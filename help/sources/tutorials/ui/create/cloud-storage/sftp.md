@@ -2,9 +2,9 @@
 title: UI での SFTP ソース接続の作成
 description: Adobe Experience Platform UI を使用して SFTP ソース接続を作成する方法を説明します。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '820'
 ht-degree: 23%
 
 ---
@@ -28,34 +28,34 @@ ht-degree: 23%
 
 既に有効な [!DNL SFTP] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/batch/cloud-storage.md)に関するチュートリアルに進むことができます。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 に接続するには [!DNL SFTP]を使用する場合、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | に関連付けられている名前または IP アドレス [!DNL SFTP] サーバー。 |
-| `port` | この [!DNL SFTP] 接続先のサーバーポート。 指定しない場合、値はデフォルトでになります。 `22`. |
-| `username` | ユーザー名 ( [!DNL SFTP] サーバー。 |
+| `port` | The [!DNL SFTP] 接続先のサーバーポート。 指定しない場合、値はデフォルトでになります。 `22`. |
+| `username` | へのアクセス権を持つユーザー名 [!DNL SFTP] サーバー。 |
 | `password` | ユーザーのパスワード [!DNL SFTP] サーバー。 |
 | `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
 | `passPhrase` | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターを PrivateKeyContent のパスフレーズと共に値として使用する必要があります。 |
-| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP が設定した制限を下回るように設定する必要があります。 **注意**:この設定を既存の SFTP アカウントに対して有効にすると、今後のデータフローにのみ影響し、既存のデータフローには影響しません。 |
+| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP が設定した制限を下回るように設定する必要があります。 **注意**：この設定を既存の SFTP アカウントに対して有効にすると、今後のデータフローにのみ影響し、既存のデータフローには影響しません。 |
 | フォルダーパス | アクセス権を付与するフォルダーのパスです。 [!DNL SFTP] ソースの場合は、選択したサブフォルダーへのユーザーアクセスを指定するためのフォルダーパスを指定できます。 |
 
 必要な資格情報を収集したら、次の手順に従って新しい [!DNL SFTP] Platform に接続するアカウント。
 
-## に接続 [!DNL SFTP] server
+## 次に接続： [!DNL SFTP] server
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 [!UICONTROL クラウドストレージ] カテゴリ、選択 **[!UICONTROL SFTP]** 次に、 **[!UICONTROL データを追加]**.
+の下 [!UICONTROL クラウドストレージ] カテゴリ、選択 **[!UICONTROL SFTP]** 次に、「 **[!UICONTROL データを追加]**.
 
 ![Experience Platformソースカタログで、選択した SFTP ソースが表示されます。](../../../../images/tutorials/create/sftp/catalog.png)
 
-この **[!UICONTROL SFTP に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL SFTP に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
@@ -65,15 +65,17 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 新規アカウント
 
->[!IMPORTANT]
+>[!TIP]
 >
->SFTP では、RSA または DSA タイプの OpenSSH キーをサポートしています。 鍵となるファイルコンテンツが `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で終わる `"-----END [RSA/DSA] PRIVATE KEY-----"`. 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して PPK から OpenSSH 形式に変換します。
+>* 作成後は、 [!DNL SFTP] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
+>
+>* SFTP では、RSA または DSA タイプの OpenSSH キーをサポートしています。 鍵となるファイルコンテンツが `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` およびで終わる `"-----END [RSA/DSA] PRIVATE KEY-----"`. 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して PPK から OpenSSH 形式に変換します。
 
-新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;新しい [!DNL SFTP] アカウント
+新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;をクリックし、新しい [!DNL SFTP] アカウント。
 
 ![SFTP の新しいアカウント画面](../../../../images/tutorials/create/sftp/new.png)
 
-この [!DNL SFTP] ソースは、SSH 公開鍵を介した基本認証と認証の両方をサポートします。
+The [!DNL SFTP] ソースは、SSH 公開鍵を介した基本認証と認証の両方をサポートします。
 
 >[!BEGINTABS]
 

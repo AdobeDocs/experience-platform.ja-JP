@@ -3,10 +3,10 @@ title: UI で Google PubSub ソース接続を作成
 description: Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 41%
+source-wordcount: '1099'
+ht-degree: 39%
 
 ---
 
@@ -27,16 +27,28 @@ ht-degree: 41%
 
 既に有効な [!DNL PubSub] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/batch/cloud-storage.md)に関するチュートリアルに進むことができます。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL PubSub] を Platform に接続するには、次の資格情報に対する有効な値を指定する必要があります。
 
-| 認証情報 | 説明 |
-| ---------- | ----------- |
+>[!BEGINTABS]
+
+>[!TAB プロジェクトベースの認証]
+
+| 資格情報 | 説明 |
+| --- | --- |
 | プロジェクト ID | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
-| 認証情報 | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、完全な JSON ファイルを配置する必要があります。 |
+| 資格情報 | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、完全な JSON ファイルを配置する必要があります。 |
+
+>[!TAB トピックおよび購読ベースの認証]
+
+| 資格情報 | 説明 |
+| --- | --- |
+| 資格情報 | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、完全な JSON ファイルを配置する必要があります。 |
 | トピック名 | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 **注意**：単一の [!DNL PubSub] サブスクリプションは 1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数のサブスクリプションが必要です。 |
 | 配信登録名 | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 |
+
+>[!ENDTABS]
 
 これらの値について詳しくは、次の [PubSub 認証](https://cloud.google.com/pubsub/docs/authentication)ドキュメントを参照してください。サービスアカウントベースの認証を使用している場合、資格情報の生成手順については、次の [PubSub ガイド](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
 
@@ -68,7 +80,8 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TIP]
 >
->アクセスが制限されたアカウントを作成する場合は、1 つ以上のトピック名またはサブスクリプション名を指定する必要があります。 両方の値が見つからない場合、認証は失敗します。
+>* アクセスが制限されたアカウントを作成する場合は、1 つ以上のトピック名またはサブスクリプション名を指定する必要があります。 両方の値が見つからない場合、認証は失敗します。
+>* 作成後は、 [!DNL Google PubSub] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
 新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;をクリックし、新しい [!DNL PubSub] アカウント。
 

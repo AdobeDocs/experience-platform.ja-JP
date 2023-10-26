@@ -3,10 +3,10 @@ title: Flow Service API を使用した Google PubSub ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 65%
+source-wordcount: '1153'
+ht-degree: 59%
 
 ---
 
@@ -27,17 +27,30 @@ ht-degree: 65%
 
 以下の節では、[!DNL Flow Service] API を使用して [!DNL PubSub] を Platform に正しく接続するために必要な追加情報を示します。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL PubSub] に接続するには、次の接続プロパティの値を指定する必要があります。
 
+>[!BEGINTABS]
+
+>[!TAB プロジェクトベースの認証]
+
 | 資格情報 | 説明 |
-| ---------- | ----------- |
+| --- | --- |
 | `projectId` | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
+| `credentials` | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、完全な JSON ファイルを配置する必要があります。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
+
+>[!TAB トピックおよび購読ベースの認証]
+
+| 資格情報 | 説明 |
+| --- | --- |
 | `credentials` | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、完全な JSON ファイルを配置する必要があります。 |
 | `topicName` | メッセージのフィードを表すリソースの名前。 トピック名を指定する必要があるのは、 [!DNL PubSub] ソース。 トピック名の形式は次のとおりです。 `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | お客様の [!DNL PubSub] 購読。 In [!DNL PubSub]を使用すると、購読を使用して、メッセージの公開先のトピックを購読することでメッセージを受け取ることができます。 **注意**：単一の [!DNL PubSub] サブスクリプションは 1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数のサブスクリプションが必要です。 購読名の形式は次のとおりです。 `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub] 接続仕様 ID は `70116022-a743-464a-bbfe-e226a7f8210c` です。 |
+
+>[!ENDTABS]
 
 これらの値について詳しくは、こちらの [[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)に関するドキュメントを参照してください。サービスアカウントベースの認証を使用するには、こちらの[[!DNL PubSub] サービスアカウントの作成に関するガイド](https://cloud.google.com/docs/authentication/production#create_service_account)で、資格情報の生成手順を確認してください。
 
@@ -50,6 +63,10 @@ ht-degree: 65%
 Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
 
 ## ベース接続の作成
+
+>[!TIP]
+>
+>作成後は、 [!DNL Google PubSub] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
 ソース接続を作成する最初の手順は、[!DNL PubSub] ソースを認証し、ベース接続 ID を生成することです。ベース接続 ID を使用すると、ソース内を移動してファイルを探索し、データのタイプや形式に関する情報など、取り込みたい特定の項目を識別できます。
 
@@ -67,11 +84,13 @@ The [!DNL PubSub] 「ソース」では、認証時に許可するアクセス�
 POST /connections
 ```
 
-**リクエスト**
-
 >[!BEGINTABS]
 
 >[!TAB プロジェクトベースの認証]
+
+プロジェクトベースの認証を使用してベース接続を作成するには、 `/connections` エンドポイントを設定し、 `projectId` および `credentials` リクエスト本文内で使用されます。
+
++++リクエスト
 
 ```shell
 curl -X POST \
@@ -104,7 +123,26 @@ curl -X POST \
 | `auth.params.credentials` | [!DNL PubSub] の認証に必要な資格情報またはキー。 |
 | `connectionSpec.id` | [!DNL PubSub] 接続仕様 ID：`70116022-a743-464a-bbfe-e226a7f8210c`。 |
 
+++++
+
++++応答
+
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。このベース接続 ID は、次の手順でソース接続を作成する際に必要になります。
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
+++++
+
 >[!TAB トピックおよび購読ベースの認証]
+
+トピックおよび購読ベースの認証を使用してベース接続を作成するには、 `/connections` エンドポイントを設定し、 `credentials`, `topicName`、および `subscriptionName` リクエスト本文内で使用されます。
+
++++リクエスト
 
 ```shell
 curl -X POST \
@@ -139,9 +177,9 @@ curl -X POST \
 | `auth.params.subscriptionName` | のプロジェクト ID と購読 ID の組み合わせ [!DNL PubSub] アクセスを提供するソース。 |
 | `connectionSpec.id` | [!DNL PubSub] 接続仕様 ID：`70116022-a743-464a-bbfe-e226a7f8210c`。 |
 
->[!ENDTABS]
++++
 
-**応答**
++++応答
 
 リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。このベース接続 ID は、次の手順でソース接続を作成する際に必要になります。
 
@@ -151,6 +189,11 @@ curl -X POST \
     "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
 }
 ```
+
+++++
+
+>[!ENDTABS]
+
 
 ## ソース接続の作成 {#source}
 
