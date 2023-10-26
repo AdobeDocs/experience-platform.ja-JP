@@ -4,9 +4,9 @@ type: Tutorial
 description: 計算フィールドを使用して、フラットスキーマファイル内の配列をReal-Time CDPからクラウドストレージの宛先に書き出す方法について説明します。
 badge: ベータ版
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1497'
 ht-degree: 6%
 
 ---
@@ -216,8 +216,21 @@ johndoe@acme.org,"1538097126"
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### `md5` および `sha256` ハッシュ関数 {#hashing-functions}
+### ハッシュ関数 {#hashing-functions}
 
-配列または要素を配列から書き出すための関数に加えて、ハッシュ関数を使用して属性をハッシュ化できます。 例えば、属性に個人を特定できる情報が含まれている場合は、それらのフィールドを書き出す際にハッシュ化できます。
+配列または要素を配列から書き出すための関数に加えて、ハッシュ関数を使用して、書き出されたファイルの属性をハッシュ化できます。 例えば、属性に個人を特定できる情報が含まれている場合は、それらのフィールドを書き出す際にハッシュ化できます。
 
-文字列値を直接ハッシュ化できます。例： `md5(personalEmail.address)`. 必要に応じて、次のように配列フィールドの個々の要素をハッシュ化することもできます。 `md5(purchaseTime[0])`
+文字列値を直接ハッシュ化できます。例： `md5(personalEmail.address)`. 必要に応じて、配列フィールドの個々の要素をハッシュ化することもできます（配列内の要素が次のような文字列であると仮定）。 `md5(purchaseTime[0])`
+
+サポートされているハッシュ関数は次のとおりです。
+
+| 関数 | サンプル式 |
+|---------|----------|
+| `sha1` | `sha1(organizations[0])` |
+| `sha256` | `sha256(organizations[0])` |
+| `sha512` | `sha512(organizations[0])` |
+| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
+| `md5` | `md5(organizations[0], "UTF-8")` |
+| `crc32` | `crc32(organizations[0])` |
+
+{style="table-layout:auto"}
