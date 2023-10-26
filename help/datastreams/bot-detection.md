@@ -1,11 +1,11 @@
 ---
-title: ボット検出の設定
-description: データストリームのボット検出を設定する方法を説明します。
+title: データストリームのボット検出の設定
+description: データストリームのボット検出を設定し、人間と人間以外のトラフィックを区別する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
