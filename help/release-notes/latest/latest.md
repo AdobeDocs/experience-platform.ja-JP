@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年10月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
+source-git-commit: a307f21ad9c72fd413c90cff1c92af8535d9b17b
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 45%
+source-wordcount: '808'
+ht-degree: 43%
 
 ---
 
@@ -30,6 +30,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
 | 拡張機能 | [!DNL Meta] コンバージョン API の機能強化 | 次の 3 つの機能強化がおこなわれました： [メタ変換 API](/help/tags/extensions/server/meta/overview.md) 拡張子： <ul><li>との統合 [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)：コンバージョン API 統合用のピクセル ID とアクセストークンをAdobeと共有でき、シームレスなログイン操作を作成します。</li><li>との統合 [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)：目的のアクションを完了し、配信された広告にアクションをリンクし直す可能性の高い人に広告を配信できます。</li><li>との統合 [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha):PII を直接パートナーやメタと共有する必要がなく、CIP フィールドに LiveRamp の RampID を渡すことができます。 </li></ul> |
+| 拡張機能 | [!DNL LinkedIn] コンバージョン API | The [[!DNL LinkedIn] コンバージョン API](../../tags/extensions/server/linkedin/overview.md) 拡張機能を使用すると、Experience PlatformイベントデータをLinkedInに転送することで、LinkedInマーケティングキャンペーンの効果を評価できます。 |
+| 秘密鍵 | [!DNL LinkedIn] OAuth 2 Secret | The [[!DNL LinkedIn] OAuth 2 Secret](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) を使用すると、サーバー間インタラクションを次の場所に送信できます： [!DNL LinkedIn] イベント転送で使用できます。 |
 
 データ収集について詳しくは、[データ収集の概要](../../tags/home.md)を参照してください。
 
