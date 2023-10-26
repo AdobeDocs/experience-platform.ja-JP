@@ -1,16 +1,16 @@
 ---
-title: データストリームの設定
+title: データストリームの作成と設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: db75771d09caef00db58073333909f730a303975
+source-git-commit: d7a0299c5fe3729620e74602ac99459093cc2e28
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2779'
 ht-degree: 75%
 
 ---
 
 
-# データストリームの設定
+# データストリームの作成と設定
 
 このドキュメントでは、UI で[データストリーム](./overview.md)を設定する手順を説明します。
 
