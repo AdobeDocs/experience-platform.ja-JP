@@ -2,7 +2,7 @@
 title: LinkedIn コンバージョン API イベント転送拡張機能
 description: このAdobe Experience Platformイベント転送拡張機能を使用すると、Linkedin マーケティングキャンペーンのパフォーマンスを測定できます。
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ### シークレットとデータ要素の作成
 
-新規作成 `LinkedIn` [イベント転送秘密鍵](../../../ui/event-forwarding/secrets.md) 認証メンバーを示す一意の名前を指定します。 これは、値のセキュリティを維持しながら、アカウントへの接続を認証するために使用されます。
+新規作成 [!DNL LinkedIn] [イベント転送秘密鍵](../../../ui/event-forwarding/secrets.md) 認証メンバーを示す一意の名前を指定します。 これは、値のセキュリティを維持しながら、アカウントへの接続を認証するために使用されます。
 
 次に、 [データ要素の作成](../../../ui/managing-resources/data-elements.md#create-a-data-element) の使用 [!UICONTROL コア] 拡張機能と [!UICONTROL 秘密鍵] を参照するデータ要素タイプ `LinkedIn` 作成した秘密鍵。
 
