@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年10月のリリースノート。
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 47%
+source-wordcount: '766'
+ht-degree: 45%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 47%
  Experience Platform の既存の機能に対するアップデート：
 
 - [データ収集](#data-collection)
+- [宛先](#destinations)
 - [サンドボックス](#sandboxes)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
@@ -30,6 +31,31 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 拡張機能 | [!DNL Meta] コンバージョン API の機能強化 | 次の 3 つの機能強化がおこなわれました： [メタ変換 API](/help/tags/extensions/server/meta/overview.md) 拡張子： <ul><li>との統合 [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)：コンバージョン API 統合用のピクセル ID とアクセストークンをAdobeと共有でき、シームレスなログイン操作を作成します。</li><li>との統合 [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)：目的のアクションを完了し、配信された広告にアクションをリンクし直す可能性の高い人に広告を配信できます。</li><li>との統合 [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha):PII を直接パートナーやメタと共有する必要がなく、CIP フィールドに LiveRamp の RampID を渡すことができます。 </li></ul> |
 
 データ収集について詳しくは、[データ収集の概要](../../tags/home.md)を参照してください。
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新規宛先または更新された宛先** {#new-updated-destinations}
+
+| 宛先 | 新規／アップデート | 説明 |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | 新規 | Moengage の宛先を使用して、Adobeデータ（ユーザー属性、セグメントおよびイベント）を MoEngage にリアルタイムで接続し、マッピングします。 その後、顧客はこのデータに基づいて行動し、パーソナライズされたターゲット設定されたエクスペリエンスを提供できます。 |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | 新規 | Adobe Experience Platformの複数の運用データソースの集計を Qualtrics Experience ID の入力として使用すると、顧客をより深く理解し、目的、感情、エクスペリエンスの推進要因を把握する際に、ターゲットを絞ったアウトリーチを有効にしてギャップを埋めることができます。 |
+
+{style="table-layout:auto"}
+
+**新機能または更新された機能** {#destinations-new-updated-functionality}
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| 計算フィールドでのハッシュ関数のサポート | に固有の関数に加えて、 [配列の書き出し](../../destinations/ui/export-arrays-calculated-fields.md) または配列の要素から、追加の [ハッシュ関数](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 書き出したファイルの属性をハッシュ化します。 サポートされているハッシュ関数は次のとおりです。 `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+
+{style="table-layout:auto"}
+
+**修正および機能強化** {#destinations-fixes-and-enhancements}
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## サンドボックス {#sandboxes}
 
