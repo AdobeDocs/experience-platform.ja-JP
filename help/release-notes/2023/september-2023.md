@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年9月のリリースノート。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 94651b8035677eb65f6ca9e93001b4149f8bdbd4
+source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2283'
 ht-degree: 33%
 
 ---
@@ -222,8 +222,6 @@ ID サービスの詳細については、 [ID サービスの概要](../../iden
 | ------- | ----------- |
 | カスタマイズ可能な列 | サイズを変更できる列を使用して、Audience Portal のレイアウトをカスタマイズできるようになりました。 この機能の詳細については、 [セグメント化 UI ガイド](../../segmentation/ui/overview.md#customize). |
 | 頻度の分類を更新 | これで、組織内のオーディエンスの更新頻度の分類を表示できます。 この機能の詳細については、 [セグメント化 UI ガイド](../../segmentation/ui/overview.md#browse). |
-
-ソースの詳細については、 [ソースの概要](../../sources/home.md).
 
 セグメント化サービスの詳細については、「[セグメント化サービスの概要](../../segmentation/home.md)」を参照してください。
 
