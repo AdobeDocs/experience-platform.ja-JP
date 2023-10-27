@@ -4,9 +4,9 @@ title: 新しい宛先接続の作成
 type: Tutorial
 description: Adobe Experience Platform で宛先に接続する方法、アラートを有効にする方法、接続した宛先に対するマーケティングアクションを設定する方法について説明します。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1146'
 ht-degree: 77%
 
 ---
@@ -84,9 +84,9 @@ ht-degree: 77%
 
 ![ファイルタイプの選択と CSV ファイルの各種オプションを示す画像](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### オーディエンスのアクティブ化、見込み客のアクティブ化、データセットの書き出しの宛先接続を設定する {#segment-activation-or-dataset-exports}
+### オーディエンスのアクティベーション、アカウントのアクティブ化、見込み客のアクティブ化、データセットのエクスポートの宛先接続を設定します {#segment-activation-or-dataset-exports}
 
-一部のファイルベースの宛先は、既知の顧客や見込み客に対するオーディエンスのアクティブ化や、データセットの書き出しをサポートしています。 これらの宛先について、次のことを可能にする接続を作成するかどうかを選択できます。 [オーディエンスをアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md), [見込み客](/help/destinations/ui/activate-prospect-audiences.md)または [データセットを書き出し](/help/destinations/ui/export-datasets.md).
+一部のファイルベースの宛先は、既知の顧客、アカウントの顧客、見込み客に対するオーディエンスのアクティブ化や、データセットの書き出しをサポートしています。 これらの宛先について、次のことを可能にする接続を作成するかどうかを選択できます。 [オーディエンスをアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md), [アカウント](/help/destinations/ui/activate-account-audiences.md), [見込み客](/help/destinations/ui/activate-prospect-audiences.md)または [データセットを書き出し](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >

@@ -2,10 +2,10 @@
 title: アカウントオーディエンス
 description: アカウントオーディエンスを作成し、使用してダウンストリームの宛先のアカウントプロファイルをターゲット設定する方法について説明します。
 badgeLimitedAvailability: label="限定提供（LA）" type="Caution"
-badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '603'
 ht-degree: 5%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 5%
 
 # アカウントオーディエンス
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->アカウントオーディエンスは、 [B2B エディションオブReal-time Customer Data Platform](../../rtcdp/b2b-overview.md). また、アカウントオーディエンス機能は、現在、 **限られた可用性**.
+>アカウントオーディエンスは、 [B2B エディションオブReal-time Customer Data Platform](../../rtcdp/b2b-overview.md). また、アカウントオーディエンス機能は、現在、 **限られた可用性**. AdobeカスタマーケアまたはAdobe担当者に問い合わせて、この機能へのアクセスをリクエストしてください。
 
 Adobe Experience Platformでは、アカウントのセグメント化により、ユーザーベースのオーディエンスからアカウントベースのオーディエンスに至るまで、マーケティングセグメント化のエクスペリエンスを完全に簡単かつ高度にすることができます。
 
@@ -69,7 +69,7 @@ The [!UICONTROL 参照] ページが表示され、組織のすべてのアカ�
 
 ![The [!UICONTROL 宛先に対して有効化] ボタンが、選択したオーディエンスのクイックアクションメニューでハイライト表示されます。](../images/ui/account-audiences/activate.png)
 
-The [!UICONTROL 宛先を有効化] ページが表示されます。 有効化プロセスの詳細（フィールドマッピングの詳細など）については、 [アクティベーションの概要](../../destinations/ui/activation-overview.md).
+The [!UICONTROL 宛先を有効化] ページが表示されます。 有効化プロセスの詳細については、次を参照してください：サポートされる宛先やフィールドマッピングの詳細など。 [アカウントオーディエンスを有効化](/help/destinations/ui/activate-account-audiences.md) チュートリアル
 
 ## 次の手順 {#next-steps}
 
