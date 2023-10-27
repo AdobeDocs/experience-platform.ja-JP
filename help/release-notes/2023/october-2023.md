@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年10月のリリースノート。
-source-git-commit: 9009f56956f0719fb80d423a14b81a6dc7115d77
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 43%
+source-wordcount: '954'
+ht-degree: 42%
 
 ---
 
@@ -14,11 +14,26 @@ ht-degree: 43%
 
  Experience Platform の既存の機能に対するアップデート：
 
+- [ダッシュボード](#dashboards)
 - [データ収集](#data-collection)
 - [宛先](#destinations)
 - [サンドボックス](#sandboxes)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+
+## ダッシュボード {#dashboards}
+
+Adobe Experience Platform では、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを確認できる複数のダッシュボードを提供しています。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| 宛先の使用指標 | ライセンス使用状況ダッシュボードに、新しいメータリング指標が追加されました。 The **[!UICONTROL Audience Activationサイズ]** および **[!UICONTROL データ書き出しサイズ]** 指標を使用すると、ライセンス使用権限に関連して Platform から書き出したデータ量を追跡できます。 詳しくは、 [利用可能な指標](../../dashboards/guides/license-usage.md#available-metrics) およびその他のライセンス使用状況指標の説明に関するドキュメントです。 |
+
+{style="table-layout:auto"}
+
+アクセス権限の付与方法やカスタムウィジェットの作成方法など、ダッシュボードの詳細については、まず[ダッシュボードの概要](../../dashboards/home.md)を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -51,7 +66,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| 計算フィールドでのハッシュ関数のサポート | に固有の関数に加えて、 [配列の書き出し](../../destinations/ui/export-arrays-calculated-fields.md) または配列の要素から、追加の [ハッシュ関数](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 書き出したファイルの属性をハッシュ化します。 サポートされているハッシュ関数は次のとおりです。 `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| （ベータ版）計算フィールドでのハッシュ関数のサポート | に固有の関数に加えて、 [配列の書き出し](../../destinations/ui/export-arrays-calculated-fields.md) または配列の要素から、追加の [ハッシュ関数](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 書き出したファイルの属性をハッシュ化します。 サポートされているハッシュ関数は次のとおりです。 `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| （限定的な GA）特定の宛先に対するアカウントオーディエンスのアクティブ化 | Real-Time CDP B2B のお客様は、 [アカウントオーディエンス](../../segmentation/ui/account-audiences.md) 特定の宛先に送信できます。 この機能の詳細については、 [アカウントオーディエンスの有効化チュートリアル](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
