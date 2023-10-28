@@ -1,20 +1,20 @@
 ---
 title: 探索的データ分析
 description: Data Distillerを使用して Python ノートブックのデータを調べ、分析する方法を説明します。
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '809'
 ht-degree: 18%
 
 ---
 
 # 探索的データ分析
 
-このドキュメントでは、Data Distillerを使用して Python ノートブックのデータを調査および分析する際の基本的な例とベストプラクティスをいくつか示します。
+このドキュメントでは、Data Distillerを使用して [!DNL Python] ノートブック。
 
 ## はじめに
 
-このガイドに進む前に、Python ノートブックで Data Distillerへの接続が作成されていることを確認してください。 手順については、ドキュメントを参照してください。 [Python ノートブックを Data Distillerに接続する](./establish-connection.md).
+このガイドに進む前に、Data Distillerへの接続が [!DNL Python] ノートブック。 手順については、ドキュメントを参照してください。 [接続する [!DNL Python] Data Distillerへのノートブック](./establish-connection.md).
 
 ## 基本統計の取得 {#basic-statistics}
 
@@ -90,7 +90,7 @@ sample_table_name = df_samples[df_samples["sampling_rate"] == sampling_rate]["sa
 count_query=f'''SELECT count(*) as cnt from {sample_table_name}'''
 
 df = qs_cursor.query(count_query, output="dataframe")
-# divide by the sampling rate to extrapolate to the full dataset
+# Divide by the sampling rate to extrapolate to the full dataset
 approx_count = df["cnt"].iloc[0] / (sampling_rate / 100)
 
 print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
@@ -137,7 +137,7 @@ funnel_df
 
 ### プロットクエリ結果 {#plot-results}
 
-次に、Python を使用してクエリ結果をプロットします `plotly` ライブラリ：
+次に、 [!DNL Python] `plotly` ライブラリ：
 
 ```python
 import plotly.express as px
@@ -261,4 +261,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## 次の手順
 
-このドキュメントでは、Data Distillerを使用して Python ノートブックからデータを調査および分析する方法を学びました。 機械学習環境でExperience Platformからカスタムモデルをフィードするための機能パイプラインを作成する次の手順は、次のとおりです。 [機械学習のエンジニア機能](./feature-engineering.md).
+このドキュメントでは、Data Distillerを使用して、 [!DNL Python] ノートブック。 機械学習環境でExperience Platformからカスタムモデルをフィードするための機能パイプラインを作成する次の手順は、次のとおりです。 [機械学習のエンジニア機能](./feature-engineering.md).

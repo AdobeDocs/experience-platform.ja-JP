@@ -1,22 +1,22 @@
 ---
 title: Jupyter ノートブックから Data Distillerに接続する
 description: Jupyter ノートブックから Data Distillerに接続する方法を説明します。
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '693'
 ht-degree: 1%
 
 ---
 
-# Jupyter ノートブックから DD に接続
+# Jupyter ノートブックから Data Distillerに接続する
 
-高価値の顧客体験データを使用して機械学習パイプラインを強化するには、まず Jupyter Notebooks から Data Distillerに接続する必要があります。 このドキュメントでは、機械学習環境の Python ノートブックから Data Distillerに接続する手順を説明します。
+価値の高い顧客体験データを使用して機械学習パイプラインを強化するには、まず、 [!DNL Jupyter Notebooks]. このドキュメントでは、 [!DNL Python] ノートブックを機械学習環境に追加します。
 
 ## はじめに
 
-このガイドは、インタラクティブな Python ノートブックに精通しており、ノートブック環境にアクセスできることを前提としています。 ノートブックは、クラウドベースの機械学習環境内でホストすることも、 [Jupyter Notebook](https://jupyter.org/).
+このガイドは、読者がインタラクティブ機能に精通していることを前提としています。 [!DNL Python] ノートブックを使用し、ノートブック環境にアクセスできる。 ノートブックは、クラウドベースの機械学習環境内でホストすることも、 [[!DNL Jupyter Notebook]](https://jupyter.org/).
 
-### 接続資格情報の取得
+### 接続資格情報の取得 {#obtain-credentials}
 
 Data Distillerおよびその他のAdobe Experience Platformサービスに接続するには、Experience PlatformAPI の資格情報が必要です。 API 資格情報は、  [Adobe Developer Console](https://developer.adobe.com/console/home) Experience Platformへの開発者アクセス権を持つユーザーによって データサイエンスワークフロー専用の Oauth2 API 資格情報を作成し、組織のAdobeシステム管理者に、適切な権限を持つ役割に資格情報を割り当ててもらうことをお勧めします。
 
@@ -24,16 +24,16 @@ Data Distillerおよびその他のAdobe Experience Platformサービスに接�
 
 データサイエンスに推奨される権限は次のとおりです。
 
-- データサイエンス（通常、実稼動）に使用されるサンドボックス
-- データモデリング：スキーマの管理
-- データ管理：データセットの管理
-- データ取り込み：ソースの表示
-- 宛先：データセットの宛先の管理とアクティブ化
-- クエリサービス：クエリの管理
+- データサイエンス ( 通常、 `prod`)
+- データモデリング： [!UICONTROL スキーマを管理]
+- データ管理： [!UICONTROL データセットの管理]
+- データ取り込み： [!UICONTROL ソースを表示]
+- 宛先： [!UICONTROL データセットの宛先の管理とアクティブ化]
+- クエリサービス： [!UICONTROL クエリの管理]
 
-デフォルトでは、役割（およびその役割に割り当てられた API 資格情報）は、ラベル付きのデータへのアクセスをブロックされます。 組織のデータガバナンスポリシーに従い、システム管理者は、データサイエンスの使用に適したと見なされる特定のラベル付きデータに対して、役割に権限を付与できます。 Platform のお客様は、関連する規制や組織のポリシーに準拠するために、ラベルのアクセスとポリシーを適切に管理する必要があります。
+デフォルトでは、役割（およびその役割に割り当てられた API 資格情報）は、ラベル付きのデータへのアクセスをブロックされます。 組織のデータガバナンスポリシーに従い、システム管理者は、データサイエンスの使用に適したと見なされる特定のラベル付きデータに対して、役割のアクセス権を付与できます。 Platform のお客様は、関連する規制や組織のポリシーに準拠するために、ラベルのアクセスとポリシーを適切に管理する必要があります。
 
-### 認証情報を別個の設定ファイルに保存
+### 認証情報を別個の設定ファイルに保存 {#store-credentials}
 
 秘密鍵証明書の安全性を維持するには、秘密鍵証明書情報をコードに直接書き込まないことをお勧めします。 代わりに、秘密鍵証明書情報を別の設定ファイルに保持し、Experience Platformと Data Distillerへの接続に必要な値を読み取ります。
 
@@ -49,7 +49,7 @@ scopes=openid, AdobeID, read_organizations, additional_info.projectedProductCont
 tech_acct_id=<YOUR_TECHNICAL_ACCOUNT_ID>
 ```
 
-ノートブックで、次に、 `configParser` 標準の Python ライブラリからのパッケージ：
+ノートブックで、次に、 `configParser` 標準のパッケージ [!DNL Python] ライブラリ：
 
 ```python
 from configparser import ConfigParser
@@ -66,9 +66,9 @@ config.read(config_path)
 org_id = config.get('Credential', 'ims_org_id')
 ```
 
-## The `aepp` Python ライブラリ
+## aepp Python ライブラリのインストール {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main) は、Adobeが管理するオープンソース Python ライブラリで、Data Distillerに接続し、クエリを送信する機能を提供し、他のExperience Platformサービスにリクエストを送信します。 The `aepp` ライブラリは、PostgreSQL データベースアダプタパッケージに依存しています  `psycopg2` インタラクティブな Data Distillerクエリ用。 Data Distillerに接続し、 `psycopg2` ただ一人で `aepp` は、すべてのExperience PlatformAPI サービスにリクエストを送信するための、より便利な追加機能を提供します。
+[aepp](https://github.com/adobe/aepp/tree/main) はAdobeが管理するオープンソースです。 [!DNL Python] 他のExperience Platformサービスにリクエストを送信する際に、Data Distillerに接続し、クエリを送信する機能を提供するライブラリ。 The `aepp` ライブラリは、PostgreSQL データベースアダプタパッケージに依存しています  `psycopg2` インタラクティブな Data Distillerクエリ用。 Data Distillerに接続し、 `psycopg2` ただ一人で `aepp` は、すべてのExperience PlatformAPI サービスにリクエストを送信するための、より便利な追加機能を提供します。
 
 インストールまたはアップグレードするには `aepp` および `psycopg2` お使いの環境では、 `%pip` ノートブック内の magic コマンド：
 
@@ -100,7 +100,7 @@ aepp.configure(
 )
 ```
 
-## Data Distillerへの接続の作成
+## Data Distillerへの接続の作成 {#create-connection}
 
 1 回 `aepp` が資格情報で設定されている場合は、次のコードを使用して Data Distillerへの接続を作成し、次のようにインタラクティブセッションを開始できます。
 
@@ -119,7 +119,7 @@ simple_query = f'''SELECT * FROM {table_name} LIMIT 5'''
 dd_cursor.query(simple_query)
 ```
 
-### 単一のデータセットに接続してクエリのパフォーマンスを向上
+### 単一のデータセットに接続してクエリのパフォーマンスを向上 {#connect-to-single-dataset}
 
 デフォルトでは、Data Distiller接続は、サンドボックス内のすべてのデータセットに接続します。 クエリを高速化し、リソースの使用量を削減するために、代わりに特定の目的のデータセットに接続できます。 これをおこなうには、 `dbname` Data Distiller接続オブジェクトの `{sandbox}:{table_name}`:
 
@@ -136,4 +136,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## 次の手順
 
-このドキュメントでは、機械学習環境の Python ノートブックから Data Distillerに接続する方法を学びました。 機械学習環境でExperience Platformからカスタムモデルをフィードするための機能パイプラインを作成する次の手順は、次のとおりです。 [データセットの調査と分析](./exploratory-analysis.md).
+このドキュメントでは、 [!DNL Python] ノートブックを機械学習環境に追加します。 機械学習環境でExperience Platformからカスタムモデルをフィードするための機能パイプラインを作成する次の手順は、次のとおりです。 [データセットの調査と分析](./exploratory-analysis.md).
