@@ -1,11 +1,11 @@
 ---
 title: データストリームの上書きの設定
 description: Web SDK を介して、データストリームの UI でデータストリームの上書きを設定し、データストリームの上書きをアクティベートする方法について説明します。
-exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
-workflow-type: ht
-source-wordcount: '1231'
-ht-degree: 100%
+exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
+source-git-commit: 5effb8a514100c28ef138ba1fc443cf29a64319a
+workflow-type: tm+mt
+source-wordcount: '1464'
+ht-degree: 78%
 
 ---
 
@@ -18,14 +18,17 @@ ht-degree: 100%
 データストリーム設定の上書きは、次の 2 つの手順で構成されます。
 
 1. 最初に、[データストリーム設定ページ](configure.md)でデータストリーム設定の上書きを定義する必要があります。
-2. 次に、Web SDK コマンドまたは Web SDK [タグ拡張機能](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)を使用して、上書きを Edge Network に送信する必要があります。
+2. 次に、次のいずれかの方法でオーバーライドを Edge ネットワークに送信する必要があります。
+   * を通じて `sendEvent` または `configure` [Web SDK](#send-overrides-web-sdk) コマンド。
+   * Web SDK を使用 [タグ拡張](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * Mobile SDK を使用 [sendEvent API](#send-overrides-mobile-sdk) を呼び出します。
 
 この記事では、サポートされているすべてのタイプの上書きに対するエンドツーエンドのデータストリーム設定の上書きプロセスについて説明します。
 
 >[!IMPORTANT]
 >
->データストリームの上書きは、[Web SDK](../edge/home.md) 統合でのみサポートされます。[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) および [Server API](../server-api/overview.md) の統合は、現在、データストリームの上書きをサポートしていません。
-><br><br>
+>データストリームの上書きは、次の場合にのみサポートされます。 [Web SDK](../edge/home.md) および [モバイル SDK](https://developer.adobe.com/client-sdks/documentation/) 統合と呼ばれます。 [サーバー API](../server-api/overview.md) 統合は、現在、データストリームの上書きをサポートしていません。
+><br>
 >異なるデータストリームに異なるデータを送信する必要がある場合は、データストリームの上書きを使用する必要があります。パーソナライゼーションのユースケースまたは同意データには、データストリームの上書きを使用しないでください。
 
 ## ユースケース {#use-cases}
@@ -111,7 +114,7 @@ Experience Platform イベントデータセットのデータストリームの
 
 これで、ID 同期コンテナの上書きが設定されました。これで、[Web SDK を介して、上書きを Edge Network に送信](#send-overrides)できるようになりました。
 
-## Web SDK を介して、上書きを Edge Network に送信する {#send-overrides}
+## Web SDK を介して、上書きを Edge Network に送信する {#send-overrides-web-sdk}
 
 >[!NOTE]
 >
@@ -119,7 +122,7 @@ Experience Platform イベントデータセットのデータストリームの
 
 データ収集 UI で[データストリームの上書きを設定](#configure-overrides)した後、Web SDK を介して、上書きを Edge Network に送信できるようになりました。
 
-Web SDK を介して Edge Network に上書きを送信することは、データストリーム設定の上書きをアクティベートする 2 番目および最後の手順です。
+Web SDK を使用している場合は、 `edgeConfigOverrides` コマンドは、データストリーム設定の上書きをアクティブ化する 2 番目および最後の手順です。
 
 データストリーム設定の上書きは、`edgeConfigOverrides` Web SDK コマンドを介して Edge Network に送信されます。このコマンドは、次のコマンドまたは `configure` コマンドの場合は、リクエストごとに [!DNL Edge Network] に渡されるデータストリームの上書きを作成します。
 
@@ -135,7 +138,7 @@ Web SDK を介して Edge Network に上書きを送信することは、デー�
 
 グローバルに指定したオプションは、個々のコマンドの設定オプションで上書きできます。
 
-### `sendEvent` コマンドを介した設定の上書きの送信 {#send-event}
+### Web SDK を使用した設定の上書きの送信 `sendEvent` command {#send-event}
 
 以下の例は、`sendEvent` コマンド上でどのように設定の上書きが表示されるかを示します。
 
@@ -149,7 +152,7 @@ alloy("sendEvent", {
     com_adobe_experience_platform: {
       datasets: {
         event: {
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleEventDatasetIdOverride"
         },
         profile: {
           datasetId: "www"
@@ -193,7 +196,7 @@ alloy("configure", {
     "com_adobe_experience_platform": {
       "datasets": {
         "event": { 
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleProfileDatasetIdOverride"
         },
         "profile": { 
           datasetId: "www"
@@ -218,9 +221,168 @@ alloy("configure", {
 };
 ```
 
-### ペイロードの例 {#payload-example}
+## Mobile SDK を使用して Edge ネットワークに上書きを送信する {#send-overrides-mobile-sdk}
 
-上記の例では、次のような [!DNL Edge Network] ペイロードが生成されます。
+後 [データストリームの上書きの設定](#configure-overrides) データ収集 UI で、Mobile SDK を使用して Edge ネットワークに上書きを送信できるようになりました。
+
+Mobile SDK を使用している場合は、 `sendEvent` API は、データストリーム設定の上書きをアクティブ化する 2 番目および最後の手順です。
+
+Mobile SDK について詳しくは、Experience Platformモバイル SDK に関する [Mobile SDK ドキュメント](https://developer.adobe.com/client-sdks/edge/edge-network/).
+
+### モバイル SDK を介したデータストリーム ID の上書き {#id-override-mobile}
+
+以下の例は、Mobile SDK 統合でのデータストリーム ID の上書きを示しています。 以下のタブを選択して、 [!DNL iOS] および [!DNL Android] 例。
+
+>[!BEGINTABS]
+
+>[!TAB iOS(Swift)]
+
+この例は、Mobile SDK でのデータストリーム ID の上書きの例を示しています [!DNL iOS] 統合とも呼ばれます。
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+この例は、Mobile SDK でのデータストリーム ID の上書きの例を示しています [!DNL Android] 統合とも呼ばれます。
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### Mobile SDK を介したデータストリーム設定の上書き {#config-override-mobile}
+
+以下の例は、Mobile SDK 統合でのデータストリーム設定の上書きを示しています。 以下のタブを選択して、 [!DNL iOS] および [!DNL Android] 例。
+
+>[!BEGINTABS]
+
+>[!TAB iOS(Swift)]
+
+この例は、Mobile SDK でのデータストリーム設定の上書きの例を示します [!DNL iOS] 統合とも呼ばれます。
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
+      ],
+      "profile": [
+        "datasetId": "SampleProfileDatasetIdOverride"
+      ],
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],  
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+この例は、Mobile SDK でのデータストリーム設定の上書きの例を示します [!DNL Android] 統合とも呼ばれます。
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride"),
+            "profile"
+            to mapOf("datasetId"
+                to "SampleProfileDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+## ペイロードの例 {#payload-example}
+
+上記の例では、 [!DNL Edge Network] 以下のペイロードに似たペイロード。
 
 ```json
 {
@@ -229,7 +391,7 @@ alloy("configure", {
       "com_adobe_experience_platform": {
         "datasets": {
           "event": {
-            "datasetId": "MyOverrideDataset"
+            "datasetId": "SampleProfileDatasetIdOverride"
           },
           "profile": {
             "datasetId": "www"
@@ -252,13 +414,6 @@ alloy("configure", {
     },
     "state": {  }
   },
-  "events": [  ],
-  "query": {
-    "identity": {
-      "fetch": [
-        "ECID"
-      ]
-    }
-  }
+  "events": [  ]
 }
 ```

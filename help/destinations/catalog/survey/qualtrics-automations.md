@@ -3,13 +3,13 @@ keywords: ストリーミング、Qualtrics の宛先
 title: Qualtrics 自動化
 description: エクスペリエンスと運用上の顧客データを同期して、パーソナライゼーションの規模を拡大/縮小できます。 Adobe Experience Platformの複数の運用データソースの集計を Qualtrics Experience ID の入力として使用すると、顧客をより深く理解し、目的、感情、エクスペリエンスの推進要因を把握する際に、ターゲットを絞ったアウトリーチを可能にしてギャップを埋めることができます。
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
+exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 32%
 
 ---
-
 
 # Qualtrics 自動化
 

@@ -2,7 +2,8 @@
 solution: Experience Platform
 title: Media Edge Open API の仕様
 description: このドキュメントには、YAML Open API Specification(OAS) または「Swagger」リファレンスが含まれています。 この仕様を editor.swagger.io などのレンダリングツールにコピー＆ペーストして、Media Edge API 情報を表示できます。 この仕様には、各エンドポイントのパラメーター、例、スキーマが含まれます。
-source-git-commit: 11a9dc980b7a63549cdd9a8c9522e001faceeb56
+exl-id: 14395fa4-14a6-4487-8645-1a19e5695349
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 72%

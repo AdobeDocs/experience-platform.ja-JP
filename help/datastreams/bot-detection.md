@@ -3,13 +3,13 @@ title: データストリームのボット検出の設定
 description: データストリームのボット検出を設定し、人間と人間以外のトラフィックを区別する方法を説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 0%
 
 ---
-
 
 # データストリームのボット検出の設定
 
@@ -176,4 +176,3 @@ The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 このリクエストは、2 つの IP アドレスのいずれか ( `referer` ヘッダーが次の値で始まる `www.adobe.com`、および `sec-ch-ua-mobile` ヘッダーは、デスクトップブラウザーからの要求であることを識別します。
 
 ![複数の条件に基づくボット検出ルールの画像。](assets/bot-detection/bot-detection-multiple.png)
-

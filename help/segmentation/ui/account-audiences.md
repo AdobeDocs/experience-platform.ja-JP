@@ -3,13 +3,13 @@ title: アカウントオーディエンス
 description: アカウントオーディエンスを作成し、使用してダウンストリームの宛先のアカウントプロファイルをターゲット設定する方法について説明します。
 badgeLimitedAvailability: label="限定提供（LA）" type="Caution"
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
+exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 5%
 
 ---
-
 
 # アカウントオーディエンス
 

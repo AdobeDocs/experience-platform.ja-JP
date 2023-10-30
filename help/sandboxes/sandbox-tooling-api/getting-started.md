@@ -1,7 +1,8 @@
 ---
 title: サンドボックスツール API の概要
 description: サンドボックスツール API を使用して、アーティファクトを調べ、サンドボックス間のサンドボックス設定のスナップショットを書き出して読み込みます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
-source-git-commit: bad6ad17a5f41e50b27ce44a6d52a79e2066c82f
+exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 70%

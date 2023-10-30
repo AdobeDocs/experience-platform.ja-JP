@@ -2,7 +2,8 @@
 keywords: IP アドレス、IP 範囲、許可リスト、許可リストに加える
 title: クエリサービ許可リストに加えるスの IP アドレス
 description: このページには、許可リストに追加できる IP 範囲が表示されます。
-source-git-commit: 89d04a98e983b5dc9f353a831cdbe21c7c7aaf36
+exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 10%

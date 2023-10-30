@@ -1,13 +1,13 @@
 ---
 title: サンドボックスツール API ガイドの付録
 description: このドキュメントでは、サンドボックスツール API の操作に関する補足情報を提供します。
-source-git-commit: e4e89c5250885bef177ba0d678629261a361a66d
+exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 2%
 
 ---
-
 
 # サンドボックス API ガイドの付録
 

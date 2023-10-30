@@ -1,7 +1,8 @@
 ---
 title: 機械学習の機能を開発する
 description: Adobe Experience Platformのデータを、機械学習モデルで使用できる機能や変数に変換する方法を説明します。 Data Distillerを使用して、ML 機能を大規模に計算し、機械学習環境と共有します。
-source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
+exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 14%

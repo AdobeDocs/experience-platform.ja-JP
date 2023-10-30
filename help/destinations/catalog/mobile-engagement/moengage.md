@@ -2,13 +2,13 @@
 title: 接続を移動
 description: Moengage は、消費者とブランドの間の顧客中心のインタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
+exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 41%
 
 ---
-
 
 # [!DNL Moengage] 接続
 
@@ -150,4 +150,3 @@ Adobe Analytics の [!UICONTROL ターゲットフィールドを選択] ウィ�
 ## データの使用とガバナンス {#data-usage-governance}
 
 [!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
-
