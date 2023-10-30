@@ -2,7 +2,7 @@
 title: フローサービス API を使用した SFTP ベース接続の作成
 description: フローサービス API を使用して、Adobe Experience Platformを SFTP(Secure File Transfer Protocol) サーバーに接続する方法について説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 28%
@@ -52,7 +52,7 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 >[!TIP]
 >
->作成後は、 [!DNL Dynamics] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
+>作成後は、 [!DNL SFTP] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 

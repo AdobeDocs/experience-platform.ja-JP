@@ -2,7 +2,7 @@
 title: UI での SFTP ソース接続の作成
 description: Adobe Experience Platform UI を使用して SFTP ソース接続を作成する方法を説明します。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
+source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 23%
