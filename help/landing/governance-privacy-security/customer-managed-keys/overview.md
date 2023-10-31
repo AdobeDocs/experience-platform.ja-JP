@@ -2,10 +2,10 @@
 title: Adobe Experience Platform の顧客管理キー
 description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 37%
+source-wordcount: '763'
+ht-degree: 36%
 
 ---
 
@@ -18,6 +18,10 @@ Adobe Experience Platform に保存されたデータは、システムレベル
 >Adobe Experience Platformのデータレイクとプロファイルストアのデータは、CMK を使用して暗号化されます。 これらは主要なデータストアと見なされます。
 
 このドキュメントでは、Platform で顧客管理キー (CMK) 機能を有効にするプロセスの概要と、これらの手順を完了するために必要な前提条件の情報を示します。
+
+>[!NOTE]
+>
+>Customer Journey Analyticsのお客様の場合は、 [Customer Journey Analytics文書](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
 
 ## 前提条件
 
