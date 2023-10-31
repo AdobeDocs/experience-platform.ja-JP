@@ -2,7 +2,8 @@
 title: Snowflakeの概要
 description: Adobe Experience Platformでのイベント転送のSnowflakeについて説明します。
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: fe28840fab46fadb82f1a37f972084057a00af44
+exl-id: abddf0c4-3d4c-4f66-a6e0-c10b54ea3430
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 2%
@@ -15,9 +16,9 @@ ht-degree: 2%
 
 [!DNL Snowflake] は、Amazon Web Services(AWS)、Microsoft Azure(Azure) およびGoogle Cloud Platform(GCP) をベースに構築されています。
 
-![以下を示す図 [!DNL Snowflake] データアーキテクチャ。](../../../images/extensions/server/snowflake/snowflake.png)
+![以下を示す図： [!DNL Snowflake] データアーキテクチャ。](../../../images/extensions/server/snowflake/snowflake.png)
 
-## Snowflake統合
+## アドビのSnowflake統合
 
 Snowflakeアカウントは、次のクラウドプラットフォームのいずれかでホストできます。
 
@@ -35,10 +36,10 @@ Snowflakeアカウントは、次のクラウドプラットフォームのい�
 
 アドビのネイティブ [[!DNL AWS]](../aws/overview.md), [[!DNL Azure]](../azure/overview.md)、および [[!DNL Google Cloud Platform]](../google-cloud-platform/overview.md) イベント転送拡張機能を使用すると、ユーザーは、イベントデータをサーバーサイドでリアルタイムに収集、エンリッチメント、転送して、 [!DNL Snowflake]. 次を参照してください。
 
-![この [!DNL Snowflake] 次の間のリンクを示すレポート図 [!DNL AWS] および [!DNL Azure].](../../../images/extensions/server/snowflake/snowflake-workflow.png)
+![The [!DNL Snowflake] 次の間のリンクを示すレポート図 [!DNL AWS] および [!DNL Azure].](../../../images/extensions/server/snowflake/snowflake-workflow.png)
 
 ## 次の手順
 
-このガイドでは、 [!DNL Snowflake] そして [!DNL AWS] および [!DNL Azure] イベント転送拡張機能。
+このガイドでは、 [!DNL Snowflake] そして、 [!DNL AWS] および [!DNL Azure] イベント転送拡張機能。
 
 詳しくは、 [!DNL AWS] および [!DNL Azure] イベント転送機能 (Experience Platform: [[!DNL AWS] 拡張機能の概要](../aws/overview.md) そして [[!DNL Azure] 拡張機能の概要](../azure/overview.md).

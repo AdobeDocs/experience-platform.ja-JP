@@ -2,13 +2,13 @@
 title: HubSpot 接続
 description: HubSpot の宛先を使用すると、HubSpot アカウント内の連絡先レコードを管理できます。
 last-substantial-update: 2023-09-28T00:00:00Z
-source-git-commit: 9a8668a81927f22b03fed424c8df346f589da544
+exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 39%
 
 ---
-
 
 # [!DNL HubSpot] 接続
 

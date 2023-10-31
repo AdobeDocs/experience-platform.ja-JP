@@ -5,10 +5,10 @@ description: 宛先に対してアカウントオーディエンスをアクテ�
 badgeLimitedAvailability: label="限定提供（LA）" type="Caution"
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: bf4a34a0fbf59571eaea3ccbc619f9fe17d5c218
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 11%
+source-wordcount: '834'
+ht-degree: 10%
 
 ---
 
@@ -90,11 +90,11 @@ ht-degree: 11%
 | ソースフィールド | ターゲットフィールド |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` ( このフィールドを **[!UICONTROL ID 名前空間を選択]** 表示 ) |
+| `accountKey.sourceKey` | `primaryId` ( このフィールドを **[!UICONTROL ID 名前空間を選択]** 表示、選択時 **[!UICONTROL ターゲットフィールド]**) をクリックします。 <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するアカウントオーディエンスをアクティブ化します。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するアカウントオーディエンスをアクティブ化します。"){width="100" zoomable="yes"} |
 
 ### データガバナンスの実施 {#data-governance-enforcement}
 
-[同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は、現在、宛先に対してアカウントオーディエンスをアクティブ化する際にはサポートされません。 アクティベーションワークフローのレビューステップで、次の項目に対して灰色表示になっているコントロールを表示できます。 **[!UICONTROL 該当する同意ポリシーの表示]**.
+同意は、次の個人レベルまたはプロファイルレベルで適用されます： *顧客および見込み客のオーディエンス*. したがって  [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は、現在、宛先に対してアカウントオーディエンスをアクティブ化する際にはサポートされません。 アクティベーションワークフローのレビューステップで、次の項目に対して灰色表示になっているコントロールを表示できます。 **[!UICONTROL 該当する同意ポリシーの表示]**.
 
 ![同意実施コントロールが灰色表示になっているアカウントオーディエンス有効化ワークフローの手順を確認します。](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

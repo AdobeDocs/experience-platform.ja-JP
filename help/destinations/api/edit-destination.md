@@ -3,7 +3,8 @@ solution: Experience Platform
 title: フローサービス API を使用した宛先接続の編集
 type: Tutorial
 description: フローサービス API を使用して、宛先接続の様々なコンポーネントを編集する方法を説明します。
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 33%
@@ -18,7 +19,7 @@ ht-degree: 33%
 >
 > このチュートリアルで説明する編集操作は、現在、フローサービス API を通じてのみサポートされています。
 
-## Destination SDK の {#get-started}
+## はじめに {#get-started}
 
 このチュートリアルでは、有効なデータフロー ID が必要です。 有効なデータフロー ID がない場合は、 [宛先カタログ](../catalog/overview.md) そして、以下に示す手順に従います。 [宛先に接続](../ui/connect-destination.md) および [データをアクティブ化](../ui/activation-overview.md) このチュートリアルを試す前に
 
@@ -28,10 +29,10 @@ ht-degree: 33%
 
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。](../home.md)[!DNL Destinations]宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+* [宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。](../home.md)[!DNL Destinations]宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 * [サンドボックス](../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Flow Service] API
+以下の節では、 [!DNL Flow Service] API.
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -51,7 +52,7 @@ Experience Platform内のすべてのリソース ( [!DNL Flow Service]は、特
 
 >[!NOTE]
 >
->この `x-sandbox-name` ヘッダーが指定されていない場合、リクエストは `prod` サンドボックス。
+>次の場合、 `x-sandbox-name` ヘッダーが指定されていない場合、リクエストは `prod` サンドボックス。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
@@ -174,7 +175,7 @@ curl -X GET \
 
 ## ターゲット接続コンポーネント（ストレージの場所と他のコンポーネント）を編集 {#patch-target-connection}
 
-ターゲット接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] の宛先を指定する場合、ファイルが書き出されるバケットとパスを更新できます。 の場合 [!DNL Pinterest] の宛先を更新するには、 [!DNL Pinterest Advertiser ID] および [!DNL Google Customer Match] 以下を更新します。 [!DNL Pinterest Account ID].
+ターゲット接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] の宛先を指定する場合、ファイルが書き出されるバケットとパスを更新できます。 の場合 [!DNL Pinterest] の宛先を更新するには、 [!DNL Pinterest Advertiser ID] そして [!DNL Google Customer Match] 以下を更新します。 [!DNL Pinterest Account ID].
 
 ターゲット接続のコンポーネントを更新するには、 `/targetConnections/{TARGET_CONNECTION_ID}` エンドポイントを使用して、ターゲット接続 ID、バージョンおよび使用する新しい値を指定します。 前の手順で、目的の宛先に対する既存のデータフローを調べた際に、ターゲット接続 ID を取得したことを忘れないでください。
 
@@ -389,7 +390,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答では、ベース接続 ID と更新された etag が返されます。更新を検証するには、 [!DNL Flow Service] API と同じです。
+正常な応答では、ベース接続 ID と更新された etag が返されます。更新を検証するには、 [!DNL Flow Service] API と呼ばれ、ベース接続 ID を指定します。
 
 ```json
 {
@@ -431,7 +432,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答では、ベース接続 ID と更新された etag が返されます。更新を検証するには、 [!DNL Flow Service] API と同じです。
+正常な応答では、ベース接続 ID と更新された etag が返されます。更新を検証するには、 [!DNL Flow Service] API と呼ばれ、ベース接続 ID を指定します。
 
 ```json
 {
@@ -450,4 +451,4 @@ curl -X PATCH \
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、 [!DNL Flow Service] API 宛先について詳しくは、 [宛先の概要](../home.md).
+このチュートリアルでは、 [!DNL Flow Service] API. 宛先について詳しくは、 [宛先の概要](../home.md).

@@ -1,13 +1,13 @@
 ---
 description: このページでは、Adobe Experience Platform から宛先に書き出されたデータのメッセージ形式およびプロファイル変換について説明します。
 title: メッセージ形式
-source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
-workflow-type: ht
+exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 100%
 
 ---
-
 
 # メッセージ形式
 

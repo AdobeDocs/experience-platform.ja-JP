@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: 基本を学ぶ
 description: ユースケースプレイブック機能の基本を学ぶ方法を説明します。
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: 297dc9d6252d401f805fa5ebb5cf5111910286cf
-workflow-type: ht
-source-wordcount: '315'
+badgeBeta: label="ベータ版" type="Informative"
+exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '316'
 ht-degree: 100%
 
 ---
-
 
 # （ベータ版）基本を学ぶ
 

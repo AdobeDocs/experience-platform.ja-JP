@@ -1,13 +1,13 @@
 ---
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、資格情報設定を取得するために使用される API 呼び出しの例を示します。
 title: 資格情報設定の取得
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 100%
 
 ---
-
 
 # 資格情報設定の取得
 

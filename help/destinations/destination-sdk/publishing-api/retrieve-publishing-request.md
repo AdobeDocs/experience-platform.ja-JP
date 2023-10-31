@@ -1,13 +1,13 @@
 ---
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先公開リクエストに関する詳細を取得するために使用される API 呼び出しの例を示します。
 title: 宛先公開リクエストの取得
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: fceef12d-a52c-4259-a91e-7af88b132800
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 100%
 
 ---
-
 
 # 宛先公開リクエストの取得
 

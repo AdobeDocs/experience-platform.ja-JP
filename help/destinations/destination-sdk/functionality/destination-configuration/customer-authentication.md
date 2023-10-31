@@ -1,13 +1,13 @@
 ---
 description: 宛先に対して認証メカニズムを設定する方法を説明し、選択した認証方法に応じて UI でユーザーに表示される内容を確認します。
 title: 顧客認証設定
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 100%
 
 ---
-
 
 # 顧客認証設定
 

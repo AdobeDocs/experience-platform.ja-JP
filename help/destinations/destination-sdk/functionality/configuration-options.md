@@ -1,13 +1,13 @@
 ---
 description: Adobe Experience Platform の宛先サービスは、宛先機能を構築するいくつかのコンポーネント用に設定エンドポイントを使用します。これらのコンポーネントをどのように組み合わせれば、Experience Platform が、宛先パートナーに接続したり、カスタムメッセージを送信したり、デジタルエコシステム全体にわたってプロファイルデータをアクティブ化したりできるかを説明します。
 title: Destination SDK の設定オプション
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
-workflow-type: ht
+exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 100%
 
 ---
-
 
 # Destination SDK の設定オプション
 

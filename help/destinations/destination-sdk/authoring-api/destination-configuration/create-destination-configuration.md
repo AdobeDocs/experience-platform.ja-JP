@@ -1,13 +1,13 @@
 ---
 description: Adobe Experience Platform Destination SDK を通じて宛先設定を作成するための API 呼び出しの構築方法を説明します。
 title: 宛先設定の作成
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
+exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 100%
 
 ---
-
 
 # 宛先設定の作成
 
@@ -210,7 +210,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `identityNamespaces.externalId.acceptsAttributes` | ブール値 | 顧客が標準的なプロファイル属性を設定中の ID にマッピングできるかどうかを示します。 |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | ブール値 | 顧客が[カスタム名前空間](/help/identity-service/namespaces.md#manage-namespaces)に属する ID を設定中の ID にマッピングできるかどうかを示します。 |
 | `identityNamespaces.externalId.transformation` | 文字列 | _サンプル設定には表示されません_。例えば、[!DNL Platform] の顧客がプレーンなメールアドレスを属性として持っており、プラットフォームがハッシュ化されたメールのみを受け取る場合に使用します。ここで、適用する必要のある変換（例えば、メールを小文字に変換してからハッシュ化するなど）を行います。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 設定中の ID に顧客がマッピングできる[標準的な ID 名前空間](/help/identity-service/namespaces.md#standard)（例えば、IDFA）を示します。<br> `acceptedGlobalNamespaces` を使用する場合、`"requiredTransformation":"sha256(lower($))"` を使用すれば、メールアドレスまたは電話番号を小文字に変換してハッシュ化できます。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 設定中の ID に顧客がマッピングできる[標準的な ID 名前空間](/help/identity-service/namespaces.md#standard)（例えば、IDFA）を示します。<br>`acceptedGlobalNamespaces` を使用する場合、`"requiredTransformation":"sha256(lower($))"` を使用すれば、メールアドレスまたは電話番号を小文字に変換してハッシュ化できます。 |
 | `destinationDelivery.authenticationRule` | 文字列 | [!DNL Platform] の顧客が宛先に接続する方法を示します。使用できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`、<br> です。 <ul><li>Platform の顧客がユーザー名とパスワード、ベアラートークンまたは他の認証方法を使用して、お使いのシステムにログインする場合は、`CUSTOMER_AUTHENTICATION` を使用します。例えば、`customerAuthenticationConfigurations` で `authType: OAUTH2` や `authType:BEARER` も選択した場合、このオプションを選択することになります。 </li><li> アドビと宛先との間にグローバル認証システムがあり、[!DNL Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、[資格情報 API 設定](../../credentials-api/create-credential-configuration.md)を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 文字列 | この宛先に使用される[宛先サーバーテンプレート](../destination-server/create-destination-server.md)の `instanceId`。 |
 | `backfillHistoricalProfileData` | ブール値 | 宛先に対してオーディエンスをアクティブ化する際に、履歴プロファイルデータを書き出すかどうかを制御します。常にこれを `true` に設定します。 |

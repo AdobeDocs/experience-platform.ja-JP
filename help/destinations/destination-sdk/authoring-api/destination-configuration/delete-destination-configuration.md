@@ -1,13 +1,13 @@
 ---
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先設定を削除するために使用される API 呼び出しの例を示します。
 title: 宛先設定の削除
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 100%
 
 ---
-
 
 # 宛先設定の削除
 
@@ -69,4 +69,3 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 * [宛先設定の作成](create-destination-configuration.md)
 * [宛先設定の取得](retrieve-destination-configuration.md)
 * [宛先設定の更新](update-destination-configuration.md)
-

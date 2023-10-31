@@ -1,10 +1,11 @@
 ---
 title: インテリジェントな再エンゲージメント
 description: 主要なコンバージョンの瞬間に魅力的でつながりのあるエクスペリエンスを提供し、頻度の少ない顧客をインテリジェントに再エンゲージします。
-source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
+exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '3424'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -26,7 +27,7 @@ ht-degree: 4%
 
 ## 前提条件と計画 {#prerequisites-and-planning}
 
-このユースケースを実装する手順を完了したら、次のReal-Time CDP機能と UI 要素（使用順に一覧表示）を利用します。 これらの領域に必要な属性ベースのアクセス制御権限を持っていることを確認するか、必要な権限をシステム管理者に与えてもらってください。
+このユースケースを実装する手順を完了したら、次の Real-Time CDP 機能と UI 要素（使用順に一覧表示されています）を使用します。これらすべての領域に必要な属性ベースのアクセス制御権限があることを確認するか、必要な権限の付与をシステム管理者に依頼してください。
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)  — 複数のデータソースのデータを統合して、キャンペーンの燃料化をおこないます。 次に、このデータを使用して、キャンペーンオーディエンスを作成し、E メールや Web プロモーションタイルで使用するパーソナライズされたデータ要素（名前やアカウント関連の情報など）を表示します。 また、CDP は、E メールと Web( [!DNL Adobe Target]) をクリックします。
    * [スキーマ](/help/xdm/home.md)
@@ -39,7 +40,7 @@ ht-degree: 4%
    * [オーディエンス/イベント](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [ジャーニーアクション](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja)
 
-### ユースケースの達成方法：おおまかな概要 {#achieve-the-use-case-high-level}
+### ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 
 以下に、3 つの再エンゲージメントジャーニーの例の概要を示します。
 
@@ -87,7 +88,7 @@ ht-degree: 4%
 
 ### 使用する UI 機能と要素 {#ui-functionality-and-elements}
 
-ユースケースを実装する手順が完了したら、このドキュメントの最初に示すReal-Time CDPの機能と UI 要素を利用します。 これらの領域に必要な属性ベースのアクセス制御権限を持っていることを確認するか、必要な権限をシステム管理者に与えてもらってください。
+ユースケースを実装する手順が完了したら、このドキュメントの最初に示すReal-Time CDPの機能と UI 要素を利用します。 これらすべての領域に必要な属性ベースのアクセス制御権限があることを確認するか、必要な権限の付与をシステム管理者に依頼してください。
 
 ### スキーマデザインの作成とフィールドグループの指定 {#schema-design}
 

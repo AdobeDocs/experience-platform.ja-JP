@@ -1,13 +1,13 @@
 ---
 description: Destination SDK で作成された宛先に対するパートナースキーマの設定方法を説明します。
 title: パートナースキーマ設定
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1897'
-ht-degree: 87%
+ht-degree: 98%
 
 ---
-
 
 # パートナースキーマ設定
 
@@ -48,7 +48,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 Destination SDK は、以下の複数のスキーマ設定をサポートします。
 
 * 静的スキーマは、`schemaConfig` セクションの `profileFields` 配列を通じて定義されます。静的スキーマでは、`profileFields` 配列で Experience Platform UI に表示される必要がある各ターゲット属性を定義します。スキーマを更新する必要がある場合、[宛先設定を更新](../../authoring-api/destination-configuration/update-destination-configuration.md)する必要があります。
-* 動的スキーマは、 [動的スキーマサーバー](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers)を呼び出して、サポートされているターゲット属性を動的に取得し、独自の API に基づいてスキーマを生成します。 動的スキーマは、`profileFields` 配列を使用しません。スキーマを更新する必要がある場合、[宛先設定を更新](../../authoring-api/destination-configuration/update-destination-configuration.md)する必要はありません。代わりに、動的スキーマサーバーは、更新されたスキーマを API から取得します。
+* 動的スキーマは、[動的スキーマサーバー](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers)と呼ばれる、追加の宛先サーバータイプを使用して、サポートされているターゲット属性を動的に取得し、独自の API に基づいて動的にスキーマを生成します。動的スキーマは、`profileFields` 配列を使用しません。スキーマを更新する必要がある場合、[宛先設定を更新](../../authoring-api/destination-configuration/update-destination-configuration.md)する必要はありません。代わりに、動的スキーマサーバーは、更新されたスキーマを API から取得します。
 * スキーマ設定内では、必須の（または事前定義済みの）マッピングを追加するオプションがあります。これらは、ユーザーが Platform UI で表示できるマッピングですが、宛先への接続を設定する際には変更できません。例えば、常に宛先に送信されるように、メールアドレスフィールドを強制できます。
 
 `schemaConfig` セクションは、以下の節で示すように、必要とするスキーマのタイプに応じて、複数の設定パラメーターを使用できます。
@@ -105,8 +105,8 @@ Destination SDK は、以下の複数のスキーマ設定をサポートしま�
 | `profileRequired` | ブール値 | オプション | ユーザーが Experience Platform から宛先プラットフォームのカスタム属性にプロファイル属性をマッピングできる必要がある場合は、`true` を使用します。 |
 | `segmentRequired` | ブール値 | 必須 | このパラメーターは、Destination SDK に必須で、常に `true` に設定される必要があります。 |
 | `identityRequired` | ブール値 | 必須 | ユーザーが Experience Platform から `profileFields` 配列で定義した属性に [ID タイプ](identity-namespace-configuration.md)をマッピングできる必要がある場合は、`true` に設定します。 |
-| `segmentNamespaceAllowList` | 配列 | オプション | ユーザーがオーディエンスを宛先にマッピングできる特定のオーディエンス名前空間を定義します。 このパラメーターを使用して、配列で定義したオーディエンス名前空間からのみオーディエンスをエクスポートするよう Platform ユーザーを制限します。 このパラメーターは、と一緒に使用することはできません `segmentNamespaceDenyList`.<br> <br> 例： `"segmentNamespaceAllowList": ["AudienceManager"]` は、ユーザーが `AudienceManager` 名前空間をこの宛先に追加します。 <br> <br> ユーザーが任意のオーディエンスを宛先に書き出すことを許可するには、このパラメーターを無視します。 <br> <br> 両方の `segmentNamespaceAllowList` および `segmentNamespaceDenyList` が設定にない場合、ユーザーは、 [セグメント化サービス](../../../../segmentation/home.md). |
-| `segmentNamespaceDenyList` | 配列 | オプション | 配列で定義されたオーディエンス名前空間からユーザーがオーディエンスを宛先にマッピングできないように制限します。 と一緒に使用することはできません `segmentNamespaceAllowed`. <br> <br> 例： `"segmentNamespaceDenyList": ["AudienceManager"]` は、ユーザーが `AudienceManager` 名前空間をこの宛先に追加します。 <br> <br> ユーザーが任意のオーディエンスを宛先に書き出すことを許可するには、このパラメーターを無視します。 <br> <br> 両方の `segmentNamespaceAllowed` および `segmentNamespaceDenyList` が設定にない場合、ユーザーは、 [セグメント化サービス](../../../../segmentation/home.md). <br> <br> 接触チャネルに関係なく、すべてのオーディエンスのエクスポートを許可するには、 `"segmentNamespaceDenyList":[]`. |
+| `segmentNamespaceAllowList` | 配列 | オプション | ユーザーがオーディエンスを宛先にマッピングできる特定のオーディエンス名前空間を定義します。このパラメーターを使用して、Platform ユーザーが配列で定義したオーディエンス名前空間のみからオーディエンスを書き出しするように制限します。このパラメーターは、`segmentNamespaceDenyList` と共に使用することはできません。<br> <br>例：`"segmentNamespaceAllowList": ["AudienceManager"]` を使用すると、ユーザーは `AudienceManager` 名前空間のオーディエンスのみをこの宛先にマッピングできます。<br> <br>ユーザーが任意のオーディエンスを宛先に書き出しできるようにするには、このパラメーターを無視します。<br> <br>`segmentNamespaceAllowList` と `segmentNamespaceDenyList` の両方が設定にない場合、ユーザーは[セグメント化サービス](../../../../segmentation/home.md)からのオーディエンスのみを書き出しできます。 |
+| `segmentNamespaceDenyList` | 配列 | オプション | ユーザーが配列で定義したオーディエンス名前空間から宛先にオーディエンスをマッピングできないように制限します。`segmentNamespaceAllowed` と共に使用することはできません。<br> <br>例：`"segmentNamespaceDenyList": ["AudienceManager"]` は、ユーザーが `AudienceManager` 名前空間のオーディエンスをこの宛先にマッピングすることをブロックします。<br> <br> ユーザーが任意のオーディエンスを宛先に書き出しできるようにするには、このパラメーターを無視します。<br> <br> `segmentNamespaceAllowed` と `segmentNamespaceDenyList` の両方が設定にない場合、ユーザーは[セグメント化サービス](../../../../segmentation/home.md)からのオーディエンスのみを書き出しできます。<br> <br> 接触チャネルに関係なく、すべてのオーディエンスを書き出しできるようにするには、`"segmentNamespaceDenyList":[]` を設定します。 |
 
 {style="table-layout:auto"}
 

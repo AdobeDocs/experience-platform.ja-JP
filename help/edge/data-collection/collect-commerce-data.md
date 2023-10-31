@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Web SDK を使用して、コマース、製品、注文に関する情報を収集する
 description: Adobe Experience Platform Web SDK を使用して、製品や買い物かごに関連するデータを追加する方法について説明します。
-source-git-commit: cb47f70fe75eb0dfe26fb3c3557658cf6cff5a17
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 27%
 
 ---
-
 
 # コマース、製品、注文情報の収集
 
@@ -32,7 +32,7 @@ ht-degree: 27%
 >
 >測定には、2 つのフィールド（`id` と `value`）があります。ほとんどの場合、 `value` フィールド ( 例： `'value':1`) をクリックします。 The `id` 「 」フィールドでは、測定が送信された際の追跡用の一意の識別子を設定できます。 詳しくは、 XDM のドキュメントを参照してください。 [測定](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) を参照してください。
 
-| 測定 | 推奨 | 説明 |
+| 測定 | レコメンデーション | 説明 |
 |---|---|---|
 | [`cartAbandons`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcartabandons) | オプション | ユーザーが買い物かごにアクセスできなくなった、または購入できなくなった。 |
 | [`checkouts`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcheckouts) | 強く推奨 | ユーザーは製品を閲覧しなくなったが、製品の購入処理を進めている。 |
@@ -75,7 +75,7 @@ The `commerce` オブジェクトには、注文の詳細を収集するため�
 
 この節では、 `order` オブジェクト。
 
-| フィールド | オプション | 推奨 | 説明 |
+| フィールド | オプション | レコメンデーション | 説明 |
 |---|---|---|---|
 | [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmcurrencycode) |  |  | 注文合計の [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 通貨。 |
 | [`payments[]`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpayments) |  |  | 注文の支払の一覧。[paymentItem](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md) には、次が含まれます。 |
@@ -137,7 +137,7 @@ alloy("sendEvent",{
 
 製品リストには、対応するアクションに関連する製品が示されます。[productListItems](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md) のリストです。各製品には、複数のオプションフィールドがあります。
 
-| フィールド | 推奨 | 説明 |
+| フィールド | レコメンデーション | 説明 |
 |---|---|---|
 | [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | オプション | The [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 通貨を設定します。 このフィールドは、通常、異なる通貨コードを持つ製品リストに複数の製品がある場合にのみ適用されます。 |
 | [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | 強く推奨 | このフィールドは、該当する場合にのみ設定します。 例えば、 `productView` 製品の異なるバリエーションは、異なる価格を持つことができますが、 `productListAdds` イベント。 |

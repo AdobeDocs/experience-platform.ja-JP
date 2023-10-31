@@ -2,7 +2,8 @@
 title: UI を使用して RainFocus アカウントをExperience Platformに接続する
 description: UI を使用して RainFocus アカウントをExperience Platformに接続する方法を説明します。
 badge: ベータ版
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 29%

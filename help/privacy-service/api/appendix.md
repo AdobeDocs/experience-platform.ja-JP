@@ -7,7 +7,7 @@ exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 68%
+ht-degree: 69%
 
 ---
 
@@ -69,7 +69,7 @@ ht-degree: 68%
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Experience Platform（リアルタイム顧客プロファイル） | `profileService` |
-| Adobe Pass Authentication | `primetimeAuthentication` |
+| Adobe Pass 認証 | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | 顧客属性 (CRS) | `CRS` |
 | ID サービス | `identity` |

@@ -1,13 +1,13 @@
 ---
 title: 計算済み属性 API エンドポイント
 description: リアルタイム顧客プロファイル API を使用して、計算済み属性を作成、表示、更新および削除する方法について説明します。
-source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
+exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 12%
 
 ---
-
 
 # 計算済み属性 API エンドポイント
 

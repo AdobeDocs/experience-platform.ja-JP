@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年8月のリリースノート。
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1750'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -183,7 +184,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | --- | --- |
 | の一般公開 [!DNL SugarCRM] | [!DNL SugarCRM] ソースが使用できるようになりました。 [!DNL SugarCRM Accounts & Contacts] および [!DNL SugarCRM Events] ソースを使用して、[!DNL SugarCRM] アカウントから Experience Platform にデータを取り込みます。詳しくは、[[!DNL SugarCRM] 概要](../../sources/connectors/crm/sugarcrm.md)を参照してください。 |
 | UI でのソースデータフローのオンデマンド取り込みのサポート | UI で、既存のソースのデータフローに対して、フロー実行をオンデマンドで作成できるようになりました。 詳しくは、 [UI を使用したソースに対するオンデマンドフロー実行の作成](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| 新規のサポート `correlationID` Adobe Analyticsのフィールド | The `_experience.decisioning.propositions.scopeDetails.correlationID` フィールドがAdobe Analyticsソースコネクタスキーマで使用できるようになりました。 このフィールドは、A4T 分類のサポートに使用され、2023 年 9 月以降に入力されます。 |
+| Adobe Analytics の新しい `correlationID` フィールドのサポート | `_experience.decisioning.propositions.scopeDetails.correlationID` フィールドが Adobe Analytics ソースコネクタスキーマで使用できるようになりました。このフィールドは、A4T 分類のサポートに使用し、2023年9月から入力される予定です。 |
 
 {style="table-layout:auto"}
 

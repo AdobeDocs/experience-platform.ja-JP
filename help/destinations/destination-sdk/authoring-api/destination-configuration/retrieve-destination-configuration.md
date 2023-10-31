@@ -1,13 +1,13 @@
 ---
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、宛先設定を取得するために使用される API 呼び出しの例を示します。
 title: 宛先設定の取得
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 100%
 
 ---
-
 
 # 宛先設定の取得
 

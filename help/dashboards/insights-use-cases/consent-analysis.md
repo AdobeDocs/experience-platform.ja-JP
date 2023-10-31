@@ -1,7 +1,8 @@
 ---
 title: 同意分析と追跡
 description: 同意分析ダッシュボードを作成して、ユーザーの同意が経時的にどのようにトレンドを示しているかを追跡する方法を説明します。
-source-git-commit: 4c45492157f0fe1a82187faf73439d6206cb0dc9
+exl-id: 34accae5-8b4f-4281-8333-187a91db8199
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1921'
 ht-degree: 1%
@@ -31,7 +32,7 @@ ht-degree: 1%
 
 ![The [!UICONTROL オーディエンス] 次のダッシュボード [!UICONTROL 顧客], [!UICONTROL オーディエンス]、および [!UICONTROL セグメントを作成] ハイライト表示されました。](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-「セグメントビルダー」が表示されます。次に、「 **[!UICONTROL XDM 個人プロファイル]** を選択します。 詳しくは、ドキュメントを参照してください。 [ルールビルダーキャンバス](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
+セグメントビルダーが表示されます。次に、「 **[!UICONTROL XDM 個人プロファイル]** を選択します。 詳しくは、ドキュメントを参照してください。 [ルールビルダーキャンバス](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
 
 ![セグメントビルダーと [!UICONTROL XDM 個人プロファイル] 属性フォルダがハイライト表示されています。](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 

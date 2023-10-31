@@ -2,13 +2,13 @@
 title: 見込み客プロファイル
 description: 見込み客プロファイルを作成および使用して、サードパーティの情報を使用して不明な顧客に関する情報を収集する方法を説明します。
 type: Documentation
-source-git-commit: 1973fbe858fc0a266936faf6060e467c108fedf6
+exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 10%
 
 ---
-
 
 # 見込み客プロファイル
 

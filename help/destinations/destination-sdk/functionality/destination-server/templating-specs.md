@@ -1,13 +1,13 @@
 ---
 description: エンドポイントに送信される HTTP リクエストの書式設定方法を説明します。/authoring/destination-servers エンドポイントを使用して、Adobe Experience Platform Destination SDK の宛先サーバーテンプレート仕様を設定します。
 title: Destination SDK で作成される宛先のテンプレート仕様
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '523'
-ht-degree: 90%
+ht-degree: 93%
 
 ---
-
 
 # Destination SDK で作成される宛先のテンプレート仕様
 
@@ -46,11 +46,11 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 変換について詳しくは、以下のリンクを参照してください。
 
 * [メッセージ形式](message-format.md)
-* [ID、属性、オーディエンスのメンバーシップ変換にテンプレート言語を使用する](message-format.md#using-templating)
+* [ID、属性およびオーディエンスメンバーシップの変換へのテンプレート言語の使用](message-format.md#using-templating)
 
 >[!TIP]
 >
->アドビは、メッセージ変換テンプレートの作成とテストに役立つ[開発者ツール](../../testing-api/streaming-destinations/create-template.md)を提供しています。
+>アドビでは、メッセージ変換テンプレートの作成とテストに役立つ[開発者ツール](../../testing-api/streaming-destinations/create-template.md)を提供しています。
 
 以下の HTTP リクエストテンプレートの例と各パラメーターの説明を参照してください。
 

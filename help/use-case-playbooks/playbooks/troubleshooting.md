@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: プレイブックに関する問題のトラブルシューティング
 description: プレイブックに関する一般的な問題とトラブルシューティング方法を学ぶ
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: f548219668abb6e34d1dd8742191964bf6436bca
-workflow-type: ht
-source-wordcount: '121'
+badgeBeta: label="ベータ版" type="Informative"
+exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '122'
 ht-degree: 100%
 
 ---
-
 
 # （ベータ版）トラブルシューティングおよび既知の制限事項
 
@@ -22,7 +22,3 @@ ht-degree: 100%
 ## 既知の制限事項 {#known-limitations}
 
 プレイブックの新しいインスタンスを作成すると、新しいアセットが生成されます。ただし、生成されたスキーマの場合、プレイブックの 1 つのインスタンスでスキーマが生成され、編集した場合、プレイブックの別のインスタンスを有効にしても別のスキーマは生成され&#x200B;*ません*。代わりに、新しいインスタンス内でも編集したスキーマを引き続き使用します。
-
-
-
-

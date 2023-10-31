@@ -1,13 +1,13 @@
 ---
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、オーディエンステンプレートを作成するために使用される API 呼び出しの例を示します。
 title: オーディエンステンプレートの作成
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
-workflow-type: ht
+exl-id: 98d30002-d462-4008-9337-7de0cd608194
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 100%
 
 ---
-
 
 # オーディエンステンプレートの作成
 

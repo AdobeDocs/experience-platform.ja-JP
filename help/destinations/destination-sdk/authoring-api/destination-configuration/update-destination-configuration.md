@@ -1,13 +1,13 @@
 ---
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先設定を更新するために使用される API 呼び出しの例を示します。
 title: 宛先設定の更新
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: d7f18689-9806-4f73-a63a-fa112569819c
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 100%
 
 ---
-
 
 # 宛先設定の更新
 

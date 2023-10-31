@@ -1,13 +1,13 @@
 ---
 description: Experience Platform Destination SDK は、Experience Platform から書き出されたデータを宛先に必須の形式に変換できる、Pebble テンプレートを使用します。
 title: Destination SDK でサポートされる変換関数
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
+exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 100%
 
 ---
-
 
 # Destination SDK でサポートされる変換関数
 

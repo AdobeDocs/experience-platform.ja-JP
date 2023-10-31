@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Media Edge API の基本を学ぶ
 description: Media Edge API の基本を学ぶ
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 100%
 
 ---
-
 
 # Media Edge API の基本を学ぶ
 
@@ -292,5 +292,3 @@ curl -X 'POST' \
 
 * [Media Edge トラブルシューティングガイド](troubleshooting.md)
 * [Media Edge API の概要](overview.md)
-
-

@@ -1,13 +1,13 @@
 ---
 title: エッジプロファイル
 description: エッジプロファイル、関連する用語、エッジプロファイルで利用可能な地域、エッジプロファイルで利用可能なサービスについて説明します。
-source-git-commit: 3c6f885f3962caff5f10980b8811f42e02b64f85
+exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 5%
 
 ---
-
 
 # エッジプロファイル
 

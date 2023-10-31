@@ -1,13 +1,13 @@
 ---
 description: Destination SDK で作成された宛先に対して、書き出されたデータの移動先や、データが到達する場所で使用される認証ルールを示す、宛先配信設定の設定方法を説明します。
 title: 宛先配信
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 100%
 
 ---
-
 
 # 宛先配信
 

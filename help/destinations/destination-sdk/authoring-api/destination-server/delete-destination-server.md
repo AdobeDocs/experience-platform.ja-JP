@@ -1,13 +1,13 @@
 ---
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先サーバー設定を削除するために使用される API 呼び出しの例を示します。
 title: 宛先サーバー設定の削除
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: 2322a2ce-220e-4590-a553-b15152412752
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 100%
 
 ---
-
 
 # 宛先サーバー設定の削除
 
@@ -75,4 +75,3 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 * [宛先サーバー設定の作成](create-destination-server.md)
 * [宛先サーバー設定の取得](retrieve-destination-server.md)
 * [宛先サーバー設定の更新](update-destination-server.md)
-

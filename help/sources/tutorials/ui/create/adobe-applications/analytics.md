@@ -2,10 +2,10 @@
 title: UI での Adobe Analytics ソースコネクタの作成
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2298'
-ht-degree: 59%
+source-wordcount: '2481'
+ht-degree: 46%
 
 ---
 
@@ -264,33 +264,53 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![レビュー](../../../../images/tutorials/create/analytics/review.png)
 
-### データフローの監視
+## データフローの監視 {#monitor-your-dataflow}
 
-データフローを作成したら、それを通じて取り込まれるデータを監視できます。 [!UICONTROL カタログ]画面から「**[!UICONTROL データフロー]**」を選択すると、Analytics アカウントに関連する確立済みフローのリストが表示されます。
+データフローが完了したら、「 」を選択します。 **[!UICONTROL データフロー]** を使用して、データのアクティビティとステータスを監視します。
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![データフロータブが選択されたソースカタログ。](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-**データフロー**&#x200B;画面が表示されます。 このページは、名前、ソースデータ、作成時間、ステータスに関する情報を含む、データセットフローのペアです。
+組織内の既存の Analytics データフローのリストが表示されます。 ここから、ターゲットデータセットを選択し、それぞれの取り込みアクティビティを表示します。
 
-コネクタは、2 つのデータセットフローをインスタンス化します。 1 つのフローはバックフィルデータ、もう 1 つはライブデータのフローを表します。 バックフィルデータは、プロファイルに対して設定されていませんが、分析およびデータサイエンスのユースケース用にデータレイクへと送信されます。
+![組織内の既存のAdobe Analyticsデータフローのリスト。](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-バックフィル、ライブデータおよびそれぞれのレイテンシーの詳細については、[Analytics データコネクタの概要](../../../../connectors/adobe-applications/analytics.md)を参照してください。
+The [!UICONTROL データセットアクティビティ] ページには、Analytics からExperience Platformに送信されるデータの進行状況に関する情報が表示されます。 インターフェイスには、取り込まれたレコードの数、取り込まれたバッチの数、失敗したバッチの数などの指標が表示されます。
 
-表示するデータセットフローをリストから選択します。
+ソースは、2 つのデータセットフローをインスタンス化します。 1 つのフローはバックフィルデータ、もう 1 つはライブデータのフローを表します。 バックフィルデータは、リアルタイム顧客プロファイルに取り込むように設定されていませんが、分析およびデータサイエンスの使用例のためにデータレイクに送信されます。
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+バックフィル、ライブデータおよびそれぞれの待ち時間について詳しくは、 [Analytics ソースの概要](../../../../connectors/adobe-applications/analytics.md).
 
-**[!UICONTROL データセットアクティビティ]**&#x200B;ページが表示されます。 このページには、消費したメッセージの割合が、グラフ形式で表示されます。 上部ヘッダーから「**[!UICONTROL データガバナンス]**」を選択し、ラベリングフィールドにアクセスします。
+![Adobe Analyticsデータの特定のターゲットデータセットのデータセットアクティビティページ。](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++レガシー監視インターフェイスを使用した個々のバッチの表示
 
-データセットフローの継承されたラベルは、[!UICONTROL データガバナンス]画面から確認できます。Analytics からのデータにラベルを付ける方法について詳しくは、[データ使用ラベルガイド](../../../../../data-governance/labels/user-guide.md)をご覧ください。
+データセットアクティビティページには、個々のバッチのリストは表示されません。 個々のバッチのリストを表示するには、データセットアクティビティインターフェイスでグラフを選択します。
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![グラフが選択されたデータセットアクティビティページ。](../../../../images/tutorials/create/analytics/select-chart.png)
 
-データフローを削除するには、[!UICONTROL データフロー]ページを開き、データフロー名の横にある「`...`」を選択してから「[!UICONTROL 削除]」を選択します。
+「監視」ダッシュボードが表示されます。 次に、「 **[!UICONTROL 取り込みエラーのみ：はい]** をクリックして、フィルターをクリアし、個々のバッチのリストを表示します。
 
-![削除](../../../../images/tutorials/create/analytics/delete.png)
+![失敗フィルターが選択された監視ダッシュボード。](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+インターフェイスは、個々のバッチのリスト（それぞれの指標に関する情報を含む）を更新します。
+
+![バッチデータの従来の監視ページ。](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| 指標 | 説明 |
+| --- | --- |
+| バッチ ID | 特定のバッチの ID。 この値は内部的に生成されます。 |
+| データセット名 | Analytics データに使用される特定のデータセットの名前。 |
+| ソース | 取り込んだデータのソース。 |
+| 更新済み | 最新のフロー実行反復の日付。 |
+| データセット内のレコード | データセット内のレコードの合計数。 **注意**：このパラメーターは、場合によっては `in-progress`. このステータスは、レコードの取り込み処理がまだ完了していないことを示します。 |
+| 新しいプロファイルフラグメント | 取り込まれた新しいプロファイルフラグメントの合計数です。 |
+| 既存のプロファイルフラグメント | 既存のプロファイルフラグメントの合計数です。 |
+| ステッチされた ID レコード | 取得後に結合された ID レコードの合計数。 |
+| プロファイル内のレコード | リアルタイム顧客プロファイルに取り込まれたレコードの合計数です。 |
+
+{style="table-layout:auto"}
+
++++
 
 ## 次の手順とその他のリソース
 
