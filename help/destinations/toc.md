@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: e4c2fc3cc2ef1f6731c81becdd6a6e4149b769dd
+source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 93%
+source-wordcount: '1201'
+ht-degree: 92%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 93%
       * [ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-streaming-profile-destinations.md)
       * [バッチプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-batch-profile-destinations.md)
       * [エッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する](./ui/activate-edge-personalization-destinations.md)
+      * [LiveRamp 識別子に基づいて、キュレーションされた宛先に対するオーディエンスをアクティブ化します](./ui/activate-curated-destinations.md)
       * [見込み客のオーディエンスを宛先に対してアクティブ化する](./ui/activate-prospect-audiences.md)
       * [（限定的な可用性）宛先に対するアカウントオーディエンスのアクティブ化](./ui/activate-account-audiences.md)
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
