@@ -2,10 +2,10 @@
 title: 宛先での設定可能で一般的な書き出し設定
 description: 宛先レベルで設定可能な宛先の書き出し設定と、固定されていて編集できない書き出し設定について説明します。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 93%
+source-wordcount: '843'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +23,7 @@ Experience Platform の宛先への書き出し動作について考える際は
 
 ## 宛先タイプ間の一般的な書き出し設定 {#common-settings-across-destination-types}
 
-宛先の書き出し動作は、*宛先の書き出しをトリガーする内容*&#x200B;と、*宛先の書き出しに含まれる内容*&#x200B;に関して、宛先タイプに属する宛先全体で一貫しています。宛先の書き出しは、宛先サービスが[アップストリームのリアルタイム顧客プロファイルサービス](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=ja#adobe-experience-platform-%26-applications-detailed-architecture-diagram)から受信する通知によってトリガーされます。
+宛先の書き出し動作は、*宛先の書き出しをトリガーする内容*&#x200B;と、*宛先の書き出しに含まれる内容*&#x200B;に関して、宛先タイプに属する宛先全体で一貫しています。宛先の書き出しは、宛先サービスが[アップストリームのリアルタイム顧客プロファイルサービス](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram)から受信する通知によってトリガーされます。
 
 宛先の書き出しに含まれる内容は、宛先タイプによって微妙に異なります。詳しくは、[宛先タイプごとの一般的な書き出し動作パターン](/help/destinations/how-destinations-work/profile-export-behavior.md)を参照してください。これらの設定は、宛先の開発者やReal-Time CDPユーザーは編集できません。
 

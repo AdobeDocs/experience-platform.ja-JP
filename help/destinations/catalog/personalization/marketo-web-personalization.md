@@ -3,10 +3,10 @@ keywords: Marketo Web パーソナライゼーション；marketo Web パーソ�
 title: Marketo web パーソナライゼーション拡張機能
 description: Marketo Web パーソナライゼーション拡張機能は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 84%
+source-wordcount: '499'
+ht-degree: 85%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 84%
 
 ## 概要 {#overview}
 
-この拡張機能は、のスクリプトをデプロイします [!DNL Marketo’s] Web パーソナライゼーションおよび ContentAI アプリケーション。 [!DNL Marketo] Web パーソナライゼーションは、匿名訪問者用の企業特性や、既知の訪問者用の Engagement Platform 内の幅広い行動属性など、Web 訪問者の特性を一意に識別子、コンテンツをパーソナライズします。[!DNL Marketo][!DNL Marketo] ContentAI には、B2B のお客様に固有の Web キャンペーンや電子メールキャンペーンで、AI を活用したレコメンデーションやパーソナライズをおこなう機能が備わっています。
+この拡張機能は、のスクリプトをデプロイします [!DNL Marketo's] Web パーソナライゼーションおよび ContentAI アプリケーション。 [!DNL Marketo] Web パーソナライゼーションは、匿名訪問者用の企業特性や、既知の訪問者用の Engagement Platform 内の幅広い行動属性など、Web 訪問者の特性を一意に識別子、コンテンツをパーソナライズします。[!DNL Marketo][!DNL Marketo] ContentAI には、B2B のお客様に固有の Web キャンペーンやメールキャンペーンで、AI を活用したレコメンデーションやパーソナライズをおこなう機能が備わっています。
 
-[!DNL Marketo Web Personalization] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 Marketoでの Web パーソナライゼーションと ContentAI について詳しくは、 [Web パーソナライゼーションの概要](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
+[!DNL Marketo Web Personalization] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 Marketoでの Web パーソナライゼーションと ContentAI について詳しくは、 [Web パーソナライゼーションの概要](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 84%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Marketo Web Personalization] 拡張子：
+[!DNL Marketo Web Personalization] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

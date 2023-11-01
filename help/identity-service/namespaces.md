@@ -2,9 +2,9 @@
 title: ID 名前空間の概要
 description: ID サービスの ID 名前空間について説明します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1691'
 ht-degree: 25%
 
 ---
@@ -76,13 +76,13 @@ Experience Platform内では、次の ID タイプを使用できます。
 | 表示名 | 説明 |
 | ------------ | ----------- |
 | AdCloud | AdobeAdCloud を表す名前空間。 |
-| Adobe Analytics（レガシー ID） | Adobe Analyticsを表す名前空間。 次のドキュメントを参照してください： [Adobe Analytics名前空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) を参照してください。 |
+| Adobe Analytics（レガシー ID） | Adobe Analyticsを表す名前空間。 次のドキュメントを参照してください： [Adobe Analytics名前空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) を参照してください。 |
 | Apple IDFA（広告主の ID） | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
 | Apple Push Notification service | Appleプッシュ通知サービスを使用して収集された ID を表す名前空間。 次のドキュメントを参照してください： [Apple Push Notification service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) を参照してください。 |
-| CORE | Adobe Audience Managerを表す名前空間。 この名前空間は、従来の名前 (「Adobe AudienceManager」) でも参照できます。 次のドキュメントを参照してください： [Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) を参照してください。 |
+| CORE | Adobe Audience Managerを表す名前空間。 この名前空間は、従来の名前 (「Adobe AudienceManager」) でも参照できます。 次のドキュメントを参照してください： [Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) を参照してください。 |
 | ECID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。次のドキュメントを参照してください： [ECID](./ecid.md) を参照してください。 |
 | メール | 電子メールアドレスを表す名前空間。 このタイプの名前空間は、多くの場合、1 人のユーザーに関連付けられているので、様々なチャネルをまたいでそのユーザーを識別するために使用できます。 |
-| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。次のドキュメントを参照してください： [SHA256 ハッシュサポート](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ja#hashing-support) を参照してください。 |
+| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。次のドキュメントを参照してください： [SHA256 ハッシュサポート](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) を参照してください。 |
 | Firebase Cloud Messaging | プッシュ通知用にGoogle Firebase Cloud Messaging を使用して収集された ID を表す名前空間。 次のドキュメントを参照してください： [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) を参照してください。 |
 | Google Ad ID (GAID) | Google 広告 ID を表す名前空間。詳しくは、[Google 広告 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=ja) に関する次のドキュメントを参照してください。 |
 | Google Click ID | Google Click ID を表す名前空間。 次のドキュメントを参照してください： [Google Ads でのクリック追跡](https://developers.google.com/adwords/api/docs/guides/click-tracking) を参照してください。 |

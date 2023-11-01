@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDKは、選択したデータおよび認証形式に基づいて、オーディエンスとプロファイルのデータをエンドポイントまたはストレージの場所に配信するExperience Platformの宛先統合パターンを設定できる設定 API のセットです。 設定は Experience Platform に保存され、API 経由で取得することで追加アップデートを入手できます。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 42%
+source-wordcount: '848'
+ht-degree: 43%
 
 ---
 
@@ -33,7 +33,7 @@ Experience Platformのお客様は、アクティベーションのニーズに�
 
 ![宛先開発者がDestination SDKとやり取りする方法、およびReal-Time CDPのお客様が製品化された宛先とプライベートな宛先から得るメリットを示す概要図です。](assets/destination-sdk-visual.png)
 
-## サポートされる統合のタイプ {#supported-integration-types}
+## サポートされる統合タイプ {#supported-integration-types}
 
 ### リアルタイム（ストリーミング）統合 {#real-time-integrations}
 
@@ -52,7 +52,7 @@ Destination SDKを通じて、選択したストレージの場所にファイ�
 * サポートされる複数の形式 (CSV、Parquet、JSON) でのファイルのエクスポート
 * 設定可能なファイルフォーマットオプション。ダウンストリームの要件を満たすように書き出されるファイルの形式を構造化できます。
 
-の宛先側の技術要件をお読みください [統合の前提条件](integration-prerequisites.md) 記事を読み、 [設定オプション](functionality/configuration-options.md) 記事
+の宛先側の技術要件をお読みください [統合の前提条件](integration-prerequisites.md) この記事を読み、 [設定オプション](functionality/configuration-options.md) 記事
 
 ## Destination SDK へのアクセスの取得 {#get-access}
 
@@ -60,9 +60,9 @@ Destination SDKへのアクセスは、パートナーまたはExperience Platfo
 
 | パートナーまたは顧客のタイプ | Destination SDK へのアクセス方法 |
 ---------|----------|
-| 独立系ソフトウェアベンダー（ISV） | 参加する [Adobe技術パートナープログラム](https://partners.adobe.com/technologyprogram/experiencecloud.html) Destination SDKへのアクセスをプロビジョニングするExperience Platformサンドボックスの取得をリクエストします。 |
+| 独立系ソフトウェアベンダー（ISV） | に参加する [Adobe技術パートナープログラム](https://partners.adobe.com/technologyprogram/experiencecloud.html) Destination SDKへのアクセスをプロビジョニングするExperience Platformサンドボックスの取得をリクエストします。 |
 | システムインテグレーター（SI） | [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) で Gold レベルまたは Platinum レベルであれば、プロビジョニングされた Experience Platform サンドボックスと Destination SDK へのアクセスが提供されます。 |
-| Experience Platform顧客 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | デフォルトでは、Experience PlatformサンドボックスとDestination SDKにアクセスでき、組織のプライベートな宛先を構築できます。 |
+| Experience Platformの顧客 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | デフォルトでは、Experience PlatformサンドボックスとDestination SDKにアクセスでき、組織のプライベートな宛先を構築できます。 |
 
 {style="table-layout:auto"}
 
@@ -70,10 +70,10 @@ Destination SDKへのアクセスは、パートナーまたはExperience Platfo
 
 Experience Platform で宛先を設定するプロセスの概要を次に示します。
 
-1. ISV または SI の場合は、 [アクセス権の取得](#get-access) 上記の節の情報。 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様は、この手順をスキップできます。
+1. ISV または SI の場合は、 [アクセス権の取得](#get-access) 上記の節の情報を参照してください。 [Real-Time CDP Ultimate パッケージ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様は、この手順をスキップできます。
 2. [Experience Platform サンドボックスのプロビジョニングをリクエスト](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support)し、宛先オーサリング権限を有効にします。
-3. 統合を構築します。 製品ドキュメントの手順に従って、を設定します。 [ストリーミング先](guides/configure-destination-instructions.md) または [ファイルベースの宛先](guides/configure-file-based-destination-instructions.md).
-4. 統合をテストします。 製品ドキュメントの手順に従って、をテストします。 [ストリーミング先](testing-api/streaming-destinations/streaming-destination-testing-overview.md) または [ファイルベースの宛先](testing-api/batch-destinations/file-based-destination-testing-overview.md).
+3. 統合を構築します。 製品ドキュメントの手順に従って、を設定します。 [ストリーミングの宛先](guides/configure-destination-instructions.md) または [ファイルベースの宛先](guides/configure-file-based-destination-instructions.md).
+4. 統合をテストします。 製品ドキュメントの手順に従って、をテストします。 [ストリーミングの宛先](testing-api/streaming-destinations/streaming-destination-testing-overview.md) または [ファイルベースの宛先](testing-api/batch-destinations/file-based-destination-testing-overview.md).
 5. ISV または SI が [製品化統合](./overview.md#productized-custom-integrations), [統合の送信](guides/submit-destination.md) Adobeのレビュー用（標準応答時間は 5 営業日）。
 6. 製品化された統合を作成する ISV または SI の場合は、[セルフサービスのドキュメントプロセス](docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを Experience League に作成します。
 7. 製品化された統合の場合、Adobeによって承認されると、統合は [Experience Platformカタログ](../catalog/overview.md).

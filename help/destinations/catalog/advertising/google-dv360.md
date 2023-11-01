@@ -3,9 +3,9 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Google Display & Video 360 接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1020'
 ht-degree: 85%
 
 ---

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年9月
 description: Adobe Experience Platform の 2022年9月のリリースノート。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
-source-wordcount: '2940'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '2938'
+ht-degree: 99%
 
 ---
 
@@ -120,7 +120,7 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新機能または更新された機能**
 
@@ -134,7 +134,7 @@ Platform のデータ収集について詳しくは、[データ収集の概要]
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)を参照してください。この統合は、[Adobe Campaign バージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ja#release-8-4-1)で機能することに注意してください。 |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の基本を学ぶ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)を参照してください。この統合は、[Adobe Campaign バージョン 8.4 以降](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)で機能することに注意してください。 |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | この [!DNL Salesforce CRM] の宛先が更新され、連絡先とリード両方の更新をサポートするようになりました。また、迅速な更新を実現するようパフォーマンスを向上しました。 |
 
 {style="table-layout:auto"}

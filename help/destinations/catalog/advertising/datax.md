@@ -2,10 +2,10 @@
 title: Verizon MediaYahoo DataX 接続
 description: DataX は Verizon Media／Yahoo の集約インフラストラクチャです。安全で自動化されたスケーラブルな方法で Verizon Media／Yahoo が外部パートナーとデータを交換できるよう様々なコンポーネントをホストしています。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '817'
-ht-degree: 49%
+source-wordcount: '815'
+ht-degree: 48%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 49%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Verizon Media] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
+[!DNL Verizon Media] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform の顧客管理キー
 description: Adobe Experience Platform に保存されたデータ用に独自の暗号化キーを設定する方法を説明します。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 36%
+source-wordcount: '761'
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform に保存されたデータは、システムレベル
 
 >[!NOTE]
 >
->Customer Journey Analyticsのお客様の場合は、 [Customer Journey Analytics文書](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
+>Customer Journey Analyticsのお客様の場合は、 [Customer Journey Analytics文書](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=ja).
 
 ## 前提条件
 

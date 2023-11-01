@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データモデリングのベストプラクティス
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3044'
-ht-degree: 88%
+source-wordcount: '3042'
+ht-degree: 89%
 
 ---
 
@@ -231,7 +231,7 @@ Adobe Analytics の場合、ECID はデフォルトのプライマリ ID です�
 
 ## データ検証フィールド {#data-validation-fields}
 
-Platform に不正なデータが取り込まれるのを防ぐには、スキーマの作成時に、フィールドレベルの検証の条件を定義することをお勧めします。 特定のフィールドに制約を設定するには、スキーマエディターからフィールドを選択して、 [!UICONTROL フィールドのプロパティ] サイドバー。 次のドキュメントを参照してください： [タイプ固有のフィールドプロパティ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) を参照してください。
+Platform に不正なデータが取り込まれるのを防ぐには、スキーマの作成時に、フィールドレベルの検証の条件を定義することをお勧めします。 特定のフィールドに制約を設定するには、スキーマエディターからフィールドを選択して、 [!UICONTROL フィールドのプロパティ] サイドバー。 次のドキュメントを参照してください： [タイプ固有のフィールドプロパティ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html#type-specific-properties) を参照してください。
 
 ![制約フィールドがハイライト表示されたスキーマエディター [!UICONTROL フィールドのプロパティ] サイドバー。](../images/best-practices/data-validation-fields.png)
 

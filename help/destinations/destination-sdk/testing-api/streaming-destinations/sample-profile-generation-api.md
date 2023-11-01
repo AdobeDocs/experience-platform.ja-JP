@@ -2,10 +2,10 @@
 description: 宛先テスト API を使用して、宛先テストで使用できる、ストリーミング宛先用のサンプルプロファイルを生成する方法を説明します。
 title: ソーススキーマに基づくサンプルプロファイルの生成
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
-workflow-type: ht
-source-wordcount: '1018'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '1010'
+ht-degree: 97%
 
 ---
 
@@ -46,8 +46,8 @@ Adobe XDM ソーススキーマ（宛先をテストする際に使用）また�
 
 >[!IMPORTANT]
 >
->* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ja)を参照してください。
-> * 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ja)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
+>* この API を使用するには、Experience Platform UI に既存の宛先への接続がある必要があります。詳しくは、[宛先への接続](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)および[宛先に対するプロファイルとオーディエンスのアクティブ化](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)を参照してください。
+> * 宛先への接続を確立したら、[宛先との接続を参照](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)する際に、このエンドポイントへの API 呼び出しで使用する必要がある、宛先インスタンス ID を取得します。
 >![宛先インスタンス ID の取得方法の UI 画像](../../assets/testing-api/get-destination-instance-id.png)
 
 **API 形式**
@@ -183,7 +183,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | `segmentMembership` | 個人のオーディエンスメンバーシップを記述するマップオブジェクト。`segmentMembership` について詳しくは、[オーディエンスメンバーシップの詳細](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)を参照してください。 |
 | `lastQualificationTime` | 前回、このプロファイルがセグメントに選定された際のタイムスタンプ。 |
 | `xdm:status` | オーディエンスメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`：プロファイルは、セグメントの一部です。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてオーディエンスから外れています。</li></ul> |
-| `identityMap` | 個人の様々な ID 値を、関連する名前空間と共に記述するマップタイプフィールド。`identityMap` について詳しくは、[スキーマ構成の基本](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja#identityMap)を参照してください。 |
+| `identityMap` | 個人の様々な ID 値を、関連する名前空間と共に記述するマップタイプフィールド。`identityMap` について詳しくは、[スキーマ構成の基本](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap)を参照してください。 |
 
 {style="table-layout:auto"}
 

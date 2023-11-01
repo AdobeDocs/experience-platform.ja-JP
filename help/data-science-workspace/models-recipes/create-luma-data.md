@@ -5,9 +5,9 @@ title: Luma Web スキーマとデータセットの作成
 type: Tutorial
 description: このチュートリアルでは、Luma デモ傾向モデルに必要な前提条件とアセットについて説明します。
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '463'
 ht-degree: 3%
 
 ---
@@ -30,10 +30,10 @@ ht-degree: 3%
 
 ## アセットをダウンロード {#assets}
 
-次のチュートリアルでは、カスタム Luma 購入傾向モデルを使用します。 先に進む前に [必要なアセットのダウンロード](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip フォルダー。 このフォルダーには次が含まれます。
+次のチュートリアルでは、カスタム Luma 購入傾向モデルを使用します。 続ける前に、 [必要なアセットのダウンロード](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip フォルダー。 このフォルダーには次が含まれます。
 
 - 購入傾向モデルノートブック
-- データをトレーニングおよびスコアリングデータセットに取り込むために使用されるノートブック（Luma Web データのサブセット）
+- トレーニングとスコアリングのデータセット（Luma Web データのサブセット）にデータを取り込むために使用されるノートブック
 - 730,000 人の Luma ユーザーの Web データを含むデモ JSON ファイル
 - Web データとモデルの理解に役立つ、オプションの Python 3 EDA（探索的データ分析）ノートブック。
 

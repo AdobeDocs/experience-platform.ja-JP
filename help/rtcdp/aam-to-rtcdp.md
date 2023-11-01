@@ -2,10 +2,10 @@
 title: Audience Manager から Real-Time CDP への進化
 description: Audience Manager から Real-Time CDP への移行を計画する前の考慮事項について説明します。
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 90%
+source-wordcount: '528'
+ht-degree: 84%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 90%
 
 ## 1. Audience Manager 内のデータアーキテクチャの検討
 
-Audience Manager から Real-Time CDP への進化を検討する場合、今が [Audience Manager のセグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=ja)を分析し、これらのセグメントを構成する[シグナル](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=ja)、[特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=ja)、[ルール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=ja#segment-builder-section)が何であるかを判断する重要な時期です。
+Audience Manager から Real-Time CDP への進化を検討する場合、今が [Audience Manager のセグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html)を分析し、これらのセグメントを構成する[シグナル](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html)、[特性](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html)、[ルール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section)が何であるかを判断する重要な時期です。
 
 さらに、Audience Manager で現在使用しているデータソースについても考慮します。
 

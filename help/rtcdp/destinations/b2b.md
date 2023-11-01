@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B Edition の宛先
 description: Adobe Real-time Customer Data Platform B2B Edition における宛先の役割の概要です。
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 4%
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
@@ -25,4 +25,4 @@ Adobe Real-time Customer Data Platform B2B Edition を使用すると、B2B デ�
 
 - Real-time Customer Data Platform B2B Edition で使用可能な任意の宛先について詳しくは、 [宛先カタログ](../../destinations/catalog/overview.md).
 - Marketo Engageに書き出し可能な ID について詳しくは、 [Marketo Engageの宛先に関するドキュメント](../../destinations/catalog/adobe/marketo-engage.md).
-- Experience PlatformUI でのMarketo Engage先への接続とデータの書き出しの方法について詳しくは、 [&#39;Adobe Experience PlatformセグメントをMarketo静的リストにプッシュ&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=ja).
+- Experience PlatformUI でのMarketo Engage先への接続とデータの書き出しの方法について詳しくは、 [&#39;Adobe Experience PlatformセグメントをMarketo静的リストにプッシュ&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).

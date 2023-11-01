@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK を使用したイベントの追跡
 description: Adobe Experience Platform Web SDK のイベントの追跡方法について説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 31%
+source-wordcount: '1192'
+ht-degree: 32%
 
 ---
 
@@ -41,7 +41,7 @@ alloy("sendEvent", {
 });
 ```
 
-この間に時間がかかる場合があります `sendEvent` コマンドが実行され、データがサーバーに送信されたとき（例えば、Web SDK ライブラリが完全に読み込まれていない場合や、同意がまだ受け取られていない場合）に実行されます。 の任意の部分を変更する場合 `xdm` オブジェクトの実行後 `sendEvent` コマンドを使用する場合は、 `xdm` object _前_ の実行 `sendEvent` コマンドを使用します。 以下に例を示します。
+この間に時間がかかる場合があります `sendEvent` コマンドが実行され、データがサーバーに送信されたとき（例えば、Web SDK ライブラリが完全に読み込まれていない場合や、同意がまだ受け取られていない場合）に呼び出されます。 の任意の部分を変更する場合 `xdm` オブジェクトを削除します。 `sendEvent` コマンドを使用する場合は、 `xdm` object _前_ の実行 `sendEvent` コマンドを使用します。 以下に例を示します。
 
 ```javascript
 var clone = function(value) {
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-この例では、データレイヤーは、JSON にシリアライズしてからデシリアライズして複製されます。 次に、クローン結果が `sendEvent` コマンドを使用します。 これにより、 `sendEvent` コマンドには、データレイヤーが存在した時点でのスナップショットが含まれます。 `sendEvent` コマンドが実行され、元のデータレイヤーオブジェクトに対する後の変更が、サーバーに送信されたデータに反映されなくなりました。 イベント駆動型のデータレイヤーを使用している場合、データのクローンは既に自動的に処理されている可能性が高くなります。 例えば、 [Adobeクライアントデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)、 `getState()` メソッドは、以前のすべての変更に関する計算済みのクローンスナップショットを提供します。 また、Adobe Experience Platform Web SDK タグ拡張機能を使用している場合は、自動的に処理されます。
+この例では、データレイヤーは、JSON にシリアライズしてからデシリアライズして複製されます。 次に、クローン結果が `sendEvent` コマンドを使用します。 これにより、 `sendEvent` コマンドには、データレイヤーが存在した時点でのスナップショットが含まれます。 `sendEvent` コマンドが実行され、後で元のデータレイヤーオブジェクトに対する変更がサーバーに送信されたデータに反映されなくなりました。 イベント駆動型のデータレイヤーを使用している場合、データのクローンは既に自動的に処理されている可能性が高くなります。 例えば、 [Adobeクライアントデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)、 `getState()` メソッドは、以前のすべての変更に関する計算済みのクローンスナップショットを提供します。 また、Adobe Experience Platform Web SDK タグ拡張機能を使用している場合は、自動的に処理されます。
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->この `datasetId` オプション `sendEvent` コマンドは廃止されました。 データセット ID を上書きするには、 [設定の上書き](../../datastreams/overrides.md) 代わりに、
+>The `datasetId` オプションは `sendEvent` コマンドは廃止されました。 データセット ID を上書きするには、 [設定の上書き](../../datastreams/overrides.md) 代わりに、
 
 場合によっては、設定 UI で設定されたデータセット以外のデータセットにイベントを送信する必要があります。 そのためには、 `datasetId` オプションを `sendEvent` コマンド：
 
@@ -162,7 +162,7 @@ alloy("sendEvent", {
 
 ## sendBeacon API の使用
 
-Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。これは、ブラウザーがバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しないことを意味します。Adobe Experience Platform [!DNL Web SDK] 使用する `sendBeacon`、オプションを追加します。 `"documentUnloading": true` を event コマンドに追加します。  次に例を示します。
+Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。これは、ブラウザーがバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しないことを意味します。Adobe Experience Platformに [!DNL Web SDK] 使用する `sendBeacon`、オプションを追加します。 `"documentUnloading": true` を event コマンドに追加します。  次に例を示します。
 
 
 ```javascript
@@ -210,15 +210,15 @@ alloy("sendEvent", {
 ```
 
 
-### この `result` object
+### The `result` object
 
-この `sendEvent` コマンドは、 `result` オブジェクト。 この `result` オブジェクトには次のプロパティが含まれます。
+The `sendEvent` コマンドは、 `result` オブジェクト。 The `result` オブジェクトには次のプロパティが含まれます。
 
-**提案**:訪問者が適合したパーソナライゼーションオファー。 [提案の詳細を表示します。](../personalization/rendering-personalization-content.md#manually-rendering-content)
+**提案**：訪問者が適合するパーソナライゼーションオファー。 [提案の詳細を表示します。](../personalization/rendering-personalization-content.md#manually-rendering-content)
 
-**決定**:このプロパティは非推奨です。 代わりに `propositions` を使用してください。
+**決定**：このプロパティは非推奨です。 代わりに `propositions` を使用してください。
 
-**宛先**:外部のパーソナライゼーションプラットフォーム、コンテンツ管理システム、広告サーバー、お客様の Web サイトで実行しているその他のアプリケーションと共有できるAdobe Experience Platformのセグメント。 [宛先の詳細を説明します。](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+**宛先**：顧客の Web サイト上で実行している外部のパーソナライゼーションプラットフォーム、コンテンツ管理システム、広告サーバー、その他のアプリケーションと共有できる、Adobe Experience Platformのセグメント。 [宛先の詳細を説明します。](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
 
 >[!WARNING]
 >
@@ -250,7 +250,7 @@ alloy("configure", {
 2. 自動的に収集された値（[自動情報](../data-collection/automatic-information.md)を参照）
 3. `onBeforeEventSend` コールバックで加えられた変更です。
 
-以下の `onBeforeEventSend` callback:
+次のページでのメモ： `onBeforeEventSend` callback:
 
 * イベント XDM は、コールバック中に変更できます。 コールバックが返された後、 content.xdm および content.data オブジェクトの変更されたフィールドと値は、イベントと共に送信されます。
 

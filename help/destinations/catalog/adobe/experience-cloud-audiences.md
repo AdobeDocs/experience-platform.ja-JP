@@ -3,10 +3,10 @@ title: Experience Cloud Audiences
 description: Real-time Customer Data Platformのオーディエンスを様々なExperience Cloudアプリに共有する方法を説明します。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 7cd8c257f723e2e60058610bf845ee1fe8785de7
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1699'
-ht-degree: 20%
+source-wordcount: '1683'
+ht-degree: 21%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
->この宛先は、 [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) Real-time Customer Data Platformから様々なExperience Cloudソリューションへ
+>この宛先は、 [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Real-time Customer Data Platformから様々なExperience Cloudソリューションへ
 > 
 >既に、Real-Time CDPからAudience Managerおよび他のExperience Cloudソリューションに、 [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)の場合、この宛先を使用する前に、カスタマーケアに連絡して従来の統合を無効にする必要があります。
 
@@ -37,8 +37,8 @@ ht-degree: 20%
 
 Audience Managerでは、Real-Time CDPオーディエンスを、次のようなデータ管理プラットフォームの使用例に使用できます。
 
-* [サードパーティデータ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=en#third-party-data)のセグメントへの追加
-* [アルゴリズムモデリング](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=en);
+* [サードパーティデータ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data)のセグメントへの追加
+* [アルゴリズムモデリング](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
 * Real-Time CDPの宛先カタログでまだサポートされていない Cookie ベースの宛先に対してオーディエンスをアクティブ化する。
 
 ### エクスポートされたオーディエンスの詳細な制御 {#segments-control}
@@ -168,7 +168,7 @@ Real-Time CDPでオーディエンスが最初にアクティブ化されてか�
 
 ### データの検証のAudience Manager
 
-Real-Time CDPオーディエンスは、Audience Managerに [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits)、および [セグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). 上記のドキュメントリンクで説明したようにデータが表示されたかどうかをAudience Managerで確認できます。
+Real-Time CDPオーディエンスは、Audience Managerに [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits)、および [セグメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). 上記のドキュメントリンクで説明したようにデータが表示されたかどうかをAudience Managerで確認できます。
 
 セグメント名は、Real-Time CDPからオーディエンスが送信されてから 15 分後にAudience Managerに入力され始めます。
 
@@ -181,7 +181,7 @@ Real-Time CDPオーディエンスは、Audience Managerに [signals](https://ex
 [!DNL Real-Time CDP] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](/help/data-governance/home.md)を参照してください。
 
 Real-Time CDPのデータガバナンスは、 [データ使用ラベル](/help/data-governance/labels/reference.md) およびマーケティングアクション。
-データ使用ラベルはアプリケーションに転送されますが、マーケティングアクションは転送されません。 つまり、Audience Managerに到達すると、Real-Time CDPのオーディエンスを使用可能な任意の宛先に書き出すことができます。 Audience Managerでは、 [データ書き出しコントロール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) を使用して、オーディエンスが特定の宛先に書き出されるのを防ぎます。
+データ使用ラベルはアプリケーションに転送されますが、マーケティングアクションは転送されません。 つまり、Audience Managerに到達すると、Real-Time CDPのオーディエンスを使用可能な任意の宛先に書き出すことができます。 Audience Managerでは、 [データ書き出しコントロール](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=ja) を使用して、オーディエンスが特定の宛先に書き出されるのを防ぎます。
 
 次の項目でマークされたオーディエンス [!DNL HIPAA] マーケティングアクションは、Real-Time CDPからAudience Managerに送信されません。
 

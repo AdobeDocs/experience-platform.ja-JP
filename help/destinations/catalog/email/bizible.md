@@ -3,10 +3,10 @@ keywords: Bizible;Bizible 拡張機能；Bizible 宛先
 title: Bizible 拡張機能
 description: Bizible 拡張機能は、Adobe Experience Platformの電子メールの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 60%
+source-wordcount: '444'
+ht-degree: 61%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 60%
 
 [!DNL Bizible] は、データを卓越した目で確認できる業界最先端の B2B アトリビューションソリューションです。これにより、成長を促進するスマートな意思決定をおこなうことができます。
 
-[!DNL Bizible] は、Adobe Experience Platformの電子メール拡張機能です。 Bizible の詳細については、 [マーケティング属性](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) （Bizible の概要リソース）を参照してください。
+[!DNL Bizible] は、Adobe Experience Platformの電子メール拡張機能です。 Bizible の詳細については、 [マーケティング属性](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) （Bizible の概要リソース）を参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張機能について詳しくは、 [タグ拡張機能の概要](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ ht-degree: 60%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Bizible] 拡張子：
+[!DNL Bizible] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
@@ -38,11 +38,11 @@ ht-degree: 60%
 
 宛先をクリックしてハイライトしてから、右側のパネルで「**[!UICONTROL 設定]**」を選択します。**[!UICONTROL 設定]**&#x200B;コントロールがグレー表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
 
-拡張機能をインストールするタグプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。のプロパティについて [タグドキュメント](../../../tags/ui/administration/companies-and-properties.md).
+拡張機能をインストールするタグプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。のプロパティについて説明します。 [タグドキュメント](../../../tags/ui/administration/companies-and-properties.md).
 
 ワークフローに従ってデータ収集 UI が表示され、インストールが完了します。
 
-拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、 [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
+拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。次のガイドを参照してください： [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
 
 ## 拡張機能の使用方法 {#how-to-use}
 

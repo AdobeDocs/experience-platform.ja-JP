@@ -2,9 +2,9 @@
 title: フローサービス API を使用して、SugarCRM アカウントおよび連絡先のソース接続とデータフローを作成します
 description: フローサービス API を使用してAdobe Experience Platformを SugarCRM アカウントおよび連絡先に接続する方法を説明します。
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2160'
 ht-degree: 55%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 55%
 
 次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL SugarCRM] の使用 [!DNL Flow Service] API.
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL SugarCRM Accounts & Contacts] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 | 例 |
+| 資格情報 | 説明 | 例 |
 | --- | --- | --- |
 | `host` | ソースが接続する SugarCRM API エンドポイント。 | `developer.salesfusion.com` |
 | `username` | SugarCRM 開発者アカウントのユーザー名。 | `abc.def@example.com@sugarmarketdemo000.com` |
@@ -670,13 +670,13 @@ curl -X POST \
 
 [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
-ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create)に関するチュートリアルを参照してください。
+ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create)に関するチュートリアルを参照してください。
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
 [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
-ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en)に関するチュートリアルを参照してください。
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)に関するチュートリアルを参照してください。
 
 ### ターゲット接続の作成 {#target-connection}
 

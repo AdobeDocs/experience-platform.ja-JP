@@ -4,9 +4,9 @@ seo-title: Resources for Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK のリソース
 seo-description: Resources for Adobe Experience Platform Web SDK
 exl-id: a6dd3a6c-e211-4fc3-b5f6-8c170e8f7503
-source-git-commit: c4ce04277fd1f5798c0c2eb6cf978b51b14e1a4b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '63'
 ht-degree: 100%
 
 ---

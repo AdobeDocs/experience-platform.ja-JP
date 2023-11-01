@@ -3,9 +3,9 @@ title: HubSpot 接続
 description: HubSpot の宛先を使用すると、HubSpot アカウント内の連絡先レコードを管理できます。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1600'
 ht-degree: 39%
 
 ---
@@ -30,7 +30,7 @@ Experience Platformおよびで設定する必要がある前提条件につい�
 
 ### Experience Platform の前提条件 {#prerequisites-in-experience-platform}
 
-に対してデータをアクティブ化する前に [!DNL HubSpot] 宛先の [スキーマ](/help/xdm/schema/composition.md), a [データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)、および [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=en) 次で作成： [!DNL Experience Platform].
+に対してデータをアクティブ化する前に [!DNL HubSpot] 宛先の [スキーマ](/help/xdm/schema/composition.md), a [データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)、および [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) 次で作成： [!DNL Experience Platform].
 
 詳しくは、Experience Platformドキュメントを参照してください。 [オーディエンスメンバーシップ詳細スキーマフィールドグループ](/help/xdm/field-groups/profile/segmentation.md) オーディエンスのステータスに関するガイダンスが必要な場合は、を参照してください。
 

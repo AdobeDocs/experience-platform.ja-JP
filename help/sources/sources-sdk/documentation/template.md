@@ -3,9 +3,9 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: ドキュメントのセルフサービステンプレート
 description: フローサービス API を使用してAdobe Experience Platformを YOURSOURCE に接続する方法を説明します。
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2139'
+source-wordcount: '2135'
 ht-degree: 56%
 
 ---
@@ -298,13 +298,13 @@ curl -X POST \
 
 [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
-ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create)に関するチュートリアルを参照してください。
+ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create)に関するチュートリアルを参照してください。
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
 [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
-ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en)に関するチュートリアルを参照してください。
+ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)に関するチュートリアルを参照してください。
 
 ### ターゲット接続の作成 {#target-connection}
 

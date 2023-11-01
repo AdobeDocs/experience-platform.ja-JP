@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信
 description: データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信する方法を説明します。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 9%
+source-wordcount: '1174'
+ht-degree: 8%
 
 ---
 

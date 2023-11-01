@@ -2,9 +2,9 @@
 title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1392'
 ht-degree: 89%
 
 ---
@@ -193,7 +193,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 **機能**:
 
-* Adobe Analytics 拡張機能を、既知の clearVars の問題を修正する [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja#version-2.14.0)に更新しました
+* Adobe Analytics 拡張機能を、既知の clearVars の問題を修正する [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0)に更新しました
 * 拡張機能への Exchange リンクを追加しました。ドロップダウンリストを選択して「拡張機能情報」を選択すると、Exchange リストにアクセスできます。
 
 **バグの修正**:
@@ -294,7 +294,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 **バグの修正**:
 
-* 詳細ビューから戻るとリストビューがリセットされるバグを修正しました
+* 詳細ビューから戻るとリスト表示がリセットされるバグを修正しました
 * いくつかのバグを修正し、リビジョンセレクターでリソースの読み込みを改善しました
 * 複数のルールが Adobe Analytics 拡張機能の s.events を上書きしていたバグを修正しました
 

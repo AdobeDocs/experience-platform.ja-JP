@@ -3,10 +3,10 @@ keywords: livefyre;livefyre 拡張機能
 title: Adobe Livefyre 拡張機能
 description: AdobeLivefyre 拡張機能は、Adobe Experience Platformのソーシャルの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 69%
+source-wordcount: '450'
+ht-degree: 67%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 69%
 
 Adobe Livefyre を使用すれば、一定量のユーザー作成コンテンツを発見、整理し、Webサイトに公開して、高度にパーソナライズされた本物のエクスペリエンスを作成することができます。
 
-AdobeLivefyre は、Adobe Experience Platformのソーシャル拡張機能です。 LivefyreAdobeについて詳しくは、 [Livefyre 実装ガイド](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=ja).
+AdobeLivefyre は、Adobe Experience Platformのソーシャル拡張機能です。 LivefyreAdobeについて詳しくは、 [Livefyre 実装ガイド](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張機能について詳しくは、 [タグ拡張機能の概要](../launch-extensions/overview.md).
 
@@ -38,11 +38,11 @@ Adobe Livefyre 拡張機能をインストールするには：
 
 宛先をクリックしてハイライトしてから、右側のパネルで「**[!UICONTROL 設定]**」を選択します。**[!UICONTROL 設定]**&#x200B;コントロールがグレー表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
 
-拡張機能をインストールするタグプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。のプロパティについて [タグドキュメント](../../../tags/ui/administration/companies-and-properties.md).
+拡張機能をインストールするタグプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。のプロパティについて説明します。 [タグドキュメント](../../../tags/ui/administration/companies-and-properties.md).
 
 ワークフローに従ってデータ収集 UI が表示され、インストールが完了します。
 
-拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、 [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
+拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。次のガイドを参照してください： [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
 
 ## 拡張機能の使用方法 {#how-to-use}
 

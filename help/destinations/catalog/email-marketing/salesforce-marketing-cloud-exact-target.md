@@ -3,9 +3,9 @@ keywords: 電子メール；電子メール；電子メールの宛先；salesfo
 title: （API）Salesforce Marketing Cloud 接続
 description: SalesforceMarketing Cloud（旧称 ExactTarget）の宛先を使用すると、アカウントデータを書き出し、SalesforceMarketing Cloud内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: b778b7b8c79176d0962a9c757d83a749acd147b6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3075'
 ht-degree: 23%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 23%
 
 ### Experience Platformの前提条件 {#prerequisites-in-experience-platform}
 
-[!DNL (API) Salesforce Marketing Cloud] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)を [!DNL Experience Platform] で作成する必要があります。
+[!DNL (API) Salesforce Marketing Cloud] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
 
 ### の前提条件 [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 

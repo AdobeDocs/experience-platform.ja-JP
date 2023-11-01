@@ -1,19 +1,19 @@
 ---
-title: offer decisioning
+title: Offer Decisioning を使用したパーソナライゼーション
 description: Server API を使用して、パーソナライズされたエクスペリエンスをOffer decisioning経由で配信およびレンダリングする方法を説明します。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 4%
+source-wordcount: '572'
+ht-degree: 7%
 
 ---
 
-# offer decisioning
+# Offer Decisioning を使用したパーソナライゼーション
 
 ## 概要 {#overview}
 
-Edge Network Server API は、 [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) を web チャネルに追加します。
+Edge Network Server API は、 [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=ja) を web チャネルに追加します。
 
 [!DNL Offer Decisioning] は、アクティビティとパーソナライゼーションエクスペリエンスを作成、アクティブ化、配信するための、非視覚的なインターフェイスをサポートしています。
 
@@ -23,9 +23,9 @@ Edge Network Server API は、 [offer decisioning](https://experienceleague.adob
 
 ## データストリームの設定 {#configure-your-datastream}
 
-Server API をOffer decisioningと組み合わせて使用する前に、データストリーム設定でAdobe Experience Platformのパーソナライゼーションを有効にし、 **[!UICONTROL offer decisioning]** オプション。
+Server API をOffer decisioningと組み合わせて使用する前に、データストリーム設定でAdobe Experience Platformのパーソナライゼーションを有効にし、 **[!UICONTROL Offer decisioning]** オプション。
 
-詳しくは、 [データストリームへのサービスの追加に関するガイド](../datastreams/overview.md#adobe-experience-platform-settings)offer decisioning
+詳しくは、 [データストリームへのサービスの追加に関するガイド](../datastreams/overview.md#adobe-experience-platform-settings)(Offer decisioningの有効化方法の詳細 )
 
 ![データストリームサービス設定画面を示す UI 画像 (Offer decisioningを選択 )](assets/aep-od-datastream.png)
 
@@ -35,13 +35,13 @@ Server API をOffer decisioningと組み合わせて使用する前に、デー�
 
 ## 決定範囲の定義 {#creating-decision-scopes}
 
-この [!DNL Offer Decision Engine] はAdobe Experience Platformデータを使用し、 [リアルタイム顧客プロファイル](../profile/home.md)、 [!DNL Offer Library]：適切な顧客およびチャネルに適切なタイミングでオファーを配信する。
+The [!DNL Offer Decision Engine] はAdobe Experience Platformデータを使用し、 [リアルタイム顧客プロファイル](../profile/home.md)、および [!DNL Offer Library]：適切な顧客およびチャネルに適切なタイミングでオファーを配信する。
 
 詳しくは、 [!DNL Offer Decisioning Engine]、該当する [ドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=ja).
 
 後 [データストリームの設定](#configure-your-datastream)に値を入力する場合は、パーソナライゼーションキャンペーンで使用する決定範囲を定義する必要があります。
 
-[決定範囲](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) は、 [!DNL Offer Decisioning Service] オファーを提案する際に使用します。
+[決定範囲](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) は、 [!DNL Offer Decisioning Service] オファーを提案する際に使用します。
 
 **決定範囲 JSON**
 
@@ -58,7 +58,7 @@ Server API をOffer decisioningと組み合わせて使用する前に、デー�
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-オファーとコレクションを作成したら、 [決定範囲](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+オファーとコレクションを作成したら、 [決定範囲](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
 Base64 でエンコードされた決定範囲をコピーします。 これは、 `query` オブジェクトに含める必要があります。
 
@@ -88,7 +88,7 @@ POST /ee/v2/interact
 
 >[!NOTE]
 >
->この `xdm` および `data` オブジェクトはオプションで、Offer decisioningに必要なのは、これらのオブジェクトのいずれかにフィールドを使用する条件を持つセグメントを作成した場合のみです。
+>The `xdm` および `data` オブジェクトはオプションで、Offer decisioningに必要なのは、これらのオブジェクトのいずれかにフィールドを使用する条件を持つセグメントを作成した場合のみです。
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -246,7 +246,7 @@ Edge ネットワークは、次のような応答を返します。
 
 訪問者が、に送信されたデータに基づいてパーソナライゼーションアクティビティの対象となる場合 [!DNL Offer Decisioning]関連するアクティビティのコンテンツは、 `handle` オブジェクト ( タイプは `personalization:decisions`.
 
-その他のコンテンツは、 `handle` オブジェクトも同様です。 その他のコンテンツタイプは、 [!DNL Offer Decisioning] パーソナライゼーション。 訪問者が複数のアクティビティに該当する場合、それらは配列に含まれます。
+その他のコンテンツは、 `handle` オブジェクトも同様に扱います。 その他のコンテンツタイプは、 [!DNL Offer Decisioning] パーソナライゼーション。 訪問者が複数のアクティビティに該当する場合、それらは配列に含まれます。
 
 次の表に、応答のその部分の主な要素を示します。
 

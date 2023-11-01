@@ -3,9 +3,9 @@ title: Platform Web SDK の ID データ
 description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID(ECID) を取得および管理する方法について説明します。
 keywords: ID；ファーストパーティ ID;ID サービス；サードパーティ ID;ID の移行；訪問者 ID；サードパーティ ID;thirdPartyCookiesEnabled;idMigrationEnabled;getId；同期 ID;sendEvent;identityMap；プライマリ；ID 名前空間；id；認証状態 hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1414'
 ht-degree: 3%
 
 ---
@@ -26,14 +26,14 @@ ECID を含む Cookie を設定した後、Web SDK によって生成される�
 
 デバイスを識別するために Cookie を使用する場合、Edge ネットワークとやり取りする方法は 2 つあります。
 
-1. Edge ネットワークドメインに直接データを送信 `adobedc.net`. このメソッドは、 [サードパーティデータ収集](#third-party).
+1. Edge ネットワークドメインに直接データを送信する `adobedc.net`. このメソッドは、 [サードパーティデータ収集](#third-party).
 1. を指す CNAME を独自のドメインで作成する `adobedc.net`. このメソッドは、 [ファーストパーティデータ収集](#first-party).
 
 以下の節で説明するように、使用するように選択したデータ収集方法は、ブラウザー全体での cookie の有効期間に直接影響します。
 
 ### サードパーティのデータ収集 {#third-party}
 
-サードパーティのデータ収集には、Edge ネットワークドメインへの直接のデータ送信が含まれます `adobedc.net`.
+サードパーティのデータ収集には、Edge ネットワークドメインへの直接のデータ送信が含まれます。 `adobedc.net`.
 
 近年、Web ブラウザーは、サードパーティによって設定された Cookie の処理に対する制限を厳しくしています。 一部のブラウザーは、デフォルトでサードパーティ Cookie をブロックします。 サードパーティ cookie を使用してサイトの訪問者を識別する場合、これらの cookie の有効期間は、それ以外の場合、ファーストパーティ cookie を使用して有効期間に入るよりも常に短くなります。 場合によっては、サードパーティ Cookie の有効期限が 7 日以内に切れることがあります。
 
@@ -51,7 +51,7 @@ ECID を含む Cookie を設定した後、Web SDK によって生成される�
 
 例えば、過去 7 日間にユーザーが 3 回閲覧した項目をホームページにプロモーションするパーソナライゼーションエクスペリエンスを作成したとします。
 
-エンドユーザーが 1 週間に 3 回訪問し、その後 7 日間サイトに戻らなかった場合、（サイトの訪問時に使用していたブラウザーによっては）ブラウザーポリシーによって cookie が削除されている可能性があるので、サイトに戻ると新規ユーザーと見なされます。 この場合、Analytics ツールは、訪問者がわずか 7 日以上前にサイトを訪問した場合でも、訪問者を新しいユーザーとして扱います。 さらに、ユーザーのエクスペリエンスをパーソナライズするための取り組みが再び開始されます。
+エンドユーザーが 1 週間に 3 回訪問し、その後 7 日間サイトに戻らなかった場合、（サイトの訪問時に使用していたブラウザーによっては）ブラウザーポリシーによって cookie が削除されている可能性があるので、サイトに戻ると新規ユーザーと見なされます。 この場合、Analytics ツールは、訪問者がわずか 7 日以上前にサイトを訪問した場合でも、訪問者を新しいユーザーとして扱います。 さらに、ユーザーのエクスペリエンスをパーソナライズするための取り組みは、再び開始されます。
 
 ### ファーストパーティデバイス ID
 
@@ -80,9 +80,9 @@ alloy("getIdentity")
 
 ## 使用 `identityMap`
 
-XDM の使用 [`identityMap` フィールド](../../xdm/schema/composition.md#identityMap)を使用すると、複数の ID を使用してデバイスやユーザーを識別し、認証状態を設定して、プライマリ ID と見なす識別子を決定できます。 識別子が設定されていない場合 `primary`の場合、プライマリは `ECID`.
+XDM の使用 [`identityMap` フィールド](../../xdm/schema/composition.md#identityMap)を使用すると、複数の ID を使用してデバイスやユーザーを識別し、認証状態を設定して、プライマリ ID と見なす識別子を決定できます。 識別子が設定されていない場合 `primary`の場合、主なデフォルトは `ECID`.
 
-`identityMap` フィールドは `sentEvent` コマンドを使用します。
+`identityMap` フィールドは、 `sentEvent` コマンドを使用します。
 
 ```javascript
 alloy("sendEvent", {
@@ -102,10 +102,10 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->Adobeは、人物を表す名前空間（例： ）を送信することをお勧めします `CRMID`をプライマリ ID として設定します。
+>Adobeは、人物を表す名前空間（例： ）を送信することをお勧めします。 `CRMID`をプライマリ ID として設定します。
 
 
-内の各プロパティ `identityMap` は、特定のに属する ID を表します [id 名前空間](../../identity-service/namespaces.md). プロパティ名は、ID 名前空間シンボルである必要があります。このシンボルは、Adobe Experience Platformユーザーインターフェイスの「[!UICONTROL ID]&quot;. プロパティ値は、その ID 名前空間に関する ID の配列である必要があります。
+内の各プロパティ `identityMap` は、特定のに属する ID を表します [ID 名前空間](../../identity-service/namespaces.md). プロパティ名は、ID 名前空間シンボルである必要があります。このシンボルは、Adobe Experience Platformユーザーインターフェイスの「[!UICONTROL ID]&quot;. プロパティ値は、その ID 名前空間に関する ID の配列である必要があります。
 
 >[!IMPORTANT]
 >
@@ -119,7 +119,7 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 | `authenticationState` | 文字列 | **（必須）** ID の認証状態。 有効な値は `ambiguous`、`authenticated`、および `loggedOut` です。 |
 | `primary` | ブール値 | この ID をプロファイル内のプライマリフラグメントとして使用するかどうかを決定します。 デフォルトでは、ECID はユーザーのプライマリ識別子として設定されています。 省略した場合、この値はデフォルトで `false` になります。 |
 
-の使用 `identityMap` デバイスまたはユーザーを識別するためのフィールドは、 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) メソッド [!DNL ID Service API]. 詳しくは、 [ID サービス API ドキュメント](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) を参照してください。
+の使用 `identityMap` デバイスまたはユーザーを識別するためのフィールドは、 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=ja) メソッドを [!DNL ID Service API]. 詳しくは、 [ID サービス API ドキュメント](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) を参照してください。
 
 ## 訪問者 API から ECID への移行
 

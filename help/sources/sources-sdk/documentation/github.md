@@ -4,10 +4,10 @@ solution: Experience Platform
 title: GitHub Web インターフェイスを使用したソースドキュメントページの作成
 description: このドキュメントでは、GitHub Web インターフェイスを使用してドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 4%
+source-wordcount: '618'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 >[!TIP]
 >
->ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューションガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[ドキュメント用のローカル Git リポジトリの設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[大きな変更をする際の GitHub コントリビューションワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューションガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[ドキュメント用のローカル Git リポジトリの設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[大きな変更をする際の GitHub コントリビューションワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## GitHub 環境の設定
 
@@ -25,7 +25,7 @@ GitHub 環境を設定する最初の手順は、 [Adobe Experience Platform Git
 
 ![platform-repo](../assets/platform-repo.png)
 
-次に、 **分岐**.
+次に、「 **分岐**.
 
 ![フォーク](../assets/fork.png)
 
@@ -41,7 +41,7 @@ GitHub 環境を設定する最初の手順は、 [Adobe Experience Platform Git
 
 ![crm](../assets/crm.png)
 
-既存の CRM ソースのフォルダが表示されます。 新しいソースのドキュメントを追加するには、 **ファイルを追加** 次に、 **新しいファイルを作成** を選択します。
+既存の CRM ソースのフォルダが表示されます。 新しいソースのドキュメントを追加するには、 **ファイルを追加** 次に、「 **新しいファイルを作成** を選択します。
 
 ![create-new-file](../assets/create-new-file.png)
 
@@ -51,17 +51,17 @@ GitHub 環境を設定する最初の手順は、 [Adobe Experience Platform Git
 
 ## ソースに関するドキュメントページの作成
 
-新しいソースのドキュメント化を開始するには、 [ソースドキュメントテンプレート](./template.md) を GitHub Web エディターに追加します。 また、テンプレートをダウンロードすることもできます [ここ](../assets/api-template.zip).
+新しいソースのドキュメント化を開始するには、 [ソースドキュメントテンプレート](./template.md) を GitHub Web エディターに移動します。 また、テンプレートをダウンロードすることもできます [ここ](../assets/api-template.zip).
 
 テンプレートを GitHub Web エディターインターフェイスにコピーした状態で、テンプレートに記載されている手順に従い、ソースに関連する情報を含む値を編集します。
 
 ![paste-template](../assets/paste-template.png)
 
-完了したら、ブランチのファイルをコミットします。
+完了したら、ブランチ内のファイルをコミットします。
 
 ![コミット](../assets/commit.png)
 
-## ドキュメントを送信してレビュー
+## ドキュメントを送信してレビューします
 
 ファイルがコミットされたら、プルリクエスト (PR) を開き、作業ブランチをAdobeドキュメントリポジトリの master ブランチにマージできます。 作業中のブランチが選択されていることを確認し、「 」を選択します。 **リクエストの比較とプル**.
 
@@ -71,7 +71,7 @@ GitHub 環境を設定する最初の手順は、 [Adobe Experience Platform Git
 
 >[!TIP]
 >
->を **メンテナーによる編集を許可** チェックボックスをオンにして、Adobeドキュメントチームが PR を編集できるようにします。
+>を残します。 **メンテナーによる編集を許可する** チェックボックスをオンにして、Adobeドキュメントチームが PR を編集できるようにします。
 
 ![create-pr](../assets/create-pr.png)
 

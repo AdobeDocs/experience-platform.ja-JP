@@ -3,27 +3,27 @@ title: Adobe Experience Platform Web SDK 拡張機能のアクションタイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なアクションタイプについて説明します。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 4%
+source-wordcount: '757'
+ht-degree: 2%
 
 ---
 
 
 # アクションタイプ
 
-設定後、 [Adobe Experience Platform Web SDK タグ拡張機能](web-sdk-extension-configuration.md)を使用する場合は、アクションタイプを設定する必要があります。
+次の設定を行った後、 [Adobe Experience Platform Web SDK タグ拡張機能](web-sdk-extension-configuration.md)を使用する場合は、アクションタイプを設定する必要があります。
 
 このページでは、 [Adobe Experience Platform Web SDK タグ拡張機能](web-sdk-extension-configuration.md).
 
 ## イベントを送信 {#send-event}
 
-イベントをAdobeに送信 [!DNL Experience Platform] Adobe Experience Platformが送信したデータを収集し、その情報に基づいて行動できるようにする。 インスタンスを選択します（複数ある場合）。 送信する任意のデータを **[!UICONTROL XDM データ]** フィールドに入力します。 XDM スキーマの構造に準拠する JSON オブジェクトを使用します。 このオブジェクトは、ページ上または **[!UICONTROL カスタムコード]** **[!UICONTROL データ要素]**.
+イベントをAdobeに送信 [!DNL Experience Platform] Adobe Experience Platformが送信したデータを収集し、その情報に基づいて行動できるようにするためです。 インスタンスを選択します（複数ある場合）。 送信する任意のデータを **[!UICONTROL XDM データ]** フィールドに入力します。 XDM スキーマの構造に準拠する JSON オブジェクトを使用します。 このオブジェクトは、ページ上または **[!UICONTROL カスタムコード]** **[!UICONTROL データ要素]**.
 
 「イベントを送信」アクションタイプには、実装に応じて役立つその他のフィールドがいくつかあります。 これらのフィールドはすべてオプションです。
 
-- **タイプ：** このフィールドでは、XDM スキーマに記録されるイベントタイプを指定できます。 詳しくは、 [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ja#using-the-sendbeacon-api) を参照してください。
+- **タイプ：** このフィールドでは、XDM スキーマに記録されるイベントタイプを指定できます。 詳しくは、 [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) を参照してください。
 - **データ：** XDM スキーマと一致しないデータは、このフィールドを使用して送信できます。 このフィールドは、Adobe Targetプロファイルを更新しようとする場合や、Target Recommendations属性を送信しようとする場合に役立ちます。 例については、 [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ja).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **データセット ID:** データストリームで指定したデータセット以外のデータセットにデータを送信する必要がある場合は、ここでそのデータセット ID を指定できます。
 - **ドキュメントをアンロードします：** ユーザーがページから離れてもイベントがサーバーに到達することを確認するには、 **[!UICONTROL ドキュメントはアンロードされます]** チェックボックス。 これにより、イベントがサーバーに到達できますが、応答は無視されます。
@@ -43,7 +43,7 @@ ht-degree: 4%
 
 ![](assets/update-variable.png)
 
-エディターに使用される XDM スキーマは、で選択されたスキーマです [!UICONTROL 変数] データ要素。 左側のツリーのプロパティの 1 つをクリックし、右側の値を変更することで、オブジェクトの 1 つ以上のプロパティを設定できます。例えば、以下のスクリーンショットでは、produsedBy プロパティがデータ要素「Produced by data element」に設定されています。
+エディターに使用される XDM スキーマは、で選択されたスキーマです。 [!UICONTROL 変数] データ要素。 左側のツリーのプロパティの 1 つをクリックし、右側の値を変更することで、オブジェクトの 1 つ以上のプロパティを設定できます。例えば、以下のスクリーンショットでは、produsedBy プロパティがデータ要素「Produced by data element」に設定されています。
 
 ![](assets/update-variable-set-property.png)
 

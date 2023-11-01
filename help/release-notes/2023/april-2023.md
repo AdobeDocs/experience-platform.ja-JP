@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2023年4月
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2082'
 ht-degree: 98%
 
 ---
@@ -68,7 +68,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | --- | --- |
 | データストリームの IP アドレスの不明化 | [データストリーム設定 UI](../../datastreams/configure.md) で、部分的または完全なデータストリームレベルの IP の不明化オプションを定義できるようになりました。<br><br>データストリームレベルの IP の不明化の設定は、Adobe Target および Audience Manager で設定した IP の不明化よりも優先されます。<br><br>Adobe Analytics に送信されるデータは、データストリームレベルの [!UICONTROL IP の不明化]の設定の影響を受けません。Adobe Analytics では現在、不明化されていない IP アドレスを受信します。Analytics で不明化された IP アドレスを受信できるようにするには、Adobe Analytics で IP の不明化を個別に設定する必要があります。この動作は、今後のリリースで更新される予定です。<br><br> IP の不明化とその設定方法について詳しくは、[データストリーム設定ドキュメント](../../datastreams/configure.md#advanced-options)を参照してください。 |
 | [データストリーム設定の上書き](../../datastreams/overrides.md) | イベントデータセット、Target プロパティトークン、ID 同期コンテナ、Analytics レポートスイートなどの特定の設定を上書きするために使用できる、データストリームの追加の設定オプションを定義できるようになりました。<br><br>データストリーム設定の上書きは、次の 2 つの手順で行います。 <ol><li>最初に、[データストリーム設定ページ](../../datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。</li><li>次に、Web SDK コマンドまたは Web SDK [タグ拡張機能](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)を使用して、上書きを Edge Network に送信する必要があります。</li></ol> |
-| OAuth JWT 秘密鍵 | [OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=ja)では、アドビおよび Google サービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。 |
+| OAuth JWT 秘密鍵 | [OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html)では、アドビおよび Google サービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。 |
 | [!DNL Pinterest Conversions API] 拡張機能 | [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=ja) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取得したデータを活用したり、[!DNL Pinterest Conversions API] を使用してサーバーサイドイベントの形式で [!DNL Pinterest] に送信したりできます。 |
 
 {style="table-layout:auto"}

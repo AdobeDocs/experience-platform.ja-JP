@@ -3,10 +3,10 @@ title: イベント転送の概要
 description: Adobe Experience Platform でのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 86%
+source-wordcount: '873'
+ht-degree: 85%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform でイベント転送を使用するには、次の 3 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform モバイル SDK](https://sdkdocs.com)
-* [サーバー間 API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=ja)
+* [サーバー間 API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
 
 >[!NOTE]
 >Platform Web SDK および Platform Mobile SDK は、Adobe Experience Platform のタグを使用したデプロイメントは必要ありません。ただし、タグを使用してこれらの SDK をデプロイする方法は、推奨されるアプローチです。
@@ -54,7 +54,7 @@ Adobe Experience Platform で、スキーマを作成します。
 
 ## イベント転送プロパティの作成
 
-内 **[!UICONTROL タグ]** ワークスペース、タイプのプロパティを作成 **[!UICONTROL Edge]**.
+Adobe Analytics の **[!UICONTROL タグ]** ワークスペース、タイプのプロパティを作成します **[!UICONTROL Edge]**.
 
 1. 「**[!UICONTROL 新しいプロパティ]**」を選択します。
 
@@ -82,7 +82,7 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 次に、Edge ネットワークを設定して、イベント転送や他のアドビ製品にデータを送信します。
 
-1. 内 **[!UICONTROL データストリーム]** ワークスペースで、作成したプロパティを選択します。
+1. Adobe Analytics の **[!UICONTROL データストリーム]** ワークスペースで、作成したプロパティを選択します。
 
 1. 「開発」、「実稼働」、または「ステージング」環境を選択します。
 

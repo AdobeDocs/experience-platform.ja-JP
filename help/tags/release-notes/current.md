@@ -2,10 +2,10 @@
 title: タグとイベント転送のリリースノート
 description: Adobe Experience Platform のタグおよびイベント転送に関する最新のリリースノート。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
-source-wordcount: '841'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '835'
+ht-degree: 97%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->今後、このページではタグとイベント転送のリリースノートは提供されなくなります。タグとイベント転送の更新について詳しくは、最新の [Adobe Experience Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja#data-collection)を参照してください。
+>今後、このページではタグとイベント転送のリリースノートは提供されなくなります。タグとイベント転送の更新について詳しくは、最新の [Adobe Experience Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection)を参照してください。
 
 ## 2023年4月26日（PT）
 
-* **OAuth JWT 秘密鍵**：[OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=ja)では、アドビおよび Google サービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。
+* **OAuth JWT 秘密鍵**：[OAuth JWT 秘密鍵](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html)では、アドビおよび Google サービストークンを使用して、イベント転送でのサーバー間インタラクションをサポートできます。
 
 次の新しい拡張機能がリリースされました。
 
@@ -28,7 +28,7 @@ ht-degree: 100%
 **クイックスタートワークフロー（ベータ版）**
 
 データ収集のホーム画面から「はじめに」の下にある新しいクイックスタートワークフローにアクセスします。お客様が次のワークフローをパブリックベータ版として利用できるようになりました。
-* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=ja#quick-start)**：イベント転送のお客様はイベントデータを迅速に収集し、広告コンバージョンのためにわずか数回の簡単な手順で Meta にサーバーサイド転送できます。
+* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**：イベント転送のお客様はイベントデータを迅速に収集し、広告コンバージョンのためにわずか数回の簡単な手順で Meta にサーバーサイド転送できます。
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**：お客様は Mobile SDK を迅速に実装し、基本的なモバイルイベントをわずか数回の簡単な手順で検証できます。
 
 次の新しい拡張機能がリリースされました。

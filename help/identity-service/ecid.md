@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ECID の概要
 description: Experience Cloud ID（ECID）は、ID 管理にアクセスできるようにするクライアントサイドモジュールで、次の 3 つの主な機能を提供します。
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 100%
+source-wordcount: '271'
+ht-degree: 97%
 
 ---
 
@@ -30,7 +30,7 @@ ECID を使用すると、次のことができます。
 次のドキュメントでは、様々な Platform および Experience Cloud アプリケーションに対応する ECID を理解するための追加のリソースを提供します。
 
 * Web サイトの実装で ECID を使用するには、[Experience Cloud ID サービス](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)のドキュメントを参照してください。
-* アプリやモバイル web コンテンツでの ECID の使用方法については、[アプリとモバイル web 間の訪問者トラッキング](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=ja#sdk-reference-ios)のドキュメントを参照してください。
+* アプリやモバイル web コンテンツでの ECID の使用方法については、[アプリとモバイル web 間の訪問者トラッキング](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios)のドキュメントを参照してください。
 * [タグ](../tags/home.md)を使用すると、これらのツールの導入が管理しやすくなります。
 * ECID を使用して GDPR などのプライバシー規制への準拠を促進する方法については、[Privacy Service のドキュメント](../privacy-service/identity-data.md)を参照してください。
 * Platform のコンテキストでの ECID について詳しくは、[ID サービスの概要](./home.md)および [ID 名前空間の概要](./namespaces.md)を参照してください。

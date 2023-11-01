@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge API の基本を学ぶ
 description: Media Edge API の基本を学ぶ
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '958'
-ht-degree: 100%
+source-wordcount: '946'
+ht-degree: 95%
 
 ---
 
@@ -42,12 +42,12 @@ ht-degree: 100%
 
 ## API の実装 {#implement-api}
 
-呼び出されるモデルとパスの小さな違いを除けば、Media Edge API は [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=ja) と同じ実装を備えています。次のドキュメントで説明しているように、Media Collection の実装の詳細は Media Edge API に対して引き続き有効です。
+呼び出されるモデルとパスの小さな違いを除けば、Media Edge API は [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html) と同じ実装を備えています。次のドキュメントで説明しているように、Media Collection の実装の詳細は Media Edge API に対して引き続き有効です。
 
-* [プレーヤーでの HTTP リクエストタイプの設定](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=ja)
-* [ping イベントの送信](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=ja)
-* [タイムアウト条件](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=ja)
-* [イベントの順序の制御](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=ja)
+* [プレーヤーでの HTTP リクエストタイプの設定](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [ping イベントの送信](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [タイムアウト条件](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [イベントの順序の制御](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## 認証 {#authorization}
 

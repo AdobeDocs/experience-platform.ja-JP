@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segment Match の概要
 description: Segment Match は、Adobe Experience Platform のセグメント共有サービスであり、安全で管理された、プライバシーに配慮した方法で 2 人以上の Platform ユーザーがセグメントデータを交換できるようにします。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1994'
 ht-degree: 98%
 
 ---
@@ -44,7 +44,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 | 名前空間 | 説明 |
 | --------- | ----------- |
-| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。Platform には、データ収集時のハッシュ化をサポートする方法として、[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ja#hashing-support) と[データ準備](../../../data-prep/functions.md#hashing)の 2 つが用意されています。 |
+| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。Platform には、データ収集時のハッシュ化をサポートする方法として、[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) と[データ準備](../../../data-prep/functions.md#hashing)の 2 つが用意されています。 |
 | 電話（SHA256_E.164） | SHA256 形式と E.164 形式の両方を使用してハッシュする必要がある生の電話番号を表す名前空間。 |
 | ECID | Experience Cloud ID（ECID）値を表す名前空間。この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID の概要](../../../identity-service/ecid.md)を参照してください。 |
 | Apple IDFA（広告主の ID） | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |

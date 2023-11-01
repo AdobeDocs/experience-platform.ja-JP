@@ -1,10 +1,10 @@
 ---
-title: Web SDK の設定 タグ拡張
+title: Web SDK タグ拡張機能の設定
 description: タグ UI でExperience PlatformWeb SDK タグ拡張を設定する方法について説明します。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1456'
 ht-degree: 11%
 
 ---

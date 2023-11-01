@@ -3,10 +3,10 @@ keywords: E メール；E メール；E メールの宛先；E メールの宛�
 title: SendGrid 接続
 description: SendGrid の宛先を使用すると、ファーストパーティデータを書き出し、SendGrid 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1577'
-ht-degree: 27%
+source-wordcount: '1571'
+ht-degree: 26%
 
 ---
 
@@ -34,7 +34,7 @@ SendGrid は、SendGrid API と通信するための認証メカニズムとし�
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-SendGrid の宛先に対してデータをアクティブ化する前に、 [スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja), a [データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)、および [セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja) 次で作成： [!DNL Experience Platform]. また、 [制限](#limits) の節をこのページの後半に示します。
+SendGrid の宛先に対してデータをアクティブ化する前に、 [スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja), a [データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)、および [セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 次で作成： [!DNL Experience Platform]. また、 [制限](#limits) の節をこのページの後半に示します。
 
 >[!IMPORTANT]
 >

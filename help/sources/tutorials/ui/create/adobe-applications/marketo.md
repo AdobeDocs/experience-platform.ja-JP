@@ -2,9 +2,9 @@
 title: UI でのMarketo Engageソース接続とデータフローの作成
 description: このチュートリアルでは、UI でMarketo Engageソース接続とデータフローを作成し、B2B データをAdobe Experience Platformに取り込む手順を説明します。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1691'
 ht-degree: 76%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 76%
 
 >[!IMPORTANT]
 >
->を作成する前に [!DNL Marketo Engage] ソース接続とデータフローの場合は、まず [Adobe組織 ID をマッピング済み](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. さらに、 [自動入力 [!DNL Marketo] B2B 名前空間とスキーマ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) ソース接続とデータフローを作成する前に、次の手順を実行します。
+>を作成する前に [!DNL Marketo Engage] ソース接続とデータフローの場合は、まず [Adobe組織 ID をマッピング済み](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) in [!DNL Marketo]. さらに、 [自動入力 [!DNL Marketo] B2B 名前空間とスキーマ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) ソース接続とデータフローを作成する前に、次の手順を実行します。
 
 このチュートリアルでは、UI で [!DNL Marketo Engage]（以下「[!DNL Marketo]」）ソースコネクタを作成し、B2B データを Adobe Experience Platform に取り込む手順について説明します。
 
@@ -29,7 +29,7 @@ ht-degree: 76%
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 Platform で [!DNL Marketo] アカウントにアクセスするには、次の値を指定する必要があります。
 
@@ -111,7 +111,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!IMPORTANT]
 >
->この [!DNL Marketo] ソースは、バッチ取り込みを使用してすべての履歴レコードを取り込み、リアルタイム更新にストリーミング取り込みを使用します。 これにより、誤ったレコードを取り込みながら、ソースのストリーミングを続行できます。 **[!UICONTROL 部分取り込み]**&#x200B;切り替えスイッチを有効化して、[!UICONTROL エラーしきい値 %] を最大にし、データフローが失敗するのを防ぎます。
+>The [!DNL Marketo] ソースは、バッチ取り込みを使用してすべての履歴レコードを取り込み、リアルタイム更新にストリーミング取り込みを使用します。 これにより、誤ったレコードを取り込みながら、ソースのストリーミングを続行できます。 **[!UICONTROL 部分取り込み]**&#x200B;切り替えスイッチを有効化して、[!UICONTROL エラーしきい値 %] を最大にし、データフローが失敗するのを防ぎます。
 
 ![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 

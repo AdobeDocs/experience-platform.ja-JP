@@ -2,9 +2,9 @@
 title: 計算済み属性に関するよくある質問
 description: 計算済み属性の使用に関するよくある質問への回答を確認します。
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 1%
 
 ---
@@ -99,4 +99,4 @@ Adobe Experience Platformでは、計算済み属性は、イベントレベル�
 
 ## 計算済み属性をAdobe Journey Optimizerで使用する方法を教えてください。
 
-ジャーニーで計算済み属性を使用するには、 `SystemComputedAttributes` フィールドグループをExperience Platformデータソースに追加します。 Experience Platformデータソースの設定について詳しくは、 [Adobe Experience Platform data source ガイド](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+ジャーニーで計算済み属性を使用するには、 `SystemComputedAttributes` フィールドグループをExperience Platformデータソースに追加します。 Experience Platformデータソースの設定について詳しくは、 [Adobe Experience Platform data source ガイド](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

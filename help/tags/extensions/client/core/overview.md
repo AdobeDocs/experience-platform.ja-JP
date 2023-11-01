@@ -2,7 +2,7 @@
 title: コア拡張機能の概要
 description: Adobe Experience Platform の Core タグ拡張機能について説明します。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '5482'
 ht-degree: 96%
@@ -191,15 +191,15 @@ onLoad がブラウザーによって呼び出され、ページの読み込み�
 
 * `property=value`
 
-   プロパティの値を指定します。
+  プロパティの値を指定します。
 
 * Regex
 
-   `property=value` が正規表現の場合は有効にします。
+  `property=value` が正規表現の場合は有効にします。
 
 * Add
 
-   別の `property=value` ペアを追加します。
+  別の `property=value` ペアを追加します。
 
 #### Advanced options (Bubbling)
 
@@ -460,9 +460,9 @@ URL に必要な 1 つ以上のハッシュパターンを指定します。
 1. （オプション）正規表現の場合は、正規表現を有効にします。
 1. その他のハッシュパターンを追加します。
 
-#### Path And Query String
+#### Pathおよびクエリ文字列
 
-URL に存在する必要がある 1 つ以上のパスを指定します。パスとクエリー文字列が含まれます。
+URL に存在する必要がある 1 つ以上のパスを指定します。パスとクエリ文字列が含まれます。
 
 >[!NOTE]
 >
@@ -472,9 +472,9 @@ URL に存在する必要がある 1 つ以上のパスを指定します。パ�
 1. （オプション）正規表現の場合は、正規表現を有効にします。
 1. 他のパスを追加します。
 
-#### Path Without Query String
+#### クエリ文字列なしのパス
 
-URL に存在する必要がある 1 つ以上のパスを指定します。これにはパスが含まれますが、クエリー文字列は含まれません。
+URL に存在する必要がある 1 つ以上のパスを指定します。これにはパスが含まれますが、クエリ文字列は含まれません。
 
 >[!NOTE]
 >
@@ -493,7 +493,7 @@ URL で使用するプロトコルを指定します。
 * HTTP
 * HTTPS
 
-#### Query String Parameter
+#### クエリ文字列パラメーター
 
 URL で使用する URLパラメーターを指定します。
 
@@ -636,7 +636,7 @@ setTimeout(function() {
 
 ![データ収集 UI でのトリガー直接呼び出しアクションのスクリーンショット](../../../images/extensions/client/core/direct-call-action.png)
 
-アクションは、クライアントサイドのコードからアクセスできる `satellite` オブジェクトの [`track` メソッド](../../../ui/client-side/satellite-object.md?lang=en#track)に直接マッピングされます。
+アクションは、クライアントサイドのコードからアクセスできる `satellite` オブジェクトの [`track` メソッド](../../../ui/client-side/satellite-object.md#track)に直接マッピングされます。
 
 ## Core 拡張機能データ要素のタイプ
 
@@ -803,7 +803,7 @@ CSS セレクターチェーン：
 * リファラー
 * Title
 
-### Query String Parameter
+### クエリ文字列パラメーター
 
 単一の URL パラメーターを「URL Parameter」フィールドで指定します。
 

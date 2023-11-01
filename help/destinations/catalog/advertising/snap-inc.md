@@ -2,9 +2,9 @@
 title: Snap Inc 接続
 description: Snapchat Ads Platform に接続し、Experience Platformからオーディエンスを書き出す方法を説明します。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1028'
 ht-degree: 28%
 
 ---
@@ -128,7 +128,7 @@ The *Snap Inc* の宛先では、以下の表で説明する id のアクティ�
 
 ![オーディエンス](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe・オーディエンスが Snap Inc に対して最初にアクティブ化されたとき、最初は空のオーディエンスとして表示されます。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、 [セグメント化サービスの概要](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Adobe・オーディエンスが Snap Inc に対して最初にアクティブ化されたとき、最初は空のオーディエンスとして表示されます。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、 [セグメント化サービスの概要](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## データの使用とガバナンス {#data-usage-governance}
 

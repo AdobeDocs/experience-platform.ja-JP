@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Debugger を使用した Adobe Target 実装のテスト
 description: Adobe Experience Platform Debugger を使用して、Adobe Target が有効な web サイトのテストとデバッグを行う方法について説明します。
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 100%
+source-wordcount: '1209'
+ht-degree: 98%
 
 ---
 
@@ -69,7 +69,7 @@ Platform Debugger を Target に使用するには、web サイトで [at.js ラ
 | [!DNL clientCode] | Target で認識される、組織のアカウントの識別子。 |
 | [!DNL requestType] | リクエストに使用された API。 at.js 1.x を使用している場合、値は `/json` です。at.js 2.x を使用している場合、値は `delivery` です。 |
 | [!DNL Audience Manager Blob] | 「blob」と呼ばれる暗号化された Audience Manager メタデータに関する情報を提供します。 |
-| [!DNL Audience Location Hint] | データ収集地域 ID。これは、特定の ID サービスデータセンターの地理的場所を示す数値識別子です。詳しくは、[DCS の地域 ID、場所、ホスト名](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=ja)に関する Audience Manager のドキュメントと、[`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=ja#reference-a761030ff06c4439946bb56febf42d4c) に関する Experience Cloud ID サービスガイドを参照してください。 |
+| [!DNL Audience Location Hint] | データ収集地域 ID。これは、特定の ID サービスデータセンターの地理的場所を示す数値識別子です。詳しくは、[DCS の地域 ID、場所、ホスト名](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=ja)に関する Audience Manager のドキュメントと、[`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c) に関する Experience Cloud ID サービスガイドを参照してください。 |
 | [!DNL Browser Height] | ブラウザーの高さ（ピクセル単位）。 |
 | [!DNL Browser Time Offset] | ブラウザーのタイムゾーンに関連付けられている、ブラウザーの時間オフセット。 |
 | [!DNL Browser Width] | ブラウザーの幅（ピクセル単位）。 |

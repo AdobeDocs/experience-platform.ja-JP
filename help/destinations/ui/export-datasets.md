@@ -3,9 +3,9 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 08463e9f14b0952fe5db177ae8b4546cc3c6cac5
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1722'
 ht-degree: 58%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 58%
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取得または収集した後、Experience PlatformUI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">システム生成プロファイルスナップショットデータセット</a>.</li></td>
+    <td><ul><li>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取得または収集した後、Experience PlatformUI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">システム生成プロファイルスナップショットデータセット</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>

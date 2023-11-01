@@ -3,9 +3,9 @@ title: SalesforceMarketing Cloudアカウントエンゲージメント
 description: SalesforceMarketing Cloudアカウントエンゲージメント（旧称 Pardot）の宛先を使用して、アカウントデータをエクスポートし、SalesforceMarketing Cloudアカウントエンゲージメント内で、ビジネスニーズに応じてアクティブ化する方法を説明します。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1620'
 ht-degree: 35%
 
 ---
@@ -34,7 +34,7 @@ Experience Platformおよびで設定する必要がある前提条件につい�
 
 ### Experience Platformの前提条件 {#prerequisites-in-experience-platform}
 
-[!DNL Marketing Cloud Account Engagement] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)を [!DNL Experience Platform] で作成する必要があります。
+[!DNL Marketing Cloud Account Engagement] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
 
 ### の前提条件 [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 

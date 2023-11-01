@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2023年1月）
 description: Adobe Experience Platform の 2023年1月のリリースノートです。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2414'
-ht-degree: 100%
+source-wordcount: '2408'
+ht-degree: 98%
 
 ---
 
@@ -86,7 +86,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ## 宛先（更新日：2月2日（PT）） {#destinations}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新しい宛先**
 
@@ -113,11 +113,11 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
     </tr>
     <tr>
         <td>ファイルベースの宛先への書き出し動作の更新（PLAT-123316）</td>
-        <td>データファイルをバッチ宛先に書き出す際の<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#mandatory-attributes">必須属性</a>の動作の問題を修正しました。<br> 以前は、出力ファイルのすべてのレコードに以下の両方が含まれていることが確認されていました。 <ol><li><code>mandatoryField</code> 列の null 以外の値および</li><li>他の非必須フィールドの少なくとも 1 つに null 以外の値。</li></ol> 2 番目の条件が削除されました。その結果、以下の例に示すように、書き出されたデータファイルでより多くの出力行が表示される場合があります。<br> <b> 2023年1月リリースより前のサンプル動作 </b> <br> 必須フィールド：<code>emailAddress</code> <br> <b>アクティブ化する入力データ</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>アクティベーション出力</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023年1月リリース以降のサンプル動作 </b> <br> <b>アクティベーション出力</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+        <td>データファイルをバッチ宛先に書き出す際の<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mandatory-attributes">必須属性</a>の動作の問題を修正しました。<br> 以前は、出力ファイルのすべてのレコードに以下の両方が含まれていることが確認されていました。 <ol><li><code>mandatoryField</code> 列の null 以外の値および</li><li>他の非必須フィールドの少なくとも 1 つに null 以外の値。</li></ol> 2 番目の条件が削除されました。その結果、以下の例に示すように、書き出されたデータファイルでより多くの出力行が表示される場合があります。<br> <b> 2023年1月リリースより前のサンプル動作 </b> <br> 必須フィールド：<code>emailAddress</code> <br> <b>アクティブ化する入力データ</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>アクティベーション出力</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023年1月リリース以降のサンプル動作 </b> <br> <b>アクティベーション出力</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
     <tr>
         <td>必要なマッピングおよび重複マッピングの UI および API 検証（PLAT-123316）</td>
-        <td>宛先のアクティブ化ワークフローで<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#mapping">フィールドをマッピング</a>する際に、UI および API で以下のように検証が実施されるようになりました。<ul><li><b>必要なマッピング</b>：宛先開発者が必要なマッピングを使用して宛先を設定した場合（<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=ja">Google アドマネージャー 360</a> の宛先など）、データを宛先にアクティブ化するときに、これらの必要なマッピングをユーザーが追加する必要があります。 </li><li><b>重複したマッピング</b>：アクティベーションワークフローのマッピング手順では、ソースフィールドに重複する値を追加できますが、ターゲットフィールドには追加できません。許可されているマッピングと禁止されているマッピングの組み合わせの例については、以下の表を参照してください。 <br><table><thead><tr><th>許可／禁止されています</th><th>ソースフィールド</th><th>ターゲットフィールド</th></tr></thead><tbody><tr><td>許可</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email alias2</li></ul></td></tr><tr><td>禁止されています</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+        <td>宛先のアクティブ化ワークフローで<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mapping">フィールドをマッピング</a>する際に、UI および API で以下のように検証が実施されるようになりました。<ul><li><b>必要なマッピング</b>：宛先開発者が必要なマッピングを使用して宛先を設定した場合（<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html">Google アドマネージャー 360</a> の宛先など）、データを宛先にアクティブ化するときに、これらの必要なマッピングをユーザーが追加する必要があります。 </li><li><b>重複したマッピング</b>：アクティベーションワークフローのマッピング手順では、ソースフィールドに重複する値を追加できますが、ターゲットフィールドには追加できません。許可されているマッピングと禁止されているマッピングの組み合わせの例については、以下の表を参照してください。 <br><table><thead><tr><th>許可／禁止されています</th><th>ソースフィールド</th><th>ターゲットフィールド</th></tr></thead><tbody><tr><td>許可</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email alias2</li></ul></td></tr><tr><td>禁止されています</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>    
 </table>
 
@@ -125,7 +125,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
-XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライゼーションのために顧客属性を使用したりできます。
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
 
 **新機能または更新された機能**
 

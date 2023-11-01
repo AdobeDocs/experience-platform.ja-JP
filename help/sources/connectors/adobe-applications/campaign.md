@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；Adobe 
 title: Adobe Campaign Managed Cloud Services
 description: ユーザーインターフェイスを使用して Campaign で管理されたCloud Serviceを Platform に接続する方法を説明します
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '753'
 ht-degree: 9%
 
 ---
@@ -30,7 +30,7 @@ Adobe Campaign Managed Cloud Servicesソースを使用すると、Adobe Campaig
 
 >[!IMPORTANT]
 >
->Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールへのアクセス権が必要です。 次にアクセス： [Campaign v8 ドキュメント](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) クライアントコンソールをダウンロードしてインストールする方法については、を参照してください。
+>Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールへのアクセス権が必要です。 次にアクセス： [Campaign v8 ドキュメント](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) クライアントコンソールをダウンロードしてインストールする方法については、を参照してください。
 
 クライアントコンソールから Campaign v8 インスタンスにログインします。 の下 [!DNL Explorer] タブ、選択 [!DNL Administration] 次に、「 [!DNL Configuration]. 次に、「 [!DNL Data schemas] 次に、 `broadLog` 名前またはラベルのフィルター。 表示されるリストで、次の名前の受信者配信ログのソーススキーマを選択します。 `broadLogRcp`.
 

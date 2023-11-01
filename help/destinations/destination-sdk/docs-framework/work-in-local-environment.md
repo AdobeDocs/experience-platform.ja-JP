@@ -2,9 +2,9 @@
 title: ローカル環境でのテキストエディターを使用した宛先ドキュメントページの作成
 description: このページの手順は、テキストエディターを使用してローカル環境で作業し、Experience Platform先のドキュメントページを作成してレビュー用に送信する方法を示します。
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '869'
 ht-degree: 6%
 
 ---
@@ -16,34 +16,33 @@ ht-degree: 6%
 >[!TIP]
 >
 >Adobeのコントリビューターガイドのサポートドキュメントも参照してください。
->* [Git および Markdown オーサリングツールのインストール](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)
->* [ドキュメント用のローカル Git リポジトリの設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)
->* [大きな変更をする際の GitHub コントリビューションワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en).
+>* [Git および Markdown オーサリングツールのインストール](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [ドキュメント用のローカル Git リポジトリの設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [大きな変更をする際の GitHub コントリビューションワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
-
-## GitHub に接続してローカルオーサリング環境を設定する {#set-up-environment}
+## GitHub に接続し、ローカルのオーサリング環境を設定する {#set-up-environment}
 
 1. ブラウザーで、に移動します。 `https://github.com/AdobeDocs/experience-platform.en`
-2. 宛先 [フォーク](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) リポジトリで、 **分岐** 以下に示すように。 これにより、自分の GitHub アカウントにExperience Platformリポジトリのコピーが作成されます。
+2. 宛先 [フォーク](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) リポジトリで、 **分岐** 以下に示すように。 これにより、自分の GitHub アカウントにExperience Platformリポジトリのコピーが作成されます。
 
    ![ForkAdobeドキュメントリポジトリ](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. ローカルマシンにリポジトリのクローンを作成. 選択 **コード/ HTTPS / GitHub Desktop で開く**、以下に示すように。 次の条件を満たしていることを確認します。 [GitHub Desktop](https://desktop.github.com/) インストール済み 詳しくは、 [リポジトリのローカルクローンを作成](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) (Adobe投稿者ガイド )。
+3. ローカルマシンにリポジトリのクローンを作成. 選択 **コード/ HTTPS / GitHub Desktop で開く**、以下に示すように。 次の条件を満たしていることを確認します。 [GitHub Desktop](https://desktop.github.com/) インストール済み 詳しくは、 [リポジトリのローカルクローンを作成](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) (Adobe投稿者ガイド )。
 
    ![Adobeドキュメントリポジトリをローカル環境に複製](../assets/docs-framework/clone-local.png)
 
-4. ローカルファイル構造内で、 `experience-platform.en/help/destinations/catalog/[...]`で、 `[...]` は、宛先の目的のカテゴリです。 例えば、パーソナライゼーションの宛先をExperience Platformに追加する場合は、 `personalization` フォルダー。
+4. ローカルファイル構造内で、に移動します。 `experience-platform.en/help/destinations/catalog/[...]`です。 `[...]` は、宛先の目的のカテゴリです。 例えば、パーソナライゼーションの宛先をExperience Platformに追加する場合は、 `personalization` フォルダー。
 
 ## 宛先のドキュメントページのオーサリング {#author-documentation}
 
-1. ドキュメントページは、 [セルフサービスの宛先テンプレート](../docs-framework/self-service-template.md). をダウンロードします。 [宛先テンプレート](../assets/docs-framework/yourdestination-template.zip). 解凍してファイルを展開します。 `yourdestination-template.md` を上記の手順 4 で説明したディレクトリに追加します。  ファイル名を変更 `YOURDESTINATION.md`:YOURDESTINATION は、Adobe Experience Platformでの宛先の名前です。 例えば、会社名が Moviestar の場合、ファイルにはという名前を付けます `moviestar.md`.
-2. 新しいファイルを [選択したテキストエディター](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors). Adobeでは、 [Visual Studio Code](https://code.visualstudio.com/) Markdown Authoring 拡張機能をAdobeします。 拡張機能をインストールするには、Visual Studio Code を開き、 **[!DNL Extensions]** 」タブをクリックし、 `adobe markdown authoring`. 拡張機能を選択し、「 **[!DNL Install]**.
+1. ドキュメントページは、 [セルフサービスの宛先テンプレート](../docs-framework/self-service-template.md). をダウンロードします。 [宛先テンプレート](../assets/docs-framework/yourdestination-template.zip). 解凍してファイルを展開します。 `yourdestination-template.md` を上記の手順 4 で説明したディレクトリに追加します。  ファイル名を変更 `YOURDESTINATION.md`:YOURDESTINATION は、Adobe Experience Platformでの宛先の名前です。 例えば、会社名が Moviestar の場合、ファイルにはという名前を付けます。 `moviestar.md`.
+2. 新しいファイルを [選択したテキストエディター](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors). Adobeでは、 [Visual Studio Code](https://code.visualstudio.com/) Markdown Authoring 拡張機能をAdobeします。 拡張機能をインストールするには、Visual Studio Code を開き、 **[!DNL Extensions]** 」タブをクリックし、 `adobe markdown authoring`. 拡張機能を選択し、「 **[!DNL Install]**.
    ![Markdown AuthoringAdobe拡張機能のインストール](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. 宛先に関する情報を使用してテンプレートを編集します。 テンプレートの指示に従います。
-4. ドキュメントに追加する予定のスクリーンショットや画像については、に移動します。 `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`で、 `[...]` は、宛先の目的のカテゴリです。 例えば、パーソナライゼーションの宛先をExperience Platformに追加する場合は、 `personalization` フォルダー。 宛先の新しいフォルダーを作成し、ここに画像を保存します。 オーサリング中のページからリンクする必要があります。 詳しくは、 [画像へのリンク方法の説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+4. ドキュメントに追加する予定のスクリーンショットや画像については、に移動します。 `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`です。 `[...]` は、宛先の目的のカテゴリです。 例えば、パーソナライゼーションの宛先をExperience Platformに追加する場合は、 `personalization` フォルダー。 宛先の新しいフォルダーを作成し、ここに画像を保存します。 オーサリング中のページからリンクする必要があります。 詳しくは、 [画像へのリンク方法の説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 5. 準備が整ったら、作業中のファイルを保存します。
 
-## ドキュメントを送信してレビュー {#submit-review}
+## ドキュメントを送信してレビューします {#submit-review}
 
 >[!TIP]
 >
@@ -68,9 +67,9 @@ ht-degree: 6%
 1. ベースと比較ブランチが正しいことを確認します。 PR に、更新内容を説明するメモを追加し、「 」を選択します。 **プル要求の作成**. これにより、PR が開き、フォークの作業ブランチがAdobeリポジトリの master ブランチにマージされます。
    >[!TIP]
    >
-   >を **メンテナーによる編集を許可** チェックボックスがオンになっているので、Adobeドキュメントチームが PR を編集できます。
+   >を残します。 **メンテナーによる編集を許可する** チェックボックスがオンになっているので、Adobeドキュメントチームが PR を編集できます。
 
-   ![Adobeドキュメントリポジトリへのプル要求の作成](../assets/docs-framework/ssd-create-pull-request-2.png)
+   ![Adobe・ドキュメント・リポジトリへのプル要求の作成](../assets/docs-framework/ssd-create-pull-request-2.png)
 
 1. この時点で、Adobeコントリビューター使用許諾契約 (CLA) に署名するよう求める通知が表示されます。 これは必須の手順です。 CLA に署名した後、PR ページを更新し、プル要求を送信します。
 
@@ -82,4 +81,4 @@ ht-degree: 6%
 
 >[!TIP]
 >
->ドキュメントに画像やリンクを追加したり、Markdown に関するその他の質問については、以下を参照してください。 [Markdown の使用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) (Adobeのコラボレーション執筆ガイド )
+>ドキュメントに画像やリンクを追加したり、Markdown に関するその他の質問については、以下を参照してください。 [Markdown の使用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) (Adobeのコラボレーション執筆ガイド )

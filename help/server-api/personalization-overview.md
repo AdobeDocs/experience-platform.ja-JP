@@ -2,16 +2,16 @@
 title: パーソナライゼーションの概要
 description: Adobe Experience Platform Edge Network Server API を使用して、パーソナライズされたコンテンツをAdobeのパーソナライゼーションソリューションから取得する方法について説明します。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 10%
+source-wordcount: '739'
+ht-degree: 11%
 
 ---
 
 # パーソナライゼーションの概要
 
-を使用 [!DNL Server API]を使用すると、次のようなパーソナライズされたコンテンツをAdobeパーソナライゼーションソリューションから取得できます。 [Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html) および [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+を使用 [!DNL Server API]を使用すると、次のようなパーソナライズされたコンテンツをAdobeパーソナライゼーションソリューションから取得できます。 [Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html) および [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja).
 
 また、 [!DNL Server API] では、Adobe Experience Platformのパーソナライゼーションの宛先 ( [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション接続](../destinations/catalog/personalization/custom-personalization.md). 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、 [専用ガイド](../destinations/ui/activate-edge-personalization-destinations.md).
 
@@ -22,13 +22,13 @@ Server API を使用する場合は、パーソナライゼーションエンジ
 Adobeのパーソナライゼーションソリューションを使用する前に、次の概念を理解しておく必要があります。
 
 * **オファー**：オファーは、オファーを表示する資格のあるユーザーを指定するルールが関連付けられているマーケティングメッセージです。
-* **決定**:決定（旧称：オファーアクティビティ）は、オファーの選択を通知します。
-* **スキーマ**:決定のスキーマは、返されるオファーのタイプを通知します。
-* **範囲**:決定の範囲。
-   * Adobe Targetでは、 [!DNL mbox]. この [!DNL global mbox] が `__view__` 範囲
+* **決定**：決定（旧称：オファーアクティビティ）は、オファーの選択を通知します。
+* **スキーマ**：決定のスキーマは、返されるオファーのタイプを通知します。
+* **範囲**：決定の範囲。
+   * Adobe Targetでは、 [!DNL mbox]. The [!DNL global mbox] が `__view__` 範囲
    * の場合 [!DNL Offer Decisioning]これらは、offer decisioningサービスがオファーの提案に使用するアクティビティ ID と配置 ID を含む、Base64 でエンコードされた JSON の文字列です。
 
-## この `query` object {#query-object}
+## The `query` object {#query-object}
 
 パーソナライズされたコンテンツを取得するには、リクエスト例の明示的なリクエストクエリオブジェクトが必要です。 クエリオブジェクトの形式は次のとおりです。
 
@@ -115,7 +115,7 @@ Adobeのパーソナライゼーションソリューションを使用する前
 | --- | --- | --- |
 | `payload.id` | 文字列 | 決定 ID。 |
 | `payload.scope` | 文字列 | 提案されたオファーを導いた決定範囲。 |
-| `payload.scopeDetails.decisionProvider` | 文字列 | に設定 `TGT` Adobe Targetを使用する場合。 |
+| `payload.scopeDetails.decisionProvider` | 文字列 | をに設定します。 `TGT` Adobe Targetを使用する場合。 |
 | `payload.scopeDetails.activity.id` | 文字列 | オファーアクティビティの一意の ID。 |
 | `payload.scopeDetails.experience.id` | 文字列 | オファー配置の一意の ID。 |
 | `items[].id` | 文字列 | オファー配置の一意の ID。 |
@@ -190,7 +190,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### 応答 {#response}
 
-を返します。 `200 OK` ステータスと 1 つ以上の `Handle` オブジェクトを作成します。
+を返します。 `200 OK` ステータスと 1 つ以上の `Handle` オブジェクトに基づきます。
 
 ```json
 {
@@ -310,15 +310,15 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | ○ | データ収集エンドポイントで使用されるデータストリームの ID。 |
-| `requestId` | `String` | いいえ | 外部リクエストトレース ID。 何も指定されない場合、Edge ネットワークはユーザーに代わって 1 つを生成し、応答の本文/ヘッダーに返します。 |
-| `silent` | `Boolean` | いいえ | Edge ネットワークが `204 No Content` 空のペイロードを持つ応答。 重大なエラーは、対応する HTTP ステータスコードとペイロードを使用して報告されます。 |
+| `requestId` | `String` | × | 外部リクエストトレース ID。 何も指定されない場合、Edge ネットワークはユーザーに代わって 1 つを生成し、応答の本文/ヘッダーに返します。 |
+| `silent` | `Boolean` | × | Edge ネットワークが `204 No Content` 空のペイロードを持つ応答。 重大なエラーは、対応する HTTP ステータスコードとペイロードを使用して報告されます。 |
 
 ### 応答 {#notifications-response}
 
 正常な応答は、次のステータスのいずれかと、 `requestID` リクエストで何も指定されていない場合。
 
 * `202 Accepted` リクエストが正常に処理されたとき。
-* `204 No Content` リクエストが正常に処理され、 `silent` パラメータがに設定されました `true`;
+* `204 No Content` リクエストが正常に処理され、 `silent` パラメータがに設定されました： `true`;
 * `400 Bad Request` リクエストの形式が正しくなかった場合（必須のプライマリ id が見つからなかった場合など）。
 
 ```json

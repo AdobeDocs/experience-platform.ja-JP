@@ -2,10 +2,10 @@
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2287'
-ht-degree: 73%
+source-wordcount: '2283'
+ht-degree: 72%
 
 ---
 
@@ -109,7 +109,7 @@ ID グラフは、アドレス可能なオーディエンスとは顧客プロ�
 | Adobe Audience Manager ソースフィルタリング | Adobe Audience Managerソース接続を作成する際に、 [!DNL data lake] およびリアルタイム顧客プロファイルを参照してください。Audience Managerデータ全体を取り込むのではありません。 詳しくは、[Audience Manager ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)に関するガイドを参照してください。 |
 | Adobe Analytics データ準備 | Analytics ソース接続を作成する際に [!DNL Data Prep] 機能を使用すると、ユースケースに必要のないデータをフィルターで除外できます。[!DNL Data Prep] を使用して、どの属性／列をプロファイルに公開する必要があるかを定義できます。また、条件文を記述して、データをプロファイルに公開するのか、それとも [!DNL data lake] にだけ公開するのかを Platform に通知できます。詳しくは、[Analytics ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md)に関するガイドを参照してください。 |
 | プロファイル用データセットの有効化／無効化のサポート | データをリアルタイム顧客プロファイルに取り込むには、プロファイルストアで使用するデータセットを有効にする必要があります。 そうすることで、[!DNL Addressable Audience] と [!DNL Profile Richness] の使用権限が追加されます。データセットが顧客プロファイルのユースケースで不要になったら、そのデータセットのプロファイルへの統合を無効にして、データが確実にライセンスへの準拠を維持するようにできます。詳しくは、[プロファイル用データセットの有効化および無効化](../../catalog/datasets/enable-for-profile.md)に関するガイドを参照してください。 |
-| Web SDK と Mobile SDK のデータ除外 | Web および Mobile SDK によって収集されるデータには、自動的に収集されるデータと、お客様の開発者が明示的に収集するデータの 2 つのタイプがあります。ライセンスのコンプライアンスをより適切に管理するために、コンテキスト設定により、SDK の設定で自動データ収集を無効にすることができます。また、カスタムデータは、開発者が削除したり、設定しないことも可能です。詳しくは、[SDK の基礎の設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja#fundamentals)に関するガイドを参照してください。 |
+| Web SDK と Mobile SDK のデータ除外 | Web および Mobile SDK によって収集されるデータには、自動的に収集されるデータと、お客様の開発者が明示的に収集するデータの 2 つのタイプがあります。ライセンスのコンプライアンスをより適切に管理するために、コンテキスト設定により、SDK の設定で自動データ収集を無効にすることができます。また、カスタムデータは、開発者が削除したり、設定しないことも可能です。詳しくは、[SDK の基礎の設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#fundamentals)に関するガイドを参照してください。 |
 | サーバーサイド転送のデータ除外 | サーバーサイド転送を使用して Platform にデータを送信する場合、ルールアクションのマッピングを削除してすべてのイベントにわたって除外するか、ルールに条件を追加して特定のイベントでのみデータを送信するようにすることで、送信するデータを除外できます。次のドキュメントを参照してください： [イベントと条件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)を参照 )。 |
 | ソースレベルでのデータのフィルタリング | 接続を作成し、データをExperience Platformに取り込む前に、論理演算子と比較演算子を使用して、ソースから行レベルのデータをフィルタリングできます。 詳しくは、 [を使用してソースの行レベルのデータをフィルタリングする [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
@@ -167,7 +167,7 @@ ID グラフは、アドレス可能なオーディエンスとは顧客プロ�
 | [エクスペリエンスイベントの有効期限](../../profile/event-expirations.md) | プロファイル対応のデータセットに取り込まれるすべてのイベントに有効期限を適用します。 この機能を有効にするには、Adobeのアカウントチームまたはカスタマーケアにお問い合わせください。 |
 | [Adobe Analytics データ準備フィルター](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します |
 | [Adobe Audience Manager ソースコネクタフィルター](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager ソース接続フィルターを適用して、不要なデータを取り込みから除外します |
-| [Alloy SDK データフィルター](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja#fundamentals) | Alloy フィルターを適用して、不要なデータを取り込みから除外します |
+| [Alloy SDK データフィルター](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#fundamentals) | Alloy フィルターを適用して、不要なデータを取り込みから除外します |
 | [イベント転送データフィルター](../../tags/ui/event-forwarding/overview.md) | サーバーサイド [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します詳しくは、[タグルール](../../tags/ui/managing-resources/rules.md)に関するドキュメントを参照してください。 |
 | [ライセンス使用状況ダッシュボード UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Experience Platform に関する組織のライセンス関連データのスナップショットを表示します |
 | [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | アドレス可能なオーディエンスに最も貢献するデータセットを出力します |

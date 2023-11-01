@@ -1,23 +1,23 @@
 ---
-title: Adobe Targetを使用したパーソナライゼーション
+title: Adobe Target を使用したパーソナライゼーション
 description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '616'
 ht-degree: 3%
 
 ---
 
-# Adobe Targetを使用したパーソナライゼーション
+# Adobe Target を使用したパーソナライゼーション
 
 ## 概要 {#overview}
 
-Edge Network Server API を使用すると、Adobe Targetで作成されたパーソナライズされたエクスペリエンスを、 [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+Edge Network Server API を使用すると、Adobe Targetで作成されたパーソナライズされたエクスペリエンスを、 [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) は、Server API で完全にはサポートされていません。 Server API では、 **取得** アクティビティが VEC で作成されたが、Server API では作成されない **レンダー** VEC で作成されたアクティビティ。 VEC で作成されたアクティビティをレンダリングする場合は、 [ハイブリッドパーソナライズ](../edge/personalization/hybrid-personalization.md) Web SDK と Edge Network Server API を使用して、
+>を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は、Server API で完全にはサポートされていません。 Server API では、 **取得** アクティビティが VEC で作成されたが、Server API では作成されない **render** VEC で作成されたアクティビティ。 VEC で作成されたアクティビティをレンダリングする場合は、 [ハイブリッドパーソナライズ](../edge/personalization/hybrid-personalization.md) Web SDK と Edge Network Server API を使用して、
 
 ## データストリームの設定 {#configure-your-datastream}
 
@@ -57,7 +57,7 @@ Target でオーディエンスを作成する場合、次の値がカスタム�
 
 ## Target プロファイルの更新 {#profile-update}
 
-この [!DNL Server API] では、Target プロファイルの更新を許可します。 Target プロファイルを更新するには、必ず `data` 次の形式のリクエストの一部：
+The [!DNL Server API] では、Target プロファイルの更新を許可します。 Target プロファイルを更新するには、必ず `data` リクエストの一部を次の形式で記述します。
 
 ```json
 "data":  {
@@ -72,7 +72,7 @@ Target でオーディエンスを作成する場合、次の値がカスタム�
 
 ### スキーマ {#schemas}
 
-リクエストのクエリ部分は、Target から返されるコンテンツを決定します。 以下 `personalization` オブジェクト `schemas` は、Target から返されるコンテンツのタイプを決定します。
+リクエストのクエリ部分は、Target から返されるコンテンツを決定します。 の下 `personalization` オブジェクト、 `schemas` は、Target から返されるコンテンツのタイプを決定します。
 
 どのようなオファーを取得するかが不明な場合は、パーソナライゼーションクエリに次の 4 つのスキーマをすべて Edge ネットワークに含める必要があります。
 

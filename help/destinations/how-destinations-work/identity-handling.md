@@ -2,10 +2,10 @@
 title: 宛先アクティブ化ワークフローでの ID の処理
 description: 宛先のタイプに応じた、アクティベーションワークフローにおける ID の書き出しの処理方法を学ぶ
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
-source-wordcount: '1186'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '1180'
+ht-degree: 98%
 
 ---
 
@@ -88,7 +88,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->これらの広告宛先のほとんどは、Audience Manager でサポートされています（これらの宛先タイプは、Audience Manager ではデバイスベースの宛先と呼ばれます）。 [Audience Manager でサポートされているデバイスベースの宛先の全リスト](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=ja)を参照してください。Experience Platform には、ほんの一部のみリストされています。Experience Platform と Audience Manager とのデータの共有について詳しくは、[Experience Platform から Audience Manager へのデータ共有の有効化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#enable-aep-to-aam-data)に関する節を参照してください。現在、サポートしているサードパーティ Cookie の宛先を増やす予定はありません。
+>これらの広告宛先のほとんどは、Audience Manager でサポートされています（これらの宛先タイプは、Audience Manager ではデバイスベースの宛先と呼ばれます）。 [Audience Manager でサポートされているデバイスベースの宛先の全リスト](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)を参照してください。Experience Platform には、ほんの一部のみリストされています。Experience Platform と Audience Manager とのデータの共有について詳しくは、[Experience Platform から Audience Manager へのデータ共有の有効化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data)に関する節を参照してください。現在、サポートしているサードパーティ Cookie の宛先を増やす予定はありません。
 
 ## エンタープライズの宛先 {#enterprise-destinations}
 

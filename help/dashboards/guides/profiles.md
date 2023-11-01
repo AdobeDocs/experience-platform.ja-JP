@@ -4,10 +4,10 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '4331'
-ht-degree: 56%
+source-wordcount: '4329'
+ht-degree: 55%
 
 ---
 
@@ -213,7 +213,7 @@ The [!UICONTROL スコアの顧客 AI 配分] ウィジェットは、プロフ�
 >
 >[!UICONTROL プロファイル数]ウィジェットは、複数の理由により、UI の「[!UICONTROL プロファイル]」セクションの「[!UICONTROL 参照]」タブに表示されるプロファイル数とは異なる数を表示する場合があります。この違いの最も一般的な理由は、 [!UICONTROL 参照] 「 」タブは、組織のデフォルトの結合ポリシーに基づいて結合されたプロファイルの合計数を参照しますが、 [!UICONTROL プロファイル数] ウィジェットは、ダッシュボードに表示するように選択した結合ポリシーに基づいて、結合されたプロファイルの合計数を参照します。
 >
->もう 1 つの一般的な原因は、ダッシュボードのスナップショットが作成される時間と、「[!UICONTROL 参照]」タブでサンプルジョブを実行する時間の違いによるものです。[!UICONTROL プロファイル数]ウィジェットが最後に更新された時間は、ウィジェットのタイムスタンプで確認できます。サンプルジョブが [!UICONTROL 参照] タブ、「 [リアルタイム顧客プロファイル UI ガイドのプロファイル数に関する節](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=ja#profile-count).
+>もう 1 つの一般的な原因は、ダッシュボードのスナップショットが作成される時間と、「[!UICONTROL 参照]」タブでサンプルジョブを実行する時間の違いによるものです。[!UICONTROL プロファイル数]ウィジェットが最後に更新された時間は、ウィジェットのタイムスタンプで確認できます。サンプルジョブが [!UICONTROL 参照] タブ、「 [リアルタイム顧客プロファイル UI ガイドのプロファイル数に関する節](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count).
 
 ![プロファイル数Experience Platformがハイライトされた「プロファイル」ダッシュボード。](../images/profiles/profile-count.png)
 

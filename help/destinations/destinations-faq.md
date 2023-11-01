@@ -3,9 +3,9 @@ keywords: 宛先；質問；よくある質問； faq；宛先 faq
 title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1634'
 ht-degree: 7%
 
 ---

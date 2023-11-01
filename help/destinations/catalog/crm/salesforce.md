@@ -3,9 +3,9 @@ keywords: crm;CRM;crm の宛先；salesforce crm;salesforce crm の宛先
 title: Salesforce CRM 接続
 description: Salesforce CRM の宛先を使用すると、アカウントデータをエクスポートし、Salesforce CRM 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3121'
+source-wordcount: '3117'
 ht-degree: 21%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 21%
 
 ### Experience Platformの前提条件 {#prerequisites-in-experience-platform}
 
-Salesforce CRM の宛先に対してデータをアクティブ化する前に、 [スキーマ](/help/xdm/schema/composition.md), a [データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)、および [セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja) 次で作成： [!DNL Experience Platform].
+Salesforce CRM の宛先に対してデータをアクティブ化する前に、 [スキーマ](/help/xdm/schema/composition.md), a [データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)、および [セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 次で作成： [!DNL Experience Platform].
 
 ### の前提条件 [!DNL Salesforce CRM] {#prerequisites-destination}
 

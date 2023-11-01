@@ -2,9 +2,9 @@
 title: Adobe Experience Platform の宛先のドキュメント化
 description: Adobe Experience Platformで宛先のドキュメントページを作成する手順を説明します。
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '530'
 ht-degree: 8%
 
 ---
@@ -24,8 +24,8 @@ Adobe Experience Platformへようこそ、ここに来てくれて嬉しい！
 
 * 新しい宛先のドキュメントページを作成する手順を説明します。
 * 宛先に入力するためのテンプレート。
-* [Markdown の一般的な使用手順](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Markdown のフレーバーAdobeの具体的な説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (Adobeの Markdown の風味は、通常の Markdown と非常に似ています )。
+* [Markdown の使用に関する一般的な手順](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Markdown のフレーバーAdobeに関する具体的な説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (Adobeの Markdown の風味は、通常の Markdown と非常に似ています )。
 * A [ベストプラクティスページ](./authoring-best-practices.md) を使用すると、宛先ページのドキュメントページを作成し、Experience Platformドキュメントの品質基準を満たすのに役立ちます。
 
 ## 前提条件 {#prerequisites}
@@ -38,7 +38,7 @@ Adobe Experience Platformへようこそ、ここに来てくれて嬉しい！
 
 ## Adobe Experience Platformで宛先のドキュメントを作成する手順の概要 {#high-level-instructions}
 
-宛先のドキュメントを作成するには、概要レベルで、次の手順を実行する必要があります [分岐を作成する](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) Adobe Experience Platformドキュメントリポジトリの [提供されたドキュメントテンプレート](./self-service-template.md) 新しい分岐に Adobeが提供するテンプレートを使用して、新しい宛先ページを作成します。 準備が整ったら、プルリクエスト (PR) を開きます。 これをおこなう手順は、以下で説明します。 [新しい宛先ページを作成する手順](./documentation-instructions.md#steps-to-create-docs-page).
+宛先のドキュメントを作成するには、概要レベルで、次の手順を実行する必要があります。 [分岐を作成する](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) Adobe Experience Platformドキュメントリポジトリの [提供されたドキュメントテンプレート](./self-service-template.md) 新しい分岐に Adobeが提供するテンプレートを使用して、新しい宛先ページを作成します。 準備が整ったら、プルリクエスト (PR) を開きます。 これをおこなう手順は、以下で説明します。 [新しい宛先ページを作成する手順](./documentation-instructions.md#steps-to-create-docs-page).
 
 <!--
 
@@ -64,4 +64,4 @@ GitHub Web インターフェイスまたはローカル環境を使用して、
 
 ## ベストプラクティス {#best-practices}
 
-以下を確認します。 [オーサリングのベストプラクティス](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) 宛先ドキュメントページを作成する前と前 必ず [Adobe文書の記述ガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) ドキュメントのオーサリング時にAdobeドキュメントチームが使用する、その他の記述に関するヒント
+以下を確認します。 [オーサリングのベストプラクティス](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) 宛先ドキュメントページを作成する前と間に 必ず [Adobe・ドキュメントの記述ガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) ドキュメントのオーサリング時にAdobeドキュメントチームが使用する、その他の記述に関するヒント

@@ -3,10 +3,10 @@ title: Web SDK と Edge Network Server API を使用したハイブリッドパ�
 description: この記事では、Web SDK を Server API と組み合わせて使用して、web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション;ハイブリッド;Server API;サーバーサイド;ハイブリッド実装;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 100%
+source-wordcount: '828'
+ht-degree: 99%
 
 ---
 
@@ -39,7 +39,7 @@ Web プロパティにハイブリッドパーソナライゼーションを実�
 1. Server API は、パーソナライゼーションコンテンツをアプリケーションサーバーに返します。
 1. アプリケーションサーバーは、[ID とクラスターの Cookie](#cookies) を含んだ HTML 応答をクライアントブラウザーに返します。
 1. クライアントページでは、[!DNL Web SDK] `applyResponse` コマンドが呼び出され、前のステップの [!UICONTROL Server API] 応答のヘッダーと本文が渡されます。
-1. `renderDecisions` フラグが `true` に設定されているので、[!DNL Web SDK] は [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) が提供するページの読み込みを自動的にレンダリングします。
+1. `renderDecisions` フラグが `true` に設定されているので、[!DNL Web SDK] は [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) が提供するページの読み込みを自動的にレンダリングします。
 1. フォームベースの [!DNL JSON] オファーは、`applyPersonalization` メソッドを使用して手動で適用され、パーソナライゼーション オファーに基づいて [!DNL DOM] を更新します。
 1. フォームベースのアクティビティの場合、オファーがいつ表示されたかを示すために、表示イベントを手動で送信する必要があります。これは、`sendEvent` コマンドを使用して行われます。
 

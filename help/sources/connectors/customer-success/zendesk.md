@@ -3,9 +3,9 @@ title: Zendesk Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Zendesk をAdobe Experience Platformに接続する方法を説明します。
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 47%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 Experience Platform は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。顧客成功プロバイダーのサポートには以下が含まれます。 [!DNL Zendesk].
 
-このAdobe Experience Platform [ソース](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=ja) は [Zendesk Search API > 検索結果の書き出し](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) これにより、Zendesk からExperience Platformにユーザー情報が返され、さらに処理が行われます。
+このAdobe Experience Platform [ソース](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=ja) は、 [Zendesk Search API > 検索結果の書き出し](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) これにより、Zendesk からExperience Platformにユーザー情報が返され、さらに処理が行われます。
 
 ## IP アドレス許可リスト
 
@@ -26,11 +26,11 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 [!DNL Zendesk] は、 API と通信するための認証メカニズムとして Bearer トークンを使用します。 [!DNL Zendesk]
 
-この節では、を認証するために完了する必要がある前提条件の手順について説明します。 [!DNL Zendesk] アカウント
+この節では、を認証するために完了する必要がある前提条件の手順について説明します。 [!DNL Zendesk] アカウント。
 
-* の認証の最初の手順 [!DNL Zendesk] アカウントは、 [!DNL Zendesk] サポートアカウント。 まだ [[!DNL Zendesk] 登録ページ](https://www.zendesk.co.jp/register/) 登録して Zendesk アカウントを作成します。
-* 登録が完了したら、 [[!DNL Zendesk] web サイト](https://www.zendesk.com/login/) の **サブドメイン**.
-* 次に、 **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
+* の認証の最初の手順 [!DNL Zendesk] アカウントは、以下を確実にお持ちであることを確認するために使用されます。 [!DNL Zendesk] サポートアカウント。 まだ [[!DNL Zendesk] 登録ページ](https://www.zendesk.co.jp/register/) 登録して Zendesk アカウントを作成します。
+* 登録が完了したら、 [[!DNL Zendesk] web サイト](https://www.zendesk.com/login/) を選択し、 **サブドメイン**.
+* 次に、「 **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * 最後に、 **[!DNL API token]** 」セクションに入力します。
 
 ![Zendesk API トークン](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)

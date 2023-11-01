@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 顧客属性ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して顧客属性をAdobe Experience Platformに接続する方法を説明します
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 19%
+source-wordcount: '405'
+ht-degree: 23%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 19%
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) 「Experience Cloud」では、顧客関係管理 (CRM) データベースから取り込んだ企業データをアップロードできます。 データを Experience Cloud の顧客属性データソースにアップロードすると、そのデータを Adobe Analytics および Adobe Target で使用できます。
+[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=ja) 「Experience Cloud」では、顧客関係管理 (CRM) データベースから取り込んだ企業データをアップロードできます。 データを Experience Cloud の顧客属性データソースにアップロードすると、そのデータを Adobe Analytics および Adobe Target で使用できます。
 
 Experience Platformは、取り込みのサポートを提供しています [!DNL Customer Attributes] プロファイルデータをAdobe Experience Platformに送信します。
 
@@ -31,7 +31,7 @@ The [!DNL Customer Attributes] ソースは、宛先となるデータのデー�
 
 の場合 [!DNL Customer Attributes] 他のデータと結び付けるデータ [!DNL Profile] データセット、そのデータおよび id をExperience CloudID と照合する必要があります。
 
-この `CORE` 名前空間を作成するには、次を使用して訪問者のExperience CloudID を設定します。 [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [モバイル SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)、または [Experience CloudID サービス API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja).
+この `CORE` 名前空間を作成するには、次を使用して訪問者のExperience CloudID を設定します。 [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=ja), [モバイル SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)、または [Experience CloudID サービス API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja).
 
 The [!DNL Customer Attributes] ファイルは、その他の id 関係をさらに設定しません。 例えば、 [!DNL Customer Attributes] ソースデータセットに次が含まれている **電子メール** および **ロイヤリティ ID** フィールドに値を入力する場合、それらのフィールドを処理するには、スキーマ内の id フィールドとしてラベル付けする必要があります。 [!DNL Identity Service].
 

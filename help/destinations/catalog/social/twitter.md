@@ -2,10 +2,10 @@
 title: Twitterのカスタムオーディエンス接続
 description: 既存のフォロワーや顧客をTwitterの対象にし、Adobe Experience Platform内で作成したオーディエンスをアクティブ化して、関連するリマーケティングキャンペーンを作成します
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '876'
-ht-degree: 57%
+source-wordcount: '874'
+ht-degree: 56%
 
 ---
 
@@ -24,7 +24,7 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
+[!DNL Twitter Custom Audiences] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

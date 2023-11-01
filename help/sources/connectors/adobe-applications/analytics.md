@@ -2,10 +2,10 @@
 title: レポートスイートデータ用のAdobe Analytics Source Connector
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 59f7b7cd2e7c52b64ee7fdb8e33b3a0116697696
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 18%
+source-wordcount: '1159'
+ht-degree: 17%
 
 ---
 
@@ -74,7 +74,7 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 | ID フィールド | 説明 |
 | --- | --- |
 | AAID | AAID はAdobe Analyticsの主なデバイス識別子で、 [!DNL Analytics] ソース。 AAID は、 *従来の Analytics ID* または `s_vi` cookie ID です。 これにもかかわらず、AAID は `s_vi` cookie が存在しません。 AAID は、 `post_visid_high` および `post_visid_low` 列 [[!DNL Analytics] データフィード](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=ja). 任意のイベントで、 AAID フィールドには単一の ID が含まれます。この ID は、 [～に対する操作の順序 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **注意**：レポートスイート全体で、AAID に複数のイベントタイプが混在している場合があります。 |
-| ECID | ECID(Experience CloudID) は、別のデバイス識別子フィールドで、Adobe Analyticsで [!DNL Analytics] は、Experience CloudID サービスを使用して実装されます。 ECID は、MCID(Marketing CloudID) とも呼ばれます。 イベントに ECID が存在する場合、AAID は、Analytics が [猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) が設定されている。 ECID は、 `mcvisid` Analytics データフィード内で使用されます。 ECID について詳しくは、 [ECID の概要](../../../identity-service/ecid.md). ECID がと連携する方法について詳しくは、 [!DNL Analytics]を参照してください。 [Analytics およびExperience CloudID のリクエスト](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=ja). |
+| ECID | ECID(Experience CloudID) は、別のデバイス識別子フィールドで、Adobe Analyticsで [!DNL Analytics] は、Experience CloudID サービスを使用して実装されます。 ECID は、MCID(Marketing CloudID) とも呼ばれます。 イベントに ECID が存在する場合、AAID は、Analytics が [猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) が設定されている。 ECID は、 `mcvisid` Analytics データフィード内で使用されます。 ECID について詳しくは、 [ECID の概要](../../../identity-service/ecid.md). ECID がと連携する方法について詳しくは、 [!DNL Analytics]を参照してください。 [Analytics およびExperience CloudID のリクエスト](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
 | AACUSTOMID | AACUSTOMID は、 `s.VisitorID` 変数を [!DNL Analytics] 実装。 AACUSTOMID は、 `cust_visid` 列 [[!DNL Analytics] データフィード](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=ja). AACUSTOMID が存在する場合、AAID は AACUSTOMID に基づきます。これは、AACUSTOMID が、 [～に対する操作の順序 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
 
 ### How [!DNL Analytics] ソースで ID を扱う

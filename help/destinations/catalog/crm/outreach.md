@@ -3,9 +3,9 @@ keywords: CRM;CRM;CRM の宛先；Outreach;Outreach crm の宛先
 title: アウトリーチ接続
 description: Outreach の宛先を使用すると、アカウントデータを書き出し、Outreach 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1742'
 ht-degree: 44%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 44%
 
 ### Experience Platform の前提条件 {#prerequisites-in-experience-platform}
 
-[!DNL Outreach] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)を [!DNL Experience Platform] で作成する必要があります。
+[!DNL Outreach] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
 
 詳しくは、Adobeのドキュメントを参照してください。 [オーディエンスメンバーシップ詳細スキーマフィールドグループ](/help/xdm/field-groups/profile/segmentation.md) オーディエンスのステータスに関するガイダンスが必要な場合は、を参照してください。
 

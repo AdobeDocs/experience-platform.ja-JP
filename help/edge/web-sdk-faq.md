@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2098'
 ht-degree: 3%
 
 ---
@@ -84,7 +84,7 @@ Alloy は、Adobe Experience Platform Web SDK のコード名です。 Adobe Exp
 
 いいえ。Adobeの Digital Experience のお客様は、Adobe Experience Platform Web SDK を無料で使用できます。 を使用するお客様 [!DNL Web SDK] は、データ収集 UI またはExperience PlatformUI でスキーマ、データセット、ID 名前空間、データストリームを作成するために、適切な権限を設定する必要があります。
 
-これらの権限の設定について詳しくは、 [データ収集権限の管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
+これらの権限の設定について詳しくは、 [データ収集権限の管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ja).
 
 ## Web SDK の使用者
 
@@ -119,7 +119,7 @@ Web SDK は急速に進化しています。 現在、さらに多くの使用�
 
 ## Alloy を使用し始めたときに、Web サイトの訪問者が新規訪問者として表示されないように、ECID を移行することはできますか？
 
-はい、Adobe Experience Platform Web SDK には、ID 移行機能が用意されています。 ID の移行手順に従います。 [Platform Web SDK ID ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) を参照してください。
+はい、Adobe Experience Platform Web SDK には、ID 移行機能が用意されています。 ID の移行手順に従います。 [Platform Web SDK ID ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#id-migration) を参照してください。
 
 ## Web SDK とタグの違いは何ですか？
 
@@ -161,7 +161,7 @@ CNAME について詳しくは、 [Adobe文書](https://experienceleague.adobe.c
 | **kndctr_orgid_cluster** | 1800 | 30 分 | この cookie は、現在のユーザーのリクエストを処理する Edge ネットワーク地域を保存します。 Edge Network がリクエストを正しい地域にルーティングできるように、地域は URL パスで使用されます。 この cookie の有効期間は 30 分なので、ユーザーが別の IP アドレスで接続した場合、リクエストは最も近い地域にルーティングできます。 |
 | **mbox** | 63072000 | 2 年。 | この cookie は、Target の移行設定が true に設定されている場合に表示されます。 これにより、Target が許可されます。 [mbox の Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) を Web SDK で設定します。 |
 | **mboxEdgeCluster** | 1800 | 30 分 | この cookie は、Target の移行設定が true に設定されている場合に表示されます。 Web SDK はこの cookie を使用して正しいエッジクラスターを at.js に通信し、ユーザーがサイト内を移動する際に Target プロファイルの同期を維持できます。 |
-| **AMCV_###@AdobeOrg** | 34128000 | 395 日 | この Cookie は、Adobe Experience Platform Web SDK での ID の移行が有効になっている場合にのみ表示されます。 この cookie は、サイトの一部で visitor.js をまだ使用している間に Web SDK に移行する際に役立ちます。 詳しくは、 [idMigrationEnabled ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) を参照してください。 |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 日 | この Cookie は、Adobe Experience Platform Web SDK での ID の移行が有効になっている場合にのみ表示されます。 この cookie は、サイトの一部で visitor.js をまだ使用している間に Web SDK に移行する際に役立ちます。 詳しくは、 [idMigrationEnabled ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#identity-options) を参照してください。 |
 
 Web SDK を使用する場合、Edge ネットワークは上記の 1 つ以上の cookie を設定します。 Edge ネットワークは、 `secure` および `sameSite="none"` 属性。
 

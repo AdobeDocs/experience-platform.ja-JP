@@ -4,9 +4,9 @@ title: 基本を学ぶ
 description: ユースケースプレイブック機能の基本を学ぶ方法を説明します。
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '314'
 ht-degree: 100%
 
 ---

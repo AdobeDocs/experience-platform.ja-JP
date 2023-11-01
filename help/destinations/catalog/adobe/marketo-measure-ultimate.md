@@ -3,9 +3,9 @@ title: Marketo Measure Ultimate の宛先
 description: Marketo Measure Ultimate の宛先にデータを接続し、アクティブ化する方法を説明します。
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '652'
 ht-degree: 37%
 
 ---
@@ -40,8 +40,8 @@ Marketo Measureの宛先に関する次の前提条件に注意します。
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL データセットの書き出し]** | オーディエンスの関心や資格でグループ化または構造化されていない未加工のデータセットを書き出します。 詳細を表示 [データセットの書き出し](/help/destinations/destination-types.md#dataset-export-destinations). |
-| 書き出し頻度 | **[!UICONTROL バッチ]** | このバッチ宛先では、2 時間ごとにMarketo Measureプラットフォームにファイルを書き出します。 詳細を表示 [データセットの書き出し](/help/destinations/ui/export-datasets.md#scheduling). |
+| 書き出しタイプ | **[!UICONTROL データセットの書き出し]** | オーディエンスの関心や資格でグループ化または構造化されていない未加工のデータセットを書き出します。 詳細を表示： [データセットの書き出し](/help/destinations/destination-types.md#dataset-export-destinations). |
+| 書き出し頻度 | **[!UICONTROL バッチ]** | このバッチ宛先では、2 時間ごとにMarketo Measureプラットフォームにファイルを書き出します。 詳細を表示： [データセットの書き出しをスケジュール](/help/destinations/ui/export-datasets.md#scheduling). |
 
 {style="table-layout:auto"}
 
@@ -72,13 +72,13 @@ Marketo Measureの宛先に関する次の前提条件に注意します。
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 詳しくは、 [（ベータ版）データセットの書き出し](/help/destinations/ui/export-datasets.md) この宛先にデータセットを書き出す詳しい手順については、こちらのチュートリアルを参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 
-データセットの書き出しが正常におこなわれたことを検証するには、データセットが [Snowflakeデータウェアハウス](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
+データセットの書き出しが正常におこなわれたことを検証するには、データセットが [Snowflakeデータウェアハウス](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## データの使用とガバナンス {#data-usage-governance}
 
