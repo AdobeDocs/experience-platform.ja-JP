@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: f3bad477156db8f8cf79582c7a6cc2562e983b63
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3354'
+source-wordcount: '3352'
 ht-degree: 99%
 
 ---
@@ -253,7 +253,7 @@ ht-degree: 99%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="推定の更新"
 >abstract="セグメント定義の推定を更新すると、提案されたセグメント定義に適格と思われるプロファイルの数をすぐにプレビューできます。オーディエンスの推定は、当日のサンプルデータのサンプルサイズを使用して生成されます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ja#estimate-and-preview-an-audience" text="オーディエンスの推定とプレビュー"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="オーディエンスの推定とプレビュー"
 
 セグメント定義を作成する際には、作成されるセグメント定義の推定サイズがワークスペースの右側の「**[!UICONTROL セグメントのプロパティ]**」セクションに表示されるので、オーディエンスそのものを作成する前に、必要に応じてセグメント定義を調整できます。
 

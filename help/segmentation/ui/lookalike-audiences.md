@@ -4,9 +4,9 @@ title: 類似オーディエンス
 description: 類似オーディエンスを使用して、Adobe Experience Platformで新しい高価値オーディエンスをターゲットにする方法を説明します。
 badgeLimitedAvailability: label="限定提供（LA）" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2121'
 ht-degree: 10%
 
 ---
@@ -110,7 +110,7 @@ y 軸は、x 軸の一致値に対応する類似性の割合を持つプロフ�
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="影響を与える要因"
 >abstract="影響を与える要因は、属性、イベントおよびオーディエンスのメンバーシップで、基本オーディエンスのメンバーに対するプロファイルの類似性を説明する際に重要です。 データ使用ラベルとポリシーを使用すると、類似モデルで特定のデータが影響を与える要因と見なされるのを除外できます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=ja#exclude" text="データを除外"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html#exclude" text="データを除外"
 
 影響要因セクションには、選択したベースオーディエンスの類似モデルに影響する上位 100 件の要因が表示されます。 これらの影響を及ぼす要因は、プロファイル属性、エクスペリエンスイベント、およびベースオーディエンスの類似性を説明する際に最も重要なオーディエンスのメンバーシップです。 最も影響を及ぼす要因を把握することで、このオーディエンスと、そこから作成する類似オーディエンスのマーケティングコンテンツをより適切にパーソナライズできます。 類似 (look-alike) モデルに影響を与える影響を与える要因がすべて表示されるわけではありません。
 
