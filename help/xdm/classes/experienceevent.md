@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent クラス
 description: このドキュメントでは、XDM ExperienceEvent クラスの概要と、イベントデータモデリングのベストプラクティスについて説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: d648a2151060d1013a6bce7a8180378400337829
+source-git-commit: 093f4881f2224d0a0c888c7be688000d31114944
 workflow-type: tm+mt
-source-wordcount: '1880'
-ht-degree: 92%
+source-wordcount: '2667'
+ht-degree: 45%
 
 ---
 
@@ -23,12 +23,12 @@ ht-degree: 92%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `_id`<br>**(必須)** | エクスペリエンスイベントクラス `_id` フィールドは、Adobe Experience Platformに取り込まれる個々のイベントを一意に識別します。 このフィールドは、個々のイベントの一意性を追跡、データの重複を防止し、ダウンストリームのサービスでそのイベントを検索するために使用されます。 <br><br>重複イベントが検出された場合、Platform のアプリケーションとサービスでは、重複の処理方法が異なる場合があります。  例えば、同じ `_id` は既にプロファイルストアに存在します。<br><br>場合によっては、`_id` は、[ユニバーサル固有識別子（UUID）](https://tools.ietf.org/html/rfc4122) または [グローバル固有識別子（GUID）](https://docs.microsoft.com/ja-jp/dotnet/api/system.guid?view=net-5.0)とすることができます。<br><br>単一ソースの接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、プライマリ ID、タイムスタンプ、イベントタイプなど、イベントを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
+| `_id`<br>**(必須)** | エクスペリエンスイベントクラス `_id` フィールドは、Adobe Experience Platformに取り込まれる個々のイベントを一意に識別します。 このフィールドは、個々のイベントの一意性を追跡、データの重複を防止し、ダウンストリームのサービスでそのイベントを検索するために使用されます。 <br><br>重複イベントが検出された場合、Platform のアプリケーションとサービスでは、重複の処理方法が異なる場合があります。 例えば、同じ `_id` は既にプロファイルストアに存在します。<br><br>場合によっては、`_id` は、[ユニバーサル固有識別子（UUID）](https://datatracker.ietf.org/doc/html/rfc4122) または [グローバル固有識別子（GUID）](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)とすることができます。<br><br>ソース接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、イベントを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結できるイベントの例としては、プライマリ ID、タイムスタンプ、イベントタイプなどがあります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
 | `eventMergeId` | [Adobe Experience Platform Web SDK](../../edge/home.md) を使用してデータを取り込む場合、レコードを作成する原因となった取り込まれたバッチの ID を表します。 このフィールドは、データの取り込み時にシステムによって自動的に入力されます。 Web SDK 実装のコンテキスト以外に、このフィールドの使用はサポートされていません。 |
 | `eventType` | イベントのタイプまたはカテゴリを示す文字列。 このフィールドは、同じスキーマとデータセット内の異なるイベントタイプを区別する場合（リテール企業で製品を表示するイベントと買い物かごへの追加イベントを区別する場合など）に使用できます。<br><br>このプロパティの標準値は、[付録の節](#eventType)に記載されています（意図するユースケースの説明も含む）。このフィールドは拡張可能な列挙型で、つまり、独自のイベントタイプ文字列を使用して、追跡するイベントを分類することもできます。<br><br>`eventType` では、アプリケーションでのヒットごとに 1 つのイベントのみを使用するように制限されているので、最も重要なイベントをシステムに伝えるには、計算フィールドを使用する必要があります。 詳しくは、[計算フィールドのベストプラクティス](#calculated)の節を参照してください。 |
 | `producedBy` | イベントのプロデューサーまたはオリジンを表す文字列の値。セグメント化で必要な場合、このフィールドを使用すると特定のイベントプロデューサーを除外できます。<br><br>このプロパティの推奨値の一部が、[付録の節](#producedBy)に記載されています。このフィールドは拡張可能な列挙型で、つまり、独自の文字列を使用して、異なるイベントプロデューサーを表すこともできます。 |
-| `identityMap` | イベントが適用される個人の名前空間 ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するために [リアルタイム顧客プロファイル](../../profile/home.md)の場合は、データ操作でフィールドのコンテンツを手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
-| `timestamp`<br>**(必須)** | イベントが発生した時点の ISO 8601 タイムスタンプ（[RFC 3339 セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) を準拠した書式設定）。このタイムスタンプは過去の日付にする必要があります。このフィールドの使用に関するベストプラクティスについては、以下の[タイムスタンプ](#timestamps)の節を参照してください。 |
+| `identityMap` | イベントが適用される個人の名前空間 ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するには、次の手順に従います。 [リアルタイム顧客プロファイル](../../profile/home.md)の場合は、データ操作でフィールドのコンテンツを手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
+| `timestamp`<br>**(必須)** | イベントが発生した時点の ISO 8601 タイムスタンプ（[RFC 3339 セクション 5.6](https://datatracker.ietf.org/doc/html/rfc3339) を準拠した書式設定）。このタイムスタンプは過去の日付にする必要があります。このフィールドの使用に関するベストプラクティスについては、以下の[タイムスタンプ](#timestamps)の節を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -92,57 +92,88 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 
 | 値 | 定義 |
 | --- | --- |
-| `advertising.clicks` | 広告でのクリックアクション。 |
-| `advertising.completes` | 時間指定メディアアセットが最後まで視聴されました。視聴者が先までスキップした可能性があるので、必ずしも視聴者が動画全体を視聴したとは限りません。 |
-| `advertising.conversions` | 顧客によって実行された事前定義済みアクション（パフォーマンス評価のイベントをトリガーします）。 |
-| `advertising.federated` | エクスペリエンスイベントが、データフェデレーション（顧客間のデータ共有）を通じて作成されたかどうかを示します。 |
-| `advertising.firstQuartiles` | デジタルビデオ広告が通常の速度で再生時間の 25％まで再生されました。 |
-| `advertising.impressions` | 閲覧される可能性のある広告が顧客に与えるインプレッション。 |
-| `advertising.midpoints` | デジタルビデオ広告が通常の速度で再生時間の 50％まで再生されました。 |
-| `advertising.starts` | デジタルビデオ広告の再生が開始されました。 |
-| `advertising.thirdQuartiles` | デジタルビデオ広告が通常の速度で再生時間の 75％まで再生されました。 |
-| `advertising.timePlayed` | 特定の時間指定メディアアセットにユーザーが費やした時間を記述します。 |
-| `application.close` | アプリケーションが閉じられたか、バックグラウンドに送られました。 |
-| `application.launch` | アプリケーションが起動したか、フォアグラウンドに移動しました。 |
-| `commerce.checkouts` | 商品リストのチェックアウトイベントが発生しました。チェックアウトプロセスに複数のステップがある場合、複数のチェックアウトイベントが存在する可能性があります。 複数のステップがある場合、各イベントのタイムスタンプと参照されているページ／エクスペリエンスを使用して、各イベント（ステップ）を識別し、順に表現します。 |
-| `commerce.productListAdds` | ある商品が商品リストまたは買い物かごに追加されました。 |
-| `commerce.productListOpens` | 新しい商品リスト（買い物かご）が初期化または作成されました。 |
-| `commerce.productListRemovals` | 1 つ以上の商品エントリが商品リストまたは買い物かごから削除されました。 |
-| `commerce.productListReopens` | アクセスできなくなった（放棄された）商品リスト（買い物かご）が、リマーケティングアクティビティなどを介して顧客によって再びアクティブ化されました。 |
-| `commerce.productListViews` | 商品リストまたは買い物かごに対して 1 回以上のビューがありました。 |
-| `commerce.productViews` | 1 つの商品に対して 1 回以上のビューがありました。 |
-| `commerce.purchases` | 注文が受理されました。これはコマースコンバージョンで唯一必要なアクションです。購入イベントでは商品リストが参照されている必要があります。 |
-| `commerce.saveForLaters` | 商品リストが今後の使用のために保存されました（例：商品ウィッシュリスト）。 |
-| `decisioning.propositionDisplay` | ある人物に決定の提案が表示されました。 |
-| `decisioning.propositionInteract` | ある人物が決定の提案を操作しました。 |
-| `delivery.feedback` | メール配信など、配信のフィードバックイベント。 |
-| `directMarketing.emailBounced` | バウンスした、ある人物へのメール。 |
-| `directMarketing.emailBouncedSoft` | ソフトバウンスした、ある人物へのメール。 |
-| `directMarketing.emailClicked` | ある人物がマーケティングメールのリンクをクリックしました。 |
-| `directMarketing.emailDelivered` | 送信先のメールサービスにメールが正常に配信されました |
-| `directMarketing.emailOpened` | マーケティングメールを開いた人。 |
-| `directMarketing.emailUnsubscribed` | ある人物がマーケティングメールの購読を解除しました。 |
-| `inappmessageTracking.dismiss` | アプリ内メッセージが取り消されました。 |
-| `inappmessageTracking.display` | アプリ内メッセージが表示されました。 |
-| `inappmessageTracking.interact` | アプリ内メッセージが応答されました。 |
-| `leadOperation.callWebhook` | リードに応答して webhook が呼び出されました。 |
-| `leadOperation.convertLead` | リードがコンバージョンに至りました。 |
-| `leadOperation.interestingMoment` | ある人物にとって興味深い瞬間が記録されました。 |
-| `leadOperation.newLead` | リードが作成されました。 |
-| `leadOperation.scoreChanged` | リードのスコア属性の値が変更されました。 |
-| `leadOperation.statusInCampaignProgressionChanged` | キャンペーンにおけるリードのステータスが変更されました。 |
-| `listOperation.addToList` | ある人物がマーケティングリストに追加されました。 |
-| `listOperation.removeFromList` | ある人物がマーケティングリストから削除されました。 |
-| `message.feedback` | 顧客に送信したメッセージに対する送信／バウンス／エラーなどのフィードバックイベント。 |
-| `message.tracking` | 顧客に送信されたメッセージに対する開く／クリック／カスタムアクションなどのトラッキングイベント。 |
-| `opportunityEvent.addToOpportunity` | ある人物がオポチュニティに追加されました。 |
-| `opportunityEvent.opportunityUpdated` | オポチュニティが更新されました。 |
-| `opportunityEvent.removeFromOpportunity` | ある人物がオポチュニティから削除されました。 |
-| `pushTracking.applicationOpened` | ある人物がプッシュ通知からアプリを開きました。 |
-| `pushTracking.customAction` | ある人物がプッシュ通知でカスタムアクションをクリックしました。 |
-| `web.formFilledOut` | ある人物が wep ページのフォームに入力しました。 |
-| `web.webinteraction.linkClicks` | あるリンクが 1 回以上選択されました。 |
-| `web.webpagedetails.pageViews` | ある web ページに対して 1 回以上のビューが発生しました。 |
+| `advertising.clicks` | このイベントは、広告を選択するアクションが発生した際に追跡します。 |
+| `advertising.completes` | このイベントは、タイムドメディアアセットが最後まで視聴された際に追跡します。 視聴者が先にスキップした可能性があるので、必ずしも視聴者がビデオ全体を視聴したとは限りません。 |
+| `advertising.conversions` | このイベントは、パフォーマンス評価用にイベントをトリガーする、顧客が実行した事前定義済みのアクションを追跡します。 |
+| `advertising.federated` | このイベントは、エクスペリエンスイベントがデータフェデレーション（顧客間のデータ共有）を通じて作成されたかどうかを追跡します。 |
+| `advertising.firstQuartiles` | このイベントは、デジタルビデオ広告が通常の速度で再生時間の 25%を再生した際に追跡します。 |
+| `advertising.impressions` | このイベントは、顧客に対する広告のインプレッションを、表示される可能性を持って追跡します。 |
+| `advertising.midpoints` | このイベントは、デジタルビデオ広告が通常の速度で再生時間の 50%を再生した際に追跡します。 |
+| `advertising.starts` | このイベントは、デジタルビデオ広告の再生がいつ開始されたかを追跡します。 |
+| `advertising.thirdQuartiles` | このイベントは、デジタルビデオ広告が通常の速度で再生時間の 75%を再生した際に追跡します。 |
+| `advertising.timePlayed` | このイベントは、特定のタイムドメディアアセットでユーザーが費やした時間を追跡します。 |
+| `application.close` | このイベントは、アプリが閉じられた、またはバックグラウンドに送信された際に追跡します。 |
+| `application.launch` | このイベントは、アプリケーションが起動された、またはフォアグラウンドに移行された際に追跡します。 |
+| `commerce.backofficeCreditMemoIssued` | このイベントは、顧客にクレジットの通知が発行された際にトラッキングします。 |
+| `commerce.backofficeOrderCancelled` | このイベントは、以前に開始された購入プロセスが完了前に終了した際に追跡します。 |
+| `commerce.backofficeOrderItemsShipped` | このイベントは、購入した品目が顧客に物理的に出荷された日時を追跡します。 |
+| `commerce.backofficeOrderPlaced` | このイベントは、注文の配置を追跡します。 |
+| `commerce.backofficeShipmentCompleted` | このイベントは、出荷プロセス全体の正常な完了を追跡します。 |
+| `commerce.checkouts` | このイベントは、製品リストのチェックアウトイベントが発生した際に追跡します。 チェックアウトプロセスに複数のステップがある場合、複数のチェックアウトイベントが存在する可能性があります。 複数のステップがある場合、各イベントのタイムスタンプと参照されているページ／エクスペリエンスを使用して、各イベント（ステップ）を識別し、順に表現します。 |
+| `commerce.productListAdds` | このイベントは、製品が製品リストまたは買い物かごに追加された際に追跡します。 |
+| `commerce.productListOpens` | このイベントは、新しい製品リスト（買い物かご）が初期化または作成された際に追跡します。 |
+| `commerce.productListRemovals` | このイベントは、製品エントリが製品リストまたは買い物かごから削除された際に追跡します。 |
+| `commerce.productListReopens` | このイベントは、リマーケティングアクティビティを介してなど、顧客がアクセスできなくなった（破棄された）製品リスト（買い物かご）が再アクティブ化したタイミングを追跡します。 |
+| `commerce.productListViews` | このイベントは、製品リストまたは買い物かごがいつビューを受け取ったかを追跡します。 |
+| `commerce.productViews` | このイベントは、製品が 1 つ以上のビューを受け取った際に追跡します。 |
+| `commerce.purchases` | このイベントは、注文が受け入れられた際に追跡します。 これはコマースコンバージョンで唯一必要なアクションです。購入イベントでは商品リストが参照されている必要があります。 |
+| `commerce.saveForLaters` | このイベントは、製品リストなど、将来の使用のために製品リストが保存された際に追跡します。 |
+| `decisioning.propositionDisplay` | このイベントは、判定の提案が人物に表示された際に追跡します。 |
+| `decisioning.propositionDismiss` | このイベントは、決定が提示されたオファーに関与しなかった際に追跡します。 |
+| `decisioning.propositionInteract` | このイベントは、人物が判定提案を操作した際に追跡します。 |
+| `decisioning.propositionSend` | このイベントは、見込み客に対して検討のレコメンデーションまたはオファーを送信することが決定されたタイミングを追跡します。 |
+| `decisioning.propositionTrigger` | このイベントは、提案プロセスのアクティブ化を追跡します。 オファーの表示を促す特定の条件またはアクションが発生しました。 |
+| `delivery.feedback` | このイベントは、E メール配信などの配信のフィードバックイベントを追跡します。 |
+| `directMarketing.emailBounced` | このイベントは、人物への E メールがバウンスした時を追跡します。 |
+| `directMarketing.emailBouncedSoft` | このイベントは、個人への電子メールがソフトバウンスされた日時を追跡します。 |
+| `directMarketing.emailClicked` | このイベントは、人がマーケティング電子メールのリンクをクリックした際に追跡します。 |
+| `directMarketing.emailDelivered` | このイベントは、電子メールが人物の電子メールサービスに正常に配信されたタイミングを追跡します。 |
+| `directMarketing.emailOpened` | このイベントは、人がマーケティング電子メールを開いた日時を追跡します。 |
+| `directMarketing.emailSent` | このイベントは、マーケティング電子メールが人物に送信された際に追跡します。 |
+| `directMarketing.emailUnsubscribed` | このイベントは、人物がいつマーケティング電子メールから購読解除されたかを追跡します。 |
+| `inappmessageTracking.dismiss` | このイベントは、アプリ内メッセージが閉じられた際に追跡します。 |
+| `inappmessageTracking.display` | このイベントは、アプリ内メッセージが表示された日時を追跡します。 |
+| `inappmessageTracking.interact` | このイベントは、アプリ内メッセージがとやり取りされた日時を追跡します。 |
+| `leadOperation.callWebhook` | このイベントは、リードに応じて Webhook が呼び出された日時を追跡します。 |
+| `leadOperation.changeCampaignStream` | このイベントは、特定のビジネスリードに対するマーケティング戦略またはエンゲージメント戦略の変化を示します。 |
+| `leadOperation.changeEngagementCampaignCadence` | このイベントは、キャンペーンの一環としてリードがエンゲージされた頻度に変更が生じた場合を追跡します。 |
+| `leadOperation.convertLead` | このイベントは、リードがコンバートされた際に追跡します。 |
+| `leadOperation.interestingMoment` | このイベントは、人物に対して興味深い瞬間が記録された日時を追跡します。 |
+| `leadOperation.mergeLeads` | このイベントは、同じエンティティを参照する複数のリードからの情報が統合されたタイミングを追跡します。 |
+| `leadOperation.newLead` | このイベントは、リードが作成された日時を追跡します。 |
+| `leadOperation.scoreChanged` | このイベントは、リードのスコア属性の値が変更された日時を追跡します。 |
+| `leadOperation.statusInCampaignProgressionChanged` | このイベントは、キャンペーン内のリードのステータスが変更された際に追跡します。 |
+| `listOperation.addToList` | このイベントは、人物がマーケティングリストにいつ追加されたかを追跡します。 |
+| `listOperation.removeFromList` | このイベントは、人物がマーケティングリストから削除された日時を追跡します。 |
+| `media.adBreakComplete` | このイベントは、 `adBreakComplete` イベントが発生しました。 このイベントは、広告ブレークの開始時にトリガーされます。 |
+| `media.adBreakStart` | このイベントは、 `adBreakStart` イベントが発生しました。 このイベントは、広告ブレークの終わりにトリガーされます。 |
+| `media.adComplete` | このイベントは、 `adComplete` イベントが発生しました。 このイベントは、広告が完了したときにトリガーされます。 |
+| `media.adSkip` | このイベントは、 `adSkip` イベントが発生しました。 このイベントは、広告がスキップされた場合にトリガーされます。 |
+| `media.adStart` | このイベントは、 `adStart` イベントが発生しました。 このイベントは、広告が開始されたときにトリガーされます。 |
+| `media.bitrateChange` | このイベントは、 `bitrateChange` イベントが発生しました。 このイベントは、ビットレートに変更がある場合にトリガーされます。 |
+| `media.bufferStart` | このイベントは、 `bufferStart` イベントが発生しました。 このイベントは、メディアがバッファリングを開始したときにトリガーされます。 |
+| `media.chapterComplete` | このイベントは、 `chapterComplete` イベントが発生しました。 このイベントは、メディアのチャプターが完了したときにトリガーされます。 |
+| `media.chapterSkip` | このイベントは、 `chapterSkip` イベントが発生しました。 このイベントは、ユーザーがメディアコンテンツ内の別のセクションまたはチャプターにスキップして進む、または戻るとトリガーされます。 |
+| `media.chapterStart` | このイベントは、 `chapterStart` イベントが発生しました。 このイベントは、メディアコンテンツ内の特定のセクションまたはチャプターの開始時にトリガーされます。 |
+| `media.downloaded` | このイベントは、メディアダウンロードされたコンテンツがいつ発生したかを追跡します。 |
+| `media.error` | このイベントは、 `error` イベントが発生しました。 このイベントは、メディアの再生中にエラーまたは問題が発生した場合にトリガーされます。 |
+| `media.pauseStart` | このイベントは、 `pauseStart` イベントが発生しました。 このイベントは、ユーザーがメディア再生で一時停止を開始したときにトリガーされます。 |
+| `media.ping` | このイベントは、 `ping` イベントが発生しました。 メディアリソースの可用性を検証します。 |
+| `media.play` | このイベントは、 `play` イベントが発生しました。 このイベントは、メディアコンテンツの再生中に、ユーザーによるアクティブな消費を示してトリガーされます。 |
+| `media.sessionComplete` | このイベントは、 `sessionComplete` イベントが発生しました。 このイベントは、メディア再生セッションの終わりをマークします。 |
+| `media.sessionEnd` | このイベントは、 `sessionEnd` イベントが発生しました。 このイベントは、メディアセッションの終了を示します。 この結論には、メディアプレーヤーを閉じるか、再生を停止する場合があります。 |
+| `media.sessionStart` | このイベントは、 `sessionStart` イベントが発生しました。 このイベントは、メディア再生セッションの開始をマークします。 ユーザーがメディアファイルの再生を開始したときにトリガーされます。 |
+| `media.statesUpdate` | このイベントは、 `statesUpdate` イベントが発生しました。 プレーヤーステートトラッキング機能は、オーディオまたはビデオストリームにアタッチできます。標準の状態は、fullscreen、mute、closedCaptioning、pictureInPicture、inFocus です。 |
+| `opportunityEvent.addToOpportunity` | このイベントは、人物がオポチュニティに追加された日時を追跡します。 |
+| `opportunityEvent.opportunityUpdated` | このイベントは、オポチュニティが更新された日時を追跡します。 |
+| `opportunityEvent.removeFromOpportunity` | このイベントは、人物がオポチュニティから削除された日時を追跡します。 |
+| `pushTracking.applicationOpened` | このイベントは、人がプッシュ通知からアプリケーションを開いた日時を追跡します。 |
+| `pushTracking.customAction` | このイベントは、人物がプッシュ通知でカスタムアクションを選択した日時を追跡します。 |
+| `web.formFilledOut` | このイベントは、人が Web ページ上のフォームにいつ入力したかを追跡します。 |
+| `web.webinteraction.linkClicks` | このイベントは、リンクが 1 回以上選択された場合に追跡します。 |
+| `web.webpagedetails.pageViews` | このイベントは、Web ページが 1 つ以上のビューを受け取った際に追跡します。 |
+| `location.entry` | このイベントは、特定の場所にある個人またはデバイスのエントリを追跡します。 |
+| `location.exit` | このイベントは、特定の場所からの人またはデバイスの出口を追跡します。 |
 
 {style="table-layout:auto"}
 
