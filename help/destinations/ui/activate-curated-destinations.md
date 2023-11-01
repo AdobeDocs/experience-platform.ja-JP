@@ -2,7 +2,7 @@
 title: LiveRamp 識別子に基づいて、キュレーションされた宛先に対するオーディエンスをアクティブ化します
 type: Tutorial
 description: LiveRamp RampID を使用して、Adobe Experience Platformから接続された TV やオーディオの宛先にオーディエンスをアクティブ化する方法、およびその他の統合について説明します。
-source-git-commit: adc7e66fa17484ccb9527650f197acc29ef4d0f1
+source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 4%
@@ -48,7 +48,7 @@ Adobe Real-Time CDP統合のとの使用 [!DNL LiveRamp] を使用するキュ�
 
 2 つの手順を実行し、 [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) そして [LiveRamp - Distribution](../catalog/advertising/liveramp-distribution.md) 宛先に設定できます（下図を参照）。
 
-![LiveRamp を通じて、Real-Time CDPからキュレーションされた宛先にオーディエンスをアクティブ化するワークフローを示す図です。](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+![LiveRamp を通じて、Real-Time CDPからキュレーションされた宛先にオーディエンスをアクティブ化するワークフローを示す図です。](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
 まず、オーディエンスをReal-Time CDPから [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) の宛先（CSV ファイル）。
 
