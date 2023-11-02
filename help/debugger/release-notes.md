@@ -4,14 +4,22 @@ description: Adobe Experience Platform Debugger の最新のリリースノー�
 keywords: デバッガー;Experience Platform Debugger 拡張機能;Chrome;拡張機能;リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
+source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 82%
+source-wordcount: '564'
+ht-degree: 77%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
+
+## バージョン 1.5.1 - 2023 年 11 月 3 日
+
+### 修正点および改善点
+
+* Analytics イベントが無視または複製される問題を修正しました。
+* 最大状態ストレージサイズを超えていた問題を修正しました。
+* Edge ログ検索でイベントがフィルタリングされない問題を修正しました。
 
 ## バージョン 1.5.0 - 2023 年 10 月 20 日
 
