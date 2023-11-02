@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースからの既知データや匿名データをまとめて顧客プロファイルを作成し、それらのプロファイルからオーディエンスセグメントを作成して、それらのセグメントをサードパーティの宛先に対してアクティブ化します。
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 94%
+source-wordcount: '254'
+ht-degree: 89%
 
 ---
 
@@ -67,9 +67,10 @@ ht-degree: 94%
 * ユースケース {#use-cases}
    * インテリジェントな再エンゲージメントの使用例 {#intelligent-re-engagement}
       * [顧客をインテリジェントに再び関与](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-   * パートナーデータのユースケース {#partner-data}
-      * [プロスペクティングサポートを通じた新規顧客のエンゲージメントと獲得](/help/rtcdp/partner-data/prospecting.md)
+   * 顧客獲得 {#customer-acquisition}
+      * [サードパーティ cookie に依存せずに新規顧客を惹きつけ、獲得する](/help/rtcdp/partner-data/prospecting.md)
+      * [パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ](/help/rtcdp/partner-data/onsite-personalization.md)
+   * プロファイルエンリッチメント {#profile-enrichment}
       * [パートナー提供の属性を使用してファーストパーティプロファイルを補完](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [パートナーの支援による訪問者認識を使用して、オンサイトエクスペリエンスをパーソナライズ](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
 * [Experience Platform の用語](https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/glossary.html)

@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1587'
-ht-degree: 97%
+source-wordcount: '1660'
+ht-degree: 93%
 
 ---
 
@@ -15,6 +15,20 @@ ht-degree: 97%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
+
+## バージョン2.19.0 - 2023 年 11 月 1 日
+
+**新機能**
+
+* Adobe Journey Optimizerからのアプリ内メッセージのレンダリングのサポートを追加しました。
+* ページイベントの上部と下部のサポートを追加しました。
+* ページ全体の範囲とデフォルト表面のリクエストを制御するために、sendEvent コマンドに「defaultPersonalizationEnabled」オプションを追加しました。
+
+**修正点および改善点**
+
+* 複数のタイプのパーソナライゼーションをレンダリングする場合、組み合わされたパーソナライゼーションの表示イベントが一緒に表示されます。
+* 単一ページのアプリケーションビュー名で大文字と小文字が区別される問題を修正しました。
+* シャドウ DOM でパーソナライズされたオファーセレクターの問題を修正しました。
 
 ## バージョン 2.18.0 - 2023年7月31日（PT）
 

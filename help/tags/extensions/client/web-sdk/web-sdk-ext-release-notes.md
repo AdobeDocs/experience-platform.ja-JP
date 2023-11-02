@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 96%
+source-wordcount: '1806'
+ht-degree: 94%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 96%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
+
+## バージョン2.21.0 - 2023 年 11 月 1 日
+
+**新機能**
+
+* 追加済み `Request default personalization` イベントアクションを送信するオプション。
+* イベント送信アクションでのページイベントの上部および下部のサポートを追加しました。
+* 追加済み `Apply propositions` アクション。
+* 追加済み `Evaluate rulesets` アクションと `Subscribe ruleset items` イベントに設定されます。
+* 追加済み `Decision context` イベントアクションを送信します。
+
+**修正点および改善点**
+
+* Adobe Experience Platform Web SDK のバージョン 2.19.0 が含まれます。
 
 ## バージョン2.20.3 - 2023 年 8 月 8 日
 
