@@ -2,23 +2,23 @@
 title: 分析データからマーチャンダイジング変数を返して使用する
 description: Analytics データセット内のマーチャンダイジング変数にアクセスするための XDM フィールドとサンプルクエリの提供方法について説明します。
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 15%
+source-wordcount: '1103'
+ht-degree: 14%
 
 ---
 
 # 分析データからのマーチャンダイジング変数の返しと使用
 
-クエリサービスを使用して、Adobe AnalyticsからAdobe Experience Platformにデータセットとして取り込まれたデータを管理します。 以下の節では、Analytics データセット内のマーチャンダイジング変数にアクセスするために使用できるクエリ例を示します。 詳しくは、ドキュメントを参照してください。 [Adobe Analyticsデータの取得とマッピング方法](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=ja) Analytics ソースを使用
+クエリサービスを使用して、Adobe AnalyticsからAdobe Experience Platformにデータセットとして取り込まれたデータを管理します。 以下の節では、Analytics データセット内のマーチャンダイジング変数にアクセスするために使用できるクエリ例を示します。 詳しくは、ドキュメントを参照してください。 [Adobe Analyticsデータの取り込みとマッピング方法](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics ソースを通じて
 
 ## マーチャンダイジング変数 {#merchandising-variables}
 
 マーチャンダイジング変数は次の 2 つの構文のいずれかに従います。
 
 * **製品の構文**:eVar値を商品に関連付けます。 
-* **コンバージョン変数の構文**:バインディングイベントが発生した場合にのみeVarを製品に関連付けます。 バインディングイベントとして機能するイベントを選択できます。
+* **コンバージョン変数の構文**：バインディングイベントが発生した場合にのみ、eVarを製品に関連付けます。 バインディングイベントとして機能するイベントを選択できます。
 
 ## 製品の構文 {#product-syntax}
 
@@ -36,8 +36,8 @@ Adobe Analyticsでは、マーチャンダイジング変数と呼ばれる特�
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-* `#`:アクセスする配列のインデックス。
-* `evar#`:アクセスする特定のeVar変数。
+* `#`：アクセスする配列のインデックス。
+* `evar#`：アクセスする特定のeVar変数。
 
 ### カスタムイベント
 
@@ -45,8 +45,8 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-* `#`:アクセスする配列のインデックス。
-* `event#`:アクセスする特定のカスタムイベント変数。
+* `#`：アクセスする配列のインデックス。
+* `event#`：アクセスする特定のカスタムイベント変数。
 
 ## 製品構文の使用例 {#product-use-cases}
 
@@ -70,7 +70,7 @@ LIMIT 10
 
 ### productListItems 配列を展開して、各製品のマーチャンダイジングeVarとイベントを返します。
 
-次のクエリでは、 `productListItems` 配列を返します。また、製品ごとの各マーチャンダイジングeVarとイベントを返します。 元のヒットとの関係を示すために、`_id` フィールドが含まれます。この `_id` の値は、データセットの一意のプライマリキーです。
+次のクエリでは、 `productListItems` 配列を返します。また、製品ごとの各マーチャンダイジングeVarとイベントを返します。 元のヒットとの関係を示すために、`_id` フィールドが含まれます。The `_id` の値は、データセットの一意のプライマリキーです。
 
 >[!NOTE]
 >
@@ -98,8 +98,7 @@ LIMIT 20
 >
 > 現在のデータセットに存在しないフィールドを取得しようとすると、「No such struct field」エラーが発生します。 エラーメッセージに返された理由を評価して使用可能なフィールドを特定し、クエリを更新して再実行します。
 >
->
-```console
+>```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 
@@ -112,12 +111,12 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 1. ユーザーが「冬帽子」に対して内部検索を実行し、コンバージョン構文が有効なマーチャンダイジングeVar6 を「内部検索：冬帽子」に設定します。
 2. ユーザーが「ワッフルビーニー」をクリックし、製品の詳細ページに移動します。\
    a. ここでランディングすると、12.99 ドルの「ワッフルビーニー」の `Product View` イベントが発生します。\
-   b.次以降 `Product View` がバインディングイベントとして設定されると、製品の「ワッフルビーニー」が「内部検索：冬帽子」のeVar6 値にバインドされるようになりました。 「ワッフルビーニー」製品が収集されるたびに、「内部検索：冬帽子」に関連付けられます。 これは、eVarの有効期限の設定に達するか、新しいeVar6 値が設定され、その製品で再びバインディングイベントが発生するまで発生します。
+   b.その後 `Product View` がバインディングイベントとして設定されると、製品の「ワッフルビーニー」が「内部検索：冬帽子」のeVar6 値にバインドされるようになりました。 「ワッフルビーニー」製品が収集されるたびに、「内部検索：冬帽子」に関連付けられます。 これは、eVarの有効期限の設定に達するか、新しいeVar6 値が設定され、その製品で再びバインディングイベントが発生するまで発生します。
 3. ユーザーが製品を買い物かごに追加し、`Cart Add` イベントが発生します。
 4. ユーザーが「夏シャツ」に対して別の内部検索を実行すると、コンバージョン構文によりマーチャンダイジングeVar6 が「内部検索：夏シャツ」に設定されます。
 5. ユーザーが「スポーティーな T シャツ」を選択し、製品の詳細ページに移動します。\
    a. ここでランディングすると、19.99 ドルの「スポーティーな T シャツ」の `Product View` イベントが発生します。\
-   b.を `Product View` イベントがバインディングイベントである場合、製品の「スポーティーな T シャツ」が「内部検索：夏シャツ」のeVar6 値にバインドされるようになりました。 以前の製品の「ワッフルビーニー」は、引き続き「内部検索：ワッフルビーニー」のeVar6 値にバインドされます。
+   b. `Product View` イベントがバインディングイベントである場合、製品の「スポーティーな T シャツ」が「内部検索：夏シャツ」のeVar6 値にバインドされるようになりました。 以前の製品の「ワッフルビーニー」は、引き続き「内部検索：ワッフルビーニー」のeVar6 値にバインドされます。
 6. ユーザーが製品を買い物かごに追加し、`Cart Add` イベントが発生します。
 7. ユーザーは両方の製品をチェックアウトします。
 
@@ -130,7 +129,7 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 
 コンバージョン変数の構文の使用について詳しくは、 Adobe Analyticsのドキュメントを参照してください。 [コンバージョン変数の構文を使用した eVar の実装](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
 
-次に、 [!DNL Analytics] データセット：
+次に、でコンバージョン変数構文を生成するための XDM フィールドを示します [!DNL Analytics] データセット：
 
 #### eVar
 
@@ -138,7 +137,7 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-* `evar#`:アクセスする特定のeVar変数。
+* `evar#`：アクセスする特定のeVar変数。
 
 #### 製品
 
@@ -146,7 +145,7 @@ _experience.analytics.customDimensions.evars.evar#
 productListItems[#].sku
 ```
 
-* `#`:アクセスする配列のインデックス。
+* `#`：アクセスする配列のインデックス。
 
 ## コンバージョン変数の使用例 {#conversion-variable-use-cases}
 
@@ -175,7 +174,7 @@ LIMIT 100
 
 ### それぞれの製品の後続の発生に連結値を保持
 
-以下のサンプルクエリは、それぞれの製品の後続の出現に連結された値を保持します。 最も低いサブクエリは、宣言されたバインディングイベント上の製品と値の関係を確立します。 次のサブクエリは、それぞれの製品との後続のインタラクションにわたって、その連結値のアトリビューションを実行します。トップレベルの SELECT は結果を集計してレポートを生成します。
+以下のサンプルクエリは、それぞれの製品の後続の発生に連結された値を保持します。 最も低いサブクエリは、宣言されたバインディングイベント上の製品と値の関係を確立します。 次のサブクエリは、それぞれの製品との後続のインタラクションにわたって、その連結値のアトリビューションを実行します。トップレベルの SELECT は結果を集計してレポートを生成します。
 
 ```sql
 SELECT
@@ -221,4 +220,4 @@ LIMIT 100
 
 このドキュメントでは、製品構文を使用してマーチャンダイジングeVarを返し、値をコンバージョン変数構文で特定の製品に結び付ける方法について、より深く理解する必要があります。
 
-まだおこなっていない場合は、 [Web およびモバイルインタラクションに関する Analytics インサイトドキュメント](./analytics-insights.md) 次へ 一般的な使用例を提供し、クエリサービスを使用して Web およびモバイルAdobe Analyticsデータから実用的なインサイトを作成する方法を示します。
+まだおこなっていない場合は、 [Web およびモバイルインタラクションに関する Analytics インサイトドキュメント](./analytics-insights.md) 次へ 一般的な使用例を提供し、クエリサービスを使用して Web データやモバイルAdobe Analyticsデータから実用的なインサイトを作成する方法を示します。

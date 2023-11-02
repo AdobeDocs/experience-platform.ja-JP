@@ -2,9 +2,9 @@
 title: 高速クエリエンドポイント
 description: クエリ高速化ストアにステートレスでアクセスし、集計データに基づいて結果をすばやく返す方法を説明します。このドキュメントでは、クエリサービス高速クエリエンドポイントに対する HTTP リクエストと応答のサンプルを示します。
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '559'
 ht-degree: 97%
 
 ---
@@ -212,6 +212,6 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 | `resultsMeta` | このオブジェクトには、結果で返される各列のメタデータが含まれるので、各列の名前とタイプがユーザーにわかります。 |
 | `resultsMeta._adhoc` | 単一のデータセットでのみ使用するために名前空間が使用されたフィールドを持つアドホックの Experience Data Model（XDM）スキーマ。 |
 | `resultsMeta._adhoc.type` | アドホックスキーマのデータタイプ。 |
-| `resultsMeta._adhoc.meta:xdmType` | これは、XDM フィールドタイプに対してシステムで生成される値です。利用可能なタイプについて詳しくは、[利用可能な XDM タイプ](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html?lang=ja)のドキュメントを参照してください。 |
+| `resultsMeta._adhoc.meta:xdmType` | これは、XDM フィールドタイプに対してシステムで生成される値です。利用可能なタイプについて詳しくは、[利用可能な XDM タイプ](../../xdm/tutorials/custom-fields-api.md)のドキュメントを参照してください。 |
 | `resultsMeta._adhoc.properties` | クエリされたデータセットの列名です。 |
 | `resultsMeta._adhoc.results` | これらは、クエリされたデータセットの行名です。返される各列を反映します。 |

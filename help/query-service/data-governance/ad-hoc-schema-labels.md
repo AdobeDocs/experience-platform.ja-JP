@@ -2,10 +2,10 @@
 title: アドホックスキーマの属性ベースのアクセス制御サポート
 description: Adobe Experience Platformクエリサービスで生成されたアドホックスキーマのデータフィールドへのアクセスを制限するためのガイドです。
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 9%
+source-wordcount: '1013'
+ht-degree: 7%
 
 ---
 
@@ -25,10 +25,10 @@ Adobe Experience Platformに取り込まれるデータは、Experience Data Mod
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [エクスペリエンスデータモデルl（XDM）システム](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=ja):Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
-* [[!DNL Data Governance]](../../data-governance/home.md):方法 [!DNL Data Governance] では、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。
-* [属性ベースのアクセス制御](../../access-control/abac/overview.md):属性ベースのアクセス制御は、Adobe Experience Platformの機能で、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにします。 属性は、アドホックや通常のスキーマフィールドに追加されるラベルなど、オブジェクトに追加されるメタデータにすることができます。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。
+* [エクスペリエンスデータモデルl（XDM）システム](../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md):Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
+* [[!DNL Data Governance]](../../data-governance/home.md)：方法を学ぶ [!DNL Data Governance] では、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。
+* [属性ベースのアクセス制御](../../access-control/abac/overview.md)：属性ベースのアクセス制御は、Adobe Experience Platformの機能で、管理者が、属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにする機能です。 属性は、アドホックや通常のスキーマフィールドに追加されるラベルなど、オブジェクトに追加されるメタデータにすることができます。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。
 
 ## アドホックスキーマの作成
 
@@ -42,7 +42,7 @@ Adobe Experience Platformに取り込まれるデータは、Experience Data Mod
 
 ## Platform UI のスキーマインベントリでアドホックスキーマを検出する {#discover-ad-hoc-schemas}
 
-Platform UI でアドホックスキーマを表示できるようにするには、フィルターアイコン (![フィルターアイコン。](../images/data-governance/filter.png)) をクリックし、「**」を選択します[!UICONTROL アドホックスキーマを表示] が表示される左側のレール。
+Platform UI でアドホックスキーマを表示できるようにするには、フィルターアイコン (![フィルターアイコン。](../images/data-governance/filter.png)) をクリックし、「**」を選択します。[!UICONTROL アドホックスキーマを表示] が表示される左側のレール。
 
 ![「アドホックスキーマを表示」切り替えを有効にした「スキーマダッシュボード」のフィルターオプションの左パネル。](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -54,7 +54,7 @@ Platform UI でアドホックスキーマを表示できるようにするに�
 
 アドホックスキーマのデータラベルを編集するには、 [!UICONTROL ラベル] タブをクリックします。 ラベルワークスペースでは、アドホックスキーマのフィールドにラベルを適用、作成および編集し、UI を使用してアクセス権限を制御できます。 アドホックスキーマ内のすべてのフィールドは、ここで表されます。
 
-## スキーマまたはフィールドのラベルを編集
+## スキーマまたはフィールドのラベルを編集します
 
 スキーマ全体のラベルを編集するには、鉛筆アイコン (![鉛筆アイコン。](../images/data-governance/edit-icon.png)) をスキーマ名の横の ( [!UICONTROL ラベル] タブをクリックします。
 
@@ -64,13 +64,13 @@ Platform UI でアドホックスキーマを表示できるようにするに�
 
 ![右側のサイドバーで「ガバナンスラベルを編集」オプションが強調表示された、スキーマワークスペースのラベル表示。](../images/data-governance/edit-governance-labels.png)
 
-## ラベルを編集ポップオーバー
+## 「ラベルを編集」ポップオーバー
 
-この [!UICONTROL ラベルを編集] ポップオーバーが表示されます。 この表示から、UI を使用して既存のガバナンスラベルを作成または編集できます。
+The [!UICONTROL ラベルを編集] ポップオーバーが表示されます。 この表示から、UI を使用して既存のガバナンスラベルを作成または編集できます。
 
 ![「ラベルを編集」ポップオーバー。](../images/data-governance/edit-labels-popover.png)
 
-次の方法に関するガイダンスについては、ドキュメントを参照してください。 [選択したスキーマまたはフィールドのラベルを作成または編集します](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+次の方法に関するガイダンスについては、ドキュメントを参照してください。 [選択したスキーマまたはフィールドのラベルを作成または編集します](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ Platform UI でアドホックスキーマを表示できるようにするに�
 
 属性ベースの適切なレベルのアクセス制御が適用されたら、次のシステム動作が、アクセス不能なデータにユーザーがアクセスしようとした場合にクエリサービスで実行されるすべてのクエリに適用されます。
 
-1. ユーザーがスキーマ内のフィールドの 1 つへのアクセスを拒否された場合、ユーザーは制限されたフィールドに対する読み取りや書き込みをおこなえなくなります。 これは、次の一般的なシナリオに当てはまります。
+1. スキーマ内のフィールドの 1 つに対するアクセス権をユーザーが拒否した場合、ユーザーは制限されたフィールドに対する読み取りや書き込みをおこなえなくなります。 これは、次の一般的なシナリオに当てはまります。
 
    * ユーザーが制限された列のみを使用してクエリを実行しようとすると、その列が存在しないというエラーがスローされます。
    * ユーザーが、制限された列を含む複数の列を持つクエリを実行しようとすると、制限されていないすべての列の出力のみが返されます。
@@ -91,7 +91,7 @@ ID またはプライマリ ID がアドホックスキーマに設定されて�
 
 ## 次の手順
 
-このドキュメントを読むと、クエリサービス CTAS クエリを使用して作成したアドホックスキーマにデータ使用ラベルを追加する方法をより深く理解できます。 クエリサービスでのデータガバナンスに関する理解を深めるには、次のドキュメントをまだおこなっていないと便利です。
+このドキュメントを読むと、クエリサービス CTAS クエリを使用して作成したアドホックスキーマにデータ使用ラベルを追加する方法をより深く理解できます。 クエリサービスでのデータガバナンスに関する理解を深めるには、次のドキュメントをまだおこなっていない場合に役立ちます。
 
 * [アドホックスキーマ ID](./ad-hoc-schema-identities.md)
-* [データガバナンス](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja)
+* [データガバナンス](../../data-governance/home.md)

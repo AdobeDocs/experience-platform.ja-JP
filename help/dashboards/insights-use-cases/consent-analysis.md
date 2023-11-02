@@ -2,9 +2,9 @@
 title: 同意分析と追跡
 description: 同意分析ダッシュボードを作成して、ユーザーの同意が経時的にどのようにトレンドを示しているかを追跡する方法を説明します。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1912'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ The [!UICONTROL 購読] フォルダーが表示されます。 使用可能な�
 
 >[!NOTE]
 >
->作成することを推奨するオーディエンスの数にはソフトリミットがあります。 詳しくは、 [セグメント化ガードレールのドキュメント](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails).
+>作成することを推奨するオーディエンスの数にはソフトリミットがあります。 詳しくは、 [セグメント化ガードレールのドキュメント](../../profile/guardrails.md#segmentation-guardrails).
 
 ![The [!UICONTROL 選択値] 属性に [!UICONTROL はい（オプトイン）] の値がセグメントビルダーでハイライト表示されている。 オーディエンスの名前と説明もハイライト表示されます。](../images/insights-use-cases/consent-analysis/choice-value.png)
 
