@@ -2,10 +2,10 @@
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新のリリースノートです。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 77%
+source-wordcount: '776'
+ht-degree: 74%
 
 ---
 
@@ -17,18 +17,18 @@ ht-degree: 77%
 
 ## v0.20.1（2023 年 11 月 4 日）
 
-- at.js 2.11.2をサポートするように更新しました。
+- をサポートするように更新しました `at.js` 2.11.2.
 - カスタムイベントで送信されるレスポンストークンに不整合が生じる問題を修正しました。
 
 ## v0.20.0（2023 年 10 月 10 日）
 
-- at.js 2.11.0をサポートするように更新しました。
+- をサポートするように更新しました `at.js` 2.11.0.
 - カスタムのAdobe Experience Platform sandboxId および sandboxName を targetGlobalSettings に設定することのサポートが追加されました。これらは、getOffer/getOffers 呼び出し時に Delivery API に渡されます。
 - セレクター内のチェーン：eq() に対するシャドウ DOM 修正。
 
 ## v0.19.3（2023 年 9 月 19 日）
 
-- at.js v2.10.3をサポートするように更新しました。
+- をサポートするように更新しました `at.js` v2.10.3.
 - オファーがレンダリングされない場合に、at-content-rendering-succeeded カスタムイベントを誤ってトリガーしていた問題を修正しました。 これで、正しいイベント at-content-rendering-no-offers がトリガーされます。
 - at-content-rendering-failed カスタムイベントの error オブジェクトに eventToken と responseTokens を追加しました。
 
@@ -66,6 +66,12 @@ ht-degree: 77%
 ## v0.16.0（2021 年 10 月 29 日）
 
 - `at.js` v2.7.0 がサポートされるように更新されました。これにより、Adobe Target からダウンロードできるようになりました。
+
+## v0.15.2（2021 年 8 月 17 日）
+
+- をサポートするように更新しました `at.js` 2.6.1.
+- ページ読み込みイベントとは無関係に、起動時に On-Device Decisioning を初期化します。
+- アーティファクトがダウンロードされた後の最初の訪問時に、オンデバイス判定を使用できるようになりました。
 
 ## v0.15.1（2021 年 7 月 21 日）
 
