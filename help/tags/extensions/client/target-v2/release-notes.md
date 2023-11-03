@@ -2,10 +2,10 @@
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新のリリースノートです。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
+source-git-commit: f235d210682feba7617b720e514361c2862512f9
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 79%
+source-wordcount: '749'
+ht-degree: 77%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 79%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## v0.20.1（2023 年 11 月 4 日）
+
+- at.js 2.11.2をサポートするように更新しました。
+- カスタムイベントで送信されるレスポンストークンに不整合が生じる問題を修正しました。
 
 ## v0.20.0（2023 年 10 月 10 日）
 
