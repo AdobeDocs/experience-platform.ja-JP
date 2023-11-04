@@ -6,7 +6,7 @@ feature: Profiles
 source-git-commit: c630eb0e13c7d4c1b8f649816402fae0d4a79326
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 97%
    * [[!DNL Profile] UI ガイド](ui/user-guide.md)
    * [[!DNL Profile] 詳細なカスタマイズ](ui/profile-customization.md)
    * [見込み客プロファイル](ui/prospect-profile.md)
-* 計算済み属性 {#computed-attributes}
+* 計算属性 {#computed-attributes}
    * [概要](computed-attributes/overview.md)
    * [計算属性 APIガイド](computed-attributes/api.md)
    * [計算属性 UI ガイド](computed-attributes/ui.md)

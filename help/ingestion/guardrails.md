@@ -3,10 +3,10 @@ keywords: Experience Platform;トラブルシューティング;ガードレー�
 title: データ取り込みのガードレール
 description: このドキュメントでは、Adobe Experience Platform でのデータ取り込みのガードレールに関するガイダンスを説明します。
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 93%
+source-wordcount: '567'
+ht-degree: 79%
 
 ---
 
@@ -41,7 +41,10 @@ ht-degree: 93%
 
 ## 次の手順
 
-Experience Platform でのデータやガードレールの処理について詳しくは、以下のドキュメントを参照してください。
+その他のExperience Platformサービスガードレール、エンドツーエンドの遅延情報、およびReal-Time CDP製品説明ドキュメントのライセンス情報の詳細については、次のドキュメントを参照してください。
 
-* [リアルタイム顧客プロファイルデータのガードレール](../profile/guardrails.md)
-* [ID サービスデータ用のガードレール](../identity-service/guardrails.md)
+* [Real-Time CDP Guardrails](/help/rtcdp/guardrails/overview.md)
+* [エンドツーエンドの待ち時間図](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 様々なExperience Platformサービス。
+* [Real-time Customer Data Platform（B2C 版 — プライムパッケージおよび究極パッケージ）](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2P — プライムおよび究極のパッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2B — プライムおよび究極のパッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

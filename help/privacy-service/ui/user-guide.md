@@ -7,11 +7,11 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1475'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
-# プライバシー UI でのPrivacy Serviceジョブの管理 {#user-guide}
+# Privacy Service UI でプライバシージョブを管理 {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"

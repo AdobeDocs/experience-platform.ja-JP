@@ -93,7 +93,7 @@ Experience Platform内では、次の ID タイプを使用できます。
 | TNTID | Adobe Targetを表す名前空間。 次のドキュメントを参照してください： [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja) を参照してください。 |
 | Windows AID | Windows 広告 ID を表す名前空間。 次のドキュメントを参照してください： [Windows 広告 ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) を参照してください。 |
 
-### ID 名前空間の表示 {#view-identity-namespaces}
+### ID 名前空間を表示 {#view-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"

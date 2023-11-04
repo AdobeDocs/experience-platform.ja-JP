@@ -1,5 +1,5 @@
 ---
-title: （ベータ版）計算フィールドを使用して、フラットスキーマファイルで配列を書き出す
+title: （ベータ版）計算フィールドを使用したフラットスキーマファイルでの配列の書き出し
 type: Tutorial
 description: 計算フィールドを使用して、フラットスキーマファイル内の配列をReal-Time CDPからクラウドストレージの宛先に書き出す方法について説明します。
 badge: ベータ版
@@ -7,11 +7,11 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# （ベータ版）計算フィールドを使用して、フラットスキーマファイルで配列を書き出す {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# （ベータ版）計算フィールドを使用したフラットスキーマファイルでの配列の書き出し {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"

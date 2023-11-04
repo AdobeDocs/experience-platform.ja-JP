@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
 workflow-type: tm+mt
 source-wordcount: '1201'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 92%
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
       * [Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
-      * [（ベータ版）計算フィールドを使用して、フラットスキーマファイルで配列を書き出す](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [（ベータ版）計算フィールドを使用したフラットスキーマファイルでの配列の書き出し](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)

@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
-source-git-commit: f96c0a3b75239681f53ffec6184af64394e37a84
+source-git-commit: 2e47f12cde0f4c4dca89deddbf612ad3840628f0
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 93%
+source-wordcount: '181'
+ht-degree: 89%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 93%
    * [SDK の設定](fundamentals/configuring-the-sdk.md)
    * [コマンドの実行](fundamentals/executing-commands.md)
    * [トラックイベント](fundamentals/tracking-events.md)
+   * [ページイベントの上部と下部を設定する](fundamentals/top-bottom-page-events.md)
    * [デバッグ](fundamentals/debugging.md)
    * [CSP の設定](fundamentals/configuring-a-csp.md)
    * [複数のプロパティの操作](fundamentals/interacting-with-multiple-properties.md)

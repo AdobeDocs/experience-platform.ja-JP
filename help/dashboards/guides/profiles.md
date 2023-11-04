@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
 source-wordcount: '4313'
-ht-degree: 55%
+ht-degree: 56%
 
 ---
 
@@ -120,9 +120,9 @@ Platform UI で提供されるプロファイル表示機能について詳し�
 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。顧客 AI は、既存の消費者エクスペリエンスイベントデータを分析してを予測することで、これを実現します **チャーンまたはコンバージョン傾向スコア**. これらの高精度な顧客傾向モデルを使用すると、より正確なセグメント化とターゲティングをおこなうことができます。 The [スコアの配分](#customer-ai-distribution-of-scores) および [スコア付けの概要](#customer-ai-scoring-summary) インサイトは、オーディエンスの分割を示します。 傾向が高い/低/中のプロファイルと、プロファイル数間でどのように分散されているかを強調します。
 
 * [[!UICONTROL 顧客 AI スコア付けの概要]](#customer-ai-scoring-summary)
-* [[!UICONTROL スコアの顧客 AI 配分]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL スコアの顧客 AI 分布]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL スコアの顧客 AI 配分] {#customer-ai-distribution-of-scores}
+### [!UICONTROL スコアの顧客 AI 分布] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
@@ -190,7 +190,7 @@ The [!UICONTROL スコアの顧客 AI 配分] ウィジェットは、プロフ�
 * [[!UICONTROL 単一の ID プロファイル]](#single-identity-profiles)
 * [[!UICONTROL 単一の ID プロファイル（ID 別）]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 非セグメント化プロファイル]](#unsegmented-profiles)
-* [[!UICONTROL 非セグメント化プロファイルの傾向の変化]](#unsegmented-profiles-change-trend)
+* [[!UICONTROL セグメント化されていないプロファイル変更トレンド]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL 非セグメント化プロファイル（ID 別）]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL オーディエンス]](#audiences)
 * [[!UICONTROL 宛先ステータスにマッピングされたオーディエンス]](#audiences-mapped-to-destination-status)
@@ -335,7 +335,7 @@ The [!UICONTROL 非セグメント化プロファイル] ウィジェットは�
 
 ![セグメント化されていないプロファイルのウィジェット。](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL 非セグメント化プロファイルの傾向の変化] {#unsegmented-profiles-change-trend}
+### [!UICONTROL セグメント化されていないプロファイル変更トレンド] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"

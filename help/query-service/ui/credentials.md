@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービス資格情報ガイド
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、以前に実行されたクエリの表示、組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1517'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,11 @@ ht-degree: 4%
 
 Adobe Experience Platformクエリサービスを使用すると、外部クライアントと接続できます。 これらの外部クライアントに接続するには、資格情報の有効期限が切れているか、期限が切れていない資格情報を使用します。
 
-## 資格情報の期限が切れています {#expiring-credentials}
+>[!NOTE]
+>
+>認証情報パネルは、すべてのユーザーが自動的に使用できるわけではありません。 をリクエストするには、Adobeアカウントチームにお問い合わせください [!UICONTROL 資格情報] 必要に応じて、クエリサービスのワークスペースに含めるタブ。 要求された場合、この変更は組織全体に適用され、Adobeのエンジニアリングチームが実施します。 ユーザーが制御する設定ではありません。
+
+## 資格情報の期限切れ {#expiring-credentials}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"

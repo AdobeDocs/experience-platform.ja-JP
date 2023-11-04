@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
 source-wordcount: '3670'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -275,7 +275,7 @@ The [!DNL Schema Editor] フィールドグループが指定したフィール�
 
 ![標準オブジェクトに追加されたフィールド](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## リアルタイム顧客プロファイルのスキーマの有効化 {#profile}
+## リアルタイム顧客プロファイルのスキーマを有効にする {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"

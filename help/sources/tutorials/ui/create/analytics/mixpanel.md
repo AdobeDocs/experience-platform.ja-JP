@@ -5,7 +5,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -59,7 +59,7 @@ The **[!UICONTROL Mixpanel アカウントの接続]** ページが表示され�
 
 ![新規](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
-## プロジェクト ID とタイムゾーンを選択します {#project-id-and-timezone}
+## プロジェクト ID とタイムゾーンを選択 {#project-id-and-timezone}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"

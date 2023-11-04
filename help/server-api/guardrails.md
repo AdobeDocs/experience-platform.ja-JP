@@ -3,10 +3,10 @@ title: Edge Network Server API のパフォーマンスガードレール
 description: 最適なパフォーマンスガードレール内で Server API を使用する方法を説明します。
 keywords: データ収集；コレクション；エッジネットワーク；api;sla;slt；サービスレベル
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 2%
+source-wordcount: '535'
+ht-degree: 6%
 
 ---
 
@@ -21,11 +21,11 @@ Adobeは、使用制限を超えたことによるパフォーマンスの低下
 ## 定義
 
 * **使用可否** は、エラーで失敗せず、プロビジョニングされた Edge Network API にのみ関連する、Experience PlatformEdge Network によって処理されたリクエストの割合として、5 分ごとに計算されます。 テナントが 5 分間隔で要求を行わなかった場合、その間隔は 100%使用可能と見なされます。
-* **月間稼動率** 特定の地域のは、1 か月の 5 分間隔のすべての可用性の平均として計算されます。
+* **月別稼動時間の割合** 特定の地域のは、1 か月の 5 分間隔のすべての可用性の平均として計算されます。
 * An **upstream** は、Edge Network の背後にあるサービスで、Adobeサーバー側転送、Adobe Edgeセグメント化、Adobe Targetなどの特定のデータストリームに対して有効になります。
 * A **リクエストユニット** は、リクエストの 8 KB のフラグメントと、データストリーム用に設定された 1 つのアップストリームに対応します。
 * A **リクエスト** は、顧客が所有するアプリケーションから [!DNL Server API]. リクエストには、1 つ以上のリクエスト単位を含めることができます。
-* An **エラー** は、Edge ネットワークのために失敗したリクエストです [内部サービスエラー](error-handling.md).
+* An **エラー** は、Edge ネットワークのために失敗したリクエストです。 [内部サービスエラー](error-handling.md).
 
 ## サービス制限
 
@@ -33,7 +33,7 @@ Adobeは、使用制限を超えたことによるパフォーマンスの低下
 
 ### 要求単位
 
-すべての制限が適用され、 **リクエストユニット (RU)**、 **8 KB フラグメント** データストリームで設定された 1 つのアップストリームサービスに送信されるリクエストの数を示します。
+すべての制限が適用され、 **リクエストユニット (RU)**、として定義 **8 KB フラグメント** データストリームで設定された 1 つのアップストリームサービスに送信されるリクエストの数を示します。
 
 #### 例
 
@@ -64,3 +64,13 @@ Adobeは、使用制限を超えたことによるパフォーマンスの低下
 >[!NOTE]
 >
 >ペイロード自体に応じて、通常、バイナリ形式は 20～40%コンパクトで、プレーンテキスト JSON よりも多くのデータをプッシュできます。 データストリームの容量を増やす必要がある場合は、カスタマーケア担当者にお問い合わせください。
+
+## 次の手順
+
+その他のExperience Platformサービスガードレール、エンドツーエンドの遅延情報、およびReal-Time CDP製品説明ドキュメントのライセンス情報の詳細については、次のドキュメントを参照してください。
+
+* [Real-Time CDP Guardrails](/help/rtcdp/guardrails/overview.md)
+* [エンドツーエンドの待ち時間図](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 様々なExperience Platformサービス。
+* [Real-time Customer Data Platform（B2C 版 — プライムパッケージおよび究極パッケージ）](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2P — プライムおよび究極のパッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2B — プライムおよび究極のパッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -24,7 +24,7 @@ ht-degree: 37%
 >title="取り込みレート"
 >abstract="正常に処理された 1 秒間あたりのイベントの数。"
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=ja" text="UI でのソースのデータフローの監視"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=ja" text="UI でソースのデータフローを監視"
 
 >[!TIP]
 >

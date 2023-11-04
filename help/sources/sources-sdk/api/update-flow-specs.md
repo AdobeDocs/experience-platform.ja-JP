@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: フローサービス API を使用してフロー仕様を更新します
 description: 次のドキュメントでは、セルフサービスソース用フローサービス API（バッチ SDK）を使用してフロー仕様を取得および更新する手順を説明します。
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 21bccacf3555881ae731d0e60ff7d7677f18732d
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 17%
@@ -24,7 +24,7 @@ ht-degree: 17%
 
 ## フロー仕様の検索 {#lookup}
 
-ソースが `generic-rest-extension` すべてをテンプレートに使用 `RestStorageToAEP` フロー仕様。 このフロー仕様は、 `/flowSpecs/` エンドポイント、および `flowSpec.id` / `6499120c-0b15-42dc-936e-847ea3c24d72`.
+で作成されたソース `generic-rest-extension` すべてをテンプレートに使用 `RestStorageToAEP` フロー仕様。 このフロー仕様は、 `/flowSpecs/` エンドポイント、および `flowSpec.id` / `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 **API 形式**
 
@@ -251,7 +251,7 @@ PUT /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 ```shell
 PUT -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -610,4 +610,4 @@ PUT -X GET \
 
 ## 次の手順
 
-新しい接続仕様を適切なフロー仕様に追加したら、新しいソースのテストと送信に進むことができます。 詳しくは、 [新しいソースのテストと送信](./submit.md) を参照してください。
+新しい接続仕様を適切なフロー仕様に追加したら、新しいソースのテストと送信に進むことができます。 次のガイドを参照してください： [新しいソースのテストと送信](./submit.md) を参照してください。

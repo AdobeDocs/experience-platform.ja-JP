@@ -62,7 +62,7 @@ ht-degree: 63%
 >
 >元のオーディエンスの選択 **[!UICONTROL カスタムアップロード]** を自動的に有効にする [エンリッチメント属性を選択](#select-enrichment-attributes) 手順
 
-## オーディエンスの書き出しをスケジュール {#scheduling}
+## オーディエンスの書き出しのスケジュール {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -432,9 +432,9 @@ ht-degree: 63%
 
 >[!IMPORTANT]
 > 
->カタログ内のすべてのクラウドストレージの宛先で、 [[!UICONTROL マッピング] step](#mapping) これは、 **[!UICONTROL 属性を選択]** この節で説明する手順です。
+カタログ内のすべてのクラウドストレージの宛先で、 [[!UICONTROL マッピング] step](#mapping) これは、 **[!UICONTROL 属性を選択]** この節で説明する手順です。
 >
->この **[!UICONTROL 属性を選択]** Adobe Campaign、OracleResponsys、OracleEloqua、SalesforceMarketing Cloud電子メールマーケティングの各宛先に対して、手順が引き続き表示されます。
+この **[!UICONTROL 属性を選択]** Adobe Campaign、OracleResponsys、OracleEloqua、SalesforceMarketing Cloud電子メールマーケティングの各宛先に対して、手順が引き続き表示されます。
 
 プロファイルベースの宛先の場合、ターゲット宛先に送信するプロファイル属性を選択する必要があります。
 
@@ -454,15 +454,15 @@ ht-degree: 63%
 
 >[!NOTE]
 >
-> Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`）を事前に選択します。
+Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`）を事前に選択します。
 
 ![オーディエンスアクティベーションワークフローのマッピング手順で事前入力された推奨属性を示す画像。](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
->既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.status` をファイル書き出しに追加できません。 代わりに、手動で値を貼り付ける必要があります `xdm: segmentMembership.status` をスキーマフィールドに追加します（下図を参照）。
+既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.status` をファイル書き出しに追加できません。 代わりに、手動で値を貼り付ける必要があります `xdm: segmentMembership.status` をスキーマフィールドに追加します（下図を参照）。
 >
->![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面の記録。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面の記録。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 ファイルの書き出しは、次の方法で、 `segmentMembership.status` が選択されている場合：
 * `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
@@ -470,15 +470,15 @@ ht-degree: 63%
 
 ## エンリッチメント属性を選択 {#select-enrichment-attributes}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_exclude_enrichment_attributes"
->title="エンリッチメント属性の除外"
->abstract="このオプションを有効にすると、選択したカスタムアップロードオーディエンスのプロファイルを宛先に書き出すことはできますが、その属性はすべて除外されます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#select-enrichment-attributes" text="詳しくは、ドキュメントを参照してください"
+[!CONTEXTUALHELP]
+id="platform_destinations_activate_exclude_enrichment_attributes"
+title="エンリッチメント属性の除外"
+abstract="このオプションを有効にすると、選択したカスタムアップロードオーディエンスのプロファイルを宛先に書き出すことはできますが、その属性はすべて除外されます。"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#select-enrichment-attributes" text="詳しくは、ドキュメントを参照してください"
 
 >[!IMPORTANT]
 >
->このステップは、 **[!UICONTROL カスタムアップロード]** オーディエンス [オーディエンス選択](#select-audiences) 手順
+このステップは、 **[!UICONTROL カスタムアップロード]** オーディエンス [オーディエンス選択](#select-audiences) 手順
 
 エンリッチメント属性は、Experience Platformで **[!UICONTROL カスタムアップロード]**. この手順では、選択した外部オーディエンスごとに、宛先に書き出す属性を選択できます。
 
@@ -509,10 +509,10 @@ ht-degree: 63%
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
->[!CONTEXTUALHELP]
->id="platform_governance_policies_viewApplicableConsentPolicies"
->title="適用可能な同意ポリシーを表示"
->abstract="組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。会社が前述の SKU へのアクセス権を持っていない場合は、このコントロールを無効になります。"
+[!CONTEXTUALHELP]
+id="platform_governance_policies_viewApplicableConsentPolicies"
+title="適用可能な同意ポリシーを表示"
+abstract="組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。会社が前述の SKU へのアクセス権を持っていない場合は、このコントロールを無効になります。"
 
 組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。お読みください [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 

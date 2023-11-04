@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年10月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
+source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 42%
+source-wordcount: '1068'
+ht-degree: 39%
 
 ---
 
@@ -47,6 +47,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 拡張機能 | [!DNL Meta] コンバージョン API の機能強化 | 次の 3 つの機能強化がおこなわれました： [メタ変換 API](/help/tags/extensions/server/meta/overview.md) 拡張子： <ul><li>との統合 [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)：コンバージョン API 統合用のピクセル ID とアクセストークンをAdobeと共有でき、シームレスなログイン操作を作成します。</li><li>との統合 [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)：目的のアクションを完了し、配信された広告にアクションをリンクし直す可能性の高い人に広告を配信できます。</li><li>との統合 [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha):PII を直接パートナーやメタと共有する必要がなく、CIP フィールドに LiveRamp の RampID を渡すことができます。 </li></ul> |
 | 拡張機能 | [!DNL LinkedIn] コンバージョン API | The [[!DNL LinkedIn] コンバージョン API](../../tags/extensions/server/linkedin/overview.md) 拡張機能を使用すると、Experience PlatformイベントデータをLinkedInに転送することで、LinkedInマーケティングキャンペーンの効果を評価できます。 |
 | 秘密鍵 | [!DNL LinkedIn] OAuth 2 Secret | The [[!DNL LinkedIn] OAuth 2 Secret](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) を使用すると、サーバー間インタラクションを次の場所に送信できます： [!DNL LinkedIn] イベント転送で使用できます。 |
+| イベント転送 | タグとイベントの転送の更新 | 保存する [タグ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) および [イベント転送](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) Platform のパフォーマンスは、成功した場合と失敗した場合の両方で、最新の開発ビルドとステージビルドのみが保持されます。 使用されなくなったすべてのビルドは削除されます。 また、スロットリングとレート制限が実装され、多数の API を使用しても他の API のパフォーマンスが低下しないようになりました。 |
+| 拡張機能 | 要素、ルール、および拡張機能 | [要素、ルール、および拡張機能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=ja) は、同じライブラリの複数のビルドとデプロイメントの間の一貫性を高めるために、ライブラリ出力で並べ替えられるようになりました。 |
 
 データ収集について詳しくは、[データ収集の概要](../../tags/home.md)を参照してください。
 

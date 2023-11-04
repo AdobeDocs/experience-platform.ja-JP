@@ -174,7 +174,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 ![マッピング手順で XDM 属性を選択する方法を示す画面の記録](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
-## オーディエンスの書き出しをスケジュール {#scheduling}
+## オーディエンスの書き出しのスケジュール {#scheduling}
 
 デフォルトでは、 [!UICONTROL オーディエンススケジュール] ページには、現在のアクティベーションフローで選択した新しく選択されたオーディエンスのみが表示されます。
 

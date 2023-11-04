@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 60%
+ht-degree: 72%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 60%
    * [概要](./ui/overview.md)
    * [データセットの有効期限の自動化](./ui/dataset-expiration.md)
    * [（ベータ版）レコードの削除](./ui/record-delete.md)
-   * [データライフサイクル作業指示を参照する](./ui/browse.md)
+   * [データライフサイクル作業指示の参照](./ui/browse.md)
 * Data Hygiene API {#api}
    * [概要](./api/overview.md)
    * [データセット有効期限](./api/dataset-expiration.md)

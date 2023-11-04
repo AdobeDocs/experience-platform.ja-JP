@@ -2,18 +2,18 @@
 title: Audiences API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用して、組織のオーディエンスをプログラムで作成、管理、更新します。
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '1879'
 ht-degree: 8%
 
 ---
 
 # オーディエンスエンドポイント
 
-オーディエンスとは、類似した行動や特性を共有する人々の集まりです。 これらの人々のコレクションは、Adobe Experience Platformを使用して、または外部ソースから生成できます。 以下を使用して、 `/audiences` エンドポイントを使用して、オーディエンスをプログラムで取得、作成、更新および削除できます。
+オーディエンスとは、類似した行動や特性を共有する人々の集まりです。 これらの人々のコレクションは、Adobe Experience Platformを使用して、または外部ソースから生成できます。 以下を使用すると、 `/audiences` エンドポイントを使用して、オーディエンスをプログラムで取得、作成、更新および削除できます。
 
-## Destination SDK の
+## はじめに
 
 このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
@@ -36,8 +36,8 @@ GET /audiences?{QUERY_PARAMETERS}
 | --------------- | ----------- | ------- |
 | `start` | 返されるオーディエンスの開始オフセットを指定します。 | `start=5` |
 | `limit` | 1 ページに返されるオーディエンスの最大数を指定します。 | `limit=10` |
-| `sort` | 結果の並べ替え順を指定します。 これは、 `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
-| `property` | オーディエンスを指定できるフィルター **正確に** は属性の値に一致します。 これは、 `property=` | `property=audienceId==test-audience-id` |
+| `sort` | 結果の並べ替え順を指定します。 これはの形式で書き込まれます `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
+| `property` | オーディエンスを指定できるフィルター。 **正確に** は属性の値に一致します。 これはの形式で書き込まれます `property=` | `property=audienceId==test-audience-id` |
 | `name` | 名前を持つオーディエンスを指定できるフィルター **次を含む** 指定された値。 この値では大文字と小文字が区別されません。 | `name=Sample` |
 | `description` | 説明を持つオーディエンスを指定できるフィルター **次を含む** 指定された値。 この値では大文字と小文字が区別されません。 | `description=Test Description` |
 
@@ -61,7 +61,7 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 正常な応答は、HTTP ステータス 200 と、組織内で JSON として作成されたオーディエンスのリストを返します。
 
-+++組織に属する、最後に作成された 2 つのオーディエンスを含むサンプル応答
++++組織に属する、最後に作成された 2 つのオーディエンスを含むサンプル応答。
 
 ```json
 {
@@ -181,9 +181,9 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
 | `sandbox` | 両方 | オーディエンスが属するサンドボックスに関する情報です。 サンドボックスの詳細については、 [サンドボックスの概要](../../sandboxes/home.md). |
 | `name` | 両方 | オーディエンスの名前。 |
 | `description` | 両方 | オーディエンスの説明。 |
-| `expression` | Platform が生成した | オーディエンスのプロファイルクエリ言語 (PQL) 式。 PQL 式の詳細については、 [PQL 式ガイド](../pql/overview.md). |
-| `mergePolicyId` | Platform が生成した | オーディエンスが関連付けられている結合ポリシーの ID。 結合ポリシーについて詳しくは、[結合ポリシーガイド](../../profile/api/merge-policies.md)を参照してください。 |
-| `evaluationInfo` | Platform が生成した | オーディエンスの評価方法を表示します。 使用可能な評価方法は、バッチ、同期（ストリーミング）、連続（エッジ）です。 評価方法の詳細については、 [セグメントの概要](../home.md) |
+| `expression` | Platform で生成された | オーディエンスのプロファイルクエリ言語 (PQL) 式。 PQL 式について詳しくは、 [PQL 式ガイド](../pql/overview.md). |
+| `mergePolicyId` | Platform で生成された | オーディエンスが関連付けられている結合ポリシーの ID。 結合ポリシーについて詳しくは、[結合ポリシーガイド](../../profile/api/merge-policies.md)を参照してください。 |
+| `evaluationInfo` | Platform で生成された | オーディエンスの評価方法を表示します。 使用可能な評価方法は、バッチ、同期（ストリーミング）、連続（エッジ）です。 評価方法の詳細については、 [セグメントの概要](../home.md) |
 | `dependents` | 両方 | 現在のオーディエンスに依存するオーディエンス ID の配列。 これは、セグメントのセグメントであるオーディエンスを作成する場合に使用されます。 |
 | `dependencies` | 両方 | オーディエンスが依存するオーディエンス ID の配列。 これは、セグメントのセグメントであるオーディエンスを作成する場合に使用されます。 |
 | `type` | 両方 | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 以下の値を指定できます。 `SegmentDefinition` および `ExternalSegment`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、 `ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
@@ -245,7 +245,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `name` | オーディエンスの名前。 |
 | `description` | オーディエンスの説明。 |
 | `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示するフィールドです。 以下の値を指定できます。 `SegmentDefinition` および `ExternalSegment`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、 `ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
-| `expression` | オーディエンスのプロファイルクエリ言語 (PQL) 式。 PQL 式の詳細については、 [PQL 式ガイド](../pql/overview.md). |
+| `expression` | オーディエンスのプロファイルクエリ言語 (PQL) 式。 PQL 式について詳しくは、 [PQL 式ガイド](../pql/overview.md). |
 | `schema` | オーディエンスのエクスペリエンスデータモデル (XDM) スキーマ。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用および属性ベースのアクセス制御ラベル。 |
 | `ttlInDays` | オーディエンスのデータ有効期限の値を日数で表します。 |
@@ -293,7 +293,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `datasetId` | オーディエンスを構成するデータが見つかるデータセットの ID。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用および属性ベースのアクセス制御ラベル。 |
 | `audienceMeta` | 外部で生成されたオーディエンスに属するメタデータ。 |
-| `linkedAudienceRef` | 他のオーディエンス関連システムの ID を含むオブジェクト。 これには、次のものが含まれます。 <ul><li>`flowId`:この ID は、オーディエンスデータを取り込むために使用されたデータフローにオーディエンスを接続するために使用されます。 必要な ID について詳しくは、 [データフローガイドの作成](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`:この ID は、オーディエンスを関連する Audience Orchestration 構成に接続するために使用されます。&lt;/li/> <li>`payloadFieldGroupRef`:この ID は、オーディエンスの構造を記述する XDM フィールドグループスキーマを参照するために使用されます。 このフィールドの値の詳細については、 [XDM フィールドグループエンドポイントガイド](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`:この ID は、オーディエンスのAdobe Audience Managerでフォルダー ID を参照するために使用されます。 この API について詳しくは、 [Adobe Audience Manager API ガイド](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
+| `linkedAudienceRef` | 他のオーディエンス関連システムの ID を含むオブジェクト。 これには、次のものが含まれます。 <ul><li>`flowId`：この ID は、オーディエンスデータを取り込むために使用されたデータフローにオーディエンスを接続するために使用されます。 必要な ID について詳しくは、 [データフローガイドの作成](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`：この ID は、オーディエンスを関連する Audience Orchestration 構成に接続するために使用されます。&lt;/li/> <li>`payloadFieldGroupRef`：この ID は、オーディエンスの構造を記述する XDM フィールドグループスキーマを参照するために使用されます。 このフィールドの値の詳細については、 [XDM フィールドグループエンドポイントガイド](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`：この ID は、オーディエンスのAdobe Audience Managerでフォルダー ID を参照するために使用されます。 この API について詳しくは、 [Adobe Audience Manager API ガイド](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
 
 +++
 
@@ -560,7 +560,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 ## オーディエンスのフィールドの更新 {#update-field}
 
-特定のオーディエンスのフィールドを更新するには、 `/audiences` エンドポイントを作成し、更新するオーディエンスの ID をリクエストパスで指定します。
+特定のオーディエンスのフィールドを更新するには、PATCHリクエストを `/audiences` エンドポイントを作成し、更新するオーディエンスの ID をリクエストパスで指定します。
 
 **API 形式**
 
@@ -722,7 +722,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | オーディエンスの名前空間。 |
 | `description` | オーディエンスの説明。 |
 | `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 以下の値を指定できます。 `SegmentDefinition` および `ExternalSegment`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、 `ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
-| `lifecycleState` | オーディエンスのステータス。以下の値を指定できます。 `draft`, `published`、および `inactive`. `draft` は、オーディエンスが作成される日時を表します。 `published` オーディエンスが公開された時点 `inactive` オーディエンスがアクティブでなくなったとき。 |
+| `lifecycleState` | オーディエンスのステータス。以下の値を指定できます。 `draft`, `published`、および `inactive`. `draft` は、オーディエンスが作成される日時を表します。 `published` オーディエンスが公開されたとき、 `inactive` オーディエンスがアクティブでなくなったとき。 |
 | `datasetId` | オーディエンスデータが見つかるデータセットの ID。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用および属性ベースのアクセス制御ラベル。 |
 
@@ -732,7 +732,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 正常な応答は、HTTP ステータス 200 と、新しく更新されたオーディエンスの詳細を返します。 オーディエンスの詳細は、Platform で生成されたオーディエンスか、外部で生成されたオーディエンスかによって異なることに注意してください。
 
-+++オーディエンス全体を更新する際のレスポンスの例。
++++オーディエンス全体を更新する際のレスポンスのサンプルです。
 
 ```json
 {
@@ -831,7 +831,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-get
 
 **応答**
 
-正常な応答は、HTTP ステータス 207 と、リクエストされたオーディエンスの情報を返します。
+正常な応答は、HTTP ステータス 207 と、リクエストされたオーディエンスに関する情報を返します。
 
 +++ 複数のオーディエンスを取得する際のレスポンスのサンプルです。
 
@@ -933,145 +933,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-get
 
 +++
 
-## 複数のオーディエンスを更新 {#bulk-patch}
-
-POSTリクエストを `/audiences/bulk-patch-metric` エンドポイントを作成し、更新するオーディエンスの ID を指定します。
-
-**API 形式**
-
-```http
-POST /audiences/bulk-patch-metric
-```
-
-**リクエスト**
-
-+++ 複数のオーディエンスを更新するためのサンプルリクエスト。
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d ' {
-    "jobId": "12345",
-    "jobType": "AO",
-    "resources": [
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 11037
-                    }
-                },
-            ]
-        },
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 523
-                    }
-                }
-            ]
-        }
-    ]
-    }
-```
-
-<table>
-<thead>
-<tr>
-<th>パラメーター</th>
-<th>説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>jobId</code></td>
-<td>更新を実行するジョブの ID。</td>
-</tr>
-<tr>
-<td><code>jobType</code></td>
-<td>更新を実行するジョブのタイプ。 この値は、 <code>export</code> または <code>AO</code>.</td>
-</tr>
-<tr>
-<td><code>audienceId</code></td>
-<td>更新するオーディエンスの ID。 これは <code>audienceId</code> 値と <strong>not</strong> の <code>id</code> オーディエンスの値。</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>更新するオーディエンスの名前空間。</td>
-</tr>
-<tr>
-<td><code>operations</code></td>
-<td>オーディエンスの更新に使用される情報を含むオブジェクト。</td>
-</tr>
-<tr>
-<td><code>operations.op</code></td>
-<td>パッチに使用する操作。 複数のオーディエンスを更新する場合、この値は <strong>常に</strong> <code>add</code>.</td>
-</tr>
-<tr>
-<td><code>operations.path</code></td>
-<td>更新するフィールドのパス。 現在、サポートされているパスは 2 つだけです。 <code>/metrics/data</code> 更新時 <strong>profile</strong> カウントと <code>/recordMetrics/data</code> 更新時 <strong>レコード</strong> 数</td>
-</tr>
-<tr>
-<td><code>operations.value</code></td>
-<td>
-更新するフィールドの値。 プロファイル数を更新する場合、この値は次のようになります。 
-<pre>
-{ "totalProfiles":123456 }
-</pre>
-レコード数を更新する場合、この値は次のようになります。 
-<pre>
-{ "recordCount":123456 }
-</pre>
-</td>
-</tr>
-</tbody>
-</table>
-
-+++
-
-**応答**
-
-正常な応答は、HTTP ステータス 207 と、更新されたオーディエンスに関する詳細を返します。
-
-+++ 複数のオーディエンスを更新するためのレスポンスの例です。
-
-```json
-{
-   "resources":[
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      },
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      }
-   ]
-}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `status` | 更新されたオーディエンスのステータス。 返されたステータスが 200 の場合、オーディエンスは正常に更新されました。 オーディエンスを更新できなかった場合は、オーディエンスが更新されなかった理由を示すエラーが返されます。 |
-
-+++
 
 ## 次の手順
 

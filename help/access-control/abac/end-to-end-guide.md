@@ -6,7 +6,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1740'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 24%
 
 Platform UI の権限ワークスペースが表示され、 **[!UICONTROL 役割]** ページに貼り付けます。
 
-## ロールへのラベルの適用 {#label-roles}
+## 役割にラベルを適用 {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
@@ -153,7 +153,7 @@ The **[!UICONTROL ラベルを編集]** ダイアログが表示され、セグ�
 
 上記の手順を **[!UICONTROL インスリン &lt;50]**.
 
-## アクセス制御ポリシーを有効にする {#policy}
+## アクセス制御ポリシーのアクティブ化 {#policy}
 
 デフォルトのアクセス制御ポリシーでは、ラベルを使用して、特定の Platform リソースに対するアクセス権を持つユーザーロールを定義します。 この例では、スキーマフィールドに対応するラベルを持つ役割を持たないユーザーの場合、すべてのサンドボックスで、スキーマフィールドとセグメントへのアクセスが拒否されます。
 

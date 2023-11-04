@@ -99,7 +99,7 @@ ht-degree: 24%
 
 ![ID マッピング](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## オーディエンスの書き出しをスケジュール {#scheduling}
+## オーディエンスの書き出しのスケジュール {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
