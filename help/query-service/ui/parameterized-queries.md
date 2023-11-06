@@ -2,23 +2,19 @@
 title: パラメーター化クエリ
 description: Adobe Experience Platform UI でパラメーター化クエリを使用する方法について説明します。
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 11%
+source-wordcount: '734'
+ht-degree: 12%
 
 ---
 
-# パラメーター化されたクエリ（限定的なリリース） {#parameterized-queries}
+# パラメーター化クエリ {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="パラメーター化クエリ"
 >abstract="パラメーター化クエリを使用して、実行時にパラメーター値を追加します。これにより、動的データを操作し、様々なユースケースでクエリを再利用できます。`'$'` の序文を使用して、テキストエディターでクエリにクエリパラメーターを入力します。次に、エディターの下にある「クエリパラメーター」セクションで、キーの値を追加します。"
-
->[!IMPORTANT]
->
->パラメータ化されたクエリ UI 機能は、 **限定リリースのみ** およびは、すべての顧客が利用できるわけではありません。
 
 クエリサービスでは、クエリエディターでのパラメーター化されたクエリの使用がサポートされています。 パラメーター化されたクエリで、パラメーターのプレースホルダーを使用して、実行時にパラメーター値を追加できるようになりました。 プレースホルダーを使用すると、ステートメントが実行されるまでの値が不明な動的データを操作できます。 また、クエリを事前に準備し、同様の目的で再利用することもできます。 クエリを再利用すると、各使用例に対して個別の SQL クエリを作成する手間が省けます。
 
