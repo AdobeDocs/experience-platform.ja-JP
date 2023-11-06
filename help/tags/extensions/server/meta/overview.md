@@ -2,9 +2,9 @@
 title: メタコンバージョン API 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送のメタコンバージョン API 拡張機能について説明します。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2595'
 ht-degree: 2%
 
 ---
@@ -67,9 +67,9 @@ MBE で認証するためのダイアログプロンプトが、イベント転�
 
 ## LiveRamp との統合 (Alpha) {#alpha}
 
-LiveRamp との統合により、メタコンバージョン API ルールの設定に新しいフィールドが追加され、LiveRamp コンバージョン API との統合が容易になります。 この統合により、PII を直接パートナーやメタと共有する必要がなくなります。 LiveRamp の堅牢な ID グラフにより、 [!UICONTROL パートナー ID（アルファ）] は、ユーザーの一致率を上げることで、統合の品質を向上させます。
+[!DNL LiveRamp] 次を持つ顧客： [!DNL LiveRamp]自社のサイトにデプロイされているの認証済みトラフィックソリューション (ATS) は、顧客情報パラメーターとして RampIDs を共有することを選択できます。 ご一緒に作業してください [!DNL Meta] この機能のAlphaプログラムに参加するアカウントチーム。
 
-![メタ偶数転送 [!UICONTROL ルール] 設定ページのハイライト [!UICONTROL パートナー名（アルファ）] および [!UICONTROL パートナー ID（アルファ）].](../../../images/extensions/server/meta/live-ramp.png)
+![メタイベントの転送 [!UICONTROL ルール] 設定ページのハイライト [!UICONTROL パートナー名（アルファ）] および [!UICONTROL パートナー ID（アルファ）].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## イベント転送ルールの設定 {#rule}
 
