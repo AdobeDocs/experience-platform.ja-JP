@@ -3,9 +3,9 @@ title: イベント転送の概要
 description: Adobe Experience Platform でのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
+source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '870'
 ht-degree: 84%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform でイベント転送を使用するには、次の 3 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform モバイル SDK](https://sdkdocs.com)
-* [サーバー間 API](/help/server-api/overview.md)
+* [Edge Network Server API](/help/server-api/overview.md)
 
 >[!NOTE]
 >Platform Web SDK および Platform Mobile SDK は、Adobe Experience Platform のタグを使用したデプロイメントは必要ありません。ただし、タグを使用してこれらの SDK をデプロイする方法は、推奨されるアプローチです。
