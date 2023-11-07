@@ -2,7 +2,7 @@
 description: 集計ポリシーを設定して、宛先に対する HTTP リクエストがどのようにグループ化およびバッチ化されるかを説明します。
 title: 集計ポリシー
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 96%
@@ -127,7 +127,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](customer-authentication.md)
-* [OAuth 2 認証](oauth2-authentication.md)
+* [OAuth 2 認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)

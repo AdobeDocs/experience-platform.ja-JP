@@ -2,7 +2,7 @@
 description: Destination SDK で作成された宛先に対するファイル書き出し設定の設定方法を説明します。
 title: バッチ設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 96%
@@ -155,7 +155,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](customer-authentication.md)
-* [OAuth 2 認証](oauth2-authentication.md)
+* [OAuth 2 認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)

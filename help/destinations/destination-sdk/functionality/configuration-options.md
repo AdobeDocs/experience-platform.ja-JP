@@ -2,7 +2,7 @@
 description: Adobe Experience Platform の宛先サービスは、宛先機能を構築するいくつかのコンポーネント用に設定エンドポイントを使用します。これらのコンポーネントをどのように組み合わせれば、Experience Platform が、宛先パートナーに接続したり、カスタムメッセージを送信したり、デジタルエコシステム全体にわたってプロファイルデータをアクティブ化したりできるかを説明します。
 title: Destination SDK の設定オプション
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 100%
@@ -39,7 +39,7 @@ Adobe Experience Platform の宛先サービスは、宛先機能を構築する
 各宛先設定コンポーネントについて詳しくは、以下のドキュメントを参照してください。[宛先エンドポイント](../authoring-api/destination-configuration/create-destination-configuration.md)を介して、以下に記載されている機能を設定できます。
 
 * [顧客認証設定](destination-configuration/customer-authentication.md)：宛先に接続するために Experience Platform が使用する必要がある認証メカニズムを選択します。この設定は、Experience Platform ユーザーインターフェイスの[新しい宛先を設定](../../ui/connect-destination.md)ページを生成します。このページでは、ユーザーが持っている宛先のアカウントに Experience Platform を接続します。
-* [OAuth2 認証](destination-configuration/oauth2-authentication.md)：Destination SDK でサポートされているすべての [!DNL OAuth2] 認証フローについて説明し、宛先用に [!DNL OAuth2] 認証を設定する手順を示します。
+* [OAuth2 認証](destination-configuration/oauth2-authorization.md)：Destination SDK でサポートされているすべての [!DNL OAuth2] 認証フローについて説明し、宛先用に [!DNL OAuth2] 認証を設定する手順を示します。
 * [顧客データフィールド](destination-configuration/customer-data-fields.md)：Experience Platform UI で入力フィールドを作成する方法を説明します。これにより、ユーザーは、宛先への接続およびデータの書き出し方法に関連する様々な情報を指定できます。
 * [UI 属性](destination-configuration/ui-attributes.md)：Destination SDK で作成された宛先に対する UI 属性（ドキュメントリンク、宛先カードカテゴリ、宛先接続タイプおよび頻度など）の設定方法を説明します。
 * [スキーマ設定](destination-configuration/schema-configuration.md)：ユーザーがプロファイル属性と ID をマッピングする、宛先のターゲットスキーマの定義方法を説明します。

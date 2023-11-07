@@ -2,7 +2,7 @@
 description: 宛先に対して認証メカニズムを設定する方法を説明し、選択した認証方法に応じて UI でユーザーに表示される内容を確認します。
 title: 顧客認証設定
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 100%
@@ -105,7 +105,7 @@ Experience Platform のリアルタイム（ストリーミング）統合では
 
 ## OAuth 2 認証 {#oauth2}
 
-ユーザーが「**[!UICONTROL 宛先に接続]**」を選択すると、以下の Twitter カスタムオーディエンスの宛先の例のように、宛先への OAuth 2 認証フローがトリガーされます。宛先エンドポイントへの OAuth 2 認証の設定について詳しくは、専用の [Destination SDK OAuth 2 認証ページ](oauth2-authentication.md)をお読みください。
+ユーザーが「**[!UICONTROL 宛先に接続]**」を選択すると、以下の Twitter カスタムオーディエンスの宛先の例のように、宛先への OAuth 2 認証フローがトリガーされます。宛先エンドポイントへの OAuth 2 認証の設定について詳しくは、専用の [Destination SDK OAuth 2 認証ページ](oauth2-authorization.md)をお読みください。
 
 ![OAuth 2 認証での UI レンダリング](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -233,7 +233,7 @@ Experience Platform では、ファイルベースの宛先に対して、[!DNL 
 
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
-* [OAuth 2 認証](oauth2-authentication.md)
+* [OAuth 2 認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)

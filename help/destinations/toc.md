@@ -4,7 +4,7 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 93%
@@ -214,7 +214,7 @@ ht-degree: 93%
          * [ファイル形式設定](./destination-sdk/functionality/destination-server/file-formatting.md)
       * 宛先設定コンポーネント {#destination-configuration}
          * [顧客認証設定](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-         * [OAuth 2 認証](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [OAuth2 認証](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [顧客データフィールド](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
          * [UI 属性](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
          * [パートナースキーマ設定](./destination-sdk/functionality/destination-configuration/schema-configuration.md)

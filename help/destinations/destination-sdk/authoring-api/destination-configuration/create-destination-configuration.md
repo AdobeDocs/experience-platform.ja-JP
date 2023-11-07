@@ -2,7 +2,7 @@
 description: Adobe Experience Platform Destination SDK を通じて宛先設定を作成するための API 呼び出しの構築方法を説明します。
 title: 宛先設定の作成
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 98%
@@ -16,7 +16,7 @@ ht-degree: 98%
 このエンドポイントを通じて設定できる機能について詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth 2 認証](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth 2 認証](../../functionality/destination-configuration/oauth2-authorization.md)
 * [顧客データフィールド](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI 属性](../../functionality/destination-configuration/ui-attributes.md)
 * [スキーマ設定](../../functionality/destination-configuration/schema-configuration.md)

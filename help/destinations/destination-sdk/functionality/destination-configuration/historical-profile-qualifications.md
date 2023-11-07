@@ -2,7 +2,7 @@
 description: Destination SDK で作成された宛先でサポートされるプロファイル選定履歴について説明します。
 title: プロファイル選定履歴
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 100%
@@ -45,7 +45,7 @@ Destination SDK を通じて作成したすべての宛先は、デフォルト�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth 2 認証](oauth2-authentication.md)
+* [OAuth 2 認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)

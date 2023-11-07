@@ -2,7 +2,7 @@
 description: このページでは、Destination SDK を使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDK を使用したストリーミングの宛先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 64%
@@ -265,7 +265,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 上記の宛先設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` と `"authenticationRule": "PLATFORM_AUTHENTICATION"` のどちらを指定したかによって、`/destination` または `/credentials` のエンドポイントを使用して宛先の認証を設定できます。
 
-次を選択した場合： `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 宛先の設定で、宛先が OAuth 2 認証方式をサポートしている場合は、 [OAuth 2 認証](../functionality/destination-configuration/oauth2-authentication.md).
+次を選択した場合： `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 宛先の設定で、宛先が OAuth 2 認証方式をサポートしている場合は、 [OAuth 2 認証](../functionality/destination-configuration/oauth2-authorization.md).
 
 次を選択した場合： `"authenticationRule": "PLATFORM_AUTHENTICATION"`を使用する場合は、 [資格情報設定](../credentials-api/create-credential-configuration.md).
 

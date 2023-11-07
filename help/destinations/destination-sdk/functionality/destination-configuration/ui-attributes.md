@@ -2,7 +2,7 @@
 description: Destination SDK で作成された宛先に対する UI 属性（ドキュメントリンク、宛先カードカテゴリ、宛先接続タイプおよび頻度など）の設定方法を説明します。
 title: UI 属性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 100%
@@ -121,7 +121,7 @@ Destination SDK で作成中の宛先が限られた数の顧客に対して使�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth 2 認証](oauth2-authentication.md)
+* [OAuth 2 認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [スキーマ設定](schema-configuration.md)
 * [ID 名前空間設定](identity-namespace-configuration.md)

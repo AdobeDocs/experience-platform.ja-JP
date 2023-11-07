@@ -2,7 +2,7 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の宛先設定を更新するために使用される API 呼び出しの例を示します。
 title: 宛先設定の更新
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 100%
@@ -20,7 +20,7 @@ ht-degree: 100%
 宛先設定の機能について詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth 2 認証](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth 2 認証](../../functionality/destination-configuration/oauth2-authorization.md)
 * [顧客データフィールド](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI 属性](../../functionality/destination-configuration/ui-attributes.md)
 * [スキーマ設定](../../functionality/destination-configuration/schema-configuration.md)
