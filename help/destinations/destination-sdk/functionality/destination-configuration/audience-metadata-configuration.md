@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対するオーディエンスメタデータ設定の設定方法を説明します。
 title: オーディエンスメタデータ設定
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
@@ -68,7 +68,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証設定](customer-authentication.md)
-* [OAuth 2 認証](oauth2-authorization.md)
+* [OAuth2 認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)

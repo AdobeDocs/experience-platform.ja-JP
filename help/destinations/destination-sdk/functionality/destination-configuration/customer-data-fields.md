@@ -2,10 +2,10 @@
 description: Experience Platform UI で入力フィールドを作成する方法を説明します。これにより、ユーザーは、宛先への接続およびデータの書き出し方法に関連する様々な情報を指定できます。
 title: 顧客データフィールド
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1580'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
@@ -568,7 +568,7 @@ Experience Platform が [!DNL Amazon S3] に正しく接続するために、以
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth 2 認証](oauth2-authorization.md)
+* [OAuth2 認証](oauth2-authorization.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)
 * [ID 名前空間設定](identity-namespace-configuration.md)

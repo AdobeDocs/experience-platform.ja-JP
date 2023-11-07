@@ -2,10 +2,10 @@
 description: サポートされる ID および属性マッピング設定に関する宛先の設定方法を説明します。
 title: サポートされるマッピング設定
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '659'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -154,7 +154,7 @@ ID 名前空間をソースフィールドとして選択する場合、ター�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth 2 認証](oauth2-authorization.md)
+* [OAuth2 認証](oauth2-authorization.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [UI 属性](ui-attributes.md)
 * [スキーマ設定](schema-configuration.md)

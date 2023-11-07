@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対するパートナースキーマの設定方法を説明します。
 title: パートナースキーマ設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1897'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -246,7 +246,7 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
 * [顧客認証](customer-authentication.md)
-* [OAuth 2 認証](oauth2-authorization.md)
+* [OAuth2 認証](oauth2-authorization.md)
 * [UI 属性](ui-attributes.md)
 * [顧客データフィールド](customer-data-fields.md)
 * [ID 名前空間設定](identity-namespace-configuration.md)
