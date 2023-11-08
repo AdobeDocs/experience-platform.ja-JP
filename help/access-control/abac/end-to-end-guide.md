@@ -6,7 +6,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1740'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
 
@@ -67,13 +67,13 @@ Platform UI の権限ワークスペースが表示され、 **[!UICONTROL 役�
 >id="platform_permissions_labels_about"
 >title="ラベルとは"
 >abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Platform には、アドビ定義の「コア」データ使用状況ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。例えば、RHD (規制医療データ) などの、機密を意味する「S」ラベルを使用すると、保護された医療情報 (PHI) を参照するデータを分類できます。また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="データ使用ラベルの概要"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#understanding-data-usage-labels" text="データ使用ラベルの概要"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="新しいラベルの作成"
 >abstract="組織のニーズに合わせて独自のカスタムラベルを作成できます。カスタムラベルを使用して、データガバナンスとアクセス制御の両方の設定をデータに適用できます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="カスタムラベルの管理"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#manage-labels" text="カスタムラベルの管理"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
@@ -85,7 +85,7 @@ Platform UI の権限ワークスペースが表示され、 **[!UICONTROL 役�
 >id="platform_permissions_roles_about_create"
 >title="新しい役割の作成"
 >abstract="新しい役割を作成するいことで、Platform インスタンスにアクセスするユーザーをより適切に分類することができます。例えば、社内マーケティングチーム用の役割を作成して、その役割に RHD ラベルを適用することで、社内マーケティングチームが保護された医療情報 (PHI) にアクセスできるようになります。また、外部エージェンシー用の役割を作成して、その役割に RHD ラベルを適用しないことで、医療情報 (PHI) データにアクセスするのを拒否することもできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html#create-a-new-role" text="新しい役割の作成"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja#create-a-new-role" text="新しい役割の作成"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"

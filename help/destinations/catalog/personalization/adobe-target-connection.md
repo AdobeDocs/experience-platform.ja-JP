@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1202'
-ht-degree: 52%
+ht-degree: 54%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 52%
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年6月 | 機能とドキュメントの更新 | 2023 年 6 月以降は、新しいAdobe Targetの宛先接続を設定する際に、オーディエンスを共有するAdobe Targetワークスペースを選択できます。 詳しくは、[接続パラメーター](#parameters)の節を参照してください。また、ワークスペースについて詳しくは、Adobe Target での[ワークスペースの設定](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)に関するチュートリアルを参照してください。 |
+| 2023年6月 | 機能とドキュメントの更新 | 2023 年 6 月以降は、新しいAdobe Targetの宛先接続を設定する際に、オーディエンスを共有するAdobe Targetワークスペースを選択できます。 詳しくは、[接続パラメーター](#parameters)の節を参照してください。また、ワークスペースについて詳しくは、Adobe Target での[ワークスペースの設定](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja)に関するチュートリアルを参照してください。 |
 | 2023年5月 | 機能とドキュメントの更新 | 2023 年 5 月現在、 **[!UICONTROL Adobe Target]** 接続サポート [属性ベースのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md#map-attributes) およびは、すべてのお客様が一般に利用できます。 |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 >id="platform_destinations_target_workspace"
 >title="Adobe Target Workspaces について"
 >abstract="オーディエンスを共有する Adobe Target Workspaces を選択します。Adobe Target 接続ごとに 1 つのワークスペースを選択できます。アクティブ化すると、該当する Experience Platform データ使用ラベルに従って、オーディエンスは選択したワークスペースにルーティングされます。"
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="Adobe Target Workspaces の詳細情報"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja" text="Adobe Target Workspaces の詳細情報"
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
@@ -109,7 +109,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
   |---|---|
   | <ul><li>データストリームは不要です。 Adobe Targetは、 [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja), [サーバーサイド](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation)または [ハイブリッド](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 実装メソッド。</li><li>[エッジセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされていません。</li><li>オーディエンスとプロファイル属性は、次の場合にのみAdobe Target接続に共有できます。 *デフォルトの実稼動サンドボックス*.</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Adobe TargetとExperience Platformがサービスとして設定されたデータストリームが必要です。</li><li>エッジのセグメント化は期待どおりに動作します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされています。</li><li>他のサンドボックスからのオーディエンスおよびプロファイル属性の共有がサポートされます。</li></ul> |
 
-* **Workspace**:Adobe Targetを選択します。 [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) オーディエンスの共有先となるもの。 Adobe Target 接続ごとに 1 つのワークスペースを選択できます。アクティベーション時に、該当する [Experience Platformデータ使用ラベル](../../../data-governance/labels/overview.md).
+* **Workspace**:Adobe Targetを選択します。 [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja) オーディエンスの共有先となるもの。 Adobe Target 接続ごとに 1 つのワークスペースを選択できます。アクティベーション時に、該当する [Experience Platformデータ使用ラベル](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >

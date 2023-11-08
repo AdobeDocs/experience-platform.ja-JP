@@ -110,7 +110,7 @@ y 軸は、x 軸の一致値に対応する類似性の割合を持つプロフ�
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="影響を与える要因"
 >abstract="影響を与える要因は、属性、イベントおよびオーディエンスのメンバーシップで、基本オーディエンスのメンバーに対するプロファイルの類似性を説明する際に重要です。 データ使用ラベルとポリシーを使用すると、類似モデルで特定のデータが影響を与える要因と見なされるのを除外できます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html#exclude" text="データを除外"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=ja#exclude" text="データを除外"
 
 影響要因セクションには、選択したベースオーディエンスの類似モデルに影響する上位 100 件の要因が表示されます。 これらの影響を及ぼす要因は、プロファイル属性、エクスペリエンスイベント、およびベースオーディエンスの類似性を説明する際に最も重要なオーディエンスのメンバーシップです。 最も影響を及ぼす要因を把握することで、このオーディエンスと、そこから作成する類似オーディエンスのマーケティングコンテンツをより適切にパーソナライズできます。 類似 (look-alike) モデルに影響を与える影響を与える要因がすべて表示されるわけではありません。
 
