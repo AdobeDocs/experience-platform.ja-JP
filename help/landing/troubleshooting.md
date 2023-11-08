@@ -2,14 +2,14 @@
 keywords: Experience Platform;ホーム;人気のトピック;API エラーコード;API エラーコード;エラーコード API;エラーコード API;API リクエストエラー;API トラブルシューティング;API エラー
 solution: Experience Platform
 title: Adobe Experience Platform に関する FAQ とトラブルシューティングガイド
-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドをご覧ください。
-landing-page-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドをご覧ください。
+description: よくある質問への回答、およびAdobe Experience Platformの一般的なエラーのトラブルシューティングに関するガイドを見つけます。
+landing-page-description: よくある質問への回答、およびAdobe Experience Platformの一般的なエラーのトラブルシューティングに関するガイドを見つけます。
 short-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドをご覧ください。
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1906'
 ht-degree: 97%
 
 ---
@@ -66,7 +66,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 [Postman](https://www.postman.com/) は、RESTful API への呼び出しを視覚化する便利なツールです。『[Platform API 入門ガイド](api-guide.md)』には、Postman コレクションを読み込むためのビデオと手順が含まれています。さらに、各サービスについて Postman コレクションのリストが提供されます。
 
-## [!DNL Platform] の必要システム構成は何ですか？{#what-are-the-system-requirements-for-platform}
+## [!DNL Platform] の必要システム構成は何ですか？ {#what-are-the-system-requirements-for-platform}
 
 UI と API のどちらを使用しているかに応じて、次の必要システム構成が適用されます。
 
@@ -90,7 +90,7 @@ UI と API のどちらを使用しているかに応じて、次の必要シス
 |--- | --- | ---|
 | 400 | Bad request | リクエストが不適切に構築され、キー情報が欠落している、または正しくない構文が含まれていました。 |
 | 401 | Authentication failed | リクエストが認証チェックに合格しませんでした。アクセストークンが見つからないか、無効です。詳しくは、以下の「[OAuth トークンエラー](#oauth-token-is-missing)」の節を参照してください。 |
-| 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。<br> このエラーの原因としては、必要な [アクセス制御権限](/help/access-control/home.md) をクリックして、リソースにアクセスしたり、リソースを編集したりします。 方法を読む [必要な属性ベースのアクセス制御権限を取得する](/help/landing/api-authentication.md#get-abac-permissions) を使用して Platform API を使用する場合。 </p> |
+| 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。<br>このエラーの原因として考えられるのは、リソースへのアクセスまたは編集に必要な[アクセス制御権限](/help/access-control/home.md)がない可能性があることです。プラットフォーム API を使用するために[必要な属性ベースのアクセス制御権限を取得する](/help/landing/api-authentication.md#get-abac-permissions)方法をお読みください。 </p> |
 | 404 | Not found | リクエストされたリソースがサーバーで見つかりませんでした。リソースが削除されたか、リクエストされたパスが正しく入力されていない可能性があります。 |
 | 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、[!DNL Catalog Service] API 開発者ガイドの[データのフィルタリング](../catalog/api/filter-data.md)に関するサブガイドを参照してください。）リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
 

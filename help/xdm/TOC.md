@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
 breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
-user-guide-description: エクスペリエンスデータモデル（XDM）のクラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
+user-guide-description: Experience Platform内でエクスペリエンスデータモデル (XDM) システムの概要を調べ、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法を学びます。
 feature: Schemas
-source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
-workflow-type: ht
-source-wordcount: '519'
-ht-degree: 100%
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+workflow-type: tm+mt
+source-wordcount: '532'
+ht-degree: 94%
 
 ---
 

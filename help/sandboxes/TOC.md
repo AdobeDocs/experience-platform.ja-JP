@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform ヘルプのサンドボックス
 breadcrumb-title: サンドボックスガイド
-user-guide-description: 開発、テスト、およびアプリケーションのデプロイメント用に、Platform インスタンスを仮想環境へとパーティション化します。
+user-guide-description: サンドボックスの機能と、開発、テスト、およびアプリケーションのデプロイメントのための仮想環境への Platform インスタンスのパーティション化の仕組みについて説明します。
 feature: Sandboxes
-source-git-commit: b5ba5afaa06d27230a211efff25f7f0222fcc23a
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 87%
+source-wordcount: '77'
+ht-degree: 63%
 
 ---
 

@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform デバッガーのヘルプ
 breadcrumb-title: Adobe Experience Platform デバッガーガイド
-user-guide-description: Web ページで、Experience Platform の実装に関する問題を調べます。
+user-guide-description: Chrome および Firefox 用のAdobe Experience Platform Debuggerを使用して、Experience Platformの実装に関する問題を Web ページで調べます。
 feature: Debugger
-source-git-commit: 6362cef0dc33f4b1f9cf8560dae50e602ce6ad80
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 100%
+source-wordcount: '72'
+ht-degree: 70%
 
 ---
 

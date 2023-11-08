@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: カタログおよびデータセットガイド
-user-guide-description: データレイク内でデータ系列、メタデータ、ファイル記述、ディレクトリ、データセットを調べます。
+user-guide-description: データレイク内でデータ系列、メタデータ、ファイル記述、ディレクトリ、データセットを調べ、カタログサービスシステムの詳細を確認します。
 feature: Catalog
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 100%
+source-wordcount: '119'
+ht-degree: 82%
 
 ---
 

@@ -3,11 +3,12 @@ keywords: Experience Platform;ホーム;人気のトピック;データの場所
 solution: Experience Platform
 title: データセットの概要
 description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
+user-guide-description: このガイドとExperience Platformして、データセットの概要を説明します。 作成、データに制約を適用、データをデータセットに取り込む方法については、こちらを参照してください。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 83%
+source-wordcount: '870'
+ht-degree: 91%
 
 ---
 
@@ -43,7 +44,7 @@ Adobe Experience Platform データガバナンスを使用すると、データ
 
 >[!IMPORTANT]
 >
->データセットレベルのフィールドにラベルを適用できなくなりました。 スキーマレベルでラベルを適用するため、このワークフローは廃止されました。 データセットオブジェクトレベルで以前に適用されたラベルは、2024 年 5 月 31 日まで、引き続き Platform UI を通じてサポートされます。 すべてのスキーマでラベルの一貫性を確保するには、データセットレベルで以前フィールドに関連付けられていたラベルを、来年度にユーザーがスキーマレベルに移行する必要があります。 詳しくは、 [以前に適用したラベルの移行](../../data-governance/e2e.md#migrate-labels) を参照してください。
+>データセットレベルでフィールドにラベルを適用できなくなりました。このワークフローは非推奨（廃止予定）になり、スキーマレベルでラベルを適用するようになりました。データセットオブジェクトレベルで以前に適用したラベルは、2024年5月31日（PT）まで Platform UI を通じて引き続きサポートされます。すべてのスキーマ間でラベルの一貫性を確保するには、データセットレベルで以前にフィールドに付けていたラベルを、今後 1 年間にスキーマレベルに移行する必要があります。これを行う方法の手順については、[以前に適用したラベルの移行](../../data-governance/e2e.md#migrate-labels)に関する節を参照してください。
 
 このサービスについて詳しくは、「[データガバナンスの概要](../../data-governance/home.md)」を参照してください。[!DNL Platform] で使用状況ラベルを使用する手順については、次のガイドを参照してください。
 
