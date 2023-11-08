@@ -4,10 +4,10 @@ title: Microsoft Dynamics 365 接続
 description: Microsoft Dynamics 365 の宛先を使用すると、アカウントデータを書き出し、Microsoft Dynamics 365 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 29cf080f83adf0e7f8b3549104229e9f54c5b8d9
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 69%
+source-wordcount: '2183'
+ht-degree: 65%
 
 ---
 
@@ -86,7 +86,7 @@ Platform から [!DNL Dynamics 365] アカウントにデータを書き出す�
 
 | ターゲット ID | 例 | 説明 | 注意点 |
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | 連絡先の一意の ID。 | **必須**。詳しくは、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1)を参照してください。 |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | 連絡先の一意の ID。 | **必須**。詳しくは、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -162,31 +162,32 @@ Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエン
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
    ![「新しいマッピングを追加」の Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. **[!UICONTROL ソースフィールドを選択]**&#x200B;ウィンドウで、「**[!UICONTROL ID 名前空間カテゴリを選択]**」を選択します。`contactId`
+1. **[!UICONTROL ソースフィールドを選択]**&#x200B;ウィンドウで、「**[!UICONTROL ID 名前空間カテゴリを選択]**」を選択します。`contactid`
    ![ソースマッピング用の Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. **[!UICONTROL ターゲットフィールドを選択]**&#x200B;ウィンドウで、ソースフィールドにマッピングするターゲットフィールドのタイプを選択します。
    * **[!UICONTROL ID 名前空間を選択]**：このオプションを選択して、ソースフィールドをリストから ID 名前空間にマッピングします。
-     ![contactId のターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![コンタクト先のターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * XDM プロファイルスキーマと [!DNL Dynamics 365] インスタンスの間の次のマッピングを追加：
 |XDM プロファイルスキーマ|[!DNL Dynamics 365] インスタンス| 必須|
 |—|—|—| 
-|`contactId`|`contactId`| はい |
+|`contactid`|`contactid`| はい |
 
    * **[!UICONTROL カスタム属性を選択]**：このオプションを選択して、「**[!UICONTROL 属性名]**」フィールドに定義するカスタム属性にマッピングするソースフィールドを選択します。サポートされる属性の包括的なリストについては、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties)を参照してください。
-     ![LastName のターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![E メールの Target マッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
-     >[!DNL Dynamics 365] [日付またはタイムスタンプ](https://docs.microsoft.com/ja-jp/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest)ターゲットフィールドでマッピングされた日付またはタイムスタンプのソースフィールドがある場合、マッピングされた値が空でないことを確認します。 渡された値が空の場合、*`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* エラーメッセージが表示され、データは更新されません。 （これは [!DNL Dynamics 365] の制限です。）
+     > * ターゲットフィールド名は、 `lowercase`.
+     > * また、 [!DNL Dynamics 365] [日付またはタイムスタンプ](https://docs.microsoft.com/ja-jp/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) ターゲットフィールドで、マッピングされた値が空でないことを確認します。 書き出されたフィールド値が空の場合、 *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* エラーメッセージが表示され、データは更新されません。 （これは [!DNL Dynamics 365] の制限です。）
 
    * 例えば、更新する値に応じて、XDM プロファイルスキーマと [!DNL Dynamics 365] インスタンスの間に次のようにマッピングを追加します。
 |XDM プロファイルスキーマ|[!DNL Dynamics 365] インスタンス|
 |—|—| 
-|`person.name.firstName`|`FirstName`| 
-|`person.name.lastName`|`LastName`| 
-|`personalEmail.address`|`Email`|
+|`person.name.firstName`|`firstname`| 
+|`person.name.lastName`|`lastname`| 
+|`personalEmail.address`|`emailaddress1`|
 
    * これらのマッピングの使用例を次に示します。
      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
@@ -251,6 +252,7 @@ Adobe Analytics の [[!UICONTROL オーディエンスの書き出しをスケ�
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
+| 2023年10月 | ドキュメントの更新 | すべてのターゲット属性名を小文字で記述する必要があることを示すガイダンスを、 [マッピングに関する考慮事項と例](#mapping-considerations-example) 手順 |
 | 2023年8月 | 機能とドキュメントの更新 | のサポートを追加しました。 [!DNL Dynamics 365] カスタムフィールドのカスタムフィールドプレフィックス ( [!DNL Dynamics 365]. 新しい入力フィールド **[!UICONTROL Customization Prefix]**&#x200B;に追加され、 [宛先の詳細を入力](#destination-details) 手順 (PLATIR-31602)。 |
 | 2022 年 11 月 | 初回リリース | 宛先の初回リリースとドキュメントの公開。 |
 
