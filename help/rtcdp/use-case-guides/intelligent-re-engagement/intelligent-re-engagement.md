@@ -2,7 +2,7 @@
 title: インテリジェントな再エンゲージメント
 description: 主要なコンバージョンの瞬間に魅力的でつながりのあるエクスペリエンスを提供し、頻度の少ない顧客をインテリジェントに再エンゲージします。
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: d47ddc474fcaf19eaff8ddcd67139dec5c417720
+source-git-commit: df82431f87f725a12cbc5b8f88fff6d4cc065450
 workflow-type: tm+mt
 source-wordcount: '3594'
 ht-degree: 6%
@@ -150,6 +150,8 @@ The [同意および環境設定](/help/xdm/field-groups//profile/consents.md) �
 
 +++XDM ExperienceEvent （クラス）
 
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスには、次のフィールドグループが含まれます。
+
 | フィールド | 要件 | 説明 |
 | --- | --- | --- |
 | `_id` | 必須 | に取り込まれる個々のイベントを一意に識別します。 [!DNL Adobe Experience Platform]. |
@@ -157,8 +159,6 @@ The [同意および環境設定](/help/xdm/field-groups//profile/consents.md) �
 | `eventType` | 必須 | イベントのカテゴリのタイプを示す文字列。 |
 
 +++
-
-The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスには、次のフィールドグループが含まれます。
 
 +++エンドユーザー ID の詳細（フィールドグループ）
 
@@ -189,6 +189,8 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 
 +++XDM ExperienceEvent （クラス）
 
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスには、次のフィールドグループが含まれます。
+
 | フィールド | 要件 | 説明 |
 | --- | --- | --- |
 | `_id` | 必須 | に取り込まれる個々のイベントを一意に識別します。 [!DNL Adobe Experience Platform]. |
@@ -196,8 +198,6 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 | `eventType` | 必須 | イベントのカテゴリのタイプを示す文字列。 |
 
 +++
-
-The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスには、次のフィールドグループが含まれます。
 
 +++コマースの詳細（フィールドグループ）
 
@@ -247,6 +247,8 @@ The [!DNL Adobe] web コネクタスキーマは、 [[!UICONTROL XDM ExperienceE
 
 +++XDM ExperienceEvent （クラス）
 
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスには、次のフィールドグループが含まれます。
+
 | フィールド | 要件 | 説明 |
 | --- | --- | --- |
 | `_id` | 必須 | に取り込まれる個々のイベントを一意に識別します。 [!DNL Adobe Experience Platform]. |
@@ -254,8 +256,6 @@ The [!DNL Adobe] web コネクタスキーマは、 [[!UICONTROL XDM ExperienceE
 | `eventType` | 必須 | イベントのカテゴリのタイプを示す文字列。 |
 
 +++
-
-The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスには、次のフィールドグループが含まれます。
 
 +++Adobe Analytics ExperienceEvent テンプレート（フィールドグループ）
 
