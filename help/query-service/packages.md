@@ -2,10 +2,10 @@
 title: クエリサービスパッケージ
 description: 次のドキュメントでは、クエリサービスで使用できる機能と製品のパッケージの概要を説明し、アドホッククエリとバッチクエリの違いについて説明します。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: 4fb755d8936a6c2019421a064e29ab403092cf77
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 8%
+source-wordcount: '1119'
+ht-degree: 9%
 
 ---
 
@@ -20,21 +20,38 @@ Adobe Experience Platformクエリサービスは、実行可能なクエリパ�
 
 クエリサービス機能は、次の製品およびアドオンでパッケージ化されています。
 
-- **プラットフォームベースのアプリケーション** (Adobe Real-time Customer Data Platform、Adobe Customer Journey Analytics、Adobe Journey Optimizer):アドホッククエリを実行するクエリサービスへのアクセスは、Platform ベースのアプリケーションのバリエーションと階層ごとに、出力セットから提供されます。
-- **[!DNL Data Distiller]** (Adobe Real-Time CDP、Customer Journey Analytics、Adobe Journey Optimizerと共に購入できるアドオンパッケージ ):バッチクエリを実行するクエリサービスへのアクセス権は、次の式で提供されます。 [!DNL Data Distiller].
+- **プラットフォームベースのアプリケーション** (Adobe Real-time Customer Data Platform、Adobe Customer Journey Analytics、Adobe Journey Optimizer)：アドホッククエリを実行するためのクエリサービスアクセスが、Platform ベースのアプリケーションのあらゆるバリエーションと層のアセットから提供されます。
+- **[!DNL Data Distiller]** (Adobe Real-Time CDP、Customer Journey Analytics、Adobe Journey Optimizerと共に購入できるアドオンパッケージ )：バッチクエリを実行するクエリサービスへのアクセス権は、次の URL で提供されます。 [!DNL Data Distiller].
+
+## 用語 {#terminology}
+
+次の節では、クエリサービスパッケージに関連する主な用語の定義を示します。
+
+- **データレイクストレージ**：データレイクは主に次の目的を果たします。
+   - Experience Platform へのデータのオンボーディングのためのステージング領域として機能させる。
+   - すべての Experience Platform データのための長期間のデータストレージとして機能させる。
+   - データ分析およびデータサイエンスなどのユースケースを有効にする。
+- **データの書き出し**: [データセット](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=ja) アプリケーション、製品層、購入したアドオンに応じて書き出すことができるタイプ。 派生データセットは、クエリサービスデータDistillerアドオンを使用して作成でき、 [Adobe Experience Platformから書き出し](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activation-overview.html) ～を含む幅広い目的地に [クラウドストレージの宛先](/help/destinations/ui/export-datasets.md).
+- **高速クエリ**：高速クエリは、集計データに基づいて結果を返し、結果の待ち時間を短縮し、よりインタラクティブな情報交換を提供します。 高速ストアに対しておこなわれたステートレスクエリは、Data Distillerアドオンの一部としてのみ使用できます。
+- **時間を計算**：時間の計算は、クエリサービス API を使用して、バッチクエリでのデータのスキャンと書き込みを追跡するために使用される指標です。 1 年あたりの時間数で計算され、すべてのサンドボックスで測定されます。 組織に提供される計算時間数は、契約スコーププロセスで定義されます。
+
+## 権利 {#entitlements}
 
 次の表に、クエリサービスの主な使用権限のパッケージ化方法に基づく概要を示します。
 
 | クエリサービスの使用権限 | プラットフォームベースのアプリケーションでパッケージ化 | パッケージ [!DNL Data Distiller] |
 |---|---|---|
 | サポートされるクエリパターン | アドホッククエリのみ | バッチクエリ |
-| サポートされる使用例 | <ul><li>探査&#x200B;</li><li>データ検出&#x200B;</li><li>データの検証</li><li>実験</li></ul> | <ul><li>クリーニング</li><li>形状</li><li>操作</li><li>エンリッチメント</li></ul> |
-| サポートされるセマンティクス | <ul><li>クエリを選択</li></ul> | <ul><li>CTAS および ITAS クエリ</li></ul> |
+| サポートされる使用例 | <ul><li>探査&#x200B;</li><li>データ検出&#x200B;</li><li>データの検証</li><li>実験</li></ul> | <ul><li>クリーニング</li><li>シェーピング</li><li>操作</li><li>エンリッチメント</li></ul> |
+| サポートされるセマンティクス | <ul><li>SELECT クエリ</li></ul> | <ul><li>CTAS および ITAS クエリ</li></ul> |
 | 最大実行時間 | 10 分 | 24 時間 |
 | ライセンス指標 | **ユーザーの同時実行をクエリ**: <ul><li>1 人の同時ユーザー (Real-Time CDP、Adobe Journey Optimizer)&#x200B;</li><li>5 人の同時ユーザー (Customer Journey Analytics&#x200B;)</li></ul> **クエリの同時実行**: <ul><li>1 個の同時実行クエリ ( すべてのアプリケーション&#x200B;)</li></ul> **追加のアドホッククエリユーザーパックアドオン** を購入して、お客様の認証済みアドホッククエリの使用権限を増やすことができます。 <ul><li>パックあたり+5 の同時ユーザー数</li><li>1 パックあたりの追加の同時実行クエリ数</li></ul> | **時間を計算**: <ul><li>変数（顧客のアプリケーション使用権限に基づいて範囲指定）</li></ul> **時間を計算** は、バッチクエリの実行時にクエリサービスエンジンがデータの読み取り、処理、データレイクへの書き戻しに要した時間の測定値です。 |
-| クエリ実行インターフェイス | <ul><li>クエリサービス UI</li><li>サードパーティクライアント UI</li><li>[!DNL PostgresSQL] クライアント UI</li></ul> | <ul><li>クエリ UI </li><li>サードパーティクライアント UI</li><li>[!DNL PostgresSQL] クライアント UI</li><li>REST API</li></ul> |
+| クエリとレポートの使用の高速化 | × | はい — 同時高速化クエリを使用すると、高速ストアからデータを読み取り、ダッシュボード内に表示できます。 また、レポートモデルとデータセットを高速ストアに保存するための専用の権限も提供されます。 |
+| データレイクのストレージ容量 | はい — ストレージの使用権限の合計は、プラットフォームベースのアプリケーションライセンスに依存します。 例えば、Real-Time CDP、AJO、CJA などです。 | はい — 7 日間のデータ有効期限を超えて Data Distillerの使用例の生のデータセットおよび派生データセットを保持するための追加のストレージ権限が提供されます。<br>データレイクのストレージ容量はテラバイト (TB) 単位で測定され、購入した Compute 時間の数に応じて異なります。 |
+| データ書き出し許可 | はい — 合計書き出し権限は、プラットフォームベースのアプリケーションライセンスに応じて異なります。 例えば、Real-Time CDP、AJO、CJA などです。 | はい — Data Distillerを使用して作成された派生データセットを書き出すための追加の書き出し権限が提供されます。<br>年間のデータエクスポートの許可はテラバイト (TB) 単位で、購入した Compute 時間数に応じて異なります。 |
+| クエリ実行インターフェイス | <ul><li>クエリサービス UI</li><li>サードパーティクライアント UI</li><li>[!DNL PostgresSQL] クライアント UI</li></ul> | <ul><li>クエリサービス UI </li><li>サードパーティクライアント UI</li><li>[!DNL PostgresSQL] クライアント UI</li><li>REST API</li></ul> |
 | 次を介して返されたクエリ結果： | クライアント UI | データレイクに保存された派生データセット |
-| 結果の制限 | <ul><li>クエリ UI - 100 行</li><li>サードパーティクライアント — 50,000</li><li>[!DNL PostgresSQL] クライアント — 50,000</li></ul> | <ul><li>クエリ UI （行の上限なし）</li><li>サードパーティクライアント（行の上限なし）</li><li>[!DNL PostgresSQL] クライアント（行の上限なし）</li><li>REST API（行の上限なし）</li></ul> |
+| 結果の制限 | <ul><li>クエリサービス UI - 100 行</li><li>サードパーティクライアント — 50,000</li><li>[!DNL PostgresSQL] クライアント — 50,000</li></ul> | <ul><li>クエリサービス UI — 出力行の数を [UI 設定で設定](./ui/user-guide.md#result-count) を 50 ～ 500 行に設定します。</li><li>サードパーティクライアント（行の上限なし）</li><li>[!DNL PostgresSQL] クライアント（行の上限なし）</li><li>REST API（行の上限なし）</li></ul> |
 | データセット容量の読み取り | ○ | ○ |
 | データセット書き込み容量 | × | ○ |
 | 予定処理能力 | × | ○ |
@@ -43,13 +60,13 @@ Adobe Experience Platformクエリサービスは、実行可能なクエリパ�
 
 {style="table-layout:auto"}
 
-## アクセス制御
+## アクセス制御 {#access-control}
 
 Experience Platformのアクセス制御は、 [Adobe Admin Console](https://adminconsole.adobe.com/) 製品プロファイルは、ユーザーを権限とサンドボックスにリンクします。 詳しくは、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
 
-クエリサービスを使用するには、 [!DNL Manage Queries] 権限は admin console 内で有効にする必要があります。 この権限を持つユーザーは、アドホッククエリおよびバッチクエリを実行できます。 製品プロファイルへのアクセスをリクエストするための詳細な手順 [!DNL Manage Queries] 許可の概要は、 [製品プロファイルの権限の管理](../access-control/ui/permissions.md) および [製品プロファイルのユーザーの管理](../access-control/ui/users.md) ドキュメント。
+クエリサービスを使用するには、 [!DNL Manage Queries] 権限は、Admin Console内で有効にする必要があります。 この権限を持つユーザーは、アドホッククエリおよびバッチクエリを実行できます。 製品プロファイルへのアクセスをリクエストするための詳細な手順 [!DNL Manage Queries] 許可の概要は、 [製品プロファイルの権限の管理](../access-control/ui/permissions.md) および [製品プロファイルのユーザーの管理](../access-control/ui/users.md) ドキュメント。
 
-購入後、 [!DNL Data Distiller] アドオン、 [!DNL Write Dataset] 権限を付与する必要があります。 この権限は次を許可します。 [!DNL Data Distiller] バッチクエリを実行するユーザー
+購入後、 [!DNL Data Distiller] アドオン、 [!DNL Write Dataset] 権限を付与する必要があります。 この権限は次を許可します。 [!DNL Data Distiller] バッチクエリを実行するユーザー。
 
 次の表に、 [!DNL Manage Queries] 権限：
 
@@ -60,10 +77,10 @@ Experience Platformのアクセス制御は、 [Adobe Admin Console](https://adm
 
 {style="table-layout:auto"}
 
-## サンドボックスのサポート
+## サンドボックスのサポート {#sandbox-support}
 
-サンドボックスは、Experience Platform の単一のインスタンス内の仮想パーティションです。各 Platform インスタンスは、複数の実稼動用サンドボックスと非実稼動用サンドボックスをサポートし、それぞれが Platform リソースの独自のライブラリを維持します。 非実稼働用サンドボックスを使用すると、実稼働用サンドボックスに影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。 サンドボックスについて詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。すべてのクエリサービスエンタイトルメントは、すべてのサンドボックスで共有されます
+サンドボックスは、Experience Platform の単一のインスタンス内の仮想パーティションです。Platform の各インスタンスは、複数の実稼動用サンドボックスと非実稼動用サンドボックスをサポートし、それぞれが Platform リソースの独自のライブラリを維持します。 非実稼働用サンドボックスを使用すると、実稼働用サンドボックスに影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。 サンドボックスについて詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。すべてのクエリサービスの使用権限は、すべてのサンドボックスで共有されます。
 
 ## 次の手順
 
-このドキュメントでは、クエリサービスで使用できる様々なパッケージタイプとクエリ実行機能について、より深く理解する必要があります。 業界でよく知られている使用例など、クエリサービスの詳細については、 [ユースケースドキュメント](./use-cases/abandoned-browse.md). 一般情報については、 [クエリサービスの概要](./home.md).
+このドキュメントでは、クエリサービスで使用できる様々なパッケージタイプとクエリ実行機能について、より深く理解する必要があります。 よく知られた業界の使用例など、クエリサービスの詳細については、 [使用例のドキュメント](./use-cases/abandoned-browse.md). 一般情報については、 [クエリサービスの概要](./home.md).
