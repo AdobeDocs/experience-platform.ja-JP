@@ -2,10 +2,10 @@
 title: Query Accelerated Store レポートインサイトガイド
 description: クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する方法について説明します。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '1033'
-ht-degree: 82%
+source-wordcount: '1034'
+ht-degree: 84%
 
 ---
 
@@ -23,11 +23,7 @@ Adobe Experience PlatformのReal-Time CDPデータモデルは、プロファイ
 
 ## はじめに
 
-レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされた Platform データを保持する Real-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。詳しくは、 [パッケージ](../../packages.md) および [guardrail](../../guardrails.md#query-accelerated-store) Data Distiller SKU に関するドキュメント。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store), and [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされた Platform データを保持する Real-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。Data Distiller SKU に関連する[パッケージ](../../packaging.md)、[ガードレール](../../guardrails.md#query-accelerated-store)および[ライセンス](../../data-distiller/license-usage.md)のドキュメントを参照してください。Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
 
 ## レポートインサイトデータモデルの作成
 
@@ -37,7 +33,7 @@ Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#
 
 ![オーディエンスインサイトユーザーモデルのエンティティ関係図（ERD）。](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-この例では、`externalaudiencereach` テーブル／データセットは ID に基づいており、一致数の下限と上限をトラックします。この `externalaudiencemapping` ディメンションテーブル/データセットは、外部 ID を Platform 上の宛先とオーディエンスにマッピングします。
+この例では、`externalaudiencereach` テーブル／データセットは ID に基づいており、一致数の下限と上限をトラックします。The `externalaudiencemapping` ディメンションテーブル/データセットは、外部 ID を Platform 上の宛先とオーディエンスにマッピングします。
 
 ## Data Distiller を使用したレポートインサイト用のモデルの作成
 

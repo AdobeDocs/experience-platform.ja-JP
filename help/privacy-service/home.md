@@ -4,20 +4,14 @@ solution: Experience Platform
 title: Privacy Service の概要
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 3296209a15a5f88ab14e16de25d554b9df712445
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '1623'
-ht-degree: 98%
+source-wordcount: '1505'
+ht-degree: 100%
 
 ---
 
 # [!DNL Privacy Service] の概要
-
->[!IMPORTANT]
->
->Adobe Experience Platform Privacy Service の権限が改善されて、精度のレベルが向上しました。これらの変更により、組織管理者は、目的とする役割と権限レベルのアクセス権を、より多くのユーザーに付与できます。この近々の更新は重大な変更となるので、技術アカウントのユーザーは、Privacy Service の権限を更新する必要があります。 この権限の変更の適用は、 **2023 年 4 月 14 日**. 詳しくは、 [従来の API 資格情報の移行](./permissions.md#migrate-tech-accounts) を参照してください。
->
->技術アカウントは、大規模法人のお客様が利用でき、Adobe Developer Console を通じて作成されます。技術アカウント所有者の Adobe ID は、末尾が `@techacct.adobe.com` になっています。自分が技術アカウントの所有者かどうか不明な場合は、組織の管理者にお問い合わせください。
 
 より良い顧客体験を提供するためには、顧客の個人データを収集し、保存する必要があります。このデータを使用する場合、顧客のプライバシーを理解し、尊重することが重要です。新しい法規制や組織の規制により、ユーザーは要求に応じて、データストアから個人データにアクセスしたり、個人データを削除したりする権利が与えられます。
 
@@ -29,7 +23,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、企業による顧客の�
 >
 >Privacy Service は、データ主体と消費者の権利リクエストのみを目的としています。それ以外にデータのクリーンアップやメンテナンスに Privacy Service を使用することは、サポートされておらず、許可もされていません。アドビには、それらをタイムリーに履行する法的義務があります。したがって、これが実稼動専用の環境であり、有効なプライバシーリクエストの不要なバックログが作成されるので、Privacy Service の読み込みテストは許可されていません。
 >
->サービスの不正使用を防ぐために、1 日あたりのアップロードに対するハードリミットが設定されるようになりました。システムの不正使用が判明したユーザーは、サービスへのアクセスが無効になります。その後、それらのユーザーの行為に対処するための会議がユーザー本人を交えて開催され、Privacy Service の適切な使用について議論が行われます。
+>サービスの不正使用を防ぐために、1 日あたりのアップロードに対するハードリミットが設定されるようになりました。システムの不正使用が判明したユーザーは、サービスへのアクセスが無効になります。その後、それらのユーザーのアクションに対処するための会議がユーザー本人を交えて開催され、Privacy Service の適切な使用について議論が行われます。
 
 ## 入門 [!DNL Privacy Service] {#getting-started}
 
