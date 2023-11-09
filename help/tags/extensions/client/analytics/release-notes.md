@@ -2,10 +2,10 @@
 title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 89%
+source-wordcount: '1416'
+ht-degree: 87%
 
 ---
 
@@ -17,13 +17,22 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 >
 >Analytics タグ拡張 ( [AppMeasurementJavaScript ライブラリ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja). 詳しくは、 [AppMeasurementリリースノート](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) 詳しくは、以下に示す特定のバージョンを参照してください。
 
+## 2023年9月15日（PT）
+
+**Adobe Analytics Extension 1.9.3**
+
+**機能**:
+
+* にアップグレード [v2.25.0へのAppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## 2023年7月19日（PT）
 
 **Adobe Analytics Extension 1.9.2**
 
 **機能**:
 
-* AppMeasurementv2.24.0にアップグレード。
+* にアップグレード [APPMEASUREMENTv2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * オプションの設定 (`decodeLinkParameters` デフォルト `false`) を使用して、2 バイトエンコードされた文字を含むリンク URL をデコードします。
 
 **バグの修正**:
