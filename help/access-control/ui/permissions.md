@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 製品プロファイルに対する権限の管理
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントでは、Platform の製品プロファイルの権限を管理する方法について説明します。
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 96%
+source-wordcount: '356'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 96%
 
 ![permissions](../images/permissions.png)
 
-権限はカテゴリに分けられ、このページに表示されます。リストには、カテゴリ名、含まれる権限の数（およびアクティブな権限の数）、説明が表示されます。
+権限はカテゴリに分けられ、このページに表示されます。リストには、カテゴリ名、含まれる権限の数（およびアクティブな権限の数）、説明が表示されます。詳しくは、 [リソース権限](/help/access-control/home.md#permissions) ：各ロールで使用可能な権限の分類。
 
 リストの任意のカテゴリをクリックして、**[!UICONTROL 権限の編集]**&#x200B;ページを開きます。
 
