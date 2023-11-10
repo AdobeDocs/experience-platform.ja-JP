@@ -14,10 +14,11 @@ solution: Experience Platform
 type: Documentation
 index: true
 role: Architect, Developer, Data Architect, Data Engineer, User, Admin, Leader
-source-git-commit: 3dbf99bd25bb2e3983de2ca5f0e1f20e9020ba7e
+auto-video-transcripts: true
+source-git-commit: a0617564db965a0bb70464ab0bdf85f5850bf64f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '111'
+ht-degree: 100%
 
 ---
 
