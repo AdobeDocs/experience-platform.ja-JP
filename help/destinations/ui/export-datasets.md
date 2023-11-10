@@ -3,10 +3,10 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 58%
+source-wordcount: '1751'
+ht-degree: 57%
 
 ---
 
@@ -60,6 +60,12 @@ ht-degree: 58%
   </tr>
 </tbody>
 </table>
+
+## ビデオチュートリアル {#video-tutorial}
+
+このページで説明するワークフロー、データセットのエクスポート機能の利点、推奨される使用例については、以下のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## サポートされる宛先 {#supported-destinations}
 
