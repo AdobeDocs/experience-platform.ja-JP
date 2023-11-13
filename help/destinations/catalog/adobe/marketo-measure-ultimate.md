@@ -3,9 +3,9 @@ title: Marketo Measure Ultimate の宛先
 description: Marketo Measure Ultimate の宛先にデータを接続し、アクティブ化する方法を説明します。
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 37%
 
 ---
@@ -74,7 +74,7 @@ Marketo Measureの宛先に関する次の前提条件に注意します。
 > 
 >データをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-詳しくは、 [（ベータ版）データセットの書き出し](/help/destinations/ui/export-datasets.md) この宛先にデータセットを書き出す詳しい手順については、こちらのチュートリアルを参照してください。
+詳しくは、 [データセットを書き出し](/help/destinations/ui/export-datasets.md) この宛先にデータセットを書き出す詳しい手順については、こちらのチュートリアルを参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 

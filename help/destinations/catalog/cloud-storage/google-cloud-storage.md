@@ -3,9 +3,9 @@ title: Google Cloud Storage 接続
 description: Google Cloud Storage に接続し、オーディエンスをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1107'
 ht-degree: 73%
 
 ---
@@ -119,7 +119,7 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 **[!UICONTROL マッピング]**&#x200B;手順では、プロファイルに書き出す属性および ID フィールドを選択できます。 また、書き出したファイル内のヘッダーを選択して、任意のわかりやすい名前に変更することもできます。詳しくは、「バッチの宛先をアクティベート」UI チュートリアルの[マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を参照してください。
 
-## （ベータ版）データセットの書き出し {#export-datasets}
+## データセットを書き出し {#export-datasets}
 
 この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
 

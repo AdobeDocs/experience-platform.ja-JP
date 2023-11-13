@@ -3,9 +3,9 @@ title: Azure Data Lake Storage Gen2 接続
 description: Azure Data Lake Storage Gen2 に接続して、オーディエンスをアクティブ化し、データセットを書き出す方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '882'
 ht-degree: 65%
 
 ---
@@ -104,7 +104,7 @@ ht-degree: 65%
 
 **[!UICONTROL マッピング]**&#x200B;手順では、プロファイルに書き出す属性および ID フィールドを選択できます。 また、書き出したファイル内のヘッダーを選択して、任意のわかりやすい名前に変更することもできます。詳しくは、「バッチの宛先をアクティベート」UI チュートリアルの[マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を参照してください。
 
-## （ベータ版）データセットの書き出し {#export-datasets}
+## データセットを書き出し {#export-datasets}
 
 この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
 

@@ -2,10 +2,10 @@
 title: 宛先での設定可能で一般的な書き出し設定
 description: 宛先レベルで設定可能な宛先の書き出し設定と、固定されていて編集できない書き出し設定について説明します。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 92%
+source-wordcount: '842'
+ht-degree: 91%
 
 ---
 
@@ -58,7 +58,7 @@ Experience Platform の宛先への書き出し動作について考える際は
 * [エンタープライズ宛先に対するオーディエンスデータの有効化 ](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [オンデマンドでのファイルのバッチ宛先への書き出し](/help/destinations/ui/export-file-now.md)
-* [（ベータ版）クラウドストレージ宛先へのデータセットの書き出し](/help/destinations/ui/export-datasets.md)
+* [クラウドストレージの宛先へのデータセットの書き出し](/help/destinations/ui/export-datasets.md)
 
 ## 次の手順 {#next-steps}
 

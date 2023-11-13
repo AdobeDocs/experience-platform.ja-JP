@@ -4,10 +4,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformでオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3720'
-ht-degree: 63%
+source-wordcount: '3781'
+ht-degree: 61%
 
 ---
 
@@ -29,6 +29,18 @@ ht-degree: 63%
 ## 前提条件 {#prerequisites}
 
 オーディエンスを宛先に対してアクティブ化するには、次の条件を満たす必要があります。 [宛先に接続されている](./connect-destination.md). まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
+
+### 書き出しでサポートされるファイル形式 {#supported-file-formats-export}
+
+オーディエンスのエクスポートでは、次のファイル形式がサポートされます。
+
+* CSV
+* JSON
+* PARQUET
+
+CSV ファイルを書き出すと、書き出したファイルの構造を柔軟に設定できることに注意してください。 詳細を表示： [CSV ファイルのファイル形式設定](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+次の場合に、書き出すファイル形式を選択します。 [ファイルベースの宛先への接続の作成](/help/destinations/ui/connect-destination.md).
 
 ## 宛先の選択 {#select-destination}
 
@@ -532,7 +544,7 @@ Adobe Analytics の **[!UICONTROL レビュー]** 手順の後、Experience Plat
 
 ## オーディエンスのアクティベーションを検証 {#verify}
 
-メールマーケティングの宛先とクラウドストレージの宛先の場合、Adobe Experience Platform は、指定されたストレージの場所に `.csv` ファイルを作成します。ワークフローで設定したスケジュールに従って、ストレージの場所に新しいファイルが作成されます。デフォルトのファイル形式を以下に示しますが、次の操作を実行できます。 [ファイル名のコンポーネントを編集する](#file-names):
+オーディエンスをクラウドストレージの宛先に書き出す場合、Adobe Experience Platformは、 `.csv`, `.json`または `.parquet` ファイルを指定したストレージの場所に保存します。 ワークフローで設定したスケジュールに従って、ストレージの場所に新しいファイルが作成されます。デフォルトのファイル形式を以下に示しますが、次の操作を実行できます。 [ファイル名のコンポーネントを編集する](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 例えば、書き出し頻度を毎日に選択した場合、連続した 3 日間に受け取るファイルは次のようになります。
