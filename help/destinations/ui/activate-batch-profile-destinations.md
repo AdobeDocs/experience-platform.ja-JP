@@ -4,7 +4,7 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformでオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
 workflow-type: tm+mt
 source-wordcount: '3781'
 ht-degree: 61%
@@ -30,7 +30,7 @@ ht-degree: 61%
 
 オーディエンスを宛先に対してアクティブ化するには、次の条件を満たす必要があります。 [宛先に接続されている](./connect-destination.md). まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
-### 書き出しでサポートされるファイル形式 {#supported-file-formats-export}
+## 書き出しでサポートされるファイル形式 {#supported-file-formats-export}
 
 オーディエンスのエクスポートでは、次のファイル形式がサポートされます。
 
