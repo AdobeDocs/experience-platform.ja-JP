@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy ServiceとExperience Cloudの適用
 description: このドキュメントでは、プライバシー関連の操作用に様々なExperience Cloudアプリケーションを設定する方法に関するリファレンスを提供します。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b73b6f1005dc8a9e647f706a1e98259131b17478
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 33%
+source-wordcount: '912'
+ht-degree: 34%
 
 ---
 
@@ -54,7 +54,6 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 顧客プライバシー管理者または AEM 管理者が GDPR リクエストを処理する方法の概要。 |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Livefyre を使用して GDPR にアクセスしたり、リクエストを削除したりする手順。 |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Magento Commerceのインストールが、特定のプライバシー法の要件に従っていることを確認します。 |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | プライバシー規制がMarketoにどのように適用されるかを説明します。 |
 | [Adobe Experience Platform のタグ](../tags/ui/client-side/consent.md) | 拡張機能とルールビルダーを使用してオプトインおよびオプトアウトソリューションを定義する方法。 |
 | [Workfront](https://www.workfront.com/privacy-notice) | Workfrontが個人データを収集する方法、およびデータ主体がフォームを使用してプライバシーリクエストを送信する方法について説明します。 |
 

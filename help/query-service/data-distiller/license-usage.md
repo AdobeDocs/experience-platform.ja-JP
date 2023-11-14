@@ -2,9 +2,9 @@
 title: バッチクエリのライセンス使用状況の監視
 description: Adobe Experience Platform UI には、組織の Data Distillerライセンスの使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: a3a2377a873c0e54ba43a60e28f922e0cb9e9d01
+source-git-commit: f33629d73e9bc7273e6ee5170294618f3e9731a8
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ The [!UICONTROL 時間を計算] 指標は、バッチクエリ用の Data Disti
 
 >[!NOTE]
 >
->**データは制限付きで使用できます**：データは 2023 年 10 月 1 日から始まり、トレンドはありません。<br>The **バックフィル** 契約の開始日のデータが進行中です。 今年末までに発表される予定です。
+>**The [!UICONTROL 時間を計算] データは制限付きで使用できます**：データは 2023 年 10 月 1 日から始まり、トレンドはありません。<br>The **バックフィル** 契約の開始日のデータが進行中です。 年内に発売予定。
 
 ![計算時間指標が強調表示されたライセンス使用状況ダッシュボード。](../images/data-distiller/compute-hours.png)
 
