@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: アルファ版
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '436'
 ht-degree: 3%
 
 ---
@@ -69,5 +69,6 @@ ID グラフリンクルールを使用すると、CRM ID を一意の ID とし
 ID グラフのリンクルールの詳細については、次のドキュメントを参照してください。
 
 * [ID グラフリンクルールの概要](./overview.md)
+* [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [ID サービスとリアルタイム顧客プロファイル](identity-and-profile.md)
 * [ID リンクロジック](./identity-linking-logic.md)

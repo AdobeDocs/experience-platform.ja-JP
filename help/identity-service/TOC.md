@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ID サービス
 breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+source-git-commit: 51bb84f530ed941a67c4a4939e153f516d96ec25
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 86%
+source-wordcount: '132'
+ht-degree: 84%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 86%
    - [UI での ID フィールドの定義](ui/label-identities.md)
 - [ID グラフリンクルール] {#identity-graph-linking-rules}
    - [機能の概要](./identity-graph-linking-rules/overview.md)
+   - [ID 最適化アルゴリズム](./identity-graph-linking-rules/identity-optimization-algorithm.md)
    - [シナリオの例](./identity-graph-linking-rules/example-scenarios.md)
    - [ID サービスとリアルタイム顧客プロファイル](./identity-graph-linking-rules/identity-and-profile.md)
    - [ID リンクロジック](./identity-graph-linking-rules/identity-linking-logic.md)
