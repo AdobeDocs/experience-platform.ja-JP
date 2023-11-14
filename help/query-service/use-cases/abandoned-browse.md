@@ -18,13 +18,13 @@ ht-degree: 3%
 * 既存のデータアーキテクチャに基づいてクエリを作成する方法。
 * ニーズを満たすデータ品質、および不足を軽減する方法を確保する。
 * パーソナライゼーションのためのセグメント化と宛先で、設定された頻度でクエリを実行するようにスケジュールするプロセスです。
-* マーケターが、 [!DNL Query Service].
+* マーケターが、以下の機能を利用して、派生した属性をオーディエンスに簡単に組み込むことができます。 [!DNL Query Service].
 
 ## 目標 {#objectives}
 
 このワークフローのデモは、複数のAdobe Experience Platformサービスに基づいています。 続ける場合は、次の機能およびサービスについて十分に理解することをお勧めします。
 
-* この [Experience Data Model(XDM) スキーマ構成の基本](../../xdm/schema/composition.md)
+* The [Experience Data Model(XDM) スキーマ構成の基本](../../xdm/schema/composition.md)
 * 方法 [データセットの作成とデータの取り込み](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)
 * 方法 [Adobe Analyticsソースコネクタを使用したデータの取り込み](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=ja)
 * [セグメント化](../../segmentation/home.md)
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 閲覧中断の例では、Adobeの使用が中心です [!DNL Analytics] 特定のアクションにつながるオーディエンスを作成するためのデータ。 オーディエンスが絞り込まれ、過去 4 日間に Web サイトを閲覧したが購入しなかったすべての顧客が含まれます。 その後、オーディエンスの各プロファイルが、顧客の行動パターンに基づいて最も価格の高い SKU をターゲットに設定されます。
 
-クエリ自体は非常に規範的で、セグメント定義の使用例の条件を満たすデータのみが含まれます。 これにより、 [!DNL Analytics] 処理中のデータ。 また、データを価格の高い順に並べ、ユーザーが閲覧していた最も価格の高い SKU を選択します。
+クエリ自体は非常に規範的で、セグメント定義の使用例の条件を満たすデータのみが含まれます。 これにより、 [!DNL Analytics] データを処理中です。 また、データを価格の高い順に並べ、ユーザーが閲覧していた最も価格の高い SKU を選択します。
 
 プレゼンテーションで使用されるクエリは、次のように表示されます。
 
@@ -77,7 +77,7 @@ Adobe Experience Platformは、データリポジトリと、効率的で信頼�
 
 の利点を示すその他のドキュメント [!DNL Query Service] 組織の戦略的ビジネスインサイトに対して、 [ボットフィルタリングの使用例](./bot-filtering.md) 例：
 
-また、これらのドキュメントは、 [!DNL Query Service] 機能：
+または、これらのドキュメントを使用すると、 [!DNL Query Service] 機能：
 
 * [クエリ実行のガイダンス](../best-practices/writing-queries.md)
 * [データアセット組織のガイダンス](../best-practices/organize-data-assets.md).

@@ -7,7 +7,7 @@ description: アトリビューション AI の一般的なエラーに対する
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 100%
 

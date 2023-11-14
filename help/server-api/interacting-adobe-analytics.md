@@ -1,27 +1,27 @@
 ---
-title: Adobe Analyticsの操作
+title: Adobe Analytics の操作
 description: Edge Network Server API を使用してAdobe Analyticsとやり取りする方法について説明します。
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '179'
-ht-degree: 2%
+ht-degree: 9%
 
 ---
 
-# Adobe Analyticsの操作
+# Adobe Analytics の操作
 
 ## 概要 {#overview}
 
-Adobe Analyticsのデータ収集は、XDM データをAdobe Analyticsが理解できる形式に変換することで機能します。 複数の XDM フィールドは次のとおりです [自動的にマッピング](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) を Analytics 変数に追加します。
+Adobe Analyticsのデータ収集は、XDM データをAdobe Analyticsが理解できる形式に変換することで機能します。 複数の XDM フィールドは次のとおりです。 [自動的にマッピング](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) を Analytics 変数に追加します。
 
 また、 [XDM 値の手動マッピング](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) を従来の Analytics 変数に追加します。
 
 Adobe Analyticsが Server API からデータを受け取れるようにするには、次の手順を実行する必要があります。 [データストリームの設定](../datastreams/overview.md#adobe-analytics-settings) イベントをAdobe Analyticsに転送するには、データストリーム設定ページでレポートスイート ID を入力します。
 
-![Adobe Analytics Datastream 設定](assets/analytics-datastream.png)
+![Adobe Analytics Datastream の設定](assets/analytics-datastream.png)
 
-## Adobe Analyticsの操作 {#interacting-analytics}
+## Adobe Analytics の操作 {#interacting-analytics}
 
 ### API 形式 {#format}
 

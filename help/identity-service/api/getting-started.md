@@ -19,11 +19,11 @@ Adobe Experience Platform [!DNL Identity Service] は、Adobe Experience Platfor
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-- [[!DNL Identity Service]](../home.md):顧客プロファイルデータの断片化によって生じる基本的な課題を解決します。 これは、顧客がブランドとやり取りするデバイスやシステム間で ID を橋渡しすることで実現します。
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+- [[!DNL Identity Service]](../home.md)：顧客プロファイルデータの断片化によって生じる基本的な課題を解決します。 これは、顧客がブランドとやり取りするデバイスやシステム間で ID を橋渡しすることで実現します。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
-以下の節では、 [!DNL Identity Service] API
+以下の節では、 [!DNL Identity Service] API.
 
 ### API 呼び出し例の読み取り
 
@@ -51,9 +51,9 @@ Adobe Experience Platform [!DNL Identity Service] は、Adobe Experience Platfor
 
 ### 地域ベースのルーティング
 
-この [!DNL Identity Service] API は、 `{REGION}` をリクエストパスの一部として追加します。 組織のプロビジョニング中に、地域が決定され、組織のプロファイル内に保存されます。 各エンドポイントで正しい地域を使用すると、 [!DNL Identity Service] API は適切な地域にルーティングされます。
+The [!DNL Identity Service] API は、 `{REGION}` をリクエストパスの一部として追加します。 組織のプロビジョニング中に、地域が決定され、組織のプロファイル内に保存されます。 各エンドポイントで正しい地域を使用すると、 [!DNL Identity Service] API は適切な地域にルーティングされます。
 
-現在、 [!DNL Identity Service] API:VA7 と NLD2。
+現在、 [!DNL Identity Service] API:VA7 および NLD2。
 
 次の表に、地域を使用したパスの例を示します。
 
@@ -78,7 +78,7 @@ ID が永続化されると、 [!DNL Identity Service] はネイティブ ID(XID
 
 応答のペイロードを制限するため、API は、使用される ID 構文のタイプに応じて、それらの応答を調整します。つまり、XID を渡すと応答に XID が含まれ、複合 ID を渡すと、応答はリクエストで使用される構造に従います。
 
-このドキュメントの例では、 [!DNL Identity Service] API 完全な API については、「[Swagger API リファレンス](https://www.adobe.io/experience-platform-apis/references/identity-service)」を参照してください。
+このドキュメントの例では、 [!DNL Identity Service] API. 完全な API については、「[Swagger API リファレンス](https://www.adobe.io/experience-platform-apis/references/identity-service)」を参照してください。
 
 >[!NOTE]
 >

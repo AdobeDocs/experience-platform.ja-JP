@@ -15,12 +15,12 @@ ht-degree: 51%
 
 このドキュメントでは、セグメント定義の評価と、 [[!DNL Segmentation API]](../api/getting-started.md).
 
-## Destination SDK の
+## はじめに
 
-このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスの作成に関わるサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、 [!DNL Adobe Experience Platform] オーディエンスの作成に関係するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):次の場所からオーディエンスを構築できます。 [!DNL Real-Time Customer Profile] データ。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：以下からオーディエンスを構築できます。 [!DNL Real-Time Customer Profile] データ。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
@@ -86,7 +86,7 @@ ht-degree: 51%
 
 セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 セグメント定義と、その方法を制御する結合ポリシーを参照します [!DNL Real-Time Customer Profile] は、複数のプロファイルフラグメントで重複している属性を結合します。 セグメントジョブが正常に完了したら、処理中に発生したエラーやオーディエンスの最大サイズなど、セグメント定義に関する様々な情報を収集できます。 セグメント定義が現在認定されているオーディエンスを更新するたびに、セグメントジョブを実行する必要があります。
 
-新しいセグメントジョブを作成するには、 `/segment/jobs` エンドポイント [!DNL Real-Time Customer Profile] API
+新しいセグメントジョブを作成するには、 `/segment/jobs` エンドポイント [!DNL Real-Time Customer Profile] API.
 
 このエンドポイントの使用に関する詳細については、 [セグメントジョブエンドポイントガイド](../api/segment-jobs.md#create)
 
@@ -128,11 +128,11 @@ ht-degree: 51%
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `lastQualificationTime` | セグメントメンバーシップのアサーションが行われ、プロファイルがセグメント定義に入った、または出たときのタイムスタンプ。 |
-| `status` | 現在のリクエストの一部としてのセグメント定義の参加ステータス。 次の既知の値のいずれかと等しい必要があります。 <ul><li>`realized`:エンティティがセグメント定義に該当します。</li><li>`exited`:エンティティがセグメント定義から退出しています。</li></ul> |
+| `status` | 現在のリクエストの一部としてのセグメント定義の参加ステータス。 次の既知の値のいずれかと等しい必要があります。 <ul><li>`realized`：エンティティがセグメント定義に適合しています。</li><li>`exited`：エンティティがセグメント定義を終了しています。</li></ul> |
 
 >[!NOTE]
 >
->次に属する任意のセグメントメンバーシップ `exited` 30 日を超えるステータス ( `lastQualificationTime`、は削除される可能性があります。
+>次に属する任意のセグメントメンバーシップ： `exited` 30 日を超えるステータス ( `lastQualificationTime`、は削除される可能性があります。
 
 ## セグメントジョブの結果へのアクセス
 
@@ -142,7 +142,7 @@ ht-degree: 51%
 
 ## プロファイルの検索
 
-アクセスする特定のプロファイルがわかっている場合は、 [!DNL Real-Time Customer Profile] API 個々のプロファイルにアクセスするための完全な手順は、 [プロファイル API を使用したリアルタイム顧客プロファイルデータへのアクセス](../../profile/api/entities.md) チュートリアル
+アクセスする特定のプロファイルがわかっている場合は、 [!DNL Real-Time Customer Profile] API. 個々のプロファイルにアクセスするための完全な手順は、 [プロファイル API を使用したリアルタイム顧客プロファイルデータへのアクセス](../../profile/api/entities.md) チュートリアル
 
 ## セグメントのエクスポート {#export}
 
@@ -163,7 +163,7 @@ ht-degree: 51%
 
 必要なデータセットを作成する方法は 2 つあります。
 
-- **API の使用：** このチュートリアルの以降の手順では、 [!DNL XDM Individual Profile Union Schema] の使用 [!DNL Catalog] API
+- **API の使用：** このチュートリアルの以降の手順では、 [!DNL XDM Individual Profile Union Schema] の使用 [!DNL Catalog] API.
 - **UI の使用：**[!DNL Adobe Experience Platform] のユーザーインターフェイスを使用して、和集合スキーマを参照するデータセットを作成するには、[UI のチュートリアル](../ui/overview.md)の手順を実行してから、このチュートリアルに戻り、[オーディエンスプロファイルを生成する](#generate-profiles)手順に進みます。
 
 互換性のあるデータセットが既に存在し、その ID がわかっている場合は、[オーディエンスプロファイルを生成する](#generate-profiles)手順に直接進むことができます。
@@ -228,6 +228,6 @@ curl -X POST \
 
 の使用方法に関する詳細な手順については、 [!DNL Data Access] バッチファイルにアクセスしてダウンロードする API では、 [データアクセスのチュートリアル](../../data-access/tutorials/dataset-data.md).
 
-また、 [!DNL Adobe Experience Platform Query Service]. UI または RESTful API の使用 [!DNL Query Service] では、 [!DNL Data Lake].
+また、 [!DNL Adobe Experience Platform Query Service]. UI または RESTful API の使用 [!DNL Query Service] を使用すると、 [!DNL Data Lake].
 
 オーディエンスデータに対してクエリを実行する方法の詳細については、 [[!DNL Query Service]](../../query-service/home.md).

@@ -16,7 +16,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->この [!DNL Azure Table Storage] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>The [!DNL Azure Table Storage] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -29,7 +29,7 @@ ht-degree: 65%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Azure Table Storage] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Azure Table Storage] の使用 [!DNL Flow Service] API.
 
 ### 必要な資格情報の収集
 
@@ -38,7 +38,7 @@ ht-degree: 65%
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | 接続に使用する接続文字列 [!DNL Azure Table Storage] インスタンス。 次の接続文字列パターン： [!DNL Azure Table Storage] 次に該当： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Azure Table Storage] が `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Azure Table Storage] 次に該当 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 接続文字列の取得について詳しくは、 [この [!DNL Azure Table Storage] 文書](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
@@ -89,7 +89,7 @@ curl -X POST \
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 接続に使用する接続文字列 [!DNL Azure Table Storage] インスタンス。 次の接続文字列パターン： [!DNL Azure Table Storage] 次に該当： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | この [!DNL Azure Table Storage] 接続仕様 ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | The [!DNL Azure Table Storage] 接続仕様 ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **応答**
 

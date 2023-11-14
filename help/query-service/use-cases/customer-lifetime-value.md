@@ -23,16 +23,16 @@ Real-time Customer Data Platformを使用して、顧客のライフタイム値
 
 ![顧客のライフタイムバリューを活用するために必要な幅広い手順の解説図。](../images/use-cases/implementation-steps.png)
 
-## Destination SDK の {#getting-started}
+## はじめに {#getting-started}
 
 このガイドでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 * [クエリサービス](../home.md):SQL クエリを使用してデータを分析およびエンリッチメントできるユーザーインターフェイスと RESTful API を提供します。
-* [セグメント化サービス](../../segmentation/home.md):リアルタイム顧客プロファイルデータからオーディエンスを生成できます。
+* [セグメント化サービス](../../segmentation/home.md)：リアルタイム顧客プロファイルデータからオーディエンスを生成できます。
 
 ## 前提条件
 
-このガイドでは、 [データDistiller](../data-distiller/overview.md) SKU をパッケージの一部として提供。 これがあるかどうかがわからない場合は、Adobe サービス担当者にお問い合わせください。
+このガイドでは、 [Data Distiller](../data-distiller/overview.md) SKU をパッケージの一部として提供。 これがあるかどうかがわからない場合は、Adobe サービス担当者にお問い合わせください。
 
 ## 派生属性の作成 {#create-derived-attribute}
 
@@ -91,7 +91,7 @@ CLV を設定する最初の手順は、ユーザーのアクションからキ�
 
 ## キャンペーンから返された分析データを確認する {#post-campaign-data-analysis}
 
-これで、ソースのデータを [段階的に処理される](../essential-concepts/incremental-load.md) を、高速化されたデータストアのデータモデルに対するスケジュールされた更新の一環として追加します。 顧客からの応答イベントは、発生時またはバッチでAdobe Experience Platformに取り込むことができます。 データモデルは、設定やソースコネクタに応じて、1 日に 1 回、または複数回更新される場合があります。 詳しくは、 [バッチ取得 API の概要](../../ingestion/batch-ingestion/api-overview.md) または [ストリーミング取得の概要](../../ingestion/streaming-ingestion/overview.md) を参照してください。
+これで、ソースのデータを [段階的に処理される](../essential-concepts/incremental-load.md) を、高速化されたデータストアのデータモデルに対するスケジュールされた更新の一環として追加できます。 顧客からの応答イベントは、発生時またはバッチでAdobe Experience Platformに取り込むことができます。 データモデルは、設定やソースコネクタに応じて、1 日に 1 回、または複数回更新される場合があります。 詳しくは、 [バッチ取得 API の概要](../../ingestion/batch-ingestion/api-overview.md) または [ストリーミング取り込みの概要](../../ingestion/streaming-ingestion/overview.md) を参照してください。
 
 データモデルが更新されると、カスタムダッシュボードウィジェットは、顧客のライフタイム値を測定し視覚化できる、意味のあるシグナルを提供します。
 

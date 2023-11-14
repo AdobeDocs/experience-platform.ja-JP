@@ -31,7 +31,7 @@ Adobe Experience Platformでは、書き出されたオーディエンスやプ�
 
    ![宛先を選択](../assets/ui/edit-activation/destination-select.png)
 
-4. この **[!UICONTROL データフローの実行]** リンク先のページが表示され、使用可能なコントロールが示されます。 この時点で、宛先データフローの複数のコンポーネントを編集できます。
+4. The **[!UICONTROL データフローの実行]** リンク先のページが表示され、使用可能なコントロールが示されます。 この時点で、宛先データフローの複数のコンポーネントを編集できます。
 
    * 選択 **[!UICONTROL オーディエンスをアクティブ化]** をクリックして、宛先に送信するオーディエンスまたはプロファイル属性を変更します。 このアクションを実行すると、アクティベーションワークフローが表示されます。このワークフローは、宛先のタイプに応じて異なります。 詳しくは、次のガイドを参照してください。
       * [オーディエンスストリーミング宛先へのオーディエンスデータのアクティブ化](./activate-segment-streaming-destinations.md) ( 例：Facebook、Twitter)。
@@ -39,7 +39,7 @@ Adobe Experience Platformでは、書き出されたオーディエンスやプ�
       * [ストリーミングプロファイルベースの宛先に対するオーディエンスデータのアクティブ化](./activate-streaming-profile-destinations.md) ( 例：HTTP API やAmazon Kinesis)。
 
    * さらに、宛先のデータフローの名前と説明を編集できます。
-   * 以下を使用して、 **[!UICONTROL 有効]/[!UICONTROL 無効]** 宛先へのすべてのデータ書き出しを開始および一時停止する切り替え。
+   * 以下を使用すると、 **[!UICONTROL 有効]/[!UICONTROL 無効]** 宛先へのすべてのデータ書き出しを開始および一時停止する切り替え。
 
    ![宛先の詳細](../assets/ui/edit-activation/destination-details.png)
 

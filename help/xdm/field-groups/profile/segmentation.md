@@ -21,7 +21,7 @@ ht-degree: 19%
 
 >[!WARNING]
 >
->また、 `segmentMembership` フィールドは、このフィールドグループを使用してプロファイルスキーマに手動で追加する必要があります。このフィールドに手動で入力または更新しないでください。 システムによって、 `segmentMembership` セグメント化ジョブの実行時に各プロファイルのマッピングをおこなう。
+>また、 `segmentMembership` フィールドは、このフィールドグループを使用してプロファイルスキーマに手動で追加する必要があります。このフィールドに手動で入力または更新しないでください。 自動的に更新されます `segmentMembership` セグメント化ジョブの実行時に各プロファイルのマッピングをおこないます。
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -75,16 +75,16 @@ ht-degree: 19%
 | `xdm:version` | このプロファイルが適合するセグメントのバージョン。 |
 | `xdm:lastQualificationTime` | 前回、このプロファイルがセグメントに選定された際のタイムスタンプ。 |
 | `xdm:validUntil` | セグメントメンバーシップが有効であると見なされなくなったときのタイムスタンプ。 外部オーディエンスの場合、このフィールドを設定しないと、セグメントのメンバーシップは、 `lastQualificationTime`. |
-| `xdm:status` | セグメントメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`:プロファイルがセグメントの対象になります。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてセグメントから外れています。</li></ul> |
+| `xdm:status` | セグメントメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`：プロファイルはセグメントに適合します。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてセグメントから外れています。</li></ul> |
 | `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれています。 各メンバーシップに指定できるペイロードは、1 つのタイプのみです。 `xdm:payloadType` ペイロードのタイプを示します (`boolean`, `number`, `propensity`または `string`) の代わりに、兄弟プロパティがペイロードタイプの値を提供します。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->次に属する任意のセグメントメンバーシップ `exited` 30 日を超えるステータス ( `lastQualificationTime`、は削除される可能性があります。
+>次に属する任意のセグメントメンバーシップ： `exited` 30 日を超えるステータス ( `lastQualificationTime`、は削除される可能性があります。
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

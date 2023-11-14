@@ -16,9 +16,9 @@ ht-degree: 39%
 
 >[!NOTE]
 >
-> HP [!DNL Vertica] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+> HP [!DNL Vertica] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
-Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、HP を作成する手順を説明します [!DNL Vertica] を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
+Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、HP を作成する手順を説明します。 [!DNL Vertica] を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
 
 ## はじめに
 
@@ -33,31 +33,31 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ### 必要な資格情報の収集
 
-次のセクションでは、HP に正しく接続するために知っておく必要がある追加情報を示します [!DNL Vertica] の使用 [!DNL Flow Service] API
+次のセクションでは、HP に正しく接続するために知っておく必要がある追加情報を示します [!DNL Vertica] の使用 [!DNL Flow Service] API.
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | HP への接続に使用する接続文字列 [!DNL Vertica] インスタンス。 HP の接続文字列パターン [!DNL Vertica] が `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
+| `connectionString` | HP への接続に使用する接続文字列 [!DNL Vertica] インスタンス。 HP の接続文字列パターン [!DNL Vertica] 次に該当 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 の導入について詳しくは、 [この HP [!DNL Vertica] 文書](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
 ## HP を接続 [!DNL Vertica] アカウント
 
-必要な資格情報を収集したら、次の手順に従って HP をリンクできます [!DNL Vertica] アカウント [!DNL Platform].
+必要な資格情報を収集したら、次の手順に従って HP をリンクできます。 [!DNL Vertica] アカウント [!DNL Platform].
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、 **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL HP Vertica]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい HP を作成するには [!DNL Vertica] コネクタ。
+の下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL HP Vertica]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい HP を作成するには [!DNL Vertica] コネクタ。
 
 ![カタログ](../../../../images/tutorials/create/hp-vertica/catalog.png)
 
-この **[!UICONTROL HP Vertica に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL HP Vertica に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、HP を入力します [!DNL Vertica] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、HP を入力します。 [!DNL Vertica] 認証情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 
 ![接続](../../../../images/tutorials/create/hp-vertica/new.png)
 
@@ -69,4 +69,4 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ## 次の手順
 
-このチュートリアルに従って、HP との接続を確立しました。 [!DNL Vertica] アカウント 次のチュートリアルに進み、[データを に取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/databases.md)を行いましょう。
+このチュートリアルに従って、HP との接続を確立しました。 [!DNL Vertica] アカウント。 次のチュートリアルに進み、[データを に取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/databases.md)を行いましょう。

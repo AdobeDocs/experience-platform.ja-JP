@@ -30,7 +30,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 * [Observability では、統計的な指標とイベント通知を使用して Platform アクティビティを監視できます。](../../../observability/home.md)[!DNL Observability Insights]
    * [アラート](../../../observability/alerts/overview.md):Platform 操作で特定の条件に達すると（システムがしきい値に達した場合に問題が発生する可能性があるなど）、Platform は、組織内で条件を購読したユーザーにアラートメッセージを配信できます。
 
-## UI でアラートを購読 {#subscribe-sources-alerts}
+## UI でのアラートの登録 {#subscribe-sources-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"

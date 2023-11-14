@@ -20,20 +20,20 @@ ht-degree: 63%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Mixpanel] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Mixpanel] の使用 [!DNL Flow Service] API.
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Mixpanel] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 | 例 |
+| 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| `username` | に対応するサービスアカウントユーザー名 [!DNL Mixpanel] アカウント 詳しくは、 [[!DNL Mixpanel] サービスアカウントドキュメント](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) を参照してください。 | `Test8.6d4ee7.mp-service-account` |
-| `password` | お使いの [!DNL Mixpanel] アカウント | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| `username` | に対応するサービスアカウントユーザー名。 [!DNL Mixpanel] アカウント。 詳しくは、 [[!DNL Mixpanel] サービスアカウントドキュメント](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) を参照してください。 | `Test8.6d4ee7.mp-service-account` |
+| `password` | お使いの [!DNL Mixpanel] アカウント。 | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | `projectId` | お使いの [!DNL Mixpanel] プロジェクト ID。 この ID は、ソース接続を作成するために必要です。 詳しくは、 [[!DNL Mixpanel] プロジェクト設定ドキュメント](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) そして [[!DNL Mixpanel] プロジェクトの作成と管理に関するガイド](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) を参照してください。 | `2384945` |
-| `timezone` | に対応するタイムゾーン [!DNL Mixpanel] プロジェクト。 ソース接続を作成するには、タイムゾーンが必要です。 詳しくは、 [Mixpanel プロジェクト設定ドキュメント](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) を参照してください。 | `Pacific Standard Time` |
+| `timezone` | に対応するタイムゾーン。 [!DNL Mixpanel] プロジェクト。 ソース接続を作成するには、タイムゾーンが必要です。 詳しくは、 [Mixpanel プロジェクト設定ドキュメント](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) を参照してください。 | `Pacific Standard Time` |
 
-認証の詳細については、 [!DNL Mixpanel] ソース、 [[!DNL Mixpanel] ソースの概要](../../../../connectors/analytics/mixpanel.md).
+認証の詳細については、 [!DNL Mixpanel] ソース、「 [[!DNL Mixpanel] ソースの概要](../../../../connectors/analytics/mixpanel.md).
 
 ## ベース接続の作成 {#base-connection}
 
@@ -117,7 +117,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。このソースの場合、値は次のようになります。 `json`. |
 | `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、 `json` は、サポートされている唯一のファイルタイプです。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
-| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、`{"projectId":"2671127","timezone":"Pacific Standard Time"}` 文字列全体を base64 にエンコードする必要があります。**注意**:次の例では、 `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` base64 でエンコードされた値は、次の値と等しくなります。 `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
+| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、`{"projectId":"2671127","timezone":"Pacific Standard Time"}` 文字列全体を base64 にエンコードする必要があります。**注意**：以下の例では、 `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` base64 でエンコードされた値は、次の値と等しくなります。 `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
 
 
 **リクエスト**
@@ -382,7 +382,7 @@ curl -X POST \
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
 | `data.format` | 取り込む [!DNL Mixpanel] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
 | `params.projectId` | お使いの [!DNL Mixpanel] プロジェクト ID。 |
-| `params.timezone` | タイムゾーン [!DNL Mixpanel] プロジェクト。 |
+| `params.timezone` | のタイムゾーン [!DNL Mixpanel] プロジェクト。 |
 
 **応答**
 
@@ -471,7 +471,7 @@ curl -X POST \
 
 ## マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、 [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、次に対してPOSTリクエストを実行する [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
 
 **API 形式**
 
@@ -580,7 +580,7 @@ curl -X POST \
 
 ## フローの作成 {#flow}
 
-データを取り込むための最後の手順 [!DNL Mixpanel] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
+からデータを取り込むための最後の手順 [!DNL Mixpanel] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -673,15 +673,15 @@ curl -X POST \
 
 ### データフローの更新
 
-に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` エンドポイント [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](../../update-dataflows.md).
+に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` の終点 [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](../../update-dataflows.md).
 
 ### アカウントを更新
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](../../update.md).
+に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](../../update.md).
 
 ### データフローの削除
 
-に対してDELETEリクエストを実行して、データフローを削除 [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](../../delete-dataflows.md).
+に対してDELETEリクエストを実行して、データフローを削除する [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](../../delete-dataflows.md).
 
 ### アカウントを削除
 

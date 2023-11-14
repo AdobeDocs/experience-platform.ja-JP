@@ -16,11 +16,11 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Apache HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>Apache HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL Apache Hadoop Distributed File System] （以下「」という。）[!DNL HDFS]」) [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL Apache Hadoop Distributed File System] （以下「」という。）[!DNL HDFS]」) を [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
@@ -29,7 +29,7 @@ ht-degree: 54%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL HDFS] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL HDFS] の使用 [!DNL Flow Service] API.
 
 ### 必要な資格情報の収集
 
@@ -85,7 +85,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --------- | ----------- |
 | `auth.params.url` | への接続に必要な認証パラメーターを定義する URL [!DNL HDFS] 匿名で |
-| `connectionSpec.id` | この [!DNL HDFS] 接続仕様 ID: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `connectionSpec.id` | The [!DNL HDFS] 接続仕様 ID: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **応答**
 

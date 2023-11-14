@@ -27,7 +27,7 @@ ht-degree: 62%
 
 次の節では、接続を成功させるために知っておく必要がある追加情報を示します [!DNL Platform] から [!DNL Salesforce] アカウントを [!DNL Flow Service] API.
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Salesforce] に接続するには、次の接続プロパティの値を指定する必要があります。
 

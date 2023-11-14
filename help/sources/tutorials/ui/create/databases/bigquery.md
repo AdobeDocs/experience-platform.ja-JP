@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '456'
+ht-degree: 58%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Google BigQuery] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Google BigQuery] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Google Big Query] Platform ユーザーインターフェイスを使用したソース接続
 
@@ -29,30 +29,30 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 既に有効な [!DNL Google BigQuery] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次の項目にアクセスするには、 [!DNL Google BigQuery] Platform のアカウントで、次の OAuth 2.0 認証値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `project` | デフォルトのプロジェクト ID [!DNL Google BigQuery] クエリするプロジェクト。 |
+| `project` | デフォルトのプロジェクト ID [!DNL Google BigQuery] クエリ対象のプロジェクト。 |
 | `clientID` | 更新トークンの生成に使用する ID 値。 |
 | `clientSecret` | 更新トークンの生成に使用するシークレット値。 |
 | `refreshToken` | から取得した更新トークン [!DNL Google] ～へのアクセスを許可するために使用される [!DNL Google BigQuery]. |
 
 これらの値について詳しくは、 [この [!DNL Google BigQuery] 文書](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 
-## Google BigQuery アカウントに接続
+## Google BigQuery アカウントに接続する
 
 Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-以下 [!UICONTROL データベース] カテゴリ、選択 **[!UICONTROL Google BigQuery]** 次に、 **[!UICONTROL データを追加]**.
+の下 [!UICONTROL データベース] カテゴリ、選択 **[!UICONTROL Google BigQuery]** 次に、「 **[!UICONTROL データを追加]**.
 
 ![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
-この **[!UICONTROL Google Big Query に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL Google Big Query に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
@@ -62,7 +62,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Google BigQuery] 資格情報。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Google BigQuery] 認証情報。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![](../../../../images/tutorials/create/google-big-query/new.png)
 

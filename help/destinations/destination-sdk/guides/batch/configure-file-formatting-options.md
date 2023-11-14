@@ -5,7 +5,7 @@ exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
 source-wordcount: '913'
-ht-degree: 3%
+ht-degree: 24%
 
 ---
 
@@ -118,7 +118,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 宛先設定で顧客データフィールドとしてファイル形式オプションを追加する順序は、UI に反映されます。 例えば、以下の設定は UI に応じて反映され、オプションは順番に表示されます **[!UICONTROL 区切り]**, **[!UICONTROL 引用符文字]**, **[!UICONTROL エスケープ文字]**, **[!UICONTROL 空の値]**, **[!UICONTROL Null 値]**.
 
-![画像 UI のファイル形式設定オプションの順序を示すExperience Platform。](../../assets/guides/batch/file-formatting-order.png)
+![Experience Platform UI でのファイル形式オプションの順序を示す画像。](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -237,7 +237,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
                 }
 ```
 
-### ファイル形式設定オプションをグループ化します {#grouping}
+### ファイル形式設定オプションをグループ化します。 {#grouping}
 
 複数のファイル形式設定オプションを 1 つのセクション内にグループ化できます。 UI で宛先への接続を設定すると、類似したフィールドを視覚的にグループ化して、その利点を活用することができます。
 
@@ -283,9 +283,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### ファイル形式設定オプション用のドロップダウンセレクターを作成します {#dropdown-selectors}
 
-CSV ファイルのフィールドを区切る文字など、複数のオプションから選択できるようにする場合は、UI にドロップダウンフィールドを追加できます。
+ユーザーがいくつかのオプションから選択できるようにしたい状況（例えば、CSV ファイルのフィールドを区切るためにどの文字を使用するか）では、UI にドロップダウンフィールドを追加できます。
 
-これをおこなうには、 `namedEnum` 以下に示すようにオブジェクトを選択し、 `default` ユーザーが選択できるオプションの値。
+これを行うには、以下に示すように、`namedEnum` オブジェクトを使用して、ユーザーが選択できるオプションの `default` 値を設定します。
 
 ```json {line-numbers="true" start-number="100" highlight="114-124"}
 [...]
@@ -324,13 +324,13 @@ CSV ファイルのフィールドを区切る文字など、複数のオプシ�
 ]
 ```
 
-![上記の設定で作成されたドロップダウンセレクターの例を示す画面記録。](../../assets/guides/batch/dropdown-options-file-formatting.gif)
+![上記の設定で作成されたドロップダウンセレクターの例を示す画面録画。](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### 条件付きファイル書式設定オプションの作成 {#conditional-options}
 
-条件付きファイル書式設定オプションを作成できます。このオプションは、ユーザーが書き出し用に特定のファイルタイプを選択した場合にのみアクティベーションワークフローに表示されます。 例えば、以下の設定では、CSV ファイルオプションの条件付きグループが作成されます。 CSV ファイルオプションは、書き出し対象のファイルタイプとして CSV を選択した場合にのみ表示されます。
+条件付きファイル書式設定オプションを作成できます。このオプションは、ユーザーが書き出し用に特定のファイルタイプを選択した場合にのみ、アクティベーションワークフローに表示されます。 例えば、以下の設定では、CSV ファイルオプションの条件付きグループが作成されます。 CSV ファイルオプションは、ユーザーが CSV を書き出し用のファイルタイプとして選択する場合にのみ表示されます。
 
-フィールドを条件付きとして設定するには、 `conditional` パラメーターの値を次に示します。
+フィールドを条件付きとして設定するには、以下に示すように、`conditional` パラメーターを使用します。
 
 ```json
             "conditional": {
@@ -340,7 +340,7 @@ CSV ファイルのフィールドを区切る文字など、複数のオプシ�
             }
 ```
 
-より広いコンテキストでは、 `conditional` 以下の宛先設定で、 `fileType` 文字列と `csvOptions` オブジェクトを定義します。
+より広いコンテキストでは、以下の宛先設定で、`fileType` 文字列とそれが定義されている `csvOptions` オブジェクトと共に `conditional` フィールドが使用されているのを確認できます。
 
 ```json
         {
@@ -483,9 +483,9 @@ CSV ファイルのフィールドを区切る文字など、複数のオプシ�
         }
 ```
 
-以下に、上記の設定に基づいて、結果の UI 画面を示します。 ユーザーがファイルタイプ CSV を選択すると、CSV ファイルタイプを参照する追加のファイル形式設定オプションが UI に表示されます。
+以下に、上記の設定に基づいた結果の UI 画面を確認できます。ユーザーがファイルタイプで CSV を選択すると、CSV ファイルタイプを参照する追加のファイル形式オプションが UI に表示されます。
 
-![CSV ファイルの条件付きファイル形式オプションを示す画面記録。](../../assets/guides/batch/conditional-file-formatting.gif)
+![CSV ファイルの条件付きファイル形式オプションを示す画面録画。](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### 上記のすべてのオプションを含む完全な API リクエスト
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 次の手順 {#next-steps}
 
-この記事では、書き出したファイルのカスタムファイル形式設定オプションを、Destination SDKを使用して設定する方法を説明します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。
+この記事では、書き出したファイルのカスタムファイル形式設定オプションを、Destination SDKを使用して設定する方法について説明します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。

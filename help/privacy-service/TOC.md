@@ -5,7 +5,7 @@ breadcrumb-title: Privacy Service ガイド
 user-guide-description: GDPR や CCPA などの法的プライバシー規制に準拠するための、顧客データリクエストを管理します。
 feature: Privacy
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 100%
 

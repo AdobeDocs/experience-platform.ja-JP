@@ -5,7 +5,7 @@ exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '921'
-ht-degree: 53%
+ht-degree: 54%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 53%
 
 Reactor API の認証値を生成する前に、開発者が Experience Platform にアクセスできる必要があります。開発者アクセス権を取得するには、[Experience Platform 認証チュートリアル](/help/landing/api-authentication.md)の最初の手順に従ってください。完了したら、 [ユーザーアクセスの取得](/help/landing/api-authentication.md#gain-user-access) 手順を実行するには、このチュートリアルに戻り、Reactor API に固有の資格情報を生成します。
 
-## アクセス認証情報の生成 {#generate-access-credentials}
+## アクセス資格情報の生成 {#generate-access-credentials}
 
-Adobe Developer Console を使用して、次の 3 つのアクセス認証情報を生成する必要があります。
+Adobe Developer Console を使用して、次の 3 つのアクセス資格情報を生成する必要があります。
 
 * `{ORG_ID}`
 * `{API_KEY}`
@@ -51,7 +51,7 @@ Adobe Developer Console を使用して、次の 3 つのアクセス認証情�
 
 >[!IMPORTANT]
 >
->を選択します。 **[!UICONTROL OAuth サーバー間]** メソッドのみを使用します。これは、今後の移行がサポートされる唯一のメソッドです。 この **[!UICONTROL サービスアカウント (JWT)]** メソッドは非推奨です。 JWT 認証方式を使用した統合は 2025 年 1 月 1 日まで引き続き機能しますが、Adobeでは、その日以前に既存の統合を新しい OAuth サーバー間方式に移行することを強くお勧めします。 詳しくは、の節を参照してください。 [!BADGE 非推奨]{type=negative}[JSON Web トークン (JWT) の生成](/help/landing/api-authentication.md#jwt) （「 Platform API 認証に関するチュートリアル」）を参照してください。
+>を選択します。 **[!UICONTROL OAuth サーバー間通信]** メソッドのみを使用します。これは、今後の移行がサポートされる唯一のメソッドです。 The **[!UICONTROL サービスアカウント (JWT)]** メソッドは非推奨です。 JWT 認証方式を使用した統合は 2025 年 1 月 1 日まで引き続き機能しますが、Adobeでは、その日以前に既存の統合を新しい OAuth サーバー間方式に移行することを強くお勧めします。 詳しくは、の節を参照してください。 [!BADGE 非推奨]{type=negative}[JSON Web トークン (JWT) の生成](/help/landing/api-authentication.md#jwt) （「 Platform API 認証に関するチュートリアル」）を参照してください。
 
 「**次へ**」をクリックして続行します。
 
@@ -91,7 +91,7 @@ API がプロジェクトに追加されると、 **[!UICONTROL Experience Platf
 
 #### アクセストークンの手動生成 {#manual}
 
-新しい `{ACCESS_TOKEN}`に移動します。 **[!UICONTROL 資格情報]** > **[!UICONTROL OAuth サーバー間]** を選択し、 **[!UICONTROL アクセストークンを生成]**、以下に示すように。
+新しい `{ACCESS_TOKEN}`に移動します。 **[!UICONTROL 資格情報]** > **[!UICONTROL OAuth サーバー間通信]** を選択し、 **[!UICONTROL アクセストークンを生成]**、以下に示すように。
 
 ![開発者コンソールの UI で、およびアクセストークンが生成された方法を示す画面記録。](/help/tags/images/api/getting-started/generate-access-token.gif)
 
@@ -103,7 +103,7 @@ API がプロジェクトに追加されると、 **[!UICONTROL Experience Platf
 
 ## API 資格情報のテスト {#test-api-credentials}
 
-このチュートリアルの手順に従うことで、の有効な値を取得できます。 `{ORG_ID}`, `{API_KEY}`、および `{ACCESS_TOKEN}`. これらの値を、Reactor API への簡単な cURL リクエストで使用してテストできるようになりました。
+このチュートリアルの手順に従うことで、の有効な値が得られます。 `{ORG_ID}`, `{API_KEY}`、および `{ACCESS_TOKEN}`. これらの値を、Reactor API への簡単な cURL リクエストで使用してテストできるようになりました。
 
 まず、[すべての会社をリスト](./endpoints/companies.md#list)する API 呼び出しを試みます。
 

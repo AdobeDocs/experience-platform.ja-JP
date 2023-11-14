@@ -33,7 +33,7 @@ Adobe Experience Platformが顧客の同意/環境設定データを処理する
 
 * [エクスペリエンスデータモデル（XDM）](../../../../xdm/home.md)：[!DNL Experience Platform] が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：XDM スキーマの基本的な構成要素について説明します。
-* [リアルタイム顧客プロファイル](../../../../profile/home.md):異なるソースの顧客データを完全な統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供します。
+* [リアルタイム顧客プロファイル](../../../../profile/home.md)：異なるソースの顧客データを完全な統合ビューに統合し、顧客インタラクションごとに実用的なタイムスタンプ付きの説明を提供します。
 
 >[!IMPORTANT]
 >
@@ -41,9 +41,9 @@ Adobe Experience Platformが顧客の同意/環境設定データを処理する
 
 ## [!UICONTROL 同意および環境設定の詳細] フィールドグループ構造 {#structure}
 
-この [!UICONTROL 同意および環境設定の詳細] フィールドグループは、スキーマに標準化された同意フィールドを提供します。 現在、このフィールドグループは、 [!DNL XDM Individual Profile] クラス。
+The [!UICONTROL 同意および環境設定の詳細] フィールドグループは、スキーマに標準化された同意フィールドを提供します。 現在、このフィールドグループは、 [!DNL XDM Individual Profile] クラス。
 
-フィールドグループには、単一のオブジェクトタイプのフィールドが用意されています。 `consents`のサブプロパティは、一連の標準化された同意フィールドをキャプチャします。 次の JSON は、データの種類の例です `consents` は、データ取り込み時に予想されます。
+フィールドグループには、単一のオブジェクトタイプのフィールドが用意されています。 `consents`のサブプロパティは、一連の標準化された同意フィールドを取り込みます。 次の JSON は、データの種類の例です `consents` は、データ取り込み時に予想されます。
 
 ```json
 {
@@ -99,23 +99,23 @@ Adobe標準を使用して同意データを収集するには、次の 2 つの
 * [!UICONTROL 同意および環境設定の詳細]
 * [!UICONTROL IdentityMap] （Platform Web または Mobile SDK を使用して同意シグナルを送信する場合に必要）
 
-Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーションで、 **[!UICONTROL 参照]** タブをクリックして、既存のスキーマのリストを表示します。 ここから、 [!DNL Profile]同意フィールドを追加する有効なスキーマです。 この節のスクリーンショットは、 [スキーマ作成チュートリアル](../../../../xdm/tutorials/create-schema-ui.md) を例として示します。
+Platform UI で、「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションで、 **[!UICONTROL 参照]** タブをクリックして、既存のスキーマのリストを表示します。 ここから、 [!DNL Profile]同意フィールドを追加する有効なスキーマです。 この節のスクリーンショットは、 [スキーマ作成チュートリアル](../../../../xdm/tutorials/create-schema-ui.md) を例として示します。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
 >[!TIP]
 >
->ワークスペースの検索およびフィルタリング機能を使用すると、スキーマを見つけやすくなります。 詳しくは、 [XDM リソースの調査](../../../../xdm/ui/explore.md) を参照してください。
+>ワークスペースの検索およびフィルタリング機能を使用すると、スキーマを見つけやすくなります。 次のガイドを参照してください： [XDM リソースの調査](../../../../xdm/ui/explore.md) を参照してください。
 
-この [!DNL Schema Editor] が表示され、キャンバスにスキーマの構造が表示されます。 キャンバスの左側で、を選択します。 **[!UICONTROL 追加]** の下に **[!UICONTROL フィールドグループ]** 」セクションに入力します。
+The [!DNL Schema Editor] が表示され、キャンバスにスキーマの構造が表示されます。 キャンバスの左側で、を選択します。 **[!UICONTROL 追加]** の下に **[!UICONTROL フィールドグループ]** 」セクションに入力します。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-この **[!UICONTROL フィールドグループを追加]** ダイアログが表示されます。 ここからを選択します。 **[!UICONTROL 同意および環境設定の詳細]** を選択します。 オプションで、検索バーを使用して結果を絞り込み、フィールドグループを見つけやすくすることができます。
+The **[!UICONTROL フィールドグループを追加]** ダイアログが表示されます。 ここからを選択します。 **[!UICONTROL 同意および環境設定の詳細]** を選択します。 オプションで、検索バーを使用して結果を絞り込み、フィールドグループを見つけやすくすることができます。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-次に、 **[!UICONTROL IdentityMap]** フィールドグループを選択し、同様に選択します。 両方のフィールドグループが右側のパネルに表示されたら、 **[!UICONTROL フィールドグループを追加]**.
+次に、 **[!UICONTROL IdentityMap]** フィールドグループを選択し、同様に選択します。 両方のフィールドグループが右側のパネルに表示されたら、「 」を選択します。 **[!UICONTROL フィールドグループを追加]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/identitymap.png)
 
@@ -133,7 +133,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 同意フィールドを含むスキーマを作成したら、顧客の同意データを最終的に取り込むデータセットを作成する必要があります。 このデータセットを有効にする必要があります [!DNL Real-Time Customer Profile].
 
-最初に、 **[!UICONTROL データセット]** 左側のナビゲーションで、「 **[!UICONTROL データセットを作成]** をクリックします。
+最初に、「 」を選択します。 **[!UICONTROL データセット]** 左側のナビゲーションで、「 **[!UICONTROL データセットを作成]** をクリックします。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/create-dataset.png)
 
@@ -141,7 +141,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/from-schema.png)
 
-この **[!UICONTROL スキーマからデータセットを作成]** ワークフローが表示され、 **[!UICONTROL スキーマを選択]** 手順 提供されたリストで、以前に作成した同意スキーマの 1 つを探します。 オプションで、検索バーを使用して結果を絞り込み、スキーマを見つけやすくすることができます。 目的のスキーマの横にあるラジオボタンを選択し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
+The **[!UICONTROL スキーマからデータセットを作成]** ワークフローが表示され、 **[!UICONTROL スキーマを選択]** 手順 提供されたリストで、以前に作成した同意スキーマの 1 つを探します。 オプションで、検索バーを使用して結果を絞り込み、スキーマを見つけやすくすることができます。 目的のスキーマの横にあるラジオボタンを選択し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-dataset-schema.png)
 
@@ -159,7 +159,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-これでデータセットが保存され、での使用が有効になりました。 [!DNL Profile]. Platform Web SDK を使用して同意データをプロファイルに送信する場合は、このデータセットを [!UICONTROL プロファイルデータセット] ( [datastream](../../../../datastreams/overview.md).
+これでデータセットが保存され、での使用が有効になりました。 [!DNL Profile]. Platform Web SDK を使用して同意データをプロファイルに送信する場合は、このデータセットを [!UICONTROL プロファイルデータセット] を設定する際に [datastream](../../../../datastreams/overview.md).
 
 ## 次の手順
 
@@ -181,11 +181,11 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 次を使用することを強くお勧めします： [!UICONTROL 同意および環境設定の詳細] フィールドグループを同意データの構造のベースラインとして追加することで、構造全体を一から作成するのではなく、必要に応じてフィールドを追加することができます。
 
-標準フィールドグループの構造にカスタムフィールドを追加するには、まずカスタムフィールドグループを作成する必要があります。 追加後 [!UICONTROL 同意および環境設定の詳細] スキーマに対するフィールドグループで、 **プラス (+)** アイコン **[!UICONTROL フィールドグループ]** セクションで、 **[!UICONTROL 新しいフィールドグループを作成]**. フィールドグループの名前と説明（オプション）を入力し、「 」を選択します。 **[!UICONTROL フィールドグループを追加]**.
+標準フィールドグループの構造にカスタムフィールドを追加するには、まずカスタムフィールドグループを作成する必要があります。 追加後 [!UICONTROL 同意および環境設定の詳細] スキーマに対するフィールドグループで、 **プラス (+)** アイコン **[!UICONTROL フィールドグループ]** 」セクションで、 **[!UICONTROL 新しいフィールドグループを作成]**. フィールドグループの名前と説明（オプション）を入力し、「 」を選択します。 **[!UICONTROL フィールドグループを追加]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-この [!DNL Schema Editor] 左側のパネルで新しいカスタムフィールドグループを選択して再び表示されます。 キャンバスに、カスタムフィールドをスキーマ構造に追加できるコントロールが表示されます。 新しい同意または環境設定フィールドを追加するには、 **プラス (+)** 横のアイコン `consents` オブジェクト。
+The [!DNL Schema Editor] 左側のパネルで新しいカスタムフィールドグループを選択して再び表示されます。 キャンバスに、カスタムフィールドをスキーマ構造に追加できるコントロールが表示されます。 新しい同意または環境設定フィールドを追加するには、 **プラス (+)** 横のアイコン `consents` オブジェクト。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
@@ -193,7 +193,7 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/nested-tenantId.png)
 
-の下の右側のレールで **[!UICONTROL フィールドプロパティ]**」で、フィールドの名前と説明を入力します。 フィールドの **[!UICONTROL タイプ]**&#x200B;の場合は、カスタムの同意または環境設定フィールドに適した標準データタイプを使用する必要があります。
+の下の右側のレールで **[!UICONTROL フィールドのプロパティ]**」で、フィールドの名前と説明を入力します。 フィールドの **[!UICONTROL タイプ]**&#x200B;の場合は、カスタムの同意または環境設定フィールドに適した標準データタイプを使用する必要があります。
 
 * [[!UICONTROL 汎用同意フィールド]](../../../../xdm/data-types/consent-field.md)
 * [[!UICONTROL 汎用マーケティング環境設定フィールド]](../../../../xdm/data-types/marketing-field.md)
@@ -208,6 +208,6 @@ Platform UI で、「 **[!UICONTROL スキーマ]** 左側のナビゲーショ�
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-added.png)
 
-必要な同意フィールドと環境設定フィールドの追加を続行するには、上記の手順に従います。 終了したら、「 」を選択します。 **[!UICONTROL 保存]** 変更を確定します。
+必要な同意フィールドと環境設定フィールドの追加を続行するには、上記の手順に従います。 終了したら、「 」を選択します。 **[!UICONTROL 保存]** をクリックして変更を確定します。
 
-このスキーマのデータセットを作成していない場合は、 [データセットの作成](#dataset).
+このスキーマのデータセットを作成していない場合は、「 [データセットの作成](#dataset).

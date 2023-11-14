@@ -9,7 +9,7 @@ ht-degree: 27%
 
 ---
 
-# 接続 [!DNL Salesforce Marketing Cloud] UI を通じてExperience Platformにアカウント
+# 接続する [!DNL Salesforce Marketing Cloud] UI を通じてExperience Platformにアカウント
 
 >[!IMPORTANT]
 >
@@ -29,13 +29,13 @@ ht-degree: 27%
 
 既に [!DNL Salesforce Marketing Cloud] アカウントを使用する場合は、このドキュメントの残りの部分をスキップし、次のチュートリアルに進んでください： [UI を使用したマーケティング自動化データのExperience Platformへの取り込み](../../dataflow/marketing-automation.md).
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 Platform で [!DNL Salesforce Marketing Cloud] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| ホスト | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** を `host` の値を指定する場合、URL 全体ではなくサブドメインのみを指定する必要があります。 例えば、ホスト URL が `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を指定した場合は、 `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` をホスト値として使用します。 |
+| ホスト | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** 次の項目に `host` の値を指定する場合、URL 全体ではなくサブドメインのみを指定する必要があります。 例えば、ホスト URL が `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を指定した場合は、 `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` をホスト値として使用します。 |
 | クライアント ID | 次に関連付けられたクライアント ID: [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | クライアントシークレット | に関連付けられたクライアント秘密鍵 [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 
@@ -43,19 +43,19 @@ Platform で [!DNL Salesforce Marketing Cloud] アカウントにアクセスす
 
 ## [!DNL Salesforce Marketing Cloud] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。この [!UICONTROL カタログ] は、Experience Platformでサポートされる様々なソースを表示します。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。The [!UICONTROL カタログ] は、Experience Platformでサポートされる様々なソースを表示します。
 
 カテゴリのリストから適切なカテゴリを選択できます。 また、検索バーを使用して、特定のソースをフィルタリングすることもできます。
 
-以下 [!UICONTROL マーケティングの自動化] カテゴリ、選択 **[!UICONTROL SalesforceMarketing Cloud]** 次に、 **[!UICONTROL 設定]**.
+の下 [!UICONTROL マーケティングの自動化] カテゴリ、選択 **[!UICONTROL SalesforceMarketing Cloud]** 次に、「 **[!UICONTROL 設定]**.
 
-![SalesforceMarketing Cloudソースが選択されたソースカタログ](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+![SalesforceMarketing Cloudソースが選択されたソースカタログ。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-この **[!UICONTROL SalesforceMarketing Cloudに接続]** ページが表示されます。 このページでは、新しいアカウントを作成するか、既存のアカウントを使用できます。
+The **[!UICONTROL SalesforceMarketing Cloudに接続]** ページが表示されます。 このページでは、新しいアカウントを作成するか、既存のアカウントを使用できます。
 
 ### 新規アカウント
 
-新しいアカウントを作成するには、 **[!UICONTROL 新しいアカウント]** アカウントの名前、オプションの説明、および [!DNL Salesforce Marketing Cloud] アカウント
+新しいアカウントを作成するには、 **[!UICONTROL 新しいアカウント]** アカウントの名前、オプションの説明、および [!DNL Salesforce Marketing Cloud] アカウント。
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 

@@ -23,7 +23,7 @@ ht-degree: 41%
 
 ## ファイルとディレクトリの命名制約
 
-以下は、クラウドストレージファイルまたはディレクトリに名前を付ける際に考慮する必要がある制約のリストです。
+以下に、クラウドストレージファイルまたはディレクトリに名前を付ける際に考慮する必要がある制約のリストを示します。
 
 - ディレクトリ名とファイルコンポーネント名は 255 文字を超えてはなりません。
 - ディレクトリ名とファイル名の末尾にスラッシュ（`/`）は使用できません。使用した場合、自動的に削除されます。
@@ -36,7 +36,7 @@ ht-degree: 41%
 
 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。
 
-内 [!DNL Azure Storage Explorer] UI で、左側のナビゲーションで接続アイコンを選択します。 **リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。選択 **[!DNL Blob container]** 接続する [!DNL Data Landing Zone].
+Adobe Analytics の [!DNL Azure Storage Explorer] UI で、左側のナビゲーションで接続アイコンを選択します。 **リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。選択 **[!DNL Blob container]** 接続する [!DNL Data Landing Zone].
 
 ![select-resource](../../images/tutorials/create/dlz/select-resource.png)
 
@@ -50,7 +50,7 @@ ht-degree: 41%
 >
 >次を取得： [!DNL Data Landing Zone] 資格情報を Platform UI のソースカタログから取得します。
 
-次を指定： [!DNL Data Landing Zone] SAS URL を選択し、 **次へ**
+次の項目を指定： [!DNL Data Landing Zone] SAS URL を選択し、 **次へ**
 
 ![enter-connection-info](../../images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -62,7 +62,7 @@ ht-degree: 41%
 
 ![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
 
-を [!DNL Data Landing Zone] ～に接続された容器 [!DNL Azure Storage Explorer]次に、 [!DNL Data Landing Zone] コンテナ。 アップロードする場合は、「 **アップロード** 次に、 **ファイルをアップロード**.
+を使用 [!DNL Data Landing Zone] ～に接続された容器 [!DNL Azure Storage Explorer]次に、 [!DNL Data Landing Zone] コンテナ。 アップロードする場合は、「 **アップロード** 次に、「 **ファイルをアップロード**.
 
 ![アップロード](../../images/tutorials/create/dlz/upload.png)
 
@@ -70,7 +70,7 @@ ht-degree: 41%
 
 | [!DNL Blob] タイプ | 説明 |
 | --- | --- |
-| ブロック [!DNL Blob] | ブロック [!DNL Blobs] は、大量のデータを効率的にアップロードするために最適化されています。 ブロック [!DNL Blobs] は、 [!DNL Data Landing Zone]. |
+| ブロック [!DNL Blob] | ブロック [!DNL Blobs] は、大量のデータを効率的にアップロードするために最適化されています。 ブロック [!DNL Blobs] は、のデフォルトのオプションです。 [!DNL Data Landing Zone]. |
 | 追加 [!DNL Blob] | 追加 [!DNL Blobs] は、ファイルの末尾にデータを追加するように最適化されています。 |
 
 ![upload-files](../../images/tutorials/create/dlz/upload-files.png)
@@ -111,7 +111,7 @@ curl -v -X PUT \
 
 >[!TIP]
 >
->次の例では完全な SAS URI を使用して [!DNL Azure Blob] コンテナに含まれる場合は、他のメソッドや操作を使用して認証をおこなうことができます。 参照 [[!DNL Microsoft] Python v12 SDK のドキュメント](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) を参照してください。
+>次の例では完全な SAS URI を使用して [!DNL Azure Blob] コンテナに含まれる場合は、他のメソッドや操作を使用して認証をおこなうことができます。 詳しくは、 [[!DNL Microsoft] Python v12 SDK のドキュメント](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) を参照してください。
 
 ```py
 import os
@@ -134,13 +134,13 @@ except Exception as ex:
     print("Exception: " + ex.strerror)
 ```
 
-### を使用してファイルをアップロード [!DNL AzCopy]
+### 次を使用してファイルをアップロード [!DNL AzCopy]
 
 次の例では、 [!DNL Microsoft's] [!DNL AzCopy] ファイルをにアップロードするユーティリティ [!DNL Data Landing Zone]:
 
 >[!TIP]
 >
->以下の例では `copy` コマンドを使用すると、他のコマンドやオプションを使用して、ファイルを [!DNL Data Landing Zone]，次を使用 [!DNL AzCopy]. 参照 [[!DNL Microsoft AzCopy] 文書](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) を参照してください。
+>以下の例では `copy` コマンドを使用すると、他のコマンドやオプションを使用して、ファイルを [!DNL Data Landing Zone]，次を使用 [!DNL AzCopy]. 詳しくは、 [[!DNL Microsoft AzCopy] 文書](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) を参照してください。
 
 ```bat
 set sasUri=<FULL SAS URI, PROPERLY ESCAPED>

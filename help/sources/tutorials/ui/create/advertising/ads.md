@@ -39,9 +39,9 @@ Google Ads アカウントプラットフォームにアクセスするには、
 | 開発者トークン | 開発者トークンを使用すると、Google Ads API にアクセスできます。 同じ開発者トークンを使用して、すべてのGoogle Ads アカウントに対してリクエストを実行できます。 次の方法で開発者トークンを取得します： [マネージャーアカウントへのログイン](https://ads.google.com/home/tools/manager-accounts/) 次に、API センターページに移動します。 |
 | 更新トークン | 更新トークンは、 [!DNL OAuth2] 認証。 このトークンを使用すると、期限切れになったアクセストークンを再生成できます。 |
 | クライアント ID | クライアント ID は、 [!DNL OAuth2] 認証。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleへのアプリケーションを識別し、アカウントに代わってアプリケーションを操作できます。 |
-| クライアントシークレット | クライアントシークレットは、 [!DNL OAuth2] 認証。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleへのアプリケーションを識別し、アカウントに代わってアプリケーションを操作できます。 |
+| クライアントシークレット | クライアントの秘密鍵は、 [!DNL OAuth2] 認証。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleへのアプリケーションを識別し、アカウントに代わってアプリケーションを操作できます。 |
 
-API の概要に関するドキュメント ( [Google Ads の概要の詳細](https://developers.google.com/google-ads/api/docs/first-call/overview).
+API の概要に関するドキュメント ( [Google Ads の使用開始に関する詳細](https://developers.google.com/google-ads/api/docs/first-call/overview).
 
 ## Google Ads アカウントの接続
 
@@ -49,11 +49,11 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 **[!UICONTROL 広告]** カテゴリ、選択 **[!UICONTROL Google Ads]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+の下 **[!UICONTROL 広告]** カテゴリ、選択 **[!UICONTROL Google Ads]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
 
 ![ソースカタログ (Experience PlatformUI)。](../../../../images/tutorials/create/ads/catalog.png).
 
-この **[!UICONTROL Google Ads に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL Google Ads に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 

@@ -13,7 +13,7 @@ ht-degree: 77%
 
 # [!DNL Catalog Service] API ガイドの付録
 
-このドキュメントでは、 [!DNL Catalog] API
+このドキュメントでは、 [!DNL Catalog] API.
 
 ## 相互に関連するオブジェクトの表示 {#view-interrelated-objects}
 

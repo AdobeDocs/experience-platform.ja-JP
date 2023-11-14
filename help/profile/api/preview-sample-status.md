@@ -18,7 +18,7 @@ Adobe Experience Platformを使用すると、複数のソースから顧客デ�
 
 >[!NOTE]
 >
->Adobe Experience Platform Segmentation Service API の一部として使用できる推定およびプレビューエンドポイントがあり、期待されるオーディエンスを確実に特定するのに役立つ、セグメント定義に関する概要レベルの情報を表示できます。 プレビューエンドポイントと推定エンドポイントを使用する手順の詳細については、 [プレビューおよび予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)( [!DNL Segmentation] API 開発者ガイド。
+>Adobe Experience Platform Segmentation Service API の一部として使用できる推定およびプレビューエンドポイントがあり、期待されるオーディエンスを確実に特定するのに役立つ、セグメント定義に関する概要レベルの情報を表示できます。 プレビューエンドポイントと推定エンドポイントを使用する手順の詳細については、 [プレビューおよび予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)（の一部） [!DNL Segmentation] API 開発者ガイド。
 
 ## はじめに
 
@@ -41,9 +41,9 @@ Experience Platform内でのプロファイルとその役割の詳細につい�
 * の場合 **ストリーミングデータワークフロー**&#x200B;に設定されている場合、5%の増減しきい値に達したかどうかを確認するチェックが 1 時間ごとにおこなわれます。 存在する場合は、サンプルジョブが自動的にトリガーされ、カウントが更新されます。
 * の場合 **バッチ取得**、バッチをプロファイルストアに正常に取り込んだ 15 分以内に、5%の増減しきい値に達した場合は、ジョブが実行されてカウントが更新されます。 プロファイル API を使用すると、成功した最新のサンプルジョブのほか、データセット別、ID 名前空間別のプロファイル配布のリストを表示できます。
 
-プロファイル数と名前空間別のプロファイルは、 [!UICONTROL プロファイル] Experience PlatformUI の UI を使用してプロファイルデータにアクセスする方法について詳しくは、 [[!DNL Profile] UI ガイド](../ui/user-guide.md).
+プロファイル数と名前空間別のプロファイル数は、 [!UICONTROL プロファイル] Experience PlatformUI の UI を使用してプロファイルデータにアクセスする方法について詳しくは、 [[!DNL Profile] UI ガイド](../ui/user-guide.md).
 
-## 最後のサンプルステータスを表示 {#view-last-sample-status}
+## 最新のサンプルステータスを表示 {#view-last-sample-status}
 
 に対してGETリクエストを実行できます `/previewsamplestatus` endpoint ：組織で最後に実行された成功したサンプルジョブの詳細を表示します。 これには、サンプル内のプロファイルの合計数、プロファイル数指標、またはExperience Platform内に組織が持つプロファイルの合計数が含まれます。
 
@@ -74,7 +74,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->この例の応答では、 `numRowsToRead` および `totalRows` は互いに等しい。 組織がExperience Platformするプロファイルの数に応じて、このような場合があります。 ただし、通常、これら 2 つの数は異なり、 `numRowsToRead` は小さい数です。これは、サンプルをプロファイルの合計数のサブセットとして表す (`totalRows`) をクリックします。
+>この例の応答では、 `numRowsToRead` および `totalRows` は互いに等しい。 組織がExperience Platformするプロファイルの数に応じて、このような場合があります。 ただし、通常、これら 2 つの数は異なり、 `numRowsToRead` は小さい数です。これは、サンプルをプロファイルの合計数のサブセットとして表すためです (`totalRows`) をクリックします。
 
 ```json
 {
@@ -107,13 +107,13 @@ curl -X GET \
 | `totalRows` | Experience Platform内の結合プロファイルの合計数（「プロファイル数」とも呼ばれます）。 |
 | `lastBatchId` | 前回のバッチ取り込み ID。 |
 | `status` | 最後のサンプルのステータス。 |
-| `samplingRatio` | サンプリングされた結合プロファイルの割合 (`numRowsToRead`) を結合済みプロファイルの合計 (`totalRows`) に割合を表します。 |
-| `mergeStrategy` | サンプルで使用される結合方法。 |
+| `samplingRatio` | サンプリングされた結合プロファイルの割合 (`numRowsToRead`) を結合済みプロファイルの合計 (`totalRows`) に割合を示します。 |
+| `mergeStrategy` | サンプルで使用される結合方法です。 |
 | `lastSampledTimestamp` | 前回成功したサンプルタイムスタンプ。 |
 
 ## データセット別のプロファイル配布のリスト
 
-データセットごとのプロファイルの分布を確認するには、次の場所で `/previewsamplestatus/report/dataset` endpoint.
+データセットごとのプロファイルの分布を確認するには、次に対してGETリクエストを実行します： `/previewsamplestatus/report/dataset` endpoint.
 
 **API 形式**
 
@@ -124,7 +124,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 | パラメーター | 説明 |
 |---|---|
-| `date` | 返されるレポートの日付を指定します。 その日に複数のレポートが実行された場合は、その日の最新のレポートが返されます。 指定した日付のレポートが存在しない場合は、404（見つかりません）エラーが返されます。 日付が指定されていない場合は、最新のレポートが返されます。 形式：YYYY-MM-DD です。 例：`date=2024-12-31` |
+| `date` | 返されるレポートの日付を指定します。 その日に複数のレポートが実行された場合は、その日の最新のレポートが返されます。 指定した日付のレポートが存在しない場合は、404（見つかりません）エラーが返されます。 日付が指定されていない場合は、最新のレポートが返されます。 形式：YYYY-MM-DD。 例：`date=2024-12-31` |
 
 **リクエスト**
 
@@ -194,21 +194,21 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `sampleCount` | このデータセット ID を持つサンプル済み結合プロファイルの合計数。 |
-| `samplePercentage` | この `sampleCount` を、サンプル済み結合プロファイルの合計数 ( `numRowsToRead` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
+| `samplePercentage` | The `sampleCount` を、サンプル済み結合プロファイルの合計数 ( `numRowsToRead` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
 | `fullIDsCount` | このデータセット ID を持つ結合プロファイルの合計数です。 |
-| `fullIDsPercentage` | この `fullIDsCount` を、結合されたプロファイルの合計数 ( `totalRows` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
+| `fullIDsPercentage` | The `fullIDsCount` を、結合されたプロファイルの合計数 ( `totalRows` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
 | `name` | データセットの名前。データセットの作成時に指定されます。 |
 | `description` | データセットの説明。データセットの作成時に指定されます。 |
 | `value` | データセットの ID。 |
 | `streamingIngestionEnabled` | データセットのストリーミング取り込みが有効になっているかどうか。 |
 | `createdUser` | データセットを作成したユーザーのユーザー ID。 |
-| `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 指定しない場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
+| `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 いいえの場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
 
 ## ID 名前空間別のプロファイル配分のリスト
 
 に対してGETリクエストを実行できます `/previewsamplestatus/report/namespace` エンドポイントを使用して、プロファイルストア内のすべての結合プロファイルの id 名前空間による分類を表示できます。 これには、Adobeが提供する標準 ID と、組織が定義するカスタム ID の両方が含まれます。
 
-ID 名前空間は、Adobe Experience Platform ID サービスの重要なコンポーネントで、顧客データが関連するコンテキストのインジケーターとして機能します。 詳しくは、まず [id 名前空間の概要](../../identity-service/namespaces.md).
+ID 名前空間は、Adobe Experience Platform ID サービスの重要なコンポーネントで、顧客データが関連するコンテキストのインジケーターとして機能します。 詳細については、まず [ID 名前空間の概要](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -223,7 +223,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 | パラメーター | 説明 |
 |---|---|
-| `date` | 返されるレポートの日付を指定します。 その日に複数のレポートが実行された場合は、その日の最新のレポートが返されます。 指定した日付のレポートが存在しない場合は、404（見つかりません）エラーが返されます。 日付が指定されていない場合は、最新のレポートが返されます。 形式：YYYY-MM-DD です。 例：`date=2024-12-31` |
+| `date` | 返されるレポートの日付を指定します。 その日に複数のレポートが実行された場合は、その日の最新のレポートが返されます。 指定した日付のレポートが存在しない場合は、404（見つかりません）エラーが返されます。 日付が指定されていない場合は、最新のレポートが返されます。 形式：YYYY-MM-DD。 例：`date=2024-12-31` |
 
 **リクエスト**
 
@@ -293,17 +293,17 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `sampleCount` | 名前空間内のサンプル済み結合プロファイルの合計数です。 |
-| `samplePercentage` | この `sampleCount` を、サンプルされた結合プロファイル ( `numRowsToRead` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
-| `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 指定しない場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
+| `samplePercentage` | The `sampleCount` を、サンプルされた結合プロファイル ( `numRowsToRead` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
+| `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 いいえの場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
 | `fullIDsFragmentCount` | 名前空間内のプロファイルフラグメントの合計数です。 |
 | `fullIDsCount` | 名前空間内の結合プロファイルの合計数です。 |
-| `fullIDsPercentage` | この `fullIDsCount` 合計結合プロファイル ( `totalRows` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
-| `code` | この `code` 名前空間用。 これは、 [Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md) また、 [!UICONTROL ID シンボル] Experience PlatformUI 詳しくは、 [id 名前空間の概要](../../identity-service/namespaces.md). |
-| `value` | この `id` 名前空間の値。 これは、 [ID サービス API](../../identity-service/api/list-namespaces.md). |
+| `fullIDsPercentage` | The `fullIDsCount` 合計マージ済みプロファイル ( `totalRows` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
+| `code` | The `code` 名前空間用。 これは、 [Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md) また、 [!UICONTROL ID シンボル] Experience PlatformUI 詳しくは、 [ID 名前空間の概要](../../identity-service/namespaces.md). |
+| `value` | The `id` 名前空間の値。 これは、 [ID サービス API](../../identity-service/api/list-namespaces.md). |
 
 ## データセットの重複レポートの生成
 
-データセット重複レポートは、アドレス可能なオーディエンス（結合プロファイル）に最も貢献するデータセットを公開することで、組織のプロファイルストアの構成を可視化できます。 このレポートは、データに関するインサイトを提供するだけでなく、特定のデータセットの有効期限を設定するなど、ライセンスの使用状況を最適化するためのアクションを実行するのに役立ちます。
+データセット重複レポートは、アドレス可能なオーディエンス（結合プロファイル）に最も貢献するデータセットを公開することで、組織のプロファイルストアの構成を可視化できます。 このレポートは、データに関するインサイトを提供するだけでなく、特定のデータセットの有効期限を設定するなど、ライセンスの使用状況を最適化するアクションを実行するのに役立ちます。
 
 データセットの重複レポートは、 `/previewsamplestatus/report/dataset/overlap` endpoint.
 
@@ -318,7 +318,7 @@ GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
 
 | パラメーター | 説明 |
 |---|---|
-| `date` | 返されるレポートの日付を指定します。 同じ日付で複数のレポートが実行された場合は、その日の最新のレポートが返されます。 指定した日付のレポートが存在しない場合は、404（見つかりません）エラーが返されます。 日付が指定されていない場合は、最新のレポートが返されます。 形式：YYYY-MM-DD です。 例：`date=2024-12-31` |
+| `date` | 返されるレポートの日付を指定します。 同じ日付で複数のレポートが実行された場合は、その日の最新のレポートが返されます。 指定した日付のレポートが存在しない場合は、404（見つかりません）エラーが返されます。 日付が指定されていない場合は、最新のレポートが返されます。 形式：YYYY-MM-DD。 例：`date=2024-12-31` |
 
 **リクエスト**
 
@@ -349,8 +349,8 @@ curl -X GET \
 
 | プロパティ | 説明 |
 |---|---|
-| `data` | この `data` オブジェクトには、データセットのコンマ区切りリストと、それぞれのプロファイル数が含まれます。 |
-| `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 指定しない場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
+| `data` | The `data` オブジェクトには、データセットのコンマ区切りリストと、それぞれのプロファイル数が含まれます。 |
+| `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 いいえの場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
 
 ### データセットの重複レポートの解釈
 
@@ -384,7 +384,7 @@ GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 
 | パラメーター | 説明 |
 |---|---|
-| `date` | 返されるレポートの日付を指定します。 同じ日付で複数のレポートが実行された場合は、その日の最新のレポートが返されます。 指定した日付のレポートが存在しない場合は、404（見つかりません）エラーが返されます。 日付が指定されていない場合は、最新のレポートが返されます。 形式：YYYY-MM-DD です。 例：`date=2024-12-31` |
+| `date` | 返されるレポートの日付を指定します。 同じ日付で複数のレポートが実行された場合は、その日の最新のレポートが返されます。 指定した日付のレポートが存在しない場合は、404（見つかりません）エラーが返されます。 日付が指定されていない場合は、最新のレポートが返されます。 形式：YYYY-MM-DD。 例：`date=2024-12-31` |
 
 **リクエスト**
 
@@ -443,9 +443,9 @@ curl -X GET \
 
 | プロパティ | 説明 |
 |---|---|
-| `data` | この `data` オブジェクトには、id 名前空間コードの一意の組み合わせと、それぞれのプロファイル数を含む、コンマ区切りのリストが含まれます。 |
-| 名前空間コード | この `code` は、各 id 名前空間名の短い形式です。 各 `code` その `name` は [Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md). この `code` は、 [!UICONTROL ID シンボル] Experience PlatformUI 詳しくは、 [id 名前空間の概要](../../identity-service/namespaces.md). |
-| `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 指定しない場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
+| `data` | The `data` オブジェクトには、id 名前空間コードの一意の組み合わせと、それぞれのプロファイル数を含む、コンマ区切りのリストが含まれます。 |
+| 名前空間コード | The `code` は、各 id 名前空間名の短い形式です。 各 `code` その `name` は、 [Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md). The `code` は、 [!UICONTROL ID シンボル] Experience PlatformUI 詳しくは、 [ID 名前空間の概要](../../identity-service/namespaces.md). |
+| `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 いいえの場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
 
 ### ID 名前空間の重複レポートの解釈
 
@@ -461,9 +461,9 @@ curl -X GET \
 
 このレポートには、次の情報が表示されます。
 
-* 次の要素で構成される 142 個のプロファイルがあります `AAID`, `ECID`、および `Email` 標準 ID とカスタム ID `crmid` id 名前空間。
-* 次の要素で構成される 24 個のプロファイルがあります `AAID` および `ECID` ID 名前空間。
-* 6,565 個のプロファイルに、 `ECID` id.
+* 次の要素で構成される 142 個のプロファイルがあります。 `AAID`, `ECID`、および `Email` 標準 ID とカスタム ID `crmid` id 名前空間。
+* 次の要素で構成される 24 個のプロファイルがあります。 `AAID` および `ECID` ID 名前空間。
+* 6,565 個のプロファイルに、 `ECID` ID。
 
 ## 未関連付けプロファイルレポートの生成
 
@@ -547,13 +547,13 @@ curl -X GET \
 
 | プロパティ | 説明 |
 |---|---|
-| `data` | この `data` オブジェクトには、未関連付けプロファイルレポートに対して返される情報が含まれます。 |
+| `data` | The `data` オブジェクトには、未関連付けプロファイルレポートに対して返される情報が含まれます。 |
 | `totalNumberOfProfiles` | プロファイルストア内の一意のプロファイルの合計数です。 これは、アドレス可能なオーディエンスの数と同じです。 これには、既知のプロファイルと未関連付けプロファイルの両方が含まれます。 |
 | `totalNumberOfEvents` | プロファイルストア内の ExperienceEvents の合計数です。 |
 | `unstitchedProfiles` | 未関連付けプロファイルの時間別分類を含むオブジェクト。 未関連付けプロファイルレポートは、7 日、30 日、60 日、90 日、120 日の期間のプロファイルの分類を表示します。 |
 | `countOfProfiles` | その期間中の未関連付けプロファイルの数または名前空間の未関連付けプロファイルの数。 |
 | `eventsAssociated` | 時間範囲の ExperienceEvents の数または名前空間のイベント数。 |
-| `nsDistribution` | 個々の ID 名前空間と、各名前空間の未関連付けプロファイルとイベントの分布を含むオブジェクト。 注意：合計の追加 `countOfProfiles` ( `nsDistribution` オブジェクトが `countOfProfiles` を設定します。 同じことが～にも当てはまる `eventsAssociated` 名前空間ごとおよび合計 `eventsAssociated` 期間ごと。 |
+| `nsDistribution` | 個々の ID 名前空間と、各名前空間の未関連付けプロファイルとイベントの分布を含むオブジェクト。 注意：合計 `countOfProfiles` （内の id 名前空間ごと） `nsDistribution` オブジェクトが次と等しい `countOfProfiles` を設定します。 同じことが～にも当てはまる `eventsAssociated` 名前空間ごとおよび合計 `eventsAssociated` 期間ごと。 |
 | `reportTimestamp` | レポートのタイムスタンプ。 |
 
 ### 未関連付けプロファイルレポートの解釈

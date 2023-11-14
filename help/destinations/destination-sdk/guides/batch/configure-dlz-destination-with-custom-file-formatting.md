@@ -1,5 +1,5 @@
 ---
-description: Destination SDKを使用して、カスタムのファイル形式オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成する方法を説明します。
+description: Destination SDKを使用して、カスタムのファイル形式オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成する方法について説明します。
 title: カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用して、データランディングゾーン (DLZ) の宛先を構成します。
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
@@ -13,7 +13,7 @@ ht-degree: 10%
 
 ## 概要 {#overview}
 
-このページでは、Destination SDKを使用して [!DNL Data Landing Zone] カスタムの宛先 [ファイル形式オプション](configure-file-formatting-options.md) そして習慣 [ファイル名設定](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+このページでは、Destination SDKを使用して [!DNL Data Landing Zone] カスタムの宛先 [ファイル形式設定オプション](configure-file-formatting-options.md) そして慣習 [ファイル名の設定](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 このページには、 [!DNL Data Landing Zone] 宛先。 以下の手順で示す設定を編集したり、必要に応じて設定の特定の部分を削除したりできます。
 
@@ -123,7 +123,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 前の手順で宛先サーバーとファイルの形式設定を作成した後、 `/destinations` 宛先設定を作成する API エンドポイント。
 
-でサーバー設定を接続するには、以下を実行します。 [手順 1](#create-server-file-configuration) をこの宛先設定に追加するには、 `destinationServerId` の値と、 [手順 1](#create-server-file-configuration).
+でサーバー設定を接続するには、以下を実行します。 [手順 1](#create-server-file-configuration) をこの宛先設定に追加するには、 `destinationServerId` 以下の API リクエストの値と、 [手順 1](#create-server-file-configuration).
 
 **API 形式**
 
@@ -432,7 +432,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ファイル名の設定オプションを表示する際に、表示されるフィールドが `filenameConfig` オプションを設定します。
 ![ファイル名設定オプション](../../assets/guides/batch/file-naming-options.gif)
 
-上記のフィールドを調整する場合は、 [ステップ 1](#create-server-file-configuration) および [2](#create-destination-configuration) を使用して、必要に応じて設定を変更します。
+上記のフィールドを調整する場合は、 [ステップ 1](#create-server-file-configuration) および [2 つ](#create-destination-configuration) を使用して、必要に応じて設定を変更します。
 
 ## 手順 4:（オプション）宛先の公開 {#publish-destination}
 
@@ -442,7 +442,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 宛先を設定した後、 [宛先公開 API](../../publishing-api/create-publishing-request.md) 設定をレビュー用にAdobeに送信します。
 
-## 手順 5:（オプション）宛先のドキュメント化 {#document-destination}
+## 手順 5: （オプション）宛先のドキュメント化 {#document-destination}
 
 >[!NOTE]
 >
@@ -452,4 +452,4 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 次の手順 {#next-steps}
 
-この記事を読むと、カスタムの作成方法がわかります [!DNL Data Landing Zone] 宛先を指定します。Destination SDKを使用します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。
+この記事を読むと、カスタムの作成方法がわかります。 [!DNL Data Landing Zone] 宛先を指定します。Destination SDKを使用します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。

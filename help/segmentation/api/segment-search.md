@@ -15,13 +15,13 @@ ht-degree: 45%
 
 このガイドには、セグメント検索をより深く理解するのに役立つ情報が記載されており、API を使用して基本的なアクションを実行するための API 呼び出し例が含まれています。
 
-## Destination SDK の
+## はじめに
 
 このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 はじめに節で説明している必須ヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
 
-- x-ups-search-version:&quot;1.0&quot;
+- x-ups-search-version: &quot;1.0&quot;
 
 ### 複数の名前空間をまたいで検索
 
@@ -98,8 +98,8 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必須）** ここで、 {SCHEMA} には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
 | `namespace={NAMESPACE}` | **（必須）** ここで、 {NAMESPACE} には、検索する名前空間が含まれます。 |
-| `s={SEARCH_TERM}` | *（オプション）* ここで、 {SEARCH_TERM} は、のMicrosoft実装に準拠するクエリを含みます [Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
-| `entityId={ENTITY_ID}` | *（オプション）* 検索範囲を、 {ENTITY_ID}. |
+| `s={SEARCH_TERM}` | *（オプション）* ここで、 {SEARCH_TERM} は、のMicrosoft実装に準拠するクエリを含みます。 [Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。詳しくは、 [付録](#appendix) 」と入力します。 |
+| `entityId={ENTITY_ID}` | *（オプション）* 検索を、で指定された指定フォルダ内に限定します。 {ENTITY_ID}. |
 | `limit={LIMIT}` | *（オプション）* ここで、 {LIMIT} は、返す検索結果の数を表します。 デフォルト値は 50 です。 |
 | `page={PAGE}` | *（オプション）* ここで、 {PAGE} 検索したクエリの結果に使用するページ番号を表します。 ページ番号は **0**. |
 
@@ -119,7 +119,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と検索クエリと一致する結果を返します。
+正常な応答は、HTTP ステータス 200 と、検索クエリと一致する結果を返します。
 
 ```json
 {
@@ -228,7 +228,7 @@ curl -X GET \
 
 ### 検索フィールド {#search-fields}
 
-次の表に、検索クエリパラメーター内で検索できるフィールドを示します。
+次の表に、検索クエリパラメーター内で検索可能なフィールドを示します。
 
 | フィールド名 | 説明 |
 | ---------- | ----------- |

@@ -30,20 +30,20 @@ ht-degree: 57%
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
 
-次の節では、に正常に接続するために必要な追加情報を示します。 [!DNL Salesforce Marketing Cloud] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために必要な追加情報を示します。 [!DNL Salesforce Marketing Cloud] の使用 [!DNL Flow Service] API.
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] ～とつながる [!DNL Salesforce Marketing Cloud]に値を入力する場合は、次の接続プロパティを指定する必要があります。
+次の条件を満たすため [!DNL Flow Service] ～と繋がる [!DNL Salesforce Marketing Cloud]に値を入力する場合は、次の接続プロパティを指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** を `host` の値を指定する場合、URL 全体ではなくサブドメインのみを指定する必要があります。 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を指定した場合は、 `acme-ab12c3d4e5fg6hijk7lmnop8qrst` をホスト値として使用します。 |
+| `host` | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** 次の項目に `host` の値を指定する場合、URL 全体ではなくサブドメインのみを指定する必要があります。 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を指定した場合は、 `acme-ab12c3d4e5fg6hijk7lmnop8qrst` をホスト値として使用します。 |
 | `clientId` | 次に関連付けられたクライアント ID: [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce Marketing Cloud] の接続仕様 ID は `ea1c2a08-b722-11eb-8529-0242ac130003` です。 |
 
-導入の詳細については、 [[!DNL Salesforce Marketing Cloud] 文書](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
+導入の詳細については、以下を参照してください。 [[!DNL Salesforce Marketing Cloud] 文書](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## ベース接続の作成
 
@@ -91,7 +91,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.clientId` | 次に関連付けられたクライアント ID: [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | `auth.params.clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Salesforce Marketing Cloud] アプリケーション。 |
-| `connectionSpec.id` | この [!DNL Salesforce Marketing Cloud] 接続仕様 ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `connectionSpec.id` | The [!DNL Salesforce Marketing Cloud] 接続仕様 ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **応答**
 

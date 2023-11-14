@@ -3,7 +3,7 @@ title: Platform Web SDK でのAdobe Analytics for Target(A4T) ログ
 description: Experience PlatformWeb SDK を使用して、Adobe Analytics for Target(A4T) データのコレクションを制御する方法について説明します。
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
-keywords: a4t；ログ；analytics;sdk;web sdk;
+keywords: a4t；ログ；analytics;sdk;Web SDK;
 exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
 source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
@@ -29,7 +29,7 @@ Adobe Experience Platform Web SDK は、 Analytics for Target(A4T) の 2 種類�
 | サーバー側分析ログ | Edge ネットワークを通じて送信される Analytics のヒットは、ヒットのステッチプロセスを経ずに、サーバー側の Target の詳細で拡張されます。 |
 | クライアントサイド分析ログ | Target データがクライアント側で返されるので、 [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-ログの記録方法は、設定したでAdobe Analyticsを有効にしているかどうかによって異なります [datastream](../../../../datastreams/overview.md):
+ログの記録方法は、設定したでAdobe Analyticsを有効にしているかどうかによって異なります。 [datastream](../../../../datastreams/overview.md):
 
 ![ログメソッドの決定フロー](../assets/analytics-logging.png)
 

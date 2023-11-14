@@ -13,9 +13,9 @@ ht-degree: 83%
 
 # フィルター [!DNL Catalog] クエリーパラメーターを使用したデータ
 
-この [!DNL Catalog Service] API を使用すると、応答データをリクエストクエリパラメーターを使用してフィルタリングできます。 のベストプラクティスの一部 [!DNL Catalog] は、すべての API 呼び出しでフィルターを使用します。API の負荷を軽減し、全体的なパフォーマンスを向上させるのに役立ちます。
+The [!DNL Catalog Service] API を使用すると、応答データをリクエストクエリパラメーターを使用してフィルタリングできます。 のベストプラクティスの一部 [!DNL Catalog] は、すべての API 呼び出しでフィルターを使用します。API の負荷を軽減し、全体的なパフォーマンスを向上させるのに役立ちます。
 
-このドキュメントでは、最も一般的なフィルタリング方法の概要を説明します [!DNL Catalog] オブジェクトを含める必要があります。 このドキュメントを参照しながら、 [カタログ開発者ガイド](getting-started.md) を使用して [!DNL Catalog] API 詳しくは、 [!DNL Catalog Service]を参照し、 [[!DNL Catalog] 概要](../home.md).
+このドキュメントでは、最も一般的なフィルタリング方法の概要を説明します [!DNL Catalog] オブジェクトを含める必要があります。 このドキュメントを参照しながら、 [カタログ開発者ガイド](getting-started.md) を使用して [!DNL Catalog] API. 詳しくは、 [!DNL Catalog Service]を参照し、 [[!DNL Catalog] 概要](../home.md).
 
 ## 返されるオブジェクトの制限
 
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 返すオブジェクトの数を 1 ～ 100 の範囲で示す整数。 |
 
 **リクエスト**
@@ -79,7 +79,7 @@ curl -X GET \
 
 `properties`パラメーターフィルターは、指定されたプロパティのセットのみを返すようにオブジェクトに応答します。このパラメーターは、1 つ以上のプロパティを返すように設定できます。
 
-この `properties` パラメータは、任意のレベルオブジェクトプロパティを受け入れることができます。 `sampleKey` は、 `?properties=subItem.sampleKey`.
+The `properties` パラメータは、任意のレベルオブジェクトプロパティを受け入れることができます。 `sampleKey` は、 `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -103,9 +103,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 応答本文に含める属性の名前。 |
-| `{OBJECT_ID}` | 特定の [!DNL Catalog] オブジェクトを取得中です。 |
+| `{OBJECT_ID}` | 特定のの一意の ID [!DNL Catalog] オブジェクトを取得中です。 |
 
 **リクエスト**
 
@@ -156,7 +156,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->内 `schemaRef` プロパティのバージョン番号は、各データセットの最新のマイナーバージョンを示します。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
+>Adobe Analytics の `schemaRef` プロパティのバージョン番号は、各データセットの最新のマイナーバージョンを示します。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
 
 ## 応答リストのオフセット開始インデックス
 
@@ -208,9 +208,9 @@ curl -X GET \
 * 現在タグをサポートしているカタログオブジェクトは、データセット、バッチ、接続のみです。
 * タグ名は組織に固有です。
 * アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
-* 次のタグ名は、で使用するために予約されています [!DNL Experience Platform]のタグ名として宣言することはできません。
-   * `unifiedProfile`:このタグ名は、が取り込むデータセット用に予約されています。 [[!DNL Real-Time Customer Profile]](../../profile/home.md).
-   * `unifiedIdentity`:このタグ名は、が取り込むデータセット用に予約されています。 [[!DNL Identity Service]](../../identity-service/home.md).
+* 次のタグ名は、で使用するために予約されています。 [!DNL Experience Platform]のタグ名として宣言することはできません。
+   * `unifiedProfile`：このタグ名は、が取得するデータセット用に予約されています。 [[!DNL Real-Time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`：このタグ名は、が取得するデータセット用に予約されています。 [[!DNL Identity Service]](../../identity-service/home.md).
 
 次に、`tags` プロパティを含むデータセットの例を示します。このプロパティ内のタグは、キーと値のペアの形式をとり、各タグ値は 1 つの文字列を含む配列として表示されます。
 
@@ -253,7 +253,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | フィルターに使用するタグの名前。 |
 | `{TAG_VALUE}` | フィルターに使用するタグの値。ワイルドカード文字（`*`）をサポートします。 |
 
@@ -474,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 値のフィルターに使用するプロパティの名前です。 |
 | `{VALUE}` | クエリに応じて含めるまたは除外する結果を決定するプロパティ値。 |
 
@@ -524,7 +524,7 @@ curl -X GET \
 
 `property` クエリパラメーターは、単純なパラメーターよりも柔軟にプロパティベースのフィルタリングをおこなえます。プロパティに特定の値が含まれるかどうかに基づいてフィルタリングする以外に、`property` パラメーターは他の比較演算子（「より大きい」（`>`）や「より小さい」（`<`）など）を正規式としてプロパティ値によるフィルタリングに使用できます。また、値に関係なく、プロパティが存在するかどうかでフィルタリングすることもできます。
 
-この `property` パラメータは、任意のレベルオブジェクトプロパティを受け入れることができます。 `sampleKey` は、 `?properties=subItem.sampleKey`.
+The `property` パラメータは、任意のレベルオブジェクトプロパティを受け入れることができます。 `sampleKey` は、 `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -546,7 +546,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | クエリするプロパティ、およびその値の評価方法を示す条件式。以下に例を示します。 |
 
 `property` パラメーターの値は、複数の異なる種類の条件付き式をサポートします。次の表に、サポートされる式の基本構文を示します。

@@ -4,7 +4,7 @@ title: プロファイルクエリ言語（PQL）の概要
 description: このガイドでは PQL の全般的な概要を説明し、形式についてのガイドラインや PQL 式の例を示します。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 100%
 

@@ -1,15 +1,15 @@
 ---
-title: Privacy ServiceAPI の認証とアクセス
+title: Privacy Service API の認証とアクセス
 description: Privacy ServiceAPI への認証方法とサンプル API 呼び出しの解釈方法については、ドキュメントを参照してください。
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 21%
+ht-degree: 23%
 
 ---
 
-# Privacy ServiceAPI の認証とアクセス
+# Privacy Service API の認証とアクセス
 
 このガイドでは、Adobe Experience Platform Privacy Service API を呼び出す前に知っておく必要があるコア概念の概要を提供します。
 
@@ -17,7 +17,7 @@ ht-degree: 21%
 
 このガイドでは、 [Privacy Service](../home.md) およびを使用すると、Adobe Experience Cloudアプリケーション全体でデータ主体（顧客）からのアクセス要求と削除要求を管理できます。
 
-API のアクセス資格情報を作成するには、組織内の管理者がAdobe Admin Console内でPrivacy Service用の製品プロファイルを事前に設定しておく必要があります。 API 統合に割り当てる製品プロファイルによって、統合機能にアクセスする際に統合に付与されるPrivacy Serviceが決まります。 詳しくは、 [Privacy Service権限の管理](../permissions.md) を参照してください。
+API のアクセス資格情報を作成するには、組織内の管理者がAdobe Admin Console内でPrivacy Service用の製品プロファイルを事前に設定しておく必要があります。 API 統合に割り当てる製品プロファイルによって、統合機能にアクセスする際に統合に付与されるPrivacy Serviceが決まります。 次のガイドを参照してください： [Privacy Service権限の管理](../permissions.md) を参照してください。
 
 ## 必須ヘッダーの値の収集 {#gather-values-required-headers}
 
@@ -37,11 +37,11 @@ Privacy ServiceAPI を呼び出すには、まず、必要なヘッダーで使�
 
 新しいプロジェクトを作成したら、「 **[!UICONTROL プロジェクトに追加]** を選択します。 **[!UICONTROL API]** をドロップダウンメニューから選択します。
 
-![API オプションが [!UICONTROL プロジェクトに追加] 開発者コンソールのプロジェクトの詳細ページからのドロップダウン](../images/api/getting-started/add-api-button.png)
+![次の中から選択された API オプション： [!UICONTROL プロジェクトに追加] 開発者コンソールのプロジェクトの詳細ページからのドロップダウン](../images/api/getting-started/add-api-button.png)
 
 #### Privacy ServiceAPI を選択 {#select-privacy-service-api}
 
-**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 選択 **[!UICONTROL Experience Cloud]** 使用可能な API のリストを絞り込むには、 **[!UICONTROL Privacy ServiceAPI]** 選択する前に **[!UICONTROL 次へ]**.
+**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 選択 **[!UICONTROL Experience Cloud]** 使用可能な API のリストを絞り込むには、 **[!UICONTROL Privacy ServiceAPI]** 選択前に **[!UICONTROL 次へ]**.
 
 ![使用可能な API のリストから選択されるPrivacy ServiceAPI カード](../images/api/getting-started/add-privacy-service-api.png)
 
@@ -53,21 +53,21 @@ Privacy ServiceAPI を呼び出すには、まず、必要なヘッダーで使�
 
 >[!IMPORTANT]
 >
->を選択します。 **[!UICONTROL OAuth サーバー間]** メソッドのみを使用します。これは、今後の移行がサポートされる唯一のメソッドです。 この **[!UICONTROL サービスアカウント (JWT)]** メソッドは非推奨です。 JWT 認証方式を使用した統合は 2025 年 1 月 1 日まで引き続き機能しますが、Adobeでは、その日以前に既存の統合を新しい OAuth サーバー間方式に移行することを強くお勧めします。 詳しくは、の節を参照してください。 [!BADGE 非推奨]{type=negative}[JSON Web トークン (JWT) の生成](/help/landing/api-authentication.md#jwt).
+>を選択します。 **[!UICONTROL OAuth サーバー間通信]** メソッドのみを使用します。これは、今後の移行がサポートされる唯一のメソッドです。 The **[!UICONTROL サービスアカウント (JWT)]** メソッドは非推奨です。 JWT 認証方式を使用した統合は 2025 年 1 月 1 日まで引き続き機能しますが、Adobeでは、その日以前に既存の統合を新しい OAuth サーバー間方式に移行することを強くお勧めします。 詳しくは、の節を参照してください。 [!BADGE 非推奨]{type=negative}[JSON Web トークン (JWT) の生成](/help/landing/api-authentication.md#jwt).
 
 ![「Oauth Server-to-Server」認証方式を選択します。](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
 #### 製品プロファイルを使用した権限の割り当て {#product-profiles}
 
-最後の設定手順では、この統合の権限を継承する製品プロファイルを選択します。 複数のプロファイルを選択した場合、その権限セットは統合用に結合されます。
+最後の設定手順では、この統合の権限を継承する製品プロファイルを選択します。 複数のプロファイルを選択した場合、その権限セットは統合用に組み合わせられます。
 
 >[!NOTE]
 >
-製品プロファイルとそれらが提供する詳細な権限は、管理者がAdobe Admin Consoleを通じて作成および管理します。 詳しくは、 [Privacy Service権限](../permissions.md) を参照してください。
+製品プロファイルとそれらが提供する詳細な権限は、管理者がAdobe Admin Consoleを通じて作成および管理します。 次のガイドを参照してください： [Privacy Service権限](../permissions.md) を参照してください。
 
 終了したら、「 」を選択します。 **[!UICONTROL 設定済み API を保存]**.
 
-![設定を保存する前にリストから 1 つの製品プロファイルが選択されている](../images/api/getting-started/select-product-profiles.png)
+![設定を保存する前にリストから 1 つの製品プロファイルが選択されていること](../images/api/getting-started/select-product-profiles.png)
 
 API がプロジェクトに追加されると、 **[!UICONTROL Privacy ServiceAPI]** プロジェクトのページには、Privacy ServiceAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
 
@@ -87,7 +87,7 @@ API がプロジェクトに追加されると、 **[!UICONTROL Privacy ServiceA
 
 #### トークンを手動で生成 {#manual-token}
 
-新しい `{ACCESS_TOKEN}`に移動します。 **[!UICONTROL 資格情報]** > **[!UICONTROL OAuth サーバー間]** を選択し、 **[!UICONTROL アクセストークンを生成]**、以下に示すように。
+新しい `{ACCESS_TOKEN}`に移動します。 **[!UICONTROL 資格情報]** > **[!UICONTROL OAuth サーバー間通信]** を選択し、 **[!UICONTROL アクセストークンを生成]**、以下に示すように。
 
 ![開発者コンソールの UI でのアクセストークンの生成方法を記録する画面です。](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
 

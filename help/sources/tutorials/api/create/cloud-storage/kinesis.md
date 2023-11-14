@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '737'
+ht-degree: 66%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Amazon Kinesis]（以下「[!DNL Kinesis]」）を Experience Platform に接続する手順を詳しく説明します。
 
@@ -27,15 +27,15 @@ ht-degree: 0%
 
 以下の節では、[!DNL Flow Service] API を使用して [!DNL Kinesis] を Platform に正しく接続するために必要な追加情報を示します。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] を [!DNL Amazon Kinesis] アカウントの場合、次の接続プロパティの値を指定する必要があります。
+次の条件を満たすため [!DNL Flow Service] を [!DNL Amazon Kinesis] アカウントの場合、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `accessKeyId` | アクセスキー ID は、 [!DNL Kinesis] アカウントを Platform に送信します。 |
-| `secretKey` | 秘密鍵は、 [!DNL Kinesis] アカウントを Platform に送信します。 |
-| `region` | の地域 [!DNL Kinesis] アカウント 詳しくは、 [許可リストへの IP アドレスの追加](../../../../ip-address-allow-list.md) 地域の詳細については、を参照してください。 |
+| `secretKey` | 秘密アクセスキーは、ユーザーの認証に使用するアクセスキーペアの残りの半分です。 [!DNL Kinesis] アカウントを Platform に送信します。 |
+| `region` | の地域 [!DNL Kinesis] アカウント。 次のガイドを参照してください： [許可リストへの IP アドレスの追加](../../../../ip-address-allow-list.md) 地域の詳細については、を参照してください。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Kinesis] 接続仕様 ID は `86043421-563b-46ec-8e6c-e23184711bf6` です。 |
 
 詳しくは、 [!DNL Kinesis] アクセスキーとその生成方法については、こちらを参照してください。 [[!DNL AWS] IAM ユーザーのアクセスキーの管理に関するガイド](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html).
@@ -87,9 +87,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | のアクセスキー ID [!DNL Kinesis] アカウント |
-| `auth.params.secretKey` | の秘密アクセスキー [!DNL Kinesis] アカウント |
-| `auth.params.region` | の地域 [!DNL Kinesis] アカウント |
+| `auth.params.accessKeyId` | のアクセスキー ID [!DNL Kinesis] アカウント。 |
+| `auth.params.secretKey` | の秘密アクセスキー [!DNL Kinesis] アカウント。 |
+| `auth.params.region` | の地域 [!DNL Kinesis] アカウント。 |
 | `connectionSpec.id` | [!DNL Kinesis] 接続仕様 ID：`86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **応答**

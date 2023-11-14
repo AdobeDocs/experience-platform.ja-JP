@@ -13,7 +13,7 @@ ht-degree: 12%
 
 ## 概要 {#overview}
 
-このページでは、Destination SDKを使用して、事前に定義されたデフォルトのAmazon S3 の宛先を設定する方法について説明します [ファイル形式オプション](configure-file-formatting-options.md) そして習慣 [ファイル名設定](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+このページでは、Destination SDKを使用して、事前に定義されたデフォルトのAmazon S3 の宛先を設定する方法について説明します [ファイル形式設定オプション](configure-file-formatting-options.md) そして慣習 [ファイル名の設定](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 このページには、 [!DNL Amazon S3] 宛先。 以下の手順で示す設定を編集したり、必要に応じて設定の特定の部分を削除したりできます。
 
@@ -35,7 +35,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、汎用が含まれています [!DNL Amazon S3] 設定、定義済み、デフォルト [CSV ファイル形式](../../functionality/destination-server/file-formatting.md) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
+次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、汎用が含まれています [!DNL Amazon S3] 設定（事前定義済み、デフォルトあり） [CSV ファイル形式](../../functionality/destination-server/file-formatting.md) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -300,7 +300,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ファイル名の設定オプションを表示する際に、表示されるフィールドが `filenameConfig` オプションを設定します。
 ![ファイル名設定オプション](../../assets/guides/batch/file-naming-options.gif)
 
-上記のフィールドを調整する場合は、 [ステップ 1](#create-server-file-configuration) および [2](#create-destination-configuration) を使用して、必要に応じて設定を変更します。
+上記のフィールドを調整する場合は、 [ステップ 1](#create-server-file-configuration) および [2 つ](#create-destination-configuration) を使用して、必要に応じて設定を変更します。
 
 ## 手順 4:（オプション）宛先の公開 {#publish-destination}
 
@@ -310,7 +310,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 宛先を設定した後、 [宛先公開 API](../../publishing-api/create-publishing-request.md) 設定をレビュー用にAdobeに送信します。
 
-## 手順 5:（オプション）宛先のドキュメント化 {#document-destination}
+## 手順 5: （オプション）宛先のドキュメント化 {#document-destination}
 
 >[!NOTE]
 >
@@ -320,4 +320,4 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 次の手順 {#next-steps}
 
-この記事を読むと、カスタムの作成方法がわかります [!DNL Amazon S3] 宛先を指定します。Destination SDKを使用します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。
+この記事を読むと、カスタムの作成方法がわかります。 [!DNL Amazon S3] 宛先を指定します。Destination SDKを使用します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。

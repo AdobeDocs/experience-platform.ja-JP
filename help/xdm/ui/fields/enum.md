@@ -11,7 +11,7 @@ ht-degree: 8%
 
 ---
 
-# UI で列挙と推奨値を定義する {#enums-and-suggested-values}
+# UI で列挙と推奨値を定義 {#enums-and-suggested-values}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"

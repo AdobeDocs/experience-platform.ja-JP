@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '509'
+ht-degree: 58%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Amazon Redshift] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Amazon Redshift] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -27,22 +27,22 @@ ht-degree: 0%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Amazon Redshift] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Amazon Redshift] の使用 [!DNL Flow Service] API.
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] ～とつながる [!DNL Amazon Redshift]に値を入力する場合は、次の接続プロパティを指定する必要があります。
+次の条件を満たすため [!DNL Flow Service] ～と繋がる [!DNL Amazon Redshift]に値を入力する場合は、次の接続プロパティを指定する必要があります。
 
 | **資格情報** | **説明** |
 | -------------- | --------------- |
-| `server` | サーバーが [!DNL Amazon Redshift] アカウント |
+| `server` | サーバーが [!DNL Amazon Redshift] アカウント。 |
 | `port` | TCP ポート [!DNL Amazon Redshift] サーバーは、を使用してクライアント接続をリッスンします。 |
-| `username` | ユーザー名 [!DNL Amazon Redshift] アカウント |
-| `password` | ユーザーに関連付けられたパスワード [!DNL Amazon Redshift] アカウント |
-| `database` | この [!DNL Amazon Redshift] アクセスするデータベース。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Amazon Redshift] が `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
+| `username` | に関連付けられたユーザー名 [!DNL Amazon Redshift] アカウント。 |
+| `password` | ユーザーに関連付けられたパスワード [!DNL Amazon Redshift] アカウント。 |
+| `database` | The [!DNL Amazon Redshift] アクセスするデータベース。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Amazon Redshift] 次に該当 `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
-導入の詳細については、 [[!DNL Amazon Redshift] 文書](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
+導入の詳細については、以下を参照してください。 [[!DNL Amazon Redshift] 文書](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 
 ### Platform API の使用
 
@@ -100,9 +100,9 @@ curl -X POST \
 | ------------- | --------------- |
 | `auth.params.server` | お使いの [!DNL Amazon Redshift] サーバー。 |
 | `auth.params.port` | TCP ポート [!DNL Amazon Redshift] サーバーは、を使用してクライアント接続をリッスンします。 |
-| `auth.params.database` | データベースが [!DNL Amazon Redshift] アカウント |
-| `auth.params.password` | ユーザーに関連付けられたパスワード [!DNL Amazon Redshift] アカウント |
-| `auth.params.username` | ユーザー名 [!DNL Amazon Redshift] アカウント |
+| `auth.params.database` | データベースが [!DNL Amazon Redshift] アカウント。 |
+| `auth.params.password` | ユーザーに関連付けられたパスワード [!DNL Amazon Redshift] アカウント。 |
+| `auth.params.username` | に関連付けられたユーザー名 [!DNL Amazon Redshift] アカウント。 |
 | `connectionSpec.id` | [!DNL Amazon Redshift] 接続仕様 ID：`3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 **応答**

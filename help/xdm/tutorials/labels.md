@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
    * [スキーマエディター](../ui/overview.md):Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：ラベル付きのデータに対して実行できるマーケティングアクション（または実行できない）を定義するポリシーを使用して、Platform の操作に対してデータ使用制限を実施するためのインフラストラクチャを提供します。
 
-## ラベルを追加するスキーマまたはフィールドを選択 {#select-schema-field}
+## ラベルの追加先となるスキーマまたはフィールドを選択 {#select-schema-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"

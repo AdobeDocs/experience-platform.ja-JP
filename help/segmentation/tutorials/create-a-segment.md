@@ -17,12 +17,12 @@ ht-degree: 57%
 
 ユーザーインターフェイスを使用したセグメント定義の作成方法について詳しくは、 [セグメントビルダーガイド](../ui/overview.md).
 
-## Destination SDK の
+## はじめに
 
 このチュートリアルでは、 [!DNL Adobe Experience Platform] セグメント定義の作成に関連するサービス。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):リアルタイム顧客プロファイルデータのセグメント定義や他の外部ソースを使用してオーディエンスを構築できます。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：リアルタイム顧客プロファイルデータのセグメント定義や他の外部ソースを使用してオーディエンスを構築できます。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
 以下の節では、 [!DNL Platform] API
@@ -55,7 +55,7 @@ ht-degree: 57%
 
 セグメント化の最初の手順は、セグメント定義を定義することです。 セグメント定義は、 [!DNL Profile Query Language] (PQL) を参照してください。 このオブジェクトは PQL 述語とも呼ばれます。PQL 述語は、指定するレコードまたは時系列データに関連する条件に基づいて、セグメント定義のルールを定義します [!DNL Real-Time Customer Profile]. PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
-新しいセグメント定義を作成するには、 `/segment/definitions` エンドポイント [!DNL Segmentation] API 次の例では、セグメント定義を正しく定義するために必要な情報など、定義リクエストの形式について説明します。
+新しいセグメント定義を作成するには、 `/segment/definitions` エンドポイント [!DNL Segmentation] API. 次の例では、セグメント定義を正しく定義するために必要な情報など、定義リクエストの形式について説明します。
 
 セグメント定義の定義方法の詳細については、 [セグメント定義開発者ガイド](../api/segment-definitions.md#create).
 
@@ -99,4 +99,4 @@ ht-degree: 57%
 
 ## 次の手順
 
-セグメント定義を開発、テスト、保存したら、セグメントジョブを作成して、 [!DNL Segmentation Service] API その詳しい手順については、[セグメント結果の評価とアクセス](./evaluate-a-segment.md)に関するチュートリアルを参照してください。
+セグメント定義を開発、テスト、保存したら、セグメントジョブを作成して、 [!DNL Segmentation Service] API. その詳しい手順については、[セグメント結果の評価とアクセス](./evaluate-a-segment.md)に関するチュートリアルを参照してください。

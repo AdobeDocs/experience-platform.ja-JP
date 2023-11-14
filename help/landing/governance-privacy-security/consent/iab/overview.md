@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # Experience Platformでの IAB TCF 2.0 のサポート
 
-この [!DNL Transparency & Consent Framework] (TCF)。 [!DNL Interactive Advertising Bureau] (IAB) は、EU の [!DNL General Data Protection Regulation] (GDPR)。 フレームワークの 2 番目の反復である TCF 2.0 は、ベンダーが正確な位置情報などのデータ処理の特定の機能を使用するかどうかや方法など、消費者が同意を提供または拒否する方法を柔軟に提供します。
+The [!DNL Transparency & Consent Framework] (TCF)。 [!DNL Interactive Advertising Bureau] (IAB) は、組織が EU の [!DNL General Data Protection Regulation] (GDPR)。 フレームワークの 2 番目の反復である TCF 2.0 は、ベンダーが正確な位置情報などのデータ処理の特定の機能を使用するかどうかや方法など、消費者が同意を提供または拒否する方法を柔軟に提供します。
 
 >[!NOTE]
 >
@@ -38,11 +38,11 @@ Adobe Experience Platformは登録済みの [IAB TCF 2.0 ベンダーリスト](
 また、このガイドでは、次の Platform サービスに関する十分な知識が必要です。
 
 * [Experience Data Model（XDM）](../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
-* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、顧客体験のフラグメント化によって生じる基本的な課題を解決します。
-* [リアルタイム顧客プロファイル](../../../../profile/home.md):活用 [!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。 [!DNL Real-Time Customer Profile] はデータレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md):様々な Platform サービスを顧客向け Web サイトに統合できる、クライアント側の JavaScript ライブラリ。
-   * [SDK の同意コマンド](../../../../edge/consent/supporting-consent.md):このガイドに示す同意関連の SDK コマンドの使用例の概要です。
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md):分割可能 [!DNL Real-Time Customer Profile] 類似した特性を共有し、マーケティング戦略に同様の応答をする個人のグループにデータを送信します。
+* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md)：デバイスやシステム間で ID を結び付けることで、顧客体験のフラグメント化によって生じる基本的な課題を解決します。
+* [リアルタイム顧客プロファイル](../../../../profile/home.md)：活用 [!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。 [!DNL Real-Time Customer Profile] はデータレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
+* [Adobe Experience Platform Web SDK](../../../../edge/home.md)：様々な Platform サービスを顧客に会う Web サイトに統合できるクライアント側 JavaScript ライブラリ。
+   * [SDK の同意コマンド](../../../../edge/consent/supporting-consent.md)：このガイドに示す同意関連の SDK コマンドの使用例の概要です。
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md)：を除算できます [!DNL Real-Time Customer Profile] 類似した特性を共有し、マーケティング戦略に同様の応答をする個人のグループにデータを送信します。
 
 上記の Platform サービスに加えて、 [宛先](../../../../data-governance/home.md) Platform エコシステムでの役割も果たします。
 
@@ -50,7 +50,7 @@ Adobe Experience Platformは登録済みの [IAB TCF 2.0 ベンダーリスト](
 
 次の節では、システムが適切に設定された後に同意データが収集され、適用される方法について説明します。
 
-### 同意データ収集
+### 同意データの収集
 
 Platform では、次のプロセスを通じて顧客の同意データを収集できます。
 
@@ -61,7 +61,7 @@ Platform では、次のプロセスを通じて顧客の同意データを収�
 
 CMP の同意変更フックによってトリガーされる SDK コマンドに加えて、同意データは、に直接アップロードされる、お客様が生成した XDM データを通じてExperience Platformに送ることもできます。 [!DNL Profile]-enabled データセット。
 
-Adobe Audience Managerによって Platform と共有されたセグメント ( [!DNL Audience Manager] また、適切なフィールドが [!DNL Experience Cloud Identity Service]. での同意データの収集に関する詳細 [!DNL Audience Manager]を参照し、 [IAB TCF 用Adobe Audience Managerプラグイン](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja).
+Adobe Audience Managerによって Platform と共有されたセグメント ( [!DNL Audience Manager] また、適切なフィールドがを通じてこれらのセグメントに適用されている場合は、ソースコネクタなど ) に同意データが含まれる場合もあります [!DNL Experience Cloud Identity Service]. での同意データの収集に関する詳細 [!DNL Audience Manager]を参照してください。 [IAB TCF 用Adobe Audience Managerプラグイン](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja).
 
 ### ダウンストリームの同意の実施
 
@@ -83,7 +83,7 @@ TCF の同意データが正常に取り込まれると、ダウンストリー�
 
 | 同意オプション | 説明 |
 | --- | --- |
-| **目的** | 目的は、ブランドが顧客のデータを使用できる広告技術の目的を定義します。 Platform が顧客 ID を処理するには、次の目的をオプトインする必要があります。 <ul><li>**目的 1**:デバイス上での情報の保存/アクセス</li><li>**目的 10**:製品の開発と改善</li></ul> |
+| **目的** | 目的は、ブランドが顧客のデータを使用できる広告技術の目的を定義します。 Platform が顧客 ID を処理するには、次の目的をオプトインする必要があります。 <ul><li>**目的 1**：デバイス上に情報を保存し、その情報にアクセスします</li><li>**目的 10**：製品の開発と改善</li></ul> |
 | **ベンダー権限** | 広告技術の目的に加えて、このダイアログでは、Adobe Experience Platform(565) を含む特定のベンダーがデータを使用することを顧客がオプトインまたはオプトアウトできるようにする必要があります。 |
 
 ### 同意文字列 {#consent-strings}
@@ -102,7 +102,7 @@ TCF 仕様では、同意文字列を使用して、ポリシーやベンダー�
 
 以下を作成したら、 [!DNL Profile]：同意データを収集するための有効なデータセット。結合ポリシーが、顧客プロファイルに TCF 同意フィールドを常に含むように設定されていることを確認する必要があります。 これには、競合する可能性のある他のデータセットよりも同意データセットの方が優先されるように、データセットの優先順位を設定する必要があります。
 
-結合ポリシーの操作方法について詳しくは、 [結合ポリシーの概要](../../../../profile/merge-policies/overview.md). 結合ポリシーを設定する場合、セグメントに、 [XDM プライバシースキーマフィールドグループ](./dataset.md#privacy-field-group)（データセットの準備に関するガイドで説明）
+結合ポリシーの操作方法について詳しくは、 [結合ポリシーの概要](../../../../profile/merge-policies/overview.md). 結合ポリシーを設定する場合、セグメントに、 [XDM プライバシースキーマフィールドグループ](./dataset.md#privacy-field-group)（データセットの準備に関するガイドで概要を説明）
 
 ## Experience PlatformWeb SDK を統合して、顧客の同意データを収集する {#sdk}
 
@@ -122,11 +122,11 @@ SDK がExperience Platformにデータを送信するには、まず Platform �
 
 データストリームに一意の名前を指定した後、の横にある切り替えボタンを選択します。 **[!UICONTROL Adobe Experience Platform]**. 次に、次の値を使用して、フォームの残りの部分を完了します。
 
-| データストリームフィールド | 値 |
+| Datastream フィールド | 値 |
 | --- | --- |
-| [!UICONTROL サンドボックス] | プラットフォームの名前 [サンドボックス](../../../../sandboxes/home.md) データストリームを設定するために必要なストリーミング接続とデータセットを含む |
-| [!UICONTROL ストリーミングインレット] | 有効なストリーミングExperience Platform。 に関するチュートリアルを参照してください。 [ストリーミング接続の作成](../../../../ingestion/tutorials/create-streaming-connection-ui.md) 既存のストリーミングインレットがない場合。 |
-| [!UICONTROL イベントデータセット] | を選択します。 [!DNL XDM ExperienceEvent] データセットを [前の手順](#datasets). 次を含む場合： [[!UICONTROL IAB TCF 2.0 同意] フィールドグループ](../../../../xdm/field-groups/event/iab.md) このデータセットのスキーマでは、 [`sendEvent`](#sendEvent) コマンドを使用して、そのデータをこのデータセットに保存します。 このデータセットに保存される同意の値は次のとおりです **not** 自動強制ワークフローで使用されます。 |
+| [!UICONTROL サンドボックス] | プラットフォームの名前 [sandbox](../../../../sandboxes/home.md) データストリームを設定するために必要なストリーミング接続とデータセットを含む |
+| [!UICONTROL ストリーミングインレット] | Experience Platformの有効なストリーミング接続。 に関するチュートリアルを参照してください。 [ストリーミング接続の作成](../../../../ingestion/tutorials/create-streaming-connection-ui.md) 既存のストリーミングインレットがない場合。 |
+| [!UICONTROL イベントデータセット] | を選択します。 [!DNL XDM ExperienceEvent] データセットを [前の手順](#datasets). 次を含む場合： [[!UICONTROL IAB TCF 2.0 同意] フィールドグループ](../../../../xdm/field-groups/event/iab.md) このデータセットのスキーマでは、 [`sendEvent`](#sendEvent) コマンドを使用して、そのデータをこのデータセットに保存します。 このデータセットに保存される同意の値は次のとおりです。 **not** 自動強制ワークフローで使用されます。 |
 | [!UICONTROL プロファイルデータセット] | を選択します。 [!DNL XDM Individual Profile] データセットを [前の手順](#datasets). CMP の同意変更フックに応答する場合は、 [`setConsent`](#setConsent) コマンドを使用すると、収集したデータがこのデータセットに保存されます。 このデータセットはプロファイル対応なので、自動実施ワークフローの間、このデータセットに保存される同意の値は保持されます。 |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
@@ -145,7 +145,7 @@ SDK がExperience Platformにデータを送信するには、まず Platform �
 
 多くの CMP は、同意変更イベントをリッスンする標準のフックを提供します。 これらのイベントが発生した場合、 `setConsent` 」コマンドを使用して、顧客の同意データを更新する必要があります。
 
-この `setConsent` コマンドには次の 2 つの引数が必要です。(1) コマンドの種類（この場合は「setConsent」）を示す文字列、および (2) `consent` 配列。次に示すように、必要な同意フィールドを提供する 1 つ以上のオブジェクトを含む必要があります。
+The `setConsent` コマンドは、(1) コマンドの種類を示す文字列（この場合は「setConsent」）と、(2) `consent` 配列。次に示すように、必要な同意フィールドを提供する 1 つ以上のオブジェクトを含む必要があります。
 
 ```js
 alloy("setConsent", {
@@ -163,9 +163,9 @@ alloy("setConsent", {
 | `standard` | 使用される同意の規格。 この値はに設定する必要があります。 `IAB` （TCF 2.0 同意処理用） |
 | `version` | 以下に示す同意標準のバージョン番号 `standard`. この値はに設定する必要があります。 `2.0` （TCF 2.0 同意処理用） |
 | `value` | CMP によって生成される、base-64 でエンコードされた同意文字列。 |
-| `gdprApplies` | GDPR が現在ログインしている顧客に適用されるかどうかを示す Boolean 値。 この顧客に TCF 2.0 を適用するには、値をに設定する必要があります。 `true`. デフォルトはです。 `true` （定義されていない場合） |
+| `gdprApplies` | GDPR が現在ログインしている顧客に適用されるかどうかを示す Boolean 値です。 この顧客に TCF 2.0 を適用するには、値をに設定する必要があります。 `true`. デフォルトはです。 `true` （定義されていない場合） |
 
-この `setConsent` コマンドは、同意設定の変更を検出する CMP フックの一部として使用する必要があります。 次の JavaScript は、 `setConsent` コマンドを OneTrust の `OnConsentChanged` フック：
+The `setConsent` コマンドは、同意設定の変更を検出する CMP フックの一部として使用する必要があります。 次の JavaScript は、 `setConsent` コマンドを OneTrust の `OnConsentChanged` フック：
 
 ```js
 OneTrust.OnConsentChanged(function () {
@@ -190,13 +190,13 @@ OneTrust.OnConsentChanged(function () {
 
 #### イベントの使用 {#sendEvent}
 
-また、 `sendEvent` コマンドを使用します。
+また、Platform でトリガーされるすべてのイベントで TCF 2.0 の同意データを収集するには、 `sendEvent` コマンドを使用します。
 
 >[!NOTE]
 >
 >この方法を使用するには、「エクスペリエンスイベントプライバシー」フィールドグループを [!DNL Profile] — 有効 [!DNL XDM ExperienceEvent] スキーマ。 詳しくは、 [ExperienceEvent スキーマの更新](./dataset.md#event-schema) （データセット準備ガイド）を参照してください。
 
-この `sendEvent` コマンドは、web サイト上の適切なイベントリスナーでコールバックとして使用する必要があります。 このコマンドは、次の 2 つの引数を受け取ります。(1) コマンドの種類を示す文字列 ( この場合は `sendEvent`) および (2) `xdm` 必要な同意フィールドを JSON として提供するオブジェクト。
+The `sendEvent` コマンドは、web サイト上の適切なイベントリスナーでコールバックとして使用する必要があります。 このコマンドは、次の 2 つの引数を受け取ります。 (1) コマンドの型を示す文字列 ( この場合は `sendEvent`) および (2) `xdm` 必要な同意フィールドを JSON として提供するオブジェクト。
 
 ```js
 alloy("sendEvent", {
@@ -217,13 +217,13 @@ alloy("sendEvent", {
 | `consentStandard` | 使用される同意の規格。 この値はに設定する必要があります。 `IAB` （TCF 2.0 同意処理用） |
 | `consentStandardVersion` | 以下に示す同意標準のバージョン番号 `standard`. この値はに設定する必要があります。 `2.0` （TCF 2.0 同意処理用） |
 | `consentStringValue` | CMP によって生成される、base-64 でエンコードされた同意文字列。 |
-| `gdprApplies` | GDPR が現在ログインしている顧客に適用されるかどうかを示す Boolean 値。 この顧客に TCF 2.0 を適用するには、値をに設定する必要があります。 `true`. デフォルトはです。 `true` （定義されていない場合） |
+| `gdprApplies` | GDPR が現在ログインしている顧客に適用されるかどうかを示す Boolean 値です。 この顧客に TCF 2.0 を適用するには、値をに設定する必要があります。 `true`. デフォルトはです。 `true` （定義されていない場合） |
 
 ### SDK 応答の処理
 
 すべて [!DNL Platform SDK] コマンドは、呼び出しが成功したか失敗したかを示す promise を返します。 その後、これらの応答を、顧客への確認メッセージの表示などの追加ロジックに使用できます。 詳しくは、 [成功または失敗の処理](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) （特定の例に関する SDK コマンドの実行に関するガイド）。
 
-## セグメントのエクスポート {#export}
+## セグメントの書き出し {#export}
 
 >[!NOTE]
 >
@@ -235,14 +235,14 @@ alloy("sendEvent", {
 
 お客様は、次の目的 ( [TCF 2.0 ポリシー](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) を使用して、セグメントに含めることができます。
 
-* **目的 1**:デバイス上での情報の保存/アクセス
-* **目的 10**:製品の開発と改善
+* **目的 1**：デバイス上に情報を保存し、その情報にアクセスします
+* **目的 10**：製品の開発と改善
 
 また、TCF 2.0 では、データのソースは、宛先にデータを送信する前に、宛先のベンダー権限を確認する必要があります。 したがって、Platform は、宛先にバインドされたデータを含める前に、宛先のベンダー権限が、クラスター内のすべての ID に対してオプトインされているかどうかを確認します。
 
 >[!NOTE]
 >
->Adobe Audience Managerと共有されるセグメントには、Platform と同じ TCF 2.0 同意値が含まれます。 次以降 [!DNL Audience Manager] は、Platform(565) と同じベンダー ID を共有し、同じ目的とベンダー権限が必要です。 ドキュメントを [IAB TCF 用Adobe Audience Managerプラグイン](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja) を参照してください。
+>Adobe Audience Managerと共有されるセグメントには、Platform と同じ TCF 2.0 同意値が含まれます。 次以降 [!DNL Audience Manager] は、Platform(565) と同じベンダー ID を共有し、同じ目的とベンダー権限が必要です。 次のドキュメントを参照： [IAB TCF 用Adobe Audience Managerプラグイン](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja) を参照してください。
 
 ## 実装をテストする {#test-implementation}
 
@@ -252,4 +252,4 @@ TCF 2.0 の実装を設定し、宛先にセグメントを書き出した後は
 
 ## 次の手順
 
-このドキュメントでは、TCF 2.0 で概要を説明しているビジネス上の義務を満たすように Platform データ操作を設定するプロセスについて説明しました。 [ガバナンス、プライバシー、セキュリティ](../../overview.md) を参照してください。
+このドキュメントでは、TCF 2.0 で概要を説明しているビジネス上の義務を満たすように Platform データ操作を設定するプロセスについて説明しました。概要については、 [ガバナンス、プライバシー、セキュリティ](../../overview.md) を参照してください。

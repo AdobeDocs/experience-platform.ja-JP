@@ -6,7 +6,7 @@ description: このドキュメントでは、Experience Platform API を呼び�
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2204'
 ht-degree: 11%
 
 ---
@@ -94,7 +94,7 @@ Adobe Developer Console で統合を作成する前に、Adobe Admin ConsoleのE
 
 >[!IMPORTANT]
 >
->を選択します。 **[!UICONTROL OAuth サーバー間通信]** メソッドのみを使用します。これは、今後の移行をサポートする唯一のメソッドです。 The **[!UICONTROL サービスアカウント (JWT)]** メソッドは非推奨です。 JWT 認証方式を使用した統合は 2025 年 1 月 1 日まで引き続き機能しますが、Adobeでは、その日以前に既存の統合を新しい OAuth サーバー間方式に移行することを強くお勧めします。 詳しくは、の節を参照してください。 [!BADGE 非推奨]{type=negative}[JSON Web トークン (JWT) の生成](#jwt).
+>を選択します。 **[!UICONTROL OAuth サーバー間通信]** メソッドを使用する必要はありません。これは、今後サポートされる唯一のメソッドです。 The **[!UICONTROL サービスアカウント (JWT)]** メソッドは非推奨です。 JWT 認証方式を使用した統合は 2025 年 1 月 1 日まで引き続き機能しますが、Adobeでは、その日以前に既存の統合を新しい OAuth サーバー間方式に移行することを強くお勧めします。 詳しくは、の節を参照してください。 [!BADGE 非推奨]{type=negative}[JSON Web トークン (JWT) の生成](#jwt).
 
 ![「Experience PlatformAPI」を選択します。](./images/api-authentication/oauth-authentication-method.png)
 
@@ -220,7 +220,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `token_type` | 返されるトークンのタイプ。 アクセストークンの場合、この値は常に `bearer`. |
+| `token_type` | タイプ of トークンが返されました。 アクセストークンの場合、この値は常に `bearer`. |
 | `access_token` | 生成された `{ACCESS_TOKEN}`. この値には、という単語の前に `Bearer`が必要です。 `Authentication` すべての Platform API 呼び出し用のヘッダー。 |
 | `expires_in` | アクセストークンの有効期限が切れるまでの残り時間（ミリ秒）。 この値が 0 に達したら、Platform API を使用し続けるには、新しいアクセストークンを生成する必要があります。 |
 

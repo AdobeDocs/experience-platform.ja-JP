@@ -91,7 +91,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 >[!TIP]
 >
-> * 省略記号 (`...`) を [!UICONTROL 名前] 列を参照し、 ![オーディエンスコントロールの有効化](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 有効化&#x200B;]**オーディエンスまたはデータセットをその宛先に書き出すためのコントロール。
+> * 省略記号 (`...`) を [!UICONTROL 名前] 列を参照し、 ![オーディエンスコントロールをアクティブ化](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 有効化&#x200B;]**オーディエンスまたはデータセットをその宛先に書き出すためのコントロール。
 > * [!UICONTROL 名前]列の省略記号（`...`）を選択し、![削除コントロール](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**コントロールを使用して、既存の宛先への接続を[削除](delete-destinations.md)できます。
 > * [!UICONTROL 名前]列の省略記号（`...`）を選択し、![モニタリングで表示コントロール](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL モニタリングで表示&#x200B;]**コントロールを使用して、[モニタリングダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)にこの宛先のアクティブ化情報を表示できます。
 > * [!UICONTROL 名前]列で省略記号（`...`）を選択し、![アラートを購読](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL アラートを購読&#x200B;]**コントロールを使用して、宛先データフローアラートを購読できます。アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 宛先データフローアラートの詳細については、[コンテキスト内の宛先アラートを購読](alerts.md)を参照してください。

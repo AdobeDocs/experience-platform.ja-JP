@@ -1,5 +1,5 @@
 ---
-title: アカウント詳細データタイプ
+title: アカウントの詳細データタイプ
 description: このドキュメントでは、アカウント詳細のエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
 source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
@@ -26,7 +26,7 @@ ht-degree: 16%
 | `companyProductAndServices` | 文字列 | 組織が取引またはビジネスを行っている製品およびサービス。 |
 | `facebookPageUrl` | 文字列 | 組織のFacebookアカウントへの Web サイトリンク。 |
 | `industry` | 文字列 | この組織が属する業界。 これは自由形式のフィールドで、クエリやプロパティの使用には、構造化された値または `xdm:classifier` を使用することをお勧めします。 |
-| `jigsaw` | 文字列 | 組織の Data.com キー。 |
+| `jigsaw` | 文字列 | 組織のData.comキー。 |
 | `linkedinPageUrl` | 文字列 | 組織のLinkedInアカウントへの Web サイトリンク。 |
 | `logoUrl` | 文字列 | Salesforce インスタンスの URL と組み合わせるパス ( 例： `https://yourInstance.salesforce.com/`) をクリックして、組織に関連付けられたソーシャルネットワークプロファイル画像をリクエストする URL を生成します。 生成された URL は、組織のソーシャルネットワークプロファイル画像への HTTP リダイレクト（コード 302）を返します。 |
 | `marketSegment` | 文字列 | 組織が参加している名前付きのマーケットオーディエンス。 これは自由形式のフィールドで、クエリやプロパティの使用には、構造化された値または `xdm:identifier` を使用することをお勧めします。 |
@@ -43,4 +43,4 @@ ht-degree: 16%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.schema.json)

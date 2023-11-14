@@ -3,7 +3,7 @@ title: Adobe Experience Platform リリースノート 2022年4月
 description: Adobe Experience Platform の 2022年4月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2904'
 ht-degree: 100%
 
@@ -88,7 +88,7 @@ Platformでは、データは様々なソースから取り込まれ、システ
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新機能または更新された機能**
 

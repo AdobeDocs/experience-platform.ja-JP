@@ -23,7 +23,7 @@ ht-degree: 89%
 
 Destination SDK では、認証に [Adobe I/O](https://www.adobe.io/) ゲートウェイを使用します。 Destination SDK エンドポイントへの API 呼び出しを行うには、API 呼び出しで特定のヘッダーを指定する必要があります。 Adobe Exchange チームと協力して、[Adobe デベロッパーコンソール](https://developer.adobe.com/console)への認証を設定してください。
 
-Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。チュートリアルを「[API キー、組織 ID、クライアントの秘密鍵を生成する](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret)&quot;ステップ。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
+Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。チュートリアルは、「[API キー、組織 ID、クライアントの秘密鍵を生成する](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret)&quot;ステップ。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
 
 * `x-api-key: {API_KEY}`（クライアント ID とも呼ばれます）
 * `x-gw-ims-org-id: {ORG_ID}`（組織 ID とも呼ばれます）
@@ -77,7 +77,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 * 宛先のタイプに応じて、以下の設定ガイドをお読みください。
 
-   * [Destination SDK を使用したストリーミングの宛先の設定](guides/configure-destination-instructions.md)
+   * [Destination SDK を使用したストリーミング宛先の設定](guides/configure-destination-instructions.md)
    * [Destination SDK を使用したファイルベースの宛先の設定](guides/configure-file-based-destination-instructions.md)
 
 * すべての操作については、 [宛先オーサリング API ドキュメント](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)を参照してください。

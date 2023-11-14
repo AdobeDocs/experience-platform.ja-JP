@@ -18,13 +18,13 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 
 >[!NOTE]
 >
->宛先の詳細ページは、 [!UICONTROL 宛先] ワークスペース [!DNL Platform] [!DNL UI]. 詳しくは、 [[!UICONTROL 宛先] workspace の概要](./destinations-workspace.md) を参照してください。
+>宛先の詳細ページは、 [!UICONTROL 宛先] ワークスペース ( [!DNL Platform] [!DNL UI]. 詳しくは、 [[!UICONTROL 宛先] workspace の概要](./destinations-workspace.md) を参照してください。
 
 ## 宛先の詳細を表示 {#view-details}
 
 既存の宛先に関する詳細を表示するには、以下の手順に従います。
 
-1. [Experience Platform UI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。選択 **[!UICONTROL 参照]** をクリックして、既存の宛先を表示します。
+1. [Experience Platform UI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。選択 **[!UICONTROL 参照]** 上部のヘッダーから、既存の宛先を表示します。
 
    ![宛先の参照](../assets/ui/details-page/browse-destinations.png)
 
@@ -48,7 +48,7 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 
 次の表に、右側のパネルで提供されるコントロールと詳細を示します。
 
-| 右側のレール項目 | 説明 |
+| 右側のレールの項目 | 説明 |
 | --- | --- |
 | [!UICONTROL オーディエンスをアクティブ化] | このコントロールを選択して、宛先にマッピングされているオーディエンスを編集したり、書き出しスケジュールを更新したり、マッピングされた属性と ID を追加および削除したりします。 詳しくは、 [オーディエンスストリーミング宛先へのオーディエンスデータのアクティブ化](./activate-segment-streaming-destinations.md), [プロファイルベースの宛先へのオーディエンスデータのアクティブ化](./activate-batch-profile-destinations.md)、および [ストリーミングプロファイルベースの宛先に対するオーディエンスデータのアクティブ化](./activate-streaming-profile-destinations.md) を参照してください。 |
 | [!UICONTROL 削除] | このデータフローを削除し、以前アクティブ化したオーディエンス（存在する場合）のマッピングを解除できます。 |
@@ -56,25 +56,25 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 | [!UICONTROL 説明] | このフィールドは、オプションで宛先を更新または追加するために編集できます。 |
 | [!UICONTROL 宛先] | オーディエンスの宛先プラットフォームを表します。詳しくは、 [宛先カタログ](../catalog/overview.md) を参照してください。 |
 | [!UICONTROL ステータス] | 宛先が有効か無効かを示します。 |
-| [!UICONTROL マーケティングアクション] | この宛先に適用される、データガバナンス目的のマーケティングアクション（使用例）を示します。 |
+| [!UICONTROL マーケティングアクション] | この宛先に適用される、データガバナンスの目的でのマーケティングアクション（使用例）を示します。 |
 | [!UICONTROL カテゴリ] | 宛先のタイプを示します。 詳しくは、 [宛先カタログ](../catalog/overview.md) を参照してください。 |
 | [!UICONTROL 接続タイプ] | オーディエンスを宛先に送信する際に使用するフォームを示します。 以下の値を指定できます。 [!UICONTROL Cookie] および [!UICONTROL プロファイルベース]. |
 | [!UICONTROL 頻度] | オーディエンスが宛先に送信される頻度を示します。以下の値を指定できます。 [!UICONTROL ストリーミング] および [!UICONTROL バッチ]. |
-| [!UICONTROL ID] | 宛先で受け入れられる ID 名前空間を表します（例： ） `GAID`, `IDFA`または `email`. 受け入れられる ID 名前空間について詳しくは、 [id 名前空間の概要](../../identity-service/namespaces.md). |
+| [!UICONTROL ID] | 宛先で受け入れられる ID 名前空間を表します（例： ）。 `GAID`, `IDFA`または `email`. 受け入れられる ID 名前空間について詳しくは、 [ID 名前空間の概要](../../identity-service/namespaces.md). |
 | [!UICONTROL 作成者] | この宛先を作成したユーザーを示します。 |
 | [!UICONTROL 作成日] | この宛先が作成された時点の UTC 日時を示します。 |
 
 {style="table-layout:auto"}
 
-## [!UICONTROL 有効]/[!UICONTROL 無効] 切り替え {#enabled-disabled-toggle}
+## [!UICONTROL 有効]/[!UICONTROL 無効] トグル {#enabled-disabled-toggle}
 
-以下を使用して、 **[!UICONTROL 有効]/[!UICONTROL 無効]** 宛先へのすべてのデータ書き出しを開始および一時停止する切り替え。
+以下を使用すると、 **[!UICONTROL 有効]/[!UICONTROL 無効]** 宛先へのすべてのデータ書き出しを開始および一時停止する切り替え。
 
 ![データフローの切り替えを有効または無効にする](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL データフローの実行] {#dataflow-runs}
 
-この [!UICONTROL データフローの実行] 「 」タブには、バッチ宛先とストリーミング宛先に対するデータフロー実行の指標データが表示されます。 参照： [データフローの監視](monitor-dataflows.md) を参照してください。
+The [!UICONTROL データフローの実行] 「 」タブには、バッチ宛先とストリーミング宛先に対するデータフロー実行の指標データが表示されます。 参照： [データフローの監視](monitor-dataflows.md) を参照してください。
 
 >[!NOTE]
 >
@@ -89,11 +89,11 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 
 ### ストリーミング宛先 {#streaming}
 
-また、 **[!UICONTROL 処理時間]** ほとんどのストリーミングデータフローの実行については、約 4 時間で示されます。以下の図に示すように、データフローの実際の処理時間は、データフローの実行に関してははるかに短くなります。 Experience Platformが宛先への呼び出しを再試行する必要がある場合に、データフローの実行ウィンドウを長時間開いたままにし、また、到着が遅れたデータを同じ時間枠で逃さないようにします。
+また、 **[!UICONTROL 処理時間]** ほとんどのストリーミングデータフローの実行については、約 4 時間で示されます。以下の図に示すように、データフローの実際の処理時間は、データフローの実行については、はるかに短くなります。 Experience Platformが宛先への呼び出しを再試行する必要がある場合に、データフローの実行ウィンドウを長時間開いたままにし、また、到着が遅れたデータを同じ時間枠で逃さないようにします。
 
 ![ストリーミング宛先の「処理時間」列が強調表示された、データフロー実行ページの画像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
-詳しくは、 [データフローの実行をストリーミング先に](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) 監視に関するドキュメント
+詳しくは、 [データフローの実行をストリーミング先に](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) （監視に関するドキュメント）
 
 ### ファイルベースの宛先 {#file-based}
 
@@ -101,15 +101,15 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 
 ![ファイルベースの宛先に対して「処理時間」列が強調表示された、データフロー実行ページの画像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
-詳しくは、 [データフローは、バッチ（ファイルベース）の宛先に対して実行されます](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 監視に関するドキュメント
+詳しくは、 [データフローは、バッチ（ファイルベース）の宛先に対して実行されます。](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) （監視に関するドキュメント）
 
 ## [!UICONTROL アクティベーションデータ] {#activation-data}
 
-この [!UICONTROL アクティベーションデータ] 「 」タブには、宛先にマッピングされたオーディエンスのリストが表示されます。これには、開始日と終了日（該当する場合）、およびデータエクスポートに関するその他の関連情報（エクスポートのタイプ、スケジュール、頻度など）が含まれます。 特定のオーディエンスに関する詳細を表示するには、リストからオーディエンスの名前を選択します。
+The [!UICONTROL アクティベーションデータ] 「 」タブには、宛先にマッピングされたオーディエンスのリストが表示されます。これには、開始日と終了日（該当する場合）、およびデータエクスポートに関するその他の関連情報（エクスポートのタイプ、スケジュール、頻度など）が含まれます。 特定のオーディエンスに関する詳細を表示するには、リストからオーディエンスの名前を選択します。
 
 >[!TIP]
 >
->宛先にマッピングされている属性と ID に関する詳細を表示および編集するには、「 」を選択します **[!UICONTROL オーディエンスをアクティブ化]** 内 [右レール](#right-rail).
+>宛先にマッピングされている属性と ID に関する詳細を表示および編集するには、「 」を選択します **[!UICONTROL オーディエンスをアクティブ化]** （内） [右レール](#right-rail).
 
 ![アクティベーションデータ表示のバッチ保存先](../assets/ui/details-page/activation-data-batch.png)
 

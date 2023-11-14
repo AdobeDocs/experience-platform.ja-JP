@@ -14,15 +14,15 @@ ht-degree: 13%
 
 マルチエンティティのセグメント化は、Adobe Experience Platformの一部として利用できる高度な機能です [!DNL Segmentation Service]. この機能を使用すると、 [!DNL Real-Time Customer Profile] 製品や店舗に関連するデータなど、組織が定義できる追加の「非人」データ（「ディメンションエンティティ」とも呼ばれます）を含むデータ。 マルチエンティティセグメント化は、独自のビジネスニーズに関連するデータに基づいてセグメント定義を定義する際に柔軟性を提供し、データベースのクエリに関する専門知識を持たずに実行できます。 複数エンティティのセグメント化を使用すると、データストリームにコストの高い変更を加えたり、バックエンドのデータ結合を待たずに、セグメント定義に主要なデータを追加できます。
 
-## Destination SDK の
+## はじめに
 
 マルチエンティティのセグメント化では、セグメント化に関連する様々なAdobe Experience Platformサービスに関する十分な知識が必要です。 このガイドを続行する前に、次のドキュメントを確認してください。
 
 * [[!DNL Real-Time Customer Profile]](../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-   * [プロファイルガードレール](../profile/guardrails.md):でサポートされるデータモデルの作成のベストプラクティス [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):次の場所からオーディエンスを構築できます。 [!DNL Real-Time Customer Profile] データ。
+   * [プロファイルガードレール](../profile/guardrails.md)：でサポートされるデータモデルを作成する際のベストプラクティス [!DNL Profile].
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md)：以下からオーディエンスを構築できます。 [!DNL Real-Time Customer Profile] データ。
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
-   * [スキーマ構成の基本](../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成する際のベストプラクティスを学びます。 セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
+   * [スキーマ構成の基本](../xdm/schema/composition.md#union)：スキーマで使用するスキーマを構成する際のベストプラクティスをExperience Platformします。 セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
 ## ユースケース
 
@@ -51,7 +51,7 @@ ht-degree: 13%
 
 ### マルチエンティティセグメント定義の作成
 
-必要な XDM の関係を定義したら、マルチエンティティセグメント定義の作成を開始できます。 これは、Segmentation API またはセグメントビルダー UI を使用しておこなえます。 詳しくは、次のガイドから選択してください。
+必要な XDM の関係を定義したら、マルチエンティティセグメント定義の作成を開始できます。 これは、Segmentation API またはセグメントビルダー UI を使用しておこなうことができます。 詳しくは、次のガイドから選択してください。
 
 * [セグメント化 API を使用したセグメント定義の作成](./tutorials/create-a-segment.md)
 * [セグメントビルダー UI を使用したセグメント定義の作成](./ui/overview.md)

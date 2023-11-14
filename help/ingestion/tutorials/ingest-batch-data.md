@@ -16,9 +16,9 @@ ht-degree: 51%
 
 Adobe Experience Platformでは、次の場所に簡単にデータを読み込むことができます。 [!DNL Platform] をバッチファイルとして使用します。 取り込むデータの例としては、CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）や、既知の [!DNL Experience Data Model] (XDM) スキーマをスキーマレジストリに追加します。
 
-## Destination SDK の
+## はじめに
 
-このチュートリアルを完了するには、 [!DNL Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
+このチュートリアルを完了するには、次にアクセスできる必要があります： [!DNL Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
 
 データ取得 API を使用してデータを取得する場合は、まず『[バッチ取得開発者ガイド](../batch-ingestion/api-overview.md)』をお読みください。
 
@@ -40,7 +40,7 @@ Adobe Experience Platformでは、次の場所に簡単にデータを読み込�
 
 ![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
 
-の **[!UICONTROL データセットを作成]** 画面で、「[!UICONTROL スキーマからデータセットを作成]&quot;または&quot;[!UICONTROL CSV ファイルからデータセットを作成]&quot;.
+次の日： **[!UICONTROL データセットを作成]** 画面を表示し、「[!UICONTROL スキーマからデータセットを作成]&quot;または&quot;[!UICONTROL CSV ファイルからデータセットを作成]&quot;.
 
 このチュートリアルでは、スキーマを使用してデータセットを作成します。続行するには、「**[!UICONTROL スキーマからデータセットを作成]**」をクリックします。
 
@@ -56,7 +56,7 @@ Adobe Experience Platformでは、次の場所に簡単にデータを読み込�
 
 ## データセットの設定
 
-の **[!UICONTROL データセットを設定]** 画面が表示されたら、データセットに名前を付け、データセットの説明も入力できます。
+次の日： **[!UICONTROL データセットを設定]** 画面が表示されたら、データセットに名前を付け、データセットの説明も入力できます。
 
 **データセット名に関する注意事項：**
 
@@ -80,17 +80,17 @@ Adobe Experience Platformでは、次の場所に簡単にデータを読み込�
 
 ## のデータセットを有効にする [!DNL Real-Time Customer Profile]
 
-データセットは、にデータを取り込むために使用されます [!DNL Experience Platform]に含まれるデータは、最終的には個人を識別し、複数のソースから得られる情報を組み合わせるために使用されます。 この情報を組み合わせたものを、 [!DNL Real-Time Customer Profile]. 次のために [!DNL Platform] どの情報を含めるべきかを知る [!DNL Real-Time Profile]を使用すると、データセットを **[!UICONTROL プロファイル]** 切り替え
+データセットは、にデータを取り込むために使用されます。 [!DNL Experience Platform]に含まれるデータは、最終的には個人を識別し、複数のソースから得られる情報を組み合わせるために使用されます。 この情報を組み合わせたものを、 [!DNL Real-Time Customer Profile]. 次の条件を満たすため [!DNL Platform] どの情報が含まれるべきかを知る [!DNL Real-Time Profile]を使用すると、データセットを **[!UICONTROL プロファイル]** 切り替え
 
-デフォルトでは、この切り替えはオフになっています。オンに切り替える場合 [!DNL Profile]の場合、データセットに取り込まれるすべてのデータは、個人を特定し、それらを結合するのに使用されます [!DNL Real-Time Profile].
+デフォルトでは、この切り替えはオフになっています。オンに切り替える場合 [!DNL Profile]の場合、データセットに取り込まれたすべてのデータは、個人を特定し、それらを結合するのに使用されます [!DNL Real-Time Profile].
 
 詳しくは、以下を参照してください。 [!DNL Real-Time Customer Profile] ID の使用については、 [ID サービス](../../identity-service/home.md) ドキュメント。
 
-のデータセットを有効にするには [!DNL Real-Time Customer Profile]、 **[!UICONTROL プロファイル]** 切り替え **[!UICONTROL 情報]** タブをクリックします。
+のデータセットを有効にするには [!DNL Real-Time Customer Profile]をクリックし、 **[!UICONTROL プロファイル]** 切り替え **[!UICONTROL 情報]** タブをクリックします。
 
 ![プロファイル切り替え](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-のデータセットを有効にするかどうかを確認するダイアログが表示されます [!DNL Real-Time Customer Profile].
+のデータセットを有効にするかどうかを確認するダイアログが表示されます。 [!DNL Real-Time Customer Profile].
 
 ![プロファイル有効ダイアログ](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
@@ -144,7 +144,7 @@ Adobe Experience Platformでは、次の場所に簡単にデータを読み込�
 
 ## 次の手順とその他のリソース
 
-これで、データセットが作成され、データが [!DNL Experience Platform]の場合は、これらの手順を繰り返して新しいデータセットを作成したり、既存のデータセットにさらにデータを取り込んだりできます。
+これで、データセットが作成され、にデータを取り込みました。 [!DNL Experience Platform]の場合は、これらの手順を繰り返して新しいデータセットを作成したり、既存のデータセットにさらにデータを取り込んだりできます。
 
 バッチ取り込みの詳細については、 [バッチ取り込みの概要](../batch-ingestion/overview.md) 以下のビデオを見て、学習を補完します。
 

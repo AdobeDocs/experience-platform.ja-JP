@@ -17,9 +17,9 @@ ht-degree: 53%
 
 開発者ガイドを使用するには、の操作に関わる様々なAdobe Experience Platformサービスに関する十分な知識が必要です [!DNL Profile] データ。 [!DNL Real-Time Customer Profile] API の使用を開始する前に、次のサービスのドキュメントを確認してください。
 
-* [[!DNL Real-Time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
-* [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):デバイスやシステム間で ID を結び付けることで、顧客とその行動をより良く把握できます。
-* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md):リアルタイム顧客プロファイルデータからオーディエンスを構築できます。
+* [[!DNL Real-Time Customer Profile]](../home.md)：複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+* [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：デバイスやシステム間で ID を結び付けることで、顧客とその行動をより良く把握します。
+* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md)：リアルタイム顧客プロファイルデータからオーディエンスを構築できます。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform が顧客体験データを整理するための標準的なフレームワーク。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
@@ -27,7 +27,7 @@ ht-degree: 53%
 
 ## API 呼び出し例の読み取り
 
-この [!DNL Real-Time Customer Profile] API ドキュメントには、リクエストを適切に書式設定する方法を示す API 呼び出しの例が含まれています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+The [!DNL Real-Time Customer Profile] API ドキュメントには、リクエストを適切に書式設定する方法を示す API 呼び出しの例が含まれています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ## 必須ヘッダー
 

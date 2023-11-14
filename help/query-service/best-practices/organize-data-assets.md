@@ -56,11 +56,11 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 ## データコンテナからのデータアセットへのアクセス
 
-データベース名を適切に絞り込むことで、 [!DNL PostgreSQL] クライアントは、 SHOW キーワードを使用して作成した任意のデータ構造に接続できます。 SHOW キーワードについて詳しくは、 [SQL 構文ドキュメント内の SHOW セクション](../sql/syntax.md#show).
+データベース名を適切に絞り込むことで、 [!DNL PostgreSQL] クライアントは、 SHOW キーワードを使用して作成した任意のデータ構造に接続できます。 SHOW キーワードについて詳しくは、 [SQL 構文ドキュメント内の「 SHOW 」セクション](../sql/syntax.md#show).
 
-「all」は、サンドボックス内のすべてのデータベースとスキーマコンテナを含むデフォルトのデータベース名です。 を [!DNL PostgreSQL] 接続 `dbname="all"`、 **任意** データを論理的に整理するために作成したデータベースおよびスキーマ。
+「all」は、サンドボックス内のすべてのデータベースとスキーマコンテナを含むデフォルトのデータベース名です。 を作成する際に、 [!DNL PostgreSQL] 接続を使用 `dbname="all"`に設定されている場合、 **任意** データを論理的に整理するために作成したデータベースおよびスキーマ。
 
-の下にすべてのデータベースをリスト `dbname="all"` は、3 つの使用可能なデータベースを表示します。
+の下にすべてのデータベースをリストする `dbname="all"` は、3 つの使用可能なデータベースを表示します。
 
 ```sql
 SHOW DATABASES;
@@ -84,7 +84,7 @@ databaseA      | schema2
 databaseB      | schema3
 ```
 
-を [!DNL PostgreSQL] 接続 `dbname="databaseA"`を使用すると、次の例に示すように、特定のデータベースに関連付けられている任意のスキーマにアクセスできます。
+を作成する際に、 [!DNL PostgreSQL] 接続を使用 `dbname="databaseA"`を使用すると、次の例に示すように、特定のデータベースに関連付けられている任意のスキーマにアクセスできます。
 
 ```sql
 SHOW DATABASES;
@@ -136,9 +136,9 @@ ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
 ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 ```
 
-### データアセットを削除
+### データアセットを削除する
 
-この [ドロップテーブル](../sql/syntax.md#drop-table) 関数は、 [!DNL Data Lake] テーブルへの単一の参照が組織内のすべてのデータベースに存在する場合。
+The [DROP TABLE](../sql/syntax.md#drop-table) 関数は、 [!DNL Data Lake] テーブルへの単一の参照が組織内のすべてのデータベースに存在する場合。
 
 ```sql
 DROP TABLE databaseA.schema2.t1;

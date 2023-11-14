@@ -7,7 +7,7 @@ exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
 source-wordcount: '595'
-ht-degree: 58%
+ht-degree: 61%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 58%
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 * [バッチ取得](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]： が CSV や Parket などのデータファイルからデータを取得して保存する方法。
-* [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):方法 [!DNL Experience Platform] クライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存します。
+* [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md)：方法 [!DNL Experience Platform] クライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存します。
 
-以下の節では、 [!DNL Catalog Service] API
+以下の節では、 [!DNL Catalog Service] API.
 
 ## API 呼び出し例の読み取り
 
@@ -61,8 +61,8 @@ ht-degree: 58%
 
 ## 次の手順
 
-このドキュメントでは、 [!DNL Catalog] API これで、この開発者ガイドに記載されているサンプル呼び出しに進んで、その手順に従うことができます。
+このドキュメントでは、[!DNL Catalog] API を呼び出すために必要な前提条件に関する知識を説明しました。これで、この開発者ガイドに記載されているサンプル呼び出しに進んで、その手順に従うことができます。
 
-このガイドの例のほとんどでは、 `/dataSets` エンドポイントに適用されますが、原則は、 [!DNL Catalog] ( `/batches`) をクリックします。 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)』を参照してください。
+このガイドの例のほとんどでは、 `/dataSets` エンドポイントに適用されますが、原則は内部の他のエンドポイントに適用できます [!DNL Catalog] ( 例： `/batches`) をクリックします。 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)』を参照してください。
 
-を [!DNL Catalog] API はデータ取得に関わっています。詳しくは、 [データセットの作成](../datasets/create.md).
+ワークフローの手順を示します。 [!DNL Catalog] API はデータ取得に関わっています。詳しくは、 [データセットの作成](../datasets/create.md).

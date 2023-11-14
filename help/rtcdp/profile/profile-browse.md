@@ -21,7 +21,7 @@ Adobe Real-time Customer Data PlatformはAdobe Experience Platformをベース�
 
 ## Real-Time CDP B2B Edition のプロファイルの機能強化
 
-Adobe Experience Platform、Real-Time CDP、B2B Edition のユーザーは、B2B の属性とイベントに、 [!UICONTROL 属性] および [!UICONTROL イベント] タブに設定します。 B2B データは、セグメント化の実行にも使用でき、これらのオーディエンスが顧客の [!UICONTROL オーディエンスのメンバーシップ] タブを使用して、B2B 以外のオーディエンスを表示できます。
+Adobe Experience Platform、Real-Time CDP、B2B Edition のユーザーは、B2B の属性とイベントに加え、 [!UICONTROL 属性] および [!UICONTROL イベント] タブに設定されます。 B2B データは、セグメント化の実行にも使用でき、これらのオーディエンスが顧客の [!UICONTROL オーディエンスのメンバーシップ] タブを使用して、B2B 以外のオーディエンスを表示できます。
 
 Real-Time CDP, B2B Edition では、 [!UICONTROL アカウント], [!UICONTROL 商談]、および [!UICONTROL ソースレコード] 個々の顧客に関連付けられている企業ソース全体から
 
@@ -43,7 +43,7 @@ Real-Time CDP, B2B Edition では、 [!UICONTROL アカウント], [!UICONTROL �
 
 ### 「機会」タブ
 
-この **[!UICONTROL 商談]** 「 」タブには、アカウントに関連するオープン商談とクローズ済商談に関する詳細が表示されます。 これらのオポチュニティは複数のソースからExperience Platformに取り込むことができますが、Real-Time CDP, B2B Edition を使用すると、マーケターは、これらのオポチュニティを 1 か所でまとめて簡単に確認できます。
+The **[!UICONTROL 商談]** 「 」タブには、アカウントに関連するオープン商談とクローズ済商談に関する詳細が表示されます。 これらのオポチュニティは複数のソースからExperience Platformに取り込むことができますが、Real-Time CDP, B2B Edition を使用すると、マーケターは、これらのオポチュニティを 1 か所でまとめて簡単に確認できます。
 
 各機会には、機会の名前、その金額、ステージ、機会がオープン、クローズ、成立、不成立のどれであるかなどの情報が含まれます。
 
@@ -51,6 +51,6 @@ Real-Time CDP, B2B Edition では、 [!UICONTROL アカウント], [!UICONTROL �
 
 ### 「ソースレコード」タブ
 
-この **[!UICONTROL ソースレコード]** 「 」タブを使用すると、単一の顧客プロファイルに貢献するエンタープライズソースからの複数のソースレコードを簡単に確認できます。 また、 [!UICONTROL 担当者ソースキー] また、各ソースレコードには、レコードのタイプ（「連絡先」や「リード」レコードなど）とソースも表示されます。
+The **[!UICONTROL ソースレコード]** 「 」タブを使用すると、単一の顧客プロファイルに貢献するエンタープライズソースからの複数のソースレコードを簡単に確認できます。 また、 [!UICONTROL 担当者ソースキー] また、各ソースレコードには、レコードのタイプ（「連絡先」や「リード」レコードなど）とソースも表示されます。
 
 ![](images/b2b-profile-source-records.png)

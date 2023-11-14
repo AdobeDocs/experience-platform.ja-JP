@@ -6,7 +6,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 36%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->この [!DNL Snowflake] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Snowflake] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 このチュートリアルでは、 [!DNL Snowflake] Adobe Experience Platformユーザーインターフェイスを使用したソースコネクタ
 
-## Destination SDK の
+## はじめに
 
 このチュートリアルは、  Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -32,19 +32,19 @@ ht-degree: 36%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| アカウント | 次に関連付けられた完全なアカウント名： [!DNL Snowflake] アカウント 完全修飾 [!DNL Snowflake] アカウント名には、アカウント名、地域、クラウドプラットフォームが含まれます。 たとえば、`cj12345.east-us-2.azure` のように設定します。アカウント名について詳しくは、 [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
-| ウェアハウス | この [!DNL Snowflake] warehouse は、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データを Platform に引き渡す際には、個別にアクセスする必要があります。 |
-| データベース | この [!DNL Snowflake] データベースには、Platform を取り込むデータが含まれます。 |
-| ユーザー名 | のユーザー名 [!DNL Snowflake] アカウント |
+| アカウント | 次に関連付けられた完全なアカウント名： [!DNL Snowflake] アカウント。 完全修飾 [!DNL Snowflake] アカウント名には、アカウント名、地域、クラウドプラットフォームが含まれます。 たとえば、`cj12345.east-us-2.azure` のように設定します。アカウント名について詳しくは、 [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
+| Warehouse | The [!DNL Snowflake] warehouse は、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データを Platform に引き渡す際には、個別にアクセスする必要があります。 |
+| データベース | The [!DNL Snowflake] データベースには、Platform を取り込むデータが含まれます。 |
+| ユーザー名 | のユーザー名 [!DNL Snowflake] アカウント。 |
 | パスワード | のパスワード [!DNL Snowflake] ユーザーアカウント。 |
 | 役割 | デフォルトのアクセス制御の役割で、 [!DNL Snowflake] セッション。 この役割は、指定したユーザーに既に割り当てられている既存の役割である必要があります。 デフォルトの役割は `PUBLIC`. |
-| 接続文字列 | の [!DNL Snowflake] インスタンス。 次の接続文字列パターン： [!DNL Snowflake] が `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
+| 接続文字列 | に接続するために使用される接続文字列 [!DNL Snowflake] インスタンス。 次の接続文字列パターン： [!DNL Snowflake] 次に該当 `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 これらの値について詳しくは、 [このSnowflake文書](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!NOTE]
 >
->次の項目を設定する必要があります。 `PREVENT_UNLOAD_TO_INLINE_URL` フラグ設定 `FALSE` データのアンロードを許可 [!DNL Snowflake] データベースからExperience Platformへ
+>次の項目を設定する必要があります。 `PREVENT_UNLOAD_TO_INLINE_URL` フラグを設定 `FALSE` データのアンロードを許可する [!DNL Snowflake] データベースからExperience Platformへ。
 
 ## Snowflakeアカウントに接続
 
@@ -52,11 +52,11 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-以下 [!UICONTROL データベース] カテゴリ、選択 **[!UICONTROL Snowflake]** 次に、 **[!UICONTROL データを追加]**.
+の下 [!UICONTROL データベース] カテゴリ、選択 **[!UICONTROL Snowflake]** 次に、「 **[!UICONTROL データを追加]**.
 
 ![](../../../../images/tutorials/create/snowflake/catalog.png)
 
-この **[!UICONTROL Snowflakeに接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL Snowflakeに接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 

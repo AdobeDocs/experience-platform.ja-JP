@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；分析；分類
+keywords: Experience Platform；ホーム；人気の高いトピック； analytics；分類
 description: UI でAdobe Analyticsソースコネクタを作成して、分類データをAdobe Experience Platformに取り込む方法を説明します。
 solution: Experience Platform
 title: UI での分類データ用のAdobe Analyticsソース接続の作成
@@ -28,31 +28,31 @@ Analytics Classifications Data Connector では、新しい [!DNL Classification
 
 ## 分類を選択
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから、ソースワークスペースにアクセスします。 この **[!UICONTROL カタログ]** 画面には、インバウンド接続を作成するために使用可能なソースが表示されます。 各ソースカードには、新しいアカウントを設定するか、既存のアカウントにデータを追加するかのどちらかのオプションが表示されます。
+にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、ソースワークスペースにアクセスします。 The **[!UICONTROL カタログ]** 画面には、インバウンド接続を作成するために使用可能なソースが表示されます。 各ソースカードには、新しいアカウントを設定するか、既存のアカウントにデータを追加するかのどちらかのオプションが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-以下 **[!UICONTROL Adobe]** カテゴリの **[!UICONTROL Adobe Analytics]** カードを選択し、 **[!UICONTROL データを追加]** をクリックして、Analytics 分類データの操作を開始します。
+の下 **[!UICONTROL Adobe]** カテゴリの下で、 **[!UICONTROL Adobe Analytics]** カードを選択し、 **[!UICONTROL データを追加]** をクリックして、Analytics 分類データの操作を開始します。
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
 **[!UICONTROL Analytics ソースデータの追加]**&#x200B;の手順が表示されます。選択 **[!UICONTROL 分類]** 上部のヘッダーから [!DNL Classifications] データセット。ディメンション ID、レポートスイート名、レポートスイート ID に関する情報を含みます。
 
-各ページは最大 10 個の異なる [!DNL Classifications] 選択できるデータセット。 選択 **[!UICONTROL 次へ]** をクリックして、その他のオプションを参照します。 右側のパネルには、 [!DNL Classifications] 選択したデータセットとその名前。 また、このパネルでは、 [!DNL Classifications] 誤って選択したデータセット、または 1 つのアクションですべての選択を解除した可能性があります。
+各ページは最大 10 個の異なる [!DNL Classifications] データセットを選択できます。 選択 **[!UICONTROL 次へ]** をクリックして、その他のオプションを参照します。 右側のパネルには、 [!DNL Classifications] 選択したデータセットとその名前。 また、このパネルでは、 [!DNL Classifications] 誤って選択したデータセット、または 1 つのアクションですべての選択を解除した可能性があります。
 
 最大 30 個の異なる [!DNL Classifications] に取り込むデータセット [!DNL Platform].
 
-次を選択したら、 [!DNL Classifications] データセット、選択 **[!UICONTROL 次へ]** をクリックします。
+次の項目を選択したら、 [!DNL Classifications] データセット、選択 **[!UICONTROL 次へ]** をクリックします。
 
 ![](../../../../images/tutorials/create/classifications/add-data.png)
 
 ## 分類のレビュー
 
-この **[!UICONTROL レビュー]** ステップが表示され、選択した [!DNL Classifications] データセットを作成する前に設定します。 詳細は、次のカテゴリに分類されます。
+The **[!UICONTROL レビュー]** ステップが表示され、選択した [!DNL Classifications] データセットを作成する前に設定します。 詳細は、次のカテゴリに分類されます。
 
-* **[!UICONTROL 接続]**:ソースプラットフォームと接続のステータスを表示します。
-* **[!UICONTROL データタイプ]**:選択した数を表示 [!DNL Classifications].
-* **[!UICONTROL スケジュール]**:同期の頻度を表示します [!DNL Classifications] データ。
+* **[!UICONTROL 接続]**：ソースプラットフォームと接続のステータスを表示します。
+* **[!UICONTROL データタイプ]**：選択した数を表示します [!DNL Classifications].
+* **[!UICONTROL スケジュール]**：同期の頻度を表示します [!DNL Classifications] データ。
 
 データフローをレビューしたら、「 」をクリックします。 **[!UICONTROL 完了]** とは、データフローが作成されるまでしばらく時間をかけます。
 
@@ -70,7 +70,7 @@ Analytics Classifications Data Connector では、新しい [!DNL Classification
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-この **[!UICONTROL データセットアクティビティ]** ページには、選択したターゲットデータセットに関する情報（バッチステータス、データセット ID、スキーマに関する詳細など）が表示されます。
+The **[!UICONTROL データセットアクティビティ]** ページには、選択したターゲットデータセットに関する情報（バッチステータス、データセット ID、スキーマに関する詳細など）が表示されます。
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)
 

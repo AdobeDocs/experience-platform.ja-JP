@@ -77,7 +77,7 @@ Adobe Experience Platform の [!DNL Data Science Workspace] を使用すると�
 
 ### 事前に作成された機械学習レシピ
 
-[!DNL Data Science Workspace] には、小売販売の予測や異常値検出など、一般的なビジネスニーズに対応した事前に作成された機械学習レシピが含まれているため、データサイエンティストや開発者は最初から始める必要はありません。現在、[製品購入予測](./pre-built-recipes/product-purchase-prediction.md)、[製品推奨](./pre-built-recipes/product-recommendations.md)、[小売販売](./pre-built-recipes/retail-sales.md)の 3 つのレシピが提供されています。
+[!DNL Data Science Workspace] には、小売販売の予測や異常値検出など、一般的なビジネスニーズに対応した事前に作成された機械学習レシピが含まれているため、データサイエンティストや開発者は最初から始める必要はありません。現在、[製品購入予測](./pre-built-recipes/product-purchase-prediction.md)、[製品レコメンデーション](./pre-built-recipes/product-recommendations.md)、[小売販売](./pre-built-recipes/retail-sales.md)の 3 つのレシピが提供されています。
 
 [//]: # (The built-in recipe gallery offers recommendations for prebuilt recipes based on your business needs.)
 

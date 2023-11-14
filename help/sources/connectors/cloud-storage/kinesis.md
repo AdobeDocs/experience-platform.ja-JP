@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 19%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネイティブの接続を提供します。 [!DNL Google Cloud Platform]、および [!DNL Azure]. これらのシステムからにデータを取り込むことができます。 [!DNL Platform].
 
@@ -22,11 +22,11 @@ Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネ�
 
 >[!NOTE]
 >
->の尺度 [!DNL Kinesis] 大量のデータを取り込む必要がある場合は、を増やす必要があります。 現在、 [!DNL Kinesis] Platform へのアカウントは、1 秒あたり 4,000 レコードです。 大量のデータをスケールアップして取り込むには、Adobe担当者にお問い合わせください。
+>の尺度係数 [!DNL Kinesis] 大量のデータを取り込む必要がある場合は、を増やす必要があります。 現在、 [!DNL Kinesis] Platform へのアカウントは、1 秒あたり 4,000 レコードです。 大量のデータをスケールアップして取り込むには、Adobe担当者にお問い合わせください。
 
 ## 前提条件
 
-次の節では、を作成する前に必要な前提条件の設定について詳しく説明します [!DNL Kinesis] ソース接続。
+次の節では、を作成する前に必要な前提条件の設定について詳しく説明します。 [!DNL Kinesis] ソース接続。
 
 ### アクセスポリシーを設定する
 
@@ -78,7 +78,7 @@ A [!DNL Kinesis] ストリームでソース接続を作成するには、次の
 | ------------- | ----------- |
 | `AT_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別された位置から読み出される。 |
 | `AFTER_SEQUENCE_NUMBER` | データは、特定のシーケンス番号で識別される位置の後から読み出される。 |
-| `AT_TIMESTAMP` | データは、特定のタイムスタンプで識別される位置から読み出される。 |
+| `AT_TIMESTAMP` | データは、特定のタイムスタンプで識別された位置から読み出される。 |
 | `TRIM_HORIZON` | データは、最も古いデータレコードから読み取られます。 |
 | `LATEST` | データは、最新のデータレコードから読み取られます。 |
 

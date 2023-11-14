@@ -1,5 +1,5 @@
 ---
-keywords: タグ拡張機能；タグ拡張；Launch の宛先；platform tag 拡張機能；platform tag 拡張機能；platform launch先
+keywords: タグの拡張機能；タグの拡張；Launch の宛先；Platform Tag の拡張；Platform Tag の拡張；platform launchの宛先
 title: Adobe Experience Platformのタグ拡張
 description: Adobe Experience Platformは、Adobeが提供する次世代タグ管理機能を提供します。 Platform は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
@@ -19,15 +19,15 @@ Adobe Experience Platformは、Adobeが提供する次世代タグ管理機能�
 - [タグの概要](../../../tags/home.md)
 - [クイックスタートガイド](../../../tags/quick-start/quick-start.md)
 
-## Platform インターフェイスでタグの拡張を見つける方法 {#how-to-find-extensions-in-interface}
+## Platform インターフェイスでタグの拡張機能を見つける方法 {#how-to-find-extensions-in-interface}
 
-Platform インターフェイスで拡張機能を見つけるには、 **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]** を選択し、 **[!UICONTROL 拡張機能]** 内 **[!UICONTROL タイプ]** フィルター。
+Platform インターフェイスで拡張機能を見つけるには、 **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]** を選択し、 **[!UICONTROL 拡張機能]** （内） **[!UICONTROL タイプ]** フィルター。
 
 ![インターフェイスの「拡張機能」フィルター](../../assets/catalog/launch-extensions/filter.png)
 
 ## タグ拡張の仕組み {#how-extensions-work}
 
-A [タグ拡張](../../../tags/home.md#extensions) は、Web サイトやモバイルアプリの機能を強化するコードのパッケージです。 これには、イベントの生データを [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) 他の機能も使えます
+A [タグ拡張](../../../tags/home.md#extensions) は、Web サイトやモバイルアプリの機能を強化するコードのパッケージです。 これには、のような宛先への生のイベントデータの送信が含まれます [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) 他の機能も使えます。
 
 タグとイベント転送の拡張機能を区別することが重要です。 Platform の宛先ユーザーインターフェイスで表示される拡張機能は、次のとおりです *タグ拡張*. 詳しくは、イベント転送の概要を参照してください。 [タグとイベント転送の違い](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
@@ -65,6 +65,6 @@ Extensions forward raw event data to several types of destinations. Think of ext
 - [Analytics](../analytics/overview.md)
 - [データ管理プラットフォーム](../data-management/overview.md)
 - [メールマーケティングの宛先](../email-marketing/overview.md)
-- [パーソナライゼーション](../personalization/overview.md)
+- [パーソナライズ機能](../personalization/overview.md)
 - [調査](../survey/overview.md)
 - [顧客の声](../voice/overview.md)

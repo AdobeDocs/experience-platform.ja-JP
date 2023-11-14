@@ -15,9 +15,9 @@ ht-degree: 30%
 
 このガイドでは、データ収集機能の権限を管理する方法について説明します。
 
-## Destination SDK の
+## はじめに
 
-データ収集用にアクセス制御を設定するには、Adobe Experience Platformデータ収集との統合を持つ組織の管理者権限が必要です。 権限を付与または取り消す最小の役割は、**製品プロファイル管理者**&#x200B;です。権限を管理できる他の管理者の役割は、**製品管理者**（製品内のすべてのプロファイルを管理）と&#x200B;**システム管理者**（制限なし）です。詳しくは、『Adobe エンタープライズ管理ガイド』の[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する記事を参照してください。
+データ収集用にアクセス制御を設定するには、Adobe Experience Platformデータ収集との製品統合を持つ組織の管理者権限が必要です。 権限を付与または取り消す最小の役割は、**製品プロファイル管理者**&#x200B;です。権限を管理できる他の管理者の役割は、**製品管理者**（製品内のすべてのプロファイルを管理）と&#x200B;**システム管理者**（制限なし）です。詳しくは、『Adobe エンタープライズ管理ガイド』の[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する記事を参照してください。
 
 このガイドは、製品プロファイルなどの基本的な Admin Console の概念と、製品の権限を個々のユーザーやグループに付与する方法について理解していることを前提としています。詳しくは、[Admin Console ユーザーガイド](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)を参照してください。
 
@@ -27,7 +27,7 @@ ht-degree: 30%
 
 ### Adobe Experience Platform権限
 
-Adobe Experience Platformの権限には、データストリーム、ID、スキーマ、サンドボックスへのアクセスが含まれます。 Adobe Experience Platform権限の設定手順については、 [アクセス制御ユーザーガイド](../access-control/ui/overview.md).
+Adobe Experience Platformの権限には、データストリーム、ID、スキーマ、サンドボックスへのアクセスが含まれます。 Adobe Experience Platformの権限の設定手順については、 [アクセス制御ユーザーガイド](../access-control/ui/overview.md).
 
 | カテゴリ | 権限 | 説明 |
 | --- | --- | --- |
@@ -47,16 +47,16 @@ Adobe Experience Platformデータ収集の権限は、タグとイベント転�
 
 | カテゴリ | 権限 | 説明 |
 | --- | --- | --- |
-| Platform | Web | へのアクセスを許可 [web プロパティ](../tags/ui/administration/companies-and-properties.md) を他のプロパティ権限と組み合わせた場合。 |
-| Platform | Mobile | へのアクセスを許可 [モバイルプロパティ](../tags/ui/administration/companies-and-properties.md) を他のプロパティ権限と組み合わせた場合。 |
-| Platform | Edge | へのアクセスを許可 [イベント転送の Edge プロパティ](../tags/ui/event-forwarding/getting-started.md) を他のプロパティ権限と組み合わせた場合。 |
+| Platform | Web | へのアクセスを許可します [web プロパティ](../tags/ui/administration/companies-and-properties.md) を他のプロパティ権限と組み合わせた場合。 |
+| Platform | Mobile | へのアクセスを許可します [モバイルプロパティ](../tags/ui/administration/companies-and-properties.md) を他のプロパティ権限と組み合わせた場合。 |
+| Platform | Edge | へのアクセスを許可します [イベント転送の Edge プロパティ](../tags/ui/event-forwarding/getting-started.md) を他のプロパティ権限と組み合わせた場合。 |
 | プロパティ | （N/A） | 組織で作成されたプロパティに応じて、「Admin Console」のこの権限カテゴリを使用して、各プロパティへのアクセスを制御できます。<br><br>ユーザーに割り当てられたプロパティ権限は、この権限カテゴリを通じてアクセス権を付与されたプロパティにのみ適用されます。 |
 | プロパティ権限 | 承認 | の一部としてライブラリビルドを承認する機能を付与します [公開フロー](../tags/ui/publishing/publishing-flow.md). |
 | プロパティ権限 | 開発 | の一部としてライブラリビルドを開発する機能を付与します [公開フロー](../tags/ui/publishing/publishing-flow.md). |
 | プロパティ権限 | プロパティの編集 | ユーザーがアクセスできるプロパティの基本設定を編集する機能を付与します。 |
 | プロパティ権限 | 環境の管理 | を管理する機能を付与します [環境](../tags/ui/publishing/environments.md) ユーザーがアクセスできるプロパティの場合。 |
 | プロパティ権限 | 拡張機能の管理 | を管理する機能を付与します [拡張機能](../tags/ui/managing-resources/extensions/overview.md) ユーザーがアクセスできるプロパティの場合。 |
-| プロパティ権限 | 公開 | ライブラリビルドを [公開フロー](../tags/ui/publishing/publishing-flow.md). |
+| プロパティ権限 | 公開 | ライブラリビルドをの一部として公開する機能を付与します [公開フロー](../tags/ui/publishing/publishing-flow.md). |
 | 会社権限 | 拡張機能の開発 | 非公開リリースや公開リリースのリクエストなど、組織が所有する拡張機能パッケージを作成および変更する機能を付与します。 |
 | 会社権限 | 拡張機能の管理 | この権限は、モバイルアプリ内メッセージおよびプッシュメッセージへのアクセスを許可するAdobe Journey Optimizerまたは他のソリューションのライセンスをお持ちの場合にのみ適用できます。 これにより、Adobe Experience Cloudが把握しているアプリと、Firebase Cloud Messaging サービスおよびAppleプッシュ通知サービスとの通信に必要なプッシュ資格情報を管理できます。 |
 
@@ -77,7 +77,7 @@ Admin Consoleの各製品で関連する権限を管理する手順について�
 
 ### Adobe Experience Platformでの権限の管理 {#manage-platform}
 
-次の **[!UICONTROL 権限]** 「 Adobe Experience Platform」の領域で、編集する役割を選択します。
+次から： **[!UICONTROL 権限]** 「 Adobe Experience Platform」の領域で、編集する役割を選択します。
 
 データ収集機能にアクセスするには、 **[!UICONTROL サンドボックス]**, **[!UICONTROL データモデリング]**, **[!UICONTROL Identity Management]**、および **[!UICONTROL データ収集]** カテゴリ。
 
@@ -97,7 +97,7 @@ Admin Consoleの各製品で関連する権限を管理する手順について�
 
 #### 製品プロファイルの選択または作成
 
-次の画面には、組織でデータ収集に使用可能な製品プロファイル（デフォルトのプロファイルはです）のリストが表示されます **[!DNL Default Data Collection All Access]**. 必要に応じて、デフォルトの製品プロファイルを編集することも、 **[!UICONTROL 新しいプロファイル]** をクリックして、1 つを作成します。 組織内に異なるレベルのアクセスを必要とする複数の役割またはユーザーグループがある場合は、それぞれに個別の製品プロファイルを作成する必要があります。
+次の画面には、組織でデータ収集に使用可能な製品プロファイル（デフォルトプロファイルはです）のリストが表示されます **[!DNL Default Data Collection All Access]**. 必要に応じて、デフォルトの製品プロファイルを編集することも、 **[!UICONTROL 新しいプロファイル]** をクリックして、1 つを作成します。 組織内に異なるレベルのアクセスを必要とする複数の役割またはユーザーグループがある場合は、それぞれに個別の製品プロファイルを作成する必要があります。
 
 ![Admin Consoleのデータ収集の製品プロファイルを示す画像](./images/permissions/new-profile.png)
 

@@ -1,5 +1,5 @@
 ---
-keywords: 宛先アカウント、宛先アカウント、アカウントの削除方法
+keywords: 宛先アカウントの削除、宛先アカウント、アカウントの削除方法
 title: 宛先アカウントの削除
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UI で宛先アカウントを削除する手順を示します
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 ## 概要 {#overview}
 
-この **[!UICONTROL アカウント]** 「 」タブには、様々な宛先との接続を確立した場合の詳細が表示されます。 詳しくは、 [アカウントの概要](../ui/destinations-workspace.md#accounts) を参照してください。
+The **[!UICONTROL アカウント]** 「 」タブには、様々な宛先との接続を確立した場合の詳細が表示されます。 詳しくは、 [アカウントの概要](../ui/destinations-workspace.md#accounts) を参照してください。
 
 このチュートリアルでは、Experience PlatformUI を使用して、不要になった宛先アカウントを削除する手順を説明します。
 
@@ -37,7 +37,7 @@ ht-degree: 18%
 
    ![宛先のフィルタリング](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. 省略記号 (`...`) をクリックします。 ポップアップパネルが表示され、次のオプションが表示されます。 **[!UICONTROL オーディエンスをアクティブ化]**, **[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** アカウント を選択します。 ![削除ボタン](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 削除]** ボタンをクリックして、目的のアカウントを削除します。
+3. 省略記号 (`...`) をクリックします。 ポップアップパネルが表示され、次のオプションが表示されます。 **[!UICONTROL オーディエンスをアクティブ化]**, **[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** アカウント。 を選択します。 ![「削除」ボタン](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 削除]** ボタンをクリックして、目的のアカウントを削除します。
 
    ![宛先アカウントを削除](../assets/ui/delete-accounts/delete-accounts.png)
 

@@ -16,7 +16,7 @@ Adobe Experience Platformでは、プロファイルのグループから特定�
 
 このガイドには、セグメント定義をより深く理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するための API 呼び出しの例を含んでいます。
 
-## Destination SDK の
+## はじめに
 
 このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
@@ -276,7 +276,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | この `id` 取得するセグメント定義の値。 |
+| `{SEGMENT_ID}` | The `id` 取得するセグメント定義の値。 |
 
 **リクエスト**
 
@@ -523,11 +523,11 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | この `id` 更新するセグメント定義の値。 |
+| `{SEGMENT_ID}` | The `id` 更新するセグメント定義の値。 |
 
 **リクエスト**
 
-次のリクエストでは、米国からカナダへの勤務先国を更新します。
+次のリクエストでは、米国からカナダへの勤務先の国を更新します。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -606,7 +606,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 ## セグメント定義を変換
 
-セグメント定義は `pql/text` および `pql/json` または `pql/json` から `pql/text` に対してPOSTリクエストを行う `/segment/conversion` endpoint.
+セグメント定義は、 `pql/text` および `pql/json` または `pql/json` から `pql/text` に対してPOSTリクエストを行う `/segment/conversion` endpoint.
 
 **API 形式**
 

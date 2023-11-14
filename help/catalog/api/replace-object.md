@@ -13,11 +13,11 @@ ht-degree: 60%
 
 # カタログオブジェクトの置き換え
 
-この [!DNL Catalog] PUTリクエストを使用するオブジェクト。リソース全体がリクエストペイロードに置き換えられます。
+次の項目の内容を上書きできます： [!DNL Catalog] PUTリクエストを使用するオブジェクト。リソース全体がリクエストペイロードに置き換えられます。
 
 >[!NOTE]
 >
->更新が必要なのが [!DNL Catalog] オブジェクトの方が、PATCHリクエストを使用する方が効率的です。
+>更新が必要なのが、 [!DNL Catalog] オブジェクトの方が、PATCHリクエストを使用する方が効率的です。
 
 **API 形式**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 置き換えるオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 置き換えるオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**

@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気の高いトピック；IBM [!
 solution: Experience Platform
 title: IBMの作成 [!DNL IBM DB2] フローサービス API を使用したベース接続
 type: Tutorial
-description: IBMの接続方法 [!DNL IBM DB2] フローサービス API を使用してAdobe Experience Platformに送信する。
+description: IBMの接続方法を学ぶ [!DNL IBM DB2] フローサービス API を使用してAdobe Experience Platformに送信する。
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->ザIBM [!DNL IBM DB2] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>ザIBM [!DNL IBM DB2] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -29,15 +29,15 @@ ht-degree: 48%
 * [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 * [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL IBM DB2] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL IBM DB2] の使用 [!DNL Flow Service] API.
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `server` | の名前 [!DNL IBM DB2] サーバー。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例：server:port. |
+| `server` | の名前 [!DNL IBM DB2] サーバー。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例： server:port |
 | `database` | の名前 [!DNL IBM DB2] データベース。 |
-| `username` | に接続するために使用するユーザー名 [!DNL IBM DB2] データベース。 |
+| `username` | に接続する際に使用するユーザー名 [!DNL IBM DB2] データベース。 |
 | `password` | ユーザー名に指定したユーザーアカウントのパスワード。 |
-| `connectionSpec.id` | 接続の作成に必要な一意の識別子。 の接続仕様 ID [!DNL IBM DB2] が `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | 接続の作成に必要な一意の識別子。 の接続仕様 ID [!DNL IBM DB2] 次に該当 `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 の導入について詳しくは、 [この [!DNL IBM DB2] 文書](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
@@ -91,8 +91,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 次に示すように、 [!DNL IBM DB2] アカウント |
-| `connectionSpec.id` | この [!DNL IBM DB2] 接続仕様 ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `auth.params.connectionString` | 次に示すように、 [!DNL IBM DB2] アカウント。 |
+| `connectionSpec.id` | The [!DNL IBM DB2] 接続仕様 ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **応答**
 

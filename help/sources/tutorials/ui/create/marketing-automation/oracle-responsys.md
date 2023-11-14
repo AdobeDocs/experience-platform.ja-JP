@@ -16,7 +16,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->[!DNL Oracle Responsys] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>[!DNL Oracle Responsys] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用した [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) ソース接続を作成する手順を説明します。
 

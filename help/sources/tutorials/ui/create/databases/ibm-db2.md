@@ -16,7 +16,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
-> IBM DB2 コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+> IBM DB2 コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Platform] ユーザーインターフェイス。
 
@@ -33,11 +33,11 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ### 必要な資格情報の収集
 
-以下の節では、 [!DNL Flow Service] API
+以下の節では、 [!DNL Flow Service] API.
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `server` | DB2 サーバーの名前。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例：server:port. |
+| `server` | DB2 サーバーの名前。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例： server:port |
 | `database` | DB2 データベースの名前。 |
 | `username` | DB2 データベースへの接続に使用するユーザー名。 |
 | `password` | ユーザー名に指定したユーザーアカウントのパスワード。 |
@@ -48,15 +48,15 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 必要な資格情報を収集したら、次の手順に従って、DB2 アカウントをにリンクできます。 [!DNL Platform].
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、 **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL IBM DB2]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい DB2 コネクタを作成します。
+の下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL IBM DB2]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい DB2 コネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/ibm-db2/catalog.png)
 
-この **[!UICONTROL IBM DB2 に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL IBM DB2 に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新しいアカウント
 
@@ -66,7 +66,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続する DB2 アカウントを選択し、「 」を選択します **[!UICONTROL 次へ]** をクリックして続行します。
+既存のアカウントに接続するには、接続する DB2 アカウントを選択し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
 
 ![既存](../../../../images/tutorials/create/ibm-db2/existing.png)
 

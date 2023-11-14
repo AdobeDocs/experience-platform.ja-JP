@@ -51,22 +51,22 @@ IT 管理者は、Experience Platformのアドホックアクティベーショ�
 アドホックアクティベーション API を使用する際は、次のガードレールに注意してください。
 
 * 現在、各アドホックアクティベーションジョブは、最大 80 人のオーディエンスをアクティブ化できます。 1 回のジョブで 80 を超えるオーディエンスをアクティブ化しようとすると、ジョブが失敗します。 この動作は、今後のリリースで変更される可能性があります。
-* アドホックアクティベーションジョブは、スケジュール済みと並行して実行できません [オーディエンスの書き出しジョブ](../../segmentation/api/export-jobs.md). アドホックアクティベーションジョブを実行する前に、スケジュールされたオーディエンスの書き出しジョブが終了していることを確認します。 詳しくは、 [宛先のデータフロー監視](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** のステータス。終了するのを待ってから、アドホックアクティベーションジョブを実行します。
+* アドホックアクティベーションジョブは、スケジュール済みと並行して実行できません [オーディエンスの書き出しジョブ](../../segmentation/api/export-jobs.md). アドホックアクティベーションジョブを実行する前に、スケジュールされたオーディエンスの書き出しジョブが終了していることを確認します。 詳しくは、 [宛先のデータフローの監視](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** のステータス。終了するのを待ってから、アドホックアクティベーションジョブを実行します。
 * オーディエンスごとに複数の同時アドホックアクティベーションジョブを実行しないでください。
 
 ## セグメント化に関する考慮事項 {#segmentation-considerations}
 
 Adobe Experience Platformは、24 時間に 1 回、スケジュールされたセグメント化ジョブを実行します。 アドホックアクティベーション API は、最新のセグメント化結果に基づいて実行されます。
 
-## 手順 1:前提条件 {#prerequisites}
+## 手順 1：前提条件 {#prerequisites}
 
 Adobe Experience Platform API を呼び出す前に、次の前提条件を満たしていることを確認してください。
 
 * Adobe Experience Platformへのアクセス権を持つ組織アカウントがある。
-* Experience Platformアカウントに `developer` および `user` 役割がAdobe Experience Platform API 製品プロファイルで有効になっていること お問い合わせ [Admin Console](../../access-control/home.md) 管理者：アカウントに対してこれらのロールを有効にします。
-* あなたはAdobe IDを持っている。 Adobe IDがない場合は、 [Adobe Developer Console](https://developer.adobe.com/console) 新しいアカウントを作成します。
+* Experience Platformアカウントに `developer` および `user` 役割がAdobe Experience Platform API 製品プロファイルで有効になっていること。 お問い合わせ [Admin Console](../../access-control/home.md) 管理者：アカウントに対してこれらのロールを有効にします。
+* あなたはAdobe IDを持っている。 Adobe IDをお持ちでない場合は、 [Adobe Developer Console](https://developer.adobe.com/console) 新しいアカウントを作成します。
 
-## 手順 2:資格情報の収集 {#credentials}
+## 手順 2：資格情報の収集 {#credentials}
 
 Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
@@ -95,7 +95,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 * [Platform UI を使用して、プロファイル書き出しの宛先をバッチ処理するためのアクティベーションフローを作成します](../ui/activate-batch-profile-destinations.md)
 * [フローサービス API を使用して、バッチプロファイル書き出しの宛先に接続し、データをアクティブ化します](../api/connect-activate-batch-destinations.md)
 
-## 手順 4:最新のオーディエンス書き出しジョブ ID の取得（v2 では不要） {#segment-export-id}
+## 手順 4：最新のオーディエンス書き出しジョブ ID を取得する（v2 では不要） {#segment-export-id}
 
 >[!IMPORTANT]
 >
@@ -105,7 +105,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 アドホックアクティベーションジョブを実行する前に、最新のオーディエンス書き出しジョブの ID を取得する必要があります。 この ID は、アドホックアクティベーションジョブリクエストで渡す必要があります。
 
-説明されている手順に従います [ここ](../../segmentation/api/export-jobs.md#retrieve-list) をクリックして、すべてのオーディエンス書き出しジョブのリストを取得します。
+説明されている手順に従います。 [ここ](../../segmentation/api/export-jobs.md#retrieve-list) をクリックして、すべてのオーディエンス書き出しジョブのリストを取得します。
 
 応答で、以下のスキーマプロパティを含む最初のレコードを探します。
 
@@ -115,20 +115,20 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 }
 ```
 
-オーディエンス書き出しジョブ ID は、 `id` プロパティに含まれます。
+オーディエンス書き出しジョブ ID は、 `id` プロパティに含めることができます。
 
 ![オーディエンス書き出しジョブ ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
-## 手順 5:アドホックアクティベーションジョブの実行 {#activation-job}
+## 手順 5：アドホックアクティベーションジョブを実行する {#activation-job}
 
 Adobe Experience Platformは、24 時間に 1 回、スケジュールされたセグメント化ジョブを実行します。 アドホックアクティベーション API は、最新のセグメント化結果に基づいて実行されます。
 
 >[!IMPORTANT]
 >
->次の 1 回限りの制約に注意してください。アドホックアクティベーションジョブを実行する前に、オーディエンスが最初にアクティブ化された時点から 20 分以上経過していることを確認してください。その時点が、 [手順 3 - Platform UI でアクティベーションフローを作成する](#activation-flow).
+>以下の 1 回限りの制約に注意してください。アドホックアクティベーションジョブを実行する前に、で設定したスケジュールに従ってオーディエンスが最初にアクティブ化された時点から少なくとも 20 分が経過していることを確認してください。 [手順 3 - Platform UI でアクティベーションフローを作成する](#activation-flow).
 
-アドホックアクティベーションジョブを実行する前に、オーディエンスに対してスケジュールされたオーディエンスの書き出しジョブが終了していることを確認します。 詳しくは、 [宛先のデータフロー監視](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** のステータス。完了するのを待ってから、アドホックアクティベーションジョブを実行して完全なファイルをエクスポートします。
+アドホックアクティベーションジョブを実行する前に、オーディエンスに対してスケジュールされたオーディエンスの書き出しジョブが終了していることを確認します。 詳しくは、 [宛先のデータフローの監視](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** のステータス。完了するのを待ってから、アドホックアクティベーションジョブを実行して完全なファイルをエクスポートします。
 
 オーディエンスの書き出しジョブが完了したら、アクティベーションをトリガーできます。
 
@@ -175,7 +175,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 >[!IMPORTANT]
 >
->**非推奨のリクエストタイプ**. このタイプの例は、API バージョン 1 のリクエストタイプを示します。 アドホックアクティベーション API の v2 では、最新のオーディエンス書き出しジョブ ID を含める必要はありません。
+>**非推奨（廃止予定）のリクエストタイプ**. このタイプの例は、API バージョン 1 のリクエストタイプを示します。 アドホックアクティベーション API の v2 では、最新のオーディエンス書き出しジョブ ID を含める必要はありません。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
@@ -205,7 +205,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティブ化する宛先インスタンスの ID。 これらの ID は、 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]** 」タブに移動し、目的の宛先行をクリックして、右側のパネルに宛先 ID を表示します。 詳しくは、 [宛先 workspace に関するドキュメント](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するオーディエンスの ID。 |
-| <ul><li>`exportId1`</li></ul> | ID が [オーディエンスの書き出し](../../segmentation/api/export-jobs.md#retrieve-list) ジョブ。 詳しくは、 [手順 4:最新のオーディエンス書き出しジョブ ID を取得する](#segment-export-id) を参照してください。 |
+| <ul><li>`exportId1`</li></ul> | の応答で返される ID [オーディエンスの書き出し](../../segmentation/api/export-jobs.md#retrieve-list) ジョブ。 詳しくは、 [手順 4：最新のオーディエンス書き出しジョブ ID を取得する](#segment-export-id) を参照してください。 |
 
 {style="table-layout:auto"}
 

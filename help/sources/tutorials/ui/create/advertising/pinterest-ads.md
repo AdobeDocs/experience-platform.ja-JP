@@ -2,7 +2,7 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: UI でのPinterest Ads ソース接続の作成
 description: Adobe Experience Platform UI を使用してPinterest Ads ソース接続を作成する方法を説明します。
-badge: ベータ
+badge: ベータ版
 hide: true
 hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
@@ -34,8 +34,8 @@ ht-degree: 29%
 
 接続するには [!DNL Pinterest Ads] をExperience Platformするには、次の接続プロパティの値を指定する必要があります。
 
-* この [!DNL Pinterest] アクセストークン。
-* この [!DNL Pinterest] 広告アカウント ID。
+* The [!DNL Pinterest] アクセストークン。
+* The [!DNL Pinterest] 広告アカウント ID。
 * 次のいずれか [!DNL Pinterest] 必要に応じて、キャンペーン、広告グループまたは広告 ID。
 
 これらの接続プロパティの詳細については、 [[!DNL Pinterest Ads] 概要](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
@@ -50,15 +50,15 @@ ht-degree: 29%
 
 ## [!DNL Pinterest Ads] アカウントの接続 {#connect-account}
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL Sources]**」を選択し、[!UICONTROL Sources ]のワークスペースにアクセスします。この [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL Sources]**」を選択し、[!UICONTROL Sources ]のワークスペースにアクセスします。The [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 *広告* カテゴリ、選択 **[!UICONTROL Pinterest Ads]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+の下 *広告* カテゴリ、選択 **[!UICONTROL Pinterest Ads]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
 
 ![Experience Platform時のソースカタログ。](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
-この **[!UICONTROL pinterest Ads アカウントの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL pinterest Ads アカウントの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント {#existing-account}
 
@@ -68,7 +68,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 ### 新規アカウント {#new-account}
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の認証情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の資格情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![ソースワークフローの新しいアカウントステップ。](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
 
@@ -76,17 +76,17 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 ## データの選択 {#select-data}
 
-この **[!UICONTROL データを選択]** の手順が表示され、API に渡され、Platform にデータを取り込むための情報を入力するためのインターフェイスが提供されます。
+The **[!UICONTROL データを選択]** の手順が表示され、API に渡され、Platform にデータを取り込むための情報を入力するためのインターフェイスが提供されます。
 
 | フィールド | 説明 |
 | --- | --- |
 | [!UICONTROL ad_account_id] | お使いの [!DNL Pinterest Ads] 広告アカウント ID。 詳しくは、 [[!DNL Pinterest] Ads Manager での ID の検索に関するガイド](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) ご指導が必要な場合は、 |
 | [!UICONTROL object_type] | 次のいずれかを選択 **campaigns**, **広告グループ** または **広告** どちらかに応じて [!DNL Pinterest] 情報の取得元の Analytics API。 |
-| [!UICONTROL object_ids] | 選択したオブジェクトの ID。 次に移動： [!DNL Pinterest] ページ **Pinterest Business Hub** > **広告アカウントの概要** > **キャンペーン** / **広告グループ** / **広告** とで、それぞれの名前のすぐ下に記載されている必要な ID をコピーします。 |
+| [!UICONTROL object_ids] | 選択したオブジェクトの ID。 次に移動： [!DNL Pinterest] ～のページ **Pinterest Business Hub** > **広告アカウントの概要** > **キャンペーン** / **広告グループ** / **広告** とで、それぞれの名前のすぐ下に記載されている必要な ID をコピーします。 |
 
 >[!TIP]
 >
->複数の `object_ids` コンマ区切り値を渡す。 1 つのリクエストで渡す ID の最大数は 100 です。 渡された値が正しくない場合、Platform は次のメッセージを表示します。 `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>複数の `object_ids` コンマ区切り値を渡す。 1 つのリクエストで渡す ID の最大数は 100 です。 間違った値が渡されると、Platform は次のメッセージを表示します。 `The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
 値を指定した後、 **[!UICONTROL 選択]**. 指定した値が有効な場合は、インターフェイスの右側に、プレビューデータが入力されます。
 
@@ -102,7 +102,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 ## スケジュール設定 {#scheduling}
 
-スケジュールを [!DNL Pinterest Ads] データフローを取り込むには、次の頻度設定と間隔設定のいずれかを選択する必要があります。
+スケジュール設定時に [!DNL Pinterest Ads] データフローを取り込むには、次の頻度設定と間隔設定のいずれかを選択する必要があります。
 
 | 頻度 | 間隔 |
 | --- | --- |
@@ -117,9 +117,9 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 ### 検証 {#validation}
 
-ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL Pinterest Ads] データを取り込むには、次の手順に従います。
+ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL Pinterest Ads] データを取り込む場合は、次の手順に従います。
 
-Platform UI で、「 **[!UICONTROL データフローを表示]** の横に [!DNL Pinterest Ads] カタログページのカードメニュー 次を選択できます。 [!UICONTROL データセットをプレビュー] をクリックして、取り込まれたデータを確認します。
+Platform UI で、「 」を選択します。 **[!UICONTROL データフローを表示]** の横に [!DNL Pinterest Ads] カタログページのカードメニュー 次を選択できます。 [!UICONTROL データセットをプレビュー] をクリックして、取り込まれたデータを確認します。
 
 ![pinterest Ads プレビューデータセットの Platform UI スクリーンショット。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
@@ -133,7 +133,7 @@ Platform UI で、「 **[!UICONTROL データフローを表示]** の横に [!D
 
 >[!TAB 広告グループ]
 
-![Pinterest Ad Groups ページ](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
+![Pinterest Ad Groups ページ。](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
 
 >[!TAB 広告]
 

@@ -25,15 +25,15 @@ ht-degree: 40%
 * [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Experience Platformサービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次の項目にアクセスするには、 [!DNL Teradata Vantage] プラットフォームのアカウントで、次の認証値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| 接続文字列 | 接続文字列は、データソースに関する情報とその接続方法を提供する文字列です。 次の接続文字列パターン： [!DNL Teradata Vantage] が `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
+| 接続文字列 | 接続文字列は、データソースに関する情報とその接続方法を提供する文字列です。 次の接続文字列パターン： [!DNL Teradata Vantage] 次に該当 `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
 
-導入の詳細については、 [[!DNL Teradata Vantage] 文書](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
+導入の詳細については、以下を参照してください。 [[!DNL Teradata Vantage] 文書](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
 ## [!DNL Teradata Vantage] アカウントを接続
 
@@ -41,11 +41,11 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-以下 [!UICONTROL データベース] カテゴリ、選択 **[!UICONTROL Teradata利益]** 次に、 **[!UICONTROL データを追加]**.
+の下 [!UICONTROL データベース] カテゴリ、選択 **[!UICONTROL Teradata利益]** 次に、「 **[!UICONTROL データを追加]**.
 
 ![](../../../../images/tutorials/create/teradata/catalog.png)
 
-この **[!UICONTROL teradataVantage に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL teradataVantage に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
@@ -55,7 +55,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Teradata Vantage] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Teradata Vantage] 認証情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 
 ![](../../../../images/tutorials/create/teradata/new.png)
 

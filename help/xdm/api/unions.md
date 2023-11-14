@@ -19,7 +19,7 @@ ht-degree: 42%
 
 ## スキーマフィールドを結合
 
-この [!DNL Schema Registry] 和集合スキーマ内に 3 つのキーフィールドを自動的に含めます。 `identityMap`, `timeSeriesEvents`、および `segmentMembership`.
+The [!DNL Schema Registry] 和集合スキーマ内に 3 つのキーフィールドを自動的に含めます。 `identityMap`, `timeSeriesEvents`、および `segmentMembership`.
 
 ### ID マップ
 
@@ -31,11 +31,11 @@ ht-degree: 42%
 
 ### セグメントメンバーシップマップ
 
-この `segmentMembership` map は、セグメント定義の評価結果を格納します。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。`segmentMembership` また、には、Platform に取り込まれた評価済みのオーディエンスも格納されます。これにより、Adobe Audience Managerなどの他のソリューションと統合することができます。 に関するチュートリアルを参照してください。 [API を使用したオーディエンスの作成](../../segmentation/tutorials/create-a-segment.md) を参照してください。
+The `segmentMembership` map は、セグメント定義の評価結果を格納します。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。`segmentMembership` また、には、Platform に取り込まれた評価済みのオーディエンスも格納されます。これにより、Adobe Audience Managerなどの他のソリューションと統合することができます。 に関するチュートリアルを参照してください。 [API を使用したオーディエンスの作成](../../segmentation/tutorials/create-a-segment.md) を参照してください。
 
 ## 和集合のリストの取得 {#list}
 
-この `union` タグを使用して、 [!DNL Schema Registry] は、スキーマの基となるクラスの和集合にスキーマを自動的に追加します。 問題のクラスに和集合が存在しない場合、新しい和集合が自動的に作成されます。 この `$id` の場合、和集合は標準に似ています `$id` その他 [!DNL Schema Registry] リソースで使用されます。ただし、2 つのアンダースコアと「和集合」という単語が付加されるという点が異なります (`__union`) をクリックします。
+次の場合、 `union` タグを使用して、 [!DNL Schema Registry] は、スキーマの基となるクラスの和集合にスキーマを自動的に追加します。 問題のクラスに和集合が存在しない場合、新しい和集合が自動的に作成されます。 The `$id` の場合、和集合は標準に似ています `$id` その他 [!DNL Schema Registry] リソースで使用されます。ただし、2 つのアンダースコアと「和集合」という単語が付加されるという点が異なります (`__union`) をクリックします。
 
 使用可能な和集合のリストを表示するには、 `/tenant/unions` endpoint.
 
@@ -57,12 +57,12 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 以下 `Accept` 和集合のリストには、次のヘッダーを使用できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 次の `Accept` 和集合のリストには、次のヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
-| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON クラスを元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
+| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 （上限：300） |
+| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON クラスを元のと共に返します `$ref` および `allOf` 含まれる。 （上限：300） |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ curl -X GET \
 
 ## 和集合メンバーシップのスキーマを有効にする {#enable}
 
-スキーマをそのクラスの和集合に含めるには、 `union` タグをスキーマの `meta:immutableTags` 属性。 これを実現するには、PATCHリクエストを実行し、 `meta:immutableTags` 次の単一の文字列値を持つ配列 `union` を問題のスキーマに追加します。 詳しくは、 [スキーマエンドポイントガイド](./schemas.md#union) 詳しい例を示します。
+スキーマをそのクラスの和集合に含めるには、 `union` タグをスキーマの `meta:immutableTags` 属性。 これを実現するには、PATCHリクエストを実行し、 `meta:immutableTags` 次の単一の文字列値を持つ配列： `union` を問題のスキーマに追加します。 詳しくは、 [スキーマエンドポイントガイド](./schemas.md#union) 詳しい例を示します。
 
 ## 和集合でのスキーマのリスト {#list-schemas}
 
@@ -194,7 +194,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CLASS_ID}` | この `$id` のスキーマを設定します。 |
+| `{CLASS_ID}` | The `$id` のスキーマを設定します。 |
 
 {style="table-layout:auto"}
 
@@ -212,12 +212,12 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 以下 `Accept` ヘッダーを使用してスキーマをリストできます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 次の `Accept` ヘッダーを使用してスキーマをリストできます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
-| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON スキーマを元のと共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
+| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 （上限：300） |
+| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON スキーマを元のと共に返します `$ref` および `allOf` 含まれる。 （上限：300） |
 
 {style="table-layout:auto"}
 

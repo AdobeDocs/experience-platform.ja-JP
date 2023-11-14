@@ -22,7 +22,7 @@ ht-degree: 24%
 
 ## セグメントジョッブリストの取得 {#retrieve-list}
 
-組織のすべてのセグメントジョブのリストを取得するには、 `/segment/jobs` endpoint.
+組織のすべてのセグメントジョブのリストを取得するには、に対してGETリクエストを実行します `/segment/jobs` endpoint.
 
 **API 形式**
 
@@ -272,7 +272,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.profileSegmentationTime` | セグメント化評価の開始および終了時間に関する情報と、合計所要時間に関する情報を含むオブジェクト。 |
 | `metrics.segmentProfileCounter` | セグメントごとに認定されたプロファイルの数。 |
 | `metrics.segmentedProfileByNamespaceCounter` | セグメント定義ごとに各 ID 名前空間で認定されたプロファイルの数。 |
-| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイル数。 次の 3 つのステータスがサポートされています。 <ul><li>「適合」 — セグメント定義の対象となるプロファイルの数。</li><li>「出口」 — セグメント定義に存在しなくなったプロファイルの数。</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイルの数。 次の 3 つのステータスがサポートされています。 <ul><li>「適合」 — セグメント定義の対象となるプロファイルの数。</li><li>「出口」 — セグメント定義に存在しなくなったプロファイルの数。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 結合ポリシーごとの結合プロファイルの合計数です。 |
 
 ## 新しいセグメントジョブの作成 {#create}
@@ -307,7 +307,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentId` | セグメントジョブを作成するセグメント定義の ID。 これらのセグメント定義は、異なる結合ポリシーに属することができます。 セグメント定義の詳細については、 [セグメント定義エンドポイントガイド](./segment-definitions.md). |
+| `segmentId` | セグメントジョブを作成するセグメント定義の ID。 これらのセグメント定義は、異なる結合ポリシーに属することができます。 セグメント定義について詳しくは、 [セグメント定義エンドポイントガイド](./segment-definitions.md). |
 
 **応答**
 
@@ -527,7 +527,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `id` | 新しく作成されたセグメントジョブのシステム生成の読み取り専用識別子。 |
 | `status` | セグメントジョブの現在のステータス。 セグメントジョブは新しく作成されるので、ステータスは常に「 `NEW`. |
 | `segments` | このセグメントジョブが実行されているセグメント定義に関する情報を含むオブジェクト。 |
-| `segments.segment.id` | この `*` は、このセグメントジョブが組織内のすべてのセグメント定義で実行されていることを意味します。 |
+| `segments.segment.id` | The `*` は、このセグメントジョブが組織内のすべてのセグメント定義で実行されていることを意味します。 |
 
 ## 特定のセグメントジョブの取得 {#get}
 

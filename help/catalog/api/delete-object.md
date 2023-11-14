@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->この `DELETE /batches/{ID}` エンドポイントは非推奨になりました。 バッチを削除するには、 [バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>The `DELETE /batches/{ID}` エンドポイントは非推奨になりました。 バッチを削除するには、 [バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | のタイプ [!DNL Catalog] 削除するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 削除するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -59,4 +59,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->指定しない場合 [!DNL Catalog] オブジェクトはリクエストで指定された ID に一致します。HTTP ステータスコード 200 が表示される場合がありますが、応答配列は空になります。
+>いいえの場合 [!DNL Catalog] オブジェクトはリクエストで指定された ID に一致します。HTTP ステータスコード 200 が表示される場合がありますが、応答配列は空になります。

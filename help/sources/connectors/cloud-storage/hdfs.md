@@ -15,7 +15,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Apache HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>Apache HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。取り込んだデータは、JSON 形式、Parquet 形式または区切り形式で指定できます。 クラウドストレージプロバイダーのサポートは次のとおりです。 [!DNL Apache] HDFS。
 

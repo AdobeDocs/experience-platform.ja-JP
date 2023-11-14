@@ -14,17 +14,17 @@ ht-degree: 27%
 
 [!DNL Real-Time Customer Profile] を使用すると、Adobe Experience Platform内の各顧客の全体像を確認できます。 [!DNL Profile] を使用すると、オンライン、オフライン、CRM、サードパーティなど、複数のチャネルの異なる顧客データを統合ビューに統合し、顧客とのやり取りごとに実用的なタイムスタンプ付きの説明を提供できます。
 
-この [!DNL Real-Time Customer Profile] API には複数のエンドポイントが含まれています（以下で概要を説明します）。 詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](getting-started.md)のガイドを参照してください。
+The [!DNL Real-Time Customer Profile] API には複数のエンドポイントが含まれています（以下で概要を説明します）。 詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](getting-started.md)のガイドを参照してください。
 
 使用可能なすべてのエンドポイントと CRUD の操作を表示するには、 [リアルタイム顧客プロファイル API リファレンス Swagger](https://www.adobe.com/go/profile-apis-en).
 
-の操作に関するガイド [!DNL Real-Time Customer Profile] データ [!DNL Experience Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
+の操作に関するガイド [!DNL Real-Time Customer Profile] データを [!DNL Experience Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
 
 ## [!BADGE ベータ版]{type=Informative} 計算済み属性 {#computed-attributes}
 
 >[!IMPORTANT]
 >
->計算済み属性機能はベータ版で、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+計算済み属性機能はベータ版で、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。
 
@@ -34,11 +34,11 @@ ht-degree: 27%
 
 ## エッジ投影 {#edge-projections}
 
-Adobe Experience Platform を使用すると、「エッジ」と呼ばれる戦略的に配置されたサーバー上のデータに容易にアクセスして、顧客体験をリアルタイムでパーソナライズできます。この [!DNL Real-Time Customer Profile] API は、「投影」と呼ばれるコンポーネントを介してエッジを操作するためのエンドポイントを提供します。 これには、各エッジに投影するデータを決定する投影設定や、投影のルーティング先を定義する投影先が含まれます。エッジ投影の操作について詳しくは、 [投影設定および宛先エンドポイントガイド](edge-projections.md).
+Adobe Experience Platform を使用すると、「エッジ」と呼ばれる戦略的に配置されたサーバー上のデータに容易にアクセスして、顧客体験をリアルタイムでパーソナライズできます。The [!DNL Real-Time Customer Profile] API は、「投影」と呼ばれるコンポーネントを介してエッジを操作するためのエンドポイントを提供します。 これには、各エッジに投影するデータを決定する投影設定や、投影のルーティング先を定義する投影先が含まれます。エッジ投影の操作について詳しくは、 [投影設定および宛先エンドポイントガイド](edge-projections.md).
 
 ## エンティティ（[!DNL Profile] アクセス） {#entities}
 
-Adobe Experience Platformから、 [!DNL Real-Time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 API を使用して、「プロファイル」と呼ばれるエンティティにアクセスする方法を学ぶには、 [エンティティエンドポイントガイド](entities.md). を使用してプロファイルにアクセスするには [!DNL Platform] UI( [プロファイルユーザーガイド](../ui/user-guide.md).
+Adobe Experience Platformを通じて、 [!DNL Real-Time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 API を使用して、「プロファイル」と呼ばれるエンティティにアクセスする方法を学ぶには、 [エンティティエンドポイントガイド](entities.md). を使用してプロファイルにアクセスするには [!DNL Platform] UI( [プロファイルユーザーガイド](../ui/user-guide.md).
 
 ## 書き出しジョブ（[!DNL Profile] 書き出し） {#profile-export}
 
@@ -46,7 +46,7 @@ Adobe Experience Platformから、 [!DNL Real-Time Customer Profile] RESTful API
 
 ## 結合ポリシー {#merge-policies}
 
-複数のソースのデータをに取り込む場合 [!DNL Experience Platform]結合ポリシーは、 [!DNL Platform] は、データの優先順位付け方法と、個々の顧客プロファイルを作成するために組み合わされるデータを決定するためにを使用します。 の使用 [!DNL Real-Time Customer Profile] API を使用すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。  を使用して結合ポリシーを使用するには、[結合ポリシー API エンドポイントガイド](merge-policies.md)を参照してください。
+複数のソースからのデータをに取り込む場合 [!DNL Experience Platform]結合ポリシーは、 [!DNL Platform] は、データの優先順位付け方法と、個々の顧客プロファイルを作成するために組み合わされるデータを決定するためにを使用します。 の使用 [!DNL Real-Time Customer Profile] API を使用すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。  を使用して結合ポリシーを使用するには、[結合ポリシー API エンドポイントガイド](merge-policies.md)を参照してください。
 
 結合ポリシーと、Platform 内での役割について詳しくは、まず [結合ポリシーの概要](../merge-policies/overview.md).
 
@@ -56,7 +56,7 @@ Adobe Experience Platformから、 [!DNL Real-Time Customer Profile] RESTful API
 
 ## プロファイルシステムジョブ {#profile-system-jobs}
 
-に取り込まれるプロファイル対応データ [!DNL Platform] が [!DNL Data Lake] また [!DNL Real-Time Customer Profile] データストア。 場合によっては、 [!DNL Profile] ストアを使用して、不要になったデータや誤って追加されたデータを削除します。 そのためには、API を使用して [!DNL Profile System Job](「[!DNL delete request]」（必要に応じて変更、監視または削除可能） を使用して削除リクエストを操作する方法を学ぶには、以下を実行します。 `/system/jobs` エンドポイント [!DNL Real-Time Customer Profile] API( [profile system jobs endpoint guide](profile-system-jobs.md).
+に取り込まれるプロファイル対応データ [!DNL Platform] が [!DNL Data Lake] 同様に [!DNL Real-Time Customer Profile] データストア。 場合によっては、 [!DNL Profile] ストアを使用して、不要になったデータや誤って追加されたデータを削除します。 そのためには、API を使用して [!DNL Profile System Job]( 別名「[!DNL delete request]」（必要に応じて変更、監視または削除できます） を使用して削除リクエストを操作する方法を学ぶには、以下を実行します。 `/system/jobs` エンドポイント [!DNL Real-Time Customer Profile] API( [profile system jobs endpoint guide](profile-system-jobs.md).
 
 ## プロファイル属性の更新 {#update-profile}
 

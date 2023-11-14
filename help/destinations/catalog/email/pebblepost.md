@@ -6,7 +6,7 @@ exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 78%
+ht-degree: 79%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 78%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL PebblePost] 拡張子：
+[!DNL PebblePost] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

@@ -16,7 +16,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->この [!DNL Apache] HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>The [!DNL Apache] HDFS コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 のソースコネクタ [!DNL Adobe Experience Platform] は、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、 [!DNL Apache Hadoop Distributed File System] （以下「HDFS」といいます） [!DNL Platform] ユーザーインターフェイス。
 
@@ -39,19 +39,19 @@ HDFS ソースコネクタを認証するには、次の接続プロパティの
 | ---------- | ----------- |
 | `url` | URL は、匿名で HDFS に接続するために必要な認証パラメーターを定義します。 この値の取得方法の詳細については、次のドキュメントを参照してください： [HDFS の HTTPS 認証](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 
-## HDFS アカウントを接続
+## HDFS アカウントを接続する
 
 必要な資格情報を収集したら、以下の手順に従って、HDFS アカウントをにリンクできます。 [!DNL Platform].
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、 **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 **[!UICONTROL クラウドストレージ]** カテゴリ、選択 **[!UICONTROL Apache HDFS]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい HDFS コネクタを作成します。
+の下 **[!UICONTROL クラウドストレージ]** カテゴリ、選択 **[!UICONTROL Apache HDFS]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい HDFS コネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/hdfs/catalog.png)
 
-この **[!UICONTROL HDFS に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL HDFS に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新しいアカウント
 

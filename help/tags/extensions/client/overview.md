@@ -1,5 +1,5 @@
 ---
-title: タグ拡張機能リファレンス
+title: タグ拡張のリファレンス
 description: Adobe Experience Platformのタグ拡張機能に関するドキュメントを検索します。
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
 source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
@@ -15,7 +15,7 @@ ht-degree: 86%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-次に、クライアント側タグ拡張のドキュメントのリストを示します。 使用可能なサーバー側拡張機能の一覧については、 [イベント転送拡張機能のリファレンス](../server/overview.md) 代わりに、
+次に、クライアント側タグ拡張機能のドキュメントのリストを示します。 使用可能なサーバー側拡張機能の一覧については、 [イベント転送拡張機能のリファレンス](../server/overview.md) 代わりに、
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ ht-degree: 86%
 
 * [Accessible Site Speed Metrics](https://exchange.adobe.com/apps/ec/103053)*
 * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)*
-* [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)*
+* [アクションページ更新](https://exchange.adobe.com/apps/ec/102848)*
 * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)

@@ -5,16 +5,16 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '492'
+ht-degree: 41%
 
 ---
 
-# 接続 [!DNL Amazon Redshift] ソースワークスペースを使用したアカウント
+# 接続する [!DNL Amazon Redshift] ソースワークスペースを使用したアカウント
 
 >[!IMPORTANT]
 >
->この [!DNL Amazon Redshift] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Amazon Redshift] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 このチュートリアルでは、 [!DNL Amazon Redshift] （以下「」という。）[!DNL Redshift]&quot;) ユーザーインターフェイスを使用してAdobe Experience Platformにアカウントする必要があります。
 
@@ -29,17 +29,17 @@ ht-degree: 0%
 
 既に有効な [!DNL Redshift] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 次の項目にアクセスするには、 [!DNL Redshift] Experience Platformのアカウントでは、次の値を指定する必要があります。
 
 | **資格情報** | **説明** |
 | -------------- | --------------- |
-| サーバー | サーバーが [!DNL Redshift] アカウント |
+| サーバー | サーバーが [!DNL Redshift] アカウント。 |
 | ポート | TCP ポート [!DNL Redshift] サーバーは、を使用してクライアント接続をリッスンします。 |
-| ユーザー名 | ユーザー名 [!DNL Redshift] アカウント |
-| パスワード | ユーザーに関連付けられたパスワード [!DNL Redshift] アカウント |
-| データベース | この [!DNL Redshift] アクセスするデータベース。 |
+| ユーザー名 | に関連付けられたユーザー名 [!DNL Redshift] アカウント。 |
+| パスワード | ユーザーに関連付けられたパスワード [!DNL Redshift] アカウント。 |
+| データベース | The [!DNL Redshift] アクセスするデータベース。 |
 
 の導入について詳しくは、 [この [!DNL Redshift] 文書](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 
@@ -51,19 +51,19 @@ ht-degree: 0%
 >
 >のデフォルトのエンコーディング規格 [!DNL Redshift] は Unicode です。 これは変更できません。
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、 **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL Amazon Redshift]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい [!DNL Redshift] コネクタ。
+の下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL Amazon Redshift]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい [!DNL Redshift] コネクタ。
 
 ![](../../../../images/tutorials/create/redshift/catalog.png)
 
-この **[!UICONTROL Amazon Redshift に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL Amazon Redshift に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Redshift] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL Redshift] 認証情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 
 ![](../../../../images/tutorials/create/redshift/new.png)
 

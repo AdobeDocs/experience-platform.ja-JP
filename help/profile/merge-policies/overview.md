@@ -22,7 +22,7 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 このガイドには、いくつかの重要な [!DNL Experience Platform] 機能に関する十分な知識が必要です。このガイドに従って結合ポリシーを使用する前に、次のサービスのドキュメントを確認してください。
 
 * [リアルタイム顧客プロファイル](../home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md):に取り込まれる様々なデータソースの ID を関連付けることで、リアルタイム顧客プロファイルを有効にします。 [!DNL Platform].
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md)：に取り込まれる様々なデータソースの ID を関連付けることで、リアルタイム顧客プロファイルを有効にします。 [!DNL Platform].
 * [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：[!DNL Platform]  が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
 
 ## 結合ポリシーについて

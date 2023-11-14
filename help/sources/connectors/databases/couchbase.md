@@ -15,7 +15,7 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->この [!DNL Couchbase] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>The [!DNL Couchbase] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 Adobe Experience Platformは、 [!DNL Microsoft]、MySQL および [!DNL Azure]を使用して、これらのシステムからデータを取り込むことができます。 リレーショナル、NoSQL、データウェアハウスなど、様々な種類のサードパーティデータベースがサポートされています。 データベースプロバイダーのサポートには以下が含まれます。 [!DNL Couchbase].
 

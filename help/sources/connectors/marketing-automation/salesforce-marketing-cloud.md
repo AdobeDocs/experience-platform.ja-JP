@@ -24,7 +24,7 @@ Experience Platformは、サードパーティのマーケティングオート�
 * `campaign_read`
 * `list_and_subscribers_read`
 
-スコープをリクエストするには、 `v2/userinfo` リソース [!DNL Salesforce Marketing Cloud] API 詳しくは、 [[!DNL Salesforce Marketing Cloud] API 統合権限スコープドキュメント](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) スコープのリクエスト方法と比較方法に関するガイダンスを参照してください。
+スコープをリクエストするには、 `v2/userinfo` リソース [!DNL Salesforce Marketing Cloud] API. 詳しくは、 [[!DNL Salesforce Marketing Cloud] API 統合権限スコープドキュメント](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) スコープのリクエスト方法と比較方法に関するガイダンスを参照してください。
 
 スコープの関連する権限と動作の一覧を含むスコープの詳細については、次を参照してください [[!DNL Salesforce Marketing Cloud] REST API ドキュメント](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 

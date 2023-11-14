@@ -19,7 +19,7 @@ Platform UI のワークスペースにアクセスするには、「 **[!UICONT
 
 ![](../images/ui/overview/schemas-tab.png)
 
-## Destination SDK の
+## はじめに
 
 初めてワークスペースを使用する場合は、まず [UI の既存のリソースの詳細](./explore.md) を参照して、様々なタブとスキーマキャンバスについて理解します。
 

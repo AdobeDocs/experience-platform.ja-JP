@@ -16,7 +16,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->この [!DNL HP Vertica] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細
+>The [!DNL HP Vertica] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -29,7 +29,7 @@ ht-degree: 65%
 * [ソース](../../../../home.md)[!DNL Platform]：Experience を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)[!DNL Platform]：Experience には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL HP Vertica] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL HP Vertica] の使用 [!DNL Flow Service] API.
 
 ### 必要な資格情報の収集
 
@@ -37,7 +37,7 @@ ht-degree: 65%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | の [!DNL HP Vertica] インスタンス。 次の接続文字列パターン： [!DNL HP Vertica] が `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
+| `connectionString` | に接続するために使用される接続文字列 [!DNL HP Vertica] インスタンス。 次の接続文字列パターン： [!DNL HP Vertica] 次に該当 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL HP Vertica] 次に該当： `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 接続文字列の取得について詳しくは、 [この HP Vertica ドキュメント](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
@@ -89,8 +89,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 次に示すように、 [!DNL HP Vertica] アカウント 次の接続文字列パターン： [!DNL HP Vertica] 次に該当： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | この [!DNL HP Vertica] 接続仕様 ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `auth.params.connectionString` | 次に示すように、 [!DNL HP Vertica] アカウント。 次の接続文字列パターン： [!DNL HP Vertica] 次に該当： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | The [!DNL HP Vertica] 接続仕様 ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **応答**
 

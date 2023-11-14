@@ -1,7 +1,7 @@
 ---
 title: Customer.io ソースの概要
-description: Web フックを活用して、API またはユーザーインターフェイスを使用して Customer.io をAdobe Experience Platformに接続する方法を説明します
-badge: ベータ
+description: Web フックを活用して、API またはユーザーインターフェイスを使用して Customer.io をAdobe Experience Platformに接続する方法を説明します。
+badge: ベータ版
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -22,7 +22,7 @@ Experience Platformは、ストリーミングアプリケーションからデ�
 
 [[!DNL Customer.io]](https://customer.io/) は、データ駆動型の E メール、プッシュ通知、アプリ内メッセージおよび SMS をより制御し柔軟に作成して送信できるようにする、マーケター向けの自動メッセージングプラットフォームです。
 
-この [!DNL Customer.io] ソースを使用すると、サポートされる webhook イベントスキーマとその関連イベントデータを [!DNL Customer.io] の使用 [[!DNL Customer.io] ウェブフックのレポート](https://customer.io/docs/api/webhooks/).
+The [!DNL Customer.io] ソースを使用すると、サポートされる webhook イベントスキーマとそれに関連するイベントデータを [!DNL Customer.io] の使用 [[!DNL Customer.io] ウェブフックのレポート](https://customer.io/docs/api/webhooks/).
 
 サポートされる Webhook イベントスキーマは次のとおりです。
 
@@ -40,7 +40,7 @@ Web フックで使用できるイベントのリストについては、 [[!DNL
 
 事前に [!DNL Customer.io] ソース接続を使用する場合は、まず次の点を確認する必要があります。
 
-* A [!DNL Customer.io] アカウント もし誰も読んでいないなら [[!DNL Customer.io] 登録ページ](https://fly.customer.io/signup) をクリックして、アカウントを登録および作成します。
+* A [!DNL Customer.io] アカウント。 もし誰も読んでいないなら [[!DNL Customer.io] 登録ページ](https://fly.customer.io/signup) をクリックして、アカウントを登録および作成します。
 * アカウントを作成したら、アカウントの検証もおこなう必要があります。 次に示す手順に従います： [[!DNL Customer.io] アカウントの検証](https://customer.io/docs/account-verification/) ページを開き、プロセスを完了します。
 
 ### 設定 [!DNL Customer.io] ウェブフック {#set-up-webhook}

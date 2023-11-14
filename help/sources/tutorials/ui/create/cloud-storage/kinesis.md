@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '474'
+ht-degree: 44%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Amazon Kinesis] ( 以下「 [!DNL "Kinesis"]) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
 
@@ -29,35 +29,35 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 既に有効な [!DNL Kinesis] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/streaming/cloud-storage-streaming.md)に関するチュートリアルに進むことができます。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
-を認証するために [!DNL Kinesis] ソースコネクタの場合、次の接続プロパティの値を指定する必要があります。
+を認証するために、 [!DNL Kinesis] ソースコネクタの場合、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | のアクセスキー ID [!DNL Kinesis] アカウント |
-| `Secret access key` | の秘密アクセスキー [!DNL Kinesis] アカウント |
+| `accessKeyId` | のアクセスキー ID [!DNL Kinesis] アカウント。 |
+| `Secret access key` | の秘密アクセスキー [!DNL Kinesis] アカウント。 |
 | `region` | AWSサーバーの地域です。 |
 
 これらの値について詳しくは、 [この [!DNL Kinesis] 文書](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ## [!DNL Kinesis] アカウントの接続
 
-必要な認証情報が揃ったら、次の手順に従って、[!DNL Kinesis] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL Kinesis] アカウントを [!DNL Platform] にリンクします。
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、 **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 **[!UICONTROL クラウドストレージ]** カテゴリ、選択 **[!UICONTROL Amazon Kinesis]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい [!DNL Kinesis] コネクタ。
+の下 **[!UICONTROL クラウドストレージ]** カテゴリ、選択 **[!UICONTROL Amazon Kinesis]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい [!DNL Kinesis] コネクタ。
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-この **[!UICONTROL Amazon Kinesisに接続]** ダイアログが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+The **[!UICONTROL Amazon Kinesisに接続]** ダイアログが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新規アカウント
 
-新しい資格情報を使用している場合は、「 **[!UICONTROL 新規アカウント]**. 表示される入力フォームで、名前、説明（オプション）および [!DNL Kinesis] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「 」を選択します。 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、名前、説明（オプション）および [!DNL Kinesis] 認証情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
 
 ![](../../../../images/tutorials/create/kinesis/new.png)
 

@@ -26,23 +26,23 @@ ht-degree: 27%
 * [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Experience Platformサービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 * [サンドボックス](../../../../../sandboxes/home.md):Experience Platformは、単一のExperience Platformインスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、 [!DNL Flow Service] API
+以下の節では、 [!DNL Flow Service] API.
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] Google Ads と接続するには、次の接続プロパティの値を指定する必要があります。
+次の条件を満たすため [!DNL Flow Service] Google Ads と接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `clientCustomerId` | クライアント顧客 ID は、Google Ads API で管理するGoogle Ads クライアントアカウントに対応するアカウント番号です。 この ID は、 `123-456-7890`. |
 | `loginCustomerId` | ログイン顧客 ID は、Google Ads Manager アカウントに対応するアカウント番号で、特定のオペレーティング顧客からレポートデータを取得するために使用されます。 ログイン顧客 ID について詳しくは、 [Google Ads API ドキュメント](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
-| `developerToken` | 開発者トークンを使用すると、Google Ads API にアクセスできます。 同じ開発者トークンを使用して、すべてのGoogle Ads アカウントに対してリクエストを実行できます。 次の方法で開発者トークンを取得します： [マネージャーアカウントへのログイン](https://ads.google.com/home/tools/manager-accounts/) 次に、 [!DNL API Center] ページ。 |
+| `developerToken` | 開発者トークンを使用すると、Google Ads API にアクセスできます。 同じ開発者トークンを使用して、すべてのGoogle Ads アカウントに対してリクエストを実行できます。 次の方法で開発者トークンを取得します： [マネージャーアカウントへのログイン](https://ads.google.com/home/tools/manager-accounts/) その後、 [!DNL API Center] ページに貼り付けます。 |
 | `refreshToken` | 更新トークンは、 [!DNL OAuth2] 認証。 このトークンを使用すると、期限切れになったアクセストークンを再生成できます。 |
 | `clientId` | クライアント ID は、 [!DNL OAuth2] 認証。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleへのアプリケーションを識別し、アカウントに代わってアプリケーションを操作できます。 |
-| `clientSecret` | クライアントシークレットは、 [!DNL OAuth2] 認証。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleへのアプリケーションを識別し、アカウントに代わってアプリケーションを操作できます。 |
+| `clientSecret` | クライアントの秘密鍵は、 [!DNL OAuth2] 認証。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleへのアプリケーションを識別し、アカウントに代わってアプリケーションを操作できます。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。Google Ads の接続仕様 ID は次のとおりです。 `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
-API の概要に関するドキュメント ( [Google Ads の概要の詳細](https://developers.google.com/google-ads/api/docs/first-call/overview).
+API の概要に関するドキュメント ( [Google Ads の使用開始に関する詳細](https://developers.google.com/google-ads/api/docs/first-call/overview).
 
 ### Platform API の使用
 
@@ -117,7 +117,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、Google Ads のベース接続を [!DNL Flow Service] API このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルに従って、Google Ads のベース接続を [!DNL Flow Service] API. このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [データフローを作成し、 [!DNL Flow Service] API](../../collect/advertising.md)

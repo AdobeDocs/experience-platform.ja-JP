@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 * [Observability では、統計的な指標とイベント通知を使用して Platform アクティビティを監視できます。](../../observability/home.md)[!DNL Observability Insights]
    * [アラート](../../observability/alerts/overview.md):Platform 操作で特定の条件に達すると（システムがしきい値に達した場合に問題が発生する可能性があるなど）、Platform は、組織内で条件を購読したユーザーにアラートメッセージを配信できます。
 
-## UI でアラートを購読 {#subscribe-destination-alerts}
+## UI でのアラートの登録 {#subscribe-destination-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"

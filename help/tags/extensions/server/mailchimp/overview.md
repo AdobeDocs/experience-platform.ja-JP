@@ -1,6 +1,6 @@
 ---
 title: Mailchimp 拡張機能の概要
-description: イベント転送を使用して Mailchimp メールをトリガーにします。
+description: Mailchimp メールへのイベント転送をトリガーします。
 type: Documentation
 feature: Data Collection, Event Forwarding
 level: Beginner
@@ -47,9 +47,9 @@ Mailchimp にログインし、ダッシュボードビューにランディン�
 
 ### API キー
 
-アカウントの API キーを見つけるには、Mailchimp UI で自分のプロファイルアイコンを選択し、 **プロファイル**. 次のような URL が表示されます。 `https://us11.admin.mailchimp.com/account/profile/` しかし **あなたの** の代わりにプレフィックス `us11`.
+アカウントの API キーを見つけるには、Mailchimp UI でプロファイルアイコンを選択し、 **プロファイル**. 次のような URL が表示されます。 `https://us11.admin.mailchimp.com/account/profile/` しかし **あなたの** の代わりにプレフィックス `us11`.
 
-選択 **追加**&#x200B;を、 **API キー**:
+選択 **Extras**&#x200B;を、 **API キー**:
 
 ![追加メニュー、API キーリンク](../../../images/extensions/server/mailchimp/menu-API-keys.png)
 
@@ -63,7 +63,7 @@ Mailchimp にログインし、ダッシュボードビューにランディン�
 
 設定画面の下部に、次の内容が表示されます。 `Unique id for audience [audience name]` 場所 `[audience name]` は、実際のオーディエンスの名前です。 オーディエンス ID をコピーして保存し、後の手順で使用できます。
 
-選択 **オーディエンス名とデフォルト** そして確認する **デフォルトの送信元メールアドレス** には、キャンペーンに適した値があります。 オーディエンス ID はこのページの上部にも表示され、前の手順でコピーした値と同じです。
+選択 **オーディエンス名とデフォルト** そして確認する **デフォルトの送信元電子メールアドレス** には、キャンペーンに適した値があります。 オーディエンス ID はこのページの上部にも表示され、前の手順でコピーした値と同じです。
 
 ## Mailchimp 自動化
 
@@ -93,11 +93,11 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 
 >[!IMPORTANT]
 >
->次を含めない `http://` または `https://` を選択します。
+>次を含めない `http://` または `https://` 」と入力します。
 
 ![拡張機能の設定](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-の下 **[!UICONTROL Mailchimp トークン]**、データ要素アイコンを選択し、 `Mailchimp Token` 作成済みのデータ要素。 選択 **[!UICONTROL 保存]** 変更を保存します。
+の下 **[!UICONTROL Mailchimp トークン]**、データ要素アイコンを選択し、 `Mailchimp Token` 作成済みのデータ要素。 選択 **[!UICONTROL 保存]** をクリックして変更を保存します。
 
 これで、拡張機能がインストールされ、プロパティで使用するように設定されました。
 
@@ -107,7 +107,7 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 
 この拡張機能で必要なデータは、XDM データまたは非 XDM データとして Web SDK から送信できます。 詳しくは、ドキュメントを参照してください。 [XDM データの送信](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 
-例えば、顧客がサイト上でイベントを購入したり登録したりした場合、Mailchimp 経由でこの拡張機能を持つ確認メールを送信できます。 Web SDK から Edge ネットワークに必要な情報を送信すると、拡張機能は Mailchimp で E メールをトリガーします。
+例えば、顧客がサイト上でイベントを購入したり登録したりした場合、Mailchimp 経由でこの拡張機能を持つ確認メールを送信できます。 Web SDK から Edge ネットワークに必要な情報を送信すると、拡張機能は Mailchimp と共に E メールをトリガーします。
 
 ![イベントアクション設定を追加](../../../images/extensions/server/mailchimp/action-configurations.png)
 
@@ -119,7 +119,7 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 
 | 名前 | パスの例 | タイプ | 説明 | 必須 | 制限 |
 |:---|:---:|:---:|:---|:---:|:---|
-| `email` | `arc.event.xdm._tenant.emailId`<br /> または<br /> `arc.event.data._tenant.emailId` | 文字列 | 電子メールを受信するアドレス | **○** | Mailchimp オーディエンスに存在する必要があります |
+| `email` | `arc.event.xdm._tenant.emailId`<br /> または<br /> `arc.event.data._tenant.emailId` | 文字列 | E メールを受信するアドレス | **○** | Mailchimp オーディエンスに存在する必要があります |
 | `listId` | `arc.event.xdm._tenant.listId`<br /> または<br /> `arc.event.data._tenant.listid` | 文字列 | オーディエンス ID | **○** | 既存のオーディエンス ID と一致する必要があります |
 | `name` | `arc.event.xdm._tenant.name`<br /> または<br /> `arc.event.data._tenant.name` | 文字列 | イベント名 | **○** | 2～30 文字 |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> または<br /> `arc.event.data._tenant.properties` | オブジェクト | JSON 形式のプロパティのオプションのリストとイベントの詳細 | × |  |
@@ -130,9 +130,9 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 
 >[!IMPORTANT]
 >  
->この **パスの例** 上記の値は例です。 フィールド名と [パス](../../../ui/event-forwarding/overview.md#data-element-path) 上記の手順で Web SDK に名前を付けて設定した方法によっては、これらのデータ要素で参照されるデータがプロパティで異なる場合があります。
+>The **パスの例** 上記の値は例です。 フィールド名と [パス](../../../ui/event-forwarding/overview.md#data-element-path) 上記の手順で Web SDK に名前を付けて設定した方法によっては、これらのデータ要素で参照されるデータがプロパティで異なる場合があります。
 
-イベント転送プロパティで、上記の各フィールドのデータ要素を作成できます。 作成したデータ要素は、 [!UICONTROL イベントを追加] この拡張機能のアクション。
+イベント転送プロパティでは、上記の各フィールドに対してデータ要素を作成できます。 作成したデータ要素は、 [!UICONTROL イベントを追加] この拡張機能のアクション。
 
 ![イベントアクション設定を追加](../../../images/extensions/server/mailchimp/action-configurations.png)
 

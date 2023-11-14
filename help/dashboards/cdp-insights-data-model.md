@@ -1,15 +1,15 @@
 ---
-title: Real-time Customer Data Platform Insights データモデル
+title: Real-time Customer Data Platform インサイトデータモデル
 description: Real-time Customer Data Platformインサイトのデータモデルで SQL クエリを使用して、マーケティングおよび KPI の使用例に合わせて独自のReal-Time CDPレポートをカスタマイズする方法を説明します。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# Real-time Customer Data Platform Insights データモデル
+# Real-time Customer Data Platform インサイトデータモデル
 
 Real-time Customer Data Platformインサイトデータモデル機能では、様々なプロファイル、宛先、セグメント化ウィジェットに関するインサイトを強化するデータモデルと SQL が表示されます。 これらの SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標 (KPI) の使用例に関するReal-Time CDPレポートを作成できます。 ユーザー定義のダッシュボードのカスタムウィジェットとして、これらのインサイトを使用できます。 詳しくは、 Query Accelerated Store reporting Insights のドキュメントを参照してください [クエリサービスを通じてレポートインサイトデータモデルを構築し、高速ストアデータとユーザー定義ダッシュボードで使用する方法](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
@@ -39,7 +39,7 @@ Real-Time CDPレポートは、プロファイルデータと、そのオーデ�
 
 #### プロファイル数の使用例
 
-プロファイル数ウィジェットに使用されるロジックは、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数を返します。 詳しくは、 [[!UICONTROL プロファイル数] ウィジェットドキュメント](./guides/profiles.md#profile-count) を参照してください。
+プロファイル数ウィジェットに使用されるロジックは、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数を返します。 詳しくは、 [[!UICONTROL プロファイル数] widget ドキュメント](./guides/profiles.md#profile-count) を参照してください。
 
 を生成する SQL [!UICONTROL プロファイル数] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -59,7 +59,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 #### 単一の ID プロファイルの使用例
 
-に使用されるロジック [!UICONTROL 単一の ID プロファイル] ウィジェットは、id を作成する 1 つのタイプの ID のみを持つ組織のプロファイルの数を提供します。 詳しくは、[[!UICONTROL 単一の ID プロファイル] ウィジェットドキュメント](./guides/profiles.md#single-identity-profiles) を参照してください。
+に使用されるロジック [!UICONTROL 単一の ID プロファイル] ウィジェットは、id を作成する 1 つのタイプの ID のみを持つ組織のプロファイルの数を提供します。 詳しくは、[[!UICONTROL 単一の ID プロファイル] widget ドキュメント](./guides/profiles.md#single-identity-profiles) を参照してください。
 
 を生成する SQL [!UICONTROL 単一の ID プロファイル] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -92,7 +92,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 #### ID 別プロファイルのユースケース
 
-[!UICONTROL ID 別プロファイル]ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 詳しくは、 [[!UICONTROL ID 別プロファイル] ウィジェットドキュメント](./guides/profiles.md#profiles-by-identity) を参照してください。
+[!UICONTROL ID 別プロファイル]ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 詳しくは、 [[!UICONTROL ID 別プロファイル] widget ドキュメント](./guides/profiles.md#profiles-by-identity) を参照してください。
 
 を生成する SQL [!UICONTROL ID 別プロファイル] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -162,7 +162,7 @@ GROUP BY
 
 #### オーディエンスサイズの使用例
 
-に使用されるロジック [!UICONTROL オーディエンスサイズ] ウィジェットは、最新のスナップショットの時点での、選択したオーディエンス内の結合されたプロファイルの合計数を返します。 詳しくは、 [[!UICONTROL オーディエンスサイズ] ウィジェットドキュメント](./guides/audiences.md#audience-size) を参照してください。
+に使用されるロジック [!UICONTROL オーディエンスサイズ] ウィジェットは、最新のスナップショットの時点での、選択したオーディエンス内の結合されたプロファイルの合計数を返します。 詳しくは、 [[!UICONTROL オーディエンスサイズ] widget ドキュメント](./guides/audiences.md#audience-size) を参照してください。
 
 を生成する SQL [!UICONTROL オーディエンスサイズ] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### オーディエンスサイズの変更のトレンドの使用例
 
-に使用されるロジック [!UICONTROL オーディエンスサイズの変更の傾向] widget は、最新の日別スナップショット間の特定のオーディエンスについて認定されたプロファイルの合計数の違いを示す線グラフを提供します。 詳しくは、 [[!UICONTROL オーディエンスサイズの変更の傾向] ウィジェットドキュメント](./guides/audiences.md#audience-size-change-trend) を参照してください。
+に使用されるロジック [!UICONTROL オーディエンスサイズの変更の傾向] widget は、最新の日別スナップショット間の特定のオーディエンスについて認定されたプロファイルの合計数の違いを示す線グラフを提供します。 詳しくは、 [[!UICONTROL オーディエンスサイズの変更の傾向] widget ドキュメント](./guides/audiences.md#audience-size-change-trend) を参照してください。
 
 を生成する SQL [!UICONTROL オーディエンスサイズの変更の傾向] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -239,7 +239,7 @@ FROM
 
 #### 最近アクティブ化されたオーディエンスの使用例
 
-のロジック [!UICONTROL 最近アクティブ化されたオーディエンス] ウィジェットは、宛先に最も最近マッピングされたオーディエンスのリストを提供します。 このリストには、システムでアクティブに使用されているオーディエンスと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、 [[!UICONTROL 最近アクティブ化されたオーディエンス] ウィジェットドキュメント](./guides/destinations.md#recently-activated-audiences) を参照してください。
+のロジック [!UICONTROL 最近アクティブ化されたオーディエンス] ウィジェットは、宛先に最も最近マッピングされたオーディエンスのリストを提供します。 このリストには、システムでアクティブに使用されているオーディエンスと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。詳しくは、 [[!UICONTROL 最近アクティブ化されたオーディエンス] widget ドキュメント](./guides/destinations.md#recently-activated-audiences) を参照してください。
 
 を生成する SQL [!UICONTROL 最近アクティブ化されたオーディエンス] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -274,7 +274,7 @@ namespace-audience モデルは、次のデータセットで構成されます�
 
 #### オーディエンスの使用例の ID 別プロファイル
 
-で使用されるロジック [!UICONTROL ID 別プロファイル] ウィジェットは、特定のオーディエンスに対して、プロファイルストア内のすべての結合プロファイルで id を分類します。 詳しくは、 [[!UICONTROL ID 別プロファイル] ウィジェットドキュメント](./guides/audiences.md#profiles-by-identity) を参照してください。
+で使用されるロジック [!UICONTROL ID 別プロファイル] ウィジェットは、特定のオーディエンスに対して、プロファイルストア内のすべての結合プロファイルで id を分類します。 詳しくは、 [[!UICONTROL ID 別プロファイル] widget ドキュメント](./guides/audiences.md#profiles-by-identity) を参照してください。
 
 を生成する SQL [!UICONTROL ID 別プロファイル] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -295,7 +295,7 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 +++
 
-### 重複名前空間モデル
+### 名前空間モデルの重複
 
 重複名前空間モデルは、次のデータセットで構成されます。
 

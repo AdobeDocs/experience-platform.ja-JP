@@ -5,7 +5,7 @@ exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
 source-wordcount: '524'
-ht-degree: 37%
+ht-degree: 38%
 
 ---
 
@@ -171,8 +171,8 @@ ht-degree: 37%
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* 付録の [候補リストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法](#picklist-type-fields) を参照してください。 | 使用可能なおよびの値とラベルのリスト `record1objecttypecode` ソースフィールドについては、次を参照してください。 [[!DNL Microsoft Dynamics] 接続エンティティ参照ドキュメント](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* 付録の [候補リストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法](#picklist-type-fields) を参照してください。 | 使用可能なおよびの値とラベルのリスト `record2objecttypecode` ソースフィールドについては、次を参照してください。 [[!DNL Microsoft Dynamics] 接続エンティティ参照ドキュメント](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* 付録の「 [候補リストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法](#picklist-type-fields) を参照してください。 | 使用可能なおよびの値とラベルのリスト `record1objecttypecode` ソースフィールドについては、次を参照してください。 [[!DNL Microsoft Dynamics] 接続エンティティ参照ドキュメント](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* 付録の「 [候補リストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法](#picklist-type-fields) を参照してください。 | 使用可能なおよびの値とラベルのリスト `record2objecttypecode` ソースフィールドについては、次を参照してください。 [[!DNL Microsoft Dynamics] 接続エンティティ参照ドキュメント](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
@@ -253,7 +253,7 @@ ht-degree: 37%
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-このシナリオでは、キーがオプションで見つかった場合は値がキーに対応し、見つかった場合は値がキーに対応します。 `default`、 `default` が存在し、キーが見つかりません。 値は、 `null` オプションの場合 `null` または `default` キーが見つかりません。
+このシナリオでは、キーがオプションで見つかった場合は値がキーに対応し、見つかった場合は値がキーに対応します。 `default`、 `default` が存在し、キーが見つかりません。 値は、に対応します。 `null` オプションの場合 `null` または `default` キーが見つかりません。
 
 #### 計算フィールドを使用
 

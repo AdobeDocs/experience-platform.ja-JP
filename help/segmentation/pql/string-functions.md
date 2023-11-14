@@ -103,7 +103,7 @@ person.name.doesNotStartWith("Joe")
 
 **例**
 
-次の PQL クエリでは、大文字と小文字を区別したうえで、人の E メールアドレスが「.com」で終わるかどうかを判定します。
+次の PQL クエリでは、大文字と小文字を区別したうえで、人のメールアドレスが「.com」で終わるかどうかを判定します。
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -127,7 +127,7 @@ person.emailAddress.endsWith(".com")
 
 **例**
 
-次の PQL クエリでは、大文字と小文字を区別したうえで、人の E メールアドレスが「.com」で終わらないかどうかを判定します。
+次の PQL クエリでは、大文字と小文字を区別したうえで、人のメールアドレスが「.com」で終わらないかどうかを判定します。
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -151,7 +151,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 **例**
 
-次の PQL クエリでは、大文字と小文字を区別したうえで、人の E メールアドレスが「2010@gm」という文字列を含んでいるかどうかを判定します。
+次の PQL クエリでは、大文字と小文字を区別したうえで、人のメールアドレスが「2010@gm」という文字列を含んでいるかどうかを判定します。
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -175,7 +175,7 @@ person.emailAddress.contains("2010@gm")
 
 **例**
 
-次の PQL クエリでは、大文字と小文字を区別したうえで、人の E メールアドレスが「2010@gm」という文字列を含んでいないかどうかを判定します。
+次の PQL クエリでは、大文字と小文字を区別したうえで、人のメールアドレスが「2010@gm」という文字列を含んでいないかどうかを判定します。
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -261,7 +261,7 @@ person.name.matches("(?i)^John")
 
 **例**
 
-次の PQL クエリは、E メールアドレスからドメイン名を抽出するために使用します。
+次の PQL クエリは、メールアドレスからドメイン名を抽出するために使用します。
 
 ```sql
 emailAddress.regexGroup("@(\\w+)", 1)

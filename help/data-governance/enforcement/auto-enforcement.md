@@ -5,7 +5,7 @@ title: ポリシーの自動適用
 description: このドキュメントでは、Experience Platform 内の宛先に対してオーディエンスをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 * [Adobe Experience Platform Data Governance](../home.md)：Platform がラベルとポリシーを通じてデータ使用のコンプライアンスを適用するフレームワークです。
 * [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)：[!DNL Platform] 内のセグメント化エンジンで、顧客の行動と属性に基づいて顧客プロファイルからオーディエンスを作成するのに使用されます。
-* [宛先](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合であり、Platform のデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、E メールキャンペーン、ターゲット広告などを実現できます。
+* [宛先](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合であり、Platform のデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などを実現できます。
 
 ## 適用フロー {#flow}
 

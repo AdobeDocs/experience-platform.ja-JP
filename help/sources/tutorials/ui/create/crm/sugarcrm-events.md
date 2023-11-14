@@ -24,11 +24,11 @@ ht-degree: 46%
 
 有効な [!DNL SugarCRM] アカウントを既にお持ちの場合は、このドキュメントの残りの部分をスキップし、[データフローの設定](../../dataflow/crm.md)に関するチュートリアルに進んでください。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL SugarCRM Events] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 | 例 |
+| 資格情報 | 説明 | 例 |
 | --- | --- | --- |
 | `Host` | ソースが接続する SugarCRM API エンドポイント。 | `developer.salesfusion.com` |
 | `Username` | SugarCRM 開発者アカウントのユーザー名。 | `abc.def@example.com@sugarmarketdemo000.com` |
@@ -64,7 +64,7 @@ The **[!UICONTROL SugarCRM イベントアカウントを接続]** ページが�
 
 ### 新規アカウント
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の認証情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の資格情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![SugarCRM イベントアカウントを新しいアカウントに接続するための Platform UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-events/new.png)
 

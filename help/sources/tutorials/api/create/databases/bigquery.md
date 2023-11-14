@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '535'
+ht-degree: 59%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->この [!DNL Google BigQuery] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>The [!DNL Google BigQuery] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -27,15 +27,15 @@ ht-degree: 0%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Google BigQuery] の使用 [!DNL Flow Service] API
+次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Google BigQuery] の使用 [!DNL Flow Service] API.
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] 接続する [!DNL Google BigQuery] Platform では、次の OAuth 2.0 認証値を指定する必要があります。
+次の条件を満たすため [!DNL Flow Service] 接続する [!DNL Google BigQuery] Platform では、次の OAuth 2.0 認証値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `project` | デフォルトのプロジェクト ID [!DNL Google BigQuery] クエリするプロジェクト。 |
+| `project` | デフォルトのプロジェクト ID [!DNL Google BigQuery] クエリ対象のプロジェクト。 |
 | `clientID` | 更新トークンの生成に使用する ID 値。 |
 | `clientSecret` | 更新トークンの生成に使用するシークレット値。 |
 | `refreshToken` | から取得した更新トークン [!DNL Google] ～へのアクセスを許可するために使用される [!DNL Google BigQuery]. |
@@ -94,11 +94,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.project` | デフォルトのプロジェクト ID [!DNL Google BigQuery] クエリするプロジェクト。 対して |
+| `auth.params.project` | デフォルトのプロジェクト ID [!DNL Google BigQuery] プロジェクトをクエリします。 対して |
 | `auth.params.clientId` | 更新トークンの生成に使用する ID 値。 |
 | `auth.params.clientSecret` | 更新トークンの生成に使用するクライアント値。 |
 | `auth.params.refreshToken` | から取得した更新トークン [!DNL Google] ～へのアクセスを許可するために使用される [!DNL Google BigQuery]. |
-| `connectionSpec.id` | この [!DNL Google BigQuery] 接続仕様 ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `connectionSpec.id` | The [!DNL Google BigQuery] 接続仕様 ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 **応答**
 

@@ -1,11 +1,11 @@
 ---
 description: Adobe Experience Platform UI でテンプレートを使用して、B2B データのデータ取り込みプロセスを高速化する方法を説明します。
 title: UI のテンプレートを使用してソースのデータフローを作成する
-badge1: "Beta"
+badge1: 「ベータ版」
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2259'
 ht-degree: 44%
 
 ---
