@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1806'
-ht-degree: 94%
+source-wordcount: '1833'
+ht-degree: 93%
 
 ---
 
@@ -14,7 +14,15 @@ ht-degree: 94%
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
 
-## バージョン2.21.0 - 2023 年 11 月 1 日
+## バージョン2.21.3 - 2023 年 11 月 10 日
+
+Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます。
+
+**修正点および改善点**
+
+* 提案配列が `Send event complete` イベントは常に空でした。
+
+## バージョン2.21.2 - 2023 年 11 月 1 日
 
 **新機能**
 

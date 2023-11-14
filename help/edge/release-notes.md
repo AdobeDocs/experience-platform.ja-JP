@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1678'
 ht-degree: 93%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 93%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
+
+## バージョン2.19.1 - 2023 年 11 月 10 日
+
+**修正点および改善点**
+
+* 提案配列が `sendEvent` 呼び出しは常に空でした。
 
 ## バージョン2.19.0 - 2023 年 11 月 1 日
 
