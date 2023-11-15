@@ -5,10 +5,10 @@ title: リアルタイム顧客プロファイルでのプライバシーリク�
 type: Documentation
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
+source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 26%
+source-wordcount: '1739'
+ht-degree: 25%
 
 ---
 
@@ -46,13 +46,14 @@ ID サービスは、グローバルに定義された（標準）ID および�
 
 ## リクエストの送信 {#submit}
 
-以下のセクションでは、[!DNL Privacy Service] の API または UI を使用して [!DNL Real-Time Customer Profile] に対しプライバシーリクエストを行う方法について概説しています。これらの節を読む前に、 [Privacy ServiceAPI](../privacy-service/api/getting-started.md) または [Privacy ServiceUI](../privacy-service/ui/overview.md) リクエストペイロードで送信されたユーザー id データを適切に書式設定する方法など、プライバシージョブを送信する手順に関する完全なドキュメントです。
+以下のセクションでは、[!DNL Privacy Service] の API または UI を使用して [!DNL Real-Time Customer Profile] に対しプライバシーリクエストを行う方法について概説しています。これらの節を読む前に、 [Privacy ServiceAPI](../privacy-service/api/getting-started.md) または [Privacy ServiceUI](../privacy-service/ui/overview.md) ドキュメント。 これらのドキュメントでは、リクエストペイロードで送信されたユーザー ID データを適切に書式設定する方法など、プライバシージョブを送信する方法に関する完全な手順を説明します。
 
 >[!IMPORTANT]
 >
 >Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行しない結合ポリシーを使用するデータ。 詳しくは、 [結合ポリシーの制限](#merge-policy-limitations) を参照してください。
 >
->プライバシーリクエストが完了するまでにかかる時間に注意してください **できません** 保証されている。 変更が [!DNL Profile] リクエストの処理中にデータを保証することはできません。
+>プライバシーリクエストは規制要件内で非同期的に処理され、完了までに要する時間は異なる場合があります。 変更が [!DNL Profile] リクエストの処理中にデータが処理される場合、そのリクエストで受信レコードも処理される保証はありません。 プライバシージョブが要求された時点でデータレイクまたはプロファイルストアに保持されているプロファイルのみ、削除が保証されます。 削除ジョブ中に削除要求の対象に関連するプロファイルデータを取り込んだ場合、すべてのプロファイルフラグメントが削除される保証はありません。
+>データがレコードストアに挿入されるので、削除リクエストの際には Platform またはプロファイルサービスで受信するデータを認識しておく必要があります。 削除された、または削除中のデータの取り込みについて慎重におこなう必要があります。
 
 ### API の使用
 
@@ -222,6 +223,6 @@ Privacy Serviceは処理のみ可能 [!DNL Profile] id ステッチを実行し�
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Experience Platform] におけるプライバシーリクエストの処理に関する重要な概念について説明します。ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるには、このガイド全体で提供されるドキュメントを引き続きお読みください。
+このドキュメントでは、[!DNL Experience Platform] におけるプライバシーリクエストの処理に関する重要な概念について説明します。ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるには、このガイドに記載されているドキュメントを引き続きお読みください。
 
 のプライバシーリクエストの処理に関する情報 [!DNL Platform] 使用されないリソース [!DNL Profile]を参照してください。 [データレイクでのプライバシーリクエストの処理](../catalog/privacy.md).

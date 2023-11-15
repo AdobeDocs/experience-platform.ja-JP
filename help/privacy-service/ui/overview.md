@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy ServiceUI の概要
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視します。
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 34%
+source-wordcount: '227'
+ht-degree: 31%
 
 ---
 
@@ -22,23 +22,24 @@ Privacy ServiceUI [!DNL Privacy Service] では、様々なAdobe Experience Clou
 
 >[!NOTE]
 >
->Privacy ServiceAPI を使用したプログラムによるコンプライアンスリクエストの管理について詳しくは、 [Privacy ServiceAPI ガイド](../api/overview.md).
+>Privacy ServiceAPI を使用したプログラムによるコンプライアンスリクエストの管理について詳しくは、 [Privacy ServiceAPI ガイド](../api/overview.md). ドキュメント番号を参照 [Privacy Service権限の管理](../permissions.md) を参照してください。
 
 ## にログインします。 [!DNL Privacy Service] UI
 
 >[!IMPORTANT]
 >
->への認証をおこなうには、Adobe IDが必要です [!DNL Privacy Service] UI また、組織内のシステム管理者権限が必要です。
+>への認証をおこなうには、Adobe IDが必要です [!DNL Privacy Service] UI
 
 UI にアクセスするには、にログインします。 [Adobe Experience Cloud](https://experience.adobe.com/) を選択し、 **[!UICONTROL プライバシー UI]** をクリックします。
 
-![](../images/ui-overview/quick-access.png)
+![プライバシー UI がハイライトされたExperience Cloudダッシュボード。](../images/ui-overview/quick-access.png)
+
 
 ### からのログイン [!DNL Experience Platform]
 
 Adobe Experience Platform UI にアクセスできる場合は、 [!DNL Privacy Service] UI( **[!UICONTROL リクエスト]** 」タブをクリックします。
 
-![](../images/ui-overview/platform.png)
+![左側のナビゲーションバーでリクエストがハイライトされたAdobe Experience Platform UI。](../images/ui-overview/platform.png)
 
 ## 次の手順
 
