@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；スト
 title: フローサービス API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、フローサービス API を使用して生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
+source-git-commit: f94a51e22731977e120351c3b3598570666a624d
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 39%
+source-wordcount: '1552'
+ht-degree: 38%
 
 ---
 
@@ -15,14 +15,14 @@ ht-degree: 39%
 
 フローサービスは、Adobe Experience Platform内の様々なソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされるすべてのソースから接続できます。
 
-このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してストリーミング接続を作成する手順を説明します。 [!DNL Flow Service] API
+このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してストリーミング接続を作成する手順を説明します。 [!DNL Flow Service] API.
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):標準化されたフレームワーク [!DNL Platform] はエクスペリエンスデータを整理します。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md)：使用する標準化されたフレームワーク [!DNL Platform] はエクスペリエンスデータを整理します。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
 
 さらに、ストリーミング接続を作成するには、ターゲット XDM スキーマとデータセットが必要です。 これらの作成方法については、次のチュートリアルを参照してください。 [ストリーミングレコードデータ](../../../../../ingestion/tutorials/streaming-record-data.md) または [時系列データのストリーミング](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
@@ -125,7 +125,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | この `id` 新しく作成したベース接続の |
+| `id` | The `id` 新しく作成したベース接続の。 |
 | `etag` | 接続に割り当てられ、ベース接続のバージョンを指定する識別子。 |
 
 ### 認証済み接続
@@ -143,7 +143,7 @@ POST /flowservice/connections
 
 **リクエスト**
 
-次のリクエストは、HTTP API の認証済みベース接続を作成します。
+次のリクエストは、HTTP API 用の認証済みベース接続を作成します。
 
 >[!BEGINTABS]
 
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.sourceId` | 認証済みのベース接続を作成する際に使用できる追加の識別子。 このパラメーターはオプションで、 `name` 属性を指定しない場合は。 |
-| `auth.params.authenticationRequired` | このパラメーターは、ストリーミング接続で認証を必要とするかどうかを指定します。 If `authenticationRequired` が `true` 次に、ストリーミング接続に認証を指定する必要があります。 If `authenticationRequired` が `false` 認証は不要です。 |
+| `auth.params.authenticationRequired` | このパラメーターは、ストリーミング接続で認証を必要とするかどうかを指定します。 次の場合 `authenticationRequired` が `true` 次に、ストリーミング接続に認証を指定する必要があります。 次の場合 `authenticationRequired` が `false` 認証は不要です。 |
 
 **応答**
 
@@ -247,7 +247,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
 
 **応答**
 
-リクエストが成功した場合は、リクエストした接続についての詳細情報と HTTP ステータス 200 が返されます。ストリーミングエンドポイント URL は、接続を使用して自動的に作成され、 `inletUrl` の値です。
+リクエストが成功した場合は、リクエストした接続についての詳細情報と HTTP ステータス 200 が返されます。ストリーミングエンドポイント URL は、接続を使用して自動的に作成されます。この URL は、 `inletUrl` の値です。
 
 ```json
 {
@@ -475,7 +475,7 @@ POST /flows
 
 >[!TAB 変換なし]
 
-次のリクエストでは、データ変換を行わずに HTTP API のストリーミングデータフローを作成します。
+次のリクエストでは、データ変換を行わずに HTTP API 用のストリーミングデータフローを作成します。
 
 ```shell
 curl -X POST \
@@ -562,7 +562,6 @@ curl -X POST \
 }
 ```
 
-
 ## Platform に取り込む POST データ {#ingest-data}
 
 これでフローが作成され、以前に作成したストリーミングエンドポイントに JSON メッセージを送信できます。
@@ -576,6 +575,7 @@ POST /collection/{INLET_URL}
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{INLET_URL}` | ストリーミングエンドポイント URL。 この URL を取得するには、 `/connections` エンドポイントを使用してベース接続 ID を指定する必要があります。 |
+| `{FLOW_ID}` | HTTP API ストリーミングデータフローの ID。 |
 
 **リクエスト**
 
@@ -584,9 +584,8 @@ POST /collection/{INLET_URL}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
         "header": {
           "schemaRef": {
@@ -625,9 +624,8 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB 生データ]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
       "name": "Johnson Smith",
       "location": {
