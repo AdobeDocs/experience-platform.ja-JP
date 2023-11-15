@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2769'
 ht-degree: 17%
 
 ---
@@ -264,6 +264,10 @@ Adobe Analytics の [!DNL Experience Platform] UI、「 」を選択します。
 ![選択したバッチの詳細が表示されます。 これには、取得されたレコード数、失敗したレコード数、バッチステータス、ファイルサイズ、取得の開始時間と終了時間、データセットとバッチ ID、組織 ID、データセット名、アクセス情報が含まれます。](../images/datasets/user-guide/batch-overview.png)
 
 バッチを削除する場合は、 **[!UICONTROL バッチを削除]** ダッシュボードの右上近くに表示されます。 また、バッチを削除すると、バッチの最初の取得先のデータセットからもレコードが削除されます。
+
+>[!NOTE]
+>
+>取り込んだデータがプロファイルに対して有効になっていて、処理されている場合、バッチを削除してもプロファイルストアからはそのデータは削除されません。
 
 ![データセットの詳細ページで、「バッチを削除」ボタンがハイライト表示されます。](../images/datasets/user-guide/delete-batch.png)
 
