@@ -3,10 +3,10 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 56%
+source-wordcount: '1233'
+ht-degree: 53%
 
 ---
 
@@ -32,6 +32,7 @@ ID データに適用される静的上限の概要を次の表に示します�
 | ガードレール | 上限 | メモ |
 | --- | --- | --- |
 | グラフ内の ID の数 | 50 | 50 個の ID がリンクされたグラフが更新されると、ID サービスは、「先入れ先出し」メカニズムを適用し、最も古い ID を削除して、最新の ID 用の領域を確保します。削除は、ID タイプとタイムスタンプに基づいて行われます。上限は、サンドボックスレベルで適用されます。詳しくは、 [削除ロジックについて](#deletion-logic). |
+| 単一のバッチ取り込みでの ID へのリンク数 | 50 | 1 つのバッチに、望ましくないグラフ結合の原因となる、異常な ID が含まれている場合があります。 これを防ぐために、ID サービスは、既に 50 個以上の ID にリンクされている ID を取り込みません。 |
 | XDM レコード内の ID 数 | 20 | 最低限必要な XDM レコード数は 2 です。 |
 | カスタム名前空間の数 | なし | 作成できるカスタム名前空間の数に制限はありません。 |
 | 名前空間の表示名または ID 記号の文字数 | なし | 名前空間の表示名または ID 記号の文字数に制限はありません。 |
@@ -42,7 +43,7 @@ ID 値の検証を成功させるために従う必要がある既存のルー�
 
 | 名前空間 | 検証ルール | ルール違反時のシステムの動作 |
 | --- | --- | --- |
-| ECID | <ul><li>ECID の ID 値はちょうど 38 文字にする必要があります。</li><li>ECID の ID 値は、数字のみで構成する必要があります。</li></ul> | <ul><li>ECID の ID 値がちょうど 38 文字でない場合、そのレコードはスキップされます。</li><li>ECID の ID 値に数字以外の文字が含まれている場合、そのレコードはスキップされます。</li></ul> |
+| ECID | <ul><li>ECID の ID 値はちょうど 38 文字にする必要があります。</li><li>ECID の ID 値は、数字のみで構成する必要があります。</li><li>ID 値は、「null」、「anonymous」、「invalid」、または空の文字列にできません（例：「&quot;, &quot;&quot;, &quot;&quot;」）。</li></ul> | <ul><li>ECID の ID 値がちょうど 38 文字でない場合、そのレコードはスキップされます。</li><li>ECID の ID 値に数字以外の文字が含まれている場合、そのレコードはスキップされます。</li><li>ID の取り込みがブロックされます。</li></ul> |
 | ECID 以外 | ID 値は 1024 文字を超えることはできません。 | ID 値が 1024 文字を超える場合、そのレコードはスキップされます。 |
 
 ### ID 名前空間の取り込み
@@ -114,6 +115,8 @@ CRM ID に対する認証済みイベントを保持する場合は、プライ�
 
 * [Experience Platformタグの ID マップの設定](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Experience PlatformWeb SDK の ID データ](../edge/identity/overview.md#using-identitymap)
+
+
 
 ## 次の手順
 
