@@ -2,10 +2,10 @@
 title: Adobe Commerce Destination Connector
 description: Adobe CommerceとReal-Time CDPの商人が、Real-Time CDP内で作成および管理する顧客オーディエンスに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、買い物体験をパーソナライズする方法を説明します。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: ddc4e877b3ae2f8b235faec1c29e71d389195e02
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 59%
+ht-degree: 58%
 
 ---
 
@@ -27,7 +27,7 @@ The [!DNL Adobe Commerce] 宛先コネクタを使用すると、アクティブ
 
 Experience Platform で、以下を作成します。
 
-- [スキーマ](../../../xdm/schema/composition.md)。作成するスキーマは、Adobe Commerce から取り込む予定のデータを表します。Commerce 固有のフィールドグループを含むスキーマの作成方法についての[詳細情報](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html?lang=ja)。
+- [スキーマ](../../../xdm/schema/composition.md)。作成するスキーマは、Adobe Commerce から取り込む予定のデータを表します。Commerce 固有のフィールドグループを含むスキーマの作成方法についての[詳細情報](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html)。
 - [データセット](../../../catalog/datasets/user-guide.md#create)。データセットは、データの集まりのためのストレージと管理の構成体です。このデータセットは、上で作成したスキーマから作成します。
 - [データストリーム](../../../datastreams/overview.md#create)。Adobe Experience Platform から他の Adobe DX 製品にデータを送信できるようにする ID。この ID は、特定の Adobe Commerce インスタンス内の特定の web サイトに関連付ける必要があります。このデータストリームを作成する場合は、上で作成した XDM スキーマを指定します。
 
