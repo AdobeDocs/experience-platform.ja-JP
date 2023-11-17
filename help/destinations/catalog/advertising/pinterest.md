@@ -2,14 +2,19 @@
 title: Pinterest Customer List 接続
 description: 顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 51%
+source-wordcount: '844'
+ht-degree: 45%
 
 ---
 
 # [!DNL Pinterest Customer List] 接続
+
+>[!IMPORTANT]
+>
+>* 2023 年 11 月 17 日以降、宛先カタログで 2 枚のPinterestカードを並べて表示できます。 これは、データをPinterestに書き出すために使用されるPinterest広告主 API へのアップグレードが原因です。 既存のPinterest宛先コネクタの名前は、「 **[!UICONTROL （廃止） Pinterest]** 新しいカード **[!UICONTROL （新規）Pinterest]** が使用できるようになりました。
+>* 以下を使用します。 **[!UICONTROL （新規）Pinterest]** 任意のキャンペーンのカタログ内のPinterestへの接続。 アクティブなデータフローがある場合は、 **[!UICONTROL （廃止） Pinterest]** 宛先、読む [アップグレードドキュメント](/help/destinations/catalog/advertising/pinterest-upgrade.md) を使用して、キャンペーンを中断しないようにするアクション項目を理解します。
 
 ## 概要 {#overview}
 
@@ -71,7 +76,7 @@ Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segme
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL 広告主 ID]**:Pinterest広告主 ID。
+* **[!UICONTROL 広告アカウント ID]**:Pinterest広告主 ID。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -95,3 +100,15 @@ Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segme
 ## その他のリソース {#additional-resources}
 
 詳しくは、 [Pinterest Help Center ページ](https://help.pinterest.com/en/business/article/audience-targeting) を参照してください。
+
++++ 変更ログを表示
+
+
+| リリース月 | 更新タイプ | 説明 |
+|---|---|---|
+| 2023年11月 | 機能とドキュメントの更新 | Real-Time CDPのPinterestの宛先が v5 広告主 API を使用するようになりました。 |
+
+{style="table-layout:auto"}
+
+
++++
