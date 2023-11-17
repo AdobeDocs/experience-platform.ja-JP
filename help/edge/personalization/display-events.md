@@ -1,9 +1,9 @@
 ---
 title: Web SDK での表示イベントの管理
-description: この記事では、Web SDK での表示イベントとその動作について説明します。
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+description: この記事では、表示イベントの概要と、Web SDK での表示イベントの使用方法について説明します。
+source-git-commit: da506cd5de69047e326790d0fae56f76c728e7a5
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
