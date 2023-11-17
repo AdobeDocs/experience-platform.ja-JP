@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Data Prep ガイド
-user-guide-description: Adobe Experience Platformに取り込むデータを準備し、Data Prep がデータのマッピング、変換、検証に役立つ方法を学びます。
+user-guide-description: Adobe Experience Platform に取り込むデータを準備し、データのマッピング、変換、検証に役立つデータ準備の方法について説明します。
 feature: Data Prep
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 60%
+ht-degree: 96%
 
 ---
 
