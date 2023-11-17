@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
-source-git-commit: 2e47f12cde0f4c4dca89deddbf612ad3840628f0
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 89%
+source-wordcount: '184'
+ht-degree: 88%
 
 ---
 
@@ -42,6 +42,7 @@ ht-degree: 89%
       * [自動的にマッピングされた変数](data-collection/adobe-analytics/automatically-mapped-vars.md)
       * [Analytics へのデータの送信](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * パーソナライズ機能 {#personalization}
+   * [表示イベントを管理](personalization/display-events.md)
    * [パーソナライズされたコンテンツのレンダリング](personalization/rendering-personalization-content.md)
    * [ハイブリッド実装を使用したパーソナライゼーション](personalization/hybrid-personalization.md)
    * [フリッカーの管理](personalization/manage-flicker.md)

@@ -1,7 +1,7 @@
 ---
 title: ページの上部と下部のイベントの使用
 description: この記事では、Web SDK でページイベントの上部と下部を使用する方法について説明します。
-source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Web SDK でページの上部と下部のイベントを使用すると、マー
 
 ## ページの先頭のイベントの例 {#top-of-page}
 
-以下のコードサンプルは、パーソナライゼーションをリクエストするページイベント設定の例ですが、自動的にレンダリングされた提案の表示通知は送信しません。 表示通知は、ページ下部のイベントの一部として送信されます。
+以下のコードサンプルは、パーソナライゼーションをリクエストするが、をリクエストしないページイベント設定の例です [ディスプレイイベントを送信](../personalization/display-events.md#send-sendEvent-calls) 自動的にレンダリングされた提案用。 The [イベントを表示](../personalization/display-events.md#send-sendEvent-calls) は、ページ下部のイベントの一部として送信されます。
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 |---|---|---|
 | `type` | 必須 | このパラメーターをに設定します。 `decisioning.propositionFetch`. この特別なイベントタイプは、Adobe Analyticsにこのイベントをドロップするように指示します。 Customer Journey Analyticsを使用する場合、これらのイベントをドロップするフィルターを設定することもできます。 |
 | `renderDecisions` | 必須 | このパラメーターをに設定します。 `true`. このパラメーターは、Edge Network から返される決定をレンダリングするよう Web SDK に指示します。 |
-| `personalization.sendDisplayEvent` | 必須 | このパラメーターをに設定します。 `false`. これにより、表示通知の送信が停止します。 |
+| `personalization.sendDisplayEvent` | 必須 | このパラメーターをに設定します。 `false`. これにより、表示イベントの送信が停止します。 |
 
 >[!ENDTABS]
 
@@ -62,7 +62,7 @@ alloy("sendEvent", {
 
 >[!TAB 自動レンダリングされた提案]
 
-以下のコード例は、ページイベント設定の下部を示しています。提案の表示通知は、ページ上で自動的にレンダリングされたが、で表示通知が抑制されたものの、提案の表示通知を送信します。 [ページの先頭](#top-of-page) イベント。
+以下のコード例は、ページ上で自動的にレンダリングされたが、で表示イベントが抑制された提案の表示イベントを送信するページイベント設定の下部を示しています。 [ページの先頭](#top-of-page) イベント。
 
 >[!NOTE]
 >
@@ -79,12 +79,12 @@ alloy("sendEvent", {
 
 | パラメーター | 必須／オプション | 説明 |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | 必須 | このパラメーターをに設定します。 `true`. これにより、ページイベントの上部で抑制された表示通知を送信できます。 |
+| `personalization.includeRenderedPropositions` | 必須 | このパラメーターをに設定します。 `true`. これにより、ページイベントの先頭で抑制された表示イベントを送信できます。 |
 | `xdm` | オプション | このセクションを使用して、ページイベントの下部に必要なすべてのデータを含めます。 |
 
 >[!TAB 手動でレンダリングされた提案]
 
-以下のコード例は、ページ上で手動でレンダリングされた提案の表示通知を送信するページイベント設定の下部を示しています（例：カスタムの決定範囲またはサーフェス）。
+以下のコード例は、ページ上で手動でレンダリングされた提案の表示イベントを送信するページイベント設定の下部を示しています（例：カスタム決定スコープまたはサーフェス）。
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 | パラメーター | 必須／オプション | 説明 |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | 必須 | この節では、手動でレンダリングした提案を定義します。 提案を含める必要があります `ID`, `scope`、および `scopeDetails`. 方法に関するドキュメントを参照してください。 [パーソナライゼーションの手動レンダリング](../personalization/rendering-personalization-content.md#manually) 手動でレンダリングしたコンテンツの表示通知を記録する方法の詳細については、を参照してください。 手動でレンダリングしたパーソナライゼーションコンテンツをページヒットの下部に含める必要があります。 |
+| `xdm._experience.decisioning.propositions` | 必須 | この節では、手動でレンダリングした提案を定義します。 提案を含める必要があります `ID`, `scope`、および `scopeDetails`. 方法に関するドキュメントを参照してください。 [パーソナライゼーションの手動レンダリング](../personalization/rendering-personalization-content.md#manually) 手動でレンダリングしたコンテンツの表示イベントを記録する方法の詳細については、を参照してください。 手動でレンダリングしたパーソナライゼーションコンテンツをページヒットの下部に含める必要があります。 |
 | `xdm._experience.decisioning.propositionEventType` | 必須 | このパラメーターをに設定します。 `display: 1`. |
 | `xdm` | オプション | このセクションを使用して、ページイベントの下部に必要なすべてのデータを含めます。 |
 
@@ -149,7 +149,7 @@ alloy("sendEvent", {
     }
 });
 
-// Bottom of page, send display notifications for the items that were rendered.
+// Bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -198,7 +198,7 @@ alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display notifications for the items that were rendered.
+// bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
