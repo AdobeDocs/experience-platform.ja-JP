@@ -3,14 +3,18 @@ title: 新しい API へのpinterestの宛先の移行。 お客様のアクシ�
 description: Pinterestは、Real-Time CDPのPinterestの宛先で現在使用されている v4 広告主 API を廃止します。 pinterestキャンペーンを中断することなく、新しい API にシームレスに移行するために、アクション項目を理解します。
 hide: true
 hidefromtoc: true
-source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
+source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
 
 # Pinterestの宛先を新しい API にアップグレードしました。 2023 年 12 月 15 日までに必要となるお客様のアクション
+
+>[!IMPORTANT]
+>
+>このページの顧客アクション項目は、2023 年 11 月 16 日 (PT) より前に、組織がPinterestにデータをエクスポートするデータフローを設定している場合、 **[!UICONTROL （新規）Pinterest]** の宛先が、最新のPinterest API を使用して、宛先カタログに追加されました。
 
 ## 何が起きているのでしょうか？
 
@@ -26,7 +30,7 @@ Adobeは、Pinterest API v5 を利用する新しいPinterest宛先カードを�
 
 ## アクティブ化されたオーディエンスを機能させ続けるには、何かをおこなう必要がありますか？
 
-はい。Adobeがアップグレードを完了し、新しいPinterestの宛先をリリースしたら、Real-Time CDPのPinterest広告主アカウントでPinterestに再認証する必要があります。 以下の詳細な手順を参照してください。
+はい、2023 年 11 月 17 日以降は、Real-Time CDPでPinterestの広告主アカウントを使用して、新しいPinterestの宛先に対する認証をおこなう必要があります。 以下の詳細な手順を参照してください。
 
 ### pinterestへの再認証 {#reauthenticate}
 
