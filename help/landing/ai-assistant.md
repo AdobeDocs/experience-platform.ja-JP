@@ -5,9 +5,9 @@ badge: アルファ版
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
+source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
 workflow-type: tm+mt
-source-wordcount: '2571'
+source-wordcount: '2183'
 ht-degree: 1%
 
 ---
@@ -121,6 +121,22 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
+#### マルチターン
+
++++選択すると、マルチターンの例が表示されます
+
+Assistant の複数回転機能を使用して、体験中により自然な会話をすることができます。 アシスタントは、以前のインタラクションからコンテキストを推論できることを前提とした、フォローアップの質問に回答できます。
+
+次の例では、セグメントの合計数に関する以前のクエリの後に、Assistant に組織内の既存のセグメントのリストを表示するよう求められます。
+
+![](./images/ai-assistant/multi-turn-one.png)
+
+次に、アシスタントが別のフォローアップリクエストを受け取ります。 今回は、Assistant が応答して、それぞれのサイズで並べられた既存のセグメントをリストします。
+
+![](./images/ai-assistant/multi-turn-two.png)
+
++++
+
 #### オートコンプリートを使用
 
 +++オートコンプリートの例を表示するには、「 」を選択します
@@ -174,9 +190,9 @@ From here, you can input your question in the text box and query Assistant for c
 
 | 質問タイプ | 説明 | 例 |
 | --- | --- | --- | 
-| データ系列 | 1 つまたは複数のオブジェクトの使用状況を他のExperience Platform・オブジェクト間で追跡 | <ul><li>使用するデータセット {SCHEMA_NAME} スキーマ？</li><li>同じスキーマを使用して取り込まれたデータセットの数</li><li>アクティブ化されたセグメントで使用されたデータセットはどれですか？</li><li>アクティブ化されたセグメントで使用される属性を持つスキーマをリストします。</li><li>アクティブ化されたセグメントを表示する {DESTINATION_ACCOUNT_NAME} およびには 1000 を超えるプロファイルがあります。</li><li>2023 年 1 月以降に変更された、アクティブ化されたセグメントで使用されている属性を表示します。</li><li>アクティブ化されたセグメントに関連し、過去 1 年間に作成されたスキーマをリストします。</li></ul> |
-| 配分と集計 | Experience Platformオブジェクトの使用に関する概要ベースの質問 | <ul><li>アクティブ化されたセグメントの割合はどれくらいですか？</li><li>セグメント化で使用されるフィールドの数</li><li>どのセグメントが最も多くの宛先に対してアクティブ化されていますか？</li><li>重複したセグメントをリストします。</li><li>アクティブ化されたセグメントを表示する {DESTINATION_ACCOUNT_NAME} プロファイルサイズでランク付けします。</li><li>アクティブ化されていないが 100 を超えるプロファイルを持つセグメントの割合。 名前を見せて。</li><li>アクティブ化されたセグメントで使用される、発生した項目に基づく上位 5 つの属性を示します。</li></ul> |
-| オブジェクト参照 | Experience Platformオブジェクトまたはそのプロパティを取得またはアクセスします。 | <ul><li>関連付けられたスキーマを持たないデータセット</li><li>使用する属性のリスト {SEGMENT_NAME}?</li><li>プロファイルが有効で、作成後に変更されていないスキーマのリストを教えてください。</li><li>先週変更されたセグメントは何ですか。</li><li>同じセグメント定義を持つセグメントと作成日をリストします。</li><li>どのデータセットが有効か、および各データセットから作成されたセグメント数も含まれます。</li><li>セグメント定義と変更日を表示する {SEGMENT_NAME}.</li></ul> |
+| データ系列 | 1 つまたは複数のオブジェクトの使用状況を他のExperience Platform・オブジェクト間で追跡 | <ul><li>使用するデータセット {SCHEMA_NAME} スキーマ？</li><li>同じスキーマを使用して取り込まれたデータセットの数</li><li>アクティブ化されたセグメントで使用されたデータセットはどれですか？</li><li>アクティブ化されたセグメントで使用される属性を持つスキーマをリストします。</li><li>アクティブ化されたセグメントを表示する {DESTINATION_ACCOUNT_NAME} およびには 1000 を超えるプロファイルがあります。</li><li>2023 年 1 月以降に変更された、アクティブ化されたセグメントで使用されている属性を表示します。</li><li>を介して取り込まれるデータセット {SOURCE_NAME}?</li><li>関連付けられているデータフロー {DATAFLOW_NAME}</li><li>アクティブ化されたセグメントに関連し、過去 1 年間に作成されたスキーマをリストします。</li></ul> |
+| 配分と集計 | Experience Platformオブジェクトの使用に関する概要ベースの質問 | <ul><li>アクティブ化されたセグメントの割合はどれくらいですか？</li><li>セグメント化で使用されるフィールドの数</li><li>どのセグメントが最も多くの宛先に対してアクティブ化されていますか？</li><li>重複したセグメントをリストします。</li><li>アクティブ化されたセグメントを表示する {DESTINATION_ACCOUNT_NAME} プロファイルサイズでランク付けします。</li><li>アクティブ化されていないが 100 を超えるプロファイルを持つセグメントの割合。 名前を見せて。</li><li>データセットにデータを取り込む 3 つのソースコネクタをリストします。</li><li>アクティブ化されたセグメントで使用される、発生した項目に基づく上位 5 つの属性を示します。</li></ul> |
+| オブジェクト参照 | Experience Platformオブジェクトまたはそのプロパティを取得またはアクセスします。 | <ul><li>関連付けられたスキーマを持たないデータセット</li><li>使用する属性のリスト {SEGMENT_NAME}?</li><li>プロファイルが有効で、作成後に変更されていないスキーマのリストを教えてください。</li><li>先週変更されたセグメントは何ですか。</li><li>同じセグメント定義を持つセグメントと作成日をリストします。</li><li>どのデータセットが有効か、および各データセットから作成されたセグメント数も含まれます。</li><li>データセット XYZ に関連付けられているソースアカウントは何ですか。</li><li>セグメント定義と変更日を表示する {SEGMENT_NAME}.</li></ul> |
 
 +++
 
@@ -237,56 +253,56 @@ Experience Platformのアシスタントの詳細については、この節を�
 ### 注意事項と制限事項
 
 次の節では、Assistant を使用する際に考慮すべき現在の注意事項と制限事項について説明します。
+<!-- 
+#### Conversational experience
 
-#### 対話型の経験
-
-アシスタントに問い合わせる際には、会話エクスペリエンスに関するニュアンスをいくつか考慮する必要があります。
+You must consider several nuances regarding the conversational experience when querying the Assistant.
 
 >[!NOTE]
 >
->これらの制限は一時的で、アルファの過程を通して改善されています。
+>These limitations are temporary and are being improved upon throughout the course of the alpha.
 
 >[!BEGINTABS]
 
->[!TAB 前のディスカッションからコンテキストを推論できません]
+>[!TAB Unable to infer context from prior discussion]
 
-現在、アシスタントは、指定された質問のコンテキストとして、以前のディスカッションを参照できません。 以下の表に例を示します。
+The Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
 
-| 曖昧な質問 | 質問をクリア | 注釈 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| <ul><li>最初の質問：「セグメントとは何ですか？」</li><li>「異なるタイプがあるのか？」という質問に従ってください。</li></ul> | <ul><li>最初の質問：「セグメントとは何ですか？」</li><li>次の質問に従います： 「異なるタイプの **セグメント**?」</li></ul> | アシスタントは、「彼ら」が何を意味するのかを推測できません。 |
-| <ul><li>最初の質問：「セグメントとは何ですか？」</li><li>「もっと詳しく話せるか？」という質問に従ってください。</li></ul> | <ul><li>最初の質問：「セグメントとは何ですか？」</li><li>「セグメントの詳細を説明する」という質問に従います。</li></ul> | アシスタントは、「詳細」に基づいてドキュメントをインテリジェントに参照できません。 |
-| <ul><li>最初の質問：「セグメントとは何ですか？」</li><li>次の質問に従います：「例を挙げていただけますか？」</li></ul> | <ul><li>最初の質問：「セグメントとは何ですか？」</li><li>「セグメントの例を教えてください」という質問に従います。</li></ul> | アシスタントは、例として何が欲しいかを推測できません。 |
-| <ul><li>最初の質問：「バッチセグメントとは何ですか？」</li><li>「ストリーミングセグメントと比較して、どのように異なるのですか？」という質問に従います。</li></ul> | <ul><li>最初の質問：「バッチセグメントとは何ですか？」</li><li>「ストリーミングセグメントとバッチセグメントを比較できますか？」という質問に従います。</li></ul> | アシスタントは、「it」が何を参照しているかを推測できないので、ストリーミングセグメントを比較できません。 |
-| <ul><li>最初の質問：「現在のセグメント数はいくつですか？」</li><li>「Facebookを宛先として使用しているのは何人ですか？」という質問に従います。</li></ul> | <ul><li>最初の質問：「現在のセグメント数はいくつですか？」</li><li>「宛先としてFacebookを使用しているセグメントの数はいくつですか？」という質問に従います。</li></ul> | アシスタントは、「彼ら」が何を参照しているかを推測できません。 |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The Assistant cannot infer what "them" means. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The Assistant cannot intelligently reference documentation based on "more". |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The Assistant cannot infer what you want an example of.|
+| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
+| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The Assistant is cannot infer what "them" is referring to. |
 
 {style="table-layout:auto"}
 
->[!TAB ページからコンテキストを推論できません]
+>[!TAB Unable to infer context from a page]
 
-現在表示しているExperience PlatformUI ページの特定の要素についてアシスタントに尋ねる場合は、質問内で特定の要素を明確に定義する必要があります。
+When asking the Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
 
-| 曖昧な質問 | 質問をクリア | 注釈 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| 「これは何の役に立つの？」 | 「何が起こるの？ {PAGE_NAME} やる？ | アシスタントは、「これ」が何を参照しているかを推測できません。 クエリを実行する特定のページ要素を指定する必要があります。 |
-| 「なぜ救われないの？」 | 「という名前の新しいサンドボックスを保存できないのはなぜですか？ {NAME}?」 | アシスタントは、「it」が何を参照しているかを推測できず、エンティティに問題があることを認識できません。 |
+| "What does this do?" | "What does {PAGE_NAME} do? | The Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
+| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
 
 {style="table-layout:auto"}
 
-さらに、アシスタントは、エラーが「Experience League」に記載されている場合にのみ、エラーメッセージに関する質問に回答できます。
+Furthermore, the Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
 
->[!TAB 曖昧さ]
+>[!TAB Ambiguity]
 
-アシスタントは現在、質問を曖昧にすることができないので、質問を明確に表現し、製品、アプリケーション、ドメイン内の範囲を絞る必要があります。
+You must phrase your questions clearly and scope them within a product, application, or domain, as the Assistant currently cannot disambiguate questions.
 
-| 曖昧な質問 | 質問をクリア | 注釈 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| 「フィルターを作成するにはどうすればよいですか？ | プロファイルクエリ言語でフィルターを作成する方法を教えてください。 | フィルタリングをサポートするExperience Platform機能は多岐にわたるので、フィルタリングする機能を指定する必要があります。 |
-| 「どうやって始めればいいの？ | 宛先の使用を開始する方法を教えてください。 | 概念が過度に広いと、汎用的な、または不必要に具体的な回答が得られる可能性があるので、目標と使用例を明確に示す必要があります。 |
+| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
+| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
+>[!ENDTABS] -->
 
 #### 限られた小さな話
 
