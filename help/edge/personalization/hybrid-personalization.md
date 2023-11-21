@@ -3,10 +3,10 @@ title: Web SDK と Edge Network Server API を使用したハイブリッドパ�
 description: この記事では、Web SDK を Server API と組み合わせて使用して、web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション;ハイブリッド;Server API;サーバーサイド;ハイブリッド実装;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 33e69f34934b505e2ee434bc957f278486a97642
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 99%
+source-wordcount: '846'
+ht-degree: 96%
 
 ---
 
@@ -70,7 +70,7 @@ Analytics 用に[データストリームを設定](../../datastreams/overview.m
 この実装のサンプルでは、次の 2 つの異なるデータストリームを使用しています。
 
 * Analytics 用に設定されたデータストリーム。 このデータストリームは、Web SDK のインタラクションに使用されます。
-* Analytics 設定のない 2 つ目のデータストリーム。 このデータストリームは、Server API リクエストに使用されます。
+* Analytics 設定のない 2 つ目のデータストリーム。 このデータストリームは、Server API リクエストに使用されます。このデータストリームは、Analytics 用に設定したデータストリームと同じ宛先設定で設定する必要があります。
 
 このように、サーバーサイドのリクエストは Analytics イベントを登録しませんが、クライアントサイドのリクエストでは登録します。 これにより、Analytics リクエストが正確にカウントされます。
 
