@@ -3,14 +3,14 @@ keywords: インサイト;Attribution AI;アトリビューション AI イン�
 title: 顧客管理キー
 description: アトリビューション AI 用の顧客管理キーの設定方法について説明します。
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 100%
+source-wordcount: '171'
+ht-degree: 98%
 
 ---
 
-# 顧客管理キー
+# 顧客管理キー Attribution AI
 
 アトリビューション AI は、[Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) および Privacy &amp; Security Shield のお客様に、Azure 顧客管理キー（CMK）を利用してアトリビューション AI データに適用するオプションを提供します。設定プロセスは [Adobe Experience Platform CMK の設定](../../../landing/governance-privacy-security/customer-managed-keys/overview.md)と同じであり、このリンク先で説明する手順に従うことができます。
 

@@ -4,14 +4,14 @@ feature: Customer AI
 title: 顧客 AI のガバナンスポリシー
 description: Adobe Experience Platform には、収集したエクスペリエンスデータを確信を持って制御できるいくつかのサービスおよびツールが用意されています。
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 98%
 
 ---
 
-# ガバナンスポリシー Attribution AI
+# ガバナンスポリシー 顧客 AI 内
 
 モデルを作成しモデルの設定を送信するワークフローが完了したら、違反があるかどうかを[ポリシーの適用](/help/data-governance/enforcement/auto-enforcement.md)が確認します。 ポリシー違反が発生した場合は、1 つ以上のポリシーに違反したことを示すポップオーバーが表示されます。 これは、Platform 内のデータ操作とマーケティングアクションがデータ使用ポリシーに準拠していることを確認するためです。
 

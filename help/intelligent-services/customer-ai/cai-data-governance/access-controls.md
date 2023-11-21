@@ -5,14 +5,14 @@ feature: Customer AI
 title: 顧客 AI のアクセス制御
 description: このドキュメントでは、顧客 AI の属性ベースのアクセス制御について説明します。
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 100%
+source-wordcount: '519'
+ht-degree: 99%
 
 ---
 
-# 属性ベースのアクセス制御
+# 属性ベースのアクセス制御 顧客 AI 内
 
 >[!IMPORTANT]
 >

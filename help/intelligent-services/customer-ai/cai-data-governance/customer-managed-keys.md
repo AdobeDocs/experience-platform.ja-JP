@@ -3,14 +3,14 @@ keywords: インサイト;顧客 AI;顧客 AI インサイト;AAI クエリサ�
 title: 顧客 AI での顧客管理キー。
 description: 顧客 AI 用の顧客管理キーの設定方法について説明します。
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 100%
+source-wordcount: '176'
+ht-degree: 98%
 
 ---
 
-# 顧客管理キー
+# 顧客管理キー 顧客 AI 内
 
 顧客 AI は、[Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) およびプライバシーとセキュリティシールドのお客様が Azure 顧客管理キー（CMK）を利用して 顧客 AI データに適用するためのオプションを提供します。設定プロセスは [Adobe Experience Platform CMK の設定](../../../landing/governance-privacy-security/customer-managed-keys/overview.md)と同じであり、このリンク先で説明する手順に従うことができます。
 

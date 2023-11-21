@@ -5,14 +5,14 @@ feature: Customer AI
 title: 顧客 AI におけるデータガバナンス
 description: Adobe Experience Platform には、ビジネスプラクティス、法的義務および開発プロセスに準拠するために、収集されたエクスペリエンスデータを確信を持って制御できるサービスやツールがいくつか用意されています。
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 100%
+source-wordcount: '303'
+ht-degree: 99%
 
 ---
 
-# 顧客 AI とデータガバナンス
+# 顧客 AI とデータガバナンス 顧客 AI 内
 
 顧客 AI におけるデータガバナンス関連の設定はすべて、Adobe Experience Platform から継承されます。
 
