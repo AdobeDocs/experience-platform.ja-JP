@@ -6,7 +6,7 @@ feature: Observability
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
