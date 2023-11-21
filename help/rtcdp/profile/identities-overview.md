@@ -2,8 +2,9 @@
 keywords: ID rtcdp;rtcdp ID;Real-Time CDP ID
 title: Real-time Customer Data Platform における ID
 description: Adobe Experience Platform ID サービスは、すべてのデバイスやシステム間で ID を橋渡しすることで、顧客とその行動をより確実に把握できるようにします。
+feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 100%

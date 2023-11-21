@@ -1,8 +1,9 @@
 ---
 title: サードパーティ cookie に依存せずに新規顧客を惹きつけ、獲得する
 description: サードパーティ Cookie に依存せずに、見込み客のユースケースを通じて新規顧客をエンゲージおよび獲得する方法を説明します。
+feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '2077'
 ht-degree: 86%

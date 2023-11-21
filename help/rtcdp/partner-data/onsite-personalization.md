@@ -1,8 +1,9 @@
 ---
 title: パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
+feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 77eb2492259cc813db2d6c514d123fa2ad698f67
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '2696'
 ht-degree: 91%

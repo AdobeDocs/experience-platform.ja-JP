@@ -1,7 +1,8 @@
 ---
 title: Real-Time CDP Guardrails
 description: Real-Time CDPの様々なサービスや領域にわたるデータガードレールについて説明します。
-source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
+feature: Guardrails, Data Management, Data Ingestion, Data Export
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 11%

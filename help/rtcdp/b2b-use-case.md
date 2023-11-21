@@ -2,11 +2,13 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp;rtcdp
 title: Real-time Customer Data Platform B2B Edition の使用例
 description: このサンプルシナリオは、Real-time Customer Data Platform B2B エディションの実装の設定例を示しています。
+feature: Get Started, Use Cases, B2B
+badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 84%
+source-wordcount: '1146'
+ht-degree: 83%
 
 ---
 
@@ -81,7 +83,7 @@ CRM1 からの B2B データ（人物、アカウント、機会およびアク�
    - おび
    - 先月製品ページにアクセスしました
 
-- Bodea の新しいマーケティングキャンペーンの最も効率的な受け手となるオーディエンスを作成します。この例では、RT-CDP B2B Edition は、マーケティング担当者がマーケティングキャンペーンの適切なターゲットとして `p2@townsend.com` を特定するのに役立ちます。
+- Bodea の新しいマーケティングキャンペーンの最も効率的な受け手となるオーディエンスを作成します。この例では、RT-CDP B2B Edition は、マーケターがマーケティングキャンペーンの適切なターゲットとして `p2@townsend.com` を特定するのに役立ちます。
 
 Marketo Engage と LinkedIn の宛先を使用することにより、Bodea はマーケティングチーム向けのエンドツーエンドの顧客体験管理（CXM）ソリューションを提供します。Experience Platform で作成されたオーディエンスは、Marketo の宛先にプッシュされ、静的なリストとして表示されます。このオーディエンスは、Marketo マーケティングキャンペーンに自動的に追加されます。同時に、RT-CDP B2B Edition によってオーディエンスを LinkedIn マーケティングキャンペーンに送ることもできます。
 

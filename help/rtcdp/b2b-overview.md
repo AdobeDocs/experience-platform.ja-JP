@@ -2,11 +2,13 @@
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;リアルタイム顧客データプラットフォーム;リアルタイム cdp;b2b;cdp;顧客 AI
 title: Real-Time CDP B2B Edition の概要
 description: Real-time Customer Data Platform B2B Edition アカウントの概要
+feature: Get Started, B2B
+badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 100%
+source-wordcount: '1093'
+ht-degree: 98%
 
 ---
 

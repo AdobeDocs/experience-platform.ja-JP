@@ -3,10 +3,12 @@ keywords: プロファイル；リアルタイム顧客プロファイル；ト�
 title: Real-time Customer Data Platform B2B Edition のデフォルトガードレール
 type: Documentation
 description: Adobe Experience Platform は、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。 このドキュメントでは、Adobe Real-time Customer Data Platform B2B Edition を使用して最適なシステムパフォーマンスを得るためにデータをモデル化する際に役立つ、デフォルトの使用方法とレート制限について説明します。
+badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1662'
 ht-degree: 59%
 
 ---
@@ -117,9 +119,9 @@ Real-time Customer Data Platform B2B Edition を使用すると、行動イン�
 
 ### エンティティタイプ
 
-この [!DNL Profile] ストアデータモデルは、次の 2 つのコアエンティティタイプで構成されます。 [プライマリエンティティ](#primary-entity) および [ディメンションエンティティ](#dimension-entity).
+この [!DNL Profile] ストアデータモデルは、次の 2 つのコアエンティティタイプで構成されます。 [主要エンティティ](#primary-entity) および [ディメンションエンティティ](#dimension-entity).
 
-#### プライマリ
+#### プライマリエンティティ
 
 プライマリエンティティ（プロファイルエンティティ）は、データを結合して、個人の「単一の真実のソース」を形成します。 この統合データは、「結合ビュー」と呼ばれるものを使用して表されます。統合ビューは、同じクラスを実装するすべてのスキーマのフィールドを、1 つの結合スキーマに集約します。[!DNL Real-Time Customer Profile] の結合スキーマは、すべてのプロファイル属性と行動イベントのコンテナとして機能する、非正規化されたハイブリッドデータモデルです。
 
@@ -127,7 +129,7 @@ Real-time Customer Data Platform B2B Edition を使用すると、行動イン�
 
 ![レコードデータと時系列データの違いを説明する解説図。](../profile/images/guardrails/profile-entity.png)
 
-#### Dimension
+#### Dimensionエンティティ
 
 プロファイルデータの保守はリレーショナルストアではありませんが、プロファイルでは、シンプルで直感的な方法でセグメントを作成するために、小さなディメンションエンティティとの統合を可能にします。 この統合は、[マルチエンティティセグメンテーション](../segmentation/multi-entity-segmentation.md)とも呼ばれます。
 

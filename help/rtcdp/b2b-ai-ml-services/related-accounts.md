@@ -2,11 +2,13 @@
 title: Real-Time CDP B2B Edition の関連するアカウント
 type: Documentation
 description: Experience PlatformReal-Time CDP B2B の関連アカウント機能の概要と詳細情報です。
+feature: Get Started, Profiles, B2B
+badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 22%
+source-wordcount: '441'
+ht-degree: 21%
 
 ---
 
@@ -18,15 +20,15 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 
 | ID | 名前 | Web サイト | 業界 | 都道府県 | Phone | 数量 > のオープン商談あり `$1 million` |
 |---|---|---|---|---|---|---|
-| 1 | Acme | acme.com | ソフトウェア | CA | (408)536-6000 |  |
+| 1 | Acme | acme.com | ソフトウェア | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | ソフトウェア | CA | 4085366000 | x |
-| 3 | Acme Inc |  |  | CA | (408)5366000 |  |
+| 3 | Acme Inc |   |   | CA | (408)5366000 |   |
 | 4 | Acme コンサルティングサービス | `http://www.acme.com/consulting` | テクノロジーコンサルティング | NY | (212)471-0904 | x |
-| 5 | Acme IT |  |  | CA |  |  |
+| 5 | Acme IT |   |   | CA |   |   |
 
 {style="table-layout:auto"}
 
-関連するアカウントを使用する場合 [!DNL Real-Time CDP B2B] では、参照しているアカウントに類似したアカウントのリストが表示されます。
+関連するアカウントを使用する場合、 [!DNL Real-Time CDP B2B] では、参照しているアカウントに類似したアカウントのリストが表示されます。
 
 ![Experience PlatformUI の関連アカウントを示す画面。](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
@@ -38,7 +40,7 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 
 ![Experience PlatformUI でプロファイルと設定をハイライト表示します。](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-の横にある切り替えを選択します。 [!UICONTROL 関連アカウントの有効化] サービスを有効にするには、「 」を選択します。 **[!UICONTROL 保存]**.
+の横にある切り替えを選択します。 [!UICONTROL 関連アカウントを有効にする] サービスを有効にするには、「 」を選択します。 **[!UICONTROL 保存]**.
 
 ![切り替えと保存をハイライトするアカウント設定画面。](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
@@ -62,6 +64,6 @@ Experience PlatformUI で参照しているアカウントの関連アカウン�
 
 ## 関連するアカウントの使用方法 {#how-to-use}
 
-アカウントと関連するアカウントをセグメント化で使用できます。 セグメント定義で関連アカウントを使用するかどうかの決定は、マーケティングの使用例によって異なります。 例えば、電子メールマーケティングや広告キャンペーンに関連するアカウントを使用し、より広い範囲のリーチと引き換えに、より低い精度を受け入れることができます。
+アカウントと関連するアカウントをセグメント化に使用できます。 セグメント定義で関連アカウントを使用するかどうかの決定は、マーケティングの使用例によって異なります。 例えば、電子メールマーケティングや広告キャンペーンに関連するアカウントを使用し、より広い範囲のリーチと引き換えに、より低い精度を受け入れることができます。
 
-参照先 [セグメント化の例](/help/rtcdp/segmentation/b2b.md#related-accounts) 関連するアカウントを使用する
+参照先 [セグメント化の例](/help/rtcdp/segmentation/b2b.md#related-accounts) 関連するアカウントを使用する。

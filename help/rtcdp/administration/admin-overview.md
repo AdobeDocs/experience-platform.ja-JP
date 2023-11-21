@@ -2,8 +2,9 @@
 keywords: rtcdp 管理の概要；管理の概要
 title: Real-time Customer Data Platform管理の概要
 description: このドキュメントでは、Adobe Experience Platformを活用したAdobe Real-time Customer Data Platformの管理機能の概要を説明します。
+feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 43%
@@ -16,7 +17,7 @@ ht-degree: 43%
 
 [!DNL Experience Platform]管理者は、 を使用して、ユーザーのロールベースのアクセス制御を管理したり、アプリケーション開発用の仮想サンドボックスを管理したりできます。
 
-以下の節では、の中央コンポーネントの紹介を示します。 [!DNL Experience Platform] 管理機能と、 [!DNL Experience Platform] 詳細情報が記載されているドキュメント。
+以下の節では、の中央コンポーネントの紹介を示します。 [!DNL Experience Platform] 管理機能と、次へのリンクが含まれます。 [!DNL Experience Platform] 詳細情報が記載されているドキュメント。
 
 ## アクセス制御
 

@@ -1,9 +1,10 @@
 ---
-keywords: データガバナンス rtcdp、rtcdp データガバナンス、リアルタイム顧客データプロファイルデータガバナンス
+keywords: データガバナンス rtcdp;rtcdp データガバナンス；リアルタイム顧客データプロファイルデータガバナンス
 title: データガバナンスの概要
 description: データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。
+feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 34%
@@ -16,7 +17,7 @@ ht-degree: 34%
 
 Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへのコンプライアンスを確保できます。これはReal-Time CDP内で重要な役割を果たし、使用ポリシーの定義、それらのポリシーに基づくデータの分類、特定のマーケティングアクションの実行時のポリシー違反の有無の確認をおこなうことができます。
 
-Real-Time CDPはAdobe Experience Platformをベースに構築されているので、データガバナンス機能の大部分は [!DNL Experience Platform] ドキュメント。 このドキュメントは、 [データガバナンスの概要](../../data-governance/home.md) 対象 [!DNL Experience Platform]を参照し、Real-Time CDPで使用できるガバナンス機能の概要を説明します。 以下のトピックを取り上げます。
+Real-Time CDPはAdobe Experience Platformをベースに構築されているので、データガバナンス機能の大部分は [!DNL Experience Platform] ドキュメント。 このドキュメントは、 [データガバナンスの概要](../../data-governance/home.md) 対象： [!DNL Experience Platform]を参照し、Real-Time CDPで使用できるガバナンス機能の概要を説明します。 以下のトピックを取り上げます。
 
 * [データへの使用状況ラベルの適用](#labels)
 * [データ使用ポリシーの管理](#policies)
@@ -34,7 +35,7 @@ Real-Time CDPはAdobe Experience Platformをベースに構築されているの
 
 >[!NOTE]
 >
->マーケティングアクションと、データ使用ポリシーでの使用について詳しくは、 [データ使用ポリシーの概要](../../data-governance/policies/overview.md) 内 [!DNL Experience Platform] ドキュメント。
+>マーケティングアクションと、データ使用ポリシーでの使用について詳しくは、 [データ使用ポリシーの概要](../../data-governance/policies/overview.md) （内） [!DNL Experience Platform] ドキュメント。
 
 宛先に対するマーケティングアクションを定義すると、それらの宛先に送信されるプロファイルやセグメントが、データ使用ポリシーに準拠していることを確認できます。 したがって、組織のアクティベーションに対するポリシー制限を実施する必要がある場合は、宛先に適切なマーケティングアクションを追加する必要があります。
 
@@ -44,7 +45,7 @@ Real-Time CDPはAdobe Experience Platformをベースに構築されているの
 
 データ使用状況ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを定義し、有効にする必要があります。データ使用ポリシーは、Real-Time CDP内のデータに対して実行を許可（/制限）するマーケティングアクションの種類を記述するルールです。 詳しくは、 で『[!DNL Experience Platform][データガバナンスの概要](../../data-governance/home.md)』の「データ使用ポリシー」の節を参照してください。
 
-Adobe Experience Platform では、一般的な顧客体験の使用例に対して、いくつかのコアポリシーがあります。これらのポリシーは、UI で **[!UICONTROL ポリシー]** ワークスペースと選択 **[!UICONTROL 参照]** タブをクリックします。 詳しくは、 [ポリシーユーザーガイド](../../data-governance/policies/user-guide.md) 内 [!DNL Experience Platform] 独自のカスタムポリシーを作成する方法など、UI でのポリシーの操作に関する詳細な手順に関するドキュメントです。
+Adobe Experience Platform では、一般的な顧客体験の使用例に対して、いくつかのコアポリシーがあります。これらのポリシーは、UI で **[!UICONTROL ポリシー]** ワークスペースと選択 **[!UICONTROL 参照]** タブをクリックします。 詳しくは、 [ポリシーユーザーガイド](../../data-governance/policies/user-guide.md) （内） [!DNL Experience Platform] 独自のカスタムポリシーを作成する方法など、UI でのポリシーの操作に関する詳細な手順に関するドキュメントです。
 
 ## データ使用コンプライアンスの実施 {#enforce}
 
@@ -54,7 +55,7 @@ Adobe Experience Platform では、一般的な顧客体験の使用例に対し
 
 ## 次の手順
 
-これで、Real-Time CDPの主要なデータガバナンス機能と、その方法をご紹介しました [!DNL Experience Platform] 有効にします。次に進んでください： [Adobe Experience Platformのデータガバナンスに関するドキュメント](../../data-governance/home.md). このドキュメントには、データガバナンスの基本概念の概要と、データ使用ラベルとポリシーを管理するためのワークフローが順を追って記載されています。
+これで、Real-Time CDPの主要なデータガバナンス機能と、その方法をご紹介しました。 [!DNL Experience Platform] 有効にします。次に進んでください： [Adobe Experience Platformのデータガバナンスに関するドキュメント](../../data-governance/home.md). このドキュメントには、データガバナンスの基本概念の概要と、データ使用ラベルとポリシーを管理するためのワークフローが順を追って記載されています。
 
 次のビデオでは、宛先でのマーケティングの使用例の使用、様々なシナリオでのワークフローの例など、Real-Time CDPのデータガバナンスの概要を示します。
 

@@ -2,8 +2,9 @@
 keywords: プロファイルの表示 rtcdp、rtcdp プロファイルビュー、rtcdp プロファイル
 title: Real-time Customer Data Platformでのプロファイルの参照
 description: Adobe Real-time Customer Data Platformを使用すると、Adobe Experience Platformユーザーインターフェイスを使用してリアルタイム顧客プロファイルデータを参照できます。
+feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 12%

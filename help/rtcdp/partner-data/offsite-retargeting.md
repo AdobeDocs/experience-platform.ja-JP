@@ -1,7 +1,8 @@
 ---
 title: 未認証訪問者のオフサイトリターゲティング
 description: 未認証ユーザーのオーディエンスを作成するために使用できる計算済み属性を作成するために、見込み客 ID を使用して未認証ユーザーを再ターゲット化する方法を説明します。
-source-git-commit: 99516d0923e61c8c81f1933076f2d3e73b55544c
+feature: Use Cases, Customer Acquisition
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 3%

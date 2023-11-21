@@ -1,8 +1,9 @@
 ---
 title: パートナー提供の属性を使用してファーストパーティプロファイルを補完
 description: 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善する方法を説明します。
+feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 79%

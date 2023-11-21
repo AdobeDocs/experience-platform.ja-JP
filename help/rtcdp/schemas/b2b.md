@@ -1,17 +1,19 @@
 ---
 title: Real-time Customer Data Platform B2B Edition のスキーマ
 description: Adobe Real-time Customer Data Platform B2B Edition の Experience Data Model(XDM) スキーマの役割の概要です。
+feature: Get Started, Data Management, Schemas
+badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 53%
+source-wordcount: '248'
+ht-degree: 50%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition のスキーマ
 
-Adobe Real-time Customer Data Platform B2B Edition は、いくつかの標準を提供します [エクスペリエンスデータモデル (XDM) クラス](../../xdm/schema/composition.md#class) は、アカウント、商談、キャンペーンなど、重要な B2B データエンティティに関する詳細をキャプチャするためのものです。 また、Real-Time CDP B2B Edition では、これらのスキーマ間に多対 1 の関係を定義して、高度なセグメント化の使用例に参加できます。
+Adobe Real-time Customer Data Platform B2B Edition は、いくつかの標準を提供します [エクスペリエンスデータモデル (XDM) クラス](../../xdm/schema/composition.md#class) は、アカウント、オポチュニティ、キャンペーンなど、重要な B2B データエンティティに関する詳細を取得します。 また、Real-Time CDP B2B Edition では、これらのスキーマ間に多対 1 の関係を定義して、高度なセグメント化の使用例に参加できます。
 
 >[!IMPORTANT]
 >

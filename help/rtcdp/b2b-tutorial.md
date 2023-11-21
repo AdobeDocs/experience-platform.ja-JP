@@ -3,11 +3,13 @@ keywords: RTCDP;CDP;B2B エディション；Real-time Customer Data Platform；
 solution: Experience Platform
 title: Real-time Customer Data Platform B2B Edition の概要
 description: Adobe Real-time Customer Data Platform B2B Edition の実装を設定する際の例として、次のシナリオをサンプルとして使用します。
+feature: Get Started, B2B
+badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 82%
+source-wordcount: '1216'
+ht-degree: 81%
 
 ---
 

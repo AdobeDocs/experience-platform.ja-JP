@@ -2,8 +2,9 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp；顧客 AI
 title: Real-Time Customer Data Platform の概要
 description: Adobe Real-time Customer Data Platformの概要
+feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 41%
@@ -14,7 +15,7 @@ ht-degree: 41%
 
 Adobe Experience Platform、Adobe Real-time Customer Data Platform(Real-Time CDP) を基に構築され、複数のエンタープライズソースから既知の匿名データを統合して、顧客プロファイルを作成し、すべてのチャネルとデバイスでリアルタイムにパーソナライズされた顧客体験を提供できます。
 
-Real-Time CDPには、データガバナンス、id 管理、高度なセグメント化、データサイエンスのツールが含まれており、プロファイルを作成してオーディエンスを定義し、リッチなインサイトを得ながら、厳密なデータガバナンスポリシーを実施できます。
+Real-Time CDPには、データガバナンス、ID 管理、高度なセグメント化、データサイエンスのツールが含まれており、プロファイルを作成してオーディエンスを定義し、リッチなインサイトを得ながら、厳密なデータガバナンスポリシーを実施できます。
 
 Real-time Customer Data Platformは、Adobe Experience Cloudとのネイティブ統合に加えて、パートナーの大規模なエコシステムに接続しているので、これらのオーディエンスをシームレスにアクティブ化し、オンサイトやアプリ内のパーソナライズから E メール、有料メディア、コールセンター、接続デバイスなど、あらゆるチャネルで優れた顧客体験を提供できます。
 
@@ -22,7 +23,7 @@ Real-time Customer Data Platformを使用すると、次のことができます
 
 * 企業全体のデータを組み合わせることで、顧客の表示を一つにまとめます。
 * 既知と未知の識別子に対して、信頼されたガバナンスとプライバシーコントロールを使用し、プロファイルを責任を持って管理します。
-* Adobe Sensei による AI や機械学習を活用して、マーケティング担当者向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
+* Adobe Sensei による AI や機械学習を活用して、マーケター向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
 
 ## Real-Time Customer Data Platform B2B 版
