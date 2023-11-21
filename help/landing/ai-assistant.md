@@ -5,7 +5,7 @@ badge: アルファ版
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
+source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 1%
@@ -77,7 +77,7 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
-### 使用例：アシスタントを使用して、スキーマ作成プロセスを迅速に進めます
+### 使用例：アシスタントを使用して、スキーマ作成プロセスを迅速に進めます {#example-use-case}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 ![回答を返した後にアシスタントが提供するオプション。](./images/ai-assistant/options.png)
 
-#### 質問をフォローアップ
+### 質問をフォローアップ {#follow-up-question}
 
 +++選択すると、フォローアップの質問の例が表示されます
 
@@ -109,7 +109,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
-#### データ使用に関する質問
+### データ使用に関する質問 {#data-usage-question}
 
 +++選択すると、データ使用に関する質問の例が表示されます
 
@@ -121,7 +121,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
-#### マルチターン
+### マルチターン {#multi-turn}
 
 +++選択すると、マルチターンの例が表示されます
 
@@ -137,7 +137,7 @@ Assistant の複数回転機能を使用して、体験中により自然な会�
 
 +++
 
-#### オートコンプリートを使用
+### オートコンプリートを使用 {#use-auto-complete}
 
 +++オートコンプリートの例を表示するには、「 」を選択します
 
@@ -153,7 +153,7 @@ Assistant の複数回転機能を使用して、体験中により自然な会�
 
 +++
 
-## 範囲
+## 範囲 {#scope}
 
 アシスタントは、Real-Time CDPとExperience Platformの概念に関する質問に回答したり、ユーザーアカウントに固有のデータ使用状況に関する質問に回答したりできます。 アシスタントは、現在の UI ページに基づいてコンテキストを推論することもできます。 次の情報を識別できます。
 
@@ -163,13 +163,13 @@ Assistant の複数回転機能を使用して、体験中により自然な会�
 * 画面に表示するリソース（タイプと ID を含む）。
 * 特定のExperience PlatformまたはReal-Time CDPワークフローの処理中である場合、Assistant は目的を推測できます。
 
-### ドキュメント
+### ドキュメント {#documentation}
 
 現在、ドキュメントインデックスはAdobe Experience Platform(Real-Time CDPおよび Audiences) を対象としています。 インデックスは定期的に更新されます。
 
 ドキュメント取得モデルは、Experience Platform(Real-Time CDPおよびオーディエンス ) に基づいてトレーニングされます。 Adobe Experience Platform以外のAdobe(Adobe TargetやCreative Cloudスイートなどの他の製品に関する質問には回答できません )。
 
-### データ使用状況
+### データ使用状況 {#data-usage}
 
 また、次のドメインでは、データの使用に関して Assistant に質問することもできます。
 
@@ -184,7 +184,7 @@ Assistant の複数回転機能を使用して、体験中により自然な会�
 
 スキーマ、データセット、属性、宛先、セグメントなどのオブジェクトに関連する特定のデータについて問い合わせるには、サンドボックスにログインする必要があります。
 
-### データ使用に関する質問の例
+### データ使用に関する質問の例 {#example-data-usage-questions}
 
 +++「 」を選択すると、データ使用に関する質問の例のリストが表示されます
 
@@ -196,11 +196,11 @@ Assistant の複数回転機能を使用して、体験中により自然な会�
 
 +++
 
-## 応答を検証
+## 応答を検証 {#verify-the-response}
 
 アシスタントが返す応答を確認するには、様々な方法があります。
 
-### ドキュメントの引用
+### ドキュメントの引用 {#citations}
 
 Assistant は、すべての応答で、確認や詳細に関して参照できる引用文を提供します。
 
@@ -208,7 +208,7 @@ Assistant は、すべての応答で、確認や詳細に関して参照でき�
 
 ![アシスタントに表示されるソースへのリンク。](./images/ai-assistant/show-sources.png)
 
-## フィードバックの提供
+## フィードバックの提供 {#feedback}
 
 >[!BEGINSHADEBOX]
 
@@ -246,11 +246,11 @@ Assistant は、すべての応答で、確認や詳細に関して参照でき�
 
 +++
 
-## 追加情報
+## 追加情報 {#additional-information}
 
 Experience Platformのアシスタントの詳細については、この節を参照してください。
 
-### 注意事項と制限事項
+### 注意事項と制限事項 {#caveats-and-limitations}
 
 次の節では、Assistant を使用する際に考慮すべき現在の注意事項と制限事項について説明します。
 <!-- 
@@ -318,7 +318,7 @@ You must phrase your questions clearly and scope them within a product, applicat
 | 「知ってる？ **x** 言語？」 | アシスタントは現在、英語のみをサポートしていますが、基になるモデルで英語をサポートできるので、「はい」と答える場合があります。 |
 | 「できるか…?」 | アシスタントは、できなくても「はい」と答える場合があります。 |
 
-### ヒント
+### ヒント {#tips}
 
 次の節では、Assistant を使用する際に考慮すべきヒントと回避策について説明します。
 
