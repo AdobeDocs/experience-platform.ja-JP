@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy ServiceとExperience Cloudの適用
 description: このドキュメントでは、プライバシー関連の操作用に様々なExperience Cloudアプリケーションを設定する方法に関するリファレンスを提供します。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: b73b6f1005dc8a9e647f706a1e98259131b17478
+source-git-commit: ba1ee18d4149ad6ae20f2ce055165f2e70ab54eb
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 34%
+source-wordcount: '915'
+ht-degree: 33%
 
 ---
 
@@ -35,6 +35,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | Adobe Advertising Cloud | ✓ | ✓ | データ主体の Cookie ID またはデバイス ID が、Cookie に関連付けられたすべてのコスト、クリック数および売上高データと共にシステムから削除されます。 | <ul><li>[GDPR 向けのアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[CCPA のアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[CCPA のオプトアウトオブセールに関するドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | Adobe Analytics では、計測データのプライバシー性と契約上の制限に従ってデータをラベルで分類するためのツールの提供を開始します。ラベルは、次の場合に重要な手順です。<ol><li>データ主体の識別。</li><li>アクセスリクエストの一部として返すデータの決定。</li><li>削除リクエストの一環として削除する必要があるデータフィールドの識別。</li></ol> | <ul><li>[プライバシーワークフロー](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html?lang=ja)</li><li>[Analytics のラベル付け](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/data-labels/gdpr-labels.html)</li><li>[Analytics オプトアウト](https://experienceleague.adobe.com/docs/analytics/components/dimensions/cm-opt-out.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | リクエストに含まれている特性識別子に関連付けられているAudience Managerとセグメントがすべて削除されます。 さらに、個人に対する各識別子は以降のデータ収集からオプトアウトされ、それぞれの ID マッピングは削除されます。 | <ul><li>[アクセス](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#access-data) / [削除](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#delete-data) ドキュメント</li><li>[オプトアウトに関するドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html#opt-out-calls)</li><li>[オプトアウトリクエスト](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests)</li></ul> |
+| Adobe Campaign Classic | ✓ | ✓ | データ主体に保存されているデータがシステムから削除されます。 | <ul><li>[プライバシーの管理](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=ja).</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | データ主体に保存されているデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://helpx.adobe.com/jp/campaign/kb/campaign-privacy.html)</li><li>[オプトアウトに関するドキュメント](../segmentation/consents.md)</li></ul> |
 | Adobe顧客属性 (CRS) | ✓ | なし | データ主体の属性がシステムから削除されます。 | <ul><li>[GDPR 向けのアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html?lang=ja)</li><li>[CCPA のアクセス/削除に関するドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html?lang=ja)</li><li>顧客属性にはデータを転送する機能がないので、販売のオプトアウトリクエストは利用できません。</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | Experience Platform が Privacy Service から削除リクエストを受信すると、リクエストが受信され、影響を受けるデータに削除マークが付けられた旨の確認を Platform が Privacy Service に送信します。プライバシージョブが完了すると、レコードはデータレイクまたはプロファイルストアから削除されます。 ジョブが完了する前に、データはソフト削除されるので、どの Platform サービスからもアクセスできません。 | <ul><li>[データレイクのためのアクセス / 削除に関するドキュメント](../catalog/privacy.md)</li><li>[ID サービスのアクセス/削除に関するドキュメント](../identity-service/privacy.md)</li><li>[リアルタイム顧客プロファイルのアクセス/削除に関するドキュメント](../profile/privacy.md)</li><li>[!DNL Experience Platform] 名誉 [オーディエンスセグメントのオプトアウトリクエスト](../segmentation/consents.md).</li></ul> |
@@ -50,7 +51,6 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 
 | アプリケーション | ドキュメントの説明 |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=ja) | Adobe Campaign Classic の GDPR 機能の概要。 |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 顧客プライバシー管理者または AEM 管理者が GDPR リクエストを処理する方法の概要。 |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Livefyre を使用して GDPR にアクセスしたり、リクエストを削除したりする手順。 |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Magento Commerceのインストールが、特定のプライバシー法の要件に従っていることを確認します。 |
