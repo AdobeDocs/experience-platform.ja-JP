@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
-source-wordcount: '1703'
-ht-degree: 91%
+source-wordcount: '1702'
+ht-degree: 89%
 
 ---
 
@@ -85,8 +85,8 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Alerts] | [!UICONTROL アラートの管理] | アラート履歴の読み取り、作成、編集、削除へのアクセス。 |
 | [!DNL Computed Attributes] | [!UICONTROL 計算済み属性の表示] | 「計算済み属性」タブ、在庫および詳細への読み取り専用アクセス。 |
 | [!DNL Computed Attributes] | [!UICONTROL 計算済み属性の管理] | ドラフトの読み取り、作成、削除、および計算済み属性の非アクティブ化を行うアクセス権。 |
-| [!DNL Data Hygiene] | [!UICONTROL データハイジーンの表示] | データハイジーンへの読み取り専用アクセス。 |
-| [!DNL Data Hygiene] | [!UICONTROL データハイジーンの管理] | データハイジーンの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Data Lifecycle] | [!UICONTROL データライフサイクルの表示] | データライフサイクルへの読み取り専用アクセス |
+| [!DNL Data Lifecycle] | [!UICONTROL データライフサイクルの管理] | データの読み取り、作成、編集、削除に対するアクセス権。 |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの管理] | 各スキーマと関連リソースへの読み取り、作成、編集および削除アクセス |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの表示] | スキーマおよび関連リソースへの読み取り専用アクセス |
 | [!DNL Data Modeling] | [!UICONTROL 関係の管理] | スキーマ関係の読み取り、作成、編集、および削除へのアクセス。 |
@@ -123,7 +123,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 2 つの 組織を接続し [!DNL Segment Match] フローを有効にするパートナーハンドシェイクを作成、承認または拒否するためのアクセス権。 |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | アクティブなパートナーで [!DNL Segment Match] フィードを読み取り、作成、編集、公開するためのアクセス権。 |
 | [!DNL Data Science Workspace] | [!UICONTROL Data Science Workspace の管理] | [!DNL Data Science Workspace] での読み取り、作成、編集、および削除へのアクセス。 |
-| データガバナンス | [!UICONTROL データ使用ラベルの適用] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
+| データガバナンス | [!UICONTROL 使用状況ラベルを管理] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | データガバナンス | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | データガバナンス | [!UICONTROL データ使用ポリシーの表示] | 組織に属するデータ使用ポリシーに対する読み取り専用アクセス。 |
 | データガバナンス | [!UICONTROL ユーザーアクティビティログを表示] | Platform のアクティビティを記録した [監査ログ](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
