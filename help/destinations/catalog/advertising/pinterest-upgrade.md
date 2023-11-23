@@ -3,7 +3,8 @@ title: 新しい API へのpinterestの宛先の移行。 お客様のアクシ�
 description: Pinterestは、Real-Time CDPのPinterestの宛先で現在使用されている v4 広告主 API を廃止します。 pinterestキャンペーンを中断することなく、新しい API にシームレスに移行するために、アクション項目を理解します。
 hide: true
 hidefromtoc: true
-source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
+exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%

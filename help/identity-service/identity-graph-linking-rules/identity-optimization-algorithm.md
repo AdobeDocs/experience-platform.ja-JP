@@ -4,7 +4,8 @@ description: ID サービスの ID 最適化アルゴリズムについて説明
 hide: true
 hidefromtoc: true
 badge: アルファ版
-source-git-commit: 8f99dc633c87fa36cc0c5413d23b97b4fce7dbc3
+exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '1319'
 ht-degree: 2%

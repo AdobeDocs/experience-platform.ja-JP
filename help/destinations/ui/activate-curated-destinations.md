@@ -2,13 +2,13 @@
 title: LiveRamp 識別子に基づいて、キュレーションされた宛先に対するオーディエンスをアクティブ化します
 type: Tutorial
 description: LiveRamp RampID を使用して、Adobe Experience Platformから接続された TV やオーディオの宛先にオーディエンスをアクティブ化する方法、およびその他の統合について説明します。
-source-git-commit: 1eb422572d95426fa8b342dc6aa79fb6125e18a1
+exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 4%
 
 ---
-
 
 # LiveRamp 識別子に基づいて、キュレーションされた宛先に対するオーディエンスをアクティブ化します
 

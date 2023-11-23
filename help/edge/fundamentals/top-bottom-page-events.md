@@ -1,13 +1,13 @@
 ---
 title: ページの上部と下部のイベントの使用
 description: この記事では、Web SDK でページイベントの上部と下部を使用する方法について説明します。
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 2%
 
 ---
-
 
 # Web SDK でのページイベントの上部および下部の使用
 
