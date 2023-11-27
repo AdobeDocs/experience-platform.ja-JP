@@ -2,9 +2,9 @@
 title: Platform Web SDK のファーストパーティデバイス ID
 description: Adobe Experience Platform Web SDK 用のファーストパーティデバイス ID(FPID) の設定方法について説明します。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ffcd428f84a4dcbbc95560cb4da5fd1c6d858a28
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1779'
 ht-degree: 2%
 
 ---
@@ -210,6 +210,10 @@ ID は次の順序で優先されます。
 このプロセスを説明するために、以前にサイトを訪問した顧客と、Adobeソリューションでの顧客の識別方法に FPID 移行が及ぼす影響を考慮します。
 
 ![FPID への移行後に訪問間で顧客の ID 値がどのように更新されるかを示す図](../assets/identity/tracking/visits.png)
+
+>[!IMPORTANT]
+>
+>The `ECID` cookie は常に `FPID`.
 
 | 訪問 | 説明 |
 | --- | --- |
