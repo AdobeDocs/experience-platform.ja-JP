@@ -4,9 +4,9 @@ title: Real-time Customer Data Platformでのプロファイルの参照
 description: Adobe Real-time Customer Data Platformを使用すると、Adobe Experience Platformユーザーインターフェイスを使用してリアルタイム顧客プロファイルデータを参照できます。
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '557'
 ht-degree: 12%
 
 ---
@@ -33,6 +33,8 @@ Real-Time CDP, B2B Edition では、 [!UICONTROL アカウント], [!UICONTROL �
 プロファイルの詳細には、 [!UICONTROL アカウント], [!UICONTROL 商談]、および [!UICONTROL ソースレコード] 顧客プロファイルで提供される標準情報に加えて、B2B のイベントと属性が強化されました。
 
 ![](images/b2b-profile-detail.png)
+
+Platform UI で提供されるプロファイルの詳細について詳しくは、 [プロファイルダッシュボードドキュメントの詳細セクション](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### 「アカウント」タブ
 

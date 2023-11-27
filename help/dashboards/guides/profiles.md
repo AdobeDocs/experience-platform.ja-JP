@@ -4,10 +4,10 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
 workflow-type: tm+mt
-source-wordcount: '4313'
-ht-degree: 56%
+source-wordcount: '4900'
+ht-degree: 50%
 
 ---
 
@@ -69,7 +69,81 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 「[!UICONTROL 参照]」タブを使用すると、組織に取り込まれた読み取り専用プロファイルを検索および表示できます。ここから、プロファイルの好み、過去のイベント、インタラクション、オーディエンスに関する重要な情報を確認できます。
 
-Platform UI で提供されるプロファイル表示機能について詳しくは、 [Adobe Real-time Customer Data Platformでのプロファイルの参照](../../rtcdp/profile/profile-browse.md).
+## プロファイルの詳細 {#profile-details}
+
+を開くには、 [!UICONTROL プロファイル] [!UICONTROL 詳細] ワークスペース、選択 [!UICONTROL プロファイル ID] を選択します。
+
+![プロファイル ID がハイライトされた「プロファイルの参照」タブ。](../images/profiles/profile-id.png)
+
+The [!UICONTROL プロファイル] [!UICONTROL 詳細] workspace には、そのプロファイルに固有の情報を伝達する、事前設定済みのウィジェットがいくつか表示されます。 この情報により、プロファイルの主要属性を一目で把握できます。 また、 [!UICONTROL プロファイル] [!UICONTROL 詳細] ワークスペースを作成します。 詳しくは、 [ウィジェットの追加方法](#add-widgets) を参照してください。
+
+![The [!UICONTROL プロファイル] [!UICONTROL 詳細] ワークスペースと [!UICONTROL 詳細] タブがハイライト表示されました。](../images/profiles/profile-details-workspace.png)
+
+### プロファイル詳細ウィジェット {#widgets}
+
+事前設定済みのプロファイル詳細ウィジェットを次に示します。
+
+#### 顧客プロファイル {#customer-profile}
+
+The [!UICONTROL 顧客プロファイル] ウィジェットには、プロファイルに関連付けられたユーザーの姓と名が表示されます [!UICONTROL プロファイル ID]. プロファイル ID は、ID タイプに関連付けられた自動生成識別子で、プロファイルを表します。 ID と ID 名前空間について詳しくは、「[ID の概要](../../rtcdp/profile/identities-overview.md)」を参照してください。
+
+![顧客プロファイルウィジェット](../images/profiles/customer-profile.png)
+
+#### 基本属性 {#basic-attributes}
+
+The [!UICONTROL 基本属性] ウィジェットは、個々のプロファイルの定義に最もよく使用される属性を表示します。
+
+![基本属性ウィジェット。](../images/profiles/basic-attributes.png)
+
+#### リンクされた ID {#linked-identities}
+
+The [!UICONTROL リンクされた ID] ウィジェットは、プロファイルに関連付けられているその他の id を表示します。
+
+プロファイルの ID の詳細をより深く表示するには、 [!UICONTROL ID] ワークスペース、選択 **[!UICONTROL ID グラフを表示]**.
+
+![Linked ID ウィジェット。](../images/profiles/linked-identities.png)
+
+#### チャネル環境設定 {#channel-preferences}
+
+The [!UICONTROL チャネル環境設定] ウィジェットは、ユーザーが通信の受信に同意した通信チャネルを表示します。 チェックマークは、ユーザーが通信の受信に同意した各チャネルを示します。
+
+<!-- image needs a blue tick added below -->
+
+![チャネル環境設定ウィジェット。](../images/profiles/channel-preferences.png)
+
+顧客の同意と取引先責任者の環境設定は複雑なトピックです。 同意とコンテキストの環境設定をExperience Platformで収集、処理、フィルタリングする方法を学ぶには、次のドキュメントをお読みください。
+
+* 次の操作に必要なスキーマフィールドグループについて説明します。 [Adobe基準に従って同意データを収集する](../../landing/governance-privacy-security/consent/adobe/overview.md)では、これらのプロファイルが有効なスキーマフィールドグループに関するドキュメントを参照してください。
+   * [[!UICONTROL 同意および環境設定の詳細]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) （Platform Web または Mobile SDK を使用して同意シグナルを送信する場合に必要）
+* Adobe標準を使用して顧客の同意と環境設定データを処理する方法については、 [Experience Platformでの同意処理](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* データガバナンスと同意ポリシーを組み合わせて使用すると、同意設定と確立された組織ルールに基づいて、セグメント化用のプロファイルをフィルタリングできます。 これらの組み合わせポリシーを作成して使用する方法については、 [データ使用ポリシーの管理](../../data-governance/policies/user-guide.md#combine-policies).
+
+### ウィジェットを追加 {#add-widgets}
+
+カスタマイズされたウィジェットを [!UICONTROL プロファイル] [!UICONTROL 詳細] ワークスペース、選択 **[!UICONTROL プロファイルの詳細のカスタマイズ]**.
+
+![プロファイルの詳細ワークスペース [!UICONTROL プロファイルの詳細のカスタマイズ] ハイライト表示されました。](../images/profiles/customize-profile-details.png)
+
+ウィジェットのサイズを変更したり、配置を変更したりして、ワークスペースを編集できるようになりました。 選択 **[!UICONTROL ウィジェットを追加]** ：カスタム属性を持つウィジェットを作成します。
+
+![プロファイル [!UICONTROL 詳細] ワークスペース [!UICONTROL ウィジェットを追加] ハイライト表示されました。](../images/profiles/add-widget.png)
+
+ウィジェットの作成者が表示されます。 ウィジェットのわかりやすい名前を [!UICONTROL カードのタイトル] テキストフィールドと選択 **[!UICONTROL 属性を追加]**.
+
+![ウィジェット作成者キャンバスと [!UICONTROL カードのタイトル] フィールドと [!UICONTROL 属性を追加] ハイライト表示されました。](../images/profiles/widget-creator.png)
+
+プロファイルの和集合スキーマのビジュアライゼーションを含むダイアログが表示されます。 検索フィールドを使用するか、スクロールして、ウィジェットでレポートする属性を見つけます。 含める属性のチェックボックスをオンにします。 選択 **[!UICONTROL 選択]** をクリックして、作成ワークフローを続行します。
+
+>[!TIP]
+>
+>最上位のチェックボックスを選択すると、子要素も含まれます。
+
+![loyalty 属性チェックボックスと [!UICONTROL 選択] ハイライト表示されました。](../images/profiles/union-schema-attributes.png)
+
+完了したウィジェットのプレビューがキャンバスに表示されます。 選択した属性に満足したら、「 」を選択します。 **[!UICONTROL 保存]** 選択を確定し、に戻るには、以下の手順に従います。 [!UICONTROL プロファイル] [!UICONTROL 詳細] ワークスペース。 新しく作成されたウィジェットがワークスペースに表示されます。
+
+![「保存」がハイライト表示され、ウィジェットプレビューが表示されたウィジェット作成キャンバス。](../images/profiles/widget-preview.png)
 
 ## 結合ポリシー {#merge-policies}
 

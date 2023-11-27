@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 同意データと環境設定データを取り込むためのデータセットの設定
 description: Adobe Experience Platformで同意データと環境設定データを取り込むための Experience Data Model(XDM) スキーマとデータセットの設定方法について説明します。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 5%
@@ -96,8 +96,8 @@ The [!UICONTROL 同意および環境設定の詳細] フィールドグルー�
 
 Adobe標準を使用して同意データを収集するには、次の 2 つのフィールドグループを含むプロファイル対応のスキーマが必要です。
 
-* [!UICONTROL 同意および環境設定の詳細]
-* [!UICONTROL IdentityMap] （Platform Web または Mobile SDK を使用して同意シグナルを送信する場合に必要）
+* [[!UICONTROL 同意および環境設定の詳細]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) （Platform Web または Mobile SDK を使用して同意シグナルを送信する場合に必要）
 
 Platform UI で、「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションで、 **[!UICONTROL 参照]** タブをクリックして、既存のスキーマのリストを表示します。 ここから、 [!DNL Profile]同意フィールドを追加する有効なスキーマです。 この節のスクリーンショットは、 [スキーマ作成チュートリアル](../../../../xdm/tutorials/create-schema-ui.md) を例として示します。
 
