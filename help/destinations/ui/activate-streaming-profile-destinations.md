@@ -1,13 +1,13 @@
 ---
-keywords: プロファイルの宛先のアクティベート;宛先のアクティベート;データのアクティベート;メールマーケティングの宛先アクティベート;クラウドストレージの宛先をアクティベート
 title: ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する
 type: Tutorial
 description: オーディエンスをストリーミングプロファイルベースの宛先に送信して、Adobe Experience Platformでオーディエンスデータをアクティブ化する方法について説明します。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 30%
+source-wordcount: '761'
+ht-degree: 24%
 
 ---
 
@@ -23,7 +23,13 @@ ht-degree: 30%
 
 ## 概要 {#overview}
 
-この記事では、Amazon Kinesisなど、Adobe Experience Platformストリーミングプロファイルベースの宛先で、オーディエンスデータをアクティブ化するために必要なワークフローについて説明します。
+この記事では、Adobe Experience Platformのオーディエンスデータをストリーミングプロファイルベースの宛先 ( [企業の宛先](/help/destinations/destination-types.md#streaming-profile-export)) をクリックします。
+
+この記事は、次の 3 つの宛先に適用されます。
+
+* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [HTTP API 宛先](/help/destinations/catalog/streaming/http-destination.md).
 
 ## 前提条件 {#prerequisites}
 
@@ -83,7 +89,15 @@ Adobe Analytics の **[!UICONTROL マッピング]** 手順：ターゲットの
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。お読みください [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
+[同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は、現在、Amazon Kinesis、Azure Event Hubs、HTTP API の 3 つのエンタープライズ環境への書き出しではサポートされていません。
+
+つまり、ターゲット設定に同意しなかったプロファイルを指します。 *含まれる* を使用して、これら 3 つの宛先に書き出すことができます。
+
+<!--
+
+If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+-->
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
