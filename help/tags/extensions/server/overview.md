@@ -2,9 +2,9 @@
 title: イベント転送拡張機能リファレンス
 description: Adobe Experience Platformのイベント転送拡張機能に関するドキュメントを見つけます。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
+source-git-commit: af3353000e5545e6d2dc729d6f0bb91a00683b04
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '189'
 ht-degree: 56%
 
 ---
@@ -48,5 +48,5 @@ ht-degree: 56%
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
-* [[!DNL Tiktok] ウェブイベント API](https://exchange.adobe.com/apps/ec/109834)*
+* [[!DNL Tiktok] ウェブイベント API](./tiktok/overview.md)
 * [[!DNL Zendesk]イベント API ](./zendesk/overview.md)
