@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2022年1月）
 description: Adobe Experience Platform の 2022年1月のリリースノートです。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 97%
@@ -91,7 +91,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| 匿名ブロック | 匿名ブロック SQL 構成を使用すると、クエリサービス内の大規模なデータ準備ジョブを小さなタスクに分類し、それらを再利用して順に実行することで増分データの読み込みを行うことができます。 詳しくは、[匿名ブロックドキュメントのクエリ例](../../query-service/essential-concepts/anonymous-block.md)を参照してください。 |
+| 匿名ブロック | 匿名ブロック SQL 構成を使用すると、クエリサービス内の大規模なデータ準備ジョブを小さなタスクに分類し、それらを再利用して順に実行することで増分データの読み込みを行うことができます。 詳しくは、[匿名ブロックドキュメントのクエリ例](../../query-service/key-concepts/anonymous-block.md)を参照してください。 |
 | データセットの構成 | サンドボックス内でデータアセットの量の増加に合わせ、クエリサービスで使用するデータアセットを整理するための論理的で一貫性のあるデータ構造を提供します。 詳しくは、[データアセットの整理に関するドキュメント](../../query-service/best-practices/organize-data-assets.md)を参照してください。 |
 
 [!DNL Query Service] について詳しくは、[[!DNL Query Service]  の概要](../../query-service/home.md)を参照してください。

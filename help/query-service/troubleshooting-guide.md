@@ -4,7 +4,7 @@ solution: Experience Platform
 title: よくある質問
 description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。トピックには、データの書き出し、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 100%
@@ -116,7 +116,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![フラット化されたデータの XDM スキーマと表形式表示。ネストされたデータセットの列名は、UI でハイライト表示されます。](./images/troubleshooting/column-name.png)
 
-クエリエディターまたはサードパーティのクライアントを使用して、[ネストされたデータ構造を操作する方法](./essential-concepts/nested-data-structures.md)の完全なガイダンスについては、ドキュメントを参照してください。
+クエリエディターまたはサードパーティのクライアントを使用して、[ネストされたデータ構造を操作する方法](./key-concepts/nested-data-structures.md)の完全なガイダンスについては、ドキュメントを参照してください。
 +++
 
 ### 配列を含むデータセットに対するクエリを高速化するにはどうすればよいですか？
@@ -156,7 +156,7 @@ SELECT * FROM customers LIMIT 0;
 +++回答
 匿名ブロック機能を使用すると、順に実行される 1 つ以上の SQL 文を連結できます。また、例外処理のオプションも使用できます。
 
-詳しくは、[匿名ブロックのドキュメント](./essential-concepts/anonymous-block.md)を参照してください。
+詳しくは、[匿名ブロックのドキュメント](./key-concepts/anonymous-block.md)を参照してください。
 +++
 
 ### クエリサービスでカスタム属性を実装するにはどうすればよいですか？
@@ -245,7 +245,7 @@ AS SELECT '1' as _id,
 ### システムに毎日入力される新しいデータを迅速に処理するにはどうすればよいですか？
 
 +++回答
-[`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 句を使用すると、スナップショット ID に基づいて、テーブルのデータを増分的に読み取ることができます。これは、最後の読み込み実行以降に作成または変更されたデータセット内の情報のみを処理する[増分読み込み](./essential-concepts/incremental-load.md)デザインパターンで使用するのに最適です。その結果、処理効率が向上し、ストリーミングデータ処理とバッチデータ処理の両方で使用できます。
+[`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 句を使用すると、スナップショット ID に基づいて、テーブルのデータを増分的に読み取ることができます。これは、最後の読み込み実行以降に作成または変更されたデータセット内の情報のみを処理する[増分読み込み](./key-concepts/incremental-load.md)デザインパターンで使用するのに最適です。その結果、処理効率が向上し、ストリーミングデータ処理とバッチデータ処理の両方で使用できます。
 +++
 
 ### プロファイル UI に表示される数値とプロファイル書き出しデータセットから計算される数値に違いがあるのはなぜですか？

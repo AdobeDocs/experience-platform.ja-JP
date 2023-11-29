@@ -2,7 +2,7 @@
 title: クエリサービスでのデータアセットの組織のベストプラクティス
 description: このドキュメントでは、クエリサービスで使いやすくするためにデータを整理する論理的な方法について説明します。
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platformクエリサービスで使用するデータアセットの構成と構造に関するベストプラクティスについて、より深く理解できました。 クエリサービスのベストプラクティスについては、 [データ重複排除ドキュメント](../essential-concepts/deduplication.md).
+このドキュメントでは、Adobe Experience Platformクエリサービスで使用するデータアセットの構成と構造に関するベストプラクティスについて、より深く理解できました。 クエリサービスのベストプラクティスについては、 [データ重複排除ドキュメント](../key-concepts/deduplication.md).

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリの記述；クエリの記述；
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリサービス；クエリの記述；クエリの記述；
 solution: Experience Platform
 title: クエリサービスでのクエリ実行に関する一般的なガイダンス
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでクエリを記述する際に知っておくべき重要な詳細について説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 45%
@@ -20,7 +20,7 @@ ht-degree: 45%
 
 ## クエリ実行モデル
 
-Adobe Experience Platform [!DNL Query Service] には、次の 2 つのモデルのクエリを実行します。インタラクティブで非インタラクティブ。 インタラクティブな実行は、ビジネスインテリジェンスツールでのクエリの開発とレポートの生成に使用され、非インタラクティブな実行は、データ処理ワークフローの一部として大規模なジョブや運用クエリに使用されます。
+Adobe Experience Platform [!DNL Query Service] には、インタラクティブと非インタラクティブの 2 つのモデルのクエリ実行があります。 インタラクティブな実行は、ビジネスインテリジェンスツールでのクエリの開発とレポートの生成に使用され、非インタラクティブな実行は、データ処理ワークフローの一部として大規模なジョブや運用クエリに使用されます。
 
 ### インタラクティブクエリの実行
 
@@ -38,11 +38,11 @@ Adobe Experience Platform [!DNL Query Service] には、次の 2 つのモデル
 >
 > 最大行数の制限を上書きするには、`LIMIT 0` をクエリに含めます。10 分のクエリタイムアウトは引き続き適用されます。
 
-デフォルトでは、インタラクティブクエリの結果はクライアントに返され、永続 化&#x200B;**されません**。結果をデータセットとしてに保持するには [!DNL Experience Platform]を使用する場合、クエリでは `CREATE TABLE AS SELECT` 構文と同じです。
+デフォルトでは、インタラクティブクエリの結果はクライアントに返され、永続 化&#x200B;**されません**。結果をデータセットとしてに保持するには [!DNL Experience Platform]を使用する場合、クエリでは `CREATE TABLE AS SELECT` 構文を使用します。
 
 ### 非インタラクティブクエリの実行
 
-を通じて送信されたクエリ [!DNL Query Service] API は、非インタラクティブに実行されます。 非インタラクティブ実行とは、 [!DNL Query Service] は API 呼び出しを受け取り、クエリを受信した順序で実行します。 非インタラクティブクエリを使用すると、常に [!DNL Experience Platform] 結果を受け取るか、既存のデータセットに新しい行を挿入します。
+を通じて送信されたクエリ [!DNL Query Service] API は、非インタラクティブに実行されます。 非インタラクティブ実行とは、 [!DNL Query Service] は API 呼び出しを受け取り、クエリを受け取った順序で実行します。 非インタラクティブクエリを使用すると、常に [!DNL Experience Platform] 結果を受け取るか、既存のデータセットに新しい行を挿入します。
 
 ## オブジェクト内の特定のフィールドへのアクセス
 
@@ -201,11 +201,11 @@ LIMIT 10
 
 ## テーブル情報の表示
 
-クエリサービスに接続すると、Platform で使用可能なすべてのテーブルを表示するには、 `\d` または `SHOW TABLES` コマンド
+クエリサービスに接続すると、Platform で使用可能なすべてのテーブルを表示するには、 `\d` または `SHOW TABLES` コマンド。
 
 ### 標準のテーブル表示
 
-この `\d` コマンドは、標準を表示します。 [!DNL PostgreSQL] 表を一覧表示するためのビュー。 このコマンドの出力の例を次に示します。
+The `\d` コマンドは、標準を表示します。 [!DNL PostgreSQL] 表を一覧表示するためのビュー。 このコマンドの出力の例を次に示します。
 
 ```sql
              List of relations
@@ -232,7 +232,7 @@ LIMIT 10
 
 テーブル内のスキーマに関する詳細情報を表示するには、 `\d {TABLE_NAME}` コマンド、ここで `{TABLE_NAME}` は、スキーマ情報を表示するテーブルの名前です。
 
-次の例は、 `luma_midvalues` 表を使用して表示する `\d luma_midvalues`:
+次の例は、 `luma_midvalues` 表を使用して表示される `\d luma_midvalues`:
 
 ```sql
                          Table "public.luma_midvalues"
@@ -271,7 +271,7 @@ LIMIT 10
 
 複数のデータセットを結合して、他のデータセットのデータをクエリに含めることができます。
 
-次の例は、次の 2 つのデータセット (`your_analytics_table` および `custom_operating_system_lookup`) とをクリックし、 `SELECT` 上位 50 のオペレーティングシステムに関する文（ページ表示数別）。
+次の例は、次の 2 つのデータセット (`your_analytics_table` および `custom_operating_system_lookup`) をクリックし、を作成します `SELECT` 上位 50 のオペレーティングシステムに関する文（ページ表示数別）。
 
 **クエリ**
 
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## 重複排除
 
-クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除の詳細については、 [クエリサービス重複排除ガイド](../essential-concepts/deduplication.md).
+クエリサービスは、データの重複排除、またはデータからの重複行の削除をサポートします。 重複排除について詳しくは、 [クエリサービス重複排除ガイド](../key-concepts/deduplication.md).
 
 ## クエリサービスでのタイムゾーンの計算
 
@@ -327,4 +327,4 @@ LIMIT 50;
 - [イベントのトレンドレポートの作成](../use-cases/trended-report-of-events.md)
 - [訪問者のロールアップレポートの表示](../use-cases/roll-up-report-of-a-visitor.md)
 - [ユーザーのページビューのリスト](../use-cases/list-visitor-sessions.md)
-- [訪問者をページビュー数別にリスト表示](../use-cases/visitors-by-number-of-page-views.md)
+- [訪問者をページビュー数別にリストする](../use-cases/visitors-by-number-of-page-views.md)

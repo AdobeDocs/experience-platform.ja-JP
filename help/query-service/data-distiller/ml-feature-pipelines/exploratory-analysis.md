@@ -2,7 +2,7 @@
 title: 探索的データ分析
 description: Data Distillerを使用して Python ノートブックのデータを調べ、分析する方法を説明します。
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
+source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 18%
@@ -42,7 +42,7 @@ df
 
 ## 大きなデータセットのサンプルバージョンを作成する {#create-dataset-sample}
 
-クエリするデータセットが非常に大きい場合、または調査クエリからの正確な結果が必要でない場合は、 [サンプリング機能](../../essential-concepts/dataset-samples.md) を Data Distillerクエリで使用できます。 これは 2 段階のプロセスです。
+クエリするデータセットが非常に大きい場合、または調査クエリからの正確な結果が必要でない場合は、 [サンプリング機能](../../key-concepts/dataset-samples.md) を Data Distillerクエリで使用できます。 これは 2 段階のプロセスです。
 
 - まず、 **分析** 指定したサンプリング比率を持つサンプリングされたバージョンを作成するデータセット
 - 次に、サンプルしたデータセットのバージョンをクエリします。 サンプリングしたデータセットに適用する関数に応じて、出力を最大数のデータセットに合わせて拡大・縮小できます

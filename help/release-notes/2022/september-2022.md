@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2022年9月
 description: Adobe Experience Platform の 2022年9月のリリースノート。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '2938'
 ht-degree: 99%
@@ -215,7 +215,7 @@ ID サービスの詳細については、[ID サービスの概要](../../ident
 | 機能 | 説明 |
 | --- | --- |
 | アラートサブスクリプション API | Adobe Experience Platform クエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを受け取ることができます。アラートは、メール、Platform UI 内またはその両方で受け取ることができます。現在、クエリアラートは、[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) を使用してのみ受け取ることができます。 |
-| データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。詳しくは、[データセットサンプルに関するガイド](../../query-service/essential-concepts/dataset-samples.md)を参照してください。 |
+| データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。詳しくは、[データセットサンプルに関するガイド](../../query-service/key-concepts/dataset-samples.md)を参照してください。 |
 
 [!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
 

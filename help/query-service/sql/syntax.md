@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 95d1aec09477480532d4df1bdc7488d3f5a39394
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '4134'
 ht-degree: 9%
@@ -765,7 +765,7 @@ The `FILTER CONTEXT` コマンドは、指定されたフィルター条件に�
 (1 row)
 ```
 
-`Statistics ID` を参照することで、計算された統計を直接クエリできます。以下の例のステートメントを `Statistics ID` またはエイリアス名とともに使用すると、出力を完全に表示できます。この機能の詳細については、 [エイリアス名ドキュメント](../essential-concepts/dataset-statistics.md#alias-name).
+`Statistics ID` を参照することで、計算された統計を直接クエリできます。以下の例のステートメントを `Statistics ID` またはエイリアス名とともに使用すると、出力を完全に表示できます。この機能の詳細については、 [エイリアス名ドキュメント](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -788,7 +788,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-詳しくは、 [データセット統計ドキュメント](../essential-concepts/dataset-statistics.md) を参照してください。
+詳しくは、 [データセット統計ドキュメント](../key-concepts/dataset-statistics.md) を参照してください。
 
 #### 大さじ {#tablesample}
 
@@ -805,7 +805,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-詳しくは、 [データセットサンプルドキュメント](../essential-concepts/dataset-samples.md) を参照してください。
+詳しくは、 [データセットサンプルドキュメント](../key-concepts/dataset-samples.md) を参照してください。
 
 ### BEGIN
 

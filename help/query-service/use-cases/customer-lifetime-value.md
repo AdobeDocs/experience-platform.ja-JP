@@ -2,7 +2,7 @@
 title: データシグナルを追跡して顧客のライフタイム値を生成する
 description: このガイドでは、Real-time Customer Data Platformで Data Distillerとユーザー定義ダッシュボードを使用して、顧客のライフタイム値を測定および視覚化する方法に関するエンドツーエンドのデモを提供します。
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 12%
@@ -91,7 +91,7 @@ CLV を設定する最初の手順は、ユーザーのアクションからキ�
 
 ## キャンペーンから返された分析データを確認する {#post-campaign-data-analysis}
 
-これで、ソースのデータを [段階的に処理される](../essential-concepts/incremental-load.md) を、高速化されたデータストアのデータモデルに対するスケジュールされた更新の一環として追加できます。 顧客からの応答イベントは、発生時またはバッチでAdobe Experience Platformに取り込むことができます。 データモデルは、設定やソースコネクタに応じて、1 日に 1 回、または複数回更新される場合があります。 詳しくは、 [バッチ取得 API の概要](../../ingestion/batch-ingestion/api-overview.md) または [ストリーミング取り込みの概要](../../ingestion/streaming-ingestion/overview.md) を参照してください。
+これで、ソースのデータを [段階的に処理される](../key-concepts/incremental-load.md) を、高速化されたデータストアのデータモデルに対するスケジュールされた更新の一環として追加できます。 顧客からの応答イベントは、発生時またはバッチでAdobe Experience Platformに取り込むことができます。 データモデルは、設定やソースコネクタに応じて、1 日に 1 回、または複数回更新される場合があります。 詳しくは、 [バッチ取得 API の概要](../../ingestion/batch-ingestion/api-overview.md) または [ストリーミング取り込みの概要](../../ingestion/streaming-ingestion/overview.md) を参照してください。
 
 データモデルが更新されると、カスタムダッシュボードウィジェットは、顧客のライフタイム値を測定し視覚化できる、意味のあるシグナルを提供します。
 

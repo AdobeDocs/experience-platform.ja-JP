@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 91%
@@ -52,6 +52,15 @@ ht-degree: 91%
    - [分析データからのマーチャンダイジング変数の返しと使用](use-cases/merchandising-variables.md)
    - [訪問者のロールアップレポートの表示](use-cases/roll-up-report-of-a-visitor.md)
    - [Web およびモバイル分析のインサイト](use-cases/analytics-insights.md)
+- 重要な概念 {#key-concepts}
+   - [ネストされたデータ構造の使用](key-concepts/nested-data-structures.md)
+   - [ネストされたデータ構造の統合](key-concepts/flatten-nested-data.md)
+   - [匿名ブロック](key-concepts/anonymous-block.md)
+   - [インラインテンプレート](key-concepts/inline-templates.md)
+   - [増分読み込み](key-concepts/incremental-load.md)
+   - [データ重複排除](key-concepts/deduplication.md)
+   - [データセットのサンプル](key-concepts/dataset-samples.md)
+   - [データセット統計の計算](key-concepts/dataset-statistics.md)
 - クエリサービスへのクライアントの接続 {#clients}
    - [クライアント接続の概要](clients/overview.md)
    - [SSL モード](./clients/ssl-modes.md)
@@ -91,15 +100,6 @@ ht-degree: 91%
 - ベストプラクティス {#best-practices}
    - [クエリの実行](best-practices/writing-queries.md)
    - [データアセット組織](./best-practices/organize-data-assets.md)
-- 基本的な概念 {#essential-concepts}
-   - [ネストされたデータ構造の使用](essential-concepts/nested-data-structures.md)
-   - [ネストされたデータ構造の統合](essential-concepts/flatten-nested-data.md)
-   - [匿名ブロック](essential-concepts/anonymous-block.md)
-   - [インラインテンプレート](essential-concepts/inline-templates.md)
-   - [増分読み込み](essential-concepts/incremental-load.md)
-   - [データ重複排除](essential-concepts/deduplication.md)
-   - [データセットのサンプル](essential-concepts/dataset-samples.md)
-   - [データセット統計の計算](essential-concepts/dataset-statistics.md)
 - SQL リファレンス {#sql}
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)
