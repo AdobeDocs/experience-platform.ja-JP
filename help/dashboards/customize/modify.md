@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: Platform のダッシュボードを UI で変更
 description: このガイドでは、組織の Adobe Experience Platform のデータをダッシュボードで表示する方法をカスタマイズする手順を説明します。
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 91%
+source-wordcount: '496'
+ht-degree: 88%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 91%
 
 Adobe Experience Platform のユーザーインターフェイス（UI）では、複数のダッシュボードを使用して組織のデータの表示や操作をおこなうことができます。ダッシュボードに表示されているデフォルトのウィジェットと指標は、個々のユーザーレベルで調整し、好きなデータを表示することができます。また、ウィジェットを作成して、同じ組織のユーザー間で共有することも可能です。
 
-このガイドでは、Platform UI の [!UICONTROL プロファイル]、 [!UICONTROL セグメント]、 [!UICONTROL 宛先] の各ダッシュボードでダッシュボードデータを表示する方法をカスタマイズする手順を説明します。
-
 >[!NOTE]
 >
->「ライセンスの使用」ダッシュボードに表示されるウィジェットはカスタマイズできません。 ライセンスの使用に特有のダッシュボードについて詳しくは、 [ライセンス使用状況ダッシュボードのドキュメント](../guides/license-usage.md) を参照してください。
+>ダッシュボードに対しておこなわれた更新は、組織ごとおよびサンドボックスごとにおこなわれます。
+
+このガイドでは、Platform UI の [!UICONTROL プロファイル]、 [!UICONTROL セグメント]、 [!UICONTROL 宛先] の各ダッシュボードでダッシュボードデータを表示する方法をカスタマイズする手順を説明します。
 
 ## はじめに
 

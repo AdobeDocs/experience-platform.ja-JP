@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience Platformでの IAB TCF 2.0 のサポート
 description: Adobe Experience Platformの宛先にセグメントをアクティブ化する際に、顧客の同意を伝えるデータ操作とスキーマを設定する方法について説明します。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 3%
@@ -19,7 +19,7 @@ The [!DNL Transparency & Consent Framework] (TCF)。 [!DNL Interactive Advertisi
 >
 >TCF 2.0 の詳細については、 [IAB Europe の Web サイト](https://iabeurope.eu/tcf-2-0/)（サポート資料および技術仕様を含む）
 
-Adobe Experience Platformは登録済みの [IAB TCF 2.0 ベンダーリスト](https://iabeurope.eu/vendor-list-tcf-v2-0/)（ID の下） **565**. TCF 2.0 の要件に準拠して、Platform を使用すると、顧客の同意データを収集し、保存された顧客プロファイルに統合できます。 その後、この同意データは、使用例に応じて、プロファイルがエクスポートされたオーディエンスセグメントに含まれるかどうかに考慮できます。
+Adobe Experience Platformは登録済みの [IAB TCF 2.0 ベンダーリスト](https://iabeurope.eu/vendor-list-tcf/)（ID の下） **565**. TCF 2.0 の要件に準拠して、Platform を使用すると、顧客の同意データを収集し、保存された顧客プロファイルに統合できます。 その後、この同意データは、使用例に応じて、プロファイルがエクスポートされたオーディエンスセグメントに含まれるかどうかに考慮できます。
 
 >[!IMPORTANT]
 >

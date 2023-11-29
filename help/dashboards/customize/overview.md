@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: ダッシュボードのカスタマイズの概要
 description: Adobe Experience Platform ダッシュボードに表示されるデータをカスタマイズする方法について詳しく説明します。
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 89%
+source-wordcount: '468'
+ht-degree: 86%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform 内で使用できるプロファイル、セグメン
 
 >[!NOTE]
 >
->[!UICONTROL ライセンスの使用] ダッシュボードに表示されるウィジェットはカスタマイズできません。 この一意のダッシュボードの詳細については、 [ライセンス使用状況ダッシュボードのドキュメント](../guides/license-usage.md) を参照してください。
+>ダッシュボードに対しておこなわれた更新は、組織ごとおよびサンドボックスごとにおこなわれます。
 
 ## ダッシュボードの変更
 

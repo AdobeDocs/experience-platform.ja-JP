@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform のプライバシー
 description: Adobe Real-time Customer Data Platform を使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '387'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 100%
 
 ## IAB TCF 2.0 のサポート
 
-[!DNL Real-Time CDP] は、[!DNL Interactive Advertising Bureau (IAB)] で説明しているように、[!DNL Transparency & Consent Framework (TCF)] の登録済み[ベンダーリスト](https://iabeurope.eu/vendor-list-tcf-v2-0/)の一部である Adobe Experience Platform に基づいて作成されています。TCF 2.0 要件に準拠して、Platform を使用すると、詳細な顧客同意データを収集し、保存されている顧客プロファイルに統合できます。この同意データは、ユースケースに応じて、特定のプロファイルが書き出されたオーディエンスセグメントに含まれているかどうかの要因となります。
+[!DNL Real-Time CDP] は、[!DNL Interactive Advertising Bureau (IAB)] で説明しているように、[!DNL Transparency & Consent Framework (TCF)] の登録済み[ベンダーリスト](https://iabeurope.eu/vendor-list-tcf/)の一部である Adobe Experience Platform に基づいて作成されています。TCF 2.0 要件に準拠して、Platform を使用すると、詳細な顧客同意データを収集し、保存されている顧客プロファイルに統合できます。この同意データは、ユースケースに応じて、特定のプロファイルが書き出されたオーディエンスセグメントに含まれているかどうかの要因となります。
 
 詳しくは、[Experience Platform での IAB TCF 2.0 のサポート](../../landing/governance-privacy-security/consent/iab/overview.md)に関する概要を参照してください。
 

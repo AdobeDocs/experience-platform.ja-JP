@@ -2,10 +2,10 @@
 title: AI 生成Recommendationsを使用して CSV ファイルを XDM スキーマにマッピングする
 description: このチュートリアルでは、AI で生成されたレコメンデーションを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
+source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 96%
+source-wordcount: '1102'
+ht-degree: 89%
 
 ---
 
@@ -72,9 +72,13 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 ![UI の[!UICONTROL マッピング]手順で、マッピングされたすべての CSV フィールドと結果のスキーマ構造を表示する.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
+>[!NOTE]
+>
+>ソースとターゲットのフィールドマッピングワークフローで、様々な条件に基づいてスキーマ内のすべてのフィールドをフィルタリングできます。 デフォルトの動作では、マッピングされたすべてのフィールドが表示されます。 表示されるフィールドを変更するには、検索入力フィールドの横にあるフィルターアイコンを選択し、ドロップダウンオプションから選択します。<br> ![フィルターアイコンとドロップダウンメニューがハイライト表示された状態の、CSV から XDM スキーマへのマッピングステージ。](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "フィルターアイコンとドロップダウンメニューがハイライト表示された状態の、CSV から XDM スキーマへのマッピングステージ。"){width="100" zoomable="yes"}
+
 ここから、必要に応じてオプションで「[フィールドマッピングを編集](#edit-mappings)」または「[関連付けられているフィールドグループを変更](#edit-schema)」を選択できます。十分な設定ができた時点で、「**[!UICONTROL 終了]**」を選択してマッピングを完了し、事前に設定したデータフローを開始します。CSV データはシステムに取り込まれ、生成されたスキーマ構造に基づいてデータセットが設定され、ダウンストリームの Platform サービスで利用できる状態になります。
 
-![この [!UICONTROL 完了] ボタンを選択し、CSV マッピングプロセスを完了します。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![The [!UICONTROL 完了] ボタンを選択し、CSV マッピングプロセスを完了します。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### フィールドマッピングの編集 {#edit-mappings}
 

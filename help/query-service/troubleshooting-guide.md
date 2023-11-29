@@ -4,10 +4,10 @@ solution: Experience Platform
 title: よくある質問
 description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。トピックには、データの書き出し、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
 workflow-type: tm+mt
-source-wordcount: '4309'
-ht-degree: 100%
+source-wordcount: '4384'
+ht-degree: 98%
 
 ---
 
@@ -583,6 +583,16 @@ WHERE T2.ID IS NULL
 
 +++回答
 いいえ、クエリサービスは「INSERT OVERWRITE INTO」コマンドをサポートしていません。
++++
+
+### ライセンス使用状況ダッシュボードの使用状況データは、Data Distiller Compute 時間に対してどのくらいの頻度で更新されますか？
+
++++回答 Data Distillerコンピューターの時間のライセンス使用状況ダッシュボードは、6 時間ごとに 1 日 4 回更新されます。
++++
+
+### Data Distillerにアクセスせずに CREATE VIEW コマンドを使用できますか？
+
++++回答はい、次を使用できます： `CREATE VIEW` コマンドを使用して、Data Distillerにアクセスできない。 このコマンドは、データの論理ビューを提供しますが、データレイクに書き戻すことはできません。
 +++
 
 ## データの書き出し {#exporting-data}

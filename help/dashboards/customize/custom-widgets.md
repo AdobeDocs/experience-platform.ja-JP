@@ -3,10 +3,10 @@ keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシ�
 title: ダッシュボードのカスタムウィジェットの作成
 description: このガイドでは、Adobe Experience Platform ダッシュボードで使用するカスタムウィジェットの作成手順を説明します。
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 91%
+source-wordcount: '975'
+ht-degree: 90%
 
 ---
 
@@ -16,11 +16,11 @@ Adobe Experience Platform では、複数のダッシュボードを使用して
 
 このガイドでは、Platform UI の [!UICONTROL プロファイル]、 [!UICONTROL セグメント]、および [!UICONTROL 宛先] ダッシュボードにカスタムウィジェットを作成して追加する手順を順を追って説明します。
 
-標準ウィジェットの詳細については、 [ダッシュボードへの標準ウィジェットの追加](standard-widgets.md) のガイドを参照してください。
-
 >[!NOTE]
 >
->[!UICONTROL ライセンスの使用] ダッシュボードに表示されるウィジェットはカスタマイズできません。 この一意のダッシュボードの詳細については、 [ライセンス使用状況ダッシュボードのドキュメント](../guides/license-usage.md) を参照してください。
+>ダッシュボードに対しておこなわれた更新は、組織ごとおよびサンドボックスごとにおこなわれます。
+
+標準ウィジェットの詳細については、 [ダッシュボードへの標準ウィジェットの追加](standard-widgets.md) のガイドを参照してください。
 
 ## ウィジェットライブラリ {#widget-library}
 
