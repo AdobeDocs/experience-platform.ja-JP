@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信
 description: データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信する方法を説明します。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1225'
 ht-degree: 8%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 8%
 [!DNL Data Prep] でアップサートをストリーミングすると、[!DNL Real-Time Customer Profile] データに部分行の更新を送信しながら、単一の API リクエストで新しい ID リンクを作成および確立できます。
 
 アップサートをストリーミングすることで、データをに変換しながら、データの形式を保持できます。 [!DNL Real-Time Customer Profile] 取り込み中のPATCHリクエスト。 指定した入力に基づいて、 [!DNL Data Prep] を使用すると、単一の API ペイロードを送信し、データを [!DNL Real-Time Customer Profile] PATCHと [!DNL Identity Service] CREATE リクエスト。
+
+>[!WARNING]
+>
+>DCS インレットを介したプロファイル更新のための、エクスペリエンスデータモデル (XDM) のエンティティ更新メッセージ (JSONPATCH操作を使用 ) の取り込みは非推奨（廃止予定）となりました。 別の方法として、次の操作を実行できます。 [DCS インレットへの生データの取り込み](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) プロファイルの更新時にデータを XDM 準拠のメッセージに変換するために必要なデータマッピングを指定します。
 
 このドキュメントでは、でアップサートをストリーミングする方法について説明します。 [!DNL Data Prep].
 
