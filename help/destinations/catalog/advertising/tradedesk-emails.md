@@ -3,9 +3,9 @@ title: （ベータ版）トレードデスク — CRM 接続
 description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3680341c5ca4012ae33df32aa901467d1048b702
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1130'
 ht-degree: 22%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform では、プレーンテキストと SHA256 でハッ�
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | メール | E メールアドレス（クリアテキスト） | 入力 `email` ソース id が E メールの名前空間または属性の場合、をターゲット id として使用します。 |
-| Email_LC_SHA256 | 電子メールアドレスは、SHA256 を使用してハッシュ化し、小文字にする必要があります。 必ず次の手順に従ってください。 [電子メールの正規化](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) ルールが必要です。 後でこの設定を変更することはできません。 | 入力 `hashed_email` ソース id が Email_LC_SHA256 名前空間または属性の場合、をターゲット id として設定します。 |
+| Email_LC_SHA256 | 電子メールアドレスは、SHA256 を使用してハッシュ化し、小文字にする必要があります。 後でこの設定を変更することはできません。 | 入力 `hashed_email` ソース id が Email_LC_SHA256 名前空間または属性の場合、をターゲット id として設定します。 |
 
 {style="table-layout:auto"}
 
