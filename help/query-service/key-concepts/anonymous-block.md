@@ -2,10 +2,10 @@
 title: クエリサービスの匿名ブロック
 description: 匿名ブロックは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文であり、クエリのシーケンスを効率的に実行できます
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 100%
+source-wordcount: '647'
+ht-degree: 74%
 
 ---
 
@@ -60,8 +60,28 @@ END
 $$;
 ```
 
+## サードパーティクライアントでの匿名ブロック {#third-party-clients}
+
+特定のサードパーティクライアントでは、スクリプトの一部を 1 つの文として処理する必要があることを示す SQL ブロックの前後に別々の識別子が必要になる場合があります。 クエリサービスをサードパーティのクライアントと共に使用する際にエラーメッセージが表示される場合は、SQL ブロックの使用に関するサードパーティのクライアントのドキュメントを参照する必要があります。
+
+例： **DbVisualizer** では、行上のテキストのみを区切り文字にする必要があります。 DbVisualizer では、Begin Identifier のデフォルト値はです。 `--/` また、終了識別子の場合は、 `/`. DbVisualizer での匿名ブロックの例を次に示します。
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+特に DbVisualizer の場合、UI には、「[!DNL Execute the complete buffer as one SQL statement]&quot;. 詳しくは、 [DbVisualizer ドキュメント](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) を参照してください。
+
 ## 次の手順
 
-このドキュメントを参照することで、匿名ブロックとその構造を明確に理解できます。[クエリの実行について詳しくは](../best-practices/writing-queries.md)、クエリサービスでのクエリの実行に関するガイドを参照してください。
+このドキュメントを参照することで、匿名ブロックとその構造を明確に理解できます。詳しくは、 [クエリ実行ガイド](../best-practices/writing-queries.md) を参照してください。
 
-また、クエリの効率を高めるために、[増分読み込みデザインパターンで匿名ブロックを使用する方法](./incremental-load.md)についても参照してください。
+また、 [増分読み込み設計パターンで匿名ブロックを使用する方法](./incremental-load.md) をクリックして、クエリの効率を高めます。

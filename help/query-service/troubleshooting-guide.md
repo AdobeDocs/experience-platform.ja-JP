@@ -4,10 +4,10 @@ solution: Experience Platform
 title: よくある質問
 description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。トピックには、データの書き出し、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
+source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
 workflow-type: tm+mt
-source-wordcount: '4384'
-ht-degree: 98%
+source-wordcount: '4450'
+ht-degree: 96%
 
 ---
 
@@ -593,6 +593,12 @@ WHERE T2.ID IS NULL
 ### Data Distillerにアクセスせずに CREATE VIEW コマンドを使用できますか？
 
 +++回答はい、次を使用できます： `CREATE VIEW` コマンドを使用して、Data Distillerにアクセスできない。 このコマンドは、データの論理ビューを提供しますが、データレイクに書き戻すことはできません。
++++
+
+### DbVisualizer で匿名ブロックを使用できますか？
+
++++回答
+はい。 ただし、DbVisualizer などの特定のサードパーティクライアントでは、SQL ブロックの前後に別の識別子を指定して、スクリプトの一部を 1 つのステートメントとして処理する必要があることを示す場合があります。 詳しくは、 [匿名ブロックドキュメント](./key-concepts/anonymous-block.md) または [DbVisualizer の公式ドキュメント](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## データの書き出し {#exporting-data}
