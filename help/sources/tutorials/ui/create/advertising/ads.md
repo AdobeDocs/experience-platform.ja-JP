@@ -2,9 +2,9 @@
 title: UI でのGoogle Ads ソース接続の作成
 description: Adobe Experience Platform UI を使用してGoogle Ads ソース接続を作成する方法を説明します。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '666'
 ht-degree: 28%
 
 ---
@@ -35,7 +35,7 @@ Google Ads アカウントプラットフォームにアクセスするには、
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | クライアント顧客 ID | クライアント顧客 ID は、Google Ads API で管理するGoogle Ads クライアントアカウントに対応するアカウント番号です。 この ID は、 `123-456-7890`. |
-| ログイン顧客 ID | ログイン顧客 ID は、Google Ads Manager アカウントに対応するアカウント番号で、特定のオペレーティング顧客からレポートデータを取得するために使用されます。 ログイン顧客 ID について詳しくは、 [Google Ads API ドキュメント](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| ログイン顧客 ID | ログイン顧客 ID は、Google Ads Manager アカウントに対応するアカウント番号で、特定のオペレーティング顧客からレポートデータを取得するために使用されます。 ログイン顧客 ID について詳しくは、 [Google Ads API ドキュメント](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | 開発者トークン | 開発者トークンを使用すると、Google Ads API にアクセスできます。 同じ開発者トークンを使用して、すべてのGoogle Ads アカウントに対してリクエストを実行できます。 次の方法で開発者トークンを取得します： [マネージャーアカウントへのログイン](https://ads.google.com/home/tools/manager-accounts/) 次に、API センターページに移動します。 |
 | 更新トークン | 更新トークンは、 [!DNL OAuth2] 認証。 このトークンを使用すると、期限切れになったアクセストークンを再生成できます。 |
 | クライアント ID | クライアント ID は、 [!DNL OAuth2] 認証。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleへのアプリケーションを識別し、アカウントに代わってアプリケーションを操作できます。 |

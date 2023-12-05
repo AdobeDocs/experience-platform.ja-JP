@@ -3,10 +3,10 @@ title: Azure Event Hubs ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Azure Event Hubs をAdobe Experience Platformに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 19%
+source-wordcount: '517'
+ht-degree: 20%
 
 ---
 
@@ -36,7 +36,7 @@ Platform 側での取り込み速度を上げるには、Platform で、ソー�
 
 ## 仮想ネットワークを使用して接続する [!DNL Event Hubs] Platform へ
 
-仮想ネットワークを設定して接続できます [!DNL Event Hubs] ファイアウォール対策を有効にしている間に、Platform に接続します。 仮想ネットワークを設定するには、次の手順に従います。 [[!DNL Event Hubs] ネットワークルールセットドキュメント](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) およびは、次に示す手順に従います。
+仮想ネットワークを設定して接続できます [!DNL Event Hubs] ファイアウォール対策を有効にしている間に、Platform に接続します。 仮想ネットワークを設定するには、次の手順に従います。 [[!DNL Event Hubs] ネットワークルールセットドキュメント](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) およびは、次に示す手順に従います。
 
 * 選択 **所要時間** （REST API パネルから）
 * の認証 [!DNL Azure] 同じブラウザーの資格情報を使用するアカウント
@@ -117,7 +117,7 @@ Platform サブネットの様々な地域については、以下のリスト�
 }
 ```
 
-次を参照してください。 [[!DNL Event Hubs] 文書](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) を参照してください。
+次を参照してください。 [[!DNL Event Hubs] 文書](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照してください。
 
 ## [!DNL Event Hubs] を Platform に接続
 
