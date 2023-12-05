@@ -3,14 +3,14 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御ユーザーの管理
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用してユーザーとユーザーグループを管理する方法について説明します
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 6%
+source-wordcount: '217'
+ht-degree: 5%
 
 ---
 
-# ユーザーの管理
+# ユーザーを管理
 
 ユーザーの詳細と割り当てられているロールを表示する場合は、 **[!UICONTROL ユーザー]** タブをクリックします。
 
@@ -32,7 +32,7 @@ ht-degree: 6%
 >
 >権限で API 資格情報を表示および管理できるのは、システム管理者のみです。
 
-Adobe Experience Platform権限への移行には、以前製品プロファイルに依存していた開発者 API ワークフローに対して完了する必要がある追加の手順があります。 詳しくは、 [API 認証](../../../landing/api-authentication.md) を参照してください。
+Adobe Experience Platform権限への移行には、以前に役割に依存していた開発者 API ワークフローに対して、追加の手順を完了する必要があります。 次のガイドを参照してください： [API 認証](../../../landing/api-authentication.md) を参照してください。
 
 ## 次の手順
 

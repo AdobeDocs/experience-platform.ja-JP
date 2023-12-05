@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御の概要
 description: このドキュメントでは、Adobe Experience Platform の属性ベースのアクセス制御に関する情報を提供します
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 94%
+source-wordcount: '1840'
+ht-degree: 87%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 94%
 
 >[!IMPORTANT]
 >
->組織で属性ベースのアクセス制御を有効にすると、Adobe Admin Console の製品プロファイルの代わりに Adobe Experience Cloud の権限を使用して、組織内のユーザー、機能、ラベル、その他のリソースに対する権限の管理を開始できます。
+>組織で属性ベースのアクセス制御を有効にしたら、Adobe Admin ConsoleのロールではなくAdobe Experience Cloudで権限を使用して、組織内のユーザー、機能、ラベル、その他のリソースの権限を管理できます。
 
 権限は、管理者がユーザーの役割およびアクセスポリシーを定義し、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できる、Experience Cloud の領域です。
 
@@ -62,7 +62,7 @@ ht-degree: 94%
 
 ### アクセス制御
 
-Platform は、[Adobe Admin Console](https://adminconsole.adobe.com) 製品プロファイルを活用し、ユーザーを権限とサンドボックスにリンクします。権限は、データモデリング、プロファイル管理、サンドボックス管理など、様々な Platform 機能へのアクセスを制御します。組織で属性ベースのアクセス制御を有効にすると、Adobe Admin Console の製品プロファイルの代わりに Adobe Experience Cloud の権限を使用して、組織内のユーザー、機能、ラベル、その他のリソースに対する権限の管理を開始できます。
+Platform の活用 [Adobe Admin Console](https://adminconsole.adobe.com) 権限とサンドボックスを持つユーザーをリンクする役割です。 権限は、データモデリング、プロファイル管理、サンドボックス管理など、様々な Platform 機能へのアクセスを制御します。組織で属性ベースのアクセス制御を有効にしたら、Adobe Admin ConsoleのロールではなくAdobe Experience Cloudで権限を使用して、組織内のユーザー、機能、ラベル、その他のリソースの権限を管理できます。
 
 ヘルスケアやプライバシーシールドを購入したお客様に対しては、属性ベースのアクセス制御に対する利用が制限されます。この機能の特長は次のとおりです。
 
@@ -74,7 +74,7 @@ Admin Console から新しい権限インターフェイスへのすべての Ex
 
 >[!IMPORTANT]
 >
->製品プロファイルは、組織が有効になると自動的に権限インターフェイスに移行されます。Admin Console の製品プロファイルは、当面の間、そのまま残ります。組織が有効になった後は、製品プロファイルを変更&#x200B;**しない**&#x200B;でください。
+>組織が有効になると、役割は自動的に権限インターフェイスに移行されます。 Admin Consoleの役割は当分の間、そのままになります。 お願いします **しない** 組織を有効にした後に役割を変更します。
 
 アクセス制御について詳しくは、[アクセス制御の概要](../home.md)を参照してください。
 
