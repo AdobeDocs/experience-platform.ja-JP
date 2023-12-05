@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2023年1月）
 description: Adobe Experience Platform の 2023年1月のリリースノートです。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '2408'
-ht-degree: 98%
+source-wordcount: '2224'
+ht-degree: 99%
 
 ---
 
@@ -149,7 +149,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | データタイプ | [[!UICONTROL 決定提案の詳細]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | 選択戦略の詳細を取得する `selectionStrategy` フィールドを追加しました。 |
 | フィールドグループ | [[!UICONTROL エクスペリエンスイベント - 提案インタラクション]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | フィールドグループは、[!UICONTROL Journey Step Event] クラスと互換性を持つようになりました。 |
 | データタイプ | [[!UICONTROL エラーの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` フィールドの名前を `name` に変更しました。 |
-| データタイプ | [[!UICONTROL メディア情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | パターンの変更をビデオセグメントプロパティに戻しました。 |
+| データタイプ | [[!UICONTROL メディア情報]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | パターンの変更をビデオセグメントプロパティに戻しました。 |
 | データタイプ | [[!UICONTROL QoE データの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | `droppedFrameCount` フィールドを削除しました。 |
 | データタイプ | [[!UICONTROL セッションの詳細情報]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `isAuthorized` フィールドの名前を `authorized` に変更し、以前はブール値だった `type` を文字列に更新しました。 |
 | データタイプ | [[!UICONTROL 送料]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | 新しいフィールド `shipDate`、`trackingNumber`、`trackingURL` を追加しました。 |

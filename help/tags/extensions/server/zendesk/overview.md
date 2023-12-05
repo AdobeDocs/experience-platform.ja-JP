@@ -2,10 +2,10 @@
 title: Zendesk イベント転送拡張機能
 description: Adobe Experience Platform の Zendesk イベント転送拡張機能。
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 100%
+source-wordcount: '1170'
+ht-degree: 99%
 
 ---
 
@@ -86,7 +86,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 
 ### `profile` キー
 
-`profile` は、イベントをトリガーしたユーザーを表す JSON オブジェクトです。 `profile` オブジェクトによって取り込まれるプロパティについて詳しくは、Zendesk のドキュメントにある[プロファイルの詳細](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/)を参照してください。
+`profile` は、イベントをトリガーしたユーザーを表す JSON オブジェクトです。 `profile` オブジェクトによって取り込まれるプロパティについて詳しくは、Zendesk のドキュメントにある[プロファイルの詳細](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)を参照してください。
 
 データ要素へのマッピングの際、次のキーは `profile` オブジェクト内で参照できます。
 
@@ -96,8 +96,8 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 | `type` | 文字列 | `arc.event.xdm._extconndev.profile_type` | プロファイルタイプの名前。このフィールドを使用して、特定のソースに対応する様々な種類のプロファイルを作成できます。例えば、顧客用と従業員用に 1 組の会社プロファイルを作成できます。 | ○ | プロファイルタイプの長さは 40 文字以下にする必要があります。 |
 | `name` | 文字列 | `arc.event.xdm._extconndev.name` | プロファイルの人物名 | × | （N/A） |
 | `user_id` | 文字列 | `arc.event.xdm._extconndev.user_id` | Zendesk におけるその人物のユーザー ID。 | × | （N/A） |
-| `identifiers` | 配列 | `arc.event.xdm._extconndev.identifiers` | 1 つ以上の識別子を含む配列。 各識別子は、タイプと値で構成されます。 | ○ | `identifiers` 配列について詳しくは、[Zendesk ドキュメント](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array)を参照してください。すべてのフィールドと値は一意である必要があります。 |
-| `attributes` | オブジェクト | `arc.event.xdm._extconndev.attrbutes` | 人物に関するユーザー定義のプロパティを含むオブジェクト。 | × | プロファイル属性について詳しくは、[Zendesk ドキュメント](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes)を参照してください。 |
+| `identifiers` | 配列 | `arc.event.xdm._extconndev.identifiers` | 1 つ以上の識別子を含む配列。 各識別子は、タイプと値で構成されます。 | ○ | `identifiers` 配列について詳しくは、[Zendesk ドキュメント](https://developer.zendesk.com/api-reference/ticketing/users/profiles_api/profiles_api/#identifiers-array)を参照してください。すべてのフィールドと値は一意である必要があります。 |
+| `attributes` | オブジェクト | `arc.event.xdm._extconndev.attrbutes` | 人物に関するユーザー定義のプロパティを含むオブジェクト。 | × | プロファイル属性について詳しくは、[Zendesk ドキュメント](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/#attributes)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -148,9 +148,9 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 このドキュメントでは、UI で Zendesk イベント転送拡張機能をインストールおよび設定する方法について説明しました。 Zendesk でのイベントデータの収集について詳しくは、次の公式ドキュメントを参照してください。
 
 * [イベント使用の手引き](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
-* [Zendesk Events API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/)
+* [Zendesk Events API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
 * [Events API について](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
 * [イベントの詳細](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
-* [Zendesk Profiles API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/#profile-object)
-* [Profiles API について](https://developer.zendesk.com/documentation/custom-data/profiles/about-the-profiles-api/)
-* [プロファイルの詳細](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/)
+* [Zendesk Profiles API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
+* [Profiles API について](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
+* [プロファイルの詳細](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

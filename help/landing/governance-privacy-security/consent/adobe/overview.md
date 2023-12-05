@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformでの同意処理
 description: Adobe2.0 標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ Web サイト上の同意変更イベントをリッスンするように CMP �
 
 モバイルアプリケーションでExperience Platformの同意設定が必要な場合は、Consent API が呼び出されるたびに同意設定を取得および更新し、Platform に送信するように、顧客の Mobile SDK を統合できます。
 
-詳しくは、 Mobile SDK のドキュメントを参照してください。 [同意モバイル拡張機能の設定](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) および [同意 API の使用](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Mobile SDK を使用してプライバシーに関する問題を処理する方法について詳しくは、の節を参照してください。 [プライバシーと GDPR](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+詳しくは、 Mobile SDK のドキュメントを参照してください。 [同意モバイル拡張機能の設定](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) および [同意 API の使用](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Mobile SDK を使用してプライバシーに関する問題を処理する方法について詳しくは、の節を参照してください。 [プライバシーと GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### XDM 準拠の同意データを直接取り込む {#batch}
 
