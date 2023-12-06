@@ -1,11 +1,10 @@
 ---
-keywords: Google 広告;google 広告;google adwords;Google AdWords;Google Adwords
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '950'
 ht-degree: 97%
 
 ---
@@ -29,7 +28,7 @@ ht-degree: 97%
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Google Ad Manager] では、以下の表で説明する ID のアクティベーションをサポートしています。
+[!DNL Google Ads] では、以下の表で説明する ID のアクティベーションをサポートしています。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
