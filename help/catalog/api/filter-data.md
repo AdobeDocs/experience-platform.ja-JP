@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリパラメータを使用したカタログデータのフィルタリング
 description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
+source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
 workflow-type: tm+mt
-source-wordcount: '2099'
-ht-degree: 83%
+source-wordcount: '2117'
+ht-degree: 82%
 
 ---
 
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{LIMIT}` | 返すオブジェクトの数を 1 ～ 100 の範囲で示す整数。 |
 
 **リクエスト**
@@ -60,12 +60,12 @@ curl -X GET \
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
@@ -103,7 +103,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY}` | 応答本文に含める属性の名前。 |
 | `{OBJECT_ID}` | 特定のの一意の ID [!DNL Catalog] オブジェクトを取得中です。 |
 
@@ -172,7 +172,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するカタログオブジェクトのタイプ。有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得するカタログオブジェクトのタイプ。有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OFFSET}` | 応答をオフセットするオブジェクトの数を示す整数。 |
 
 **リクエスト**
@@ -393,7 +393,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するカタログオブジェクトのタイプ。有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得するカタログオブジェクトのタイプ。有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | 結果の並べ替えに使用するプロパティの名前。 |
 
 **リクエスト**
@@ -455,7 +455,7 @@ curl -X GET \
 * [単純なフィルターの使用](#using-simple-filters)：特定のプロパティが特定の値と一致するかどうかでフィルタリングします。
 * [プロパティパラメーターの使用](#using-the-property-parameter)：条件付き式を使用して、プロパティが存在するかどうか、またはプロパティの値が別の指定した値や正規式と一致、近似、比較するかどうかを基にフィルタリングします。
 
-### 単純なフィルターの使用 {#using-simple-filters}
+### 標準フィルターの使用 {#using-simple-filters}
 
 単純なフィルターを使用すると、特定のプロパティ値に基づいて応答をフィルタリングできます。単純なフィルターは、`{PROPERTY_NAME}={VALUE}` の形式をとります。
 
@@ -474,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | 値のフィルターに使用するプロパティの名前です。 |
 | `{VALUE}` | クエリに応じて含めるまたは除外する結果を決定するプロパティ値。 |
 
@@ -520,7 +520,7 @@ curl -X GET \
 }
 ```
 
-### `property` パラメータの使用  {#using-the-property-parameter}
+### の使用 `property` パラメーター {#using-the-property-parameter}
 
 `property` クエリパラメーターは、単純なパラメーターよりも柔軟にプロパティベースのフィルタリングをおこなえます。プロパティに特定の値が含まれるかどうかに基づいてフィルタリングする以外に、`property` パラメーターは他の比較演算子（「より大きい」（`>`）や「より小さい」（`<`）など）を正規式としてプロパティ値によるフィルタリングに使用できます。また、値に関係なく、プロパティが存在するかどうかでフィルタリングすることもできます。
 
@@ -546,7 +546,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{CONDITION}` | クエリするプロパティ、およびその値の評価方法を示す条件式。以下に例を示します。 |
 
 `property` パラメーターの値は、複数の異なる種類の条件付き式をサポートします。次の表に、サポートされる式の基本構文を示します。
@@ -565,7 +565,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 >[!NOTE]
 >
-> `name` プロパティでは、検索文字列全体またはその一部として、ワイルドカード `*` の使用がサポートされています。ワイルドカードは空の文字に一致するので、検索文字列 `te*st` は「test」に一致します。アスタリスクは繰り返す（`**`）ことでエスケープされます。検索文字列内のダブルアスタリスクは、リテラル文字列として 1 つのアスタリスクを表します。
+>The `name` プロパティでは、ワイルドカードの使用がサポートされています。 `*`を検索文字列全体として、またはその一部として使用できます。 ワイルドカードは空の文字に一致するので、検索文字列 `te*st` は「test」に一致します。アスタリスクは繰り返す（`**`）ことでエスケープされます。検索文字列内のダブルアスタリスクは、リテラル文字列として 1 つのアスタリスクを表します。
 
 **リクエスト**
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: カタログオブジェクトの検索
 description: 特定のカタログオブジェクトの一意の ID がわかっている場合は、GET リクエストを実行してそのオブジェクトの詳細を表示できます。
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 0331b6bbd22255cab92c93070dda1ffaed5bbbcb
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 63%
+ht-degree: 44%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
-> 特定のオブジェクトを表示する場合も、[プロパティでフィルター](filter-data.md)し、目的のプロパティのみを返すのがベストプラクティスです。
+>特定のオブジェクトを表示する場合は、次の操作を行うことをお勧めします。 [プロパティでフィルター](filter-data.md) を呼び出し、目的のプロパティのみを返します。
 
 **API 形式**
 
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 取得する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -58,11 +58,11 @@ curl -X GET \
                 "sample_dataset"
             ]
         },
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     }
 }
 ```
 
 >[!NOTE]
 >
->値の前に `@` が付いているプロパティは、相互に関連するオブジェクトを表します。これらのオブジェクトの詳細を表示する手順については、付録の「[相互関連オブジェクトの表示](appendix.md#view-interrelated-objects)」の節を参照してください。
+>値の前にが付いているプロパティ `@` は、相互に関連するオブジェクトを表します。 これらのオブジェクトの詳細を表示する手順については、付録の「[相互関連オブジェクトの表示](appendix.md#view-interrelated-objects)」の節を参照してください。

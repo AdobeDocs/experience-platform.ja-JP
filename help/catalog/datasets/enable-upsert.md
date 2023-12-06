@@ -4,9 +4,9 @@ title: API を使用したデータセットのプロファイル更新の有効
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1067'
 ht-degree: 92%
 
 ---
@@ -165,7 +165,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "{VIEW_ID}",
-        "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
+        "files": "@/dataSetFiles?dataSetId=5b020a27e7040801dedbf46e",
         "schema": "{SCHEMA}",
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",

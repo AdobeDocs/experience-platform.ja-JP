@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 用 ETL 統合の開発
 description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '4081'
+source-wordcount: '3978'
 ht-degree: 100%
 
 ---
@@ -319,7 +319,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=1&
 ```json
 {
   "5bf479a6a8c862000050e3c7": {
-    "files": "@/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files"
+    "files": "@/dataSetFiles?dataSetId=5bf479a6a8c862000050e3c7"
   }
 }
 ```
@@ -779,7 +779,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ## 遅延
 
-遅延とは、入力データがまだ完了しておらず、下流プロセスに送信できないが、将来使用できる可能性があるプロセスです。クライアントは、将来の照合のためのデータウィンドウ処理に対する個々の許容値と処理コストを決定し、データを脇に置いて次の変換実行で再処理する決定を通知し、保持期間内の将来のある時点でデータを強化および調整／ステッチできることを期待します。このサイクルは、行が十分に処理されるか、投資を続行するには古すぎると見なされるまで継続されます。すべての反復は、前の反復でのすべての遅延データのスーパーセットである遅延データを生成します。
+遅延とは、入力データがまだ完了しておらず、下流プロセスに送信できないが、将来使用できる可能性があるプロセスです。クライアントは、将来の照合のためのデータウィンドウ処理に対する個々の許容値と処理コストを決定し、データを脇に置いて次の変換実行で再処理する決定を通知し、保持期間内の将来のある時点でデータを強化および紐付け／ステッチできることを期待します。このサイクルは、行が十分に処理されるか、投資を続行するには古すぎると見なされるまで継続されます。すべての反復は、前の反復でのすべての遅延データのスーパーセットである遅延データを生成します。
 
 Adobe Experience Platform は、現在、遅延データを識別していません。そのため、クライアント実装では、ETL およびデータセットの手動構成により、[!DNL Platform] で、遅延データの保持に使用できるソースデータセットをミラーリングする、別のデータセットを作成する必要があります。この場合、遅延データはスナップショットデータに似ています。ETL 変換が実行されるたびに、ソースデータは遅延データと統合され、処理用に送信されます。
 

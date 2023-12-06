@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API でのオブジェクトの削除
 description: DELETE リクエストのパスに ID を指定することで、カタログオブジェクトを削除できます。
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: d88336d314e767a068ef6524161baeb642a58433
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 47%
+source-wordcount: '210'
+ht-degree: 48%
 
 ---
 
@@ -31,7 +31,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 削除するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 削除するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
