@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform Web SDK を使用したイベントの追跡
 description: Adobe Experience Platform Web SDK のイベントの追跡方法について説明します。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1167'
 ht-degree: 21%
 
 ---
@@ -76,11 +76,9 @@ dataLayer.commerce = null;
 
 ## XDM　以外のデータの送信
 
-XDM スキーマと一致しないデータは、を使用して送信する必要があります。 `data` オプション `sendEvent` コマンドを使用します。 この機能は、Web SDK のバージョン 2.5.0 以降でサポートされます。
+XDM スキーマと一致しないデータは、を使用して送信する必要があります。 `data` オプション `sendEvent` コマンドを使用します。 この機能は、Web SDK のバージョン 2.5.0 以降でサポートされます。 このオプションを使用する場合、データは、を介してサポートされる XDM スキーマにサーバー側でマッピングされる必要があります [データ収集用のデータ準備](../../datastreams/data-prep.md#create-mapping).
 
-これは、Adobe Targetプロファイルを更新するか、Target Recommendations属性を送信する必要がある場合に役立ちます。 [これらの Target 機能の詳細をお読みください。](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-今後、 `data` 」オプションを使用し、XDM サーバー側にマッピングします。
+この機能は、Adobe Targetプロファイルを更新するか、Target Recommendations属性を送信する必要がある場合にも便利です。 詳細を表示： [Target のパーソナライゼーション](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **プロファイル属性とRecommendations属性をAdobe Targetに送信する方法：**
 

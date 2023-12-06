@@ -1,16 +1,40 @@
 ---
 title: データ収集のためのデータ準備
 description: Adobe Experience Platform Web および Mobile SDK のデータストリームを設定する際に、エクスペリエンスデータモデル（XDM）イベントスキーマにデータをマッピングする方法について説明します。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 85%
+source-wordcount: '1201'
+ht-degree: 64%
 
 ---
+
 
 # データ収集のためのデータ準備
 
 データ準備は、[エクスペリエンスデータモデル（XDM）](../xdm/home.md)との間でデータのマッピング、変換、検証を可能にする、Adobe Experience Platform サービスです。Platform 対応の[データストリーム](./overview.md)を設定する場合、データ準備機能を使用して、Platform Edge Network に送信する際にソースデータを XDM にマッピングできます。
+
+Web ページから送信されるすべてのデータは、XDM としてExperience Platformにランディングする必要があります。 ページ上のデータレイヤーのデータを、Experience Platformが受け入れる XDM に変換する方法は 3 つあります。
+
+1. Web ページ自体のデータレイヤーを XDM に再フォーマットします。
+2. Web ページの既存のデータレイヤー形式を XDM に書式変更するには、タグネイティブデータ要素機能を使用します。
+3. Data Prep for Data Collection を使用して、Edge ネットワークを介して Web ページの既存のデータレイヤー形式を XDM に再フォーマットします。
+
+このガイドでは、3 番目のオプションに焦点を当てています。
+
+## Data Prep for Data Collection を使用するタイミング {#when-to-use-data-prep}
+
+Data Prep for Data Collection が役立つ使用例は 2 つあります。
+
+1. Web サイトのデータレイヤーは整形式で管理され、維持されます。JavaScript 操作を使用して（タグのデータ要素を介してまたは手動の JavaScript 操作を介して）ページ上の XDM に変換するのではなく、Edge Network に直接送信する方が望ましいです。
+2. サイトには、タグ以外のタグ付けシステムが導入されます。
+
+## WebSDK を使用して、既存のデータレイヤーを Edge ネットワークに送信する {#send-datalayer-via-websdk}
+
+既存のデータレイヤーは、 `data` オプション `sendEvent` コマンドを使用します。 [Web SDK ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+
+タグを使用する場合は、 **[!UICONTROL データ]** フィールドの **[!UICONTROL イベントの送信]** アクションタイプ (「 [Web SDK タグ拡張機能ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+
+このガイドの残りの部分では、WebSDK からデータレイヤーが送信された後に、データレイヤーを XDM 標準にマッピングする方法に焦点を当てます。
 
 >[!NOTE]
 >
@@ -131,6 +155,10 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 オブジェクトをファイルとしてアップロードするオプションを選択するか、提供されたテキストボックスに生のオブジェクトを代わりに貼り付けることができます。JSON が有効な場合、右側のパネルにプレビュースキーマが表示されます。「**[!UICONTROL 次へ]**」をクリックして続行します。
 
 ![期待される受信データの JSON サンプル](assets/data-prep/select-data.png)
+
+>[!NOTE]
+>
+> 任意のページで使用できるすべてのデータレイヤー要素を表すサンプル JSON オブジェクトを使用します。 例えば、一部のページで買い物かごのデータレイヤー要素が使用されているわけではありません。 ただし、買い物かごのデータレイヤー要素は、このサンプル JSON オブジェクトに含める必要があります。
 
 ## [!UICONTROL マッピング]
 
