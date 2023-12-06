@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 91%
+source-wordcount: '309'
+ht-degree: 89%
 
 ---
 
@@ -48,8 +48,9 @@ ht-degree: 91%
    - [ユーザーのページビューのリスト](use-cases/list-visitor-sessions.md)
    - [ページビュー別の訪問者のリスト](use-cases/visitors-by-number-of-page-views.md)
    - [傾向スコア](use-cases/propensity-score.md)
-   - [SQLAlchemy](use-cases/sqlalchemy.md)
+   - [ラムダ関数の例：類似したレコードを取得する](use-cases/retrieve-similar-records.md)
    - [分析データからのマーチャンダイジング変数の返しと使用](use-cases/merchandising-variables.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [訪問者のロールアップレポートの表示](use-cases/roll-up-report-of-a-visitor.md)
    - [Web およびモバイル分析のインサイト](use-cases/analytics-insights.md)
 - 重要な概念 {#key-concepts}
