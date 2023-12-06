@@ -1,11 +1,10 @@
 ---
 title: データストリームの上書きの設定
 description: Web SDK を介して、データストリームの UI でデータストリームの上書きを設定し、データストリームの上書きをアクティベートする方法について説明します。
-exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 77%
+source-wordcount: '1450'
+ht-degree: 60%
 
 ---
 
@@ -13,23 +12,23 @@ ht-degree: 77%
 
 データストリームの上書きを使用すると、Web SDK を介して Edge Network に渡されるデータストリームの追加設定を定義できます。
 
-これにより、新しいデータストリームを作成したり、既存の設定を変更したりすることなく、デフォルトとは異なるデータストリームの動作をトリガーできます。
+これにより、デフォルトとは異なる様々なデータストリーム動作をトリガー化できます。データストリームを作成したり、既存の設定を変更したりする必要はありません。
 
 データストリーム設定の上書きは、次の 2 つの手順で構成されます。
 
-1. 最初に、[データストリーム設定ページ](configure.md)でデータストリーム設定の上書きを定義する必要があります。
+1. まず、 [datastream 設定ページ](configure.md).
 2. 次に、次のいずれかの方法でオーバーライドを Edge ネットワークに送信する必要があります。
    * を通じて `sendEvent` または `configure` [Web SDK](#send-overrides-web-sdk) コマンド。
    * Web SDK を使用 [タグ拡張](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * Mobile SDK を使用 [sendEvent API](#send-overrides-mobile-sdk) を呼び出します。
+   * Mobile SDK を使用 [sendEvent](#send-overrides-mobile-sdk) コマンドを使用します。
 
 この記事では、サポートされているすべてのタイプの上書きに対するエンドツーエンドのデータストリーム設定の上書きプロセスについて説明します。
 
 >[!IMPORTANT]
 >
->データストリームの上書きは、次の場合にのみサポートされます。 [Web SDK](../edge/home.md) および [モバイル SDK](https://developer.adobe.com/client-sdks/documentation/) 統合と呼ばれます。 [サーバー API](../server-api/overview.md) 統合は、現在、データストリームの上書きをサポートしていません。
+>データストリームの上書きは、次の場合にのみサポートされます。 [Web SDK](../edge/home.md) および [モバイル SDK](https://developer.adobe.com/client-sdks/home/) 統合と呼ばれます。 [サーバー API](../server-api/overview.md) 統合は、現在、データストリームの上書きをサポートしていません。
 ><br>
->異なるデータストリームに異なるデータを送信する必要がある場合は、データストリームの上書きを使用する必要があります。パーソナライゼーションのユースケースまたは同意データには、データストリームの上書きを使用しないでください。
+>異なるデータストリームに異なるデータを送信する必要がある場合は、データストリームの上書きを使用する必要があります。パーソナライゼーションの使用例や同意データには、データストリームの上書きを使用しないでください。
 
 ## ユースケース {#use-cases}
 
@@ -41,11 +40,11 @@ ht-degree: 77%
 
 データストリームの上書きを使用すると、会社は、1 つのデータストリームにデータを送信するデフォルトの動作ではなく、異なるデータストリームにデータのフローを動的に切り替えることができます。
 
-一般的なユースケースとしては、国別のデータストリームにデータを送信することや顧客が注文やユーザープロファイルの更新などの重要なアクションを実行する場合にグローバルデータストリームにデータを送信することがあります。
+一般的な使用例としては、データを国固有のデータストリームやグローバルデータストリームに送信し、顧客が注文やユーザープロファイルの更新など重要なアクションを実行する場合があります。
 
 **様々なビジネスユニットに対するプロファイルと ID の区別**
 
-複数のビジネスユニットを持つ会社は、複数の Experience Platform サンドボックスを使用して、各ビジネスユニットに固有のデータを保存したいと考えています。
+複数のビジネスユニットを持つ会社は、複数のExperience Platformサンドボックスを使用して、各ビジネスユニットに固有のデータを保存したいと考えています。
 
 会社は、デフォルトのデータストリームにデータを送信する代わりに、データストリームの上書きを使用して、各ビジネスユニットがデータを受け取るデータストリームを独自に持つようにすることができます。
 
@@ -62,7 +61,7 @@ ht-degree: 77%
 
 Adobe Target データストリームのデータストリーム上書きを設定するには、まず Adobe Target のデータストリームを作成する必要があります。手順に従って、[Adobe Target](configure.md#target) サービスで[データストリームを設定](configure.md)します。
 
-データストリームを作成したら、以下の画像に示すように、追加した [Adobe Target](configure.md#target) サービスを編集し、「**[!UICONTROL プロパティトークンの上書き]**」セクションを使用して、必要なデータストリームの上書きを追加します。1 行につき 1 つのプロパティトークンを追加します。
+データストリームを作成したら、 [Adobe Target](configure.md#target) 追加して使用したサービス **[!UICONTROL プロパティトークンの上書き]** 」セクションを使用して、必要なデータストリームのオーバーライドを追加できます（下図を参照）。 1 行につき 1 つのプロパティトークンを追加します。
 
 ![プロパティトークンの上書きがハイライト表示された、Adobe Target サービス設定を示すデータストリーム UI のスクリーンショット。](assets/overrides/override-target.png)
 
@@ -74,7 +73,7 @@ Adobe Target データストリームのデータストリーム上書きを設�
 
 Adobe Analytics のデータストリームの上書きを設定するには、まず、[Adobe Analytics](configure.md#analytics) データストリームを作成する必要があります。手順に従って、[Adobe Analytics](configure.md#analytics) サービスで[データストリームを設定](configure.md)します。
 
-データストリームを作成したら、以下の画像に示すように、追加した [Adobe Analytics](configure.md#target) サービスを編集して、「**[!UICONTROL レポートスイートの上書き]**」セクションを使用して、必要なデータストリームの上書きを追加します。
+データストリームを作成したら、 [Adobe Analytics](configure.md#target) 追加して使用したサービス **[!UICONTROL レポートスイートの上書き]** 」セクションを使用して、必要なデータストリームのオーバーライドを追加できます（下図を参照）。
 
 「**[!UICONTROL バッチモードを表示]**」を選択して、レポートスイートの上書きのバッチ編集を有効にします。1 行に 1 つのレポートスイートを入力して、レポートスイートの上書きのリストをコピー＆ペーストできます。
 
@@ -88,7 +87,7 @@ Adobe Analytics のデータストリームの上書きを設定するには、�
 
 Experience Platform イベントデータセットのデータストリームの上書きを設定するには、まず [Adobe Experience Platform](configure.md#aep) データストリームを作成する必要があります。手順に従って、[Adobe Experience Platform](configure.md#aep) サービスで[データストリームを設定](configure.md)します。
 
-データストリームを作成したら、以下の画像に示すように、追加した [Adobe Experience Platform](configure.md#aep) サービスを編集して、「**[!UICONTROL イベントデータセットを追加]**」オプションを選択し、1 つ以上の上書きイベントデータセットを追加します。
+データストリームを作成したら、 [Adobe Experience Platform](configure.md#aep) 追加したサービスを選択します。 **[!UICONTROL イベントデータセットを追加]** オプションを使用して、1 つ以上のオーバーライドイベントデータセットを追加できます（下図を参照）。
 
 ![イベントデータセットの上書きがハイライト表示された Adobe Experience Platform サービス設定を示すデータストリーム UI のスクリーンショット。](assets/overrides/override-aep.png)
 
@@ -124,9 +123,9 @@ Experience Platform イベントデータセットのデータストリームの
 
 Web SDK を使用している場合は、 `edgeConfigOverrides` コマンドは、データストリーム設定の上書きをアクティブ化する 2 番目および最後の手順です。
 
-データストリーム設定の上書きは、`edgeConfigOverrides` Web SDK コマンドを介して Edge Network に送信されます。このコマンドは、次のコマンドまたは `configure` コマンドの場合は、リクエストごとに [!DNL Edge Network] に渡されるデータストリームの上書きを作成します。
+データストリーム設定の上書きは、`edgeConfigOverrides` Web SDK コマンドを介して Edge Network に送信されます。このコマンドは、 [!DNL Edge Network] 次のコマンドで、 を使用している場合、 `configure` コマンドを使用する場合、リクエストごとにオーバーライドが渡されます。
 
-`edgeConfigOverrides` コマンドは、次のコマンドまたは `configure`の場合、リクエストごとに [!DNL Edge Network] に渡されるデータストリームの上書きを作成します。
+The `edgeConfigOverrides` コマンドは、に渡されるデータストリームの上書きを作成します。 [!DNL Edge Network] 次のコマンドで、
 
 設定の上書きが `configure` コマンドで送信される場合、次の Web SDK コマンドに含まれます。
 
@@ -246,7 +245,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 }
 ```
 
->[!TAB Android (Kotlin)]
+>[!TAB Android™ (Kotlin)]
 
 この例は、Mobile SDK でのデータストリーム ID の上書きの例を示しています [!DNL Android] 統合とも呼ばれます。
 

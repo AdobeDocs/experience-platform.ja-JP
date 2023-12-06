@@ -1,18 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK を使用したイベントの追跡
 description: Adobe Experience Platform Web SDK のイベントの追跡方法について説明します。
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
-exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 32%
+source-wordcount: '1163'
+ht-degree: 21%
 
 ---
 
+
 # トラックイベント
 
-イベントデータをAdobe Experience Cloudに送信するには、 `sendEvent` コマンドを使用します。 この `sendEvent` コマンドは、 にデータを送信し、パーソナライズされたコンテンツ、ID、オーディエンスの宛先を取得する主な方法です。[!DNL Experience Cloud]
+イベントデータをAdobe Experience Cloudに送信するには、 `sendEvent` コマンドを使用します。 The `sendEvent` コマンドは、 [!DNL Experience Cloud]、パーソナライズされたコンテンツ、id、オーディエンスの宛先を取得するためのものです。
 
 Adobe Experience Cloud に送信されるデータは、次の 2 つのカテゴリに分類されます。
 
@@ -21,7 +20,7 @@ Adobe Experience Cloud に送信されるデータは、次の 2 つのカテゴ
 
 ## XDM データの送信
 
-XDM データは、Adobe Experience Platform 内で作成したスキーマとコンテンツと同じ構造を持つオブジェクトです。[スキーマの作成方法の詳細について説明します。](../../xdm/tutorials/create-schema-ui.md)
+XDM データは、Adobe Experience Platform内で作成したスキーマとコンテンツと構造が一致するオブジェクトです。 [スキーマの作成方法の詳細について説明します。](../../xdm/tutorials/create-schema-ui.md)
 
 分析、パーソナライゼーション、オーディエンスまたは宛先の一部とする XDM データは、 `xdm` オプション。
 
@@ -72,7 +71,7 @@ dataLayer.commerce = null;
 
 >[!NOTE]
 >
->「XDM」フィールドの各イベントで送信できるデータには 32 KB の制限があります。
+>XDM フィールドの各イベントで送信できるデータには 32 KB の制限があります。
 
 
 ## XDM　以外のデータの送信
@@ -103,7 +102,7 @@ alloy("sendEvent", {
 
 ### `eventType` の設定 {#event-types}
 
-XDM ExperienceEvent スキーマには、オプションのがあります `eventType` フィールドに入力します。 ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信する様々なイベントを区別するのに役立ちます。 XDM には、使用できる事前定義済みのイベントタイプがいくつか用意されています。また、使用事例に応じて、独自のカスタムイベントタイプを常に作成することもできます。 詳しくは、 XDM のドキュメントを参照してください。 [事前定義済みのすべてのイベントタイプのリスト](../../xdm/classes/experienceevent.md#eventType).
+XDM ExperienceEvent スキーマには、オプションのがあります `eventType` フィールドに入力します。 ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDM には、使用できる事前定義済みのイベントタイプがいくつか用意されています。また、使用事例に応じて、独自のカスタムイベントタイプを常に作成することもできます。 詳しくは、 XDM のドキュメントを参照してください。 [事前定義済みのすべてのイベントタイプのリスト](../../xdm/classes/experienceevent.md#eventType).
 
 これらのイベントタイプは、タグ拡張を使用する場合はドロップダウンに表示され、タグを使用せずにいつでも渡すことができます。 これらは、 `xdm` オプション。
 
@@ -162,8 +161,9 @@ alloy("sendEvent", {
 
 ## sendBeacon API の使用
 
-Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。これは、ブラウザーがバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しないことを意味します。Adobe Experience Platformに [!DNL Web SDK] 使用する `sendBeacon`、オプションを追加します。 `"documentUnloading": true` を event コマンドに追加します。  次に例を示します。
+Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。つまり、ブラウザーはバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しません。 Adobe Experience Platformに [!DNL Web SDK] 使用する `sendBeacon`、オプションを追加します。 `"documentUnloading": true` を event コマンドに追加します。
 
+**例**
 
 ```javascript
 alloy("sendEvent", {
@@ -181,7 +181,7 @@ alloy("sendEvent", {
 });
 ```
 
-ブラウザーでは、`sendBeacon` で一度に送信できるデータの量に制限が設けられています。多くのブラウザーでは、上限は 64K です。ペイロードが大きすぎるのでブラウザーがイベントを拒否した場合、Adobe Experience Platform [!DNL Web SDK] は、通常のトランスポート方法（fetch など）を使用する方法にフォールバックします。
+ブラウザーでは、`sendBeacon` で一度に送信できるデータの量に制限が設けられています。多くのブラウザーでは、上限は 64 KB です。ペイロードが大きすぎるのでブラウザーがイベントを拒否した場合、Adobe Experience Platform [!DNL Web SDK] は、通常のトランスポート方法（fetch など）を使用する方法にフォールバックします。
 
 ## イベントからの応答の処理
 
@@ -214,19 +214,19 @@ alloy("sendEvent", {
 
 The `sendEvent` コマンドは、 `result` オブジェクト。 The `result` オブジェクトには次のプロパティが含まれます。
 
-**提案**：訪問者が適合するパーソナライゼーションオファー。 [提案の詳細を表示します。](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**決定**：このプロパティは非推奨です。 代わりに `propositions` を使用してください。
-
-**宛先**：顧客の Web サイト上で実行している外部のパーソナライゼーションプラットフォーム、コンテンツ管理システム、広告サーバー、その他のアプリケーションと共有できる、Adobe Experience Platformのセグメント。 [宛先の詳細を説明します。](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
+| プロパティ | 説明 |
+|---------|----------|
+| `propositions` | 訪問者が適合したパーソナライゼーションオファー。 [提案の詳細を表示します。](../personalization/rendering-personalization-content.md#manually-rendering-content) |
+| `decisions` | このプロパティは非推奨です。 代わりに、`propositions` を使用してください。 |
+| `destinations` | 外部のパーソナライゼーションプラットフォーム、コンテンツ管理システム、広告サーバー、お客様の Web サイトで実行しているその他のアプリケーションと共有できるAdobe Experience Platformのオーディエンス。 [宛先の詳細を説明します。](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html) |
 
 >[!WARNING]
 >
->`destinations` は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>The `destinations` プロパティはベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ## イベントのグローバルな変更 {#modifying-events-globally}
 
-イベントのフィールドをグローバルに追加、削除、または変更する場合は、`onBeforeEventSend` コールバックを設定できます。このコールバックは、イベントが送信されるたびに呼び出されます。このコールバックは、`xdm` フィールドを含むイベントオブジェクトで渡されます。変更 `content.xdm` をクリックして、イベントで送信されるデータを変更します。
+イベントのフィールドをグローバルに追加、削除、または変更する場合は、 `onBeforeEventSend` コールバック。 このコールバックは、イベントが送信されるたびに呼び出されます。 このコールバックは、 `xdm` フィールドに入力します。 イベントと共に送信されるデータを変更するには、 `content.xdm`.
 
 
 ```javascript
@@ -246,8 +246,8 @@ alloy("configure", {
 
 `xdm` フィールドは次の順序で設定されます。
 
-1. イベントコマンド　`alloy("sendEvent", { xdm: ... });`　にオプションとして渡される値
-2. 自動的に収集された値（[自動情報](../data-collection/automatic-information.md)を参照）
+1. イベントコマンドにオプションとして渡される値 `alloy("sendEvent", { xdm: ... });`.
+2. 自動的に収集された値。 詳しくは、 [自動情報](../data-collection/automatic-information.md).
 3. `onBeforeEventSend` コールバックで加えられた変更です。
 
 次のページでのメモ： `onBeforeEventSend` callback:
@@ -297,4 +297,4 @@ alloy("configure", {
 
 ## 実行可能なエラーの可能性
 
-イベントを送信する際、送信されるデータが大きすぎる（要求全体で 32KB を超える）場合は、エラーが発生する可能性があります。この場合、送信されるデータの量を減らす必要があります。
+イベントを送信する際、送信されるデータが大きすぎる（要求全体で 32 KB を超える）場合は、エラーが発生する可能性があります。この場合、送信されるデータの量を減らす必要があります。

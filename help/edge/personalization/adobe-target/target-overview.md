@@ -1,16 +1,15 @@
 ---
-title: Platform Web SDK でのAdobe Targetの使用
+title: Adobe Targetと Web SDK を使用してパーソナライゼーションを実行する
 description: Adobe Targetを使用してExperience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
-exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 6%
+source-wordcount: '1153'
+ht-degree: 5%
 
 ---
 
-# 使用 [!DNL Adobe Target] と [!DNL Platform Web SDK]
+
+# 用途 [!DNL Adobe Target] および [!DNL Web SDK] パーソナライゼーションの
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] では、で管理されるパーソナライズされたエクスペリエンスを配信およびレンダリングできます [!DNL Adobe Target] を web チャネルに追加します。 WYSIWYG エディタを使用できます。このエディタは、 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)、または非ビジュアルインターフェイス [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)を使用して、アクティビティとパーソナライゼーションエクスペリエンスを作成、アクティブ化および配信します。
 
@@ -32,20 +31,20 @@ ht-degree: 6%
 * [ネイティブ Target のインプレッションおよびコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC サポート](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
-## [!DNL Platform Web SDK] システム図
+## [!DNL Web SDK] システム図
 
-次の図は、 [!DNL Target] および [!DNL Platform Web SDK] エッジ判定。
+次の図は、 [!DNL Target] および [!DNL Web SDK] エッジ判定。
 
 ![Platform Web SDK を使用したAdobe Target Edge Decisioning の図](./assets/target-platform-web-sdk.png)
 
-| を呼び出します | 詳細 |
+| 呼び出し | 詳細 |
 | --- | --- |
-| 1 | デバイスが [!DNL Platform Web SDK]. The [!DNL Platform Web SDK] は、XDM データ、Datastreams 環境 ID、渡されたパラメーターおよび顧客 ID（オプション）を使用して、エッジネットワークにリクエストを送信します。 ページ（またはコンテナ）は事前に非表示になっています。 |
+| 1 | デバイスが [!DNL Web SDK]. The [!DNL Web SDK] は、XDM データ、Datastreams 環境 ID、渡されたパラメーターおよび顧客 ID（オプション）を使用して、エッジネットワークにリクエストを送信します。 ページ（またはコンテナ）は事前に非表示になっています。 |
 | 2 | エッジネットワークは、エッジサービスにリクエストを送信し、訪問者 ID、同意、その他の訪問者のコンテキスト情報（位置情報やデバイスにわかりやすい名前など）でエンリッチメントします。 |
 | 3 | エッジネットワークは、エンリッチメントされたパーソナライゼーションリクエストを [!DNL Target] エッジに貼り付け、訪問者 ID および渡されたパラメーターを含める必要があります。 |
 | 4 | プロファイルスクリプトが実行されてから、 [!DNL Target] プロファイルストレージ。 プロファイルストレージは、 [!UICONTROL オーディエンスライブラリ] ( 例えば、 [!DNL Adobe Analytics], [!DNL Adobe Audience Manager]、 [!DNL Adobe Experience Platform]) をクリックします。 |
 | 5 | URL リクエストパラメーターとプロファイルデータに基づき、 [!DNL Target] は、現在のページビューと今後のプリフェッチされたビューに対して、訪問者に対して表示するアクティビティとエクスペリエンスを決定します。 [!DNL Target] 次に、これを edge ネットワークに送り返します。 |
-| 6 | a. Edge ネットワークは、パーソナライゼーション応答を（オプションで、追加のパーソナライゼーションに関するプロファイル値を含めて）ページに送り返します。 デフォルトコンテンツがちらつくことなく、可能な限り迅速に現在のページ上のパーソナライズされたコンテンツが表示されます。<br>b.シングルページアプリケーション (SPA) のユーザーアクションの結果として表示されるビュー用にパーソナライズされたコンテンツはキャッシュされるので、ビューがトリガーされたときに追加のサーバー呼び出しなしで即座に適用できます。 <br>c.エッジネットワークは、同意、セッション ID、ID、Cookie チェック、パーソナライゼーションなど、訪問者 ID とその他の値を Cookie で送信します。 |
+| 6 | a. Edge ネットワークは、パーソナライゼーション応答を（オプションで、追加のパーソナライゼーションに関するプロファイル値を含めて）ページに送り返します。 デフォルトコンテンツがちらつくことなく、可能な限り迅速に現在のページ上のパーソナライズされたコンテンツが表示されます。<br>b.シングルページアプリケーション (SPA) のユーザーアクションの結果として表示されるビュー用にパーソナライズされたコンテンツはキャッシュされるので、ビューがトリガーされたときに追加のサーバー呼び出しなしで即座に適用できます。 <br>。Edge ネットワークは、訪問者 ID とその他の値を Cookie で送信します（同意、セッション ID、ID、Cookie チェック、パーソナライゼーションなど）。 |
 | 7 | エッジネットワークが転送されます [!UICONTROL Analytics for Target] (A4T) [!DNL Analytics] エッジです。 |
 
 ## 有効化 [!DNL Adobe Target]
@@ -62,7 +61,7 @@ ht-degree: 6%
 
 ## Adobe Target VEC の使用
 
-VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [クロム](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC ヘルパー拡張機能。
+VEC を [!DNL Web SDK] 実装、インストール、アクティブ化 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [クロム](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC ヘルパー拡張機能。
 
 詳しくは、 [Visual Experience Composer ヘルパー拡張機能](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) （内） *Adobe Targetガイド*.
 
@@ -72,15 +71,15 @@ VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化
 
 ## XDM のオーディエンス
 
-のオーディエンスを定義する際 [!DNL Target] 経由で配信されるアクティビティ [!DNL Platform Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) を定義して使用する必要があります。 XDM スキーマ、クラス、スキーマフィールドグループを定義したら、 [!DNL Target] ターゲティング用に XDM データで定義されるオーディエンスルール。 Within [!DNL Target]に値を指定しない場合、XDM データは [!UICONTROL Audience Builder] をカスタムパラメーターとして設定します。 XDM は、ドット表記 ( 例えば、 `web.webPageDetails.name`) をクリックします。
+のオーディエンスを定義する際 [!DNL Target] 経由で配信されるアクティビティ [!DNL Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) を定義して使用する必要があります。 XDM スキーマ、クラス、スキーマフィールドグループを定義したら、 [!DNL Target] ターゲティング用に XDM データで定義されるオーディエンスルール。 Within [!DNL Target]に値を指定しない場合、XDM データは [!UICONTROL Audience Builder] をカスタムパラメーターとして設定します。 XDM は、ドット表記 ( 例えば、 `web.webPageDetails.name`) をクリックします。
 
-次の条件を満たしている場合： [!DNL Target] アクティビティが事前に定義されたオーディエンスでカスタムパラメーターまたはユーザープロファイルを使用する場合、SDK を介して正しく配信されません。 カスタムパラメーターやユーザープロファイルを使用する代わりに、XDM を使用する必要があります。 ただし、 [!DNL Platform Web SDK] XDM を必要としない これらのフィールドは、 [!DNL Target] XDM を必要としない UI:
+次の条件を満たしている場合： [!DNL Target] アクティビティが事前に定義されたオーディエンスでカスタムパラメーターまたはユーザープロファイルを使用する場合、SDK を介して正しく配信されません。 カスタムパラメーターやユーザープロファイルを使用する代わりに、XDM を使用する必要があります。 ただし、 [!DNL Web SDK] XDM を必要としない これらのフィールドは、 [!DNL Target] XDM を必要としない UI:
 
 * ターゲットライブラリ
 * ジオ
 * ネットワーク
 * オペレーティングシステム
-* サイトページ
+* サイトのページ
 * ブラウザー
 * トラフィックソース
 * 時間枠
@@ -89,7 +88,7 @@ VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化
 
 ### レスポンストークン
 
-レスポンストークンは主に、Google、Facebookなどのサードパーティにメタデータを送信するために使用されます。 レスポンストークンは、 `meta` ～の中に入る `propositions` -> `items`. 次に例を示します。
+レスポンストークンは、GoogleやFacebookなどのサードパーティにメタデータを送信するために使用されます。 レスポンストークンは、 `meta` ～の中に入る `propositions` -> `items`. 次に例を示します。
 
 ```json
 {
@@ -112,8 +111,9 @@ VEC を [!DNL Platform Web SDK] 実装、インストール、アクティブ化
 }
 ```
 
-レスポンストークンを収集するには、サブスクライブする必要があります。 `alloy.sendEvent` 約束、反復する `propositions`
-詳細を抽出する `items` -> `meta`. 毎 `proposition` には、 `renderAttempted` ブール型フィールドで、 `proposition` がレンダリングされたかどうか。 以下のサンプルを参照してください。
+レスポンストークンを収集するには、サブスクライブする必要があります。 `alloy.sendEvent` 約束、反復する `propositions`」をクリックし、次の場所から詳細を抽出します。 `items` -> `meta`.
+
+毎 `proposition` には、 `renderAttempted` ブール型フィールドで、 `proposition` がレンダリングされたかどうか。 以下のサンプルを参照してください。
 
 ```js
 alloy("sendEvent",
@@ -157,9 +157,9 @@ alloy("sendEvent",
 
 #### ページ読み込み時：
 
-* フォームベースのコンポーザーベース `propositions` 次を使用 `renderAttempted` フラグをに設定 `false`
-* を使用した Visual Experience Composer ベースの提案 `renderAttempted` フラグをに設定 `false`
-* を使用したシングルページアプリケーションビューに対する Visual Experience Composer ベースの提案 `renderAttempted` フラグをに設定 `false`
+* [!DNL Form-based Composer] — ベース `propositions` 次を使用 `renderAttempted` フラグをに設定 `false`
+* [!DNL Visual Experience Composer]に基づく提案 `renderAttempted` フラグをに設定 `false`
+* [!DNL Visual Experience Composer]を使用したシングルページアプリビューのベースの提案 `renderAttempted` フラグをに設定 `false`
 
 #### 表示時 — 変更時（キャッシュされた表示の場合）:
 
@@ -167,22 +167,22 @@ alloy("sendEvent",
 
 ### 単一プロファイルの更新
 
-The [!DNL Platform Web SDK] を使用すると、プロファイルを [!DNL Target] プロファイルと [!DNL Platform Web SDK] エクスペリエンスイベントとして。
+The [!DNL Web SDK] を使用すると、プロファイルを [!DNL Target] プロファイルと [!DNL Web SDK] エクスペリエンスイベントとして。
 
 を更新するには [!DNL Target] プロファイルで、プロファイルデータが次の情報と共に渡されていることを確認します。
 
-* 「`"data {"`
-* 「`"__adobe.target"`
-* プレフィックス `"profile."` 例：以下
+* の下 `"data {"`
+* の下 `"__adobe.target"`
+* プレフィックス `"profile."`
 
 | キー | タイプ | 説明 |
 | --- | --- | --- |
 | `renderDecisions` | ブール値 | パーソナライゼーションコンポーネントに DOM アクションを解釈するかどうかを指定します |
 | `decisionScopes` | 配列 `<String>` | 決定を取得するスコープのリスト |
-| `xdm` | オブジェクト | XDM で形式設定されたデータで、Platform Web SDK にエクスペリエンスイベントとして読み込まれます。 |
+| `xdm` | オブジェクト | エクスペリエンスイベントとして Web SDK に格納される XDM で形式設定されたデータ |
 | `data` | オブジェクト | に送信される任意のキーと値のペア [!DNL Target] target クラスのソリューション。 |
 
-標準 [!DNL Platform Web SDK] このコマンドを使用するコードは、次のようになります。
+標準 [!DNL Web SDK] このコマンドを使用するコードは、次のようになります。
 
 **`sendEvent`プロファイルデータと共に**
 
@@ -212,7 +212,7 @@ alloy("sendEvent", {
 
 ## 推奨をリクエスト
 
-次の表にリストを示します。 [!DNL Recommendations] 属性と、それぞれが [!DNL Platform Web SDK]:
+次の表にリストを示します。 [!DNL Recommendations] 属性と、それぞれが [!DNL Web SDK]:
 
 | カテゴリ | 属性 | サポートステータス |
 | --- | --- | --- |
@@ -251,14 +251,14 @@ alloy("sendEvent", {
 
 ## デバッグ
 
-mboxTrace と mboxDebug は非推奨（廃止予定）となりました。 用途 [[!DNL Platform Web SDK] デバッグ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
+mboxTrace と mboxDebug は非推奨（廃止予定）となりました。 用途 [[!DNL Web SDK] デバッグ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## 用語
 
-__提案：__ In [!DNL Target]の提案は、アクティビティから選択されたエクスペリエンスと相関関係を持ちます。
+__提案：__ In [!DNL Adobe Target]の提案は、アクティビティから選択されたエクスペリエンスと相関関係を持ちます。
 
-__スキーマ：__ 決定のスキーマは、 [!DNL Target].
+__スキーマ：__ 決定のスキーマは、 [!DNL Adobe Target].
 
-__範囲：__ 決定の範囲。 In [!DNL Target]の場合、範囲は mBox です。 グローバル mBox は、 `__view__` 範囲。
+__範囲：__ 決定の範囲。 In [!DNL Adobe Target]の場合、範囲は mBox です。 グローバル mBox は、 `__view__` 範囲。
 
-__XDM:__ XDM はドット表記にシリアル化され、次に [!DNL Target] を mbox パラメーターとして設定します。
+__XDM:__ XDM はドット表記にシリアル化され、次に [!DNL Adobe Target] を mbox パラメーターとして設定します。

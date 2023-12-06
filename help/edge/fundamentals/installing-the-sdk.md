@@ -1,18 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK のインストール
-description: Experience Platform Web SDK のインストール方法について説明します.
-keywords: web sdk のインストール；web sdk のインストール；internet explorer;promise;npm パッケージ
-exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+description: Experience PlatformWeb SDK のインストール方法を説明します。
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 31%
+source-wordcount: '864'
+ht-degree: 26%
 
 ---
 
-# SDK のインストール {#installing-the-sdk}
 
-Adobe Experience Platform Web SDK の使用方法は 3 つあります。
+# Web SDK のインストール {#installing-the-sdk}
+
+Adobe Experience Platform Web SDK をインストールするには、次の 3 つのサポートされている方法があります。
 
 1. Adobe Experience Platform Web SDK を使用する推奨される方法は、データ収集 UI またはExperience PlatformUI を使用することです。
 1. Adobe Experience Platform Web SDK は、コンテンツ配信ネットワーク (CDN) でも使用でき、
@@ -29,7 +28,6 @@ Adobe Experience Platform Web SDK の使用方法は 3 つあります。
 URL 構造： https://cdn1.adoberesources.net/alloy/[バージョン]/alloy.min.js または alloy.js （非縮小版）
 
 以下に例を示します。
-
 
 * 縮小： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
 * 縮小解除済み： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
@@ -77,7 +75,7 @@ URL 構造： https://cdn1.adoberesources.net/alloy/[バージョン]/alloy.min.
 
 1. で Web サイトを開きます。 [!DNL Internet Explorer].
 1. ブラウザーのデバッグコンソールを開きます。
-1. コンソールに「`window.Promise`」とに入力し、Enter キーを押します。
+1. タイプ `window.Promise` コンソールに移動し、Enter キーを押します。
 
 `undefined` 以外が表示された場合は、既に `window.Promise`　がポリフィルされている可能性があります。上記のインストール手順を完了した後に Web サイトを読み込むことで、`window.Promise` がポリフィルされているかどうかを判断する方法もあります。SDK が promise に関するエラーをスローした場合、`window.Promise` がポリフィルされていない可能性が高くなります。
 
@@ -97,7 +95,7 @@ URL 構造： https://cdn1.adoberesources.net/alloy/[バージョン]/alloy.min.
 
 「 」の節で説明されているように、 [コードの追加](#adding-the-code)の場合、Web サイトのHTMLにコピー&amp;ペーストしたベースコードは、外部ファイルを読み込みます。 外部ファイルには、SDK のコア機能が含まれています。 このファイルの読み込み中に実行しようとしたコマンドは、キューに追加され、ファイルの読み込み後に処理されます。 ファイルを非同期で読み込むことが、最もパフォーマンスの高いインストール方法です。
 
-ただし、特定の状況では、ファイルを同期的に読み込むことが望ましい場合もあります（これらの状況に関する詳細は後で説明します）。これをおこなうと、外部ファイルが読み込まれて実行されるまで、HTML ドキュメントの残りの部分がブラウザーで解析およびレンダリングされなくなります。通常、プライマリコンテンツをユーザーに表示する前にこの遅延が発生するのはお勧めしませんが、状況によっては合理的な場合もあります。
+ただし、特定の状況では、ファイルを同期的に読み込むことが望ましい場合があります。 これをおこなうと、外部ファイルが読み込まれて実行されるまで、HTML ドキュメントの残りの部分がブラウザーで解析およびレンダリングされなくなります。通常、プライマリコンテンツをユーザーに表示する前にこの遅延が発生するのはお勧めしませんが、状況によっては合理的な場合もあります。
 
 非同期ではなく同期的にファイルを読み込むには、次に示すように、2 番目の　`script`　タグから `async` 属性を削除します。
 

@@ -1,17 +1,17 @@
 ---
-title: Platform Web SDK のファーストパーティデバイス ID
+title: Web SDK でのファーストパーティデバイス ID
 description: Adobe Experience Platform Web SDK 用のファーストパーティデバイス ID(FPID) の設定方法について説明します。
-exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: ffcd428f84a4dcbbc95560cb4da5fd1c6d858a28
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 2%
+source-wordcount: '1700'
+ht-degree: 0%
 
 ---
 
-# Platform Web SDK のファーストパーティデバイス ID
 
-Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=ja) を web サイト訪問者に対して送信します。 cookie のライフスパンに関するブラウザーの制限を考慮するには、代わりに、独自のデバイス識別子を設定および管理するように選択できます。 これらは、ファーストパーティデバイス ID（FPID）と呼ばれます。
+# Web SDK でのファーストパーティデバイス ID
+
+Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=ja) cookie を使用して web サイト訪問者に送信し、ユーザーの行動を追跡します。 cookie のライフスパンに関するブラウザーの制限を考慮するには、代わりに、独自のデバイス識別子を設定および管理するように選択できます。 これらはファーストパーティデバイス ID(FPID) と呼ばれます。
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](https
 
 ## FPID の使用
 
-FPID は、ファーストパーティ cookie を使用して訪問者を追跡します。 ファーストパーティ cookie は、DNS を利用するサーバーを使用して設定される場合に最も効果的です。 [レコード](https://datatracker.ietf.org/doc/html/rfc1035) （IPv4 の場合）または [AAA レコード](https://datatracker.ietf.org/doc/html/rfc3596) （IPv6 の場合）。DNS CNAME または JavaScript コードとは異なります。
+FPID はファーストパーティ Cookie を使用して訪問者を追跡します。 ファーストパーティ cookie は、DNS を使用するサーバーを使用して設定される場合に最も効果的です。 [レコード](https://datatracker.ietf.org/doc/html/rfc1035) （IPv4 の場合）または [AAA レコード](https://datatracker.ietf.org/doc/html/rfc3596) （IPv6 の場合）。DNS CNAME または JavaScript コードとは異なります。
 
 >[!IMPORTANT]
 >
->レコードまたは AAAA レコードは、Cookie の設定とトラッキングに対してのみサポートされます。 データ収集の主な方法は、DNS CNAME を使用する方法です。 つまり、FPID は A レコードまたは AAAA レコードを使用して設定され、CNAME を使用してAdobeに送信されます。
+>`A` または `AAAA` のレコードは、cookie の設定と追跡に対してのみサポートされます。 データ収集の主な方法は、DNS CNAME を使用する方法です。 つまり、FPID は A レコードまたは AAAA レコードを使用して設定され、CNAME を使用してAdobeに送信されます。
 >
 >The [Adobe管理証明書プログラム](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) は、ファーストパーティのデータ収集でも引き続きサポートされます。
 
@@ -64,25 +64,25 @@ ECID が最終的にブラウザー削除ポリシーの影響を受けますが
 
 ### cookie の有効期限の設定
 
-Cookie の有効期限の設定は、FPID 機能を実装する際に慎重に検討する必要があります。 この決定を下す際は、組織が活動する国や地域と、それらの各地域の法律やポリシーを考慮に入れる必要があります。
+Cookie の有効期限の設定は、FPID 機能を実装する際に慎重に検討する必要があります。 これを決定する際は、組織が運営する国や地域と、それらの各地域の法律やポリシーを考慮する必要があります。
 
-この決定の一環として、会社全体の Cookie 設定ポリシーまたは、運用する各ロケールのユーザーごとに異なる Cookie 設定を採用することができます。
+この決定の一環として、会社全体の Cookie 設定ポリシーまたは、を使用する各ロケールのユーザーごとに異なる Cookie 設定ポリシーを採用することができます。
 
 cookie の初回有効期限に対して選択した設定に関係なく、サイトへの新しい訪問が発生するたびに cookie の有効期限を延長するロジックを含める必要があります。
 
 ## cookie フラグの影響
 
-異なるブラウザーでの cookie の処理方法に影響する cookie フラグには、様々なものがあります。
+異なるブラウザーでの cookie の処理方法に影響を与える様々な cookie フラグがあります。
 
 * [&#39;HTTPOnly&#39;](#http-only)
-* [`安全`](#secure)
-* [`SameSite`](#same-site)
+* [&#39;セキュア&#39;](#secure)
+* [&#39;SameSite&#39;](#same-site)
 
 ### `HTTPOnly` {#http-only}
 
-を使用して設定された Cookie `HTTPOnly` フラグには、クライアント側のスクリプトを使用してアクセスできません。 つまり、 `HTTPOnly` フラグを設定する場合、サーバー側のスクリプティング言語を利用して、cookie の値を読み取り、 `identityMap`.
+を使用して設定された Cookie `HTTPOnly` フラグには、クライアント側のスクリプトを使用してアクセスできません。 つまり、 `HTTPOnly` フラグを設定する場合、サーバー側のスクリプティング言語を使用して、cookie の値を読み取り、 `identityMap`.
 
-Platform Edge Network に FPID Cookie の値を読み取らせる場合は、 `HTTPOnly` フラグを設定すると、クライアント側のスクリプトによって値にアクセスできなくなり、Platform Edge ネットワークの cookie を読み取る機能に悪影響を与えません。
+Platform Edge Network に FPID Cookie の値を読み取らせる場合は、 `HTTPOnly` フラグを設定することで、クライアント側のスクリプトによって値にアクセスできなくなり、Platform Edge ネットワークの cookie を読み取る機能に悪影響を与えなくなります。
 
 >[!NOTE]
 >
@@ -94,13 +94,13 @@ Cookie の設定に基づいて、 `Secure` 属性は、暗号化されたリク
 
 ### `SameSite` {#same-site}
 
-The `SameSite` 属性を使用すると、サーバーは、クロスサイトリクエストで cookie を送信するかどうかを決定できます。 属性は、クロスサイトフォージェリ攻撃に対する保護を提供します。 次の 3 つの値が使用可能です。 `Strict`, `Lax` および `None`. お客様の組織に適した設定を判断するには、社内チームにお問い合わせください。
+The `SameSite` 属性を使用すると、サーバーは、クロスサイトリクエストで cookie を送信するかどうかを決定できます。 属性は、クロスサイトフォージェリ攻撃に対する保護を提供します。 次の 3 つの値が使用可能です。 `Strict`, `Lax`、および `None`. 組織にとって適切な設定を判断するには、社内チームに相談してください。
 
 いいえの場合 `SameSite` 属性が指定されている場合、一部のブラウザーのデフォルト設定がになりました。 `SameSite=Lax`.
 
 ## での FPID の使用 `identityMap` {#identityMap}
 
-以下に、で独自に FPID を設定する方法の例を示します。 `identityMap`:
+以下に、で FPID を設定する方法の例を示します。 `identityMap`:
 
 ```json
 {
@@ -194,7 +194,7 @@ The `SameSite` 属性を使用すると、サーバーは、クロスサイト�
 
 ## ID 階層
 
-ECID と FPID の両方が存在する場合、ユーザーを識別する際に ECID が優先されます。 これにより、既存の ECID がブラウザーの Cookie ストアに存在する場合でも、その ECID は引き続き主な識別子となり、既存の訪問者のカウントが影響を受けるリスクを回避できます。 既存のユーザーの場合、ECID が期限切れになるか、ブラウザーポリシーまたは手動プロセスの結果として ECID が削除されるまで、FPID はプライマリ ID になりません。
+ECID と FPID の両方が存在する場合、ユーザーを識別する際に ECID が優先されます。 これにより、既存の ECID がブラウザーの cookie ストアに存在する場合でも、その ECID がプライマリ識別子のままになり、既存の訪問者のカウントが影響を受けるリスクを回避できます。 既存のユーザーの場合、ECID が期限切れになるか、ブラウザーポリシーまたは手動プロセスの結果として ECID が削除されるまで、FPID はプライマリ ID になりません。
 
 ID は次の順序で優先されます。
 
@@ -218,8 +218,8 @@ ID は次の順序で優先されます。
 | 訪問 | 説明 |
 | --- | --- |
 | 初回訪問 | FPID Cookie の設定をまだ開始していないとします。 ECID は [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) は、訪問者を識別するために使用される識別子です。 |
-| 2 回目の訪問 | ファーストパーティデバイス ID ソリューションのロールアウトが開始しました。 既存の ECID は引き続き存在し、訪問者を識別するための主な識別子になります。 |
-| 3 回目の訪問 | 2 回目と 3 回目の訪問の間に、ブラウザーポリシーが原因で ECID が削除されたのに十分な時間が経過しました。 ただし、FPID は DNS A レコードを使用して設定されたので、FPID は保持されます。 この FPID はプライマリ ID と見なされ、ECID のシードに使用されます。ECID はエンドユーザーデバイスに書き込まれます。 これで、このユーザーは、Adobe Experience PlatformおよびExperience Cloudソリューションで新しい訪問者と見なされます。 |
+| 2 回目の訪問 | ファーストパーティデバイス ID ソリューションのロールアウトが開始しました。 既存の ECID は引き続き存在し、訪問者を識別するための主な識別子です。 |
+| 3 回目の訪問 | 2 回目と 3 回目の訪問の間に、ブラウザーポリシーにより ECID が削除されたのに十分な時間が経過しました。 ただし、FPID は DNS A レコードを使用して設定されたので、FPID は保持されます。 この FPID はプライマリ ID と見なされ、ECID のシードに使用されます。ECID はエンドユーザーデバイスに書き込まれます。 これで、このユーザーは、Adobe Experience PlatformおよびExperience Cloudソリューションで新しい訪問者と見なされます。 |
 | 4 回目の訪問 | 3 回目と 4 回目の訪問の間に、ブラウザーポリシーが原因で ECID が削除されたのに十分な時間が経過しました。 以前の訪問と同様、FPID は設定された方法が原因で残ります。 今回は、前回の訪問と同じ ECID が生成されます。 ユーザーは、Experience PlatformおよびExperience Cloudソリューション全体で、以前の訪問と同じユーザーとして表示されます。 |
 | 5 回目の訪問 | 4 回目と 5 回目の訪問の間に、エンドユーザーはブラウザー内のすべての cookie をクリアしました。 新しい FPID が生成され、新しい ECID の作成をシードするために使用されます。 これで、このユーザーは、Adobe Experience PlatformおよびExperience Cloudソリューションで新しい訪問者と見なされます。 |
 
@@ -235,11 +235,11 @@ ID は次の順序で優先されます。
 
 ### ファーストパーティデバイス ID は、いつ生成する必要がありますか？
 
-訪問者の水増しの可能性を減らすには、Platform Web SDK を使用して最初のリクエストをおこなう前に FPID を生成する必要があります。 ただし、これができない場合、ECID はそのユーザーに対して生成され、プライマリ識別子として使用されます。 生成された FPID は、ECID が存在しなくなるまで、プライマリ識別子になりません。
+訪問者の水増しの可能性を減らすには、Web SDK を使用して最初のリクエストをおこなう前に FPID を生成する必要があります。 ただし、これができない場合、ECID はそのユーザーに対して生成され、プライマリ識別子として使用されます。 生成された FPID は、ECID が存在しなくなるまで、プライマリ識別子になりません。
 
 ### ファーストパーティデバイス ID をサポートしているのは、どのデータ収集方法ですか？
 
-現在、FPID をサポートしているのは、Platform Web SDK のみです。
+現在、FPID をサポートしているのは Web SDK のみです。
 
 ### FPID は、どのプラットフォームまたはExperience Cloudソリューションにも保存されますか。
 

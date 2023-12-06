@@ -2,10 +2,10 @@
 title: データストリームの作成と設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f4c41e75eaa61878557868ffa9ce0c866eba3941
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '2842'
-ht-degree: 71%
+source-wordcount: '2725'
+ht-degree: 58%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 71%
 
 ![データ収集 UI の「データストリーム」タブ](assets/configure/datastreams-tab.png)
 
-「**[!UICONTROL データストリーム]**」タブには、わかりやすい名前、ID および最終更新日を含む、既存のデータストリームのリストが表示されます。データストリームの名前を選択して、[その詳細および設定サービスを表示](#view-details)します。
+「**[!UICONTROL データストリーム]**」タブには、わかりやすい名前、ID および最終更新日を含む、既存のデータストリームのリストが表示されます。宛先 [詳細の表示とサービスの設定](#view-details)「 」で、データストリームの名前を選択します。
 
-特定のデータストリームの「その他」アイコン（**...**）を選択して、その他のオプションを表示します。データストリームの[基本設定](#configure)を更新するには&#x200B;**[!UICONTROL 編集]**&#x200B;を選択し、データストリームを削除するには&#x200B;**[!UICONTROL 削除]**&#x200B;を選択します。
+特定のデータストリームに関するその他のオプションを表示するには、「その他」アイコン (**...**) をクリックします。 次の手順で [基本設定](#configure) データストリームの場合は、「 **[!UICONTROL 編集]**. データストリームを削除するには、 **[!UICONTROL 削除]**.
 
 ![既存のデータストリームを編集または削除するためのオプション](assets/configure/edit-datastream.png)
 
-## 新しいデータストリームの作成 {#create}
+## データストリームの作成 {#create}
 
 データストリームを作成するには、最初に「**[!UICONTROL 新規データストリーム]**」を選択します。
 
@@ -34,7 +34,7 @@ ht-degree: 71%
 
 設定手順から始まる、データストリーム作成ワークフローが表示されます。ここから、データストリームの名前およびオプションで説明を指定する必要があります。
 
-Experience Platform で使用するためにこのデータストリームを設定していて、Platform Web SDK を使用している場合、取り込みを予定しているデータを表すために、[イベントベースのエクスペリエンスデータモデル（XDM）スキーマ](../xdm/classes/experienceevent.md)も選択する必要があります。
+Experience Platformで使用するデータストリームを設定し、Web SDK も使用する場合は、 [イベントベースのエクスペリエンスデータモデル (XDM) スキーマ](../xdm/classes/experienceevent.md) 取り込む予定のデータを表す。
 
 ![データストリームの基本設定](assets/configure/configure.png)
 
@@ -55,7 +55,7 @@ Experience Platform で使用するためにこのデータストリームを設
 
 位置情報検索フィールドでは、 `context` 配列文字列 `"placeContext"`ネットワーク検索フィールドは `context` 配列文字列 `"environment"`.
 
-さらに、スキーマに必要な各 XDM フィールドが存在することを確認します。 表示されない場合は、指定されたAdobeを追加できます `Environment Details` フィールドグループをスキーマに追加します。
+また、スキーマに目的の各 XDM フィールドが存在することを確認します。 表示されない場合は、指定されたAdobeを追加できます `Environment Details` フィールドグループをスキーマに追加します。
 
 ### デバイス参照の設定 {#geolocation-device-lookup}
 
@@ -67,7 +67,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 >[!IMPORTANT]
 >
->以下の表で説明する設定は、相互に排他的です。 ユーザーエージェント情報とデバイス参照データの両方を同時に選択することはできません。
+>次の表に示す設定は、相互に排他的です。 両方のユーザーエージェント情報を選択することはできません *および* デバイスのルックアップデータを同時に参照します。
 
 | 設定 | 説明 |
 | --- | --- |
@@ -79,29 +79,29 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 デバイスとハードウェアの情報は、 `context` 配列文字列 `"device"`ブラウザーとオペレーティングシステムの情報は `context` 配列文字列 `"environment"`.
 
-さらに、スキーマに必要な各 XDM フィールドが存在することを確認します。 表示されない場合は、指定されたAdobeを追加できます `Environment Details` フィールドグループをスキーマに追加します。
+また、スキーマに目的の各 XDM フィールドが存在することを確認します。 表示されない場合は、指定されたAdobeを追加できます `Environment Details` フィールドグループをスキーマに追加します。
 
 ### 詳細オプションの設定 {#@advanced-options}
 
-選択 **[!UICONTROL 詳細オプション]** :IP の難読化、ファーストパーティ ID cookie など、データストリームを設定する追加のコントロールを表示します。
+詳細設定オプションを表示するには、「 **[!UICONTROL 詳細オプション]**. ここでは、IP の難読化、ファーストパーティ ID Cookie など、追加のデータストリーム設定を指定できます。
 
 ![詳細設定オプション](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
-> 正確な位置情報を含む個人データを収集、処理および送信するには、適用される法律および規制の下で必要なすべての権限、同意、許可および承認を、責任を持って確実に取得しておく必要があります。
+> お客様は、適用される法令に基づき、正確な位置情報を含む個人データの収集、処理、送信に必要なすべての権限、同意、明確性、および承認を取得していることを確認する責任を負います。
 > 
-> IP アドレスの不明化を選択しても、IP アドレスから導き出されて設定済みのアドビソリューションに送信される位置情報のレベルには影響しません。位置情報の参照は、個別に制限するか無効にする必要があります。
+> IP アドレスの難読化の選択は、IP アドレスから派生し、設定したAdobeソリューションに送信される位置情報のレベルには影響しません。 位置情報の参照は、個別に制限するか無効にする必要があります。
 
 | 設定 | 説明 |
 | --- | --- |
-| [!UICONTROL IP の不明化] | データストリームに適用される IP 不明化のタイプを示します。顧客 IP に基づく処理は、IP の不明化設定の影響を受けます。これには、データストリームからデータを受信するすべての Experience Cloud サービスが含まれます。 <p>選択可能なオプションは次のとおりです。</p> <ul><li>**[!UICONTROL なし]**：IP の不明化を無効にします。ユーザーの完全な IP アドレスがデータストリームを介して送信されます。</li><li>**[!UICONTROL 部分的]**：IPv4 アドレスの場合、ユーザー IP アドレスの最後のオクテットを不明化します。IPv6 アドレスの場合、アドレスの最後の 80 ビットを不明化します。 <p>例：</p> <ul><li>IPv4：`1.2.3.4` -> `1.2.3.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 完全]**：IP アドレス全体を不明化します。 <p>例：</p> <ul><li>IPv4：`1.2.3.4` -> `0.0.0.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> 他のアドビ製品に対する IP の不明化の影響は次のとおりです。 <ul><li>**Adobe Target**：データストリームレベル。 [!UICONTROL IP Obfuscation（IP の不明化）] が [!UICONTROL IP Obfuscation（IP の不明化）] Adobe Targetで実行され、リクエストに存在するすべての IP アドレスに対して実行されます。 例えば、データストリームレベルの場合、 [!UICONTROL IP Obfuscation（IP の不明化）] オプションが **[!UICONTROL 完全]** Adobe Target IP obfuscation（ IP の不明化）オプションが **[!UICONTROL 最終オクテットの難読化]**&#x200B;を指定すると、Adobe Targetは完全に不明化された IP を受け取ります。 データストリームレベルの場合 [!UICONTROL IP Obfuscation（IP の不明化）] オプションが **[!UICONTROL 部分的]** Adobe Target IP obfuscation（ IP の不明化）オプションが **[!UICONTROL 完全]**&#x200B;を指定した場合、Adobe Targetは部分的に不明化された IP を受け取り、その IP に完全な不明化を適用します。 Adobe Target IP の不明化は、データストリームとは独立して管理されます。 詳しくは、[IP の不明化](https://developer.adobe.com/target/before-implement/privacy/privacy/)および[位置情報](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html)に関する Adobe Target ドキュメントを参照してください。</li><li>**Audience Manager**：データストリームレベル。 [!UICONTROL IP Obfuscation（IP の不明化）] 設定が適用される前に [!UICONTROL IP Obfuscation（IP の不明化）] Audience Managerで実行され、リクエストに存在するすべての IP アドレスに対して実行されます。 Audience Manager で実行される位置情報検索は、データストリームレベルの [!UICONTROL IP 不明化]オプションの影響を受けます。Audience Manager で、完全に不明化された IP に基づいて位置情報の検索が行われると、不明な地域が発生し、結果として得られた位置情報データに基づくすべてのセグメントは実現されません。詳しくは、[IP の不明化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html)に関する Audience Manager のドキュメントを参照してください。</li><li>**Adobe Analytics**: datastream-level IP obfuscation 設定が **[!UICONTROL 完全]**&#x200B;を指定した場合、Adobe Analyticsは IP アドレスを空白として扱います。 これは、位置情報の検索や IP フィルタリングなど、IP アドレスに依存する Analytics の処理に影響します。 不明化されていない IP アドレスまたは部分的に不明化された IP アドレスを Analytics が受け取るには、 IP の不明化設定をに設定します。 **[!UICONTROL 部分的]** または **[!UICONTROL なし]**. 部分的に不明化された IP アドレスと、不明化されていない IP アドレスは、Analytics 内でさらに不明化される可能性があります。 Analytics で IP の不明化を有効にする方法について詳しくは、Adobe Analytics の[ドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html?lang=ja)を参照してください。IP アドレスが完全に不明化され、ページヒットに [!DNL ECID] nor [!DNL VisitorID]その場合、Analytics は、 [フォールバック ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-ids.html?lang=ja)：部分的に IP アドレスに基づいています。</li></ul> |
-| [!UICONTROL ファーストパーティ ID Cookie] | この設定を有効にすると、Edge Network は[ファーストパーティデバイス ID](../edge/identity/first-party-device-ids.md) を参照する際に、この値を ID Map で参照するのではなく、指定された Cookie を参照するように指示します。<br><br>この設定を有効にする場合、ID が保存されていると期待される Cookie の名前を指定する必要があります。 |
+| [!UICONTROL IP の不明化] | データストリームに適用される IP 不明化のタイプを示します。顧客 IP に基づく処理は、IP の不明化設定の影響を受けます。 これには、データストリームからデータを受信するすべての Experience Cloud サービスが含まれます。 <p>選択可能なオプションは次のとおりです。</p> <ul><li>**[!UICONTROL なし]**：IP の不明化を無効にします。完全なユーザー IP アドレスは、データストリームを介して送信されます。</li><li>**[!UICONTROL 部分的]**：IPv4 アドレスの場合、ユーザー IP アドレスの最後のオクテットを不明化します。IPv6 アドレスの場合、アドレスの最後の 80 ビットを不明化します。 <p>例：</p> <ul><li>IPv4：`1.2.3.4` -> `1.2.3.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 完全]**：IP アドレス全体を不明化します。 <p>例：</p> <ul><li>IPv4：`1.2.3.4` -> `0.0.0.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> 他のアドビ製品に対する IP の不明化の影響は次のとおりです。 <ul><li>**Adobe Target**：データストリームレベル。 [!UICONTROL IP Obfuscation（IP の不明化）] が [!UICONTROL IP Obfuscation（IP の不明化）] Adobe Targetで実行され、リクエストに存在するすべての IP アドレスに対して実行されます。 例えば、データストリームレベルの場合、 [!UICONTROL IP Obfuscation（IP の不明化）] オプションが **[!UICONTROL 完全]** Adobe Target IP obfuscation（ IP の不明化）オプションが **[!UICONTROL 最終オクテットの難読化]**&#x200B;を指定すると、Adobe Targetは完全に不明化された IP を受け取ります。 データストリームレベルの場合 [!UICONTROL IP Obfuscation（IP の不明化）] オプションが **[!UICONTROL 部分的]** Adobe Target IP obfuscation（ IP の不明化）オプションが **[!UICONTROL 完全]**&#x200B;を指定した場合、Adobe Targetは部分的に不明化された IP を受け取り、その IP に完全な不明化を適用します。 Adobe Target IP の不明化は、データストリームとは独立して管理されます。 詳しくは、[IP の不明化](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/privacy.html)および[位置情報](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html)に関する Adobe Target ドキュメントを参照してください。</li><li>**Audience Manager**：データストリームレベル。 [!UICONTROL IP Obfuscation（IP の不明化）] 設定が適用される前に [!UICONTROL IP Obfuscation（IP の不明化）] Audience Managerで実行され、リクエストに存在するすべての IP アドレスに対して実行されます。 Audience Manager で実行される位置情報検索は、データストリームレベルの [!UICONTROL IP 不明化]オプションの影響を受けます。完全に不明化された IP に基づくAudience Managerの位置情報参照は、不明な地域になり、結果として得られた位置情報データに基づくセグメントは認識されません。 詳しくは、[IP の不明化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html)に関する Audience Manager のドキュメントを参照してください。</li><li>**Adobe Analytics**: datastream-level IP obfuscation 設定が **[!UICONTROL 完全]**&#x200B;を指定した場合、Adobe Analyticsは IP アドレスを空白として扱います。 これは、位置情報の検索や IP フィルタリングなど、IP アドレスに依存する Analytics の処理に影響します。 不明化されていない IP アドレスまたは部分的に不明化された IP アドレスを Analytics が受け取るには、 IP の不明化設定をに設定します。 **[!UICONTROL 部分的]** または **[!UICONTROL なし]**. 部分的に不明化された IP アドレスと、不明化されていない IP アドレスは、Analytics 内でさらに不明化される可能性があります。 Adobe Analytics [ドキュメント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html?lang=ja) を参照してください。 IP アドレスが完全に不明化され、ページヒットに [!DNL ECID] nor [!DNL VisitorID]その後、Analytics は、 [フォールバック ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-ids.html?lang=ja)：部分的に IP アドレスに基づいています。</li></ul> |
+| [!UICONTROL ファーストパーティ ID Cookie] | この設定を有効にすると、Edge Network は[ファーストパーティデバイス ID](../edge/identity/first-party-device-ids.md) を参照する際に、この値を ID Map で参照するのではなく、指定された Cookie を参照するように指示します。<br><br>この設定を有効にする場合、ID を保存する Cookie の名前を指定する必要があります。 |
 | [!UICONTROL サードパーティ ID 同期] | ID 同期は、コンテナにグループ化して、異なる ID 同期を異なる時間に実行できます。この設定を有効にすると、どの ID 同期のコンテナがこのデータストリームに対して実行されるかを指定できます。 |
 | [!UICONTROL サードパーティ ID 同期のコンテナ ID] | サードパーティ ID 同期に使用されるコンテナの数値 ID。 |
-| [!UICONTROL コンテナ ID の上書き] | このセクションでは、デフォルト ID の上書きに使用できる、追加のサードパーティ ID 同期コンテナ ID を定義できます。 |
-| [!UICONTROL アクセスタイプ] | Edge Network がデータストリームに受け入れる認証タイプを定義します。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが Edge Network で処理されないようにする場合は、このオプションを選択します。</li></ul> |
-| [!UICONTROL Media Analytics] | Experience PlatformSDK または Media Edge API を介した Edge ネットワーク統合のためのストリーミングトラッキングデータの処理を有効にするには、このオプションを選択します。 Media Analytics については、 [ドキュメント](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=ja). |
+| [!UICONTROL コンテナ ID の上書き] | このセクションでは、デフォルトの ID を上書きするために使用できる、追加のサードパーティ ID 同期コンテナ ID を定義できます。 |
+| [!UICONTROL アクセスタイプ] | Edge Network がデータストリームに受け入れる認証タイプを定義します。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://developer.adobe.com/client-sdks/home/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが Edge Network で処理されないようにする場合は、このオプションを選択します。</li></ul> |
+| [!UICONTROL Media Analytics] | Experience PlatformSDK または Media Edge API を介した、Edge ネットワーク統合のためのストリーミングトラッキングデータの処理を有効にします。 Media Analytics については、 [ドキュメント](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=ja). |
 
 ここから、Experience Platform のデータストリームを設定している場合は、[データ収集のためのデータ準備](./data-prep.md)に関するチュートリアルに従って、Platform イベントスキーマにデータをマッピングしてから、このガイドに戻ってください。それ以外の場合は、「**[!UICONTROL 保存]**」を選択して、次の節を続行します。
 
@@ -119,7 +119,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 ![「サービスを追加」を選択して続行](assets/configure/add-service.png)
 
-次の画面で、ドロップダウンメニューを使用して、このデータストリームで設定するサービスを選択します。アクセス権のあるサービスのみが、このリストに表示されます。
+次の画面で、ドロップダウンメニューを使用して、このデータストリームで設定するサービスを選択します。このリストには、アクセス権のあるサービスのみが表示されます。
 
 ![リストからサービスを選択](assets/configure/service-selection.png)
 
@@ -173,10 +173,10 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 |---| --- |
 | [!UICONTROL イベントデータセット] | **（必須）**&#x200B;顧客イベントデータのストリーミング先となる Platform データセットを選択します。このスキーマは、[XDM ExperienceEvent クラス](../xdm/classes/experienceevent.md)を使用する必要があります。データセットを追加するには、**[!UICONTROL イベントデータセットを追加]**&#x200B;を選択します。 |
 | [!UICONTROL プロファイルデータセット] | 顧客属性データの送信先となる Platform データセットを選択します。このスキーマは、[XDM Individual Profile クラス](../xdm/classes/individual-profile.md)を使用する必要があります。 |
-| [!UICONTROL Offer Decisioning] | このチェックボックスを選択して、Platform Web SDK 実装用の Offer Decisioning を有効にします。実装について詳しくは、[Platform Web SDK での Offer Decisioning の使用](../edge/personalization/offer-decisioning/offer-decisioning-overview.md)に関するガイドを参照してください。<br><br>Offer Decisioning 機能について詳しくは、[Adobe Journey Optimizer のドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ja)を参照してください。 |
-| [!UICONTROL エッジのセグメント化] | このチェックボックスを選択して、このデータストリームの[エッジのセグメント化](../segmentation/ui/edge-segmentation.md)を有効にします。SDK がエッジセグメント化対応データストリームでデータを送信すると、当該プロファイルの更新されたセグメントメンバーシップが応答で返されます。<br><br>このオプションは、[次のページパーソナライゼーションのユースケース](../destinations/ui/activate-edge-personalization-destinations.md)の[!UICONTROL パーソナライゼーションの宛先]と組み合わせて使用できます。 |
+| [!UICONTROL Offer Decisioning] | Web SDK 実装のOffer decisioningを有効にします。 次のガイドを参照してください： [Web SDK でのOffer decisioningの使用](../edge/personalization/offer-decisioning/offer-decisioning-overview.md) を参照してください。<br><br>Offer Decisioning 機能について詳しくは、[Adobe Journey Optimizer のドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=ja)を参照してください。 |
+| [!UICONTROL エッジのセグメント化] | 有効 [エッジセグメント化](../segmentation/ui/edge-segmentation.md) このデータストリーム用。 SDK がエッジセグメント化対応データストリームでデータを送信すると、当該プロファイルの更新されたセグメントメンバーシップが応答で返されます。<br><br>このオプションは、[次のページパーソナライゼーションのユースケース](../destinations/ui/activate-edge-personalization-destinations.md)の[!UICONTROL パーソナライゼーションの宛先]と組み合わせて使用できます。 |
 | [!UICONTROL パーソナライゼーションの宛先] | 「[!UICONTROL エッジセグメント化]」チェックボックスを有効にした後でこの項目を有効にすると、[カスタムパーソナライゼーション](../destinations/catalog/personalization/custom-personalization.md)などのパーソナライゼーションの宛先にデータストリームが接続できるようになります。<br><br>[パーソナライゼーションの宛先の設定](../destinations/ui/activate-edge-personalization-destinations.md)に関する特定の手順については、宛先のドキュメントを参照してください。 |
-| [!UICONTROL Adobe Journey Optimizer] | このチェックボックスを選択すると、このデータストリームに対して [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) を有効にすることができます。<br><br> このオプションを有効にすると、データストリームは [!DNL Adobe Journey Optimizer] の web およびアプリベースのインバウンドキャンペーンからパーソナライズされたコンテンツを返すことができるようになります。このオプションを使用するには、[!UICONTROL エッジセグメント化]をアクティブにする必要があります。[!UICONTROL エッジセグメント化]がオフの場合、このオプションはグレー表示されます。 |
+| [!UICONTROL Adobe Journey Optimizer] | 有効 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) このデータストリーム用。 <br><br> このオプションを有効にすると、データストリームは [!DNL Adobe Journey Optimizer] の web およびアプリベースのインバウンドキャンペーンからパーソナライズされたコンテンツを返すことができるようになります。このオプションを使用するには、[!UICONTROL エッジセグメント化]をアクティブにする必要があります。次の場合 [!UICONTROL エッジのセグメント化] がオフの場合、このオプションはグレー表示されます。 |
 
 ### Adobe Target 設定 {#target}
 
@@ -186,10 +186,10 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 | 設定 | 説明 |
 | --- | --- |
-| [!UICONTROL プロパティトークン] | [!DNL Target] を使用すると、お客様は、プロパティの使用を通じて権限を制御できます。プロパティについて詳しくは、[!DNL Target] ドキュメントの[エンタープライズ権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja)に関するガイドを参照してください。<br><br>プロパティトークンは、Adobe Target UI の[!UICONTROL 設定]／[!UICONTROL プロパティ]にあります。 |
+| [!UICONTROL プロパティトークン] | [!DNL Target] を使用すると、ユーザーはプロパティを使用して権限を制御できます。 プロパティについて詳しくは、[!DNL Target] ドキュメントの[エンタープライズ権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja)に関するガイドを参照してください。<br><br>プロパティトークンは、Adobe Target UI の[!UICONTROL 設定]／[!UICONTROL プロパティ]にあります。 |
 | [!UICONTROL Target 環境 ID] | [Adobe Target の環境](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=ja)を使用すると、開発のすべてのステージを通じて実装を管理できます。この設定は、このデータストリームで使用しようとしている環境を指定します。<br><br>ベストプラクティスは、`dev`、`stage`、`prod` の各データストリーム環境ごとに異なる設定を行って、物事をシンプルに保つことです。ただし、既に Adobe Target 環境を定義している場合は、それを使用できます。 |
 | [!UICONTROL Target サードパーティ ID 名前空間] | このデータストリームに使用する `mbox3rdPartyId` の ID 名前空間。詳しくは、[Web SDK を使用した `mbox3rdPartyId` の実装](../edge/personalization/adobe-target/using-mbox-3rdpartyid.md)に関するガイドを参照してください。 |
-| [!UICONTROL プロパティトークンの上書き] | このセクションでは、デフォルトのプロパティトークンを上書きするために使用できる、追加のプロパティトークンを定義できます。 |
+| [!UICONTROL プロパティトークンの上書き] | このセクションでは、デフォルトのプロパティトークンを上書きするために使用できる追加のプロパティトークンを定義できます。 |
 
 ### [!UICONTROL イベント転送]設定
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge API
 description: Media Edge API の概要
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 86%
+source-wordcount: '331'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +23,7 @@ Media Edge API は、Adobe Experience Platform上に作成され、[XDM スキ�
 
 ## メディアトラッキングデータフローの最適化
 
-[Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html&amp;media-tracking-data-flows) と Media Edge API は両方とも、メディアトラッキングデータを RESTful サービスとして提供します。ただし、Media Edge サービスを使用すると、次のような利点があります。
+[Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html#media-tracking-data-flows) と Media Edge API は両方とも、メディアトラッキングデータを RESTful サービスとして提供します。ただし、Media Edge サービスを使用すると、次のような利点があります。
 
 * これは、XDM スキーマをデータフローに組み込む最も簡単な方法です。
 
