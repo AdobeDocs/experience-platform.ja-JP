@@ -4,16 +4,29 @@ description: Adobe Experience Platform Debugger の最新のリリースノー�
 keywords: デバッガー;Experience Platform Debugger 拡張機能;Chrome;拡張機能;リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
+source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 77%
+source-wordcount: '660'
+ht-degree: 71%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
 
-## バージョン 1.5.1 - 2023 年 11 月 3 日
+## バージョン 1.5.3 - 2023年12月6日（PT）
+
+### 新機能
+
+* 「デバッガーを開く際のアクティブタブへのロック」設定が追加されました。
+
+### 修正点および改善点
+
+* プライベートドメインで Analytics リクエストが見つからない問題を修正しました。
+* Analytics リクエストテーブルにActivity Mapデータが表示されない問題を修正しました。
+* Target Trace を表示するとクラッシュが発生する問題を修正しました。
+* Debugger が Firefox でページ上のインフラストラクチャを設定できなかった場合に警告を追加しました。
+
+## バージョン 1.5.1 - 2023年11月2日（PT）
 
 ### 修正点および改善点
 
@@ -21,7 +34,7 @@ ht-degree: 77%
 * 最大状態ストレージサイズを超えていた問題を修正しました。
 * Edge ログ検索でイベントがフィルタリングされない問題を修正しました。
 
-## バージョン 1.5.0 - 2023 年 10 月 20 日
+## バージョン 1.5.0 - 2023年10月19日（PT）
 
 ### 新機能
 
@@ -37,7 +50,7 @@ ht-degree: 77%
 * Edge ログが検索できない問題を修正しました。
 * 特定のアカウントタイプの追加プロファイルに関する注意を追加しました。
 
-## バージョン 1.4.1 - 2022 年 11 月 2 日
+## バージョン 1.4.1 - 2022年11月1日（PT）
 
 * 多くのAdobe Experience Platform Assurance イベントを含むページのパフォーマンスが向上しました。
 
