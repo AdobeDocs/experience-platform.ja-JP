@@ -2,12 +2,13 @@
 title: 非インタラクティブデータ収集
 description: Adobe Experience Platform Edge Network Server API による非インタラクティブデータ収集の仕組みについて説明します。
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 5%
 
 ---
+
 
 # 非インタラクティブデータ収集
 
@@ -90,16 +91,15 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | ○ | データ収集エンドポイントで使用されるデータストリームの ID。 |
-| `requestId` | `String` | いいえ | 外部リクエストトレース ID を指定します。 何も指定されない場合、Edge ネットワークはユーザーに代わって 1 つを生成し、応答の本文/ヘッダーに返します。 |
-| `silent` | `Boolean` | いいえ | Edge ネットワークが `204 No Content` 空のペイロードを含む応答、または含まない応答。 重大なエラーは、対応する HTTP ステータスコードとペイロードを使用して報告されます。 |
-
+| `requestId` | `String` | × | 外部リクエストトレース ID を指定します。 何も指定されない場合、Edge ネットワークはユーザーに代わって 1 つを生成し、応答の本文/ヘッダーに返します。 |
+| `silent` | `Boolean` | × | Edge ネットワークが `204 No Content` 空のペイロードを含む応答、または含まない応答。 重大なエラーは、対応する HTTP ステータスコードとペイロードを使用して報告されます。 |
 
 ### 応答 {#response}
 
 正常な応答は、次のステータスのいずれかと、 `requestID` リクエストで何も指定されていない場合。
 
 * `202 Accepted` リクエストが正常に処理されたとき。
-* `204 No Content` リクエストが正常に処理され、 `silent` パラメータがに設定されました `true`;
+* `204 No Content` リクエストが正常に処理され、 `silent` パラメータがに設定されました： `true`;
 * `400 Bad Request` リクエストの形式が正しくなかった場合（必須のプライマリ id が見つからなかった場合など）。
 
 ```json

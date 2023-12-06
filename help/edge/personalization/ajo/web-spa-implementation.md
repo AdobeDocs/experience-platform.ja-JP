@@ -2,10 +2,10 @@
 title: シングルページアプリケーションの実装
 description: Adobe Journey OptimizerでSPAビューを実装する方法を説明します。
 exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 79%
+source-wordcount: '866'
+ht-degree: 77%
 
 ---
 
@@ -61,7 +61,7 @@ XDM ビューは、Adobe Journey Optimizerで活用して、マーケターがJo
 
 これには、1 回限りの開発者向けの設定を完了するために、次の手順を実行する必要があります。
 
-1. [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)  をインストールして、[web チャネルの前提条件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html)ページを確認します。
+1. インストール [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md) そして、 [web チャネルの前提条件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) ページに貼り付けます。
 
 2. パーソナライズするシングルページアプリケーション内のすべての XDM ビューを決定します。
 
@@ -92,7 +92,7 @@ XDM ビューは、Adobe Journey Optimizerで活用して、マーケターがJo
 
 マーケティングチームは、ホームページ全体で A/B テストを実行したいと考えています。
 
-![](assets/web-spa-home.png)
+![シングルページアプリケーションのサンプルページ](assets/web-spa-home.png)
 
 ホームサイト全体で A/B テストを実行するには、`sendEvent()` は、`home` に設定した XDM `viewName` と共に呼び出す必要があります。
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 マーケティングチームは、ユーザーがすべてのメンズ向け製品をクリックした後に、価格ラベルの色を赤に変更して、2 行目の製品をパーソナライズしたいと考えています。
 
-![](assets/web-spa-men-products.png)
+![パーソナライズされた製品を含むシングルページアプリケーションのサンプルページ。](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

@@ -3,10 +3,10 @@ title: at.js とExperience PlatformWeb SDK の比較
 description: at.js の機能とExperience PlatformWeb SDK の比較方法を説明します。
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；スニペットの事前非表示；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；ダイアグラム
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '2257'
-ht-degree: 8%
+source-wordcount: '2167'
+ht-degree: 7%
 
 ---
 
@@ -857,7 +857,7 @@ Analytics ペイロード (`tnta` トークン ) は、 [Data Insertion API](htt
 Analytics Server Side のログは、 `analyticsLogging: server_side` (at.js 設定内、または `window.targetglobalSettings` オブジェクト。
 その後、データフローは次のようになります。
 
-![](assets/a4t-server-side-atjs.png)
+![Analytics Server Side のログワークフローを示す図](assets/a4t-server-side-atjs.png)
 
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
@@ -872,7 +872,7 @@ Web SDK では、次の機能もサポートしています。
 
 Analytics クライアント側のログは、Adobe Analyticsがその DataStream 設定で無効になっている場合に有効になります。
 
-![](assets/analytics-disabled-datastream-config.png)
+![Analytics クライアント側のログワークフローを示す図](assets/analytics-disabled-datastream-config.png)
 
 お客様が Analytics トークン (`tnta`) を使用して Analytics と共有する必要がある [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 鎖をつけて入る `sendEvent` コマンドを実行し、結果の提案配列を繰り返し処理します。
@@ -910,19 +910,19 @@ alloy("sendEvent", {
 
 次の図は、Analytics クライアント側が有効な場合のデータフローを示しています。
 
-![](assets/analytics-client-side-logging.png)
+![Analytics クライアントサイドログのデータフロー図](assets/analytics-client-side-logging.png)
 
 #### Analytics Server Side Logging
 
 Analytics がその DataStream 設定で有効になっている場合、Analytics Server Side Logging が有効になります。
 
-![](assets/analytics-enabled-datastream-config.png)
+![Analytics 設定を表示するデータストリーム UI。](assets/analytics-enabled-datastream-config.png)
 
 サーバーサイド分析ログが有効になっている場合、Analytics レポートで正しいインプレッション数とコンバージョン数が Edge ネットワークレベルで共有され、追加の処理をおこなう必要がないように、Analytics と共有する必要がある A4T ペイロード。
 
 サーバー側分析ログが有効な場合にシステムにデータが送られる仕組みを次に示します。
 
-![](assets/analytics-server-side-logging.png)
+![Server Side Analytics ログのデータフローを示す図](assets/analytics-server-side-logging.png)
 
 ## Target のグローバル設定の設定方法
 
@@ -1130,9 +1130,9 @@ Web SDK は、Target サードパーティ ID をサポートします。 ただ
 ID マップを使用すると、顧客は複数の ID を送信できます。 すべての ID は名前空間に分けられています。 各名前空間は 1 つ以上の ID を持つことができます。 特定の ID をプライマリとしてマークできます。
 この知識を念頭に置いて、Target サードパーティ ID を使用するために Web SDK を設定するために必要な手順を確認できます。
 
-1. データストリーム設定表示で、Target サードパーティ ID を含む名前空間を設定します。
+1. データストリーム設定ページで、Target サードパーティ ID を含む名前空間を設定します。
 
-![](assets/mbox-3-party-id-setup.png)
+![「 Target サードパーティ ID 名前空間」フィールドが表示されたデータストリーム UI](assets/mbox-3-party-id-setup.png)
 
 1. 次のように、各 sendEvent コマンドで ID 名前空間を送信します。
 
@@ -1181,7 +1181,7 @@ window.targetPageParams = function() {
 ### Web SDK の使用
 
 Web SDK を使用すると、お客様は、Adobe Target名前空間でデータストリーム設定をおこなう際に、より高いレベルでプロパティを設定できます。
-![](assets/at-property-setup.png)
+![Adobe Target設定を表示するデータストリーム UI。](assets/at-property-setup.png)
 つまり、その特定のデータストリーム設定のすべての Target 呼び出しに、そのプロパティトークンが含まれます。
 
 ## mbox のプリフェッチ方法

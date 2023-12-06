@@ -3,10 +3,10 @@ title: Platform Web SDK でのOffer decisioningの使用
 description: Adobe Experience Platform Web SDK は、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファー UI または API を使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 16%
+source-wordcount: '849'
+ht-degree: 13%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >
 >Adobe Experience Platform Web SDK でのOffer decisioningの使用は、一部のユーザーに対して早期にアクセスできます。 この機能は、一部の組織ではご利用いただけきません。
 
-Adobe Experience Platform [!DNL Web SDK] では、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 Offer Decisioning ユーザーインターフェイス（UI）または API を使用して、オファーとその他の関連オブジェクトを作成できます。
+Adobe Experience Platform [!DNL Web SDK] では、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファーとその他の関連オブジェクトは、Offer decisioningユーザーインターフェイス (UI) または API を使用して作成できます。
 
 ## 前提条件
 
@@ -51,7 +51,7 @@ offer decisioningを扱う際は、次の用語を理解することが重要で
   >
   >決定範囲の値は、 **アクティビティの概要** ページを使用します。
 
-  ![](assets/decision-scope-copy.png)
+  ![決定コピーの設定。](assets/decision-scope-copy.png)
 
 * **データストリーム：** 詳しくは、 [datastreams](../../../datastreams/overview.md) ドキュメント。
 

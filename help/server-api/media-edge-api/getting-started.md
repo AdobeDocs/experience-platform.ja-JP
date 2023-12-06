@@ -3,12 +3,13 @@ solution: Experience Platform
 title: Media Edge API の基本を学ぶ
 description: Media Edge API の基本を学ぶ
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 95%
+source-wordcount: '806'
+ht-degree: 97%
 
 ---
+
 
 # Media Edge API の基本を学ぶ
 
@@ -284,7 +285,7 @@ curl -X 'POST' \
 | ステータス | 説明 |
 | ---------- | --------- |
 | 200 | セッションが正常に作成されました |
-| 207 |  Edge Network に接続するサービスの 1 つに関する問題（[トラブルシューティングガイド](troubleshooting.md)の詳細を参照） |
+| 207 | Edge ネットワークに接続するサービスの 1 つに関する問題 ( 詳しくは、 [トラブルシューティングガイド](troubleshooting.md)) |
 | 400 レベル | リクエストが正しくありません |
 | 500 レベル | サーバーエラー |
 

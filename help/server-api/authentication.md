@@ -2,10 +2,10 @@
 title: 認証
 description: Adobe Experience Platform Edge Network Server API の認証を設定する方法について説明します。
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 19%
+source-wordcount: '633'
+ht-degree: 18%
 
 ---
 
@@ -36,7 +36,7 @@ The [!DNL Edge Network Server API] は、イベントのソースと API 収集�
 * Experience Platformアカウントに `developer` および `user` 役割がAdobe Experience Platform API 製品プロファイルで有効になっていること。 お問い合わせ [Admin Console](../access-control/home.md) 管理者：アカウントに対してこれらのロールを有効にします。
 * あなたはAdobe IDを持っている。 Adobe IDをお持ちでない場合は、 [Adobe Developer Console](https://developer.adobe.com/console) 新しいアカウントを作成します。
 
-##  資格情報の収集 {#credentials}
+## 資格情報の収集 {#credentials}
 
 Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](../landing/api-authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 

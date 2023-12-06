@@ -4,10 +4,10 @@ description: Experience PlatformWeb SDK の処理ルールを使用して、変�
 seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analytics；変数；マッピング変数；map 変数；contextData；コンテキストデータ；処理ルール；xdm；スキーマ；
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 25%
+source-wordcount: '333'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 Adobe Experience Platform [!DNL Web SDK] は特定の変数を自動的にマッピングできますが、カスタム変数は手動でマッピングする必要があります。
 
-自動的にマッピングされない XDM データの場合 [!DNL Analytics]を使用する場合、 [コンテキストデータ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=ja) を [スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja). その後、にマッピングできます。 [!DNL Analytics] using [処理ルール](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=ja) 体に入れる [!DNL Analytics] 変数。
+自動的にマッピングされない XDM データの場合 [!DNL Analytics]を使用する場合、 [コンテキストデータ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=ja) 次の条件に一致する [スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja). その後、にマッピングできます。 [!DNL Analytics] using [処理ルール](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=ja) 体に入れる [!DNL Analytics] 変数。
 
 また、デフォルトのアクションと製品リストのセットを使用して、Adobe Experience Platform Web SDK でデータを送信または取得できます。 これをおこなうには、 [コマースおよび製品情報の収集](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
@@ -52,8 +52,7 @@ Adobe Experience Platform [!DNL Web SDK] は特定の変数を自動的にマッ
 
 例えば、次のルールでは、Adobe Analyticsが **内部検索用語 (eVar2)** と **a.x._atag.search.term(Context Data)**.
 
-![](assets/examplerule.png)
-
+![ルールの例を示す Analytics UI 画像。](assets/examplerule.png)
 
 ## XDM スキーマ
 

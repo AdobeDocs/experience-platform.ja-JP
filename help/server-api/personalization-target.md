@@ -2,9 +2,9 @@
 title: Adobe Target を使用したパーソナライゼーション
 description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '591'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,6 @@ Server API をAdobe Targetと組み合わせて使用する前に、データス
 データストリームを設定する際に、次の値を（オプションで）指定できます。 [!DNL Property Token], [!DNL Target Environment ID]、および [!DNL Target Third Party ID Namespace].
 
 ![Adobe Targetを選択した状態で、データストリームサービス設定画面を示す UI 画像](assets/target-datastream.png)
-
 
 ## カスタムパラメーター {#custom-parameters}
 
