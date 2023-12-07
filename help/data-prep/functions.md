@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ準備マッピング関数
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
 workflow-type: tm+mt
-source-wordcount: '5221'
-ht-degree: 13%
+source-wordcount: '5080'
+ht-degree: 10%
 
 ---
 
@@ -46,13 +46,13 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | 指定された文字列を連結します。 | <ul><li>STRING：連結する文字列。</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| explode | 正規表現に基づいて文字列を分割し、部分の配列を返します。オプションで正規表現を含めて、文字列を分割できます。 デフォルトでは、分割は「,」に解決されます。 次の区切り文字 **必要** 脱走する `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` 複数の文字を区切り文字として含める場合、区切り文字は複数文字の区切り文字として扱われます。 | <ul><li>文字列： **必須** 分割する必要がある文字列です。</li><li>正規表現： *オプション* 文字列の分割に使用できる正規表現です。</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
+| explode | 正規表現に基づいて文字列を分割し、部分の配列を返します。 オプションで正規表現を含めて、文字列を分割できます。 デフォルトでは、分割は「,」に解決されます。 次の区切り文字 **必要** 脱走する `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` 複数の文字を区切り文字として含める場合、区切り文字は複数文字の区切り文字として扱われます。 | <ul><li>文字列： **必須** 分割する必要がある文字列です。</li><li>正規表現： *オプション* 文字列の分割に使用できる正規表現です。</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | サブ文字列の場所/インデックスを返します。 | <ul><li>入力： **必須** 検索する文字列です。</li><li>SUBSTRING: **必須** 文字列内で検索される部分文字列。</li><li>開始位置： *オプション* 文字列内で検索を開始する場所。</li><li>発生件数： *オプション* 開始位置から検索する n 番目のオカレンス。 デフォルトの重み付けは 1 です。 </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
 | replacestr | 元の文字列に検索文字列が存在する場合は、その文字列を置き換えます。 | <ul><li>入力： **必須** 入力文字列。</li><li>検索 (_F): **必須** 入力内で検索する文字列です。</li><li>置換 (_R): **必須** 「TO_FIND」内の値を置き換える文字列。</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacestr(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;This is a string replace test&quot; |
 | substr | 指定された長さのサブ文字列を返します。 | <ul><li>入力： **必須** 入力文字列。</li><li>START_INDEX: **必須** 部分文字列が開始する入力文字列のインデックスです。</li><li>長さ： **必須** サブ文字列の長さ。</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;This is a substring test&quot;, 7, 8) | &quot;サブセット&quot; |
 | lower /<br>lcase | 文字列を小文字に変換します。 | <ul><li>入力： **必須** 小文字に変換する文字列です。</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | upper /<br>ucase | 文字列を大文字に変換します。 | <ul><li>入力： **必須** 大文字に変換する文字列です。</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
-| split | 区切り記号で入力文字列を分割します。次の区切り文字 **ニーズ** 脱走する `\`: `\`. 複数の区切り文字を含める場合、文字列は **任意** 文字列内に存在する区切り文字の数を指定します。 | <ul><li>入力： **必須** 分割する入力文字列です。</li><li>区切り文字： **必須** 入力を分割するために使用される文字列です。</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
+| split | 区切り文字で入力文字列を分割します。 次の区切り文字 **ニーズ** 脱走する `\`: `\`. 複数の区切り文字を含める場合、文字列は **任意** 文字列内に存在する区切り文字の数を指定します。 **注意：** この関数は、区切り文字の有無に関係なく、文字列から null 以外のインデックスのみを返します。 結果の配列に NULL を含むすべてのインデックスが必要な場合は、代わりに「explode」関数を使用します。 | <ul><li>入力： **必須** 分割する入力文字列です。</li><li>区切り文字： **必須** 入力を分割するために使用される文字列です。</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | join | 区切り記号を使用してオブジェクトのリストを結合します。 | <ul><li>区切り文字： **必須** オブジェクトの結合に使用する文字列。</li><li>オブジェクト： **必須** 結合される文字列の配列。</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | 文字列の左側を他の指定された文字列でパディングします。 | <ul><li>入力： **必須** パドアウトする文字列です。 この文字列は null にすることができます。</li><li>カウント： **必須** 埋め込む文字列のサイズです。</li><li>パディング： **必須** 入力を埋め込む文字列です。 null または空の場合は、1 つのスペースとして扱われます。</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | 文字列の右側を他の指定された文字列でパディングします。 | <ul><li>入力： **必須** パドアウトする文字列です。 この文字列は null にすることができます。</li><li>カウント： **必須** 埋め込む文字列のサイズです。</li><li>パディング： **必須** 入力を埋め込む文字列です。 null または空の場合は、1 つのスペースとして扱われます。</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzy&quot; |
@@ -62,7 +62,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | rtrim | 文字列の末尾から空白を削除します。 | <ul><li>文字列： **必須** 空白を削除する文字列です。</li></ul> | rtrim(STRING) | rtrim(&quot;hello &quot;) | &quot;hello&quot; |
 | trim | 文字列の先頭と末尾から空白を削除します。 | <ul><li>文字列： **必須** 空白を削除する文字列です。</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;hello&quot; |
 | 次と等しい | 2 つの文字列を比較し、等しいかどうかを確認します。 この関数では大文字と小文字が区別されます。 | <ul><li>文字列 1: **必須** 比較する最初の文字列です。</li><li>文字列 2: **必須** 比較する 2 番目の文字列です。</li></ul> | STRING1&#x200B;.equals( &#x200B; STRING2) | &quot;string1&quot;です&#x200B;。equals(&#x200B;&quot;STRING1&quot;) | false |
-| equalSignoreCase | 2 つの文字列を比較し、等しいかどうかを確認します。 この関数は、 **not** 大文字と小文字を区別します。 | <ul><li>文字列 1: **必須** 比較する最初の文字列です。</li><li>文字列 2: **必須** 比較する 2 番目の文字列です。</li></ul> | STRING1&#x200B;.equalsIgnoreCase(&#x200B;STRING2) | &quot;string1&quot;です&#x200B;。equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
+| equalsIgnoreCase | 2 つの文字列を比較し、等しいかどうかを確認します。 この関数は、 **not** 大文字と小文字を区別します。 | <ul><li>文字列 1: **必須** 比較する最初の文字列です。</li><li>文字列 2: **必須** 比較する 2 番目の文字列です。</li></ul> | STRING1&#x200B;.equalsIgnoreCase(&#x200B;STRING2) | &quot;string1&quot;です&#x200B;。equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
 {style="table-layout:auto"}
 
@@ -113,7 +113,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。詳しくは、 `date` 関数は、 [データ形式処理ガイド](./data-handling.md#dates).
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。 詳しくは、 `date` 関数は、 [データ形式処理ガイド](./data-handling.md#dates).
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -126,7 +126,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** 日付を表す文字列です。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | date_part | 日付の一部を取得します。次のコンポーネント値がサポートされています。 <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;週&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;millisecond&quot;<br>&quot;SSS&quot; | <ul><li>コンポーネント： **必須** 日付の部分を表す文字列です。 </li><li>日付： **必須** 標準形式の日付。</li></ul> | date_part(&#x200B;COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
 | set_date_part | 指定された日付のコンポーネントを置き換えます。次のコンポーネントが受け入れられます。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>コンポーネント： **必須** 日付の部分を表す文字列です。 </li><li>値： **必須** 指定した日付のコンポーネントに設定する値。</li><li>日付： **必須** 標準形式の日付。</li></ul> | set_date_part(&#x200B;COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44Z&quot; |
-| make_date_time | 部分から日付を作成します。この関数は、make_timestamp を使用して誘導することもできます。 | <ul><li>年： **必須** 年は 4 桁で書かれました</li><li>月： **必須** 月。 使用できる値は 1 ～ 12 です。</li><li>日： **必須** 1 日。 使用できる値は 1 ～ 31 です。</li><li>時間： **必須** 時間。 使用できる値は 0 ～ 23 です。</li><li>分： **必須** 分。 使用できる値は 0 ～ 59 です。</li><li>ナノ秒： **必須** ナノ秒の値。 使用できる値は 0 ～ 999999999です。</li><li>タイムゾーン： **必須** 日時のタイムゾーン。</li></ul> | make_date_time(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12Z` |
+| make_date_time | パーツから日付を作成します。 この関数は、make_timestamp を使用して誘導することもできます。 | <ul><li>年： **必須** 年は 4 桁で書かれました</li><li>月： **必須** 月。 使用できる値は 1 ～ 12 です。</li><li>日： **必須** 1 日。 使用できる値は 1 ～ 31 です。</li><li>時間： **必須** 時間。 使用できる値は 0 ～ 23 です。</li><li>分： **必須** 分。 使用できる値は 0 ～ 59 です。</li><li>ナノ秒： **必須** ナノ秒の値。 使用できる値は 0 ～ 999999999です。</li><li>タイムゾーン： **必須** 日時のタイムゾーン。</li></ul> | make_date_time(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 任意のタイムゾーンの日付を UTC での日付に変換します。 | <ul><li>日付： **必須** 変換しようとしている日付です。</li></ul> | zone_date_to_utc(&#x200B;DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | あるタイムゾーンから別のタイムゾーンに日付を変換します。 | <ul><li>日付： **必須** 変換しようとしている日付です。</li><li>ゾーン： **必須** 日付を変換しようとしているタイムゾーンです。</li></ul> | zone_date_to_zone(&#x200B;DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
@@ -377,7 +377,7 @@ address.line1 -> addr.addrLine1
 | ロボット | Web サイトを訪問するロボット。 |
 | Robot Mobile | Web サイトを訪問したが、モバイル訪問者として認識されたいことを示すロボット。 |
 | ロボットイミテータ | Web サイトを訪問するロボットで、のようなロボットのふりをする [!DNL Google]ですが、実際にはそうではありません。 **注意**：ほとんどの場合、ロボットイミテーターは実際にはロボットです。 |
-| Cloud | クラウドベースのアプリケーション。 これらはロボットでもハッカーでもなく、接続する必要のあるアプリケーションです。 これには以下が含まれます。 [!DNL Mastodon] サーバー。 |
+| クラウド | クラウドベースのアプリケーション。 これらはロボットでもハッカーでもなく、接続する必要のあるアプリケーションです。 これには以下が含まれます。 [!DNL Mastodon] サーバー。 |
 | ハッカー | このデバイス値は、 `useragent` 文字列。 |
 
 {style="table-layout:auto"}
