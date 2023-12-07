@@ -2,16 +2,16 @@
 title: Zendesk イベント転送拡張機能
 description: Adobe Experience Platform の Zendesk イベント転送拡張機能。
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
 source-wordcount: '1170'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
 # [!DNL Zendesk] Events API 拡張機能の概要
 
-[Zendesk](https://www.zendesk.co.jp) は、カスタマーサービスソリューションおよびセールスツールです。 Zendesk [イベント転送](../../../ui/event-forwarding/overview.md)拡張機能は、[[!DNL Zendesk Events API]](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) を活用して、イベントを Adobe Experience Platform Edge Network から Zendesk に送信して、さらに処理できるようにします。 拡張機能を使用して、ダウンストリームの分析やアクションで使用する顧客プロファイルインタラクションを収集できます。
+[Zendesk](https://www.zendesk.co.jp) は、カスタマーサービスソリューションおよびセールスツールです。 Zendesk [イベント転送](../../../ui/event-forwarding/overview.md)拡張機能は、[[!DNL Zendesk Events API]](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) を活用して、イベントを Adobe Experience Platform Edge Network から Zendesk に送信して、さらに処理できるようにします。 拡張機能を使用して、ダウンストリームの分析やアクションで使用する顧客プロファイルインタラクションを収集できます。
 
 このドキュメントでは、UI で 拡張機能をインストールおよび設定する方法について説明します。
 
@@ -66,7 +66,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 
 ### `event` キー
 
-`event` は、ユーザーによってトリガーされたイベントを表す JSON オブジェクトです。`event` オブジェクトが取得するプロパティについて詳しくは、[イベントの詳細](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)に関する Zendesk のドキュメントを参照してください。
+`event` は、ユーザーによってトリガーされたイベントを表す JSON オブジェクトです。`event` オブジェクトが取得するプロパティについて詳しくは、[イベントの詳細](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)に関する Zendesk のドキュメントを参照してください。
 
 次のキーは、`event` オブジェクト内でデータ要素にマッピングするときに参照されます。
 
@@ -82,7 +82,7 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 
 >[!NOTE]
 >
->イベントプロパティについて詳しくは、[[!DNL Zendesk Events API] ドキュメント](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/)を参照してください。
+>イベントプロパティについて詳しくは、[[!DNL Zendesk Events API] ドキュメント](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)を参照してください。
 
 ### `profile` キー
 
@@ -147,10 +147,10 @@ UI で Zendesk 拡張機能をインストールするには、**イベント転
 
 このドキュメントでは、UI で Zendesk イベント転送拡張機能をインストールおよび設定する方法について説明しました。 Zendesk でのイベントデータの収集について詳しくは、次の公式ドキュメントを参照してください。
 
-* [イベント使用の手引き](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
+* [イベント使用の手引き](https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events/)
 * [Zendesk Events API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
-* [Events API について](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
-* [イベントの詳細](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
+* [Events API について](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)
+* [イベントの詳細](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)
 * [Zendesk Profiles API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
 * [Profiles API について](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
 * [プロファイルの詳細](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

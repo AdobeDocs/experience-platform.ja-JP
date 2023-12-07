@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Debugger を使用した埋め込みコードのテスト
 description: Platform Debugger を使用して、Web サイト上で Adobe Experience Platform の様々な埋め込みコードをローカルでテストする方法について説明します。
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 96%
+source-wordcount: '488'
+ht-degree: 92%
 
 ---
 
@@ -21,10 +21,9 @@ Adobe Experience Platform のタグライブラリビルドに変更を加える
 
 このチュートリアルでは、タグの環境と埋め込みコードの使用に関する十分な知識が必要です。 「[環境の概要](./environments.md) 」で詳細情報を参照してください。
 
-また、このチュートリアルでは、Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Platform Debugger は、クロムおよび Firefox ブラウザーでのみ使用できます。 チュートリアルを開始する前に、次のリンクのいずれかを使用して、拡張機能をインストールしてください。
+また、このチュートリアルでは、Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Platform Debugger は、Chrome ブラウザーで使用できます。 チュートリアルを開始する前に、次のリンクを使用して、拡張機能をインストールします。
 
 * [クロム用 Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Firefox 用 Platform Debugger](https://addons.mozilla.org/ja/firefox/addon/adobe-experience-platform-dbg/)
 
 ## Web サイトで Platform Debugger を開きます
 

@@ -4,10 +4,10 @@ title: Braze イベント転送拡張機能
 description: このAdobe Experience Platformイベント転送拡張機能は、Edge ネットワークイベントを Braze に送信します。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 6%
+source-wordcount: '1692'
+ht-degree: 4%
 
 ---
 
@@ -51,7 +51,7 @@ The [!DNL Braze Track Events API] [イベント転送](../../../ui/event-forward
 
 ### 課金対象のデータポイント
 
-追加のカスタム属性をに送信する [!DNL Braze] を増やすかもしれません [!DNL Braze] データポイントの使用。 詳しくは、 [!DNL Braze] 追加のカスタム属性を送信する前に、アカウントマネージャーに問い合わせてください。 詳しくは、 [!DNL Braze] に関するドキュメント [課金対象のデータポイント](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) を参照してください。
+追加のカスタム属性をに送信する [!DNL Braze] を増やすかもしれません [!DNL Braze] データポイントの使用。 詳しくは、 [!DNL Braze] 追加のカスタム属性を送信する前に、アカウントマネージャーに問い合わせてください。 詳しくは、 [!DNL Braze] に関するドキュメント [課金対象のデータポイント](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) を参照してください。
 
 ### 必要な設定の詳細の収集 {#configuration-details}
 
@@ -72,7 +72,7 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 左側のナビゲーションの「**[!UICONTROL 拡張機能]**」をクリックします。Adobe Analytics の **[!UICONTROL カタログ]** タブ、選択 **[!UICONTROL インストール]** ～のためのカードで [!DNL Braze] 拡張子。
 
-![[!DNL Braze]拡張機能のインストール.](../../../images/extensions/server/braze/install-extension.png)
+![をインストールします。 [!DNL Braze] 拡張子。](../../../images/extensions/server/braze/install-extension.png)
 
 次の画面で、次の情報を入力します。 [設定値](#configuration-details) 以前に集めた [!DNL Braze]:
 
@@ -107,7 +107,7 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 | 入力 | 説明 | 必須 |
 | --- | --- | --- |
-| [!UICONTROL イベント名 &#x200B;] | イベントの名前。 | ○ |
+| [!UICONTROL イベント名&#x200B;] | イベントの名前。 | ○ |
 | [!UICONTROL イベント時刻] | ISO 8601 またはでの文字列としての日時。 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式を使用します。 | ○ |
 | [!UICONTROL アプリ識別子] | アプリの識別子または <strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作しているアプリグループ内のアプリを指定します。 詳しくは、 [API 識別子のタイプ](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL イベントのプロパテ&#x200B;ィ] | イベントのカスタムプロパティを含む JSON オブジェクト。 |  |
@@ -126,7 +126,7 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 | --- | --- |
 | [!UICONTROL 名] | |
 | [!UICONTROL 姓] | |
-| [!UICONTROL Phone] | |
+| [!UICONTROL 電話] | |
 | [!UICONTROL メール] | |
 | [!UICONTROL 性別] | 「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（特に指定しない）のいずれかの文字列。 |
 | [!UICONTROL 市区町村] | |
@@ -163,11 +163,11 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 
 | 入力 | 説明 | 必須 |
 | --- | --- | --- |
-| [!UICONTROL 製品 ID &#x200B;] | 購入の識別子。 （例：製品名または製品カテゴリ） | ○ |
+| [!UICONTROL 製品 ID&#x200B;] | 購入の識別子。 （例：製品名または製品カテゴリ） | ○ |
 | [!UICONTROL 購入時間] | ISO 8601 またはでの文字列としての日時。 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式を使用します。 | ○ |
-| [!UICONTROL 通貨 &#x200B;] | 通貨を文字列として [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 英字通貨コード形式。 | ○ |
-| [!UICONTROL 価格 &#x200B;] | 価格. | ○ |
-| [!UICONTROL 数量 &#x200B;] | 指定しない場合、デフォルト値は 1 です。 最大値は 100 より小さい値にする必要があります。 | |
+| [!UICONTROL 通貨&#x200B;] | 通貨を文字列として [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 英字通貨コード形式。 | ○ |
+| [!UICONTROL 価格&#x200B;] | 価格。 | ○ |
+| [!UICONTROL 数&#x200B;量] | 指定しない場合、デフォルト値は 1 です。 最大値は 100 より小さい値にする必要があります。 | |
 | [!UICONTROL アプリ識別子] | アプリの識別子または <strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作しているアプリグループ内のアプリを指定します。 詳しくは、 [API 識別子のタイプ](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL 購入プロパティ&#x200B;] | 購入のカスタムプロパティを含む JSON オブジェクト。 |  |
 
@@ -185,7 +185,7 @@ Edge ネットワークをに接続するには [!DNL Braze]の場合、次の�
 | --- | --- |
 | [!UICONTROL 名] | |
 | [!UICONTROL 姓] | |
-| [!UICONTROL Phone] | |
+| [!UICONTROL 電話] | |
 | [!UICONTROL メール] | |
 | [!UICONTROL 性別] | 「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（特に指定しない）のいずれかの文字列。 |
 | [!UICONTROL 市区町村] | |

@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK でのデバッグ
 description: Experience PlatformWeb SDK でデバッグ機能を切り替える方法を説明します。
 keywords: Web SDK のデバッグ；デバッグ；設定；コマンドの設定；debug コマンド；edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '516'
 ht-degree: 50%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 50%
 * `configure` コマンド
 * `setDebug` コマンド
 * クエリ文字列パラメーター
-* Enable Debugging in Debugging をオンに切り替えるAdobe Experience Platform Debugger。 Adobe Experience Platformは、Web ページを調べ、Experience Cloud製品の実装の問題をデバッグできる強力なツールです。 Adobe Experience Platform Debuggerは、 [クロム](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) および [Firefox](https://addons.mozilla.org/ja/firefox/addon/adobe-experience-platform-dbg/) 拡張子。 デバッグは、AEP Web SDK セクションの「設定」タブで有効にできます。
+* Enable Debugging in Debugging をオンに切り替えるAdobe Experience Platform Debugger。 Adobe Experience Platformは、Web ページを調べ、Experience Cloud製品の実装の問題をデバッグできる強力なツールです。 Adobe Experience Platform Debuggerは、 [クロム](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 拡張子。 デバッグは、AEP Web SDK セクションの「設定」タブで有効にできます。
 
 ![Experience PlatformDebugger UI 設定画面を表示する画像。](../assets/enable-debugging.png)
 

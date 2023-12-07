@@ -2,10 +2,10 @@
 title: turbine 自由変数
 description: Adobe Experience Platform タグのランタイムに固有の情報やユーティリティを提供する自由変数である turbine オブジェクトについて説明します。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 100%
+source-wordcount: '606'
+ht-degree: 97%
 
 ---
 
@@ -112,7 +112,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-ログユーティリティは、コンソールにメッセージを記録するために使用します。ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、 [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) を使用することをお勧めします。別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド `_satellite.setDebug(true)` を実行できます。ロガーには次のメソッドがあります。
+ログユーティリティは、コンソールにメッセージを記録するために使用します。ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). 別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド `_satellite.setDebug(true)` を実行できます。ロガーには次のメソッドがあります。
 
 * `logger.log(message: string)`：コンソールにメッセージを記録します。
 * `logger.info(message: string)`：コンソールに情報メッセージを記録します。
@@ -137,8 +137,8 @@ console.log(turbine.propertySettings.domains);
 
 * `propertySettings.domains: Array<String>`
 
-   プロパティの対象となるドメインの配列です。
+  プロパティの対象となるドメインの配列です。
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   拡張機能の開発者は、この設定を気に掛ける必要はありません。
+  拡張機能の開発者は、この設定を気に掛ける必要はありません。
