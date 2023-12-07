@@ -3,16 +3,16 @@ keywords: E メール；E メール；E メールの宛先；oracleEloqua;oracle
 title: （ファイル）Oracle Eloqua 接続
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 53%
+source-wordcount: '717'
+ht-degree: 49%
 
 ---
 
 # [!DNL (Files) Oracle Eloqua] 接続
 
-[[!DNL Oracle Eloqua] は](https://www.oracle.com/cx/marketing/automation/)[!DNL Oracle]、 が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) は、が提供するマーケティング自動化用のソフトウェア (SaaS) プラットフォームです。 [!DNL Oracle] これは、B2B マーケターや組織がマーケティングキャンペーンやセールスリードジェネレーションを管理するのを支援することを目的としています。
 
 オーディエンスデータをに送信するには、以下を実行します。 [!DNL Oracle Eloqua]を選択し、最初に [宛先に接続](#connect-destination) Adobe Experience Platformで [データインポートの設定](#import-data-into-eloqua) ストレージの場所から [!DNL Oracle Eloqua].
 

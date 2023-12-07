@@ -1,12 +1,11 @@
 ---
-keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Display 360;display 360;display and video
 title: Google Display & Video 360 接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 81%
+source-wordcount: '974'
+ht-degree: 69%
 
 ---
 
@@ -14,18 +13,18 @@ ht-degree: 81%
 
 ## 概要 {#overview}
 
-[!DNL Display & Video 360]（旧称： ） [!DNL DoubleClick Bid Manager]は、ディスプレイ、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用されるツールです。
+[!DNL Display & Video 360]（旧称： ） [!DNL DoubleClick Bid Manager]は、ディスプレイ広告、ビデオおよびモバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用されるツールです。
 
 ## 宛先の詳細 {#specifics}
 
 [!DNL Google Display & Video 360] の宛先に固有な次の詳細に注意ください。
 
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラムを使用して作成されます。
-* オーディエンスのバックフィルを [!DNL Google Display & Video 360] の宛先は、オーディエンスが最初に宛先接続にマッピングされてから 24 ～ 48 時間後に発生するようにスケジュールされます。 この更新は、Googleのデータ取得まで 24 時間待機するポリシーに対応したもので、Real-Time CDPとの一致率を向上させるためのものです。 [!DNL Google Display & Video 360]. これは、この宛先にのみ適用されるバックエンド設定であり、UI でお客様が設定可能なスケジュールオプションとは無関係です。
+* オーディエンスのバックフィルを [!DNL Google Display & Video 360] の宛先は、オーディエンスが最初に宛先接続にマッピングされてから 24 ～ 48 時間後に発生するようにスケジュールされます。 この更新は、Googleのデータ取得まで 24 時間待機するポリシーに対応したもので、Real-Time CDPとの一致率を向上させるためのものです。 [!DNL Google Display & Video 360]. これは、この宛先にのみ適用されるバックエンド設定で、UI のお客様が設定できるスケジュールオプションとは無関係です。
 
 >[!IMPORTANT]
 >
->Google Display &amp; Video 360 を使用して最初の宛先を作成する場合で、以前に Experience Cloud ID サービスにおいて、Adobe Audience Manager や他のアプリケーションとの間で [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしていないときには、アドビコンサルティングまたはカスタマーケアに連絡して、ID 同期を有効にしてください。以前に Audience Manager で Google 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>Google Display &amp; Video 360 で最初の宛先を作成しようとしている場合に、 [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) 以前のExperience CloudID サービス (Adobe Audience Managerや他のアプリケーションを使用 ) では、Adobeコンサルティングまたはカスタマーケアに問い合わせて、ID 同期を有効にしてもらいます。 以前に Audience Manager で Google 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ## サポートされている ID {#supported-identities}
 
@@ -67,10 +66,10 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Platform で最初の [!DNL Google Display & Video 360] の宛先を設定する前に、許可リストへの登録は必須です。宛先を作成する前に、[!DNL Google] が以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
+>Platform で最初の [!DNL Google Display & Video 360] の宛先を設定する前に、許可リストへの登録は必須です。以下に説明する許可リスト登録プロセスが次の方法で完了していることを確認します。 [!DNL Google] 宛先を作成する前に、をクリックします。
 >このルールの例外は、[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客の場合です。この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
 
-を作成する前に [!DNL Google Display & Video 360] の宛先に設定する場合は、Googleに問い合わせて、許可されたデータプロバイダーのリストにAdobeを追加し、お使いのアカウントを許可リストに追加するように依頼する必要があります。 Google に連絡し、次の情報を提供します。
+を作成する前に [!DNL Google Display & Video 360] の宛先に設定する場合は、Googleに問い合わせて、許可されたデータプロバイダーのリストにAdobeを追加する方法と、お使いのアカウントをに追加する方法を尋ねる必要がありま許可リストに加えるす。 Google に連絡し、次の情報を提供します。
 
 * **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
 * **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
@@ -97,7 +96,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->[!DNL Google Display & Video 360] の宛先を設定する際は、[!DNL Google Account Manager] またはアドビの担当者にお問い合わせの上、お持ちのアカウントの種類をご確認ください。
+>の設定時に、 [!DNL Google Display & Video 360] 宛先、 [!DNL Google Account Manager] またはAdobe担当者を参照して、お持ちのアカウントの種類を確認してください。
 
 ### アラートの有効化 {#enable-alerts}
 

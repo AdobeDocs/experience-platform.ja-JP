@@ -3,10 +3,10 @@ keywords: E メール；E メール；E メールの宛先；Adobe Campaign;Camp
 title: Adobe Campaign 接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 42%
+source-wordcount: '906'
+ht-degree: 40%
 
 ---
 
@@ -40,11 +40,11 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 {style="table-layout:auto"}
 
-## IP アドレス許可リスト {#allow-list}
+## IP アドレスの許可リスト {#allow-list}
 
-SFTP ストレージを使用した電子メールマーケティングの宛先を設定する場合、Adobeでは、特定の IP 範囲を許可リストに追加することをお勧めします。
+SFTP ストレージを使用した電子メールマーケティングの宛先を設定する場合、Adobeでは、特定の IP 範囲をユーザーのに追加することをお勧めし許可リストに加えるます。
 
-参照： [SFTP の宛先の IP アドレス許可リスト](../cloud-storage/ip-address-allow-list.md) 許可リストにAdobeIP を追加する必要がある場合。
+参照： [SFTP の宛先の IP ア許可リストに加えるドレスの](../cloud-storage/ip-address-allow-list.md) AdobeIP を追加する必要がある場合は、次の手順を実行し許可リストに加えるます。
 
 ## 宛先への接続 {#connect}
 
@@ -101,14 +101,14 @@ Adobe Campaignは、次の接続タイプをサポートしています。
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Adobe Campaign] 宛先の場合、[!DNL Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルについて詳しくは、 [オーディエンスのアクティベーションを検証](../../ui/activate-batch-profile-destinations.md#verify) （ audience activation チュートリアル）を参照してください。
+[!DNL Adobe Campaign] 宛先の場合、[!DNL Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルについて詳しくは、 [オーディエンスのアクティベーションを検証](../../ui/activate-batch-profile-destinations.md#verify) の節を参照してください。
 
-## Adobe Campaign へのデータインポートの設定 {#import-data-into-campaign}
+## Adobe Campaignへのデータインポートの設定 {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
 >* 次の点に注意してください。 [!DNL SFTP] この統合を実行する際に、Adobe Campaign契約に従って、ストレージの制限、データベースのストレージの制限、アクティブなプロファイルの制限。
->* Adobe Campaignで、 [!DNL Campaign] ワークフロー。 参照： [繰り返し発生するインポートの設定](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja) Adobe Campaign Classicのドキュメントおよび [データ管理アクティビティについて](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) (Adobe Campaign Standardドキュメント )
+>* を使用して、Adobe Campaignで書き出したセグメントのスケジュール、読み込み、マッピングをおこなう必要があります。 [!DNL Campaign] ワークフロー。 参照： [繰り返し発生するインポートの設定](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja) Adobe Campaign Classicのドキュメントおよび [データ管理アクティビティについて](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) (Adobe Campaign Standardドキュメント )
 >* データをAdobe Campaignに送信する推奨される方法は、次のとおりです [!DNL Amazon S3] または [!DNL Azure Blob].
 
 接続後 [!DNL Platform] を [!DNL Amazon S3] または [!DNL Azure Blob] ストレージの場合は、ストレージの場所からAdobe Campaignへのデータインポートを設定する必要があります。 これをおこなう方法については、次のAdobe Campaignドキュメントページを参照してください。

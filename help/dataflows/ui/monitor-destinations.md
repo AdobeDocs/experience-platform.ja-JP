@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;アカウントの監視;データフローの監視;データフロー;宛先
 description: 宛先を使用すると、Adobe Experience Platform から無数の外部パートナーに対してデータをアクティブ化できます。このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して宛先のデータフローを監視する方法について説明します。
 solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '3227'
-ht-degree: 98%
+source-wordcount: '3290'
+ht-degree: 90%
 
 ---
 
 # UI での宛先のデータフローの監視
 
-宛先を使用すると、Adobe Experience Platform から無数の外部パートナーに対してデータをアクティブ化できます。Platform では、データフローの透明性を提供することで、宛先へのデータフローの追跡プロセスを容易にします。
+Experience Platformカタログ内の様々な宛先を使用して、Platform から無数の外部パートナーに対してデータをアクティブ化します。 Platform では、データフローの透明性を提供することで、宛先へのデータフローの追跡プロセスを容易にします。
 
 監視ダッシュボードは、データがアクティブ化される宛先を含め、データフローのジャーニーを視覚的に表します。 このチュートリアルでは、宛先ワークスペースでデータフローを直接監視する方法や、監視ダッシュボードを使用して Experience Platform ユーザーインターフェイスで宛先のデータフローを監視する方法について説明します。
 
@@ -31,7 +30,7 @@ ht-degree: 98%
 
 Platform UI 内の&#x200B;**[!UICONTROL 宛先]**&#x200B;ワークスペースで、「**[!UICONTROL 参照]**」タブに移動し、表示する宛先の名前を選択します。
 
-![宛先表示の選択](../assets/ui/monitor-destinations/select-destination.png)
+![宛先接続がハイライト表示された宛先ビューを選択](../assets/ui/monitor-destinations/select-destination.png)
 
 既存のデータフローのリストが表示されます。このページには、宛先、ユーザー名、データフロー数およびステータスに関する情報を含め、表示可能なデータフローがリストされます。
 
@@ -73,7 +72,7 @@ Platform UI 内の&#x200B;**[!UICONTROL 宛先]**&#x200B;ワークスペース�
 
 ストリーミング宛先の場合、「[!UICONTROL データフロー実行]」タブには、データフロー実行に関する指標データの 1 時間ごとの更新が表示されます。 ラベル付けされた最も顕著な統計情報は ID の情報です。
 
-ID は、プロファイルの様々なファセットを表します。例えば、プロファイルに電話番号とメールアドレスの両方が含まれている場合、そのプロファイルには 2 つの ID が含まれます。
+ID は、プロファイルの様々なファセットを表します。例えば、プロファイルに電話番号と電子メールアドレスの両方が含まれている場合、そのプロファイルには 2 つの ID があります。
 
 個々の実行とその特定の指標のリストが、ID の下記の合計数と共に表示されます。
 
@@ -81,11 +80,11 @@ ID は、プロファイルの様々なファセットを表します。例え�
 - **[!UICONTROL 除外された ID]**：属性の欠如と同意違反に基づいてアクティブ化の対象からスキップされたプロファイル ID の合計数です。
 - **[!UICONTROL 失敗した ID]**：エラーが原因で宛先に対してアクティブ化されなかったプロファイル ID の合計数です。
 
-![ストリーミング宛先のデータフロー実行の詳細](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
+![データフローの実行の詳細は、ストリーミングの宛先に関するものです。](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 個々のデータフロー実行ごとに、次の詳細が表示されます。
 
-- **[!UICONTROL データフロー実行開始]**：データフロー実行が開始された時刻です。ストリーミングデータフロー実行の場合、Experience Platform は、データフロー実行の開始時刻に基づく指標を時間別指標の形式で取得します。ストリーミングデータフロー実行の場合、データフロー実行が例えば午後 10:30 に開始した場合、UI では、この指標は開始時刻が午後 10:00 と表示されます。
+- **[!UICONTROL データフロー実行開始]**：データフロー実行が開始された時刻です。ストリーミングデータフロー実行の場合、Experience Platform は、データフロー実行の開始時刻に基づく指標を時間別指標の形式で取得します。データフローのストリーミング実行の場合、データフローの実行が午後 10 時 30 分に開始した場合、この指標は、UI で開始時刻を午後 10 時と表示します。
 - **[!UICONTROL 処理時間]**：データフロー実行が処理されるまでにかかった時間です。
    - **[!UICONTROL 完了]**&#x200B;した実行の場合、処理時間指標には常に 1 時間と表示されます。
    - まだ&#x200B;**[!UICONTROL 処理中]**&#x200B;状態のデータフロー実行の場合、データフロー実行に対応するすべての指標を処理するために、すべての指標を取得するウィンドウが 1 時間以上開いたままになります。例えば、午前 9:30 に開始したデータフロー実行が、すべての指標を取得して処理するために、1 時間 30 分間処理状態のままになるといった場合です。 次に、処理ウィンドウが閉じ、データフロー実行のステータスが&#x200B;**完了**&#x200B;に更新されると、表示される処理時間が 1 時間に変更されます。
@@ -94,18 +93,18 @@ ID は、プロファイルの様々なファセットを表します。例え�
 - **[!UICONTROL 除外された ID]**：属性の欠如と同意違反に基づいてアクティブ化から除外されたプロファイル ID の合計数です。
 - **[!UICONTROL 失敗した ID]**：エラーが原因で宛先に対してアクティブ化されなかったプロファイル ID の合計数です。
 - **[!UICONTROL アクティブ化率]**：正常にアクティブ化されたかスキップされた受信 ID の割合です。次の数式は、この値の計算方法を示しています。
-  ![アクティブ化率の数式](../assets/ui/monitor-destinations/activation-rate-formula.png)
+  ![アクティベーション率の数式。](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL ステータス]**：データフローの状態（[!UICONTROL 完了]または[!UICONTROL 処理中]）を表します。[!UICONTROL 完了]は、対応するデータフロー実行のすべての ID が 1 時間以内に書き出されたことを意味します。[!UICONTROL 処理中]は、データフロー実行がまだ終了していないことを意味します。
 
 特定のデータフロー実行の詳細を表示するには、実行の開始時刻をリストから選択します。
 
 データフロー実行の詳細ページには、受信したプロファイルの数、アクティブ化された ID の数、失敗した ID の数、除外された ID の数などの、追加の情報が含まれています。
 
-![ストリーミング宛先のデータフローの詳細](../assets/ui/monitor-destinations/dataflow-details-stream.png)
+![ストリーミング宛先のデータフローの詳細。](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
 詳細ページには、失敗した ID と除外された ID のリストも表示されます。失敗した ID と除外された ID の両方に関する情報（エラーコード、ID の数、説明など）が表示されます。デフォルトでは、リストには、失敗した ID が表示されます。スキップされた ID を表示するには、「**[!UICONTROL 除外された ID]**」切替スイッチを選択します。
 
-![ストリーミング宛先のデータフローレコード](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+![エラーメッセージが強調表示された、ストリーミング先のデータフローレコード。](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### バッチ宛先のデータフロー実行 {#dataflow-runs-for-batch-destinations}
 
@@ -135,7 +134,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 - **[!UICONTROL アクティブ化された ID]**：選択した宛先に対して正常にアクティブ化されたプロファイル ID の合計数です。この指標には、書き出されたセグメントで作成、更新および削除された ID が含まれます。
 - **[!UICONTROL 除外された ID]**：属性の欠如と同意違反に基づいて、選択した宛先のアクティブ化から除外された個人プロファイル ID の数です。
 
-![バッチ宛先のデータフロー実行ビュー](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
+![バッチ保存先のデータフロー実行ビュー。](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
 個々のデータフロー実行ごとに、次の詳細が表示されます。
 
@@ -159,11 +158,11 @@ ID は、プロファイルの様々なファセットを表します。例え�
 - **[!UICONTROL 合計ファイル数]**：データフローで書き出されたファイルの合計数です。
 - **[!UICONTROL 最終更新日時]**：データフロー実行が最後に更新された時刻。
 
-![バッチ宛先のデータフロー実行の詳細](../assets/ui/monitor-destinations/dataflow-batch.png)
+![バッチ宛先のデータフロー実行の詳細。](../assets/ui/monitor-destinations/dataflow-batch.png)
 
 詳細ページには、失敗した ID と除外された ID のリストも表示されます。エラーコードや説明など、失敗した ID と除外された ID の両方に関する情報が表示されます。 デフォルトでは、リストには、失敗した ID が表示されます。除外された ID を表示するには、「**[!UICONTROL 除外された ID]**」切替スイッチを選択します。
 
-![バッチ宛先のデータフローレコード](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+![エラーメッセージが強調表示されたバッチ保存先のデータフローレコード。](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## 宛先監視ダッシュボード {#monitoring-destinations-dashboard}
 
@@ -183,7 +182,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 ダッシュボードの中央にある[!UICONTROL アクティブ化]パネルには、ストリーミング宛先に書き出されたデータのアクティブ化率に関するデータと、バッチ宛先に対する失敗したバッチデータフロー実行に関するデータを表示する指標とグラフが表示されます。
 
-![ストリーミングアクティブ化とバッチアクティブ化のグラフ](../assets/ui/monitor-destinations/dashboard-graph.png)
+![監視ビューでハイライト表示されたストリーミングおよびバッチアクティベーショングラフ。](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
 デフォルトでは、表示されるデータには、過去 24 時間のアクティブ化情報が含まれています。 「**[!UICONTROL 過去 24 時間]**」を選択すると、表示されるレコードの時間枠を調整できます。 利用可能なオプションには、「**[!UICONTROL 過去 24 時間]**」、「**[!UICONTROL 過去 7 日間]**」および「**[!UICONTROL 過去 30 日間]**」があります。 または、表示されるカレンダーポップアップウィンドウで日付を選択することもできます。 日付を選択したら、「**[!UICONTROL 適用]**」を選択して、表示される情報の時間枠を調整できます。
@@ -192,14 +191,14 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >
 >次のスクリーンショットは、過去 24 時間ではなく、過去 30 日間のアクティブ化率とバッチデータフロー実行を示しています。 「**[!UICONTROL 過去 30 日間]**」を選択して、時間枠を調整できます。
 
-![アクティブ化された宛先のルックバック日付範囲の変更](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
+![アクティブ化された宛先に対してハイライト表示されたルックバック日付範囲コントロールの変更](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
 矢印アイコン（![矢印アイコン](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)）を使用すると、画面上部のカードを展開したり展開解除したりできます。このカードでは、宛先のタイプ（ストリーミングまたはバッチ）に基づいて、アクティブ化の詳細に関する情報を一目で確認できます。
 
 - **[!UICONTROL ストリーミングのアクティブ化率]**：正常にアクティブ化またはスキップされた受信 ID の割合を表します。この割合の計算に使用される数式について詳しくは、このページの[ストリーミング宛先のデータフロー実行](#dataflow-runs-for-streaming-destinations)節を参照してください。
 - **[!UICONTROL 失敗したデータフロー実行のバッチ]**：選択した時間枠での失敗したデータフロー実行の数を表します。
 
-![ページ上部でのカードの表示または解除](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
+![ページの上部でカードを表示または解除します。](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
 
 **[!UICONTROL アクティブ化]**&#x200B;グラフはデフォルトで表示されますが、これを無効にして、以下の宛先リストを展開することができます。グラフを無効にするには、「**[!UICONTROL 指標とグラフ]**」切替スイッチを選択します。
 
@@ -215,7 +214,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 | **[!UICONTROL 失敗したデータフローの合計]** | バッチ |
 | **[!UICONTROL 最終更新日]** | ストリーミングとバッチ |
 
-![アクティブ化されたすべての宛先のダッシュボード](../assets/ui/monitor-destinations/dashboard-destinations.png)
+![アクティブ化されたすべての宛先がハイライト表示された監視ダッシュボード。](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
 また、宛先のリストをフィルタリングして、選択したカテゴリの宛先のみを表示することもできます。 **[!UICONTROL 宛先]**&#x200B;ドロップダウンを選択し、フィルタリングする[宛先カテゴリ](/help/destinations/destination-types.md#categories)を選択します。
 
@@ -223,13 +222,13 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 さらに、検索バーに宛先を入力して、1 つの宛先に分離することもできます。宛先のデータフローを表示する場合は、その横にあるフィルター ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を選択して、アクティブなデータフローのリストを表示できます。
 
-![検索バーを使用した宛先のフィルタリング](../assets/ui/monitor-destinations/filtered-destinations.png)
+![監視ビューで強調表示されている検索バーを使用して、宛先をフィルタリングします。](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 すべての宛先の既存のデータフローをすべて表示する場合は、「**[!UICONTROL データフロー]**」を選択します。
 
 データフローのリストが表示され、最後のデータフロー実行で並べ替えられます。監視する宛先を見つけ、その横にあるフィルター ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を選択してから、詳細情報が必要なデータフローの横にあるフィルター ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を選択すると、特定のデータフローの追加の詳細を表示できます。
 
-![監視ダッシュボードでハイライト表示されたすべてのデータフロー](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+![監視ダッシュボードでハイライト表示されたすべてのデータフロー。](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
 さらに調査するデータフローを選択すると、データフローの詳細ページには、データフロー内のアクティブ化されたデータをデータフロー実行またはセグメント別に分類して表示できる切替スイッチが含まれています。
 
@@ -243,11 +242,11 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >
 >バッチ宛先へのデータフローの場合、各セグメントには、スケジュールされたセグメントアクティブ化頻度に基づいて、対応するデータフロー実行が生成されます。 例えば、同じ宛先データフロー内の 5 つのセグメントに対して、毎日スケジュールされたアクティブ化を設定した場合、毎日 5 つの個別のデータフロー実行が生成されます。
 
-![フロー実行パネル](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
+![複数の実行がハイライト表示されたデータフロー実行パネル。](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
 「**[!UICONTROL 失敗のみを表示]**」切替スイッチを使用すると、データフローの失敗した実行のみを表示できます。
 
-![データフロー実行 - 「失敗のみを表示」切替スイッチ](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
+![「エラーの表示のみ」切り替えが強調表示されたデータフロー実行ビュー](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
 ### セグメントレベルビュー {#segment-level-view}
 
@@ -261,7 +260,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >- セグメントレベルビューは、現在、バッチ宛先でのみ使用できます。
 >- セグメントレベルの指標は、現在、正常なデータフロー実行の場合にのみ記録されます。 失敗したデータフロー実行や除外されたレコードに対しては、記録されません。
 
-![データフローパネル内のセグメント](../assets/ui/monitor-destinations/dashboard-segments-view.png)
+![データフローパネルでハイライト表示されたセグメント。](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 セグメントレベルビューでは、指標は、選択した時間範囲内の複数のデータフロー実行にわたって集計されます。 複数のデータフロー実行がある場合、セグメントレベルからドリルダウンして、データフロー実行ごとの分類を、選択したセグメントでフィルタリングした結果を表示できます。
 フィルターボタン ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を使用すると、データフロー内の各セグメントのデータフロー実行ビューにドリルダウンできます。
@@ -276,30 +275,30 @@ ID は、プロファイルの様々なファセットを表します。例え�
 - **[!UICONTROL ID がスキップされたデータフロー実行]**：選択したセグメントに対して、このオプションは、一部の ID が完全にはアクティブ化されておらず、一部のプロファイルがスキップされた、すべてのデータフロー実行をリストします。 特定のデータフロー実行内の ID がスキップされた理由を調べるには、そのデータフロー実行の[データフロー実行の詳細ページ](#dataflow-run-details-page)を参照してください。
 - **[!UICONTROL ID がアクティブ化されたデータフロー実行]**：選択したセグメントに対して、このオプションは、正常にアクティブ化された ID を持つすべてのデータフロー実行をリストします。
 
-![セグメントのデータフロー実行のフィルタリング](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
+![セグメントのデータフロー実行をフィルタリングする方法を示すラジオボタン。](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
 特定のデータフロー実行の詳細を表示するには、データフロー実行開始時間の横にあるフィルター ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を選択して、データフロー実行の詳細ページを表示します。
 
-![監視ダッシュボードのデータフロー実行フィルター](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
+![監視ダッシュボードのデータフロー実行フィルターを使用して、特定のデータフロー実行の詳細を調べます。](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 
 ### データフロー実行の詳細ページ {#dataflow-run-details-page}
 
 データフロー実行の詳細ページには、データフロー実行リストに表示される詳細に加えて、データフローに関するより具体的な情報も表示されます。
 
 - **[!UICONTROL データフロー実行 ID]**：データフローの ID です。
-- **[!UICONTROL 組織 ID]**：データフローが属する IMS 組織です。
+- **[!UICONTROL IMS org ID]**：データフローが属する組織。
 - **[!UICONTROL 最終更新日時]**：データフロー実行が最後に更新された時刻です。
 
 詳細ページには、データフロー実行エラーとセグメントを切り替える切替スイッチもあります。このオプションは、バッチ宛先でのデータフロー実行に対してのみ使用できます。
 
 データフロー実行エラービューには、失敗した ID と除外された ID のリストが表示されます。 失敗した ID と除外された ID の両方に関する情報（エラーコード、ID の数、説明など）が表示されます。デフォルトでは、リストには、失敗した ID が表示されます。スキップされた ID を表示するには、「**[!UICONTROL 除外された ID]**」切替スイッチを選択します。
 
-![除外された ID の切替スイッチ](../assets/ui/monitor-destinations/identities-excluded.png)
+![監視ビューでハイライト表示された ID の除外の切り替え](../assets/ui/monitor-destinations/identities-excluded.png)
 
 **[!UICONTROL セグメント]**&#x200B;が選択されている場合、選択したデータフロー実行でアクティブ化されたセグメントのリストが表示されます。 この画面には、アクティブ化された ID、除外された ID、最後のデータフロー実行のステータスと時刻に関するセグメントレベルの情報が含まれます。
 
-![データフロー実行 - セグメントビュー](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
+![データフロー実行の詳細画面の「セグメント」表示。](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## 次の手順 {#next-steps}
 
-このガイドを通じて、処理時間、アクティブ化率、ステータスなどのすべての関連情報を含め、バッチ宛先とストリーミング宛先の両方のデータフローを監視する方法を理解できました。Platform でのデータフローについて詳しくは、[データフローの概要](../home.md)を参照してください。宛先について詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
+このガイドを通じて、処理時間、アクティブ化率、ステータスなどのすべての関連情報を含め、バッチ宛先とストリーミング宛先の両方のデータフローを監視する方法を理解できました。Platform でのデータフローの詳細については、 [データフローの概要](../home.md). 宛先について詳しくは、 [宛先の概要](../../destinations/home.md).

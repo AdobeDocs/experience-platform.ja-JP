@@ -2,10 +2,10 @@
 title: Amazon S3 接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 66%
+source-wordcount: '1052'
+ht-degree: 62%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 66%
 ## 次に接続： [!DNL Amazon S3] API または UI を介したストレージ {#connect-api-or-ui}
 
 * 次の URL に接続するには： [!DNL Amazon S3] ストレージの場所 Platform ユーザーインターフェイスを使用して、「 」セクションを読みます。 [宛先に接続](#connect) および [この宛先に対するオーディエンスをアクティブ化](#activate) 下
-* 次の URL に接続するには： [!DNL Amazon S3] ストレージの場所をプログラムで設定し、読み取る [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
+* 次の URL に接続するには： [!DNL Amazon S3] ストレージの場所をプログラムで設定する場合は、次の方法に関するガイドを読んでください。 [フローサービス API のチュートリアルを使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します](../../api/activate-segments-file-based-destinations.md).
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -47,7 +47,7 @@ ht-degree: 66%
 
 {style="table-layout:auto"}
 
-![Amazon S3 プロファイルベースの書き出しタイプ](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Amazon S3 のプロファイルベースの書き出しタイプで、UU で強調表示されています。](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## 宛先への接続 {#connect}
 
@@ -69,9 +69,9 @@ ht-degree: 66%
 * **[!DNL Amazon S3]アクセスキー** と **[!DNL Amazon S3]秘密鍵**：[!DNL Amazon S3] で `access key - secret access key` ペアを生成して、[!DNL Amazon S3] アカウントに Platform アクセス権を付与します。詳しくは、[Amazon Web Services に関するドキュメント](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-  ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI での正しく書式設定された PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-### 宛先の詳細の入力 {#destination-details}
+### 宛先の詳細を入力 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
@@ -91,7 +91,7 @@ ht-degree: 66%
 * **[!UICONTROL バケット名]**：この宛先が使用する [!DNL Amazon S3] バケット名を入力します。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする保存先フォルダーのパス。
 * **[!UICONTROL ファイルタイプ]**：書き出したファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**：書き出したファイルに Experience Platform で使用する圧縮タイプを選択します。
+* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
 * **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストの名前は、形式を使用して付けられます `manifest-<<destinationId>>-<<dataflowRunId>>.json`. を表示します。 [サンプルマニフェストファイル](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). マニフェストファイルには、次のフィールドが含まれます。
    * `flowRunId`: [データフローの実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 書き出されたファイルを生成した
    * `scheduledTime`：ファイルが書き出されたときの UTC 時刻 (UTC)。

@@ -2,10 +2,10 @@
 title: Twitterのカスタムオーディエンス接続
 description: 既存のフォロワーや顧客をTwitterの対象にし、Adobe Experience Platform内で作成したオーディエンスをアクティブ化して、関連するリマーケティングキャンペーンを作成します
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 56%
+source-wordcount: '859'
+ht-degree: 50%
 
 ---
 
@@ -24,12 +24,12 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
+[!DNL Twitter Custom Audiences] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | device_id | IDFA/AdID/Android ID | Google Advertising ID(GAID) とApple Advertisers(IDFA) の両方がAdobe Experience Platformでサポートされています。 これらの名前空間や属性は、ソーススキーマから適切にマッピングしてください。 [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 宛先のアクティベーションワークフローの |
-| メール | ユーザーの電子メールアドレス | プレーンテキストの電子メールアドレスと SHA256 ハッシュ化された電子メールアドレスを、このフィールドにマッピングしてください。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。顧客の電子メールアドレスをAdobe Experience Platformにアップロードする前にハッシュ化する場合、これらの ID は、SHA256 を使用して、ソルトなしでハッシュ化する必要があります。 |
+| メール | ユーザーの電子メールアドレス | プレーンテキストの電子メールアドレスと SHA256 ハッシュ化された電子メールアドレスを、このフィールドにマッピングしてください。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプション、 [!DNL Platform] 有効化時に、データを自動的にハッシュ化します。 顧客の電子メールアドレスをAdobe Experience Platformにアップロードする前にハッシュ化する場合、これらの ID は、SHA256 を使用して、ソルトなしでハッシュ化する必要があります。 |
 
 {style="table-layout:auto"}
 
@@ -57,7 +57,7 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 ## ユースケース {#use-cases}
 
-[!DNL Twitter Custom Audiences] 宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
+をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL Twitter Custom Audiences] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
 ### ユースケース 1
 

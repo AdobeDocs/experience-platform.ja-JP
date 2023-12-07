@@ -3,9 +3,9 @@ keywords: モバイル；ブレーズ；メッセージ；
 title: Braze 接続
 description: Braze は、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1122'
 ht-degree: 34%
 
 ---
@@ -154,8 +154,8 @@ XDM プロファイルスキーマと [!DNL Braze] インスタンスには、�
 
 |  | XDM プロファイルスキーマ | [!DNL Braze] インスタンス |
 |---|---|---|
-| 属性 | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>電話番号</code></li></ul> |
-| ID | <ul><li><code>メール</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple Id For Advertisers(IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
+| 属性 | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>名</code></li><li><code>姓</code></li><li><code>電話番号</code></li></ul> |
+| ID | <ul><li><code>電子メール</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple Id For Advertisers(IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 正しいマッピングは次のようになります。
 

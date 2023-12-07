@@ -3,10 +3,10 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからオーディエンス情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルのオーディエンスメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 65%
+source-wordcount: '907'
+ht-degree: 64%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 65%
 
 >[!IMPORTANT]
 >
-> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL カスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](/help/server-api/overview.md) 属性ベースのパーソナライゼーションの宛先を設定する際に使用します。 すべてのサーバー API 呼び出しは、 [認証済みコンテキスト](../../../server-api/authentication.md).
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 [Edge Network Server API](/help/server-api/overview.md) 設定時に **[!UICONTROL カスタムパーソナライゼーション]** 属性ベースのパーソナライゼーションの宛先。 すべてのサーバー API 呼び出しは、 [認証済みコンテキスト](../../../server-api/authentication.md).
 >
 ><br>既に統合に Web SDK または Mobile SDK を使用している場合は、サーバー側の統合を追加して、Server API を介して属性を取得できます。
 >
@@ -31,7 +31,7 @@ ht-degree: 65%
 
 ## 概要 {#overview}
 
-この宛先を使用すると、Adobe Experience Platformから外部のパーソナライゼーションプラットフォーム、コンテンツ管理システム、広告サーバー、および顧客の Web サイト上で実行されているその他のアプリケーションに対してオーディエンス情報を取得できます。
+この宛先を設定して、顧客の Web サイトで実行されている外部のパーソナライゼーションプラットフォーム、コンテンツ管理システム、広告サーバー、およびその他のアプリケーションでAdobe Experience Platformからオーディエンス情報を取得できるようにします。
 
 ## 前提条件 {#prerequisites}
 

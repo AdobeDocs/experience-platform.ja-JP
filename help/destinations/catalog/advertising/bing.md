@@ -3,7 +3,7 @@ keywords: 広告；Bing;
 title: Microsoft Bing 接続
 description: Microsoft Bing の接続先を使用すると、ディスプレイ広告、検索、ネイティブなど、Microsoft Advertising Network 全体をまたいで、再ターゲティングとオーディエンスにターゲットを設定したデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 57%

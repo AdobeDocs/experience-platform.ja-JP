@@ -3,10 +3,10 @@ title: エッジパーソナライゼーションの宛先に対してオーデ�
 description: 同じページおよび次のページのパーソナライゼーションのユースケースで、Adobe Experience Platformからエッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 20%
+source-wordcount: '1922'
+ht-degree: 15%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 20%
 
 ## 概要 {#overview}
 
-Adobe Experience Platform使用 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) を edge の宛先と共に使用することで、顧客はオーディエンスをリアルタイムで大規模に作成し、ターゲットに設定できます。 この機能は、同じページおよび次のページのパーソナライゼーションのユースケースを設定するのに役立ちます。
+Adobe Experience Platform使用 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) と一緒に [エッジの宛先](/help/destinations/destination-types.md#edge-personalization-destinations) 顧客がリアルタイムで高い規模でオーディエンスを作成しターゲットに設定できるようにする。 この機能は、同じページおよび次のページのパーソナライゼーションのユースケースを設定するのに役立ちます。
 
 エッジの宛先の例は、 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション](../../destinations/catalog/personalization/custom-personalization.md) 接続。
 
 >[!NOTE]
 >
->条件 [Adobe Target接続の設定](../catalog/personalization/adobe-target-connection.md) datastream ID を使用しない場合、この記事で説明する使用例はサポートされません。 データストリームがない場合、次セッションのパーソナライゼーションの使用例のみがサポートされます。
+>条件 [Adobe Target接続の設定](../catalog/personalization/adobe-target-connection.md) *なし* datastream ID を使用する場合、この記事で説明する使用例はサポートされません。 データストリームがない場合、次セッションのパーソナライゼーションの使用例のみがサポートされます。
 
 >[!IMPORTANT]
 > 
@@ -31,7 +31,7 @@ Adobe Experience Platform使用 [エッジセグメント化](../../segmentation
 > 
 > [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この記事では、Adobe Experience Platform Edge の宛先でオーディエンスをアクティブ化するために必要なワークフローについて説明します。 と一緒に使用する場合 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) オプションの [プロファイル属性マッピング](#mapping)を使用すると、これらの宛先によって、Web およびモバイルプロパティでの同じページおよび次のページのパーソナライゼーションの使用例を可能にします。
+この記事では、Adobe Experience Platform Edge の宛先に対してオーディエンスをアクティブ化するために必要なワークフローについて説明します。 と一緒に使用する場合 [エッジセグメント化](../../segmentation/ui/edge-segmentation.md) オプションの [プロファイル属性マッピング](#mapping)を使用すると、これらの宛先によって、Web およびモバイルプロパティでの同じページおよび次のページのパーソナライゼーションの使用例を可能にします。
 
 Edge パーソナライゼーション用のAdobe Target接続の設定方法の概要については、以下のビデオをご覧ください。
 
@@ -47,7 +47,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 ## ユースケース {#use-cases}
 
-エッジのパーソナライゼーションの宛先を使用すると、Adobe TargetなどのAdobeのパーソナライゼーションソリューションや、独自のパーソナライゼーションパートナープラットフォーム ( 例： [!DNL Optimizely], [!DNL Pega]) や独自システム（社内 CMS など）を使用して、 [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) 宛先。 これらすべてに加えて、Experience PlatformEdge ネットワークのデータ収集およびセグメント化機能も活用します。
+Adobe TargetなどのAdobeのパーソナライゼーションソリューション、または独自のパーソナライゼーションパートナープラットフォーム ( 例： [!DNL Optimizely], [!DNL Pega]) や独自システム（社内 CMS など）を使用して、 [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) 宛先。 これらすべてに加えて、Experience PlatformEdge ネットワークのデータ収集およびセグメント化機能も活用します。
 
 以下に説明する使用例には、サイトのパーソナライゼーションとターゲット化されたオンサイト広告の両方が含まれます。
 
@@ -55,11 +55,11 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 ### 同じページのパーソナライズ機能 {#same-page}
 
-ユーザーが Web サイトのページを訪問します。 顧客は、現在のページ訪問情報（参照 URL、ブラウザーの言語、埋め込まれた製品情報など）を使用して、 [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) 非Adobeプラットフォームの接続 ( 例： [!DNL Pega], [!DNL Optimizely]など )
+ユーザーが Web サイトのページを訪問します。 現在のページ訪問情報（参照 URL、ブラウザーの言語、埋め込まれた製品情報など）を使用し、 [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) 非Adobeプラットフォームの接続 ( 例： [!DNL Pega], [!DNL Optimizely] など )。
 
 ### 次のページのパーソナライゼーション {#next-page}
 
-あるユーザーが Web サイトのページ A を訪問します。 このインタラクションに基づいて、ユーザーは一連のオーディエンスの対象として認定されます。 次に、ページ A からページ B に移動するリンクをクリックします。ページ A での前のインタラクション中にユーザーが認定したオーディエンスと、現在の Web サイト訪問によって決定されたプロファイルの更新は、次のアクション/決定（例えば、訪問者に表示する広告バナー、A/B テストの場合は表示するページ）に使用されます。
+あるユーザーが Web サイトのページ A を訪問します。 このインタラクションに基づいて、ユーザーは一連のオーディエンスの対象として認定されます。 次に、ページ A からページ B に移動するリンクをクリックします。ページ A での前のインタラクション中にユーザーが認定したオーディエンスと、現在の Web サイト訪問で決定されたプロファイルの更新は、次のアクションまたは決定（例えば、訪問者に表示する広告バナー、A/B テストの場合は表示するページのバージョン）に使用されます。
 
 ### 次のセッションのパーソナライズ機能 {#next-session}
 
@@ -67,9 +67,9 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 次の日に、ユーザーは同じ顧客 Web サイトに戻ります。 以前のインタラクションで、現在の Web サイトの訪問によって決定されたプロファイルの更新と共に、訪問者に表示する広告バナーや、表示するページのバージョン A/B テストの場合は次のアクション/決定を選択します。
 
-### ホームページバナーのパーソナライズ {#home-page-banner}
+### ホームページバナーをパーソナライズする {#home-page-banner}
 
-あるレンタル販売会社は、Adobe Experience Platformでの閲覧資格に基づいて、自社のホームページをバナー付きでパーソナライズしたいと考えています。 会社は、パーソナライズされたエクスペリエンスを体験できるオーディエンスを選択し、それらのオーディエンスを Target オファーのターゲッティング条件として Adobe Target に送信できます。
+あるレンタル販売会社は、Adobe Experience Platformでの閲覧資格に基づいて、自社のホームページをバナー付きでパーソナライズしたいと考えています。 会社は、パーソナライズされたエクスペリエンスを取得するオーディエンスを選択し、それらのオーディエンスを、Target オファーのターゲット条件としてAdobe Targetに送信できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -79,13 +79,13 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 データストリームを設定する際に、「**[!UICONTROL Adobe Experience Platform]**」で「**[!UICONTROL エッジセグメンテーション]**」と「**[!UICONTROL パーソナライゼーションの宛先]**」の両方が選択されていることを確認します。
 
-![データストリーム設定](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![エッジのセグメント化とパーソナライゼーションの宛先が強調表示されたデータストリーム設定。](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 データストリームの設定方法の詳細については、[Platform Web SDK ドキュメント](../../datastreams/configure.md#aep)に記載されている手順に従ってください。
 
 ### の作成 [!DNL Active-On-Edge] 結合ポリシー {#create-merge-policy}
 
-宛先接続を作成したら、[!DNL Active-On-Edge] 結合ポリシーを作成する必要があります。The [!DNL Active-On-Edge] 結合ポリシーにより、オーディエンスが常に評価されます。 [端に](../../segmentation/ui/edge-segmentation.md) とは、リアルタイムで次のページにパーソナライゼーションの使用例に使用できます。
+宛先接続を作成したら、 [!DNL Active-On-Edge] 結合ポリシー。 The [!DNL Active-On-Edge] 結合ポリシーにより、オーディエンスが常に評価されます。 [端に](../../segmentation/ui/edge-segmentation.md) とは、リアルタイムで次のページにパーソナライゼーションの使用例に使用できます。
 
 >[!IMPORTANT]
 >
@@ -97,7 +97,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 作成後、 [!DNL Active-On-Edge] 結合ポリシーの場合、Platform で新しいオーディエンスを作成する必要があります。
 
-フォロー： [audience builder](../../segmentation/ui/segment-builder.md) 新しいオーディエンスを作成するためのガイドを参照し、必ず [割り当てる](../../segmentation/ui/segment-builder.md#merge-policies) の [!DNL Active-On-Edge] 手順 3 で作成した結合ポリシーです。
+フォロー： [audience builder](../../segmentation/ui/segment-builder.md) 新しいオーディエンスを作成するためのガイドを参照し、必ず [割り当てる](../../segmentation/ui/segment-builder.md#merge-policies) の [!DNL Active-On-Edge] 前の手順で作成した結合ポリシー。
 
 ### 宛先接続の作成 {#connect-destination}
 
@@ -105,7 +105,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 新しい宛先接続の作成方法に関する詳細な手順については、[宛先接続の作成チュートリアル](../ui/connect-destination.md)に従ってください。
 
-設定する宛先に応じて、次の記事で宛先固有の前提条件と関連情報について確認してください。
+設定する宛先に応じて、宛先固有の前提条件と関連情報については、次の記事を参照してください。
 
 * [Adobe Target 接続](../catalog/personalization/adobe-target-connection.md#parameters)
 * [カスタムパーソナライゼーション接続](../catalog/personalization/custom-personalization.md##parameters)
@@ -116,15 +116,15 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![「宛先カタログ」タブ](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![宛先 UI でハイライト表示された「宛先カタログ」Experience Platform。](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. 選択 **[!UICONTROL オーディエンスをアクティブ化]** オーディエンスをアクティブ化するパーソナライゼーションの宛先に対応するカード（下図を参照）。
 
-   ![ボタンを有効化](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+   ![カタログ内の宛先カードでハイライト表示されたオーディエンスコントロールを有効にします。](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
 1. オーディエンスのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-   ![宛先を選択](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+   ![アクティベーションワークフローの宛先ステップを選択します。](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. 次のセクションに移動： [オーディエンスを選択](#select-audiences).
 
@@ -140,13 +140,13 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 * **[!UICONTROL カスタムアップロード]**：オーディエンスがExperience Platform外で生成され、CSV ファイルとして Platform にアップロードされた。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
 * 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
 
-![オーディエンスを選択](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+![複数のオーディエンスがハイライト表示された状態で、アクティベーションワークフローのオーディエンスステップを選択します。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 ## マップ属性 {#mapping}
 
 >[!IMPORTANT]
 >
-> プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL カスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](../../server-api/overview.md) 属性ベースのパーソナライゼーションの宛先を設定する際に使用します。 すべてのサーバー API 呼び出しは、 [認証済みコンテキスト](../../server-api/authentication.md).
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL カスタムパーソナライゼーション]** の宛先では、 [Edge Network Server API](../../server-api/overview.md) 属性ベースのパーソナライゼーションの宛先を設定する際に使用します。 すべてのサーバー API 呼び出しは、 [認証済みコンテキスト](../../server-api/authentication.md).
 >
 ><br>既に統合に Web SDK または Mobile SDK を使用している場合は、サーバー側の統合を追加して、Server API を介して属性を取得できます。
 >
@@ -156,13 +156,13 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 属性の追加はオプションで、属性を選択せずに次の手順に進み、同じページと次のページのパーソナライゼーションを有効にすることができます。 この手順で属性を追加しない場合、パーソナライゼーションは、オーディエンスのメンバーシップとプロファイルの ID マップの認定に基づいておこなわれます。
 
-![属性が選択されたマッピング手順を示す画像](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
+![属性が選択されたマッピング手順を示す画像。](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
 
 ### ソース属性を選択 {#select-source-attributes}
 
 ソース属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** ～に対する制御 **[!UICONTROL ソースフィールド]** 列を検索し、以下に示すように、目的の XDM 属性フィールドに移動します。
 
-![マッピング手順でターゲット属性を選択する方法を示す画面記録](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+![マッピング手順でターゲット属性を選択する方法を示す画面記録。](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### ターゲット属性を選択 {#select-target-attributes}
 
@@ -180,11 +180,11 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 宛先に対してアクティブ化されているすべてのオーディエンスを確認するには、フィルタリングオプションを使用して、 **[!UICONTROL 新しいオーディエンスのみを表示]** フィルター。
 
-![すべてのオーディエンス](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
+![すべてのオーディエンスフィルターがハイライト表示されました。](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
 次の日： **[!UICONTROL オーディエンススケジュール]** ページで、各オーディエンスを選択し、 **[!UICONTROL 開始日]** および **[!UICONTROL 終了日]** セレクター：宛先にデータを送信する際の時間間隔を設定します。
 
-![オーディエンススケジュール](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
+![開始日と終了日が強調表示された、アクティベーションワークフローのオーディエンススケジュール手順です。](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
 選択 **[!UICONTROL 次へ]** に行く [!UICONTROL レビュー] ページに貼り付けます。
 
@@ -202,7 +202,7 @@ Edge パーソナライゼーション用のAdobe Target接続の設定方法の
 
 Adobe Analytics の **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）を参照してください。
 
-![データポリシー違反](../assets/common/data-policy-violation.png)
+![データポリシー違反の例です。](../assets/common/data-policy-violation.png)
 
 ### オーディエンスのフィルタリング {#filter-audiences}
 

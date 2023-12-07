@@ -3,9 +3,9 @@ keywords: crm;CRM;crm の宛先；salesforce crm;salesforce crm の宛先
 title: Salesforce CRM 接続
 description: Salesforce CRM の宛先を使用すると、アカウントデータをエクスポートし、Salesforce CRM 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '2818'
 ht-degree: 21%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 21%
 
 ## 概要 {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) は、人気のある顧客関係管理 (CRM) プラットフォームで、次のものをサポートします。
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) は、一般的な顧客関係管理 (CRM) プラットフォームで、以下に説明するプロファイルのタイプをサポートします。
 
 * [リード](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm)  — リードとは、販売する製品やサービスに関心を持つ（または興味を持たない）人または会社の名前です。
 * [連絡先](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm)  — 連絡先とは、担当者の 1 人が関係を確立し、潜在的な顧客として認定された個人です。
@@ -27,7 +27,7 @@ ht-degree: 21%
 
 ## ユースケース {#use-cases}
 
-マーケターは、Adobe Experience Platform プロファイルの属性に基づいて、ユーザーにパーソナライズされたエクスペリエンスを提供できます。 オフラインデータからオーディエンスを構築し、Salesforce CRM に送信して、Adobe Experience Platformでオーディエンスとプロファイルが更新されるとすぐに、ユーザーのフィードに表示できます。
+マーケターは、Adobe Experience Platform プロファイルの属性に基づいて、ユーザーにパーソナライズされたエクスペリエンスを提供できます。 オフラインデータからオーディエンスを構築し、これらのオーディエンスを Salesforce CRM に送信して、Adobe Experience Platformでオーディエンスとプロファイルが更新されるとすぐに CRM メンバーシップを更新できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -100,7 +100,7 @@ Platform からに対してアクティブ化する各オーディエンスに�
 
 #### [!DNL Salesforce CRM] 資格情報の収集 {#gather-credentials}
 
-[!DNL Salesforce CRM] 宛先に対して認証を行う前に、以下の項目をメモしておきます。
+を認証する前に、以下の項目をメモしておきます。 [!DNL Salesforce CRM] 宛先：
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
@@ -152,7 +152,8 @@ Platform からに対してアクティブ化する各オーディエンスに�
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先を認証するには、以下の必須フィールドに入力し、を選択します。 **[!UICONTROL 宛先に接続]**. 詳しくは、[ [!DNL Salesforce CRM]  資格情報の収集](#gather-credentials)の節を参照してください。|資格情報 |説明 | | — | — | | **[!UICONTROL ユーザー名]** |お客様の [!DNL Salesforce] アカウントのユーザー名。 | | **[!UICONTROL パスワード]** |次の文字列で構成される連結文字列： [!DNL Salesforce] アカウントのパスワードが追加されました [!DNL Salesforce] セキュリティトークン。<br>連結された値は、 `{PASSWORD}{TOKEN}`.<br> なお、中括弧やスペースは使用しないでください。<br>例えば、 [!DNL Salesforce] パスワード： `MyPa$$w0rd123` および [!DNL Salesforce] セキュリティトークンは `TOKEN12345....0000`に設定する場合、 **[!UICONTROL パスワード]** フィールドが次の値 `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL カスタムドメイン]** |お客様の [!DNL Salesforce] ドメインプレフィックス。 <br>例えば、ドメインが *`d5i000000isb4eak-dev-ed`.my.salesforce.com*&#x200B;を指定する場合は、 `d5i000000isb4eak-dev-ed` を値として使用します。 | | **[!UICONTROL クライアント ID]** |お客様の [!DNL Salesforce] 接続されたアプリ `Consumer Key`. | | **[!UICONTROL クライアントの秘密鍵]** |お客様の [!DNL Salesforce] 接続されたアプリ `Consumer Secret`. |
+宛先を認証するには、以下の必須フィールドに入力し、を選択します。 **[!UICONTROL 宛先に接続]**. 詳しくは、 [収集 [!DNL Salesforce CRM] 資格情報](#gather-credentials) 」の節を参照してください。
+|資格情報 |説明 | | — | — | | **[!UICONTROL ユーザー名]** |お客様の [!DNL Salesforce] アカウントのユーザー名。 | | **[!UICONTROL パスワード]** |次の文字列で構成される連結文字列： [!DNL Salesforce] アカウントのパスワードが追加されました [!DNL Salesforce] セキュリティトークン。<br>連結された値は、 `{PASSWORD}{TOKEN}`.<br> なお、中括弧やスペースは使用しないでください。<br>例えば、 [!DNL Salesforce] パスワード： `MyPa$$w0rd123` および [!DNL Salesforce] セキュリティトークンは `TOKEN12345....0000`に設定する場合、 **[!UICONTROL パスワード]** フィールドが次の値 `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL カスタムドメイン]** |お客様の [!DNL Salesforce] ドメインプレフィックス。 <br>例えば、ドメインが *`d5i000000isb4eak-dev-ed`.my.salesforce.com*&#x200B;を指定する場合は、 `d5i000000isb4eak-dev-ed` を値として使用します。 | | **[!UICONTROL クライアント ID]** |お客様の [!DNL Salesforce] 接続されたアプリ `Consumer Key`. | | **[!UICONTROL クライアントの秘密鍵]** |お客様の [!DNL Salesforce] 接続されたアプリ `Consumer Secret`. |
 
 ![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
@@ -186,7 +187,7 @@ Platform からに対してアクティブ化する各オーディエンスに�
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platform から [!DNL Salesforce CRM] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 
+Adobe Experience Platform から [!DNL Salesforce CRM] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。
 
 で指定された属性 **[!UICONTROL ターゲットフィールド]** は、属性マッピングテーブルで説明されたとおりに名前を付ける必要があります。これらの属性は、リクエスト本文を形成します。
 
@@ -210,7 +211,7 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
    * これらのマッピングの使用例を次に示します。
      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
-   **リードの使用**
+   **リードの操作**
 
    * を使用して *リード* セグメント内で、Salesforce のオブジェクト参照を参照してください。 [リード](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) ：更新するフィールドのマッピングを定義します。
    * 単語を検索することで、必須フィールドを識別できます *必須*：前述のリンクのフィールドの説明で説明されています。
@@ -269,7 +270,7 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
    * を選択します。 *連絡先* フィールドが更新されたかどうかを確認します。 各オーディエンスのステータスは、 [!DNL Salesforce CRM] は、 **[!UICONTROL マッピング ID]** 期間中に指定された値 [オーディエンススケジュール](#schedule-segment-export-example).
      ![連絡先の詳細ページが表示された Salesforce CRM スクリーンショットと、オーディエンスのステータスが更新されました。](../../assets/catalog/crm/salesforce/contact-info.png)
 
-   **リードの使用**
+   **リードの操作**
 
    * 次を選択した場合、 *リード* を Platform セグメント内でクリックし、 **[!DNL Apps]** > **[!DNL Leads]** ページに貼り付けます。
      ![セグメントのプロファイルを含むリードページを示す Salesforce CRM のスクリーンショット。](../../assets/catalog/crm/salesforce/leads.png)

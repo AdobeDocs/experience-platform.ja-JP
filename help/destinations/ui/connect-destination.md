@@ -1,12 +1,11 @@
 ---
-keywords: 宛先を接続;宛先の接続;宛先の接続方法
 title: 新しい宛先接続の作成
 type: Tutorial
 description: Adobe Experience Platform で宛先に接続する方法、アラートを有効にする方法、接続した宛先に対するマーケティングアクションを設定する方法について説明します。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1138'
 ht-degree: 77%
 
 ---

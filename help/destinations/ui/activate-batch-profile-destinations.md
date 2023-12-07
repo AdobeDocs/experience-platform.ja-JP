@@ -1,13 +1,12 @@
 ---
-keywords: プロファイルの宛先のアクティベート;宛先のアクティベート;データのアクティベート;メールマーケティングの宛先アクティベート;クラウドストレージの宛先をアクティベート
 title: バッチプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する
 type: Tutorial
 description: Adobe Experience Platformでオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '3781'
-ht-degree: 61%
+source-wordcount: '3765'
+ht-degree: 59%
 
 ---
 
@@ -24,7 +23,7 @@ ht-degree: 61%
 
 ## 概要 {#overview}
 
-この記事では、クラウドストレージや電子メールマーケティングの宛先など、Adobe Experience Platformのバッチプロファイルベースの宛先でオーディエンスをアクティブ化するために必要なワークフローについて説明します。
+この記事では、クラウドストレージや電子メールマーケティングの宛先など、プロファイルのファイルベースの宛先をバッチ処理するために、Adobe Experience Platformでオーディエンスをアクティブ化するために必要なワークフローについて説明します。
 
 ## 前提条件 {#prerequisites}
 
@@ -46,15 +45,15 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![「宛先のカタログ」タブへのアクセス方法をハイライト表示した画像](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![宛先カタログタブへのアクセス方法をハイライトした画像。](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. 選択 **[!UICONTROL オーディエンスをアクティブ化]** オーディエンスをアクティブ化する宛先に対応するカード（下図を参照）。
 
-   ![「オーディエンスをアクティブ化」ボタンをハイライトした画像](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![カタログページで強調表示されているオーディエンスコントロールをアクティブ化します。](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. オーディエンスのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-   ![オーディエンスをアクティブ化する 1 つまたは複数の宛先を選択する方法を強調した画像](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![オーディエンスをアクティブ化する 1 つ以上の宛先を選択するためにハイライトされたチェックボックス。](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. 次のセクションに移動： [オーディエンスを選択](#select-audiences).
 
@@ -68,7 +67,7 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 * **[!UICONTROL カスタムアップロード]**：オーディエンスがExperience Platform外で生成され、CSV ファイルとして Platform にアップロードされた。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
 * 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
 
-![アクティブ化する 1 つまたは複数のオーディエンスの選択方法を強調した画像](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![アクティブ化する 1 つまたは複数のオーディエンスを選択する際に表示されるチェックボックス。](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -81,7 +80,7 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 >title="スケジュール"
 >abstract="鉛筆アイコンを使用して、ファイルの書き出しタイプ（完全なファイルまたは増分ファイル）と書き出し頻度を設定します。"
 
-[!DNL Adobe Experience Platform] は、メールマーケティングおよびクラウドストレージの宛先のデータを [!DNL CSV] ファイルの形式で書き出します。Adobe Analytics の **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
+[!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先を次の形式で書き出し： [異なるファイルタイプ](#supported-file-formats-export). Adobe Analytics の **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
 >[!IMPORTANT]
 >
@@ -89,9 +88,9 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 >
 >`filename.csv`、`filename_2.csv`、`filename_3.csv` のように、分割ファイル名には、ファイルが大きな書き出しの一部であることを示す数字が付加されます。
 
-を選択します。 **[!UICONTROL スケジュールを作成]** ボタンをクリックします。
+を選択します。 **[!UICONTROL スケジュールを作成]** 宛先に送信するオーディエンスに対応するコントロール。
 
-![「スケジュールを作成」ボタンを強調表示した画像](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![スケジュール設定手順でハイライト表示されたスケジュールコントロールを作成します。](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 完全ファイルを書き出し {#export-full-files}
 
@@ -113,14 +112,14 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 
 選択 **[!UICONTROL 完全なファイルを書き出し]** ：選択したオーディエンスに対するすべてのプロファイル認定の完全なスナップショットを含むファイルの書き出しをトリガーします。
 
-![「完全なファイルを書き出し」切り替えを選択した UI の画像。](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![「すべてのファイルを書き出し」切り替えを選択。](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. 「**[!UICONTROL 頻度]**」セレクターを使用して、書き出しの頻度を選択します。
 
    * **[!UICONTROL 1 回]**：オンデマンドによる 1 回限りの完全ファイルの書き出しをスケジュールします。
    * **[!UICONTROL 毎日]**：指定した時刻に、毎日 1 回、完全ファイルの書き出しをスケジュールします。
 
-1. 以下を使用します。 **[!UICONTROL 時間]** オーディエンス評価の直後に書き出しを実行するか、スケジュールに沿って、指定した時間に書き出しを実行するかを選択します。 「**[!UICONTROL スケジュール済み]**」オプションを選択すると、セレクターを使用して書き出しを実行する時刻を [!DNL UTC] 形式で選択できます。
+2. 以下を使用します。 **[!UICONTROL 時間]** オーディエンス評価の直後に書き出しを実行するか、スケジュールに沿って、指定した時間に書き出しを実行するかを選択します。 「**[!UICONTROL スケジュール済み]**」オプションを選択すると、セレクターを使用して書き出しを実行する時刻を [!DNL UTC] 形式で選択できます。
 
    >[!NOTE]
    >
@@ -135,13 +134,13 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 
    ![バッチ宛先のアクティベーションフローの「スケジュール済み」オプションが強調表示され、時間セレクターが表示されている画像。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. 「**[!UICONTROL 日付]**」セレクターを使用して、書き出しを実行する日または間隔を選択します。日常の書き出しでのベストプラクティスは、開始日と終了日を、ダウンストリームプラットフォームのキャンペーンの期間に合わせて設定することです。
+3. 「**[!UICONTROL 日付]**」セレクターを使用して、書き出しを実行する日または間隔を選択します。日常の書き出しでのベストプラクティスは、開始日と終了日を、ダウンストリームプラットフォームのキャンペーンの期間に合わせて設定することです。
 
    >[!IMPORTANT]
    >
    > 書き出し間隔を選択する場合、その間隔の最終日は書き出しに含まれません。例えば、1 月 4 日から 11 日の間隔を選択した場合、最後のファイルエクスポートは 1 月 10 日におこなわれます。
 
-1. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
+4. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
 
 ### 増分ファイルの書き出し {#export-incremental-files}
 
@@ -151,22 +150,22 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 >
 >最初に書き出された増分ファイルには、オーディエンスの資格を持つすべてのプロファイルが含まれ、バックフィルとして機能します。
 
-![「増分ファイルの書き出し」切替スイッチが選択された UI の画像。](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![「増分ファイルを書き出し」切り替えを選択しました。](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. **[!UICONTROL 頻度]**&#x200B;セレクターを使用して、エクスポートする頻度を選択します。
 
    * **[!UICONTROL 毎日]**：増分ファイルのエクスポートを、毎日 1 回指定した時刻にスケジュールします。
    * **[!UICONTROL 毎時]**：増分ファイルのエクスポートを、3 時間、6 時間、8 時間、または 12 時間ごとにスケジュールします。
 
-1. **[!UICONTROL 時間]**&#x200B;セレクターを使用して、ファイルが書き出される時刻を [!DNL UTC] 形式で指定します。
+2. **[!UICONTROL 時間]**&#x200B;セレクターを使用して、ファイルが書き出される時刻を [!DNL UTC] 形式で指定します。
 
-1. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、書き出しが行われる間隔を選択します。ベストプラクティスは、開始日と終了日を、ダウンストリームプラットフォームのキャンペーンの期間に合わせて設定することです。
+3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、書き出しが行われる間隔を選択します。ベストプラクティスは、開始日と終了日を、ダウンストリームプラットフォームのキャンペーンの期間に合わせて設定することです。
 
    >[!IMPORTANT]
    >
    >間隔の最終日はエクスポートに含まれません。例えば、1 月 4 日から 11 日の間隔を選択した場合、最後のファイルエクスポートは 1 月 10 日におこなわれます。
 
-1. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
+4. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
 
 ### ファイル名の設定 {#file-names}
 
@@ -198,7 +197,7 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 | **[!UICONTROL カスタムテキスト]** | ファイル名に追加する任意のカスタムテキスト。 |
 | **[!UICONTROL 宛先 ID]** | オーディエンスのエクスポートに使用する宛先データフローの ID。 |
 | **[!UICONTROL 宛先名]** | オーディエンスのエクスポートに使用する宛先データフローの名前。 |
-| **[!UICONTROL 組織名]** | Experience Platform 内の組織名。 |
+| **[!UICONTROL 組織名]** | 組織内のExperience Platform名。 |
 | **[!UICONTROL サンドボックス名]** | オーディエンスの書き出しに使用するサンドボックスの ID。 |
 
 {style="table-layout:auto"}
@@ -215,7 +214,7 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 
 この手順では、ターゲットの宛先に書き出すファイルに追加する、プロファイル属性を選択する必要があります。 書き出すプロファイル属性と ID を選択するには：
 
-1. **[!UICONTROL マッピング]**&#x200B;ページで「**[!UICONTROL 新しいフィールドを追加]**」を選択します。
+1. Adobe Analytics の **[!UICONTROL マッピング]** ページ、選択 **[!UICONTROL 新しいマッピングを追加]**.
 
    ![マッピングワークフローで強調表示されている新しいフィールドコントロールを追加します。](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -434,7 +433,7 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 
 以下の画像に示すように、ID 名前空間を書き出し用に選択する機能は、現在サポートされていません。 書き出し用の ID 名前空間を選択すると、**[!UICONTROL レビュー]**&#x200B;手順でエラーが発生します。
 
-![ID の書き出しを示す、サポートされていないマッピング](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![ID エクスポートを示すマッピングがサポートされていません。](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 ベータ版の間に書き出したファイルに ID 名前空間を追加する必要がある場合の一時的な回避策として、次のいずれかを実行できます。
 * 書き出しに ID 名前空間を含めるデータフローに、従来のクラウドストレージの宛先を使用する
@@ -517,7 +516,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 「**[!UICONTROL レビュー]**」ページには、選択内容の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
-![レビューステップの選択の概要。](../assets/ui/activate-batch-profile-destinations/review.png)
+![レビューステップに表示される選択の概要。](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
@@ -532,7 +531,7 @@ abstract="組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; 
 
 Adobe Analytics の **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）を参照してください。
 
-![データポリシー違反](../assets/common/data-policy-violation.png)
+![アクティベーションワークフローに表示されるデータポリシー違反の例です。](../assets/common/data-policy-violation.png)
 
 ### オーディエンスのフィルタリング {#filter-audiences}
 

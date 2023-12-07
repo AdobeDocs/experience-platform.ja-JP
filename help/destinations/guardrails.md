@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1662'
 ht-degree: 52%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->* ほとんどのお客様は、これらのデフォルトの上限を超えることはありません。カスタムの上限について詳しくは、カスタマーケア担当者にお問い合わせください。
->* このドキュメントで概要を説明する上限は、常に改善されています。 定期的にアップデートを確認してください。
+>* ほとんどのお客様は、これらのデフォルトの上限を超えることはありません。カスタム制限の詳細については、カスタマーケア担当者にお問い合わせください。
+>* このドキュメントで概要を説明する上限は、常に改善されています。 定期的に更新を確認してください。
 >* 個々のダウンストリームの制限によっては、一部の宛先は、このページで説明するものよりも厳しいガードレールを持つ場合があります。また、接続してデータをアクティブ化する宛先のページの[カタログ](/help/destinations/catalog/overview.md)を確認します。
 
 ## ガードレールのタイプ {#limit-types}

@@ -1,13 +1,12 @@
 ---
-keywords: オーディエンスストリーミング宛先のアクティブ化；オーディエンスストリーミング宛先のアクティブ化；データのアクティブ化
 title: ストリーミング先へのオーディエンスデータのアクティブ化
 type: Tutorial
 description: ストリーミングの宛先にマッピングして、Adobe Experience Platformでオーディエンスをアクティブ化する方法を説明します。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 24%
+source-wordcount: '1121'
+ht-degree: 20%
 
 ---
 
@@ -34,15 +33,15 @@ ht-degree: 24%
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![「宛先カタログ」タブ](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![様々なストリーミング宛先を表示する「宛先カタログ」タブ](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. 選択 **[!UICONTROL オーディエンスをアクティブ化]** オーディエンスをアクティブ化する宛先に対応するカード（下図を参照）。
 
-   ![ボタンを有効化](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![宛先カタログでハイライト表示されているコントロールをアクティブ化します。](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. オーディエンスのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
 
-   ![宛先を選択](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![宛先の選択手順でハイライト表示された宛先接続です。](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. 次のセクションに移動： [オーディエンスを選択](#select-audiences).
 
@@ -56,7 +55,7 @@ ht-degree: 24%
 * **[!UICONTROL カスタムアップロード]**：オーディエンスがExperience Platform外で生成され、CSV ファイルとして Platform にアップロードされた。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
 * 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
 
-![オーディエンスを選択](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![オーディエンスの選択手順でハイライト表示された複数のオーディエンス。](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## 属性と ID のマッピング {#mapping}
 
@@ -68,23 +67,23 @@ ht-degree: 24%
 
 1. Adobe Analytics の **[!UICONTROL マッピング]** ページ、選択 **[!UICONTROL 新しいマッピングを追加]**.
 
-   ![新しいマッピングを追加](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+   ![ハイライト表示された新しいマッピングコントロールを追加します。](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
 1. **[!UICONTROL ソースフィールド]**&#x200B;エントリの右側の矢印を選択します。
 
-   ![ソースフィールドを選択](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![ハイライト表示されたソースフィールドコントロールを選択します。](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. Adobe Analytics の **[!UICONTROL ソースフィールドを選択]** ページでは、 **[!UICONTROL 属性を選択]** または **[!UICONTROL ID 名前空間を選択]** 使用可能なソースフィールドの 2 つのカテゴリを切り替えるためのオプション。 使用可能な [!DNL XDM] プロファイル属性と id 名前空間で、宛先にマッピングする名前空間を選択し、「 」を選択します。 **[!UICONTROL 選択]**.
 
-   ![ソースフィールドページを選択](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   ![使用可能なソースフィールドを表示するソースフィールドページを選択します。](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
 1. の右側にあるボタンを選択します。 **[!UICONTROL ターゲットフィールド]** エントリ。
 
-   ![ターゲットフィールドを選択](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![ハイライト表示されているターゲットフィールドを選択します。](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. Adobe Analytics の **[!UICONTROL ターゲットフィールドを選択]** ページで、ソースフィールドをマッピングするターゲット id 名前空間を選択し、「 」を選択します。 **[!UICONTROL 選択]**.
 
-   ![ターゲットフィールドページを選択](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![ターゲットフィールドページを選択し、ターゲットフィールドマッピングに使用可能なオプションを表示します。](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. さらにマッピングを追加するには、手順 1 ～ 5 を繰り返します。
 
@@ -97,7 +96,7 @@ ht-degree: 24%
 
 ハッシュ化されていないソース属性を、宛先によってハッシュ化されることが期待されているターゲット属性（例：`email_lc_sha256` や `phone_sha256`）にマッピングしている場合、アクティベーション時に Adobe Experience Platform にソース属性を自動的にハッシュ化させるために、「**変換を適用**」オプションをオンにします。
 
-![ID マッピング](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![「ID マッピング」手順で強調表示されている変換コントロールを適用します。](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## オーディエンスの書き出しのスケジュール {#scheduling}
 
@@ -114,19 +113,19 @@ ht-degree: 24%
 
 1. 次の日： **[!UICONTROL オーディエンススケジュール]** ページで、各オーディエンスを選択し、 **[!UICONTROL 開始日]** および **[!UICONTROL 終了日]** セレクター：宛先にデータを送信する際の時間間隔を設定します。
 
-   ![オーディエンススケジュール](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![オーディエンススケジュールフィルターが強調表示されています。](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * 一部の宛先では、 **[!UICONTROL オーディエンスの起源]** 各オーディエンスに対して、カレンダーセレクターの下にあるドロップダウンメニューを使用します。 宛先にこのセレクターが含まれていない場合は、この手順をスキップします。
 
-     ![マッピング ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![マッピング ID ドロップダウンが強調表示されています。](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * 一部の宛先では、手動でマッピングする必要があります [!DNL Platform] オーディエンスをターゲットとする宛先のオーディエンスに関連付けます。 これをおこなうには、各オーディエンスを選択し、 **[!UICONTROL マッピング ID]** フィールドに入力します。 宛先にこのフィールドが含まれていない場合は、この手順をスキップします。
 
-     ![マッピング ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![オーディエンスの接触チャネルドロップダウンが強調表示されています。](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * 一部の宛先では、 **[!UICONTROL アプリ ID]** 有効化時 [!DNL IDFA] または [!DNL GAID] オーディエンス。 宛先にこのフィールドが含まれていない場合は、この手順をスキップします。
 
-     ![アプリ ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![アプリ ID ドロップダウンが強調表示されています。](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. 選択 **[!UICONTROL 次へ]** に行く [!UICONTROL レビュー] ページに貼り付けます。
 
@@ -144,7 +143,7 @@ ht-degree: 24%
 
 Adobe Analytics の **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）を参照してください。
 
-![データポリシー違反](../assets/common/data-policy-violation.png)
+![アクティベーションワークフローに表示されるデータポリシー違反の例です。](../assets/common/data-policy-violation.png)
 
 ### オーディエンスのフィルタリング {#filter-audiences}
 

@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1202'
-ht-degree: 54%
+source-wordcount: '1109'
+ht-degree: 51%
 
 ---
 
@@ -27,6 +27,8 @@ Adobe Target は、web サイトやモバイルアプリなど、すべてのイ
 
 Adobe Targetは、Adobe Experience Platformの宛先カタログのパーソナライゼーション接続です。
 
+## ビデオの概要 {#video-overview}
+
 Experience PlatformでのAdobe Target接続の設定方法の概要については、以下のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
@@ -41,7 +43,7 @@ datastream ID を使用せずにAdobe Target接続を設定する場合、Web SD
 
 >[!IMPORTANT]
 >
->[!DNL Adobe Target] 接続を作成する前に、[同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定](../../ui/activate-edge-personalization-destinations.md)を行う方法を参照してください。このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。同じページと次のページのパーソナライゼーションでは、Adobe Target接続を設定する際にデータストリーム ID を使用する必要があります。
+>[!DNL Adobe Target] 接続を作成する前に、[同じページと次のページのパーソナライズのためのパーソナライズ機能宛先の設定](../../ui/activate-edge-personalization-destinations.md)を行う方法を参照してください。このガイドでは、複数のパーソナライゼーションコンポーネントにわたる、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順をExperience Platformします。 同じページおよび次のページのパーソナライゼーションの使用例を実現するには、Adobe Target接続を設定する際に datastream ID を使用する必要があります。
 
 ### Adobe Targetの前提条件 {#prerequisites-in-adobe-target}
 
@@ -103,7 +105,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 * **名前**：この宛先に希望する名前を入力します。
 * **説明**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
 * **Datastream ID**：オーディエンスを含めるデータ収集データストリームを決定します。 ドロップダウンメニューには、Target サービスとAdobe Experience Platformサービスが有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../datastreams/configure.md#aep) Adobe Experience PlatformとAdobe Targetのデータストリームを設定する方法について詳しくは、こちらを参照してください。
-   * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](../../../edge/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたオーディエンスは、次セッションのパーソナライゼーションのみをサポートし、エッジセグメント化は無効になります。 詳しくは後述のテーブルを参照してください.
+   * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](../../../edge/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたオーディエンスは、次セッションのパーソナライゼーションのみをサポートし、エッジセグメント化は無効になります。 詳しくは、以下の表を参照してください。
 
   | Adobe Target実装（Web SDK を使用しない） | Web SDK の実装 |
   |---|---|
@@ -133,7 +135,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 ## 書き出したデータ {#exported-data}
 
-Adobe Target は、Adobe Experience Platform Edge Network からプロファイルデータを読み取るので、データはエクスポートされません。
+Adobe Target *読み取り* Adobe Experience Platform Edge Network からのプロファイルデータなので、データは書き出されません。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

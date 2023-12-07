@@ -1,12 +1,11 @@
 ---
-keywords: 電子メール；電子メール；電子メールの宛先；salesforce;api salesforce marketing cloud の宛先
 title: （API）Salesforce Marketing Cloud 接続
 description: SalesforceMarketing Cloud（旧称 ExactTarget）の宛先を使用すると、アカウントデータを書き出し、SalesforceMarketing Cloud内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3075'
-ht-degree: 23%
+source-wordcount: '2895'
+ht-degree: 22%
 
 ---
 
@@ -22,7 +21,7 @@ ht-degree: 23%
 
 比較対象 [!DNL Salesforce Marketing Cloud Account Engagement] それはより向いている **B2B** マーケティング、 [!DNL (API) Salesforce Marketing Cloud] 目的地は次に最適です： **B2C** トランザクションの意思決定サイクルが短い使用例です。 特に外部のデータセットから連絡先を優先順位付けしてセグメント化することで、マーケティングキャンペーンを調整し改善するために、ターゲットオーディエンスの行動を表す大きなデータセットを統合できます [!DNL Salesforce]. *注意：Experience Platformには、 [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は、 [!DNL Salesforce Marketing Cloud] [連絡先を更新](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API（次の操作を実行できます） **連絡先の追加と連絡先データの更新** 新しい内でアクティブ化した後のビジネスニーズに合わせて [!DNL Salesforce Marketing Cloud] セグメント。
+この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [!DNL Salesforce Marketing Cloud] [連絡先を更新](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API（次の操作を実行できます） **連絡先の追加と連絡先データの更新** 新しい内でアクティブ化した後のビジネスニーズに合わせて [!DNL Salesforce Marketing Cloud] セグメント。
 
 [!DNL Salesforce Marketing Cloud] は、OAuth 2 とクライアント資格情報を使用し、 [!DNL Salesforce Marketing Cloud] API. [!DNL Salesforce Marketing Cloud] インスタンスを認証する手順は、さらに下の[宛先に対する認証](#authenticate)の節にあります。
 
@@ -94,7 +93,7 @@ As [!DNL Salesforce Marketing Cloud] では、ユースケースに応じてカ�
 
 ![許可された権限を持つ電子メールデータ拡張を表示する SalesforceMarketing CloudUI。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
-アクセスレベルを制限するには、詳細な権限を使用して個々のアクセスを上書きすることもできます。
+アクセスレベルを制限する場合は、詳細な権限を使用して個々のアクセスを上書きすることもできます。
 ![詳細な権限を持つ電子メールデータ拡張を表示する SalesforceMarketing CloudUI。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
 詳しくは、 [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) および [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) 詳細なガイダンスに関するページを参照してください。
@@ -106,8 +105,8 @@ As [!DNL Salesforce Marketing Cloud] では、ユースケースに応じてカ�
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
 | サブドメイン | 詳しくは、 [[!DNL Salesforce Marketing Cloud domain prefix]](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) この値を [!DNL Salesforce Marketing Cloud] インターフェイス。 | 次の場合、 [!DNL Salesforce Marketing Cloud] ドメインは<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>次を提供する必要があります： `mcq4jrssqdlyc4lph19nnqgzzs84` を値として使用します。 |
-| クライアント ID | 詳しくは、 [!DNL Salesforce Marketing Cloud] [ドキュメント](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) この値を [!DNL Salesforce Marketing Cloud] インターフェイス。 | r23kxxxxxxxx0z05xxxxxx |
-| クライアント秘密鍵 | 詳しくは、 [!DNL Salesforce Marketing Cloud] [ドキュメント](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) この値を [!DNL Salesforce Marketing Cloud] インターフェイス。 | ipxxxxxxxxxxT4xxxxxxxxxx |
+| クライアント ID | 詳しくは、 [!DNL Salesforce Marketing Cloud] [ドキュメント](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) この値を [!DNL Salesforce Marketing Cloud] インターフェイス。 | r23kxxxxxxxxx0z05xxxxxxx |
+| クライアント秘密鍵 | 詳しくは、 [!DNL Salesforce Marketing Cloud] [ドキュメント](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) この値を [!DNL Salesforce Marketing Cloud] インターフェイス。 | ipxxxxxxxxT4xxxxxxxx |
 
 {style="table-layout:auto"}
 
@@ -126,7 +125,7 @@ As [!DNL Salesforce Marketing Cloud] では、ユースケースに応じてカ�
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL (API) Salesforce Marketing Cloud] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL (API) Salesforce Marketing Cloud] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -166,13 +165,13 @@ Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索しま
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先を認証するには、以下の必須フィールドに入力し、を選択します。 **[!UICONTROL 宛先に接続]**. 詳しくは、[ [!DNL Salesforce Marketing Cloud]  資格情報の収集](#gather-credentials)の節を参照してください。
+宛先を認証するには、以下の必須フィールドに入力し、を選択します。 **[!UICONTROL 宛先に接続]**. 詳しくは、 [収集 [!DNL Salesforce Marketing Cloud] 資格情報](#gather-credentials) 」の節を参照してください。
 
 | [!DNL (API) Salesforce Marketing Cloud] 宛先 | [!DNL Salesforce Marketing Cloud] |
 | --- | --- |
 | **[!UICONTROL サブドメイン]** | お使いの [!DNL Salesforce Marketing Cloud] ドメインプレフィックス。 <br>例えば、ドメインが <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> 次を提供する必要があります： `mcq4jrssqdlyc4lph19nnqgzzs84` を値として使用します。 |
 | **[!UICONTROL クライアント ID]** | お使いの [!DNL Salesforce Marketing Cloud] `Client ID`. |
-| **[!UICONTROL クライアント秘密鍵]** | お使いの [!DNL Salesforce Marketing Cloud] `Client Secret`. |
+| **[!UICONTROL クライアントの秘密鍵]** | お使いの [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
 ![SalesforceMarketing Cloudへの認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
@@ -203,7 +202,7 @@ Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索しま
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platform から [!DNL (API) Salesforce Marketing Cloud] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 
+Adobe Experience Platform から [!DNL (API) Salesforce Marketing Cloud] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。
 
 XDM フィールドを [!DNL (API) Salesforce Marketing Cloud] 宛先フィールドには、次の手順に従います。
 

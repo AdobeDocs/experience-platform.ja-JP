@@ -3,10 +3,10 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 71%
+source-wordcount: '776'
+ht-degree: 65%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 71%
 
 ## 宛先のタイプ {#destination-types}
 
-Adobe Experience Platformでは、接続、データセットの書き出し、拡張機能など、様々な宛先タイプを区別します。 接続先には複数のタイプがあり、API ベースの宛先 ( ) にデータを書き出すことができます。
+Adobe Experience Platformでは、接続、データセットの書き出し、拡張機能など、様々な宛先タイプを区別します。 複数の種類の接続先があり、API ベースの宛先、ソーシャルの宛先、CRM プラットフォームなどにデータを書き出すことができます。
 
 最後に、宛先カタログ内のすべての組織で使用可能な公開宛先と、Real-Time CDP Ultimate のお客様が独自の書き出し使用例を満たすために作成できる非公開宛先との間で接続を区別することもできます。
 
-![宛先のタイプを示す図.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![宛先図のタイプ。](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## 接続 {#connections}
 
@@ -68,6 +68,21 @@ Experience Platform のエッジパーソナライゼーション宛先には、
 次のビデオでは、次の 2 種類の宛先の詳細について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## エクスポートされるオーディエンスのタイプ {#exported-audiences-types}
+
+次の 3 種類のオーディエンスを、Experience Platformから様々な宛先に書き出すことができます。
+
+* People オーディエンス
+* アカウントオーディエンス
+* 見込み客オーディエンス
+
+詳しくは、 [様々なオーディエンスタイプ](/help/segmentation/ui/account-audiences.md#terminology).
+
+宛先カードの記号は、各宛先に書き出すことができるオーディエンスのタイプを示します。
+
+![書き出し可能なオーディエンスタイプを示す記号付きの宛先カードの例。](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## データセットの書き出し先 {#dataset-export-destinations}
 

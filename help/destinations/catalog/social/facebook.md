@@ -3,10 +3,10 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 38%
+source-wordcount: '1949'
+ht-degree: 36%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 38%
 
 この宛先を、 [!DNL Facebook's] 次の機能をサポートするアプリのファミリー [!DNL Custom Audiences]を含む [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]、および [!DNL Messenger]. キャンペーンを実行するアプリの選択範囲が、[!DNL Facebook Ads Manager] の配置レベルで示されます。
 
-![Adobe Experience Platform UI でのfacebookの宛先](../../assets/catalog/social/facebook/catalog.png)
+![Adobe Experience Platform UI でのfacebookの宛先。](../../assets/catalog/social/facebook/catalog.png)
 
 ## ユースケース
 
@@ -30,7 +30,7 @@ ht-degree: 38%
 
 ### 使用例#2
 
-航空会社には異なる顧客階層（ブロンズ、シルバー、ゴールド）があり、ソーシャルプラットフォームを通じてパーソナライズされたオファーを各層に提供したいと考えています。ただし、すべての顧客が航空会社のモバイルアプリを使用するわけではなく、会社の Web サイトにログオンしていない顧客もいます。 会社がこれらの顧客に関して持っている識別子は、メンバーシップ ID と電子メールアドレスのみです。
+航空会社には異なる顧客階層（ブロンズ、シルバー、ゴールド）があり、ソーシャルプラットフォームを通じてパーソナライズされたオファーを各層に提供したいと考えています。ただし、すべての顧客が航空会社のモバイルアプリを使用するわけではなく、会社の Web サイトにログオンしていない顧客もいます。 会社がこれらの顧客に関して持つ識別子は、メンバーシップ ID と電子メールアドレスのみです。
 
 ソーシャルメディアをまたいでターゲットを設定するには、電子メールアドレスを識別子として使用して、顧客データを CRM からAdobe Experience Platformにオンボーディングできます。
 
@@ -38,7 +38,7 @@ ht-degree: 38%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Facebook Custom Audiences] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Facebook Custom Audiences] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -74,7 +74,7 @@ ht-degree: 38%
 
 オーディエンスをに送信する前に [!DNL Facebook]次の要件を満たしていることを確認します。
 
-* お使いの [!DNL Facebook] ユーザーアカウントは、 [!DNL Facebook Business Account] 使用する広告アカウントを所有する
+* お使いの [!DNL Facebook] ユーザーアカウントは、 [!DNL Facebook Business Account] 使用している広告アカウントを所有する
 * お使いの [!DNL Facebook] ユーザーアカウントには **[!DNL Manage campaigns]** 使用する予定の広告アカウントに対して有効になっている権限です。
 * The **Adobe Experience Cloud** ビジネスアカウントは、 [!DNL Facebook Ad Account]. `business ID=206617933627973`.を使用します。詳しくは、 [ビジネスマネージャにパートナーを追加する](https://www.facebook.com/business/help/1717412048538897) ( Facebookのドキュメント ) を参照してください。
   >[!IMPORTANT]
@@ -123,7 +123,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 > 属性ソースデータは自動的にハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。
 > The **[!UICONTROL 変換を適用]** オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
 
-![ID マッピング変換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![マッピング手順でハイライト表示された変換コントロールを適用します。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## カスタム名前空間の使用 {#custom-namespaces}
 
@@ -149,7 +149,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 1. 宛先カタログでFacebookの宛先を見つけ、「 」を選択します。 **[!UICONTROL 設定]**.
 2. 選択 **[!UICONTROL 宛先に接続]**.
-   ![facebookへの認証](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![アクティベーションワークフローに表示されるFacebookへの認証手順。](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. facebook資格情報を入力し、「 」を選択します。 **ログイン**.
 
 ### 宛先の詳細の入力 {#destination-details}
@@ -176,7 +176,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="オーディエンスのオリジン"
->abstract="オーディエンス内の顧客データが最初に収集された方法を選択します。ユーザーがセグメントのターゲットになっている場合、このデータが Facebook に表示されます"
+>abstract="オーディエンス内の顧客データが最初に収集された方法を選択します。ユーザーがセグメントのターゲットになっている場合、データはFacebookに表示されます"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -202,7 +202,7 @@ E メールアドレスの取り込みについて詳しくは、Experience Plat
 
 Adobe Analytics の **[!UICONTROL セグメントスケジュール]** 手順に従って、 [!UICONTROL オーディエンスの起源] オーディエンスを [!DNL Facebook Custom Audiences].
 
-![Facebook Origin of Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![facebookのアクティベーション手順に表示される「オーディエンスの接触チャネル」ドロップダウン。](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### マッピングの例：でのオーディエンスデータのアクティブ化 [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ Adobe Analytics の **[!UICONTROL セグメントスケジュール]** 手順に
 > 
 >属性ソースデータは自動的にハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。
 
-![ID マッピング](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![マッピング手順でハイライト表示された変換コントロールを適用します。](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 書き出したデータ {#exported-data}
 
@@ -251,4 +251,4 @@ Adobe Analytics の **[!UICONTROL セグメントスケジュール]** 手順に
 
 このエラーは、新しく作成されたアカウントを使用している場合に発生し、 [!DNL Facebook] 権限はまだアクティブではありません。
 
-以下を受け取った場合、 `400 Bad Request` 次の手順に従った後のエラーメッセージ： [Facebookアカウントの前提条件](#facebook-account-prerequisites)を使用する場合、 [!DNL Facebook] 有効にする権限。
+以下を受け取った場合、 `400 Bad Request` 次の手順に従った後のエラーメッセージ： [Facebookアカウントの前提条件](#facebook-account-prerequisites)、 [!DNL Facebook] 有効にする権限。

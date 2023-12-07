@@ -3,10 +3,10 @@ keywords: E メール；E メール；E メールの宛先；oracleresponsys の
 title: Oracle Responsys 接続
 description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向けメールマーケティングツールで、電子メール、モバイル、ディスプレイおよびソーシャルでのインタラクションをパーソナライズします。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 54%
+source-wordcount: '704'
+ht-degree: 51%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 54%
 
 ## 概要 {#overview}
 
-[Responsys](https://www.oracle.com/cx/marketing/campaign-management/)[!DNL Oracle] は、 が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向けメールマーケティングツールで、電子メール、モバイル、ディスプレイおよびソーシャルでのインタラクションをパーソナライズします。
+[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) は、が提供するクロスチャネルマーケティングキャンペーン用のエンタープライズ電子メールマーケティングツールです。 [!DNL Oracle] 電子メール、モバイル、ディスプレイ、ソーシャルをまたいでインタラクションをパーソナライズする。
 
 オーディエンスデータをに送信するには、以下を実行します。 [!DNL Oracle Responsys]を選択し、最初に [宛先に接続](#connect-destination) Adobe Experience Platformで [データインポートの設定](#import-data-into-responsys) ストレージの場所から [!DNL Oracle Responsys].
 

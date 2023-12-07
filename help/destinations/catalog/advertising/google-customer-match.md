@@ -3,10 +3,10 @@ keywords: Google カスタマーマッチ；Googleカスタマーマッチ；Goo
 title: Google Customer Match 接続
 description: Google Customer Match を使用すると、Search、Shopping、Gmail、YouTubeなど、Googleが所有および運用するプロパティをまたいで、オンラインデータとオフラインデータを使用して顧客にリーチし、再び関与させることができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 27%
+source-wordcount: '1788'
+ht-degree: 24%
 
 ---
 
@@ -38,7 +38,7 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Google Customer Match] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Google Customer Match] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -76,13 +76,13 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 
 を設定する前に [!DNL Google Customer Match] の宛先をExperience Platformして、Googleの使用ポリシーを読み、準拠していることを確認します。 [!DNL Customer Match](「 [Googleサポートドキュメント](https://support.google.com/google-ads/answer/6299717).
 
-次に、[!DNL Google] アカウントが [!DNL Standard] 以上の権限レベルに設定されていることを確認してください。詳しくは、[Google 広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
+次に、 [!DNL Google] アカウントが [!DNL Standard] 以上の権限レベル。 詳しくは、[Google 広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
 
 ### 許可リスト {#allowlist}
 
-を作成する前に [!DNL Google Customer Match] 宛先をExperience Platformで指定する場合は、 [!DNL Google Ads] アカウントが次に準拠する [[!DNL Google Customer Match] ポリシー](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+を作成する前に [!DNL Google Customer Match] の宛先をExperience Platformして、 [!DNL Google Ads] アカウントが次に準拠する [[!DNL Google Customer Match] ポリシー](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-準拠しているアカウントを持つお客様は、Google によってリストへの掲載が自動的に許可されます。
+準拠しているアカウントを持つお客様は、Googleによって自動的に許可リストに加えるされます。
 
 ## ID 一致要件 {#id-matching-requirements}
 
@@ -132,6 +132,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
+## ビデオの概要 {#video-overview}
+
+利点の説明と、Google Customer Match へのデータのアクティブ化方法については、以下のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
+
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
@@ -169,9 +175,9 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 Adobe Analytics の **[!UICONTROL セグメントスケジュール]** 手順に従って、 [!UICONTROL アプリ ID] 送信時 [!DNL IDFA] または [!DNL GAID] オーディエンスから [!DNL Google Customer Match].
 
-![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![アクティベーションワークフローのセグメントスケジュール手順で強調表示されている「 Google Customer Match App ID 」フィールド。](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-の検索方法の詳細 [!DNL App ID]（を参照） [Google公式ドキュメント](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+の検索方法の詳細 [!DNL App ID]（を参照） [Google公式ドキュメント](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) またはGoogleの担当者にお問い合わせください。
 
 ### マッピングの例：でのオーディエンスデータのアクティブ化 [!DNL Google Customer Match] {#example-gcm}
 
@@ -194,17 +200,17 @@ Adobe Analytics の **[!UICONTROL セグメントスケジュール]** 手順に
 * を選択します。 `IDFA` または `GAID` ソース名前空間が使用されている場合のターゲット ID としての名前空間 `IDFA` または `GAID`.
 * を選択します。 `User_ID` ソース名前空間がカスタムの名前空間の場合は、ターゲット id として名前空間を設定します。
 
-![ID マッピング](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![アクティベーションワークフローの「マッピング」手順に表示される、ソースフィールドとターゲットフィールドの ID マッピング。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 ハッシュ化されていない名前空間のデータは、によって自動的にハッシュ化されます。 [!DNL Platform] 有効化時。
 
 属性ソースデータは自動的にハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。
 
-![ID マッピング変換](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![アクティベーションワークフローの「マッピング」手順でハイライト表示されている変換コントロールを適用します。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## オーディエンスのアクティベーションが成功したことを確認します。 {#verify-activation}
 
-アクティベーションフローが完了したら、 **[!UICONTROL Google Ads]** アカウント。 アクティブ化されたオーディエンスは、顧客リストとしてGoogleアカウントに表示されます。 なお、オーディエンスのサイズによっては、提供するアクティブユーザーが 100 人を超えない限り、一部のオーディエンスは設定されないことに注意してください。
+アクティベーションフローが完了したら、 **[!UICONTROL Google Ads]** アカウント。 アクティブ化されたオーディエンスは、顧客リストとしてGoogleアカウントに表示されます。 オーディエンスのサイズに応じて、提供するアクティブユーザーが 100 人を超えない限り、一部のオーディエンスは設定されません。
 
 オーディエンスを両方にマッピングする場合 [!DNL IDFA] および [!DNL GAID] モバイル ID [!DNL Google Customer Match] は、ID マッピングごとに個別のオーディエンスを作成します。 お使いの [!DNL Google Ads] アカウントには 2 つの異なるセグメントが表示され、1 つは [!DNL IDFA]で、1 つは [!DNL GAID] マッピング。
 
@@ -217,8 +223,3 @@ Adobe Analytics の **[!UICONTROL セグメントスケジュール]** 手順に
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
 このエラーは、顧客アカウントが [前提条件](#google-account-prerequisites). この問題を修正するには、Googleに連絡し、お使いのアカウントが許可リストに登録され、 [!DNL Standard] 以上の権限レベル。 詳しくは、[Google 広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
-
-## その他のリソース {#additional-resources}
-
-* [統合 [!DNL Google Customer Match]  — ビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html?lang=ja)
-

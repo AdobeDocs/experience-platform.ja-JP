@@ -2,10 +2,10 @@
 title: Google Ads 接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 97%
+source-wordcount: '946'
+ht-degree: 83%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 97%
 
 >[!IMPORTANT]
 >
->[!DNL Google Ads] での最初の宛先を作成しようとしており、これまで（Audience Manager などのアプリケーションを使用して）Experience Cloud ID サービスで [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja)を有効にしたことがない場合は、アドビのコンサルティングまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。以前に Audience Manager で Google 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>を使用して最初の宛先を作成する場合は、 [!DNL Google Ads] 有効にしていない [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) 以前のExperience CloudID サービス (Audience Managerや他のアプリケーションを使用 ) では、Adobeコンサルティングまたはカスタマーケアに問い合わせて、ID 同期を有効にしてもらいます。 以前に Audience Manager で Google 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ## サポートされる ID {#supported-identities}
 
@@ -70,16 +70,16 @@ ht-degree: 97%
 
 >[!IMPORTANT]
 >
-> [!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。次のセクションの許可リストのステップを実行するには、[!DNL Google Ads] との既存の統合が必要です。そのため、[!DNL Google Ads] を使用する場合に推奨されるアプローチは、[!DNL Google Customer Match] 統合をセットアップすることです。[!DNL Google Customer Match] 統合の作成について詳しくは、[[!DNL Google Customer Match]](./google-customer-match.md) 接続の作成に関するチュートリアルを参照してください。
+> [!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。次の節の手順を実許可リストに加える行するには、 [!DNL Google Ads]. そのため、[!DNL Google Ads] を使用する場合に推奨されるアプローチは、[!DNL Google Customer Match] 統合をセットアップすることです。詳しくは、 [!DNL Google Customer Match] 統合については、 [[!DNL Google Customer Match]](./google-customer-match.md) 接続。
 
 ### 許可リストへの登録 {#allow-listing}
 
 >[!NOTE]
 >
->Platform で最初の [!DNL Google Ads] の宛先を設定する前に、許可リストへの登録は必須です。宛先を作成する前に、[!DNL Google] が以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
+>Platform で最初の [!DNL Google Ads] の宛先を設定する前に、許可リストへの登録は必須です。以下に説明する許可リスト登録プロセスが、次の方法で完了していることを確認します。 [!DNL Google] 宛先を作成する前に、をクリックします。
 >このルールの例外は、[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客の場合です。この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
 
-Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] に連絡して、許可されたデータプロバイダーのリストにアドビを追加し、お使いのアカウントを許可リストに追加してもらう必要があります。 [!DNL Google] に連絡し、次の情報を提供します。
+を作成する前に [!DNL Google Ads] の宛先に設定する場合は、 [!DNL Google] Adobeを許可されたデータプロバイダーのリストに追加し、アカウントをリストに追加するた許可リストに加えるめ。 [!DNL Google] に連絡し、次の情報を提供します。
 
 * **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
 * **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
@@ -131,6 +131,6 @@ Platform で [!DNL Google Ads] の宛先を作成する前に、[!DNL Google] �
 
 このエラーは、顧客アカウントが[前提条件](#prerequisites)に準拠していない場合、または顧客が既存の [!DNL Google Ads] アカウントなしで宛先を設定しようとした場合に発生します。
 
-[!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。[allow-list](#allow-listing) のステップを実行するには、[!DNL Google Ads] との既存の統合が必要です。
+[!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] Cookie 統合を非推奨にしました。次の手順で [許可リストに加える](#allow-listing) の手順では、 [!DNL Google Ads].
 
 [!DNL Google Ads] を使用する場合に推奨されるアプローチは、[[!DNL Google Customer Match]](google-customer-match.md) 統合をセットアップすることです。

@@ -2,10 +2,10 @@
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 60%
+source-wordcount: '1022'
+ht-degree: 52%
 
 ---
 
@@ -55,7 +55,7 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 
 {style="table-layout:auto"}
 
-![SFTP プロファイルベースの書き出しタイプ](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![宛先カタログでハイライト表示された SFTP プロファイルベースの書き出しタイプ。](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## 宛先への接続 {#connect}
 
@@ -79,7 +79,7 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 
 次を選択した場合、 **[!UICONTROL パスワード付き SFTP]** SFTP ロケーションに接続するための認証タイプ：
 
-![SFTP 宛先の基本認証](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![パスワードを使用した SFTP 宛先の基本認証。](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL ドメイン]**:SFTP ストレージの場所のアドレス。
 * **[!UICONTROL ユーザー名]**：SFTP ストレージの場所にログインするためのユーザー名
@@ -87,32 +87,32 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 * **[!UICONTROL パスワード]**：SFTP ストレージの場所にログインするためのパスワード
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-  ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI での正しく書式設定された PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 **[!UICONTROL SSH キーを使用した SFTP]** 認証タイプを選択して SFTP ストレージの場所に接続する場合：
 
-![SFTP 宛先の SSH キー認証](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP 宛先の SSH キー認証。](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL ドメイン]**：SFTP アカウントの IP アドレスまたはドメイン名を入力します
 * **[!UICONTROL ポート]**：SFTP ストレージの場所で使用されるポート
 * **[!UICONTROL ユーザー名]**：SFTP ストレージの場所にログインするためのユーザー名
-* **[!UICONTROL SSH キー]**：SFTP ストレージの場所へのログインに使用する SSH 秘密鍵。  秘密鍵は、RSA 形式の Base64 でエンコードされた文字列にする必要があり、パスワードで保護しないでください。
+* **[!UICONTROL SSH キー]**：SFTP ストレージの場所へのログインに使用する SSH 秘密鍵。 秘密鍵は、RSA 形式の Base64 エンコードされた文字列である必要があり、パスワードで保護してはなりません。
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
-  ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI での正しく書式設定された PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 宛先の詳細 {#destination-details}
 
 SFTP ストレージの場所への認証接続を確立したら、宛先の次の情報を指定します。
 
-![SFTP 宛先に対して使用可能な宛先詳細](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![SFTP 宛先の宛先の詳細フィールド。](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL 名前]**:Experience Platformユーザーインターフェイスでこの宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**：この宛先の説明を入力します。
 * **[!UICONTROL フォルダーパス]**:SFTP でファイルを書き出す場所にあるフォルダーのパスを入力します。
 * **[!UICONTROL ファイルタイプ]**：書き出したファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**：書き出したファイルに Experience Platform で使用する圧縮タイプを選択します。
+* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
 * **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストの名前は、形式を使用して付けられます `manifest-<<destinationId>>-<<dataflowRunId>>.json`. を表示します。 [サンプルマニフェストファイル](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). マニフェストファイルには、次のフィールドが含まれます。
    * `flowRunId`: [データフローの実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 書き出されたファイルを生成した
    * `scheduledTime`：ファイルが書き出されたときの UTC 時刻 (UTC)。
@@ -140,6 +140,6 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 
 [!DNL SFTP] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。
 
-## IP アドレス許可リスト {#ip-address-allow-list}
+## IP アドレスの許可リスト {#ip-address-allow-list}
 
-参照： [SFTP の宛先の IP アドレス許可リスト](ip-address-allow-list.md) 許可リストにAdobeIP を追加する必要がある場合。
+参照： [SFTP の宛先の IP ア許可リストに加えるドレスの](ip-address-allow-list.md) AdobeIP を追加する必要がある場合は、次の手順を実行しま許可リストに加えるす。

@@ -3,10 +3,10 @@ title: データランディングゾーンの宛先
 description: データランディングゾーンに接続して、オーディエンスをアクティブ化し、データセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1481'
-ht-degree: 53%
+source-wordcount: '1509'
+ht-degree: 50%
 
 ---
 
@@ -58,15 +58,15 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 ### 接続する [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer]
 
-[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。を使用し始めるには [!DNL Data Landing Zone]を使用する場合は、まず資格情報を取得し、に入力する必要があります。 [!DNL Azure Storage Explorer]をクリックし、 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer].
+以下を使用できます。 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) コンテンツを管理するには、 [!DNL Data Landing Zone] コンテナ。 を使用し始めるには [!DNL Data Landing Zone]を使用する場合は、まず資格情報を取得し、に入力する必要があります。 [!DNL Azure Storage Explorer]をクリックし、 [!DNL Data Landing Zone] コンテナ [!DNL Azure Storage Explorer].
 
 [!DNL Azure Storage Explorer] UI 内で、左側のナビゲーションバーの「接続」アイコンを選択します。**リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。**[!DNL Blob container]** を選択し、[!DNL Data Landing Zone] ストレージに接続します。
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Azure UI で強調表示されているリソースを選択します。](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 次に、接続方法として「**共有アクセス署名 URL (SAS)**」を選択し、「**次へ**」をクリックします。
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Azure UI で強調表示されている接続方法を選択します。](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 接続方法を選択した後、**表示名**&#x200B;およびお使いの [!DNL Data Landing Zone] コンテナに対応する&#x200B;**[!DNL Blob]コンテナ SAS URL** を入力します。
 
@@ -171,15 +171,15 @@ curl -X POST \
 
 表示名 (`containerName`) および [!DNL Data Landing Zone] 上記の API 呼び出しで返される SAS URL で、を選択します。 **次へ**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Azure UI でハイライト表示されている接続情報を入力します。](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 **概要**&#x200B;ウィンドウが開き、[!DNL Blob] エンドポイントと権限を含む設定の概要が表示されます。準備ができたら、「**接続**」を選択します。
 
-![概要](/help/sources/images/tutorials/create/dlz/summary.png)
+![Azure UI に表示される設定の概要です。](/help/sources/images/tutorials/create/dlz/summary.png)
 
 接続が成功すると、[!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナが更新されます。
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Azure UI で強調表示された DLZ ユーザーコンテナの概要。](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 [!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続され、Experience Platform から [!DNL Data Landing Zone] コンテナへのファイルの書き出しを開始できるようになりました。ファイルを書き出すには、 [!DNL Data Landing Zone] の宛先を指定します（以下の節で説明）。
 
@@ -203,7 +203,7 @@ curl -X POST \
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
 * **[!UICONTROL ファイルタイプ]**：書き出したファイルに使用する形式Experience Platformを選択します。 選択時に、 [!UICONTROL CSV] オプションを選択する場合は、 [ファイル形式設定オプションの設定](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 圧縮形式]**：書き出したファイルに Experience Platform で使用する圧縮タイプを選択します。
+* **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformが使用する圧縮タイプを選択します。
 * **[!UICONTROL マニフェストファイルを含める]**：書き出しの場所や書き出しサイズなどに関する情報を含むマニフェスト JSON ファイルを書き出しに含める場合は、このオプションをオンに切り替えます。 マニフェストの名前は、形式を使用して付けられます `manifest-<<destinationId>>-<<dataflowRunId>>.json`. を表示します。 [サンプルマニフェストファイル](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). マニフェストファイルには、次のフィールドが含まれます。
    * `flowRunId`: [データフローの実行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 書き出されたファイルを生成した
    * `scheduledTime`：ファイルが書き出されたときの UTC 時刻 (UTC)。

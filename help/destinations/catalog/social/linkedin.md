@@ -3,10 +3,10 @@ keywords: linkedin 接続；linkedin 接続；linkedin 宛先；linkedin;linkedi
 title: Linkedin Matched Audiences 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのLinkedInキャンペーンのプロファイルをアクティブ化します。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 45%
+source-wordcount: '1096'
+ht-degree: 42%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 45%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL LinkedIn Matched Audiences] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL LinkedIn Matched Audiences] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -62,7 +62,7 @@ ht-degree: 45%
 
 使用する前に、 [!UICONTROL LinkedIn Matched Audience] 宛先、 [!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 権限レベル以上。
 
-[!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、「[Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753)」（LinkedIn ドキュメント）を参照してください。
+編集方法を学ぶには [!DNL LinkedIn Campaign Manager] ユーザー権限： [Advertising アカウントに対するユーザー権限の追加、編集、削除](https://www.linkedin.com/help/lms/answer/5753) (LinkedInドキュメント ) を参照してください。
 
 ## ID 一致要件 {#id-matching-requirements}
 

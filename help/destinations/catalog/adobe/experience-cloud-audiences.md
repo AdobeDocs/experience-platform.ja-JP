@@ -3,10 +3,10 @@ title: Experience Cloud Audiences
 description: Real-time Customer Data Platformのオーディエンスを様々なExperience Cloudアプリに共有する方法を説明します。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 20%
+source-wordcount: '1675'
+ht-degree: 18%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
->この宛先は、 [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Real-time Customer Data Platformから様々なExperience Cloudソリューションへ
+>この宛先は、 [レガシーオーディエンス共有の統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Real-time Customer Data Platformから様々なExperience Cloudソリューションへ
 > 
->既に、Real-Time CDPからAudience Managerおよび他のExperience Cloudソリューションに、 [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)の場合、この宛先を使用する前に、カスタマーケアに連絡して従来の統合を無効にする必要があります。
+>既に、Real-Time CDPからAudience Managerおよび他のExperience Cloudソリューションに、 [レガシーオーディエンス共有の統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)の場合、この宛先を使用する前に、カスタマーケアに連絡して従来の統合を無効にする必要があります。
 
 ![Experience Cloudオーディエンスの宛先。宛先カタログでハイライト表示されます。](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -40,12 +40,12 @@ ht-degree: 20%
 Audience Managerでは、Real-Time CDPオーディエンスを、次のようなデータ管理プラットフォームの使用例に使用できます。
 
 * 追加中 [サードパーティデータ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) をセグメントに追加します。
-* [アルゴリズムモデリング](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
+* [アルゴリズムモデリング](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html)
 * Real-Time CDPの宛先カタログでまだサポートされていない Cookie ベースの宛先に対してオーディエンスをアクティブ化する。
 
 ### エクスポートされたオーディエンスの詳細な制御 {#segments-control}
 
-Audience Manager以降に書き出すオーディエンスを選択するには、 Audiences の宛先で、新しいセルフサービスオーディエンス共有Experience Cloudを使用します。  これにより、他のExperience Cloudソリューションと共有するオーディエンスや、Real-Time CDPにのみ保持するオーディエンスを決定できます。
+Audience Manager以降に書き出すオーディエンスを選択するには、 AudiencesExperience Cloudの宛先で、新しいセルフサービスのオーディエンス共有統合を使用します。  これにより、他のExperience Cloudソリューションと共有するオーディエンスや、Real-Time CDPにのみ保持するオーディエンスを決定できます。
 
 従来のオーディエンス共有統合では、どのオーディエンスをAudience Manager以降に書き出すかを詳細に制御できませんでした。
 
@@ -80,7 +80,7 @@ Audiences の宛先に送信したオーディエンスは、Experience CloudAdo
 
 ### 従来のオーディエンス共有ソリューションを使用しているお客様向け
 
-既に、Real-Time CDPからAudience Managerおよび他のExperience Cloudソリューションに、 [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)の場合、レガシー統合を無効にするには、カスタマーケアにお問い合わせいただく必要があります。
+既に、Real-Time CDPからAudience Managerおよび他のExperience Cloudソリューションに、 [レガシーオーディエンス共有の統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)の場合、レガシー統合を無効にするには、カスタマーケアにお問い合わせいただく必要があります。
 
 プロビジョニング解除チケットの解決にかかる所要時間は 6 営業日以下です。 既存のレガシー統合を無効にした後、次に進むことができます： [接続の作成](#connect) セルフサービスの宛先カードを使用する。
 
@@ -94,7 +94,7 @@ Audiences の宛先に送信したオーディエンスは、Experience CloudAdo
 
 * 現在、単一のExperience Cloudオーディエンスの宛先がサポートされています。 2 つ目の宛先接続を構成しようとすると、エラーが発生します。
 * 宛先に接続する際に、次のオプションが表示されます。 [データフローアラートを有効にする](../../ui/alerts.md). UI には表示されますが、 **アラートの有効化オプションは、現在サポートされていません**.
-* **オーディエンスのバックフィルのサポート**：最初のAudience Managerへのエクスポートまたは他のExperience Cloudソリューションには、オーディエンスの過去の母集団が含まれます。 のユーザー [従来のオーディエンス共有統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) この宛先を設定するユーザーは、約 6 時間のバックフィルの違いを期待する必要があります。
+* **オーディエンスのバックフィルのサポート**：最初のAudience Managerへのエクスポートまたは他のExperience Cloudソリューションには、オーディエンスの過去の母集団が含まれます。 のユーザー [レガシーオーディエンス共有の統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) この宛先を設定するユーザーは、約 6 時間のバックフィルの違いを期待する必要があります。
 
 ### オーディエンスをアクティブ化する際の遅延 {#audience-activation-latency}
 
@@ -168,7 +168,7 @@ Real-Time CDPでオーディエンスが最初にアクティブ化されてか�
 > 
 >データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
-この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。いいえ [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 必須で、いいえ [スケジューリング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) は、この宛先で使用できます。
+読み取り [ストリーミングオーディエンスの書き出し先に対するプロファイルとオーディエンスのアクティブ化](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。 いいえ [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 必須で、いいえ [スケジューリング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) は、この宛先で使用できます。
 
 ## データの書き出しを検証する {#exported-data}
 

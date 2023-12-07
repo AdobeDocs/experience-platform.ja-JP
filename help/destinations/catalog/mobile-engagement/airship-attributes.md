@@ -3,10 +3,10 @@ keywords: 飛行船の属性；飛行船の宛先
 title: Airship Attributes 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンス属性として Airship にシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 38%
+source-wordcount: '1036'
+ht-degree: 34%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 38%
 
 >[!TIP]
 >
->この宛先コネクタとドキュメントページは、[!DNL Airship] チームによって作成および管理されています。お問い合わせや更新のご依頼は、直接お問い合わせください。 [support.airship.com](https://support.airship.com/).
+>この宛先コネクタとドキュメントページは、 [!DNL Airship] チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 [support.airship.com](https://support.airship.com/).
 
 ## 前提条件 {#prerequisites}
 
@@ -75,7 +75,7 @@ Adobe Experience Platformプロファイル属性は、 [!DNL Airship] このペ
 
 ## ユースケース {#use-cases}
 
-[!DNL Airship Attributes] 宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
+をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL Airship Attributes] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
 ### 使用例#1
 
@@ -139,7 +139,7 @@ Adobe Experience Platformの属性を活用してさらに強化 [!DNL Airship] 
 
 **ID をマッピング**
 
-ソースフィールドを選択:
+ソースフィールドを選択：
 
 ![飛行船属性に接続](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
 

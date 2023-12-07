@@ -3,10 +3,10 @@ keywords: 飛行船タグ；飛行船の宛先
 title: Airship Tags 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンスタグとして Airship にシームレスに渡します。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 39%
+source-wordcount: '967'
+ht-degree: 35%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 39%
 
 >[!TIP]
 >
->この宛先コネクタとドキュメントページは、[!DNL Airship] チームによって作成および管理されています。お問い合わせや更新のご依頼は、直接お問い合わせください。 [support.airship.com](https://support.airship.com/).
+>この宛先コネクタとドキュメントページは、 [!DNL Airship] チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 [support.airship.com](https://support.airship.com/).
 
 ## 前提条件
 
@@ -82,7 +82,7 @@ Experience Platform でのオーディエンスの概念は、Adobeの Experienc
 
 ## ユースケース
 
-[!DNL Airship Tags] 宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
+をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL Airship Tags] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
 ### 使用例#1
 

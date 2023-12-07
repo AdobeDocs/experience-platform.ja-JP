@@ -1,12 +1,11 @@
 ---
-keywords: 電子メール；電子メール；電子メールの宛先；Salesforce;Salesforce の宛先
 title: Salesforce Marketing Cloud 接続
 description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 57%
+source-wordcount: '795'
+ht-degree: 54%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 57%
 
 ## 概要 {#overview}
 
-[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/jp/products/marketing-cloud/email-marketing/) は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです（旧称 ExactTarget）。
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/jp/products/marketing-cloud/email-marketing/) は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできる、デジタルマーケティングスイート（旧称 ExactTarget）です。
 
 オーディエンスデータをに送信するには、以下を実行します。 [!DNL Salesforce Marketing Cloud]を選択し、最初に [宛先に接続](#connect-destination) プラットフォーム内で、 [データインポートの設定](#import-data-into-salesforce) ストレージの場所から [!DNL Salesforce Marketing Cloud].
 
@@ -40,11 +39,11 @@ ht-degree: 57%
 
 {style="table-layout:auto"}
 
-## IP アドレス許可リスト {#allow-list}
+## IP アドレスの許可リスト {#allow-list}
 
-SFTP ストレージを使用した電子メールマーケティングの宛先を設定する場合、Adobeでは、特定の IP 範囲を許可リストに追加することをお勧めします。
+SFTP ストレージを使用した電子メールマーケティングの宛先を設定する場合、Adobeでは、特定の IP 範囲をユーザーのに追加することをお勧めし許可リストに加えるます。
 
-参照： [SFTP の宛先の IP アドレス許可リスト](../cloud-storage/ip-address-allow-list.md) 許可リストにAdobeIP を追加する必要がある場合。
+参照： [SFTP の宛先の IP ア許可リストに加えるドレスの](../cloud-storage/ip-address-allow-list.md) AdobeIP を追加する必要がある場合は、次の手順を実行し許可リストに加えるます。
 
 ## 宛先への接続 {#connect}
 
