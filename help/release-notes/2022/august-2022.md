@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年8月
 description: Adobe Experience Platform の 2022年8月のリリースノート。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
+source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
 workflow-type: tm+mt
-source-wordcount: '2082'
-ht-degree: 100%
+source-wordcount: '1999'
+ht-degree: 99%
 
 ---
 
@@ -116,7 +116,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL AJO エンティティクラス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizer のルックアップスキーマを作成するためのレコードベースのクラス。 |
+| クラス | [[!UICONTROL AJO エンティティクラス]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Adobe Journey Optimizer のルックアップスキーマを作成するためのレコードベースのクラス。 |
 | フィールドグループ | [[!UICONTROL Workfront 作業オブジェクト]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfront のすべての下位レベルのオブジェクト固有のフィールドグループを参照するラッパーフィールドグループ。 |
 
 {style="table-layout:auto"}

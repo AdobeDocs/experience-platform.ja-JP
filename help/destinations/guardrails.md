@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;アクティベーション;トラブルシューティング;ガードレール;ガイドライン;制限
-title: アクティベーションデータのデフォルトのガードレール
+title: データのアクティベーションのデフォルトのガードレール
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 52%
 
 ---
 
-# アクティベーションデータのガードレール
+# データアクティベーション用の Guardrail
 
 このページでは、アクティベーション動作に関するデフォルトの使用方法とレートの制限について説明します。次のガードレールを確認する際は、正しく[宛先に接続されている](/help/destinations/ui/connect-destination.md)とみなされます。
 
