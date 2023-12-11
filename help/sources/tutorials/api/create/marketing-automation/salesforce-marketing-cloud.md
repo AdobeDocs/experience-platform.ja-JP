@@ -2,10 +2,10 @@
 title: フローサービス API を使用した SalesforceMarketing Cloudベース接続の作成
 description: フローサービス API を使用して、SalesforceMarketing CloudアカウントをExperience Platformに対して認証する方法を説明します。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 57%
+source-wordcount: '491'
+ht-degree: 58%
 
 ---
 
@@ -38,7 +38,7 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** 次の項目に `host` の値を指定する場合、URL 全体ではなくサブドメインのみを指定する必要があります。 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を指定した場合は、 `acme-ab12c3d4e5fg6hijk7lmnop8qrst` をホスト値として使用します。 |
+| `host` | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** 次の項目に `host` 値を指定する場合は、 `{subdomain}.rest.marketingcloudapis.com`. 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を指定した場合は、 `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` をホスト値として使用します。 |
 | `clientId` | 次に関連付けられたクライアント ID: [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce Marketing Cloud] の接続仕様 ID は `ea1c2a08-b722-11eb-8529-0242ac130003` です。 |
