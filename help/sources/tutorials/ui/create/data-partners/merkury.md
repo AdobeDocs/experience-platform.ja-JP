@@ -2,9 +2,7 @@
 title: UI でのマークエンタープライズ ID 解決ソース接続とデータフローの作成
 description: Adobe Experience Platform UI を使用してマークエンタープライズ ID 解決ソース接続を作成する方法を説明します。
 badge: ベータ版
-hide: true
-hidefromtoc: true
-source-git-commit: cc87bff5ea19e2ffc9958bd645b4736d05773e3c
+source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
 workflow-type: tm+mt
 source-wordcount: '2015'
 ht-degree: 30%

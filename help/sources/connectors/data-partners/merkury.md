@@ -2,9 +2,7 @@
 title: マークエンタープライズ ID 解決ソースの概要
 description: ユーザーインターフェイスを使用して Merkury Enterprise ID 解決をAdobe Experience Platformに接続する方法を説明します。
 badge: ベータ版
-hide: true
-hidefromtoc: true
-source-git-commit: bf6a3422d9af6eaa4f3f4a8a573dc587b3cfdbd5
+source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 44%
