@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;クラウドストレージデータ；ストリーミングデータ；ストリーミング
+keywords: Experience Platform；ホーム；人気の高いトピック；クラウドストレージデータ；ストリーミングデータ；ストリーミング
 solution: Experience Platform
 title: フローサービス API を使用した生データのストリーミングデータフローの作成
 type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 54%
+source-wordcount: '1138'
+ht-degree: 46%
 
 ---
 
@@ -41,7 +41,7 @@ Platform API を正常に呼び出す方法については詳しくは、[Platfo
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。このターゲット XDM スキーマは、XDM も拡張します [!DNL Individual Profile] クラス。
+ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。 このターゲット XDM スキーマは、XDM も拡張します [!DNL Individual Profile] クラス。
 
 ターゲット XDM スキーマを作成するには、 `/schemas` エンドポイント [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -194,7 +194,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成されたデータセットの ID をの形式で含む配列を返します `"@/datasets/{DATASET_ID}"`. データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順で、ターゲット接続とデータフローを作成するには、ターゲットデータセット ID が必要です。
+正常な応答は、新しく作成されたデータセットの ID をの形式で含む配列を返します `"@/datasets/{DATASET_ID}"`. データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。 後の手順で、ターゲット接続とデータフローを作成するには、ターゲットデータセット ID が必要です。
 
 ```json
 [
@@ -325,7 +325,7 @@ curl -X POST \
 
 ## データフロー仕様のリストの取得 {#specs}
 
-データフローは、ソースからデータを収集し、Platform に取り込む役割を担っています。データフローを作成するにはまず、[!DNL Flow Service] API に対して GET リクエストを実行し、データフローの仕様を取得する必要があります。
+データフローは、ソースからデータを収集し、Platform に取り込む役割を担っています。GETフローを作成するには、まずにに対してデータリクエストを実行して、データフロー仕様を取得する必要があります。 [!DNL Flow Service] API.
 
 **API 形式**
 
@@ -481,6 +481,86 @@ curl -X POST \
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+## 取り込み用の POST データ
+
+取り込み用に送信できる未加工または XDM 準拠の json の例については、以下のサンプルペイロードを参照してください。
+
+>[!TIP]
+>
+>次の例は、3 つすべてに適用されます。
+>
+>- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+>- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+>- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
+>[!BEGINTABS]
+
+>[!TAB 生データ]
+
+```json
+'{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB XDM データ]
+
+```json
+{
+  "header": {
+    "schemaRef": {
+      "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+      "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+    }
+  },
+  "body": {
+    "xdmMeta": {
+      "schemaRef": {
+        "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+      }
+    },
+    "xdmEntity": {
+      "_id": "acme",
+      "workEmail": {
+        "address": "mike@acme.com",
+        "primary": true,
+        "type": "work",
+        "status": "active"
+      },
+      "person": {
+        "gender": "male",
+        "name": {
+          "firstName": "Mike",
+          "lastName": "Wazowski"
+        },
+        "birthDate": "1985-01-01"
+      },
+      "identityMap": {
+        "ecid": [
+          {
+            "id": "01262118050522051420082102000000000000"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+>[!ENDTABS]
 
 ## 次の手順
 
