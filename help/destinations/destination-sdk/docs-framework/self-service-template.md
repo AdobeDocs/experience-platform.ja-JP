@@ -2,10 +2,10 @@
 title: ドキュメントのセルフサービステンプレート//を宛先の名前に置き換えます。
 description: このテンプレートを使用して、Adobe Experience Platformカタログの宛先に関する公開ドキュメントを作成します。//概要セクションの段落に置き換えます
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: 48efe49a51c2917cd4bda9b6d8aaed72d8f0f90b
 workflow-type: tm+mt
-source-wordcount: '1640'
-ht-degree: 37%
+source-wordcount: '1642'
+ht-degree: 35%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 37%
 
 ## サポートされている ID {#supported-identities}
 
-*宛先でサポートされている ID に関する情報をこの節に追加します。 テーブルには、いくつかの標準値が事前入力されています。 宛先に適用しない値と、事前入力されていない値を削除します。*
+*宛先でサポートされている ID に関する情報をこの節に追加します。 テーブルには、いくつかの標準値が事前入力されています。 宛先に適用しない値を削除するか、事前入力されていない値を追加します。*
 
 *宛先* では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
@@ -94,7 +94,7 @@ ht-degree: 37%
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 *宛先* 宛先。 |
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)のプロファイル属性選択画面で選択した目的のスキーマフィールド（例：メールアドレス、電話番号、姓）と共に、セグメントのすべてのメンバーを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | オーディエンスのすべてのメンバーを、目的のスキーマフィールド（例：E メールアドレス、電話番号、姓）と共に、 [宛先のアクティベーションワークフロー](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 書き出しタイプ | **[!UICONTROL データセットの書き出し]** | オーディエンスの関心や資格でグループ化または構造化されていない未加工のデータセットを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 | 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
