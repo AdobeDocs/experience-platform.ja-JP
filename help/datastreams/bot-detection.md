@@ -4,9 +4,9 @@ description: データストリームのボット検出を設定し、人間と�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 4881a82c0ce68d1efe85281d2a8c457a29531559
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -47,24 +47,22 @@ Edge ネットワークへのリクエストがいずれかのボット検出ル
 
 ボット検出は、データストリーム設定を作成した後に設定できます。 方法に関するドキュメントを参照してください。 [データストリームの作成と設定](configure.md)次に、以下の手順に従って、データストリームにボット検出機能を追加します。
 
-
 データストリームリストに移動し、ボット検出を追加するデータストリームを選択します。
 
-![データストリーム UI の画像](assets/bot-detection/datastream-list.png)
+![データストリームのリストを表示するデータストリームユーザーインターフェイス。](assets/bot-detection/datastream-list.png)
 
 データストリームの詳細ページで、 **[!UICONTROL ボット検出]** 」オプションを使用します。
 
-![「ボット検出」オプションがハイライトされたデータストリーム UI の画像](assets/bot-detection/bot-detection.png)
+![データストリームユーザーインターフェイスでハイライトされているボット検出オプション。](assets/bot-detection/bot-detection.png)
 
 The **[!UICONTROL ボット検出ルール]** ページが表示されます。
 
-![「ボット検出」オプションがハイライトされたデータストリーム UI の画像](assets/bot-detection/bot-detection-page.png)
+![データストリーム設定ページのボット検出設定を参照してください。](assets/bot-detection/bot-detection-page.png)
 
 ボット検出ルールページで、次の機能を使用してボット検出を設定できます。
 
-* デフォルト PCID の代わりに [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* の使用 [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * 独自のボット検出ルールを作成する。
-
 
 ### IAB/ABC International Spiders and Bots List の使用 {#iab-list}
 
@@ -72,8 +70,7 @@ The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 
 データストリームを設定して [!DNL IAB/ABC International Spiders and Bots List]、切り替え **[!UICONTROL このデータストリームのボット検出には、 IAB/ABC International Spiders and Bots Lists を使用します。]** 」オプションを選択し、「保存」を選択して、ボット検出設定をデータストリームに適用します。
 
-![IAB スパイダーとボットリストが有効なボット検出設定画面の画像。](assets/bot-detection/bot-detection-list.png)
-
+![IAB スパイダーとボットリストが有効になっています。](assets/bot-detection/bot-detection-list.png)
 
 ### ボット検出ルールの作成 {#rules}
 
@@ -97,25 +94,21 @@ The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 | `sec-ch-ua-bitness` | ユーザーエージェントの基盤となる CPU アーキテクチャの「ビット度」を提供します。 これは、整数またはメモリアドレス（通常は 64 または 32 ビット）のビット数です。 |
 | `sec-ch-ua-wow64` | 64 ビット Windows 上で、ユーザーエージェントバイナリが 32 ビットモードで実行されているかどうかを示します。 |
 
-
-
-
-
 ボット検出ルールを作成するには、次の手順に従います。
 
 1. 選択 **[!UICONTROL 新規ルールの追加]**.
 
-   ![「新しいルールを追加」ボタンがハイライトされた、ボット検出設定画面の画像。](assets/bot-detection/bot-detection-new-rule.png)
+   ![「新しいルールを追加」ボタンがハイライトされたボット検出設定画面](assets/bot-detection/bot-detection-new-rule.png)
 
 2. ルールの名前を **[!UICONTROL ルール名]** フィールドに入力します。
 
-   ![ルール名がハイライト表示されたボット検出ルール画面の画像。](assets/bot-detection/rule-name.png)
+   ![ルール名がハイライトされたボット検出ルール画面。](assets/bot-detection/rule-name.png)
 
 3. 選択 **[!UICONTROL 新しい IP 条件を追加]** をクリックして、新しい IP ベースのルールを追加します。 ルールは、IP アドレスまたは IP アドレス範囲で定義できます。
 
-   ![「IP アドレス」フィールドが強調表示された、ボット検出ルール画面の画像。](assets/bot-detection/ip-address-rule.png)
+   ![「IP アドレス」フィールドが強調表示されたボット検出ルール画面。](assets/bot-detection/ip-address-rule.png)
 
-   ![「IP 範囲」フィールドが強調表示された、ボット検出ルール画面の画像。](assets/bot-detection/ip-range-rule.png)
+   ![「IP 範囲」フィールドがハイライト表示されたボット検出ルール画面。](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
@@ -123,15 +116,15 @@ The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 
 4. ルールにヘッダー条件を追加する場合は、「 **[!UICONTROL ヘッダー条件グループを追加]**&#x200B;をクリックし、ルールで使用するヘッダーを選択します。
 
-   ![ヘッダー条件がハイライト表示されたボット検出ルール画面の画像。](assets/bot-detection/header-conditions.png)
+   ![ボット検出ルール画面のヘッダー条件がハイライト表示されます。](assets/bot-detection/header-conditions.png)
 
    次に、選択したヘッダーに使用する条件を追加します。
 
-   ![ヘッダー条件がハイライト表示されたボット検出ルール画面の画像。](assets/bot-detection/header-condition-rule.png)
+   ![ボット検出ルール画面のヘッダー条件がハイライト表示されます。](assets/bot-detection/header-condition-rule.png)
 
 5. 目的のボット検出ルールを設定したら、「 」を選択します。 **[!UICONTROL 保存]** ルールをデータストリームに適用する。
 
-   ![ヘッダー条件がハイライト表示されたボット検出ルール画面の画像。](assets/bot-detection/bot-detection-save.png)
+   ![ボット検出ルール画面のヘッダー条件がハイライト表示されます。](assets/bot-detection/bot-detection-save.png)
 
 
 ## ボット検出ルールの例 {#examples}
@@ -142,19 +135,19 @@ The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 
 特定の IP アドレスからのすべての要求をボットトラフィックとしてマークするには、次の図に示すように、単一の IP アドレスを評価する新しいボット検出ルールを作成します。
 
-![1 つの IP アドレスに基づくボット検出ルールの画像。](assets/bot-detection/bot-detection-one-ip.png)
+![1 つの IP アドレスに基づくボット検出ルール。](assets/bot-detection/bot-detection-one-ip.png)
 
 ### 2 つの IP アドレスに基づくボット検出 {#two-ip}
 
 2 つの特定の IP アドレスのいずれかから発生するすべての要求をボットトラフィックとしてマークするには、次の図に示すように、2 つの IP アドレスを評価する新しいボット検出ルールを作成します。
 
-![2 つの IP アドレスに基づくボット検出ルールの画像。](assets/bot-detection/bot-detection-two-ips.png)
+![2 つの IP アドレスに基づくボット検出ルール。](assets/bot-detection/bot-detection-two-ips.png)
 
 ### IP アドレスの範囲に基づくボット検出 {#range}
 
 特定の範囲内の任意の IP アドレスから発生したすべてのリクエストをボットトラフィックとしてマークするには、次の図に示すように、IP アドレス範囲全体を評価する新しいボット検出ルールを作成します。
 
-![IP 範囲に基づくボット検出ルールの画像。](assets/bot-detection/bot-detection-range.png)
+![IP 範囲に基づくボット検出ルール。](assets/bot-detection/bot-detection-range.png)
 
 ### IP アドレスとリクエストヘッダーに基づくボット検出 {#ip-header}
 
@@ -162,7 +155,7 @@ The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 
 このルールは、リクエストが特定の IP アドレスから送信されたかどうか、および `referer` リクエストヘッダーが次の値で始まる `www.adobe.com`.
 
-![IP アドレスとリクエストヘッダーに基づくボット検出ルールの画像。](assets/bot-detection/bot-detection-header-ip.png)
+![IP アドレスとリクエストヘッダーに基づくボット検出ルール。](assets/bot-detection/bot-detection-header-ip.png)
 
 ### 複数の条件に基づくボット検出 {#multiple-conditions}
 
@@ -175,4 +168,4 @@ The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 
 このリクエストは、2 つの IP アドレスのいずれか ( `referer` ヘッダーが次の値で始まる `www.adobe.com`、および `sec-ch-ua-mobile` ヘッダーは、デスクトップブラウザーからの要求であることを識別します。
 
-![複数の条件に基づくボット検出ルールの画像。](assets/bot-detection/bot-detection-multiple.png)
+![複数の条件に基づくボット検出ルール。](assets/bot-detection/bot-detection-multiple.png)

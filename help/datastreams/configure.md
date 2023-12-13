@@ -2,10 +2,10 @@
 title: データストリームの作成と設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 58%
+source-wordcount: '2707'
+ht-degree: 56%
 
 ---
 
@@ -44,7 +44,7 @@ Experience Platformで使用するデータストリームを設定し、Web SDK
 
 を展開します。 **[!UICONTROL 位置情報とネットワーク参照]** 以下に説明する設定を行う場合は、「 」セクションを参照してください。
 
-![データストリーム設定画面を示す Platform UI のスクリーンショットで、位置情報とネットワーク参照の設定がハイライト表示されています。](assets/configure/geolookup.png)
+![位置情報およびネットワーク参照設定がハイライトされたデータストリーム設定画面](assets/configure/geolookup.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -63,7 +63,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 を展開します。 **[!UICONTROL デバイス参照]** 以下に説明する設定を行う場合は、「 」セクションを参照してください。
 
-![デバイス参照設定がハイライト表示されたデータストリーム設定画面を示す Platform UI のスクリーンショット。](assets/configure/device-lookup.png)
+![デバイス参照設定がハイライトされたデータストリーム設定画面。](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 新しいデータストリームを設定したり、表示するために既存のデータストリームを選択したりすると、そのデータストリームの詳細ページが表示されます。ここでは、データストリームの詳細情報（ID など）を確認できます。
 
-![作成されたデータストリームの詳細ページ](assets/configure/view-details.png)
+![データストリームの詳細ページ。](assets/configure/view-details.png)
 
 データストリームの詳細画面から、[サービスを追加](#add-services)して、アクセス権のある Adobe Experience Cloud 製品の機能を有効にできます。また、データストリームの[基本設定](#create)を編集したり、その[マッピングルール](./data-prep.md)を更新したり、[データストリームをコピー](#copy)したり、完全に削除したりできます。
 
@@ -117,11 +117,11 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 データストリームの詳細ページで、「**[!UICONTROL サービスを追加]**」を選択して、そのデータストリームで使用可能なサービスの追加を開始します。
 
-![「サービスを追加」を選択して続行](assets/configure/add-service.png)
+![「サービスを追加」を選択して続行します。](assets/configure/add-service.png)
 
 次の画面で、ドロップダウンメニューを使用して、このデータストリームで設定するサービスを選択します。このリストには、アクセス権のあるサービスのみが表示されます。
 
-![リストからサービスを選択](assets/configure/service-selection.png)
+![リストからサービスを選択します。](assets/configure/service-selection.png)
 
 目的のサービスを選択し、表示される設定オプションに入力してから、「**[!UICONTROL 保存]**」を選択してデータストリームにサービスを追加します。データストリームの詳細表示に、追加されたすべてのサービスが表示されます。
 
@@ -137,7 +137,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 このサービスは、Adobe Analytics にデータを送信するかどうかと、どのように送信するかを制御します。追加情報については、[Analytics へのデータの送信](../edge/data-collection/adobe-analytics/analytics-overview.md)に関するガイドを参照してください。
 
-![Adobe Analytics 設定ブロック](assets/configure/analytics-config.png)
+![Adobe Analytics Datastream 設定](assets/configure/analytics-config.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -148,7 +148,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 このサービスは、Adobe Audience Manager にデータを送信するかどうかと、どのように送信するかを制御します。Audience Manager にデータを送信するために必要なのは、このセクションを有効にすることだけです。その他の設定は、オプションですが推奨されます。
 
-![Adobe Audience Manage 設定ブロック](assets/configure/audience-manager-config.png)
+![AdobeAudience Manager データストリーム設定。](assets/configure/audience-manager-config.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -167,7 +167,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 このサービスは、Adobe Experience Platform にデータを送信するかどうかと、どのように送信するかを制御します。
 
-![Adobe Experience Platform 設定ブロック](assets/configure/platform-config.png)
+![Adobe Experience Platform Datastream 設定](assets/configure/platform-config.png)
 
 | 設定 | 説明 |
 |---| --- |
@@ -182,7 +182,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 このサービスは、Adobe Target にデータを送信するかどうかと、どのように送信するかを制御します。
 
-![Adobe Target 設定ブロック](assets/configure/target-config.png)
+![Adobe Target Datastream 設定](assets/configure/target-config.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -195,7 +195,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 このサービスは、[イベント転送](../tags/ui/event-forwarding/overview.md)にデータを送信するかどうかと、どのように送信するかを制御します。
 
-![設定 UI の「イベント転送」セクション](assets/configure/event-forwarding-config.png)
+![データストリーム設定画面の「イベント転送」セクション。](assets/configure/event-forwarding-config.png)
 
 | 設定 | 説明 |
 | --- | --- |
@@ -216,15 +216,15 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 
 [!UICONTROL データストリーム]ワークスペースのメインページから、当該データストリームの省略記号（**...**）を選択してから、「**[!UICONTROL コピー]**」を選択します。
 
-![データストリームリスト表示から「[!UICONTROL コピー]」オプションが選択されていることを示す画像](assets/configure/copy-datastream-list.png)
+![データストリームリスト表示から「コピー」オプションを選択した画像。](assets/configure/copy-datastream-list.png)
 
 または、指定されたデータストリームの詳細表示から「**[!UICONTROL データストリームをコピー]**」を選択することもできます。
 
-![データストリームの詳細表示から「[!UICONTROL コピー]」オプションが選択されていることを示す画像](assets/configure/copy-datastream-details.png)
+![データストリームの詳細ビューから「コピー」オプションが選択されています。](assets/configure/copy-datastream-details.png)
 
 作成する新しいデータストリームの一意の名前を指定するよう促す確認ダイアログが表示され、上書きされる設定オプションに関する詳細が表示されます。準備ができたら、「**[!UICONTROL コピー]**」を選択します。
 
-![データストリームのコピーに関する確認ダイアログの画像](assets/configure/copy-datastream-confirm.png)
+![データストリームをコピーするための確認ダイアログ。](assets/configure/copy-datastream-confirm.png)
 
 [!UICONTROL データストリーム]ワークスペースのメインページが再表示され、新しいデータストリームがリスト表示されます。
 
