@@ -3,10 +3,10 @@ keywords: Experience Platform；クエリサービス；クエリサービス；
 title: Adobe Experience Platformクエリサービスの使用例
 description: Adobe Experience Platform Query Service の汎用性とメリットを示すエンドツーエンドの例です。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 3%
+source-wordcount: '695'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 * 既存のデータアーキテクチャに基づいてクエリを作成する方法。
 * ニーズを満たすデータ品質、および不足を軽減する方法を確保する。
 * パーソナライゼーションのためのセグメント化と宛先で、設定された頻度でクエリを実行するようにスケジュールするプロセスです。
-* マーケターが、以下の機能を利用して、派生した属性をオーディエンスに簡単に組み込むことができます。 [!DNL Query Service].
+* マーケターが、 [!DNL Query Service].
 
 ## 目標 {#objectives}
 
