@@ -1,15 +1,15 @@
 ---
 title: レポートスイートデータ用のAdobe Analytics Source Connector
-description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
+description: このドキュメントでは、Analytics の概要と Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 17%
+source-wordcount: '1110'
+ht-degree: 10%
 
 ---
 
-# レポートスイートデータ用の Adobe Analytics ソースコネクタ
+# レポートスイートデータ用のAdobe Analyticsソースコネクタ
 
 Adobe Experience Platformでは、Analytics ソースコネクタを使用してAdobe Analyticsデータを取り込むことができます。 The [!DNL Analytics] ソースコネクタは、収集されたデータをストリーミングします [!DNL Analytics] をリアルタイムで Platform に変換し、SCDS 形式に変換 [!DNL Analytics] データを [!DNL Experience Data Model] (XDM)Platform で使用するフィールド。
 
@@ -21,13 +21,13 @@ Adobe Experience Platformでは、Analytics ソースコネクタを使用して
 
 ![Adobe Analyticsを含む様々なAdobeアプリケーションからのデータのジャーニーを示す図。](./images/analytics-data-experience-platform.png)
 
-高いレベルでは [!DNL Analytics] は、世界中の様々なデジタルチャネルや複数のデータセンターからデータを収集します。 データが収集されると、訪問者 ID、セグメント化および変換アーキテクチャ (VISTA) のルールと処理ルールが適用され、受信データが形成されます。 生データは、この軽量な処理を経た後、次の方法で使用できる状態と見なされます。 [!DNL Real-Time Customer Profile]. 前述と並行するプロセスでは、同じ処理済みデータがマイクロバッチされ、で使用するために Platform データセットに取り込まれます。 [!DNL Data Science Workspace], [!DNL Query Service]、およびその他のデータ検出アプリケーション。
+高いレベルでは [!DNL Analytics] は、世界中の様々なデジタルチャネルや複数のデータセンターからデータを収集します。 データが収集されると、訪問者 ID、セグメント化および変換アーキテクチャ (VISTA) のルールと処理ルールが適用され、受信データが形成されます。 生データは、この軽量な処理を経た後、次の方法で使用できる状態と見なされます。 [!DNL Real-Time Customer Profile]. 前述と並行するプロセスでは、同じ処理済みデータがマイクロバッチされ、で使用するために Platform データセットに取り込まれます。 [!DNL Query Service]、およびその他のデータ検出アプリケーション。
 
 詳しくは、 [処理ルールの概要](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=ja) を参照してください。
 
 ## エクスペリエンスデータモデル（XDM）
 
-XDM は公に文書化された仕様で、 Experience Platform 上のサービスとの通信に使用するアプリケーションの共通の構造と定義を提供します。
+XDM は公に文書化された仕様で、Experience Platform上のサービスとの通信に使用するアプリケーションの共通の構造と定義を提供します。
 
 XDM 標準規格に準拠することで、データを統一的に取り込むことができ、データの配信と情報の収集が容易になります。
 
@@ -45,7 +45,7 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 
 ## Platform の Analytics データで予想される遅延はどのくらいですか。
 
-次の表に、Platform 上の Analytics データで予想される遅延を示します。  遅延は、顧客の構成、データ量、消費者のアプリケーションによって異なります。例えば、Analytics の実装が `A4T` で設定されている場合、パイプラインの遅延が 5 ～ 10 分に増えます。
+次の表に、Platform 上の Analytics データで予想される遅延を示します。 遅延は、顧客の構成、データ量、消費者のアプリケーションによって異なります。 例えば、Analytics の実装が `A4T` で設定されている場合、パイプラインの遅延が 5 ～ 10 分に増えます。
 
 | Analytics データ | 予想される遅延 |
 | -------------- | ---------------- |
@@ -91,7 +91,7 @@ The [!DNL Analytics] ソースは、これらの ID を次のように XDM 形�
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
-ID マップで、ECID が存在する場合は、イベントのプライマリ ID としてマークされます。 この場合、AAID は、 [ID サービスの猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). それ以外の場合、AAID は、イベントのプライマリ ID としてマークされます。AACUSTOMID は、イベントのプライマリ ID としてマークされることはありません。ただし、AACUSTOMID が存在する場合、AAID は操作のExperience Cloud順序に基づいて AACUSTOMID に基づきます。
+ID マップで、ECID が存在する場合は、イベントのプライマリ ID としてマークされます。 この場合、AAID は、 [ID サービスの猶予期間](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). それ以外の場合、AAID はイベントのプライマリ ID としてマークされます。 AACUSTOMID は、イベントのプライマリ ID としてマークされることはありません。ただし、AACUSTOMID が存在する場合、AAID は操作のExperience Cloud順序に基づいて AACUSTOMID に基づきます。
 
 >[!NOTE]
 >
