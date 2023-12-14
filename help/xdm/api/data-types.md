@@ -4,20 +4,24 @@ solution: Experience Platform
 title: データタイプ API エンドポイント
 description: スキーマレジストリ API の/datatypes エンドポイントを使用すると、エクスペリエンスアプリケーション内で XDM データ型をプログラムで管理できます。
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 16%
+source-wordcount: '1247'
+ht-degree: 13%
 
 ---
 
 # データタイプエンドポイント
 
-データ型は、クラスまたはスキーマフィールドグループの参照型フィールドとして、基本リテラルフィールドと同じ方法で使用されます。主な違いは、データ型が複数のサブフィールドを定義できる点です。 複数フィールド構造を一貫して使用できるという点でフィールドグループと同様ですが、データ型はスキーマ構造の任意の場所に含めることができるのに対して、ルートレベルでのみ追加できるので、より柔軟です。 この `/datatypes` エンドポイント [!DNL Schema Registry] API を使用すると、エクスペリエンスアプリケーション内のデータタイプをプログラムで管理できます。
+データ型は、クラスまたはスキーマフィールドグループの参照型フィールドとして、基本リテラルフィールドと同じ方法で使用されます。主な違いは、データ型が複数のサブフィールドを定義できる点です。 複数フィールド構造を一貫して使用できるという点でフィールドグループと同様ですが、データ型はスキーマ構造の任意の場所に含めることができるのに対して、ルートレベルでのみ追加できるので、より柔軟です。 The `/datatypes` エンドポイント [!DNL Schema Registry] API を使用すると、エクスペリエンスアプリケーション内のデータタイプをプログラムで管理できます。
+
+>[!NOTE]
+>
+>フィールドが特定のデータ型として定義されている場合、別のスキーマ内に異なるデータ型を持つ同じフィールドを作成することはできません。 この制約は、組織のテナント全体に適用されます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるエンドポイントは、 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## データタイプのリストの取得 {#list}
 
@@ -35,8 +39,8 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | データタイプの取得元のコンテナ： `global` (Adobe作成データタイプの場合 ) または `tenant` 組織が所有するデータタイプの場合。 |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
+| `{CONTAINER_ID}` | データタイプの取得元のコンテナ： `global` (Adobe作成データタイプの場合 ) または `tenant` （組織が所有するデータタイプの場合） |
+| `{QUERY_PARAMS}` | 結果をフィルタリングするためのオプションのクエリパラメーターです。 詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -54,12 +58,12 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 以下 `Accept` ヘッダーは、次のデータタイプをリストするために使用できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 次の `Accept` ヘッダーは、次のデータタイプをリストするために使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 ( 制限：300) |
-| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON データ型を元の値と共に返します `$ref` および `allOf` 含まれる ( 制限：300) |
+| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 （上限：300） |
+| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON データ型を元の値と共に返します `$ref` および `allOf` 含まれる。 （上限：300） |
 
 {style="table-layout:auto"}
 
@@ -110,7 +114,7 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | パラメーター | 説明 |
 | --- | --- |
 | `{CONTAINER_ID}` | 取得するデータ型を格納するコンテナ： `global` (Adobeが作成したデータ型の場合 ) または `tenant` 組織が所有するデータ型の場合。 |
-| `{DATA_TYPE_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索するデータ型の値です。 |
+| `{DATA_TYPE_ID}` | The `meta:altId` または URL エンコード済み `$id` 検索するデータ型の値を指定します。 |
 
 {style="table-layout:auto"}
 
@@ -128,7 +132,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 すべての検索リクエストには `version` 含まれる `Accept` ヘッダー。 以下 `Accept` ヘッダーを使用できます。
+応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 すべての検索リクエストには `version` ～に含まれる `Accept` ヘッダー。 次の `Accept` ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | ------- | ------------ |
@@ -235,7 +239,7 @@ POST /tenant/datatypes
 
 フィールドグループとは異なり、データタイプを定義する場合には、 `meta:extends` または `meta:intendedToExtend` フィールドを入れ子にする必要はありません。衝突を避けるために、フィールドを入れ子にする必要はありません。
 
-データ型自体のフィールド構造を定義する場合、 `string` または `object`を参照するか、 `$ref` 属性。 詳しくは、 [API でのカスタム XDM フィールドの定義](../tutorials/custom-fields-api.md) を参照してください。
+データ型自体のフィールド構造を定義する場合、以下のようなプリミティブ型を使用できます。 `string` または `object`を参照するか、 `$ref` 属性。 次のガイドを参照してください： [API でのカスタム XDM フィールドの定義](../tutorials/custom-fields-api.md) を参照してください。
 
 次のリクエストでは、サブプロパティを持つ「Property Construction」オブジェクトデータタイプが作成されます `yearBuilt`, `propertyType`、および `location`:
 
@@ -349,11 +353,11 @@ curl -X POST \
 }
 ```
 
-へのGETリクエストの実行 [すべてのデータタイプのリスト](#list) テナントコンテナにプロパティの詳細データ型が含まれるようになります。または、 [ルックアップ (GET) リクエストの実行](#lookup) URL エンコードされたを使用 `$id` 新しいデータ型を直接表示する URI。
+に対するGETリクエストの実行 [すべてのデータタイプのリスト](#list) テナントコンテナにプロパティの詳細データ型が含まれるようになります。または、次の操作を実行できます。 [ルックアップ (GET) リクエストの実行](#lookup) URL エンコードされたを使用 `$id` 新しいデータ型を直接表示する URI。
 
 ## データタイプの更新 {#put}
 
-データ型全体を置き換えるには、PUT操作を使用します。つまり、リソースを書き直す必要があります。 PUTリクエストを通じてデータ型を更新する場合、本文には、 [新しいデータ型の作成](#create) POST。
+データ型全体を置き換えるには、PUT操作を使用します。つまり、リソースを書き直す必要があります。 PUTリクエストを通じてデータ型を更新する場合、本文には、 [新しいデータ型の作成](#create) をPOSTします。
 
 >[!NOTE]
 >
@@ -367,7 +371,7 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | この `meta:altId` または URL エンコード済み `$id` の値を指定します。 |
+| `{DATA_TYPE_ID}` | The `meta:altId` または URL エンコード済み `$id` の値を指定します。 |
 
 {style="table-layout:auto"}
 
@@ -484,7 +488,7 @@ curl -X PUT \
 
 ## データタイプの一部を更新する {#patch}
 
-データ型の一部を更新するには、PATCHリクエストを使用します。 この [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチについて詳しくは、[API の基本ガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
+データ型の一部を更新するには、PATCHリクエストを使用します。 The [!DNL Schema Registry] は、以下を含むすべての標準的な JSON パッチ操作をサポートしています。 `add`, `remove`、および `replace`. JSON パッチについて詳しくは、[API の基本ガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
 
 >[!NOTE]
 >
@@ -498,13 +502,13 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
+| `{DATA_TYPE_ID}` | URL エンコードされた `$id` URI or `meta:altId` の値を指定します。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-以下のリクエスト例は、 `description` を追加し、 `floorSize` フィールドに入力します。
+以下のリクエスト例は、 `description` を追加し、新しい `floorSize` フィールドに入力します。
 
 リクエスト本文は配列の形式をとり、リストに表示される各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトには、実行される操作 (`op`) を呼び出し、操作を実行する必要があるフィールド (`path`) と、その操作に含める必要のある情報 (`value`) をクリックします。
 
@@ -536,7 +540,7 @@ curl -X PATCH \
 
 **応答**
 
-応答には、両方の操作が正常に実行されたことが示されます。この `description` が更新され、 `floorSize` は以下に追加されています： `definitions`.
+応答には、両方の操作が正常に実行されたことが示されます。The `description` が更新され、 `floorSize` は以下に追加されています： `definitions`.
 
 ```JSON
 {
@@ -637,7 +641,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | URL エンコードされた `$id` URI or `meta:altId` を設定します。 |
+| `{DATA_TYPE_ID}` | URL エンコードされた `$id` URI or `meta:altId` の値を指定します。 |
 
 {style="table-layout:auto"}
 

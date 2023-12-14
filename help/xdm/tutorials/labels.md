@@ -2,9 +2,9 @@
 title: スキーマのデータ使用状況ラベルの管理
 description: Adobe Experience Platform UI でデータ使用ラベルをエクスペリエンスデータモデル (XDM) スキーマフィールドに追加する方法を説明します。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
+source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '806'
 ht-degree: 10%
 
 ---
@@ -43,6 +43,10 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
 ラベルの追加を開始するには、まず [編集する既存のスキーマを選択](../ui/resources/schemas.md#edit) または [新しいスキーマの作成](../ui/resources/schemas.md#create) をクリックして、スキーマエディターで構造を表示します。
 
 個々のフィールドのラベルを編集するには、キャンバスでフィールドを選択し、「 」を選択します。 **[!UICONTROL アクセスを管理]** をクリックします。
+
+>[!IMPORTANT]
+>
+>任意のスキーマに適用できるラベルは最大 300 個です。
 
 ![スキーマエディターキャンバスからフィールドを選択します。](../images/tutorials/labels/manage-access.png)
 
