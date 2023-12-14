@@ -5,10 +5,10 @@ title: フローサービス API を使用した生データのストリーミ�
 type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 46%
+source-wordcount: '1169'
+ht-degree: 44%
 
 ---
 
@@ -486,13 +486,15 @@ curl -X POST \
 
 取り込み用に送信できる未加工または XDM 準拠の json の例については、以下のサンプルペイロードを参照してください。
 
->[!TIP]
+>[!NOTE]
 >
->次の例は、3 つすべてに適用されます。
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>データフローの作成からストリーミングデータの取り込みまでの間に、少なくとも 5 分の遅延を追加する必要があります。 これにより、データが取り込まれる前に、データフローを完全に有効にすることができます。
+
+次の例は、すべてに適用されます。
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 

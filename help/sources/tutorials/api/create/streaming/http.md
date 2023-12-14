@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；スト
 title: フローサービス API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、フローサービス API を使用して生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f94a51e22731977e120351c3b3598570666a624d
+source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 38%
+source-wordcount: '1568'
+ht-degree: 37%
 
 ---
 
@@ -563,6 +563,10 @@ curl -X POST \
 ```
 
 ## Platform に取り込む POST データ {#ingest-data}
+
+>[!NOTE]
+>
+>データフローの作成からストリーミングデータの取り込みまでの間に、少なくとも 5 分の遅延を追加する必要があります。 これにより、データが取り込まれる前に、データフローを完全に有効にすることができます。
 
 これでフローが作成され、以前に作成したストリーミングエンドポイントに JSON メッセージを送信できます。
 
