@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 93%
+source-wordcount: '1188'
+ht-degree: 92%
 
 ---
 
@@ -91,6 +91,7 @@ ht-degree: 93%
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
       * [Pinterest接続のアップグレード](./catalog/advertising/pinterest-upgrade.md)
+      * [PubMatic 接続](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads 接続](./catalog/advertising/snap-inc.md)
       * [Trade Desk 接続](./catalog/advertising/tradedesk.md)
       * [（ベータ版）The Trade Desk CRM 接続](./catalog/advertising/tradedesk-emails.md)
@@ -204,7 +205,7 @@ ht-degree: 93%
 * Destination SDK {#destination-sdk}
    * [概要](./destination-sdk/overview.md)
    * [統合の前提条件](./destination-sdk/integration-prerequisites.md)
-   * [Destination SDK のDestination SDK の基本を学ぶ](./destination-sdk/getting-started.md)
+   * [Destination SDK の概要](./destination-sdk/getting-started.md)
    * 機能 {#functionality}
       * [設定オプション](./destination-sdk/functionality/configuration-options.md)
       * 宛先サーバーコンポーネント {#destination-server}
