@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 100%
+source-wordcount: '561'
+ht-degree: 93%
 
 ---
 
@@ -80,6 +80,7 @@ ht-degree: 100%
       * [フライトの予約](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 同意](./field-groups/event/iab.md)
       * [宿泊施設の予約](./field-groups/event/lodging-reservation.md)
+      * [MediaAnalytics インタラクションの詳細](./field-groups/event/mediaanalytics-interaction.md)
       * [見積依頼の詳細](./field-groups/event/quote-request-details.md)
       * [予約の詳細](./field-groups/event/reservation-details.md)
       * [サイトツールの詳細](./field-groups/event/sitetool-details.md)
@@ -104,17 +105,22 @@ ht-degree: 100%
 * データタイプ {#data-types}
    * [アカウントの詳細](./data-types/account-details.md)
    * [広告ブレーク](./data-types/ad-break.md)
+   * [広告の詳細情報](./data-types/advertising-details-information.md)
+   * [広告ポッドの詳細情報](./data-types/advertising-pod-details-information.md)
    * [アプリケーション](./data-types/application.md)
    * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
    * [B2B ソース](./data-types/b2b-source.md)
+   * [チャプターの詳細情報](./data-types/chapter-details-information.md)
    * [コマース](./data-types/commerce.md)
    * [同意文字列](./data-types/consent-string.md)
    * [同意および環境設定](./data-types/consents.md)
    * [通貨](./data-types/currency.md)
+   * [カスタムメタデータの詳細情報](./data-types/custom-metadata-details-information.md)
    * [デバイス](./data-types/device.md)
    * [メールアドレス](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
+   * [エラーの詳細情報](./data-types/error-details-information.md)
    * [エクスペリエンスチャネル](./data-types/experience-channel.md)
    * [外部ソースシステム監査属性](./data-types/external-source-system-audit-attributes.md)
    * [金融口座](./data-types/financial-account.md)
@@ -134,17 +140,22 @@ ht-degree: 100%
    * [キーと値のペア](./data-types/key-value-pair.md)
    * [マーケティング](./data-types/marketing.md)
    * [測定](./data-types/measure.md)
+   * [メディアの詳細情報](./data-types/media-details-information.md)
+   * [メディアイベント情報](./data-types/media-event-information.md)
    * [注文](./data-types/order.md)
    * [支払い項目](./data-types/payment-item.md)
    * [人物](./data-types/person.md)
    * [氏名](./data-types/person-name.md)
    * [電話番号](./data-types/phone-number.md)
    * [場所の背景](./data-types/place-context.md)
+   * [プレーヤーステートデータ情報](./data-types/player-state-data-information.md)
    * [POI の詳細](./data-types/poi-details.md)
    * [POI インタラクション](./data-types/poi-interaction.md)
    * [住所](./data-types/postal-address.md)
    * [製品リスト項目](./data-types/product-list-item.md)
+   * [QoE データの詳細情報](./data-types/qoe-data-details-information.md)
    * [検索](./data-types/search.md)
+   * [セッションの詳細情報](./data-types/session-details-information.md)
    * [サブスクリプション](./data-types/subscription.md)
    * [通信サブスクリプション](./data-types/telecom-subscription.md)
    * [トランザクション](./data-types/transaction.md)
@@ -194,7 +205,7 @@ ht-degree: 100%
    * [スキーマへの特定フィールドの追加（API）](./tutorials/specific-fields-api.md)
    * [カスタムフィールドの定義（API）](./tutorials/custom-fields-api.md)
    * [フィールドへの推奨値の追加（API）](tutorials/suggested-values.md)
-   * [XDM フィールドの廃止UI 内](tutorials/field-deprecation-ui.md)
+   * [UI での XDM フィールドの非推奨化](tutorials/field-deprecation-ui.md)
    * [API での XDM フィールドの非推奨化](tutorials/field-deprecation-api.md)
    * [UI でのスキーマ関係の定義](tutorials/relationship-ui.md)
    * [API でのスキーマ関係の定義](tutorials/relationship-api.md)

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent クラス
 description: このドキュメントでは、XDM ExperienceEvent クラスの概要と、イベントデータモデリングのベストプラクティスについて説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 093f4881f2224d0a0c888c7be688000d31114944
+source-git-commit: ac504f588b34961dff6887167e2cd07bc0eda453
 workflow-type: tm+mt
-source-wordcount: '2667'
-ht-degree: 45%
+source-wordcount: '2663'
+ht-degree: 43%
 
 ---
 
@@ -23,12 +23,12 @@ ht-degree: 45%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `_id`<br>**(必須)** | エクスペリエンスイベントクラス `_id` フィールドは、Adobe Experience Platformに取り込まれる個々のイベントを一意に識別します。 このフィールドは、個々のイベントの一意性を追跡、データの重複を防止し、ダウンストリームのサービスでそのイベントを検索するために使用されます。 <br><br>重複イベントが検出された場合、Platform のアプリケーションとサービスでは、重複の処理方法が異なる場合があります。 例えば、同じ `_id` は既にプロファイルストアに存在します。<br><br>場合によっては、`_id` は、[ユニバーサル固有識別子（UUID）](https://datatracker.ietf.org/doc/html/rfc4122) または [グローバル固有識別子（GUID）](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)とすることができます。<br><br>ソース接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、イベントを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結できるイベントの例としては、プライマリ ID、タイムスタンプ、イベントタイプなどがあります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
+| `_id`<br>**（必須）** | エクスペリエンスイベントクラス `_id` フィールドは、Adobe Experience Platformに取り込まれる個々のイベントを一意に識別します。 このフィールドは、個々のイベントの一意性を追跡し、データの重複を防ぎ、ダウンストリームサービスでそのイベントを検索するために使用します。<br><br>重複イベントが検出された場合、Platform のアプリケーションとサービスでは、重複の処理方法が異なる場合があります。 例えば、同じ `_id` は既にプロファイルストアに存在します。<br><br>場合によっては、 `_id` は、 [UUID(Universally Unique Identifier)[UUID(Universally Unique Identifier)]](https://datatracker.ietf.org/doc/html/rfc4122) または [グローバル一意識別子 (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>ソース接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、イベントを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結できるイベントの例としては、プライマリ ID、タイムスタンプ、イベントタイプなどがあります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
 | `eventMergeId` | [Adobe Experience Platform Web SDK](../../edge/home.md) を使用してデータを取り込む場合、レコードを作成する原因となった取り込まれたバッチの ID を表します。 このフィールドは、データの取り込み時にシステムによって自動的に入力されます。 Web SDK 実装のコンテキスト以外に、このフィールドの使用はサポートされていません。 |
 | `eventType` | イベントのタイプまたはカテゴリを示す文字列。 このフィールドは、同じスキーマとデータセット内の異なるイベントタイプを区別する場合（リテール企業で製品を表示するイベントと買い物かごへの追加イベントを区別する場合など）に使用できます。<br><br>このプロパティの標準値は、[付録の節](#eventType)に記載されています（意図するユースケースの説明も含む）。このフィールドは拡張可能な列挙型で、つまり、独自のイベントタイプ文字列を使用して、追跡するイベントを分類することもできます。<br><br>`eventType` では、アプリケーションでのヒットごとに 1 つのイベントのみを使用するように制限されているので、最も重要なイベントをシステムに伝えるには、計算フィールドを使用する必要があります。 詳しくは、[計算フィールドのベストプラクティス](#calculated)の節を参照してください。 |
 | `producedBy` | イベントのプロデューサーまたはオリジンを表す文字列の値。セグメント化で必要な場合、このフィールドを使用すると特定のイベントプロデューサーを除外できます。<br><br>このプロパティの推奨値の一部が、[付録の節](#producedBy)に記載されています。このフィールドは拡張可能な列挙型で、つまり、独自の文字列を使用して、異なるイベントプロデューサーを表すこともできます。 |
 | `identityMap` | イベントが適用される個人の名前空間 ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するには、次の手順に従います。 [リアルタイム顧客プロファイル](../../profile/home.md)の場合は、データ操作でフィールドのコンテンツを手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
-| `timestamp`<br>**(必須)** | イベントが発生した時点の ISO 8601 タイムスタンプ（[RFC 3339 セクション 5.6](https://datatracker.ietf.org/doc/html/rfc3339) を準拠した書式設定）。このタイムスタンプは過去の日付にする必要があります。このフィールドの使用に関するベストプラクティスについては、以下の[タイムスタンプ](#timestamps)の節を参照してください。 |
+| `timestamp`<br>**（必須）** | イベントが発生した時点の ISO 8601 タイムスタンプ（[RFC 3339 セクション 5.6](https://datatracker.ietf.org/doc/html/rfc3339) を準拠した書式設定）。このタイムスタンプは過去の日付にする必要があります。このフィールドの使用に関するベストプラクティスについては、以下の[タイムスタンプ](#timestamps)の節を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -65,12 +65,12 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 アドビでは、 [!DNL XDM ExperienceEvent] クラスで使用するためのいくつかの標準フィールドグループを提供しています。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
 * [[!UICONTROL Adobe Analytics ExperienceEvent Full 拡張機能]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL 残高繰り越し]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL 残高移動]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL キャンペーンマーケティング詳細]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL カードのアクション]](../field-groups/event/card-actions.md)
+* [[!UICONTROL カードアクション]](../field-groups/event/card-actions.md)
 * [[!UICONTROL チャンネル詳細]](../field-groups/event/channel-details.md)
 * [[!UICONTROL コマース詳細]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL 入金明細]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL 預金の詳細]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL デバイス下取り詳細]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 食事予約]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL エンドユーザー ID 詳細]](../field-groups/event/enduserids.md)
@@ -78,6 +78,7 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 * [[!UICONTROL フライト予約]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 同意]](../field-groups/event/iab.md)
 * [[!UICONTROL 宿泊予約]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics インタラクションの詳細]](../field-groups/event/mediaanalytics-interaction.md)
 * [[!UICONTROL 見積依頼の詳細]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL 予約詳細]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web 詳細]](../field-groups/event/web-details.md)
