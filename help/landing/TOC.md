@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform でガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
-source-git-commit: a3ba26fd6ee7b473d74cc3cf3d142e0f3ff069bb
+source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 89%
+source-wordcount: '281'
+ht-degree: 87%
 
 ---
 
@@ -75,6 +75,7 @@ ht-degree: 89%
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
    * [ライセンス使用状況ダッシュボード](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Adobe Journey Optimizer Guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analyticsガードレール](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [Real-Time CDP Guardrails](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [Gen2 Data Lake の移行](adls2-gen2-migration.md)
