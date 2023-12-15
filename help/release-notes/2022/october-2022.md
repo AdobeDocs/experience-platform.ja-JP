@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2022年10月
 description: Adobe Experience Platform の 2022年10月のリリースノート。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1135'
 ht-degree: 100%
 
 ---
@@ -101,7 +101,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 | 機能 | 説明 |
 | --- | --- |
 | Platform UI によるクエリの監視 | クエリサービスの「[!UICONTROL 予定クエリ]」タブでは、UI を使用して、すべてのクエリジョブのステータスをより明確に表示できます。「[!UICONTROL 予定クエリ]」タブから、エラーメッセージや失敗した場合のコードなど、クエリ実行のステータスに関する重要な情報を確認できるようになりました。これらのクエリのステータスに基づいて、UI を使用して、アラートを購読することもできます。この機能について詳しくは、[クエリドキュメントの監視](../../query-service/ui/monitor-queries.md)を参照してください。 |
-| クエリ高速化レポートインサイトデータモデル | Data Distiller SKU の一部として、クエリ高速化ストアを使用すると、データから重要なインサイトを得るために必要な時間と処理能力を削減できます。クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存の Adobe Real-time Customer Data Platform データモデルを拡張したりして、レポートインサイトとそのビジュアライゼーションを改善できます。この機能について詳しくは、[クエリ高速化ストアレポートインサイトのドキュメント](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md)を参照してください。 |
+| クエリ高速化レポートインサイトデータモデル | Data Distiller SKU の一部として、クエリ高速化ストアを使用すると、データから重要なインサイトを得るために必要な時間と処理能力を削減できます。クエリ高速化ストアを使用すると、カスタムデータモデルを作成したり、既存の Adobe Real-time Customer Data Platform データモデルを拡張したりして、レポートインサイトとそのビジュアライゼーションを改善できます。この機能について詳しくは、[クエリ高速化ストアレポートインサイトのドキュメント](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md)を参照してください。 |
 
 {style="table-layout:auto"}
 

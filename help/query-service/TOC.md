@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
+source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 86%
+source-wordcount: '313'
+ht-degree: 84%
 
 ---
 
@@ -26,9 +26,10 @@ ht-degree: 86%
       - [概要](data-distiller/derived-datasets/overview.md)
       - [シームレスな SQL フロー](data-distiller/derived-datasets/seamless-sql-flow.md)
       - [デシルベースの派生データセットの作成](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - クエリ高速化ストア {#query-accelerated-store}
-      - [高速クエリの送信](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-      - [レポートインサイトデータモデルガイド](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - 拡張されたアプリレポート用にカスタマイズ可能なインサイト {#customizable-insights}
+      - [概要](data-distiller/customizable-insights/overview.md)
+      - [高速クエリの送信](data-distiller/customizable-insights/send-accelerated-queries.md)
+      - [レポートインサイトデータモデルガイド](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI/ML 機能パイプライン {#ml-feature-pipelines}
       - [概要](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks に接続](data-distiller/ml-feature-pipelines/establish-connection.md)

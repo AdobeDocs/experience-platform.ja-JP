@@ -2,10 +2,10 @@
 title: クエリサービスでのデータガバナンス
 description: この概要では、Experience Platformクエリサービスのデータガバナンスの主な要素について説明します。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3132'
-ht-degree: 3%
+source-wordcount: '3129'
+ht-degree: 2%
 
 ---
 
@@ -93,7 +93,7 @@ The `CREATE VIEW` キーワードは、クエリのビューを定義します�
 
 #### 高速データセットに対するフィールドベースのアクセス制限の作成 {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-を使用 [属性ベースのアクセス制御機能](../../access-control/abac/overview.md) ファクトデータセットとディメンションデータセットに基づいて、組織またはデータの使用範囲を定義できます。 [加速貯蔵](../data-distiller/query-accelerated-store/send-accelerated-queries.md). これにより、管理者は特定のセグメントへのアクセスを管理し、ユーザーまたはユーザーグループに与えられるアクセスをより適切に管理できます。
+を使用 [属性ベースのアクセス制御機能](../../access-control/abac/overview.md) ファクトデータセットとディメンションデータセットに基づいて、組織またはデータの使用範囲を定義できます。 [加速貯蔵](../data-distiller/customizable-insights/send-accelerated-queries.md). これにより、管理者は特定のセグメントへのアクセスを管理し、ユーザーまたはユーザーグループに与えられるアクセスをより適切に管理できます。
 
 高速データセットに対してフィールドベースのアクセス制限を作成するには、クエリサービス CTAS クエリを使用して高速データセットを作成し、既存の XDM スキーマまたはアドホックスキーマに基づいてこれらのデータセットを構築します。 管理者が [スキーマのデータ使用状況ラベルの追加と編集](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) または [アドホックスキーマ](./ad-hoc-schema-labels.md#edit-governance-labels). スキーマに対して、 [!UICONTROL ラベル] ワークスペース ( [!UICONTROL スキーマ] UI
 
