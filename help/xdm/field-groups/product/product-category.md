@@ -1,11 +1,11 @@
 ---
 title: 製品カテゴリスキーマフィールドグループ
-description: このドキュメントでは、「製品カテゴリ」スキーマフィールドグループの概要を説明します。
+description: 「製品カテゴリ」スキーマフィールドグループについて説明します。
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 8%
+source-wordcount: '86'
+ht-degree: 9%
 
 ---
 

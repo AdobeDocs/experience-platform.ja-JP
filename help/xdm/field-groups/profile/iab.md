@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；iab;tcf；同意；
 solution: Experience Platform
 title: プロファイルスキーマ用の IAB TCF 2.0 同意フィールドグループ
-description: このドキュメントでは、XDM Individual Profile クラスの IAB TCF 2.0 同意スキーマフィールドグループの概要を説明します。
+description: XDM Individual Profile クラスの IAB TCF 2.0 同意スキーマフィールドグループについて説明します。
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '321'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 ID 値ごとに、 `identityIABConsent` プロパティを指定する必要があります。このプロパティは、ID の TCF 同意値を提供します。 このプロパティの値は、 [[!UICONTROL 同意文字列] データタイプ](../../data-types/consent-string.md).
 
-詳しくは、 [Platform での IAB TCF 2.0 のサポート](../../../landing/governance-privacy-security/consent/iab/overview.md) を参照してください。 フィールドグループ自体について詳しくは、パブリック XDM リポジトリを参照してください。
+次のガイドを参照してください： [Platform での IAB TCF 2.0 のサポート](../../../landing/governance-privacy-security/consent/iab/overview.md) を参照してください。 フィールドグループ自体について詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

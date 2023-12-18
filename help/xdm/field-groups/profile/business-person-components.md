@@ -1,11 +1,11 @@
 ---
 title: XDM ビジネス人物コンポーネントスキーマフィールドグループ
-description: このドキュメントでは、XDM ビジネスユーザーコンポーネントスキーマフィールドグループの概要を説明します。
+description: XDM ビジネスユーザーコンポーネントスキーマフィールドグループについて説明します。
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 6%
+source-wordcount: '514'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 6%
 >取り込みパターンに従う必要があります ( [ソースドキュメント](../../../rtcdp/sources/b2b.md). その他のフィールドマッピングメソッドは、動作を保証するものではありません。
 >
 >例えば、 `personComponents` 配列は、標準の取り込みパターンで個別に送信され、Platform によって配列に追加されます。 オブジェクトの配列を Business Person コンポーネントに手動で追加すると、エラーが返されます。
->B2B データのスキーマを作成する場合は、自動生成ユーティリティを使用する必要があります。 の使用方法については、ドキュメントを参照してください [B2B 名前空間とスキーマ自動生成ユーティリティ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). 自動生成ユーティリティを使用せず、データモデルを手動でマッピングする場合は、 [Adobe Real-time Customer Data Platform B2B Edition XDM クラス](../../../rtcdp/schemas/b2b.md) を参照してください。
+>B2B データのスキーマを作成する場合は、自動生成ユーティリティを使用する必要があります。 の使用方法については、ドキュメントを参照してください。 [B2B 名前空間とスキーマ自動生成ユーティリティ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). 自動生成ユーティリティを使用せず、データモデルを手動でマッピングする場合は、 [Adobe Real-time Customer Data Platform B2B Edition XDM クラス](../../../rtcdp/schemas/b2b.md) を参照してください。
 >
 >詳しくは、 [エンドツーエンドのチュートリアル](../../../rtcdp/b2b-tutorial.md) を参照してください。
 
@@ -35,7 +35,7 @@ ht-degree: 6%
 | `sourceExternalKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | 個人のデータの元となったソースシステムの複合識別子。 |
 | `sourcePersonKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | 人物の複合識別子。 |
 | `workEmail` | [[!UICONTROL メールアドレス]](../../data-types/b2b-source.md) | 人物の仕事用電子メール ID。 |
-| `personGroupID` | 文字列 | 人物のグループ識別子。 |
+| `personGroupID` | 文字列 | 人物のグループ ID。 |
 | `personScore` | 文字列 | CRM システムによって個人に対して生成されたスコア。 |
 | `personSource` | 文字列 | 個人のデータの送信元のソースシステムの一意の文字列ベースの識別子。 |
 | `personStatus` | 文字列 | 人物の現在のマーケティングまたは販売のステータス。 |
@@ -50,4 +50,4 @@ ht-degree: 6%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.schema.json)

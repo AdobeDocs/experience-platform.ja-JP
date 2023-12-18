@@ -1,11 +1,11 @@
 ---
 title: カードアクションスキーマフィールドグループ
-description: このドキュメントでは、「カードアクション」スキーマフィールドグループの概要を説明します。
+description: 「カードアクション」スキーマフィールドグループについて説明します。
 exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 7%
+source-wordcount: '176'
+ht-degree: 8%
 
 ---
 

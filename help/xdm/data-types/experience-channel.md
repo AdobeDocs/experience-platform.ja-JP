@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；Web ページの詳細；データ型；データ型；データ型；web ページ
 solution: Experience Platform
 title: Experience Channel データタイプ
-description: このドキュメントでは、エクスペリエンスチャネルエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
+description: エクスペリエンスチャネルエクスペリエンスデータモデル (XDM) データタイプについて説明します。
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 22%
+source-wordcount: '244'
+ht-degree: 24%
 
 ---
 
 # [!UICONTROL Experience チャネル] データタイプ
 
-[!UICONTROL Experience チャネル] は、エクスペリエンスチャネルを記述する標準のエクスペリエンスデータモデル (XDM) データ型です。 エクスペリエンスチャネルは、デジタルエクスペリエンスの利用方法またはパスを表します。
+[!UICONTROL Experience チャネル] は、エクスペリエンスチャネルを記述する標準のエクスペリエンスデータモデル (XDM) データ型です。 エクスペリエンスチャネルは、デジタルエクスペリエンスを利用する方法またはパスを表します。
 
 複数のエクスペリエンスチャネルがあり、それぞれにコンテンツの配信方法、顧客インタラクションの観測方法、データの収集方法に関する制約があります。 チャネル内では、エクスペリエンスを特定の場所に配信できます。 チャネル内に存在するロケーションの場所とタイプは、チャネルによって異なります。
 
@@ -36,4 +36,4 @@ ht-degree: 22%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)

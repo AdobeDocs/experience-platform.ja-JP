@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；地域；データ型；データ型；データ型；
 solution: Experience Platform
 title: 地域データタイプ
-description: このドキュメントでは、地域 XDM データタイプの概要を説明します。
+description: Geo XDM データタイプについて説明します。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 36%
+source-wordcount: '174'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 36%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL 地理座標]](./geo-coordinates.md) | 場所の地理的座標を表します。 |
+| `_schema` | [[!UICONTROL 地域座標]](./geo-coordinates.md) | 場所の地理的座標を表します。 |
 | `_id` | 文字列 | システムで生成された、座標の一意の ID。 |
 | `city` | 文字列 | 市区町村の名前。 |
 | `countryCode` | 文字列 | 国の 2 文字の <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> コード。 |
@@ -33,4 +33,4 @@ ht-degree: 36%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM システムの概要
 description: 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '2087'
-ht-degree: 100%
+source-wordcount: '2083'
+ht-degree: 99%
 
 ---
 
@@ -19,7 +19,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 XDM は、Experience Platform が提供する Adobe Experience Cloud が、適切なタイミングに、適切なチャネル経由で、適切な相手へと適切なメッセージを届けることを可能にする、基本的なフレームワークです。Experience Platform の基礎となる XDM システムは、[!DNL Experience Data Model] スキーマを Platform サービスで操作できるようにします。
 
-このドキュメントでは、Experience Platform 内における XDM システムの役割の概要について説明します。
+Experience Platform内での XDM システムの役割について説明します。
 
 ## XDM スキーマ
 

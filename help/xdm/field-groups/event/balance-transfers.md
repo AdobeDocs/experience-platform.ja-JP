@@ -1,11 +1,11 @@
 ---
 title: 残高転送スキーマフィールドグループ
-description: このドキュメントでは、「残高移動」スキーマ・フィールド・グループの概要を示します。
+description: 「残高移動」スキーマ・フィールド・グループの詳細を説明します。
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 7%
+source-wordcount: '101'
+ht-degree: 3%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 7%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `accountFrom` | [[!UICONTROL 金融口座]](../../data-types/financial-account.md) | 残高の転送元の金融口座を表します。 |
-| `accountTo` | [[!UICONTROL 金融口座]](../../data-types/financial-account.md) | 残高の転送先の金融口座を表します。 |
+| `accountFrom` | [[!UICONTROL 金融口座]](../../data-types/financial-account.md) | 残高の振り替え元の金融口座を表します。 |
+| `accountTo` | [[!UICONTROL 金融口座]](../../data-types/financial-account.md) | 残高の振り替え先の金融口座を表します。 |
 | `transaction` | [[!UICONTROL トランザクション]](../../data-types/transaction.md) | 残高移動に関連する金融トランザクションを記述します。 |
 
 {style="table-layout:auto"}

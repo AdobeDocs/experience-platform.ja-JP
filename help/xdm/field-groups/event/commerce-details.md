@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；
 solution: Experience Platform
 title: コマース詳細スキーマフィールドグループ
-description: このドキュメントでは、「コマース詳細」スキーマフィールドグループの概要を説明します。
+description: コマース詳細スキーマフィールドグループについて説明します。
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 13%
+source-wordcount: '158'
+ht-degree: 15%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 13%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `commerce` | [Commerce](../../data-types/commerce.md) | 製品の返品、保証登録、買い物かご/注文プロセスを表すオブジェクト。 |
+| `commerce` | [コマース](../../data-types/commerce.md) | 製品の返品、保証登録、買い物かご/注文プロセスを表すオブジェクト。 |
 | `productListItems` | の配列 [製品リスト項目](../../data-types/product-list-item.md) | 顧客が選択した製品を表す項目のリストで、特定の時点での特定のオプションと価格（製品レコードと異なる場合があります）を含みます。 |
 
 {style="table-layout:auto"}
@@ -31,4 +31,4 @@ ht-degree: 13%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.schema.json)

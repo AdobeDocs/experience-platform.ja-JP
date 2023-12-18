@@ -1,11 +1,11 @@
 ---
 title: 実装の詳細データタイプ
-description: このドキュメントでは、実装の詳細なエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
+description: 実装の詳細のエクスペリエンスデータモデル (XDM) データタイプについて説明します。
 exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 13%
+source-wordcount: '101'
+ht-degree: 7%
 
 ---
 
@@ -26,4 +26,4 @@ ht-degree: 13%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)

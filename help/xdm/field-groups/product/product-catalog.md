@@ -1,11 +1,11 @@
 ---
 title: 商品カタログスキーマフィールドグループ
-description: このドキュメントでは、製品カタログスキーマフィールドグループの概要を説明します。
+description: 製品カタログスキーマフィールドグループについて説明します。
 exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 7%
+source-wordcount: '70'
+ht-degree: 8%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: XDM ビジネスマーケティングリストメンバークラス
-description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスマーケティングリストメンバークラスの概要を説明します。
+description: エクスペリエンスデータモデル (XDM) の XDM ビジネスマーケティングリストメンバークラスについて説明します。
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 6%
+source-wordcount: '325'
+ht-degree: 2%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 6%
 | `marketingListMemberKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | マーケティングリストメンバーシップエンティティの複合識別子。 |
 | `personKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | マーケティングリストのメンバーである人物の複合識別子。 |
 | `_id` | 文字列 | レコードの一意の ID。 これは、 `marketingListMemberID`. |
-| `isDeleted` | ブール値 | このマーケティングリストメンバーエンティティがMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 設定別 `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
+| `isDeleted` | ブール値 | このマーケティングリストメンバーエンティティがMarketo Engageで削除されたかどうかを示します。<br><br>を使用する場合、 [Marketoソースコネクタ](../../../sources/connectors/adobe-applications/marketo/marketo.md)を指定した場合、Marketoで削除されたレコードは自動的にリアルタイム顧客プロファイルに反映されます。 ただし、これらのプロファイルに関連するレコードは、データレイク内で引き続き保持される場合があります。 次の設定を使用： `isDeleted` から `true`の場合は、フィールドを使用して、データレイクに対するクエリを実行する際に、ソースから削除されたレコードを除外できます。 |
 | `marketingListID` | 文字列 | マーケティングリストの一意の ID。 |
 | `marketingListMemberID` | 文字列 | マーケティングリストメンバーシップエンティティの一意の ID。 |
 | `personId` | 文字列 | 人物の一意の ID。 |
 
 {style="table-layout:auto"}
 
-詳しくは、 [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md) このクラスが他の B2B クラスと概念的にどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法を学びます。
+次のガイドを参照してください： [Real-Time CDP B2B Edition のスキーマ関係](../../tutorials/relationship-b2b.md) このクラスが他の B2B クラスと概念的にどのように関連しているか、およびAdobe Experience Platform UI でこれらの関係を確立する方法を学びます。

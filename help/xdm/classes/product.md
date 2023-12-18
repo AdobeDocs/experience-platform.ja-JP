@@ -1,11 +1,11 @@
 ---
 title: 製品クラス
-description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の Product クラスの概要を説明します。
+description: エクスペリエンスデータモデル (XDM) の Product クラスについて説明します。
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
-source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 20%
+source-wordcount: '200'
+ht-degree: 15%
 
 ---
 
@@ -32,5 +32,5 @@ ht-degree: 20%
 
 Adobeには、 [!UICONTROL 製品] クラス。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
-* [[!UICONTROL 製品カタログ]](../field-groups/product/product-catalog.md)
+* [[!UICONTROL 商品カタログ]](../field-groups/product/product-catalog.md)
 * [[!UICONTROL 製品カテゴリ]](../field-groups/product/product-category.md)

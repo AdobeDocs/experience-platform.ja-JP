@@ -1,11 +1,11 @@
 ---
 title: 預金詳細スキーマフィールドグループ
-description: このドキュメントでは、「預金詳細」スキーマフィールドグループの概要を説明します。
+description: 預金詳細スキーマフィールドグループについて説明します。
 exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 7%
+source-wordcount: '94'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 7%
 | --- | --- | --- |
 | `account` | [[!UICONTROL 金融口座]](../../data-types/financial-account.md) | 預金に関連付けられた金融口座を表します。 |
 | `transaction` | [[!UICONTROL トランザクション]](../../data-types/transaction.md) | 預金に関連する金融トランザクションを記述します。 |
-| `mobileDeposit` | [!UICONTROL ブール値] | 預金がモバイルプラットフォームを通じて行われたかどうかを示します。 |
+| `mobileDeposit` | [!UICONTROL ブール型] | 預金がモバイルプラットフォームを通じて行われたかどうかを示します。 |
 
 {style="table-layout:auto"}
 

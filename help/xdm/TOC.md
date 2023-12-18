@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
-source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
+source-git-commit: f0d437743b33818c27de94eb522227bb950e60cb
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 93%
+source-wordcount: '589'
+ht-degree: 89%
 
 ---
 
@@ -58,16 +58,20 @@ ht-degree: 93%
       * [ヘルスケア会員の詳細](./field-groups/profile/healthcare-member-details.md)
       * [ロイヤルティの詳細](./field-groups/profile/loyalty-details.md)
       * [個人の連絡先の詳細](./field-groups/profile/personal-contact-details.md)
+      * [プロファイルパートナーエンリッチメント（サンプル）](./field-groups/profile/profile-partner-enrichment.md)
       * [セグメントメンバーシップの詳細](./field-groups/profile/segmentation.md)
       * [通信サブスクリプション](./field-groups/profile/telecom-subscription.md)
       * [仕事用連絡先の詳細](./field-groups/profile/work-contact-details.md)
       * [XDM ビジネスパーソンのコンポーネント](./field-groups/profile/business-person-components.md)
       * [XDM ビジネスパーソンの詳細](./field-groups/profile/business-person-details.md)
+   * XDM 個別見込み客プロファイル {#prospect-profile}
+      * [パートナー見込み客の詳細（例）](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics の完全拡張機能](./field-groups/event/analytics-full-extension.md)
       * [広告の詳細](./field-groups/event/advertising-details.md)
       * [アプリケーションの詳細](./field-groups/event/application-details.md)
       * [残高繰り越し](./field-groups/event/balance-transfers.md)
+      * [ボット検出](./field-groups/event/bot-detection-information.md)
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
       * [カードのアクション](./field-groups/event/card-actions.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
@@ -105,14 +109,18 @@ ht-degree: 93%
 * データタイプ {#data-types}
    * [アカウントの詳細](./data-types/account-details.md)
    * [広告ブレーク](./data-types/ad-break.md)
+   * [Address](./data-types/address.md)
    * [広告の詳細情報](./data-types/advertising-details-information.md)
    * [広告ポッドの詳細情報](./data-types/advertising-pod-details-information.md)
    * [アプリケーション](./data-types/application.md)
    * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
    * [B2B ソース](./data-types/b2b-source.md)
+   * [買い物かご](./data-types/cart.md)
+   * [カテゴリデータ](./data-types/category-data.md)
    * [チャプターの詳細情報](./data-types/chapter-details-information.md)
-   * [コマース](./data-types/commerce.md)
+   * [Commerce](./data-types/commerce.md)
+   * [コマース範囲](./data-types/commerce-scope.md)
    * [同意文字列](./data-types/consent-string.md)
    * [同意および環境設定](./data-types/consents.md)
    * [通貨](./data-types/currency.md)
@@ -153,9 +161,14 @@ ht-degree: 93%
    * [POI インタラクション](./data-types/poi-interaction.md)
    * [住所](./data-types/postal-address.md)
    * [製品リスト項目](./data-types/product-list-item.md)
+   * [払い戻し項目](./data-types/refund-item.md)
+   * [購買依頼リスト](./data-types/requisition-list.md)
+   * [戻る](./data-types/return.md)
+   * [項目を返す](./data-types/return-item.md)
    * [QoE データの詳細情報](./data-types/qoe-data-details-information.md)
    * [検索](./data-types/search.md)
    * [セッションの詳細情報](./data-types/session-details-information.md)
+   * [送料](./data-types/shipping.md)
    * [サブスクリプション](./data-types/subscription.md)
    * [通信サブスクリプション](./data-types/telecom-subscription.md)
    * [トランザクション](./data-types/transaction.md)

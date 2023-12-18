@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；スキーマグループ；フィールドグループ；enduserids;end-user;end user;ids;
 solution: Experience Platform
 title: エンドユーザー ID 詳細スキーマフィールドグループ
-description: このドキュメントでは、「 End User ID Details 」スキーマフィールドグループの概要を説明します。
+description: エンドユーザー ID 詳細スキーマフィールドグループについて説明します。
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 14%
+source-wordcount: '200'
+ht-degree: 16%
 
 ---
 
@@ -38,4 +38,4 @@ ht-degree: 14%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)

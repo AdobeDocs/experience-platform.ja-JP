@@ -1,10 +1,10 @@
 ---
 title: 薬のクラス
-description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の Medigure クラスの概要を説明します。
+description: Experience Data Model(XDM) の Pedicuration クラスについて説明します。
 exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '145'
 ht-degree: 4%
 
 ---

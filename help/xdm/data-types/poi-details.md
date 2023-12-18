@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；poi;poi 詳細；目標点の詳細；データ型；データ型；
 solution: Experience Platform
 title: 目標点の詳細データタイプ
-description: このドキュメントでは、目標地点の詳細の XDM データタイプの概要を説明します。
+description: 目標地点の詳細の XDM データ型について説明します。
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 20%
+source-wordcount: '180'
+ht-degree: 16%
 
 ---
 
 # [!UICONTROL 目標地点の詳細] データタイプ
 
-[!UICONTROL 目標地点の詳細] は、イベントが観測された地理関連データを記述する標準 XDM データ型です。
+[!UICONTROL 目標地点の詳細] は、イベントが観測された地域関連のデータを記述する標準 XDM データ型です。
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
@@ -33,4 +33,4 @@ ht-degree: 20%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)

@@ -1,10 +1,10 @@
 ---
 title: アップセル詳細スキーマフィールドグループ
-description: このドキュメントでは、アップセル詳細スキーマフィールドグループの概要を説明します。
+description: アップセル詳細スキーマフィールドグループについて説明します。
 exl-id: 6b69805d-03bc-489b-945a-03e61b99842e
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '126'
 ht-degree: 3%
 
 ---
@@ -27,4 +27,4 @@ ht-degree: 3%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.schema.json)

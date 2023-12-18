@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；測定；データ型；データ型；
 solution: Experience Platform
 title: 測定データタイプ
-description: このドキュメントでは、エクスペリエンスデータモデル (XDM) データタイプの測定の概要を説明します。
+description: Measure Experience Data Model(XDM) データタイプについて説明します。
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '204'
 ht-degree: 5%
 
 ---
@@ -27,4 +27,4 @@ ht-degree: 5%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.schema.json)

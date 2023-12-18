@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；iab;tcf；同意；
 solution: Experience Platform
 title: イベントスキーマ用の IAB TCF 2.0 同意フィールドグループ
-description: このドキュメントでは、XDM ExperienceEvent クラスの IAB TCF 2.0 同意スキーマフィールドグループの概要を説明します。
+description: XDM ExperienceEvent クラスの IAB TCF 2.0 同意スキーマフィールドグループについて説明します。
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '233'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-詳しくは、 [Platform での IAB TCF 2.0 のサポート](../../../landing/governance-privacy-security/consent/iab/overview.md) を参照してください。 フィールドグループ自体について詳しくは、パブリック XDM リポジトリを参照してください。
+次のガイドを参照してください： [Platform での IAB TCF 2.0 のサポート](../../../landing/governance-privacy-security/consent/iab/overview.md) を参照してください。 フィールドグループ自体について詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

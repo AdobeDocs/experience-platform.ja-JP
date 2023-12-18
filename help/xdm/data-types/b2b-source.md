@@ -1,11 +1,11 @@
 ---
 title: B2B ソースデータタイプ
-description: このドキュメントでは、B2B ソースエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
+description: B2B ソースエクスペリエンスデータモデル (XDM) データタイプについて説明します。
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 2%
+source-wordcount: '236'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 文字列ベースの識別子のみに依存する場合、複数のシステム間で ID が重複する場合があります（例えば、1 つの CRM システムで文字列 ID を割り当てる場合は、同じ ID でまったく異なるオポチュニティを参照する場合があります）。 その結果、 [リアルタイム顧客プロファイル](../../profile/home.md).
 
-この [!UICONTROL B2B ソース] データ型を使用すると、エンティティの元の文字列 ID を使用し、それをソース固有のコンテキスト情報と組み合わせて、元のソースに関係なく、Platform システム内で完全に一意の状態を維持できます。
+The [!UICONTROL B2B ソース] データ型を使用すると、エンティティの元の文字列 ID を使用し、それをソース固有のコンテキスト情報と組み合わせて、元のソースに関係なく、Platform システム内で完全に一意の状態を維持できます。
 
 ![B2B ソース構造](../images/data-types/b2b-source.png)
 
@@ -31,4 +31,4 @@ ht-degree: 2%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.schema.json)

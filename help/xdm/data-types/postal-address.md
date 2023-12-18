@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；スキーマ；アドレス；xdm:address；データ型；データ型；
 solution: Experience Platform
-title: 郵送先住所データタイプ
-description: このドキュメントでは、 Postal Address XDM データタイプの概要を説明します。
+title: 郵送先住所のデータタイプ
+description: Postal Address XDM データタイプについて説明します。
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 22%
+source-wordcount: '313'
+ht-degree: 25%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 22%
 | `city` | 市区町村の名前。 |
 | `country` | 政府が管理する領土の名前。これは、任意の言語で国名を付けることができる自由形式のフィールドです。 |
 | `countryCode` | 国の 2 文字の <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> コード。 |
-| `createdByBatchID` | アドレスレコードを作成した、取得したバッチファイルの ID。 |
+| `createdByBatchID` | アドレスレコードを作成した、取り込んだバッチファイルの ID。 |
 | `dmaID` | Nielsen メディア研究が指定された市場領域。 |
 | `label` | アドレスの自由形式の名前。 |
 | `lastVerifiedDate` | アドレスが人物に関連付けられていることを最後に検証した日付。 |
@@ -44,4 +44,4 @@ ht-degree: 22%
 郵送先住所のデータタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)

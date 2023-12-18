@@ -1,11 +1,11 @@
 ---
 title: インプレッションデータタイプ
-description: このドキュメントでは、インプレッション XDM データタイプの概要を説明します。
+description: Impressions XDM データタイプについて説明します。
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 5%
+source-wordcount: '115'
+ht-degree: 6%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 5%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)

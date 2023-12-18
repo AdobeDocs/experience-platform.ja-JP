@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；予約；食事；
 title: 食事予約スキーマフィールドグループ
-description: このドキュメントでは、「食事の予約スキーマ」フィールドグループの概要を説明します。
+description: 「食事の予約スキーマ」フィールドグループについて説明します。
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '435'
 ht-degree: 6%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 6%
 
 ## `diningReservations`
 
-`diningReservations` は、食事の予約のリストを表すオブジェクトの配列です。 予約イベントが、1 日の異なる時間帯に複数の異なるレストランでの予約を含む場合、例えば、これらの予約は、個々のオブジェクトとして以下に示すことができます。 `diningReservations` 1 つのイベント用。
+`diningReservations` は、食事の予約のリストを表すオブジェクトの配列です。 予約イベントが、1 日の異なる時間帯に複数の異なるレストランで予約を行う場合、例えば、個々のオブジェクトとして、以下に挙げることができます。 `diningReservations` 1 つのイベント用。
 
 の下に提供される各オブジェクトの構造 `diningReservations` は以下に示します。
 
@@ -33,7 +33,7 @@ ht-degree: 6%
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `ID` | 文字列 | 予約番号または識別子。 |
-| `cancellation` | 整数 | この値は、予約がキャンセルされるとキャプチャされます。 |
+| `cancellation` | 整数 | この値は、予約がキャンセルされると取り込まれます。 |
 | `confirmationNumber` | 文字列 | 予約確認番号または識別子。 |
 | `created` | 整数 | この値は、予約が作成されるとキャプチャされます。 |
 | `cuisine` | 整数 | レストランの料理のタイプ。 |
@@ -62,4 +62,4 @@ ht-degree: 6%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.schema.json)

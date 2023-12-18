@@ -1,10 +1,10 @@
 ---
 title: アップグレード詳細スキーマフィールドグループ
-description: このドキュメントでは、「アップグレードの詳細」スキーマフィールドグループの概要を説明します。
+description: 「アップグレードの詳細」スキーマフィールドグループについて説明します。
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '126'
 ht-degree: 3%
 
 ---
@@ -27,4 +27,4 @@ ht-degree: 3%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.schema.json)

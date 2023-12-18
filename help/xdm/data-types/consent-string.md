@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: 同意文字列データタイプ
-description: このドキュメントでは、同意文字列 XDM データタイプの概要を説明します。
+description: 同意文字列 XDM データタイプについて説明します。
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 4%
+source-wordcount: '176'
+ht-degree: 5%
 
 ---
 
@@ -29,4 +29,4 @@ ht-degree: 4%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.schema.json)

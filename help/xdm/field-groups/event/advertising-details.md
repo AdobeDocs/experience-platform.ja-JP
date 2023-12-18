@@ -1,11 +1,11 @@
 ---
 title: 広告詳細スキーマフィールドグループ
-description: このドキュメントでは、「広告の詳細」スキーマフィールドグループの概要を説明します。
+description: 広告詳細スキーマフィールドグループについて説明します。
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 21%
+source-wordcount: '992'
+ht-degree: 15%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 21%
 
 [!UICONTROL 広告の詳細] は、 [[!DNL XDM ExperienceEvent] クラス](../../classes/experienceevent.md). フィールドグループには、 `advertising` オブジェクトをスキーマに追加します。
 
-![フィールドグループ構造](../../images/field-groups/advertising-details/structure.png)
+![フィールドグループの構造](../../images/field-groups/advertising-details/structure.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
@@ -36,7 +36,7 @@ ht-degree: 21%
 
 ## `adAssetReference` {#adAssetReference}
 
-この `adAssetReference` オブジェクトは、広告に関するアセット情報をキャプチャします。
+The `adAssetReference` オブジェクトは、広告に関するアセット情報をキャプチャします。
 
 ![adAssetReference 構造](../../images/field-groups/advertising-details/adAssetReference.png)
 
@@ -45,32 +45,32 @@ ht-degree: 21%
 | `_dc.title` | 文字列 | 人間が読み取り可能な、わかりやすい広告アセットの名前。 |
 | `_xmpDM.duration` | 整数 | アセットの長さまたは期間（秒）。 |
 | `_id` | 文字列 | 広告アセットの一意の識別子 ( [広告 ID 標準](https://datatracker.ietf.org/doc/html/rfc8107). |
-| `advertiser` | 文字列 | 広告で取り上げられている製品の会社またはブランド. |
-| `campaign` | 文字列 | 広告キャンペーンの ID. |
-| `creativeID` | 文字列 | 広告クリエイティブの ID. |
-| `creativeURL` | 文字列 | 広告クリエイティブの URL. |
-| `placementID` | 文字列 | 広告のプレースメント ID. |
-| `siteID` | 文字列 | 広告サイトの ID. |
+| `advertiser` | 文字列 | 広告で商品が取り上げられる会社またはブランド。 |
+| `campaign` | 文字列 | 広告キャンペーンの ID。 |
+| `creativeID` | 文字列 | 広告クリエイティブの ID。 |
+| `creativeURL` | 文字列 | 広告クリエイティブの URL。 |
+| `placementID` | 文字列 | 広告のプレースメント ID。 |
+| `siteID` | 文字列 | 広告サイトの ID。 |
 
 {style="table-layout:auto"}
 
 ## `adAssetViewDetails` {#adAssetViewDetails}
 
-この `adAssetViewDetails` オブジェクトは、広告再生の表示の詳細をキャプチャします。
+The `adAssetViewDetails` オブジェクトは、広告再生の表示の詳細をキャプチャします。
 
-![adAssetViewDetails 構造](../../images/field-groups/advertising-details/adAssetViewDetails.png)
+![adAssetViewDetails 構造体](../../images/field-groups/advertising-details/adAssetViewDetails.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `adBreak` | [[!UICONTROL 広告ブレーク]](../../data-types/ad-break.md) | タイムド広告がタイムドメディアにどのように挿入されるかを説明します。 |
-| `index` | 整数 | 親広告ブレーク内の広告のインデックス。 例えば、最初の広告にインデックスがあるとします `0` 2 つ目の広告はインデックスを持ちます `1`. |
-| `playerName` | 文字列 | 広告のレンダリングをおこなうプレーヤーの名前. |
+| `index` | 整数 | 親広告ブレーク内の広告のインデックス。 例えば、最初の広告にインデックスがあるとします。 `0` 2 つ目の広告はインデックスを持ちます `1`. |
+| `playerName` | 文字列 | 広告のレンダリングをおこなうプレーヤーの名前。 |
 
 {style="table-layout:auto"}
 
 ## `adViewability` {#adViewability}
 
-この `adViewability` オブジェクトは、プレーヤーのボリューム、ライブラリのバージョン、ウィンドウのステータス、広告ビューポートのディメンションなど、エンドユーザーに表示されるインプレッションの数をキャプチャします。
+The `adViewability` オブジェクトは、プレーヤーのボリューム、ライブラリのバージョン、ウィンドウのステータス、広告ビューポートのディメンションなど、エンドユーザーに表示されるインプレッションの数をキャプチャします。
 
 ![adViewability 構造](../../images/field-groups/advertising-details/adViewability.png)
 
@@ -87,7 +87,7 @@ ht-degree: 21%
 | `viewableImpressions` | [[!UICONTROL 測定]](../../data-types/measure.md) | 視認性ライブラリにより、2 秒間再生した後に視聴可能と認められたエンドユーザーに対する広告のインプレッション。 |
 | `viewableMidpoints` | [[!UICONTROL 測定]](../../data-types/measure.md) | 視認性ライブラリにより、再生の中間点で視聴可能と見なされたエンドユーザーに対する広告の（1 つまたは複数の）中間点。 |
 | `viewableThirdQuartiles` | [[!UICONTROL 測定]](../../data-types/measure.md) | 視認性ライブラリにより、再生第 3 四分位数で視聴可能と認められたエンドユーザーに対する広告の（1 つまたは複数の）第 3 四分位数。 |
-| `activeWindow` | ブール値 | 広告がユーザーのデバイスのアクティブなウィンドウに表示されたかどうかを示します。 |
+| `activeWindow` | ブール値 | 広告がユーザーのデバイスのアクティブウィンドウに表示されたかどうかを示します。 |
 | `adHeight` | 整数 | 実行時に測定される、プレイヤーの垂直方向のピクセル数。プレイヤーに追加のコントロールまたはサムネールがある場合は、広告のサイズよりも大きくなる可能性があります。 |
 | `adUnitDepth` | 整数 | パブリッシャーは、広告のアクセスをページのコードのみに制限するために、コンテナ (iFrame) 内に広告ユニットを埋め込むことができます。 この値は、広告ユニットが内部に表示されるコンテナの数を示します。 |
 | `adWidth` | 整数 | 実行時に測定される、プレイヤーの水平方向のピクセル数。プレイヤーに追加のコントロールまたはサムネールがある場合は、広告のサイズよりも大きくなる可能性があります。 |

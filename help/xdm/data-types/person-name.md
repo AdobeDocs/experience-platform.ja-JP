@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；fullName;xdm:fullName；ユーザー名；名前；データ型；データ型；
 solution: Experience Platform
 title: 担当者名データタイプ
-description: このドキュメントでは、ユーザー名 XDM データタイプの概要を説明します。
+description: ユーザー名 XDM データタイプについて説明します。
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 20%
+source-wordcount: '230'
+ht-degree: 6%
 
 ---
 
 # [!UICONTROL 人物名] データタイプ
 
-[!UICONTROL 人物名] は、個人の完全名を表す標準的な XDM データ型です。 名前構造の規則は言語や文化によって大きく異なるので、名前は常にこのデータ型を使用してモデル化する必要があります。
+[!UICONTROL 人物名] は、人物の完全名を表す標準的な XDM データ型です。 名前構造の規則は言語や文化によって大きく異なるので、名前は常にこのデータ型を使用してモデル化する必要があります。
 
 また、データ型には、正式な挨拶や非公式の挨拶の作成など、完全な名前のフラグメントのみを使用する必要がある状況で使用できる、多数のオプションのプロパティが用意されています。
 
@@ -33,4 +33,4 @@ ht-degree: 20%
 人物名データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)

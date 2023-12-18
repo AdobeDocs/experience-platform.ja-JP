@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；環境；データ型；データ型；
 solution: Experience Platform
 title: 環境データタイプ
-description: このドキュメントでは、環境 XDM データタイプの概要を説明します。
+description: 環境 XDM データ型について説明します。
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 15%
+source-wordcount: '440'
+ht-degree: 14%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
->すべての値は、 [DeviceAtlas](https://deviceatlas.com) データベース (Adobeがライセンス )
+>すべての値は、 [DeviceAtlas](https://deviceatlas.com) データベース (Adobeがライセンス )。
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
@@ -44,7 +44,7 @@ ht-degree: 15%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
 
 ## 付録
 

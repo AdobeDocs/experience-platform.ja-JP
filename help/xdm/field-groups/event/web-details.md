@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；
 solution: Experience Platform
 title: Web 詳細スキーマフィールドグループ
-description: このドキュメントでは、「Web 詳細スキーマ」フィールドグループの概要を説明します。
+description: 「 Web 詳細スキーマ」フィールドグループについて説明します。
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 18%
+source-wordcount: '118'
+ht-degree: 20%
 
 ---
 
@@ -30,4 +30,4 @@ ht-degree: 18%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.schema.json)

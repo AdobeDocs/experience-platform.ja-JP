@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；デバイス；トレードイン；下取り；
 solution: Experience Platform
 title: デバイスの下取り詳細スキーマフィールドグループ
-description: このドキュメントでは、「 Device Trade-In Details 」スキーマフィールドグループの概要を説明します。
+description: 「 Device Trade-In Details 」スキーマフィールドグループについて説明します。
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 15%
+source-wordcount: '150'
+ht-degree: 18%
 
 ---
 
@@ -32,4 +32,4 @@ ht-degree: 15%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)

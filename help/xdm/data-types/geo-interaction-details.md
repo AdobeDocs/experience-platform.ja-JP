@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；ビーコン；インタラクションの詳細；データ型；データ型；
 solution: Experience Platform
 title: ジオインタラクションの詳細データタイプ
-description: このドキュメントでは、ジオインタラクションの詳細の XDM データタイプの概要を説明します。
+description: ジオインタラクションの詳細の XDM データタイプについて説明します。
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 5%
+source-wordcount: '135'
+ht-degree: 4%
 
 ---
 
@@ -28,4 +28,4 @@ ht-degree: 5%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.schema.json)

@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；ジオ；ジオシェイプ；データ型；データ型；
 solution: Experience Platform
 title: ジオシェイプデータタイプ
-description: このドキュメントでは、ジオシェイプ XDM データタイプの概要を説明します。
+description: ジオシェイプ XDM データタイプについて説明します。
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 34%
+source-wordcount: '238'
+ht-degree: 28%
 
 ---
 

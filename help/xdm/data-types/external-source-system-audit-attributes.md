@@ -1,10 +1,10 @@
 ---
 title: 外部ソースシステム監査属性データタイプ
-description: このドキュメントでは、外部ソースシステム監査属性エクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
+description: 外部ソースシステム監査属性エクスペリエンスデータモデル (XDM) データタイプについて説明します。
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '168'
 ht-degree: 7%
 
 ---

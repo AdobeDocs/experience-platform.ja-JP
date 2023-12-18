@@ -1,11 +1,11 @@
 ---
 title: XDM ビジネスキャンペーンクラス
-description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスキャンペーンクラスの概要を説明します。
+description: エクスペリエンスデータモデル (XDM) の XDM ビジネスキャンペーンクラスについて説明します。
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 7%
+source-wordcount: '228'
+ht-degree: 3%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 7%
 | `campaignDescription` | 文字列 | キャンペーンの説明。 |
 | `campaignID` | 文字列 | キャンペーンエンティティの一意の ID。 |
 | `campaignName` | 文字列 | キャンペーンの名前。 |
-| `campaignType` | 文字列 | キャンペーンタイプまたはターゲットオーディエンス。 |
+| `campaignType` | 文字列 | キャンペーンのタイプまたはターゲットオーディエンス。 |
 
 {style="table-layout:auto"}
 

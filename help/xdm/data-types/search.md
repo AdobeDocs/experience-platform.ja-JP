@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；検索；データ型；データ型；
 solution: Experience Platform
 title: データタイプを検索
-description: このドキュメントでは、Search Experience Data Model(XDM) データタイプの概要を説明します。
+description: Search Experience Data Model(XDM) データタイプについて説明します。
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 16%
+source-wordcount: '160'
+ht-degree: 18%
 
 ---
 
 # [!UICONTROL 検索] データタイプ
 
-[!UICONTROL 検索] は、Web 検索アクティビティに関する情報を含む標準 Experience Data Model(XDM) データ型です。
+[!UICONTROL 検索] は、Web 検索アクティビティに関する情報が含まれる標準の Experience Data Model(XDM) データ型です。
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
@@ -32,4 +32,4 @@ ht-degree: 16%
 データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)

@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；
 solution: Experience Platform
 title: キャンペーンマーケティング詳細スキーマフィールドグループ
-description: このドキュメントでは、「キャンペーンマーケティング詳細」スキーマフィールドグループの概要を説明します。
+description: 「キャンペーンマーケティング詳細」スキーマフィールドグループについて説明します。
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 17%
+source-wordcount: '124'
+ht-degree: 20%
 
 ---
 
@@ -30,4 +30,4 @@ ht-degree: 17%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)

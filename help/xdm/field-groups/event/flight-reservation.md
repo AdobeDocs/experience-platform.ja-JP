@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；予約；フライト；
 title: フライト予約スキーマフィールドグループ
-description: このドキュメントでは、「フライト予約スキーマ」フィールドグループの概要を説明します。
+description: 「フライト予約スキーマ」フィールドグループについて説明します。
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 4%
+source-wordcount: '625'
+ht-degree: 5%
 
 ---
 
@@ -32,14 +32,14 @@ ht-degree: 4%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `flightCheckIn` | オブジェクト | フライトチェックインに関する詳細をキャプチャします。 このオブジェクトには、次のプロパティが含まれます。<ul><li>`arrivalAirportCode`:(String) 到着都市の空港コード。</li><li>`boardingGroup`:(String) 搭乗注文の航空会社固有の指標。</li><li>`checkInMethod`:（文字列）カウンター、オンライン、キオスク、セルフサービスなど、チェックインで使用したメソッド。</li><li>`checkedBags`:（整数）フライトに対してチェックされたバッグの数。</li><li>`checkedPassengers`:（整数）同じ予約番号に複数の乗客が存在する場合の、フライトにチェックインした乗客の数。</li><li>`confirmationNumber`:(String) 予約確認番号または識別子。</li><li>`departureAirportCode`:（文字列）出発都市の空港コード。</li><li>`flightNumber`:（文字列）予約されているフライトの便名。</li></ul> |
-| `flightStatusSearch` | オブジェクト | フライトのステータスが検索されたときに返される詳細をキャプチャします。 このオブジェクトには、次のプロパティが含まれます。<ul><li>`arrivalAirportCode`:(String) 到着都市の空港コード。</li><li>`boardingGroup`:(String) 搭乗注文の航空会社固有の指標。</li><li>`departureAirportCode`:（文字列）出発都市の空港コード。</li><li>`departureDate`:(DateTime) 予約されているフライトの出発日。</li><li>`flightNumber`:（文字列）予約されているフライトの便名。</li><li>`searchCount`:（整数）予約されたフライトのステータスが検索された回数。</li></ul> |
+| `flightCheckIn` | オブジェクト | フライトチェックインに関する詳細をキャプチャします。 このオブジェクトには、次のプロパティが含まれます。<ul><li>`arrivalAirportCode`: (String) 到着都市の空港コード。</li><li>`boardingGroup`: (String) 搭乗注文の航空会社固有の指標。</li><li>`checkInMethod`: (String) カウンター、オンライン、キオスク、セルフサービスなど、チェックインで使用したメソッド。</li><li>`checkedBags`: （整数）フライトに対して確認されたバッグの数。</li><li>`checkedPassengers`: （整数）同じ予約番号に複数の乗客が存在する場合の、フライトにチェックインした乗客の数。</li><li>`confirmationNumber`: (String) 予約確認番号または識別子。</li><li>`departureAirportCode`: (String) 出発都市の空港コード。</li><li>`flightNumber`: (String) 予約するフライトの便名。</li></ul> |
+| `flightStatusSearch` | オブジェクト | フライトのステータスが検索されたときに返される詳細をキャプチャします。 このオブジェクトには、次のプロパティが含まれます。<ul><li>`arrivalAirportCode`: (String) 到着都市の空港コード。</li><li>`boardingGroup`: (String) 搭乗注文の航空会社固有の指標。</li><li>`departureAirportCode`: (String) 出発都市の空港コード。</li><li>`departureDate`: (DateTime) 予約されているフライトの出発日。</li><li>`flightNumber`: (String) 予約するフライトの便名。</li><li>`searchCount`:（整数）予約済みのフライトのステータスが検索された回数。</li></ul> |
 | `agentID` | 文字列 | 予約の予約を担当するエージェントまたはブッカー（該当する場合）。 |
 | `aircraftID` | 文字列 | 航空機の識別子。 |
 | `aircraftType` | 文字列 | 航空機の型。 |
 | `arrivalAirportCode` | 文字列 | 到着都市の空港コード。 |
 | `arrivalDate` | 日時 | 予約されているフライトの到着日。 |
-| `cancellation` | 整数 | この値は、予約がキャンセルされるとキャプチャされます。 |
+| `cancellation` | 整数 | この値は、予約がキャンセルされると取り込まれます。 |
 | `confirmationNumber` | 文字列 | 予約確認番号または識別子。 |
 | `created` | 文字列 | この値は、予約が作成されるとキャプチャされます。 |
 | `currencyCode` | 文字列 | 購入に使用される ISO 4217 通貨コード。 |
@@ -66,4 +66,4 @@ ht-degree: 4%
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.schema.json)

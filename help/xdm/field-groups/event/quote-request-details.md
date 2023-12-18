@@ -1,10 +1,10 @@
 ---
 title: 見積依頼詳細スキーマフィールドグループ
-description: このドキュメントでは、「Quote Request Details」スキーマ・フィールド・グループの概要を説明します。
+description: 「Quote Request Details」スキーマ・フィールド・グループの詳細を説明します。
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '133'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `discount` | [[!UICONTROL 通貨]](../../data-types/currency.md) | 訪問者に表示される見積書の割引額。 |
+| `discount` | [[!UICONTROL 通貨]](../../data-types/currency.md) | 訪問者に表示される見積もりの割引額。 |
 | `premium` | [[!UICONTROL 通貨]](../../data-types/currency.md) | 訪問者に表示される見積もりのプレミアム金額。 |
 | `location` | [!UICONTROL 文字列] | 訪問者の場所の近くで小売業者を見つけるのに使用される郵便番号。 |
 | `requestID` | [!UICONTROL 文字列] | 見積もり依頼の一意の ID。 |

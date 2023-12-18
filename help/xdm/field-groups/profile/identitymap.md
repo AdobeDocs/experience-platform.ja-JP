@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;スキーマ;XDM;個人プロファイル;フィールド;identityMap;ID マップ;スキーマデザイン;マップ;結合スキーマ;和集合
 title: IdentityMap スキーマフィールドグループ
-description: このドキュメントでは、XDM 個人プロファイルクラスの概要を説明します。
+description: XDM Individual Profile クラスについて説明します。
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 81%
+source-wordcount: '139'
+ht-degree: 76%
 
 ---
 

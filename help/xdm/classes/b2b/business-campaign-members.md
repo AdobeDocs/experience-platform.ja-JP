@@ -1,11 +1,11 @@
 ---
 title: XDM ビジネスキャンペーンメンバークラス
-description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の XDM ビジネスキャンペーンメンバークラスの概要を説明します。
+description: エクスペリエンスデータモデル (XDM) の XDM ビジネスキャンペーンメンバークラスについて説明します。
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 7%
+source-wordcount: '235'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `campaignKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | 関連するキャンペーンの複合識別子。 |
+| `campaignKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | 関連するキャンペーンの複合 ID。 |
 | `campaignMemberKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | キャンペーンメンバーシップエンティティの複合 ID。 |
 | `extSourceSystemAudit` | [[!UICONTROL 外部ソースシステム監査属性]](../../data-types/external-source-system-audit-attributes.md) | キャンペーンのメンバーシップが外部ソースシステムから取得された場合、このオブジェクトはそのシステムの監査属性をキャプチャします。 |
 | `personKey` | [[!UICONTROL B2B ソース]](../../data-types/b2b-source.md) | 関連するキャンペーンのメンバーである人物の複合 ID。 |

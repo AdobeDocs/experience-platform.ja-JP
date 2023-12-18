@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；環境；環境の詳細；
 solution: Experience Platform
 title: 環境詳細スキーマフィールドグループ
-description: このドキュメントでは、「 ExperienceEvent 環境の詳細」スキーマフィールドグループの概要を説明します。
+description: 「 ExperienceEvent 環境の詳細」スキーマフィールドグループについて説明します。
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '189'
 ht-degree: 13%
 
 ---
@@ -26,11 +26,11 @@ ht-degree: 13%
 | --- | --- | --- |
 | `device` | [デバイス](../../data-types/device.md) | セッションをまたいで（通常は cookie で）追跡可能な、識別されたデバイス、アプリケーションまたはデバイスブラウザーインスタンスを表します。 |
 | `environment` | [環境](../../data-types/environment.md) | イベント観測の状況に関する情報、特にネットワークやソフトウェアのバージョンなどの一時的な情報の詳細を説明します。 |
-| `placeContext` | [場所の背景](../../data-types/place-context.md) | イベント観測に関連する一時的な状況を示します。 例としては、天気、現地時間、交通量、曜日、就業日と休日、就業時間など、ロケール固有の情報が含まれます。 |
+| `placeContext` | [場所のコンテキスト](../../data-types/place-context.md) | イベント観測に関連する一時的な状況を示します。 例としては、天気、現地時間、交通量、曜日、就業日と休日、就業時間など、ロケール固有の情報が含まれます。 |
 
 {style="table-layout:auto"}
 
 フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
 
 * [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.schema.json)
+* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.schema.json)

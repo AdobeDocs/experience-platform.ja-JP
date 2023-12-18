@@ -1,11 +1,11 @@
 ---
 title: アカウントの詳細データタイプ
-description: このドキュメントでは、アカウント詳細のエクスペリエンスデータモデル (XDM) データタイプの概要を説明します。
+description: アカウント詳細のエクスペリエンスデータモデル (XDM) データタイプについて説明します。
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 16%
+source-wordcount: '409'
+ht-degree: 17%
 
 ---
 

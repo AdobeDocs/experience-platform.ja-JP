@@ -1,10 +1,10 @@
 ---
 title: プランクラス
-description: このドキュメントでは、エクスペリエンスデータモデル (XDM) の Plan クラスの概要を説明します。
+description: Experience Data Model(XDM) の Plan クラスについて説明します。
 exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '145'
 ht-degree: 4%
 
 ---
@@ -23,4 +23,4 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-クラスは、 [[!UICONTROL 医療プランの詳細] フィールドグループ](../field-groups/plan/healthcare-plan-details.md) 健康保険計画の詳細を説明する。
+クラスは、 [[!UICONTROL ヘルスケアプランの詳細] フィールドグループ](../field-groups/plan/healthcare-plan-details.md) 健康保険計画の詳細を説明する。
