@@ -4,14 +4,21 @@ description: Adobe Experience Platform Debugger の最新のリリースノー�
 keywords: デバッガー;Experience Platform Debugger 拡張機能;Chrome;拡張機能;リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
+source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 71%
+source-wordcount: '704'
+ht-degree: 69%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
+
+## バージョン 1.5.4 - 2023年12月19日（PT）
+
+### 修正点および改善点
+
+* 設定が保持されない問題を修正しました。
+* Analytics の後処理されたヒットを表示すると、デバッガーがクラッシュする問題を修正しました。
 
 ## バージョン 1.5.3 - 2023年12月6日（PT）
 
@@ -25,6 +32,14 @@ ht-degree: 71%
 * Analytics リクエストテーブルにActivity Mapデータが表示されない問題を修正しました。
 * Target Trace を表示するとクラッシュが発生する問題を修正しました。
 * Debugger が Firefox でページ上のインフラストラクチャを設定できなかった場合に警告を追加しました。
+
+## バージョン 1.5.2 - 2023年11月10日（PT）
+
+（Firefox のみ）
+
+### 修正点および改善点
+
+* ファイルの構成を更新しました。
 
 ## バージョン 1.5.1 - 2023年11月2日（PT）
 
