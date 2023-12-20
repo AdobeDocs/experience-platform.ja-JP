@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;ユーザーインターフェイス;UI;カスタマイズ;ライセンス使用状況ダッシュボード;ダッシュボード;ライセンス使用状況;使用権限;使用
-title: ライセンス使用状況ダッシュボード ガイド
+title: ライセンス使用状況ダッシュボードガイド
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
+source-git-commit: e80577cb190e77624a2dc32f8343fc4b82a24a03
 workflow-type: tm+mt
-source-wordcount: '2027'
-ht-degree: 8%
+source-wordcount: '2108'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,14 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="ライセンス使用状況ダッシュボード"
->abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
+>abstract="ライセンス使用状況ダッシュボードには、購入したAdobe Experience Platform製品に関するインサイトが表示されます。 ダッシュボードの概要には、各プライマリ指標の使用状況や契約ライセンス額など、製品の主要指標が表示されます。 詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="ライセンス使用状況ダッシュボード"
+>abstract="ライセンス使用状況ダッシュボードには、購入したAdobe Experience Platform製品に関するインサイトが表示されます。 ダッシュボードの概要には、各プライマリ指標の使用状況や契約ライセンス額など、製品の主要指標が表示されます。 詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。<br>使用状況予測は、月末に月単位で更新され、今後 6 ヶ月の期間の使用状況を予測します。 使用量を減らすには、サンドボックスとデータセットに対して、データセットまたは偽名プロファイルのデータ有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="データセット有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルのデータ有効期限"
 
 Adobe Experience Platformから、組織のライセンス使用状況に関する重要な情報を表示できます [!UICONTROL ライセンスの使用状況] ダッシュボード。 ここに表示される情報は、Platform インスタンスの毎日のスナップショットの間にキャプチャされます。
 
@@ -46,7 +53,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 ![左側のナビゲーションサイドバーで「ライセンス使用状況ダッシュボードの概要」タブの「ライセンス使用状況」がハイライト表示されています。](../images/license-usage/dashboard-overview.png)
 
-## [!UICONTROL 「概要」タブ] {#overview-tab}
+## [!UICONTROL 概要] タブ {#overview-tab}
 
 このダッシュボードには、アドオンを含む、ライセンスされたAdobe Experience Platform製品がすべて表形式で表示されます。 表には、使用可能なすべてのプロファイルにわたるライセンスの使用状況に関する主な情報が表示されます。
 
@@ -56,7 +63,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 | **[!UICONTROL プライマリ指標]** | その製品の内でのトラッキングに使用される主要指標。 |
 | **[!UICONTROL ライセンス数]** | 製品使用許諾契約で合意したプライマリ指標の最大金額の契約値。 |
 | **[!UICONTROL 用途]** | 使用するプライマリ指標の量。 この値は、実稼働または開発のいずれかの、すべてのサンドボックスでのその指標の合計使用量を提供します。 |
-| **[!UICONTROL 用途 %]** | 使用しているプライマリ指標の割合（ライセンス金額に応じた）。 |
+| **[!UICONTROL 使用状況%]** | 使用しているプライマリ指標の割合（ライセンス金額に応じた）。 |
 
 >[!NOTE]
 >
@@ -64,7 +71,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 この表は、各製品が多数の指標を追跡できるので、各製品の主要指標を示しています。
 
-## [!UICONTROL 「概要」タブ] {#summary-tab}
+## [!UICONTROL 概要] タブ {#summary-tab}
 
 製品ライセンスの使用状況に関するその他の指標や詳細なインサイトを表示するには、リストから製品名を選択します。 The [!UICONTROL 概要] その製品のビューが表示されます。 使用可能なすべての指標が [!UICONTROL 概要] タブをクリックします。 使用できる指標は、ライセンスされた製品によって異なります。 このビューには、 **すべての実稼動または開発用サンドボックスのすべての指標の統合表示**. 実稼働用サンドボックスと開発用サンドボックスの両方に同じレベルの分析が提供されます。
 
@@ -145,7 +152,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
-これらの指標の可用性と各指標の具体的な定義は、お客様の組織が購入したライセンスによって異なります。各指標の詳細な定義については、該当する製品の説明ドキュメントを参照してください。
+これらの指標の使用可否と各指標の定義は、組織が購入したライセンスによって異なります。 各指標の詳細な定義については、該当する製品の説明ドキュメントを参照してください。
 
 | ライセンス | 製品の説明 |
 |---|---|
