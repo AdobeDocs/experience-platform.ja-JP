@@ -2,10 +2,10 @@
 description: このページでは、Destination SDKがサポートする様々な OAuth 2 認証フローについて説明し、宛先の OAuth 2 認証を設定する手順を説明します。
 title: OAuth 2 認証
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 80%
+source-wordcount: '2181'
+ht-degree: 78%
 
 ---
 
@@ -33,11 +33,16 @@ Destination SDKは、宛先への複数の認証メソッドをサポートし�
 
 ### システムの前提条件 {#prerequisites}
 
-最初の手順として、お使いのシステムで Adobe Experience Platform 用にアプリを作成するか、またはお使いのシステムで Experience Platform を登録する必要があります。目的は、宛先に対して Experience Platform を認証するために必要な、クライアント ID およびクライアントシークレットを生成することです。お使いのシステムでのこの設定の一環として、Adobe Experience Platform OAuth 2 リダイレクト／コールバック URL が必要です（以下のリストから取得できます）。
+最初の手順として、お使いのシステムで Adobe Experience Platform 用にアプリを作成するか、またはお使いのシステムで Experience Platform を登録する必要があります。目的は、宛先へのExperience Platformを認証するために必要な、クライアント ID とクライアント秘密鍵を生成することです。
+
+お使いのシステムでのこの設定の一環として、Adobe Experience Platform OAuth 2 リダイレクト／コールバック URL が必要です（以下のリストから取得できます）。
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
