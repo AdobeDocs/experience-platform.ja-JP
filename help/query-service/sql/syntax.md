@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；SQL 構文；SQL;CTAS;CTAS；選択としてテーブルを作成
 solution: Experience Platform
 title: クエリサービスの SQL 構文
-description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文を示します。
+description: このドキュメントでは、Adobe Experience Platformクエリサービスでサポートされる SQL 構文の詳細と説明を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
 workflow-type: tm+mt
-source-wordcount: '4134'
-ht-degree: 9%
+source-wordcount: '4111'
+ht-degree: 5%
 
 ---
 
 # クエリサービスの SQL 構文
 
-Adobe Experience Platformクエリサービスは、 `SELECT` ステートメントおよびその他の制限付きコマンド。 このドキュメントでは、 [!DNL Query Service].
+標準の ANSI SQL は、 `SELECT` ステートメントおよびその他の制限付きコマンドをAdobe Experience Platformクエリサービスで使用する場合。 このドキュメントでは、 [!DNL Query Service].
 
 ## SELECT クエリ {#select-queries}
 
@@ -35,7 +35,11 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-場所 `from_item` は、次のいずれかのオプションです。
+以下のタブセクションには、FROM、GROUP、WITH キーワードで使用できるオプションが表示されます。
+
+>[!BEGINTABS]
+
+>[!TAB `from_item`]
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -53,7 +57,7 @@ with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-および `grouping_element` は、次のいずれかのオプションです。
+>[!TAB `grouping_element`]
 
 ```sql
 ( )
@@ -79,13 +83,15 @@ CUBE ( { expression | ( expression [, ...] ) } [, ...] )
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
-`with_query` は以下になります。
+>[!TAB `with_query`]
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
 ```
 
-以下のサブセクションでは、上記の形式に従う場合に、クエリで使用できる追加の句の詳細を示します。
+>[!ENDTABS]
+
+次のサブセクションでは、上記の形式に従う場合に、クエリで使用できる追加の句の詳細を示します。
 
 ### SNAPSHOT 句
 
@@ -113,15 +119,15 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-なお、 `SNAPSHOT` 句は、テーブルまたはテーブルのエイリアスに対して機能しますが、サブクエリまたはビューの上には機能しません。 A `SNAPSHOT` 条項はどこでも機能する `SELECT` テーブルのクエリを適用できます。
+A `SNAPSHOT` 句は、テーブルまたはテーブルのエイリアスで機能しますが、サブクエリまたはビューの上には機能しません。 A `SNAPSHOT` 節はどこでも機能する `SELECT` テーブルのクエリを適用できます。
 
 また、 `HEAD` および `TAIL` スナップショット句の特別なオフセット値として。 使用 `HEAD` は、最初のスナップショットの前のオフセットを指し、 `TAIL` は、最後のスナップショットの後のオフセットを指します。
 
 >[!NOTE]
 >
->2 つのスナップショット ID 間でクエリを実行し、開始スナップショットが期限切れになった場合、オプションのフォールバック動作フラグ (`resolve_fallback_snapshot_on_failure`) が設定されている場合は次のようになります。
+>2 つのスナップショット ID 間でクエリを実行する場合、開始スナップショットが期限切れで、オプションのフォールバック動作フラグ (`resolve_fallback_snapshot_on_failure`) が設定されている場合は次のようになります。
 >
->- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは、利用可能な最も古いスナップショットを選択し、開始スナップショットとして設定し、利用可能な最も古いスナップショットと指定された終了スナップショットの間のデータを返します。 このデータは **包括的** 最も古いスナップショットの
+>- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは最も古い使用可能なスナップショットを選択し、開始スナップショットとして設定し、最も古い使用可能なスナップショットと指定した終了スナップショットの間のデータを返します。 このデータは **包括的** 最も古いスナップショットの
 >
 >- オプションのフォールバック動作フラグが設定されていない場合は、エラーが返されます。
 
@@ -183,7 +189,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | パラメーター | 説明 |
 | ----- | ----- |
 | `schema` | XDM スキーマのタイトル。 この句は、CTAS クエリで作成された新しいデータセットに対して既存の XDM スキーマを使用する場合にのみ使用します。 |
-| `rowvalidation` | （オプション）新しく作成したデータセットに対して取り込まれる新しいバッチの行レベルの検証を、すべてユーザーが必要とするかどうかを指定します。 デフォルト値は `true` です。 |
+| `rowvalidation` | （オプション）新しく作成したデータセットに対して取り込まれる新しいバッチごとに行レベルの検証を行うかどうかを指定します。 デフォルト値は `true` です。 |
 | `label` | CTAS クエリでデータセットを作成する場合、このラベルをの値と共に使用します。 `profile` をクリックし、データセットに対して「プロファイルを有効にする」というラベルを付けます。 つまり、データセットは作成時に自動的にプロファイル用にマークされます。 の使用について詳しくは、派生属性拡張機能のドキュメントを参照してください。 `label`. |
 | `select_query` | A `SELECT` ステートメント。 の構文 `SELECT` クエリは、 [「SELECT queries」セクション](#select-queries). |
 
@@ -199,7 +205,7 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->`SELECT` 文には、`COUNT`、`SUM`、`MIN` などの集計関数のエイリアスが含まれている必要があります。また、 `SELECT` 文は () 括弧ありでもなしでも使用できます。 次の項目を指定できます。 `SNAPSHOT` 増分デルタをターゲットテーブルに読み込むための句。
+>The `SELECT` ステートメントには、次のような集計関数のエイリアスが必要です。 `COUNT`, `SUM`, `MIN`など。 また、 `SELECT` 文は () 括弧ありでもなしでも使用できます。 次の項目を指定できます。 `SNAPSHOT` 増分デルタをターゲットテーブルに読み込むための句。
 
 ## INSERT INTO
 
@@ -228,7 +234,7 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
-> The `SELECT` 文 **を次の値に設定する** は () 括弧で囲まれます。 また、 `SELECT` 文は、 `INSERT INTO` ステートメント。 次の項目を指定できます。 `SNAPSHOT` 増分デルタをターゲットテーブルに読み込むための句。
+>実行 **not** 同封する `SELECT` 文を () 括弧で囲んで記述します。 また、 `SELECT` 文は、 `INSERT INTO` ステートメント。 次の項目を指定できます。 `SNAPSHOT` 増分デルタをターゲットテーブルに読み込むための句。
 
 実際の XDM スキーマ内のフィールドのほとんどは、ルートレベルで見つからず、SQL ではドット表記の使用は許可されていません。 ネストされたフィールドを使用して現実的な結果を得るには、各フィールドを `INSERT INTO` パス。
 
@@ -290,9 +296,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `IF EXISTS` | これを指定した場合、スキーマが **not** 存在する。 |
-| `RESTRICT` | モードのデフォルト値。 これを指定した場合、スキーマは指定した場合にのみ削除されます **doesn&#39;t** には、任意のテーブルが含まれます。 |
-| `CASCADE` | これを指定した場合、スキーマは、スキーマ内に存在するすべてのテーブルと共にドロップされます。 |
+| `IF EXISTS` | このパラメーターを指定し、スキーマが **not** が存在する場合、例外はスローされません。 |
+| `RESTRICT` | モードのデフォルト値。 指定した場合、スキーマは削除する場合にのみ削除されます **not** には、任意のテーブルが含まれます。 |
+| `CASCADE` | 指定した場合、スキーマは、スキーマ内に存在するすべてのテーブルと共にドロップされます。 |
 
 ## CREATE VIEW
 
@@ -609,11 +615,11 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-次のガイドを参照してください： [データアセットの論理的な編成](../best-practices/organize-data-assets.md) を参照してください。
+詳しくは、 [データアセットの論理的な編成](../best-practices/organize-data-assets.md) クエリサービスのベストプラクティスに関する詳細な説明を示すガイドです。
 
 ## テーブルが存在します
 
-The `table_exists` SQL コマンドは、現在システムにテーブルが存在するかどうかを確認するために使用します。 このコマンドは、ブール値を返します（テーブルが存在&#x200B;**する**&#x200B;場合は `true`、テーブルが存在&#x200B;**しない**&#x200B;場合は `false`）。
+The `table_exists` SQL コマンドは、現在システムにテーブルが存在するかどうかを確認するために使用します。 このコマンドは、次のブール値を返します。 `true` もしテーブルが **は、** 存在し、 `false` テーブルが **not** 存在する。
 
 文を実行する前にテーブルが存在するかどうかを検証すると、 `table_exists` 機能を使用すると、匿名ブロックを書き込んで、 `CREATE` および `INSERT INTO` の使用例です。
 
@@ -680,7 +686,7 @@ select inline(productListItems) from source_dataset limit 10;
 
 値は `source_dataset` を使用してターゲットテーブルにデータを入力します。
 
-| SKU | _experience | quantity | priceTotal |
+| SKU | _experience | 量 | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot; | 5 | 10.5 |
 | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;)&quot; |          |              |
@@ -689,7 +695,7 @@ select inline(productListItems) from source_dataset limit 10;
 
 ## [!DNL Spark] SQL コマンド
 
-次のサブ節では、クエリサービスでサポートされる Spark SQL コマンドについて説明します。
+次の節では、クエリサービスでサポートされる Spark SQL コマンドについて説明します。
 
 ### SET
 
@@ -742,7 +748,7 @@ ANALYZE TABLE <original_table_name>
 
 次の項目に関する列レベルの統計を計算できるようになりました。 [!DNL Azure Data Lake Storage] (ADLS) データセットと `COMPUTE STATISTICS` SQL コマンド。 データセット全体、データセットのサブセット、すべての列、または列のサブセットに関する列の統計を計算します。
 
-`COMPUTE STATISTICS` は、 `ANALYZE TABLE` コマンドを使用します。 ただし、 `COMPUTE STATISTICS`, `FILTERCONTEXT`、および `FOR COLUMNS` 高速ストアテーブルでは、コマンドはサポートされません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。
+`COMPUTE STATISTICS` は、 `ANALYZE TABLE` コマンドを使用します。 ただし、 `COMPUTE STATISTICS`, `FILTERCONTEXT`、および `FOR COLUMNS` 高速ストアテーブルでは、コマンドはサポートされません。 これらの `ANALYZE TABLE` コマンドは、現在、ADLS テーブルでのみサポートされています。
 
 **例**
 
@@ -754,7 +760,7 @@ The `FILTER CONTEXT` コマンドは、指定されたフィルター条件に�
 
 >[!NOTE]
 >
->The `Statistics ID` および生成された統計は、各セッションでのみ有効で、異なる PSQL セッションをまたいでアクセスすることはできません。<br><br>制限事項:<ul><li>配列またはマップのデータタイプでは、統計の生成はサポートされていません</li><li>計算済みの統計は次のとおりです **not** セッション間で保持されます。</li></ul><br><br>オプション:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>デフォルトでは、フラグは true に設定されています。その結果、サポートされていないデータ型に対して統計がリクエストされた場合、エラーは発生しませんが、サポートされていないデータ型のフィールドは警告なくスキップされます。<br>サポートされていないデータ型に関する統計がリクエストされた場合にエラーに関する通知を有効にするには、次を使用します。 `SET skip_stats_for_complex_datatypes = false`.
+>The `Statistics ID` および生成された統計は、各セッションでのみ有効で、異なる PSQL セッションをまたいでアクセスすることはできません。<br><br>制限事項：<ul><li>配列またはマップのデータタイプでは、統計の生成はサポートされていません</li><li>計算済みの統計は次のとおりです **not** セッション間で保持されます。</li></ul><br><br>オプション：<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>デフォルトでは、このフラグは true に設定されています。 その結果、サポートされていないデータ型に対して統計がリクエストされた場合、エラーは発生しませんが、サポートされていないデータ型のフィールドは警告なくスキップされます。<br>サポートされていないデータ型に関する統計がリクエストされた場合にエラーに関する通知を有効にするには、次を使用します。 `SET skip_stats_for_complex_datatypes = false`.
 
 コンソール出力は、次のように表示されます。
 
@@ -765,7 +771,7 @@ The `FILTER CONTEXT` コマンドは、指定されたフィルター条件に�
 (1 row)
 ```
 
-`Statistics ID` を参照することで、計算された統計を直接クエリできます。以下の例のステートメントを `Statistics ID` またはエイリアス名とともに使用すると、出力を完全に表示できます。この機能の詳細については、 [エイリアス名ドキュメント](../key-concepts/dataset-statistics.md#alias-name).
+その後、計算済みの統計を直接クエリするには、 `Statistics ID`. 以下の `Statistics ID` または以下の文の例で示すエイリアス名を使用して、出力を完全に表示します。 この機能について詳しくは、 [エイリアス名ドキュメント](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -792,7 +798,9 @@ age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) 
 
 #### 大さじ {#tablesample}
 
-Adobe Experience Platform クエリサービスは、近似クエリ処理機能の一部としてサンプルデータセットを提供します。データセットのサンプルは、データセットに対する集計操作に正確な答えが必要ない場合に最も適しています。 この機能を使用すると、近似クエリを発行して近似回答を返すことで、大規模なデータセットに関するより効率的な探索的クエリを実行できます。
+Adobe Experience Platformクエリサービスは、クエリ処理機能の一部として、サンプルデータセットを提供します。
+
+データセットのサンプルは、データセットに対する集計操作に正確な答えが必要ない場合に最も適しています。 概算の回答を返す近似クエリを発行して、大規模なデータセットに対してより効率的な探索的クエリを実行するには、 `TABLESAMPLE` 機能。
 
 サンプルデータセットは、既存のサンプルから均一なランダムサンプルを使用して作成されます。 [!DNL Azure Data Lake Storage] (ADLS) データセット（元のレコードの割合のみを使用）。 データセットサンプル機能は、 `ANALYZE TABLE` コマンドを `TABLESAMPLE` および `SAMPLERATE` SQL コマンド。
 
@@ -830,7 +838,7 @@ CLOSE ALL
 
 ### DEALLOCATE
 
-The `DEALLOCATE` コマンドを使用すると、事前に準備された SQL 文の割り当てを解除できます。 準備された文の割り当てを明示的に解除しない場合は、セッションが終了すると割り当てが解除されます。準備済み文の詳細については、 [PREPARE コマンド](#prepare) 」セクションに入力します。
+事前に準備された SQL 文の割り当てを解除するには、 `DEALLOCATE` コマンドを使用します。 準備済み文の割り当てを明示的に解除しなかった場合、セッションが終了すると割り当てが解除されます。 準備済み文の詳細については、 [PREPARE コマンド](#prepare) 」セクションに入力します。
 
 ```sql
 DEALLOCATE name
@@ -865,17 +873,17 @@ EXECUTE name [ ( parameter ) ]
 | パラメーター | 説明 |
 | ------ | ------ |
 | `name` | 実行する準備済み文の名前。 |
-| `parameter` | 準備済み文のパラメーターの実際の値。 これは、準備済み文の作成時に決定された、このパラメーターのデータ型と互換性のある値を生成する式である必要があります。準備済み文に複数のパラメーターがある場合は、コンマで区切ります。 |
+| `parameter` | 準備済み文のパラメーターの実際の値。 これは、準備済み文の作成時に決定された、このパラメーターのデータ型と互換性のある値を生成する式である必要があります。 準備済み文に複数のパラメーターがある場合は、コンマで区切ります。 |
 
 ### EXPLAIN
 
-The `EXPLAIN` コマンドは、指定された文の実行計画を表示します。 実行計画では、文で参照されるテーブルがスキャンされる方法が示されます。  複数のテーブルが参照されている場合は、各入力テーブルから必要な行を組み合わせるために使用される結合アルゴリズムが表示されます。
+The `EXPLAIN` コマンドは、指定された文の実行計画を表示します。 実行計画では、文で参照されるテーブルがスキャンされる方法が示されます。 複数のテーブルが参照されている場合は、各入力テーブルから必要な行を組み合わせるために使用される結合アルゴリズムが表示されます。
 
 ```sql
 EXPLAIN statement
 ```
 
-以下を使用します。 `FORMAT` キーワードを `EXPLAIN` コマンドを使用して、応答の形式を定義します。
+応答の形式を定義するには、 `FORMAT` キーワードを `EXPLAIN` コマンドを使用します。
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -922,7 +930,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 The `PREPARE` コマンドを使用すると、準備済み文を作成できます。 準備済み文は、類似した SQL 文をテンプレート化するために使用できるサーバー側のオブジェクトです。
 
-準備済み文はパラメーターを受け取ることができます。パラメーターは、文の実行時に文内で置き換えられる値です。 パラメーターは、準備済み文を使用する場合、$1、$2 などを使用して、位置で参照されます。
+準備済み文はパラメーターを受け取ることができます。パラメーターは、文の実行時に文内で置き換えられる値です。 準備済み文を使用する場合、パラメーターは位置で参照され、$1、$2 などを使用します。
 
 必要に応じて、パラメータのデータ型のリストを指定できます。 パラメーターのデータ型が一覧に表示されない場合は、その型をコンテキストから推論できます。
 
@@ -933,7 +941,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 | パラメーター | 説明 |
 | ------ | ------ |
 | `name` | 準備済み文の名前。 |
-| `data_type` | 準備済み文のパラメーターのデータ型。 パラメーターのデータ型が一覧に表示されない場合は、その型をコンテキストから推論できます。 複数のデータ型を追加する必要がある場合は、コンマ区切りのリストで追加できます。 |
+| `data_type` | 準備済み文のパラメーターのデータ型。 パラメーターのデータ型が一覧に表示されない場合は、その型をコンテキストから推論できます。 複数のデータ型を追加する必要がある場合は、コンマ区切りリストで追加できます。 |
 
 ### ROLLBACK
 
@@ -970,8 +978,8 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `TEMPORARY` または `TEMP` | オプションのパラメーター。 指定した場合、作成されるテーブルは一時テーブルになります。 |
-| `UNLOGGED` | オプションのパラメーター。 指定した場合、として作成されたテーブルはログなしのテーブルになります。 ログが記録されていないテーブルの詳細については、 [[!DNL PostgreSQL] ドキュメント](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `TEMPORARY` または `TEMP` | オプションのパラメーター。 パラメータを指定した場合、作成されたテーブルは一時テーブルになります。 |
+| `UNLOGGED` | オプションのパラメーター。 パラメータを指定した場合、作成されたテーブルはログなしのテーブルになります。 ログが記録されていないテーブルの詳細については、 [[!DNL PostgreSQL] ドキュメント](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | 作成するテーブルの名前。 |
 
 **例**
@@ -1028,11 +1036,11 @@ COPY query
 
 >[!NOTE]
 >
->完全な出力パスは次のようになります。 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>完全な出力パスは次のとおりです。 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 ### ALTER TABLE {#alter-table}
 
-The `ALTER TABLE` コマンドを使用すると、プライマリキーまたは外部キーの制約を追加または削除したり、テーブルに列を追加したりできます。
+The `ALTER TABLE` コマンドを使用すると、プライマリキー制約や外部キー制約を追加または削除し、テーブルに列を追加できます。
 
 #### 制約を追加または削除
 
@@ -1085,14 +1093,13 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 | `referenced_table_name` | 外部キーによって参照されるテーブルの名前。 |
 | `primary_column_name` | 外部キーによって参照される列の名前。 |
 
-
 >[!NOTE]
 >
 >テーブルスキーマは一意であり、複数のテーブル間で共有されない必要があります。 また、名前空間は、プライマリキー、プライマリ ID、ID の制約に必須です。
 
 #### プライマリ ID とセカンダリ ID の追加またはドロップ
 
-The `ALTER TABLE` コマンドを使用すると、プライマリ ID テーブル列とセカンダリ ID テーブル列の両方に対する制約を SQL を介して直接追加または削除できます。
+プライマリ ID テーブル列とセカンダリ ID テーブル列の両方に制約を追加または削除するには、 `ALTER TABLE` コマンドを使用します。
 
 次の例では、制約を追加して、プライマリ ID とセカンダリ ID を追加します。
 
@@ -1108,7 +1115,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-次のドキュメントを参照してください： [アドホックデータセットで ID を設定する](../data-governance/ad-hoc-schema-identities.md) を参照してください。
+詳しくは、 [アドホックデータセットで ID を設定する](../data-governance/ad-hoc-schema-identities.md).
 
 #### 列を追加
 
@@ -1134,7 +1141,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 | 6 | `double` | `float8` | `double precision` | `FLOAT8` および `FLOAT` は、次の同義語として有効です： `DOUBLE PRECISION`. `double precision` は浮動小数点データ型です。 浮動小数点値は 8 バイトで格納されます。 |
 | 7 | `double precision` | `float8` | `double precision` | `FLOAT8` は、 `double precision`.`double precision` は浮動小数点データ型です。 浮動小数点値は 8 バイトで格納されます。 |
 | 8 | `date` | `date` | `date` | The `date` データタイプは、タイムスタンプ情報のない 4 バイトで保存されるカレンダー日付値です。 有効な日付の範囲は01-01-0001 ～ 12-31-9999です。 |
-| 9 | `datetime` | `datetime` | `datetime` | インスタントを時刻で保存するために使用されるデータ型で、カレンダーの日時として表されます。 `datetime` には、年、月、日、時間、秒、分数の区切り記号が含まれます。 A `datetime` 宣言には、これらの時間単位のサブセットを含めることができます。この時間単位は、その順序で結合される場合も、単一の時間単位で構成される場合もあります。 |
+| 9 | `datetime` | `datetime` | `datetime` | インスタントを時刻で保存するために使用されるデータ型で、カレンダーの日時として表されます。 `datetime` には、年、月、日、時間、秒、分数の修飾子が含まれます。 A `datetime` 宣言には、これらの時間単位のサブセットを含めることができます。この時間単位は、その順序で結合される場合も、単一の時間単位で構成される場合もあります。 |
 | 10 | `char(len)` | `string` | `char(len)` | The `char(len)` キーワードは、項目が固定長の文字であることを示すために使用されます。 |
 
 #### スキーマを追加
@@ -1204,7 +1211,7 @@ SHOW FOREIGN KEYS
 
 ### DATAGROUPS を表示
 
-The `SHOW DATAGROUPS` コマンドは、関連するすべてのデータベースのテーブルを返します。 各データベースについて、テーブルにはスキーマ、グループタイプ、子タイプ、子名、子 ID が含まれます。
+The `SHOW DATAGROUPS` コマンドは、関連するすべてのデータベースのテーブルを返します。 各データベースのテーブルには、スキーマ、グループタイプ、子タイプ、子名、子 ID が含まれます。
 
 ```sql
 SHOW DATAGROUPS
@@ -1222,7 +1229,7 @@ SHOW DATAGROUPS
 
 ### テーブルのデータグループを表示
 
-The `SHOW DATAGROUPS FOR` &#39;table_name&#39;コマンドは、パラメータを子として含むすべての関連データベースのテーブルを返します。 各データベースについて、テーブルにはスキーマ、グループタイプ、子タイプ、子名、子 ID が含まれます。
+The `SHOW DATAGROUPS FOR 'table_name'` コマンドは、パラメータを子として含むすべての関連データベースのテーブルを返します。 各データベースのテーブルには、スキーマ、グループタイプ、子タイプ、子名、子 ID が含まれます。
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'

@@ -2,56 +2,58 @@
 keywords: Experience Platform;ホーム;人気のトピック;query service;Query service;クエリ
 solution: Experience Platform
 title: クエリサービスの概要
-description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
+description: クエリサービスの役割 (Experience Platform内 ) を説明します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 100%
+source-wordcount: '837'
+ht-degree: 25%
 
 ---
 
-# [!DNL Query Service] の概要
+# クエリサービスの概要
 
-Adobe Experience Platform は様々なソースからデータを取得します。マーケターにとっての主要な課題は、このデータの意味を理解して、顧客に関するインサイトを得ることです。Adobe Experience Platform [!DNL Query Service] では、標準の SQL を使用して [!DNL Platform] のデータに対してクエリを実行することによってこれを促進します。[!DNL Query Service] を使用すると、[!DNL Data Lake] 内のデータセットを結合して、クエリ結果を新しいデータセットとして取得し、レポートやマシンラーニングで使用したり、[!DNL Real-Time Customer Profile] に取り込んだりできます。このドキュメントでは、[!DNL Experience Platform] 内での[!DNL Query Service]の役割を概説します。
+Adobe Experience Platform は様々なソースからデータを取得します。マーケターにとっての主な課題は、このデータを把握して、顧客に関するインサイトを得ることです。 Platform でデータをクエリするには、標準の SQL およびAdobe Experience Platformクエリサービスを使用できます。 クエリサービスを使用して、データレイク内の任意のデータセットを結合し、クエリ結果を新しいデータセットとして取り込み、レポート、機械学習、またはに取り込むことができます。 [!DNL Real-Time Customer Profile]. このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 
-[!DNL Query Service] を使用すると、企業はオンラインからオフラインへのカスタマージャーニーを結び付け、オムニチャネル属性を把握することが可能です。次のビデオでは、エクスペリエンスビジネスが [!DNL Query Service] を活用して主要なユースケースに対応する方法や[!DNL Query Service]の仕組みについて説明します。
+クエリサービスを使用して、オンラインからオフラインのカスタマージャーニーを結び付け、ブランドのオムニチャネルアトリビューションを理解できます。 次のビデオでは、エクスペリエンスビジネスがクエリサービスを使用して主な使用例に対処する方法、およびクエリサービスの仕組みを示します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
 
-## 使用 [!DNL Query Service]
+## クエリサービスの使用 {#usage}
 
-[!DNL Query Service] は、データを詳細に分析するための SQL クエリを作成できるユーザーインターフェイスと RESTful API を提供します。ユーザーインターフェイスを使用すると、クエリを作成して実行したり、以前に実行したクエリを表示したり、組織内のユーザーが保存したクエリにアクセスしたりできます。このユーザーインターフェイスは、より広範なデータセットに対してクエリを実行する前にクエリをテストするためのサンドボックスとして使用するためのものです。[!DNL Platform] 内でのインタラクティブサービスの使用に関する詳細については、[クエリサービスのユーザーインターフェイスのガイド](ui/overview.md)を参照してください。RESTful API も同様のエクスペリエンスを提供し、クエリの記述と実行、将来の使用と繰り返しに備えたクエリのスケジュール、記述するクエリのテンプレートの作成をプログラムで行えるようにします。[!DNL Query Service] API の使用に関する詳細については、[クエリサービスデベロッパーガイド](api/getting-started.md)を参照してください。
+データを分析するには、クエリサービスのユーザーインターフェイスと、SQL クエリを作成できる RESTful API を使用します。 ユーザーインターフェイスを使用すると、クエリを作成して実行したり、以前に実行したクエリを表示したり、組織内のユーザーが保存したクエリにアクセスしたりできます。サンドボックスと同様にクエリエディターを使用して、より広範なデータセットに対してクエリを実行する前にクエリをテストできます。 詳しくは、 [クエリサービスユーザーインターフェイスガイド](ui/overview.md) UI の使用に関する詳細情報を参照してください。 RESTful API も同様のエクスペリエンスを提供します。 クエリサービス API を使用して、クエリの書き込みと実行、将来の使用と繰り返しに備えたクエリのスケジュール、書き込むクエリのテンプレートの作成をプログラムで実行できます。 クエリサービス API の使用に関する詳細については、「[クエリサービス開発者向けガイド](api/getting-started.md)」を参照してください。
 
-## [!DNL Query Service] および [!DNL Experience Platform] サービス
+## クエリサービスと Experience Platform サービス {#experience-platform-services}
 
-[!DNL Query Service] は複数の [!DNL Experience Platform] サービスで動作し、これらのサービスと連携して使用できます。[!DNL Query Service's] の機能を最大限に活用するために、これらのサービスと、[!DNL Query Service] とのやり取りについて理解することをお勧めします。
+クエリサービスは相互に作用し、複数のクエリサービスと共に使用できますExperience Platform。 クエリサービスの機能を最大限に活用するには、これらのサービスと、それらのクエリサービスとのやり取りについて理解する必要があります。 The [Experience Platformドキュメントのランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja) には、プラットフォームの機能の概要とリンクが記載されています。
 
-### [!DNL Data Science Workspace]
+### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人工知能を使用して、[!DNL Experience Platform] 内に保存されたデータからインサイトを取得します。[!DNL Data Science Workspace] を使用すると、データサイエンティストは、顧客とそのアクティビティに関するレコードと時系列データに基づいてレシピを作成できるため、購入傾向やユーザーが評価して使用する可能性の高い推奨オファーなどの予測が容易になります。[!DNL Query Service] を [!DNL JupyterLab] に統合すると、[!DNL Data Science Workspace] 内で SQL を使用できます。これにより、Adobe Analytics データの調査、変換、分析をおこなうことができます。[!DNL Data Science Workspace] の詳細については [!DNL Data Science Workspace] の概要を、[!DNL Data Science Workspace] と [!DNL Query Service] のやり取りについては [!DNL Query Service] 統合ガイドをお読みください。
+Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人工知能を使用して、Experience Platform内に保存されたデータからインサイトを得ます。 データサイエンティストは、 [!DNL Data Science Workspace] を使用して、顧客とそのアクティビティに関するレコードと時系列のデータに基づいてレシピを作成します。 これらのレシピは、購入傾向や、個人が喜んで受け入れる可能性が高い推奨オファーなどの予測を促進します。 SQL は、 [!DNL Data Science Workspace] クエリサービスを [!DNL JupyterLab] Adobe Analyticsデータを調査、変換、分析する。 詳しくは、 [[!DNL Data Science Workspace] 概要](../data-science-workspace/home.md) そして [Jypiter Notebook 接続ガイド](./clients/jupyter-notebook.md) 詳しくは、 [!DNL Data Science Workspace] はクエリサービスとやり取りする
 
-### [!DNL Segmentation Service]
+### [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] を使用すると、ユーザーは顧客を、類似特性を共有する小さなグループに分割することができます。その後、これらのオーディエンスを評価して、[!DNL Real-Time Customer Profile] データをより詳細に分析できます。[!DNL Query Service] を使用して、[!DNL Data Lake] 内でこのオーディエンスデータに関するクエリを実行することにより、この分析を提供できます。セグメント化の詳細については [!DNL Segmentation Service] の概要を、オーディエンスの分析方法について詳しくは [!DNL Profile Query Language]（PQL）ガイドを参照してください。
+Adobe Experience Platformセグメント化サービスを使用すると、顧客を、類似した特性を共有する小さなグループに分割できます。 これらのオーディエンスを評価して、リアルタイム顧客プロファイルデータの分析を改善できます。 クエリサービスを使用して、データレイク内でこのオーディエンスデータに対してクエリを実行し、分析を提供できます。 詳しくは、 [セグメント化サービスの概要](../segmentation/home.md) そして [[!DNL Profile Query Language] (PQL) ガイド](../segmentation/pql/overview.md) オーディエンスの分析方法の詳細については、を参照してください。
 
-## ユースケース
+## ユースケース {#use-cases}
 
-[!DNL Query Service] では、多くの目的に役立つ柔軟なデータ処理アプローチを提供します。 特に、マーケターによるセグメント化の負担を軽減し、実用的なオーディエンスや意味のあるビジネスインサイトを生成するのに役立ちます。次のユースケースでは、[!DNL Query Service] の機能のさらに詳しい例を示しています。
+クエリサービスは、様々な目的に対応する柔軟なデータ処理アプローチを提供します。 特に、マーケターからのセグメント化の負担を軽減し、実用的なオーディエンスや意味のあるビジネスインサイトを生み出すのに役立ちます。 次の使用例では、クエリサービスの機能の詳細な例を示しています。
 
-### Adobe Analytics の閲覧放棄
+### Adobe Analytics の閲覧放棄 {#abandon-browse}
 
-この[閲覧放棄の例では、Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) データを使用して、特定の実用的なオーディエンスを作成することに重点を置いています。[!DNL Query Service] では、セグメント化の複雑なロジックを調整して、ダウンストリームで使用できるようにパーソナライズされた様々な属性を計算したり、オーディエンスの作成方法を大幅に簡素化したりします。
+この[閲覧放棄の例では、Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) データを使用して、特定の実用的なオーディエンスを作成することに重点を置いています。クエリサービスは、セグメント化の複雑なロジックに対応し、ダウンストリームで使用するためにパーソナライズされた様々な属性を計算したり、オーディエンスの構築方法を大幅に簡略化したりします。
 
-### Looker BI ダッシュボード
+## カスタムダッシュボードでインサイトを生成 {#custom-dashboards}
 
-Adobe Experience Platform では、行動データ、CRM データ、POS データなどのすべての保存済みデータセットの取得、保存、構造化および取り込みをおこなうことができます。[!DNL Experience Platform's Query Service] を使用すると、これらのデータセットに対してクエリを実行して、ビジネスに関する特定の質問に回答し、重要なインサイトの生成を開始できます。次のビデオでは、[!DNL Query Service] を使用して Business Intelligence（BI）ツールでダッシュボードを構築する意味を紹介します。
-
->[!VIDEO](https://video.tv.adobe.com/v/28981?quality=12&learn=on)
+Adobe Experience Platform では、行動データ、CRM データ、POS データなどのすべての保存済みデータセットの取得、保存、構造化および取り込みをおこなうことができます。[!DNL Experience Platform's Query Service] を使用すると、これらのデータセットに対してクエリを実行して、ビジネスに関する特定の質問に回答し、重要なインサイトの生成を開始できます。カスタムダッシュボードを作成および管理する方法について説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、主要指標を視覚化します。 [ユーザ定義のダッシュボード](../dashboards/user-defined-dashboards.md). 次のことが可能です。 [独自のReal-Time CDPレポートのカスタマイズ](../dashboards/cdp-insights-data-model.md) Real-time Customer Data Platform Insights データモデルで SQL クエリを使用することで、マーケティングおよび KPI の使用例に応じて変更できます。
 
 ## 次の手順とその他のリソース
 
-このドキュメントでは、[!DNL Query Service] の概要と、[!DNL Experience Platform] の範囲内でどのように機能するかについて説明しました。[!DNL Query Service] API 内の様々なエンドポイントとの相互作用に関する詳細については、『[クエリサービスのデベロッパーガイド](api/getting-started.md)』を参照してください。[!DNL Platform] 内でのインタラクティブサービスの使用に関する詳細については、[クエリサービスのユーザーインターフェイスガイド](ui/overview.md)を参照してください。外部クライアントと [!DNL Query Service] の接続に関する包括的なリストについては、[クエリサービスクライアントの概要](clients/overview.md)を参照してください。
+このドキュメントでは、クエリサービスと、Experience Platform の範囲内でクエリサービスがどのように機能するかについて説明しました。クエリサービス機能の学習を続けるには、次のドキュメントを読むことをお勧めします。
+
+- The [クエリサービス開発者ガイド](api/getting-started.md)：クエリサービス API 内の様々なエンドポイントとのやり取りに関する詳細。
+- The [クエリサービスユーザーインターフェイスガイド](ui/overview.md)：クエリエディターと UI の使用に関する詳細。
+- The [クエリサービスクライアントの概要](clients/overview.md)：クエリサービスに接続する外部クライアントの包括的なリスト。
 
 クエリを実行する準備を整えるために、次のビデオをご覧ください。このビデオでは、クエリエディターインターフェイス、PSQL クライアント、Business Intelligence（BI）ソリューション、および HTTP API でのクエリの実行に関するヒントとベストプラクティスを紹介します。
 

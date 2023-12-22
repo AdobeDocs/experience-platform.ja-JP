@@ -2,20 +2,20 @@
 keywords: Experience Platform;ホーム;人気のトピック;クエリサービス;クエリサービス;Spark SQL;Spark SQL;Spark SQL 関数;関数;
 solution: Experience Platform
 title: クエリサービスの Spark SQL 関数
-description: このドキュメントには、SQL 機能を拡張する Spark SQL 関数に関する情報が含まれています。
+description: SQL 機能を拡張する、サポートされる Spark SQL 関数について説明します。
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
 workflow-type: tm+mt
-source-wordcount: '3866'
-ht-degree: 100%
+source-wordcount: '1903'
+ht-degree: 93%
 
 ---
 
 # [!DNL Spark] SQL 関数
 
-Adobe Experience Platform クエリサービスには、SQL 機能を拡張する Spark SQL のビルトイン関数がいくつか用意されています。このドキュメントでは、クエリサービスでサポートされる Spark SQL 関数を示します。
+複数の組み込みの Spark SQL 関数を使用して、Adobe Experience Platformクエリサービスで SQL 機能を拡張できます。 このドキュメントでは、クエリサービスでサポートされる Spark SQL 関数を示します。
 
-関数の構文、使用方法、例など、関数について詳しくは、[Spark SQL 関数のドキュメント](https://spark.apache.org/docs/latest/api/sql/index.html)を参照してください。
+関数の構文、使用方法、例など、関数の詳細については、 [Spark SQL 関数のドキュメント](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ Adobe Experience Platform クエリサービスには、SQL 機能を拡張す�
 | [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | 正の値を返します |
 | [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | 2 番目の値の指数に対する最初の値を返します |
 | [`radians`](https://spark.apache.org/docs/latest/api/sql/index.html#radians) | 値をラジアンに変換します |
-| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | 0 と 1 の間の乱数を返します |
+| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | 0 ～ 1 の乱数を返します |
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | ランダムな値を返します |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | 最も近い倍精度浮動小数点の値を返します |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | 最も近い丸められた値を返します |
@@ -129,10 +129,10 @@ Adobe Experience Platform クエリサービスには、SQL 機能を拡張す�
 | [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | 月間通算日を返します |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | 週間通算日（1～7）を返します |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | 年間通算日を返します |
-| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | 日付を UNIX 時間で返します |
+| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | 日付を UNIX®時間で返します |
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | 日付を UTC 時間で返します |
 | [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | 入力の時間を返します |
-| [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | その日付が含まれる月の最終日を返します |
+| [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | 日付が属する月の最終日を返します |
 | [`minute`](https://spark.apache.org/docs/latest/api/sql/index.html#minute) | 入力の分を返します |
 | [`month`](https://spark.apache.org/docs/latest/api/sql/index.html#month) | 入力の月を返します |
 | [`months_between`](https://spark.apache.org/docs/latest/api/sql/index.html#months_between) | 期間内の月数 |
@@ -141,10 +141,10 @@ Adobe Experience Platform クエリサービスには、SQL 機能を拡張す�
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | 文字列の秒を返します |
 | [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 文字列を日付に変換します。**メモ：**&#x200B;文字列は `yyyy-mm-ddTHH24:MM:SS` の形式である&#x200B;**必要**&#x200B;があります。 |
 | [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 文字列をタイムスタンプに変換します。**メモ：**&#x200B;文字列は `yyyy-mm-ddTHH24:MM:SS` の形式である&#x200B;**必要**&#x200B;があります。 |
-| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 文字列を UNIX タイムスタンプに変換します |
+| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 文字列を UNIX®タイムスタンプに変換します |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | 文字列を UTC タイムスタンプに変換します |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | 日付を切り捨てます |
-| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | UNIX タイムスタンプを返します |
+| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | UNIX®タイムスタンプを返します。 |
 | [`weekday`](https://spark.apache.org/docs/latest/api/sql/index.html#weekday) | 週間通算日（0～6） |
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | 指定された日付の年間通算での週を返します |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | 文字列の年を返します |
@@ -166,7 +166,7 @@ Adobe Experience Platform クエリサービスには、SQL 機能を拡張す�
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | カウントされた回数の値を含む配列を作成する |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | 配列をソートする |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | 重複なしで配列を結合する |
-| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | 指定された配列の値を、指定されたインデックスの元のコレクションの値と組み合わせる |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | 指定された配列の値を、指定されたインデックスの元のコレクションの値と結合します |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | 配列のサイズを返します |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | 位置の要素を返す |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | 配列の要素を複数の行（null を除く）に分割する |
@@ -175,7 +175,7 @@ Adobe Experience Platform クエリサービスには、SQL 機能を拡張す�
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | 配列の配列を一次元化する |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | 構造体の配列をテーブル（null を除く）に区切る |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | 構造体の配列をテーブル（null を含む）に区切る |
-| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | 配列の要素を、null を除く位置を含む複数の行に分割する |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | 配列の要素を複数の行に分割し、位置を付けます（null を除く） |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | 配列の要素を逆にする |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | 配列のランダム順列を返す |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | 配列をサブセット化する |
@@ -217,7 +217,7 @@ Adobe Experience Platform クエリサービスには、SQL 機能を拡張す�
 | [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json)、[`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | JSON からデータを取得します |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | ハッシュ値を返します |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | 引数を 16 進数値に変換します |
-| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | 文字列を単語の先頭のみ大文字に変更します |
+| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | 文字列をタイトルケースに変更します |
 | [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase)、[`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | 文字列をすべて小文字に変更します |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | 文字列の左側をパディングします |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | マップを作成します |
@@ -305,7 +305,7 @@ Adobe Experience Platform クエリサービスには、SQL 機能を拡張す�
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | 現在の日付を返します |
 | [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | 現在のタイムスタンプを返します |
 
-### 高階関数 {#higher-order}
+### 上位関数 {#higher-order}
 
 | 関数 | 説明 |
 | -------- | ----------- |
