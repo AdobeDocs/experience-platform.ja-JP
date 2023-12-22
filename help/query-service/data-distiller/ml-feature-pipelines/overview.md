@@ -2,9 +2,9 @@
 title: AI/ML 機能パイプライン
 description: Data Distillerを使用して、Adobe Experience Platformデータから派生した機能を機械学習パイプラインに組み込む方法を説明します。 生データを機能に変換し、機能データを配信して、マーケティングの使用例をサポートするモデルをトレーニングまたはスコアリングします。
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '473'
 ht-degree: 3%
 
 ---
@@ -25,9 +25,9 @@ Data Distillerを使用すると、データサイエンティストやエンジ
 
 ![AI-ML 機能パイプラインの詳細な解説図です。](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. Data Distillerの強力なクエリ機能を使用すると、Experience Platformで利用可能な豊富な行動データから意味のある機能を抽出し、Experience Platform外の大量のイベントデータをコピーする必要なく、蒸留された機能データを機械学習環境に取り込むことができます。
-2. 用意された機能データセットを好みの機械学習ツールに読み込み、企業データから得られる他の機能と組み合わせて、ビジネスに合わせてカスタマイズされたカスタムモデルのトレーニング、実験、調整、デプロイを行います。
-3. モデルからスコア、予測またはレコメンデーションを生成し、出力をExperience Platformに返して、Real-time Customer Data PlatformとAdobe Journey Optimizerを通じて顧客体験を最適化します。
+- Data Distillerの強力なクエリ機能を使用すると、Experience Platformで利用可能な豊富な行動データから意味のある機能を抽出できます。 その後、Experience Platformの外部に大量のイベントデータをコピーする必要なく、蒸留された機能データを機械学習環境に取り込むことができます。
+- 用意された機能データセットを好みの機械学習ツールに読み込み、企業データから得られる他の機能と組み合わせて、ビジネスに合わせてカスタマイズされたカスタムモデルのトレーニング、実験、調整、デプロイを行います。
+- モデルからスコア、予測またはレコメンデーションを生成し、出力をExperience Platformに返して、Real-time Customer Data PlatformとAdobe Journey Optimizerを通じて顧客体験を最適化します。
 
 ## 前提条件 {#prerequisites}
 
@@ -43,10 +43,13 @@ Data Distillerを使用すると、データサイエンティストやエンジ
 
 この一連のガイドに含まれるドキュメントでは、機械学習環境でExperience Platformからカスタムモデルをフィードするための機能パイプラインを作成する基本的な手順を説明します。 これで、Data Distillerと [!DNL Jupyter Notebook].
 
-- [から Data Distillerに接続する [!DNL Python] notebook](./establish-connection.md)
-- [データセットの調査と分析](./exploratory-analysis.md)
-- [機械学習の機能を開発する](./feature-engineering.md)
-- [機能データセットを書き出し](./export-data.md)
+- **設定**: [から Data Distillerに接続する [!DNL Python] notebook](./establish-connection.md)
+
+以下にリンクされるドキュメントは、上記の解説図で示した手順に対応しています。
+
+- **手順 1**: [データセットの調査と分析](./exploratory-analysis.md)
+- **手順 2**: [機械学習の機能を開発する](./feature-engineering.md)
+- **手順 3**: [機能データセットを書き出し](./export-data.md)
 
 ## その他のリソース
 
