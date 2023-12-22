@@ -4,7 +4,7 @@ title: ライセンス使用状況ダッシュボードガイド
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e80577cb190e77624a2dc32f8343fc4b82a24a03
+source-git-commit: fabc6611baec68e7948ed2539c496b5a0125cd72
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 5%
@@ -21,7 +21,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="ライセンス使用状況ダッシュボード"
->abstract="ライセンス使用状況ダッシュボードには、購入したAdobe Experience Platform製品に関するインサイトが表示されます。 ダッシュボードの概要には、各プライマリ指標の使用状況や契約ライセンス額など、製品の主要指標が表示されます。 詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。<br>使用状況予測は、月末に月単位で更新され、今後 6 ヶ月の期間の使用状況を予測します。 使用量を減らすには、サンドボックスとデータセットに対して、データセットまたは偽名プロファイルのデータ有効期限を設定します。"
+>abstract="ライセンス使用状況ダッシュボードには、購入したAdobe Experience Platform製品に関するインサイトが表示されます。 ダッシュボードの概要には、各プライマリ指標の使用状況や契約ライセンス額など、製品の主要指標が表示されます。 詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。<br><br>使用状況予測は、月末に月単位で更新され、今後 6 ヶ月の期間の使用状況を予測します。 使用量を減らすには、サンドボックスとデータセットに対して、データセットまたは偽名プロファイルのデータ有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="データセット有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルのデータ有効期限"
 
