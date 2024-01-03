@@ -2,9 +2,9 @@
 title: ID 名前空間の概要
 description: ID サービスの ID 名前空間について説明します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1779'
 ht-degree: 18%
 
 ---
@@ -22,8 +22,6 @@ ID 名前空間では、様々なAdobe Experience Platformサービスに関す�
 * [[!DNL Privacy Service]](../privacy-service/home.md):ID 名前空間は、EU 一般データ保護規則 (GDPR) などの法的プライバシー規制への準拠リクエストで使用されます。 各プライバシーリクエストは、影響を受ける消費者のデータを識別するために、名前空間に対しておこなわれます。
 
 ## ID 名前空間について
-
-![ID サービスを使用したデータワークフローの図です。](images/identity-service-stitching.png)
 
 完全修飾 ID には、次の 2 つのコンポーネントが含まれます。 **ID 値** および **ID 名前空間**. 例えば、ID の値が `scott@acme.com`の場合、名前空間は電子メールアドレスと区別して、この値のコンテキストを提供します。 同様に、名前空間で `555-123-456` 電話番号として、および `3126ABC` を CRM ID として追加しました。 基本的には、 **名前空間は、特定の ID にコンテキストを提供します**. プロファイルフラグメント間でレコードデータを一致させる場合、 [!DNL Real-Time Customer Profile] プロファイルデータの結合。id 値と名前空間の両方が一致する必要があります。
 

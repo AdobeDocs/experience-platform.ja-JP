@@ -2,10 +2,10 @@
 title: ID サービスでの削除
 description: このドキュメントでは、Experience Platform での ID データの削除や、ID グラフがどのような影響を受ける可能性があるかを明確にするために使用できる様々なメカニズムの概要を説明します。
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 100%
+source-wordcount: '1199'
+ht-degree: 97%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform ID サービスでは、個々のユーザーのすべ
 
 ## 単一 ID の削除
 
-単一 ID の削除リクエストでは、グラフ内の ID を削除できるので、ID 名前空間に関連付けられている単一のユーザー ID に結びついているリンクが削除されます。[Privacy Service](../privacy-service/home.md) から提供されるメカニズムは、顧客からのデータ削除リクエストや、EU 一般データ保護規則（GDPR）などのプライバシー規制への準拠といったユースケースに使用することができます。
+単一 ID の削除リクエストでは、グラフ内の ID を削除できるので、ID 名前空間に関連付けられている単一のユーザー ID に結びついているリンクが削除されます。で提供されるメカニズムを使用できます [Privacy Service](../privacy-service/home.md) を参照してください。
 
 以下の節では、Experience Platform で単一の ID 削除リクエストに使用できるメカニズムの概要を説明します。
 

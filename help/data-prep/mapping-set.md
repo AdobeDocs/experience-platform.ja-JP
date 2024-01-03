@@ -4,10 +4,10 @@ solution: Experience Platform
 title: マッピングセットの概要
 description: Adobe Experience Platform Data Prep でのマッピングセットの使用方法を説明します。
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
 workflow-type: tm+mt
 source-wordcount: '959'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -74,8 +74,8 @@ ht-degree: 100%
 | `outputSchema` | 入力データが保持する XDM スキーマは、準拠するように変換されます。 |
 | `mappings` | ソーススキーマから宛先スキーマへのフィールド間マッピングの配列。 |
 | `sourceType` | リストされた各マッピングについて、`sourceType` 属性はマッピングするソースのタイプを示します。`ATTRIBUTE`、`STATIC`、`EXPRESSION` のいずれかです。 <ul><li> `ATTRIBUTE` は、ソースパス内の任意の値に対して使用されます。 </li><li>`STATIC` は、宛先パスに挿入される値に使用されます。この値は一定で、ソーススキーマの影響を受けません。</li><li> `EXPRESSION` は、実行時に解決される式に使用されます。使用可能な式のリストは、[マッピング関数ガイド](./functions.md)に記載されています。</li> </ul> |
-| `source` | リストされた各マッピングについて、`source` 属性はマッピングするフィールドを示します。ソースの設定方法について詳しくは、[ソースの節](#sources)を参照してください。 |
-| `destination` | リストされた各マッピングついて、`destination` 属性はフィールド（`source` フィールドから抽出された値が配置されるフィールドのパス）を示します。宛先の設定方法について詳しくは、[宛先の節](#destination)を参照してください。 |
+| `source` | リストされた各マッピングについて、`source` 属性はマッピングするフィールドを示します。ソースの設定方法の詳細については、 [ソースの概要](../sources/home.md). |
+| `destination` | リストされた各マッピングついて、`destination` 属性はフィールド（`source` フィールドから抽出された値が配置されるフィールドのパス）を示します。宛先の設定方法について詳しくは、 [宛先の概要](../destinations/home.md). |
 | `mappings.name` | （*オプション*）マッピングの名前。 |
 | `mappings.description` | （*オプション*）マッピングの説明。 |
 
