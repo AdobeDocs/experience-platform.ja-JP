@@ -2,7 +2,7 @@
 title: レポートスイートデータ用のAdobe Analytics Source Connector
 description: このドキュメントでは、Analytics の概要と Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
+source-git-commit: 5ec22fcf0f4c48efc28a3abd343bb00a19756281
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 10%
@@ -51,7 +51,7 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 | -------------- | ---------------- |
 | 新しいデータの追加先 [!DNL Real-Time Customer Profile] (A4T) **not** 有効 ) | &lt; 2 分 |
 | 新しいデータの追加先 [!DNL Real-Time Customer Profile] (A4T) **次に該当** 有効 ) | 最大 30 分 |
-| データレイクの新しいデータ | &lt; 90 分 |
+| データレイクの新しいデータ | &lt; 2.25 時間 |
 | 100 億未満のイベントのバックフィル | &lt; 4 週間 |
 
 実稼動サンドボックスの Analytics バックフィルのデフォルト値は 13 ヶ月です。 非実稼動用サンドボックスの Analytics データの場合、バックフィルは 3 ヶ月に設定されます。 上記の表に示した 100 億件のイベントの制限は、予想される待ち時間に厳密に関係しています。
