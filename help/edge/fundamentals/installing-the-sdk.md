@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Web SDK のインストール
 description: Experience PlatformWeb SDK のインストール方法を説明します。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: a8b1aa87ecd85c530188e520db2f17136a63ae44
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '886'
 ht-degree: 26%
 
 ---
-
 
 # Web SDK のインストール {#installing-the-sdk}
 
@@ -68,6 +68,10 @@ URL 構造： https://cdn1.adoberesources.net/alloy/[バージョン]/alloy.min.
 このベースコードは、グローバル関数を作成するだけでなく、サーバ上でホストされる外部ファイル（`alloy.js`）に含まれる追加のコードも読み込みます。デフォルトでは、このコードは非同期で読み込まれ、Web ページのパフォーマンスを可能な限り高めます。これは推奨される実装です。
 
 ### Internet Explorer のサポート {#support-internet-explore}
+
+>[!IMPORTANT]
+>
+>2024 年 4 月末に、Adobe Experience Platform Web SDK は、Internet Explorer のすべてのバージョンのサポートを削除します。
 
 この SDK は、非同期タスクの完了を伝える方法として promise を使用します。 The [プロミス](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) SDK で使用される実装は、次を除くすべての target ブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]. で SDK を使用するには、以下を実行します。 [!DNL Internet Explorer]に設定するには、 `window.Promise` [多充填の](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 

@@ -1,15 +1,20 @@
 ---
 title: Adobe Experience Platform Web ソフトウェア開発キット (SDK) の概要
 description: Adobe Experience Platform Web SDK を使用して、Platform 機能を Web サイトに統合する方法について説明します。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
+source-git-commit: a8b1aa87ecd85c530188e520db2f17136a63ae44
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 32%
+source-wordcount: '772'
+ht-degree: 31%
 
 ---
 
 
 # Adobe Experience Platform Web SDK {#overview}
+
+>[!IMPORTANT]
+>
+>2024 年 4 月末に、Adobe Experience Platform Web SDK は、Internet Explorer のすべてのバージョンのサポートを削除します。
 
 Adobe Experience Platform Web Software Development Kit(SDK) は、Adobe Experience Cloudのお客様がAdobe Experience Platform Edge Network を通じてサービスを操作できるようにする、クライアントサイド JavaScript ライブラリです。 Adobeには、Web SDK を実装する 2 つの方法があります。
 
