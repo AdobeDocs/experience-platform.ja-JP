@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 97%
+source-wordcount: '986'
+ht-degree: 95%
 
 ---
 
@@ -100,6 +100,10 @@ ht-degree: 97%
 役割からユーザーを削除するには、ユーザー名の横の「**X**」アイコンを選択します。
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
+
+次のビデオは、新しい役割の作成と、その役割のユーザーの管理に関する理解を深めることを目的としています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## 役割での API 資格情報の管理 {#manage-api-credentials-for-role}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 製品プロファイルのユーザー管理
 description: このドキュメントでは、Adobe Experience Platform の UI で製品プロファイルのユーザーを管理する方法を示します。
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 100%
+source-wordcount: '228'
+ht-degree: 82%
 
 ---
 
@@ -15,17 +15,21 @@ ht-degree: 100%
 
 製品プロファイルにユーザーを割り当てたり、製品プロファイルからユーザーを削除したりするには、プロファイルの詳細ページを開き、「**[!UICONTROL ユーザー]**」タブに移動します。ここから、「**[!UICONTROL ユーザーの追加]**」を選択します。
 
-![add-user](../images/add-user.png)
+![製品プロファイルの詳細ページ。 [!UICONTROL ユーザー] タブをクリックします。](../images/add-user.png)
 
 「**[!UICONTROL ユーザーの追加]**」ダイアログが表示されます。検索フィールドを使用して、名前または電子メールでユーザーを検索し、追加できます。入力を始めると、テキストボックスの下のオートコンプリートウィンドウに一致するユーザーが表示されます。
 
 >[!NOTE]
 >
-> ユーザーがオートコンプリートウィンドウに表示されない場合は、検索バーにユーザーの完全な電子メールアドレスを入力します。Adobe ID アカウントの設定手順を記載した招待状が電子メールアドレスに送信されます。
+>ユーザーがオートコンプリートウィンドウに表示されない場合は、検索バーにユーザーの完全な電子メールアドレスを入力します。Adobe ID アカウントの設定手順を記載した招待状が電子メールアドレスに送信されます。
 
 ユーザーを選択したら、「**[!UICONTROL 保存]**」をクリックして、ユーザーを製品プロファイルに追加します。
 
-![save-user](../images/save-user.png)
+![ユーザーの詳細を強調表示する製品プロファイルページにユーザーを追加します。](../images/save-user.png)
+
+次のビデオは、製品プロファイルの管理者の管理に関する理解を深めることを目的としています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
 
 ## 次の手順
 
