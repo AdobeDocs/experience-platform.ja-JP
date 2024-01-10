@@ -2,16 +2,16 @@
 description: Destination SDK で作成された宛先に対する UI 属性（ドキュメントリンク、宛先カードカテゴリ、宛先接続タイプおよび頻度など）の設定方法を説明します。
 title: UI 属性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 99%
+source-wordcount: '800'
+ht-degree: 85%
 
 ---
 
 # UI 属性
 
-UI 属性は、Adobe Experience Platform ユーザーインターフェイスでアドビが宛先カードに表示する必要がある視覚要素（宛先プラットフォームロゴ、ドキュメントページへのリンク、宛先の説明とそのカテゴリおよびタイプなど）を定義します。
+UI 属性は、ロゴ、ドキュメントページへのリンク、宛先の説明、そのカテゴリとタイプなど、Adobe Experience Platformユーザーインターフェイスの宛先カードに対してAdobeが表示するビジュアル要素を定義します。
 
 このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、以下の宛先設定の概要ページを参照してください。
 
@@ -21,10 +21,10 @@ UI 属性は、Adobe Experience Platform ユーザーインターフェイスで
 Destination SDK を使用して[宛先を作成](../../authoring-api/destination-configuration/create-destination-configuration.md)する場合、`uiAttributes` セクションで宛先カードの以下のビジュアルプロパティを定義します。
 
 * [宛先カタログ](../../../catalog/overview.md)の宛先ドキュメントページの URL。
-* 宛先カタログのカードに表示するアイコンをホストした URL。
 * Platform UI で宛先が表示されるカテゴリ。
 * 宛先のデータ書き出し頻度。
 * 宛先接続タイプ（Amazon S3、Azure Blob など）。
+* 宛先カタログのカードに表示するアイコンをホストした URL。
 
 `/authoring/destinations` エンドポイントを介して UI 属性を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -82,14 +82,6 @@ Destination SDK を使用して[宛先を作成](../../authoring-api/destination
 
 ![宛先カテゴリの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` は、宛先に応じて接続のタイプを参照する文字列パラメーターです。サポートされている値： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -114,9 +106,17 @@ Destination SDK で作成中の宛先が限られた数の顧客に対して使�
 
 ![ベータ版としてマークされた宛先カードを示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
+### `icon` {#icon}
+
+下の画像に示すように、ロゴアイコンを宛先に追加できます。
+
+![アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+ロゴをリンク先のカードに追加するには、目的の画像をAdobeチームと共有する必要があります [レビュー用に宛先を送信](../../guides/submit-destination.md#logo).
+
 ## 次の手順 {#next-steps}
 
-この記事を読むことで、宛先に設定できる UI 属性と、それが Platform UI で表示される場所について、理解を深めることができました。
+この記事を読むと、宛先に設定できる UI 属性と、ユーザーが Platform UI で表示する場所を、より深く理解できるようになります。
 
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 
