@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 93%
+source-wordcount: '1990'
+ht-degree: 92%
 
 ---
 
@@ -14,7 +14,16 @@ ht-degree: 93%
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
 
-## バージョン2.21.3 - 2023 年 11 月 10 日
+## バージョン 2.21.4 - 2024年1月10日（PT）
+
+**修正点および改善点**
+
+* 設定の上書きを 3 つの環境セットのすべてを設定せずに保存すると、拡張機能 UI がクラッシュする問題を修正しました。
+* 変数更新アクションの編集時に、「既存の値をルートでクリア」チェックボックスが入力されない問題を修正しました。
+
+Adobe Experience Platform Web SDK のバージョン 2.19.2 が含まれます。
+
+## バージョン 2.21.3 - 2023年11月10日（PT）
 
 Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます。
 
@@ -22,7 +31,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 * 提案配列が `Send event complete` イベントは常に空でした。
 
-## バージョン2.21.2 - 2023 年 11 月 1 日
+## バージョン 2.21.2 - 2023年11月1日（PT）
 
 **新機能**
 
@@ -36,13 +45,13 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 * Adobe Experience Platform Web SDK のバージョン 2.19.0 が含まれます。
 
-## バージョン2.20.3 - 2023 年 8 月 8 日
+## バージョン 2.20.3 - 2023年8月8日（PT）
 
 **修正点および改善点**
 
 * ID 同期コンテナ ID 上書きフィールドにデータ要素を保存できなかった問題を修正しました。
 
-## バージョン2.20.1 - 2023 年 8 月 3 日
+## バージョン 2.20.1 - 2023年8月3日（PT）
 
 **修正点および改善点**
 
@@ -56,7 +65,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-*  SDK 設定では `edgeConfigId` が非推奨となり、`datastreamId` が優先されます。
+* 非推奨 `edgeConfigId` ～を支持して `datastreamId` （SDK 設定）を参照してください。
 * データストリーム設定に関する複数のユーザーエクスペリエンス強化が、ユーザーインターフェイスを上書きします。
 
 ## バージョン 2.19.0 - 2023年6月21日（PT）

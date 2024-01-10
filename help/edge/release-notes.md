@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: e46ac94a2328b045d7270b2498d6cb7ef5f0464b
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 93%
+source-wordcount: '1740'
+ht-degree: 90%
 
 ---
 
@@ -16,13 +16,21 @@ ht-degree: 93%
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
 
-## バージョン2.19.1 - 2023 年 11 月 10 日
+## バージョン 2.19.2 - 2024年1月10日（PT）
+
+**修正点および改善点**
+
+* ID エラーで他のエラーがマスクされ、ID エラーが警告に変更される問題を修正しました。
+* renderDecisions が false に設定されているページの呼び出しの先頭がある場合、ページの下部が送信されない問題を修正しました。
+* 複数の adobe_mc クエリ文字列パラメーターがある場合に、Web SDK がクロスドメイン ID を読み取れなかった問題を修正しました。
+
+## バージョン 2.19.1 - 2023年11月10日（PT）
 
 **修正点および改善点**
 
 * 提案配列が `sendEvent` 呼び出しは常に空でした。
 
-## バージョン2.19.0 - 2023 年 11 月 1 日
+## バージョン 2.19.0 - 2023年11月1日（PT）
 
 **新機能**
 
