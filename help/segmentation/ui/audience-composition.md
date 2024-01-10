@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 99%
+source-wordcount: '1789'
+ht-degree: 97%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->構成にタイトルを付け&#x200B;**ない**&#x200B;場合、「構成」の後にデフォルトで作成日時が続くタイトルになります。
+>もし **not** コンポジションにタイトルを付けます。タイトルは「コンポジション」に続き、デフォルトで作成日時が続きます。 また、各構成 **必須** には独自の一意の名前が付けられます。
 
 構成の詳細を更新した後、「**[!UICONTROL 保存]**」を選択して、これらの更新を確定します。オーディエンス構成キャンバスが再び表示されます。
 
