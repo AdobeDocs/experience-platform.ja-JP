@@ -1,11 +1,11 @@
 ---
 description: Destination SDKを使用して、カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定する方法について説明します。
-title: カスタムのファイル名とファイル形式オプションを使用した Amazon S3 の宛先の設定.
+title: カスタムのファイル名と書式設定オプションを使用してAmazon S3 の宛先を設定します。
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 14%
+source-wordcount: '707'
+ht-degree: 10%
 
 ---
 
@@ -35,7 +35,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **リクエスト**
 
-次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しい宛先サーバー設定を作成します。以下のペイロードには、カスタムを使用した一般的なAmazon S3 設定が含まれています [CSV ファイル形式](../../functionality/destination-server/file-formatting.md) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい宛先サーバー設定を作成します。
+以下のペイロードには、カスタムを使用した一般的なAmazon S3 設定が含まれています [CSV ファイル形式](../../functionality/destination-server/file-formatting.md) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -48,7 +49,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "name":"Amazon S3 destination server with custom file formatting options",
    "destinationServerType":"FILE_BASED_S3",
    "fileBasedS3Destination":{
-      "bucketName":{
+      "bucket":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.bucketName}}"
       },

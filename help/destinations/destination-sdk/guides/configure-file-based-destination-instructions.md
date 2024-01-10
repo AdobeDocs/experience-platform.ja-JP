@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してファイルベースの宛先を設定する手順について説明します。
 title: Destination SDK を使用したファイルベースの宛先の設定
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 70%
+source-wordcount: '732'
+ht-degree: 55%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 70%
 
 開始者 [サーバーとファイル設定の作成](../authoring-api/destination-server/create-destination-server.md) の使用 `/destinations-server` endpoint.
 
-次に [!DNL Amazon S3] 宛先の設定例を示します。他のタイプのファイルベースの宛先を設定するには、対応する[サーバーの設定](../functionality/destination-server/server-specs.md)を参照してください。
+次に [!DNL Amazon S3] 宛先の設定例を示します。設定で使用されるフィールドや、その他のタイプのファイルベースの宛先を設定する際に詳しくは、対応する [サーバーの設定](../functionality/destination-server/server-specs.md).
 
 **API 形式**
 
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -114,9 +114,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## 手順 2：宛先の構成の作成 {#create-destination-configuration}
 
-次に、`/destinations` API エンドポイントを使用して作成された宛先の設定例を示します。
+以下に、 `/destinations` API エンドポイント。
 
-手順 1 のサーバーとファイル設定をこの宛先設定に接続するには、サーバーのインスタンス ID とテンプレート設定を `destinationServerId` のように追加します。
+手順 1 からこの宛先設定にサーバーとファイルの設定を接続するには、 `instance ID` サーバーとファイル設定の `destinationServerId` ここ。
 
 **API 形式**
 
@@ -124,7 +124,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ```
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -189,7 +189,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -232,7 +232,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -244,7 +259,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 オーディエンスメタデータの構成を使用する場合は、手順 2 で作成した宛先構成に接続する必要があります。 オーディエンスメタデータ設定のインスタンス ID を `audienceTemplateId` のように宛先設定に追加します。
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -309,7 +324,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -358,7 +373,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -367,6 +397,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 ## 手順 4：認証の設定 {#set-up-authentication}
 
 前述した宛先設定で、`"authenticationRule": "CUSTOMER_AUTHENTICATION"` または `"authenticationRule": "PLATFORM_AUTHENTICATION"` を指定するかどうかに応じて、`/destination` または `/credentials` エンドポイントを使用して宛先の認証を設定できます。
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` は、2 つの認証ルールのより一般的なもので、接続とデータの書き出しを設定する前にユーザーが宛先に何らかの認証形式を提供する必要がある場合に使用します。
 
 * 宛先の設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` を選択した場合、ファイルベースの宛先で Destination SDK によってサポートされる認証タイプについては、次の節を参照してください。
 
@@ -384,10 +418,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 前の手順の構成エンドポイントを使用して宛先を設定した後、 [宛先テストツール](../testing-api/batch-destinations/file-based-destination-testing-overview.md)を使用して、Adobe Experience Platform と宛先の統合をテストすることができます。
 
-宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、以下の 2 つのリソースを参照してください。
+宛先をテストするプロセスの一部として、Experience PlatformUI を使用してオーディエンスを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、以下の 2 つのリソースを参照してください。
 
-* [オーディエンスドキュメントの作成ページ](/help/segmentation/ui/overview.md#create-segment)
-* [オーディエンスのビデオチュートリアルの作成](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [オーディエンスの作成 — ドキュメントページ](/help/segmentation/ui/overview.md#create-segment)
+* [オーディエンスの作成 — ビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 手順 6：宛先を公開する {#publish-destination}
 
