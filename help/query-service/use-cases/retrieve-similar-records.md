@@ -1,7 +1,8 @@
 ---
 title: ラムダ関数の例 — 類似レコードを取得する
 description: 類似性指標と類似性しきい値に基づいて、1 つ以上のデータセットから類似したレコードや関連するレコードを識別し、取得する方法について説明します。 このワークフローでは、意味のある関係や、異なるデータセット間の重複を強調表示することができます。
-source-git-commit: 55af6c8de72e9b60eb9423dda568681e7c84245f
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
+source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
 workflow-type: tm+mt
 source-wordcount: '4011'
 ht-degree: 3%
