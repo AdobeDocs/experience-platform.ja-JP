@@ -3,10 +3,10 @@ title: IP アドレス許可リストの SFTP の宛先
 type: Documentation
 description: このページでは、許可リストに追加し、Experience Platformから SFTP サーバーにデータを安全に書き出すことができる IP 範囲を提供します。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
+source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 9%
+source-wordcount: '189'
+ht-degree: 8%
 
 ---
 
@@ -33,9 +33,17 @@ Adobeでは、クラウドストレージの宛先接続を使用する前に、
 
 * `52.252.71.64/29`
 
+## カナダのお客様
+
+* `20.220.135.16/29`
+
 ## EMEA のお客様
 
 * `51.137.8.208/29`
+
+## 英国の顧客
+
+* `20.26.133.96/29`
 
 ## APAC のお客様
 
