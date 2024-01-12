@@ -4,23 +4,24 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースからの既知データや匿名データをまとめて顧客プロファイルを作成し、それらのプロファイルからオーディエンスセグメントを作成して、それらのセグメントをサードパーティの宛先に対してアクティブ化します。
-source-git-commit: c76a6267230599dfab905524e613f9721b928211
+source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 74%
+source-wordcount: '287'
+ht-degree: 71%
 
 ---
 
 
 # Real-time Customer Data Platform のヘルプ {#rtcdp}
 
-* [Real-Time CDP の概要](overview.md)
-* [Real-Time CDP B2B Edition の概要](b2b-overview.md)
+* [Real-Time CDPドキュメント](home.md)
 * はじめに {#intro}
    * Real-Time CDP {#rtcdp-intro}
+      * [Real-Time CDP の概要](overview.md)
       * [Real-Time CDP の基本を学ぶ](get-started.md)
       * [ホームページ](home-page-dashboards.md)
    * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
+      * [Real-Time CDP B2B Edition の概要](b2b-overview.md)
       * [使用例](./b2b-use-case.md)
       * [エンドツーエンドのチュートリアル](./b2b-tutorial.md)
       * [Real-Time CDP B2B Edition のガードレール](b2b-guardrails.md)
@@ -37,12 +38,12 @@ ht-degree: 74%
 * 宛先 {#destinations}
    * [宛先の概要](destinations/overview.md)
    * [Real-Time CDP B2B Edition の宛先](destinations/b2b.md)
-* ガードレール {#guardrails}
+* Guardrails {#guardrails}
    * [Real-Time CDP Guardrails の概要](guardrails/overview.md)
    * [データ取り込みのガードレール](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [のガードレール [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
    * [のガードレール [!DNL Real-Time Customer Profile] データとセグメント化](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"}
-   * [ [!DNL Identity Service] データ](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html)のガードレール{target="_blank"}
+   * [のガードレール [!DNL Identity Service] データ](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [のガードレール [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
    * [宛先を介したデータのアクティベーションのガードレール](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * ID {#identity}
@@ -73,11 +74,12 @@ ht-degree: 74%
    * [ソースの概要](sources/sources-overview.md)
    * [Real-Time CDP B2B Edition のソース](sources/b2b.md)
 * ユースケース {#use-cases}
+   * [サポートされるユースケースの概要](/help/rtcdp/use-case-guides/overview.md)
    * パーソナライゼーション、インサイト、エンゲージメント {#personalization-insights-engagement}
       * [顧客をインテリジェントに再び関与](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * 顧客獲得 {#customer-acquisition}
       * [サードパーティ cookie に依存せずに新規顧客を惹きつけ、獲得する](/help/rtcdp/partner-data/prospecting.md)
-      * [パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズ](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md)
       * [未認証ユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
    * プロファイルエンリッチメント {#profile-enrichment}
       * [パートナー提供の属性を使用してファーストパーティプロファイルを補完](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
