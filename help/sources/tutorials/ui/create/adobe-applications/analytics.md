@@ -2,10 +2,10 @@
 title: UI での Adobe Analytics ソースコネクタの作成
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 47%
+source-wordcount: '2695'
+ht-degree: 41%
 
 ---
 
@@ -127,7 +127,7 @@ Platform は、マッピングセットにフレンドリ名の競合がない�
 
 Data Prep 関数を使用して、カスタム属性に新しいカスタムマッピングまたは計算フィールドを追加できます。 カスタムマッピングを追加するには、「 **[!UICONTROL カスタム]**.
 
-![custom](../../../../images/tutorials/create/analytics/custom.png)
+![カスタム](../../../../images/tutorials/create/analytics/custom.png)
 
 必要に応じて、次のいずれかを選択できます。 **[!UICONTROL 新しいマッピングを追加]** または **[!UICONTROL 計算フィールドを追加]** カスタム属性のカスタムマッピングの作成に進みます。 Data Prep 関数の使用方法に関する包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
 
@@ -177,11 +177,30 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 マッピングを完了したら、 [!DNL Analytics] レポートスイートのデータを使用する場合、フィルタリングルールと条件を適用して、リアルタイム顧客プロファイルへの取り込みからデータを選択的に含めたり除外したりできます。 フィルタリングのサポートは、次の場合にのみ使用できます。 [!DNL Analytics] データとデータは、 [!DNL Profile.] すべてのデータがデータレイクに取り込まれます。
 
+>[!BEGINSHADEBOX]
+
+**リアルタイム顧客プロファイル用の Analytics データのデータ準備とフィルタリングに関する追加情報**
+
+* プロファイルに移動するデータに対してはフィルタリング機能を使用できますが、データレイクに移動するデータに対しては使用できません。
+* ライブデータに対してフィルタリングを使用することはできますが、バックフィルのデータに対してはフィルタリングできません。
+   * The [!DNL Analytics] ソースは、データをプロファイルにバックフィルしません。
+* の初期設定時に Data Prep 構成を利用する場合 [!DNL Analytics] フローの場合、その変更は 13 ヶ月の自動バックフィルにも適用されます。
+   * ただし、フィルタリングはライブデータ用にのみ予約されているので、フィルタリングには当てはまりません。
+* データ準備は、ストリーミング取り込みパスとバッチ取り込みパスの両方に適用されます。 既存の Data Prep 構成を変更すると、その変更は、ストリーミングとバッチの取り込み経路の両方で新しい受信データに適用されます。
+   * ただし、Data Prep の設定は、ストリーミングデータかバッチデータかに関係なく、Experience Platformに取り込まれたデータには適用されません。
+* Analytics の標準属性は、常に自動的にマッピングされます。 したがって、標準のアトリビュートに変換を適用することはできません。
+   * ただし、標準属性が ID サービスまたはプロファイルで必要でない限り、標準属性を除外できます。
+* 列レベルのフィルタリングを使用して、必須フィールドと ID フィールドをフィルタリングすることはできません。
+* セカンダリ ID（特に AAID と AACustomID）を除外できますが、ECID を除外することはできません。
+* 変換エラーが発生した場合、対応する列は NULL になります。
+
+>[!ENDSHADEBOX]
+
 #### 行レベルのフィルター
 
 >[!IMPORTANT]
 >
->行レベルのフィルタリングを使用して、条件を適用し、**プロファイルの取り込みに含める**&#x200B;データを指示します。列レベルのフィルタリングを使用して、**プロファイルの取り込みから除外する**&#x200B;データの列を選択します。
+>行レベルのフィルタリングを使用して、条件を適用し、**プロファイルの取り込みに含める**&#x200B;データを指示します。列レベルのフィルターを使用して、データの列を選択します **プロファイル取り込み用に除外**.
 
 データをフィルターできます。 [!DNL Profile] 行レベルおよび列レベルでの取り込み。 行レベルのフィルタリングでは、文字列の含む、等しい、始まる、次で終わるなどの条件を定義できます。 また、行レベルのフィルターを使用して、 `AND` 同様に `OR`を使用して、条件を無効にする `NOT`.
 
@@ -201,14 +220,14 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 設定可能な条件のリストは次のとおりです。
 
-* [!UICONTROL 次と等しい]
+* [!UICONTROL equals]
 * [!UICONTROL 次と等しくない]
-* [!UICONTROL 次の語句で始まる]
+* [!UICONTROL 次で始まる]
 * [!UICONTROL 次の語句で終わる]
-* [!UICONTROL 次の語句で終わらない]
+* [!UICONTROL 次で終わらない]
 * [!UICONTROL 次を含む]
 * [!UICONTROL 次を含まない]
-* [!UICONTROL 存在する]
+* [!UICONTROL exists]
 * [!UICONTROL 存在しない]
 
 ![条件](../../../../images/tutorials/create/analytics/conditions.png)
