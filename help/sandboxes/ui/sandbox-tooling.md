@@ -2,10 +2,10 @@
 title: サンドボックスツール
 description: サンドボックス間でのサンドボックス設定のシームレスな書き出しと読み込みをおこないます。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
+source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 10%
+source-wordcount: '1859'
+ht-degree: 6%
 
 ---
 
@@ -67,19 +67,14 @@ ht-degree: 10%
 >すべての書き出しアクションは監査ログに記録されます。
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="パッケージを保存して終了"
->abstract="パッケージを終了して保存するには、「戻る」オプションを使用するだけで済みます。"
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="オブジェクトを削除"
->abstract="ユーザーは行を選択し、削除オプション（選択時に使用可能）を使用して、行を削除する必要があります。"
+>abstract="パッケージからオブジェクトを削除するには、削除する行を選択し、選択時に使用可能にする削除オプションを使用します。 公開済みのパッケージからオブジェクトを削除することはできません。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="パッケージの有効期限設定"
->abstract="日付は今日から 90 日に設定されています。この日付は、パッケージが公開されるまで変更され続けます。あるユーザーが翌日ドラフトステータスのパッケージにアクセスすると、日付は 1 日後に移動します（ユーザーが設定している場合を除く）。"
+>abstract="パッケージは、ドラフトステータスで無操作状態が続くと有効期限が切れるように設定されます。 デフォルトの日付は今日から 90 日間に設定されます。 この日付は、パッケージが公開されるまで変更され続けます。明日、ドラフト状態のパッケージにアクセスすると、手動で設定しない限り、日付は+1 日ずつ変わります。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
