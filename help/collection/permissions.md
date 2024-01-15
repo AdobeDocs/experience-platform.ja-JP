@@ -2,10 +2,10 @@
 title: Experience Platformでのデータ収集の権限管理
 description: 権限を管理し、Adobe Experience Platformのデータ収集機能へのアクセスを制御する方法の概要です。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 30%
+source-wordcount: '1285'
+ht-degree: 29%
 
 ---
 
@@ -53,12 +53,13 @@ Adobe Experience Platformデータ収集の権限は、タグとイベント転�
 | プロパティ | （N/A） | 組織で作成されたプロパティに応じて、「Admin Console」のこの権限カテゴリを使用して、各プロパティへのアクセスを制御できます。<br><br>ユーザーに割り当てられたプロパティ権限は、この権限カテゴリを通じてアクセス権を付与されたプロパティにのみ適用されます。 |
 | プロパティ権限 | 承認 | の一部としてライブラリビルドを承認する機能を付与します [公開フロー](../tags/ui/publishing/publishing-flow.md). |
 | プロパティ権限 | 開発 | の一部としてライブラリビルドを開発する機能を付与します [公開フロー](../tags/ui/publishing/publishing-flow.md). |
-| プロパティ権限 | プロパティの編集 | ユーザーがアクセスできるプロパティの基本設定を編集する機能を付与します。 |
+| プロパティ権限 | プロパティを編集 | ユーザーがアクセスできるプロパティの基本設定を編集する機能を付与します。 |
 | プロパティ権限 | 環境の管理 | を管理する機能を付与します [環境](../tags/ui/publishing/environments.md) ユーザーがアクセスできるプロパティの場合。 |
 | プロパティ権限 | 拡張機能の管理 | を管理する機能を付与します [拡張機能](../tags/ui/managing-resources/extensions/overview.md) ユーザーがアクセスできるプロパティの場合。 |
 | プロパティ権限 | 公開 | ライブラリビルドをの一部として公開する機能を付与します [公開フロー](../tags/ui/publishing/publishing-flow.md). |
 | 会社権限 | 拡張機能の開発 | 非公開リリースや公開リリースのリクエストなど、組織が所有する拡張機能パッケージを作成および変更する機能を付与します。 |
-| 会社権限 | 拡張機能の管理 | この権限は、モバイルアプリ内メッセージおよびプッシュメッセージへのアクセスを許可するAdobe Journey Optimizerまたは他のソリューションのライセンスをお持ちの場合にのみ適用できます。 これにより、Adobe Experience Cloudが把握しているアプリと、Firebase Cloud Messaging サービスおよびAppleプッシュ通知サービスとの通信に必要なプッシュ資格情報を管理できます。 |
+| 会社権限 | アプリ設定の管理 | この権限は、モバイルアプリ内メッセージおよびプッシュメッセージへのアクセスを許可するAdobe Journey Optimizerまたは他のソリューションのライセンスをお持ちの場合にのみ適用できます。 これにより、Adobe Experience Cloudが把握しているアプリと、Firebase Cloud Messaging サービスおよびAppleプッシュ通知サービスとの通信に必要なプッシュ資格情報を管理できます。 |
+| 会社権限 | プロパティの管理 | タグ（Web プロパティ）、イベント転送（エッジプロパティ）およびモバイルプロパティを作成および管理する機能を付与します。 |
 
 {style="table-layout:auto"}
 
