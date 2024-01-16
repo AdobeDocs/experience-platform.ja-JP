@@ -4,8 +4,8 @@ description: Adobe Experience Platform の 2023年10月のリリースノート�
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 39%
+source-wordcount: '1052'
+ht-degree: 38%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 39%
 
 **リリース日：2023年10月25日（PT）**
 
- Experience Platform の既存の機能に対するアップデート：
+Experience Platformの既存の機能の更新：
 
 - [ダッシュボード](#dashboards)
 - [データ収集](#data-collection)
