@@ -2,10 +2,10 @@
 title: データ要素
 description: データ要素は、データディクショナリ（またはデータマップ）の構築ブロックです。データ要素を使用して、マーケティングおよび広告テクノロジー全体でデータを収集、整理、配信します。
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 92%
+source-wordcount: '1614'
+ht-degree: 91%
 
 ---
 
@@ -91,9 +91,11 @@ ht-degree: 92%
 
 ## データ要素のタイプ {#types-of-data-elements}
 
-データ要素のタイプは、拡張機能によって決まります。タイプはいくつでも作成することができます。
+>[!NOTE]
+>
+>データ要素のタイプは、拡張機能によって決まります。タイプはいくつでも作成することができます。
 
-以降の節では、Core 拡張機能で使用できるデータ要素のタイプについて説明します。その他の拡張機能は、他のタイプのデータ要素を使用します。
+次の節では、 **Core 拡張機能**. その他の拡張機能は、他のタイプのデータ要素を使用します。
 
 ### Cookie
 
