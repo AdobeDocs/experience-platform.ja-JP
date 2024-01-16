@@ -2,7 +2,7 @@
 title: Real-Time CDPの使用例
 description: クロスサービスの使用例を参照して、Real-Time CDPの実装を最大限に活用してください。
 feature: Use Cases
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 Adobe Real-Time CDPは、パートナー識別子を広範にサポートし、見込み客のオーディエンスを作成したり、パートナーの属性を使用して既知のオーディエンスを強化したりできます。
 
-サポートされるユースケースは、顧客獲得およびプロファイルエンリッチメントケースにグループ化できます。 詳細な実装情報については、以下のドキュメントリンクを参照してください。
+サンプルの使用例は、顧客獲得とプロファイルエンリッチメントの例にグループ化できます。 詳細な実装情報については、以下のドキュメントリンクを参照してください。
 
 ### 顧客獲得 {#customer-acquisition}
 
