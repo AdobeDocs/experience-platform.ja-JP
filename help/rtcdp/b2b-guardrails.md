@@ -6,10 +6,10 @@ description: Adobe Experience Platform は、従来のリレーショナルデ�
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 59%
+source-wordcount: '1675'
+ht-degree: 58%
 
 ---
 
@@ -66,6 +66,7 @@ Real-time Customer Data Platform B2B Edition を使用すると、行動イン�
 | ネストされたレガシー関係がありません | 0 | ソフト | 2 つの非 [!DNL XDM Individual Profile] スキーマ間に関係を作成しないでください。[!DNL Profile] 結合スキーマの一部ではないスキーマでは、関係を作成する機能は推奨されません。 |
 | 多対 1 の関係に追加できるのはB2B オブジェクトのみ | 0 | ハード | システムは、B2B オブジェクト間の多対 1 の関係のみをサポートします。 多対 1 の関係について詳しくは、[B2B スキーマの関係の定義](../xdm/tutorials/relationship-b2b.md)に関するチュートリアルを参照してください。 |
 | B2B オブジェクト間のネストされた関係の最大深度 | 3 | ハード | B2B オブジェクト間でネストされた関係の最大深度は 3 です。つまり、高度にネストされたスキーマでは、B2B オブジェクト間の関係を 3 レベルをより深くネストしないでください。 |
+| 各ディメンションエンティティの単一スキーマ | 1 | ハード | 各ディメンションエンティティには、1 つのスキーマが必要です。 複数のスキーマから作成されたディメンションエンティティを使用しようとすると、セグメント化の結果に影響を与える可能性があります。 異なるディメンションエンティティには、別々のスキーマが必要です。 |
 
 ## データサイズの上限
 
@@ -119,7 +120,7 @@ Real-time Customer Data Platform B2B Edition を使用すると、行動イン�
 
 ### エンティティタイプ
 
-この [!DNL Profile] ストアデータモデルは、次の 2 つのコアエンティティタイプで構成されます。 [主要エンティティ](#primary-entity) および [ディメンションエンティティ](#dimension-entity).
+The [!DNL Profile] ストアデータモデルは、次の 2 つのコアエンティティタイプで構成されます。 [主要エンティティ](#primary-entity) および [ディメンションエンティティ](#dimension-entity).
 
 #### プライマリエンティティ
 
@@ -131,7 +132,7 @@ Real-time Customer Data Platform B2B Edition を使用すると、行動イン�
 
 #### Dimensionエンティティ
 
-プロファイルデータの保守はリレーショナルストアではありませんが、プロファイルでは、シンプルで直感的な方法でセグメントを作成するために、小さなディメンションエンティティとの統合を可能にします。 この統合は、[マルチエンティティセグメンテーション](../segmentation/multi-entity-segmentation.md)とも呼ばれます。
+プロファイルデータの保守はリレーショナルストアではありませんが、プロファイルでは、シンプルで直感的な方法でセグメントを作成するために、小さなディメンションエンティティとの統合を可能にします。 この統合は、 [マルチエンティティセグメント化](../segmentation/multi-entity-segmentation.md).
 
 組織では、店舗、製品、資産など、個人以外のものを記述する XDM クラスを定義することもできます。 これらの[!DNL XDM Individual Profile] スキーマは「ディメンションエンティティ」（「ルックアップエンティティ」とも呼ばれます）と呼ばれ、時系列データを含みません。 ディメンションエンティティを表すスキーマは、 [スキーマの関係](../xdm/tutorials/relationship-ui.md).
 
