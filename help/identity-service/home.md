@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ID サービスの概要
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
+source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1524'
 ht-degree: 8%
 
 ---
@@ -33,7 +33,7 @@ ID サービスの詳細を確認する前に、次の表を読んで、主な�
 | --- | --- |
 | ID | ID は、エンティティに固有のデータです。 通常、これは個人、ハードウェアデバイス、Web ブラウザー（Cookie で表される）など、実際のオブジェクトです。 完全修飾 ID は、次の 2 つの要素で構成されます。 **ID 名前空間** および **ID 値**. |
 | ID 名前空間 | ID 名前空間は、指定された ID のコンテキストです。 例えば、 `Email` ～と一致する可能性がある **julien<span>@acme.com**. 同様に、 `Phone` ～と一致する可能性がある `555-555-1234`. 詳しくは、 [ID 名前空間の概要](./namespaces.md) |
-| ID 値 | ID 値は、実際のエンティティを表す文字列で、名前空間を通じて ID サービス内に分類されます。 例えば、E メール **julien<span>@acme.com** は、次のように分類できます `Email` 名前空間。 |
+| ID 値 | ID 値は、実際のエンティティを表す文字列で、名前空間を通じて ID サービス内に分類されます。 例えば、ID 値（文字列） **julien<span>@acme.com** は、次のように分類できます `Email` 名前空間。 |
 | ID タイプ | ID タイプは、ID 名前空間のコンポーネントです。 ID タイプは、ID データが ID グラフでリンクされているかどうかを示します。 |
 | リンク | リンクやリンケージは、2 つの異なる ID が同じエンティティを表すことを確立するメソッドです。 例えば、「`Email` = julien<span>@acme.com」および「`Phone` = 555-555-1234」は、両方の ID が同じエンティティを表すことを意味します。 これは、julien の E メールアドレスを使用してブランドとやり取りした顧客を示しています。<span>@acme.comと555-555-1234の電話番号は同じです。 |
 | ID サービス | ID サービスは、ID をリンク（またはリンク解除）して ID グラフを維持する、Experience Platform内のサービスです。 |
@@ -92,7 +92,7 @@ ID サービスは、ミッションを達成するために次の操作を提�
 * 次に、同じ e コマース Web サイトに同じ資格情報でログインし、ノート PC の Web ブラウザーではなく、携帯電話で Web ブラウザーを使用すると、新しい ECID が ID サービスに登録されます。
 * バックグラウンドで、ID サービスはこの新しいイベントを `{CRM_ID:ABC, ECID:456}`（ここで、 CRM_ID: ABC は認証済みの顧客 ID を表し、 ECID:456 はモバイルデバイス上の Web ブラウザーを表します）。
 
-上記のシナリオを考慮すると、ID サービスは、 `CRM_ID:ABC, ECID:123`、および `{CRM_ID:ABC, ECID:456}`. その結果、ID グラフでは、ユーザー ID(CRM ID) 用に 1 つ、Cookie ID(ECID) 用に 2 つの ID を「所有」します。
+上記のシナリオを考慮すると、ID サービスは、 `{CRM_ID:ABC, ECID:123}`、および `{CRM_ID:ABC, ECID:456}`. その結果、ID グラフでは、ユーザー ID(CRM ID) 用に 1 つ、Cookie ID(ECID) 用に 2 つの ID を「所有」します。
 
 ## ID グラフ
 
