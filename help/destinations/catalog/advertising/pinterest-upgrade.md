@@ -4,9 +4,9 @@ description: Pinterestは、Real-Time CDPのPinterestの宛先で現在使用さ
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 3968c8e2a0ebd2084a7047fb41e2b85c5da7a6e7
+source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Pinterestは、 [Pinterestの宛先](/help/destinations/catalog/advertising/pint
 
 ## 計画は？
 
-Adobeは、Pinterest API v5 を利用する新しいPinterest宛先カードをリリースします。このカードは、新しい接続で既存のデータフローを保持します。
+Adobeは、Pinterest API v5 を利用する新しいPinterest宛先カードをリリースしました。このカードは、新しい接続で既存のデータフローを保持します。
 
 ## アクティブ化されたオーディエンスを機能させ続けるには、何かをおこなう必要がありますか？
 
@@ -45,7 +45,7 @@ Adobeは、Pinterest API v5 を利用する新しいPinterest宛先カードを�
 
 ### 新しい宛先へのフローの有効化 {#disable-old-enable-new-flows}
 
-次に、新しいカードへのデータフローを有効にする必要があります **[!UICONTROL （新規）Pinterest]**.
+次に、新しい  **[!UICONTROL Pinterest]** カード。
 
 1. に移動します。 **[!UICONTROL 宛先/参照]** 画面上のフィルターを使用して、 **[!UICONTROL Pinterest]** 宛先のみ。
    ![pinterestのデータフローを「参照」タブでのみフィルタリングする](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
@@ -66,14 +66,18 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 ![新旧のPinterestの宛先を並べて表示](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
+<!--
+
 >[!IMPORTANT]
 >
->2023 年 11 月 16 日以降、従来のPinterestの宛先が **[!UICONTROL 廃止]**. <span class="preview">11 月 17 日以降に（廃止予定の）Pinterestの宛先に対してデータフローに加えた変更は、すべて次のとおりです。 *not* が新しいPinterest宛先に自動的に引き継がれます。 </span>
->例えば、次のようにします。 *推奨しない* 11 月 16 日以降に、古い宛先に対する新しいオーディエンスをアクティブ化する場合 そうすれば、 [通常のアクティベーション手順](/help/destinations/ui/activate-segment-streaming-destinations.md) 顧客アクションを実行した後で、オーディエンスを新しい宛先に追加する場合。
+>After November 16th, 2023 the legacy Pinterest destination is marked **[!UICONTROL Deprecating]**. <span class="preview">Any changes that you make to dataflows to the (Deprecating) Pinterest destination after November 16th will *not* be automatically carried over to the new Pinterest destination. </span>
+>For example, we *do not recommend* that you activate new audiences to the old destination after November 16th. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
+
+-->
 
 **2023 年 12 月 15 日まで**: <span class="preview">顧客アクション 1</span>. 新しいカードがPinterestに接続されるように、Pinterestに再認証する必要があります。 完全な手順を次の場所に表示： [この節](#reauthenticate).
 
-<span class="preview">顧客アクション 2</span>次に、古いカードでPinterestへのデータフローを無効にし、新しいカードでデータフローを有効にする必要があります。 完全な手順を次の場所に表示： [この節](#disable-old-enable-new-flows).
+<span class="preview">顧客アクション 2</span>次に、新しいカードでデータフローを有効にする必要があります。 完全な手順を次の場所に表示： [この節](#disable-old-enable-new-flows).
 
 <!--
 
@@ -83,8 +87,12 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-**2024 年 1 月 19 日以降**: <span class="preview">Pinterestは V4 広告主 API へのアクセスをオフにしました。 新しい宛先にアップグレードしていないReal-Time CDPのお客様は、Pinterestの宛先へのデータフローが失敗することになります。 [pinterestへの再認証](#reauthenticate) および [データフローを有効にする](#disable-old-enable-new-flows) をアップグレードした宛先に追加して、Pinterestへのキャンペーンを再開します。</span>.
+**2024 年 1 月 19 日以降**: <span class="preview">Pinterestは V4 広告主 API へのアクセスをオフにしました。 新しい宛先にアップグレードしていないReal-Time CDPのお客様は、Pinterestの宛先へのデータフローが失敗することになります。 [pinterestへの再認証](#reauthenticate) および [データフローを有効にする](#disable-old-enable-new-flows) をアップグレードした宛先に追加し、Pinterestへのキャンペーンを再開します。</span>
 
-## その他の注意事項
+<!--
 
-新しい宛先カードでデータフローを有効にし、古い宛先カードでデータフローを無効にした後は、キャンペーンやAdobe Real-Time CDPからのオーディエンス内の認定済みプロファイルの数に混乱が生じることはありません。
+## Other items to note
+
+After you enable the dataflows on the new destination card and disable the dataflows on the old destination cards, you should see no disruption in your campaigns or in the numbers of qualified profiles in the audiences coming in from Adobe Real-Time CDP.
+
+-->
