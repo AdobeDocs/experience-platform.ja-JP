@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform における ID
 description: Adobe Experience Platform ID サービスは、すべてのデバイスやシステム間で ID を橋渡しすることで、顧客とその行動をより確実に把握できるようにします。
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 100%
+source-wordcount: '422'
+ht-degree: 81%
 
 ---
 
@@ -23,9 +23,9 @@ ID 名前空間は [!DNL Identity Service] のコンポーネントで、顧客 
 
 ## ID グラフ
 
-ID グラフは、異なる ID 名前空間間の関係のマップで、顧客が様々なチャネルを通じてブランドとどのようにやり取りするかを視覚的に示します。すべての顧客 ID グラフは、顧客の活動に応じて、[!DNL Identity Service]によって、ほぼリアルタイムでまとめて管理および更新されます。
+ID グラフは、異なる ID 間の関係のマップで、顧客が様々なチャネルを通じてブランドとどのようにやり取りするかを視覚的に示します。 すべての顧客 ID グラフは、顧客の行動に応じて、ID サービスによって一括で管理および更新されます。
 
-[!DNL Identity Service]は、プライベートグラフと呼ばれる、組織のみが表示できる、データに基づいて構築された ID グラフを管理します。[!DNL Identity Service]は、取り込んだデータレコードに複数の ID が含まれている場合にプライベートグラフを拡張し、見つかった ID 間の関係を追加します。
+[!DNL Identity Service] は、組織にのみ表示され、データに基づいて構築された id グラフを管理します。 [!DNL Identity Service] 取り込まれたデータレコードに複数の ID が含まれている場合にグラフが拡張され、見つかった ID 間の関係が追加されます。
 
 ## 次の手順
 
