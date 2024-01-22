@@ -2,19 +2,14 @@
 title: Pinterest Customer List 接続
 description: 顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
+source-git-commit: 02110e4b4156774c2961803f78ae1c3fc9d6240a
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 45%
+source-wordcount: '719'
+ht-degree: 48%
 
 ---
 
 # [!DNL Pinterest Customer List] 接続
-
->[!IMPORTANT]
->
->* 2023 年 11 月 17 日以降、宛先カタログで 2 枚のPinterestカードを並べて表示できます。 これは、データをPinterestに書き出すために使用されるPinterest広告主 API へのアップグレードが原因です。 既存のPinterest宛先コネクタの名前は、「 **[!UICONTROL （廃止） Pinterest]** 新しいカード **[!UICONTROL （新規）Pinterest]** が使用できるようになりました。
->* 以下を使用します。 **[!UICONTROL （新規）Pinterest]** 任意のキャンペーンのカタログ内のPinterestへの接続。 アクティブなデータフローがある場合は、 **[!UICONTROL （廃止） Pinterest]** 宛先、読む [アップグレードドキュメント](/help/destinations/catalog/advertising/pinterest-upgrade.md) を使用して、キャンペーンを中断しないようにするアクション項目を理解します。
 
 ## 概要 {#overview}
 
@@ -56,7 +51,7 @@ Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segme
 
 ## ユースケース {#use-cases}
 
-[!DNL Pinterest Customer List] 宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
+をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL Pinterest Customer List] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
 
 ### ユースケース 1
 
