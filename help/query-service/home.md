@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービスの概要
 description: クエリサービスの役割 (Experience Platform内 ) を説明します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
+source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 25%
@@ -29,7 +29,7 @@ Adobe Experience Platform は様々なソースからデータを取得します
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人工知能を使用して、Experience Platform内に保存されたデータからインサイトを得ます。 データサイエンティストは、 [!DNL Data Science Workspace] を使用して、顧客とそのアクティビティに関するレコードと時系列のデータに基づいてレシピを作成します。 これらのレシピは、購入傾向や、個人が喜んで受け入れる可能性が高い推奨オファーなどの予測を促進します。 SQL は、 [!DNL Data Science Workspace] クエリサービスを [!DNL JupyterLab] Adobe Analyticsデータを調査、変換、分析する。 詳しくは、 [[!DNL Data Science Workspace] 概要](../data-science-workspace/home.md) そして [Jypiter Notebook 接続ガイド](./clients/jupyter-notebook.md) 詳しくは、 [!DNL Data Science Workspace] はクエリサービスとやり取りする
+Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人工知能を使用して、Experience Platform内に保存されたデータからインサイトを得ます。 データサイエンティストは、 [!DNL Data Science Workspace] を使用して、顧客とそのアクティビティに関するレコードと時系列のデータに基づいてレシピを作成します。 これらのレシピは、購入傾向や、個人が喜んで受け入れる可能性が高い推奨オファーなどの予測を促進します。 SQL は、 [!DNL Data Science Workspace] クエリサービスを [!DNL JupyterLab] Adobe Analyticsデータを調査、変換、分析する。 詳しくは、 [[!DNL Data Science Workspace] 概要](../data-science-workspace/home.md) そして [Jupyter Notebook 接続ガイド](./clients/jupyter-notebook.md) 詳しくは、 [!DNL Data Science Workspace] はクエリサービスとやり取りする
 
 ### [!DNL Segmentation Service] {#segmentation}
 
