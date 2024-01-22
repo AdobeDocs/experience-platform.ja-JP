@@ -3,10 +3,10 @@ title: HubSpot 接続
 description: HubSpot の宛先を使用すると、HubSpot アカウント内の連絡先レコードを管理できます。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1600'
-ht-degree: 39%
+source-wordcount: '1543'
+ht-degree: 36%
 
 ---
 
@@ -99,7 +99,7 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -133,13 +133,13 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 >[!IMPORTANT]
 >
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-Adobe Experience Platformからにオーディエンスデータを正しく送信するには、以下を実行します。 [!DNL HubSpot] の宛先の場合は、フィールドマッピングの手順を実行する必要があります。 マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 
+Adobe Experience Platformからにオーディエンスデータを正しく送信するには、以下を実行します。 [!DNL HubSpot] の宛先の場合は、フィールドマッピングの手順を実行する必要があります。 マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。
 
 XDM フィールドを [!DNL HubSpot] 宛先フィールドには、次の手順に従います。
 
@@ -201,7 +201,7 @@ XDM プロファイルスキーマとの使用可能なマッピングの一部 
 
 ## その他のリソース {#additional-resources}
 
-[!DNL HubSpot] ドキュメントからのその他の役に立つ情報は次のとおりです。
+以下に示すその他の役に立つ情報 [!DNL HubSpot] 以下のドキュメントです。
 * [HubSpot での認証方法](https://developers.hubspot.com/docs/api/intro-to-auth)
 * [!DNL HubSpot] の API リファレンス [連絡先](https://developers.hubspot.com/docs/api/crm/contacts) および [プロパティ](https://developers.hubspot.com/docs/api/crm/properties) API
 

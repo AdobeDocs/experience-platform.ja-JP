@@ -2,10 +2,10 @@
 title: LiveRamp - Distribution Connection
 description: LiveRamp - Distribution コネクタを使用して、以前 LiveRamp に転送されたオーディエンスを、ダウンストリーム広告の宛先に合わせて調整およびアクティブ化する方法について説明します。
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2716'
-ht-degree: 46%
+source-wordcount: '2722'
+ht-degree: 45%
 
 ---
 
@@ -65,7 +65,7 @@ The [!DNL LiveRamp - Distribution] 接続を使用すると、モバイル、Web
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -195,7 +195,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 
 * **[!UICONTROL 広告主データの宛先に関する利用条件の契約]**：に入力します。 `I AGREE` をクリックして、Disney 広告主のデータ利用条件に対する確認および同意を確認します。
 * **[!UICONTROL クライアント名]**：宛先パートナーに表示する会社名を入力します。
-* **[!UICONTROL 電子メールアドレス]**：個人に関連付けられた電子メールアドレスを入力します。 このメールアドレスは、広告主データの利用規約への署名として機能します。
+* **[!UICONTROL 電子メールアドレス]**：個人に関連付けられた電子メールアドレスを入力します。 この電子メールアドレスは、広告主データ利用規約契約の署名の役割を果たします。
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -431,7 +431,7 @@ LiveRamp アカウントに正常に接続したら、オーディエンスを�
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 The [!DNL LiveRamp - Distribution] 接続は、 [LiveRamp - Onboarding](liveramp-onboarding.md) 接続。
 

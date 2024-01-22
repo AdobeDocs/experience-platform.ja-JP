@@ -4,10 +4,10 @@ title: LINE 接続
 description: LINE の宛先を使用すると、Platform オーディエンスにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを提供できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 46%
+source-wordcount: '1190'
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 46%
 
 ## 概要 {#overview}
 
-[[!DNL LINE]](https://line.me/en/) は、人物、サービスおよび情報をつなぎ、チャットアプリからエンターテインメント、ソーシャルおよび日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。
+[[!DNL LINE]](https://line.me/en/) は、人、サービス、情報を結び付け、チャットアプリからエンターテインメント、ソーシャル、日々のアクティビティのハブに成長した、人気のあるコミュニケーションプラットフォームです。
 
 この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は、 [[!DNL LINE] メッセージング API](https://developers.line.biz/en/reference/messaging-api/). 内の接続として、Experience Platformオーディエンスからプロファイルをアクティブ化できます。 [!DNL LINE] ビジネスニーズに合わせて
 
@@ -48,7 +48,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| `[!DNL Channel access token (long-lived)]` | お使いの「[!DNL LINE Channel access token (long-lived)]」。 | `aaa2112XSMWqLXR7..........nyilFU=` |
+| `[!DNL Channel access token (long-lived)]` | お使いの [!DNL LINE Channel access token (long-lived)]. | `aaa2112XSMWqLXR7..........nyilFU=` |
 
 詳しくは、 [[!DNL LINE] ドキュメント](https://developers.line.biz/en/docs/messaging-api/getting-started/) チャネルの作成や、既存のチャネルへのチャネルの追加に関するガイダンス [!DNL LINE] を通じて説明する [!DNL LINE] 開発者コンソール。
 
@@ -76,7 +76,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -87,7 +87,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
 ![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
-以下の必須のフィールドに入力します。
+以下の必須フィールドに入力します。
 * **[!UICONTROL Bearer トークン]**: [!DNL LINE Channel access token (long-lived)] から [!DNL LINE] 開発者コンソール。 詳しくは、 [資格情報を収集](#gather-credentials) 」セクションに入力します。
 
 指定した詳細が有効な場合、UI で&#x200B;**[!UICONTROL 接続済み]**&#x200B;ステータスに緑色のチェックマークが付きます。その後、次の手順に進むことができます。
@@ -111,7 +111,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
@@ -120,7 +120,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 Adobe Experience Platform から [!DNL LINE] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL LINE] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
-ソース ID に応じて、次のターゲット ID 名前空間をマッピングする必要があります。 |ターゲット ID |ソースフィールド |ターゲットフィールド | | — | — | — | |広告主 (IFA) の ID | `IDFA` または `GAID` | `LineId` | | LINE ユーザー ID | `UserID` | `LineId` |
+ソース ID に応じて、次のターゲット ID 名前空間をマッピングする必要があります。 | ターゲット ID | ソースフィールド | ターゲットフィールド | | — | — | — | | 広告主 (IFA) の ID | `IDFA` または `GAID` | `LineId` | | LINE ユーザー ID | `UserID` | `LineId` |
 
 ターゲット ID が *LINE ユーザー ID* 以下が必要です。
 ![ターゲット ID に LINE ユーザー ID を使用する場合の、Target マッピングを示す Platform UI のスクリーンショット例。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)

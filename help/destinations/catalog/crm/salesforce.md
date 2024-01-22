@@ -3,10 +3,10 @@ keywords: crm;CRM;crm の宛先；salesforce crm;salesforce crm の宛先
 title: Salesforce CRM 接続
 description: Salesforce CRM の宛先を使用すると、アカウントデータをエクスポートし、Salesforce CRM 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2818'
-ht-degree: 21%
+source-wordcount: '2821'
+ht-degree: 20%
 
 ---
 
@@ -144,7 +144,7 @@ Platform からに対してアクティブ化する各オーディエンスに�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -153,7 +153,7 @@ Platform からに対してアクティブ化する各オーディエンスに�
 ### 宛先に対する認証 {#authenticate}
 
 宛先を認証するには、以下の必須フィールドに入力し、を選択します。 **[!UICONTROL 宛先に接続]**. 詳しくは、 [収集 [!DNL Salesforce CRM] 資格情報](#gather-credentials) 」の節を参照してください。
-|資格情報 |説明 | | — | — | | **[!UICONTROL ユーザー名]** |お客様の [!DNL Salesforce] アカウントのユーザー名。 | | **[!UICONTROL パスワード]** |次の文字列で構成される連結文字列： [!DNL Salesforce] アカウントのパスワードが追加されました [!DNL Salesforce] セキュリティトークン。<br>連結された値は、 `{PASSWORD}{TOKEN}`.<br> なお、中括弧やスペースは使用しないでください。<br>例えば、 [!DNL Salesforce] パスワード： `MyPa$$w0rd123` および [!DNL Salesforce] セキュリティトークンは `TOKEN12345....0000`に設定する場合、 **[!UICONTROL パスワード]** フィールドが次の値 `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL カスタムドメイン]** |お客様の [!DNL Salesforce] ドメインプレフィックス。 <br>例えば、ドメインが *`d5i000000isb4eak-dev-ed`.my.salesforce.com*&#x200B;を指定する場合は、 `d5i000000isb4eak-dev-ed` を値として使用します。 | | **[!UICONTROL クライアント ID]** |お客様の [!DNL Salesforce] 接続されたアプリ `Consumer Key`. | | **[!UICONTROL クライアントの秘密鍵]** |お客様の [!DNL Salesforce] 接続されたアプリ `Consumer Secret`. |
+| 資格情報 | 説明 | | — | — | | **[!UICONTROL ユーザー名]** | お使いの [!DNL Salesforce] アカウントのユーザー名。 | | **[!UICONTROL パスワード]** | 連結された文字列で、 [!DNL Salesforce] アカウントのパスワードが追加されました [!DNL Salesforce] セキュリティトークン。<br>連結された値は、 `{PASSWORD}{TOKEN}`.<br> なお、中括弧やスペースは使用しないでください。<br>例えば、 [!DNL Salesforce] パスワード： `MyPa$$w0rd123` および [!DNL Salesforce] セキュリティトークンは `TOKEN12345....0000`に設定する場合、 **[!UICONTROL パスワード]** フィールドが次の値 `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL カスタムドメイン]** | お使いの [!DNL Salesforce] ドメインプレフィックス。 <br>例えば、ドメインが *`d5i000000isb4eak-dev-ed`.my.salesforce.com*&#x200B;を指定する場合は、 `d5i000000isb4eak-dev-ed` を値として使用します。 | | **[!UICONTROL クライアント ID]** | お使いの [!DNL Salesforce] 接続されたアプリ `Consumer Key`. | | **[!UICONTROL クライアントの秘密鍵]** | お使いの [!DNL Salesforce] 接続されたアプリ `Consumer Secret`. |
 
 ![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
@@ -180,7 +180,7 @@ Platform からに対してアクティブ化する各オーディエンスに�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
@@ -205,8 +205,8 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
 
    * を使用して *連絡先* セグメント内で、Salesforce のオブジェクト参照を参照してください。 [連絡先](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) ：更新するフィールドのマッピングを定義します。
    * 単語を検索することで、必須フィールドを識別できます *必須*：前述のリンクのフィールドの説明で説明されています。
-   * 書き出しまたは更新するフィールドに応じて、XDM プロファイルスキーマと [!DNL (API) Salesforce CRM]: |ソースフィールド|ターゲットフィールド|メモ | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 連絡先の姓（最大 80 文字）。 |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`|連絡先の名（40 文字以内）。 | |`xdm: personalEmail.address`|`Attribute: Email`|連絡先の電子メールアドレス。 |
+   * 書き出しまたは更新するフィールドに応じて、XDM プロファイルスキーマと [!DNL (API) Salesforce CRM]: |ソースフィールド|ターゲットフィールド| メモ | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 連絡先の姓（最大 80 文字）。 |\
+     |`xdm: person.name.firstName`|`Attribute: FirstName`| 連絡先の名（40 文字まで）。 | |`xdm: personalEmail.address`|`Attribute: Email`| 連絡先の電子メールアドレス。 |
 
    * これらのマッピングの使用例を次に示します。
      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -215,8 +215,8 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
 
    * を使用して *リード* セグメント内で、Salesforce のオブジェクト参照を参照してください。 [リード](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) ：更新するフィールドのマッピングを定義します。
    * 単語を検索することで、必須フィールドを識別できます *必須*：前述のリンクのフィールドの説明で説明されています。
-   * 書き出しまたは更新するフィールドに応じて、XDM プロファイルスキーマと [!DNL (API) Salesforce CRM]: |ソースフィールド|ターゲットフィールド|メモ | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 80 文字までのリードの姓です。 |\
-     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. リードの会社。 | |`xdm: personalEmail.address`|`Attribute: Email`|リードの電子メールアドレス。 |
+   * 書き出しまたは更新するフィールドに応じて、XDM プロファイルスキーマと [!DNL (API) Salesforce CRM]: |ソースフィールド|ターゲットフィールド| メモ | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 80 文字までのリードの姓です。 |\
+     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. リードの会社。 | |`xdm: personalEmail.address`|`Attribute: Email`| リードの電子メールアドレス。 |
 
    * これらのマッピングの使用例を次に示します。
      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-leads.png)

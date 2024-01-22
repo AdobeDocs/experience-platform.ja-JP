@@ -3,10 +3,10 @@ title: 見込み客のオーディエンスを宛先に対してアクティブ�
 type: Tutorial
 description: 見込み客オーディエンスを宛先に対してアクティブ化する方法を説明します。
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 28%
+source-wordcount: '619'
+ht-degree: 25%
 
 ---
 
@@ -27,11 +27,11 @@ ht-degree: 28%
 ## 前提条件 {#prerequisites}
 
 * 最初に取り込む必要があります [見込み客プロファイル](/help/profile/ui/prospect-profile.md) を作成します。 [見込み客オーディエンス](/help/segmentation/ui/prospect-audience.md) これらをダウンストリームの宛先に対してアクティブ化する前に、次の手順を実行します。
-* 見込み客オーディエンスを宛先に対してアクティブ化するには、宛先に正常に接続している必要があります。 まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。に関する UI チュートリアルをお読みください。 [宛先への接続](./connect-destination.md) を参照してください。
+* 見込み客オーディエンスを宛先に対してアクティブ化するには、宛先に正常に接続している必要があります。 まだおこなっていない場合は、 [宛先カタログ](../catalog/overview.md)、サポートされている宛先を参照し、使用する宛先を設定します。 に関する UI チュートリアルをお読みください。 [宛先への接続](./connect-destination.md) を参照してください。
 
 ### 必要な権限 {#permissions}
 
-見込み客オーディエンスをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+見込み客オーディエンスをアクティブ化するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 見込み客オーディエンスをアクティブ化するために必要な権限を持っていることを確認するには、宛先カタログを参照します。 宛先に **[!UICONTROL 有効化]** コントロールを使用する場合、適切な権限を持っています。
 

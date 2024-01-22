@@ -4,9 +4,9 @@ title: フローサービス API を使用して、ファイルベースの宛�
 description: フローサービス API を使用して、認定されたプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法について説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '4401'
+source-wordcount: '4335'
 ht-degree: 11%
 
 ---
@@ -57,7 +57,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### 必要な権限 {#permissions}
 
-プロファイルを書き出すには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先の表示]**、および **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+プロファイルを書き出すには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
@@ -102,9 +102,9 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 | 宛先 | 接続仕様 | フロー仕様 |
 ---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
-| Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
+| Azure Blob ストレージ | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
-| データランディングゾーン（DLZ） | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
+| データランディングゾーン (DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `fd36aaa4-bf2b-43fb-9387-43785eeeb799` |
 
@@ -133,7 +133,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答**
 
-+++[!DNL Amazon S3] - 接続仕様
++++[!DNL Amazon S3]  — 接続仕様
 
 ```json
 {
@@ -216,7 +216,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB データランディングゾーン (DLZ)]
 
 **リクエスト**
 
@@ -524,7 +524,7 @@ A [ベース接続](https://developer.adobe.com/experience-platform-apis/referen
 +++
 
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB データランディングゾーン (DLZ)]
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] 表示中 [!DNL auth spec]
 
@@ -841,7 +841,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB データランディングゾーン (DLZ)]
 
 **リクエスト**
 
@@ -1755,7 +1755,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB データランディングゾーン (DLZ)]
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] ターゲット接続パラメータの表示
 
@@ -2616,7 +2616,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB データランディングゾーン (DLZ)]
 
 **リクエスト**
 
@@ -3060,7 +3060,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB データランディングゾーン (DLZ)]
 
 **リクエスト**
 

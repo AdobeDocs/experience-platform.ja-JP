@@ -3,10 +3,10 @@ title: 接続を移動
 description: Moengage は、消費者とブランドの間の顧客中心のインタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 41%
+source-wordcount: '996'
+ht-degree: 37%
 
 ---
 
@@ -59,7 +59,7 @@ Adobeにより、統合は非常にシンプルで直感的です。 任意のAd
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -92,7 +92,7 @@ Adobeにより、統合は非常にシンプルで直感的です。 任意のAd
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]**[に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -108,7 +108,7 @@ Adobe Analytics の [!UICONTROL マッピング] ステップ、選択 **[!UICON
 
 ![宛先の追加マッピングを移動](../../assets/catalog/mobile-engagement/moengage/segments.png)
 
-[!UICONTROL マッピング]手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。
+Adobe Analytics の [!UICONTROL マッピング] ステップ、選択 **[!UICONTROL 新しいマッピングを追加]**.
 
 ![宛先の追加マッピングを移動](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 

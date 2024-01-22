@@ -3,10 +3,10 @@ title: （ベータ版）Experience Platform UI を使用した、オンデマ�
 type: Tutorial
 description: Experience PlatformUI を使用して、オンデマンドでファイルをバッチ保存先に書き出す方法を説明します。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 22%
+source-wordcount: '743'
+ht-degree: 20%
 
 ---
 
@@ -19,18 +19,18 @@ ht-degree: 22%
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ## **[!UICONTROL 今すぐファイルを書き出し]**&#x200B;の概要 {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="今すぐファイルを書き出し"
->abstract="このコントロールを選択すると、以前にスケジュールされた書き出しに加えて完全なファイル書き出しが実行されます。 ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化の実行から最新の結果が取得されます。"
+>abstract="このコントロールを選択すると、以前にスケジュールされた書き出しに加えて完全なファイル書き出しが実行されます。ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化実行から最新の結果が取得されます。"
 
 この記事では、Experience PlatformUI を使用して、オンデマンドでファイルをバッチ保存先 ( 例： [クラウドストレージ](/help/destinations/catalog/cloud-storage/overview.md) および [電子メールマーケティング](/help/destinations/catalog/email-marketing/overview.md) 宛先。
 
-The **[!UICONTROL ファイルを今すぐ書き出し]** 「 」コントロールを使用すると、以前にスケジュールされたオーディエンスの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出すことができます。 このエクスポートは、以前にスケジュールされたエクスポートに加えておこなわれ、オーディエンスのエクスポート頻度は変更されません。  ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化の実行から最新の結果が取得されます。
+The **[!UICONTROL ファイルを今すぐ書き出し]** 「 」コントロールを使用すると、以前にスケジュールされたオーディエンスの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出すことができます。 このエクスポートは、以前にスケジュールされたエクスポートに加えておこなわれ、オーディエンスのエクスポート頻度は変更されません。 ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化実行から最新の結果が取得されます。
 
 この目的でExperience PlatformAPI を使用することもできます。 方法を読む [アドホックアクティベーション API を使用して、オーディエンスをオンデマンドでバッチ保存先にアクティブ化します](/help/destinations/api/ad-hoc-activation-api.md).
 

@@ -3,16 +3,16 @@ title: Zendesk 接続
 description: Zendesk の宛先を使用すると、アカウントデータを書き出し、Zendesk 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 48%
+source-wordcount: '1469'
+ht-degree: 42%
 
 ---
 
 # [!DNL Zendesk] 接続
 
-[[!DNL Zendesk]](https://www.zendesk.co.jp) は、カスタマーサービスソリューションおよびセールスツールです。 
+[[!DNL Zendesk]](https://www.zendesk.co.jp) は、カスタマーサービスソリューションおよびセールスツールです。
 
 この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は、 [[!DNL Zendesk] 連絡先 API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/)、宛先 **id の作成と更新** 内の連絡先としてオーディエンス内に [!DNL Zendesk].
 
@@ -36,7 +36,7 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 #### [!DNL Zendesk] 資格情報の収集 {#gather-credentials}
 
-[!DNL Zendesk] 宛先に対して認証を行う前に、以下の項目をメモしておきます。
+を認証する前に、以下の項目をメモしておきます。 [!DNL Zendesk] 宛先：
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
@@ -69,7 +69,7 @@ The [価格とレート制限](https://developer.zendesk.com/api-reference/sales
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -77,7 +77,7 @@ The [価格とレート制限](https://developer.zendesk.com/api-reference/sales
 
 ### 宛先に対する認証 {#authenticate}
 
-以下の必須のフィールドに入力します。詳しくは、[ [!DNL Zendesk]  資格情報の収集](#gather-credentials)の節を参照してください。
+以下の必須のフィールドに入力します。詳しくは、 [収集 [!DNL Zendesk] 資格情報](#gather-credentials) 」の節を参照してください。
 * **[!UICONTROL Bearer トークン]**: [!DNL Zendesk] アカウント。
 
 宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
@@ -103,14 +103,14 @@ The [価格とレート制限](https://developer.zendesk.com/api-reference/sales
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platform から [!DNL Zendesk] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 
+Adobe Experience Platform から [!DNL Zendesk] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。
 
 で指定された属性 **[!UICONTROL ターゲットフィールド]** は、属性マッピングテーブルで説明されたとおりに名前を付ける必要があります。これらの属性は、リクエスト本文を形成します。
 
@@ -121,7 +121,7 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
 1. Adobe Analytics の **[!UICONTROL ソースフィールドを選択]** ウィンドウで、 **[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、 **[!UICONTROL ID 名前空間を選択]** ID を選択します。
 1. Adobe Analytics の **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** カテゴリを選択してターゲット id を選択するか、 **[!UICONTROL 属性を選択]** カテゴリを選択し、サポートされているスキーマ属性の 1 つを選択します。
-   * これらの手順を繰り返して、次の必須マッピングを追加します。XDM プロファイルスキーマと [!DNL Zendesk] インスタンス： |ソースフィールド|ターゲットフィールド|必須| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`|はい | |`IdentityMap: Email`|`Identity: email`|はい | |`xdm: person.name.firstName`|`xdm: first_name`| |
+   * これらの手順を繰り返して、次の必須マッピングを追加します。XDM プロファイルスキーマと [!DNL Zendesk] インスタンス： |ソースフィールド|ターゲットフィールド| 必須| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| はい | |`IdentityMap: Email`|`Identity: email`| はい | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * これらのマッピングの使用例を次に示します。
      ![属性マッピングを使用した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/mappings.png)
@@ -164,7 +164,7 @@ Adobe Analytics の [[!UICONTROL オーディエンスの書き出しをスケ�
 
 ## その他のリソース {#additional-resources}
 
-[!DNL Zendesk] ドキュメントからのその他の役に立つ情報は次のとおりです。
+以下に示すその他の役に立つ情報 [!DNL Zendesk] 以下のドキュメントです。
 * [最初の呼び出し](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [カスタムフィールド](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
 

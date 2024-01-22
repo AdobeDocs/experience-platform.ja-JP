@@ -3,10 +3,10 @@ title: Mailchimp の興味カテゴリ
 description: Mailchimp（Intuit Mailchimp とも呼ばれます）は、メーリングリストやメールマーケティングキャンペーンを使用して連絡先（顧客、顧客、または他の関心者）を管理し、連絡を取るために企業が使用する一般的なマーケティングオートメーションプラットフォームです。 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 22%
+source-wordcount: '2299'
+ht-degree: 19%
 
 ---
 
@@ -78,7 +78,7 @@ API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us1
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Mailchimp] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Mailchimp] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -101,7 +101,7 @@ API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us1
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -152,14 +152,14 @@ Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索しま
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platformからにオーディエンスデータを正しく送信するには、以下を実行します。 [!DNL Mailchimp Interest Categories] の宛先の場合は、フィールドマッピングの手順を実行する必要があります。 マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 
+Adobe Experience Platformからにオーディエンスデータを正しく送信するには、以下を実行します。 [!DNL Mailchimp Interest Categories] の宛先の場合は、フィールドマッピングの手順を実行する必要があります。 マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。
 
 XDM フィールドを [!DNL Mailchimp Interest Categories] 宛先フィールドには、次の手順に従います。
 
@@ -167,7 +167,7 @@ XDM フィールドを [!DNL Mailchimp Interest Categories] 宛先フィール�
 1. Adobe Analytics の **[!UICONTROL ソースフィールドを選択]** ウィンドウで、 **[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、 **[!UICONTROL ID 名前空間を選択]** ID を選択します。
 1. Adobe Analytics の **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** ID を選択するか、 **[!UICONTROL 属性を選択]** カテゴリを選択し、 [!DNL Mailchimp] API. *選択したに追加したカスタム属性 [!DNL Mailchimp] オーディエンスは、ターゲットフィールドとして選択することもできます。*
 
-   XDM プロファイルスキーマと [!DNL Mailchimp Interest Categories] は次のとおりです。 |ソースフィールド |ターゲットフィールド |メモ | | — | — | — | |`IdentityMap: Email`|`Identity: email`|必須：はい | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+   XDM プロファイルスキーマと [!DNL Mailchimp Interest Categories] は次のとおりです。 | ソースフィールド | ターゲットフィールド | メモ | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 必須：はい | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
    また、 `ADDRESS` は、 `merge field` の [!DNL Mailchimp] オーディエンス。 The [[!DNL Mailchimp] ドキュメント](https://mailchimp.com/developer/marketing/docs/merge-fields/) 必要なキーを次のように定義します。 `addr1`, `city`, `state`、および `zip`、およびオプションのキー `addr2` および `country`. これらのフィールドの値は、文字列である必要があります。 次のいずれかの `ADDRESS` フィールドマッピングが存在する場合、宛先は `ADDRESS` オブジェクトを [!DNL Mailchimp] 更新用の API。 任意 `ADDRESS` マッピングされていないフィールドの値はデフォルトではに設定されます `NULL` デフォルトの国を除いて `US`.
 
@@ -229,8 +229,8 @@ API キーが **[!UICONTROL パスワード]** フィールドまたは **[!UICO
 
 ## その他のリソース {#additional-resources}
 
-[!DNL Mailchimp] ドキュメントからのその他の役に立つ情報は次のとおりです。
-* [ [!DNL Mailchimp] 入門](https://mailchimp.com/help/getting-started-with-mailchimp/)
+以下に示すその他の役に立つ情報 [!DNL Mailchimp] 以下のドキュメントです。
+* [の概要 [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Audiences の概要](https://mailchimp.com/help/getting-started-audience/)
 * [オーディエンスの作成](https://mailchimp.com/help/create-audience/)
 * [グループの概要](https://mailchimp.com/help/getting-started-with-groups/)

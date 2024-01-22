@@ -5,10 +5,10 @@ description: 宛先に対してアカウントオーディエンスをアクテ�
 badgeLimitedAvailability: label="限定提供（LA）" type="Caution"
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 10%
+source-wordcount: '827'
+ht-degree: 7%
 
 ---
 
@@ -29,11 +29,11 @@ ht-degree: 10%
 ## 前提条件 {#prerequisites}
 
 * 最初に取り込む必要があります [アカウントプロファイル](/help/rtcdp/accounts/account-profile-overview.md) を作成します。 [アカウントオーディエンス](/help/segmentation/ui/account-audiences.md) これらをダウンストリームの宛先に対してアクティブ化する前に、次の手順を実行します。
-* アカウントオーディエンスを宛先に対してアクティブ化するには、宛先に正常に接続している必要があります。 まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。に関する UI チュートリアルをお読みください。 [宛先への接続](./connect-destination.md) を参照してください。
+* アカウントオーディエンスを宛先に対してアクティブ化するには、宛先に正常に接続している必要があります。 まだおこなっていない場合は、 [宛先カタログ](../catalog/overview.md)、サポートされている宛先を参照し、使用する宛先を設定します。 に関する UI チュートリアルをお読みください。 [宛先への接続](./connect-destination.md) を参照してください。
 
 ### 必要な権限 {#permissions}
 
-アカウントオーディエンスをアクティブ化するには、 **[!UICONTROL 宛先の管理]**, **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+アカウントオーディエンスをアクティブ化するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 アカウントオーディエンスをアクティブ化するために必要な権限を持っていることを確認するには、宛先カタログを参照します。 宛先に **[!UICONTROL 有効化]** コントロールを使用する場合、適切な権限を持っています。
 

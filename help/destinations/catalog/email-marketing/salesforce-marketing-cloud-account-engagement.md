@@ -3,10 +3,10 @@ title: SalesforceMarketing Cloudアカウントエンゲージメント
 description: SalesforceMarketing Cloudアカウントエンゲージメント（旧称 Pardot）の宛先を使用して、アカウントデータをエクスポートし、SalesforceMarketing Cloudアカウントエンゲージメント内で、ビジネスニーズに応じてアクティブ化する方法を説明します。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1620'
-ht-degree: 35%
+source-wordcount: '1532'
+ht-degree: 30%
 
 ---
 
@@ -72,7 +72,7 @@ A [!DNL Marketing Cloud Account Engagement] のサブスクリプションを持
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Marketing Cloud Account Engagement] では、以下の表で説明する ID のアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Marketing Cloud Account Engagement] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -95,7 +95,7 @@ A [!DNL Marketing Cloud Account Engagement] のサブスクリプションを持
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -103,8 +103,7 @@ Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索しま
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
-次のページに移動します： [!DNL Salesforce] ログインページ。 を入力します。 [!DNL Marketing Cloud Account Engagement] アカウントの資格情報を選択します。 [!DNL Log In].
+宛先を認証するには、「 」を選択します。 **[!UICONTROL 宛先に接続]**. 次のページに移動します： [!DNL Salesforce] ログインページ。 を入力します。 [!DNL Marketing Cloud Account Engagement] アカウントの資格情報を選択します。 [!DNL Log In].
 
 ![プラットフォームアカウントエンゲージメントを認証する方法を示すMarketing CloudUI のスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
 
@@ -116,7 +115,7 @@ Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索しま
 
 ### 宛先の詳細を入力 {#destination-details}
 
-宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。詳しくは、[ [!DNL Marketing Cloud Account Engagement]  資格情報の収集](#gather-credentials)の節を参照してください。
+宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI でフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。 詳しくは、 [収集 [!DNL Marketing Cloud Account Engagement] 資格情報](#gather-credentials) 」の節を参照してください。
 
 ![宛先の詳細を示す Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
 
@@ -138,14 +137,14 @@ Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索しま
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platform から [!DNL Marketing Cloud Account Engagement] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 
+Adobe Experience Platform から [!DNL Marketing Cloud Account Engagement] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。
 
 XDM フィールドを [!DNL Marketing Cloud Account Engagement] 宛先フィールドには、次の手順に従います。
 
@@ -153,7 +152,7 @@ XDM フィールドを [!DNL Marketing Cloud Account Engagement] 宛先フィー
 1. Adobe Analytics の **[!UICONTROL ソースフィールドを選択]** ウィンドウで、 **[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、 **[!UICONTROL ID 名前空間を選択]** ID を選択します。
 1. Adobe Analytics の **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** ID を選択するか、 **[!UICONTROL カスタム属性を選択]** カテゴリを選択し、 [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) を使用可能なスキーマから取得します。
 
-   * XDM プロファイルスキーマとのマッピングを追加するには、以下の手順を繰り返します。 [!DNL Marketing Cloud Account Engagement]: |ソースフィールド |ターゲットフィールド |必須 | | — | — | — | |`IdentityMap: Email`|`Identity: email`|はい | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
+   * XDM プロファイルスキーマとのマッピングを追加するには、以下の手順を繰り返します。 [!DNL Marketing Cloud Account Engagement]: | ソースフィールド | ターゲットフィールド | 必須 | | — | — | — | |`IdentityMap: Email`|`Identity: email`| はい | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
    * 上記のマッピングの例を次に示します。
      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

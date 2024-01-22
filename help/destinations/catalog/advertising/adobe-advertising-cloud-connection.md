@@ -2,10 +2,10 @@
 title: Adobe Advertising Cloud DSP Connection
 description: Adobe Advertising Cloud DSPはAdobe Real-time Customer Data Platformの統合された宛先で、認証済みのファーストパーティオーディエンスを承認済みの広告主やユーザーと共有して、キャンペーンをアクティブ化できます。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 28%
+source-wordcount: '1055'
+ht-degree: 25%
 
 ---
 
@@ -45,7 +45,7 @@ Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID の�
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Experience Platformは、プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方をサポートしています。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に Experience Platform がデータを自動的にハッシュ化するように設定します。  |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Experience Platformは、プレーンテキストと SHA256 ハッシュ化された電子メールアドレスの両方をサポートしています。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、 **[!UICONTROL 変換を適用]** オプションを使用して、Experience Platformがアクティベーション時にデータを自動的にハッシュ化するように設定する必要があります。 |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID の�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions) Experience Platform。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions) Experience Platform。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 宛先に接続するには、次の手順に従います： [宛先接続の作成](/help/destinations/ui/connect-destination.md) を使用します。 宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -95,7 +95,7 @@ Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID の�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**&#x200B;および&#x200B;**[!UICONTROL セグメントの表示]** [に対するアクセス制御権限](/help/access-control/home.md#permissions)が必要です。詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
