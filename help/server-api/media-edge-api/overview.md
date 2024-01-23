@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge API
 description: Media Edge API の概要
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
+source-git-commit: b247790a155c04301215b03dad2f2765a1afd8fe
 workflow-type: tm+mt
 source-wordcount: '331'
-ht-degree: 92%
+ht-degree: 85%
 
 ---
 
@@ -42,7 +42,7 @@ Media Edge API は、Adobe Experience Platform上に作成され、[XDM スキ�
 
 >[!NOTE]
 >
-> Analtyics の Media Collection API サービスは引き続き XDM データを受信しますが、Media Edge サービスほど最適化されていません。Media Player から送信されるデータによっては、一部の Analytics 専用データを Media Edge API サービス経由でルーティングすることもできます。
+> Analytics のメディアコレクション API サービスは、引き続き XDM データを受け取りますが、Media Edge サービスの範囲では、XDM データに対して最適化されていません。 Media Player から送信されるデータによっては、一部の Analytics 専用データを Media Edge API サービス経由でルーティングすることもできます。
 
 次の図に、2 つの API サービスのデータフローを示します。
 
