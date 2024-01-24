@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
 workflow-type: tm+mt
-source-wordcount: '2304'
-ht-degree: 56%
+source-wordcount: '2382'
+ht-degree: 54%
 
 ---
 
@@ -26,6 +26,13 @@ ht-degree: 56%
 [!DNL Query Editor] に接続することで、クエリを柔軟に実行できます。 [!DNL Query Service]、およびクエリは、この接続がアクティブな間にのみ実行されます。
 
 ## [!DNL Query Editor] へのアクセス {#accessing-query-editor}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_create_datagovernance"
+>title="データガバナンスの義務"
+>abstract="お客様の組織のデータガバナンスポリシーに準拠し、お客様の規制要件を満たすのは、お客様の単独の責任です。 Experience Platformは、データ使用上の義務を管理するためのデータガバナンスツールを提供します。 データのクエリや処理をおこなう前に、適切なデータ使用ラベルを適用します。 データガバナンスツールとベストプラクティスについては、ドキュメントを参照してください。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja" text="データガバナンスの概要"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja" text="データガバナンスラベルの概要"
 
 [!DNL Experience Platform] UI で、左側のナビゲーションメニューの「**[!UICONTROL クエリ]**」を選択して、[!DNL Query Service] ワークスペースを開きます。次に、クエリの記述を開始するには、「 」を選択します。 **[!UICONTROL クエリを作成]** をクリックします。 このリンクは、[!DNL Query Service] ワークスペースのどのページからも利用できます。
 

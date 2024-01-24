@@ -2,10 +2,10 @@
 title: スキーマのデータ使用状況ラベルの管理
 description: Adobe Experience Platform UI でデータ使用ラベルをエクスペリエンスデータモデル (XDM) スキーマフィールドに追加する方法を説明します。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
+source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 10%
+source-wordcount: '913'
+ht-degree: 9%
 
 ---
 
@@ -39,6 +39,12 @@ Adobe Experience Platformに取り込まれるすべてのデータは、Experie
 >id="platform_schemas_editgovernancelabels"
 >title="ガバナンスラベルの編集"
 >abstract="スキーマフィールドにラベルを適用して、その特定のフィールドに含まれるデータに適用する使用ポリシーを指定します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_labelusageacknowledgement"
+>title="ラベルの使用"
+>abstract="このオブジェクトのラベルを編集する前に、次のダウンストリーム効果に注意してください。<br>ガバナンスポリシー：データをダウンストリームの宛先に対してアクティブ化できるかどうかを管理するために、ラベルを使用します。 ラベルの使用が正しくないと、データがダウンストリームにアクセスできなくなる場合があります。<br>同意ポリシー：セグメントにプロファイルを含める際に、顧客の同意および環境設定を強制するためにラベルを使用します。 ラベルの使用が正しくないと、データがダウンストリームにアクセスできなくなる場合があります。<br>アクセスポリシー：属性ベースのアクセス制御は、ラベルを使用して、特定のアセットにアクセスできるユーザーの役割を決定します。 意図しないラベルを使用すると、組織内の一部のユーザーが以前アクセス権を持っていたアセットを使用できなくなる場合があります。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=ja" text="属性ベースのアクセス制御の概要"
 
 ラベルの追加を開始するには、まず [編集する既存のスキーマを選択](../ui/resources/schemas.md#edit) または [新しいスキーマの作成](../ui/resources/schemas.md#create) をクリックして、スキーマエディターで構造を表示します。
 
