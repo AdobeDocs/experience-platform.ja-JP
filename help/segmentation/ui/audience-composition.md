@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1789'
-ht-degree: 97%
+source-wordcount: '1844'
+ht-degree: 94%
 
 ---
 
@@ -115,6 +115,10 @@ ht-degree: 97%
 プロファイル属性のリストが表示されます。除外する属性タイプを選択し、続けて「**[!UICONTROL 選択]**」をクリックして、「除外」ブロックに追加します。
 
 ![属性のリストが表示されます。](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>属性別に除外する場合は、 **1 つ** 除外する値。 コンマやセミコロンなど、任意の種類の区切り文字を使用すると、その正確な値が除外されます。 例えば、値を `red, blue` は、期間を除外する結果になります `red, blue` 属性から。ただし、次の条件は満たされません。 **not** その結果、いずれかの用語を除外することになる `red` または `blue`.
 
 ## [!UICONTROL エンリッチメント] {#enrich-block}
 
