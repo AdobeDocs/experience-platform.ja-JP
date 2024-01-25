@@ -3,7 +3,7 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 43%
@@ -186,7 +186,7 @@ ECID:35577を削除した結果、CRM ID:60013と CRM ID:25212を、現在削除
 [!DNL Identity Service] について詳しくは、次のドキュメントを参照してください。
 
 * [[!DNL Identity Service] の概要](home.md)
-* [ID グラフビューア](ui/identity-graph-viewer.md)
+* [ID グラフビューア](features/identity-graph-viewer.md)
 
 その他のExperience Platformサービスガードレール、エンドツーエンドの遅延情報、およびReal-Time CDP製品説明ドキュメントのライセンス情報の詳細については、次のドキュメントを参照してください。
 

@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: アルファ版
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
+source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1022'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,6 @@ ht-degree: 1%
 * [概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [シナリオの例](./example-scenarios.md)
-* [ID サービスとリアルタイム顧客プロファイル](identity-and-profile.md)
-* [ID リンクロジック](./identity-linking-logic.md)
 
 Adobe Experience Platform ID サービスとリアルタイム顧客プロファイルを使用すると、データが完全に取り込まれ、すべての結合プロファイルが、CRM ID などの個人 ID を通じて 1 人の個人を表していると簡単に想定できます。 ただし、特定のデータが複数の異なるプロファイルを 1 つのプロファイルに結合しようとするシナリオが考えられます（「プロファイルの折りたたみ」）。 これらの不要な結合を防ぐには、ID グラフのリンクルールを通じて提供される設定を使用し、ユーザーに対する正確なパーソナライゼーションを可能にします。
 
@@ -114,5 +112,3 @@ ID グラフのリンクルールの詳細については、次のドキュメ�
 
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [ID グラフのリンクルールの設定例](./example-scenarios.md)
-* [ID サービスとリアルタイム顧客プロファイル](identity-and-profile.md)
-* [ID リンクロジック](./identity-linking-logic.md)

@@ -3,7 +3,7 @@ title: パートナー支援による訪問者認識を使用して、不明な�
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -51,7 +51,7 @@ ht-degree: 89%
    * [タグ](/help/tags/home.md)
    * [データストリーム](/help/datastreams/overview.md)
 * Real-Time CDP におけるデータ管理
-   * [ID](/help/identity-service/namespaces.md)
+   * [ID](/help/identity-service/features/namespaces.md)
    * [スキーマ](/help/xdm/home.md)
    * [データ使用ラベル](/help/data-governance/labels/overview.md)
    * [データセット](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ Platform UI で、に移動します。 **[!UICONTROL 顧客]** > **[!UICONTROL 
 
 このページで説明するユースケースを参照する際は、次の制限事項に注意してください。
 
-* パートナー ID を使用する場合、これらの ID は [ID グラフの作成](/help/identity-service/ui/identity-graph-viewer.md)時に使用されません。
+* パートナー ID を使用する場合、これらの ID は [ID グラフの作成](/help/identity-service/features/identity-graph-viewer.md)時に使用されません。
 
 ## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 

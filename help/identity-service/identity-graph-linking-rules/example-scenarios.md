@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: アルファ版
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '437'
 ht-degree: 3%
 
 ---
@@ -70,5 +70,5 @@ ID グラフのリンクルールの詳細については、次のドキュメ�
 
 * [ID グラフリンクルールの概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
-* [ID サービスとリアルタイム顧客プロファイル](identity-and-profile.md)
-* [ID リンクロジック](./identity-linking-logic.md)
+* [ID サービスとリアルタイム顧客プロファイル](../identity-and-profile.md)
+* [ID リンクロジック](../features/identity-linking-logic.md)

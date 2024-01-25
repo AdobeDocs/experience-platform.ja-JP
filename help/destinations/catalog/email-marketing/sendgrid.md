@@ -3,7 +3,7 @@ keywords: E メール；E メール；E メールの宛先；E メールの宛�
 title: SendGrid 接続
 description: SendGrid の宛先を使用すると、ファーストパーティデータを書き出し、SendGrid 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 24%
@@ -44,7 +44,7 @@ SendGrid の宛先に対してデータをアクティブ化する前に、 [ス
 
 ## サポートされている ID {#supported-identities}
 
-SendGrid では、以下の表で説明する ID のアクティブ化がサポートされています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+SendGrid では、以下の表で説明する ID のアクティブ化がサポートされています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

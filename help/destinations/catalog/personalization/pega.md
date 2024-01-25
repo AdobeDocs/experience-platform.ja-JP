@@ -2,7 +2,7 @@
 title: Pega Customer Decision Hub 接続
 description: Adobe Experience Platformの Pega Customer Decision Hub の宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次に最適なアクションを決定します。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 20%
@@ -43,7 +43,7 @@ ht-degree: 20%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] では、以下の表で説明するカスタムユーザー ID のアクティベーションをサポートしています。 詳しくは、 [id](/help/identity-service/namespaces.md).
+[!DNL Pega Customer Decision Hub] では、以下の表で説明するカスタムユーザー ID のアクティベーションをサポートしています。 詳しくは、 [id](/help/identity-service/features/namespaces.md).
 
 | ターゲット ID | 説明 |
 |---|---|

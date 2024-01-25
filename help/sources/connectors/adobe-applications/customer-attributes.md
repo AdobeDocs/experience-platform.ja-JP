@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 顧客属性ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して顧客属性をAdobe Experience Platformに接続する方法を説明します
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 23%
+source-wordcount: '381'
+ht-degree: 19%
 
 ---
 
@@ -25,7 +25,7 @@ The [!DNL Customer Attributes] ソースは、宛先となるデータのデー�
 
 ## ID
 
-データセットのプライマリ ID は、ソースデータの CSV ファイルの最初の列に含まれます。 The [!DNL Customer Attributes] ソースは、id が常に [`CORE` 名前空間](../../../identity-service/namespaces.md)：でサポートされるシステム生成名前空間。 [[!DNL Identity Service]](../../../identity-service/home.md).
+データセットのプライマリ ID は、ソースデータの CSV ファイルの最初の列に含まれます。 The [!DNL Customer Attributes] ソースは、id が常に [`CORE` 名前空間](../../../identity-service/features/namespaces.md)：でサポートされるシステム生成名前空間。 [[!DNL Identity Service]](../../../identity-service/home.md).
 
 使用時に ID 用の既存の名前空間を選択することはできません [!DNL Customer Attributes] ソースの理由： [!DNL Customer Attributes] は、スキーマのプライマリ ID が常に id マップ内にあると仮定します。 [!DNL Customer Attributes] 次に、ソース ID と id マップ UUID のマッピングを自動的に作成します。
 

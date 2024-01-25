@@ -5,10 +5,10 @@ title: UI でのスキーマリソースの調査
 description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、スキーマフィールドグループ、データ型を調べる方法について説明します。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '993'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -86,7 +86,7 @@ The **[!UICONTROL プロファイルに含まれる]** toggle を使用すると
 
 ID フィールドを含むスキーマを検査する場合、これらのフィールドは、スキーマに提供するクラスまたはフィールドグループの下の左側のレールに表示されます。 左側のレールで ID フィールド名を選択して、フィールドがネストされている深さに関係なく、キャンバスにフィールドを表示します。
 
-キャンバス上で ID フィールドが指紋アイコン (![指紋アイコン画像](../images/ui/explore/identity-symbol.png)) をクリックします。 ID フィールドの名前を選択すると、 [ID 名前空間](../../identity-service/namespaces.md) フィールドがスキーマのプライマリ ID かどうかを示します。
+キャンバス上で ID フィールドが指紋アイコン (![指紋アイコン画像](../images/ui/explore/identity-symbol.png)) をクリックします。 ID フィールドの名前を選択すると、 [ID 名前空間](../../identity-service/features/namespaces.md) フィールドがスキーマのプライマリ ID かどうかを示します。
 
 ![](../images/ui/explore/identity-field.png)
 

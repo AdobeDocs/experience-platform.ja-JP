@@ -5,10 +5,10 @@ title: スキーマエディターを使用した 2 つのスキーマ間の関�
 description: このドキュメントでは、スキーマユーザーインターフェイスのスキーマエディターを使用して 2 つのスキーマ間の関係を定義するためのExperience Platformを提供します。
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 27%
+source-wordcount: '1158'
+ht-degree: 26%
 
 ---
 
@@ -63,13 +63,13 @@ ht-degree: 27%
 
 次の節では、関係が定義される前に、このチュートリアルで使用する各スキーマの構造について説明します。
 
-### [!DNL Loyalty Members] schema
+### [!DNL Loyalty Members] スキーマ
 
 ソーススキーマ「 」[!DNL Loyalty Members]」が [!DNL XDM Individual Profile] クラス。ロイヤルティプログラムのメンバーを説明するフィールドを含みます。 この一つのフィールドは `personalEmail.addess`は、の下のスキーマのプライマリ ID として機能します。 [!UICONTROL 電子メール] 名前空間。 以下に示すように **[!UICONTROL スキーマのプロパティ]**&#x200B;の場合、このスキーマはでの使用に対して有効になっています [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
-### [!DNL Hotels] schema
+### [!DNL Hotels] スキーマ
 
 参照スキーマ「 」[!DNL Hotels]&quot;はカスタム&quot;[!DNL Hotels]「 」クラスで、ホテルを説明するフィールドを含んでいます。 関係に参加するには、参照スキーマにもプライマリ ID が定義され、に対して有効になっている必要があります。 [!UICONTROL プロファイル]. この場合、 `_tenantId.hotelId`は、カスタム「 」を使用して、スキーマのプライマリ ID として機能します。[!DNL Hotel ID]&quot; id 名前空間。
 
@@ -77,7 +77,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->カスタム ID 名前空間の作成方法については、 [ID サービスドキュメント](../../identity-service/namespaces.md#manage-namespaces).
+>カスタム ID 名前空間の作成方法については、 [ID サービスドキュメント](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## 関係フィールドグループの作成
 
@@ -103,7 +103,7 @@ ht-degree: 27%
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## ソーススキーマでの関係フィールドの定義 {#relationship-field}
+## ソーススキーマで関係フィールドを定義 {#relationship-field}
 
 ソーススキーマに専用の参照フィールドが定義されたら、それを関係フィールドとして指定できます。
 

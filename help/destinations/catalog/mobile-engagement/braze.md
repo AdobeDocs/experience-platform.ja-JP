@@ -3,7 +3,7 @@ keywords: モバイル；ブレーズ；メッセージ；
 title: Braze 接続
 description: Braze は、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 31%
@@ -40,7 +40,7 @@ The [!DNL Braze] の宛先は、次にプロファイルデータを送信する
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| external_id | カスタム [!DNL Braze] 任意の id のマッピングをサポートする識別子。 | 任意の [id](../../../identity-service/namespaces.md) から [!DNL Braze] 宛先にマッピングする場合は、 [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | カスタム [!DNL Braze] 任意の id のマッピングをサポートする識別子。 | 任意の [id](../../../identity-service/features/namespaces.md) から [!DNL Braze] 宛先にマッピングする場合は、 [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 

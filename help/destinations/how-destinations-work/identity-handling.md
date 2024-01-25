@@ -2,10 +2,10 @@
 title: 宛先アクティブ化ワークフローでの ID の処理
 description: 宛先のタイプに応じた、アクティベーションワークフローにおける ID の書き出しの処理方法を学ぶ
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 98%
+source-wordcount: '1163'
+ht-degree: 99%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 98%
 
 [ファイルベースの宛先](/help/destinations/destination-types.md#file-based)（例えば、[!DNL Amazon S3]、SFTP、[!DNL Adobe Campaign]、[!DNL Oracle Eloqua]、[!DNL Salesforce Marketing Cloud] などのほとんどのメールマーケティングの宛先）の場合、これらの宛先のほとんどでの ID 設定はオープンです。つまり、バッチアクティベーションワークフローの[属性を選択](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)手順で ID を選択する必要はありません。
 
-ファイルの書き出しに ID を追加することを選択した場合、書き出しでは [ID 名前空間](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer)から 1 つの ID しか選択できません。書き出す ID を選択すると、[必須属性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)および[重複排除キー](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)として自動的に選択されます。
+ファイルの書き出しに ID を追加することを選択した場合、書き出しでは [ID 名前空間](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer)から 1 つの ID しか選択できません。書き出す ID を選択すると、[必須属性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)および[重複排除キー](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)として自動的に選択されます。
 
 ![必須属性および重複排除キーとして選択された ID。](/help/destinations/assets/how-destinations-work/selected-identity.png)
 

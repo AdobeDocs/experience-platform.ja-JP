@@ -2,7 +2,7 @@
 title: Google Display & Video 360 接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 65%
@@ -28,7 +28,7 @@ ht-degree: 65%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Google Display & Video 360] は、以下の表に示す id に基づいてオーディエンスをアクティブ化できます。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Google Display & Video 360] は、以下の表に示す id に基づいてオーディエンスをアクティブ化できます。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ID | 説明 | 注意点 |
 |---|---|---|

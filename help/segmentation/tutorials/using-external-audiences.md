@@ -5,10 +5,10 @@ description: このチュートリアルでは、Adobe Experience Platformで外
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 5%
+source-wordcount: '1724'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platformは、外部オーディエンスをインポートす�
 
 - [セグメント化サービス](../home.md)：リアルタイム顧客プロファイルデータからオーディエンスを構築できます。
 - [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-- [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
+- [エクスペリエンスデータモデル (XDM)](../../xdm/home.md):Platform が顧客体験データを整理する際に使用する標準化されたフレームワーク。 セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 - [データセット](../../catalog/datasets/overview.md)：Experience Platform のデータ永続化のためのストレージと管理の構成。
 - [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md):Experience Platformがクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
 
@@ -46,7 +46,7 @@ Adobe Experience Platformは、外部オーディエンスをインポートす�
 
 外部オーディエンスを使用する最初の手順は、ID 名前空間を作成することです。 ID 名前空間を使用すると、Platform はオーディエンスの元となる場所を関連付けることができます。
 
-ID 名前空間を作成するには、 [id 名前空間ガイド](../../identity-service/namespaces.md#manage-namespaces). ID 名前空間を作成する際に、ソースの詳細を ID 名前空間に追加し、その ID 名前空間をマークします [!UICONTROL タイプ] as a **[!UICONTROL 人以外の識別子]**.
+ID 名前空間を作成するには、 [id 名前空間ガイド](../../identity-service/features/namespaces.md#manage-namespaces). ID 名前空間を作成する際に、ソースの詳細を ID 名前空間に追加し、その ID 名前空間をマークします [!UICONTROL タイプ] as a **[!UICONTROL 人以外の識別子]**.
 
 ![非個人識別子は、「 ID 名前空間を作成」モーダルでハイライト表示されます。](../images/tutorials/external-audiences/identity-namespace-info.png)
 

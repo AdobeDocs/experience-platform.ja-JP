@@ -3,7 +3,7 @@ title: SalesforceMarketing Cloudアカウントエンゲージメント
 description: SalesforceMarketing Cloudアカウントエンゲージメント（旧称 Pardot）の宛先を使用して、アカウントデータをエクスポートし、SalesforceMarketing Cloudアカウントエンゲージメント内で、ビジネスニーズに応じてアクティブ化する方法を説明します。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 30%
@@ -72,7 +72,7 @@ A [!DNL Marketing Cloud Account Engagement] のサブスクリプションを持
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Marketing Cloud Account Engagement] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Marketing Cloud Account Engagement] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

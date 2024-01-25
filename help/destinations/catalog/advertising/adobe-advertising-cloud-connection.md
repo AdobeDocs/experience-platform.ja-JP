@@ -2,7 +2,7 @@
 title: Adobe Advertising Cloud DSP Connection
 description: Adobe Advertising Cloud DSPはAdobe Real-time Customer Data Platformの統合された宛先で、認証済みのファーストパーティオーディエンスを承認済みの広告主やユーザーと共有して、キャンペーンをアクティブ化できます。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 25%
@@ -41,7 +41,7 @@ DSPアカウントを持つメディアエージェンシーは、接客業の�
 
 ## サポートされている ID {#supported-identities}
 
-Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+Adobe Advertising Cloud DSPの宛先では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

@@ -2,9 +2,9 @@
 description: Destination SDK で作成された宛先でサポートされるターゲット ID の設定方法を説明します。
 title: ID 名前空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '842'
 ht-degree: 95%
 
 ---
@@ -17,13 +17,13 @@ Destination SDK で宛先を作成すると、ユーザーによるプロファ�
 
 これを行うと、ユーザーは、ターゲットプロファイル属性に加えて、ターゲット ID も選択できるようになります。
 
-Experience Platform の ID 名前空間について詳しくは、[ID 名前空間ドキュメント](../../../../identity-service/namespaces.md)を参照してください。
+Experience Platform の ID 名前空間について詳しくは、[ID 名前空間ドキュメント](../../../../identity-service/features/namespaces.md)を参照してください。
 
 宛先用に ID 名前空間を設定する場合、宛先でサポートされているターゲット ID マッピングを微調整できます。以下に例を示します。
 
 * ユーザーは、XDM 属性を ID 名前空間にマッピングできます。
-* ユーザーは、[標準的な ID 名前空間](../../../../identity-service/namespaces.md#standard)を独自の ID 名前空間にマッピングできます。
-* ユーザーは、[カスタム ID 名前空間](../../../../identity-service/namespaces.md#manage-namespaces)を独自の ID 名前空間にマッピングできます。
+* ユーザーは、[標準的な ID 名前空間](../../../../identity-service/features/namespaces.md#standard)を独自の ID 名前空間にマッピングできます。
+* ユーザーは、[カスタム ID 名前空間](../../../../identity-service/features/namespaces.md#manage-namespaces)を独自の ID 名前空間にマッピングできます。
 
 Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -55,7 +55,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 |---------|----------|---|------|
 | `acceptsAttributes` | ブール値 | オプション | 顧客が標準的なプロファイル属性を設定中の ID にマッピングできるかどうかを示します。 |
 | `acceptsCustomNamespaces` | ブール値 | オプション | 顧客がカスタム ID 名前空間を設定中の ID 名前空間にマッピングできるかどうかを示します。 |
-| `acceptedGlobalNamespaces` | - | オプション | 設定中の ID に顧客がマッピングできる[標準的な ID 名前空間](../../../../identity-service/namespaces.md#standard)（例えば、[!UICONTROL IDFA]）を示します。 |
+| `acceptedGlobalNamespaces` | - | オプション | 設定中の ID に顧客がマッピングできる[標準的な ID 名前空間](../../../../identity-service/features/namespaces.md#standard)（例えば、[!UICONTROL IDFA]）を示します。 |
 | `transformation` | 文字列 | オプション | ソースフィールドが XDM 属性かカスタム ID 名前空間のどちらかの場合に、Platform UI に「[[!UICONTROL 変換を適用]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスを表示します。このオプションを使用して、書き出し時にソース属性をハッシュ化する機能をユーザーに提供します。このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
 | `requiredTransformation` | 文字列 | オプション | 顧客がこのソース ID 名前空間を選択すると、「[[!UICONTROL 変換を適用]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスが自動的にマッピングに適用され、顧客は無効にすることができなくなります。このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
 
@@ -84,7 +84,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 ID 名前空間は、[!DNL Platform] と宛先が 1 対 1 で対応している必要はありません。
 例えば、顧客は [!DNL Platform] [!DNL IDFA] 名前空間を宛先からの [!DNL IDFA] 名前空間にマッピングすることができ、また顧客は同じ [!DNL Platform] [!DNL IDFA] 名前空間を宛先の [!DNL Customer ID] 名前空間にマッピングすることもできます。
 
-ID について詳しくは、[ID 名前空間の概要](../../../../identity-service/namespaces.md)を参照してください。
+ID について詳しくは、[ID 名前空間の概要](../../../../identity-service/features/namespaces.md)を参照してください。
 
 ## マッピングに関する考慮事項
 

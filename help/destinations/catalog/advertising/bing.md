@@ -3,7 +3,7 @@ keywords: 広告；Bing;
 title: Microsoft Bing 接続
 description: Microsoft Bing の接続先を使用すると、ディスプレイ広告、検索、ネイティブなど、Microsoft Advertising Network 全体をまたいで、再ターゲティングとオーディエンスにターゲットを設定したデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 52%
@@ -26,7 +26,7 @@ The [!DNL Microsoft Bing] 宛先が作成されました *[!DNL Custom Audiences
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Microsoft Bing] は、以下の表に示す id に基づいてオーディエンスをアクティブ化できます。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Microsoft Bing] は、以下の表に示す id に基づいてオーディエンスをアクティブ化できます。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ID | 説明 |
 |---|---|

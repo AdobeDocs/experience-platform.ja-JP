@@ -3,9 +3,9 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: サンプルステータスのプレビュー（プロファイルプレビュー）API エンドポイント
 description: リアルタイム顧客プロファイル API のプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功例をプレビューし、データセットと ID 別にプロファイル配分をリストし、データセットの重複、ID の重複、未関連付けプロファイルを示すレポートを生成できます。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2906'
 ht-degree: 5%
 
 ---
@@ -208,7 +208,7 @@ curl -X GET \
 
 に対してGETリクエストを実行できます `/previewsamplestatus/report/namespace` エンドポイントを使用して、プロファイルストア内のすべての結合プロファイルの id 名前空間による分類を表示できます。 これには、Adobeが提供する標準 ID と、組織が定義するカスタム ID の両方が含まれます。
 
-ID 名前空間は、Adobe Experience Platform ID サービスの重要なコンポーネントで、顧客データが関連するコンテキストのインジケーターとして機能します。 詳細については、まず [ID 名前空間の概要](../../identity-service/namespaces.md).
+ID 名前空間は、Adobe Experience Platform ID サービスの重要なコンポーネントで、顧客データが関連するコンテキストのインジケーターとして機能します。 詳細については、まず [ID 名前空間の概要](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ curl -X GET \
 | `fullIDsFragmentCount` | 名前空間内のプロファイルフラグメントの合計数です。 |
 | `fullIDsCount` | 名前空間内の結合プロファイルの合計数です。 |
 | `fullIDsPercentage` | The `fullIDsCount` 合計マージ済みプロファイル ( `totalRows` 返される値 [最終サンプルステータス](#view-last-sample-status)) で表されます。 |
-| `code` | The `code` 名前空間用。 これは、 [Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md) また、 [!UICONTROL ID シンボル] Experience PlatformUI 詳しくは、 [ID 名前空間の概要](../../identity-service/namespaces.md). |
+| `code` | The `code` 名前空間用。 これは、 [Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md) また、 [!UICONTROL ID シンボル] Experience PlatformUI 詳しくは、 [ID 名前空間の概要](../../identity-service/features/namespaces.md). |
 | `value` | The `id` 名前空間の値。 これは、 [ID サービス API](../../identity-service/api/list-namespaces.md). |
 
 ## データセットの重複レポートの生成
@@ -444,7 +444,7 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `data` | The `data` オブジェクトには、id 名前空間コードの一意の組み合わせと、それぞれのプロファイル数を含む、コンマ区切りのリストが含まれます。 |
-| 名前空間コード | The `code` は、各 id 名前空間名の短い形式です。 各 `code` その `name` は、 [Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md). The `code` は、 [!UICONTROL ID シンボル] Experience PlatformUI 詳しくは、 [ID 名前空間の概要](../../identity-service/namespaces.md). |
+| 名前空間コード | The `code` は、各 id 名前空間名の短い形式です。 各 `code` その `name` は、 [Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md). The `code` は、 [!UICONTROL ID シンボル] Experience PlatformUI 詳しくは、 [ID 名前空間の概要](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | レポートのタイムスタンプ。 次の場合、 `date` パラメーターがリクエスト中に指定された場合、返されるレポートは指定された日付です。 いいえの場合 `date` パラメーターが指定された場合は、最新のレポートが返されます。 |
 
 ### ID 名前空間の重複レポートの解釈

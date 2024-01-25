@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での ID フィールドの定義
 description: Experience Platformユーザーインターフェイスで ID フィールドを定義する方法を説明します。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 16%
@@ -20,7 +20,7 @@ ht-degree: 16%
 ID フィールドは、Platform で顧客 ID グラフを構築する方法に関する重要なコンポーネントで、最終的には、異なるデータフラグメントをリアルタイム顧客プロファイルが結合して顧客の全体像を把握する方法に影響します。 スキーマで ID フィールドを定義する前に、次のドキュメントを参照して、ID フィールドに関する主要なサービスと概念について確認してください。
 
 * [Adobe Experience Platform ID サービス](../../../identity-service/home.md)：デバイスやシステム間で ID をブリッジし、準拠する XDM スキーマで定義された ID フィールドに基づいてデータセットをリンクします。
-   * [ID 名前空間](../../../identity-service/namespaces.md)：ID 名前空間は、1 人の人物に関連している可能性のある様々なタイプの ID 情報を定義する、各 ID フィールドに必須のコンポーネントです。
+   * [ID 名前空間](../../../identity-service/features/namespaces.md)：ID 名前空間は、1 人の人物に関連している可能性のある様々なタイプの ID 情報を定義する、各 ID フィールドに必須のコンポーネントです。
 * [リアルタイム顧客プロファイル](../../../profile/home.md)：顧客 ID グラフを活用して、ほぼリアルタイムで更新された、複数のソースからの集計データに基づいて統合された消費者プロファイルを提供します。
 
 ## ID フィールドを定義 {#define-a-identity-field}
@@ -56,6 +56,6 @@ ID フィールドは、Platform で顧客 ID グラフを構築する方法に�
 
 ## 次の手順
 
-このガイドでは、UI で ID フィールドを定義する方法について説明しました。 このスキーマを使用してデータが取り込まれると、顧客の ID グラフが更新され、スキーマの ID フィールドが反映されます。 詳しくは、 [ID グラフビューア](../../../identity-service/ui/identity-graph-viewer.md) を参照して、UI で組織のプライベートグラフを参照する方法を確認してください。
+このガイドでは、UI で ID フィールドを定義する方法について説明しました。 このスキーマを使用してデータが取り込まれると、顧客の ID グラフが更新され、スキーマの ID フィールドが反映されます。 詳しくは、 [ID グラフビューア](../../../identity-service/features/identity-graph-viewer.md) を参照して、UI で組織のプライベートグラフを参照する方法を確認してください。
 
 概要については、 [UI でのフィールドの定義](./overview.md#special) で他の XDM フィールドタイプを定義する方法を学ぶには、以下を実行します。 [!DNL Schema Editor].

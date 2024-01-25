@@ -2,7 +2,7 @@
 title: Snap Inc 接続
 description: Snapchat Ads Platform に接続し、Experience Platformからオーディエンスを書き出す方法を説明します。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 26%
@@ -37,7 +37,7 @@ ht-degree: 26%
 
 ## サポートされている ID {#supported-identities}
 
-The *Snap Inc* の宛先では、以下の表で説明する id のアクティブ化がサポートされます。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+The *Snap Inc* の宛先では、以下の表で説明する id のアクティブ化がサポートされます。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 に送信されたすべての識別子 *Snap Inc* の宛先は、SHA-256 形式でハッシュ化する必要があります。 プレーンテキストの識別子をハッシュ化してから宛先に送信するには、 **[!UICONTROL 変換を適用]** オプションを使用します。
 

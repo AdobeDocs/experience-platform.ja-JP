@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック
 title: ID サービスでのプライバシーリクエストの処理
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、ID サービスのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1016'
-ht-degree: 66%
+ht-degree: 64%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 ID サービスは、グローバルに定義された（標準）ID およびユーザー定義の（カスタム）ID 名前空間を保持します。標準の名前空間はすべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
-[!DNL Experience Platform] の ID 名前空間について詳しくは、 [ID 名前空間の概要](../identity-service/namespaces.md)を参照してください。
+[!DNL Experience Platform] の ID 名前空間について詳しくは、 [ID 名前空間の概要](../identity-service/features/namespaces.md)を参照してください。
 
 ## リクエストの送信 {#submit}
 
@@ -104,7 +104,7 @@ UI でジョブリクエストを作成する場合は、[!DNL Identity Service]
 
 ## リクエスト処理の削除
 
-[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。各 ID の削除は、指定した名前空間または ID の値に基づいて行われます。 さらに、指定した組織に関連付けられているすべてのサンドボックスに対して削除が行われます。
+[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。各 ID の削除は、指定した名前空間または ID の値に基づいて行われます。 さらに、特定の組織に関連付けられているすべてのサンドボックスに対して、削除が実行されます。
 
 リアルタイム顧客プロファイル (`ProfileService`) とデータレイク (`aepDataLake`) を ID サービス (`identity`) の場合、id に関連する様々なデータセットが、次のように異なるタイミングでシステムから削除されます。
 
@@ -113,7 +113,7 @@ UI でジョブリクエストを作成する場合は、[!DNL Identity Service]
 | `identity` のみ | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。 その ID グラフから構築されたプロファイルは、引き続き残りますが、ID 関連付けが削除されたので、新しいデータが取り込まれるたびに更新されません。 プロファイルに関連付けられたデータも、データレイクに残ります。 |
 | `identity` および `ProfileService` | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。 プロファイルに関連付けられたデータは、データレイクに残ります。 |
 | `identity` および `aepDataLake` | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。 その ID グラフから構築されたプロファイルは、引き続き残りますが、ID 関連付けが削除されたので、新しいデータが取り込まれるたびに更新されません。<br><br>データレイク製品が要求を受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、誰もがアクセスできません [!DNL Platform] サービス。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
-| `identity`, `ProfileService`, および `aepDataLake` | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。<br><br>データレイク製品が要求を受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、誰もがアクセスできません [!DNL Platform] サービス。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
+| `identity`、`ProfileService` および `aepDataLake` | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。<br><br>データレイク製品が要求を受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、誰もがアクセスできません [!DNL Platform] サービス。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
 
 詳しくは、 [[!DNL Privacy Service] ドキュメント](../privacy-service/home.md#monitor) を参照してください。
 

@@ -3,7 +3,7 @@ title: Zendesk 接続
 description: Zendesk の宛先を使用すると、アカウントデータを書き出し、Zendesk 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 42%
@@ -48,7 +48,7 @@ The [価格とレート制限](https://developer.zendesk.com/api-reference/sales
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Zendesk] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Zendesk] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 例 | 説明 | 必須 |
 |---|---|---|---|

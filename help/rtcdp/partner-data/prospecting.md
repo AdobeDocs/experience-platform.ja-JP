@@ -3,9 +3,9 @@ title: サードパーティ cookie に依存せずに新規顧客を惹きつ�
 description: サードパーティ Cookie に依存せずに、見込み客のユースケースを通じて新規顧客をエンゲージおよび獲得する方法を説明します。
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2074'
 ht-degree: 86%
 
 ---
@@ -65,7 +65,7 @@ Real-Time CDP を拡張して新規顧客のエンゲージメントや獲得を
 
 このユースケースを実装する手順を完了したら、次の Real-Time CDP 機能と UI 要素（使用順に一覧表示されています）を使用します。これらすべての領域に必要な属性ベースのアクセス制御権限があることを確認するか、必要な権限の付与をシステム管理者に依頼してください。
 
-* [ID](/help/identity-service/namespaces.md)
+* [ID](/help/identity-service/features/namespaces.md)
 * [スキーマ](/help/xdm/home.md)
 * [データ使用ラベル](/help/data-governance/labels/overview.md)
 * [データセット](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Real-Time CDP を拡張して新規顧客のエンゲージメントや獲得を
 
 ![新しいパートナー ID の ID 名前空間を作成します。](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* パートナー ID 名前空間について詳しくは、[ID タイプの節](/help/identity-service/namespaces.md)を参照してください。
+* パートナー ID 名前空間について詳しくは、[ID タイプの節](/help/identity-service/features/namespaces.md)を参照してください。
 * 詳しくは、Experience Platform ユーザーインターフェイスの [ID フィールドの定義方法](/help/xdm/ui/fields/identity.md)を参照してください。
 
 #### **[!UICONTROL XDM 個人見込み客プロファイル]**&#x200B;クラスを使用して新しいスキーマを作成します

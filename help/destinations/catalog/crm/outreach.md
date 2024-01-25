@@ -3,7 +3,7 @@ keywords: CRM;CRM;CRM の宛先；Outreach;Outreach crm の宛先
 title: アウトリーチ接続
 description: Outreach の宛先を使用すると、アカウントデータを書き出し、Outreach 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 43%
@@ -71,7 +71,7 @@ The [!DNL Outreach] API には、ユーザーあたり 1 時間に 10,000 件の
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Outreach] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Outreach] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

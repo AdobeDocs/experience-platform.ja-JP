@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 同意および環境設定スキーマフィールドグループ
 description: 「同意」および「環境設定」スキーマフィールドグループについて説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -106,7 +106,7 @@ The [!UICONTROL 同意および環境設定] フィールドグループには�
 >* 顧客がチャネルレベルでオプトアウトした場合、 `idSpecific` は無視されます。
 >* チャネルレベルの同意または環境設定が設定されていない場合、または顧客がオプトインした場合、 `idSpecific` は光栄です。
 
-各キー `idSpecific` オブジェクトは、Adobe Experience Platform ID サービスで認識される特定の ID 名前空間を表します。 独自のカスタム名前空間を定義して様々な識別子を分類できますが、ID サービスが提供する標準名前空間の 1 つを使用して、リアルタイム顧客プロファイルのストレージサイズを減らすことをお勧めします。 ID 名前空間について詳しくは、 [ID 名前空間の概要](../../../identity-service/namespaces.md) （ ID サービスドキュメント）を参照してください。
+各キー `idSpecific` オブジェクトは、Adobe Experience Platform ID サービスで認識される特定の ID 名前空間を表します。 独自のカスタム名前空間を定義して様々な識別子を分類できますが、ID サービスが提供する標準名前空間の 1 つを使用して、リアルタイム顧客プロファイルのストレージサイズを減らすことをお勧めします。 ID 名前空間について詳しくは、 [ID 名前空間の概要](../../../identity-service/features/namespaces.md) （ ID サービスドキュメント）を参照してください。
 
 各 namespace オブジェクトのキーは、顧客が設定した一意の ID 値を表します。 各 ID 値には、 `consents`.
 

@@ -1,17 +1,17 @@
 ---
 title: Web SDK の ID データ
 description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID(ECID) を取得および管理する方法について説明します。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 2%
 
 ---
 
-
 # Web SDK の ID データ
 
-Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](../../identity-service/ecid.md) 訪問者の行動を追跡するには、をクリックします。 ECID を使用すると、各デバイスに複数のセッション間で保持できる一意の ID が割り当てられていることを確認でき、Web セッション中および複数の Web セッション間で発生したすべてのヒットを特定のデバイスに結び付けることができます。
+Adobe Experience Platform Web SDK は、 [Adobe Experience Cloud ID(ECID)](../../identity-service/features/ecid.md) 訪問者の行動を追跡するには、をクリックします。 ECID を使用すると、各デバイスに複数のセッション間で保持できる一意の ID が割り当てられていることを確認でき、Web セッション中および複数の Web セッション間で発生したすべてのヒットを特定のデバイスに結び付けることができます。
 
 このドキュメントでは、Platform Web SDK を使用して ECID を管理する方法の概要を説明します。
 
@@ -104,7 +104,7 @@ alloy("sendEvent", {
 >Adobeは、人物を表す名前空間（例： ）を送信することをお勧めします。 `CRMID`をプライマリ ID として設定します。
 
 
-内の各プロパティ `identityMap` は、特定のに属する ID を表します [ID 名前空間](../../identity-service/namespaces.md). プロパティ名は、ID 名前空間シンボルである必要があります。このシンボルは、Adobe Experience Platformユーザーインターフェイスの「[!UICONTROL ID]&quot;. プロパティ値は、その ID 名前空間に関する ID の配列である必要があります。
+内の各プロパティ `identityMap` は、特定のに属する ID を表します [ID 名前空間](../../identity-service/features/namespaces.md). プロパティ名は、ID 名前空間シンボルである必要があります。このシンボルは、Adobe Experience Platformユーザーインターフェイスの「[!UICONTROL ID]&quot;. プロパティ値は、その ID 名前空間に関する ID の配列である必要があります。
 
 >[!IMPORTANT]
 >

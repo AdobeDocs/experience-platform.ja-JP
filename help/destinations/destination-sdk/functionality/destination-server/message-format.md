@@ -2,9 +2,9 @@
 description: このページでは、Adobe Experience Platform から宛先に書き出されたデータのメッセージ形式およびプロファイル変換について説明します。
 title: メッセージ形式
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2489'
 ht-degree: 87%
 
 ---
@@ -380,7 +380,7 @@ Experience Platform のプロファイルの以下の 2 つの例を参照して
 
 ### ID {#identities}
 
-Experience Platform の ID について詳しくは、[ID 名前空間の概要](../../../../identity-service/namespaces.md)を参照してください。
+Experience Platform の ID について詳しくは、[ID 名前空間の概要](../../../../identity-service/features/namespaces.md)を参照してください。
 
 **入力**
 
@@ -1212,9 +1212,9 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | `destination.namespaceSegmentTimestamps` | オーディエンスが作成、更新またはアクティブ化された時刻を UNIX タイムスタンプ形式で返します。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`:ID を持つセグメントの時間を戻します `seg-id-1`、 `ups` 名前空間が UNIX タイムスタンプ形式で作成された。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`:ID を持つオーディエンスの時刻を戻します `seg-id-1`、 `ups` 名前空間が UNIX タイムスタンプ形式で更新されました。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`:ID を持つオーディエンスの時刻を戻します `seg-id-1`、 `ups` 名前空間は、UNIX タイムスタンプ形式で宛先に対してアクティブ化されました。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：オーディエンスのアクティベーションが宛先で更新された時間を UNIX タイムスタンプ形式で戻します。</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | ステータスを持つオーディエンスのみを返します `realized`、すべての名前空間にまたがる | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | ステータスを持つオーディエンスのみを返します `exited`、すべての名前空間にまたがる | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **非推奨です。置き換え：`destination.namespaceSegmentAliases`** <br><br> Adobe Experience Platform名前空間のオーディエンス ID からパートナーのシステムのオーディエンスエイリアスにマッピングします。 | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **非推奨です。置き換え：`destination.namespaceSegmentNames`** <br><br>  Adobe Experience Platform名前空間内のオーディエンス名からパートナーのシステム内のオーディエンス名にマッピングします。 | `destination.segmentNames["seg-name-1"]` |
-| `destination.segmentTimestamps` | **非推奨です。置き換え：`destination.namespaceSegmentTimestamps`** <br><br> オーディエンスが作成、更新またはアクティブ化された時刻を UNIX タイムスタンプ形式で返します。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`:ID を持つオーディエンスの時刻を戻します `seg-id-1` が UNIX タイムスタンプ形式で作成された。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`:ID を持つオーディエンスの時刻を戻します `seg-id-1` が UNIX タイムスタンプ形式で更新されました。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`:ID を持つオーディエンスの時刻を戻します `seg-id-1` が宛先に対してアクティブ化されました（UNIX タイムスタンプ形式）。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：オーディエンスのアクティベーションが宛先で更新された時間を UNIX タイムスタンプ形式で戻します。</li></ul> |
+| `destination.segmentAliases` | **廃止されました。 置き換え：`destination.namespaceSegmentAliases`** <br><br> Adobe Experience Platform名前空間のオーディエンス ID からパートナーのシステムのオーディエンスエイリアスにマッピングします。 | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **廃止されました。 置き換え：`destination.namespaceSegmentNames`** <br><br>  Adobe Experience Platform名前空間内のオーディエンス名からパートナーのシステム内のオーディエンス名にマッピングします。 | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **廃止されました。 置き換え：`destination.namespaceSegmentTimestamps`** <br><br> オーディエンスが作成、更新またはアクティブ化された時刻を UNIX タイムスタンプ形式で返します。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`:ID を持つオーディエンスの時刻を戻します `seg-id-1` が UNIX タイムスタンプ形式で作成された。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`:ID を持つオーディエンスの時刻を戻します `seg-id-1` が UNIX タイムスタンプ形式で更新されました。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`:ID を持つオーディエンスの時刻を戻します `seg-id-1` が宛先に対してアクティブ化されました（UNIX タイムスタンプ形式）。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：オーディエンスのアクティベーションが宛先で更新された時間を UNIX タイムスタンプ形式で戻します。</li></ul> |
 
 {style="table-layout:auto"}
 

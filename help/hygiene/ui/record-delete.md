@@ -2,10 +2,10 @@
 title: レコードを削除
 description: Adobe Experience Platform UI でレコードを削除する方法を説明します。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 26%
+source-wordcount: '1557'
+ht-degree: 25%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 26%
 Platform の ID について詳しくは、次のドキュメントを参照してください。
 
 * [Adobe Experience Platform ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID をブリッジし、準拠する XDM スキーマで定義された ID フィールドに基づいてデータセットをリンクします。
-* [ID 名前空間](../../identity-service/namespaces.md):ID 名前空間は様々なタイプを定義します of 1 人の個人に関連付けることができ、id フィールドごとに必須のコンポーネントである id 情報。
+* [ID 名前空間](../../identity-service/features/namespaces.md):ID 名前空間は様々なタイプを定義します of 1 人の個人に関連付けることができ、id フィールドごとに必須のコンポーネントである id 情報。
 * [リアルタイム顧客プロファイル](../../profile/home.md):ID グラフを使用して、ほぼリアルタイムで更新された、複数のソースからの集計データに基づいて統合された消費者プロファイルを提供します。
 * [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：スキーマの使用により、Platform データの標準的な定義および構造を提供します。すべての Platform データセットは特定の XDM スキーマに準拠しており、スキーマはどのフィールドが ID であるかを定義しています。
 * [ID フィールド](../../xdm/ui/fields/identity.md)：XDM スキーマで ID フィールドが定義される方法を説明します。
@@ -125,7 +125,7 @@ ID を手動で入力するには、「**[!UICONTROL ID を追加]**」を選択
 
 ![リクエスト作成ワークフローで、 [!UICONTROL ID を追加] オプションがハイライト表示されました。](../images/ui/record-delete/add-identity.png)
 
-ID を 1 つずつ入力できるコントロールが表示されます。 「**[!UICONTROL プライマリ ID]**」で、ドロップダウンメニューを使用して ID タイプを選択します。 Under **[!UICONTROL ID 値]**&#x200B;に、レコードのプライマリ ID 値を指定します。
+ID を 1 つずつ入力できるコントロールが表示されます。 の下 **[!UICONTROL プライマリID]**&#x200B;を選択し、ドロップダウンメニューを使用して id タイプを選択します。 Under **[!UICONTROL ID 値]**&#x200B;に、レコードのプライマリ ID 値を指定します。
 
 ![ID フィールドを手動で追加したリクエスト作成ワークフロー。](../images/ui/record-delete/identity-added.png)
 

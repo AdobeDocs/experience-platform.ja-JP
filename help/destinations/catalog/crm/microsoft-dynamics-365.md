@@ -4,7 +4,7 @@ title: Microsoft Dynamics 365 接続
 description: Microsoft Dynamics 365 の宛先を使用すると、アカウントデータを書き出し、Microsoft Dynamics 365 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2019'
 ht-degree: 62%
@@ -82,7 +82,7 @@ Platform から [!DNL Dynamics 365] アカウントにデータを書き出す�
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Dynamics 365] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Dynamics 365] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 例 | 説明 | 注意点 |
 |---|---|---|---|

@@ -3,7 +3,7 @@ title: TikTok 接続
 description: 広告キャンペーンでターゲティングするためのデータを使用して、TikTok上にカスタムオーディエンスを構築します。 これらのオーディエンスは、Web サイトを訪問した人や、コンテンツに対して何らかのアクションを起こした人のものです。 AdobeのTikTok Ads Manager とのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 39%
@@ -36,7 +36,7 @@ TikTokの宛先をいつどのように使用するかを理解しやすくす�
 
 ## サポートされている ID {#supported-identities}
 
-TikTokでは、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+TikTokでは、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

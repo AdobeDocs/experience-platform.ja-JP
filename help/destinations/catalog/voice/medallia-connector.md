@@ -2,7 +2,7 @@
 title: Medallia 接続
 description: ターゲットを絞った Medalia の調査とフィードバックの収集のプロファイルを活用して、顧客のニーズと期待をより深く理解します。
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 33%
@@ -44,7 +44,7 @@ Medalia 接続を確立するには、次の情報が必要です。
 
 ## サポートされている ID {#supported-identities}
 
-Medalia では、以下の表で説明する ID のアクティベーションをサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+Medalia では、以下の表で説明する ID のアクティベーションをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

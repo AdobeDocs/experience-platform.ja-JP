@@ -3,7 +3,7 @@ keywords: 広告、トレードデスク、広告業務用デスク
 title: Trade Desk 接続
 description: トレードデスクは、広告バイヤーがディスプレイ、ビデオ、モバイルの在庫ソースをまたいで再ターゲティングを実行し、オーディエンスにターゲットを絞ったデジタルキャンペーンを実施するためのセルフサービスプラットフォームです。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 41%
@@ -26,7 +26,7 @@ ht-degree: 41%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL The Trade Desk] は、以下の表に示す id に基づいてオーディエンスをアクティブ化できます。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL The Trade Desk] は、以下の表に示す id に基づいてオーディエンスをアクティブ化できます。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ID | 説明 |
 |---|---|

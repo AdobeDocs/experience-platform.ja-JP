@@ -3,7 +3,7 @@ keywords: linkedin 接続；linkedin 接続；linkedin 宛先；linkedin;linkedi
 title: Linkedin Matched Audiences 接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのLinkedInキャンペーンのプロファイルをアクティブ化します。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 39%
@@ -26,7 +26,7 @@ ht-degree: 39%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL LinkedIn Matched Audiences] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL LinkedIn Matched Audiences] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

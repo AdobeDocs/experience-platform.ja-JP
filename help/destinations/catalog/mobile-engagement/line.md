@@ -4,7 +4,7 @@ title: LINE 接続
 description: LINE の宛先を使用すると、Platform オーディエンスにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを提供できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 41%
@@ -54,7 +54,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL LINE] では、次の表で説明する id の更新と書き出しをサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL LINE] では、次の表で説明する id の更新と書き出しをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 |
 |---|---|

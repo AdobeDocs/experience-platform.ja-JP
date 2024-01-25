@@ -3,7 +3,7 @@ title: （API）Oracle Eloqua 接続
 description: (API)Oracleの Eloqua の宛先を使用すると、アカウントデータを書き出し、ビジネスニーズに合わせてOracleEloqua 内でアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 30%
@@ -65,7 +65,7 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Oracle Eloqua] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Oracle Eloqua] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 必須 |
 |---|---|---|

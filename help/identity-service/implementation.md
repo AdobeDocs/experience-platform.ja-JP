@@ -1,10 +1,10 @@
 ---
 title: ID サービスの実装ガイド
 description: Adobe Experience Platformに提供されたデータが、ID サービスで ID グラフの作成に使用される前にどのように処理されるかを説明します。
-source-git-commit: bdda234c44b63999d7582857975afa64fdb93605
+source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 66%
+source-wordcount: '581'
+ht-degree: 64%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 66%
 
 ## 追加の ID 名前空間
 
-Experience Platform オファーには様々な標準名前空間がありますが、ID を適切に分類するために、追加の名前空間を作成する必要がある場合があります。詳しくは、 [組織のカスタム名前空間の作成](./namespaces.md).
+Experience Platform オファーには様々な標準名前空間がありますが、ID を適切に分類するために、追加の名前空間を作成する必要がある場合があります。詳しくは、 [組織のカスタム名前空間の作成](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -45,6 +45,8 @@ ID フィールドでは、共通の PII データを共有している ID を�
 >
 >* 配列およびマップタイプのフィールドはサポートされておらず、ID フィールドとしてマークおよびラベル付けできません。
 >*  結果の ID の名前空間は、フィールドにラベルが付けられた時点で提供されます。
+
+詳しくは、 [UI での id フィールドの定義](../xdm/ui/fields/identity.md).
 
 ## データセットの ID サービスに対する設定
 

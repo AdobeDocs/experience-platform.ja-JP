@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM システムトラブルシューティングガイド
 description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル（XDM）に関するよくある質問への回答を示します。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '1947'
 ht-degree: 100%
 
 ---
@@ -136,7 +136,6 @@ XDM での結合について詳しくは、[!DNL Schema Registry] API ガイド�
 >* `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-
 API での参照パスの作成について詳しくは、[!DNL Schema Registry] 開発者ガイドの[コンテナ](./api/getting-started.md#container)および[リソースの識別](api/getting-started.md#resource-identification)の節を参照してください。
 
 ### タイトルが一意ではありません
@@ -189,7 +188,6 @@ API での参照パスの作成について詳しくは、[!DNL Schema Registry]
 >* `http://ns.adobe.com/aep/errors/XDM-1023-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
-
 XDM リソースの適切なデータ構造の詳細な例については、スキーマレジストリ API ガイドを参照してください。
 
 * [カスタムクラスの作成](./api/classes.md#create)
@@ -225,7 +223,6 @@ XDM リソースの適切なデータ構造の詳細な例については、ス�
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1008-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
-
 
 様々な API リクエストに適合する Accept ヘッダーのリストについては、[スキーマレジストリ開発者ガイド](./api/overview.md)の対応する節を参照してください。
 
@@ -277,7 +274,7 @@ XDM リソースの適切なデータ構造の詳細な例については、ス�
 
 この問題を解決するには、参照スキーマの ID フィールドの `xdm:namespace` 値が、ソースフィールドの参照 ID 記述子における `xdm:identityNamespace` プロパティの値と一致することを確認してください。
 
-標準の ID 名前空間コードのリストについては、「ID 名前空間の概要」の[標準の名前空間](../identity-service/namespaces.md)の節を参照してください。
+標準の ID 名前空間コードのリストについては、「ID 名前空間の概要」の[標準の名前空間](../identity-service/features/namespaces.md)の節を参照してください。
 
 #### スキーマには identityMap またはプライマリ ID が含まれている必要があります
 

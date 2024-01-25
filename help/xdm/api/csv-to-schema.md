@@ -2,22 +2,22 @@
 title: CSV テンプレートからスキーマ変換 API エンドポイント
 description: スキーマレジストリ API の/rpc/csv2schema エンドポイントを使用すると、CSV テンプレートを使用して Experience Data Model(XDM) スキーマを自動的に作成できます。
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
-source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '849'
 ht-degree: 6%
 
 ---
 
 # CSV テンプレートからスキーマ変換 API エンドポイント
 
-この `/rpc/csv2schema` エンドポイント [!DNL Schema Registry] API を使用すると、CSV ファイルをテンプレートとして使用して、Experience Data Model(XDM) スキーマを自動的に作成できます。 このエンドポイントを使用して、テンプレートを作成し、スキーマフィールドを一括で読み込み、API や UI の手動動作を削減できます。
+The `/rpc/csv2schema` エンドポイント [!DNL Schema Registry] API を使用すると、CSV ファイルをテンプレートとして使用して、Experience Data Model(XDM) スキーマを自動的に作成できます。 このエンドポイントを使用して、テンプレートを作成し、スキーマフィールドを一括で読み込み、API や UI の手動動作を削減できます。
 
 ## はじめに
 
-この `/rpc/csv2schema` エンドポイントが [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 続行する前に、 [入門ガイド](./getting-started.md) 関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方のガイド、および任意のAdobe Experience Platform API を正しく呼び出すために必要な必須ヘッダーに関する重要な情報。
+The `/rpc/csv2schema` エンドポイントが [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 続行する前に、 [入門ガイド](./getting-started.md) 関連ドキュメントへのリンク、このドキュメントの API 呼び出し例の読み方のガイド、および任意のAdobe Experience Platform API を正しく呼び出すために必要な必須ヘッダーに関する重要な情報。
 
-この `/rpc/csv2schema` endpoint は、 [!DNL Schema Registry]. の他のエンドポイントとは異なり、 [!DNL Schema Registry] API、RPC エンドポイントは、 `Accept` または `Content-Type`、およびを使用しない `CONTAINER_ID`. 代わりに、 `/rpc` 名前空間と呼ばれます。
+The `/rpc/csv2schema` endpoint は、 [!DNL Schema Registry]. の他のエンドポイントとは異なり、 [!DNL Schema Registry] API、RPC エンドポイントは、 `Accept` または `Content-Type`、およびを使用しない `CONTAINER_ID`. 代わりに、 `/rpc` 名前空間と呼ばれます（下記の API 呼び出しで示されているもの）。
 
 ## CSV ファイルの要件
 
@@ -29,14 +29,14 @@ ht-degree: 6%
 | 2 | `isCustom` | 必須 | フィールドがカスタムフィールドかどうかを示します。 |
 | 3 | `fieldGroupId` | オプション | カスタムフィールドを関連付ける必要があるフィールドグループの ID。 |
 | 4 | `fieldGroupName` | （説明を参照） | このフィールドを関連付けるフィールドグループの名前。<br><br>既存の標準フィールドを拡張しないカスタムフィールドの場合は、オプションです。 空白の場合は、名前が自動的に割り当てられます。<br><br>標準フィールドグループを拡張する標準フィールドまたはカスタムフィールドに必須です。標準フィールドグループは、 `fieldGroupId`. |
-| 5 | `fieldPath` | 必須 | フィールドの完全な XED ドット表記のパス。 標準フィールドグループのすべてのフィールドを含めるには ( `fieldGroupName`)、値を `ALL`. |
+| 5 | `fieldPath` | 必須 | フィールドの完全な XED ドット表記のパス。 標準フィールドグループのすべてのフィールドを含めるには ( `fieldGroupName`)、値をに設定します。 `ALL`. |
 | 6 | `displayName` | オプション | フィールドのタイトルまたはわかりやすい表示名。 存在する場合は、タイトルのエイリアスを指定することもできます。 |
 | 7 | `fieldDescription` | オプション | フィールドの説明。 説明のエイリアス（存在する場合）を指定することもできます。 |
-| 8 | `dataType` | （説明を参照） | を示します。 [基本データタイプ](../schema/field-constraints.md#basic-types) フィールドの すべてのカスタムフィールドに必須です。<br><br>If `dataType` が `object`、 `properties` または `$ref` 同じ行に対しても定義する必要がありますが、両方は定義できません。 |
+| 8 | `dataType` | （説明を参照） | を示します。 [基本データタイプ](../schema/field-constraints.md#basic-types) フィールドの。 すべてのカスタムフィールドに必須です。<br><br>次の場合 `dataType` が `object`を、 `properties` または `$ref` 同じ行に対しても定義する必要がありますが、両方は定義できません。 |
 | 9 | `isRequired` | オプション | データの取り込みにフィールドが必須かどうかを示します。 |
 | 10 | `isArray` | オプション | フィールドが、示されたの配列かどうかを示します `dataType`. |
 | 11 | `isIdentity` | オプション | フィールドが ID フィールドかどうかを示します。 |
-| 12 | `identityNamespace` | 必須 `isIdentity` が true | この [id 名前空間](../../identity-service/namespaces.md) id フィールド用。 |
+| 12 | `identityNamespace` | 必須 `isIdentity` が true | The [ID 名前空間](../../identity-service/features/namespaces.md) id フィールド用。 |
 | 13 | `isPrimaryIdentity` | オプション | フィールドがスキーマのプライマリ ID であるかどうかを示します。 |
 | 14 | `minimum` | オプション | （数値フィールドのみ）フィールドの最小値。 |
 | 15 | `maximum` | オプション | （数値フィールドのみ）フィールドの最大値。 |
@@ -83,7 +83,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `csv-file` | ローカルマシンに保存されている CSV テンプレートへのパス。 |
-| `schema-class-id` | この `$id` XDM の [クラス](../schema/composition.md#class) このスキーマが使用する |
+| `schema-class-id` | The `$id` XDM の [クラス](../schema/composition.md#class) このスキーマが使用する |
 | `schema-name` | スキーマの表示名。 |
 | `schema-description` | スキーマの説明。 |
 
@@ -360,6 +360,6 @@ curl -X POST \
 
 ## スキーマペイロードをインポート
 
-CSV ファイルから書き出しペイロードを生成したら、そのペイロードを `/rpc/import` endpoint ：スキーマを生成します。
+CSV ファイルから書き出しペイロードを生成したら、そのペイロードをに送信できます。 `/rpc/import` endpoint ：スキーマを生成します。
 
 詳しくは、 [インポートエンドポイントガイド](./import.md) を参照してください。

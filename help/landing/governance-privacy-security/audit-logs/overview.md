@@ -2,10 +2,10 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platform で誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1294'
-ht-degree: 51%
+source-wordcount: '1291'
+ht-degree: 46%
 
 ---
 
@@ -40,18 +40,18 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 | --- | --- |
 | [アクセス制御ポリシー（属性ベースのアクセス制御）](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | [アカウント (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
-| [アトリビューション AI インスタンス](../../../intelligent-services/attribution-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li></ul> |
+| [Attribution AIインスタンス](../../../intelligent-services/attribution-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>Enable（有効）</li><li>Disable（無効）</li></ul> |
 | [監査ログ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>書き出し</li></ul> |
 | [クラス](../../../xdm/schema/composition.md#class) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | 計算済み属性 | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
-| [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li></ul> |
+| [顧客 AI インスタンス](../../../intelligent-services/customer-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>Enable（有効）</li><li>Disable（無効）</li></ul> |
 | [データセット](../../../catalog/datasets/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする対象 [リアルタイム顧客プロファイル](../../../profile/home.md)</li><li>プロファイルに対して無効にする</li><li>データの追加</li><li>バッチを削除</li></ul> |
-| [データストリーム](../../../datastreams/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li><li>[マッピングを編集](../../../datastreams/data-prep.md)</li></ul> |
+| [Datastream](../../../datastreams/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>Enable（有効）</li><li>Disable（無効）</li><li>[マッピングを編集](../../../datastreams/data-prep.md)</li></ul> |
 | [データタイプ](../../../xdm/schema/composition.md#data-type) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
-| [宛先](../../../destinations/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
+| [宛先](../../../destinations/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>Enable（有効）</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
 | [フィールドグループ](../../../xdm/schema/composition.md#field-group) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
-| [ID グラフ](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>表示</li></ul> |
-| [ID 名前空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li> の作成</li><li>更新</li></ul> |
+| [ID グラフ](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>表示</li></ul> |
+| [ID 名前空間](../../../identity-service/features/namespaces.md) | <ul><li> の作成</li><li>更新</li></ul> |
 | [結合ポリシー](../../../profile/merge-policies/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | [製品プロファイル](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | [クエリ](../../../query-service/ui/overview.md) | <ul><li>実行</li></ul> |
@@ -61,7 +61,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 | [スケジュール済みクエリ](../../../query-service/ui/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | [スキーマ](../../../xdm/schema/composition.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>プロファイルに対して有効にする</li></ul> |
 | [セグメント](../../../segmentation/home.md) | <ul><li> の作成</li><li>削除</li><li>セグメントの有効化</li><li>セグメントの削除</li></ul> |
-| [ソースデータフロー](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
+| [ソースデータフロー](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>Enable（有効）</li><li>Disable（無効）</li><li>データセットの有効化</li><li>データセットの削除</li><li>プロファイルの有効化</li><li>プロファイルの削除</li></ul> |
 | [作業指示](../../../hygiene/home.md) | <ul><li> の作成</li></ul> |
 
 ## 監査ログへのアクセス
@@ -94,7 +94,7 @@ Adobe Experience Platformでは、システムで実行されるアクティビ�
 この新機能により、表示されるデータは 2022 年 3 月まで遡ります。 選択したリソースに応じて、2022 年 1 月より前のデータを利用できるようになります。
 
 
-ファネルアイコン（![フィルターアイコン](../../images/audit-logs/icon.png)）を選択し、フィルターコントロールのリストを表示して、結果を絞り込みます。選択した各種フィルターに関係なく、直近の 1000 件のレコードのみが表示されます。
+ファネルアイコン (![フィルターアイコン](../../images/audit-logs/icon.png)) をクリックして、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。 選択した各種フィルターに関係なく、直近の 1000 件のレコードのみが表示されます。
 
 ![フィルターが適用されたアクティビティログが強調表示された「監査」ダッシュボード。](../../images/audit-logs/filters.png)
 
@@ -106,7 +106,7 @@ UI の監査イベントには、次のフィルターを使用できます。
 | [!UICONTROL アクション] | アクションでフィルターします。 上記のリソーステーブルには、各サービスで使用できるアクションが表示されています。 |
 | [!UICONTROL ユーザー] | 完全なユーザー ID を入力します ( 例： `johndoe@acme.com`) を使用して、ユーザーでフィルタリングできます。 |
 | [!UICONTROL ステータス] | アクションが許可（完了）されたか、または不足により拒否されたかによってフィルターします [アクセス制御](../../../access-control/home.md) 権限。 |
-| [!UICONTROL 日付] | 結果をフィルターする日付範囲を定義する開始日および／または終了日を選択します。データは 90 日間のルックバック期間で書き出すことができます ( 例：2021-12-15 ～ 2022-03-15)。 これは、イベントタイプによって異なる場合があります。 |
+| [!UICONTROL 日付] | 結果をフィルターする日付範囲を定義する開始日または終了日を選択します。 データは 90 日間のルックバック期間で書き出すことができます ( 例：2021-12-15 ～ 2022-03-15)。 これは、イベントタイプによって異なる場合があります。 |
 
 フィルターを削除するには、該当するフィルターのピルアイコンの「X」を選択するか、「**[!UICONTROL すべてクリア]**」をクリックして、すべてのフィルターを削除します。
 
@@ -136,7 +136,7 @@ UI の監査イベントには、次のフィルターを使用できます。
 
 ## API での監査ログの管理
 
-UI で実行できるすべてのアクションは、API 呼び出しを使用して実行することもできます。詳しくは、[ API 参照ドキュメント](https://www.adobe.io/experience-platform-apis/references/audit-query/)を参照してください。
+UI で実行できるすべてのアクションは、API 呼び出しを使用して実行することもできます。詳しくは、 [API リファレンスドキュメント](https://www.adobe.io/experience-platform-apis/references/audit-query/) を参照してください。
 
 ## Adobe Admin Consoleの監査ログの管理
 

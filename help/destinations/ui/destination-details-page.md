@@ -3,10 +3,10 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたオーディエンス、アクティベーションを編集し、データフローを有効または無効にするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 13%
+source-wordcount: '925'
+ht-degree: 12%
 
 ---
 
@@ -60,7 +60,7 @@ Adobe Experience Platformユーザーインターフェイスで、宛先の属�
 | [!UICONTROL カテゴリ] | 宛先のタイプを示します。 詳しくは、 [宛先カタログ](../catalog/overview.md) を参照してください。 |
 | [!UICONTROL 接続タイプ] | オーディエンスを宛先に送信する際に使用するフォームを示します。 以下の値を指定できます。 [!UICONTROL Cookie] および [!UICONTROL プロファイルベース]. |
 | [!UICONTROL 頻度] | オーディエンスが宛先に送信される頻度を示します。以下の値を指定できます。 [!UICONTROL ストリーミング] および [!UICONTROL バッチ]. |
-| [!UICONTROL ID] | 宛先で受け入れられる ID 名前空間を表します（例： ）。 `GAID`, `IDFA`または `email`. 受け入れられる ID 名前空間について詳しくは、 [ID 名前空間の概要](../../identity-service/namespaces.md). |
+| [!UICONTROL ID] | 宛先で受け入れられる ID 名前空間を表します（例： ）。 `GAID`, `IDFA`または `email`. 受け入れられる ID 名前空間について詳しくは、 [ID 名前空間の概要](../../identity-service/features/namespaces.md). |
 | [!UICONTROL 作成者] | この宛先を作成したユーザーを示します。 |
 | [!UICONTROL 作成日] | この宛先が作成された時点の UTC 日時を示します。 |
 
@@ -87,7 +87,7 @@ The [!UICONTROL データフローの実行] 「 」タブには、バッチ宛�
 
 ストリーミングとファイルベースの宛先の間で、データフローの実行の表示時間に違いがあります。
 
-### ストリーミング宛先 {#streaming}
+### ストリーミングの宛先 {#streaming}
 
 また、 **[!UICONTROL 処理時間]** ほとんどのストリーミングデータフローの実行については、約 4 時間で示されます。以下の図に示すように、データフローの実際の処理時間は、データフローの実行については、はるかに短くなります。 Experience Platformが宛先への呼び出しを再試行する必要がある場合に、データフローの実行ウィンドウを長時間開いたままにし、また、到着が遅れたデータを同じ時間枠で逃さないようにします。
 

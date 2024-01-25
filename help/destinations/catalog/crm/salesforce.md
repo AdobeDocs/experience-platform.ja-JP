@@ -3,7 +3,7 @@ keywords: crm;CRM;crm の宛先；salesforce crm;salesforce crm の宛先
 title: Salesforce CRM 接続
 description: Salesforce CRM の宛先を使用すると、アカウントデータをエクスポートし、Salesforce CRM 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2821'
 ht-degree: 20%
@@ -123,7 +123,7 @@ Platform からに対してアクティブ化する各オーディエンスに�
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL Salesforce CRM] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Salesforce CRM] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

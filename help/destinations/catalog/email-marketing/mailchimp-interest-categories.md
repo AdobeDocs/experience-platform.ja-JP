@@ -3,7 +3,7 @@ title: Mailchimp の興味カテゴリ
 description: Mailchimp（Intuit Mailchimp とも呼ばれます）は、メーリングリストやメールマーケティングキャンペーンを使用して連絡先（顧客、顧客、または他の関心者）を管理し、連絡を取るために企業が使用する一般的なマーケティングオートメーションプラットフォームです。 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2299'
 ht-degree: 19%
@@ -78,7 +78,7 @@ API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us1
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Mailchimp] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL Mailchimp] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|

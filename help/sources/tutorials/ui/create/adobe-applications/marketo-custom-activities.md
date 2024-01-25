@@ -2,9 +2,9 @@
 title: UI でのMarketo Engageソース接続とカスタムアクティビティデータのデータフローの作成
 description: このチュートリアルでは、UI でMarketo Engageソース接続とデータフローを作成し、カスタムアクティビティデータをAdobe Experience Platformに取り込む手順を説明します。
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1470'
 ht-degree: 22%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 22%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [Experience Data Model（XDM）](../../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [UI でのスキーマの作成と編集](../../../../../xdm/ui/resources/schemas.md)：UI でスキーマを作成および編集する方法について説明します。
-* [ID 名前空間](../../../../../identity-service/namespaces.md)：ID 名前空間は [!DNL Identity Service] のコンポーネントで、ID の関連先コンテキストのインジケーターとして機能します。完全修飾 ID には、ID 値と名前空間が含まれます。
+* [ID 名前空間](../../../../../identity-service/features/namespaces.md)：ID 名前空間は [!DNL Identity Service] のコンポーネントで、ID の関連先コンテキストのインジケーターとして機能します。完全修飾 ID には、ID 値と名前空間が含まれます。
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
 
@@ -73,7 +73,7 @@ The *[!UICONTROL フィールドグループを追加]* ウィンドウが表示
 
 次に、スキーマに新しいフィールドを追加します。 この新しいフィールドはに設定する必要があります `type: object` とには、カスタムアクティビティの個々のフィールドが含まれます。
 
-新しいフィールドを追加するには、プラス記号 (`+`) をクリックします。 のエントリ *[!UICONTROL 名称未設定フィールド |タイプ]* が表示されます。 次に、 *[!UICONTROL フィールドのプロパティ]* パネル。 フィールド名をカスタムアクティビティの API 名に設定し、表示名をカスタムアクティビティの表示名に設定します。 次に、タイプをに設定します。 `object` フィールドグループを、前の手順で作成したカスタムアクティビティフィールドグループに割り当てます。 完了したら、「**[!UICONTROL 適用]**」を選択します。
+新しいフィールドを追加するには、プラス記号 (`+`) をクリックします。 のエントリ *[!UICONTROL 名称未設定フィールド | タイプ]* が表示されます。 次に、 *[!UICONTROL フィールドのプロパティ]* パネル。 フィールド名をカスタムアクティビティの API 名に設定し、表示名をカスタムアクティビティの表示名に設定します。 次に、タイプをに設定します。 `object` フィールドグループを、前の手順で作成したカスタムアクティビティフィールドグループに割り当てます。 完了したら、「**[!UICONTROL 適用]**」を選択します。
 
 ![プラス (`+`) 記号を選択し、新しいフィールドを追加できるようにします。](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 

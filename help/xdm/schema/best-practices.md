@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データモデリングのベストプラクティス
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 71%
@@ -206,7 +206,7 @@ ERD で確立された基数は、エンティティの分類方法に関する�
 
 Experience Platform では、ID としてマークされた XDM フィールドを使用して、複数のデータソースからの個々の顧客に関する情報を結合します。 1 つのスキーマに複数のフィールドを ID としてマークすることはできますが、で使用できるようにするには、1 つのプライマリ ID を定義する必要があります [!DNL Real-Time Customer Profile]. これらのフィールドのユースケースについて詳しくは、スキーマ構成の基本の [ID フィールド](./composition.md#identity)に関する節を参照してください。
 
-スキーマを設計する際、リレーショナルデータベーステーブル内のプライマリキーは、プライマリ ID の候補となる可能性が高くなります。 該当する ID フィールドの他の例としては、顧客の電子メールアドレス、電話番号、アカウント ID、[ECID](../../identity-service/ecid.md) などがあります。
+スキーマを設計する際、リレーショナルデータベーステーブル内のプライマリキーは、プライマリ ID の候補となる可能性が高くなります。 該当する ID フィールドの他の例としては、顧客の電子メールアドレス、電話番号、アカウント ID、[ECID](../../identity-service/features/ecid.md) などがあります。
 
 ### Adobeアプリケーションスキーマフィールドグループ {#adobe-application-schema-field-groups}
 

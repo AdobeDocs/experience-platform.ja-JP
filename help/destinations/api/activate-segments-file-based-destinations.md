@@ -4,7 +4,7 @@ title: フローサービス API を使用して、ファイルベースの宛�
 description: フローサービス API を使用して、認定されたプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法について説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 11%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ 入力スキーマで使用可能な ID を表示します
 
-応答は、入力スキーマの作成時に使用できる ID を返します。 この応答は、 [標準](/help/identity-service/namespaces.md#standard) および [カスタム](/help/identity-service/namespaces.md#manage-namespaces) id 名前空間を設定します。Experience Platform
+応答は、入力スキーマの作成時に使用できる ID を返します。 この応答は、 [標準](/help/identity-service/features/namespaces.md#standard) および [カスタム](/help/identity-service/features/namespaces.md#manage-namespaces) id 名前空間を設定します。Experience Platform
 
 ```json
 [

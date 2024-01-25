@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データレイクでのプライバシーリクエストの処理
 description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1429'
 ht-degree: 73%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、法的および組織の�
 
 >[!NOTE]
 >
->このガイドでは、Experience Platformのデータレイクに対してプライバシーリクエストを実行する方法についてのみ説明します。 リアルタイム顧客プロファイルデータストアに対してもプライバシーリクエストをおこなう予定がある場合は、 [プロファイルのプライバシーリクエストの処理](../profile/privacy.md) を追加しました。
+>このガイドでは、Experience Platformのデータレイクに対してプライバシーリクエストを実行する方法についてのみ説明します。 リアルタイム顧客プロファイルデータストアに対してもプライバシーリクエストをおこなう予定がある場合は、 [プロファイルのプライバシーリクエストの処理](../profile/privacy.md) このチュートリアルに加えて、
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 [!DNL Identity Service] は、グローバルに定義された（標準）ID およびユーザー定義の（カスタム）ID 名前空間を保持します。標準の名前空間はすべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
-[!DNL Experience Platform] の ID 名前空間について詳しくは、 [ID 名前空間の概要](../identity-service/namespaces.md)を参照してください。
+[!DNL Experience Platform] の ID 名前空間について詳しくは、 [ID 名前空間の概要](../identity-service/features/namespaces.md)を参照してください。
 
 ## ID データをデータセットに追加
 
@@ -61,7 +61,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 ### UI の使用 {#identity-ui}
 
-[!DNL Experience Platform ]ユーザーインターフェイスでは、**[!UICONTROL スキーマ]**&#x200B;ワークスペースを使用して、既存の XDM スキーマを編集できます。スキーマに ID 記述子を追加するには、リストからスキーマを選択し、[!DNL Schema Editor] チュートリアルの[ID フィールドとしてスキーマフィールドを設定する](../xdm/tutorials/create-schema-ui.md#identity-field)の手順に従います。
+[!DNL Experience Platform]ユーザーインターフェイスでは、**[!UICONTROL スキーマ]**&#x200B;ワークスペースを使用して、既存の XDM スキーマを編集できます。スキーマに ID 記述子を追加するには、リストからスキーマを選択し、[!DNL Schema Editor] チュートリアルの[ID フィールドとしてスキーマフィールドを設定する](../xdm/tutorials/create-schema-ui.md#identity-field)の手順に従います。
 
 スキーマ内の適切なフィールドを ID フィールドとして設定したら、[プライバシーリクエストの送信](#submit)に関する次の節に進むことができます。
 
@@ -212,7 +212,7 @@ curl -X POST \
 
 このドキュメントでは、データレイクのプライバシーリクエストの処理に関する重要な概念を紹介しました。 ID データの管理方法とプライバシージョブの作成方法に関する理解を深めるために、引き続きこのガイド全体に記載されているドキュメントを読むことをお勧めします。
 
-次のドキュメントを参照してください： [リアルタイム顧客プロファイルのプライバシーリクエスト処理](../profile/privacy.md) のプライバシーリクエストの処理手順を参照してください。 [!DNL Profile] ストア。
+次のドキュメントを参照してください： [リアルタイム顧客プロファイルのプライバシーリクエストの処理](../profile/privacy.md) のプライバシーリクエストの処理手順を参照してください。 [!DNL Profile] ストア。
 
 ## 付録
 

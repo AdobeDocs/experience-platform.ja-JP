@@ -3,7 +3,7 @@ title: HubSpot 接続
 description: HubSpot の宛先を使用すると、HubSpot アカウント内の連絡先レコードを管理できます。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1543'
 ht-degree: 36%
@@ -64,7 +64,7 @@ Platform からにデータを書き出すには、以下を実行します。 [
 
 ## サポートされる ID {#supported-identities}
 
-[!DNL HubSpot] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL HubSpot] では、以下の表で説明する ID の更新をサポートしています。[ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 例 | 説明 | 注意点 |
 |---|---|---|---|

@@ -3,7 +3,7 @@ title: （ベータ版）トレードデスク — CRM 接続
 description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 18%
@@ -38,11 +38,11 @@ ht-degree: 18%
 
 ## ID 一致の要件 {#id-matching-requirements}
 
-Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件を満たす必要があります。 詳しくは、 [ID 名前空間の概要](/help/identity-service/namespaces.md) を参照してください。
+Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件を満たす必要があります。 詳しくは、 [ID 名前空間の概要](/help/identity-service/features/namespaces.md) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL The Trade Desk] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/namespaces.md) についての詳細情報。
+[!DNL The Trade Desk] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。「 ID 一致要件」の節の手順に従い、プレーンテキストとハッシュ化された電子メールアドレスにそれぞれ適切な名前空間を使用します。
 

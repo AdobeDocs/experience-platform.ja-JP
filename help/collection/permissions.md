@@ -2,7 +2,7 @@
 title: Experience Platformでのデータ収集の権限管理
 description: 権限を管理し、Adobe Experience Platformのデータ収集機能へのアクセスを制御する方法の概要です。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 29%
@@ -34,7 +34,7 @@ Adobe Experience Platformの権限には、データストリーム、ID、ス�
 | サンドボックス | （N/A） | に応じて [サンドボックス](../sandboxes/home.md) 組織の下に作成されたので、「Admin Console」のこの権限カテゴリを使用して、各組織へのアクセスを制御できます。 |
 | データモデリング | スキーマの管理 | 表示、作成および編集の機能を付与します [エクスペリエンスデータモデル (XDM) スキーマ](../xdm/home.md). |
 | データモデリング | スキーマの表示 | スキーマへの読み取り専用アクセスを許可します。 |
-| Identity Management | ID 名前空間の管理 | 表示、作成および編集の機能を付与します [ID 名前空間](../identity-service/namespaces.md). |
+| Identity Management | ID 名前空間の管理 | 表示、作成および編集の機能を付与します [ID 名前空間](../identity-service/features/namespaces.md). |
 | Identity Management | ID 名前空間の表示 | ID 名前空間への読み取り専用アクセスを許可します。 |
 | データ収集 | データストリームの管理 | 表示、作成および編集の機能を付与します [datastreams](../datastreams/overview.md). |
 | データ収集 | データストリームの表示 | データストリームへの読み取り専用アクセスを許可します。 |

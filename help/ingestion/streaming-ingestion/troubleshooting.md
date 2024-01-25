@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ストリーミング取り込みトラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 100%
 
 ---
@@ -97,6 +97,6 @@ Adobe Experience Platform [!DNL Data Ingestion] は、データを [!DNL Experie
 
 [!DNL Real-Time Customer Profile] がメッセージを拒否した場合、原因として可能性が高いのは、ID 情報が正しくないということです。これは、ID に無効な値または名前空間を指定した結果です。
 
-ID 名前空間には、デフォルトとカスタムの 2 タイプがあります。カスタム名前空間を使用する場合は、名前空間が [!DNL Identity Service] 内に登録されていることを確認します。デフォルトおよびカスタム名前空間の使用について詳しくは、[ID 名前空間の概要](../../identity-service/namespaces.md)を参照してください。
+ID 名前空間には、デフォルトとカスタムの 2 タイプがあります。カスタム名前空間を使用する場合は、名前空間が [!DNL Identity Service] 内に登録されていることを確認します。デフォルトおよびカスタム名前空間の使用について詳しくは、[ID 名前空間の概要](../../identity-service/features/namespaces.md)を参照してください。
 
 [[!DNL Experience Platform UI]](https://platform.adobe.com) を使用して、メッセージの取り込みに失敗した理由の詳細を確認できます。左側のナビゲーションで「**[!UICONTROL 監視]**」をクリックし、「**[!UICONTROL エンドツーエンドのストリーミング]**」タブを表示して、選択した期間にストリーミングされたメッセージバッチを表示します。

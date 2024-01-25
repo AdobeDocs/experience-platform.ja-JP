@@ -5,9 +5,9 @@ title: リアルタイム顧客プロファイルでのプライバシーリク�
 type: Documentation
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1743'
 ht-degree: 25%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 ID サービスは、グローバルに定義された（標準）ID およびユーザー定義の（カスタム）ID 名前空間を保持します。標準の名前空間はすべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
-[!DNL Experience Platform] の ID 名前空間について詳しくは、 [ID 名前空間の概要](../identity-service/namespaces.md)を参照してください。
+[!DNL Experience Platform] の ID 名前空間について詳しくは、 [ID 名前空間の概要](../identity-service/features/namespaces.md)を参照してください。
 
 ## リクエストの送信 {#submit}
 
@@ -203,7 +203,7 @@ Adobe Analytics の [!DNL Profile] データストアとは、多くの場合、
 | `ProfileService` のみ | 削除リクエストを受け取ったことを示す確認が Platform から送信されるとすぐに、プロファイルが削除されます。 ただし、プロファイルの ID グラフは引き続き残り、同じ ID を持つ新しいデータが取り込まれると、プロファイルを再構築できる可能性があります。 プロファイルに関連付けられたデータも、データレイクに残ります。 |
 | `ProfileService` および `identity` | 削除リクエストを受け取ったことを示す確認が Platform から送信されるとすぐに、プロファイルとそれに関連する ID グラフが削除されます。 プロファイルに関連付けられたデータは、データレイクに残ります。 |
 | `ProfileService` および `aepDataLake` | 削除リクエストを受け取ったことを示す確認が Platform から送信されるとすぐに、プロファイルが削除されます。 ただし、プロファイルの ID グラフは引き続き残り、同じ ID を持つ新しいデータが取り込まれると、プロファイルを再構築できる可能性があります。<br><br>データレイク製品が要求を受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、誰もがアクセスできません [!DNL Platform] サービス。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
-| `ProfileService`, `identity`, および `aepDataLake` | 削除リクエストを受け取ったことを示す確認が Platform から送信されるとすぐに、プロファイルとそれに関連する ID グラフが削除されます。<br><br>データレイク製品が要求を受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、誰もがアクセスできません [!DNL Platform] サービス。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
+| `ProfileService`、`identity` および `aepDataLake` | 削除リクエストを受け取ったことを示す確認が Platform から送信されるとすぐに、プロファイルとそれに関連する ID グラフが削除されます。<br><br>データレイク製品が要求を受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、誰もがアクセスできません [!DNL Platform] サービス。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
 
 詳しくは、 [[!DNL Privacy Service] ドキュメント](../privacy-service/home.md#monitor) を参照してください。
 

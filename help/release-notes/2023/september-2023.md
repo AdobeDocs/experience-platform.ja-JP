@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年9月のリリースノート。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 33%
+source-wordcount: '2257'
+ht-degree: 31%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform の新機能：
 
 - [計算属性](#computed-attributes)
 
- Experience Platform の既存の機能に対するアップデート：
+Experience Platformの既存の機能の更新：
 
 - [アラート](#alerts)
 - [ダッシュボード](#dashboards)
@@ -190,7 +190,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| ID サービス UI の強化 | Experience PlatformUI の改善されたカスタム名前空間作成ツールを使用して、カスタム名前空間と、対応する ID タイプをより適切に管理できます。 拡張された ID サービス UI には、次の機能が備わっています。 <ul><li>コンテキストエクスペリエンス： ID 名前空間と ID タイプに対する視覚的な手掛かり、明確性、コンテキスト。</li><li>精度：エラー処理の改善。ID 名の重複がなくなりました。</li><li>検出性：製品内ダイアログ内からドキュメントにアクセスできます。</li></ul> 詳しくは、 [カスタム名前空間の作成](../../identity-service/namespaces.md#create-namespaces). |
+| ID サービス UI の強化 | Experience PlatformUI の改善されたカスタム名前空間作成ツールを使用して、カスタム名前空間と、対応する ID タイプをより適切に管理できます。 拡張された ID サービス UI には、次の機能が備わっています。 <ul><li>コンテキストエクスペリエンス： ID 名前空間と ID タイプに対する視覚的な手掛かり、明確性、コンテキスト。</li><li>精度：エラー処理の改善。ID 名の重複がなくなりました。</li><li>検出性：製品内ダイアログ内からドキュメントにアクセスできます。</li></ul> 詳しくは、 [カスタム名前空間の作成](../../identity-service/features/namespaces.md#create-namespaces). |
 | ID グラフの制限の変更 | ID グラフの上限が 150 ID から 50 ID に変更されました。 新しい ID がフルグラフに取り込まれると、取り込みタイムスタンプと ID タイプに基づく最も古い ID が削除されます。 Cookie の ID タイプは削除用に優先されます。 実稼動用サンドボックスに次の情報が含まれている場合は、Adobeアカウントチームに連絡して、ID タイプの変更をリクエストしてください。 <ul><li>ユーザー識別子（CRM ID など）を cookie/デバイス id タイプとして設定するカスタム名前空間。</li><li>cookie/device 識別子がクロスデバイス id タイプとして設定されるカスタム名前空間。</li></ul> Adobeエンジニアリングがこれらのリクエストを手動で処理します。 詳しくは、 [ID サービスデータのガードレール](../../identity-service/guardrails.md) そしてガイド [データ管理ライセンス使用権限のベストプラクティス](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}

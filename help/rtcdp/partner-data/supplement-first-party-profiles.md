@@ -3,9 +3,9 @@ title: パートナー提供の属性を使用してファーストパーティ�
 description: 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善する方法を説明します。
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1256'
 ht-degree: 79%
 
 ---
@@ -56,7 +56,7 @@ Adobeは、1 つのサイズに合ったアプローチがないことを理解�
 1. **顧客**&#x200B;は、**データパートナー**&#x200B;から属性のライセンスを取得します。
 2. **顧客**&#x200B;は、**パートナー**&#x200B;提供の属性に対応するためにプロファイルデータとガバナンスモデルを拡張します。
 3. **顧客**&#x200B;は、データパートナーと共に、強化するオーディエンスをオンボーディングします。一般に、これらのオーディエンスのメール、名前、住所などの個人を特定できる情報（PII）要素などの入力識別子を取得します。
-4. **パートナー**&#x200B;は、照合できるプロファイルにライセンス済み属性を追加します。オプションで、[パートナー ID](/help/identity-service/namespaces.md) を含めて、パートナースコープの ID 名前空間に取り込むことができます。
+4. **パートナー**&#x200B;は、照合できるプロファイルにライセンス済み属性を追加します。オプションで、[パートナー ID](/help/identity-service/features/namespaces.md) を含めて、パートナースコープの ID 名前空間に取り込むことができます。
 5. **顧客**&#x200B;は、データパートナーからの属性を Real-Time CDP の顧客プロファイルに読み込みます。
 
 ## ユースケースの達成方法：手順 {#step-by-step-instructions}
@@ -99,9 +99,9 @@ Commenting out links for now
 
 >[!TIP]
 >
->データベンダーからの個人ベースの識別子で顧客プロファイルを補完することを選択した場合は、**[[!UICONTROL パートナー ID]](/help/identity-service/namespaces.md)** タイプの新しい ID タイプを作成できます。
+>データベンダーからの個人ベースの識別子で顧客プロファイルを補完することを選択した場合は、**[[!UICONTROL パートナー ID]](/help/identity-service/features/namespaces.md)** タイプの新しい ID タイプを作成できます。
 >
->パートナー ID について詳しくは、[ID タイプの節](/help/identity-service/namespaces.md)を参照してください。
+>パートナー ID について詳しくは、[ID タイプの節](/help/identity-service/features/namespaces.md)を参照してください。
 >詳しくは、Experience Platform ユーザーインターフェイスの [ID フィールドの定義方法](/help/xdm/ui/fields/identity.md)を参照してください。
 
 ### 個人を特定できる情報（PII）またはハッシュ化された PII をキーオフした際に強化するオーディエンスを書き出します {#export-audiences}
@@ -130,7 +130,7 @@ Commenting out links for now
 
 このページで説明するユースケースを参照する際は、次の制限事項に注意してください。
 
-* パートナー ID の使用を選択した場合、これらの ID は [ID グラフの作成](/help/identity-service/ui/identity-graph-viewer.md)時に使用されません。
+* パートナー ID の使用を選択した場合、これらの ID は [ID グラフの作成](/help/identity-service/features/identity-graph-viewer.md)時に使用されません。
 
 ## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 
