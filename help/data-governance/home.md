@@ -4,14 +4,21 @@ solution: Experience Platform
 title: データガバナンスの概要
 description: Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへのコンプライアンスを確保できます。Experience Platform 内の様々なレベルで重要な役割を果たします（例えば、カタログ化、データ系列、データ使用ポリシー、マーケティングアクションのデータに関するアクセス制御など）。
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 2b16ecb840e63baa244d8061a0349a9e39e726b2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 65%
+source-wordcount: '1623'
+ht-degree: 62%
 
 ---
 
-# データガバナンスの概要
+# データガバナンスの概要 {#data-governance-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_datagovernance_framework"
+>title="データガバナンスの義務"
+>abstract="お客様の組織のデータガバナンスポリシーに準拠し、お客様の規制要件を満たすのは、お客様の単独の責任です。 Experience Platformは、データ使用上の義務を管理するためのデータガバナンスツールを提供します。 データのクエリや処理をおこなう前に、適切なデータ使用ラベルを適用します。 データガバナンスツールとベストプラクティスについては、ドキュメントを参照してください。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja" text="データガバナンスの概要"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja" text="データガバナンスラベルの概要"
 
 Adobe Experience Platform の主な機能の 1 つは、複数の企業システムのデータを統合して、マーケターが顧客を識別、理解し、惹きつけられるようにすることです。このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。したがって、[!DNL Platform] 内のデータ操作が、データ使用ポリシーを確実に準拠できるようにすることが重要です。
 

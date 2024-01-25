@@ -3,14 +3,19 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御の概要
 description: このドキュメントでは、Adobe Experience Platform の属性ベースのアクセス制御に関する情報を提供します
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
+source-git-commit: 91631c056fc9d7ceab9eeecdba5733b64f6e869b
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1844'
 ht-degree: 87%
 
 ---
 
-# 属性ベースのアクセス制御の概要
+# 属性ベースのアクセス制御の概要 {#attribute-based-access-control-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_accesscontrol_abac_labelusageaccesspolicy"
+>title="ラベル使用のアクセスポリシー"
+>abstract=""
 
 属性ベースのアクセス制御は、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにする Adobe Experience Platform の機能です。属性は、スキーマフィールドやセグメントに追加されるラベルなど、オブジェクトに追加されるメタデータであることがあります。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。
 
@@ -103,7 +108,7 @@ Admin Console から新しい権限インターフェイスへのすべての Ex
 
 Adobe Experience Platform [!DNL Identity Service] を利用すると、デバイスやシステム間の ID を橋渡しすることで顧客と顧客の行動をよりよく把握でき、インパクトのある、パーソナライズされたデジタル体験をリアルタイムで提供できます。
 
-属性ベースのアクセス制御の一環として、`view-identity-graph` 権限を使用すると、ユーザーインターフェイスまたは API で ID グラフにアクセスできる組織内のユーザーを決定できます。 詳しくは、[ID グラフビューアへのアクセス](../../identity-service/ui/identity-graph-viewer.md)に関するガイドを参照してください.
+属性ベースのアクセス制御の一環として、`view-identity-graph` 権限を使用すると、ユーザーインターフェイスまたは API で ID グラフにアクセスできる組織内のユーザーを決定できます。 詳しくは、[ID グラフビューアへのアクセス](../../identity-service/features/identity-graph-viewer.md)に関するガイドを参照してください.
 
 [!DNL Identity Service] について詳しくは、[[!DNL Identity Service] 概要](../../identity-service/home.md)を参照してください。
 
