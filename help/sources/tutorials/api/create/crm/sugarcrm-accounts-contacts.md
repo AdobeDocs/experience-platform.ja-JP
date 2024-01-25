@@ -2,10 +2,10 @@
 title: フローサービス API を使用して、SugarCRM アカウントおよび連絡先のソース接続とデータフローを作成します
 description: フローサービス API を使用してAdobe Experience Platformを SugarCRM アカウントおよび連絡先に接続する方法を説明します。
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
 workflow-type: tm+mt
-source-wordcount: '2160'
-ht-degree: 55%
+source-wordcount: '2104'
+ht-degree: 54%
 
 ---
 
@@ -101,7 +101,8 @@ curl -X POST \
 
 ### ソースを参照 {#explore}
 
-前の手順で生成したベース接続 ID を使用することで、GET リクエストを実行してファイルとディレクトリを調べることができます。次の呼び出しを使用して、Platform に取り込むファイルのパスを見つけます。
+前の手順で生成したベース接続 ID を使用して、GETリクエストを実行することで、ファイルとディレクトリを調べることができます。
+次の呼び出しを使用して、Platform に取り込むファイルのパスを見つけます。
 
 **API 形式**
 
@@ -116,7 +117,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
 | `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常にに設定されています。 `rest`. |
-| `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。このソースの場合、値は次のようになります。 `json`. |
+| `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 その値は、参照するディレクトリのパスを表します。 このソースの場合、値は次のようになります。 `json`. |
 | `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、 `json` は、サポートされている唯一のファイルタイプです。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
 | `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 の受け入れ可能な format-type を取得するには `{SOURCE_PARAMS}`の場合は、base64 で文字列全体をエンコードする必要があります。 <br> [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 利用するオブジェクトのタイプに応じて、次のいずれかを渡します。 <ul><li>`accounts` ：組織と関係のある会社。</li><li>`contacts` ：組織と既に関係が確立されている個人。</li></ul> |
@@ -349,6 +350,8 @@ curl -X GET \
 ```
 
 >[!TAB 連絡先]
+
+正常な応答は、次のような構造を返します。
 
 ```json
 {
