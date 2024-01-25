@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
 workflow-type: tm+mt
 source-wordcount: '1863'
-ht-degree: 19%
+ht-degree: 22%
 
 ---
 
@@ -26,13 +26,13 @@ ID 名前空間では、様々なAdobe Experience Platformサービスに関す�
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="ID 名前空間"
->abstract="ID 名前空間は、指定された ID のコンテキストです。 例えば、 `Email` ～と一致する可能性がある **名前<span>@acme.com**. 同様に、 `Phone` ～と一致する可能性がある `555-555-1234`."
+>abstract="ID 名前空間は、特定の ID のコンテキストです。例えば、`Email` の名前空間を、**name<span>@acme.com** に対応させることができます。同様に、`Phone` の名前空間は、`555-555-1234` に対応させることができます。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="ID 値"
->abstract="ID 値は、一意の個人、組織またはアセットを表す識別子です。値が表す ID のコンテキストまたはタイプは、対応する ID 名前空間によって定義されます。プロファイルフラグメントをまたいでレコードデータを一致させる場合、名前空間と ID 値が一致する必要があります。 プロファイルフラグメントをまたいでレコードデータを一致させる場合、名前空間と ID 値が一致する必要があります。"
+>abstract="ID 値は、一意の個人、組織またはアセットを表す識別子です。値が表す ID のコンテキストまたはタイプは、対応する ID 名前空間によって定義されます。プロファイルフラグメント間でレコードデータを一致させる場合、名前空間と ID 値が一致する必要があります。プロファイルフラグメント間でレコードデータを一致させる場合、名前空間と ID 値が一致する必要があります。"
 >text="Learn more in documentation"
 
 完全修飾 ID には、次の 2 つのコンポーネントが含まれます。 **ID 値** および **ID 名前空間**. 例えば、ID の値が `scott@acme.com`の場合、名前空間は電子メールアドレスと区別して、この値のコンテキストを提供します。 同様に、名前空間で `555-123-456` 電話番号として、および `3126ABC` を CRM ID として追加しました。 基本的には、 **名前空間は、特定の ID にコンテキストを提供します**. プロファイルフラグメント間でレコードデータを一致させる場合、 [!DNL Real-Time Customer Profile] プロファイルデータの結合。id 値と名前空間の両方が一致する必要があります。
