@@ -4,10 +4,10 @@ title: 適切なプレイブックを見つける
 description: ユースケースに適切なプレイブックを見つけてプレイブックを有効にする方法を説明します。
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 96%
+source-wordcount: '776'
+ht-degree: 91%
 
 ---
 
@@ -51,6 +51,11 @@ ht-degree: 96%
 
 
 ### 概要 {#summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_assets"
+>title="Assets"
+>abstract="これらは、このプレイブックによって生成されたアセットです。 プレイブックのインスタンスを作成したら、インスピレーションを得られるサンドボックス内のアセットを表示し、必要に応じて他のサンドボックスにプロモーションすることができます。"
 
 「概要」の節を参照して、プレイブックからインスタンスを作成すると生成されるアセットを理解します。 プレイブックごとに生成されるアセットは、プレイブックで有効にするユースケースに合わせて調整されます。「概要」の節にあるすべての項目については、以下の詳細情報を参照してください。
 

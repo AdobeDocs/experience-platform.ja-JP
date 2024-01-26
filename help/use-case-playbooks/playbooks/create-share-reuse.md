@@ -4,10 +4,10 @@ title: プレイブックインスタンスの作成、共有、再利用
 description: マーケティングのユースケースを達成するために、プレイブックインスタンスを作成、共有、再利用する方法を学びます。
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 100%
+source-wordcount: '745'
+ht-degree: 97%
 
 ---
 
@@ -20,6 +20,11 @@ ht-degree: 100%
 プレイブックを使用するには、**[!UICONTROL ユースケースプレイブック]／[!UICONTROL プレイブック]**&#x200B;に移動します。ページ上の様々な検索およびフィルタリングオプションを参照して使用し、特定のプレイブックの基本を学びます。
 
 ## プレイブックインスタンスの作成 {#create-playbook-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_create"
+>title="インスタンスを作成"
+>abstract="ジャーニー、オーディエンス、スキーマ、宛先など、ジャーニーやアクティベーションのシナリオで使用するアセットのリストを生成します。"
 
 プレイブックインスタンスを作成する前に、使用可能なプレイブックを調べて、[適切なプレイブックを見つけましょう](/help/use-case-playbooks/playbooks/discover.md)。プレイブックを続行してインスタンスを作成する準備が整ったら、「**[!UICONTROL インスタンスを作成]**」を選択してプレイブックを続行し、技術アセットを生成します。
 
