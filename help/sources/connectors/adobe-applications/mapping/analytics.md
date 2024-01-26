@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Analytics Source Connector のフィールドのマッピング
 description: Analytics Source Connector を使用して、Adobe Analyticsフィールドを XDM フィールドにマッピングします。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: bb07d45df3ca585b2ca4af07cc991ac0b1e4df12
+source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
-source-wordcount: '2367'
-ht-degree: 75%
+source-wordcount: '2388'
+ht-degree: 73%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Platformでは、Analytics ソースを使用してAdobe Analyt
 | `m_keywords` | `search.keywords` | 文字列 | 「キーワード」ディメンションで使用される変数。 |
 | `m_os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | 整数 | 訪問者のオペレーティングシステムを表す数値 ID。user_agent 列に基づきます。 |
 | `m_page_url` | `web.webPageDetails.URL` | 文字列 | ページヒットの URL。 |
-| `m_pagename_no_url` | `web.webPageDetails.name` | 文字列 | 「ページ」ディメンションの入力に使用される変数。 |
+| `m_pagename` | `web.webPageDetails.pageViews.value` | 文字列 | ページ名を持つヒットの 1 と等しい。 これは、Adobe Analyticsのページビュー数指標に似ています。 |
 | `m_referrer` | `web.webReferrer.URL` | 文字列 | 前のページのページ URL。 |
 | `m_search_page_num` | `search.pageDepth` | 整数 | 「すべての検索ページのランク」ディメンションで使用されます。ユーザーがクリックスルーしてサイトに到達する前にサイトが表示された検索結果ページを示します。 |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | 文字列 | 状態変数。 |
@@ -152,7 +152,7 @@ ADC からのフィールドを変換する必要があるので、Adobe Analyti
 | `m_page_event_var1` | `web.webInteraction.URL` | 文字列 | リンクトラッキングイメージリクエストでのみ使用される変数。この変数には、クリックされたダウンロードリンク、離脱リンク、またはカスタムリンクの URL が含まれます。 |
 | `m_page_event_var2` | `web.webInteraction.name` | 文字列 | リンクトラッキングイメージリクエストでのみ使用される変数。このリストは、リンクのカスタム名をリスト表示します（指定されている場合）。 |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | ブール値 | 「ページが見つかりません」ディメンションの入力に使用される変数。この変数は、空にするか、「ErrorPage」を含む必要があります。 |
-| `m_pagename_no_url` | `web.webPageDetails.pageViews.value` | 数値 | ページの名前（設定されている場合）。ページが指定されていない場合、この値は空のままです。 |
+| `m_pagename_no_url` | `web.webPageDetails.name` | 数値 | ページの名前（設定されている場合）。ページが指定されていない場合、この値は空のままです。 |
 | `m_paid_search` | `search.isPaid` | ブール値 | ヒットが有料検索の検出に一致した場合に設定されるフラグ。 |
 | `m_product_list` | `productListItems[].items` | 配列 | 製品リスト。products 変数を通じて渡されます。 | {SKU (文字列), quantity (整数), priceTotal (数値)} |
 | `m_ref_type` | `web.webReferrer.type` | 文字列 | ヒットのリファラルのタイプを表す数値 ID。<br/>`1`：サイト内<br/>`2`：その他の Web サイト<br/>`3`：検索エンジン<br/>`4`：ハードドライブ<br/>`5`: USENET<br/>`6`：手動入力/ブックマーク（リファラーなし）<br/>`7`：電子メール<br/>`8`:JavaScript なし<br/>`9`：ソーシャルネットワーク |
@@ -203,7 +203,7 @@ Adobeが処理ルール、VISTA ルール、および参照テーブルを使用
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | 文字列 | 「オリジナルの入口ページ」ディメンションで使用される変数。訪問者の入口ページのページ名。 |
 | `post_keywords` | `search.keywords` | 文字列 | ヒット用に収集されたキーワード。 |
 | `post_page_url` | `web.webPageDetails.URL` | 文字列 | ページヒットの URL。 |
-| `post_pagename_no_url` | `web.webPageDetails.name` | 文字列 | 「ページ」ディメンションの入力に使用される変数。 |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | 文字列 | ページ名を持つヒットの 1 と等しい。 これは、Adobe Analyticsのページビュー数指標に似ています。 |
 | `post_purchaseid` | `commerce.order.purchaseID` | 文字列 | 購入を一意に識別するために使用される変数。 |
 | `post_referrer` | `web.webReferrer.URL` | 文字列 | 前のページの URL。 |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | 文字列 | 状態変数。 |
@@ -233,11 +233,11 @@ Adobeが処理ルール、VISTA ルール、および参照テーブルを使用
 | `post_latitude` | `placeContext.geo._schema.latitude` | 数値 | <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | 数値 | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | 文字列 | イメージリクエストで送信されるヒットのタイプ（標準的なヒット、ダウンロードリンク、離脱リンク、クリックされたカスタムリンク）。 |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | 数値 | イメージリクエストで送信されるヒットのタイプ（標準的なヒット、ダウンロードリンク、離脱リンク、クリックされたカスタムリンク）。 |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | 数値 | ヒットがリンククリックの場合は 1 に等しくなります。 これは、Adobe Analyticsのページイベント指標に似ています。 |
 | `post_page_event_var1` | `web.webInteraction.URL` | 文字列 | この変数は、リンクトラッキングイメージリクエストでのみ使用されます。クリックされたダウンロードリンク、出口リンク、またはカスタムリンクの URL です。 |
 | `post_page_event_var2` | `web.webInteraction.name` | 文字列 | この変数は、リンクトラッキングイメージリクエストでのみ使用されます。リンクのカスタム名です。 |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | ブール値 | 「エラーページ」ディメンションの入力に使用されます。この変数の値は、空か「ErrorPage」である必要があります。 |
-| `post_pagename_no_url` | `web.webPageDetails.pageViews.value` | 数値 | ページの名前（設定されている場合）。ページが指定されていない場合、この値は空のままです。 |
+| `post_pagename_no_url` | `web.webPageDetails.name` | 数値 | ページの名前（設定されている場合）。ページが指定されていない場合、この値は空のままです。 |
 | `post_product_list` | `productListItems[].items` | 配列 | 製品リスト。products 変数を通じて渡されます。 | {SKU (文字列), quantity (整数), priceTotal (数値)} |
 | `post_search_engine` | `search.searchEngine` | 文字列 | サイトに訪問者を誘導した検索エンジンを表す数値 ID。 |
 | `mvvar1_instances` | `.list.items[]` | オブジェクト | 変数値のリスト。実装に応じて、カスタム値の区切りリストが含まれます。 |
