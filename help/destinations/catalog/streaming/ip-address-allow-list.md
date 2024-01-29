@@ -4,7 +4,7 @@ title: ストリーミング宛先の IP アドレス許可リスト
 type: Documentation
 description: このページでは、許可リストに追加できる IP 範囲を提供し、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesisまたは Azure Event Hubs インスタンスにデータを安全に書き出すことができます。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ca3c9ed87f2365cc1d9e4ef5e4a6145266a11bba
+source-git-commit: d4833821105433518ee30415fe08f281effa5616
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 9%
@@ -83,6 +83,7 @@ Adobeでは、上記の宛先を操作する前に、許可リストに加える
 `40.74.7.192/28`
 `51.105.144.81`
 `51.124.70.4`
+`20.101.233.128`
 
 ## AUS5:APAC のお客様 {#apac}
 
