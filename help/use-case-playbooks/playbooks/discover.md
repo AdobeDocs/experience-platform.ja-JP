@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: 適切なプレイブックを見つける
 description: ユースケースに適切なプレイブックを見つけてプレイブックを有効にする方法を説明します。
-badgeBeta: label="ベータ版" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '752'
 ht-degree: 91%
 
 ---
 
-# （ベータ版）適切なプレイブックを見つける
-
->[!AVAILABILITY]
->
->この機能は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+# 適切なプレイブックを見つける
 
 プレイブックを使用するには、**[!UICONTROL ユースケースプレイブック]／[!UICONTROL プレイブック]**&#x200B;に移動します。ページ上の様々な検索およびフィルタリングオプションを参照して使用し、特定のプレイブックの基本を学びます。
 
@@ -48,7 +43,6 @@ ht-degree: 91%
 マインドマップでは、ユーザージャーニーでどのユーザーにリーチするかの定義から始まり、新しいメッセージやリマインダーなど、アドビで情報が配信された場合や、ターゲットとするペルソナが次のメッセージまたはイベントをトリガーする場合に手順を追って説明します。
 
 ![ハイライト表示されたプレイブックのマインドマップ。](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### 概要 {#summary}
 
