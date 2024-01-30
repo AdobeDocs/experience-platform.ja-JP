@@ -4,10 +4,10 @@ title: 宛先ダッシュボードガイド
 description: Adobe Experience Platform には、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3171'
-ht-degree: 63%
+source-wordcount: '3244'
+ht-degree: 61%
 
 ---
 
@@ -50,6 +50,10 @@ Platform UI 内で宛先ダッシュボードに移動するには、左側の�
 ![追加ウィジェットが強調表示された宛先ダッシュボードの概要。](../images/destinations/destinations-overview-add-widget.png)
 
 ウィジェットライブラリから、標準およびカスタムのオーディエンスウィジェットを参照できます。 ウィジェットの追加方法について詳しくは、[ウィジェットを追加](../customize/widget-library.md#add-widgets)する方法に関するウィジェットライブラリのドキュメントを参照してください。
+
+### SQL を表示 {#view-sql}
+
+ダッシュボードで表示されたインサイトを生成する SQL を、切り替えでオンにして表示できます。 [!UICONTROL 概要] ワークスペース。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから一意のインサイトを引き出す新しいクエリを作成できます。 この機能について詳しくは、 [SQL UI ガイドを表示](../view-sql.md).
 
 ## デフォルトのウィジェット {#default-widgets}
 
@@ -290,7 +294,7 @@ The [!UICONTROL オーディエンスサイズ] 列には、リストされた�
 
 ![「すべての宛先のアクティブ化されたオーディエンス」ウィジェット](../images/destinations/activated-audiences-across-all-destinations.png)
 
-「**[!UICONTROL オーディエンス]**」を選択して、宛先の「[!UICONTROL 参照]」タブに移動します。このページには、有効なすべての宛先と様々な関連指標が一覧表示されます。「[[!UICONTROL 参照]」タブについて詳しくは、こちら](../../destinations/ui/destinations-workspace.md#browse)のドキュメントを参照してください。
+「**[!UICONTROL オーディエンス]**」を選択して、宛先の「[!UICONTROL 参照]」タブに移動します。このページには、有効なすべての宛先と様々な関連指標が一覧表示されます。詳しくは、ドキュメントを参照してください。 [[!UICONTROL 参照] タブ](../../destinations/ui/destinations-workspace.md#browse).
 
 前提条件の節を参照してください。 [使用される用語の定義](#prerequisites) （この説明）。
 

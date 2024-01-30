@@ -4,10 +4,10 @@ title: プロファイルダッシュボードガイド
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '4935'
-ht-degree: 50%
+source-wordcount: '4996'
+ht-degree: 49%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform ユーザーインターフェイス（UI）には、�
 >
 >スナップショットが作成された後にデータに加えられた変更や更新は、次のスナップショットが作成されるまでダッシュボードに反映されません。
 
-## プロファイルダッシュボードの詳細
+## プロファイルダッシュボードの参照 {#explore-dashboard}
 
 Platform UI 内でプロファイルダッシュボードに移動するには、左側のレールで「**[!UICONTROL プロファイル]**」を選択してから「**[!UICONTROL 概要]**」タブを選択して、ダッシュボードを表示します。
 
@@ -37,7 +37,7 @@ Platform UI 内でプロファイルダッシュボードに移動するには�
 
 ![プロファイルと概要がハイライトされたExperience Platformプロファイルダッシュボード。](../images/profiles/dashboard-overview.png)
 
-### プロファイルダッシュボードの変更
+### プロファイルダッシュボードの変更 {#modify-dashboard}
 
 プロファイルダッシュボードの外観は、「**[!UICONTROL ダッシュボードを変更]**」を選択することによって変更できます。ダッシュボードからウィジェットの移動、追加、サイズ変更、削除を行うことができます。また、 **[!UICONTROL Widget ライブラリ]** 使用可能なウィジェットを表示し、組織のカスタムウィジェットを作成するには、以下を実行します。
 
@@ -50,6 +50,10 @@ Platform UI 内でプロファイルダッシュボードに移動するには�
 ![ウィジェットを追加がハイライト表示されたプロファイルダッシュボードの概要。](../images/profiles/profiles-overview-add-widget.png)
 
 ウィジェットライブラリから、標準およびカスタムのオーディエンスウィジェットの選択を参照できます。 ウィジェットの追加方法について詳しくは、[ウィジェットを追加](../customize/widget-library.md#add-widgets)する方法に関するウィジェットライブラリのドキュメントを参照してください。
+
+### SQL を表示 {#view-sql}
+
+ダッシュボードで表示されたインサイトを生成する SQL を、切り替えでオンにして表示できます。 [!UICONTROL 概要] ワークスペース。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから一意のインサイトを引き出す新しいクエリを作成できます。 この機能について詳しくは、 [SQL UI ガイドを表示](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 

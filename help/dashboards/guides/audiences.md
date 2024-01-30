@@ -4,16 +4,16 @@ title: Audiences ダッシュボードガイド
 description: Adobe Experience Platformには、組織が作成したオーディエンスに関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3053'
-ht-degree: 41%
+source-wordcount: '3133'
+ht-degree: 40%
 
 ---
 
 # [!UICONTROL オーディエンス]ダッシュボード {#audiences-dashboard}
 
-Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取り込んだ、オーディエンスに関する重要な情報を確認できるダッシュボードが用意されています。このガイドでは、 [!UICONTROL オーディエンス] ダッシュボードを使用して、ダッシュボードに表示されるビジュアライゼーションに関する詳細情報を確認できます。
+Adobe Experience Platformのユーザーインターフェイス (UI) は、毎日のスナップショットでキャプチャされた、オーディエンスに関する重要な情報を表示できるダッシュボードを提供します。 このガイドでは、 [!UICONTROL オーディエンス] ダッシュボードを使用して、ダッシュボードに表示されるビジュアライゼーションに関する詳細情報を確認できます。
 
 Platform ユーザーインターフェイス内の Adobe Experience Platform セグメント化サービスのすべての機能の概要については、 [セグメント化サービス UI ガイド](../../segmentation/ui/overview.md)を参照してください。
 
@@ -50,6 +50,10 @@ The [!UICONTROL オーディエンス] 「Experience Platform」には、組織�
 ![The [!UICONTROL オーディエンス] ダッシュボードの概要 [!UICONTROL ウィジェットを追加] ハイライト表示されました。](../images/audiences/audiences-overview-add-widget.png)
 
 ウィジェットライブラリから、標準およびカスタムのオーディエンスウィジェットを参照できます。 ウィジェットの追加方法について詳しくは、[ウィジェットを追加](../customize/widget-library.md#add-widgets)する方法に関するウィジェットライブラリのドキュメントを参照してください。
+
+### SQL を表示 {#view-sql}
+
+ダッシュボードで表示されたインサイトを生成する SQL を、切り替えでオンにして表示できます。 [!UICONTROL 概要] ワークスペース。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから一意のインサイトを引き出す新しいクエリを作成できます。 この機能について詳しくは、 [SQL UI ガイドを表示](../view-sql.md).
 
 ## オーディエンスを選択 {#select-audience}
 
@@ -92,9 +96,9 @@ The [!UICONTROL オーディエンス] ダッシュボードはウィジェッ�
 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。顧客 AI は、既存の消費者エクスペリエンスイベントデータを分析してを予測することで、これを実現します **チャーンまたはコンバージョン傾向スコア**. これらの高精度な顧客傾向モデルを使用すると、より正確なセグメント化とターゲティングをおこなうことができます。 The [スコアの配分](#customer-ai-distribution-of-scores) および [スコア付けの概要](#customer-ai-scoring-summary) インサイトは、オーディエンスの分割を示します。 傾向が高い/低/中のプロファイルと、プロファイル数間でどのように分散されているかを強調します。
 
 * [[!UICONTROL 顧客 AI スコア付けの概要]](#customer-ai-scoring-summary)
-* [[!UICONTROL スコアの顧客 AI 配分]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL スコアの顧客 AI 分布]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL スコアの顧客 AI 配分] {#customer-ai-distribution-of-scores}
+### [!UICONTROL スコアの顧客 AI 分布] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_distributionOfScores"
@@ -209,7 +213,7 @@ The **[!UICONTROL オーディエンスサイズのトレンド]** widget は、
 
 ### [!UICONTROL Audience Activation の順序] {#audience-activation-order}
 
-[!UICONTROL Audience Activation の順序]ウィジェットには、宛先名、プラットフォームおよびアクティベーション日をリストする 3 列のテーブルが表示されます。リストは新しい順に並べられ、最大 10 行まで格納できます。
+The [!UICONTROL オーディエンスのアクティベーションの順序] widget には、宛先名、プラットフォーム、オーディエンスのアクティベート日の一覧を示す 3 列のテーブルが用意されています。 リストは新しい順に並べられ、最大 10 行まで格納できます。
 
 ![オーディエンスアクティベーションの順序ウィジェット](../images/audiences/audience-activation-order.png)
 
