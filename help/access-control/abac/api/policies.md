@@ -4,9 +4,9 @@ solution: Experience Platform
 title: アクセス制御ポリシー API エンドポイント
 description: 属性ベースのアクセス制御 API の/policies エンドポイントを使用すると、Adobe Experience Platformでポリシーをプログラムで管理できます。
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1433'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 10%
 >
 >ユーザートークンが渡されている場合、トークンのユーザーは、リクエストされた組織に対して「組織管理者」の役割を持つ必要があります。
 
-アクセス制御ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを確立するステートメントです。 これらのポリシーは、ローカルまたはグローバルのどちらでもかまいません。また、他のポリシーを上書きすることもできます。 この `/policies` 属性ベースのアクセス制御 API のエンドポイントを使用すると、ポリシーを制御するルールに関する情報や、それぞれの件名条件を含むポリシーをプログラムで管理できます。
+アクセス制御ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを確立するステートメントです。 これらのポリシーは、ローカルまたはグローバルのどちらでもかまいません。また、他のポリシーを上書きすることもできます。 The `/policies` 属性ベースのアクセス制御 API のエンドポイントを使用すると、ポリシーを制御するルールに関する情報や、それぞれの件名条件を含むポリシーをプログラムで管理できます。
 
 >[!IMPORTANT]
 >
@@ -135,9 +135,9 @@ curl -X GET \
 | `id` | ポリシーに対応する ID。 この識別子は自動生成され、ポリシーの参照、更新、削除に使用できます。 |
 | `imsOrgId` | 照会されたポリシーにアクセスできる組織。 |
 | `createdBy` | ポリシーを作成したユーザーの ID。 |
-| `createdAt` | ポリシーが作成された時刻。 この `createdAt` プロパティは unix エポックタイムスタンプで表示されます。 |
+| `createdAt` | ポリシーが作成された時刻。 The `createdAt` プロパティは unix エポックタイムスタンプで表示されます。 |
 | `modifiedBy` | ポリシーを最後に更新したユーザーの ID。 |
-| `modifiedAt` | ポリシーが最後に更新された時刻。 この `modifiedAt` プロパティは unix エポックタイムスタンプで表示されます。 |
+| `modifiedAt` | ポリシーが最後に更新された時刻。 The `modifiedAt` プロパティは unix エポックタイムスタンプで表示されます。 |
 | `name` | ポリシーの名前。 |
 | `description` | （オプション）特定のポリシーに関する詳細情報を提供するために追加できるプロパティです。 |
 | `status` | ポリシーの現在のステータスです。このプロパティは、ポリシーが現在 `active` または `inactive`. |
@@ -180,35 +180,49 @@ curl -X GET \
 
 ```json
 {
-    "id": "13138ef6-c007-495d-837f-0a248867e219",
-    "imsOrgId": "{IMS_ORG}",
-    "createdBy": "{CREATED_BY}",
-    "createdAt": 1652859368555,
-    "modifiedBy": "{MODIFIED_BY}",
-    "modifiedAt": 1652890780206,
-    "name": "Documentation-Copy",
-    "description": "xyz",
-    "status": "active",
-    "subjectCondition": null,
-    "rules": [
+  "policies": [
+    {
+      "id": "7019068e-a3a0-48ce-b56b-008109470592",
+      "imsOrgId": "5555467B5D8013E50A494220@AdobeOrg",
+      "createdBy": "example@AdobeID",
+      "createdAt": 1652892767559,
+      "modifiedBy": "example@AdobeID",
+      "modifiedAt": 1652895736367,
+      "name": "schema-field",
+      "description": "schema-field",
+      "status": "inactive",
+      "subjectCondition": null,
+      "rules": [
         {
-            "effect": "Permit",
-            "resource": "orgs/{IMS_ORG}/sandboxes/ro-sand/schemas/*/schema-fields/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"and\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/xql/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.read",
+            "com.adobe.action.write",
+            "com.adobe.action.view"
+          ]
         },
         {
-            "effect": "Deny",
-            "resource": "orgs/{IMS_ORG}/sandboxes/*/segments/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Permit",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/*/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.delete"
+          ]
+        },
+        {
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/delete-sandbox-adfengine-test-8/segments/*",
+          "condition": "{\"!\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}",
+          "actions": [
+            "com.adobe.action.write"
+          ]
         }
-    ],
-    "_etag": "\"0300d43c-0000-0200-0000-62851c9c0000\""
+      ],
+      "etag": "\"0300593f-0000-0200-0000-62852ff80000\""
+    }
+  ]
 }
 ```
 
@@ -217,9 +231,9 @@ curl -X GET \
 | `id` | ポリシーに対応する ID。 この識別子は自動生成され、ポリシーの参照、更新、削除に使用できます。 |
 | `imsOrgId` | 照会されたポリシーにアクセスできる組織。 |
 | `createdBy` | ポリシーを作成したユーザーの ID。 |
-| `createdAt` | ポリシーが作成された時刻。 この `createdAt` プロパティは unix エポックタイムスタンプで表示されます。 |
+| `createdAt` | ポリシーが作成された時刻。 The `createdAt` プロパティは unix エポックタイムスタンプで表示されます。 |
 | `modifiedBy` | ポリシーを最後に更新したユーザーの ID。 |
-| `modifiedAt` | ポリシーが最後に更新された時刻。 この `modifiedAt` プロパティは unix エポックタイムスタンプで表示されます。 |
+| `modifiedAt` | ポリシーが最後に更新された時刻。 The `modifiedAt` プロパティは unix エポックタイムスタンプで表示されます。 |
 | `name` | ポリシーの名前。 |
 | `description` | （オプション）特定のポリシーに関する詳細情報を提供するために追加できるプロパティです。 |
 | `status` | ポリシーの現在のステータスです。このプロパティは、ポリシーが現在 `active` または `inactive`. |
@@ -243,7 +257,7 @@ POST /policies
 
 **リクエスト**
 
-次のリクエストでは、という名前の新しいポリシーが作成されます。 `acme-integration-policy`.
+次のリクエストは、という名前の新しいポリシーを作成します。 `acme-integration-policy`.
 
 ```shell
 curl -X POST \
@@ -261,7 +275,7 @@ curl -X POST \
           "resource": "/orgs/{IMS_ORG}/sandboxes/*",
           "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
           "actions": [
-            "read"
+            "com.adobe.action.read"
           ]
         }
       ]
@@ -301,7 +315,7 @@ curl -X POST \
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -352,7 +366,7 @@ curl -X PUT \
         "resource": "/orgs/{IMS_ORG}/sandboxes/*",
         "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
         "actions": [
-          "read"
+          "com.adobe.action.read"
         ]
       }
     ]
@@ -381,7 +395,7 @@ curl -X PUT \
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -452,7 +466,7 @@ curl -X PATCH \
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],

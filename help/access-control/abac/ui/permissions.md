@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 95%
+source-wordcount: '984'
+ht-degree: 93%
 
 ---
 
@@ -155,9 +155,9 @@ API 資格情報を役割から削除するには、API 資格情報名の横に
 
 「**[!UICONTROL ユーザーグループ]**」タブに戻されます。
 
-## 製品プロファイルを使用した Experience Platform へのユーザーの追加
+## 役割を使用したExperience Platformへのユーザーの追加
 
-製品プロファイルにユーザーを追加するには、Admin Console にログインし、「**[!UICONTROL ユーザーを追加]**」を選択します。
+役割にユーザーを追加するには、ユーザーにログインし、「Admin Console」を選択します。 **[!UICONTROL ユーザーを追加]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

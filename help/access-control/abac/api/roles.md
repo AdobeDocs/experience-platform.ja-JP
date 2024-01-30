@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 役割 API エンドポイント
 description: 属性ベースのアクセス制御 API の/roles エンドポイントを使用すると、Adobe Experience Platformの役割をプログラムで管理できます。
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 28%
+source-wordcount: '1665'
+ht-degree: 27%
 
 ---
 
@@ -253,7 +253,7 @@ curl -X GET \
 | `subjectType` | 問い合わせ対象のタイプ。 |
 | `subjectId` | 問い合わせ対象に対応する ID。 |
 
-## ロールの作成 {#create}
+## 新しい役割を作成 {#create}
 
 新しいロールを作成するには、 `/roles` エンドポイントを使用して、役割の名前、説明、役割タイプの値を指定します。
 
@@ -440,13 +440,13 @@ curl -X PUT \
 
 **応答**
 
-正常な場合は、更新されたロールが返されます。このロールの名前、説明、ロールタイプの新しい値も含まれます。
+正常な応答は、更新されたロールを返します。そのロールの名前、説明、ロールタイプの新しい値も含まれます。
 
 ```json
 {
   "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
-  "name": "Administrator Role",
-  "description": "Role with permission sets for admin type of access",
+  "name": "Administrator role for ACME",
+  "description": "New administrator role for ACME",
   "roleType": "user-defined",
   "permissionSets": [
     "manage-datasets",
@@ -486,7 +486,7 @@ curl -X PUT \
 **API 形式**
 
 ```http
-PATCH /roles/{ROLE_ID}
+PATCH /roles/{ROLE_ID}/subjects
 ```
 
 | パラメーター | 説明 |
@@ -520,9 +520,36 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **応答**
 
-リクエストが成功した場合は、HTTP ステータス 204（コンテンツなし）が空白の本文とともに返されます。
+正常な応答は、更新された役割を返します。件名の新しい値も含まれます。
 
-## ロールの削除 {#delete}
+```json
+{
+  "subjects": [
+    [
+      {
+        "subjectId": "03Z07HFQCCUF3TUHAX274206@AdobeID",
+        "subjectType": "user"
+      }
+    ]
+  ],
+  "_page": {
+    "limit": 1,
+    "count": 1
+  },
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects",
+      "templated": true
+    },
+    "page": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects?limit={limit}&start={start}&orderBy={orderBy}&property={property}",
+      "templated": true
+    }
+  }
+}
+```
+
+## 役割を削除 {#delete}
 
 ロールを削除するには、 `/roles` エンドポイントを使用して、削除するロールの ID を指定します。
 
