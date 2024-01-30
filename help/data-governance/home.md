@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 62%
+ht-degree: 66%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 62%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="データガバナンスの義務"
->abstract="お客様の組織のデータガバナンスポリシーに準拠し、お客様の規制要件を満たすのは、お客様の単独の責任です。 Experience Platformは、データ使用上の義務を管理するためのデータガバナンスツールを提供します。 データのクエリや処理をおこなう前に、適切なデータ使用ラベルを適用します。 データガバナンスツールとベストプラクティスについては、ドキュメントを参照してください。"
+>abstract="組織のデータガバナンスポリシーを遵守し、規制要件を満たすのは、お客様自身の責任です。Experience Platform では、データ使用上の義務を管理するためのデータガバナンスツールを提供します。データのクエリや処理を行う前に、適切なデータ使用ラベルを適用します。データガバナンスツールとベストプラクティスについては、ドキュメントを参照してください。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ja" text="データガバナンスの概要"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja" text="データガバナンスラベルの概要"
 

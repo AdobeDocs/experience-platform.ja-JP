@@ -14,7 +14,7 @@ ht-degree: 87%
 
 >[!CONTEXTUALHELP]
 >id="platform_accesscontrol_abac_labelusageaccesspolicy"
->title="ラベル使用のアクセスポリシー"
+>title="ラベルの使用のアクセスポリシー"
 >abstract=""
 
 属性ベースのアクセス制御は、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにする Adobe Experience Platform の機能です。属性は、スキーマフィールドやセグメントに追加されるラベルなど、オブジェクトに追加されるメタデータであることがあります。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。

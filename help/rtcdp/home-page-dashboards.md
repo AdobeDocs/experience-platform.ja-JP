@@ -7,7 +7,7 @@ exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
 source-wordcount: '850'
-ht-degree: 7%
+ht-degree: 11%
 
 ---
 
@@ -37,8 +37,8 @@ The [!UICONTROL リアルタイム顧客プロファイルの概要] ウィジ�
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalProfiles"
 >title="合計プロファイル数"
->abstract="組織がExperience Platform内に持つプロファイルの合計数。 この数は、組織の結合ポリシーに基づいており、プロファイルフラグメントは含まれていません。 プロファイルの数は 24 時間ごとに更新されます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="詳しくは、ドキュメントを参照してください"
+>abstract="組織が Experience Platform 内に持つプロファイルの合計数。この数は、組織の結合ポリシーに基づいており、プロファイルフラグメントは含まれません。プロファイルの数は 24 時間ごとに更新されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=ja#profile-count" text="詳しくは、ドキュメントを参照してください"
 
 指標ダッシュボードには、指標データに関する最新の情報がExperience Platformされます。 ダッシュボードは次の 2 つのセクションに分かれています。
 
