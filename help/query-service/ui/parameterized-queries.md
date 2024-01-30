@@ -2,10 +2,10 @@
 title: パラメーター化クエリ
 description: Adobe Experience Platform UI でパラメーター化クエリを使用する方法について説明します。
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 12%
+source-wordcount: '690'
+ht-degree: 13%
 
 ---
 
@@ -47,21 +47,17 @@ SELECT
 
 UI でパラメーター化されたクエリを作成するには、クエリエディターに移動します。 詳しくは、 [クエリエディターへのアクセス](./user-guide.md#accessing-query-editor) を参照してください。
 
-`'$'` の序文を使用して、テキストエディターでクエリにクエリパラメーターを入力します。次に、見つからないキーの値を [!UICONTROL クエリパラメーター] 」セクションをクリックします。 必要なキーのいずれかに値を追加しなかった場合、クエリは実行できません。 アラートアイコン (![アラートアイコン。](../images/ui/parameterized-queries/alert-icon.png)) は、空の場合は横の「クエリパラメーター」セクションに表示されます [!UICONTROL 値] 入力フィールド。
+`'$'` の序文を使用して、テキストエディターでクエリにクエリパラメーターを入力します。次に、 **[!UICONTROL クエリパラメーター]** タブの横 [!UICONTROL コンソール] キーの欠落した値を追加します。 必要なキーのいずれかに値を追加しなかった場合、クエリは実行できません。 アラートアイコン (![アラートアイコン。](../images/ui/parameterized-queries/alert-icon.png)) は、空の場合は横の「クエリパラメーター」セクションに表示されます [!UICONTROL 値] 入力フィールド。
+
+>[!NOTE]
+>
+>クエリがパラメータを取らない場合でも、クエリエディタ内で不要なパラメータを入力できます。 クエリエディターは、不要なキーと値のペアをすべて無視し、クエリの実行や結果には影響しません。
 
 ![パラメーター化されたクエリと「クエリパラメーター」セクションがハイライト表示されたクエリエディター。](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >タブの変更元 [!UICONTROL クエリパラメーター] から [!UICONTROL コンソール] をクリックして、クエリのコンソール出力を表示します。
-
-パラメーターを削除し、既に実行された後にクエリを再実行しようとすると、エラーメッセージが [!UICONTROL クエリパラメーター] 」セクションに移動して、警告を表示します。
-
->[!NOTE]
->
->クエリがパラメータを取らない場合でも、クエリエディタ内で不要なパラメータを入力できます。 クエリエディターは、不要なキーと値のペアをすべて無視し、クエリの実行や結果には影響しません。
-
-![値が空のフィールドとクエリーパラメーターのエラーが強調表示されたクエリーエディター。](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## クエリログの詳細を使用してパラメーター値を確認 {#check-parameter-values}
 

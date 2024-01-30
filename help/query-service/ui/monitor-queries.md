@@ -2,10 +2,10 @@
 title: スケジュール済みクエリの監視
 description: クエリサービス UI を使用してクエリを監視する方法について説明します。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 39%
+ht-degree: 37%
 
 ---
 
@@ -35,7 +35,7 @@ The [!UICONTROL スケジュール済みクエリ] 「 」タブには、スケ�
 | **[!UICONTROL 実行頻度]** | クエリを実行するように設定されたケイデンス。 指定可能な値は `Run once` と `Scheduled` です。クエリは、実行頻度に従ってフィルタリングできます。 |
 | **[!UICONTROL 作成者]** | クエリを作成したユーザーの名前。 |
 | **[!UICONTROL 作成日]** | クエリが作成されたときのタイムスタンプ（UTC 形式）。 |
-| **[!UICONTROL 前回実行時のタイムスタンプ]** | クエリ実行時の最新のタイムスタンプ。 この列では、現在のスケジュールに従ってクエリが実行されたかどうかがハイライト表示されます。 |
+| **[!UICONTROL 前回の実行のタイムスタンプ]** | クエリ実行時の最新のタイムスタンプ。 この列では、現在のスケジュールに従ってクエリが実行されたかどうかがハイライト表示されます。 |
 | **[!UICONTROL 前回の実行ステータス]** | 最新のクエリ実行ステータス。 ステータスの値は次のとおりです。 `Success`, `Failed`, `In progress`、および `No runs`. |
 | **[!UICONTROL スケジュールのステータス]** | スケジュール済みクエリの現在のステータス。 5 つの潜在的な値があります。 [!UICONTROL 登録中], [!UICONTROL アクティブ], [!UICONTROL 非アクティブ], [!UICONTROL 削除済み]、およびハイフン <ul><li>ハイフンは、スケジュール済みクエリが 1 回限りの、繰り返し発生しないクエリであることを示します。</li><li>The [!UICONTROL 登録中] 「 」ステータスは、クエリの新しいスケジュールの作成をシステムがまだ処理していることを示します。 スケジュール済みクエリの登録中に、そのクエリを無効にしたり削除したりすることはできません。</li><li>The [!UICONTROL アクティブ] ステータスは、スケジュール済みクエリに **まだ経過していない** 完了日時。</li><li>The [!UICONTROL 非アクティブ] ステータスは、スケジュール済みクエリに **渡された** 完了日時。</li><li>The [!UICONTROL 削除済み] 「 」ステータスは、クエリスケジュールが削除されたことを示します。</li></ul> |
 
@@ -87,7 +87,7 @@ The [!UICONTROL スケジュール済みクエリ] 「表示」では、スケ�
 
 スケジュール済みクエリの実行に関するアラートをサブスクライブするには、管理するスケジュール済みクエリの省略記号を選択し、「 」を選択します。 **[!UICONTROL 購読]** を選択します。
 
-The [!UICONTROL アラート] ダイアログが開きます。 The [!UICONTROL アラート] ダイアログは、UI 通知と E メールアラートの両方を購読します。 アラートは、クエリのステータスに基づいています。使用できるオプションは、`start`、`success` および `failure` の 3 つです。該当する 1 つ以上のチェックボックスをオンにし、「**[!UICONTROL 保存]**」を選択して配信を登録します。アラートが [!UICONTROL 前回の実行のタイムスタンプ] の値です。
+The [!UICONTROL アラート] ダイアログが開きます。 The [!UICONTROL アラート] ダイアログは、UI 通知と E メールアラートの両方を購読します。 アラートは、クエリのステータスに基づいています。使用できるオプションは、`start`、`success` および `failure` の 3 つです。該当するボックスをオンにし、「 」を選択します。 **[!UICONTROL 保存]** 購読する アラートが [!UICONTROL 前回の実行のタイムスタンプ] の値です。
 
 ![アラートの配信を登録するダイアログ。](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
@@ -125,9 +125,9 @@ The [!UICONTROL アラート] ダイアログが開きます。 The [!UICONTROL 
 
 | 列名 | 説明 |
 |---|---|
-| **[!UICONTROL クエリ実行 ID]** | 毎日の実行に対するクエリ実行 ID。を選択します。 **[!UICONTROL クエリ実行 ID]** をクリックして、 [!UICONTROL クエリ実行の概要]. |
-| **[!UICONTROL クエリの実行開始]** | クエリが実行されたときのタイムスタンプ。タイムスタンプは UTC 形式です。 |
-| **[!UICONTROL クエリの実行完了]** | クエリが完了したときのタイムスタンプ。タイムスタンプは UTC 形式です。 |
+| **[!UICONTROL クエリ実行 ID]** | 毎日の実行に対するクエリ実行 ID。 を選択します。 **[!UICONTROL クエリ実行 ID]** をクリックして、 [!UICONTROL クエリ実行の概要]. |
+| **[!UICONTROL クエリ実行の開始]** | クエリが実行されたときのタイムスタンプ。タイムスタンプは UTC 形式です。 |
+| **[!UICONTROL クエリの実行が完了しました]** | クエリが完了したときのタイムスタンプ。タイムスタンプは UTC 形式です。 |
 | **[!UICONTROL ステータス]** | 最新のクエリ実行ステータス。 ステータス値は `successful`、`failed`、`in progress` のいずれかです。 |
 | **[!UICONTROL データセット]** | 実行に使われたデータセット。 |
 
@@ -174,9 +174,3 @@ The [!UICONTROL クエリ実行の概要] は、このスケジュール済み�
 「**[!UICONTROL クエリ]**」を選択してスケジュール詳細画面に戻るか、「**[!UICONTROL スケジュール済みクエリ]**」を選択して「[!UICONTROL スケジュール済みクエリ]」タブに戻ります。
 
 ![クエリがハイライト表示された実行詳細画面](../images/ui/monitor-queries/return-navigation.png)
-
-<!-- Details required to complete this section below:
-### Run details for queries with parameterized queries {#parameterized-queries}
-
-Queries that use parameterized values to make up the SQL statement are ... 
--->

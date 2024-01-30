@@ -5,16 +5,16 @@ title: クエリ結果から出力データセットを生成
 type: Tutorial
 description: Adobe Experience Platform クエリサービスを使用すると、UI からデータセットを作成できます。データセットを作成したら、データレイク内の他のデータセットと同様にアクセスしたり、様々なユースケースに使用したりできます。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 94%
+source-wordcount: '497'
+ht-degree: 84%
 
 ---
 
 # クエリ結果からの出力データセットの生成
 
-[!DNL Query Service] では、クエリを使用して [!DNL Data Lake] にデータセットを生成できます。その後、これらのデータセットを他のクエリや他のサービス ( [!DNL Data Science Workspace]、リアルタイム顧客プロファイル、または [!DNL Analysis Workspace].
+[!DNL Query Service] では、クエリを使用して [!DNL Data Lake] にデータセットを生成できます。その後、これらのデータセットを、他のクエリや他のサービス ( [!DNL Data Science Workspace]、リアルタイム顧客プロファイル、または [!DNL Analysis Workspace].
 
 ## Adobe Experience Platform ユーザーインターフェイスからのデータセットの生成
 
@@ -24,15 +24,15 @@ Adobe Experience Platform ユーザーインターフェイス（UI）からデ�
 
 2. Platform UI で、**[!UICONTROL クエリ]**&#x200B;に移動したあと「**[!UICONTROL テンプレート]**」タブに移動し、作成したクエリを選択します。 Platform UI 内で組織用に作成および保存されたクエリを表示する方法について詳しくは、[[!DNL Query Service] 概要](./overview.md#browse)を参照してください。
 
-3. クエリの詳細パネルで、「**[!UICONTROL データセットを出力]**」を選択します。 
+3. クエリの詳細パネルで、「 」を選択します。 **[!UICONTROL CTAS として実行]**.
 
-   ![「出力データセットを選択」が強調表示されたクエリワークスペースの「テンプレート」タブ](../images/ui/create-datasets/output-dataset.png)
+   ![クエリワークスペース [!UICONTROL テンプレート] タブと選択 [!UICONTROL CTAS として実行] ハイライト表示されました。](../images/ui/create-datasets/run-as-ctas.png)
 
 4. 表示されるダイアログで、先頭に LDAP ID が追加されたデータセット名を入力します。 データセット名は、一意である必要も、SQL セーフである必要もありません。 なお、データセットのテーブル名は、ここで作成したデータセット名に基づいて生成されます。
 
-5. 次に、データセットの説明を「[!UICONTROL 説明]」フィールドに入力し、「**[!UICONTROL クエリを実行]**」を選択します。
+5. 次に、にデータセットの説明を入力します。 [!UICONTROL 説明] 「 」フィールドで「 」を選択します。 **[!UICONTROL CTAS として実行]**.
 
-   ![データセットの詳細と「クエリを実行」が強調表示されたデータセットを出力ダイアログ](../images/ui/create-datasets/run-query.png)
+   ![データセットの詳細と [!UICONTROL CTAS として実行] ハイライト](../images/ui/create-datasets/run-query.png)
 
 6. クエリの実行が完了したら、**[!UICONTROL データセット]**&#x200B;に移動して、作成したデータセットを表示します。 Platform UI 内でデータセットを操作する際に一般的なアクションを実行する方法について詳しくは、 [データセット UI ガイド](../../catalog/datasets/user-guide.md)を参照してください。
 
