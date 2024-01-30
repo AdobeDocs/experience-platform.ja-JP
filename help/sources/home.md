@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
+source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1526'
 ht-degree: 75%
 
 ---
@@ -161,11 +161,13 @@ Adobe Experience Platform には、ローカルシステムからデータを取
 
 Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
+- [[!DNL Braze]](tutorials/ui/create/marketing-automation/braze.md) [!BADGE ストリーミング]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE ストリーミング]{type=Positive}
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE ストリーミング]{type=Positive}
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE バッチ]{type=Informative}
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE バッチ]{type=Informative}
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE バッチ]{type=Informative}
+- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE バッチ]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE バッチ]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
