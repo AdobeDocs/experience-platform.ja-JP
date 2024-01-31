@@ -3,9 +3,9 @@ title: Real-Time CDP製品ドキュメント
 description: Adobe Real-Time CDPの使用方法を学ぶ。
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1071'
 ht-degree: 4%
 
 ---
@@ -20,17 +20,17 @@ Real-Time CDP製品およびドキュメントの最新の機能強化の概要�
 
 >[!BEGINTABS]
 
+>[!TAB ユースケースプレイブック]
+
+The [!UICONTROL ユースケースプレイブック] の機能は、すべてのReal-Time CDPおよびAdobe Journey Optimizerのユーザーに対して一般に利用できるようになりました。 [!UICONTROL ユースケースプレイブック] は、Real-time Customer Data PlatformまたはAdobe Journey Optimizerを使い始める際に、課題の克服に役立つように設計されています。 開始する場所や目的の使用例に適したアセットの作成方法が不明な場合は、ユースケースプレイブックにインスピレーションが得られ、準備が整ったら実稼動環境にテストして読み込むための様々なアセットを作成できます。
+
+[![画像](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB サンドボックスツール]
 
 サンドボックスツール機能を使用すると、サンドボックス間の設定の精度を向上し、サンドボックス間で設定をシームレスに書き出し、読み込むことができます。 サンドボックスツール機能を使用すると、異なるオブジェクトを選択してパッケージにエクスポートできます。
 
 [![画像](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB （限定的な GA）アカウントオーディエンスをアクティブ化]
-
-Real-Time CDP B2B のお客様は、 [アカウントオーディエンス](/help/segmentation/ui/account-audiences.md) 特定の宛先に送信できます。
-
-[![画像](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB 計算済み属性]
 
@@ -202,4 +202,4 @@ Real-Time CDP、そのアーキテクチャ、インターフェイス、およ�
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>常に情報を提供し、コミュニティに貢献し、Adobe Real-Time CDPのエクスペリエンスを向上させます。</b><br/>Real-time Customer Data Platformコミュニティにアクセスして、実務担当者と機能について話し合ってください。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">今すぐコミュニティに参加！</a></td></tr></table>
+<b>常に情報を提供し、コミュニティに貢献し、Adobe Real-Time CDPのエクスペリエンスを向上させます。</b><br/>Real-time Customer Data Platformコミュニティにアクセスして、実務担当者と機能について話し合ってください。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">今すぐコミュニティに参加</a></td></tr></table>
