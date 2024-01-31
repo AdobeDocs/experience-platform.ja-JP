@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
+source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2576'
 ht-degree: 46%
 
 ---
@@ -120,6 +120,10 @@ ht-degree: 46%
 ### テキストの書式設定 {#format-text}
 
 The [!UICONTROL テキストの書式設定] 機能により、標準化された構文スタイルを追加することで、クエリがより読みやすくなります。 選択 **[!UICONTROL テキストの書式設定]** を使用して、クエリエディター内のすべてのテキストを標準化します。
+
+>[!NOTE]
+>
+>The [!UICONTROL テキストの書式設定] 機能は匿名ブロックでは動作しません。 1 つ以上の SQL 文を順番にチェーンする方法については、 [匿名ブロックドキュメント](../key-concepts/anonymous-block.md).
 
 ![クエリエディターと [!UICONTROL テキストの書式設定] ハイライト表示された SQL 文](../images/ui/query-editor/format-text.png)
 
