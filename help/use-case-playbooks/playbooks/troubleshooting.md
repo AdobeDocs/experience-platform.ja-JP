@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: 既知の制限事項とプレイブックに関する問題のトラブルシューティング
 description: プレイブックの既知の問題と一般的な問題と、それらのトラブルシューティング方法について詳しく説明します
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 2%
 
 # トラブルシューティングと既知の制限事項 {#troubleshooting-known-limitations}
 
+ユースケースプレイブックを操作する際のエラーのトラブルシューティング方法と、一般リリースリリースの既知の制限事項を説明します。
+
 ## トラブルシューティング {#troubleshooting}
+
+ユースケースプレイブックを使用する際の一般的なエラーに関するトラブルシューティングの提案を表示します
 
 ### Adobe Journey Optimizerサーフェスが設定されていません
 
@@ -35,7 +40,7 @@ ht-degree: 2%
 
 * を使用する場合、 [データ認識機能](/help/use-case-playbooks/playbooks/data-awareness.md) スキーマをインスピレーション可能なサンドボックスから開発用サンドボックスに昇格させるには、次のようなエラーが発生する場合があります。
 
-![schema-errors](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![スキーママッピングワークフローに表示されるエラー。](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 これは、スキーマから生成された一部のフィールドが、コピー先の開発サンドボックスのスキーマに存在しないためです。 そのフィールドを調べなさい。 次に、次の操作をおこなえる開発用サンドボックスに戻ります。
 

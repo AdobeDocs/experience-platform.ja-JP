@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: 基本を学ぶ
 description: ユースケースプレイブック機能の基本を学ぶ方法を説明します。
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 15%
 
 ---
@@ -65,7 +66,7 @@ Real-time Customer Data PlatformとAdobe Journey Optimizer向けに設計され�
 
 **宛先の権限**
 
-宛先を作成および管理するには、宛先権限を使用します。 **[!UICONTROL 管理]**, **[!UICONTROL 宛先]**, **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL データセットの宛先の管理とアクティブ化]**, UICONTROL 宛先オーサリング*.
+宛先を作成および管理するには、宛先権限を使用します。 **[!UICONTROL 管理]**, **[!UICONTROL 宛先]**, **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL データセットの宛先の管理とアクティブ化]**, **[!UICONTROL 宛先のオーサリング]**.
 
 **ジャーニーの権限**
 

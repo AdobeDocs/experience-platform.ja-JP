@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: ユースケースプレイブックにおけるデータ認識の概要
 description: エンドインスピレーションのサンドボックスで生成されたアセットを他のサンドボックスにコピーして、価値の創出に要する時間を短縮する方法を説明します。
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# ユースケースプレイブックにおけるデータ認識の概要
+# プレイブック生成アセットを他のサンドボックスに公開する {#publish-to-other-sandboxes}
 
 ユースケースプレイブックは、一般的なマーケティングの使用例で使用するオーディエンス、スキーマ、ジャーニーなどのアセットを生成するように設計されたマーケティングテンプレートです。 インスピレーションが得られたサンドボックスで、再生ブックによって作成されたアセットをテストし、準備が整ったら、そのアセットを他の開発サンドボックスに読み込み、それらのサンドボックスで使用可能なデータを使用してさらにテストできます。 テストが完了したら、開発用サンドボックスから実稼動用サンドボックスにアセットを移動できます。
 
@@ -97,7 +98,3 @@ ht-degree: 0%
 ## 次の手順
 
 このガイドを読むと、使用例のプレイブックを、 [サンドボックスツール](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) を使用して、スキーマを参照する実行可能なジャーニーを作成します。 共通の [Real-Time CDPの使用例](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### このトピックに関するその他のヘルプ
-
-[サンドボックスツール](/help/sandboxes/ui/sandbox-tooling.md)

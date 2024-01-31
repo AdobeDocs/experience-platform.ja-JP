@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: プレイブックインスタンスの作成、共有、再利用
 description: マーケティングのユースケースを達成するために、プレイブックインスタンスを作成、共有、再利用する方法を学びます。
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 86%
+source-wordcount: '787'
+ht-degree: 81%
 
 ---
 
@@ -73,6 +74,12 @@ ht-degree: 86%
 生成されたインスタンスとアセットを他のチームメンバーと共有できます。これを行うには、ブラウザーから URL リンクをコピーして、チームと共有し、生成されたアセットの概要を提供します。
 
 ![ユースケースのプレイブックビューでハイライト表示された URL。](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## エンドツーエンドの再生ブックプロセスのビデオチュートリアル
+
+このビデオでは、ユースケースプレイブックのインスタンスをエンドツーエンドで検出、作成、公開、トラブルシューティングする方法、およびプレイブックで生成されたアセットを組織内の他のサンドボックスにコピーする方法について説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## 次の手順 {#next-steps}
 
