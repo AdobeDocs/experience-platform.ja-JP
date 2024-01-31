@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ準備マッピング関数
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
+source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
 workflow-type: tm+mt
-source-wordcount: '5080'
-ht-degree: 10%
+source-wordcount: '5459'
+ht-degree: 9%
 
 ---
 
@@ -151,6 +151,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | map_get_values | マップとキー入力を取得します。 入力が単一のキーの場合、この関数はそのキーに関連付けられた値を返します。 入力が文字列配列の場合、この関数は指定されたキーに対応するすべての値を返します。 受信マップに重複するキーがある場合、戻り値はキーの重複を排除し、一意の値を返す必要があります。 | <ul><li>マップ： **必須** 入力マップデータ。</li><li>キー：  **必須** キーは、単一の文字列または文字列配列です。 他のプリミティブ型（データ/数値）が指定されている場合は、文字列として扱われます。</li></ul> | get_values(MAP, KEY) | 詳しくは、 [付録](#map_get_values) を参照してください。 | |
 | map_has_keys | 1 つ以上の入力キーが指定されている場合、この関数は true を返します。 文字列配列を入力として指定した場合、この関数は、見つかった最初のキーに対して true を返します。 | <ul><li>マップ：  **必須** 入力マップデータ</li><li>キー：  **必須** キーは、単一の文字列または文字列配列です。 他のプリミティブ型（データ/数値）が指定されている場合は、文字列として扱われます。</li></ul> | map_has_keys(MAP, KEY) | 詳しくは、 [付録](#map_has_keys) を参照してください。 | |
 | add_to_map | 2 つ以上の入力を受け入れます。 任意の数のマップを入力として指定できます。 Data Prep は、すべての入力からすべてのキーと値のペアを持つ単一のマップを返します。 1 つ以上のキーが同じマップ内または複数のマップ間で繰り返される場合、Data Prep はキーの重複を排除し、最初のキーと値のペアが入力で渡された順に保持されるようにします。 | マップ： **必須** 入力マップデータ。 | add_to_map(MAP 1, MAP 2, MAP 3, ...) | 詳しくは、 [付録](#add_to_map) を参照してください。 | |
+| object_to_map （構文 1） | Map データ型を作成するには、この関数を使用します。 | <ul><li>キー： **必須** キーは文字列である必要があります。 整数や日付などの他のプリミティブ値が指定された場合、それらは文字列に自動変換され、文字列として扱われます。</li><li>ANY_TYPE: **必須** マップを除く、サポートされている任意の XDM データタイプを参照します。</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... ) | 詳しくは、 [付録](#object_to_map) を参照してください。 | |
+| object_to_map （構文 2） | Map データ型を作成するには、この関数を使用します。 | <ul><li>オブジェクト： **必須** 受け取るオブジェクトまたはオブジェクト配列を指定し、オブジェクト内の属性をキーとして指定できます。</li></ul> | object_to_map(OBJECT) | 詳しくは、 [付録](#object_to_map) を参照してください。 |
+| object_to_map （構文 3） | Map データ型を作成するには、この関数を使用します。 | <ul><li>オブジェクト： **必須** 受け取るオブジェクトまたはオブジェクト配列を指定し、オブジェクト内の属性をキーとして指定できます。</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | 詳しくは、 [付録](#object_to_map) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -173,6 +176,20 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | size_of | 入力のサイズを返します。 | <ul><li>入力： **必須** サイズを探しているオブジェクト。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | この関数は、入力配列全体のすべての要素を、プロファイルの配列の末尾に追加するために使用します。 この関数は、 **のみ** 更新時に適用されます。 挿入のコンテキストで使用する場合、この関数は入力をそのまま返します。 | <ul><li>配列： **必須** プロファイルに配列を追加する配列です。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | この関数は、配列内の要素を置き換えるために使用されます。 この関数は、 **のみ** 更新時に適用されます。 挿入のコンテキストで使用する場合、この関数は入力をそのまま返します。 | <ul><li>配列： **必須** プロファイル内の配列を置き換える配列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+
+{style="table-layout:auto"}
+
+### 階層 — マップ {#map}
+
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
+| 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| array_to_map | この関数は、オブジェクト配列とキーを入力として受け取り、値をキー、配列要素を値とするキーのフィールドのマップを返します。 | <ul><li>入力： **必須** の最初の null 以外のオブジェクトを検索するオブジェクト配列。</li><li>キー：  **必須** キーは、オブジェクト配列内のフィールド名、オブジェクトは値として指定する必要があります。</li></ul> | array_to_map(OBJECT[] 入力、キー ) | 詳しくは、 [付録](#object_to_map) を参照してください。 |
+| object_to_map | この関数は、オブジェクトを引数として受け取り、キーと値のペアのマップを返します。 | <ul><li>入力： **必須** の最初の null 以外のオブジェクトを検索するオブジェクト配列。</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address) ここで、入力が&quot; + &quot;住所： {line1 : \&quot;345 park ave\&quot;,line2: \&quot;bldg 2\&quot;，市区町村：\&quot;san jose\&quot;，都道府県：\&quot;CA\&quot;,type: \&quot;office\&quot;}&quot;の場合は次のようになります。&quot; | 指定されたフィールド名と値のペアを持つマップを返します。入力が null の場合は null を返します。 例：`"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
+| to_map | この関数は、キーと値のペアのリストを取得し、キーと値のペアのマップを返します。 | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;, \&quot;John\&quot;, \&quot;lastName\&quot;, \&quot;Doe\&quot;)&quot; | 指定されたフィールド名と値のペアを持つマップを返します。入力が null の場合は null を返します。 例：`"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
 {style="table-layout:auto"}
 
@@ -455,3 +472,150 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
 ```
 
 +++
+
+#### object_to_map {#object_to_map}
+
+**構文 1**
+
++++選択して例を表示
+
+```json
+example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
+result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
+```
+
++++
+
+**構文 2**
+
++++選択して例を表示
+
+```json
+example = "object_to_map(address) where input is " +
+  "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}",
+result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"
+```
+
++++
+
+**構文 3**
+
++++選択して例を表示
+
+```json
+example = "object_to_map(addresses,type)" +
+        "\n" +
+        "[\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "]" ,
+result = "{\n" +
+        "    \"home\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    \"work\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    \"office\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "}" 
+```
+
++++
+
+#### array_to_map {#array_to_map}
+
++++選択して例を表示
+
+```json
+example = "array_to_map(addresses, \"type\") where addresses is\n" +
+  "\n" +
+  "[\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "]" ,
+result = "{\n" +
+  "    \"home\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    \"work\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    \"office\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "}",
+returns = "Returns a map with given field name and value pairs or null if input is null"
+```
+
++++
+
