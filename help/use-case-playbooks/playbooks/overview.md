@@ -3,7 +3,7 @@ solution: Experience Platform
 title: ユースケースプレイブックの概要
 description: Experience Platform のユースケースプレイブック機能を使用して、様々なマーケティングユースケースの基本を学ぶ
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: c79bffdc38d269385689da64ee8e78ea60e6af92
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 32%
@@ -34,7 +34,6 @@ ht-degree: 32%
 * 準備が整ったら、使用、テスト、実稼動環境への昇格のための様々なアセットの作成。
 
 ![すべてのプレイブックを表示](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
-<!-- Replace this image with a current image -->
 
 各プレイブックには、解決する特定のユースケースに関する情報が含まれています。
 
