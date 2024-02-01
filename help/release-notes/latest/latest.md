@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年1月のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
+source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 38%
+source-wordcount: '1476'
+ht-degree: 40%
 
 ---
 
@@ -19,9 +19,11 @@ Adobe Experience Platform の新機能：
 
 Experience Platformの既存の機能の更新：
 
-- [ダッシュボード](#dashboards)
+- [属性ベースのアクセス制御](#abac)
 - [データ準備](#data-prep)
+- [ダッシュボード](#dashboards)
 - [宛先](#destinations)
+- [ID サービス](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
@@ -37,6 +39,22 @@ The [!UICONTROL ユースケースプレイブック] の機能は、すべて�
 - すべての [必要な権限](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) プレイブックとプレイブックが生成したアセットを使用する。
 - について [データ認識機能](/help/use-case-playbooks/playbooks/data-awareness.md) ：生成されたアセットを他のサンドボックス環境にコピーできます。
 - 取得 [トラブルシューティングのヒント](/help/use-case-playbooks/playbooks/troubleshooting.md) ユースケースプレイブックの使用に関するエラーや問題が発生した場合。
+
+## 属性ベースのアクセス制御 {#abac}
+
+属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platform の機能です。ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
+
+属性ベースのアクセス制御により、組織の管理者は、すべての Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、およびその他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+
+**新規ドキュメントまたは更新されたドキュメント**
+
+| ドキュメントの更新 | 説明 |
+| --- | --- |
+| 属性ベースのアクセス制御用に新しい API エンドポイントがドキュメント化されました。 | The [アクセス制御 API リファレンスドキュメント](https://developer.adobe.com/experience-platform-apis/references/access-control/) には、属性ベースのアクセス制御 API の役割、ポリシー、製品エンドポイントが含まれるようになりました。 これらのエンドポイントは、指定したサンドボックス内の特定のリソースに関するユーザーの関連する役割、ポリシーおよび製品を取得するために使用できます。 |
+
+{style="table-layout:auto"}
+
+属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。属性ベースのアクセス制御ワークフローの包括的なガイドについては、[属性ベースのアクセス制御エンドツーエンドガイド](../../access-control/abac/end-to-end-guide.md)を参照してください。
 
 ## データ準備 {#data-prep}
 
@@ -88,6 +106,20 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
+## ID サービス {#identity-service}
+
+Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
+
+**新規ドキュメントまたは更新されたドキュメント**
+
+| ドキュメントの更新 | 説明 |
+| --- | --- |
+| ドキュメントの再構築 | ID サービスのドキュメントが再構成され、ID サービス内の概念の表示と明確性が向上しました。<ul><li>次にアクセス： [ID サービスの概要ページ](../../identity-service/home.md) 用語ガイドの拡張、一般的なカスタマージャーニーの詳細、ID サービスによる id のリンク方法の分類、Experience Platformエコシステム内での ID サービスの役割の概要を説明する使用例です。</li><li>次のガイドを読む： [ID サービスとリアルタイム顧客プロファイルの関係について](../../identity-service/identity-and-profile.md) 2 つのサービスの連携の仕組みと、目的、プロセス、入力、出力の違いに関する詳細な概要。</li><li>詳しくは、 [ID サービスリンクロジックガイド](../../identity-service/features/identity-linking-logic.md) を参照してください。</li></ul> |
+
+{style="table-layout:auto"}
+
+ID サービスの詳細については、 [ID サービスの概要](../../identity-service/home.md).
+
 ## Real-Time Customer Data Platform {#rtcdp}
 
 Experience Platform 上に構築された Real-time Customer Data Platform（[!DNL Real-Time CDP]）は、企業が既知および未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな意思決定により顧客プロファイルをアクティブ化するのに役立ちます。[!DNL Real-Time CDP] では、複数のエンタープライズデータソースを組み合わせて、リアルタイムで顧客プロファイルを作成します。これらのプロファイルから構築されたセグメントをダウンストリームの宛先に送信し、すべてのチャネルとデバイスにわたって 1 対 1 のパーソナライズされた顧客体験を提供できます。
@@ -97,6 +129,17 @@ Experience Platform 上に構築された Real-time Customer Data Platform（[!D
 | 機能 | 説明 |
 | --- | --- |
 | の更新 [Real-Time CDPホームページ](https://experience.adobe.com) | <ul><li>**プロファイルウィジェット**：プロファイルウィジェットを使用してプロファイルの概要ページに移動し、組織のプロファイル指標を表示できるようになりました。</li><li>**「プロファイル指標」カード**：ホームページダッシュボードの「プロファイル指標」カードに、それぞれの結合ポリシーに応じて、組織内のプロファイルの合計数が表示されるようになりました。</li><li>**スキーマウィジェット**：スキーマウィジェットを使用して、UI でスキーマ作成ワークフローに移動できるようになりました。</li></ul> |
+
+{style="table-layout:auto"}
+
+**新規ドキュメントまたは更新されたドキュメント**
+
+| ドキュメントの更新 | 説明 |
+| --- | --- |
+| 新しいReal-Time CDPドキュメントのホームページ | 次にアクセス： [新しいReal-Time CDPドキュメントのホームページ](/help/rtcdp/home.md) を参照して、製品、ガードレール、サンプルユースケースの使用を開始する方法などの概要情報を確認できます。 |
+| サンプルReal-Time CDPの使用例の概要 | 次にアクセス： [新しいサンプルユースケースの概要ページ](/help/rtcdp/use-case-guides/overview.md) を参照してください。 |
+
+{style="table-layout:auto"}
 
 Real-Time CDPの詳細については、 [Real-Time CDPの概要](../../rtcdp/overview.md).
 
