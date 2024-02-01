@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年1月のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ee30e00bceb392b775d15ca2cad95b746698dc4
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 40%
@@ -46,7 +46,7 @@ The [!UICONTROL ユースケースプレイブック] の機能は、すべて�
 
 | 機能 | 説明 |
 | --- | --- |
-| 新しいマッパー関数 | <ul><li>`object_to_map`：を使用します。 `object_to_map` 関数を使用して、マップデータ型を作成します。 この関数は、複数の異なる構文をサポートします。 詳しくは、 [階層の関数 — オブジェクト](../../data-prep/functions.md#objects). </li><li>`to_map`：を使用します。 `to_map` 関数を使用して、指定されたフィールド名と値のペアを持つマップをオブジェクトを使用して作成します。 詳しくは、 [階層の関数 — マップ](../../data-prep/functions.md#objects). </li><li>`array_to_map`：を使用します。 `array_to_map` 関数を使用して、オブジェクト配列を使用して、指定されたフィールド名と値のペアを持つマップを作成します。 詳しくは、 [階層の関数 — マップ](../../data-prep/functions.md#objects). |
+| 新しいマッパー関数 | <ul><li>`object_to_map`：を使用します。 `object_to_map` 関数を使用して、マップデータ型を作成します。 この関数は、複数の異なる構文をサポートします。 詳しくは、 [階層の関数 — オブジェクト](../../data-prep/functions.md#objects). </li><li>`to_map`：を使用します。 `to_map` 関数を使用して、指定されたフィールド名と値のペアを持つマップをオブジェクトを使用して作成します。 詳しくは、 [階層の関数 — マップ](../../data-prep/functions.md#map). </li><li>`array_to_map`：を使用します。 `array_to_map` 関数を使用して、オブジェクト配列を使用して、指定されたフィールド名と値のペアを持つマップを作成します。 詳しくは、 [階層の関数 — マップ](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
