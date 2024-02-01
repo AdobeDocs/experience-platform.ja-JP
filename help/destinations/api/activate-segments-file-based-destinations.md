@@ -4,10 +4,10 @@ title: フローサービス API を使用して、ファイルベースの宛�
 description: フローサービス API を使用して、認定されたプロファイルを含むファイルをクラウドストレージの宛先に書き出す方法について説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b94828381da56fa957b44b77aefa00a8ddd4bbd6
 workflow-type: tm+mt
-source-wordcount: '4335'
-ht-degree: 11%
+source-wordcount: '4404'
+ht-degree: 10%
 
 ---
 
@@ -390,38 +390,58 @@ A [ベース接続](https://developer.adobe.com/experience-platform-apis/referen
 {
     "items": [
         {
-            "id": "4fce964d-3f37-408f-9778-e597338a21ee",
-            "name": "Amazon S3",
-            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
-            "version": "1.0",
-            "authSpec": [ // describes the authentication parameters
-                {
-                    "name": "Access Key",
-                    "type": "KeyBased",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "description": "Defines auth params required for connecting to amazon-s3",
-                        "type": "object",
-                        "properties": {
-                            "s3AccessKey": {
-                                "description": "Access key id",
-                                "type": "string",
-                                "pattern": "^[A-Z2-7]{20}$"
-                            },
-                            "s3SecretKey": {
-                                "description": "Secret access key for the user account",
-                                "type": "string",
-                                "format": "password",
-                                "pattern": "^[A-Za-z0-9\/\\+]{40}$"
-                            }
-                        },
-                        "required": [
-                            "s3SecretKey",
-                            "s3AccessKey"
-                        ]
-                    }
+        "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+        "name": "amazon-s3",
+        "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+        "version": "1.0",
+        "authSpec": [
+            {
+            "name": "Access Key",
+            "type": "KeyBased",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Defines auth params required for connecting to amazon-s3",
+                "type": "object",
+                "properties": {
+                "s3AccessKey": {
+                    "description": "Access key id",
+                    "type": "string",
+                    "pattern": "^[A-Z2-7]{20}$"
+                },
+                "s3SecretKey": {
+                    "description": "Secret access key for the user account",
+                    "type": "string",
+                    "format": "password",
+                    "pattern": "^[A-Za-z0-9\\/\\+]{40}$"
                 }
-            ],
+                },
+                "required": [
+                "s3SecretKey",
+                "s3AccessKey"
+                ]
+            }
+            },
+            {
+            "name": "Assumed Role",
+            "type": "S3RoleBased",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Defines role based auth params required for connecting to amazon-s3",
+                "type": "object",
+                "properties": {
+                "s3Role": {
+                    "title": "Role",
+                    "description": "S3 role",
+                    "type": "string",
+                    "format": "password"
+                }
+                },
+                "required": [
+                "s3Role"
+                ]
+            }
+            }
+        ],
 //...
 ```
 
@@ -691,7 +711,7 @@ A [ベース接続](https://developer.adobe.com/experience-platform-apis/referen
 
 **リクエスト**
 
-+++[!DNL Amazon S3]  — ベース接続リクエスト
++++[!DNL Amazon S3]  — アクセスキーと秘密鍵認証を使用したベース接続リクエスト
 
 >[!TIP]
 >
@@ -714,6 +734,39 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "s3SecretKey": "<Add secret key>",
       "s3AccessKey": "<Add access key>"
+    }
+  },
+  "connectionSpec": {
+    "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec
+    "version": "1.0"
+  }
+}'
+```
+
++++
+
+++[!DNL Amazon S3]  — 想定されるロール認証を使用したベース接続リクエスト
+
+>[!TIP]
+>
+>必要な認証資格情報の取得方法について詳しくは、 [宛先への認証](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) の節を参照してください。
+
+リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+
+```shell {line-numbers="true" start-line="1" highlight="17"}
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Amazon S3 Base Connection",
+  "auth": {
+    "specName": "Assumed Role",
+    "params": {
+      "s3Role": "<Add s3 role>"
     }
   },
   "connectionSpec": {

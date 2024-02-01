@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート（2024年1月）
 description: Adobe Experience Platform の 2024年1月のリリースノートです。
-source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
+source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 40%
+source-wordcount: '1038'
+ht-degree: 39%
 
 ---
 
@@ -74,6 +74,14 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 | 宛先 | 説明 |
 | ----------- | ----------- |
 | [公開接続](../../destinations/catalog/advertising/pubmatic.md) | この宛先を使用して、オーディエンスデータをに送信します。 [!DNL PubMatic Connect] プラットフォーム。 |
+
+{style="table-layout:auto"}
+
+**新機能または更新された機能** {#destinations-new-updated-functionality}
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| 新規 **仮の役割** Amazon S3 の宛先の認証タイプ | アカウントキーと秘密鍵をExperience Platformと共有しない場合は、Experience PlatformをAmazon S3 バケットに接続する際に、新しい想定される役割認証タイプを使用します。 新しい認証方法について詳しくは、 [認証セクション](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) Amazon S3 ドキュメントの |
 
 {style="table-layout:auto"}
 

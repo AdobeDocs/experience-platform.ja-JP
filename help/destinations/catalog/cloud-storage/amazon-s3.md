@@ -2,10 +2,10 @@
 title: Amazon S3 接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 59%
+source-wordcount: '1354'
+ht-degree: 48%
 
 ---
 
@@ -13,12 +13,17 @@ ht-degree: 59%
 
 ## 宛先の変更ログ {#changelog}
 
-2023 年 7 月のExperience Platformリリースに伴い、 [!DNL Amazon S3] の宛先には、次に示す新しい機能が用意されています。
++++ 変更ログを表示
 
-* [データセット書き出しのサポート](/help/destinations/ui/export-datasets.md)。
-* 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
-* 書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）
-* [書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
+
+| リリース月 | 更新タイプ | 説明 |
+|---|---|---|
+| 2024年1月 | 機能とドキュメントの更新 | Amazon S3 宛先コネクタで、新しい想定されるロール認証タイプがサポートされるようになりました。 詳しくは、 [認証セクション](#assumed-role-authentication). |
+| 2023年7月 | 機能とドキュメントの更新 | 2023 年 7 月のExperience Platformリリースに伴い、 [!DNL Amazon S3] の宛先には、次に示す新しい機能が用意されています。 <br><ul><li>[データセットの書き出しのサポート](/help/destinations/ui/export-datasets.md)</li><li>追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。</li><li>書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）</li><li>[書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> |
+
+{style="table-layout:auto"}
+
++++
 
 ## 次に接続： [!DNL Amazon S3] API または UI を介したストレージ {#connect-api-or-ui}
 
@@ -64,12 +69,37 @@ ht-degree: 59%
 >title="RSA 公開鍵"
 >abstract="必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式のキーの例については、以下のドキュメントリンクを参照してください。"
 
-宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
+宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**. Amazon S3 の宛先は、次の 2 つの認証方法をサポートします。
+
+* アクセスキーと秘密鍵の認証
+* 仮定された役割認証
+
+#### アクセスキーと秘密鍵の認証
+
+この認証方法は、Experience PlatformがAmazon S3 プロパティにデータを書き出せるように、Amazon S3 のアクセスキーと秘密鍵を入力する場合に使用します。
+
+![アクセスキーおよび秘密鍵認証を選択する際の必須フィールドの画像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
 * **[!DNL Amazon S3]アクセスキー** と **[!DNL Amazon S3]秘密鍵**：[!DNL Amazon S3] で `access key - secret access key` ペアを生成して、[!DNL Amazon S3] アカウントに Platform アクセス権を付与します。詳しくは、[Amazon Web Services に関するドキュメント](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
   ![UI での正しく書式設定された PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+#### 想定される役割 {#assumed-role-authentication}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_assumed_role"
+>title="仮定された役割認証"
+>abstract="アカウントキーと秘密鍵をAdobeと共有しない場合は、この認証タイプを使用します。 代わりに、Experience Platformは、役割ベースのアクセス権を使用してAmazon S3 の場所に接続します。 AWSで作成した役割の ARN を、Adobeユーザーに貼り付けます。 このパターンは、次のようになります。 `arn:aws:iam::800873819705:role/destinations-role-customer` "
+
+![想定される役割認証を選択する際の必須フィールドの画像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+
+アカウントキーと秘密鍵をAdobeと共有しない場合は、この認証タイプを使用します。 代わりに、Experience Platformは、役割ベースのアクセス権を使用してAmazon S3 の場所に接続します。
+
+これをおこなうには、AWSコンソールで、とのAdobeを想定するユーザーを作成する必要があります [必要な権限](#required-s3-permission) を使用してAmazon S3 バケットに書き込みます。 の作成 **[!UICONTROL 信頼済みエンティティ]** AWSのAdobeアカウント **[!UICONTROL 670664943635]**. 詳しくは、 [AWSのロール作成に関するドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+* **[!DNL Role]**:AWSで作成した役割の ARN を、Adobeユーザーに貼り付けます。 このパターンは、次のようになります。 `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
 ### 宛先の詳細を入力 {#destination-details}
 
