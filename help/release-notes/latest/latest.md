@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年1月のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 40%
+source-wordcount: '1551'
+ht-degree: 38%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| SQL を表示 | プロファイル、オーディエンス、宛先、カスタマイズされたインサイトの背後に SQL を表示し、クエリエディターを使用してクエリをオンデマンドで実行できるようになりました。 40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから一意のインサイトを引き出す新しいクエリを作成します。 詳しくは、 [insight SQL の表示](../../dashboards/view-sql.md). |
+| SQL を表示 | SQL を表示の切り替えで、プロファイル、オーディエンス、宛先、カスタマイズされたインサイトの背後に SQL を表示し、クエリエディターを使用してクエリをオンデマンドで実行できるようになりました。 Real-time Customer Data Platformの洞察を強化する SQL にアクセスすると、データモデルの分析の背後にあるロジックを理解できます。 この透明性により、Adobeのリアルタイム CDP データに対するアクセス性と理解性が向上し、意思決定にとっての影響が大きくなります。<br>40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから一意のインサイトを引き出す新しいクエリを作成します。 SQL は、 [プロファイル](../../dashboards/insights/profiles.md), [オーディエンス](../../dashboards/insights/audiences.md)、および [宛先](../../dashboards/insights/destinations.md) Experience Leagueドキュメントのインサイト。 これらのドキュメントでは、標準的なインサイトを使用して回答できるビジネスユースケースを重点的に説明します。 詳しくは、 [insight SQL の表示](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
