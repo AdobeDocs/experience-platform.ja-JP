@@ -7,7 +7,7 @@ exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 81%
+ht-degree: 83%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 81%
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
->title="インスタンスを作成"
+>title="インスタンスの作成"
 >abstract="ジャーニー、オーディエンス、スキーマ、宛先など、ジャーニーやアクティベーションのシナリオで使用するアセットのリストを生成します。"
 
 プレイブックインスタンスを作成する前に、使用可能なプレイブックを調べて、[適切なプレイブックを見つけましょう](/help/use-case-playbooks/playbooks/discover.md)。プレイブックを続行してインスタンスを作成する準備が整ったら、「**[!UICONTROL インスタンスを作成]**」を選択してプレイブックを続行し、技術アセットを生成します。
