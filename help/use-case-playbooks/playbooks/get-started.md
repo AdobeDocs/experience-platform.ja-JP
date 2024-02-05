@@ -4,9 +4,9 @@ title: 基本を学ぶ
 description: ユースケースプレイブック機能の基本を学ぶ方法を説明します。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '943'
 ht-degree: 15%
 
 ---
@@ -29,6 +29,11 @@ Real-time Customer Data PlatformとAdobe Journey Optimizer向けに設計され�
 ## 開発サンドボックスを作成 {#create-development-sandbox}
 
 ユースケースプレイブックは、特別なタイプの開発サンドボックスを使用します。 [[!UICONTROL ユースケースプレイブック]](/help/use-case-playbooks/playbooks/overview.md)機能の基本を学び、アクセスするには、下記に示すように、サフィックスに `-ucp` または `-UCP` を含む名前（タイトルではない）を付けて[新しい開発サンドボックスを作成](/help/sandboxes/ui/user-guide.md#create)します（実稼動用サンドボックスを選択しないようにしてください）。
+
+>[!IMPORTANT]
+>
+>新しい開発サンドボックスを作成する場合は、名前にが含まれていることを確認してください。 `-ucp` または `-UCP` 」と入力します。
+
 
 ![ユースケースプレイブック用の開発サンドボックスの作成](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
