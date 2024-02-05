@@ -4,7 +4,7 @@ title: Adobe I/O イベント通知の登録
 description: このドキュメントでは、Adobe Experience Platform サービスの Adobe I/O イベント通知を登録する手順を説明します。利用可能なイベントタイプに関する参照情報も、該当する各 [!DNL Platform] サービスに対して返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクとともに提供されます。
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: eccd53a8b2076fe23a65aa2e933a7cb871e97f72
+source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 90%
@@ -41,7 +41,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->データ取り込み通知は、AdobeI/O サブスクリプションで廃止されます。 代わりに、 **ソースフロー実行情報** I/O イベント。
+>データ取り込み通知イベントは、Adobe I/Oで非推奨（廃止予定）となりました。代わりに、 **ソースフロー実行情報** I/O イベント。
 
 新しいプロジェクトを作成したら、そのプロジェクトの概要画面に移動します。 ここから、「**[!UICONTROL イベントの追加]**」を選択します。
 
