@@ -3,7 +3,7 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
 source-wordcount: '3933'
 ht-degree: 87%
@@ -331,7 +331,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 >[!NOTE]
 >
->外部生成オーディエンスは CSV 形式で、**最大** 11 列かつ 1 GB 未満にする&#x200B;**必要があります**。
+>外部生成オーディエンスは CSV 形式で、**最大** 25 列かつ 1 GB 未満にする&#x200B;**必要があります**。
 
 読み込む CSV ファイルを選択すると、この外部で生成されたオーディエンスのサンプルデータのリストが表示されます。サンプルデータが正しいことを確認したら、「**[!UICONTROL 次へ]**」を選択します。
 

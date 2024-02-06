@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年1月のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1551'
-ht-degree: 38%
+source-wordcount: '1653'
+ht-degree: 39%
 
 ---
 
@@ -26,6 +26,7 @@ Experience Platformの既存の機能の更新：
 - [ID サービス](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [リアルタイム顧客プロファイル](#profile)
+- [セグメント化サービス](#segmentation)
 - [ソース](#sources)
 
 ## ユースケースプレイブック {#use-case-playbooks}
@@ -156,6 +157,21 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 {style="table-layout:auto"}
 
 リアルタイム顧客プロファイルの詳細については、 [プロファイルの概要](../../profile/home.md)
+
+## セグメント化サービス {#segmentation}
+
+[!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 外部で生成されたオーディエンスのアップロード | 列の最大数が **25**. |
+| セグメントビルダーの予測 | 推定および認定済みプロファイルが、オーディエンスプロパティセクション内に表示されるようになりました。 この変更の詳細については、 [セグメントビルダー UI ガイド](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+[!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
