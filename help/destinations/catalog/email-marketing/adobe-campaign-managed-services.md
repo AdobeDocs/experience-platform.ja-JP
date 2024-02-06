@@ -2,10 +2,10 @@
 title: Adobe Campaign Managed Cloud Services 接続
 description: Adobe Campaign Managed Cloud Servicesは、クロスチャネルの顧客体験を設計するためのプラットフォームと、視覚的なキャンペーン編成、リアルタイムのインタラクション管理、クロスチャネルの実行のための環境を提供します。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 35%
+source-wordcount: '1589'
+ht-degree: 34%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 35%
 Adobe Campaign Managed Cloud Services は、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理、クロスチャネル実行のための環境を提供します。[Campaign の概要](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ja)
 
 Campaign を使用すると、次のことを行えます。
+
 * お客様に対する単一のアクセス可能な表示で、パーソナライゼーションとエンゲージメントを促進
 * E メール、モバイル、オンライン、オフラインの各チャネルをカスタマージャーニーに統合する
 * 意味のあるタイムリーなメッセージやオファーの配信を自動化します。
@@ -32,6 +33,7 @@ Campaign を使用すると、次のことを行えます。
 >* 各セグメントについて、最大 20 個のフィールドを [マップ](#map) Adobe Campaignへ
 >* Azure Blob ストレージデータランディングゾーン (DLZ) でのデータ保持：7 日
 >* 有効化の頻度は 3 時間以上です。
+>* この接続でサポートされるファイル名の最大長は 255 文字です。 次の場合： [書き出したファイル名を設定する](../../ui/activate-batch-profile-destinations.md#configure-file-names)を使用する場合は、ファイル名が 255 文字を超えないようにしてください。 最大ファイル名の長さを超えると、アクティベーションエラーが発生します。
 
 ## ユースケース {#use-cases}
 
