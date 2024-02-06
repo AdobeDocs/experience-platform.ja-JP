@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK コマンドの実行
 description: Experience Platform Web SDK コマンドの実行方法について説明します
 keywords: コマンドの実行；commandName;Promise;getLibraryInfo;response オブジェクト；consent;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
+source-git-commit: ffc60e83285188bc5b0f6eb7a20fafee16d51d4d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 71%
+source-wordcount: '405'
+ht-degree: 70%
 
 ---
 
@@ -35,7 +35,7 @@ alloy("commandName", options);
 alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
-    // "value" is whatever the command returned
+    // "result" is whatever the command returned
   })
   .catch(function(error) {
     // The command failed.
@@ -78,4 +78,4 @@ alloy("getLibraryInfo")
 
 ### 同意
 
-ユーザーが特定の目的に対して同意しなかった場合でも、プロミスは解決されます。ただし、応答オブジェクトには、ユーザーが同意した内容のコンテキストで提供できる情報のみが含まれます。
+ユーザーが特定の目的に対して同意しなかった場合、プロミスは解決されます。ただし、応答オブジェクトには、ユーザーが同意した内容に関して提供できる情報のみが含まれます。
