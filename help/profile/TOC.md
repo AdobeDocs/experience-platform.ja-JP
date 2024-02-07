@@ -3,10 +3,10 @@ audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 feature: Profiles
-source-git-commit: c630eb0e13c7d4c1b8f649816402fae0d4a79326
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 98%
+source-wordcount: '129'
+ht-degree: 93%
 
 ---
 
@@ -23,7 +23,6 @@ ht-degree: 98%
 * [!DNL Profile] API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
-   * [エッジ投影](api/edge-projections.md)
    * [エンティティ（[!DNL Profile] アクセス）](api/entities.md)
    * [書き出しジョブ（[!DNL Profile] 書き出し）](api/export-jobs.md)
    * [プレビューサンプルのステータス（[!DNL Profile] プレビュー）](api/preview-sample-status.md)
@@ -32,9 +31,9 @@ ht-degree: 98%
    * [[!DNL Profile] UI ガイド](ui/user-guide.md)
    * [[!DNL Profile] 詳細なカスタマイズ](ui/profile-customization.md)
    * [見込み客プロファイル](ui/prospect-profile.md)
-* 計算属性 {#computed-attributes}
+* 計算済み属性 {#computed-attributes}
    * [概要](computed-attributes/overview.md)
-   * [計算属性 APIガイド](computed-attributes/api.md)
+   * [計算済み属性 API ガイド](computed-attributes/api.md)
    * [計算属性 UI ガイド](computed-attributes/ui.md)
    * [よくある質問](computed-attributes/faq.md)
 * 結合ポリシー {#merge-policies}
