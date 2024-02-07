@@ -6,7 +6,7 @@ description: Experience Platformユーザーインターフェイスでスキー
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3670'
+source-wordcount: '3671'
 ht-degree: 4%
 
 ---
@@ -191,7 +191,7 @@ The [!DNL Schema Editor] フィールドグループが指定したフィール�
 
 ![追加された標準フィールド](../../images/ui/resources/schemas/standard-field-added.png)
 
-### カスタムフィールドの追加 {#add-custom-fields}
+### カスタムフィールドを追加 {#add-custom-fields}
 
 標準フィールドのワークフローと同様に、独自のカスタムフィールドを直接スキーマに追加することもできます。
 

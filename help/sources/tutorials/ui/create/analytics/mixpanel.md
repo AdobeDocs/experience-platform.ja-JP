@@ -4,8 +4,8 @@ description: Adobe Experience Platform UI を使用して Mixpanel ソース接�
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 42%
+source-wordcount: '797'
+ht-degree: 41%
 
 ---
 
@@ -55,7 +55,7 @@ The **[!UICONTROL Mixpanel アカウントの接続]** ページが表示され�
 
 ### 新しいアカウント
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の資格情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;をクリックし、名前、オプションの説明および資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 

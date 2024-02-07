@@ -6,8 +6,8 @@ description: Privacy Serviceユーザーインターフェイスを使用して�
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 67%
+source-wordcount: '1456'
+ht-degree: 59%
 
 ---
 
@@ -38,18 +38,18 @@ ht-degree: 67%
 
 | UI ラベル | 規則 |
 | --- | --- |
-| [!UICONTROL APA_AUS] | 「[!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | 「[!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | 「[!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | 「[!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | 「[!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL APA_AUS] | [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL CPA] | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CCPA] | [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA] | [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | 欧州連合&#39;s [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | 「[!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | ブラジル [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | ニュージーランド [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | タイ [!DNL Personal Data Protection Act] |
-| [!UICONTROL UCPA] | 「[!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | 「[!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL UCPA] | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA] | [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
-> 以前に作成したジョブのデータは、完了日から 30 日間のみアクセスできます。
+>以前に作成したジョブのデータは、完了日から 30 日間のみアクセスできます。
 
 「Job Requests」タイトルの下の検索バーにキーワードを入力することで、このリストをフィルタリングできます。リストは、入力に応じて自動的にフィルタリングをおこない、検索用語に一致する値を含んだリクエストを表示します。**[!UICONTROL Requested on]** ドロップダウンメニューを使用して、リストに表示されているジョブの時間範囲を選択することもできます。
 
@@ -120,7 +120,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
-> プライバシージョブリクエストを作成するには、アクセスまたは削除するデータの所有者である特定の顧客の ID 情報を指定する必要があります。この節を続行する前に、[プライバシーリクエストの ID データ](../identity-data.md)に関するドキュメントを確認してください。
+>プライバシージョブリクエストを作成するには、アクセスまたは削除するデータの所有者である特定の顧客の ID 情報を指定する必要があります。 この節を続行する前に、[プライバシーリクエストの ID データ](../identity-data.md)に関するドキュメントを確認してください。
 
 The [!DNL Privacy Service] UI には、新しいジョブリクエストを作成する次の 2 つの方法が用意されています。
 
@@ -149,11 +149,11 @@ The [!DNL Privacy Service] UI には、新しいジョブリクエストを作�
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-standard タイプの名前空間を使用する場合は、ドロップダウンメニューから名前空間（メール、ECID、AAID のいずれか）を選択し、右側のテキストボックスに ID 値を入力し、ID ごとに **Enter** キーを押してリストに追加します。
+標準の名前空間タイプを使用する場合は、ドロップダウンメニューから名前空間（E メール、ECID、AAID）を選択し、右側のテキストボックスに ID 値を入力して、 **\&lt;enter>** を設定して、リストに追加します。
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-custom タイプの名前空間を使用する場合は、名前空間を手動で入力してから、その下で ID 値を入力する必要があります。
+カスタムタイプの名前空間を使用する場合は、名前空間を手動で入力してから、その下で ID 値を指定する必要があります。
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -183,7 +183,7 @@ custom タイプの名前空間を使用する場合は、名前空間を手動�
 
 コンピューター上で JSON ファイルを探し、ダイアログウィンドウにドラッグします。アップロードが正常に完了すると、ダイアログにファイル名が表示されます。必要に応じて、引き続き JSON ファイルをダイアログにドラッグ＆ドロップして追加できます。
 
-完了したら、「**[!UICONTROL 作成]**」をクリックします。ダイアログが閉じ、新しいジョブ（複数の場合あり）が現在の処理ステータスと共にジョブリクエストウィジェットにリスト表示されます。
+終了したら、「 」を選択します。 **[!UICONTROL 作成]**. ダイアログが閉じ、新しいジョブ（複数の場合あり）が現在の処理ステータスと共にジョブリクエストウィジェットにリスト表示されます。
 
 ### 次の手順
 

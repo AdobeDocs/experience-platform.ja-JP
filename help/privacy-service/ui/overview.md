@@ -6,8 +6,8 @@ description: Privacy Serviceユーザーインターフェイスを使用して�
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 31%
+source-wordcount: '226'
+ht-degree: 20%
 
 ---
 
@@ -43,4 +43,4 @@ Adobe Experience Platform UI にアクセスできる場合は、 [!DNL Privacy 
 
 ## 次の手順
 
-これで正常にログインできました。 UI を使用して様々な操作を実行する手順については、[ユーザーガイド](user-guide.md)を参照してください。[!DNL Privacy Service]
+これで正常にログインできました。 [ユーザーガイド](user-guide.md) を使用して様々な操作を実行する手順を説明します。 [!DNL Privacy Service] UI

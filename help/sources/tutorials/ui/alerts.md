@@ -5,8 +5,8 @@ title: UI でのコンテキスト内アラートへのサブスクライブ
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '846'
-ht-degree: 23%
+source-wordcount: '842'
+ht-degree: 18%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 23%
 
 Adobe Experience Platform では、Adobe Experience Platform アクティビティに関するイベントベースのアラートを登録できます。 アラートにより、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、何らかのエラーが発生したかを確認するために、[[!DNL Observability Insights] API](../../../observability/api/overview.md) をポーリングする必要が低減される、またはなくなります。
 
-データフローを作成する際にアラートの配信を登録して、フロー実行のステータス、成功または失敗に関するアラートメッセージを受信できます。
+データフローを作成する際にアラートをサブスクライブして、フロー実行のステータス、成功または失敗に関するアラートメッセージを受け取ることができます。
 
 このドキュメントでは、ソースデータフローのアラートメッセージを受信する方法をサブスクライブする手順を説明します。
 
@@ -27,7 +27,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 このドキュメントでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 * [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [Observability では、統計的な指標とイベント通知を使用して Platform アクティビティを監視できます。](../../../observability/home.md)[!DNL Observability Insights]
+* [観察性](../../../observability/home.md): [!DNL Observability Insights] では、統計指標とイベント通知を使用して、Platform アクティビティを監視できます。
    * [アラート](../../../observability/alerts/overview.md):Platform 操作で特定の条件に達すると（システムがしきい値に達した場合に問題が発生する可能性があるなど）、Platform は、組織内で条件を購読したユーザーにアラートメッセージを配信できます。
 
 ## UI でのアラートの登録 {#subscribe-sources-alerts}
@@ -70,7 +70,7 @@ UI でソースデータフローを作成する詳細な手順については�
 * [データベース](./dataflow/databases.md)
 * [E コマース](./dataflow/ecommerce.md)
 * [ローカルファイル](./create/local-system/local-file-upload.md)
-* [マーケティングの自動処理](./dataflow/marketing-automation.md)
+* [マーケティングの自動化](./dataflow/marketing-automation.md)
 * [支払い](./dataflow/payments.md)
 * [プロトコル](./dataflow/protocols.md)
 
@@ -110,7 +110,7 @@ The [!UICONTROL データフロー実行の概要] ページが表示されま�
 
 また、データフローのアラートは E メールで配信されます。 データフローの詳細を確認するには、E メールの本文でデータフロー名を選択します。
 
-![メール](../../images/tutorials/alerts/email.png)
+![電子メール](../../images/tutorials/alerts/email.png)
 
 UI アラートと同様に、 [!UICONTROL データフロー実行の概要] ページが表示され、データフローに関連するエラーを調査するためのインターフェイスが提供されます。
 

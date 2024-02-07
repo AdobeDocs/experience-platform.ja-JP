@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；アカウントの監視；データフローの監視；データフロー
-description: Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、「ソース」ワークスペースからのストリーミングデータフローを監視する手順を説明します。
+description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに従って取り込む機能を提供します。 このチュートリアルでは、「ソース」ワークスペースからのストリーミングデータフローを監視する手順を説明します。
 title: UI でのストリーミングソースのデータフローの監視
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 35%
+source-wordcount: '1037'
+ht-degree: 33%
 
 ---
 

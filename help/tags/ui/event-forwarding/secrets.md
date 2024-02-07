@@ -4,8 +4,8 @@ description: イベント転送のプロパティで使用されるエンドポ�
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2458'
-ht-degree: 76%
+source-wordcount: '2426'
+ht-degree: 75%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 76%
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) および [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) で使用する [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL HTTP] | ユーザー名とパスワードの 2 つの文字列属性がそれぞれ含まれます。 |
-| [!UICONTROL [!DNL LinkedIn] OAuth2] | システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL OAuth2] | [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様の[クライアント資格情報付与タイプ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL OAuth 2 JWT] | 次の JSON Web トークン (JWT) プロファイルをサポートする属性が複数含まれます。 [OAuth 2.0 の認証](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 交付金 システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL トークン] | 両方のシステムで認識および理解されている認証トークン値を表す単一の文字列。 |
@@ -178,7 +178,7 @@ Google アカウントの資格情報を入力するためのダイアログが�
 >
 >この問題を解決するには、Google 管理コンソールにログインし、イベント転送アプリ（Adobe Real-Time CDP イベント転送）を [!DNL Trusted] としてマークできるように **[!DNL App access control]** ページに移動します。詳しくは、Google ドキュメントで [Google Cloud サービスのセッション継続時間を設定する](https://support.google.com/a/answer/9368756)を参照してください。
 
-### [!UICONTROL [!DNL LinkedIn] OAuth2] {#linkedin-oauth2}
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
 を作成するには、以下を実行します。 [!DNL LinkedIn] OAuth 2 シークレット、「 」を選択します。 **[!UICONTROL [!DNL LinkedIn]OAuth 2]** から **[!UICONTROL タイプ]** ドロップダウン。 次に、「 **[!UICONTROL 秘密鍵を作成]**.
 

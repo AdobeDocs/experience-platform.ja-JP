@@ -6,8 +6,8 @@ description: Adobe Experience Platformクエリサービスは、クエリの書
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1517'
-ht-degree: 4%
+source-wordcount: '1504'
+ht-degree: 3%
 
 ---
 
@@ -61,7 +61,7 @@ The **[!UICONTROL 資格情報の期限が切れています]** 「 」セクシ
 有効期限のない資格情報を生成する前に、Adobe Admin Consoleで次の手順を実行する必要があります。
 
 1. ログイン [Adobe Admin Console](https://adminconsole.adobe.com/) をクリックし、上部のナビゲーションバーから関連する組織を選択します。
-2. [製品プロファイルの選択.](../../access-control/ui/browse.md)
+2. [製品プロファイルを選択します。](../../access-control/ui/browse.md)
 3. [両方の **サンドボックス** および **クエリサービス統合の管理** 権限](../../access-control/ui/permissions.md) 製品プロファイルの。
 4. [製品プロファイルへの新しいユーザーの追加](../../access-control/ui/users.md) 設定済みの権限が付与されます。
 5. [ユーザーを製品プロファイル管理者として追加する](https://helpx.adobe.com/jp/enterprise/using/manage-product-profiles.html) ：任意のアクティブな製品プロファイルに対してアカウントの作成を許可します。
@@ -137,7 +137,7 @@ The **[!UICONTROL 資格情報の期限が切れています]** 「 」セクシ
 | **ポート** | 接続先のサーバー/ホストのポート。 <ul><li>この値は、有効期限が切れる資格情報と有効期限が切れない資格情報の両方に使用され、次の場所にあります。 **[!UICONTROL ポート]** （内） [!UICONTROL 資格情報の期限が切れています] 」セクションに入力します。</ul></li> | `80` |
 | **データベース** | 接続先のデータベース。 <ul><li>この値は、有効期限が切れる資格情報と有効期限が切れない資格情報の両方に使用され、の下にあります。 **[!UICONTROL データベース]** （内） [!UICONTROL 資格情報の期限が切れています] 」セクションに入力します。 </ul></li> | `prod:all` |
 | **ユーザー名** | 外部クライアントに接続するユーザーのユーザー名。 <ul><li>この値は、有効期限が切れる資格情報と、期限が切れない資格情報の両方に使用されます。 これは、の前に英数字の文字列を使用します。 `@AdobeOrg`. この値は、の下にあります。 **[!UICONTROL ユーザー名]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **パスワード** | 外部クライアントに接続するユーザーのパスワードです。 <ul><li>資格情報の有効期限が近づいている場合は、次の場所にあります。 **[!UICONTROL パスワード]** 内 [!UICONTROL 資格情報の期限が切れています] 」セクションに入力します。</li><li>有効期限のない資格情報を使用している場合、この値は、technicalAccountID からの引数と設定 JSON ファイルから取得した資格情報の連結値です。 パスワードの値は `{technicalAccountId}:{credential}` 形式で指定します。  </li></ul> | <ul><li>証明書のパスワードの有効期限が切れるのは、1,000 文字を超える英数字の文字列です。 例はありません。</li><li>証明書の有効期限が切れないパスワードは次のとおりです。<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **パスワード** | 外部クライアントに接続するユーザーのパスワードです。 <ul><li>資格情報の有効期限が近づいている場合は、次の場所にあります。 **[!UICONTROL パスワード]** 内 [!UICONTROL 資格情報の期限が切れています] 」セクションに入力します。</li><li>有効期限のない資格情報を使用している場合、この値は、technicalAccountID からの引数と設定 JSON ファイルから取得した資格情報の連結値です。 パスワードの値は次の形式で指定します。 `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>証明書のパスワードの有効期限が切れるのは、1,000 文字を超える英数字の文字列です。 例はありません。</li><li>証明書の有効期限が切れないパスワードは次のとおりです。<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 
