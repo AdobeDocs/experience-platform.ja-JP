@@ -2,9 +2,9 @@
 title: UI を使用して SalesforceMarketing CloudアカウントをExperience Platformに接続
 description: UI を使用して SalesforceMarketing CloudアカウントをExperience Platformに接続する方法を説明します。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
+source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 27%
 
 ---
@@ -34,7 +34,7 @@ Platform で [!DNL Salesforce Marketing Cloud] アカウントにアクセスす
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| ホスト | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** 次の項目に `host` 値を指定する場合は、 `{subdomain}.rest.marketingcloudapis.com`. 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`を指定した場合は、 `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` をホスト値として使用します。 |
+| ホスト | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** 次の項目に `host` 値を指定する場合は、 `{subdomain}.rest.marketingcloudapis.com`. 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を入力した場合、 `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` をホスト値として使用します。 |
 | クライアント ID | 次に関連付けられたクライアント ID: [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 | クライアントシークレット | に関連付けられたクライアント秘密鍵 [!DNL Salesforce Marketing Cloud] アプリケーション。 |
 
