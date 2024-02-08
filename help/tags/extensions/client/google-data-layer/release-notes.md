@@ -2,14 +2,14 @@
 title: Google Data Layer 拡張機能のリリースノート
 description: Adobe Experience PlatformのGoogle Data Layer タグ拡張機能に関する最新のリリースノートです。
 exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
-source-git-commit: 0b9fa104777f21fc9bc893784ae3155d887a48d2
+source-git-commit: c1bad7d5414e62f4d77f7d5903f4b2bf4d9081f8
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 1%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
-# Google Data Layer 拡張機能リリースノート
+# Google Data Layer 拡張機能のリリースノート
 
 ## バージョン 1.0.4
 
@@ -37,3 +37,7 @@ ht-degree: 1%
 * 状況によってデータ要素を保存するとエラーが発生するバグを修正しました。
 * Tags イベントオブジェクトの使い方を説明するドキュメントをイベントダイアログに追加します。
 * イベントダイアログに無限ループに関する警告を追加します。
+
+## バージョン 1.2.2
+
+* Google Analyticsgtag() イベントのサポートを追加しました。

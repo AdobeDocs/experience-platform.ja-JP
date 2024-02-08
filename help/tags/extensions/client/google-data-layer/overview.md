@@ -2,22 +2,18 @@
 title: Google Data Layer 拡張機能
 description: Adobe Experience PlatformのGoogle Client Data Layer タグ拡張機能について説明します。
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
+source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 15%
+source-wordcount: '937'
+ht-degree: 12%
 
 ---
 
 # Google Data Layer 拡張機能
 
-Google データレイヤー拡張機能を使用すると、タグ実装で Google データレイヤーを使用できます。この拡張機能は、単独で、またはGoogleソリューションと同時に、Googleのオープンソースと共に使用できます [データレイヤーヘルパーライブラリ](https://github.com/google/data-layer-helper).
+Google Data Layer 拡張機能を使用すると、タグ実装でGoogleデータレイヤーを使用できます。 この拡張機能は、単独で、またはGoogleソリューションと同時に、Googleのオープンソースと共に使用できます [データレイヤーヘルパーライブラリ](https://github.com/google/data-layer-helper).
 
-ヘルパーライブラリは、イベントクライアントデータデイヤー (ACDL) と同様のAdobe駆動型機能を提供します。 Google Data Layer 拡張機能のデータ要素、ルールおよびアクションは、 [ACDL 拡張機能](../client-data-layer/overview.md).
-
-## 成熟度
-
-バージョン 1.2.x は実稼動環境で使用される遅延ベータです。
+ヘルパーライブラリは、イベントクライアントデータレイヤー (ACDL) と同様のAdobe駆動型機能を提供します。 Google Data Layer 拡張機能のデータ要素、ルールおよびアクションは、 [ACDL 拡張機能](../client-data-layer/overview.md).
 
 ## インストール
 
@@ -29,7 +25,7 @@ Google データレイヤー拡張機能を使用すると、タグ実装で Goo
 
 拡張機能の設定を使用して、拡張機能が使用するデータレイヤーの名前を定義できます。 Adobe Experience Platformタグの読み込み時に設定済みの名前のデータレイヤーが存在しない場合、拡張機能によって作成されます。
 
-データレイヤー名のデフォルトは、Googleのデフォルト名です `dataLayer`.
+データレイヤー名のデフォルトは、Googleのデフォルト名です。 `dataLayer`.
 
 >[!NOTE]
 >
@@ -44,15 +40,24 @@ Google データレイヤー拡張機能を使用すると、タグ実装で Goo
 > - JavaScript イベント。
 > - を使用してデータレイヤーにプッシュされたデータ _イベント_ キーワード。
 
-
 拡張機能を使用すると、データレイヤーの変更をリッスンできます。
 
 >[!NOTE]
 >
->この _イベント_ キーワード。データがGoogleデータレイヤーに (Adobeクライアントデータレイヤーと同様に ) プッシュされたときに使用します。 この _イベント_ キーワードは、Googleデータレイヤー（したがってこの拡張）の動作を変更します。\
+>この _イベント_ キーワード。データがGoogleデータレイヤーに (Adobeクライアントデータレイヤーと同様に ) プッシュされたときに使用します。 The _イベント_ キーワードは、Googleデータレイヤー（したがってこの拡張）の動作を変更します。\
 > この点について不明な点がある場合は、 Googleのドキュメントを読むか、調査してください。
 
-### データレイヤーへのすべてのプッシュをリッスンします
+### Google Event Types
+
+Googleは、次の 2 つのプッシュ方法をサポートしています。 Google Tag Manager は、 `push()` メソッドとGoogle Analytics4、を使用 `gtag()` メソッド。
+
+1.2.1 より前のGoogle Data Layer 拡張機能バージョンでは、 `push()`に含めることができます。
+
+バージョン 1.2.1 以降では、 `gtag()`.  これはオプションで、拡張機能設定ダイアログで有効にできます。
+
+詳しくは、 `push()` および `gtag()` イベントについては、 [Googleドキュメント](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  情報は、拡張機能の設定ダイアログとルールダイアログでも提供されます。
+
+### データレイヤーへのすべてのプッシュをリッスンします。
 
 このオプションを選択すると、イベントリスナーはこのデータレイヤーに加えられた変更をリッスンします。
 
@@ -113,23 +118,23 @@ dataLayer.push({"event":"myEvent2"})
 
 ### データレイヤーにプッシュ {#push-to-data-layer}
 
-拡張機能では、JSON をデータレイヤーにプッシュする 2 つのアクションを提供します。プッシュする JSON を手動で作成するための自由テキストフィールド、およびキーと値の対応する multifield ダイアログのバージョン 1.2.0 から。
+拡張機能では、JSON をデータレイヤーにプッシュする 2 つのアクションを提供します。プッシュする JSON を手動で作成する自由テキストフィールドと、キーと値のペアのマルチフィールドダイアログのバージョン 1.2.0 です。
 
 #### フリーテキスト JSON
 
-フリーテキストアクションを使用すると、JSON 内で直接データ要素を使用できます。 JSON エディター内では、データ要素は、パーセント表記を使用して参照する必要があります。例： `%dataElementName%`.
+フリーテキストアクションを使用すると、JSON 内で直接データ要素を使用できます。 JSON エディター内では、データ要素は、パーセント表記を使用して参照する必要があります。 例：`%dataElementName%`。
 
 ```json
 {
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
+  "page": {
+    "url": "%url%",
+    "previous_url": "%previous_url%",
+    "concatenated_values": "static string %dataElement%"
+  }
 }
 ```
 
-#### キーと値の複数フィールド
+#### キーと値のマルチフィールド
 
 新しいキーと値のペアのマルチフィールドダイアログは、JSON を手動で書かずにプッシュを設定できる、より使いやすいインターフェイスです。
 
@@ -146,7 +151,7 @@ dataLayer.push({"event":"myEvent2"})
 したがって、データ要素は次の値を返すことができます。
 
 - 空のフィールド：データレイヤーの計算済み状態。
-- キーを持つフィールド（上記の例の page.previous_url など）:イベントオブジェクトまたは計算済み状態のキーの値。
+- キーを持つフィールド（上の例では page.previous_url など）：イベントオブジェクト内のキーの値または計算済み状態。
 
 ## 追加情報
 
