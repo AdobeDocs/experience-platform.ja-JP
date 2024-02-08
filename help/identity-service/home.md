@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ID サービスの概要
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 8%
+source-wordcount: '1560'
+ht-degree: 9%
 
 ---
 
@@ -32,7 +32,7 @@ ID サービスの詳細を確認する前に、次の表を読んで、主な�
 | 用語 | 定義 |
 | --- | --- |
 | ID | ID は、エンティティに固有のデータです。 通常、これは個人、ハードウェアデバイス、Web ブラウザー（Cookie で表される）など、実際のオブジェクトです。 完全修飾 ID は、次の 2 つの要素で構成されます。 **ID 名前空間** および **ID 値**. |
-| ID 名前空間 | ID 名前空間は、指定された ID のコンテキストです。 例えば、 `Email` ～と一致する可能性がある **julien<span>@acme.com**. 同様に、 `Phone` ～と一致する可能性がある `555-555-1234`. 詳しくは、 [ID 名前空間の概要](./features/namespaces.md) |
+| ID 名前空間 | ID 名前空間は、特定の ID のコンテキストです。例えば、 `Email` は、次の id 値に対応します。 **julien<span>@acme.com**. 同様に、 `Phone` は、次の id 値に対応します。 `555-555-1234`. 詳しくは、 [ID 名前空間の概要](./features/namespaces.md). |
 | ID 値 | ID 値は、実際のエンティティを表す文字列で、名前空間を通じて ID サービス内に分類されます。 例えば、ID 値（文字列） **julien<span>@acme.com** は、次のように分類できます `Email` 名前空間。 |
 | ID タイプ | ID タイプは、ID 名前空間のコンポーネントです。 ID タイプは、ID データが ID グラフでリンクされているかどうかを示します。 |
 | リンク | リンクやリンケージは、2 つの異なる ID が同じエンティティを表すことを確立するメソッドです。 例えば、「`Email` = julien<span>@acme.com」および「`Phone` = 555-555-1234」は、両方の ID が同じエンティティを表すことを意味します。 これは、julien の E メールアドレスを使用してブランドとやり取りした顧客を示しています。<span>@acme.comと555-555-1234の電話番号は同じです。 |
