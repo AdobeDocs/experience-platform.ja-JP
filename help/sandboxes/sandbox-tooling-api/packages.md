@@ -2,10 +2,10 @@
 title: サンドボックスツールパッケージ API エンドポイント
 description: Sandbox Tooling API の/packages エンドポイントを使用すると、Adobe Experience Platformでパッケージをプログラムで管理できます。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 9%
+source-wordcount: '1531'
+ht-degree: 8%
 
 ---
 
@@ -493,7 +493,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| {QUERY_PARAMS} | 結果をフィルタリングする条件となるクエリパラメーター（オプション）。詳しくは、 [クエリパラメーター](./appendix.md) を参照してください。 |
+| {QUERY_PARAMS} | 結果をフィルタリングするためのオプションのクエリパラメーターです。 詳しくは、 [クエリパラメーター](./appendix.md) を参照してください。 |
 
 **リクエスト**
 
@@ -747,11 +747,11 @@ POST /packages/import
 
 **リクエスト**
 
-次のリクエストでは、 {PACKAGE_ID} 提供済み ペイロードは置換のマップで、エントリが存在する場合、キーは `artifactId` はパッケージで指定され、代わりには値が使用されます。 マップまたはペイロードが **空**、置き換えは実行されません。
+次のリクエストでは、インポートするパッケージを取得します。 ペイロードは置換のマップで、エントリが存在する場合、キーは `artifactId` はパッケージで指定され、代わりには値が使用されます。 マップまたはペイロードが **空**、置き換えは実行されません。
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -775,7 +775,6 @@ curl -X POST \
 
 | プロパティ | 説明 | タイプ | 必須 |
 | --- | --- | --- | --- |
-| `id` | パッケージの ID。 | 文字列 | ○ |
 | `alternatives` | `alternatives` は、ソースサンドボックスアーティファクトの既存のターゲットサンドボックスアーティファクトへのマッピングを表します。 既に存在するので、インポートジョブでは、ターゲットサンドボックスにこれらのアーティファクトが作成されるのを防ぎます。 | 文字列 | × |
 
 **応答**
@@ -1039,7 +1038,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| {QUERY_PARAMS} | 結果をフィルタリングする条件となるクエリパラメーター（オプション）。詳しくは、 [クエリパラメーター](./appendix.md) を参照してください。 |
+| {QUERY_PARAMS} | 結果をフィルタリングするためのオプションのクエリパラメーターです。 詳しくは、 [クエリパラメーター](./appendix.md) を参照してください。 |
 
 **リクエスト**
 
