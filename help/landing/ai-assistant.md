@@ -5,9 +5,9 @@ badge: アルファ版
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
+source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '2383'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >Adobe Experience Platformのアシスタントは現在Alpha中です。 機能とドキュメントは変更される場合があります。
 
-Adobe Experience Platformのアシスタントは、Experience PlatformとReal-time Customer Data Platformの概念、およびオブジェクトの使用方法に関する情報をナビゲートおよび理解するために使用できる UI 機能です。
+アシスタントは、Adobe Experience PlatformとReal-time Customer Data Platformの概念、およびオブジェクトに関する使用情報をナビゲートおよび理解するために使用できる UI 機能です。
 
 次のような情報を Assistant に問い合わせることができます。
 
@@ -26,7 +26,7 @@ Adobe Experience Platformのアシスタントは、Experience PlatformとReal-t
 * 組織内の既存のデータオブジェクトのステータスと指標。
 * 使用例とニュアンスを参照して、属性、データセット、宛先、スキーマ、セグメント、ソースなどのデータオブジェクトをより深く理解してください。
 
-このドキュメントでは、アシスタントにアクセスして使用し、Experience PlatformとReal-Time CDPの概念に関する質問や回答を受け取る方法に関する情報を提供します。
+以下のガイドを読んで、アシスタントを使用してExperience PlatformとReal-Time CDPのワークフローをナビゲートし理解する方法を学びます。
 
 >[!BEGINSHADEBOX]
 
@@ -55,85 +55,93 @@ Assistant に問い合わせる前に考慮すべき質問は 2 つあります�
 
 >[!ENDSHADEBOX]
 
-## UI でのExperience Platform用アシスタントへのアクセス
+## Experience PlatformUI のアシスタントにアクセス
 
-アシスタントには、Experience PlatformUI のヘッダーナビゲーションからアクセスできます。
+アシスタントを起動するには、 **[!UICONTROL アシスタントアイコン]** をExperience PlatformUI の上部のヘッダーから。
 
-を選択します。 **[!UICONTROL アシスタントアイコン]** ヘッダーからアシスタントパネルを起動します。
+![Experience Platformのホームページ（「アシスタント」アイコンを選択し、「アシスタント」インターフェイスを開く）。](./images/ai-assistant/ai-assistant.png)
 
-![アシスタントアイコンが選択されたExperience PlatformUI のホームページ。](./images/ai-assistant/ai-assistant.png)
+Assistant のインターフェイスが表示され、すぐに使い始めるための情報が提供されます。 以下に示すオプションを使用できます。 [!UICONTROL 開始するアイデア] 次のような質問やコマンドに答えるには：
 
-<!-- +++Use immersive mode
+* [!UICONTROL アクティブ化されているセグメントはどれですか？]
+* [!UICONTROL スキーマとは]
+* [!UICONTROL Real-Time CDPの一般的な使用例]
 
-To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
+![アシスタントの「開始するアイデア」の節。](./images/ai-assistant/ideas-to-get-started.png)
 
-![select-immersive](./images/ai-assistant/select-immersive.png)
+アシスタントを操作するには、入力ボックスを使用してクエリやコマンドを入力します。 また、(**`+`**) 記号を使用してオートコンプリート機能とブックマークアイコンを使用し、ブックマークされたクエリやコマンドにアクセスできます。
 
-A dedicated pop-up interface for Assistant appears at the center of your screen.
+![アシスタントの入力ボックスがハイライト表示されています。](./images/ai-assistant/interact.png)
 
-![immersive-mode](./images/ai-assistant/immersive-mode.png)
-
-+++
-
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
-
-### 使用例：アシスタントを使用して、スキーマ作成プロセスを迅速に進めます {#example-use-case}
+## 使用例：アシスタントを使用して、スキーマ作成プロセスを迅速に進めます
 
 >[!NOTE]
 >
->次のワークフローの例では、 ExperienceEvent スキーマの作成プロセスを使用して、Experience PlatformUI を使用する際にアシスタントを使用する方法を示しています。
+>次に示すワークフローの例では、エクスペリエンスイベントスキーマの作成プロセスを使用して、Experience PlatformUI を使用する際にアシスタントを使用する方法を示しています。
 
-例えば、 **イベントスキーマでのデバイスの取引**. ExperienceEvent スキーマの作成プロセスで、 `eventType` フィールドに入力します。 この時点で、ワークフローを終了し、 [スキーマ構成の基本](../xdm/schema/composition.md)または、アシスタントを使用して、質問に対する直接の回答を取得できます。
+例えば、 **イベントスキーマでのデバイスの取引**. エクスペリエンスイベントスキーマの作成プロセスで、 `eventType` フィールドに入力します。 「この時点で、ワークフローを終了し、 [スキーマ構成の基本](../xdm/schema/composition.md) ドキュメントを参照するか、Assistant を使用して質問への回答を取得し、Assistant が推奨するドキュメントリンクを通じて追加のリソースを見つけることができます。」
 
 まず、表示されるテキストボックスに質問を入力します。 以下の例では、Assistant が次の質問を提供しています。**ExperienceEvent スキーマの eventType フィールドとは何ですか。**&quot;
 
-![次の質問を含むExperience Platformアシスタントが、ExperienceEvent スキーマの eventType フィールドとは何ですか。](./images/ai-assistant/question.png)
+![次の質問を含むExperience Platformのアシスタントが、ExperienceEvent スキーマの eventType フィールドとは何ですか。](./images/ai-assistant/question.png)
 
 次に、アシスタントがナレッジベースに問い合わせて回答を計算します。 しばらくすると、Assistant は回答と関連する提案を返します。この情報は、フォローアッププロンプトとして使用できます。
 
-所定の回答は、参照されているエンティティへのハイパーリンクを提供します。 以下の例では、 **[!UICONTROL スキーマ]** 参照されるスキーマのリストを表示するには、または **[!UICONTROL セグメント]** をクリックして、参照されているセグメントのリストを表示します。
-
 ![前のクエリに対する回答を含むExperience Platformのアシスタント。](./images/ai-assistant/answer.png)
 
-アシスタントでは、回答のソースを表示して、回答を検証する方法を提供します。 概念に関する質問にはドキュメントへのリンクが提供されていますが、データ使用に関する質問は、回答の計算方法を示す SQL クエリを使用して検証できます。
+アシスタントからの応答を受け取ったら、様々なオプションから選択して、続行する方法を決定できます。
 
-![回答を返した後にアシスタントが提供するオプション。](./images/ai-assistant/options.png)
+### クエリを保存 {#save-your-query}
 
-### 質問をフォローアップ {#follow-up-question}
++++クエリの保存方法の例を表示するには、「 」を選択します
 
-+++選択すると、フォローアップの質問の例が表示されます
+クエリを保存するには、質問の横にあるブックマークアイコンを選択します。
 
-フォローアップの質問をして、特定のトピックに関する詳細を確認できます。 次の例では、アシスタントに対して、eventType をセグメント化でどのように使用できるかを尋ねられます。
+![選択したブックマークのスクリーンショット。](./images/ai-assistant/save-your-query.png)
 
-![Experience Platformのアシスタントに表示されるフォローアップの質問と回答。](./images/ai-assistant/follow-up-question.png)
+保存したクエリにアクセスするには、入力ボックスの下のブックマークアイコンを選択し、実行するクエリを選択します。
 
-+++
-
-### データ使用に関する質問 {#data-usage-question}
-
-+++選択すると、データ使用に関する質問の例が表示されます
-
-また、データの使用に関してアシスタントに質問することもできます。 データの使用に関して質問する場合、アシスタントがクエリに回答するには、アクティブなサンドボックスにいる必要があります。
-
-データ使用情報に関する応答の場合、Assistant は該当するエンティティへのリンクを提供します。 また、Assistant では、その回答の計算方法に関する説明も提供されます。
-
-![ユーザーにいくつのセグメントがあるかを尋ねる、データ使用に関する質問。](./images/ai-assistant/data-usage-question.png)
+![ブックマークアイコンのスクリーンショットと保存済みクエリのリスト。](./images/ai-assistant/bookmarks.png)
 
 +++
 
-### マルチターン {#multi-turn}
+### サンドボックスでのデータの表示 {#view-data-in-your-sandbox}
 
-+++選択すると、マルチターンの例が表示されます
++++選択して例を表示
 
-Assistant の複数回転機能を使用して、体験中により自然な会話をすることができます。 アシスタントは、以前のインタラクションからコンテキストを推論できることを前提とした、フォローアップの質問に回答できます。
+クエリに応じて、Assistant はサンドボックス内のデータに関する追加情報を提供します。 クエリへの応答がサンドボックスにどのように適用されるかを表示するには、「 」を選択します。 **[!UICONTROL サンドボックス内].**
 
-次の例では、セグメントの合計数に関する以前のクエリの後に、Assistant に組織内の既存のセグメントのリストを表示するよう求められます。
+この手順の間、Assistant は、該当する特定のオブジェクトの UI ページへの直接リンクを提供できます。 以下の例では、Assistant は、 [!UICONTROL スキーマ] および [!UICONTROL セグメント] UI ページ。
 
-![](./images/ai-assistant/multi-turn-one.png)
+![「サンドボックス内」オプションのスクリーンショット。](./images/ai-assistant/in-your-sandbox.png)
 
-次に、アシスタントが別のフォローアップリクエストを受け取ります。 今回は、Assistant が応答して、それぞれのサイズで並べられた既存のセグメントをリストします。
++++
 
-![](./images/ai-assistant/multi-turn-two.png)
+### 応答を検証 {#verify-the-response}
+
++++選択すると、ソースの表示方法の例が表示されます
+
+引用を表示し、アシスタントの応答を検証するには、 **[!UICONTROL ソースを表示]**. Assistant は、応答を裏付けるドキュメントへのリンクを提供します。 Assistant が提供するクエリを使用することもできます。 [!UICONTROL 関連する提案] を参照して、元のクエリに関連するトピックをさらに詳しく調べます。
+
+![「ソースを表示」のスクリーンショット。](./images/ai-assistant/show-sources.png)
+
++++
+
+### データの使用とビジュアライゼーション {#data-usage-and-visualization}
+
++++「 」を選択すると、データ使用に関する質問とデータの視覚化の例が表示されます
+
+データの使用状況については、アシスタントに問い合わせることができます。 組織内のデータに関するデータ使用に関する質問に回答するには、アシスタントがアクティブなサンドボックスにいる必要があります。
+
+![データの使用に関する質問に従います。](./images/ai-assistant/data-usage-question.png)
+
+データ使用に関する質問が表示されると、Assistant では、その回答の計算方法に関する説明も表示されます。 以下の例では、1,000 を超えるプロファイルとそれぞれのアクティベーションステータスを持つセグメントを表示するために実行した手順の概要をアシスタントが説明します。
+
+![アシスタントによる回答の計算方法を示すセグメントに関する質問に従います。](./images/ai-assistant/results-explained.png)
+
+さらに、Assistant はグラフをレンダリングしてデータを視覚化します。 また、クエリにフィルターを指定したり、変更を加えたりできます。また、含めるフィルターに基づいて結果をレンダリングするように Assistant に指示できます。 例えば、Assistant に対し、作成日の順にカウントセグメントのトレンドを表示するように依頼したり、合計プロファイル数がゼロのセグメントを削除したり、データを表示する際には整数ではなく月の名前を使用したりできます。
+
+![データのビジュアライゼーションを示す質問に従います。](./images/ai-assistant/data-visualization.png)
 
 +++
 
@@ -143,13 +151,29 @@ Assistant の複数回転機能を使用して、体験中により自然な会�
 
 オートコンプリート関数を使用して、サンドボックスに存在するデータオブジェクトのリストを受け取ることができます。 オートコンプリートの推奨事項は、セグメント、スキーマ、データセット、ソース、宛先の各ドメインで使用できます。
 
-オートコンプリートを使用するには、プラス記号 (**`+`**) を含める必要があります。 または、プラス記号 (**`+`**) をクリックします。 次に、ウィンドウが開き、サンドボックスに存在する推奨データオブジェクトのリストが表示されます。
+オートコンプリートを使用するには、プラス記号 (**`+`**) をクエリ内でクリックします。 別の方法として、プラス記号 (**`+`**) をクリックします。 ウィンドウが開き、サンドボックス内の推奨データオブジェクトのリストが表示されます。
 
-![](./images/ai-assistant/autocomplete-options.png)
+![オートコンプリートの例](./images/ai-assistant/auto-complete-one.png)
 
 次に、クエリを実行して質問を完了し、質問を送信するデータオブジェクトを選択します。
 
-![](./images/ai-assistant/autocomplete-question.png)
+![質問と回答を含むオートコンプリートの例](./images/ai-assistant/auto-complete-two.png)
+
++++
+
+### マルチターンを使用 {#use-multi-turn}
+
++++選択すると、マルチターンの例が表示されます
+
+Assistant の複数回転機能を使用して、体験中により自然な会話をすることができます。 アシスタントは、与えられたフォローアップの質問に答えることができます。 このコンテキストは、以前のインタラクションから推論できます。
+
+次の例では、現在の組織内のデータフローの合計数に関してアシスタントが要求されます。
+
+![マルチターンの例](./images/ai-assistant/multi-turn-one.png)
+
+次に、アシスタントが別のフォローアップリクエストを受け取ります。 今回は、Assistant が、組織に現在存在するデータフローをリストして応答します。
+
+![質問と回答を含むマルチターンの例](./images/ai-assistant/multi-turn-two.png)
 
 +++
 
@@ -195,18 +219,6 @@ Assistant の複数回転機能を使用して、体験中により自然な会�
 | オブジェクト参照 | Experience Platformオブジェクトまたはそのプロパティを取得またはアクセスします。 | <ul><li>関連付けられたスキーマを持たないデータセット</li><li>使用する属性のリスト {SEGMENT_NAME}?</li><li>プロファイルが有効で、作成後に変更されていないスキーマのリストを教えてください。</li><li>先週変更されたセグメントは何ですか。</li><li>同じセグメント定義を持つセグメントと作成日をリストします。</li><li>どのデータセットが有効か、および各データセットから作成されたセグメント数も含まれます。</li><li>データセット XYZ に関連付けられているソースアカウントは何ですか。</li><li>セグメント定義と変更日を表示する {SEGMENT_NAME}.</li></ul> |
 
 +++
-
-## 応答を検証 {#verify-the-response}
-
-アシスタントが返す応答を確認するには、様々な方法があります。
-
-### ドキュメントの引用 {#citations}
-
-Assistant は、すべての応答で、確認や詳細に関して参照できる引用文を提供します。
-
-選択 **[!UICONTROL ソースを表示]** ：応答を計算するためにアシスタントが参照するドキュメントへのリンクのリスト。 参照ドキュメントへのリンクを選択すると、そのページの関連セクションに移動し、特定の情報が強調表示されます。
-
-![アシスタントに表示されるソースへのリンク。](./images/ai-assistant/show-sources.png)
 
 ## フィードバックの提供 {#feedback}
 
@@ -312,7 +324,7 @@ You must phrase your questions clearly and scope them within a product, applicat
 
 アシスタントは、何ができるかを不正確なインプレッションを与える場合があります。 次のタイプの質問に対して、間違って回答する場合があります。
 
-| 質問の例 | 注釈 |
+| 質問の例 | 注意 |
 | --- | --- |
 | 「～に関する質問に答えていただけますか？ {ENTITY}?」 | アシスタントがインデックス内の特定のエンティティを参照する単一のページを見つけられる限り、はいに応答します。 |
 | 「知ってる？ **x** 言語？」 | アシスタントは現在、英語のみをサポートしていますが、基になるモデルで英語をサポートできるので、「はい」と答える場合があります。 |
