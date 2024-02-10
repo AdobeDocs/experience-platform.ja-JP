@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービスの概要
 description: クエリサービスの役割 (Experience Platform内 ) を説明します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 25%
+source-wordcount: '860'
+ht-degree: 20%
 
 ---
 
@@ -21,7 +21,16 @@ Adobe Experience Platform は様々なソースからデータを取得します
 
 ## クエリサービスの使用 {#usage}
 
-データを分析するには、クエリサービスのユーザーインターフェイスと、SQL クエリを作成できる RESTful API を使用します。 ユーザーインターフェイスを使用すると、クエリを作成して実行したり、以前に実行したクエリを表示したり、組織内のユーザーが保存したクエリにアクセスしたりできます。サンドボックスと同様にクエリエディターを使用して、より広範なデータセットに対してクエリを実行する前にクエリをテストできます。 詳しくは、 [クエリサービスユーザーインターフェイスガイド](ui/overview.md) UI の使用に関する詳細情報を参照してください。 RESTful API も同様のエクスペリエンスを提供します。 クエリサービス API を使用して、クエリの書き込みと実行、将来の使用と繰り返しに備えたクエリのスケジュール、書き込むクエリのテンプレートの作成をプログラムで実行できます。 クエリサービス API の使用に関する詳細については、「[クエリサービス開発者向けガイド](api/getting-started.md)」を参照してください。
+データを分析するには、クエリサービスのユーザーインターフェイスまたは RESTful API を使用して SQL クエリを作成し、実行します。
+クエリサービス UI を使用すると、クエリの書き込み、実行、スケジュール設定、以前に実行したクエリの表示、組織内のユーザーが保存したクエリへのアクセスをおこなうことができます。 クエリエディターを使用して、より広いデータセットに対してクエリを実行する前に、クエリをテストすることもできます。 詳しくは、 [クエリサービス UI ガイド](ui/overview.md) :UI 機能の概要を示します。
+
+RESTful API も同様のエクスペリエンスを提供します。 クエリサービス API を使用すると、クエリの書き込みと実行、適応させるクエリのテンプレートの作成と保存、クエリの自動実行スケジュールの設定をプログラムで実行できます。 詳しくは、 [クエリサービス開発者ガイド](api/getting-started.md) クエリサービス API の使用に関する詳細。
+
+クエリサービス機能の使用をすぐに開始するには、次のドキュメントを読むことをお勧めします。
+
+- [クエリ実行の一般的なガイダンス](./best-practices/writing-queries.md)
+- [クエリサービスの SQL 構文](./sql/syntax.md)
+- [SQL を使用した派生データセットの作成](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## クエリサービスと Experience Platform サービス {#experience-platform-services}
 

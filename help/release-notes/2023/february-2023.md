@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2023年2月）
 description: Adobe Experience Platform の 2023年2月のリリースノートです。
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
 source-wordcount: '1255'
 ht-degree: 97%
@@ -102,7 +102,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 | 機能 | 説明 |
 | --- | --- |
-| SQL によるプロファイルでのデータセットの有効化 | [CTAS クエリで LABEL を使用して、データセットを「プロファイル対応」にする](../../query-service/sql/syntax.md#create-table-as-select)か、ALTER を使用して、プロファイルで有効になるように既存のデータセットを更新します。この拡張 SQL 構成を使用して、リアルタイム顧客プロファイルビジネスの使用例に対して派生データセットをシームレスにサポートできます。 詳しくは、 [派生データセットドキュメントのシームレスな SQL フロー](../../query-service/data-distiller/derived-datasets/seamless-sql-flow.md) を参照してください。 |
+| SQL によるプロファイルでのデータセットの有効化 | [CTAS クエリで LABEL を使用して、データセットを「プロファイル対応」にする](../../query-service/sql/syntax.md#create-table-as-select)か、ALTER を使用して、プロファイルで有効になるように既存のデータセットを更新します。この拡張 SQL 構成を使用して、リアルタイム顧客プロファイルビジネスの使用例に対して派生データセットをシームレスにサポートできます。 詳しくは、 [派生データセットドキュメントのシームレスな SQL フロー](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) を参照してください。 |
 | スケジュール済みクエリの監視 | [「スケジュール済みクエリ」タブ](../../query-service/ui/monitor-queries.md)を使用すると、クエリの実行に関する重要な情報を見つけたり、アラートを購読したりできます。 スケジュール詳細のクエリ、ステータス、クエリが失敗した場合のエラーメッセージ／コードを監視できます。 |
 | オートコンプリート機能の切り替え | [クエリエディターのオートコンプリート機能を切り替えると](../../query-service/ui/user-guide.md#auto-complete)、特定のメタデータコマンドが削除され、処理時間が短縮されます。この機能では、クエリの記述時に、クエリの SQL キーワード候補とテーブル詳細が自動的に提示されます。 |
 | データセットのサンプル | クエリでサンプリングレートを指定し、[データセットサンプルを使用して、均一なランダムサンプルを作成する](../../query-service/key-concepts/dataset-samples.md)か、特定の条件に基づいて条件付きサンプルを作成します。 |
