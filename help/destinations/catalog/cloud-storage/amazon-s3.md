@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 48%
+ht-degree: 53%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 48%
 宛先を認証するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 宛先に接続]**. Amazon S3 の宛先は、次の 2 つの認証方法をサポートします。
 
 * アクセスキーと秘密鍵の認証
-* 仮定された役割認証
+* 想定される役割認証
 
 #### アクセスキーと秘密鍵の認証
 
@@ -89,12 +89,12 @@ ht-degree: 48%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
->title="仮定された役割認証"
->abstract="アカウントキーと秘密鍵をAdobeと共有しない場合は、この認証タイプを使用します。 代わりに、Experience Platformは、役割ベースのアクセス権を使用してAmazon S3 の場所に接続します。 AWSで作成した役割の ARN を、Adobeユーザーに貼り付けます。 このパターンは、次のようになります。 `arn:aws:iam::800873819705:role/destinations-role-customer` "
+>title="想定される役割認証"
+>abstract="アカウントキーと秘密鍵をアドビと共有したくない場合は、この認証タイプを使用します。代わりに、Experience Platform は、役割ベースのアクセス権を使用して Amazon S3 の場所に接続します。アドビユーザー用に AWS で作成した役割の ARN をペーストします。このパターンは、`arn:aws:iam::800873819705:role/destinations-role-customer` のようになります "
 
 ![想定される役割認証を選択する際の必須フィールドの画像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-アカウントキーと秘密鍵をAdobeと共有しない場合は、この認証タイプを使用します。 代わりに、Experience Platformは、役割ベースのアクセス権を使用してAmazon S3 の場所に接続します。
+アカウントキーと秘密鍵をアドビと共有したくない場合は、この認証タイプを使用します。代わりに、Experience Platformは、役割ベースのアクセス権を使用してAmazon S3 の場所に接続します。
 
 これをおこなうには、AWSコンソールで、とのAdobeを想定するユーザーを作成する必要があります [必要な権限](#required-s3-permission) を使用してAmazon S3 バケットに書き込みます。 の作成 **[!UICONTROL 信頼済みエンティティ]** AWSのAdobeアカウント **[!UICONTROL 670664943635]**. 詳しくは、 [AWSのロール作成に関するドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
