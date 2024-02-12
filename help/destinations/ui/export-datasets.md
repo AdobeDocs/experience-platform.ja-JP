@@ -3,7 +3,7 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 4d662bc8ec8729654589c8675c5e598b94957ed7
+source-git-commit: d6b3dd7de1e8b5247bf692d1654fc4506ab4a471
 workflow-type: tm+mt
 source-wordcount: '1838'
 ht-degree: 51%
@@ -56,7 +56,7 @@ ht-degree: 51%
   <tr>
     <td>Customer Journey Analytics</td>
     <td>すべて</td>
-    <td> ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取得または収集した後、Experience PlatformUI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。 必要な権限については、 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Customer Journey Analytics文書</a>.  <br> <b>利用可否に関する注意：</b> データセットをクラウドに書き出す機能は、リリースのテスト段階に限定されており、お使いの環境ではまだ使用できない場合があります。 機能が一般に利用できるようになったら、このメモは削除されます。Customer Journey Analyticsのリリース手順については、 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics機能リリース</a>. </td>
+    <td> <p> ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取得または収集した後、Experience PlatformUI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。 必要な権限については、 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Customer Journey Analytics文書</a>. </p> <p> <b>利用可否に関する注意：</b> データセットをクラウドに書き出す機能は、リリースのテスト段階に限定されており、お使いの環境ではまだ使用できない場合があります。 機能が一般に利用できるようになったら、このメモは削除されます。Customer Journey Analyticsのリリース手順については、 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics機能リリース</a>. </p> </td>
   </tr>
   <tr>
     <td>Data Distiller</td>
