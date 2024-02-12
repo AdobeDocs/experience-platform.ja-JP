@@ -4,10 +4,10 @@ title: Experience Platform のカスタムアクセシビリティソリュー�
 type: Documentation
 description: Adobe Experience Platform ユーザーインターフェイス内のカスタムアクセシビリティソリューションについて詳しく説明します。
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 94%
+source-wordcount: '1663'
+ht-degree: 92%
 
 ---
 
@@ -142,6 +142,10 @@ Experience Platform ユーザーインターフェイス内のすべてのテー
 
 * クエリサービスエディター UI のカラーコントラストは、アクセシビリティのコンプライアンスを満たしています。
 * キーボードナビゲーションは、エディター UI の外部でサポートされています。エディター UI は、CodeMirror を埋め込んだものです。
+
+>[!NOTE]
+>
+>クエリエディターでは **タブ** キーはデフォルトで設定されています。 を呼び出すには **タブ** 機能を使用する場合は、 **Escape** キーを押し、 **タブ** すぐ後ろに 押す **タブ** もう一度、フォーカスをエディターの外に移動します。
 
 ## ソースと宛先の「システム表示」タブ
 
