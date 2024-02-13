@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ストリーミング取り込みの概要
 description: Adobe Experience Platformのストリーミング取り込みを使用すると、ユーザーはクライアントおよびサーバーサイドのデバイスから、リアルタイムでExperience Platformにデータを送信できます。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 5adcdf3108fbbaee9e81dc737ae67b563e4dbf1d
+source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
 workflow-type: tm+mt
-source-wordcount: '348'
-ht-degree: 18%
+source-wordcount: '357'
+ht-degree: 16%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] 個々の�
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### プロファイルレコードと のストリーミング[!DNL ExperienceEvents]
+### プロファイルレコードのストリーミングおよび [!DNL ExperienceEvents]
 
 ストリーミング取り込みを使用すると、ユーザーはプロファイルレコードをストリーミングし、 [!DNL ExperienceEvents] から [!DNL Platform] リアルタイムのパーソナライゼーションの促進に役立つ秒数。 ストリーミング取得 API に送信されるすべてのデータは、 [!DNL Data Lake].
 
@@ -39,7 +39,7 @@ Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] 個々の�
 
 | 宛先 | 予想遅延時間 |
 | --------- | ---------------- |
-| リアルタイム顧客プロファイル | &lt; 15 分 |
+| リアルタイム顧客プロファイル | 第 95 百分位で 15 分未満 |
 | データレイク | &lt; 60 分 |
 
 ## ストリーミング取り込み時の 1 秒あたりのリクエスト (RPS) ガイダンス
