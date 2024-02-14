@@ -3,9 +3,9 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 2fd721084ff8b3cf24b585a2179b1efe34de4c83
+source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1849'
 ht-degree: 51%
 
 ---
@@ -239,3 +239,4 @@ Adobe Analytics の [宛先ワークフローに接続](/help/destinations/ui/co
 * API で作成されたデータセットは、現在、書き出しに使用できません。
 * 宛先に書き出されるデータセットの削除は、現在、UI で禁止されていません。 宛先に書き出されるデータセットは削除しないでください。 データセットを削除する場合は、まず、宛先データフローから[データセットを削除](#remove-dataset)します。
 * データセット書き出しの監視指標は、現在、プロファイル書き出しの数値と混在しているので、実際の書き出し数値を反映していません。
+* タイムスタンプが 365 日より古いデータは、データセットエクスポートから除外されます。 詳しくは、 [スケジュールされたデータセットエクスポートのガードレール](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
