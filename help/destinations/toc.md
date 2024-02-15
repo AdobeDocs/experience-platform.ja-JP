@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: ed3d672c2f6c06259c341c87451d049d00a41268
+source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1196'
 ht-degree: 91%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 91%
       * [Decibel 拡張機能](./catalog/analytics/decibel.md)
       * [Demandbase 拡張機能](./catalog/analytics/demandbase.md)
       * [DialogTech 拡張機能](./catalog/analytics/dialogtech.md)
+      * [Gainsight PX](./catalog/analytics/gainsight-px.md)
       * [Google Global Site Tag 拡張機能](./catalog/analytics/gtag-analytics.md)
       * [Google Universal Analytics 拡張機能](./catalog/analytics/google-universal-analytics.md)
       * [JW Player Analytics（ベータ版）拡張機能](./catalog/analytics/jw-player-analytics.md)
