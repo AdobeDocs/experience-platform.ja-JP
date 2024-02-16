@@ -4,14 +4,18 @@ solution: Experience Platform
 title: SFTP ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して SFTP サーバーを Adobe Experience Platform に接続する方法について説明します。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 100%
+source-wordcount: '750'
+ht-degree: 94%
 
 ---
 
 # SFTP コネクタ
+
+>[!IMPORTANT]
+>
+>The [!DNL SFTP] Adobe Experience Platformが接続するサーバーは、chunking（単一のファイルへの複数の接続を意味する）をサポートできる必要があります。 次の場合、 [!DNL SFTP] サーバーが chunking をサポートしていない場合は、エラーが発生してファイルの取り込みが妨げられる可能性があります。
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 
