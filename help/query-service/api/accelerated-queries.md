@@ -2,9 +2,9 @@
 title: 高速クエリエンドポイント
 description: クエリ高速化ストアにステートレスでアクセスし、集計データに基づいて結果をすばやく返す方法を説明します。このドキュメントでは、クエリサービス高速クエリエンドポイントに対する HTTP リクエストと応答のサンプルを示します。
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: ea2a1cddf299bec750875c4a9125cdd065f18d8b
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '560'
 ht-degree: 97%
 
 ---
@@ -40,7 +40,7 @@ POST /accelerated-queries
 次のリクエストでは、リクエスト本文の SQL クエリを高速ストアに送信します。
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
@@ -60,7 +60,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 この代替リクエストでは、リクエスト本文のテンプレート ID を高速ストアに送信します。対応するテンプレートの SQL を使用して、高速ストアに対するクエリを実行します。
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
