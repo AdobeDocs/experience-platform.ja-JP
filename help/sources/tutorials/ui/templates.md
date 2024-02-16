@@ -3,7 +3,7 @@ description: Adobe Experience Platform UI でテンプレートを使用して�
 title: UI のテンプレートを使用してソースのデータフローを作成する
 badge1: 「ベータ版」
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 44%
@@ -51,7 +51,7 @@ Adobe Experience Platform には、データ取り込みプロセスを高速化
 >id="platform_sources_templates_accounttype"
 >title="ビジネスタイプを選択する"
 >abstract="ユースケースに適したビジネスタイプを選択します。アクセス権は、Real-time Customer Data Platform サブスクリプションアカウントによって異なる場合があります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja" text="Real-time CDP の概要"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP の概要"
 
 Platform UI で、「 」を選択します。 **[!UICONTROL ソース]** 左側のナビゲーションから、 [!UICONTROL ソース] workspace を参照し、Experience Platformで使用可能なソースのカタログを確認します。
 
