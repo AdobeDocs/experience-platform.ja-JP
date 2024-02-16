@@ -2,9 +2,9 @@
 title: レポートスイートデータ用のAdobe Analytics Source Connector
 description: このドキュメントでは、Analytics の概要と Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
+source-git-commit: 7812cfa44e1fcbe71d7b6231dc0b31c727c93a31
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1145'
 ht-degree: 10%
 
 ---
@@ -52,11 +52,11 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 | 新しいデータの追加先 [!DNL Real-Time Customer Profile] (A4T) **not** 有効 ) | &lt; 2 分 |
 | 新しいデータの追加先 [!DNL Real-Time Customer Profile] (A4T) **次に該当** 有効 ) | 最大 30 分 |
 | データレイクの新しいデータ | &lt; 2.25 時間 |
-| を使用しない CJA への新しいデータ [ステッチ](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3.75 時間 |
-| ステッチを使用した CJA への新しいデータ | 7 時間未満 |
+| を使用しない新規データのCustomer Journey Analytics [ステッチ](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3.75 時間 |
+| ステッチを使用したCustomer Journey Analyticsへの新しいデータ | 7 時間未満 |
 | 100 億未満のイベントのバックフィル | &lt; 4 週間 |
 
-CJA の待ち時間について詳しくは、以下を参照してください。 [Customer Journey Analyticsガードレール](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
+Customer Journey Analyticsの待ち時間について詳しくは、以下を参照してください。 [Customer Journey Analyticsガードレール](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 実稼動サンドボックスの Analytics バックフィルのデフォルト値は 13 ヶ月です。 非実稼動用サンドボックスの Analytics データの場合、バックフィルは 3 ヶ月に設定されます。 上記の表に示した 100 億件のイベントの制限は、予想される待ち時間に厳密に関係しています。
 
