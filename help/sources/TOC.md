@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 97%
+source-wordcount: '1012'
+ht-degree: 96%
 
 ---
 
@@ -296,6 +296,7 @@ ht-degree: 97%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - データパートナー {#data-partner}
          - [企業 ID の解決](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom 見込みデータのインポート](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - e コマース {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
