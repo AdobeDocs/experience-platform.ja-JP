@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: 基本を学ぶ
+title: ユースケースプレイブックの概要
 description: ユースケースプレイブック機能の基本を学ぶ方法を説明します。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
+source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '947'
 ht-degree: 15%
 
 ---
