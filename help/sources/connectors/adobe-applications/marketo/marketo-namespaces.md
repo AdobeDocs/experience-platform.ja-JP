@@ -2,10 +2,10 @@
 title: B2B 名前空間とスキーマ
 description: このドキュメントでは、B2B ソースコネクタを作成する際に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 11%
+source-wordcount: '1620'
+ht-degree: 10%
 
 ---
 
@@ -68,7 +68,7 @@ The [!DNL Runner] インターフェイスが表示されます。 ここから�
 
 ## B2B 名前空間
 
-ID 名前空間は、 [[!DNL Identity Service]](../../../../identity-service/home.md) id のコンテキストまたはタイプを区別するために役立つ 完全修飾 ID には、ID 値と名前空間が含まれています。詳しくは、 [名前空間の概要](../../../../identity-service/features/namespaces.md) を参照してください。
+ID 名前空間は、 [[!DNL Identity Service]](../../../../identity-service/home.md) id のコンテキストを区別するのに役立つ 完全修飾 ID には、ID 値と名前空間が含まれます。 詳しくは、 [名前空間の概要](../../../../identity-service/features/namespaces.md) を参照してください。
 
 B2B 名前空間は、エンティティのプライマリ ID で使用されます。
 
