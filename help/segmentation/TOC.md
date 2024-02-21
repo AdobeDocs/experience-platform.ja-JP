@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
-source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
+source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 94%
+source-wordcount: '183'
+ht-degree: 89%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 94%
 
 - [セグメント化サービスの概要](home.md)
 - [セグメント化のデータタイプ](data-types.md)
-- [セグメンテーションガードレール](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [セグメント化ガードレール](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentation API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
@@ -39,7 +39,8 @@ ht-degree: 94%
    - [見込み客オーディエンス](ui/prospect-audience.md)
    - [エッジセグメント化](ui/edge-segmentation.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
-   - [ストリーミングセグメント化（ビデオ）](video/streaming-segmentation-overview.md)
+   - [ストリーミングのセグメント化（ビデオ）](video/streaming-segmentation-overview.md)
+   - [年時間制約の更新を無視](ui/ignore-year.md)
    - [時間制約のリファクタリング](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
       - [Segment Match の概要](ui/segment-match/overview.md)

@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: ad3b739f300aa51f6f12c566ab49fafedb90be23
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 83%
+source-wordcount: '317'
+ht-degree: 82%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 83%
    - [ユーザーのページビューのリスト](use-cases/list-visitor-sessions.md)
    - [ページビュー別の訪問者のリスト](use-cases/visitors-by-number-of-page-views.md)
    - [傾向スコア](use-cases/propensity-score.md)
-   - [ラムダ関数の例：類似したレコードを取得する](use-cases/retrieve-similar-records.md)
+   - [上位関数を使用して類似したレコードを取得](use-cases/retrieve-similar-records.md)
    - [分析データからのマーチャンダイジング変数の返しと使用](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [訪問者のロールアップレポートの表示](use-cases/roll-up-report-of-a-visitor.md)
@@ -106,6 +106,7 @@ ht-degree: 83%
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)
    - [アドビ定義関数](sql/adobe-defined-functions.md)
+   - [上位関数](sql/higher-order-functions.md)
    - [Spark SQL 関数](sql/spark-sql-functions.md)
    - [メタデータコマンド](sql/metadata.md)
    - [準備済み文](sql/prepared-statements.md)

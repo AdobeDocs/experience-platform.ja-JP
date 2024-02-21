@@ -4,9 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告などに使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1202'
 ht-degree: 91%
 
 ---
@@ -139,6 +139,8 @@ ht-degree: 91%
    * データ管理プラットフォームの宛先 {#data-management}
       * [データ管理プラットフォーム（DMP）の宛先の概要](./catalog/data-management/overview.md)
       * [Audience Manager DIL 拡張機能](./catalog/data-management/aam-dil-extension.md)
+   * e コマースの宛先 {#ecommerce}
+      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * メールの宛先 {#email}
       * [Bizible 拡張機能](./catalog/email/bizible.md)
       * [Marketo 拡張機能](./catalog/email/marketo.md)
@@ -149,6 +151,7 @@ ht-degree: 91%
       * [Adobe Campaign 接続](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 接続](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Mailchimp の興味カテゴリ](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp タグ](./catalog/email-marketing/mailchimp-tags.md)
       * [（API）Oracle Eloqua 接続](./catalog/email-marketing/oracle-eloqua-api.md)
       * [（ファイル）Oracle Eloqua 接続](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys 接続](./catalog/email-marketing/oracle-responsys.md)

@@ -2,12 +2,12 @@
 keywords: メール;メール;メール;メールの宛先
 title: メールマーケティングの宛先の概要
 type: Tutorial
-description: メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。宛先としてサポートされる ESP をExperience Platformします。
+description: 電子メールサービスプロバイダー (ESP) を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。 宛先としてサポートされる ESP をExperience Platformします。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 66%
+source-wordcount: '376'
+ht-degree: 60%
 
 ---
 
@@ -24,10 +24,11 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Mailchimp の興味カテゴリ](mailchimp-interest-categories.md)
+* [Mailchimp タグ](mailchimp-tags.md)
 * [(API)OracleEloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [（ファイル）OracleEloqua](oracle-eloqua.md)
-* [(ファイル) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
+* [（ファイル） [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [SendGrid](sendgrid.md)

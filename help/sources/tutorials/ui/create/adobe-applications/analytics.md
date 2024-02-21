@@ -2,10 +2,10 @@
 title: UI での Adobe Analytics ソースコネクタの作成
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2695'
-ht-degree: 41%
+source-wordcount: '2755'
+ht-degree: 40%
 
 ---
 
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### リアルタイム顧客プロファイルのフィルタリング {#filtering-for-profile}
+## リアルタイム顧客プロファイルのフィルタリング {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 >[!ENDSHADEBOX]
 
-#### 行レベルのフィルター
+### 行レベルのフィルター
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### 列レベルのフィルター
+### 列レベルのフィルター
 
 選択 **[!UICONTROL 列フィルター]** 列レベルのフィルターを適用するには、ヘッダーからを選択します。
 
@@ -267,6 +267,14 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
 ![列 — 選択済み](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### セカンダリ ID のフィルタリング
+
+列フィルターを使用して、プロファイル取り込みからセカンダリ ID を除外します。 セカンダリ ID をフィルタリングするには、「 」を選択します **[!UICONTROL 列フィルター]** 次に、「 **[!UICONTROL _identities]**.
+
+このフィルターは、ID がセカンダリとしてマークされている場合にのみ適用されます。 ID が選択されているが、イベントが発生し、その ID の 1 つがプライマリとしてマークされている場合、それらは除外されません。
+
+![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### データフローの詳細を入力
 
