@@ -6,7 +6,7 @@ exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 19%
+ht-degree: 26%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 19%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_constraints"
 >title="時間制約のリファクタリング"
->abstract="時間制限の使用を明確にするために、ルールレベルとグループレベルの時間の制約が削除されました。 制約をキャンバスレベルまたはカードレベルの時間制約として書き直してください。"
+>abstract="時間制限の使用を明確にするために、ルールレベルとグループレベルの時間制約を削除しました。制約をキャンバスレベルまたはカードレベルの時間制約として記述し直してください。"
 
 Adobe Experience Platformの 2024 年 1 月リリースでは、時間制限を定義できる場所に新しい制限を追加する、Adobe Experience Platform Segmentation Service の変更が導入されました。 これらの変更は、セグメントビルダー UI を使用して新しく作成または編集されたセグメントに影響します。 このガイドでは、これらの変更の影響を軽減する方法について説明します。
 
