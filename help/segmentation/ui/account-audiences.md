@@ -4,10 +4,10 @@ description: アカウントオーディエンスを作成し、使用してダ�
 badgeLimitedAvailability: label="限定提供（LA）" type="Caution"
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 5%
+source-wordcount: '1050'
+ht-degree: 3%
 
 ---
 
@@ -74,3 +74,101 @@ The [!UICONTROL 宛先を有効化] ページが表示されます。 有効化�
 ## 次の手順 {#next-steps}
 
 このガイドを読むと、Adobe Experience Platformでアカウントオーディエンスを作成して使用する方法をより深く理解できます。 Platform での他のタイプのオーディエンスの使用方法については、 [セグメント化サービス UI ガイド](./overview.md).
+
+## 付録 {#appendix}
+
+次の節では、アカウントオーディエンスに関する追加情報を示します。
+
+### アカウントセグメント化の検証 {#validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_eventLookbackWindow"
+>title="最大ルックバックウィンドウエラー"
+>abstract="エクスペリエンスイベントのルックバックウィンドウの最大値は 30 日です。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxDepth"
+>title="ネストされたコンテナの深さの最大値エラー"
+>abstract="ネストされたコンテナの最大の深さは次のとおりです。 **5**. これは、 **できません** オーディエンスを作成する際に、6 つ以上のネストされたコンテナがある。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxBreadth"
+>title="最大ルール数量エラー"
+>abstract="1 つのコンテナ内のルールの最大数は次のとおりです。 **5**. これは、 **できません** オーディエンスを作成する際に、1 つのコンテナ内に 5 つ以上のルールがある。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_crossEntityMaxDepth"
+>title="最大クロスエンティティ金額エラー"
+>abstract="1 つのオーディエンス内で使用できるクロスエンティティの最大数は次のとおりです **5**. クロスエンティティとは、オーディエンス内の異なるエンティティを切り替えるときです。 例えば、アカウントからマーケティングリストに移動する場合などです。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowCustomEntity"
+>title="カスタムエンティティエラー"
+>abstract="カスタムエンティティは、 **not** 許可済み"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_b2bBuiltInEntities"
+>title="無効な B2B エンティティエラー"
+>abstract="次の B2B エンティティのみを使用できます。 `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`、および `_xdm.classes.campaign`."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_rhsMaxOptions"
+>title="最大値エラー"
+>abstract="1 つのフィールドに対して確認できる値の最大数は次のとおりです **50**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByReference"
+>title="inSegment イベントエラー"
+>abstract="inSegment イベントは、 **not** 許可済み"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByValue"
+>title="inSegment イベントエラー"
+>abstract="inSegment イベントは、 **not** 許可済み"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowSequentialEvents"
+>title="順次イベントエラー"
+>abstract="順次イベントは、 **not** 許可済み"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowMaps"
+>title="マップタイププロパティエラー"
+>abstract="マップタイプのプロパティは次のとおりです。 **not** 許可済み"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxNestedAggregationDepth"
+>title="ネストされたエンティティの最大深度エラー"
+>abstract="ネストされた配列の最大の深さは次のとおりです **5**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxObjectNestingLevel"
+>title="ネストされたオブジェクトの最大量エラー"
+>abstract="ネスト可能なオブジェクトの最大数は次のとおりです。 **10**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_generic"
+>title="制約違反"
+>abstract="オーディエンスが制約に違反しています。 詳しくは、リンクされたドキュメントを参照してください。"
+
+アカウントオーディエンスを使用する場合、オーディエンス **必須** 次の制約に従います。
+
+>[!NOTE]
+>
+>次のリストに、 **デフォルト** アカウントオーディエンスの制約。 これらの値 **may** 組織の管理者が実装した設定に応じて、を変更します。
+
+- エクスペリエンスイベントのルックバックウィンドウの最大数は次のとおりです。 **30 日**.
+- ネストされたコンテナの最大の深さは次のとおりです。 **5**.
+   - これは、 **できません** オーディエンスを作成する際に、6 つ以上のネストされたコンテナがある。
+- 1 つのコンテナ内のルールの最大数は次のとおりです。 **5**.
+   - これは、オーディエンスが **できません** オーディエンスを構成するルールが 5 つ以上ある。
+- 使用できるクロスエンティティの最大数は次のとおりです。 **5**.
+   - クロスエンティティとは、オーディエンス内の異なるエンティティを切り替えるときです。 例えば、アカウントからマーケティングリストに移動する場合などです。
+- カスタムエンティティ **できません** を使用します。
+- 1 つのフィールドに対して確認できる値の最大数は次のとおりです **50**.
+   - 例えば、「市区町村名」というフィールドがある場合、その値を 50 の市区町村名に対してチェックできます。
+- アカウントオーディエンス **できません** use `inSegment` イベント。
+- アカウントオーディエンス **できません** 順次イベントを使用します。
+- アカウントオーディエンス **できません** マップを使用します。
+- ネストされた配列の最大の深さは次のとおりです **5**.
+- ネストされたオブジェクトの最大数は次のとおりです。 **10**.
