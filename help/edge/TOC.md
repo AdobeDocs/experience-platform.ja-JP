@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 88%
+source-wordcount: '188'
+ht-degree: 86%
 
 ---
 
@@ -46,6 +46,7 @@ ht-degree: 88%
    * [パーソナライズされたコンテンツのレンダリング](personalization/rendering-personalization-content.md)
    * [ハイブリッド実装を使用したパーソナライゼーション](personalization/hybrid-personalization.md)
    * [フリッカーの管理](personalization/manage-flicker.md)
+
    * Adobe Target {#adobe-target}
       * [概要](personalization/adobe-target/target-overview.md)
       * [シングルページアプリケーションの実装](personalization/adobe-target/spa-implementation.md)
@@ -61,6 +62,7 @@ ht-degree: 88%
    * Adobe Journey Optimizer {#ajo}
       * [概要](personalization/ajo/overview.md)
       * [シングルページアプリケーションの実装](personalization/ajo/web-spa-implementation.md)
+      * [Web アプリ内メッセージの設定](personalization/web-in-app-messaging.md)
 * 同意 {#consent}
    * [同意のサポート](consent/supporting-consent.md)
    * IAB の透明性および同意フレームワーク 2.0 {#iab-tcf}

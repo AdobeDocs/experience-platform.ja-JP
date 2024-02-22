@@ -5,16 +5,16 @@ description: Experience PlatformWeb SDK 用の CSP の設定方法を説明し�
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；コンテキスト；Web；デバイス；環境；Web SDK 設定；コンテンツセキュリティポリシー；
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 099f87acded9eca31c31555e63c0ea49ae2d1719
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '339'
+ht-degree: 0%
 
 ---
 
 # CSP の設定
 
-A [コンテンツセキュリティポリシー](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) は、ブラウザーが使用できるリソースを制限するために使用されます。 また、CSP はスクリプトおよびスタイルリソースの機能を制限することもできます。 Adobe Experience Platform Web SDK には CSP は必要ありませんが、CSP を追加すると、悪意のある攻撃に対する攻撃の対象が減少し、
+A [コンテンツセキュリティポリシー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) は、ブラウザーが使用できるリソースを制限するために使用されます。 また、CSP はスクリプトおよびスタイルリソースの機能を制限することもできます。 Adobe Experience Platform Web SDK には CSP は必要ありませんが、CSP を追加すると、悪意のある攻撃に対する攻撃の対象が減少し、
 
 CSP は、 [!DNL Platform Web SDK] がデプロイされ、設定されている。 次の CSP は、SDK が正しく機能するために必要となる可能性のある変更を示しています。 特定の環境に応じて、追加の CSP 設定が必要になる場合があります。
 
@@ -33,7 +33,7 @@ connect-src 'self' EDGE-DOMAIN
 
 ### NONCE を使用してインラインスクリプトおよびスタイル要素を許可します
 
-[!DNL Platform Web SDK] でページコンテンツを変更できるので、インラインスクリプトおよびスタイルタグの作成を承認する必要があります。 これを実現するために、Adobeでは、に nonce を使用することをお勧めします。 [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP ディレクティブ。 nonce は、一意のページビューごとに 1 回生成される、サーバー生成の暗号として強固なランダムトークンです。
+[!DNL Platform Web SDK] でページコンテンツを変更できるので、インラインスクリプトおよびスタイルタグの作成を承認する必要があります。 これを実現するために、Adobeでは、に nonce を使用することをお勧めします。 [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP ディレクティブ。 nonce は、一意のページビューごとに 1 回生成される、サーバー生成の暗号的に強いランダムトークンです。
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
@@ -59,4 +59,12 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobeが実行 **not** ～を指定する `unsafe-inline` これは、CSP のメリットが制限されるページ上で任意のスクリプトを実行できるためです。
+>Adobeが実行する **not** ～を指定することを勧める `unsafe-inline` これは、CSP のメリットが制限されるページ上で任意のスクリプトを実行できるからです。
+
+## アプリ内メッセージ用の CSP の設定 {#in-app-messaging}
+
+設定時に [Web アプリ内メッセージ](../personalization/web-in-app-messaging.md)の場合、CSP に次のディレクティブを含める必要があります。
+
+```
+default-src  blob:;
+```
