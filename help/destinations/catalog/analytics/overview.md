@@ -3,9 +3,9 @@ keywords: analytics の宛先；analytics の宛先
 title: Analytics の宛先の概要
 description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '176'
 ht-degree: 84%
 
 ---
@@ -28,7 +28,7 @@ Analytics の宛先は、訪問者がサイト上のコンテンツとどのよ�
 * [Decibel 拡張機能](decibel.md)
 * [Demandbase 拡張機能](demandbase.md)
 * [Dialogtech 拡張機能](dialogtech.md)
-* [Gainsight PX](gainsight-px.md)
+* [Gainsight PX 接続](gainsight-px.md)
 * [Google Global Site Tag Analytics 拡張機能](gtag-analytics.md)
 * [Google Universal Analytics 拡張機能](google-universal-analytics.md)
 * [JW Player Analytics（ベータ版）拡張機能](jw-player-analytics.md)
