@@ -3,10 +3,10 @@ title: LinkedIn コンバージョン API イベント転送拡張機能
 description: このAdobe Experience Platformイベント転送拡張機能を使用すると、Linkedin マーケティングキャンペーンのパフォーマンスを測定できます。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 4%
+source-wordcount: '790'
+ht-degree: 3%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 4%
 
 ## 前提条件 {#prerequisites}
 
-変換ルールは、 [!DNL LinkedIn] キャンペーン広告アカウント。 [!DNL Adobe] では、会話ルール名の先頭に「CAPI」を含めて、設定した他のコンバージョンルールタイプと切り離すことをお勧めします。
+次の条件を満たす必要があります。 [コンバージョンルールの作成](https://www.linkedin.com/help/lms/answer/a1657171) の [!DNL LinkedIn Campaign Manager] アカウント。 [!DNL Adobe] では、会話ルール名の先頭に「CAPI」を含めて、設定した他のコンバージョンルールタイプと切り離すことをお勧めします。
 
 ### シークレットとデータ要素の作成
 
-新規作成 [!DNL LinkedIn] [イベント転送秘密鍵](../../../ui/event-forwarding/secrets.md) 認証メンバーを示す一意の名前を指定します。 これは、値のセキュリティを維持しながら、アカウントへの接続を認証するために使用されます。
+新規作成 [!DNL LinkedIn] [イベント転送秘密鍵](../../../ui/event-forwarding/secrets.md) 認証するメンバーを示す一意の名前を付けます。 これは、値のセキュリティを維持しながら、アカウントへの接続を認証するために使用されます。
 
 次に、 [データ要素の作成](../../../ui/managing-resources/data-elements.md#create-a-data-element) の使用 [!UICONTROL コア] 拡張機能と [!UICONTROL 秘密鍵] を参照するデータ要素タイプ `LinkedIn` 作成した秘密鍵。
 
@@ -40,7 +40,7 @@ ht-degree: 4%
 
 すべてのデータ要素を設定したら、イベントの送信先と送信方法を決定するイベント転送ルールの作成を開始できます。 [!DNL LinkedIn].
 
-新しいイベント転送の作成 [ルール](../../../ui/managing-resources/rules.md) を設定します。 の下 **[!UICONTROL アクション]**、新しいアクションを追加し、拡張機能をに設定します。 **[!UICONTROL LinkedIn]**. 次に、「 **[!UICONTROL Web 変換を送信]** （の） **[!UICONTROL アクションタイプ]**.
+新しいイベント転送の作成 [ルール](../../../ui/managing-resources/rules.md) を設定します。 の下 **[!UICONTROL アクション]**、新しいアクションを追加し、拡張機能をに設定します。 **[!UICONTROL LinkedIn]**. 次に、「 **[!UICONTROL 変換を送信]** （の） **[!UICONTROL アクションタイプ]**.
 
 ![[Event Forwarding Property Rules] ビューで、イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されています。](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ ht-degree: 4%
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL コンバージョン] | 作成されたコンバージョンルールの ID。 [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171) または [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL コンバージョン] | 作成されたコンバージョンルールの ID。 [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). ID を取得する変換ルールを選択し、ブラウザー URL から ID をコピーします ( 例： `/campaignmanager/accounts/508111232/conversions/15588877`) として `/conversions/<id>`. |
 | [!UICONTROL コンバージョン時間] | コンバージョンイベントが発生した各タイムスタンプ（ミリ秒単位）。 <br><br> 注意：ソースが変換タイムスタンプを秒単位で記録している場合、最後に 000 を挿入して、ミリ秒に変換してください。 |
 | [!UICONTROL 通貨] | ISO 形式の通貨コード。 |
 | [!UICONTROL 量] | 10 進数文字列での変換の値（例：「100.05」）。 |
-| [!UICONTROL イベント ID] | 各イベントを示す広告主によって生成される一意の ID。 これはオプションのフィールドで、重複排除に使用します。 |
+| [!UICONTROL イベント ID] | 各イベントを示す広告主によって生成される一意の ID。 これはオプションのフィールドで、 [重複の除外](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -86,4 +86,6 @@ ht-degree: 4%
 
 ## 次の手順
 
-このガイドでは、にデータを送信する方法について説明しました。 [!DNL LinkedIn] の使用 [!DNL LinkedIn Conversions API] イベント転送拡張機能。 でのイベント転送機能の詳細については、 [!DNL Adobe Experience Platform]（を参照） [イベント転送の概要](../../../ui/event-forwarding/overview.md).
+このガイドでは、にデータを送信する方法について説明しました。 [!DNL LinkedIn] の使用 [!DNL LinkedIn Conversions API] イベント転送拡張機能。 でのイベント転送機能の詳細については、 [!DNL Adobe Experience Platform]を読む [イベント転送の概要](../../../ui/event-forwarding/overview.md).
+
+Event Debugger およびイベント転送監視ツールを使用したExperience Platformのデバッグ方法について詳しくは、 [Adobe Experience Platform Debuggerの概要](../../../../debugger/home.md) および [イベント転送のアクティビティの監視](../../../ui/event-forwarding/monitoring.md).
