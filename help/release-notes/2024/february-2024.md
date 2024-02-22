@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート（2024年2月）
 description: Adobe Experience Platform の 2024年2月のリリースノートです。
-source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 26%
@@ -16,7 +16,6 @@ Experience Platformの既存の機能の更新：
 
 - [アラート](#alerts)
 - [データ収集](#data-collection)
-<!-- - [Data Prep](#data-prep) -->
 - [宛先](#destinations)
 - [サンドボックス](#sandboxes)
 - [セグメント化サービス](#segmentation)
@@ -78,7 +77,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| 一般に使用可能なアカウントオーディエンスを有効化 | 特定の宛先に対してアカウントオーディエンスをアクティブ化する機能は、 [B2B](/help/rtcdp/overview.md#rtcdp-b2b) および [B2P](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platformの各エディション。 に関するチュートリアルをお読みください。 [アカウントオーディエンスの有効化](/help/destinations/ui/activate-account-audiences.md) ：サポートされる宛先を含む完全な情報を取得します。 |
+| 一般に使用可能なアカウントオーディエンスを有効化 | 特定の宛先に対してアカウントオーディエンスをアクティブ化する機能は、 [B2B](/help/rtcdp/overview.md#rtcdp-b2b) および [B2P](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platformの各エディション。 に関するチュートリアルをお読みください。 [アカウントオーディエンスの有効化](/help/destinations/ui/activate-account-audiences.md) ：サポートされる宛先を含む完全な情報を取得します。 |
 | Googleの宛先のデジタル市場法同意実施ツール | Googleは [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、および [ディスプレイおよびビデオ 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) コンプライアンスおよび同意関連の要件をサポートするために、 [デジタル市場法](https://digital-markets-act.ec.europa.eu/index_en) 欧州連合 (EU) の (DMA)[EU ユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)) をクリックします。 同意要件に対するこれらの変更の適用は、2024 年 3 月 6 日から施行される予定です。 <br/><br/> EU ユーザーの同意ポリシーに従い、欧州経済圏 (EEA) のユーザーに対してオーディエンスリストを作成し続けるには、広告主やパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡す必要があります。 GoogleパートナーのAdobeは、EU の DMA に基づくこれらの同意要件を満たすために必要なツールを提供します。<br/><br/>Adobeのプライバシーとセキュリティシールドを購入し、 [同意ポリシー](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 同意しないプロファイルを除外するには、何のアクションも実行する必要はありません。<br/><br/>Adobeプライバシーとセキュリティシールドを購入していないお客様は、 [セグメント定義](../../segmentation/home.md#segment-definitions) 内の機能 [セグメントビルダー](../../segmentation/ui/segment-builder.md) を使用して、同意されていないプロファイルを除外し、既存のReal-Time CDP Googleの宛先を中断することなく使用し続けます。 |
 | [!BADGE ベータ版]{type=Informative} バッチ保存先のマッピングフィールドを並べ替える | CSV エクスポートの列の順序を変更するには、 [マッピング](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 手順 UI でマッピングされたフィールドの順序は、書き出された CSV ファイル内の列の順序に上から下へと反映されます。上の行は CSV ファイル内の一番左の列になります。 <br/><br/> この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。 |
 | [!BADGE ベータ版]{type=Informative} バッチ保存先用に事前に選択されたデフォルトの書き出しスケジュール | Experience Platformは、各ファイル書き出しのデフォルトスケジュールを自動的に設定するようになりました。 次のドキュメントを参照してください： [オーディエンスの書き出しをスケジュール](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) を参照して、デフォルトのスケジュールを変更する方法を確認してください。 <br/><br/> この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。 |

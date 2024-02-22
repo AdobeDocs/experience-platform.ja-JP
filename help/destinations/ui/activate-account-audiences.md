@@ -5,7 +5,7 @@ description: 宛先に対してアカウントオーディエンスをアクテ�
 badgeB2B: label="B2B エディション" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 7%
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->宛先に対してアカウントオーディエンスを有効化する機能は、 [B2B](/help/rtcdp/overview.md#rtcdp-b2b) および [B2P](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platformの各エディション。
+>宛先に対してアカウントオーディエンスを有効化する機能は、 [B2B](/help/rtcdp/overview.md#rtcdp-b2b) および [B2P](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platformの各エディション。
 
 この記事では、エクスポートに必要なワークフローについて説明します。 [アカウントオーディエンス](/help/segmentation/ui/account-audiences.md) Adobe Experience Platformから目的の宛先に移動します。
 
