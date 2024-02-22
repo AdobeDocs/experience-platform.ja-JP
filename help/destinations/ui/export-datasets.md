@@ -3,10 +3,10 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
+source-git-commit: 5d9384f57765126709f6bfcc005334ba4120595a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 51%
+source-wordcount: '1857'
+ht-degree: 49%
 
 ---
 
@@ -211,14 +211,19 @@ Adobe Analytics の [宛先ワークフローに接続](/help/destinations/ui/co
 
    ![アクティベーションデータ列で強調表示されている使用可能なデータセットナビゲーションオプション](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. 宛先の&#x200B;**[!UICONTROL アクティベーションデータ]**&#x200B;ページが表示されます。 右側のパネルで「**[!UICONTROL データセットを削除]**」を選択すると、データセット削除の確認ダイアログが表示されます。
+1. 宛先の&#x200B;**[!UICONTROL アクティベーションデータ]**&#x200B;ページが表示されます。 削除するデータセットを選択し、「 」を選択します。 **[!UICONTROL データセットを削除]** 右側のレールで、データセット削除の確認ダイアログをトリガーにします。
 
    ![右側のパネルに「データセットの削除」コントロールが表示されているデータセットを削除ダイアログ](../assets/ui/export-datasets/remove-dataset-control.png)
+
+<!-- USE THIS FOR BULK REMOVE RELEASE
+
+1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
+
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
 
 1. 確認ダイアログで、「**[!UICONTROL 削除]**」を選択すると、宛先への書き出しからデータセットが直ちに削除されます。
 
    ![データフローからのデータセットの削除を確認するオプションを表示するダイアログ](../assets/ui/export-datasets/remove-dataset-confirm.png)
-
 
 ## データセット書き出しの権利 {#licensing-entitlement}
 

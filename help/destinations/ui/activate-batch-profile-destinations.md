@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformでオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 59%
+source-wordcount: '3879'
+ht-degree: 58%
 
 ---
 
@@ -73,6 +73,10 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 >
 >元のオーディエンスの選択 **[!UICONTROL カスタムアップロード]** を自動的に有効にする [エンリッチメント属性を選択](#select-enrichment-attributes) 手順
 
+>[!TIP]
+>
+>既存のアクティベーションフローからオーディエンスを削除できます。 **[!UICONTROL アクティベーションデータ]** ページに貼り付けます。 詳しくは、 [専用ドキュメント](../ui/destination-details-page.md#bulk-remove) 」を参照してください。
+
 ## オーディエンスの書き出しのスケジュール {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 >title="スケジュール"
 >abstract="鉛筆アイコンを使用して、ファイルの書き出しタイプ（完全なファイルまたは増分ファイル）と書き出し頻度を設定します。"
 
-[!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先を次の形式で書き出し： [異なるファイルタイプ](#supported-file-formats-export). Adobe Analytics の **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
+[!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先を次の形式で書き出し： [異なるファイルタイプ](#supported-file-formats-export). Adobe Analytics の **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。
+
+Experience Platformは、各ファイル書き出しのデフォルトスケジュールを自動的に設定します。 各スケジュールの横にある鉛筆アイコンを選択し、カスタムスケジュールを定義することで、必要に応じてデフォルトのスケジュールを変更できます。
+
+![スケジュール設定手順でハイライト表示されているスケジュールコントロールを編集します。](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>既存のアクティベーションフローに関するオーディエンスのアクティベーションスケジュールは、 **[!UICONTROL アクティベーションデータ]** ページに貼り付けます。 次のドキュメントを参照してください： [アクティベーションスケジュールの一括編集](../ui/destination-details-page.md#bulk-edit-schedule) 」を参照してください。
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] は、書き出しファイルを1 ファイルあたり 500 万件のレコード（行）で自動的に分割します。各行は 1 つのプロファイルを表します。
 >
 >`filename.csv`、`filename_2.csv`、`filename_3.csv` のように、分割ファイル名には、ファイルが大きな書き出しの一部であることを示す数字が付加されます。
-
-を選択します。 **[!UICONTROL スケジュールを作成]** 宛先に送信するオーディエンスに対応するコントロール。
-
-![スケジュール設定手順でハイライト表示されたスケジュールコントロールを作成します。](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 完全ファイルを書き出し {#export-full-files}
 
@@ -247,6 +255,14 @@ CSV ファイルを書き出すと、書き出したファイルの構造を柔�
 1. 書き出し用に選択したフィールドがマッピングビューに表示され、編集したヘッダーが書き出したファイルに表示されます。
 
    ![宛先に書き出すことができるプロファイル属性を示すモーダルウィンドウ。](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。
+
+   ![ドラッグ&amp;ドロップで並べ替えを行ったマッピングフィールドを示す記録。](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. （オプション）書き出されたフィールドを[必須キー](#mandatory-keys)または [重複排除キー](#deduplication-keys)のどちらにするかを選択できます。
 

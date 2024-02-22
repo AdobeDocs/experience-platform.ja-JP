@@ -3,10 +3,10 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたオーディエンス、アクティベーションを編集し、データフローを有効または無効にするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 12%
+source-wordcount: '1100'
+ht-degree: 10%
 
 ---
 
@@ -115,6 +115,32 @@ The [!UICONTROL アクティベーションデータ] 「 」タブには、宛�
 
 ![アクティベーションデータビューのストリーミング先](../assets/ui/details-page/activation-data-streaming.png)
 
+<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+
+To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+
+![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+
+### [!BADGE ベータ版]{type=Informative} 複数のファイルをオンデマンドでバッチ保存先に書き出す {#bulk-export}
+
 >[!NOTE]
 >
->オーディエンスの詳細ページについて詳しくは、 [セグメント化 UI の概要](../../segmentation/ui/overview.md#segment-details).
+この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。
+
+以下が可能です。 [複数のファイルをオンデマンドで書き出し](../ui/export-file-now.md) から **[!UICONTROL アクティベーションデータ]** ページに貼り付けます。 これをおこなうには、ファイルをオンデマンドでエクスポートするオーディエンスを選択し、 **[!UICONTROL ファイルを今すぐ書き出し]** を制御して、1 回限りのエクスポートをトリガーし、選択した各オーディエンスのファイルをバッチ保存先に配信します。
+
+![「ファイルを今すぐ書き出し」ボタンをハイライトした画像。](../assets/ui/details-page/bulk-export-file-now.png)
+
+### [!BADGE ベータ版]{type=Informative} バッチ保存先にエクスポートされた複数のオーディエンスのアクティベーションスケジュールを編集します {#bulk-edit-schedule}
+
+>[!NOTE]
+>
+この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。
+
+複数のオーディエンスの既存のアクティベーションスケジュールを同時に編集するには、目的のオーディエンスを選択してから、「 」を選択します。 **[!UICONTROL スケジュールを編集]**. 書き出しスケジュールを定義または編集する方法について詳しくは、 [オーディエンスの書き出しをスケジュール](../ui/activate-batch-profile-destinations.md#scheduling) 」セクションに入力します。
+
+![複数のオーディエンスのアクティベーションスケジュールを編集するオプションをハイライトするアクティベーションデータ画面。](../assets/ui/details-page/bulk-edit-schedule.png)
+
+>[!NOTE]
+>
+オーディエンスの詳細ページについて詳しくは、 [セグメント化 UI の概要](../../segmentation/ui/overview.md#segment-details).

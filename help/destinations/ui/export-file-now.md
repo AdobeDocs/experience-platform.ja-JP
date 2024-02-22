@@ -3,10 +3,10 @@ title: （ベータ版）Experience Platform UI を使用した、オンデマ�
 type: Tutorial
 description: Experience PlatformUI を使用して、オンデマンドでファイルをバッチ保存先に書き出す方法を説明します。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 20%
+source-wordcount: '722'
+ht-degree: 21%
 
 ---
 
@@ -48,13 +48,9 @@ The **[!UICONTROL ファイルを今すぐ書き出し]** 「 」コントロー
 
    ![フィルタリングしたデータフローをハイライトした画像。](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. を選択します。 **[!UICONTROL アクティベーションデータ]** 」タブをクリックし、オンデマンドでファイルを書き出すオーディエンスを選択して、 **[!UICONTROL ファイルを今すぐ書き出し]** ファイルをバッチ保存先に配信する 1 回限りのエクスポートをトリガーするためのコントロール。
+3. を選択します。 **[!UICONTROL アクティベーションデータ]** 」タブをクリックし、ファイルをオンデマンドでエクスポートするオーディエンスを選択して、 **[!UICONTROL ファイルを今すぐ書き出し]** を制御して、1 回限りのエクスポートをトリガーし、選択した各オーディエンスのファイルをバッチ保存先に配信します。
 
-   >[!IMPORTANT]
-   >
-   >オンデマンドでファイルを一括で書き出す複数のオーディエンスの選択は、現在、UI ではサポートされていません。 以下を使用します。 [アドホックアクティベーション API](/help/destinations/api/ad-hoc-activation-api.md) そのために。
-
-   ![「ファイルを今すぐ書き出し」ボタンをハイライトした画像。](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![「ファイルを今すぐ書き出し」ボタンをハイライトした画像。](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. 選択 **[!UICONTROL はい]** をクリックして、ファイルのエクスポートを確認してトリガーを設定します。
 
