@@ -2,12 +2,12 @@
 title: 宛先へのアカウントオーディエンスのアクティブ化
 type: Tutorial
 description: 宛先に対してアカウントオーディエンスをアクティブ化する方法を説明します。
-badgeLimitedAvailability: label="限定提供（LA）" type="Caution"
-badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B エディション" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '810'
 ht-degree: 7%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->宛先に対してアカウントオーディエンスをアクティブ化する機能は、 [B2B エディションオブReal-time Customer Data Platform](../../rtcdp/b2b-overview.md). また、アカウントオーディエンス機能は、現在、 **限られた可用性**. AdobeカスタマーケアまたはAdobe担当者に問い合わせて、この機能へのアクセスをリクエストしてください。
+>宛先に対してアカウントオーディエンスを有効化する機能は、 [B2B](/help/rtcdp/overview.md#rtcdp-b2b) および [B2P](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platformの各エディション。
 
 この記事では、エクスポートに必要なワークフローについて説明します。 [アカウントオーディエンス](/help/segmentation/ui/account-audiences.md) Adobe Experience Platformから目的の宛先に移動します。
 
@@ -79,7 +79,7 @@ ht-degree: 7%
 
 ## 重要な注意事項と既知の制限事項 {#important-callouts-known-limitations}
 
-アカウントオーディエンスをアクティブ化する機能の限定提供リリースについては、次の重要な注意事項と既知の制限事項に注意してください。
+アカウントオーディエンスをアクティブ化する機能の一般リリースに関する、次の重要な注意事項と既知の制限事項に注意してください。
 
 ### アカウントオーディエンスを **[!UICONTROL （会社） LinkedIn Matched Audiences]** 宛先 {#required-mappings}
 

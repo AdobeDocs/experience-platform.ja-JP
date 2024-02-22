@@ -4,7 +4,7 @@ title: Real-time Customer Data Platformの概要
 description: Adobe Real-time Customer Data Platformの概要
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: ab87434b753c1231f01cde85637081eb08fce356
+source-git-commit: f89665837b75dc4305073d675c4c05b04302c85e
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 17%
@@ -49,11 +49,11 @@ Real-Time CDPを購入する際、次の表に示すように、会社は 3 つ�
 * [Real-time Customer Data Platform（B2B エディション — プライムパッケージおよび究極パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform（B2P エディション — プライムパッケージおよび最終パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 
-### Adobe Real-time Customer Data Platform - B2C(B2C) 版
+### Adobe Real-time Customer Data Platform - B2C(B2C) 版 {#rtcdp-b2c}
 
 Real-Time CDP B2C(B2C) は、B2C マーケターがすべての統合、管理、アクティブ化を行うための専用設計です *消費者データ* をまたいで、よりパーソナライズされた顧客体験を実現し、完全なデータの安心を実現します。
 
-### Adobe Real-time Customer Data Platform - B2B(B2B) 版
+### Adobe Real-time Customer Data Platform - B2B(B2B) 版 {#rtcdp-b2b}
 
 Real-Time CDP B2B(B2B) は、B2B マーケターがすべての統合、管理、アクティブ化を行うための専用設計です *リードとアカウントのデータ* 様々なシステムやチャネルをまたいで、パーソナライズされた顧客体験と完全なデータの安心を実現
 
@@ -61,7 +61,7 @@ Real-Time CDP B2B Edition を使用すると、マーケターは、ユーザー
 
 詳しくは、 [Real-Time CDP B2B Edition の概要](./b2b-overview.md) を参照してください。
 
-### Adobe Real-time Customer Data Platform - B2P(B2P) 版
+### Adobe Real-time Customer Data Platform - B2P(B2P) 版 {#rtcdp-b2p}
 
 Real-Time CDPの B2P(B2P) 版を使用すると、 *B2C および B2B 顧客データ* 単一の CDP を使用し、シームレスな経験と完全なデータの安心を通じて、あらゆる業務の中で同じ人物をターゲットに設定します。
 
