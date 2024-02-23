@@ -27,7 +27,7 @@ Experience Platform では、様々な Platform アクティビティに関す�
 **新機能または更新された機能**
 | 機能 | 説明 | | — | — | | 「アラート履歴」タブ | Experience Platform管理者は、アラート購読者の管理機能を使用して、Adobeユーザー ID、外部電子メールアドレス、または電子メールグループリストにアラートを割り当てることができます。 詳しくは、 [アラート UI ドキュメント](../../observability/alerts/ui.md) 「履歴」タブの詳細を参照してください。 |
 
-{style="table-layout:auto"}
+
 
 アラートの詳細については、 [[!DNL Observability Insights] 概要](../../observability/home.md).
 
