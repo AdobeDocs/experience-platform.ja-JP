@@ -1,7 +1,7 @@
 ---
 title: Web SDK での Web アプリ内メッセージサポートの設定
 description: Web アプリ内メッセージをサポートするように Web SDK タグ拡張を設定する方法について説明します。
-source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
+source-git-commit: a020f880be2606024c6a986dc468d70a2fbdc30f
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
@@ -185,5 +185,5 @@ Web SDK でページの読み込み時にパーソナライゼーションコン
 
 Adobe Analytics の [Web SDK の設定](../fundamentals/configuring-the-sdk.md) を設定します。 `personalizationStorageEnabled` オプションを選択します。
 
-* `personalizationStorageEnabled: true` トリガー内メッセージを、 [Adobe Journey Optimizer campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` トリガー内メッセージを、 [Adobe Journey Optimizerキャンペーン](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` トリガー読み込みのたびにアプリ内メッセージが表示されます。
