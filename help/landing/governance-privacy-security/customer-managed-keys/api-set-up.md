@@ -2,9 +2,9 @@
 title: API を使用した顧客管理キーの設定
 description: Azure テナントで CMK アプリを設定し、暗号化キー ID をAdobe Experience Platformに送信する方法を説明します。
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1002'
 ht-degree: 49%
 
 ---
@@ -24,7 +24,7 @@ CMK を有効にするには、 [[!DNL Azure] Key Vault を設定する必要が
 * [消去保護を有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [ソフトデリートを有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [次を使用してアクセスを設定 [!DNL Azure] ロールベースのアクセス制御](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [ [!DNL Azure]  Key Vault の設定](./azure-key-vault-config.md)
+* [の設定 [!DNL Azure] Key Vault](./azure-key-vault-config.md)
 
 ## CMK アプリのセットアップ {#register-app}
 
@@ -77,6 +77,10 @@ curl -X GET \
 ![Microsoft Azure ダッシュボードと [!DNL Add] および [!DNL Add role assignment] ハイライト表示されました。](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 次の画面では、この割り当ての役割を選択するように求められます。**[!DNL Key Vault Crypto Service Encryption User]** を選択してから **[!DNL Next]** を選択し、続行します。
+
+>[!NOTE]
+>
+>次の条件を満たす [!DNL Managed-HSM Key Vault] 層を選択して、 **[!DNL Managed HSM Crypto Service Encryption User]** ユーザーの役割。
 
 ![Microsoft Azure ダッシュボードと [!DNL Key Vault Crypto Service Encryption User] ハイライト表示されました。](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
@@ -133,7 +137,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 設定の名前。この値は、 [後の手順](#check-status). この値は、大文字と小文字を区別します。 |
 | `type` | 設定タイプ。 `BYOK_CONFIG` に設定する必要があります。 |
-| `imsOrgId` | 組織 ID。この ID は、 `x-gw-ims-org-id` ヘッダー。 |
+| `imsOrgId` | 組織 ID。 この ID は、 `x-gw-ims-org-id` ヘッダー。 |
 | `configData` | このプロパティには、設定に関する次の詳細が含まれます。<ul><li>`providerType`：`AZURE_KEYVAULT` に設定する必要があります。</li><li>`keyVaultKeyIdentifier`：[以前](#send-to-adobe)にコピーした Key Vault の URI。</li></ul> |
 
 +++

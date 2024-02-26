@@ -2,10 +2,10 @@
 title: Platform UI を使用した顧客管理キーの設定
 description: Azure テナントで CMK アプリを設定し、暗号化キー ID をAdobe Experience Platformに送信する方法を説明します。
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 22%
+source-wordcount: '1090'
+ht-degree: 20%
 
 ---
 
@@ -24,7 +24,7 @@ CMK を有効にするには、 [[!DNL Azure] Key Vault を設定する必要が
 * [消去保護を有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [ソフトデリートを有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [次を使用してアクセスを設定 [!DNL Azure] ロールベースのアクセス制御](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [ [!DNL Azure]  Key Vault の設定](./azure-key-vault-config.md)
+* [の設定 [!DNL Azure] Key Vault](./azure-key-vault-config.md)
 
 ## CMK アプリのセットアップ {#register-app}
 
@@ -46,7 +46,7 @@ CMK を有効にするには、 [[!DNL Azure] Key Vault を設定する必要が
 
 ![The [!UICONTROL 顧客管理キーの設定] 「アプリケーション認証 url 」セクションをハイライト表示した状態で表示します。](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-をコピーして貼り付けます。 [!UICONTROL アプリケーション認証 URL] をブラウザーにドラッグして、認証ダイアログを開きます。 **[!DNL Accept]** を選択して、CMK アプリサービスプリンシパルを [!DNL Azure] テナントに追加します。認証を確認すると、Experience Cloudのランディングページにリダイレクトされます。
+をコピーして貼り付けます。 [!UICONTROL アプリケーション認証 URL] をブラウザーにドラッグして、認証ダイアログを開きます。 選択 **[!DNL Accept]** CMK アプリサービスプリンシパルを [!DNL Azure] テナント。 認証を確認すると、Experience Cloudのランディングページにリダイレクトされます。
 
 ![Microsoft権限リクエストダイアログ [!UICONTROL 確定] ハイライト表示されました。](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
@@ -61,6 +61,10 @@ CMK を有効にするには、 [[!DNL Azure] Key Vault を設定する必要が
 ![The [!DNL Microsoft Azure] 次のダッシュボード [!DNL Add] および [!DNL Add role assignment] ハイライト表示されました。](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 次の画面では、この割り当ての役割を選択するように求められます。**[!DNL Key Vault Crypto Service Encryption User]** を選択してから **[!DNL Next]** を選択し、続行します。
+
+>[!NOTE]
+>
+>次の条件を満たす [!DNL Managed-HSM Key Vault] 層を選択して、 **[!DNL Managed HSM Crypto Service Encryption User]** ユーザーの役割。
 
 ![The [!DNL Microsoft Azure] ダッシュボードと [!DNL Key Vault Crypto Service Encryption User] ハイライト表示されました。](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 

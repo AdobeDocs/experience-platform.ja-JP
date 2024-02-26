@@ -2,20 +2,20 @@
 title: Azure Key Vault を設定する
 description: Azure で新しいエンタープライズアカウントを作成する方法、または既存のエンタープライズアカウントを使用して Key Vault を作成する方法を説明します。
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 36%
+source-wordcount: '561'
+ht-degree: 24%
 
 ---
 
 # [!DNL Azure] Key Vault の設定
 
-顧客管理キー (CMK) は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、[!DNL Azure] を使用して新しいエンタープライズアカウントを作成するか、既存のエンタープライズアカウントを使用して、以下の手順に従って Key Vault を作成する必要があります。
+顧客管理キー (CMK) は、 [!DNL Microsoft Azure] キー Vault。 作業を開始するには、 [!DNL Azure] 新しいエンタープライズアカウントを作成するには、または既存のエンタープライズアカウントを使用して、以下の手順に従って Key Vault を作成します。
 
 >[!IMPORTANT]
 >
->[!DNL Azure] Key Vault の Premium と Standard のサービスレベルのみがサポートされています。[!DNL Azure Managed HSM]、[!DNL Azure Dedicated HSM] および [!DNL Azure Payments HSM] ではサポートされていません。提供されるキー管理サービスについて詳しくは、[[!DNL Azure] ドキュメント](https://learn.microsoft.com/ja-jp/azure/security/fundamentals/key-management#azure-key-management-services)を参照してください。
+>の Standard、Premium および Managed HSM 層のみ [!DNL Azure] Key Vault がサポートされています。 [!DNL Azure Dedicated HSM] および [!DNL Azure Payments HSM] はサポートされていません。 提供されるキー管理サービスについて詳しくは、[[!DNL Azure] ドキュメント](https://learn.microsoft.com/ja-jp/azure/security/fundamentals/key-management#azure-key-management-services)を参照してください。
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Key Vault を作成したら、新しいキーを生成できます。 「**[!DN
 
 ![The [!DNL Keys] タブ [!DNL Azure] 次を使用 [!DNL Generate import] ハイライト表示されました。](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-提供されたフォームを使用してキーの名前を指定し、キータイプに「**RSA**」を選択します。少なくとも、 **[!DNL RSA key size]** は、少なくとも **3072** 必要なビット数 [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] は、RSA 3027 とも互換性があります。
+提供されたフォームを使用してキーの名前を指定し、次のいずれかを選択します。 **RSA** または **RSA-HSM** キーのタイプを表します。 少なくとも、 **[!DNL RSA key size]** は、少なくとも **3072** 必要なビット数 [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] は、RSA 3027 とも互換性があります。
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Key Vault を作成したら、新しいキーを生成できます。 「**[!DN
 
 残りのコントロールを使用して、必要に応じて生成または読み込むキーを設定します。終了したら「**[!DNL Create]**」を選択します。
 
-![キーダッシュボードの作成 [!DNL 3072] ハイライト表示されたビット。](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![The [!DNL Create a key] 次のダッシュボード [!DNL 3072] ハイライト表示されたビット。](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 設定されたキーが、Vault のキーのリストに表示されます。
 
