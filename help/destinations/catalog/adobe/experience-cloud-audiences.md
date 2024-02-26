@@ -3,10 +3,10 @@ title: Experience Cloud Audiences
 description: Real-time Customer Data Platformのオーディエンスを様々なExperience Cloudアプリに共有する方法を説明します。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 17%
+source-wordcount: '1703'
+ht-degree: 16%
 
 ---
 
@@ -95,6 +95,7 @@ Audiences の宛先に送信したオーディエンスは、Experience CloudAdo
 * 現在、単一のExperience Cloudオーディエンスの宛先がサポートされています。 2 つ目の宛先接続を構成しようとすると、エラーが発生します。
 * 宛先に接続する際に、次のオプションが表示されます。 [データフローアラートを有効にする](../../ui/alerts.md). UI には表示されますが、 **アラートの有効化オプションは、現在サポートされていません**.
 * **オーディエンスのバックフィルのサポート**：最初のAudience Managerへのエクスポートまたは他のExperience Cloudソリューションには、オーディエンスの過去の母集団が含まれます。 のユーザー [レガシーオーディエンス共有の統合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) この宛先を設定するユーザーは、約 6 時間のバックフィルの違いを期待する必要があります。
+* 元のオーディエンス [オーディエンスの構成](../../../segmentation/ui/audience-composition.md) は、直接はサポートされていません。 この宛先に対して複合オーディエンスをアクティブ化するには、次を通じてオーディエンス定義を作成する必要があります。 [セグメントビルダー](../../../segmentation/ui/segment-builder.md) 複合オーディエンスに基づいて、新しく作成したオーディエンスをアクティブ化します。
 
 ### オーディエンスをアクティブ化する際の遅延 {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ Audience Managerのオーディエンスと特性は、 [ロールベースの�
 
 Real-Time CDPから書き出されたオーディエンスは、Audience Manager「 」の特定のデータソースに割り当てられます **[!UICONTROL Experience Platformセグメント]**.
 
-特定のユーザーのみがオーディエンスにアクセスできるようにするには、データソースに属するオーディエンスにアクセス制御を適用します。 これらのオーディエンスおよびReal-Time CDPセグメントから作成された特性に対して、Audience Managerで新しいアクセス制御権限を設定します。
+特定のユーザーのみがオーディエンスにアクセスできるようにするには、 [ロールベースのアクセス制御](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=ja) Real-Time CDPオーディエンスから作成されたオーディエンスおよび特性へのユーザーアクセスを設定する場合。
