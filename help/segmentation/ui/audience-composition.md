@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1844'
-ht-degree: 94%
+ht-degree: 91%
 
 ---
 
@@ -220,9 +220,9 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 属性を選択したら、ランク付けの順序を選択できます。 昇順（最小から最大）または降順（最大から最小）のいずれかです。
 
-さらに、「**[!UICONTROL プロファイル制限を追加]**」切替スイッチを有効にすることで、返されるオーディエンスの数を制限できます。この切替スイッチが有効になっている場合は、「**[!UICONTROL 含まれるプロファイル]**」フィールド内で、返されるオーディエンスの最大数を設定できます。
+また、 **[!UICONTROL プロファイル制限を追加]** 切り替え この切り替えを有効にした場合、 **[!UICONTROL 含まれるプロファイル]** フィールドに入力します。
 
-![「プロファイル制限を追加」切替スイッチがハイライト表示されています。ここから、返されるオーディエンスの数を制限できます。](../images/ui/audience-composition/add-profile-limit.png)
+![「プロファイル制限を追加」切り替えがハイライト表示され、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL 分割] {#split-block}
 
