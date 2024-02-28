@@ -2,9 +2,9 @@
 title: クエリサービスパッケージング
 description: 次のドキュメントでは、クエリサービスで使用できる機能と製品のパッケージ化の概要を説明し、アドホッククエリとバッチクエリの違いについて説明します。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 2bea95d855d24aa9d5763ab541ec282f0d8d1d56
+source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '963'
 ht-degree: 5%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Platformクエリサービスは、実行可能なクエリパ�
 | データ書き出し許可 | 合計書き出し権限は、プラットフォームベースのアプリケーションライセンスに応じて異なります。 例えば、Real-Time CDP、AJO、CJA などです。 | はい — Data Distillerを使用して作成された派生データセットを書き出すための追加の書き出し権限が提供されます。<br>年間のデータエクスポートの許可はテラバイト (TB) 単位で、購入した Compute 時間数に応じて異なります。 詳しくは、製品の説明を確認してください。 |
 | クエリ実行インターフェイス | <ul><li>クエリサービス UI</li><li>サードパーティクライアント UI</li><li>[!DNL PostgresSQL] クライアント UI</li></ul> | <ul><li>クエリサービス UI </li><li>サードパーティクライアント UI</li><li>[!DNL PostgresSQL] クライアント UI</li><li>REST API</li></ul> |
 | 次を介して返されたクエリ結果： | クライアント UI | データレイクに保存された派生データセット |
-| 結果の制限 | <ul><li>クエリサービス UI — 出力行の数を [UI 設定で設定](./ui/user-guide.md#result-count) を 50 ～ 500 行に設定します。</li><li>サードパーティクライアント — 50,000</li><li>[!DNL PostgresSQL] クライアント — 50,000</li></ul> | <ul><li>クエリサービス UI — 出力行の数を [UI 設定で設定](./ui/user-guide.md#result-count) を 50 ～ 500 行に設定します。<br>注意： CTAS クエリと ITAS クエリは、クエリ出力が派生データセットに保存されるので、成功メッセージのみを生成します。</li><li>サードパーティクライアント（行の上限なし）</li><li>[!DNL PostgresSQL] クライアント（行の上限なし）</li><li>REST API（行の上限なし）</li></ul> |
+| 結果の制限 | <ul><li>クエリサービス UI — 出力行の数を [UI 設定で設定](./ui/user-guide.md#result-count) を 50 ～ 500 行に設定します。</li><li>サードパーティクライアント — 50,000</li><li>[!DNL PostgresSQL] クライアント — 50,000</li></ul> | CTAS および ITAS クエリは、クエリ出力が派生データセットに保存されるので、成功メッセージのみを生成します。 |
 | データセット容量の読み取り | ○ | ○ |
 | データセット書き込み容量 | × | ○ |
 | 予定処理能力 | × | ○ |
