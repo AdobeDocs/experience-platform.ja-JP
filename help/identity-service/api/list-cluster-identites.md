@@ -3,11 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；リス
 solution: Experience Platform
 title: クラスター内のすべての ID のリスト
 description: ID グラフで関連付けられている ID は、名前空間に関係なく、その ID グラフでは同じ「クラスター」の一部と見なされます。以下のオプションは、すべてのクラスターメンバーにアクセスする手段を提供します。
+role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 95%
+source-wordcount: '365'
+ht-degree: 83%
 
 ---
 
@@ -71,7 +72,7 @@ curl -X GET \
 
 >[!NOTE]
 >
-> リクエストで使用できる ID 数の上限は 1000 です。ID 数が 1000 を超えるリクエストに対しては、ステータスコード 400 が発生します。
+>リクエストで使用できる ID 数の上限は 1000 です。 ID 数が 1000 を超えるリクエストに対しては、ステータスコード 400 が発生します。
 
 **API 形式**
 
@@ -237,7 +238,7 @@ curl -X POST \
 
 >[!NOTE]
 >
-> リクエストの XID が同じクラスターに属しているかどうか、または 1 つ以上にクラスターが関連付けられているかどうかに関係なく、応答には、リクエストで提供された XID ごとに 1 つのエントリがあります。
+>リクエストの XID が同じクラスターに属しているかどうか、または 1 つ以上にクラスターが関連付けられているかどうかに関係なく、応答には、リクエストで提供された XID ごとに 1 つのエントリがあります。
 
 ## 次の手順
 

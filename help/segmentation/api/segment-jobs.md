@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: セグメントジョブ API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
+role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 24%
+source-wordcount: '1524'
+ht-degree: 17%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 24%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] API. 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 ## セグメントジョッブリストの取得 {#retrieve-list}
 
@@ -26,7 +27,7 @@ ht-degree: 24%
 
 **API 形式**
 
-`/segment/jobs` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+`/segment/jobs` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /segment/jobs
@@ -55,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定した 組織のセグメントジョブのリストを JSON として返します。ただし、応答は、セグメントジョブ内のセグメント定義の数に応じて異なります。
+正常な応答は、HTTP ステータス 200 と、指定した組織のセグメントジョブのリストを JSON として返します。 ただし、応答は、セグメントジョブ内のセグメント定義の数に応じて異なります。
 
 **セグメントジョブ内の 1500 個以下のセグメント定義**
 
@@ -63,7 +64,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 >[!NOTE]
 >
-> 次の応答はスペースを節約するために切り捨てられ、最初に返されたジョブのみが表示されます。
+>次の応答はスペースを節約するために切り捨てられ、最初に返されたジョブのみが表示されます。
 
 ```json
 {
@@ -171,7 +172,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 >[!NOTE]
 >
-> 次の応答はスペースを節約するために切り捨てられ、最初に返されたジョブのみが表示されます。
+>次の応答はスペースを節約するために切り捨てられ、最初に返されたジョブのみが表示されます。
 
 ```json
 {
@@ -555,7 +556,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定したセグメントジョブに関する詳細情報を返します。ただし、応答は、セグメントジョブ内のセグメント定義の数に応じて異なります。
+正常な応答は、HTTP ステータス 200 と、指定されたセグメントジョブに関する詳細情報を返します。  ただし、応答は、セグメントジョブ内のセグメント定義の数に応じて異なります。
 
 **セグメントジョブ内の 1500 個以下のセグメント定義**
 

@@ -3,11 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 solution: Experience Platform
 title: クエリテンプレート API エンドポイント
 description: このガイドでは、クエリサービス API を使用して実行できる様々なクエリテンプレート API 呼び出しの詳細を説明します。
+role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 54%
+source-wordcount: '977'
+ht-degree: 44%
 
 ---
 
@@ -47,7 +48,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストは、 組織用に作成された最新のクエリテンプレートを取得します。
+次のリクエストは、組織用に作成された最新のクエリテンプレートを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +60,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定した組織のクエリテンプレートのリストを返します。 次の応答は、 組織用に作成された最新のクエリテンプレートを返します。
+正常な応答は、HTTP ステータス 200 と、指定した組織のクエリテンプレートのリストを返します。 次の応答は、組織用に作成された最新のクエリテンプレートを返します。
 
 ```json
 {
@@ -108,7 +109,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して、[テンプレートを削除](#delete-a-specified-query-template)できます。
+>この場合、 `_links.delete` から [クエリテンプレートを削除](#delete-a-specified-query-template).
 
 ### クエリテンプレートの作成
 
@@ -175,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して、[テンプレートを削除](#delete-a-specified-query-template)できます。
+>この場合、 `_links.delete` から [クエリテンプレートを削除](#delete-a-specified-query-template).
 
 ### 指定されたクエリテンプレートの取得
 
@@ -233,7 +234,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して、[テンプレートを削除](#delete-a-specified-query-template)できます。
+>この場合、 `_links.delete` から [クエリテンプレートを削除](#delete-a-specified-query-template).
 
 ### 指定されたクエリテンプレートの更新
 
@@ -253,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
-> PUT リクエストでは、sql と name の両方のフィールドに入力する必要があり、そのクエリテンプレートの現在の内容が&#x200B;**上書き**&#x200B;されます。
+>PUTリクエストでは、sql と name の両方のフィールドに値を入力する必要があり、は **上書き** そのクエリテンプレートの現在の内容。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -309,7 +310,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->`_links.delete` の値を使用して、[テンプレートを削除](#delete-a-specified-query-template)できます。
+>この場合、 `_links.delete` から [クエリテンプレートを削除](#delete-a-specified-query-template).
 
 ### 指定されたクエリテンプレートの削除
 

@@ -3,11 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；ID;ID
 solution: Experience Platform
 title: ID マッピングのリスト
 description: マッピングは、クラスターにある、指定した名前空間の全 ID の集まりです。
+role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 96%
+source-wordcount: '278'
+ht-degree: 92%
 
 ---
 
@@ -66,7 +67,7 @@ curl -X GET \
 
 >[!NOTE]
 >
-> リクエストで使用できる ID 数の上限は 1000 です。ID 数が 1000 を超えるリクエストに対しては、ステータスコード 400 が発生します。
+>リクエストで使用できる ID 数の上限は 1000 です。 ID 数が 1000 を超えるリクエストに対しては、ステータスコード 400 が発生します。
 
 **API 形式**
 

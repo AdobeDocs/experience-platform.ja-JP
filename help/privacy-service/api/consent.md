@@ -3,17 +3,18 @@ keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: 同意 API エンドポイント
 description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションの顧客の同意リクエストを管理する方法について説明します。
+role: Developer
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '245'
 ht-degree: 4%
 
 ---
 
 # 同意エンドポイント
 
-特定の規制では、個人データを収集する前に、明示的なお客様の同意が必要です。 この `/consent` エンドポイント [!DNL Privacy Service] API を使用すると、顧客の同意リクエストを処理し、プライバシーワークフローに統合できます。
+特定の規制では、個人データを収集する前に、明示的なお客様の同意が必要です。 The `/consent` エンドポイント [!DNL Privacy Service] API を使用すると、顧客の同意リクエストを処理し、プライバシーワークフローに統合できます。
 
 このガイドを使用する前に、 [はじめに](./getting-started.md) 以下の API 呼び出し例で示す、必要な認証ヘッダーに関する情報を参照してください。
 
@@ -69,7 +70,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->送信先の顧客 ID 値を決定する方法の詳細 [!DNL Privacy Service]( [id データの提供](../identity-data.md).
+>送信先の顧客 ID 値を決定する方法の詳細 [!DNL Privacy Service]詳しくは、 [id データの提供](../identity-data.md).
 
 **応答**
 

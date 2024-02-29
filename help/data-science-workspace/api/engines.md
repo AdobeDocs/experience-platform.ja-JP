@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、エンジン、sensei 機械学習 api
+keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、エンジン、sensei 機械学習 API
 solution: Experience Platform
 title: エンジン API エンドポイント
 description: エンジンは、Data Science Workspace　での機械学習モデルの基礎です。特定の問題を解決する機械学習アルゴリズム、特徴エンジニアリングを実行する特徴パイプライン、またはその両方が含まれます。
+role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1165'
-ht-degree: 69%
+ht-degree: 65%
 
 ---
 
@@ -45,7 +46,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 >[!NOTE]
 >
-> Docker のパスワードは、`{ACCESS_TOKEN}` が更新するたびに変更されます。
+>Docker のパスワードは、 `{ACCESS_TOKEN}` が更新されました。
 
 ```json
 {
@@ -142,7 +143,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新たに作成されたエンジンの一意の ID（`id`）を含む詳細を含むペイロードを返します。次のレスポンスの例は、Python エンジン用です。 すべてのエンジン応答は、次の形式に従います。
+正常な応答は、新たに作成されたエンジンの一意の識別子 (`id`) をクリックします。 次のレスポンスの例は、Python エンジン用です。 すべてのエンジン応答は、次の形式に従います。
 
 ```json
 {
@@ -386,7 +387,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->この PUT リクエストを確実に成功させるために、まず GET リクエストを実行して、[ID でエンジンを取得](#retrieve-specific)することをお勧めします。次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
+>このPUTリクエストを確実に成功させるために、まず次に対してGETリクエストを実行することをお勧めします。 [ID によるエンジンの取得](#retrieve-specific). 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
 
 以下の API 呼び出し例を使用すると、これらのプロパティを最初に持つ間に、エンジンの名前と説明が更新されます。
 

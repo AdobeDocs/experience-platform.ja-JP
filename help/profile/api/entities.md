@@ -3,17 +3,18 @@ keywords: Experience Platform;プロファイル;リアルタイム顧客プロ�
 title: エンティティ（プロファイルアクセス）API エンドポイント
 type: Documentation
 description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、プロファイル API を使用してエンティティ（より一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
+role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1734'
 ht-degree: 89%
 
 ---
 
 # エンティティエンドポイント（プロファイルアクセス）
 
-Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。を使用したプロファイルへのアクセスに関する詳細 [!DNL Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
+Adobe Experience Platformを使用すると、 [!DNL Real-Time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。を使用したプロファイルへのアクセスに関する詳細 [!DNL Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
 
 ## はじめに
 
@@ -21,7 +22,7 @@ Adobe Experience Platformでは、 [!DNL Real-Time Customer Profile] RESTful API
 
 ## ID によるプロファイルデータへのアクセス
 
-次の項目にアクセスすると、 [!DNL Profile] エンティティに対してGETリクエストを実行する `/access/entities` エンドポイントを作成し、一連のクエリパラメーターとしてエンティティの id を指定することができます。 この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
+次の項目にアクセスすると、 [!DNL Profile] エンティティに対してGETリクエストを行う `/access/entities` エンドポイントを作成し、一連のクエリパラメーターとしてエンティティの id を指定することができます。 この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
 
 クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -910,5 +911,5 @@ curl -X GET \
 | `startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 | `startTime=1539838505` |
 | `endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 | `endTime=1539838510` |
 | `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 | `limit=100` |
-| `property` | プロパティの値でフィルターします。 次の評価演算子をサポートします。=、!=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大 3 つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `property` | プロパティの値でフィルターします。 次の評価演算子をサポートします： =, !=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大 3 つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 | `withCA=true` |

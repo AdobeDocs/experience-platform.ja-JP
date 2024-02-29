@@ -3,11 +3,12 @@ keywords: Experience Platform;プロファイル;リアルタイム顧客プロ�
 title: プロファイル書き出しジョブ API エンドポイント
 type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースのデータを統合することで、Adobe Experience Platform内の個々の顧客を一目で把握できます。 その後、プロファイルデータをデータセットに書き出して、さらに処理することができます。
+role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1518'
-ht-degree: 54%
+source-wordcount: '1512'
+ht-degree: 53%
 
 ---
 
@@ -25,7 +26,7 @@ ht-degree: 54%
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[!DNL Real-Time Customer Profile]API の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用される API エンドポイントは、 [!DNL Real-Time Customer Profile] API. 先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## エクスポートジョブの作成
 
@@ -194,7 +195,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 | `start` | リクエストの作成時刻に従って、返された結果のページをオフセットします。例：`start=4` |
 | `limit` | 返す結果の数を制限します。例：`limit=10` |
 | `page` | リクエストの作成時刻に従って、特定のページの結果を返します。例：`page=2` |
-| `sort` | 特定のフィールドで結果を昇順（**`asc`**）または降順（**`desc`**）で並べ替えます。結果の複数ページを返す場合、並べ替えパラメーターは機能しません。例：`sort=updateTime:asc` |
+| `sort` | 特定のフィールドで結果を昇順 ( **`asc`** ) または降順 ( **`desc`** ) 注文内容です。 結果の複数ページを返す場合、並べ替えパラメーターは機能しません。例：`sort=updateTime:asc` |
 
 **リクエスト**
 

@@ -1,11 +1,12 @@
 ---
 title: セグメント検索 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API では、セグメント検索は、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返すために使用されます。 このガイドには、セグメント検索をより深く理解するのに役立つ情報が記載されており、API を使用して基本的なアクションを実行するための API 呼び出し例が含まれています。
+role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1196'
-ht-degree: 45%
+source-wordcount: '1189'
+ht-degree: 44%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 45%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] API. 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 はじめに節で説明している必須ヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
 

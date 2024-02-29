@@ -5,7 +5,8 @@ user-guide-title: データ収集
 breadcrumb-title: データ収集
 user-guide-description: Adobe Experience Platform Edge Network のクライアントサイドのデータ収集を有効にする方法と、使用するデータ収集テクノロジーについて詳しく説明します。
 feature: Data Collection
-source-git-commit: b6230760c1e25a3ef0901d80160fb0992578c41e
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 89%

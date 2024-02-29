@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: セグメント書き出しジョブ API エンドポイント
 description: 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 Adobe Experience Platform Segmentation Service API の/export/jobs エンドポイントを使用すると、書き出しジョブをプログラムで取得、作成およびキャンセルできます。
+role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 35%
+source-wordcount: '1615'
+ht-degree: 32%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 35%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] API. 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 ## 書き出しジョブのリストの取得 {#retrieve-list}
 
@@ -28,7 +29,7 @@ ht-degree: 35%
 
 **API 形式**
 
-`/export/jobs` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+`/export/jobs` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /export/jobs
@@ -197,7 +198,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `destination` | エクスポートするデータの宛先情報：<ul><li>`datasetId`：データが書き出されたデータセットの ID。</li><li>`segmentPerBatch`：セグメント ID が統合されているかどうかを示す Boolean 値。 値が「false」の場合、すべてのセグメント ID が単一のバッチ ID に書き出されます。 値が「true」の場合、1 つのセグメント ID が 1 つのバッチ ID に書き出されます。 **注意：** 値を true に設定すると、バッチエクスポートのパフォーマンスに影響を与える場合があります。</li></ul> |
-| `fields` | コンマで区切った、書き出すフィールドのリスト。 |
+| `fields` | 書き出すフィールドのリスト（コンマ区切り）。 |
 | `schema.name` | データのエクスポート先のデータセットに関連付けられているスキーマの名前。 |
 | `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`：プロファイルの書き出し先のセグメント ID。</li><li>`segmentNs`：指定したのセグメント名前空間 `segmentID`.</li><li>`status`：のステータスフィルターを提供する文字列の配列。 `segmentID`. デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized"]` を持ちます。次の値を指定できます。 `realized` および `exited`. 値： `realized` は、プロファイルがセグメントに適合することを意味します。 値： `exiting` は、プロファイルがセグメントから離脱していることを意味します。</li></ul> |
 | `mergePolicy` | エクスポートされたデータの結合ポリシー情報。 |
@@ -467,7 +468,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `destination` | エクスポートするデータの宛先情報：<ul><li>`datasetId`：データが書き出されたデータセットの ID。</li><li>`segmentPerBatch`：セグメント ID が統合されているかどうかを示す Boolean 値。 値： `false` は、すべてのセグメント ID が単一のバッチ ID に含まれていることを意味します。 値： `true` は、1 つのセグメント ID が 1 つのバッチ ID に書き出されることを意味します。</li></ul> |
-| `fields` | コンマで区切った、書き出すフィールドのリスト。 |
+| `fields` | 書き出すフィールドのリスト（コンマ区切り）。 |
 | `schema.name` | データのエクスポート先のデータセットに関連付けられているスキーマの名前。 |
 | `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`：書き出すプロファイルのセグメント ID。</li><li>`segmentNs`：指定したのセグメント名前空間 `segmentID`.</li><li>`status`：のステータスフィルターを提供する文字列の配列。 `segmentID`. デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized"]` を持ちます。次の値を指定できます。 `realized` および `exited`.  値： `realized` は、プロファイルがセグメントに適合することを意味します。 値： `exiting` は、プロファイルがセグメントから離脱していることを意味します。</li></ul> |
 | `mergePolicy` | エクスポートされたデータの結合ポリシー情報。 |

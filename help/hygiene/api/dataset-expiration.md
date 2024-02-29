@@ -1,11 +1,12 @@
 ---
 title: Dataset Expiration API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
+role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: a954059155857e6dde7884cf413561cd5214d9bb
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1714'
-ht-degree: 78%
+source-wordcount: '1726'
+ht-degree: 76%
 
 ---
 
@@ -37,7 +38,7 @@ Data Hygiene API の `/ttl` エンドポイントを使用すると、Adobe Expe
 
 ## データセット有効期限のリスト {#list}
 
-GET リクエストを行うことで、組織のすべてのデータセット有効期限をリスト表示できます。クエリパラメーターを使用して、応答を適切な結果に絞り込むことができます。
+GETリクエストをおこなうことで、組織のすべてのデータセット有効期限をリストできます。 クエリパラメーターを使用して、応答を適切な結果に絞り込むことができます。
 
 **API 形式**
 
@@ -297,7 +298,7 @@ curl -X DELETE \
 
 ## データセットの有効期限ステータス履歴の取得 {#retrieve-expiration-history}
 
-ルックアップリクエストでクエリパラメーター `include=history` を使用することで、特定のデータセットの有効期限ステータス履歴を検索できます。結果には、データセットの有効期限の作成、適用された更新、およびそのキャンセルまたは実行（該当する場合）に関する情報が含まれます。また、 `ttlId` 」と入力します。
+ルックアップリクエストでクエリパラメーター `include=history` を使用することで、特定のデータセットの有効期限ステータス履歴を検索できます。結果には、データセットの有効期限の作成、適用された更新、キャンセルまたは実行（該当する場合）に関する情報が含まれます。 また、 `ttlId` 」と入力します。
 
 **API 形式**
 

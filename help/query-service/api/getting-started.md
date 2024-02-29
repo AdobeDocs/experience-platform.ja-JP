@@ -3,10 +3,11 @@ keywords: Experience Platform;ホーム;人気のトピック;query service;Quer
 solution: Experience Platform
 title: Query Service API ガイド
 description: Query Service API を使用すると、開発者は標準の SQL を使用して Adobe Experience Platform データに対してクエリを実行できます。このガイドに従って、API を使用した主な操作の実行方法を学習します。
+role: Developer
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '396'
 ht-degree: 100%
 
 ---

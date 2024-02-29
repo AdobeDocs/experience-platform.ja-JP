@@ -3,9 +3,10 @@ audience: user
 user-guide-title: Observability Insights ガイド
 user-guide-description: Adobe Experience Platform Observability Insights の統計指標とイベント通知を使用して、Platform アクティビティを監視する方法を確認します。
 feature: Observability
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '55'
 ht-degree: 100%
 
 ---

@@ -3,8 +3,9 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 solution: Experience Platform
 title: 参照 API エンドポイント
 description: アクセス制御 API の参照エンドポイントを使用すると、使用可能な権限の名前とリソースの種類を表示できます。これを使用して、現在のユーザーに対する有効なアクセス制御ポリシーを表示できます。
+role: Developer
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 59%

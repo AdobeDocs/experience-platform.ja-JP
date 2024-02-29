@@ -2,10 +2,11 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；属性ベースのアクセス制御；属性ベースのアクセス制御
 title: 属性ベースのアクセス制御 API の概要
 description: 属性ベースのアクセス制御 API を使用すると、Adobe Experience Platform内の役割とアクセスポリシーをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '327'
 ht-degree: 69%
 
 ---

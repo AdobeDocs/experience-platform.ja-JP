@@ -3,8 +3,9 @@ keywords: Experience Platform;ホーム;人気のトピック;効果的なポリ
 solution: Experience Platform
 title: 有効なポリシー API エンドポイント
 description: Adobe Experience Platformのアクセス制御 API を使用して、効果的なアクセスポリシーを表示する方法を説明します。
+role: Developer
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 74%
@@ -17,7 +18,7 @@ ht-degree: 74%
 >
 >ユーザートークンが渡されている場合、トークンのユーザーは、リクエストされた組織に対して「組織管理者」の役割を持つ必要があります。
 
-現在のユーザーに対して有効なアクセス制御ポリシーを表示するには、 `/acl/effective-policies` エンドポイント [!DNL Access Control] API 取得する権限とリソースの種類は、リクエストペイロードに配列の形式で指定する必要があります。これは、以下の API 呼び出し例に示されています。
+現在のユーザーに対して有効なアクセス制御ポリシーを表示するには、次に対してPOSTリクエストを実行します： `/acl/effective-policies` エンドポイント [!DNL Access Control] API. 取得する権限とリソースの種類は、リクエストペイロードに配列の形式で指定する必要があります。これは、以下の API 呼び出し例に示されています。
 
 **API 形式**
 

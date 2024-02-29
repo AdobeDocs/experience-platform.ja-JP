@@ -1,11 +1,12 @@
 ---
 title: Privacy ServiceAPI ガイド
 description: Privacy ServiceAPI を使用して、サポートされるAdobe Experience Cloudアプリケーションのプライバシージョブをプログラムで管理する方法について説明します。
+role: Developer
 exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
-source-git-commit: bda8d0ee1db4b58b4b856a23a8790cd7f76c0656
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 21%
+source-wordcount: '261'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +16,7 @@ Privacy ServiceAPI は、組織のプライバシージョブをプログラム�
 
 >[!NOTE]
 >
->このガイドでは、 [!DNL Privacy Service] API UI の使用方法について詳しくは、「[Privacy Service サービス UI の概要](../ui/overview.md)」を参照してください。
+>このガイドでは、 [!DNL Privacy Service] API. UI の使用方法について詳しくは、 [Privacy ServiceUI の概要](../ui/overview.md).
 
 使用可能なすべてのエンドポイントと CRUD の操作を表示するには、 [Privacy ServiceAPI リファレンス](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 
@@ -23,11 +24,11 @@ Privacy ServiceAPI は、組織のプライバシージョブをプログラム�
 
 Privacy Serviceは、主体の個人データへのアクセスまたは削除のリクエストを受け取ると、そのリクエストを満たすためにプライバシージョブを作成します。 各プライバシージョブには、データ主体に関する ID 情報、ジョブが適用されるAdobe Experience Cloud製品に関するメタデータ、ジョブの処理ステータスが含まれます。
 
-この `/jobs` endpoint を使用すると、組織のプライバシージョブを作成および取得できます。 このエンドポイントの使用方法については、 [privacy jobs endpoint guide](./privacy-jobs.md).
+The `/jobs` endpoint を使用すると、組織のプライバシージョブを作成および取得できます。 このエンドポイントの使用方法については、 [privacy jobs endpoint guide](./privacy-jobs.md).
 
 ## 同意
 
-特定の規制では、個人データを収集する前に、明示的なお客様の同意が必要です。 この `/consent` endpoint を使用すると、顧客の同意リクエストを処理して、プライバシーワークフローに統合できます。 詳しくは、 [同意エンドポイントガイド](./consent.md) を参照してください。
+特定の規制では、個人データを収集する前に、明示的なお客様の同意が必要です。 The `/consent` endpoint を使用すると、顧客の同意リクエストを処理して、プライバシーワークフローに統合できます。 詳しくは、 [同意エンドポイントガイド](./consent.md) を参照してください。
 
 ## 次の手順
 

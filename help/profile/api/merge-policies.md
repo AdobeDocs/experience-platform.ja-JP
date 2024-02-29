@@ -3,11 +3,12 @@ keywords: Experience Platform;プロファイル;リアルタイム顧客プロ�
 title: 結合ポリシー API エンドポイント
 type: Documentation
 description: Adobe Experience Platform では、個々の顧客の全体像を把握するために、複数のソースから得られたデータフラグメントを統合し組み合わせることができます。このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合ビューを作成するためにどのデータを組み合わせるかを決定するために Platform が使用するルールです。
+role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '2467'
-ht-degree: 65%
+source-wordcount: '2465'
+ht-degree: 64%
 
 ---
 
@@ -588,7 +589,7 @@ curl -X PATCH \
 | プロパティ | 説明 |
 |---|---|
 | `op` | 操作を指定します。その他のパッチ操作の例については、 [JSON パッチのドキュメント](https://datatracker.ietf.org/doc/html/rfc6902)を参照してください |
-| `path` | 更新するフィールドのパス。指定できる値は「/name」、「/identityGraph.type」、「/attributeMerge.type」、「/schema.name」、「/version」、「/default」です。, &quot;/isActiveOnEdge&quot; |
+| `path` | 更新するフィールドのパス。指定できる値は、「/name」、「/identityGraph.type」、「/attributeMerge.type」、「/schema.name」、「/version」、「/default」、「/isActiveOnEdge」です。 |
 | `value` | 指定したフィールドに設定する値。 |
 
 詳細は、「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。

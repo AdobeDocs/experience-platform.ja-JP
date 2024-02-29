@@ -3,11 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 solution: Experience Platform
 title: 接続パラメーター API エンドポイント
 description: /connection_parameters エンドポイントに対してGETリクエストを実行することで、インタラクティブサービスを使用するための接続パラメーターを取得できます。
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 28%
+ht-degree: 29%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 28%
 
 ## サンプル API 呼び出し
 
-以下の節では、 [!DNL Query Service] API この呼び出しには、一般的な API 形式、必要なヘッダーを示すリクエスト例および応答例が含まれています。
+以下の節では、 [!DNL Query Service] API. この呼び出しには、一般的な API 形式、必要なヘッダーを示すリクエスト例および応答例が含まれています。
 
 ### 接続パラメーターをリクエスト
 

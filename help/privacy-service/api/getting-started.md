@@ -1,11 +1,12 @@
 ---
 title: Privacy Service API の認証とアクセス
 description: Privacy ServiceAPI への認証方法とサンプル API 呼び出しの解釈方法については、ドキュメントを参照してください。
+role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 23%
+source-wordcount: '851'
+ht-degree: 18%
 
 ---
 
@@ -99,7 +100,7 @@ API がプロジェクトに追加されると、 **[!UICONTROL Privacy ServiceA
 
 ## API 呼び出し例の読み取り {#read-sample-api-calls}
 
-各エンドポイントガイドには、API 呼び出しの例が用意されており、リクエストの形式を設定する方法を示しています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、 Platform API の開始ガイドの[API 呼び出し例の読み方](../../landing/api-guide.md#sample-api)に関する節を参照してください。
+各エンドポイントガイドには、API 呼び出しの例が用意されており、リクエストの形式を設定する方法を示しています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 [API 呼び出し例の読み取り方法](../../landing/api-guide.md#sample-api) （Platform API の入門ガイド）を参照してください。
 
 ## 次の手順 {#next-steps}
 

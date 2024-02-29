@@ -3,11 +3,12 @@ keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: プライバシージョブ API エンドポイント
 description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションのプライバシージョブを管理する方法について説明します。
+role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 62%
+source-wordcount: '1552'
+ht-degree: 57%
 
 ---
 
@@ -78,7 +79,7 @@ curl -X GET \
 
 >[!NOTE]
 >
-> 互換性のある Adobe Experience Cloud アプリケーションは、データの主題を識別するために異なる値を使用します。アプリに必要な識別子について詳しくは、[Privacy Service および Experience Cloud アプリケーションの](../experience-cloud-apps.md)に関するガイドを参照してください。送信先 ID の決定に関する一般的なガイダンスについて [!DNL Privacy Service]を参照してください。 [プライバシーリクエストの id データ](../identity-data.md).
+>互換性のあるAdobe Experience Cloudアプリケーションは、データの主体を識別するために異なる値を使用します。 次のガイドを参照してください： [Privacy Service/Experience Cloud・アプリケーション](../experience-cloud-apps.md) を参照してください。 送信先 ID の決定に関する一般的なガイダンスについて [!DNL Privacy Service]を参照してください。 [プライバシーリクエストの id データ](../identity-data.md).
 
 The [!DNL Privacy Service] API は、個人データに対する 2 種類のジョブリクエストをサポートしています。
 
@@ -87,9 +88,9 @@ The [!DNL Privacy Service] API は、個人データに対する 2 種類のジ�
 
 >[!IMPORTANT]
 >
-> アクセスリクエストと削除リクエストは 1 回の API 呼び出しとして組み合わせることができますが、オプトアウトリクエストは別々におこなう必要があります。
+>アクセスリクエストと削除リクエストは 1 回の API 呼び出しとして組み合わせることができますが、オプトアウトリクエストは別々におこなう必要があります。
 
-### アクセスおよび削除ジョブの作成 {#access-delete}
+### アクセスジョブと削除ジョブの作成 {#access-delete}
 
 この節では、API を使用してアクセスおよび削除ジョブリクエストを作成する方法を説明します。
 
@@ -234,7 +235,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
-> 以前に作成したジョブのデータは、ジョブの完了日から 30 日間のみ取得できます。
+>以前に作成したジョブのデータは、ジョブの完了日から 30 日以内に取得できます。
 
 **API 形式**
 

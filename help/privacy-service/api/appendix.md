@@ -3,11 +3,12 @@ keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Privacy ServiceAPI ガイドの付録
 description: このドキュメントには、Privacy ServiceAPI の操作に関する追加情報が含まれています。
+role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 69%
+ht-degree: 59%
 
 ---
 
@@ -37,13 +38,13 @@ ht-degree: 69%
 
 >[!NOTE]
 >
-> 各 ID タイプには整数値の `namespaceId` があります。これは、ID の `namespace` プロパティを「namespaceId」に設定する際に `type` 文字列の代わりに使用できます。詳しくは、[名前空間修飾子](#namespace-qualifiers)の節を参照してください。
+>各 ID タイプにも `namespaceId` 整数値。 `namespace` 文字列 (ID の `type` プロパティを「namespaceId」に設定します。 詳しくは、[名前空間修飾子](#namespace-qualifiers)の節を参照してください。
 
 組織で使用中の ID 名前空間のリストを取得するには、にGETリクエストを送信します `idnamespace/identities` エンドポイント [!DNL Identity Service] API. 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
 
 ## 名前空間修飾子
 
- API で `namespace`[!DNL Privacy Service] 値を指定する場合、対応する **パラメーターに**&#x200B;名前空間修飾子`type`を含める必要があります。使用できる様々な名前空間修飾子の概要を次の表に示します。
+を指定する場合、 `namespace` 値を [!DNL Privacy Service] API, a **名前空間修飾子** は、対応する `type` パラメーター。 使用できる様々な名前空間修飾子の概要を次の表に示します。
 
 | 修飾子 | 定義 |
 | --------- | ---------- |

@@ -3,17 +3,18 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 solution: Experience Platform
 title: アカウント API エンドポイント
 description: 永続的なのクエリサービスアカウントを作成できます。
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '498'
 ht-degree: 5%
 
 ---
 
 # アカウントエンドポイント
 
-Adobe Experience Platformクエリサービスでは、外部 SQL クライアントで使用できる、有効期限の切れない資格情報を作成するためにアカウントが使用されます。 以下を使用して、 `/accounts` エンドポイント（クエリサービス API 内）。クエリサービス統合アカウント（テクニカルアカウントとも呼ばれます）を、プログラムによって作成、取得、編集および削除できます。
+Adobe Experience Platformクエリサービスでは、外部 SQL クライアントで使用できる、有効期限の切れない資格情報を作成するためにアカウントが使用されます。 以下を使用すると、 `/accounts` エンドポイント（クエリサービス API 内）。クエリサービス統合アカウント（テクニカルアカウントとも呼ばれます）を、プログラムによって作成、取得、編集および削除できます。
 
 ## はじめに
 

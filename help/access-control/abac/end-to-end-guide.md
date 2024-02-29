@@ -2,11 +2,12 @@
 keywords: Experience Platform;ホーム;人気のトピック;アクセス制御;属性ベースのアクセス制御;
 title: 属性ベースのアクセス制御エンドツーエンドガイド
 description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関するエンドツーエンドのガイドを提供します
+role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 26%
+source-wordcount: '1714'
+ht-degree: 24%
 
 ---
 
@@ -51,7 +52,7 @@ Adobe Experience Platformの属性ベースのアクセス制御を使用する�
 
 [!UICONTROL 権限] は、管理者がExperience Cloudの領域で、製品アプリケーション内の機能とオブジェクトに対する権限を管理するためのユーザーの役割とポリシーを定義できます。
 
-～ [!UICONTROL 権限]を使用すると、役割を作成および管理し、これらの役割に対する必要なリソース権限を割り当てることができます。 [!UICONTROL また、権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。]
+～ [!UICONTROL 権限]を使用すると、役割を作成および管理し、これらの役割に対する必要なリソース権限を割り当てることができます。 [!UICONTROL 権限] また、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。
 
 管理者権限がない場合は、システム管理者に問い合わせてアクセス権を取得してください。
 

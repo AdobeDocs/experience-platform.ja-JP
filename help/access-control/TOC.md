@@ -4,10 +4,11 @@ user-guide-title: Adobe Experience Platform ヘルプのアクセス制御
 breadcrumb-title: アクセス制御ガイド
 user-guide-description: Adobe Admin Console の製品プロファイルを使用して、ユーザー権限を管理します。ユーザーを製品とサンドボックスに割り当てる方法について説明します。
 feature: Access Control
-source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
+role: Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 100%
+source-wordcount: '117'
+ht-degree: 94%
 
 ---
 
@@ -23,13 +24,13 @@ ht-degree: 100%
       * [ラベル](abac/ui/labels.md)
       * [権限](abac/ui/permissions.md)
       * [ポリシー](abac/ui/policies.md)
-      * [ロール](abac/ui/roles.md)
+      * [役割](abac/ui/roles.md)
       * [サンドボックス](abac/ui/sandboxes.md)
       * [ユーザー](abac/ui/users.md)
    * 属性ベースのアクセス制御 API {#abac-api}
       * [概要](abac/api/overview.md)
       * [はじめに](abac/api/getting-started.md)
-      * [ロール](abac/api/roles.md)
+      * [役割](abac/api/roles.md)
       * [ポリシー](abac/api/policies.md)
       * [製品](abac/api/products.md)
 * アクセス制御 UI {#ui}

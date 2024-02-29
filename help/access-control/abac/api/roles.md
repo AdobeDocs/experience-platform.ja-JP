@@ -3,8 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；api；
 solution: Experience Platform
 title: 役割 API エンドポイント
 description: 属性ベースのアクセス制御 API の/roles エンドポイントを使用すると、Adobe Experience Platformの役割をプログラムで管理できます。
+role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 27%

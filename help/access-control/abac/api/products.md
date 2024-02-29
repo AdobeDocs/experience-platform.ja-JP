@@ -3,10 +3,11 @@ keywords: Experience Platform；ホーム；人気の高いトピック；api；
 solution: Experience Platform
 title: 製品 API エンドポイント
 description: 属性ベースのアクセス制御 API の/products エンドポイントを使用すると、Adobe Experience Platformで製品をプログラムで管理できます。
+role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '513'
 ht-degree: 25%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 25%
 >
 >ユーザートークンが渡されている場合、トークンのユーザーは、リクエストされた組織に対して「組織管理者」の役割を持つ必要があります。
 
-この `/products` 属性ベースのアクセス制御 API のエンドポイントを使用すると、製品、および組織内の製品に関連する権限カテゴリや権限セットをプログラムで管理できます。
+The `/products` 属性ベースのアクセス制御 API のエンドポイントを使用すると、製品、および組織内の製品に関連する権限カテゴリや権限セットをプログラムで管理できます。
 
 ## はじめに
 

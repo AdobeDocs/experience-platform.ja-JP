@@ -3,11 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；セグ
 solution: Experience Platform
 title: セグメント化サービス API の概要
 description: 次のドキュメントは、セグメント化 API を正しく操作するために知っておく必要がある追加情報を示しています。
+role: Developer
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 63%
+source-wordcount: '352'
+ht-degree: 62%
 
 ---
 

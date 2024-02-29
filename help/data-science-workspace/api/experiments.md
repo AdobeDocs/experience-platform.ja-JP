@@ -3,11 +3,12 @@ keywords: Experience Platform、開発者ガイド、エンドポイント、Dat
 solution: Experience Platform
 title: Experiment API エンドポイント
 description: モデルの開発とトレーニングは、実験レベルで行われます。実験は、MLInstance、トレーニング実行、スコア付け実行で構成されます。
+role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '783'
-ht-degree: 97%
+ht-degree: 89%
 
 ---
 
@@ -245,7 +246,7 @@ curl -X GET \
 
 >[!NOTE]
 >
-> 複数のクエリパラメーターを組み合わせる場合は、アンパサンド（&amp;）で区切る必要があります。
+>複数のクエリパラメーターを組み合わせる場合は、アンパサンド (&amp;) で区切る必要があります。
 
 **API 形式**
 
@@ -306,7 +307,7 @@ curl -X GET \
 
 >[!TIP]
 >
->この PUT リクエストを確実に成功させるために、まず GET リクエストを実行し、[ID で実験を取得](#retrieve-specific)することをお勧めします。次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
+>このPUTリクエストを確実に成功させるために、まず次に対してGETリクエストを実行することをお勧めします。 [ID による実験の取得](#retrieve-specific). 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
 
 次のサンプル API 呼び出しは、初期状態で次のプロパティを持つと同時に、実験の名前を更新します。
 

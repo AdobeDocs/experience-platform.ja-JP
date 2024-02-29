@@ -3,11 +3,12 @@ keywords: Experience Platform、ホーム、人気の高いトピック、ID サ
 solution: Experience Platform
 title: ID サービス API ガイド
 description: ID サービス API を使用すると、開発者は、Adobe Experience Platformの ID グラフを使用して、デバイス間、チャネル間、ほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+role: Developer
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 66%
+source-wordcount: '753'
+ht-degree: 61%
 
 ---
 
@@ -64,7 +65,7 @@ The [!DNL Identity Service] API は、 `{REGION}` をリクエストパスの一
 
 >[!NOTE]
 >
->地域を指定しないでリクエストをおこなうと、誤った地域に対する呼び出しルーティングが発生したり、呼び出しが予期せず失敗したりする場合があります。
+>地域を指定せずにリクエストをおこなうと、誤った地域に対する呼び出しルーティングが発生したり、呼び出しが予期せず失敗したりする場合があります。
 
 組織プロファイル内で地域が見つからない場合は、システム管理者に問い合わせてサポートを依頼してください。
 
@@ -82,7 +83,7 @@ ID が永続化されると、 [!DNL Identity Service] はネイティブ ID(XID
 
 >[!NOTE]
 >
->リクエストでネイティブ XID が使用される場合、返される ID はすべてネイティブ XID 形式になります。ID／名前空間フォームの使用詳しくは、「[ID の XID の取得](./create-custom-namespace.md)」に関する節を参照してください。
+>リクエストでネイティブ XID が使用される場合、返される ID はすべてネイティブ XID 形式になります。 ID／名前空間フォームの使用詳しくは、「[ID の XID の取得](./create-custom-namespace.md)」に関する節を参照してください。
 
 ## 次の手順
 

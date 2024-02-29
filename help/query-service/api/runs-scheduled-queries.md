@@ -3,11 +3,12 @@ keywords: Experience Platform、ホーム、人気の高いトピック、クエ
 solution: Experience Platform
 title: スケジュール済みクエリ実行 API エンドポイント
 description: 以下の節では、クエリサービス API を使用してスケジュールされたクエリを実行するために実行できる様々な API 呼び出しについて説明します。
+role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 78%
+source-wordcount: '782'
+ht-degree: 76%
 
 ---
 
@@ -148,7 +149,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
-> `_links.cancel` の値を使用して、[指定したスケジュール済みクエリの実行を停止](#immediately-stop-a-run-for-a-specific-scheduled-query)できます。
+>この場合、 `_links.cancel` から [指定したスケジュール済みクエリの実行を停止する](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### 特定のスケジュール済みクエリ実行の即時トリガー
 

@@ -3,11 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 solution: Experience Platform
 title: クエリ API エンドポイント
 description: 以降の節では、クエリサービス API の/querys エンドポイントを使用しておこなう呼び出しについて説明します。
+role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 53%
+source-wordcount: '950'
+ht-degree: 48%
 
 ---
 
@@ -46,7 +47,7 @@ GET /queries?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストで、 組織用に作成された最新のクエリを取得します。
+次のリクエストは、組織用に作成された最新のクエリを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定された組織のクエリのリストを JSON として返します。 次の応答は、 組織用に作成された最新のクエリを返します。
+正常な応答は、HTTP ステータス 200 と、指定された組織のクエリのリストを JSON として返します。 次の応答は、組織用に作成された最新のクエリを返します。
 
 ```json
 {
@@ -222,7 +223,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 >[!NOTE]
 >
-> `_links.cancel` の値を使用して、[作成したクエリをキャンセル](#cancel-a-query)できます。
+>この場合、 `_links.cancel` から [作成したクエリをキャンセル](#cancel-a-query).
 
 ### ID によるクエリの取得
 
@@ -293,7 +294,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 >[!NOTE]
 >
-> `_links.cancel` の値を使用して、[作成したクエリをキャンセル](#cancel-a-query)できます。
+>この場合、 `_links.cancel` から [作成したクエリをキャンセル](#cancel-a-query).
 
 ### クエリのキャンセルまたはソフト削除
 

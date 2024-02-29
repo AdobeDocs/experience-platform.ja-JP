@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: プレビューと推定 API エンドポイント
 description: セグメント定義の開発時に、Adobe Experience Platform内の推定ツールとプレビューツールを使用して概要レベルの情報を表示し、期待されるオーディエンスを確実に特定することができます。
+role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 23%
+source-wordcount: '971'
+ht-degree: 21%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 23%
 
 セグメント定義の作成時に、Adobe Experience Platform内の推定ツールとプレビューツールを使用して概要レベルの情報を表示し、期待するオーディエンスを確実に特定することができます。
 
-* **プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。**
+* **プレビュー** セグメント定義に適格なプロファイルのページ分割リストを提供し、結果を期待値と比較できます。
 
 * **見積もり** は、推定オーディエンスサイズ、信頼区間、エラーの標準偏差など、セグメント定義の統計情報を提供します。
 
@@ -24,7 +25,7 @@ ht-degree: 23%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] API. 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 ## 推定の生成方法
 

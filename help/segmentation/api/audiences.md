@@ -1,11 +1,12 @@
 ---
 title: Audiences API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用して、組織のオーディエンスをプログラムで作成、管理、更新します。
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 8%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[!DNL Adobe Experience Platform Segmentation Service]API の一部です。続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] API. 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
 
 ## オーディエンスのリストの取得 {#list}
 
@@ -195,7 +196,7 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 +++
 
-## 新しいオーディエンスを作成する {#create}
+## 新しいオーディエンスの作成 {#create}
 
 新しいオーディエンスを作成するには、 `/audiences` endpoint.
 
@@ -209,7 +210,7 @@ POST /audiences
 
 >[!BEGINTABS]
 
->[!TAB Platform で生成されたオーディエンス]
+>[!TAB Platform が生成したオーディエンス]
 
 +++ Platform で生成されたオーディエンスを作成するためのサンプルリクエスト
 
@@ -305,7 +306,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 >[!BEGINTABS]
 
->[!TAB Platform で生成されたオーディエンス]
+>[!TAB Platform が生成したオーディエンス]
 
 +++Platform で生成されたオーディエンスを作成する際のレスポンスの例。
 
@@ -450,7 +451,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 >[!BEGINTABS]
 
->[!TAB Platform で生成されたオーディエンス]
+>[!TAB Platform が生成したオーディエンス]
 
 +++Platform で生成されたオーディエンスを取得する際のレスポンスのサンプルです。
 

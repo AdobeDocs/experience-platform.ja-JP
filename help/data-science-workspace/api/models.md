@@ -3,11 +3,12 @@ keywords: Experience Platform、開発者ガイド、エンドポイント、Dat
 solution: Experience Platform
 title: モデル API エンドポイント
 description: モデルとは、履歴データと設定を使用してトレーニングされた機械学習レシピのインスタンスであり、ビジネス上の使用例について解決します。
+role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '864'
-ht-degree: 65%
+ht-degree: 62%
 
 ---
 
@@ -221,7 +222,7 @@ curl -X POST \
 
 >[!TIP]
 >
-> この PUT リクエストを確実に成功させるために、まず GET リクエストを実行して、ID でモデルを取得することをお勧めします。次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
+>このPUTリクエストを確実に成功させるために、まずGETリクエストを実行して、ID でモデルを取得することをお勧めします。 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
 
 **API 形式**
 
@@ -354,7 +355,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、トランスコードの情報を含む JSON オブジェクトを含むペイロードを返します。 これには、トランスコーディングの一意の識別子 (`id`) で使用 [特定のトランスコード済みモデルの取得](#retrieve-transcoded-model).
+正常な応答は、トランスコードの情報を含む JSON オブジェクトを含むペイロードを返します。 これには、トランスコーディングの一意の識別子 (`id`) で使用されています [特定のトランスコード済みモデルの取得](#retrieve-transcoded-model).
 
 ```json
 {

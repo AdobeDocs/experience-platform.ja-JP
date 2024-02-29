@@ -3,11 +3,12 @@ keywords: Experience Platform；ホーム；人気のトピック；ID；クラ�
 solution: Experience Platform
 title: ID のクラスター履歴の取得
 description: ID を使用して、様々なデバイスグラフの実行中にクラスターを移動できます。ID サービスは、特定の ID のクラスター関連付けを経時的に表示します。
+role: Developer
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 92%
+source-wordcount: '345'
+ht-degree: 78%
 
 ---
 
@@ -69,7 +70,7 @@ curl -X GET \
 
 >[!NOTE]
 >
-> リクエストで使用できる ID 数の上限は 1000 です。ID 数が 1000 を超えるリクエストに対しては、ステータスコード 400 が発生します。
+>リクエストで使用できる ID 数の上限は 1000 です。 ID 数が 1000 を超えるリクエストに対しては、ステータスコード 400 が発生します。
 
 **API 形式**
 
@@ -213,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
-> リクエストの XID が同じクラスターに属しているかどうか、または 1 つ以上にクラスターが関連付けられているかどうかに関係なく、応答には、リクエストで提供された XID ごとに 1 つのエントリがあります。
+>リクエストの XID が同じクラスターに属しているかどうか、または 1 つ以上にクラスターが関連付けられているかどうかに関係なく、応答には、リクエストで提供された XID ごとに 1 つのエントリがあります。
 
 ## 次の手順
 

@@ -3,11 +3,12 @@ keywords: Experience Platform；開発者ガイド；エンドポイント；Dat
 solution: Experience Platform
 title: MLServices API エンドポイント
 description: MLService は、組織が開発済みのモデルにアクセスし再利用できるようにするための、公開されているトレーニング済みモデルです。MLService の主要な特長は、トレーニングとスコアリングをスケジュールに従って自動化できる点です。スケジュールされたトレーニングの実行は、モデルの効率と精度を維持するのに役立ちます。また、スケジュールされたスコアリングの実行で、新しいインサイトを一貫して生成できるようになります。
+role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 97%
+source-wordcount: '887'
+ht-degree: 94%
 
 ---
 
@@ -214,7 +215,7 @@ curl -X GET \
 
 >[!TIP]
 >
-> この PUT リクエストを確実に成功させるために、まず GET リクエストを実行して、[対象となる MLService を ID で取得](#retrieve-a-specific-mlservice)することをお勧めします。次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
+>このPUTリクエストを確実に成功させるために、まず次に対してGETリクエストを実行することをお勧めします。 [ID を使用した MLService の取得](#retrieve-a-specific-mlservice). 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
 
 **API 形式**
 

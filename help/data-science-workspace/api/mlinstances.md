@@ -3,11 +3,12 @@ keywords: Experience Platform、開発者ガイド、エンドポイント、Dat
 solution: Experience Platform
 title: MLInstance API エンドポイント
 description: MLInstance は、既存のエンジンと適切な設定セット（トレーニングパラメーター、スコアリングパラメーター、またはハードウェアリソース設定を定義する）とのペアリングです。
+role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 96%
+ht-degree: 87%
 
 ---
 
@@ -274,7 +275,7 @@ curl -X GET \
 
 >[!TIP]
 >
-> この PUT リクエストを確実に成功させるために、まず GET リクエストを実行し、[ID で MLInstance を取得する](#retrieve-specific)ことをお勧めします。次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
+>このPUTリクエストを確実に成功させるために、まず次に対してGETリクエストを実行することをお勧めします。 [ID による MLInstance の取得](#retrieve-specific). 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
 
 以下のサンプル API 呼び出しは、MLInstance のトレーニングパラメーターとスコアリングパラメーターを更新し、これらのプロパティを最初に次のように設定します。
 

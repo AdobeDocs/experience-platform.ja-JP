@@ -3,11 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；使用
 solution: Experience Platform
 title: 使用可能なサンドボックス API エンドポイント
 description: 現在のユーザーが使用できるサンドボックスのリストを作成するには、使用可能なサンドボックスのエンドポイントに対してGETリクエストを実行します。
+role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 41%
+ht-degree: 30%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
-> Sandbox API で提供される他のエンドポイントとは異なり、このエンドポイントは、サンドボックス管理のアクセス権限を持たないユーザーも含め、すべてのユーザーが使用できます。
+>Sandbox API で提供される他のエンドポイントとは異なり、このエンドポイントは、サンドボックス管理のアクセス権限を持たないユーザーも含め、すべてのユーザーが使用できます。
 
 現在のユーザーが使用できるサンドボックスのリストを作成するには、使用可能なサンドボックスのエンドポイントに対してGETリクエストを実行します。
 
@@ -27,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 結果をフィルタリングする条件となるクエリパラメーター（オプション）。詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
+| `{QUERY_PARAMS}` | 結果をフィルタリングするためのオプションのクエリパラメーターです。 詳しくは、 [付録文書](./appendix.md#query) を参照してください。 |
 
 **リクエスト**
 

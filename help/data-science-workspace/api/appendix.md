@@ -3,21 +3,22 @@ keywords: Experience Platform、開発者ガイド、エンドポイント、Dat
 solution: Experience Platform
 title: Sensei Machine Learning API ガイドの付録
 description: 以下の節では、Sensei Machine Learning API の様々な機能に関するリファレンス情報を提供します。
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 80%
+ht-degree: 66%
 
 ---
 
 # [!DNL Sensei Machine Learning] API ガイドの付録
 
-以下の節では、の様々な機能に関するリファレンス情報を示します [!DNL Sensei Machine Learning] API
+以下の節では、の様々な機能に関するリファレンス情報を示します [!DNL Sensei Machine Learning] API.
 
-## アセット取得用のクエリーパラメーター {#query}
+## アセット取得用のクエリパラメーター {#query}
 
-この [!DNL Sensei Machine Learning] API は、アセットの取得に関するクエリパラメーターをサポートしています。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
+The [!DNL Sensei Machine Learning] API は、アセットの取得に関するクエリパラメーターをサポートしています。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
 
 | クエリーパラメーター | 説明 | デフォルト値 |
 | --------------- | ----------- | ------- |
@@ -28,7 +29,7 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->複数のクエリパラメーターを組み合わせる場合は、アンパサンド（**&amp;**）で区切る必要があります。
+>複数のクエリパラメーターを組み合わせる場合は、アンパサンド (**&amp;**) をクリックします。
 
 ## Python CPU と GPU の設定 {#cpu-gpu-config}
 
@@ -69,7 +70,7 @@ Python Engines は、トレーニングまたはスコアリングの目的で C
 
 >[!NOTE]
 >
->`cpus` と `gpus` の値は、CPU と GPU の数ではなく、物理マシンの数を示します。これらの値は許容できる`"1"`であり、それ以外の場合は例外がスローされます。
+>の値 `cpus` および `gpus` では、CPU や GPU の数ではなく、物理マシンの数を示します。 これらの値は許容できる`"1"`であり、それ以外の場合は例外がスローされます。
 
 ## PySpark および Spark のリソース設定 {#resource-config}
 

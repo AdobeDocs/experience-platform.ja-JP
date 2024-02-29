@@ -4,10 +4,11 @@ user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
-source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 89%
+ht-degree: 92%
 
 ---
 
@@ -40,7 +41,7 @@ ht-degree: 89%
    - [エッジセグメント化](ui/edge-segmentation.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
    - [ストリーミングのセグメント化（ビデオ）](video/streaming-segmentation-overview.md)
-   - [年時間制約の更新を無視](ui/ignore-year.md)
+   - [年の時間制約を無視の更新](ui/ignore-year.md)
    - [時間制約のリファクタリング](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
       - [Segment Match の概要](ui/segment-match/overview.md)

@@ -3,11 +3,12 @@ keywords: Experience Platform、ホーム、人気の高いトピック、クエ
 solution: Experience Platform
 title: Schedules エンドポイント
 description: 以下の節では、クエリサービス API を使用してスケジュールされたクエリに対して実行できる様々な API 呼び出しについて説明します。
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1212'
-ht-degree: 64%
+source-wordcount: '1214'
+ht-degree: 59%
 
 ---
 
@@ -45,7 +46,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストは、 組織用に作成され、最新のスケジュール済みクエリを返します。
+次のリクエストは、組織に対して作成された最新のスケジュール済みクエリを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定した組織に対してスケジュールされたクエリのリストを返します。 次の応答は、 組織用に作成され、最新のスケジュール済みクエリを返します。
+正常な応答は、HTTP ステータス 200 と、指定した組織に対してスケジュールされたクエリのリストを返します。 次の応答は、組織に対して作成された最新のスケジュール済みクエリを返します。
 
 ```json
 {
@@ -123,7 +124,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 新しいスケジュール済みクエリの作成
 
-`/schedules` エンドポイントに POST リクエストを送信することで、新しいスケジュール済みクエリを作成できます。API でスケジュール済みクエリを作成すると、クエリエディターでもクエリを表示できます。 UI でのスケジュール済みクエリについて詳しくは、 [クエリエディターのドキュメント](../ui/user-guide.md#scheduled-queries).
+新しいスケジュール済みクエリを作成するには、 `/schedules` endpoint. API でスケジュール済みクエリを作成すると、クエリエディターでもクエリを表示できます。 UI でのスケジュール済みクエリについて詳しくは、 [クエリエディターのドキュメント](../ui/user-guide.md#scheduled-queries).
 
 **API 形式**
 
@@ -218,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 >[!NOTE]
 >
-> `_links.delete` の値を使用して、[作成したスケジュール済みクエリを削除](#delete-a-specified-scheduled-query)できます。
+>この場合、 `_links.delete` から [作成したスケジュール済みクエリを削除](#delete-a-specified-scheduled-query).
 
 ### 指定したスケジュール済みクエリの詳細のリクエスト
 
@@ -301,7 +302,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
-> `_links.delete` の値を使用して、[作成したスケジュール済みクエリを削除](#delete-a-specified-scheduled-query)できます。
+>この場合、 `_links.delete` から [作成したスケジュール済みクエリを削除](#delete-a-specified-scheduled-query).
 
 ### 指定したスケジュール済みクエリの詳細の更新
 
@@ -420,7 +421,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 >[!NOTE]
 >
-> スケジュールを削除する前に、無効にする&#x200B;**必要があります**。
+>スケジュール **必須** を無効にしてから削除してください。
 
 **API 形式**
 
