@@ -4,9 +4,9 @@ description: アカウントオーディエンスを作成し、使用してダ�
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1130'
 ht-degree: 2%
 
 ---
@@ -41,19 +41,29 @@ The [!UICONTROL 参照] ページが表示され、組織のすべてのアカ�
 
 このビューには、名前、プロファイル数、接触チャネル、ライフサイクルステータス、作成日、最終更新日など、オーディエンスに関する情報が一覧表示されます。
 
+また、検索とフィルタリング機能を使用して、特定のアカウントオーディエンスをすばやく検索したり、並べ替えたりすることもできます。 この機能の詳細については、 [セグメント化 UI ガイド](./overview.md#manage-audiences).
+
 ## オーディエンスを作成 {#create}
+
+>[!NOTE]
+>
+>アカウントのオーディエンスは、 **バッチ** セグメント化を行い、24 時間ごとに評価されます。
 
 アカウントオーディエンスを作成するには、 **[!UICONTROL オーディエンスを作成]** の [!UICONTROL 参照] ページに貼り付けます。
 
 ![The [!UICONTROL オーディエンスを作成] アカウントオーディエンスの参照ページでボタンが強調表示されます。](../images/ui/account-audiences/select-create-audience.png)
 
-セグメントビルダーが表示されます。アカウント属性は、左側のナビゲーションバーに表示されます。
+セグメントビルダーが表示されます。アカウント属性とオーディエンスが左側のナビゲーションバーに表示されます。 の下 [!UICONTROL 属性] 「 」タブでは、プラットフォームで作成した属性とカスタム属性の両方を追加できます。
 
-![セグメントビルダーが表示されています。属性のみが表示されます。](../images/ui/account-audiences/segment-builder.png)
+![セグメントビルダーが表示されています。属性とオーディエンスのみが表示されます。](../images/ui/account-audiences/segment-builder.png)
 
 アカウントオーディエンスを作成する場合、イベントは **[!UICONTROL People]**&#x200B;これらの属性はユーザーに関連付けられるので、個々のタブではなく個々のユーザーのタブになります。
 
 ![イベントを検索する場所 ( [!UICONTROL People] フォルダーがハイライト表示されます。](../images/ui/account-audiences/attributes.png)
+
+の下 [!UICONTROL オーディエンス] 「 」タブを使用すると、以前に作成したユーザーベースのオーディエンスを追加して、独自のアカウントオーディエンスを作成する際に基づいてオーディエンスを構築できます。
+
+![セグメントビルダー内の「オーディエンス」タブが強調表示されます。](../images/ui/account-audiences/audiences.png)
 
 セグメントビルダーの使用について詳しくは、[セグメントビルダー UI ガイド](./segment-builder.md)を参照してください。
 
