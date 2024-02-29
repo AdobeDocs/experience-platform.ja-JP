@@ -5,9 +5,9 @@ breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: Tags
 solution: Data Collection
-source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
+source-git-commit: 1e61b2258f943a09cba30aa1c0bc1c6647b9fd16
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '773'
 ht-degree: 99%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 99%
    * [顧客の同意を管理する JavaScript タグのデプロイ](./ui/client-side/consent.md)
    * [コンテンツセキュリティポリシー（CSP）のサポート](./ui/client-side/content-security-policy.md)
    * [サブリソースの整合性（SRI）のサポート](./ui/client-side/sri.md)
+   * [トランスポート層のセキュリティ](./ui/client-side/transport-layer-security.md)
 * イベントの転送 {#event-forwarding}
    * [概要](./ui/event-forwarding/overview.md)
    * [はじめに](./ui/event-forwarding/getting-started.md)
