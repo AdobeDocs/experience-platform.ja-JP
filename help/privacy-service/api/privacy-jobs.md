@@ -5,10 +5,10 @@ title: プライバシージョブ API エンドポイント
 description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションのプライバシージョブを管理する方法について説明します。
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 57%
+source-wordcount: '1857'
+ht-degree: 47%
 
 ---
 
@@ -26,25 +26,34 @@ ht-degree: 57%
 
 **API 形式**
 
-このリクエストの形式では、 `regulation` クエリパラメーターを `/jobs` エンドポイントの場合、疑問符 (`?`) を使用します。 応答はページ分割され、他のクエリパラメーター（`page` および `size`）を使用して応答をフィルターできます。アンパサンド（`&`）を使用して、複数のパラメーターを区切ることができます。
+このリクエストの形式では、 `regulation` クエリパラメーターを `/jobs` エンドポイントの場合、疑問符 (`?`) を使用します。 リソースをリストする場合、Privacy ServiceAPI は最大 1,000 個のジョブを返し、応答をページ化します。 他のクエリパラメーター (`page`, `size`、および日付フィルター ) を使用して、応答をフィルターします。 アンパサンド（`&`）を使用して、複数のパラメーターを区切ることができます。
+
+>[!TIP]
+>
+>特定のクエリの結果をさらにフィルタリングするには、追加のクエリパラメーターを使用します。 例えば、一定期間に送信されたプライバシージョブの数や、そのステータスで `status`, `fromDate`、および `toDate` クエリパラメーター。
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリする規制の種類。指定できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
+| `{REGULATION}` | クエリする規制の種類。指定できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>概要については、 [サポート規制](../regulations/overview.md) 上記の値が表すプライバシー規制に関する詳細。 |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
-| `{SIZE}` | 各ページに表示する結果の数。デフォルトは `1` で、最大は `100` です。最大値を超えると、API は 400 コードエラーを返します。 |
+| `{SIZE}` | 各ページに表示する結果の数。デフォルトは `100` で、最大は `1000` です。最大値を超えると、API は 400 コードエラーを返します。 |
+| `{status}` | デフォルトの動作では、すべてのステータスが含まれます。 ステータスタイプを指定すると、リクエストはそのステータスタイプに一致するプライバシージョブのみを返します。 指定できる値は次のとおりです。 <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | このパラメーターは、結果を、指定された日付より前に処理される結果に制限します。 リクエストの日付から、システムは 45 日間を振り返ることができます。 ただし、30 日を超える期間は指定できません。<br>YYYY-MM-DD 形式を受け入れます。 指定した日付は、グリニッジ標準時 (GMT) で表される終了日と解釈されます。<br>このパラメーター ( および対応する `fromDate`) の場合、デフォルトの動作では過去 7 日間にデータを返すジョブが返されます。 次を使用する場合、 `toDate`を使用する場合は、 `fromDate` クエリパラメーター。 両方を使用しない場合、呼び出しは 400 エラーを返します。 |
+| `{fromDate}` | このパラメーターは、結果を、指定された日付の後に処理される結果に制限します。 リクエストの日付から、システムは 45 日間を振り返ることができます。 ただし、30 日を超える期間は指定できません。<br>YYYY-MM-DD 形式を受け入れます。 指定した日付は、リクエストの接触チャネル日として解釈され、グリニッジ標準時 (GMT) で表されます。<br>このパラメーター ( および対応する `toDate`) の場合、デフォルトの動作では過去 7 日間にデータを返すジョブが返されます。 次を使用する場合、 `fromDate`を使用する場合は、 `toDate` クエリパラメーター。 両方を使用しない場合、呼び出しは 400 エラーを返します。 |
+| `{filterDate}` | このパラメーターは、結果を、指定された日付に処理される結果に制限します。 YYYY-MM-DD 形式を受け入れます。 システムは過去 45 日間を振り返ることができます。 |
 
 {style="table-layout:auto"}
 
 <!-- Not released yet:
-<li>`pdpd_vnm`</li>
+<li>`pdpd_vnm`</li> 
  -->
 
 **リクエスト**

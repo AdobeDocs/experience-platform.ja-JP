@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシー規制の概要
 description: このドキュメントでは、Adobe Experience Cloudでサポートされる様々なプライバシー規制の概要を説明します。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 0%
 | GDPR （欧州連合） | The [[!DNL General Data Protection Regulation (GDPR)]](https://gdpr-info.eu) は、アクセス権や忘れられる権利など、欧州経済圏 (EEA) のメンバーに対して、新しいデータプライバシー権をいくつか導入しました。 これらの権利とは、EEA 内で、お客様のビジネスによって個人データが収集されたすべての人が、いつでもデータのアクセスや削除を要求できることを意味します。<br><br>英国（英国）には独自のバージョンの規制 UK-GDPR があり、EEA 版と同じ権利を国民に提供します。 |
 | HIPAA （米国） | The [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) は、医療効率の向上、医療保険の移植性の向上、患者や医療計画メンバーのプライバシー保護を目的として作成された米国連邦法です。 HIPAA の下では、個人は、情報にアクセスし、情報を修正し、医療記録や医療情報のコピーを取得する権利を持ちます。 対象エンティティと対象エンティティのビジネス関係者は、HIPAA の規制に従う必要があります。 |
 | LGPD（ブラジル） | The [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) は、ブラジルのすべての個人または自然人の個人データの扱いを規制することを目的としています。 LGPD は、ブラジル市民に対し、自分の個人データにアクセスし削除する権利、自分の個人データが販売または開示されたか（そして誰に対して）を知る権利、および自分のデータが第三者に販売されることをオプトアウトする権利を与えます。 |
+| MHMDA（ワシントン） | The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) は、消費者の健康データに関するプライバシー権を強化します。 健康データに対する開示、消費者の同意、削除権を義務付け、許可なしでの健康データの販売を禁止します。 また、医療施設の周りのジオフェンシングを違法に行う。 |
 | ニュージーランド [!DNL Privacy Act] | The [ニュージーランド [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) は、代理店がニュージーランドの市民および組織の個人情報を収集、使用、開示、保存、およびアクセス権を付与する方法を制御します。 2020 年に、この法律の最新バージョンでは、これらのプライバシー法に対して大幅な更新がおこなわれました。 更新には、新しい犯罪、罰金の増額、データ漏洩に対する強制通知、プライバシー担当者の権限の拡大が含まれます。 |
 | PDPA（タイ） | The [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) は、タイのデータ所有者が個人データの違法な収集、使用、開示を受けるのを防ぐために導入されました。 EU の GDPR に影響を受け、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求したり、そのデータを削除したりする権利を付与します。 |
 | UCPA（ユタ） | The [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) は、顧客がビジネスが収集する個人データ、ビジネスが個人データをどのように使用するか、およびビジネスが個人データを販売しているかを知る権利を作成します。 消費者は、ビジネスに対し、自分の個人データの削除や販売の停止を要求できます。 |

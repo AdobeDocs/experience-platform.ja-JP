@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシー規制の用語
 description: このドキュメントでは、Adobe Experience Cloudでサポートされるプライバシー規制に関する主な用語の定義を示します。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1842'
 ht-degree: 4%
 
 ---
@@ -100,6 +100,8 @@ ht-degree: 4%
 ## M
 
 **主な施設**：処理者の観点からデータ処理に関する主な決定がおこなわれる和集合内の場所。
+
+**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) は、消費者の健康データに関するプライバシー権を強化します。 健康データに対する開示、消費者の同意、削除権を義務付け、許可なしでの健康データの販売を禁止します。 また、医療施設の周りのジオフェンシングを違法に行う。
 
 ## いいえ
 
