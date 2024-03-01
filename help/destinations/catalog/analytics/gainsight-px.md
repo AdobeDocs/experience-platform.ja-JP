@@ -1,7 +1,8 @@
 ---
 title: Gainsight PX 接続
 description: Gainsight PX の宛先を使用して、Gainsight PX プラットフォームにセグメント情報を送信します。
-source-git-commit: b09a0e12372ba2d9b250c8627401ebf34006fb02
+last-substantial-update: 2024-02-20T00:00:00Z
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 37%

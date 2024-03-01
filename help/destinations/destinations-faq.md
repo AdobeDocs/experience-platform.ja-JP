@@ -3,10 +3,10 @@ keywords: 宛先；質問；よくある質問； faq；宛先 faq
 title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 7%
+source-wordcount: '1673'
+ht-degree: 4%
 
 ---
 
@@ -48,6 +48,15 @@ ht-degree: 7%
 すべてのプロファイルを確実に宛先に送信するには、新しい設定で新しいオーディエンスを作成し、宛先に対してアクティブ化する必要があります。
 
 +++
+
+### オーディエンスが宛先から削除された場合、そのオーディエンスが削除されたことを示すシグナルが宛先に送信されることはありますか。
+
++++回答
+
+いいえ。ターゲットシステムのExperience Platform先と顧客インスタンスとの間に依存関係はありません。 受信側では、ターゲットシステムが認識する唯一の兆候は、そのオーディエンスデータの受信を停止したことです。
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 
@@ -138,7 +147,7 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/f
 はい。 facebookのExperience Platform先は、Facebookの広告アカウントに対して 1:1 です。 会社内のFacebook広告アカウントごとに別々のFacebookの宛先を作成できます。 フォロー： [宛先接続のチュートリアル](/help/destinations/ui/connect-destination.md) をクリックし、Platform UI の新しいFacebookの宛先ごとに個別のFacebookアカウントに接続します。 接続できるFacebook広告アカウントの数に制限はありません。
 +++
 
-## Google カスタマーマッチ {#google-customer-match}
+## Google Customer Match {#google-customer-match}
 
 ### オーディエンスをGoogle Customer Match にエクスポートする際に、Googleインターフェイスのオーディエンス名の末尾に余分な数字が追加されているのはなぜですか。
 
@@ -157,7 +166,7 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/f
 
 +++回答使用する前に [!UICONTROL LinkedIn Matched Audience] 宛先、 [!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 権限レベル以上。
 
-[!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、「[Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753)」（LinkedIn ドキュメント）を参照してください。
+編集方法を学ぶには [!DNL LinkedIn Campaign Manager] ユーザー権限： [Advertising アカウントに対するユーザー権限の追加、編集、削除](https://www.linkedin.com/help/lms/answer/5753) (LinkedInドキュメント ) を参照してください。
 +++
 
 ### に送信する前にオーディエンスデータをハッシュ化する方法 [!DNL LinkedIn]?

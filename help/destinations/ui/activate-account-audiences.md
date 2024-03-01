@@ -5,9 +5,9 @@ description: 宛先に対してアカウントオーディエンスをアクテ�
 badgeB2B: label="B2B エディション" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '834'
 ht-degree: 7%
 
 ---
@@ -25,6 +25,12 @@ ht-degree: 7%
 **[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。以下を使用します。 **[!UICONTROL データタイプ]** フィルターと選択 **[!UICONTROL アカウント]** アカウントオーディエンスのアクティブ化をサポートする宛先を表示する。 現在、アカウントオーディエンスの書き出しは、特定のクラウドストレージの宛先 ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob ストレージ](/help/destinations/catalog/cloud-storage/azure-blob.md), [データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、および [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) および [（会社） LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) 宛先。
 
 ![アカウントオーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## ビデオの概要
+
+アカウントオーディエンスの作成とアクティブ化の概要と、アカウントオーディエンスをアクティブ化する際にサポートされる使用例については、以下のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## 前提条件 {#prerequisites}
 
