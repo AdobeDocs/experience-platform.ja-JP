@@ -1,0 +1,458 @@
+---
+description: Destination SDKを使用してファイルベースの宛先を設定し、見込み客のオーディエンスをストレージの場所にエクスポートする方法を説明します。
+title: 見込み客のオーディエンスをストレージの場所にエクスポートするためのファイルベースの宛先の設定
+source-git-commit: b0884524eb4f42f4f152efcb27aed19d3dabf582
+workflow-type: tm+mt
+source-wordcount: '724'
+ht-degree: 8%
+
+---
+
+
+# 見込み客のオーディエンスをストレージの場所にエクスポートするためのファイルベースの宛先の設定
+
+## 概要 {#overview}
+
+このページでは、Destination SDKを使用して、カスタムでファイルベースの宛先を設定する方法について説明します [ファイル形式設定オプション](configure-file-formatting-options.md) そして慣習 [ファイル名の設定](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) エクスポートする [見込み客オーディエンス](/help/destinations/ui/activate-prospect-audiences.md). このガイドの例では、見込み客プロファイルのオーディエンスをAmazon S3 の場所にエクスポートする方法を説明します。
+
+また、STFP やその他のストレージの場所を設定して、見込み客のオーディエンスをエクスポートすることもできます。 覚えておくべき重要な部分は、以下のスニペットをの宛先設定に追加することです。 [手順 2](#create-destination-configuration) 有効にする [見込み客オーディエンスをエクスポートするワークフロー](/help/destinations/ui/activate-prospect-audiences.md) を宛先に追加します。
+
+```json
+  "sources": [
+    "UNIFIED_PROFILE_PROSPECTS"
+  ],
+```
+
+以下で使用するパラメーターについて詳しくは、 [宛先 SDK の設定オプション](../../functionality/configuration-options.md).
+
+## 前提条件 {#prerequisites}
+
+以下の手順に進む前に、 [Destination SDKの概要](../../getting-started.md) 認証に必要な資格情報や、認証 API を使用するためのその他の前提条件の取得に関するDestination SDK。
+
+## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
+
+まず、 `/destination-server` endpoint to [サーバーとファイルの設定を作成する](../../authoring-api/destination-server/create-destination-server.md).
+
+**API 形式**
+
+```http
+POST platform.adobe.io/data/core/activation/authoring/destination-servers
+```
+
+**リクエスト**
+
+次のリクエストは、ペイロードで指定されたパラメーターで設定された新しい宛先サーバー設定を作成します。
+以下のペイロードには、カスタムを使用した一般的なAmazon S3 設定が含まれています [CSV ファイル形式](../../functionality/destination-server/file-formatting.md) ユーザーが設定 UI で定義できるExperience Platformパラメーター。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d ' {
+   "name":"Amazon S3 destination server with custom file formatting options",
+   "destinationServerType":"FILE_BASED_S3",
+   "fileBasedS3Destination":{
+      "bucket":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.bucketName}}"
+      },
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+   "fileConfigurations":{
+      "compression":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.compression}}"
+      },
+      "fileType":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.fileType}}"
+      },
+      "csvOptions":{
+         "sep":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.sep}}"
+         },
+         "encoding":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.encoding}}"
+         },
+         "quote":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.quote}}"
+         },
+         "quoteAll":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.quoteAll}}"
+         },
+         "escape":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.escape}}"
+         },
+         "escapeQuotes":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.escapeQuotes}}"
+         },
+         "header":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.header}}"
+         },
+         "ignoreLeadingWhiteSpace":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.ignoreLeadingWhiteSpace}}"
+         },
+         "nullValue":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.nullValue}}"
+         },
+         "dateFormat":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.dateFormat}}"
+         },
+         "charToEscapeQuoteEscaping":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.charToEscapeQuoteEscaping}}"
+         },
+         "emptyValue":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{customerData.dateFormat}}"
+         }
+      }
+   }
+}'
+```
+
+正常な応答は、一意の識別子 (`instanceId`) が含まれています。 この値は、次の手順で必要になるため保存します。
+
+## 手順 2：宛先の構成の作成 {#create-destination-configuration}
+
+前の手順で宛先サーバーとファイルの形式設定を作成した後、 `/destinations` 宛先設定を作成する API エンドポイント。
+
+でサーバー設定を接続するには、以下を実行します。 [手順 1](#create-server-file-configuration) をこの宛先設定に追加するには、 `destinationServerId` 以下の API リクエストの値と、 [手順 1](#create-server-file-configuration).
+
+**API 形式**
+
+```http
+POST platform.adobe.io/data/core/activation/authoring/destinations
+```
+
+**リクエスト**
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Amazon S3 destination to export prospect audiences",
+   "description":"Amazon S3 destination to export prospect audiences",
+   "status":"TEST",
+   "sources": [
+    "UNIFIED_PROFILE_PROSPECTS"
+   ],
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"S3"
+      }
+   ],
+   "customerEncryptionConfigurations":[
+      
+   ],
+   "customerDataFields":[
+      {
+         "name":"bucketName",
+         "title":"Enter the name of your Amazon S3 bucket",
+         "description":"Amazon S3 bucket name",
+         "type":"string",
+         "isRequired":true,
+         "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"path",
+         "title":"Enter the path to your S3 bucket folder",
+         "description":"Enter the path to your S3 bucket folder",
+         "type":"string",
+         "isRequired":true,
+         "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"sep",
+         "title":"Enter your desired separator for each field and value",
+         "description":"Enter your desired separator for each field and value",
+         "type":"string",
+         "isRequired":false,
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"encoding",
+         "title":"Select the desired CSV file encoding",
+         "description":"Select the desired CSV file encoding",
+         "type":"string",
+         "enum":[
+            "UTF-8",
+            "UTF-16"
+         ],
+         "isRequired":false,
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"quote",
+         "title":"Quoted values escape character",
+         "description":"Enter the desired character to be used for escaping quoted values.",
+         "type":"string",
+         "isRequired":false,
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"quoteAll",
+         "title":"Escape all quoted values",
+         "description":"Select whether to escape all quoted values.",
+         "type":"string",
+         "enum":[
+            "true",
+            "false"
+         ],
+         "default":"true",
+         "isRequired":true,
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"escape",
+         "title":"Quote escaping character",
+         "description":"Enter the desired character to be used for escaping quotes inside an already quoted value.",
+         "type":"string",
+         "isRequired":false,
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"escapeQuotes",
+         "title":"Enclose quoted values within quotes",
+         "description":"Select whether values containing quotes should always be enclosed in quotes.",
+         "type":"string",
+         "enum":[
+            "true",
+            "false"
+         ],
+         "isRequired":false,
+         "default":"true",
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"header",
+         "title":"Generate file header.",
+         "description":"Select whether to write the names of columns as the first line of the exported files.",
+         "type":"string",
+         "isRequired":false,
+         "enum":[
+            "true",
+            "false"
+         ],
+         "readOnly":false,
+         "default":"true",
+         "hidden":false
+      },
+      {
+         "name":"ignoreLeadingWhiteSpace",
+         "title":"Ignore leading white space",
+         "description":"Select whether leading whitespaces should be trimmed from exported values.",
+         "type":"string",
+         "isRequired":false,
+         "enum":[
+            "true",
+            "false"
+         ],
+         "readOnly":false,
+         "default":"true",
+         "hidden":false
+      },
+      {
+         "name":"nullValue",
+         "title":"NULL value string format",
+         "description":"Enter the string representation of a NULL value. ",
+         "type":"string",
+         "isRequired":false,
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"dateFormat",
+         "title":"Date format",
+         "description":"Enter the desired date format. ",
+         "type":"string",
+         "default":"yyyy-MM-dd",
+         "isRequired":false,
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"charToEscapeQuoteEscaping",
+         "title":"Quote escaping escape character",
+         "description":"Enter the desired character to be used for escaping the escaping of a quote character.",
+         "type":"string",
+         "isRequired":false,
+         "readOnly":false,
+         "hidden":false
+      },
+      {
+         "name":"emptyValue",
+         "title":"Empty value string format",
+         "description":"Enter the string representation of an empty value.",
+         "type":"string",
+         "isRequired":false,
+         "readOnly":false,
+         "default":"",
+         "hidden":false
+      },
+      {
+         "name":"compression",
+         "title":"Compression format",
+         "description":"Select the desired file compression format.",
+         "type":"string",
+         "isRequired":true,
+         "readOnly":false,
+         "enum":[
+            "SNAPPY",
+            "GZIP",
+            "DEFLATE",
+            "NONE"
+         ]
+      },
+      {
+         "name":"fileType",
+         "title":"File type",
+         "description":"Select the exported file type.",
+         "type":"string",
+         "isRequired":true,
+         "readOnly":false,
+         "hidden":false,
+         "enum":[
+            "csv",
+            "json",
+            "parquet"
+         ],
+         "default":"csv"
+      }
+   ],
+   "uiAttributes":{
+      "documentationLink":"https://www.adobe.com/go/destinations-amazon-s3-en",
+      "category":"cloudStorage",
+      "connectionType":"S3",
+      "flowRunsSupported":true,
+      "monitoringSupported":true,
+      "frequency":"Batch"
+   },
+   "destinationDelivery":[
+      {
+         "deliveryMatchers":[
+            {
+               "type":"SOURCE",
+               "value":[
+                  "batch"
+               ]
+            }
+         ],
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"{{destinationServerId}}"
+      }
+   ],
+   "schemaConfig":{
+      "profileRequired":true,
+      "segmentRequired":true,
+      "identityRequired":true
+   },
+   "batchConfig":{
+      "allowMandatoryFieldSelection":true,
+      "allowDedupeKeyFieldSelection":true,
+      "defaultExportMode":"DAILY_FULL_EXPORT",
+      "allowedExportMode":[
+         "DAILY_FULL_EXPORT"
+      ],
+      "allowedScheduleFrequency":[
+         "DAILY",
+         "ONCE"
+      ],
+      "defaultFrequency":"DAILY",
+      "defaultStartTime":"00:00",
+      "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      },
+      "backfillHistoricalProfileData":true
+   }
+}'
+```
+
+正常な応答は、一意の識別子 (`instanceId`) が含まれています。 この値は、宛先設定を更新するためにさらに HTTP リクエストを実行する必要がある場合に必要なため保存します。
+
+## 手順 3:Experience PlatformUI の確認 {#verify-ui}
+
+上記の設定に基づいて、Experience Platformカタログに新しいプライベートの宛先カードが表示され、使用できるようになります。
+
+![選択した宛先カードを含む宛先カタログページを示す画面記録。](../../assets/guides/batch/destination-card.gif)
+
+以下の画像と記録で、 [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) の宛先設定で選択したオプションに一致する。
+
+宛先に関する詳細を入力する際に、表示されるフィールドは設定で設定したカスタムデータフィールドです。
+
+>[!TIP]
+>
+>カスタムデータフィールドを宛先設定に追加する順序は、UI に反映されません。 カスタムデータフィールドは、次の画面の記録で表示される順序で常に表示されます。
+
+![宛先の詳細を入力](../../assets/guides/batch/file-configuration-options.gif)
+
+書き出し間隔を設定する場合、表示されるフィールドは、 `batchConfig` 設定。
+![書き出しスケジュールオプション](../../assets/guides/batch/ui-view-scheduling-prospect-destination.png)
+
+ファイル名の設定オプションを表示する際に、表示されるフィールドが `filenameConfig` オプションを設定します。
+![ファイル名設定オプション](../../assets/guides/batch/file-naming-options.gif)
+
+上記のフィールドを調整する場合は、 [ステップ 1](#create-server-file-configuration) および [2 つ](#create-destination-configuration) を使用して、必要に応じて設定を変更します。
+
+## 手順 4:（オプション）宛先の公開 {#publish-destination}
+
+>[!NOTE]
+>
+>独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
+
+宛先を設定した後、 [宛先公開 API](../../publishing-api/create-publishing-request.md) 設定をレビュー用にAdobeに送信します。
+
+## 手順 5: （オプション）宛先のドキュメント化 {#document-destination}
+
+>[!NOTE]
+>
+>独自の用途でプライベートな宛先を作成し、他の顧客が使用できるように宛先カタログに公開しようとしない場合は、この手順は不要です。
+
+独立系ソフトウェアベンダー（ISV）またはシステムインテグレータ（SI）で[製品化統合](../../overview.md#productized-custom-integrations)を作成する場合、[セルフサービスドキュメント化プロセス](../../docs-framework/documentation-instructions.md)を使用して、宛先の製品ドキュメントページを [Experience Platform 宛先カタログ](../../../catalog/overview.md)に作成します。
+
+## 次の手順 {#next-steps}
+
+この記事を読むと、Destination SDKを使用してカスタムを作成する方法がわかります [!DNL Amazon S3] の宛先で見込み客オーディエンスをエクスポートします。

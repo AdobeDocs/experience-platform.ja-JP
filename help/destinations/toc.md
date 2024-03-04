@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 91%
+source-wordcount: '1209'
+ht-degree: 90%
 
 ---
 
@@ -247,6 +247,7 @@ ht-degree: 91%
          * [カスタムのファイル形式オプションとカスタムのファイル名設定を使用した、Azure Data Lake Storage の宛先の設定](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用した、データランディングゾーン（DLZ）の宛先の設定](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [事前定義済みファイル形式オプションとカスタムファイル名設定を使用した、 SFTP の宛先の設定](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [見込み客のオーディエンスをエクスポートするためのファイルベースの宛先の設定](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * 宛先オーサリング API リファレンス {#authoring-api}
       * [Destination SDK（宛先オーサリング）API リファレンス](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * 宛先サーバーの操作 {#server-operations}
