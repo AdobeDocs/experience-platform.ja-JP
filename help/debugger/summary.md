@@ -1,21 +1,21 @@
 ---
 title: 「概要」タブ
-description: Adobe Experience Platform Debugger での「概要」タブの使用方法について説明します。
+description: Adobe Experience Platform Debuggerの「概要」タブの使用方法を説明します。
 keywords: debugger;experience Platform Debugger 拡張機能；chrome；拡張機能；概要；クリア；リクエスト；概要画面；ソリューション；情報；analytics;target;dtm;audience manager;launch;id サービス
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 77%
+source-wordcount: '711'
+ht-degree: 83%
 
 ---
 
 # 「概要」タブ
 
-Adobe Experience Platform Debugger を実行するには、ブラウザーで確認するページを開き、アイコン (![](images/start-icon.jpg)) をブラウザーバーに表示します。 拡張機能が **概要** タブをクリックします。
+Adobe Experience Platform Debuggerを実行するには、ブラウザーで確認するページを開き、アイコン (![](images/start-icon.jpg)) をブラウザーバーに表示します。 拡張機能が **概要** タブをクリックします。
 
 ![](images/summary.jpg)
 
@@ -85,11 +85,11 @@ Experience Platform Debugger には、各ソリューションについて以下
   </tr> 
   <tr> 
    <td colname="col1"> <p>ビルド日 </p> </td> 
-   <td colname="col2"> <p>タグ <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> ライブラリ</a> 作成日 </p> </td> 
+   <td colname="col2"> <p>タグ <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=ja" format="https" scope="external"> ライブラリ</a> 作成日 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>環境 </p> </td> 
-   <td colname="col2"> <p>この <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja" format="https" scope="external"> 環境</a> タグライブラリで使用されます </p> </td> 
+   <td colname="col2"> <p>The <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ja" format="https" scope="external"> 環境</a> タグライブラリで使用されます </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>拡張機能 </p> </td> 
@@ -104,7 +104,7 @@ Experience Platform Debugger には、各ソリューションについて以下
  <tbody> 
   <tr> 
    <td colname="col1"> <p>ライブラリバージョン </p> </td> 
-   <td colname="col2"> <p>Adobe Experience Platform Web SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">ライブラリのバージョン番号</a> </p> </td> 
+   <td colname="col2"> <p>Adobe Experience Platform Web SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">ライブラリのバージョン番号</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>名前空間</p> </td> 
@@ -185,7 +185,7 @@ Experience Platform Debugger には、各ソリューションについて以下
    <td colname="col2"> <p>Target エクスペリエンスの ID。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>オファー     名前</p> </td> 
+   <td colname="col1"> <p>オファー名</p> </td> 
    <td colname="col2"> <p>Target <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ja" format="html" scope="external"> オファー</a>の名前。コードまたはタグマネージャーで Debugging イベントリスナーを実装し、Target UI で必要な<a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external">レスポンストークン</a>をオンにする場合にのみ、認証なしで使用できます。 </p> </td> 
   </tr> 
   <tr> 

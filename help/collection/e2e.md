@@ -2,16 +2,16 @@
 title: エンドツーエンドでのデータ収集の概要
 description: Adobe Experience Platformのデータ収集機能を使用してAdobe Experience Cloudソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2621'
-ht-degree: 95%
+source-wordcount: '2616'
+ht-degree: 93%
 
 ---
 
 # エンドツーエンドでのデータ収集の概要
 
-Adobe Experience Platformは、データを収集して、他のAdobe製品やサードパーティの宛先に転送します。 アプリケーションから Experience Platform Edge Network にイベントデータを送信するには、これらのコアテクノロジーと、必要なときに必要な宛先へとデータを配信するように設定する方法を理解することが重要です。
+Adobe Experience Platformは、データを収集して、他のAdobe製品やサードパーティの宛先に転送します。 アプリケーションからExperience PlatformEdge ネットワークにイベントデータを送信するには、これらのコアテクノロジーと、必要に応じて必要な宛先にデータを配信するように設定する方法を理解することが重要です。
 
 このガイドでは、Platform のデータ収集機能を使用して Edge ネットワークを通じてイベントを送信する方法に関する概要なチュートリアルを提供します。 具体的には、チュートリアルでは、データ収集 UI（旧 Adobe Experience Platform Launch）内で Adobe Experience Platform Web SDK タグ拡張機能をインストールおよび設定する手順について説明します。
 
@@ -113,8 +113,8 @@ UI で、「 」を選択します。 **[!UICONTROL スキーマ]** をクリッ
 >
 >この節では、データ収集 UI を使用して web SDK タグ拡張機能を設定しますが、代わりに生のコードを使用してインストールおよび設定することもできます。詳しくは、次のガイドを参照してください。
 >
->* [SDK のインストール](../edge/fundamentals/installing-the-sdk.md)
->* [SDK の設定](../edge/fundamentals/configuring-the-sdk.md)
+>* [SDK のインストール](/help/web-sdk/install/overview.md)
+>* [SDK の設定](/help/web-sdk/commands/configure/overview.md)
 >
 >また、イベント転送のみを使用する場合でも、[後の手順](#event-forwarding)でイベント転送を設定する前に、説明に従って SDK をインストールして設定する必要があります。
 

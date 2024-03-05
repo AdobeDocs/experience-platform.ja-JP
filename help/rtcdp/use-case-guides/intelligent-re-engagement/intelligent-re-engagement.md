@@ -3,14 +3,14 @@ title: インテリジェントな再エンゲージメント
 description: 主要なコンバージョンの瞬間に魅力的でつながりのあるエクスペリエンスを提供し、頻度の少ない顧客をインテリジェントに再エンゲージします。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
 
 ---
 
-# 顧客をインテリジェントに再エンゲージして戻す
+# インテリジェントな再エンゲージメントで通じて顧客の再来訪を促す
 
 >[!NOTE]
 >
@@ -147,7 +147,7 @@ The [同意および環境設定](/help/xdm/field-groups//profile/consents.md) �
 
 #### 顧客のデジタルトランザクションスキーマ
 
-このスキーマは、Web サイトまたは関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータの構造化および参照に使用されます。 このデータは通常、 [!DNL Adobe Experience Platform] 経由 [Web SDK](/help/edge/home.md) とは、ジャーニーのトリガー、詳細なオンライン顧客分析、拡張オーディエンス機能に使用される様々な参照イベントやコンバージョンイベントを参照するために必要です。
+このスキーマは、Web サイトまたは関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータの構造化および参照に使用されます。 このデータは通常、 [!DNL Adobe Experience Platform] 経由 [Web SDK](/help/web-sdk/home.md) とは、ジャーニーのトリガー、詳細なオンライン顧客分析、拡張オーディエンス機能に使用される様々な参照イベントやコンバージョンイベントを参照するために必要です。
 
 顧客のデジタルトランザクションスキーマは、 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラス。
 
@@ -244,7 +244,7 @@ External Source System Audit Attributes は、外部ソースシステムに関�
 >
 >これは、 [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-このスキーマは、Web サイトまたは関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータの構造化および参照に使用されます。 このスキーマは、顧客デジタルトランザクションスキーマに似ていますが、このスキーマは、顧客デジタルトランザクションスキーマが [Web SDK](/help/edge/home.md) はデータ収集のオプションではありません。したがって、このスキーマは、 [!DNL Adobe Analytics Source Connector] オンラインデータをに送信するには、以下を実行します。 [!DNL Adobe Experience Platform] プライマリまたはセカンダリのデータストリームとして。
+このスキーマは、Web サイトまたは関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータの構造化および参照に使用されます。 このスキーマは、顧客デジタルトランザクションスキーマに似ていますが、このスキーマは、顧客デジタルトランザクションスキーマが [Web SDK](/help/web-sdk/home.md) はデータ収集のオプションではありません。したがって、このスキーマは、 [!DNL Adobe Analytics Source Connector] オンラインデータをに送信するには、以下を実行します。 [!DNL Adobe Experience Platform] プライマリまたはセカンダリのデータストリームとして。
 
 The [!DNL Adobe] web コネクタスキーマは、 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラス。
 

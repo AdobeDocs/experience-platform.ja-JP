@@ -2,10 +2,10 @@
 title: Audience Manager から Real-Time CDP への進化
 description: Audience Manager から Real-Time CDP への移行を計画する前の考慮事項について説明します。
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 84%
+source-wordcount: '498'
+ht-degree: 88%
 
 ---
 
@@ -33,7 +33,7 @@ Audience Manager から Real-Time CDP への進化を検討する場合、今が
 
 ## 2. [!UICONTROL Audience Manager ソースコネクタ]経由で送信するために重要なセグメント
 
-評価基準に基づいて、データの依存関係がなく、宛先やアクティブ化の課題がなく、後日 [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md) などの Real-Time CDP データ収集を通じて作成できるセグメントは、Audience Manager ソースコネクタ経由で送信する必要があります。
+評価基準に基づいて、データの依存関係がなく、宛先やアクティブ化の課題がなく、後日 [Adobe Experience Platform Web SDK](/help/web-sdk/faq.md) などの Real-Time CDP データ収集を通じて作成できるセグメントは、Audience Manager ソースコネクタ経由で送信する必要があります。
 
 ## 3. [!UICONTROL Experience Cloud Audiences] の宛先を使用してデータを Audience Manager に戻す
 

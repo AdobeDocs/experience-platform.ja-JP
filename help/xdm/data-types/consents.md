@@ -3,9 +3,9 @@ keywords: Experience Platform；プロファイル；リアルタイム顧客プ
 title: 同意および環境設定のデータタイプ
 description: プライバシー、パーソナライゼーション、マーケティング環境設定に関する同意のデータ型は、お客様のデータ操作から、CMP（同意管理プラットフォーム）およびその他のソースで生成される顧客の権限と設定を収集できるようにするものです。
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2278'
 ht-degree: 1%
 
 ---
@@ -267,7 +267,7 @@ The [!UICONTROL 同意および環境設定] データタイプは、キャプ�
 
 ## 同意と環境設定の変更の処理
 
-顧客が Web サイトでの同意や環境設定を変更した場合、その変更は [Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md). 顧客がデータ収集をオプトアウトした場合、すべてのデータ収集は直ちに停止する必要があります。 顧客がパーソナライゼーションをオプトアウトした場合、訪問する次のページにパーソナライゼーションが存在しないはずです。
+顧客が Web サイトでの同意や環境設定を変更した場合、その変更は [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). 顧客がデータ収集をオプトアウトした場合、すべてのデータ収集は直ちに停止する必要があります。 顧客がパーソナライゼーションをオプトアウトした場合、訪問する次のページにパーソナライゼーションが存在しないはずです。
 
 ## 付録 {#appendix}
 

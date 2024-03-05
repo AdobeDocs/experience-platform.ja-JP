@@ -3,7 +3,7 @@ title: パートナー支援による訪問者認識を使用して、不明な�
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -47,7 +47,7 @@ ht-degree: 89%
 このユースケースをうまく実装するには、Real-time Customer Data Platform や他の Experience Cloud ソリューションの複数の領域を使用する必要があります。これらすべての領域に必要な[属性ベースのアクセス制御権限](/help/access-control/abac/overview.md)があることを確認するか、必要な権限の付与をシステム管理者に依頼してください。
 
 * データ収集
-   * [Adobe Experience Platform Web SDK](/help/edge/home.md)
+   * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)
    * [タグ](/help/tags/home.md)
    * [データストリーム](/help/datastreams/overview.md)
 * Real-Time CDP におけるデータ管理

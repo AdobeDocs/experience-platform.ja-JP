@@ -3,7 +3,7 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 397a88caaf7762dfa9b64aaa472910c6a34e7778
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 47%
@@ -38,7 +38,7 @@ Experience PlatformでのAdobe Target接続の設定方法の概要について�
 
 ### Datastream ID {#datastream-id}
 
-へのAdobe Target接続を設定する際 [datastream ID の使用](#parameters)を使用する場合、 [Adobe Experience Platform Web SDK](../../../edge/home.md) 実装済み。
+へのAdobe Target接続を設定する際 [datastream ID の使用](#parameters)を使用する場合、 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) 実装済み。
 
 datastream ID を使用せずにAdobe Target接続を設定する場合、Web SDK を実装する必要はありません。
 
@@ -106,7 +106,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 * **名前**：この宛先に希望する名前を入力します。
 * **説明**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
 * **Datastream ID**：オーディエンスを含めるデータ収集データストリームを決定します。 ドロップダウンメニューには、Target サービスとAdobe Experience Platformサービスが有効になっているデータストリームのみが表示されます。 詳しくは、 [データストリームの設定](../../../datastreams/configure.md#aep) Adobe Experience PlatformとAdobe Targetのデータストリームを設定する方法について詳しくは、こちらを参照してください。
-   * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](../../../edge/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたオーディエンスは、次セッションのパーソナライゼーションのみをサポートし、エッジセグメント化は無効になります。 詳しくは、以下の表を参照してください。
+   * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、 [Experience PlatformWeb SDK](/help/web-sdk/home.md). このオプションを使用する場合、Experience Platformから Target に書き出されたオーディエンスは、次セッションのパーソナライゼーションのみをサポートし、エッジセグメント化は無効になります。 詳しくは、以下の表を参照してください。
 
   | Adobe Target実装（Web SDK を使用しない） | Web SDK の実装 |
   |---|---|

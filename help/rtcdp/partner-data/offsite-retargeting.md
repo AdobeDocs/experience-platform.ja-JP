@@ -3,7 +3,7 @@ title: 未認証訪問者のオフサイトリターゲティング
 description: 未認証ユーザーのオーディエンスを作成するために使用できる計算済み属性を作成するために、見込み客 ID を使用して未認証ユーザーを再ターゲット化する方法を説明します。
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1462'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 - [オーディエンス](../../segmentation/home.md)
 - [計算属性](../../profile/computed-attributes/overview.md)
 - [宛先](../../destinations/home.md)
-- [Web SDK](../../edge/home.md)
+- [Web SDK](../../web-sdk/home.md)
 
 ## パートナーデータをReal-Time CDPに取得する {#get-data-in}
 

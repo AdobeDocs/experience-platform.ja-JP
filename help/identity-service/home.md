@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ID サービスの概要
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 9%
@@ -110,7 +110,7 @@ ID サービスは、Experience Platform内で重要な役割を果たします�
 
 * [スキーマ](../xdm/home.md)：特定のスキーマ内で、ID としてマークされたスキーマフィールドを使用して、ID グラフを作成できます。
 * [データセット](../catalog/datasets/overview.md)：データセットのリアルタイム顧客プロファイルへの取り込みが有効になっている場合、データセットが ID としてマークされた 2 つ以上のフィールドとして存在すると、ID グラフはデータセットから生成されます。
-* [Web SDK](../edge/home.md):Web SDK はエクスペリエンスイベントをAdobe Experience Platformに送信し、イベントに 2 つ以上の ID が存在する場合、ID サービスはグラフを生成します。
+* [Web SDK](../web-sdk/home.md):Web SDK はエクスペリエンスイベントをAdobe Experience Platformに送信し、イベントに 2 つ以上の ID が存在する場合、ID サービスはグラフを生成します。
 * [リアルタイム顧客プロファイル](../profile/home.md)：特定のプロファイルの属性とイベントが結合される前に、リアルタイム顧客プロファイルは ID グラフを参照できました。 詳しくは、 [ID サービスとリアルタイム顧客プロファイルの関係について](./identity-and-profile.md).
 * [宛先](../destinations/home.md)：宛先は、ハッシュ化された電子メールなどの ID 名前空間に基づいて、プロファイル情報を他のシステムに送信できます。
 * [セグメントの一致](../segmentation/ui/segment-match/overview.md)：セグメントの一致は、同じ ID 名前空間および ID 値を持つ 2 つの異なるサンドボックス全体で 2 つのプロファイルと一致します。

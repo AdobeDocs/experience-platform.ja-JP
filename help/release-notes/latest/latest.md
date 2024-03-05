@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年1月のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 26%
@@ -28,7 +28,7 @@ Experience Platform では、様々な Platform アクティビティに関す�
 **新機能または更新された機能**
 | 機能 | 説明 | | — | — | | 「アラート履歴」タブ | Experience Platform管理者は、アラート購読者の管理機能を使用して、Adobeユーザー ID、外部電子メールアドレス、または電子メールグループリストにアラートを割り当てることができます。 詳しくは、 [アラート UI ドキュメント](../../observability/alerts/ui.md) 「履歴」タブの詳細を参照してください。 |
 
-
+{style="table-layout:auto"}
 
 アラートの詳細については、 [[!DNL Observability Insights] 概要](../../observability/home.md).
 
@@ -40,7 +40,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| [Web SDK での Web アプリ内メッセージのサポート](../../edge/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK で、Adobe Journey Optimizerキャンペーン用の Web アプリ内メッセージ設定がサポートされるようになりました。 |
+| [Web SDK での Web アプリ内メッセージのサポート](../../web-sdk/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK で、Adobe Journey Optimizerキャンペーン用の Web アプリ内メッセージ設定がサポートされるようになりました。 |
 
 {style="table-layout:auto"}
 

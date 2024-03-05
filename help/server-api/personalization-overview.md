@@ -2,10 +2,10 @@
 title: パーソナライゼーションの概要
 description: Adobe Experience Platform Edge Network Server API を使用して、パーソナライズされたコンテンツをAdobeのパーソナライゼーションソリューションから取得する方法について説明します。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 11%
+source-wordcount: '729'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 また、 [!DNL Server API] では、Adobe Experience Platformのパーソナライゼーションの宛先 ( [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション接続](../destinations/catalog/personalization/custom-personalization.md). 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、 [専用ガイド](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Server API を使用する場合は、パーソナライゼーションエンジンから提供される応答と、サイト上でのコンテンツのレンダリングに使用されるロジックを統合する必要があります。 とは異なり、 [Web SDK](../edge/home.md)、 [!DNL Server API] には、が返したコンテンツを自動的に適用するメカニズムがありません。 [!DNL Adobe Target] および [!DNL Offer Decisioning].
+Server API を使用する場合は、パーソナライゼーションエンジンから提供される応答と、サイト上でのコンテンツのレンダリングに使用されるロジックを統合する必要があります。 とは異なり、 [Web SDK](../web-sdk/home.md)、 [!DNL Server API] には、が返したコンテンツを自動的に適用するメカニズムがありません。 [!DNL Adobe Target] および [!DNL Offer Decisioning].
 
 ## 用語 {#terminology}
 

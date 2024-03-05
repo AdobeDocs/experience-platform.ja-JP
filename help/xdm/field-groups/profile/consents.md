@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 同意および環境設定スキーマフィールドグループ
 description: 「同意」および「環境設定」スキーマフィールドグループについて説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -185,7 +185,7 @@ The `adID` 同意とは、広告主 ID（IDFA または GAID）を使用して�
 
 ## 同意と環境設定の変更の処理
 
-顧客が Web サイトでの同意や環境設定を変更した場合、その変更は [Adobe Experience Platform Web SDK](../../../edge/consent/supporting-consent.md). 顧客がデータ収集をオプトアウトした場合、すべてのデータ収集は直ちに停止する必要があります。 顧客がパーソナライゼーションをオプトアウトした場合、訪問する次のページにパーソナライゼーションが存在しないはずです。
+顧客が Web サイトでの同意や環境設定を変更した場合、その変更は [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). 顧客がデータ収集をオプトアウトした場合、すべてのデータ収集は直ちに停止する必要があります。 顧客がパーソナライゼーションをオプトアウトした場合、訪問する次のページにパーソナライゼーションが存在しないはずです。
 
 ## 次の手順
 

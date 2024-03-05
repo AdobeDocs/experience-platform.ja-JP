@@ -2,10 +2,10 @@
 title: データ収集のためのデータ準備
 description: Adobe Experience Platform Web および Mobile SDK のデータストリームを設定する際に、エクスペリエンスデータモデル（XDM）イベントスキーマにデータをマッピングする方法について説明します。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 59%
+source-wordcount: '1183'
+ht-degree: 60%
 
 ---
 
@@ -30,9 +30,9 @@ Data Prep for Data Collection が役立つ使用例は 2 つあります。
 
 ## WebSDK を使用して、既存のデータレイヤーを Edge ネットワークに送信する {#send-datalayer-via-websdk}
 
-既存のデータレイヤーは、 `data` オプション `sendEvent` コマンドを使用します。 [Web SDK ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+既存のデータレイヤーは、 [`data`](/help/web-sdk/commands/sendevent/data.md) オブジェクトを `sendEvent` コマンドを使用します。
 
-タグを使用する場合は、 **[!UICONTROL データ]** フィールドの **[!UICONTROL イベントの送信]** アクションタイプ (「 [Web SDK タグ拡張機能ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+タグを使用する場合は、 **[!UICONTROL データ]** フィールドの **[!UICONTROL イベントの送信]** アクションタイプ (「 [Web SDK タグ拡張機能ドキュメント](/help/tags/extensions/client/web-sdk/action-types.md).
 
 このガイドの残りの部分では、WebSDK からデータレイヤーが送信された後に、データレイヤーを XDM 標準にマッピングする方法に焦点を当てます。
 

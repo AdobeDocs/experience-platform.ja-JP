@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platformでの同意処理
 description: Adobe2.0 標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 1%
@@ -25,12 +25,12 @@ Adobe Experience Platformを使用すると、顧客から収集した同意デ�
 
 このガイドでは、同意データの処理に関わる様々なExperience Platformサービスに関する十分な知識が必要です。
 
-* [Experience Data Model（XDM）](../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
-* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md)：デバイスやシステム間で ID を結び付けることで、顧客体験のフラグメント化によって生じる基本的な課題を解決します。
-* [リアルタイム顧客プロファイル](../../../../profile/home.md)：使用 [!DNL Identity Service] データセットから詳細な顧客プロファイルをリアルタイムで作成する機能。 リアルタイム顧客プロファイルは、データレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md)：様々な Platform サービスを顧客に会う Web サイトに統合できるクライアント側 JavaScript ライブラリ。
-   * [SDK の同意コマンド](../../../../edge/consent/supporting-consent.md)：このガイドに示す同意関連の SDK コマンドの使用例の概要です。
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md)：リアルタイム顧客プロファイルデータを、類似した特性を共有し、マーケティング戦略に同様の応答をする個人のグループに分割できます。
+* [Experience Data Model（XDM）](/help/xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
+* [Adobe Experience Platform Identity Service](/help/identity-service/home.md)：デバイスやシステム間で ID を結び付けることで、顧客体験のフラグメント化によって生じる基本的な課題を解決します。
+* [リアルタイム顧客プロファイル](/help/profile/home.md)：使用 [!DNL Identity Service] データセットから詳細な顧客プロファイルをリアルタイムで作成する機能。 リアルタイム顧客プロファイルは、データレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)：様々な Platform サービスを顧客に会う Web サイトに統合できるクライアント側 JavaScript ライブラリ。
+   * [SDK の同意コマンド](/help/web-sdk/consent/supporting-consent.md)：このガイドに示す同意関連の SDK コマンドの使用例の概要です。
+* [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md)：リアルタイム顧客プロファイルデータを、類似した特性を共有し、マーケティング戦略に同様の応答をする個人のグループに分割できます。
 
 ## 同意処理フローの概要 {#summary}
 
@@ -49,7 +49,7 @@ Platform での同意処理のサポートの現在のリリースでは、デ�
 
 >[!NOTE]
 >
->上記の XDM 同意フィールドの構造について詳しくは、 [[!UICONTROL 同意および環境設定] データタイプ](../../../../xdm/data-types/consents.md).
+>上記の XDM 同意フィールドの構造について詳しくは、 [[!UICONTROL 同意および環境設定] データタイプ](/help/xdm/data-types/consents.md).
 
 システムが設定されると、Platform Web SDK は、現在のユーザーのデータ収集の同意値を解釈し、データをAdobe Experience Platform Edge Network に送信するか、クライアントから削除するか、データ収集権限が yes または no に設定されるまで保持するかを決定します。
 

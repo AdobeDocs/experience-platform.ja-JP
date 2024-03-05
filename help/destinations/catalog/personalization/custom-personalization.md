@@ -3,10 +3,10 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからオーディエンス情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルのオーディエンスメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 60%
+source-wordcount: '906'
+ht-degree: 58%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 60%
 
 ## 前提条件 {#prerequisites}
 
-この統合は、[Adobe Experience Platform Web SDK](../../../edge/home.md) または [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) によって実現されます。この宛先を使用するには、次の SDK のいずれかを使用する必要があります。
+この統合は、[Adobe Experience Platform Web SDK](/help/web-sdk/home.md) または [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) によって実現されます。この宛先を使用するには、次の SDK のいずれかを使用する必要があります。
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ ht-degree: 60%
 ]
 ```
 
-[タグ](../../../tags/home.md)を使用せずに Experience Platform Web SDK をデプロイする場合、[イベントからの応答の処理](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events)機能を使用して、書き出したデータを確認します。
+を使用しない場合、 [タグ](/help/tags/home.md) Experience PlatformWeb SDK をデプロイするには、 [コマンド応答](/help/web-sdk/commands/command-responses.md) をクリックして、書き出されたデータを確認します。
 
 Adobe Experience Platform からの JSON 応答は、Adobe Experience Platform と統合しているアプリケーションの対応する統合エイリアスを見つけるために解析できます。オーディエンス ID は、ターゲティングパラメーターとしてアプリケーションのコードに渡すことができます。 次に、これが宛先の応答に特有なサンプルを示します。
 

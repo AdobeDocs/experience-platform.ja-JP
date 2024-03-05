@@ -2,9 +2,9 @@
 title: エッジプロファイル
 description: エッジプロファイル、関連する用語、エッジプロファイルで利用可能な地域、エッジプロファイルで利用可能なサービスについて説明します。
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Express Profile Service (XPS) は、異なるエッジ上のプロファイル�
 
 ## 次の手順
 
-このガイドを読んだ後、エッジプロファイルで使用可能な地域やサービスに関する情報など、エッジプロファイルに関する基本的な知識が必要です。 Experience Edge の詳細については、Adobeエクスペリエンス Edge [Edge の概要](../edge/home.md).
+このガイドを読んだ後、エッジプロファイルで使用可能な地域やサービスに関する情報など、エッジプロファイルに関する基本的な知識が必要です。 Experience Edge の詳細については、Adobeエクスペリエンス Edge [Edge ネットワークの概要](../web-sdk/home.md).
 
 ## 付録
 

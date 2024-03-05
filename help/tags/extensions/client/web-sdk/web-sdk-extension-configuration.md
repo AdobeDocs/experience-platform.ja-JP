@@ -2,9 +2,9 @@
 title: Web SDK タグ拡張機能の設定
 description: タグ UI でExperience PlatformWeb SDK タグ拡張を設定する方法について説明します。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1552'
 ht-degree: 6%
 
 ---
@@ -84,7 +84,7 @@ Web SDK タグ拡張機能をインストールするには、プロパティが
 * **[!UICONTROL サードパーティ Cookie の使用]**：このオプションが有効な場合、Web SDK は、ユーザー識別子をサードパーティ Cookie に保存しようとします。 成功した場合、ユーザーは、各ドメインで個別のユーザーとして識別されるのではなく、複数のドメインをまたいで移動する際に、単一のユーザーとして識別されます。 このオプションが有効になっている場合、ブラウザーがサードパーティ Cookie をサポートしていない場合や、ユーザーがサードパーティ Cookie を許可しないように設定している場合、SDK は引き続き、ユーザー ID をサードパーティ Cookie に保存できません。 この場合、SDK は識別子をファーストパーティドメインにのみ保存します。
 
   >[!IMPORTANT]
-  >>サードパーティ Cookie は [ファーストパーティデバイス ID](../../../../edge/identity/first-party-device-ids.md) の機能を使用して、Web SDK にアクセスできます。
+  >>サードパーティ Cookie は [ファーストパーティデバイス ID](../../../../web-sdk/identity/first-party-device-ids.md) の機能を使用して、Web SDK にアクセスできます。
 ファーストパーティのデバイス ID を使用することも、サードパーティの cookie を使用することもできますが、両方の機能を同時に使用することはできません。
   >
 ## パーソナライゼーション設定の指定 {#personalization}
@@ -113,9 +113,9 @@ Web SDK タグ拡張機能をインストールするには、プロパティが
 
 ![タグ UI での Web SDK タグ拡張機能のデータ収集設定を示す画像](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL コールバック関数]**：拡張機能で提供されるコールバック関数は、 [`onBeforeEventSend` 関数](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja) ライブラリ内に保存されます。 この関数を使用すると、Edge ネットワークに送信される前に、イベントをグローバルに変更できます。 この関数の使用方法の詳細については、を参照してください。 [ここ](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL コールバック関数]**：拡張機能で提供されるコールバック関数は、 [`onBeforeEventSend` 関数](/help/web-sdk/commands/configure/onbeforeeventsend.md) ライブラリ内に保存されます。 この関数を使用すると、Edge ネットワークに送信される前に、イベントをグローバルに変更できます。
 * **[!UICONTROL クリックデータの収集を有効にする]**:Web SDK は、リンククリック情報を自動的に収集できます。 デフォルトでは、この機能は有効ですが、このオプションを使用して無効にできます。 また、 [!UICONTROL リンク修飾子のダウンロード] テキストボックス。 Adobeには、いくつかのデフォルトのダウンロードリンク修飾子が用意されています。 必要に応じて編集できます。
-* **[!UICONTROL 自動的に収集されたコンテキストデータ]**：デフォルトでは、Web SDK は、デバイス、Web、環境、場所コンテキストに関する特定のコンテキストデータを収集します。 収集された情報Adobeの一覧を表示するには、次の URL を見つけます [ここ](../../../../edge/data-collection/automatic-information.md). このデータを収集しない場合や、特定のカテゴリのデータのみを収集する場合は、「 **[!UICONTROL 特定のコンテキスト情報]** をクリックし、収集するデータを選択します。
+* **[!UICONTROL 自動的に収集されたコンテキストデータ]**：デフォルトでは、Web SDK は、デバイス、Web、環境、場所コンテキストに関する特定のコンテキストデータを収集します。 このデータを収集しない場合や、特定のカテゴリのデータのみを収集する場合は、「 **[!UICONTROL 特定のコンテキスト情報]** をクリックし、収集するデータを選択します。 詳しくは、 [`context`](/help/web-sdk/commands/configure/context.md) を参照してください。
 
 ## データストリームの上書きの設定 {#datastream-overrides}
 
@@ -125,10 +125,10 @@ Web SDK タグ拡張機能をインストールするには、プロパティが
 
 データストリーム設定の上書きは、次の 2 つの手順で構成されます。
 
-1. 最初に、[データストリーム設定ページ](../../../../datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。
+1. 最初に、[データストリーム設定ページ](/help/datastreams/configure.md)でデータストリーム設定の上書きを定義する必要があります。
 2. 次に、Web SDK コマンドを使用するか、Web SDK タグ拡張を使用して、オーバーライドを Edge Network に送信する必要があります。
 
-データストリームを見る [設定の上書きドキュメント](../../../../datastreams/overrides.md) データストリーム設定を上書きする方法の詳細な手順については、を参照してください。
+データストリームを見る [設定の上書きドキュメント](/help/datastreams/overrides.md) データストリーム設定を上書きする方法の詳細な手順については、を参照してください。
 
 オーバーライドを Web SDK コマンドに渡す代わりに、次に示すタグ拡張画面でオーバーライドを設定できます。
 
@@ -136,10 +136,10 @@ Web SDK タグ拡張機能をインストールするには、プロパティが
 >
 データストリームの上書きは、環境ごとに設定する必要があります。 開発環境、ステージング環境および実稼動環境には、すべて別々のオーバーライドがあります。 次の画面に示す専用オプションを使用して、設定をコピーできます。
 
-![Web SDK タグ拡張ページのデータストリーム設定を示す画像が上書きされます。](assets/datastream-overrides.png)
+![Web SDK タグ拡張ページを使用した、データストリーム設定を示す画像の上書き。](assets/datastream-overrides.png)
 
 ## 詳細設定
 
 以下を使用します。 **[!UICONTROL エッジの基本パス]** Edge ネットワークとのやり取りに使用されるベースパスを変更する必要がある場合は、「 」フィールドを使用します。 これは更新する必要はありませんが、ベータ版またはアルファ版に参加する場合は、Adobeからこのフィールドを変更するように求められる場合があります。
 
-![Web SDK タグ拡張ページの詳細設定を示す画像です。](assets/advanced-settings.png)
+![Web SDK タグ拡張ページを使用した詳細設定を示す画像です。](assets/advanced-settings.png)

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK を使用した顧客の同意データの処理
 description: Adobe Experience Platform Web SDK を統合して、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1349'
-ht-degree: 3%
+source-wordcount: '1311'
+ht-degree: 2%
 
 ---
 
@@ -24,15 +24,15 @@ Adobe Experience Platform Web SDK を使用すると、同意管理プラット�
 
 このガイドでは、UI のタグ拡張を使用した SDK のセットアップワークフローに従います。 拡張機能を使用しない場合で、スタンドアロンバージョンの SDK をサイトに直接埋め込む場合は、このガイドではなく、次のドキュメントを参照してください。
 
-* [データストリームの設定](../../../datastreams/overview.md)
-* [SDK のインストール](../../../edge/fundamentals/installing-the-sdk.md)
-* [SDK の設定 同意コマンド用](../../../edge/consent/supporting-consent.md)
+* [データストリームの設定](/help/datastreams/overview.md)
+* [SDK のインストール](/help/web-sdk/install/overview.md)
+* [同意コマンド用の SDK の設定](/help/web-sdk/commands/configure/defaultconsent.md)
 
 このガイドのインストール手順では、タグの拡張機能と、Web アプリケーションでのタグのインストール方法に関する十分な知識が必要です。 詳しくは、次のドキュメントを参照してください。
 
-* [タグの概要](../../../tags/home.md)
-* [クイックスタートガイド](../../../tags/quick-start/quick-start.md)
-* [公開の概要](../../../tags/ui/publishing/overview.md)
+* [タグの概要](/help/tags/home.md)
+* [クイックスタートガイド](/help/tags/quick-start/quick-start.md)
+* [公開の概要](/help/tags/ui/publishing/overview.md)
 
 ## データストリームの設定
 
@@ -110,14 +110,7 @@ The `setConsent` コマンドは、次の 2 つのアクションを実行しま
 
 ### `setConsent` 構文
 
->[!NOTE]
->
->Platform SDK コマンドの一般的な構文の概要については、 [コマンドの実行](../../../edge/fundamentals/executing-commands.md).
-
-The `setConsent` コマンドには次の 2 つの引数が必要です。
-
-1. コマンドの種類を示す文字列 ( この場合は `"setConsent"`)
-1. 単一の配列タイププロパティを含むペイロードオブジェクト： `consent`. The `consent` 配列には、Adobe標準に必要な同意フィールドを提供するオブジェクトが少なくとも 1 つ含まれている必要があります。
+The [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドは、単一の配列タイプのプロパティを含むペイロードオブジェクトを受け取ります。 `consent`. The `consent` 配列には、Adobe標準に必要な同意フィールドを提供するオブジェクトが少なくとも 1 つ含まれている必要があります。
 
 次の例に、Adobe標準に必要な同意フィールドを示します `setConsent` 呼び出し
 
@@ -139,7 +132,7 @@ alloy("setConsent", {
         }
       },
       metadata: {
-        time: "2020-10-12T15:52:25+00:00"
+        time: "YYYY-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -200,7 +193,7 @@ var setConsent = function () {
 
 ## SDK 応答の処理
 
-すべて [!DNL Platform SDK] コマンドは、呼び出しが成功したか失敗したかを示す promise を返します。 その後、これらの応答を、顧客への確認メッセージの表示などの追加ロジックに使用できます。 詳しくは、 [成功または失敗の処理](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) （特定の例に関する SDK コマンドの実行に関するガイド）。
+すべて [!DNL Platform SDK] コマンドは、呼び出しが成功したか失敗したかを示す promise を返します。 その後、これらの応答を、顧客への確認メッセージの表示などの追加ロジックに使用できます。 詳しくは、 [コマンド応答](/help/web-sdk/commands/command-responses.md) を参照してください。
 
 正常に `setConsent` SDK を呼び出す場合、Platform UI のプロファイルビューアを使用して、データがプロファイルストアにランディングしているかどうかを検証できます。 詳しくは、 [ID によるプロファイルの参照](../../../profile/ui/user-guide.md#browse-identity) を参照してください。
 
@@ -208,5 +201,5 @@ var setConsent = function () {
 
 このガイドに従うことで、同意データをExperience Platformに送信するように Platform Web SDK 拡張機能を設定しました。 実装のテストに関するガイダンスについては、実装する同意標準のドキュメントを参照してください。
 
-* [Adobe 標準](./adobe/overview.md#test)
+* [Adobe標準](./adobe/overview.md#test)
 * [TCF 2.0 標準](./iab/overview.md#test)

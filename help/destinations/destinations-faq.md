@@ -3,7 +3,7 @@ keywords: 宛先；質問；よくある質問； faq；宛先 faq
 title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1673'
 ht-degree: 4%
@@ -188,11 +188,11 @@ ID 照合の要件について詳しくは、 [ID 一致要件](catalog/social/l
 
 ### Experience PlatformWeb SDK を使用して、オーディエンスと属性をAdobe Targetに送信する必要がありますか？
 
-+++答えはいいえ。 [Web SDK](../edge/home.md) は、オーディエンスをアクティブ化する必要はありません。 [Adobe Target](catalog/personalization/adobe-target-connection.md).
++++答えはいいえ。 [Web SDK](../web-sdk/home.md) は、オーディエンスをアクティブ化する必要はありません。 [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 ただし、 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja) が Web SDK の代わりに使用され、次回のセッションのパーソナライゼーションのみがサポートされます。
 
-の場合 [同じページと次のページのパーソナライゼーション](ui/activate-edge-personalization-destinations.md) ユースケースでは、次のいずれかを使用する必要があります。 [Web SDK](../edge/home.md) または [Edge Network Server API](../server-api/overview.md). 次のドキュメントを参照してください： [エッジ宛先へのオーディエンスのアクティブ化](ui/activate-edge-personalization-destinations.md) を参照してください。
+の場合 [同じページと次のページのパーソナライゼーション](ui/activate-edge-personalization-destinations.md) ユースケースでは、次のいずれかを使用する必要があります。 [Web SDK](../web-sdk/home.md) または [Edge Network Server API](../server-api/overview.md). 次のドキュメントを参照してください： [エッジ宛先へのオーディエンスのアクティブ化](ui/activate-edge-personalization-destinations.md) を参照してください。
 +++
 
 ### Real-time Customer Data PlatformからAdobe Targetまたはカスタムパーソナライゼーションの宛先に送信できる属性の数に制限はありますか。
@@ -211,7 +211,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Experience Platformでオーディエンスを作成した後、そのオーディエンスがエッジセグメント化の使用例で使用できるようになるまで、どの程度の時間がかかりますか？
 
-+++回答オーディエンスの定義は、 [Edge Network](../edge/home.md) 最大 1 時間で ただし、この最初の 1 時間以内にオーディエンスがアクティブ化された場合、そのオーディエンスの資格を持つ一部の訪問者が欠落する可能性があります。
++++回答オーディエンスの定義は、 [Edge Network](../web-sdk/home.md) 最大 1 時間で ただし、この最初の 1 時間以内にオーディエンスがアクティブ化された場合、そのオーディエンスの資格を持つ一部の訪問者が欠落する可能性があります。
 +++
 
 ### アクティベートされた属性はAdobe Targetのどこで確認できますか？

@@ -3,7 +3,7 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 41%
@@ -101,7 +101,7 @@ ID 値の検証を成功させるために従う必要がある既存のルー�
 CRM ID に対する認証済みイベントを保持する場合は、プライマリ ID を ECID から CRM ID に変更することをお勧めします。 この変更の実装手順については、次のドキュメントを参照してください。
 
 * [Experience Platformタグの ID マップの設定](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Experience PlatformWeb SDK の ID データ](../edge/identity/overview.md#using-identitymap)
+* [Experience PlatformWeb SDK の ID データ](../web-sdk/identity/overview.md#using-identitymap)
 
 ### シナリオの例
 

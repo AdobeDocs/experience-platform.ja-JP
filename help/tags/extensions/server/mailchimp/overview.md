@@ -7,9 +7,9 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1267'
 ht-degree: 7%
 
 ---
@@ -97,7 +97,7 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 
 ![拡張機能の設定](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-の下 **[!UICONTROL Mailchimp トークン]**、データ要素アイコンを選択し、 `Mailchimp Token` 作成済みのデータ要素。 選択 **[!UICONTROL 保存]** をクリックして変更を保存します。
+の下 **[!UICONTROL Mailchimp トークン]**、データ要素アイコンを選択し、 `Mailchimp Token` 作成済みのデータ要素。 「**[!UICONTROL 保存]**」を選択して、変更を保存します。
 
 これで、拡張機能がインストールされ、プロパティで使用するように設定されました。
 
@@ -105,7 +105,7 @@ Mailchimp プランと、トランザクションメール、顧客ジャーニ�
 
 この拡張機能を [ルール](../../../ui/managing-resources/rules.md)の場合、各イベントと共に拡張機能が Mailchimp に送信するデータ値は複数あります。 一般的な実装の場合、 [Adobe Experience Platform Web SDK 拡張機能](../../client/web-sdk/overview.md) そのデータをに送信する [!DNL Platform Edge Network] 拡張機能でイベント転送プロパティに使用するためのもの。
 
-この拡張機能で必要なデータは、XDM データまたは非 XDM データとして Web SDK から送信できます。 詳しくは、ドキュメントを参照してください。 [XDM データの送信](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
+この拡張機能で必要なデータは、Web SDK から XDM データとして ( [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) オブジェクト ) または XDM 以外のデータ ( [`data`](/help/web-sdk/commands/sendevent/data.md) オブジェクト ) を参照してください。
 
 例えば、顧客がサイト上でイベントを購入したり登録したりした場合、Mailchimp 経由でこの拡張機能を持つ確認メールを送信できます。 Web SDK から Edge ネットワークに必要な情報を送信すると、拡張機能は Mailchimp と共に E メールをトリガーします。
 

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: セグメント化サービスの概要
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1627'
 ht-degree: 98%
@@ -92,7 +92,7 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 >abstract="エッジセグメント化は、 Platform のセグメントを Edge Network 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ja" text="エッジセグメント化 UI ガイド"
 
-エッジのセグメント化は、Platform でのセグメントを瞬時に評価する機能です [Edge ネットワーク上](../edge/home.md)を使用して、同じページおよび次のページのパーソナライゼーションの使用例を有効にします。
+エッジのセグメント化は、Platform でのセグメントを瞬時に評価する機能です [Edge ネットワーク上](../web-sdk/home.md)を使用して、同じページおよび次のページのパーソナライゼーションの使用例を有効にします。
 
 エッジのセグメント化について詳しくは、[API ドキュメント](./api/edge-segmentation.md)または [UI ドキュメント](./ui/edge-segmentation.md)を参照してください。
 

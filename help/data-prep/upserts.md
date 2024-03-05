@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気の高いトピック；デー
 title: データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信
 description: データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信する方法を説明します。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 5%
 
 ---
@@ -265,7 +265,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 * ストリーミングアップサートメソッドは、部分行の更新をに送信する場合にのみ使用してください。 [!DNL Real-Time Customer Profile]. 行の一部の更新は、 **not** データレイクによって消費されます。
 * ストリーミングアップサートメソッドでは、ID の更新、置換、削除はサポートされていません。 存在しない場合は新しい ID が作成されます。 したがって、 `identity` 操作は常に作成するように設定する必要があります。 ID が既に存在する場合、操作は何も実行されません。
-* 現在、ストリーミングアップサートメソッドはをサポートしていません [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja) および [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* 現在、ストリーミングアップサートメソッドはをサポートしていません [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) および [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## 次の手順
 

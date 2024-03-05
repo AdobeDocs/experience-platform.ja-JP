@@ -2,7 +2,7 @@
 title: Adobe Target を使用したパーソナライゼーション
 description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Edge Network Server API を使用すると、Adobe Targetで作成されたパ�
 
 >[!IMPORTANT]
 >
->を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は、Server API で完全にはサポートされていません。 Server API では、 **取得** アクティビティが VEC で作成されたが、Server API では作成されない **render** VEC で作成されたアクティビティ。 VEC で作成されたアクティビティをレンダリングする場合は、 [ハイブリッドパーソナライズ](../edge/personalization/hybrid-personalization.md) Web SDK と Edge Network Server API を使用して、
+>を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は、Server API で完全にはサポートされていません。 Server API では、 **取得** アクティビティが VEC で作成されたが、Server API では作成されない **render** VEC で作成されたアクティビティ。 VEC で作成されたアクティビティをレンダリングする場合は、 [ハイブリッドパーソナライズ](../web-sdk/personalization/hybrid-personalization.md) Web SDK と Edge Network Server API を使用して、
 
 ## データストリームの設定 {#configure-your-datastream}
 

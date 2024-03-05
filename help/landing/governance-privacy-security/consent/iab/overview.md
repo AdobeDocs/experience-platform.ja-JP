@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Experience Platformでの IAB TCF 2.0 のサポート
 description: Adobe Experience Platformの宛先にセグメントをアクティブ化する際に、顧客の同意を伝えるデータ操作とスキーマを設定する方法について説明します。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2492'
 ht-degree: 1%
 
 ---
@@ -37,14 +37,14 @@ Adobe Experience Platformは登録済みの [IAB TCF 2.0 ベンダーリスト](
 
 また、このガイドでは、次の Platform サービスに関する十分な知識が必要です。
 
-* [Experience Data Model（XDM）](../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
-* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md)：デバイスやシステム間で ID を結び付けることで、顧客体験のフラグメント化によって生じる基本的な課題を解決します。
-* [リアルタイム顧客プロファイル](../../../../profile/home.md)：使用 [!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。 [!DNL Real-Time Customer Profile] はデータレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md)：様々な Platform サービスを顧客に会う Web サイトに統合できるクライアント側 JavaScript ライブラリ。
-   * [SDK の同意コマンド](../../../../edge/consent/supporting-consent.md)：このガイドに示す同意関連の SDK コマンドの使用例の概要です。
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md)：を除算できます [!DNL Real-Time Customer Profile] 類似した特性を共有し、マーケティング戦略と同様に対応する個人のグループにデータを組み込みます。
+* [Experience Data Model（XDM）](/help/xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
+* [Adobe Experience Platform Identity Service](/help/identity-service/home.md)：デバイスやシステム間で ID を結び付けることで、顧客体験のフラグメント化によって生じる基本的な課題を解決します。
+* [リアルタイム顧客プロファイル](/help/profile/home.md)：使用 [!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。 [!DNL Real-Time Customer Profile] はデータレイクからデータを取り込み、顧客プロファイルを独自の別々のデータストアに保持します。
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)：様々な Platform サービスを顧客に会う Web サイトに統合できるクライアント側 JavaScript ライブラリ。
+   * [SDK の同意コマンド](/help/web-sdk/consent/supporting-consent.md)：このガイドに示す同意関連の SDK コマンドの使用例の概要です。
+* [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md)：を除算できます [!DNL Real-Time Customer Profile] 類似した特性を共有し、マーケティング戦略と同様に対応する個人のグループにデータを組み込みます。
 
-上記の Platform サービスに加えて、 [宛先](../../../../data-governance/home.md) Platform エコシステムでの役割も果たします。
+上記の Platform サービスに加えて、 [宛先](/help/data-governance/home.md) Platform エコシステムでの役割も果たします。
 
 ## 顧客の同意フローの概要 {#summary}
 
@@ -102,7 +102,7 @@ TCF 仕様では、同意文字列を使用して、ポリシーやベンダー�
 
 以下を作成したら、 [!DNL Profile]：同意データを収集するための有効なデータセット。結合ポリシーが、顧客プロファイルに TCF 同意フィールドを常に含むように設定されていることを確認する必要があります。 これには、競合する可能性のある他のデータセットよりも同意データセットの方が優先されるように、データセットの優先順位を設定する必要があります。
 
-結合ポリシーの操作方法について詳しくは、 [結合ポリシーの概要](../../../../profile/merge-policies/overview.md). 結合ポリシーを設定する場合、セグメントに、 [XDM プライバシースキーマフィールドグループ](./dataset.md#privacy-field-group)（データセットの準備に関するガイドで概要を説明）
+結合ポリシーの操作方法について詳しくは、 [結合ポリシーの概要](/help/profile/merge-policies/overview.md). 結合ポリシーを設定する場合、セグメントに、 [XDM プライバシースキーマフィールドグループ](./dataset.md#privacy-field-group)（データセットの準備に関するガイドで概要を説明）
 
 ## Experience PlatformWeb SDK を統合して、顧客の同意データを収集する {#sdk}
 
@@ -118,15 +118,15 @@ TCF 仕様では、同意文字列を使用して、ポリシーやベンダー�
 
 ### データストリームの作成
 
-SDK がExperience Platformにデータを送信するには、まず Platform のデータストリームを作成する必要があります。 データストリームの作成方法に関する具体的な手順は、 [SDK ドキュメント](../../../../datastreams/overview.md).
+SDK がExperience Platformにデータを送信するには、まず Platform のデータストリームを作成する必要があります。 データストリームの作成方法に関する具体的な手順は、 [SDK ドキュメント](/help/datastreams/overview.md).
 
 データストリームに一意の名前を指定した後、の横にある切り替えボタンを選択します。 **[!UICONTROL Adobe Experience Platform]**. 次に、次の値を使用して、フォームの残りの部分を完了します。
 
 | Datastream フィールド | 値 |
 | --- | --- |
-| [!UICONTROL サンドボックス] | プラットフォームの名前 [sandbox](../../../../sandboxes/home.md) データストリームを設定するために必要なストリーミング接続とデータセットを含む |
-| [!UICONTROL ストリーミングインレット] | Experience Platformの有効なストリーミング接続。 に関するチュートリアルを参照してください。 [ストリーミング接続の作成](../../../../ingestion/tutorials/create-streaming-connection-ui.md) 既存のストリーミングインレットがない場合。 |
-| [!UICONTROL イベントデータセット] | を選択します。 [!DNL XDM ExperienceEvent] データセットを [前の手順](#datasets). 次を含む場合： [[!UICONTROL IAB TCF 2.0 同意] フィールドグループ](../../../../xdm/field-groups/event/iab.md) このデータセットのスキーマでは、 [`sendEvent`](#sendEvent) コマンドを使用して、そのデータをこのデータセットに保存します。 このデータセットに保存される同意の値は次のとおりです。 **not** 自動強制ワークフローで使用されます。 |
+| [!UICONTROL サンドボックス] | プラットフォームの名前 [sandbox](/help/sandboxes/home.md) データストリームを設定するために必要なストリーミング接続とデータセットを含む |
+| [!UICONTROL ストリーミングインレット] | Experience Platformの有効なストリーミング接続。 に関するチュートリアルを参照してください。 [ストリーミング接続の作成](/help/ingestion/tutorials/create-streaming-connection-ui.md) 既存のストリーミングインレットがない場合。 |
+| [!UICONTROL イベントデータセット] | を選択します。 [!DNL XDM ExperienceEvent] データセットを [前の手順](#datasets). 次を含む場合： [[!UICONTROL IAB TCF 2.0 同意] フィールドグループ](/help/xdm/field-groups/event/iab.md) このデータセットのスキーマでは、 [`sendEvent`](#sendEvent) コマンドを使用して、そのデータをこのデータセットに保存します。 このデータセットに保存される同意の値は次のとおりです。 **not** 自動強制ワークフローで使用されます。 |
 | [!UICONTROL プロファイルデータセット] | を選択します。 [!DNL XDM Individual Profile] データセットを [前の手順](#datasets). CMP の同意変更フックに応答する場合は、 [`setConsent`](#setConsent) コマンドを使用すると、収集したデータがこのデータセットに保存されます。 このデータセットはプロファイル対応なので、自動実施ワークフローの間、このデータセットに保存される同意の値は保持されます。 |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
@@ -137,13 +137,9 @@ SDK がExperience Platformにデータを送信するには、まず Platform �
 
 前の節で説明したデータストリームを作成したら、SDK コマンドを使用して、Platform に同意データを送信できます。 以下の節では、各 SDK コマンドが様々なシナリオでどのように使用できるかの例を示します。
 
->[!NOTE]
->
->すべての Platform SDK コマンドの一般的な構文の概要については、 [コマンドの実行](../../../../edge/fundamentals/executing-commands.md).
-
 #### CMP 同意変更フックの使用 {#setConsent}
 
-多くの CMP は、同意変更イベントをリッスンする標準のフックを提供します。 これらのイベントが発生した場合、 `setConsent` 」コマンドを使用して、顧客の同意データを更新する必要があります。
+多くの CMP は、同意変更イベントをリッスンする標準のフックを提供します。 これらのイベントが発生した場合、 [`setConsent`](/help/web-sdk/commands/setconsent.md) 」コマンドを使用して、顧客の同意データを更新する必要があります。
 
 The `setConsent` コマンドには次の 2 つの引数が必要です。
 
@@ -226,7 +222,7 @@ alloy("sendEvent", {
 
 ### SDK 応答の処理
 
-すべて [!DNL Platform SDK] コマンドは、呼び出しが成功したか失敗したかを示す promise を返します。 その後、これらの応答を、顧客への確認メッセージの表示などの追加ロジックに使用できます。 詳しくは、 [成功または失敗の処理](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) （特定の例に関する SDK コマンドの実行に関するガイド）。
+多くの Web SDK コマンドは、呼び出しが成功したか失敗したかを示す promise を返します。 その後、これらの応答を、顧客への確認メッセージの表示などの追加ロジックに使用できます。 詳しくは、 [コマンド応答](/help/web-sdk/commands/command-responses.md) を参照してください。
 
 ## セグメントの書き出し {#export}
 

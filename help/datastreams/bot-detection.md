@@ -4,9 +4,9 @@ description: データストリームのボット検出を設定し、人間と�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1320'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 自動プログラム、Web スクレーパ、スパイダ、スクリプトスキャナなど、非人間エンティティから発生するトラフィックは、人間の訪問者によって発生するイベントの識別をより難しくする場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、トラフィックレポートが不正確になる可能性があります。
 
-ボット検出を使用すると、 [[!DNL Web SDK]](../edge/home.md), [[!DNL Mobile SDK]](https://developer.adobe.com/client-sdks/home/) および [[!DNL Server API]](../server-api/overview.md) 既知のスパイダーやボットによって生成されるものとして。
+ボット検出を使用すると、[Web SDK](../web-sdk/home.md), [モバイル SDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Server API]](../server-api/overview.md) 既知のスパイダーやボットによって生成されるものとして。
 
 データストリームのボット検出を設定することで、ボットイベントとして分類したい特定の IP アドレス、IP 範囲、リクエストヘッダーを特定できます。
 

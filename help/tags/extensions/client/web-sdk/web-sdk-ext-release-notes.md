@@ -2,17 +2,17 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '1990'
-ht-degree: 92%
+source-wordcount: '1983'
+ht-degree: 90%
 
 ---
 
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
-このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)を参照してください。
+このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
 
 ## バージョン 2.21.4 - 2024年1月10日（PT）
 
@@ -81,7 +81,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 **新機能**
 
 * Adobe Experience Platform Web SDK のバージョン 2.16.0 が含まれます。
-* [データストリーム設定の上書き](../../../../datastreams/overrides.md)のサポートを追加しました。
+* [データストリーム設定の上書き](/help/datastreams/overrides.md)のサポートを追加しました。
 * `sendEvent` コマンドの `datasetId` オプションに非推奨（廃止予定）通知を追加しました。
 
 
@@ -98,7 +98,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 **新機能**
 
 * （ベータ版）**[!UICONTROL 変数を更新]**&#x200B;アクションと&#x200B;**[!UICONTROL 変数]**&#x200B;データ要素を追加しました。
-* [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) コールバック関数の設定を追加しました。
+* [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) コールバック関数の設定を追加しました。
 
 **修正点および改善点**
 
@@ -176,7 +176,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.8.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.7.0 が含まれます。
 
-* Edge ネットワークからの追加情報は、「イベント完了を送信」イベントで使用できます。以下に例を示します。 `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。詳しくは、[トラッキングイベント](../../../../edge/fundamentals/tracking-events.md)を参照してください。
+* Edge ネットワークからの追加情報は、「イベント完了を送信」イベントで使用できます。以下に例を示します。 `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変わる場合があります。
 
 ## バージョン 2.7.3 - 2021年9月7日（PT）
 
@@ -223,10 +223,10 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.5.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含まれます。
 
-* イベントを送信アクション UI に「[ドキュメントのアンロード中](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api)」チェックボックスを追加しました。
-* [デフォルトの同意を設定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ja#default-consent)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションはイベントをキューに入れ、同意が得られると送信します）。
+* 追加済み [&quot;ドキュメントのアンロード&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) 「 」チェックボックスをオンにして、イベントアクション UI を送信します。
+* [デフォルトの同意を設定](/help/web-sdk/commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションはイベントをキューに入れ、同意が得られると送信します）。
 * デフォルトの同意フィールドにツールヒントを追加しました。
-* [アドビの同意 2.0 標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=ja#communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
+* を使用する際のAdobeの同意 2.0 標準のサポートを追加しました。 [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドを使用します。
 * ユーザーのアクセストークンが無効であるか、不適切にプロビジョニングされている場合に、XDM オブジェクトデータ要素 UI に表示されるエラーを改善しました。
 * XDM オブジェクトデータ要素を表示する際にブラウザーの開発者コンソールに表示されるクロスオリジンエラー（拡張機能の操作には影響しません）を修正しました。
 
@@ -251,7 +251,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 ## バージョン 2.1.0 - 2020年8月5日（PT）
 
 * 重大な変更：`syncIdentity` アクションを削除し、代わりに `sendEvent` アクションにこれらの ID を渡すことをサポートします。拡張機能をアップグレードする前に、このアクションを使用する既存のルールを無効にしてください。
-* Ally v. 2.1.0 へのアップデート（[リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=ja)）。
+* Ally v. 2.1.0 へのアップデート（[リリースノート](/help/web-sdk/release-notes.md)）。
 * `setConsent` アクションでの IAB 2.0 Consent Standard をサポートします。
 * `sendEvent` アクションでのデータセット ID の上書きをサポートします。
 * タイプ `IdentityMap` の新しいデータ要素を追加します。これは、現在有効になっている XDM オブジェクトデータ要素と `setConsent` アクションに `identityMap` エントリを入力するために使用できます。

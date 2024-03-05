@@ -1,7 +1,7 @@
 ---
 title: Experience Platformでのイベント重複処理
 description: Adobe Experience Platformでのイベント重複の処理方法を説明します
-source-git-commit: 89cdb0832009bcee31b4339f021bc5a0ce254752
+source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platformは、増え続けるデータ量に対応しながら、信頼性を最大限に高めるように設計された、高度に分散されたシステムです。
 
-リアルタイムデータ収集の場合、 [エクスペリエンスイベント](../xdm/classes/experienceevent.md) を使用して収集 [Edge Network](../edge/home.md#edge-network)、クライアント側のソース ( [Web SDK](../edge/home.md) または [モバイル SDK](https://developer.adobe.com/client-sdks/home/)、Experience Platform処理およびストレージレイヤーに配信されます。 これらのレイヤーは、Experience Platform、 [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja)、および [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja).
+リアルタイムデータ収集の場合、 [エクスペリエンスイベント](../xdm/classes/experienceevent.md) を使用して収集 [Edge Network](../web-sdk/home.md#edge-network)、クライアント側のソース ( [Web SDK](../web-sdk/home.md) または [モバイル SDK](https://developer.adobe.com/client-sdks/home/)、Experience Platform処理およびストレージレイヤーに配信されます。 これらのレイヤーは、Experience Platform、 [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja)、および [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja).
 
 エクスペリエンスイベントの損失を最小限に抑えるために、クライアント側 SDK および内部Experience Platform配信サービスは、イベントが正常に収集されたことを確認する必要があります。
 

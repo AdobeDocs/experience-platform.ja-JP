@@ -3,7 +3,7 @@ solution: Experience Platform
 title: エッジセグメント化 UI ガイド
 description: エッジセグメント化を使用して、Platform のセグメント定義をエッジ上で即座に評価し、同じページや次のページのパーソナライゼーションのユースケースを可能にする方法を説明します。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: d3c0e5ed596661f11191bbcd8d51c888bbd4c1d2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 95%
@@ -16,7 +16,7 @@ ht-degree: 95%
 >
 >エッジセグメント化は、すべての Platform ユーザーが一般に使用できるようになりました。ベータ版でエッジセグメント定義を作成した場合、これらのセグメント定義は引き続き動作します。
 
-エッジセグメント化は、Adobe Experience Platform 内のセグメントを[エッジ上で](../../edge/home.md)即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
+エッジセグメント化は、Adobe Experience Platform 内のセグメントを[エッジ上で](../../web-sdk/home.md)即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
 
 >[!IMPORTANT]
 >
