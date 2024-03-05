@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
 workflow-type: tm+mt
-source-wordcount: '3562'
-ht-degree: 90%
+source-wordcount: '3629'
+ht-degree: 88%
 
 ---
 
@@ -282,6 +282,8 @@ The **[!UICONTROL オーディエンスのプロパティ]** 「 」セクショ
 また、評価方法を選択することもできます。 使用する評価方法がわかっている場合は、ドロップダウンリストを使用して、目的の評価方法を選択できます。 このセグメント定義が適合する評価タイプを知りたい場合、「参照」アイコン（![拡大鏡付きのフォルダーアイコン](../images/ui/segment-builder/segment-evaluation-select-icon.png)）を選択すると、使用可能なセグメント定義の評価方法のリストが表示されます。
 
 [!UICONTROL 評価方法の実施要件]ポップオーバーが表示されます。 このポップオーバーには、使用可能な評価方法（バッチ、ストリーミングおよびエッジ）が表示されます。 ポップオーバーには、どの評価方法が適格か不適格かが表示されます。 セグメント定義で使用したパラメーターによっては、特定の評価方法に適合しない場合があります。 各評価方法の要件について詳しくは、[ストリーミングセグメント化](./streaming-segmentation.md#query-types)または[エッジセグメント化](./edge-segmentation.md#query-types)の概要を参照してください。
+
+セグメント定義の作成が完了したら、セグメント定義の評価方法を変更することもできます。 評価方法を Edge または Streaming から Batch に変更した場合は、 **not** を Edge または Streaming に戻すことができます。 評価方法の変更は次のようになります。 **のみ** 選択後に有効になる **[!UICONTROL 保存]** をポップオーバーに追加します。 ダイアログをキャンセルすると、 **維持する** 元の評価方法。
 
 ![評価方法の実施要件のポップアップが表示されます。 このポップアップには、どの評価方法が対象のセグメント定義に適格か不適格かが表示されます。](../images/ui/segment-builder/select-evaluation-method.png)
 
