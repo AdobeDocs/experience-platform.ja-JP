@@ -3,18 +3,18 @@ title: UI での Braze データのデータフローの作成
 description: Adobe Experience Platform UI を使用して Braze アカウントのデータフローを作成する方法を説明します。
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: ベータ版
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 23%
 
 ---
 
-# UI での [!DNL Braze] ソース接続の作成
+# UI での [!DNL Braze Currents] ソース接続の作成
 
 >[!NOTE]
 >
->[!DNL Braze] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Braze Currents] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 [!DNL Braze] を使用すると、消費者とブランド間の顧客中心のインタラクションをリアルタイムで実現できます。 [!DNL Braze Currents] は、Braze プラットフォームのエンゲージメントイベントのリアルタイムデータストリームで、 [!DNL Braze] プラットフォーム。
 
@@ -44,7 +44,7 @@ ht-degree: 23%
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 *マーケティング自動化* カテゴリ、選択 **[!UICONTROL ブレーズ]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+の下 *マーケティング自動化* カテゴリ、選択 **[!UICONTROL ブレーズ電流]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
 
 ![ソースカタログは、Experience PlatformUI 上で、「Braze Currements」ソースを選択した状態で表示されます。](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 必要な資格情報の収集
 
-接続を作成したら、次の資格情報値を収集する必要があります。収集した資格情報値は、Braze ダッシュボードでに指定して、にデータを送信します。 [!DNL Platform]. 詳しくは、 [!DNL Braze] [Currents への移動に関するガイド](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+接続を作成したら、次の資格情報値を収集する必要があります。収集した資格情報値は、Braze ダッシュボードに指定して、Experience Platformにデータを送信します。 詳しくは、 [!DNL Braze] [Currents への移動に関するガイド](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | フィールド | 説明 |
-| ---------- | ----------- |
-| `Client ID` | 次に関連付けられたクライアント ID: [!DNL Platform] ソース。 |
-| `Client Secret` | に関連付けられたクライアント秘密鍵 [!DNL Platform] ソース。 |
-| `Tenant ID` | に関連付けられたテナント ID [!DNL Platform] ソース。 |
-| `Sandbox Name` | に関連付けられたサンドボックス [!DNL Platform] ソース。 |
-| `Dataflow ID` | に関連付けられたデータフロー ID [!DNL Platform] ソース。 |
-| `Streaming Endpoint` | 次に関連付けられたストリーミングエンドポイント： [!DNL Platform] ソース。 Braze はこれをバッチストリーミングエンドポイントに自動的に変換します。 |
+| --- | --- |
+| クライアント ID | Experience Platformソースに関連付けられたクライアント ID。 |
+| クライアント秘密鍵 | Experience Platform・ソースに関連付けられたクライアントの秘密鍵。 |
+| テナント ID | Experience Platformソースに関連付けられたテナント ID。 |
+| サンドボックス名 | Experience Platformソースに関連付けられたサンドボックス。 |
+| データフロー ID | データソースに関連付けられたExperience Platformフロー ID。 |
+| ストリーミングエンドポイント | Experience Platformソースに関連付けられたストリーミングエンドポイント。 **注意**: [!DNL Braze] は、これをバッチストリーミングエンドポイントに自動的に変換します。 |
 
 ### 設定 [!DNL Braze Currents] を使用して、データソースにデータをストリーミングする
 
