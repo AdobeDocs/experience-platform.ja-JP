@@ -2,9 +2,9 @@
 title: データストリームの作成と設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
 workflow-type: tm+mt
-source-wordcount: '2700'
+source-wordcount: '2737'
 ht-degree: 55%
 
 ---
@@ -142,6 +142,7 @@ The **[!UICONTROL デバイス参照]** 「 」設定では、収集するデバ
 | 設定 | 説明 |
 | --- | --- |
 | [!UICONTROL レポートスイート ID] | **（必須）**&#x200B;データの送信先の Analytics レポートスイートの ID。この ID は、Adobe Analytics UI の[!UICONTROL 管理者]／[!UICONTROL レポートスイート]にあります。複数のレポートスイートが指定された場合、データは各レポートスイートにコピーされます。 |
+| [!UICONTROL 訪問者 ID の名前空間] | （オプション）Adobe Analyticsで使用する名前空間 [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=ja). この名前空間に指定された値を持つイベントを送信すると、そのイベントは自動的に `visitorID` Analytics で使用できます。 |
 | [!UICONTROL レポートスイートの上書き] | このセクションでは、デフォルトのレポートスイート ID を上書きするために使用できるレポートスイート ID を追加できます。 |
 
 ### Adobe Audience Manager 設定 {#audience-manager}
