@@ -5,17 +5,17 @@ description: 年の時間制限を無視して問題を解決する方法を説�
 source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
 source-wordcount: '208'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
 
-# 年時間制約の更新を無視 {#ignore-year}
+# 年の時間制約を無視の更新 {#ignore-year}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_ignoreYear"
->title="年の更新を無視"
->abstract="年の時間制限を無視する機能が更新されました。 オーディエンスを再度保存してください。"
+>title="年を無視の更新"
+>abstract="年の時間制約を無視が更新されました。オーディエンスを再度保存してください。"
 
 Adobe Experience Platformの 2024 年 2 月リリースで、Adobe Experience Platformセグメント化サービスが変更されました。この変更により、オーディエンスの作成と評価で「年を無視」オプションが使用される問題が解決されました。
 

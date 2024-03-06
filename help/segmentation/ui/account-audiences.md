@@ -7,7 +7,7 @@ exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 2%
+ht-degree: 29%
 
 ---
 
@@ -94,72 +94,72 @@ The [!UICONTROL 宛先を有効化] ページが表示されます。 有効化�
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
 >title="最大ルックバックウィンドウエラー"
->abstract="エクスペリエンスイベントのルックバックウィンドウの最大値は 30 日です。"
+>abstract="エクスペリエンスイベントの最大ルックバックウィンドウは 30 日間です。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
->title="ネストされたコンテナの深さの最大値エラー"
->abstract="ネストされたコンテナの最大の深さは次のとおりです。 **5**. これは、 **できません** オーディエンスを作成する際に、6 つ以上のネストされたコンテナがある。"
+>title="ネストされたコンテナの最大深度エラー"
+>abstract="ネストされたコンテナの最大深度は **5** です。つまり、オーディエンスを作成する際に、ネストされたコンテナの数を 6 以上にすることは&#x200B;**できません**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
->title="最大ルール数量エラー"
->abstract="1 つのコンテナ内のルールの最大数は次のとおりです。 **5**. これは、 **できません** オーディエンスを作成する際に、1 つのコンテナ内に 5 つ以上のルールがある。"
+>title="ルールの最大数エラー"
+>abstract="1 つのコンテナ内のルールの最大数は **5** です。つまり、オーディエンスを作成する際に、1 つのコンテナ内のルールを 6 個以上にすることは&#x200B;**できません**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
->title="最大クロスエンティティ金額エラー"
->abstract="1 つのオーディエンス内で使用できるクロスエンティティの最大数は次のとおりです **5**. クロスエンティティとは、オーディエンス内の異なるエンティティを切り替えるときです。 例えば、アカウントからマーケティングリストに移動する場合などです。"
+>title="クロスエンティティの最大数エラー"
+>abstract="1 つのオーディエンス内で使用できるクロスエンティティの最大数は **5** です。クロスエンティティとは、オーディエンス内で異なるエンティティ間を切り替えることです。例えば、アカウントからユーザーに、さらにマーケティングリストに移行するといったことです。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowCustomEntity"
 >title="カスタムエンティティエラー"
->abstract="カスタムエンティティは、 **not** 許可済み"
+>abstract="カスタムエンティティは使用でき&#x200B;**ません**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_b2bBuiltInEntities"
 >title="無効な B2B エンティティエラー"
->abstract="次の B2B エンティティのみを使用できます。 `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`、および `_xdm.classes.campaign`."
+>abstract="`_xdm.context.account`、`_xdm.content.opportunity`、`_xdm.context.profile`、`_xdm.context.experienceevent`、`_xdm.context.account-person`、`_xdm.classes.opportunity-person`、`_xdm.classes.marketing-list-member`、`_xdm.classes.marketing-list`、`_xdm.context.campaign-member`、`_xdm.classes.campaign` の B2B エンティティのみを使用できます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_rhsMaxOptions"
->title="最大値エラー"
->abstract="1 つのフィールドに対して確認できる値の最大数は次のとおりです **50**."
+>title="値の最大数エラー"
+>abstract="1 つのフィールドに対して確認できる値の最大数は **50** です。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByReference"
 >title="inSegment イベントエラー"
->abstract="inSegment イベントは、 **not** 許可済み"
+>abstract="inSegment イベントは使用でき&#x200B;**ません**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByValue"
 >title="inSegment イベントエラー"
->abstract="inSegment イベントは、 **not** 許可済み"
+>abstract="inSegment イベントは使用でき&#x200B;**ません**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowSequentialEvents"
 >title="順次イベントエラー"
->abstract="順次イベントは、 **not** 許可済み"
+>abstract="順次イベントは使用でき&#x200B;**ません**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowMaps"
 >title="マップタイププロパティエラー"
->abstract="マップタイプのプロパティは次のとおりです。 **not** 許可済み"
+>abstract="マップタイププロパティは使用でき&#x200B;**ません**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxNestedAggregationDepth"
 >title="ネストされたエンティティの最大深度エラー"
->abstract="ネストされた配列の最大の深さは次のとおりです **5**."
+>abstract="ネストされた配列の最大深度は **5** です。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxObjectNestingLevel"
->title="ネストされたオブジェクトの最大量エラー"
->abstract="ネスト可能なオブジェクトの最大数は次のとおりです。 **10**."
+>title="ネストされたオブジェクトの最大数エラー"
+>abstract="許可されるネストされたオブジェクトの最大数は、**10** です。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_generic"
 >title="制約違反"
->abstract="オーディエンスが制約に違反しています。 詳しくは、リンクされたドキュメントを参照してください。"
+>abstract="オーディエンスが制約に違反しています。詳しくは、リンク先のドキュメントを参照してください。"
 
 アカウントオーディエンスを使用する場合、オーディエンス **必須** 次の制約に従います。
 
@@ -169,16 +169,16 @@ The [!UICONTROL 宛先を有効化] ページが表示されます。 有効化�
 
 - エクスペリエンスイベントのルックバックウィンドウの最大数は次のとおりです。 **30 日**.
 - ネストされたコンテナの最大の深さは次のとおりです。 **5**.
-   - これは、 **できません** オーディエンスを作成する際に、6 つ以上のネストされたコンテナがある。
+   - つまり、オーディエンスを作成する際に、ネストされたコンテナの数を 6 以上にすることは&#x200B;**できません**。
 - 1 つのコンテナ内のルールの最大数は次のとおりです。 **5**.
    - これは、オーディエンスが **できません** オーディエンスを構成するルールが 5 つ以上ある。
 - 使用できるクロスエンティティの最大数は次のとおりです。 **5**.
-   - クロスエンティティとは、オーディエンス内の異なるエンティティを切り替えるときです。 例えば、アカウントからマーケティングリストに移動する場合などです。
+   - クロスエンティティとは、オーディエンス内で異なるエンティティ間を切り替えることです。例えば、アカウントからユーザーに、さらにマーケティングリストに移行するといったことです。
 - カスタムエンティティ **できません** を使用します。
-- 1 つのフィールドに対して確認できる値の最大数は次のとおりです **50**.
+- 1 つのフィールドに対して確認できる値の最大数は **50** です。
    - 例えば、「市区町村名」というフィールドがある場合、その値を 50 の市区町村名に対してチェックできます。
 - アカウントオーディエンス **できません** use `inSegment` イベント。
 - アカウントオーディエンス **できません** 順次イベントを使用します。
 - アカウントオーディエンス **できません** マップを使用します。
-- ネストされた配列の最大の深さは次のとおりです **5**.
+- ネストされた配列の最大深度は **5** です。
 - ネストされたオブジェクトの最大数は次のとおりです。 **10**.

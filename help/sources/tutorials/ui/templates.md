@@ -51,7 +51,7 @@ Adobe Experience Platform には、データ取り込みプロセスを高速化
 >id="platform_sources_templates_accounttype"
 >title="ビジネスタイプを選択する"
 >abstract="ユースケースに適したビジネスタイプを選択します。アクセス権は、Real-time Customer Data Platform サブスクリプションアカウントによって異なる場合があります。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP の概要"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja" text="Real-Time CDP の概要"
 
 Platform UI で、「 」を選択します。 **[!UICONTROL ソース]** 左側のナビゲーションから、 [!UICONTROL ソース] workspace を参照し、Experience Platformで使用可能なソースのカタログを確認します。
 
