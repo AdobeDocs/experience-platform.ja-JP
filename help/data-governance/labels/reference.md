@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用ラベルの用語集
 description: このドキュメントでは、Adobe Experience Platform が現在サポートしているすべてのデータ使用ラベルについて概説します。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
+source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2254'
 ht-degree: 96%
 
 ---
