@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3633'
 ht-degree: 88%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 88%
 >
 >Platform 内で作成されたオーディエンスの場合、 **同じ** 結合ポリシーが表示されます。
 
-「**[!UICONTROL オーディエンス]**」タブには、Adobe Audience Manager などの外部ソースから読み込まれたすべてのオーディエンスと、[!DNL Experience Platform] 内で作成されたオーディエンスが表示されます。
+The **[!UICONTROL オーディエンス]** 「 」タブには、Adobe Audience ManagerやCustomer Journey Analyticsなど、外部ソースからインポートされたすべてのオーディエンスと、で作成されたオーディエンスが一覧表示されます [!DNL Experience Platform].
 
 「**[!UICONTROL オーディエンス]**」タブでは、使用可能なすべてのソースがフォルダーのグループとして表示されます。フォルダーを選択すると、使用可能なサブフォルダーとオーディエンスが表示されます。また、フォルダー構造を表示するには、フォルダーアイコンを選択します（右端の画像を参照）。チェックマークは、現在のフォルダーを表しています。また、ツリー内のフォルダーの名前を選択することで、フォルダー間を簡単に移動できます。
 
