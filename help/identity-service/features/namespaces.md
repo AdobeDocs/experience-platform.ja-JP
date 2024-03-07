@@ -2,9 +2,9 @@
 title: ID 名前空間の概要
 description: ID サービスの ID 名前空間について説明します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1920'
 ht-degree: 22%
 
 ---
@@ -134,6 +134,10 @@ UI で ID 名前空間を表示するには、「 **[!UICONTROL ID]** 左側の�
 組織のデータや使用例によっては、カスタム名前空間が必要な場合があります。 カスタム名前空間は、 [[!DNL Identity Service]](../api/create-custom-namespace.md) API または UI を使用します。
 
 カスタム名前空間を作成するには、「 **[!UICONTROL ID 名前空間を作成]**.
+
+>[!TIP]
+>
+>統合 ID は、他のシステムとの接続に使用される名前空間です。 ID の解決にも、ID のステッチにも使用されません。 選択 **[!UICONTROL 統合 ID の表示]** をクリックします。 ただし、統合 ID は表示専用で、設定する必要がないので、デフォルトでは非表示になっています。
 
 ![ID ワークスペースの「 ID 名前空間を作成」ボタン。](../images/namespace/create-identity-namespace.png)
 
