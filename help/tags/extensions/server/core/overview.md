@@ -3,10 +3,10 @@ title: コアイベント転送拡張機能の概要
 description: Adobe Experience Platform のコアイベント拡張機能について説明します。
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 100%
+source-wordcount: '1715'
+ht-degree: 99%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 ### カスタムコード
 
-イベントの条件として使用する必要があるカスタムコードを指定します。組み込みコードエディターを使用してカスタムコードを入力します。Adobe Experience Platform でのイベント転送は、ES6 をサポートしています。
+イベントの条件として使用する必要があるカスタムコードを指定します。組み込みコードエディターを使用してカスタムコードを入力します。Adobe Experience Platformでのイベント転送は、ES13 をサポートしています。
 
 1. 「**[!UICONTROL エディターを開く]**」を選択します。
 1. カスタムコードを入力します。
@@ -155,7 +155,7 @@ module.exports = (context) => {
 
 ### カスタムコード
 
-イベントのトリガー後に実行して条件を評価するコードを提供します。Adobe Experience Platform でのイベント転送は、ES6 をサポートしています。
+イベントのトリガー後に実行して条件を評価するコードを提供します。Adobe Experience Platformでのイベント転送は、ES13 をサポートしています。
 
 1. アクションコードに名前を付けます。
 1. 「**[!UICONTROL エディターを開く]**」を選択します。
