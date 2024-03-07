@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI でのクラスの作成と編集
 description: ユーザーインターフェイスでクラスを作成および編集するExperience Platformを説明します。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 8%
@@ -24,13 +24,13 @@ Adobeには、XDM 個別プロファイルや XDM ExperienceEvent など、い�
 
 このドキュメントでは、Experience PlatformUI でカスタムクラスを作成、編集、管理する方法の概要を説明します。
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
 このガイドでは、XDM システムに関する十分な知識が必要です。 詳しくは、 [XDM の概要](../../home.md) Experience Platformエコシステム内での XDM の役割、および [スキーマ構成の基本](../../schema/composition.md) クラスが XDM スキーマにどのように貢献するかを学ぶため。
 
 このガイドは必須ではありませんが、 [UI でのスキーマの構成](../../tutorials/create-schema-ui.md) を参照して、スキーマエディターの様々な機能について理解してください。
 
-## はじめに
+## はじめに {#getting-started}
 
 Platform UI で、「 」を選択します。 **[!UICONTROL スキーマ]** 左側のナビゲーションで、 [!UICONTROL スキーマ] ワークスペースに移動して、 **[!UICONTROL クラス]** タブをクリックします。 使用可能なクラスのリストが表示されます。
 
@@ -121,7 +121,7 @@ An **[!UICONTROL 名称未設定フィールド]** プレースホルダーが�
 スキーマのクラスは、最初の作成プロセス中、保存前の任意の時点で変更できます。 ただし、フィールドグループは特定のクラスとのみ互換性があるので、この操作は慎重におこなう必要があります。 クラスを変更すると、キャンバスと追加したフィールドがリセットされます。
 次のガイドを参照してください： [スキーマの作成と編集](./schemas.md#change-class) を参照してください。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このドキュメントでは、Platform UI を使用してクラスを作成および編集する方法について説明しました。 の機能の詳細については、 [!UICONTROL スキーマ] ワークスペースについては、 [[!UICONTROL スキーマ] workspace の概要](../overview.md).
 

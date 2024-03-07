@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI でのスキーマフィールドグループの作成と編集
 description: スキーマユーザーインターフェイスでスキーマフィールドグループを作成および編集するExperience Platformを説明します。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0375ddcb7d06208199bf1172b157aa6eb28811f6
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 8%
@@ -24,7 +24,7 @@ ht-degree: 8%
 
 Adobe Experience Platformには、様々なマーケティングの使用例に対応する多くの標準的なフィールドグループが用意されています。 ただし、独自のカスタムフィールドグループを作成および編集して、XDM スキーマ内のビジネスに関連する追加の概念を定義することもできます。 このガイドでは、Platform UI で組織のカスタムフィールドグループを作成、編集、管理する方法の概要を説明します。
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
 このガイドでは、XDM システムに関する十分な知識が必要です。 詳しくは、 [XDM の概要](../../home.md) Experience Platformエコシステム内での XDM の役割、および [スキーマ構成の基本](../../schema/composition.md) フィールドグループが XDM スキーマにどのように貢献するかを説明します。
 
@@ -90,7 +90,7 @@ An **[!UICONTROL 名称未設定フィールド]** プレースホルダーが�
 
 同じフィールドグループが他のスキーマで既に使用されている場合、新しく追加されたフィールドは、それらのスキーマに自動的に表示されます。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このガイドでは、Platform UI を使用してフィールドグループを作成および編集する方法について説明しました。 の機能の詳細については、 [!UICONTROL スキーマ] ワークスペースについては、 [[!UICONTROL スキーマ] workspace の概要](../overview.md).
 

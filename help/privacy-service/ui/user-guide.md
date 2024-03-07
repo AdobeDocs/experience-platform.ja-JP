@@ -4,10 +4,10 @@ solution: Experience Platform
 title: プライバシー UI でのPrivacy Serviceジョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 59%
+source-wordcount: '1511'
+ht-degree: 57%
 
 ---
 
@@ -143,6 +143,8 @@ The [!DNL Privacy Service] UI には、新しいジョブリクエストを作�
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
 を選択します。 **[!UICONTROL ジョブタイプ]** リクエストの（「削除」または「アクセス」）と 1 つ以上の使用可能な製品のリスト。
+
+Privacy Serviceは、個人データに対する 2 種類のジョブリクエストをサポートしています。 [!UICONTROL アクセス] （読み取り）および/または [!UICONTROL 削除]. 問い合わせの対象に関する製品内のすべての情報を受け取る要求を送信するか、問い合わせの対象に関するすべての情報を削除する要求を送信できます。
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 

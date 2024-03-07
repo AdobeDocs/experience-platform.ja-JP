@@ -5,7 +5,7 @@ title: UI を使用したデータタイプの作成と編集
 type: Tutorial
 description: データユーザーインターフェイスでデータタイプを作成および編集するExperience Platformを説明します。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 6%
@@ -29,7 +29,7 @@ Adobe Experience Platformには、様々な標準的なデータ型が用意さ�
 
 このチュートリアルでは、Platform ユーザーインターフェイスでカスタムデータタイプを作成および編集する手順について説明します。
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
 このガイドでは、XDM システムに関する十分な知識が必要です。 詳しくは、 [XDM の概要](../../home.md) Experience Platformエコシステム内での XDM の役割、および [スキーマ構成の基本](../../schema/composition.md) データタイプが XDM スキーマに与える影響を説明します。
 
@@ -105,7 +105,7 @@ Restaurant データ型では、レストランの名前を表す文字列フィ
 
 データタイプへのフィールドの追加が完了したら、「 **[!UICONTROL 保存]** 変更を保存し、データタイプを [!DNL Schema Library].
 
-## データタイプをスキーマに追加する
+## データタイプをスキーマに追加する {#add-data-type}
 
 データ型を作成したら、スキーマで使用できます。 XDM スキーマは、クラスと 0 個以上のフィールドグループで構成されるので、データ型で提供されるフィールドを直接スキーマに追加することはできません。 代わりに、クラスまたはフィールドグループに含める必要があります。
 
@@ -123,7 +123,7 @@ Restaurant データ型では、レストランの名前を表す文字列フィ
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このガイドでは、Platform UI を使用してデータタイプを作成および編集する方法について説明しました。 の機能の詳細については、 [!UICONTROL スキーマ] ワークスペースについては、 [[!UICONTROL スキーマ] workspace の概要](../overview.md).
 

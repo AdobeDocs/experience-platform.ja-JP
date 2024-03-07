@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
+source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
 workflow-type: tm+mt
 source-wordcount: '3671'
 ht-degree: 4%
@@ -21,7 +21,7 @@ ht-degree: 4%
 >
 >スキーマ作成プロセスの完全なツアーについては、 [スキーマ作成チュートリアル](../../tutorials/create-schema-ui.md) 完全なサンプルスキーマを作成し、の多くの機能に慣れるには、以下を実行します。 [!DNL Schema Editor].
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
 このガイドでは、XDM システムに関する十分な知識が必要です。 詳しくは、 [XDM の概要](../../home.md) Experience Platformエコシステム内での XDM の役割、および [スキーマ構成の基本](../../schema/composition.md) スキーマの構築方法の概要を示します。
 
@@ -350,7 +350,7 @@ The [!DNL Schema Editor] フィールドグループが指定したフィール�
 
 クラスの変更を確認した後、キャンバスがリセットされ、構成の進行状況がすべて失われます。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このドキュメントでは、Platform UI でのスキーマの作成と編集の基本について説明します。 次の項目を確認することを強くお勧めします。 [スキーマ作成チュートリアル](../../tutorials/create-schema-ui.md) :UI で完全なスキーマを構築するための包括的なワークフロー。一意の使用例のカスタムフィールドグループとデータタイプの作成を含みます。
 

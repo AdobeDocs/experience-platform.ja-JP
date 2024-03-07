@@ -2,9 +2,9 @@
 title: XDM における機密情報と個人情報
 description: Experience Data Model(XDM) の機密性の高い個人情報 (SPI) および個人情報 (PII) に関する主な考慮事項について説明します。
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
+source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '567'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,10 @@ Platform では、独自のカスタムフィールドグループとデータ�
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
 -->
+
+>[!IMPORTANT]
+>
+>SPI と PII は [XDM 個人プロファイル](../classes/individual-profile.md) および [XDM ExperienceEvent](../classes/experienceevent.md) クラス。 データ削除やプライバシー、ガバナンスの目的で使用するベストプラクティスとして、SPI と PII を他のカスタムまたは標準の XDM クラスに保存しないでください。
 
 ## 次の手順
 
