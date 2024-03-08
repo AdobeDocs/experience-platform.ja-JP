@@ -4,9 +4,9 @@ title: Twitterイベント転送拡張機能
 description: このAdobe Experience Platformイベント転送拡張機能を使用すると、ビジネス要件に合わせてTwitterにイベントを取り込むことができます。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1048'
 ht-degree: 7%
 
 ---
@@ -91,13 +91,13 @@ Experience Platformを [!DNL Twitter]の場合、次の入力が必要です。
 | --- | --- | --- | --- |
 | [!UICONTROL [!DNL Twitter] クリック ID] | [!DNL Twitter] クリックスルー URL から解析された ID をクリックします。 | 26l6412g5p4iyj65a2oic2ayg2 | 他の識別子が追加されていない場合は必須です。 |
 | [!UICONTROL メール] | SHA256 でハッシュ化された電子メールアドレス。 テキストは小文字で、ハッシュ化の前に末尾または先頭のスペースを削除する必要があります。 | eventforwarding@example.com | 他の識別子が追加されていない場合は必須です。 |
-| [!UICONTROL Phone] | 電話は、コンバージョンイベントに対応する識別子として機能します。 電話番号は、E164 形式 [+][ 国コード ] である必要があります[面積コード][local phone number] ハッシュする前に | +911234567875 | 他の識別子が追加されていない場合は必須です。 |
+| [!UICONTROL 電話] | 電話は、コンバージョンイベントに対応する識別子として機能します。 電話番号は、E164 形式 [+][ 国コード ] である必要があります[面積コード][local phone number] ハッシュする前に | +911234567875 | 他の識別子が追加されていない場合は必須です。 |
 
 **[!UICONTROL コンバージョンデータ]**
 
 | フィールド名 | 説明 | 例 | 必須 |
 | --- | --- | --- | --- |
-| [!UICONTROL コンバージョン時間] | ISO 8601 または yyyy-MM-dd&#39;T&#39;HH での文字列としての日時:mm:ss:SSSZ 形式。 | 2022-02-18T01:14:00.603Z | ○ |
+| [!UICONTROL コンバージョン時間] | ISO 8601 またはでの文字列としての日時。 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式を使用します。 | 2022-02-18T01:14:00.603Z | ○ |
 | [!UICONTROL イベント ID] | 特定のイベントの base-36 ID。 この ID は、 [!DNL Twitter] 広告アカウント。 これは、イベントマネージャーで対応するイベントの ID と呼ばれます。 | o87ne または tw-o8z6j-o87ne (tw-pixel_id-event-id) | ○ |
 | [!UICONTROL 項目数] | イベントで購入された品目の数。 0 より大きい正の数を指定する必要があります。 | 4 | × |
 | [!UICONTROL 通貨] | イベントで購入される品目の通貨。 これは ISO-4217 で表現され、指定されていない場合、デフォルトは USD です。 | USD | × |

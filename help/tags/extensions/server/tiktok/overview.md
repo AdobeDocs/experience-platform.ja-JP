@@ -2,9 +2,10 @@
 title: AdobeTikTok Web イベント API 拡張機能の統合
 description: このAdobe Experience Platform Web イベント API を使用すると、Web サイトでのインタラクションをTikTokと直接共有できます。
 last-substantial-update: 2023-09-26T00:00:00Z
-source-git-commit: d8b7006ade1dc82fdd79b7ed744c021bc304bca7
+exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1105'
 ht-degree: 5%
 
 ---
@@ -64,7 +65,7 @@ Web イベントとパラメーターには、イベントに関する一般的�
 | 入力 | 説明 |
 | --- | --- |
 | イベント名 | イベントの名前。 これらは、で作成された事前定義済みの名前を持つアクションです。 [!DNL TikTok] は必須フィールドです。 詳しくは、 [[!DNL TikTok] マーケティング API](https://business-api.tiktok.com/portal/docs?id=1741601162187777) サポートされるイベントの詳細については、ドキュメントを参照してください。 |
-| イベント時刻 | ISO 8601 または yyyy-MM-dd&#39;T&#39;HH での文字列としての日時:mm:ss:SSSZ 形式。 これは必須フィールドです。 |
+| イベント時刻 | ISO 8601 またはでの文字列としての日時。 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式を使用します。 これは必須フィールドです。 |
 | イベント ID | 各イベントを示す広告主によって生成される一意の ID。 これはオプションのフィールドで、重複排除に使用します。 |
 
 {style="table-layout:auto"}
