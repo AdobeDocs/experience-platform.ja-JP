@@ -2,10 +2,10 @@
 title: タグ拡張のリファレンス
 description: Adobe Experience Platformのタグ拡張機能に関するドキュメントを検索します。
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 86%
+source-wordcount: '469'
+ht-degree: 32%
 
 ---
 
@@ -21,102 +21,102 @@ ht-degree: 86%
 >
 >Adobe名の後にアスタリスク (*) が付くと、拡張機能の Exchange 上のリストにリンクされます。このリストには、インストール手順と使用手順が含まれます。 その他すべてのリンクは、Adobe Experience League上の拡張機能のドキュメントを指しています。
 
-* [Accessible Site Speed Metrics](https://exchange.adobe.com/apps/ec/103053)*
-* [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)*
-* [アクションページ更新](https://exchange.adobe.com/apps/ec/102848)*
+* [アクセス可能なサイト速度指標](https://exchange.adobe.com/apps/ec/103053)*
+* [Activity Mapカスタマイズ者](https://exchange.adobe.com/apps/ec/101531)*
+* [アクションページの更新](https://exchange.adobe.com/apps/ec/102848)*
 * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics &amp; Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)
-* [Adobe Analytics &amp; Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
+* [Adobe AnalyticsとMicrosoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)*
-* [Adobe Analytics 製品文字列](./product-string/overview.md)
+* [Adobe Analytics Product String](./product-string/overview.md)
 * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)*
-* [Adobe Experience Platform Web SDK を使用した Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
+* [Adobe Experience Platform Web SDK を使用したAdobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
-* [Adobe Client Data Layer](./client-data-layer/overview.md)
-* [Adobe ContextHub](./contexthub/overview.md)
+* [Adobe クライアントデータレイヤー](./client-data-layer/overview.md)
+* [AdobeContextHub](./contexthub/overview.md)
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID サービス](./id-service/overview.md)
-* [Adobe Experience Platform デモ](./platform-demo/overview.md)
+* [Adobe Experience Platform Demo](./platform-demo/overview.md)
 * [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
-* [Adobe Media Analytics for Audio and Video](./media-analytics/overview.md)
-* [Adobe Media Analytics（3.x SDK） ](./media-analytics-3x/overview.md)
-* [アドビプライバシー](./privacy/overview.md)
-* [Adobe Report Suite Selector](https://exchange.adobe.com/apps/ec/100640)*
+* [Adobe Medium分析（オーディオおよびビデオ用）](./media-analytics/overview.md)
+* [Adobe MediumAnalytics (3.x SDK)](./media-analytics-3x/overview.md)
+* [Adobeプライバシー](./privacy/overview.md)
+* [Adobeレポートスイートセレクター](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
 * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
 * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
-* [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)*
-* [Amplitude](https://exchange.adobe.com/apps/ec/108010)*
-* [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)*
+* [Airbrake JS 通知機](https://exchange.adobe.com/apps/ec/103342)*
+* [振幅](https://exchange.adobe.com/apps/ec/108010)*
+* [アポロクァクス](https://exchange.adobe.com/apps/ec/105068)*
 * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)*
-* [Awin Conversion Tag](https://exchange.adobe.com/apps/ec/103240)*
-* [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)*
-* [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)*
+* [Awin コンバージョンタグ](https://exchange.adobe.com/apps/ec/103240)*
+* [Beemray 人間のコンテキスト](https://exchange.adobe.com/apps/ec/101063)*
+* [Bing Ads ユニバーサルイベントトラッキング](https://exchange.adobe.com/apps/ec/100154)*
 * [ブランチ](https://exchange.adobe.com/apps/ec/101382)*
 * [[!DNL BrightCove] ビデオトラッキング](./brightcove/overview.md)
 * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)*
-* [Channel Source Identifier](https://exchange.adobe.com/apps/ec/101412)*
-* [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)*
+* [チャネルソース識別子](https://exchange.adobe.com/apps/ec/101412)*
+* [Cheetah エクスペリエンス](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
-* [Common Analytics Plugins](./plugins/overview.md)
-* [Common Web SDK Plugins](./web-sdk/web-sdk-plugins.md)
+* [共通の Analytics プラグイン](./plugins/overview.md)
+* [共通の Web SDK プラグイン](./web-sdk/web-sdk-plugins.md)
 * [連結](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)
 * [コア](./core/overview.md)
 * [Custom Debug Logger](https://exchange.adobe.com/apps/ec/104698)*
-* [Customer Recognition](https://exchange.adobe.com/apps/ec/100688)*
-* [Data Element Assistant (DEA)](https://exchange.adobe.com/apps/ec/101413)*
-* [Data Layer Manager](https://exchange.adobe.com/apps/ec/101462)*
+* [顧客認識](https://exchange.adobe.com/apps/ec/100688)*
+* [データ要素アシスタント (DEA)](https://exchange.adobe.com/apps/ec/101413)*
+* [データレイヤーマネージャ](https://exchange.adobe.com/apps/ec/101462)*
 * [Decibel](https://exchange.adobe.com/apps/ec/100913)*
 * [Demandbase](https://exchange.adobe.com/apps/ec/101605)*
-* [Differential Privacy](https://exchange.adobe.com/apps/ec/104535)*
-* [Dynamic Media ビューア](https://exchange.adobe.com/apps/ec/103048)*
-* [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)*
+* [差分プライバシー](https://exchange.adobe.com/apps/ec/104535)*
+* [Dynamic Media Viewers](https://exchange.adobe.com/apps/ec/103048)*
+* [EDDL ヘルパー](https://exchange.adobe.com/apps/ec/107691)*
 * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)*
 * [ForeSee](https://exchange.adobe.com/apps/ec/100164)*
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
-* [Genesys Predictive Engagement](https://exchange.adobe.com/apps/ec/106148)*
+* [Genesys 予測エンゲージメント](https://exchange.adobe.com/apps/ec/106148)*
 * [Google Data Layer](./google-data-layer/overview.md)
 * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)
 * [InMoment](https://exchange.adobe.com/apps/ec/100847)*
-* [JSON Helper](https://exchange.adobe.com/apps/ec/106449)*
+* [JSON ヘルパー](https://exchange.adobe.com/apps/ec/106449)*
 * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
-* [Mapping Table](https://exchange.adobe.com/apps/ec/103136)*
+* [マッピングテーブル](https://exchange.adobe.com/apps/ec/103136)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
-* [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)*
-* [Monita](https://exchange.adobe.com/apps/ec/106544)*
+* [マスタープロパティマネージャ](https://exchange.adobe.com/apps/ec/102992)*
+* [監視](https://exchange.adobe.com/apps/ec/106544)*
 * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)*
-* [OneTrust Consent Management for Cookies](https://exchange.adobe.com/apps/ec/100340)*
+* [Cookie に対する OneTrust Consent Management](https://exchange.adobe.com/apps/ec/100340)*
 * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)*
 * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)*
 * [Pinterest Conversion Tracking](https://exchange.adobe.com/apps/ec/100523)*
-* [Pixel Loader](https://exchange.adobe.com/apps/ec/100152)*
+* [ピクセルローダー](https://exchange.adobe.com/apps/ec/100152)*
 * [Qualtrics Website Feedback](https://exchange.adobe.com/apps/ec/101569)*
 * [Quantum Metric](https://exchange.adobe.com/apps/ec/101535)*
-* [Resolve Momentum](https://exchange.adobe.com/apps/ec/108352)*
+* [モメンタムの解決](https://exchange.adobe.com/apps/ec/108352)*
 * [Rokt](https://exchange.adobe.com/apps/ec/107591)*
-* [SDI Survey](https://exchange.adobe.com/apps/ec/102991)*
+* [SDI 調査](https://exchange.adobe.com/apps/ec/102991)*
 * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
-* [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
-* [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)*
+<!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
+* [ストレージスパナ](https://exchange.adobe.com/apps/ec/102990)*
 * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)*
-* [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)*
+* [収集 (Tealium)](https://exchange.adobe.com/apps/ec/104217)*
 * [Tealium Data Enrichment](https://exchange.adobe.com/apps/ec/104217)*
-* [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)*
-* [TrustArc Cookie Consent Manager](https://exchange.adobe.com/apps/ec/107037)*
-* [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)*
-* [Web Vitals](https://exchange.adobe.com/apps/ec/106769)*
+* [TMMData Foundation プラットフォーム](https://exchange.adobe.com/apps/ec/100148)*
+* [TrustArc Cookie 同意マネージャー](https://exchange.adobe.com/apps/ec/107037)*
+* [Vimeo 再生](https://exchange.adobe.com/apps/ec/108937)*
+* [Web の概要](https://exchange.adobe.com/apps/ec/106769)*
 * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)*
 * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)*
-* [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)*
+* [Yext コンバージョントラッキング](https://exchange.adobe.com/apps/ec/103174)*
 * [[!DNL Youtube] 再生](https://exchange.adobe.com/apps/ec/103174)*
 * [[!DNL YouTube] ビデオトラッキング](./youtube/overview.md)
