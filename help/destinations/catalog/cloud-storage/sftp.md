@@ -2,10 +2,10 @@
 title: SFTP 接続
 description: SFTP サーバーへのライブアウトバウンド接続を作成して、区切りデータファイルを定期的に Adobe Experience Platform から書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 49%
+source-wordcount: '1091'
+ht-degree: 45%
 
 ---
 
@@ -56,6 +56,19 @@ SFTP サーバーへのライブアウトバウンド接続を作成して、区
 {style="table-layout:auto"}
 
 ![宛先カタログでハイライト表示された SFTP プロファイルベースの書き出しタイプ。](../../assets/catalog/cloud-storage/sftp/catalog.png)
+
+## データセットを書き出し {#export-datasets}
+
+この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
+
+* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
+* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
+
+## エクスポートするデータのファイル形式 {#file-format}
+
+書き出し時 *オーディエンスデータ*、Platform は `.csv`, `parquet`または `.json` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [書き出しでサポートされるファイル形式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
+
+書き出し時 *データセット*、Platform は `.parquet` または `.json` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [データセットの書き出しが成功したことを確認する](../../ui/export-datasets.md#verify) 「データセットの書き出し」チュートリアルの節を参照してください。
 
 ## 宛先への接続 {#connect}
 
@@ -129,17 +142,10 @@ SFTP ストレージの場所への認証接続を確立したら、宛先の次
 
 詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
-## データセットを書き出し {#export-datasets}
+## データの正常な書き出しの検証 {#exported-data}
 
-この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
-
-* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
-* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
-
-## 書き出したデータ {#exported-data}
-
-[!DNL SFTP] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。
+データが正常に書き出されたかどうかを確認するには、SFTP ストレージを確認し、書き出されたファイルに、期待されるプロファイルの母集団が含まれていることを確認します。
 
 ## IP アドレスの許可リスト {#ip-address-allow-list}
 
-参照： [SFTP の宛先の IP ア許可リストに加えるドレスの](ip-address-allow-list.md) AdobeIP を追加する必要がある場合は、次の手順を実行しま許可リストに加えるす。
+詳しくは、 [IP アドレスの許可リストに加える](ip-address-allow-list.md) 記事を参照してください許可リストに加える。

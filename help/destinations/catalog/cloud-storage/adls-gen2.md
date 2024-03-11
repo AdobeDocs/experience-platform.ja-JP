@@ -3,10 +3,10 @@ title: Azure Data Lake Storage Gen2 接続
 description: Azure Data Lake Storage Gen2 に接続して、オーディエンスをアクティブ化し、データセットを書き出す方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 60%
+source-wordcount: '954'
+ht-degree: 55%
 
 ---
 
@@ -43,7 +43,18 @@ ht-degree: 60%
 
 {style="table-layout:auto"}
 
-## 前提条件 {#prerequisites}
+## データセットを書き出し {#export-datasets}
+
+この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
+
+* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
+* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
+
+## エクスポートするデータのファイル形式 {#file-format}
+
+書き出し時 *オーディエンスデータ*、Platform は `.csv`, `parquet`または `.json` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [書き出しでサポートされるファイル形式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
+
+書き出し時 *データセット*、Platform は `.parquet` または `.json` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [データセットの書き出しが成功したことを確認する](../../ui/export-datasets.md#verify) 「データセットの書き出し」チュートリアルの節を参照してください。
 
 ## 宛先への接続 {#connect}
 
@@ -103,13 +114,6 @@ ht-degree: 60%
 ### 属性と ID のマッピング {#map}
 
 **[!UICONTROL マッピング]**&#x200B;手順では、プロファイルに書き出す属性および ID フィールドを選択できます。 また、書き出したファイル内のヘッダーを選択して、任意のわかりやすい名前に変更することもできます。詳しくは、「バッチの宛先をアクティベート」UI チュートリアルの[マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を参照してください。
-
-## データセットを書き出し {#export-datasets}
-
-この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
-
-* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
-* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
 
 ## データの正常な書き出しの検証 {#exported-data}
 

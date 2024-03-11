@@ -3,10 +3,10 @@ title: Google Cloud Storage 接続
 description: Google Cloud Storage に接続し、オーディエンスをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 68%
+source-wordcount: '1199'
+ht-degree: 63%
 
 ---
 
@@ -42,6 +42,19 @@ ht-degree: 68%
 | 書き出し頻度 | **[!UICONTROL バッチ]** | バッチ宛先では、ファイルが 3 時間、6 時間、8 時間、12 時間、24 時間の単位でダウンストリームプラットフォームに書き出されます。 詳しくは、[バッチ（ファイルベース）宛先](/help/destinations/destination-types.md#file-based)を参照してください。 |
 
 {style="table-layout:auto"}
+
+## データセットを書き出し {#export-datasets}
+
+この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
+
+* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
+* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
+
+## エクスポートするデータのファイル形式 {#file-format}
+
+書き出し時 *オーディエンスデータ*、Platform は `.csv`, `parquet`または `.json` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [書き出しでサポートされるファイル形式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
+
+書き出し時 *データセット*、Platform は `.parquet` または `.json` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、 [データセットの書き出しが成功したことを確認する](../../ui/export-datasets.md#verify) 「データセットの書き出し」チュートリアルの節を参照してください。
 
 ## [!DNL Google Cloud Storage] アカウントを接続するための前提条件の設定 {#prerequisites}
 
@@ -119,13 +132,10 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 **[!UICONTROL マッピング]**&#x200B;手順では、プロファイルに書き出す属性および ID フィールドを選択できます。 また、書き出したファイル内のヘッダーを選択して、任意のわかりやすい名前に変更することもできます。詳しくは、「バッチの宛先をアクティベート」UI チュートリアルの[マッピング手順](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)を参照してください。
 
-## データセットを書き出し {#export-datasets}
-
-この宛先では、データセットの書き出しをサポートしています。 データセットエクスポートの設定方法について詳しくは、次のチュートリアルを参照してください。
-
-* 方法 [Platform ユーザーインターフェイスを使用したデータセットの書き出し](/help/destinations/ui/export-datasets.md).
-* 方法 [フローサービス API を使用したデータセットの書き出し](/help/destinations/api/export-datasets.md).
-
 ## データの正常な書き出しの検証 {#exported-data}
 
 データが正常に書き出されたかどうかを確認するには、[!DNL Google Cloud Storage] バケットを確認し、書き出したファイルに、期待されたプロファイルの母集団が含まれていることを確認します。
+
+## IP アドレスの許可リスト {#ip-address-allow-list}
+
+詳しくは、 [IP アドレスの許可リストに加える](ip-address-allow-list.md) 記事を参照してください許可リストに加える。
