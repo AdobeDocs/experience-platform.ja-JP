@@ -3,9 +3,10 @@ title: Real-Time CDP製品ドキュメント
 description: Adobe Real-Time CDPの使用方法を学ぶ。
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
+exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1090'
 ht-degree: 4%
 
 ---
@@ -20,7 +21,7 @@ Real-Time CDP製品およびドキュメントの最新の機能強化の概要�
 
 >[!BEGINTABS]
 
->[!TAB ユースケースプレイブック]
+>[!TAB ユースケースのプレイブック]
 
 The [!UICONTROL ユースケースプレイブック] の機能は、すべてのReal-Time CDPおよびAdobe Journey Optimizerのユーザーに対して一般に利用できるようになりました。 [!UICONTROL ユースケースプレイブック] は、Real-time Customer Data PlatformまたはAdobe Journey Optimizerを使い始める際に、課題の克服に役立つように設計されています。 開始する場所や目的の使用例に適したアセットの作成方法が不明な場合は、ユースケースプレイブックにインスピレーションが得られ、準備が整ったら実稼動環境にテストして読み込むための様々なアセットを作成できます。
 
@@ -192,9 +193,11 @@ Real-Time CDP、そのアーキテクチャ、インターフェイス、およ�
 
 ## その他のリソース {#additional-resources}
 
+Real-Time CDPの使用例やサービスなどについての理解を深めるには、以下のリンクを参照してください。
+
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">製品説明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B エディション</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B エディション</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">セキュリティの概要 (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ja" target="_blank">実装ブループリント</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">製品説明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B エディション</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B エディション</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">セキュリティの概要 (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ja" target="_blank">実装ブループリント</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja" target="_blank">用語集</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja" target="_blank">ドキュメント</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API リファレンス — <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">コース：Experience Platformの概要</a></a>

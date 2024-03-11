@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気の高いトピック；CJA；
 title: アプリケーションサービスドキュメント
 description: Adobe Experience Platformのドキュメントは、ユーザーインターフェイスと API の両方の概要、チュートリアル、ガイドなど、複数の形式で提供されています。Experience Platformサービスで使用できる最も一般的なドキュメントタイプについて簡単に説明します。
 exl-id: 24fdb183-f75b-40e0-828e-9dd49422a7b1
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 33%
+source-wordcount: '109'
+ht-degree: 22%
 
 ---
 
@@ -18,3 +18,8 @@ Adobeは、Experience Platform上に複数のアプリケーションサービ�
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja)
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
+
+次のビデオでは、Experience Platform上に構築された各アプリケーションサービスの使用例を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)

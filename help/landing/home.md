@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 概要
 description: Adobe Experience Platform を使用すると、組織は、顧客データを一元化および標準化し、データサイエンスと機械学習を適用することにより、設計を劇的に改善し、パーソナライズされ充実したエクスペリエンスを配信することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 48e050718b665bc297f97bf1b90a6f4517dd3af5
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 100%
+source-wordcount: '434'
+ht-degree: 92%
 
 ---
 
@@ -34,13 +34,18 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 
 ### [!DNL Experience Platform] 上で構築されたアプリケーションサービスのドキュメント
 
-アドビは、Experience Platform 上に複数のアプリケーションサービスを構築しました。これらのサービスのドキュメントは、以下にリンクされている独自のガイドで確認できます。
+アドビは、Experience Platform 上に複数のアプリケーションサービスを構築しました。これらのアプリケーションのドキュメントは、以下にリンクされている独自のガイドで確認できます。
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+
+次のビデオでは、Experience Platform上に構築された各アプリケーションサービスの使用例を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
 ## [!DNL Experience Platform] チュートリアル
 
@@ -51,16 +56,16 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 ## 参照ドキュメントとリソース
 
 * [**API の基本事項**](api-fundamentals.md)\
-   [!DNL Platform] API の操作の基本について説明します。
+  [!DNL Platform] API の操作の基本について説明します。
 
 * [**API リファレンスドキュメント**](https://www.adobe.com/go/platform-api-reference-en)\
-   ヘッダー、パラメーター、サンプルリクエスト、応答などの [!DNL Experience Platform] API について説明しています。<br/>*これらのドキュメントは Adobe I/O でホストされます。*
+  ヘッダー、パラメーター、サンプルリクエスト、応答などの [!DNL Experience Platform] API について説明しています。<br/>*これらのドキュメントは Adobe I/O でホストされます。*
 
 * [**用語集**](glossary.md)\
-   Adobe Experience Platform の用語を確認します。
+  Adobe Experience Platform の用語を確認します。
 
 * [**リリースノート**](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)\
-   最新の [!DNL Experience Platform] リリースに関する情報を検索し、過去のリリースを確認します。
+  最新の [!DNL Experience Platform] リリースに関する情報を検索し、過去のリリースを確認します。
 
 * [**トラブルシューティングガイド**](troubleshooting.md)\
-   一般的なエラーの解決策と、よくある質問に対する回答を紹介しています。
+  一般的なエラーの解決策と、よくある質問に対する回答を紹介しています。
