@@ -1,13 +1,13 @@
 ---
 title: タグ拡張機能を使用した Web SDK のインストール
 description: Adobe Experience Cloud Data Collection を使用して、Web SDK ライブラリを参照します。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
-
 
 # タグ拡張機能を使用した Web SDK のインストール
 
@@ -23,6 +23,8 @@ Adobeには、Web SDK を実装および設定するための専用のタグ拡�
 1. に移動します。 **[!UICONTROL 拡張機能]**&#x200B;を選択し、 **[!UICONTROL カタログ]** タブをクリックします。
 1. を探してインストールします。 **[!UICONTROL Adobe Experience Platform Web SDK]** 拡張子。
 1. 各環境に適したサンドボックスとデータストリームを選択し、「 **[!UICONTROL 保存]**.
+
+方法に関するドキュメントを参照してください。 [Web SDK タグ拡張機能の設定](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) を参照してください。
 
 ## タグコードを開発に公開する
 

@@ -1,17 +1,17 @@
 ---
 title: JavaScript ライブラリを使用した Web SDK のインストール
 description: スタンドアロンの CDN ファイルを使用して、Web SDK ライブラリを参照します。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
-
 # JavaScript ライブラリを使用した Web SDK のインストール
 
-Web SDK をインストールする方法の 1 つは、CDN でホストされる JavaScript ライブラリを参照する方法です。 ライブラリを直接参照することも、ライブラリをダウンロードして独自のインフラストラクチャ上でホストすることもできます。 縮小形式およびフル形式で使用できます。
+を使用せずに Web SDK をインストールする代わりの方法 [タグ拡張機能の使用](extension.md) は、CDN でホストされる JavaScript ライブラリを参照します。 ライブラリを直接参照することも、ライブラリをダウンロードして独自のインフラストラクチャ上でホストすることもできます。 縮小形式およびフル形式で使用できます。
 
 Web SDK ライブラリは、次の URL 構造を使用して使用できます。
 

@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf6df4d005486aa297dcced7c8811f87f5e988c2
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 86%
+source-wordcount: '1725'
+ht-degree: 84%
 
 ---
 
@@ -213,8 +213,8 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.2.0 - 2020年10月
 
-* バグ修正：`idMigrationEnabled` が `true` の場合、オプトインオブジェクトが Alloy の呼び出しをブロックしていました。
-* バグ修正：ちらつきの問題を防ぐために、パーソナライズオファーを返す必要があるリクエストを Alloy に認識させます。
+* バグ修正：オプトインオブジェクトが、Web SDK が `idMigrationEnabled` 次に該当 `true`.
+* バグ修正：ちらつきの問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストを Web SDK に知らせます。
 
 ## バージョン 2.1.0 - 2020年8月
 
@@ -222,5 +222,5 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 * IAB 2.0 同意標準をサポートします。
 * `setConsent` コマンドで追加の ID を渡すことをサポートします。
 * `sendEvent` コマンドでの `datasetId` の上書きをサポートします。
-* Alloy モニターをサポートします（[詳細情報](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
+* 監視フック ([詳細を表示](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * 実装の詳細コンテキストデータで `environment: browser` を渡します。

@@ -2,12 +2,13 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '2279'
+source-wordcount: '2268'
 ht-degree: 5%
 
 ---
+
 
 # よくある質問
 
@@ -15,16 +16,15 @@ ht-degree: 5%
 
 ## Adobe Experience Platform Web SDK とは
 
-Adobe Experience Platform Web SDK は、Adobe Experience Cloudのお客様がExperience Cloud内の様々なサービスを操作できるようにする、クライアントサイド JavaScript ライブラリです。
+Adobe Experience Platform Web SDK は、Adobe Experience Cloudの様々なサービスを操作できる、クライアントサイド JavaScript ライブラリです。
 
-データは、ソリューションに依存しない方法 (XDM) でAdobe Experience Platform Edge Network に送信され、データをソリューション固有の形式および宛先にマッピングして、リアルタイムで送信します。
+Web SDK は、ソリューションに依存しない方法 (XDM) でExperience Platformを Edge ネットワークに送信し、その後、データをソリューション固有の形式および宛先にマッピングして、リアルタイムで送信します。
 
-**詳細情報**
-[Adobe Summit表示](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)
+Web SDK について詳しくは、次のビデオを参照してください。 [Alloy.js を満たし、eVarまたは mbox のタグを再び設定しない](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
 
 ## Adobe Experience Platform Web SDK は以前のソリューションとどのように異なりますか。
 
-### Adobe Experience Platform SDK より前
+### Experience PlatformWeb SDK より前
 
 現在、個々のソリューションに応じて異なる JavaScript ライブラリをデプロイする必要があります。
 
@@ -44,9 +44,9 @@ Platform のタグを使用すると、これらのライブラリをできる�
 
 また、現在、Adobe Experience Platformに直接データを送信する JavaScript ライブラリはありません。
 
-### Adobe Experience Platform Web SDK を使用
+### Experience PlatformWeb SDK を使用
 
-新しい Web SDK は、次のソリューションのデータを単一の宛先 (Adobe Experience Platform Edge Network) に送信し、前述のソリューションの最も一般的な使用例を解決します。
+新しい Web SDK は、次のソリューションのデータを単一の宛先 (Experience PlatformEdge ネットワーク ) に送信し、前述のソリューションの最も一般的な使用例を解決します。
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -54,9 +54,9 @@ Platform のタグを使用すると、これらのライブラリをできる�
 * 訪問者 ID
 * Adobe Experience Platform
 
-今年中に他のソリューションが導入される予定です。
+その他のソリューションもそれに従います。
 
-Adobe Experience Platform Web SDK は、データをAdobe Experience Platformに直接送信することもできます。 このデータは XDM に存在し、サーバー側のソリューションスキーマにマッピングされます。
+Adobe Experience Platform Web SDK は、データをAdobe Experience Platformに直接送信することもできます。 このデータは XDM 形式で、サーバー側のソリューションスキーマにマッピングされます。
 
 ## この新しい Web SDK にはどのような価値がありますか？
 
@@ -65,7 +65,7 @@ Adobe Experience Platform Web SDK は、データをAdobe Experience Platformに
 **シンプル：** XDM、Web SDK、タグ、Edge Network、Adobe Experience Cloudソリューション、Adobe Experience Platformを組み合わせることで、わかりやすく、簡単に追跡できるデータ収集の仕組みを作成できます。
 
 * **XDM:** データをAdobeに送信する際に使用する、ソリューションに依存しないスキーマ。 eVar や mbox のタグ付けは不要になりました。
-* **Adobe Experience Platform Web SDK:** Adobe Experience Platform Edge Network へのデータの送受信が簡単になります。
+* **Web SDK:** Adobe Experience Platform Edge Network へのデータの送受信が簡単になります。
 * **タグ：** サイト上での Web SDK（およびその他の JavaScript タグ）のデプロイと設定を簡素化します。
 * **Edge ネットワーク：** データを必要な形式でAdobe Experience Platformおよびソリューションに簡単にルーティングできます。
 * **Adobe Experience PlatformとAdobeのソリューション：** 価値提案を有効にします。
@@ -76,9 +76,9 @@ Adobe Experience Platform Web SDK は、データをAdobe Experience Platformに
 
 **値への時間：** Adobeは、タグを介して Web SDK を簡単にデプロイし、クライアント側のデータを XDM にマッピングできるよう、十分に作業を進めてきました（今後も続けます）。 その後、他のすべてのAdobeソリューションおよびAdobe Experience Platformサービスをサーバー側でオンまたはオフにできます。 例えば、Adobe Analyticsでこれを使用し、Target またはExperience Platformをオンにする場合は、Datastream の設定を切り替えて、これらの使用例を明確にできます。
 
-## Alloy とは
+## [!DNL alloy.js] とは？
 
-Alloy は、Adobe Experience Platform Web SDK のコード名です。 Adobe Experience Platform Web SDK は正式な名前ですが、SDK のソースコードおよびファイル名内で使用されます。
+[!DNL alloy.js] は、Web SDK JavaScript ライブラリの名前です。 SDK のソースコード内およびファイル名で参照されます。
 
 ## お客様が、 [!DNL Web SDK]?
 
@@ -88,24 +88,27 @@ Alloy は、Adobe Experience Platform Web SDK のコード名です。 Adobe Exp
 
 ## Web SDK の使用者
 
-Adobe Experience Platform Web SDK は、以下のユーザー向けに開発されました。
+Adobe Experience Platform Web SDK は、次のお客様向けに開発されました。
 
 * Adobe Experience Platformユーザー
    * デバイスからAdobe Experience Platformに直接データを送信する必要がある場合は、この方法を正式にお勧めします。
-   * Adobeは、お客様が既にAdobe Analyticsを使用している場合、Adobe Analyticsコネクタの使用はより高速になることを認識していますが、これはデータ収集の長期的な戦略ではありません。
+   * Adobeは、既にAdobe Analyticsがある場合、Adobe Analyticsコネクタの使用はより高速になることを認識していますが、これはデータ収集の長期的な戦略ではありません。
 
 * Adobe Experience Cloudソリューションのお客様
    * 新しいAdobe Analytics、Adobe Audience ManagerおよびAdobe Targetのお客様は、レガシーライブラリを使用せず、新しい Web SDK から始める必要があります。
    * 可能な限り最適化された実装を取得したい既存のお客様は、新しい Web SDK を使用する必要があります。
 
+## Web SDK にアクセスするにはどうすればよいですか？
 
-## Adobe Experience Platform Web SDK にアクセスして使用を開始するには、どうすればよいですか？
+Web SDK は、現在、一般ユーザーが利用でき、Adobe Experience Cloud製品へのデータ送信に使用できます。 サードパーティソリューションにデータを送信する機能は、近い将来に提供される予定です。
 
-Web SDK は、現在、一般ユーザーが利用でき、Adobe Experience Cloud製品へのデータ送信に使用できます。 サードパーティソリューションにデータを送信する機能は、近い将来に提供される予定です。 SDK は無料で、Adobeで無料でホストされます。 必要に応じて、ダウンロードして独自のサーバーで無料でホストできます。 Adobeのサーバーが SDK からの受信データを適切に処理するには、Platform Web SDK が Datastream 設定とAdobe Experience Platform XDM スキーマビルダーにアクセスする必要があります。 アクセス権を取得する場合は、担当のAdobeアカウントチームに連絡して、リクエストプロセスを開始してください。
+SDK は無料で、Adobeで無料でホストされます。 必要に応じて、ダウンロードして独自のサーバーで無料でホストできます。
+
+Web SDK は、 [データストリーム設定](../datastreams/overview.md) そしてExperience Platform [XDM スキーマビルダー](../xdm/tutorials/create-schema-ui.md):Adobeのサーバーが SDK からの受信データを適切に処理できるようにするために使用します。 アクセス権を取得する場合は、担当のAdobeアカウントチームに連絡して、リクエストプロセスを開始してください。
 
 ## Web SDK で現在サポートされている使用例を教えてください。
 
-Web SDK は急速に進化しています。 現在、さらに多くの使用例が対象となっています。 次の項目が見つかります。 [現在サポートされている使用例のリストはこちらです。](https://github.com/adobe/alloy/projects/5)
+Web SDK は急速に進化しています。 現在、さらに多くの使用例が対象となっています。 次の項目が見つかります。 [現在サポートされている使用例のリストはこちらです。](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
 
 ## 現在のお客様はサイトを再タグ付けする必要がありますか。
 
@@ -117,7 +120,7 @@ Web SDK は急速に進化しています。 現在、さらに多くの使用�
 
 つまり、ソリューション以外の使用例でAdobe Experience Platform Web SDK を使用する場合は、 `alloy.js` 新しい解決策のように進みます。 Adobe Analytics、Target、Audience Manager、またはアプリケーションの使用例で使用する場合は、ページ上の従来のコードを削除する必要が生じる場合があります。
 
-## Alloy を使用し始めたときに、Web サイトの訪問者が新規訪問者として表示されないように、ECID を移行することはできますか？
+## Web サイトの訪問者が新規訪問者として表示されないように、Web SDK の使用を開始する際に ECID を移行することはできますか？
 
 はい、Adobe Experience Platform Web SDK には、ID 移行機能が用意されています。 ID の移行手順に従います。 [Platform Web SDK ID ドキュメント](/help/web-sdk/identity/overview.md#id-migration) を参照してください。
 
