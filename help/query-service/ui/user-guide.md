@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '2576'
-ht-degree: 46%
+source-wordcount: '2647'
+ht-degree: 44%
 
 ---
 
@@ -255,6 +255,10 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 クエリが完了すると、結果が「**[!UICONTROL コンソール]**」タブの横の「**[!UICONTROL 結果]**」タブに表示されます。このビューは、クエリの表形式の出力を表示し、選択した結果に応じて 50 ～ 500 行の結果が表示されます [結果数](#result-count). このビューを使用すると、クエリが目的どおりの出力を生成することを確認できます。クエリでデータセットを生成するには、返される行の制限を解除し、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行します。[!DNL Query Editor] でクエリの結果からデータセットを生成する方法については、[データセットの生成についてのチュートリアル](./create-datasets.md)を参照してください。
 
 ![クエリ実行の結果を表示するクエリエディターコンソールの「結果」タブ](../images/ui/query-editor/query-results.png)
+
+## ユースケース {#use-cases}
+
+クエリサービスは、業界やビジネスシナリオにわたる様々な使用例に対するソリューションを提供します。 これらの実例は、多様なニーズに対応する際のサービスの柔軟性と効果を示しています。 宛先 [クエリサービスが特定のビジネスニーズにどのように価値をもたらすかを明らかにする](../use-cases/overview.md)を参照し、使用例に関するドキュメントの包括的なコレクションを参照してください。 クエリサービスを使用して、運用効率とビジネス成功を高めるためのインサイトとソリューションを提供する方法を説明します。
 
 ## [!DNL Query Service] チュートリアルビデオを使用したクエリの実行 {#query-tutorial-video}
 

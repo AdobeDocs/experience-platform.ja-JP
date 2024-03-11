@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '3671'
-ht-degree: 4%
+source-wordcount: '3732'
+ht-degree: 3%
 
 ---
 
@@ -126,6 +126,12 @@ The [!UICONTROL スキーマ] [!UICONTROL 参照] 」タブが表示されます
 The [!DNL Schema Editor] フィールドグループが指定したフィールドがキャンバスに表示された状態で再表示されます。
 
 ![The [!DNL Schema Editor] とサンプルのスキーマが表示されます。](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE]
+>
+>スキーマエディター内で、標準 (Adobe生成 ) のクラスとフィールドグループに南京錠アイコン (![南京錠アイコン。](../../images/ui/explore/padlock-icon.png)。南京錠アイコンは、クラス名またはフィールドグループ名の横の左側のレールと、システム生成リソースの一部であるスキーマダイアグラムのフィールドの横に表示されます。
+>
+>![南京錠アイコンがハイライトされたスキーマエディター](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 スキーマにフィールドグループを追加した後、オプションで [既存のフィールドを削除](#remove-fields) または [新しいカスタムフィールドを追加](#add-fields) 必要に応じて、これらのグループに追加します。
 

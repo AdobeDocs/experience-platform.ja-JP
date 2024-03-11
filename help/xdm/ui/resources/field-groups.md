@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマフィールドグループの作成と編集
 description: スキーマユーザーインターフェイスでスキーマフィールドグループを作成および編集するExperience Platformを説明します。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '999'
 ht-degree: 8%
 
 ---
@@ -56,7 +56,7 @@ The [!DNL Schema Editor] 再び表示され、左側のパネルに新しいフ�
 
 >[!NOTE]
 >
->完全に編集およびカスタマイズできるのは、組織で定義されたカスタムフィールドグループのみです。 Adobeで定義されたコアフィールドグループの場合、各スキーマのコンテキスト内では、フィールドの表示名のみを編集できます。 詳しくは、 [スキーマフィールドの表示名の編集](./schemas.md#display-names) 」を参照してください。
+>完全に編集およびカスタマイズできるのは、組織で定義されたカスタムフィールドグループのみです。 Adobeで定義されたコアフィールドグループの場合、各スキーマのコンテキスト内では、フィールドの表示名のみを編集できます。 スキーマエディターには南京錠アイコン (![南京錠アイコン。](../../images/ui/explore/padlock-icon.png) ）サードパーティリクエストを待機する、特別なコア Adobe JavaScript モジュールです。詳しくは、 [スキーマフィールドの表示名の編集](./schemas.md#display-names) 」を参照してください。
 >
 >カスタムフィールドグループを保存し、データ取り込み用にスキーマで使用した後は、その後はフィールドグループに追加的な変更を加えることのみ可能です。 詳しくは、 [スキーマ進化のルール](../../schema/composition.md#evolution) を参照してください。
 

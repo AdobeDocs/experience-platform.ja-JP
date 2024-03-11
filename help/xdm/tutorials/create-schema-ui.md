@@ -5,10 +5,10 @@ title: スキーマエディターを使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '4632'
-ht-degree: 82%
+source-wordcount: '4695'
+ht-degree: 80%
 
 ---
 
@@ -42,7 +42,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 ## スキーマの作成と命名 {#create}
 
-スキーマの作成を開始するには、**[!UICONTROL スキーマ]**&#x200B;ワークスペースの右上隅にある「**[!UICONTROL スキーマを作成]**」を選択します。
+スキーマの構成を開始するには、「 **[!UICONTROL スキーマを作成]** の右上隅に **[!UICONTROL スキーマ]** ワークスペース。
 
 ![The [!UICONTROL スキーマ] workspace [!UICONTROL 参照] タブ [!UICONTROL スキーマを作成] ハイライト表示されました。](../images/tutorials/create-schema/create-schema-button.png)
 
@@ -116,6 +116,12 @@ The [!UICONTROL スキーマを作成] ワークフローが表示されます�
 スキーマキャンバスが再び表示されます。「**[!UICONTROL フィールドグループ]**」セクションには[!UICONTROL デモグラフィックの詳細]がリストされ、「**[!UICONTROL 構造]**」セクションにはフィールドグループによって提供されたフィールドが含まれます。「**[!UICONTROL フィールドグループ]**」セクションでフィールドグループの名前を選択して、キャンバス内で提供される特定のフィールドをハイライト表示できます。
 
 ![人口統計の詳細フィールドグループがハイライトされたスキーマエディター。](../images/tutorials/create-schema/demographic-details-structure.png)
+
+>[!NOTE]
+>
+>スキーマエディター内で、標準 (Adobe生成 ) のクラスとフィールドグループに南京錠アイコン (![南京錠アイコン。](../images/ui/explore/padlock-icon.png)。南京錠アイコンは、クラス名またはフィールドグループ名の横の左側のレールと、システム生成リソースの一部であるスキーマダイアグラムのフィールドの横に表示されます。
+>
+>![南京錠アイコンがハイライトされたスキーマエディター](../images/ui/explore/padlock-icon-highlight.png)
 
 このフィールドグループでは、データタイプが「[!UICONTROL ユーザー]」の最上位の名前 `person` の下にいくつかのフィールドが提供されます。このフィールドグループは、名前、生年月日、性別など、個人に関する情報を説明します。
 
@@ -201,7 +207,7 @@ The [!UICONTROL スキーマを作成] ワークフローが表示されます�
 * **[!UICONTROL 型]：**&#x200B;フィールドのデータタイプ。これには、基本的なスカラータイプと、[!DNL Schema Registry] に定義されている任意のデータタイプが含まれます。例：[!UICONTROL 文字列]、[!UICONTROL 整数]、[!UICONTROL ブーリアン]、[!UICONTROL 人物]、[!UICONTROL 住所]、[!UICONTROL 電話番号]など
 * **[!UICONTROL 説明]：**&#x200B;フィールドの説明（オプション）は、200 文字以内で指定してください。
 
-`loyaltyTier` オブジェクトの最初のフィールドは、`id` という文字列になります。これは、ロイヤルティメンバーの現在の階層の ID を表します。 この会社では、様々な要因に基づいて顧客ごとに異なるロイヤルティ層ポイントしきい値を設定しているので、階層 ID はロイヤルティメンバーごとに一意になります。 新しいフィールドのタイプを「[!UICONTROL 文字列]」に設定すると、デフォルト値、形式、最大長など、制約を適用するためのオプションが&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;セクションに自動的に入力されます。次のドキュメントを参照してください： [データ検証フィールドのベストプラクティス](../schema/best-practices.md#data-validation-fields) を参照してください。
+`loyaltyTier` オブジェクトの最初のフィールドは、`id` という文字列になります。これは、ロイヤルティメンバーの現在の階層の ID を表します。 この会社では、様々な要因に基づいて顧客ごとに異なるロイヤルティ層ポイントしきい値を設定しているので、階層 ID はロイヤルティメンバーごとに一意になります。 新しいフィールドのタイプを「[!UICONTROL 文字列]「」、および **[!UICONTROL フィールドのプロパティ]** 「 」セクションには、デフォルト値、形式、最大長など、制約を適用するためのオプションがいくつか設定されます。 次のドキュメントを参照してください： [データ検証フィールドのベストプラクティス](../schema/best-practices.md#data-validation-fields) を参照してください。
 
 ![新しい ID フィールドのフィールドプロパティ値がハイライトされたスキーマエディター。](../images/tutorials/create-schema/string-constraints.png)
 

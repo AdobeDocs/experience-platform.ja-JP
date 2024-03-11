@@ -5,10 +5,10 @@ title: UI でのスキーマリソースの調査
 description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、スキーマフィールドグループ、データ型を調べる方法について説明します。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 1%
+source-wordcount: '1078'
+ht-degree: 0%
 
 ---
 
@@ -53,6 +53,14 @@ The **[!UICONTROL プロファイルに含まれる]** toggle を使用すると
 サブプロパティを含むすべてのオブジェクトタイプフィールドは、最初にキャンバスに表示されたときに、デフォルトで折りたたまれます。 任意のフィールドのサブプロパティを表示するには、名前の横にあるアイコンを選択します。
 
 ![](../images/ui/explore/field-expand.png)
+
+### 標準クラスおよびフィールドグループのインジケーター {#standard-class-and-field-group-indicator}
+
+スキーマエディター内で、標準 (Adobe生成 ) のクラスとフィールドグループに南京錠アイコン (![南京錠アイコン。](../images/ui/explore/padlock-icon.png)。南京錠アイコンは、クラス名またはフィールドグループ名の横の左側のレールと、システム生成リソースの一部であるスキーマダイアグラムのフィールドの横に表示されます。
+
+![南京錠アイコンがハイライトされたスキーマエディター](../images/ui/explore/schema-editor-padlock-icon.png)
+
+詳しくは、 [標準フィールドグループにカスタムフィールドを追加する](./resources/schemas.md) ガイダンスに関するドキュメント。 標準クラスは編集できません。
 
 ### システム生成フィールド {#system-fields}
 
