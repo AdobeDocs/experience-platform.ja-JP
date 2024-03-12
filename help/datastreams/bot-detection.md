@@ -4,9 +4,9 @@ description: データストリームのボット検出を設定し、人間と�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Edge ネットワークへのリクエストがいずれかのボット検出ル
 >[!IMPORTANT]
 >
 >ボット検出は、ボットリクエストを削除しません。 このメソッドは、ボットスコアで XDM スキーマを更新し、イベントをに転送します。 [datastream サービス](configure.md) 設定済みの
+>
+>Adobeソリューションは、ボットスコアリングを様々な方法で処理できます。 例えば、Adobe Analyticsは独自の [ボットフィルタリングサービス](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) とは、Edge ネットワークで設定されたスコアを使用しません。 2 つのサービスは同じものを使用します [IAB ボットリスト](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)に設定する必要があるので、ボットスコアは同じになります。
 
 ボット検出ルールは、作成後に Edge ネットワーク全体に反映されるまでに最大 15 分かかる場合があります。
 
