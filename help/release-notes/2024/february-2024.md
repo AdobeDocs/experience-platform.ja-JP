@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート（2024年2月）
 description: Adobe Experience Platform の 2024年2月のリリースノートです。
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
+source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
 workflow-type: tm+mt
 source-wordcount: '1244'
-ht-degree: 26%
+ht-degree: 29%
 
 ---
 
@@ -23,11 +24,12 @@ Experience Platformの既存の機能の更新：
 
 ## アラート {#alerts}
 
-Experience Platform では、様々な Platform アクティビティに関するイベントベースのアラートを登録できます。を使用して、様々なアラートルールを購読できます。 [!UICONTROL アラート] 」タブをクリックし、UI 内または電子メール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platform では、様々な Platform アクティビティに関するイベントベースのアラートを登録できます。Platform ユーザーインターフェイスの「[!UICONTROL アラート]」タブを使用して、様々なアラートルールを購読し、UI 内または電子メール通知を通じてアラートメッセージを受け取るように選択できます。
+
 **新機能または更新された機能**
 
-| 機能 | 説明 | 
-| --- | --- | 
+| 機能 | 説明 |
+| --- | --- |
 | 「アラート履歴」タブ | Experience Platform管理者は、アラート購読者の管理機能を使用して、Adobeユーザー ID、外部電子メールアドレス、または電子メールグループリストにアラートを割り当てることができます。 詳しくは、 [アラート UI ドキュメント](../../observability/alerts/ui.md) 「履歴」タブの詳細を参照してください。 |
 
 {style="table-layout:auto"}
