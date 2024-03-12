@@ -2,10 +2,10 @@
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新のリリースノートです。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
+source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 72%
+source-wordcount: '834'
+ht-degree: 68%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 72%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## v0.20.3（2024 年 1 月 24 日）
+
+- をサポートするように更新しました `at.js` 2.11.4
+- 無効な地域データが配信 API に送信されない問題を修正しました。
 
 ## v0.20.2（2023 年 11 月 30 日）
 
@@ -43,19 +48,19 @@ ht-degree: 72%
 
 ## v0.19.1（2023 年 2 月 4 日）
 
-- `at.js` v2.10.1 をサポートするように更新しました
+- をサポートするように更新しました `at.js` v2.10.1
 - クライアントカスタム mbox パラメーターで、ドット表記を正しくサポートするようになりました。
 - VEC での配信呼び出しはおこなわれなくなりました
 
 ## v0.19.0（2022 年 9 月 20 日）
 
-- `at.js` v2.10.0 をサポートするように更新しました
+- をサポートするように更新しました `at.js` v2.10.0
 - クロスドメイントラッキングサポートを追加しました。
 
 ## v0.18.0（2022 年 6 月 2 日）
 
-- `at.js` v2.9.0 をサポートするように更新しました
-- User Agent Client Hints のサポートを追加しました。
+- をサポートするように更新しました `at.js` v2.9.0
+- ユーザーエージェントのクライアントヒントのサポートが追加されました。
 
 ## v0.17.1（2022 年 1 月 29 日）
 
@@ -142,7 +147,7 @@ ht-degree: 72%
 - adobe.target.getOffer API に Target Global Mbox サポートを追加しました。
 - パラメーターとページ読み込みパラメーターが正しく処理されない問題を修正しました。
 
-## v0.12.0（2019年10月10日）
+## v0.12.0（2019 年 10 月 11 日）
 
 - `at.js` を v2.2 に更新しました。
 - Experience Cloud ID ライブラリ（ECID）v4.4 と `at.js` 2.2 間の統合のパフォーマンスを向上しました。
