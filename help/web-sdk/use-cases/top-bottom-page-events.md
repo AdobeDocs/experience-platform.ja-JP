@@ -2,7 +2,7 @@
 title: Web SDK でのページイベントの上部および下部の設定
 description: この記事では、Web SDK でページイベントの上部と下部を使用する方法について説明します。
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 4d0895c6ad38523f5527c9630931c3c0b8ef83c0
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 2%
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## GitHub のサンプル {#github-sample}
 
-次の場所にあるサンプル： [この住所](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) では、Experience Platformと Web SDK を使用して、ページの上部でパーソナライゼーションをリクエストし、下部で analytics 指標を送信する方法について説明します。 サンプルをダウンロードしてローカルで実行し、ページイベントの上部と下部の動作を理解できます。
+次の場所にあるサンプル： [この住所](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) では、Experience Platformと Web SDK を使用して、ページの上部でパーソナライゼーションをリクエストし、下部で analytics 指標を送信する方法について説明します。 サンプルをダウンロードしてローカルで実行し、ページイベントの上部と下部の動作を理解できます。
