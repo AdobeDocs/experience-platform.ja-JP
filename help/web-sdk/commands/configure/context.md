@@ -1,10 +1,11 @@
 ---
 title: context
 description: デバイス、環境、または場所のデータを自動的に収集します。
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
+source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 13%
+source-wordcount: '900'
+ht-degree: 14%
 
 ---
 
@@ -59,8 +60,34 @@ The `"placeContext"` キーワードは、ユーザーの場所に関する情�
 | --- | --- | --- | --- |
 | 現地時間 | エンドユーザーのローカルタイムスタンプ（簡易拡張） [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) 形式を使用します。 | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | ローカルタイムゾーンのオフセット | ユーザーが GMT からオフセットする時間（分）。 | `xdm.placeContext.localTimezoneOffset` | `360` |
+| 国コード | エンドユーザーの国コード。 | `xdm.placeContext.geo.countryCode` | `US` |
+| 都道府県 | エンドユーザーの都道府県コード。 | `xdm.placeContext.geo.stateProvince` | `CA` |
+| 緯度 | エンドユーザーの場所の緯度。 | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
+| 経度 | エンドユーザーの場所の経度。 | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
 
 {style="table-layout:auto"}
+
+
+### タイムスタンプ
+
+The `timestamp` キーワードは、イベントのタイムスタンプに関する情報を収集します。 コンテキストのこの部分は削除できません。
+
+| ディメンション | 説明 | XDM パス | 値の例 |
+| --- | --- | --- | --- |
+| イベントのタイムスタンプ | エンドユーザーの UTC タイムスタンプ（簡易拡張） [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) 形式を使用します。 | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+{style="table-layout:auto"}
+
+### 実装の詳細
+
+The `implementationDetails` キーワードは、イベントの収集に使用された SDK バージョンに関する情報を収集します。
+
+| ディメンション | 説明 | XDM パス | 値の例 |
+| --- | --- | --- | --- |
+| 名前 | ソフトウェア開発キット (SDK) の識別子。 このフィールドでは、URI を使用で、異なるソフトウェアライブラリで提供される ID 間の一意性を改善します。 | `xdm.implementationDetails.name` | スタンドアロンライブラリを使用する場合、値は `https://ns.adobe.com/experience/alloy`. ライブラリをタグ拡張の一部として使用する場合、値は `https://ns.adobe.com/experience/alloy+reactor`. |
+| バージョン | ソフトウェア開発キット (SDK) のバージョン。 | `xdm.implementationDetails.version` | スタンドアロンライブラリを使用する場合、値はライブラリのバージョンになります。 ライブラリをタグ拡張の一部として使用する場合、値はライブラリバージョンになり、タグ拡張バージョンは `+`. 例えば、ライブラリのバージョンが `2.1.0` タグ拡張のバージョンは、 `2.1.3`の場合、値は `2.1.0+2.1.3`. |
+| 環境 | データが収集された環境。 これは常にに設定されています。 `browser`. | `xdm.implementationDetails.environment` | `browser` |
+
 
 ### 高エントロピーのクライアントヒント
 
