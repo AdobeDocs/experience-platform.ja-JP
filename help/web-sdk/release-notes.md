@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 84%
+source-wordcount: '1777'
+ht-degree: 81%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 84%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
+
+>[!IMPORTANT]
+>
+>Google [発表済み](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) は、2024 年後半にサードパーティ cookie の Chrome サポートを廃止する予定です。 その結果、主要なブラウザーではサードパーティ Cookie がサポートされなくなります。
+>
+>この変更が実装されると、Adobeは、 `demdex` Web SDK で現在サポートされている Cookie。
 
 ## バージョン 2.19.2 - 2024年1月10日（PT）
 
