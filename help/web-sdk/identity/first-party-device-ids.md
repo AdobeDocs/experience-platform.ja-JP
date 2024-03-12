@@ -2,12 +2,13 @@
 title: Web SDK でのファーストパーティデバイス ID
 description: Adobe Experience Platform Web SDK 用のファーストパーティデバイス ID(FPID) の設定方法について説明します。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
+
 
 # Web SDK でのファーストパーティデバイス ID
 
@@ -47,6 +48,28 @@ Web サイト訪問者の FPID を Platform Edge Network に送信するには�
 Platform Edge ネットワークは、 [UUIDv4 形式](https://datatracker.ietf.org/doc/html/rfc4122). UUIDv4 形式でないデバイス ID は拒否されます。
 
 UUID を生成すると、ほとんどの場合、一意のランダムな ID が生成され、衝突の発生確率は無視できます。 UUIDv4 は、IP アドレスやその他の個人情報 (PII) を使用してシードすることはできません。 UUID はあらゆる場所に存在し、ほぼすべてのプログラミング言語でライブラリを見つけて生成できます。
+
+## データストリーム UI でのファーストパーティ ID cookie の設定 {#setting-cookie-datastreams}
+
+Cookie 名は、Datastreams UI で指定できます。ここで、 [!DNL FPID] は、cookie 値を読み取り、ID マップに FPID を含める必要はなく、存在することができます。
+
+>[!IMPORTANT]
+>
+>この機能を使用するには、 [ファーストパーティデータ収集](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) 有効。
+
+詳しくは、 [datastreams に関するドキュメント](../../datastreams/configure.md) を参照してください。
+
+データストリームを設定する際に、 **[!UICONTROL ファーストパーティ ID Cookie]** オプション。 この設定は、Edge ネットワークに対し、ファーストパーティデバイス ID を検索する際に、 [ID マップ](#identityMap).
+
+次のドキュメントを参照してください： [ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) Adobe Experience Cloudとの連携方法の詳細
+
+![データストリーム設定を示す Platform UI の画像で、ファーストパーティ ID Cookie 設定が強調表示されています。](../assets/first-party-id-datastreams.png)
+
+この設定を有効にする場合、ID の保存先となる Cookie の名前を指定する必要があります。
+
+ファーストパーティ ID を使用する場合、サードパーティ ID 同期を実行できません。 サードパーティ ID の同期は、 [!DNL Visitor ID] サービスと `UUID` を生成します。 ファーストパーティ ID 機能を使用する場合、ECID は、 [!DNL Visitor ID] サードパーティ ID を同期できないようにするサービス。
+
+ファーストパーティ ID を使用する場合、Audience Managerのパートナー ID 同期の主なベースは次のとおりであるので、パートナープラットフォームでのアクティベーションをターゲットにしたAudience Manager機能はサポートされません `UUIDs` または `DIDs`. ファーストパーティ ID から派生した ECID は、 `UUID`を設定し、アドレス指定不可にします。
 
 ## 独自のサーバーを使用した cookie の設定
 
