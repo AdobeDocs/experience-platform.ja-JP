@@ -5,10 +5,10 @@ title: フローサービス API を使用した Salesforce ベース接続の�
 type: Tutorial
 description: フローサービス API を使用してAdobe Experience Platformを Salesforce アカウントに接続する方法を説明します。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 62%
+source-wordcount: '511'
+ht-degree: 60%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 62%
 | `username` | のユーザー名 [!DNL Salesforce] ユーザーアカウント。 |
 | `password` | のパスワード [!DNL Salesforce] ユーザーアカウント。 |
 | `securityToken` | のセキュリティトークン [!DNL Salesforce] ユーザーアカウント。 |
-| `apiVersion` | （オプション） [!DNL Salesforce] 使用しているインスタンス。 このフィールドを空白のままにすると、Experience Platformは利用可能な最新バージョンを自動的に使用します。 |
+| `apiVersion` | （オプション）の REST API バージョン [!DNL Salesforce] 使用しているインスタンス。 API バージョンの値は、小数で書式設定する必要があります。 例えば、API バージョンを使用している場合は、 `52`の場合、値を `52.0` このフィールドを空白のままにすると、Experience Platformは利用可能な最新バージョンを自動的に使用します。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
 使い始める方法について詳しくは、 [この Salesforce ドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).

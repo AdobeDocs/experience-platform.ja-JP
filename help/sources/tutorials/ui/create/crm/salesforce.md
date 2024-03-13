@@ -2,10 +2,10 @@
 title: '[Experience Platform] ユーザインターフェイスを使用して Salesforce アカウントに接続'
 description: Salesforce アカウントを接続し、ユーザーインターフェイスを使用して CRM データをExperience Platformに取り込む方法を説明します。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 31%
+source-wordcount: '542'
+ht-degree: 23%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 31%
 | `username` | のユーザー名 [!DNL Salesforce] ユーザーアカウント。 |
 | `password` | のパスワード [!DNL Salesforce] ユーザーアカウント。 |
 | `securityToken` | のセキュリティトークン [!DNL Salesforce] ユーザーアカウント。 |
-| `apiVersion` | （オプション） [!DNL Salesforce] 使用しているインスタンス。 このフィールドを空白のままにすると、Experience Platformは利用可能な最新バージョンを自動的に使用します。 |
+| `apiVersion` | （オプション） [!DNL Salesforce] 使用しているインスタンス。 API バージョンの値は、小数で書式設定する必要があります。 例えば、API バージョンを使用している場合は、 `52`の場合、値を `52.0` このフィールドを空白のままにすると、Experience Platformは利用可能な最新バージョンを自動的に使用します。 |
 
 認証について詳しくは、 [この [!DNL Salesforce] 認証ガイド](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
@@ -56,7 +56,7 @@ The **[!UICONTROL Salesforce に連携]** ページが表示されます。 こ�
 
 >[!TAB 既存の Salesforce アカウントを使用]
 
-既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択し、表示されるリストから使用するアカウントを選択します。終了したら、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
+既存のアカウントを使用するには、「 」を選択します。 **[!UICONTROL 既存のアカウント]** 次に、表示されるリストから、使用するアカウントを選択します。 終了したら、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
 
 ![組織に既に存在する認証済み Salesforce アカウントのリスト。](../../../../images/tutorials/create/salesforce/existing.png)
 
@@ -70,4 +70,4 @@ The **[!UICONTROL Salesforce に連携]** ページが表示されます。 こ�
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Salesforce] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを に取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/crm.md)を行いましょう。
+このチュートリアルでは、[!DNL Salesforce] アカウントとの接続を確立しました。次のチュートリアルに進み、 [データをに取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/crm.md).
