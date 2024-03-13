@@ -3,7 +3,7 @@ title: インテリジェントな再エンゲージメント
 description: 主要なコンバージョンの瞬間に魅力的でつながりのあるエクスペリエンスを提供し、頻度の少ない顧客をインテリジェントに再エンゲージします。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
@@ -60,7 +60,7 @@ ht-degree: 4%
 廃止された製品参照シナリオは、Web サイトとモバイルアプリの両方で廃止された製品参照をターゲットにします。 このシナリオは、製品が表示されたが、購入されなかった、または買い物かごに追加されなかった場合にトリガーされます。 この例では、過去 24 時間以内にリストが追加されなかった場合、3 日後にブランドエンゲージメントがトリガーされます。<p>![顧客のインテリジェントな廃止された製品ブラウズシナリオの概要レベルのビジュアル概要。](../intelligent-re-engagement/images/re-engagement-journey.png "顧客のインテリジェントな廃止された製品ブラウズシナリオの概要レベルのビジュアル概要。"){width="1920" zoomable="yes"}</p>
 
 1. スキーマとデータセットを作成し、を有効にします。 [!UICONTROL プロファイル].
-2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
+2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics ソースコネクタも使用できますが、ジャーニーの遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。このデータは、ID グラフを使用して、認証済み Web およびモバイルアプリの訪問者にリンクできます。
 4. プロファイルのリストから焦点を絞ったオーディエンスを作成し、 **顧客** が過去 3 日間に契約を結んでいます
 5. 廃止された製品参照ジャーニーは、で作成します。 [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ ht-degree: 4%
 放棄された買い物かごシナリオは、製品が買い物かごに入れられたが、Web サイトとモバイルアプリの両方でまだ購入されていない場合に適用されます。 また、有料メディアキャンペーンは、この方法を使用して開始および停止されます。<p>![顧客が放棄した買い物かごシナリオの概要レベルの視覚的概要。](../intelligent-re-engagement/images/abandoned-cart-journey.png "顧客が放棄した買い物かごシナリオの概要レベルの視覚的概要。"){width="1920" zoomable="yes"}</p>
 
 1. スキーマとデータセットを作成し、を有効にします。 [!UICONTROL プロファイル].
-2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
+2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics ソースコネクタも使用できますが、ジャーニーの遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。このデータは、ID グラフを使用して、認証済み Web およびモバイルアプリの訪問者にリンクできます。
 4. プロファイルのリストから焦点を絞ったオーディエンスを作成し、 **顧客** は買い物かごに品目を配置しましたが、まだ購入を完了していません。 The **[!UICONTROL 買い物かごに追加]** イベントは、30 分間待機し、購入を確認するタイマーを開始します。 購入が行われていない場合、 **顧客** が **[!UICONTROL 買い物かごを放棄]** オーディエンス。
 5. 次の場所で買い物かごの放棄済みジャーニーを作成します。 [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ ht-degree: 4%
 注文確認シナリオでは、Web サイトおよびモバイルアプリを通じた製品の購入に焦点を当てます。<p>![顧客注文確認シナリオの概要レベルの視覚的概要。](../intelligent-re-engagement/images/order-confirmation-journey.png "顧客注文確認シナリオの概要レベルの視覚的概要。"){width="1920" zoomable="yes"}</p>
 
 1. スキーマとデータセットを作成し、を有効にします。 [!UICONTROL プロファイル].
-2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Data Connector も使用できますが、ジャーニーの遅延が発生する可能性があります。
+2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics ソースコネクタも使用できますが、ジャーニーの遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。このデータは、ID グラフを使用して、認証済み Web およびモバイルアプリの訪問者にリンクできます。
 4. 確認ジャーニーは、で作成します。 [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] は、優先チャネルを使用して注文確認メッセージを送信します。
