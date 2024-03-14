@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 95%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 95%
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
       - [Teradata Vantage コネクタ](connectors/databases/teradata-vantage.md)
    - データと ID パートナー {#data-partner}
+      - [Acxiom データ取り込み](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom 見込みデータのインポート](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [企業 ID の解決](connectors/data-partners/merkury.md)
    - e コマース {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 95%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - データと ID パートナー {#data-partner}
-         - [企業 ID の解決](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom データ取り込み](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom 見込みデータのインポート](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [企業 ID の解決](tutorials/ui/create/data-partners/merkury.md)
       - e コマース {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
