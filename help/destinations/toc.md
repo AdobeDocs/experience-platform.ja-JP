@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
+source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1215'
 ht-degree: 90%
 
 ---
@@ -140,6 +140,8 @@ ht-degree: 90%
    * データ管理プラットフォームの宛先 {#data-management}
       * [データ管理プラットフォーム（DMP）の宛先の概要](./catalog/data-management/overview.md)
       * [Audience Manager DIL 拡張機能](./catalog/data-management/aam-dil-extension.md)
+   * データおよび ID パートナー {#data-partner}
+      * [Acxiom 見込み客抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
    * e コマースの宛先 {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * メールの宛先 {#email}
