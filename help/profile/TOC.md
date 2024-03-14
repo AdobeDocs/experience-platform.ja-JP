@@ -4,7 +4,7 @@ user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 feature: Profiles
 role: User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 93%
@@ -53,4 +53,4 @@ ht-degree: 93%
 * [プライバシーリクエストの処理](privacy.md)
 * [[!DNL Profile] トラブルシューティングガイド](troubleshooting.md)
 * [Profile API のリファレンス](https://www.adobe.com/go/profile-apis-en)
-* [Platform リリースノート](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ja)
+* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -5,10 +5,10 @@ breadcrumb-title: データアクセスガイド
 user-guide-description: Experience Platform で、取り込んだデータセットを検索してアクセスします。
 feature: Data Access
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '35'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -19,4 +19,4 @@ ht-degree: 100%
 - [データアクセス API](api.md)
 - チュートリアル {#tutorials}
    - [データセットのデータの表示](tutorials/dataset-data.md)
-- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+- [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

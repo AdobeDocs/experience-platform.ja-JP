@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 概要
 description: Adobe Experience Platform を使用すると、組織は、顧客データを一元化および標準化し、データサイエンスと機械学習を適用することにより、設計を劇的に改善し、パーソナライズされ充実したエクスペリエンスを配信することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 92%
@@ -64,7 +64,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 * [**用語集**](glossary.md)\
   Adobe Experience Platform の用語を確認します。
 
-* [**リリースノート**](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)\
+* [**リリースノート**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)\
   最新の [!DNL Experience Platform] リリースに関する情報を検索し、過去のリリースを確認します。
 
 * [**トラブルシューティングガイド**](troubleshooting.md)\

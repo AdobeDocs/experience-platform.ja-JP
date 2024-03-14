@@ -5,7 +5,7 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 90%
@@ -296,4 +296,4 @@ ht-degree: 90%
       * [ドキュメントのセルフサービステンプレート](./destination-sdk/docs-framework/self-service-template.md)
       * [オーサリングのベストプラクティス](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [よくある質問](./destinations-faq.md)
-* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

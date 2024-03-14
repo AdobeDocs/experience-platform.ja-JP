@@ -6,10 +6,10 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '761'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -321,5 +321,5 @@ ht-degree: 99%
 * [FAQ](./faq.md)
 * [用語の更新](./term-updates.md)
 * [Internet Explorer 10 および 11 のサポートの廃止](./ie-deprecation.md)
-* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
