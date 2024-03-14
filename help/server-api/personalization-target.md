@@ -2,9 +2,9 @@
 title: Adobe Target を使用したパーソナライゼーション
 description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ddffe9bf30741b457f7de1099b50ac1624fca927
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '664'
 ht-degree: 3%
 
 ---
@@ -287,3 +287,9 @@ Edge ネットワークは、次のような応答を返します。
 | `items[].data.id` | 提案されたオファーの ID。 | `"id": "282484"` |
 | `items[].data.format` | 提案されたオファーに関連付けられたコンテンツの形式。 | `"format: "application/json` |
 | `items[].data.content` | 提案されたオファーに関連付けられたコンテンツ。 これは、呼び出し元のアプリケーションのコンテンツのパーソナライゼーションに使用されます。 | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
+
+## サーバー側パーソナライゼーションサンプルアプリケーション {#sample}
+
+次の場所にあるサンプルアプリケーション： [この URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) Adobe Experience Platformを使用してAdobe Targetからパーソナライゼーションコンテンツを取得する方法を示します。 Web ページは、返されるパーソナライゼーションコンテンツに基づいて変化します。
+
+このサンプルでは、 _not_ 次のようなクライアント側ライブラリに依存する [!DNL Web SDK] パーソナライゼーションコンテンツを取得します。 代わりに、Adobe Experience Platform API を使用してパーソナライゼーションコンテンツを取得します。 次に、返されたHTMLコンテンツに基づいて、パーソナライゼーションサーバーサイドが生成されます。
