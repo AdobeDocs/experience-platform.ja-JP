@@ -3,7 +3,7 @@ title: 作業指示 API エンドポイント
 description: Data Whealthy API の/workorder エンドポイントを使用すると、ID の削除タスクをプログラムで管理できます。
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 56%
@@ -126,9 +126,9 @@ curl -X POST \
 
 {style="table-layout:auto"}
 
-## レコードの削除のステータスを取得します (#lookup)
+## レコードの削除ステータスの取得 {#lookup}
 
-後 [レコード削除リクエストの作成](#create)の場合は、データリクエストを使用して、ステータスをGETで確認できます。
+後で [レコード削除リクエストの作成](#create)の場合は、データリクエストを使用して、ステータスをGETで確認できます。
 
 **API 形式**
 

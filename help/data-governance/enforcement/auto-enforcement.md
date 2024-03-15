@@ -4,24 +4,24 @@ solution: Experience Platform
 title: ポリシーの自動適用
 description: このドキュメントでは、Experience Platform 内の宛先に対してオーディエンスをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 100%
+source-wordcount: '2012'
+ht-degree: 90%
 
 ---
 
 # ポリシーの自動適用
 
+データ使用ラベルとポリシーは、すべてのAdobe Experience Platformユーザーが使用できます。 データ使用ポリシーを定義し、データ使用ラベルを適用して、機密データ、識別可能なデータ、契約上のデータを正しく処理するようにします。 これらの測定は、データへのアクセス、処理、保存および共有の方法に関する組織のデータガバナンスルールの実施に役立ちます。
+
+潜在的なリスクや負債から組織を保護するため、Platform は、宛先に対するオーディエンスをアクティブ化する際に違反が発生した場合に、使用ポリシーを自動的に適用します。
+
 >[!IMPORTANT]
 >
->ポリシーの自動適用は、**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織のみが利用できます。
+>同意ポリシーと自動同意ポリシーの実施は、を購入した組織でのみ利用できます **Adobeヘルスケアシールド** または **Adobeプライバシーとセキュリティシールド**.
 
-データにラベルを付け、データ使用ポリシーを定義したら、データ使用のコンプライアンスをポリシーで適用できます。宛先に対してオーディエンスをアクティブ化すると、Adobe Experience Platform は、違反が発生した場合に使用ポリシーを自動的に適用します。
-
->[!NOTE]
->
->このドキュメントでは、データガバナンスと同意ポリシーの適用について重点的に説明しています。アクセス制御ポリシーについて詳しくは、[属性ベースのアクセス制御](../../access-control/abac/overview.md)に関するドキュメントを参照してください。
+このドキュメントでは、データガバナンスと同意ポリシーの適用について重点的に説明しています。アクセス制御ポリシーについて詳しくは、[属性ベースのアクセス制御](../../access-control/abac/overview.md)に関するドキュメントを参照してください。
 
 ## 前提条件
 
@@ -94,27 +94,31 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 ポリシー違反の詳細を表示するには、その違反の左列のポップオーバーでポリシー違反を選択します。
 
-![](../images/enforcement/violation-policy-select.png)
+![ポリシー違反を示すダイアログが表示され、ポリシー名がハイライト表示されます。](../images/enforcement/violation-policy-select.png)
 
 違反メッセージには、違反をチェックするためにポリシーが設定されている条件、違反をトリガーした特定のアクション、問題の解決策のリストなど、ポリシー違反に関する概要が表示されます。
 
-![](../images/enforcement/violation-summary.png)
+![違反の概要が強調表示されたポリシー違反ダイアログ。](../images/enforcement/violation-summary.png)
 
 違反の概要の下にデータ系列グラフが表示され、ポリシー違反に関与したデータセット、結合ポリシー、オーディエンス、および宛先を視覚化できます。グラフ内では現在変更中のエンティティがハイライト表示され、違反が発生する原因となっているフロー内のポイントを示します。グラフ内でエンティティ名を選択して、対象のエンティティの詳細ページを開くことができます。
 
-![](../images/enforcement/data-lineage.png)
+![データ系列グラフが強調表示されたポリシー違反ダイアログ。](../images/enforcement/data-lineage.png)
 
 また、**[!UICONTROL フィルター]**&#x200B;アイコン（![](../images/enforcement/filter.png)）を使用して、表示されたエンティティをカテゴリでフィルターすることもできます。データを表示するには、少なくとも 2 つのカテゴリを選択する必要があります。
 
-![](../images/enforcement/lineage-filter.png)
+![データ系列フィルターとドロップダウンメニューがハイライト表示されたポリシー違反ダイアログ。](../images/enforcement/lineage-filter.png)
 
 「**[!UICONTROL リスト表示]**」を選択し、データ系列をリストとして表示します。ビジュアルグラフに戻すには、「**[!UICONTROL パス表示]**」を選択します。
 
-![](../images/enforcement/list-view.png)
+![データ系列のパス表示が強調表示されたポリシー違反ダイアログ。](../images/enforcement/list-view.png)
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-[同意ポリシーを作成](../policies/user-guide.md#consent-policy)し、宛先に対してオーディエンスをアクティブ化している場合、同意ポリシーがアクティベーションに含まれるプロファイルの割合にどのように影響するかを確認できます。
+宛先に対するオーディエンスをアクティブ化する際に、 [同意ポリシー](../policies/user-guide.md#consent-policy) は、アクティベーションに含まれるプロファイルの様々な割合に影響を与えます。
+
+>[!NOTE]
+>
+>同意ポリシーは、AdobeのヘルスケアシールドまたはAdobeのプライバシーとセキュリティシールドを購入した組織でのみ使用できます。
 
 #### 有料メディアの同意ポリシーの強化 {#consent-policy-enhancement}
 
