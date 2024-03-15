@@ -3,9 +3,9 @@ title: Acxiom Prospect-Suppression
 description: ファーストパーティオーディエンスを Acxiom の宛先に書き出して、Acxiom が既知の顧客やコンバージョンされた顧客を抑制できるようにします。 次に、Acxiom ソースコネクタを使用して、既知の顧客または変換済みの顧客を削除し、Acxiom から見込み客リストを取り込み、有効化します。
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: ベータ版
-source-git-commit: c881f8375bc0eccb8e64666a888735c03018421c
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1466'
 ht-degree: 26%
 
 ---
@@ -102,7 +102,7 @@ Experience Platformでバケットにアクセスするには、次の資格情�
 
 ### 既存のアカウント
 
-Acxiom Prospect-Suppression カードを使用して既に定義されているアカウントは、リストポップアップに表示され、選択すると、アカウントの詳細が表示されます。  次に、UI の例で、に移動したときの例を示します。 **宛先** > **アカウント**;
+アカウントは、 [!DNL Acxiom Prospect Suppression] 宛先がリストポップアップに表示されます。 選択すると、右側のパネルにアカウントの詳細が表示されます。 に移動したときに UI から例を表示します。 **[!UICONTROL 宛先]** > **[!UICONTROL アカウント]**:
 
 ![既存のアカウント](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -145,14 +145,14 @@ Acxiom Prospect-Suppression カードを使用して既に定義されている�
 
 | ターゲットフィールド | ソースの説明 |
 |--------------|-------------------------------------------------------------|
-| name | Experience Platformの person.name.fullName 値。 |
-| firstName | Experience Platformの person.name.firstName 値。 |
-| lastName | Experience Platformの person.name.lastName 値。 |
-| address1 | Experience Platformの mailingAddress.street1 値。 |
-| address2 | Experience Platformの mailingAddress.street2 値。 |
-| 都市 | Experience Platformの mailingAddress.city 値。 |
-| state | Experience Platformの mailingAddress.state 値。 |
-| 郵便番号 | Experience Platformの mailingAddress.postalCode 値。 |
+| name | The `person.name.fullName` Experience Platformの値。 |
+| firstName | The `person.name.firstName` Experience Platformの値。 |
+| lastName | The `person.name.lastName` Experience Platformの値。 |
+| address1 | The `mailingAddress.street1` Experience Platformの値。 |
+| address2 | The `mailingAddress.street2` Experience Platformの値。 |
+| 都市 | The `mailingAddress.city` Experience Platformの値。 |
+| state | The `mailingAddress.state` Experience Platformの値。 |
+| 郵便番号 | The `mailingAddress.postalCode` Experience Platformの値。 |
 
 {style="table-layout:auto"}
 
