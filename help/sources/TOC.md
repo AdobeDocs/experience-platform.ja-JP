@@ -5,10 +5,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
+source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 95%
+source-wordcount: '1031'
+ht-degree: 94%
 
 ---
 
@@ -115,6 +115,7 @@ ht-degree: 95%
    - 支払い {#payments}
       - [PayPal コネクタ](connectors/payments/paypal.md)
       - [正方形コネクタ](connectors/payments/square.md)
+      - [Stripeコネクタ](connectors/payments/stripe.md)
    - プロトコル {#protocols}
       - [汎用 OData コネクタ](connectors/protocols/odata.md)
       - [汎用 REST API コネクタ](connectors/protocols/generic-rest.md)
@@ -195,6 +196,7 @@ ht-degree: 95%
       - 支払い {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [正方形](tutorials/api/create/payments/square.md)
+         - [Stripe](tutorials/api/create/payments/stripe.md)
       - プロトコル {#protocols}
          - [汎用 OData](tutorials/api/create/protocols/odata.md)
          - [汎用 REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -323,6 +325,7 @@ ht-degree: 95%
       - 支払い {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [正方形](tutorials/ui/create/payments/square.md)
+         - [Stripe](tutorials/ui/create/payments/stripe.md)
       - プロトコル {#protocols}
          - [汎用 OData](tutorials/ui/create/protocols/odata.md)
       - ストリーミング {#streaming}
