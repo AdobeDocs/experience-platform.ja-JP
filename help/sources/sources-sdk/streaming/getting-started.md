@@ -1,13 +1,11 @@
 ---
 title: セルフサービスソース（ストリーミング SDK）の概要
 description: このドキュメントでは、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の情報について説明します。
-hide: true
-hidefromtoc: true
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 36%
+source-wordcount: '523'
+ht-degree: 35%
 
 ---
 

@@ -1,10 +1,8 @@
 ---
 title: フローサービス API を使用したストリーミング SDK のフロー仕様の更新
 description: 次のドキュメントでは、セルフサービスソース用フローサービス API（ストリーミング SDK）を使用して、フロー仕様を取得および更新する手順を説明します。
-hide: true
-hidefromtoc: true
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 14%
@@ -17,7 +15,7 @@ ht-degree: 14%
 
 フロー仕様には、フローを定義する情報が含まれます。フローがサポートするソース接続 ID とターゲット接続 ID、データに適用する必要がある変換仕様、フローの生成に必要なスケジューリングパラメータなどです。 フローの仕様は、 `/flowSpecs` endpoint.
 
-次のドキュメントでは、 [!DNL Flow Service] セルフサービスソース用 API（ストリーミング SDK）。
+次のドキュメントでは、 [!DNL Flow Service] セルフサービスソース用の API（ストリーミング SDK）。
 
 ## はじめに
 
@@ -25,7 +23,7 @@ ht-degree: 14%
 
 ## フロー仕様の検索 {#lookup}
 
-ソースが `generic-streaming` すべてをテンプレートに使用 `GenericStreamingAEP` フロー仕様。 このフロー仕様は、 `/flowSpecs/` エンドポイント、および `flowSpec.id` / `e77fde5a-22a8-11ed-861d-0242ac120002`.
+で作成されたソース `generic-streaming` すべてをテンプレートに使用 `GenericStreamingAEP` フロー仕様。 このフロー仕様は、 `/flowSpecs/` エンドポイント、および `flowSpec.id` / `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 **API 形式**
 
@@ -365,4 +363,4 @@ PUT -X GET \
 
 ## 次の手順
 
-新しい接続仕様を適切なフロー仕様に追加したら、新しいソースのテストと送信に進むことができます。 詳しくは、 [新しいソースのテストと送信](./submit.md) を参照してください。
+新しい接続仕様を適切なフロー仕様に追加したら、新しいソースのテストと送信に進むことができます。 次のガイドを参照してください： [新しいソースのテストと送信](./submit.md) を参照してください。

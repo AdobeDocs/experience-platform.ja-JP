@@ -1,12 +1,10 @@
 ---
 title: ストリーミング SDK UI 用のドキュメントセルフサービステンプレート
 description: UI を使用して、ストリーミングデータをソースからAdobe Experience Platformに取り込む方法を説明します。
-hide: true
-hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1186'
 ht-degree: 19%
 
 ---
@@ -95,7 +93,7 @@ The **データフローの詳細** 手順が表示され、既存のデータ�
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対するインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対するインテリジェントなレコメンデーションを提供します。 マッピングルールは、使用例に合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 ソースデータが正常にマッピングされたら、「 」を選択します。 **[!UICONTROL 次へ]**.
 

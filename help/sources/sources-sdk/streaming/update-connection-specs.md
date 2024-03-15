@@ -1,10 +1,8 @@
 ---
 title: フローサービス API を使用して、ストリーミング SDK の接続仕様を更新します
 description: 次のドキュメントでは、セルフサービスソース用フローサービス API（ストリーミング SDK）を使用して接続を指定する手順を説明します。
-hide: true
-hidefromtoc: true
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 4%

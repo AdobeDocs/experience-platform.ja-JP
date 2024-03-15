@@ -1,12 +1,10 @@
 ---
 title: フローサービス API を使用して、ストリーミング SDK 用の新しい接続仕様を作成します
 description: 次のドキュメントでは、フローサービス API を使用して接続仕様を作成し、セルフサービスソースを使用して新しいソースを統合する手順を説明します。
-hide: true
-hidefromtoc: true
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '736'
 ht-degree: 37%
 
 ---
@@ -38,8 +36,8 @@ ht-degree: 37%
 
 | アーティファクト（ファイル名） | 説明 | 例 |
 | --- | --- | --- |
-| {your_source} | ソースの名前。このフォルダーには、ソースに関連するすべてのアーティファクトを、プライベート Git リポジトリ内に含める必要があります。 | `medallia` |
-| {your_source}-category.txt | ソースが属するカテゴリ。テキストファイル形式で指定します。 **注意**:ソースが上記のカテゴリのいずれにも適合しないと思われる場合は、Adobe担当者にお問い合わせください。 | `medallia-category.txt` ファイル内で、次のようにソースのカテゴリを指定します。 `streaming`. |
+| {your_source} | ソースの名前。 このフォルダーには、ソースに関連するすべてのアーティファクトを、プライベート Git リポジトリ内に含める必要があります。 | `medallia` |
+| {your_source}-category.txt | ソースが属するカテゴリ。テキストファイル形式で指定します。 **注意**：ソースが上記のカテゴリのいずれにも適合しないと思われる場合は、Adobe担当者にお問い合わせください。 | `medallia-category.txt` ファイル内で、次のようにソースのカテゴリを指定します。 `streaming`. |
 | {your_source}-description.txt | ソースの簡単な説明。 | [!DNL Medallia] は、 [!DNL Medallia] データをExperience Platformに送信します。 |
 | {your_source}-icon.svg | 画像ソースカタログでソースを表すために使用するExperience Platform。 このアイコンは、SVGファイルです。 |
 | {your_source}-label.txt | ソースの名前。ソースカタログに表示されるExperience Platformです。 | メダリア |
@@ -134,7 +132,7 @@ ht-degree: 37%
 
 接続仕様テンプレートを取得したら、ソースに対応する適切な値を入力して、新しい接続仕様のオーサリングを開始できます。
 
-接続仕様は、次の 2 つの個別の部分に分割できます。ソースの仕様とエクスプローラの仕様。
+接続仕様は、ソース仕様とエクスプローラ仕様の 2 つの異なる部分に分けることができます。
 
 接続仕様のセクションの詳細については、次のドキュメントを参照してください。
 

@@ -1,12 +1,10 @@
 ---
 title: ソースのドキュメント化（ストリーミング SDK）
 description: Adobe Experience Platformで新しいソースをライブにする前の最後の手順は、新しいソースをドキュメント化することです。
-hide: true
-hidefromtoc: true
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '389'
 ht-degree: 2%
 
 ---
