@@ -2,7 +2,7 @@
 title: Acxiom データ取り込み
 description: 取り込み方法を学ぶ [!DNL Acxiom] データをReal-time Customer Data Platformに送信し、ファーストパーティプロファイルを強化し、オーディエンスを向上させて、マーケティングチャネル全体でアクティブ化します。
 badge: ベータ版
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 42%
@@ -54,3 +54,4 @@ ht-degree: 42%
 ## 次の手順
 
 このドキュメントを読むと、データを [!DNL Acxiom] アカウントからExperience Platformへ。 次のガイドに進むことができます： [接続 [!DNL Acxiom Data Ingestion] ユーザーインターフェイスを使用してExperience Platformを設定するには](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+
