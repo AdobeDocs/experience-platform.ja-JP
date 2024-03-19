@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1530'
 ht-degree: 75%
 
 ---
@@ -181,6 +181,7 @@ Adobe Experience Platform には、サードパーティの支払いシステム
 
 - [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE バッチ]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE バッチ]{type=Informative}
+- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE バッチ]{type=Informative}
 
 ### ストリーミング {#streaming}
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3933'
-ht-degree: 87%
+source-wordcount: '4018'
+ht-degree: 86%
 
 ---
 
@@ -212,6 +212,18 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 | [!UICONTROL 変更日] | オーディエンスの最終変更日に基づいてフィルタリングできます。オーディエンスが最後に変更された日時をフィルタリングする日付範囲を選択できます。 |
 
 ![使用可能なフィルターが表示され、オーディエンスを参照ページでハイライトされます。](../images/ui/overview/filter-audiences.png)
+
+**バルクアクション** {#bulk-actions}
+
+さらに、最大 25 個の異なるオーディエンスを選択し、これらのオーディエンスに対して様々なアクションを実行できます。 次のアクションが含まれます。 [フォルダへの移動](#folders), [タグの編集または適用](#tags), [アクセスラベルの適用](../../access-control/abac/ui/labels.md)、および [削除中](#browse).
+
+![一括アクションに使用できるオプションはハイライト表示されます。](../images/ui/overview/bulk-actions.png)
+
+これらのオーディエンスにバルクアクションを適用する場合、次の条件が適用されます。
+
+- あなた **can** 別のページからオーディエンスを選択します。
+- あなた **できません** 宛先のアクティベーションで使用されているオーディエンスを削除します。
+- フィルターを選択した場合、選択したオーディエンス **will** リセット。
 
 ### オーディエンスの詳細 {#audience-details}
 

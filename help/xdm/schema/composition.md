@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマ構成の基本
 description: Experience Data Model(XDM) スキーマと、Adobe Experience Platformでスキーマを構成するための構成要素、原則およびベストプラクティスについて説明します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
 workflow-type: tm+mt
-source-wordcount: '4229'
+source-wordcount: '4236'
 ht-degree: 25%
 
 ---
@@ -261,7 +261,7 @@ Experience Platformは、 [!DNL Schema Registry] 共通のデータ構造を記�
 
 >[!NOTE]
 >
->「マップ」フィールドタイプでは、1 つのキーの複数の値を含む、キーと値のペアのデータを使用できます。 マップは、標準の XDM クラスとフィールドグループで見つけることができますが、スキーマレジストリ API を使用してカスタムマップを定義することもできます。 に関するチュートリアルを参照してください。 [カスタムフィールドの定義](../tutorials/custom-fields-api.md#custom-maps) を参照してください。
+>「マップ」フィールドタイプでは、1 つのキーの複数の値を含む、キーと値のペアのデータを使用できます。 マップは、標準の XDM クラスとフィールドグループで見つけることができますが、カスタムマップを定義することもできます。 次の API チュートリアルを参照してください： [カスタムマップフィールドの定義](../tutorials/custom-fields-api.md#custom-maps) または [UI でのマップフィールドの定義](../ui/fields/map.md) を参照してください。
 
 ## 合成の例 {#composition-example}
 
@@ -275,7 +275,7 @@ Web サイトトラフィックを追跡する別のスキーマは、「[!UICON
 
 ![4 つのスキーマと、それらに貢献するフィールドグループのフロー図です。](../images/schema-composition/composition.png)
 
-### Union {#union}
+### 和集合 {#union}
 
 Experience Platform では特定の使用事例のスキーマを作成できますが、特定のクラスタイプのスキーマの「和集合」を確認することもできます。上の図は、XDM ExperienceEvent クラスに基づく 2 つのスキーマと、に基づく 2 つのスキーマを示しています [!DNL XDM Individual Profile] クラス。 次に示す和集合は、同じクラス ([!DNL XDM ExperienceEvent] および [!DNL XDM Individual Profile]、それぞれ )。
 

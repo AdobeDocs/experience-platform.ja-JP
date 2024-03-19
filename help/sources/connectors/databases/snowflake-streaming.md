@@ -5,7 +5,7 @@ badgeBeta: label="ベータ版" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 11%
@@ -47,7 +47,6 @@ The [!DNL Snowflake] ストリーミングソースは、SQL クエリを定期�
 | `role` | （オプション）特定の接続に対してユーザーに提供できるカスタム定義の役割です。 指定しない場合、この値はデフォルトでになります。 `public`. |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Snowflake] 次に該当 `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-認証について詳しくは、 [[!DNL Snowflake] 文書](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### 役割の設定を構成する {#configure-role-settings}
 
@@ -83,3 +82,4 @@ The [!DNL Snowflake] ストリーミングソースは、SQL クエリを定期�
 次のチュートリアルでは、 [!DNL Snowflake] ストリーミングソースからExperience Platformへの変換（API を使用）:
 
 * [からのデータのストリーミング [!DNL Snowflake] フローサービス API を使用してExperience Platformにデータベースを送信する](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [からのデータのストリーミング [!DNL Snowflake] データベースユーザーインターフェイスの「ソース」ワークスペースを使用してExperience PlatformをExperience Platform化する](../../tutorials/ui/create/databases/snowflake-streaming.md)

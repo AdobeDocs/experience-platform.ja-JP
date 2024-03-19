@@ -5,9 +5,9 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: a3b23c67847765692144459939afec23fd15c2a5
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 89%
 
 ---
@@ -186,12 +186,13 @@ ht-degree: 89%
       * [データタイプ](./ui/resources/data-types.md)
    * フィールドの定義 {#fields}
       * [概要](./ui/fields/overview.md)
-      * [必須フィールド](./ui/fields/required.md)
-      * [オブジェクトフィールド](./ui/fields/object.md)
       * [配列フィールド](./ui/fields/array.md)
       * [列挙フィールド](./ui/fields/enum.md)
       * [ID フィールド](./ui/fields/identity.md)
+      * [マップ](./ui/fields/map.md)
+      * [オブジェクトフィールド](./ui/fields/object.md)
       * [関係フィールド](./ui/fields/relationship.md)
+      * [必須フィールド](./ui/fields/required.md)
    * [フィールドベースのワークフロー](./ui/field-based-workflows.md)
    * [サンプル XDM データの生成](./ui/sample.md)
    * [XDM スキーマのエクスポート](./ui/export.md)

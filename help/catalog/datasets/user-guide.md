@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
+source-git-commit: aee82356f1f519398f381e161be14789532561f1
 workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 17%
+source-wordcount: '2932'
+ht-degree: 14%
 
 ---
 
@@ -41,12 +41,36 @@ ht-degree: 17%
 
 Adobe Analytics の [!DNL Experience Platform] UI、「 」を選択します。 **[!UICONTROL データセット]** 左側のナビゲーションで、 **[!UICONTROL データセット]** ダッシュボード。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが適用されるスキーマ、最新の取得実行のステータスなど）が表示されます。
 
-![左側のナビゲーションバー内の「データセット」項目をハイライトした画像です。](../images/datasets/user-guide/browse-datasets.png)
+![左側のナビゲーションバーで「データセット」項目がハイライトされた Platform UI。](../images/datasets/user-guide/browse-datasets.png)
 
 次の中からデータセットの名前を選択します： [!UICONTROL 参照] タブをクリックして、アクセスします **[!UICONTROL データセットアクティビティ]** 画面に、選択したデータセットの詳細が表示されます。 「アクティビティ」タブには、消費されるメッセージの割合を視覚化したグラフと、成功および失敗したバッチのリストが含まれます。
 
-![選択したデータセットの詳細がハイライト表示されます。](../images/datasets/user-guide/dataset-activity-1.png)
-![選択したデータセットに属するサンプルバッチがハイライト表示されます。](../images/datasets/user-guide/dataset-activity-2.png)
+![選択したデータセットの指標とビジュアライゼーションが強調表示されます。](../images/datasets/user-guide/dataset-activity-1.png)
+![選択したデータセットに関連するサンプルバッチがハイライト表示されます。](../images/datasets/user-guide/dataset-activity-2.png)
+
+## その他のアクション {#more-actions}
+
+以下が可能です。 [!UICONTROL 削除] または [!UICONTROL プロファイルのデータセットの有効化] から [!UICONTROL データセット] 詳細表示。 使用可能なアクションを確認するには、「 **[!UICONTROL ...その他]** をクリックします。 ドロップダウンメニューが表示されます。
+
+![「データセット」ワークスペースと [!UICONTROL ...その他] ドロップダウンメニューがハイライト表示されます。](../images/datasets/user-guide/more-actions.png)
+
+次を選択した場合、 **[!UICONTROL プロファイルのデータセットの有効化]**&#x200B;と入力すると、確認ダイアログが表示されます。 選択 **[!UICONTROL 有効にする]** をクリックして選択を確定します。
+
+>[!NOTE]
+>
+>プロファイルのデータセットを有効にするには、データセットが準拠するスキーマが、リアルタイム顧客プロファイルでの使用に対して互換性がある必要があります。 詳しくは、 [プロファイルのデータセットの有効化](#enable-profile) 」の節を参照してください。
+
+![データセットの有効化の確認ダイアログが表示されます。](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+次を選択した場合、 **[!UICONTROL 削除]**、 [!UICONTROL データセットを削除] 確認ダイアログが表示されます。 選択 **[!UICONTROL 削除]** をクリックして選択を確定します。
+
+>[!NOTE]
+>
+>システムデータセットは削除できません。
+
+また、 [!UICONTROL 参照] タブをクリックします。 詳しくは、 [インラインアクションセクション](#inline-actions) を参照してください。
+
+![データセットの削除の確認ダイアログ。](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## インラインデータセットアクション {#inline-actions}
 
@@ -135,14 +159,14 @@ The [!UICONTROL タグの管理] ダイアログでは、データセットか�
 
 ## データセットの作成 {#create}
 
-新しいデータセットを作成するには、まず、データセットダッシュボードの「**[!UICONTROL データセットを作成]**」を選択します。****
+新しいデータセットを作成するには、まず「 」を選択します。 **[!UICONTROL データセットを作成]** （内） **[!UICONTROL データセット]** ダッシュボード。
 
 ![「データセットを作成」ボタンがハイライト表示されます。](../images/datasets/user-guide/select-create.png)
 
 次の画面に、新しいデータセットを作成するための次の 2 つのオプションが表示されます。
 
-* [スキーマからのデータセットの作成](#schema)
-* [CSV ファイルからのデータセットの作成](#csv)
+* [スキーマからデータセットを作成](#schema)
+* [CSV ファイルからデータセットを作成](#csv)
 
 ### 既存スキーマからのデータセットの作成 {#schema}
 
@@ -174,7 +198,7 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 >[!NOTE]
 >
-> CSV の列名は英数字で始める必要があり、文字、数字、アンダースコアのみを含めることができます。
+>CSV の列名は英数字で始める必要があり、文字、数字、アンダースコアのみを含めることができます。
 
 ![データを追加画面が表示されます。 データセットの CSV ファイルをアップロードできる場所がハイライト表示されます。](../images/datasets/user-guide/add-csv-data.png)
 

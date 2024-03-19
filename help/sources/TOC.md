@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
+source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1033'
 ht-degree: 94%
 
 ---
@@ -299,6 +299,7 @@ ht-degree: 94%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+         - [Snowflakeストリーミング](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - データと ID パートナー {#data-partner}
          - [Acxiom データ取り込み](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)

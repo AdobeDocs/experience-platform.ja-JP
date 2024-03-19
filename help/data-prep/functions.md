@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ準備マッピング関数
 description: このドキュメントでは、Data Prep で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
 workflow-type: tm+mt
-source-wordcount: '5789'
+source-wordcount: '5792'
 ht-degree: 9%
 
 ---
@@ -289,7 +289,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->ストリーミング取り込みには、次の分析機能のみを使用できます。
+>WebSDK とAdobe Analyticsのフローに対しては、次の分析関数のみを使用できます。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
