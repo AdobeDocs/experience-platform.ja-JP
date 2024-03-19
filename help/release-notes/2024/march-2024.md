@@ -1,10 +1,9 @@
 ---
-title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の 2024年1月のリリースノートです。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform リリースノート（2024年3月）
+description: Adobe Experience Platform の 2024年3月のリリースノート。
 source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1043'
 ht-degree: 33%
 
 ---
@@ -117,3 +116,4 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 {style="table-layout:auto"}
 
 ソースの詳細については、 [ソースの概要](../../sources/home.md).
+
