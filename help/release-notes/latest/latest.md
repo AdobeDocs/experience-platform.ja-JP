@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の 2024年1月のリリースノートです。
+description: Adobe Experience Platform の 2024年3月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
+source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1061'
 ht-degree: 33%
 
 ---
@@ -29,6 +29,10 @@ Experience Platformの既存の機能の更新：
 ## カタログサービス {#catalog-service}
 
 カタログサービスは、Adobe Experience Platform 内のデータの場所と系列のレコードのシステムです。Experience Platformに取り込まれるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
+
+>[!NOTE]
+>
+>アドビでは、テーブル内の画像の横に不要な構文が表示される表示の問題を認識し、修正に取り組んでいます。
 
 | 機能 | 説明 |
 | --- | --- |
