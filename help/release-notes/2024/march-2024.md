@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート（2024年3月）
 description: Adobe Experience Platform の 2024年3月のリリースノート。
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 33%
+source-wordcount: '1177'
+ht-degree: 34%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 33%
 Experience Platformの既存の機能の更新：
 
 - [カタログサービス](#catalog-service)
+- [データ収集](#data-collection)
 - [データ準備](#data-prep)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
@@ -40,6 +41,20 @@ Experience Platformの既存の機能の更新：
 {style="table-layout:auto"}
 
 Catalog Service について詳しくは、[Catalog Service の概要](../../catalog/home.md)を参照してください。
+
+## データ収集 {#data-collection}
+
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
+
+**新機能**
+
+| タイプ | 機能 | 説明 |
+| --- | --- | --- |
+| 拡張機能 | [!DNL Merkury] タグ拡張 | The [[!DNL Merkury] タグ拡張](https://exchange.adobe.com/apps/ec/600027/merkury-tag) は、匿名の Web サイト訪問者が [!DNL Merkury] ID。 ブランドは、 [!DNL Merkury] タグとAdobeを使用して、パーソナライズされた web サイトエクスペリエンスをリアルタイムで提供します。 また、 [!DNL Merkury] タグを使用すると、接続されたオンラインおよびオフラインの顧客プロファイルと共に、ファーストパーティのデジタルデータの増加に役立ちます。 |
+
+{style="table-layout:auto"}
+
+データ収集の詳細については、 [データ収集の概要](../../tags/home.md).
 
 ## データ準備 {#data-prep}
 
