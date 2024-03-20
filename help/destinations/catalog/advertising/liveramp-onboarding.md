@@ -3,10 +3,10 @@ title: LiveRamp - オンボーディング接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platform から LiveRamp Connect にオーディエンスをオンボーディングする方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
 workflow-type: tm+mt
-source-wordcount: '1759'
-ht-degree: 96%
+source-wordcount: '1941'
+ht-degree: 89%
 
 ---
 
@@ -70,6 +70,9 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 ![パスワードによる SFTP を使用して宛先に対する認証を行う方法を示すサンプルスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
+* **[!UICONTROL ポート]**：に使用するポート [!DNL LiveRamp - Onboarding] ストレージの場所。  地理的な場所に対応するポートを使用します。以下に例を示します。
+   * **[!UICONTROL 該当なし]**：ポートを使用 `22`
+   * **[!UICONTROL AU]**：ポートを使用 `2222`
 * **[!UICONTROL ユーザー名]**：[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
 * **[!UICONTROL パスワード]**：[!DNL LiveRamp - Onboarding] ストレージの場所のパスワード。
 * **[!UICONTROL PGP／GPG 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
@@ -80,6 +83,8 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 ![SSH キーを使用して宛先に対する認証を行う方法を示すサンプルスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
+* **[!UICONTROL ポート]**：に使用するポート [!DNL LiveRamp - Onboarding] ストレージの場所。  地理的な場所に対応するポートを使用します。以下に例を示します。
+   * **[!UICONTROL EU]**：ポートを使用 `4222`
 * **[!UICONTROL ユーザー名]**：[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
 * **[!UICONTROL SSH キー]**：[!DNL LiveRamp - Onboarding] ストレージの場所へのログインに使用する [!DNL SSH] 秘密鍵。この秘密鍵は、[!DNL Base64] でエンコードされた文字列の形式にする必要があり、パスワードで保護しないでください。
 
@@ -99,10 +104,11 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![宛先の詳細を入力する方法を示す Platform UI のスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![宛先の詳細を入力する方法を示す Platform UI のスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL 地域]**:LiveRamp SFTP ストレージのインスタンスの地域。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする [!DNL LiveRamp] `uploads` サブフォルダーへのパス。`uploads` プレフィックスがフォルダーパスに自動的に追加されます。[!DNL LiveRamp] では、他の既存のフィードとは別にファイルを保存し、すべての自動処理がスムーズに実行されるように、Adobe Real-Time CDP からの配信専用のサブフォルダーを作成することをお勧めします。
    * 例えば、ファイルを `uploads/my_export_folder` に書き出す場合は、「**[!UICONTROL フォルダーパス]**」フィールドに `my_export_folder` と入力します。
 * **[!UICONTROL 圧縮形式]**：書き出したファイルに Experience Platform で使用する圧縮タイプを選択します。使用可能なオプションは、**[!UICONTROL GZIP]** または&#x200B;**[!UICONTROL なし]**&#x200B;です。
@@ -179,6 +185,8 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 データは、設定した [!DNL LiveRamp - Onboarding] ストレージの場所に CSV ファイルとして書き出されます。
 
+書き出されたファイルの最大サイズは 1,000 万行です。 Experience Platformしたオーディエンスの行数が 1,000 万行を超える場合、配信ごとに複数のファイルが生成されます。 単一ファイルの制限を超えると考えられる場合は、 [!DNL LiveRamp] 担当者に問い合わせて、バッチ取得を設定するよう依頼します。
+
 ファイルを [!DNL LiveRamp - Onboarding] 宛先に書き出す場合、Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成します。
 
 例えば、次のオーディエンスについて考えてみます。
@@ -238,3 +246,18 @@ Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.
 ## その他のリソース {#additional-resources}
 
 [!DNL LiveRamp - Onboarding] ストレージの設定方法について詳しくは、[公式ドキュメント](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)を参照してください。
+
+## 変更ログ {#changelog}
+
+この節では、この宛先コネクタに対する機能の概要と重要なドキュメントの更新について説明します。
+
++++ 変更ログを表示
+
+| リリース月 | 更新タイプ | 説明 |
+|---|---|---|
+| 2024年3月 | 機能とドキュメントの更新 | <ul><li>ヨーロッパおよびオーストラリアへの配送のサポートを追加しました。 [!DNL LiveRamp] [!DNL SFTP] インスタンス。</li><li>新しくサポートされる地域に固有の設定について説明するドキュメントを更新しました。</li><li>最大ファイルサイズを 1,000 万行に増やしました（以前の 500 万行から）。</li><li>ファイルサイズの増加を反映するようにドキュメントを更新しました。</li></ul> |
+| 2023年7月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |
+
+{style="table-layout:auto"}
+
++++

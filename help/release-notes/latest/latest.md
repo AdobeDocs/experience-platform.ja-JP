@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年3月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 34%
+source-wordcount: '1209'
+ht-degree: 33%
 
 ---
 
@@ -82,6 +82,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | [（ベータ版）Acxiom データ拡張接続](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新規 | このコネクタを使用して、データエンリッチメントのためにReal-Time CDPから Acxiom にファーストパーティプロファイルをアクティブ化し、マーケティングチャネルをまたいで使用します。 その後、Acxiom ソースを使用して、拡張データを含むプロファイルを読み込み、Real-Time CDPで操作できます。 |
 | [（ベータ版）Acxiom Prospect Suppression 接続](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新規 | ファーストパーティオーディエンスを Acxiom の宛先に書き出して、Acxiom が既知の顧客やコンバージョンされた顧客を抑制できるようにします。 次に、 [Acxiom 見込みデータのインポート](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) 既知の顧客またはコンバージョン済みの顧客を削除して、見込み客リストを Acxiom から取り込み、有効化するソースコネクタ。 |
 | [Amazon Ads 接続](../../destinations/catalog/advertising/amazon-ads.md) | 更新 | Amazon Ads の宛先にデータを書き出す際に、Amazon DSPまたはAmazonMarketing Cloud（新規）にデータをルーティングできるようになりました。 |
+| [LiveRamp オンボーディング接続](../../destinations/catalog/advertising/liveramp-onboarding.md) | 更新 | LiveRamp オンボーディング先では、ヨーロッパおよびオーストラリアへの配信をサポートするようになりました。 [!DNL LiveRamp] [!DNL SFTP] インスタンス。 最大書き出しファイルサイズも 1,000 万行に（以前の 500 万行から）増加しました。 |
 
 {style="table-layout:auto"}
 
