@@ -3,9 +3,9 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: リアルタイム顧客プロファイル UI ガイド
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platformユーザーインターフェイスでリアルタイム顧客プロファイルを操作する際のガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2103'
 ht-degree: 7%
 
 ---
@@ -144,6 +144,12 @@ The **[!UICONTROL 属性]** 「 」タブには、指定した結合ポリシー
 
 ![「属性」タブがハイライト表示されます。 プロファイル属性が表示されます。](../images/user-guide/attributes.png)
 
+エッジで使用可能な属性を表示するには、を選択します。 **[!UICONTROL Edge]** （データの場所セレクター）。
+
+![「属性」タブ内のデータの場所の選択がハイライト表示されます。](../images/user-guide/attributes-select.png)
+
+エッジプロファイルの詳細については、 [エッジプロファイルに関するドキュメント](../edge-profiles.md).
+
 ### 「イベント」タブ
 
 The **[!UICONTROL イベント]** 「 」タブには、顧客に関連付けられた最新の 100 個の ExperienceEvents のデータが含まれます。 このデータには、電子メールの開封、買い物かごのアクティビティ、ページビューが含まれます。 選択 **[!UICONTROL すべて表示]** 個々のイベントの場合は、イベントの一部として取り込まれる追加のフィールドと値を提供します。
@@ -158,7 +164,11 @@ The **[!UICONTROL オーディエンスのメンバーシップ]** 「 」タブ
 
 Experience Platformでのセグメント化について詳しくは、 [AdobeExperience Platformセグメント化サービスのドキュメント](../../segmentation/home.md).
 
-![「オーディエンスのメンバーシップ」タブがハイライト表示されます。 プロファイルのオーディエンスメンバーシップの詳細が表示されます。](../images/user-guide/segment-membership.png)
+![「オーディエンスのメンバーシップ」タブがハイライト表示されます。 プロファイルのオーディエンスメンバーシップの詳細が表示されます。](../images/user-guide/audience-membership.png)
+
+Edge で使用可能なプロファイルのオーディエンスメンバーシップを表示するには、「 」を選択します。 **[!UICONTROL Edge]** （データの場所の選択）をクリックします。 エッジのセグメント化について詳しくは、 [エッジセグメントガイド](../../segmentation/ui/edge-segmentation.md).
+
+![オーディエンスのメンバーシップタブ内のデータの場所の選択が強調表示されます。](../images/user-guide/audience-membership-select.png)
 
 ## 結合ポリシー
 
