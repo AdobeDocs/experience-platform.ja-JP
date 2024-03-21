@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 84%
+source-wordcount: '1707'
+ht-degree: 83%
 
 ---
 
@@ -27,7 +27,7 @@ Experience Platform のアクセス制御を設定するには、Experience Plat
 
 - Adobe Experience Platform のライセンス認証、または Experience Platform を使用するアプリケーション／アプリケーションサービスのライセンス認証が完了すると、ライセンス認証時に指定した管理者に電子メールが送信されます。
 - 管理者は [Adobe Admin Console](#adobe-admin-console) にログインし、概要ページの製品のリストから **Adobe Experience Platform** を選択します。
-- Experience Platform へのアクセス権を付与するには、管理者がデフォルトの製品プロファイル `AEP-Default-All-Users` にユーザーを追加する必要があります。
+- 管理者がExperience Platformに対するアクセス権を付与するには、管理者がデフォルトの製品プロファイルにユーザーを追加することをお勧めします。 `AEP-Default-All-Users`.
 - Experience Platform の権限では、管理者は、新しい役割を作成したり、既存の役割の権限とユーザーを編集したりできます。
 - 役割を作成または編集する際、管理者は、**[!UICONTROL ユーザー]**&#x200B;タブを使用してユーザーを役割に追加し、役割の権限を編集してこれらのユーザーに権限（「[!UICONTROL データセットを読み取り]」や「[!UICONTROL スキーマを管理]」など）を付与します。同様に、管理者は、同じ編集オプションを使用してサンドボックスへのアクセス権を割り当てることができます。
 - ユーザーが Experience Platform ユーザーインターフェイスにログインすると、Experience Platform の機能へのアクセスは、前の手順で付与された権限によって決まります。例えば、ユーザーが[!UICONTROL データセットを表示]権限を持っていない場合、サイドメニューの「**[!UICONTROL データセット]**」タブはそのユーザーには表示されません。
