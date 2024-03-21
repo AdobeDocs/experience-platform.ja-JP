@@ -2,10 +2,10 @@
 title: タグ拡張のリファレンス
 description: Adobe Experience Platformのタグ拡張機能に関するドキュメントを検索します。
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 32%
+source-wordcount: '472'
+ht-degree: 28%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 32%
 * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
-* [Adobe Analytics &amp; Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)
+* [ADOBE ANALYTICS&amp;ADOBE TARGET](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe AnalyticsとMicrosoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics Product String](./product-string/overview.md)
@@ -68,7 +68,7 @@ ht-degree: 32%
 * [共通の Web SDK プラグイン](./web-sdk/web-sdk-plugins.md)
 * [連結](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
-* [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)
+* [Usercentrics による Cookie Consent Management CMP v2](https://exchange.adobe.com/apps/ec/*107037)*
 * [コア](./core/overview.md)
 * [Custom Debug Logger](https://exchange.adobe.com/apps/ec/104698)*
 * [顧客認識](https://exchange.adobe.com/apps/ec/100688)*
@@ -84,12 +84,13 @@ ht-degree: 32%
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Genesys 予測エンゲージメント](https://exchange.adobe.com/apps/ec/106148)*
 * [Google Data Layer](./google-data-layer/overview.md)
-* [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)
+* [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
 * [InMoment](https://exchange.adobe.com/apps/ec/100847)*
 * [JSON ヘルパー](https://exchange.adobe.com/apps/ec/106449)*
-* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)
+* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
 * [マッピングテーブル](https://exchange.adobe.com/apps/ec/103136)*
+* [マークリタグ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [マスタープロパティマネージャ](https://exchange.adobe.com/apps/ec/102992)*
 * [監視](https://exchange.adobe.com/apps/ec/106544)*
