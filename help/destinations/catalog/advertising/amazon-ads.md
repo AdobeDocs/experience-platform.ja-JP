@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
+source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 55%
@@ -16,7 +16,7 @@ ht-degree: 55%
 
 [!DNL Amazon Ads] には、登録販売者、ベンダー、書籍ベンダー、Kindle Direct Publishing(KDP) 作成者、アプリ開発者、代理店に対して広告目標を達成するのに役立つ様々なオプションが用意されています。
 
-The [!DNL Amazon Ads] Adobe Experience Platformとの統合により、 [!DNL Amazon Ads] Amazon DSP(ADSP) およびAmazon Marketing Cloud(AMC) を含む製品。
+The [!DNL Amazon Ads] Adobe Experience Platformとの統合により、 [!DNL Amazon Ads] Amazon DSP(ADSP) およびAmazonMarketing Cloud(AMC) を含む製品。
 
 の使用 [!DNL Amazon Ads] Adobe Experience Platformの宛先に設定すると、ユーザーは、Amazon DSPでのターゲティングとアクティブ化のための広告主オーディエンスを定義できます。  また、ユーザーは、 [!DNL Amazon Marketing Cloud] オーディエンス、広告主が提供したディメンション、Amazonセグメントのメンバーシップ、または AMC で使用可能なその他のシグナルによるパフォーマンスを把握します。 広告主オーディエンスを AMC にアップロードした後、ユーザーは [!DNL Amazon Marketing Cloud] 内からAmazonシグナルを使用して、オーディエンスメンバーを変更、拡張または追加する [!DNL Amazon Marketing Cloud].
 
@@ -171,7 +171,7 @@ The [!DNL Amazon Ads] 接続は、ID 照合のために、ハッシュ化され�
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2024年2月 | 機能とドキュメントの更新 | 使用するオーディエンスをエクスポートするオプションが追加されました。 [!DNL Amazon Marketing Cloud] (AMC) を使用します。 |
+| 2024年3月 | 機能とドキュメントの更新 | 使用するオーディエンスをエクスポートするオプションが追加されました。 [!DNL Amazon Marketing Cloud] (AMC) を使用します。 |
 | 2023年5月 | 機能とドキュメントの更新 | <ul><li>[宛先接続ワークフロー](#destination-details)での広告主地域選択のサポートを追加しました。</li><li>広告主地域の選択の追加を反映するようにドキュメントを更新しました。正しい広告主地域選択について詳しくは、[Amazon ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。</li></ul> |
 | 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |
 
