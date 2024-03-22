@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 55%
@@ -38,7 +38,7 @@ AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーデ�
 
 このとの統合 [!DNL Amazon Marketing Cloud] (AMC) により、 [!DNL Amazon Ads] 広告主が CDP セグメントをAdobe Experience Platformフォームから AMC に渡す場合。 その後、広告主は、 [!DNL Amazon Ads] メディアの影響、オーディエンスセグメント、カスタマージャーニーなどのトピックに関するシグナルを送信し、カスタム分析を実行します。また、プライバシーに準拠した形式でカスタムジャーニーを実行します。 例えば、広告主は既存の顧客のリストをアップロードして、広告キャンペーンの全体的な効果や、製品の詳細ページの表示、買い物かごへの製品の追加、製品の購入など、Amazon上のコンバージョンイベントの集計統計を把握できます。
 
-### 広告の最適化：
+### 広告の最適化
 
 このとの統合 [!DNL Amazon Marketing Cloud] (AMC) を使用すると、広告主は独自の顧客リストをアップロードし、 [!DNL Amazon Marketing Cloud] Amazon DSPでターゲティング用のアクティベーション対応オーディエンスを作成する前に、SQL を実行し、重複分析、抑制、追加またはオーディエンスの最適化を繰り返し実行します。
 
