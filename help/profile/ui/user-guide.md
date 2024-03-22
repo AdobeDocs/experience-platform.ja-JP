@@ -3,9 +3,9 @@ keywords: Experience Platform、プロファイル、リアルタイム顧客プ
 title: リアルタイム顧客プロファイル UI ガイド
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platformユーザーインターフェイスでリアルタイム顧客プロファイルを操作する際のガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2108'
 ht-degree: 7%
 
 ---
@@ -190,9 +190,9 @@ Edge で使用可能なプロファイルのオーディエンスメンバーシ
 
 メインから **[!UICONTROL プロファイル]** メニューで、 **[!UICONTROL 計算済み属性]** タブをクリックして、組織に属する計算済み属性のリストを表示します。
 
-計算済み属性の詳細については、 [計算済み属性の概要](../computed-attributes/overview.md). Platform UI 内で計算済み属性を使用する方法の詳細については、 [計算済み属性 UI ガイド](../computed-attributes/ui.md).
+![「計算済み属性」タブがハイライト表示されます。](../images/user-guide/computed-attributes.png)
 
-画像
+計算済み属性の詳細については、 [計算済み属性の概要](../computed-attributes/overview.md). Platform UI 内で計算済み属性を使用する方法の詳細については、 [計算済み属性 UI ガイド](../computed-attributes/ui.md).
 
 ## 次の手順
 
