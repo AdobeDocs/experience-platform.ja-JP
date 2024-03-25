@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ポリシーの自動適用
 description: このドキュメントでは、Experience Platform 内の宛先に対してオーディエンスをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 90%
+source-wordcount: '2109'
+ht-degree: 84%
 
 ---
 
@@ -92,7 +92,7 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 オーディエンスをアクティブ化（または[既にアクティブ化されたオーディエンスを編集](#policy-enforcement-for-activated-audiences)）しようとするとポリシー違反が発生する場合、アクションは実行されず、1 つ以上のポリシーに違反したことを示すポップオーバーが表示されます。違反がトリガーされると、適切なコンポーネントを更新してデータ使用ポリシーに準拠するようになるまで、「**[!UICONTROL 保存]**」ボタンは、変更するエンティティに対して無効になります。
 
-ポリシー違反の詳細を表示するには、その違反の左列のポップオーバーでポリシー違反を選択します。
+ポリシー名を選択して、違反の詳細を表示します。
 
 ![ポリシー違反を示すダイアログが表示され、ポリシー名がハイライト表示されます。](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 ![データ系列グラフが強調表示されたポリシー違反ダイアログ。](../images/enforcement/data-lineage.png)
 
-また、**[!UICONTROL フィルター]**&#x200B;アイコン（![](../images/enforcement/filter.png)）を使用して、表示されたエンティティをカテゴリでフィルターすることもできます。データを表示するには、少なくとも 2 つのカテゴリを選択する必要があります。
+また、 **[!UICONTROL フィルター]** アイコン (![フィルターアイコン。](../images/enforcement/filter.png)) をクリックして、表示されたエンティティをカテゴリ別にフィルタリングします。 データを表示するには、少なくとも 2 つのカテゴリを選択する必要があります。
 
 ![データ系列フィルターとドロップダウンメニューがハイライト表示されたポリシー違反ダイアログ。](../images/enforcement/lineage-filter.png)
 
 「**[!UICONTROL リスト表示]**」を選択し、データ系列をリストとして表示します。ビジュアルグラフに戻すには、「**[!UICONTROL パス表示]**」を選択します。
 
 ![データ系列のパス表示が強調表示されたポリシー違反ダイアログ。](../images/enforcement/list-view.png)
+
+#### ラベルが正常に適用されました {#labels-successfully-applied}
+
+スキーマフィールドにラベルを付ける前にデータ使用ポリシーを作成すると、スキーマにラベルを適用するとすぐに、ガバナンスポリシー違反ダイアログが表示される場合があります。 この場合、スキーマの一部に正常にラベルを付けることができます。 The [!UICONTROL ラベルが正常に適用されました] 「 」タブには、そのフィールドに対するポリシー制限がないので、どのラベルが正常に適用されたかが示されます。
+
+データ系列図を使用して、ラベルをスキーマフィールドに追加する前に必要なその他の設定の変更を理解します。
+
+![ポリシー違反ダイアログ [!UICONTROL ラベルが正常に適用されました] タブがハイライト表示されました。](../images/enforcement/labels-successfully-applied.png)
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
