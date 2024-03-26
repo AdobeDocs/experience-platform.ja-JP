@@ -3,10 +3,10 @@ title: Dataset Expiration API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 76%
+source-wordcount: '2083'
+ht-degree: 63%
 
 ---
 
@@ -130,8 +130,6 @@ curl -X GET \
 
 応答が成功すると、データセット有効期限の詳細が返されます。
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -186,29 +184,105 @@ curl -X GET \
 }
 ```
 
-## データセットの有効期限の作成または更新 {#create-or-update}
+## データセット有効期限の作成 {#create}
 
-PUTリクエストを使用して、データセットの有効期限を作成または更新します。 PUTリクエストでは、 `datasetId` または `ttlId`.
+指定した期間が経過してもデータがシステムから削除されるようにするには、データセット ID と有効期限の日時を ISO 8601 形式で指定して、特定のデータセットの有効期限をスケジュールします。
+
+データセットの有効期限を作成するには、次に示すようにPOSTリクエストを実行し、ペイロード内で以下に示す値を指定します。
 
 **API 形式**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| パラメーター | 説明 |
-| --- | --- |
-| `{DATASET_ID}` | 有効期限をスケジュール設定するデータセットの ID。 |
-| `{TTL_ID}` | データセット有効期限の ID。 |
 
 **リクエスト**
 
-次のリクエストは、データセット `5b020a27e7040801dedbf46e` の削除を 2022年末（グリニッジ標準時）にスケジュール設定します。データセットに既存の有効期限が見つからない場合は、新しい有効期限が作成されます。データセットに既に保留中の有効期限がある場合、その有効期限は新しい `expiry` の値で更新されます。
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `datasetId` | **必須** 有効期限をスケジュールするターゲットデータセットの ID。 |
+| `expiry` | **必須** ISO 8601 形式の日時。 文字列に明示的なタイムゾーンオフセットがない場合、タイムゾーンは UTC と見なされます。 システム内のデータの有効期限は、提供された有効期限値に従って設定されます。<br>注意：<ul><li>データセットのデータセット有効期限が既に存在する場合、リクエストは失敗します。</li><li>この日時は少なくとも設定する必要があります **24 時間後**.</li></ul> |
+| `displayName` | データセット有効期限リクエストの表示名（オプション）。 |
+| `description` | 有効期限リクエストのオプション説明。 |
+
+**応答**
+
+リクエストが成功した場合は、HTTP 201（作成済み）ステータスと、データセットの有効期限の新しい状態（既存のデータセットの有効期限がない場合）が返されます。
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `ttlId` | データセット有効期限の ID。 |
+| `datasetId` | この有効期限が適用されるデータセットの ID。 |
+| `datasetName` | この有効期限が適用されるデータセットの表示名。 |
+| `sandboxName` | ターゲットデータセットが配置されているサンドボックスの名前。 |
+| `imsOrg` | 組織の ID。 |
+| `status` | データセット有効期限の現在のステータス。 |
+| `expiry` | データセットが削除されるようにスケジュール設定された日付および時刻。 |
+| `updatedAt` | 有効期限が最後に更新された際のタイムスタンプ。 |
+| `updatedBy` | 有効期限を最後に更新したユーザー。 |
+| `displayName` | 有効期限のリクエストの表示名。 |
+| `description` | 有効期限リクエストの説明。 |
+
+データセットのデータセット有効期限が既に存在する場合、400(Bad Request)HTTP ステータスが発生します。 失敗した応答は、そのようなデータセットの有効期限が存在しない（またはアクセス権を持っていない）場合、404（未検出）HTTP ステータスを返します。
+
+## データセット有効期限の更新 {#update}
+
+データセットの有効期限を更新するには、PUTリクエストと `ttlId`. 次の項目を更新して、 `displayName`, `description`，および/または `expiry` 情報。
+
+>[!NOTE]
+>
+>有効期限の日時を変更する場合は、24 時間以上後にする必要があります。 この強制的な遅延により、期限切れのキャンセルや再スケジュールをおこない、誤ってデータが失われるのを防ぐことができます。
+
+**API 形式**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{TTL_ID}` | 変更するデータセット有効期限の ID。 |
+
+**リクエスト**
+
+次のリクエストは、データセットの有効期限を再スケジュールします。 `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` 2024 年末（グリニッジ標準時）に発生する 既存のデータセットの有効期限が見つかった場合、その有効期限は新しい `expiry` の値です。
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -223,7 +297,7 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `expiry` | ISO 8601 形式の日時。 文字列に明示的なタイムゾーンオフセットがない場合、タイムゾーンは UTC と見なされます。 システム内のデータの有効期限は、提供された有効期限値に従って設定されます。 同じデータセットの以前の有効期限のタイムスタンプは、指定した新しい有効期限値に置き換えられます。 |
+| `expiry` | **必須** ISO 8601 形式の日時。 文字列に明示的なタイムゾーンオフセットがない場合、タイムゾーンは UTC と見なされます。 システム内のデータの有効期限は、提供された有効期限値に従って設定されます。 同じデータセットの以前の有効期限のタイムスタンプは、指定した新しい有効期限値に置き換えられます。 この日時は少なくとも設定する必要があります **24 時間後**. |
 | `displayName` | 有効期限のリクエストの表示名。 |
 | `description` | 有効期限リクエストのオプション説明。 |
 
@@ -231,7 +305,7 @@ curl -X PUT \
 
 **応答**
 
-応答が成功すると、データセット有効期限の詳細が、HTTP ステータス（既存の有効期限が更新されていた場合は 200（OK）、既存の有効期限がなかった場合は 201（作成済み））と共に返されます。
+正常な応答は、データセットの有効期限の新しい状態と、既存の有効期限が更新された場合は HTTP ステータス 200(OK) を返します。
 
 ```json
 {
@@ -258,6 +332,8 @@ curl -X PUT \
 | `updatedBy` | 有効期限を最後に更新したユーザー。 |
 
 {style="table-layout:auto"}
+
+データセットの有効期限が存在しない場合、失敗した応答は 404（未検出）HTTP ステータスを返します。
 
 ## データセット有効期限のキャンセル {#delete}
 
