@@ -3,7 +3,7 @@ title: Dataset Expiration API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
+source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 63%
@@ -489,3 +489,4 @@ curl -X GET \
 | `updatedDate`／`updatedToDate`／`updatedFromDate` | `createdDate`／`createdFromDate`／`createdToDate` に似ていますが、作成時間ではなく、データセットの有効期限の更新時間に対して一致します。<br><br>有効期限は、作成時、キャンセル時、実行時を含め、編集されるたびに更新されたと見なされます。 | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
+
