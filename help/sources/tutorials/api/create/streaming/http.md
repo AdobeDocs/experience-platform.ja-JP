@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気の高いトピック；スト
 title: フローサービス API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、フローサービス API を使用して生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
+source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 34%
@@ -718,3 +718,4 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
     }
 }
 ```
+
