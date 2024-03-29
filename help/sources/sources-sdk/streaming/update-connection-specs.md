@@ -2,14 +2,19 @@
 title: フローサービス API を使用して、ストリーミング SDK の接続仕様を更新します
 description: 次のドキュメントでは、セルフサービスソース用フローサービス API（ストリーミング SDK）を使用して接続を指定する手順を説明します。
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: ベータ版
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '163'
 ht-degree: 4%
 
 ---
 
 # フローサービス API を使用した接続仕様の更新
+
+>[!NOTE]
+>
+>セルフサービスソースストリーミング SDK はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 接続操作を通じて、接続仕様のプロパティを更新することがPUTできます。 PUTリクエストを通じてPOST仕様を更新する場合、本文には、接続リクエストで新しい接続仕様を作成する際に必要となるすべてのフィールドを含める必要があります。
 

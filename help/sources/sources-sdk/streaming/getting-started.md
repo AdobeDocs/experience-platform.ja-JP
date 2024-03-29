@@ -2,14 +2,19 @@
 title: セルフサービスソース（ストリーミング SDK）の概要
 description: このドキュメントでは、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の情報について説明します。
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: ベータ版
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 35%
+source-wordcount: '543'
+ht-degree: 34%
 
 ---
 
 # セルフサービスソース（ストリーミング SDK）の概要
+
+>[!NOTE]
+>
+>セルフサービスソースストリーミング SDK はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 セルフサービスソース（ストリーミング SDK）を使用すると、独自のソースを統合して、ストリーミングデータをAdobe Experience Platformに取り込むことができます。 このドキュメントでは、 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

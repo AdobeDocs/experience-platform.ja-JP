@@ -2,14 +2,19 @@
 title: ソースをテストして送信する
 description: 次のドキュメントでは、フローサービス API を使用して新しいソースをテストおよび検証し、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを統合する手順を説明します。
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: ベータ版
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1265'
 ht-degree: 22%
 
 ---
 
 # ソースのテストと送信
+
+>[!NOTE]
+>
+>セルフサービスソースストリーミング SDK はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 セルフサービスソース（ストリーミング SDK）を使用して新しいソースをAdobe Experience Platformに統合する最後の手順は、新しいソースをテストして送信することです。 接続の仕様を完了し、ストリーミングフローの仕様を更新したら、API または UI を使用して、ソースの機能のテストを開始できます。 成功したら、Adobe担当者に問い合わせて、新しいソースを送信できます。
 

@@ -2,14 +2,19 @@
 title: フローサービス API を使用して、ストリーミング SDK 用の新しい接続仕様を作成します
 description: 次のドキュメントでは、フローサービス API を使用して接続仕様を作成し、セルフサービスソースを使用して新しいソースを統合する手順を説明します。
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: ベータ版
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 37%
+source-wordcount: '756'
+ht-degree: 36%
 
 ---
 
 # を使用して新しい接続仕様を作成します。 [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>セルフサービスソースストリーミング SDK はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 接続仕様は、ソースの構造を表します。ソースの認証要件に関する情報が含まれ、ソースデータの調査および検査方法が定義され、特定のソースの属性に関する情報が提供されます。[!DNL Flow Service] API の `/connectionSpecs` エンドポイントを使用すると、組織内の接続仕様をプログラムで管理できます。
 

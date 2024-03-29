@@ -2,14 +2,19 @@
 title: フローサービス API を使用したストリーミング SDK のフロー仕様の更新
 description: 次のドキュメントでは、セルフサービスソース用フローサービス API（ストリーミング SDK）を使用して、フロー仕様を取得および更新する手順を説明します。
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: ベータ版
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 14%
+source-wordcount: '423'
+ht-degree: 13%
 
 ---
 
 # を使用してフロー仕様を更新する [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>セルフサービスソースストリーミング SDK はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
 
 新しい接続仕様 ID を生成したら、データフローを作成するために、フロー仕様にこの ID を追加する必要があります。
 
