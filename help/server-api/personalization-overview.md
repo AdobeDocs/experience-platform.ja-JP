@@ -2,20 +2,20 @@
 title: パーソナライゼーションの概要
 description: Adobe Experience Platform Edge Network Server API を使用して、パーソナライズされたコンテンツをAdobeのパーソナライゼーションソリューションから取得する方法について説明します。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '735'
 ht-degree: 10%
 
 ---
 
 # パーソナライゼーションの概要
 
-を使用 [!DNL Server API]を使用すると、次のようなパーソナライズされたコンテンツをAdobeパーソナライゼーションソリューションから取得できます。 [Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html) および [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja).
+を使用 [!DNL Server API]を使用すると、次のようなパーソナライズされたコンテンツをAdobeパーソナライゼーションソリューションから取得できます。 [Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)、および [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja).
 
 また、 [!DNL Server API] では、Adobe Experience Platformのパーソナライゼーションの宛先 ( [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション接続](../destinations/catalog/personalization/custom-personalization.md). 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、 [専用ガイド](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Server API を使用する場合は、パーソナライゼーションエンジンから提供される応答と、サイト上でのコンテンツのレンダリングに使用されるロジックを統合する必要があります。 とは異なり、 [Web SDK](../web-sdk/home.md)、 [!DNL Server API] には、が返したコンテンツを自動的に適用するメカニズムがありません。 [!DNL Adobe Target] および [!DNL Offer Decisioning].
+Server API を使用する場合は、パーソナライゼーションエンジンから提供される応答と、サイト上でのコンテンツのレンダリングに使用されるロジックを統合する必要があります。 とは異なり、 [Web SDK](../web-sdk/home.md)、 [!DNL Server API] には、Adobeのパーソナライゼーションソリューションから返されるコンテンツを自動的に適用するメカニズムはありません。
 
 ## 用語 {#terminology}
 
@@ -34,24 +34,30 @@ Adobeのパーソナライゼーションソリューションを使用する前
 
 ```json
 {
-   "query":{
-      "personalization":{
-         "schemas":[
-            "https://ns.adobe.com/personalization/html-content-item",
-            "https://ns.adobe.com/personalization/json-content-item",
-            "https://ns.adobe.com/personalization/redirect-item",
-            "https://ns.adobe.com/personalization/dom-action"
-         ],
-         "decisionScopes":[
-            "alloyStore",
-            "siteWide",
-            "__view__",
-            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
-         ]
-      }
-   }
+  "query": {
+    "personalization": {
+      "schemas": [
+        "https://ns.adobe.com/personalization/html-content-item",
+        "https://ns.adobe.com/personalization/json-content-item",
+        "https://ns.adobe.com/personalization/redirect-item",
+        "https://ns.adobe.com/personalization/dom-action"
+      ],
+      "decisionScopes": [
+        "alloyStore",
+        "siteWide",
+        "__view__",
+        "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
+      ],
+      "surfaces": [
+        "web://mywebpage.html/",
+        "web://mywebpage.html/#sample-json-content"
+      ]
+    }
+  }
 }
 ```
+
+
 
 | 属性 | タイプ | 必須／オプション | 説明 |
 | --- | --- | --- | ---|

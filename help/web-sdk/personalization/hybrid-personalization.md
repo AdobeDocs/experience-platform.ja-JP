@@ -3,10 +3,10 @@ title: Web SDK と Edge Network Server API を使用したハイブリッドパ�
 description: この記事では、Web SDK を Server API と組み合わせて使用して、web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション;ハイブリッド;Server API;サーバーサイド;ハイブリッド実装;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 94%
+source-wordcount: '861'
+ht-degree: 84%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 94%
 
 ハイブリッドパーソナライゼーションでは、[Edge Network Server API](../../server-api/overview.md) を使用してパーソナライゼーションコンテンツをサーバーサイドで取得し、[Web SDK](../home.md) を使用してクライアント側でレンダリングするプロセスについて説明します。
 
-ハイブリッドパーソナライゼーションを、Adobe Target や Offer Decisioning などのパーソナライゼーションソリューションと共に使用できますが、違いは、[!UICONTROL Server API] ペイロードの内容です。
+ハイブリッドパーソナライゼーションを、Adobe Target、Adobe Journey Optimizer、Offer decisioningなどのパーソナライゼーションソリューションと共に使用できます。違いは、 [!UICONTROL サーバー API] ペイロード。
 
 ## 前提条件 {#prerequisites}
 
@@ -39,9 +39,9 @@ Web プロパティにハイブリッドパーソナライゼーションを実�
 1. Server API は、パーソナライゼーションコンテンツをアプリケーションサーバーに返します。
 1. アプリケーションサーバーは、[ID とクラスターの Cookie](#cookies) を含んだ HTML 応答をクライアントブラウザーに返します。
 1. クライアントページでは、[!DNL Web SDK] `applyResponse` コマンドが呼び出され、前のステップの [!UICONTROL Server API] 応答のヘッダーと本文が渡されます。
-1. `renderDecisions` フラグが `true` に設定されているので、[!DNL Web SDK] は [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) が提供するページの読み込みを自動的にレンダリングします。
-1. フォームベースの [!DNL JSON] オファーは、`applyPersonalization` メソッドを使用して手動で適用され、パーソナライゼーション オファーに基づいて [!DNL DOM] を更新します。
-1. フォームベースのアクティビティの場合、オファーがいつ表示されたかを示すために、表示イベントを手動で送信する必要があります。これは、`sendEvent` コマンドを使用して行われます。
+1. The [!DNL Web SDK] renders Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) オファーとJourney Optimizer Web チャネルの項目は、 `renderDecisions` フラグが `true`.
+1. Target フォームベース [!DNL HTML]/[!DNL JSON] オファーとJourney Optimizerのコードベースのエクスペリエンスは、 `applyProposition` メソッドを使用して、 [!DNL DOM] 提案内のパーソナライゼーションコンテンツに基づいて
+1. Target フォームベースの場合 [!DNL HTML]/[!DNL JSON] オファーおよびJourney Optimizerのコードベースのエクスペリエンスでは、表示イベントを手動で送信して、返されたコンテンツがいつ表示されたかを示す必要があります。 これは、`sendEvent` コマンドを使用して行われます。
 
 ## Cookie {#cookies}
 

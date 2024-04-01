@@ -3,16 +3,16 @@ title: Platform Web SDK でのAdobe Journey Optimizerの使用
 description: Adobe Journey Optimizerを使用してExperience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: ajo;ajoweb;adobe journey optimizer;renderDecisions;surfaces;decisions;propositions;scope;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '390'
 ht-degree: 1%
 
 ---
 
 # 使用 [!DNL Adobe Journey Optimizer] と [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] では、で管理されるパーソナライズされたエクスペリエンスを配信およびレンダリングできます [!DNL Adobe Journey Optimizer] を web チャネルに追加します。 WYSIWYG エディタを使用できます。 [!DNL Adobe Journey Optimizer] [ウェブキャンペーン UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)を作成、アクティブ化、配信する [!DNL Journey Optimizer Web] キャンペーンとパーソナライゼーションエクスペリエンス。
+[!DNL Adobe Experience Platform] [!DNL Web SDK] では、で管理されるパーソナライズされたエクスペリエンスを配信およびレンダリングできます [!DNL Adobe Journey Optimizer] を web チャネルに追加します。 WYSIWYG エディタを使用できます。 [!DNL Adobe Journey Optimizer] [Web チャネル](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)または非ビジュアルインターフェイス [コードベースの Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) を作成、アクティブ化、配信するには、以下を実行します。 [!DNL Journey Optimizer Web] キャンペーンとパーソナライゼーションエクスペリエンス。
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 用語 {#terminology}
 
-**[!UICONTROL サーフェス]**:Web サーフェスは、URL で識別される Web プロパティで、 [!DNL Adobe Journey Optimizer] エクスペリエンスコンテンツが配信されます。
+**[!UICONTROL サーフェス]**:Web サーフェスは、URI で識別される Web ページまたはページ上の場所で、 [!DNL Adobe Journey Optimizer] エクスペリエンスコンテンツが配信されます。
 
 **[!UICONTROL 提案]**：内 [!DNL Adobe Journey Optimizer]、提案は、 [!DNL Journey Optimizer Campaign].
 

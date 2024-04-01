@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK を使用したパーソナライズさ
 description: Adobe Experience Platform Web SDK を使用してパーソナライズされたコンテンツをレンダリングする方法について説明します。
 keywords: パーソナライゼーション；renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 6841a6f777d18845ce36e3503fbdb9698ece84bb
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '947'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform Web SDK は、次のようなパーソナライゼー�
 
 さらに、Web SDK を使用すると、Adobe Experience Platformのパーソナライゼーションの宛先 ( [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) そして [カスタムパーソナライゼーション接続](../../destinations/catalog/personalization/custom-personalization.md). 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、 [専用ガイド](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Adobe Target内で作成されたコンテンツ [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) とAdobe Journey Optimizer [ウェブキャンペーン UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) は、SDK で自動的に取得およびレンダリングできます。 Adobe Target内で作成されたコンテンツ [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) またはOffer decisioningは、SDK で自動的にレンダリングできません。 代わりに、SDK を使用してこのコンテンツを要求し、自分で手動でコンテンツをレンダリングする必要があります。
+Adobe Target内で作成されたコンテンツ [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) とAdobe Journey Optimizer [ウェブキャンペーン UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) は、SDK で自動的に取得およびレンダリングできます。 Adobe Target内で作成されたコンテンツ [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), Adobe Journey Optimizer [コードベースの Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) またはOffer decisioningは、SDK で自動的にレンダリングできません。 代わりに、SDK を使用してこのコンテンツを要求し、自分で手動でコンテンツをレンダリングする必要があります。
 
 ## コンテンツの自動レンダリング {#automatic}
 
@@ -299,7 +299,7 @@ SDK は、次の機能を提供します。 [ちらつきを制御](../personali
 
 ## 指標を増分せずに単一ページアプリケーションで提案をレンダリング {#applypropositions}
 
-The `applyPropositions` コマンドを使用すると、次の提案の配列をレンダリングまたは実行できます： [!DNL Target] を単一ページのアプリケーションに追加するときに、 [!DNL Analytics] および [!DNL Target] 指標。 これにより、レポートの精度が向上します。
+The `applyPropositions` コマンドを使用すると、次の提案の配列をレンダリングまたは実行できます： [!DNL Target] またはAdobe Journey Optimizerを単一ページのアプリケーションに変換する場合、 [!DNL Analytics] および [!DNL Target] 指標。 これにより、レポートの精度が向上します。
 
 >[!IMPORTANT]
 >
@@ -338,7 +338,7 @@ alloy("applyPropositions", {
 
 ### 使用例 2：セレクターのない提案をレンダリングする
 
-この使用例は、 [!DNL Target Form-based Experience Composer].
+この使用例は、 [!DNL Target Form-based Experience Composer] またはAdobe Journey Optimizer [コードベースの Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
 
 セレクター、アクションおよび範囲を `applyPropositions` を呼び出します。
 
@@ -372,16 +372,31 @@ alloy("sendEvent", {
         var renderedPropositions = applyPropositionsResult.propositions;
 
         // Send the display notifications via sendEvent command
-        alloy("sendEvent", {
-            "xdm": {
-                "eventType": "decisioning.propositionDisplay",
-                "_experience": {
-                    "decisioning": {
-                        "propositions": renderedPropositions
-                    }
-                }
-            }
-        });
+        function sendDisplayEvent(proposition) {
+            const {
+                id,
+                scope,
+                scopeDetails = {}
+            } = proposition;
+
+            alloy("sendEvent", {
+                xdm: {
+                    eventType: "decisioning.propositionDisplay",
+                    _experience: {
+                        decisioning: {
+                            propositions: [{
+                                id: id,
+                                scope: scope,
+                                scopeDetails: scopeDetails,
+                            }, ],
+                            propositionEventType: {
+                                display: 1
+                            },
+                        },
+                    },
+                },
+            });
+        }
     });
 });
 ```
