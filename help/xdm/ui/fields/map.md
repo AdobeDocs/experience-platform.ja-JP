@@ -1,9 +1,10 @@
 ---
 title: UI でのマップフィールドの定義
 description: Experience Platformユーザーインターフェイスでマップフィールドを定義する方法を説明します。
-source-git-commit: 8eea73c91d0671b1ddaeb8da0dc18b3e5e306f57
+exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
+source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -25,6 +26,19 @@ A [!UICONTROL マップ値のタイプ] プロパティが表示されます。 
 サブフィールドを設定したら、そのサブフィールドをフィールドグループに割り当てる必要があります。 以下を使用します。 **[!UICONTROL フィールドグループ]** ドロップダウンメニューまたは検索フィールドを使用して、 **[!UICONTROL 適用]**. 同じ処理を使用して引き続きオブジェクトにフィールドを追加するか、「 」を選択します。 **[!UICONTROL 保存]** をクリックして設定を確定します。
 
 ![適用されるフィールドグループの選択と設定の記録。](../../images/ui/fields/special/assign-to-field-group.gif)
+
+## 使用制限 {#restrictions}
+
+XDM では、このデータ型の使用に次の制限を設けます。
+
+* マップタイプはタイプである必要があります `object`.
+* マップタイプには、プロパティを定義することはできません（つまり、「空の」オブジェクトを定義します）。
+* マップタイプには `additionalProperties.type` マップ内に配置される値を示すフィールド。 `string` または `integer`.
+
+必要に応じて、次のパフォーマンス上の欠点があるので、マップタイプのフィールドのみを使用していることを確認します。
+
+* 応答時間：自 [Adobe Experience Platform Query Service](../../../query-service/home.md) は 3 秒から 10 秒に分解し、1 億レコードを記録します。
+* マップのキー数は 16 個未満にする必要があります。16 個未満にすると、さらに低下する可能性があります。
 
 >[!NOTE]
 >
