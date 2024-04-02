@@ -4,10 +4,10 @@ solution: Experience Platform
 title: バッチ取得 API の概要
 description: Adobe Experience Platform Batch Ingestion API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model(XDM) レジストリの既知のスキーマに適合するデータを取り込むことができます。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 73%
+source-wordcount: '1388'
+ht-degree: 65%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 73%
 
 Adobe Experience Platform Batch Ingestion API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 フラットファイル（Parquet ファイルなど）のプロファイルデータ、または [!DNL Experience Data Model] (XDM) レジストリ。
 
-この [バッチ取得 API リファレンス](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) は、これらの API 呼び出しに関する追加情報を提供します。
+The [バッチ取得 API リファレンス](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) は、これらの API 呼び出しに関する追加情報を提供します。
 
 次の図に、バッチインジェストプロセスの概要を示します。
 
@@ -44,17 +44,17 @@ Adobe Experience Platform Batch Ingestion API を使用すると、データを�
 - バッチあたりの最大ファイル数：1500
 - 最大バッチサイズ：100GB
 - 1 行あたりのプロパティまたはフィールドの最大数：10000
-- 1 ユーザーあたりの 1 分あたりの最大バッチ数：138
+- 1 ユーザーあたりの、1 分あたりのデータレイクの最大バッチ数： 138
 
 >[!NOTE]
 >
->512 MB を超えるファイルをアップロードする場合は、ファイルを小さなチャンクに分割する必要があります。大きなファイルをアップロードする手順については、 [このドキュメントの大きなファイルのアップロードの節](#large-file-upload---create-file).
+>512 MB を超えるファイルをアップロードする場合は、ファイルを小さなチャンクに分割する必要があります。サイズの大きいファイルをアップロードする手順については、 [このドキュメントの大きなファイルのアップロードの節](#large-file-upload---create-file).
 
 ### タイプ
 
 データを取り込む際は、次の点を理解することが重要です。 [!DNL Experience Data Model] (XDM) スキーマが機能します。 XDM のフィールドタイプを様々な形式にマップする方法について詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
-データ取得には柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。  できない場合は、バッチが `TypeCompatibilityException` で失敗します。
+データを取り込む際には、柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。 できない場合は、バッチが `TypeCompatibilityException` で失敗します。
 
 例えば、JSON も CSV も `date` または `date-time` タイプ。 その結果、これらの値は [ISO 8061 形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000～08:00&quot;) または Unix 時間 ( ミリ秒 (1531263959000) で書式設定され、取得時にターゲット XDM タイプに変換されます。
 
@@ -62,24 +62,24 @@ Adobe Experience Platform Batch Ingestion API を使用すると、データを�
 
 | 受信（行）とターゲット（列） | String | Byte | Short | Integer | Long | Double | Date | Date-Time | Object | Map |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| String | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
-| Short | X | X | X | X | X | X |  |  |  |  |
-| Integer | X | X | X | X | X | X |  |  |  |  |
-| Long | X | X | X | X | X | X | X | X |  |  |
-| Double | X | X | X | X | X | X |  |  |  |  |
-| Date |  |  |  |  |  |  | X |  |  |  |
-| Date-Time |  |  |  |  |  |  |  | X |  |  |
-| Object |  |  |  |  |  |  |  |  | X | X |
-| Map |  |  |  |  |  |  |  |  | X | X |
+| String | X | X | X | X | X | X | X | X |   |   |
+| Byte | X | X | X | X | X | X |   |   |   |   |
+| Short | X | X | X | X | X | X |   |   |   |   |
+| Integer | X | X | X | X | X | X |   |   |   |   |
+| Long | X | X | X | X | X | X | X | X |   |   |
+| Double | X | X | X | X | X | X |   |   |   |   |
+| Date |   |   |   |   |   |   | X |   |   |   |
+| Date-Time |   |   |   |   |   |   |   | X |   |   |
+| Object |   |   |   |   |   |   |   |   | X | X |
+| Map |   |   |   |   |   |   |   |   | X | X |
 
 >[!NOTE]
 >
-> ブール値と配列は他の型に変換できません。
+>ブール値と配列は他の型に変換できません。
 
 ## API の使用
 
-この [!DNL Data Ingestion] API を使用すると、データをバッチ（1 つのユニットとして取り込む 1 つ以上のファイルで構成されるデータの単位）としてに取り込むことができます。 [!DNL Experience Platform] 3 つの基本的な手順を次に示します。
+The [!DNL Data Ingestion] API を使用すると、データをバッチ（1 つのユニットとして取り込む 1 つ以上のファイルで構成されるデータの単位）としてに取り込むことができます。 [!DNL Experience Platform] 3 つの基本的な手順を次に示します。
 
 1. 新しいバッチを作成します。
 2. データの XDM スキーマと一致する、指定したデータセットにファイルをアップロードします。
@@ -142,11 +142,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 アップロード用の新しいバッチが正常に作成されたら、ファイルを特定のデータセットにアップロードできます。
 
-ファイルをアップロードするには、Small File Upload API を使用します。ただし、ファイルのサイズが大きすぎて、ゲートウェイの制限（拡張タイムアウト、リクエストの本文のサイズ、その他の制限）を超える場合は、Large File Upload API に切り替えることができます。この API は、ファイルをチャンク単位でアップロードし、その後 Large File Upload Complete API 呼び出しを使用してデータを統合します。
+ファイルをアップロードするには、Small File Upload API を使用します。 ただし、ファイルのサイズが大きすぎて、ゲートウェイの制限（拡張タイムアウト、リクエストの本文のサイズ、その他の制限）を超える場合は、Large File Upload API に切り替えることができます。 この API は、ファイルをチャンク単位でアップロードし、Large File Upload Complete API 呼び出しを使用してデータを結び付けます。
 
 >[!NOTE]
 >
->バッチ取り込みは、プロファイルストア内のデータを増分的に更新するために使用できます。 詳しくは、 [バッチの更新](#patch-a-batch) 内 [バッチ取得開発者ガイド](api-overview.md).
+>バッチ取り込みは、プロファイルストア内のデータを増分的に更新するために使用できます。 詳しくは、 [バッチの更新](#patch-a-batch) （内） [バッチ取得開発者ガイド](api-overview.md).
 
 >[!INFO]
 >
@@ -257,7 +257,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## バッチ完了を示す
 
-すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。これを行うと、 [!DNL Catalog] DataSetFile エントリは、完了したファイルに対して作成され、上で生成したバッチに関連付けられます。 これにより、[!DNL Catalog] のバッチが成功とマークされ、ダウンストリームフローがトリガーされて使用可能なデータを取り込みます。
+すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。これを実行すると、 [!DNL Catalog] DataSetFile エントリは、完了したファイルに対して作成され、上で生成したバッチに関連付けられます。 これにより、[!DNL Catalog] のバッチが成功とマークされ、ダウンストリームフローがトリガーされて使用可能なデータを取り込みます。
 
 **リクエスト**
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
+source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
 workflow-type: tm+mt
-source-wordcount: '4018'
+source-wordcount: '4014'
 ht-degree: 86%
 
 ---
@@ -78,7 +78,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 | [!UICONTROL パートナーと共有] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスを他の Platform ユーザーと共有します。 この機能について詳しくは、[Segment Match の概要](./segment-match/overview.md)を参照してください。 |
 | [!UICONTROL タグの管理] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスに属するユーザー定義のタグを管理します。 この機能について詳しくは、[フィルタリングとタグ付け](#manage-audiences)に関する節を参照してください。 |
 | [!UICONTROL フォルダーに移動] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスが属するフォルダーを管理します。 この機能について詳しくは、[フィルタリングとタグ付け](#manage-audiences)に関する節を参照してください。 |
-| [!UICONTROL コピー] | オーディエンス構成、カスタムアップロード、セグメント化サービス | 選択されたオーディエンスを複製します。 |
+| [!UICONTROL コピー] | セグメント化サービス | 選択されたオーディエンスを複製します。 |
 | [!UICONTROL アクセスラベルの適用] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスに属するアクセスラベルを管理します。 アクセスラベルについて詳しくは、[ラベルの管理](../../access-control/abac/ui/labels.md)に関するドキュメントを参照してください。 |
 | [!UICONTROL アーカイブ] | カスタムアップロード | 選択されたオーディエンスをアーカイブします。 |
 | [!UICONTROL 削除] | オーディエンス構成、カスタムアップロード、セグメント化サービス | 選択されたオーディエンスを削除します。 |
