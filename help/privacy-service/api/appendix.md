@@ -5,10 +5,10 @@ title: Privacy ServiceAPI ガイドの付録
 description: このドキュメントには、Privacy ServiceAPI の操作に関する追加情報が含まれています。
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 59%
+source-wordcount: '496'
+ht-degree: 57%
 
 ---
 
@@ -62,18 +62,24 @@ ht-degree: 59%
 
 ジョブ作成リクエストの `include` 属性でアドビ製品を指定するために使用できる値の概要を次の表に示します。
 
+>[!NOTE]
+>
+>製品リストの値は、大文字と小文字が区別されません。 キャメルケースは推奨されますが、適用されません。
+
 | 製品 | `include` 属性で使用する値 |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `AudienceManager` |
+| Adobe Audience Manager | `audienceManager` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform (Data Lake) | `aepDataLake` |
+| Adobe Experience Platform （データレイク） | `aepDataLake` |
 | Adobe Experience Platform（リアルタイム顧客プロファイル） | `profileService` |
 | Adobe Pass 認証 | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | 顧客属性 (CRS) | `CRS` |
+| 顧客ジャーニー管理 | `cjm` |
 | ID サービス | `identity` |
 | Marketo Engage | `marketo` |
+| Marketo Measure | `marketomeasure` |
 
 {style="table-layout:auto"}

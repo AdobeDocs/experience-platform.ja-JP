@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: ab2ebc5e2ba63d415ef39feba0392d08026050ba
 workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 44%
@@ -49,7 +49,7 @@ ht-degree: 44%
 
 >[!IMPORTANT]
 >
->従来のエディターは 2024 年 4 月 1 日に廃止され、使用できなくなります。
+>レガシーエディターは 2024 年 4 月 30 日に廃止され、使用できなくなります。
 
 ## クエリエディターの切り替え機能の強化 {#enhanced-editor-toggle}
 
