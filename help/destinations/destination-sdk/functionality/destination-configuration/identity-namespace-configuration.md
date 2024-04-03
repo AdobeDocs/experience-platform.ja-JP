@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先でサポートされるターゲット ID の設定方法を説明します。
 title: ID 名前空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 95%
+source-wordcount: '892'
+ht-degree: 83%
 
 ---
 
@@ -13,9 +13,11 @@ ht-degree: 95%
 
 Experience Platform は、ID 名前空間を使用して、特定の ID のタイプを記述します。例えば、`Email` と呼ばれる ID 名前空間は、`name@email.com` のような値をメールアドレスとして識別します。
 
-Destination SDK で宛先を作成すると、ユーザーによるプロファイル属性および ID のマッピングが可能な[パートナースキーマを設定](schema-configuration.md)することに加えて、宛先プラットフォームでサポートされている ID 名前空間を定義することもできます。
+に加えて、Destination SDKを通じてリアルタイム（ストリーミング）の宛先を作成する場合 [パートナースキーマの設定](schema-configuration.md) ユーザーがプロファイル属性と id をにマッピングできるように、宛先プラットフォームでサポートされる id 名前空間も定義する必要があります。 例えば、宛先プラットフォームがハッシュ化された電子メールを受け入れ、 [!DNL IDFA]の場合、これら 2 つの ID を [このドキュメントでさらに詳しく説明する](#supported-parameters).
 
-これを行うと、ユーザーは、ターゲットプロファイル属性に加えて、ターゲット ID も選択できるようになります。
+ストリーミング宛先に対してオーディエンスをアクティブ化する場合、ユーザーは、ターゲットプロファイル属性に加えて、ターゲット ID をマッピングする必要があります。 そうしないと、オーディエンスは宛先プラットフォームに対してアクティブ化されません。
+
+Destination SDKを使用してファイルベースの宛先を作成する場合、ID 名前空間の設定はオプションです。
 
 Experience Platform の ID 名前空間について詳しくは、[ID 名前空間ドキュメント](../../../../identity-service/features/namespaces.md)を参照してください。
 
@@ -44,8 +46,8 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 
 | 統合タイプ | 機能のサポート |
 |---|---|
-| リアルタイム（ストリーミング）統合 | ○ |
-| ファイルベースの（バッチ）統合 | ○ |
+| リアルタイム（ストリーミング）統合 | はい（必須） |
+| ファイルベースの（バッチ）統合 | はい（オプション） |
 
 ## サポートされるパラメーター {#supported-parameters}
 
