@@ -2,9 +2,9 @@
 title: Adobe Analytics Product String 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics Product String タグ拡張機能について説明します。
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '516'
 ht-degree: 100%
 
 ---
@@ -89,7 +89,7 @@ digitalData.transaction.item.productInfo.productName
 
 このアクションは、対応する成功イベントを設定する「Adobe Analytics - Set Variables」アクション、および「Adobe Analytics - Send Beacon」アクションと共に実行する必要があります。アクションの適切な順序を次に示します。
 
-![標準フィールド](./images/screenshot-price-type.png)
+![標準フィールド](./images/screenshot-action-type.png)
 
 ### 要件
 
