@@ -3,10 +3,10 @@ title: Platform Web SDK でのOffer decisioningの使用
 description: Adobe Experience Platform Web SDK は、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 オファー UI または API を使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 0449718b1f536055d3dca27dfed1346c066e0325
+source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
 workflow-type: tm+mt
-source-wordcount: '849'
-ht-degree: 13%
+source-wordcount: '818'
+ht-degree: 12%
 
 ---
 
@@ -27,8 +27,6 @@ Adobe Experience Platform [!DNL Web SDK] では、Offer decisioningで管理さ�
 ## 用語
 
 offer decisioningを扱う際は、次の用語を理解することが重要です。 詳細および追加のキーワードを表示するには、 [Offer decisioning用語集](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
-
-* **コンテナ：** コンテナとは、異なる懸念を切り離すための分離メカニズムです。 コンテナ ID は、すべてのリポジトリ API の最初のパス要素です。すべての決定オブジェクトはコンテナ内に存在します。
 
 * **決定範囲：** offer decisioningの場合、決定範囲は、offer decisioningサービスがオファーの提案に使用するアクティビティと配置 ID を含む、Base64 でエンコードされた JSON の文字列です。
 
