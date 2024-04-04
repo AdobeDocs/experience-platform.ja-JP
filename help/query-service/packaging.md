@@ -2,9 +2,9 @@
 title: クエリサービスパッケージング
 description: 次のドキュメントでは、クエリサービスで使用できる機能と製品のパッケージ化の概要を説明し、アドホッククエリとバッチクエリの違いについて説明します。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
+source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '980'
 ht-degree: 5%
 
 ---
@@ -52,9 +52,11 @@ Adobe Experience Platformクエリサービスは、実行可能なクエリパ�
 
 Experience Platformのアクセス制御は、 [Adobe Admin Console](https://adminconsole.adobe.com/) 製品プロファイルは、ユーザーを権限とサンドボックスにリンクします。 詳しくは、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
 
-クエリサービスを使用するには、 [!DNL Manage Queries] 権限は、Admin Console内で有効にする必要があります。 この権限を持つユーザーは、アドホッククエリおよびバッチクエリを実行できます。 製品プロファイルへのアクセスをリクエストするための詳細な手順 [!DNL Manage Queries] 許可の概要は、 [製品プロファイルの権限の管理](../access-control/ui/permissions.md) および [製品プロファイルのユーザーの管理](../access-control/ui/users.md) ドキュメント。
+詳しくは、 [製品プロファイルの権限の管理](../access-control/ui/permissions.md) および [製品プロファイルのユーザーの管理](../access-control/ui/users.md) 製品プロファイル権限へのアクセスをリクエストする手順について詳しくは、ドキュメントを参照してください。
 
-購入後、 [!DNL Data Distiller] アドオン、 [!DNL Write Dataset] 権限を付与する必要があります。 この権限は次を許可します。 [!DNL Data Distiller] バッチクエリを実行するユーザー。
+### 関連するクエリサービスの権限 {#query-service-permissions}
+
+クエリサービスを使用するには、 **[!DNL Manage Queries]** 権限は、Admin Console内で有効にする必要があります。 この権限を持つユーザーは、アドホッククエリおよびバッチクエリを実行できます。
 
 次の表に、 [!DNL Manage Queries] 権限：
 
@@ -62,6 +64,17 @@ Experience Platformのアクセス制御は、 [Adobe Admin Console](https://adm
 |---|---|
 | [!DNL Manage Queries] （データ書き込み権限なし） | アドホッククエリを実行するためのアクセスを提供します |
 | [!DNL Manage Queries] （データ書き込み権限を持つ） | バッチクエリを実行するためのアクセスを提供します |
+
+{style="table-layout:auto"}
+
+### 関連するカスタマイズ可能なインサイトの権限 {#customizable-insights-permissions}
+
+Data Distillerを作成するには [カスタマイズ可能なインサイト](./data-distiller/customizable-insights/overview.md) ダッシュボード内で、次の権限を設定します。 **必須** をAdmin Console内で有効にする。
+
+| 権限 | 関数 |
+|---|---|
+| [!DNL View Custom Dashboard] | ユーザー定義のダッシュボードへの表示アクセスを提供します |
+| [!DNL Manage Custom Dashboard] | ユーザー定義のダッシュボードのアクセス管理を提供 |
 
 {style="table-layout:auto"}
 
