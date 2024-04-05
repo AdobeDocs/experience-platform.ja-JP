@@ -2,7 +2,7 @@
 title: クエリサービスパッケージング
 description: 次のドキュメントでは、クエリサービスで使用できる機能と製品のパッケージ化の概要を説明し、アドホッククエリとバッチクエリの違いについて説明します。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
+source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 5%
@@ -85,3 +85,4 @@ Data Distillerを作成するには [カスタマイズ可能なインサイト]
 ## 次の手順
 
 このドキュメントでは、クエリサービスで使用できる様々なパッケージタイプとクエリ実行機能について、より深く理解する必要があります。 よく知られた業界の使用例など、クエリサービスの詳細については、 [使用例のドキュメント](./use-cases/abandoned-browse.md). 一般情報については、 [クエリサービスの概要](./home.md).
+
