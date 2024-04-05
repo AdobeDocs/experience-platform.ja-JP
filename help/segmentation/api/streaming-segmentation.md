@@ -4,10 +4,10 @@ title: ストリーミングセグメント化を使用してほぼリアルタ�
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でストリーミングセグメント化を使用する方法の例を示します。
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
-ht-degree: 70%
+source-wordcount: '2038'
+ht-degree: 67%
 
 ---
 
@@ -454,3 +454,7 @@ Adobe Experience Platformユーザーインターフェイスを使用して同�
 ### セグメント定義が使用可能になるまで、どれくらいかかりますか。
 
 セグメント定義が使用可能になるまでに最大 1 時間かかります。
+
+### ストリーミングされるデータに制限はありますか。
+
+ストリーミングデータをストリーミングセグメント化で使用するには、ここで **必須** 間には、ストリーミングされるイベントの間隔を指定します。 同じ秒数内にストリーミングされるイベントが多すぎる場合、Platform はこれらのイベントをボット生成データとして扱い、破棄されます。 ベストプラクティスとして、以下が必要です。 **少なくとも** データが適切に使用されていることを確認するために、イベントデータの間の 5 秒間隔。
