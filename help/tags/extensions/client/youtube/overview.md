@@ -2,10 +2,10 @@
 title: YouTube ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の YouTube ビデオトラッキングタグ拡張機能について説明します。
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 100%
+source-wordcount: '895'
+ht-degree: 83%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 * Experience Cloud 訪問者 ID サービス
 * Core 拡張機能
 
-ビデオプレーヤーがレンダリングされる各 web ページの HTML にある Google 開発者ドキュメントから[「&lt;iframe\> タグを使用してプレーヤーを埋め込む」](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)コードスニペットを使用します。
+の使用 [「を使用したプレーヤーの埋め込み\&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) ビデオプレーヤーがレンダリングされる各 web ページのHTMLにあるGoogle開発者ドキュメントのコードスニペット。
 
 この拡張機能バージョン 2.0.1 は、iframe script タグに一意の値を持つ `id` 属性を挿入し、`src` 属性値の末尾にまだ含まれていない場合は `enablejsapi=1` と `rel=0` を付加することで、単一の Web ページに 1 つ以上の YouTube 動画を埋め込むことができます。次に例を示します。
 
@@ -78,15 +78,15 @@ document.onreadystatechange = function () {
 * **ビーコンを送信：** Adobe Analytics ビーコンをカスタムリンクトラッキングコールとして送信し、「リンク名」の値を指定します。
 * **変数をクリア：** Adobe Analytics 変数をクリアします。
 
-## 「ビデオ開始」のタグルールの例
+## 「Video Start」のタグルールの例
 
 次のビデオ拡張機能オブジェクトが含まれます。
 
-* **イベント**：「ビデオ開始」（このイベントは、訪問者が YouTube ビデオの再生を開始したときにルールを起動します）。
+* **イベント**:「ビデオスタート」（このイベントは、訪問者がYouTube ビデオの再生を開始したときにルールを起動します）。
 
 * **条件**：なし
 
-* **アクション**：**Analytics 拡張機能**&#x200B;を使用して「変数を設定」アクションを使用し、次のようにマッピングします。
+* **アクション**：を使用します **Analytics 拡張機能** 「変数を設定」アクションをマッピングするには：
 
    * ビデオ開始のイベント、
    * ビデオデュレーションデータ要素の prop／eVar
@@ -94,13 +94,13 @@ document.onreadystatechange = function () {
    * ビデオ名データ要素の prop／eVar
    * ビデオ URL データ要素の prop／eVar
 
-   次に、「ビーコンを送信」アクション（`s.tl`）をリンク名「ビデオ開始」と共に追加した後、「変数をクリア」アクションを実行します。
+  次に、「ビーコンを送信」アクション （`s.tl`）を選択し、リンク名「ビデオ開始」を選択して、その後に「変数をクリア」アクションを選択します。
 
 >[!TIP]
 > 
 >各ビデオの要素に対して複数の eVar または prop を使用できない実装では、Platform 内でデータ要素の値を連結します。[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) で説明されているように、分類ルールビルダーツールを使用して解析した後、Analysis Workspace でセグメントとして適用できます。
 
-ビデオ情報の値を連結するには、「Video Meta Data」という新しいデータ要素を作成し、プログラムしてすべてのビデオデータ要素（上記を参照）を取り込み、それらをまとめます。 次に例を示します。
+ビデオ情報の値を連結するには、「ビデオメタデータ」という新しいデータ要素を作成し、（上記の）すべてのビデオデータ要素を取り込み、組み立てるようにプログラミングします。 例：
 
 ```javascript
 var r = [];
@@ -113,3 +113,5 @@ r.push(_satellite.getVar('Extension Version'));
 
 return r.join('|');
 ```
+
+Platform 内でデータ要素を効果的に作成および活用する方法について詳しくは、以下を参照してください [データ要素](../../../ui/managing-resources/data-elements.md) ドキュメント。
