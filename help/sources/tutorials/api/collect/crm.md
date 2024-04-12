@@ -5,10 +5,10 @@ title: Flow Service API を使用した CRM ソースのデータフローの作
 type: Tutorial
 description: このチュートリアルでは、サードパーティの CRM システムからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1374'
-ht-degree: 92%
+source-wordcount: '1367'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,8 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->データフローを作成するには、CRM ソースと有効なベース接続 ID が既に存在する必要があります。 この ID がない場合、 [ソースの概要](../../../home.md#customer-relationship-management) ：ベース接続を作成できる CRM ソースのリスト。
+>* データフローを作成するには、CRM ソースとの有効なベース接続 ID が必要となります。 この ID を持っていない場合は、を参照してください。 [ソースの概要](../../../home.md#customer-relationship-management) ベース接続を作成できる CRM ソースのリストの場合は次のようにします。
+>* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。
 
 ## はじめに
 
@@ -183,7 +184,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | ターゲット XDM スキーマの `$id`。 |
 | `data.schema.version` | スキーマのバージョン番号。この値を、スキーマの最新のマイナーバージョンを返す `application/vnd.adobe.xed-full+json;version=1` に設定する必要があります。 |
-| `params.dataSetId` | 前の手順で生成したターゲットデータセットの ID。 **注意**：ターゲット接続を作成する際は、有効なデータセット ID を指定する必要があります。 無効なデータセット ID は、エラーの原因となります。 |
+| `params.dataSetId` | 前の手順で生成されたターゲットデータセットの ID。 **注意**：ターゲット接続を作成する際は、有効なデータセット ID を指定する必要があります。 無効なデータセット ID は、エラーの原因となります。 |
 | `connectionSpec.id` | データレイクへの接続に使用する接続仕様 ID。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 
 ```json
@@ -294,7 +295,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->以下の JSON 応答ペイロードは、簡潔にするために非表示になっています。 「ペイロード」を選択して、応答ペイロードを表示します。
+>以下の JSON 応答ペイロードは、簡潔にするために非表示になっています。 「ペイロード」を選択して、応答ペイロードを確認します。
 
 +++ ペイロードを表示
 
