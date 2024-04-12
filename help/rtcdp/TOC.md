@@ -3,19 +3,19 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
-user-guide-description: 複数のエンタープライズソースからの既知データや匿名データをまとめて顧客プロファイルを作成し、それらのプロファイルからオーディエンスセグメントを作成して、それらのセグメントをサードパーティの宛先に対してアクティブ化します。
+user-guide-description: 複数のエンタープライズソースからの既知データや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスを作成し、それらのオーディエンスをサードパーティの宛先に対してアクティブ化します。
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 69%
+source-wordcount: '294'
+ht-degree: 59%
 
 ---
 
 
 # Real-time Customer Data Platform のヘルプ {#rtcdp}
 
-* [Real-Time CDPドキュメント](home.md)
+* [Real-Time CDP ドキュメント](home.md)
 * はじめに {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Real-Time CDP の概要](overview.md)
@@ -33,20 +33,25 @@ ht-degree: 69%
    * [アカウントプロファイル UI ガイド](accounts/account-profile-ui-guide.md)
 * 管理 {#admin}
    * [管理の概要](administration/admin-overview.md)
+* オーディエンスとセグメント化 {#segmentation}
+   * [セグメント化の概要](segmentation/segmentation-overview.md)
+   * [セグメントビルダーガイド](segmentation/segment-builder-guide.md)
+   * [Real-Time CDP B2B Edition のセグメント化](segmentation/b2b.md)
+   * [顧客 AI](segmentation/customer-ai.md)
 * データセット {#datasets}
    * [データセット](datasets/dataset.md)
    * [プラットフォーム上のデータ品質](datasets/data-quality.md)
 * 宛先 {#destinations}
    * [宛先の概要](destinations/overview.md)
    * [Real-Time CDP B2B Edition の宛先](destinations/b2b.md)
-* Guardrails {#guardrails}
-   * [Real-Time CDP Guardrails の概要](guardrails/overview.md)
+* ガードレール {#guardrails}
+   * [Real-Time CDP ガードレールの概要](guardrails/overview.md)
    * [データ取り込みのガードレール](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [のガードレール [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
    * [のガードレール [!DNL Real-Time Customer Profile] データとセグメント化](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"}
    * [のガードレール [!DNL Identity Service] データ](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [のガードレール [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [宛先を介したデータのアクティベーションのガードレール](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [宛先を介したデータのアクティベーションのためのガードレール](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * ID {#identity}
    * [ID と ID 名前空間](profile/identities-overview.md)
 * 結合ポリシー {#merge-policies}
@@ -66,24 +71,19 @@ ht-degree: 69%
 * スキーマ {#schemas}
    * [スキーマの概要](schemas/overview.md)
    * [Real-Time CDP B2B Edition のスキーマ](schemas/b2b.md)
-* セグメント {#segmentation}
-   * [セグメント化の概要](segmentation/segmentation-overview.md)
-   * [セグメントビルダーガイド](segmentation/segment-builder-guide.md)
-   * [Real-Time CDP B2B Edition のセグメント化](segmentation/b2b.md)
-   * [顧客 AI](segmentation/customer-ai.md)
 * ソース {#sources}
    * [ソースの概要](sources/sources-overview.md)
    * [Real-Time CDP B2B Edition のソース](sources/b2b.md)
 * ユースケース {#use-cases}
    * [サンプルユースケースの概要](/help/rtcdp/use-case-guides/overview.md)
    * 顧客獲得 {#customer-acquisition}
-      * [サードパーティ cookie に依存せずに新規顧客を惹きつけ、獲得する](/help/rtcdp/partner-data/prospecting.md)
-      * [パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md)
-      * [未認証ユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
+      * [サードパーティ cookie に依存せずに新規顧客を獲得](/help/rtcdp/partner-data/prospecting.md)
+      * [パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [認証されていないユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
    * プロファイルエンリッチメント {#profile-enrichment}
       * [パートナー提供の属性を使用してファーストパーティプロファイルを補完](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * パーソナライゼーション、インサイト、エンゲージメント {#personalization-insights-engagement}
-      * [顧客をインテリジェントに再び関与](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-      * [顧客をインテリジェントに再び関与させる：Luma の例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
+      * [お客様をインテリジェントに再エンゲージ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [顧客をインテリジェントに再エンゲージ：Luma の例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 * [Experience Platform の用語](https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/glossary.html)

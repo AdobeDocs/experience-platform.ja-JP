@@ -5,9 +5,9 @@ description: Real-time Customer Data Platform B2B Edition アカウントの概�
 feature: Get Started, B2B
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1050'
 ht-degree: 98%
 
 ---
@@ -86,6 +86,6 @@ Real-Time CDP B2B Edition が B2B サービスモデルに与えるメリット�
 * [データの取り込み方法](./sources/b2b.md)
 * [プロファイルへのアクセス方法](./profile/profile-overview.md)
 * [Real-time Customer Data Platform B2B Edition のスキーマ](./schemas/b2b.md)
-* [セグメントの作成方法](./segmentation/b2b.md)
-* [宛先へのセグメントのアクティブ化の方法](./destinations/b2b.md)
+* [オーディエンスの作成方法](./segmentation/b2b.md)
+* [宛先へのオーディエンスのアクティブ化の方法](./destinations/b2b.md)
 * [データガバナンスポリシーの定義と実施方法](./privacy/data-governance-overview.md)

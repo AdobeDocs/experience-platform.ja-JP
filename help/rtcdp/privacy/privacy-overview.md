@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform のプライバシー
 description: Adobe Real-time Customer Data Platform を使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 99%
+source-wordcount: '386'
+ht-degree: 86%
 
 ---
 
@@ -27,13 +27,13 @@ ht-degree: 99%
 
 ## オプトアウト機能
 
-[!DNL Real-Time CDP] を使用すると、顧客は個人データをセグメント化のユースケースに含めることをオプトアウトできます。顧客のオプトアウト環境設定は [!DNL Real-Time Customer Profile] によってキャプチャおよび保存され、セグメント述語でブーリアン論理（「AND NOT」）を使用してセグメントからオプトアウトしたユーザーを除外することによって適用できます。
+[!DNL Real-Time CDP] を使用すると、顧客は個人データをセグメント化のユースケースに含めることをオプトアウトできます。顧客のオプトアウト環境設定は、によってキャプチャおよび保存されます。 [!DNL Real-Time Customer Profile]、およびは、セグメント述語でブーリアン論理（「AND NOT」）を使用してオーディエンスからオプトアウトしたユーザーを除外することで適用できます。
 
 詳しくは、Adobe Experience Platform セグメント化サービスのドキュメントで、[オプトアウトリクエストの遵守](../../segmentation/consents.md)に関するドキュメントを参照してください。
 
 ## IAB TCF 2.0 のサポート
 
-[!DNL Real-Time CDP] は、[!DNL Interactive Advertising Bureau (IAB)] で説明しているように、[!DNL Transparency & Consent Framework (TCF)] の登録済み[ベンダーリスト](https://iabeurope.eu/vendor-list-tcf/)の一部である Adobe Experience Platform に基づいて作成されています。TCF 2.0 要件に準拠して、Platform を使用すると、詳細な顧客同意データを収集し、保存されている顧客プロファイルに統合できます。この同意データは、ユースケースに応じて、特定のプロファイルが書き出されたオーディエンスセグメントに含まれているかどうかの要因となります。
+[!DNL Real-Time CDP] は、[!DNL Interactive Advertising Bureau (IAB)] で説明しているように、[!DNL Transparency & Consent Framework (TCF)] の登録済み[ベンダーリスト](https://iabeurope.eu/vendor-list-tcf/)の一部である Adobe Experience Platform に基づいて作成されています。TCF 2.0 要件に準拠して、Platform を使用すると、詳細な顧客同意データを収集し、保存されている顧客プロファイルに統合できます。この同意データは、ユースケースに応じて、特定のプロファイルが書き出されたオーディエンスに含まれているかどうかの要因となります。
 
 詳しくは、[Experience Platform での IAB TCF 2.0 のサポート](../../landing/governance-privacy-security/consent/iab/overview.md)に関する概要を参照してください。
 

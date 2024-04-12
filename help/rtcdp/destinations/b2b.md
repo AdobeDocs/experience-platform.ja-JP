@@ -4,9 +4,9 @@ description: Adobe Real-time Customer Data Platform B2B Edition における宛�
 feature: Destinations
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Real-time Customer Data Platform B2B Edition を使用していない場合は、 [宛先の概要](../../destinations/home.md) 代わりに、
+>Adobe Real-time Customer Data Platform B2B Edition を使用していない場合は、を参照してください [宛先の概要](../../destinations/home.md) その代わり。
 
-Real-Time CDP B2B Edition で完全にサポートされるExperience Platformの宛先には、Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ad Manager が含まれます。
+Real-Time CDP B2B Edition で完全にサポートされるExperience Platformの宛先には、Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ad Manager などがあります。
 
-宛先が B2B ワークフローにどのように適合するかを理解するには、 [エンドツーエンドのチュートリアル](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
+宛先が B2B ワークフローにどのように適合するかを理解するには、を参照してください [エンドツーエンドのチュートリアル](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
-Adobe Real-time Customer Data Platform B2B Edition を使用すると、B2B データを書き出し先コネクタを通じてMarketo Engageできます。 Marketo Engageの宛先を使用すると、Adobe Experience Platformで作成したセグメントをMarketoにプッシュして、静的リストとして表示することができます。
+Adobe Real-time Customer Data Platform B2B Edition を使用すると、Marketo Engage先コネクタを通じて B2B データを書き出すことができます。 Marketo Engageの宛先を使用すると、Adobe Experience Platformで作成したオーディエンスをMarketoにプッシュでき、静的リストとして表示されます。
 
-データの書き出し先でのMarketo Engageの使用に関する詳細は、次のドキュメントを参照してください。
+次のドキュメントでは、Marketo Engageの宛先を使用したデータの書き出しに関する詳細を説明します。
 
-- Real-time Customer Data Platform B2B Edition で使用可能な任意の宛先について詳しくは、 [宛先カタログ](../../destinations/catalog/overview.md).
-- Marketo Engageに書き出し可能な ID について詳しくは、 [Marketo Engageの宛先に関するドキュメント](../../destinations/catalog/adobe/marketo-engage.md).
-- Experience PlatformUI でのMarketo Engage先への接続とデータの書き出しの方法について詳しくは、 [&#39;Adobe Experience PlatformセグメントをMarketo静的リストにプッシュ&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).
+- Real-time Customer Data Platform B2B Edition で使用できる宛先の詳細については、 [宛先カタログ](../../destinations/catalog/overview.md).
+- Marketo Engageに書き出し可能な ID について詳しくは、を参照してください。 [Marketo Engage先ドキュメント](../../destinations/catalog/adobe/marketo-engage.md).
+- Experience PlatformUI でMarketo Engage先に接続しデータを書き出す方法について詳しくは、以下を参照してください。 [&#39;Adobe Experience Platform セグメントをMarketo静的リストにプッシュ&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).

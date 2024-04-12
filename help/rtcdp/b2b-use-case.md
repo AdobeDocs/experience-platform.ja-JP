@@ -1,23 +1,23 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform；リアルタイム顧客データプラットフォーム；リアルタイム cdp;cdp;rtcdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Real-time Customer Data Platform B2B Edition の使用例
 description: このサンプルシナリオは、Real-time Customer Data Platform B2B エディションの実装の設定例を示しています。
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 83%
+source-wordcount: '1151'
+ht-degree: 76%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition の使用例
 
-Real-time Customer Data Platform B2B Edition は、B2B のデータとワークフローをサポートするために、既存のReal-Time CDPおよびAdobe Experience Platformのサービスを拡張します。 このドキュメントでは、B2B Edition が提供するさらなるメリットを示すユースケースの例について説明します。次のようなものがあります。
+Real-time Customer Data Platform B2B Edition は、既存のReal-Time CDPおよびAdobe Experience Platform製品を拡張して、B2B のデータとワークフローをサポートします。 このドキュメントでは、B2B Edition が提供するさらなるメリットを示すユースケースの例について説明します。次のようなものがあります。
 
 - 様々なサイロ化されたデータソースからの個人データとアカウントデータを組み合わせて、顧客の理解を深め、より正確なセグメント化を可能にする包括的なビューを作成します。詳しくは、様々な B2Bソースで使用するための [XDM スキーマ関係の作成](./schemas/b2b.md)に関するドキュメントを参照してください。
-- 関連するエンティティの属性に基づいてオーディエンスをセグメント化します。これには、アカウント、オポチュニティ、キャンペーンおよびマーケティングリストが含まれます。セグメントは、ユーザー属性とエクスペリエンスイベントだけに限定されなくなりました。B2B 固有のオーディエンスを作成するその他の例については、[B2B セグメント化のドキュメント](./segmentation/b2b.md)を参照してください。
+- 関連するエンティティの属性に基づいてオーディエンスをセグメント化します。これには、アカウント、オポチュニティ、キャンペーンおよびマーケティングリストが含まれます。オーディエンスは、ユーザー属性とエクスペリエンスイベントだけに制限されなくなりました。 B2B 固有のオーディエンスを作成するその他の例については、[B2B セグメント化のドキュメント](./segmentation/b2b.md)を参照してください。
 - 複数のアカウントに関連する 1 ユーザーのユースケースをネイティブにサポートします。
 
 ## 使用例
@@ -44,21 +44,21 @@ Marketo 2 では、Townsend はアカウント 2 として記録されます。�
 
 ## 問題
 
-Line 1 は新しいソフトウェア製品をリリースし、Bodea の既存のトップレベルの顧客ベースにアップセルしたいと考えています。 Bodea は、その特定のターゲットオーディエンスを念頭に置いたマーケティングキャンペーンを開始します。
+Line 1 は新しいソフトウェア製品をリリースしたばかりで、Bodea の既存の大手顧客にアップセルしたいと考えています。 Bodea は、その特定のターゲットオーディエンスを念頭に置いたマーケティングキャンペーンを開始します。
 
 関連する Townsend 情報は Marketo 1 のアカウント 1 および Marketo 2 のアカウント 2 として記録されているため、Bodea のマーケティングチームはサイロ化された情報を効率的に利用できません。
 
 そのためBodea のマーケティングチームは、効率的にこれらの特定の企業を新しい製品のターゲットにすることができなくなります。
 
-これまで、Townsend は、すべてのアカウントで Bodea 製品に累積で 100 万ドル以上を費やしてきました。ただし、古いシステムを使用して作成されたセグメントには、単一の販売システム内で費やされた合計が 100 万ドルを超えない限り、Townsend の誰も含まれません。これは、収益データが様々な販売システムのアカウントにサイロ化されているためです。
+これまで、Townsend は、すべてのアカウントで Bodea 製品に累積で 100 万ドル以上を費やしてきました。ただし、古いシステムを使用して作成されたオーディエンスには、1 つの販売システム内で費やされた合計が 100 万ドルを超えない限り、Townsend の誰も含まれません。 これは、収益データが様々な販売システムのアカウントにサイロ化されているためです。
 
-Townsend の支出は様々な販売システムに分割されており、個別に合計で 100 万ドルを超えることはないため、このセグメントでは Marketo 1 または Marketo 2 のいずれかに適格な人物は見つかりません。
+Townsend の支出は様々な販売システムに分割されており、個別に合計で 100 万ドルを超えることはないため、このセグメント定義では、Marketo 1 またはMarketo 2 のいずれかに該当する人物は見つかりません。
 
-### Real-Time CDP B2B Edition による問題の解決方法
+### Real-Time CDP B2B Edition で問題を解決する方法
 
-Real-Time CDP B2B Edition を利用すると、Bodea のマーケティングチームは次のことが可能になります。
+Real-Time CDP B2B Edition を使用すると、Bodea のマーケティングチームは次のことができるようになります。
 
-- すべての異なるソース ( 複数のMarketoおよび CRM インスタンス、マスターデータ管理 ) のデータをReal-Time CDP B2B Edition に組み合わせます。
+- すべての異なるソース（複数のMarketoと CRM インスタンス、マスターデータ管理）からのデータをReal-Time CDP B2B Edition に結合します。
 
 RT-CDP B2B Edition を使用すると、Bodea は Marketo Engage Source Connector を使用して、Marketo 1 および Marketo 2 からの B2B データを Experience Platform に取り込み、プラットフォームに接続されたアプリケーションを使用してこのデータを最新の状態に保つことができます。詳しくは、[Marketo ソースコネクタ](../sources/connectors/adobe-applications/marketo/marketo.md)ドキュメントを参照してください。
 
@@ -77,7 +77,7 @@ CRM1 からの B2B データ（人物、アカウント、機会およびアク�
 | 商談 1、20 万ドル |
 | 商談 2、90 万ドル |
 
-- 様々なマーケティングイニシアチブのために、この集計データを使用して一意のセグメントを作成します。この例では、セグメントは次のようなすべての人物を検索します。
+- 様々なマーケティングイニシアチブのために、この集計データを使用して一意のオーディエンスを作成します。 この例では、セグメント定義は次のようなすべての人物を検索します。
 
    - すべてのアカウントで、関連する商談の価値が 100 万ドルを超える
    - おび
@@ -89,7 +89,7 @@ Marketo Engage と LinkedIn の宛先を使用することにより、Bodea は�
 
 ## 次の手順
 
-このドキュメントでは、Real-Time CDP B2B Edition を使用して解決できる目標と問題の種類を紹介しました。
+このドキュメントを読むことで、Real-Time CDP B2B Edition で解決できる目的と問題の種類が紹介されました。
 
 B2B 固有の機能の理解を深めるために、次のドキュメントをお勧めします。
 

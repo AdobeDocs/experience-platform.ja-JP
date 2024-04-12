@@ -1,18 +1,18 @@
 ---
-keywords: rtcdp ソース、ソース rtcdp、リアルタイム顧客データプラットフォームソース
+keywords: rtcdp ソース；ソース rtcdp;real-time customer data platform ソース
 title: Real-time Customer Data Platformのソース
 description: このドキュメントでは、Adobe Real-time Customer Data Platformのソースの概要を説明します
 feature: Sources, Data Ingestion, Get Started
 exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 43%
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 # Real-time Customer Data Platformのソース
 
-[!DNL Adobe Real-Time Customer Data Platform] では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取り込むことができます。
+[!DNL Adobe Real-Time Customer Data Platform] を使用すると、外部ソースからデータを取り込みながら、受信データの構造化、ラベル付けおよび拡張を行うことができます [!DNL Platform] サービス。 Adobeアプリ、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-利用可能なソースのリストやチュートリアルへのリンクを含む、ソースの詳細な概要については、 [ソースドキュメント](../../sources/home.md).
+利用可能なソースのリストやチュートリアルへのリンクなど、ソースの詳細な概要については、を参照してください。 [ソースのドキュメント](../../sources/home.md).

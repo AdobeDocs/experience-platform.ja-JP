@@ -1,11 +1,11 @@
 ---
 title: Audience Manager から Real-Time CDP への進化
-description: Audience Manager から Real-Time CDP への移行を計画する前の考慮事項について説明します。
+description: Audience Manager環境からAdobe Real-Time CDPへの移行を計画する前の考慮事項について説明します。
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 88%
+source-wordcount: '499'
+ht-degree: 86%
 
 ---
 
@@ -23,7 +23,7 @@ Audience Manager から Real-Time CDP への進化を検討する場合、今が
 
 アドビでは、セグメントを次のように分類することをお勧めします。
 
-* セグメントの一部として、 [[!UICONTROL Audience Managerソースコネクタ]](/help/sources/connectors/adobe-applications/audience-manager.md)データに依存しないので、宛先やアクティブ化に関する課題はなく、セグメント化ルールはReal-Time CDPを使用して作成できます [セグメントビルダー](/help/segmentation/ui/segment-builder.md) 後で。
+* を介してExperience Platformに送信できるセグメント [[!UICONTROL Audience Managerソースコネクタ]](/help/sources/connectors/adobe-applications/audience-manager.md)にはデータの依存関係がなく、宛先やアクティブ化の課題もないので、Real-Time CDPを通じてセグメント化ルールを作成できます [セグメントビルダー](/help/segmentation/ui/segment-builder.md) 後で。
 * サポートできるルールがあるセグメント：Real-Time CDP で使用できないデータが含まれている場合があります。
 * Real-Time CDPで作成できず、機能が欠落しているセグメント。
 
