@@ -5,7 +5,7 @@ breadcrumb-title: 詳細なデータライフサイクル管理ガイド
 user-guide-description: データのクレンジング、匿名データの削除およびデータの最小化のために、Experience Platform で個々のレコードを削除し、データセットの有効期限をスケジュールします。
 feature: Data Hygiene
 role: User, Developer, Admin
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 72%
@@ -13,9 +13,9 @@ ht-degree: 72%
 ---
 
 
-# 高度なデータライフサイクル管理 {#data-lifecycle}
+# 高度なデータ・ライフサイクル管理 {#data-lifecycle}
 
-* [高度なデータライフサイクル管理の概要](./home.md)
+* [高度なデータ・ライフサイクル管理の概要](./home.md)
 * データライフサイクル UI {#ui}
    * [概要](./ui/overview.md)
    * [データセットの有効期限の自動化](./ui/dataset-expiration.md)

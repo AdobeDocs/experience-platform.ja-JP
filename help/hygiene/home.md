@@ -1,15 +1,15 @@
 ---
-title: 高度なデータライフサイクル管理の概要
-description: 高度なデータライフサイクル管理を使用すると、古いレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
+title: 高度なデータ・ライフサイクル管理の概要
+description: 高度なデータライフサイクル管理を使用すると、古くなったレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 62%
+source-wordcount: '583'
+ht-degree: 58%
 
 ---
 
-# Adobe Experience Platformの高度なデータライフサイクル管理
+# Adobe Experience Platformの Advanced Data Lifecycle Management
 
 Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
 
@@ -22,21 +22,21 @@ Adobe Experience Platform では、カスタマーエクスペリエンスを調
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
-これらのアクティビティは、 [[!UICONTROL データのライフサイクル] UI ワークスペース](#ui) または [データ衛生 API](#api). データライフサイクルジョブを実行すると、プロセスの各ステップで透明度の更新が行われます。 各ジョブタイプがシステム上でどのように表現されるかについて詳しくは、[タイムラインと透明性](#timelines-and-transparency)の節を参照してください。
+これらのアクティビティは、 [[!UICONTROL データライフサイクル] UI ワークスペース](#ui) または [データハイジーン API](#api). データ・ライフサイクル・ジョブが実行されると、システムはプロセスの各ステップで透明性を更新します。 各ジョブタイプがシステム上でどのように表現されるかについて詳しくは、[タイムラインと透明性](#timelines-and-transparency)の節を参照してください。
 
-## [!UICONTROL データのライフサイクル] UI ワークスペース {#ui}
+## [!UICONTROL データライフサイクル] UI ワークスペース {#ui}
 
-The [!UICONTROL データのライフサイクル] Platform UI のワークスペースを使用すると、データのライフサイクル操作を設定およびスケジュールでき、レコードが期待どおりに維持されるようになります。
+この [!UICONTROL データライフサイクル] platform UI のワークスペースを使用すると、データライフサイクル操作の設定とスケジュール設定ができ、レコードが期待どおりに維持されていることを確認するのに役立ちます。
 
 UI でデータライフサイクルタスクを管理する手順について詳しくは、 [データライフサイクル UI ガイド](./ui/overview.md).
 
 ## Data Hygiene API {#api}
 
-The [!UICONTROL データのライフサイクル] UI は、データライフサイクル API をベースに構築されています。データライフサイクルアクティビティを自動化する場合に、エンドポイントを直接使用できます。 詳しくは、[Data Hygiene API ガイド](./api/overview.md)を参照してください。
+この [!UICONTROL データライフサイクル] UI は、Data Hygiene API をベースに構築されており、そのエンドポイントは、データのライフサイクルアクティビティを自動化したい場合に、直接使用できます。 詳しくは、[Data Hygiene API ガイド](./api/overview.md)を参照してください。
 
 ## タイムラインと透明性
 
-[レコードの削除リクエストとデータセット有効期限切れリクエストには、それぞれ独自の処理タイムラインがあり、それぞれのワークフローの主要なポイントで透明性を更新します。](./ui/record-delete.md)
+[レコード削除](./ui/record-delete.md) およびデータセット有効期限のリクエストには、それぞれ独自の処理タイムラインがあり、それぞれのワークフローの主要なポイントで透明性を更新します。
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
@@ -44,12 +44,12 @@ The [!UICONTROL データのライフサイクル] UI は、データライフ�
 
 | 段階 | スケジュールされた有効期限後の経過時間 | 説明 |
 | --- | --- | --- |
-| リクエストが送信される | 0 時間 | データセットが指定の時間に有効期限切れになるように求めるリクエストをデータスチュワードまたはプライバシーアナリストが送信します。リクエストは、 [!UICONTROL データライフサイクル UI] 送信後は、スケジュールされた有効期限まで保留状態のままになり、その後、リクエストが実行されます。 |
+| リクエストが送信される | 0 時間 | データセットが指定の時間に有効期限切れになるように求めるリクエストをデータスチュワードまたはプライバシーアナリストが送信します。このリクエストは、に表示されます [!UICONTROL データライフサイクル UI] 送信後、スケジュールされた有効期限まで保留状態のままになり、期限後にリクエストが実行されます。 |
 | データセットがドロップされる | 1 時間 | UI の[データセットインベントリページ](../catalog/datasets/user-guide.md)からデータセットがドロップされます。データレイク内のデータはソフト削除されるだけで、プロセスの終わりまでそのまま残り、プロセスの終了後にハード削除されます。 |
 | プロファイル数が更新される | 30 時間 | 削除するデータセットの内容に応じて、すべてのコンポーネント属性がそのデータセットに関連付けられている場合、一部のプロファイルがシステムから削除されることがあります。 データセットが削除されてから 30 時間が経過すると、結果として生じるプロファイル数全体の変更が、 [ダッシュボードウィジェット](../dashboards/guides/profiles.md#profile-count-trend)やその他のレポートに反映されます。 |
 | オーディエンスが更新される | 48 時間 | 影響を受けるすべてのプロファイルが更新されると、関連するすべての[オーディエンス](../segmentation/home.md)が更新されて、新しいサイズが反映されます。削除したデータセットとセグメント化しようとしている属性に応じて、削除の結果、各オーディエンスのサイズが増減する場合があります。 |
 | ジャーニーと宛先の更新 | 50 時間 | 関連するセグメントの変更に従って、[ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=ja)、[キャンペーン](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=ja)および[宛先](../destinations/home.md)が更新されます。 |
-| ハード削除が完了する | 15 日 | データセットに関連するすべてのデータが、データレイクからハード削除されます。 The [データライフサイクルジョブのステータス](./ui/browse.md#view-details) 削除されたデータセットは、これを反映するように更新されます。 |
+| ハード削除が完了する | 15 日 | データセットに関連するすべてのデータが、データレイクからハード削除されます。 この [データ ライフサイクル ジョブの状態](./ui/browse.md#view-details) が削除されたので、これを反映するようにデータセットが更新されます。 |
 
 {style="table-layout:auto"}
 
@@ -70,4 +70,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## 次の手順
 
-このドキュメントでは、Platform のデータライフサイクル機能の概要を説明しました。 UI でのデータハイジーンリクエストの実行を開始するには、[UI ガイド](./ui/overview.md)を参照してください。データライフサイクルジョブをプログラムで作成する方法については、 [データ衛生 API ガイド](./api/overview.md)
+このドキュメントでは、Platform のデータライフサイクル機能の概要を説明しました。 UI でのデータハイジーンリクエストの実行を開始するには、[UI ガイド](./ui/overview.md)を参照してください。データライフサイクルジョブをプログラムで作成する方法については、を参照してください。 [データハイジーン API ガイド](./api/overview.md)

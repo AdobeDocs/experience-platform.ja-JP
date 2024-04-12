@@ -3,10 +3,10 @@ title: Dataset Expiration API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
+source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
 workflow-type: tm+mt
-source-wordcount: '2141'
-ht-degree: 60%
+source-wordcount: '2166'
+ht-degree: 59%
 
 ---
 
@@ -197,6 +197,10 @@ curl -X GET \
 指定した期間の後にデータがシステムから削除されるようにするには、データセット ID と有効期限の日時を ISO 8601 形式で指定して、特定のデータセットの有効期限をスケジュールします。
 
 データセットの有効期限を作成するには、次に示すようにPOSTリクエストを実行し、ペイロード内で以下に示す値を指定します。
+
+>[!NOTE]
+>
+>404 エラーが発生した場合は、リクエストに追加のフォワードスラッシュがないことを確認します。 末尾のスラッシュは、POSTリクエストの失敗の原因になる可能性があります。
 
 **API 形式**
 
