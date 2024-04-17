@@ -1,14 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Amazon Redshift;Amazon redshift;Redshift
-solution: Experience Platform
 title: Snowflakeソースコネクタの概要
 description: API またはユーザーインターフェイスを使用してSnowflakeをAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 8b0f6eca87deedd8090830e3375d5099bfb0dfc0
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 57%
+source-wordcount: '303'
+ht-degree: 48%
 
 ---
 
@@ -16,11 +14,13 @@ ht-degree: 57%
 
 >[!IMPORTANT]
 >
->The [!DNL Snowflake] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>* この [!DNL Snowflake] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログから利用できます。
+>* デフォルトでは、 [!DNL Snowflake] ソース解釈 `null` 空の文字列として。 Adobe担当者に連絡して、次のことを確認します `null` 値は、次のように正しく記述されています `null` Adobe Experience Platformで。
+>* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。 でサポートされている唯一のタイムスタンプ [!DNL Snowflake] ソースは TIMESTAMP_NTZ （UTC 時間）。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Platform は、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートは次のとおりです。 [!DNL Snowflake].
+Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Platform は、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートは次のとおりです [!DNL Snowflake].
 
 ## IP アドレス許可リスト
 
@@ -30,11 +30,11 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ## API を使用して [!DNL Snowflake] と Platform を接続する
 
-- [フローサービス API を使用したSnowflakeベース接続の作成](../../tutorials/api/create/databases/snowflake.md)
-- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
-- [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
+* [Flow Service API を使用したSnowflakeベース接続の作成](../../tutorials/api/create/databases/snowflake.md)
+* [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
+* [Flow Service API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
 ## UI を使用した [!DNL Snowflake] の Platform への接続
 
-- [UI でのSnowflakeソース接続の作成](../../tutorials/ui/create/databases/snowflake.md)
-- [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
+* [UI でのSnowflakeソースコネクタの作成](../../tutorials/ui/create/databases/snowflake.md)
+* [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
