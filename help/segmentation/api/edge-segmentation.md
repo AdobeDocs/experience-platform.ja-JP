@@ -4,10 +4,10 @@ title: API を使用したエッジのセグメント化
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1195'
-ht-degree: 90%
+source-wordcount: '1207'
+ht-degree: 89%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 90%
 >
 >エッジセグメント化は、すべての Platform ユーザーが一般に使用できるようになりました。ベータ版でエッジセグメント定義を作成した場合、これらのセグメント定義は引き続き動作します。
 
-エッジのセグメント化とは、エッジ上で瞬時にAdobe Experience Platformのセグメント定義を評価する機能で、同じページや次のページのパーソナライゼーションの使用例を可能にします。
+エッジセグメント化は、Adobe Experience Platform内のセグメント定義をエッジ上で即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ ht-degree: 90%
 この開発者ガイドでは、エッジのセグメント化に関連する様々な [!DNL Adobe Experience Platform] サービスについての十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：以下からオーディエンスを構築できます。 [!DNL Real-Time Customer Profile] データ。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：からオーディエンスを作成できます [!DNL Real-Time Customer Profile] データ。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 Experience Platform API エンドポイントへの呼び出しを正常に行うには、[Platform API の基本を学ぶ](../../landing/api-guide.md)のガイドを読み、必要なヘッダーとサンプル API 呼び出しの読み方を確認してください。
@@ -48,7 +48,7 @@ Experience Platform API エンドポイントへの呼び出しを正常に行�
 | プロファイルを参照する単一のイベント | 1 つ以上のプロファイル属性と、時間制限のない単一の受信イベントを参照する任意のセグメント定義。 | ホームページを訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
 | プロファイル属性を持つ単一イベントの否定 | 単一の受信イベントの否定と 1 つ以上のプロファイル属性を参照する任意のセグメント定義 | ホームページを訪問&#x200B;**したことがない**&#x200B;米国在住の人物。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
 | 時間枠内での単一のイベント | 設定された期間内の単一の受信イベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを訪問した人物。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
-| 24 時間未満の相対時間枠内のプロファイル属性を持つ単一イベント | 1 つ以上のプロファイル属性を持つ単一の受信イベントを参照するセグメント定義で、24 時間未満の相対時間枠内に発生します。 | 過去 24 時間以内にホームページを訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
+| 24 時間未満の相対時間枠内でのプロファイル属性を持つ単一のイベント | 1 つ以上のプロファイル属性を持つ 1 つの受信イベントを参照し、24 時間未満の相対時間枠内に発生するセグメント定義。 | 過去 24 時間以内にホームページを訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
 | 時間枠内でのプロファイル属性を持つ単一イベントの否定 | 1 つ以上のプロファイル属性と、期間内の単一受信イベントの否定を参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを訪問&#x200B;**していない**&#x200B;米国在住の人物。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)]))` |
 | 24 時間の時間枠内での頻度イベント | 24 時間の時間枠内に特定の回数だけ発生するイベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを&#x200B;**少なくとも** 5 回訪問した人物。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | 24 時間の時間枠内でのプロファイル属性を持つ頻度イベント | 1 つ以上のプロファイル属性と、24 時間の時間枠内に一定の回数だけ発生するイベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを&#x200B;**少なくとも** 5 回訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
@@ -64,10 +64,11 @@ Experience Platform API エンドポイントへの呼び出しを正常に行�
 
 - セグメント定義には、単一のイベントと `inSegment` イベントの組み合わせが含まれています。
    - ただし、`inSegment` イベントに含まれるセグメントがプロファイルのみの場合、セグメント定義はエッジセグメント化に対して有効に&#x200B;**なります**。
+- セグメント定義では、時間制約の一部として「年を無視」を使用します。
 
 ## エッジセグメント化で有効なすべてのセグメントの取得
 
-組織内でエッジセグメント化に対して有効になっているすべてのセグメントのリストを取得するには、に対してGETリクエストを実行します。 `/segment/definitions` endpoint.
+にGETリクエストを行うことで、組織内でエッジセグメント化が有効になっているすべてのセグメントのリストを取得できます。 `/segment/definitions` エンドポイント。
 
 **API 形式**
 
@@ -90,7 +91,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、エッジセグメント化が有効な組織内のセグメントの配列を返します。 返されるセグメント定義について詳しくは、[セグメント定義エンドポイントガイド](./segment-definitions.md)を参照してください。
+応答が成功すると、エッジセグメント化が有効になっている、組織内のセグメントの配列が返されます。 返されるセグメント定義について詳しくは、[セグメント定義エンドポイントガイド](./segment-definitions.md)を参照してください。
 
 ```json
 {
