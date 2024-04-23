@@ -1,10 +1,10 @@
 ---
 title: データストリームのボット検出の設定
-description: データストリームのボット検出を設定し、人間と人間以外のトラフィックを区別する方法を説明します。
+description: 人間トラフィックと非人間トラフィックを区別するために、データストリームのボット検出を設定する方法を説明します。
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
+source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 # データストリームのボット検出の設定
 
-自動プログラム、Web スクレーパ、スパイダ、スクリプトスキャナなど、非人間エンティティから発生するトラフィックは、人間の訪問者によって発生するイベントの識別をより難しくする場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、トラフィックレポートが不正確になる可能性があります。
+自動プログラム、Web スクレーパー、スパイダー、スクリプト化されたスキャナーなど、人間以外のエンティティから発生するトラフィックによって、人間の訪問者から発生するイベントの特定がより困難になる場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。
 
-ボット検出を使用すると、[Web SDK](../web-sdk/home.md), [モバイル SDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Server API]](../server-api/overview.md) 既知のスパイダーやボットによって生成されるものとして。
+ボット検出を使用すると、によって生成されたイベントを識別できます。 [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Server API]](../server-api/overview.md) 既知のクモやボットによって生成されるものです。
 
-データストリームのボット検出を設定することで、ボットイベントとして分類したい特定の IP アドレス、IP 範囲、リクエストヘッダーを特定できます。
+データストリームのボット検出を設定することで、ボットイベントとして分類したい特定の IP アドレス、IP 範囲およびリクエストヘッダーを識別できます。
 
-ボットトラフィックを特定することで、サイトやモバイルアプリケーションでのユーザーアクティビティをより正確に測定できます。
+ボットトラフィックを識別することで、サイトまたはモバイルアプリケーションのユーザーアクティビティをより正確に測定できます。
 
-Edge ネットワークへのリクエストがいずれかのボット検出ルールと一致する場合、XDM スキーマは、次に示すように、ボットスコアリングで更新されます（常に 1 に設定されます）。
+Edge Networkへのリクエストが任意のボット検出ルールに一致すると、以下に示すように、XDM スキーマがボットスコアリングを使用して更新されます（常に 1 に設定されます）。
 
 ```json
 {
@@ -31,143 +31,143 @@ Edge ネットワークへのリクエストがいずれかのボット検出ル
 }
 ```
 
-このボットスコアリングは、リクエストを受け取るソリューションがボットトラフィックを正しく識別するのに役立ちます。
+このボットスコアリングは、リクエストを受信したソリューションがボットトラフィックを正しく識別するのに役立ちます。
 
 >[!IMPORTANT]
 >
->ボット検出は、ボットリクエストを削除しません。 このメソッドは、ボットスコアで XDM スキーマを更新し、イベントをに転送します。 [datastream サービス](configure.md) 設定済みの
+>ボット検出は、ボットリクエストをドロップしません。 ボットスコアリングを使用した XDM スキーマのみを更新し、イベントをに転送します [datastream サービス](configure.md) 設定した。
 >
->Adobeソリューションは、ボットスコアリングを様々な方法で処理できます。 例えば、Adobe Analyticsは独自の [ボットフィルタリングサービス](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) とは、Edge ネットワークで設定されたスコアを使用しません。 2 つのサービスは同じものを使用します [IAB ボットリスト](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)に設定する必要があるので、ボットスコアは同じになります。
+>Adobeソリューションは、様々な方法でボットスコアリングを処理できます。 例えば、Adobe Analyticsは独自の [ボットフィルタリングサービス](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) Edge Networkで設定されたスコアを使用しません。 2 つのサービスは同じを使用します [IAB ボットリスト](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)したがって、ボットスコアリングは同じです。
 
-ボット検出ルールは、作成後に Edge ネットワーク全体に反映されるまでに最大 15 分かかる場合があります。
+ボット検出ルールは、作成後、Edge Network全体に反映されるまでに最大 15 分かかる場合があります。
 
 ## 前提条件 {#prerequisites}
 
-データストリームでボット検出が機能するには、 **[!UICONTROL ボット検出情報]** フィールドグループをスキーマに追加します。 詳しくは、 [XDM スキーマ](../xdm/ui/resources/schemas.md#add-field-groups) フィールドグループをスキーマに追加する方法を説明するドキュメントです。
+ボット検出がデータストリームで機能するには、 **[!UICONTROL ボット検出情報]** フィールドグループをスキーマに追加します。 を参照してください。 [XDM スキーマ](../xdm/ui/resources/schemas.md#add-field-groups) スキーマにフィールドグループを追加する方法について説明するドキュメント。
 
 ## データストリームのボット検出の設定 {#configure}
 
-ボット検出は、データストリーム設定を作成した後に設定できます。 方法に関するドキュメントを参照してください。 [データストリームの作成と設定](configure.md)次に、以下の手順に従って、データストリームにボット検出機能を追加します。
+データストリーム設定を作成した後で、ボット検出を設定できます。 方法については、ドキュメントを参照してください。 [データストリームの作成と設定](configure.md)次に、以下の手順に従ってデータストリームにボット検出機能を追加します。
 
 データストリームリストに移動し、ボット検出を追加するデータストリームを選択します。
 
-![データストリームのリストを表示するデータストリームユーザーインターフェイス。](assets/bot-detection/datastream-list.png)
+![データストリームのリストを表示する、データストリームのユーザーインターフェイス。](assets/bot-detection/datastream-list.png)
 
-データストリームの詳細ページで、 **[!UICONTROL ボット検出]** 」オプションを使用します。
+データストリームの詳細ページで、 **[!UICONTROL ボットの検出]** 右側のパネルの「」オプションをクリックします。
 
-![データストリームユーザーインターフェイスでハイライトされているボット検出オプション。](assets/bot-detection/bot-detection.png)
+![データストリームのユーザーインターフェイスで強調表示されているボット検出オプション](assets/bot-detection/bot-detection.png)
 
-The **[!UICONTROL ボット検出ルール]** ページが表示されます。
+この **[!UICONTROL ボット検出ルール]** ページが表示されます。
 
-![データストリーム設定ページのボット検出設定を参照してください。](assets/bot-detection/bot-detection-page.png)
+![データストリーム設定ページのボット検出設定。](assets/bot-detection/bot-detection-page.png)
 
-ボット検出ルールページで、次の機能を使用してボット検出を設定できます。
+ボット検出ルール ページで、次の機能を使用してボット検出を設定できます。
 
-* の使用 [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
-* 独自のボット検出ルールを作成する。
+* 使用， [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* 独自のボット検出ルールの作成。
 
-### IAB/ABC International Spiders and Bots List の使用 {#iab-list}
+### IAB/ABC International Spiders and Bot List の使用 {#iab-list}
 
-The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) は、業界標準のインターネットスパイダーおよびボットリストで、検索エンジンクローラー、監視ツールなど、analytics のカウントに表示したくない自動トラフィックを識別するのに役立ちます。
+この [IAB/ABC International Spiders and Bot List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) は、サードパーティの業界標準のインターネットスパイダーとボットのリストです。検索エンジンクローラーや監視ツールなどの自動トラフィックや、analytics カウントに表示したくない人とは異なるトラフィックを特定するのに役立ちます。
 
-データストリームを設定して [!DNL IAB/ABC International Spiders and Bots List]、切り替え **[!UICONTROL このデータストリームのボット検出には、 IAB/ABC International Spiders and Bots Lists を使用します。]** 」オプションを選択し、「保存」を選択して、ボット検出設定をデータストリームに適用します。
+を使用するようにデータストリームを設定するには [!DNL IAB/ABC International Spiders and Bots List]、を切り替えます **[!UICONTROL このデータストリームでのボット検出には、IAB/ABC International Spiders and Bot List を使用します。]** オプションを選択してから、「保存」を選択して、データストリームにボット検出設定を適用します。
 
 ![IAB スパイダーとボットリストが有効になっています。](assets/bot-detection/bot-detection-list.png)
 
 ### ボット検出ルールの作成 {#rules}
 
-を使用する以外に、 [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)を使用する場合、各データストリームに対して独自のボット検出ルールを定義できます。
+を使用するほか、 [IAB/ABC International Spiders and Bot List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)を使用すると、データストリームごとに独自のボット検出ルールを定義できます。
 
-ボット検出ルールは、 **IP アドレス** および **IP アドレスの範囲**.
+に基づいてボット検出ルールを作成できます **IP アドレス** および **IP アドレスの範囲**.
 
 より詳細なボット検出ルールが必要な場合は、IP 条件とリクエストヘッダー条件を組み合わせることができます。 ボット検出ルールでは、次のヘッダーを使用できます。
 
 | HTTP ヘッダー | 説明 |
 | --- | --- |
-| `user-agent` | サーバーとネットワークピアが要求元のユーザーエージェントのアプリケーション、オペレーティングシステム、ベンダー、バージョンを識別できるようにするヘッダー。 |
-| `content-type` | リソースの元のメディアタイプを示します（送信に適用されるコンテンツエンコーディングの前）。 |
-| `referer` | リソースがリクエストされた Web ページのアドレスを識別します。 |
-| `sec-ch-ua` | ブラウザーに関連付けられた各ブランドのブランドと重要なバージョンを、コンマ区切りのリストで提供します。 |
-| `sec-ch-ua-mobile` | ブラウザーがモバイルデバイス上にあるかどうかを示します。 また、モバイルユーザーエクスペリエンスの環境設定を示すために、デスクトップブラウザーで使用することもできます。 |
-| `sec-ch-ua-platform` | ユーザーエージェントが実行されているプラットフォームまたはオペレーティングシステムを提供します。 例えば、「Windows」や「Android」と入力します。 |
-| `sec-ch-ua-platform-version` | ユーザーエージェントが実行されているオペレーティングシステムのバージョンを示します。 |
-| `sec-ch-ua-arch` | ARM や x86 など、ユーザーエージェントの基盤となる CPU アーキテクチャを提供します。 |
+| `user-agent` | サーバーやネットワークピアが、要求元のユーザーエージェントのアプリケーション、オペレーティングシステム、ベンダー、バージョンを特定できるヘッダー。 |
+| `content-type` | （送信にコンテンツエンコーディングが適用される前の）リソースの元のメディアタイプを示します。 |
+| `referer` | リソースがリクエストされた web ページのアドレスを識別します。 |
+| `sec-ch-ua` | ブラウザーに関連付けられている各ブランドのブランドと重要なバージョンをコンマ区切りリストで提供します。 |
+| `sec-ch-ua-mobile` | ブラウザーがモバイルデバイス上にあるかどうかを示します。 また、デスクトップブラウザーでモバイルユーザーエクスペリエンスの環境設定を示すためにも使用できます。 |
+| `sec-ch-ua-platform` | ユーザーエージェントが実行されているプラットフォームまたはオペレーティングシステムを提供します。 例：「Windows」または「Android」。 |
+| `sec-ch-ua-platform-version` | ユーザーエージェントが実行されているオペレーティングシステムのバージョンを提供します。 |
+| `sec-ch-ua-arch` | ユーザーエージェントの基盤となる CPU アーキテクチャ （ARM、x86 など）を提供します。 |
 | `sec-ch-ua-model` | ブラウザーが実行されているデバイスモデルを示します。 |
-| `sec-ch-ua-bitness` | ユーザーエージェントの基盤となる CPU アーキテクチャの「ビット度」を提供します。 これは、整数またはメモリアドレス（通常は 64 または 32 ビット）のビット数です。 |
-| `sec-ch-ua-wow64` | 64 ビット Windows 上で、ユーザーエージェントバイナリが 32 ビットモードで実行されているかどうかを示します。 |
+| `sec-ch-ua-bitness` | user-agent の基盤となる CPU アーキテクチャの「ビット数」を提供します。 これは、整数またはメモリアドレスのビット単位のサイズで、通常は 64 ビットまたは 32 ビットです。 |
+| `sec-ch-ua-wow64` | ユーザーエージェント バイナリが 64 ビット Windows 上の 32 ビット モードで実行されているかどうかを示します。 |
 
 ボット検出ルールを作成するには、次の手順に従います。
 
-1. 選択 **[!UICONTROL 新規ルールの追加]**.
+1. を選択 **[!UICONTROL 新規ルールの追加]**.
 
-   ![「新しいルールを追加」ボタンがハイライトされたボット検出設定画面](assets/bot-detection/bot-detection-new-rule.png)
+   ![「新しいルールを追加」ボタンがハイライト表示されたボット検出設定画面](assets/bot-detection/bot-detection-new-rule.png)
 
-2. ルールの名前を **[!UICONTROL ルール名]** フィールドに入力します。
+2. ルールの名前を **[!UICONTROL ルール名]** フィールド。
 
-   ![ルール名がハイライトされたボット検出ルール画面。](assets/bot-detection/rule-name.png)
+   ![ルール名がハイライト表示されたボット検出ルール画面](assets/bot-detection/rule-name.png)
 
-3. 選択 **[!UICONTROL 新しい IP 条件を追加]** をクリックして、新しい IP ベースのルールを追加します。 ルールは、IP アドレスまたは IP アドレス範囲で定義できます。
+3. を選択 **[!UICONTROL 新しい IP 条件を追加]** 新しい IP ベースのルールを追加する場合 ルールは、IP アドレスまたは IP アドレスの範囲で定義できます。
 
-   ![「IP アドレス」フィールドが強調表示されたボット検出ルール画面。](assets/bot-detection/ip-address-rule.png)
+   ![IP アドレスフィールドがハイライトされたボット検出ルール画面。](assets/bot-detection/ip-address-rule.png)
 
-   ![「IP 範囲」フィールドがハイライト表示されたボット検出ルール画面。](assets/bot-detection/ip-range-rule.png)
+   ![IP 範囲フィールドがハイライトされたボット検出ルール画面。](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
-   >IP 条件は、論理に基づいています `OR` 操作。 定義した IP 条件のいずれかと一致する場合、リクエストはボットからの発信元としてマークされます。
+   >IP 条件は、論理に基づいています `OR` 操作。 定義したいずれかの IP 条件に一致する場合、リクエストはボットからの発信元としてマークされます。
 
-4. ルールにヘッダー条件を追加する場合は、「 **[!UICONTROL ヘッダー条件グループを追加]**&#x200B;をクリックし、ルールで使用するヘッダーを選択します。
+4. ルールにヘッダー条件を追加する場合は、 **[!UICONTROL ヘッダー条件グループの追加]**&#x200B;ルールで使用するヘッダーを選択します。
 
-   ![ボット検出ルール画面のヘッダー条件がハイライト表示されます。](assets/bot-detection/header-conditions.png)
+   ![ヘッダー条件がハイライト表示されたボット検出ルール画面](assets/bot-detection/header-conditions.png)
 
    次に、選択したヘッダーに使用する条件を追加します。
 
-   ![ボット検出ルール画面のヘッダー条件がハイライト表示されます。](assets/bot-detection/header-condition-rule.png)
+   ![ヘッダー条件がハイライト表示されたボット検出ルール画面](assets/bot-detection/header-condition-rule.png)
 
-5. 目的のボット検出ルールを設定したら、「 」を選択します。 **[!UICONTROL 保存]** ルールをデータストリームに適用する。
+5. 目的のボット検出ルールを設定したら、以下を選択します。 **[!UICONTROL 保存]** ルールをデータストリームに適用する。
 
-   ![ボット検出ルール画面のヘッダー条件がハイライト表示されます。](assets/bot-detection/bot-detection-save.png)
+   ![ヘッダー条件がハイライト表示されたボット検出ルール画面](assets/bot-detection/bot-detection-save.png)
 
 
 ## ボット検出ルールの例 {#examples}
 
-ボット検出を開始する際に役立つように、以下に説明する例を使用してボット検出ルールを作成できます。
+ボット検出を開始する際に役立つように、以下に説明する例を使用して、ボット検出ルールを作成できます。
 
 ### 1 つの IP アドレスに基づくボット検出 {#one-ip}
 
-特定の IP アドレスからのすべての要求をボットトラフィックとしてマークするには、次の図に示すように、単一の IP アドレスを評価する新しいボット検出ルールを作成します。
+特定の IP アドレスから発生するすべてのリクエストをボットトラフィックとしてマークするには、単一の IP アドレスを評価する新しいボット検出ルールを作成します（下図を参照）。
 
 ![1 つの IP アドレスに基づくボット検出ルール。](assets/bot-detection/bot-detection-one-ip.png)
 
 ### 2 つの IP アドレスに基づくボット検出 {#two-ip}
 
-2 つの特定の IP アドレスのいずれかから発生するすべての要求をボットトラフィックとしてマークするには、次の図に示すように、2 つの IP アドレスを評価する新しいボット検出ルールを作成します。
+2 つの特定の IP アドレスのいずれかから発生するすべての要求をボットトラフィックとしてマークするには、次の画像に示すように、2 つの IP アドレスを評価する新しいボット検出ルールを作成します。
 
 ![2 つの IP アドレスに基づくボット検出ルール。](assets/bot-detection/bot-detection-two-ips.png)
 
 ### IP アドレスの範囲に基づくボット検出 {#range}
 
-特定の範囲内の任意の IP アドレスから発生したすべてのリクエストをボットトラフィックとしてマークするには、次の図に示すように、IP アドレス範囲全体を評価する新しいボット検出ルールを作成します。
+特定の範囲の任意の IP アドレスから発生するすべての要求をボットトラフィックとしてマークするには、以下の画像に示すように、IP アドレス範囲全体を評価する新しいボット検出ルールを作成します。
 
 ![IP 範囲に基づくボット検出ルール。](assets/bot-detection/bot-detection-range.png)
 
 ### IP アドレスとリクエストヘッダーに基づくボット検出 {#ip-header}
 
-特定の IP アドレスから発生したすべてのリクエストをボットトラフィックとしてマークするには、次の図に示すように、新しいボット検出ルールを作成します。
+特定の IP アドレスから発生し、特定のリクエストヘッダーを含むすべてのリクエストをボットトラフィックとしてマークするには、次の画像に示すように、新しいボット検出ルールを作成します。
 
-このルールは、リクエストが特定の IP アドレスから送信されたかどうか、および `referer` リクエストヘッダーが次の値で始まる `www.adobe.com`.
+このルールは、リクエストが特定の IP アドレスから発生しているかどうか、および `referer` リクエストヘッダーがで始まる `www.adobe.com`.
 
 ![IP アドレスとリクエストヘッダーに基づくボット検出ルール。](assets/bot-detection/bot-detection-header-ip.png)
 
 ### 複数の条件に基づくボット検出 {#multiple-conditions}
 
-次の条件に基づいて、ボット検出ルールを作成できます。
+次の項目に基づいてボット検出ルールを作成できます。
 
-* **複数の異なる条件**：異なる条件は、論理的に評価されます `AND` 操作とは、リクエストをボットから生成したものとして識別するために、条件を同時に満たす必要があることを意味します。
-* **同じタイプの複数の条件**：同じタイプの条件は、論理的なとして評価されます `OR` 操作。つまり、いずれかの条件が満たされた場合、リクエストはボットからのリクエストとして識別されます。
+* **複数の異なる条件**：様々な条件が論理として評価されます `AND` 操作：リクエストがボットから発生したものとして識別されるためには、条件を同時に満たす必要があります。
+* **同じタイプの複数の条件**：同じタイプの条件が論理として評価されます `OR` 操作。つまり、いずれかの条件が満たされた場合、リクエストは、ボットから生じたものとして識別されます。
 
-次の画像に示すルールは、次の条件を満たした場合に、ボット発信リクエストを識別します。
+以下の画像に示すルールは、次の条件を満たす場合、ボット起点のリクエストを識別します。
 
-このリクエストは、2 つの IP アドレスのいずれか ( `referer` ヘッダーが次の値で始まる `www.adobe.com`、および `sec-ch-ua-mobile` ヘッダーは、デスクトップブラウザーからの要求であることを識別します。
+リクエストは、2 つの IP アドレスのどちらか（ `referer` ヘッダーがで始まる `www.adobe.com`、および `sec-ch-ua-mobile` ヘッダーは、リクエストの発信元がデスクトップブラウザーであることを識別します。
 
 ![複数の条件に基づくボット検出ルール。](assets/bot-detection/bot-detection-multiple.png)
