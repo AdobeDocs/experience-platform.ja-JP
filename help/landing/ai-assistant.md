@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platformの AI アシスタント
 description: AI アシスタントを使用して、Experience PlatformとReal-time Customer Data Platformの概念、およびオブジェクトの使用状況を移動および把握する方法について説明します。
-badge: アルファ版
+badge: ベータ版
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
+source-git-commit: 2bf445144789a05e8a789994d30b884be7a8843d
 workflow-type: tm+mt
 source-wordcount: '2730'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> Adobe Experience Platform用 AI アシスタントは現在Alpha中です。 機能とドキュメントは変更される場合があります。
+> Adobe Experience Platform用 AI アシスタントは現在ベータ版です。 機能とドキュメントは変更される場合があります。
 
 AI アシスタントは、Adobe Experience PlatformおよびReal-time Customer Data Platformの概念や、オブジェクトに関する使用状況情報をナビゲーションおよび理解するために使用できる UI 機能です。
 
