@@ -1,21 +1,25 @@
 ---
-title: インタラクティブデータ収集
-description: Adobe Experience Platform Edge Network Server API によるインタラクティブなデータ収集の仕組みについて説明します。
+title: インタラクティブなデータ収集
+description: Adobe Experience Platform Edge Networkサーバー API がインタラクティブなデータ収集を実行する方法について説明します。
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f8434746c4a023ec895d23a59e04fca4baecfc36
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 19%
+source-wordcount: '179'
+ht-degree: 15%
 
 ---
 
-# インタラクティブデータ収集
+# インタラクティブなデータ収集
 
 ## 概要 {#overview}
 
-インタラクティブデータ収集エンドポイントは、単一のイベントを受け取り、クライアントがAdobe Experience Platform Edge Network サーバーによって応答が返されると想定する場合に使用されます。 また、これらのエンドポイントは、データ収集を実行中に、他の Edge ネットワークサービスからコンテンツを返すこともできます。
+インタラクティブデータ収集エンドポイントは、1 つのイベントを受け取り、クライアントがAdobe Experience Platform Edge Networkサーバーから返される応答を必要とする場合に使用されます。 また、これらのエンドポイントは、データ収集を実行しながら、他のEdge Networkサービスからコンテンツを返すこともできます。
 
-サーバー応答に 1 つ以上の `Handle` オブジェクトを作成します。
+>[!IMPORTANT]
+>
+>この `/interact` エンドポイントは、主にExperience Platform SDK で使用するように設計されています。 このエンドポイントは追加的な変更が行われる可能性があり、その動作は予告なく進化する可能性があります。 例えば、今後、新しい項目が応答ペイロードに追加される可能性があります。
+
+サーバー応答には、1 つ以上の応答が含まれます `Handle` オブジェクト（下図を参照）。
 
 ## API 呼び出しの例
 
@@ -63,11 +67,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | はい。 | データストリーム ID。 |
-| `requestId` | `String` | × | 内部サーバーリクエストを関連付けるためのクライアントのランダム ID を指定します。 何も指定されない場合、Edge Network によって生成され、応答で返されます。 |
+| `requestId` | `String` | × | 内部サーバーリクエストを関連付けるためのクライアントランダム ID を指定します。 何も指定されない場合、Edge Network によって生成され、応答で返されます。 |
 
 ### 応答 {#response}
 
-正常な応答は HTTP ステータスを返します `200 OK`（1 つ以上） `Handle` データストリーム設定で有効なリアルタイムエッジサービスに応じたオブジェクト。
+応答が成功すると、HTTP ステータスが返されます `200 OK`、1 つ以上 `Handle` データストリーム設定で有効になっているリアルタイムエッジサービスに応じたオブジェクト。
 
 ```json
 {
