@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
+source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1036'
 ht-degree: 94%
 
 ---
@@ -92,10 +92,10 @@ ht-degree: 94%
       - [Snowflake ストリーミングコネクタ](connectors/databases/snowflake-streaming.md)
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
       - [Teradata Vantage コネクタ](connectors/databases/teradata-vantage.md)
-   - データと ID パートナー {#data-partner}
-      - [Acxiom データ取り込み](connectors/data-partners/acxiom-data-ingestion.md)
-      - [Acxiom 見込みデータのインポート](connectors/data-partners/acxiom-prospecting-data-import.md)
-      - [企業 ID の解決](connectors/data-partners/merkury.md)
+   - データおよび ID パートナー {#data-partner}
+      - [Acxiom のデータ取り込み](connectors/data-partners/acxiom-data-ingestion.md)
+      - [Acxiom Prospecting データ・インポート](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Merkury エンタープライズ Id 解決](connectors/data-partners/merkury.md)
    - e コマース {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -109,8 +109,9 @@ ht-degree: 94%
       - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
       - [Mailchimp コネクタ](connectors/marketing-automation/mailchimp.md)
       - [Oracle Eloqua コネクタ](connectors/marketing-automation/oracle-eloqua.md)
-      - [OracleNetSuite](connectors/marketing-automation/oracle-netsuite.md)
+      - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [Oracle Responsys コネクタ](connectors/marketing-automation/oracle-responsys.md)
+      - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 支払い {#payments}
       - [PayPal コネクタ](connectors/payments/paypal.md)
@@ -190,8 +191,9 @@ ht-degree: 94%
          - [MailChimp メンバー](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [OracleNetSuite アクティビティ](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
-         - [OracleNetSuite エンティティ](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
+         - [NetSuite エンティティのOracle](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -301,10 +303,10 @@ ht-degree: 94%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflakeストリーミング](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - データと ID パートナー {#data-partner}
-         - [Acxiom データ取り込み](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
-         - [Acxiom 見込みデータのインポート](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
-         - [企業 ID の解決](tutorials/ui/create/data-partners/merkury.md)
+      - データおよび ID パートナー {#data-partner}
+         - [Acxiom のデータ取り込み](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
+         - [Acxiom Prospecting データ・インポート](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Merkury エンタープライズ Id 解決](tutorials/ui/create/data-partners/merkury.md)
       - e コマース {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -320,8 +322,9 @@ ht-degree: 94%
          - [Mailchimp メンバー](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [OracleNetSuite アクティビティ](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
-         - [OracleNetSuite エンティティ](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
+         - [NetSuite エンティティのOracle](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
