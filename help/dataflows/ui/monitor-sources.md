@@ -1,30 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；アカウントの監視；データフローの監視；データフロー；ソース
-description: このチュートリアルでは、集計された監視ビューとクロスサービス監視の両方を使用してデータフローを監視する手順を説明します。
-solution: Experience Platform
+description: 監視ダッシュボードを使用して、ソースから取り込まれたデータを監視する方法について説明します。
 title: UI でのソースのデータフローの監視
-type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 29%
+source-wordcount: '1256'
+ht-degree: 21%
 
 ---
 
-# UI でのソースのデータフローの監視
+# UI でソースのデータフローを監視
 
 >[!IMPORTANT]
 >
->ストリーミングソース ( [HTTP API ソース](../../sources/connectors/streaming/http.md) は、現在、監視ダッシュボードではサポートされていません。 現時点では、ダッシュボードを使用してバッチソースを監視することのみできます。
+>などのストリーミングソース [HTTP API ソース](../../sources/connectors/streaming/http.md) は、現在、監視ダッシュボードではサポートされていません。 現時点では、バッチソースの監視にのみダッシュボードを使用できます。
 
-Adobe Experience Platform では、様々なソースからデータを取り込み、Experience Platform 内で分析し、様々な目的でアクティブ化します。Platform では、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
+このドキュメントでは、モニタリングダッシュボードを使用して、Experience PlatformUI でソースデータフローをモニタリングする方法について説明します。
 
-監視ダッシュボードは、データフローのジャーニーを視覚的に表します。 集計された監視ビューを使用し、ソースレベルからデータフロー、およびデータフローの実行に垂直に移動して、データフローの成功または失敗に貢献する対応する指標を表示できます。 また、監視ダッシュボードのクロスサービス監視機能を使用して、ソースからへのデータフローのジャーニーを監視することもできます。 [!DNL Identity Service]、およびに [!DNL Profile].
-
-このチュートリアルでは、集計された監視ビューとクロスサービス監視の両方を使用してデータフローを監視する手順を説明します。
-
-## はじめに {#getting-started}
+## 基本を学ぶ {#get-started}
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -35,7 +28,7 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 * [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-## 集計された監視ビュー {#aggregated-monitoring-view}
+## 監視ダッシュボードを使用したソースデータの監視
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -49,89 +42,101 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 >abstract="ソース処理ビューには、データレイクサービスのデータアクティビティステータスや指標に関する情報 (取り込まれたレコードや失敗したレコードなど) が表示されます。指標およびグラフについて詳しくは、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
-Adobe Analytics の [Platform UI](https://platform.adobe.com)を選択します。 **[!UICONTROL 監視]** 左側のナビゲーションから、 [!UICONTROL 監視] ダッシュボード。 The [!UICONTROL 監視] ダッシュボードには、ソースからソースへのデータトラフィックの状態に関するインサイトを含む、すべてのソースデータフローに関する指標と情報が含まれます。 [!DNL Identity Service]、およびに [!DNL Profile].
+<!-- In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
-ダッシュボードの中央には、 [!UICONTROL ソースの取り込み] 取得されたレコードと失敗したレコードに関するデータを表示する指標とグラフを含むパネル。
+At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
-![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
+監視ダッシュボードで、を選択します。 [!UICONTROL ソース] メインヘッダーのを使用して、ソースデータフローの取り込み率を表示してダッシュボードを更新します。
 
-デフォルトでは、表示されるデータには、過去 24 時間のインジェスト率が含まれています。 「**[!UICONTROL 過去 24 時間]**」を選択すると、表示されるレコードの時間枠を調整できます。 
+![ソースカードが選択された監視ダッシュボード。](../assets/ui/monitor-sources/sources.png)
 
-![change-date](../assets/ui/monitor-sources/change-date.png)
+この [!UICONTROL 取り込みレート] グラフには、設定した時間枠に基づいてデータ取り込み率が表示されます。 デフォルトでは、監視ダッシュボードには、過去 24 時間の取り込み率が表示されます。 時間枠の設定手順については、に関するガイドを参照してください。 [監視時間枠の設定](monitor.md#configure-monitoring-time-frame).
 
-カレンダーポップアップウィンドウが開き、別の取り込み時間枠のオプションが表示されます。 選択 **[!UICONTROL 過去 30 日間]** 次に、「 **[!UICONTROL 適用]**
+このグラフは、デフォルトで表示できるようになっています。 グラフを非表示にするには、以下を選択します **[!UICONTROL 指標とグラフ]** 切り替えを無効にしてグラフを非表示にします。
 
-![adjust-time-frame](../assets/ui/monitor-sources/adjust-timeframe.png)
+![取り込み率メトリクスグラフ。](../assets/ui/monitor-sources/metrics-graph.png)
 
-グラフはデフォルトで有効になっています。無効にすると、以下のソースのリストが展開されます。 グラフを無効にするには、「**[!UICONTROL 指標とグラフ]**」切替スイッチを選択します。
+ダッシュボードの下部には、既存のすべてのソースデータフローの現在の指標レポートの概要を示すテーブルが表示されます。
 
-![指標とグラフ](../assets/ui/monitor-sources/metrics-graphs.png)
+![監視ダッシュボード指標テーブル。](../assets/ui/monitor-sources/metrics-table.png)
 
-| ソース取り込み | 説明 |
-| ---------------- | ----------- |
-| [!UICONTROL 取り込まれたレコード] | 取り込まれたレコードの合計数。 |
-| [!UICONTROL 失敗したレコード] | データのエラーが原因で取り込まれなかったレコードの合計数です。 |
-| [!UICONTROL 失敗したデータフローの合計] | を含むデータフローの合計数 `failed` ステータス。 |
+| 指標 | 説明 |
+| --- | --- |
+| 受信したレコード | ソースから受信したレコードの合計数。 |
+| 取り込まれたレコード | データレイクに取り込まれたレコードの合計数。 |
+| スキップされたレコード | スキップされたレコードの合計数です。 |
+| 失敗したレコード | エラーが原因で取り込むことができなかったレコードの合計数です。 |
+| 取り込み率 | 受信したレコードの合計数に基づいて取り込まれたレコードの割合。 |
+| 失敗したデータフローの合計 | 失敗したデータフローの合計数。 |
 
-ソースの取り込みリストには、1 つ以上の既存のアカウントを含むすべてのソースが表示されます。 また、このリストには、適用した時間枠に基づく、各ソースの取り込み率、失敗したレコードの数、失敗したデータフローの合計数に関する情報も含まれます。
+{style="table-layout:auto"}
 
-![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
+指標テーブルの上にあるオプションを使用して、データをさらにフィルタリングできます。
 
-ソースのリストを並べ替えるには、「 **[!UICONTROL マイソース]** 次に、ドロップダウンメニューから選択したカテゴリを選択します。 例えば、クラウドストレージに焦点を当てるには、「  **[!UICONTROL クラウドストレージ]**
+| フィルターオプション | 説明 |
+| --- | --- |
+| 検索 | 検索バーを使用して、ビューを単一のソースタイプにフィルタリングします。 |
+| ソース | を選択 **[!UICONTROL ソース]** ビューをフィルタリングし、ソースタイプごとに指標データを表示します。 これは、監視ダッシュボードが使用するデフォルトの表示です。 |
+| データフロー | を選択 **[!UICONTROL データフロー]** ビューをフィルタリングし、データフローごとに指標データを表示します。 |
+| 失敗のみを表示 | を選択 **[!UICONTROL 失敗のみを表示]** でビューをフィルタリングし、取り込み失敗を報告したデータフローのみを表示します。 |
+| マイソース | を使用して、ビューをさらにフィルタリングできます [!UICONTROL マイソース] ドロップダウンメニュー。 ドロップダウンメニューを使用すると、カテゴリでビューをフィルタリングできます。 または、以下を選択できます。 **[!UICONTROL すべてのソース]** すべてのソースまたはソースの指標を表示するか、次を選択します **[!UICONTROL マイソース]** にアクセスして、対応するアカウントを持つソースのみを表示します。 |
 
-![カテゴリ別に並べ替え](../assets/ui/monitor-sources/sort-by-category.png)
+{style="table-layout:auto"}
 
-すべてのソースの既存のデータフローをすべて表示するには、「 」を選択します。 **[!UICONTROL データフロー]**.
+特定のデータフローに取り込まれるデータを監視するには、フィルターアイコンを選択します ![フィルター](../assets/ui/monitor-sources/filter.png) ソースの横。
 
-![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
+![特定のソースの横にあるフィルターアイコンを選択して、特定のデータフローを監視します。](../assets/ui/monitor-sources/monitor-dataflow.png)
 
-または、検索バーにソースを入力して、1 つのソースを分離することもできます。 ソースを特定したら、フィルターアイコンを選択します。 ![フィルター](../assets/ui/monitor-sources/filter.png) その横に、アクティブなデータフローのリストを表示します。
+指標テーブルは、選択したソースに対応するアクティブなデータフローのテーブルに更新されます。 この手順では、対応するデータセットやデータタイプなどのデータフローに関する追加情報と、最後にアクティブだった日時を示すタイムスタンプを表示できます。
 
-![検索](../assets/ui/monitor-sources/search.png)
+データフローをさらに詳しく調べるには、フィルターアイコンを選択します ![フィルター](../assets/ui/monitor-sources/filter.png) データフローの横に。
 
-データフローのリストが表示されます。 リストを絞り込み、エラーのあるデータフローに焦点を当てるには、「 」を選択します。 **[!UICONTROL 失敗のみを表示]**.
+![監視ダッシュボードのデータフローテーブル。](../assets/ui/monitor-sources/select-dataflow.png)
 
-![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
+次に、選択したデータフローのすべてのデータフロー実行イテレーションをリストするインターフェイスに移動します。
 
-監視するデータフローを見つけ、フィルターアイコンを選択します。 ![フィルター](../assets/ui/monitor-sources/filter.png) の横に、実行ステータスの詳細を表示します。
+データフロー実行は、データフロー実行のインスタンスを表します。 例えば、データフローが 1 時間ごとに午前 9:00、午前 10:00、午前 11:00 に実行されるようにスケジュールされている場合、フロー実行のインスタンスが 3 つ存在します。 フロー実行は、特定の組織に固有です。
 
-![データフロー](../assets/ui/monitor-sources/dataflow.png)
+特定のデータフロー実行イテレーションの指標を調べるには、フィルターアイコンを選択します ![フィルター](../assets/ui/monitor-sources/filter.png) データフローの横に、
 
-データフローの実行ページには、データフローの実行開始日、データのサイズ、ステータス、および処理時間に関する情報が表示されます。 フィルターアイコンを選択します。 ![フィルター](../assets/ui/monitor-sources/filter.png) をクリックし、データフローの実行の詳細を確認します。
+![データフロー実行指標ページ。](../assets/ui/monitor-sources/dataflow-page.png)
 
-![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
+データフロー実行の詳細ページを使用して、選択した実行イテレーションの指標と情報を表示します。
 
-The [!UICONTROL データフローの実行の詳細] ページには、データフローのメタデータ、部分取り込みステータス、エラー概要に関する情報が表示されます。 エラー概要には、取り込みプロセスでエラーが発生した手順を示す特定の最上位エラーが含まれます。
+![データフロー実行の詳細ページ。](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-下にスクロールして、発生したエラーに関する詳細情報を確認します。
+| データフロー実行の詳細 | 説明 |
+| --- | --- |
+| 取り込まれたレコード | データフロー実行から取り込まれたレコードの合計数です。 |
+| 失敗したレコード | データフロー実行のエラーによって取り込まれなかったレコードの合計数です。 |
+| 合計ファイル数 | データフロー実行のファイルの合計数。 |
+| データのサイズ | データフロー実行に含まれるデータの合計サイズ。 |
+| データフロー実行 ID | データフロー実行イテレーションの ID。 |
+| 組織 ID | データフロー実行が作成された組織の ID。 |
+| ステータス | データフロー実行のステータス。 |
+| データフロー実行開始 | データフロー実行がいつ開始されたかを示すタイムスタンプ。 |
+| データフローの実行終了 | データフロー実行がいつ終了したかを示すタイムスタンプ。 |
+| データセット | データフローの作成に使用するデータセット。 |
+| データタイプ | データフローに含まれていたデータのタイプ。 |
+| 部分取り込み | 部分的なバッチ取得は、設定可能な特定のしきい値まで、エラーを含むデータを取り込む機能です。 この機能を使用すると、正確なデータをすべてExperience Platformに正常に取り込みながら、不正なデータがすべて無効な理由に関する情報と共に個別にバッチ処理されます。 データフローの作成プロセス中に、部分取り込みを有効にすることができます。 |
+| エラー診断 | エラー診断は、ソースがエラー診断を生成するように指示します。エラー診断は、後でデータセットアクティビティとデータフローステータスを監視するときに参照できます。 データフローの作成プロセス中に、エラー診断を有効にすることができます。 |
+| エラーの概要 | データフロー実行が失敗した場合、エラーサマリーには、実行の反復が失敗した理由を要約するエラーコードと説明が表示されます。 |
 
-![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
+{style="table-layout:auto"}
 
-The [!UICONTROL データフロー実行エラー] パネルには、データフローの取り込み失敗を引き起こした特定のエラーおよびエラーコードが表示されます。 このシナリオでは、マッパー変換エラーが発生し、結果として 24 件のレコードが失敗しました。
+データフロー実行でエラーが報告された場合は、ページの下部まで下にスクロールして、を使用できます。 [!UICONTROL データフロー実行エラー] インターフェイス。
 
-選択 **[!UICONTROL ファイル]** を参照してください。
+の使用 [!UICONTROL 失敗したレコード] エラーが原因で取り込まれなかったレコードの指標を表示するセクション。 包括的なエラーレポートを表示するには、 **[!UICONTROL エラー診断のプレビュー]**. エラー診断とファイル マニフェストのコピーをダウンロードするには、次のオプションを選択します **[!UICONTROL Download]** をコピーし、 [!DNL Data Access] API です。
 
-![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
+>[!NOTE]
+>
+>エラー診断を使用できるのは、ソース接続の作成プロセス中にこの機能が有効になった場合のみです。
 
-The [!UICONTROL ファイル] パネルには、ファイルの名前とパスに関する情報が含まれます。
-
-エラーの詳細な表現を得るには、 **[!UICONTROL エラー診断をプレビュー]**.
-
-![files](../assets/ui/monitor-sources/files.png)
-
-The [!UICONTROL エラー診断のプレビュー] ウィンドウが表示され、データフローで最大 100 個のエラーのプレビューが表示されます。 次の項目を選択できます。 **[!UICONTROL ダウンロード]** を使用して curl コマンドを取得します。このコマンドを使用すると、エラー診断をダウンロードできます。
-
-完了したら、「 **[!UICONTROL 閉じる]**
-
-![error-diagnostics](../assets/ui/monitor-sources/error-diagnostics.png)
-
-上部のヘッダーにあるパンくずリストシステムを使用すると、 [!UICONTROL 監視] ダッシュボード。 選択 **[!UICONTROL 実行開始：2/14/2021、9:47 PM]** 前のページに戻り、「 **[!UICONTROL データフロー：ロイヤルティデータ取り込みのデモ — 失敗]** をクリックして、データフローページに戻ります。
-
-![パンくず](../assets/ui/monitor-sources/breadcrumbs.png)
+![データフロー実行エラーパネル。](../assets/ui/monitor-sources/errors.png)
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うことで、 **[!UICONTROL 監視]** ダッシュボード。 また、取り込みプロセス中にデータフローが失敗した原因となるエラーも正常に識別されました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、を使用して、ソースレベルから取得データフローを正常に監視しました **[!UICONTROL 監視]** ダッシュボード。 また、取り込みプロセス中のデータフローの失敗に貢献したエラーを正常に特定しました。 詳しくは、次のドキュメントを参照してください。
 
-* [データフローの ID の監視](./monitor-identities.md)
-* [データフローのプロファイルの監視](./monitor-profiles.md)
+* [ID データの監視](./monitor-identities.md).
+* [プロファイルデータの監視](./monitor-profiles.md).
