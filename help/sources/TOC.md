@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1039'
 ht-degree: 94%
 
 ---
@@ -348,6 +348,7 @@ ht-degree: 94%
       - [支払接続のデータフロー](tutorials/ui/dataflow/payments.md)
       - [プロトコル接続のデータフロー](tutorials/ui/dataflow/protocols.md)
    - [UI のテンプレートを使用してソースのデータフローを作成する](tutorials/ui/templates.md)
+   - [ソースオブジェクトのフィルタリング](tutorials/ui/filter.md)
    - [オンデマンド取り込み](tutorials/ui/on-demand-ingestion.md)
    - [バッチデータフローのモニタリング](tutorials/ui/monitor.md)
    - [ストリーミングデータフローのモニタリング](tutorials/ui/monitor-streaming.md)
@@ -393,4 +394,4 @@ ht-degree: 94%
 - [IP アドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
