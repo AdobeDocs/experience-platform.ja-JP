@@ -1,24 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；teradata;teradata利用率
-title: TeradataVantage Source Connector の概要
-description: API またはユーザーインターフェイスを使用してTeradataVantage をAdobe Experience Platformに接続する方法を説明します。
+keywords: Experience Platform；ホーム；人気のトピック；teradata;teradataの利点
+title: Teradataバントージソースコネクタの概要
+description: API またはユーザーインターフェイスを使用してTeradata活用をAdobe Experience Platformに接続する方法について説明します。
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 59%
+source-wordcount: '238'
+ht-degree: 60%
 
 ---
 
-# （ベータ版）[!DNL Teradata Vantage] ソース
-
->[!NOTE]
->
->[!DNL Teradata Vantage] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+# [!DNL Teradata Vantage] ソース
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Platform は、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートは次のとおりです。 [!DNL Teradata Vantage].
+Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Platform は、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートは次のとおりです [!DNL Teradata Vantage].
 
 ## IP アドレス許可リスト
 
@@ -28,11 +24,11 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ## API を使用して [!DNL Teradata Vantage] と Platform を接続する
 
-- [フローサービス API を使用してTeradataVantage ベース接続を作成する](../../tutorials/api/create/databases/teradata-vantage.md)
+- [Flow Service API を使用したTeradata活用ベース接続の作成](../../tutorials/api/create/databases/teradata-vantage.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
-- [フローサービス API を使用して、データベースソースのデータフローを作成します](../../tutorials/api/collect/database-nosql.md)
+- [Flow Service API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
 ## UI を使用した [!DNL Teradata Vantage] の Platform への接続
 
-- [UI でのTeradataVantage ソース接続の作成](../../tutorials/ui/create/databases/teradata-vantage.md)
+- [UI でのTeradata Vantage ソースコネクタの作成](../../tutorials/ui/create/databases/teradata-vantage.md)
 - [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
