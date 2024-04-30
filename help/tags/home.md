@@ -2,10 +2,10 @@
 title: タグの概要
 description: Adobe Experience Platform のタグは、Adobe が提供する次世代のタグ管理機能です。タグを使用すると、関連する顧客体験を強化するために必要なすべての分析、マーケティング、広告などのタグを、簡単にデプロイして管理できます。
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 100%
+source-wordcount: '588'
+ht-degree: 95%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Adobe Experience Platform のタグは、Adobe が提供する次世代のタグ管理機能です。タグを使用すると、関連する顧客体験を強化するために必要なすべての分析、マーケティング、広告などのタグを、簡単にデプロイして管理できます。
 
-タグを使用すると、誰でも&#x200B;*拡張機能*&#x200B;と呼ばれる独自の統合を作成して使用できます。[!DNL Adobe Experience Cloud] のお客様は、アプリストアと同じようにこれらの機能を利用して、タグをすばやくインストール、設定およびデプロイすることができます。
+タグを使用すると、誰でも&#x200B;*拡張機能*&#x200B;と呼ばれる独自の統合を作成して使用できます。[!DNL Adobe Experience Cloud] のお客様は、アプリストアと同じようにこれらの拡張機能を利用して、タグをすばやくインストール、設定およびデプロイすることができます。
 
 タグは、[!DNL Adobe Experience Cloud] のお客様に、付属の付加価値機能として提供されます。
 
@@ -28,6 +28,10 @@ Adobe Experience Platform のタグは、Adobe が提供する次世代のタグ
 * ルールビルダーを使用した、データとマーケティングテクノロジーの統合による、強力なエクスペリエンス.
 
 ## 主な特長 {#key-features}
+
+右側のパネルの製品ヘルプのを使用して、タグの詳細を確認し、その他の使用可能なリソースを表示します。
+
+![データ収集 UI のタグプロパティ。](./images/ui/tags-overview/tags-properties.png)
 
 ### 拡張機能 {#extensions}
 

@@ -3,10 +3,10 @@ title: イベント転送の概要
 description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 87%
+source-wordcount: '1160'
+ht-degree: 76%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 このドキュメントでは、 Platform のイベント転送の概要を説明します。
 
-![データ収集エコシステムでのイベント転送](../../../collection/images/home/event-forwarding.png)
+![データ収集エコシステムでのイベント転送。](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
@@ -53,9 +53,13 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 ### プロパティ {#properties}
 
-イベント転送は、タグとは別に独自のプロパティストアを維持します。このプロパティは、Experience PlatformUI またはデータ収集 UI で、 **[!UICONTROL イベント転送]** をクリックします。
+イベント転送は、タグとは別に独自のプロパティのストアを保持し、以下を選択してExperience PlatformUI またはデータ収集 UI で表示できます **[!UICONTROL イベントの転送]** 左側のナビゲーションの
 
-![データ収集 UI のイベント転送プロパティ](../../images/ui/event-forwarding/overview/properties.png)
+>[!TIP]
+>
+>右側のパネルの製品ヘルプのを使用して、イベント転送の詳細を確認し、その他の使用可能なリソースを表示します。
+
+![データ収集 UI のイベント転送プロパティ。](../../images/ui/event-forwarding/overview/properties.png)
 
 すべてのイベント転送プロパティには、プラットフォームとして **[!UICONTROL Edge]** がリストされています。Web とモバイルは、Platform Edge Network から受信したデータのみを処理するため区別されません。Platform Edge Network 自体は、web プラットフォームとモバイルプラットフォームの両方からイベントデータを受信できます。
 
@@ -63,7 +67,9 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 イベント転送には、[Core](../../extensions/server/core/overview.md) 拡張機能や [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) 拡張機能など、互換性のある拡張機能の独自のカタログがあります。左側のナビゲーションで「**[!UICONTROL 拡張機能]**」、「**[!UICONTROL カタログ]**」の順に選択すると、UI にイベント転送プロパティで使用可能な拡張機能を表示できます。
 
-![データ収集 UI のイベント転送拡張機能](../../images/ui/event-forwarding/overview/extensions.png)
+次のオプションを選択すると、この機能の詳細を確認できる追加のリソースを表示できます ![について](../../images/ui/event-forwarding/overview/about.png) 右パネルから。
+
+![データ収集 UI のイベント転送拡張機能。](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### データ要素 {#data-elements}
 
@@ -77,25 +83,31 @@ Platform Edge Network からデータを参照するには、そのデータへ�
 
 データ要素の&#x200B;**[!UICONTROL パス]**&#x200B;値は、パターン `arc.event.{ELEMENT}` に従う必要があります（例：`arc.event.xdm.web.webPageDetails.URL`）。データを送信するには、このパスを正しく指定する必要があります。
 
-![イベント転送のパスタイプデータ要素の例](../../images/ui/event-forwarding/overview/data-reference.png)
+次のオプションを選択すると、この機能の詳細を確認できる追加のリソースを表示できます ![について](../../images/ui/event-forwarding/overview/about.png) 右パネルから。
+
+![イベント転送のパスタイプデータ要素の例。](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### ルール {#rules}
 
 イベント転送プロパティでのルールの作成はタグと同様に機能しますが、重要な違いは、イベントをルールコンポーネントとして選択できないことです。代わりに、イベント転送ルールは[データストリーム](../../../datastreams/overview.md)から受け取ったすべてのイベントを処理し、特定の条件を満たした場合にそれらのイベントを宛先に転送します。
 
-さらに、1 つのイベントに適用される 30 秒のタイムアウトがあります。このタイムアウトは、イベント転送プロパティ内のすべてのルール（したがってすべてのアクション）で処理されます。 つまり、1 つのイベントに対するすべてのルールとすべてのアクションは、この期間内に完了する必要があります。
+さらに、イベント転送プロパティ内のすべてのルール（およびすべてのアクション）で処理されるので、1 つのイベントに適用される 30 秒のタイムアウトがあります。 つまり、単一のイベントのすべてのルールとすべてのアクションは、この期間内に完了する必要があります。
 
-![データ収集 UI のイベント転送ルール](../../images/ui/event-forwarding/overview/rules.png)
+次のオプションを選択すると、この機能の詳細を確認できる追加のリソースを表示できます ![について](../../images/ui/event-forwarding/overview/about.png) 右パネルから。
+
+![データ収集 UI のイベント転送ルール。](../../images/ui/event-forwarding/overview/rules.png)
 
 #### データ要素のトークン化 {#tokenization}
 
 タグルールでは、データ要素名の先頭と末尾に `%` を付けてデータ要素をトークン化します（例：`%viewportHeight%`）。イベント転送ルールでは、データ要素は代わりにデータ要素名の先頭に `{{`、末尾に `}}` を付けてトークン化します（例：`{{viewportHeight}}`）。
 
-![イベント転送のパスタイプデータ要素の例](../../images/ui/event-forwarding/overview/tokenization.png)
+次のオプションを選択すると、この機能の詳細を確認できる追加のリソースを表示できます ![について](../../images/ui/event-forwarding/overview/about.png) 右パネルから。
+
+![イベント転送のパスタイプデータ要素の例。](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### ルールアクションのシーケンス {#action-sequencing}
 
-イベント転送ルールの[!UICONTROL アクション]セクションは常に順番に実行されます。例えば、ルールに 2 つのアクションがある場合、2 つ目のアクションは、前のアクションが完了するまで（また、エンドポイントからの応答が期待される場合は、そのエンドポイントが応答するまで）実行を開始しません。 ルールを保存する際に、アクションの順序が正しいことを確認します。この実行シーケンスは、タグルールで実行できるのと同様に、非同期で実行することはできません。
+イベント転送ルールの[!UICONTROL アクション]セクションは常に順番に実行されます。例えば、ルールに 2 つのアクションがある場合、2 番目のアクションは、前のアクションが完了するまで（およびエンドポイントから応答が期待される場合は、そのエンドポイントが応答するまで）実行を開始しません。 ルールを保存する際に、アクションの順序が正しいことを確認します。この実行シーケンスは、タグルールの場合のように非同期で実行することはできません。
 
 ## 秘密鍵 {#secrets}
 
