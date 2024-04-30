@@ -1,10 +1,8 @@
 ---
 title: データストリームのボット検出の設定
 description: 人間トラフィックと非人間トラフィックを区別するために、データストリームのボット検出を設定する方法を説明します。
-hide: true
-hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
+source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
