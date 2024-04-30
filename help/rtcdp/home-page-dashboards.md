@@ -1,13 +1,13 @@
 ---
 keywords: 指標の概要；rtcdp 指標の概要
 title: Real-time Customer Data Platformのホームページとダッシュボード
-description: Adobe Real-Time CDPの様々なダッシュボード、ホームページ、および初回ユーザーエクスペリエンスについて説明します。
+description: Adobe Real-Time CDP の様々なダッシュボード、ホームページおよび初回ユーザーエクスペリエンスについて説明します。
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '919'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
