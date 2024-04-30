@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2024年3月）
 description: Adobe Experience Platform の 2024年3月のリリースノート。
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
+source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 33%
@@ -39,20 +39,6 @@ Experience Platformの既存の機能に対するアップデート：
 
 Catalog Service について詳しくは、[Catalog Service の概要](../../catalog/home.md)を参照してください。
 
-## データ収集 {#data-collection}
-
-Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
-
-**新機能**
-
-| タイプ | 機能 | 説明 |
-| --- | --- | --- |
-| 拡張機能 | [!DNL Merkury] タグ拡張機能 | この [[!DNL Merkury] タグ拡張機能](https://exchange.adobe.com/apps/ec/600027/merkury-tag) は、への匿名 web サイト訪問者に、業界をリードする一致率を提供します [!DNL Merkury] ID。 ブランドは、の機能を活用できます [!DNL Merkury] タグ付けおよびAdobeして、パーソナライズされた web サイトエクスペリエンスをリアルタイムで提供します。 さらに、 [!DNL Merkury] タグを使用すると、ファーストパーティのデジタルデータを、オンラインおよびオフラインの接続された顧客プロファイルと共に成長させることができます。 |
-
-{style="table-layout:auto"}
-
-データ収集について詳しくは、を参照してください。 [データ収集の概要](../../tags/home.md).
-
 ## データ準備 {#data-prep}
 
 データ準備を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータのマッピング、変換および検証を行うことができます。
@@ -66,6 +52,20 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 {style="table-layout:auto"}
 
 データ準備について詳しくは、 [データ準備の概要](../../data-prep/home.md).
+
+## データ収集 {#data-collection}
+
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
+
+**新機能**
+
+| タイプ | 機能 | 説明 |
+| --- | --- | --- |
+| 拡張機能 | [!DNL Merkury] タグ拡張機能 | この [[!DNL Merkury] タグ拡張機能](https://exchange.adobe.com/apps/ec/600027/merkury-tag) は、への匿名 web サイト訪問者に、業界をリードする一致率を提供します [!DNL Merkury] ID。 ブランドは、の機能を活用できます [!DNL Merkury] タグ付けおよびAdobeして、パーソナライズされた web サイトエクスペリエンスをリアルタイムで提供します。 さらに、 [!DNL Merkury] タグを使用すると、ファーストパーティのデジタルデータを、オンラインおよびオフラインの接続された顧客プロファイルと共に成長させることができます。 |
+
+{style="table-layout:auto"}
+
+データ収集について詳しくは、を参照してください。 [データ収集の概要](../../tags/home.md).
 
 ## 宛先 {#destinations}
 
