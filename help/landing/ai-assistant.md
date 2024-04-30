@@ -5,7 +5,7 @@ badge: ベータ版
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 2bf445144789a05e8a789994d30b884be7a8843d
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '2730'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> Adobe Experience Platform用 AI アシスタントは現在ベータ版です。 機能とドキュメントは変更される場合があります。
+>Adobe Experience Platform用 AI アシスタントは現在ベータ版です。 機能とドキュメントは変更される場合があります。
 
 AI アシスタントは、Adobe Experience PlatformおよびReal-time Customer Data Platformの概念や、オブジェクトに関する使用状況情報をナビゲーションおよび理解するために使用できる UI 機能です。
 

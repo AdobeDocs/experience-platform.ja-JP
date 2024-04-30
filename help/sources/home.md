@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1531'
 ht-degree: 75%
 
 ---
@@ -26,9 +26,9 @@ Experience Platform を使用すると、異なるソースから収集したデ
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Adobeで作成されたソースとパートナーで作成されたソース {#adobe-and-partner-built-sources}
+## Adobe構築およびパートナー構築のソース {#adobe-and-partner-built-sources}
 
-Experience Platformソースカタログ内のコネクタの一部はAdobeによって作成および管理され、その他はパートナー企業によって作成および管理されます。 [ソース SDK](/help/sources/sources-sdk/overview.md). ソースがパートナーによって作成および管理されている場合は、各パートナーが作成したコネクタのドキュメントページ上部にあるメモが呼び出されます。 例えば、 [Amazon S3 コネクタ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、 [RainFocus コネクタ](/help/sources/connectors/analytics/rainfocus.md) は、RainFocus チームによって作成および管理されます。
+Experience Platformソースカタログのコネクタには、Adobeが構築および管理するものもあれば、を使用してパートナー企業が構築および管理するものもあります [Sources SDK](/help/sources/sources-sdk/overview.md). 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例： [Amazon S3 コネクタ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成されますが、 [RainFocus コネクタ](/help/sources/connectors/analytics/rainfocus.md) は、RainFocus チームが作成および管理します。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
@@ -48,18 +48,18 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
    - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Adobe Campaign Managed Cloud Services ソースの概要](connectors/adobe-applications/campaign.md)
    - [UI での Adobe Campaign Managed Cloud Services ソース接続の作成](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Adobe Commerceソースの概要](connectors/adobe-applications/commerce.md)
+- [Adobe Commerce ソースの概要](connectors/adobe-applications/commerce.md)
 - [Adobe Data Collection ソースの概要](connectors/adobe-applications/data-collection.md)
    - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] ソースの概要](connectors/adobe-applications/marketo/marketo.md)
    - [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
-   - [の作成 [!DNL Marketo Engage] カスタムアクティビティデータのソース接続とデータフロー](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+   - [を作成 [!DNL Marketo Engage] カスタムアクティビティデータのソース接続とデータフロー](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
 ### 広告 {#advertising}
 
 Adobe Experience Platform には、サードパーティの広告システムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [Google Ads](connectors/advertising/ads.md) [!BADGE バッチ]{type=Informative}
+- [Google広告](connectors/advertising/ads.md) [!BADGE バッチ]{type=Informative}
 
 ### Analytics {#analytics}
 
@@ -170,6 +170,7 @@ Experience Platform は、サードパーティのマーケティング自動化
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE バッチ]{type=Informative}
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE バッチ]{type=Informative}
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE バッチ]{type=Informative}
+- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE バッチ]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE バッチ]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
@@ -216,15 +217,15 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、データセットにデータを取り込むことはできません。
 
-#### ソースでの属性ベースのアクセス制御のサポート
+#### ソースの属性ベースのアクセス制御のサポート
 
 >[!TIP]
 >
->属性ベースのアクセス制御は、次のように機能します。 **役割** は、Platform インスタンスとやり取りするユーザーのタイプを分類するために作成されます。 **ラベル** が適用される **役割** を使用して、特定のロールへのアクセスを指定します。 **ラベル** また、は、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドやセグメントにアクセスできるようにするには、次のように追加する必要があります。 *問い合わせ先のリソースに割り当てられた同じラベルを持つロール*. 詳しくは、 [属性ベースのアクセス制御エンドツーエンドガイド](../access-control/abac/end-to-end-guide.md).
+>属性ベースのアクセス制御は次のように動作します。 **役割** は、Platform インスタンスとやり取りするユーザーのタイプを分類するために作成されます。 **ラベル** 適用先 **役割** を使用して、その特定の役割のアクセスを指定します。 **ラベル** また、スキーマフィールドやセグメントなどのリソースにも適用されます。 ユーザーが特定のスキーマフィールドおよびセグメントにアクセスできるようにするには、次の場所に追加する必要があります *クエリされたリソースに割り当てられているのと同じラベルを持つ役割*. 詳しくは、 [属性ベースのアクセス制御エンドツーエンドガイド](../access-control/abac/end-to-end-guide.md).
 
-- スキーマフィールドにラベルを適用して、組織内の特定のスキーマフィールドへのアクセスを定義します。 特定のスキーマフィールドへのアクセスが確立されると、ユーザーは、アクセス権を持つフィールドのマッピングのみ作成できます。
-- 適切な役割を持たないユーザーは、アクセスできないスキーマフィールドを含むマッピングを使用してデータフローを作成または更新できません。 また、権限のないユーザーは、アクセスできないスキーマフィールドを持つ既存のデータフローを更新、削除、有効化、無効化することはできません。
-- さらに、データフローのマッピング、ターゲットデータセット、ターゲット接続には、完全に同じスキーマ ID とバージョンが必要です。
+- スキーマフィールドにラベルを適用して、組織内の特定のスキーマフィールドへのアクセスを定義します。 特定のスキーマフィールドへのアクセスが確立されると、ユーザーは、アクセス権のあるフィールドのマッピングのみを作成できるようになります。
+- 適切な役割を持たないユーザーは、アクセスできないスキーマフィールドを含むマッピングを使用したデータフローを作成または更新できません。 さらに、権限のないユーザーは、アクセスできないスキーマフィールドを含む既存のデータフローを更新、削除、有効化または無効化できません。
+- さらに、データフローは、マッピング、ターゲットデータセット、ターゲット接続でまったく同じスキーマ ID とバージョンを持つ必要があります。
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md)を参照してください。
 
@@ -232,7 +233,7 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 「ベータ版」としてラベル付けされたソースを使用することにより、お客様は、ベータ版が&#x200B;***「現状のまま」でいかなる保証もなく***&#x200B;提供されていることを承諾します。
 
-アドビは、ベータ版を維持、訂正、更新、変更、修正、またはその他の方法でサポートする義務を負いません。 お客様は、情報を利用し、かかるベータ版および/または付属の資料の正しい機能やパフォーマンスに何らかの方法で依存しないようお勧めします。 ベータ版はアドビの機密情報と見なされます。
+アドビは、ベータ版を維持、訂正、更新、変更、修正、またはその他の方法でサポートする義務を負いません。 お客様は、情報を使用し、そのようなベータ版および/または付属の資料の正しい機能やパフォーマンスにいかなる方法でも依存しないことをお勧めします。 ベータ版はアドビの機密情報と見なされます。
 
 お客様がアドビに提供するあらゆる「フィードバック」（ベータ版の使用中に発生した問題や欠陥、提案、改善、レコメンデーションを含むがこれに限定されないベータ版に関する情報）は、このようなフィードバックに含まれる、およびフィードバックに対するすべての権利、所有権、利益を含め、アドビに帰属します。
 
