@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2024年4月
 description: Adobe Experience Platform の 2024年4月のリリースノート。
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1843'
 ht-degree: 22%
 
 ---
@@ -51,7 +51,7 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
-| Insights | [!DNL Acxiom] 匿名訪問者インサイト | Web サイトの訪問者のソースを検出 [!DNL Acxiom's] 訪問者インサイト。 ジオ IP ルックアップテクノロジーを利用して、匿名ブラウザーの場所を特定します。 特定されたら、整理されたデータベース内で素早く検索すると、追加のインサイトが得られ、ブラウザーに送り返されます。 つまり、コンテンツ作成者にとっては、これらのデータポイントに合わせてコンテンツを調整する絶好の機会であり、見知らぬ人として出発した訪問者であっても、訪問者によりパーソナライズされた魅力的なエクスペリエンスを提供できます。 |
+| 拡張機能 | [!DNL Acxiom Anonymous Visitor Insights] タグ拡張機能 | Web サイトの訪問者のソースを検出 [!DNL Acxiom's Visitor Insights]. Acxiom では、地域 IP 検索テクノロジーを利用して、匿名ブラウザの場所を特定できます。 識別されると、組織データベース内の検索によって追加のインサイトが得られ、ブラウザーに送り返されます。 これにより、コンテンツ作成者は、これらのデータポイントに合わせてコンテンツを調整でき、見知らぬ人として出発した訪問者でも、よりパーソナライズされた魅力的なエクスペリエンスを訪問者に提供できます。 |
 | データストリーム | [Edge Networkボットの検出](../../datastreams/bot-detection.md) | 自動プログラム、Web スクレーパー、スパイダー、スクリプト化されたスキャナーなど、人間以外のエンティティから発生するトラフィックによって、人間の訪問者から発生するイベントの特定がより困難になる場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。 <br>ボット検出を使用すると、によって生成されたイベントを識別できます。 [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Server API]](../../server-api/overview.md) 既知のクモやボットによって生成されるものです。 データストリームのボット検出を設定することで、ボットイベントとして分類したい特定の IP アドレス、IP 範囲およびリクエストヘッダーを識別できます。 <br> ボットトラフィックを識別することで、サイトまたはモバイルアプリケーションのユーザーアクティビティをより正確に測定できます。 |
 | Mobile SDK | メジャーバージョンリリース | iOS Mobile Core 5.x と互換性のあるiOS拡張機能、Android Mobile Core 3.x と互換性のある Android 拡張機能、React Native Core 6.x と互換性のある React Native 拡張機能、Flutter Core 4.x と互換性のある Flutter 拡張機能など、Mobile SDK の新しいメジャーバージョンがリリースされました。 これらのリリースでは、Android SDK for Jetpack Compose のサポート、Adobe Journey Optimizer コードベースのエクスペリエンスのサポート、Flutter 向けAdobe Journey Optimizer Messaging 拡張機能の一般提供など、いくつかの新機能と機能強化が提供されています。 詳しくは、リリースノートを参照してください [Mobile SDK リリースノート](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | Mobile SDK | プライバシー | Appleのポリシーが更新されたので、2024 年 5 月 1 日（PT）以降、開発者はApp Storeに送信するために新しいプライバシー機能を実装する必要があります。 Mobile SDK を使用するすべてのAdobeのお客様は、5 月 1 日以降にApp Storeの承認を受けることを希望する場合、SDK のバージョン 5.x にアップグレードする必要があります。 |
