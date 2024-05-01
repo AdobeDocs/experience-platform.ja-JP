@@ -3,9 +3,9 @@ title: UI での Azure Event Hubs ソース接続の作成
 description: Adobe Experience Platform UI を使用して Azure Event Hubs ソース接続を作成する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1096'
 ht-degree: 17%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 17%
 >
 >この [!DNL Azure Event Hubs] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログから利用できます。
 
-このチュートリアルでは、を作成する手順を説明します [!DNL Azure Event Hubs] Adobe Experience Platform ユーザーインターフェイスを使用したアカウント。
+を作成する方法については、このチュートリアルをお読みください。 [!DNL Azure Event Hubs] Adobe Experience Platform ユーザーインターフェイスを使用したアカウント。
 
 ## はじめに
 

@@ -3,9 +3,9 @@ title: Flow Service API を使用した Azure Event Hubs ソース接続の作�
 description: Flow Service API を使用してAdobe Experience Platformを Azure Event Hubs アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 33%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 33%
 >
 >この [!DNL Azure Event Hubs] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログから利用できます。
 
-このチュートリアルでは、を作成する手順を説明します [!DNL Azure Event Hubs] （以下「という[!DNL Event Hubs]``）にExperience Platformするには、を使用します [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+接続方法については、このチュートリアルを参照してください。 [!DNL Azure Event Hubs] （以下「という[!DNL Event Hubs]``）にExperience Platformするには、を使用します [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## はじめに
 
