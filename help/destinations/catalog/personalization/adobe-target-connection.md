@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 92238ee94149b3cb4293d726d08dc4927e2dedb5
+source-git-commit: c113d9615a276af67714f38b8325e69737b23964
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 46%
+source-wordcount: '1303'
+ht-degree: 42%
 
 ---
 
@@ -16,7 +16,8 @@ ht-degree: 46%
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2024年1月 | 機能とドキュメントの更新。 | デフォルトの実稼動サンドボックスおよびその他のデフォルト以外のサンドボックス用に、Adobe Target接続に対してオーディエンスとプロファイル属性を共有できるようになりました。 |
+| 2024年4月 | 機能とドキュメントの更新 | データストリーム ID を使用してをターゲット宛先に接続する場合、以下を達成できました *必要ありません* エッジセグメント化のためにデータストリームを必ず有効にする。 つまり、Target の宛先は、実行できるユースケースは異なりますが、バッチオーディエンスとストリーミングオーディエンスで機能します。 でテーブルを表示します。 [接続パラメーター](#parameters) を参照してください。 |
+| 2024年1月 | 機能とドキュメントの更新 | デフォルトの実稼動サンドボックスおよびその他のデフォルト以外のサンドボックス用に、Adobe Target接続に対してオーディエンスとプロファイル属性を共有できるようになりました。 |
 | 2023年6月 | 機能とドキュメントの更新 | 2023 年 6 月現在、新しいAdobe Target宛先接続を設定する際に、オーディエンスを共有するAdobe Target Workspace を選択できます。 詳しくは、[接続パラメーター](#parameters)の節を参照してください。また、ワークスペースについて詳しくは、Adobe Target での[ワークスペースの設定](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja)に関するチュートリアルを参照してください。 |
 | 2023年5月 | 機能とドキュメントの更新 | 2023 年 5 月現在、 **[!UICONTROL Adobe Target]** 接続のサポート [属性ベースのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md#map-attributes) とは、すべてのお客様が一般に使用できます。 |
 
@@ -111,11 +112,11 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
   >
   >データストリーム ID は、Adobe Target宛先接続ごとに一意です。 同じオーディエンスを複数のデータストリームにマッピングする必要がある場合は、次の手順に従います [新しい宛先接続の作成](../../ui/connect-destination.md) 各データストリーム ID について、を実行します。 [audience activation フロー](#activate).
 
-   * **[!UICONTROL なし]**:Adobe Target Personalization を設定する必要があるが、を実装できない場合は、このオプションを選択します [Web SDK のExperience Platform](/help/web-sdk/home.md). このオプションを使用する場合、Target からExperience Platformに書き出されたオーディエンスは、次のセッションのパーソナライゼーションのみをサポートし、エッジのセグメント化は無効になります。 詳しくは、次の表を参照してください。
+   * **[!UICONTROL なし]**:Adobe Target Personalization を設定する必要があるが、を実装できない場合は、このオプションを選択します [Web SDK のExperience Platform](/help/web-sdk/home.md). このオプションを使用する場合、Target からExperience Platformに書き出されたオーディエンスは、次のセッションのパーソナライゼーションのみをサポートし、エッジのセグメント化は無効になります。 実装タイプごとの使用可能なユースケースの比較については、以下の表を参照してください。
 
-  | Adobe Targetの実装（Web SDK を使用しない） | Web SDK の実装 |
-  |---|---|
-  | <ul><li>データストリームは必須ではありません。 Adobe Targetは以下を介してデプロイできます [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation)、または [雑種](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 実装方法。</li><li>[エッジのセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされていません。</li><li>のAdobe Target接続に、オーディエンスとプロファイル属性を共有できます。 *デフォルトの実稼動用サンドボックス* およびのデフォルト以外のサンドボックス</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、を使用します [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Adobe TargetとExperience Platformがサービスとして設定されたデータストリームが必要です。</li><li>エッジのセグメント化が期待どおりに機能します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) サポートされています。</li><li>他のサンドボックスからのオーディエンスとプロファイル属性の共有がサポートされています。</li></ul> |
+  | Adobe Target実装 *なし* Web SDK | Adobe Target実装 *（を使用）* Web SDK | Adobe Target実装 *（を使用）* Web SDK *および* エッジセグメント化オフ |
+  |---|---|---|
+  | <ul><li>データストリームは必須ではありません。 Adobe Targetは以下を介してデプロイできます [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation)、または [雑種](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 実装方法。</li><li>[エッジのセグメント化](../../../segmentation/ui/edge-segmentation.md) はサポートされていません。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md) はサポートされていません。</li><li>のAdobe Target接続に、オーディエンスとプロファイル属性を共有できます。 *デフォルトの実稼動用サンドボックス* およびのデフォルト以外のサンドボックス</li><li>データストリーム ID を使用せずに次のセッションのパーソナライゼーションを設定するには、を使用します [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Adobe TargetとExperience Platformがサービスとして設定されたデータストリームが必要です。</li><li>エッジのセグメント化が期待どおりに機能します。</li><li>[同じページと次のページのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md#use-cases) サポートされています。</li><li>他のサンドボックスからのオーディエンスとプロファイル属性の共有がサポートされています。</li></ul> | <ul><li>Adobe TargetとExperience Platformがサービスとして設定されたデータストリームが必要です。</li><li>条件 [データストリームの設定](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)を選択しないでください。 **エッジのセグメント化** チェックボックス。</li><li>[次のセッションのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md#next-session) はサポートされています。</li><li>他のサンドボックスからのオーディエンスとプロファイル属性の共有がサポートされています。</li></ul> |
 
 * **ワークスペース**:Adobe Targetを選択します [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ja) をオーディエンスと共有します。 Adobe Target 接続ごとに 1 つのワークスペースを選択できます。アクティブ化すると、該当する手順に従って、オーディエンスは選択したワークスペースにルーティングされます [Experience Platformデータ使用ラベル](../../../data-governance/labels/overview.md).
 
