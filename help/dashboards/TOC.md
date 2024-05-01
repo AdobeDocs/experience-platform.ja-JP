@@ -5,10 +5,10 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
 role: Developer,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 87%
+source-wordcount: '106'
+ht-degree: 70%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 87%
    * [プロファイル](insights/profiles.md)
    * [オーディエンス](insights/audiences.md)
    * [宛先](insights/destinations.md)
+   * [アカウントプロファイル](insights/account-profiles.md)
 * ダッシュボードのカスタマイズ {#customize}
    * [カスタマイズの概要](customize/overview.md)
    * [ダッシュボードの変更](customize/modify.md)
@@ -37,11 +38,13 @@ ht-degree: 87%
    * [標準ウィジェット](customize/standard-widgets.md)
    * [カスタムウィジェット](customize/custom-widgets.md)
    * [スキーマの編集](customize/edit-schema.md)
-* インサイトの使用例 {#insights-use-cases}
+* インサイトのユースケース {#insights-use-cases}
    * [同意分析](insights-use-cases/consent-analysis.md)
+* 使用可能なデータモデル {#data-models}
+   * [Real-time Customer Data Platform Insights データモデル B2B エディション](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-time Customer Data Platform Insights データモデル B2C エディション](data-models/cdp-insights-data-model-b2c.md)
 * アプリケーションの統合 {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [ダッシュボードデータセットのクエリ](query.md)
-* [Real-time Customer Data Platform インサイトデータモデル](cdp-insights-data-model.md)
 * [インサイト SQL を表示](view-sql.md)
-* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
