@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスを作成し、それらのオーディエンスをサードパーティの宛先に活用します。
 role: Admin
-source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 68%
@@ -82,7 +82,7 @@ ht-degree: 68%
       * [認証されていないユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
    * プロファイルエンリッチメント {#profile-enrichment}
       * [パートナー提供の属性を使用してファーストパーティプロファイルを補完](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * パーソナライゼーション、インサイト、エンゲージメント {#personalization-insights-engagement}
+   * パーソナライズされたインサイトとエンゲージメント {#personalization-insights-engagement}
       * [お客様をインテリジェントに再エンゲージ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [顧客をインテリジェントに再エンゲージ：Luma の例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

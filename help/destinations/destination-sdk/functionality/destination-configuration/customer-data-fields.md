@@ -2,7 +2,7 @@
 description: Experience Platform UI で入力フィールドを作成する方法を説明します。これにより、ユーザーは、宛先への接続およびデータの書き出し方法に関連する様々な情報を指定できます。
 title: 顧客データフィールド
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 80%
@@ -352,7 +352,7 @@ API を動的に呼び出し、応答を使用してドロップダウンメニ�
 >
 >2024 年 4 月のリリース以降、を設定できます `isRequired` ネストされたフィールドのパラメーター。 例えば、以下の設定スニペットでは、ネストされた最初の 2 つのフィールドが必須としてマークされており（ハイライト表示された行 xxx）、ユーザーはフィールドの値を選択しない限り続行できません。 詳しくは、の必須フィールドを参照してください。 [サポートされるパラメーター](#supported-parameters) セクション。
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",

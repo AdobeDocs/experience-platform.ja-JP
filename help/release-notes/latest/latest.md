@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Adobe Experience Platform の 2024年3月のリリースノート。
+description: Adobe Experience Platform の 2024年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
+source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 24%
+source-wordcount: '1849'
+ht-degree: 22%
 
 ---
 
@@ -74,12 +74,12 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 | 機能 | 説明 |
 | ----------- | ----------- |
 | `isRequired` Destination SDKのネストされた顧客データフィールドでパラメーターを使用できるようになりました | Destination SDKで宛先を設定する際に、以下を行えるようになりました [ネストされた顧客データフィールドを必要に応じて設定する](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). これにより、宛先を設定するユーザーは、そのフィールドの値を選択するまでアクティベーションフローを続行できません。 |
+| Web SDK を使用してAdobe Targetの宛先を設定する場合、エッジのセグメント化は必須要件ではなくなりました | 以前は、 [Adobe Target先](/help/destinations/catalog/personalization/adobe-target-connection.md) web SDK を使用する場合、データストリームでパーソナライゼーションおよびエッジセグメント化を有効にする必要がありました。 エッジのセグメント化に対してデータストリームを有効にする必要があります [が削除されました](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). この統合パターンを使用すると、Real-Time CDPでAdobe Targetを使用する際に、パーソナライゼーションのユースケースのサブセットのメリットを得ることができます。 詳しくは、 [統合タイプで有効になるユースケース](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE ベータ版]{type=Informative} アクティブ化フローから複数のオーディエンスとデータセットを削除 | 宛先アクティブ化フローから複数のオーディエンスとデータセットを選択して削除できるようになりました。 を参照してください。 [宛先の詳細](../../destinations/ui/destination-details-page.md#bulk-remove) および [データセットの書き出し](../../destinations/ui/export-datasets.md) 詳しくは、ドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## ID サービス {#identity-service}
 
