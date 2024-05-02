@@ -4,14 +4,18 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2825'
 ht-degree: 42%
 
 ---
 
 # [!DNL Query Editor] UI ガイド
+
+>[!NOTE]
+>
+>2024 年 4 月 30 日現在 [クエリエディターの強化](#enhanced-editor-toggle) は、すべてのユーザーにとってデフォルトのエディターになりました。 レガシーエディターは 2024 年 5 月 30 日（PT）に非推奨（廃止予定）となり、使用できなくなります。
 
 [!DNL Query Editor] は、Adobe Experience Platform [!DNL Query Service] が提供するインタラクティブなツールで、[!DNL Experience Platform] ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。[!DNL Query Editor] では、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して [!DNL Experience Platform] のデータセットに入力することもできます。
 
@@ -229,7 +233,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 テンプレートとして保存したクエリは、クエリエディターからスケジュールできます。 クエリをスケジュール設定すると、カスタムケイデンスでクエリの実行を自動化できます。 頻度、日時に基づいてクエリのスケジュールを設定したり、必要に応じて結果の出力データセットを選択したりできます。 クエリスケジュールは、UI から無効または削除することもできます。
 
-スケジュールは、クエリエディターで設定します。 クエリエディターを使用する場合、既に作成、保存、実行されたクエリにのみスケジュールを追加できます。 次の場合も同じ制限は適用されません。 [!DNL Query Service] API です。
+スケジュールは、クエリエディターで設定します。 クエリエディターを使用する場合、既に作成および保存されたクエリにのみスケジュールを追加できます。 次の場合も同じ制限は適用されません。 [!DNL Query Service] API です。
 
 >[!NOTE]
 >

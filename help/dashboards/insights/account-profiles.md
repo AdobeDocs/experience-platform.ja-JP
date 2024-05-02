@@ -3,9 +3,10 @@ title: アカウントプロファイルインサイト
 description: アカウントプロファイルのインサイトを強化する SQL を確認し、これらのクエリを使用して、顧客と消費者エクスペリエンスをさらに詳しく調べるカスタムインサイトを生成します。
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## 業種別アカウント {#accounts-by-industry}
+## 業界別の新しいアカウント {#accounts-by-industry}
 
 このインサイトによって回答された質問：
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## タイプ別のアカウント {#accounts-by-type}
+## タイプ別の新しいアカウント {#accounts-by-type}
 
 このインサイトによって回答された質問：
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## 人物の役割別の商談 {#opportunities-by-person-role}
+## 人物の役割別の新しい機会 {#opportunities-by-person-role}
 
 このインサイトによって回答された質問：
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## 営業案件（収益別） {#opportunities-by-revenue}
+## 収益別の新しい商談 {#opportunities-by-revenue}
 
 このインサイトによって回答された質問：
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## 商談（ステータスおよびステージ別） {#opportunities-by-status-and-stage}
+## ステータスおよびステージ別の新しい商談 {#opportunities-by-status-and-stage}
 
 このインサイトによって回答された質問：
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## 獲得した商談 {#opportunities-won}
+## 獲得済みの新規商談 {#opportunities-won}
 
 このインサイトによって回答された質問：
 

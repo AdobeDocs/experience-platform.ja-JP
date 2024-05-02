@@ -4,9 +4,9 @@ solution: Experience Platform
 title: よくある質問
 description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。トピックには、データの書き出し、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4450'
+source-wordcount: '4425'
 ht-degree: 96%
 
 ---
@@ -303,7 +303,7 @@ SELECT count(1) FROM myTableName
 
 また、[UI でのスケジュール済みクエリの実行](./ui/user-guide.md#scheduled-queries)と [API](./api/scheduled-queries.md) を使用したスケジュール済みクエリの実行の方法については、ドキュメントを参照してください。
 
-[!DNL Query Editor] を使用する場合、既に作成、保存、実行されたクエリにのみスケジュールを追加できます。これは、[!DNL Query Service] API には適用されません。
+を使用する場合は、次の点に注意してください [!DNL Query Editor] 既に作成および保存されているクエリにのみスケジュールを追加できます。 これは、[!DNL Query Service] API には適用されません。
 +++
 
 ### 「セッション制限に達しました」エラーはどういう意味ですか？
@@ -585,20 +585,20 @@ WHERE T2.ID IS NULL
 いいえ、クエリサービスは「INSERT OVERWRITE INTO」コマンドをサポートしていません。
 +++
 
-### ライセンス使用状況ダッシュボードの使用状況データは、Data Distiller Compute 時間に対してどのくらいの頻度で更新されますか？
+### ライセンス使用状況ダッシュボードに表示されている使用状況データが、Data Distillerのコンピューティング時間に対して更新される頻度はどれくらいですか？
 
-+++回答 Data Distillerコンピューターの時間のライセンス使用状況ダッシュボードは、6 時間ごとに 1 日 4 回更新されます。
++++回答 Data Distillerのコンピューター時間のライセンス使用状況ダッシュボードは、6 時間ごとに 1 日 4 回更新されます。
 +++
 
-### Data Distillerにアクセスせずに CREATE VIEW コマンドを使用できますか？
+### データDistillerへのアクセス権を持たずに CREATE VIEW コマンドを使用できますか？
 
-+++回答はい、次を使用できます： `CREATE VIEW` コマンドを使用して、Data Distillerにアクセスできない。 このコマンドは、データの論理ビューを提供しますが、データレイクに書き戻すことはできません。
++++回答はい、次を使用できます `CREATE VIEW` データDistillerへのアクセス権を持たないコマンド。 このコマンドは、データの論理ビューを提供しますが、データレイクには書き戻しません。
 +++
 
 ### DbVisualizer で匿名ブロックを使用できますか？
 
 +++回答
-はい。 ただし、DbVisualizer などの特定のサードパーティクライアントでは、SQL ブロックの前後に別の識別子を指定して、スクリプトの一部を 1 つのステートメントとして処理する必要があることを示す場合があります。 詳しくは、 [匿名ブロックドキュメント](./key-concepts/anonymous-block.md) または [DbVisualizer の公式ドキュメント](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
+はい。 ただし、DbVisualizer などの特定のサードパーティクライアントでは、SQL ブロックの前後に別の識別子が必要になる場合があり、スクリプトの一部を 1 つのステートメントとして処理する必要があることを示します。 詳しくは、 [匿名ブロックドキュメント](./key-concepts/anonymous-block.md) または [dbVisualizer の公式ドキュメント](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## データの書き出し {#exporting-data}

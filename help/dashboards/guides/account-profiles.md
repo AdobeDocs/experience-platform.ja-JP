@@ -2,9 +2,9 @@
 title: アカウントプロファイルダッシュボード
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1800'
 ht-degree: 3%
 
 ---
@@ -67,16 +67,20 @@ Adobe Experience Platform ユーザーインターフェイス（UI）には、�
 
 Adobeには、アカウントプロファイルに関連する様々な指標を視覚化するために使用できる標準ウィジェットが用意されています。
 
+>[!IMPORTANT]
+>
+>日付フィルターを指定しない場合、インサイトのデフォルトの動作では、前年から今日までに追加されたデータが分析されます。
+
 使用可能な各標準ウィジェットの詳細を確認するには、次のリストからウィジェットの名前を選択します。
 
 * [追加されたアカウントプロファイル](#account-profiles-added)
-* [業種別アカウント](#accounts-by-industry)
-* [タイプ別のアカウント](#accounts-by-type)
+* [業界別の新しいアカウント](#accounts-by-industry)
+* [タイプ別の新しいアカウント](#accounts-by-type)
 * [追加された商談](#opportunities-added)
-* [人物の役割別の商談](#opportunities-by-person-role)
-* [営業案件（収益別）](#opportunities-by-revenue)
-* [商談（ステータスおよびステージ別）](#opportunities-by-status-&-stage)
-* [獲得した商談](#opportunities-won)
+* [人物の役割別の新しい機会](#opportunities-by-person-role)
+* [収益別の新しい商談](#opportunities-by-revenue)
+* [ステータスおよびステージ別の新しい商談](#opportunities-by-status-&-stage)
+* [獲得済みの新規商談](#opportunities-won)
 * [予測スコアリング分布](#predictive-scoring-distribution)
 * [予測スコアリングの上位影響要因](#predictive-scoring-top-influential-factors)
 * [業種別のアカウント総数](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 
 ![アカウントプロファイル追加ウィジェット。](../images/account-profiles/account-profiles-added.png)
 
-### 業種別アカウント {#accounts-by-industry}
+### 業界別の新しいアカウント {#accounts-by-industry}
 
-この [!UICONTROL 業種別アカウント] ウィジェットは、アカウントの合計数を、ドーナツグラフ内の 1 つの指標で表示します。 ドーナツグラフは、この合計を構成する様々な業界の相対的な構成を示します。 色分けされたキーは、含まれているすべての業界の分類を提供します。 ドーナツグラフの各セクションにカーソルを合わせると、各業界の個々のカウントがダイアログに表示されます。
+この [!UICONTROL 業界別の新しいアカウント] ウィジェットは、アカウントの合計数を、ドーナツグラフ内の 1 つの指標で表示します。 ドーナツグラフは、この合計を構成する様々な業界の相対的な構成を示します。 色分けされたキーは、含まれているすべての業界の分類を提供します。 ドーナツグラフの各セクションにカーソルを合わせると、各業界の個々のカウントがダイアログに表示されます。
 
-![業種別アカウント ウィジェット。](../images/account-profiles/accounts-by-industry.png)
+![業界別の新しいアカウント ウィジェット。](../images/account-profiles/new-accounts-by-industry.png)
 
-### タイプ別のアカウント {#accounts-by-type}
+### タイプ別の新しいアカウント {#accounts-by-type}
 
-この [!UICONTROL タイプ別のアカウント] ウィジェットは、アカウントの合計数を、ドーナツグラフ内の 1 つの指標で表示します。 ドーナツグラフは、この合計を構成する様々なアカウントタイプの相対的な構成を示しています。 色分けされたキーは、含まれているすべてのアカウントタイプの分類を提供します。 ドーナツグラフの各セクションにカーソルを合わせると、各タイプのアカウントの個々のカウントがダイアログに表示されます。
+この [!UICONTROL タイプ別の新しいアカウント] ウィジェットは、アカウントの合計数を、ドーナツグラフ内の 1 つの指標で表示します。 ドーナツグラフは、この合計を構成する様々なアカウントタイプの相対的な構成を示しています。 色分けされたキーは、含まれているすべてのアカウントタイプの分類を提供します。 ドーナツグラフの各セクションにカーソルを合わせると、各タイプのアカウントの個々のカウントがダイアログに表示されます。
 
-![「タイプ別アカウント」ウィジェット](../images/account-profiles/accounts-by-type.png)
+![タイプ別の新しいアカウント ウィジェット](../images/account-profiles/new-accounts-by-type.png)
 
 ### 追加された商談 {#opportunities-added}
 
@@ -107,35 +111,35 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 
 ![商談追加ウィジェット。](../images/account-profiles/opportunities-added.png)
 
-### 人物の役割別の商談 {#opportunities-by-person-role}
+### 人物の役割別の新しい機会 {#opportunities-by-person-role}
 
-この [!UICONTROL 人物の役割別の商談] ウィジェットは、商談の合計数を、ドーナツグラフ内の単一の指標で表示します。 ドーナツグラフは、この機会の合計数を構成する役割の相対的な構成を示します。 色分けされたキーは、含まれているすべての役割の分類を提供します。 ドーナツグラフの各セクションにカーソルを合わせると、各役割の個々のカウントがダイアログに表示されます。
+この [!UICONTROL 人物の役割別の新しい機会] ウィジェットは、商談の合計数を、ドーナツグラフ内の単一の指標で表示します。 ドーナツグラフは、この機会の合計数を構成する役割の相対的な構成を示します。 色分けされたキーは、含まれているすべての役割の分類を提供します。 ドーナツグラフの各セクションにカーソルを合わせると、各役割の個々のカウントがダイアログに表示されます。
 
 >[!NOTE]
 >
 >この [!UICONTROL データが見つかりません] または [!UICONTROL ロードできません] エラーは、「Opportunity-Person」ブリッジテーブルがスキーマで使用されていない場合に発生します。 インサイトでこれらのエラーのいずれかが表示された場合は、和集合スキーマを確認し、「Opportunity-Person」フィールドグループがデータを取り込んでいることを確認してください。
 
-![「ユーザー役割別の商談」ウィジェット](../images/account-profiles/opportunities-by-person-role.png)
+![「人物の役割別の新しい機会」ウィジェット](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### 営業案件（収益別） {#opportunities-by-revenue}
+### 収益別の新しい商談 {#opportunities-by-revenue}
 
-この [!UICONTROL 営業案件（収益別）] ウィジェットは、棒グラフを使用して、商談によって生み出された収益の推定合計額を示します。 ウィジェットは最大 6 つの機会をサポートします。
+この [!UICONTROL 収益別の新しい商談] ウィジェットは、棒グラフを使用して、商談によって生み出された収益の推定合計額を示します。 ウィジェットは最大 6 つの機会をサポートします。
 
 商談の特定の合計売上高を含むダイアログを表示するには、カーソルを個々のバーに合わせます。
 
-![「収益別商談」ウィジェット](../images/account-profiles/opportunities-by-revenue.png)
+![「売上高別新規商談」ウィジェット](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### 商談（ステータスおよびステージ別） {#opportunities-by-status-&-stage}
+### ステータスおよびステージ別の新しい商談 {#opportunities-by-status-&-stage}
 
 このウィジェットは、棒グラフを使用して、マーケティング/セールスファネルのすべてのステージで開いている商談または閉じている商談の数を示します。 ウィジェットは色を使用して、商談のステージを区別します。 色分けされたキーは、商談で使用可能なステージを示します。
 
-![ステータスおよびステージ別の商談ウィジェット。](../images/account-profiles/opportunities-by-status-&-stage.png)
+![ステータスおよびステージウィジェット別の新しい商談。](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### 獲得した商談 {#opportunities-won}
+### 獲得済みの新規商談 {#opportunities-won}
 
-この [!UICONTROL 獲得した商談] ウィジェットは、ドーナツグラフ内の単一の指標で、正常に確定された商談の合計数を表示します。 ドーナツグラフは、獲得または獲得していない機会の相対的な構成を示します。 色分けされたキーは、獲得した商談と獲得しなかった商談を区別します。 ドーナツグラフの各セクションにカーソルを合わせると、各役割の個々のカウントがダイアログに表示されます。
+この [!UICONTROL 獲得済みの新規商談] ウィジェットは、ドーナツグラフ内の単一の指標で、正常に確定された商談の合計数を表示します。 ドーナツグラフは、獲得または獲得していない機会の相対的な構成を示します。 色分けされたキーは、獲得した商談と獲得しなかった商談を区別します。 ドーナツグラフの各セクションにカーソルを合わせると、各役割の個々のカウントがダイアログに表示されます。
 
-![獲得した商談ウィジェット。](../images/account-profiles/opportunities-won.png)
+![新しい商談の獲得ウィジェット。](../images/account-profiles/new-opportunities-won.png)
 
 ### 予測スコアリング分布 {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 ### 業種別のアカウント総数 {#total-accounts-by-industry}
 
 このウィジェットは、アカウントの合計数を 1 つの指標で表示し、ドーナツグラフを使用して、全体の数に占める各業種の割合を、数に比例したサイズで示します。 キーは、ドーナツグラフを構成する様々な業界の色分け情報を提供します。
+
+>[!NOTE]
+>
+>このインサイトで表示される情報は、指定した日付範囲によって異なります。 日付フィルターを指定しない場合、インサイトのデフォルトの動作では、前年から今日までに追加されたデータが分析されます。
 
 ドーナツグラフの各セクションにカーソルを合わせると、様々な業界の個々のカウントがダイアログに表示されます。
 

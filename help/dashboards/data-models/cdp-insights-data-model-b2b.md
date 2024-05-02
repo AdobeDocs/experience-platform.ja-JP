@@ -3,9 +3,10 @@ title: Real-time Customer Data Platform Insights データモデル B2B エデ�
 description: Real-time Customer Data Platform Insights データモデル（B2B Edition）で SQL クエリを使用して、マーケティングおよび KPI のユースケースに合わせて独自のReal-Time CDP レポートをカスタマイズする方法を説明します。
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 3%
 
 ---
@@ -49,15 +50,15 @@ Real-Time CDP B2B レポートは、アカウントプロファイルデータ�
 
 ![アカウントプロファイルモデルのエンティティ関係図。](../images/data-models/account-profile-model.png)
 
-#### 業界ごとのアカウントのユースケース {#accounts-by-industry}
+#### 業界のユースケース別の新しいアカウント {#accounts-by-industry}
 
-に使用されるロジック [!UICONTROL 業種別アカウント] insight は、アカウントプロファイルの数と相互の相対的なサイズに応じて、上位 5 つの業界を返します。 を参照してください。 [[!UICONTROL 業種別アカウント] ウィジェットのドキュメント](../guides/account-profiles.md#accounts-by-industry) を参照してください。
+に使用されるロジック [!UICONTROL 業界別の新しいアカウント] insight は、アカウントプロファイルの数と相互の相対的なサイズに応じて、上位 5 つの業界を返します。 を参照してください。 [[!UICONTROL 業種別アカウント] ウィジェットのドキュメント](../guides/account-profiles.md#accounts-by-industry) を参照してください。
 
 >[!TIP]
 >
 >この SQL クエリをカスタマイズすると、上位 5 つ以下の業界を返すことができます。
 
-を生成する SQL [!UICONTROL 業種別アカウント] 以下の折りたたみ可能なセクションにインサイトが表示されます。
+を生成する SQL [!UICONTROL 業界別の新しいアカウント] 以下の折りたたみ可能なセクションにインサイトが表示されます。
 
 +++SQL クエリ
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### タイプ別アカウントのユースケース {#accounts-by-type}
+#### タイプ別の新規アカウントのユースケース {#accounts-by-type}
 
-に使用されるロジック [!UICONTROL タイプ別アカウント] インサイトは、アカウントのタイプ別の数値分類を返します。 このインサイトは、リソース割り当てやマーケティング戦略など、ビジネス戦略と運用のガイドにするのに役立ちます。 を参照してください。 [[!UICONTROL タイプ別アカウント] ウィジェットのドキュメント](../guides/account-profiles.md#accounts-by-type) を参照してください。
+に使用されるロジック [!UICONTROL タイプ別の新しいアカウント] インサイトは、アカウントのタイプ別の数値分類を返します。 このインサイトは、リソース割り当てやマーケティング戦略など、ビジネス戦略と運用のガイドにするのに役立ちます。 を参照してください。 [[!UICONTROL タイプ別の新しいアカウント] ウィジェットのドキュメント](../guides/account-profiles.md#accounts-by-type) を参照してください。
 
-を生成する SQL [!UICONTROL タイプ別アカウント] 以下の折りたたみ可能なセクションにインサイトが表示されます。
+を生成する SQL [!UICONTROL タイプ別の新しいアカウント] 以下の折りたたみ可能なセクションにインサイトが表示されます。
 
 +++SQL クエリ
 
