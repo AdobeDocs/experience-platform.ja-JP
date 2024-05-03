@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
 workflow-type: tm+mt
-source-wordcount: '1983'
-ht-degree: 90%
+source-wordcount: '2024'
+ht-degree: 89%
 
 ---
 
@@ -14,12 +14,21 @@ ht-degree: 90%
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
 
+## バージョン 2.22.0 - 2024年5月3日（PT）
+
+**新機能**
+
+* 変数データ要素を拡張して、データオブジェクトをサポートします。
+* 「変数を更新」アクションで、パススルーAdobe Analytics、Adobe Audience Manager、Adobe Targetのデータの変更がサポートされるようになりました。
+
+Adobe Experience Platform Web SDK のバージョン 2.19.2 が含まれます。
+
 ## バージョン 2.21.4 - 2024年1月10日（PT）
 
 **修正点および改善点**
 
-* 設定の上書きを 3 つの環境セットのすべてを設定せずに保存すると、拡張機能 UI がクラッシュする問題を修正しました。
-* 変数更新アクションの編集時に、「既存の値をルートでクリア」チェックボックスが入力されない問題を修正しました。
+* 3 つの環境をすべて設定せずに設定の上書きを保存すると、拡張機能 UI がクラッシュする問題を修正しました。
+* 変数の更新アクションを編集する際に、ルートの既存の値をクリア チェックボックスが入力されない問題を修正しました。
 
 Adobe Experience Platform Web SDK のバージョン 2.19.2 が含まれます。
 
@@ -29,16 +38,16 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-* 提案配列が `Send event complete` イベントは常に空でした。
+* で提案配列が使用できる問題を修正しました `Send event complete` イベントは常に空でした。
 
 ## バージョン 2.21.2 - 2023年11月1日（PT）
 
 **新機能**
 
 * 追加済み `Request default personalization` イベントアクションを送信するオプション。
-* イベント送信アクションでのページイベントの上部および下部のサポートを追加しました。
+* イベントを送信アクションでページイベントの上部と下部をサポートするようになりました。
 * 追加済み `Apply propositions` アクション。
-* 追加済み `Evaluate rulesets` アクションと `Subscribe ruleset items` イベントに設定されます。
+* 追加済み `Evaluate rulesets` アクションと `Subscribe ruleset items` アプリ内メッセージのイベント。
 * 追加済み `Decision context` イベントアクションを送信します。
 
 **修正点および改善点**
@@ -55,7 +64,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-* 保存済みデータストリーム上書き設定の検証を改善しました。
+* 保存されたデータストリームの上書き設定の検証を改善しました。
 
 ## バージョン 2.20.0 - 2023年7月31日（PT）
 
@@ -65,8 +74,8 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-* 非推奨 `edgeConfigId` ～を支持して `datastreamId` （SDK 設定）を参照してください。
-* データストリーム設定に関する複数のユーザーエクスペリエンス強化が、ユーザーインターフェイスを上書きします。
+* 非推奨 `edgeConfigId` 賛成して `datastreamId` SDK 設定。
+* データストリーム設定の複数のユーザーエクスペリエンスを強化すると、ユーザーインターフェイスが上書きされます。
 
 ## バージョン 2.19.0 - 2023年6月21日（PT）
 
@@ -176,7 +185,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.8.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.7.0 が含まれます。
 
-* Edge ネットワークからの追加情報は、「イベント完了を送信」イベントで使用できます。以下に例を示します。 `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変わる場合があります。
+* Edge Networkからの追加情報は、次のような Send Event Complete イベントで利用できます `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。
 
 ## バージョン 2.7.3 - 2021年9月7日（PT）
 
@@ -223,10 +232,10 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.5.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含まれます。
 
-* 追加済み [&quot;ドキュメントのアンロード&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) 「 」チェックボックスをオンにして、イベントアクション UI を送信します。
+* 追加済み [「ドキュメントのアンロード中」](/help/web-sdk/commands/sendevent/documentunloading.md) イベントアクション UI を送信するためのチェックボックス。
 * [デフォルトの同意を設定](/help/web-sdk/commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションはイベントをキューに入れ、同意が得られると送信します）。
 * デフォルトの同意フィールドにツールヒントを追加しました。
-* を使用する際のAdobeの同意 2.0 標準のサポートを追加しました。 [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドを使用します。
+* を使用する際のAdobeの同意 2.0 標準のサポートを追加しました [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンド。
 * ユーザーのアクセストークンが無効であるか、不適切にプロビジョニングされている場合に、XDM オブジェクトデータ要素 UI に表示されるエラーを改善しました。
 * XDM オブジェクトデータ要素を表示する際にブラウザーの開発者コンソールに表示されるクロスオリジンエラー（拡張機能の操作には影響しません）を修正しました。
 
