@@ -2,9 +2,9 @@
 title: パーソナライゼーションのための Web SDK でのAdobe Targetの使用
 description: Adobe Targetを使用して、Experience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
+source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1345'
 ht-degree: 4%
 
 ---
@@ -183,7 +183,7 @@ alloy("sendEvent",
 | `xdm` | オブジェクト | Web SDK にエクスペリエンスイベントとして格納される、XDM 形式のデータ |
 | `data` | オブジェクト | に送信された任意のキーと値のペア [!DNL Target] target クラスの下のソリューション。 |
 
-標準 [!DNL Web SDK] このコマンドを使用するコードは次のようになります。
+<!--Typical [!DNL Web SDK] code using this command looks like the following:-->
 
 **コンテンツがエンドユーザーに表示されるまで、プロファイルまたはエンティティパラメーターの保存を遅らせる**
 
