@@ -1,17 +1,17 @@
 ---
 title: データストリームの上書きの設定
-description: Web SDK を介して、データストリームの UI でデータストリームの上書きを設定し、データストリームの上書きをアクティベートする方法について説明します。
+description: データストリーム UI でデータストリームの上書きを設定し、Web SDK または Mobile SDK を介して有効化する方法を説明します。
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
+source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 68%
+source-wordcount: '1081'
+ht-degree: 57%
 
 ---
 
 # データストリームの上書きの設定
 
-データストリームの上書きを使用すると、Web SDK を介して Edge Network に渡されるデータストリームの追加設定を定義できます。
+データストリームの上書きにより、データストリームの追加設定を定義できます。この設定は、Web SDK または Mobile SDK を介してEdge Networkーに渡されます。
 
 これにより、データストリームを作成したり、既存のトリガーを変更したりせずに、デフォルトとは異なるデータストリームの動作を設定できます。
 
@@ -68,7 +68,7 @@ Adobe Target データストリームのデータストリーム上書きを設�
 
 必要な上書きを追加したら、データストリーム設定を保存します。
 
-これで、Adobe Target のデータストリームの上書きが設定されました。これで、[Web SDK を介して、上書きを Edge Network に送信できるようになりました](#send-overrides)。
+これで、Adobe Target のデータストリームの上書きが設定されました。次の操作が可能になりました [web SDK または Mobile SDK 経由で上書きをEdge Networkに送信](#send-overrides).
 
 ### Adobe Analytics のデータストリームの上書き {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Adobe Analytics のデータストリームの上書きを設定するには、�
 
 必要な上書きを追加したら、データストリーム設定を保存します。
 
-これで、Adobe Analytics データストリームの上書きが設定されました。これで、[Web SDK を介して、上書きを Edge Network に送信できるようになりました](#send-overrides)。
+これで、Adobe Analytics データストリームの上書きが設定されました。次の操作が可能になりました [web SDK または Mobile SDK 経由で上書きをEdge Networkに送信](#send-overrides).
 
 ### Experience Platform イベントデータセットのデータストリームの上書き {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Experience Platform イベントデータセットのデータストリームの
 
 必要な上書きを追加したら、データストリーム設定を保存します。
 
-これで、Adobe Experience Platform データストリームの上書きが設定されました。これで、[Web SDK を介して、上書きを Edge Network に送信できるようになりました](#send-overrides)。
+これで、Adobe Experience Platform データストリームの上書きが設定されました。次の操作が可能になりました [web SDK または Mobile SDK 経由で上書きをEdge Networkに送信](#send-overrides).
 
 ### サードパーティ ID 同期コンテナのデータストリームの上書き {#container-overrides}
 
@@ -112,9 +112,9 @@ Experience Platform イベントデータセットのデータストリームの
 
 必要な上書きを追加したら、データストリーム設定を保存します。
 
-これで、ID 同期コンテナの上書きが設定されました。これで、[Web SDK を介して、上書きを Edge Network に送信](#send-overrides)できるようになりました。
+これで、ID 同期コンテナの上書きが設定されました。次の操作が可能になりました [web SDK または Mobile SDK 経由で上書きをEdge Networkに送信](#send-overrides).
 
-## Web SDK を介して、上書きを Edge Network に送信する {#send-overrides}
+## 上書きをEdge Networkに送信 {#send-overrides}
 
 データ収集 UI でデータストリームの上書きを設定した後、Web SDK または Mobile SDK を通じてEdge Networkに上書きを送信できます。
 
