@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
+source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
 workflow-type: tm+mt
 source-wordcount: '4274'
-ht-degree: 80%
+ht-degree: 79%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 80%
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：[!DNL Platform] に取り込まれる様々なデータソースの ID を結合することで、顧客プロファイルの作成を有効にします。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
-また、このドキュメントを通して使用される次の 2 つの重要用語を知り、その違いを理解することも重要です。
+また、このドキュメントで使用される 3 つの主要な用語を理解し、それらの違いを理解する必要があります。
 
 - **オーディエンス**：類似した行動や特徴を共有する一連の人物。このユーザーのコレクションは、セグメント定義やオーディエンス構成（プラットフォーム生成オーディエンス）を使用して Adobe Experience Platform で生成することも、カスタムアップロードなどの外部ソース（外部生成オーディエンス）から生成することもできます。
 - **セグメント定義**：Adobe Experience Platform が、ターゲットオーディエンスの重要な特徴や行動の説明に使用するルールです。
