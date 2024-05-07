@@ -2,10 +2,10 @@
 title: パーソナライゼーションのための Web SDK でのAdobe Targetの使用
 description: Adobe Targetを使用して、Experience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
+source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 5%
+source-wordcount: '1354'
+ht-degree: 4%
 
 ---
 
@@ -184,6 +184,58 @@ alloy("sendEvent",
 | `data` | オブジェクト | に送信された任意のキーと値のペア [!DNL Target] target クラスの下のソリューション。 |
 
 標準 [!DNL Web SDK] このコマンドを使用するコードは次のようになります。
+
+**コンテンツがエンドユーザーに表示されるまで、プロファイルまたはエンティティパラメーターの保存を遅らせる**
+
+コンテンツが表示されるまでプロファイルの属性の記録を遅延させるには、次のように設定します `data.adobe.target._save=false` ご要望の通りです。
+
+例えば、Web サイトには、Web サイト上の 3 つのカテゴリリンク（男性、女性および子供）に対応する 3 つの決定範囲が含まれており、ユーザーが最終的に訪問したカテゴリを追跡したいとします。 これらのリクエストを送信するには、 `__save` フラグの設定 `false` コンテンツがリクエストされた際にカテゴリが保持されるのを回避する。 コンテンツを視覚化したら、適切なペイロードを送信します（ `eventToken` および `stateToken`）に設定する必要があります。
+
+<!--Save profile or entity attributes by default with:
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "__save" : true // Optional. __save=true is the default 
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt",
+        "entity.id" : "1234",
+      }
+    }
+  }
+} ) ; 
+```
+-->
+
+次の例では、trackEvent スタイルのメッセージを送信し、プロファイルスクリプトを実行して、属性を保存し、イベントを直ちに記録します。
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt" ,
+        "entity.id" : "1234" ,
+        "track": {
+          "scopes": [ "mbox1", "mbox2"],
+          "type": "display|click|..."
+        }
+      }
+    }
+  }
+} ) ;
+```
+
+>[!NOTE]
+>
+>次の場合 `__save` ディレクティブは省略され、プロファイルとエンティティの属性を保存すると、リクエストの残りがパーソナライゼーションのプリフェッチであっても、リクエストが実行されたかのように直ちに処理されます。 この `__save` ディレクティブは、プロファイル属性とエンティティ属性にのみ関連しています。 トラック オブジェクトが存在する場合、 `__save` ディレクティブは無視されます。 データは直ちに保存され、通知が記録されます。
 
 **`sendEvent`プロファイルデータを使用**
 
