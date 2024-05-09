@@ -1,24 +1,29 @@
 ---
-keywords: Experience Platform；モデルの公開；Data Science Workspace；人気の高いトピック；サービスのスコア付け
+keywords: Experience Platform；モデルの公開；Data Science Workspace；人気のトピック；サービスのスコアリング
 solution: Experience Platform
-title: Data Science Workspace UI でモデルをサービスとして公開する
+title: Data Science Workspace UI でのモデルのサービスとしての公開
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace を使用すると、トレーニング済みおよび評価済みのモデルをサービスとして公開でき、組織内のユーザーは、独自のモデルを作成する必要なく、データをスコアリングできます。
+description: Adobe Experience Platform Data Science Workspace を使用すると、トレーニング済みおよび評価済みのモデルをサービスとして公開でき、組織内のユーザーが独自のモデルを作成しなくてもデータのスコアを取得できます。
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 74dd4cb786cb96c04d15005fe869ff861093edc3
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 34%
+source-wordcount: '505'
+ht-degree: 33%
 
 ---
 
-# Data Science Workspace UI でモデルをサービスとして公開する
+# Data Science Workspace UI でモデルをサービスとして公開する {#publish-a-model-as-a-service}
 
-Adobe Experience Platform Data Science Workspace を使用すると、トレーニング済みおよび評価済みのモデルをサービスとして公開でき、組織内のユーザーは、独自のモデルを作成する必要なく、データをスコアリングできます。
+>[!CONTEXTUALHELP]
+>id="platform_intelligent-services_publishmodel"
+>title="サービスとしてのモデルの公開"
+>abstract=""
+
+Adobe Experience Platform Data Science Workspace を使用すると、トレーニング済みおよび評価済みのモデルをサービスとして公開でき、組織内のユーザーが独自のモデルを作成しなくてもデータのスコアを取得できます。
 
 ## はじめに
 
-このチュートリアルを完了するには、 [!DNL Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]続行する前に、システム管理者にお問い合わせください。
+このチュートリアルを完了するには、にアクセスできる必要があります。 [!DNL Experience Platform]. で組織にアクセスする権限がない場合 [!DNL Experience Platform]続行する前にシステム管理者に問い合わせてください。
 
 このチュートリアルでは、トレーニングを正常に実行できる既存のモデルが必要です。公開できるモデルがない場合は、「[UI でのモデルの訓練と評価](./train-evaluate-model-ui.md)」チュートリアルに従って操作を続行します。
 
@@ -26,15 +31,15 @@ Sensei 機械学習 API を使用してモデルを公開する場合は、[API 
 
 ## モデルの公開 {#publish-a-model}
 
-Adobe Experience Platformで、 **[!UICONTROL モデル]** 左側のナビゲーション列に配置され、「 **[!UICONTROL 参照]** 」タブをクリックして、既存のすべてのモデルを一覧表示します。 サービスとして公開するモデルの名前を選択します。
+Adobe Experience Platformで、を選択します。 **[!UICONTROL モデル]** 左側のナビゲーション列にあるを選択します。 **[!UICONTROL 参照]** タブをクリックすると、既存のすべてのモデルが一覧表示されます。 サービスとして公開するモデルの名前を選択します。
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-選択 **[!UICONTROL 公開]** 「モデルの概要」ページの右上近くにあるサービス作成プロセスを開始します。
+を選択 **[!UICONTROL 公開]** モデルの概要ページの右上付近にある、サービス作成プロセスを開始します。
 
 ![](../images/models-recipes/publish-model/view_training.png)
 
-サービスの名前を入力し、必要に応じてサービスの説明を入力して、 **[!UICONTROL 次へ]** 終了したとき。
+サービスに必要な名前を入力し、オプションでサービスの説明を入力して、 **[!UICONTROL 次]** 終了したとき。
 
 ![](../images/models-recipes/publish-model/configure_training.png)
 
@@ -42,29 +47,29 @@ Adobe Experience Platformで、 **[!UICONTROL モデル]** 左側のナビゲー
 
 ![](../images/models-recipes/publish-model/select_training_run.png)
 
-選択 **[!UICONTROL 完了]** サービスを作成し、 **[!UICONTROL サービスギャラリー]** ：新しく作成されたサービスを含む、使用可能なすべてのサービスを表示します。
+を選択 **[!UICONTROL 終了]** サービスを作成し、にリダイレクトするには **[!UICONTROL サービスギャラリー]** 新規作成されたサービスを含め、使用可能なすべてのサービスを表示します。
 
 ![](../images/models-recipes/publish-model/service_gallery.png)
 
 ## サービスを使用したスコア {#access-a-service}
 
-Adobe Experience Platformで、 **[!UICONTROL サービス]** 左側のナビゲーション列にあるタブで、 **[!UICONTROL サービスギャラリー]**. 使用するサービスを見つけ、「 」を選択します。 **[!UICONTROL 開く]**.
+Adobe Experience Platformで、 **[!UICONTROL サービス]** にアクセスするには、左側のナビゲーション列にあるタブ **[!UICONTROL サービスギャラリー]**. 使用するサービスを見つけて選択します **[!UICONTROL 開く]**.
 
 ![](../images/models-recipes/publish-model/open_service.png)
 
-サービスの概要ページで、「 」を選択します。 **[!UICONTROL スコア]**.
+サービスの概要ページで、 **[!UICONTROL スコア]**.
 
 ![](../images/models-recipes/publish-model/score_service.png)
 
-スコアリング実行に適した入力データセットを選択し、「 」を選択します。 **[!UICONTROL 次へ]**. スコアリングデータセットに対しても同じ手順を実行するように求められます。 入出力データセットを選択したら、設定を更新できます。
+スコアリング実行に適した入力データセットを選択し、 **[!UICONTROL 次]**. スコアリングデータセットに対して同じ手順を実行するように求められます。 入力および出力データセットを選択したら、設定を更新できます。
 
 ![](../images/models-recipes/publish-model/select_datasets.png)
 
-サービスを作成すると、デフォルトのスコア設定が継承されます。これらの設定を確認し、必要に応じて値をダブルクリックして調整できます。設定が完了したら、「 」を選択します。 **[!UICONTROL 完了]** をクリックして、スコアリングの実行を開始します。
+サービスを作成すると、デフォルトのスコア設定が継承されます。これらの設定を確認し、必要に応じて値をダブルクリックして調整できます。設定に満足したら、次を選択します。 **[!UICONTROL 終了]** スコアリング実行を開始します。
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 
-サービスの&#x200B;**概要**&#x200B;ページに、新しいスコアリングジョブとその進行状況の詳細が表示されます。ジョブが完了したら、 **[!UICONTROL 最新]** ヘッダー内 **[!UICONTROL スコア]** コンテナが更新されます。
+サービスの&#x200B;**概要**&#x200B;ページに、新しいスコアリングジョブとその進行状況の詳細が表示されます。ジョブが完了すると、 **[!UICONTROL 最新]** 内のヘッダー **[!UICONTROL スコアリング]** コンテナが更新されます。
 
 ![](../images/models-recipes/publish-model/pending_scoring.png)
 
