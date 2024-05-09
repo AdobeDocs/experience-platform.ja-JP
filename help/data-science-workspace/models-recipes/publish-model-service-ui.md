@@ -5,7 +5,7 @@ title: Data Science Workspace UI でのモデルのサービスとしての公�
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace を使用すると、トレーニング済みおよび評価済みのモデルをサービスとして公開でき、組織内のユーザーが独自のモデルを作成しなくてもデータのスコアを取得できます。
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 74dd4cb786cb96c04d15005fe869ff861093edc3
+source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 33%
@@ -15,7 +15,7 @@ ht-degree: 33%
 # Data Science Workspace UI でモデルをサービスとして公開する {#publish-a-model-as-a-service}
 
 >[!CONTEXTUALHELP]
->id="platform_intelligent-services_publishmodel"
+>id="platform_intelligentservices_publishmodel"
 >title="サービスとしてのモデルの公開"
 >abstract=""
 
