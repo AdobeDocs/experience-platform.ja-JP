@@ -5,10 +5,10 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
 role: Developer,User
-source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
+source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 70%
+source-wordcount: '132'
+ht-degree: 61%
 
 ---
 
@@ -18,8 +18,19 @@ ht-degree: 70%
 * [ダッシュボードの概要](home.md)
 * [ダッシュボードへのアクセス権限](permissions.md)
 * [ダッシュボードインベントリ](inventory.md)
-* [ユーザー定義ダッシュボード](user-defined-dashboards.md)
+* [ダッシュボード](user-defined-dashboards.md)
 * [ダッシュボードを PDF にダウンロード](download.md)
+* Data Distiller {#data-distiller}
+   * [概要](data-distiller/overview.md)
+   * 拡張アプリレポート用のカスタマイズ可能なインサイト {#customizable-insights}
+      * [概要](data-distiller/customizable-insights/overview.md)
+      * [クエリ予測モード （SQL グラフの作成）](data-distiller/customizable-insights/query-pro-mode.md)
+      * フィルター {#filters}
+         * [日付フィルター](data-distiller/customizable-insights/filters/date-filter.md)
+         * [グローバルフィルター](data-distiller/customizable-insights/filters/global-filter.md)
+      * [さらに表示](data-distiller/customizable-insights/view-more.md)
+      * [SQL を表示](data-distiller/customizable-insights/view-sql.md)
+      * [CSV としてダウンロード](data-distiller/customizable-insights/download-csv.md)
 * 使用可能なダッシュボード {#guides}
    * [プロファイル](guides/profiles.md)
    * [アカウントプロファイル](guides/account-profiles.md)

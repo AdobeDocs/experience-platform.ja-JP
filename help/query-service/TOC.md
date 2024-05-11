@@ -5,9 +5,9 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '321'
 ht-degree: 82%
 
 ---
@@ -27,17 +27,18 @@ ht-degree: 82%
       - [概要](data-distiller/derived-datasets/overview.md)
       - [SQL を使用した派生データセットの作成](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [デシルベースの派生データセットの作成](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 拡張されたアプリレポート用にカスタマイズ可能なインサイト {#customizable-insights}
+   - 拡張アプリレポート用のカスタマイズ可能なインサイト {#customizable-insights}
       - [概要](data-distiller/customizable-insights/overview.md)
+      - [Query pro モード](data-distiller/customizable-insights/query-pro-mode.md)
       - [高速クエリの送信](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [レポートインサイトデータモデルガイド](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI/ML 機能パイプライン {#ml-feature-pipelines}
       - [概要](data-distiller/ml-feature-pipelines/overview.md)
-      - [Jupyter Notebooks に接続](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Jupyter Notebooks への接続](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [探索的データ分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
       - [ML のエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 環境へのデータの書き出し](data-distiller/ml-feature-pipelines/export-data.md)
-      - [AI/ML データパイプラインエンリッチメントのエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+      - [AI/ML データパイプラインのエンリッチメントエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - ユースケース {#use-cases}
    - [概要](use-cases/overview.md)
    - [参照を中止](use-cases/abandoned-browse.md)
@@ -51,7 +52,7 @@ ht-degree: 82%
    - [ユーザーのページビューのリスト](use-cases/list-visitor-sessions.md)
    - [ページビュー別の訪問者のリスト](use-cases/visitors-by-number-of-page-views.md)
    - [傾向スコア](use-cases/propensity-score.md)
-   - [上位関数を使用して類似したレコードを取得](use-cases/retrieve-similar-records.md)
+   - [上位関数を持つ類似レコードの取得](use-cases/retrieve-similar-records.md)
    - [分析データからのマーチャンダイジング変数の返しと使用](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [訪問者のロールアップレポートの表示](use-cases/roll-up-report-of-a-visitor.md)
@@ -108,11 +109,11 @@ ht-degree: 82%
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)
    - [アドビ定義関数](sql/adobe-defined-functions.md)
-   - [上位関数](sql/higher-order-functions.md)
+   - [高階関数](sql/higher-order-functions.md)
    - [Spark SQL 関数](sql/spark-sql-functions.md)
    - [メタデータコマンド](sql/metadata.md)
    - [準備済み文](sql/prepared-statements.md)
 - [よくある質問](troubleshooting-guide.md)
 - [IP アドレスの許可リスト](ip-address-allowlist.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
