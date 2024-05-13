@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 42%
+source-wordcount: '1459'
+ht-degree: 38%
 
 ---
 
@@ -139,6 +139,16 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 >データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 Read [エッジパーソナライゼーションの宛先に対するオーディエンスのアクティブ化](../../ui/activate-edge-personalization-destinations.md) この宛先に対してオーディエンスをアクティブ化する手順については、を参照してください。
+
+## Target の宛先からのオーディエンスの削除 {#remove}
+
+オーディエンスが既にAdobe Targetで使用されている場合は、そのオーディエンスを既存のAdobe Target接続から削除するために必要な追加の手順があります [activity](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). オーディエンスがAdobe Target アクティビティで使用されている場合、Adobe Target接続からオーディエンスを削除しようとすると、エラーが発生します。
+
+![Target アクティビティで使用されるオーディエンスを削除しようとするとエラーが発生する Platform UI 画像。](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+オーディエンスがアクティビティで使用されているときに Target の宛先からオーディエンスを削除するには、最初に、オーディエンスを使用している Target アクティビティからオーディエンスを削除するか、アクティビティを完全に削除する必要があります。 次に、Target 接続からオーディエンスを削除できます。
+
+オーディエンスがアクティビティで使用されていない場合は、に移動します。 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]** > **[!UICONTROL 宛先データフローを選択]** > **[!UICONTROL アクティベーションデータ]**&#x200B;を選択し、削除するオーディエンスを選択してから、 **[!UICONTROL オーディエンスを削除]**.
 
 ## 書き出したデータ {#exported-data}
 
