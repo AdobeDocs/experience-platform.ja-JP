@@ -1,7 +1,8 @@
 ---
 title: 監視ダッシュボードの概要
 description: Adobe Experience Platform UI でのモニタリングダッシュボードの使用方法について説明します
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 8%
@@ -100,7 +101,7 @@ Experience PlatformUI で、次を選択します。 **[!UICONTROL 監視]** 未
 
 >[!TAB オーディエンス]
 
-を選択 **[!UICONTROL オーディエンス]** オーディエンスおよびセグメント化ジョブの指標を表示する場合。 ガイドを読む [オーディエンスデータの監視](monitor-segments.md) を参照してください。
+を選択 **[!UICONTROL オーディエンス]** オーディエンスおよびセグメント化ジョブの指標を表示する場合。 ガイドを読む [オーディエンスデータの監視](monitor-audiences.md) を参照してください。
 
 ![オーディエンスカードが選択された Ui の監視ダッシュボード。](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ Experience PlatformUI で、次を選択します。 **[!UICONTROL 監視]** 未
 * [ソースデータの監視](monitor-sources.md).
 * [ID データの監視](monitor-identities.md).
 * [プロファイルデータの監視](monitor-profiles.md).
-* [オーディエンスデータの監視](monitor-segments.md).
+* [オーディエンスデータの監視](monitor-audiences.md).
 * [宛先データの監視](monitor-destinations.md).

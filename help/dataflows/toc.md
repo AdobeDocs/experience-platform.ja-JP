@@ -4,7 +4,7 @@ user-guide-title: データフローガイド
 user-guide-description: データフローと、様々なサービス間でデータフローを設定する方法について説明します。
 feature: Dataflows
 role: Developer
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+source-git-commit: 8d7bb7058df67526710936e330c69e524d18b709
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 65%
@@ -23,7 +23,7 @@ ht-degree: 65%
    - [ソースのデータフローの監視](./ui/monitor-sources.md)
    - [ID のデータフローの監視](./ui/monitor-identities.md)
    - [プロファイルのデータフローの監視](./ui/monitor-profiles.md)
-   - [セグメントのデータフローの監視](./ui/monitor-segments.md)
+   - [オーディエンスのデータフローの監視](./ui/monitor-audiences.md)
    - [宛先のデータフローの監視](./ui/monitor-destinations.md)
    - B2B 監視 {#b2b}
       - [プロファイルエンリッチメントジョブの監視](./ui/b2b/monitor-profile-enrichment.md)

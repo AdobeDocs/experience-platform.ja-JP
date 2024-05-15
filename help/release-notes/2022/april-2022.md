@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2022年4月
 description: Adobe Experience Platform の 2022年4月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2670'
 ht-degree: 100%
 
 ---
@@ -69,7 +69,7 @@ Platformでは、データは様々なソースから取り込まれ、システ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| セグメントダッシュボード | 監視ダッシュボードを使用して、セグメントのデータフローを監視できるようになりました。詳しくは、[UI でのセグメントの監視](../../dataflows/ui/monitor-segments.md)に関するガイドを参照してください。 |
+| セグメントダッシュボード | 監視ダッシュボードを使用して、セグメントのデータフローを監視できるようになりました。詳しくは、[UI でのセグメントの監視](../../dataflows/ui/monitor-audiences.md)に関するガイドを参照してください。 |
 
 データフローの一般的な情報については、[データフローの概要](../../dataflows/home.md)を参照してください。セグメント化について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 

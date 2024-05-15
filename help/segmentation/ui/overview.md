@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
+source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
 workflow-type: tm+mt
 source-wordcount: '4274'
-ht-degree: 79%
+ht-degree: 80%
 
 ---
 
@@ -112,7 +112,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 | [!UICONTROL 名前] | オーディエンスの名前。 |
 | [!UICONTROL プロファイル数] | オーディエンスに適合するプロファイルの合計数。 |
 | [!UICONTROL 接触チャネル] | オーディエンスの接触チャネル。これは、オーディエンスがどこから来たかを示します。指定できる値には、セグメント化サービス、カスタムアップロード、オーディエンス構成、Audience Manager が含まれます。 |
-| [!UICONTROL ライフサイクルステータス] | オーディエンスのステータス。このフィールドの可能な値は次のとおりです `Draft`, `Inactive`, `Published`、および `Archived`. 様々な状態の意味や、オーディエンスを様々なライフサイクル状態に移動する方法など、ライフサイクルのステータスに関する詳細については、を参照してください [セグメント化に関する FAQ のライフサイクルステータスセクション](../faq.md#lifecycle-status). |
+| [!UICONTROL ライフサイクルステータス] | オーディエンスのステータス。このフィールドの可能な値は次のとおりです `Draft`, `Inactive`、および `Published`. 様々な状態の意味や、オーディエンスを様々なライフサイクル状態に移動する方法など、ライフサイクルのステータスに関する詳細については、を参照してください [セグメント化に関する FAQ のライフサイクルステータスセクション](../faq.md#lifecycle-status). |
 | [!UICONTROL 更新頻度] | オーディエンスのデータが更新される頻度を示す値。このフィールドの可能な値は次のとおりです [!UICONTROL バッチ], [!UICONTROL ストリーミング], [!UICONTROL Edge]、および [!UICONTROL スケジュール未設定]. |
 | [!UICONTROL 最終更新者] | オーディエンスを最後に更新したユーザーの名前。 |
 | [!UICONTROL 作成日] | オーディエンスが作成された日時（UTC）。 |
@@ -422,7 +422,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 | フィールド | 説明 |
 | ----- | ----------- | 
 | [!UICONTROL 名前] | オーディエンスの名前。 |
-| [!UICONTROL ステータス] | オーディエンスのステータス。このフィールドの可能な値は次のとおりです `Draft`, `Inactive`, `Published`、および `Archived`. |
+| [!UICONTROL ステータス] | オーディエンスのステータス。このフィールドの可能な値には、`Draft`、`Inactive` および `Published` が含まれます。 |
 | [!UICONTROL 作成日] | オーディエンスが作成された日時。 |
 | [!UICONTROL 作成者] | オーディエンスを作成した人物の名前。 |
 | [!UICONTROL 更新済み] | オーディエンスが最後に更新された日時。 |
