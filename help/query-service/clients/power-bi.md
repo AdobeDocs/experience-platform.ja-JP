@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Power BI をクエリサービスに接続します。
 description: このドキュメントでは、Power BI と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 100%
+source-wordcount: '1073'
+ht-degree: 96%
 
 ---
 
@@ -42,6 +42,10 @@ Npgsql が正しくインストールされていることを確認するには�
 [!DNL PostgreSQL] データベースダイアログが表示され、サーバーとデータベースの値の入力が求められます。[Power Query Desktop から PostgreSQL データベースに接続](https://learn.microsoft.com/ja-jp/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop)する方法の追加手順については、[!DNL PowerBI] の公式ドキュメントを参照してください。
 
 これらの必須値は、Adobe Experience Platform 資格情報から取得されます。資格情報を見つけるには、Platform UI にログインし、左側のナビゲーションから「**[!UICONTROL クエリ]**」を選択し、続いて「**[!UICONTROL 資格情報]**」を選択します。データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[資格情報ガイド](../ui/credentials.md)を参照してください。
+
+>[!IMPORTANT]
+>
+>Power BIユーザーまたは Tableau ユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 の方法については、資格情報ドキュメントを参照してください。 [bi ツールをCustomer Journey Analyticsに接続](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![「資格情報」タブと期限切れになる資格情報がハイライト表示されている Experience Platform クエリワークスペース](../images/clients/power-bi/query-service-credentials-page.png)
 
