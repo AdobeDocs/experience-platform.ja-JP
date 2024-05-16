@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Debugger を使用した Adobe Target 実装のテスト
 description: Adobe Experience Platform Debugger を使用して、Adobe Target が有効な web サイトのテストとデバッグを行う方法について説明します。
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 98%
+source-wordcount: '1035'
+ht-degree: 99%
 
 ---
 
@@ -109,7 +109,7 @@ Platform Debugger を Target に使用するには、web サイトで [at.js ラ
 | デバッグツール | 説明 |
 | --- | --- |
 | [!DNL Target Console Logging] | 有効にすると、ブラウザーのコンソールタブで at.js ログにアクセスできます。 この機能は、ブラウザーの URL に `mboxDebug` クエリパラメーター（任意の値）を追加することによっても有効にできます。 |
-| [!DNL Target Diable] | 有効にすると、ページ上で Target のすべての機能が無効になります。 これを使用すると、Target 固有のオファーがページ上での問題の原因であるかどうかを判断できます。 |
+| [!DNL Target Disable] | 有効にすると、ページ上で Target のすべての機能が無効になります。 これを使用すると、Target 固有のオファーがページ上での問題の原因であるかどうかを判断できます。 |
 | [!DNL Target Trace] | **メモ**：この機能を有効にするには、ログインする必要があります。<br><br>有効にした場合、クエストのたびにトラッキングトークンが送信され、各応答でトレースオブジェクトが返されます。`at.js` は応答 `window.__targetTraces` を解析します。各トレースオブジェクトには、次の追加事項に加えて「[!DNL Network Requests]」タブと同じ情報が含まれます。<ul><li>プロファイルスナップショット（リクエストの前後で属性を確認できるようになります）。</li><li>一致した／一致しなかった[アクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja)（現在のプロファイルが特定のアクティビティの対象として認定された／認定されなかった理由を示します）。<ul><li>これは、特定の時点でプロファイルの対象となるオーディエンスとその理由を特定するのに役立ちます。</li><li>様々なアクティビティタイプに関する詳細は、Target ドキュメントに記載されています</li></ul></li></ul> |
 
 {style="table-layout:auto"}
