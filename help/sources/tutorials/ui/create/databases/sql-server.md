@@ -1,20 +1,17 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Microsoft SQL Server;SQL Server;SQL Server
-solution: Experience Platform
 title: UI でのMicrosoft SQL Server ソース接続の作成
-type: Tutorial
 description: Adobe Experience Platform UI を使用してMicrosoft SQL Server ソース接続を作成する方法を説明します。
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 55%
+source-wordcount: '465'
+ht-degree: 45%
 
 ---
 
 # UI での [!DNL Microsoft SQL Server] ソース接続の作成
 
-Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Microsoft SQL Server] （以下「」という。）[!DNL SQL Server]&quot;) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
+を接続する方法については、このチュートリアルをお読みください。 [!DNL Microsoft SQL Server] ユーザーインターフェイスを使用してAdobe Experience Platformにアカウント設定します。
 
 ## はじめに
 
@@ -27,42 +24,50 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 既に有効な [!DNL SQL Server] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
-に接続するには [!DNL SQL Server] オン [!DNL Platform]を使用する場合は、次の接続プロパティを指定する必要があります。
+に接続するには [!DNL SQL Server] 日付： [!DNL Platform]には、次の接続プロパティを指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | 次に示すように、 [!DNL SQL Server] アカウント この [!DNL SQL Server] 接続文字列のパターン： `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| 接続文字列 | に関連付けられた接続文字列 [!DNL Microsoft SQL Server] アカウント。 接続文字列のパターンは、データソースにサーバー名とインスタンス名のどちらを使用しているかによって異なります。<ul><li>サーバー名を使用した接続文字列： `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>インスタンス名を使用した接続文字列：`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
 
-の導入について詳しくは、 [この [!DNL SQL Server] 文書](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
+基本について詳しくは、を参照してください。 [この [!DNL SQL Server] 文書](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
-## [!DNL SQL Server] アカウントの接続
+## [!DNL SQL Server] アカウントを接続
 
-必要な認証情報が揃ったら、次の手順に従って、[!DNL SQL Server] アカウントを [!DNL Platform] にリンクします。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、 **[!UICONTROL ソース]** 左側のナビゲーションバーから **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+の下 *データベース* カテゴリ、選択 **[!DNL Microsoft SQL Server]**&#x200B;を選択してから、 **[!UICONTROL の設定]**.
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+>[!TIP]
+>
+>ソースカタログ内のソースには、 **[!UICONTROL の設定]** 特定のソースがまだ認証済みアカウントを持っていない場合のオプション。 認証済みアカウントが存在すると、このオプションはに変更されます。 **[!UICONTROL データを追加]**.
 
-以下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL Microsoft SQL Server]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい [!DNL SQL Server] コネクタ。
+![Microsoft SQL Server ソースが選択されたソースカタログ](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
+この **[!UICONTROL Microsoft SQL Server への接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
-この **[!UICONTROL Microsoft SQL Server に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+>[!BEGINTABS]
 
-### 新しいアカウント
+>[!TAB 新しいアカウントを作成]
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および [!DNL SQL Server] 資格情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しいアカウントを作成するには、を選択します **[!UICONTROL 新しいアカウント]** に加えて、名前、説明（オプション）、の認証情報を指定します。
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
+終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-### 既存のアカウント
+![ソース接続の詳細が入力され、ハイライト表示された新しいアカウントインターフェイス。](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
-既存のアカウントに接続するには、 [!DNL SQL Server] 接続するアカウントを選択し、 **[!UICONTROL 次へ]** をクリックして続行します。
+>[!TAB 既存のアカウントを使用]
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+既存のアカウントを使用するには、を選択します **[!UICONTROL 既存のアカウント]** 次に、既存のアカウントカタログから使用するアカウントを選択します。
+
+「**[!UICONTROL 次へ]**」を選択して次に進みます。
+
+![既存のアカウントのリストを表示する既存のアカウントインターフェイス。](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+
+>[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL SQL Server] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを に取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/databases.md)を行いましょう。
+このチュートリアルでは、[!DNL SQL Server] アカウントとの接続を確立しました。次のチュートリアルに進むことができます。 [データをに取り込むデータフローの設定 [!DNL Platform]](../../dataflow/databases.md).
