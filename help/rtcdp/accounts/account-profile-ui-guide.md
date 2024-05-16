@@ -5,10 +5,10 @@ description: Adobe Real-time Customer Data Platform B2B Edition では、アカ�
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 57%
+source-wordcount: '1664'
+ht-degree: 56%
 
 ---
 
@@ -16,39 +16,39 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->アカウントプロファイルは、Real-time Customer Data Platform B2B Edition のお客様のみが利用できます。 各ライセンスタイプで使用できる機能など、Real-Time CDPの詳細については、まず [Real-Time CDPの概要](../overview.md).
+>アカウントプロファイルは、Real-time Customer Data Platform B2B Edition のお客様のみが使用できます。 各ライセンスタイプで使用できる機能など、Real-Time CDPの詳細については、まず次をお読みください [Real-Time CDPの概要](../overview.md).
 
-アカウントプロファイルを使用すると、複数のソースのアカウント情報を統合できます。 この統一されたアカウントビューは、多くのマーケティングチャネルや、顧客のアカウント情報を保存するために組織が現在使用している多様なシステムからのデータを統合します。このドキュメントでは、Adobe Experience Platformユーザーインターフェイス (UI) で使用できるReal-Time CDP B2B エディション機能を使用して、アカウントプロファイルを操作する方法を説明します。
+アカウントプロファイルを使用すると、複数のソースのアカウント情報を統合できます。 この統一されたアカウントビューは、多くのマーケティングチャネルや、顧客のアカウント情報を保存するために組織が現在使用している多様なシステムからのデータを統合します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイス（UI）で使用できるReal-Time CDP、B2B Edition 機能を使用してアカウントプロファイルを操作するためのガイドです。
 
 B2B ワークフローの一部としてアカウントプロファイルを作成する方法について詳しくは、[エンドツーエンドのチュートリアル](../b2b-tutorial.md)を参照してください。
 
 ## アカウントプロファイルの概要 {#account-profiles-overview}
 
-選択 **[!UICONTROL プロファイル]** under [!UICONTROL アカウント] （左側のナビゲーション）アカウントプロファイルの概要を表示します。 の下 [!UICONTROL 概要] 」タブをクリックすると、ダッシュボードに、1 つのエントリポイントにウィジェットを表示するグラフィックまたはグラフが表示されます。
+を選択 **[!UICONTROL プロファイル]** 未満 [!UICONTROL アカウント] 左側のナビゲーションに、アカウントプロファイルの概要を表示します。 の下 [!UICONTROL 概要] タブをクリックすると、ダッシュボードに、単一のエントリポイントにウィジェットを表示するグラフィックまたはグラフが表示されます。
 
-![ウィジェットを表示する「概要」タブ](images/b2b-account-profile-overview.png)
+![ウィジェットが表示された「概要」タブ](images/b2b-account-profile-overview.png)
 
-詳しくは、 [[!UICONTROL アカウントプロファイル]](../../dashboards/guides/account-profiles.md) ダッシュボードを参照してください。
+のドキュメントを参照してください。 [[!UICONTROL アカウントプロファイル]](../../dashboards/guides/account-profiles.md) ダッシュボードで詳細情報を確認できます。 のドキュメントを参照してください。 [Real-time Customer Data Platform Insights データモデル B2B エディション](../../dashboards/data-models/cdp-insights-data-model-b2b.md) インサイトデータモデルを使用してダッシュボードのカスタムグラフを作成する方法について詳しくは、こちらを参照してください。
 
-## リードとアカウントの照合の設定 {#configure-lead-to-account-matching}
+## リードとアカウントのマッチングの設定 {#configure-lead-to-account-matching}
 
 >[!IMPORTANT]
 >
-> リードとアカウントのマッチングサービスの有効化、無効化および設定を行えるのは、B2B AI 管理者だけです。 サービスを無効にすると、一致する結果は 24 時間以内に削除されます。
+> リードとアカウントのマッチングサービスを有効化、無効化および設定できるのは、B2B AI 管理者のみです。 サービスを無効にすると、一致する結果は 24 時間以内に削除されます。
 
-リードとアカウントの照合を設定するには、 **[!UICONTROL プロファイル]** under [!UICONTROL アカウント] をクリックします。 次の日： **[!UICONTROL 概要]** タブ、選択 **[!UICONTROL 設定]** を右上に表示します。
+リードとアカウントのマッチングを設定するには、以下を選択します **[!UICONTROL プロファイル]** 未満 [!UICONTROL アカウント] 左側のナビゲーションの 日 **[!UICONTROL 概要]** タブ、選択 **[!UICONTROL 設定]** 右上。
 
 ![設定を選択](images/b2b-configuring-accounts-profile.png)
 
-The **[!UICONTROL アカウント設定]** ダイアログが開きます。 ここから、 **[!UICONTROL リード — アカウントマッチングの有効化]** 切り替えて機能を有効にします。 ドロップダウンメニューを使用して、 **[!UICONTROL 毎日]** （の） **[!UICONTROL 一致するケイデンス]** 設定。 最後に、関連する **[!UICONTROL 一致条件]** 続くオプション **[!UICONTROL 保存]** 設定を確認して、に戻るには、以下の手順に従います。 **[!UICONTROL アカウントプロファイル]** 画面。
+この **[!UICONTROL アカウント設定]** ダイアログが開きます。 ここから **[!UICONTROL リードとアカウントのマッチングを有効にする]** を切り替えてこの機能を有効にします。 ドロップダウンメニューを使用して選択 **[!UICONTROL 日次]** の場合 **[!UICONTROL マッチング頻度]** の設定値。 最後に、関連するを選択します **[!UICONTROL 一致条件]** オプションの後にが続く **[!UICONTROL 保存]** 設定を確認し、に戻ります **[!UICONTROL アカウントプロファイル]** 画面。
 
 >[!NOTE]
 >
-> アドレスは、一致する唯一の条件として使用できません。 他の一致条件の 1 つ以上を選択する必要があります。
+> 住所は、唯一の一致条件として使用することはできません。 他の一致条件を 1 つ以上選択する必要があります。
 
 ![アカウント設定の指定](images/b2b-configuring-account-settings.png)
 
-リードトゥアカウントマッチングの詳細については、 [Real-Time CDP B2B でのアカウントマッチングの概要](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+リードとアカウントのマッチングについて詳しくは、 [Real-Time CDP B2B でのリードとアカウントのマッチングの概要](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## アカウントプロファイルの参照 {#browse-account-profiles}
 
@@ -88,7 +88,7 @@ The **[!UICONTROL アカウント設定]** ダイアログが開きます。 こ
 
 ### [!UICONTROL その他]で参照 {#browse-by-others}
 
-Real-Time CDP, B2B Edition では、 **[!UICONTROL ソース名]**, **[!UICONTROL ソースインスタンス]**、および **[!UICONTROL アカウント ID]** 表示するアカウントに対して。 ソース名とインスタンスを直接入力することで、Experience Platform が正しいアカウントプロファイルデータを検索して表示するのに必要なコンテキストを提供します。
+Real-Time CDP、B2B Edition では、 **[!UICONTROL ソース名]**, **[!UICONTROL ソースインスタンス]**、および **[!UICONTROL アカウント ID]** 表示するアカウントの場合。 ソース名とインスタンスを直接入力することで、Experience Platform が正しいアカウントプロファイルデータを検索して表示するのに必要なコンテキストを提供します。
 
 直接検索を実行する機能は、ソースに直接データを接続できない状況下で役立ちます。例えば、組織で CRM への直接接続を妨げるデータガバナンスポリシーが設定されている場合、そのデータをクラウドストレージシステムに書き出してから、Experience Platform に取り込むことができます。
 
@@ -96,7 +96,7 @@ Real-Time CDP, B2B Edition では、 **[!UICONTROL ソース名]**, **[!UICONTRO
 
 直接検索を開始するには、「**[!UICONTROL 参照方法]**」ドロップダウンから「**[!UICONTROL その他]**」を選択し、表示するアカウントの&#x200B;**[!UICONTROL ソース名]**、**[!UICONTROL ソースインスタンス]**、**[!UICONTROL アカウント ID]** を入力します。
 
-![他のユーザーによる参照](images/b2b-account-browse-adhoc.png)
+![その他で参照](images/b2b-account-browse-adhoc.png)
 
 ## アカウントプロファイルの詳細の表示 {#view-account-profile-details}
 
@@ -122,19 +122,19 @@ Real-Time CDP, B2B Edition では、 **[!UICONTROL ソース名]**, **[!UICONTRO
 
 ## 「人物」タブ {#people-tab}
 
-「**[!UICONTROL 人物]**」タブには、アカウントに関連付けられた個人のリストが表示されます。組織内の様々なチームが管理する様々なエンタープライズシステムの連絡先やリードですが、Real-Time CDP、B2B Edition では、1 つのリストとしてまとめて表示され、アカウントの連絡先の全体像を把握できます。
+「**[!UICONTROL 人物]**」タブには、アカウントに関連付けられた個人のリストが表示されます。これらのユーザーは、組織内の様々なチームが管理する様々なエンタープライズシステムの連絡先やリードである場合がありますが、Real-Time CDP B2B Edition では、単一のリストとしてまとめて表示され、アカウントの連絡先の全体像を確認できます。
 
 >[!NOTE]
 >
 >「[!UICONTROL 人物]」タブには、アカウントに関連付けられた最大 25 人の人物のリストが表示されます。関連する人物が 25 人を超えるアカウントの場合、システムは 25 件のレコードのランダムサンプリングを表示します。
 
-連絡先の情報のスナップショットを表示する以外に、リストに表示される各担当者には、 **[!UICONTROL プロファイル ID]**：該当する個人のリアルタイム顧客プロファイルを参照できるクリック可能なリンクです。 お使いのアカウントに関連する個々の顧客プロファイルの表示について詳しくは、 [Real-Time CDP, B2B Edition でのプロファイルの参照](../profile/profile-browse.md).
+連絡先の情報のスナップショットを表示するほか、リストされている各ユーザーには次も含まれます **[!UICONTROL プロファイル ID]**&#x200B;は、その個人のリアルタイム顧客プロファイルを参照できるクリック可能なリンクです。 アカウントに関連する個々の顧客プロファイルの表示について詳しくは、ガイドを参照してください [Real-Time CDP, B2B Edition でのプロファイルの参照](../profile/profile-browse.md).
 
 ![「人物」タブ](images/b2b-account-people.png)
 
 ## 「機会」タブ {#opportunities-tab}
 
-「**[!UICONTROL 機会]**」タブには、アカウントに関連するオープンな機会およびクローズされた機会に関する情報が表示されます。これらのオポチュニティは複数のソースからExperience Platformに取り込むことができますが、Real-Time CDP, B2B Edition を使用すると、マーケターは、これらのオポチュニティを 1 か所でまとめて簡単に確認できます。
+「**[!UICONTROL 機会]**」タブには、アカウントに関連するオープンな機会およびクローズされた機会に関する情報が表示されます。これらのオポチュニティは複数のソースからExperience Platformに取り込むことができますが、Real-Time CDP B2B Edition を使用すると、マーケターは、これらのオポチュニティをすべて 1 か所で簡単に確認できます。
 
 >[!NOTE]
 >
@@ -142,19 +142,19 @@ Real-Time CDP, B2B Edition では、 **[!UICONTROL ソース名]**, **[!UICONTRO
 
 各機会には、機会の名前、その金額、ステージ、機会がオープン、クローズ、成立、不成立のどれであるかなどの情報が含まれます。
 
-![「アカウント商談」タブ](images/b2b-account-opportunities.png)
+![「アカウントの機会」タブ](images/b2b-account-opportunities.png)
 
-## 「関連アカウント」タブ {#related-accounts-tab}
+## 「関連するアカウント」タブ {#related-accounts-tab}
 
-The **[!UICONTROL 関連するアカウント]** 「 」タブには、閲覧中のアカウントに関連する他のアカウントに関する情報が表示されます。 この機能の詳細については、 [関連アカウントの概要](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+この **[!UICONTROL 関連するアカウント]** タブには、参照中のアカウントに関連する可能性のある他のアカウントに関する情報が表示されます。 この機能について詳しくは、 [関連するアカウントの概要](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
 >[!NOTE]
 >
->* 関連アカウントグループには、最大 30 個のアカウントプロファイルを含めることができます。 関連するアカウントプロファイルが 30 件を超える場合、それらは任意に複数のグループに分割され、それぞれのグループのメンバーは 30 人以下になります。 アカウントプロファイルの関連アカウントグループには、常にそれ自体が含まれます。
->* The [!UICONTROL 関連するアカウント] 現在、「 」タブには、参照しているアカウントに関連する最大 25 件のアカウントの一覧が表示されます。 これは、今後のアップデートで対処される予定の制限です。 この UI の制限にもかかわらず、セグメント定義で関連アカウントを使用する場合、30 件の関連アカウントプロファイルのグループに対して、すべてのプロファイルがターゲティングに使用されます。
+>* 関連するアカウントグループには、最大 30 個のアカウントプロファイルを含めることができます。 30 を超えるアカウントプロファイルが関連していることが判明した場合、それらは任意に複数のグループに分割され、それぞれが 30 人以下のメンバーを持ちます。 アカウントプロファイルの関連アカウントグループには、常に自分自身が含まれます。
+>* この [!UICONTROL 関連するアカウント] タブには、現在、参照中のアカウントに関連付けられている関連アカウントのリストが最大 25 個表示されます。 これは、今後のアップデートで対処される予定の制限事項です。 この UI 制限にもかかわらず、セグメント定義で関連するアカウントを使用する場合、30 個の関連するアカウントプロファイルのグループに対して、すべてのプロファイルがターゲティングに使用されます。
 
-各関連アカウントには、アカウントプロファイル ID や名前、アカウントのソースキーなどの情報のほか、ホームページ、住所、親アカウント、電話、業界、年間売上高に関する情報が含まれます。
+関連する各アカウントには、アカウントプロファイル ID と名前、アカウントのソースキーなどの情報や、ホームページ、住所、親アカウント、電話、業界、年間売上高に関連するその他の情報が含まれます。
 
-![「関連アカウント」タブ](images/b2b-account-related-accounts.png)
+![「関連するアカウント」タブ](images/b2b-account-related-accounts.png)
 
-このリスト内の関連するアカウントをセグメント化に使用できます。 参照先 [セグメント化の例](/help/rtcdp/segmentation/b2b.md#related-account) を参照してください。
+セグメント化の目的で、このリストの関連アカウントを使用できます。 を表示 [セグメント化の例](/help/rtcdp/segmentation/b2b.md#related-account) 関連するアカウントを使用してセグメント定義でリーチを拡大する方法を理解します。
