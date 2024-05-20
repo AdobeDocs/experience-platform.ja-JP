@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Salesforce Service Cloud;Salesforce サービスクラウド
+keywords: Experience Platform；ホーム；人気のトピック；Salesforce Service Cloud;Salesforce service cloud
 solution: Experience Platform
-title: フローサービス API を使用した Salesforce サービスクラウドソース接続の作成
+title: Flow Service API を使用した Salesforce サービスクラウドソース接続の作成
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを Salesforce Service Cloud に接続する方法を説明します。
+description: Flow Service API を使用してAdobe Experience Platformを Salesforce Service Cloud に接続する方法について説明します。
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
+source-git-commit: 1f13b5fcad683b4c0ede96654e35d6f0c64d9eb7
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 69%
+source-wordcount: '498'
+ht-degree: 68%
 
 ---
 
-# の作成 [!DNL Salesforce Service Cloud] を使用したソース接続 [!DNL Flow Service] API
+# を作成 [!DNL Salesforce Service Cloud] を使用したソース接続 [!DNL Flow Service] API
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -25,21 +25,22 @@ ht-degree: 69%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Salesforce Service Cloud] の使用 [!DNL Flow Service] API.
+次の節では、に正常に接続するために必要な追加情報を示します [!DNL Salesforce Service Cloud] の使用 [!DNL Flow Service] API です。
 
 ### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Salesforce Service Cloud] に接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
-| ---------- | ----------- |
-| `username` | ユーザー名 [!DNL Salesforce Service Cloud] ユーザーアカウント。 |
-| `password` | ユーザーのパスワード [!DNL Salesforce Service Cloud] アカウント。 |
+| --- | ---|
+| `environmentUrl` | の URL [!DNL Salesforce] ソースインスタンス。 |
+| `username` | のユーザー名 [!DNL Salesforce Service Cloud] ユーザーアカウント。 |
+| `password` | パスワード [!DNL Salesforce Service Cloud] アカウント。 |
 | `securityToken` | のセキュリティトークン [!DNL Salesforce Service Cloud] アカウント。 |
-| `apiVersion` | （オプション） [!DNL Salesforce Service Cloud] 使用しているインスタンス。 このフィールドを空白のままにすると、Experience Platformは利用可能な最新バージョンを自動的に使用します。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce Service Cloud] の接続仕様 ID は `b66ab34-8619-49cb-96d1-39b37ede86ea` です。 |
+| `apiVersion` | （オプション）の REST API バージョン [!DNL Salesforce Service Cloud] 使用しているインスタンス。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce Service Cloud] の接続仕様 ID は `cb66ab34-8619-49cb-96d1-39b37ede86ea` です。 |
 
-の導入について詳しくは、 [この Salesforce Service Cloud ドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
+基本について詳しくは、を参照してください。 [この Salesforce Service Cloud ドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
 ### Platform API の使用
 
@@ -75,24 +76,26 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "username": "{USERNAME}",
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce-service-cloud",
               "password": "{PASSWORD}",
               "securityToken": "{SECURITY_TOKEN}"
           }
       },
       "connectionSpec": {
-          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
           "version": "1.0"
       }
   }'
 ```
 
 | パラメーター | 説明 |
-| --------- | ----------- |
+| ---| --- |
+| `auth.params.environmentUrl` | の URL [!DNL Salesforce Service Cloud] インスタンス。 |
 | `auth.params.username` | に関連付けられたユーザー名 [!DNL Salesforce Service Cloud] アカウント。 |
-| `auth.params.password` | ユーザーに関連付けられたパスワード [!DNL Salesforce Service Cloud] アカウント。 |
-| `auth.params.securityToken` | に関連付けられたセキュリティトークン。 [!DNL Salesforce Service Cloud] アカウント。 |
-| `connectionSpec.id` | [!DNL Salesforce Service Cloud] 接続仕様 ID：`b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `auth.params.password` | に関連付けられたパスワード [!DNL Salesforce Service Cloud] アカウント。 |
+| `auth.params.securityToken` | に関連付けられたセキュリティトークン [!DNL Salesforce Service Cloud] アカウント。 |
+| `connectionSpec.id` | [!DNL Salesforce Service Cloud] 接続仕様 ID：`cb66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **応答**
 
