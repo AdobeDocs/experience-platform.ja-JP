@@ -3,7 +3,7 @@ title: 1 回限りの顧客価値をライフタイム価値に進化
 description: 特定の顧客の属性、行動、過去の購入に基づいて、最適な補完的な製品やサービスを提供するパーソナライズされたキャンペーンを作成する方法を説明します。
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -27,7 +27,7 @@ ht-degree: 2%
 * オーディエンスを作成
 * Adobe Journey Optimizerでこれらのオーディエンスをターゲットにし、Real-Time CDPでアクティブ化するジャーニーを作成します。
 
-![ステップバイステップ ワンタイム値をライフタイム値に進化する高レベルの視覚的な概要。](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
+![ステップバイステップ ワンタイム値をライフタイム値に進化する高レベルの視覚的な概要。](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## 前提条件と計画 {#prerequisites-and-planning}
 
@@ -54,7 +54,7 @@ ht-degree: 2%
 
 以下は、Real-Time CDPとJourney Optimizerの様々なコンポーネントのアーキテクチャの概要です。 次の図は、このページで説明するユースケースを達成するために、データ収集からジャーニーやキャンペーンを通じてアクティブ化された宛先に至るまでの、2 つのExperience Platformアプリを介したデータのフローを示しています。
 
-![アーキテクチャの大まかなビジュアルの概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
+![アーキテクチャの大まかなビジュアルの概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
 ## ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 >[!BEGINSHADEBOX]
 
-![ステップバイステップ ワンタイム値をライフタイム値に進化する高レベルの視覚的な概要。](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
+![ステップバイステップ ワンタイム値をライフタイム値に進化する高レベルの視覚的な概要。](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. スキーマとデータセットを作成し、次の目的でマークします [!UICONTROL Profile].
 2. データは、Web SDK、Mobile Edge SDK または API を介して収集され、Experience Platformに統合されます。 Analytics Data Connector も利用できますが、ジャーニー遅延が発生する可能性があります。
@@ -304,7 +304,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 特に、次の画像に示すように、ユースケースの異なる手順で 2 つのオーディエンスを作成し使用する必要があります。
 
-![ハイライト表示されたオーディエンス](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![ハイライト表示されたオーディエンス](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -351,7 +351,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 * ライフタイムジャーニー：高価値で低頻度の顧客に送信するメッセージが含まれます
 * 電話に応答してサブスクリプションを購入するユーザーの注文確認ジャーニー。
 
-![ハイライト表示されたジャーニー](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![ハイライト表示されたジャーニー](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 以下に、各ジャーニーブランチに必要な正確なデータを示します。
 
@@ -361,7 +361,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 ライフタイムジャーニーは、過去 30 日以内にターゲットとならなかった高価値および低頻度の顧客のオーディエンスに対応します。 これらの顧客にメッセージが表示され、7 日間経過してもまだ購入されない場合は、有料メディア広告を表示できるオーディエンスに未購入者を含めることができます。 購入した場合は、注文確認ジャーニー（詳細は別のタブで説明）で購入者を設定できます。
 
-![ライフタイムジャーニーの概要レベルのビジュアル概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "ライフタイムジャーニーに 1 回限りの値を提供する、視覚的な概要の説明。"){width="600" zoomable="yes"}
+![ライフタイムジャーニーの概要レベルのビジュアル概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "ライフタイムジャーニーに 1 回限りの値を提供する、視覚的な概要の説明。"){zoomable="yes"}
 
 +++詳細なジャーニーロジック
 
@@ -383,7 +383,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 注文確認ジャーニーでは、購入が web サイトまたはモバイルアプリを通じて行われたかどうかに焦点を当てています。 顧客が会社のサブスクリプションなどの購入を正常に完了したら、注文確認ジャーニーにそれらを設定できます。
 
-![顧客注文確認ジャーニーの大まかなビジュアル概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "顧客注文確認ジャーニーの大まかなビジュアル概要。"){width="600" zoomable="yes"}
+![顧客注文確認ジャーニーの大まかなビジュアル概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "顧客注文確認ジャーニーの大まかなビジュアル概要。"){zoomable="yes"}
 
 +++ジャーニーロジック
 
