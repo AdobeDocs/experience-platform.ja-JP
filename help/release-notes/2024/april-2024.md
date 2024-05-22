@@ -1,10 +1,9 @@
 ---
-title: Adobe Experience Platform リリースノート 2024年4月
+title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年4月のリリースノート。
-exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1895'
 ht-degree: 22%
 
 ---
@@ -117,7 +116,7 @@ Experience PlatformUI のモニタリングダッシュボードを使用する�
 
 | 機能 | 説明 |
 | --- | --- |
-| クエリの強制隔離 | 失敗したクエリ実行を自動的に分離して中断を防ぎ、一貫したパフォーマンスを維持します。 を参照してください。 [クエリの強制隔離](../../query-service/ui/query-schedules.md#quarantine) 詳しくは、ドキュメントを参照してください。 |
+| クエリ強制隔離 | 失敗したクエリ実行を自動的に分離して中断を防ぎ、一貫したパフォーマンスを維持します。 を参照してください。 [クエリの強制隔離](../../query-service/ui/query-schedules.md#quarantine) 詳しくは、ドキュメントを参照してください。 |
 | クエリをキャンセル | クエリの実行を制御し、長時間実行されるクエリをキャンセルすることで生産性を向上させます。詳しくは、 [クエリをキャンセル](../../query-service/ui/user-guide.md#cancel-query) 詳しくは、ドキュメントを参照してください。 |
 | スケジュールされたクエリのアラート | クエリをスケジュールしながら、プロアクティブな通知で常に情報を入手し、効率的でタイムリーなタスク管理を確保します。 次のことができます [クエリの作成時にアラートを購読](../../query-service/ui/query-schedules.md#alerts-for-query-status) または、既存のスケジュール済みクエリに対してインラインアクションを使用します。 を参照してください。 [インラインアクションを使用したアラートの購読](../../query-service/ui/monitor-queries.md#alert-subscription) 詳しくは、ドキュメントを参照してください。 |
 | スケジュール済みクエリナビゲーションの改善 | クエリテンプレートとスケジュールされた実行の間を簡単に移動して、生産性を向上させます。 のドキュメントを参照してください。 [スケジュールされたクエリ実行の表示](../../query-service/ui/query-schedules.md#scheduled-query-runs) を参照してください。 |
