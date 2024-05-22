@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年5月
 description: Adobe Experience Platform の 2024年5月のリリースノート。
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 24%
+source-wordcount: '1596'
+ht-degree: 23%
 
 ---
 
@@ -71,9 +71,9 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| バッチ宛先のマッピングフィールドの並べ替え | にマッピングフィールドをドラッグ&amp;ドロップして、CSV 書き出しの列の順序を変更できるようになりました [マッピングステップ](../../destinations/ui/activate-batch-profile-destinations.md#mapping). UI でマッピングされたフィールドの順序は、書き出された CSV ファイルの列の順序で上から下に反映されます。一番上の行は CSV ファイルの左端の列です。 |
+| バッチ宛先のマッピングフィールドの並べ替え | にマッピングフィールドをドラッグ&amp;ドロップして、CSV 書き出しの列の順序を変更できるようになりました [マッピングステップ](../../destinations/ui/activate-batch-profile-destinations.md#mapping). UI でマッピングされたフィールドの順序は、書き出された CSV ファイルの列の順序で上から下に反映されます。一番上の行は CSV ファイルの左端の列です。 <br> ![マッピングの並べ替え方法の表示。](../2024/assets/may/reorder-mappings.gif "マッピングの並べ替え方法の表示。"){width="100" zoomable="yes"} |
 | バッチ宛先のデフォルトの書き出しスケジュールがあらかじめ選択されています | Experience Platformは、各ファイル書き出しのデフォルトのスケジュールを自動的に設定するようになりました。 のドキュメントを参照してください。 [オーディエンス書き出しのスケジュール設定](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) デフォルトスケジュールの変更方法については、こちらを参照してください。 |
-| バッチ宛先の複数のオーディエンスアクティベーションスケジュールを編集 | から複数のオーディエンスのアクティベーションスケジュールを編集できるようになりました [宛先の詳細ページ](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| バッチ宛先の複数のオーディエンスアクティベーションスケジュールを編集 | からバッチ（ファイルベース）宛先に書き出された複数のオーディエンスのアクティベーションスケジュールを **[!UICONTROL アクティベーションデータ]** タブ [宛先の詳細ページ](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![複数のオーディエンスを選択し、ファイル書き出しスケジュールを編集する方法の表示。](../2024/assets/may/bulk-edit-schedule.gif "複数のオーディエンスを選択し、ファイル書き出しスケジュールを編集する方法の表示。"){width="100" zoomable="yes"} |
 | オンデマンドでの複数オーディエンスのバッチ宛先への書き出し | を通じて、複数のオーディエンスを選択してバッチ宛先に書き出すことができるようになりました [オンデマンドでのファイルの書き出し](../../destinations/ui/export-file-now.md) 機能。 |
 
 {style="table-layout:auto"}
