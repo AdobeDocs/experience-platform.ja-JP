@@ -1,11 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年5月
 description: Adobe Experience Platform の 2024年5月のリリースノート。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2bdac588114236c6f314217112b9afa805c1f58c
+source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 23%
+source-wordcount: '1546'
+ht-degree: 24%
 
 ---
 
@@ -22,6 +21,7 @@ Experience Platformの既存の機能に対するアップデート：
 - [カタログサービス](#catalog-service)
 - [ダッシュボード](#dashboards)
 - [データガバナンス](#governance)
+- [宛先](#destinations)
 - [クエリサービス](#query-service)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
@@ -40,16 +40,16 @@ Adobe Experience Platformのその他のアップデート：
 | --- | --- |
 | 一括アクション | データセットインベントリで一括アクションがサポートされるようになりました。 データ管理プロセスを合理化し、一括アクションでデータセットを効率的に管理できるようにします。 一括アクションを使用すると、多数のデータセットに対して複数のアクションを同時に実行することで時間を節約できます。  一括アクションには次のものがあります [フォルダーに移動](../../catalog/datasets/user-guide.md#move-to-folders), [タグを編集](../../catalog/datasets/user-guide.md#manage-tags)、および [削除](../../catalog/datasets/user-guide.md#delete) データセット。 <br> ![データセット UI ワークスペースでの一括アクション。](../2024/assets/may/bulk-actions.png "データセット UI ワークスペースでの一括アクション。"){width="100" zoomable="yes"} <br> この機能について詳しくは、 [データセット UI ガイド](../../catalog/datasets/user-guide.md#bulk-actions). |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ## ダッシュボード {#dashboards}
 
-Adobe Experience Platform では、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを表示できる複数のダッシュボードを提供しています。
+Adobe Experience Platform では、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを確認できる複数のダッシュボードを提供しています。
 
 **新機能または更新された機能**
 |機能 |説明 | | — | — | |拡張アプリレポートのためのカスタマイズ可能なインサイト |シームレス [sql 分析の出力を、わかりやすいビジネスに適したビジュアル形式に変換](../../dashboards/data-distiller/customizable-insights/overview.md). カスタム SQL クエリを使用すると、正確なデータ操作や、様々な構造化データセットからの動的グラフの作成を行えます。 Query pro モードを使用して、SQL で複雑な分析を実行し、カスタムダッシュボード上のグラフを通じて技術者以外のユーザーとこの分析を共有したり、CSV ファイルに書き出したりできます。 |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ## データガバナンス {#governance}
 
@@ -61,7 +61,24 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 | --- | --- |
 | HTTP API 宛先とAdobe Journey Optimizer カスタムアクションの mTLS サポート | 相互トランスポート層のセキュリティ（mTLS）プロトコルの強化されたセキュリティ対策で、顧客の信頼を構築します。 この [Experience PlatformHTTP API の宛先](../../destinations/catalog/streaming/http-destination.md#mtls-protocol-support) および [Adobe Journey Optimizerのカスタムアクション](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) 設定済みのエンドポイントにデータを送信する際に、mTLS プロトコルをサポートするようになりました。 カスタムアクションや HTTP API 宛先で mTLS を有効化するための追加設定は必要ありません。このプロセスは、mTLS が有効なエンドポイントが検出された場合に自動的に実行されます。 次のことができます [Adobe Journey Optimizer公開証明書をここからダウンロードします](../../landing/governance-privacy-security/encryption.md#download-certificates) および [Destinations Service 公開証明書はこちらから](../../landing/governance-privacy-security/encryption.md#download-certificates).<br>を参照してください。 [Experience Platformデータ暗号化ドキュメント](../../landing/governance-privacy-security/encryption.md#mtls-protocol-support) データをサードパーティ製システムに書き出す際のネットワーク接続プロトコルについて詳しくは、こちらを参照してください。 |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能** {#destinations-new-updated-functionality}
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| バッチ宛先のマッピングフィールドの並べ替え | にマッピングフィールドをドラッグ&amp;ドロップして、CSV 書き出しの列の順序を変更できるようになりました [マッピングステップ](../../destinations/ui/activate-batch-profile-destinations.md#mapping). UI でマッピングされたフィールドの順序は、書き出された CSV ファイルの列の順序で上から下に反映されます。一番上の行は CSV ファイルの左端の列です。 |
+| バッチ宛先のデフォルトの書き出しスケジュールがあらかじめ選択されています | Experience Platformは、各ファイル書き出しのデフォルトのスケジュールを自動的に設定するようになりました。 のドキュメントを参照してください。 [オーディエンス書き出しのスケジュール設定](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) デフォルトスケジュールの変更方法については、こちらを参照してください。 |
+| バッチ宛先の複数のオーディエンスアクティベーションスケジュールを編集 | から複数のオーディエンスのアクティベーションスケジュールを編集できるようになりました [宛先の詳細ページ](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| オンデマンドでの複数オーディエンスのバッチ宛先への書き出し | を通じて、複数のオーディエンスを選択してバッチ宛先に書き出すことができるようになりました [オンデマンドでのファイルの書き出し](../../destinations/ui/export-file-now.md) 機能。 |
+
+{style="table-layout:auto"}
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## クエリサービス {#query-service}
 
@@ -76,7 +93,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 | 効率的なクエリログインベントリ | で、改善されたトラブルシューティング効率とタスク監視を使用できるようになりました [効率化されたクエリログ UI](../../query-service/ui/query-logs.md#filter-logs): <ul><li> Platform UI は、デフォルトで「ログ」タブからすべての「システムクエリ」を除外するようになりました。 </li><li> チェックを解除してシステムクエリを表示 **システムクエリの除外**. </li></ul> <br> ![クエリ UI ワークスペースの「ログ」タブ](../2024/assets/may/query-log.png "クエリ UI ワークスペースの「ログ」タブ"){width="100" zoomable="yes"} <br> 効率化されたクエリログ UI を使用すると、よりフォーカスのあるビューが表示され、関連するログをすばやく識別して分析できます。 |
 | データベースセレクター | 新規データベースセレクタードロップダウンメニューを使用して、次の操作を行います [Power BIまたは Tableau からCustomer Journey Analyticsのデータビューに簡単にアクセス](../../query-service/ui/credentials.md#connect-to-customer-journey-analytics). Platform UI から目的のデータベースを直接選択して、BI ツールをよりシームレスに統合できるようになりました。 <br> ![クエリ UI ワークスペースの「資格情報」タブ。](../2024/assets/may/database-selector.png "クエリ UI ワークスペースの「資格情報」タブ。"){width="100" zoomable="yes"} <br> |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ## セグメント化サービス {#segmentation}
 
@@ -88,7 +105,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 | --- | --- |
 | 外部で生成されたオーディエンスのインポート | 外部で生成されたオーディエンスの読み込みには、「オーディエンスを読み込み」権限が必要になりました。 権限について詳しくは、 [権限 UI ガイド](../../access-control/home.md#permissions). |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ## ソース {#sources}
 
@@ -104,7 +121,7 @@ Experience Platformのソースを使用すると、Adobeアプリケーショ�
 | のサンプルデータフローのサポート [!DNL Marketo Engage] ソース | この [!DNL Marketo Engage] ソースでサンプルデータフローがサポートされるようになりました。 サンプルデータフロー設定を有効にして取り込み率を制限してから、大量のデータを取り込まずにExperience Platform機能を試してください。 詳しくは、のガイドを参照してください。 [のデータフローの作成 [!DNL Marketo Engage] UI 内](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 | IP アドレス許可リストの更新 | ストリーミングソースを正常に使用するには、場所に応じて、新しい IP アドレスのセットを許可リストに追加する必要があります。 新しい IP アドレスの包括的なリストについては、 [IP アドレス許可リストガイド](../../sources/ip-address-allow-list.md). |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 **新規ドキュメントまたは更新されたドキュメント**
 
@@ -112,7 +129,7 @@ Experience Platformのソースを使用すると、Adobeアプリケーショ�
 | --- | --- |
 | のドキュメントの更新 [!DNL Google PubSub] | この [!DNL Google PubSub] ソースドキュメントが更新されて、包括的な前提条件ガイドが追加されました。 新しい「前提条件」の節を使用して、サービスアカウントの作成方法、トピックまたは購読レベルでの権限の付与方法、の使用を最適化するための設定方法を確認してください [!DNL Google PubSub] ソース。 を読み取る [[!DNL Google PubSub] の概要](../../sources/connectors/cloud-storage/google-pubsub.md) を参照してください。 |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 ソースについて詳しくは、 [ソースの概要](../../sources/home.md).
 
