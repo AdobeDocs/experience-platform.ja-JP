@@ -2,67 +2,76 @@
 title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
+source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 87%
+source-wordcount: '1438'
+ht-degree: 74%
 
 ---
 
 # Adobe Analytics 拡張機能のリリースノート
 
-Adobe Analyticsタグ拡張機能のリリースノートのリストを次に示します。
+以下は、Adobe Analytics タグ拡張機能のリリースノートのリストです。
 
 >[!NOTE]
 >
->Analytics タグ拡張 ( [AppMeasurementJavaScript ライブラリ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja). 詳しくは、 [AppMeasurementリリースノート](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) 詳しくは、以下に示す特定のバージョンを参照してください。
+>Analytics タグ拡張機能（多くの場合、の更新に応答して更新される） [AppMeasurement JavaScript ライブラリ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja). を参照してください。 [AppMeasurementリリースノート](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) 詳しくは、以下に説明する特定のバージョンを参照してください。
 
-## 2023年9月15日（PT）
+## 2024 年 3 月 4 日（Pt）
+
+**Adobe Analytics Extension 1.9.4**
+
+**機能**:
+
+* アップグレード先 [v2.26.0 へのAppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+
+## 2023 年 9 月 15 日（Pt）
 
 **Adobe Analytics Extension 1.9.3**
 
 **機能**:
 
-* にアップグレード [v2.25.0へのAppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+* アップグレード先 [v2.25.0 へのAppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
 
 
-## 2023年7月19日（PT）
+## 2023 年 7 月 19 日（Pt）
 
 **Adobe Analytics Extension 1.9.2**
 
 **機能**:
 
-* にアップグレード [APPMEASUREMENTv2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
-* オプションの設定 (`decodeLinkParameters` デフォルト `false`) を使用して、2 バイトエンコードされた文字を含むリンク URL をデコードします。
+* アップグレード先 [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
+* オプションの設定（`decodeLinkParameters` default `false`）に設定します。これにより、2 バイトのエンコードされた文字を含むリンク URL がデコードされます。
 
 **バグの修正**:
-* 高エントロピーの誤ったブラウザーに対するエラー処理を追加しました。 [User-Agent クライアントのヒント](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=ja) API です。
-* 変更済み [POST](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/POST) 使用する Content-Type ヘッダー `x-www-form-urlencoded` デフォルトでは。
 
-## 2022年9月23日（PT）
+* 高エントロピーの不具合があるブラウザーに対するエラー処理を追加しました [User-Agent のクライアントヒント](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API の略。
+* 変更日 [POST](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/POST) 使用する Content-Type ヘッダー `x-www-form-urlencoded` デフォルトでは。
+
+## 2022 年 9 月 23 日（Pt）
 
 **Adobe Analytics Extension 1.9.1**
 
 **機能**:
 
-* AppMeasurementv2.23.0にアップグレード。
-* 拡張機能は高エントロピーを収集できるようになった [user-agent クライアントのヒント](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新バージョンのAppMeasurementでサポートされる
+* AppMeasurement v2.23.0 にアップグレードしました。
+* 拡張機能で高エントロピーを収集できるようになりました [user-agent クライアントヒント](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新バージョンのAppMeasurementでサポートされています。
 
-## 2022年2月28日（PT）
+## 2022 年 2 月 28 日（Pt）
 
 **Adobe Analytics Extension 1.9.0**
 
 **バグの修正**:
 
-* デバッグ文の一部を削除し、AppMeasurement。
+* AppMeasurementから一部の debug ステートメントを削除しました。
 
-## 2021年11月29日
+## 2021年11月29日（PT）
 
 **Adobe Analytics Extension 1.8.8**
 
 **バグの修正**:
 
-* AppMeasurement を v2.22.3 にアップグレードしました。
+* AppMeasurementを v2.22.3 にアップグレードしました。
 
 ## 2021年9月16日（PT）
 
@@ -193,8 +202,8 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 
 * DIL 9.2 for Audience Manager をサポートするように Adobe Analytics 拡張機能を更新しました
 
-* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja#バージョン - 2.15.0) をサポートするように拡張機能を更新しました
-* 現在はサポートされていないので、次のチェックボックスを削除しました：「Do not attach the destination publishing IFRAME to the DOM or fire destinations」
+* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0) をサポートするように拡張機能を更新しました
+* サポートされなくなったので、次のチェックボックスを削除しました：「宛先を公開する IFRAME を DOM または Fire の宛先に添付しない」
 
 ## 2019 年 6 月 4 日（PT）
 
@@ -276,7 +285,7 @@ Adobe Analyticsタグ拡張機能のリリースノートのリストを次に�
 * 「Serialize from value」フィールドを、「Event ID」と「Event Value」の 2 つに分割しました。これにより、イベントがシリアル化されず、値を割り当てていた問題が修正されます。
    * 注：文字列（例：Event7=3:abc123）を使用して ID を追加する際、現在のフィールドを使用している場合は、「Event ID」フィールドの ID を反映するよう入力内容を更新する必要があります。
 
-**バグの修正**：
+**バグの修正**:
 
 * 通貨コードが正しく入力できなかったバグを修正しました
 
