@@ -3,10 +3,10 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたオーディエンス、アクティブ化を編集したり、データフローを有効または無効にしたりするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '1154'
-ht-degree: 9%
+source-wordcount: '1106'
+ht-degree: 10%
 
 ---
 
@@ -125,21 +125,13 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
 ![「オーディエンスを削除」オプションをハイライト表示したアクティベーションデータ画面。](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE ベータ版]{type=Informative} 複数のファイルをオンデマンドでバッチ宛先に書き出す {#bulk-export}
-
->[!NOTE]
->
-この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+### オンデマンドでの複数ファイルのバッチ宛先への書き出し {#bulk-export}
 
 次のことができます [オンデマンドでの複数ファイルの書き出し](../ui/export-file-now.md) から **[!UICONTROL アクティベーションデータ]** ページ。 それには、ファイルをオンデマンドで書き出すオーディエンスを選択し、 **[!UICONTROL 今すぐファイルを書き出し]** 1 回限りの書き出しをトリガーにするコントロール。これにより、選択した各オーディエンスのファイルがバッチ宛先に配信されます。
 
 ![「今すぐファイルを書き出し」ボタンを強調表示した画像。](../assets/ui/details-page/bulk-export-file-now.png)
 
-### [!BADGE ベータ版]{type=Informative} バッチ宛先に書き出された複数のオーディエンスのアクティベーションスケジュールを編集します {#bulk-edit-schedule}
-
->[!NOTE]
->
-この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+### バッチ宛先に書き出された複数のオーディエンスのアクティベーションスケジュールを編集します {#bulk-edit-schedule}
 
 複数のオーディエンスの既存のアクティベーションスケジュールを同時に編集するには、目的のオーディエンスを選択してから、以下を選択します。 **[!UICONTROL スケジュールを編集]**. 書き出しスケジュールを定義または編集する方法について詳しくは、 [オーディエンスの書き出しをスケジュール](../ui/activate-batch-profile-destinations.md#scheduling) セクション。
 

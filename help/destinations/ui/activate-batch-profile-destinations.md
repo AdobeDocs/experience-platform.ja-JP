@@ -1,12 +1,12 @@
 ---
 title: バッチプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する
 type: Tutorial
-description: Adobe Experience Platformでオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
+description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '3879'
-ht-degree: 58%
+source-wordcount: '3937'
+ht-degree: 51%
 
 ---
 
@@ -15,84 +15,84 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 > 
-> * オーディエンスをアクティブ化して [マッピング手順](#mapping) ワークフローの「 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
-> * を経由せずにオーディエンスをアクティブ化するには [マッピング手順](#mapping) ワークフローの「 **[!UICONTROL 宛先の表示]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
->* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+> * オーディエンスをアクティブ化し、 [マッピングステップ](#mapping) ワークフローで、次が必要です **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> * を実行せずにオーディエンスをアクティブ化するには [マッピングステップ](#mapping) ワークフローで、次が必要です **[!UICONTROL 宛先の表示]**, **[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>* エクスポートする *id*、が必要です **[!UICONTROL ID グラフの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png "宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。"){width="100" zoomable="yes"}
 > 
 > 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 
-この記事では、クラウドストレージや電子メールマーケティングの宛先など、プロファイルのファイルベースの宛先をバッチ処理するために、Adobe Experience Platformでオーディエンスをアクティブ化するために必要なワークフローについて説明します。
+この記事では、クラウドストレージやメールマーケティングの宛先など、バッチプロファイルファイルベースの宛先に対してAdobe Experience Platformでオーディエンスをアクティブ化するために必要なワークフローについて説明します。
 
 ## 前提条件 {#prerequisites}
 
-オーディエンスを宛先に対してアクティブ化するには、次の条件を満たす必要があります。 [宛先に接続されている](./connect-destination.md). まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
+宛先に対してオーディエンスをアクティブ化するには、が正常に機能している必要があります [宛先に接続しました](./connect-destination.md). まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
 ## 書き出しでサポートされるファイル形式 {#supported-file-formats-export}
 
-オーディエンスのエクスポートでは、次のファイル形式がサポートされます。
+オーディエンスを書き出す場合、次のファイル形式がサポートされます。
 
 * CSV
 * JSON
 * PARQUET
 
-CSV ファイルを書き出すと、書き出したファイルの構造を柔軟に設定できることに注意してください。 詳細を表示： [CSV ファイルのファイル形式設定](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+CSV ファイルの書き出しでは、書き出したファイルの構造をより柔軟に指定できます。 詳細を読む： [csv ファイルのファイル形式設定](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
 
-次の場合に、書き出すファイル形式を選択します。 [ファイルベースの宛先への接続の作成](/help/destinations/ui/connect-destination.md).
+次の場合に、書き出すファイル形式を選択します [ファイルベースの宛先への接続の作成](/help/destinations/ui/connect-destination.md).
 
 ## 宛先の選択 {#select-destination}
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![宛先カタログタブへのアクセス方法をハイライトした画像。](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![「宛先のカタログ」タブへのアクセス方法をハイライト表示した画像。](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. 選択 **[!UICONTROL オーディエンスをアクティブ化]** オーディエンスをアクティブ化する宛先に対応するカード（下図を参照）。
+1. を選択 **[!UICONTROL オーディエンスをアクティベート]** 次の画像に示すように、オーディエンスをアクティベートする宛先に対応するカードで。
 
-   ![カタログページで強調表示されているオーディエンスコントロールをアクティブ化します。](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![カタログページでハイライト表示されているオーディエンスコントロールをアクティブ化。](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
-1. オーディエンスのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
+1. オーディエンスをアクティベートするために使用する宛先接続を選択してから、を選択します **[!UICONTROL 次]**.
 
-   ![オーディエンスをアクティブ化する 1 つ以上の宛先を選択するためにハイライトされたチェックボックス。](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![オーディエンスをアクティブ化する 1 つまたは複数の宛先を選択するためにハイライト表示されたチェックボックス。](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. 次のセクションに移動： [オーディエンスを選択](#select-audiences).
 
 ## オーディエンスを選択 {#select-audiences}
 
-宛先に対してアクティブ化するオーディエンスを選択するには、オーディエンス名の左側にあるチェックボックスを使用して、 **[!UICONTROL 次へ]**.
+宛先に対してアクティブ化するオーディエンスを選択するには、オーディエンス名の左側にあるチェックボックスを使用したあと、「」を選択します。 **[!UICONTROL 次]**.
 
-オリジンに応じて、複数のタイプのオーディエンスから選択できます。
+接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
-* **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**：オーディエンスがExperience Platform外で生成され、CSV ファイルとして Platform にアップロードされた。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
-* 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
+* **[!UICONTROL セグメント化サービス]**:Segmentation Service によってExperience Platform内で生成されたオーディエンス。 を参照してください。 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
+* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、のドキュメントを参照してください。 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
+* その他のAdobeソリューションから生成される、次のようなオーディエンスのタイプ [!DNL Audience Manager].
 
-![アクティブ化する 1 つまたは複数のオーディエンスを選択する際に表示されるチェックボックス。](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
-
->[!TIP]
->
->元のオーディエンスの選択 **[!UICONTROL カスタムアップロード]** を自動的に有効にする [エンリッチメント属性を選択](#select-enrichment-attributes) 手順
+![アクティブ化する 1 つ以上のオーディエンスを選択する際に表示されるチェックボックス。](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->既存のアクティベーションフローからオーディエンスを削除できます。 **[!UICONTROL アクティベーションデータ]** ページに貼り付けます。 詳しくは、 [専用ドキュメント](../ui/destination-details-page.md#bulk-remove) 」を参照してください。
+>元のオーディエンスの選択 **[!UICONTROL カスタムアップロード]** は自動的に [エンリッチメント属性を選択](#select-enrichment-attributes) ステップ。
 
-## オーディエンスの書き出しのスケジュール {#scheduling}
+>[!TIP]
+>
+>から既存のアクティベーションフローからオーディエンスを削除できます **[!UICONTROL アクティベーションデータ]** ページ。 を参照してください。 [専用ドキュメント](../ui/destination-details-page.md#bulk-remove) を参照してください。
+
+## オーディエンスの書き出しをスケジュール {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="スケジュール"
 >abstract="鉛筆アイコンを使用して、ファイルの書き出しタイプ（完全なファイルまたは増分ファイル）と書き出し頻度を設定します。"
 
-[!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先を次の形式で書き出し： [異なるファイルタイプ](#supported-file-formats-export). Adobe Analytics の **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。
+[!DNL Adobe Experience Platform] は、メールマーケティングおよびクラウドストレージの宛先のデータをとして書き出します。 [様々なファイルタイプ](#supported-file-formats-export). が含まれる **[!UICONTROL スケジュール]** このページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。
 
-Experience Platformは、各ファイル書き出しのデフォルトスケジュールを自動的に設定します。 各スケジュールの横にある鉛筆アイコンを選択し、カスタムスケジュールを定義することで、必要に応じてデフォルトのスケジュールを変更できます。
+Experience Platformは、各ファイル書き出しのデフォルトのスケジュールを自動的に設定します。 各スケジュールの横にある鉛筆アイコンを選択し、カスタムスケジュールを定義することで、必要に応じてデフォルトのスケジュールを変更できます。
 
-![スケジュール設定手順でハイライト表示されているスケジュールコントロールを編集します。](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+![スケジュール設定ステップでハイライト表示されたスケジュール管理を編集。](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
 >[!TIP]
 >
->既存のアクティベーションフローに関するオーディエンスのアクティベーションスケジュールは、 **[!UICONTROL アクティベーションデータ]** ページに貼り付けます。 次のドキュメントを参照してください： [アクティベーションスケジュールの一括編集](../ui/destination-details-page.md#bulk-edit-schedule) 」を参照してください。
+>既存のアクティベーションフローに対するオーディエンスアクティベーションスケジュールは、次の場所から編集できます **[!UICONTROL アクティベーションデータ]** ページ。 のドキュメントを参照してください。 [有効化スケジュールの一括編集](../ui/destination-details-page.md#bulk-edit-schedule) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -105,7 +105,7 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="ファイルの書き出しオプション"
->abstract="「**完全ファイルを書き出し**」を選択して、オーディエンスに該当するすべてのプロファイルの完全なスナップショットを書き出します。「**増分ファイルの書き出し**」を選択して、前回の書き出し以降にオーディエンスの対象として認定されたプロファイルのみを書き出します。<br> 最初の増分ファイルの書き出しには、オーディエンスに該当するすべてのプロファイルが含まれ、バックフィルとして機能します。それ以後の増分ファイルには、最初の増分ファイル書き出し以降にオーディエンスに該当したプロファイルのみが含まれます。"
+>abstract="を選択 **完全ファイルを書き出し** オーディエンスに該当するすべてのプロファイルの完全なスナップショットを書き出します。 を選択 **増分ファイルの書き出し** 前回の書き出し以降にオーディエンスに該当したプロファイルのみを書き出します。 <br> 最初の増分ファイルの書き出しには、オーディエンスに適合するすべてのプロファイルが含まれ、バックフィルとして機能します。 それ以後の増分ファイルには、最初の増分ファイル書き出し以降にオーディエンスに該当したプロファイルのみが含まれます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#export-incremental-files" text="増分ファイルの書き出し"
 
 >[!CONTEXTUALHELP]
@@ -118,27 +118,27 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 >title="スケジュールされたアクティベーション"
 >abstract="アクティベーションが特定の時刻に実行されます。"
 
-選択 **[!UICONTROL 完全なファイルを書き出し]** ：選択したオーディエンスに対するすべてのプロファイル認定の完全なスナップショットを含むファイルの書き出しをトリガーします。
+を選択 **[!UICONTROL 完全ファイルを書き出し]** 選択したオーディエンスに対する、すべてのプロファイル選定の完全なスナップショットを含むファイルの書き出しをトリガーにします。
 
-![「すべてのファイルを書き出し」切り替えを選択。](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![「完全なファイルを書き出し」切替スイッチが選択されている。](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. 「**[!UICONTROL 頻度]**」セレクターを使用して、書き出しの頻度を選択します。
 
    * **[!UICONTROL 1 回]**：オンデマンドによる 1 回限りの完全ファイルの書き出しをスケジュールします。
    * **[!UICONTROL 毎日]**：指定した時刻に、毎日 1 回、完全ファイルの書き出しをスケジュールします。
 
-2. 以下を使用します。 **[!UICONTROL 時間]** オーディエンス評価の直後に書き出しを実行するか、スケジュールに沿って、指定した時間に書き出しを実行するかを選択します。 「**[!UICONTROL スケジュール済み]**」オプションを選択すると、セレクターを使用して書き出しを実行する時刻を [!DNL UTC] 形式で選択できます。
+2. の使用 **[!UICONTROL 時間]** 書き出しをオーディエンス評価直後に実行するか、指定した時間にスケジュールに沿って実行するかを切り替えます。 「**[!UICONTROL スケジュール済み]**」オプションを選択すると、セレクターを使用して書き出しを実行する時刻を [!DNL UTC] 形式で選択できます。
 
    >[!NOTE]
    >
-   >The **[!UICONTROL セグメント評価後]** 以下に説明するオプションは、一部のベータ版のお客様のみが利用できます。
+   >この **[!UICONTROL セグメント評価後]** 以下に説明するオプションは、一部のベータ版のお客様のみが利用できます。
 
-   「**[!UICONTROL セグメントの評価後]**」オプションを使用して、毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブをを実行します。このオプションを使用すると、アクティベーションジョブを実行する際に、最新のプロファイルが確実に宛先に書き出されます。
+   「**[!UICONTROL セグメントの評価後]**」オプションを使用して、毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブをを実行します。このオプションを使用すると、アクティベーションジョブが実行されたときに、最新のプロファイルが確実に宛先に書き出されます。
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![バッチ宛先のアクティベーションフローでの「セグメントの評価後」オプションを強調表示した画像。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-「**[!UICONTROL スケジュール済み]**」オプションを使用して、特定の時間にアクティベーションジョブを実行します。 このオプションを使用すると、Experience Platformプロファイルデータが毎日同時に書き出されます。 ただし、アクティベーションジョブが開始される前にバッチセグメントジョブが完了しているかどうかによっては、書き出すプロファイルが最新でない場合があります。
+「**[!UICONTROL スケジュール済み]**」オプションを使用して、特定の時間にアクティベーションジョブを実行します。 このオプションを選択すると、Experience Platformプロファイルデータが毎日同じ時間に書き出されます。 ただし、アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新でない場合があります。
 
    ![バッチ宛先のアクティベーションフローの「スケジュール済み」オプションが強調表示され、時間セレクターが表示されている画像。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -146,7 +146,7 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 
    >[!IMPORTANT]
    >
-   > 書き出し間隔を選択する場合、その間隔の最終日は書き出しに含まれません。例えば、1 月 4 日から 11 日の間隔を選択した場合、最後のファイルエクスポートは 1 月 10 日におこなわれます。
+   > 書き出し間隔を選択する場合、その間隔の最終日は書き出しに含まれません。例えば、1 月 4 日から 11 日までの間隔を選択した場合、最後のファイルエクスポートは 1 月 10 日に実行されます。
 
 4. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
 
@@ -155,15 +155,15 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
 >title="ファイル名の設定"
->abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
+>abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。 ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
 
-選択 **[!UICONTROL 増分ファイルの書き出し]** 最初のファイルが、選択したオーディエンスに対するすべてのプロファイル認定の完全なスナップショットであるエクスポートをトリガーし、それ以降のファイルは、前回のエクスポート以降の増分プロファイル認定です。
+を選択 **[!UICONTROL 増分ファイルの書き出し]** エクスポートをトリガーにします。最初のファイルは、選択したオーディエンスに対するすべてのプロファイル選定の完全なスナップショットであり、それ以降のファイルは、前回のエクスポート以降の増分プロファイル選定です。
 
 >[!IMPORTANT]
 >
->最初に書き出された増分ファイルには、オーディエンスの資格を持つすべてのプロファイルが含まれ、バックフィルとして機能します。
+>最初にエクスポートされた増分ファイルには、オーディエンスの対象となるすべてのプロファイルが含まれ、バックフィルとして機能します。
 
-![「増分ファイルを書き出し」切り替えを選択しました。](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![「増分ファイルの書き出し」切替スイッチが選択されている。](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. **[!UICONTROL 頻度]**&#x200B;セレクターを使用して、エクスポートする頻度を選択します。
 
@@ -176,7 +176,7 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 
    >[!IMPORTANT]
    >
-   >間隔の最終日はエクスポートに含まれません。例えば、1 月 4 日から 11 日の間隔を選択した場合、最後のファイルエクスポートは 1 月 10 日におこなわれます。
+   >間隔の最終日はエクスポートに含まれません。例えば、1 月 4 日から 11 日までの間隔を選択した場合、最後のファイルエクスポートは 1 月 10 日に実行されます。
 
 4. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
 
@@ -185,11 +185,11 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="ファイル名の設定"
->abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
+>abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。 ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
 
-ほとんどの宛先では、デフォルトのファイル名は、宛先名、オーディエンス ID、日付と時刻のインジケーターで構成されます。 例えば、書き出したファイル名を編集して、異なるキャンペーンを区別したり、データの書き出し時間をファイルに追加したりできます。一部の宛先開発者は、別のデフォルトのファイル名追加オプションを宛先に表示するように選択する場合があります。
+ほとんどの宛先では、デフォルトのファイル名は、宛先名、オーディエンス ID、日時インジケーターで構成されます。 例えば、書き出したファイル名を編集して、異なるキャンペーンを区別したり、データの書き出し時間をファイルに追加したりできます。一部の宛先開発者は、別のデフォルトのファイル名追加オプションを宛先に表示するように選択する場合があります。
 
-モーダルウィンドウを開いてファイル名を編集するには、鉛筆アイコンを選択します。 ファイル名は 255 文字までに制限されています。
+モーダルウィンドウを開き、ファイル名を編集するには、鉛筆アイコンを選択します。 ファイル名は 255 文字までに制限されています。
 
 >[!NOTE]
 >
@@ -201,16 +201,16 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 
 ![使用可能なすべてのファイル名オプションを示す画像。](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
-宛先名とオーディエンス ID は、ファイル名から削除できません。 これらのオプションに加えて、次のオプションを追加できます。
+宛先名とオーディエンス ID をファイル名から削除することはできません。 これらのオプションに加えて、次のオプションを追加できます。
 
 | ファイル名オプション | 説明 |
 |---------|----------|
-| **[!UICONTROL オーディエンス名]** | エクスポートされたオーディエンスの名前。 |
-| **[!UICONTROL 日時]** | 追加する項目を選択 `MMDDYYYY_HHMMSS` 形式または UNIX の 10 桁のタイムスタンプ。 増分書き出しのたびにファイル名を動的に生成したい場合は、次のオプションのいずれかを選択します。 |
+| **[!UICONTROL オーディエンス名]** | 書き出されたオーディエンスの名前。 |
+| **[!UICONTROL 日時]** | を追加するか、 `MMDDYYYY_HHMMSS` ファイルを生成した時刻の形式または UNIX の 10 桁のタイムスタンプ。 増分書き出しのたびにファイル名を動的に生成したい場合は、次のオプションのいずれかを選択します。 |
 | **[!UICONTROL カスタムテキスト]** | ファイル名に追加する任意のカスタムテキスト。 |
-| **[!UICONTROL 宛先 ID]** | オーディエンスのエクスポートに使用する宛先データフローの ID。 |
-| **[!UICONTROL 宛先名]** | オーディエンスのエクスポートに使用する宛先データフローの名前。 |
-| **[!UICONTROL 組織名]** | 組織内のExperience Platform名。 |
+| **[!UICONTROL 宛先 ID]** | オーディエンスの書き出しに使用する宛先データフローの ID。 |
+| **[!UICONTROL 宛先名]** | オーディエンスの書き出しに使用する宛先データフローの名前。 |
+| **[!UICONTROL 組織名]** | Experience Platform内の組織名。 |
 | **[!UICONTROL サンドボックス名]** | オーディエンスの書き出しに使用するサンドボックスの ID。 |
 
 {style="table-layout:auto"}
@@ -221,13 +221,13 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 > 
 >**[!UICONTROL 日時]**&#x200B;コンポーネントを選択しない場合、ファイル名は固定され、新しくエクスポートされたファイルは、エクスポートのたびに保存場所にある以前のファイルを上書きします。ストレージの場所からメールマーケティングプラットフォームへのインポートジョブを繰り返し実行する場合は、このオプションをお勧めします。
 
-すべてのオーディエンスの設定が完了したら、 **[!UICONTROL 次へ]** をクリックして続行します。
+すべてのオーディエンスの設定が完了したら、以下を選択します。 **[!UICONTROL 次]** 続行します。
 
 ## マッピング {#mapping}
 
 この手順では、ターゲットの宛先に書き出すファイルに追加する、プロファイル属性を選択する必要があります。 書き出すプロファイル属性と ID を選択するには：
 
-1. Adobe Analytics の **[!UICONTROL マッピング]** ページ、選択 **[!UICONTROL 新しいマッピングを追加]**.
+1. が含まれる **[!UICONTROL マッピング]** ページ、選択 **[!UICONTROL 新しいマッピングを追加]**.
 
    ![マッピングワークフローで強調表示されている新しいフィールドコントロールを追加します。](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -256,13 +256,13 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 
    ![宛先に書き出すことができるプロファイル属性を示すモーダルウィンドウ。](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Beta]{type=Informative}
+1. （オプション） UI でマッピングされたフィールドの順序は、書き出された CSV ファイルの列の順序で（上から下に）反映されます。一番上の行は CSV ファイルの左端の列です。 以下に示すように、マッピングされた行をドラッグ&amp;ドロップすることで、マッピングされたフィールドを任意の方法で並べ替えることができます。
 
    >[!NOTE]
    >
-   >この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。
+   >この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
 
-   ![ドラッグ&amp;ドロップで並べ替えを行ったマッピングフィールドを示す記録。](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
+   ![ドラッグ&amp;ドロップでマッピングフィールドの並べ替えを示す録画。](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. （オプション）書き出されたフィールドを[必須キー](#mandatory-keys)または [重複排除キー](#deduplication-keys)のどちらにするかを選択できます。
 
@@ -275,7 +275,7 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="必須の属性について"
->abstract="書き出されたすべてのプロファイルに含める XDM スキーマ属性を選択します。必須キーのないプロファイルは、宛先に書き出されません。必須キーを選択しない場合、属性に関係なく、すべての該当プロファイルを書き出します。"
+>abstract="書き出されたすべてのプロファイルに含める XDM スキーマ属性を選択します。必須キーのないプロファイルは、宛先に書き出されません。必須キーを選択しない場合、属性に関係なく、すべての対象プロファイルを書き出します。"
 
 必須属性は、選択した属性がすべてのプロファイルレコードに含まれるようにする、ユーザーが有効にしたチェックボックスです。例：書き出されるすべてのプロファイルには、メールアドレスが含まれます。
 
@@ -394,7 +394,7 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 
 ### 重複排除の使用例 2：ID 名前空間に基づく重複排除 {#deduplication-use-case-2}
 
-[!DNL Email] 名前空間の重複排除を指定した場合、書き出しファイルには次のエントリが含まれます。プロファイル B はオーディエンスの資格を持つ最新のものなので、書き出されるのは 1 つだけです。
+[!DNL Email] 名前空間の重複排除を指定した場合、書き出しファイルには次のエントリが含まれます。プロファイル B はオーディエンスに適合する最新のプロファイルなので、唯一書き出されます。
 
 | メール* | personalEmail | firstName | lastName |
 |---|---|---|---|
@@ -403,7 +403,7 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 
 ### 重複排除のユースケース 3：単一のプロファイル属性に基づく重複排除 {#deduplication-use-case-3}
 
-`personal Email` 属性による重複排除を仮定した場合、エクスポートファイルには次のエントリが含まれます。プロファイル B はオーディエンスの資格を持つ最新のものなので、書き出されるのは 1 つだけです。
+`personal Email` 属性による重複排除を仮定した場合、エクスポートファイルには次のエントリが含まれます。プロファイル B はオーディエンスに適合する最新のプロファイルなので、唯一書き出されます。
 
 | personalEmail* | firstName | lastName |
 |---|---|---|
@@ -425,36 +425,36 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 > 
 >（データセット全体ではなく）データセット内の特定のフィールドのみに適用されたデータ使用ラベルがある場合、アクティベーション時のこれらのフィールドレベルラベルの適用は、次の条件で行われます。
 >
->* これらのフィールドは、オーディエンス定義で使用されます。
+>* フィールドは、オーディエンス定義で使用されます。
 >* フィールドは、ターゲット先の予測属性として設定されます。
 >
 > 例えば、フィールド `person.name.firstName` に宛先のマーケティングアクションと競合する特定のデータ使用ラベルがある場合、レビュー手順でデータ使用ポリシー違反が表示されます。詳しくは、[Adobe Experience Platform でのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)を参照してください。
 
-### [!BADGE ベータ版]{type=Informative} 計算フィールドを使用した配列の書き出し {#export-arrays-calculated-fields}
+### [!BADGE ベータ版]{type=Informative} 計算フィールドから配列を書き出し {#export-arrays-calculated-fields}
 
-ベータ版のお客様は、アレイオブジェクトをExperience Platformからクラウドストレージの宛先に書き出すことができます。 詳細を表示： [配列と計算フィールドのエクスポート](/help/destinations/ui/export-arrays-calculated-fields.md) 機能にアクセスするには、Adobe担当者にお問い合わせください。
+一部のベータ版のお客様は、Experience Platformからクラウドストレージの宛先に配列オブジェクトを書き出すことができます。 詳細を読む： [配列と計算フィールドの書き出し](/help/destinations/ui/export-arrays-calculated-fields.md) 機能にアクセスするには、Adobe担当者にお問い合わせください。
 
 ### 既知の制限事項 {#known-limitations}
 
 新しい&#x200B;**[!UICONTROL マッピング]**&#x200B;ページには次の既知の制限事項があります。
 
-#### マッピングワークフローでは、オーディエンスのメンバーシップ属性を選択できません
+#### マッピングワークフローでは、オーディエンスメンバーシップの属性を選択できません
 
 既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.status` をファイル書き出しに追加できません。 代わりに、手動で値 `xdm: segmentMembership.status` をスキーマフィールドに貼り付ける必要があります（下図を参照）。
 
-![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面の記録。](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面録画。](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 ファイルのエクスポートは、`segmentMembership.status` が選択されているかどうかによって、次のように異なります。
-* 次の場合、 `segmentMembership.status` フィールドが選択され、書き出されたファイルは次を含む **[!UICONTROL アクティブ]** 最初のフルスナップショットと新規の **[!UICONTROL アクティブ]** および **[!UICONTROL 期限切れ]** 以降の増分エクスポートのメンバー。
+* 次の場合 `segmentMembership.status` フィールドが選択されています。エクスポートされたファイルには次が含まれます **[!UICONTROL アクティブ]** 最初の完全スナップショットと新しいスナップショットのメンバー **[!UICONTROL アクティブ]** および **[!UICONTROL 期限切れ]** その後の増分エクスポートのメンバー。
 * `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
 
-詳細を表示： [ファイルベースの宛先に対するプロファイルの書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
+詳細を読む： [ファイルベースの宛先のプロファイル書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### ID 名前空間は現在、書き出し用に選択できません
 
 以下の画像に示すように、ID 名前空間を書き出し用に選択する機能は、現在サポートされていません。 書き出し用の ID 名前空間を選択すると、**[!UICONTROL レビュー]**&#x200B;手順でエラーが発生します。
 
-![ID エクスポートを示すマッピングがサポートされていません。](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![ID の書き出しを示す、サポートされていないマッピング。](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 ベータ版の間に書き出したファイルに ID 名前空間を追加する必要がある場合の一時的な回避策として、次のいずれかを実行できます。
 * 書き出しに ID 名前空間を含めるデータフローに、従来のクラウドストレージの宛先を使用する
@@ -464,9 +464,9 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 
 >[!IMPORTANT]
 > 
-カタログ内のすべてのクラウドストレージの宛先で、 [[!UICONTROL マッピング] step](#mapping) これは、 **[!UICONTROL 属性を選択]** この節で説明する手順です。
+カタログ内のすべてのクラウドストレージの宛先は、改善されて表示できます [[!UICONTROL マッピング] ステップ](#mapping) に置き換わる **[!UICONTROL 属性を選択]** この節で説明する手順。
 >
-この **[!UICONTROL 属性を選択]** Adobe Campaign、OracleResponsys、OracleEloqua、SalesforceMarketing Cloud電子メールマーケティングの各宛先に対して、手順が引き続き表示されます。
+この **[!UICONTROL 属性を選択]** Adobe Campaign、Oracle Responsys、Oracle Eloqua および Salesforce Marketing Cloudのメールマーケティングの宛先では、ステップが引き続き表示されます。
 
 プロファイルベースの宛先の場合、ターゲット宛先に送信するプロファイル属性を選択する必要があります。
 
@@ -478,7 +478,7 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 
    ![ソースフィールドの選択方法をハイライト表示した画像。](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-3. Adobe Analytics の **[!UICONTROL フィールドを選択]** ページで、宛先に送信する XDM 属性または ID 名前空間を選択してから、「 」を選択します **[!UICONTROL 選択]**.
+3. が含まれる **[!UICONTROL フィールドを選択]** ページで、宛先に送信する XDM 属性または ID 名前空間を選択してから選択します **[!UICONTROL を選択]**.
 
    ![ソースフィールドとして使用可能な様々なフィールドを示す画像。](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
@@ -488,15 +488,15 @@ Experience Platformは、各ファイル書き出しのデフォルトスケジ�
 >
 Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`）を事前に選択します。
 
-![オーディエンスアクティベーションワークフローのマッピング手順で事前入力された推奨属性を示す画像。](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
+![Audience Activation ワークフローのマッピング手順で事前入力された推奨属性を示す画像。](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.status` をファイル書き出しに追加できません。 代わりに、手動で値を貼り付ける必要があります `xdm: segmentMembership.status` をスキーマフィールドに追加します（下図を参照）。
+既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.status` をファイル書き出しに追加できません。 代わりに、値を手動で貼り付ける必要があります `xdm: segmentMembership.status` スキーマフィールドに移動します（下図を参照）。
 >
-![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面の記録。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面録画。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-ファイルの書き出しは、次の方法で、 `segmentMembership.status` が選択されている場合：
+ファイルのエクスポートは、次のように、どちらであるかによって異なります。 `segmentMembership.status` が選択されました：
 * `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
 * `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
 
@@ -504,67 +504,67 @@ Adobe Experience Platform は、スキーマから推奨される一般的に使
 
 [!CONTEXTUALHELP]
 id="platform_destinations_activate_exclude_enrichment_attributes"
-title="エンリッチメント属性の除外"
-abstract="このオプションを有効にすると、選択したカスタムアップロードオーディエンスのプロファイルを宛先に書き出すことはできますが、その属性はすべて除外されます。"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#select-enrichment-attributes" text="詳しくは、ドキュメントを参照してください"
+title="エンリッチメント属性を除外"
+abstract="このオプションを有効にすると、選択したカスタムアップロード済みオーディエンスのプロファイルを、すべての属性を除外しながら、宛先に書き出すことができます。"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="詳しくは、ドキュメントを参照してください"
 
 >[!IMPORTANT]
 >
-このステップは、 **[!UICONTROL カスタムアップロード]** オーディエンス [オーディエンス選択](#select-audiences) 手順
+このステップは、「」を選択した場合にのみ表示されます **[!UICONTROL カスタムアップロード]** 次の期間のオーディエンス [オーディエンスの選択](#select-audiences) ステップ。
 
-エンリッチメント属性は、Experience Platformで **[!UICONTROL カスタムアップロード]**. この手順では、選択した外部オーディエンスごとに、宛先に書き出す属性を選択できます。
+エンリッチメント属性は、Experience Platformにとして取り込まれた、カスタムでアップロードされたオーディエンスに対応しています **[!UICONTROL カスタムアップロード]**. この手順では、選択した外部オーディエンスごとに、宛先に書き出す属性を選択できます。
 
-![エンリッチメント属性の選択手順を示す UI 画像。](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
+![エンリッチメント属性選択手順を示す UI 画像。](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 
-次の手順に従って、各外部オーディエンスのエンリッチメント属性を選択します。
+各外部オーディエンスのエンリッチメント属性を選択するには、次の手順に従います。
 
-1. Adobe Analytics の **[!UICONTROL エンリッチメント属性]** 列で、 ![「編集」ボタン](../assets/ui/activate-batch-profile-destinations/edit-button.svg) （編集）ボタン。
-2. 選択 **[!UICONTROL エンリッチメント属性を追加]**. 新しい空のスキーマフィールドが表示されます。
+1. が含まれる **[!UICONTROL エンリッチメント属性]** 列で、 ![「編集」ボタン](../assets/ui/activate-batch-profile-destinations/edit-button.svg) （編集）ボタンをクリックします。
+2. を選択 **[!UICONTROL エンリッチメント属性を追加]**. 新しい空のスキーマフィールドが表示されます。
    ![エンリッチメント属性モーダル画面を示す UI 画像。](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 3. 空のフィールドの右側にあるボタンを選択して、フィールド選択画面を開きます。
-4. オーディエンスのエクスポート対象の属性を選択します。
+4. オーディエンス用に書き出す属性を選択します。
    ![エンリッチメント属性リストを示す UI 画像。](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. 書き出すすべての属性を追加したら、「 」を選択します。 **[!UICONTROL 保存して閉じる]**.
-6. 各外部オーディエンスに対して、これらの手順を繰り返します。
+5. 書き出すすべての属性を追加したら、 **[!UICONTROL 保存して閉じる]**.
+6. 外部オーディエンスごとに、これらの手順を繰り返します。
 
-属性をエクスポートせずに、宛先に対する外部オーディエンスをアクティブ化する場合は、 **[!UICONTROL エンリッチメント属性の除外]** 切り替え このオプションを選択すると、外部オーディエンスからプロファイルがエクスポートされますが、対応する属性はどれも宛先に送信されません。
+属性を書き出さずに宛先に対して外部オーディエンスをアクティブ化する場合は、を有効にします **[!UICONTROL エンリッチメント属性を除外]** 切り替えます。 このオプションでは、外部オーディエンスからプロファイルが書き出されますが、対応する属性は宛先に送信されません。
 
-![「エンリッチメント属性を除外」切り替えを示す UI 画像。](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
+![「エンリッチメント属性を除外」切替スイッチを示す UI 画像。](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
-選択 **[!UICONTROL 次へ]** 移動先 [レビュー](#review) 手順
+を選択 **[!UICONTROL 次]** に移動します [レビュー](#review) ステップ。
 
 ## レビュー {#review}
 
 「**[!UICONTROL レビュー]**」ページには、選択内容の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
-![レビューステップに表示される選択の概要。](../assets/ui/activate-batch-profile-destinations/review.png)
+![レビュー手順で表示される選択の概要。](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
 [!CONTEXTUALHELP]
 id="platform_governance_policies_viewApplicableConsentPolicies"
-title="適用可能な同意ポリシーを表示"
-abstract="組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。会社が前述の SKU へのアクセス権を持っていない場合は、このコントロールを無効になります。"
+title="適用可能な同意ポリシーの表示"
+abstract="組織が購入している場合 **Adobe ヘルスケア シールド** または **Adobeプライバシーとセキュリティシールド**&#x200B;を選択 **[!UICONTROL 適用可能な同意ポリシーの表示]** どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認します。 会社が前述の SKU へのアクセス権を持っていない場合は、このコントロールを無効になります。"
 
-組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。お読みください [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
+組織が購入している場合 **Adobe ヘルスケア シールド** または **Adobeプライバシーとセキュリティシールド**&#x200B;を選択 **[!UICONTROL 適用可能な同意ポリシーの表示]** どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認します。 詳細を読む [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
-Adobe Analytics の **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）を参照してください。
+が含まれる **[!UICONTROL レビュー]** また、Experience Platformはデータ使用ポリシーの違反がないかどうかを確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、以下を参照してください [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) データガバナンスに関するドキュメントの節を参照してください。
 
-![アクティベーションワークフローに表示されるデータポリシー違反の例です。](../assets/common/data-policy-violation.png)
+![アクティベーションワークフローに表示されるデータポリシー違反の例。](../assets/common/data-policy-violation.png)
 
 ### オーディエンスのフィルタリング {#filter-audiences}
 
-また、この手順では、ページで使用可能なフィルターを使用して、このワークフローの一部としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。 また、表示するテーブル列を切り替えることもできます。
+また、この手順では、ページで使用可能なフィルターを使用して、このワークフローの一環としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。 また、表示するテーブル列を切り替えることもできます。
 
-![レビュー手順で使用可能なオーディエンスフィルターを示す画面記録。](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif)
+![レビューステップで使用可能なオーディエンスフィルターを示す画面録画。](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif)
 
-選択が完了し、ポリシー違反が検出されなかった場合は、「 」を選択します。 **[!UICONTROL 完了]** をクリックして選択を確定し、宛先へのデータの送信を開始します。
+選択内容に満足し、ポリシー違反が検出されていない場合は、を選択します **[!UICONTROL 終了]** をクリックして選択内容を確認し、宛先へのデータの送信を開始します。
 
-## オーディエンスのアクティベーションを検証 {#verify}
+## Audience Activation の検証 {#verify}
 
-オーディエンスをクラウドストレージの宛先に書き出す場合、Adobe Experience Platformは、 `.csv`, `.json`または `.parquet` ファイルを指定したストレージの場所に保存します。 ワークフローで設定したスケジュールに従って、ストレージの場所に新しいファイルが作成されます。デフォルトのファイル形式を以下に示しますが、次の操作を実行できます。 [ファイル名のコンポーネントを編集する](#file-names):
+オーディエンスをクラウドストレージの宛先に書き出す場合、Adobe Experience Platformは `.csv`, `.json`、または `.parquet` ファイルは、指定したストレージの場所にあります。 ワークフローで設定したスケジュールに従って、ストレージの場所に新しいファイルが作成されます。デフォルトのファイル形式を以下に示しますが、次のことが可能です [ファイル名のコンポーネントを編集する](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 例えば、書き出し頻度を毎日に選択した場合、連続した 3 日間に受け取るファイルは次のようになります。
