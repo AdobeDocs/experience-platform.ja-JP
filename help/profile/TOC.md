@@ -4,10 +4,10 @@ user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 feature: Profiles
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 93%
+source-wordcount: '132'
+ht-degree: 91%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 93%
 * [エッジプロファイル](edge-profiles.md)
 * [エクスペリエンスイベントの有効期限](event-expirations.md)
 * [偽名プロファイルの有効期限](pseudonymous-profiles.md)
+* [顧客タイムスタンプの順序](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
@@ -32,9 +33,9 @@ ht-degree: 93%
    * [[!DNL Profile] UI ガイド](ui/user-guide.md)
    * [[!DNL Profile] 詳細なカスタマイズ](ui/profile-customization.md)
    * [見込み客プロファイル](ui/prospect-profile.md)
-* 計算済み属性 {#computed-attributes}
+* 計算属性 {#computed-attributes}
    * [概要](computed-attributes/overview.md)
-   * [計算済み属性 API ガイド](computed-attributes/api.md)
+   * [計算属性 API ガイド](computed-attributes/api.md)
    * [計算属性 UI ガイド](computed-attributes/ui.md)
    * [よくある質問](computed-attributes/faq.md)
 * 結合ポリシー {#merge-policies}
@@ -53,4 +54,4 @@ ht-degree: 93%
 * [プライバシーリクエストの処理](privacy.md)
 * [[!DNL Profile] トラブルシューティングガイド](troubleshooting.md)
 * [Profile API のリファレンス](https://www.adobe.com/go/profile-apis-en)
-* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
