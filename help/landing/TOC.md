@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
-user-guide-description: Experience Platform でガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+user-guide-description: Experience Platformを利用して、ガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 86%
+source-wordcount: '281'
+ht-degree: 78%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 86%
 * Platform ドキュメント {#documentation}
    * [概要](documentation/overview.md)
    * [言語サポート](documentation/language-support.md)
-* Platform {#ecosystem} に構築されたアプリケーションサービス
+* Platform で構築されたアプリケーション {#ecosystem}
    * [概要](application-services.md)
    * [Adobe Real-time Customer Data Platform（すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=ja)
    * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)
@@ -69,16 +69,16 @@ ht-degree: 86%
    * [データ暗号化](./governance-privacy-security/encryption.md)
    * 顧客管理キー {#customer-managed-keys}
       * [顧客管理キー](./governance-privacy-security/customer-managed-keys/overview.md)
-      * [Azure Key Vault を設定する](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
+      * [Azure Key Vault の設定](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
       * [API を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [UI を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * ライセンスの使用とガードレール {#license}
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
    * [ライセンス使用状況ダッシュボード](./license-usage-and-guardrails/license-usage-dashboard.md)
-   * [Adobe Journey Optimizer Guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Adobe Journey Optimizer ガードレール](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
    * [Customer Journey Analyticsガードレール](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
-   * [Real-Time CDP Guardrails](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
+   * [Real-Time CDP ガードレール](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [Gen2 Data Lake の移行](adls2-gen2-migration.md)
 * [用語集](glossary.md)
-* [リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

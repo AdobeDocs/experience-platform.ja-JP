@@ -1,24 +1,24 @@
 ---
-title: Experience Platform上に構築されたアプリケーションとインテリジェントサービス
-description: このビデオでは、Adobe Experience Platformをベースに構築された Application Services と Intelligent Services の概要を説明します。これは、Experience Cloudの Applications&mdash、Real-time Customer Data Platform、Journey Orchestration、Customer Journey Analytics、Attribution AI、および顧客 AI を補完するものです。
+title: Experience Platformに基づいて構築されたアプリケーションとインテリジェントサービス
+description: このビデオでは、Adobe Experience Platform上に構築されたアプリケーションとインテリジェントサービスの概要を説明します。これらは、Applications&mdash;Real-time Customer Data Platform、Journey Orchestration、Customer Journey Analytics、Attribution AI、顧客 AI というExperience Cloudを補完します。
 kt: 4333
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32554.jpg
 exl-id: d2f30bba-4b49-40b2-9f2a-80905894baa6
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 17%
+source-wordcount: '92'
+ht-degree: 5%
 
 ---
 
-# Experience Platform上に構築されたアプリケーションとインテリジェントサービス
+# Experience Platformに基づいて構築されたアプリケーションとインテリジェントサービス
 
 このビデオでは、Experience Platform上に構築されたアプリケーションとインテリジェントサービスの概要を説明します。
 
-詳しくは、各アプリケーションのドキュメントにアクセスするためのリンクを使用してください。
+詳しくは、リンクを使用して、個々のアプリケーションのドキュメントにアクセスしてください。
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=ja)
 * [インテリジェントサービス](https://experienceleague.adobe.com/docs/intelligent-services.html)

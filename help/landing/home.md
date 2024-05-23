@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 概要
 description: Adobe Experience Platform を使用すると、組織は、顧客データを一元化および標準化し、データサイエンスと機械学習を適用することにより、設計を劇的に改善し、パーソナライズされ充実したエクスペリエンスを配信することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 92%
+source-wordcount: '431'
+ht-degree: 86%
 
 ---
 
@@ -28,13 +28,13 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 
 ## [!DNL Experience Platform]ドキュメント
 
-[!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。使用可能なドキュメントの種類について詳しくは、 [Platform ドキュメントの概要](documentation/overview.md) を参照してください。
+[!DNL Experience Platform] ドキュメントは、様々な機能やアプリケーションのために複数の形式で提供されています。 使用可能なドキュメントの種類について詳しくは、 [Platform ドキュメントの概要](documentation/overview.md) を参照してください。
 
 特定の [!DNL Platform] サービスに関する詳細な情報については、[ドキュメントランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)に戻って目的のガイドを選択してください。
 
-### [!DNL Experience Platform] 上で構築されたアプリケーションサービスのドキュメント
+### 上で構築されたアプリケーションのドキュメント [!DNL Experience Platform]
 
-アドビは、Experience Platform 上に複数のアプリケーションサービスを構築しました。これらのアプリケーションのドキュメントは、以下にリンクされている独自のガイドで確認できます。
+Adobeは、Experience Platformを基盤として複数のアプリケーションを構築しています。 これらのアプリケーションのドキュメントは、以下にリンクされている独自のガイドで確認できます。
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,7 +43,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-次のビデオでは、Experience Platform上に構築された各アプリケーションサービスの使用例を説明します。
+次のビデオでは、Experience Platform上に構築された各アプリケーションのユースケースについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
@@ -64,7 +64,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 * [**用語集**](glossary.md)\
   Adobe Experience Platform の用語を確認します。
 
-* [**リリースノート**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)\
+* [**リリースノート**](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)\
   最新の [!DNL Experience Platform] リリースに関する情報を検索し、過去のリリースを確認します。
 
 * [**トラブルシューティングガイド**](troubleshooting.md)\
