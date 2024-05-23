@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年5月
 description: Adobe Experience Platform の 2024年5月のリリースノート。
-source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
+source-git-commit: e02892a2cbf5f65a1b9a0eec49722896bd061084
 workflow-type: tm+mt
 source-wordcount: '1596'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -47,7 +47,10 @@ Adobe Experience Platformのその他のアップデート：
 Adobe Experience Platform では、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを確認できる複数のダッシュボードを提供しています。
 
 **新機能または更新された機能**
-|機能 |説明 | | — | — | |拡張アプリレポートのためのカスタマイズ可能なインサイト |シームレス [sql 分析の出力を、わかりやすいビジネスに適したビジュアル形式に変換](../../dashboards/data-distiller/customizable-insights/overview.md). カスタム SQL クエリを使用すると、正確なデータ操作や、様々な構造化データセットからの動的グラフの作成を行えます。 Query pro モードを使用して、SQL で複雑な分析を実行し、カスタムダッシュボード上のグラフを通じて技術者以外のユーザーとこの分析を共有したり、CSV ファイルに書き出したりできます。 |
+
+| 機能 | 説明 |
+| --- | --- |
+| 拡張アプリレポート用のカスタマイズ可能なインサイト | シームレス [sql 分析の出力を、わかりやすいビジネスに適したビジュアル形式に変換](../../dashboards/data-distiller/customizable-insights/overview.md). カスタム SQL クエリを使用すると、正確なデータ操作や、様々な構造化データセットからの動的グラフの作成を行えます。 Query pro モードを使用して、SQL で複雑な分析を実行し、カスタムダッシュボード上のグラフを通じて技術者以外のユーザーとこの分析を共有したり、CSV ファイルに書き出したりできます。 |
 
 {style="table-layout:auto"}
 
