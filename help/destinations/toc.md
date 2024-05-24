@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 89%
+source-wordcount: '1224'
+ht-degree: 88%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 89%
    * [様々な宛先タイプのプロファイル書き出し動作](./how-destinations-work/profile-export-behavior.md)
    * [宛先アクティブ化ワークフローでの ID の処理](./how-destinations-work/identity-handling.md)
 * API チュートリアル {#api}
-   * [フローサービス API を使用して、ファイルベースの宛先に対するデータをアクティブ化する](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [Flow Service API を使用して、ファイルベースの宛先に対するデータをアクティブ化する](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
-   * [ファイルベースの電子メールマーケティングの宛先に接続し、フローサービス API を使用してデータをアクティブ化します](./api/connect-activate-batch-destinations.md)
+   * [Flow Service API でファイルベースのメールマーケティングの宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
    * [（ベータ版）アドホックなアクティベーション API を介してバッチ宛先に対してオーディエンスをアクティブ化する](./api/ad-hoc-activation-api.md)
    * [宛先の編集](./api/edit-destination.md)
    * [宛先データフローの更新](./api/update-destination-dataflows.md)
@@ -42,13 +42,13 @@ ht-degree: 89%
       * [ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-streaming-profile-destinations.md)
       * [バッチプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-batch-profile-destinations.md)
       * [エッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する](./ui/activate-edge-personalization-destinations.md)
-      * [LiveRamp 識別子に基づいて、キュレーションされた宛先に対するオーディエンスをアクティブ化します](./ui/activate-curated-destinations.md)
+      * [LiveRamp 識別子に基づいてキュレーションされた宛先に対するオーディエンスのアクティブ化](./ui/activate-curated-destinations.md)
       * [見込み客のオーディエンスを宛先に対してアクティブ化する](./ui/activate-prospect-audiences.md)
-      * [宛先へのアカウントオーディエンスのアクティブ化](./ui/activate-account-audiences.md)
+      * [宛先へのアカウントオーディエンスの有効化](./ui/activate-account-audiences.md)
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
       * [Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
-      * [（ベータ版）計算フィールドを使用したフラットスキーマファイルでの配列の書き出し](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [（ベータ版）計算フィールドを使用したフラットスキーマファイルの配列のエクスポート](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
@@ -61,7 +61,7 @@ ht-degree: 89%
    * [宛先カタログの概要](./catalog/overview.md)
    * アドビの宛先{#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
-      * [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 接続](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate 接続](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform オーディエンスの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
@@ -83,16 +83,17 @@ ht-degree: 89%
       * [Google Ad Manager の接続](./catalog/advertising/google-ad-manager.md)
       * [（ベータ版）Google Ad Manager 360 接続](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 接続](./catalog/advertising/google-customer-match.md)
+      * [（ベータ版）Google カスタマーマッチ + DV360 接続](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360 接続](./catalog/advertising/google-dv360.md)
       * [Google gtag 拡張機能](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag 拡張機能](./catalog/advertising/linkedin.md)
       * [LiveRamp - オンボーディング接続](./catalog/advertising/liveramp-onboarding.md)
-      * [LiveRamp — 配布接続](./catalog/advertising/liveramp-distribution.md)
+      * [LiveRamp – 配信接続](./catalog/advertising/liveramp-distribution.md)
       * [Microsoft Bing 接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
       * [Pinterest接続のアップグレード](./catalog/advertising/pinterest-upgrade.md)
-      * [PubMatic 接続](./catalog/advertising/pubmatic.md)
+      * [PubMatic Connect 接続](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads 接続](./catalog/advertising/snap-inc.md)
       * [Trade Desk 接続](./catalog/advertising/tradedesk.md)
       * [（ベータ版）The Trade Desk CRM 接続](./catalog/advertising/tradedesk-emails.md)
@@ -130,9 +131,9 @@ ht-degree: 89%
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
-      * [ファイルベ許可リストに加えるースのクラウドストレージの宛先の IP アドレス](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [許可リストに加える ファイルベースのクラウドストレージの宛先の IP アドレス。](./catalog/cloud-storage/ip-address-allow-list.md)
    * 顧客関係管理（CRM）の宛先 {#crm}
-      * [ハブスポット接続](./catalog/crm/hubspot.md)
+      * [Hubspot 接続](./catalog/crm/hubspot.md)
       * [Salesforce CRM 接続](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 接続](./catalog/crm/microsoft-dynamics-365.md)
       * [アウトリーチ接続](catalog/crm/outreach.md)
@@ -141,8 +142,8 @@ ht-degree: 89%
       * [データ管理プラットフォーム（DMP）の宛先の概要](./catalog/data-management/overview.md)
       * [Audience Manager DIL 拡張機能](./catalog/data-management/aam-dil-extension.md)
    * データおよび ID パートナー {#data-partner}
-      * [Acxiom 見込み客抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
-      * [Acxiom データ機能強化](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Acxiom 見込み客の抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
+      * [Acxiom データの機能強化](./catalog/data-partner/acxiom-data-enhancement.md)
    * e コマースの宛先 {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * メールの宛先 {#email}
@@ -171,10 +172,10 @@ ht-degree: 89%
       * [Airship Tags 接続](./catalog/mobile-engagement/airship-tags.md)
       * [Braze 接続](./catalog/mobile-engagement/braze.md)
       * [回線接続](./catalog/mobile-engagement/line.md)
-      * [接続を移動](./catalog/mobile-engagement/moengage.md)
+      * [Moengage 接続](./catalog/mobile-engagement/moengage.md)
    * パーソナライゼーションの宛先 {#personalization}
       * [パーソナライゼーションの宛先の概要](./catalog/personalization/overview.md)
-      * [（限定提供）Audience Analysis](./catalog/personalization/audience-analysis.md)
+      * [（限定提供）オーディエンス分析](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce 接続](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target 接続](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 拡張機能](./catalog/personalization/adobe-target.md)
@@ -199,7 +200,7 @@ ht-degree: 89%
       * [ストリーミング宛先の IP アドレス許可リスト](./catalog/streaming/ip-address-allow-list.md)
    * サーベイの宛先 {#survey}
       * [サーベイの宛先の概要](./catalog/survey/overview.md)
-      * [Qualtrics 自動化の宛先](./catalog/survey/qualtrics-automations.md)
+      * [Qualtrics Automations の宛先](./catalog/survey/qualtrics-automations.md)
       * [Foresee 拡張機能の宛先](./catalog/survey/foresee.md)
       * [InMoment 拡張機能](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback 拡張機能](./catalog/survey/qualtrics.md)
@@ -250,7 +251,7 @@ ht-degree: 89%
          * [カスタムのファイル形式オプションとカスタムのファイル名設定を使用した、Azure Data Lake Storage の宛先の設定](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [カスタムのファイル形式設定オプションとカスタムのファイル名設定を使用した、データランディングゾーン（DLZ）の宛先の設定](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [事前定義済みファイル形式オプションとカスタムファイル名設定を使用した、 SFTP の宛先の設定](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-         * [見込み客のオーディエンスをエクスポートするためのファイルベースの宛先の設定](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
+         * [見込み客オーディエンスをエクスポートするためのファイルベースの宛先の設定](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * 宛先オーサリング API リファレンス {#authoring-api}
       * [Destination SDK（宛先オーサリング）API リファレンス](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * 宛先サーバーの操作 {#server-operations}
@@ -297,4 +298,4 @@ ht-degree: 89%
       * [ドキュメントのセルフサービステンプレート](./destination-sdk/docs-framework/self-service-template.md)
       * [オーサリングのベストプラクティス](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [よくある質問](./destinations-faq.md)
-* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

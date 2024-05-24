@@ -2,10 +2,10 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、媒体社がビデオやモバイルアプリを通じて web サイト上の広告の表示を管理できる、Google の広告配信プラットフォームです。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
+source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 61%
+source-wordcount: '1206'
+ht-degree: 59%
 
 ---
 
@@ -104,8 +104,8 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="オーディエンス名へのオーディエンス ID の追加"
->abstract="Google アドマネージャー 360 のオーディエンス名に Experience Platform のオーディエンス ID を含めるには、`Audience Name (Audience ID)` のように、このオプションを選択します。"
+>title="オーディエンス ID をオーディエンス名に追加"
+>abstract="この宛先のオーディエンス名にExperience Platformのオーディエンス ID を含めるには、次のように、このオプションを選択します。 `Audience Name (Audience ID)`"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
