@@ -2,10 +2,10 @@
 title: アカウントプロファイルダッシュボード
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 3%
+source-wordcount: '1675'
+ht-degree: 4%
 
 ---
 
@@ -76,14 +76,13 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 * [追加されたアカウントプロファイル](#account-profiles-added)
 * [業界別の新しいアカウント](#accounts-by-industry)
 * [タイプ別の新しいアカウント](#accounts-by-type)
-* [追加された商談](#opportunities-added)
 * [人物の役割別の新しい機会](#opportunities-by-person-role)
 * [収益別の新しい商談](#opportunities-by-revenue)
 * [ステータスおよびステージ別の新しい商談](#opportunities-by-status-&-stage)
 * [獲得済みの新規商談](#opportunities-won)
+* [追加された商談](#opportunities-added)
 * [予測スコアリング分布](#predictive-scoring-distribution)
 * [予測スコアリングの上位影響要因](#predictive-scoring-top-influential-factors)
-* [業種別のアカウント総数](#total-accounts-by-industry)
 
 ### 追加されたアカウントプロファイル {#account-profiles-added}
 
@@ -102,14 +101,6 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 この [!UICONTROL タイプ別の新しいアカウント] ウィジェットは、アカウントの合計数を、ドーナツグラフ内の 1 つの指標で表示します。 ドーナツグラフは、この合計を構成する様々なアカウントタイプの相対的な構成を示しています。 色分けされたキーは、含まれているすべてのアカウントタイプの分類を提供します。 ドーナツグラフの各セクションにカーソルを合わせると、各タイプのアカウントの個々のカウントがダイアログに表示されます。
 
 ![タイプ別の新しいアカウント ウィジェット](../images/account-profiles/new-accounts-by-type.png)
-
-### 追加された商談 {#opportunities-added}
-
-この [!UICONTROL 追加された商談] ウィジェットは、折れ線グラフを使用して、一定期間にわたって 1 日に追加された商談数を表示します。 ダッシュボードの上部にあるグローバル日付フィルターを使用して、分析期間を決定します。 日付フィルターが指定されていない場合、デフォルトの動作では、今日より前の年に追加された商談が一覧表示されます。 結果を使用して、追加された商談数のトレンドを推測できます。
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![商談追加ウィジェット。](../images/account-profiles/opportunities-added.png)
 
 ### 人物の役割別の新しい機会 {#opportunities-by-person-role}
 
@@ -141,6 +132,14 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 
 ![新しい商談の獲得ウィジェット。](../images/account-profiles/new-opportunities-won.png)
 
+### 追加された商談 {#opportunities-added}
+
+この [!UICONTROL 追加された商談] ウィジェットは、折れ線グラフを使用して、一定期間にわたって 1 日に追加された商談数を表示します。 ダッシュボードの上部にあるグローバル日付フィルターを使用して、分析期間を決定します。 日付フィルターが指定されていない場合、デフォルトの動作では、今日より前の年に追加された商談が一覧表示されます。 結果を使用して、追加された商談数のトレンドを推測できます。
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![商談追加ウィジェット。](../images/account-profiles/opportunities-added.png)
+
 ### 予測スコアリング分布 {#predictive-scoring-distribution}
 
 この [!UICONTROL 予測スコアリング分布] ウィジェットには、すべてのアカウントプロファイルのスコア分布が表示され、セールスパイプラインの健全性を一目で把握するのに役立ちます。 スコアリングデータは、ドーナツグラフおよび列グラフを介して伝達される。
@@ -170,18 +169,6 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 >グローバル日付範囲フィルターは、予測スコアリングインサイトには適用されません。 予測スコアリングウィジェットは、ドロップダウンで選択したアカウントのスコアリングモデルに基づいてデータを分析します。
 
 ![予測スコアリングの上位影響要因ウィジェット。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### 業種別のアカウント総数 {#total-accounts-by-industry}
-
-このウィジェットは、アカウントの合計数を 1 つの指標で表示し、ドーナツグラフを使用して、全体の数に占める各業種の割合を、数に比例したサイズで示します。 キーは、ドーナツグラフを構成する様々な業界の色分け情報を提供します。
-
->[!NOTE]
->
->このインサイトで表示される情報は、指定した日付範囲によって異なります。 日付フィルターを指定しない場合、インサイトのデフォルトの動作では、前年から今日までに追加されたデータが分析されます。
-
-ドーナツグラフの各セクションにカーソルを合わせると、様々な業界の個々のカウントがダイアログに表示されます。
-
-![業界ウィジェット別のアカウント総数。](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## 次の手順
 

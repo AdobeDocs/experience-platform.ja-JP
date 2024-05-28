@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年4月のリリースノート。
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 22%
@@ -121,7 +121,7 @@ Experience PlatformUI のモニタリングダッシュボードを使用する�
 | スケジュールされたクエリのアラート | クエリをスケジュールしながら、プロアクティブな通知で常に情報を入手し、効率的でタイムリーなタスク管理を確保します。 次のことができます [クエリの作成時にアラートを購読](../../query-service/ui/query-schedules.md#alerts-for-query-status) または、既存のスケジュール済みクエリに対してインラインアクションを使用します。 を参照してください。 [インラインアクションを使用したアラートの購読](../../query-service/ui/monitor-queries.md#alert-subscription) 詳しくは、ドキュメントを参照してください。 |
 | スケジュール済みクエリナビゲーションの改善 | クエリテンプレートとスケジュールされた実行の間を簡単に移動して、生産性を向上させます。 のドキュメントを参照してください。 [スケジュールされたクエリ実行の表示](../../query-service/ui/query-schedules.md#scheduled-query-runs) を参照してください。 |
 | 拡張クエリの出力 | コンソール内で最大 500 行のクエリ結果にアクセスすると、データをより詳細に分析できます。詳しくは、 [結果数](../../query-service/ui/user-guide.md#result-count) 詳しくは、ドキュメントを参照してください。 |
-| レガシ クエリ エディターの廃止 | 2024 年 4 月 30 日（PT）現在、拡張クエリエディターは、すべてのユーザーにとってデフォルトのエディターになっています。 レガシーエディターは 2024 年 5 月 30 日（PT）に非推奨（廃止予定）となり、使用できなくなります。 を参照してください。 [クエリエディターユーザーガイド](../../query-service/ui/user-guide.md) を参照してください。 |
+| レガシ クエリ エディターの廃止 | 2024 年 4 月 30 日（PT）現在、拡張クエリエディターは、すべてのユーザーにとってデフォルトのエディターになっています。 レガシーエディターは 2024 年 5 月 24 日（PT）に廃止され、使用できなくなります。 を参照してください。 [クエリエディターユーザーガイド](../../query-service/ui/user-guide.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
