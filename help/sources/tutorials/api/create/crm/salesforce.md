@@ -2,10 +2,10 @@
 title: Flow Service API を使用した Salesforce ベース接続の作成
 description: Flow Service API を使用してAdobe Experience Platformを Salesforce アカウントに接続する方法について説明します。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 40%
+source-wordcount: '774'
+ht-degree: 37%
 
 ---
 
@@ -99,11 +99,11 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params":
-              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-              "username": "acme-salesforce",
-              "password": "xxxx",
-              "securityToken": "xxxx"
-          }
+            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+            "username": "acme-salesforce",
+            "password": "xxxx",
+            "securityToken": "xxxx"
+        }
       },
       "connectionSpec": {
           "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -163,7 +163,7 @@ curl -X POST \
 
 **応答**
 
-リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成された接続が応答として返されます。この ID は、次の手順で CRM システムを探索するために必要になります。
+正常な応答では、新しく作成したベース接続と、一意の ID が返されます。
 
 ```json
 {

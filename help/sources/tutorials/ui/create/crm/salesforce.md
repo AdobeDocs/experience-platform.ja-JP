@@ -2,7 +2,7 @@
 title: Experience Platformユーザーインターフェイスを使用した Salesforce アカウントの接続
 description: ユーザーインターフェイスを使用して Salesforce アカウントを連携し、CRM データをExperience Platformに取り込む方法について説明します。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 21%
@@ -65,7 +65,7 @@ ht-degree: 21%
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 *CRM* カテゴリ、選択 **[!DNL Salesforce]**&#x200B;を選択してから、 **[!UICONTROL データを追加]**.
+を選択 **[!DNL Salesforce]** の下 *[!UICONTROL CRM]* カテゴリを選択してから、 **[!UICONTROL データを追加]**.
 
 >[!TIP]
 >
