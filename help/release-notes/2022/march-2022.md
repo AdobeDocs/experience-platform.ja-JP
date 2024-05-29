@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年3月
 description: Adobe Experience Platform の 2022年3月のリリースノート。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 100%
+source-wordcount: '1172'
+ht-degree: 98%
 
 ---
 
@@ -77,7 +77,7 @@ Adobe Experience Platform は、毎日のスナップショットで取得した
 
 ### プロファイルダッシュボード
 
-プロファイルダッシュボードは、組織が Experience Platform のプロファイルストア内に持つ属性（レコード）データのスナップショットを表示します。
+プロファイルダッシュボードは、組織がExperience Platformのプロファイルストア内に持つ属性（レコード） データのスナップショットを表示します。
 
 **更新された機能**
 

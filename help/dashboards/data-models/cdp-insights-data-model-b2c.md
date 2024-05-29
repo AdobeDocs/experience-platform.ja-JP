@@ -4,10 +4,10 @@ description: Real-time Customer Data Platform Insights データモデル（B2C 
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1155'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -98,7 +98,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### ID 別プロファイルのユースケース {#profiles-by-identity}
 
-[!UICONTROL ID 別プロファイル]ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 を参照してください。 [[!UICONTROL ID 別プロファイル] ウィジェットのドキュメント](../guides/profiles.md#profiles-by-identity) を参照してください。
+この [!UICONTROL ID 別プロファイル] ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 を参照してください。 [[!UICONTROL ID 別プロファイル] ウィジェットのドキュメント](../guides/profiles.md#profiles-by-identity) を参照してください。
 
 を生成する SQL [!UICONTROL ID 別プロファイル] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 
@@ -291,7 +291,7 @@ LIMIT
 
 #### オーディエンスのユースケースの ID 別プロファイル {#audience-profiles-by-identity}
 
-で使用されるロジック [!UICONTROL ID 別プロファイル] ウィジェットは、特定のオーディエンスに関する ID を、プロファイルストアにあるすべての結合済みプロファイルで分類して提供します。 を参照してください。 [[!UICONTROL ID 別プロファイル] ウィジェットのドキュメント](../guides/audiences.md#profiles-by-identity) を参照してください。
+で使用されるロジック [!UICONTROL ID 別プロファイル] ウィジェットは、特定のオーディエンスに対して、プロファイルストアにあるすべての結合済みプロファイルをまたいで ID の分類を提供します。 を参照してください。 [[!UICONTROL ID 別プロファイル] ウィジェットのドキュメント](../guides/audiences.md#profiles-by-identity) を参照してください。
 
 を生成する SQL [!UICONTROL ID 別プロファイル] ウィジェットは、下の折りたたみ可能なセクションに表示されます。
 

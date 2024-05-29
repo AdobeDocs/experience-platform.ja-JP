@@ -2,10 +2,10 @@
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
 title: プロファイル書き出しジョブ API エンドポイント
 type: Documentation
-description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースのデータを統合することで、Adobe Experience Platform内の個々の顧客を一目で把握できます。 その後、プロファイルデータをデータセットに書き出して、さらに処理することができます。
+description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースからデータを統合することで、Adobe Experience Platform内で個々の顧客の単一のビューを作成できます。 その後、さらに処理するために、プロファイルデータをデータセットに書き出すことができます。
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 53%
@@ -14,31 +14,31 @@ ht-degree: 53%
 
 # プロファイル書き出しジョブエンドポイント
 
-[!DNL Real-Time Customer Profile] を使用すると、属性データと行動データの両方を含む複数のソースからのデータを統合し、個々の顧客の単一のビューを構築できます。 その後、プロファイルデータをデータセットに書き出して、さらに処理することができます。 例： [!DNL Profile] オーディエンスを作成してデータをアクティブ化用に書き出し、レポート用にプロファイル属性を書き出すことができます。
+[!DNL Real-Time Customer Profile] を使用すると、属性データと行動データの両方を含む複数のソースからデータを統合することで、個々の顧客の単一のビューを作成できます。 その後、さらに処理するために、プロファイルデータをデータセットに書き出すことができます。 例： [!DNL Profile] オーディエンスを作成することで、アクティベーション用にデータを書き出したり、レポート用にプロファイル属性を書き出したりできます。
 
-このドキュメントでは、 [プロファイル API](https://www.adobe.com/go/profile-apis-en).
+このドキュメントでは、を使用してエクスポートジョブを作成および管理する手順を説明します [プロファイル API](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
->このガイドでは、 [!DNL Profile API]. Adobe Experience Platform Segmentation Service の書き出しジョブの管理方法について詳しくは、 [セグメント化 API でのジョブの書き出し](../../profile/api/export-jobs.md).
+>このガイドでは、でのエクスポートジョブの使用について説明します [!DNL Profile API]. Adobe Experience Platform Segmentation Service の書き出しジョブを管理する方法については、のガイドを参照してください。 [segmentation API でのジョブの書き出し](../../profile/api/export-jobs.md).
 
-書き出しジョブの作成に加えて、 [!DNL Profile] データを `/entities` エンドポイント（別名「 」）[!DNL Profile Access]&quot;. 詳しくは、 [エンティティエンドポイントガイド](./entities.md) を参照してください。 にアクセスする手順については、 [!DNL Profile] UI を使用するデータ ( [ユーザーガイド](../ui/user-guide.md).
+エクスポートジョブの作成に加えて、にもアクセスできます。 [!DNL Profile] を使用したデータ `/entities` エンドポイント（「」とも呼ばれます）[!DNL Profile Access]」と入力します。 を参照してください。 [エンティティエンドポイントガイド](./entities.md) を参照してください。 アクセス方法の手順については、を参照してください [!DNL Profile] ui を使用したデータ。を参照してください。 [ユーザーガイド](../ui/user-guide.md).
 
 ## はじめに
 
-このガイドで使用される API エンドポイントは、 [!DNL Real-Time Customer Profile] API. 先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、 [!DNL Real-Time Customer Profile] API です。 先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## エクスポートジョブの作成
 
-エクスポート中 [!DNL Profile] データを書き出すには、まずデータの書き出し先となるデータセットを作成し、その後新しい書き出しジョブを開始する必要があります。 これらの両方の手順は、Experience PlatformAPI を使用して実行できます。前者はカタログサービス API を使用し、後者はリアルタイム顧客プロファイル API を使用します。 各手順を完了するための詳細な手順については、以下の節で説明しています。
+エクスポート [!DNL Profile] データを取得するには、まずデータの書き出し先となるデータセットを作成してから、新しい書き出しジョブを開始する必要があります。 これらの手順は両方とも、Experience PlatformAPI を使用して実行できます。前者は Catalog Service API を使用し、後者はリアルタイム顧客プロファイル API を使用します。 各手順を完了するための詳細な手順については、以下の節で説明しています。
 
 ### ターゲットデータセットの作成
 
-書き出し時 [!DNL Profile] データの場合は、最初にターゲットデータセットを作成する必要があります。 データセットを正しく設定して、エクスポートが正常に行われるようにすることが重要です。
+書き出し時 [!DNL Profile] データの場合、まずターゲットデータセットを作成する必要があります。 データセットを正しく設定して、エクスポートが正常に行われるようにすることが重要です。
 
-重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。プロファイルデータを書き出すには、データセットが [!DNL XDM Individual Profile] 和集合スキーマ (`https://ns.adobe.com/xdm/context/profile__union`) をクリックします。 和集合スキーマは、同じクラスを共有するスキーマのフィールドを集計する、システム生成の読み取り専用のスキーマです。 この場合、 [!DNL XDM Individual Profile] クラス。 和集合表示スキーマについて詳しくは、 [『スキーマ構成の基本』ガイドの「和集合」セクション](../../xdm/schema/composition.md#union).
+重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。プロファイルデータを書き出すには、データセットはに基づいている必要があります [!DNL XDM Individual Profile] 結合スキーマ （`https://ns.adobe.com/xdm/context/profile__union`）に設定します。 結合スキーマは、同じクラスを共有するスキーマのフィールドを集約する、システム生成の読み取り専用スキーマです。 この場合、次のようになります [!DNL XDM Individual Profile] クラス。 和集合表示スキーマについて詳しくは、を参照してください。 [スキーマ構成の基本ガイドの和集合の節](../../xdm/schema/composition.md#union).
 
-このチュートリアルの以降の手順では、 [!DNL XDM Individual Profile] スキーマの和集合 [!DNL Catalog] API. また、 [!DNL Platform] ユニオンスキーマを参照するデータセットを作成するユーザーインターフェイス。 UI を使用する手順については、 [オーディエンスのエクスポートに関するこの UI チュートリアル](../../segmentation/tutorials/create-dataset-export-segment.md) しかしここでも当てはまります。 完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
+このチュートリアルの手順では、を参照するデータセットの作成方法の概要を説明します [!DNL XDM Individual Profile] を使用した結合スキーマ [!DNL Catalog] API です。 を使用することもできます。 [!DNL Platform] 和集合スキーマを参照するデータセットを作成するためのユーザーインターフェイス。 UI の使用手順の概要については、を参照してください。 [オーディエンスを書き出すための UI チュートリアル](../../segmentation/tutorials/create-dataset-export-segment.md) ただし、ここでも適用できます。 完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
 
 互換性のあるデータセットが既に存在し、その ID がわかっている場合は、[新しいエクスポートジョブを開始する](#initiate)手順に直接進むことができます。
 
@@ -53,8 +53,7 @@ POST /dataSets
 次のリクエストは、新しいデータセットを作成し、ペイロードに設定パラメーターを提供します。
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog/dataSets \
+curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -86,7 +85,7 @@ curl -X POST \
 
 ### エクスポートジョブの開始 {#initiate}
 
-和集合永続化データセットを取得したら、に対してPOSTリクエストを実行することで、プロファイルデータをデータセットに保持する書き出しジョブを作成できます `/export/jobs` エンドポイントを使用して、書き出すデータの詳細をリクエストの本文に指定できます。
+和集合を保持するデータセットが用意できたら、に対してPOSTリクエストを行い、プロファイルデータをデータセットに保持する書き出しジョブを作成できます。 `/export/jobs` リアルタイム顧客プロファイル API のエンドポイントと、書き出すデータの詳細をリクエストの本文で指定します。
 
 **API 形式**
 
@@ -99,8 +98,7 @@ POST /export/jobs
 次のリクエストは、新しいエクスポートジョブを作成し、ペイロードに設定パラメーターを提供します。
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/export/jobs \
+curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -119,7 +117,7 @@ curl -X POST \
           "fromIngestTimestamp": "2018-10-25T13:22:04-07:00"
         }
       }
-    }
+    },
     "destination": {
       "datasetId": "5b020a27e7040801dedba61b",
       "segmentPerBatch": false
@@ -133,11 +131,11 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `fields` | *（オプション）*&#x200B;エクスポートに含めるデータフィールドを、このパラメーターで指定されたデータフィールドのみに制限します。この値を省略すると、エクスポートされるデータにすべてのフィールドが含まれます。 |
-| `mergePolicy` | *（オプション）*&#x200B;エクスポートされるデータを管理する結合ポリシーを指定します。複数のオーディエンスがエクスポートされる場合は、このパラメーターを含めます。 |
+| `mergePolicy` | *（オプション）*&#x200B;エクスポートされるデータを管理する結合ポリシーを指定します。複数のオーディエンスが書き出される場合は、このパラメーターを含めます。 |
 | `mergePolicy.id` | 結合ポリシーの ID。 |
 | `mergePolicy.version` | 使用する結合ポリシーの特定のバージョンです。この値を省略すると、デフォルトで最新バージョンが使用されます。 |
-| `additionalFields.eventList` | *（オプション）* 次の 1 つ以上の設定を指定して、子オブジェクトまたは関連オブジェクト用に書き出される時系列イベントフィールドを制御します。<ul><li>`eventList.fields`：エクスポートするフィールドを制御します。</li><li>`eventList.filter`：関連オブジェクトから取得される結果を制限する基準を指定します。エクスポートに必要な最小値（通常は日付）が基準として予期されます。</li><li>`eventList.filter.fromIngestTimestamp`：時系列イベントをフィルター処理して、指定されたタイムスタンプの後に取り込まれたイベントに絞り込みます。 これは、イベント時間自体ではなく、イベントの取得時間です。</li></ul> |
-| `destination` | **（必須）**&#x200B;エクスポートするデータの宛先情報：<ul><li>`destination.datasetId`：**（必須）**&#x200B;データのエクスポート先のデータセットの ID。</li><li>`destination.segmentPerBatch`：*（オプション）*&#x200B;指定しない場合、ブール値はデフォルトで `false` になります。値： `false` は、すべてのセグメント定義 ID を単一のバッチ ID にエクスポートします。 値： `true` は、1 つのセグメント定義 ID を 1 つのバッチ ID に書き出します。 値を `true` に設定すると、バッチエクスポートのパフォーマンスに影響を与える場合があることに注意してください。</li></ul> |
+| `additionalFields.eventList` | *（オプション）* 次の 1 つ以上の設定を指定して、子または関連するオブジェクト用に書き出された時系列イベントフィールドを制御します。<ul><li>`eventList.fields`：エクスポートするフィールドを制御します。</li><li>`eventList.filter`：関連オブジェクトから取得される結果を制限する基準を指定します。エクスポートに必要な最小値（通常は日付）が基準として予期されます。</li><li>`eventList.filter.fromIngestTimestamp`：時系列イベントを、指定されたタイムスタンプ以降に取り込まれたイベントにフィルターします。 これは、イベント時間自体ではなく、イベントの取得時間です。</li></ul> |
+| `destination` | **（必須）**&#x200B;エクスポートするデータの宛先情報：<ul><li>`destination.datasetId`：**（必須）**&#x200B;データのエクスポート先のデータセットの ID。</li><li>`destination.segmentPerBatch`：*（オプション）*&#x200B;指定しない場合、ブール値はデフォルトで `false` になります。値 `false` すべてのセグメント定義 ID を単一のバッチ ID にエクスポートします。 値 `true` 1 つのセグメント定義 ID を 1 つのバッチ ID にエクスポートします。 値を `true` に設定すると、バッチエクスポートのパフォーマンスに影響を与える場合があることに注意してください。</li></ul> |
 | `schema.name` | **（必須）**&#x200B;データのエクスポート先のデータセットに関連付けられているスキーマの名前。 |
 
 >[!NOTE]
@@ -181,7 +179,7 @@ curl -X POST \
 
 ## すべてのエクスポートジョブのリスト
 
-特定の組織に対してすべてのエクスポートジョブのリストを返すには、 `export/jobs` endpoint. リクエストは、以下に示すように、クエリパラメーター `limit` および `offset` もサポートします。
+に対してGETリクエストを実行することで、特定の組織のすべての書き出しジョブのリストを返すことができます `export/jobs` エンドポイント。 リクエストは、以下に示すように、クエリパラメーター `limit` および `offset` もサポートします。
 
 **API 形式**
 
@@ -195,13 +193,12 @@ GET /export/jobs?{QUERY_PARAMETERS}
 | `start` | リクエストの作成時刻に従って、返された結果のページをオフセットします。例：`start=4` |
 | `limit` | 返す結果の数を制限します。例：`limit=10` |
 | `page` | リクエストの作成時刻に従って、特定のページの結果を返します。例：`page=2` |
-| `sort` | 特定のフィールドで結果を昇順 ( **`asc`** ) または降順 ( **`desc`** ) 注文内容です。 結果の複数ページを返す場合、並べ替えパラメーターは機能しません。例：`sort=updateTime:asc` |
+| `sort` | 特定のフィールドを基準に、結果を昇順（ **`asc`** ）または降順（ **`desc`** ）の順序です。 結果の複数ページを返す場合、並べ替えパラメーターは機能しません。例：`sort=updateTime:asc` |
 
 **リクエスト**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/export/jobs/ \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -210,7 +207,7 @@ curl -X GET \
 
 **応答**
 
-応答には、 `records` オブジェクトには、組織で作成されたエクスポートジョブが含まれます。
+応答には次が含まれます `records` 組織で作成された書き出しジョブを含むオブジェクト。
 
 ```json
 {
@@ -342,8 +339,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 **リクエスト**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/export/jobs/24115 \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -419,8 +415,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 **リクエスト**
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/export/jobs/726 \
+curl -X POST https://platform.adobe.io/data/core/ups/export/jobs/726 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -437,19 +432,19 @@ curl -X POST \
 
 データアクセス API を使用してバッチファイルにアクセスしてダウンロードする手順については、[データアクセスのチュートリアル](../../data-access/tutorials/dataset-data.md)を参照してください。
 
-また、Adobe Experience Platformクエリサービスを使用して、正常に書き出されたリアルタイム顧客プロファイルデータにアクセスすることもできます。 クエリサービスでは、UI または RESTful API を使用して、クエリの書き込みと検証を行い、データレイク内のデータに対してクエリを実行することができます。
+また、Adobe Experience Platform クエリサービスを使用して、正常に書き出されたリアルタイム顧客プロファイルデータにアクセスすることもできます。 クエリサービスでは、UI または RESTful API を使用して、クエリの書き込みと検証を行い、データレイク内のデータに対してクエリを実行することができます。
 
 オーディエンスデータに対してクエリを実行する方法ついて詳しくは、[クエリサービスのドキュメント](../../query-service/home.md)を参照してください。
 
 ## 付録
 
-次の節では、プロファイル API の書き出しジョブに関する追加情報を示します。
+次の節では、Profile API の書き出しジョブに関する追加情報を示します。
 
-### その他の書き出しペイロードの例
+### その他のエクスポートペイロードの例
 
-API 呼び出しの例 ( [書き出しジョブの開始](#initiate) は、プロファイル（レコード）とイベント（時系列）の両方のデータを含むジョブを作成します。 この節では、書き出しに 1 つのデータタイプまたは他のデータタイプが含まれるように制限する、追加のリクエストペイロードの例を示します。
+API 呼び出しの例を、の節で示します。 [エクスポートジョブの開始](#initiate) プロファイル（レコード）とイベント（時系列）の両方のデータを含むジョブを作成します。 この節では、エクスポートするデータ型を 1 つのみに制限する、追加のリクエストペイロードの例を示します。
 
-次のペイロードは、プロファイルデータのみを含む（イベントを含まない）書き出しジョブを作成します。
+次のペイロードは、プロファイルデータのみを含み（イベントを含まない）、書き出しジョブを作成します。
 
 ```json
 {
@@ -468,7 +463,7 @@ API 呼び出しの例 ( [書き出しジョブの開始](#initiate) は、プ�
   }
 ```
 
-イベントデータのみを含む（プロファイル属性を含まない）書き出しジョブを作成する場合、ペイロードは次のようになります。
+イベントデータのみを含む（プロファイル属性を含まない）書き出しジョブを作成するには、ペイロードは次のようになります。
 
 ```json
 {
@@ -495,6 +490,6 @@ API 呼び出しの例 ( [書き出しジョブの開始](#initiate) は、プ�
   }
 ```
 
-### オーディエンスのエクスポート
+### オーディエンスの書き出し
 
-また、書き出しジョブのエンドポイントを使用して、 [!DNL Profile] データ。 次のガイドを参照してください： [セグメント化 API でのジョブの書き出し](../../segmentation/api/export-jobs.md) を参照してください。
+代わりに、エクスポートジョブエンドポイントを使用して、オーディエンスをエクスポートすることもできます。 [!DNL Profile] データ。 のガイドを参照してください [segmentation API でのジョブの書き出し](../../segmentation/api/export-jobs.md) を参照してください。

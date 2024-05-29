@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platformを使用すると、プロファイルストアからデータセットやバッチを削除して、不要になった、または誤って追加されたリアルタイム顧客プロファイルデータを削除できます。 これには、プロファイル API を使用して、プロファイルシステムジョブまたは削除リクエストを作成する必要があります。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 61%
@@ -305,4 +305,4 @@ curl -X POST \
 
 ## 次の手順
 
-これで、からデータセットとバッチを削除する手順がわかりました [!DNL Profile Store] 内 [!DNL Experience Platform]誤って追加されたデータや、組織で必要がなくなったデータは安全に削除できます。 削除リクエストは元に戻せないので、今は不要で将来は不要になると確信しているデータのみを削除するようにしてください。
+これで、からデータセットとバッチを削除する手順がわかりました [!DNL Profile store] 内 [!DNL Experience Platform]誤って追加されたデータや、組織で必要がなくなったデータは安全に削除できます。 削除リクエストは元に戻せないので、今は不要で将来は不要になると確信しているデータのみを削除するようにしてください。

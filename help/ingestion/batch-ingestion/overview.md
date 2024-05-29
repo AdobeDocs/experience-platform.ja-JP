@@ -4,7 +4,7 @@ solution: Experience Platform
 title: バッチ取得 API の概要
 description: Adobe Experience Platform Batch Ingestion API を使用すると、データをバッチファイルとして Platform に取り込むことができます。 取り込まれるデータは、CRM システム内のフラットファイル（Parquet ファイルなど）のプロファイルデータや、Experience Data Model （XDM）レジストリの既知のスキーマに準拠するデータの場合があります。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 65%

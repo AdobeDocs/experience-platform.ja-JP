@@ -3,7 +3,7 @@ title: 1 回限りの顧客価値をライフタイム価値に進化
 description: 特定の顧客の属性、行動、過去の購入に基づいて、最適な補完的な製品やサービスを提供するパーソナライズされたキャンペーンを作成する方法を説明します。
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -46,7 +46,7 @@ ht-degree: 2%
    * [オーディエンス](/help/segmentation/home.md)
    * [宛先](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)：ジャーニーを設計し、トリガーを設定して、訪問者に対処する適切なメッセージを作成します。
-   * [イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=ja)
+   * [イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [オーディエンスとイベント](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=ja)
    * [ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 

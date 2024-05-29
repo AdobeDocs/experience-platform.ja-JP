@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；バッチ取り込み；バッチ取り込み；取り込み；開発者ガイド；API ガイド；アップロード；取り込み Parquet；取り込み json;
+keywords: Experience Platform；ホーム；人気のトピック；バッチ取得；バッチ取得；取得；developer guide;api guide；アップロード；Parquet の取り込み；json の取り込み；
 solution: Experience Platform
-title: バッチ取得 API ガイド
+title: バッチ取り込み API ガイド
 description: このドキュメントでは、Adobe Experience Platformのバッチ取得 API を使用する開発者向けの包括的なガイドを提供します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 75%
+source-wordcount: '2383'
+ht-degree: 65%
 
 ---
 
 # バッチ取得開発者ガイド
 
-このドキュメントでは、 [バッチ取得 API エンドポイント](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) Adobe Experience Platform 前提条件やベストプラクティスを含む、バッチ取得 API の概要については、まず [バッチ取得 API の概要](overview.md).
+このドキュメントでは、を使用するための包括的なガイドを提供します [バッチ取り込み API エンドポイント](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) Adobe Experience Platformで。 前提条件やベストプラクティスを含む、バッチ取得 API の概要については、最初にを参照してください。 [バッチ取得 API の概要](overview.md).
 
 このドキュメントの付録では、CSV 例や JSON データファイル例など、[取得に使用するデータの形式設定](#data-transformation-for-batch-ingestion)に関する情報を提供します。
 
 ## はじめに
 
-このガイドで使用される API エンドポイントは、 [バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). バッチ取り込みは、RESTful API を通じて提供されます。この API では、サポートされるオブジェクトタイプに対して基本的な CRUD 操作を実行できます。
+このガイドで使用する API エンドポイントは、 [バッチ取得 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). バッチ取得は、サポートされているオブジェクトタイプに対して基本的な CRUD 操作を実行できる RESTful API を通じて提供されます。
 
-続行する前に、 [バッチ取得 API の概要](overview.md) そして [入門ガイド](getting-started.md).
+続行する前に、を確認してください [バッチ取得 API の概要](overview.md) および [はじめる前に](getting-started.md).
 
 ## JSON ファイルの取得
 
 >[!NOTE]
 >
-> 次の手順は、小さいファイル（256MB 以下）に適用されます。ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+>次の手順は、小さいファイル（256 MB 以下）に適用されます。 ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
 
 ### バッチの作成
 
@@ -35,7 +35,7 @@ ht-degree: 75%
 
 >[!NOTE]
 >
-> 以下に、1 行の JSON の例を示します。複数行の JSON を取得するには、`isMultiLineJson` フラグを設定する必要があります。詳しくは、『[バッチ取得トラブルシューティングガイド](./troubleshooting.md)』を参照してください。
+>以下の例は、1 行の JSON に対するものです。 複数行の JSON を取得するには、`isMultiLineJson` フラグを設定する必要があります。詳しくは、『[バッチ取得トラブルシューティングガイド](./troubleshooting.md)』を参照してください。
 
 **API 形式**
 
@@ -93,11 +93,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### ファイルのアップロード
 
-これで、バッチを作成したので、バッチ作成応答のバッチ ID を使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
+バッチを作成したので、バッチ作成応答のバッチ ID を使用してファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
 
 >[!NOTE]
 >
->付録の[適切に書式設定された JSON データファイルの例](#data-transformation-for-batch-ingestion)についての節を参照してください。
+>詳しくは、付録の節を参照してください [適切にフォーマットされた JSON データファイルの例](#data-transformation-for-batch-ingestion).
 
 **API 形式**
 
@@ -109,13 +109,13 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。 送信するファイルのバッチに対して別のファイルと競合しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
 >[!NOTE]
 >
-> API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。
+>この API は、シングルパートのアップロードをサポートします。 content-type が application/octet-stream であることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 次のようなローカルファイルパスを指定します `acme/customers/campaigns/summer.json`. |
 
 **応答** 
 
@@ -171,7 +171,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 >[!NOTE]
 >
-> 次の手順は、小さいファイル（256MB 以下）に適用されます。ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+>次の手順は、小さいファイル（256 MB 以下）に適用されます。 ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
 
 ### バッチの作成
 
@@ -244,13 +244,13 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。 送信するファイルのバッチに対して別のファイルと競合しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
 >[!CAUTION]
 >
-> この API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。
+>この API は、シングルパートのアップロードをサポートします。 content-type が application/octet-stream であることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.parquet`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 次のようなローカルファイルパスを指定します `acme/customers/campaigns/summer.parquet`. |
 
 **応答** 
 
@@ -306,7 +306,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 >[!NOTE]
 >
-> この節では、256MB を超えるファイルをアップロードする方法について説明します。大きなファイルはチャンク単位でアップロードされ、API 信号を介して繋ぎ合わされます。
+>この節では、256 MB を超えるファイルのアップロード方法について詳しく説明します。 大きなファイルはチャンク単位でアップロードされ、API 信号を介して繋ぎ合わされます。
 
 ### バッチの作成
 
@@ -417,13 +417,13 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。 送信するファイルのバッチに対して別のファイルと競合しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
 >[!CAUTION]
 >
-> この API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。
+>この API は、シングルパートのアップロードをサポートします。 content-type が application/octet-stream であることを確認します。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 指定した範囲の開始と終了を整数で指定します。 |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 次のようなローカルファイルパスを指定します `acme/customers/campaigns/summer.json`. |
 
 
 **応答** 
@@ -517,7 +517,7 @@ CSV ファイルを取得するには、CSV をサポートするクラス、ス
 
 >[!NOTE]
 >
-> 次の手順は、小さいファイル（256MB 以下）に適用されます。ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+>次の手順は、小さいファイル（256 MB 以下）に適用されます。 ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
 
 ### データセットの作成
 
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{TENANT_ID}` | この ID は、作成したリソースの名前空間が適切に付けられ、組織内に含まれるようにするために使用されます。 |
+| `{TENANT_ID}` | この ID は、作成したリソースの名前空間が適切に設定され、組織内に格納されていることを確認するために使用されます。 |
 | `{SCHEMA_ID}` | 作成したスキーマの ID。 |
 
 ### バッチの作成
@@ -621,7 +621,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 >[!NOTE]
 >
->付録の[適切に書式設定された CSV データファイルの例](#data-transformation-for-batch-ingestion)についての節を参照してください。
+>詳しくは、付録の節を参照してください [正しい形式の CSV データファイルの例](#data-transformation-for-batch-ingestion).
 
 **API 形式**
 
@@ -633,13 +633,13 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。 送信するファイルのバッチに対して別のファイルと競合しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
 >[!CAUTION]
 >
-> この API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。
+>この API は、シングルパートのアップロードをサポートします。 content-type が application/octet-stream であることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.csv`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 次のようなローカルファイルパスを指定します `acme/customers/campaigns/summer.csv`. |
 
 
 **応答** 
@@ -750,26 +750,26 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## バッチのパッチ適用
 
-場合によっては、組織のプロファイルストアのデータを更新する必要があります。例えば、レコードを修正したり、属性値を変更したりする必要がある場合があります。Adobe Experience Platformは、アップサートアクションまたは「バッチのパッチ適用」を通じて、プロファイルストアデータの更新またはパッチをサポートします。
+場合によっては、組織のプロファイルストアのデータを更新する必要があります。 例えば、レコードを修正したり、属性値を変更したりする必要がある場合があります。Adobe Experience Platformは、アップサートアクションまたは「バッチのパッチ適用」を通じたプロファイルストアデータの更新またはパッチ適用をサポートします。
 
 >[!NOTE]
 >
->これらの更新は、エクスペリエンスイベントではなく、プロファイルレコードでのみ許可されます。
+>これらの更新は、プロファイルレコードでのみ許可され、エクスペリエンスイベントでは許可されません。
 
-バッチにパッチを適用するには、次が必要です。
+バッチにパッチを適用するには、次の操作が必要です。
 
-- **データセットのプロファイルと属性の更新が有効になっている。** これはデータセットタグを使用しておこなわれ、特定の `isUpsert:true` タグを `unifiedProfile` 配列。 データセットを作成する方法、またはアップサート用に既存のデータセットを設定する方法の詳細については、 [プロファイル更新用のデータセットの有効化](../../catalog/datasets/enable-upsert.md).
-- **パッチを適用するフィールドとプロファイルの ID フィールドを含む Parquet ファイル。** バッチにパッチを適用するデータ形式は、通常のバッチ取り込みプロセスに似ています。 入力が必要なのは Parquet ファイルです。また、更新するフィールドに加えて、プロファイルストア内のデータと一致させるために、アップロードされたデータには ID フィールドが含まれている必要があります。
+- **プロファイルおよび属性の更新が有効になっているデータセット。** この処理はデータセットタグを通して行われ、具体的に何かを必要とします `isUpsert:true` タグがに追加されます `unifiedProfile` 配列。 データセットの作成またはアップサート用の既存のデータセットの設定の方法を示す詳細な手順については、次のチュートリアルに従ってください： [プロファイル更新のためのデータセットの有効化](../../catalog/datasets/enable-upsert.md).
+- **パッチを適用するフィールドと、プロファイルの ID フィールドを含む Parquet ファイル。** バッチにパッチを適用するためのデータ形式は、通常のバッチ取得プロセスと似ています。 必要な入力は Parquet ファイルであり、更新するフィールドに加えて、プロファイルストアのデータと一致させるために、アップロードされたデータに ID フィールドが含まれている必要があります。
 
-プロファイルとアップサートを有効にし、パッチを適用するフィールドと必要な ID フィールドを含む Parquet ファイルを作成したら、次の手順に従います。 [Parquet ファイルの取得](#ingest-parquet-files) バッチ取得を使用してパッチを完了するため。
+プロファイルとアップサートが有効なデータセットと、パッチを適用するフィールドおよび必要な ID フィールドを含む Parquet ファイルが完成したら、次の手順に従います [parquet ファイルの取り込み](#ingest-parquet-files) バッチ取り込みを使用してパッチを完了する。
 
 ## バッチの再生
 
-既に取得したバッチを置き換える場合は、「バッチ再生」を使用できます。この操作は、古いバッチを削除し、代わりに新しいバッチを取得する操作と同じです。
+既に取得したバッチを置き換える場合は、「バッチ再生」を使用できます。このアクションは、古いバッチを削除し、代わりに新しいバッチを取得するアクションと同じです。
 
 ### バッチの作成
 
-まず、JSON を入力形式としてバッチを作成する必要があります。バッチを作成する場合は、データセット ID を指定する必要があります。また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされた XDM スキーマに適合していることを確認する必要があります。また、再生セクションで参照として古いバッチを指定する必要があります。次の例では、`batchIdA` ID と `batchIdB` ID を使用してバッチを再生します 。
+まず、JSON を入力形式としてバッチを作成する必要があります。バッチを作成する場合は、データセット ID を指定する必要があります。また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされた XDM スキーマに適合していることを確認する必要があります。また、再生セクションで参照として古いバッチを指定する必要があります。次の例では、ID を持つバッチを再生しています `batchIdA` および `batchIdB`.
 
 **API 形式**
 
@@ -855,13 +855,13 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。送信されるファイルのバッチに対して別のファイルと干渉しないように、一意のファイル名を使用してください。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。 送信するファイルのバッチに対して別のファイルと競合しないように、一意のファイル名を使用してください。 |
 
 **リクエスト**
 
 >[!CAUTION]
 >
-> この API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。API と互換性のないマルチパートリクエストがデフォルトで設定されるので、curl -F オプションは使用しないでください。
+>この API は、シングルパートのアップロードをサポートします。 content-type が application/octet-stream であることを確認します。API と互換性のないマルチパートリクエストがデフォルトで設定されるので、curl -F オプションは使用しないでください。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスはローカルのファイルパスです。次に例を示します。 `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 次のようなローカルファイルパスを指定します `acme/customers/campaigns/summer.json`. |
 
 **応答** 
 
@@ -915,11 +915,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 付録
 
-次の節では、バッチ取得を使用してExperience Platform内のデータを取り込む方法について説明します。
+次の節では、バッチ取得を使用してExperience Platformでデータを取り込む方法について説明します。
 
 ### バッチ取得用のデータ変換
 
-データファイルをに取り込むため [!DNL Experience Platform]の場合、ファイルの階層構造は [エクスペリエンスデータモデル (XDM)](../../xdm/home.md) スキーマは、アップロード先のデータセットに関連付けられています。
+データファイルをに取り込むには [!DNL Experience Platform]ファイルの階層構造は、次に準拠している必要があります [エクスペリエンスデータモデル（XDM）](../../xdm/home.md) アップロード先のデータセットに関連付けられているスキーマ。
 
 XDM スキーマに準拠する CSV ファイルのマッピング方法に関する情報は、[サンプル変換](../../etl/transformations.md)ドキュメントに記載されている情報と、適切に書式設定された JSON データファイルの例を参照してください。このドキュメントのサンプルファイルは、次の場所にあります。
 

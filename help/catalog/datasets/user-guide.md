@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータセットを操作する際に一般的なアクションを実行する方法について説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3080'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
@@ -262,8 +262,8 @@ ht-degree: 14%
 
 次の画面に、新しいデータセットを作成するための次の 2 つのオプションが表示されます。
 
-* [スキーマからのデータセットの作成](#schema)
-* [CSV ファイルからのデータセットの作成](#csv)
+* [スキーマからデータセットを作成](#schema)
+* [CSV ファイルからデータセットを作成](#csv)
 
 ### 既存スキーマからのデータセットの作成 {#schema}
 

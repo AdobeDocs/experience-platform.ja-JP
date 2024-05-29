@@ -1,36 +1,36 @@
 ---
-title: サードパーティ cookie に依存せずに新規顧客を惹きつけ、獲得する
-description: サードパーティ Cookie に依存せずに、見込み客のユースケースを通じて新規顧客をエンゲージおよび獲得する方法を説明します。
+title: サードパーティ cookie に依存せずに新規顧客を獲得
+description: サードパーティ Cookie に依存せずに、見込み客のユースケースを通じて新規顧客を獲得および獲得する方法を説明します。
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
-# サードパーティ cookie に依存せずに新規顧客を惹きつけ、獲得する
+# サードパーティ cookie に依存せずに新規顧客を獲得
 
 >[!AVAILABILITY]
 >
->* この機能は、Real-Time CDP(App Service)、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを取得したお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 Real-Time CDP でサードパーティデータのサポートを使用して、データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客を獲得またはリーチできるよう見込み客にエンゲージします。
 
 ![顧客プロスペクティングユースケースについての大まかで視覚的な概要。](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
-## この使用例を検討する理由 {#why-this-use-case}
+## このユースケースを検討する理由 {#why-this-use-case}
 
-ブランドは、サードパーティ cookie に依存せず、予算に制限があり、透明性と広告費用対効果に対する高い需要に依存せずに、ファネルのトップオブ顧客獲得の使用例を責任を持って実行するという大きな課題に同時に直面しています。
+ブランドは、サードパーティ cookie への依存、限られた予算、透明性と広告費用対効果への高い需要に依存することなく、ファネルの最上部の顧客獲得のユースケースを責任を持って実行するという困難な課題に同時に直面しています。
 
-Adobe Real-time Customer Data Platformは、企業が DMP（データ管理プラットフォーム）でサポートされる使用例を Cookie のない代替手段に安全に移行し、セルフサービスのセグメント化、オーディエンスのキュレーション、アクティベーションの完全な高度化と機能を 1 つのシステムに導くのに役立ちます。 特許取得済みのデータガバナンスと同意フレームワークを通じて、Adobeの責任あるデータの使用に妥協することなく焦点を当てています。
+Adobe Real-time Customer Data Platformを使用すると、企業は、Data Management Platform （DMP）でサポートされているユースケースを cookie のない代替手段に安全に移行し、セルフサービスのセグメント化、オーディエンスのキュレーション、アクティベーションの完全な高度化と機能を 1 つのシステムに導入できます。 特許取得済みのデータガバナンスと同意の枠組みを通じて、Adobeの責任あるデータの使用に対する揺るぎない焦点を妥協することなくすべて。
 
-例えば、ユーザーまたは既知の顧客になる見込み客を引き付けるためにキャンペーンを実行する必要がある場合は、この使用例で説明する手順に従います。
+例えば、見込み客を引き付けてユーザーまたは既知の顧客にするキャンペーンを実行する必要がある場合は、このユースケースで説明している手順に従ってください。
 
 ## 前提条件と計画 {#prerequisites-and-planning}
 
-新規顧客に連絡して獲得する際は、計画プロセスで次の前提条件を考慮します。
+新規顧客への接触および獲得を検討する際は、計画プロセスで次の前提条件を考慮してください。
 
 * パートナーが提供したプロファイルが Real-Time CDP に取り込まれて更新される頻度？
 * ダウンストリームの宛先で必要な ID は何か
@@ -53,7 +53,7 @@ Real-Time CDP を拡張して新規顧客のエンゲージメントや獲得を
 
 ## ビデオチュートリアル {#video-walkthrough}
 
-見込み客のオーディエンスにリーチして惹きつける方法については、以下のビデオチュートリアルをご覧ください。
+見込み客オーディエンスにリーチしてエンゲージする方法のウォークスルーについては、以下のビデオチュートリアルをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
@@ -110,7 +110,7 @@ XDM 個人見込み客プロファイルクラスの完全な情報について�
 
 ![XDM 個人見込み客プロファイルクラスの事前設定済みフィールド。](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-次に、スキーマのプライマリ ID として、先ほど作成したパートナー ID の ID を選択する必要があります。プロファイルレコードにはプライマリ識別子が含まれている必要があります。この手順は、見込み客データをプロファイルストアに読み込み、セグメント化とアクティブ化に使用できるようにするために必要です。
+次に、スキーマのプライマリ ID として、先ほど作成したパートナー ID の ID を選択する必要があります。プロファイルレコードにはプライマリ識別子が含まれている必要があります。この手順は、見込み客データをプロファイルストアに読み込み、セグメント化やアクティベーションに使用できるようにするために必要です。
 
 >[!AVAILABILITY]
 >
@@ -124,7 +124,7 @@ XDM 個人見込み客プロファイルクラスの完全な情報について�
 
 #### スキーマのすべてのフィールドに対するサードパーティデータガバナンスラベルの追加
 
-スキーマを構成するすべてのフィールドにサードパーティデータガバナンスラベルを追加することを検討します。これは、サードパーティデータの責任ある使用を徹底し、データ漏洩のリスクを最小限に抑えるために重要です。次の情報を検索： [サードパーティのデータガバナンスラベル](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+スキーマを構成するすべてのフィールドにサードパーティデータガバナンスラベルを追加することを検討します。これは、サードパーティデータの責任ある使用を徹底し、データ漏洩のリスクを最小限に抑えるために重要です。の詳細情報を見つける [サードパーティのデータガバナンスラベル](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 これを行うには、以下の手順に従います。
 
@@ -197,7 +197,7 @@ Real-Time CDP に読み込んだ見込み客のプロファイルが見込み客
 
 ![見込み客プロファイルの検査方法のビュー。](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-詳細を表示： [見込み客プロファイル](/help/profile/ui/prospect-profile.md).
+詳細を読む： [見込み客プロファイル](/help/profile/ui/prospect-profile.md).
 
 ### 見込み客オーディエンスを作成 {#create-prospect-audiences}
 
@@ -213,20 +213,20 @@ Real-Time CDP のセグメント化機能を使用して、見込み客プロフ
 * バッチプロファイル評価のみ。
 * 時系列イベントに基づくオーディエンスの作成をサポートしていません。
 
-詳細を表示： [見込み客オーディエンス](/help/segmentation/ui/prospect-audience.md).
+詳細を読む： [見込み客オーディエンス](/help/segmentation/ui/prospect-audience.md).
 
 ### 宛先への見込み客のプロファイルをアクティブ化 {#activate-to-destinations}
 
-見込み客のオーディエンスを宛先に書き出して利用します。現在、見込み客プロファイルのアクティブ化は、特定のクラウドストレージの宛先でのみサポートされています。
+見込み客のオーディエンスを宛先に書き出して利用します。現在、特定のクラウドストレージの宛先のみが、見込み客プロファイルのアクティブ化をサポートしています。
 
 ![見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[詳細を表示](/help/destinations/ui/activate-prospect-audiences.md) クラウドストレージの宛先への見込み客のアクティブ化について
+[詳細情報](/help/destinations/ui/activate-prospect-audiences.md) クラウドストレージの宛先への見込み客のアクティブ化について。
 
 ## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 
 Real-Time CDP のパートナーデータサポートを通じて達成されるその他のユースケースを調べます。
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証していない、または以前の履歴がない訪問中に発生した場合に発生していた問題を修正しました。
-* [見込み客プロファイルと見込み客オーディエンスのアクティブ化の拡張](/help/destinations/ui/activate-prospect-audiences.md) をクリックして、宛先を選択します。
+* [パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり、ブランドの過去の履歴を持ったりすることなく、訪問中。
+* [見込み客プロファイルと見込み客オーディエンスのアクティブ化の拡張](/help/destinations/ui/activate-prospect-audiences.md) 宛先を選択します。

@@ -2,22 +2,22 @@
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API;データセットの有効化
 title: API を使用したデータセットのプロファイル更新の有効化
 type: Tutorial
-description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能を持つデータセットを有効にする方法について説明します。
+description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能によってデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1067'
-ht-degree: 92%
+ht-degree: 87%
 
 ---
 
 # API を使用したデータセットのプロファイル更新の有効化
 
-このチュートリアルでは、リアルタイム顧客プロファイルデータを更新するために、「アップサート」機能を持つデータセットを有効にするプロセスについて説明します。 これには、新しいデータセットを作成し、既存のデータセットを設定する手順が含まれます。
+このチュートリアルでは、リアルタイム顧客プロファイルデータを更新するために、「アップサート」機能によってデータセットを有効にするプロセスについて説明します。 これには、新しいデータセットを作成し、既存のデータセットを設定する手順が含まれます。
 
 >[!NOTE]
 >
->このチュートリアルで説明するワークフローは、バッチ取り込みでのみ機能します。 ストリーミング取り込みのアップサートについては、 [データ準備を使用して、リアルタイム顧客プロファイルに部分的な行更新を送信する](../../data-prep/upserts.md).
+>このチュートリアルで説明するワークフローは、バッチ取り込みでのみ機能します。 ストリーミング取得のアップサートについては、のガイドを参照してください。 [データ準備を使用したリアルタイム顧客プロファイルへの部分行の更新の送信](../../data-prep/upserts.md).
 
 ## はじめに
 
@@ -36,7 +36,7 @@ ht-degree: 92%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+に対して呼び出しを行うため [!DNL Platform] API を使用する場合、最初にを完了する必要があります。 [認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja). 認証チュートリアルを完了すると、必要な各ヘッダーの値がすべて提供されます [!DNL Experience Platform] API 呼び出し（下図を参照）。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`

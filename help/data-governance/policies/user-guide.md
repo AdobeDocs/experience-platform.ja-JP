@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI でのデータ使用ポリシーの管理
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platform ユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要について説明します。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 100%
+source-wordcount: '1768'
+ht-degree: 97%
 
 ---
 
@@ -151,7 +151,7 @@ ht-degree: 100%
 
 ![](../images/policies/select-schema-field.png)
 
-1 つ以上の同意属性を選択した後、**[!UICONTROL ポリシーのプロパティ]**&#x200B;パネルが更新され、このポリシーで許可されるプロファイルの推定数（プロファイルストア全体に対する割合を含む）が表示されます。 この推定値は、ポリシーの設定を調整すると自動的に更新されます。
+1 つ以上の同意属性を選択した後、 **[!UICONTROL ポリシープロパティ]** パネルが更新され、このポリシーで許可されるプロファイルの推定数（プロファイルストア全体に対する割合を含む）が表示されます。 この推定値は、ポリシーの設定を調整すると自動的に更新されます。
 
 ![](../images/policies/audience-preview.png)
 
