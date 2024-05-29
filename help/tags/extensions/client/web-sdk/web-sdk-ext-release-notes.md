@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
+source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
 workflow-type: tm+mt
-source-wordcount: '2024'
-ht-degree: 89%
+source-wordcount: '2096'
+ht-degree: 87%
 
 ---
 
@@ -13,6 +13,21 @@ ht-degree: 89%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
+
+## バージョン 2.23.1 - 2024年5月28日（PT）
+
+**新機能**
+
+* をサポートするようになりました [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) コンポーネントを拡張機能の設定で使用できます。
+* さんがを追加しました [`Send Media Event`](action-types.md#send-media-event) のアクション [!DNL Streaming Media Collection] 機能。
+* さんがを追加しました [`Media: Quality of Experience`](data-element-types.md#quality-experience) のデータ要素 [!DNL Streaming Media Collection] 機能。
+
+Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます。
+
+**修正点および改善点**
+
+* でデータ要素を検索する際に発生していたエラーを修正しました [変数を更新](action-types.md#update-variable) アクション。
+* 削除済み [!UICONTROL メディア] で使用するために推奨されるイベントタイプのイベントタイプ `sendEvent` アクション。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
 
