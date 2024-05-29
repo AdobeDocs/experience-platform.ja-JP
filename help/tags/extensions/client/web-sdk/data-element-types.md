@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能のデータ要素タイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なデータ要素タイプについて説明します。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
+source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 6%
+source-wordcount: '653'
+ht-degree: 5%
 
 ---
 
@@ -60,6 +60,12 @@ XDM オブジェクトデータ要素を使用すると、データを XDM に�
 ![データ要素オプションを示すタグ UI の画像。](assets/variable-data-element.png)
 
 このデータ要素を作成したら、 [変数を更新](./action-types.md#update-variable) 変更するアクション。 準備が整ったら、このデータ要素を [イベントを送信](./action-types.md#send-event) データストリームにデータを送信するアクション。
+
+## メディア：エクスペリエンスの品質 {#quality-experience}
+
+A **[!UICONTROL エクスペリエンスの品質]** データ要素は、ストリーミングメディアイベントをAdobe Experience Platformに送信する場合に役立ちます。 この要素は、メディアセッションの作成時に追加できます。追加したメディアイベントには、更新されたエクスペリエンス品質データが含まれます。
+
+![エクスペリエンスの品質データ要素の作成画面を示す UI 画像。](assets/qoe-data-element.png)
 
 ## 次の手順 {#next-steps}
 
