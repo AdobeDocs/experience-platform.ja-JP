@@ -4,10 +4,10 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
 workflow-type: tm+mt
-source-wordcount: '2107'
-ht-degree: 10%
+source-wordcount: '2069'
+ht-degree: 3%
 
 ---
 
@@ -16,14 +16,14 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="ライセンス使用状況ダッシュボード"
->abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
+>abstract="ライセンス使用状況ダッシュボードを使用すると、購入したAdobe Experience Platform製品に関するインサイトを得ることができます。 ダッシュボードの概要には、製品の主要指標が表示されます。これには、各主要指標の使用状況と契約ライセンス量が含まれます。 詳細ワークスペースには、特定のサンドボックス内の各製品の指標の分類が表示されます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="ライセンス使用状況ダッシュボード"
->abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。<br><br>使用状況予測は毎月月末に更新され、6 か月先までの期間の使用状況が予測されます。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセット有効期限"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="匿名プロファイルのデータの有効期限"
+>abstract="ライセンス使用状況ダッシュボードを使用すると、購入したAdobe Experience Platform製品に関するインサイトを得ることができます。 ダッシュボードの概要には、製品の主要指標が表示されます。これには、各主要指標の使用状況と契約ライセンス量が含まれます。 詳細ワークスペースには、特定のサンドボックス内の各製品の指標の分類が表示されます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="データセット有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 組織のライセンス使用状況に関する重要な情報は、Adobe Experience Platformで確認できます [!UICONTROL ライセンス使用状況] ダッシュボード。 ここに表示される情報は、Platform インスタンスの毎日のスナップショット中にキャプチャされます。
 
@@ -57,7 +57,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 このダッシュボードには、ライセンスを取得したすべてのAdobe Experience Platform製品（アドオンを含む）が表形式で表示されます。 この表には、使用可能なすべてのプロファイルをまたいだライセンス使用状況に関する主要な情報が表示されます。
 
-| 列名 | 説明 |
+| 列の名前 | 説明 |
 |---|---|
 | **[!UICONTROL 製品]** | 組織でライセンスされたAdobeソリューション。 |
 | **[!UICONTROL プライマリ指標]** | その製品の内でのトラッキングに使用されるプライマリ指標。 |
@@ -154,7 +154,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 これらの指標の可用性と各指標の具体的な定義は、組織が購入したライセンスによって異なります。 各指標の定義について詳しくは、該当する製品説明ドキュメントを参照してください。
 
-| ライセンス | 製品の説明 |
+| ライセンス | 商品の説明 |
 |---|---|
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD 標準</li><li>ADOBE EXPERIENCE PLATFORM:OD ヘビー</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリサービスおよびインテリジェントサービス](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
