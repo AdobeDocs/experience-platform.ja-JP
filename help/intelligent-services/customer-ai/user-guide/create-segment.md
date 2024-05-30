@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；インサイト；顧客 AI；人気の高いトピック；顧客 AI セグメント
+keywords: Experience Platform；インサイト；顧客 ai；人気のトピック；顧客 ai セグメント
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: 予測スコアを使用した顧客セグメントの作成
-description: 予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づくオーディエンスを発見するための顧客セグメントを作成できます。ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。
+title: 予測スコアでの顧客セグメントの作成
+description: 予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づくオーディエンスを発見するための顧客セグメントを作成できます。この節では、セグメントビルダーを使用してセグメントを作成する手順を説明します。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
 workflow-type: tm+mt
 source-wordcount: '318'
-ht-degree: 78%
+ht-degree: 75%
 
 ---
 
@@ -22,22 +22,22 @@ ht-degree: 78%
 
 プラットフォーム UI で、左側のナビゲーションの「**[!UICONTROL セグメント]**」をクリックし、「**[!UICONTROL セグメント作成]**」をクリックします。
 
-![](../images/user-guide/segments.png)
+![](../images/user-guide/segments_new.png)
 
 「**セグメントビルダー**」が表示されます。左側の「**[!UICONTROL フィールド]**」列の「**[!UICONTROL 属性]**」タブで、「**[!UICONTROL XDM Individual Profile]**」という名前のフォルダーをクリックし、組織の名前空間を持つフォルダーをクリックします。「**[!UICONTROL Customer AI]**」という名前のフォルダーには、予測実行の結果が格納され、スコアが属するインスタンスに基づいて名前が付けられます。インスタンスフォルダーをクリックして、目的のインスタンスの結果にアクセスします。
 
-![](../images/user-guide/results.png)
+![](../images/user-guide/results_new.png)
 
 セグメントビルダーの中央にある「**[!UICONTROL スコア]**」属性を&#x200B;*ルールビルダーキャンバス*&#x200B;にドラッグ&amp;ドロップし、ルールを定義します。
 
 右側の&#x200B;*セグメントのプロパティ*&#x200B;列で、セグメントの名前を指定します。
 
-![](../images/user-guide/properties.png)
+![](../images/user-guide/properties_new.png)
 
-左側の上 *フィールド* 列で、 **ギア** アイコンをクリックし、 *結合ポリシー* 」をクリックします。 「**[!UICONTROL 保存]**」をクリックしてセグメントを作成します。
+左手の上に *フィールド* 列で、 **歯車** アイコンをクリックして *結合ポリシー* ドロップダウンから。 「**[!UICONTROL 保存]**」をクリックしてセグメントを作成します。
 
-![](../images/user-guide/merge_policy.png)
+![](../images/user-guide/merge_policy_new.png)
 
 ## 次の手順
 
-このチュートリアルでは、セグメントビルダーを使用して、傾向スコアに基づくオーディエンスを見つけることができました。 これで、オーディエンスを宛先にアクティブ化することでターゲットに設定できます。詳しくは、「[宛先の概要](../../../destinations/home.md)」を参照してください。
+このチュートリアルに従うと、セグメントビルダーを使用して、傾向スコアに基づいたオーディエンスを正常に見つけることができます。 これで、オーディエンスを宛先にアクティブ化することでターゲットに設定できます。詳しくは、「[宛先の概要](../../../destinations/home.md)」を参照してください。
