@@ -2,7 +2,7 @@
 description: Destination SDK で作成された宛先に対するオーディエンスメタデータ設定の設定方法を説明します。
 title: オーディエンスメタデータ設定
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 90%
@@ -15,7 +15,7 @@ Experience Platform から宛先にデータを書き出す場合、特定のオ
 
 Destination SDK には、宛先プラットフォームのオーディエンスをプログラムで作成、更新または削除するのに使用できるツールが用意されています。
 
-Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したストリーミング先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration).
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、の図を参照してください。 [設定オプション](../configuration-options.md) の方法については、ドキュメントを参照してください。 [Destination SDKを使用したストリーミングの宛先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 `/authoring/audience-templates` エンドポイントを介してオーディエンスメタデータテンプレートを設定できます。オーディエンスメタデータ設定を作成したら、`/authoring/destinations` エンドポイントを使用して、`audienceMetadataConfig` セクションを設定できます。このセクションは、オーディエンステンプレートにマッピングする必要があるオーディエンスメタデータを宛先に指示します。
 
@@ -57,7 +57,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 | `mapExperiencePlatformSegmentName` | ブール値 | 宛先アクティベーションワークフローの[[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 値が Experience Platform オーディエンス名である必要があるかどうかを示します。 |
 | `mapExperiencePlatformSegmentId` | ブール値 | 宛先アクティベーションワークフローの[[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 値が Experience Platform オーディエンス ID である必要があるかどうかを示します。 |
 | `mapUserInput` | ブール値 | 宛先アクティベーションワークフローの[[!UICONTROL マッピング ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 値に対するユーザー入力を有効または無効にします。`true` に設定すると、`audienceTemplateId` は存在できません。 |
-| `audienceTemplateId` | ブール値 | 宛先に使用される[オーディエンスメタデータテンプレート](../../metadata-api/create-audience-template.md)の `instanceId`。 |
+| `audienceTemplateId` | 文字列 | 宛先に使用される[オーディエンスメタデータテンプレート](../../metadata-api/create-audience-template.md)の `instanceId`。 |
 
 {style="table-layout:auto"}
 

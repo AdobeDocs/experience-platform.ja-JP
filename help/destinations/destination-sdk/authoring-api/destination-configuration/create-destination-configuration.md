@@ -2,7 +2,7 @@
 description: Adobe Experience Platform Destination SDK を通じて宛先設定を作成するための API 呼び出しの構築方法を説明します。
 title: 宛先設定の作成
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 98%
@@ -203,7 +203,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | 文字列 | カスタムフィールドをドロップダウンメニューとしてレンダリングし、ユーザーが使用できるオプションを一覧表示します。<br/><br/>これらの設定について詳しくは、[顧客データフィールド](../../functionality/destination-configuration/customer-data-fields.md)を参照してください。 |
 | `customerDataFields.default` | 文字列 | デフォルト値を `enum` リストから定義します。 |
 | `customerDataFields.pattern` | 文字列 | 必要に応じて、カスタムフィールドのパターンを適用します。正規表現を使用して、パターンを適用します。例えば、顧客 ID に数字やアンダースコアが含まれない場合は、このフィールドに「`^[A-Za-z]+$`」と入力します。<br/><br/>これらの設定について詳しくは、[顧客データフィールド](../../functionality/destination-configuration/customer-data-fields.md)を参照してください。 |
-| `uiAttributes.documentationLink` | 文字列 | 宛先用の[宛先のカタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog)にあるドキュメントページを参照します。`https://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。ここでは、`YOURDESTINATION` は宛先の名前です。Moviestar という宛先の場合、 `https://www.adobe.com/go/destinations-moviestar-en`. このリンクは、アドビが宛先をライブに設定してドキュメントが公開された後でのみ機能することに注意してください。<br/><br/>これらの設定について詳しくは、[UI 属性](../../functionality/destination-configuration/ui-attributes.md)を参照してください。![ドキュメントリンクを示す Platform UI 画像。](../../assets/authoring-api/destination-configuration/documentation-url.png "ドキュメント URL"){width="100" zoomable="yes"} |
+| `uiAttributes.documentationLink` | 文字列 | 宛先用の[宛先のカタログ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog)にあるドキュメントページを参照します。`https://www.adobe.com/go/destinations-YOURDESTINATION-en` を使用します。ここでは、`YOURDESTINATION` は宛先の名前です。Moviestar という宛先の場合、を使用します `https://www.adobe.com/go/destinations-moviestar-en`. このリンクは、アドビが宛先をライブに設定してドキュメントが公開された後でのみ機能することに注意してください。<br/><br/>これらの設定について詳しくは、[UI 属性](../../functionality/destination-configuration/ui-attributes.md)を参照してください。![ドキュメントリンクを示す Platform UI 画像。](../../assets/authoring-api/destination-configuration/documentation-url.png "ドキュメント URL"){width="100" zoomable="yes"} |
 | `uiAttributes.category` | 文字列 | Adobe Experience Platform で宛先に割り当てられたカテゴリを参照します。詳しくは、[宛先のカテゴリ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories)をお読みください。以下のいずれかの値を使用します：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。<br/><br/>これらの設定について詳しくは、[UI 属性](../../functionality/destination-configuration/ui-attributes.md)を参照してください。 |
 | `uiAttributes.connectionType` | 文字列 | 宛先に応じた接続のタイプ。サポートされている値： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | 文字列 | 宛先でサポートされているデータ書き出しのタイプを指します。API ベースの統合の場合は `Streaming` に設定し、宛先にファイルを書き出す場合は `Batch` に設定する。 |
@@ -217,7 +217,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapUserInput` | ブール値 | 宛先アクティベーションワークフローのオーディエンスマッピング ID をユーザーが入力するかどうかを制御します。 |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | ブール値 | 宛先アクティベーションワークフローのオーディエンスマッピング ID が Experience Platform のオーディエンス ID かどうかを制御します。 |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | ブール値 | 宛先アクティベーションワークフローのオーディエンスマッピング ID が Experience Platform のオーディエンス名かどうかを制御します。 |
-| `segmentMappingConfig.audienceTemplateId` | ブール値 | この宛先に使用される[オーディエンスメタデータテンプレート](../../metadata-api/create-audience-template.md)の `instanceId`。 |
+| `segmentMappingConfig.audienceTemplateId` | 文字列 | この宛先に使用される[オーディエンスメタデータテンプレート](../../metadata-api/create-audience-template.md)の `instanceId`。 |
 | `schemaConfig.profileFields` | 配列 | 上記の設定に示すように、定義済みの `profileFields` を追加する際、ユーザーは Adobe Experience Platform 属性を宛先側の定義済み属性にマッピングするオプションを選択できます。 |
 | `schemaConfig.profileRequired` | ブール値 | 上記の設定例に示すように、ユーザーが Experience Platform から宛先側のカスタム属性にプロファイル属性をマッピングできる場合、`true` を使用します。 |
 | `schemaConfig.segmentRequired` | ブール値 | 常に `segmentRequired:true` を使用します。 |
