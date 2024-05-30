@@ -1,38 +1,38 @@
 ---
 solution: Experience Platform
-title: フローサービス API を使用した宛先接続の編集
+title: Flow Service API を使用した宛先接続の編集
 type: Tutorial
-description: フローサービス API を使用して、宛先接続の様々なコンポーネントを編集する方法を説明します。
+description: Flow Service API を使用して宛先接続の様々なコンポーネントを編集する方法について説明します。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 33%
+source-wordcount: '1605'
+ht-degree: 29%
 
 ---
 
-# フローサービス API を使用した宛先接続の編集
+# Flow Service API を使用した宛先接続の編集
 
-このチュートリアルでは、宛先接続の様々なコンポーネントを編集する手順を説明します。 認証資格情報を更新する方法、書き出し場所など、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、宛先接続の様々なコンポーネントの編集手順を説明します。 を使用して、認証資格情報や書き出し場所などを更新する方法を説明します [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
-> このチュートリアルで説明する編集操作は、現在、フローサービス API を通じてのみサポートされています。
+> このチュートリアルで説明する編集操作は、現在 Flow Service API でのみサポートされています。
 
 ## はじめに {#get-started}
 
-このチュートリアルでは、有効なデータフロー ID が必要です。 有効なデータフロー ID がない場合は、 [宛先カタログ](../catalog/overview.md) そして、以下に示す手順に従います。 [宛先に接続](../ui/connect-destination.md) および [データをアクティブ化](../ui/activation-overview.md) このチュートリアルを試す前に
+このチュートリアルでは、有効なデータフロー ID が必要です。 有効なデータフロー ID がない場合は、宛先を以下から選択します [宛先カタログ](../catalog/overview.md) そして、説明されている手順に従います [宛先への接続](../ui/connect-destination.md) および [データをアクティブ化](../ui/activation-overview.md) このチュートリアルを試す前に、
 
 >[!NOTE]
 >
-> 用語 *流れ* および *データフロー* このチュートリアルでは、同じ意味で使用されます。 このチュートリアルのコンテキストでは、同じ意味を持ちます。
+> 用語 *フロー* および *データフロー* このチュートリアルでは、を同じ意味で使用します。 このチュートリアルのコンテキストでは、同じ意味を持ちます。
 
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
-* [宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。](../home.md)[!DNL Destinations]宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+* [宛先](../home.md): [!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 * [サンドボックス](../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Flow Service] API.
+次の節では、を使用してデータフローを正常に更新するために必要な追加情報を示しています [!DNL Flow Service] API です。
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -46,15 +46,15 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Experience Platform内のすべてのリソース ( [!DNL Flow Service]は、特定の仮想サンドボックスに分離されています。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソースを含む、Experience Platformのすべてのリソース [!DNL Flow Service]は、特定の仮想サンドボックスに分離されています。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->次の場合、 `x-sandbox-name` ヘッダーが指定されていない場合、リクエストは `prod` サンドボックス。
+>次の場合 `x-sandbox-name` ヘッダーが指定されていない場合、リクエストは `prod` サンドボックス。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
+ペイロードを含むすべてのリクエスト （`POST`, `PUT`, `PATCH`）には、追加のメディアタイプヘッダーが必要です。
 
 * `Content-Type: application/json`
 
@@ -64,7 +64,7 @@ Experience Platform内のすべてのリソース ( [!DNL Flow Service]は、特
 
 >[!TIP]
 >
->Experience PlatformUI を使用して、宛先の目的のデータフロー ID を取得できます。 に移動します。 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]**&#x200B;をクリックし、目的の宛先データフローを選択し、右側のパネルで宛先 ID を見つけます。 宛先 ID は、次の手順でフロー ID として使用する値です。
+>Experience PlatformUI を使用して、宛先の目的のデータフロー ID を取得できます。 に移動 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]**&#x200B;を選択し、目的の宛先データフローを選択して、右側のパネルで宛先 ID を見つけます。 宛先 ID は、次の手順でフロー ID として使用する値です。
 >
 > ![Experience PlatformUI を使用した宛先 ID の取得](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -95,7 +95,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、バージョン、一意の識別子 (`id`)、およびその他の関連情報。 このチュートリアルで最も関連性の高いのは、以下の応答で強調表示されているターゲット接続とベース接続 ID です。 次の節でこれらの ID を使用して、宛先接続の様々なコンポーネントを更新します。
+リクエストが成功した場合は、バージョンや一意の ID （`id`）、およびその他の関連情報。 このチュートリアルで最も関連するのは、以下の応答でハイライト表示されているターゲット接続 ID とベース接続 ID です。 次の節では、これらの ID を使用して、宛先接続の様々なコンポーネントを更新します。
 
 ```json {line-numbers="true" start-line="1" highlight="27,38"}
 {
@@ -173,21 +173,23 @@ curl -X GET \
 
 >[!ENDSHADEBOX]
 
-## ターゲット接続コンポーネント（ストレージの場所と他のコンポーネント）を編集 {#patch-target-connection}
+## ターゲット接続コンポーネント （ストレージの場所およびその他のコンポーネント）の編集 {#patch-target-connection}
 
-ターゲット接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] の宛先を指定する場合、ファイルが書き出されるバケットとパスを更新できます。 の場合 [!DNL Pinterest] の宛先を更新するには、 [!DNL Pinterest Advertiser ID] そして [!DNL Google Customer Match] 以下を更新します。 [!DNL Pinterest Account ID].
+ターゲット接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] 宛先を使用すると、ファイルの書き出し先のバケットとパスを更新できます。 の場合 [!DNL Pinterest] の宛先、を更新できます [!DNL Pinterest Advertiser ID] および [!DNL Google Customer Match] を更新できます [!DNL Pinterest Account ID].
 
-ターゲット接続のコンポーネントを更新するには、 `/targetConnections/{TARGET_CONNECTION_ID}` エンドポイントを使用して、ターゲット接続 ID、バージョンおよび使用する新しい値を指定します。 前の手順で、目的の宛先に対する既存のデータフローを調べた際に、ターゲット接続 ID を取得したことを忘れないでください。
+ターゲット接続のコンポーネントを更新するには、次の手順を実行します `PATCH` に対するリクエスト `/targetConnections/{TARGET_CONNECTION_ID}` ターゲット接続 ID、バージョン、使用したい新しい値を指定する際にエンドポイントに移動します。 前の手順で、目的の宛先に対する既存のデータフローを調べた際に、ターゲット接続 ID を取得しました。
 
 >[!IMPORTANT]
 >
->`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新するターゲット接続の一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>この `If-Match` ヘッダーは、 `PATCH` リクエスト。 このヘッダーの値は、更新するターゲット接続の一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
-> 最新バージョンの etag 値を取得するには、に対してGETリクエストを実行します。 `/targetConnections/{TARGET_CONNECTION_ID}` endpoint，ここで `{TARGET_CONNECTION_ID}` は、更新しようとしているターゲット接続 ID です。
+> etag 値の最新バージョンを取得するには、に対してGETリクエストを実行します。 `/targetConnections/{TARGET_CONNECTION_ID}` エンドポイント `{TARGET_CONNECTION_ID}` は、更新するターゲット接続 ID です。
+>
+> 必ずの値をラップしてください。 `If-Match` 以下の例のように、を作成する際に二重引用符で囲んだヘッダー `PATCH` リクエスト。
 
-次に、様々なタイプの宛先のターゲット接続仕様のパラメーターを更新する例をいくつか示します。 ただし、宛先のパラメーターを更新する一般的なルールは次のとおりです。
+様々なタイプの宛先に対して、ターゲット接続仕様のパラメーターを更新する例を以下に示します。 ただし、宛先のパラメーターを更新するための一般的なルールは次のとおりです。
 
-接続のデータフロー ID を取得し、ターゲット接続 ID を取得して、目的のパラメーターの更新された値を使用してターゲット接続をPATCHします。
+接続のデータフロー ID を取得/ ターゲット接続 ID を取得/ `PATCH` 目的のパラメーターの更新値を含むターゲット接続。
 
 >[!BEGINSHADEBOX]
 
@@ -203,7 +205,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 **リクエスト**
 
-次のリクエストは、 `bucketName` および `path` のパラメーター [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 宛先接続。
+次のリクエストは、 `bucketName` および `path` パラメーター： [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 宛先接続。
 
 ```shell
 curl -X PATCH \
@@ -233,7 +235,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、ターゲット接続 ID と更新された Etag を返します。 更新を検証するには、 [!DNL Flow Service] API を使用してターゲット接続 ID を指定します。
+正常な応答では、ターゲット接続 ID と更新された Etag が返されます。 に対してGETリクエストを実行すると、更新を確認できます。 [!DNL Flow Service] API、ターゲット接続 ID を指定する際に使用します。
 
 ```json
 {
@@ -242,11 +244,11 @@ curl -X PATCH \
 }
 ```
 
->[!TAB Google Ad Manager とGoogle Ad Manager 360]
+>[!TAB Google Ad Manager およびGoogle Ad Manager 360]
 
 **リクエスト**
 
-次のリクエストは、 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) または [[!DNL Google Ad Manager 360] 宛先](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 新しい [**[!UICONTROL オーディエンス名にオーディエンス ID を追加する]**](/help/release-notes/2023/april-2023.md#destinations) フィールドに入力します。
+次のリクエストは、のパラメーターを更新します [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) または [[!DNL Google Ad Manager 360] 宛先](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 新しいを追加するための接続 [**[!UICONTROL オーディエンス ID をオーディエンス名に追加]**](/help/release-notes/2023/april-2023.md#destinations) フィールド。
 
 ```shell
 curl -X PATCH \
@@ -273,7 +275,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、ターゲット接続 ID と更新された etag を返します。 更新を検証するには、 [!DNL Flow Service] API を使用してターゲット接続 ID を指定します。
+正常な応答は、ターゲット接続 ID と更新された etag を返します。 に対してGETリクエストを実行すると、更新を確認できます。 [!DNL Flow Service] API、ターゲット接続 ID を指定する際に使用します。
 
 ```json
 {
@@ -286,7 +288,7 @@ curl -X PATCH \
 
 **リクエスト**
 
-次のリクエストは、 `advertiserId` のパラメーター [[!DNL Pinterest] 宛先接続](/help/destinations/catalog/advertising/pinterest.md#parameters).
+次のリクエストは、 `advertiserId` パラメーター [[!DNL Pinterest] 宛先接続](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
@@ -315,7 +317,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、ターゲット接続 ID と更新された etag を返します。 更新を検証するには、 [!DNL Flow Service] API を使用してターゲット接続 ID を指定します。
+正常な応答は、ターゲット接続 ID と更新された etag を返します。 に対してGETリクエストを実行すると、更新を確認できます。 [!DNL Flow Service] API、ターゲット接続 ID を指定する際に使用します。
 
 ```json
 {
@@ -328,23 +330,25 @@ curl -X PATCH \
 
 >[!ENDSHADEBOX]
 
-## 基本接続コンポーネント（認証パラメーターおよび他のコンポーネント）の編集 {#patch-base-connection}
+## ベース接続コンポーネント（認証パラメーターおよびその他のコンポーネント）の編集 {#patch-base-connection}
 
-宛先の資格情報を更新する場合は、ベース接続を編集します。 ベース接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] の宛先の場合、アクセスキーと秘密鍵を [!DNL Amazon S3] 場所。
+宛先の資格情報を更新する場合は、ベース接続を編集します。 ベース接続のコンポーネントは、宛先によって異なります。 例： [!DNL Amazon S3] の宛先に割り当てます。アクセスキーと秘密鍵を [!DNL Amazon S3] 場所。
 
-ベース接続のコンポーネントを更新するには、 `/connections` エンドポイントを使用して、基本接続 ID、バージョンおよび使用する新しい値を指定します。
+ベース接続のコンポーネントを更新するには、 `PATCH` に対するリクエスト `/connections` ベース接続 ID、バージョン、使用したい新しい値を指定する際にエンドポイントに移動します。
 
-ベース接続 ID は [前の手順](#look-up-dataflow-details)（既存のデータフローを目的の宛先に対してパラメーターを調べた場合） `baseConnection`.
+ベース接続 ID はにあります。 [前の手順](#look-up-dataflow-details)：パラメーターの目的の宛先に対する既存のデータフローを調べた場合 `baseConnection`.
 
 >[!IMPORTANT]
 >
->`If-Match` ヘッダーは、PATCH リクエストを行う際に必要です。このヘッダーの値は、更新するベース接続の一意のバージョンです。 etag 値は、データフロー、ベース接続などのフローエンティティが正常に更新されるたびに更新されます。
+>この `If-Match` ヘッダーは、 `PATCH` リクエスト。 このヘッダーの値は、更新するベース接続の一意のバージョンです。 etag の値は、データフロー、ベース接続など、フローエンティティが正常に更新されるたびに更新されます。
 >
-> 最新バージョンの Etag 値を取得するには、に対してGETリクエストを実行します。 `/connections/{BASE_CONNECTION_ID}` endpoint，ここで `{BASE_CONNECTION_ID}` は、更新しようとしているベース接続 ID です。
+> Etag 値の最新バージョンを取得するには、に対してGETリクエストを実行します。 `/connections/{BASE_CONNECTION_ID}` エンドポイント `{BASE_CONNECTION_ID}` は、更新するベース接続 ID です。
+>
+> 必ずの値をラップしてください。 `If-Match` 以下の例のように、を作成する際に二重引用符で囲んだヘッダー `PATCH` リクエスト。
 
-様々なタイプの宛先のベース接続仕様のパラメーターを更新する例を以下にいくつか示します。 ただし、宛先のパラメーターを更新する一般的なルールは次のとおりです。
+様々なタイプの宛先に対して、ベース接続仕様のパラメーターを更新する例を以下に示します。 ただし、宛先のパラメーターを更新するための一般的なルールは次のとおりです。
 
-接続のデータフロー ID を取得し、ベース接続 ID を取得して、必要なパラメーターの更新された値を使用してベース接続をPATCHします。
+接続のデータフロー ID を取得/ ベース接続 ID を取得/ `PATCH` 目的のパラメーターの更新値を含むベース接続。
 
 >[!BEGINSHADEBOX]
 
@@ -360,7 +364,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 **リクエスト**
 
-次のリクエストは、 `accessId` および `secretKey` のパラメーター [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 宛先接続。
+次のリクエストは、 `accessId` および `secretKey` パラメーター： [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 宛先接続。
 
 ```shell
 curl -X PATCH \
@@ -390,7 +394,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答では、ベース接続 ID と更新された etag が返されます。更新を検証するには、 [!DNL Flow Service] API と呼ばれ、ベース接続 ID を指定します。
+正常な応答では、ベース接続 ID と更新された etag が返されます。に対してGETリクエストを実行すると、更新を確認できます。 [!DNL Flow Service] API、ベース接続 ID を提供している間。
 
 ```json
 {
@@ -403,7 +407,7 @@ curl -X PATCH \
 
 **リクエスト**
 
-次のリクエストは、 [[!DNL Azure Blob] 宛先](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) 接続を使用して Azure Blob インスタンスへの接続に必要な接続文字列を更新します。
+次のリクエストは、のパラメーターを更新します [[!DNL Azure Blob] 宛先](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) azure Blob インスタンスへの接続に必要な接続文字列を更新するための接続。
 
 ```shell
 curl -X PATCH \
@@ -432,7 +436,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答では、ベース接続 ID と更新された etag が返されます。更新を検証するには、 [!DNL Flow Service] API と呼ばれ、ベース接続 ID を指定します。
+正常な応答では、ベース接続 ID と更新された etag が返されます。に対してGETリクエストを実行すると、更新を確認できます。 [!DNL Flow Service] API、ベース接続 ID を提供している間。
 
 ```json
 {
@@ -447,8 +451,8 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](/help/landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors) エラー応答の解釈について詳しくは、『 Platform トラブルシューティングガイド』を参照してください。
+このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 こちらを参照してください [API ステータスコード](/help/landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors) エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドを参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、 [!DNL Flow Service] API. 宛先について詳しくは、 [宛先の概要](../home.md).
+このチュートリアルでは、を使用して宛先接続の様々なコンポーネントを更新する方法を学びました [!DNL Flow Service] API です。 宛先について詳しくは、 [宛先の概要](../home.md).

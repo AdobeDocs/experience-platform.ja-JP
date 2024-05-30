@@ -4,10 +4,10 @@ title: Flow Service API を使用して、ファイルベースの宛先に対�
 description: Flow Service API を使用して、認定プロファイルを含むファイルをクラウドストレージ宛先に書き出す方法を説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
 workflow-type: tm+mt
-source-wordcount: '4404'
-ht-degree: 10%
+source-wordcount: '4760'
+ht-degree: 9%
 
 ---
 
@@ -81,7 +81,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 >
 >[!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
+ペイロードを含むすべてのリクエスト （`POST`, `PUT`, `PATCH`）には、追加のメディアタイプヘッダーが必要です。
 
 * Content-Type: `application/json`
 
@@ -4454,7 +4454,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-最後に、作成したマッピングセットPATCHを使用して、データフローを設定する必要があります。
+最後に、以下を行う必要があります `PATCH` 作成したマッピングセット情報を含むデータフロー。
 
 >[!BEGINSHADEBOX]
 
@@ -4504,11 +4504,88 @@ Flow Service API からの応答は、更新されたデータフローの ID �
 
 ![ユーザーがオンになっている現在の手順をハイライト表示するオーディエンスをアクティブ化する手順](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-データフローを更新するには、 `PATCH` 操作。例えば、必須キーまたは重複排除キーとしてフィールドを選択するようにデータフローを更新できます。
+データフローを更新するには、 `PATCH` 操作。 例えば、データフローにマーケティングアクションを追加できます。 または、データフローを更新して、フィールドを必須キーまたは重複排除キーとして選択できます。
+
+### マーケティングアクションの追加 {#add-marketing-action}
+
+を追加します [マーケティングアクション](/help/data-governance/api/marketing-actions.md)。以下のリクエストと応答の例を参照してください。
+
+>[!IMPORTANT]
+>
+>この `If-Match` ヘッダーは、 `PATCH` リクエスト。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>
+> etag 値の最新バージョンを取得するには、に対してGETリクエストを実行します。 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイント `{ID}` は、更新するデータフロー ID です。
+>
+> 必ずの値をラップしてください。 `If-Match` 以下の例のように、を作成する際に二重引用符で囲んだヘッダー `PATCH` リクエスト。
+
+>[!BEGINSHADEBOX]
+
+**リクエスト**
+
+>[!TIP]
+>
+>マーケティングアクションをデータフローに追加する前に、既存のコアマーケティングアクションとカスタムマーケティングアクションを検索できます。 表示 [既存のマーケティングアクションのリストの取得方法](/help/data-governance/api/marketing-actions.md#list).
+
++++宛先データフローへのマーケティングアクションの追加 – リクエスト
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+   {
+      "op":"add",
+      "path":"/policy",
+      "value":{
+         "enforcementRefs":[
+            
+         ]
+      }
+   },
+   {
+      "op":"add",
+      "path":"/policy/enforcementRefs/-",
+      "value":"/dulepolicy/marketingActions/custom/6b935bc8-bb9e-451b-a327-0ffddfb91e66/constraints"
+   }
+]'
+```
+
++++
+
+
+**応答**
+
++++マーケティングアクションの追加 – 応答
+
+応答が成功すると、応答コードが返されます `200` さらに、更新されたデータフローの ID および更新された eTag。
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 ### 必須キーを追加 {#add-mandatory-key}
 
-を追加します [必須キー](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)。以下のリクエストと応答の例を参照してください
+を追加します [必須キー](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)。以下のリクエストと応答の例を参照してください。
+
+>[!IMPORTANT]
+>
+>この `If-Match` ヘッダーは、 `PATCH` リクエスト。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>
+> etag 値の最新バージョンを取得するには、に対してGETリクエストを実行します。 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイント `{ID}` は、更新するデータフロー ID です。
+>
+> 必ずの値をラップしてください。 `If-Match` 以下の例のように、を作成する際に二重引用符で囲んだヘッダー `PATCH` リクエスト。
 
 >[!BEGINSHADEBOX]
 
@@ -4517,12 +4594,13 @@ Flow Service API からの応答は、更新されたデータフローの ID �
 +++ID を必須フィールドとして追加 – リクエスト
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4540,12 +4618,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++XDM 属性を必須フィールドとして追加 – リクエスト
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4579,6 +4658,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 を追加します [重複排除キー](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)。以下のリクエストと応答の例を参照してください
 
+>[!IMPORTANT]
+>
+>この `If-Match` ヘッダーは、 `PATCH` リクエスト。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>
+> etag 値の最新バージョンを取得するには、に対してGETリクエストを実行します。 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイント `{ID}` は、更新するデータフロー ID です。
+>
+> 必ずの値をラップしてください。 `If-Match` 以下の例のように、を作成する際に二重引用符で囲んだヘッダー `PATCH` リクエスト。
+
 >[!BEGINSHADEBOX]
 
 **リクエスト**
@@ -4586,12 +4673,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++ID を重複排除キーとして追加 – リクエスト
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4612,12 +4700,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++XDM 属性を重複排除キーとして追加 – リクエスト
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
