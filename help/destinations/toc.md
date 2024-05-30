@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 88%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 88%
    * [Flow Service API を使用して、ファイルベースの宛先に対するデータをアクティブ化する](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でファイルベースのメールマーケティングの宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
-   * [（ベータ版）アドホックなアクティベーション API を介してバッチ宛先に対してオーディエンスをアクティブ化する](./api/ad-hoc-activation-api.md)
+   * [アドホックアクティベーション API を介して、バッチ宛先に対するオーディエンスをアクティブ化します。](./api/ad-hoc-activation-api.md)
    * [宛先の編集](./api/edit-destination.md)
    * [宛先データフローの更新](./api/update-destination-dataflows.md)
    * [宛先アカウントの削除](./api/delete-destination-account.md)
