@@ -1,12 +1,10 @@
 ---
 title: スキーマエディターのフィールドベースのワークフロー
 description: 既存のフィールドグループのフィールドを Experience Data Model （XDM）スキーマに個別に追加する方法を説明します。
-hide: true
-hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: b224783922c3b6c5e2045134be2512748ca2575b
+source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1301'
 ht-degree: 0%
 
 ---
@@ -31,41 +29,41 @@ Adobe Experience Platformは、標準化された堅牢なセットを提供し�
 >
 >標準フィールドグループからフィールドを削除すると、作業中のスキーマにのみ影響し、フィールドグループ自体には影響しません。 1 つのスキーマで標準フィールドを削除しても、それらのフィールドは、同じフィールドグループを使用する他のすべてのスキーマで引き続き使用できます。
 
-次の例では、標準フィールドグループです **[!UICONTROL 人口統計の詳細]** スキーマに追加されました。 単一のフィールド（例：）を削除するには `taxId`をクリックし、キャンバスでフィールドを選択して、を選択します **[!UICONTROL 削除]** 右側のパネルの
+次の例では、標準フィールドグループです **[!UICONTROL 人口統計の詳細]** スキーマに追加されました。 単一のフィールド（例：）を削除するには `maritalStatus`をクリックし、キャンバスでフィールドを選択して、を選択します **[!UICONTROL 削除]** 右側のパネルの
 
-![単一フィールドを削除](../images/ui/field-based-workflows/remove-single-field.png)
+![フィールドグループ、「Marital Status （配偶者の有無）」フィールド、および「削除」がハイライト表示されたスキーマエディター](../images/ui/field-based-workflows/remove-single-field.png)
 
 削除するフィールドが複数ある場合は、フィールドグループ全体を管理できます。 キャンバスでグループに属するフィールドを選択してから、を選択します **[!UICONTROL 関連フィールドを管理]** 右側のパネルの
 
-![関連フィールドを管理](../images/ui/field-based-workflows/manage-related-fields.png)
+![フィールドと関連フィールドの管理がハイライト表示されたスキーマエディター。](../images/ui/field-based-workflows/manage-related-fields.png)
 
 問題のフィールドグループの構造を示すダイアログが表示されます。 ここから、用意されているチェックボックスを使用して、必要なフィールドを選択または選択解除できます。 内容を確認して、 **[!UICONTROL 確認]**.
 
-![フィールドグループからフィールドを選択](../images/ui/field-based-workflows/select-fields.png)
+![フィールドグループ図と「確認」がハイライト表示された関連フィールドを管理ダイアログ。](../images/ui/field-based-workflows/select-fields.png)
 
 キャンバスが再び表示され、選択したフィールドのみがスキーマ構造に存在します。
 
-![追加されたフィールド](../images/ui/field-based-workflows/fields-added.png)
+![新しく編集されたフィールドグループがハイライト表示されたスキーマエディター。](../images/ui/field-based-workflows/fields-added.png)
 
 ## 標準フィールドをスキーマに直接追加
 
 標準フィールドグループからスキーマに直接フィールドを追加でき、対応するフィールドグループを事前に知る必要はありません。 標準フィールドをスキーマに追加するには、プラス（**+**） アイコンが、キャンバスでスキーマ名の隣に表示されます。 An **[!UICONTROL 名称未設定フィールド]** プレースホルダーがスキーマ構造に表示されます。また、右側のパネルが更新されて、フィールドを設定するためのコントロールが表示されます。
 
-![フィールドプレースホルダー](../images/ui/field-based-workflows/root-custom-field.png)
+![ルートフィールドプレースホルダーがハイライト表示されたスキーマエディター。](../images/ui/field-based-workflows/root-custom-field.png)
 
 次の下 **[!UICONTROL フィールド名]**&#x200B;追加するフィールドの名前の入力を開始します。 クエリに一致する標準フィールドが自動的に検索され、の下に一覧表示されます **[!UICONTROL 推奨標準フィールド]**（所属するフィールドグループを含む）。
 
-![推奨標準フィールド](../images/ui/field-based-workflows/standard-field-search.png)
+![ハイライト表示されたフィールド名、およびスキーマエディターのフィールドプロパティ内に表示される推奨の標準フィールドのリスト。](../images/ui/field-based-workflows/standard-field-search.png)
 
 一部の標準フィールドは同じ名前を共有しますが、構造は元のフィールドグループによって異なる場合があります。 標準フィールドがフィールドグループ構造内の親オブジェクト内にネストされている場合、子フィールドが追加されると、親フィールドもスキーマに含まれます。
 
 プレビューアイコン（![プレビューアイコン](../images/ui/field-based-workflows/preview-icon.png)）を選択し、標準フィールドの横に表示して、フィールドグループの構造を確認し、ネストの方法をより深く理解します。 標準フィールドをスキーマに追加するには、プラスアイコン（![プラスアイコン](../images/ui/field-based-workflows/add-icon.png)）に設定します。
 
-![標準フィールドを追加](../images/ui/field-based-workflows/add-standard-field.png)
+![提案された標準フィールドの項目でハイライト表示された追加アイコン。](../images/ui/field-based-workflows/add-standard-field.png)
 
 キャンバスが更新され、スキーマに追加された標準フィールドが表示されます。これには、フィールドグループ構造内にネストされた親フィールドも含まれます。 フィールドグループの名前は、の下にもリストされます。 **[!UICONTROL フィールドグループ]** 左パネルで。 同じフィールドグループからさらにフィールドを追加する場合は、 **[!UICONTROL 関連フィールドを管理]** 右側のパネルの
 
-![追加された標準フィールド](../images/ui/field-based-workflows/standard-field-added.png)
+![フィールドグループ、標準フィールド、関連フィールドの管理がハイライト表示されたスキーマエディター。](../images/ui/field-based-workflows/standard-field-added.png)
 
 ## カスタムフィールドをスキーマに直接追加
 
@@ -73,15 +71,15 @@ Adobe Experience Platformは、標準化された堅牢なセットを提供し�
 
 スキーマのルートレベルにフィールドを追加するには、プラス（**+**） アイコンが、キャンバスでスキーマ名の隣に表示されます。 An **[!UICONTROL 名称未設定フィールド]** プレースホルダーがスキーマ構造に表示されます。また、右側のパネルが更新されて、フィールドを設定するためのコントロールが表示されます。
 
-![ルートカスタムフィールド](../images/ui/field-based-workflows/root-custom-field.png)
+![追加アイコンと名称未設定のルートレベルフィールドがハイライトされたスキーマエディター](../images/ui/field-based-workflows/root-custom-field.png)
 
 追加するフィールドの名前の入力を開始すると、一致する標準フィールドの検索が自動的に開始されます。 代わりに新しいカスタムフィールドを作成するには、が付加された上部のオプションを選択します **（[!UICONTROL 新しいフィールド]）**.
 
-![新しいフィールド](../images/ui/field-based-workflows/custom-field-search.png)
+![スキーマエディターのフィールドプロパティ内でハイライト表示されたフィールド名と新しいフィールドの提案。](../images/ui/field-based-workflows/custom-field-search.png)
 
 ここから、フィールドの表示名とデータタイプを指定します。 次の下 **[!UICONTROL フィールドグループを割り当て]**&#x200B;に関連付ける新しいフィールドのフィールドグループを選択してください。 フィールドグループの名前の入力を開始します（以前に入力したことがある場合）。 [がカスタムフィールドグループを作成しました](./resources/field-groups.md#create) これらはドロップダウンリストに表示されます。 または、フィールドに一意の名前を入力して、代わりに新しいフィールドグループを作成することもできます。
 
-![フィールドグループを選択](../images/ui/field-based-workflows/select-field-group.png)
+![スキーマエディターでハイライト表示されている「表示名」、「タイプ」および「フィールドに割り当て」プロパティ設定。](../images/ui/field-based-workflows/select-field-group.png)
 
 >[!WARNING]
 >
@@ -89,11 +87,11 @@ Adobe Experience Platformは、標準化された堅牢なセットを提供し�
 
 完了したら、「**[!UICONTROL 適用]**」を選択します。
 
-![フィールドを適用](../images/ui/field-based-workflows/apply-field.png)
+![スキーマエディターのフィールドプロパティで「適用」がハイライト表示されます。](../images/ui/field-based-workflows/apply-field.png)
 
 新しいフィールドがキャンバスに追加され、の下に名前空間が設定されます。 [テナント ID](../api/getting-started.md#know-your-tenant_id) 標準 XDM フィールドとの競合を避けるために使用します。 新しいフィールドを関連付けたフィールドグループも、の下に表示されます **[!UICONTROL フィールドグループ]** 左パネルで。
 
-![テナント ID](../images/ui/field-based-workflows/tenantId.png)
+![新しいフィールドがキャンバスに追加され、テナント ID の下に名前空間が設定されたスキーマエディター。 フィールドグループとフィールドがハイライト表示されます。](../images/ui/field-based-workflows/tenantId.png)
 
 >[!NOTE]
 >
@@ -101,13 +99,15 @@ Adobe Experience Platformは、標準化された堅牢なセットを提供し�
 
 ### 標準フィールドグループの構造へのカスタムフィールドの追加
 
-作業中のスキーマに、標準フィールドグループが提供するオブジェクトタイプのフィールドがある場合、独自のカスタムフィールドを標準オブジェクトに追加できます。 プラス（**+**） アイコンをクリックし、右側のパネルでカスタムフィールドの詳細を入力します。
+作業中のスキーマに、標準フィールドグループが提供するオブジェクトタイプのフィールドがある場合、独自のカスタムフィールドを標準オブジェクトに追加できます。 プラス（**+**） アイコン（オブジェクトのルートの隣）をクリックします。
 
-![標準オブジェクトにフィールドを追加](../images/ui/field-based-workflows/add-field-to-standard-object.png)
+>[!IMPORTANT]
+>
+>1 つのスキーマのフィールドグループに追加されたフィールドは、同じフィールドグループを使用する他のすべてのスキーマにも表示されます。
 
-変更を適用すると、標準オブジェクト内のテナント ID 名前空間の下に新しいフィールドが表示されます。 このネストされた名前空間は、同じフィールドグループを使用する他のスキーマでの変更が壊れるのを防ぐために、フィールドグループ自体の中でのフィールド名の競合を防ぎます。
+![標準オブジェクトの横のプラスアイコンがハイライト表示されたスキーマエディター。](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
-![標準オブジェクトに追加されたフィールド](../images/ui/field-based-workflows/added-to-standard-object.png)
+を参照してください。 [UI ガイドでのスキーマの作成と編集](./resources/schemas.md#custom-fields-for-standard-groups) 詳しくは、カスタムフィールドの追加を参照してください。
 
 ## 次の手順
 
