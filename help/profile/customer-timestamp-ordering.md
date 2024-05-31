@@ -4,9 +4,9 @@ description: プロファイルデータの一貫性を確保するために、�
 badgePrivateBeta: label="プライベートベータ版" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # 顧客タイムスタンプの順序
 
-Adobe Experience Platformでは、プロファイルストアへのストリーミング取得を使用してデータを取り込む場合、データ順序は自動的に保証されません。 顧客タイムスタンプの順序付けを使用すると、指定された顧客タイムスタンプに従った最新のメッセージがプロファイルストアに保持されます。 その後、古いメッセージはすべて削除され、次のように処理されます **ではない** セグメント化や宛先などのプロファイルデータを使用するダウンストリームサービスで使用できます。 その結果、プロファイルデータの一貫性が保たれ、プロファイルデータとソースシステムの同期が維持されます。
+Adobe Experience Platformでは、プロファイルストアへのストリーミング取得を通じてデータを取り込む場合、デフォルトでは、データ順序が保証されるわけではありません。 顧客タイムスタンプの順序付けを使用すると、指定された顧客タイムスタンプに従った最新のメッセージがプロファイルストアに保持されます。 その後、古いメッセージはすべて削除され、次のように処理されます **ではない** セグメント化や宛先などのプロファイルデータを使用するダウンストリームサービスで使用できます。 その結果、プロファイルデータの一貫性が保たれ、プロファイルデータとソースシステムの同期が維持されます。
 
-顧客タイムスタンプの順序を有効にするには、を使用します `extSourceSystemAudit.lastUpdatedDate` 内のフィールド [外部ソースシステム監査属性データタイプ](../xdm/data-types/external-source-system-audit-attributes.md) さらに、AdobeのテクニカルアカウントマネージャーまたはAdobeカスタマーケアに、サンドボックスとデータセットに関する情報をお問い合わせください。
+顧客タイムスタンプの順序を有効にするには、を使用します `extSourceSystemAudit.lastUpdatedDate` 内のフィールド [外部ソースシステム監査属性データタイプ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) さらに、AdobeのテクニカルアカウントマネージャーまたはAdobeカスタマーケアに、サンドボックスとデータセットに関する情報をお問い合わせください。
 
 ## 制約
 
@@ -30,7 +30,7 @@ Adobe Experience Platformでは、プロファイルストアへのストリー�
 - この `extSourceSystemAudit.lastUpdatedDate` フィールド **が** ～に入っている [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) 形式。 ISO 8601 形式を使用する場合、 **が** 形式では完全な日時として指定します `yyyy-MM-ddTHH:mm:ss.sssZ` （例： `2028-11-13T15:06:49.001Z`）に設定します。
 - 取り込まれたデータのすべての行 **が** contain `extSourceSystemAudit.lastUpdatedDate` 最上位のフィールドグループとしてのフィールド。 このフィールドは **が** xdm スキーマ内にネストしないでください。 このフィールドがないか、形式が正しくない場合、不正なレコードは次のようになります。 **ではない** を取り込むと、対応するエラーメッセージが送信されます。
 - 顧客のタイムスタンプ順序が有効になっているデータセット **が** 以前に取り込んだデータを含まない新しいデータセットにする。
-- 特定のプロファイルフラグメントで、より新しい `extSourceSystemAudit.lastUpdatedDate` は取り込まれます。 行に最新のが含まれていない場合 `extSourceSystemAudit.lastUpdatedDate`その場合、行は破棄されます。
+- 特定のプロファイルフラグメントで、より新しい `extSourceSystemAudit.lastUpdatedDate` は取り込まれます。 を含む行 `extSourceSystemAudit.lastUpdatedDate` その年齢より古い場合や、同じ年齢の場合は破棄されます。
 
 ## レコメンデーション
 
