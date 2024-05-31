@@ -4,7 +4,7 @@ description: プロファイルデータの一貫性を確保するために、�
 badgePrivateBeta: label="プライベートベータ版" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
+source-git-commit: dffbdafc3f063906c8c8fb648ace59b2f1aedab8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platformでは、プロファイルストアへのストリーミング取得を通じてデータを取り込む場合、デフォルトでは、データ順序が保証されるわけではありません。 顧客タイムスタンプの順序付けを使用すると、指定された顧客タイムスタンプに従った最新のメッセージがプロファイルストアに保持されます。 その後、古いメッセージはすべて削除され、次のように処理されます **ではない** セグメント化や宛先などのプロファイルデータを使用するダウンストリームサービスで使用できます。 その結果、プロファイルデータの一貫性が保たれ、プロファイルデータとソースシステムの同期が維持されます。
 
-顧客タイムスタンプの順序を有効にするには、を使用します `extSourceSystemAudit.lastUpdatedDate` 内のフィールド [外部ソースシステム監査属性データタイプ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) さらに、AdobeのテクニカルアカウントマネージャーまたはAdobeカスタマーケアに、サンドボックスとデータセットに関する情報をお問い合わせください。
+顧客タイムスタンプの順序を有効にするには、を使用します `extSourceSystemAudit.lastUpdatedDate` 内のフィールド [「外部ソースシステム監査属性」フィールドグループ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) さらに、AdobeのテクニカルアカウントマネージャーまたはAdobeカスタマーケアに、サンドボックスとデータセットに関する情報をお問い合わせください。
 
 ## 制約
 
