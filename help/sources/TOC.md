@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
-user-guide-description: 様々なソースからデータを取り込みます。既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
+user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 94%
+source-wordcount: '1043'
+ht-degree: 95%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 94%
          - [Marketo Engage コネクタ](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage 認証ガイド](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B 名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [ECID マッピング移行ガイド](connectors/adobe-applications/marketo/migration.md)
    - 広告 {#advertising}
       - [Google Ads コネクタ](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
@@ -93,9 +94,9 @@ ht-degree: 94%
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
       - [Teradata Vantage コネクタ](connectors/databases/teradata-vantage.md)
    - データおよび ID パートナー {#data-partner}
-      - [Acxiom のデータ取り込み](connectors/data-partners/acxiom-data-ingestion.md)
-      - [Acxiom Prospecting データ・インポート](connectors/data-partners/acxiom-prospecting-data-import.md)
-      - [Merkury エンタープライズ Id 解決](connectors/data-partners/merkury.md)
+      - [Acxiom データ取り込み](connectors/data-partners/acxiom-data-ingestion.md)
+      - [Acxiom プロスペクティングデータの読み込み](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Merkury エンタープライズ ID 解決](connectors/data-partners/merkury.md)
    - e コマース {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -103,7 +104,7 @@ ht-degree: 94%
    - ローカルシステム {#local-system}
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
    - マーケティングの自動処理 {#marketing-automation}
-      - [ブレーズ電流](connectors/marketing-automation/braze.md)
+      - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot コネクタ](connectors/marketing-automation/hubspot.md)
@@ -175,7 +176,7 @@ ht-degree: 94%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
-         - [Snowflakeストリーミング](tutorials/api/create/databases/snowflake-streaming.md)
+         - [Snowflake ストリーミング](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -301,12 +302,12 @@ ht-degree: 94%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
-         - [Snowflakeストリーミング](tutorials/ui/create/databases/snowflake-streaming.md)
+         - [Snowflake ストリーミング](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - データおよび ID パートナー {#data-partner}
-         - [Acxiom のデータ取り込み](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
-         - [Acxiom Prospecting データ・インポート](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
-         - [Merkury エンタープライズ Id 解決](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom データ取り込み](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
+         - [Acxiom プロスペクティングデータの読み込み](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Merkury エンタープライズ ID 解決](tutorials/ui/create/data-partners/merkury.md)
       - e コマース {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -314,7 +315,7 @@ ht-degree: 94%
       - ローカルシステム {#local-system}
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
       - マーケティングの自動処理 {#marketing-automation}
-         - [ブレーズ電流](tutorials/ui/create/marketing-automation/braze.md)
+         - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)

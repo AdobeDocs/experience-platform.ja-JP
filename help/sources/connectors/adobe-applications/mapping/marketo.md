@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage ソースのマッピングフィールド
 description: Marketo データセットのフィールドとそれに対応する XDM フィールドとのマッピングを次の表に示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 100%
+source-wordcount: '890'
+ht-degree: 94%
 
 ---
 
@@ -23,7 +23,11 @@ ht-degree: 100%
 
 [!DNL Marketo] ソースでは、追加の標準アクティビティをサポートするようになりました。 標準のアクティビティを使用するには、[スキーマ自動生成ユーティリティ](../marketo/marketo-namespaces.md)を使用してスキーマを更新する必要があります。スキーマを更新せずに新しい `activities` データフローを作成すると、新しいターゲットフィールドがスキーマに存在しないので、マッピングテンプレートが機能しなくなるからです。スキーマの更新を選択しない場合でも、新しいデータフローを作成しエラーを解除できます。 ただし、新しいフィールドや更新されたフィールドは、Platform には取り込まれません。
 
-XDM クラスと XDM フィールドについて詳しくは、[XDM エクスペリエンスイベントクラス](../../../../xdm/classes/experienceevent.md)に関するドキュメントを参照してください。
+のドキュメントを参照してください。 [XDM Experience Event クラス](../../../../xdm/classes/experienceevent.md) xdm クラスと XDM フィールドグループについて詳しくは、こちらを参照してください。
+
+>[!NOTE]
+>
+>この `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` ソースフィールドは、 **[!UICONTROL 計算フィールドを追加]** Experience PlatformUI の「」オプション。 チュートリアルを読む [計算フィールドの追加](../../../../data-prep/ui/mapping.md#calculated-fields) を参照してください。
 
 | ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |
@@ -127,6 +131,7 @@ XDM クラスと XDM フィールドについて詳しくは、[XDM エクスペ
 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
+| `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` | `identityMap` | これは計算フィールドです。 |
 
 {style="table-layout:auto"}
 
@@ -402,16 +407,11 @@ XDM クラスについて詳しくは、[XDM 個人プロファイルの概要](
 | `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | これは計算フィールドです。 |
 | `marketoIsDeleted` | `isDeleted` |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | これは計算フィールドです。 |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | これは計算フィールドです。 |
 
 {style="table-layout:auto"}
-
->[!NOTE]
->
->`to_object('ECID',arrays_to_objects('id',explode(ecids)))` ソースフィールドは、Platform UI の「[!UICONTROL 計算フィールドを追加] 」オプションを使用して追加する必要がある計算フィールドです。詳しくは、[計算フィールドの追加](../../../../data-prep/ui/mapping.md#calculated-fields)に関するチュートリアルを参照してください。
 
 ## 次の手順
 
