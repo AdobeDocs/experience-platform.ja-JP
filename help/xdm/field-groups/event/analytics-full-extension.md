@@ -1,11 +1,11 @@
 ---
 title: Adobe Analytics ExperienceEvent 完全拡張スキーマフィールドグループ
-description: Adobe Analytics ExperienceEvent Full Extension スキーマフィールドグループについて説明します。
+description: Adobe Analytics ExperienceEvent 完全拡張スキーマフィールドグループについて説明します。
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
 workflow-type: tm+mt
 source-wordcount: '811'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->このフィールドグループ内で繰り返される要素のサイズと数のため、このガイドで示される多くのフィールドは、スペースを節約するために折りたたまれています。このフィールドグループの完全な構造を見るには、次の操作を行います。 [Platform UI で参照する](../../ui/explore.md) または、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>このフィールドグループ内で繰り返される要素のサイズと数のため、このガイドで示される多くのフィールドは、スペースを節約するために折りたたまれています。このフィールドグループの完全な構造を見るには、次の操作を実行します [platform UI での検索](../../ui/explore.md) または、でスキーマ全体を表示します。 [公開 XDM リポジトリ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## フィールドグループ構造
 
