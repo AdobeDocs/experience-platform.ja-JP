@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
+source-git-commit: e96477882beceb6e370d53df3cc65e8dfb28745f
 workflow-type: tm+mt
-source-wordcount: '2096'
-ht-degree: 87%
+source-wordcount: '2158'
+ht-degree: 86%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 87%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
+
+## バージョン 2.23.2 - 2024年6月3日（PT）
+
+**修正点および改善点**
+
+* 設定の上書きが定義されている場合に、拡張機能の設定を変更する際に発生していたエラーを修正しました。
+* メディアコレクションの ping 間隔に空の値を設定することを許可します。
+* 変数の更新アクションを変更する際に発生していたエラーを修正しました。
+* 設定の上書きで ID 同期コンテナのリセットを許可します。
+
+Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます。
 
 ## バージョン 2.23.1 - 2024年5月28日（PT）
 
