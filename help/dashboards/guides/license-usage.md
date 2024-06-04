@@ -4,9 +4,9 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
+source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2101'
 ht-degree: 3%
 
 ---
@@ -24,6 +24,13 @@ ht-degree: 3%
 >abstract="ライセンス使用状況ダッシュボードを使用すると、購入したAdobe Experience Platform製品に関するインサイトを得ることができます。 ダッシュボードの概要には、製品の主要指標が表示されます。これには、各主要指標の使用状況と契約ライセンス量が含まれます。 詳細ワークスペースには、特定のサンドボックス内の各製品の指標の分類が表示されます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="データセット有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_reduction"
+>title="使用量を削減する方法"
+>abstract="使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="偽名プロファイルデータの有効期限のビデオ"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータ有効期限のドキュメント"
 
 組織のライセンス使用状況に関する重要な情報は、Adobe Experience Platformで確認できます [!UICONTROL ライセンス使用状況] ダッシュボード。 ここに表示される情報は、Platform インスタンスの毎日のスナップショット中にキャプチャされます。
 
