@@ -6,10 +6,10 @@ description: Adobe Experience Platform は、従来のリレーショナルデ�
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 47%
+source-wordcount: '1817'
+ht-degree: 46%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 47%
 >このドキュメントで概説している上限は、Real-time Customer Data Platform B2B Edition で有効になった変更内容を表しています。 Real-Time CDP B2B Edition のデフォルトの上限の詳細なリストについては、これらの上限と、に概説されているAdobe Experience Platformの一般的な上限を組み合わせてください [リアルタイム顧客プロファイルデータドキュメント用のガードレール](../profile/guardrails.md).
 
 Real-time Customer Data Platform B2B Edition を使用すると、リアルタイム顧客プロファイルおよびアカウントプロファイルの形式で、行動インサイトと顧客属性に基づいてパーソナライズされたクロスチャネルエクスペリエンスを提供できます。 プロファイルに対するこの新しいアプローチをサポートするために、Experience Platform では、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。
+
+>[!IMPORTANT]
+>
+>販売注文のライセンスの使用権限と対応するを確認します [製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html) 実際の使用制限に関して、このガードレール ページに加えて説明します。
 
 このドキュメントでは、最適なシステムパフォーマンスを得るためにデータをモデルリングする際に役立つ、デフォルトの使用方法とレートの上限について説明します。次のガードレールを確認する際は、データが正しくモデル化されていることが前提になっています。データのモデル化方法に関するご質問は、カスタマーサービス担当者にお問い合わせください。
 

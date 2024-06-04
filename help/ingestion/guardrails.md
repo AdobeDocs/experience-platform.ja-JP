@@ -3,10 +3,10 @@ keywords: Experience Platform;トラブルシューティング;ガードレー�
 title: データ取り込みのガードレール
 description: Adobe Experience Platformでのデータ取り込み用のガードレールについて説明します。
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
+source-git-commit: 7a2463e1bb09180ae7e02674d0c0040c8c874ad5
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 52%
+source-wordcount: '669'
+ht-degree: 50%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 52%
 >バッチおよびストリーミング取り込みのガードレールは、サンドボックスレベルではなく組織レベルで計算されます。 つまり、サンドボックスごとのデータ使用状況は、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスでのデータ使用は、プロファイル全体の 10% に制限されています。 ライセンス使用権限について詳しくは、を参照してください [データ管理のベストプラクティスガイド](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 ガードレールとは、Adobe Experience Platform でのデータやシステムの使用状況、パフォーマンスの最適化、エラーや予期しない結果の回避に関するガイダンスを提供するしきい値のことです。 ガードレールは、データの使用状況や消費量、ライセンスのエンタイトルメントに関連する処理方法を参照できます。
+
+>[!IMPORTANT]
+>
+>販売注文のライセンスの使用権限と対応するを確認します [製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html) 実際の使用制限に関して、このガードレール ページに加えて説明します。
 
 このドキュメントでは、Adobe Experience Platform でのデータ取り込みのガードレールに関するガイダンスを説明します。
 

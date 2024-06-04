@@ -3,16 +3,20 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 41%
+source-wordcount: '1549'
+ht-degree: 40%
 
 ---
 
 # のガードレール [!DNL Identity Service] データ
 
 このドキュメントでは、ID グラフの使用を最適化するのに役立つ [!DNL Identity Service] データの使用とレート制限について説明します。次のガードレールを確認する際は、データが正しくモデル化されていることが前提になっています。データのモデル化方法に関するご質問は、カスタマーサービス担当者にお問い合わせください。
+
+>[!IMPORTANT]
+>
+>販売注文のライセンスの使用権限と対応するを確認します [製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html) 実際の使用制限に関して、このガードレール ページに加えて説明します。
 
 ## 基本を学ぶ
 
@@ -31,8 +35,8 @@ ID データに適用される静的上限の概要を次の表に示します�
 
 | ガードレール | 上限 | メモ |
 | --- | --- | --- |
-| グラフ内の ID の数 | 50 | 50 個のリンクされた ID を持つグラフが更新されると、ID サービスは、「先入れ先出し」メカニズムを適用し、最も古い ID を削除して、このグラフの最新 ID(**注意**：リアルタイム顧客プロファイルへの影響はありません )。 削除は、ID タイプとタイムスタンプに基づいて行われます。上限は、サンドボックスレベルで適用されます。詳しくは、 [削除ロジックについて](#deletion-logic). |
-| 単一のバッチ取り込みでの ID へのリンク数 | 50 | 1 つのバッチに、望ましくないグラフ結合の原因となる、異常な ID が含まれている場合があります。 これを防ぐために、ID サービスは、既に 50 個以上の ID にリンクされている ID を取り込みません。 |
+| グラフ内の ID 数 | 50 | 50 個のリンクされた ID を含むグラフが更新されると、ID サービスは「先入れ先出し」メカニズムを適用し、最も古い ID を削除して、このグラフの最新の ID 用にスペースを確保します（**注意**：リアルタイム顧客プロファイルは影響を受けません）。 削除は、ID タイプとタイムスタンプに基づいて行われます。上限は、サンドボックスレベルで適用されます。詳しくは、の節を参照してください。 [削除ロジックについて](#deletion-logic). |
+| 単一のバッチ取り込みの ID へのリンク数 | 50 | 1 つのバッチに、不要なグラフ結合を引き起こす異常な ID が含まれている場合があります。 これを防ぐために、ID サービスは、既に 50 以上の ID にリンクされている ID を取り込みません。 |
 | XDM レコード内の ID 数 | 20 | 最低限必要な XDM レコード数は 2 です。 |
 | カスタム名前空間の数 | なし | 作成できるカスタム名前空間の数に制限はありません。 |
 | 名前空間の表示名または ID 記号の文字数 | なし | 名前空間の表示名または ID 記号の文字数に制限はありません。 |
@@ -46,7 +50,7 @@ ID 値の検証を成功させるために従う必要がある既存のルー�
 | 名前空間 | 検証ルール | ルール違反時のシステムの動作 |
 | --- | --- | --- |
 | ECID | <ul><li>ECID の ID 値はちょうど 38 文字にする必要があります。</li><li>ECID の ID 値は、数字のみで構成する必要があります。</li></ul> | <ul><li>ECID の ID 値がちょうど 38 文字でない場合、そのレコードはスキップされます。</li><li>ECID の ID 値に数字以外の文字が含まれている場合、そのレコードはスキップされます。</li></ul> |
-| ECID 以外 | <ul><li>ID 値は 1024 文字を超えることはできません。</li><li>ID 値は、「null」、「anonymous」、「invalid」、または空の文字列にできません（例：「&quot;, &quot;&quot;, &quot;&quot;」）。</li></ul> | <ul><li>ID 値が 1024 文字を超える場合、そのレコードはスキップされます。</li><li>ID の取り込みがブロックされます。</li></ul> |
+| ECID 以外 | <ul><li>ID 値は 1024 文字を超えることはできません。</li><li>ID 値には、&quot;null&quot;、&quot;anonymous&quot;、&quot;invalid&quot;や、空の文字列（&quot;&quot;、&quot;&quot;、&quot;など）を指定することはできません。</li></ul> | <ul><li>ID 値が 1024 文字を超える場合、そのレコードはスキップされます。</li><li>ID は取り込みからブロックされます。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -54,7 +58,7 @@ ID 値の検証を成功させるために従う必要がある既存のルー�
 
 2023年3月31日（PT）以降、ID サービスは、新規のお客様について Adobe Analytics ID (AAID) の取り込みをブロックします。この ID は、通常、[Adobe Analytics ソース](../sources/connectors/adobe-applications/analytics.md)と [Adobe Audience Manager ソース](../sources//connectors/adobe-applications/audience-manager.md)を通じて取り込まれ、ECID が同じ web ブラウザーを表すため冗長です。このデフォルト設定を変更する場合は、Adobe アカウントチームにお問い合わせください。
 
-## 容量の ID グラフが更新された場合の削除ロジックの理解 {#deletion-logic}
+## 処理能力の ID グラフが更新される際の削除ロジックについて {#deletion-logic}
 
 完全な ID グラフが更新されると、ID サービスは、最新の ID を追加する前に、グラフ内の最も古い ID を削除します。これは、ID データの正確性と関連性を維持するためです。この削除プロセスは、次の 2 つの主なルールに従います。
 
@@ -76,45 +80,45 @@ ID 値の検証を成功させるために従う必要がある既存のルー�
 >
 >削除するように指定された ID がグラフ内で他の複数の ID にリンクしている場合、その ID を接続するリンクも削除されます。
 
-### 実装に対する影響
+### 実装への影響
 
-以下の節では、削除ロジックが ID サービス、リアルタイム顧客プロファイル、WebSDK に与える影響について説明します。
+以下の節では、削除ロジックが ID サービス、リアルタイム顧客プロファイルおよび Web SDK に及ぼす影響について説明します。
 
-#### ID サービス：カスタム名前空間の ID タイプの変更
+#### ID サービス：カスタム名前空間 ID タイプの変更
 
-実稼働用サンドボックスに次の情報が含まれている場合は、Adobeのアカウントチームに連絡して、ID タイプの変更をリクエストしてください。
+実稼動サンドボックスに次の ID が含まれている場合は、Adobeアカウントチームに連絡して、ID タイプの変更をリクエストしてください。
 
-* ユーザー識別子（CRM ID など）を cookie/デバイス ID タイプとして設定するカスタム名前空間。
-* Cookie/デバイスの識別子をクロスデバイス ID タイプとして設定するカスタム名前空間。
+* ユーザー識別子（CRM ID など）が cookie/デバイス ID タイプとして設定されるカスタム名前空間。
+* Cookie とデバイスの識別子がクロスデバイス ID タイプとして設定されるカスタム名前空間。
 
-この機能を使用できるようになると、ID 数の上限である 50 個を超えるグラフは、最大 50 個の ID にまで減らされます。 Real-Time CDP B2C Edition では、以前はセグメント化とアクティベーションから無視されていたので、オーディエンスの資格を持つプロファイルの数が最小限に増える可能性がありました。
+この機能が使用可能になると、50 個の ID の制限を超えているグラフが最大 50 個の ID に縮小されます。 Real-Time CDP B2C Edition の場合、以前はセグメント化とアクティベーションでこれらのプロファイルが無視されていたので、これにより、オーディエンスに適合するプロファイルの数が最小限に増える可能性があります。
 
 #### リアルタイム顧客プロファイル：アドレス可能なオーディエンスへの影響
 
-削除は、リアルタイム顧客プロファイルではなく、ID サービス内のデータに対してのみ発生します。
+削除は ID サービスのデータにのみ発生し、リアルタイム顧客プロファイルには発生しません。
 
-* その結果、ECID が ID グラフの一部ではなくなったので、この動作により、1 つの ECID でより多くのプロファイルが作成される可能性があります。
-* アドレス可能なオーディエンスの権利付与番号の範囲内に留まるには、を有効にすることをお勧めします。 [偽名プロファイルデータの有効期限](../profile/pseudonymous-profiles.md) をクリックして、古いプロファイルを削除します。
+* この動作により、単一の ECID を持つプロファイルがより多く作成される可能性があります。これは、ECID が ID グラフに含まれなくなったためです。
+* アドレス可能なオーディエンスの使用権限番号の範囲内に収まるようにするには、を有効にすることをお勧めします [偽名プロファイルデータの有効期限](../profile/pseudonymous-profiles.md) 古いプロファイルを削除します。
 
-#### リアルタイム顧客プロファイルおよび WebSDK:プライマリID の削除
+#### リアルタイムプライマリプロファイルと WebSDK：顧客 ID 削除
 
-CRM ID に対する認証済みイベントを保持する場合は、プライマリ ID を ECID から CRM ID に変更することをお勧めします。 この変更の実装手順については、次のドキュメントを参照してください。
+CRM ID に対して認証済みイベントを保持する場合は、プライマリ ID を ECID から CRM ID に変更することをお勧めします。 この変更を実装する手順については、次のドキュメントを参照してください。
 
-* [Experience Platformタグの ID マップの設定](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Experience Platformタグ用の ID マップの設定](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Experience PlatformWeb SDK の ID データ](../web-sdk/identity/overview.md#using-identitymap)
 
-### シナリオの例
+### サンプルシナリオ
 
-#### 例 1：一般的な大きいグラフ
+#### 例 1：典型的な大きなグラフ
 
-*図の注意：*
+*図のメモ：*
 
-* `t` =タイムスタンプ。
-* タイムスタンプの値は、指定した ID の最新性に対応します。 例： `t1` は、最初にリンクされた id（古い ID）を表し、 `t51` は、最新のリンクされた id を表します。
+* `t` = タイムスタンプ。
+* タイムスタンプの値は、特定の ID の最新性に対応します。 例： `t1` 最初にリンクされた ID （最も古い）を表し、 `t51` は、最新のリンク ID を表します。
 
-この例では、左側のグラフを新しい ID で更新する前に、ID サービスは、最も古いタイムスタンプを持つ既存の ID を最初に削除します。 ただし、最も古い ID はデバイス ID なので、ID サービスは、削除の優先順位リストの上位のタイプの名前空間（この場合は `ecid-3`）に到達するまで、その ID をスキップします。削除の優先順位が上位のタイプの最も古い ID が削除されると、グラフは新しいリンク `ecid-51` で更新されます。
+この例では、左側のグラフを新しい ID で更新する前に、ID サービスはまず、最も古いタイムスタンプを持つ既存の ID を削除します。 ただし、最も古い ID はデバイス ID なので、ID サービスは、削除の優先順位リストの上位のタイプの名前空間（この場合は `ecid-3`）に到達するまで、その ID をスキップします。削除の優先順位が上位のタイプの最も古い ID が削除されると、グラフは新しいリンク `ecid-51` で更新されます。
 
-* まれに、タイムスタンプと ID タイプが同じ 2 つの ID がある場合、ID サービスは、 [XID](./api/list-native-id.md) 削除を実行します。
+* 同じタイムスタンプと ID タイプを持つ 2 つの ID がある場合、ID サービスは次に基づいて ID を並べ替えます [XID](./api/list-native-id.md) 削除を実行します。
 
 ![最新の ID を受け入れるために削除される最も古い ID の例](./images/graph-limits-v3.png)
 
@@ -124,58 +128,58 @@ CRM ID に対する認証済みイベントを保持する場合は、プライ�
 
 >[!TAB 受信イベント]
 
-*図の注意：*
+*図のメモ：*
 
-* 次の図は、を `timestamp=50`の場合、ID グラフに 50 個の ID が存在します。
+* 次の図は、の場所でを前提としています `timestamp=50`ID グラフには 50 個の ID が存在します。
 * `(...)` は、グラフ内で既にリンクされている他の ID を示します。
 
-この例では、ECID:32110が取り込まれ、 `timestamp=51`に設定することで、id 数が 50 個の制限を超えることになります。
+この例では、ECID:32110 が取り込まれ、で大きなグラフにリンクされています `timestamp=51`これにより、50 個の ID の制限を超えています。
 
 ![](./images/guardrails/before-split.png)
 
 >[!TAB 削除プロセス]
 
-その結果、ID サービスは、タイムスタンプと ID タイプに基づいて最も古い ID を削除します。 この場合、ECID:35577は ID グラフからのみ削除されます。
+その結果、ID サービスは、タイムスタンプと ID タイプに基づいて最も古い ID を削除します。 この場合、ECID:35577 は、ID グラフからのみ削除されます。
 
 ![](./images/guardrails/during-split.png)
 
 >[!TAB グラフ出力]
 
-ECID:35577を削除した結果、CRM ID:60013と CRM ID:25212を、現在削除されている ECID:35577とリンクしたエッジも削除されます。 この削除処理により、グラフが 2 つの小さなグラフに分割されます。
+ECID:35577 を削除した結果、CRM ID:60013 および CRM ID:25212 が削除された ECID:35577 にリンクされていたエッジも削除されます。 この削除プロセスにより、グラフが 2 つの小さなグラフに分割されます。
 
 ![](./images/guardrails/after-split.png)
 
 >[!ENDTABS]
 
-#### 例 3:「hub-and-spoke」
+#### 例 3:「ハブアンドスポーク」
 
 >[!BEGINTABS]
 
 >[!TAB 受信イベント]
 
-*図の注意：*
+*図のメモ：*
 
-* 次の図は、を `timestamp=50`の場合、ID グラフに 50 個の ID が存在します。
+* 次の図は、の場所でを前提としています `timestamp=50`ID グラフには 50 個の ID が存在します。
 * `(...)` は、グラフ内で既にリンクされている他の ID を示します。
 
-削除ロジックにより、一部の「ハブ」ID も削除できます。 これらのハブ ID とは、リンクが解除される個々の ID にリンクされたノードを指します。
+削除ロジックにより、一部の「ハブ」 ID も削除される可能性があります。 これらのハブ ID は、複数の個々の ID にリンクされたノードを指します。これらの ID をリンクしていない場合は、リンクが解除されます。
 
-次の例では、ECID:21011が取り込まれ、 `timestamp=51`に設定することで、id 数が 50 個の制限を超えることになります。
+以下の例では、ECID:21011 が取り込まれ、のグラフにリンクされています `timestamp=51`これにより、50 個の ID の制限を超えています。
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
 >[!TAB 削除プロセス]
 
-その結果、ID サービスは、ID グラフからのみ最も古い ID を削除します ( この場合は ECID:35577)。 ECID:35577を削除すると、次の情報も削除されます。
+その結果、ID サービスは ID グラフ（この場合は ECID:35577）からのみ最も古い ID を削除します。 ECID:35577 を削除すると、次も削除されます。
 
-* CRM ID:60013と、現在削除されている ECID:35577間のリンク。その結果、グラフ分割シナリオが発生します。
-* IDFA: 32110、IDFA: 02383および `(...)`. これらの ID は、個別に他の ID にリンクされていないので、グラフに表示できないので、削除されます。
+* CRM ID:60013 と削除済みの ECID:35577 間のリンクなので、グラフ分割のシナリオが発生します。
+* IDFA:32110、IDFA:02383 および他の ID はで表されます `(...)`. これらの ID は、個別にリンクされていないので削除され、他の ID にリンクされないので、グラフで表すことができません。
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
 >[!TAB グラフ出力]
 
-最後に、削除処理では、2 つの小さなグラフが生成されます。
+最後に、削除プロセスによって 2 つの小さなグラフが生成されます。
 
 ![](./images/guardrails/hub-and-spoke-result.png)
 
@@ -188,10 +192,10 @@ ECID:35577を削除した結果、CRM ID:60013と CRM ID:25212を、現在削除
 * [[!DNL Identity Service] の概要](home.md)
 * [ID グラフビューア](features/identity-graph-viewer.md)
 
-その他のExperience Platformサービスガードレール、エンドツーエンドの遅延情報、およびReal-Time CDP製品説明ドキュメントのライセンス情報の詳細については、次のドキュメントを参照してください。
+他のExperience Platformサービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
-* [Real-Time CDP Guardrails](/help/rtcdp/guardrails/overview.md)
-* [エンドツーエンドの待ち時間図](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 様々なExperience Platformサービス。
-* [Real-time Customer Data Platform（B2C 版 — プライムパッケージおよび究極パッケージ）](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P — プライムおよび究極のパッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B — プライムおよび究極のパッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
+* [エンドツーエンドの待ち時間図](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) （様々なExperience Platformサービス用）
+* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ）](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -2,9 +2,9 @@
 title: Edge Network Server API のパフォーマンスガードレール
 description: 最適なパフォーマンスガードレール内で Server API を使用する方法を説明します。
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '531'
 ht-degree: 5%
 
 ---
@@ -14,41 +14,45 @@ ht-degree: 5%
 
 ## 概要 {#overview}
 
-パフォーマンスガードレールは、Server API の使用例に関連する使用制限を定義します。 この記事で説明しているパフォーマンスガードレールを超えると、パフォーマンスが低下する可能性があります。
+パフォーマンスガードレールは、Server API のユースケースに関連する使用制限を定義します。 この記事で説明しているパフォーマンスガードレールを超えると、パフォーマンスが低下する可能性があります。
 
-Adobeは、使用制限を超えたことによるパフォーマンスの低下に対する責任を負いません。 パフォーマンスガードレールを常に上回る顧客は、パフォーマンスの低下を避けるために、追加の処理能力をリクエストできます。
+Adobeは、使用量の制限を超えたことによるパフォーマンスの低下については責任を負いません。 パフォーマンスのガードレールを常に超えるお客様は、パフォーマンスの低下を避けるために追加の処理能力をリクエストできます。
+
+>[!IMPORTANT]
+>
+>販売注文のライセンスの使用権限と対応するを確認します [製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html) 実際の使用制限に関して、このガードレール ページに加えて説明します。
 
 ## 定義
 
-* **使用可否** は、エラーで失敗せず、プロビジョニングされた Edge Network API にのみ関連する、Experience PlatformEdge Network によって処理されたリクエストの割合として、5 分ごとに計算されます。 テナントが 5 分間隔で要求を行わなかった場合、その間隔は 100%使用可能と見なされます。
-* **月別稼動時間の割合** 特定の地域のは、1 か月の 5 分間隔のすべての可用性の平均として計算されます。
-* An **upstream** は、Edge Network の背後にあるサービスで、Adobeサーバー側転送、Adobe Edgeセグメント化、Adobe Targetなどの特定のデータストリームに対して有効になります。
-* A **リクエストユニット** は、リクエストの 8 KB のフラグメントと、データストリーム用に設定された 1 つのアップストリームに対応します。
-* A **リクエスト** は、顧客が所有するアプリケーションから [!DNL Server API]. リクエストには、1 つ以上のリクエスト単位を含めることができます。
-* An **エラー** は、Edge ネットワークのために失敗したリクエストです。 [内部サービスエラー](error-handling.md).
+* **対象** は、5 分間隔ごとに、エラーで失敗せず、プロビジョニングされたEdge NetworkAPI にのみ関連するExperience PlatformEdge Networkによって処理されたリクエストの割合として計算されます。 指定された 5 分間隔でテナントがリクエストを行わなかった場合、その間隔は 100% 使用可能と見なされます。
+* **月間稼動率** 特定の地域について、1 か月におけるすべての 5 分間の利用可能時間の平均として計算されます。
+* An **上流** は、Edge Networkの背後にあるサービスで、Adobeサーバーサイド転送、Adobe Edge セグメント化、Adobe Targetなどの特定のデータストリームに対して有効になります。
+* A **リクエスト単位** リクエストの 8 KB フラグメントと、データストリーム用に設定された 1 つのアップストリームに対応します。
+* A **リクエスト** は、顧客が所有するアプリケーションから [!DNL Server API]. リクエストには、1 つ以上のリクエストユニットを含めることができます。
+* An **エラー** は、Edge Networkが原因で失敗したリクエストです [内部サービスエラー](error-handling.md).
 
 ## サービス制限
 
-すべてのデータストリームには、特定の使用制限が適用されます。主に、同時に送信できるイベントの数、サイズ、およびこれらのリクエストの宛先となるアップストリームサービスの数を制御します。
+すべてのデータストリームは特定の使用制限を適用します。これは主に、同時に送信できるイベントの数、そのサイズ、およびそれらのリクエストのルーティング先となるアップストリームサービスの数を制御します。
 
-### 要求単位
+### リクエスト単位
 
-すべての制限が適用され、 **リクエストユニット (RU)**、として定義 **8 KB フラグメント** データストリームで設定された 1 つのアップストリームサービスに送信されるリクエストの数を示します。
+すべての制限が適用され、 **要求単位（RU）**、として定義 **8 KB フラグメント** データストリームで設定された 1 つのアップストリームサービスに送信されるリクエストの。
 
 #### 例
 
-| データストリームごとに設定されたアップストリーム | 平均リクエストサイズ | 要求単位 |
+| データストリームごとに設定されたアップストリーム | 平均リクエストサイズ | リクエスト単位 |
 | --- | --- | --- |
-| 1 (Adobeプラットフォーム ) | 8 KB（1 つのフラグメント） | 1 |
-| 2(Adobeプラットフォーム、Adobe Target) | 8 KB（1 つのフラグメント） | 2 |
-| 2(Adobeプラットフォーム、Adobe Target) | 16 KB（2 つのフラグメント） | 4 |
-| 2(Adobeプラットフォーム、Adobe Target) | 64 KB（8 つのフラグメント） | 16 |
+| 1 （Adobe基盤） | 8 KB （1 個のフラグメント） | 1 |
+| 2 （Adobeプラットフォーム、Adobe Target） | 8 KB （1 個のフラグメント） | 2 |
+| 2 （Adobeプラットフォーム、Adobe Target） | 16 KB （2 個のフラグメント） | 4 |
+| 2 （Adobeプラットフォーム、Adobe Target） | 64 KB （8 個のフラグメント） | 16 |
 
-### 要求単位の制限
+### リクエスト単位の制限
 
-次の表に、デフォルトの制限値を示します。 より高いリクエスト単位の制限が必要な場合は、アカウント担当者にお問い合わせください。
+次の表に、デフォルトの制限値を示します。 より高いリクエスト単位数の制限が必要な場合は、アカウント担当者にお問い合わせください。
 
-| エンドポイント | 1 秒あたりの要求数 |
+| エンドポイント | 1 秒あたりのリクエスト数 |
 | --- | --- |
 | `/v2/interact` | 4000 |
 | `/v2/collect` | 6000 |
@@ -56,21 +60,21 @@ Adobeは、使用制限を超えたことによるパフォーマンスの低下
 
 ### HTTP リクエストのサイズ制限
 
-| ペイロードの形式 | リクエストの最大サイズ | 最大 8 KB のリクエストフラグメント |
+| ペイロード形式 | リクエストの最大サイズ | 最大 8 KB のリクエストフラグメント |
 | --- | --- | --- |
 | JSON プレーンテキスト | 64 KB | 8 |
 
 
 >[!NOTE]
 >
->ペイロード自体に応じて、通常、バイナリ形式は 20～40%コンパクトで、プレーンテキスト JSON よりも多くのデータをプッシュできます。 データストリームの容量を増やす必要がある場合は、カスタマーケア担当者にお問い合わせください。
+>ペイロード自体に応じて、バイナリ形式は通常、プレーンテキスト JSON よりも多くのデータをプッシュできるので、20～40% コンパクトです。 データストリームにより高い処理能力が必要な場合は、カスタマーケア担当者にお問い合わせください。
 
 ## 次の手順
 
-その他のExperience Platformサービスガードレール、エンドツーエンドの遅延情報、およびReal-Time CDP製品説明ドキュメントのライセンス情報の詳細については、次のドキュメントを参照してください。
+他のExperience Platformサービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
-* [Real-Time CDP Guardrails](/help/rtcdp/guardrails/overview.md)
-* [エンドツーエンドの待ち時間図](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 様々なExperience Platformサービス。
-* [Real-time Customer Data Platform（B2C 版 — プライムパッケージおよび究極パッケージ）](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P — プライムおよび究極のパッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B — プライムおよび究極のパッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
+* [エンドツーエンドの待ち時間図](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) （様々なExperience Platformサービス用）
+* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ）](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
