@@ -1,9 +1,7 @@
 ---
 title: Adobe Experience Platformの AI アシスタント
 description: AI アシスタントを使用して、Experience PlatformとReal-time Customer Data Platformの概念、およびオブジェクトの使用状況を移動および把握する方法について説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 723638fcd580c81a84ffe6bf38c197c62fabc1f3
+source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 0%

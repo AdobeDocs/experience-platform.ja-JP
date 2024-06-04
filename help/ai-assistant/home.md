@@ -1,11 +1,9 @@
 ---
 title: Adobe Experience Platformの AI アシスタントの概要
 description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: fe87a487079f5154f238b2d425cdd249a4724762
+source-git-commit: dd3a7d07c0c78d76c552affef892d5e5c0f0bfb5
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2371'
 ht-degree: 1%
 
 ---
@@ -72,6 +70,13 @@ Experience League知識とは、製品ドキュメントに基づいた概念と
 * ソース _（アカウントに関する質問は現時点では回答できません。_
 
 オペレーショナルインサイトの質問については、回答が現在の UI の状態を反映していない場合があります。 これらの質問を裏付けるデータは、24 時間ごとに 1 回更新されます。 例えば、Real-Time CDPで日中に行った変更内容は、夜間にデータストアに同期され、午前中にユーザーからの質問に使用できるようになります。 オブジェクトに関連する特定のデータを照会するには、サンドボックスにログインする必要があります。
+
+### 機能範囲 {#feature-scope}
+
+現在、AI アシスタントの範囲は次のとおりです。
+
+* [製品に関する知識](./home.md#product-knowledge):AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizerの製品ナレッジに関する質問に回答できます。 また、Customer Journey AnalyticsUI を通じてのみ、Customer Journey Analyticsに関する製品のナレッジトピックを掘り下げることもできます。
+* [運用インサイト](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースといったデータオブジェクトに関する運用上のインサイトについて、AI アシスタントに質問することができます。
 
 ## 機能へのアクセス {#feature-access}
 
