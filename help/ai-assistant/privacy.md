@@ -1,9 +1,10 @@
 ---
 title: AI アシスタントでのプライバシー、セキュリティ、ガバナンス
 description: AI アシスタントのプライバシー、セキュリティ、ガバナンス手法について説明します。
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
+source-git-commit: 1762fcbcc730ccb08340a71383c90404c3fea614
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,6 @@ Adobe Experience Platformの AI アシスタントは、プライバシー、セ
 * 現在、AI アシスタントは、トレーニング目的であっても、個人データを使用していません。
 * AI アシスタントは、消費者データを認識していません。
 * 既存のすべて [アクセス制御](../access-control/home.md) ポリシーは、AI アシスタントによって尊重されます。
-   * オブジェクトには、オブジェクトレベルのアクセス制御がサポートされています。 属性のオブジェクトレベルのアクセス制御のサポートは、近日中に提供されます。
    * 新しい属性ベースのアクセス制御ポリシーは、最大 24 時間後に AI Assistant に反映されます*
 * AI アシスタントとやり取りするための明示的な権限を付与される必要があります。
    * 次を使用して、Experience PlatformとJourney Optimizerに異なる権限を設定できます [権限 UI](../access-control/abac/ui/permissions.md) 次を使用できます [Admin Console](../access-control/ui/browse.md) Customer Journey Analyticsの権限を割り当てます。
