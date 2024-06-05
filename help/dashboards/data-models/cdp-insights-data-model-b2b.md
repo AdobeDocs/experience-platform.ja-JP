@@ -4,9 +4,9 @@ description: Real-time Customer Data Platform Insights データモデル（B2B 
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '476'
 ht-degree: 3%
 
 ---
@@ -52,7 +52,7 @@ Real-Time CDP B2B レポートは、アカウントプロファイルデータ�
 
 #### 業界のユースケース別の新しいアカウント {#accounts-by-industry}
 
-に使用されるロジック [!UICONTROL 業界別の新しいアカウント] insight は、アカウントプロファイルの数と相互の相対的なサイズに応じて、上位 5 つの業界を返します。 を参照してください。 [[!UICONTROL 業種別アカウント] ウィジェットのドキュメント](../guides/account-profiles.md#accounts-by-industry) を参照してください。
+に使用されるロジック [!UICONTROL 業界別の新しいアカウント] insight は、アカウントプロファイルの数と相互の相対的なサイズに応じて、上位 5 つの業界を返します。 を参照してください。 [[!UICONTROL 業界別の新しいアカウント] ウィジェットのドキュメント](../guides/account-profiles.md#accounts-by-industry) を参照してください。
 
 >[!TIP]
 >
