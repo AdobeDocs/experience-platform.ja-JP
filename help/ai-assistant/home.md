@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタントの概要
 description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '679'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platformの AI アシスタントは、Adobeアプリケーシ�
 
 >[!IMPORTANT]
 >
->AI アシスタントを使用するには、ユーザー使用許諾契約に同意する必要があります。 ユーザー契約には、パブリックベータ版の契約も含まれています。 これにより、ベータ版の容量で展開する際に、追加の AI アシスタント機能を使用できます。
+>同意する必要があります [ユーザー契約書](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) ai アシスタントを使用する前に。 ユーザー契約には、パブリックベータ版の契約も含まれています。 これにより、ベータ版の容量で展開する際に、追加の AI アシスタント機能を使用できます。
 
 +++選択してユーザー契約インターフェイスを表示します
 
