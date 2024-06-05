@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platformの AI アシスタント ガイド
-user-guide-description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
+user-guide-description: Adobe Experience PlatformとReal-time Customer Data Platformで AI アシスタントを使用して、ワークフローを迅速化する方法を説明します。
 description: ここでは、Adobe Experience Platformの AI アシスタントの目次を示します。
 role: Admin,User,Developer,Leader
-source-git-commit: 9b8d2422d3b5e13b980002a21f02dbbb6de8c6c6
+source-git-commit: 228c4a8882503912634b515be55d1ed726be756c
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '65'
 ht-degree: 1%
 
 ---
