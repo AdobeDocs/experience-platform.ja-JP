@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platformの AI アシスタント ガイド
-user-guide-description: Adobe Experience Platformの AI アシスタントは、Adobeアプリケーションのワークフローを高速化するために使用できる対話型エクスペリエンスです。 AI アシスタントを使用すると、製品の知識をより深く理解したり、問題をトラブルシューティングしたり、情報を検索して運用インサイトを見つけたりできます。
+user-guide-description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
 description: ここでは、Adobe Experience Platformの AI アシスタントの目次を示します。
 role: Admin,User,Developer,Leader
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: 9b8d2422d3b5e13b980002a21f02dbbb6de8c6c6
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '74'
 ht-degree: 1%
 
 ---
