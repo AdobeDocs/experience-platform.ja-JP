@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 95%
 
 ---
@@ -350,6 +350,7 @@ ht-degree: 95%
       - [プロトコル接続のデータフロー](tutorials/ui/dataflow/protocols.md)
    - [UI のテンプレートを使用してソースのデータフローを作成する](tutorials/ui/templates.md)
    - [ソースオブジェクトのフィルタリング](tutorials/ui/filter.md)
+   - [暗号化されたデータの取り込み](tutorials/ui/encryped-ingestion.md)
    - [オンデマンド取り込み](tutorials/ui/on-demand-ingestion.md)
    - [バッチデータフローのモニタリング](tutorials/ui/monitor.md)
    - [ストリーミングデータフローのモニタリング](tutorials/ui/monitor-streaming.md)

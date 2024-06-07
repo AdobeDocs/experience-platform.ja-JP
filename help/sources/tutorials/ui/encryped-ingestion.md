@@ -1,0 +1,37 @@
+---
+title: ソース UI ワークスペースへの暗号化されたデータの取り込み
+description: ソース UI ワークスペースで暗号化されたデータを取り込む方法を説明します。
+hide: true
+hidefromtoc: true
+source-git-commit: f2a0a9b84dfd3c1d32c8049148d38ef4d2ec822e
+workflow-type: tm+mt
+source-wordcount: '111'
+ht-degree: 9%
+
+---
+
+# ソース UI での暗号化されたデータの取り込み
+
+このガイドでは、バッチデータのクラウドストレージソースを使用して、暗号化されたデータをAdobe Experience Platformに取り込む方法について説明します。
+
+## 前提条件
+
+* データの暗号化
+
+## 暗号化されたデータの取り込み {#ingest-encrypted-data}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_isFileEncrypted"
+>title="ファイルは暗号化されていますか？"
+>abstract="既に暗号化されているファイルを取り込む場合は、この切替スイッチを選択します。"
+
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_sampleFile"
+>title="サンプルファイルを選択"
+>abstract="マッピングを作成するために、暗号化されたデータを取り込む際は、サンプルファイルを取り込む必要があります。"
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_createCustomKey"
+>title="カスタムキーを作成"
+>abstract="オプションで、署名検証キーペアを作成し、暗号化されたデータのカスタムキーを作成することもできます。"
