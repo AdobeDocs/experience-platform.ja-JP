@@ -3,9 +3,9 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1555'
 ht-degree: 29%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 29%
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2024年4月 | 機能とドキュメントの更新 | データストリーム ID を使用してをターゲット宛先に接続する場合、以下を達成できました *必要ありません* エッジセグメント化のためにデータストリームを必ず有効にする。 つまり、Target の宛先は、実行できるユースケースは異なりますが、バッチオーディエンスとストリーミングオーディエンスで機能します。 でテーブルを表示します。 [接続パラメーター](#parameters) を参照してください。 |
+| 2024年4月 | 機能とドキュメントの更新 | ターゲット宛先に接続し、データストリーム ID を使用する場合、以下を達成できました *必要ありません* エッジセグメント化のためにデータストリームを必ず有効にする。 つまり、Target の宛先は、実行できるユースケースは異なりますが、バッチオーディエンスとストリーミングオーディエンスで機能します。 でテーブルを表示します。 [接続パラメーター](#parameters) を参照してください。 |
 | 2024年1月 | 機能とドキュメントの更新 | デフォルトの実稼動サンドボックスおよびその他のデフォルト以外のサンドボックス用に、Adobe Target接続に対してオーディエンスとプロファイル属性を共有できるようになりました。 |
 | 2023年6月 | 機能とドキュメントの更新 | 2023 年 6 月現在、新しいAdobe Target宛先接続を設定する際に、オーディエンスを共有するAdobe Target Workspace を選択できます。 詳しくは、[接続パラメーター](#parameters)の節を参照してください。また、ワークスペースについて詳しくは、Adobe Target での[ワークスペースの設定](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)に関するチュートリアルを参照してください。 |
 | 2023年5月 | 機能とドキュメントの更新 | 2023 年 5 月現在、 **[!UICONTROL Adobe Target]** 接続のサポート [属性ベースのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md#map-attributes) とは、すべてのお客様が一般に使用できます。 |
@@ -62,9 +62,9 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 
 >[!IMPORTANT]
 >
->この宛先に対してアクティブ化するオーディエンスは、を使用する必要があります [アクティブオンエッジ結合ポリシー](../../../segmentation/ui/segment-builder.md#merge-policies). この [!DNL Active-On-Edge] 結合ポリシーは、オーディエンスが常に評価されるようにします [端に](../../../segmentation/ui/edge-segmentation.md) およびは、リアルタイムおよび次のページのパーソナライゼーションのユースケースで使用できます。
-> 異なる結合ポリシーを使用するオーディエンスをエッジ宛先にマッピングした場合、それらのオーディエンスは評価されません。
-> [結合ポリシーの作成](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)の手順に従い、「**[!UICONTROL エッジでアクティブ化結合ポリシー]**」切り替えスイッチを必ず有効にします。
+>アクティブ化する場合 *同じページと次のページのパーソナライゼーションのユースケースに対応するエッジオーディエンス*、オーディエンス *が* 使用： [アクティブオンエッジ結合ポリシー](../../../segmentation/ui/segment-builder.md#merge-policies). この [!DNL active-on-edge] 結合ポリシーは、オーディエンスが常に評価されるようにします [端に](../../../segmentation/ui/edge-segmentation.md) およびは、リアルタイムおよび次のページのパーソナライゼーションのユースケースで使用できます。  詳細を読む [利用可能なすべてのユースケース](#parameter)実装のタイプに基づいています。
+>別の結合ポリシーを使用するエッジオーディエンスをAdobe Targetの宛先にマッピングした場合、それらのオーディエンスは、リアルタイムおよび次のページのユースケースでは評価されません。
+>[結合ポリシーの作成](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)の手順に従い、「**[!UICONTROL エッジでアクティブ化結合ポリシー]**」切り替えスイッチを必ず有効にします。
 
 
 | オーディエンスオリジン | サポートあり | 説明 |
