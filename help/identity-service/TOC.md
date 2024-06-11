@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Adobe Experience Platform ID サービス
 breadcrumb-title: Platform ID サービスガイド
-user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
+user-guide-description: デバイスやシステム間で顧客 ID を橋渡しし、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
 role: Admin,Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 81%
+source-wordcount: '126'
+ht-degree: 68%
 
 ---
 
@@ -40,7 +40,8 @@ ht-degree: 81%
 - [ID グラフリンクルール] {#identity-graph-linking-rules}
    - [機能の概要](./identity-graph-linking-rules/overview.md)
    - [ID 最適化アルゴリズム](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-   - [シナリオの例](./identity-graph-linking-rules/example-scenarios.md)
+   - [名前空間の優先度](./identity-graph-linking-rules/namespace-priority.md)
+   - [サンプルシナリオ](./identity-graph-linking-rules/example-scenarios.md)
 - [プライバシーリクエストの処理](privacy.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
-- [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
