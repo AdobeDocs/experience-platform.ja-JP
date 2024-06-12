@@ -5,7 +5,7 @@ breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステム間で顧客 ID を橋渡しし、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
 role: Admin,Developer
-source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
+source-git-commit: f04587fe325c1515545e4067845976aafc7d68ed
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 68%
@@ -22,6 +22,11 @@ ht-degree: 68%
    - [ID リンクロジック](./features/identity-linking-logic.md)
    - [ID グラフビューア](./features/identity-graph-viewer.md)
    - [ID サービスでの削除](./features/deletion.md)
+   - ID グラフリンクルール {#identity-graph-linking-rules}
+      - [機能の概要](./identity-graph-linking-rules/overview.md)
+      - [ID 最適化アルゴリズム](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [名前空間の優先度](./identity-graph-linking-rules/namespace-priority.md)
+      - [サンプルシナリオ](./identity-graph-linking-rules/example-scenarios.md)
    - [ECID の概要](./features/ecid.md)
 - [実装ガイド](implementation.md)
 - [ID データ用のガードレール](guardrails.md)
@@ -37,11 +42,6 @@ ht-degree: 68%
    - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [共有デバイスの検出](shared-device-detection.md)
 - [UI での ID フィールドの定義](label-identities.md)
-- [ID グラフリンクルール] {#identity-graph-linking-rules}
-   - [機能の概要](./identity-graph-linking-rules/overview.md)
-   - [ID 最適化アルゴリズム](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-   - [名前空間の優先度](./identity-graph-linking-rules/namespace-priority.md)
-   - [サンプルシナリオ](./identity-graph-linking-rules/example-scenarios.md)
 - [プライバシーリクエストの処理](privacy.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
 - [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
