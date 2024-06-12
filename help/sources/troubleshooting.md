@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ソースのトラブルシューティング
 description: このドキュメントでは、Adobe Experience Platform でのソースに関するよくある質問に対する回答を示します。
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 100%
@@ -47,7 +47,7 @@ ht-degree: 100%
 - 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 - 1 回のバッチあたりの最大ファイル数は 1500 で、最大バッチサイズは 100 GB です。
 - 1 行あたりのプロパティまたはフィールドの最大数は 10,000 個です。
-- 1 分間にユーザーごとに送信できるバッチの最大数は 138 個です。
+- 1 分間にユーザーごとに送信できるバッチの最大数は 2000 個です。
 
 ### サポートされているデータタイプは何ですか？
 
