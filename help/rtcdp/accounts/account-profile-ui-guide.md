@@ -5,10 +5,10 @@ description: Adobe Real-time Customer Data Platform B2B Edition では、アカ�
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 56%
+source-wordcount: '1680'
+ht-degree: 55%
 
 ---
 
@@ -26,7 +26,7 @@ B2B ワークフローの一部としてアカウントプロファイルを作�
 
 を選択 **[!UICONTROL プロファイル]** 未満 [!UICONTROL アカウント] 左側のナビゲーションに、アカウントプロファイルの概要を表示します。 の下 [!UICONTROL 概要] タブをクリックすると、ダッシュボードに、単一のエントリポイントにウィジェットを表示するグラフィックまたはグラフが表示されます。
 
-![ウィジェットが表示された「概要」タブ](images/b2b-account-profile-overview.png)
+![左側のナビゲーションのプロファイルと「概要」がハイライト表示されたアカウントプロファイルの「概要」タブ。](images/b2b-account-profile-overview.png)
 
 のドキュメントを参照してください。 [[!UICONTROL アカウントプロファイル]](../../dashboards/guides/account-profiles.md) ダッシュボードで詳細情報を確認できます。 のドキュメントを参照してください。 [Real-time Customer Data Platform Insights データモデル B2B エディション](../../dashboards/data-models/cdp-insights-data-model-b2b.md) インサイトデータモデルを使用してダッシュボードのカスタムグラフを作成する方法について詳しくは、こちらを参照してください。
 
@@ -38,7 +38,7 @@ B2B ワークフローの一部としてアカウントプロファイルを作�
 
 リードとアカウントのマッチングを設定するには、以下を選択します **[!UICONTROL プロファイル]** 未満 [!UICONTROL アカウント] 左側のナビゲーションの 日 **[!UICONTROL 概要]** タブ、選択 **[!UICONTROL 設定]** 右上。
 
-![設定を選択](images/b2b-configuring-accounts-profile.png)
+![設定がハイライト表示された「アカウントプロファイルの概要」タブ。](images/b2b-configuring-accounts-profile.png)
 
 この **[!UICONTROL アカウント設定]** ダイアログが開きます。 ここから **[!UICONTROL リードとアカウントのマッチングを有効にする]** を切り替えてこの機能を有効にします。 ドロップダウンメニューを使用して選択 **[!UICONTROL 日次]** の場合 **[!UICONTROL マッチング頻度]** の設定値。 最後に、関連するを選択します **[!UICONTROL 一致条件]** オプションの後にが続く **[!UICONTROL 保存]** 設定を確認し、に戻ります **[!UICONTROL アカウントプロファイル]** 画面。
 

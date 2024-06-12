@@ -1,59 +1,57 @@
 ---
-title: AI/ML 機能パイプライン
-description: Data Distillerを使用して、Adobe Experience Platformデータから派生した機能を機械学習パイプラインに組み込む方法を説明します。 生データを機能に変換し、機能データを配信して、マーケティングの使用例をサポートするモデルをトレーニングまたはスコアリングします。
+title: AI/ML 機⁠能パ⁠イ⁠プ⁠ラ⁠イ⁠ン
+description: Data Distillerを使用して、Adobe Experience Platform データから派生した機能で機械学習パイプラインを強化する方法を説明します。 生データを機能に変換し、機能データを配信して、マーケティングのユースケースをサポートするモデルをトレーニングまたはスコアリングします。
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
-# AI/ML 機能パイプライン
+# AI/ML 機⁠能パ⁠イ⁠プ⁠ラ⁠イ⁠ン
 
 <!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
-<!--  -->
-
-Data Distillerを使用すると、データサイエンティストやエンジニアは、Adobe Experience Platformで収集およびキュレーションされた高価値の顧客体験データを使用して、機械学習パイプラインを強化できます。 から [!DNL Python] あらゆる環境で、Experience Platform内の顧客データをインタラクティブに調査し、データから機能を定義および計算し、計算された機能をモデリング用の機械学習環境に読み込むことができます。
+Data Distillerを使用すると、データサイエンティストやエンジニアは、Adobe Experience Platformで収集およびキュレーションされた、価値の高いカスタマーエクスペリエンスデータを使用して、機械学習パイプラインを強化できます。 から [!DNL Python] ノートブックどのようなExperience Platformでも、お客様のデータをインタラクティブに探索し、データから機能を定義して計算し、計算された機能をモデリング用に機械学習に読み込むことができます。
 
 >[!IMPORTANT]
 >
->このワークフローには、Data DistillerとAdobe Experience Platform Intelligence ライセンスが必要です。 これらの製品をお持ちでない場合は、Adobe サービス担当者にお問い合わせください。
+>このワークフローを使用するには、Data DistillerとAdobe Experience Platform Intelligence ライセンスが必要です。 これらの商品をお持ちでない場合は、Adobe サービス担当者にお問い合わせください。
 
-![AI-ML 機能パイプラインの詳細な解説図です。](../../images/data-distiller/ai-ml-feature-pipeline.png)
+![AI-ML 機能パイプラインの詳細を説明するインフォグラフィック。](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-- Data Distillerの強力なクエリ機能を使用すると、Experience Platformで利用可能な豊富な行動データから意味のある機能を抽出できます。 その後、Experience Platformの外部に大量のイベントデータをコピーする必要なく、蒸留された機能データを機械学習環境に取り込むことができます。
-- 用意された機能データセットを好みの機械学習ツールに読み込み、企業データから得られる他の機能と組み合わせて、ビジネスに合わせてカスタマイズされたカスタムモデルのトレーニング、実験、調整、デプロイを行います。
-- モデルからスコア、予測またはレコメンデーションを生成し、出力をExperience Platformに返して、Real-time Customer Data PlatformとAdobe Journey Optimizerを通じて顧客体験を最適化します。
+- Data Distillerの強力なクエリ機能を使用すると、Experience Platformで利用可能な豊富な行動データから意味のある機能を抽出できます。 その後、大量のイベントデータをExperience Platformの外部にコピーしなくても、蒸留済みの機能データを機械学習に取り込むことができます。
+- 準備した機能データセットを好みの機械学習ツールに読み込み、エンタープライズデータから得られた他の機能と組み合わせて、ビジネスに合わせたカスタムモデルのトレーニング、実験、調整、デプロイを行います。
+- モデルからスコア、予測または推奨事項を生成し、その出力をExperience Platformに返して、Real-time Customer Data PlatformやAdobe Journey Optimizerを通じたカスタマーエクスペリエンスを最適化します。
 
 ## 前提条件 {#prerequisites}
 
-このワークフローでは、Adobe Experience Platformの様々な側面に関する十分な知識が必要です。 このチュートリアルを始める前に、次の概念に関するドキュメントを確認してください。
+このワークフローを実行するには、Adobe Experience Platformの様々な側面に関する十分な知識が必要です。 このチュートリアルを始める前に、次の概念に関するドキュメントを確認してください。
 
-- 方法 [認証およびアクセスExperience PlatformAPI](../../../landing/api-authentication.md).
-- サンドボックス： [属性ベースのアクセス制御権限](../../../access-control/abac/overview.md) 役割の作成および管理方法、およびこれらの役割に対する必要なリソース権限の割り当て方法について説明します。
-- データガバナンス：方法 [データ使用ラベルをデータセットとフィールドに適用し、各](../../../data-governance/labels/overview.md) 関連するデータガバナンスポリシーおよびアクセス制御ポリシーに従います。
+- 方法 [Experience PlatformAPI の認証とアクセス](../../../landing/api-authentication.md).
+- サンドボックス： [属性ベースのアクセス制御権限](../../../access-control/abac/overview.md) および役割の作成および管理方法と、それらの役割に対する必要なリソース権限の割り当て。
+- データガバナンス：方法 [データセットとフィールドに、各を分類するデータ使用ラベルを適用する](../../../data-governance/labels/overview.md) 関連するデータガバナンスポリシーとアクセス制御ポリシーに従う。
 
 ## 次の手順
 
-このドキュメントでは、好みの機械学習ツールを使用してマーケティングの使用例をサポートするカスタムモデルを構築するうえで必要な重要な概念を紹介しました。
+このドキュメントでは、優先する機械学習ツールを使用してマーケティングのユースケースをサポートするカスタムモデルを構築する際の、背後にある重要な概念について説明しました。
 
-この一連のガイドに含まれるドキュメントでは、機械学習環境でExperience Platformからカスタムモデルをフィードするための機能パイプラインを作成する基本的な手順を説明します。 これで、Data Distillerと [!DNL Jupyter Notebook].
+この一連のガイドに含まれるドキュメントでは、Experience Platformから機能パイプラインを作成し、機械学習でカスタムモデルをフィードするための基本的な手順を説明します。 これで、Data Distillerとサーバーとの接続を確立する準備が整いました [!DNL Jupyter Notebook].
 
-- **設定**: [から Data Distillerに接続する [!DNL Python] notebook](./establish-connection.md)
+- **の設定**: [から Data Distillerへの接続 [!DNL Python] ノートブック](./establish-connection.md)
 
-以下にリンクされるドキュメントは、上記の解説図で示した手順に対応しています。
+以下にリンクされているドキュメントは、上記のインフォグラフィックに示されている手順に対応しています。
 
 - **手順 1**: [データセットの調査と分析](./exploratory-analysis.md)
-- **手順 2**: [機械学習の機能を開発する](./feature-engineering.md)
-- **手順 3**: [機能データセットを書き出し](./export-data.md)
+- **手順 2**: [機械学習のエンジニア機能](./feature-engineering.md)
+- **手順 3**: [機能データセットの書き出し](./export-data.md)
 
 ## その他のリソース
 
-- [aepp](https://github.com/adobe/aepp):Adobeが管理するオープンソース [!DNL Python] から Data Distillerおよびその他のExperience Platformサービスにリクエストを行うためのライブラリ [!DNL Python] コード。
+- [aepp](https://github.com/adobe/aepp):Adobeが管理するオープンソース [!DNL Python] からデータDistillerおよびその他のExperience Platformサービスにリクエストを送信するためのライブラリ [!DNL Python] コード。
 
 <!-- Old content below -->
 

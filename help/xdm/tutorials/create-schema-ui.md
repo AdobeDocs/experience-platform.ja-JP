@@ -5,7 +5,7 @@ title: スキーマエディターを使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 78%
@@ -49,10 +49,6 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 この [!UICONTROL スキーマを作成] ワークフローが表示されます。 次に、スキーマの基本クラスを選択します。 次のコアクラスから選択できます [!UICONTROL XDM 個人プロファイル] および [!UICONTROL XDM ExperienceEvent]、または [!UICONTROL その他] これらのクラスが目的に合わない場合。 この [!UICONTROL その他] 「クラス」オプションを使用すると、次のいずれかを実行できます [新しいクラスの作成](#create-new-class) または、他の既存のクラスから選択します。
 
 を参照してください。 [XDM 個人プロファイル](../classes/individual-profile.md) および [XDM ExperienceEvent](../classes/experienceevent.md) これらのクラスの詳細については、を参照してください。 このチュートリアルでは、を選択します。 **[!UICONTROL XDM 個人プロファイル]** 続いて **[!UICONTROL 次]**.
-
-
-
-<!--  -->
 
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 
