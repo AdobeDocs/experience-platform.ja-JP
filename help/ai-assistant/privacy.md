@@ -2,9 +2,9 @@
 title: AI アシスタントでのプライバシー、セキュリティ、ガバナンス
 description: AI アシスタントのプライバシー、セキュリティ、ガバナンス手法について説明します。
 exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
-source-git-commit: 1762fcbcc730ccb08340a71383c90404c3fea614
+source-git-commit: e14bf4191319d646c6c4bfd55656fc6de141e9ca
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,9 @@ Adobe Experience Platformの AI アシスタントは、プライバシー、セ
 * AI アシスタントとやり取りするための明示的な権限を付与される必要があります。
    * 次を使用して、Experience PlatformとJourney Optimizerに異なる権限を設定できます [権限 UI](../access-control/abac/ui/permissions.md) 次を使用できます [Admin Console](../access-control/ui/browse.md) Customer Journey Analyticsの権限を割り当てます。
    * 権限は粒度が細かく、サンドボックス管理者は、どのユーザーに異なる質問カテゴリ（AI アシスタントを使用した製品ナレッジベースの質問または運用インサイトに関する質問）を依頼できるかを設定できます。
-* AI アシスタントは、HIPAA 対応の機能であり、保護された医療情報（PHI）の処理と使用に関する HIPAA 要件を満たしています。
+* AI アシスタントは、Adobe Experience Platform Healthcare Shield と組み合わせて使用する場合の、HIPAA 対応の機能です。
 * 以前に AI アシスタントとやり取りしたログを 30 日間の保持ポリシーで表示できます。
 * AI アシスタントは、ユーザーのプロンプトに答える際に、サンドボックス固有のデータとパブリックAdobeのドキュメントに基づいています。 データは、サンドボックス間で共有されません。
 * AI アシスタントに指定したプロンプトは、他の顧客とは共有されません。
-
 
 **つまり、フィールドやオブジェクトに新しいラベルが追加された場合や、新しいポリシーが作成された場合、AI アシスタントは最長で 24 時間かかります。 この 24 時間、新たにアクセスを制限されたユーザーは、引き続きこれらのフィールドやオブジェクトにアクセスできます。*
