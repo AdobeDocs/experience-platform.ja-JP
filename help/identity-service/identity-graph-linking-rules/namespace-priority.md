@@ -2,9 +2,10 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 badge: ベータ版
-source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1519'
 ht-degree: 2%
 
 ---
@@ -50,9 +51,9 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 このトピックにアプローチするもう 1 つの方法は、カーディナリティを使用することです。 特定のユーザーエンティティに対して、いくつの ID が作成されますか？ ほとんどの場合、1 人のユーザーは 1 つの CRM ID、いくつかのハードウェアデバイス識別子（IDFA/GAID のリセットは頻繁には発生しません）、さらにはさらに Cookie （個人が複数のデバイスで閲覧したり、匿名モードを使用したり、Cookie を任意の時間にリセットしたりする可能性があります）を持ちます。 通常、 **カーディナリティが低い場合は、値が大きい名前空間を示します**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## 名前空間の優先度設定の検証
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+名前空間にどのように優先順位を付けるかを把握したら、グラフシミュレーション ツールを使用して、様々なグラフ折りたたみシナリオをテストし、優先設定が期待どおりのグラフ結果を返していることを確認します。 詳しくは、の使用に関するガイドを参照してください [グラフシミュレーションツール](./graph-simulation.md).
 
 ## 名前空間の優先度の設定
 

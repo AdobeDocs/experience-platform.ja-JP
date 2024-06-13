@@ -5,10 +5,10 @@ breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステム間で顧客 ID を橋渡しし、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
 role: Admin,Developer
-source-git-commit: f04587fe325c1515545e4067845976aafc7d68ed
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 68%
+source-wordcount: '129'
+ht-degree: 66%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 68%
       - [ID 最適化アルゴリズム](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [名前空間の優先度](./identity-graph-linking-rules/namespace-priority.md)
       - [サンプルシナリオ](./identity-graph-linking-rules/example-scenarios.md)
+      - [グラフシミュレーション UI](./identity-graph-linking-rules/graph-simulation.md)
    - [ECID の概要](./features/ecid.md)
 - [実装ガイド](implementation.md)
 - [ID データ用のガードレール](guardrails.md)
