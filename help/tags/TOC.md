@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 98%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 98%
    * [ライブラリ](./ui/publishing/libraries.md)
    * [自己ホスト型ライブラリ](./ui/publishing/hosts/self-hosting-libraries.md)
    * [ライブラリの再公開](./ui/publishing/republish.md)
-   * [Experience Platformタグ（中国）](./ui/publishing/premium-cdn.md)
+   * [Experience Platformタグ （中国）](./ui/publishing/premium-cdn.md)
 * クライアント側の情報 {#client-side}
    * [概要](./ui/client-side/overview.md)
    * [非同期デプロイメント](./ui/client-side/asynchronous-deployment.md)
@@ -180,7 +180,7 @@ ht-degree: 98%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [マークリタグ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury タグ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -249,8 +249,10 @@ ht-degree: 98%
          * [概要](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [概要](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] ウェブイベント API {#tiktok}
+      * [!DNL Tiktok] Web イベント API {#tiktok}
          * [概要](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [概要](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk]イベント API {#zendesk}
          * [概要](./extensions/server/zendesk/overview.md)
 * 拡張機能の開発 {#extension-dev}
@@ -322,5 +324,5 @@ ht-degree: 98%
 * [FAQ](./faq.md)
 * [用語の更新](./term-updates.md)
 * [Internet Explorer 10 および 11 のサポートの廃止](./ie-deprecation.md)
-* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
 
