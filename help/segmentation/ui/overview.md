@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4334'
+source-wordcount: '4346'
 ht-degree: 73%
 
 ---
@@ -78,7 +78,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 | [!UICONTROL パートナーと共有] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスを他の Platform ユーザーと共有します。 この機能について詳しくは、[Segment Match の概要](./segment-match/overview.md)を参照してください。 |
 | [!UICONTROL タグを管理] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスに属する、ユーザー定義のタグを管理します。 この機能について詳しくは、[フィルタリングとタグ付け](#manage-audiences)に関する節を参照してください。 |
 | [!UICONTROL フォルダーに移動] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスが属するフォルダーを管理します。 この機能について詳しくは、[フィルタリングとタグ付け](#manage-audiences)に関する節を参照してください。 |
-| [!UICONTROL コピー] | セグメント化サービス | 選択されたオーディエンスを複製します。 |
+| [!UICONTROL コピー] | セグメント化サービス | 選択したオーディエンスを複製します。 この関数について詳しくは、 [セグメント化に関する FAQ](../faq.md#copy). |
 | [!UICONTROL アクセスラベルを適用] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスに属するアクセスラベルを管理します。 アクセスラベルについて詳しくは、[ラベルの管理](../../access-control/abac/ui/labels.md)に関するドキュメントを参照してください。 |
 | [!UICONTROL 公開] | カスタムアップロード、セグメント化サービス | 選択したオーディエンスを公開します。 ライフサイクルステータス管理の詳細については、 [セグメント化に関する FAQ の「ライフサイクルの状態」セクション](../faq.md#lifecycle-states). |
 | [!UICONTROL 非アクティブ化] | カスタムアップロード、セグメント化サービス | 選択したオーディエンスをアクティベート解除します。 ライフサイクルステータス管理の詳細については、 [セグメント化に関する FAQ の「ライフサイクルの状態」セクション](../faq.md#lifecycle-states). |
