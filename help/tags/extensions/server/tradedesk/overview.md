@@ -3,18 +3,16 @@ title: The Trade Desk Real-Time Conversions API 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送用の Trade Desk Real-Time Conversions API 拡張機能について説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 4%
+source-wordcount: '930'
+ht-degree: 3%
 
 ---
 
 # [!DNL The Trade Desk Real-Time Conversions API] 拡張機能の概要
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) イベントをに送信できます [!DNL The Trade Desk] リターゲティングとアトリビューションを活用するために使用します。
-
-を使用できます [!DNL The Trade Desk Real-Time Conversions API] Adobe Experience Platform Edge Networkからにデータを送信するための拡張機能 [!DNL The Trade Desk] の API の機能を利用する [イベント転送](../../../ui/event-forwarding/overview.md) ルール。
+を使用できます [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) Adobe Experience Platform Edge Networkからにデータを送信するための拡張機能 [!DNL The Trade Desk] の API の機能を利用する [イベント転送](../../../ui/event-forwarding/overview.md) ルール。
 
 使用 [!DNL The Trade Desk Real-Time Conversions API] 拡張機能を使用すると、で API の機能を利用できます [イベント転送](../../../ui/event-forwarding/overview.md) にデータを送信するためのルール [!DNL The Trade Desk] Adobe Experience Platform Edge Networkから変更します。
 
@@ -91,7 +89,8 @@ ht-degree: 4%
 
 **[!UICONTROL オブジェクトリクエストパラメーター]**
 
-項目、プライバシー、データ処理などの JSON 形式のリクエストパラメーターについて詳しくは、次の節を参照してください。
+詳細情報を含む JSON オブジェクト。 キー値の入力の縮小セットを使用するか、生の JSON を提供するかを選択できます。 さらに、ディスクを選択して、データ要素から動的データを取得できます（![ディスク アイコン](../../../images/extensions/server/tradedesk/disk-icon.png)）を選択します。
+
 
 ![この [!DNL Object Request Parameters] 使用可能なフィールドを示すセクション。](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -99,14 +98,14 @@ ht-degree: 4%
 
 **[!UICONTROL 設定の上書き]**
 
->メモ
+>[!NOTE]
 >
 >この [!UICONTROL 設定の上書き] フィールドには、別の値を設定できます [!DNL Advertiser ID] および/または [!DNL Merchant ID] すべてのルールで。
 
 | 入力 | 説明 |
 | --- | --- |
-| 広告主 ID | 拡張機能設定で指定された広告主 ID を上書きする広告主 ID。 |
-| マーチャント ID | 拡張機能の設定で指定されたマーチャント ID を上書きするマーチャント ID。 |
+| 広告主 ID | このイベントが関連付けられている広告主の一意の ID。 別の広告主 ID を指定して、拡張機能の設定で指定した ID を上書きできます。 |
+| マーチャント ID | 各マーチャントが提供される一意の ID [!DNL The Trade Desk] オンボーディング手順を通して。 拡張機能の設定で指定した ID を上書きするために、別のマーチャント ID を指定できます。 |
 
 ![この [!DNL Configuration Overrides] 使用可能なフィールドを示すセクション。](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
