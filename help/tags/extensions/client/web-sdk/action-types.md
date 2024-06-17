@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 拡張機能のアクションタイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なアクションタイプについて説明します。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
+source-git-commit: e5fd8a53cfd612034d12a761ac4779ed930557d4
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1264'
 ht-degree: 1%
 
 ---
@@ -17,17 +17,33 @@ ht-degree: 1%
 
 ここでは、でサポートされるアクションタイプについて説明します [Adobe Experience Platform Web SDK タグ拡張機能](web-sdk-extension-configuration.md).
 
+
+## 応答を適用 {#apply-response}
+
+の使用 **[!UICONTROL 応答を適用]** Edge Networkからの応答に基づいて様々なアクションを実行する場合は、「アクションタイプ」を選択します。 このアクションタイプは、通常、サーバーがブラウザーに対して最初の呼び出しを行い、その呼び出しから応答を受け取ってEdge Networkーで Web SDK を初期化するハイブリッドデプロイメントで使用されます。
+
+このアクションタイプを使用すると、ハイブリッドパーソナライゼーションのユースケースでクライアントの読み込み時間が短縮される可能性があります。
+
+![「応答を適用」アクションタイプを示すExperience Platformユーザーインターフェイスの画像。](assets/apply-response.png)
+
+このアクションタイプは、次の設定オプションをサポートしています。
+
+* **[!UICONTROL Instance]**：使用している Web SDK インスタンスを選択します。
+* **[!UICONTROL 応答ヘッダー]**:Edge Networkサーバーコールから返されたヘッダーキーと値を含むオブジェクトを返すデータ要素を選択します。
+* **[!UICONTROL 応答本文]**:Edge Networkレスポンスで提供される JSON ペイロードを含むオブジェクトを返すデータ要素を選択します。
+* **[!UICONTROL ビジュアルパーソナライゼーションの決定のレンダリング]**:Edge Networkが提供するパーソナライゼーションコンテンツを自動的にレンダリングし、ちらつきを防ぐためにコンテンツを事前に非表示にするには、このオプションを有効にします。
+
 ## イベントを送信 {#send-event}
 
 Adobeにイベントを送信します [!DNL Experience Platform] これにより、Adobe Experience Platformは、お客様が送信したデータを収集し、その情報に基づいて行動することができます。 インスタンスを選択します（複数のインスタンスがある場合）。 送信したいデータは、以下で送信できます。 **[!UICONTROL XDM データ]** フィールド。 XDM スキーマの構造に準拠する JSON オブジェクトを使用します。 このオブジェクトは、ページ上で作成することも、 **[!UICONTROL カスタムコード]** **[!UICONTROL データ要素]**.
 
 イベントを送信アクションタイプには、実装に応じて役立つ他のフィールドがいくつかあります。 これらのフィールドはすべてオプションであることに注意してください。
 
-- **タイプ：** このフィールドを使用すると、XDM スキーマに記録されるイベントタイプを指定できます。 参照： [`type`](/help/web-sdk/commands/sendevent/type.md) が含まれる `sendEvent` コマンドを使用すると、詳細情報を取得できます。
-- **データ：** XDM スキーマに一致しないデータは、このフィールドを使用して送信できます。 このフィールドは、Adobe Target プロファイルを更新したり、Target Recommendations属性を送信したりする場合に便利です。 参照： [`data`](/help/web-sdk/commands/sendevent/data.md) が含まれる `sendEvent` コマンドを使用すると、詳細情報を取得できます。<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
-- **データセット ID:** データストリームで指定したデータセット以外のデータセットにデータを送信する必要がある場合は、ここでデータセット ID を指定できます。
-- **ドキュメントはアンロードされます：** ユーザーがページから移動した場合でも、イベントがサーバーに到達するようにするには、 **[!UICONTROL ドキュメントはアンロードされます]** チェックボックス。 これにより、イベントはサーバーに到達できますが、応答は無視されます。
-- **ビジュアルパーソナライゼーションの決定をレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、 **[!UICONTROL ビジュアルパーソナライゼーションの決定のレンダリング]** チェックボックス。 必要に応じて、決定範囲やサーフェスを指定することもできます。 を参照してください。 [パーソナライゼーションドキュメント](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) パーソナライズされたコンテンツのレンダリングに関する詳細情報。
+* **タイプ：** このフィールドを使用すると、XDM スキーマに記録されるイベントタイプを指定できます。 参照： [`type`](/help/web-sdk/commands/sendevent/type.md) が含まれる `sendEvent` コマンドを使用すると、詳細情報を取得できます。
+* **データ：** XDM スキーマに一致しないデータは、このフィールドを使用して送信できます。 このフィールドは、Adobe Target プロファイルを更新したり、Target Recommendations属性を送信したりする場合に便利です。 参照： [`data`](/help/web-sdk/commands/sendevent/data.md) が含まれる `sendEvent` コマンドを使用すると、詳細情報を取得できます。<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+* **データセット ID:** データストリームで指定したデータセット以外のデータセットにデータを送信する必要がある場合は、ここでデータセット ID を指定できます。
+* **ドキュメントはアンロードされます：** ユーザーがページから移動した場合でも、イベントがサーバーに到達するようにするには、 **[!UICONTROL ドキュメントはアンロードされます]** チェックボックス。 これにより、イベントはサーバーに到達できますが、応答は無視されます。
+* **ビジュアルパーソナライゼーションの決定をレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、 **[!UICONTROL ビジュアルパーソナライゼーションの決定のレンダリング]** チェックボックス。 必要に応じて、決定範囲やサーフェスを指定することもできます。 を参照してください。 [パーソナライゼーションドキュメント](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) パーソナライズされたコンテンツのレンダリングに関する詳細情報。
 
 ## 同意を設定 {#set-consent}
 
@@ -57,24 +73,28 @@ Adobeにイベントを送信します [!DNL Experience Platform] これによ�
 
 この **[!UICONTROL メディアイベントを送信]** アクションタイプでは、次のプロパティがサポートされています。
 
-- **[!UICONTROL Instance]**：使用されている Web SDK インスタンス。
-- **[!UICONTROL メディアイベントタイプ]**：トラッキングするメディアイベントのタイプ。
-- **[!UICONTROL プレーヤー ID]**：メディアセッションの一意の ID。
-- **[!UICONTROL 再生ヘッド]**：メディア再生の現在の位置（秒単位）。
-- **[!UICONTROL メディアセッションの詳細]**：メディア開始イベントを送信する場合、必要なメディアセッションの詳細を指定する必要があります。
-- **[!UICONTROL チャプターの詳細]**：このセクションでは、チャプター開始メディアイベントを送信する際のチャプターの詳細を指定できます。
-- **[!UICONTROL 広告の詳細]**：を送信する場合 `AdBreakStart` イベントには、必要な広告の詳細を指定する必要があります。
-- **[!UICONTROL 広告ポッドの詳細]**：送信時の広告ポッドに関する詳細 `AdStart` イベント。
-- **[!UICONTROL エラーの詳細]**：トラッキングされている再生エラーに関する詳細。
-- **[!UICONTROL 状態の更新の詳細]**：更新中のプレーヤーの状態。
-- **[!UICONTROL カスタムメタデータ]**：追跡されるメディアイベントに関するカスタムメタデータ。
-- **[!UICONTROL エクスペリエンスの品質]**：トラッキングされるエクスペリエンスデータのメディア品質。
+* **[!UICONTROL Instance]**：使用されている Web SDK インスタンス。
+* **[!UICONTROL メディアイベントタイプ]**：トラッキングするメディアイベントのタイプ。
+* **[!UICONTROL プレーヤー ID]**：メディアセッションの一意の ID。
+* **[!UICONTROL 再生ヘッド]**：メディア再生の現在の位置（秒単位）。
+* **[!UICONTROL メディアセッションの詳細]**：メディア開始イベントを送信する場合、必要なメディアセッションの詳細を指定する必要があります。
+* **[!UICONTROL チャプターの詳細]**：このセクションでは、チャプター開始メディアイベントを送信する際のチャプターの詳細を指定できます。
+* **[!UICONTROL 広告の詳細]**：を送信する場合 `AdBreakStart` イベントには、必要な広告の詳細を指定する必要があります。
+* **[!UICONTROL 広告ポッドの詳細]**：送信時の広告ポッドに関する詳細 `AdStart` イベント。
+* **[!UICONTROL エラーの詳細]**：トラッキングされている再生エラーに関する詳細。
+* **[!UICONTROL 状態の更新の詳細]**：更新中のプレーヤーの状態。
+* **[!UICONTROL カスタムメタデータ]**：追跡されるメディアイベントに関するカスタムメタデータ。
+* **[!UICONTROL エクスペリエンスの品質]**：トラッキングされるエクスペリエンスデータのメディア品質。
 
 ## Media Analytics トラッカーを取得 {#get-media-analytics-tracker}
 
 このアクションは、従来の Media Analytics API を取得するために使用されます。 アクションを設定してオブジェクト名が指定されると、従来の Media Analytics API がそのウィンドウオブジェクトに書き出されます。 何も指定されない場合、に書き出されます `window.Media` 現在の Media JS ライブラリと同様です。
 
 ![Media Analytics トラッカーを取得アクションタイプを示す Platform UI 画像。](assets/get-media-analytics-tracker.png)
+
+## ID でリダイレクト {#redirect-with-identity}
+
+このアクションタイプを使用して、現在のページの ID を他のドメインに共有します。 このアクションは、 **[!UICONTROL click]** イベントタイプと値の比較条件。 参照： [web SDK 拡張機能を使用した URL への ID の追加](../../../../web-sdk/commands/appendidentitytourl.md#extension) このアクションタイプの使用方法について詳しくは、を参照してください。
 
 ## 次の手順 {#next-steps}
 
