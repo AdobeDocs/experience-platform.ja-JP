@@ -1,85 +1,74 @@
 ---
 solution: Experience Platform
-title: 適切なプレイブックを見つける
-description: ユースケースに適切なプレイブックを見つけてプレイブックを有効にする方法を説明します。
+title: プレイブックを見つける
+description: プレイブックのギャラリーを見つけて、感動的なサンドボックスの使用を開始する方法を説明します。
 role: User
-exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: ad3f746580f85e77cba390208d147b35b6854e10
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 96%
+source-wordcount: '711'
+ht-degree: 2%
 
 ---
 
-# 適切なプレイブックを見つける
+# プレイブックを見つける
 
-プレイブックを使用するには、**[!UICONTROL ユースケースプレイブック]／[!UICONTROL プレイブック]**&#x200B;に移動します。ページ上の様々な検索およびフィルタリングオプションを参照して使用し、特定のプレイブックの基本を学びます。
+ユースケースプレイブックは、すべてのAdobe Experience Platformのお客様が追加費用なしで利用できます。 Experience PlatformUI で豊富なユースケースプレイブックのギャラリーにアクセスするには、次を選択します **[!UICONTROL プレイブック]** 左側のナビゲーションから。
 
-## 検索とフィルター {#search-and-filter}
+![ユースケースプレイブックギャラリー。](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
-ページ上で使用可能な検索ウィンドウとフィルターを使用して、ユースケースに適切なプレイブックを見つけます。
+![左側のナビゲーションバーのユースケースプレイブックに直接アクセスします。](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-例えば、ターゲットとするマーケティングファネルのステージ（コンバージョン、エンゲージメント、維持）に基づいて、使用できるプレイブックをフィルタリングできます。また、表示されたプレイブックを、現在の業界や、アクセス権のある製品の使用権限 (Adobe Journey OptimizerまたはReal-Time CDP) 別にフィルタリングすることもできます。
+任意のプレイブックを選択して詳細ページに移動し、以下を選択します **[!UICONTROL インスピレーションの得られるサンドボックスに移動]**. 確認モーダルが表示されます。 を選択 **確認** 様々なユースケースを探索し、試すことができる感動的なサンドボックスに移動します。
 
-![マーケティングファネル、業界、製品別でのプレイブックのフィルタリング](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+サンドボックスを作成する権限がない場合は、管理者に連絡して、感動的なサンドボックスの作成についてサポートを受けてください。
 
-また、検索機能を使用して、適切なプレイブックを見つけることもできます。買い物かごを放棄した可能性のあるユーザーとのエンゲージに役立つ、プレイブックの検索方法の例を以下に示します。
+>[!TIP]
+>
+>感動的なサンドボックスは、Adobe Experience Platform内の開発用サンドボックスで、ライブ実稼動環境に実装する前に、様々なユースケースを作成、テスト、実験できます。
 
-![買い物かごを放棄した可能性のあるユーザーとエンゲージします。](/help/use-case-playbooks/assets/playbooks/ui-guide/engage-abandoned-cart.gif)
+![感動的なサンドボックスに移動します。](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-または、以下に示すように、お客様へのリーチに使用を予定しているチャネルで、使用可能なプレイブックをフィルタリングすることもできます。
+インスピレーションを得られるサンドボックスをまだ設定していない場合は、次を選択します。 **[!UICONTROL 感動的なサンドボックスの作成]**. モーダルが表示されます。 を入力 **名前** および **タイトル** 必須フィールドボックスでを選択し、 **作成**. 感動的なサンドボックスを作成したら、必ず次の操作を行います [権限の定義](/help/access-control/home.md) ユースケースプレイブックの詳細ページに戻ってインスタンスを作成する前に。
 
-![チャネルでのフィルタリング](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
+![感動的なサンドボックスを作成します。](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
-フィルターと検索オプションを試して、適切なプレイブックを見つけます。
+![名前とタイトルを入力して、感動的なサンドボックスを作成します。](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-## プレイブックの表示とアセットの生成 {#view-playbook-generate-assets}
+感動的なサンドボックスの外部からユースケースプレイブックを選択した場合は、インスタンスを作成できません。 詳細ページで、 **感動的なサンドボックスに移動** 既存の感動的サンドボックスに移動して、次を選択します： **[!UICONTROL インスタンスを作成]**.
 
-プレイブックを決定してそのインスタンスを作成する前に、プレイブックを検査してニーズに適合していることを確認する必要があります。対象となるユースケースをより深く理解できるように、すべてのプレイブックには以下にリストされている節が含まれています。アセットを生成して続行する準備が整ったら、「**[!UICONTROL インスタンスを作成]**」を選択します。
+サンドボックスを作成する権限がない場合は、管理者に連絡して、感動的なサンドボックスの作成についてサポートを受けてください。
 
-### マインドマップ {#mindmap}
+![サンドボックスを作成する権限がありません。](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
 
-プレイブックの「マインドマップ」の節を参照して、プレイブックで解決できるワークフローの手順を理解します。生成されたすべてのオブジェクトがユース ケースの達成にどのように役立つかというフローを、ユースケースでターゲットとするペルソナの観点から視覚化します。
+割り当てられるサンドボックスの数が上限に達した場合は、組織の管理者に連絡して、上限を増やすか、アクティブなサンドボックスの一部を非アクティブにするか削除するかを尋ねるメッセージが表示されます。 サンドボックスの制限を調整するか、アクティブなサンドボックスの数を減らしたら、感動的なサンドボックスの作成に進むことができます。
 
-マインドマップでは、ユーザージャーニーでどのユーザーにリーチするかの定義から始まり、新しいメッセージやリマインダーなど、アドビで情報が配信された場合や、ターゲットとするペルソナが次のメッセージまたはイベントをトリガーする場合に手順を追って説明します。
+![サンドボックスの制限に達しました。](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
 
-![ハイライト表示されたプレイブックのマインドマップ。](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+インスピレーションの得られるサンドボックスを作成する場合、メール、プッシュおよび SMS 通知用のチャネルサーフェスは、自動的には設定されません。 IT 管理者に手動で設定するように依頼してください。そうでない場合は、インスタンスの作成に失敗することがあります。
 
-### 概要 {#summary}
+![チャネルプリセットの設定](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
 
->[!CONTEXTUALHELP]
->id="platform_playbooks_assets"
->title="アセット"
->abstract="このプレイブックによって生成されたアセットです。プレイブックのインスタンスを作成したら、インスピレーションを得られるサンドボックス内のアセットを確認し、必要に応じて他のサンドボックスにプロモートできます。"
+## Journey Optimizerでのサンドボックスおよびチャネルサーフェスの設定 {#configure-channel-surfaces}
 
-「概要」の節を参照して、プレイブックからインスタンスを作成すると生成されるアセットを理解します。 プレイブックごとに生成されるアセットは、プレイブックで有効にするユースケースに合わせて調整されます。「概要」の節にあるすべての項目については、以下の詳細情報を参照してください。
+組織がにライセンスを取得している場合 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja)また、Journey Optimizer用に設計されたプレイブックを使用する場合は、サンドボックスでチャネルプリセットを設定する必要があります。これは、メッセージに必要な技術的パラメーターを定義します。 [詳しくは、Adobe Journey Optimizer でのチャネルサーフェスの設定方法を参照してください](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=ja)。
 
-| 項目 | 説明 |
----------|----------|
-| **[!UICONTROL ターゲットオーディエンス]** | このユースケースプレイブックを通じてリーチするペルソナについて説明します。 |
-| **[!UICONTROL マーケティングチャネル]** | プレイブックでターゲットとしているペルソナにリーチするために使用されるチャネルについて説明します。 |
-| **[!UICONTROL テクニカルアセット]** | プレイブックのインスタンスを作成した後に生成されるテクニカルアセットのリスト。生成されるアセットは、ユースケースに応じて、プレイブックごとに異なります。一部のプレイブックでは、スキーマ、セグメント、ジャーニーを生成する場合があります。宛先を生成する場合もあります。生成されたアセットの使用方法と再利用方法について詳しくは、インスタンスの作成と再利用に関するガイドの[生成されたアセットについて](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets)の節を参照してください。 |
+Journey Optimizerでプレイブックのインスタンスを作成するには、メール、プッシュ、SMS 通知用のチャネルサーフェスを設定する必要があります。
 
-{style="table-layout:auto"}
+### メールチャネルサーフェス
 
-![ハイライト表示されたプレイブックの概要](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
+に移動 `Channels` Journey Optimizerのインターフェイスで上書きできます。 まだ設定されていない場合は、マーケティングメールとトランザクションメッセージ用に個別のサブドメインと IP プールを設定します。 これらは、注文確認メールなどのトランザクションメッセージを顧客に確実に送信するためのベストプラクティスです。 名前、メールアドレスおよび追加設定を入力します。 を選択 **Submit** ページの右上で、マーケティングチャネルサーフェスを作成します。 のドキュメントを参照してください。 [メールチャネルサーフェスの設定方法](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
-### インスタンス {#instances}
+### SMS チャネルサーフェス
 
-「インスタンス」の節まで下にスクロールして、自分またはチームのメンバーが既に作成したこのプレイブックのインスタンスの概要を確認します。様々なコントロールを使用して、表示されるインスタンスを並べ替えたりフィルタリングしたりすることができます。例えば、自分が作成したインスタンスのみを表示することができます。また、以下に示すように、各インスタンスに関する様々な情報も確認できます。
+SMS チャネルサーフェスを作成するには、まず SMS API 認証情報を作成し、優先ベンダー（Sinch など）を選択します。 SMS チャネルサーフェスに名前を付け（例：SMS マーケティング）、設定を選択し、送信者番号を入力します。 を選択 **Submit** をクリックし、SMS チャネルサーフェスを保存します。 のドキュメントを参照してください。 [sms チャネルサーフェスの設定方法](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ja#message-preset-sms).
 
-| 項目 | 説明 |
-|---------|----------|
-| **[!UICONTROL 名前]** | プレイブックに基づくインスタンスの名前。インスタンスの名前と説明をカスタマイズできます。詳しくは、[インスタンスメタデータの編集方法](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata)に関する節を参照してください。 |
-| **[!UICONTROL ステータス]** | インスタンスのステータスを示します。**[!UICONTROL 送信済み]**&#x200B;インスタンスを使用する準備が整いました。 |
-| **[!UICONTROL 作成日]** | インスタンスが作成された日時を示します。 |
-| **[!UICONTROL 作成者]** | インスタンスを作成したユーザーを示します。 |
-| **[!UICONTROL 最終変更日]** | インスタンスが最後に変更された日時を示します。 |
+また、注文確認などのトランザクションメッセージを含むプレイブックのチャネルを設定します。
 
-{style="table-layout:auto"}
+### チャネルサーフェスをプッシュ
 
-![ハイライト表示されたプレイブックインスタンス。](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
+アプリサーフェスがExperience Platformまたはデータ収集インターフェイスのいずれかから設定されていることを確認します。 データ収集環境では、アプリのサーフェスはこのように表示されます。
 
-## 次の手順 - プレイブックインスタンスの作成 {#next-steps-create-instance}
+## 次の手順 {#next-steps}
 
-プレイブックを続行してインスタンスを作成する準備が整ったら、「**[!UICONTROL インスタンスを作成]**」を選択してプレイブックを続行し、技術アセットを生成します。詳しくは、[プレイブックインスタンスの作成、共有、再利用方法](/help/use-case-playbooks/playbooks/create-share-reuse.md)に関するガイドを参照してください。
+このドキュメントを読み、感動的なサンドボックスの設定方法を理解し、Platform 内のユースケースプレイブックにアクセスする様々な方法に精通する必要があります。 次の手順として、その方法を確認します。 [検索](/help/use-case-playbooks/playbooks/find.md) 適切なプレイブック。
+
