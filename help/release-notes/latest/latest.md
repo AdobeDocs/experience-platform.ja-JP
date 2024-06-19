@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年6月
 description: Adobe Experience Platform の 2024年6月 のリリースノート。
-source-git-commit: 03a88554e8b7793d8e91bc867ce67a00f620b622
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: e1b56c6150274748c35fedfc1e1b6bbbf66d1bfb
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 22%
+source-wordcount: '1195'
+ht-degree: 21%
 
 ---
 
@@ -71,6 +72,7 @@ JWT 認証方法を使用した既存の API 統合は 2025年1月1日（PT）�
 | ----------- | ----------- |
 | アドホックエクスポート API の機能強化による外部オーディエンスのエクスポート | アドホック書き出し API を使用して、外部（カスタムアップロード）オーディエンスを書き出せるようになりました。 [詳細情報](/help/destinations/api/ad-hoc-activation-api.md) . |
 | （ベータ版）書き出し配列のサポートのベータ段階でサポートされている追加関数 | 以前は、ファイルベースの宛先に対してオーディエンスをアクティブ化し、「計算フィールドを使用」を選択する場合、データ準備で使用可能なオーディエンスのサブセットを使用するように制限されていました。 オーディエンスをファイルベースの宛先に書き出す際に、データ準備で利用できるすべての機能にアクセスできるようになりました。 [詳細情報](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions)。 |
+| マッピングステップでデータが含まれるフィールドのみを表示します | プロファイル属性を宛先にマッピングする際に、すべてのプロファイル属性を切り替えるか、データを含むプロファイル属性のみを切り替えることができるようになりました。 デフォルトでは、データが含まれるフィールドのみが表示されます。 のアクティベーションガイドを参照してください [バッチ](../../destinations/ui/activate-batch-profile-destinations.md#mapping) および [ストリーミング](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) 宛先を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -117,4 +119,3 @@ JWT 認証方法を使用した既存の API 統合は 2025年1月1日（PT）�
 - すべてのリストを取得 [使用可能なプレイブック](/help/use-case-playbooks/playbooks/playbooks-list.md)、製品（Real-Time CDPまたはJourney Optimizer）別にグループ化。
 - について [権限](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) プレイブックと作成したアセットを使用する場合に必要です。
 - について [データ認識機能](/help/use-case-playbooks/playbooks/data-awareness.md) を使用すると、生成されたアセットを他のサンドボックス環境に複製できます。
-
