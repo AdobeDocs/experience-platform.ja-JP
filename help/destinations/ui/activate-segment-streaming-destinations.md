@@ -3,10 +3,10 @@ title: ストリーミング宛先に対するオーディエンスデータの�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをストリーミングの宛先にマッピングしてアクティブ化する方法について説明します。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
+source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 16%
+source-wordcount: '1188'
+ht-degree: 19%
 
 ---
 
@@ -79,7 +79,9 @@ ht-degree: 16%
 
 1. が含まれる **[!UICONTROL ソースフィールドを選択]** ページ、を使用 **[!UICONTROL 属性を選択]** または **[!UICONTROL ID 名前空間を選択]** 使用可能なソースフィールドの 2 つのカテゴリを切り替えるオプション。 利用可能なの [!DNL XDM] プロファイル属性と ID 名前空間を選択し、宛先にマッピングするものを選択します **[!UICONTROL を選択]**.
 
-   ![使用可能なソースフィールドをいくつか表示しているソースフィールドページを選択します。](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   の使用 **[!UICONTROL データのあるフィールドのみを表示]** 値が入力されたスキーマフィールドのみを表示するように切り替えます。 デフォルトでは、入力されたスキーマフィールドのみが表示されます。
+
+   ![使用可能なソースフィールドをいくつか表示しているソースフィールドページを選択します。](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
 1. の右側にあるボタンを選択します **[!UICONTROL ターゲットフィールド]** エントリ。
 
@@ -102,12 +104,12 @@ ht-degree: 16%
 
 ![ID マッピング手順でハイライト表示された変換コントロールを適用します。](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## オーディエンスの書き出しをスケジュール {#scheduling}
+## オーディエンスの書き出しのスケジュール {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="終了日"
->abstract="オーディエンススケジュール終了日の追加は使用できません。"
+>abstract="オーディエンススケジュールの終了日を追加することはできません。"
 
 デフォルトでは、 **[!UICONTROL オーディエンススケジュール]** ページには、現在のアクティベーションフローで選択した、新しく選択したオーディエンスのみが表示されます。
 
@@ -141,7 +143,7 @@ ht-degree: 16%
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-組織が購入している場合 **Adobe ヘルスケア シールド** または **Adobeプライバシーとセキュリティシールド**&#x200B;を選択 **[!UICONTROL 適用可能な同意ポリシーの表示]** どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認します。 詳細を読む [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
+組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。詳細を読む [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 

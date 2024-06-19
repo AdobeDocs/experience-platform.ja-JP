@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
 workflow-type: tm+mt
-source-wordcount: '3937'
-ht-degree: 51%
+source-wordcount: '3961'
+ht-degree: 57%
 
 ---
 
@@ -77,7 +77,7 @@ CSV ファイルの書き出しでは、書き出したファイルの構造を�
 >
 >から既存のアクティベーションフローからオーディエンスを削除できます **[!UICONTROL アクティベーションデータ]** ページ。 を参照してください。 [専用ドキュメント](../ui/destination-details-page.md#bulk-remove) を参照してください。
 
-## オーディエンスの書き出しをスケジュール {#scheduling}
+## オーディエンスの書き出しのスケジュール {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -105,7 +105,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="ファイルの書き出しオプション"
->abstract="を選択 **完全ファイルを書き出し** オーディエンスに該当するすべてのプロファイルの完全なスナップショットを書き出します。 を選択 **増分ファイルの書き出し** 前回の書き出し以降にオーディエンスに該当したプロファイルのみを書き出します。 <br> 最初の増分ファイルの書き出しには、オーディエンスに適合するすべてのプロファイルが含まれ、バックフィルとして機能します。 それ以後の増分ファイルには、最初の増分ファイル書き出し以降にオーディエンスに該当したプロファイルのみが含まれます。"
+>abstract="「**完全ファイルを書き出し**」を選択して、オーディエンスに該当するすべてのプロファイルの完全なスナップショットを書き出します。「**増分ファイルの書き出し**」を選択して、前回の書き出し以降にオーディエンスの対象として認定されたプロファイルのみを書き出します。<br> 最初の増分ファイルの書き出しには、オーディエンスに該当するすべてのプロファイルが含まれ、バックフィルとして機能します。それ以後の増分ファイルには、最初の増分ファイル書き出し以降にオーディエンスに該当したプロファイルのみが含まれます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#export-incremental-files" text="増分ファイルの書き出し"
 
 >[!CONTEXTUALHELP]
@@ -155,7 +155,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
 >title="ファイル名の設定"
->abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。 ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
+>abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
 
 を選択 **[!UICONTROL 増分ファイルの書き出し]** エクスポートをトリガーにします。最初のファイルは、選択したオーディエンスに対するすべてのプロファイル選定の完全なスナップショットであり、それ以降のファイルは、前回のエクスポート以降の増分プロファイル選定です。
 
@@ -185,7 +185,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="ファイル名の設定"
->abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。 ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
+>abstract="ファイルベースの宛先の場合、オーディエンスごとに一意のファイル名が生成されます。ファイル名エディターを使用して、一意のファイル名を作成および編集するか、デフォルトの名前のままにします。"
 
 ほとんどの宛先では、デフォルトのファイル名は、宛先名、オーディエンス ID、日時インジケーターで構成されます。 例えば、書き出したファイル名を編集して、異なるキャンペーンを区別したり、データの書き出し時間をファイルに追加したりできます。一部の宛先開発者は、別のデフォルトのファイル名追加オプションを宛先に表示するように選択する場合があります。
 
@@ -241,6 +241,8 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
    > 
    >次の画像に示すように、検索フィールドを使用して、選択を絞り込むことができます。
 
+   の使用 **[!UICONTROL データのあるフィールドのみを表示]** 値が入力されたスキーマフィールドのみを表示するように切り替えます。 デフォルトでは、入力されたスキーマフィールドのみが表示されます。
+
    ![宛先に書き出すことができるプロファイル属性を示す、モーダルウィンドウ。](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
 
@@ -275,7 +277,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="必須の属性について"
->abstract="書き出されたすべてのプロファイルに含める XDM スキーマ属性を選択します。必須キーのないプロファイルは、宛先に書き出されません。必須キーを選択しない場合、属性に関係なく、すべての対象プロファイルを書き出します。"
+>abstract="書き出されたすべてのプロファイルに含める XDM スキーマ属性を選択します。必須キーのないプロファイルは、宛先に書き出されません。必須キーを選択しない場合、属性に関係なく、すべての該当プロファイルを書き出します。"
 
 必須属性は、選択した属性がすべてのプロファイルレコードに含まれるようにする、ユーザーが有効にしたチェックボックスです。例：書き出されるすべてのプロファイルには、メールアドレスが含まれます。
 
@@ -504,9 +506,9 @@ Adobe Experience Platform は、スキーマから推奨される一般的に使
 
 [!CONTEXTUALHELP]
 id="platform_destinations_activate_exclude_enrichment_attributes"
-title="エンリッチメント属性を除外"
-abstract="このオプションを有効にすると、選択したカスタムアップロード済みオーディエンスのプロファイルを、すべての属性を除外しながら、宛先に書き出すことができます。"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="詳しくは、ドキュメントを参照してください"
+title="エンリッチメント属性の除外"
+abstract="このオプションを有効にすると、選択したカスタムアップロードオーディエンスのプロファイルを宛先に書き出すことはできますが、その属性はすべて除外されます。"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#select-enrichment-attributes" text="詳しくは、ドキュメントを参照してください"
 
 >[!IMPORTANT]
 >
@@ -543,10 +545,10 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 [!CONTEXTUALHELP]
 id="platform_governance_policies_viewApplicableConsentPolicies"
-title="適用可能な同意ポリシーの表示"
-abstract="組織が購入している場合 **Adobe ヘルスケア シールド** または **Adobeプライバシーとセキュリティシールド**&#x200B;を選択 **[!UICONTROL 適用可能な同意ポリシーの表示]** どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認します。 会社が前述の SKU へのアクセス権を持っていない場合は、このコントロールを無効になります。"
+title="適用可能な同意ポリシーを表示"
+abstract="組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。会社が前述の SKU へのアクセス権を持っていない場合は、このコントロールを無効になります。"
 
-組織が購入している場合 **Adobe ヘルスケア シールド** または **Adobeプライバシーとセキュリティシールド**&#x200B;を選択 **[!UICONTROL 適用可能な同意ポリシーの表示]** どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認します。 詳細を読む [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
+組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。詳細を読む [同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
