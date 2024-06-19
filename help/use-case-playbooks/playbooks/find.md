@@ -3,8 +3,7 @@ solution: Experience Platform
 title: 適切なプレイブックを見つける
 description: ユースケースに適切なプレイブックを見つけてプレイブックを有効にする方法を説明します。
 role: User
-exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 4ca1a93d611f3790fda9b2ed77520e9b2a5c11ec
+source-git-commit: 82acd4fb1376d397e833f12430a3e6b1bd7309d1
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 93%
