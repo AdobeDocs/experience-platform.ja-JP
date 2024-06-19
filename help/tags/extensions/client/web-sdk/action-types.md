@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 拡張機能のアクションタイプ
 description: Adobe Experience Platform Web SDK タグ拡張機能で提供される様々なアクションタイプについて説明します。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: e5fd8a53cfd612034d12a761ac4779ed930557d4
+source-git-commit: fb9f7757d77b221c733bbed5124fa576a6b02ed2
 workflow-type: tm+mt
 source-wordcount: '1264'
 ht-degree: 1%
@@ -47,7 +47,7 @@ Adobeにイベントを送信します [!DNL Experience Platform] これによ�
 
 ## 同意を設定 {#set-consent}
 
-ユーザーから同意を得たら、「同意を設定」アクションタイプを使用して、この同意をAdobe Experience Platform Web SDK に伝える必要があります。 現在、「Adobe」と「IAB TCF」の 2 種類の標準がサポートされています。参照： [顧客の同意環境設定のサポート](/help/web-sdk/consent/supporting-consent.md). Adobeバージョン 2.0 を使用する場合、データ要素の値のみがサポートされます。 同意オブジェクトに解決されるデータ要素を作成します。
+ユーザーから同意を得たら、「同意を設定」アクションタイプを使用して、この同意をAdobe Experience Platform Web SDK に伝える必要があります。 現在、「Adobe」と「IAB TCF」の 2 種類の標準がサポートされています。参照： [顧客の同意環境設定のサポート](../../../../web-sdk/commands/setconsent.md). Adobeバージョン 2.0 を使用する場合、データ要素の値のみがサポートされます。 同意オブジェクトに解決されるデータ要素を作成します。
 
 このアクションでは、ID マップを含めて同意を得た後で ID を同期できるようにするオプションのフィールドも提供されます。 同期は、同意が「保留中」または「アウト」と設定されている場合に役立ちます。これは、同意呼び出しが最初に実行される可能性が高いからです。
 

@@ -3,13 +3,13 @@ solution: Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
-user-guide-description: Edge Network を介したExperience Cloudサービスとのやり取り。
+user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
 role: Developer
-source-git-commit: ec801c550740c4cba3481a961599f548518bb032
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 46%
+source-wordcount: '224'
+ht-degree: 52%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 46%
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
       * [概要](commands/sendevent/overview.md)
-      * [データ](commands/sendevent/data.md)
+      * [data](commands/sendevent/data.md)
       * [documentUnloading](commands/sendevent/documentunloading.md)
       * [パーソナライズ機能](commands/sendevent/personalization.md)
       * [renderDecisions](commands/sendevent/renderdecisions.md)
@@ -91,7 +91,6 @@ ht-degree: 46%
       * [Web SDK での Web アプリ内メッセージのサポートの設定](personalization/web-in-app-messaging.md)
 
 * 同意 {#consent}
-   * [同意のサポート](consent/supporting-consent.md)
    * IAB の透明性および同意フレームワーク 2.0 {#iab-tcf}
       * [概要](consent/iab-tcf/overview.md)
       * [タグを使用した統合](consent/iab-tcf/with-tags.md)

@@ -1,40 +1,40 @@
 ---
-title: Adobe Experience Platform Web SDK を使用した IAB TCF 2.0 の統合
-description: タグを使用せずに Web サイトの IAB TCF 2.0 サポートを設定する方法を説明します。
+title: Adobe Experience Platform Web SDK を使用して IAB TCF 2.0 のサポートを統合する
+description: タグを使用せずに web サイトの IAB TCF 2.0 サポートを設定する方法を説明します。
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
 
-# Platform Web SDK との IAB TCF 2.0 の統合
+# IAB TCF 2.0 のサポートと Platform Web SDK の統合
 
-このガイドでは、タグを使用せずに、Interactive Advertising Bureau の Transparency &amp; Consent Framework、バージョン 2.0(IAB TCF 2.0) をAdobe Experience Platform Web SDK に統合する方法を示します。 IAB TCF 2.0 との統合の概要については、 [概要](./overview.md). タグとの統合方法に関するガイドについては、 [タグの IAB TCF 2.0 ガイド](./with-tags.md).
+このガイドでは、タグを使用せずに、Interactive Advertising Bureau Transparency &amp; Consent Framework バージョン 2.0 （IAB TCF 2.0）をAdobe Experience Platform Web SDK と統合する方法について説明します。 IAB TCF 2.0 との統合の概要については、以下を参照してください [の概要](./overview.md). タグとの統合方法については、を参照してください。 [タグ用 IAB TCF 2.0 ガイド](./with-tags.md).
 
 ## はじめに
 
-このガイドでは、 `__tcfapi` 同意情報にアクセスするためのインターフェイス。 クラウド管理プロバイダー (CMP) と直接統合する方が簡単な場合があります。 ただし、CMP は通常、TCF API と同様の機能を提供するので、このガイドの情報は引き続き役立つ場合があります。
+このガイドでは、を使用します `__tcfapi` 同意情報にアクセスするためのインターフェイス。 クラウド管理プロバイダー（CMP）と直接統合する方が簡単な場合があります。 ただし、CMP は一般に TCF API と同様の機能を提供するので、このガイドの情報は引き続き役に立つ場合があります。
 
 >[!NOTE]
 >
->以下の例では、コードが実行されるまでに、 `window.__tcfapi` がページで定義されている。 CMP には、 `__tcfapi` オブジェクトの準備が整いました。
+>これらの例では、コードが実行されるまでに `window.__tcfapi` ページで定義されます。 CMP は次の場合にこれらの関数を実行できるフックを提供できます `__tcfapi` オブジェクトの準備ができました。
 
-IAB TCF 2.0 をタグとAdobe Experience Platform Web SDK 拡張機能と共に使用するには、XDM スキーマを使用可能にする必要があります。 これらのいずれも設定していない場合は、先に進む前にこのページを表示して開始します。
+タグおよびAdobe Experience Platform Web SDK 拡張機能で IAB TCF 2.0 を使用するには、XDM スキーマが使用可能である必要があります。 これらのどちらも設定していない場合は、続行する前にこのページを表示して開始します。
 
-また、このガイドでは、Adobe Experience Platform Web SDK に関する十分な知識が必要です。 簡単なリフレッシャーについては、 [Adobe Experience Platform Web SDK の概要](../../home.md) そして [よくある質問](../../faq.md) ドキュメント。
+また、このガイドでは、Adobe Experience Platform Web SDK に関する十分な知識が必要です。 簡単な復習については、 [Adobe Experience Platform Web SDK の概要](../../home.md) および [よくある質問](../../faq.md) ドキュメント。
 
 ## デフォルトの同意の有効化
 
-すべての不明なユーザーを同じように扱う場合は、 [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) から `pending` または `out`. これは、同意の環境設定を受け取るまで、エクスペリエンスイベントをキューに追加または破棄します。
+すべての不明なユーザーを同じように扱う場合は、次のように設定できます [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) 対象： `pending` または `out`. これにより、同意設定が受信されるまでエクスペリエンスイベントがキューに入れられるか、破棄されます。
 
-### 次に基づくデフォルトの同意の設定 `gdprApplies`
+### 基づくデフォルトの同意の設定 `gdprApplies`
 
-一部の CMP では、EU 一般データ保護規則 (GDPR) がお客様に適用されるかどうかを判断する機能を提供しています。 GDPR が適用されないお客様の同意を前提とする場合は、 `gdprApplies` フラグを設定します。
+一部の CMP は、お客様が GDPR （一般データ保護規則）を適用されているかどうかを判断する機能を提供します。 GDPR が適用されない顧客の同意を得たい場合は、 `gdprApplies` tcf API 呼び出しのフラグ。
 
-次の例に、これをおこなう方法の 1 つを示します。
+次の例は、これを行う 1 つの方法を示しています。
 
 ```javascript
 var alloyConfiguration = { ... };
@@ -46,17 +46,17 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-この例では、 `configure` コマンドが `tcData` は TCF API から取得されます。 次の場合 `gdprApplies` が true の場合、デフォルトの同意はに設定されます。 `pending`. 次の場合 `gdprApplies` が false の場合、デフォルトの同意はに設定されます。 `in`. 必ず `alloyConfiguration` 変数に設定を入力します。
+この例では、 `configure` コマンドは、 `tcData` は、TCF API から取得されます。 次の場合 `gdprApplies` が true の場合、デフォルトの同意はに設定されます `pending`. 次の場合 `gdprApplies` が false の場合、デフォルトの同意がに設定されます `in`. 必ずを入力してください。 `alloyConfiguration` ご使用の設定で変更します。
 
 >[!NOTE]
 >
->デフォルトの同意がに設定されている場合 `in`、 `setConsent` コマンドを使用して、顧客の同意設定を記録できます。
+>デフォルトの同意がに設定されている場合 `in`, `setConsent` コマンドは、引き続き顧客の同意環境設定を記録するために使用できます。
 
 ## setConsent イベントの使用
 
-IAB TCF 2.0 API は、お客様が同意を更新した場合にイベントを提供します。 これは、顧客が最初に環境設定を設定したときや、顧客が環境設定を更新したときに発生します。
+IAB TCF 2.0 API は、顧客が同意を更新した場合にのイベントを提供します。 この問題は、顧客が最初に環境設定を行い、顧客が環境設定を更新した場合に発生します。
 
-次の例に、これをおこなう方法の 1 つを示します。
+次の例は、これを行う 1 つの方法を示しています。
 
 ```javascript
 const identityMap = { ... };
@@ -77,13 +77,13 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-このコードブロックは、 `useractioncomplete` イベントを送信し、同意を設定します。 `gdprApplies` フラグ。 顧客のカスタム ID がある場合は、必ず `identityMap` 変数を使用します。 に関するガイドを参照してください。 [同意のサポート](../../consent/supporting-consent.md) 電話での詳細 `setConsent`.
+このコードブロックは、 `useractioncomplete` イベントを発生させ、同意を設定し、同意文字列と `gdprApplies` フラグ。 顧客のカスタム ID がある場合は、必ずを入力してください `identityMap` 変数。 のガイドを参照してください [setConsent](../../../web-sdk/commands/setconsent.md) を参照してください。
 
 ## sendEvent に同意情報を含める
 
-XDM スキーマ内では、エクスペリエンスイベントから同意設定情報を保存できます。 この情報を各イベントに追加する方法は 2 つあります。
+XDM スキーマ内に、エクスペリエンスイベントから同意環境設定情報を保存できます。 すべてのイベントにこの情報を追加する方法は 2 つあります。
 
-まず、次のページに関連する XDM スキーマを `sendEvent` を呼び出します。 次の例に、これをおこなう方法の 1 つを示します。
+まず、に関連する XDM スキーマを指定できます `sendEvent` を呼び出します。 次の例は、これを行う 1 つの方法を示しています。
 
 ```javascript
 var sendEventOptions = { ... };
@@ -106,4 +106,4 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## 次の手順
 
-これで、IAB TCF 2.0 と Platform Web SDK 拡張機能の使用方法が学びました。これで、Adobe AnalyticsやAdobe Real-time Customer Data Platformなどの他のAdobeソリューションと統合することも選択できます。 詳しくは、 [IAB Transparency &amp; Consent Framework 2.0 の概要](./overview.md) を参照してください。
+これで、IAB TCF 2.0 を Platform Web SDK 拡張機能と共に使用する方法を説明したので、次は、Adobe AnalyticsやAdobe Real-time Customer Data Platformなど、他のAdobeソリューションと統合することもできます。 を参照してください。 [IAB の透明性および同意フレームワーク 2.0 の概要](./overview.md) を参照してください。

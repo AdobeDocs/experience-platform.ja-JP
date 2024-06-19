@@ -2,7 +2,7 @@
 title: Web SDK の ID データ
 description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID （ECID）を取得および管理する方法について説明します。
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6b58d72628b58b75a950892e7c16d397e3c107e2
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 2%
@@ -104,7 +104,7 @@ alloy("getIdentity")
   });
 ```
 
-## 使用 `identityMap`
+## 使用 `identityMap` {#using-identitymap}
 
 XDM の使用 [`identityMap` フィールド](../../xdm/schema/composition.md#identityMap)では、複数の ID を使用してデバイスやユーザーを識別し、その認証状態を設定し、どの識別子をプライマリと見なすかを決定できます。 識別子がに設定されていない場合 `primary`の場合、プライマリのデフォルトはです。 `ECID`.
 
