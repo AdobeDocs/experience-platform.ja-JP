@@ -1,54 +1,33 @@
 ---
 solution: Experience Platform
-title: 既知の制限事項とプレイブックに関する問題のトラブルシューティング
-description: プレイブックの既知の問題と一般的な問題と、それらのトラブルシューティング方法について詳しく説明します
+title: プレイブックの既知の制限と問題のトラブルシューティング
+description: プレイブックの既知の問題とよくある問題の詳細とトラブルシューティング方法について説明します
 role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 0faf3187c0b32e0be70033e501939412ade37d7e
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 2%
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
 
-# トラブルシューティングと既知の制限事項 {#troubleshooting-known-limitations}
+# トラブルシューティング {#troubleshooting}
 
-ユースケースプレイブックを操作する際のエラーのトラブルシューティング方法と、一般リリースリリースの既知の制限事項を説明します。
+ユースケースプレイブックを操作する際の一般的なエラーに関するトラブルシューティングの提案を表示します
 
-## トラブルシューティング {#troubleshooting}
-
-ユースケースプレイブックを使用する際の一般的なエラーに関するトラブルシューティングの提案を表示します
-
-### Adobe Journey Optimizerサーフェスが設定されていません
+## Adobe Journey Optimizerサーフェスが設定されていません {#surfaces-not-configured}
 
 プレイブックのインスタンスを作成すると、次のメッセージが表示される場合があります。
 
 ![トラブルシューティング](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-これは、Journey Optimizer Playbook が E メール、プッシュ、SMS チャネル用のメッセージを作成するからです。 詳しくは、 [使い始める](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) 様々なサーフェスを設定するためのガイド。
+これは、Journey Optimizer プレイブックがメール、プッシュ、SMS チャネルのメッセージを作成するからです。 を読み取る [はじめに](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) 様々なサーフェスの設定に関するガイド。
 
-### ステータス *失敗* 新しいインスタンスを作成する場合
+## ステータス *失敗* 新しいインスタンスの作成時 {#status-failed}
 
-インスタンスの作成時に失敗したメッセージが表示される場合は、管理者が必要なユーザー権限を付与していない可能性があります。 プレイブックには様々なアセットが多数含まれており、プレイブックのインスタンスを正しく作成するには、ユーザーがこれらのアセットを作成する権限が必要です。 詳しくは、 [権限](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 権限の設定方法に関するこのガイドの節を参照してください。
+インスタンスを作成しようとしたときに失敗メッセージが表示された場合は、管理者から必要なユーザー権限が付与されていない可能性があります。 プレイブックには様々なアセットが多数含まれており、プレイブックのインスタンスを正常に作成するには、ユーザーがこれらのアセットを作成する権限が必要です。 を参照してください。 [権限](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 権限の設定方法については、このガイドの節を参照してください。
 
-## 既知の制限事項
+## 読み込み失敗 {#import-failure}
 
-プレイブックのインスタンスを作成してアセットを生成する場合、いくつかの既知の制限事項が表示されます。
-
-* 生成されたスキーマについて、スキーマがプレイブックの 1 つのインスタンスで生成され、編集した場合は、別のスキーマ *次の条件を満たさない* プレイブックの別のインスタンスを有効にした場合に生成されます。 代わりに、インスタンス内で編集したスキーマも引き続き使用します。
-
-* を使用する場合、 [データ認識機能](/help/use-case-playbooks/playbooks/data-awareness.md) スキーマをインスピレーション可能なサンドボックスから開発用サンドボックスに昇格させるには、次のようなエラーが発生する場合があります。
-
-![スキーママッピングワークフローに表示されるエラー。](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
-
-これは、スキーマから生成された一部のフィールドが、コピー先の開発サンドボックスのスキーマに存在しないためです。 そのフィールドを調べなさい。 次に、次の操作をおこなえる開発用サンドボックスに戻ります。
-
-* これらのフィールドを含む新しいフィールドグループを作成するか、
-* スキーマに、見つからないフィールドを含む、事前定義済みの標準フィールドグループを含めます。
-
-これらのフィールドを開発サンドボックスのスキーマに含めたら、ワークフローに戻り、スキーマフィールドをインスピレーションを得たサンドボックスから開発サンドボックスにコピーします。 エラーは消えました。
-
-詳しくは、以下のビデオを見て、スキーマフィールドグループを作成してください。
-
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+お客様は様々なテスト環境内で作業しますが、インスタンスを環境からAdobeサンドボックスに読み込む際に失敗する場合もあります。 これらの読み込みのステータスを表示するには、左側のナビゲーションから「サンドボックス」を選択したあと、「ジョブ」を選択します。 ここでは、読み込まれたファイルのすべての詳細を表示できます。 失敗ステータスのファイルを選択し、「ジョブの詳細を表示」を選択します。 モーダルが表示されます。 「JSON ファイルを表示」を選択し、下にスクロールして「メッセージ」の下に表示されるエラーメッセージをコピーします。 複数のエラーメッセージが表示される可能性があるので、必ずすべてをコピーします。 バグ チケットをログに記録する際に、Adobeチームに送信します。 これにより、解決プロセスが迅速化され、起こっていることについてのチームのコンテキストが増えます。

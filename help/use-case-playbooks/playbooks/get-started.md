@@ -4,7 +4,7 @@ title: ユースケースプレイブックの概要
 description: ユースケースプレイブック機能の基本を学ぶ方法を説明します。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 15%
@@ -113,4 +113,4 @@ SMS チャネルサーフェスを作成するには、まず SMS API 認証情�
 
 ## 次の手順 {#next-steps}
 
-このドキュメントのすべての手順を完了したので、左側のナビゲーションにユースケースプレイブックが表示された開発用サンドボックスを作成しました。 また、プレイブックの表示と管理、アセットの生成に必要な権限をチームメンバーに付与する方法についても理解しました。 次の手順として、方法をお読みください [適切なプレイブックを見つける](/help/use-case-playbooks/playbooks/discover.md) その時のために [そこからインスタンスを作成](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+このドキュメントのすべての手順を完了したので、左側のナビゲーションにユースケースプレイブックが表示された開発用サンドボックスを作成しました。 また、プレイブックの表示と管理、アセットの生成に必要な権限をチームメンバーに付与する方法についても理解しました。 次の手順として、方法をお読みください [適切なプレイブックを選択](/help/use-case-playbooks/playbooks/choose.md) その時のために [そこからインスタンスを作成](/help/use-case-playbooks/playbooks/create-share-reuse.md).
