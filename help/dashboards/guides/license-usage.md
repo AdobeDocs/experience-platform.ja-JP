@@ -4,10 +4,10 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
-source-wordcount: '2135'
-ht-degree: 3%
+source-wordcount: '2103'
+ht-degree: 9%
 
 ---
 
@@ -16,21 +16,14 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="ライセンス使用状況ダッシュボード"
->abstract="ライセンス使用状況ダッシュボードを使用すると、購入したAdobe Experience Platform製品に関するインサイトを得ることができます。 ダッシュボードの概要には、製品の主要指標が表示されます。これには、各主要指標の使用状況と契約ライセンス量が含まれます。 詳細ワークスペースには、特定のサンドボックス内の各製品の指標の分類が表示されます。"
+>abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="ライセンス使用状況ダッシュボード"
->abstract="ライセンス使用状況ダッシュボードを使用すると、購入したAdobe Experience Platform製品に関するインサイトを得ることができます。 ダッシュボードの概要には、製品の主要指標が表示されます。これには、各主要指標の使用状況と契約ライセンス量が含まれます。 詳細ワークスペースには、特定のサンドボックス内の各製品の指標の分類が表示されます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="データセット有効期限"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_reduction"
->title="使用量を削減する方法"
->abstract="使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
->additional-url="https://experienceleague.adobe.com/ja/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="偽名プロファイルデータの有効期限のビデオ"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータ有効期限のドキュメント"
+>abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセット有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="匿名プロファイルのデータの有効期限"
 
 組織のライセンス使用状況に関する重要な情報は、Adobe Experience Platformで確認できます [!UICONTROL ライセンス使用状況] ダッシュボード。 ここに表示される情報は、Platform インスタンスの毎日のスナップショット中にキャプチャされます。
 

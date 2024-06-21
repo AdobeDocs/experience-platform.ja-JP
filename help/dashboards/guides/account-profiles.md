@@ -2,7 +2,7 @@
 title: アカウントプロファイルダッシュボード
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 4%
@@ -170,7 +170,7 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 
 ![予測スコアリングの上位影響要因ウィジェット。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
-### データを読み込めませんエラー {#errors}
+## データを読み込めませんエラー {#errors}
 
 ウィジェットが *[!UICONTROL 読み込めません。 もう一回やってみて。]* これは、B2B エンティティに使用できるデータがないことが原因です。 例えば、以下に表示されるウィジェットです。 [!UICONTROL 人物の役割別の新しい機会]は、メッセージ「」を表示します[!UICONTROL 読み込めません。 もう一回やってみて。]このサンドボックスには使用可能な商談データがないので、」です。
 

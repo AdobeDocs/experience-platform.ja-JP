@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文の詳細と説明を説明します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
+source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4305'
 ht-degree: 5%
 
 ---
@@ -312,7 +312,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | モードのデフォルト値。 指定した場合、スキーマは該当する場合にのみ削除されます **ではない** すべてのテーブルが含まれます。 |
 | `CASCADE` | 指定した場合、スキーマは、スキーマに存在するすべてのテーブルと共にドロップされます。 |
 
-## CREATE VIEW
+## CREATE VIEW {#create-view}
+
+SQL ビューは、SQL 文の結果セットに基づく仮想テーブルです。 を使用したビューの作成 `CREATE VIEW` ステートメントと名前を付けます。 その後、その名前を使用して、クエリの結果を返すことができます。 これにより、複雑なクエリの再利用が容易になります。
 
 以下の構文は、 `CREATE VIEW` データセットのクエリ。 このデータセットは、ADLS または高速ストアデータセットにすることができます。
 
