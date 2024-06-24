@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
+source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1227'
 ht-degree: 88%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 88%
       * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
       * [Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
-      * [（ベータ版）計算フィールドを使用したフラットスキーマファイルの配列のエクスポート](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [（ベータ版）計算フィールドを使用したフラットスキーマファイルでの配列の書き出し](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
@@ -141,6 +141,7 @@ ht-degree: 88%
    * データ管理プラットフォームの宛先 {#data-management}
       * [データ管理プラットフォーム（DMP）の宛先の概要](./catalog/data-management/overview.md)
       * [Audience Manager DIL 拡張機能](./catalog/data-management/aam-dil-extension.md)
+      * [Zeta マーケティングプラットフォーム](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * データおよび ID パートナー {#data-partner}
       * [Acxiom 見込み客の抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom データの機能強化](./catalog/data-partner/acxiom-data-enhancement.md)
