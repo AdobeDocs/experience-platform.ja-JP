@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
+source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1233'
 ht-degree: 88%
 
 ---
@@ -145,6 +145,8 @@ ht-degree: 88%
    * データおよび ID パートナー {#data-partner}
       * [Acxiom 見込み客の抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom データの機能強化](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Merkury エンタープライズ接続](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+      * [Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
    * e コマースの宛先 {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * メールの宛先 {#email}
