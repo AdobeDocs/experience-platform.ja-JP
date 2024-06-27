@@ -5,9 +5,9 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: fe239bee3c853d43c04200092f59537dfeb00c87
+source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '633'
 ht-degree: 81%
 
 ---
@@ -65,14 +65,14 @@ ht-degree: 81%
       * [仕事用連絡先の詳細](./field-groups/profile/work-contact-details.md)
       * [XDM ビジネスパーソンのコンポーネント](./field-groups/profile/business-person-components.md)
       * [XDM ビジネスパーソンの詳細](./field-groups/profile/business-person-details.md)
-   * XDM 個別見込み客プロファイル {#prospect-profile}
-      * [パートナー見込み客の詳細（例）](./field-groups/prospect-profile/partner-prospect-details.md)
+   * XDM 個人見込み客プロファイル {#prospect-profile}
+      * [パートナー見込み客の詳細（サンプル）](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics の完全拡張機能](./field-groups/event/analytics-full-extension.md)
       * [広告の詳細](./field-groups/event/advertising-details.md)
       * [アプリケーションの詳細](./field-groups/event/application-details.md)
       * [残高繰り越し](./field-groups/event/balance-transfers.md)
-      * [ボット検出](./field-groups/event/bot-detection-information.md)
+      * [ボットの検出](./field-groups/event/bot-detection-information.md)
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
       * [カードのアクション](./field-groups/event/card-actions.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
@@ -98,7 +98,7 @@ ht-degree: 81%
    * XDM ビジネスキャンペーンメンバー {#b2b-campaign-members}
       * [XDM ビジネスキャンペーンメンバーの詳細](./field-groups/b2b-campaign-members/details.md)
    * 医薬品 {#medication}
-      * [医療薬](./field-groups/medication/healthcare-medication.md)
+      * [ヘルスケア薬品](./field-groups/medication/healthcare-medication.md)
    * プラン {#plan}
       * [ヘルスケアプランの詳細](./field-groups/plan/healthcare-plan-details.md)
    * 製品 {#product}
@@ -106,30 +106,32 @@ ht-degree: 81%
       * [製品カテゴリ](./field-groups/product/product-category.md)
    * プロバイダー {#provider}
       * [ヘルスケア提供組織](./field-groups/provider/healthcare-provider.md)
+   * 共有 {#shared}
+      * [外部ソースシステム監査の詳細](./field-groups/shared/external-source-system-audit-details.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
    * [アカウントの詳細](./data-types/account-details.md)
    * [広告](./data-types/ad-break.md)
    * [Address](./data-types/address.md)
-   * [広告の詳細コレクション](./data-types/advertising-details-collection.md)
-   * [広告の詳細レポート](./data-types/advertising-details-reporting.md)
-   * [広告ポッドの詳細コレクション](./data-types/advertising-pod-details-collection.md)
-   * [広告ポッドの詳細レポート](./data-types/advertising-pod-details-reporting.md)
+   * [Advertisingの詳細コレクション](./data-types/advertising-details-collection.md)
+   * [Advertising詳細レポート](./data-types/advertising-details-reporting.md)
+   * [Advertising ポッドの詳細コレクション](./data-types/advertising-pod-details-collection.md)
+   * [Advertising ポッドの詳細レポート](./data-types/advertising-pod-details-reporting.md)
    * [アプリケーション](./data-types/application.md)
    * [B2B ソース](./data-types/b2b-source.md)
    * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
    * [買い物かご](./data-types/cart.md)
    * [カテゴリデータ](./data-types/category-data.md)
-   * [Chapter Details コレクション](./data-types/chapter-details-collection.md)
+   * [チャプター詳細コレクション](./data-types/chapter-details-collection.md)
    * [チャプターの詳細レポート](./data-types/chapter-details-reporting.md)
-   * [コマース範囲](./data-types/commerce-scope.md)
+   * [Commerceの範囲](./data-types/commerce-scope.md)
    * [コマース](./data-types/commerce.md)
    * [同意文字列](./data-types/consent-string.md)
    * [同意および環境設定](./data-types/consents.md)
    * [通貨](./data-types/currency.md)
-   * [カスタムメタデータ詳細コレクション](./data-types/custom-metadata-details-collection.md)
-   * [カスタムメタデータ詳細レポート](./data-types/custom-metadata-details-reporting.md)
+   * [カスタムメタデータの詳細コレクション](./data-types/custom-metadata-details-collection.md)
+   * [カスタムメタデータの詳細レポート](./data-types/custom-metadata-details-reporting.md)
    * [デバイス](./data-types/device.md)
    * [メールアドレス](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
@@ -151,8 +153,8 @@ ht-degree: 81%
    * [印象](./data-types/impressions.md)
    * [内部サイト検索](./data-types/internal-site-search.md)
    * [キーと値のペア](./data-types/key-value-pair.md)
-   * [状態のリストの終了コレクション](./data-types/list-of-states-end-collection.md)
-   * [List of States Start Collection](./data-types/list-of-states-start-collection.md)
+   * [状態のリスト終了コレクション](./data-types/list-of-states-end-collection.md)
+   * [状態のリストの収集を開始](./data-types/list-of-states-start-collection.md)
    * [マーケティング](./data-types/marketing.md)
    * [測定](./data-types/measure.md)
    * [メディアコレクションの詳細](./data-types/media-collection-details.md)
@@ -162,23 +164,23 @@ ht-degree: 81%
    * [POI の詳細](./data-types/poi-details.md)
    * [POI インタラクション](./data-types/poi-interaction.md)
    * [支払い項目](./data-types/payment-item.md)
-   * [担当者名](./data-types/person-name.md)
+   * [人物名](./data-types/person-name.md)
    * [人物](./data-types/person.md)
    * [電話番号](./data-types/phone-number.md)
    * [場所コンテキスト](./data-types/place-context.md)
-   * [プレーヤーステートデータのレポート](./data-types/player-state-data-reporting.md)
+   * [プレーヤーステートデータレポート](./data-types/player-state-data-reporting.md)
    * [郵送先住所](./data-types/postal-address.md)
-   * [製品リスト項目](./data-types/product-list-item.md)
-   * [QoE(Quality of Experience) データ詳細の収集](./data-types/qoe-data-details-collection.md)
-   * [QoE データ詳細レポート](./data-types/qoe-data-details-reporting.md)
-   * [払い戻し項目](./data-types/refund-item.md)
-   * [購買依頼リスト](./data-types/requisition-list.md)
-   * [項目を返す](./data-types/return-item.md)
+   * [商品リスト項目](./data-types/product-list-item.md)
+   * [QoE （Quality of Experience）データの詳細収集](./data-types/qoe-data-details-collection.md)
+   * [QoE データの詳細レポート](./data-types/qoe-data-details-reporting.md)
+   * [払戻品目](./data-types/refund-item.md)
+   * [要求リスト](./data-types/requisition-list.md)
+   * [返品品目](./data-types/return-item.md)
    * [戻る](./data-types/return.md)
    * [検索](./data-types/search.md)
-   * [セッションの詳細コレクション](./data-types/session-details-collection.md)
-   * [セッションの詳細レポート](./data-types/session-details-reporting.md)
-   * [送料](./data-types/shipping.md)
+   * [Session Details Collection](./data-types/session-details-collection.md)
+   * [Session Details Reporting](./data-types/session-details-reporting.md)
+   * [発送](./data-types/shipping.md)
    * [サブスクリプション](./data-types/subscription.md)
    * [通信サブスクリプション](./data-types/telecom-subscription.md)
    * [トランザクション](./data-types/transaction.md)
@@ -238,4 +240,4 @@ ht-degree: 81%
    * [アドホックスキーマの作成](tutorials/ad-hoc.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
