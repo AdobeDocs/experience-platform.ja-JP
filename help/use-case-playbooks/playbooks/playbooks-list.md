@@ -7,7 +7,7 @@ exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 Real-time Customer Data PlatformとAdobe Journey Optimizerで見つけて使用できる、使用可能なすべてのプレイブックの概要については、このページを参照してください。
 
-## Journey Optimizerのユースケースプレイブック {#optimizer-playbooks}
+## Journey Optimizer のユースケースプレイブック {#optimizer-playbooks}
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_list"
 >title="使用可能なプレイブック"
->abstract="Real-time Customer Data PlatformとAdobe Journey Optimizerのすべてのプレイブックのリスト。"
+>abstract="Real-time Customer Data Platform と Adobe Journey Optimizer のすべてのプレイブックのリスト。"
 
 | プレイブック名 | 説明 |
 | ------------- |  ----------- |
@@ -38,8 +38,8 @@ Real-time Customer Data PlatformとAdobe Journey Optimizerで見つけて使用�
 | 来店時の製品購入の増加 | 買い物客が店の近くにいる間に商品を購入するように微調整します。 |
 | 滞在中の製品およびサービス購入の増加 | ホテル内で商品やサービスを購入するために、ゲストを微調整します。 |
 | 単一ゲームの購入を増やす | ファンをターゲットにして、シングルゲームのリピート購入を増やします。 |
-| イベント調査およびインセンティブプロモの投稿 | インセンティブプロモを提供することで、イベント後の調査に対応するようにファンを微調整します。 |
-| 旅行後の調査 | インセンティブプロモを提供することで、旅行後の調査に対応するようにゲストを微調整します。 |
+| Post イベント調査とインセンティブプロモ | インセンティブプロモを提供することで、イベント後の調査に対応するようにファンを微調整します。 |
+| Post旅行調査 | インセンティブプロモを提供することで、旅行後の調査に対応するようにゲストを微調整します。 |
 | 商品プロモーション | 進行中の製品プロモーションキャンペーン中に、買い物客を微調整して製品を購入します。 |
 | 購入確認：商品 | 新しい商品購入ファンを確認します。 |
 | 購入確認：製品 | 新しい製品購入ショッパーを確認します。 |
