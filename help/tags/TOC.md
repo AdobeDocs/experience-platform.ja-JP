@@ -6,10 +6,10 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 98%
+source-wordcount: '769'
+ht-degree: 97%
 
 ---
 
@@ -299,6 +299,7 @@ ht-degree: 98%
       * [ルール](./api/endpoints/rules.md)
       * [ルールコンポーネント](./api/endpoints/rule-components.md)
       * [拡張機能パッケージ](./api/endpoints/extension-packages.md)
+      * [拡張機能パッケージの使用認証](./api/endpoints/extension-package-usage-authorizations.md)
       * [拡張機能](./api/endpoints/extensions.md)
       * [ライブラリ](./api/endpoints/libraries.md)
       * [ビルド](./api/endpoints/builds.md)
