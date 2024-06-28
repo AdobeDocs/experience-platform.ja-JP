@@ -77,9 +77,11 @@ Merkury Enterprise Identity Destination は、次の Merkury 機能のために�
 ## 書き出しのタイプと頻度
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
-|**対象読者**|**サポート**|**説明の起源**|\
-|—|—|—|\
-✓ |セグメント化サービス|Experience Platformを通じて生成されたオーディエンス [[ セグメント サービス ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| カスタムアップロード|X|オーディエンス [[ 読み込み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformに変換します。
+
+|**Audience**|**Supported**|**Description origin**|            
+|---|---|---|      
+|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.
 
 {style="table-layout:auto"}
 
