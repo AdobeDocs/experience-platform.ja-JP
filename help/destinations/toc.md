@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
+source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
 workflow-type: tm+mt
-source-wordcount: '1237'
-ht-degree: 88%
+source-wordcount: '1241'
+ht-degree: 87%
 
 ---
 
@@ -89,7 +89,8 @@ ht-degree: 88%
       * [LinkedIn Insight Tag 拡張機能](./catalog/advertising/linkedin.md)
       * [LiveRamp - オンボーディング接続](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp – 配信接続](./catalog/advertising/liveramp-distribution.md)
-      * [Magnite ストリーミングリアルタイム接続](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [（Beta）マグナイト・バッチ](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [（Beta） Magnite Streaming Real-time Connection](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing 接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
