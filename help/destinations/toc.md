@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
+source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1237'
 ht-degree: 88%
 
 ---
@@ -83,12 +83,13 @@ ht-degree: 88%
       * [Google Ad Manager の接続](./catalog/advertising/google-ad-manager.md)
       * [（ベータ版）Google Ad Manager 360 接続](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 接続](./catalog/advertising/google-customer-match.md)
-      * [（ベータ版）Google カスタマーマッチ + DV360 接続](./catalog/advertising/google-customer-match-dv360.md)
+      * [（Beta）Google Customer Match + DV360 接続](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360 接続](./catalog/advertising/google-dv360.md)
       * [Google gtag 拡張機能](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag 拡張機能](./catalog/advertising/linkedin.md)
       * [LiveRamp - オンボーディング接続](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp – 配信接続](./catalog/advertising/liveramp-distribution.md)
+      * [Magnite ストリーミングリアルタイム接続](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing 接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
