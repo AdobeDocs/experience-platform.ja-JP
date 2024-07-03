@@ -3,9 +3,9 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3975'
 ht-degree: 57%
 
 ---
@@ -131,7 +131,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
    >[!NOTE]
    >
-   >この **[!UICONTROL セグメント評価後]** 以下に説明するオプションは、一部のベータ版のお客様のみが利用できます。
+   >この **[!UICONTROL セグメント評価後]** 以下に説明するオプションは、一部のBetaのお客様のみが利用できます。
 
    「**[!UICONTROL セグメントの評価後]**」オプションを使用して、毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブをを実行します。このオプションを使用すると、アクティベーションジョブが実行されたときに、最新のプロファイルが確実に宛先に書き出されます。
 
@@ -432,7 +432,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 >
 > 例えば、フィールド `person.name.firstName` に宛先のマーケティングアクションと競合する特定のデータ使用ラベルがある場合、レビュー手順でデータ使用ポリシー違反が表示されます。詳しくは、[Adobe Experience Platform でのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)を参照してください。
 
-### [!BADGE ベータ版]{type=Informative} 計算フィールドから配列を書き出し {#export-arrays-calculated-fields}
+### [!BADGE Beta]{type=Informative} 計算フィールドから配列を書き出し {#export-arrays-calculated-fields}
 
 一部のベータ版のお客様は、Experience Platformからクラウドストレージの宛先に配列オブジェクトを書き出すことができます。 詳細を読む： [配列と計算フィールドの書き出し](/help/destinations/ui/export-arrays-calculated-fields.md) 機能にアクセスするには、Adobe担当者にお問い合わせください。
 
@@ -442,13 +442,22 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 #### マッピングワークフローでは、オーディエンスメンバーシップの属性を選択できません
 
-既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.status` をファイル書き出しに追加できません。 代わりに、手動で値 `xdm: segmentMembership.status` をスキーマフィールドに貼り付ける必要があります（下図を参照）。
+既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.seg_namespace.seg_id.status` をファイル書き出しに追加できません。 代わりに、手動で値 `xdm: segmentMembership.seg_namespace.seg_id.status` をスキーマフィールドに貼り付ける必要があります（下図を参照）。
 
 ![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面録画。](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-ファイルのエクスポートは、`segmentMembership.status` が選択されているかどうかによって、次のように異なります。
-* 次の場合 `segmentMembership.status` フィールドが選択されています。エクスポートされたファイルには次が含まれます **[!UICONTROL アクティブ]** 最初の完全スナップショットと新しいスナップショットのメンバー **[!UICONTROL アクティブ]** および **[!UICONTROL 期限切れ]** その後の増分エクスポートのメンバー。
-* `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
+
+>[!NOTE]
+>
+クラウドストレージの宛先の場合、デフォルトでマッピングに追加される属性は次のとおりです。
+>
+* `segmentMembership.seg_namespace.seg_id.status`
+* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+ファイルのエクスポートは、`segmentMembership.seg_namespace.seg_id.status` が選択されているかどうかによって、次のように異なります。
+
+* 次の場合 `segmentMembership.seg_namespace.seg_id.status` フィールドが選択されています。エクスポートされたファイルには次が含まれます **[!UICONTROL アクティブ]** 最初の完全スナップショットと新しいスナップショットのメンバー **[!UICONTROL アクティブ]** および **[!UICONTROL 期限切れ]** その後の増分エクスポートのメンバー。
+* `segmentMembership.seg_namespace.seg_id.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
 
 詳細を読む： [ファイルベースの宛先のプロファイル書き出し動作](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -488,19 +497,19 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 >[!NOTE]
 >
-Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`）を事前に選択します。
+Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.seg_namespace.seg_id.status`）を事前に選択します。
 
 ![Audience Activation ワークフローのマッピング手順で事前入力された推奨属性を示す画像。](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.status` をファイル書き出しに追加できません。 代わりに、値を手動で貼り付ける必要があります `xdm: segmentMembership.status` スキーマフィールドに移動します（下図を参照）。
+既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.seg_namespace.seg_id.status` をファイル書き出しに追加できません。 代わりに、値を手動で貼り付ける必要があります `xdm: segmentMembership.seg_namespace.seg_id.status` スキーマフィールドに移動します（下図を参照）。
 >
 ![アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面録画。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-ファイルのエクスポートは、次のように、どちらであるかによって異なります。 `segmentMembership.status` が選択されました：
-* `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
-* `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
+ファイルのエクスポートは、次のように、どちらであるかによって異なります。 `segmentMembership.seg_namespace.seg_id.status` が選択されました：
+* `segmentMembership.seg_namespace.seg_id.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
+* `segmentMembership.seg_namespace.seg_id.status` フィールドを選択しない場合、エクスポートされたファイルには、最初の完全スナップショットとその後の増分エクスポートで、**[!UICONTROL アクティブ]**&#x200B;メンバーのみが含まれます。
 
 ## エンリッチメント属性を選択 {#select-enrichment-attributes}
 
