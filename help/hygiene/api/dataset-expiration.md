@@ -3,10 +3,10 @@ title: Dataset Expiration API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
+source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
 workflow-type: tm+mt
-source-wordcount: '2166'
-ht-degree: 59%
+source-wordcount: '2217'
+ht-degree: 58%
 
 ---
 
@@ -27,6 +27,12 @@ Data Hygiene API の `/ttl` エンドポイントを使用すると、Adobe Expe
 >[!WARNING]
 >
 >データセットの有効期限が切れるように設定されている場合、ダウンストリームワークフローに悪影響が及ばないよう、データをそのデータセットに取り込む可能性があるデータフローを手動で変更する必要があります。
+
+高度なデータライフサイクル管理では、データセット有効期限エンドポイントを介したデータセット削除と、を介したプライマリ ID を使用した ID 削除（行レベルのデータ）をサポートしています [workorder エンドポイント](./workorder.md). 以下を管理することもできます [データセット有効期限](../ui/dataset-expiration.md) および [レコードの削除](../ui/record-delete.md) Platform UI を使用する。 詳しくは、リンクされたドキュメントを参照してください。
+
+>[!NOTE]
+>
+>データ ライフサイクルはバッチ削除をサポートしていません。
 
 ## はじめに
 
@@ -493,7 +499,7 @@ curl -X GET \
 | `orgId` | 組織 ID がパラメーターと一致するデータセットの有効期限に一致します。この値はデフォルトで `x-gw-ims-org-id` ヘッダーの値となり、リクエストがサービストークンを提供しない限り無視されます。 | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | 返される有効期限のページを示す整数。 | `page=3` |
 | `sandboxName` | サンドボックス名が引数と完全に一致するデータセット有効期限に一致します。デフォルトは、リクエストの `x-sandbox-name` ヘッダーにあるサンドボックス名です。`sandboxName=*` を使用して、すべてのサンドボックスからデータセット有効期限を含めます。 | `sandboxName=dev1` |
-| `search` | 指定された文字列が有効期限 ID と完全に一致する場合、またはである場合に有効期限に一致します **含まれる** 次のいずれかのフィールドで：<br><ul><li>author</li><li>表示名</li><li>説明</li><li>表示名</li><li>データセット名</li></ul> | `search=TESTING` |
+| `search` | 指定された文字列が有効期限 ID と完全に一致する場合、またはである場合に有効期限に一致します **含まれる** 次のいずれかのフィールドで：<br><ul><li>作成者</li><li>表示名</li><li>説明</li><li>表示名</li><li>データセット名</li></ul> | `search=TESTING` |
 | `status` | ステータスのコンマ区切りリスト。含める場合、応答は、現在のステータスがリストに含まれるデータセットの有効期限に一致します。 | `status=pending,cancelled` |
 | `ttlId` | 指定された ID で有効期限リクエストに一致します。 | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
 | `updatedDate`／`updatedToDate`／`updatedFromDate` | `createdDate`／`createdFromDate`／`createdToDate` に似ていますが、作成時間ではなく、データセットの有効期限の更新時間に対して一致します。<br><br>有効期限は、作成時、キャンセル時、実行時を含め、編集されるたびに更新されたと見なされます。 | `updatedDate=2022-01-01` |

@@ -2,10 +2,10 @@
 title: 高度なデータ・ライフサイクル管理の概要
 description: 高度なデータライフサイクル管理を使用すると、古くなったレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 58%
+source-wordcount: '636'
+ht-degree: 53%
 
 ---
 
@@ -23,6 +23,10 @@ Adobe Experience Platform では、カスタマーエクスペリエンスを調
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 これらのアクティビティは、 [[!UICONTROL データライフサイクル] UI ワークスペース](#ui) または [データハイジーン API](#api). データ・ライフサイクル・ジョブが実行されると、システムはプロセスの各ステップで透明性を更新します。 各ジョブタイプがシステム上でどのように表現されるかについて詳しくは、[タイムラインと透明性](#timelines-and-transparency)の節を参照してください。
+
+>[!NOTE]
+>
+>Advanced Data Lifecycle Management は、以下を通じてデータセット削除をサポートします。 [データセット有効期限エンドポイント](./api/dataset-expiration.md) 経由でのプライマリ ID を使用した ID 削除（行レベルのデータ） [workorder エンドポイント](./api/workorder.md). 以下を管理することもできます [データセット有効期限](./ui/dataset-expiration.md) および [レコードの削除](./ui/record-delete.md) Platform UI を使用する。 詳しくは、リンクされたドキュメントを参照してください。 なお、データライフサイクルはバッチ削除をサポートしていません。
 
 ## [!UICONTROL データライフサイクル] UI ワークスペース {#ui}
 
