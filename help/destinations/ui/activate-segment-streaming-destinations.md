@@ -3,7 +3,7 @@ title: ストリーミング宛先に対するオーディエンスデータの�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをストリーミングの宛先にマッピングしてアクティブ化する方法について説明します。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 19%
@@ -52,7 +52,7 @@ ht-degree: 19%
 接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
 * **[!UICONTROL セグメント化サービス]**:Segmentation Service によってExperience Platform内で生成されたオーディエンス。 を参照してください。 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、のドキュメントを参照してください。 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、のドキュメントを参照してください。 [オーディエンスのインポート](../../segmentation/ui/audience-portal.md#import-audience).
 * その他のAdobeソリューションから生成される、次のようなオーディエンスのタイプ [!DNL Audience Manager].
 
 ![オーディエンスを選択手順でハイライト表示された複数のオーディエンス。](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)

@@ -3,10 +3,10 @@ keywords: google カスタマーマッチ；Google カスタマーマッチ；Go
 title: Google Customer Match 接続
 description: Google カスタマーマッチを使用すると、オンラインおよびオフラインのデータを使用して、検索、ショッピング、Gmail、YouTubeなど、Googleが所有および運営するプロパティをまたいで顧客にリーチし、再びエンゲージできます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1969'
-ht-degree: 20%
+ht-degree: 19%
 
 ---
 
@@ -50,7 +50,7 @@ Experience Platformの一部の宛先には、宛先プラットフォームに�
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
+| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
 | phone_sha256_e.164 | SHA256 アルゴリズムでハッシュ化された E164 形式の電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。の指示に従います [ID の一致要件](#id-matching-requirements-id-matching-requirements) およびは、プレーンテキストとハッシュ化された電話番号に適した名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。の指示に従います [ID の一致要件](#id-matching-requirements-id-matching-requirements) およびは、プレーンテキストとハッシュ化されたメールアドレスに適した名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
@@ -63,9 +63,9 @@ Experience Platformの一部の宛先には、宛先プラットフォームに�
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
 | オーディエンスオリジン | サポートあり | 説明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
-| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -84,7 +84,7 @@ Experience Platformの一部の宛先には、宛先プラットフォームに�
 
 の設定前に [!DNL Google Customer Match] 宛先Experience Platformで、を使用するGoogleのポリシーを読み、遵守してください [!DNL Customer Match]、で説明されています [Google サポートドキュメント](https://support.google.com/google-ads/answer/6299717).
 
-次に、 [!DNL Google] アカウントはに対して設定されています [!DNL Standard] 以上の権限レベル。 詳しくは、[Google 広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
+次に、 [!DNL Google] アカウントはに対して設定されています [!DNL Standard] 以上の権限レベル。 を参照してください。 [Google Ads ドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) を参照してください。
 
 ### 許可リスト {#allowlist}
 
@@ -230,4 +230,4 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-このエラーは、カスタマーアカウントが準拠していない場合に発生します [前提条件](#google-account-prerequisites). この問題を修正するには、Googleに連絡して、お使いのアカウントが許可リストに登録され、に対応するよう設定されていることを確認してください [!DNL Standard] 以上の権限レベル。 詳しくは、[Google 広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
+このエラーは、カスタマーアカウントが準拠していない場合に発生します [前提条件](#google-account-prerequisites). この問題を修正するには、Googleに連絡して、お使いのアカウントが許可リストに登録され、に対応するよう設定されていることを確認してください [!DNL Standard] 以上の権限レベル。 を参照してください。 [Google Ads ドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) を参照してください。

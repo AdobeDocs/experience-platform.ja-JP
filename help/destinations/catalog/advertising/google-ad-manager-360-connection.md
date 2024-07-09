@@ -2,10 +2,10 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、媒体社がビデオやモバイルアプリを通じて web サイト上の広告の表示を管理できる、Google の広告配信プラットフォームです。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 59%
+ht-degree: 61%
 
 ---
 
@@ -52,9 +52,9 @@ ht-degree: 59%
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
 | オーディエンスオリジン | サポートあり | 説明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
-| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -104,8 +104,8 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="オーディエンス ID をオーディエンス名に追加"
->abstract="この宛先のオーディエンス名にExperience Platformのオーディエンス ID を含めるには、次のように、このオプションを選択します。 `Audience Name (Audience ID)`"
+>title="オーディエンス名へのオーディエンス ID の追加"
+>abstract="この宛先のオーディエンス名に Experience Platform のオーディエンス ID を含める（`Audience Name (Audience ID)` など）には、このオプションを選択します。"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 

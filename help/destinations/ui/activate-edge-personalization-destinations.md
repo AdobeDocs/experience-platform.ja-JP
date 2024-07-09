@@ -3,7 +3,7 @@ title: エッジパーソナライゼーションの宛先に対してオーデ�
 description: 同じページと次のページのパーソナライゼーションのユースケースに対して、Adobe Experience Platformからエッジパーソナライゼーションの宛先へのオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 15%
@@ -47,13 +47,13 @@ Adobe Targetとカスタムパーソナライゼーションの宛先に対し�
 
 ## ユースケース {#use-cases}
 
-Adobe TargetなどのAdobeのパーソナライゼーションソリューションや、独自のパーソナライゼーションパートナープラットフォーム（例： [!DNL Optimizely], [!DNL Pega]）に加えて、独自のシステム（社内の CMS など）を使用して、を介してより深い顧客パーソナライゼーションエクスペリエンスを強化します [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) の宛先。 これらすべてを、Experience PlatformEdge Networkのデータ収集およびセグメント化機能も活用して行います。
+Adobe TargetなどのAdobeのパーソナライゼーションソリューションや、独自のパーソナライゼーションパートナープラットフォーム（例： [!DNL Optimizely], [!DNL Pega]）に加えて、独自のシステム（社内の CMS など）を使用して、を介してより深い顧客パーソナライゼーションエクスペリエンスを強化します [カスタムPersonalization](../catalog/personalization/custom-personalization.md) の宛先。 これらすべてを、Experience PlatformEdge Networkのデータ収集およびセグメント化機能も活用して行います。
 
 以下に説明するユースケースには、サイトのパーソナライゼーションとターゲットを設定したオンサイト広告の両方が含まれます。
 
-これらのユースケースを可能にするには、オーディエンス情報とプロファイル属性情報の両方をExperience Platformから取得し、その情報を以下のどちらかに送信する、迅速かつ合理化された方法が必要です [Adobe Target](../catalog/personalization/adobe-target-connection.md) または [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) Experience PlatformUI での接続。
+これらのユースケースを可能にするには、オーディエンス情報とプロファイル属性情報の両方をExperience Platformから取得し、その情報を以下のどちらかに送信する、迅速かつ合理化された方法が必要です [Adobe Target](../catalog/personalization/adobe-target-connection.md) または [カスタムPersonalization](../catalog/personalization/custom-personalization.md) Experience PlatformUI での接続。
 
-### 同じページのパーソナライズ機能 {#same-page}
+### 同じページのパーソナライゼーション {#same-page}
 
 ユーザーが web サイトのページにアクセスします。 現在のページ訪問情報（参照 URL、ブラウザー言語、埋め込み製品情報など）を使用して、次のアクションや決定（パーソナライゼーションなど）を選択するには、 [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) Adobe以外のプラットフォーム用の接続（例： [!DNL Pega], [!DNL Optimizely] など）。
 
@@ -61,7 +61,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 ユーザーが web サイトのページ A にアクセスします。 このインタラクションに基づいて、ユーザーは一連のオーディエンスに対して選定されました。 次に、ユーザーがページ A からページ B に移動するリンクをクリックします。ページ A での以前のインタラクション中にユーザーが選定したオーディエンスは、現在の web サイト訪問によって決定されたプロファイルの更新と共に、次のアクションまたは決定（例えば、訪問者に表示する広告バナー、A/B テストの場合は表示するページのバージョン）の強化に使用されます。
 
-### 次のセッションのパーソナライズ機能 {#next-session}
+### 次のセッションのパーソナライゼーション {#next-session}
 
 ユーザーが web サイトの複数のページにアクセスします。 これらのインタラクションに基づいて、ユーザーは一連のオーディエンスに対して選定されました。 次に、ユーザーは現在の閲覧セッションを終了します。
 
@@ -81,9 +81,9 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 >[!TIP]
 >
->2024 年 4 月リリース以降、次の場合に「エッジセグメント化」チェックボックスをオンにする必要はありません [Adobe Targetへの接続の設定](/help/destinations/catalog/personalization/adobe-target-connection.md). この場合、 [次のセッションのパーソナライズ機能](#next-session) は、利用できるパーソナライゼーションのユースケースのみです。
+>2024 年 4 月リリース以降、「Edgeのセグメント化」チェックボックスをオンにする必要はありません [Adobe Targetへの接続の設定](/help/destinations/catalog/personalization/adobe-target-connection.md). この場合、 [次のセッションのパーソナライズ機能](#next-session) は、利用できるパーソナライゼーションのユースケースのみです。
 
-![エッジセグメント化とパーソナライゼーションの宛先がハイライト表示されたデータストリーム設定。](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Edgeのセグメント化とPersonalizationの宛先がハイライト表示されたデータストリーム設定。](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 データストリームの設定方法の詳細については、[Platform Web SDK ドキュメント](../../datastreams/configure.md#aep)に記載されている手順に従ってください。
 
@@ -93,7 +93,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 >[!IMPORTANT]
 >
->現在、エッジ宛先では、 [アクティブオンエッジ結合ポリシー](../../segmentation/ui/segment-builder.md#merge-policies) をデフォルトとして設定します。 異なる結合ポリシーを使用するオーディエンスをエッジ宛先にマッピングした場合、それらのオーディエンスは評価されません。
+>現在、エッジ宛先では、 [Active-on-Edge結合ポリシー](../../segmentation/ui/segment-builder.md#merge-policies) をデフォルトとして設定します。 異なる結合ポリシーを使用するオーディエンスをエッジ宛先にマッピングした場合、それらのオーディエンスは評価されません。
 
 [結合ポリシーの作成](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)の手順に従い、「**[!UICONTROL エッジでアクティブ化結合ポリシー]**」切り替えスイッチを必ず有効にします。
 
@@ -141,7 +141,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
 * **[!UICONTROL セグメント化サービス]**:Segmentation Service によってExperience Platform内で生成されたオーディエンス。 を参照してください。 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、のドキュメントを参照してください。 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、のドキュメントを参照してください。 [オーディエンスのインポート](../../segmentation/ui/audience-portal.md#import-audience).
 * その他のAdobeソリューションから生成される、次のようなオーディエンスのタイプ [!DNL Audience Manager].
 
 ![複数のオーディエンスがハイライト表示された、アクティベーションワークフローのオーディエンス選択手順。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL カスタムパーソナライゼーション]** 宛先では、を使用する必要があります [Edge Networkサーバー API](../../server-api/overview.md) 属性ベースのパーソナライゼーションの宛先を設定する場合。 すべての Server API 呼び出しは、 [認証済みコンテキスト](../../server-api/authentication.md).
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、 **[!UICONTROL カスタムPersonalization]** 宛先では、を使用する必要があります [Edge Networkサーバー API](../../server-api/overview.md) 属性ベースのパーソナライゼーションの宛先を設定する場合。 すべての Server API 呼び出しは、 [認証済みコンテキスト](../../server-api/authentication.md).
 >
 ><br>既に統合に Web SDK または Mobile SDK を使用している場合は、サーバーサイド統合を追加することで、Server API を介して属性を取得できます。
 >
@@ -164,7 +164,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 ### ソース属性を選択 {#select-source-attributes}
 
-ソース属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** に対する制御 **[!UICONTROL ソースフィールド]** 列を選択し、目的の XDM 属性フィールドを検索するか、移動します（下図を参照）。
+ソース属性を追加するには、 **[!UICONTROL 新しいフィールドを追加]** に対する制御 **[!UICONTROL Source フィールド]** 列を選択し、目的の XDM 属性フィールドを検索するか、移動します（下図を参照）。
 
 ![マッピングステップでターゲット属性を選択する方法を示す画面録画。](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
@@ -174,7 +174,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 >[!NOTE]
 >
->ターゲット属性の選択は、 [カスタムパーソナライゼーション](../catalog/personalization/custom-personalization.md) 宛先プラットフォームでわかりやすい名前のフィールドマッピングをサポートするためのアクティベーションワークフローです。
+>ターゲット属性の選択は、 [カスタムPersonalization](../catalog/personalization/custom-personalization.md) 宛先プラットフォームでわかりやすい名前のフィールドマッピングをサポートするためのアクティベーションワークフローです。
 
 ![マッピングステップで XDM 属性を選択する方法を示す画面録画](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 

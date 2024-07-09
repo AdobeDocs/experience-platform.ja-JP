@@ -1,9 +1,9 @@
 ---
-keywords: 広告；Bing;
+keywords: 広告；bing;
 title: Microsoft Bing 接続
-description: Microsoft Bing の接続先を使用すると、ディスプレイ広告、検索、ネイティブなど、Microsoft Advertising Network 全体をまたいで、再ターゲティングとオーディエンスにターゲットを設定したデジタルキャンペーンを実行できます。
+description: Microsoft Bing の接続先を使用すると、ディスプレイ広告、検索、ネイティブを含むMicrosoft Advertising ネットワーク全体でリターゲティングとオーディエンスターゲットのデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 52%
@@ -14,23 +14,23 @@ ht-degree: 52%
 
 ## 概要 {#overview}
 
-以下を使用します。 [!DNL Microsoft Bing] 宛先を使用して、プロファイルデータを [!DNL Microsoft Advertising Network]を含む [!DNL Display Advertising], [!DNL Search]、および [!DNL Native].
+の使用 [!DNL Microsoft Bing] 全体へのプロファイルデータの送信先 [!DNL Microsoft Advertising Network]を含む [!DNL Display Advertising], [!DNL Search]、および [!DNL Native].
 
-The [!DNL Microsoft Bing] 宛先が作成されました *[!DNL Custom Audiences]* Microsoftで これらは、 [!DNL Microsoft Search Network] および [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) を [Microsoft Advertising ドキュメント](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+この [!DNL Microsoft Bing] 宛先の作成 *[!DNL Custom Audiences]* Microsoftで。 これらは、次の場所から利用できます [!DNL Microsoft Search Network] および [!DNL Audience Network] （[!DNL Native] /[!DNL Display] /[!DNL Programmatic]）に一覧表示されます。 [Microsoft Advertising ドキュメント](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
-プロファイルデータをに送信するには [!DNL Microsoft Bing]の場合、最初に宛先に接続する必要があります。
+プロファイルデータをに送信する [!DNL Microsoft Bing]最初に宛先に接続する必要があります。
 
 ## ユースケース {#use-cases}
 
-マーケターは、 [!DNL Microsoft Advertising IDs] 広告を表示または検索してユーザーをターゲットにする [!DNL Microsoft Advertising] チャネル。
+マーケターは、から構築されたオーディエンスを使用できるようにしたいと考えています [!DNL Microsoft Advertising IDs] でのディスプレイまたは検索広告を介したユーザーのターゲット設定 [!DNL Microsoft Advertising] チャネル：
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Microsoft Bing] は、以下の表に示す id に基づいてオーディエンスをアクティブ化できます。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL Microsoft Bing] では、以下の表に示す ID に基づいたオーディエンスのアクティベーションがサポートされています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ID | 説明 |
 |---|---|
-| MAID | Microsoft Advertising ID |
+| MAID | MICROSOFT ADVERTISING ID |
 
 {style="table-layout:auto"}
 
@@ -38,22 +38,22 @@ The [!DNL Microsoft Bing] 宛先が作成されました *[!DNL Custom Audiences
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスの起源 | サポートあり | 説明 |
----------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
-| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| オーディエンスオリジン | サポートあり | 説明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
-**[!DNL Audience Export]**  — オーディエンスのすべてのメンバーを [!DNL Microsoft Bing] 宛先。
+**[!DNL Audience Export]** - オーディエンスのすべてのメンバーをにエクスポートしています [!DNL Microsoft Bing] の宛先。
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーをにエクスポートしています [!DNL Microsoft Bing] 宛先。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーをに書き出します。 [!DNL Microsoft Bing] の宛先。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
@@ -62,11 +62,11 @@ The [!DNL Microsoft Bing] 宛先が作成されました *[!DNL Custom Audiences
 
 >[!IMPORTANT]
 >
->を使用して最初の宛先を作成する場合は、 [!DNL Microsoft Bing] 有効にしていない [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) 以前のExperience CloudID サービス (Adobe Audience Managerや他のアプリケーションを使用 ) では、Adobeコンサルティングまたはカスタマーケアに問い合わせて、ID 同期を有効にしてください。 以前に Audience Manager で [!DNL Microsoft Bing] 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>を使用した最初の宛先を作成する場合 [!DNL Microsoft Bing] を有効にしていません。 [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) 過去のExperience CloudID サービス（Adobe Audience Managerまたはその他のアプリケーションを使用）では、Adobe Consultingまたはカスタマーケアに連絡して、ID 同期を有効にしてもらってください。 以前に Audience Manager で [!DNL Microsoft Bing] 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
-宛先を設定する際は、次の情報を指定する必要があります。
+宛先を設定する際には、次の情報を指定する必要があります。
 
-* [!UICONTROL アカウント ID]：こちらが [!DNL Bing Ads CID]（整数形式）
+* [!UICONTROL アカウント ID]：これはです [!DNL Bing Ads CID]（整数フォーマット）。
 
 ## 宛先への接続 {#connect}
 
@@ -82,7 +82,7 @@ The [!DNL Microsoft Bing] 宛先が作成されました *[!DNL Custom Audiences
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**: [!DNL Bing Ads Customer ID] (CID) を使用します。 CID は整数で、にログインする際に URL に含まれます。 [!DNL Microsoft Advertising].
+* **[!UICONTROL アカウント ID]**：あなたの [!DNL Bing Ads Customer ID] （CID）。 CID は整数で、にログインしたときに URL 内に表示されます。 [!DNL Microsoft Advertising].
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -99,13 +99,13 @@ The [!DNL Microsoft Bing] 宛先が作成されました *[!DNL Custom Audiences
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-Adobe Analytics の [オーディエンススケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順に従って、 [!UICONTROL マッピング ID] フィールドに入力します。 これにより、オーディエンスのメタデータがに正しく渡されます。 [!DNL Bing].
+が含まれる [オーディエンススケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順では、でオーディエンス名を手動でマッピングする必要があります [!UICONTROL マッピング ID] フィールド。 これにより、オーディエンスメタデータがに正しく渡されます [!DNL Bing].
 
-![オーディエンス名を Bing マッピング ID にマッピングする方法の例を示す、オーディエンススケジュール画面を示す UI 画像。](../../assets/catalog/advertising/bing/mapping-id.png)
+![オーディエンス名を Bing マッピング ID にマッピングする方法の例を示すオーディエンススケジュール画面を示す UI 画像。](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## 書き出したデータ {#exported-data}
 

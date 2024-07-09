@@ -3,7 +3,7 @@ title: Zeta マーケティングプラットフォーム
 description: Zeta Marketing Platform （ZMP）は、インテリジェンス（独自のデータと AI）を活用して、より効率的に顧客を獲得、成長、保持するのに役立つクラウドベースのシステムです。
 hide: true
 hidefromtoc: true
-source-git-commit: bf553371316d9d9cb368fc4d1be14196201ef680
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 28%
@@ -62,9 +62,9 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
 | オーディエンスオリジン | サポートあり | 説明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
-| カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 

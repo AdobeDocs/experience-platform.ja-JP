@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート（2024年3月）
 description: Adobe Experience Platform の 2024年3月のリリースノート。
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1190'
 ht-degree: 33%
 
 ---
@@ -75,8 +75,8 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 宛先 | タイプ | 説明 |
 | ----------- | --------- | ----------- |
-| [（ベータ版） Acxiom のデータ拡張接続](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新規 | このコネクタを使用して、Real-Time CDPから Acxiom に対してファーストパーティ・プロファイルをアクティブ化し、データのエンリッチメントとマーケティング・チャネル全体での使用を実現します。 その後、Acxiom ソースを使用して、拡張データを含むプロファイルをインポートし、Real-Time CDPで操作できます。 |
-| [（ベータ版） Acxiom 見込み客抑制接続](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新規 | ファーストパーティオーディエンスを Acxiom の宛先にエクスポートして、Acxiom が既知の顧客やコンバート済み顧客を抑制できるようにします。 次に、を使用します [Acxiom prospecting データのインポート](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) ソース・コネクタ：既知のお客様またはコンバート済みのお客様を削除して、Acxiom から見込み客リストを取り込み、アクティブ化します。 |
+| [（Beta） Acxiom Data Enhancement Connection](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新規 | このコネクタを使用して、Real-Time CDPから Acxiom に対してファーストパーティ・プロファイルをアクティブ化し、データのエンリッチメントとマーケティング・チャネル全体での使用を実現します。 その後、Acxiom ソースを使用して、拡張データを含むプロファイルをインポートし、Real-Time CDPで操作できます。 |
+| [（Beta） Acxiom Prospect Suppression connection](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新規 | ファーストパーティオーディエンスを Acxiom の宛先にエクスポートして、Acxiom が既知の顧客やコンバート済み顧客を抑制できるようにします。 次に、を使用します [Acxiom prospecting データのインポート](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) ソース・コネクタ：既知のお客様またはコンバート済みのお客様を削除して、Acxiom から見込み客リストを取り込み、アクティブ化します。 |
 | [Amazon Ads 接続](../../destinations/catalog/advertising/amazon-ads.md) | 更新 | Amazon Ads のMarketing Cloudにデータを書き出す際に、Amazon DSPまたはAmazon宛先（新規）にデータをルーティングできるようになりました。 |
 | [LiveRamp オンボーディング接続](../../destinations/catalog/advertising/liveramp-onboarding.md) | 更新 | LiveRamp オンボーディング宛先で、ヨーロッパおよびオーストラリアへの配信がサポートされるようになりました [!DNL LiveRamp] [!DNL SFTP] インスタンス。 また、書き出されるファイルの最大サイズも 1,000 万行に増えました（以前は 500 万行でした）。 |
 
@@ -112,7 +112,7 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 一括アクション | オーディエンスインベントリで一括アクションがサポートされるようになりました。 一括アクションを使用すると、複数のオーディエンスをすばやく選択して、それらをフォルダーに移動、タグを適用、アクセスラベルを適用または削除できます。 <br> ![オーディエンス UI ワークスペースでの一括アクション。](../2024/assets/march/bulk-actions.png "オーディエンス UI ワークスペースでの一括アクション。"){width="100" zoomable="yes"} <br>この機能について詳しくは、 [セグメント化サービス UI ガイド](../../segmentation/ui/overview.md#bulk-actions). |
+| 一括アクション | オーディエンスインベントリで一括アクションがサポートされるようになりました。 一括アクションを使用すると、複数のオーディエンスをすばやく選択して、それらをフォルダーに移動、タグを適用、アクセスラベルを適用または削除できます。 <br> ![オーディエンス UI ワークスペースでの一括アクション。](../2024/assets/march/bulk-actions.png "オーディエンス UI ワークスペースでの一括アクション。"){width="100" zoomable="yes"} <br>この機能について詳しくは、 [オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 
@@ -126,8 +126,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | タイプ | 説明 |
 | --- | --- | --- |
-| [!BADGE ベータ版]{type=Informative} [!DNL Acxiom Data Ingestion] | 新規 | の使用 [[!DNL Acxiom Data Ingestion] ソース](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) 取り込む [!DNL Acxiom] データをReal-time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化します。 その後、を使用できます [!DNL Acxiom] – の強化されたファーストパーティプロファイルにより、オーディエンスを向上させ、複数のマーケティングチャネルをまたいでアクティブ化します。 <br> ![Acxiom データ取り込みソース。](../2024/assets/march/acxiom-data-ingestion.png "新しい Acxiom データ取り込みソース。"){width="100" zoomable="yes"} <br> を読み取る [[!DNL Acxiom Data Ingestion] の概要](../../sources/connectors/data-partners/acxiom-data-ingestion.md) を開始する方法について説明します。 |
-| [!BADGE ベータ版]{type=Informative} [!DNL Stripe] | 新規 | の使用 [[!DNL Stripe] ソース](../../sources/connectors/payments/stripe.md) 顧客の購入フロー中に取り込んだデータをExperience Platformに取り込みます。 取り込んだら、このデータを使用して、パーソナライズされたオファーを作成し、より豊富なビジネスインサイトを活用できます。 <br> ![Stripeソース。](../2024/assets/march/stripe.png "新しいStripeソース。"){width="100" zoomable="yes"} <br> を読み取る [[!DNL Stripe] の概要](../../sources/connectors/payments/stripe.md) を開始する方法について説明します。 |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | 新規 | の使用 [[!DNL Acxiom Data Ingestion] ソース](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) 取り込む [!DNL Acxiom] データをReal-time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化します。 その後、を使用できます [!DNL Acxiom] – の強化されたファーストパーティプロファイルにより、オーディエンスを向上させ、複数のマーケティングチャネルをまたいでアクティブ化します。 <br> ![Acxiom データ取り込みソース。](../2024/assets/march/acxiom-data-ingestion.png "新しい Acxiom データ取り込みソース。"){width="100" zoomable="yes"} <br> を読み取る [[!DNL Acxiom Data Ingestion] の概要](../../sources/connectors/data-partners/acxiom-data-ingestion.md) を開始する方法について説明します。 |
+| [!BADGE Beta]{type=Informative} [!DNL Stripe] | 新規 | の使用 [[!DNL Stripe] ソース](../../sources/connectors/payments/stripe.md) 顧客の購入フロー中に取り込んだデータをExperience Platformに取り込みます。 取り込んだら、このデータを使用して、パーソナライズされたオファーを作成し、より豊富なビジネスインサイトを活用できます。 <br> ![Stripeソース。](../2024/assets/march/stripe.png "新しいStripeソース。"){width="100" zoomable="yes"} <br> を読み取る [[!DNL Stripe] の概要](../../sources/connectors/payments/stripe.md) を開始する方法について説明します。 |
 | の UI サポート [!DNL Snowflake Streaming] | 新規 | これで、を使用できます [[!DNL Snowflake Streaming] ソース](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) Experience PlatformUI で、からデータをストリーミングするには [!DNL Snowflake] データベース。 <br> ![Snowflakeストリーミングソース。](../2024/assets/march/snowflake-streaming.png "新しいSnowflakeストリークソース。"){width="100" zoomable="yes"} <br> を読み取る [[!DNL Snowflake Streaming] の概要](../../sources/connectors/databases/snowflake-streaming.md) を開始する方法について説明します。 |
 
 {style="table-layout:auto"}

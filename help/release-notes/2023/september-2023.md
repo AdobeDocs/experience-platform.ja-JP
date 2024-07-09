@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2023年9月のリリースノート。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 31%
@@ -98,7 +98,7 @@ Experience Platform は、消費者レコードとデータセットをプログ
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE ベータ版]{type=Informative} レコード削除（限定リリース） | Adobe Experience Platformの高度なデータライフサイクル管理機能：データセットの有効期限とレコード削除の自動化により、お客様のコミットメントと使用許諾契約を満たすために、すべてのデータストアにわたるデータライフサイクルを管理します。<br>データセットの自動有効期限を使用すると、データセット全体を削除し、削除するデータセットの日時を設定できます。<br>レコード削除を使用すると、プライマリ ID をターゲット設定することで、個々の消費者プロファイルを削除できます。 UI または CSV/JSON ファイルのアップロードを使用して、プライマリ ID を個別に指定できます。 を参照してください。 [レコード削除ドキュメント](../../hygiene/ui/record-delete.md) 詳細情報 |
+| [!BADGE Beta]{type=Informative} レコード削除（限定リリース） | Adobe Experience Platformの高度なデータライフサイクル管理機能：データセットの有効期限とレコード削除の自動化により、お客様のコミットメントと使用許諾契約を満たすために、すべてのデータストアにわたるデータライフサイクルを管理します。<br>データセットの自動有効期限を使用すると、データセット全体を削除し、削除するデータセットの日時を設定できます。<br>レコード削除を使用すると、プライマリ ID をターゲット設定することで、個々の消費者プロファイルを削除できます。 UI または CSV/JSON ファイルのアップロードを使用して、プライマリ ID を個別に指定できます。 を参照してください。 [レコード削除ドキュメント](../../hygiene/ui/record-delete.md) 詳細情報 |
 | データセット有効期限 | データセットの自動有効期限を使用すると、データを最小限に抑え、使用許諾契約を常に制御できます。 データセット全体を削除し、削除するデータセットの日時を設定することで、データ量を削減します。 を参照してください。 [データセット有効期限に関するドキュメント](../../hygiene/ui/dataset-expiration.md) を参照してください。 |
 
 {style="table-layout:auto"}
@@ -134,7 +134,7 @@ Add these to release notes as they go out
 | 機能 | 説明 |
 | ----------- | ----------- |
 | Real-Time CDPでのデータの書き出し | この [データセットの書き出し](../../destinations/ui/export-datasets.md) 機能が一般入手可能になりました。 参照： [Experience Platformアプリに基づいて、書き出すことができるデータセット](../../destinations/ui/export-datasets.md#datasets-to-export) を購入し、 [データセット書き出し用のガードレール](/help/destinations/guardrails.md#dataset-exports). |
-| （ベータ版）配列タイプのオブジェクトの書き出しのサポート | プリミティブ値（文字列、整数またはブール値）の配列をフラットスキーマファイルとしてクラウドストレージ宛先に書き出します。 詳しくは、の機能を参照してください。 [詳細を見る](../../destinations/ui/export-arrays-calculated-fields.md). |
+| （Beta）配列型オブジェクトの書き出しのサポート | プリミティブ値（文字列、整数またはブール値）の配列をフラットスキーマファイルとしてクラウドストレージ宛先に書き出します。 詳しくは、の機能を参照してください。 [詳細を見る](../../destinations/ui/export-arrays-calculated-fields.md). |
 | Destination SDKの動的ドロップダウンセレクター | Destination SDKを通じて宛先を作成する場合、を使用できるようになりました [動的ドロップダウンセレクター](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) ドロップダウンセレクターのフィールドに API から取得した値を入力します。 |
 
 **修正および機能強化** {#destinations-fixes-and-enhancements}
@@ -220,7 +220,7 @@ ID サービスについて詳しくは、を参照してください。 [ID サ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| カスタマイズ可能な列 | サイズを変更できる列を使用して、オーディエンスポータルのレイアウトをカスタマイズできるようになりました。 この機能について詳しくは、を参照してください。 [セグメント化 UI ガイド](../../segmentation/ui/overview.md#customize). |
+| カスタマイズ可能な列 | サイズを変更できる列を使用して、オーディエンスポータルのレイアウトをカスタマイズできるようになりました。 この機能について詳しくは、を参照してください。 [オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#customize). |
 | 更新頻度の分類 | 組織のオーディエンスの更新頻度の分類を表示できるようになりました。 この機能について詳しくは、を参照してください。 [セグメント化 UI ガイド](../../segmentation/ui/overview.md#browse). |
 
 セグメント化サービスの詳細については、「[セグメント化サービスの概要](../../segmentation/home.md)」を参照してください。

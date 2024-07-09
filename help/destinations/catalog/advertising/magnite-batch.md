@@ -4,7 +4,7 @@ description: この宛先を使用して、Adobe CDP オーディエンスを Ma
 badgeBeta: label="ベータ版" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 0e6d95e2f68d97805af439d91b4a53230eaf773f
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 14%
@@ -77,7 +77,7 @@ Magnite ストリーミング：バッチ宛先は次を受信できます *い�
 | オーディエンスオリジン | サポートあり | 説明 |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
-| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 

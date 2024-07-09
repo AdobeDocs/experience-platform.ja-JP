@@ -5,10 +5,10 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 91%
+source-wordcount: '185'
+ht-degree: 94%
 
 ---
 
@@ -33,6 +33,7 @@ ht-degree: 91%
 - セグメント化 UI {#ui}
    - [概要](ui/overview.md)
    - [オーディエンスダッシュボード](ui/audience-dashboard.md)
+   - [オーディエンスポータル](ui/audience-portal.md)
    - [オーディエンス構成](ui/audience-composition.md)
    - [セグメントビルダー](ui/segment-builder.md)
    - [アカウントオーディエンス](ui/account-audiences.md)
@@ -40,7 +41,7 @@ ht-degree: 91%
    - [見込み客オーディエンス](ui/prospect-audience.md)
    - [エッジセグメント化](ui/edge-segmentation.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
-   - [ストリーミングのセグメント化（ビデオ）](video/streaming-segmentation-overview.md)
+   - [ストリーミングセグメント化（ビデオ）](video/streaming-segmentation-overview.md)
    - [年の時間制約を無視の更新](ui/ignore-year.md)
    - [時間制約のリファクタリング](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
@@ -73,4 +74,4 @@ ht-degree: 91%
    - [セグメントでデータ使用のコンプライアンスを実施する](tutorials/governance.md)
 - [よくある質問](./faq.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

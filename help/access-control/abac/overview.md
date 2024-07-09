@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御の概要
 description: このドキュメントでは、Adobe Experience Platform の属性ベースのアクセス制御に関する情報を提供します
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1866'
-ht-degree: 84%
+source-wordcount: '1864'
+ht-degree: 82%
 
 ---
 
@@ -98,7 +98,7 @@ Admin Console から新しい権限インターフェイスへのすべての Ex
 >
 >要約すると、宛先と属性ベースのアクセス制御を使用する際には、次の点に注意してください。
 >
->* アクティブ化できるのは、アクティベーションワークフローの[セグメントの参照表示](/help/segmentation/ui/overview.md#browse)と[セグメント手順を選択](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments)でアクセスおよび表示する権限を持っているセグメントのみです。
+>* アクティブ化できるのは、でアクセスおよび表示する権限を持っているオーディエンスのみです [オーディエンスポータル](/help/segmentation/ui/audience-portal.md#browse) および [セグメントを選択ステップ](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) アクティベーションワークフローの
 >* [アクティベーションワークフローのマッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)では、アクセス権限のあるフィールドのみを表示して選択してアクティブ化できます。
 >* 書き出し用にマッピングされるすべてのフィールドへのアクセス権を持たない既存の宛先に対して、追加のセグメントをアクティブ化しようとすると、アクティベーションワークフローがブロックされます。
 

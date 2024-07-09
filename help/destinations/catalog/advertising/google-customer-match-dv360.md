@@ -1,14 +1,14 @@
 ---
 title: Google Customer Match + Display & Video 360 connection
 description: Google Customer Match + Display & Video 360 宛先コネクタを使用すると、Experience Platformのオンラインおよびオフラインデータを使用して、検索、ショッピング、Gmail、YouTubeなど、Googleが所有および運営するプロパティをまたいで顧客にリーチし、再びエンゲージできます。
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: 7a9312a3722e205de3d11e17f6f079709b20237c
+badgeBeta: label="ベータ版" type="Informative"
+exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 18%
 
 ---
-
 
 # [!DNL Google Customer Match + Display & Video 360] 接続
 
@@ -82,9 +82,9 @@ Adobe Real-Time CDPなど、Googleと統合された特定のサードパーテ�
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
 | オーディエンスオリジン | サポートあり | 説明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
-| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 

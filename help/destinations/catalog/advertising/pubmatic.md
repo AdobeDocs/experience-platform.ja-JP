@@ -1,46 +1,46 @@
 ---
-title: PubMatic Connect
-description: PubMatic は、将来のプログラム的なデジタルマーケティングサプライチェーンを提供することで、顧客価値を最大化します。 PubMatic Connect は、プラットフォームテクノロジーと専用サービスを組み合わせ、インベントリとデータのパッケージ化とトランザクションの方法を強化します。
+title: PubMatic 接続
+description: PubMatic は、将来のプログラムによるデジタルマーケティングのサプライチェーンを提供することで、顧客価値を最大化します。 PubMatic Connect は、プラットフォーム技術と専用サービスを組み合わせて、在庫とデータのパッケージ化および取引方法を強化します。
 last-substantial-update: 2023-12-14T00:00:00Z
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 43%
 
 ---
 
-
-# PubMatic 接続先 {#pubmatic-connect}
+# PubMatic Connect の宛先 {#pubmatic-connect}
 
 ## 概要 {#overview}
 
-用途 [!DNL PubMatic Connect] 将来のプログラム的なデジタルマーケティングサプライチェーンを提供することで、顧客価値を最大化する。 [!DNL PubMatic Connect] プラットフォームテクノロジーと専用サービスを組み合わせ、インベントリとデータのパッケージ化とトランザクションの方法を強化します。
+使用方法 [!DNL PubMatic Connect] 将来のプログラム的なデジタルマーケティングサプライチェーンを提供することで、顧客価値を最大化する。 [!DNL PubMatic Connect] は、プラットフォームテクノロジーと専用サービスを組み合わせて、在庫とデータのパッケージ化および取引方法を強化します。
 
-この宛先を使用して、オーディエンスデータをに送信します。 [!DNL PubMatic Connect] プラットフォーム。
+この宛先を使用して、オーディエンスデータをに送信します [!DNL PubMatic Connect] プラットフォーム。
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、 [!DNL PubMatic] チーム。 お問い合わせや更新のご依頼は、 `support@pubmatic.com`.
+>宛先コネクタとドキュメントページは、によって作成および管理されます。 [!DNL PubMatic] チーム。 お問い合わせや更新のリクエストについては、 `support@pubmatic.com`.
 
 ## ユースケース {#use-cases}
 
 [!DNL PubMatic Connect] 宛先を使用する方法とタイミングを理解しやすくするために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
 
-### モバイル、Web および CTV プラットフォームでのユーザーのターゲティング {#targeting}
+### モバイル、web および CTV プラットフォームでのユーザーのターゲティング {#targeting}
 
-パブリッシャーまたはデータプロバイダーが、Adobe Experience Platformからにオーディエンスを送信する [!DNL PubMatic Connect] 様々な識別子を使用して、モバイル、web および CTV プラットフォーム上のユーザーをターゲットに設定する。
+公開者またはデータプロバイダーが、オーディエンスをAdobe Experience Platformからに送信するとします。 [!DNL PubMatic Connect] モバイル、Web および CTV プラットフォーム上で広範囲の識別子を使用してユーザーをターゲットにします。
 
 ## 前提条件 {#prerequisites}
 
-お問い合わせ [!DNL PubMatic] アカウントが正しく設定されていることをアカウントマネージャーに確認して、オーディエンスセグメントのオンボーディングをサポートします。 また、この宛先を使用するためのすべての関連情報が揃っていることを確認し、セットアップ中にサポートを提供します。
+に問い合わせる [!DNL PubMatic] アカウントマネージャー：アカウントが正しく設定され、オーディエンスセグメントのオンボーディングをサポートしていることを確認します。 また、この宛先を使用するための関連する詳細がすべて用意され、設定中にサポートが提供されます。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL PubMatic Connect] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL PubMatic Connect] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 | --------------- | ------ | --- |
-| GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
+| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
@@ -50,10 +50,10 @@ ht-degree: 43%
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスの起源 | サポートあり | 説明 |
+| オーディエンスオリジン | サポートあり | 説明 |
 | --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
-| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -63,8 +63,8 @@ ht-degree: 43%
 
 | 項目 | タイプ | メモ |
 | --- | --- | --- |
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | PubMatic Connect の宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメントの評価に基づいてExperience Platformでプロファイルが更新されると、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
+| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | PubMatic Connect 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいてExperience Platform内でプロファイルが更新されると、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -92,11 +92,11 @@ ht-degree: 43%
 
 - **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 - **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-- **[!UICONTROL データパートナー ID]**: [!DNL PubMatic] この統合のアカウント。
-- **[!UICONTROL デフォルトの国コード]**：プロファイルに何も指定されていない場合にすべての ID に適用する必要があるデフォルトの国コード。
-- **[!UICONTROL アカウント ID]**: [!DNL PubMatic Connect] アカウント ID。
-- **[!UICONTROL アカウントタイプ]**: [!DNL PubMatic] プラットフォームアカウント。 お問い合わせ [!DNL PubMatic] どの項目を選択するかについて質問がある場合は、アカウントマネージャー。 使用できる選択肢は次のとおりです。
-   - [!UICONTROL 投稿者]
+- **[!UICONTROL データパートナー ID]**：で設定されたデータパートナー ID [!DNL PubMatic] この統合用のアカウント。
+- **[!UICONTROL デフォルトの国コード]**：プロファイルで指定されていない場合にすべての ID に適用されるデフォルトの国コード。
+- **[!UICONTROL アカウント ID]**：あなたの [!DNL PubMatic Connect] アカウント ID。
+- **[!UICONTROL アカウントタイプ]**：のアカウントタイプ [!DNL PubMatic] platform アカウント。 に問い合わせる [!DNL PubMatic] アカウントマネージャー（ご質問がある場合） 使用できる選択肢は次のとおりです。
+   - [!UICONTROL 公開者]
    - [!UICONTROL DEMAND_PARTNER]
    - [!UICONTROL 購入者]
 
@@ -110,28 +110,28 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 >
-> - データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+> - データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >
-> - 書き出す _id_、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](../../assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+> - エクスポートする _id_、が必要です **[!UICONTROL ID グラフの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。](../../assets/overview/export-identities-to-destination.png "宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。"){width="100" zoomable="yes"}
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-ソースフィールドを選択しています。
+ソースフィールドを選択中：
 
-- 識別子を選択します ( 通常、名前空間（IDFA やカスタム ID 名前空間など）。
+- 識別子（通常は IDFA やカスタム ID 名前空間などの名前空間）を選択します。
 
-ターゲットフィールドの選択：
+ターゲットフィールドを選択：
 
-- お問い合わせ [!DNL PubMatic] この手順で正しい UID タイプに関する情報を取得するには、アカウントマネージャー。
-- を選択します。 [!DNL PubMatic UID] 最初の手順で選択した識別子に一致する番号を入力します。
+- に問い合わせる [!DNL PubMatic] アカウントマネージャー：この手順で UID タイプが正しいかに関する情報を取得します。
+- 「」を選択します [!DNL PubMatic UID] 最初の手順で選択した識別子に一致する番号を入力します。
 
 ![属性と ID のマッピング](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-The [!DNL PubMatic] UI では、データが正しくプッシュされたかどうか、およびセグメントが使用可能かどうかを確認できます。 データが [!DNL PubMatic] UI を更新します。
+この [!DNL PubMatic] UI を使用すると、データが正しくプッシュされているかどうか、およびセグメントが使用可能かどうかを確認できます。 にデータがプッシュされてから最大 24 時間かかる場合があります [!DNL PubMatic] 更新する UI。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

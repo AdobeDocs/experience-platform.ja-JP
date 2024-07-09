@@ -3,10 +3,10 @@ title: 見込み客オーディエンス
 description: 見込み客オーディエンスを作成および使用して、サードパーティ情報を使用して未知の顧客をターゲティングする方法について説明します。
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 100%
+source-wordcount: '395'
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platform を使用すると、マーケターにとってわか
 
 この表示にフィールドを追加するには、![フィルター属性アイコン](../images/ui/prospect-audience/filter-attribute.png) アイコンを選択します。これらの追加フィールドには、更新頻度と最終更新者が含まれます。
 
-一覧表示されたフィールドの詳細情報など、参照ページについて詳しくは、[セグメント化 UI ガイドの「参照」節](./overview.md#browse)を参照してください。
+リストされたフィールドに関する詳細情報を含む、参照ページの詳細については、を参照してください [オーディエンスポータルの概要](./audience-portal.md#list).
 
 ## オーディエンスの詳細 {#details}
 
@@ -40,7 +40,7 @@ Adobe Experience Platform を使用すると、マーケターにとってわか
 
 ![見込み客オーディエンスの詳細ページが表示されています。](../images/ui/prospect-audience/audience-details.png)
 
-オーディエンスの詳細ページについて詳しくは、[セグメント化 UI ガイドの「オーディエンスの詳細」節](./overview.md)を参照してください。
+オーディエンスの詳細ページについて詳しくは、 [オーディエンスポータルの概要の「オーディエンスの詳細」セクション](./audience-portal.md#audience-details).
 
 ## オーディエンスを作成 {#create}
 

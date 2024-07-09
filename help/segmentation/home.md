@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント化サービスの概要
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 94%
+source-wordcount: '1607'
+ht-degree: 96%
 
 ---
 
@@ -20,9 +20,9 @@ Adobe Experience Platform [!DNL Segmentation Service] は、[!DNL Real-Time Cust
 
 このドキュメント全体で使用される次の主な用語を理解する必要があります。
 
-- **セグメント**：多数の個人（顧客、見込み客、ユーザーまたは組織など）から成るグループを、類似の特性を共有しマーケティング戦略に対して同様の反応をする小さなグループに分割します。
 - **オーディエンス**：類似した行動や特性を共有する人の集まりです。この人々の集団は、セグメント定義（プラットフォーム生成オーディエンス）を使用して Adobe Experience Platform で生成することも、外部ソース（外部生成オーディエンス）から生成することもできます。
 - **セグメント定義**：Adobe Experience Platform によって使用されるルールセット。ターゲットオーディエンスの主要な特性や行動を説明します。
+- **セグメント**：プロファイルをオーディエンスに分割する行為です。
 
 ## セグメント化の仕組み
 
@@ -42,7 +42,7 @@ Platform 上でオーディエンスを直接構成する場合、オーディ�
 
 API を使用して作成した場合でも、[!DNL Segment Builder] を使用した場合でも、セグメント定義は最終的に [!DNL Profile Query Language]（PQL）を使用して定義されます。ここでは、条件を満たすプロファイルを取得するために設計された言語で概念セグメント定義を記述します。詳しくは、[PQL の概要](./pql/overview.md)を参照してください。
 
-[!DNL Segment Builder]（[!DNL Segmentation Service] の UI 実装）でセグメントを作成して使用する方法については、[セグメントビルダーガイド](./ui/overview.md)を参照してください。
+[!DNL Segment Builder]（[!DNL Segmentation Service] の UI 実装）でセグメントを作成して使用する方法については、[セグメントビルダーガイド](./ui/segment-builder.md)を参照してください。
 
 API を使用したセグメント定義の作成について詳しくは、[API を使用したセグメント定義の作成](./tutorials/create-a-segment.md)に関するチュートリアルを参照してください。
 
@@ -78,7 +78,7 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="バッチ評価"
->abstract="継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したオーディエンスは保存されるので、使用時に書き出すことができます。"
+>abstract="継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したオーディエンスは保存されるので、書き出して使用できます。"
 
 継続的なデータ選択プロセスに代わる手段として、バッチセグメント化では、セグメント定義を通じてすべてのプロファイルデータを一度に移動して、対応するオーディエンスを生成します。作成したオーディエンスは保存されるので、書き出して使用できます。
 
@@ -89,10 +89,10 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="エッジ評価"
->abstract="エッジのセグメント化は、Platform のセグメントをEdge Network上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
+>abstract="エッジセグメント化は、 Platform のセグメントを Edge Network 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ja" text="エッジセグメント化 UI ガイド"
 
-エッジセグメント化は、Platform 内のセグメントを即座に評価する機能です [Edge Network上](../web-sdk/home.md)を使用する場合、同じページおよび次のページのパーソナライゼーションのユースケースが可能になります。
+Edgeのセグメント化は、Platform 内のセグメントを即座に評価する機能です [Edge Network上](../web-sdk/home.md)を使用する場合、同じページおよび次のページのパーソナライゼーションのユースケースが可能になります。
 
 エッジのセグメント化について詳しくは、[API ドキュメント](./api/edge-segmentation.md)または [UI ドキュメント](./ui/edge-segmentation.md)を参照してください。
 

@@ -3,7 +3,7 @@ title: LiveRamp - オンボーディング接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platform から LiveRamp Connect にオーディエンスをオンボーディングする方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 89%
@@ -36,10 +36,10 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
 
-| オーディエンスの起源 | サポートあり | 説明 |
----------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [セグメント化サービス](../../../segmentation/home.md). |
-| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
+| オーディエンスオリジン | サポートあり | 説明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 ![パスワードによる SFTP を使用して宛先に対する認証を行う方法を示すサンプルスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
-* **[!UICONTROL ポート]**：に使用するポート [!DNL LiveRamp - Onboarding] ストレージの場所。  地理的な場所に対応するポートを使用します。以下に例を示します。
+* **[!UICONTROL ポート]**：に使用するポート [!DNL LiveRamp - Onboarding] 保存場所。  次に示すように、地理的な場所に対応するポートを使用します。
    * **[!UICONTROL 該当なし]**：ポートを使用 `22`
    * **[!UICONTROL AU]**：ポートを使用 `2222`
 * **[!UICONTROL ユーザー名]**：[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
@@ -83,7 +83,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 ![SSH キーを使用して宛先に対する認証を行う方法を示すサンプルスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL ポート]**：に使用するポート [!DNL LiveRamp - Onboarding] ストレージの場所。  地理的な場所に対応するポートを使用します。以下に例を示します。
+* **[!UICONTROL ポート]**：に使用するポート [!DNL LiveRamp - Onboarding] 保存場所。  次に示すように、地理的な場所に対応するポートを使用します。
    * **[!UICONTROL EU]**：ポートを使用 `4222`
 * **[!UICONTROL ユーザー名]**：[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
 * **[!UICONTROL SSH キー]**：[!DNL LiveRamp - Onboarding] ストレージの場所へのログインに使用する [!DNL SSH] 秘密鍵。この秘密鍵は、[!DNL Base64] でエンコードされた文字列の形式にする必要があり、パスワードで保護しないでください。
@@ -108,7 +108,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL 地域]**:LiveRamp SFTP ストレージのインスタンスの地域。
+* **[!UICONTROL 地域]**:LiveRamp SFTP ストレージのインスタンスの地理的地域。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする [!DNL LiveRamp] `uploads` サブフォルダーへのパス。`uploads` プレフィックスがフォルダーパスに自動的に追加されます。[!DNL LiveRamp] では、他の既存のフィードとは別にファイルを保存し、すべての自動処理がスムーズに実行されるように、Adobe Real-Time CDP からの配信専用のサブフォルダーを作成することをお勧めします。
    * 例えば、ファイルを `uploads/my_export_folder` に書き出す場合は、「**[!UICONTROL フォルダーパス]**」フィールドに `my_export_folder` と入力します。
 * **[!UICONTROL 圧縮形式]**：書き出したファイルに Experience Platform で使用する圧縮タイプを選択します。使用可能なオプションは、**[!UICONTROL GZIP]** または&#x200B;**[!UICONTROL なし]**&#x200B;です。
@@ -123,7 +123,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -185,7 +185,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 データは、設定した [!DNL LiveRamp - Onboarding] ストレージの場所に CSV ファイルとして書き出されます。
 
-書き出されたファイルの最大サイズは 1,000 万行です。 Experience Platformしたオーディエンスの行数が 1,000 万行を超える場合、配信ごとに複数のファイルが生成されます。 単一ファイルの制限を超えると考えられる場合は、 [!DNL LiveRamp] 担当者に問い合わせて、バッチ取得を設定するよう依頼します。
+書き出されるファイルの最大サイズは 1,000 万行です。 選択したオーディエンスが 1,000 万行を超える場合、Experience Platformでは配信ごとに複数のファイルが生成されます。 単一ファイルの上限を超える可能性がある場合は、にお問い合わせください [!DNL LiveRamp] を代表して、バッチ取得の設定を依頼します。
 
 ファイルを [!DNL LiveRamp - Onboarding] 宛先に書き出す場合、Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成します。
 
@@ -211,7 +211,7 @@ Platform では、次の 2 つの CSV ファイルを [!DNL LiveRamp - Onboardin
 * `Expired`：プロファイルはオーディエンスに対して選定されなくなりましたが、過去に選定されたことがあります。
 * `""`（空の文字列）：プロファイルはオーディエンスに対して選定されたことはありません。
 
-例えば、書き出された CSV ファイルに、1 つの `email` 属性、Experience Platform [セグメント化サービス](../../../segmentation/home.md)から生成された 2 つのオーディエンスおよび[読み込まれた](../../../segmentation/ui/overview.md#importing-an-audience) 1 つの外部オーディエンスが含まれている場合は、次のようになります。
+例えば、書き出された CSV ファイルに、1 つの `email` 属性、Experience Platform [セグメント化サービス](../../../segmentation/home.md)から生成された 2 つのオーディエンスおよび[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience) 1 つの外部オーディエンスが含まれている場合は、次のようになります。
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,7 +223,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` セクションと `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` セクションはセグメント化サービスから生成されたオーディエンスを記述しているのに対して、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` は[カスタムアップロード](../../../segmentation/ui/overview.md#importing-an-audience)として Platform に読み込まれたオーディエンスを記述しています。
+上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` セクションと `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` セクションはセグメント化サービスから生成されたオーディエンスを記述しているのに対して、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` は[カスタムアップロード](../../../segmentation/ui/audience-portal.md#import-audience)として Platform に読み込まれたオーディエンスを記述しています。
 
 Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
 
@@ -255,7 +255,7 @@ Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2024年3月 | 機能とドキュメントの更新 | <ul><li>ヨーロッパおよびオーストラリアへの配送のサポートを追加しました。 [!DNL LiveRamp] [!DNL SFTP] インスタンス。</li><li>新しくサポートされる地域に固有の設定について説明するドキュメントを更新しました。</li><li>最大ファイルサイズを 1,000 万行に増やしました（以前の 500 万行から）。</li><li>ファイルサイズの増加を反映するようにドキュメントを更新しました。</li></ul> |
+| 2024年3月 | 機能とドキュメントの更新 | <ul><li>ヨーロッパおよびオーストラリアへの配信がサポートされるようになりました [!DNL LiveRamp] [!DNL SFTP] インスタンス。</li><li>新しくサポートされる地域に特有の設定について説明するようにドキュメントを更新しました。</li><li>最大ファイルサイズが 1,000 万行に増加しました（以前は 500 万行でした）。</li><li>ファイルサイズの増加を反映するようにドキュメントを更新しました。</li></ul> |
 | 2023年7月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |
 
 {style="table-layout:auto"}

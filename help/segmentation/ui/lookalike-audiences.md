@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 類似オーディエンス
 description: 類似オーディエンスを使用して、Adobe Experience Platformで新しい高価値オーディエンスをターゲットにする方法を説明します。
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2192'
 ht-degree: 10%
 
 ---
@@ -179,7 +179,7 @@ y 軸は、x 軸の一致する値に対応する類似性の割合を持つプ�
 
 ![「類似オーディエンス」セクションがハイライト表示されます。](../images/ui/lookalike-audiences/select-laa.png)
 
-オーディエンスの詳細ページが表示されます。このページの詳細については、 [セグメント化サービス UI ガイドの「オーディエンスの詳細」セクション](./overview.md#audience-details).
+オーディエンスの詳細ページが表示されます。このページの詳細については、 [オーディエンスポータルの概要の「オーディエンスの詳細」セクション](./audience-portal.md#audience-details).
 
 ![類似オーディエンスの詳細が表示されます。](../images/ui/lookalike-audiences/laa-details.png)
 

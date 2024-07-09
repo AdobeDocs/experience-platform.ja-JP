@@ -1,12 +1,12 @@
 ---
 title: ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する
 type: Tutorial
-description: オーディエンスをストリーミングプロファイルベースの宛先に送信して、Adobe Experience Platformでオーディエンスデータをアクティブ化する方法について説明します。
+description: オーディエンスをストリーミングプロファイルベースの宛先に送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '764'
 ht-degree: 23%
 
 ---
@@ -16,20 +16,20 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 > 
-> * データをアクティブ化し、 [マッピング手順](#mapping) ワークフローの「 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
-> * を経由せずにデータをアクティブ化するには [マッピング手順](#mapping) ワークフローの「 **[!UICONTROL 宛先の表示]**, **[!UICONTROL マッピングなしでセグメントをアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> * データをアクティブ化してを有効にするには [マッピングステップ](#mapping) ワークフローで、次が必要です **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+> * を経由せずにデータをアクティブ化するには [マッピングステップ](#mapping) ワークフローで、次が必要です **[!UICONTROL 宛先の表示]**, **[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
 > 
 > 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 
-この記事では、Adobe Experience Platformのオーディエンスデータをストリーミングプロファイルベースの宛先 ( [企業の宛先](/help/destinations/destination-types.md#streaming-profile-export)) をクリックします。
+この記事では、Adobe Experience Platformのオーディエンスデータをストリーミングプロファイルベースの宛先（ [エンタープライズの宛先](/help/destinations/destination-types.md#streaming-profile-export)）に設定します。
 
 この記事は、次の 3 つの宛先に適用されます。
 
 * [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
-* [HTTP API の宛先](/help/destinations/catalog/streaming/http-destination.md).
+* [HTTP API 宛先](/help/destinations/catalog/streaming/http-destination.md).
 
 ## 前提条件 {#prerequisites}
 
@@ -39,59 +39,59 @@ ht-degree: 23%
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![宛先カタログタブを示す画像。](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![「宛先カタログ」タブを示す画像。](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. 選択 **[!UICONTROL オーディエンスをアクティブ化]** オーディエンスをアクティブ化する宛先に対応するカード（下図を参照）。
+1. を選択 **[!UICONTROL オーディエンスをアクティベート]** 次の画像に示すように、オーディエンスをアクティベートする宛先に対応するカードで。
 
-   ![「宛先カタログ」タブで、オーディエンスコントロールをアクティブ化したことをハイライトする画像。](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
+   ![「宛先のカタログ」タブの「オーディエンスをアクティブ化」コントロールをハイライト表示した画像。](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. オーディエンスのアクティブ化に使用する宛先接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
+1. オーディエンスをアクティベートするために使用する宛先接続を選択してから、を選択します **[!UICONTROL 次]**.
 
-   ![接続できる 2 つの宛先の選択を示す画像。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![接続可能な 2 つの宛先の選択を示す画像。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. 次のセクションに移動： [オーディエンスを選択](#select-audiences).
 
 ## オーディエンスを選択 {#select-audiences}
 
-宛先に対してアクティブ化するオーディエンスを選択するには、オーディエンス名の左側にあるチェックボックスを使用して、 **[!UICONTROL 次へ]**.
+宛先に対してアクティブ化するオーディエンスを選択するには、オーディエンス名の左側にあるチェックボックスを使用したあと、「」を選択します。 **[!UICONTROL 次]**.
 
-オリジンに応じて、複数のタイプのオーディエンスから選択できます。
+接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
-* **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、 [セグメント化ドキュメント](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**：オーディエンスがExperience Platform外で生成され、CSV ファイルとして Platform にアップロードされた。 外部オーディエンスについて詳しくは、 [オーディエンスのインポート](../../segmentation/ui/overview.md#import-audience).
-* 他のタイプのオーディエンス ( 例：他のAdobeソリューションからのもの ) [!DNL Audience Manager].
+* **[!UICONTROL セグメント化サービス]**:Segmentation Service によってExperience Platform内で生成されたオーディエンス。 を参照してください。 [Audience Portal ドキュメント](../../segmentation/ui/audience-portal.md) を参照してください。
+* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、のドキュメントを参照してください。 [オーディエンスのインポート](../../segmentation/ui/audience-portal.md#import-audience).
+* その他のAdobeソリューションから生成される、次のようなオーディエンスのタイプ [!DNL Audience Manager].
 
-![アクティベーションワークフローのオーディエンスを選択ステップで選択されたチェックボックスをハイライトした画像です。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
+![アクティベーションワークフローのオーディエンスを選択手順で選択されたチェックボックス選択を強調表示した画像。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## プロファイル属性の選択 {#select-attributes}
 
-Adobe Analytics の **[!UICONTROL マッピング]** 手順：ターゲットの宛先に送信するプロファイル属性を選択します。
+が含まれる **[!UICONTROL マッピング]** 手順として、ターゲット宛先に送信するプロファイル属性を選択します。
 
 1. **[!UICONTROL 属性を選択]**&#x200B;ページで「**[!UICONTROL 新しいフィールドを追加]**」を選択します。
 
-   ![マッピング手順の新しいフィールドの追加コントロールをハイライトした画像。](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![マッピングステップの「新しいフィールドを追加」コントロールを強調表示した画像。](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. 「**[!UICONTROL スキーマフィールド]**」エントリの右側の矢印を選択します。
 
-   ![マッピング手順でソースフィールドを選択する方法をハイライトした画像です。](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![マッピングステップでのソースフィールドの選択方法を強調表示した画像。](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. **[!UICONTROL フィールドを選択]**&#x200B;ページで、宛先に送信する XDM 属性を選択してから「**[!UICONTROL 選択]**」を選択します。
 
-   ![ソースフィールドとして選択できる XDM フィールドの選択を示す画像です。](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![ソースフィールドとして選択できる XDM フィールドの選択を示す画像。](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-1. フィールドをさらに追加するには、手順 1 ～ 3 を繰り返して、「 」を選択します。 **[!UICONTROL 次へ]**.
+1. さらにフィールドを追加するには、手順 1 ～ 3 を繰り返してから、以下を選択します **[!UICONTROL 次]**.
 
 ## レビュー {#review}
 
 「**[!UICONTROL レビュー]**」ページには、選択内容の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
-![レビューステップの選択の概要。](../assets/ui/activate-streaming-profile-destinations/review.png)
+![レビュー手順の選択の概要。](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-[同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は、現在、Amazon Kinesis、Azure Event Hubs、HTTP API の 3 つのエンタープライズ環境への書き出しではサポートされていません。
+[同意ポリシーの評価](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は現在、3 つのエンタープライズ宛先（Amazon Kinesis、Azure Event Hubs および HTTP API）への書き出しではサポートされていません。
 
-つまり、ターゲット設定に同意しなかったプロファイルを指します。 *含まれる* を使用して、これら 3 つの宛先に書き出すことができます。
+これは、ターゲット設定に同意しないプロファイルを意味します *次が含まれます* これら 3 つの宛先への書き出し。
 
 <!--
 
@@ -101,21 +101,21 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
-Adobe Analytics の **[!UICONTROL レビュー]** 手順の後、Experience Platformは、データ使用ポリシーの違反を確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、オーディエンスのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法については、 [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （データガバナンスに関するドキュメントの節）を参照してください。
+が含まれる **[!UICONTROL レビュー]** また、Experience Platformはデータ使用ポリシーの違反がないかどうかを確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、以下を参照してください [データ使用ポリシーの違反](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) データガバナンスに関するドキュメントの節を参照してください。
 
 ![データポリシー違反](../assets/common/data-policy-violation.png)
 
 ### オーディエンスのフィルタリング {#filter-audiences}
 
-また、この手順では、ページで使用可能なフィルターを使用して、このワークフローの一部としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。
+また、この手順では、ページで使用可能なフィルターを使用して、このワークフローの一環としてスケジュールまたはマッピングが更新されたオーディエンスのみを表示できます。
 
-![レビュー手順で使用可能なオーディエンスフィルターを示す画面記録。](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
+![レビューステップで使用可能なオーディエンスフィルターを示す画面録画。](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
-選択が完了し、ポリシー違反が検出されなかった場合は、「 」を選択します。 **[!UICONTROL 完了]** をクリックして選択を確定し、宛先へのデータの送信を開始します。
+選択内容に満足し、ポリシー違反が検出されていない場合は、を選択します **[!UICONTROL 終了]** をクリックして選択内容を確認し、宛先へのデータの送信を開始します。
 
-## オーディエンスのアクティベーションを検証 {#verify}
+## Audience Activation の検証 {#verify}
 
-エクスポート済み [!DNL Experience Platform] データは、ターゲットとなる宛先に JSON 形式で配置されます。 例えば、以下のイベントには、特定のオーディエンスに適合し、別のオーディエンスから離脱したプロファイルの電子メールアドレス属性が含まれます。 この見込み客の ID は次のとおりです `ECID` および `email_lc_sha256`.
+エクスポートした [!DNL Experience Platform] データは、JSON 形式でターゲットの宛先に格納されます。 例えば、以下のイベントには、特定のオーディエンスに対して選定され、別のオーディエンスから退出したプロファイルのメールアドレス属性が含まれています。 この見込顧客の ID は次のとおりです `ECID` および `email_lc_sha256`.
 
 ```json
 {
