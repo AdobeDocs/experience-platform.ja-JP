@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Adobe Experience Platform ヘルプのアクセス制御
 breadcrumb-title: アクセス制御ガイド
-user-guide-description: Adobe Admin Console の製品プロファイルを使用して、ユーザー権限を管理します。ユーザーを製品とサンドボックスに割り当てる方法について説明します。
+user-guide-description: Adobe Admin Console の製品プロファイルを使用して、ユーザー権限を管理します。 ユーザーを製品とサンドボックスに割り当てる方法について説明します。
 feature: Access Control
 role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 85%
 * 属性ベースのアクセス制御 {#abac}
    * [概要](abac/overview.md)
    * [エンドツーエンドのガイド](abac/end-to-end-guide.md)
-   * [アクセスラベルを使用して、宛先データフローへのユーザーアクセスを管理する](/help/access-control/abac/apply-access-labels-destinations.md)
+   * [アクセスラベルを使用した宛先データフローへのユーザーアクセスの管理](/help/access-control/abac/apply-access-labels-destinations.md)
    * 権限 {#permissions-ui}
       * [参照](abac/ui/browse.md)
       * [ラベル](abac/ui/labels.md)
@@ -47,4 +47,4 @@ ht-degree: 85%
    * [有効なポリシーの表示](api/effective-policies.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
