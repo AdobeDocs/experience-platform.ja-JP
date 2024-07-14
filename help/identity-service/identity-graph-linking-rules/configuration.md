@@ -2,10 +2,10 @@
 title: ID グラフリンクルール設定ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 badge: ベータ版
-source-git-commit: d8a36650b2cd3ec9683763f536ea5c2c2e27455c
+source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 5%
+source-wordcount: '807'
+ht-degree: 4%
 
 ---
 
@@ -26,29 +26,28 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 開始する前に、まず、システム内の認証済みイベントにユーザー識別子が常に含まれていることを確認する必要があります。
 
-<!-- ## Set permissions {#set-permissions}
+## 権限の設定 {#set-permissions}
 
-The first step in the implementation process for Identity Service is to ensure that your Experience Platform account is added to a role that is provisioned with the necessary permissions. Your administrator can configure permissions for your account by navigating to the Permissions UI in Adobe Experience Cloud. From there, your account must be added to a role with the following permissions:
+ID サービスの実装プロセスの最初の手順は、Experience Platformアカウントが、必要な権限がプロビジョニングされたロールに確実に追加されるようにすることです。 管理者は、Adobe Experience Cloudの権限 UI に移動して、アカウントの権限を設定できます。 ここから、アカウントを次の権限を持つ役割に追加する必要があります。
 
-* manage-identity-settings
-* view-identity-dashboard
-* view-identity-simulation
+* [!UICONTROL ID 設定の表示 ]：この権限を適用して、ID 名前空間の参照ページで一意の名前空間と名前空間の優先度を表示できるようにします。
+* [!UICONTROL ID 設定の編集 ]:ID 設定を編集および保存できるようにするために、この権限を適用します。
 
-For more information on permissions, read the [permissions guide](../../access-control/abac/ui/permissions.md). -->
+権限について詳しくは、[ 権限ガイド ](../../access-control/abac/ui/permissions.md) を参照してください。
 
 ## ID 名前空間の作成 {#namespace}
 
-データで名前空間が必要な場合、まず組織に適した名前空間を作成する必要があります。 カスタム名前空間の作成手順については、のガイドを参照してください。 [ui でのカスタム名前空間の作成](../features/namespaces.md#create-custom-namespaces).
+データで名前空間が必要な場合、まず組織に適した名前空間を作成する必要があります。 カスタム名前空間の作成手順については、[UI でのカスタム名前空間の作成 ](../features/namespaces.md#create-custom-namespaces) に関するガイドを参照してください。
 
 ## グラフシミュレーションツールの使用 {#graph-simulation}
 
-次に、に移動します [グラフシミュレーションツール](./graph-simulation.md) ID サービス UI ワークスペースで変更します。 グラフシミュレーションツールを使用して、様々な一意の名前空間や名前空間の優先度設定で作成された ID グラフをシミュレートできます。
+次に、ID サービス UI ワークスペースの [ グラフシミュレーションツール ](./graph-simulation.md) に移動します。 グラフシミュレーションツールを使用して、様々な一意の名前空間や名前空間の優先度設定で作成された ID グラフをシミュレートできます。
 
 様々な設定を作成することで、グラフシミュレーションツールを使用して、ID 最適化アルゴリズムや特定の設定が、グラフの動作に与える影響をより深く理解できます。
 
 ## ID 設定の指定 {#identity-settings}
 
-グラフがどのように動作するかを把握したら、 [id 設定ツール](./identity-settings-ui.md) ID サービス UI ワークスペースで変更します。
+グラフがどのように動作するかを把握したら、ID サービス UI ワークスペースの [ID 設定ツール ](./identity-settings-ui.md) に移動します。
 
 ID 設定ツールを使用して、一意の名前空間を指定し、優先順に名前空間を設定します。 設定の適用が完了したら、新しい設定が ID サービスに反映されるまで少なくとも 6 時間かかるので、データの取り込みに進むまでに少なくとも 6 時間待つ必要があります。
 
@@ -58,13 +57,13 @@ ID 設定ツールを使用して、一意の名前空間を指定し、優先�
 
 リアルタイム顧客プロファイルにデータを取り込むには、スキーマに、プライマリ ID として指定されたフィールドが少なくとも 1 つ含まれていることを確認する必要があります。 プライマリ ID を設定することで、特定のスキーマをプロファイル取り込みに対して有効にできます。
 
-スキーマの作成方法については、に関するガイドを参照してください。 [ui での XDM スキーマの作成](../../xdm/tutorials/create-schema-ui.md).
+スキーマの作成方法について詳しくは、[UI での XDM スキーマの作成 ](../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。
 
 ## データセットの作成 {#dataset}
 
 次に、取り込むデータの構造を提供するデータセットを作成します。 データセットは、スキーマ（列）とフィールド（行）で構成されるデータコレクション（通常はテーブル）を格納し管理するための構造です。データセットはスキーマと連携し、リアルタイム顧客プロファイルにデータを取り込むには、データセットがプロファイル取り込みに対して有効になっている必要があります。 データセットをプロファイルで有効にするには、プロファイルの取り込みが有効になっているスキーマを参照する必要があります。
 
-データセットの作成方法については、次を参照してください [データセット UI ガイド](../../catalog/datasets/user-guide.md).
+データセットの作成方法については、[ データセット UI ガイド ](../../catalog/datasets/user-guide.md) を参照してください。
 
 ## データの取り込み {#ingest}
 
@@ -78,7 +77,7 @@ ID 設定ツールを使用して、一意の名前空間を指定し、優先�
 
 上記のすべての項目を完了したら、データをExperience Platformに取り込み始めることができます。 様々な方法でデータ取り込みを実行できます。 次のサービスを使用してデータをExperience Platformに取り込むことができます。
 
-* [バッチおよびストリーミング取得](../../ingestion/home.md)
+* [ バッチおよびストリーミング取得 ](../../ingestion/home.md)
 * [Experience Platformでのデータ収集](../../collection/home.md)
 * [Experience Platformソース](../../sources/home.md)
 
@@ -86,4 +85,4 @@ ID 設定ツールを使用して、一意の名前空間を指定し、優先�
 >
 >データが取り込まれても、XDM 生データペイロードは変更されません。 プライマリ ID 設定は、UI に表示される場合があります。 ただし、これらの設定は ID 設定によって上書きされます。
 
-フィードバックには、を使用します **[!UICONTROL Betaのフィードバック]** id サービス UI ワークスペースの「」オプション。
+フィードバックについては、ID サービス UI ワークスペースの **[!UICONTROL Beta feedback]** オプションを使用してください。
