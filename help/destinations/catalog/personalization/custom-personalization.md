@@ -3,10 +3,10 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからオーディエンス情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルオーディエンスメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 58%
+source-wordcount: '912'
+ht-degree: 57%
 
 ---
 
@@ -17,17 +17,17 @@ ht-degree: 58%
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年5月 | 機能とドキュメントの更新 | 2023 年 5 月現在、 **[!UICONTROL カスタムパーソナライゼーション]** 接続のサポート [属性ベースのパーソナライゼーション](../../ui/activate-edge-personalization-destinations.md#map-attributes) とは、すべてのお客様が一般に使用できます。 |
+| 2023年5月 | 機能とドキュメントの更新 | 2023 年 5 月の時点で、**[!UICONTROL カスタムパーソナライゼーション]** 接続は [ 属性ベースのパーソナライゼーション ](../../ui/activate-edge-personalization-destinations.md#map-attributes) をサポートしており、通常すべてのお客様が利用できます。 |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、を使用する必要があります [Edge Networkサーバー API](/help/server-api/overview.md) の設定時 **[!UICONTROL カスタムPersonalization]** 属性ベースのパーソナライゼーションの宛先。 すべての Server API 呼び出しは、 [認証済みコンテキスト](../../../server-api/authentication.md).
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に ](/help/server-api/overview.md) カスタム Personalization **[!UICONTROL をEdge Networkする際に]** 0}Configuration Server API} を使用する必要があります。 [すべての Server API 呼び出しは、[ 認証済みコンテキスト ](../../../server-api/authentication.md) で行う必要があります。
 >
-><br>既に統合に Web SDK または Mobile SDK を使用している場合は、サーバーサイド統合を追加することで、Server API を介して属性を取得できます。
+>Web または Mobile SDK の実装に既に使用しているのと同じデータストリームを使用するサーバーサイドEdge Networkを追加することで ](/help/server-api/overview.md)<br>1}Integration Server API を介してプロファイル属性を取得できます。[
 >
-><br>上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
+><br> 上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
 
 ## 概要 {#overview}
 
@@ -39,7 +39,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->カスタムパーソナライゼーション接続を作成する前に、その方法に関するガイドを参照してください [エッジパーソナライゼーションの宛先に対するオーディエンスデータの有効化](../../ui/activate-edge-personalization-destinations.md). このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。
+>カスタムパーソナライゼーション接続を作成する前に、[ エッジパーソナライゼーションの宛先に対してオーディエンスデータをアクティブ化する ](../../ui/activate-edge-personalization-destinations.md) 方法についてのガイドをお読みください。 このガイドでは、複数の Experience Platform コンポーネントをまたいで、同じページおよび次のページのパーソナライゼーションの使用例に必要な設定手順を説明します。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -47,7 +47,7 @@ ht-degree: 58%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -69,7 +69,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -92,9 +92,9 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-Read [プロファイルとオーディエンスのエッジパーソナライゼーションの宛先のアクティブ化](../../ui/activate-edge-personalization-destinations.md) この宛先に対してオーディエンスをアクティブ化する手順については、を参照してください。
+この宛先にオーディエンスをアクティブ化する手順については、[ プロファイルとオーディエンスのエッジパーソナライゼーションの宛先のアクティブ化 ](../../ui/activate-edge-personalization-destinations.md) をお読みください。
 
 ## 書き出したデータ {#exported-data}
 
@@ -120,7 +120,7 @@ Read [プロファイルとオーディエンスのエッジパーソナライ�
 ]
 ```
 
-を使用していない場合 [タグ](/help/tags/home.md) Experience PlatformWeb SDK をデプロイするには、を使用します [コマンドの応答](/help/web-sdk/commands/command-responses.md) 書き出されたデータを表示します。
+[Tags](/help/tags/home.md) を使用せずにExperience PlatformWeb SDK をデプロイする場合、[ コマンド応答 ](/help/web-sdk/commands/command-responses.md) を使用して、書き出したデータを確認します。
 
 Adobe Experience Platform からの JSON 応答は、Adobe Experience Platform と統合しているアプリケーションの対応する統合エイリアスを見つけるために解析できます。オーディエンス ID は、ターゲティングパラメーターとしてアプリケーションのコードに渡すことができます。 次に、これが宛先の応答に特有なサンプルを示します。
 
@@ -156,11 +156,11 @@ alloy("sendEvent", {
   });
 ```
 
-### の応答の例 [!UICONTROL 属性を含むカスタムPersonalization]
+### [!UICONTROL  属性を含むカスタムPersonalization] の応答の例
 
-使用時 **[!UICONTROL 属性を含むカスタムPersonalization]**&#x200B;の場合、API 応答は以下の例のようになります。
+**[!UICONTROL 属性を含むカスタムPersonalization]** を使用する場合、API 応答は次の例のようになります。
 
-の違い **[!UICONTROL 属性を含むカスタムPersonalization]** および **[!UICONTROL カスタムPersonalization]** 次を含む `attributes` API 応答の「」セクション。
+**[!UICONTROL 属性を含むカスタムPersonalization]** と **[!UICONTROL カスタムPersonalization]** の違いは、API 応答に `attributes` セクションが含まれることです。
 
 ```json
 [
