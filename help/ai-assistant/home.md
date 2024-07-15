@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタントの概要
 description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
+source-git-commit: d950e7ef524dfb487176e51ef25e98c0b5fe8b6c
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '925'
 ht-degree: 6%
 
 ---
@@ -77,7 +77,7 @@ Experience League知識とは、製品ドキュメントに基づいた概念と
 | データセット | <ul><li>データセット数</li><li>プロファイル有効化ステータス</li><li>作成日/変更日</li><li>データセット – スキーマの関係</li><li>データセット – オーディエンスの関係</li><li>データセット – 属性関係</li><li>データセット – データフロー関係</li><li>名前の検索 </li><li>名前と ID の検索</li></ul> | <ul><li>監査</li><li>作成者</li><li>データセット – バッチ関係</li><li>データセットの作成/変更</li><li>データセットサイズ</li><li>プロファイル数</li><li>行数</li><li>値検索</li></ul> |
 | 宛先 | <ul><li>設定済みの宛先数</li><li>宛先 – オーディエンスの関係</li><li>宛先属性の関係</li></ul> | <ul><li>アカウントの設定</li><li>アカウント資格情報</li><li>一意のプロファイルがアクティブ化されました</li></ul> |
 | ジャーニー | <ul><li>カウント</li><li>名前の検索</li><li>名前と ID の検索</li><li>ジャーニーステータス</li><li>トリガーステータス（オーディエンスとイベント）</li><li>作成日/変更日</li><li>繰り返し頻度</li></ul> | <ul><li>属性 – ジャーニーの関係</li><li>監査</li><li>作成/変更</li><li>作成者</li><li>イベント</li><li>ジャーニー - データセット</li><li>ジャーニー - スキーマ</li><li>オファー</li><li>プロファイル選定トレンド</li><li>ステップイベント</li></ul> |
-| スキーマ | <ul><li>スキーマ数</li><li>作成日/変更日</li><li>スキーマクラスタイプ</li><li>スキーマ – 属性関係</li><li>スキーマ – データセットの関係</li><li>スキーマ – オーディエンスの関係</li><li>プロファイル有効化ステータス</li><li>名前の検索</li><li>名前と ID の検索</li></ul> | <ul><li>監査</li><li>作成/変更</li><li>作成者</li><li>フィールドグループ</li><li>ID</li><li>ID 名前空間</li><li>ラベル</li><li>プロファイル数</li></ul> |
+| スキーマ | <ul><li>スキーマ数</li><li>作成日/変更日</li><li>スキーマ – 属性関係</li><li>スキーマ – データセットの関係</li><li>スキーマ – オーディエンスの関係</li><li>プロファイル有効化ステータス</li><li>名前の検索</li><li>名前と ID の検索</li></ul> | <ul><li>監査</li><li>作成/変更</li><li>作成者</li><li>フィールドグループ</li><li>ID</li><li>ID 名前空間</li><li>ラベル</li><li>プロファイル数</li></ul> |
 | ソース | <ul><li>アカウント数</li><li>アカウントステータス</li><li>各アカウントのアクティブ/非アクティブなデータフロー</li><li>Source コネクタ – データフローの関係</li><li>Source アカウント – データフローの関係</li></ul> | <ul><li>アカウント資格情報</li><li>アカウントの設定</li><li>データ取得指標</li><li>プロファイル数</li><li>Source - バッチ関係</li></ul> |
 
 {style="table-layout:auto"}
