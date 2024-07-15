@@ -1,22 +1,22 @@
 ---
-title: Flow Service API を使用した Azure Event Hubs ソース接続の作成
+title: Flow Service API を使用した Azure Event Hubs Source接続の作成
 description: Flow Service API を使用してAdobe Experience Platformを Azure Event Hubs アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1492'
 ht-degree: 33%
 
 ---
 
-# を作成 [!DNL Azure Event Hubs] を使用したソース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Azure Event Hubs] ソース接続の作成
 
 >[!IMPORTANT]
 >
->この [!DNL Azure Event Hubs] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログから利用できます。
+>Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Azure Event Hubs] ソースを利用できます。
 
-接続方法については、このチュートリアルを参照してください。 [!DNL Azure Event Hubs] （以下「という[!DNL Event Hubs]``）にExperience Platformするには、を使用します [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Azure Event Hubs] （以下「[!DNL Event Hubs]」）をExperience Platformに接続する方法について説明します。
 
 ## はじめに
 
@@ -29,55 +29,55 @@ ht-degree: 33%
 
 ### 必要な資格情報の収集
 
-の目的で [!DNL Flow Service] に接続する [!DNL Event Hubs] アカウント。次の接続プロパティの値を指定する必要があります：
+[!DNL Flow Service] を [!DNL Event Hubs] アカウントに接続するには、次の接続プロパティの値を指定する必要があります。
 
 >[!BEGINTABS]
 
->[!TAB 標準認証]
+>[!TAB  標準認証 ]
 
 | 資格情報 | 説明 |
 | --- | --- |
 | `sasKeyName` | 承認ルールの名前。SAS キー名とも呼ばれます。 |
-| `sasKey` | のプライマリキー [!DNL Event Hubs] 名前空間。 この `sasPolicy` その `sasKey` 次に対応する必要があります `manage` 用に設定された権限 [!DNL Event Hubs] 入力するリスト。 |
-| `namespace` | の名前空間 [!DNL Event Hubs] 現在アクセス中。 An [!DNL Event Hubs] 名前空間は、1 つ以上の作成できる一意のスコーピングコンテナを提供します [!DNL Event Hubs]. |
+| `sasKey` | [!DNL Event Hubs] 名前空間のプライマリキー。 [!DNL Event Hubs] リストを入力するには、`sasKey` が対応する `sasPolicy` に `manage` 権限が設定されている必要があります。 |
+| `namespace` | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 
->[!TAB SAS 認証]
+>[!TAB SAS 認証 ]
 
 | 資格情報 | 説明 |
 | --- | --- |
 | `sasKeyName` | 承認ルールの名前。SAS キー名とも呼ばれます。 |
-| `sasKey` | のプライマリキー [!DNL Event Hubs] 名前空間。 この `sasPolicy` その `sasKey` 次に対応する必要があります `manage` 用に設定された権限 [!DNL Event Hubs] 入力するリスト。 |
-| `namespace` | の名前空間 [!DNL Event Hubs] 現在アクセス中。 An [!DNL Event Hubs] 名前空間は、1 つ以上の作成できる一意のスコーピングコンテナを提供します [!DNL Event Hubs]. |
-| `eventHubName` | の名前 [!DNL Event Hubs] ソース。 |
+| `sasKey` | [!DNL Event Hubs] 名前空間のプライマリキー。 [!DNL Event Hubs] リストを入力するには、`sasKey` が対応する `sasPolicy` に `manage` 権限が設定されている必要があります。 |
+| `namespace` | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
+| `eventHubName` | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 
-の共有アクセス署名（SAS）認証について詳しくは、を参照してください [!DNL Event Hubs]、を読み取ります [[!DNL Azure] sas の使用に関するガイド](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+[!DNL Event Hubs] の共有アクセス署名（SAS）認証について詳しくは、[[!DNL Azure] SAS の使用に関するガイド ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
 
->[!TAB イベント ハブ Azure Active Directory 認証]
-
-| 資格情報 | 説明 |
-| --- | --- |
-| `tenantId` | 権限をリクエストするテナント ID。 テナント ID は、GUID またはわかりやすい名前として書式設定できます。 **注意**：テナント ID は、では「ディレクトリ ID」と呼ばれます [!DNL Microsoft Azure] インターフェイス。 |
-| `clientId` | アプリに割り当てられたアプリケーション ID。 この ID は、から取得できます [!DNL Microsoft Entra ID] を登録したポータル [!DNL Azure Active Directory]. |
-| `clientSecretValue` | アプリを認証するためにクライアント ID と共に使用されるクライアント秘密鍵。 クライアント秘密鍵は、から取得できます。 [!DNL Microsoft Entra ID] を登録したポータル [!DNL Azure Active Directory]. |
-| `namespace` | の名前空間 [!DNL Event Hubs] 現在アクセス中。 An [!DNL Event Hubs] 名前空間は、1 つ以上の作成できる一意のスコーピングコンテナを提供します [!DNL Event Hubs]. |
-
-について詳しくは、 [!DNL Azure Active Directory]、を読み取ります [Microsoft Entra ID の使用に関する Azure ガイド](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
-
->[!TAB Azure Active Directory 認証を範囲とするイベント ハブ]
+>[!TAB Event Hub Azure Active Directory Auth]
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `tenantId` | 権限をリクエストするテナント ID。 テナント ID は、GUID またはわかりやすい名前として書式設定できます。 **注意**：テナント ID は、では「ディレクトリ ID」と呼ばれます [!DNL Microsoft Azure] インターフェイス。 |
-| `clientId` | アプリに割り当てられたアプリケーション ID。 この ID は、から取得できます [!DNL Microsoft Entra ID] を登録したポータル [!DNL Azure Active Directory]. |
-| `clientSecretValue` | アプリを認証するためにクライアント ID と共に使用されるクライアント秘密鍵。 クライアント秘密鍵は、から取得できます。 [!DNL Microsoft Entra ID] を登録したポータル [!DNL Azure Active Directory]. |
-| `namespace` | の名前空間 [!DNL Event Hubs] 現在アクセス中。 An [!DNL Event Hubs] 名前空間は、1 つ以上の作成できる一意のスコーピングコンテナを提供します [!DNL Event Hubs]. |
-| `eventHubName` | の名前 [!DNL Event Hubs] ソース。 |
+| `tenantId` | 権限をリクエストするテナント ID。 テナント ID は、GUID またはわかりやすい名前として書式設定できます。 **注意**：テナント ID は、[!DNL Microsoft Azure] インターフェイスでは「ディレクトリ ID」と呼ばれます。 |
+| `clientId` | アプリに割り当てられたアプリケーション ID。 この ID は、[!DNL Azure Active Directory] ーザーを登録した [!DNL Microsoft Entra ID] ポータルから取得できます。 |
+| `clientSecretValue` | アプリを認証するためにクライアント ID と共に使用されるクライアント秘密鍵。 クライアントの秘密鍵は、クライアントを登録した [!DNL Microsoft Entra ID] ポータルから取得でき [!DNL Azure Active Directory] す。 |
+| `namespace` | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
+
+[!DNL Azure Active Directory] について詳しくは、[Microsoft Entra ID の使用に関する Azure ガイド ](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application) を参照してください。
+
+>[!TAB Azure Active Directory 認証をスコープとするイベント ハブ ]
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `tenantId` | 権限をリクエストするテナント ID。 テナント ID は、GUID またはわかりやすい名前として書式設定できます。 **注意**：テナント ID は、[!DNL Microsoft Azure] インターフェイスでは「ディレクトリ ID」と呼ばれます。 |
+| `clientId` | アプリに割り当てられたアプリケーション ID。 この ID は、[!DNL Azure Active Directory] ーザーを登録した [!DNL Microsoft Entra ID] ポータルから取得できます。 |
+| `clientSecretValue` | アプリを認証するためにクライアント ID と共に使用されるクライアント秘密鍵。 クライアントの秘密鍵は、クライアントを登録した [!DNL Microsoft Entra ID] ポータルから取得でき [!DNL Azure Active Directory] す。 |
+| `namespace` | アクセスする [!DNL Event Hub] の名前空間。 [!DNL Event Hub] 名前空間は、一意のスコーピングコンテナを提供し、このコンテナでは 1 つ以上の [!DNL Event Hubs] を作成できます。 |
+| `eventHubName` | [!DNL Azure Event Hub] 名を入力します。 [!DNL Event Hub] の名前について詳しくは、[Microsoft ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。 |
 
 >[!ENDTABS]
 
-これらの値について詳しくは、次を参照してください [この Event Hubs ドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+これらの値について詳しくは、[ この Event Hubs ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
 
 ### Platform API の使用
 
@@ -87,7 +87,7 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 >[!TIP]
 >
->作成後は、の認証タイプを変更できません [!DNL Event Hubs] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
+>作成した後は、[!DNL Event Hubs] ベース接続の認証タイプを変更できません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
 ソース接続を作成する最初の手順は、[!DNL Event Hubs] ソースを認証し、ベース接続 ID を生成することです。ベース接続 ID を使用すると、ソース内を移動してファイルを探索し、データのタイプや形式に関する情報など、取り込みたい特定の項目を識別できます。
 
@@ -101,9 +101,9 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB 標準認証]
+>[!TAB  標準認証 ]
 
-標準認証を使用してアカウントを作成するには、次に対してPOSTリクエストを実行します。 `/connections` エンドポイントと、の値を指定する方法 `sasKeyName`, `sasKey`、および `namespace`.
+標準認証を使用してアカウントを作成するには、`/connections` エンドポイントに対してPOSTリクエストを行い、`sasKeyName`、`sasKey`、`namespace` の値を指定します。
 
 +++リクエスト
 
@@ -137,8 +137,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | 承認ルールの名前。SAS キー名とも呼ばれます。 |
 | `auth.params.sasKey` | 生成された共有アクセス署名。 |
-| `auth.params.namespace` | の名前空間 [!DNL Event Hubs] 現在アクセス中。 |
-| `connectionSpec.id` | この [!DNL Event Hubs] 接続仕様 ID は次のとおりです。 `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | アクセスする [!DNL Event Hubs] の名前空間。 |
+| `connectionSpec.id` | [!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 
 +++
 
@@ -155,9 +155,9 @@ curl -X POST \
 
 +++
 
->[!TAB SAS 認証]
+>[!TAB SAS 認証 ]
 
-SAS 認証を使用してアカウントを作成するには、に対してPOSTリクエストを実行します。 `/connections` エンドポイントと、の値を指定する方法 `sasKeyName`, `sasKey`,`namespace`、および `eventHubName`.
+SAS 認証を使用してアカウントを作成するには、`/connections` エンドポイントに対してPOSTリクエストを行い、`sasKeyName`、`sasKey`、`namespace`、`eventHubName` の値を指定します。
 
 +++リクエスト
 
@@ -192,9 +192,9 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | 承認ルールの名前。SAS キー名とも呼ばれます。 |
 | `auth.params.sasKey` | 生成された共有アクセス署名。 |
-| `auth.params.namespace` | の名前空間 [!DNL Event Hubs] 現在アクセス中。 |
-| `params.eventHubName` | の名前 [!DNL Event Hubs] ソース。 |
-| `connectionSpec.id` | この [!DNL Event Hubs] 接続仕様 ID は次のとおりです。 `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | アクセスする [!DNL Event Hubs] の名前空間。 |
+| `params.eventHubName` | [!DNL Event Hubs] ソースの名前。 |
+| `connectionSpec.id` | [!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 
 +++
 
@@ -211,9 +211,9 @@ curl -X POST \
 
 +++
 
->[!TAB イベント ハブ Azure Active Directory 認証]
+>[!TAB Event Hub Azure Active Directory Auth]
 
-Azure Active Directory Auth を使用してアカウントを作成するには、次の URL に対してPOSTリクエストを行います。 `/connections` エンドポイントと、の値を指定する方法 `tenantId`, `clientId`,`clientSecretValue`、および `namespace`.
+Azure Active Directory Auth を使用してアカウントを作成するには、`tenantId`、`clientId`、`clientSecretValue`、`namespace` の値を指定したうえで、`/connections` エンドポイントに対してPOSTリクエストを行います。
 
 +++リクエスト
 
@@ -246,11 +246,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.tenantId` | アプリケーションのテナント ID。 **注意**：テナント ID は、では「ディレクトリ ID」と呼ばれます [!DNL Microsoft Azure] インターフェイス。 |
+| `auth.params.tenantId` | アプリケーションのテナント ID。 **注意**：テナント ID は、[!DNL Microsoft Azure] インターフェイスでは「ディレクトリ ID」と呼ばれます。 |
 | `auth.params.clientId` | 組織のクライアント ID。 |
 | `auth.params.clientSecretValue` | 組織のクライアントシークレット値。 |
-| `auth.params.namespace` | の名前空間 [!DNL Event Hubs] 現在アクセス中。 |
-| `connectionSpec.id` | この [!DNL Event Hubs] 接続仕様 ID は次のとおりです。 `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | アクセスする [!DNL Event Hubs] の名前空間。 |
+| `connectionSpec.id` | [!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 
 +++
 
@@ -267,9 +267,9 @@ curl -X POST \
 
 +++
 
->[!TAB Azure Active Directory 認証を範囲とするイベント ハブ]
+>[!TAB Azure Active Directory 認証をスコープとするイベント ハブ ]
 
-Azure Active Directory Auth を使用してアカウントを作成するには、次の URL に対してPOSTリクエストを行います。 `/connections` エンドポイントと、の値を指定する方法 `tenantId`, `clientId`,`clientSecretValue`, `namespace`、および `eventHubName`.
+Azure Active Directory Auth を使用してアカウントを作成するには、`tenantId`、`clientId`、`clientSecretValue`、`namespace`、`eventHubName` の値を指定したうえで、`/connections` エンドポイントに対してPOSTリクエストを行います。
 
 +++リクエスト
 
@@ -303,12 +303,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.tenantId` | アプリケーションのテナント ID。 **注意**：テナント ID は、では「ディレクトリ ID」と呼ばれます [!DNL Microsoft Azure] インターフェイス。 |
+| `auth.params.tenantId` | アプリケーションのテナント ID。 **注意**：テナント ID は、[!DNL Microsoft Azure] インターフェイスでは「ディレクトリ ID」と呼ばれます。 |
 | `auth.params.clientId` | 組織のクライアント ID。 |
 | `auth.params.clientSecretValue` | 組織のクライアントシークレット値。 |
-| `auth.params.namespace` | の名前空間 [!DNL Event Hubs] 現在アクセス中。 |
-| `auth.params.eventHubName` | の名前 [!DNL Event Hubs] ソース。 |
-| `connectionSpec.id` | この [!DNL Event Hubs] 接続仕様 ID は次のとおりです。 `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | アクセスする [!DNL Event Hubs] の名前空間。 |
+| `auth.params.eventHubName` | [!DNL Event Hubs] ソースの名前。 |
+| `connectionSpec.id` | [!DNL Event Hubs] 接続仕様 ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 
 +++
 
@@ -331,7 +331,7 @@ curl -X POST \
 
 >[!TIP]
 >
->An [!DNL Event Hubs] コンシューマーグループは、特定の時間に 1 つのフローに対してのみ使用できます。
+>[!DNL Event Hubs] コンシューマーグループは、特定の時間に 1 つのフローに対してのみ使用できます。
 
 ソース接続は、データの取り込み元となる外部ソースへの接続を作成および管理します。ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続 ID などの情報で構成されます。ソース接続インスタンスは、テナントと組織に固有です。
 
@@ -377,14 +377,14 @@ curl -X POST \
 | --- | --- |
 | `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前はわかりやすいものにしてください。 |
 | `description` | 指定するとソース接続に関する詳細情報を含めることができるオプションの値。 |
-| `baseConnectionId` | の接続 ID [!DNL Event Hubs] 前の手順で生成されたソース。 |
+| `baseConnectionId` | 前の手順で生成された [!DNL Event Hubs] ソースの接続 ID。 |
 | `connectionSpec.id` | [!DNL Event Hubs] の固定接続仕様 ID。この ID は `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` です。 |
 | `data.format` | 取り込む [!DNL Event Hubs] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `params.eventHubName` | の名前 [!DNL Event Hubs] ソース。 |
+| `params.eventHubName` | [!DNL Event Hubs] ソースの名前。 |
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。`raw` および `xdm` を含むデータタイプがサポートされています。 |
-| `params.reset` | このパラメーターは、データの読み取り方法を定義します。 使用方法 `latest` 最新のデータから読み込みを開始するには、次を使用します `earliest` ストリーム内の最初の使用可能なデータからの読み取りを開始します。 このパラメーターはオプションで、デフォルトはです。 `earliest` 指定されていない場合。 |
-| `params.consumerGroup` | 使用するパブリッシュまたは購読メカニズム [!DNL Event Hubs]. このパラメーターはオプションで、デフォルトはです。 `$Default` 指定されていない場合。 こちらを参照してください [[!DNL Event Hubs] イベント消費者ガイド](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 **注意**:An [!DNL Event Hubs] コンシューマーグループは、特定の時間に 1 つのフローに対してのみ使用できます。 |
+| `params.reset` | このパラメーターは、データの読み取り方法を定義します。 `latest` を使用すると、最新のデータから読み取りを開始でき、`earliest` を使用すると、ストリーム内の最初の使用可能なデータから読み取りを開始できます。 このパラメーターはオプションです。指定しない場合、デフォルトは `earliest` になります。 |
+| `params.consumerGroup` | [!DNL Event Hubs] に使用するパブリッシュまたは購読のメカニズム。 このパラメーターはオプションです。指定しない場合、デフォルトは `$Default` になります。 詳しくは、この [[!DNL Event Hubs]  イベントコンシューマーに関するガイド ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 **メモ**:[!DNL Event Hubs] コンシューマーグループは、特定の時間に 1 つのフローに対してのみ使用できます。 |
 
 ## 次の手順
 
-このチュートリアルでは、を作成しました [!DNL Event Hubs] を使用したソース接続 [!DNL Flow Service] API です。 次のチュートリアルでは、このソース接続 ID を使用して、[ [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Event Hubs] ソース接続を作成しました。 次のチュートリアルでは、このソース接続 ID を使用して、[ [!DNL Flow Service] API を使用したストリーミングデータフローの作成](../../collect/streaming.md)を行います。
