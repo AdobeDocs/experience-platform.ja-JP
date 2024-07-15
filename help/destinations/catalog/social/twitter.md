@@ -2,10 +2,10 @@
 title: Twitterカスタムオーディエンス接続
 description: twitterで既存のフォロワーと顧客をターゲットに設定し、Adobe Experience Platform内に構築したオーディエンスをアクティブ化して、関連するリマーケティングキャンペーンを作成します
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ba9b59a24079b61a0f5d6076f3acfd83fc8f4092
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 43%
+source-wordcount: '857'
+ht-degree: 44%
 
 ---
 
@@ -17,10 +17,10 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 ## 前提条件 {#prerequisites}
 
-設定する前に [!DNL Twitter Custom Audiences] 出力先で、満たす必要のある次のTwitterの前提条件を確認してください。
+[!DNL Twitter Custom Audiences] の宛先を設定する前に、満たす必要のある次のTwitterの前提条件を確認してください。
 
-1. あなたの [!DNL Twitter Ads] アカウントは広告の対象となる必要があります。 新規 [!DNL Twitter Ads] アカウントは、作成後の最初の 2 週間は広告の対象になりません。
-2. でのアクセスを許可したTwitterユーザーアカウント [!DNL Twitter Audience Manager] に該当する必要があります。 *[!DNL Partner Audience Manager]* 権限が有効になっています。
+1. [!DNL Twitter Ads] アカウントは広告の対象となる必要があります。 新しい [!DNL Twitter Ads] アカウントは、作成後の最初の 2 週間は広告の対象になりません。
+2. [!DNL Twitter Audience Manager] でのアクセスを許可したTwitterユーザーアカウントで、*[!DNL Partner Audience Manager]* 権限が有効になっている必要があります。
 
 ## サポートされている ID {#supported-identities}
 
@@ -28,8 +28,8 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| device_id | IDFA/AdID/Android ID | Adobe Experience Platformでは、広告主のGoogle Advertising ID （GAID）とApple ID （IDFA）がサポートされています。 で、ソーススキーマからこれらの名前空間や属性を適切にマッピングしてください。 [マッピングステップ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) ：宛先のアクティベーションワークフロー |
-| メール | ユーザーのメールアドレス | プレーンテキストのメールアドレスと SHA256 でハッシュ化されたメールアドレスをこのフィールドにマッピングしてください。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、 **[!UICONTROL 変換を適用]** 選択肢、持つこと [!DNL Platform] アクティブ化時にデータを自動的にハッシュ化します。 お客様のメールアドレスをAdobe Experience Platformにアップロードする前にハッシュ化する場合、これらの ID は、ソルトを使用せずに、SHA256 を使用してハッシュ化する必要があることに注意してください。 |
+| device_id | IDFA/AdID/Android ID | Adobe Experience Platformでは、広告主のGoogle Advertising ID （GAID）とApple ID （IDFA）がサポートされています。 宛先のアクティベーションワークフローの [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) で、ソーススキーマからこれらの名前空間や属性を適切にマッピングしてください。 |
+| メール | ユーザーのメールアドレス | プレーンテキストのメールアドレスと SHA256 でハッシュ化されたメールアドレスをこのフィールドにマッピングしてください。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時にがデータ [!DNL Platform] 自動的にハッシュ化するように設定します。 お客様のメールアドレスをAdobe Experience Platformにアップロードする前にハッシュ化する場合、これらの ID は、ソルトを使用せずに、SHA256 を使用してハッシュ化する必要があることに注意してください。 |
 
 {style="table-layout:auto"}
 
@@ -39,7 +39,7 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -57,26 +57,26 @@ Twitter で既存のフォロワーと顧客をターゲットに設定し、Ado
 
 ## ユースケース {#use-cases}
 
-を使用する方法とタイミングをより深く理解するために、 [!DNL Twitter Custom Audiences] 宛先の場合、Adobe Experience Platformのお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
+[!DNL Twitter Custom Audiences] の宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
 
 ### ユースケース 1
 
-twitterで既存のフォロワーと顧客をターゲットに設定し、Adobe Experience Platform内に構築したオーディエンスをとしてアクティブ化して、関連するリマーケティングキャンペーンを作成します。 [!DNL List Custom Audiences] twitterで。
+twitterで既存のフォロワーと顧客をターゲットに設定し、Twitterに合わせてAdobe Experience Platform内に構築したオーディエンスをアクティブ化して、関連するリマーケティングキャンペーンを作成 [!DNL List Custom Audiences] ます。
 
 ## 宛先に接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-1. の検索 [!DNL Twitter Custom Audiences] 宛先カタログでの宛先と選択 **[!UICONTROL 設定]**.
-2. を選択 **[!UICONTROL 宛先への接続]**.
-   ![linkedInに対する認証](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. twitter資格情報を入力し、を選択します。 **ログイン**.
+1. 宛先カタログで [!DNL Twitter Custom Audiences] の宛先を見つけて、「**[!UICONTROL 設定]**」を選択します。
+2. **[!UICONTROL 宛先に接続]** を選択します。
+   ![LinkedInへの認証 ](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+3. twitter資格情報を入力し、「**ログイン**」を選択します。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -89,7 +89,11 @@ twitterで既存のフォロワーと顧客をターゲットに設定し、Adob
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**：あなたの [!DNL Twitter Ads] アカウント ID。 これは [!DNL Twitter Ads] 設定。
+* **[!UICONTROL アカウント ID]**：お使いの [!DNL Twitter Ads] アカウント ID。 これは、[!DNL Twitter Ads] の設定で確認できます。
+
+>[!IMPORTANT]
+>
+>特殊文字（+ &amp;、% : ; @ / = ? $ \n）を使用して、オーディエンス、説明およびオーディエンスマッピング名を定義します。 Experience Platformオーディエンス名にこれらの文字が含まれている場合は、オーディエンスをTwitterの宛先にマッピングする前に、これらの文字を削除してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -101,10 +105,14 @@ twitterで既存のフォロワーと顧客をターゲットに設定し、Adob
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* エクスポートする *id*、が必要です **[!UICONTROL ID グラフの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png "宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+
+### マッピングに関する考慮事項 {#mapping-considerations}
+
+オーディエンスをTwitterにマッピングする場合は、人間が読み取れるオーディエンスマッピング名を指定します。 Experience Platformセグメントと同じ名前を使用することをお勧めします。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -112,9 +120,4 @@ twitterで既存のフォロワーと顧客をターゲットに設定し、Adob
 
 ## その他のリソース {#additional-resources}
 
-オーディエンスをTwitterにマッピングする場合は、次のオーディエンスの命名要件を必ず満たすようにします。
-
-1. 人間が読み取れるオーディエンスマッピング名を指定します。 Experience Platformセグメントと同じ名前を使用することをお勧めします。
-2. 特殊文字（+ &amp;、% : ; @ / = ? $）を使用してオーディエンスとオーディエンスマッピングの名前を定義します。 Experience Platformオーディエンス名にこれらの文字が含まれている場合は、オーディエンスをTwitterの宛先にマッピングする前に、これらの文字を削除してください。
-
-に関する詳細情報 [!DNL List Custom Audiences] twitterー内のを見つけることができます。 [Twitterドキュメント](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+twitterの [!DNL List Custom Audiences] について詳しくは、[Twitterドキュメント ](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html) を参照してください。
