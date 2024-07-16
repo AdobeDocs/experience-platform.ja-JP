@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；準備済み文；準備済み；SQL;
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；クエリサービス；準備済み文；準備済み；sql;
 solution: Experience Platform
 title: クエリサービスの準備済み文
-description: SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。 Adobe Experience Platform クエリサービスは、パラメーター化されたクエリを使用して準備済み文をサポートします。
+description: SQL では、準備済みステートメントを使用して、類似のクエリや更新をテンプレート化します。 Adobe Experience Platform クエリサービスは、パラメーター化されたクエリを使用して、準備済みステートメントをサポートします。
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 85%
+source-wordcount: '364'
+ht-degree: 78%
 
 ---
 
 # 準備済み文
 
-SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform [!DNL Query Service] は、パラメーター化されたクエリを使用して準備済み文をサポートします。 クエリを繰り返し再解析する必要がなくなったので、パフォーマンスを最適化できます。
+SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform [!DNL Query Service] は、パラメーター化クエリを使用したプリペアドステートメントをサポートしています。 これにより、クエリを繰り返し再解析する必要がなくなるので、パフォーマンスを最適化できます。
 
 ## 準備済み文の使用
 
@@ -23,7 +23,7 @@ SQL では、準備済み文を使用して、類似したクエリや更新を�
 - [EXECUTE](#execute)
 - [DEALLOCATE](#deallocate)
 
-### 準備済み文の準備 {#prepare}
+### 準備文を準備 {#prepare}
 
 この SQL クエリは、書き込まれた SELECT クエリを、`PLAN_NAME` として指定された名前で保存します。実際の値の代わりに、`$1` などの変数を使用できます。この準備済み文は、現在のセッション中に保存されます。プラン名では大文字と小文字が区別&#x200B;**されない**&#x200B;ことに注意してください。
 
@@ -39,7 +39,7 @@ PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 ```
 
-### 準備済み文の実行 {#execute}
+### プリペアドステートメントを実行 {#execute}
 
 この SQL クエリは、前に作成した準備済み文を使用します。
 
@@ -55,7 +55,7 @@ EXECUTE {PLAN_NAME}('{PARAMETERS}')
 EXECUTE test('canada', 'vancouver');
 ```
 
-### 準備済み文の割り当て解除 {#deallocate}
+### 準備済み文の割り当てを解除 {#deallocate}
 
 この SQL クエリは、名前の付いた準備済み文を削除するために使用されます。
 

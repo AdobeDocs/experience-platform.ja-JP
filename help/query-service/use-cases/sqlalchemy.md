@@ -1,45 +1,45 @@
 ---
 title: Python と SQLAlchemy を使用した Platform データの管理
-description: SQL の代わりに Python を使用して、SQLAlchemy を使用して Platform データを管理する方法を説明します。
+description: SQL ではなく Python を使用して、SQLAlchemy を使用して Platform データを管理する方法を説明します。
 exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
 source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '570'
 ht-degree: 7%
 
 ---
 
-# 次を使用した Platform データの管理 [!DNL Python] および [!DNL SQLAlchemy]
+# [!DNL Python] と [!DNL SQLAlchemy] を使用した Platform データの管理
 
-SQLAlchemy を使用して、Adobe Experience Platformデータの管理をより柔軟におこなう方法を説明します。 SQL に詳しくない方には、SQLAlchemy を使用すると、リレーショナルデータベースを使用する際の開発時間を大幅に短縮できます。 このドキュメントでは、接続の手順と例を示します [!DNL SQLAlchemy] をクエリサービスに追加し、Python を使用してデータベースとやり取りを開始します。
+SQLAlchemy を使用してAdobe Experience Platform データの管理をより柔軟に行う方法を説明します。 SQL に詳しくないユーザーにとって、SQLAlchemy は、リレーショナル・データベースを使用する際の開発時間を大幅に短縮できます。 このドキュメントでは、[!DNL SQLAlchemy] をクエリサービスに接続し、Python を使用してデータベースとやり取りする手順と例を説明します。
 
-[!DNL SQLAlchemy] はオブジェクトリレーショナルマッパー (ORM) および [!DNL Python] SQL データベースに保存されたデータをに転送できるコードライブラリ [!DNL Python] オブジェクト。 その後、 [!DNL Python] コード。 これにより、PSQL のみを使用してデータを管理する必要がなくなりました。
+[!DNL SQLAlchemy] は、SQL データベースに格納されたデータを [!DNL Python] のオブジェクトに転送できる ORM （Object Relational Mapper）および [!DNL Python] コード ライブラリです。 その後、コードを使用して、Platform データレイク内に保持されているデータに対して CRUD 操作 [!DNL Python] 実行できます。 これにより、PSQL のみを使用してデータを管理する必要がなくなります。
 
 ## はじめに
 
-[!DNL SQLAlchemy] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在クエリワークスペースへのアクセス権がない場合は、組織の管理者に問い合わせてください。
+[!DNL SQLAlchemy] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在、クエリワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ## [!DNL Query Service] 資格情報 {#credentials}
 
-資格情報を見つけるには、Platform UI にログインし、左側のナビゲーションから「**[!UICONTROL クエリ]**」を選択し、続いて「**[!UICONTROL 資格情報]**」を選択します。ログイン資格情報の見つけ方の詳細については、 [資格情報ガイド](../ui/credentials.md).
+資格情報を見つけるには、Platform UI にログインし、左側のナビゲーションから「**[!UICONTROL クエリ]**」を選択し、続いて「**[!UICONTROL 資格情報]**」を選択します。ログイン資格情報の検索方法の詳細については、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。
 
-![クエリサービスの資格情報の期限が近づいている「資格情報」タブがハイライト表示されています。](../images/use-cases/credentials.png)
+![ クエリサービスの資格情報の有効期限が切れる「資格情報」タブがハイライト表示されます。](../images/use-cases/credentials.png)
 
-クエリサービスへの接続には、ポート 80 が推奨されるポートですが、ポート 5432 を使用することもできます。
+クエリサービスへの接続にはポート 80 をお勧めしますが、ポート 5432 を使用することもできます。
 
 >[!IMPORTANT]
 >
->（上の図に示すように）期限切れの資格情報を使用してクエリサービスに接続すると、接続のセッション有効期間は、組織の設定で定義された設定期間が過ぎると期限切れになります。 デフォルトでは、この期間は 24 時間です。 方法については、ドキュメントを参照してください。 [期限切れでない資格情報でクライアントに接続](../ui/credentials.md#non-expiring-credentials)、または方法 [有効期限が切れる資格情報のセッション期間を変更する](../ui/credentials.md#expiring-credentials).
+>有効期限が切れる資格情報（上図を参照）を使用してクエリサービスに接続する場合、接続のセッション有効期間は、組織の設定で定義された期間の後に期限切れになります。 デフォルトでは、この期間は 24 時間です。 [ 有効期限のない資格情報を使用してクライアントを接続 ](../ui/credentials.md#non-expiring-credentials) する方法や、有効期限のある資格情報のセッション期間を変更 [ する方法については、ドキュメントを参照してください ](../ui/credentials.md#expiring-credentials)。
 
-QS 資格情報にアクセスできたら、 [!DNL Python] 編集者を選択します。
+QS 認証情報にアクセスできるようになったら、任意の [!DNL Python] エディターを開きます。
 
-### 資格情報をに保存 [!DNL Python] {#store-credentials}
+### [!DNL Python] に資格情報を保存 {#store-credentials}
 
-を [!DNL Python] エディタ、インポート `urllib.parse.quote` ライブラリに追加し、各秘密鍵証明書変数をパラメーターとして保存します。 この `urllib.parse` モジュールは、URL 文字列をコンポーネントに分割するための標準的なインターフェイスを提供します。 quote 関数は、URL 文字列内の特殊文字を置き換えて、URL コンポーネントとしてデータを安全に使用できるようにします。 必要なコードの例を以下に示します。
+[!DNL Python] エディターで、`urllib.parse.quote` ライブラリを読み込み、各資格情報変数をパラメーターとして保存します。 `urllib.parse` モジュールは、URL 文字列をコンポーネントに分割する標準的なインターフェイスを提供します。 quote 関数は、URL 文字列内の特殊文字を置き換えて、データを URL コンポーネントとして安全に使用できるようにします。 必要なコードの例を以下に示します。
 
 >[!TIP]
 >
->用途 [!DNL Python]複数行のパスワード文字列を入力するための三重引用符です。
+>[!DNL Python] の 3 重引用符を使用して、複数行のパスワード文字列を入力します。
 
 ```python
 from urllib.parse import quote
@@ -59,19 +59,19 @@ password = quote('''
 
 >[!NOTE]
 >
->接続に指定したパスワード [!DNL SQLAlchemy] をExperience Platformに追加すると、有効期限が切れます。 詳しくは、 [資格情報セクション](#credentials) を参照してください。
+>有効期限が切れる資格情報を使用する場合、[!DNL SQLAlchemy] をExperience Platformに接続するために指定したパスワードの有効期限が切れます。 詳しくは、[ 資格情報の節 ](#credentials) を参照してください。
 
 ### エンジンインスタンスの作成 [#create-engine]
 
-変数を作成したら、 `create_engine` 関数を作成し、SQLAlchemy でクエリサービス資格情報をコンパイルして書式設定する文字列を作成します。 この `create_engine` 関数は、その後、エンジンインスタンスの構築に使用されます。
+変数を作成した後、`create_engine` 関数をインポートし、SQLAlchemy でクエリサービスの認証情報をコンパイルしてフォーマットするための文字列を作成します。 次に、`create_engine` 関数を使用してエンジンインスタンスが作成されます。
 
 >[!NOTE]
 >
->`create_engine`エンジンのインスタンスを返します。 ただし、接続が必要なクエリが呼び出されるまで、クエリサービスへの接続は開きません。
+>`create_engine` エンジンのインスタンスを返します。 ただし、接続を必要とするクエリが呼び出されるまで、クエリサービスへの接続は開きません。
 
-サードパーティのクライアントを使用して Platform にアクセスする場合は、SSL を有効にする必要があります。 エンジンの一部として、 `connect_args` をクリックして、追加のキーワード引数を入力します。 SSL モードをに設定することをお勧めします。 `require`. 詳しくは、 [SSL モードのドキュメント](../clients/ssl-modes.md) を参照してください。
+サードパーティクライアントを使用して Platform にアクセスする場合は、SSL を有効にする必要があります。 エンジンの一部として、`connect_args` を使用して追加のキーワード引数を入力します。 SSL モードを `require` に設定することをお勧めします。 使用可能な値について詳しくは、[SSL モードのドキュメント ](../clients/ssl-modes.md) を参照してください。
 
-次の例は、 [!DNL Python] エンジンと接続文字列を初期化するために必要なコード。
+次の例は、エンジンと接続文字列を初期化するために必要な [!DNL Python] コードを示しています。
 
 ```python
 from sqlalchemy import create_engine
@@ -89,9 +89,9 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 
 >[!NOTE]
 >
->接続に指定したパスワード [!DNL SQLAlchemy] をExperience Platformに追加すると、有効期限が切れます。 詳しくは、 [資格情報セクション](#credentials) を参照してください。
+>有効期限が切れる資格情報を使用する場合、[!DNL SQLAlchemy] をExperience Platformに接続するために指定したパスワードの有効期限が切れます。 詳しくは、[ 資格情報の節 ](#credentials) を参照してください。
 
-これで、次を使用して Platform データをクエリする準備が整いました： [!DNL Python]. 次の例は、クエリサービステーブル名の配列を返します。
+これで、[!DNL Python] を使用して Platform データをクエリする準備が整いました。 次の例では、クエリサービスのテーブル名の配列を返します。
 
 ```python
 from sqlalchemy import inspect

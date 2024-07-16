@@ -1,11 +1,11 @@
 ---
-title: AWS Extension の概要
+title: AWS拡張機能の概要
 description: Adobe Experience Platformでのイベント転送用のAWS拡張機能について説明します。
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
 source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '810'
 ht-degree: 7%
 
 ---
@@ -16,64 +16,64 @@ ht-degree: 7%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) は、顧客関係管理 (CRM) およびエンタープライズリソース計画 (ERP) 向けの、分散コンピューティング、データベースストレージ、コンテンツ配信、SaaS(Software-as-a-S) 統合サービスなど、幅広いサービスを提供するクラウドコンピューティングプラットフォームです。
+[[!DNL Amazon Web Services]  （[!DNL AWS]） ](https://aws.amazon.com/jp/) は、分散コンピューティング、データベースストレージ、コンテンツ配信、顧客関係管理（CRM）やエンタープライズリソースプランニング（ERP）向けの SaaS （software-as-a-service）統合サービスなど、様々なサービスを提供するクラウドコンピューティングプラットフォームです。
 
-この [!DNL AWS] [イベント転送](../../../ui/event-forwarding/overview.md) 拡張機能の活用 [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) を追加して、Adobe Experience Platform Edge Network からにイベントを送信します。 [!DNL AWS] を参照してください。 このガイドでは、イベント転送ルールでの拡張機能のインストール方法とその機能の使用方法について説明します。
+[!DNL AWS] [ イベント転送 ](../../../ui/event-forwarding/overview.md) 拡張機能は、[[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) を活用して、イベントをAdobe Experience Platform Edge Networkから [!DNL AWS] に送信して、さらに処理できるようにします。 このガイドでは、拡張機能をインストールし、イベント転送ルールでその機能を使用する方法について説明します。
 
 ## 前提条件
 
-次が必要です： [!DNL AWS] 既存の [!DNL Kinesis] この拡張機能を使用するためのデータストリーム。 既存のデータストリームがない場合は、 [!DNL AWS] ドキュメント [を使用した新しいデータストリームの作成 [!DNL AWS] 管理コンソール](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+この拡張機能を使用するには、既存の [!DNL Kinesis] データストリームを持つ [!DNL AWS] アカウントが必要です。 既存のデータストリームがない場合は、[ 管理コンソールを使用した新しいデータストリームの作成 ](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html) に関する [!DNL AWS] のドキュメントを参照し  [!DNL AWS]  ください。
 
 ## 拡張機能のインストール {#install}
 
-をインストールするには、以下を実行します。 [!DNL AWS] 拡張機能に移動し、データ収集 UI またはExperience PlatformUI に移動して、「 」を選択します。 **[!UICONTROL イベント転送]** をクリックします。 ここから、拡張機能を追加するプロパティを選択するか、代わりに新しいプロパティを作成します。
+[!DNL AWS] 拡張機能をインストールするには、データ収集 UI またはExperience PlatformUI に移動し、左側のナビゲーションから **[!UICONTROL イベント転送]** を選択します。 ここから、拡張機能を追加するプロパティを選択するか、代わりに新しいプロパティを作成します。
 
-目的のプロパティを選択または作成したら、「 」を選択します。 **[!UICONTROL 拡張機能]** 左側のナビゲーションで、 **[!UICONTROL カタログ]** タブをクリックします。 を検索します。 [!UICONTROL AWS] カードを選択し、 **[!UICONTROL インストール]**.
+目的のプロパティを選択または作成したら、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 [!UICONTROL AWS] カードを検索し、「**[!UICONTROL インストール]**」を選択します。
 
-![この [!UICONTROL インストール] ボタンを選択しています [!UICONTROL AWS] 拡張機能を使用して、データ収集 UI に追加できます。](../../../images/extensions/server/aws/install.png)
+![ データ収集 UI の [!UICONTROL AWS] 拡張機能に対して選択されている「[!UICONTROL  インストール ]」ボタン。](../../../images/extensions/server/aws/install.png)
 
-次の画面で、 [!DNL AWS] アカウント 特に、 [!DNL AWS] アクセスキー ID および秘密アクセスキー。 これらの値が不明な場合は、 [!DNL AWS] ドキュメント [アクセスキー ID と秘密アクセスキーの取得方法](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+次の画面で、[!DNL AWS] アカウントの接続資格情報を指定する必要があります。 特に、[!DNL AWS] アクセスキー ID と秘密アクセスキーを指定する必要があります。 これらの値がわからない場合は、[!DNL AWS] のドキュメント [ アクセスキー ID と秘密アクセスキーを取得する方法 ](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html) を参照してください。
 
-![拡張機能の設定表示に追加されたアクセスキー ID と秘密アクセスキー。](../../../images/extensions/server/aws/credentials.png)
+![ 拡張機能の設定ビューに追加されたアクセスキー ID と秘密アクセスキー。](../../../images/extensions/server/aws/credentials.png)
 
 >[!IMPORTANT]
 >
->アクセスポリシーを [!DNL AWS] アクセス資格情報の生成に使用するアカウント。 このポリシーは、にデータを送信するためのアクセス権を付与するように構成する必要があります [!DNL Kinesis] データストリーム。 参照： **例 2** 内 [!DNL AWS] 文書 [ポリシーの例 [!DNL Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples) ポリシーの定義方法を確認します。
+>アクセス資格情報の生成に使用する [!DNL AWS] アカウントにアクセスポリシーを添付する必要があります。 このポリシーは、[!DNL Kinesis] のデータストリームにデータを送信するためのアクセス権を付与するように設定する必要があります。 ポリシーの定義方法については、[ のポリシーの例  [!DNL Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples) に関する [!DNL AWS] ドキュメントの **例 2** を参照してください。
 
-終了したら、「 」を選択します。 **[!UICONTROL 保存]** 拡張機能がインストールされている。
+終了したら、「**[!UICONTROL 保存]** を選択すると、拡張機能がインストールされます。
 
 ## イベント転送ルールの設定 {#rule}
 
-拡張機能をインストールしたら、新しいイベント転送を作成します [ルール](../../../ui/managing-resources/rules.md) 必要に応じて、条件を設定します。 ルールのアクションを設定する際に、 **[!UICONTROL AWS]** 拡張機能、「 **[!UICONTROL Kinesis Data Stream へのデータ送信]** （アクションタイプ）。
+拡張機能をインストールした後、新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成し、必要に応じてその条件を設定します。 ルールのアクションを設定する際に、**[!UICONTROL AWS]** 拡張機能を選択してから、アクションタイプとして **[!UICONTROL Kinesis データストリームにデータを送信]** を選択します。
 
-![この [!UICONTROL Kinesis Data Stream へのデータ送信] データ収集 UI のルールに対して選択されているアクションタイプ。](../../../images/extensions/server/aws/select-action-type.png)
+![ データ収集 UI でルールに対して選択されている「[!UICONTROL Kinesis データストリームにデータを送信 ]」アクションタイプ ](../../../images/extensions/server/aws/select-action-type.png)
 
-右側のパネルが更新され、データの送信方法に関する設定オプションが表示されます。 特に、 [データ要素](../../../ui/managing-resources/data-elements.md) を [!DNL Event Hub] 設定。
+右側のパネルが更新され、データの送信方法に関する設定オプションが表示されます。 特に、[!DNL Event Hub] 設定を表す様々なプロパティに [ データ要素 ](../../../ui/managing-resources/data-elements.md) を割り当てる必要があります。
 
-![の設定オプション [!UICONTROL Kinesis Data Stream へのデータ送信] UI に表示されるアクションタイプ。](../../../images/extensions/server/aws/data-stream-details.png)
+![UI に表示される [!UICONTROL Kinesis データストリームにデータを送信 ] アクションタイプの設定オプション ](../../../images/extensions/server/aws/data-stream-details.png)
 
-**[!UICONTROL Kinesis Data Stream の詳細]**
+**[!UICONTROL Kinesis データストリームの詳細]**
 
-| 必要情報 | 説明 |
+| 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL ストリーム名] | このイベント転送ルールがデータレコードを送信するストリームの名前。 |
-| [!UICONTROL AWS リージョン] | この [!DNL AWS] 地域 [!DNL Kinesis] データストリームが作成されます。 |
-| [!UICONTROL パーティションキー] | この [パーティションキー](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) 拡張機能がデータストリームにデータを送信する際に使用する<br><br>[!DNL Kinesis Data Streams] 1 つのストリームに属するデータレコードを複数のシャードに分離します。 各データレコードと共に送信されるパーティションキーを使用して、特定のデータレコードが属するシャードを判断します。<br><br>顧客を配布するための適切なパーティションキーは、顧客ごとに異なるので、顧客番号である場合があります。 パーティションキーの値が低いと、すべてのキーが近くの同じ領域に存在する可能性があるので、郵便番号が表示される場合があります。 通常は、様々な潜在的な値の範囲が最も大きいパーティションキーを選択する必要があります。 詳しくは、 [!DNL AWS] 記事 [スケール [!DNL Kinesis] データストリーム](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) パーティションキーの管理に関するベストプラクティスを参照してください。 |
+| [!UICONTROL  ストリーム名 ] | このイベント転送ルールがデータレコードを送信するストリームの名前。 |
+| [!UICONTROL AWS リージョン] | [!DNL Kinesis] データストリームが作成される [!DNL AWS] 領域。 |
+| [!UICONTROL  パーティションキー ] | データ ストリームにデータを送信するときに拡張機能が使用する [ パーティション キー ](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key)。<br><br>[!DNL Kinesis Data Streams] は、ストリームに属するデータレコードを複数のシャードに分離します。 各データレコードと共に送信されるパーティションキーを使用して、特定のデータレコードが属するシャードを判断します。<br><br> 顧客ごとに異なるので、顧客を配布するための良いパーティションキーは、顧客番号かもしれません。 パーティション キーが不適切な場合、近くの同じエリアに住んでいる可能性があるため、郵便番号が異なる可能性があります。 一般に、パーティションキーは異なる可能性のある値の範囲が最も大きいものを選択します。 パーティションキーの管理のベストプラクティスについては、[ データストリームのスケーリング ](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) に関する [!DNL AWS] の記事を参照してください  [!DNL Kinesis]  |
 
 {style="table-layout:auto"}
 
 **[!UICONTROL データ]**
 
-| 必要情報 | 説明 |
+| 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL ペイロード] | このフィールドには、 [!DNL Kinesis] データストリーム（JSON 形式）。<br><br>以下 **[!UICONTROL 生]** 」オプションを使用する場合は、指定したテキストフィールドに JSON オブジェクトを直接貼り付けるか、データ要素アイコン (![データセットアイコン](../../../images/extensions/server/aws/data-element-icon.png)) をクリックして、ペイロードを表す既存のデータ要素のリストから選択します。<br><br>また、 **[!UICONTROL JSON キーと値のペアエディター]** UI エディターを使用して各キーと値のペアを手動で追加するオプションが追加されました。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
+| [!UICONTROL  ペイロード ] | このフィールドには、[!DNL Kinesis] データストリームに転送されるデータが JSON 形式で格納されます。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](../../../images/extensions/server/aws/data-element-icon.png)）を選択して、ペイロードを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
 
 {style="table-layout:auto"}
 
-終了したら、「 」を選択します。 **[!UICONTROL 変更を保持]** をクリックして、ルール設定にアクションを追加します。 ルールに問題がない場合は、「 」を選択します。 **[!UICONTROL ライブラリに保存]**.
+完了したら、「**[!UICONTROL 変更を保持]**」を選択して、アクションをルール設定に追加します。 ルールの設定が完了したら、「**[!UICONTROL ライブラリに保存]**」を選択します。
 
-最後に、新しいイベント転送を公開します [ビルド](../../../ui/publishing/builds.md) ライブラリへの変更を有効にします。
+最後に、新しいイベント転送 [ ビルド ](../../../ui/publishing/builds.md) を公開して、ライブラリに対する変更を有効にします。
 
 ## 次の手順
 
-このガイドでは、にデータを送信する方法について説明しました [!DNL Kinesis Data Streams] の使用 [!DNL AWS] イベント転送拡張機能。 Experience Platformのイベント転送機能について詳しくは、 [イベント転送の概要](../../../ui/event-forwarding/overview.md).
+このガイドでは、[!DNL AWS] イベント転送拡張機能を使用して [!DNL Kinesis Data Streams] にデータを送信する方法について説明しました。 Experience Platformのイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。

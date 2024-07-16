@@ -1,41 +1,41 @@
 ---
-title: フローサービス API を使用して、Shopify データ用のストリーミングソース接続とデータフローを作成する
-description: フローサービス API を使用して、Shopify データのストリーミングソース接続とデータフローを作成する方法を説明します。
+title: Flow Service API を使用して、Shopify データ用のストリーミング Source接続とデータフローを作成します
+description: Flow Service API を使用して Shopify データのストリーミングソース接続とデータフローを作成する方法について説明します。
 badge: ベータ版
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 52%
+source-wordcount: '1421'
+ht-degree: 51%
 
 ---
 
-# のストリーミングソース接続とデータフローの作成 [!DNL Shopify] フローサービス API を使用したデータ
+# Flow Service API を使用した、[!DNL Shopify] データのストリーミングソース接続とデータフローの作成
 
 >[!NOTE]
 >
->The [!DNL Shopify] ストリーミングソースはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Shopify] ストリーミングソースはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-次のチュートリアルでは、ストリーミングソース接続とデータフローを作成してデータをストリーミングする手順を説明します。 [[!DNL Shopify]](https://www.shopify.com/) を使用してAdobe Experience Platformに [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+次のチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [[!DNL Shopify]](https://www.shopify.com/) からAdobe Experience Platformにデータをストリーミングするストリーミングソース接続とデータフローを作成する方法について説明します。
 
 ## はじめに {#getting-started}
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)[!DNL Platform]：Experience を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
 
 ### Platform API の使用
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
 
-## ストリーム [!DNL Shopify] フローサービス API を使用した Platform へのデータの取得
+## Flow Service API[!DNL Shopify] 使用した Platform へのデータのストリーミング
 
-次に、ソース接続とデータフローを作成し、 [!DNL Shopify] データを Platform に送信します。
+ソース接続とデータフローを作成して [!DNL Shopify] データを Platform にストリーミングするために必要な手順の概要を、次に示します。
 
 ### ソース接続の作成 {#source-connection}
 
-に対してPOSTリクエストを実行してソース接続を作成 [!DNL Flow Service] API：ソースの接続仕様 ID、名前、説明、データの形式などの詳細を指定します。
+[!DNL Flow Service] API に接続リクエストを実行し、その際にソースのPOST仕様 ID、名前や説明などの詳細、データの形式を指定することで、ソース接続を作成します。
 
 **API 形式**
 
@@ -45,7 +45,7 @@ POST /sourceConnections
 
 **リクエスト**
 
-次のリクエストは、 *YOURSOURCE*:
+次のリクエストは、*YOURSOURCE* のソース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -71,7 +71,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前がわかりやすい名前になっていることを確認します。 |
+| `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前はわかりやすいものにしてください。 |
 | `description` | 含めることでソース接続に関する詳細情報を提供できるオプションの値です。 |
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
 | `data.format` | 取り込む [!DNL Shopify] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
@@ -103,9 +103,9 @@ curl -X POST \
 
 ### ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込んだデータの保存先への接続を表します。 ターゲット接続を作成するには、データレイクに対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続は、取り込まれたデータが保存される宛先への接続を表します。 ターゲット接続を作成するには、データレイクに対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
-これで、一意の識別子、ターゲットスキーマ、ターゲットデータセット、およびデータレイクへの接続仕様 ID が用意されました。 これらの識別子を使用すると、受信ソースデータを格納するデータセットを指定する [!DNL Flow Service] API を使用して、ターゲット接続を作成することができます。
+これで、一意の識別子、ターゲットスキーマ、ターゲットデータセット、データレイクへの接続仕様 ID が用意できました。 これらの識別子を使用すると、受信ソースデータを格納するデータセットを指定する [!DNL Flow Service] API を使用して、ターゲット接続を作成することができます。
 
 **API 形式**
 
@@ -149,7 +149,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | ターゲット接続の名前。ターゲット接続の名前がわかりやすい名前であることを確認します。これは、ターゲット接続に関する情報を検索するために使用できます。 |
+| `name` | ターゲット接続の名前。ターゲット接続の情報を検索する際に使用できるので、ターゲット接続の名前はわかりやすい名前にしてください。 |
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
 | `connectionSpec.id` | データレイクに対応する接続仕様 ID。 この修正済み ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
 | `data.format` | Platform に取り込む [!DNL Shopify] データの形式。 |
@@ -169,7 +169,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、次に対してPOSTリクエストを実行する [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これを実現するには、リクエストペイロード内で定義されたデータマッピングを使用して、[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) に対してPOSTリクエストを実行します。
 
 **API 形式**
 
@@ -232,7 +232,7 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-からデータを取り込むための最後の手順 [!DNL Shopify] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
+[!DNL Shopify] から Platform にデータを取り込むための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -282,8 +282,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | データフローの名前。データフローの情報を検索するのに使用できるので、データフローの名前がわかりやすい名前になっていることを確認します。 |
-| `description` | データフローの詳細を指定するために含めることができるオプションの値です。 |
+| `name` | データフローの名前。データフローの情報を検索する際に使用できるので、データフローはわかりやすい名前にしてください。 |
+| `description` | データフローの詳細を提供するために含めることができるオプションの値です。 |
 | `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。この修正済み ID は `e77fde5a-22a8-11ed-861d-0242ac120002` です。 |
 | `flowSpec.version` | フロー仕様 ID の対応するバージョン。この値のデフォルトは `1.0` です。 |
 | `sourceConnectionIds` | 以前の手順で生成された[ソース接続 ID](#source-connection)。 |
@@ -304,11 +304,11 @@ curl -X POST \
 }
 ```
 
-### ストリーミングエンドポイント URL を取得する
+### ストリーミングエンドポイント URL の取得
 
-データフローを作成したら、ストリーミングエンドポイント URL を取得できます。 このエンドポイント URL を使用して、ソースを Webhook に登録し、ソースとの通信を可能にします。Experience Platform
+データフローを作成したので、ストリーミングエンドポイント URL を取得できるようになりました。 このエンドポイント URL を使用して、ソースを Webhook に登録し、ソースがExperience Platformと通信できるようにします。
 
-ストリーミングエンドポイント URL を取得するには、に対してGETリクエストを実行します。 `/flows` エンドポイントに接続し、データフローの ID を指定します。
+ストリーミングエンドポイント URL を取得するには、`/flows` エンドポイントに対してGETリクエストを実行し、データフローの ID を指定します。
 
 **API 形式**
 
@@ -329,7 +329,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、としてマークされたエンドポイント URL を含む、データフローに関する情報を返します。 `inletUrl`.
+応答が成功すると、`inletUrl` とマークされたエンドポイント URL を含む、データフローに関する情報が返されます。
 
 ```json
 {
@@ -651,24 +651,24 @@ curl -X GET \
 
 ## 付録
 
-次の節では、データフローを監視、更新および削除するための手順について説明します。
+次の節では、データフローの監視、更新、削除を行う手順について説明します。
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。API の完全な例については、 [API を使用したソースデータフローの監視](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html) に関するガイドを参照してください。
 
 ### データフローの更新
 
-に対してPATCHリクエストをおこなうことで、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` エンドポイント [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+データフローの ID を指定しながら [!DNL Flow Service] API の `/flows` エンドポイントにPATCHリクエストを実行することで、名前や説明、実行スケジュールや関連するマッピングセットなど、データフローの詳細を更新します。 データフローをリクエストする場合は、PATCHの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html) に関するガイドを参照してください
 
 ### アカウントを更新
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+ベースPATCHID をクエリパラメーターとして指定して [!DNL Flow Service] API に接続リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCHリクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html) に関するガイドを参照してください。
 
 ### データフローの削除
 
-に対してDELETEリクエストを実行して、データフローを削除する [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETEリクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-アカウントを削除するには、 [!DNL Flow Service] 削除するアカウントのベース接続 ID を指定する際の API。 API の完全な例については、 [API を使用したソースアカウントの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+削除するアカウントのベースDELETEID を指定したうえで、[!DNL Flow Service] API に接続リクエストを実行してアカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html) に関するガイドを参照してください。

@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング；ストリーミング取り込み；ストリーミング取り込みの検証；検証；ストリーミング取り込みの検証；検証；同期検証；非同期検証；非同期検証；非同期検証；
+keywords: Experience Platform；ホーム；人気のトピック；ストリーミング；ストリーミング取得；ストリーミング取得の検証；検証；ストリーミング取得の検証；検証；同期検証；非同期検証；非同期検証；
 solution: Experience Platform
 title: ストリーミング取り込みの検証
 type: Tutorial
-description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+description: ストリーミング取得では、ストリーミングエンドポイントを使用してリアルタイムにデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 83%
+source-wordcount: '906'
+ht-degree: 82%
 
 ---
 
 # ストリーミング取得検証
 
-ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+ストリーミング取得では、ストリーミングエンドポイントを使用してリアルタイムにデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):データをに送信する方法の 1 つ [!DNL Experience Platform].
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):[!DNL Experience Platform] にデータを送信するメソッドの 1 つ。
 
 ### API 呼び出し例の読み取り
 
@@ -35,7 +35,7 @@ ht-degree: 83%
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-のすべてのリソース [!DNL Experience Platform]( [!DNL Schema Registry]は、特定の仮想サンドボックスに分離されています。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Schema Registry] に属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name：`{SANDBOX_NAME}`
 
@@ -49,7 +49,7 @@ ht-degree: 83%
 
 ### 検証の範囲
 
-[!DNL Streaming Validation Service] 次の領域での検証について説明します。
+[!DNL Streaming Validation Service] では、次の領域で検証について説明します。
 - 範囲
 - 配置
 - 列挙
@@ -65,13 +65,13 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->この `syncValidation` クエリパラメーターは、単一のメッセージエンドポイントに対してのみ使用でき、バッチエンドポイントには使用できません。
+>`syncValidation` クエリパラメーターは、単一のメッセージエンドポイントでのみ使用でき、バッチエンドポイントでは使用できません。
 
 同期検証中にメッセージが失敗した場合、そのメッセージは出力キューに書き込まれず、ユーザーに対して即座にフィードバックが提供されます。
 
 >[!NOTE]
 >
->変更がキャッシュされるので、スキーマの変更はすぐには利用できない場合があります。 キャッシュが更新されるまで最大 15 分かかります。
+>変更はキャッシュされるので、スキーマの変更をすぐに使用できない場合があります。 キャッシュが更新されるまで、最大 15 分間待ちます。
 
 **API 形式**
 
@@ -148,7 +148,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 ## 非同期検証
 
-非同期検証は、即座にフィードバックを提供しない検証方法です。代わりに、で失敗したバッチにデータが送信されます。 [!DNL Data Lake] データの損失を防ぐ。 この失敗したデータを、後で取得して、さらに分析と再現をおこなうことができます。この方法は、実稼働環境で使用する必要があります。特に要求されない限り、ストリーミング取り込みは非同期検証モードで動作します。
+非同期検証は、即座にフィードバックを提供しない検証方法です。代わりに、データの損失を防ぐた [!DNL Data Lake] に、失敗したバッチにデータが送信されます。 この失敗したデータを、後で取得して、さらに分析と再現をおこなうことができます。この方法は、実稼働環境で使用する必要があります。特に要求されない限り、ストリーミング取り込みは非同期検証モードで動作します。
 
 **API 形式**
 
@@ -176,7 +176,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 
 >[!NOTE]
 >
-> 非同期検証はデフォルトで有効なので、追加のクエリパラメーターは不要です。
+>非同期検証はデフォルトで有効になっているので、追加のクエリパラメーターは必要ありません。
 
 **応答**
 

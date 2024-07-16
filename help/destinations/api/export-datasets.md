@@ -1,39 +1,39 @@
 ---
 solution: Experience Platform
-title: フローサービス API を使用したデータセットのエクスポート
-description: フローサービス API を使用してデータセットを書き出し、宛先を選択する方法について説明します。
+title: Flow Service API を使用したデータセットの書き出し
+description: Flow Service API を使用して、データセットを書き出し、宛先を選択する方法を説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3550'
-ht-degree: 17%
+source-wordcount: '3524'
+ht-degree: 16%
 
 ---
 
-# を使用してデータセットを書き出す [!DNL Flow Service API]
+# [!DNL Flow Service API] を使用したデータセットの書き出し
 
 >[!AVAILABILITY]
 >
 >* この機能は、Real-Time CDP Prime および Ultimate パッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
 
-この記事では、 [!DNL Flow Service API] エクスポートする [データセット](/help/catalog/datasets/overview.md) Adobe Experience Platformから目的のクラウドストレージの場所 ( [!DNL Amazon S3]、SFTP の場所、または [!DNL Google Cloud Storage].
+この記事では、[!DNL Flow Service API] を使用して、Adobe Experience Platformから目的のクラウドストレージの場所（[!DNL Amazon S3]、SFTP の場所または [!DNL Google Cloud Storage] など ](/help/catalog/datasets/overview.md) データセット [ を書き出すために必要なワークフローについて説明します。
 
 >[!TIP]
 >
->また、Experience Platformユーザーインターフェイスを使用してデータセットを書き出すこともできます。 詳しくは、 [データセットの書き出し UI チュートリアル](/help/destinations/ui/export-datasets.md) を参照してください。
+>Experience Platformユーザーインターフェイスを使用して、データセットを書き出すこともできます。 詳しくは、[ データセット UI の書き出しチュートリアル ](/help/destinations/ui/export-datasets.md) を参照してください。
 
-## 書き出しに使用できるデータセット {#datasets-to-export}
+## 書き出すことができるデータセット {#datasets-to-export}
 
-書き出すデータセットは、Experience Platformアプリケーション (Real-Time CDP、Adobe Journey Optimizer)、層（Prime または Ultimate）、および購入した任意のアドオン ( 例：Data Distiller) によって異なります。
+書き出し可能なデータセットは、Experience Platformアプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（Prime または Ultimate）、購入したアドオン（例：Data Distiller）によって異なります。
 
-詳しくは、 [UI チュートリアルページの表](/help/destinations/ui/export-datasets.md#datasets-to-export) を参照して、書き出すことができるデータセットを把握します。
+書き出し可能なデータセットについては、[UI チュートリアルページの表 ](/help/destinations/ui/export-datasets.md#datasets-to-export) を参照してください。
 
 ## サポートされる宛先 {#supported-destinations}
 
-現在、以下のスクリーンショットでハイライト表示されているクラウドストレージの宛先にデータセットを書き出すことができます。
+現在、スクリーンショットでハイライト表示され、以下に示されているクラウドストレージの宛先にデータセットを書き出すことができます。
 
-![データセットの書き出しをサポートする宛先](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![ データセットの書き出しをサポートする宛先 ](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -44,18 +44,18 @@ ht-degree: 17%
 
 ## はじめに {#get-started}
 
-![概要 — 宛先の作成手順とデータセットの書き出し手順](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![ 概要 – 宛先の作成およびデータセットの書き出し手順 ](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Adobe Experience Platformに正常に取り込まれたすべてのデータは、 [!DNL Data Lake] データセットとして。 データセットは、通常、スキーマ（列）とフィールド（行）を含むテーブルであるデータコレクションのストレージと管理をおこなう構成体です。データセットには、保存するデータの様々な側面を記述したメタデータも含まれます。
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md):Adobe Experience Platformに正常に取り込まれたすべてのデータは、[!DNL Data Lake] 内にデータセットとして保持されます。 データセットは、通常、スキーマ（列）とフィールド（行）を含むテーブルであるデータコレクションのストレージと管理をおこなう構成体です。データセットには、保存するデータの様々な側面を記述したメタデータも含まれます。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、データセットを Platform のクラウドストレージの宛先に書き出す際に知っておく必要がある追加情報を示します。
+以下の節では、Platform のクラウドストレージ宛先にデータセットを書き出すために知っておく必要がある追加情報を示します。
 
 ### 必要な権限 {#permissions}
 
-データセットを書き出すには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL データセットを表示]**、および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
+データセットを書き出すには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL データセットの表示]** および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 必要な権限を取得するには、[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせてください。
 
 データセットの書き出しに必要な権限があることと、宛先でデータセットの書き出しがサポートされていることを確認するには、宛先カタログを参照します。 宛先に「**[!UICONTROL アクティブ化]**」または「**[!UICONTROL データセットを書き出し]**」コントロールがある場合、適切な権限を持っています。
 
@@ -65,7 +65,7 @@ ht-degree: 17%
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values-headers}
 
-を呼び出すために [!DNL Platform] API の場合、最初に [Experience Platform認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja). 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず [Experience Platform認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -85,15 +85,15 @@ ht-degree: 17%
 
 ### API リファレンスドキュメント {#api-reference-documentation}
 
-このチュートリアルに含まれるすべての API 操作について、付属リファレンスドキュメントが用意されています。詳しくは、 [[!DNL Flow Service] - Adobe Developer Web サイト上の宛先 API ドキュメント](https://developer.adobe.com/experience-platform-apis/references/destinations/). このチュートリアルと API リファレンスのドキュメントを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 操作について、付属リファレンスドキュメントが用意されています。Adobe Developer web サイト ](https://developer.adobe.com/experience-platform-apis/references/destinations/) で [[!DNL Flow Service] - Destinations API ドキュメントを参照してください。 このチュートリアルと API リファレンスのドキュメントを並行して使用することをお勧めします。
 
 ### 用語集 {#glossary}
 
-この API チュートリアルで遭遇する用語の説明については、 [用語集セクション](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) API リファレンスドキュメントの
+この API チュートリアルで発生する用語については、API リファレンスドキュメントの [ 用語集の節 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) を参照してください。
 
-### 目的の宛先の接続仕様およびフロー仕様を収集します {#gather-connection-spec-flow-spec}
+### 目的の宛先の接続仕様とフロー仕様を収集します {#gather-connection-spec-flow-spec}
 
-データセットの書き出しワークフローを開始する前に、データセットの書き出し先の接続仕様とフロー仕様 ID を特定します。 以下の表を参考にしてください。
+データセットの書き出しワークフローを開始する前に、データセットの書き出し先となる宛先の接続仕様およびフロー仕様 ID を特定します。 以下の表を参照してください。
 
 
 | 宛先 | 接続仕様 | フロー仕様 |
@@ -107,7 +107,7 @@ ht-degree: 17%
 
 {style="table-layout:auto"}
 
-様々な ID を作成するには、これらの ID が必要です [!DNL Flow Service] エンティティ。 また、 [!DNL Connection Spec] 自身を使用して特定のエンティティを設定し、 [!DNL Connection Spec] から [!DNL Flow Service APIs]. この表のすべての宛先の接続仕様の取得については、以下の例を参照してください。
+様々な [!DNL Flow Service] エンティティを作成するには、これらの ID が必要です。 また、[!DNL Flow Service APIs] から [!DNL Connection Spec] ータを取得できるように、[!DNL Connection Spec] 自体の一部を参照して、特定のエンティティを設定する必要があります。 テーブル内のすべての宛先の接続仕様を取得する例を以下に示します。
 
 >[!BEGINTABS]
 
@@ -115,7 +115,7 @@ ht-degree: 17%
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象： [!DNL Amazon S3]
++++[!DNL Amazon S3] の [!DNL connection spec] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -130,7 +130,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答**
 
-+++[!DNL Amazon S3] - 接続仕様
++++[!DNL Amazon S3] – 接続仕様
 
 ```json
 {
@@ -149,7 +149,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象： [!DNL Azure Blob Storage]
++++[!DNL Azure Blob Storage] の [!DNL connection spec] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -179,11 +179,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象： [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2] の [!DNL connection spec] の取得）
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -213,11 +213,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB  データランディングゾーン（DLZ） ]
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象： [!DNL Data Landing Zone(DLZ)]
++++[!DNL Data Landing Zone(DLZ)] の [!DNL connection spec] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -251,7 +251,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] 対象： [!DNL Google Cloud Storage]
++++[!DNL Google Cloud Storage] の [!DNL connection spec] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -285,7 +285,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++取得 [!DNL connection spec] （SFTP 用）
++++SFTP の [!DNL connection spec] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -317,19 +317,19 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-以下の手順に従って、クラウドストレージの宛先へのデータセットのデータフローを設定します。 一部の手順では、クラウドストレージの様々な宛先でリクエストと応答が異なります。 このような場合は、ページのタブを使用して、接続してデータセットを書き出す宛先に固有のリクエストと応答を取得します。 正しい [!DNL connection spec] および [!DNL flow spec] を設定します。
+クラウドストレージの宛先へのデータセットデータフローを設定するには、次の手順に従います。 一部の手順では、リクエストと応答はクラウドストレージの様々な宛先間で異なります。 その場合、ページ上のタブを使用して、データセットの接続および書き出し先となる宛先に固有のリクエストと応答を取得します。 設定している宛先に適した [!DNL connection spec] と [!DNL flow spec] を使用してください。
 
 ## データセットのリストの取得 {#retrieve-list-of-available-datasets}
 
-![データセットの書き出しワークフローの手順 1 を示す図](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
+![ データセットの書き出しワークフローの手順 1 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
 
-アクティベーションの対象となるデータセットのリストを取得するには、まず以下のエンドポイントに対して API 呼び出しをおこないます。
+アクティベーションの対象となるデータセットのリストを取得するには、まず以下のエンドポイントに対して API 呼び出しを行います。
 
 >[!BEGINSHADEBOX]
 
 **リクエスト**
 
-+++適格なデータセットの取得 — リクエスト
++++適格なデータセットの取得 – リクエスト
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/23598e46-f560-407b-88d5-ea6207e49db0/configs?outputType=activationDatasets&outputField=datasets&start=0&limit=20&properties=name,state' \
@@ -340,13 +340,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-適格なデータセットを取得するには、 [!DNL connection spec] 要求 URL で使用される ID は、データレイクソース接続仕様 ID である必要があります。 `23598e46-f560-407b-88d5-ea6207e49db0`、および 2 つのクエリパラメーター `outputField=datasets` および `outputType=activationDatasets` を指定する必要があります。 その他すべてのクエリパラメーターは、 [カタログサービス API](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+適格なデータセットを取得するには、リクエスト URL で使用される [!DNL connection spec] ID が Data Lake ソース接続仕様 ID の `23598e46-f560-407b-88d5-ea6207e49db0` である必要があり、`outputField=datasets` と `outputType=activationDatasets` の 2 つのクエリパラメーターを指定する必要があります。 その他のすべてのクエリパラメーターは、[Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) でサポートされる標準のクエリパラメーターです。
 
 +++
 
 **応答**
 
-+++データセットの取得 — 応答
++++データセットの取得 – 応答
 
 ```json
 {
@@ -425,13 +425,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-正常な応答は、アクティベーションの対象となるデータセットのリストを含みます。 次の手順でソース接続を構築する際に、これらのデータセットを使用できます。
+成功した応答には、アクティブ化の対象となるデータセットのリストが含まれます。 これらのデータセットは、次の手順でソース接続を作成するときに使用できます。
 
-返される各データセットの様々な応答パラメーターについて詳しくは、 [データセット API 開発者ドキュメント](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+返される各データセットの様々な応答パラメーターについて詳しくは、[ データセット API 開発者向けドキュメント ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) を参照してください。
 
 ## ソース接続の作成 {#create-source-connection}
 
-![データセットの書き出しワークフローの手順 2 を示す図](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
+![ データセットの書き出しワークフローの手順 2 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
 書き出すデータセットのリストを取得したら、それらのデータセット ID を使用してソース接続を作成できます。
 
@@ -439,9 +439,9 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++ソース接続の作成 — リクエスト
++++ソース接続を作成 – リクエスト
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,16"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
@@ -475,7 +475,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++ソース接続の作成 — 応答
++++ソース接続の作成 – 応答
 
 ```json
 {
@@ -488,26 +488,26 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-正常な応答は、ID(`id`) をクリックし、新しく作成されたソース接続と `etag`. 後でデータフローを作成する際に必要になるので、ソース接続 ID をメモしておきます。
+リクエストが成功した場合は、新しく作成したソース接続の ID （`id`）と `etag` が返されます。 後でデータフローを作成する際に必要になるので、ソース接続 ID をメモしておきます。
 
 また、次の点にも注意してください。
 
-* この手順で作成したソース接続を宛先に対してアクティブ化するには、データセットをデータフローにリンクする必要があります。 詳しくは、 [データフローの作成](#create-dataflow) ソース接続をデータフローにリンクする方法については、を参照してください。
-* ソース接続のデータセット ID は、作成後に変更することはできません。 ソース接続にデータセットを追加または削除する必要がある場合は、新しいソース接続を作成し、新しいソース接続の ID をデータフローにリンクする必要があります。
+* この手順で作成したソース接続は、そのデータセットが宛先に対してアクティブ化されるように、データフローにリンクされている必要があります。 ソース接続をデータフローにリンクする方法については、[ データフローの作成 ](#create-dataflow) の節を参照してください。
+* 作成後にソース接続のデータセット ID を変更することはできません。 ソース接続にデータセットを追加または削除する必要がある場合は、新しいソース接続を作成し、新しいソース接続の ID をデータフローにリンクする必要があります。
 
 ## （ターゲット）ベース接続の作成 {#create-base-connection}
 
-![データセットの書き出しワークフローの手順 3 を示す図](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
+![ データセットの書き出しワークフローの手順 3 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-ベース接続は、宛先への資格情報を安全に保存します。 宛先のタイプに応じて、その宛先に対する認証に必要な資格情報が異なる場合があります。 これらの認証パラメーターを検索するには、まず [!DNL connection spec] を設定します。 [接続仕様およびフロー仕様を収集する](#gather-connection-spec-flow-spec) そして、 `authSpec` 応答の。 以下のタブを参照して、 `authSpec` サポートされるすべての宛先のプロパティ。
+ベース接続は、資格情報を宛先に安全に保存します。 宛先のタイプによって、その宛先に対して認証するために必要な資格情報は異なる場合があります。 これらの認証パラメーターを見つけるには、[ 接続仕様とフロー仕様の収集 ](#gather-connection-spec-flow-spec) の節で説明されているように、最初に目的の宛先の [!DNL connection spec] を取得し、次に応答の `authSpec` を確認します。 サポートされているすべての宛先の `authSpec` プロパティについては、以下のタブを参照してください。
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] 表示中 [!DNL auth spec]
++++[!DNL auth spec] を表示している [!DNL Amazon S3] - [!DNL Connection spec]
 
-インラインコメントが付いた強調表示された行に、 [!DNL connection spec] 次の例で、 [!DNL connection spec].
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -552,9 +552,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Blob Storage]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] 表示中 [!DNL auth spec]
++++[!DNL auth spec] を表示している [!DNL Azure Blob Storage] - [!DNL Connection spec]
 
-インラインコメントが付いた強調表示された行に、 [!DNL connection spec] 次の例で、 [!DNL connection spec].
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -591,11 +591,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++
 
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 表示中 [!DNL auth spec]
++++[!DNL auth spec] を表示している [!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec]
 
-インラインコメントが付いた強調表示された行に、 [!DNL connection spec] 次の例で、 [!DNL connection spec].
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -647,13 +647,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++
 
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB  データランディングゾーン（DLZ） ]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] 表示中 [!DNL auth spec]
++++[!DNL auth spec] を表示している [!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec]
 
 >[!NOTE]
 >
->データランディングゾーンの宛先には、 [!DNL auth spec].
+>データランディングゾーンの宛先には [!DNL auth spec] は必要ありません。
 
 ```json
 {
@@ -671,9 +671,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] 表示中 [!DNL auth spec]
++++[!DNL auth spec] を表示している [!DNL Google Cloud Storage] - [!DNL Connection spec]
 
-インラインコメントが付いた強調表示された行に、 [!DNL connection spec] 次の例で、 [!DNL connection spec].
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -716,13 +716,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] 表示中 [!DNL auth spec]
++++SFTP - [!DNL auth spec] を表示する [!DNL Connection spec]
 
 >[!NOTE]
 >
->SFTP の宛先では、 [!DNL auth spec]（パスワードと SSH キー認証の両方をサポートするので）。
+>SFTP 宛先には、パスワードと SSH キー認証の両方をサポートしているので、[!DNL auth spec] に 2 つの異なる項目が含まれています。
 
-インラインコメントが付いた強調表示された行に、 [!DNL connection spec] 次の例で、 [!DNL connection spec].
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -806,7 +806,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-認証仕様で指定されたプロパティ ( `authSpec` 応答から ) 必要な資格情報を使用して、以下の例に示すように、各宛先タイプに固有のベース接続を作成できます。
+認証仕様で指定されたプロパティ（つまり、応答からの `authSpec`）を使用して、以下の例に示すように、各宛先タイプに固有の必要な資格情報を含むベース接続を作成できます。
 
 >[!BEGINTABS]
 
@@ -814,13 +814,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++[!DNL Amazon S3]  — ベース接続リクエスト
++++[!DNL Amazon S3] - ベース接続リクエスト
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、 [宛先への認証](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、Amazon S3 の宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) の節を参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -865,13 +865,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++[!DNL Azure Blob Storage]  — ベース接続リクエスト
++++[!DNL Azure Blob Storage] - ベース接続リクエスト
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、 [宛先への認証](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、Azure Blob Storage 宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) の節を参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="16"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -900,7 +900,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++[!DNL Azure Blob Storage]  — ベース接続応答
++++[!DNL Azure Blob Storage] - ベース接続応答
 
 ```json
 {
@@ -911,17 +911,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
 
 **リクエスト**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)]  — ベース接続リクエスト
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - ベース接続リクエスト
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、 [宛先への認証](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) Azure Data Lake Gen 2(ADLS Gen2) の宛先ドキュメントページの「 」セクションを参照してください。
+>必要な認証資格情報の取得方法については、Azure Data Lake Gen 2 （ADLS Gen2）宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) の節を参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="20"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -953,7 +953,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)]  — ベース接続応答
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - ベース接続応答
 
 ```json
 {
@@ -964,15 +964,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB  データランディングゾーン（DLZ） ]
 
 **リクエスト**
 
-+++[!DNL Data Landing Zone(DLZ)]  — ベース接続リクエスト
++++[!DNL Data Landing Zone(DLZ)] - ベース接続リクエスト
 
 >[!TIP]
 >
->データランディングゾーンの宛先に認証資格情報は必要ありません。 詳しくは、 [宛先への認証](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) の節を参照してください。
+>データランディングゾーンの宛先には、認証資格情報は必要ありません。 詳しくは、データランディングゾーンの宛先に関するドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) の節を参照してください。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -991,7 +991,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++[!DNL Data Landing Zone]  — ベース接続応答
++++[!DNL Data Landing Zone] - ベース接続応答
 
 ```json
 {
@@ -1006,13 +1006,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++[!DNL Google Cloud Storage]  — ベース接続リクエスト
++++[!DNL Google Cloud Storage] - ベース接続リクエスト
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、 [宛先への認証](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、Google Cloud Storage の宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) の節を参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1042,7 +1042,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++[!DNL Google Cloud Storage]  — ベース接続応答
++++[!DNL Google Cloud Storage] - ベース接続応答
 
 ```json
 {
@@ -1057,13 +1057,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++SFTP（パスワード） — ベース接続リクエスト
++++パスワードを使用した SFTP - ベース接続リクエスト
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、 [宛先への認証](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、SFTP 宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) の節を参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1092,13 +1092,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++SFTP（SSH キー） — ベース接続リクエスト
++++SSH キーを使用した SFTP - ベース接続リクエスト
 
 >[!TIP]
 >
->必要な認証資格情報の取得方法について詳しくは、 [宛先への認証](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) の節を参照してください。
+>必要な認証資格情報の取得方法について詳しくは、SFTP 宛先ドキュメントページの [ 宛先への認証 ](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) の節を参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1129,7 +1129,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++SFTP — ベース接続応答
++++SFTP - ベース接続応答
 
 ```json
 {
@@ -1142,25 +1142,25 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-応答の接続 ID をメモします。 この ID は、次の手順でターゲット接続を作成する際に必要になります。
+応答からの接続 ID をメモしておきます。 この ID は、次の手順でターゲット接続を作成する際に必要になります。
 
 ## ターゲット接続の作成 {#create-target-connection}
 
-![データセットの書き出しワークフローの手順 4 を示す図](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
+![ データセットの書き出しワークフローの手順 4 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
-次に、データセットの書き出しパラメーターを保存するターゲット接続を作成する必要があります。 書き出しパラメーターには、場所、ファイル形式、圧縮、その他の詳細が含まれます。 詳しくは、 `targetSpec` 宛先の接続仕様で指定されたプロパティ。各宛先タイプでサポートされるプロパティを理解します。 以下のタブを参照して、 `targetSpec` サポートされるすべての宛先のプロパティ。
+次に、データセットの書き出しパラメーターを保存するターゲット接続を作成する必要があります。 書き出しパラメーターには、場所、ファイル形式、圧縮、その他の詳細が含まれます。 各宛先タイプでサポートされているプロパティについて理解するには、宛先の接続仕様に記載されている `targetSpec` のプロパティを参照します。 サポートされているすべての宛先の `targetSpec` プロパティについては、以下のタブを参照してください。
 
 >[!WARNING]
 >
->JSON ファイルへの書き出しは、圧縮モードでのみサポートされます。 への書き出し先 [!DNL Parquet] ファイルは、圧縮モードと非圧縮モードでサポートされます。
+>JSON ファイルへの書き出しは、圧縮モードでのみサポートされます。 [!DNL Parquet] ファイルへの書き出しは、圧縮モードと非圧縮モードでサポートされています。
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] ターゲット接続パラメータの表示
++++[!DNL Amazon S3] - ターゲット接続パラメーターを示す [!DNL Connection spec]
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* データセットの書き出し先に適用できます。
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。これは、接続仕様で [!DNL target spec] のパラメーターが見つかる場所に関する追加情報を提供します。 以下の例では、データセット書き出し宛先に適用されない *適用されない* ターゲットパラメーターも確認できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,41,56"}
 {
@@ -1244,9 +1244,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Blob Storage]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] ターゲット接続パラメータの表示
++++[!DNL Azure Blob Storage] - ターゲット接続パラメーターを示す [!DNL Connection spec]
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* データセットの書き出し先に適用できます。
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。これは、接続仕様で [!DNL target spec] のパラメーターが見つかる場所に関する追加情報を提供します。 以下の例では、データセット書き出し宛先に適用されない *適用されない* ターゲットパラメーターも確認できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1317,11 +1317,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++
 
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] ターゲット接続パラメータの表示
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - ターゲット接続パラメーターを示す [!DNL Connection spec]
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* データセットの書き出し先に適用できます。
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。これは、接続仕様で [!DNL target spec] のパラメーターが見つかる場所に関する追加情報を提供します。 以下の例では、データセット書き出し宛先に適用されない *適用されない* ターゲットパラメーターも確認できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1383,11 +1383,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB  データランディングゾーン（DLZ） ]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] ターゲット接続パラメータの表示
++++[!DNL Data Landing Zone(DLZ)] - ターゲット接続パラメーターを示す [!DNL Connection spec]
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* データセットの書き出し先に適用できます。
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。これは、接続仕様で [!DNL target spec] のパラメーターが見つかる場所に関する追加情報を提供します。 以下の例では、データセット書き出し宛先に適用されない *適用されない* ターゲットパラメーターも確認できます。
 
 ```json {line-numbers="true" start-line="1" highlight="9,21,36"}
 "items": [
@@ -1450,9 +1450,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] ターゲット接続パラメータの表示
++++[!DNL Google Cloud Storage] - ターゲット接続パラメーターを示す [!DNL Connection spec]
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* データセットの書き出し先に適用できます。
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。これは、接続仕様で [!DNL target spec] のパラメーターが見つかる場所に関する追加情報を提供します。 以下の例では、データセット書き出し宛先に適用されない *適用されない* ターゲットパラメーターも確認できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1524,9 +1524,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] ターゲット接続パラメータの表示
++++SFTP - ターゲット接続パラメーターを表示する [!DNL Connection spec]
 
-強調表示された行に、 [!DNL connection spec] 以下の例。 [!DNL target spec] 接続仕様のパラメータ。 次の例でも、ターゲットパラメーターが示されています。 *not* データセットの書き出し先に適用できます。
+次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。これは、接続仕様で [!DNL target spec] のパラメーターが見つかる場所に関する追加情報を提供します。 以下の例では、データセット書き出し宛先に適用されない *適用されない* ターゲットパラメーターも確認できます。
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1591,7 +1591,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!ENDTABS]
 
 
-上記の仕様を使用すると、次のタブに示すように、目的のクラウドストレージの宛先に固有のターゲット接続リクエストを作成できます。
+上記の仕様を使用すると、以下のタブに示すように、目的のクラウドストレージの宛先に固有のターゲット接続リクエストを作成できます。
 
 >[!BEGINTABS]
 
@@ -1599,14 +1599,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++[!DNL Amazon S3] - Target 接続リクエスト
++++[!DNL Amazon S3] - ターゲット接続リクエスト
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) のセクション [!DNL Amazon S3] リンク先のドキュメントページ。
->のその他のサポートされている値 `datasetFileType`詳しくは、 API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Amazon S3] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) の節を参照してください。
+>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1637,7 +1637,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++Target 接続 — 応答
++++ターゲット接続 – 応答
 
 ```json
 {
@@ -1652,15 +1652,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++[!DNL Azure Blob Storage] - Target 接続リクエスト
++++[!DNL Azure Blob Storage] - ターゲット接続リクエスト
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) のセクション [!DNL Azure Blob Storage] リンク先のドキュメントページ。
->のその他のサポートされている値 `datasetFileType`詳しくは、 API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Azure Blob Storage] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) の節を参照してください。
+>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1691,7 +1691,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++Target 接続 — 応答
++++ターゲット接続 – 応答
 
 ```json
 {
@@ -1702,18 +1702,18 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
 
 **リクエスト**
 
-+++[!DNL Azure Blob Storage] - Target 接続リクエスト
++++[!DNL Azure Blob Storage] - ターゲット接続リクエスト
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) Azure のセクション [!DNL Data Lake Gen 2(ADLS Gen2)] リンク先のドキュメントページ。
->のその他のサポートされている値 `datasetFileType`詳しくは、 API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、Azure [!DNL Data Lake Gen 2(ADLS Gen2)] 宛先ドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) の節を参照してください。
+>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1743,7 +1743,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++Target 接続 — 応答
++++ターゲット接続 – 応答
 
 ```json
 {
@@ -1754,18 +1754,18 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB  データランディングゾーン（DLZ） ]
 
 **リクエスト**
 
-+++[!DNL Data Landing Zone] - Target 接続リクエスト
++++[!DNL Data Landing Zone] - ターゲット接続リクエスト
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) のセクション [!DNL Data Landing Zone] リンク先のドキュメントページ。
->のその他のサポートされている値 `datasetFileType`詳しくは、 API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Data Landing Zone] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) の節を参照してください。
+>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1795,7 +1795,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++Target 接続 — 応答
++++ターゲット接続 – 応答
 
 ```json
 {
@@ -1810,15 +1810,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++[!DNL Google Cloud Storage] - Target 接続リクエスト
++++[!DNL Google Cloud Storage] - ターゲット接続リクエスト
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) のセクション [!DNL Google Cloud Storage] リンク先のドキュメントページ。
->のその他のサポートされている値 `datasetFileType`詳しくは、 API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Google Cloud Storage] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
+>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1849,7 +1849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++Target 接続 — 応答
++++ターゲット接続 – 応答
 
 ```json
 {
@@ -1864,14 +1864,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++SFTP - Target 接続のリクエスト
++++SFTP - ターゲット接続リクエスト
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、 [宛先の詳細を入力](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
->のその他のサポートされている値 `datasetFileType`詳しくは、 API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、SFTP 宛先ドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
+>`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1901,7 +1901,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++Target 接続 — 応答
++++ターゲット接続 – 応答
 
 ```json
 {
@@ -1914,13 +1914,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-応答から Target 接続 ID をメモします。 この ID は、次の手順で、データセットをエクスポートするデータフローを作成する際に必要になります。
+応答からのターゲット接続 ID をメモします。 この ID は、次の手順で、データセットを書き出すデータフローを作成する際に必要になります。
 
 ## データフローの作成 {#create-dataflow}
 
-![データセットの書き出しワークフローの手順 5 を示す図](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
+![ データセットの書き出しワークフローの手順 5 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
-宛先設定の最後の手順は、データフローを設定することです。 データフローは、以前に作成したエンティティと結び付け、データセットの書き出しスケジュールを設定するオプションも提供します。 データフローを作成するには、目的のクラウドストレージの宛先に応じて、以下のペイロードを使用し、前の手順のエンティティ ID を置き換えます。
+宛先設定の最後の手順は、データフローを設定することです。 データフローは、以前に作成したエンティティを結び付け、データセット書き出しスケジュールを設定するためのオプションも提供します。 データフローを作成するには、目的のクラウドストレージの宛先に応じて以下のペイロードを使用し、前の手順で取得したエンティティ ID を置き換えます。
 
 >[!BEGINTABS]
 
@@ -1928,9 +1928,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++データセットのデータフローを次に作成： [!DNL Amazon S3] destination — リクエスト
++++宛先へのデータセットデータフロー [!DNL Amazon S3] 作成 – リクエスト
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -1966,7 +1966,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++データフローの作成 — 応答
++++データフローの作成 – 応答
 
 ```json
 {
@@ -1981,9 +1981,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++データセットのデータフローを次に作成： [!DNL Azure Blob Storage] destination — リクエスト
++++宛先へのデータセットデータフロー [!DNL Azure Blob Storage] 作成 – リクエスト
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2019,7 +2019,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++データフローの作成 — 応答
++++データフローの作成 – 応答
 
 ```json
 {
@@ -2030,13 +2030,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
 
 **リクエスト**
 
-+++データセットのデータフローを次に作成： [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destination — リクエスト
++++宛先へのデータセットデータフロー [!DNL Azure Data Lake Gen 2(ADLS Gen2)] 作成 – リクエスト
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2072,7 +2072,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++データフローの作成 — 応答
++++データフローの作成 – 応答
 
 ```json
 {
@@ -2083,13 +2083,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB データランディングゾーン（DLZ）]
+>[!TAB  データランディングゾーン（DLZ） ]
 
 **リクエスト**
 
-+++データセットのデータフローを次に作成： [!DNL Data Landing Zone] destination — リクエスト
++++宛先へのデータセットデータフロー [!DNL Data Landing Zone] 作成 – リクエスト
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2125,7 +2125,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++データフローの作成 — 応答
++++データフローの作成 – 応答
 
 ```json
 {
@@ -2140,9 +2140,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++データセットのデータフローを次に作成： [!DNL Google Cloud Storage] destination — リクエスト
++++宛先へのデータセットデータフロー [!DNL Google Cloud Storage] 作成 – リクエスト
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2178,7 +2178,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++データフローの作成 — 応答
++++データフローの作成 – 応答
 
 ```json
 {
@@ -2193,9 +2193,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++SFTP 宛先へのデータセットデータフローの作成 — リクエスト
++++SFTP 宛先へのデータセットデータフローの作成 – リクエスト
 
-リクエスト例で、インラインコメント付きの強調表示された行に注意してください。この行には、追加情報が示されています。 リクエストを任意のターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2231,7 +2231,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++データフローの作成 — 応答
++++データフローの作成 – 応答
 
 ```json
 {
@@ -2244,21 +2244,21 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-応答のデータフロー ID をメモします。 この ID は、データフロー実行を取得して正常な日付セットエクスポートを検証する際に、次の手順で必要になります。
+応答のデータフロー ID をメモします。 この ID は、データフロー実行を取得して正常なデータセット書き出しを検証する次の手順で必要になります。
 
-## データフローの実行 {#get-dataflow-runs}
+## データフローの実行の取得 {#get-dataflow-runs}
 
-![データセットの書き出しワークフローの手順 6 を示す図](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
+![ データセットの書き出しワークフローの手順 6 を示す図 ](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
 
-データフローの実行を確認するには、次の Dataflow Run API を使用します。
+データフローの実行を確認するには、Dataflow Runs API を使用します。
 
 >[!BEGINSHADEBOX]
 
 **リクエスト**
 
-+++データフロー実行の取得 — リクエスト
++++データフロー実行の取得 – リクエスト
 
-データフローの実行を取得するリクエストで、前の手順で取得したデータフロー ID を、データフローの作成時にクエリパラメーターとして追加します。
+データフロー実行を取得するリクエストで、データフローの作成時に前の手順で取得したデータフロー ID をクエリパラメーターとして追加します。
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -2273,7 +2273,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答**
 
-+++データフローの実行の取得 — 応答
++++データフロー実行の取得 – 応答
 
 ```json
 {
@@ -2321,11 +2321,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-次の項目に関する情報を検索できます。 [データフロー実行 API から返される様々なパラメーター](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) （ API リファレンスドキュメント）を参照してください。
+[ データフロー実行 API によって返される様々なパラメーター ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) に関する情報については、API リファレンスドキュメントを参照してください。
 
 ## データセットの正常な書き出しの確認 {#verify}
 
-データセットを書き出す際、Experience Platform は、指定されたストレージの場所に `.json` または `.parquet` ファイルを保存します。指定した日時に指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に保存されます。 [データフローの作成](#create-dataflow).
+データセットを書き出す際、Experience Platform は、指定されたストレージの場所に `.json` または `.parquet` ファイルを保存します。[ データフローの作成 ](#create-dataflow) 時に指定した書き出しスケジュールに従って、新しいファイルがストレージの場所に格納されます。
 
 Experience Platform は、指定されたストレージの場所にフォルダー構造を作成し、書き出されたデータセットファイルを格納します。 書き出しのたびに、次のパターンに従って新しいフォルダーが作成されます。
 
@@ -2337,22 +2337,22 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 これらのファイルがストレージの場所に存在すれば、書き出しは成功しています。書き出されたファイルの構造を理解するには、サンプルの [.parquet ファイル](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet)または [.json ファイル](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json)をダウンロードできます。
 
-#### 圧縮データセットファイル {#compressed-dataset-files}
+#### 圧縮されたデータセットファイル {#compressed-dataset-files}
 
-次の手順で [ターゲット接続の作成](#create-target-connection)に含めると、書き出したデータセットファイルを圧縮して選択できます。
+[ ターゲット接続の作成 ](#create-target-connection) 手順では、圧縮する書き出したデータセットファイルを選択できます。
 
-圧縮時のファイル形式の違いに注意してください。
+2 つのファイルタイプを圧縮した場合、ファイル形式に違いがあることに注意してください。
 
-* 圧縮 JSON ファイルを書き出す場合、書き出されるファイル形式は次のようになります。 `json.gz`
-* 圧縮 Parquet ファイルを書き出す場合、書き出されるファイル形式は次のようになります。 `gz.parquet`
+* 圧縮された JSON ファイルを書き出す場合、書き出されるファイルの形式は `json.gz` です
+* 圧縮 Parquet ファイルをエクスポートする場合、エクスポートされるファイル形式は `gz.parquet` です
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、Experience PlatformAPI エラーメッセージの一般的な原則に従います。 参照： [API ステータスコード](/help/landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors) エラー応答の解釈について詳しくは、『 Platform トラブルシューティングガイド』を参照してください。
+このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、Platform を目的のバッチクラウドストレージの宛先の 1 つに接続し、データセットを書き出すための各宛先へのデータフローを設定しました。 次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
+このチュートリアルでは、目的のクラウドストレージのバッチ宛先の 1 つに Platform を正常に接続し、データセットを書き出す各宛先へのデータフローを設定しました。 次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
 
 * [宛先の概要](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)

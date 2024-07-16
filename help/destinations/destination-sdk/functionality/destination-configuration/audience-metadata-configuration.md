@@ -15,7 +15,7 @@ Experience Platform から宛先にデータを書き出す場合、特定のオ
 
 Destination SDK には、宛先プラットフォームのオーディエンスをプログラムで作成、更新または削除するのに使用できるツールが用意されています。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、の図を参照してください。 [設定オプション](../configuration-options.md) の方法については、ドキュメントを参照してください。 [Destination SDKを使用したストリーミングの宛先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration).
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 ](../../guides/configure-destination-instructions.md#create-destination-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/audience-templates` エンドポイントを介してオーディエンスメタデータテンプレートを設定できます。オーディエンスメタデータ設定を作成したら、`/authoring/destinations` エンドポイントを使用して、`audienceMetadataConfig` セクションを設定できます。このセクションは、オーディエンステンプレートにマッピングする必要があるオーディエンスメタデータを宛先に指示します。
 

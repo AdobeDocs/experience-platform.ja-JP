@@ -2,19 +2,19 @@
 title: 統合タグエンドポイント
 description: Adobe Experience Platform API を使用して、タグカテゴリとタグを作成、更新、管理、削除する方法について説明します。
 role: Developer
-source-git-commit: ede314d0cbe50514090915fccf7ef3c2a5254b7a
+exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
 
 ---
 
-
 # 統合タグエンドポイント
 
 >[!IMPORTANT]
 >
->このエンドポイントのセットのエンドポイント URL は次のとおりです `https://experience.adobe.io`.
+>このエンドポイントのセットのエンドポイント URL は `https://experience.adobe.io` です。
 
 タグは、メタデータ分類を管理してビジネスオブジェクトを分類し、検出とカテゴリ化を容易にする機能です。 その後、これらのタグをタグカテゴリに追加することで、タグをさらにグループ化できます。
 
@@ -22,19 +22,19 @@ ht-degree: 4%
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、Adobe Experience Platform API の一部です。 続行する前に、を確認してください [はじめる前に](./getting-started.md) は、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API に対する呼び出しを正常に実行するために知っておく必要がある重要な情報です
+このガイドで使用するエンドポイントは、Adobe Experience Platform API の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください
 
 ### 用語集
 
-次の用語集では、 **tag** および **タグカテゴリ**.
+次の用語集では、**タグ** と **タグカテゴリ** の違いについて説明します。
 
 - **タグ**：タグを使用すると、ビジネスオブジェクトのメタデータ分類を管理でき、これらのオブジェクトを分類して検出と分類が容易になります。
-   - **未分類タグ**：分類されていないタグとは、タグカテゴリに属さないタグです。 デフォルトでは、作成されたタグは分類されません。
-- **タグカテゴリ**：タグカテゴリを使用すると、タグを意味のあるセットにグループ化し、タグの目的に対してより多くのコンテキストを提供できます。
+   - **未分類タグ**：未分類タグは、タグカテゴリに属さないタグです。 デフォルトでは、作成されたタグは分類されません。
+- **タグカテゴリ**：タグカテゴリを使用すると、タグを意味のあるセットにグループ化し、タグの目的に関するより多くのコンテキストを提供できます。
 
 ## タグカテゴリのリストの取得 {#get-tag-categories}
 
-組織に属するタグカテゴリのリストを取得するには、にGETリクエストを実行します `/tagCategory` エンドポイント。
+`/tagCategory` エンドポイントにGETリクエストをおこなうことで、組織に属するタグカテゴリのリストを取得できます。
 
 **API 形式**
 
@@ -49,9 +49,9 @@ GET /tagCategory?{QUERY_PARAMETERS}
 | --------------- | ----------- | ------- |
 | `start` | 結果のリストの開始位置。 これを使用して、結果のページネーションの開始インデックスを指定できます。 | `start=a` |
 | `limit` | ページごとに取得するタグカテゴリの最大数。 | `limit=20` |
-| `property` | タグカテゴリを取得する際にフィルタリングする属性。 次の値がサポートされています。 &lt;ul><li>`name`：タグカテゴリの名前</li></ul> | `property=name==category` |
-| `sortBy` | タグカテゴリが並べ替えられる順序。 次の値がサポートされています `name`, `createdAt`、および `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | タグカテゴリが並べ替えられる方向です。 次の値がサポートされています `asc` および `desc`. | `sortOrder=asc` |
+| `property` | タグカテゴリを取得する際にフィルタリングする属性。 次の値がサポートされています。&lt;ul≥<li>`name`：タグカテゴリの名前。</li></ul> | `property=name==category` |
+| `sortBy` | タグカテゴリが並べ替えられる順序。 サポートされる値は、`name`、`createdAt`、`modifiedAt` です。 | `sortBy=name` |
+| `sortOrder` | タグカテゴリが並べ替えられる方向です。 サポートされる値は `asc` と `desc` です。 | `sortOrder=asc` |
 
 **リクエスト**
 
@@ -104,7 +104,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
 >
 >この API 呼び出しを使用できるのは、システム管理者と製品管理者のみです。
 
-新しいタグカテゴリを作成するには、に対してPOSTリクエストを実行します。 `/tagCategory` エンドポイント。
+`/tagCategory` エンドポイントに対してタグリクエストを実行することで、新しいPOSTカテゴリを作成できます。
 
 **API 形式**
 
@@ -159,7 +159,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 ## 特定のタグカテゴリの取得 {#get-tag-category}
 
-組織に属する特定のタグカテゴリを取得するには、に対してGETリクエストを実行します `/tagCategory` エンドポイントを設定し、タグカテゴリの ID を指定します。
+`/tagCategory` エンドポイントに対してGETリクエストを実行し、タグカテゴリの ID を指定すると、組織に属する特定のタグカテゴリを取得できます。
 
 **API 形式**
 
@@ -224,7 +224,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
 >
 >この API 呼び出しを使用できるのは、システム管理者と製品管理者のみです。
 
-組織に属する特定のタグカテゴリの詳細を更新するには、に対してPATCHリクエストを実行します。 `/tagCategory` エンドポイントを設定し、タグカテゴリの ID を指定します。
+`/tagCategory` エンドポイントにPATCHリクエストを実行し、タグカテゴリの ID を指定することで、組織に属する特定のタグカテゴリの詳細を更新できます。
 
 **API 形式**
 
@@ -256,8 +256,8 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `op` | 完了した操作。 特定のタグカテゴリを更新するには、この値をに設定します `replace`. |
-| `path` | 更新されるフィールドのパス。 次の値がサポートされています `name` および `description`. |
+| `op` | 完了した操作。 特定のタグカテゴリを更新するには、この値を `replace` に設定します。 |
+| `path` | 更新されるフィールドのパス。 サポートされる値は `name` と `description` です。 |
 | `value` | 更新するフィールドの更新された値。 |
 | `from` | 更新するフィールドの元の値。 |
 
@@ -291,7 +291,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 >
 >この API 呼び出しを使用できるのは、システム管理者と製品管理者のみです。
 
-組織に属する特定のタグカテゴリを削除するには、次のリクエストをDELETEします。 `/tagCategory` エンドポイントを設定し、タグカテゴリの ID を指定します。
+`/tagCategory` エンドポイントに対して削除リクエストを行い、タグカテゴリの ID を指定することで、組織に属する特定のタグカテゴリをDELETEできます。
 
 **API 形式**
 
@@ -323,7 +323,7 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b
 
 ## タグのリストの取得 {#get-tags}
 
-に対してGETリクエストを実行すると、組織に属するタグのリストを取得できます `/tags` エンドポイントとタグカテゴリの ID。
+`/tags` エンドポイントとタグカテゴリの ID に対してGETリクエストを実行することで、組織に属するタグのリストを取得できます。
 
 **API 形式**
 
@@ -338,9 +338,9 @@ GET /tags?{QUERY_PARAMETERS}
 | --------------- | ----------- | ------- |
 | `start` | 結果のリストの開始位置。 これを使用して、結果のページネーションの開始インデックスを指定できます。 | `start=a` |
 | `limit` | ページごとに取得するタグの最大数。 | `limit=20` |
-| `property` | タグを取得する際にフィルタリングする属性。 次の値がサポートされています。<ul><li>`name`：タグの名前。</li><li>`archived`：タグがアーカイブされているか、アーカイブされていないかを示します。 この値は次のいずれかに設定できます `true` または `false`.</li><li>`tagCategoryId`：タグが属するタグカテゴリの ID。</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
-| `sortBy` | タグが並べ替えられる順序。 次の値がサポートされています `name`, `createdAt`、および `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | タグカテゴリが並べ替えられる方向です。 次の値がサポートされています `asc` および `desc`. | `sortOrder=asc` |
+| `property` | タグを取得する際にフィルタリングする属性。 次の値がサポートされています。<ul><li>`name`: タグの名前。</li><li>`archived`：タグがアーカイブされているかどうか、またはアーカイブ解除されているかどうか。 この値には、`true` または `false` を設定できます。</li><li>`tagCategoryId`：タグが属するタグカテゴリの ID。</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
+| `sortBy` | タグが並べ替えられる順序。 サポートされる値は、`name`、`createdAt`、`modifiedAt` です。 | `sortBy=name` |
+| `sortOrder` | タグカテゴリが並べ替えられる方向です。 サポートされる値は `asc` と `desc` です。 | `sortOrder=asc` |
 
 
 **リクエスト**
@@ -506,9 +506,9 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=
 >
 >この API 呼び出しを使用して、指定したタグカテゴリに新しいタグを作成できるのは、システム管理者と製品管理者のみです。
 >
->分類されていないタグを作成する場合は、次のようになります **ではない** 管理者権限が必要です。
+>分類されていないタグを作成する場合は、管理者権限は必要ありません ****。
 
-にPOSTリクエストを行うことで、新しいタグを作成できます。 `/tags` エンドポイント。
+`/tags` エンドポイントにPOSTリクエストを行うことで、新しいタグを作成できます。
 
 **API 形式**
 
@@ -575,7 +575,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 ## 特定のタグの取得 {#get-tag}
 
-組織に属する特定のタグを取得するには、にGETリクエストを行います。 `/tags` エンドポイントを指定し、取得するタグの ID を指定します。
+`/tags` エンドポイントに対してGETリクエストを実行し、取得するタグの ID を指定することで、組織に属する特定のタグを取得できます。
 
 **API 形式**
 
@@ -633,13 +633,13 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 | `modifiedBy` | タグを最後に更新したユーザーの ID。 |
 | `tagCategoryId` | タグが属するタグカテゴリの ID。 |
 | `tagCategoryName` | タグが属するタグカテゴリの名前。 |
-| `archived` | タグのアーカイブステータス。 に設定されている場合 `true`は、タグがアーカイブされていることを意味します。 |
+| `archived` | タグのアーカイブステータス。 `true` に設定すると、タグがアーカイブされます。 |
 
 +++
 
 ## タグを検証 {#validate-tags}
 
-に対してPOSTリクエストを行うと、タグが存在するかどうかを検証できます。 `/tags/validate` エンドポイント。
+`/tags/validate` エンドポイントに対してPOSTリクエストを行うことで、タグが存在するかどうかを検証できます。
 
 **API 形式**
 
@@ -668,7 +668,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `ids` | 検証するタグ ID のリストを含む配列。 |
-| `entity` | 検証をリクエストするエンティティ。 を使用できます `{API_KEY}` このパラメーターの値。 |
+| `entity` | 検証をリクエストするエンティティ。 このパラメーターには `{API_KEY}` の値を使用できます。 |
 
 +++
 
@@ -705,7 +705,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 ## 特定のタグの更新 {#update-tag}
 
-指定したタグを更新するには、に対してPATCHリクエストを実行します。 `/tags` エンドポイントと、更新するタグの ID を指定します。
+`/tags` エンドポイントにPATCHリクエストを実行し、更新するタグの ID を指定することで、指定したタグを更新できます。
 
 **API 形式**
 
@@ -737,8 +737,8 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `op` | 実行する必要がある操作。 このユースケースでは、常にに設定されます `replace`. |
-| `path` | 更新されるフィールドのパス。 次の値がサポートされています `name`, `archived`、および `tagCategoryId`. |
+| `op` | 実行する必要がある操作。 このユースケースでは、常に `replace` に設定されます。 |
+| `path` | 更新されるフィールドのパス。 サポートされる値は、`name`、`archived`、`tagCategoryId` です。 |
 | `value` | 更新するフィールドの更新された値。 |
 | `from` | 更新するフィールドの元の値。 |
 
@@ -773,9 +773,9 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 >
 >この API 呼び出しを使用できるのは、システム管理者と製品管理者のみです。
 >
->さらに、タグ **できません** あらゆるビジネスオブジェクトに関連付けられ、 **が** タグを削除する前にアーカイブしてください。 タグをアーカイブするには、 [タグエンドポイントの更新](#update-tag).
+>また、タグ **不可** はビジネスオブジェクトに関連付けることができ、タグを削除する前に **アーカイブする必要** があります。 [ タグエンドポイントを更新 ](#update-tag) を使用して、タグをアーカイブできます。
 
-特定のタグを削除するには、にDELETEタグを作成します。 `/tags` エンドポイントを指定し、削除するタグの ID を指定します。
+`/tags` のエンドポイントにタグタグを作成し、削除するDELETEの ID を指定することで、特定のタグを削除できます。
 
 **API 形式**
 
@@ -807,4 +807,4 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-8
 
 ## 次の手順
 
-このガイドを読むことで、Adobe Experience Platform API を使用してタグやタグカテゴリを作成、管理、削除する方法に関する理解が深まりました。 UI を使用したタグの管理について詳しくは、を参照してください。 [タグ管理ガイド](../ui/managing-tags.md). UI を使用したタグカテゴリの管理について詳しくは、を参照してください。 [タグカテゴリガイド](../ui/tags-categories.md).
+このガイドを読むことで、Adobe Experience Platform API を使用してタグやタグカテゴリを作成、管理、削除する方法に関する理解が深まりました。 UI を使用したタグの管理について詳しくは、[ タグ管理ガイド ](../ui/managing-tags.md) を参照してください。 UI を使用したタグカテゴリの管理について詳しくは、[ タグカテゴリガイド ](../ui/tags-categories.md) を参照してください。

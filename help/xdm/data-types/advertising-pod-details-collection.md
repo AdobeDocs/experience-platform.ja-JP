@@ -1,21 +1,22 @@
 ---
-title: 広告ポッド詳細コレクションのデータタイプ
-description: 広告ポッド詳細コレクションエクスペリエンスデータモデル (XDM) データタイプについて説明します。
-source-git-commit: a604dc8b541784ace8aedef42030e5bd8b646c28
+title: Advertising ポッドの詳細コレクションのデータタイプ
+description: Advertising ポッドの詳細コレクション Experience Data Model （XDM）データタイプについて説明します。
+exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '160'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL 広告ポッドの詳細] コレクションデータタイプ
+# [!UICONTROL Advertising ポッドの詳細 ] コレクション データ型
 
-[!UICONTROL 広告ポッドの詳細] コレクションは、標準の Experience Data Model(XDM) データ型です。 通常、コンテンツの時間中に連続して再生される広告のシーケンスまたはグループを定義します。 以下を使用します。 [!UICONTROL 広告ポッドの詳細] 広告ブレーク ID、広告ブレークのわかりやすい名前、ブレーク内の広告のインデックス、コンテンツのタイムライン内の広告ブレークのオフセット（秒）などの詳細を取り込むコレクションデータ型です。
+[!UICONTROL Advertising ポッドの詳細 ] コレクションは、標準の Experience Data Model （XDM）データタイプです。 通常、コンテンツブレーク中に連続して再生される広告のシーケンスまたはグループを定義します。 [!UICONTROL Advertising ポッドの詳細 ] コレクション データタイプを使用すると、広告ブレーク ID、広告ブレークのわかりやすい名前、ブレーク内の広告のインデックス、コンテンツのタイムライン内の広告ブレークのオフセット （秒）などの詳細をキャプチャできます。
 
-![広告ポッドの詳細情報収集データタイプの図です。](../images/data-types/advertising-pod-details-collection.png)
+![Advertising Pod Details Information Collection データタイプの図。](../images/data-types/advertising-pod-details-collection.png)
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|
-| [!UICONTROL ポッド位置の広告] | `index` | 整数 | ○ | 親広告ブレーク開始内の広告のインデックス。 |
-| [!UICONTROL ポッドのわかりやすい名前] | `friendlyName` | 文字列 | × | 広告ブレークのわかりやすい名前。 |
-| [!UICONTROL ポッドオフセット] | `offset` | 整数 | ○ | コンテンツ内の広告ブレークのオフセット（秒）。 |
+| [!UICONTROL  ポッド位置の広告 ] | `index` | 整数 | ○ | 親広告の改ページ内の広告のインデックスが開始されます。 |
+| [!UICONTROL  ポッドのわかりやすい名前 ] | `friendlyName` | 文字列 | × | 広告ブレークのわかりやすい名前。 |
+| [!UICONTROL  ポッド オフセット ] | `offset` | 整数 | ○ | コンテンツ内の広告ブレークのオフセット （秒単位）。 |

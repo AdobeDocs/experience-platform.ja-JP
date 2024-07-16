@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ETL;etl;etl ワークフロー；ETL ワークフロー
+keywords: Experience Platform；ホーム；人気のトピック；ETL;etl;etl ワークフロー；ETL ワークフロー
 solution: Experience Platform
 title: ETL ワークフロー
 description: 様々な抽出、変換、読み込み（ETL）ツールの形式は異なることがありますが、ほとんどのツールでは、複数のデータソースを組み合わせる際に役立つ類似した機能が公開されています。
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 84%
+source-wordcount: '225'
+ht-degree: 83%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 84%
 
 ![](images/image2.png)
 
-### 図 2 - [!DNL Experience Platform] 有効化されたコネクタ：
+### 図 2 - [!DNL Experience Platform] コネクタのアクティブ化
 
 ![](images/image3.png)
 
@@ -33,11 +33,11 @@ ht-degree: 84%
 
 ![](images/image4.png)
 
-### 図 4 — 新しい変換 UI、選択 [!DNL Experience Platform] 接続：
+### 図 4 – 新しい変換 UI、接続 [!DNL Experience Platform] 選択：
 
 ![](images/image5.png)
 
-### 図 5 — ソースの参照 [!DNL Experience Platform] データセット：
+### 図 5 - ソース [!DNL Experience Platform] データセットの参照：
 
 ![](images/image6.png)
 
@@ -57,7 +57,7 @@ ht-degree: 84%
 
 ![](images/image10.png)
 
-### 図 10 — の定義 [!DNL Experience Data Model] (XDM) ターゲットデータセット：
+### 図 10 - [!DNL Experience Data Model] （XDM）ターゲットデータセットの定義：
 
 ![](images/image11.png)
 

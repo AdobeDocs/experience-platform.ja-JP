@@ -4,8 +4,8 @@ description: Reactor API で /rule_components エンドポイントを呼び出�
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 93%
+source-wordcount: '1151'
+ht-degree: 92%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->このドキュメントでは、Reactor API のルールコンポーネントを管理する方法について説明します。 UI でルールやルールコンポーネントを操作する方法について詳しくは、 [UI ガイド](../../ui/managing-resources/rules.md).
+>このドキュメントでは、Reactor API のルールコンポーネントを管理する方法について説明します。 UI でのルールおよびルールコンポーネントの操作方法について詳しくは、[UI ガイド ](../../ui/managing-resources/rules.md) を参照してください。
 
 ルールコンポーネントには、次の 3 つの基本的なタイプがあります。
 
@@ -310,13 +310,13 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | パラメーター | 説明 |
 | --- | --- |
-| `PROPERTY_ID` | The `id` ルールコンポーネントを定義するプロパティの。 |
+| `PROPERTY_ID` | ルールコンポーネントを定義するプロパティの `id`。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエストは、新しいルールコンポーネントを作成します。 ペイロードでは、 `relationships` プロパティは、コンポーネントを特定のルールおよび既存の拡張機能に関連付けます。 詳しくは、 [関係](../guides/relationships.md) に関するガイドを参照してください。
+次のリクエストは、新しいルールコンポーネントを作成します。 ペイロードでは、`relationships` プロパティはコンポーネントを特定のルールと既存の拡張機能に関連付けます。 詳しくは、 [関係](../guides/relationships.md) に関するガイドを参照してください。
 
 ```shell
 curl -X POST \
@@ -788,7 +788,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたルールコンポーネントの拡張の詳細を返します。
+応答が成功すると、指定されたルールコンポーネントの拡張機能の詳細が返されます。
 
 ```json
 {
@@ -908,7 +908,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたルールコンポーネントの接触チャネルの詳細を返します。
+応答が成功すると、指定したルールコンポーネントのオリジンの詳細が返されます。
 
 ```json
 {

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；接続；クエリサービスへの接続；SSL;ssl;sslmode;
-title: クエリサービスの SSL オプション
-description: Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、verify-full SSL モードを使用した接続方法について説明します。
+keywords: Experience Platform；ホーム；人気のトピック；Query Service;Query Service；接続；Query Service への接続；SSL;ssl;sslmode;
+title: クエリサービス SSL オプション
+description: Adobe Experience Platform クエリサービスへのサードパーティ接続での SSL サポートと、完全検証 SSL モードを使用した接続方法について説明します。
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
 source-git-commit: 229ce98da8f1c97e421ef413826b0d23754d16df
 workflow-type: tm+mt
@@ -12,75 +12,75 @@ ht-degree: 1%
 
 # [!DNL Query Service] SSL オプション
 
-セキュリティの向上のため、Adobe Experience Platform [!DNL Query Service] は、クライアント/サーバー通信を暗号化するための SSL 接続をネイティブでサポートします。 このドキュメントでは、に対するサードパーティクライアント接続で使用可能な SSL オプションについて説明します。 [!DNL Query Service] および `verify-full` SSL パラメーター値。
+セキュリティを強化するために、Adobe Experience Platform [!DNL Query Service] では、SSL 接続のネイティブサポートを提供して、クライアントとサーバーの通信を暗号化します。 このドキュメントでは、[!DNL Query Service] へのサードパーティクライアント接続に使用できる SSL オプションと、`verify-full` の SSL パラメーター値を使用して接続する方法について説明します。
 
 ## 前提条件
 
-このドキュメントでは、お使いの Platform データで使用するサードパーティのデスクトップクライアントアプリケーションを既にダウンロード済みであることを前提としています。 サードパーティのクライアントとの接続時に SSL セキュリティを組み込む方法に関する具体的な手順は、それぞれの接続ガイドのドキュメントに記載されています。 すべての [!DNL Query Service] サポートされるクライアント ( [クライアント接続の概要](./overview.md).
+このドキュメントは、Platform データで使用するサードパーティのデスクトップクライアントアプリケーションを既にダウンロードしていることを前提としています。 サードパーティのクライアントと接続する際に SSL セキュリティを組み込む方法については、それぞれの接続ガイドのドキュメントを参照してください。 サポートされているすべてのクライアント [!DNL Query Service] リストについては、[ クライアント接続の概要 ](./overview.md) を参照してください。
 
 ## 使用可能な SSL オプション {#available-ssl-options}
 
-Platform は、データセキュリティのニーズに合わせて様々な SSL オプションをサポートし、暗号化と鍵交換の処理オーバーヘッドのバランスを取ります。
+Platform では、データセキュリティのニーズに合わせ、暗号化と鍵交換の処理オーバーヘッドのバランスを取るために、様々な SSL オプションをサポートしています。
 
-異なる `sslmode` パラメータ値は、異なるレベルの保護を提供します。 SSL 証明書を使用してデータを動作中に暗号化することで、「中間者」(MITM) 攻撃、盗聴、偽装を防ぐのに役立ちます。 次の表に、使用可能な様々な SSL モードの分類と保護レベルを示します。
+`sslmode` パラメーターの値が異なれば、保護レベルも異なります。 SSL 証明書を使用してデータを暗号化することで、「中間者」（MITM）攻撃、盗聴、なりすましを防ぐのに役立ちます。 次の表に、使用可能な様々な SSL モードの分類と、提供される保護レベルを示します。
 
 >[!NOTE]
 >
-> SSL 値 `disable` は、必要なデータ保護コンプライアンスのため、Adobe Experience Platformでサポートされていません。
+> 必要なデータ保護コンプライアンスにより、SSL 値 `disable` はAdobe Experience Platformでサポートされていません。
 
-| sslmode | 盗聴防止 | MITM 保護 | 説明 |
+| sslmode | 盗聴保護 | MITM 保護 | 説明 |
 |---|---|---|---|
-| `allow` | 部分的 | × | セキュリティは優先事項ではありません。処理の速度と低いオーバーヘッドがより重要です。 このモードでは、サーバーが暗号化を要求した場合にのみ、暗号化がオプトされます。 |
-| `prefer` | 部分的 | × | 暗号化は必要ありませんが、サーバーが暗号化をサポートしている場合は、通信が暗号化されます。 |
-| `require` | ○ | × | すべての通信で暗号化が必要です。 ネットワークは、正しいサーバーに接続するために信頼されています。 サーバー SSL 証明書の検証は不要です。 |
-| `verify-ca` | ○ | CA ポリシーに依存 | すべての通信で暗号化が必要です。 データを共有する前に、サーバーの検証が必要です。 この場合は、 [!DNL PostgreSQL] ホームディレクトリ。 [詳細は以下のとおりです](#instructions) |
-| `verify-full` | ○ | ○ | すべての通信で暗号化が必要です。 データを共有する前に、サーバーの検証が必要です。 この場合は、 [!DNL PostgreSQL] ホームディレクトリ。 [詳細は以下のとおりです](#instructions). |
+| `allow` | 一部 | × | セキュリティは優先されません。速度と低い処理オーバーヘッドの方が重要です。 このモードは、サーバーが要求する場合にのみ暗号化を選択します。 |
+| `prefer` | 一部 | × | 暗号化は必要ありませんが、サーバーがサポートしている場合は通信が暗号化されます。 |
+| `require` | ○ | × | 暗号化はすべての通信で必要です。 ネットワークは、正しいサーバーに接続するために信頼されています。 サーバー SSL 証明書の検証は不要です。 |
+| `verify-ca` | ○ | CA-policy に依存 | 暗号化はすべての通信で必要です。 データを共有するには、サーバーの検証が必要です。 それには、[!DNL PostgreSQL] ホームディレクトリにルート証明書を設定する必要があります。 [ 詳細は以下のとおりです ](#instructions) |
+| `verify-full` | ○ | ○ | 暗号化はすべての通信で必要です。 データを共有するには、サーバーの検証が必要です。 それには、[!DNL PostgreSQL] ホームディレクトリにルート証明書を設定する必要があります。 [ 詳細は以下のとおりです ](#instructions)。 |
 
 >[!NOTE]
 >
->違いは `verify-ca` および `verify-full` ルート証明機関 (CA) のポリシーに依存します。 独自のローカル CA を作成し、アプリケーションに対してプライベート証明書を発行した場合は、 `verify-ca` 多くの場合、十分な保護を提供します。 パブリック CA を使用する場合、 `verify-ca` は、他のユーザーが CA に登録している可能性のあるサーバーへの接続を許可します。 `verify-full` は常にパブリックルート CA と共に使用する必要があります。
+>`verify-ca` と `verify-full` の違いは、ルート証明機関（CA）のポリシーによって異なります。 アプリケーション用にプライベート証明書を発行する独自のローカル CA を作成している場合は、`verify-ca` を使用すると十分な保護が得られることがよくあります。 パブリック CA を使用する場合、`verify-ca` は、他のユーザーが CA に登録している可能性のあるサーバーへの接続を許可します。 `verify-full` は、常にパブリックルート CA で使用する必要があります。
 
-Platform データベースへのサードパーティ接続を確立する場合は、 `sslmode=require` 少なくとも、動作中のデータに対して安全な接続を確保するために必要です。 The `verify-full` ほとんどのセキュリティ上の問題を区別する環境では、SSL モードを使用することをお勧めします。
+Platform データベースへのサードパーティ接続を確立する場合、少なくとも `sslmode=require` を使用して、移動中のデータの安全な接続を確保することをお勧めします。 セキュリティが重視されるほとんどの環境では、`verify-full` SSL モードを使用することをお勧めします。
 
-## サーバーの検証用にルート証明書を設定する {#root-certificate}
+## サーバー検証用のルート証明書を設定します {#root-certificate}
 
 >[!IMPORTANT]
 >
->クエリサービス Interactive Postgres API の実稼動環境の TLS/SSL 証明書が、2024 年 1 月 24 日（水）に更新されました。<br>これは年間要件ですが、Adobeの TLS/SSL 証明書プロバイダーが証明書階層を更新したので、この時点で、チェーン内のルート証明書も変更されました。 これは、特定の Postgres クライアントに影響を及ぼす可能性があります。 たとえば、PSQL CLI クライアントでは、ルート証明書を明示的なファイルに追加する必要がある場合があります。 `~/postgresql/root.crt`を含めない場合は、エラーが発生する可能性があります。 たとえば、`psql: error: SSL error: certificate verify failed` のように設定します。詳しくは、 [PostgreSQL の公式ドキュメント](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) 詳しくは、この問題を参照してください。<br>追加するルート証明書は、からダウンロードできます。 [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>Query Service Interactive Postgres API の実稼動環境の TLS/SSL 証明書は、2024 年 1 月 24 日水曜日（PT）に更新されました。<br> これは年間要件ですが、この機会に、Adobeの TLS/SSL 証明書プロバイダーが証明書階層を更新したので、チェーンのルート証明書も変更されました。 これは、特定の Postgres クライアントで、その認証機関のリストにルート証明書がない場合に影響を与える可能性があります。 例えば、PSQL CLI クライアントでは、ルート証明書を明示的なファイル `~/postgresql/root.crt` に追加する必要がある場合があります。そうしないと、エラーが発生する可能性があります。 たとえば、`psql: error: SSL error: certificate verify failed` のように設定します。この問題について詳しくは、[ 公式の PostgreSQL ドキュメント ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) を参照してください。<br> 追加するルート証明書は、[https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pemからダウンロードできます ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem)。
 
-安全な接続を確保するには、接続を確立する前に、クライアントとサーバーの両方で SSL 使用を設定する必要があります。 SSL がサーバー上でのみ設定されている場合、クライアントは、サーバーのセキュリティが高い必要があるという確立前に、パスワードなどの機密情報を送信する場合があります。
+安全な接続を確保するには、接続を行う前に、クライアントとサーバーの両方で SSL 使用を設定する必要があります。 SSL がサーバー上でのみ設定されている場合、クライアントは、サーバーが高いセキュリティを必要とすることが確立される前に、パスワードなどの機密情報を送信する可能性があります。
 
-デフォルトでは、 [!DNL PostgreSQL] は、サーバー証明書の検証を実行しません。 （SSL の一部として）機密データが送信される前に、サーバーの ID を検証し、安全な接続を確保するため `verify-full` モード ) の場合は、ローカルマシン（自己署名済み）にルート（自己署名済み）証明書を配置する必要があります。`root.crt`) と、サーバー上のルート証明書によって署名されたリーフ証明書。
+デフォルトでは、[!DNL PostgreSQL] はサーバー証明書の検証を実行しません。 サーバーの ID を検証し、（SSL `verify-full` モードの一部として）機密データが送信される前に安全な接続を確保するには、ローカル マシン（`root.crt`）にルート（自己署名）証明書を、そしてルート証明書によって署名されたリーフ証明書を、サーバーに配置する必要があります。
 
-次の場合、 `sslmode` パラメーターがに設定されている `verify-full`を指定した場合、libpq は、クライアントに格納されているルート証明書まで証明書チェーンをチェックすることで、サーバーが信頼できることを検証します。 次に、ホスト名がサーバーの証明書に保存された名前と一致していることを確認します。
+`sslmode` パラメータが `verify-full` に設定されている場合、libpq はクライアントに格納されているルート証明書までの証明書チェーンをチェックして、サーバーの信頼性を検証します。 次に、ホスト名がサーバー証明書に保存されている名前と一致することを確認します。
 
-サーバー証明書の検証を許可するには、1 つ以上のルート証明書 (`root.crt`) を [!DNL PostgreSQL] ファイルをホームディレクトリに保存します。 ファイルパスは次のようになります。 `~/.postgresql/root.crt`.
+サーバー証明書の検証を許可するには、ホーム ディレクトリの [!DNL PostgreSQL] ファイルに 1 つ以上のルート証明書（`root.crt`）を配置する必要があります。 ファイルパスは `~/.postgresql/root.crt` のようになります。
 
-## サードパーティで使用するための verify-full SSL モードの有効化 [!DNL Query Service] 接続 {#instructions}
+## サードパーティ [!DNL Query Service] 接続で使用する完全検証 SSL モードを有効にする {#instructions}
 
-より厳しいセキュリティ制御が必要な場合 `sslmode=require`を使用すると、ハイライト表示されている手順に従って、サードパーティのクライアントを [!DNL Query Service] using `verify-full` SSL モード。
+`sslmode=require` よりも厳しいセキュリティ制御が必要な場合は、ハイライト表示された手順に従って、SSL モードを使用してサードパーティクライアントを [!DNL Query Service] に接続 `verify-full` きます。
 
 >[!NOTE]
 >
->SSL 証明書を取得するには、多くのオプションを使用できます。 不正な証明書の傾向が高まっているので、DigiCert は、TLS/SSL、PKI、IoT、および署名ソリューションの信頼できるグローバルプロバイダーであるため、このガイドで使用されています。
+>SSL 証明書を取得するために使用できるオプションは多数あります。 不正な証明書の増加傾向により、DigiCert は、高保証 TLS/SSL、PKI、IoT、署名ソリューションの信頼できるグローバルプロバイダーであるため、このガイドで使用されています。
 
-1. に移動します。 [使用可能な DigiCert ルート証明書のリスト](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. 「」を検索します。[!DNL DigiCert Global Root G2]」をクリックします。
-1. 選択 [!DNL **PEM をダウンロード**] をクリックして、ローカルマシンにファイルをダウンロードします。
-   ![「Download PEM」がハイライト表示された、使用可能な DigiCert ルート証明書のリスト。](../images/clients/ssl-modes/digicert.png)
-1. セキュリティ証明書ファイルの名前をに変更します。 `root.crt`.
-1. ファイルを [!DNL PostgreSQL] フォルダー。 必要なファイルパスは、オペレーティングシステムによって異なります。 フォルダーが存在しない場合は、フォルダーを作成します。
-   - macOSを使用している場合、パスは `/Users/<username>/.postgresql`
-   - Windows を使用している場合、パスは `%appdata%\postgresql`
+1. [ 使用可能な DigiCert ルート証明書のリスト ](https://www.digicert.com/kb/digicert-root-certificates.htm) に移動します。
+1. 使用可能な証明書のリストから「[!DNL DigiCert Global Root G2]」を検索します。
+1. 「[!DNL **PEM をダウンロード**]」を選択して、ファイルをローカルマシンにダウンロードします。
+   ![ 「PEM をダウンロード」がハイライト表示された、使用可能な DigiCert ルート証明書のリスト ](../images/clients/ssl-modes/digicert.png)
+1. セキュリティ証明書ファイルの名前を `root.crt` に変更します。
+1. ファイルを [!DNL PostgreSQL] フォルダーにコピーします。 必要なファイルパスは、オペレーティングシステムによって異なります。 フォルダーがまだ存在しない場合は作成します。
+   - macOSを使用している場合、パスは `/Users/<username>/.postgresql` になります
+   - Windows を使用している場合、パスは `%appdata%\postgresql` です
 
 >[!TIP]
 >
->次を検索： `%appdata%` Windows オペレーティングシステム上のファイルの場所を指定するには、⊞を押します。 **Win + R** と入力 `%appdata%` を検索フィールドに入力します。
+>Windows オペレーティング・システム上で `%appdata%` ファイルの場所を見つけるには、⊞**Win + R** を押して、検索フィールドに `%appdata%` を入力します。
 
-次の期間の後に [!DNL DigiCert Global Root G2] CRT ファイルは、 [!DNL PostgreSQL] フォルダー、次の場所に接続できます： [!DNL Query Service] の使用 `sslmode=verify-full` または `sslmode=verify-ca` オプション。
+[!DNL DigiCert Global Root G2] CRT ファイルを [!DNL PostgreSQL] フォルダーで使用できるようになったら、`sslmode=verify-full` または `sslmode=verify-ca` オプションを使用して、[!DNL Query Service] に接続できます。
 
 ## 次の手順
 
-このドキュメントでは、サードパーティクライアントをに接続する際に使用できる SSL オプションについてより深く理解しています。 [!DNL Query Service]、および有効にする方法 `verify-full` SSL オプションを使用して、データを移行中に暗号化できます。
+このドキュメントでは、サードパーティクライアントを [!DNL Query Service] に接続するための使用可能な SSL オプションと、`verify-full` SSL オプションを有効にしてデータを移動しながら暗号化する方法について詳しく説明します。
 
-まだおこなっていない場合は、 [サードパーティクライアントの接続先 [!DNL Query Service]](./overview.md).
+まだ行っていない場合は、[ サードパーティのクライアントの接続  [!DNL Query Service]](./overview.md) に関するガイダンスに従ってください。

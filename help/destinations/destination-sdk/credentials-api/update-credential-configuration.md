@@ -4,7 +4,7 @@ title: 資格情報設定の更新
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '588'
 ht-degree: 100%
 
 ---

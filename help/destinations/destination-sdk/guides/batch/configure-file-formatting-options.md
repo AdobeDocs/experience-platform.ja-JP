@@ -1,11 +1,11 @@
 ---
 description: ファイルベースの宛先のファイル形式オプションの設定
-title: Destination SDKを使用して、ファイルベースの宛先のファイル形式設定オプションを設定する方法について説明します。
+title: Destination SDKを使用して、ファイルベースの宛先のファイル形式オプションを設定する方法を説明します。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
 source-wordcount: '913'
-ht-degree: 24%
+ht-degree: 22%
 
 ---
 
@@ -13,24 +13,24 @@ ht-degree: 24%
 
 ## 概要 {#overview}
 
-Destination SDKを使用すると、ストレージの場所でのダウンストリーム要件に合わせて、書き出したファイルの形式と圧縮のオプションを大幅に調整できます。
+Destination SDKを使用すると、書き出したファイルの書式設定と圧縮のオプションを、ストレージの場所のダウンストリーム要件に合わせて大幅に調整できます。
 
-このページでは、Destination SDKを使用して、ファイルベースの宛先のファイル形式設定オプションを設定する方法について説明します。
+ここでは、Destination SDKを使用して、ファイルベースの宛先のファイル形式オプションを設定する方法について説明します。
 
 ## 前提条件 {#prerequisites}
 
-以下の手順に進む前に、 [Destination SDKの概要](../../getting-started.md) ページを参照してください。Adobe I/O認証に必要な資格情報や、Destination SDKAPI を使用するためのその他の前提条件が取得されます。
+以下に説明する手順に進む前に、[Destination SDKの概要 ](../../getting-started.md) ページを参照して、Adobe I/ODestination SDK資格情報および認証 API を使用するために必要なその他の前提条件について確認してください。
 
-Adobeでは、先に進む前に、次のドキュメントを読み、よく理解しておくことをお勧めします。
+Adobeでは、先に進む前に次のドキュメントを読み、内容を理解しておくこともお勧めします。
 
-* 使用可能なすべてのファイルフォーマットオプションについては、 [ファイルフォーマット設定](../../functionality/destination-server/file-formatting.md) 」セクションに入力します。
-* 次の手順を実行します。 [ファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md) Destination SDKを使用。
+* 使用可能なすべてのファイル形式オプションについては、[ ファイル形式設定 ](../../functionality/destination-server/file-formatting.md) セクションで詳しく説明しています。
+* Destination SDKを使用して [ ファイルベースの宛先を設定 ](../../guides/configure-file-based-destination-instructions.md) する手順を実行します。
 
 ## サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-まず、 `/destination-server` endpoint ：書き出されたファイルに対して設定するファイル形式設定オプションを決定します。
+まず `/destination-server` エンドポイントを使用して、書き出したファイルに設定するファイル形式設定オプションを決定します。
 
-次に、 [!DNL Amazon S3] 宛先に書き出します。複数のファイル形式設定オプションが選択されています。
+以下は、複数のファイル形式オプションが選択された、[!DNL Amazon S3] 宛先の宛先サーバー設定の例です。
 
 **API 形式**
 
@@ -98,25 +98,25 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-## 宛先設定にファイル形式設定オプションを追加する {#create-destination-configuration}
+## 宛先設定へのファイル形式オプションの追加 {#create-destination-configuration}
 
 >[!TIP]
 >
->**Experience PlatformUI の確認**. 以下の節で説明する設定を使用してファイル形式オプションを設定する場合は、Experience PlatformUI で、これらのオプションのレンダリング方法を確認する必要があります。
+>**Experience PlatformUI を確認します**。 以下の節で説明する設定でファイル形式オプションを設定する場合は、Experience Platform UI でこれらのオプションのレンダリング方法を確認する必要があります。
 
-前の手順で、目的のファイルフォーマットオプションを宛先サーバーに追加し、ファイルフォーマット設定を設定した後、 `/destinations` 目的のフィールドを顧客データフィールドとして宛先設定に追加する API エンドポイント。
+前の手順で、目的のファイル形式オプションを宛先サーバーに追加し、ファイル形式設定を追加したら、`/destinations` API エンドポイントを使用して、目的のフィールドを顧客データフィールドとして宛先設定に追加できるようになりました。
 
 >[!IMPORTANT]
 >
->この手順はオプションで、ユーザーに対してExperience PlatformUI で表示するファイル形式設定オプションを指定するだけです。 顧客データフィールドとしてファイルフォーマットオプションを設定しない場合、ファイルエクスポートは、 [サーバーとファイルの設定](#create-server-file-configuration).
+>この手順はオプションで、Experience PlatformUI でユーザーに表示するファイル形式オプションを指定するだけです。 顧客データフィールドとしてファイル形式オプションを設定しない場合、ファイルの書き出しは、[ サーバーおよびファイル設定 ](#create-server-file-configuration) で設定されたデフォルト値で続行されます。
 
-この手順では、表示されたオプションを任意の順序でグループ化し、選択したファイルタイプに基づいてカスタムグループ化、ドロップダウンフィールド、条件付きグループを作成できます。 これらの設定はすべて、記録および後述のセクションに表示されます。
+この手順では、表示されるオプションを任意の順序でグループ化し、選択したファイルタイプに基づいて、カスタムグループ化、ドロップダウンフィールド、条件付きグループを作成できます。 これらの設定はすべて、録画と後述の節で説明します。
 
-![バッチファイルの様々なファイル形式オプションを示す画面記録。](../../assets/guides/batch/file-formatting-options.gif)
+![ バッチファイルの様々なファイル形式オプションを示す画面録画。](../../assets/guides/batch/file-formatting-options.gif)
 
-### ファイル形式設定オプションの並べ替え {#ordering}
+### ファイル形式オプションの並べ替え {#ordering}
 
-宛先設定で顧客データフィールドとしてファイル形式オプションを追加する順序は、UI に反映されます。 例えば、以下の設定は UI に応じて反映され、オプションは順番に表示されます **[!UICONTROL 区切り]**, **[!UICONTROL 引用符文字]**, **[!UICONTROL エスケープ文字]**, **[!UICONTROL 空の値]**, **[!UICONTROL Null 値]**.
+宛先設定でファイル形式オプションを顧客データフィールドとして追加した順序は、UI に反映されます。 例えば、以下の設定は、UI にそのまま反映され、オプションは **[!UICONTROL 区切り文字]**、**[!UICONTROL 引用符文字]**、**[!UICONTROL エスケープ文字]**、**[!UICONTROL 空の値]**、**[!UICONTROL Null 値]** の順序で表示されます。
 
 ![Experience Platform UI でのファイル形式オプションの順序を示す画像。](../../assets/guides/batch/file-formatting-order.png)
 
@@ -237,11 +237,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
                 }
 ```
 
-### ファイル形式設定オプションをグループ化します。 {#grouping}
+### ファイル形式オプションのグループ化 {#grouping}
 
-複数のファイル形式設定オプションを 1 つのセクション内にグループ化できます。 UI で宛先への接続を設定すると、類似したフィールドを視覚的にグループ化して、その利点を活用することができます。
+複数のファイル形式オプションを 1 つのセクション内にグループ化できます。 UI で宛先への接続を設定する際に、ユーザーは、類似したフィールドを視覚的にグループ化することで、メリットが得られます。
 
-これをおこなうには、 `"type": "object"` グループを作成し、必要なファイルフォーマットオプションを `properties` 次の例に示すように、グループ化の場所のパラメーター **[!UICONTROL CSV オプション]** がハイライト表示されます。
+これを行うには、`"type": "object"` を使用してグループを作成し、以下の例に示すように、`properties` パラメーター内に目的のファイル形式オプションを収集します **[!UICONTROL CSV オプション]** のグループ化がハイライト表示されています。
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -281,7 +281,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ![UI での CSV オプションのグループ化を示す画像。](../../assets/guides/batch/file-formatting-grouping.png)
 
-### ファイル形式設定オプション用のドロップダウンセレクターを作成します {#dropdown-selectors}
+### ファイル形式オプション用のドロップダウンセレクターの作成 {#dropdown-selectors}
 
 ユーザーがいくつかのオプションから選択できるようにしたい状況（例えば、CSV ファイルのフィールドを区切るためにどの文字を使用するか）では、UI にドロップダウンフィールドを追加できます。
 
@@ -326,9 +326,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ![上記の設定で作成されたドロップダウンセレクターの例を示す画面録画。](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
-### 条件付きファイル書式設定オプションの作成 {#conditional-options}
+### 条件付きファイル形式オプションの作成 {#conditional-options}
 
-条件付きファイル書式設定オプションを作成できます。このオプションは、ユーザーが書き出し用に特定のファイルタイプを選択した場合にのみ、アクティベーションワークフローに表示されます。 例えば、以下の設定では、CSV ファイルオプションの条件付きグループが作成されます。 CSV ファイルオプションは、ユーザーが CSV を書き出し用のファイルタイプとして選択する場合にのみ表示されます。
+条件付きファイル形式オプションを作成できます。このオプションは、ユーザーが書き出し用に特定のファイルタイプを選択する場合にのみ、アクティベーションワークフローに表示されます。 例えば、以下の設定は、CSV ファイルオプション用の条件グループを作成します。 CSV ファイルオプションは、ユーザーが CSV を書き出し用のファイルタイプとして選択する場合にのみ表示されます。
 
 フィールドを条件付きとして設定するには、以下に示すように、`conditional` パラメーターを使用します。
 
@@ -489,7 +489,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 上記のすべてのオプションを含む完全な API リクエスト
 
-以下の API リクエストは、上記の節で説明したすべてのオプションを 1 つの設定に組み合わせたものです。
+以下の API リクエストは、上記の節で説明するすべてのオプションを 1 つの設定にまとめたものです。
 
 **リクエスト**
 
@@ -711,11 +711,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-正常な応答は、一意の識別子 (`instanceId`) が含まれています。
+応答が成功すると、設定の一意の ID （`instanceId`）を含む宛先設定が返されます。
 
 ## 既知の制限事項 {#known-limitations}
 
-ファイルフォーマットオプションを特定の組み合わせにすると、ファイルの書き出し結果が望ましくなくなる場合があります。
+ファイル形式オプションの特定の組み合わせが、望ましくないファイル書き出しの結果につながる可能性があります。
 Adobeでは、次の CSV オプションの組み合わせを選択しないことをお勧めします。
 
 ```
@@ -724,16 +724,16 @@ quote -> "
 emptyValue -> ""
 ```
 
-制限の例を示すために、次の値を持つファイルのエクスポートを検討します。
+制限の例として、次の値を持つファイルのエクスポートを考えてみましょう。
 
 | 名 | 姓 | 国 | state |
 |---------|----------|---------|--------|
 | マイケル | Rose | 米国 | NY |
-| James | Smith |  | null |
+| ジェームズ | Smith |  | null |
 
 {style="table-layout:auto"}
 
-これにより、次のような出力が生成されます。 テーブルからの null 値が、誤ってエスケープされた引用符として書き出されることに注意してください。
+その結果、次のような出力が得られます。 テーブルの null 値が誤ってエスケープされた引用符として書き出されていることに注意してください。
 
 ```csv
 Michael,Rose,USA,NY 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 次の手順 {#next-steps}
 
-この記事では、書き出したファイルのカスタムファイル形式設定オプションを、Destination SDKを使用して設定する方法について説明します。 次に、チームが [ファイルベースの宛先のアクティベーションワークフロー](../../../ui/activate-batch-profile-destinations.md) をクリックして、宛先にデータを書き出します。
+この記事では、Destination SDKを使用して、書き出したファイルにカスタムのファイル形式オプションを設定する方法を確認しました。 次に、チームは [ ファイルベース宛先のアクティベーションワークフロー ](../../../ui/activate-batch-profile-destinations.md) を使用して、宛先にデータを書き出すことができます。

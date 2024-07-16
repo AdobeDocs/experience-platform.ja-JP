@@ -1,12 +1,12 @@
 ---
-keywords: QuestionPro Intercept Surveys;questionpro intercept surveys;QuestionPro;questionpro
+keywords: QuestionPro Intercept Surveys;Questionpro Intercept Surveys;QuestionPro;Questionpro
 title: QuestionPro Intercept Surveys 拡張機能
-description: QuestionPro Intercept Surveys 拡張機能は、Adobe Experience Platformの調査の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: QuestionPro Intercept Surveys 拡張機能は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: a0d6d46b-caac-48ae-94bc-4ebf24f9c94a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 92%
+source-wordcount: '458'
+ht-degree: 88%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 92%
 
 ## 概要 {#overview}
 
-[!DNL QuestionPro Intercept Surveys] は、調査を導入し、トランザクションの時点で、またはユーザーが Web サイトを開始／終了したときに、行動データを収集するためのプラットフォームです。
+[!DNL QuestionPro Intercept Surveys] は、調査をデプロイし、トランザクションの時点で、またはユーザーが web サイトに入る/出るときに属性データを収集するためのプラットフォームです。
 
-[!DNL QuestionPro Intercept Surveys] は、Adobe Experience Platformの調査の拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html) の拡張機能のページを参照してください。
+[!DNL QuestionPro Intercept Surveys] は、Adobe Experience Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 92%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL QuestionPro Intercept Surveys] 拡張子：
+[!DNL QuestionPro Intercept Surveys] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

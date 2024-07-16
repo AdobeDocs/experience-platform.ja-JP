@@ -4,7 +4,7 @@ title: 宛先サーバー設定の作成
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2036'
 ht-degree: 89%
 
 ---
@@ -848,23 +848,23 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >[!ENDTABS]
 
 
-### 動的ドロップダウンの宛先サーバーの作成 {#dynamic-dropdown-servers}
+### 動的ドロップダウン宛先サーバーの作成 {#dynamic-dropdown-servers}
 
-用途 [動的ドロップダウン](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) ：独自の API に基づいて、ドロップダウンの顧客データフィールドを動的に取得し、設定します。 例えば、宛先接続に使用する既存のユーザーアカウントのリストを取得できます。
+[ 動的ドロップダウン ](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) を使用して、独自の API に基づいて、ドロップダウン顧客データフィールドを動的に取得および設定します。 例えば、宛先接続に使用したい既存のユーザーアカウントのリストを取得できます。
 
 動的ドロップダウン顧客データフィールドを設定する前に、動的ドロップダウンの宛先サーバーを設定する必要があります。
 
-ドロップダウンセレクターに表示される値を API から動的に取得する場合に使用する宛先サーバーの例の下にある「 」タブのを参照してください。
+ドロップダウンセレクターに表示される値を動的に取得するために使用される宛先サーバーの例については、以下のタブを参照してください。
 
 以下のサンプルペイロードには、動的スキーマサーバーに必要なすべてのパラメーターが含まれています。
 
 >[!BEGINTABS]
 
->[!TAB 動的ドロップダウンサーバー]
+>[!TAB  動的ドロップダウンサーバー ]
 
 **動的ドロップダウンサーバーの作成**
 
-独自の API エンドポイントからドロップダウン顧客データフィールドの値を取得する宛先を設定する際に、次に示すような動的ドロップダウンサーバーを作成する必要があります。
+独自の API エンドポイントからドロップダウン顧客データフィールドの値を取得する宛先を設定する場合、以下に示すものに類似した動的ドロップダウンサーバーを作成する必要があります。
 
 +++リクエスト
 
@@ -923,14 +923,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | パラメーター | タイプ | 説明 |
 | -------- | ----------- | ----------- |
-| `name` | 文字列 | *必須。* 動的ドロップダウンサーバーのわかりやすい名前を表します。Adobeにのみ表示されます。 |
-| `destinationServerType` | 文字列 | *必須。* をに設定します。 `URL_BASED` 動的なドロップダウンサーバーの場合。 |
+| `name` | 文字列 | *必須。* 動的ドロップダウンサーバーのわかりやすい名前を表し、Adobeにのみ表示されます。 |
+| `destinationServerType` | 文字列 | *必須。* 動的ドロップダウンサーバーの場合は「`URL_BASED` に設定」をクリックします。 |
 | `urlBasedDestination.url.templatingStrategy` | 文字列 | *必須。* <ul><li>以下の `value` フィールドの URL をアドビが変換する必要がある場合は、`PEBBLE_V1` を使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` のようなエンドポイントがある場合は、このオプションを使用します。 </li><li> アドビ側での変換が不要な場合（例えば、`https://api.moviestar.com/data/items` のようなエンドポイントがある場合）は、`NONE` を使用します。</li></ul> |
-| `urlBasedDestination.url.value` | 文字列 | *必須。* Experience Platformが接続する API エンドポイントのアドレスを入力し、ドロップダウン値を取得します。 |
-| `httpTemplate.httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。動的なドロップダウンサーバーの場合は、 `GET`. |
-| `httpTemplate.headers` | オブジェクト | *Optiona.l* 動的ドロップダウンサーバーへの接続に必要なヘッダーを含めます。 |
+| `urlBasedDestination.url.value` | 文字列 | *必須。* Experience Platformが接続する API エンドポイントのアドレスを入力して、ドロップダウン値を取得します。 |
+| `httpTemplate.httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。動的ドロップダウンサーバーには、`GET` を使用します。 |
+| `httpTemplate.headers` | オブジェクト | *オプション.l* 動的ドロップダウンサーバーへの接続に必要なヘッダーを含めます。 |
 | `responseFields.templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `responseFields.value` | 文字列 | *必須。* この文字列は、API から受け取った応答を Platform UI に表示される値に変換する、文字エスケープされた変換テンプレートです。 <br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](../../functionality/destination-server/message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 |
+| `responseFields.value` | 文字列 | *必須。* この文字列は、API から受信した応答を Platform UI に表示される値に変換する、文字がエスケープされた変換テンプレートです。<br> <ul><li> テンプレートの記述方法について詳しくは、[テンプレートセクションの使用](../../functionality/destination-server/message-format.md#using-templating)を参照してください。 </li><li> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。 |
 
 {style="table-layout:auto"}
 

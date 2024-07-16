@@ -16,15 +16,15 @@ ht-degree: 73%
 # 高度なデータ・ライフサイクル管理 {#data-lifecycle}
 
 * [高度なデータ・ライフサイクル管理の概要](./home.md)
-* データライフサイクル UI {#ui}
+* Data Lifecycle UI {#ui}
    * [概要](./ui/overview.md)
    * [データセットの有効期限の自動化](./ui/dataset-expiration.md)
-   * [（ベータ版）レコードの削除](./ui/record-delete.md)
+   * [（Beta）レコードの削除](./ui/record-delete.md)
    * [データライフサイクル作業指示の参照](./ui/browse.md)
 * Data Hygiene API {#api}
    * [概要](./api/overview.md)
    * [データセット有効期限](./api/dataset-expiration.md)
    * [レコード削除](./api/jobs.md)
-   * [（ベータ版）レコードの削除](./api/workorder.md)
+   * [（Beta）レコードの削除](./api/workorder.md)
    * [割り当て量](./api/quota.md)
 * [ベストプラクティス](./best-practices.md)

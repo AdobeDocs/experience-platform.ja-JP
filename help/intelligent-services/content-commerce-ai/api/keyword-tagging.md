@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform；はじめに；コンテンツ；コンテンツのタグ付け ai；キーワードタグ付け；キーワードタグ付け
+keywords: Experience Platform；はじめに；コンテンツ；コンテンツのタグ付け AI；キーワードのタグ付け；キーワードのタグ付け
 solution: Experience Platform
-title: コンテンツタグ付け API のキーワードタグ付け
-description: キーワードタグ付けサービスは、テキストドキュメントを指定すると、ドキュメントの件名を最もよく表すキーワードまたはキーボードを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識 (NER) と未監視のキーワードタグ付けアルゴリズムの組み合わせを使用する。
+title: コンテンツのタグ付け API でのキーワードのタグ付け
+description: キーワードタグ付けサービスは、テキストドキュメントが指定されると、ドキュメントの件名を最も的確に表すキーワードまたはキーフレーズを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識（NER）と教師なしキーワードタグ付けアルゴリズムとの組み合わせが使用される。
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '444'
 ht-degree: 6%
 
 ---
 
 # キーワードのタグ付け
 
-キーワードタグ付けサービスは、テキストドキュメントを指定すると、そのドキュメントの件名を最も適切に表すキーワードまたはキーフレーズを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識 (NER) と未監視のキーワードタグ付けアルゴリズムの組み合わせを使用する。
+テキストドキュメントが指定された場合、キーワードタグ付けサービスは、ドキュメントの件名を最も的確に表すキーワードまたはキーフレーズを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識（NER）と教師なしキーワードタグ付けアルゴリズムとの組み合わせが使用される。
 
-次の表に、 [!DNL Content Tagging] は次を識別できます。
+次の表に、識別可能な名前付 [!DNL Content Tagging] エンティティを示します。
 
 | エンティティ名 | 説明 |
 | --- | --- |
-| PERSON | 架空の人物を含む。 |
-| GPE | 国、都市、州。 |
-| LOC | 非 GPE の場所、山の範囲、および水の体。 |
+| 人物 | 人々（架空のものを含む）。 |
+| GPE | 国、市、州。 |
+| LOC | GPE 以外の場所、山脈、水域。 |
 | FAC | 建物、空港、高速道路、橋など |
-| 組織 | 会社、機関、機関等 |
-| 製品 | 物品、車両、食品等 （サービスではありません。） |
-| イベント | ハリケーン、戦闘、戦争、スポーツイベントなどと名付けた。 |
-| WORK_OF_ART | 書籍、歌曲等の名称 |
-| 法 | 法律化された名前付きドキュメント。 |
+| ORG | 会社、代理店、組織など |
+| 製品 | 物品、車両、食品など。 （サービスではありません。） |
+| イベント | ハリケーン、戦い、戦争、スポーツイベントなど。 |
+| WORK_OF_ART | 本、歌等の題名 |
+| 法則 | 法律に作られた名前付き文書。 |
 | 言語 | 任意の名前付き言語。 |
 
 **API 形式**
@@ -38,11 +38,11 @@ POST /services/v2/predict
 
 **リクエスト**
 
-次のリクエストは、ペイロードで提供された入力パラメーターに基づいて、ドキュメントからキーワードを抽出します。
+次のリクエストは、ペイロードで指定された入力パラメーターに基づいて、ドキュメントからキーワードを抽出します。
 
-表示される入力パラメーターの詳細については、サンプルのペイロードの下の表を参照してください。
+表示される入力パラメーターについて詳しくは、ペイロード例の下の表を参照してください。
 
-この [サンプル pdf](../pdf-files/simple-text.pdf) ファイルは、このドキュメントの例で使用されています。
+この [ サンプル pdf](../pdf-files/simple-text.pdf) ファイルは、このドキュメントで示す例で使用されています。
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -90,25 +90,25 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | プロパティ | 説明 | 必須 |
 | --- | --- | --- |
-| `top_n` | 返される結果の数。 0：すべての結果を返します。 しきい値と組み合わせて使用した場合、返される結果の数はどちらの制限も下回ります。 | いいえ |
-| `min_relevance` | 結果を返す必要があるスコアしきい値。 すべての結果を返すには、パラメーターを除外します。 | いいえ |
-| `min_key_phrase_length` | キーフレーズに必要な単語の最小数。 | いいえ |
-| `max_key_phrase_length` | キーフレーズに必要な単語の最大数。 | いいえ |
-| `last_semantic_unit_type` | 階層応答で指定されたレベルまでのセマンティック単位のみを返します。 「key_phrase」はキーフレーズのみを返し、「linked_entity」はキーフレーズとそれに対応するリンクエンティティのみを返し、「concept」はキーフレーズ、リンクされたエンティティおよび概念を返します。 | いいえ |
-| `entity_types` | キーフレーズとして返されるエンティティのタイプ。 | いいえ |
+| `top_n` | 返される結果の数。 0 （すべての結果を返す）。 しきい値と共に使用すると、返される結果の数が、いずれかの制限値未満になります。 | × |
+| `min_relevance` | 以下で結果を返す必要があるスコアのしきい値。 パラメーターを除外すると、すべての結果が返されます。 | × |
+| `min_key_phrase_length` | キーフレーズで必要な最小単語数。 | × |
+| `max_key_phrase_length` | キーフレーズで必要な最大単語数。 | × |
+| `last_semantic_unit_type` | 階層応答で指定されたレベルまでの意味単位のみを返します。 「key_phrase」はキーフレーズのみを返し、「linked_entity」はキーフレーズとそれに対応するリンクエンティティのみを返し、「concept」はキーフレーズ、リンクエンティティおよび概念を返します。 | × |
+| `entity_types` | キーフレーズとして返されるエンティティのタイプ。 | × |
 
 **Document オブジェクト**
 
 | 名前 | データタイプ | 必須 | デフォルト | 値 | 説明 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | 文字列 | - | - | - | キーフレーズの抽出元となるドキュメントの署名済み URL。 |
-| `sensei:repoType` | 文字列 | - | - | HTTPS | ドキュメントを保存するリポジトリのタイプ。 |
-| `sensei:multipart_field_name` | 文字列 | - | - | - | ドキュメントを、署名済みの URL を使用する代わりに、マルチパート引数として渡す場合に使用します。 |
-| `dc:format` | 文字列 | ○ | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | 文書のエンコーディングは、処理前に、許可されている入力エンコーディングタイプと照合されます。 |
+| `repo:path` | 文字列 | - | - | - | キーフレーズを抽出するドキュメントの事前署名済み URL。 |
+| `sensei:repoType` | 文字列 | - | - | HTTPS | ドキュメントが保存されているリポジトリのタイプ。 |
+| `sensei:multipart_field_name` | 文字列 | - | - | - | 事前署名された URL を使用する代わりに、マルチパート引数としてドキュメントを渡す場合に使用します。 |
+| `dc:format` | 文字列 | ○ | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | ドキュメントのエンコーディングは、処理前に、許可されている入力エンコーディングタイプと照合されます。 |
 
 **応答**
 
-リクエストが成功した場合は、抽出したキーワードを含む JSON オブジェクトが `response` 配列。
+応答が成功すると、抽出されたキーワードを含む JSON オブジェクトが `response` 配列に返されます。
 
 ```json
 {

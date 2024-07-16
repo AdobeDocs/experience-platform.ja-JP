@@ -1,11 +1,11 @@
 ---
 title: Pinterest Customer List 接続
-description: 顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
+description: 顧客リスト、サイトを訪問した人、またはPinterest上のコンテンツとインタラクションを既に経験した人からオーディエンスを作成します。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
 workflow-type: tm+mt
 source-wordcount: '722'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -13,28 +13,28 @@ ht-degree: 43%
 
 ## 概要 {#overview}
 
-顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
+顧客リスト、サイトを訪問した人、またはPinterest上のコンテンツとインタラクションを既に経験した人からオーディエンスを作成します。
 
 >[!IMPORTANT]
 >
->この宛先はPinterestチームが作成しました。 お問い合わせや更新のご依頼は、https://help.pinterest.com/en/contactから直接お問い合わせください。
+>この目的地はPinterestチームによって作成されました。 お問い合わせや更新のリクエストについては、https://help.pinterest.com/en/contactまで直接ご連絡ください。
 
 ## 前提条件 {#prerequisites}
 
-* ユーザーは、オーディエンスの追加先の広告主アカウントにアクセスできるPinterestアカウントを使用して認証する必要があります。 広告主アカウントの共有に関する詳細が見つかります [ここ](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). 特に、ユーザーには「オーディエンス」アクセスレベルが必要です。
-* 顧客リストの ID 形式の詳細が見つかります [ここ](https://help.pinterest.com/en/business/article/audience-targeting).
+* ユーザーは、オーディエンスを追加する広告主アカウントにアクセスできるPinterest アカウントで認証する必要があります。 広告主アカウントの共有について詳しくは [ こちら ](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts) を参照してください。 特に、ユーザーには「オーディエンス」アクセスレベルが必要になります。
+* 顧客リストの ID 形式について詳しくは [ こちら ](https://help.pinterest.com/en/business/article/audience-targeting) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
-The [!DNL Pinterest Customer List] の宛先では、以下の表で説明する id のアクティブ化がサポートされます。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
+[!DNL Pinterest Customer List] の宛先では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
-Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 宛先のアクティベーションワークフローで、目的の id を「ターゲット」フィールドにマッピングします。 *pinterest_audience*. ID は、Pinterestにデータを取り込む際に識別され、解決されます。
+宛先アクティベーションワークフローの [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) で、目的の ID をターゲットフィールド *pinterest_audience* にマッピングします。 ID は、Pinterestへのデータ取り込み時に区別されて解決されます。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | マッピング *GAID* ターゲット id フィールドへのソース id 名前空間 *pinterest_audience*. ID は、Pinterestにデータを取り込む際に識別され、解決されます。 |
-| IDFA | [!DNL Apple ID for Advertisers] | マッピング *IDFA* ターゲット id フィールドへのソース id 名前空間 *pinterest_audience*. ID は、Pinterestにデータを取り込む際に識別され、解決されます。 |
-| EMAIL | 電子メールアドレス（クリアテキストまたは SHA256 アルゴリズムでハッシュ化） | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。<br> マッピング *電子メール* または *Email_LC_SHA256* ターゲット id フィールドへのソース id 名前空間 *pinterest_audience*. |
+| GAID | [!DNL Google Advertising ID] | *GAID* ソース ID 名前空間をターゲット ID フィールド *pinterest_audience* にマッピングします。 ID は、Pinterestへのデータ取り込み時に区別されて解決されます。 |
+| IDFA | [!DNL Apple ID for Advertisers] | *IDFA* ソース ID 名前空間をターゲット ID フィールド *pinterest_audience* にマッピングします。 ID は、Pinterestへのデータ取り込み時に区別されて解決されます。 |
+| EMAIL | メールアドレス（クリアテキストまたは SHA256 アルゴリズムでハッシュ化） | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。<br> *Email* または *Email_LC_SHA256* ソース ID 名前空間をターゲット ID フィールド *pinterest_audience* にマッピングします。 |
 
 {style="table-layout:auto"}
 
@@ -44,24 +44,24 @@ Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segme
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | pinterestの顧客リストの宛先で使用されている識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | pinterest Customer List の宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
 ## ユースケース {#use-cases}
 
-をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL Pinterest Customer List] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+[!DNL Pinterest Customer List] の宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
 
 ### ユースケース 1
 
-顧客リスト、サイトを訪問した人、またはPinterestで既にコンテンツに対してインタラクションを起こした人からオーディエンスを作成します。
+顧客リスト、サイトを訪問した人、またはPinterest上のコンテンツとインタラクションを既に経験した人からオーディエンスを作成します。
 
 ## 宛先に接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -71,7 +71,7 @@ Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segme
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL 広告アカウント ID]**:Pinterest広告主 ID。
+* **[!UICONTROL 広告アカウント ID]**：お使いのPinterest広告主 ID。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -83,8 +83,8 @@ Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segme
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -94,14 +94,14 @@ Adobe Analytics の [マッピング手順](/help/destinations/ui/activate-segme
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、 [Pinterest Help Center ページ](https://help.pinterest.com/en/business/article/audience-targeting) を参照してください。
+詳しくは、[Pinterest ヘルプセンター ](https://help.pinterest.com/en/business/article/audience-targeting) ページを参照してください。
 
 +++ 変更ログを表示
 
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年11月 | 機能とドキュメントの更新 | Real-Time CDPのPinterestの宛先が v5 広告主 API を使用するようになりました。 |
+| 2023年11月 | 機能とドキュメントの更新 | Real-Time CDPのPinterest宛先で v5 Advertiser API が使用されるようになりました。 |
 
 {style="table-layout:auto"}
 

@@ -13,7 +13,7 @@ ht-degree: 75%
 
 イベント転送では、秘密鍵は別のシステムの資格情報を表すリソースであり、データの安全な交換を可能にします。秘密鍵は、イベント転送プロパティ内でのみ作成できます。
 
-現在、次のシークレットタイプがサポートされています。
+現在、次の秘密鍵タイプがサポートされています。
 
 | 秘密鍵タイプ | 説明 |
 | --- | --- |
@@ -21,7 +21,7 @@ ht-degree: 75%
 | [!UICONTROL HTTP] | ユーザー名とパスワードの 2 つの文字列属性がそれぞれ含まれます。 |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL OAuth2] | [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 認証仕様の[クライアント資格情報付与タイプ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)をサポートするためのいくつかの属性が含まれています。システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
-| [!UICONTROL OAuth 2 JWT] | 次の JSON Web トークン (JWT) プロファイルをサポートする属性が複数含まれます。 [OAuth 2.0 の認証](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 交付金 システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
+| [!UICONTROL OAuth 2 JWT] | [OAuth 2.0 認証 ](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 付与の JSON Web トークン（JWT）プロファイルをサポートするためのいくつかの属性が含まれています。 システムの指示に従って必要な情報を入力すると、指定した間隔でトークンの更新が行われます。 |
 | [!UICONTROL トークン] | 両方のシステムで認識および理解されている認証トークン値を表す単一の文字列。 |
 
 {style="table-layout:auto"}
@@ -123,37 +123,37 @@ OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**�
 
 ### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
-OAuth 2 JWT シークレットを作成するには、「 」を選択します。 **[!UICONTROL OAuth 2 JWT]** から **[!UICONTROL タイプ]** ドロップダウン。
+OAuth 2 JWT 秘密鍵を作成するには、「**[!UICONTROL タイプ]**」ドロップダウンから **[!UICONTROL OAuth 2 JWT]** を選択します。
 
-![The [!UICONTROL 秘密鍵を作成] 」タブに、 [!UICONTROL タイプ] ドロップダウン。](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![[!UICONTROL  タイプ ] ドロップダウンでハイライト表示された OAuth 2 JWT 秘密鍵を含む [!UICONTROL  秘密鍵を作成 ] タブ ](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
->唯一の [!UICONTROL アルゴリズム] JWT への署名が現在サポートされている RS256。
+>現在 JWT への署名でサポートされている [!UICONTROL  アルゴリズム ] は RS256 のみです。
 
-以下に表示されるフィールドで、 [!UICONTROL 発行者], [!UICONTROL 件名], [!UICONTROL 対象ユーザ], [!UICONTROL カスタム要求], [!UICONTROL TTL]を選択し、 [!UICONTROL アルゴリズム] をドロップダウンから選択します。 次に、 [!UICONTROL 秘密鍵 ID]、 、および [[!UICONTROL トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) OAuth 統合用。 The [!UICONTROL トークン URL] フィールドは必須フィールドではありません。 値を指定した場合、JWT はアクセストークンと交換されます。 この秘密は `expires_in` 属性を返します。 [!UICONTROL オフセットを更新] の値です。 値を指定しない場合、エッジにプッシュされる秘密鍵は JWT になります。 JWT は、 [!UICONTROL TTL] および [!UICONTROL オフセットを更新] 値。
+以下に表示されるフィールドに、[!UICONTROL  発行者 ]、[!UICONTROL  件名 ]、[!UICONTROL  オーディエンス ]、[!UICONTROL  カスタム要求 ]、[!UICONTROL TTL] を入力し、ドロップダウンから [!UICONTROL  アルゴリズム ] を選択します。 次に、OAuth 統合の [!UICONTROL  秘密鍵 ID] と [[!UICONTROL  トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) を入力します。 [!UICONTROL  トークン URL] フィールドは必須フィールドではありません。 値を指定すると、JWT がアクセストークンと交換されます。 秘密鍵は、応答の `expires_in` 属性と [!UICONTROL  更新オフセット ] 値に従って更新されます。 値を指定しない場合、エッジにプッシュされる秘密鍵は JWT です。 [!UICONTROL TTL] および [!UICONTROL  更新オフセット ] 値に従って JWT が更新されます。
 
-![The [!UICONTROL 秘密鍵を作成] タブ内で選択した入力フィールドがハイライト表示されています。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![ 入力フィールドの選択がハイライト表示された [!UICONTROL  秘密鍵を作成 ] タブ。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
-の下 **[!UICONTROL 秘密鍵証明書オプション]**&#x200B;を使用する場合、 `jwt_param` キーと値のペアの形式で書き込まれます。 キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
+**[!UICONTROL 認証情報オプション]** の下で、キーと値のペアの形式で `jwt_param` すなど、他の認証情報オプションを提供できます。 キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
 
-![The [!UICONTROL 秘密鍵を作成] タブハイライト [!UICONTROL 秘密鍵証明書オプション] フィールド。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![ 資格情報オプション  フィールドがハイライト表示された [!UICONTROL  秘密鍵を作成 ] タブ。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
 最後に、シークレットの&#x200B;**[!UICONTROL 更新オフセット]**&#x200B;値を設定できます。これは、トークンの有効期限が切れる前に、システムが自動更新を実行する秒数を表します。同等の時間（時間と分）がフィールドの右側に表示され、入力中に自動で更新されます。
 
-![The [!UICONTROL 秘密鍵を作成] タブハイライト [!UICONTROL オフセットを更新] フィールドに入力します。](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![ 「[!UICONTROL  オフセットを更新 ] フィールドをハイライト表示した [!UICONTROL  秘密鍵を作成 ] タブ ](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
-例えば、更新オフセットが `1800` （30 分）に設定され、アクセストークンに `expires_in` の値 `3600` （1 時間）の場合、1 時間でシークレットが自動的に更新されます。
+例えば、更新オフセットがデフォルト値の `1800` （30 分）に設定されていて、アクセストークンの `expires_in` 値が `3600` （1 時間）の場合、システムは 1 時間で自動的に秘密鍵を更新します。
 
 >[!IMPORTANT]
 >
->OAuth 2 JWT シークレットは、更新の間隔を 30 分以上にする必要があり、1 時間以上有効である必要があります。 この制限により、生成されたトークンに問題が発生した場合に介入するまでに最低 30 分かかります。
+>OAuth 2 JWT 秘密鍵は、更新間隔が 30 分以上で、1 時間以上も有効である必要があります。 この制限により、生成されたトークンで問題が発生した場合に介入するための時間が 30 分以上になります。
 >
->例えば、オフセットが `1800` （30 分）に設定され、アクセストークンに `expires_in` / `2700` （45 分）、結果として 30 分未満になる差異が原因で、交換が失敗する場合があります。
+>例えば、オフセットが `1800` （30 分）に設定されていて、アクセストークンの `expires_in` が `2700` （45 分）の場合、差分が 30 分未満となるため、交換は失敗します。
 
 終了したら、「**[!UICONTROL 秘密鍵の作秘]**」を選択し、秘密鍵を保存します。
 
-![The [!UICONTROL 秘密鍵を作成] タブのハイライト [!UICONTROL 秘密鍵を作成]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![ シークレットの作成 [!UICONTROL  がハイライト表示された ] シークレットの作成 [!UICONTROL  タブ ]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth2] {#google-oauth2}
 
@@ -180,35 +180,35 @@ Google アカウントの資格情報を入力するためのダイアログが�
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
-を作成するには、以下を実行します。 [!DNL LinkedIn] OAuth 2 シークレット、「 」を選択します。 **[!UICONTROL [!DNL LinkedIn]OAuth 2]** から **[!UICONTROL タイプ]** ドロップダウン。 次に、「 **[!UICONTROL 秘密鍵を作成]**.
+[!DNL LinkedIn] しい OAuth2 シークレットを作成す **[!UICONTROL [!DNL LinkedIn]には、「**[!UICONTROL  タイプ ]**」ドロップダウンから「OAuth2]**」を選択します。 次に、「秘密鍵を作成 **[!UICONTROL を選択し]** す。
 
-![The [!UICONTROL 秘密鍵を作成] タブに [!UICONTROL タイプ] フィールドがハイライト表示されました。](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+![[!UICONTROL  タイプ ] フィールドがハイライト表示された [!UICONTROL  秘密鍵を作成 ] タブ。](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
-を使用してシークレットを手動で認証する必要があることを示すポップオーバーが表示されます。 [!DNL LinkedIn]. 選択 **[!UICONTROL での秘密鍵の作成と認証[!DNL LinkedIn]]** をクリックして続行します。
+秘密鍵を [!DNL LinkedIn] で手動で認証する必要があることを示すポップオーバーが表示されます。 **[!UICONTROL [!DNL LinkedIn]]** で秘密鍵を作成して認証」を選択して続行します。
 
-![[!DNL LinkedIn] 認証ポップオーバーのハイライト [!UICONTROL での秘密鍵の作成と認証 [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+[!UICONTROL [!DNL LinkedIn]] で秘密鍵 ![[!DNL LinkedIn] 作成および認証 ](../../images/ui/event-forwarding/secrets/linkedin-authorization.png) をハイライト表示した認証ポップオーバー
 
-ダイアログが開き、 [!DNL LinkedIn] 認証情報。 画面の指示に従って、データへのイベント転送のアクセス権を付与します。
+[!DNL LinkedIn] 資格情報を入力するように求めるダイアログが表示されます。 画面の指示に従い、イベント転送にデータへのアクセスを許可します。
 
-承認プロセスが完了すると、 **[!UICONTROL 秘密]** タブに表示されます。新しく作成した暗号鍵を確認できます。 秘密鍵のステータスと有効期限を表示します。
+認証プロセスが完了すると、「**[!UICONTROL 秘密鍵]**」タブに戻り、新しく作成した秘密鍵を確認できます。 ここでは、秘密鍵のステータスと有効期限の日付を確認できます。
 
-![The [!UICONTROL 秘密鍵] タブで、新しく作成されたシークレットをハイライト表示します。](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+![ 新しく作成した秘密鍵がハイライト表示された [!UICONTROL  秘密鍵 ] タブ。](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### 再認証： [!UICONTROL [!DNL LinkedIn] OAuth 2] 秘密鍵
+#### [!UICONTROL [!DNL LinkedIn] OAuth 2] 秘密鍵の再認証
 
 >重要
 >
->を使用して再認証する必要があります [!DNL LinkedIn] 資格情報を 365 日ごとに設定します。 しばらくして再認証しない場合、シークレットは更新されず、 [!DNL LinkedIn] コンバージョンリクエストが失敗します。
+>365 日ごとに、[!DNL LinkedIn] 資格情報を使用して再認証する必要があります。 時間内に再認証しない場合、秘密鍵は更新されず、[!DNL LinkedIn] のコンバージョンリクエストは失敗します。
 
-再認証が必要な秘密鍵の 3 ヶ月前に、プロパティのページを移動する際にポップアップが表示され始めます。 選択 **[!UICONTROL ここをクリックして秘密鍵に移動]**.
+再認証が必要な秘密鍵の 3 か月前に、プロパティの任意のページを移動すると、ポップアップが表示され始めます。 **[!UICONTROL ここをクリックしてシークレットに移動]** を選択します。
 
-![The [!UICONTROL プロパティの概要] タブで秘密鍵の再認証ポップアップをハイライト表示します。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+![ 秘密鍵の再認証ポップアップをハイライト表示した [!UICONTROL  プロパティの概要 ] タブ。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
 
-次のページにリダイレクトされます： [!UICONTROL 秘密] タブをクリックします。 このページに表示される秘密鍵はフィルタリングされ、再認証が必要な秘密のみが表示されます。 選択 **[!UICONTROL 認証が必要です]** 再認証が必要な秘密鍵のためです。
+「[!UICONTROL  秘密鍵 ] タブにリダイレクトされます。 このページにリストされている秘密鍵は、再認証する必要がある秘密鍵のみを表示するようにフィルタリングされます。 再認証する必要がある秘密鍵の **[!UICONTROL 認証必要]** を選択します。
 
-![The [!UICONTROL 秘密鍵] タブのハイライト [!UICONTROL 認証が必要です]（の） [!DNL LinkedIn] 秘密。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![[!UICONTROL  [!DNL LinkedIn] ーザーシークレットの [!UICONTROL  認証が必要 ] を強調表示した ] シークレット ](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png) タブ
 
-ダイアログが開き、 [!DNL LinkedIn] 認証情報。 画面の指示に従って秘密鍵を再認証します。
+[!DNL LinkedIn] 資格情報を入力するよう求めるダイアログが表示されます。 画面の指示に従って、秘密鍵を再認証します。
 
 ## 秘密鍵の編集
 

@@ -1,94 +1,94 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；Db Visualizer;Db Visualizer;db visualizer；クエリサービスへの接続；
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；Query service;Db Visualizer;DbVisualizer;db Visulaizer；クエリサービスへの接続；
 solution: Experience Platform
-title: DbVisualizer をクエリサービスに接続
-description: このドキュメントでは、DbVisualizer とAdobe Experience Platform Query Service を接続する手順について説明します。
+title: DbVisualizer のクエリサービスへの接続
+description: ここでは、DbVisualizer をAdobe Experience Platform クエリサービスに接続する手順について説明します。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 6%
+source-wordcount: '891'
+ht-degree: 5%
 
 ---
 
-# 接続 [!DNL DbVisualizer] から [!DNL Query Service] {#connect-dbvisualizer}
+# [!DNL DbVisualizer] の [!DNL Query Service] への接続 {#connect-dbvisualizer}
 
-このドキュメントでは、 [!DNL DbVisualizer] Adobe Experience Platformのデータベースツール [!DNL Query Service].
+このドキュメントでは、[!DNL DbVisualizer] データベースツールをAdobe Experience Platform [!DNL Query Service] に接続する手順を説明します。
 
 ## はじめに
 
-このガイドでは、[!DNL DbVisualizer] Desktop アプリに既にアクセスしており、そのインターフェイスの操作方法に精通している必要があります。次の手順で [!DNL DbVisualizer] デスクトップアプリケーションまたは詳しくは、 [公式 [!DNL DbVisualizer] ドキュメント](https://www.dbvis.com/download/).
+このガイドでは、[!DNL DbVisualizer] Desktop アプリに既にアクセスしており、そのインターフェイスの操作方法に精通している必要があります。[!DNL DbVisualizer] デスクトップアプリケーションをダウンロードするには、または詳細情報については、[official [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/) を参照してください。
 
-[!DNL  DbVisualizer] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在クエリワークスペースへのアクセス権がない場合は、組織の管理者に問い合わせてください。
+[!DNL  DbVisualizer] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在、クエリワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ## データベース接続の作成 {#connect-database}
 
-デスクトップアプリケーションをローカルマシンにインストールしたら、BDVisualizer の公式手順に従って、 [新しいデータベース接続を作成する](https://confluence.dbvis.com/display/UG130/Create+a+New+Database+Connection).
+デスクトップアプリケーションをローカルマシンにインストールしたら、BDVisualizer の公式の手順に従って [ 新しいデータベース接続の作成 ](https://confluence.dbvis.com/display/UG130/Create+a+New+Database+Connection) を行います。
 
-次を選択したら、 **[!DNL PostgreSQL]** から [!DNL Connections] リスト、 [!DNL Object View] 新しい [!DNL PostgreSQL] 接続が表示されます。
+[!DNL Connections] リストから **[!DNL PostgreSQL]** を選択すると、新しい [!DNL PostgreSQL] 接続の [!DNL Object View] タブが表示されます。
 
-### 接続のドライバのプロパティを設定する {#properties}
+### 接続のドライバ プロパティを設定する {#properties}
 
-次の [!DNL PostgreSQL] 「オブジェクトビュー」タブで、 **[!DNL Properties]** タブに続いて、 **[!DNL Driver Properties]** ナビゲーションサイドバーから。 詳細情報： [ドライバーのプロパティ](https://confluence.dbvis.com/display/UG130/Configuring+Connection+Properties#ConfiguringConnectionProperties-DriverProperties) は公式ドキュメントに記載されています。
+「[!DNL PostgreSQL] object view」タブで、「**[!DNL Properties]**」タブを選択し、次にナビゲーション・サイドバーから **[!DNL Driver Properties]** を選択します。 [ ドライバーのプロパティ ](https://confluence.dbvis.com/display/UG130/Configuring+Connection+Properties#ConfiguringConnectionProperties-DriverProperties) について詳しくは、公式ドキュメントを参照してください。
 
-次に、以下の表に示すドライバのプロパティを入力します。
+次に、以下の表で説明されているドライバのプロパティを入力します。
 
 >[!IMPORTANT]
 >
->DBVisualizer をAdobe Experience Platformに接続するには、SSL の使用を有効にする必要があります。 詳しくは、 [SSL モードのドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
+>DBVisualizer をAdobe Experience Platformに接続するには、SSL の使用を有効にする必要があります。 Adobe Experience Platform クエリサービスへのサードパーティ接続での SSL サポートと、SSL モードを使用した接続方法については、[SSL モードのドキュメント ](./ssl-modes.md) を参照し `verify-full` ください。
 
 | プロパティ | 説明 |
 | ------ | ------ |
-| `PGHOST` | のホスト名 [!DNL PostgreSQL] サーバー。 この値はExperience Platform **[!UICONTROL ホスト] 資格情報**. |
-| `ssl` | SSL 値の定義 `1` をクリックして、SSL を使用できるようにします。 |
-| `sslmode` | SSL 保護のレベルを制御します。 次を使用することをお勧めします。 `require` サードパーティクライアントをAdobe Experience Platformに接続する際の SSL モード。 この `require` モードでは、すべての通信で暗号化が必要で、正しいサーバに接続するためにネットワークが信頼されていることを確認します。 サーバー SSL 証明書の検証は不要です。 |
-| `user` | データベースに接続されるユーザー名は組織 ID です。 これは、で終わる英数字の文字列です。 `@Adobe.Org`. この値はExperience Platform **[!UICONTROL ユーザー名] 資格情報**. |
+| `PGHOST` | [!DNL PostgreSQL] サーバーのホスト名。 この値はExperience Platform **[!UICONTROL ホスト ] 資格情報** です。 |
+| `ssl` | SSL 値 `1` を定義して、SSL の使用を有効にします。 |
+| `sslmode` | SSL 保護のレベルを制御します。 サードパーティクライアントをAdobe Experience Platformに接続する場合は、`require` SSL モードを使用することをお勧めします。 `require` モードを使用すると、すべての通信で暗号化が必要になり、ネットワークが正しいサーバーに接続するために信頼されます。 サーバー SSL 証明書の検証は不要です。 |
+| `user` | データベースに接続するユーザー名は組織 ID です。 `@Adobe.Org` で終わる英数字の文字列です。 この値はExperience Platformの **[!UICONTROL ユーザー名 ] 資格情報** です。 |
 
-検索バーを使用して各プロパティを検索し、パラメーターの値に対応するセルを選択します。 セルが青でハイライト表示されます。 「値」フィールドに Platform の資格情報を入力し、「 」を選択します。 **[!DNL Apply]** をクリックして、driver プロパティを追加します。
+検索バーを使用して各プロパティを検索し、パラメーター値に対応するセルを選択します。 セルが青でハイライト表示されます。 Platform の資格情報を「値」フィールドに入力し、「**[!DNL Apply]**」を選択してドライバープロパティを追加します。
 
 >[!NOTE]
 >
->秒を追加するには `user` プロファイル、選択 `user` 「パラメーター」列で、青い+（プラス）アイコンを選択して、各ユーザーの資格情報を追加します。 選択 **[!DNL Apply]** をクリックして、driver プロパティを追加します。
+>2 つ目の `user` プロファイルを追加するには、パラメーター列で `user` を選択し、青い+（プラス）アイコンを選択して、各ユーザーの資格情報を追加します。 「**[!DNL Apply]**」を選択して、ドライバのプロパティを追加します。
 
-この [!DNL Edited] 列には、パラメータ値が更新されたことを示すチェックマークが表示されます。
+[!DNL Edited] の列には、パラメーター値が更新されたことを示すチェックマークが表示されます。
 
-### クエリサービスの資格情報を入力 {#query-service-credentials}
+### クエリサービス資格情報を入力 {#query-service-credentials}
 
-BBVisualizer をクエリサービスに接続するために必要な資格情報を見つけるには、Platform UI にログインし、「 」を選択します。 **[!UICONTROL クエリ]** 左のナビゲーションから、の後に **[!UICONTROL 資格情報]**. の検索方法の詳細 **ホスト**, **ポート**, **データベース**, **ユーザー名**、および **パスワード** 認証情報、お読みください [資格情報ガイド](../ui/credentials.md).
+BBVisualizer をクエリサービスに接続するために必要な資格情報を見つけるには、Platform UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 **host**、**port**、**database**、**username** および **password** 資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。
 
-![「認証情報クエリ」ワークスペースの「Experience Platform」ページ（「認証情報」と「有効期限」がハイライト表示されています）。](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![ 資格情報と期限切れになる資格情報がハイライト表示されているExperience Platformクエリワークスペースの「資格情報」ページ ](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >
->[!DNL Query Service] また、は、期限切れでない資格情報を提供して、サードパーティクライアントとの 1 回限りのセットアップを可能にします。 詳しくは、 [有効期限のない資格情報の生成および使用方法に関する完全な手順](../ui/credentials.md#non-expiring-credentials). BDVisualizer を 1 回限りのセットアップとして接続する場合は、このプロセスを完了する必要があります。 この `credential` および `technicalAccountId` 取得した値が DBVisualizer の値を構成します `password` パラメーター。
+>[!DNL Query Service] では、有効期限のない資格情報も提供され、サードパーティのクライアントとの 1 回限りのセットアップが可能になります。 詳しくは、ドキュメント [ 有効期限のない資格情報の生成と使用の方法に関する完全な手順 ](../ui/credentials.md#non-expiring-credentials) を参照してください。 BDVisualizer を 1 回限りの設定として接続する場合は、このプロセスを完了する必要があります。 取得される `credential` と `technicalAccountId` の値は、DBVisualizer `password` パラメーターの値を構成します。
 
 ## 認証 {#authentication}
 
-接続が確立されるたびにユーザー ID とパスワードベースの認証を要求するには、 [!DNL Properties] 「 」タブで「 」を選択します。 **[!DNL Authentication]** 下のナビゲーションサイドバーから、 [!DNL PostgreSQL].
+接続が確立されるたびにユーザー ID とパスワードベースの認証を要求するには、「[!DNL Properties]」タブに移動し、[!DNL PostgreSQL] の下のナビゲーションサイドバーから **[!DNL Authentication]** を選択します。
 
-接続認証パネルで、 **[!DNL Require Userid]** および **[!DNL Require Password]** チェックボックスをオンにしてから、 **[!DNL Apply]**. 詳細情報： [認証オプションの設定](https://confluence.dbvis.com/display/UG140/Setting+Common+Authentication+Options) は、公式ドキュメントを参照してください。
+接続認証パネルで、「**[!DNL Require Userid]**」チェックボックスと「**[!DNL Require Password]**」チェックボックスの両方をオンにし、「**[!DNL Apply]**」を選択します。 [ 認証オプションの設定 ](https://confluence.dbvis.com/display/UG140/Setting+Common+Authentication+Options) について詳しくは、公式ドキュメントを参照してください。
 
-##  を Platform に接続
+## を Platform に接続
 
-接続は、有効期限切れまたは期限切れでない資格情報を使用しておこなえます。 接続するには、 **[!DNL Connection]** タブ [!DNL PostgreSQL] 「オブジェクト表示」タブに移動し、次の設定のExperience Platform資格情報を入力します。 補足的な指示 [手動接続の設定](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually) 公式の DBVisualizer の Web サイトで入手できます。
+有効期限のある資格情報や、有効期限のない資格情報を使用して接続を作成できます。 接続を確立するには、「オブジェクトの [!DNL PostgreSQL] 示」タブから「**[!DNL Connection]**」タブを選択し、次の設定のExperience Platform資格情報を入力します。 [ 手動接続の設定 ](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually) を補完する手順は、DBVisualizer の公式 Web サイトで入手できます。
 
 >[!NOTE]
 >
->以下の表に示す BDVisualizer に必要な資格情報は、パラメーターの説明に記載されていない限り、資格情報の有効期限と有効期限が切れない場合に同じです。
+>以下の表の BDVisualizer に必要なすべての資格情報は、パラメーターの説明に記載されていない限り、有効期限が切れる資格情報と有効期限が切れない資格情報で同じです。
 
 | 接続パラメーター | 説明 |
 |---|---|
-| **[!UICONTROL 名前]** | 接続の名前を作成します。 接続を認識する人間にわかりやすい名前を付けることをお勧めします。 |
-| **[!UICONTROL データベースサーバ]** | これがExperience Platform **[!UICONTROL ホスト]** 資格情報。 |
-| **[!UICONTROL データベースポート]** | のポート [!DNL Query Service]. ポートを使用する必要があります **80** または **5432** ～とつながる [!DNL Query Service]. |
-| **[!UICONTROL データベース]** | Experience Platform **[!UICONTROL データベース]** 資格情報の値： `prod:all`. |
-| **[!UICONTROL データベースユーザ ID]** | これは Platform 組織 ID です。 Experience Platform **[!UICONTROL ユーザー名]** 資格情報の値。 ID は、 `ORG_ID@AdobeOrg`. |
-| **[!UICONTROL データベースのパスワード]** | この英数字の文字列はExperience Platform **[!UICONTROL パスワード]** 資格情報。 有効期限のない資格情報を使用する場合、この値は `technicalAccountID` そして `credential` 設定 JSON ファイルにダウンロードされました。 パスワードの値は次の形式で指定します。{technicalAccountId}:{credential}。 有効期限のない資格情報の設定 JSON ファイルは、Adobeがのコピーを保持しない、初期化中に 1 回限りのダウンロードです。 |
+| **[!UICONTROL 名前]** | 接続の名前を作成します。 接続を認識するために、人間にとってわかりやすい名前を指定することをお勧めします。 |
+| **[!UICONTROL データベースサーバー]** | これはExperience Platform **[!UICONTROL ホスト]** 資格情報です。 |
+| **[!UICONTROL データベースポート]** | [!DNL Query Service] のポート。 [!DNL Query Service] に接続するには、ポート **80** または **5432** を使用する必要があります。 |
+| **[!UICONTROL データベース]** | Experience Platform **[!UICONTROL データベース]** 資格情報の値 `prod:all` を使用します。 |
+| **[!UICONTROL データベース ユーザー ID]** | これは Platform 組織 ID です。 Experience Platform **[!UICONTROL ユーザー名]** の資格情報の値を使用します。 ID は、`ORG_ID@AdobeOrg` の形式になります。 |
+| **[!UICONTROL データベース パスワード]** | この英数字の文字列は、Experience Platformの **[!UICONTROL パスワード]** 資格情報です。 有効期限のない認証情報を使用する場合、この値は `technicalAccountID` からの連結引数と、設定 JSON ファイルでダウンロードされた `credential` です。 パスワードの値は {technicalAccountId}:{credential} 形式で指定します。 有効期限のない資格情報用の設定 JSON ファイルは、Adobeがコピーを保持しない、初期化中の 1 回限りのダウンロードです。 |
 
-関連するすべての資格情報を入力したら、「 」を選択します。 **[!DNL Connect]**.
+関連するすべての資格情報を入力したら、「**[!DNL Connect]**」を選択します。
 
-この [!DNL Connect] このセッションの最初の日にダイアログが表示されます。 ユーザー ID とパスワードを入力し、「 」を選択します。 **[!DNL Connect]**. 接続が成功したことを確認するメッセージがログに表示されます。
+セッションの初回に [!DNL Connect] ダイアログが表示されます。 ユーザー ID とパスワードを入力し、「**[!DNL Connect]**」を選択します。 接続が成功したことを確認するメッセージがログに表示されます。
 
 ## 次の手順
 
-これで、 [!DNL DbVisualizer] と [!DNL Query Service]を使用する場合、 [!DNL DbVisualizer] クエリを書き込みます。 クエリの書き込みと実行の方法について詳しくは、 [クエリ実行のガイド](../best-practices/writing-queries.md).
+[!DNL DbVisualizer] と [!DNL Query Service] を接続したので、[!DNL DbVisualizer] を使用してクエリを記述できます。 クエリの作成および実行方法について詳しくは、[ クエリの実行に関するガイド ](../best-practices/writing-queries.md) を参照してください。

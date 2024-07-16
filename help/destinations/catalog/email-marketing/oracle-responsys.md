@@ -14,9 +14,9 @@ ht-degree: 46%
 
 ## 概要 {#overview}
 
-[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) は、が提供するクロスチャネルマーケティングキャンペーン用のエンタープライズ電子メールマーケティングツールです。 [!DNL Oracle] メール、モバイル、ディスプレイ、ソーシャルをまたいでインタラクションをパーソナライズします。
+[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) は、[!DNL Oracle] がメール、モバイル、ディスプレイ、ソーシャルをまたいでインタラクションをパーソナライズするために提供する、クロスチャネルマーケティングキャンペーン用のエンタープライズ電子メールマーケティングツールです。
 
-オーディエンスデータをに送信するには [!DNL Oracle Responsys]、最初にする必要があります [宛先への接続](#connect-destination) （Adobe Experience Platform内） [データインポートの設定](#import-data-into-responsys) ストレージの場所から [!DNL Oracle Responsys].
+オーディエンスデータを [!DNL Oracle Responsys] に送信するには、まずAdobe Experience Platformで [ 宛先に接続 ](#connect-destination) してから、ストレージの場所から [!DNL Oracle Responsys] に [ データの読み込みを設定 ](#import-data-into-responsys) する必要があります。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -24,7 +24,7 @@ ht-degree: 46%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -44,40 +44,40 @@ ht-degree: 46%
 
 Adobeでは、SFTP ストレージを使用してメールマーケティングの宛先を設定する場合、特定の IP 範囲を許可リストに追加することをお勧めします。
 
-こちらを参照してください [SFTP 宛先の IP アドレスの許可リスト](../cloud-storage/ip-address-allow-list.md) 許可リストにAdobeIP を追加する必要がある場合。
+許可リストにAdobeIP を許可リストする必要がある場合は ](../cloud-storage/ip-address-allow-list.md) [SFTP 宛先の IP アドレス追加」を参照してください。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
 この宛先は、次の接続タイプをサポートしています。
 
-* **[!UICONTROL パスワード付き SFTP]**
+* **[!UICONTROL パスワードを使用した SFTP]**
 * **[!UICONTROL SSH キーを使用した SFTP]**
 
 ### 接続パラメーター {#parameters}
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* の場合 **[!UICONTROL パスワード付き SFTP]** 接続。次を指定する必要があります。
+* **[!UICONTROL パスワード付き SFTP]** 接続の場合は、次を指定する必要があります。
    * [!UICONTROL ドメイン]
    * [!UICONTROL ポート]
    * [!UICONTROL ユーザー名]
    * [!UICONTROL パスワード]
-* の場合 **[!UICONTROL SSH キーを使用した SFTP]** 接続。次を指定する必要があります。
+* SSH キーを使用した **[!UICONTROL SFTP]** 接続の場合は、次を指定する必要があります。
    * [!UICONTROL ドメイン]
    * [!UICONTROL ポート]
    * [!UICONTROL ユーザー名]
-   * [!UICONTROL SSH キー]
-* 必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに PGP/GPG による暗号化をの下に追加できます。 **[!UICONTROL キー]** セクション。 公開鍵は、[!DNL Base64] でエンコードされた文字列として記述する必要があります。
+   * [!UICONTROL SSH キー ]
+* 必要に応じて、RSA 形式の公開鍵を添付して、「**[!UICONTROL キー]**」セクションで書き出したファイルに PGP/GPG による暗号化を追加できます。 公開鍵は、[!DNL Base64] でエンコードされた文字列として記述する必要があります。
 * **[!UICONTROL 名前]**：宛先の名前を選択します。
 * **[!UICONTROL 説明]**：宛先の説明を入力します。
-* **[!UICONTROL フォルダーパス]**:Platform が書き出しデータを CSV ファイルとして保存するストレージの場所のパスを指定します。
-* **[!UICONTROL ファイル形式]**：を選択 **CSV** CSV ファイルをストレージの場所に書き出す。
+* **[!UICONTROL フォルダーパス]**：書き出しデータを CSV ファイルとして保存するストレージの場所のパスを指定します。
+* **[!UICONTROL ファイル形式]**: **CSV** を選択して、CSV ファイルをストレージの場所に書き出します。
 
 <!--
 
@@ -97,19 +97,19 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* エクスポートする *id*、が必要です **[!UICONTROL ID グラフの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png "宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-参照： [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](../../ui/activate-batch-profile-destinations.md) この宛先に対してオーディエンスをアクティブ化する手順については、を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 ### 宛先属性 {#destination-attributes}
 
-この宛先に対してオーディエンスをアクティブ化する場合、Adobeでは、 [結合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas). 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、次を参照してください。 [メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス](overview.md#best-practices).
+この宛先に対してオーディエンスをアクティブ化する場合、Adobeでは [ 和集合スキーマ ](../../../profile/home.md#profile-fragments-and-union-schemas) から一意の ID を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、[ メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス ](overview.md#best-practices) を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Oracle Responsys] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルの詳細については、を参照してください [audience activation の検証](../../ui/activate-batch-profile-destinations.md#verify) オーディエンスのアクティベーションのチュートリアルの
+[!DNL Oracle Responsys] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 ](../../ui/activate-batch-profile-destinations.md#verify) を参照してください。
 
-## へのデータの読み込みを設定 [!DNL Oracle Responsys] {#import-data-into-responsys}
+## [!DNL Oracle Responsys] へのデータの読み込みの設定 {#import-data-into-responsys}
 
-接続後 [!DNL Platform] 宛先： [!DNL SFTP] ストレージ。ストレージの場所からへのデータの読み込みを設定する必要があります [!DNL Oracle Responsys]. これを実行する方法については、を参照してください。 [連絡先またはアカウントのインポート](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) が含まれる [!DNL Oracle Responsys Help Center].
+[!DNL Platform] を [!DNL SFTP] ストレージに接続した後、ストレージの場所から [!DNL Oracle Responsys] へのデータの読み込みを設定する必要があります。 これを実行する方法については、[!DNL Oracle Responsys Help Center] の [ 連絡先またはアカウントの読み込み ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) を参照してください。

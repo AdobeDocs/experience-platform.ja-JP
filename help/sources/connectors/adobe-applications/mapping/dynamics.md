@@ -1,11 +1,11 @@
 ---
 title: Microsoft Dynamics マッピングフィールド
-description: 以下の表に、Microsoft Dynamics ソースフィールドと、対応する XDM フィールドとのマッピングを示します。
+description: Microsoft Dynamics ソースフィールドとそれに対応する XDM フィールドとのマッピングを次の表に示します。
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 38%
+source-wordcount: '499'
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 38%
 
 ## 連絡先 {#contacts}
 
-| ソースフィールド | Target XDM フィールド | メモ |
+| ソースフィールド | ターゲット XDM フィールド | メモ |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -43,7 +43,7 @@ ht-degree: 38%
 | `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |
 | `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
-| `emailaddress1` | `workEmail.address` | セカンダリの識別子。 |
+| `emailaddress1` | `workEmail.address` | セカンダリ識別子。 |
 | `emailaddress2` | `personalEmail.address` |
 | `emailaddress1` | `personComponents.workEmail.address` |
 | `firstname` | `person.name.firstName` |
@@ -60,7 +60,7 @@ ht-degree: 38%
 
 ## リード数 {#leads}
 
-| ソースフィールド | Target XDM フィールド | メモ |
+| ソースフィールド | ターゲット XDM フィールド | メモ |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -99,7 +99,7 @@ ht-degree: 38%
 
 ## アカウント {#accounts}
 
-| ソースフィールド | Target XDM フィールド | メモ |
+| ソースフィールド | ターゲット XDM フィールド | メモ |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
@@ -136,7 +136,7 @@ ht-degree: 38%
 
 ## 商談 {#opportunities}
 
-| ソースフィールド | Target XDM フィールド | メモ |
+| ソースフィールド | ターゲット XDM フィールド | メモ |
 | --- | --- | --- |
 | `name` | `opportunityName` |
 | `"Dynamics"` | `opportunityKey.sourceType` |
@@ -160,7 +160,7 @@ ht-degree: 38%
 
 ## 商談連絡先の役割 {#opportunity-contact-roles}
 
-| ソースフィールド | Target XDM フィールド | メモ |
+| ソースフィールド | ターゲット XDM フィールド | メモ |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
@@ -171,14 +171,14 @@ ht-degree: 38%
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* 付録の「 [候補リストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法](#picklist-type-fields) を参照してください。 | 使用可能なおよびの値とラベルのリスト `record1objecttypecode` ソースフィールドについては、次を参照してください。 [[!DNL Microsoft Dynamics] 接続エンティティ参照ドキュメント](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* 付録の「 [候補リストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法](#picklist-type-fields) を参照してください。 | 使用可能なおよびの値とラベルのリスト `record2objecttypecode` ソースフィールドについては、次を参照してください。 [[!DNL Microsoft Dynamics] 接続エンティティ参照ドキュメント](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* しくは、付録の節を参照して、[ ピックリストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法 ](#picklist-type-fields) の手順を確認してください。 | `record1objecttypecode` ソースフィールドで使用可能なおよび値とラベルのリストについては、この [[!DNL Microsoft Dynamics]  接続エンティティ参照ドキュメント ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options) を参照してください。 |
+| `record2objecttypecode` | *カスタムフィールドグループは、ターゲットスキーマとして定義する必要があります。* しくは、付録の節を参照して、[ ピックリストタイプのソースフィールドをターゲット XDM スキーマにマッピングする方法 ](#picklist-type-fields) の手順を確認してください。 | `record2objecttypecode` ソースフィールドで使用可能なおよび値とラベルのリストについては、この [[!DNL Microsoft Dynamics]  接続エンティティ参照ドキュメント ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options) を参照してください。 |
 
 {style="table-layout:auto"}
 
 ## キャンペーン {#campaigns}
 
-| ソースフィールド | Target XDM フィールド | メモ |
+| ソースフィールド | ターゲット XDM フィールド | メモ |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
@@ -203,7 +203,7 @@ ht-degree: 38%
 
 ## マーケティングリスト {#marketing-list}
 
-| ソースフィールド | Target XDM フィールド | メモ |
+| ソースフィールド | ターゲット XDM フィールド | メモ |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
@@ -216,9 +216,9 @@ ht-degree: 38%
 
 {style="table-layout:auto"}
 
-## マーケティングリストメンバー {#marketing-list-members}
+## マーケティングリストのメンバー {#marketing-list-members}
 
-| ソースフィールド | Target XDM フィールド | メモ |
+| ソースフィールド | ターゲット XDM フィールド | メモ |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | `"${CRM_ORG_ID}"` の値は自動的に置き換えられます。 |
@@ -232,37 +232,37 @@ ht-degree: 38%
 
 ## 付録
 
-以下の節では、 [!DNL Microsoft] Dynamics ソース。
+以下の節では、[!DNL Microsoft] Dynamics ソースに対して B2B マッピングを設定する際に使用できる追加情報を示します。
 
-### 候補リストタイプのフィールド {#picklist-type-fields}
+### 選択リストタイプフィールド {#picklist-type-fields}
 
-以下を使用できます。 [計算フィールド](../../../../data-prep/ui/mapping.md#calculated-fields) 候補リストタイプのソースフィールドを [!DNL Microsoft Dynamics] を target XDM フィールドに追加します。
+[ 計算フィールド ](../../../../data-prep/ui/mapping.md#calculated-fields) を使用して、[!DNL Microsoft Dynamics] からターゲット XDM フィールドにピックリストタイプのソースフィールドをマッピングできます。
 
-例えば、 `genderCode` フィールドには次の 2 つのオプションが含まれます。
+例えば、「`genderCode`」フィールドには、次の 2 つのオプションが含まれています。
 
 | 値 | ラベル |
 | --- | --- |
 | 1 | `male` |
 | 2 | `female` |
 
-次のオプションを使用して、 `genderCode` ソースフィールド `person.gender` ターゲットフィールド：
+次のオプションを使用して、`genderCode` ソースフィールドをターゲットフィールドにマッピング `person.gender` きます。
 
 #### 論理演算子を使用
 
-| ソースフィールド | Target XDM フィールド |
+| ソースフィールド | ターゲット XDM フィールド |
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-このシナリオでは、キーがオプションで見つかった場合は値がキーに対応し、見つかった場合は値がキーに対応します。 `default`、 `default` が存在し、キーが見つかりません。 値は、に対応します。 `null` オプションの場合 `null` または `default` キーが見つかりません。
+このシナリオでは、値は、キーがオプションにある場合はキーに対応し、キーが存在し `default` 見つからない場合は `default` に対応します。 オプションが `null` の場合、または `default` がなくキーが見つからない場合、値は `null` に対応します。
 
-#### 計算フィールドを使用
+#### 計算フィールドの使用
 
-| ソースフィールド | Target XDM フィールド |
+| ソースフィールド | ターゲット XDM フィールド |
 | --- | --- |
 | `iif(gendercode.equals("1"),"male",iif(gendercode.equals("2"),"female",null))` | `person.gender` |
 
 >[!TIP]
 >
->上記の操作のネストされた反復は、次のようになります。 `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+>上記の操作のネストされたイテレーションは、次のようになります。`iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`
 
-詳しくは、 [の論理演算子のドキュメント [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+詳しくは、 [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators) の論理演算子に関するドキュメント [ を参照してください。

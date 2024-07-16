@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；veeva crm;Veeva CRM;Veeva;
+keywords: Experience Platform；ホーム；人気のトピック；veeva crm;Veeva CRM;Veeva;
 solution: Experience Platform
-title: フローサービス API を使用した Veeva CRM ベース接続の作成
+title: Flow Service API を使用した Veeva CRM ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを Veeva CRM に接続する方法を説明します。
+description: Flow Service API を使用してAdobe Experience Platformを Veeva CRM に接続する方法を説明します。
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '497'
 ht-degree: 78%
 
 ---
@@ -33,13 +33,13 @@ ht-degree: 78%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `environmentUrl` | の URL [!DNL Veeva CRM] インスタンス。 |
-| `username` | ユーザー名の値 [!DNL Veeva CRM] アカウント |
-| `password` | パスワードの値 [!DNL Veeva CRM] アカウント |
-| `securityToken` | のセキュリティトークン [!DNL Veeva CRM] インスタンス。 |
+| `environmentUrl` | [!DNL Veeva CRM] インスタンスの URL。 |
+| `username` | [!DNL Veeva CRM] アカウントのユーザー名の値。 |
+| `password` | [!DNL Veeva CRM] アカウントのパスワード値。 |
+| `securityToken` | [!DNL Veeva CRM] インスタンスのセキュリティトークン。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Veeva CRM] の接続仕様 ID は `fcad62f3-09b0-41d3-be11-449d5a621b69` です。 |
 
-これらの値について詳しくは、 [[!DNL Veeva CRM] 文書](https://developer.veevacrm.com/doc/Content/rest-api.htm).
+これらの値について詳しくは、この [[!DNL Veeva CRM]  ドキュメント ](https://developer.veevacrm.com/doc/Content/rest-api.htm) を参照してください。
 
 ### Platform API の使用
 
@@ -93,10 +93,10 @@ curl -X POST \
 | `name` | [!DNL Veeva CRM] ベース接続名。この名前を使用して、[!DNL Veeva CRM] ベース接続を検索できます。 |
 | `description` | [!DNL Veeva CRM] ベース接続のオプション説明。 |
 | `auth.specName` | 接続に使用する認証タイプ。 |
-| `auth.params.environmentUrl` | の URL [!DNL Veeva CRM] インスタンス。 |
-| `auth.params.username` | ユーザー名の値 [!DNL Veeva CRM] アカウント |
-| `auth.params.password` | パスワードの値 [!DNL Veeva CRM] アカウント |
-| `auth.params.securityToken` | のセキュリティトークン [!DNL Veeva CRM] インスタンス。 |
+| `auth.params.environmentUrl` | [!DNL Veeva CRM] インスタンスの URL。 |
+| `auth.params.username` | [!DNL Veeva CRM] アカウントのユーザー名の値。 |
+| `auth.params.password` | [!DNL Veeva CRM] アカウントのパスワード値。 |
+| `auth.params.securityToken` | [!DNL Veeva CRM] インスタンスのセキュリティトークン。 |
 | `connectionSpec.id` | [!DNL Veeva CRM] の接続仕様 ID は `fcad62f3-09b0-41d3-be11-449d5a621b69` です。 |
 
 **応答**
@@ -117,4 +117,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Veeva CRM] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/crm.md)
+* [ [!DNL Flow Service] API を使用した、CRM データを Platform に取り込むデータフローの作成](../../collect/crm.md)

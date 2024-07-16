@@ -5,11 +5,11 @@ exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
-# イベントタイプ （web 拡張機能）
+# Web 拡張機能のイベントタイプ
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 98%
 
 イベントタイプは拡張機能で定義され、通常は次の要素で構成されます。
 
-1. A [表示](./views.md) イベントの設定を変更できるExperience PlatformUI およびデータ収集 UI 内に表示されます。
+1. Experience PlatformUI とデータ収集 UI に表示される [ ビュー ](./views.md)。イベントの設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、特定のアクティビティが発生するのを監視します。
 
 `module.exports` は、`settings` と `trigger` の両方のパラメーターを受け入れます。これにより、イベントタイプをカスタマイズできます。

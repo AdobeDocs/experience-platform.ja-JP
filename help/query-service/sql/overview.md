@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；SQL;SQL 参照；
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；Query service;sql;sql リファレンス；
 solution: Experience Platform
 title: クエリサービス SQL リファレンス
-description: Adobe Experience Platformクエリサービスは、標準の ANSI SQL を SELECT 文やその他の制限付きコマンドに使用する機能を提供します。
+description: Adobe Experience Platform クエリサービスでは、SELECT ステートメントやその他の制限付きコマンドに標準の ANSI SQL を使用できます。
 exl-id: 81d7d440-c51b-46a8-8690-0c0637826077
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # クエリサービス SQL リファレンス
 
-[!DNL Query Service] には、標準の ANSI SQL を `SELECT` ステートメントおよびその他の制限付きコマンド [!DNL Query Service] には、データ定義言語やデータ操作言語の機能は含まれていません。 サービスを通じてクエリされるデータは、 [!DNL Experience Data Lake]：主に不変データセットを含みます。
+[!DNL Query Service] は、`SELECT` 文やその他の制限付きコマンドに標準の ANSI SQL を使用する機能を提供します。 [!DNL Query Service] には、データ定義言語またはデータ操作言語機能は含まれていません。 サービスを介してクエリされたデータは、ほとんど不変のデータセットを含む [!DNL Experience Data Lake] から取得されます。

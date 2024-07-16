@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
+keywords: Experience Platform；ホーム；人気のトピック；IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
-title: IBMの作成 [!DNL IBM DB2] フローサービス API を使用したベース接続
+title: Flow Service API を使用したIBM [!DNL IBM DB2]  ベース接続の作成
 type: Tutorial
-description: IBMの接続方法を学ぶ [!DNL IBM DB2] フローサービス API を使用してAdobe Experience Platformに送信する。
+description: Flow Service API を使用してIBM [!DNL IBM DB2] Adobe Experience Platformを接続する方法について説明します。
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 48%
+source-wordcount: '458'
+ht-degree: 49%
 
 ---
 
-# IBMの作成 [!DNL IBM DB2] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用したIBM [!DNL IBM DB2] ベース接続の作成
 
 >[!NOTE]
 >
->ザIBM [!DNL IBM DB2] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
+>IBM [!DNL IBM DB2] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -26,20 +26,20 @@ ht-degree: 48%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ ソース ](../../../../home.md):[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL IBM DB2] の使用 [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL IBM DB2] ています。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `server` | の名前 [!DNL IBM DB2] サーバー。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例： server:port |
-| `database` | の名前 [!DNL IBM DB2] データベース。 |
-| `username` | に接続する際に使用するユーザー名 [!DNL IBM DB2] データベース。 |
+| `server` | [!DNL IBM DB2] サーバーの名前。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例：server:port |
+| `database` | [!DNL IBM DB2] データベースの名前。 |
+| `username` | [!DNL IBM DB2] データベースへの接続に使用するユーザー名。 |
 | `password` | ユーザー名に指定したユーザーアカウントのパスワード。 |
-| `connectionSpec.id` | 接続の作成に必要な一意の識別子。 の接続仕様 ID [!DNL IBM DB2] 次に該当 `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | 接続の作成に必要な一意の ID。 [!DNL IBM DB2] の接続仕様 ID は `09182899-b429-40c9-a15a-bf3ddbc8ced7` です。 |
 
-の導入について詳しくは、 [この [!DNL IBM DB2] 文書](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
+基本について詳しくは、[ このドキュメント  [!DNL IBM DB2]  を参照してください ](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html)。
 
 ### Platform API の使用
 
@@ -91,8 +91,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 次に示すように、 [!DNL IBM DB2] アカウント。 |
-| `connectionSpec.id` | The [!DNL IBM DB2] 接続仕様 ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `auth.params.connectionString` | [!DNL IBM DB2] アカウントに関連付けられた接続文字列。 |
+| `connectionSpec.id` | [!DNL IBM DB2] 接続仕様 ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`。 |
 
 **応答**
 
@@ -110,5 +110,5 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL IBM DB2] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)
 

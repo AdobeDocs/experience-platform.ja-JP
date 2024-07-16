@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；xdm；エクスペリエンスデータモデル；名前空間；名前空間；互換性モード；xed;
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；xdm;experience data model；名前空間；名前空間；互換モード；xed;
 solution: Experience Platform
-title: エクスペリエンスデータモデル (XDM) での名前空間
-description: Experience Data Model(XDM) の名前空間でスキーマを拡張し、異なるスキーマコンポーネントが統合される際にフィールドの競合を防ぐ方法について説明します。
+title: エクスペリエンスデータモデル（XDM）の名前空間
+description: エクスペリエンスデータモデル（XDM）の名前空間を使用して、スキーマを拡張し、様々なスキーマコンポーネントが統合されたときにフィールドの競合を防ぐ方法について説明します。
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
 workflow-type: tm+mt
@@ -11,29 +11,29 @@ ht-degree: 1%
 
 ---
 
-# エクスペリエンスデータモデル (XDM) での名前空間
+# エクスペリエンスデータモデル（XDM）の名前空間
 
 >[!IMPORTANT]
 >
->XDM では、名前空間（このページのトピック）を使用して、スキーマ内のフィールドを区別します。 これは、ID サービスの ID 名前空間の概念とは異なります。ID サービスでは、名前空間を使用して ID 値を区別します。 ドキュメントを読む [ID サービスの名前空間](../../identity-service/features/namespaces.md) を参照してください。
+>XDM では、名前空間（このページのトピック）をスキーマ内のフィールドの区別に使用します。 これは、名前空間を使用して ID 値を区別する ID サービスの ID 名前空間の概念とは異なります。 詳しくは、[ID サービスの名前空間 ](../../identity-service/features/namespaces.md) に関するドキュメントを参照してください。
 
-エクスペリエンスデータモデル (XDM) スキーマのすべてのフィールドには、関連する名前空間があります。 これらの名前空間を使用すると、異なるスキーマコンポーネントが統合される際に、スキーマを拡張し、フィールドの競合を防ぐことができます。 このドキュメントでは、XDM の名前空間の概要と、 [スキーマレジストリ API](../api/overview.md).
+エクスペリエンスデータモデル（XDM）スキーマのすべてのフィールドには、名前空間が関連付けられています。 これらの名前空間を使用すると、スキーマを拡張し、様々なスキーマコンポーネントが統合されてフィールドの競合を防ぐことができます。 このドキュメントでは、XDM の名前空間の概要と、[ スキーマレジストリ API](../api/overview.md) での表現方法について説明します。
 
-名前空間を使用すると、ある名前空間でフィールドを、別の名前空間で同じフィールドとは異なる意味として定義できます。 実際には、フィールドの名前空間は、フィールドの作成者 ( 標準 XDM(Adobe)、ベンダー、組織など ) を示します。
+名前空間を使用すると、ある名前空間のフィールドを、別の名前空間の同じフィールドとは異なるものを意味するように定義できます。 実際には、フィールドの名前空間は、フィールドを作成したユーザー（標準 XDM （Adobe）、ベンダー、組織など）を示します。
 
-例えば、 [[!UICONTROL 個人の連絡先の詳細] フィールドグループ](../field-groups/profile/demographic-details.md)( 標準の `mobilePhone` 次に存在するフィールド： `xdm` 名前空間。 同じスキーマ内で、別の `mobilePhone` 別の名前空間 ( [テナント ID](../api/getting-started.md#know-your-tenant_id)) をクリックします。 これらのフィールドは、基本的な意味や制約が異なる間に共存することができます。
+例えば、[[!UICONTROL  個人の連絡先の詳細 ] フィールドグループ ](../field-groups/profile/demographic-details.md) を使用する XDM スキーマについて考えてみます。このフィールドグループには、`xdm` 名前空間に存在する標準の `mobilePhone` フィールドがあります。 同じスキーマ内で、別の名前空間（[ テナント ID](../api/getting-started.md#know-your-tenant_id)）の下に別の `mobilePhone` フィールドを自由に作成することもできます。 これらのフィールドは両方とも混在でき、基盤となる様々な意味や制約を持つことができます。
 
 ## 名前空間の構文
 
-次の節では、XDM 構文で名前空間を割り当てる方法を示します。
+以下の節では、XDM 構文での名前空間の割り当て方法について説明します。
 
 ### 標準 XDM {#standard}
 
-標準の XDM 構文を使用すると、スキーマで名前空間がどのように表されているか ( [Adobe Experience Platformでの翻訳方法](#compatibility)) をクリックします。
+標準 XDM 構文を使用すると、スキーマでの名前空間の表現方法（[Adobe Experience Platformでの名前空間の翻訳方法 ](#compatibility) など）に関するインサイトを得ることができます。
 
-標準 XDM はを使用します [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) 名前空間をフィールドに割り当てるための構文です。 この名前空間は URI の形式 ( 例： `https://ns.adobe.com/xdm` （の） `xdm` 名前空間として )、または `@context` スキーマの属性。
+標準 XDM では、[JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) 構文を使用して名前空間をフィールドに割り当てます。 この名前空間は、URI の形式（`xdm` 名前空間の `https://ns.adobe.com/xdm` など）、またはスキーマの `@context` 属性に設定される短縮形のプレフィックスとして提供されます。
 
-次に、標準の XDM 構文の製品のスキーマの例を示します。 次を除き `@id` （JSON-LD 仕様で定義される一意の識別子）、各フィールドは、 `properties` 名前空間で始まり、フィールド名で終わります。 以下で定義された短縮形のプレフィックスを使用する場合 `@context`の場合、名前空間とフィールド名はコロン (`:`) をクリックします。 プレフィックスを使用しない場合、名前空間とフィールド名はスラッシュ (`/`) をクリックします。
+標準 XDM 構文での製品のスキーマ例を次に示します。 `@id` （JSON-LD 仕様で定義された一意の ID）を除き、`properties` の下の各フィールドは名前空間で始まり、フィールド名で終わります。 `@context` で定義された短縮形のプレフィックスを使用する場合、名前空間とフィールド名はコロン（`:`）で区切られます。 プレフィックスを使用しない場合、名前空間とフィールド名はスラッシュ（`/`）で区切られます。
 
 ```json
 {
@@ -78,20 +78,20 @@ ht-degree: 1%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@context` | の下の完全な名前空間 URI の代わりに使用できる短縮形のプレフィックスを定義するオブジェクト `properties`. |
-| `@id` | レコードの一意の識別子 ( [JSON-LD 仕様](https://www.w3.org/TR/json-ld11/#node-identifiers). |
-| `xdm:sku` | 名前空間を表す短縮形のプレフィックスを使用するフィールドの例です。 この場合、 `xdm` は名前空間 (`https://ns.adobe.com/xdm`) および `sku` はフィールド名です。 |
-| `https://ns.adobe.com/xdm/channels/application` | 完全な名前空間 URI を使用するフィールドの例。 この場合、 `https://ns.adobe.com/xdm/channels` は名前空間で、 `application` はフィールド名です。 |
-| `https://ns.adobe.com/vendorA/product/stockNumber` | ベンダーリソースが提供するフィールドは、独自の一意の名前空間を使用します。 この例では、 `https://ns.adobe.com/vendorA/product` はベンダーの名前空間で、 `stockNumber` はフィールド名です。 |
-| `tenantId:internalSku` | 組織で定義されたフィールドでは、一意のテナント ID を名前空間として使用します。 この例では、 `tenantId` はテナントの名前空間 (`https://ns.adobe.com/tenantId`) および `internalSku` はフィールド名です。 |
+| `@context` | `properties` の下で、完全な名前空間 URI の代わりに使用できる短縮形のプレフィックスを定義するオブジェクト。 |
+| `@id` | [JSON-LD 仕様 ](https://www.w3.org/TR/json-ld11/#node-identifiers) で定義されたレコードの一意の ID。 |
+| `xdm:sku` | 短縮形のプレフィックスを使用して名前空間を示すフィールドの例。 この場合、`xdm` は名前空間（`https://ns.adobe.com/xdm`）、`sku` はフィールド名です。 |
+| `https://ns.adobe.com/xdm/channels/application` | 完全な名前空間 URI を使用するフィールドの例です。 この場合、`https://ns.adobe.com/xdm/channels` は名前空間で、`application` はフィールド名です。 |
+| `https://ns.adobe.com/vendorA/product/stockNumber` | ベンダーリソースによって提供されるフィールドは、独自の一意の名前空間を使用します。 この例では、`https://ns.adobe.com/vendorA/product` はベンダーの名前空間で、`stockNumber` はフィールド名です。 |
+| `tenantId:internalSku` | 組織で定義されたフィールドでは、一意のテナント ID を名前空間として使用しています。 この例では、`tenantId` はテナント名前空間（`https://ns.adobe.com/tenantId`）で、`internalSku` はフィールド名です。 |
 
 {style="table-layout:auto"}
 
 ### 互換性モード {#compatibility}
 
-Adobe Experience Platformでは、XDM スキーマは、 [互換性モード](../api/appendix.md#compatibility) 構文とは異なり、名前空間を表すのに JSON-LD 構文を使用しません。 代わりに、Platform は名前空間を親フィールド（アンダースコアで始まる）に変換し、その下にフィールドをネストします。
+Adobe Experience Platformでは、XDM スキーマは、JSON-LD 構文を使用して名前空間を表さない [ 互換モード ](../api/appendix.md#compatibility) 構文で表されます。 代わりに、Platform は名前空間を親フィールド（アンダースコアで始まる）に変換し、その下にフィールドをネストします。
 
-例えば、標準の XDM `repo:createdDate` 次に変換： `_repo.createdDate` とは、互換性モードで次の構造の下に表示されます。
+例えば、標準 XDM `repo:createdDate` は `_repo.createdDate` に変換され、互換性モードでは次の構造で表示されます。
 
 ```json
 "_repo": {
@@ -105,9 +105,9 @@ Adobe Experience Platformでは、XDM スキーマは、 [互換性モード](..
 }
 ```
 
-次を使用するフィールド： `xdm` 名前空間はの下にルートフィールドとして表示されます。 `properties` をクリックし、 `xdm:` に表示されるプレフィックス [標準 XDM 構文](#standard). 例： `xdm:sku` は、 `sku` 代わりに、
+`xdm` 名前空間を使用するフィールドは、`properties` の下のルートフィールドとして表示され、[ 標準 XDM 構文 ](#standard) に表示される `xdm:` プレフィックスをドロップします。 例えば、`xdm:sku` は代わりに `sku` として単にリストされます。
 
-次の JSON は、上記の標準 XDM 構文の例が互換性モードに変換される方法を表しています。
+次の JSON は、上記の標準 XDM 構文の例が互換性モードにどのように翻訳されるかを表しています。
 
 ```json
 {
@@ -176,4 +176,4 @@ Adobe Experience Platformでは、XDM スキーマは、 [互換性モード](..
 
 ## 次の手順
 
-このガイドでは、XDM 名前空間の概要と JSON での表現方法を示しました。 API を使用して XDM スキーマを設定する方法について詳しくは、 [スキーマレジストリ API ガイド](../api/overview.md).
+このガイドでは、XDM 名前空間の概要と JSON での表現方法を説明しました。 API を使用して XDM スキーマを設定する方法について詳しくは、『 [ スキーマレジストリ API ガイド ](../api/overview.md) 』を参照してください。

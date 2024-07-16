@@ -7,11 +7,11 @@ exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
 source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
 workflow-type: tm+mt
 source-wordcount: '193'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
-# ガバナンスポリシー Attribution AI
+# Attribution AIにおけるガバナンスポリシー
 
 ワークフローを実行してモデルを作成しモデルの設定を送信したら、違反がないかどうかを[ポリシー適用](../../../data-governance/enforcement/auto-enforcement.md)が確認します。 ポリシー違反が発生した場合は、1 つ以上のポリシーに違反したことを示すポップオーバーが表示されます。 これは、Platform 内のデータ操作とマーケティングアクションがデータ使用ポリシーに準拠していることを確認するためです。
 

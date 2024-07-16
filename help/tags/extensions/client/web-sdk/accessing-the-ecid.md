@@ -1,6 +1,6 @@
 ---
 title: ECID へのアクセス
-description: データ準備またはExperience Cloudからタグ ID にアクセスする方法を説明します
+description: Data Prep または Tags からExperience CloudID にアクセスする方法を説明します
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
 source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
 workflow-type: tm+mt
@@ -12,30 +12,30 @@ ht-degree: 3%
 
 # ECID へのアクセス
 
-The [!DNL Experience Cloud Identity (ECID)] は、ユーザーが Web サイトを訪問した際にユーザーに割り当てられる永続的な識別子です。 特定の状況で、 [!DNL ECID] （サードパーティに送信する場合など）。 別の使用例として、 [!DNL ECID] カスタム XDM フィールドに追加する必要があります。
+[!DNL Experience Cloud Identity (ECID)] は、ユーザーが web サイトを訪問したときにユーザーに割り当てられる永続的な識別子です。 状況によっては、（例えば、サードパーティに送信するために） [!DNL ECID] ールにアクセスする方が良い場合があります。 別の使用例としては、ID マップに含めるだけでなく、カスタム XDM フィールドに [!DNL ECID] を設定する場合があります。
 
-ECID には、 [データ収集用のデータ準備](../../../../datastreams/data-prep.md) （推奨）またはタグを使用します。
+[ データ収集のためのデータ準備 ](../../../../datastreams/data-prep.md) （推奨）またはタグを使用して、ECID にアクセスできます。
 
 ## データ準備を使用した ECID へのアクセス（推奨される方法） {#accessing-ecid-data-prep}
 
-ECID をカスタム XDM フィールドに設定したい場合は、ID マップに追加で、ECID を設定することができます。それには、 `source` を次のパスに追加します。
+ECID をカスタム XDM フィールドに設定する場合、ID マップに含める以外に、`source` を次のパスに設定することでこれを実行できます。
 
 ```js
 xdm.identityMap.ECID[0].id
 ```
 
-次に、フィールドのタイプがの XDM パスにターゲットを設定します `string`.
+次に、フィールドのタイプが `string` の XDM パスにターゲットを設定します。
 
 ![](./assets/access-ecid-data-prep.png)
 
 ## タグ
 
-次にアクセスする必要がある場合、 [!DNL ECID] クライアント側では、次に説明するタグアプローチを使用します。
+クライアントサイドで [!DNL ECID] にアクセスする必要がある場合は、以下に説明するようにタグアプローチを使用します。
 
-1. プロパティがで設定されていることを確認します。 [ルールコンポーネントの順序付け](../../../ui/managing-resources/rules.md#sequencing) 有効。
-1. 新しいルールを作成します。 このルールは、 [!DNL ECID] 他の重要な行動もなく
-1. を追加します。 [!UICONTROL Library Loaded] イベントをルールに追加します。
-1. を追加します。 [!UICONTROL カスタムコード] 次のコードを使用してルールにアクションを追加します（SDK インスタンスに設定した名前がの場合）。 `alloy` 同じ名前のデータ要素がまだ存在していません )。
+1. [ ルールコンポーネントの優先順位 ](../../../ui/managing-resources/rules.md#sequencing) が有効になっているプロパティが設定されていることを確認します。
+1. 新しいルールを作成します。 このルールは、他の重要なアクションを実行せずに [!DNL ECID] をキャプチャする場合にのみ使用してください。
+1. [!UICONTROL  ライブラリの読み込み ] イベントをルールに追加します。
+1. 次のコードを使用して、ルールに [!UICONTROL  カスタムコード ] アクションを追加します（SDK インスタンスに対して設定した名前が `alloy` で、同じ名前のデータ要素がまだない場合）。
 
    ```js
     return alloy("getIdentity")
@@ -46,4 +46,4 @@ xdm.identityMap.ECID[0].id
 
 1. ルールを保存します。
 
-その後、 [!DNL ECID] 以降のルールでは `%ECID%` または `_satellite.getVar("ECID")`他のデータ要素にアクセスする場合と同様に、
+その後、他のデータ要素にアクセスする場合と同様に、`%ECID%` または `_satellite.getVar("ECID")` を使用して、後続のルールで [!DNL ECID] にアクセスできます。

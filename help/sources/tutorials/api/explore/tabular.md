@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ソース；API；参照；フローサービス
-title: フローサービス API を使用した表形式のソースの調査
-description: このチュートリアルでは、フローサービス API を使用して、テーブルベースのソースのコンテンツと構造を調べます。
+keywords: Experience Platform；ホーム；人気のトピック；ソース；API；参照；フローサービス
+title: Flow Service API を使用した表形式のSourceの調査
+description: このチュートリアルでは、Flow Service API を使用して、テーブルベースのソースの内容と構造を調べます。
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
 source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 23%
+source-wordcount: '465'
+ht-degree: 21%
 
 ---
 
-# を使用してデータテーブルを調査する [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用したデータテーブルの調査
 
-このチュートリアルでは、 [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API
+このチュートリアルでは、[[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API を使用してデータテーブルの構造と内容を調査およびプレビューする手順を説明します。
 
 >[!NOTE]
 >
-> データテーブルを調べるには、表形式のソースに対して有効なベース接続 ID が既に存在している必要があります。 この ID がない場合は、次のチュートリアルを参照して、表形式のソースのベース接続 ID を作成する手順を確認してください。 <ul><li>[広告](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[カスタマーサクセス](../../../home.md#customer-success)</li><li>[データベース](../../../home.md#database)</li><li>[E コマース](../../../home.md#ecommerce)</li><li>[マーケティングの自動処理](../../../home.md#marketing-automation)</li><li>[支払い](../../../home.md#payments)</li><li>[プロトコル](../../../home.md#protocols)</li></ul>
+> データテーブルを調べるには、表形式のソースに対して有効なベース接続 ID が必要です。 この ID を持っていない場合は、次のチュートリアルで、表形式のソースのベース接続 ID を作成する手順を確認してください。 <ul><li>[広告](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[ カスタマーサクセス ](../../../home.md#customer-success)</li><li>[データベース](../../../home.md#database)</li><li>[E コマース ](../../../home.md#ecommerce)</li><li>[ マーケティングの自動処理 ](../../../home.md#marketing-automation)</li><li>[ 支給 ](../../../home.md#payments)</li><li>[ プロトコル ](../../../home.md#protocols)</li></ul>
 
 ## はじめに
 
@@ -29,9 +29,9 @@ ht-degree: 23%
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
 
-## データテーブルの調査
+## データテーブルの探索
 
-GETリクエストを [!DNL Flow Service] ソースのベース接続 ID を提供する際の API。
+ソースのベース接続 ID を指定したうえで [!DNL Flow Service] API に対してデータリクエストを行うことで、GETテーブルの構造に関する情報を取得できます。
 
 **API 形式**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、ソースからテーブルの配列を返します。 Platform に取り込むテーブルを見つけて、そのテーブルをメモします。 `path` プロパティに含める必要がある場合は、次の手順で指定して、その構造を調べます。
+応答が成功すると、ソースからテーブルの配列が返されます。 Platform に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、その構造を検査するために次の手順で指定する必要があるからです。
 
 ```json
 [
@@ -77,9 +77,9 @@ curl -X GET \
 ]
 ```
 
-## Inspectテーブルの構造
+## テーブルの構造のInspect
 
-データテーブルの内容を調べるには、に対してGETリクエストを実行します。 [!DNL Flow Service] テーブルのパスをクエリパラメーターとして指定する際の API。
+データテーブルの内容を調べるには、テーブルのパスをクエリパラメーターとして指定して、[!DNL Flow Service] API にGETリクエストを実行します。
 
 **API 形式**
 
@@ -90,7 +90,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | パラメーター | 説明 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | ソースのベース接続 ID。 |
-| `{TABLE_PATH}` | 検査するテーブルの path プロパティです。 |
+| `{TABLE_PATH}` | 検査するテーブルのパスプロパティ。 |
 
 **リクエスト**
 
@@ -105,7 +105,7 @@ curl -X GET \
 
 **応答**
 
-リクエストが成功した場合は、指定したテーブルの内容と構造に関する情報が返されます。 各テーブルの列に関する詳細は、 `columns` 配列。
+応答が成功すると、指定されたテーブルのコンテンツと構造に関する情報が返されます。 テーブルの各列に関する詳細は、`columns` 配列の要素内にあります。
 
 ```json
 {
@@ -188,11 +188,11 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、データテーブルの構造と内容に関する情報を収集しました。 さらに、Platform に取り込むテーブルへのパスを取得しました。 この情報を使用して、ソース接続とデータフローを作成し、データを Platform に取り込むことができます。 を使用してソース接続とデータフローを作成する手順については、次のチュートリアルを参照してください [!DNL Flow Service] API:
+このチュートリアルでは、データテーブルの構造と内容に関する情報を収集しました。 さらに、Platform に取り込むテーブルへのパスを取得しました。 この情報を使用して、ソース接続とデータフローを作成し、データを Platform に取り込むことができます。 [!DNL Flow Service] API を使用してソース接続とデータフローを作成する方法に関する具体的な手順については、次のチュートリアルを参照してください。
 
-* [広告ソース](../collect/advertising.md)
+* [Advertising ソース](../collect/advertising.md)
 * [CRM ソース](../collect/crm.md)
-* [顧客成功ソース](../collect/customer-success.md)
+* [カスタマーサクセスソース](../collect/customer-success.md)
 * [データベースソース](../collect/database-nosql.md)
 * [E コマースソース](../collect/ecommerce.md)
 * [マーケティング自動化ソース](../collect/marketing-automation.md)

@@ -8,7 +8,7 @@ role: Developer,User
 source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 61%
+ht-degree: 62%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 61%
 * [ダッシュボードを PDF にダウンロード](download.md)
 * Data Distiller {#data-distiller}
    * [概要](data-distiller/overview.md)
-   * 拡張アプリレポート用のカスタマイズ可能なインサイト {#customizable-insights}
+   * 拡張アプリレポートスイート向けのカスタマイズ可能 {#customizable-insights} インサイト
       * [概要](data-distiller/customizable-insights/overview.md)
       * [クエリ予測モード （SQL グラフの作成）](data-distiller/customizable-insights/query-pro-mode.md)
       * フィルター {#filters}
          * [日付フィルター](data-distiller/customizable-insights/filters/date-filter.md)
-         * [グローバルフィルター](data-distiller/customizable-insights/filters/global-filter.md)
+         * [ グローバルフィルター ](data-distiller/customizable-insights/filters/global-filter.md)
       * [さらに表示](data-distiller/customizable-insights/view-more.md)
       * [SQL を表示](data-distiller/customizable-insights/view-sql.md)
       * [CSV としてダウンロード](data-distiller/customizable-insights/download-csv.md)
@@ -37,7 +37,7 @@ ht-degree: 61%
    * [オーディエンス](guides/audiences.md)
    * [宛先](guides/destinations.md)
    * [ライセンス使用状況](guides/license-usage.md)
-* 利用可能なインサイト {#insights}
+* Available Insights {#insights}
    * [プロファイル](insights/profiles.md)
    * [オーディエンス](insights/audiences.md)
    * [宛先](insights/destinations.md)
@@ -49,9 +49,9 @@ ht-degree: 61%
    * [標準ウィジェット](customize/standard-widgets.md)
    * [カスタムウィジェット](customize/custom-widgets.md)
    * [スキーマの編集](customize/edit-schema.md)
-* インサイトのユースケース {#insights-use-cases}
+* のインサイトのユースケー {#insights-use-cases}
    * [同意分析](insights-use-cases/consent-analysis.md)
-* 使用可能なデータモデル {#data-models}
+* で使用可能なデータモデ {#data-models}
    * [Real-time Customer Data Platform Insights データモデル B2B エディション](data-models/cdp-insights-data-model-b2b.md)
    * [Real-time Customer Data Platform Insights データモデル B2C エディション](data-models/cdp-insights-data-model-b2c.md)
 * アプリケーションの統合 {#integrations}

@@ -1,7 +1,7 @@
 ---
-title: ファイルベースのクラウドストレージの宛先の IP アドレス許可リスト
+title: ファイルベースのクラウドストレージの宛先の IP アドレスの許可リスト
 type: Documentation
-description: このページでは、許可リストに追加できる IP 範囲を提供し、Experience Platformからクラウドストレージの宛先にデータを安全に書き出すことができます。
+description: このページでは、Experience Platformからクラウドストレージの宛先にデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
 workflow-type: tm+mt
@@ -10,16 +10,16 @@ ht-degree: 6%
 
 ---
 
-# ファイルベ許可リストに加えるースのクラウドストレージの宛先の IP アドレス {#ip-address-allow-list-cloud-storage}
+# 許可リストに加える ファイルベースのクラウドストレージの宛先の IP アドレス。 {#ip-address-allow-list-cloud-storage}
 
 >[!IMPORTANT]
 >
-> * Adobeでは、このページをブックマークし、3 か月ごとに再度アクセスして、最新の IP アドレスを確認することをお勧めします。 Adobeは、新しい IP 範囲の通知を提供しません。
-> * Adobeは SFTP サーバーへのデータの書き出しをサポートしていますが、データを書き出す際に推奨されるクラウドストレージの場所は次のとおりです [!DNL Amazon S3] および [!DNL Azure Blob].
+> * Adobeでは、このページをブックマークに追加し、3 か月ごとに再訪問して最新の IP アドレスを確認することをお勧めします。 Adobeは新しい IP 範囲を通知しません。
+> * Adobeでは SFTP サーバーへのデータの書き出しをサポートしていますが、データを書き出す際に推奨されるクラウドストレージの場所は [!DNL Amazon S3] と [!DNL Azure Blob] です。
 
-## 適用可能性 {#applicability}
+## 適用性 {#applicability}
 
-このページの IP 範囲情報は、宛先カタログ内の次のファイルベースのクラウドストレージコネクタに適用されます。
+このページの IP 範囲の情報は、宛先カタログの次のファイルベースのクラウドストレージコネクタに適用されます。
 
 * [[!UICONTROL Amazon S3]](./amazon-s3.md)
 * [[!UICONTROL Google Cloud Storage]](google-cloud-storage.md)
@@ -27,17 +27,17 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->このページに記載されている IP 範囲は次のとおりです。 *not* 次のファイルベースのクラウドストレージの宛先でサポートされます。 [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] および [!UICONTROL データランディングゾーン].
+>このページで説明している IP 範囲は、ファイルベースのクラウドストレージ宛先 [!UICONTROL Azure Blob]、[!UICONTROL Azure Data Lake Storage Gen2] および [!UICONTROL  データランディングゾーン ] では *サポートされていません*。
 
 ## 概要 {#overview}
 
-このページでは、Experience Platformから複数のクラウドストレージの宛先に安全に許可リストに加えるデータを書き出すために、に追加できる IP 範囲を提供します。
+このページでは、Experience Platformから複数のクラウドストレージの宛先にデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
 
 ネットワークファイアウォールを介して、ネットワークアクセス制御を定義できます。 適切な IP 範囲を指定することで、データ転送サービスのトラフィックを許可できます。
 
-Adobeでは、クラウドストレージの宛先接続を使用する前に、次の IP 範囲をク許可リストに加えるラウドに追加することをお勧めします。 クラウドストレージの宛先接続を使用する際に、地域固有の IP 範囲を許可リストに加えるに追加しないと、エラーやパフォーマンスが低下する可能性があります。
+Adobeでは、クラウドストレージの宛先接続を使用する前に、次の IP 範囲を許可リストに追加することをお勧めします。 地域固有の IP 範囲を許可リストに追加しないと、クラウドストレージの宛先接続を使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
 
-## すべての顧客に必須 {#all-customers}
+## すべてのお客様に必須 {#all-customers}
 
 * `52.247.108.70`
 

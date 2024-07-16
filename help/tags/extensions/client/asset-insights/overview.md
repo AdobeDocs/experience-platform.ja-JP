@@ -4,8 +4,8 @@ description: Adobe Experience Platform の AEM Asset Insights タグ拡張機能
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 100%
+source-wordcount: '1062'
+ht-degree: 99%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 Analytics の AEM Asset レポートには、次の 3 つのディメンションが含まれます。
 
 * アセット ID
-* アセットソース
+* Asset Source
 * アセットのクリック
 
 また、次の 2 つの指標があります。

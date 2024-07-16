@@ -45,7 +45,7 @@ Npgsql が正しくインストールされていることを確認するには�
 
 >[!IMPORTANT]
 >
->Power BIユーザーまたは Tableau ユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 の方法については、資格情報ドキュメントを参照してください。 [bi ツールをCustomer Journey Analyticsに接続](../ui/credentials.md#connect-to-customer-journey-analytics).
+>Power BIユーザーまたは Tableau ユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 ](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。
 
 ![「資格情報」タブと期限切れになる資格情報がハイライト表示されている Experience Platform クエリワークスペース](../images/clients/power-bi/query-service-credentials-page.png)
 

@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Azure AzureData Explorer;AzureData Explorer;AzureData Explorer
+keywords: Experience Platform；ホーム；人気のトピック；Azure Azure Data Explorer;Azure Data Explorer;Azure Data Explorer
 solution: Experience Platform
-title: フローサービス API を使用した Azure AzureData Explorerベース接続の作成
+title: Flow Service API を使用した Azure Data Explorerベース接続の作成
 type: Tutorial
-description: フローサービス API を使用して Azure AzureData ExplorerをAdobe Experience Platformに接続する方法を説明します。
+description: Flow Service API を使用して Azure Data ExplorerをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 61%
+source-wordcount: '510'
+ht-degree: 62%
 
 ---
 
-# の作成 [!DNL Azure Azure Data Explorer] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Azure Azure Data Explorer] ベース接続の作成
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -26,7 +26,7 @@ ht-degree: 61%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Azure Data Explorer] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Azure Data Explorer] ています。
 
 ### 必要な資格情報の収集
 
@@ -35,13 +35,13 @@ ht-degree: 61%
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `endpoint` | [!DNL Azure Data Explorer] サーバーのエンドポイント。 |
-| `database` | の名前 [!DNL Azure Data Explorer] データベース。 |
-| `tenant` | への接続に使用される一意のテナント ID [!DNL Azure Data Explorer] データベース。 |
-| `servicePrincipalId` | に接続するために使用される一意のサービスプリンシパル ID [!DNL Azure Data Explorer] データベース。 |
-| `servicePrincipalKey` | への接続に使用する一意のサービスプリンシパルキー [!DNL Azure Data Explorer] データベース。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Azure Data Explorer] が `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `database` | [!DNL Azure Data Explorer] データベースの名前。 |
+| `tenant` | [!DNL Azure Data Explorer] データベースへの接続に使用する一意のテナント ID。 |
+| `servicePrincipalId` | [!DNL Azure Data Explorer] データベースへの接続に使用する一意のサービスプリンシパル ID。 |
+| `servicePrincipalKey` | [!DNL Azure Data Explorer] データベースへの接続に使用する一意のサービスプリンシパルキー。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Azure Data Explorer] の接続仕様 ID は `0479cc14-7651-4354-b233-7480606c2ac3` です。 |
 
-導入の詳細については、こちらを参照してください。 [[!DNL Azure Data Explorer] 文書](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
+はじめに詳しくは、この [[!DNL Azure Data Explorer]  ドキュメント ](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad) を参照してください。
 
 ### Platform API の使用
 
@@ -94,11 +94,11 @@ curl -X POST \
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `auth.params.endpoint` | [!DNL Azure Data Explorer] サーバーのエンドポイント。 |
-| `auth.params.database` | の名前 [!DNL Azure Data Explorer] データベース。 |
-| `auth.params.tenant` | への接続に使用される一意のテナント ID [!DNL Azure Data Explorer] データベース。 |
-| `auth.params.servicePrincipalId` | に接続するために使用される一意のサービスプリンシパル ID [!DNL Azure Data Explorer] データベース。 |
-| `auth.params.servicePrincipalKey` | への接続に使用する一意のサービスプリンシパルキー [!DNL Azure Data Explorer] データベース。 |
-| `connectionSpec.id` | この [!DNL Azure Data Explorer] 接続仕様 ID: `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `auth.params.database` | [!DNL Azure Data Explorer] データベースの名前。 |
+| `auth.params.tenant` | [!DNL Azure Data Explorer] データベースへの接続に使用する一意のテナント ID。 |
+| `auth.params.servicePrincipalId` | [!DNL Azure Data Explorer] データベースへの接続に使用する一意のサービスプリンシパル ID。 |
+| `auth.params.servicePrincipalKey` | [!DNL Azure Data Explorer] データベースへの接続に使用する一意のサービスプリンシパルキー。 |
+| `connectionSpec.id` | [!DNL Azure Data Explorer] 接続仕様 ID: `0479cc14-7651-4354-b233-7480606c2ac3`。 |
 
 **応答**
 
@@ -116,4 +116,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Azure Data Explorer] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)

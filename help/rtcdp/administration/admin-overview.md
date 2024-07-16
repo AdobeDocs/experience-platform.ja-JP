@@ -13,26 +13,26 @@ ht-degree: 21%
 
 # Real-time Customer Data Platform管理の概要
 
-このドキュメントでは、の管理機能の概要を説明します [!DNL Adobe Real-Time Customer Data Platform]はAdobe Experience Platformを活用しています。
+このドキュメントでは、Adobe Experience Platformを活用した [!DNL Adobe Real-Time Customer Data Platform] の管理機能の概要について説明します。
 
-[!DNL Experience Platform] を使用すると、管理者は、ユーザーの役割ベースのアクセス制御を管理したり、アプリケーション開発用の仮想サンドボックスを管理したりできます。
+管理者 [!DNL Experience Platform]、ユーザーの役割ベースのアクセス制御を管理したり、アプリケーション開発用の仮想サンドボックスを管理したりできます。
 
-以下の節では、の主要なコンポーネントの概要を説明します [!DNL Experience Platform] 管理機能。へのリンクが含まれます [!DNL Experience Platform] 詳細情報が提供されるドキュメント。
+以降の節では、[!DNL Experience Platform] 管理機能の主要なコンポーネントを紹介し、詳細な情報が提供されている [!DNL Experience Platform] ドキュメントへのリンクを示します。
 
 ## アクセス制御
 
 属性ベースのアクセス制御は、権限 UI を通じて管理されます。 この機能は、権限 UI の役割を活用し、ユーザーを権限とサンドボックスにリンクできるようにします。 この機能を使用すると、管理者は、定義されたユーザのセットに対して、特定の Real-time CDP 機能に対するアクセスを許可または制限できます。
 
-アクセス制御の詳細については、を参照してください [属性ベースのアクセス制御の概要](/help/access-control/abac/overview.md) が含まれる [!DNL Experience Platform] ドキュメント。
+アクセス制御について詳しくは、[!DNL Experience Platform] ドキュメントの [ 属性ベースのアクセス制御の概要 ](/help/access-control/abac/overview.md) を参照してください。
 
 >[!IMPORTANT]
 >
->UI での表示の有効化など、Real-Time CDP機能へのアクセス権を付与する詳細なガイドについては、次の手順に従ってください [アクセス制御ユーザーガイド](../../access-control/ui/overview.md)、特に製品プロファイルの詳細および追加サービスを管理する場合。
+>UI での表示の有効化など、Real-Time CDP機能へのアクセス権を付与する詳細なガイドについては、製品プロファイルの詳細および追加サービスを管理するための [ アクセス制御ユーザーガイド ](../../access-control/ui/overview.md) に記載されている手順に従ってください。
 
 ## サンドボックス
 
 Adobe Experience Platform（および拡張機能による Real-time CDP）は、デジタルエクスペリエンスアプリケーションをグローバルに拡張するために構築されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。
 
-このニーズに対応するために、Adobe Experience Platformは次のことを提供します *サンドボックス*（単一のパーティションの作成が可能） [!DNL Platform] デジタルエクスペリエンスアプリケーションの開発と発展に使用できる個別の仮想環境にインスタンス化する。 サンドボックスツール機能を使用すると、サンドボックス間の設定精度を向上させ、サンドボックス設定をシームレスに書き出して読み込むことができます。 に記載されている手順に従います [サンドボックスツール UI ガイド](../../sandboxes/ui/sandbox-tooling.md).
+このニーズに応えるために、Adobe Experience Platformでは *サンドボックス* を提供し、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割できるようにします。この仮想環境は、デジタルエクスペリエンスアプリケーションの開発と発展に使用できます。 サンドボックスツール機能を使用すると、サンドボックス間の設定精度を向上させ、サンドボックス設定をシームレスに書き出して読み込むことができます。 [ サンドボックスツール UI ガイド ](../../sandboxes/ui/sandbox-tooling.md) に記載されている手順に従います。
 
-サンドボックスについて詳しくは、 [サンドボックスの概要](../../sandboxes/home.md) が含まれる [!DNL Experience Platform] ドキュメント。
+サンドボックスについて詳しくは、[!DNL Experience Platform] ドキュメントの [ サンドボックスの概要 ](../../sandboxes/home.md) を参照してください。

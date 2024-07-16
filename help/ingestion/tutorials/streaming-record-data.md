@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミング取り込み；取り込み；レコードデータ；ストリームレコードデータ；
+keywords: Experience Platform；ホーム；人気のトピック；ストリーミング取得；取得；レコードデータ；ストリームレコードデータ；
 solution: Experience Platform
-title: ストリーミング取得 API を使用したレコードデータのストリーミング
+title: ストリーミング取得 API を使用してレコードデータをストリーミングする
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 64%
+source-wordcount: '1032'
+ht-degree: 62%
 
 ---
 
 
-# ストリーミング取得 API を使用したレコードデータのストリーミング
+# ストリーミング取得 API を使用してレコードデータをストリーミングする
 
-このチュートリアルは、Adobe Experience Platformに含まれるストリーミング取得 API の使用を開始する際に役立ちます [!DNL Data Ingestion Service] API
+このチュートリアルは、Adobe Experience Platform [!DNL Data Ingestion Service] API の一部であるストリーミング取得 API の使用を開始する際に役立ちます。
 
 ## はじめに
 
 このチュートリアルでは、Adobe Experience Platform の各種サービスに関する実用的な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化されたフレームワーク [!DNL Platform] はエクスペリエンスデータを整理します。
-   - [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md):の使用可能な各エンドポイントをカバーする包括的なガイド [!DNL Schema Registry] API と呼び出し方法を参照してください。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):[!DNL Platform] がエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
+   - [ スキーマレジストリ開発者ガイド ](../../xdm/api/getting-started.md):[!DNL Schema Registry] API の使用可能な各エンドポイントとそれらの呼び出し方法を説明する包括的なガイド。 これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ### Platform API の使用
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../landing/api-guide.md)のガイドを参照してください。
 
-## 次に基づいてスキーマを作成 [!DNL XDM Individual Profile] クラス
+## [!DNL XDM Individual Profile] クラスに基づいてスキーマを作成します
 
-データセットを作成するには、まず、 [!DNL XDM Individual Profile] クラス。 スキーマの作成方法について詳しくは、『[スキーマレジストリ API 開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
+データセットを作成するには、まず [!DNL XDM Individual Profile] クラスを実装する新しいスキーマを作成する必要があります。 スキーマの作成方法について詳しくは、『[スキーマレジストリ API 開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
 **API 形式**
 
@@ -73,7 +73,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | スキーマ名。この名前は一意である必要があります。 |
 | `description` | 作成するスキーマのわかりやすい説明。 |
-| `meta:immutableTags` | この例では、 `union` タグは、データを [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | この例では、データを [[!DNL Real-Time Customer Profile]](../../profile/home.md) に保持するために `union` タグが使用されています。 |
 
 **応答** 
 
@@ -128,7 +128,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{TENANT_ID}` | この ID は、作成したリソースの名前空間が適切に付けられ、組織内に含まれるようにするために使用されます。 テナント ID の詳細については、『[スキーマレジストリガイド](../../xdm/api/getting-started.md#know-your-tenant-id)』を参照してください。 |
+| `{TENANT_ID}` | この ID は、作成したリソースの名前空間が適切に設定され、組織内に格納されていることを確認するために使用されます。 テナント ID の詳細については、『[スキーマレジストリガイド](../../xdm/api/getting-started.md#know-your-tenant-id)』を参照してください。 |
 
 データセットを作成する際には、`$id` 属性と `version` 属性の両方が使用されるので、注意してください。
 
@@ -138,7 +138,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 1. 仕事用電子メールアドレスは必須フィールドになります。つまり、このフィールドなしで送信されたメッセージは検証に失敗し、取得されません。
 
-2. [!DNL Real-Time Customer Profile] は、仕事用電子メールアドレスを識別子として使用し、個人に関する詳細情報をまとめます。
+2. [!DNL Real-Time Customer Profile] は、その個人に関する詳細を結合するのに役立つ識別子として、作業メールアドレスを使用します。
 
 ### リクエスト
 
@@ -166,7 +166,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->&#x200B; &#x200B;**ID 名前空間コード**
+>&#x200B; &#x200B;**Id 名前空間コード**
 >
 > コードが有効であることを確認してください。上記の例では、標準の ID 名前空間である「email」を使用しています。その他の一般的に使用される標準 ID 名前空間は、[ID サービスの FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform) に記載されています。
 >
@@ -198,7 +198,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->このデータセットは、次に対して有効になります： **[!DNL Real-Time Customer Profile]** および **[!DNL Identity Service]**.
+>このデータセットは、**[!DNL Real-Time Customer Profile]** および **[!DNL Identity Service]** に対して有効になります。
 
 **API 形式**
 
@@ -247,7 +247,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## ストリーミング接続へのレコードデータの取り込み {#ingest-data}
 
-データセットとストリーミング接続が確立されたら、XDM 形式の JSON レコードを取り込み、レコードデータをに取り込むことができます。 [!DNL Platform].
+データセットとストリーミング接続を配置したら、XDM 形式の JSON レコードを取り込んで、レコードデータを [!DNL Platform] に取り込むことができます。
 
 **API 形式**
 
@@ -258,17 +258,17 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 作成済みのストリーミング接続の `inletId` 値です。 |
-| `syncValidation` | 開発用のクエリパラメーター（オプション）。`true` に設定した場合、リクエストが正常に送信されたかどうかを確認するために、即座のフィードバックに使用できます。デフォルトでは、この値は `false` に設定されています。このクエリパラメーターを `true` リクエストのレートは 1 分あたり 60 回に制限されます。 `CONNECTION_ID`. |
+| `syncValidation` | 開発用のクエリパラメーター（オプション）。`true` に設定した場合、リクエストが正常に送信されたかどうかを確認するために、即座のフィードバックに使用できます。デフォルトでは、この値は `false` に設定されています。 このクエリパラメーターを `true` に設定すると、リクエストのレートは 1`CONNECTION_ID` あたり 1 分あたり 60 回に制限されます。 |
 
 **リクエスト**
 
-ストリーミング接続へのレコードデータの取り込みは、ソース名を使用して行うことも、使用しないこともできます。
+ストリーミング接続へのレコードデータの取り込みは、ソース名の有無にかかわらず実行できます。
 
-次のリクエスト例では、ソース名がないレコードを Platform に取り込みます。 レコードにソース名がない場合は、ストリーミング接続定義からソース ID が追加されます。
+次のリクエスト例では、ソース名が欠落しているレコードを Platform に取り込んでいます。 レコードにソース名がない場合、ストリーミング接続定義からソース ID が追加されます。
 
 >[!NOTE]
 >
-> 以下の API 呼び出しでは、認証ヘッダーは&#x200B;**必要ありません**。
+>次の API 呼び出しには、認証ヘッダーは必要ありません ****。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -312,7 +312,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 }'
 ```
 
-ソース名を含める場合、次の例は、ソース名を含める方法を示しています。
+ソース名を含める場合に、ソース名をどのように含めるかを次の例に示します。
 
 ```json
     "header": {
@@ -330,7 +330,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、新しくストリーミングされた [!DNL Profile].
+応答が成功すると、HTTP ステータス 200 が、新しくストリーミングされた [!DNL Profile] の詳細と共に返されます。
 
 ```json
 {
@@ -352,11 +352,11 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 ## 新しく取り込んだレコードデータの取得
 
-以前に取り込んだレコードを検証するには、 [[!DNL Profile Access API]](../../profile/api/entities.md) をクリックして、レコードデータを取得します。
+以前に取り込んだレコードを検証するには、[[!DNL Profile Access API]](../../profile/api/entities.md) を使用してレコードデータを取得します。
 
 >[!NOTE]
 >
->結合ポリシー ID が定義されておらず、 `schema.name` または `relatedSchema.name` が `_xdm.context.profile`, [!DNL Profile Access] 取得 **すべて** 関連する id。
+>結合ポリシー ID が定義されておらず、`schema.name` または `relatedSchema.name` が `_xdm.context.profile` の場合、[!DNL Profile Access] れは **すべて** 関連の ID を取得します。
 
 **API 形式**
 
@@ -435,6 +435,6 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 次の手順
 
-このドキュメントを読むと、レコードデータをに取り込む方法を理解できます。 [!DNL Platform] ストリーミング接続の使用 異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。さらに、取得したデータの監視は、 [!DNL Platform] UI 詳しくは、『[データ取得監視ガイド](../quality/monitor-data-ingestion.md)』を参照してください。
+このドキュメントでは、ストリーミング接続を使用してレコードデータを [!DNL Platform] に取り込む方法について説明しました。 異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。さらに、UI を使用して、取り込んだデータの監視 [!DNL Platform] 開始できます。 詳しくは、『[データ取得監視ガイド](../quality/monitor-data-ingestion.md)』を参照してください。
 
 一般的なストリーミング取得の詳細については、『[ストリーミング取得の概要](../streaming-ingestion/overview.md)』を参照してください。

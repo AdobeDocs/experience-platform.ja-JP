@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Real-time Customer Data Platformのセグメントビルダー
 
-Adobe Experience Platform上に構築、 [!DNL Adobe Real-Time Customer Data Platform] は、の一部であるセグメントビルダーのすべての機能を利用できる [!DNL Experience Platform]. セグメントビルダーのユーザーインターフェイス内では、新しいオーディエンスを作成し、既存のオーディエンスにアクセスして、既存のオーディエンスを変更できます。
+Adobe Experience Platform上に構築され [!DNL Adobe Real-Time Customer Data Platform] ので、[!DNL Experience Platform] の一部であるセグメントビルダー機能を最大限に活用できます。 セグメントビルダーのユーザーインターフェイス内では、新しいオーディエンスを作成し、既存のオーディエンスにアクセスして、既存のオーディエンスを変更できます。
 
-セグメントビルダーの詳細については、 [セグメントビルダーユーザーガイド](../../segmentation/ui/segment-builder.md).
+セグメントビルダーの詳細については、『 [ セグメントビルダーユーザーガイド ](../../segmentation/ui/segment-builder.md) 』を参照してください。

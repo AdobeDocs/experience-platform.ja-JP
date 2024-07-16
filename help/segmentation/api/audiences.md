@@ -12,15 +12,15 @@ ht-degree: 5%
 
 # オーディエンスエンドポイント
 
-オーディエンスは、類似の行動や特徴を共有する人々の集まりです。 これらの人物のコレクションは、Adobe Experience Platformを使用するか、外部ソースから生成できます。 を使用できます `/audiences` segmentation API のエンドポイント。プログラムによって、オーディエンスを取得、作成、更新、削除できます。
+オーディエンスは、類似の行動や特徴を共有する人々の集まりです。 これらの人物のコレクションは、Adobe Experience Platformを使用するか、外部ソースから生成できます。 Segmentation API の `/audiences` エンドポイントを使用すると、オーディエンスをプログラムにより取得、作成、更新、削除できます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] API です。 続行する前に、を確認してください [はじめる前に](./getting-started.md) は、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API に対する呼び出しを正常に実行するために知っておく必要がある重要な情報です。
+このガイドで使用するエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] API の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 ## オーディエンスのリストの取得 {#list}
 
-に対してGETリクエストを行うことで、組織のすべてのオーディエンスのリストを取得できます。 `/audiences` エンドポイント。
+`/audiences` エンドポイントに対してGETリクエストを行うことで、組織のすべてのオーディエンスのリストを取得できます。
 
 **API 形式**
 
@@ -37,10 +37,10 @@ GET /audiences?{QUERY_PARAMETERS}
 | --------------- | ----------- | ------- |
 | `start` | 返されるオーディエンスの開始オフセットを指定します。 | `start=5` |
 | `limit` | ページごとに返されるオーディエンスの最大数を指定します。 | `limit=10` |
-| `sort` | 結果の並べ替え順序を指定します。 これは、フォーマットで記述されます `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
-| `property` | 次のオーディエンスを指定できるフィルター **正確に** 属性の値に一致します。 これは、フォーマットで記述されます `property=` | `property=audienceId==test-audience-id` |
-| `name` | 名前が付いたオーディエンスを指定できるフィルター **contain** 指定された値。 この値では、大文字と小文字が区別されません。 | `name=Sample` |
-| `description` | 説明を持つオーディエンスを指定できるフィルター **contain** 指定された値。 この値では、大文字と小文字が区別されません。 | `description=Test Description` |
+| `sort` | 結果の並べ替え順序を指定します。 これは、`attributeName:[desc/asc]` の形式で記述されます。 | `sort=updateTime:desc` |
+| `property` | 属性の値に **正確に** 一致するオーディエンスを指定できるフィルター。 これは、`property=` の形式で記述されます | `property=audienceId==test-audience-id` |
+| `name` | 指定した値を名前に含む **オーディエンスを指定でき** フィルター。 この値では、大文字と小文字が区別されません。 | `name=Sample` |
+| `description` | 指定された値を説明 **含む** オーディエンスを指定できるフィルター。 この値では、大文字と小文字が区別されません。 | `description=Test Description` |
 
 **リクエスト**
 
@@ -176,29 +176,29 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 | プロパティ | オーディエンスタイプ | 説明 |
 | -------- | ------------- | ----------- | 
 | `id` | 両方 | オーディエンスのシステム生成の読み取り専用識別子。 |
-| `audienceId` | 両方 | オーディエンスが Platform で生成されたオーディエンスの場合、これは `id`. オーディエンスが外部で生成される場合、この値はクライアントから提供されます。 |
+| `audienceId` | 両方 | オーディエンスが Platform で生成されたオーディエンスの場合、これは `id` と同じ値です。 オーディエンスが外部で生成される場合、この値はクライアントから提供されます。 |
 | `schema` | 両方 | オーディエンスのエクスペリエンスデータモデル（XDM）スキーマ。 |
 | `imsOrgId` | 両方 | オーディエンスが属する組織の ID。 |
-| `sandbox` | 両方 | オーディエンスが属するサンドボックスに関する情報。 サンドボックスの詳細については、次を参照してください。 [サンドボックスの概要](../../sandboxes/home.md). |
+| `sandbox` | 両方 | オーディエンスが属するサンドボックスに関する情報。 サンドボックスについて詳しくは、[ サンドボックスの概要 ](../../sandboxes/home.md) を参照してください。 |
 | `name` | 両方 | オーディエンスの名前。 |
 | `description` | 両方 | オーディエンスの説明。 |
-| `expression` | Platform で生成 | オーディエンスのプロファイルクエリ言語（PQL）式。 PQL 式について詳しくは、を参照してください。 [PQL 式ガイド](../pql/overview.md). |
+| `expression` | Platform で生成 | オーディエンスのProfile Query Language（PQL）式。 PQL式について詳しくは、[PQL式ガイド ](../pql/overview.md) を参照してください。 |
 | `mergePolicyId` | Platform で生成 | オーディエンスが関連付けられている結合ポリシーの ID。 結合ポリシーについて詳しくは、[結合ポリシーガイド](../../profile/api/merge-policies.md)を参照してください。 |
-| `evaluationInfo` | Platform で生成 | オーディエンスの評価方法を表示します。 考えられる評価方法には、バッチ、同期（ストリーミング）または連続（エッジ）があります。 評価方法について詳しくは、を参照してください。 [セグメント化の概要](../home.md) |
+| `evaluationInfo` | Platform で生成 | オーディエンスの評価方法を表示します。 考えられる評価方法には、バッチ、同期（ストリーミング）または連続（エッジ）があります。 評価方法について詳しくは、[ セグメント化の概要 ](../home.md) を参照してください。 |
 | `dependents` | 両方 | 現在のオーディエンスに依存するオーディエンス ID の配列。 これは、セグメントのセグメントであるオーディエンスを作成する場合に使用されます。 |
 | `dependencies` | 両方 | オーディエンスが依存するオーディエンス ID の配列。 これは、セグメントのセグメントであるオーディエンスを作成する場合に使用されます。 |
-| `type` | 両方 | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 使用可能な値は次のとおりです `SegmentDefinition` および `ExternalSegment`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを参照し、は `ExternalSegment` platform で生成されなかったオーディエンスを参照します。 |
-| `originName` | 両方 | オーディエンスの接触チャネルの名前を参照するフィールド。 Platform で生成されたオーディエンスの場合、この値はになります `REAL_TIME_CUSTOMER_PROFILE`. Audience Orchestration で生成されたオーディエンスの場合、この値はになります `AUDIENCE_ORCHESTRATION`. Adobe Audience Managerで生成されたオーディエンスの場合、この値はになります `AUDIENCE_MANAGER`. 外部で生成されたその他のオーディエンスの場合、この値は次のようになります `CUSTOM_UPLOAD`. |
+| `type` | 両方 | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
+| `originName` | 両方 | オーディエンスの接触チャネルの名前を参照するフィールド。 Platform で生成されたオーディエンスの場合、この値は `REAL_TIME_CUSTOMER_PROFILE` になります。 Audience Orchestration で生成されたオーディエンスの場合、この値は `AUDIENCE_ORCHESTRATION` になります。 Adobe Audience Managerで生成されたオーディエンスの場合、この値は `AUDIENCE_MANAGER` になります。 外部で生成されたその他のオーディエンスの場合、この値は `CUSTOM_UPLOAD` になります。 |
 | `createdBy` | 両方 | オーディエンスを作成したユーザーの ID。 |
 | `labels` | 両方 | オーディエンスに関連するオブジェクトレベルのデータ使用と属性ベースのアクセス制御ラベル。 |
-| `namespace` | 両方 | オーディエンスが属する名前空間。 使用可能な値は次のとおりです `AAM`, `AAMSegments`, `AAMTraits`、および `AEPSegments`. |
+| `namespace` | 両方 | オーディエンスが属する名前空間。 使用可能な値は、`AAM`、`AAMSegments`、`AAMTraits`、`AEPSegments` などです。 |
 | `linkedAudienceRef` | 両方 | 他のオーディエンス関連システムへの識別子を含むオブジェクト。 |
 
 +++
 
 ## 新しいオーディエンスの作成 {#create}
 
-にPOSTリクエストを実行することで、新しいオーディエンスを作成できます。 `/audiences` エンドポイント。
+`/audiences` エンドポイントにPOSTリクエストを実行することで、新しいオーディエンスを作成できます。
 
 **API 形式**
 
@@ -210,7 +210,7 @@ POST /audiences
 
 >[!BEGINTABS]
 
->[!TAB Platform で生成されたオーディエンス]
+>[!TAB Platform で生成されたオーディエンス ]
 
 +++ Platform で生成されたオーディエンスを作成するためのサンプルリクエスト
 
@@ -245,15 +245,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | -------- | ----------- | 
 | `name` | オーディエンスの名前。 |
 | `description` | オーディエンスの説明。 |
-| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたものかを表示するフィールド。 使用可能な値は次のとおりです `SegmentDefinition` および `ExternalSegment`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを参照し、は `ExternalSegment` platform で生成されなかったオーディエンスを参照します。 |
-| `expression` | オーディエンスのプロファイルクエリ言語（PQL）式。 PQL 式について詳しくは、を参照してください。 [PQL 式ガイド](../pql/overview.md). |
+| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたものかを表示するフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
+| `expression` | オーディエンスのProfile Query Language（PQL）式。 PQL式について詳しくは、[PQL式ガイド ](../pql/overview.md) を参照してください。 |
 | `schema` | オーディエンスのエクスペリエンスデータモデル（XDM）スキーマ。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用と属性ベースのアクセス制御ラベル。 |
 | `ttlInDays` | オーディエンスのデータ有効期限値を日単位で表します。 |
 
 +++
 
->[!TAB 外部で生成されたオーディエンス]
+>[!TAB  外部で生成されたオーディエンス ]
 
 +++ 外部で生成されたオーディエンスを作成するためのサンプルリクエスト
 
@@ -288,13 +288,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `name` | オーディエンスの名前。 |
 | `namespace` | オーディエンスの名前空間。 |
 | `description` | オーディエンスの説明。 |
-| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたものかを表示するフィールド。 使用可能な値は次のとおりです `SegmentDefinition` および `ExternalSegment`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを参照し、は `ExternalSegment` platform で生成されなかったオーディエンスを参照します。 |
-| `originName` | オーディエンスの接触チャネルの名前。 外部で生成されたオーディエンスの場合、このデフォルト値はです。 `CUSTOM_UPLOAD`. その他にサポートされている値は次のとおりです `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION`、および `AUDIENCE_MATCH`. |
-| `lifecycleState` | 作成しようとしているオーディエンスの初期状態を決定するオプションのフィールド。 次の値がサポートされています `draft`, `published`、および `inactive`. |
+| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたものかを表示するフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
+| `originName` | オーディエンスの接触チャネルの名前。 外部で生成されたオーディエンスの場合、このデフォルト値は `CUSTOM_UPLOAD` です。 その他にサポートされている値には、`REAL_TIME_CUSTOMER_PROFILE`、`CUSTOM_UPLOAD`、`AUDIENCE_ORCHESTRATION`、`AUDIENCE_MATCH` などがあります。 |
+| `lifecycleState` | 作成しようとしているオーディエンスの初期状態を決定するオプションのフィールド。 サポートされる値は、`draft`、`published`、`inactive` です。 |
 | `datasetId` | オーディエンスを含むデータが見つかるデータセットの ID。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用と属性ベースのアクセス制御ラベル。 |
 | `audienceMeta` | 外部で生成されたオーディエンスに属するメタデータです。 |
-| `linkedAudienceRef` | 他のオーディエンス関連システムの識別子を含むオブジェクト。 これには以下が含まれます。 <ul><li>`flowId`：この ID は、オーディエンスデータの取り込みに使用されたデータフローにオーディエンスを接続するために使用されます。 必要な ID について詳しくは、を参照してください。 [データフローガイドの作成](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`：この ID は、オーディエンスを関連するオーディエンスオーケストレーション構成に接続するために使用されます。&lt;/li/> <li>`payloadFieldGroupRef`：この ID は、オーディエンスの構造を説明する XDM フィールドグループスキーマを参照するために使用されます。 このフィールドの値について詳しくは、 [XDM フィールドグループエンドポイントガイド](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`：この ID は、オーディエンスのAdobe Audience Managerのフォルダー ID を参照するために使用されます。 この API について詳しくは、 [Adobe Audience Manager API ガイド](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
+| `linkedAudienceRef` | 他のオーディエンス関連システムの識別子を含むオブジェクト。 これには以下が含まれます。 <ul><li>`flowId`：この ID は、オーディエンスデータの取り込みに使用されたデータフローにオーディエンスを接続するために使用されます。 必要な ID について詳しくは、[ データフローの作成ガイド ](../../sources/tutorials/api/collect/cloud-storage.md) を参照してください。</li><li>`aoWorkflowId`：この ID は、オーディエンスを関連する Audience Orchestration コンポジションに接続するために使用されます。&lt;/li/> <li>`payloadFieldGroupRef`：この ID は、オーディエンスの構造を説明する XDM フィールドグループスキーマを参照するために使用されます。 このフィールドの値について詳しくは、[XDM フィールドグループエンドポイントガイド ](../../xdm/api/field-groups.md) を参照してください。</li><li>`audienceFolderId`：この ID は、オーディエンスのAdobe Audience Managerのフォルダー ID を参照するために使用されます。 この API について詳しくは、[Adobe Audience Manager API ガイド ](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API) を参照してください。</ul> |
 
 +++
 
@@ -306,7 +306,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 >[!BEGINTABS]
 
->[!TAB Platform で生成されたオーディエンス]
+>[!TAB Platform で生成されたオーディエンス ]
 
 +++Platform で生成されたオーディエンスを作成する際の応答のサンプル。
 
@@ -377,7 +377,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB 外部で生成されたオーディエンス]
+>[!TAB  外部で生成されたオーディエンス ]
 
 +++外部で生成されたオーディエンスを作成する際の応答のサンプル。
 
@@ -419,7 +419,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 ## 指定したオーディエンスの検索 {#get}
 
-に対してGETリクエストを実行すると、特定のオーディエンスに関する詳細を検索できます。 `/audiences` エンドポイントと、取得するオーディエンスの ID をリクエストパスで指定します。
+`/audiences` エンドポイントに対してGETリクエストを実行し、取得するオーディエンスの ID をリクエストパスで指定することで、特定のオーディエンスに関する詳細な情報を検索できます。
 
 **API 形式**
 
@@ -429,7 +429,7 @@ GET /audiences/{AUDIENCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | 取得しようとしているオーディエンスの ID。 これはです `id` フィールド、およびは **ではない** この `audienceId` フィールド。 |
+| `{AUDIENCE_ID}` | 取得しようとしているオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
 
 **リクエスト**
 
@@ -451,7 +451,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 >[!BEGINTABS]
 
->[!TAB Platform で生成されたオーディエンス]
+>[!TAB Platform で生成されたオーディエンス ]
 
 +++Platform で生成されたオーディエンスを取得する際の応答のサンプル。
 
@@ -521,7 +521,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 +++
 
->[!TAB 外部で生成されたオーディエンス]
+>[!TAB  外部で生成されたオーディエンス ]
 
 +++外部で生成されたオーディエンスを取得する際の応答のサンプル。
 
@@ -561,7 +561,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 ## オーディエンスのフィールドの更新 {#update-field}
 
-特定のオーディエンスのフィールドを更新するには、次の項目に対してPATCHリクエストを実行します。 `/audiences` エンドポイントと、更新するオーディエンスの ID をリクエストパスで指定します。
+`/audiences` エンドポイントにPATCHリクエストを実行し、リクエストパスで更新するオーディエンスの ID を指定することで、特定のオーディエンスのフィールドを更新できます。
 
 **API 形式**
 
@@ -571,7 +571,7 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これはです `id` フィールド、およびは **ではない** この `audienceId` フィールド。 |
+| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
 
 **リクエスト**
 
@@ -600,7 +600,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `op` | オーディエンスを更新する場合、この値は常にです `add`. |
+| `op` | オーディエンスを更新する場合、この値は常に `add` です。 |
 | `path` | 更新するフィールドのパス。 |
 | `value` | フィールドの更新先の値。 |
 
@@ -679,7 +679,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 
 ## オーディエンスの更新 {#put}
 
-特定のオーディエンスを更新（上書き）するには、に対してPUTリクエストを実行します。 `/audiences` エンドポイントと、更新するオーディエンスの ID をリクエストパスで指定します。
+特定のエンドポイントに対してPUTリクエストを実行し、リクエストパスで更新するオーディエンスの ID を指定することで、`/audiences` 定のオーディエンスを更新（上書き）できます。
 
 **API 形式**
 
@@ -689,7 +689,7 @@ PUT /audiences/{AUDIENCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これはです `id` フィールド、およびは **ではない** この `audienceId` フィールド。 |
+| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
 
 **リクエスト**
 
@@ -722,8 +722,8 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | オーディエンスの名前。 |
 | `namespace` | オーディエンスの名前空間。 |
 | `description` | オーディエンスの説明。 |
-| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 使用可能な値は次のとおりです `SegmentDefinition` および `ExternalSegment`. A `SegmentDefinition` は、Platform で生成されたオーディエンスを参照し、は `ExternalSegment` platform で生成されなかったオーディエンスを参照します。 |
-| `lifecycleState` | オーディエンスのステータス。使用可能な値は次のとおりです `draft`, `published`、および `inactive`. `draft` オーディエンスが作成されると、を表します。 `published` オーディエンスが公開されるタイミング、および `inactive` オーディエンスがアクティブでなくなった場合。 |
+| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
+| `lifecycleState` | オーディエンスのステータス。使用可能な値は、`draft`、`published`、`inactive` です。 `draft` は、オーディエンスが作成されたとき、オーディエンスが公開されたと `published`、オーディエンスがアクティブでなくなった `inactive` を表します。 |
 | `datasetId` | オーディエンスデータを検索できるデータセットの ID。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用と属性ベースのアクセス制御ラベル。 |
 
@@ -765,7 +765,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 ## オーディエンスの削除 {#delete}
 
-特定のオーディエンスを削除するには、次の項目に対してDELETEリクエストを実行します。 `/audiences` エンドポイントと、削除するオーディエンスの ID をリクエストパスで指定します。
+特定のオーディエンスを削除するには、`/audiences` エンドポイントにDELETEリクエストを実行し、リクエストパスで削除するオーディエンスの ID を指定します。
 
 **API 形式**
 
@@ -775,7 +775,7 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 削除するオーディエンスの ID。 これはです `id` フィールド、およびは **ではない** この `audienceId` フィールド。 |
+| `{AUDIENCE_ID}` | 削除するオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
 
 **リクエスト**
 
@@ -797,7 +797,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4
 
 ## 複数のオーディエンスの取得 {#bulk-get}
 
-に対してPOSTリクエストを実行すると、複数のオーディエンスを取得できます。 `/audiences/bulk-get` エンドポイントと、取得するオーディエンスの ID を指定します。
+`/audiences/bulk-get` エンドポイントに対してPOSTリクエストを行い、取得するオーディエンスの ID を指定することで、複数のオーディエンスを取得できます。
 
 **API 形式**
 
@@ -937,4 +937,4 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-get
 
 ## 次の手順
 
-このガイドを読むことで、Adobe Experience Platform API を使用してオーディエンスを作成、管理および削除する方法について、理解が深まりました。 UI を使用した Audience Management について詳しくは、を参照してください。 [セグメント化 UI ガイド](../ui/overview.md).
+このガイドを読むことで、Adobe Experience Platform API を使用してオーディエンスを作成、管理および削除する方法について、理解が深まりました。 UI を使用した Audience Management について詳しくは、[ セグメント化 UI ガイド ](../ui/overview.md) を参照してください。

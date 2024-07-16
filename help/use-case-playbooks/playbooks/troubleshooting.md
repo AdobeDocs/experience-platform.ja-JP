@@ -22,11 +22,11 @@ ht-degree: 0%
 
 ![トラブルシューティング](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-これは、Journey Optimizer プレイブックがメール、プッシュ、SMS チャネルのメッセージを作成するからです。 を読み取る [はじめに](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) 様々なサーフェスの設定に関するガイド。
+これは、Journey Optimizer プレイブックがメール、プッシュ、SMS チャネルのメッセージを作成するからです。 様々なサーフェスの設定については、[ 基本を学ぶ ](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) ガイドを参照してください。
 
-## ステータス *失敗* 新しいインスタンスの作成時 {#status-failed}
+## 新しいインスタンスの作成時のステータス *失敗* {#status-failed}
 
-インスタンスを作成しようとしたときに失敗メッセージが表示された場合は、管理者から必要なユーザー権限が付与されていない可能性があります。 プレイブックには様々なアセットが多数含まれており、プレイブックのインスタンスを正常に作成するには、ユーザーがこれらのアセットを作成する権限が必要です。 を参照してください。 [権限](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 権限の設定方法については、このガイドの節を参照してください。
+インスタンスを作成しようとしたときに失敗メッセージが表示された場合は、管理者から必要なユーザー権限が付与されていない可能性があります。 プレイブックには様々なアセットが多数含まれており、プレイブックのインスタンスを正常に作成するには、ユーザーがこれらのアセットを作成する権限が必要です。 権限の設定方法については、このガイドの [ 権限 ](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) の節を参照してください。
 
 ## 読み込み失敗 {#import-failure}
 

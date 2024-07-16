@@ -4,7 +4,7 @@ title: 宛先サーバー設定の取得
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '466'
 ht-degree: 100%
 
 ---

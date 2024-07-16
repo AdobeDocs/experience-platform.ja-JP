@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；FTP;ftp
+keywords: Experience Platform；ホーム；人気のトピック；FTP;ftp
 solution: Experience Platform
-title: UI での FTP ソース接続の作成
+title: UI での FTP Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して FTP ソース接続を作成する方法を説明します。
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 34%
+source-wordcount: '462'
+ht-degree: 31%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 >[!NOTE]
 >
->FTP コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
+>FTP コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-このチュートリアルでは、Adobe Experience Platform UI を使用して FTP ソース接続を作成する手順を説明します。
+このチュートリアルでは、Adobe Experience Platform UI を使用して FTP ソース接続を作成する手順について説明します。
 
 ## はじめに
 
@@ -29,7 +29,7 @@ ht-degree: 34%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な FTP 接続がある場合は、このドキュメントの残りの部分をスキップし、次のドキュメントのチュートリアルに進んでください。 [データフローの設定](../../dataflow/batch/cloud-storage.md).
+既に有効な FTP 接続がある場合は、このドキュメントの残りの部分をスキップし、[ データフローの設定 ](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -38,35 +38,35 @@ FTP に接続するには、次の接続プロパティの値を指定する必�
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | FTP サーバーに関連付けられた名前または IP アドレス。 |
-| `username` | FTP サーバーへのアクセス権を持つユーザー名。 |
+| `username` | FTP サーバーにアクセスできるユーザー名。 |
 | `password` | FTP サーバーのパスワード。 |
 
 ## FTP サーバーへの接続
 
-必要な資格情報を収集したら、次の手順に従って、Platform に接続するための新しい FTP アカウントを作成できます。
+必要な資格情報を収集したら、次の手順に従って Platform に接続する新しい FTP アカウントを作成できます。
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、 [!UICONTROL ソース] ワークスペース。 The [!UICONTROL カタログ] 画面には、インバウンドアカウントを作成するための様々なソースが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して [!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、インバウンドアカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 [!UICONTROL クラウドストレージ] カテゴリ、選択 **[!UICONTROL FTP]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** をクリックして、新しい FTP 接続を作成します。
+[!UICONTROL  クラウドストレージ ] カテゴリで、「**[!UICONTROL FTP]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい FTP 接続を作成します。
 
 ![カタログ](../../../../images/tutorials/create/ftp/catalog.png)
 
-The **[!UICONTROL FTP に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL FTP に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、アカウント名、説明（オプション）、 の資格情報を入力します。終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、の資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../../../../images/tutorials/create/ftp/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続する FTP アカウントを選択し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
+既存のアカウントに接続するには、接続する FTP アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
 ![既存](../../../../images/tutorials/create/ftp/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、FTP アカウントへの接続を確立しました。 次のチュートリアルに進み、 [データフローを設定して、クラウドストレージから Platform にデータを取り込みます。](../../dataflow/batch/cloud-storage.md).
+このチュートリアルでは、FTP アカウントへの接続を確立しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージから Platform にデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。

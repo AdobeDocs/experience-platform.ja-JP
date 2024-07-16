@@ -17,18 +17,18 @@ ht-degree: 40%
 
 エクスペリエンスイベントは、発生した事実（特定の時点や個人の ID など）の記録したものです。イベントは、明示的（直接観察可能な人間のアクション）または暗黙的（人間の直接のアクションなしに発生したもの）に設定でき、集計や解釈なしで記録されます。Platform エコシステムでのこのクラスの使用に関するハイレベルな情報については、[XDM の概要](../home.md#data-behaviors)を参照してください。
 
-[!DNL XDM ExperienceEvent] クラス自体は、スキーマに対していくつかの時系列関連フィールドを提供します。 この 2 つのフィールド （`_id` および `timestamp`） **必須** このクラスに基づくすべてのスキーマには、残りはオプションです。 一部のフィールドの値は、データの取り込み時に自動入力されます。
+[!DNL XDM ExperienceEvent] クラス自体は、スキーマに対していくつかの時系列関連フィールドを提供します。 これらのフィールドのうち 2 つ（`_id` と `timestamp`）は、このクラスに基づくすべてのスキーマに対して **必須** ですが、残りはオプションです。 一部のフィールドの値は、データの取り込み時に自動入力されます。
 
-![Platform UI に表示される XDM ExperienceEvent の構造。](../images/classes/experienceevent/structure.png)
+![Platform UI に表示される XDM ExperienceEvent の構造 ](../images/classes/experienceevent/structure.png)
 
 | プロパティ | 説明 |
 | --- | --- |
-| `_id`<br>**（必須）** | エクスペリエンスイベントクラス `_id` フィールドは、Adobe Experience Platformに取り込まれる個々のイベントを一意に識別します。 このフィールドは、個々のイベントの一意性を追跡、データの重複を防ぎ、ダウンストリームのサービスでそのイベントを検索するために使用されます。<br><br>重複イベントが検出された場合、Platform のアプリケーションとサービスでは重複の処理が異なる可能性があります。 例えば、イベントに同じものが含まれる場合、プロファイルサービスの重複イベントはドロップされます `_id` プロファイル ストアに既に存在します。<br><br>場合によっては、 `_id` は次になることができます。 [ユニバーサル固有識別子（UUID）](https://datatracker.ietf.org/doc/html/rfc4122) または [グローバル一意識別子（GUID）](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>ソース接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、イベントを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結できるイベントの例としては、プライマリ ID、タイムスタンプ、イベントタイプなどがあります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
+| `_id`<br>**（必須）** | 「エクスペリエンスイベントクラス `_id`」フィールドは、Adobe Experience Platformに取り込まれる個々のイベントを一意に識別します。 このフィールドは、個々のイベントの一意性を追跡、データの重複を防ぎ、ダウンストリームのサービスでそのイベントを検索するために使用されます。<br><br> 重複イベントが検出された場合、Platform アプリケーションおよびサービスの重複処理の方法が異なる可能性があります。 例えば、同じ `_id` を持つイベントが既にプロファイルストアに存在する場合、プロファイルサービスの重複イベントはドロップされます。<br><br> 場合によ `_id` ては、[ ユニバーサル固有識別子（UUID） ](https://datatracker.ietf.org/doc/html/rfc4122) または [ グローバル固有識別子（GUID） ](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) とすることができます。<br><br> ソース接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、イベントを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結できるイベントの例としては、プライマリ ID、タイムスタンプ、イベントタイプなどがあります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
 | `eventMergeId` | [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) を使用してデータを取り込む場合、レコードを作成する原因となった取り込まれたバッチの ID を表します。 このフィールドは、データの取り込み時にシステムによって自動的に入力されます。 Web SDK 実装のコンテキスト以外に、このフィールドの使用はサポートされていません。 |
 | `eventType` | イベントのタイプまたはカテゴリを示す文字列。 このフィールドは、同じスキーマとデータセット内の異なるイベントタイプを区別する場合（リテール企業で製品を表示するイベントと買い物かごへの追加イベントを区別する場合など）に使用できます。<br><br>このプロパティの標準値は、[付録の節](#eventType)に記載されています（意図するユースケースの説明も含む）。このフィールドは拡張可能な列挙型で、つまり、独自のイベントタイプ文字列を使用して、追跡するイベントを分類することもできます。<br><br>`eventType` では、アプリケーションでのヒットごとに 1 つのイベントのみを使用するように制限されているので、最も重要なイベントをシステムに伝えるには、計算フィールドを使用する必要があります。 詳しくは、[計算フィールドのベストプラクティス](#calculated)の節を参照してください。 |
 | `producedBy` | イベントのプロデューサーまたはオリジンを表す文字列の値。セグメント化で必要な場合、このフィールドを使用すると特定のイベントプロデューサーを除外できます。<br><br>このプロパティの推奨値の一部が、[付録の節](#producedBy)に記載されています。このフィールドは拡張可能な列挙型で、つまり、独自の文字列を使用して、異なるイベントプロデューサーを表すこともできます。 |
-| `identityMap` | イベントが適用される個人の名前空間 ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを適切に利用するには： [リアルタイム顧客プロファイル](../../profile/home.md)の場合は、データ操作でフィールドの内容を手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
-| `timestamp`<br>**（必須）** | イベントが発生した時点の ISO 8601 タイムスタンプ（[RFC 3339 セクション 5.6](https://datatracker.ietf.org/doc/html/rfc3339) を準拠した書式設定）。このタイムスタンプ **が** 過去に起こるが **が** 1970 年以降に行われます。 このフィールドの使用に関するベストプラクティスについては、以下の[タイムスタンプ](#timestamps)の節を参照してください。 |
+| `identityMap` | イベントが適用される個人の名前空間 ID のセットを含む map フィールド。 このフィールドは、ID データが取り込まれると、システムによって自動的に更新されます。 このフィールドを [ リアルタイム顧客プロファイル ](../../profile/home.md) に適切に利用するために、データ操作でフィールドの内容を手動で更新しようとしないでください。<br /><br />そのユースケースについては、[スキーマ構成の基本](../schema/composition.md#identityMap) の ID マップの節を参照してください。 |
+| `timestamp`<br>**（必須）** | イベントが発生した時点の ISO 8601 タイムスタンプ（[RFC 3339 セクション 5.6](https://datatracker.ietf.org/doc/html/rfc3339) を準拠した書式設定）。このタイムスタンプは過去の日付 **必須** ですが、1970 年以降の日付 **必須** となります。 このフィールドの使用に関するベストプラクティスについては、以下の[タイムスタンプ](#timestamps)の節を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -38,11 +38,11 @@ ht-degree: 40%
 
 ### タイムスタンプ {#timestamps}
 
-イベントスキーマのルート `timestamp` フィールドは、イベント自体の観測&#x200B;**のみ**&#x200B;を表すことができ、過去の日付にする必要があります。 ただし、イベント **が** 1970 年以降に行われます。 セグメント化のユースケースで、使用するタイムスタンプが将来の日付になる可能性がある場合、これらの値はエクスペリエンスイベントスキーマの他の場所で制約を受ける必要があります。
+イベントスキーマのルート `timestamp` フィールドは、イベント自体の観測&#x200B;**のみ**&#x200B;を表すことができ、過去の日付にする必要があります。 ただし、このイベント **必須** は 1970 年以降に発生します。 セグメント化のユースケースで、使用するタイムスタンプが将来の日付になる可能性がある場合、これらの値はエクスペリエンスイベントスキーマの他の場所で制約を受ける必要があります。
 
 例えば、旅行業界や接客業のビジネスがフライト予約イベントをモデリングしている場合、クラスレベルの `timestamp`フィールドは、予約イベントが観測された時刻を表します。 旅行予約の開始日など、イベントに関連するその他のタイムスタンプは、標準フィールドグループまたはカスタムフィールドグループが提供する別のフィールドで取得する必要があります。
 
-![フライトの予約と開始日がハイライト表示されたサンプルエクスペリエンスイベントスキーマ。](../images/classes/experienceevent/timestamps.png)
+![ フライトの予約と開始日がハイライト表示されたサンプルエクスペリエンスイベントスキーマ ](../images/classes/experienceevent/timestamps.png)
 
 クラスレベルのタイムスタンプをイベントスキーマの他の関連する日時値から分離することで、エクスペリエンスアプリケーションでカスタマージャーニーをタイムスタンプで記録しながら、柔軟なセグメント化のユースケースを実装することができます。
 
@@ -50,7 +50,7 @@ ht-degree: 40%
 
 エクスペリエンスアプリケーションにおける特定のインタラクションの結果、技術的に同じイベントタイムスタンプを共有する複数の関連イベントが発生する可能性があるので、それらのインタラクションを単一のイベントレコードとして表現できます。 例えば、顧客が web サイトで製品を閲覧すると、結果的に、可能性のある 2 つの `eventType` 値を持つイベントレコードになることがあります。「製品ビュー」イベント（`commerce.productViews`）または汎用的な「ページビュー」イベント（`web.webpagedetails.pageViews`）の 2 つです。 このような場合、1 回のヒットで複数のイベントがキャプチャされる際に、計算フィールドを使用して最も重要な属性をキャプチャすることができます。
 
-使用方法 [Adobe Experience Platform Data Prep](../../data-prep/home.md) を使用して、XDM との間でデータのマッピング、変換および検証を行います。 サービスから提供される[マッピング機能](../../data-prep/functions.md)を使用すると、複数のイベントレコードのデータを Experience Platform に取り込む際に、論理演算子を呼び出してデータの優先順位付け、変換および統合を行うことができます。上記の例では、「製品ビュー」と「ページビュー」の両方が発生した場合に「ページビュー」よりも「製品ビュー」を優先させる計算フィールドとして、`eventType` を指定することができます。
+[Adobe Experience Platform Data Prep](../../data-prep/home.md) を使用して、XDM との間でデータのマッピング、変換および検証を行います。 サービスから提供される[マッピング機能](../../data-prep/functions.md)を使用すると、複数のイベントレコードのデータを Experience Platform に取り込む際に、論理演算子を呼び出してデータの優先順位付け、変換および統合を行うことができます。上記の例では、「製品ビュー」と「ページビュー」の両方が発生した場合に「ページビュー」よりも「製品ビュー」を優先させる計算フィールドとして、`eventType` を指定することができます。
 
 UI を使用して手動で Platform にデータを取り込む場合、計算フィールドの作成方法に関する具体的な手順については、[計算フィールド](../../data-prep/ui/mapping.md#calculated-fields)に関するガイドを参照してください。
 
@@ -64,13 +64,13 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 
 アドビでは、 [!DNL XDM ExperienceEvent] クラスで使用するためのいくつかの標準フィールドグループを提供しています。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
-* [[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL 残高繰り越し]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 ]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL  残高移動 ]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL キャンペーンマーケティング詳細]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL カードアクション]](../field-groups/event/card-actions.md)
+* [[!UICONTROL  カードのアクション ]](../field-groups/event/card-actions.md)
 * [[!UICONTROL チャンネル詳細]](../field-groups/event/channel-details.md)
 * [[!UICONTROL コマース詳細]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL 預金の詳細]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL  供託内容等 ]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL デバイス下取り詳細]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 食事予約]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL エンドユーザー ID 詳細]](../field-groups/event/enduserids.md)
@@ -78,8 +78,8 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 * [[!UICONTROL フライト予約]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 同意]](../field-groups/event/iab.md)
 * [[!UICONTROL 宿泊予約]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL MediaAnalytics インタラクションの詳細]](../field-groups/event/mediaanalytics-interaction.md)
-* [[!UICONTROL 見積依頼の詳細]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL MediaAnalytics インタラクションの詳細 ]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL  見積依頼の詳細 ]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL 予約詳細]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web 詳細]](../field-groups/event/web-details.md)
 
@@ -146,25 +146,25 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 | `leadOperation.statusInCampaignProgressionChanged` | このイベントは、キャンペーンでのリードのステータスが変更されたタイミングを追跡します。 |
 | `listOperation.addToList` | このイベントでは、人物がマーケティングリストに追加されたタイミングを追跡します。 |
 | `listOperation.removeFromList` | このイベントは、ある人物がマーケティングリストから削除されたタイミングを追跡します。 |
-| `media.adBreakComplete` | このイベントは、 `adBreakComplete` イベントが発生しました。 このイベントは、広告ブレークの開始時にトリガーされます。 |
-| `media.adBreakStart` | このイベントは、 `adBreakStart` イベントが発生しました。 このイベントは、広告ブレークの終了時にトリガーされます。 |
-| `media.adComplete` | このイベントは、 `adComplete` イベントが発生しました。 このイベントは、広告が完了したときにトリガーされます。 |
-| `media.adSkip` | このイベントは、 `adSkip` イベントが発生しました。 このイベントは、広告がスキップされたときにトリガーされます。 |
-| `media.adStart` | このイベントは、 `adStart` イベントが発生しました。 このイベントは、広告が開始されたときにトリガーされます。 |
-| `media.bitrateChange` | このイベントは、 `bitrateChange` イベントが発生しました。 このイベントは、ビットレートに変更がある場合にトリガーされます。 |
-| `media.bufferStart` | このイベントは、 `bufferStart` イベントが発生しました。 メディアのバッファー処理が開始されると、このイベントがトリガーされます。 |
-| `media.chapterComplete` | このイベントは、 `chapterComplete` イベントが発生しました。 このイベントは、メディアのチャプターが完了したときにトリガーされます。 |
-| `media.chapterSkip` | このイベントは、 `chapterSkip` イベントが発生しました。 このイベントは、ユーザーがメディアコンテンツ内の別のセクションまたはチャプターに進む、または戻る際にトリガーされます。 |
-| `media.chapterStart` | このイベントは、 `chapterStart` イベントが発生しました。 このイベントは、メディアコンテンツ内の特定のセクションまたはチャプターの開始時にトリガーされます。 |
+| `media.adBreakComplete` | このイベントは、`adBreakComplete` イベントが発生した際に追跡します。 このイベントは、広告ブレークの開始時にトリガーされます。 |
+| `media.adBreakStart` | このイベントは、`adBreakStart` イベントが発生した際に追跡します。 このイベントは、広告ブレークの終了時にトリガーされます。 |
+| `media.adComplete` | このイベントは、`adComplete` イベントが発生した際に追跡します。 このイベントは、広告が完了したときにトリガーされます。 |
+| `media.adSkip` | このイベントは、`adSkip` イベントが発生した際に追跡します。 このイベントは、広告がスキップされたときにトリガーされます。 |
+| `media.adStart` | このイベントは、`adStart` イベントが発生した際に追跡します。 このイベントは、広告が開始されたときにトリガーされます。 |
+| `media.bitrateChange` | このイベントは、`bitrateChange` イベントが発生した際に追跡します。 このイベントは、ビットレートに変更がある場合にトリガーされます。 |
+| `media.bufferStart` | このイベントは、`bufferStart` イベントが発生した際に追跡します。 メディアのバッファー処理が開始されると、このイベントがトリガーされます。 |
+| `media.chapterComplete` | このイベントは、`chapterComplete` イベントが発生した際に追跡します。 このイベントは、メディアのチャプターが完了したときにトリガーされます。 |
+| `media.chapterSkip` | このイベントは、`chapterSkip` イベントが発生した際に追跡します。 このイベントは、ユーザーがメディアコンテンツ内の別のセクションまたはチャプターに進む、または戻る際にトリガーされます。 |
+| `media.chapterStart` | このイベントは、`chapterStart` イベントが発生した際に追跡します。 このイベントは、メディアコンテンツ内の特定のセクションまたはチャプターの開始時にトリガーされます。 |
 | `media.downloaded` | このイベントは、メディアダウンロード済みコンテンツが発生したタイミングを追跡します。 |
-| `media.error` | このイベントは、 `error` イベントが発生しました。 このイベントは、メディアの再生中にエラーまたは問題が発生するとトリガーされます。 |
-| `media.pauseStart` | このイベントは、 `pauseStart` イベントが発生しました。 このイベントは、ユーザーがメディア再生で一時停止を開始するとトリガーされます。 |
-| `media.ping` | このイベントは、 `ping` イベントが発生しました。 これにより、メディアリソースが使用可能かどうかが確認されます。 |
-| `media.play` | このイベントは、 `play` イベントが発生しました。 このイベントは、メディアコンテンツの再生中にトリガーされ、ユーザーによるアクティブな消費を示します。 |
-| `media.sessionComplete` | このイベントは、 `sessionComplete` イベントが発生しました。 このイベントは、メディア再生セッションの終了をマークします。 |
-| `media.sessionEnd` | このイベントは、 `sessionEnd` イベントが発生しました。 このイベントは、メディアセッションの終了を示します。 この結論には、メディアプレーヤーを閉じるか、再生を停止することが含まれる場合があります。 |
-| `media.sessionStart` | このイベントは、 `sessionStart` イベントが発生しました。 このイベントは、メディア再生セッションの開始をマークします。 ユーザーがメディアファイルの再生を開始するとトリガーされます。 |
-| `media.statesUpdate` | このイベントは、 `statesUpdate` イベントが発生しました。 プレーヤーステートトラッキング機能は、オーディオストリームまたはビデオストリームに付加することができる。 標準の状態は、fullscreen、mute、closedCaptioning、pictureInPicture、inFocus です。 |
+| `media.error` | このイベントは、`error` イベントが発生した際に追跡します。 このイベントは、メディアの再生中にエラーまたは問題が発生するとトリガーされます。 |
+| `media.pauseStart` | このイベントは、`pauseStart` イベントが発生した際に追跡します。 このイベントは、ユーザーがメディア再生で一時停止を開始するとトリガーされます。 |
+| `media.ping` | このイベントは、`ping` イベントが発生した際に追跡します。 これにより、メディアリソースが使用可能かどうかが確認されます。 |
+| `media.play` | このイベントは、`play` イベントが発生した際に追跡します。 このイベントは、メディアコンテンツの再生中にトリガーされ、ユーザーによるアクティブな消費を示します。 |
+| `media.sessionComplete` | このイベントは、`sessionComplete` イベントが発生した際に追跡します。 このイベントは、メディア再生セッションの終了をマークします。 |
+| `media.sessionEnd` | このイベントは、`sessionEnd` イベントが発生した際に追跡します。 このイベントは、メディアセッションの終了を示します。 この結論には、メディアプレーヤーを閉じるか、再生を停止することが含まれる場合があります。 |
+| `media.sessionStart` | このイベントは、`sessionStart` イベントが発生した際に追跡します。 このイベントは、メディア再生セッションの開始をマークします。 ユーザーがメディアファイルの再生を開始するとトリガーされます。 |
+| `media.statesUpdate` | このイベントは、`statesUpdate` イベントが発生した際に追跡します。 プレーヤーステートトラッキング機能は、オーディオストリームまたはビデオストリームに付加することができる。 標準の状態は、fullscreen、mute、closedCaptioning、pictureInPicture、inFocus です。 |
 | `opportunityEvent.addToOpportunity` | このイベントでは、人物がオポチュニティに追加されたタイミングを追跡します。 |
 | `opportunityEvent.opportunityUpdated` | このイベントは、オポチュニティが更新されたタイミングを追跡します。 |
 | `opportunityEvent.removeFromOpportunity` | このイベントでは、人物がオポチュニティから削除されたタイミングを追跡します。 |

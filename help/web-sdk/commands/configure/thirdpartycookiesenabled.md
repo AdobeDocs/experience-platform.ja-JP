@@ -1,6 +1,6 @@
 ---
 title: thirdPartyCookiesEnabled
-description: サードパーティ Cookie を使用して訪問者を識別することを許可する。
+description: 訪問者を識別するためのサードパーティ Cookie の使用を許可する。
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
 source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
@@ -14,29 +14,29 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Google [発表済み](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) は、2024 年後半にサードパーティ cookie の Chrome サポートを廃止する予定です。 その結果、主要なブラウザーではサードパーティ Cookie がサポートされなくなります。
+>Google[ 発表しました ](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) は、2024 年後半にサードパーティ cookie に対するChromeのサポートを廃止する計画です。 その結果、主要なブラウザーでサードパーティ cookie がサポートされなくなります。
 >
->この変更が実装されると、Adobeは、 `demdex` Web SDK で現在サポートされている Cookie。
+>この変更が実装されると、Adobeでは、Web SDK で現在サポートされている `demdex` Cookie のサポートを停止します。
 
 
-The `thirdPartyCookiesEnabled` プロパティは、Web SDK が Cookie をサードパーティのコンテキストに設定するかどうかを決定するブール値です。 このオプションを有効にすると、組織が所有するサブドメインまたはドメイン間の訪問者を識別する場合に役立ちます。 ただし、最新のブラウザーの多くは、サードパーティ Cookie の設定と有効期限を制限しています。
+`thirdPartyCookiesEnabled` プロパティは、Web SDK がサードパーティコンテキストで cookie を設定するかどうかを決定するブール値です。 このオプションを有効にすると、組織が所有するサブドメイン間またはドメイン間で訪問者を識別する場合に役立ちます。 ただし、最新のブラウザーの多くは、サードパーティ cookie の設定と有効期限を制限しています。
 
-このオプションを有効にすると、Web SDK はAdobe Audience Managerを使用して訪問者を識別します。 このオプションが無効の場合、Audience Managerの呼び出しは無効になります。 詳しくは、 [Demdex ドメインの呼び出しについて](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=ja) (『Audience Managerユーザガイド』) を参照してください。
+このオプションを有効にすると、Web SDK はAdobe Audience Managerを使用して訪問者の特定に役立ちます。 このオプションを無効にすると、コールトゥAudience Managerは無効になります。 詳しくは、Audience Managerユーザーガイドの [Demdex ドメインの呼び出しについて ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=ja) を参照してください。
 
 ## Web SDK タグ拡張機能を使用してサードパーティ Cookie を有効にする
 
-を選択します。 **[!UICONTROL サードパーティ Cookie の使用]** チェックボックス [タグ拡張の設定](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) の場合は、「**[!UICONTROL サードパーティ Cookie を使用]**」チェックボックスを選択します。
 
-1. にログインします。 [experience.adobe.com](https://experience.adobe.com) Adobe ID資格情報を使用して。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL 拡張機能]**&#x200B;を選択し、次に **[!UICONTROL 設定]** の [!UICONTROL Adobe Experience Platform Web SDK] カード。
-1. 下にスクロールして、 [!UICONTROL ID] 「 」セクションで、「 」チェックボックスをオンにします。 **[!UICONTROL サードパーティ Cookie の使用]**.
-1. クリック **[!UICONTROL 保存]**&#x200B;をクリックし、変更を公開します。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. 「[!UICONTROL ID]」セクションまでスクロールし、「**[!UICONTROL サードパーティ Cookie を使用]**」チェックボックスを選択します。
+1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 
 ## Web SDK JavaScript ライブラリを使用してサードパーティ Cookie を有効にする
 
-を設定します。 `thirdPartyCookiesEnabled` 実行時のブール値 `configure` コマンドを使用します。 Web SDK を設定する際にこのプロパティを省略した場合、デフォルトはになります。 `true`. この値をに設定します。 `false` Web SDK で訪問者の識別にAudience Managerを使用しない場合。
+`configure` コマンドを実行するときは、`thirdPartyCookiesEnabled` のブール値を設定します。 Web SDK の設定時にこのプロパティを省略すると、デフォルトは `true` になります。 Web SDK で訪問者の特定にAudience Managerを使用しない場合は、この値を `false` に設定します。
 
 ```js
 alloy("configure", {

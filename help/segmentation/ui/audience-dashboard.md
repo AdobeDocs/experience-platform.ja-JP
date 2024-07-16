@@ -4,7 +4,7 @@ description: Adobe Experience Platform UI には、組織が作成および管�
 type: Documentation
 exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
 source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 100%
 

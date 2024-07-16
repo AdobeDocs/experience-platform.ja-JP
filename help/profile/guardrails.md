@@ -3,22 +3,22 @@ title: リアルタイム顧客プロファイルデータとセグメント化�
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Real-Time CDP機能を最適に使用するための、プロファイルデータとセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
+description: Real-Time CDP 機能を最適に使用するための、プロファイルデータおよびセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
 source-wordcount: '2457'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 
-# のデフォルトガードレール [!DNL Real-Time Customer Profile] データとセグメント化
+# [!DNL Real-Time Customer Profile] データとセグメント化のデフォルトガードレール
 
 Adobe Experience Platformを使用すると、リアルタイム顧客プロファイルの形式で、行動インサイトと顧客属性に基づいてパーソナライズされたクロスチャネルエクスペリエンスを提供できます。 プロファイルに対するこの新しいアプローチをサポートするために、Experience Platform では、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。
 
 >[!IMPORTANT]
 >
->販売注文のライセンスの使用権限と対応するを確認します [製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html) 実際の使用制限に関して、このガードレール ページに加えて説明します。
+>このガードレール ページに加えて、販売注文と対応する [ 製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html) でライセンスの使用権限を確認してください。
 
 このドキュメントでは、最適なシステムパフォーマンスを得るためにプロファイルデータをモデル化する際に役立つ、デフォルトの使用方法とレートの制限について説明します。次のガードレールを確認する際は、データが正しくモデル化されていることが前提になっています。データのモデル化方法に関するご質問は、カスタマーサービス担当者にお問い合わせください。
 
@@ -33,7 +33,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 * [[!DNL Real-Time Customer Profile]](home.md)：複数のソースからのデータを使用して、統合された消費者プロファイルを作成します。
 * [ID](../identity-service/home.md)：Platform に取り込まれる際に、異なるデータソースからの ID を結び付けます。
 * [スキーマ](../xdm/home.md)：Experience Data Model（XDM）スキーマは、Platform が顧客体験データを整理するための標準化されたフレームワークです。
-* [オーディエンス](../segmentation/home.md):Platform 内のセグメント化エンジンは、顧客の行動と属性に基づいて顧客プロファイルからオーディエンスを作成するために使用されます。
+* [ オーディエンス ](../segmentation/home.md):Platform 内のセグメント化エンジンは、顧客の行動と属性に基づいて顧客プロファイルからオーディエンスを作成するために使用されます。
 
 ## 上限のタイプ
 
@@ -98,7 +98,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 | 最大プロファイルフラグメントサイズ | 50 MB | システムに適用されたガードレール | **単一のプロファイルフラグメントの最大サイズは 50 MB です。** セグメント化、書き出しおよびルックアップは、[プロファイルフラグメント](#profile-fragments)が 50 MB を超える場合、失敗することがあります。 |
 | 最大プロファイルストレージサイズ | 50 MB | パフォーマンスガードレール | **保存されたプロファイルの最大サイズは 50 MB です。** 50 MB を超えるプロファイルに新しい[プロファイルフラグメント](#profile-fragments)を追加すると、システムのパフォーマンスに影響を与えます。例えば、プロファイルには 50 MB の単一のフラグメントを含めることも、複数のデータセットにわたる、合計サイズが 50 MB の複数のフラグメントを含めることもできます。 50 MB を超える単一のフラグメントを持つプロファイル、または合計サイズが 50 MB を超える複数のフラグメントを保存しようとすると、システムのパフォーマンスに影響を与えます。 |
 | 1 日に取り込まれるプロファイルバッチまたは ExperienceEvent バッチの数 | 90 | パフォーマンスガードレール | **1 日に取り込まれるプロファイルバッチまたは ExperienceEvent バッチの最大数は 90 です。** つまり、1 日に取り込まれるプロファイルバッチと ExperienceEvent バッチを合わせた合計数は 90 を超えることはできないということです。追加のバッチを取り込むと、システムのパフォーマンスに影響します。 |
-| プロファイルレコードあたりの ExperienceEvents の数 | 5,000 | パフォーマンスガードレール | **プロファイルレコードあたりの ExperienceEvents の最大数は 5000 です。** 5,000 件を超える ExperienceEvents を持つプロファイルは、 **ではない** セグメント化に考慮する。 |
+| プロファイルレコードあたりの ExperienceEvents の数 | 5,000 | パフォーマンスガードレール | **プロファイルレコードあたりの ExperienceEvents の最大数は 5000 です。5,000 件を超える ExperienceEvents を持つ** プロファイルは、セグメント化の対象と **されません**。 |
 
 {style="table-layout:auto"}
 
@@ -118,21 +118,21 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --------- | ----- | ---------- | ----------- |
-| サンドボックスあたりのオーディエンス数 | 4000 | パフォーマンスガードレール | 組織は合計 4000 個を超えるオーディエンスを持つことができます（各サンドボックスのオーディエンス数が 4000 個未満である必要があります）。 これは、バッチ、ストリーミング、エッジオーディエンスを含みます。 追加のオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳細を読む： [オーディエンスの作成](/help/segmentation/ui/segment-builder.md) セグメントビルダーを使用。 |
-| サンドボックスごとのエッジオーディエンス | 150 | パフォーマンスガードレール | 組織は合計 150 個を超えるエッジオーディエンスを持つことができます（各サンドボックスのエッジオーディエンス数が 150 個未満である必要があります）。 追加のエッジオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳細を読む： [edge オーディエンス](/help/segmentation/ui/edge-segmentation.md). |
-| すべてのサンドボックスにわたるエッジスループット | 1500 RPS | パフォーマンスガードレール | エッジセグメント化では、Adobe Experience Platform Edge Networkに入るインバウンドイベント数のピーク値（1 秒あたり 1,500 件）をサポートしています。 エッジセグメント化には、インバウンドイベントがAdobe Experience Platform Edge Networkに入った後に処理するのに最大 350 ミリ秒かかる場合があります。 詳細を読む： [edge オーディエンス](/help/segmentation/ui/edge-segmentation.md). |
-| サンドボックスごとのストリーミングオーディエンス | 500 | パフォーマンスガードレール | 組織は合計 500 個を超えるストリーミングオーディエンスを持つことができます（各サンドボックスのストリーミングオーディエンス数が 500 個未満である必要があります）。 これは、ストリーミングオーディエンスとエッジオーディエンスの両方を含んでいます。 追加のストリーミングオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳細を読む： [ストリーミングオーディエンス](/help/segmentation/ui/streaming-segmentation.md). |
-| すべてのサンドボックスでのストリーミングスループット | 1500 RPS | パフォーマンスガードレール | ストリーミングセグメント化では、1 秒あたり 1,500 インバウンドイベントのピーク値をサポートしています。 ストリーミングセグメント化は、セグメントメンバーシップのプロファイルを選定するのに最大 5 分かかる場合があります。 詳細を読む： [ストリーミングオーディエンス](/help/segmentation/ui/streaming-segmentation.md). |
+| サンドボックスあたりのオーディエンス数 | 4000 | パフォーマンスガードレール | 組織は合計 4000 個を超えるオーディエンスを持つことができます（各サンドボックスのオーディエンス数が 4000 個未満である必要があります）。 これは、バッチ、ストリーミング、エッジオーディエンスを含みます。 追加のオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、セグメントビルダーを使用した [ オーディエンスの作成 ](/help/segmentation/ui/segment-builder.md) を参照してください。 |
+| サンドボックスごとのEdge オーディエンス | 150 | パフォーマンスガードレール | 組織は合計 150 個を超えるエッジオーディエンスを持つことができます（各サンドボックスのエッジオーディエンス数が 150 個未満である必要があります）。 追加のエッジオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/ui/edge-segmentation.md) を参照してください。 |
+| すべてのサンドボックスにわたるEdgeのスループット | 1500 RPS | パフォーマンスガードレール | Edgeのセグメント化では、Adobe Experience Platform Edge Networkに入るインバウンドイベント数のピーク値（1 秒あたり 1,500 件）がサポートされています。 Edgeのセグメント化は、インバウンドイベントがAdobe Experience Platform Edge Networkに入った後、処理するのに最大 350 ミリ秒かかる場合があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/ui/edge-segmentation.md) を参照してください。 |
+| サンドボックスごとのストリーミングオーディエンス | 500 | パフォーマンスガードレール | 組織は合計 500 個を超えるストリーミングオーディエンスを持つことができます（各サンドボックスのストリーミングオーディエンス数が 500 個未満である必要があります）。 これは、ストリーミングオーディエンスとエッジオーディエンスの両方を含んでいます。 追加のストリーミングオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/ui/streaming-segmentation.md) を参照してください。 |
+| すべてのサンドボックスでのストリーミングスループット | 1500 RPS | パフォーマンスガードレール | ストリーミングセグメント化では、1 秒あたり 1,500 インバウンドイベントのピーク値をサポートしています。 ストリーミングセグメント化は、セグメントメンバーシップのプロファイルを選定するのに最大 5 分かかる場合があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/ui/streaming-segmentation.md) を参照してください。 |
 | サンドボックスごとのバッチオーディエンス | 4000 | パフォーマンスガードレール | 組織は合計 4000 個を超えるバッチオーディエンスを持つことができます（各サンドボックスのバッチオーディエンス数が 4000 個未満である必要があります）。 追加のバッチオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 |
-| サンドボックスごとのアカウントオーディエンス | 50 | システムに適用されたガードレール | 1 つのサンドボックスに作成できるアカウントオーディエンスは最大 50 個です。 サンドボックスで 50 人のオーディエンスに到達した後、 **[!UICONTROL オーディエンスを作成]** 新しいアカウントオーディエンスを作成しようとすると、コントロールが無効になります。 詳細を読む： [アカウントオーディエンス](/help/segmentation/ui/account-audiences.md). |
-| サンドボックスごとの公開済みコンポジション | 10 | パフォーマンスガードレール | サンドボックスには、最大 10 個の公開済みコンポジションを含めることができます。 詳細を読む： [ui ガイドのオーディエンス構成](/help/segmentation/ui/audience-composition.md). |
+| サンドボックスごとのアカウントオーディエンス | 50 | システムに適用されたガードレール | 1 つのサンドボックスに作成できるアカウントオーディエンスは最大 50 個です。 サンドボックスで 50 個のオーディエンスに到達した場合、新しいアカウントオーディエンスを作成しようとすると、**[!UICONTROL オーディエンスを作成]** コントロールが無効になります。 詳しくは、[ アカウントオーディエンス ](/help/segmentation/ui/account-audiences.md) を参照してください。 |
+| サンドボックスごとの公開済みコンポジション | 10 | パフォーマンスガードレール | サンドボックスには、最大 10 個の公開済みコンポジションを含めることができます。 詳しくは、[UI ガイドのオーディエンス構成 ](/help/segmentation/ui/audience-composition.md) を参照してください。 |
 | 最大オーディエンスサイズ | 30% | パフォーマンスガードレール | オーディエンスの推奨される最大メンバーシップは、システム内のプロファイルの合計数の 30% です。 プロファイルの 30% 以上をメンバーまたは複数の大きなオーディエンスとしてオーディエンスを作成できますが、システムのパフォーマンスに影響を与える可能性があります。 |
 
 {style="table-layout:auto"}
 
 ## 予想される可用性
 
-以下の節では、の概要を説明します **予測** Real-Time CDPの宛先などのダウンストリームサービスでのオーディエンスおよび結合ポリシーの使用が可能：
+次の節では、Real-Time CDPの宛先などのダウンストリームサービスにおけるオーディエンスと結合ポリシーの **想定** 可用性の概要を説明します。
 
 | サンドボックスタイプ | 時間 |
 | ------------ | ---- |
@@ -148,7 +148,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 ### エンティティタイプ
 
-この [!DNL Profile] ストアデータモデルは、次の 2 つのコアエンティティタイプで構成されます。 [プライマリエンティティ](#primary-entity) および [ディメンションエンティティ](#dimension-entity).
+[!DNL Profile] ストアデータモデルは、2 つのコアエンティティタイプ（[ プライマリエンティティ ](#primary-entity) と [ ディメンションエンティティ ](#dimension-entity) で構成されます。
 
 #### プライマリエンティティ
 
@@ -156,17 +156,17 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 時間に依存しない属性（「レコードデータ」とも呼ばれる）は、[!DNL XDM Individual Profile]、時系列データ（「イベントデータ」とも呼ばれる）は [!DNL XDM ExperienceEvent] を使用してモデル化されます。レコードと時系列データが Adobe Experience Platform に取り込まれると、[!DNL Real-Time Customer Profile] がトリガーされ、使用可能なデータの取り込みが開始されます。 取り込まれるインタラクションや詳細が多いほど、個人プロファイルは正確になります。
 
-![レコードデータと時系列データの違いの概要を示したインフォグラフィック。](images/guardrails/profile-entity.png)
+![ レコードデータと時系列データの違いの概要を示したインフォグラフィック。](images/guardrails/profile-entity.png)
 
 #### Dimensionエンティティ
 
-プロファイルデータを保持しているプロファイルデータストアはリレーショナルストアではありませんが、シンプルで直感的にオーディエンスを作成できるようにするために、プロファイルでは小さなディメンションエンティティとの統合が可能になっています。 この統合は、 [マルチエンティティのセグメント化](../segmentation/multi-entity-segmentation.md).
+プロファイルデータを保持しているプロファイルデータストアはリレーショナルストアではありませんが、シンプルで直感的にオーディエンスを作成できるようにするために、プロファイルでは小さなディメンションエンティティとの統合が可能になっています。 この統合は、[ マルチエンティティセグメント化 ](../segmentation/multi-entity-segmentation.md) とも呼ばれます。
 
-組織では、店舗、製品、資産など、個人以外のものを記述する XDM クラスを定義することもできます。 これら以外[!DNL XDM Individual Profile] スキーマは「ディメンションエンティティ」（「ルックアップエンティティ」とも呼ばれます）と呼ばれ、時系列データを含みません。 ディメンションエンティティを表すスキーマは、を使用することでプロファイルエンティティにリンクされます。 [スキーマの関係](../xdm/tutorials/relationship-ui.md).
+組織では、店舗、製品、資産など、個人以外のものを記述する XDM クラスを定義することもできます。 これらの [!DNL XDM Individual Profile] 以外のスキーマは「ディメンションエンティティ」（「ルックアップエンティティ」とも呼ばれます）と呼ばれ、時系列データを含みません。 ディメンションエンティティを表すスキーマは、[ スキーマ関係 ](../xdm/tutorials/relationship-ui.md) を使用してプロファイルエンティティにリンクされます。
 
 ディメンションエンティティは、複数エンティティのセグメント定義を支援および簡素化するルックアップデータを提供します。また、セグメントエンジンが、処理の最適化（高速ポイントルックアップ）のためにデータセット全体をメモリに読み込めるようディメンションエンティティのサイズは小さくする必要があります。
 
-![プロファイルエンティティが複数のディメンションエンティティで構成されていることを示すインフォグラフィック。](images/guardrails/profile-and-dimension-entities.png)
+![ プロファイルエンティティがディメンションエンティティで構成されていることを示すインフォグラフィック。](images/guardrails/profile-and-dimension-entities.png)
 
 ### プロファイルフラグメント
 
@@ -185,7 +185,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 他のExperience Platformサービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* [エンドツーエンドの待ち時間図](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) （様々なExperience Platformサービス用）
-* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ）](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 様々なExperience Platformサービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

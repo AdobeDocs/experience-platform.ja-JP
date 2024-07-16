@@ -58,7 +58,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 [!DNL Segment Match] のデフォルトの同意設定は `opt-out` に指定されています。データのオプトインモデルを適用するには、アドビアカウントチームにメールでリクエストを送信してください。
 
-詳しくは、 `share` 属性を使用して、データ共有の同意の値を設定します。 [プライバシーと同意フィールドグループ](../../../xdm/field-groups/profile/consents.md). プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
+データ共有の同意値を設定するために使用される `share` 属性について詳しくは、[ プライバシーと同意フィールドグループ ](../../../xdm/field-groups/profile/consents.md) に関する次のドキュメントを参照してください。 プライバシー、パーソナライゼーション、マーケティングの環境設定に関連するデータの収集と使用に対する消費者の同意をキャプチャするために使用される特定のフィールドグループについては、次の[プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意の GitHub の例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
 
 ### データ使用ラベルの設定
 

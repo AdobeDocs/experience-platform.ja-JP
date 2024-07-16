@@ -1,13 +1,13 @@
 ---
-title: SAP Commerce ソースの概要
-description: API またはユーザーインターフェイスを使用して SAP Commerce をAdobe Experience Platformに接続する方法を説明します。
+title: SAP Commerce Sourceの概要
+description: API またはユーザーインターフェイスを使用して SAP CommerceをAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: ベータ版
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 17%
+source-wordcount: '347'
+ht-degree: 19%
 
 ---
 
@@ -15,33 +15,33 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->[!DNL SAP Commerce] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL SAP Commerce] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html)は、B2B および B2C 企業向けのクラウドベースの e コマースプラットフォームソリューションで、SAP Customer Experience ポートフォリオの一部として利用できます。 [[!DNL SAP] サブスクリプションの請求](https://www.sap.com/products/financial-management/subscription-billing.html) は、ポートフォリオの下の製品で、標準化された統合による販売と支払いの経験をシンプル化し、完全なサブスクリプションライフサイクル管理を可能にします。
+[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html) は、B2B および B2C 企業向けのクラウドベースの e コマースプラットフォームソリューションで、SAP カスタマーエクスペリエンスのポートフォリオの一部として利用できます。 [[!DNL SAP]  サブスクリプション請求 ](https://www.sap.com/products/financial-management/subscription-billing.html) は、ポートフォリオの製品であり、標準化された統合によってシンプルな販売および支払いエクスペリエンスで完全なサブスクリプションライフサイクル管理を可能にします。
 
-The [!DNL SAP Commerce] ソースを使用すると、 [[!DNL SAP] サブスクリプションの請求](https://www.sap.com/products/financial-management/subscription-billing.html) 以下のビジネスパートナー API エンドポイント：
+[!DNL SAP Commerce] ソースを使用すると、以下の [[!DNL SAP]  サブスクリプション請求 ](https://www.sap.com/products/financial-management/subscription-billing.html) ビジネスパートナー API エンドポイントから顧客および連絡先情報を Platform に取り込むことができます。
 
-* [顧客](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
-* [連絡先](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
+* [ 顧客 ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
+* [ 連絡先 ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
 
-また、 [!DNL SAP Commerce] を実行して顧客データを取得する場合、 [顧客と連絡先の関係](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) また、API は、顧客の連絡先情報を取得するためにも呼び出されます。
+さらに、[!DNL SAP Commerce] が実行されて顧客データが取得される場合、[ 顧客と連絡先の関係 ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) API も呼び出されて、顧客の連絡先情報が取得されます。
 
 ## IP アドレス許可リスト {#ip-allow-list}
 
-ソースコネクタを使用する前に、IP アドレスのリストを許可リストに追加する必要が生じる場合があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要がある場合があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
 ## 前提条件 {#prerequisites}
 
-次を持ってくる前に、 [!DNL SAP Commerce] Experience Platformにデータを送信する場合は、まず、次の条件を満たす必要があります。
+[!DNL SAP Commerce] データをExperience Platformに取り込む前に、まず次の点を確認する必要があります。
 
-* A [!DNL SAP Subscription Billing] アカウント。 有効な請求アカウントをまだお持ちでない場合は、 [!DNL SAP] アカウントマネージャー。 詳しくは、 [[!DNL SAP] プラットフォーム設定](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) ドキュメントを参照してください。
+* [!DNL SAP Subscription Billing] アカウント。 有効な請求アカウントをお持ちでない場合は、[!DNL SAP] アカウントマネージャーにお問い合わせください。 詳しくは、[[!DNL SAP] Platform 設定 ](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) ドキュメントを参照してください。
 
-* [!DNL SAP] サービスキー。 The [!DNL SAP] サービスキーを使用すると、 [!DNL SAP Subscription Billing] Experience Platformを介した API [!DNL SAP Commerce] には、以下が必要です。
+* サ [!DNL SAP] ビスキー。 [!DNL SAP] サービスキーを使用すると、Experience Platformから [!DNL SAP Subscription Billing] API にアクセスできます。 [!DNL SAP Commerce] には、以下が必要です。
    * クライアント ID
    * クライアントシークレット
-   * URL. URL のパターンは次のとおりです。 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. この値は後での値の取得に使用されます。 `region` および `tokenEndpoint` いつ [ベース接続を作成](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) API を使用する場合、または [接続する [!DNL SAP Commerce] アカウント](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) Platform UI を使用します。
+   * URL。 URL パターンは次のとおりです。`https://subscriptionbilling.authentication.eu10.hana.ondemand.com` この値は、後で API を使用して [ ベース接続を作成 ](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) する場合、または Platform UI を使用して [ アカウントを接続 ](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) する場合に  [!DNL SAP Commerce] `region` および `tokenEndpoint` の値を取得するために使用されます。
 
-+++「 」を選択して、サービスキーの例を表示します。
++++選択して、サービスキーの例を確認します
 
 ```json
 { 
@@ -73,6 +73,6 @@ The [!DNL SAP Commerce] ソースを使用すると、 [[!DNL SAP] サブスク�
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL SAP Commerce] と Platform を接続する方法について説明します。
 
-* [ソース接続とデータフローを作成して、 [!DNL SAP Commerce] API を使用した Platform へのデータの取得](../../tutorials/api/create/ecommerce/sap-commerce.md).
-* [接続する [!DNL SAP Commerce] UI を使用してExperience Platformにアカウント](../../tutorials/ui/create/ecommerce/sap-commerce.md).
+* [API を使用して Platform にデータを取り込むためのソ  [!DNL SAP Commerce]  ス接続とデータフローを作成します ](../../tutorials/api/create/ecommerce/sap-commerce.md)。
+* [UI を使用してアカウ  [!DNL SAP Commerce]  トをExperience Platformに接続します ](../../tutorials/ui/create/ecommerce/sap-commerce.md)。
 * [UI を使用したソースのデータフローの作成](../../tutorials/ui/dataflow/ecommerce.md)

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；api;
+keywords: Experience Platform；ホーム；人気のトピック；セグメント化；セグメント化；Segmentation Service;api;
 solution: Experience Platform
-title: セグメント化サービス API の概要
-description: 次のドキュメントは、セグメント化 API を正しく操作するために知っておく必要がある追加情報を示しています。
+title: Segmentation Service API の概要
+description: 次のドキュメントでは、Segmentation API を正しく使用するために知っておく必要がある追加情報を示します。
 role: Developer
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,18 +12,18 @@ ht-degree: 62%
 
 ---
 
-# セグメント化サービス API の概要 {#getting-started}
+# Segmentation Service API の概要 {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] では、Adobe Experience Platformのセグメント定義や他のソースを使用して、 [!DNL Real-Time Customer Profile] データ。
+Adobe Experience Platform [!DNL Segmentation Service] を使用すると、Adobe Experience Platformのセグメント定義またはその他のソースを使用して、[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。
 
-開発者ガイドでは、 [!DNL Experience Platform] 使用に関わるサービス [!DNL Segmentation Service].
+デベロッパーガイドには、[!DNL Segmentation Service] の使用に関連する様々な [!DNL Experience Platform] サービスについての十分な知識が必要です。
 
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：以下からオーディエンスを構築できます。 [!DNL Real-Time Customer Profile] データ。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、 [!DNL Segmentation] API.
+次の節では、[!DNL Segmentation] API を正しく使用するために必要な追加情報を示します。
 
 ## API 呼び出し例の読み取り
 
@@ -47,4 +47,4 @@ Adobe Experience Platform [!DNL Segmentation Service] では、Adobe Experience 
 
 ## 次の手順
 
-を使用して呼び出しをおこなうには [!DNL Segmentation Service] API で、左側のナビゲーションを使用するか、 [開発者ガイドの概要](./overview.md)
+[!DNL Segmentation Service] API を使用して呼び出すには、左側のナビゲーションを使用して、または [ 開発者ガイドの概要内で、使用可能なエンドポイントガイドの 1 つを選択 ](./overview.md) ます。

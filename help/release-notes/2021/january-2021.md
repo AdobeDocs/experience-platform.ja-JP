@@ -7,7 +7,7 @@ author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '718'
 ht-degree: 93%
 
 ---
@@ -64,7 +64,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | プロファイルストアからのデータセットの削除 | Experience Platform Data Lake からデータセットを削除すると、データセットはプロファイルストアからも自動的に削除されます。プロファイルストアからデータセットを明示的に削除する削除リクエストをおこなう場合に、Profile System jobs API エンドポイントを使用する必要がなくなりました。詳しくは、 [プロファイルシステムジョブ API エンドポイントのガイド](../../profile/api/profile-system-jobs.md) を参照してください。 |
 | 特定のセグメントに対する ID 名前空間の推定数 | プロファイルの推定数について、プレビュー API が次の情報をレポートするようになりました。<ul><li>特定の名前空間のセグメントにおける推定プロファイルの合計数。</li><li>特定の名前空間のプロファイル和集合スキーマにおける推定プロファイルの合計数。</li></ul>詳しくは、 [プロファイルプレビュー API エンドポイントのガイド](../../profile/api/preview-sample-status.md) を参照してください。 |
 
-リアルタイム顧客プロファイルの詳細については、の操作に関するチュートリアルやベストプラクティスを参照してください。 [!DNL Profile] データを読み込む前に、 [リアルタイム顧客プロファイルの概要](../../profile/home.md).
+[!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
 
 ## [!DNL Sources] {#sources}
 
@@ -80,6 +80,6 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | [!DNL Google BigQuery] ソースコネクタの機能強化 | [!DNL BigQuery] ソースコネクタを使用して、1 回のフロー実行で 10 GB を超えるファイルを取り込めるようになりました。詳しくは、 [[!DNL BigQuery] ソースコネクタの概要](../../sources/connectors/databases/bigquery.md) を参照してください。 |
 | クラウドストレージ用の複雑なデータ型のサポート | クラウドストレージソースコネクタを使用する場合、JSON ファイル内の配列などの複雑なデータ型を取り込めるようになりました。詳しくは、 [UI での](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)、または[  [!DNL Flow Service] API を使用した](../../sources/tutorials/api/collect/cloud-storage.md)クラウドストレージのデータフロー の作成に関するチュートリアルを参照してください。 |
 | [!DNL Microsoft Dynamics] ソースのサービスプリンシパルキーベースの認証のサポート | パスワードベースの認証の代わりに、サービスプリンシパルキーを使用して [!DNL Dynamics] アカウントを認証できるようになりました。詳しくは、 [[!DNL Dynamics] ソースコネクタの概要](../../sources/connectors/crm/ms-dynamics.md) を参照してください。 |
-| クラウドストレージソースでのカスタム区切り文字の UI のサポート | カスタムの列区切り文字 ( コンマ (`,`)，タブ (`\t`) またはパイプ (`|`) をクリックして、区切りファイルを収集します。 詳しくは、 [クラウドストレージソースコネクタを使用したデータフローの作成](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) のチュートリアルを参照してください。 |
+| クラウドストレージソースでのカスタム区切り文字の UI のサポート | コンマ（`,`）、タブ（`\t`）、パイプ（`|`）などのカスタム列区切り記号を設定して、UI から区切りファイルを収集できるようになりました。 詳しくは、 [クラウドストレージソースコネクタを使用したデータフローの作成](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) のチュートリアルを参照してください。 |
 
 ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。

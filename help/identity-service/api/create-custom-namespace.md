@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；名前空間；名前空間；名前空間；名前空間；ID 名前空間；ID 名前空間；ID;ID
+keywords: Experience Platform；ホーム；人気のトピック；名前空間；名前空間；名前空間；名前空間；ID 名前空間；ID;ID
 solution: Experience Platform
-title: ID サービス API でカスタム名前空間を作成する
+title: ID サービス API でのカスタム名前空間の作成
 description: ID 名前空間 API を使用して、組織でのみ使用可能なカスタム ID 名前空間を作成できます。
 role: Developer
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
@@ -12,9 +12,9 @@ ht-degree: 52%
 
 ---
 
-# ID サービス API でカスタム名前空間を作成する
+# ID サービス API でのカスタム名前空間の作成
 
-の使用 [!DNL Identity Namespace] API を使用すると、組織でのみ使用できるカスタム ID 名前空間を作成できます。
+[!DNL Identity Namespace] API を使用して、組織のみが使用できるカスタム ID 名前空間を作成できます。
 
 カスタム名前空間の作成に関するレコメンデーションについては、[ID サービスに関する FAQ ドキュメント](../troubleshooting-guide.md)を参照してください。
 

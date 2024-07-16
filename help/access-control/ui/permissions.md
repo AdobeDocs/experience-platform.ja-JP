@@ -7,7 +7,7 @@ exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 92%
+ht-degree: 86%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 92%
 
 ![permissions](../images/permissions.png)
 
-権限はカテゴリに分けられ、このページに表示されます。リストには、カテゴリ名、含まれる権限の数（およびアクティブな権限の数）、説明が表示されます。詳しくは、 [リソース権限](/help/access-control/home.md#permissions) ：各ロールで使用可能な権限の分類。
+権限はカテゴリに分けられ、このページに表示されます。リストには、カテゴリ名、含まれる権限の数（およびアクティブな権限の数）および説明が表示されます。 各役割で使用できる権限の分類については、[ リソースの権限 ](/help/access-control/home.md#permissions) の表を参照してください。
 
 リストの任意のカテゴリをクリックして、**[!UICONTROL 権限の編集]**&#x200B;ページを開きます。
 
@@ -25,7 +25,7 @@ ht-degree: 92%
 
 **[!UICONTROL 権限の編集]**&#x200B;ページには、選択した製品プロファイルの権限を追加および削除するためのワークスペースが表示されます。画面の左側には、権限カテゴリのリストが表示されます。カテゴリをクリックすると、**[!UICONTROL 使用可能な権限項目]**&#x200B;に表示される権限が変更されます。
 
-例えば、データモデリングの権限を更新するには、「 」を選択します。 **[!UICONTROL データモデリング]**.
+例えば、データモデリングの権限を更新するには、「**[!UICONTROL データモデリング]**」を選択します。
 
 ![profile-management](../images/profile-management.png)
 

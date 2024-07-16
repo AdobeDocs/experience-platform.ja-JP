@@ -4,7 +4,7 @@ description: Adobe Experience Platform の BrightCove ビデオトラッキン�
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '898'
 ht-degree: 97%
 
 ---
@@ -94,13 +94,13 @@ Adobe Experience Platform の各タグプロパティには、拡張機能画面
       * **ビデオ名**&#x200B;データ要素の prop／eVar（例：eVar10）
       * **ビデオ期間**&#x200B;データ要素の prop／eVar（例：eVar11）
       * **現在のビデオ配置**&#x200B;データ要素の prop／eVar（例：eVar12）
+
    1. Analytics の「Send Beacon」アクション（`s.tl`）
    1. Analytics の「Clear Variables」アクション
 
-
 >[!TIP]
 >
->各ビデオ要素に対して複数の eVar や prop をプロビジョニングしたくない場合は、代替方法としてデータ要素の値が連結されます。 次に、分類ルールビルダーツールを使用して、分類レポートに解析されます。詳しくは、 [分類ルールビルダーツール](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) のドキュメントを参照してください。最終的には、Analysis Workspace のセグメントとして適用されます。
+>ビデオ要素ごとに複数の eVar または prop をプロビジョニングしたくない場合は、別の方法としてデータ要素の値を連結します。 次に、分類ルールビルダーツールを使用して、分類レポートに解析されます。詳しくは、 [分類ルールビルダーツール](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) のドキュメントを参照してください。最終的には、Analysis Workspace のセグメントとして適用されます。
 >
 >これをおこなうには、「ビデオメタデータ」のような新しいデータ要素を作成し、（上記の）すべてのビデオデータ要素をプルし、連結するようにプログラミングします。
 

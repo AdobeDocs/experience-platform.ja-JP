@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform；はじめに；コンテンツ；コンテンツタグ付け
+keywords: Experience Platform；はじめに；コンテンツ；コンテンツのタグ付け
 solution: Experience Platform
-title: コンテンツタグ付けの概要
-description: コンテンツタグ付けはAdobe I/OAPI を利用します。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず認証に関するチュートリアルを完了する必要があります。
+title: コンテンツのタグ付けの概要
+description: コンテンツのタグ付けには、Adobe I/O API が使用されます。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず認証に関するチュートリアルを完了する必要があります。
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 15%
+source-wordcount: '541'
+ht-degree: 12%
 
 ---
 
-# コンテンツタグ付けの概要
+# コンテンツのタグ付けの概要
 
-[!DNL Content tagging] はAdobe I/OAPI を利用します。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず [認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja).
+[!DNL Content tagging] はAdobe I/OAPI を使用します。 Adobe I/OAPI と I/O コンソール統合を呼び出すには、まず [ 認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。
 
-ただし、 **API を追加** 手順を実行すると、API は、次のスクリーンショットに示すように、Adobe Experience PlatformではなくCreative Cloudの下に配置されます。
+ただし、**API を追加** ステップに進むと、次のスクリーンショットに示すように、API はAdobe Experience PlatformではなくCreative Cloudの下にあります。
 
-![コンテンツタグ付けの追加](./images/add-api-updated.png)
+![ コンテンツのタグ付けの追加 ](./images/add-api-updated.png)
 
-認証に関するチュートリアルを完了すると、すべての認証 API 呼び出しで必要な各Adobe I/Oの値が次のようになります。
+次に示すように、すべての認証 API 呼び出しで必要な各ヘッダーの値はAdobe I/Oチュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -27,37 +27,37 @@ ht-degree: 15%
 
 ## Postman環境の作成（オプション）
 
-Adobe Developerコンソール内でプロジェクトと API を設定したら、Postmanの環境ファイルをダウンロードするオプションがあります。 の下 **[!UICONTROL API]** プロジェクトの左側のパネルで、「 **[!UICONTROL コンテンツのタグ付け]**. 新しいタブが開き、「[!DNL Try it out]&quot;. 選択 **Postman用のダウンロード** をクリックして、postman 環境の設定に使用する JSON ファイルをダウンロードします。
+Adobe Developer Console内でプロジェクトと API を設定したら、Postmanの環境ファイルをダウンロードするオプションがあります。 プロジェクトの左側のパネルにある **[!UICONTROL API]** の下で **[!UICONTROL コンテンツのタグ付け]** を選択します。 「[!DNL Try it out]」というラベルの付いたカードを含む新しいタブが開きます。 **Postman用にダウンロード** を選択して、Postman 環境の設定に使用する JSON ファイルをダウンロードします。
 
-![postman 用にダウンロード](./images/add-to-postman-updated.png)
+![postman 用にダウンロード ](./images/add-to-postman-updated.png)
 
-ファイルをダウンロードしたら、Postmanを開き、 **歯車アイコン** を右上に開いて **環境の管理** ダイアログ。
+ファイルをダウンロードしたら、Postmanを開き、右上の **歯車アイコン** を選択して **環境の管理** ダイアログを開きます。
 
-![歯車アイコン](./images/select-gear-icon.png)
+![ 歯車アイコン ](./images/select-gear-icon.png)
 
-次に、 **インポート** 内から **環境の管理** ダイアログ。
+次に、**環境の管理** ダイアログ内から **読み込み** を選択します。
 
-![インポート](./images/import-updated.png)
+![ 読み込み ](./images/import-updated.png)
 
-リダイレクトされ、コンピューターから環境ファイルを選択するように求められます。 前にダウンロードした JSON ファイルを選択し、「 」を選択します。 **開く** 環境を読み込みます。
+リダイレクトされ、コンピューターから環境ファイルを選択するように求められます。 前にダウンロードした JSON ファイルを選択し、「**開く**」を選択して環境を読み込みます。
 
 ![](./images/choose-your-file.png)
 
 ![](./images/click-open.png)
 
-次のページにリダイレクトされます： *環境の管理* タブに新しい環境名が入力されます。 環境名を選択して、Postmanで使用可能な変数を表示および編集します。 引き続き、 `JWT_TOKEN` および `ACCESS_TOKEN`. これらの値は、 [認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja).
+新しい環境名が入力された状態で *環境の管理* タブにリダイレクトされます。 Postmanで使用可能な変数を表示および編集するには、環境名を選択します。 `JWT_TOKEN` と `ACCESS_TOKEN` を手動で入力する必要があります。 これらの値は、[ 認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する際に取得する必要があります。
 
 ![](./images/re-direct-updated.png)
 
-完了した変数は、次のスクリーンショットのようになります。 選択 **更新** をクリックして、環境の設定を完了します。
+完了すると、変数は次のスクリーンショットのようになります。 「**アップデート**」を選択して、環境の設定を完了します。
 
 ![](./images/final-environment-updated.png)
 
-右上隅のドロップダウンメニューから環境を選択し、保存した値を自動入力できるようになりました。 いつでも値を再編集して、すべての API 呼び出しを更新できます。
+右上隅のドロップダウンメニューから環境を選択し、保存した値を自動入力できるようになりました。 任意の時点で値を再編集するだけで、すべての API 呼び出しを更新できます。
 
 ![例](./images/select-environment-updated.png)
 
-Postmanを使用したAdobe I/OAPI の操作について詳しくは、 [Adobe I/Oでの JWT 認証にPostmanを使用](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Postmanを使用したAdobe I/OAPI の操作について詳しくは、Mediumの投稿 [Adobe I/Oでの JWT 認証にPostmanを使用 ](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) を参照してください。
 
 ## API 呼び出し例の読み取り
 
@@ -65,8 +65,8 @@ Postmanを使用したAdobe I/OAPI の操作について詳しくは、 [Adobe I
 
 ## 次の手順 {#next-steps}
 
-すべての資格情報を取得したら、次の用にカスタムワーカーを設定する準備が整います。 [!DNL Content tagging]. 次のドキュメントは、拡張フレームワークと環境の設定の理解に役立ちます。
+すべての資格情報を取得したら、[!DNL Content tagging] 用のカスタムワーカーを設定する準備が整います。 拡張フレームワークと環境のセットアップについては、次のドキュメントを参照してください。
 
-拡張フレームワークの詳細については、まず [拡張機能の概要](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=ja) 文書。 このドキュメントでは、前提条件とプロビジョニング要件の概要を説明します。
+拡張フレームワークの詳細については、まず [ 拡張機能の概要 ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) を参照してください。 このドキュメントでは、前提条件とプロビジョニング要件の概要を説明します。
 
-の環境の設定について詳しくは、以下を参照してください。 [!DNL Content tagging]を参照し、まず [開発環境の設定](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). このドキュメントでは、Service Service の開発に使用する設定手順をAsset computeします。
+デベロッパー環境のセットアップについて詳しくは、[!DNL Content tagging] ベロッパー環境のセットアップ [ に関するガイドを参照して開始し ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html) ください。 このドキュメントでは、Asset computeサービス向けの開発を可能にする設定手順を示します。

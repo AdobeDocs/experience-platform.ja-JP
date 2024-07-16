@@ -11,9 +11,9 @@ ht-degree: 3%
 
 # `appendIdentityToUrl`
 
-この `appendIdentityToUrl` コマンドを使用すると、ユーザー識別子をクエリ文字列として URL に追加できます。 このアクションにより、ドメイン間で訪問者の ID を持ち歩き、ドメインまたはチャネルの両方を含むデータセットに対して、重複した訪問者数を防ぐことができます。 Web SDK バージョン 2.11.0 以降で使用できます。
+`appendIdentityToUrl` コマンドを使用すると、ユーザー識別子をクエリ文字列として URL に追加できます。 このアクションにより、ドメイン間で訪問者の ID を持ち歩き、ドメインまたはチャネルの両方を含むデータセットに対して、重複した訪問者数を防ぐことができます。 Web SDK バージョン 2.11.0 以降で使用できます。
 
-生成され、URL に追加されるクエリ文字列はです `adobe_mc`. Web SDK で ECID が見つからない場合は、を呼び出します `/acquire` エンドポイントを生成します。
+生成され、URL に追加されたクエリ文字列は `adobe_mc` です。 Web SDK で ECID が見つからない場合は、`/acquire` エンドポイントを呼び出して ECID を生成します。
 
 >[!NOTE]
 >
@@ -23,26 +23,26 @@ ht-degree: 3%
 
 URL への ID の追加は、Adobe Experience Platform Data Collection タグインターフェイスのルール内のアクションとして実行されます。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL ルール]**&#x200B;を選択してから、目的のルールを選択します。
-1. 次の下 [!UICONTROL アクション]、既存のアクションを選択するか、アクションを作成します。
-1. を [!UICONTROL 拡張機能] ドロップダウンフィールドの移動先 **[!UICONTROL Adobe Experience Platform Web SDK]**、を設定します。 [!UICONTROL アクションタイプ] 対象： **[!UICONTROL ID でリダイレクト]**.
-1. クリック **[!UICONTROL 変更を保持]**&#x200B;次に、公開ワークフローを実行します。
+1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
+1. [!UICONTROL  アクション ] で、既存のアクションを選択するか、アクションを作成します。
+1. 「[!UICONTROL  拡張機能 ]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL  アクションタイプ ] を **[!UICONTROL ID を使用してリダイレクト]** に設定します。
+1. 「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 
 このコマンドは、通常、クリックをリッスンして目的のドメインを確認する特定のルールと共に使用されます。
 
 +++ルールイベントの条件
 
-を使用したアンカータグ時のトリガー `href` プロパティがクリックされました。
+`href` プロパティを持つアンカータグがクリックされたときのトリガー。
 
 * **[!UICONTROL 拡張機能]**：コア
-* **[!UICONTROL イベントタイプ]**：クリック
-* **[!UICONTROL ユーザーがをクリックした場合]**：特定の要素
-* **[!UICONTROL CSS セレクターに一致する要素]**: `a[href]`
+* **[!UICONTROL イベントタイプ]**：クリックします
+* **[!UICONTROL ユーザーがクリックしたとき]**：特定の要素
+* **[!UICONTROL CSS セレクターに一致する要素]**:`a[href]`
 
-![ルールイベント](../assets/id-sharing-event-configuration.png)
+![ ルールイベント ](../assets/id-sharing-event-configuration.png)
 
 +++
 
@@ -54,10 +54,10 @@ URL への ID の追加は、Adobe Experience Platform Data Collection タグイ
 * **[!UICONTROL 拡張機能]**：コア
 * **[!UICONTROL 条件タイプ]**：値の比較
 * **[!UICONTROL 左オペランド]**: `%this.hostname%`
-* **[!UICONTROL 演算子]**：正規表現に一致
+* **[!UICONTROL 演算子]**：正規表現に一致します
 * **[!UICONTROL 右オペランド]**：目的のドメインに一致する正規表現。 例：`adobe.com$|behance.com$`
 
-![ルール条件](../assets/id-sharing-condition-configuration.png)
+![ ルールの条件 ](../assets/id-sharing-condition-configuration.png)
 
 +++
 
@@ -68,13 +68,13 @@ URL に ID を追加します。
 * **[!UICONTROL 拡張機能]**：Adobe Experience Platform Web SDK
 * **[!UICONTROL アクションタイプ]**:ID を使用したリダイレクト
 
-![ルールアクション](../assets/id-sharing-action-configuration.png)
+![ ルールアクション ](../assets/id-sharing-action-configuration.png)
 
 +++
 
 ## Web SDK JavaScript ライブラリを使用して URL に ID を追加
 
-を実行 `appendIdentityToUrl` URL をパラメーターとして使用するコマンド。 メソッドは、識別子がクエリ文字列として追加された URL を返します。
+URL をパラメーターとして使用して `appendIdentityToUrl` コマンドを実行します。 メソッドは、識別子がクエリ文字列として追加された URL を返します。
 
 ```js
 alloy("appendIdentityToUrl",document.location);
@@ -100,4 +100,4 @@ document.addEventListener("click", event => {
 
 ## 応答オブジェクト
 
-以下を行う場合 [応答を処理](command-responses.md) このコマンドを使用すると、応答オブジェクトには次のものが含まれます **`url`**:ID 情報を含む新しい URL をクエリ文字列パラメーターとして追加します。
+このコマンドを使用して [ 応答を処理 ](command-responses.md) する場合、応答オブジェクトには、ID 情報がクエリ文字列パラメーターとして追加された **`url`** という新しい URL が含まれます。

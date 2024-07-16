@@ -1,21 +1,22 @@
 ---
-title: List of States Start コレクションのデータ型
-description: 状態のリスト開始データタイプエクスペリエンスデータモデル (XDM) データタイプについて説明します。
-source-git-commit: e9107092b60361216744e154752f48546b5bad73
+title: 状態のリストの収集を開始データタイプ
+description: 状態のリスト開始データタイプ エクスペリエンスデータモデル（XDM）データタイプについて説明します。
+exl-id: adeb3e91-7266-41ce-b406-f7fd5dbb2236
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '126'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL List of States Start] データタイプ
+# [!UICONTROL  状態のリストの開始 ] データタイプ
 
-The [!UICONTROL List of States Start] データタイプは、様々なプレーヤー属性の開始状態に関する情報を表すために設計された、エクスペリエンスデータモデル (XDM) データタイプです。 これには、 [!UICONTROL プレーヤーステート名] 特定の属性の状態を示すプロパティ（例：「fullscreen」、「mute」、「closedCaptioning」）。 このデータ型は、様々なプレーヤーステートの初期条件をキャプチャおよび記述するために使用されます。
+[!UICONTROL  状態の開始のリスト ] データタイプは、様々なプレーヤー属性の開始状態に関連する情報を表すために設計されたエクスペリエンスデータモデル（XDM）データタイプです。 特定の属性の状態を示す [!UICONTROL  プレーヤーの状態名 ] プロパティ（「fullscreen」、「mute」、「closedCaptioning」など）が含まれます。 このデータタイプは、様々なプレーヤー状態の初期条件をキャプチャおよび記述するために使用されます。
 
-![の図 [!UICONTROL List of States Start] データタイプ。](../images/data-types/list-of-states-start-collection.png)
+![ 状態のリストの開始 [!UICONTROL  データタイプ ] 図 ](../images/data-types/list-of-states-start-collection.png)
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|
-| [!UICONTROL プレーヤーステート名] | `name` | 文字列 | × | プレーヤーの状態の名前。 列挙： &quot;fullscreen&quot;、&quot;mute&quot;、&quot;closedCaptioning&quot;、&quot;pictureInPicture&quot;、&quot;inFocus&quot;と、それぞれの意味を持ちます。 |
+| [!UICONTROL  プレイヤーの州名 ] | `name` | 文字列 | × | プレイヤーの状態の名前。 列挙：「fullscreen」、「mute」、「closedCaptioning」、「pictureInPicture」、「inFocus」とそれぞれの意味。 |
 
 {style="table-layout:auto"}

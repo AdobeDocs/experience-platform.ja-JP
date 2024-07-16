@@ -1,14 +1,14 @@
 ---
 title: CSV としてダウンロード
 description: カスタムダッシュボードインサイトから処理済みデータを CSV 形式でダウンロードする方法を説明します。
-source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
+exl-id: d2a7c7b6-d218-4974-8634-6ce412b98a3b
+source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
 workflow-type: tm+mt
 source-wordcount: '57'
-ht-degree: 10%
+ht-degree: 0%
 
 ---
 
 # CSV としてダウンロード
 
-データの共有と操作のプロセスを簡素化するために、カスタマイズしたインサイトから処理済みのデータを CSV 形式でダウンロードできます。 詳しくは、その他のドキュメントを参照してください [処理済みのグラフデータをダウンロードする方法](./view-more.md#download-csv).
-
+データの共有と操作のプロセスを簡素化するために、カスタマイズしたインサイトから処理済みのデータを CSV 形式でダウンロードできます。 詳しくは、その他のドキュメントの表示 [ 処理済みのグラフデータのダウンロード方法 ](./view-more.md#download-csv) を参照してください。

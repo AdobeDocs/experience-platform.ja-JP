@@ -1,6 +1,6 @@
 ---
-title: フローサービス API を使用した SalesforceMarketing Cloudベース接続の作成
-description: フローサービス API を使用して、SalesforceMarketing CloudアカウントをExperience Platformに対して認証する方法を説明します。
+title: Flow Service API を使用した Salesforce Marketing Cloudベース接続の作成
+description: Flow Service API を使用して、Experience Platformに対する Salesforce Marketing Cloudアカウントを認証する方法を説明します。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->カスタムオブジェクトの取り込みは、現在、 [!DNL Salesforce Marketing Cloud] ソースの統合。
+>カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -30,26 +30,26 @@ ht-degree: 58%
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
 
-次の節では、に正常に接続するために必要な追加情報を示します。 [!DNL Salesforce Marketing Cloud] の使用 [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Salesforce Marketing Cloud] す。
 
 ### 必要な資格情報の収集
 
-次の条件を満たすため [!DNL Flow Service] ～と繋がる [!DNL Salesforce Marketing Cloud]に値を入力する場合は、次の接続プロパティを指定する必要があります。
+[!DNL Flow Service] を [!DNL Salesforce Marketing Cloud] に接続するには、次の接続プロパティを指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **注意：** 次の項目に `host` 値を指定する場合は、 `{subdomain}.rest.marketingcloudapis.com`. 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`を入力した場合、 `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` をホスト値として使用します。 |
-| `clientId` | 次に関連付けられたクライアント ID: [!DNL Salesforce Marketing Cloud] アプリケーション。 |
-| `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Salesforce Marketing Cloud] アプリケーション。 |
+| `host` | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **メモ：**`host` 値を入力する場合は、`{subdomain}.rest.marketingcloudapis.com` を指定する必要があります。 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/` の場合、ホスト値として `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` を入力する必要があります。 |
+| `clientId` | [!DNL Salesforce Marketing Cloud] アプリケーションに関連付けられたクライアント ID。 |
+| `clientSecret` | [!DNL Salesforce Marketing Cloud] アプリケーションに関連付けられたクライアント秘密鍵。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce Marketing Cloud] の接続仕様 ID は `ea1c2a08-b722-11eb-8529-0242ac130003` です。 |
 
-導入の詳細については、以下を参照してください。 [[!DNL Salesforce Marketing Cloud] 文書](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
+基本について詳しくは、この [[!DNL Salesforce Marketing Cloud]  ドキュメント ](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>) を参照してください。
 
 ## ベース接続の作成
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、 `/connections` エンドポイントを [!DNL Salesforce Marketing Cloud] 認証資格情報をリクエスト本文の一部として使用します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、その際にリクエスト本文の一部として [!DNL Salesforce Marketing Cloud] 認証資格情報を指定します。
 
 **API 形式**
 
@@ -89,13 +89,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.clientId` | 次に関連付けられたクライアント ID: [!DNL Salesforce Marketing Cloud] アプリケーション。 |
-| `auth.params.clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Salesforce Marketing Cloud] アプリケーション。 |
-| `connectionSpec.id` | The [!DNL Salesforce Marketing Cloud] 接続仕様 ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `auth.params.clientId` | [!DNL Salesforce Marketing Cloud] アプリケーションに関連付けられたクライアント ID。 |
+| `auth.params.clientSecret` | [!DNL Salesforce Marketing Cloud] アプリケーションに関連付けられたクライアント秘密鍵。 |
+| `connectionSpec.id` | [!DNL Salesforce Marketing Cloud] 接続仕様 ID: `ea1c2a08-b722-11eb-8529-0242ac130003`。 |
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の接続識別子 (`id`) をクリックします。 この ID は、次のチュートリアルでデータを調べるために必要です。
+応答が成功すると、一意の接続識別子（`id`）を含む、新しく作成された接続が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {

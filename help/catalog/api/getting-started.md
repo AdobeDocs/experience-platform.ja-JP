@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；カタログサービス；カタログ；カタログサービス；カタログ
+keywords: Experience Platform；ホーム；人気のトピック；catalog service；カタログ；Catalog service；カタログ
 solution: Experience Platform
-title: カタログサービス API ガイド
-description: カタログサービス API を使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+title: Catalog Service API ガイド
+description: Catalog Service API を使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 61%
+source-wordcount: '588'
+ht-degree: 58%
 
 ---
 
 # [!DNL Catalog Service] API ガイド
 
-[!DNL Catalog Service] は、Adobe Experience Platform 内のデータの場所と系列の記録システムです。[!DNL Catalog] は、内のデータに関する情報を検索できるメタデータストアまたは「カタログ」として機能します。 [!DNL Experience Platform]（データ自体にアクセスする必要はありません）。 詳しくは、[[!DNL Catalog] 概要](../home.md)を参照してください。
+[!DNL Catalog Service] は、Adobe Experience Platform 内のデータの場所と系列の記録システムです。[!DNL Catalog] はメタデータストア（「カタログ」）として機能し、データ自体にアクセスしなくても、[!DNL Experience Platform] 内のデータに関する情報を検索できます。 詳しくは、[[!DNL Catalog] 概要](../home.md)を参照してください。
 
-このデベロッパーガイドでは、[!DNL Catalog] API を使い始めるのに役立つ手順を説明します。次に、 [!DNL Catalog].
+このデベロッパーガイドでは、[!DNL Catalog] API を使い始めるのに役立つ手順を説明します。次に、このガイドでは、[!DNL Catalog] を使用して主要な操作を実行するための API 呼び出しのサンプルを提供します。
 
 ## 前提条件
 
-[!DNL Catalog] では、様々な種類のリソースおよび操作のメタデータを内でトラッキングします。 [!DNL Experience Platform]. この開発者ガイドでは、 [!DNL Experience Platform] 以下のリソースの作成と管理に関わるサービス：
+[!DNL Catalog] は、[!DNL Experience Platform] 内の複数の種類のリソースおよび操作のメタデータを追跡します。 このデベロッパーガイドでは、これらのリソースの作成と管理に関わる様々な [!DNL Experience Platform] サービスについて、実際に理解している必要があります。
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
-* [バッチ取得](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]： が CSV や Parket などのデータファイルからデータを取得して保存する方法。
-* [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md)：方法 [!DNL Experience Platform] クライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存します。
+* [ バッチ取り込み ](../../ingestion/batch-ingestion/overview.md):[!DNL Experience Platform] が CSV や Parquet などのデータファイルからデータを取り込んで保存する方法。
+* [ ストリーミング取得 ](../../ingestion/streaming-ingestion/overview.md):[!DNL Experience Platform] がクライアントサイドおよびサーバーサイドのデバイスから、リアルタイムにデータを取得して保存する方法。
 
-以下の節では、 [!DNL Catalog Service] API.
+次の節では、[!DNL Catalog Service] API の呼び出しを正しくおこなうために知っておく必要がある、または手元に用意しておく必要がある追加情報を提供します。
 
 ## API 呼び出し例の読み取り
 
@@ -51,18 +51,18 @@ ht-degree: 61%
 
 * Content-Type：application/json
 
-## のベストプラクティス [!DNL Catalog] API 呼び出し
+## [!DNL Catalog] API 呼び出しのベストプラクティス
 
-に対してGETリクエストを実行する際 [!DNL Catalog] API のベストプラクティスは、必要なオブジェクトとプロパティのみを返すために、リクエストにクエリパラメーターを含めることです。 フィルターを適用しないリクエストの応答ペイロードのサイズは 3 GB に達っすることがあり、全体的なパフォーマンスが低下する可能性があります。
+[!DNL Catalog] API に対してGETリクエストを実行する場合、ベストプラクティスは、必要なオブジェクトとプロパティのみを返すために、リクエストにクエリパラメーターを含めることです。 フィルターを適用しないリクエストの応答ペイロードのサイズは 3 GB に達っすることがあり、全体的なパフォーマンスが低下する可能性があります。
 
 特定のオブジェクトを表示するには、リクエストパスに ID を含めるか、または `properties` や `limit` などのクエリーパラメーターを使用して応答をフィルターします。フィルターは、ヘッダーおよびクエリーパラメーターとして渡すことができ、クエリーパラメーターとして渡されたフィルターが優先されます。詳しくは、[カタログデータのフィルター](filter-data.md)に関するドキュメントを参照してください。
 
-一部のクエリが API に大きな負荷をかける可能性があるので、グローバル制限が [!DNL Catalog] のクエリを参照して、ベストプラクティスをさらにサポートします。
+一部のクエリは API に大きな負荷がかかる可能性があるので、ベストプラクティスをさらにサポートするために、[!DNL Catalog] クエリに対してグローバルな制限が実装されました。
 
 ## 次の手順
 
 このドキュメントでは、[!DNL Catalog] API を呼び出すために必要な前提条件に関する知識を説明しました。これで、この開発者ガイドに記載されているサンプル呼び出しに進んで、その手順に従うことができます。
 
-このガイドの例のほとんどでは、 `/dataSets` エンドポイントに適用されますが、原則は内部の他のエンドポイントに適用できます [!DNL Catalog] ( 例： `/batches`) をクリックします。 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)』を参照してください。
+このガイドの例のほとんどは `/dataSets` エンドポイントを使用しますが、原則は [!DNL Catalog] 内の他のエンドポイント（`/batches` など）にも適用できます。 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)』を参照してください。
 
-ワークフローの手順を示します。 [!DNL Catalog] API はデータ取得に関わっています。詳しくは、 [データセットの作成](../datasets/create.md).
+[!DNL Catalog] API がデータ取り込みにどのように関係するかを示す詳細なワークフローについては、[ データセットの作成 ](../datasets/create.md) に関するチュートリアルを参照してください。

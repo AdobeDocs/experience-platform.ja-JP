@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
+keywords: Experience Platform；ホーム；人気のトピック；Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
-title: UI でのMicrosoft Dynamics ソース接続の作成
+title: UI でのMicrosoft Dynamics Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用してMicrosoft Dynamics ソース接続を作成する方法を説明します。
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
 source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '614'
 ht-degree: 31%
 
 ---
 
 # UI での [!DNL Microsoft Dynamics] ソース接続の作成
 
-このチュートリアルでは、 [!DNL Microsoft Dynamics] （以下「」という。）[!DNL Dynamics]&quot;) Adobe Experience Platform UI を使用したソース接続。
+このチュートリアルでは、Adobe Experience Platform UI を使用して [!DNL Microsoft Dynamics] （以下「[!DNL Dynamics]」）ソース接続を作成する手順について説明します。
 
 ## はじめに
 
@@ -25,48 +25,48 @@ ht-degree: 31%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Dynamics] アカウントを使用する場合は、このドキュメントの残りの部分をスキップし、次のチュートリアルに進んでください： [CRM ソース用のデータフローの設定](../../dataflow/crm.md).
+有効な [!DNL Dynamics] アカウントを既にお持ちの場合は、このドキュメントの残りの部分をスキップし、[CRM ソースのデータフローの設定 ](../../dataflow/crm.md) に関するチュートリアルに進んでください。
 
 ### 必要な資格情報の収集
 
-を認証するために、 [!DNL Dynamics] ソースの場合、次の接続プロパティの値を指定する必要があります。
+[!DNL Dynamics] ソースを認証するには、次の接続プロパティの値を指定する必要があります。
 
 >[!BEGINTABS]
 
->[!TAB 基本認証]
+>[!TAB  基本認証 ]
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `serviceUri` | のサービス URL [!DNL Dynamics] インスタンス。 |
-| `username` | のユーザー名 [!DNL Dynamics] ユーザーアカウント。 |
-| `password` | ユーザーのパスワード [!DNL Dynamics] アカウント。 |
+| `serviceUri` | [!DNL Dynamics] インスタンスのサービス URL。 |
+| `username` | [!DNL Dynamics] ユーザーアカウントのユーザー名。 |
+| `password` | [!DNL Dynamics] アカウントのパスワード。 |
 
->[!TAB サービスプリンシパルおよびキー認証]
+>[!TAB  サービスプリンシパルとキーの認証 ]
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `servicePrincipalId` | のクライアント ID [!DNL Dynamics] アカウント。 この ID は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
-| `servicePrincipalKey` | サービスプリンシパル秘密鍵です。 この資格情報は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
+| `servicePrincipalId` | [!DNL Dynamics] アカウントのクライアント ID。 この ID は、サービスプリンシパルおよびキーベースの認証を使用する場合に必要です。 |
+| `servicePrincipalKey` | サービスプリンシパルの秘密鍵。 この資格情報は、サービスプリンシパルおよびキーベースの認証を使用する場合に必要です。 |
 
 >[!ENDTABS]
 
-の導入について詳しくは、 [この [!DNL Dynamics] 文書](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+基本について詳しくは、[ このドキュメント  [!DNL Dynamics]  を参照してください ](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)。
 
 ## [!DNL Dynamics] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。The [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 [!UICONTROL CRM] カテゴリ、選択 **[!UICONTROL Microsoft Dynamics]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+[!UICONTROL CRM] カテゴリで、「**[!UICONTROL Microsoft Dynamics]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![ソースカタログで、Microsoft Dynamics が選択されています。](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![Microsoft Dynamics が選択されているソースカタログ ](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-The **[!UICONTROL Microsoft Dynamics アカウントに接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Microsoft Dynamics アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
-既存のアカウントを使用するには、 [!DNL Dynamics] 使用するアカウントを選択し、 **[!UICONTROL 次へ]** をクリックして次に進みます。
+既存のアカウントを使用するには、使用する [!DNL Dynamics] アカウントを選択し、右上隅にある **[!UICONTROL 次へ]** を選択して続行します。
 
 ![既存のアカウントインターフェイス。](../../../../images/tutorials/create/ms-dynamics/existing.png)
 
@@ -74,31 +74,31 @@ The **[!UICONTROL Microsoft Dynamics アカウントに接続]** ページが表
 
 >[!TIP]
 >
->作成後は、 [!DNL Dynamics] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
+>作成した後は、[!DNL Dynamics] ベース接続の認証タイプを変更できません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
-新しいアカウントを作成するには、 **[!UICONTROL 新しいアカウント]**&#x200B;をクリックし、新しい [!DNL Dynamics] アカウント。
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL Dynamics] アカウントの名前と説明（オプション）を入力します。
 
-![新しいアカウント作成インターフェイス。](../../../../images/tutorials/create/ms-dynamics/new.png)
+![ 新しいアカウント作成インターフェイス ](../../../../images/tutorials/create/ms-dynamics/new.png)
 
-を作成する際に、基本認証、またはサービスプリンシパルとキー認証を使用できます [!DNL Dynamics] アカウント。
+[!DNL Dynamics] アカウントを作成する際は、基本認証またはサービスプリンシパルおよびキー認証のいずれかを使用できます。
 
 >[!BEGINTABS]
 
->[!TAB 基本認証]
+>[!TAB  基本認証 ]
 
-を作成するには、以下を実行します。 [!DNL Dynamics] 基本認証を使用するアカウント： [!UICONTROL 基本認証] 次に、 [!UICONTROL サービス URI], [!UICONTROL ユーザー名]、および [!UICONTROL パスワード]. **注意**：での基本認証 [!DNL Dynamics] は、現在 Platform ではサポートされていない 2 要素認証によってブロックされる場合があります。 この場合、キーベースの認証を使用して、 [!DNL Dynamics].
+基本認証を持つ [!DNL Dynamics] アカウントを作成するには、「[!UICONTROL  基本認証 ]」を選択し、「[!UICONTROL  サービス URI]」、「[!UICONTROL  ユーザー名 ]」、「[!UICONTROL  パスワード ] の値を指定します。 **注意**:[!DNL Dynamics] での基本認証は、現在 Platform でサポートされていない 2 要素認証によってブロックされる可能性があります。 この場合、[!DNL Dynamics] を使用してソースコネクタを作成するには、キーベースの認証を使用することをお勧めします。
 
-終了したら、「 」を選択します。 **[!UICONTROL ソースに接続]** そして、新しいアカウントが確立されるまでしばらく待ちます。
+完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しいアカウントが確立されるまでしばらく待ちます。
 
-![基本認証インターフェイス。](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
+![ 基本認証インターフェイス ](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
 
->[!TAB サービスプリンシパルおよびキー認証]
+>[!TAB  サービスプリンシパルとキーの認証 ]
 
-を作成するには、以下を実行します。 [!DNL Dynamics] service-principal および key 認証を持つアカウントを選択します。 **[!UICONTROL サービスプリンシパルおよびキー認証]** 次に、 [!UICONTROL サービスプリンシパル ID] および [!UICONTROL サービスプリンシパルキー].
+サービスプリンシパルとキーの認証を持つ [!DNL Dynamics] アカウントを作成するには、「**[!UICONTROL サービスプリンシパルとキーの認証]** を選択してから、「[!UICONTROL  サービスプリンシパル ID] と [!UICONTROL  サービスプリンシパルキー ] の値を指定します。
 
-終了したら、「 」を選択します。 **[!UICONTROL ソースに接続]** そして、新しいアカウントが確立されるまでしばらく待ちます。
+完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しいアカウントが確立されるまでしばらく待ちます。
 
-![service-principal キー認証インターフェイス。](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
+![ サービスプリンシパルキー認証インターフェイス ](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
 
 >[!ENDTABS]
 

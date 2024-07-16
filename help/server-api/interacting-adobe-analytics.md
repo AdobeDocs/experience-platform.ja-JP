@@ -1,11 +1,11 @@
 ---
 title: Adobe Analytics の操作
-description: Edge Network Server API を使用してAdobe Analyticsとやり取りする方法について説明します。
+description: Edge Networkサーバー API を使用してAdobe Analyticsとやり取りする方法を説明します。
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 9%
 
 ## 概要 {#overview}
 
-Adobe Analyticsのデータ収集は、XDM データをAdobe Analyticsが理解できる形式に変換することで機能します。 複数の XDM フィールドは次のとおりです。 [自動的にマッピング](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=ja) を Analytics 変数に追加します。 また、XDM 値を手動でレガシー Analytics 変数にマッピングすることもできます。
+Adobe Analyticsのデータ収集は、XDM データをAdobe Analyticsが理解できる形式に変換することで機能します。 複数の XDM フィールドが Analytics 変数に [ 自動的にマッピング ](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) されます。 また、XDM 値を従来の Analytics 変数に手動でマッピングすることもできます。
 
-Adobe Analyticsが Server API からデータを受け取れるようにするには、次の手順を実行する必要があります。 [データストリームの設定](../datastreams/overview.md#adobe-analytics-settings) イベントをAdobe Analyticsに転送するには、データストリーム設定ページでレポートスイート ID を入力します。
+Adobe Analyticsが Server API からデータを受信できるようにするには、データストリーム設定ページでレポートスイート ID を入力してイベントをAdobe Analyticsに転送する [ データストリームを設定する ](../datastreams/overview.md#adobe-analytics-settings) 必要があります。
 
-![Adobe Analytics Datastream の設定](assets/analytics-datastream.png)
+![Adobe Analytics データストリーム設定 ](assets/analytics-datastream.png)
 
 ## Adobe Analytics の操作 {#interacting-analytics}
 
@@ -29,9 +29,9 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### リクエスト {#request}
 
-以下のサンプルには、 `_experience.analytics` フィールドグループを使用します。 また、JSON ベースのデータレイヤーも含まれます。 これらのデータレイヤーは自動的にマッピングできませんが、 [データ収集用のデータ準備](../datastreams/data-prep.md) を使用して、上記で参照されているフィールドグループを含むスキーマにこれらの値をマッピングできます。
+以下のサンプルには、`_experience.analytics` フィールドグループから自動的にマッピングされた複数の値が含まれています。 また、JSON ベースのデータレイヤーも含まれます。 これらのデータレイヤーは自動的にマッピングできませんが、[ データ収集のデータ準備 ](../datastreams/data-prep.md) を使用して、上記で参照されたフィールドグループを含むスキーマにこれらの値をマッピングできます。
 
-ユーザーがこれらのフィールドにマッピングしたすべての値は、API リクエストに含まれる場合と同じように、適切な Analytics 値に自動的にマッピングされます。
+ユーザーがこれらのフィールドにマッピングするすべての値は、API リクエストに含まれているかのように、適切な Analytics 値に自動的にマッピングされます。
 
 ```shell
 curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" \
@@ -119,7 +119,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 }'
 ```
 
-### レスポンス {#response}
+### 回答 {#response}
 
 ```json
 {

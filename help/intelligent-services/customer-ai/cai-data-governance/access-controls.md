@@ -8,11 +8,11 @@ exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
 source-wordcount: '519'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
-# 属性ベースのアクセス制御 顧客 AI 内
+# 顧客 AI の属性ベースのアクセス制御
 
 >[!IMPORTANT]
 >

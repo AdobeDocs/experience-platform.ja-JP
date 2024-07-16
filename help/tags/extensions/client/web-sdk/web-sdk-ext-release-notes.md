@@ -29,16 +29,16 @@ Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます�
 
 **新機能**
 
-* をサポートするようになりました [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) コンポーネントを拡張機能の設定で使用できます。
-* さんがを追加しました [`Send Media Event`](action-types.md#send-media-event) のアクション [!DNL Streaming Media Collection] 機能。
-* さんがを追加しました [`Media: Quality of Experience`](data-element-types.md#quality-experience) のデータ要素 [!DNL Streaming Media Collection] 機能。
+* 拡張機能の設定に [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) コンポーネントのサポートを追加しました。
+* [!DNL Streaming Media Collection] 機能に [`Send Media Event`](action-types.md#send-media-event) アクションを追加しました。
+* [!DNL Streaming Media Collection] 機能用に [`Media: Quality of Experience`](data-element-types.md#quality-experience) データ要素を追加しました。
 
 Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます。
 
 **修正点および改善点**
 
-* でデータ要素を検索する際に発生していたエラーを修正しました [変数を更新](action-types.md#update-variable) アクション。
-* 削除済み [!UICONTROL メディア] で使用するために推奨されるイベントタイプのイベントタイプ `sendEvent` アクション。
+* [ 変数を更新 ](action-types.md#update-variable) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
+* `sendEvent` アクションで使用することが推奨されるイベントタイプから [!UICONTROL  メディア ] イベントタイプを削除しました。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
 
@@ -64,17 +64,17 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-* で提案配列が使用できる問題を修正しました `Send event complete` イベントは常に空でした。
+* イベントで使用できる提案配列が常に空であ `Send event complete` 問題を修正しました。
 
 ## バージョン 2.21.2 - 2023年11月1日（PT）
 
 **新機能**
 
-* 追加済み `Request default personalization` イベントアクションを送信するオプション。
+* イベントアクション `Request default personalization` 送信するオプションを追加しました。
 * イベントを送信アクションでページイベントの上部と下部をサポートするようになりました。
-* 追加済み `Apply propositions` アクション。
-* 追加済み `Evaluate rulesets` アクションと `Subscribe ruleset items` アプリ内メッセージのイベント。
-* 追加済み `Decision context` イベントアクションを送信します。
+* アクション `Apply propositions` 追加しました。
+* アプリ内メッセ `Evaluate rulesets` ジのアクションと `Subscribe ruleset items` イベントを追加しました。
+* イベントを送信アクションに `Decision context` を追加しました。
 
 **修正点および改善点**
 
@@ -100,7 +100,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-* 非推奨 `edgeConfigId` 賛成して `datastreamId` SDK 設定。
+* `edgeConfigId` を非推奨（廃止予定）にし、SDK 設定の `datastreamId` を優先しました。
 * データストリーム設定の複数のユーザーエクスペリエンスを強化すると、ユーザーインターフェイスが上書きされます。
 
 ## バージョン 2.19.0 - 2023年6月21日（PT）
@@ -211,7 +211,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.8.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.7.0 が含まれます。
 
-* Edge Networkからの追加情報は、次のような Send Event Complete イベントで利用できます `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。
+* Edge Networkからの追加情報は、`inferences` や `destinations` など、Send Event Complete イベントで利用できます。 これらの機能は現在、Betaの一部としてロールアウトされているので、これらのプロパティの形式は変わる可能性があります。
 
 ## バージョン 2.7.3 - 2021年9月7日（PT）
 
@@ -258,10 +258,10 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.5.0 が含
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含まれます。
 
-* 追加済み [「ドキュメントのアンロード中」](/help/web-sdk/commands/sendevent/documentunloading.md) イベントアクション UI を送信するためのチェックボックス。
+* イベントを送信アクション UI に [ 「ドキュメントのアンロード中」 ](/help/web-sdk/commands/sendevent/documentunloading.md) チェックボックスを追加しました。
 * [デフォルトの同意を設定](/help/web-sdk/commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションはイベントをキューに入れ、同意が得られると送信します）。
 * デフォルトの同意フィールドにツールヒントを追加しました。
-* を使用する際のAdobeの同意 2.0 標準のサポートを追加しました [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンド。
+* [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドの使用時に、Adobeの同意 2.0 標準をサポートするようになりました。
 * ユーザーのアクセストークンが無効であるか、不適切にプロビジョニングされている場合に、XDM オブジェクトデータ要素 UI に表示されるエラーを改善しました。
 * XDM オブジェクトデータ要素を表示する際にブラウザーの開発者コンソールに表示されるクロスオリジンエラー（拡張機能の操作には影響しません）を修正しました。
 

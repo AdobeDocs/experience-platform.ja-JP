@@ -3,8 +3,8 @@ title: 気象データフィールドのマッピング
 description: The Weather Channel との統合の一環として利用できる気象データフィールドの参照ページです。
 exl-id: bc0f158b-f9d0-424a-aa21-953e8380473f
 source-git-commit: e2122008fcae1016db03d6b5f56e4fa25520f9d0
-workflow-type: ht
-source-wordcount: '12238'
+workflow-type: tm+mt
+source-wordcount: '12787'
 ht-degree: 100%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 100%
 これらのフィールドは、フィールドグループに合わせて 3 つの異なるグループに分類されています。
 
 * [**[!UICONTROL 現在の天気]**](#current-weather)：所在地に基づく、ユーザーの現在の気象状況。これには、現在の気温、降水量、雲量などが含まれます。
-* [**[!UICONTROL 予測された天気]**](#forecast)：予測には、ユーザーの所在地の 1 日、2 日、3 日、5 日、7 日および 10 日間の予測が含まれます。
-* [**[!UICONTROL トリガー]**](#triggers)：トリガーとは、異なる意味の気象状況にマッピングされる特定の組み合わせのことです。天候トリガーは 3 種類あります。
+* [**[!UICONTROL 天候の予測]**](#forecast)：予測には、ユーザーの所在地の 1 日、2 日、3 日、5 日、7 日および 10 日の予測が含まれます。
+* [**[!UICONTROL トリガー]**](#triggers)：トリガーとは、違った意味での気象条件に対応する、特定の組み合わせのことです。天候トリガーは 3 種類あります。
 
    * **[!UICONTROL 相対トリガー]**：意味的に重要な気象状況（寒波や雨天など）。これらの定義は、気候によって異なる場合があります。
-   * **[!UICONTROL 製品トリガー]**：様々な種類の製品の購入につながる可能性のある状況。例：気温が低くなる天気予報が出ると、レインコートが売れる可能性が高くなることがあります。
+   * **[!UICONTROL 製品トリガー]**：様々な種類の製品の購入につながる条件。例：気温が低くなる天気予報が出ると、レインコートが売れる可能性が高くなることがあります。
    * **[!UICONTROL 荒天トリガー]**：荒天の警告（冬の嵐や台風の警告など）。
 
 ## 現在の天気 {#current-weather}
@@ -106,7 +106,7 @@ ht-degree: 100%
 | [!DNL Day 1 Forecast Night QPF Millimeters] | 1 日の天気予報夜間の気象情報。12 時間または 24 時間の間に予測される測定可能な降水量（液体または液体と同等のもの）。ミリメートル単位で測定されます。ミリメートル単位の降水量 | `weather.forecast.day01Forecast.night.qpf.millimeters` |
 | [!DNL Day 1 Forecast Night QPF Snow Centimeters] | 1 日の天気予報夜間の気象情報。12 時間または 24 時間の間に予測される測定可能な降雪量。センチメートル単位で測定されます。降雪量（センチメートル） | `weather.forecast.day01Forecast.night.qpfSnow.centimeters` |
 | [!DNL Day 1 Forecast Night QPF Snow Inches] | 1 日の天気予報夜間の気象情報。12 時間または 24 時間の間に予測される測定可能な降雪量。センチメートル単位で測定されます。降雪量（インチ） | `weather.forecast.day01Forecast.night.qpfSnow.inches` |
-| [!DNL Day 1 Forecast Night Relative Humidity] | 1 日の天気予報夜間の気象情報。空気の相対湿度。空気の中の水蒸気の量と、一定の温度で空気を飽和させるのに必要な水蒸気の量との比で定義されます。相対湿度は常にパーセンテージで表されます。<br>範囲：0 ～ 100。 | `weather.forecast.day01Forecast.night.relativeHumidity` |
+| [!DNL Day 1 Forecast Night Relative Humidity] | 1 日の天気予報夜間の気象情報。空気の相対湿度。空気の中の水蒸気の量と、一定の温度で空気を飽和させるのに必要な水蒸気の量との比で定義されます。相対湿度は常にパーセンテージで表されます。<br>範囲：0～100。 | `weather.forecast.day01Forecast.night.relativeHumidity` |
 | [!DNL Day 1 Forecast Night Snow Range] | 1 日の天気予報夜間の気象情報。可能性のある降雪量（1～3 インチ、3～6 インチなど）。 | `weather.forecast.day01Forecast.night.snowRange` |
 | [!DNL Day 1 Forecast Night Temperature Celsius] | 1 日の天気予報夜間の気象情報。定義された測定単位での温度。範囲：-140～140。°（摂氏）単位の気温 | `weather.forecast.day01Forecast.night.temperature.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Fahrenheit] | 1 日の天気予報夜間の気象情報。定義された測定単位での温度。範囲：-140～140。°（華氏）単位の気温 | `weather.forecast.day01Forecast.night.temperature.fahrenheit` |

@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: PQL フィルター関数
-description: フィルター関数は、プロファイルクエリ言語（PQL）で配列内のデータをフィルターするために使用します。
+description: フィルター関数は、Profile Query Language（PQL）の配列内のデータをフィルタリングするために使用されます。
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 87%
+ht-degree: 80%
 
 ---
 
 # フィルター関数
 
-フィルター関数は、 [!DNL Profile Query Language] (PQL) を参照してください。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+フィルター関数は、[!DNL Profile Query Language] （PQL）の配列内のデータをフィルタリングするために使用されます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## フィルター
 

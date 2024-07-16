@@ -15,7 +15,7 @@ ht-degree: 20%
 
 >[!TIP]
 >
->[Experience Platformの AI アシスタント](https://platform.adobe.com) が利用可能になりました。 AI アシスタントを使用して、Adobeアプリケーションのワークフローを高速化します。 [詳細情報](#ai-assistant) 新しい機能について
+>[Experience Platformの AI アシスタント ](https://platform.adobe.com) が利用できるようになりました。 AI アシスタントを使用して、Adobeアプリケーションのワークフローを高速化します。 新しい機能について ](#ai-assistant) 詳細を参照 [。
 
 Adobe Experience Platform の新機能：
 
@@ -36,12 +36,12 @@ Adobe Experience Platformの AI アシスタントは、Adobeアプリケーシ�
 
 | 機能 | 説明 |
 | --- | --- |
-| Experience Platformの AI アシスタント | Experience Platformで AI アシスタントを使用できるようになりました。 AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizer、およびCustomer Journey Analyticsをサポートします。 <br> ![Experience Platform の AI アシスタント。](../2024/assets/june/ai-assistant-full.png "Experience Platform の AI アシスタント。"){width="100" zoomable="yes"} <br> この機能について詳しくは、 [AI アシスタント UI ガイド](../../ai-assistant/ui-guide.md). |
-| 製品に関する知識の質問のサポート | [製品に関する知識](../../ai-assistant/home.md#product-knowledge) は、Experience Leagueドキュメントに基づく概念とトピックです。ポイントラーニングラーニング、オープンディスカバリー、トラブルシューティングに使用できます。 次のような AI アシスタントの製品知識に関する質問をすることができます。 <ul><li>類似オーディエンスとは</li><li>プロファイル充実度はどのように計算されますか？</li><li> データの取り込み後にプロファイル対応スキーマを削除できますか？</li></ul> |
-| [!BADGE Beta]オペレーショナルインサイトに関する質問に対する {type=Informative} のサポート | [運用インサイト](../../ai-assistant/home.md#operational-insights) は、カウント、検索、系列の影響など、AI アシスタントがメタデータオブジェクトに関して生成する回答です。 運用インサイトでは、サンドボックス内のデータは参照されません。 AI アシスタントに次のようなオペレーショナルインサイトを求めることができます。 <ul><li>アクティブ状態にあるのは、どの宛先ですか？</li><li>データセットはいくつ持っていますか？</li><li>ライブジャーニーで使用されるオーディエンスをリストします。</li></ul> 運用インサイトは、属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースのドメインでサポートされています。 |
-| AI アシスタントにアクセス | Experience Platform、Real-Time CDPおよびJourney Optimizer用の AI アシスタントにアクセスするには、次を含むロールに追加される必要があります **AI アシスタントを有効にする** および **運用インサイトの表示** 権限。 詳しくは、 [機能アクセスガイド](../../ai-assistant/access.md). 以下に対してAdmin Consoleを使用する必要があります。 [Customer Journey Analyticsでのアクセス](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
+| Experience Platformの AI アシスタント | Experience Platformで AI アシスタントを使用できるようになりました。 AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizer、およびCustomer Journey Analyticsをサポートします。<br> ![Experience Platform の AI アシスタント。](../2024/assets/june/ai-assistant-full.png "Experience Platform の AI アシスタント。"){width="100" zoomable="yes"} <br> この機能の詳細については、[AI アシスタント UI ガイド ](../../ai-assistant/ui-guide.md) を参照してください。 |
+| 製品に関する知識の質問のサポート | [ 製品知識 ](../../ai-assistant/home.md#product-knowledge) は、Experience Leagueドキュメントに基づく概念とトピックであり、ポイントラーニングラーニング、オープンディスカバリー、トラブルシューティングに使用できます。 次のような AI アシスタントの製品知識に関する質問をすることができます。 <ul><li>類似オーディエンスとは</li><li>プロファイル充実度はどのように計算されますか？</li><li> データの取り込み後にプロファイル対応スキーマを削除できますか？</li></ul> |
+| オペレーショナルインサイトに関する質問に対する [!BADGE Beta]{type=Informative} のサポート | [ 運用インサイト ](../../ai-assistant/home.md#operational-insights) とは、カウント、ルックアップ、系列の影響など、AI Assistant が生成するメタデータオブジェクトに関する回答です。 運用インサイトでは、サンドボックス内のデータは参照されません。 AI アシスタントに次のようなオペレーショナルインサイトを求めることができます。 <ul><li>アクティブ状態にあるのは、どの宛先ですか？</li><li>データセットはいくつ持っていますか？</li><li>ライブジャーニーで使用されるオーディエンスをリストします。</li></ul> 運用インサイトは、属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースのドメインでサポートされています。 |
+| AI アシスタントにアクセス | Experience Platform、Real-Time CDP、Journey Optimizerの AI アシスタントにアクセスするには、**AI アシスタントを有効にする** および **オペレーショナルインサイトを表示** 権限を含むロールに追加される必要があります。 詳しくは、[ 機能アクセスガイド ](../../ai-assistant/access.md) を参照してください。 [Customer Journey Analyticsでのアクセス ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access) には、Admin Consoleを使用する必要があります。 |
 
-AI アシスタントの詳細については、 [AI アシスタントの概要](../../ai-assistant/home.md).
+AI アシスタントの詳細については、「[AI アシスタントの概要 ](../../ai-assistant/home.md)」を参照してください。
 
 ## Experience Platform API に対する認証 {#authentication-platform-apis}
 
@@ -57,11 +57,11 @@ JWT 認証方法を使用した既存の API 統合は 2025年1月1日（PT）�
 
 | 機能 | 説明 |
 | --- | --- |
-| 予約済みキーワードリストへの追加 | 次の単語がデータ準備予約キーワードリストに追加されました。<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> 詳しくは、を参照してください [データ準備関数ガイド](../../data-prep/functions.md). |
+| 予約済みキーワードリストへの追加 | 次の単語がデータ準備予約キーワードリストに追加されました。<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> 詳しくは、[ データ準備関数ガイド ](../../data-prep/functions.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
-データ準備について詳しくは、 [データ準備の概要](../../data-prep/home.md).
+データ準備について詳しくは、[ データ準備の概要 ](../../data-prep/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -71,9 +71,9 @@ JWT 認証方法を使用した既存の API 統合は 2025年1月1日（PT）�
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| アドホックエクスポート API の機能強化による外部オーディエンスのエクスポート | アドホック書き出し API を使用して、外部（カスタムアップロード）オーディエンスを書き出せるようになりました。 [詳細情報](/help/destinations/api/ad-hoc-activation-api.md) . |
+| アドホックエクスポート API の機能強化による外部オーディエンスのエクスポート | アドホック書き出し API を使用して、外部（カスタムアップロード）オーディエンスを書き出せるようになりました。 [ 詳細情報 ](/help/destinations/api/ad-hoc-activation-api.md)。 |
 | （Beta）書き出し配列のサポートのベータ段階でサポートされている追加関数 | 以前は、ファイルベースの宛先に対してオーディエンスをアクティブ化し、「計算フィールドを使用」を選択する場合、データ準備で使用可能なオーディエンスのサブセットを使用するように制限されていました。 オーディエンスをファイルベースの宛先に書き出す際に、データ準備で利用できるすべての機能にアクセスできるようになりました。 [詳細情報](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions)。 |
-| マッピングステップでデータが含まれるフィールドのみを表示します | プロファイル属性を宛先にマッピングする際に、すべてのプロファイル属性を切り替えるか、データを含むプロファイル属性のみを切り替えることができるようになりました。 デフォルトでは、データが含まれるフィールドのみが表示されます。 のアクティベーションガイドを参照してください [バッチ](../../destinations/ui/activate-batch-profile-destinations.md#mapping) および [ストリーミング](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) 宛先を参照してください。 |
+| マッピングステップでデータが含まれるフィールドのみを表示します | プロファイル属性を宛先にマッピングする際に、すべてのプロファイル属性を切り替えるか、データを含むプロファイル属性のみを切り替えることができるようになりました。 デフォルトでは、データが含まれるフィールドのみが表示されます。 詳しくは、[ バッチ ](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 宛先と [ ストリーミング ](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) 宛先のアクティベーションガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -87,7 +87,7 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} ID グラフリンクルール | ベータ版プログラムの参加者は、ID グラフリンクルールを使用して、「共有デバイス」やその他のグラフ折りたたみシナリオを防ぐことで、システムでの人物エンティティの表現を確保できます。 この目標を達成するために、ベータ版プログラムの参加者は、開発用サンドボックス環境の次の 3 つの機能にアクセスできます。 <ul><li>グラフアルゴリズムがどのように機能するかを理解するためのグラフシミュレーションツール。</li><li>ID 設定画面では、一意の名前空間と名前空間の優先度を設定できます。</li><li>取り込まれたグラフに関するインサイトを得るための ID ダッシュボード。</li></ul> さらに、ベータ版プログラムには、プロファイル動作の安定性の向上が含まれます。 詳しくは、 [id グラフリンクルール](../../identity-service/identity-graph-linking-rules/overview.md) ドキュメント。 |
+| [!BADGE Beta]{type=Informative} ID グラフリンクルール | ベータ版プログラムの参加者は、ID グラフリンクルールを使用して、「共有デバイス」やその他のグラフ折りたたみシナリオを防ぐことで、システムでの人物エンティティの表現を確保できます。 この目標を達成するために、ベータ版プログラムの参加者は、開発用サンドボックス環境の次の 3 つの機能にアクセスできます。 <ul><li>グラフアルゴリズムがどのように機能するかを理解するためのグラフシミュレーションツール。</li><li>ID 設定画面では、一意の名前空間と名前空間の優先度を設定できます。</li><li>取り込まれたグラフに関するインサイトを得るための ID ダッシュボード。</li></ul> さらに、ベータ版プログラムには、プロファイル動作の安定性の向上が含まれます。 詳しくは、[ID グラフリンクルール ](../../identity-service/identity-graph-linking-rules/overview.md) ドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -95,15 +95,15 @@ ID サービスについて詳しくは、[ID サービスの概要](../../ident
 
 ## [!DNL Privacy Service] {#privacy}
 
-いくつかの法規制や組織の規制により、ユーザーは、要求に応じて、データストアから個人データにアクセスしたり、個人データを削除したりする権利が与えられています。 Adobe Experience Platform [!DNL Privacy Service] は、顧客からのこれらのデータリクエストを管理するのに役立つ RESTful API とユーザーインターフェイスを提供します。 （を使用） [!DNL Privacy Service]を使用すると、Adobe Experience Cloud アプリケーションから非公開または個人的な顧客データに対するアクセスおよび削除のリクエストを送信でき、法的および組織のプライバシー規制への自動コンプライアンスが容易になります。
+いくつかの法規制や組織の規制により、ユーザーは、要求に応じて、データストアから個人データにアクセスしたり、個人データを削除したりする権利が与えられています。 Adobe Experience Platform [!DNL Privacy Service] は、お客様からのこれらのデータリクエストを管理するのに役立つ RESTful API とユーザーインターフェイスを提供します。 [!DNL Privacy Service] を使用すると、Adobe Experience Cloud アプリケーションから非公開または個人的な顧客データに対するアクセスおよび削除のリクエストを送信でき、法的および組織のプライバシー規制への自動コンプライアンスが容易になります。
 
 **新機能**
 
 | 機能 | 説明 |
 |--- | ---|
-| Adobe Journey OptimizerのPrivacy Serviceサポート | Privacy Service機能は、削除リクエストを処理するためのAdobe Journey Optimizer プロトコルと互換性を持つようになりました。 を参照してください。 [Adobe Journey Optimizer プライバシーリクエストドキュメント](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) 詳しくは、Experience Platformドキュメントのリストを参照してください [Privacy Serviceと統合されたExperience Cloudアプリケーション](../../privacy-service/experience-cloud-apps.md). |
+| Adobe Journey OptimizerのPrivacy Serviceサポート | Privacy Service機能は、削除リクエストを処理するためのAdobe Journey Optimizer プロトコルと互換性を持つようになりました。 詳しくは、[Adobe Journey Optimizer プライバシーリクエストのドキュメント ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) を参照してください。また、Privacy Serviceと統合されている [Experience Cloudアプリケーションのリストについては、Experience Platformドキュメントを参照してください ](../../privacy-service/experience-cloud-apps.md)。 |
 
-を参照してください。 [Privacy Serviceの概要](../../privacy-service/home.md) このサービスについて詳しくは、こちらを参照してください。
+このサービスについて詳しくは ](../../privacy-service/home.md)[Privacy Serviceの概要 } を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
@@ -113,7 +113,7 @@ ID サービスについて詳しくは、[ID サービスの概要](../../ident
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 時間制約の更新 | 「今月」と「今年」の動作が更新され、それぞれ「月初めから今日」と「年初から今日」を表すようになりました。 この変更について詳しくは、 [セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
+| 時間制約の更新 | 「今月」と「今年」の動作が更新され、それぞれ「月初めから今日」と「年初から今日」を表すようになりました。 この変更について詳しくは、[ セグメントビルダーガイド ](../../segmentation/ui/segment-builder.md#rule-builder-canvas) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -121,16 +121,16 @@ ID サービスについて詳しくは、[ID サービスの概要](../../ident
 
 ## ユースケースプレイブック {#use-case-playbooks}
 
-[!DNL Use Case Playbooks] は、すべてのAdobe Experience Platformのお客様が追加費用なしで利用できます。 Experience PlatformUI で豊富なユースケースプレイブックのギャラリーにアクセスするには、次の項目を選択できるようになりました **[!UICONTROL プレイブック]** 左側のナビゲーションから。
+[!DNL Use Case Playbooks] は、すべてのAdobe Experience Platformのお客様が追加費用なしで利用できます。 Experience PlatformUI で豊富なユースケースプレイブックにアクセスするには、左側のナビゲーションから **[!UICONTROL プレイブック]** を選択できるようになりました。
 
 [!DNL Use Case Playbooks] は、Real-time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題の克服を支援するように設計されています。 ガイダンスを提供し、様々なアセットを生成するので、どこから始めればよいかわからない場合や、意図するユースケースに合った正しいアセットを生成する方法がわからない場合でも、準備が整ったら、実稼動環境にテストして読み込むことができます。
 
-開始するには、を参照してください [ユースケースプレイブックの概要](/help/use-case-playbooks/playbooks/overview.md)インスタンスを作成し、生成されたアセットを他のサンドボックス環境に読み込む方法など、プレイブックの機能の概要、目的、エンドツーエンドのデモを提供します。
+開始するには、[ ユースケースプレイブックの概要 ](/help/use-case-playbooks/playbooks/overview.md) を参照してください。プレイブックの機能の概要、目的、エンドツーエンドのデモ（インスタンスを作成する方法や、生成されたアセットを他のサンドボックス環境に読み込む方法など）が示されています。
 
-様々なユースケースプレイブックを実験し探索するために、インスピレーションを与えるサンドボックスにアクセスして設定する方法については、を参照してください。 [ユースケースプレイブックに移動](/help/use-case-playbooks/playbooks/navigate.md) ドキュメント。
+様々なユースケースプレイブックを実験し探索するために、インスピレーションを与えるサンドボックスにアクセスして設定する方法については、[ ユースケースプレイブックに移動 ](/help/use-case-playbooks/playbooks/navigate.md) ドキュメントを参照してください。
 
-について詳しくは、 [!DNL Use Case Playbooks]詳しくは、次のドキュメントページを参照してください。
+[!DNL Use Case Playbooks] について詳しくは、次のドキュメントページを参照してください。
 
-- すべてのリストを取得 [使用可能なプレイブック](/help/use-case-playbooks/playbooks/playbooks-list.md)、製品（Real-Time CDPまたはJourney Optimizer）別にグループ化。
-- について [権限](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) プレイブックと作成したアセットを使用する場合に必要です。
-- について [データ認識機能](/help/use-case-playbooks/playbooks/data-awareness.md) を使用すると、生成されたアセットを他のサンドボックス環境に複製できます。
+- 製品別（Real-Time CDPまたはJourney Optimizer[ にグループ化されたすべての ](/help/use-case-playbooks/playbooks/playbooks-list.md) 使用可能なプレイブック）のリストを取得します。
+- プレイブックとそれらが作成するアセットを使用するために必要な [ 権限 ](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) について説明します。
+- 生成されたアセットを他のサンドボックス環境に複製できる ](/help/use-case-playbooks/playbooks/data-awareness.md) データ認識機能 [ について説明します。

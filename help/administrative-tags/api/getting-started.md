@@ -3,7 +3,8 @@ solution: Experience Platform
 title: 統合タグ API の概要
 description: 次のドキュメントでは、統合タグ API を正常に使用するために必要な追加情報を示しています。
 role: Developer
-source-git-commit: 8280281fa8b676b13c0601e2c9a50515ce8979c3
+exl-id: 8f33707f-b46d-4054-802c-9e42ecabd9ba
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 44%
@@ -18,7 +19,7 @@ Unified Tags API を使用すると、Adobe Experience Platform内のビジネ�
 
 ## API 呼び出し例の読み取り
 
-統合タグ API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、の節を参照してください。 [サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platformトラブルシューティングガイドを参照してください。
+統合タグ API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platformトラブルシューテングガイドの [API 呼び出し例の読み方 ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) に関する節を参照してください。
 
 ## 必須ヘッダー
 
@@ -38,4 +39,4 @@ Unified Tags API を使用すると、Adobe Experience Platform内のビジネ�
 
 ## 次の手順
 
-統合タグ API を使用して呼び出しを行うには、左側のナビゲーションを使用するか内で、使用可能なエンドポイントガイドの 1 つを選択します [開発者ガイドの概要](./overview.md)
+統合タグ API を使用して呼び出しを行うには、左側のナビゲーションを使用して、または [ 開発者ガイドの概要内で、使用可能なエンドポイントガイドの 1 つを選択 ](./overview.md) ます。

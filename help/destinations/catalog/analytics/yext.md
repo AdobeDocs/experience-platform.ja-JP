@@ -1,12 +1,12 @@
 ---
-keywords: Yext コンバージョントラッキング；Yext;yext;yext コンバージョントラッキング
+keywords: Yext Conversion Tracking;Yext;yext;yext コンバージョントラッキング
 title: Yext Conversion Tracking 拡張機能
-description: Yext コンバージョントラッキング拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Yext Conversion Tracking 拡張機能は、Adobe Experience Platformの Analytics の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 89%
+source-wordcount: '453'
+ht-degree: 91%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 89%
 
 ## 概要 {#overview}
 
-この [!DNL Yext Conversion Tracking] 拡張機能を使用すると、Yext 製品の使用に起因すると考えられるコンバージョンを測定できます。
+[!DNL Yext Conversion Tracking] 拡張機能を使用すると、Yext 製品の使用に起因する可能性のあるコンバージョンを測定できます。
 
-[!DNL Yext Conversion Tracking] は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html) の拡張機能のページを参照してください。
+[!DNL Yext Conversion Tracking] は、Adobe Experience Platform の分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 89%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Yext Conversion Tracking] 拡張子：
+[!DNL Yext Conversion Tracking] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

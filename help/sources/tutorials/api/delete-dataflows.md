@@ -7,7 +7,7 @@ description: Flow Service API を使用してバッチおよびストリーミ�
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '322'
 ht-degree: 100%
 
 ---

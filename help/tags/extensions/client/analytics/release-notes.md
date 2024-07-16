@@ -15,7 +15,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Analytics タグ拡張機能（多くの場合、の更新に応答して更新される） [AppMeasurement JavaScript ライブラリ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja). を参照してください。 [AppMeasurementリリースノート](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) 詳しくは、以下に説明する特定のバージョンを参照してください。
+>[AppMeasurementのJavaScript ライブラリ ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) の更新に対応して Analytics タグ拡張機能が頻繁に更新される場合。 以下に説明する具体的なバージョンについて詳しくは ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)[AppMeasurementのリリースノート } を参照してください。
 
 ## 2024 年 3 月 4 日（Pt）
 
@@ -23,7 +23,7 @@ ht-degree: 74%
 
 **機能**:
 
-* アップグレード先 [v2.26.0 へのAppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+* [AppMeasurementに v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0) にアップグレードしました。
 
 ## 2023 年 9 月 15 日（Pt）
 
@@ -31,7 +31,7 @@ ht-degree: 74%
 
 **機能**:
 
-* アップグレード先 [v2.25.0 へのAppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+* [AppMeasurementに v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0) にアップグレードしました。
 
 
 ## 2023 年 7 月 19 日（Pt）
@@ -40,13 +40,13 @@ ht-degree: 74%
 
 **機能**:
 
-* アップグレード先 [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
-* オプションの設定（`decodeLinkParameters` default `false`）に設定します。これにより、2 バイトのエンコードされた文字を含むリンク URL がデコードされます。
+* [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0) にアップグレードしました。
+* 2 バイトのエンコードされた文字 `decodeLinkParameters` 含むリンク URL をデコードするオプションの設定（デフォルト `false`）を追加しました。
 
-**バグの修正**:
+**バグ修正**:
 
-* 高エントロピーの不具合があるブラウザーに対するエラー処理を追加しました [User-Agent のクライアントヒント](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API の略。
-* 変更日 [POST](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/POST) 使用する Content-Type ヘッダー `x-www-form-urlencoded` デフォルトでは。
+* 高エントロピー [User-Agent クライアントヒント ](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API の不具合があるブラウザー向けに、エラー処理を追加しました。
+* [Header](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/POST) Content-Type POSTが `x-www-form-urlencoded` を既定で使用するように変更されました。
 
 ## 2022 年 9 月 23 日（Pt）
 
@@ -55,13 +55,13 @@ ht-degree: 74%
 **機能**:
 
 * AppMeasurement v2.23.0 にアップグレードしました。
-* 拡張機能で高エントロピーを収集できるようになりました [user-agent クライアントヒント](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新バージョンのAppMeasurementでサポートされています。
+* 最新バージョンのAppMeasurementでサポートされているように、拡張機能は高エントロピー [user-agent クライアントヒント ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) を収集できるようになりました。
 
 ## 2022 年 2 月 28 日（Pt）
 
 **Adobe Analytics Extension 1.9.0**
 
-**バグの修正**:
+**バグ修正**:
 
 * AppMeasurementから一部の debug ステートメントを削除しました。
 
@@ -69,7 +69,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.8**
 
-**バグの修正**:
+**バグ修正**:
 
 * AppMeasurementを v2.22.3 にアップグレードしました。
 
@@ -77,7 +77,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.7**
 
-**バグの修正**:
+**バグ修正**:
 
 * AppMeasurement を v2.22.2 にアップグレードしました。
 * 非推奨（廃止予定）の buildInfo.environment を削除
@@ -86,7 +86,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.6**
 
-**バグの修正**:
+**バグ修正**:
 
 * [AppMeasurement を v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja) にアップグレードしました。
 * innerHTML を使用する代わりに、Activity Map ロジックを反映するように linkName のフォールバックを更新しました。
@@ -95,7 +95,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.5**
 
-**バグの修正**:
+**バグ修正**:
 
 * このフィールドを空白のままにした場合に、AAM モジュール設定で誤った Cookie 名が設定されていました。これは修正されました。
 
@@ -108,7 +108,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.4**
 
-**バグの修正**:
+**バグ修正**:
 
 * 買い物かごのイベント（prodView、scAdd、scView など）がイベントドロップダウンに表示されない問題を修正しました。これらすべてをドロップダウンから選択できるようになります。
 
@@ -122,7 +122,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.3**
 
-**バグの修正**:
+**バグ修正**:
 
 * カスタムライブラリを使用しており、レポートスイートが Analytics で設定されていない場合、変数を設定しようとするとエラーが発生する、ルール設定に影響するバグを修正しました。
 * eVar を作成する際、「複製元」を prop とするオプションまたは prop に複製するオプションを表示しないバグが発生していました。このバグが修正され、以前のバージョンの動作を反映するようになりました。
@@ -135,7 +135,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.2**
 
-**バグの修正**:
+**バグ修正**:
 
 * 数値イベントやシリアル化された通貨で間違った構文が使用されていた問題を修正しました。
 
@@ -152,7 +152,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.1**
 
-**バグの修正**:
+**バグ修正**:
 
 * プレミアムの eVar と prop が保存されないバグを修正しました。
 
@@ -160,7 +160,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.8.0**
 
-**バグの修正**:
+**バグ修正**:
 
 * 少数の顧客が、ドロップダウンにレポートスイートのオプションを表示できないというバグを修正しました。
 * ECID を使用している間、一部の変数が正しく設定されない問題を修正しました。
@@ -174,7 +174,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.7.8**
 
-**バグの修正**:
+**バグ修正**:
 
 * ドロップダウンのレポートスイートオプションが、一部のユーザーに表示されない表示しないバグを修正しました。
 * イベントが正しく実行されないバグを修正しました。
@@ -189,7 +189,7 @@ ht-degree: 74%
 * Audience Management モジュールを DIL 9.3 をサポートするよう更新されました。
 * スペースを増やすよう、フィールドの幅を更新しました。
 
-**バグの修正**:
+**バグ修正**:
 
 * オプトイン／オプトアウトの設定に関するバグを修正しました。
 * ECID を使用する際に変数が正しく設定されないバグを修正しました。
@@ -214,7 +214,7 @@ ht-degree: 74%
 * Adobe Analytics 拡張機能を、既知の clearVars の問題を修正する [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0)に更新しました
 * 拡張機能への Exchange リンクを追加しました。ドロップダウンリストを選択して「拡張機能情報」を選択すると、Exchange リストにアクセスできます。
 
-**バグの修正**:
+**バグ修正**:
 
 * 誤った evar がリストから削除されるという UI のバグを修正しました
 * 複数のレポートスイートを追加しようとすると SSL トラッキングサーバーが必要となるバグを修正しました。複数のレポートスイートを追加する場合、トラッキングサーバーは必要ですが、SSL トラッキングサーバーフィールドはオプションです。
@@ -223,7 +223,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.7.4**
 
-**バグの修正**:
+**バグ修正**:
 
 * AppMeasurement 2.13.0 でバグが見つかった後に拡張機能をロールバックしました。AppMeasurement 2.13.0 では、ECID に送信されない問題が発生していました。そのため、1.7.3 をインストールしている場合は、問題を回避するため、1.7.4 にアップグレードすることをお勧めします。AppMeasurement の更新バージョンがリリースされるまで、clearVars は継続します
 
@@ -231,7 +231,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.7.3**
 
-**バグの修正**:
+**バグ修正**:
 
 * Adobe Analytics 拡張機能を、既知の clearVars の問題を修正する AppMeasurement 2.13.0 に更新しました。
 
@@ -250,7 +250,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.7.1**
 
-**バグの修正**:
+**バグ修正**:
 
 * 1.7 でバグが検出された後、拡張機能をバージョン 1.6 に戻しました。
 
@@ -263,7 +263,7 @@ ht-degree: 74%
 * Adobe Analytics 拡張機能が、オプトインをサポートする DIL 9.0 に更新されました。
 * Adobe Analytics 拡張機能が、オプトインをサポートす AppMeasurement 2.11 に更新されました。
 
-**バグの修正**:
+**バグ修正**:
 
 * Prototype JS との競合を修正しました。Analytics 拡張機能は、標準的な prototype.js ライブラリをサポートするようになります。
 
@@ -271,7 +271,7 @@ ht-degree: 74%
 
 **Adobe Analytics Extension 1.5.1**
 
-**バグの修正**:
+**バグ修正**:
 
 * DIL モジュールを 7.0 にダウングレードして、解析ビーコンが実行されなかった問題を修正しました
 
@@ -285,7 +285,7 @@ ht-degree: 74%
 * 「Serialize from value」フィールドを、「Event ID」と「Event Value」の 2 つに分割しました。これにより、イベントがシリアル化されず、値を割り当てていた問題が修正されます。
    * 注：文字列（例：Event7=3:abc123）を使用して ID を追加する際、現在のフィールドを使用している場合は、「Event ID」フィールドの ID を反映するよう入力内容を更新する必要があります。
 
-**バグの修正**:
+**バグ修正**:
 
 * 通貨コードが正しく入力できなかったバグを修正しました
 
@@ -297,7 +297,7 @@ ht-degree: 74%
 
 * トラッキング cookie 名を拡張機能設定に移行しました。
 
-**バグの修正**:
+**バグ修正**:
 
 * trackerProperties オブジェクトがない場合に、変数がクラッシュすることがないように、バグを修正しました。
 
@@ -310,7 +310,7 @@ ht-degree: 74%
 * AppMeasurement 2.9 をサポートするように Adobe Analytics 拡張機能を更新しました。
 * Adobe Analytics拡張機能に「トラッカーをグローバルにアクセスできるようにする」機能を追加しました。これにより、`windows.s` の下でトラッカーをグローバルにスコープ設定できます。
 
-**バグの修正**:
+**バグ修正**:
 
 * 詳細ビューから戻るとリスト表示がリセットされるバグを修正しました
 * いくつかのバグを修正し、リビジョンセレクターでリソースの読み込みを改善しました
@@ -334,6 +334,6 @@ ht-degree: 74%
 * AppMeasurement はバージョン 2.6 に更新されました
 * 初期化された Analytics トラッカーが Adobe Experience Platform タグ拡張機能の共有モジュールを使用して公開されるようになりました。これにより、やり取りするコードを他の拡張機能に含めることができます。
 
-**バグの修正**:
+**バグ修正**:
 
 * Adobe Analytics 拡張機能で、「Error, missing Report Suite ID in AppMeasurement initialization」がブラウザーコンソールに表示されていたエラーを修正しました。

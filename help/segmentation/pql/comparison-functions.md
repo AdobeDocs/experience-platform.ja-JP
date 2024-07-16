@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: PQL 比較関数
-description: 比較関数は、異なる式と値を比較するために使用され、それに応じて「true」または「false」を返します。
+title: PQL比較関数
+description: 比較関数は、様々な式と値を比較するために使用され、それに応じて「true」または「false」を返します。
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 89%
 
 # 比較関数
 
-比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## Equals
 

@@ -1,45 +1,45 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；RStudio;rstudio；クエリサービスへの接続；
+keywords: Experience Platform；ホーム；人気のトピック；Query Service;Query Service;RStudio;rstudio;Query Service への接続；
 solution: Experience Platform
-title: RStudio をクエリサービスに接続
+title: クエリサービスへの RStudio の接続
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 15%
+source-wordcount: '439'
+ht-degree: 11%
 
 ---
 
 # クエリサービスへの [!DNL RStudio] の接続
 
-このドキュメントでは、 [!DNL RStudio] Adobe Experience Platform [!DNL Query Service].
+このドキュメントでは、[!DNL RStudio] とAdobe Experience Platform [!DNL Query Service] を接続する手順について説明します。
 
 >[!NOTE]
 >
-> [!DNL RStudio] は現在、 [!DNL Posit]. [!DNL RStudio] 製品名は「 [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] マネージャ [!DNL Posit Cloud]、および [!DNL Posit Academy].
+> [!DNL RStudio] は現在、[!DNL Posit] としてリブランドされています。 [!DNL RStudio] 製品の名前は、[!DNL Posit Connect]、[!DNL Posit Workbench]、[!DNL Posit Package] Manager、[!DNL Posit Cloud]、[!DNL Posit Academy] に変更されました。
 >
-> このガイドは、ユーザーが既に [!DNL RStudio] そしてその使い方に精通している 詳細情報： [!DNL RStudio] は [公式 [!DNL RStudio] ドキュメント](https://rstudio.com/products/rstudio/).
+> このガイドは、[!DNL RStudio] へのアクセス権を既に持ち、使用方法に精通していることを前提としています。 [!DNL RStudio] について詳しくは、[official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/) を参照してください。
 > 
-> また、 [!DNL RStudio] クエリサービスを使用する場合は、 [!DNL PostgreSQL] JDBC 4.2 ドライバ。 JDBC ドライバーは、 [[!DNL PostgreSQL] 公式サイト](https://jdbc.postgresql.org/download/).
+> さらに、クエリサービスで [!DNL RStudio] を使用するには、[!DNL PostgreSQL] JDBC 4.2 ドライバーをインストールする必要があります。 JDBC ドライバーは、[[!DNL PostgreSQL]  公式サイト ](https://jdbc.postgresql.org/download/) からダウンロードできます。
 
-## の作成 [!DNL Query Service] 接続 [!DNL RStudio] インターフェイス
+## [!DNL RStudio] インターフェイスでの [!DNL Query Service] 接続の作成
 
-インストール後 [!DNL RStudio]RJDBC パッケージをインストールする必要があります。 方法に関する説明 [コマンドラインを使用してデータベースを接続する](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) は公式の Posit ドキュメントに記載されています。
+[!DNL RStudio] をインストールしたら、RJDBC パッケージをインストールする必要があります。 [ コマンドラインを使用してデータベースを接続する ](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) 方法については、公式の Post ドキュメントを参照してください。
 
-Mac OS を使用している場合は、 **[!UICONTROL ツール]** メニューバーから、 **[!UICONTROL パッケージのインストール]** をドロップダウンメニューから選択します。 または、 **[!DNL Packages]** RStudio UI の「 」タブで、「 」を選択します。 **[!DNL Install]**.
+Mac OS を使用している場合は、メニューバーから **[!UICONTROL ツール]** を選択し、その後ドロップダウンメニューから **[!UICONTROL パッケージをインストール]** を選択できます。 または、RStudio UI から「**[!DNL Packages]**」タブを選択し、「**[!DNL Install]**」を選択します。
 
-ポップアップが表示され、 **[!DNL Install Packages]** 画面 以下を確認します。 **[!DNL Repository (CRAN)]** が **[!DNL Install from]** 」セクションに入力します。 の値 **[!DNL Packages]** は、 `RJDBC`. 確認 **[!DNL Install dependencies]** が選択されている。 すべての値が正しいことを確認したら、「 」を選択します。 **[!DNL Install]** をクリックして、パッケージをインストールします。 RJDBC パッケージがインストールされたので、を再起動します。 [!DNL RStudio] をクリックして、インストールプロセスを完了します。
+ポップアップが表示され、**[!DNL Install Packages]** 画面が表示されます。 **[!DNL Install from]** セクションに **[!DNL Repository (CRAN)]** が選択されていることを確認します。 **[!DNL Packages]** の値は `RJDBC` にしてください。 「**[!DNL Install dependencies]**」が選択されていることを確認します。 すべての値が正しいことを確認したら、「**[!DNL Install]**」を選択してパッケージをインストールします。 RJDBC パッケージがインストールされたので、[!DNL RStudio] を再起動してインストールプロセスを完了します。
 
-後 [!DNL RStudio] が再起動され、クエリサービスに接続できるようになりました。 を選択します。 **[!DNL RJDBC]** パッケージを **[!DNL Packages]** ウィンドウに移動し、コンソールに次のコマンドを入力します。
+再起動 [!DNL RStudio] たら、クエリサービスに接続できます。 **[!DNL Packages]** ペインで **[!DNL RJDBC]** パッケージを選択し、コンソールに次のコマンドを入力します。
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-ここで、 `{PATH TO THE POSTGRESQL JDBC JAR}` は、 [!DNL PostgreSQL] お使いのコンピューターにインストールされた JDBC JAR。
+`{PATH TO THE POSTGRESQL JDBC JAR}` は、コンピューターにインストールされた [!DNL PostgreSQL] JDBC JAR へのパスを表します。
 
-これで、クエリサービスへの接続を作成できます。 コンソールで次のコマンドを入力します。
+これで、クエリサービスへの接続を作成できます。 コンソールに次のコマンドを入力します。
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -47,17 +47,17 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
+>Adobe Experience Platform クエリサービスへのサードパーティ接続での SSL サポートと、SSL モードを使用した接続方法については、[[!DNL Query Service] SSL ドキュメント ](./ssl-modes.md) を参照し `verify-full` ください。
 
-データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[資格情報ガイド](../ui/credentials.md)を参照してください。資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
+データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。 資格情報を見つけるには、[!DNL Platform] にログインし、「**[!UICONTROL クエリ]**」を選択してから、「**[!UICONTROL 資格情報]** を選択します。
 
-コンソール出力のメッセージで、クエリサービスへの接続を確認します。
+コンソール出力内のメッセージで、クエリサービスへの接続を確認します。
 
 ## クエリの記述
 
-これで、 [!DNL Query Service]を使用すると、SQL 文を実行および編集するクエリを記述できます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
+[!DNL Query Service] に接続したので、SQL 文を実行および編集するクエリを記述できます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
 
-次のクエリでは、 [エクスペリエンスイベント](../../xdm/classes/experienceevent.md) およびは、デバイスの画面の高さを指定して、Web サイトのページビューのヒストグラムを作成します。
+次のクエリでは、[ エクスペリエンスイベント ](../../xdm/classes/experienceevent.md) を含むデータセットを使用し、デバイスの画面の高さを考慮して、web サイトのページビューのヒストグラムを作成します。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -94,4 +94,4 @@ df_pageviews
 
 ## 次の手順
 
-クエリの書き込みと実行の方法について詳しくは、 [クエリの実行](../best-practices/writing-queries.md).
+クエリの作成および実行方法について詳しくは、[ クエリの実行 ](../best-practices/writing-queries.md) に関するガイドを参照してください。

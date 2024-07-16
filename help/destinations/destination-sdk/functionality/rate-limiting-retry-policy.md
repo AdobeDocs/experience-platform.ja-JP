@@ -4,7 +4,7 @@ title: Destination SDK で作成されたストリーミング宛先のレート
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 100%
 
 ---

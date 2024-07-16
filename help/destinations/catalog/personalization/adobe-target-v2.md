@@ -1,12 +1,12 @@
 ---
-keywords: target 拡張機能；target;target v2;target v2 拡張機能
+keywords: ターゲット拡張機能；ターゲット；ターゲット v2；ターゲット v2 拡張機能
 title: Adobe Target v2 拡張機能
-description: Adobe Target v2 拡張機能は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Adobe Target v2 拡張機能は、Adobe Experience Platformのパーソナライズ機能の提供先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: d1d5ebbc-9093-42b0-8d88-58779df3ec89
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 76%
+source-wordcount: '483'
+ht-degree: 69%
 
 ---
 
@@ -38,18 +38,18 @@ Adobe Target v2 拡張機能をインストールするには：
 
 宛先をクリックしてハイライトしてから、右側のパネルで「**[!UICONTROL 設定]**」を選択します。**[!UICONTROL 設定]**&#x200B;コントロールがグレー表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
 
-拡張機能をインストールするプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。次のドキュメントを参照してください： [プロパティ](../../../tags/ui/administration/companies-and-properties.md#properties-page) 詳しくは、タグのドキュメントを参照してください。
+拡張機能をインストールするプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。詳しくは、タグドキュメントの [ プロパティ ](../../../tags/ui/administration/companies-and-properties.md#properties-page) に関するドキュメントを参照してください。
 
 このワークフローでは、インストールを完了する手順について説明します。
 
-拡張機能の設定オプションについて詳しくは、 [Adobe Target v2 拡張機能ページ](../../../tags/extensions/client/target-v2/overview.md) （タグドキュメント）を参照してください。
+拡張機能の設定オプションについて詳しくは、タグドキュメントの [Adobe Target v2 拡張機能のページ ](../../../tags/extensions/client/target-v2/overview.md) を参照してください。
 
-拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、 [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
+拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、[ 新しい拡張機能の追加 ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) のガイドを参照してください。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
 
-拡張機能をインストールしたら、ルールの設定を開始できます。データ収集 UI では、特定の状況でのみ拡張機能の宛先にイベントデータを送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、「 [ルール](../../../tags/ui/managing-resources/rules.md) （タグドキュメント）を参照してください。
+拡張機能をインストールしたら、ルールの設定を開始できます。 データ収集 UI では、特定の状況でのみ拡張機能の宛先にイベントデータを送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、タグドキュメントの [ ルール ](../../../tags/ui/managing-resources/rules.md) の概要を参照してください。
 
 ## 拡張機能の設定、アップグレード、削除 {#configure-upgrade-delete}
 
@@ -57,6 +57,6 @@ Adobe Target v2 拡張機能をインストールするには：
 
 >[!TIP]
 >
->拡張機能がいずれかのプロパティに既にインストールされている場合、 UI ではその拡張機能に引き続き「**[!UICONTROL インストール]**」が表示されます。[拡張機能のインストール](#install-extension)の説明に従ってインストールワークフローを開始し、拡張機能を設定または削除します。
+>拡張機能がいずれかのプロパティに既にインストールされている場合、UI ではその拡張機能に引き続き **[!UICONTROL インストール]** が表示されます。 [拡張機能のインストール](#install-extension)の説明に従ってインストールワークフローを開始し、拡張機能を設定または削除します。
 
 拡張機能をアップグレードするには、[拡張機能のアップグレードプロセス](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) （タグドキュメント）のガイドを参照してください。

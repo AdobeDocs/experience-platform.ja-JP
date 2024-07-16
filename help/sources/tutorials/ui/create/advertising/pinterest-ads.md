@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
-title: UI でのPinterest Ads ソース接続の作成
+title: UI でのPinterest Ads ソースコネクタの作成
 description: Adobe Experience Platform UI を使用してPinterest Ads ソース接続を作成する方法を説明します。
 badge: ベータ版
 hide: true
@@ -8,8 +8,8 @@ hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 29%
+source-wordcount: '815'
+ht-degree: 27%
 
 ---
 
@@ -17,134 +17,134 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->[!DNL Pinterest Ads] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Pinterest Ads] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-このチュートリアルでは、 [!DNL Pinterest Ads] Adobe Experience Platformユーザーインターフェイスを使用したソースコネクタ
+このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Pinterest Ads] ソースコネクタを作成する手順を説明します。
 
 ## はじめに {#getting-started}
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):Experience Platform が顧客体験データを整理する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]  システム ](../../../../../xdm/home.md):Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 ## 前提条件 {#prerequisites}
 
-接続するには [!DNL Pinterest Ads] をExperience Platformするには、次の接続プロパティの値を指定する必要があります。
+[!DNL Pinterest Ads] をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
-* The [!DNL Pinterest] アクセストークン。
-* The [!DNL Pinterest] 広告アカウント ID。
-* 次のいずれか [!DNL Pinterest] 必要に応じて、キャンペーン、広告グループまたは広告 ID。
+* [!DNL Pinterest] アクセストークン。
+* [!DNL Pinterest] 広告アカウント ID。
+* 必要 [!DNL Pinterest] 応じて、キャンペーン、広告グループまたは広告 ID のいずれか
 
-これらの接続プロパティの詳細については、 [[!DNL Pinterest Ads] 概要](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
+これらの接続プロパティについて詳しくは、[[!DNL Pinterest Ads]  概要 ](../../../../connectors/advertising/pinterest-ads.md#prerequisites) を参照してください。
 
 ### Platform スキーマの作成 {#create-platform-schema}
 
-また、最初に、 [!DNL Pinterst Ads] ソース。 に関するチュートリアルをお読みください。 [Platform スキーマの作成](../../../../../xdm/schema/composition.md) スキーマの作成方法に関する包括的な手順を参照してください。
+また、[!DNL Pinterst Ads] ソースに使用する Platform スキーマを最初に作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-![pinterest Ads のサンプルの Platform スキーマ](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![Pinterest広告の Platform スキーマの例 ](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
-でサポートされているフィールドのリスト [!DNL Pinterest] キャンペーン、広告グループ、広告の API( [[!DNL Pinterest] フィールド](#pinterest-fields) 」セクションに入力します。
+[!DNL Pinterest] キャンペーン、広告グループおよび広告 API でサポートされるフィールドのリストについては、[[!DNL Pinterest]  フィールド ](#pinterest-fields) の節を参照してください。
 
 ## [!DNL Pinterest Ads] アカウントの接続 {#connect-account}
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL Sources]**」を選択し、[!UICONTROL Sources ]のワークスペースにアクセスします。The [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL Sources]**」を選択し、[!UICONTROL Sources ]のワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 *広告* カテゴリ、選択 **[!UICONTROL Pinterest Ads]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+*Advertising* カテゴリで、「**[!UICONTROL Pinterest広告]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![Experience Platform時のソースカタログ。](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
+![Experience Platformのソースカタログ ](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
-The **[!UICONTROL pinterest Ads アカウントの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Pinterest Ads アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント {#existing-account}
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL Pinterest Ads] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ソースワークフローの既存のアカウントステップ。](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
+![ ソースワークフローの既存のアカウントステップ ](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
 
 ### 新規アカウント {#new-account}
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の資格情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ソースワークフローの新しいアカウントステップ。](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
+![ ソースワークフローの新しいアカウント手順。](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
 
 
 
 ## データの選択 {#select-data}
 
-The **[!UICONTROL データを選択]** の手順が表示され、API に渡され、Platform にデータを取り込むための情報を入力するためのインターフェイスが提供されます。
+**[!UICONTROL データを選択]** 手順が表示され、Platform に取り込むデータを API に渡す情報を入力するためのインターフェイスが表示されます。
 
 | フィールド | 説明 |
 | --- | --- |
-| [!UICONTROL ad_account_id] | お使いの [!DNL Pinterest Ads] 広告アカウント ID。 詳しくは、 [[!DNL Pinterest] Ads Manager での ID の検索に関するガイド](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) ご指導が必要な場合は、 |
-| [!UICONTROL object_type] | 次のいずれかを選択 **campaigns**, **広告グループ** または **広告** どちらかに応じて [!DNL Pinterest] 情報の取得元の Analytics API。 |
-| [!UICONTROL object_ids] | 選択したオブジェクトの ID。 次に移動： [!DNL Pinterest] ～のページ **Pinterest Business Hub** > **広告アカウントの概要** > **キャンペーン** / **広告グループ** / **広告** とで、それぞれの名前のすぐ下に記載されている必要な ID をコピーします。 |
+| [!UICONTROL ad_account_id] | [!DNL Pinterest Ads] 広告アカウント ID。 ガイダンスが必要な場合は、[[!DNL Pinterest]  広告マネージャーでの ID の検索に関するガイド ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) を参照してください。 |
+| [!UICONTROL object_type] | 情報を取得する [!DNL Pinterest] Analytics API の種類に応じて、**campaigns**、**広告グループ** または **広告** のいずれかを選択します。 |
+| [!UICONTROL object_ids] | 選択したオブジェクトの ID。 **Pinterest Business Hub**/**広告アカウント概要**/**キャンペーン**/**広告グループ**/**広告** の [!DNL Pinterest] ページに移動し、それぞれの名前の下に記載されている必須の ID をコピーします。 |
 
 >[!TIP]
 >
->複数の `object_ids` コンマ区切り値を渡す。 1 つのリクエストで渡す ID の最大数は 100 です。 間違った値が渡されると、Platform は次のメッセージを表示します。 `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>コンマ区切りの値を渡すことで、複数の `object_ids` を指定できます。 1 回のリクエストで渡せる ID の最大数は 100 です。 間違った値が渡された場合、Platform は次のメッセージを表示します。`The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
-値を指定した後、 **[!UICONTROL 選択]**. 指定した値が有効な場合は、インターフェイスの右側に、プレビューデータが入力されます。
+値を指定したら、「**[!UICONTROL 選択]**」を選択します。 指定した値が有効な場合、インターフェイスの右側の部分（プレビューデータ）が入力されます。
 
-![ソースワークフローのデータ選択ステップ。](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png)
+![ ソースワークフローのデータを選択ステップ ](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png)
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Pinterest Ads] アカウントとの接続を確立しました。次のチュートリアルに進み、 [広告データを Platform に取り込むためのデータフローの設定](../../dataflow/advertising.md).
+このチュートリアルでは、[!DNL Pinterest Ads] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 広告データを Platform に取り込むためのデータフローの設定 ](../../dataflow/advertising.md) を行いましょう。
 
 ## その他のリソース {#additional-resources}
 
-以下の節では、 [!DNL Pinterest Ads] ソース。
+以下の節では、[!DNL Pinterest Ads] ソースを使用する際に参照できるその他のリソースを示します。
 
 ## スケジュール設定 {#scheduling}
 
-スケジュール設定時に [!DNL Pinterest Ads] データフローを取り込むには、次の頻度設定と間隔設定のいずれかを選択する必要があります。
+[!DNL Pinterest Ads] データフローを取り込み用にスケジュールする場合、次の頻度および間隔の設定のいずれかを選択する必要があります。
 
 | 頻度 | 間隔 |
 | --- | --- |
 | `Day` | 1 |
 | `Hour` | 24 |
 
-スケジュールについて詳しくは、 [!DNL Pinterest Ads] データフロー、 [の guardrails セクション [!DNL Pinterest Ads] 概要](../../../../connectors/advertising/pinterest-ads.md#guardrails).
+[!DNL Pinterest Ads] データフローのスケジュール設定について詳しくは、[ 概要のガードレールの節  [!DNL Pinterest Ads]  を参照してください ](../../../../connectors/advertising/pinterest-ads.md#guardrails)。
 
-スケジュールの値を指定したら、「 」を選択します。 **[!UICONTROL 次へ]**.
+スケジュールの値を指定したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのスケジュール設定手順。](../../../../images/tutorials/create/advertising/pinterest-ads/scheduling.png)
+![ ソースワークフローのスケジュール手順 ](../../../../images/tutorials/create/advertising/pinterest-ads/scheduling.png)
 
 ### 検証 {#validation}
 
-ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL Pinterest Ads] データを取り込む場合は、次の手順に従います。
+ソースを正しく設定し、データが取り込まれてい [!DNL Pinterest Ads] ことを検証するには、次の手順に従います。
 
-Platform UI で、「 」を選択します。 **[!UICONTROL データフローを表示]** の横に [!DNL Pinterest Ads] カタログページのカードメニュー 次を選択できます。 [!UICONTROL データセットをプレビュー] をクリックして、取り込まれたデータを確認します。
+Platform UI で、カタログページの [!DNL Pinterest Ads] カードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 その後、「[!UICONTROL  データセットをプレビュー ]」を選択して、取り込まれたデータを確認できます。
 
-![pinterest Ads プレビューデータセットの Platform UI スクリーンショット。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![Pinterest Ads プレビューデータセットの Platform UI のスクリーンショット。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
-データを、 [!DNL Pinterest] UI
+[!DNL Pinterest] UI に表示されるカウントに対してデータを検証できます
 
 >[!BEGINTABS]
 
 >[!TAB キャンペーン]
 
-![Pinterest Campaigns ページ](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png)
+![Pinterestキャンペーンページ。](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png)
 
->[!TAB 広告グループ]
+>[!TAB  広告グループ ]
 
-![Pinterest Ad Groups ページ。](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
+![Pinterest広告グループページ。](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
 
 >[!TAB 広告]
 
-![Pinterest Ads ページ。](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ads.png)
+![Pinterest広告ページ。](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ads.png)
 
 >[!ENDTABS]
 
 
 ### [!DNL Pinterest] フィールド {#pinterest-fields}
 
-でサポートされるフィールド [!DNL Pinterest] キャンペーン、広告グループ、広告 API は以下のとおりです。
+[!DNL Pinterest] キャンペーン、広告グループおよび広告 API でサポートされているフィールドは次のとおりです。
 
 +++ ペイロードを表示
 

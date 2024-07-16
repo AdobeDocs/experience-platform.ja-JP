@@ -13,11 +13,11 @@ ht-degree: 5%
 
 # クエリサービスの SQL 構文
 
-標準の ANSI SQL を使用して、 `SELECT` Adobe Experience Platform クエリサービスのステートメントおよびその他の制限付きコマンド。 このドキュメントでは、でサポートされる SQL 構文について説明します [!DNL Query Service].
+Adobe Experience Platform クエリサービスの `SELECT` ステートメントやその他の制限付きコマンドには、標準の ANSI SQL を使用できます。 このドキュメントでは、[!DNL Query Service] でサポートされる SQL 構文について説明します。
 
 ## クエリを選択 {#select-queries}
 
-以下の構文は、 `SELECT` でサポートされるクエリ [!DNL Query Service]:
+次の構文は、[!DNL Query Service] でサポートされる `SELECT` クエリを定義します。
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -95,7 +95,7 @@ GROUPING SETS ( grouping_element [, ...] )
 
 ### SNAPSHOT 句
 
-この句は、スナップショット ID に基づいて、テーブルのデータを増分的に読み取るために使用できます。 スナップショット ID は、データが書き込まれるたびにデータレイクテーブルに適用される、Long タイプの番号で表されるチェックポイントマーカーです。 この `SNAPSHOT` 句は、次に使用されるテーブル関係にアタッチします。
+この句は、スナップショット ID に基づいて、テーブルのデータを増分的に読み取るために使用できます。 スナップショット ID は、データが書き込まれるたびにデータレイクテーブルに適用される、Long タイプの番号で表されるチェックポイントマーカーです。 `SNAPSHOT` 句は、次に使用するテーブル関係にアタッチします。
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -128,24 +128,24 @@ SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND 
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | `SINCE start_snapshot_id` | 指定されたスナップショット ID からデータを読み取ります（排他的）。 |
 | `AS OF end_snapshot_id` | 指定されたスナップショット ID （両端を含む）のデータをそのまま読み取ります。 |
-| `BETWEEN start_snapshot_id AND end_snapshot_id` | 指定された開始 ID と終了 ID の間でデータを読み取ります。 これは `start_snapshot_id` 次を含む `end_snapshot_id`. |
-| `BETWEEN HEAD AND start_snapshot_id` | 最初（最初のスナップショットの前）から、指定された開始スナップショット ID （この値を含む）までデータを読み取ります。 これは、の行のみを返すことに注意してください。 `start_snapshot_id`. |
-| `BETWEEN end_snapshot_id AND TAIL` | 指定された直後のデータを読み取ります `end-snapshot_id` （スナップショット ID を除く）データセットの最後まで。 これは、次の場合を意味します `end_snapshot_id` はデータセット内の最後のスナップショットです。この最後のスナップショットを超えるスナップショットがないので、クエリはゼロ行を返します。 |
-| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | 指定されたスナップショット ID からデータを読み取ります `table_to_be_queried` から取得したデータと結合されます。 `table_to_be_joined` 当時のように `your_chosen_snapshot_id`. 結合は、結合する 2 つのテーブルの ID 列の一致する ID に基づきます。 |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | 指定された開始 ID と終了 ID の間でデータを読み取ります。 `start_snapshot_id` を除き、`end_snapshot_id` を含みます。 |
+| `BETWEEN HEAD AND start_snapshot_id` | 最初（最初のスナップショットの前）から、指定された開始スナップショット ID （この値を含む）までデータを読み取ります。 これは、`start_snapshot_id` の行のみを返すことに注意してください。 |
+| `BETWEEN end_snapshot_id AND TAIL` | 指定された `end-snapshot_id` の直後からデータセットの最後（スナップショット ID を除く）までデータを読み取ります。 つまり、データセット内の最後のスナップショットが `end_snapshot_id` の場合、その最後のスナップショットを超えるスナップショットはないので、クエリはゼロ行を返します。 |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | 指定されたスナップショット ID から始まるデータを `table_to_be_queried` から読み取り、`your_chosen_snapshot_id` の時点の `table_to_be_joined` からのデータと結合します。 結合は、結合する 2 つのテーブルの ID 列の一致する ID に基づきます。 |
 
-A `SNAPSHOT` 句は、テーブルまたはテーブルの別名と連携しますが、サブクエリまたはビューの上では機能しません。 A `SNAPSHOT` 句は次の場所で機能 `SELECT` テーブルに対するクエリは適用できます。
+`SNAPSHOT` 句は、テーブルまたはテーブルの別名と一緒に使用できますが、サブクエリまたはビューの上には使用できません。 `SNAPSHOT` 句は、テーブルの `SELECT` クエリを適用できる場所で機能します。
 
-また、次を使用できます `HEAD` および `TAIL` スナップショット句の特別なオフセット値。 使用 `HEAD` は最初のスナップショットの前のオフセットを指し、は `TAIL` 最後のスナップショット後のオフセットを参照します。
+また、スナップショット句の特別なオフセット値として `HEAD` と `TAIL` を使用することもできます。 `HEAD` を使用する場合は、最初のスナップショットの前のオフセットを参照し、`TAIL` を使用する場合は、最後のスナップショットの後のオフセットを参照します。
 
 >[!NOTE]
 >
->2 つのスナップショット ID 間でクエリを実行している場合、「開始スナップショット」の有効期限が切れていると、オプションのフォールバック動作フラグ （`resolve_fallback_snapshot_on_failure`）が設定されています。
+>2 つのスナップショット ID 間でクエリを実行する場合、「開始スナップショット」の有効期限が切れ、オプションのフォールバック動作フラグ （`resolve_fallback_snapshot_on_failure`）が設定されていると、次の 2 つのシナリオが発生する可能性があります。
 >
->- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは使用可能な最も古いスナップショットを選択し、それを開始スナップショットとして設定し、使用可能な最も古いスナップショットと指定された終了スナップショットの間のデータを返します。 このデータは **包括的** 最も早く使用可能なスナップショット。
+>- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは使用可能な最も古いスナップショットを選択し、それを開始スナップショットとして設定し、使用可能な最も古いスナップショットと指定された終了スナップショットの間のデータを返します。 このデータには、使用可能な最も古いスナップショットの **含む** が含まれます。
 
 ### WHERE 句
 
-デフォルトでは、によって生成された一致 `WHERE` a の条項 `SELECT` クエリでは大文字と小文字が区別されます。 一致で大文字と小文字を区別しないようにするには、キーワード `ILIKE` の代わりに `LIKE`.
+デフォルトでは、`SELECT` クエリの `WHERE` 句で生成される一致は、大文字と小文字が区別されます。 大文字と小文字を区別せずに一致させる場合は、`LIKE` の代わりにキーワード `ILIKE` を使用します。
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -171,7 +171,7 @@ WHERE CustomerName ILIKE 'a%';
 
 ### 結合
 
-A `SELECT` 結合を使用するクエリには、次の構文があります。
+結合を使用する `SELECT` クエリの構文は次のとおりです。
 
 ```sql
 SELECT statement
@@ -182,7 +182,7 @@ ON join condition
 
 ### UNION、INTERSECT、EXCEPT
 
-この `UNION`, `INTERSECT`、および `EXCEPT` 句は、複数のテーブルの行を結合したり、テーブルの行と似た行を除外したりするために使用します。
+`UNION`、`INTERSECT`、および `EXCEPT` 句は、2 つ以上のテーブルの like 行を組み合わせたり、除外したりするために使用します。
 
 ```sql
 SELECT statement 1
@@ -192,7 +192,7 @@ SELECT statement 2
 
 ### CREATE TABLE AS SELECT {#create-table-as-select}
 
-以下の構文は、 `CREATE TABLE AS SELECT` （CTAS）クエリ：
+次の構文は、`CREATE TABLE AS SELECT` （CTAS）クエリを定義します。
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
@@ -202,8 +202,8 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | ----- | ----- |
 | `schema` | XDM スキーマのタイトル。 この句は、CTAS クエリで作成された新しいデータセットに既存の XDM スキーマを使用する場合にのみ使用します。 |
 | `rowvalidation` | （オプション）新しく作成されたデータセットに取り込まれるすべての新しいバッチの行レベル検証が必要かどうかを指定します。 デフォルト値は `true` です。 |
-| `label` | CTAS クエリを使用してデータセットを作成する場合、このラベルにの値を指定します。 `profile` をクリックして、プロファイルに対してデータセットに有効なラベルを付けます。 つまり、データセットは、作成時に自動的にプロファイル用にマークされます。 の使用について詳しくは、派生属性拡張ドキュメントを参照してください `label`. |
-| `select_query` | A `SELECT` ステートメント。 の構文 `SELECT` クエリはにあります。 [クエリ セクションの選択](#select-queries). |
+| `label` | CTAS クエリを使用してデータセットを作成する場合、このラベルを値 `profile` と共に使用して、プロファイルに対して有効であるとしてデータセットにラベルを付けます。 つまり、データセットは、作成時に自動的にプロファイル用にマークされます。 `label` の使用について詳しくは、派生属性拡張ドキュメントを参照してください。 |
+| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries) にあります。 |
 
 **例**
 
@@ -217,11 +217,11 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->この `SELECT` ステートメントには、次のような集計関数のエイリアスが必要です： `COUNT`, `SUM`, `MIN`など。 また、 `SELECT` ステートメントは、括弧（）の付いたまたは付けなしで指定できます。 以下を指定できます。 `SNAPSHOT` 増分削除をターゲットテーブルに読み込むための句。
+>`SELECT` ステートメントには、`COUNT`、`SUM`、`MIN` などの集計関数のエイリアスが必要です。 また、`SELECT` ステートメントに括弧（）を付ける場合と付けない場合があります。 `SNAPSHOT` 句を指定すると、増分差分をターゲットテーブルに読み込むことができます。
 
 ## INSERT INTO
 
-この `INSERT INTO` コマンドは次のように定義されます。
+`INSERT INTO` コマンドは、次のように定義されます。
 
 ```sql
 INSERT INTO table_name select_query
@@ -230,7 +230,7 @@ INSERT INTO table_name select_query
 | パラメーター | 説明 |
 | ----- | ----- |
 | `table_name` | クエリを挿入するテーブルの名前。 |
-| `select_query` | A `SELECT` ステートメント。 の構文 `SELECT` クエリはにあります。 [クエリ セクションの選択](#select-queries). |
+| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries) にあります。 |
 
 **例**
 
@@ -246,11 +246,11 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
->実行 **ではない** を囲む `SELECT` カッコ（）内のステートメント。 また、の結果のスキーマ `SELECT` ステートメントは、 `INSERT INTO` ステートメント。 以下を指定できます。 `SNAPSHOT` 増分削除をターゲットテーブルに読み込むための句。
+>`SELECT` 文 **丸カッコ（）** 囲まないでください。 また、`SELECT` ステートメントの結果のスキーマは、`INSERT INTO` ステートメントで定義されたテーブルのスキーマと一致する必要があります。 `SNAPSHOT` 句を指定すると、増分差分をターゲットテーブルに読み込むことができます。
 
-実際の XDM スキーマのほとんどのフィールドはルートレベルで見つからず、SQL ではドット表記の使用が許可されていません。 ネストされたフィールドを使用して現実的な結果を得るには、の各フィールドをマッピングする必要があります `INSERT INTO` パス。
+実際の XDM スキーマのほとんどのフィールドはルートレベルで見つからず、SQL ではドット表記の使用が許可されていません。 ネストされたフィールドを使用して現実的な結果を得るには、`INSERT INTO` パスの各フィールドをマッピングする必要があります。
 
-終了 `INSERT INTO` ネストされたパスでは、次の構文を使用します。
+ネストされたパスを `INSERT INTO` すには、次の構文を使用します。
 
 ```sql
 INSERT INTO [dataset]
@@ -268,7 +268,7 @@ INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCi
 
 ## DROP TABLE
 
-この `DROP TABLE` コマンドは、既存のテーブルを削除し、そのテーブルに関連付けられているディレクトリをファイルシステムから削除します（外部テーブルでない場合）。 テーブルが存在しない場合、例外が発生します。
+`DROP TABLE` コマンドは、既存のテーブルを削除し、そのテーブルに関連付けられているディレクトリが外部テーブルでない場合は、ファイルシステムから削除します。 テーブルが存在しない場合、例外が発生します。
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -276,11 +276,11 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `IF EXISTS` | これを指定した場合、テーブルに例外が発生しても例外はスローされません **ではない** 存在する。 |
+| `IF EXISTS` | これを指定した場合、テーブルが存在しない **場合でも例外はスローされ** せん。 |
 
 ## データベースを作成
 
-この `CREATE DATABASE` コマンドは、Azure Data Lake Storage （ADLS）データベースを作成します。
+`CREATE DATABASE` コマンドは、Azure Data Lake Storage （ADLS）データベースを作成します。
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -288,7 +288,7 @@ CREATE DATABASE [IF NOT EXISTS] db_name
 
 ## データベースの削除
 
-この `DROP DATABASE` コマンドは、インスタンスからデータベースを削除します。
+`DROP DATABASE` コマンドは、インスタンスからデータベースを削除します。
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -296,11 +296,11 @@ DROP DATABASE [IF EXISTS] db_name
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `IF EXISTS` | これを指定した場合、データベースで例外が発生しても例外は発生しません **ではない** 存在する。 |
+| `IF EXISTS` | これを指定した場合、データベースが存在しない **場合は例外がスローされ** せん。 |
 
 ## スキーマをドロップ
 
-この `DROP SCHEMA` コマンドは、既存のスキーマを削除します。
+`DROP SCHEMA` コマンドは、既存のスキーマを削除します。
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -308,15 +308,15 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `IF EXISTS` | このパラメーターが指定され、スキーマで指定されている場合 **ではない** 存在する場合、例外はスローされません。 |
-| `RESTRICT` | モードのデフォルト値。 指定した場合、スキーマは該当する場合にのみ削除されます **ではない** すべてのテーブルが含まれます。 |
+| `IF EXISTS` | このパラメーターを指定し、スキーマが存在し **い** 場合、例外はスローされません。 |
+| `RESTRICT` | モードのデフォルト値。 指定した場合、スキーマにテーブルが含まれていない **場合** のみ削除されます。 |
 | `CASCADE` | 指定した場合、スキーマは、スキーマに存在するすべてのテーブルと共にドロップされます。 |
 
 ## CREATE VIEW {#create-view}
 
-SQL ビューは、SQL 文の結果セットに基づく仮想テーブルです。 を使用したビューの作成 `CREATE VIEW` ステートメントと名前を付けます。 その後、その名前を使用して、クエリの結果を返すことができます。 これにより、複雑なクエリの再利用が容易になります。
+SQL ビューは、SQL 文の結果セットに基づく仮想テーブルです。 `CREATE VIEW` ステートメントでビューを作成し、名前を付けます。 その後、その名前を使用して、クエリの結果を返すことができます。 これにより、複雑なクエリの再利用が容易になります。
 
-以下の構文は、 `CREATE VIEW` データセットのクエリ。 このデータセットは、ADLS または高速ストアデータセットにすることができます。
+次の構文は、データセットの `CREATE VIEW` クエリを定義します。 このデータセットは、ADLS または高速ストアデータセットにすることができます。
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -325,7 +325,7 @@ CREATE VIEW view_name AS select_query
 | パラメーター | 説明 |
 | ------ | ------ |
 | `view_name` | 作成するビューの名前。 |
-| `select_query` | A `SELECT` ステートメント。 の構文 `SELECT` クエリはにあります。 [クエリ セクションの選択](#select-queries). |
+| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries) にあります。 |
 
 **例**
 
@@ -335,7 +335,7 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-以下の構文は、 `CREATE VIEW` データベースおよびスキーマのコンテキストでビューを作成するクエリ。
+次の構文は、データベースとスキーマのコンテキストでビューを作成する `CREATE VIEW` クエリを定義します。
 
 **例**
 
@@ -349,7 +349,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | `db_name` | データベースの名前。 |
 | `schema_name` | スキーマの名前。 |
 | `view_name` | 作成するビューの名前。 |
-| `select_query` | A `SELECT` ステートメント。 の構文 `SELECT` クエリはにあります。 [クエリ セクションの選択](#select-queries). |
+| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries) にあります。 |
 
 **例**
 
@@ -377,7 +377,7 @@ SHOW VIEWS;
 
 ## DROP VIEW
 
-以下の構文は、 `DROP VIEW` クエリ :
+次の構文は、`DROP VIEW` クエリを定義します。
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -385,7 +385,7 @@ DROP VIEW [IF EXISTS] view_name
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `IF EXISTS` | これを指定した場合、ビューで例外が発生することはありません **ではない** 存在する。 |
+| `IF EXISTS` | これを指定した場合、ビューが存在しない **場合でも例外はスローされ** せん。 |
 | `view_name` | 削除するビューの名前。 |
 
 **例**
@@ -452,7 +452,7 @@ END IF
 
 **例**
 
-次の例は、を実行します `SELECT 200;`.
+次の例では、`SELECT 200;` を実行します。
 
 ```sql
 $$BEGIN
@@ -471,7 +471,7 @@ $$BEGIN
  END$$;
 ```
 
-この構造は以下で使用できます。 `raise_error();` カスタムエラーメッセージを返します。 以下に示すコードブロックは、「カスタムエラーメッセージ」で匿名ブロックを終了します。
+この構造を `raise_error();` で使用すると、カスタムエラーメッセージを返すことができます。 以下に示すコードブロックは、「カスタムエラーメッセージ」で匿名ブロックを終了します。
 
 **例**
 
@@ -537,17 +537,17 @@ EXCEPTION WHEN OTHER THEN
 
 ### JSON に自動 {#auto-to-json}
 
-クエリサービスは、オプションのセッションレベル設定をサポートし、インタラクティブ SELECT クエリから最上位の複雑なフィールドを JSON 文字列として返します。 この `auto_to_json` を設定すると、複雑なフィールドのデータを JSON として返し、標準のライブラリを使用して JSON オブジェクトに解析できます。
+クエリサービスは、オプションのセッションレベル設定をサポートし、インタラクティブ SELECT クエリから最上位の複雑なフィールドを JSON 文字列として返します。 `auto_to_json` 設定を使用すると、複雑なフィールドのデータを JSON として返し、標準のライブラリを使用して JSON オブジェクトに解析できます。
 
-機能フラグの設定 `auto_to_json` 複雑なフィールドを含む SELECT クエリを実行する前に、true に設定します。
+複雑なフィールドを含む SELECT クエリを実行する前に、機能フラグ `auto_to_json` を true に設定します。
 
 ```sql
 set auto_to_json=true; 
 ```
 
-#### を設定する前に、 `auto_to_json` フラグ
+#### `auto_to_json` フラグの設定前
 
-次の表は、前のクエリ結果の例を示しています `auto_to_json` の設定が適用されます。 両方のシナリオで、複雑なフィールドを持つテーブルをターゲットとする同じ SELECT クエリ（以下に示す）が使用されました。
+次の表は、`auto_to_json` 設定が適用される前のクエリ結果の例を示しています。 両方のシナリオで、複雑なフィールドを持つテーブルをターゲットとする同じ SELECT クエリ（以下に示す）が使用されました。
 
 ```sql
 SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
@@ -563,9 +563,9 @@ SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 (2 rows)  
 ```
 
-#### 設定後： `auto_to_json` フラグ
+#### `auto_to_json` フラグの設定後
 
-次の表に、結果の違いを示します `auto_to_json` 結果のデータセットに対する設定は、です。 両方のシナリオで同じ SELECT クエリが使用されました。
+次の表に、結果のデータセットに対する `auto_to_json` 設定の結果の違いを示します。 両方のシナリオで同じ SELECT クエリが使用されました。
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
@@ -577,9 +577,9 @@ SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 
 ### 失敗時のフォールバックスナップショットの解決 {#resolve-fallback-snapshot-on-failure}
 
-この `resolve_fallback_snapshot_on_failure` オプションを使用すると、期限切れのスナップショット ID の問題を解決できます。 スナップショットメタデータは 2 日後に有効期限が切れます。期限切れのスナップショットは、スクリプトのロジックを無効にする可能性があります。 これは、匿名ブロックを使用する場合に問題となる可能性があります。
+`resolve_fallback_snapshot_on_failure` オプションは、期限切れのスナップショット ID の問題を解決するために使用します。 スナップショットメタデータは 2 日後に有効期限が切れます。期限切れのスナップショットは、スクリプトのロジックを無効にする可能性があります。 これは、匿名ブロックを使用する場合に問題となる可能性があります。
 
-を `resolve_fallback_snapshot_on_failure` スナップショットを以前のスナップショット ID で上書きする場合は、true に設定します。
+スナップショットを以前のスナップショット ID で上書きするには、`resolve_fallback_snapshot_on_failure` オプションを true に設定します。
 
 ```sql
 SET resolve_fallback_snapshot_on_failure=true;
@@ -629,15 +629,15 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-を参照してください。 [データアセットの論理的編成](../best-practices/organize-data-assets.md) クエリサービスのベストプラクティスについて詳しく説明するガイドです。
+クエリサービスのベストプラクティスについて詳しくは、[ データアセットの論理的構成 ](../best-practices/organize-data-assets.md) ガイドを参照してください。
 
 ## テーブルが存在します
 
-この `table_exists` SQL コマンドは、テーブルが現在システム内に存在するかどうかを確認するために使用します。 このコマンドはブール値を返します。 `true` テーブルの場合 **実行** 存在する、および `false` テーブルに表示される場合 **ではない** 存在する。
+`table_exists` SQL コマンドは、テーブルが現在システムに存在するかどうかを確認するために使用します。 このコマンドは、ブール値を返します。テーブル **が存在** する場合は `true`、テーブル **が存在しない** 場合は `false` です。
 
-文を実行する前にテーブルが存在するかどうかを検証すると、次のようになります `table_exists` の機能により、両方をカバーするように匿名ブロックを書き込むプロセスが簡素化されます `CREATE` および `INSERT INTO` ユースケース。
+文を実行する前にテーブルが存在するかどうかを検証することで、`table_exists` 機能により、`CREATE` と `INSERT INTO` のユースケースの両方に対応する匿名ブロックを記述するプロセスが簡略化されます。
 
-次の構文は、 `table_exists` コマンド：
+次の構文は、`table_exists` コマンドを定義します。
 
 ```SQL
 $$
@@ -665,15 +665,15 @@ END $$;
 
 ## インライン {#inline}
 
-この `inline` 関数は、構造体の配列の要素を分離し、その値をテーブルに生成する。 以下にのみ配置できます `SELECT` リストまたは `LATERAL VIEW`.
+`inline` 関数は、構造体の配列の要素を分割し、値をテーブルに生成します。 `SELECT` リストまたは `LATERAL VIEW` にのみ配置できます。
 
-この `inline` 関数 **できません** 他のジェネレータ機能がある選択リストに配置します。
+`inline` 関数 **使用できません** は、他のジェネレータ関数がある選択リストに配置できます。
 
-デフォルトでは、生成される列の名前は「col1」、「col2」などです。 式が `NULL` その後、行は生成されません。
+デフォルトでは、生成される列の名前は「col1」、「col2」などです。 式が `NULL` の場合、行は生成されません。
 
 >[!TIP]
 >
->列名は、を使用して変更できます `RENAME` コマンド。
+>列名は、`RENAME` コマンドを使用して名前を変更できます。
 
 **例**
 
@@ -688,7 +688,7 @@ END $$;
 2  b Spark SQL
 ```
 
-この 2 つ目の例では、の概念と適用をさらに示しています `inline` 関数。 この例のデータモデルを次の画像に示します。
+この 2 番目の例では、`inline` 関数の概念と適用をさらに示しています。 この例のデータモデルを次の画像に示します。
 
 ![productListItems のスキーマ図。](../images/sql/productListItems.png)
 
@@ -698,7 +698,7 @@ END $$;
 select inline(productListItems) from source_dataset limit 10;
 ```
 
-から取得された値 `source_dataset` を使用して、ターゲットテーブルにデータを入力します。
+`source_dataset` から取得された値は、ターゲットテーブルの入力に使用されます。
 
 | SKU | _experience | 数量 | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
@@ -713,7 +713,7 @@ select inline(productListItems) from source_dataset limit 10;
 
 ### SET
 
-この `SET` コマンドは、プロパティを設定し、既存のプロパティの値を返すか、既存のプロパティをすべて一覧表示します。 既存プロパティのキーに値が指定された場合、古い値が上書きされます。
+`SET` コマンドは、プロパティを設定し、既存のプロパティの値を返すか、既存のすべてのプロパティを一覧表示します。 既存プロパティのキーに値が指定された場合、古い値が上書きされます。
 
 ```sql
 SET property_key = property_value
@@ -724,19 +724,19 @@ SET property_key = property_value
 | `property_key` | リストまたは変更するプロパティの名前。 |
 | `property_value` | プロパティに設定する値。 |
 
-設定の値を返すには、を使用します `SET [property key]` 指定しない `property_value`.
+任意の設定の値を返すには、`property_value` を付けずに `SET [property key]` を使用します。
 
 ## [!DNL PostgreSQL] コマンド
 
-以下のサブセクションでは、について説明します [!DNL PostgreSQL] クエリサービスでサポートされているコマンド。
+以下のサブセクションでは、クエリサービスでサポートされている [!DNL PostgreSQL] コマンドについて説明します。
 
 ### 分析テーブル {#analyze-table}
 
-この `ANALYZE TABLE` コマンドは、指定されたテーブルに対して分布分析および統計計算を実行します。 の使用 `ANALYZE TABLE` データセットがに保存されているかどうかによって異なります [高速化ストア](#compute-statistics-accelerated-store) または [データレイク](#compute-statistics-data-lake). 使用方法について詳しくは、それぞれの節を参照してください。
+`ANALYZE TABLE` コマンドは、指定されたテーブルに対して分布分析および統計計算を実行します。 `ANALYZE TABLE` の使用方法は、データセットが [ 高速化ストア ](#compute-statistics-data-lake) と [ データレイク ](#compute-statistics-accelerated-store) のどちらに保存されているかによって異なります。 使用方法について詳しくは、それぞれの節を参照してください。
 
 #### 高速化ストアの統計を計算 {#compute-statistics-accelerated-store}
 
-この `ANALYZE TABLE` コマンドは、高速化ストアに関するテーブルの統計を計算します。 統計は、高速化ストア上の特定のテーブルに対して実行された CTAS または ITAS クエリに基づいて計算されます。
+`ANALYZE TABLE` コマンドは、高速化ストア上のテーブルの統計を計算します。 統計は、高速化ストア上の特定のテーブルに対して実行された CTAS または ITAS クエリに基づいて計算されます。
 
 **例**
 
@@ -744,7 +744,7 @@ SET property_key = property_value
 ANALYZE TABLE <original_table_name>
 ```
 
-を使用した後で使用できる統計計算のリストを以下に示します `ANALYZE TABLE` コマンド：-
+`ANALYZE TABLE` コマンドを使用した後に使用できる統計計算のリストを以下に示します。-
 
 | 計算された値 | 説明 |
 |---|---|
@@ -760,9 +760,9 @@ ANALYZE TABLE <original_table_name>
 
 #### データレイクの統計を計算 {#compute-statistics-data-lake}
 
-で列レベルの統計を計算できるようになりました [!DNL Azure Data Lake Storage] （ADLS）データセットと `COMPUTE STATISTICS` SQL コマンド。 データセット全体、データセットのサブセット、すべての列、列のサブセットのいずれかに関する列の統計を計算。
+`COMPUTE STATISTICS` SQL コマンドを使用して、[!DNL Azure Data Lake Storage] （ADLS）データセットに関する列レベルの統計を計算できるようになりました。 データセット全体、データセットのサブセット、すべての列、列のサブセットのいずれかに関する列の統計を計算。
 
-`COMPUTE STATISTICS` を拡張します `ANALYZE TABLE` コマンド。 ただし、 `COMPUTE STATISTICS`, `FILTERCONTEXT`、および `FOR COLUMNS` コマンドは、高速化ストアテーブルではサポートされていません。 の拡張機能 `ANALYZE TABLE` コマンドは現在、ADLS テーブルでのみサポートされています。
+`COMPUTE STATISTICS` は、`ANALYZE TABLE` コマンドを拡張します。 ただし、`COMPUTE STATISTICS`、`FILTERCONTEXT`、`FOR COLUMNS` コマンドは、高速ストアテーブルではサポートされていません。 `ANALYZE TABLE` コマンドのこれらの拡張機能は、現在 ADLS テーブルでのみサポートされています。
 
 **例**
 
@@ -770,11 +770,11 @@ ANALYZE TABLE <original_table_name>
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
-この `FILTER CONTEXT` コマンドは、指定されたフィルター条件に基づいてデータセットのサブセットに関する統計を計算します。 この `FOR COLUMNS` コマンドは、分析の特定の列をターゲットにします。
+`FILTER CONTEXT` コマンドは、指定されたフィルター条件に基づいてデータセットのサブセットに関する統計を計算します。 `FOR COLUMNS` のコマンドは、分析用の特定の列をターゲットにします。
 
 >[!NOTE]
 >
->この `Statistics ID` また、生成された統計はセッションごとに有効で、異なる PSQL セッション間でアクセスすることはできません。<br><br>制限事項：<ul><li>統計の生成は、配列またはマップのデータタイプではサポートされていません</li><li>計算された統計は次のとおりです **ではない** セッションをまたいで保持される。</li></ul><br><br>オプション：<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>デフォルトでは、フラグは true に設定されています。 その結果、サポートされていないデータタイプに関する統計がリクエストされた場合、エラーは発生しませんが、サポートされていないデータタイプのフィールドはサイレントにスキップされます。<br>サポートされていないデータタイプに関する統計がリクエストされた場合にエラー通知を有効にするには、次を使用します。 `SET skip_stats_for_complex_datatypes = false`.
+>生成された `Statistics ID` と統計は、セッションごとに有効であり、異なる PSQL セッション間でアクセスすることはできません。<br><br> 制限事項：<ul><li>統計の生成は、配列またはマップのデータタイプではサポートされていません</li><li>計算された統計は、セッションをまたいで保持 **されません**。</li></ul><br><br> オプション：<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br> デフォルトでは、フラグは true に設定されています。 その結果、サポートされていないデータタイプに関する統計がリクエストされた場合、エラーは発生しませんが、サポートされていないデータタイプのフィールドはサイレントにスキップされます。<br> サポートされていないデータタイプに関する統計がリクエストされた場合にエラーの通知を有効にするには、`SET skip_stats_for_complex_datatypes = false` を使用します。
 
 コンソール出力は、次のように表示されます。
 
@@ -785,14 +785,14 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 (1 row)
 ```
 
-その後、を参照して、計算された統計に対して直接クエリを実行できます。 `Statistics ID`. を使用する `Statistics ID` または、以下のステートメント例に示すようなエイリアス名を使用して、出力を完全に表示できます。 この機能について詳しくは、 [エイリアス名のドキュメント](../key-concepts/dataset-statistics.md#alias-name).
+その後、`Statistics ID` を参照して、計算された統計に対して直接クエリを実行できます。 以下のステートメントの例に示すように、`Statistics ID` またはエイリアス名を使用して、出力を完全に表示します。 この機能について詳しくは、[ エイリアス名のドキュメント ](../key-concepts/dataset-statistics.md#alias-name) を参照してください。
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-の使用 `SHOW STATISTICS` コマンドを使用して、セッションで生成されたすべての一時統計のメタデータを表示します。 このコマンドを使用すると、統計分析の範囲を絞り込むことができます。
+`SHOW STATISTICS` コマンドを使用して、セッションで生成されたすべての一時統計のメタデータを表示します。 このコマンドを使用すると、統計分析の範囲を絞り込むことができます。
 
 ```sql
 SHOW STATISTICS;
@@ -808,15 +808,15 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-を参照してください。 [データセット統計ドキュメント](../key-concepts/dataset-statistics.md) を参照してください。
+詳しくは、[ データセット統計のドキュメント ](../key-concepts/dataset-statistics.md) を参照してください。
 
 #### 大さじ {#tablesample}
 
 Adobe Experience Platform クエリサービスは、近似クエリ処理機能の一部としてサンプルデータセットを提供します。
 
-データセットのサンプルは、データセットに対する集計操作に対して正確な回答が必要ない場合に最適に使用されます。 近似クエリを発行して近似回答を返すことで、大規模なデータセットに対するより効率的な探索的クエリを実行するには、を使用します `TABLESAMPLE` 機能
+データセットのサンプルは、データセットに対する集計操作に対して正確な回答が必要ない場合に最適に使用されます。 近似クエリを発行して近似回答を返すことで、大規模なデータセットに対するより効率的な探索的クエリを実行するには、`TABLESAMPLE` 機能を使用します。
 
-サンプルデータセットは、既存の均一なランダムサンプルを使用して作成されます [!DNL Azure Data Lake Storage] （ADLS）データセット：元のレコードのパーセンテージのみを使用します。 データセットサンプル機能は、を拡張します `ANALYZE TABLE` を使用したコマンド `TABLESAMPLE` および `SAMPLERATE` SQL コマンド。
+サンプルデータセットは、元のレコードのパーセンテージのみを使用して、既存の [!DNL Azure Data Lake Storage] （ADLS）データセットからの均一なランダムサンプルを使用して作成されます。 データセットサンプル機能は、`TABLESAMPLE` および `SAMPLERATE` SQL コマンドで `ANALYZE TABLE` コマンドを拡張します。
 
 次の例では、1 行目にテーブルの 5% のサンプルを計算する方法が示されています。 2 行目では、テーブル内のデータのフィルター済みビューから 5% のサンプルを計算する方法を示しています。
 
@@ -827,11 +827,11 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-を参照してください。 [データセットサンプルに関するドキュメント](../key-concepts/dataset-samples.md) を参照してください。
+詳しくは、[ データセットサンプルのドキュメント ](../key-concepts/dataset-samples.md) を参照してください。
 
 ### BEGIN
 
-この `BEGIN` コマンド、または `BEGIN WORK` または `BEGIN TRANSACTION` コマンド。トランザクションブロックを開始します。 begin コマンドの後に入力された文は、明示的な COMMIT または ROLLBACK コマンドが指定されるまで、1 回のトランザクションで実行されます。 このコマンドは次と同じです `START TRANSACTION`.
+`BEGIN` コマンド、または `BEGIN WORK` または `BEGIN TRANSACTION` コマンドは、トランザクションブロックを開始します。 begin コマンドの後に入力された文は、明示的な COMMIT または ROLLBACK コマンドが指定されるまで、1 回のトランザクションで実行されます。 このコマンドは `START TRANSACTION` と同じです。
 
 ```sql
 BEGIN
@@ -841,29 +841,29 @@ BEGIN TRANSACTION
 
 ### CLOSE
 
-この `CLOSE` コマンドは、開いているカーソルに関連付けられているリソースを解放します。 カーソルを閉じた後の操作は許可されません。不要になったカーソルは閉じる必要があります。
+`CLOSE` コマンドは、開いているカーソルに関連付けられているリソースを解放します。 カーソルを閉じた後の操作は許可されません。不要になったカーソルは閉じる必要があります。
 
 ```sql
 CLOSE name
 CLOSE ALL
 ```
 
-次の場合 `CLOSE name` が使用され、 `name` は、閉じる必要がある開いているカーソルの名前を表します。 次の場合 `CLOSE ALL` を使用すると、開いているカーソルはすべて閉じられます。
+`CLOSE name` を使用する場合、`name` は閉じる必要がある開いているカーソルの名前を表します。 `CLOSE ALL` を使用すると、開いているカーソルはすべて閉じられます。
 
 ### DEALLOCATE
 
-以前に準備した SQL 文の割り当てを解除するには、次を使用します `DEALLOCATE` コマンド。 プリペアドステートメントの割り当てを明示的に解除しなかった場合、セッションが終了すると割り当てが解除されます。 準備済み文の詳細については、次を参照してください。 [準備コマンド](#prepare) セクション。
+以前に準備した SQL 文の割り当てを解除するには、`DEALLOCATE` コマンドを使用します。 プリペアドステートメントの割り当てを明示的に解除しなかった場合、セッションが終了すると割り当てが解除されます。 準備文の詳細については、[PREPARE コマンド ](#prepare) の節を参照してください。
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-次の場合 `DEALLOCATE name` が使用され、 `name` 割り当て解除する必要がある準備済み文の名前を表します。 次の場合 `DEALLOCATE ALL` を使用すると、準備済み文がすべて割り当て解除されます。
+`DEALLOCATE name` を使用する場合、`name` は、割り当てを解除する必要がある準備済み文の名前を表します。 `DEALLOCATE ALL` を使用すると、準備済み文がすべて割り当て解除されます。
 
 ### DECLARE
 
-この `DECLARE` コマンドを使用すると、ユーザーはカーソルを作成できます。このカーソルを使用して、大きなクエリから少数の行を取得できます。 カーソルが作成された後、`FETCH` を使用して行がカーソルから取得されます。
+`DECLARE` コマンドを使用すると、ユーザーはカーソルを作成できます。このカーソルを使用して、大きなクエリから少数の行を取得できます。 カーソルが作成された後、`FETCH` を使用して行がカーソルから取得されます。
 
 ```sql
 DECLARE name CURSOR FOR query
@@ -872,13 +872,13 @@ DECLARE name CURSOR FOR query
 | パラメーター | 説明 |
 | ------ | ------ |
 | `name` | 作成するカーソルの名前。 |
-| `query` | A `SELECT` または `VALUES` カーソルが返す行を指定するコマンド。 |
+| `query` | カーソルによって返されるローを提供する `SELECT` または `VALUES` コマンド。 |
 
 ### EXECUTE
 
-この `EXECUTE` コマンドは、事前に準備された文を実行するために使用されます。 準備済み文はセッション中にのみ存在するので、準備済み文は `PREPARE` 現在のセッションの前に実行されたステートメント。 準備済み文の使用の詳細については、次を参照してください。 [`PREPARE` コマンド](#prepare) セクション。
+`EXECUTE` コマンドは、事前に準備された文を実行するために使用します。 準備済み文はセッション中にのみ存在するので、準備済み文は現在のセッションの前に実行された `PREPARE` 文によって作成されている必要があります。 準備文の使用について詳しくは、[`PREPARE` のコマンドの節を参照し ](#prepare) ください。
 
-次の場合 `PREPARE` ステートメントを作成したステートメントで、いくつかのパラメーターを指定しました。互換性のあるパラメーターセットをパラメーターに渡す必要があります。 `EXECUTE` ステートメント。 これらのパラメーターが渡されない場合、エラーが発生します。
+ステートメントを作成した `PREPARE` ステートメントで一部のパラメーターが指定された場合は、互換性のあるパラメーターセットを `EXECUTE` ステートメントに渡す必要があります。 これらのパラメーターが渡されない場合、エラーが発生します。
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -891,13 +891,13 @@ EXECUTE name [ ( parameter ) ]
 
 ### EXPLAIN
 
-この `EXPLAIN` コマンドは、指定された文の実行計画を表示します。 実行計画は、ステートメントによって参照されるテーブルのスキャン方法を示します。 複数のテーブルが参照されている場合、各入力テーブルから必要な行をまとめるために使用される結合アルゴリズムが表示されます。
+`EXPLAIN` コマンドは、指定された文の実行計画を表示します。 実行計画は、ステートメントによって参照されるテーブルのスキャン方法を示します。 複数のテーブルが参照されている場合、各入力テーブルから必要な行をまとめるために使用される結合アルゴリズムが表示されます。
 
 ```sql
 EXPLAIN statement
 ```
 
-応答の形式を定義するには、を使用します `FORMAT` キーワードと `EXPLAIN` コマンド。
+応答の形式を定義するには、`FORMAT` キーワードを `EXPLAIN` コマンドと共に使用します。
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -905,16 +905,16 @@ EXPLAIN FORMAT { TEXT | JSON } statement
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `FORMAT` | の使用 `FORMAT` 出力形式を指定するコマンド。 使用できるオプションは次のとおりです `TEXT` または `JSON`. テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。 |
-| `statement` | 任意 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`、または `CREATE MATERIALIZED VIEW AS` 実行計画を確認する文。 |
+| `FORMAT` | `FORMAT` コマンドを使用して、出力形式を指定します。 使用可能なオプションは、`TEXT` または `JSON` です。 テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。このパラメーターのデフォルトは `TEXT` です。 |
+| `statement` | 実行計画を確認する `SELECT`、`INSERT`、`UPDATE`、`DELETE`、`VALUES`、`EXECUTE`、`DECLARE`、`CREATE TABLE AS` または `CREATE MATERIALIZED VIEW AS` 文。 |
 
 >[!IMPORTANT]
 >
->次の値を持つ出力 `SELECT` ステートメントが次のコードで実行された場合は破棄されます： `EXPLAIN` キーワード。 その他の副作用は通常通り発生します。
+>`SELECT` ステートメントが返す出力は、`EXPLAIN` キーワードを指定して実行すると破棄されます。 その他の副作用は通常通り発生します。
 
 **例**
 
-以下の例は、単一のテーブルに対する単純なクエリのプランを示しています `integer` 列および 10000 行：
+次の例は、`integer` 列が 1 行と 10000 行を持つテーブルに対して単純なクエリを実行する計画を示しています。
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -929,7 +929,7 @@ EXPLAIN SELECT * FROM foo;
 
 ### FETCH
 
-この `FETCH` コマンドは、以前に作成したカーソルを使用して行を取得します。
+`FETCH` コマンドは、以前に作成したカーソルを使用して行を取得します。
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -942,7 +942,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### PREPARE {#prepare}
 
-この `PREPARE` コマンドを使用すると、プリペアドステートメントを作成できます。 準備済み文は、類似の SQL 文をテンプレート化するために使用できるサーバー側オブジェクトです。
+`PREPARE` コマンドを使用すると、準備済み文を作成できます。 準備済み文は、類似の SQL 文をテンプレート化するために使用できるサーバー側オブジェクトです。
 
 準備済みステートメントは、パラメーター（実行時にステートメントに置き換えられる値）を取ることができます。 プリペアドステートメントを使用する場合、パラメーターは$1、$2 などを使用して、位置によって参照されます。
 
@@ -959,7 +959,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 ### ROLLBACK
 
-この `ROLLBACK` コマンドは、現在のトランザクションを元に戻し、そのトランザクションによって行われたすべての更新を破棄します。
+`ROLLBACK` コマンドは、現在のトランザクションを元に戻し、そのトランザクションによって行われたすべての更新を破棄します。
 
 ```sql
 ROLLBACK
@@ -968,7 +968,7 @@ ROLLBACK WORK
 
 ### SELECT INTO
 
-この `SELECT INTO` コマンドは、新しいテーブルを作成し、クエリによって計算されたデータをテーブルに入力します。 通常の場合のように、データはクライアントに返されません `SELECT` コマンド。 新しいテーブルの列には、の出力列に関連付けられた名前とデータタイプがあります。 `SELECT` コマンド。
+`SELECT INTO` コマンドは、新しいテーブルを作成し、クエリによって計算されたデータをテーブルに入力します。 通常の `SELECT` コマンドの場合のように、データはクライアントに返されません。 新しいテーブルの列には、`SELECT` コマンドの出力列に関連付けられた名前とデータ型があります。
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -988,17 +988,17 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-標準の SELECT クエリパラメーターの詳細については、を参照してください。 [クエリ セクションの選択](#select-queries). このセクションには、専用のパラメーターのみがリストされます。 `SELECT INTO` コマンド。
+標準の SELECT クエリパラメーターについて詳しくは、[SELECT クエリの節 ](#select-queries) を参照してください。 このセクションには、`SELECT INTO` コマンド専用のパラメータのみがリストされます。
 
 | パラメーター | 説明 |
 | ------ | ------ |
 | `TEMPORARY` または `TEMP` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルは一時テーブルになります。 |
-| `UNLOGGED` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルはログのないテーブルになります。 ログ未記録テーブルの詳細については、以下を参照してください。 [[!DNL PostgreSQL] 詳細を見る](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | オプションのパラメーター。 パラメーターを指定した場合、作成されたテーブルはログのないテーブルになります。 ログに記録されていないテーブルについて詳しくは、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/sql-createtable.html) を参照してください。 |
 | `new_table` | 作成するテーブルの名前。 |
 
 **例**
 
-次のクエリは、新しいテーブルを作成します `films_recent` テーブルの最近のエントリのみから成る `films`:
+次のクエリは、テーブル `films` の最近のエントリのみで構成される新しいテーブル `films_recent` を作成します。
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -1006,7 +1006,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### SHOW
 
-この `SHOW` コマンドは、ランタイム パラメーターの現在の設定を表示します。 これらの変数は、 `SET` ステートメント、を編集する `postgresql.conf` 設定ファイル、を使用 `PGOPTIONS` 環境変数（libpq または libpq ベースのアプリケーションを使用する場合）、または Postgres サーバの起動時にコマンドラインフラグを使用します。
+`SHOW` コマンドは、ランタイム パラメーターの現在の設定を表示します。 これらの変数を設定するには、`SET` 文を使用するか、`postgresql.conf` 設定ファイルを編集するか、`PGOPTIONS` 環境変数（libpq あるいは libpq ベースのアプリケーションを使用する場合）、または Postgres サーバ起動時のコマンドラインフラグを使用します。
 
 ```sql
 SHOW name
@@ -1015,12 +1015,12 @@ SHOW ALL
 
 | パラメーター | 説明 |
 | ------ | ------ |
-| `name` | 情報が必要なランタイムパラメーターの名前。 ランタイムパラメーターには、次の値を使用できます。<br>`SERVER_VERSION`：このパラメーターは、サーバーのバージョン番号を示します。<br>`SERVER_ENCODING`：このパラメーターは、サーバーサイドの文字セットエンコーディングを示します。<br>`LC_COLLATE`：このパラメーターは、照合用のデータベースのロケール設定を表示します（テキストの順序）。<br>`LC_CTYPE`：このパラメーターは、文字を分類するためのデータベースのロケール設定を示します。<br>`IS_SUPERUSER`：このパラメーターは、現在の役割がスーパーユーザー権限を持っているかどうかを示します。 |
+| `name` | 情報が必要なランタイムパラメーターの名前。 ランタイムパラメーターには、次の値を使用できます。<br>`SERVER_VERSION`：このパラメーターは、サーバーのバージョン番号を表示します。<br>`SERVER_ENCODING`：このパラメーターは、サーバーサイドの文字セットエンコーディングを示します。<br>`LC_COLLATE`：このパラメーターは、照合用のデータベースのロケール設定を示します（テキストの順序）。<br>`LC_CTYPE`：このパラメーターは、文字分類に対するデータベースのロケール設定を示します。<br>`IS_SUPERUSER`：このパラメーターは、現在の役割がスーパーユーザー権限を持っているかどうかを示します。 |
 | `ALL` | すべての設定パラメーターの値と説明を表示します。 |
 
 **例**
 
-次のクエリは、パラメーターの現在の設定を示しています `DateStyle`.
+次のクエリは、パラメーター `DateStyle` の現在の設定を示しています。
 
 ```sql
 SHOW DateStyle;
@@ -1035,7 +1035,7 @@ SHOW DateStyle;
 
 ### コピー
 
-この `COPY` コマンドは、以下の出力を複製します `SELECT` 指定した場所にクエリを実行します。 このコマンドを実行するには、ユーザーがこの場所にアクセスできる必要があります。
+`COPY` コマンドは、`SELECT` クエリの出力を指定した場所に複製します。 このコマンドを実行するには、ユーザーがこの場所にアクセスできる必要があります。
 
 ```sql
 COPY query
@@ -1046,15 +1046,15 @@ COPY query
 | パラメーター | 説明 |
 | ------ | ------ |
 | `query` | コピーするクエリ。 |
-| `format_name` | クエリのコピー先の形式。 この `format_name` は次のいずれかになります： `parquet`, `csv`、または `json`. デフォルト値はです `parquet`. |
+| `format_name` | クエリのコピー先の形式。 `format_name` は、`parquet`、`csv`、`json` のいずれかです。 デフォルト値は `parquet` です。 |
 
 >[!NOTE]
 >
->完全な出力パスはです。 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>完全な出力パスは `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 ### テーブルの変更 {#alter-table}
 
-この `ALTER TABLE` コマンドを使用すると、プライマリキー制約または外部キー制約を追加またはドロップしたり、テーブルに列を追加したりできます。
+`ALTER TABLE` コマンドを使用すると、プライマリ・キー制約または外部キー制約を追加または削除したり、テーブルにカラムを追加したりできます。
 
 #### 制約を追加またはドロップ
 
@@ -1068,7 +1068,7 @@ ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE name
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name1, column_name2 ) NAMESPACE namespace
 ```
 
-**1 つ以上のキーに基づいてテーブル間の関係を定義**
+**1 つ以上のキーに基づいてテーブル間の関係を定義する**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
@@ -1113,7 +1113,7 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 
 #### プライマリ ID とセカンダリ ID の追加またはドロップ
 
-プライマリ ID テーブル列とセカンダリ ID テーブル列の両方の制約を追加または削除するには、を使用します `ALTER TABLE` コマンド。
+プライマリ ID テーブル列とセカンダリ ID テーブル列の両方の制約を追加または削除するには、`ALTER TABLE` コマンドを使用します。
 
 次の例では、制約を追加してプライマリ ID とセカンダリ ID を追加します。
 
@@ -1129,7 +1129,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-詳しくは、のドキュメントを参照してください。 [アドホックデータセットでの ID の設定](../data-governance/ad-hoc-schema-identities.md).
+詳しくは、[ アドホックデータセットでの ID の設定 ](../data-governance/ad-hoc-schema-identities.md) のドキュメントを参照してください。
 
 #### 列を追加
 
@@ -1143,7 +1143,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 ##### サポートされるデータタイプ
 
-以下の表に、を使用してテーブルに列を追加するために使用可能なデータタイプを示します [!DNL Postgres SQL]、XDM および [!DNL Accelerated Database Recovery] （ADR）を Azure SQL で使用します。
+次の表に、Azure SQL の [!DNL Postgres SQL]、XDM、[!DNL Accelerated Database Recovery] （ADR）を使用してテーブルに列を追加するために許可されるデータタイプを示します。
 
 | --- | PSQL クライアント | XDM | AD | 説明 |
 |---|---|---|---|---|
@@ -1151,12 +1151,12 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 | 2 | `integer` | `int4` | `integer` | 4 バイト単位の–2,147,483,648 から 2,147,483,647 までの整数を格納するために使用される数値データ型。 |
 | 3 | `smallint` | `int2` | `smallint` | 整数を格納するために使用される数値データ型で、-32,768 ～ 215-1 32,767 の範囲は 2 バイトです。 |
 | 4 | `tinyint` | `int1` | `tinyint` | 1 バイトの 0 ～ 255 の整数を格納するために使用される数値データ型。 |
-| 5 | `varchar(len)` | `string` | `varchar(len)` | 可変サイズの文字データタイプ。 `varchar` は、列のデータエントリのサイズが大幅に異なる場合に最適です。 |
-| 6 | `double` | `float8` | `double precision` | `FLOAT8` および `FLOAT` 次の有効な同義語です： `DOUBLE PRECISION`. `double precision` は浮動小数点データ型です。 浮動小数点値は 8 バイトで格納されます。 |
-| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` は、の有効な同義語です `double precision`.`double precision` は浮動小数点データ型です。 浮動小数点値は 8 バイトで格納されます。 |
-| 8 | `date` | `date` | `date` | この `date` データタイプは、タイムスタンプ情報を含まない 4 バイトの格納されたカレンダー日付値です。 有効な日付の範囲は、01-01-0001 ～ 12-31-9999 です。 |
-| 9 | `datetime` | `datetime` | `datetime` | ある時点を保存するために使用されるデータタイプで、カレンダーの日付および時刻として表されます。 `datetime` 年、月、日、時間、秒、分数の修飾子が含まれます。 A `datetime` 宣言には、これらの時間単位のサブセットを含めることができ、この順序で結合することも、1 つの時間単位のみで構成することもできます。 |
-| 10 | `char(len)` | `string` | `char(len)` | この `char(len)` キーワードは、項目が固定長の文字であることを示すために使用されます。 |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | 可変サイズの文字データタイプ。 `varchar` は、列データエントリのサイズが大幅に異なる場合に最適です。 |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` および `FLOAT` は、`DOUBLE PRECISION` の有効な同義語です。 `double precision` は浮動小数点データ型です。 浮動小数点値は 8 バイトで格納されます。 |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` は `double precision` の有効な同義語です。`double precision` は浮動小数点データ型です。 浮動小数点値は 8 バイトで格納されます。 |
+| 8 | `date` | `date` | `date` | `date` のデータタイプは、タイムスタンプ情報を含まない 4 バイトの格納されたカレンダー日付値です。 有効な日付の範囲は、01-01-0001 ～ 12-31-9999 です。 |
+| 9 | `datetime` | `datetime` | `datetime` | ある時点を保存するために使用されるデータタイプで、カレンダーの日付および時刻として表されます。 `datetime` には、年、月、日、時間、秒、分数の修飾子が含まれます。 `datetime` 宣言には、これらの時間単位のサブセットを含めることができ、この順序で結合することも、1 つの時間単位のみで構成することもできます。 |
+| 10 | `char(len)` | `string` | `char(len)` | `char(len)` キーワードは、項目が固定長の文字であることを示すために使用されます。 |
 
 #### スキーマを追加
 
@@ -1194,7 +1194,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 ### プライマリキーを表示
 
-この `SHOW PRIMARY KEYS` コマンドは、指定されたデータベースのすべてのプライマリ・キー制約を一覧表示します。
+`SHOW PRIMARY KEYS` コマンドは、指定されたデータベースのすべてのプライマリ・キー制約を一覧表示します。
 
 ```sql
 SHOW PRIMARY KEYS
@@ -1209,7 +1209,7 @@ SHOW PRIMARY KEYS
 
 ### 外部キーを表示
 
-この `SHOW FOREIGN KEYS` コマンドは、指定されたデータベースのすべての外部キー制約を一覧表示します。
+`SHOW FOREIGN KEYS` コマンドは、指定されたデータベースのすべての外部キー制約を一覧表示します。
 
 ```sql
 SHOW FOREIGN KEYS
@@ -1225,7 +1225,7 @@ SHOW FOREIGN KEYS
 
 ### データグループを表示
 
-この `SHOW DATAGROUPS` コマンドは、関連付けられたすべてのデータベースのテーブルを返します。 データベースごとに、スキーマ、グループタイプ、子タイプ、子名、子 ID がテーブルに表示されます。
+`SHOW DATAGROUPS` コマンドは、関連するすべてのデータベースのテーブルを返します。 データベースごとに、スキーマ、グループタイプ、子タイプ、子名、子 ID がテーブルに表示されます。
 
 ```sql
 SHOW DATAGROUPS
@@ -1243,7 +1243,7 @@ SHOW DATAGROUPS
 
 ### テーブルのデータグループを表示
 
-この `SHOW DATAGROUPS FOR 'table_name'` コマンドは、パラメーターを子として含む、関連付けられたすべてのデータベースのテーブルを返します。 データベースごとに、スキーマ、グループタイプ、子タイプ、子名、子 ID がテーブルに表示されます。
+`SHOW DATAGROUPS FOR 'table_name'` コマンドは、パラメーターを子として含む、関連付けられたすべてのデータベースのテーブルを返します。 データベースごとに、スキーマ、グループタイプ、子タイプ、子名、子 ID がテーブルに表示されます。
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'
@@ -1251,7 +1251,7 @@ SHOW DATAGROUPS FOR 'table_name'
 
 **パラメーター**
 
-- `table_name`：関連付けられたデータベースを検索するテーブルの名前。
+- `table_name`：関連付けられたデータベースを検索する表の名前。
 
 ```console
    Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId

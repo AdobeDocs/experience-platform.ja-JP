@@ -1,22 +1,22 @@
 ---
 keywords: DoubleClick Floodlight;doubleclick floodlight 拡張機能；doubleclick;floodlight
 title: DoubleClick Floodlight（ベータ版）拡張機能
-description: DoubleClick Floodlight（ベータ版）拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: DoubleClick Floodlight （Beta）拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 64e1f964-a58e-43d2-8b1a-3baa6104ab3a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '444'
 ht-degree: 85%
 
 ---
 
-# [!DNL DoubleClick Floodlight] （ベータ版）拡張機能
+# [!DNL DoubleClick Floodlight] （Beta）拡張機能
 
 ## 概要 {#overview}
 
-この拡張機能を使用すると、の迅速かつ容易なデプロイメントが可能になります。 [!DNL DoubleClick Floodlight] （グローバルサイトタグではなく）従来の floodlight 形式を使用するタグ。 注意：この拡張機能はベータ版です。
+この拡張機能を使用すると、（グローバルサイトタグではなく）従来の投光形式を使用して [!DNL DoubleClick Floodlight] タグを迅速かつ簡単にデプロイできます。 注意：この拡張機能はベータ版です。
 
-[!DNL DoubleClick Floodlight] （ベータ版）は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、 [!DNL Google] のサポートドキュメント [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=ja).
+[!DNL DoubleClick Floodlight] （Beta）は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、[DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=ja) の [!DNL Google] サポートドキュメントを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 

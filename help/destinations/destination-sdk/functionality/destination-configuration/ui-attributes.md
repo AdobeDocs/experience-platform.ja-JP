@@ -11,7 +11,7 @@ ht-degree: 85%
 
 # UI 属性
 
-UI 属性は、ロゴ、ドキュメントページへのリンク、宛先の説明、そのカテゴリとタイプなど、Adobe Experience Platformユーザーインターフェイスの宛先カードに対してAdobeが表示するビジュアル要素を定義します。
+UI 属性は、Adobe Experience Platform ユーザーインターフェイスでAdobeが宛先カードに表示する必要がある視覚的な要素（ロゴ、ドキュメントページへのリンク、宛先の説明とそのカテゴリおよびタイプなど）を定義します。
 
 このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、以下の宛先設定の概要ページを参照してください。
 
@@ -108,15 +108,15 @@ Destination SDK で作成中の宛先が限られた数の顧客に対して使�
 
 ### `icon` {#icon}
 
-下の画像に示すように、ロゴアイコンを宛先に追加できます。
+以下の画像に示すように、宛先にロゴアイコンを追加できます。
 
-![アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![ アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-ロゴをリンク先のカードに追加するには、目的の画像をAdobeチームと共有する必要があります [レビュー用に宛先を送信](../../guides/submit-destination.md#logo).
+宛先カードにロゴを追加するには、[ レビュー用に宛先を送信 ](../../guides/submit-destination.md#logo) する際に、Adobeチームと目的の画像を共有する必要があります。
 
 ## 次の手順 {#next-steps}
 
-この記事を読むと、宛先に設定できる UI 属性と、ユーザーが Platform UI で表示する場所を、より深く理解できるようになります。
+この記事を読むことで、宛先に設定できる UI 属性と、それが Platform UI で表示される場所について、理解を深めることができました。
 
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 

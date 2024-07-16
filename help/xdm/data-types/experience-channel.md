@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；Web ページの詳細；データ型；データ型；データ型；web ページ
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；Web ページの詳細；データタイプ；データタイプ；データタイプ；Web ページ
 solution: Experience Platform
 title: Experience Channel データタイプ
-description: エクスペリエンスチャネルエクスペリエンスデータモデル (XDM) データタイプについて説明します。
+description: Experience Channel Experience Data Model （XDM）データタイプについて説明します。
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,29 +11,29 @@ ht-degree: 24%
 
 ---
 
-# [!UICONTROL Experience チャネル] データタイプ
+# [!UICONTROL  エクスペリエンスチャネル ] データタイプ
 
-[!UICONTROL Experience チャネル] は、エクスペリエンスチャネルを記述する標準のエクスペリエンスデータモデル (XDM) データ型です。 エクスペリエンスチャネルは、デジタルエクスペリエンスを利用する方法またはパスを表します。
+[!UICONTROL  エクスペリエンスチャネル ] は、エクスペリエンスチャネルを記述する標準の Experience Data Model （XDM）データタイプです。 エクスペリエンスチャネルは、デジタルエクスペリエンスの消費方法またはパスを表します。
 
-複数のエクスペリエンスチャネルがあり、それぞれにコンテンツの配信方法、顧客インタラクションの観測方法、データの収集方法に関する制約があります。 チャネル内では、エクスペリエンスを特定の場所に配信できます。 チャネル内に存在するロケーションの場所とタイプは、チャネルによって異なります。
+複数のエクスペリエンスチャネルがあり、コンテンツが配信される方法、顧客インタラクションを監視する方法、データを収集する方法には、それぞれ異なる制約があります。 チャネル内では、エクスペリエンスを特定の場所に配信できます。 チャネル内に存在する場所の場所とタイプは、チャネルごとに異なります。
 
 ![](../images/data-types/experience-channel.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `_id` | 文字列 | チャネルを一意に識別する ID。 特定のエクスペリエンスチャネルごとに定数が定義されます `@id`. |
-| `_type` | 文字列 | 類似のプロパティを持つチャネルに対して、大まかな分類ラベルを提供します。 |
+| `_id` | 文字列 | チャネルを一意に識別する ID。 それぞれの特定のエクスペリエンスチャネルは、一定の `@id` を定義します。 |
+| `_type` | 文字列 | 類似のプロパティを持つチャネルの大まかな分類ラベルを提供します。 |
 | `contentTypes` | 文字列の配列 | このチャネルが配信できるコンテンツタイプ。 |
 | `locationTypes` | 文字列の配列 | このチャネルが構成し、コンテンツを配信できる場所（仮想場所）のタイプ。 |
 | `mediaAction` | 文字列 | エクスペリエンスイベントメディアアクションを表します（該当する場合）。 |
-| `mediaType` | 文字列 | メディアタイプが有料か、所有か、獲得かを表します。 |
+| `mediaType` | 文字列 | メディアタイプがペイド、オウンドまたはアーンドのいずれかを表します。 |
 | `metricTypes` | 文字列の配列 | このチャネルで収集できる指標。 |
 | `mode` | 文字列 | このチャネルでエクスペリエンスがどのように配信されるか。 |
 | `typeAtSource` | 文字列 | チャネルのカスタム名。 |
 
 {style="table-layout:auto"}
 
-データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
+データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
-* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)
+* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
+* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)

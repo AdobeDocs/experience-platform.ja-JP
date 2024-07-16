@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: PQL 文字列関数
-description: プロファイルクエリ言語（PQL）には、文字列の操作が簡単になる関数が用意されています。
+title: PQL文字列関数
+description: Profile Query Language（PQL）が提供する関数によって、文字列の操作が容易になります。
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 90%
+source-wordcount: '815'
+ht-degree: 88%
 
 ---
 
 # 文字列関数
 
-[!DNL Profile Query Language] (PQL) は、文字列とのやり取りが簡単になる関数を提供します。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+[!DNL Profile Query Language] （PQL）が提供する関数によって、文字列の操作が容易になります。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## 類似
 
@@ -247,7 +247,7 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->次のような正規表現関数を使用する場合： `\w`、 **必須** バックスラッシュ文字をエスケープします。 だから、ただ書く代わりに `\w`の場合は、余分なバックスラッシュを含め、 `\\w`.
+>`\w` などの正規表現関数を使用している場合は、バックスラッシュ文字をエスケープする **必要があります**。 そのため、`\w` だけを書くのではなく、余分なバックスラッシュを含めて `\\w` を書く必要があります。
 
 ## 正規表現グループ
 
@@ -269,7 +269,7 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->次のような正規表現関数を使用する場合： `\w`、 **必須** バックスラッシュ文字をエスケープします。 だから、ただ書く代わりに `\w`の場合は、余分なバックスラッシュを含め、 `\\w`.
+>`\w` などの正規表現関数を使用している場合は、バックスラッシュ文字をエスケープする **必要があります**。 そのため、`\w` だけを書くのではなく、余分なバックスラッシュを含めて `\\w` を書く必要があります。
 
 ## 次の手順
 

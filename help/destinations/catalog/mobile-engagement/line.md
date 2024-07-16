@@ -1,7 +1,7 @@
 ---
 keywords: モバイル；モバイルエンゲージメントの宛先；LINE;LINE モバイルエンゲージメントの宛先
-title: LINE 接続
-description: LINE の宛先を使用すると、Platform オーディエンスにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを提供できます。
+title: 回線接続
+description: LINE 宛先を使用すると、Platform オーディエンスにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを提供できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
@@ -15,15 +15,15 @@ ht-degree: 41%
 
 ## 概要 {#overview}
 
-[[!DNL LINE]](https://line.me/en/) は、人、サービス、情報を結び付け、チャットアプリからエンターテインメント、ソーシャル、日々のアクティビティのハブに成長した、人気のあるコミュニケーションプラットフォームです。
+[[!DNL LINE]](https://line.me/en/) は、人物、サービス、情報をつなぎ、チャットアプリからエンターテイメント、ソーシャル、日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は、 [[!DNL LINE] メッセージング API](https://developers.line.biz/en/reference/messaging-api/). 内の接続として、Experience Platformオーディエンスからプロファイルをアクティブ化できます。 [!DNL LINE] ビジネスニーズに合わせて
+この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は、[[!DNL LINE] Messaging API](https://developers.line.biz/en/reference/messaging-api/) を活用します。 Experience Platformオーディエンスのプロファイルを、ビジネスニーズに合わせて、[!DNL LINE] 内のつながりとしてアクティブ化できます。
 
-[!DNL LINE] は、Bearer トークンを認証メカニズムとして使用し、 [!DNL LINE] メッセージング API に対する認証手順 [!DNL LINE] インスタンスは、以下、内 [宛先に対する認証](#authenticate) 」セクションに入力します。
+[!DNL LINE] は、[!DNL LINE] Messaging API と通信するための認証メカニズムとして Bearer トークンを使用します。 [!DNL LINE] インスタンスを認証する手順は、さらに下の [ 宛先に対する認証 ](#authenticate) の節にあります。
 
 ## ユースケース {#use-cases}
 
-マーケターは、オーディエンスの組み込みを使用して、モバイルエンゲージメントの宛先でユーザーをターゲットにすることができます [!DNL Adobe Experience Platform]. さらに、エクスペリエンスの属性に基づいて、パーソナライズされたエクスペリエンスを配信できます [!DNL Adobe Experience Platform] プロファイル：オーディエンスとプロファイルが [!DNL Adobe Experience Platform].
+マーケターの場合、組み込みのオーディエンスを使用して、モバイルエンゲージメントの宛先のユーザーをターゲットに設定で [!DNL Adobe Experience Platform] ます。 さらに、[!DNL Adobe Experience Platform] でオーディエンスとプロファイルが更新されるとすぐに、[!DNL Adobe Experience Platform] プロファイルの属性に基づいてパーソナライズされたエクスペリエンスを提供できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -33,32 +33,32 @@ Platform から [!DNL LINE] アカウントにデータを書き出すには、[
 
 #### [!DNL LINE] アカウントが必要です {#prerequisites-account}
 
-を登録して、 [!DNL LINE] アカウントを作成します。 アカウントを作成するには：
+[!DNL LINE] アカウントをまだお持ちでない場合は、登録して作成する必要があります。 アカウントを作成するには：
 
-1. 次に移動： [!DNL LINE] [アカウントログイン](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) ページ
-2. 選択 **[!UICONTROL アカウントの作成]**.
+1. [!DNL LINE] [acount login](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) ページに移動します。
+2. **[!UICONTROL アカウントを作成]** を選択します。
 
-#### を収集します。 [!DNL LINE channel access token (long-lived)] から [!DNL LINE] 開発者コンソール {#gather-credentials}
+#### [!DNL LINE] Developer Console からの [!DNL LINE channel access token (long-lived)] の収集 {#gather-credentials}
 
-Platform がにアクセスできるようにするには、以下を実行します。 [!DNL LINE] リソースを使用する場合、 *[!DNL Channel access token (long-lived)]* 望み通りに [!DNL LINE] *メッセージング API* チャネル。
+Platform が [!DNL LINE] リソースにアクセスできるようにするには、目的の [!DNL LINE] *Messaging API* チャネルからの *[!DNL Channel access token (long-lived)]* が必要です。
 
-1. 次を使用してログイン： [!DNL LINE] アカウントの [[!DNL LINE] 開発者コンソール](https://developers.line.biz/console).
-1. 次に、 *[!DNL Providers]* リストを開き、 *[!DNL Provider]* 興味を持ち、最後に選択する *メッセージング API* チャネルを開き、設定にアクセスします。 初めてデベロッパーコンソールにアクセスする場合は、 [[!DNL LINE] ドキュメント](https://developers.line.biz/en/docs/messaging-api/getting-started/) をクリックして、プロバイダーの作成に必要な手順を完了します。
-1. 最後に、 ***[!DNL Channel access token]*** セクションを開き、 ***[!DNL Channel access token (long-lived)]*** 内で必要な値 [宛先に対する認証](#authenticate) 手順
+1. [!DNL LINE] アカウントで [[!DNL LINE]  開発者コンソール ](https://developers.line.biz/console) にログインします。
+1. 次に、*[!DNL Providers]* リストにアクセスして、目的の *[!DNL Provider]* を選択し、最後に *Messaging API* チャネルを選択して、その設定にアクセスします。 初めて Developer Console にアクセスする場合は、[[!DNL LINE]  ドキュメント ](https://developers.line.biz/en/docs/messaging-api/getting-started/) に従って、プロバイダーの作成に必要な手順を完了してください。
+1. 最後に、「***[!DNL Channel access token]***」セクションに移動し、[ 宛先に対する認証 ](#authenticate) 手順で必要な ***[!DNL Channel access token (long-lived)]*** の値をコピーします。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| `[!DNL Channel access token (long-lived)]` | お使いの [!DNL LINE Channel access token (long-lived)]. | `aaa2112XSMWqLXR7..........nyilFU=` |
+| `[!DNL Channel access token (long-lived)]` | あなたの [!DNL LINE Channel access token (long-lived)]。 | `aaa2112XSMWqLXR7..........nyilFU=` |
 
-詳しくは、 [[!DNL LINE] ドキュメント](https://developers.line.biz/en/docs/messaging-api/getting-started/) チャネルの作成や、既存のチャネルへのチャネルの追加に関するガイダンス [!DNL LINE] を通じて説明する [!DNL LINE] 開発者コンソール。
+[!DNL LINE] Developers コンソールを使用してチャネルを作成したり、既存の [!DNL LINE] アカウントにチャネルを追加したりする方法のガイダンスについては、[[!DNL LINE]  ドキュメント ](https://developers.line.biz/en/docs/messaging-api/getting-started/) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL LINE] では、次の表で説明する id の更新と書き出しをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL LINE] では、以下の表で説明する ID の更新および書き出しをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 |
 |---|---|
-| 広告主 (IFA) の ID | ソース ID が IFA の場合に、広告主 (IFA) のターゲット ID を選択します *(Apple ID for Advertisers)* または GAID *(Google Advertising ID) 名前空間。 |
+| 広告主（IFA）の ID | ソース ID が IFA *（Google ID for Advertisers）または GAID *（Apple Advertising ID）名前空間の場合* 広告主（IFA）ターゲット ID を選択します。 |
 | LINE ユーザー ID | ソース ID が LINE ユーザー ID の場合は、ユーザー ID ターゲット ID を選択します。 |
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
@@ -76,11 +76,11 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
-**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;内で [!DNL LINE] を検索します。または、 **[!UICONTROL モバイルエンゲージメント]** カテゴリ。
+**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;内で [!DNL LINE] を検索します。または、**[!UICONTROL モバイルエンゲージメント]** カテゴリの下に配置することもできます。
 
 ### 宛先に対する認証 {#authenticate}
 
@@ -88,7 +88,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 ![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 以下の必須フィールドに入力します。
-* **[!UICONTROL Bearer トークン]**: [!DNL LINE Channel access token (long-lived)] から [!DNL LINE] 開発者コンソール。 詳しくは、 [資格情報を収集](#gather-credentials) 」セクションに入力します。
+* **[!UICONTROL ベアラートークン]**:[!DNL LINE] 開発者コンソールからの [!DNL LINE Channel access token (long-lived)]。 [ 資格情報の収集 ](#gather-credentials) の節を参照してください。
 
 指定した詳細が有効な場合、UI で&#x200B;**[!UICONTROL 接続済み]**&#x200B;ステータスに緑色のチェックマークが付きます。その後、次の手順に進むことができます。
 
@@ -99,7 +99,7 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL オーディエンスタイプ]**：を選択します。 **[!UICONTROL 広告主 (IFA) の ID]** 書き出す id のタイプがの場合 *広告主 (IFA) の ID*. 選択 **[!UICONTROL LINE ユーザー ID]** 書き出す id のタイプがの場合 *LINE ユーザー ID*. 詳しくは、 [サポートされる ID](#supported-identities) 「 」セクションを参照してください。
+* **[!UICONTROL オーディエンスタイプ]**：書き出しを探している ID のタイプが **** 広告主（IFA）の ID *である場合は、* 「広告主の ID」を選択します。 書き出す ID のタイプが **[!UICONTROL LINE ユーザー ID]** の場合は、「*LINE ユーザー ID*」を選択します。 ID タイプについて詳しくは、[ サポートされている ID](#supported-identities) の節を参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -111,8 +111,8 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -120,30 +120,34 @@ Platform がにアクセスできるようにするには、以下を実行し�
 
 Adobe Experience Platform から [!DNL LINE] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL LINE] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
-ソース ID に応じて、次のターゲット ID 名前空間をマッピングする必要があります。 | ターゲット ID | ソースフィールド | ターゲットフィールド | | — | — | — | | 広告主 (IFA) の ID | `IDFA` または `GAID` | `LineId` | | LINE ユーザー ID | `UserID` | `LineId` |
+ソース ID に応じて、次のターゲット ID 名前空間をマッピングする必要があります。
+| ターゲット ID |Sourceフィールド | ターゲットフィールド |
+| — | — | — |
+|広告主の ID | `IDFA` または `GAID` | `LineId` |
+| LINE ユーザー ID | `UserID` | `LineId` |
 
-ターゲット ID が *LINE ユーザー ID* 以下が必要です。
-![ターゲット ID に LINE ユーザー ID を使用する場合の、Target マッピングを示す Platform UI のスクリーンショット例。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+ターゲット ID が *LINE ユーザー ID* の場合は、以下が必要です。
+![ ターゲット ID に LINE ユーザー ID を使用する際のターゲットマッピングを示す Platform UI のスクリーンショットの例。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
-ターゲット ID が *広告主 (IFA) の ID* 以下が必要です。
-![ターゲット ID に広告主 (IFA) の ID を使用する場合の、Target マッピングを示す Platform UI のスクリーンショット例。](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+ターゲット ID が *広告主（IFA）の ID）の場合は* 以下が必要になります。
+![ ターゲット ID に広告主（IFA）の ID を使用する際のターゲットマッピングを示す Platform UI のスクリーンショットの例。](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## データの書き出しを検証する {#exported-data}
 
-データのエクスポートが正常にExperience Platformされると、 [!DNL LINE] 宛先が以下の範囲内に新しいオーディエンスを作成 [!DNL LINE] 選択したオーディエンス名を使用します。
+Experience Platform外のデータの書き出しに成功すると、[!DNL LINE] の宛先は、選択されたオーディエンス名を使用して [!DNL LINE] 内に新しいオーディエンスを作成します。
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
-1. In [!DNL LINE]、にログインします。 [マネージャーコンソール](https://manager.line.biz/).
+1. [!DNL LINE] で、[Manager コンソール ](https://manager.line.biz/) にログインします。
 
-1. 次に、に移動します。 **[!UICONTROL データ制御]** > **[!UICONTROL オーディエンス]** をクリックし、 **[!UICONTROL オーディエンス名]** 列。
+1. 次に、**[!UICONTROL データコントロール]**/**[!UICONTROL オーディエンス]** に移動し、**[!UICONTROL オーディエンス名]** 列内で、選択したオーディエンスに一致する名前を確認します。
 
 1. 更新されたボリュームは、セグメント内のカウントと一致します。
 
-1. The *タイプ* 列に記載されている **[!UICONTROL UserID]** 書き出した id のタイプがの場合 *UserID*. 同様に、 *タイプ* 列に記載されている **[!UICONTROL モバイル広告 ID]** 書き出した id のタイプがの場合 *IDFA*.
+1. 書き出した ID のタイプが **[!UICONTROL UserID]** の場合、*タイプ* 列には *UserID* が表示されます。 同様に、書き出した ID のタイプが **[!UICONTROL IDFA]** の場合、*タイプ* 列には *モバイル広告 ID* が表示されます。
 
-内の設定例 [!DNL LINE] は次のように表示されます。
-![オーディエンスの量を示す LINE UI のスクリーンショット。](../../assets/catalog/mobile-engagement/line/audience-volume.png)
+[!DNL LINE] 内の設定例を次に示します。
+![ オーディエンスの量を示す LINE UI のスクリーンショット。](../../assets/catalog/mobile-engagement/line/audience-volume.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 

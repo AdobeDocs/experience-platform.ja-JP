@@ -1,6 +1,6 @@
 ---
 title: Data Distillerの概要
-description: ライセンス付与に関する、クエリサービスデータの Data Distillerの使用制限の概要です。
+description: ライセンスの使用権限に関連した、クエリサービスデータの Data Distillerでの使用制限の概要。
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Data Distillerの概要
 
-Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージ提供です。 Data Distillerを使用すると、クエリサービスでバッチクエリを実行することで、リアルタイム顧客プロファイルや分析的な使用例に対して、取り込み後のデータの準備（クリーニング、整形、操作など）を実行できます。 Data Distillerの使用は、Platform ベースのアプリケーションの使用権限に応じて異なります。
+Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージソリューションです。 Data Distillerを使用すると、クエリサービスでバッチクエリを実行することで、リアルタイム顧客プロファイルや分析的なユースケースに対して取得後のデータ準備（クリーニング、シェーピング、操作など）を実行できます。 Data Distillerの使用は、Platform ベースのアプリケーションの使用権限によって異なります。
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## ガードレール
 
-詳しくは、 [クエリサービスガードレール](../guardrails.md) ライセンス付与に関するクエリサービスデータのデフォルトの使用制限に関するドキュメント。
+ライセンスの使用権限に関連して、クエリサービスデータのデフォルトの使用制限に関する [ クエリサービスガードレール ](../guardrails.md) ドキュメントを参照してください。
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

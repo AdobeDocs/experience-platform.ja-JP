@@ -1,12 +1,12 @@
 ---
-keywords: twitter;Twitter;twitterユニバーサル Web サイトタグ；Twitterユニバーサル Web サイトタグ；Twitter UWT タグ；Twitter uwt;twitter uwt
+keywords: twitter;Twitter;twitterのユニバーサルウェブサイトタグ；Twitterのユニバーサルウェブサイトタグ；Twitterの UWT タグ；Twitterの uwt;twitterの uwt
 title: Twitter Universal Website Tag 拡張機能
-description: twitter Universal Website Tag 拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: twitterユニバーサルウェブサイトタグ拡張機能は、Adobe Experience Platformの広告の提供先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 83%
+source-wordcount: '437'
+ht-degree: 85%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 83%
 
 ## 概要 {#overview}
 
-[!DNL Twitter Universal Website Tag] は、ビーコンをTwitter UWT タグに送信するアクションを提供します。
+[!DNL Twitter Universal Website Tag] には、Twitterの UWT タグにビーコンを送信するアクションが用意されています。
 
-[!DNL Twitter Universal Website Tag] は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、 [コンバージョンの追跡](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) (Twitterドキュメント ) を参照してください。
+[!DNL Twitter Universal Website Tag] は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、Twitterドキュメントの [ コンバージョントラッキング ](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) を参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 83%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Twitter Universal Website Tag] 拡張子：
+[!DNL Twitter Universal Website Tag] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

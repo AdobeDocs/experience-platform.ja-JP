@@ -44,7 +44,7 @@ ht-degree: 21%
 
 * CRM ID:Tom、Email_LC_SHA256:tom<span>@acme.com
 * CRM ID:Tom、ECID:111
-* CRM ID：夏、Email_LC_SHA256：夏<span>@acme.com
+* CRM ID：夏物、Email_LC_SHA256：夏物 <span>@acme.com
 * CRM ID：夏物、ECID:222
 
 アルゴリズム設定：

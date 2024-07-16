@@ -5,7 +5,7 @@ description: このドキュメントでは、CTAS 文と INSERT INTO 文を使�
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '789'
 ht-degree: 100%
 
 ---

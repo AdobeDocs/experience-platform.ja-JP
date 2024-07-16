@@ -1,12 +1,12 @@
 ---
 keywords: demandbase 拡張機能；demandbase;demandbase 宛先
 title: Demandbase 拡張機能
-description: Demandbase 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Demandbase 拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 112a9575-4527-4a32-9610-a9d18ffd84f1
 source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 86%
+source-wordcount: '464'
+ht-degree: 88%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 86%
 
 ## 概要 {#overview}
 
-取得 [!DNL Demandbase] B2B アカウントのインサイトをAdobe Analyticsに直接取り込み、業界、売上高、およびターゲットアカウント別にトラフィックと行動をセグメント化できます。 このアカウントベースの表示は、エンゲージメント、コンバージョン、および最も価値の高い訪問者の出所に関する独自の洞察を提供します。
+B2B アカウントのインサイト [!DNL Demandbase]Adobe Analyticsで直接取得すると、業界、売上高、ターゲットアカウント別のトラフィックと行動をセグメント化できます。 このアカウントベースの表示は、エンゲージメント、コンバージョン、および最も価値の高い訪問者の出所に関する独自の洞察を提供します。
 
-[!DNL Demandbase] は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html) の拡張機能のページを参照してください。
+[!DNL Demandbase] は、Adobe Experience Platform の分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -24,13 +24,13 @@ ht-degree: 86%
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、Platform を購入したすべての顧客が、宛先カタログで使用できます。
+プラットフォームを購入したすべての顧客は、この拡張機能を宛先カタログから利用できます。
 
 この拡張機能を使用するには、Adobe Experience Platform でタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてタグへのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Demandbase] 拡張子：
+[!DNL Demandbase] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

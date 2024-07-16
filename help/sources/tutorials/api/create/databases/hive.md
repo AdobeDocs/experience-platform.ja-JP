@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Apache hive;hive;Hive
+keywords: Experience Platform；ホーム；人気のトピック；Apache ハイブ；ハイブ；ハイブ
 solution: Experience Platform
-title: フローサービス API を使用して Azure HDInsights Base Connection 上に Apache Hive を作成する
+title: Flow Service API を使用して、Azure HDInsights ベース接続に Apache Hive を作成します
 type: Tutorial
-description: フローサービス API を使用して、Azure HDInsights 上の Apache Hive をAdobe Experience Platformに接続する方法を説明します。
+description: Flow Service API を使用して Azure HDInsights 上の Apache Hive をAdobe Experience Platformに接続する方法を説明します。
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '477'
 ht-degree: 58%
 
 ---
 
-# の作成 [!DNL Apache Hive] オン [!DNL Azure HDInsights] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用したベ [!DNL Azure HDInsights] ス接続での [!DNL Apache Hive] ール作成
 
 >[!NOTE]
 >
->The [!DNL Apache Hive] オン [!DNL Azure HDInsights] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
+>[!DNL Azure HDInsights] コネクタの [!DNL Apache Hive] はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL Apache Hive] オン [!DNL Azure HDInsights] （以下「」という。）[!DNL Hive]」) を [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、[!DNL Azure HDInsights] 上の [!DNL Apache Hive] （以下「[!DNL Hive]」と呼びます）のベース接続を作成する手順について説明します。
 
 ## はじめに
 
@@ -29,7 +29,7 @@ ht-degree: 58%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Hive] の使用 [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Hive] ています。
 
 ### 必要な資格情報の収集
 
@@ -37,12 +37,12 @@ ht-degree: 58%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | の IP アドレスまたはホスト名 [!DNL Hive] サーバー。 |
-| `username` | アクセスに使用するユーザー名 [!DNL Hive] サーバー。 |
+| `host` | [!DNL Hive] サーバーの IP アドレスまたはホスト名。 |
+| `username` | サーバーへのアクセスに使用 [!DNL Hive] るユーザー名。 |
 | `password` | ユーザーに対応するパスワード。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Hive] 次に該当： `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Hive] の接続仕様 ID は `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` です。 |
 
-の導入について詳しくは、 [この Hive ドキュメント](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
+基本について詳しくは、[ この Hive ドキュメント ](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted) を参照してください。
 
 ### Platform API の使用
 
@@ -90,8 +90,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 次に示すように、 [!DNL Hive] アカウント。 |
-| `connectionSpec.id` | The [!DNL Hive] 接続仕様 ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
+| `auth.params.connectionString` | [!DNL Hive] アカウントに関連付けられた接続文字列。 |
+| `connectionSpec.id` | [!DNL Hive] 接続仕様 ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`。 |
 
 **応答**
 
@@ -106,7 +106,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Apache Hive] オン [!DNL Azure HDInsights] を使用したベース接続 [!DNL Flow Service] API. このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用してベース接続に [!DNL Apache Hive] ール [!DNL Azure HDInsights] 作成しました。 このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)

@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；couchbase;Couchbase
+keywords: Experience Platform；ホーム；人気のトピック；couchbase;Couchbase
 solution: Experience Platform
-title: フローサービス API を使用した Couchbase ベース接続の作成
+title: Flow Service API を使用した Couchbase ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用して Couchbase をAdobe Experience Platformに接続する方法を説明します。
+description: Flow Service API を使用して Couchbase をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 63%
+source-wordcount: '446'
+ht-degree: 64%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->The [!DNL Couchbase] コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
+>[!DNL Couchbase] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -29,14 +29,14 @@ ht-degree: 63%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Couchbase] の使用 [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Couchbase] ています。
 
 ### 必要な資格情報の収集
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | に接続するために使用される接続文字列 [!DNL Couchbase] インスタンス。 次の接続文字列パターン： [!DNL Couchbase] 次に該当 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. 接続文字列の取得について詳しくは、 [この Couchbase ドキュメント](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Couchbase] 次に該当 `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionString` | [!DNL Couchbase] インスタンスへの接続に使用する接続文字列。 [!DNL Couchbase] の接続文字列のパターンは `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];` です。 接続文字列の取得について詳しくは、[ この Couchbase ドキュメント ](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview) を参照してください。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Couchbase] の接続仕様 ID は `1fe283f6-9bec-11ea-bb37-0242ac130002` です。 |
 
 ### Platform API の使用
 
@@ -84,12 +84,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 接続に使用する接続文字列 [!DNL Couchbase] アカウント。 接続文字列のパターンは次のとおりです。 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | The [!DNL Couchbase] 接続仕様 ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `auth.params.connectionString` | [!DNL Couchbase] アカウントへの接続に使用する接続文字列。 接続文字列のパターンは `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];` です。 |
+| `connectionSpec.id` | [!DNL Couchbase] 接続仕様 ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`。 |
 
 **応答**
 
-正常な応答は、新しく作成された接続の詳細 ( 一意の識別子 (`id`) をクリックします。 この ID は、次のチュートリアルでデータを調べるために必要です。
+リクエストが成功した場合は、一意の ID （`id`）を含む、新しく作成された接続の詳細が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -103,4 +103,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Couchbase] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)

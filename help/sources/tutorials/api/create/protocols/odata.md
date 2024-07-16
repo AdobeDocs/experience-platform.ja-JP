@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；汎用 OData；汎用 ODATA
+keywords: Experience Platform；ホーム；人気のトピック；汎用 OData；汎用 odata
 solution: Experience Platform
-title: フローサービス API を使用した汎用 OData ベース接続の作成
+title: Flow Service API を使用した汎用 OData ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用して汎用 OData をAdobe Experience Platformに接続する方法を説明します。
+description: Flow Service API を使用して汎用 OData をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 71%
+source-wordcount: '426'
+ht-degree: 72%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 71%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Generic OData] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Generic OData] ています。
 
 ### 必要な資格情報の収集
 
@@ -33,10 +33,10 @@ ht-degree: 71%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `url` | のルート URL [!DNL Generic OData] サービス。 |
+| `url` | [!DNL Generic OData] サービスのルート URL。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Generic Generic OData] の接続仕様 ID は `8e6b41a8-d998-4545-ad7d-c6a9fff406c3` です。 |
 
-の導入について詳しくは、 [この [!DNL Generic OData] 文書](https://www.odata.org/getting-started/basic-tutorial/).
+基本について詳しくは、[ このドキュメント  [!DNL Generic OData]  を参照してください ](https://www.odata.org/getting-started/basic-tutorial/)。
 
 ### Platform API の使用
 
@@ -84,12 +84,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.url` | のホスト [!DNL Generic OData] サーバー。 |
-| `connectionSpec.id` | この [!DNL Generic OData] 接続仕様 ID: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
+| `auth.params.url` | [!DNL Generic OData] サーバーのホスト。 |
+| `connectionSpec.id` | [!DNL Generic OData] 接続仕様 ID: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`。 |
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の接続識別子 (`id`) をクリックします。 この ID は、次のチュートリアルでデータを調べるために必要です。
+応答が成功すると、一意の接続識別子（`id`）を含む、新しく作成された接続が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -103,4 +103,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Generic REST OData] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/protocols.md)
+* [ [!DNL Flow Service] API を使用した、プロトコルデータを Platform に取り込むデータフローの作成](../../collect/protocols.md)

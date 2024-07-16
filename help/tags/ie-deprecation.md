@@ -4,7 +4,7 @@ description: Adobe Experience Platform では、Internet Explorer 10 および 1
 exl-id: 35491c80-2a8a-4e07-baa7-a5db373b6852
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 100%
 
 ---

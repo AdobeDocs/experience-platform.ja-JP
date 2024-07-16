@@ -51,9 +51,9 @@ var product = _satellite.getVar('product');
 
 >[!NOTE]
 >
->パーセント (`%`) 構文を使用して、タグ実装内の多くのフォームフィールドの変数を参照し、を呼び出す必要がなくなります。 `_satellite.getVar()`. 例えば、 `%product%` は、製品データ要素またはカスタム変数の値にアクセスします。
+>パーセント（`%`）構文を使用して、タグ実装の多くのフォームフィールドの変数を参照し、`_satellite.getVar()` の呼び出しを減らすことができます。 例えば、`%product%` を使用すると、製品データ要素またはカスタム変数の値にアクセスします。
 
-イベントがルールをトリガーする際に、ルールの対応する `event` ～に向かう `_satellite.getVar()` 次のようにします。
+イベントがルールをトリガー設定する場合、次のように、ルールの対応する `event` オブジェクトを `_satellite.getVar()` に渡すことができます。
 
 ```javascript
 // event refers to the calling rule's event
@@ -64,7 +64,7 @@ var rule = _satellite.getVar('return event rule', event);
 
 >[!NOTE]
 >
->The `setVar` コードは、タグで指定されたデータ要素と完全に独立しています。
+>`setVar` コードは、タグで指定されたデータ要素から完全に分離されています。
 
 **コード**
 
@@ -160,7 +160,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->古い [`setCookie`](#setCookie) cookie を設定する方法では、この関数呼び出しの 3 番目（オプション）の引数は、cookie の有効期限を日数で示す整数でした。 この新しいメソッドでは、「attributes」オブジェクトを 3 番目の引数として受け取ります。 新しい方法で Cookie の有効期限を設定するには、 `expires` プロパティを設定し、必要な値に設定します。 以下に例を示します。
+>古い [`setCookie`](#setCookie) メソッドを使う cookie の設定方法では、この関数呼び出しの 3 番目（オプション）の引数は、cookie の有効期限を日数で示す整数でした。 この新しいメソッドでは、「attributes」オブジェクトを 3 番目の引数として受け取ります。 新しいメソッドを使用して cookie の有効期限を設定するには、attributes オブジェクトに `expires` プロパティを指定し、目的の値に設定する必要があります。 以下に例を示します。
 
 **例**
 

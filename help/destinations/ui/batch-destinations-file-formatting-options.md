@@ -4,8 +4,8 @@ title: ファイルベースの宛先のファイル形式オプションの設�
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 52%
+source-wordcount: '1193'
+ht-degree: 50%
 
 ---
 
@@ -24,15 +24,15 @@ Experience Platform UI を使用して、書き出したファイルに対して
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## ファイル形式設定 （CSV ファイルの場合） {#file-configuration}
+## CSV ファイルのファイル形式設定 {#file-configuration}
 
-ファイル形式設定オプションを表示するには、 [宛先に接続](/help/destinations/ui/connect-destination.md) ワークフロー。 選択 **データタイプ：セグメント** および **ファイルタイプ：CSV** 書き出したファイルのフォーマット設定を表示するには `CSV` ファイル。
+ファイル形式オプションを表示するには、[ 宛先に接続 ](/help/destinations/ui/connect-destination.md) ワークフローを開始します。 **データタイプ：セグメント** および **ファイルタイプ：CSV** を選択して、書き出された `CSV` ファイルで使用できるファイル形式設定を表示します。
 
 >[!IMPORTANT]
 >
 >接続先には、これらのオプションの一部が使用できない場合があります。 宛先でサポートするファイル形式オプションは、宛先の開発者が決定します。 宛先の開発者は、宛先に接続する際に使用できるオプションを決定できます。 必須オプションは、Experience Platform UI でアスタリスクでマークされます。
 > 
->Adobeが構築したクラウドストレージの宛先 — [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [データランディングゾーン](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) ：現在、以下で強調表示されている 6 つの CSV オプションのみをサポートしています。
+>Adobeが構築したクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、[SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）では、現在、以下にハイライト表示されている 6 つの CSV オプションのみがサポートされています。
 
 ![使用可能なファイル形式オプションの一部を示す画像。](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -43,9 +43,9 @@ Experience Platform UI を使用して、書き出したファイルに対して
 >title="区切り"
 >abstract="このコントロールを使用して、各フィールドと値の区切り記号を設定します。各選択の例については、ドキュメントを参照してください。"
 
-このコントロールを使用して、書き出された CSV ファイルの各フィールドと値の区切り文字を設定します。 利用可能なオプションは次のとおりです。
+このコントロールを使用して、書き出された CSV ファイルの各フィールドおよび値の区切り文字を設定します。 利用可能なオプションは次のとおりです。
 
-* コロン `(:)`
+* 結腸 `(:)`
 * コンマ `(,)`
 * パイプ `(|)`
 * セミコロン `(;)`
@@ -53,13 +53,13 @@ Experience Platform UI を使用して、書き出したファイルに対して
 
 #### 例
 
-UI の各選択項目と共に、書き出された CSV ファイルのコンテンツの以下の例を参照してください。
+書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* を使用した出力の例 **[!UICONTROL コロン`(:)`]** 選択済み： `male:John:Doe`
-* を使用した出力の例 **[!UICONTROL コンマ`(,)`]** 選択済み： `male,John,Doe`
-* を使用した出力の例 **[!UICONTROL パイプ`(|)`]** 選択済み： `male|John|Doe`
-* を使用した出力の例 **[!UICONTROL セミコロン`(;)`]** 選択済み： `male;John;Doe`
-* を使用した出力の例 **[!UICONTROL タブ`(\t)`]** 選択済み： `male \t John \t Doe`
+* **[!UICONTROL コロン`(:)`]** を選択した出力の例：`male:John:Doe`
+* **[!UICONTROL コンマ`(,)`]** を選択した場合の出力例：`male,John,Doe`
+* **[!UICONTROL Pipe`(|)`]** を選択した場合の出力例：`male|John|Doe`
+* **[!UICONTROL セミコロン`(;)`]** を選択した場合の出力例：`male;John;Doe`
+* **[!UICONTROL Tab`(\t)`]** を選択した場合の出力例：`male \t John \t Doe`
 
 ### 引用符文字 {#quote-character}
 
@@ -70,15 +70,15 @@ UI の各選択項目と共に、書き出された CSV ファイルのコンテ
 
 書き出した文字列から二重引用符を削除する場合は、このオプションを使用します。利用可能なオプションは次のとおりです。
 
-* **[!UICONTROL Null 文字 (\0000)]**. 書き出した CSV ファイルから二重引用符を削除するには、このオプションを使用します。
-* **[!UICONTROL 二重引用符 (&quot;)]**. 書き出した CSV ファイルで二重引用符を保持するには、このオプションを使用します。
+* **[!UICONTROL Null 文字（\0000）]**。 書き出された CSV ファイルから二重引用符を削除するには、このオプションを使用します。
+* **[!UICONTROL 二重引用符（&quot;）]**. 書き出した CSV ファイルで二重引用符を保持するには、このオプションを使用します。
 
 #### 例
 
-UI の各選択項目と共に、書き出された CSV ファイルのコンテンツの以下の例を参照してください。
+書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* を使用した出力の例 **[!UICONTROL Null 文字 (\0000)]** 選択済み： `Test,John,LastName`
-* を使用した出力の例 **[!UICONTROL 二重引用符 (&quot;)]** 選択済み： `"Test","John","LastName"`
+* **[!UICONTROL Null 文字（\0000）]** 選択された出力例：`Test,John,LastName`
+* **[!UICONTROL 二重引用符（&quot;）を選択し]** 出力の例：`"Test","John","LastName"`
 
 ### エスケープ文字 {#escape-character}
 
@@ -87,17 +87,17 @@ UI の各選択項目と共に、書き出された CSV ファイルのコンテ
 >title="エスケープ文字"
 >abstract="既に引用されている値の内部で引用符をエスケープするために使用する 1 文字を設定します。各選択の例については、ドキュメントを参照してください。"
 
-既に引用符で囲まれた値内の引用符をエスケープするための 1 文字を設定するには、このオプションを使用します。 例えば、このオプションは、文字列の一部が既に二重引用符で囲まれている二重引用符で囲まれた文字列がある場合に便利です。 このオプションは、内側の二重引用符を置き換える文字を決定します。 利用可能なオプションは次のとおりです。
+既に引用されている値の内部で引用符をエスケープする 1 文字を設定するには、このオプションを使用します。 例えば、このオプションは、文字列の一部が既に二重引用符で囲まれている文字列を二重引用符で囲んでいる場合に便利です。 このオプションは、内側の二重引用符を置き換える文字を決定します。 利用可能なオプションは次のとおりです。
 
 * バックスラッシュ `(\)`
 * 一重引用符 `(')`
 
 #### 例
 
-UI の各選択項目と共に、書き出された CSV ファイルのコンテンツの以下の例を参照してください。
+書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* を使用した出力の例 **[!UICONTROL バックスラッシュ`(\)`]** 選択済み： `"Test,\"John\",LastName"`
-* を使用した出力の例 **[!UICONTROL 一重引用符`(')`]** 選択済み： `"Test,'"John'",LastName"`
+* **[!UICONTROL バックスラッシュ`(\)`]** を選択した場合の出力例：`"Test,\"John\",LastName"`
+* **[!UICONTROL 一重引用符`(')`]** を選択した場合の出力例：`"Test,'"John'",LastName"`
 
 ### 空の値出力 {#empty-value-output}
 
@@ -106,23 +106,23 @@ UI の各選択項目と共に、書き出された CSV ファイルのコンテ
 >title="空の値出力"
 >abstract="このオプションを使用して、書き出された CSV ファイルで空の値を表す方法を設定します。各選択の例については、ドキュメントを参照してください。"
 
-空の値の文字列表現を設定するには、このコントロールを使用します。 このオプションは、書き出した CSV ファイルで空の値をどのように表すかを決定します。 利用可能なオプションは次のとおりです。
+このコントロールを使用して、空の値の文字列表現を設定します。 このオプションは、書き出された CSV ファイルで空の値を表す方法を決定します。 利用可能なオプションは次のとおりです。
 
-* **[!UICONTROL Null (null)]**
-* **二重引用符で囲まれた空の文字列 (&quot;&quot;)**
+* **[!UICONTROL ヌル（null）]**
+* **二重引用符（&quot;）で囲まれた空の文字列**
 * **[!UICONTROL 空の文字列]**
 
 #### 例
 
-UI の各選択項目と共に、書き出された CSV ファイルのコンテンツの以下の例を参照してください。
+書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* を使用した出力の例 **[!UICONTROL null]** 選択済み： `male,NULL,TestLastName`. この場合、Experience Platformは空の値を null 値に変換します。
-* を使用した出力の例 **&quot;&quot;** 選択済み： `male,"",TestLastName`. この場合、Experience Platformは空の値を二重引用符の対に変換します。
-* を使用した出力の例 **[!UICONTROL 空の文字列]** 選択済み： `male,,TestLastName`. この場合、Experience Platformは空の値をそのまま維持し、（二重引用符なしで）そのまま書き出します。
+* **[!UICONTROL null]** を選択した出力の例：`male,NULL,TestLastName`。 この場合、Experience Platformは空の値を null 値に変換します。
+* **&quot;&quot;** を選択した場合の出力例：`male,"",TestLastName`。 この場合、Experience Platformは空の値を二重引用符のペアに変換します。
+* **[!UICONTROL 空の文字列]** を選択した出力の例：`male,,TestLastName`。 この場合、Experience Platformは空の値を保持し、そのまま（二重引用符なしで）書き出します。
 
 >[!TIP]
 >
->空の値出力と以下のセクションでの null 値出力の違いは、空の値には実際の空の値が含まれるという点です。 NULL 値には値がまったくありません。 空の値はテーブル上の空のガラスとして考え、null 値はテーブル上にガラスがまったくないと考えます。
+>以下の節で示す空の値出力と null 値の出力の違いは、空の値には空の実際の値が含まれることです。 NULL 値には値がありません。 空の値はテーブル上に空のガラスがあり、null 値はテーブルにガラスがまったくない状態と考えてください。
 
 ### Null 値出力 {#null-value-output}
 
@@ -131,19 +131,19 @@ UI の各選択項目と共に、書き出された CSV ファイルのコンテ
 >title="Null 値出力"
 >abstract="このコントロールを使用して、書き出されたファイル内の null 値の文字列表現を設定します。各選択の例については、ドキュメントを参照してください。"
 
-このコントロールを使用して、書き出されたファイル内の null 値の文字列表現を設定します。このオプションは、書き出した CSV ファイルで null 値をどのように表すかを決定します。 利用可能なオプションは次のとおりです。
+このコントロールを使用して、書き出されたファイル内の null 値の文字列表現を設定します。このオプションは、書き出された CSV ファイルで null 値を表す方法を決定します。 利用可能なオプションは次のとおりです。
 
-* **[!UICONTROL Null (null)]**
-* **二重引用符で囲まれた空の文字列 (&quot;&quot;)**
+* **[!UICONTROL ヌル（null）]**
+* **二重引用符（&quot;）で囲まれた空の文字列**
 * **[!UICONTROL 空の文字列]**
 
 #### 例
 
-UI の各選択項目と共に、書き出された CSV ファイルのコンテンツの以下の例を参照してください。
+書き出された CSV ファイルのコンテンツの以下の例と、UI での各選択項目を表示します。
 
-* を使用した出力の例 **[!UICONTROL null]** 選択済み： `male,NULL,TestLastName`. この場合、変換はおこなわれず、CSV ファイルに null 値が含まれます。
-* を使用した出力の例 **&quot;&quot;** 選択済み： `male,"",TestLastName`. この場合、Experience Platformは、空の文字列を囲む二重引用符で Null 値を置き換えます。
-* を使用した出力の例 **[!UICONTROL 空の文字列]** 選択済み： `male,,TestLastName`. この場合、Experience Platformは、null 値を（二重引用符なしで）空の文字列に置き換えます。
+* **[!UICONTROL null]** を選択した出力の例：`male,NULL,TestLastName`。 この場合、変換は行われず、CSV ファイルに null 値が含まれます。
+* **&quot;&quot;** を選択した場合の出力例：`male,"",TestLastName`。 この場合、Experience Platformは null 値を空の文字列を二重引用符で囲んで置き換えます。
+* **[!UICONTROL 空の文字列]** を選択した出力の例：`male,,TestLastName`。 この場合、Experience Platformは null 値を空の文字列（二重引用符なし）に置き換えます。
 
 ### 圧縮形式 {#compression-format}
 

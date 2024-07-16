@@ -5,7 +5,7 @@ exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
 source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -13,21 +13,21 @@ ht-degree: 43%
 
 ## 概要 {#overview}
 
-[!DNL DataX] は集計です [!DNL Verizon Media/Yahoo] を可能にする様々なコンポーネントをホストするインフラストラクチャ [!DNL Verizon Media/Yahoo] 外部パートナーと安全で自動化された拡張性の高い方法でデータを交換する。
+[!DNL DataX] は、安全で自動化されたスケーラブルな方法で外部パートナーとデータを交換で [!DNL Verizon Media/Yahoo] る様々なコンポーネントをホストする集約 [!DNL Verizon Media/Yahoo] インフラストラクチャです。
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、によって作成および管理されます [!DNL Verizon Media/Yahoo]&#39;s [!DNL DataX] チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>この宛先コネクタとドキュメントページは、[!DNL Verizon Media/Yahoo] の [!DNL DataX] チームが作成および管理します。 お問い合わせや更新のリクエストについては、[dataops@verizonmedia.comまで直接ご連絡ください ](mailto:dataops@verizonmedia.com)
 
 ## 前提条件 {#prerequisites}
 
 **MDM ID**
 
-これは、 [!DNL Yahoo DataX] この宛先へのデータエクスポートを設定する際には、必須のフィールドです。 この ID がわからない場合は、 [!DNL Yahoo DataX] アカウントマネージャー。
+これは [!DNL Yahoo DataX] の一意の ID で、この宛先へのデータ書き出しを設定するための必須フィールドです。 この ID が不明な場合は、[!DNL Yahoo DataX] アカウントマネージャーにお問い合わせください。
 
 **分類メタデータ**
 
-分類リソースは、ベースを介して拡張を定義します。 [!DNL DataX] メタデータの構造
+分類リソースは、ベース [!DNL DataX] メタデータ構造に対する拡張を定義します
 
 ```
 {
@@ -48,31 +48,31 @@ ht-degree: 43%
 }
 ```
 
-詳細を表示： [分類メタデータ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) （内） [!DNL DataX] 開発者向けドキュメント。
+[ 分類メタデータ ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) の詳細については、[!DNL DataX] 開発者向けドキュメントを参照してください。
 
 ## レート制限とガードレール {#rate-limits-guardrails}
 
 >[!IMPORTANT]
 >
->100 を超えるオーディエンスをアクティブ化する場合 [!DNL Verizon Media/Yahoo DataX]の場合は、宛先からレート制限エラーが発生する可能性があります。 この宛先に対してオーディエンスをアクティブ化する場合は、1 つのアクティベーションデータフローで 100 未満のオーディエンスをアクティブ化するようにします。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントで新しい宛先を作成します。
+>[!DNL Verizon Media/Yahoo DataX] に 100 を超えるオーディエンスをアクティブ化すると、宛先からレート制限エラーを受け取る場合があります。 この宛先に対してオーディエンスをアクティブ化する場合、1 つのアクティベーションデータフローでアクティブ化するオーディエンスが 100 個未満になるようにしてください。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントに新しい宛先を作成します。
 
-[!DNL DataX] は、分類およびオーディエンスの投稿に対するクォータ制限に従って、 [DataX ドキュメント](https://developer.verizonmedia.com/datax/guide/rate-limits/).
+[DataX ドキュメント ](https://developer.verizonmedia.com/datax/guide/rate-limits/) に概説されている分類やオーディエンスの投稿の割り当て量の制限に対して、[!DNL DataX] れはレート制限されています。
 
 
 | エラーコード | エラーメッセージ | 説明 |
 |---------|----------|---------|
-| 429 リクエストが多すぎます | レート制限を 1 時間に超えました **（上限：100）** | プロバイダーあたり 1 時間で許可されるリクエストの数。 |
+| 429 リクエストが多すぎます | 1 時間あたりのレート制限を超えています **（制限：100）** | プロバイダーごとに 1 時間に許可されるリクエストの数。 |
 
 {style="table-layout:auto"}
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Verizon Media] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
+[!DNL Verizon Media] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
-| GAID | Google Advertising ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
+| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 
 {style="table-layout:auto"}
@@ -83,22 +83,22 @@ ht-degree: 43%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | Verizon Media の宛先で使用される識別子（E メール、GAID、IDFA）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | Verizon Media の宛先で使用される識別子（メール、GAID、IDFA）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
 ## ユースケース {#use-cases}
 
-[!DNL DataX] API は、 [!DNL Verizon Media] (VMG) は、VMG のほぼリアルタイム API を使用して、新しいオーディエンスをすばやく作成し、目的のオーディエンスグループをプッシュできます。
+[!DNL Verizon Media] （VMG）のメールアドレスをキーに特定のオーディエンスグループをターゲットにしたい広告主は、[!DNL DataX] API を使用して、新しいオーディエンスをすばやく作成し、VMG のほぼリアルタイムの API を使用して目的のオーディエンスグループをプッシュできます。
 
 ## 宛先に接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-![Platform UI での Yahoo DataX 宛先カード](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
+![Platform UI の Yahoo DataX 宛先カード ](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -108,7 +108,7 @@ ht-degree: 43%
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL MDM ID]**：これは、 [!DNL Yahoo DataX] この宛先へのデータエクスポートを設定する際には、必須のフィールドです。 この ID がわからない場合は、 [!DNL Yahoo DataX] アカウントマネージャー。  MDM ID を使用すると、データは特定の排他的ユーザー（広告主のファーストパーティデータなど）とのみ使用するように制限できます。
+* **[!UICONTROL MDM ID]**：これは [!DNL Yahoo DataX] の一意の ID で、この宛先へのデータの書き出しを設定するための必須フィールドです。 この ID が不明な場合は、[!DNL Yahoo DataX] アカウントマネージャーにお問い合わせください。  MDM ID を使用すると、特定の排他的なユーザーのセット（広告主向けのファーストパーティデータなど）でのみデータを使用するように制限できます。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -120,10 +120,10 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-読み取り [宛先へのプロファイルとオーディエンスのアクティブ化](../../ui/activate-segment-streaming-destinations.md) を参照してください。
+宛先にオーディエンスをアクティブ化する手順については、[ 宛先へのプロファイルとオーディエンスのアクティブ化 ](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -131,4 +131,4 @@ ht-degree: 43%
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、 [!DNL Yahoo/Verizon Media] [に関するドキュメント [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).
+詳しくは、[!DNL Yahoo/Verizon Media][ のドキュメント  [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/) を参照してください。

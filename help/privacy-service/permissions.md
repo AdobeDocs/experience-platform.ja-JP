@@ -4,8 +4,8 @@ description: Adobe Admin Console を使用して Adobe Experience Platform Priva
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 54%
+source-wordcount: '1481'
+ht-degree: 53%
 
 ---
 
@@ -31,7 +31,7 @@ Privacy Service のアクセス制御を設定するには、Adobe Experience Pl
 
 >[!NOTE]
 >
->すべてのPrivacy Serviceと [!UICONTROL 販売のオプトアウト] 権限は異なり、機能の重複がない間、互いに切り離されます。 これは、Privacy ServiceAPI がべき等と見なされるので可能です。
+>すべてのPrivacy Service権限と [!UICONTROL  販売のオプトアウト ] 権限は異なり、機能的に重複することなく、相互に分離されています。 Privacy ServiceAPI がべき等と見なされるので、これが可能です。
 
 | カテゴリ | 権限 | 説明 |
 | --- | --- | --- |
@@ -47,17 +47,17 @@ Privacy Service のアクセス制御を設定するには、Adobe Experience Pl
 
 Privacy Service の権限を管理するには、[Admin Console](https://adminconsole.adobe.com/) にログインし、上部ナビゲーションから「**[!UICONTROL 製品]**」を選択します。こちらから、「**[!UICONTROL Adobe Experience Platform Privacy Service]**」を選択します。
 
-![Admin Console製品カードがハイライト表示されたPrivacy Service。](./images/permissions/privacy-service-card.png)
+![Privacy Service商品カードがハイライト表示されたAdmin Console。](./images/permissions/privacy-service-card.png)
 
 ### 製品プロファイルの選択または作成
 
 次の画面には、組織で使用可能な Privacy Service の製品プロファイルのリストが表示されます。製品プロファイルが存在しない場合は、「**[!UICONTROL 新規プロファイル]**」を選択して作成します。組織内に異なるレベルのアクセスを必要とする複数の役割またはユーザーグループがある場合は、それぞれに個別の製品プロファイルを作成する必要があります。
 
-![Admin Console製品プロファイルがハイライトされたPrivacy Service。](./images/permissions/select-or-create-profile.png)
+![Privacy Serviceの製品プロファイルがハイライト表示されたAdmin Console。](./images/permissions/select-or-create-profile.png)
 
 製品プロファイルを選択したら、「**[!UICONTROL 権限]**」タブを使用してプロファイルの[権限の編集](#edit-permissions)を開始するか、「**[!UICONTROL ユーザー]**」タブを選択してプロファイルへの[ユーザーの割り当て](#assign-users)を開始できます。
 
-![製品プロファイルAdmin Consoleの「権限」タブ。](./images/permissions/users-permissions-tabs.png)
+![ 製品プロファイルAdmin Consoleの「権限」タブ ](./images/permissions/users-permissions-tabs.png)
 
 ### プロファイルの権限の編集 {#edit-permissions}
 
@@ -65,25 +65,25 @@ Privacy Service の権限を管理するには、[Admin Console](https://adminco
 
 プロファイルの権限を編集する場合、使用可能な権限が左側の列にリストされ、プロファイルに含まれている権限が右側の列にリストされます。リストされた権限を選択して、いずれかの列間で移動します。
 
-![使用可能な権限列と含まれる権限列。](./images/permissions/edit-permissions.png)
+![ 使用可能な権限列と含まれている権限列 ](./images/permissions/edit-permissions.png)
 
 権限はカテゴリに分類されています。カテゴリを切り替えるには、左のナビゲーションから目的のカテゴリを選択します。
 
-![The [!UICONTROL 販売のオプトアウト] 」の節を参照してください。](./images/permissions/switch-category.png)
+![ 権限の下の [!UICONTROL  販売のオプトアウト ] の節。](./images/permissions/switch-category.png)
 
 権限の設定が完了したら、「**[!UICONTROL 保存]**」を選択します。
 
-![「保存」がハイライト表示された製品プロファイルの権限設定。](./images/permissions/save-permissions.png)
+![ 「保存」がハイライト表示された製品プロファイルの権限設定。](./images/permissions/save-permissions.png)
 
 追加された権限が反映された製品プロファイルビューが再表示されます。
 
-![製品プロファイルに追加された権限。](./images/permissions/permissions-added.png)
+![ 製品プロファイル用に追加された権限 ](./images/permissions/permissions-added.png)
 
 ### プロファイルへのユーザーの割り当て {#assign-users}
 
 ユーザーを製品プロファイルに割り当て（およびプロファイルで設定された権限を付与）するには、「**[!UICONTROL ユーザー]**」タブに続いて「**[!UICONTROL ユーザーを追加]**」を選択します。
 
-![Admin Console内の製品プロファイルの「ユーザー」タブ。](./images/permissions/manage-users.png)
+![Admin Consoleの製品プロファイル用の「ユーザー」タブ ](./images/permissions/manage-users.png)
 
 製品プロファイル用のユーザー管理について詳しくは、[Admin Console のドキュメント](https://helpx.adobe.com/jp/enterprise/using/manage-product-profiles.html)を参照してください。
 
@@ -93,49 +93,49 @@ Privacy Service の権限を管理するには、[Admin Console](https://adminco
 >
 >この節の説明は、Privacy Service 権限が Adobe Admin Console に統合される前に作成された既存の API 資格情報にのみ適用されます。新しい資格情報の場合、代わりに、[Adobe Developer Console プロジェクト](https://developer.adobe.com/developer-console/docs/guides/projects/)を通じて製品プロファイル（およびその権限）が割り当てられます。<br><br>詳しくは、[プロジェクトへの製品プロファイルの割り当て](./api/getting-started.md#product-profiles)（Privacy Service API 入門ガイド）に関する節を参照してください。
 
-以前は、技術アカウントでは、統合と権限に対して製品プロファイルは必要ありませんでした。 ただし、Privacy Service権限が最近改善されたので、従来の API 資格情報を製品プロファイルに移行する必要が生じました。 この更新により、テクニカルアカウント所有者に対して詳細な権限を付与できます。 以下の手順に従って、Privacy Serviceのテクニカルアカウント権限を更新します。
+以前は、テクニカルアカウントには、統合と権限のための製品プロファイルは必要ありませんでした。 ただし、最近のPrivacy Service権限の機能強化により、従来の API 資格情報を製品プロファイルに移行する必要が生じています。 この更新により、テクニカルアカウント所有者に詳細な権限を付与できます。 以下の手順に従って、Privacy Service用のテクニカルアカウント権限を更新します。
 
 #### テクニカルアカウント権限の更新 {#update-tech-account-permissions}
 
-テクニカルアカウントに権限セットを割り当てる最初の手順は、 [Adobe Admin Console](https://adminconsole.adobe.com/) をクリックし、Privacy Service用の新しい製品プロファイルを作成します。
+テクニカルアカウントに権限セットを割り当てる最初の手順は、[Adobe Admin Consoleに移動し ](https://adminconsole.adobe.com/)Privacy Service用の新しい製品プロファイルを作成することです。
 
-Admin ConsoleUI から、 **製品** ナビゲーションバーから、 **[!UICONTROL Experience Cloud]** および **[!UICONTROL Adobe Experience Platform Privacy Service]** 左側のサイドバーに表示されます。 The [!UICONTROL 製品プロファイル] 」タブが表示されます。 選択 **新しいプロファイル** をクリックして、Privacy Service用の新しい製品プロファイルを作成します。
+Admin Console UI で、ナビゲーションバーから **製品** を選択したあと、左側のサイドバーで「**[!UICONTROL Experience Cloud]**」と「**[!UICONTROL Adobe Experience Platform Privacy Service]**」を選択します。 「[!UICONTROL  製品プロファイル ]」タブが表示されます。 **新規プロファイル** を選択して、Privacy Service用の新しい製品プロファイルを作成します。
 
-![Adobe Admin Consoleの「Experience PlatformPrivacy Service製品プロファイル」タブで、「新しいプロファイル」がハイライトされています。](./images/permissions/create-product-profile.png)
+![ 新しいプロファイルがハイライト表示されたAdobe Admin Consoleの「Experience Platform Privacy Service製品プロファイル」タブ ](./images/permissions/create-product-profile.png)
 
-The [!UICONTROL 新しい製品プロファイルの作成] ダイアログが表示されます。 製品プロファイルの作成方法に関する完全な手順については、 [プロファイル作成用 UI ガイド](../access-control/ui/create-profile.md).
+[!UICONTROL  新しい製品プロファイルの作成 ] ダイアログが表示されます。 製品プロファイルの作成方法に関する詳しい手順については、[ プロファイルを作成するための UI ガイド ](../access-control/ui/create-profile.md) を参照してください。
 
-新しい製品プロファイルを保存したら、 [Adobe Developer Console](https://developer.adobe.com/console/home) その製品またはそのプロジェクトにログインします。 選択 **[!UICONTROL プロジェクト]** 上部のナビゲーションから、プロジェクトのカードの順に選択します。
+新しい製品プロファイルを保存したら、[Adobe Developer Consoleに移動し ](https://developer.adobe.com/console/home) その製品またはプロジェクトにログインします。 上部ナビゲーションから **[!UICONTROL プロジェクト]** を選択し、その後プロジェクトのカードを選択します。
 
 >[!NOTE]
 >
->キャッシュをクリアするか、新しいプロジェクトが開発者コンソールプロジェクトのリストに表示されるまでしばらく待つ必要がある場合があります。
+>キャッシュをクリアしたり、新しいプロジェクトがDeveloper Console プロジェクトのリストに表示されるまでしばらく待つ必要がある場合があります。
 
-プロジェクトにログインした後、 **[!UICONTROL Privacy ServiceAPI]** 左側のサイドバーからの統合。
+プロジェクトにログインしたら、左側のサイドバーから **[!UICONTROL Privacy ServiceAPI]** 統合を選択します。
 
-![プロジェクト API とPrivacy ServiceAPI がハイライトされたAdobe Developerコンソールの「プロジェクト」タブ。](./images/permissions/login-to-dev-console-project.png)
+![ プロジェクトとPrivacy ServiceAPI がハイライト表示されたAdobe Developer Consoleの「プロジェクト」タブ。](./images/permissions/login-to-dev-console-project.png)
 
-「Privacy ServiceAPI 統合」ダッシュボードが表示されます。 このダッシュボードから、そのプロジェクトに関連付けられている製品プロファイルを編集できます。 選択 **[!UICONTROL 製品プロファイルの編集]** をクリックしてプロセスを開始します。 The [!UICONTROL API の設定] ダイアログが表示されます。
+Privacy ServiceAPI 統合ダッシュボードが表示されます。 このダッシュボードから、そのプロジェクトに関連付けられている製品プロファイルを編集できます。 **[!UICONTROL 製品プロファイルを編集]** を選択して、プロセスを開始します。 [!UICONTROL API を設定 ] ダイアログが表示されます。
 
-![Adobe Developerコンソールの「Privacy ServiceAPI 統合」ダッシュボード（「製品プロファイルを編集」がハイライトされています）](./images/permissions/edit-product-profiles.png)
+![ 「製品プロファイルを編集」がハイライト表示されたAdobe Developer ConsoleのPrivacy ServiceAPI 統合ダッシュボード ](./images/permissions/edit-product-profiles.png)
 
-The [!UICONTROL API の設定] ダイアログには、サービスに現在存在する使用可能な製品プロファイルが表示されます。 管理コンソールで作成した製品プロファイルと関連付けられます。 使用可能な製品プロファイルのリストから、Admin Console でテクニカルアカウント用に作成した新しい製品プロファイルのチェックボックスを選択します。 これにより、このテクニカルアカウントが、選択した製品プロファイルの権限に自動的に関連付けられます。 選択 **[!UICONTROL 設定済み API を保存]** をクリックして設定を確定します。
+[!UICONTROL API を設定 ] ダイアログには、現在サービスに存在する使用可能な製品プロファイルが表示されます。 これらは、admin console で作成された製品プロファイルに関連付けられます。 使用可能な製品プロファイルのリストから、admin console でテクニカルアカウント用に作成した新しい製品プロファイルのチェックボックスを選択します。 これにより、このテクニカルアカウントが、選択した製品プロファイルの権限に自動的に関連付けられます。 **[!UICONTROL 設定済み API を保存]** を選択して、設定を確定します。
 
 >[!NOTE]
 >
 >テクニカルアカウントが既に製品プロファイルに関連付けられている場合、使用可能な製品プロファイルのリストにあるチェックボックスの 1 つが既に選択されています。
 
-![Adobe Developer Console の API を設定ダイアログに、製品プロファイルのチェックボックスと「設定済み API を保存」がハイライト表示されています。](./images/permissions/select-profile-for-tech-account.png)
+![ 製品プロファイルのチェックボックスと「設定済み API を保存」がハイライト表示されたAdobe Developer Consoleの API を設定ダイアログ ](./images/permissions/select-profile-for-tech-account.png)
 
 #### 設定が適用されていることを確認します {#confirm-applied-settings}
 
-設定がアカウントに適用されたことを確認するには、以下を実行します。 に戻ります。 [Admin Console](https://adminconsole.adobe.com/) 新しく作成した製品プロファイルに移動します。 を選択します。 **[!UICONTROL API 資格情報]** タブをクリックし、関連するプロジェクトのリストを表示します。 製品プロファイルをテクニカルアカウントに割り当てた開発者コンソールで使用されるプロジェクトが、資格情報のリストに表示されます。 各 API 秘密鍵証明書の名前は、プロジェクト名と、ランダムに生成された番号が末尾に付加されたもので構成されます。 秘密鍵証明書を選択してを開きます。 [!UICONTROL 詳細] パネル。
+設定がアカウントに適用されたことを確認します。 [Admin Consoleに戻り ](https://adminconsole.adobe.com/) 新しく作成した製品プロファイルに移動します。 「**[!UICONTROL API 資格情報]**」タブを選択して、関連プロジェクトのリストを表示します。 製品プロファイルをテクニカルアカウントに割り当てた、Developer Consoleで使用するプロジェクトが、資格情報のリストに表示されます。 各 API 資格情報の名前は、プロジェクト名と、末尾に付加されたランダムに生成された数字で構成されます。 資格情報を選択して [!UICONTROL  詳細 ] パネルを開きます。
 
-![「 API 資格情報」タブが表示され、Admin Console内の製品プロファイルと、一連のプロジェクト資格情報がハイライト表示されています。](./images/permissions/confirm-credentials-in-admin-console.png)
+![ 「API 資格情報」タブとプロジェクト資格情報の行がハイライト表示されたAdmin Console内の製品プロファイル。](./images/permissions/confirm-credentials-in-admin-console.png)
 
-The [!UICONTROL 詳細] パネルには、関連する技術 ID、API キー、作成日、最終変更日、および関連するAdobe製品など、API 資格情報に関する情報が含まれています。
+[!UICONTROL  詳細 ] パネルには、関連するテクニカル ID、API キー、作成および最終変更日、関連するAdobe商品など、API 資格情報に関する情報が含まれています。
 
-![Admin Console内の API 秘密鍵証明書で強調表示されている詳細パネル。](./images/permissions/admin-console-details-panel.png)
+![Admin Console内の API 認証情報のハイライト表示された詳細パネル。](./images/permissions/admin-console-details-panel.png)
 
 ## 次の手順
 

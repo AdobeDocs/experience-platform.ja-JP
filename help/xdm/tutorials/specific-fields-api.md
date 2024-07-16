@@ -4,7 +4,7 @@ description: スキーマレジストリ API を使用して、既存のフィ�
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '625'
 ht-degree: 100%
 
 ---

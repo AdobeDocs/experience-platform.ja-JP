@@ -1,6 +1,6 @@
 ---
 title: キーと値のペアのデータタイプ
-description: キー値ペアエクスペリエンスデータモデル (XDM) データタイプについて説明します。
+description: キーと値のペアの Experience Data Model （XDM）データタイプについて説明します。
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt

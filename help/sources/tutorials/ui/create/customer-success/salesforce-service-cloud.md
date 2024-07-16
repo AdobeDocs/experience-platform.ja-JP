@@ -9,9 +9,9 @@ ht-degree: 21%
 
 ---
 
-# を接続 [!DNL Salesforce Service Cloud] ui を使用したExperience Platformへのアカウント設定
+# UI を使用して [!DNL Salesforce Service Cloud] アカウントをExperience Platformに接続する
 
-このチュートリアルでは、を接続する手順を説明します [!DNL Salesforce Service Cloud] Experience Platformユーザーインターフェイスを使用して、アカウントを設定し、カスタマーサクセスデータをAdobe Experience Platformに取り込みます。
+このチュートリアルでは、Experience Platformユーザーインターフェイスを使用して [!DNL Salesforce Service Cloud] アカウントを接続し、カスタマーサクセスデータをAdobe Experience Platformに取り込む手順について説明します。
 
 ## はじめに
 
@@ -22,98 +22,98 @@ ht-degree: 21%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効ながある場合 [!DNL Salesforce Service Cloud] 接続する場合は、このドキュメントの残りの部分をスキップし、に関するチュートリアルに進んでください。 [カスタマーサクセスのためのデータフローの設定](../../dataflow/customer-success.md)
+既に有効な [!DNL Salesforce Service Cloud] 接続がある場合は、このドキュメントの残りの部分をスキップし、[ カスタマーサクセスのためのデータフローの設定 ](../../dataflow/customer-success.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-この [!DNL Salesforce Service Cloud] ソースは、基本認証および OAuth2 クライアント資格情報をサポートします。
+[!DNL Salesforce Service Cloud] ソースは、基本認証と OAuth2 クライアント資格情報をサポートしています。
 
 >[!BEGINTABS]
 
->[!TAB 基本認証]
+>[!TAB  基本認証 ]
 
-を接続するには、次の資格情報の値を指定する必要があります [!DNL Salesforce Service Cloud] 基本認証を使用するアカウント。
-
-| 資格情報 | 説明 |
-| --- | --- |
-| 環境 URL | の URL [!DNL Salesforce Service Cloud] ソースインスタンス。 |
-| ユーザー名 | のユーザー名 [!DNL Salesforce Service Cloud] ユーザーアカウント。 |
-| パスワード | パスワード： [!DNL Salesforce Service Cloud] ユーザーアカウント。 |
-| セキュリティトークン | のセキュリティトークン [!DNL Salesforce Service Cloud] ユーザーアカウント。 |
-| API バージョン | （オプション）の REST API バージョン [!DNL Salesforce Service Cloud] 使用しているインスタンス。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョンを使用している場合 `52`の場合、値をに入力する必要があります `52.0`. このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
-
-認証について詳しくは、次を参照してください [この [!DNL Salesforce Service Cloud] 認証ガイド](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
-
->[!TAB OAuth2 クライアント資格情報]
-
-を接続するには、次の資格情報の値を指定する必要があります [!DNL Salesforce Service Cloud] oauth2 クライアント資格情報を使用するアカウント。
+基本認証を使用して [!DNL Salesforce Service Cloud] アカウントに接続するには、次の資格情報の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
-| 環境 URL | の URL [!DNL Salesforce Service Cloud] ソースインスタンス。 |
-| クライアント ID | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、アプリケーションを識別して、アカウントに代わってアプリケーションを動作させることができます [!DNL Salesforce Service Cloud]. |
-| クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、アプリケーションを識別して、アカウントに代わってアプリケーションを動作させることができます [!DNL Salesforce Service Cloud]. |
-| API バージョン | の REST API バージョン [!DNL Salesforce Service Cloud] 使用しているインスタンス。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョンを使用している場合 `52`の場合、値をに入力する必要があります `52.0`. このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
+| 環境 URL | [!DNL Salesforce Service Cloud] ソースインスタンスの URL。 |
+| ユーザー名 | [!DNL Salesforce Service Cloud] ユーザーアカウントのユーザー名。 |
+| パスワード | [!DNL Salesforce Service Cloud] ユーザーアカウントのパスワード。 |
+| セキュリティトークン | [!DNL Salesforce Service Cloud] ユーザーアカウントのセキュリティ トークン。 |
+| API バージョン | （オプション）使用している [!DNL Salesforce Service Cloud] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
 
-用の OAuth の使用の詳細 [!DNL Salesforce Service Cloud]、を読み取ります [[!DNL Salesforce Service Cloud] oauth 認証フローのガイド](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+認証について詳しくは、[ この  [!DNL Salesforce Service Cloud]  認証ガイド ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm) を参照してください。
+
+>[!TAB OAuth2 クライアント資格情報 ]
+
+OAuth2 クライアント資格情報を使用して [!DNL Salesforce Service Cloud] アカウントに接続するには、次の資格情報の値を指定する必要があります。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| 環境 URL | [!DNL Salesforce Service Cloud] ソースインスタンスの URL。 |
+| クライアント ID | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce Service Cloud] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
+| クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce Service Cloud] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
+| API バージョン | 使用している [!DNL Salesforce Service Cloud] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
+
+[!DNL Salesforce Service Cloud] に対する OAuth の使用について詳しくは、[[!DNL Salesforce Service Cloud] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5) を参照してください。
 
 >[!ENDTABS]
 
-必要な資格情報を収集したら、次の手順に従って接続できます [!DNL Salesforce Service Cloud] Experience Platformするアカウント。
+必要な資格情報を収集したら、次の手順に従って [!DNL Salesforce Service Cloud] アカウントをExperience Platformに接続できます。
 
 ## [!DNL Salesforce Service Cloud] アカウントを接続
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-を選択 **[!DNL Salesforce Service Cloud]** の下 *[!UICONTROL カスタマーサクセス]* カテゴリを選択してから、 **[!UICONTROL データを追加]**.
+*[!UICONTROL カスタマーサクセス]* カテゴリの下の **[!DNL Salesforce Service Cloud]** を選択してから、**[!UICONTROL データを追加]** を選択します。
 
 >[!TIP]
 >
->ソースカタログ内のソースには、 **[!UICONTROL の設定]** 特定のソースがまだ認証済みアカウントを持っていない場合のオプション。 認証済みアカウントが存在すると、このオプションはに変更されます。 **[!UICONTROL データを追加]**.
+>ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![Salesforce Service Cloud ソースカードが選択されたExperience PlatformUI のソースカタログ。](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
+![Salesforce Service Cloud ソースカードが選択されたExperience PlatformUI のソースカタログ ](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
-この **[!UICONTROL Salesforce Service Cloud への接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Salesforce Service Cloud に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウントを使用
 
-既存のアカウントを使用するには、を選択します **[!UICONTROL 既存のアカウント]**&#x200B;表示されるリストから目的のアカウントを選択します。 終了したら、 **[!UICONTROL 次]** をクリックして続行します。
+既存のアカウントを使用するには、**[!UICONTROL 既存のアカウント]** を選択し、表示されるリストから目的のアカウントを選択します。 終了したら、「**[!UICONTROL 次へ]** を選択して続行します。
 
-![組織に既に存在する、認証済みの Salesforce Service クラウドアカウントのリスト。](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
+![ 組織に既に存在する、認証済みの Salesforce サービス クラウドアカウントのリスト。](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
 ### 新しいアカウントを作成
 
-新しいアカウントを作成するには、を選択します **[!UICONTROL 新しいアカウント]** 新しいの名前と説明を入力します [!DNL Salesforce Service Cloud] アカウント。
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL Salesforce Service Cloud] アカウントの名前と説明を入力します。
 
-![適切な認証資格情報を提供することで、新しい Salesforce サービスクラウドアカウントを作成するためのインターフェイス。](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
+![ 適切な認証資格情報を提供することで、新しい Salesforce サービスクラウドアカウントを作成できるインターフェイス。](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
 
 次に、新しいアカウントに使用する認証タイプを選択します。
 
 >[!BEGINTABS]
 
->[!TAB 基本認証]
+>[!TAB  基本認証 ]
 
-基本認証の場合、次を選択します **[!UICONTROL 基本認証]** 次に、次の資格情報の値を指定します。
+基本認証の場合は、「**[!UICONTROL 基本認証]** を選択し、次の資格情報の値を指定します。
 
 * 環境 URL
 * ユーザー名
 * パスワード
 * API バージョン （オプション）
 
-終了したら、 **[!UICONTROL ソースに接続]**.
+終了したら「**[!UICONTROL ソースに接続]**」を選択します。
 
 ![Salesforce アカウント作成用の基本認証インターフェイス。](../../../../images/tutorials/create/salesforce-service-cloud/basic.png)
 
->[!TAB OAuth2 クライアント資格情報]
+>[!TAB OAuth2 クライアント資格情報 ]
 
-OAuth 2 クライアント資格情報の場合は、を選択します。 **[!UICONTROL OAuth2 クライアント資格情報]** 次に、次の資格情報の値を指定します。
+「OAuth 2 クライアント資格情報」で、「**[!UICONTROL OAuth2 クライアント資格情報]** を選択し、次の資格情報の値を入力します。
 
 * 環境 URL
 * クライアント ID
 * クライアントシークレット
 * API バージョン
 
-終了したら、 **[!UICONTROL ソースに接続]**.
+終了したら「**[!UICONTROL ソースに接続]**」を選択します。
 
 ![Salesforce アカウント作成用の OAuth インターフェイス。](../../../../images/tutorials/create/salesforce-service-cloud/oauth2.png)
 
@@ -121,4 +121,4 @@ OAuth 2 クライアント資格情報の場合は、を選択します。 **[!U
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Salesforce Service Cloud] アカウントとの接続を確立しました。次のチュートリアルに進むことができます。 [カスタマーサクセスデータをExperience Platformに取り込むためのデータフローの設定](../../dataflow/customer-success.md).
+このチュートリアルでは、[!DNL Salesforce Service Cloud] アカウントとの接続を確立しました。次のチュートリアルに進み、[ カスタマーサクセスデータをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/customer-success.md) を行いましょう。

@@ -4,7 +4,7 @@ description: 各リソースの関係要件など、Reactor API でリソース�
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '809'
 ht-degree: 100%
 
 ---
@@ -150,8 +150,8 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
-| `entity` | ✓ |  |  |
+| `property` | ✓ | | |
+| `entity` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -159,12 +159,12 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `rules` |  |  |  |
-| `environment` | ✓ |  |  |
-| `library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `rules` | | | |
+| `environment` | ✓ | | |
+| `library` | ✓ | | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -172,7 +172,7 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `properties` |  |  |  |
+| `properties` | | | |
 
 {style="table-layout:auto"}
 
@@ -188,14 +188,14 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `updated_with_extension` | ✓ |  |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `updated_with_extension` | ✓ | | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -203,10 +203,10 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `library` |  |  |  |
-| `builds` |  |  |  |
-| `host` | ✓ | ✓ |  |
-| `property` | ✓ |  |  |
+| `library` | | | |
+| `builds` | | | |
+| `host` | ✓ | ✓ | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -214,13 +214,13 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension_package` | ✓ | ✓ |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension_package` | ✓ | ✓ | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -228,7 +228,7 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -236,15 +236,15 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `builds` |  |  |  |
-| `environment` |  |  | ✓ |
-| `data_elements` |  |  | ✓ |
-| `extensions` |  |  | ✓ |
-| `rules` |  |  | ✓ |
-| `notes` |  |  |  |
-| `upstream_library` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `last_build` |  |  |  |
+| `builds` | | | |
+| `environment` | | | ✓ |
+| `data_elements` | | | ✓ |
+| `extensions` | | | ✓ |
+| `rules` | | | ✓ |
+| `notes` | | | |
+| `upstream_library` | ✓ | | |
+| `property` | ✓ | | |
+| `last_build` | | | |
 
 {style="table-layout:auto"}
 
@@ -252,7 +252,7 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `resource` | ✓ |  |  |
+| `resource` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -260,13 +260,13 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `company` | ✓ |  |  |
-| `callbacks` |  |  |  |
-| `environments` |  |  |  |
-| `libraries` |  |  |  |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `extensions` |  |  |  |
+| `company` | ✓ | | |
+| `callbacks` | | | |
+| `environments` | | | |
+| `libraries` | | | |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `extensions` | | | |
 
 {style="table-layout:auto"}
 
@@ -274,14 +274,14 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ✓ |  |  |
-| `updated_with_extension` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `notes` |  |  |  |
-| `origin` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `rules` | ✓ | ✓ |  |
-| `revisions` | ✓ |  |  |
+| `updated_with_extensions_package` | ✓ | | |
+| `updated_with_extension` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `notes` | | | |
+| `origin` | ✓ | | |
+| `property` | ✓ | | |
+| `rules` | ✓ | ✓ | |
+| `revisions` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -289,17 +289,17 @@ curl -X POST \
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `rule_components` |  |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `rule_components` | | | |
 
 ### 秘密鍵
 
 | 関係 | 必須 | ペイロード別に作成 | URL で作成 |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  | ✓ |
-| `environment` | ✓ | ✓ |  |
+| `property` | ✓ | | ✓ |
+| `environment` | ✓ | ✓ | |
 

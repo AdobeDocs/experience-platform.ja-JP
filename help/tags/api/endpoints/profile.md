@@ -4,8 +4,8 @@ description: Reactor API で /profiles エンドポイントを呼び出す方�
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 78%
+source-wordcount: '161'
+ht-degree: 77%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 78%
 
 Reactor API では、プロファイルは Adobe Experience Platform ユーザーを表します。 Reactor API は、ユーザーと権限に関する独自のデータベースを保持せず、[アドビの Identity Management システム（IMS）](https://helpx.adobe.com/jp/enterprise/using/identity.html)によって管理される Adobe ID に依存します。
 
-プロファイルには、ログインしたユーザーに関するすべての情報（ユーザーが属するすべての組織、各組織内の製品プロファイル、各製品プロファイルからの権限など）が含まれます。
+プロファイルには、ログインしたユーザーに関するすべての情報（所属するすべての組織、各組織内に属する製品プロファイル、各製品プロファイルからの権限など）が含まれます。
 
 ## はじめに
 

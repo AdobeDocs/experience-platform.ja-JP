@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform、製品購入レシピ、Data Science Workspace、人気の高いトピック、レシピ、事前作成レシピ
+keywords: Experience Platform；製品購入レシピ；Data Science Workspace；人気のトピック；レシピ；ビルド前のレシピ
 solution: Experience Platform
 title: 製品購入予測レシピ
 description: 製品購入予測レシピを使用すると、特定のタイプの顧客購入イベント（製品購入など）の確率を予測できます。
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '392'
 ht-degree: 94%
 
 ---
@@ -56,6 +56,6 @@ ht-degree: 94%
 
 ## アルゴリズム
 
-まず、*ProductPrediction* スキーマのトレーニングデータセットが読み込まれます。ここから、モデルは[ランダムフォレスト分類子](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)を使用してトレーニングされます。ランダムフォレスト分類子は、複数のアルゴリズムを組み合わせて予測性能を向上させるアルゴリズムを参照する、一種の合成アルゴリズムです。アルゴリズムの背後にある考え方は、ランダムフォレスト分類子が複数のデシジョンツリーを構築し、それらを結合して、より正確で安定した予測を作成するというものです。
+まず、*ProductPrediction* スキーマのトレーニングデータセットが読み込まれます。ここから、モデルは[ランダムフォレスト分類子](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)を使用してトレーニングされます。ランダムフォレスト分類子は、複数のアルゴリズムを組み合わせて予測パフォーマンスを向上させるアルゴリズムを参照する、一種の合成アルゴリズムです。アルゴリズムの背後にある考え方は、ランダムフォレスト分類子が複数のデシジョンツリーを構築し、それらを結合して、より正確で安定した予測を作成するというものです。
 
 このプロセスではまず、トレーニングデータのサブセットをランダムに選択する一連のデシジョンツリーを作成します。その後、各デシジョンツリーの結果を平均化します。

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックス開発者ガイド
+keywords: Experience Platform；ホーム；人気のトピック；サンドボックス開発者ガイド
 solution: Experience Platform
 title: サンドボックス API - はじめに
-description: サンドボックス API を使用すると、開発者はAdobe Experience Platformでサンドボックスをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+description: Sandbox API を使用すると、開発者はAdobe Experience Platformのサンドボックスをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -20,7 +20,7 @@ Adobe Experience Platform のサンドボックスは、独立した開発環境
 
 ## 前提条件
 
-組織のサンドボックスを管理するには、サンドボックス管理権限が必要です。 アクセス権限のないユーザーは、 [使用可能なサンドボックスエンドポイント](./available.md) 現在のユーザーのアクティブなサンドボックスの一覧を表示します。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
+組織のサンドボックスを管理するには、サンドボックス管理権限が必要です。 アクセス権限を持たないユーザーは、[ 使用可能なサンドボックスエンドポイント ](./available.md) のみを使用して、現在のユーザーのアクティブなサンドボックスをリストできます。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
 
 ### API 呼び出し例の読み取り
 

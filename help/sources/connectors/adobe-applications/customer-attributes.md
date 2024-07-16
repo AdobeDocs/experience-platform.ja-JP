@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；顧客属性コネクタ
+keywords: Experience Platform；ホーム；人気のトピック；Customer Attributes connector
 solution: Experience Platform
-title: 顧客属性ソースコネクタの概要
-description: API またはユーザーインターフェイスを使用して顧客属性をAdobe Experience Platformに接続する方法を説明します
+title: 顧客属性Source コネクタの概要
+description: API またはユーザーインターフェイスを使用して顧客属性をAdobe Experience Platformに接続する方法について説明します
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
 source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
@@ -15,24 +15,24 @@ ht-degree: 19%
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=ja) 「Experience Cloud」では、顧客関係管理 (CRM) データベースから取り込んだ企業データをアップロードできます。 データを Experience Cloud の顧客属性データソースにアップロードすると、そのデータを Adobe Analytics および Adobe Target で使用できます。
+Experience Cloud内の [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) を使用すると、顧客関係管理（CRM）データベースから取り込んだ大規模法人データをアップロードできます。 データを Experience Cloud の顧客属性データソースにアップロードすると、そのデータを Adobe Analytics および Adobe Target で使用できます。
 
-Experience Platformは、取り込みのサポートを提供しています [!DNL Customer Attributes] プロファイルデータをAdobe Experience Platformに送信します。
+Experience Platformは、プロファイルデータをAdobe Experience Platformに取り込む [!DNL Customer Attributes] めのサポートを提供しています。
 
 ## データセットとスキーマ
 
-The [!DNL Customer Attributes] ソースは、宛先となるデータのデータセットを自動的に作成します。 この自動作成されたデータセットは修正されており、手動で選択することはできません。 また、入力データソースに基づいて、データセットのスキーマも自動的に作成されます。 また、このプロセスでは、スキーマとソースデータの間の必要なマッピングの自動作成もおこないます。
+[!DNL Customer Attributes] ソースは、データを取得するデータセットを自動的に作成します。 この自動作成されたデータセットは固定されており、手動で選択することはできません。 また、ソースは、入力データソースに基づいて、データセットのスキーマを自動作成します。 このプロセスには、スキーマとソースデータの間の必要なマッピングの自動作成も含まれます。
 
 ## ID
 
-データセットのプライマリ ID は、ソースデータの CSV ファイルの最初の列に含まれます。 The [!DNL Customer Attributes] ソースは、id が常に [`CORE` 名前空間](../../../identity-service/features/namespaces.md)：でサポートされるシステム生成名前空間。 [[!DNL Identity Service]](../../../identity-service/home.md).
+データセットのプライマリ ID は、ソースデータの CSV ファイルの最初の列に含まれています。 [!DNL Customer Attributes] ソースは、ID が常に [`CORE` 名前空間（[[!DNL Identity Service]](../../../identity-service/home.md) でサポートされるシステム生成の名前空間 ](../../../identity-service/features/namespaces.md) にマッピングされていることを前提としています。
 
-使用時に ID 用の既存の名前空間を選択することはできません [!DNL Customer Attributes] ソースの理由： [!DNL Customer Attributes] は、スキーマのプライマリ ID が常に id マップ内にあると仮定します。 [!DNL Customer Attributes] 次に、ソース ID と id マップ UUID のマッピングを自動的に作成します。
+ソースを使用する場合、ID の既存の名前空間を選択 [!DNL Customer Attributes] ることはできません。[!DNL Customer Attributes] れは、スキーマのプライマリ ID が常に ID マップにあることを前提としているからです。 次に [!DNL Customer Attributes] ソース ID と ID マップ UUID のマッピングを自動的に作成します。
 
-の場合 [!DNL Customer Attributes] 他のデータと結び付けるデータ [!DNL Profile] データセット、そのデータおよび id をExperience CloudID と照合する必要があります。
+[!DNL Customer Attributes] データを他の [!DNL Profile] データセットに結び付けるには、そのデータと ID をExperience Cloud ID と一致させる必要があります。
 
-この `CORE` 名前空間を作成するには、次を使用して訪問者のExperience CloudID を設定します。 [Web SDK](/help/web-sdk/identity/overview.md), [モバイル SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)、または [Experience CloudID サービス API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja).
+[Web SDK](/help/web-sdk/identity/overview.md)、{Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) または [5}Experience CloudID サービス API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja) を使用して、訪問者のExperience CloudID を設定することで、`CORE` 名前空間を設定できます。[
 
-The [!DNL Customer Attributes] ファイルは、その他の id 関係をさらに設定しません。 例えば、 [!DNL Customer Attributes] ソースデータセットに次が含まれている **電子メール** および **ロイヤリティ ID** フィールドに値を入力する場合、それらのフィールドを処理するには、スキーマ内の id フィールドとしてラベル付けする必要があります。 [!DNL Identity Service].
+[!DNL Customer Attributes] ファイルは、他の ID 関係をこれ以上入力しません。 例えば、[!DNL Customer Attributes] ソースデータセットに **メール** と **ロイヤルティ ID** フィールドが含まれる場合、[!DNL Identity Service] で処理するには、これらのフィールドにスキーマの ID フィールドというラベルを付ける必要があります。
 
-に関するチュートリアルを参照してください。 [作成 [!DNL Customer Attributes] UI のソース接続](../../tutorials/ui/create/adobe-applications/customer-attributes.md) を参照してください。
+詳しくは、[UI での  [!DNL Customer Attributes]  ソース接続の作成 ](../../tutorials/ui/create/adobe-applications/customer-attributes.md) に関するチュートリアルを参照してください。

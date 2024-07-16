@@ -69,7 +69,7 @@ ht-degree: 73%
 
 ## ストリーミングソースの IP アドレス許可リスト {#streaming}
 
-次のようなストリーミングソースのデータ転送サービス用のトラフィックを許可するには、許可リストに次の IP アドレスを追加する必要があります [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md)、および [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+[[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md)、[[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md)、[[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md)、[[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) などのストリーミングソースのデータ転送サービスのトラフィックを許可するには、次の IP アドレスを許可リストに追加する必要があります。
 
 >[!BEGINTABS]
 

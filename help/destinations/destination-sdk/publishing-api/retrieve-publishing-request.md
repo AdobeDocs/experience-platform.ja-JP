@@ -4,7 +4,7 @@ title: 宛先公開リクエストの取得
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 100%
 
 ---

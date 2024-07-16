@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform、ホーム、人気の高いトピック、ID サービス api、ID サービス開発者ガイド、地域
+keywords: Experience Platform；ホーム；人気のトピック；identity service api;identity service デベロッパーガイド；地域
 solution: Experience Platform
 title: ID サービス API ガイド
-description: ID サービス API を使用すると、開発者は、Adobe Experience Platformの ID グラフを使用して、デバイス間、チャネル間、ほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+description: ID サービス API を使用すると、デベロッパーはAdobe Experience Platformの ID グラフを使用して、クロスデバイス、クロスチャネル、ほぼリアルタイムでの顧客の ID を管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 role: Developer
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -14,17 +14,17 @@ ht-degree: 61%
 
 # [!DNL Identity Service] API ガイド
 
-Adobe Experience Platform [!DNL Identity Service] は、Adobe Experience Platform内の ID グラフと呼ばれる、クロスデバイス、クロスチャネル、およびほぼリアルタイムでの顧客の識別を管理します。
+Adobe Experience Platform [!DNL Identity Service] は、クロスデバイス、クロスチャネル、ほぼリアルタイムでの顧客の ID （Adobe Experience Platform内の ID グラフ）を管理します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-- [[!DNL Identity Service]](../home.md)：顧客プロファイルデータの断片化によって生じる基本的な課題を解決します。 これは、顧客がブランドとやり取りするデバイスやシステム間で ID を橋渡しすることで実現します。
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
+- [[!DNL Identity Service]](../home.md)：顧客プロファイルデータの断片化によって発生する基本的な課題を解決します。 これを実現するには、顧客がブランドとやり取りするデバイスやシステム間で ID を橋渡しします。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
-以下の節では、 [!DNL Identity Service] API.
+次の節では、[!DNL Identity Service] API の呼び出しを正しくおこなうために知っておく必要がある、または手元に用意しておく必要がある追加情報を提供します。
 
 ### API 呼び出し例の読み取り
 
@@ -52,9 +52,9 @@ Adobe Experience Platform [!DNL Identity Service] は、Adobe Experience Platfor
 
 ### 地域ベースのルーティング
 
-The [!DNL Identity Service] API は、 `{REGION}` をリクエストパスの一部として追加します。 組織のプロビジョニング中に、地域が決定され、組織のプロファイル内に保存されます。 各エンドポイントで正しい地域を使用すると、 [!DNL Identity Service] API は適切な地域にルーティングされます。
+[!DNL Identity Service] API では、リクエストパスの一部として `{REGION}` を含める必要がある、地域固有のエンドポイントを使用します。 組織のプロビジョニング中に、地域が決定され、組織プロファイル内に保存されます。 各エンドポイントで正しい領域を使用すると、[!DNL Identity Service] API を使用して行われたすべてのリクエストが適切な領域にルーティングされます。
 
-現在、 [!DNL Identity Service] API:VA7 および NLD2。
+現在、[!DNL Identity Service] API でサポートされているリージョンは VA7 および NLD2 です。
 
 次の表に、地域を使用したパスの例を示します。
 
@@ -65,25 +65,25 @@ The [!DNL Identity Service] API は、 `{REGION}` をリクエストパスの一
 
 >[!NOTE]
 >
->地域を指定せずにリクエストをおこなうと、誤った地域に対する呼び出しルーティングが発生したり、呼び出しが予期せず失敗したりする場合があります。
+>地域を指定せずに要求を行うと、誤った地域への呼び出しがルーティングされたり、呼び出しが予期せず失敗したりする可能性があります。
 
-組織プロファイル内で地域が見つからない場合は、システム管理者に問い合わせてサポートを依頼してください。
+組織プロファイル内で地域が見つからない場合は、システム管理者にお問い合わせください。
 
-## の使用 [!DNL Identity Service] API
+## [!DNL Identity Service] API の使用
 
 これらのサービスで使用される ID パラメーターは、次の 2 つの方法、複合または XID のいずれかで表現できます。
 
 複合 ID は、ID 値と名前空間の両方を含む構成です。複合 ID を使用する場合、名前空間は名前（`namespace.code`）または ID（`namespace.id`）で指定できます。
 
-ID が永続化されると、 [!DNL Identity Service] はネイティブ ID(XID) と呼ばれる ID を生成し、その ID に割り当てます。 クラスター API とマッピング API のすべてのバリエーションは、リクエストと応答で複合 ID と XID の両方をサポートしています。これらのAPIを使用するには、次のパラメーターのいずれかが必要です。`xid`、[`ns`または`nsid`]および`id`の組み合わせ。
+ID が永続化されると、[!DNL Identity Service] はネイティブ ID （XID）と呼ばれる ID を生成してその ID に割り当てます。 クラスター API とマッピング API のすべてのバリエーションは、リクエストと応答で複合 ID と XID の両方をサポートしています。これらのAPIを使用するには、次のパラメーターのいずれかが必要です。`xid`、[`ns`または`nsid`]および`id`の組み合わせ。
 
 応答のペイロードを制限するため、API は、使用される ID 構文のタイプに応じて、それらの応答を調整します。つまり、XID を渡すと応答に XID が含まれ、複合 ID を渡すと、応答はリクエストで使用される構造に従います。
 
-このドキュメントの例では、 [!DNL Identity Service] API. 完全な API については、「[Swagger API リファレンス](https://www.adobe.io/experience-platform-apis/references/identity-service)」を参照してください。
+このドキュメントの例では、[!DNL Identity Service] API の完全な機能については説明していません。 完全な API については、「[Swagger API リファレンス](https://www.adobe.io/experience-platform-apis/references/identity-service)」を参照してください。
 
 >[!NOTE]
 >
->リクエストでネイティブ XID が使用される場合、返される ID はすべてネイティブ XID 形式になります。 ID／名前空間フォームの使用詳しくは、「[ID の XID の取得](./create-custom-namespace.md)」に関する節を参照してください。
+>リクエストでネイティブ XID が使用されている場合、返されるすべての ID はネイティブ XID 形式です。 ID／名前空間フォームの使用詳しくは、「[ID の XID の取得](./create-custom-namespace.md)」に関する節を参照してください。
 
 ## 次の手順
 

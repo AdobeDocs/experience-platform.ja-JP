@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；CRM;crm;crm フローサービス
+keywords: Experience Platform；ホーム；人気のトピック；CRM;crm;crm フローサービス
 solution: Experience Platform
-title: フローサービス API を使用した CRM システムの調査
-description: このチュートリアルでは、フローサービス API を使用して CRM システムを調べます。
+title: Flow Service API を使用した CRM システムの調査
+description: このチュートリアルでは、Flow Service API を使用して CRM システムを調べます。
 exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 39%
+source-wordcount: '586'
+ht-degree: 38%
 
 ---
 
-# を使用した CRM システムの調査 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した CRM システムの調査
 
-[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされるすべてのソースから接続できます。
+[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Adobe Experience Platformで一元化できます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] CRM システムを調査する API。
+このチュートリアルでは、[!DNL Flow Service] API を使用して CRM システムを調べます。
 
 ## はじめに
 
@@ -24,11 +24,11 @@ ht-degree: 39%
 * [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用して CRM システムに正常に接続するために必要な追加情報を示しています。
 
 ### 接続 ID の作成
 
-を使用して CRM システムを調べるには、以下を使用します。 [!DNL Platform] API を使用する場合は、有効な接続 ID が必要です。 使用する CRM システムに接続がまだない場合は、次のチュートリアルを通じて接続を作成できます。
+[!DNL Platform] API を使用して CRM システムを調査するには、有効な接続 ID が必要です。 使用する CRM システムの接続がまだない場合は、次のチュートリアルを通じて接続を作成できます。
 
 * [Microsoft Dynamics](../create/crm/ms-dynamics.md)
 * [Salesforce](../create/crm/salesforce.md)
@@ -53,9 +53,9 @@ ht-degree: 39%
 
 * `Content-Type: application/json`
 
-## データテーブルの調査
+## データテーブルの探索
 
-CRM システムの接続 ID を使用して、GETリクエストを実行することでデータテーブルを調べることができます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを見つけます。 [!DNL Platform].
+CRM システムの接続 ID を使用すると、データリクエストを実行してGETテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Platform] に取り込むテーブルのパスを検索します。
 
 **API 形式**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、から CRM システムへのテーブルの配列です。 に取り込むテーブルを探します。 [!DNL Platform] そしてそれを書き留める `path` プロパティに含める必要がある場合は、次の手順で指定して、その構造を調べます。
+正常な応答は、から CRM システムへのテーブルの配列です。 [!DNL Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
 
 ```json
 [
@@ -108,9 +108,9 @@ curl -X GET \
 ]
 ```
 
-## Inspectテーブルの構造
+## テーブルの構造のInspect
 
-CRM システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定してGETリクエストを実行します。
+CRM システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定して、GETリクエストを実行します。
 
 **API 形式**
 
@@ -136,7 +136,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、テーブルの構造を返します。 各テーブルの列に関する詳細は、 `columns` 配列。
+応答が成功すると、テーブルの構造が返されます。 テーブルの各列に関する詳細は、`columns` 配列の要素内にあります。
 
 ```json
 {
@@ -171,4 +171,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、CRM システムを調べ、に取り込むテーブルのパスを見つけました [!DNL Platform]、およびその構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して、 [CRM システムからデータを収集し、Platform に取り込む](../collect/crm.md).
+このチュートリアルでは、CRM システムを探索し、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルではこの情報を使用して [CRM システムからデータを収集し、Platform に取り込む ](../collect/crm.md) ことができます。

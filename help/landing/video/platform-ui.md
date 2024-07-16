@@ -1,6 +1,6 @@
 ---
 title: Experience PlatformUI ツアー
-description: このビデオでは、Adobe Experience Platformのユーザーインターフェイスに関する簡単なツアーを提供し、Experience Cloud、ホームページのダッシュボード、インターフェイスの有効化機能、サンドボックス切り替えボタン、ナビゲーション要素からExperience Platformに移動する方法を示します。
+description: このビデオでは、Adobe Experience Platformのユーザーインターフェイスを簡単に紹介し、サンドボックスからExperience Platformに移動する方法、ホームページのExperience Cloud、インターフェイスのイネーブルメント機能、サンドボックススイッチャー、ナビゲーション要素を示します。
 kt: 4821
 audience: all
 doc-type: video
@@ -16,11 +16,11 @@ ht-degree: 15%
 
 # Experience PlatformUI ツアー
 
-このビデオでは、Adobe Experience Platformのユーザーインターフェイス (UI) のクイックツアーを提供します。このツアーには、Experience CloudからExperience Platformに移動する方法、ホームページの操作方法、サンドボックスの切り替え方法、UI 内の様々なナビゲーション要素の使用方法が含まれます。
+このビデオでは、Experience Cloudからナビゲーションに移動する方法、ホームページを操作する方法、サンドボックスを切り替える方法、UI 内で様々なExperience Platform要素を使用する方法など、Adobe Experience Platform ユーザーインターフェイス（UI）について簡単に説明します。
 
 >[!NOTE]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、 [Adobe Experience Platform UI ガイド](../ui-guide.md).
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、[Adobe Experience Platform UI ガイド ](../ui-guide.md) を参照してください。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)

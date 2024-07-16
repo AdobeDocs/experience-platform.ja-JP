@@ -16,19 +16,19 @@ ht-degree: 5%
 
 ## Adobe Experience Platform Web SDK とは
 
-Adobe Experience Platform Web SDK は、Adobe Experience Cloudの様々なサービスとのやり取りを可能にするクライアントサイド JavaScript ライブラリです。
+Adobe Experience Platform Web SDK は、Adobe Experience Cloudの様々なサービスとのやり取りを可能にする、クライアントサイド JavaScript ライブラリです。
 
 Web SDK は、ソリューションに依存しない方法（XDM）でデータをExperience PlatformEdge Networkに送信し、その後、データをソリューション固有の形式と宛先にマッピングしてリアルタイムで送信します。
 
-Web SDK について詳しくは、次のビデオを参照してください。 [Alloy.js に対応し、eVarや Mbox のタグを二度と付けない](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
+Web SDK について詳しくは、次のビデオを参照してください。[Alloy.js を満たし、eVarまたは Mbox を二度とタグ付けしない ](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)。
 
 ## Adobe Experience Platform Web SDK の以前のソリューションとの相違点
 
 ### Web SDKExperience Platform以前
 
-現在、個々のソリューションに基づいて異なる JavaScript ライブラリをデプロイする必要があります。
+現在、個々のソリューションに基づいて異なるJavaScript ライブラリをデプロイする必要があります。
 
-* 各ソリューションには、独自の JavaScript ライブラリ、スキーマ、ドメインがあります。
+* ソリューションごとに独自のJavaScript ライブラリ、スキーマ、ドメインがあります。
 * これらのライブラリは、互いに動作するように構築されたものではありません。
 * クロスソリューションとAdobe Experience Platformのユースケースでは、これらの異なるライブラリが相互に依存する必要があるので、デプロイメントに問題が生じます。
 
@@ -42,7 +42,7 @@ Platform のタグを使用すると、これらのライブラリをできる�
 * ソリューション間のスキーマの混乱（A4T）
 * その他の非最適なものの多く
 
-また、現在、Adobe Experience Platformに直接データを送信する JavaScript ライブラリはありません。
+また、現在、Adobe Experience Platformにデータを直接送信するJavaScript ライブラリはありません。
 
 ### Experience PlatformWeb SDK を使用
 
@@ -62,29 +62,29 @@ Adobe Experience Platform Web SDK は、Adobe Experience Platformに直接デー
 
 **パフォーマンス：** Web SDK は、現在のすべてのAdobeライブラリを使用するよりも小さく、ページの読み込みを大幅に高速化します。
 
-**シンプルさ：** XDM、Web SDK、タグ、Edge Network、Adobe Experience Cloud ソリューションおよびAdobe Experience Platformの組み合わせは、理解しやすく、シンプルなデータ収集ストーリーを作成します。
+**シンプル：** XDM、Web SDK、タグ、Edge Network、Adobe Experience Cloud ソリューションおよびAdobe Experience Platformを組み合わせると、理解しやすく、シンプルにデータ収集ストーリーを作成できます。
 
-* **XDM:** データをAdobeに送信するために使用する、ソリューションに依存しないスキーマ。 eVar または mbox 用のタグ付けはこれ以上ありません。
+* **XDM:** Adobeにデータを送信するために使用する、ソリューションに依存しないスキーマ。 eVar または mbox 用のタグ付けはこれ以上ありません。
 * **Web SDK:** Adobe Experience Platform Edge Networkとのデータの送受信を容易にします。
-* **タグ :** サイトでの Web SDK （およびその他の JavaScript タグ）のデプロイメントと設定を簡素化します。
-* **Edge Network:** データを必要な形式でAdobe Experience Platformおよびソリューションに簡単にルーティングします。
-* **Adobe Experience PlatformおよびAdobeソリューション：** 価値提案を有効にします。
+* **Tags:** サイトへの Web SDK （およびその他のJavaScript タグ）のデプロイメントと設定を簡素化します。
+* **Edge Network:** Adobe Experience Platformおよびソリューションに、必要な形式で簡単にデータをルーティングします。
+* **Adobe Experience PlatformおよびAdobeソリューション：** 価値提案を実現します。
 
-**制御：** すべてのデータは、接続された単一のデータストリームを使用しているので、アプリケーションとの間で、ジャーニーのミリ秒ごとにデータがどのように表示されるかを論理的に追跡および制御できます。
+**コントロール：** すべてのデータは、接続された単一のデータストリームを使用しているので、アプリケーションとの間で、ジャーニーのミリ秒ごとにデータがどのように表示されるかを論理的に追跡および制御できます。
 
-**現代的で未来に備えたデザイン：** Web SDK とそのEdge Networkへの接続により、Adobeでは、データ収集、パーソナライゼーション、同意、サードパーティ cookie の将来に関するAdobeの取り扱いを大幅に最新化できるようになりました。 （Adobeが管理するファーストパーティドメインが有効になります）。
+**最新で未来に対応：** Web SDK とそのEdge NetworkAdobeへの接続により、Adobeでは、データ収集、パーソナライゼーション、同意、サードパーティ cookie の将来に関する扱いを大幅に最新化できるようになりました。 （Adobeが管理するファーストパーティドメインが有効になります）。
 
-**価値創出までの時間：** Adobeは、タグを使用して Web SDK を可能な限り簡単にデプロイし、クライアントサイドのデータを XDM にマッピングできるように、鋭意取り組んできました（今後も継続する）。 その作業が完了したら、他のすべてのAdobeソリューションとAdobe Experience Platform サービスを、サーバーサイドでオンまたはオフにできます。 例えば、Adobe Analyticsでこの機能を使用していて、ターゲットまたはExperience Platformをオンにする場合、データストリーム設定の切り替えをオンにして、これらのユースケースを照らし出すだけです。
+**価値実現までの時間：** Adobeは、タグを使用して Web SDK をデプロイし、クライアントサイドのデータを XDM にマッピングをできるだけ簡単にできるように鋭意取り組んでいます（そして、今後も継続します）。 その作業が完了したら、他のすべてのAdobeソリューションとAdobe Experience Platform サービスを、サーバーサイドでオンまたはオフにできます。 例えば、Adobe Analyticsでこの機能を使用していて、ターゲットまたはExperience Platformをオンにする場合、データストリーム設定の切り替えをオンにして、これらのユースケースを照らし出すだけです。
 
 ## [!DNL alloy.js] とは？
 
 [!DNL alloy.js] は、Web SDK JavaScript ライブラリの名前です。 SDK のソースコードとファイル名で参照されます。
 
-## を使用するためにAdobe Experience Platformを購入する必要があるか [!DNL Web SDK]?
+## [!DNL Web SDK] を使用するには、Adobe Experience Platformを購入する必要がありますか？
 
-いいえ。Adobeのデジタルエクスペリエンスのお客様は誰でも、Adobe Experience Platform Web SDK を無料で使用できます。 の使用を希望するお客様 [!DNL Web SDK] は、データ収集 UI またはExperience PlatformUI でスキーマ、データセット、ID 名前空間およびデータストリームを作成するための適切な権限を設定する必要があります。
+いいえ。Adobeのデジタルエクスペリエンスのお客様は誰でも、Adobe Experience Platform Web SDK を無料で使用できます。 [!DNL Web SDK] を使用する場合は、データ収集 UI またはExperience PlatformUI で、スキーマ、データセット、ID 名前空間およびデータストリームを作成するための適切な権限を設定する必要があります。
 
-これらの権限の設定について詳しくは、次のドキュメントを参照してください [データ収集の権限管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ja).
+これらの権限の設定について詳しくは、[ データ収集の権限管理 ](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html) に関するドキュメントを参照してください。
 
 ## Web SDK を使用するのは誰ですか？
 
@@ -104,45 +104,45 @@ Web SDK は現在一般に利用可能で、Adobe Experience Cloud製品への�
 
 SDK は無料で、Adobeがホストします。 必要に応じて、無料でダウンロードして独自のサーバーにホストできます。
 
-Web SDK は、次へのアクセスを必要とします。 [データストリーム設定](../datastreams/overview.md) とExperience Platform [XDM スキーマビルダー](../xdm/tutorials/create-schema-ui.md)（Adobeのサーバーが SDK からの受信データを適切に処理するために使用されます）。 アクセス権を希望する場合は、Adobeアカウントチームに連絡してリクエストプロセスを開始してください。
+Web SDK は、Adobeのサーバーが SDK からの受信データを適切に処理するために、[ データストリーム設定 ](../datastreams/overview.md) およびExperience Platform[XDM スキーマビルダー ](../xdm/tutorials/create-schema-ui.md) へのアクセスを必要とします。 アクセス権を希望する場合は、Adobeアカウントチームに連絡してリクエストプロセスを開始してください。
 
 ## Web SDK で現在サポートされているユースケースは何ですか？
 
-Web SDK は急速に進化しています。 現在取り組んでいるユースケースは増えています。 次を見つけることができます [現在ここでサポートされているユースケースのリストです。](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
+Web SDK は急速に進化しています。 現在取り組んでいるユースケースは増えています。 [ 現在サポートされているユースケースのリストは、こちらで確認できます ](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)。
 
 ## 現在の顧客は、サイトを再タグ付けする必要がありますか？
 
-場合によります。Adobe Experience Platform Web SDK は、2 つの異なるスタイルでデプロイできます。 今後の移行ドキュメントには、追加の詳細が記載されます。
+場合によります。 Adobe Experience Platform Web SDK は、2 つの異なるスタイルでデプロイできます。 今後の移行ドキュメントには、追加の詳細が記載されます。
 
-* **もう 1 つのタグ：** サイトが既にソリューション用にタグ付けされていて、再タグ付けできない場合でも、Experience Platformのユースケースや今後のイベント転送機能に関するデータをAdobe Experience Platform Edge Networkに送信したい場合は（以下を参照）、 `alloy.js` サイトにタグ付けし、「別のタグに過ぎない」ように機能させます。
+* **別のタグのみ：** サイトに既にソリューションのタグが付けられており、再タグ付けできない場合でも、Experience Platformのユースケースや今後のイベント転送機能に関するデータをAdobe Experience Platform Edge Networkに送信したい場合（以下を参照）、`alloy.js` タグをサイトに追加すると、「別のタグのみ」として機能します。
 
-* **唯一のタグ：** Web SDK をExperience Cloudソリューションに使用する場合は、次の目的で使用する必要があります _all_ そのページのソリューション。 例えば、サイトが既にAdobe Analytics用にタグ付けされていて、Target に使用する場合は、将来、他のユーザーと同様に、両方に使用する必要があります。
+* **唯一のタグ：** Web SDK をExperience Cloudソリューションに使用する場合は、そのページのソリューションの _すべて_ に使用する必要があります。 例えば、サイトが既にAdobe Analytics用にタグ付けされていて、Target に使用する場合は、将来、他のユーザーと同様に、両方に使用する必要があります。
 
-つまり、ソリューション以外のユースケースにAdobe Experience Platform Web SDK を使用する場合は、でサイトにタグを付けることができます `alloy.js` 新しいソリューションであるかのように進みます。 Adobe Analytics、Target、Audience Manager、またはアプリケーションのユースケースに使用する場合は、ページ上の従来のコードを削除する必要が生じる場合があります。
+つまり、ソリューション以外のユースケースにAdobe Experience Platform Web SDK を使用する場合は、`alloy.js` でサイトにタグを付けて、新しいソリューションであるかのようにサイトを進めることができます。 Adobe Analytics、Target、Audience Manager、またはアプリケーションのユースケースに使用する場合は、ページ上の従来のコードを削除する必要が生じる場合があります。
 
 ## Web SDK の使用を開始する際に ECID を移行して、web サイトの訪問者が新しい訪問者として表示されないようにできますか？
 
-はい。Adobe Experience Platform Web SDK には、ID 移行機能が用意されています。 の ID 移行の手順に従います [Platform Web SDK ID ドキュメント](/help/web-sdk/identity/overview.md#id-migration) を参照してください。
+はい。Adobe Experience Platform Web SDK には、ID 移行機能が用意されています。 詳しくは、[Platform Web SDK ID ドキュメント ](/help/web-sdk/identity/overview.md#id-migration) の ID 移行の手順に従います。
 
 ## Web SDK とタグの違いは何ですか？
 
-* **Experience Platform内のタグ** デバイスコードを管理します。 これらを使用すると、コードをより簡単にデプロイできます。 彼らは自由で強力です。
+* **Experience Platform内のタグ** がデバイスコードを管理します。 これらを使用すると、コードをより簡単にデプロイできます。 彼らは自由で強力です。
 
-* **Adobe Experience Platform Web SDK** は、Adobeのユースケース用にタグによってデプロイされる新しいコードの正式名前です。 また、無料で強力です。
+* **Adobe Experience Platform Web SDK** は、Adobeのユースケースのためにタグによってデプロイされる新しいコードの正式名前です。 また、無料で強力です。
 
 * **`alloy.js`** は、Adobe Experience Platform Web SDK コードのファイル名です。
 
 ## Web SDK をデプロイするには、タグを使用する必要がありますか？
 
-いいえ。をダウンロードできます `alloy.js` 自分でファイルを作成します。
+いいえ。`alloy.js` ファイルは自分でダウンロードできます。
 
 ただし、
 
-* Adobe Experience Platform Web SDK では、Edge Network がストリームを識別してデータの処理方法を決定できるように、データストリーム ID と呼ばれるものが必要です。 この ID は、Experience Platform内で作成されます。 UI を使用してプロパティを作成したり JavaScript コードをデプロイしたりする必要があるわけではありませんが、タグを使用して設定 ID を作成する必要があります。
+* Adobe Experience Platform Web SDK では、Edge Network がストリームを識別してデータの処理方法を決定できるように、データストリーム ID と呼ばれるものが必要です。 この ID は、Experience Platform内で作成されます。 UI を使用してプロパティを作成したりJavaScript コードをデプロイしたりする必要があるわけではありませんが、タグを使用して設定 ID を作成する必要があります。
 
-* タグは、利用できる最高のタグおよび SDK マネージャーであるだけでなく、デプロイを非常に簡単にします `alloy.js` およびデータを XDM スキーマにマッピングします。 タグを使用しない場合、のデプロイを管理する必要があります `alloy.js`を送信する前に、イベントを生成し、データを XDM にマッピングします。 これは _多い_ タグを使用するよりも難しいプロセスです。
+* タグは、利用可能な最高のタグおよび SDK マネージャーであるだけでなく、`alloy.js` のデプロイやデータの XDM スキーマへのマッピングを非常に簡単にします。 タグを使用しない場合は、データを送信する前に、`alloy.js` のデプロイ、イベントおよび XDM へのマッピングを管理する必要があります。 これは、タグを使用する場合よりも _はるかに_ 難しいプロセスです。
 
-* タグを使用してデプロイすることをお勧めします `alloy.js`使用する唯一のタグである場合でも同様です。
+* タグのみを使用する場合でも、タグを使用してデプロイすることを `alloy.js` 勧めします。
 
 ## イベント転送とは
 
@@ -150,7 +150,7 @@ SDK を使用して XDM をEdge Networkに送信すると、これらの新機�
 
 ## CNAME またはファーストパーティドメインとは何ですか？また、それが重要な理由は何ですか？
 
-CNAME の詳細については、を参照してください。 [Adobeドキュメント](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=ja)
+CNAME について詳しくは、[Adobeドキュメントを参照してください ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=ja)
 
 ## Adobe Experience Platform Web SDK は Cookie を使用しますか？ その場合、どのような cookie を使用しますか？
 
@@ -158,17 +158,17 @@ CNAME の詳細については、を参照してください。 [Adobeドキュ�
 
 | **名前** | **maxAge** | **友好時代** | **説明** |
 |---|---|---|---|
-| **knd_orgid_identity** | 34128000 | 395 日 | ID cookie は、ECID と、ECID に関連するその他の情報を保存します。 |
+| **kndct_orgid_identity** | 34128000 | 395 日 | ID cookie は、ECID と、ECID に関連するその他の情報を保存します。 |
 | **kndctr_orgid_consent_check** | 7200 | 2 時間 | このセッションベースの Cookie は、同意設定サーバー側を検索するようにサーバーにシグナルで通知します。 |
 | **kndctr_orgid_consent** | 15552000 | 180 日 | この cookie は、web サイトに対するユーザーの同意設定を保存します。 |
 | **kndctr_orgid_cluster** | 1800 | 30 分 | この cookie は、現在のユーザーのリクエストを処理するEdge Networkリージョンを格納します。 Edge Networkがリクエストを正しいリージョンにルーティングできるように、リージョンは URL パスで使用されます。 この cookie の有効期間は 30 分です。これにより、ユーザーが別の IP アドレスで接続した場合、リクエストは最も近い地域にルーティングできます。 |
-| **mbox** | 63072000 | 2 年。 | この cookie は、Target 移行設定が true に設定されている場合に表示されます。 これにより、Target が許可されます [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) Web SDK で設定されます。 |
+| **mbox** | 63072000 | 2 年。 | この cookie は、Target 移行設定が true に設定されている場合に表示されます。 これにより、Web SDK で Target [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) を設定できます。 |
 | **mboxEdgeCluster** | 1800 | 30 分 | この cookie は、Target 移行設定が true に設定されている場合に表示されます。 この cookie を使用すると、Web SDK は正しいエッジクラスターを at.js に通信できるため、ユーザーがサイト全体を移動しても、Target プロファイルの同期が維持されます。 |
-| **AMCV_###@AdobeOrg** | 34128000 | 395 日 | この cookie は、Adobe Experience Platform Web SDK で ID 移行が有効な場合にのみ表示されます。 この cookie は、サイトの一部がまだ visitor.js を使用している場合に Web SDK に移行するのに役立ちます。 参照： [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md) を参照してください。 |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 日 | この cookie は、Adobe Experience Platform Web SDK で ID 移行が有効な場合にのみ表示されます。 この cookie は、サイトの一部がまだ visitor.js を使用している場合に Web SDK に移行するのに役立ちます。 詳細は、[`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md) を参照してください。 |
 
-Web SDK を使用する場合、Edge Networkは上記の Cookie を 1 つ以上設定します。 Edge Networkは、すべての Cookie をに設定します。 `secure` および `sameSite="none"` 属性。
+Web SDK を使用する場合、Edge Networkは上記の Cookie を 1 つ以上設定します。 Edge Networkは、すべての Cookie を `secure` 属性と `sameSite="none"` 属性に設定します。
 
-現在、web サイトにセキュリティで保護されたセクションと保護されていないセクションの両方がある場合は、ユーザーの識別が妨げられることがあります。 ユーザーがサイトの保護されたセクションから保護されていないセクションに移動すると、Edge Networkは新しい `ECID` （リクエストを使用）。
+現在、web サイトにセキュリティで保護されたセクションと保護されていないセクションの両方がある場合は、ユーザーの識別が妨げられることがあります。 ユーザーがサイトの保護されたセクションから保護されていないセクションに移動すると、Edge Networkはリクエストで新しい `ECID` を生成します。
 
 ## Adobe Experience Platform Web SDK はどのブラウザーをサポートしていますか？
 
@@ -177,38 +177,38 @@ Adobe Experience Platform Web SDK は、最新バージョンのGoogle Chrome、
 ## Adobe Experience Platform Web SDK に関する詳細情報はどこで入手できますか？
 
 * [ドキュメント](/help/web-sdk/home.md)
-* [ソースコード](https://github.com/adobe/alloy)
+* [Source コード ](https://github.com/adobe/alloy)
 
 ### Internet Explorer のサポート {#support-internet-explore}
 
-この SDK では、非同期タスクの完了を通信する方法である promises を使用します。 この [約束](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) sdk で使用される実装は、を除くすべてのターゲットブラウザーでネイティブにサポートされています [!DNL Internet Explorer]. SDK を使用する対象： [!DNL Internet Explorer]に設定します `window.Promise` [ポリフィル](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+この SDK では、非同期タスクの完了を通信する方法である promises を使用します。 SDK で使用される [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) 実装は、[!DNL Internet Explorer] 以外のすべてのターゲットブラウザーでネイティブにサポートされています。 [!DNL Internet Explorer] で SDK を使用するには、`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill) が必要です。
 
 既に `window.Promise` がポリフィルされているかどうかを判断するには、次の手順を実行します。
 
-1. で web サイトを開きます。 [!DNL Internet Explorer].
+1. Web サイトを [!DNL Internet Explorer] で開きます。
 1. ブラウザーのデバッグコンソールを開きます。
 1. コンソールに「`window.Promise`」とに入力し、Enter キーを押します。
 
 `undefined` 以外が表示された場合は、既に `window.Promise`　がポリフィルされている可能性があります。上記のインストール手順を完了した後に Web サイトを読み込むことで、`window.Promise` がポリフィルされているかどうかを判断する方法もあります。SDK が promise に関するエラーをスローした場合、`window.Promise` がポリフィルされていない可能性が高くなります。
 
-決定した場合は、ポリフィルする必要があります `window.Promise`で、以前に指定したベースコードの上に次のスクリプトタグを含めます。
+`window.Promise` をポリフィルする必要があると判断した場合は、以前に指定したベースコードの上に次のスクリプトタグを含めます。
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
 ```
 
-このタグは、以下を保証するスクリプトを読み込みます `window.Promise` は有効な Promise 実装です。
+このタグは、`window.Promise` が有効な Promise 実装であることを確認するスクリプトを読み込みます。
 
 >[!NOTE]
 >
->別の Promise 実装を読み込む場合は、がサポートしていることを確認してください `Promise.prototype.finally`.
+>別の Promise 実装を読み込む場合は、`Promise.prototype.finally` をサポートしていることを確認してください。
 
 ### Internet Explorer のサポート
 
-Adobe Experience Platform SDK は、プロミスを使用します。プロミスは、非同期タスクの完了を伝える手段です。 この [約束](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) sdk で使用される実装は、を除くすべてのターゲットブラウザーでネイティブにサポートされています [!DNL Internet Explorer]. SDK を使用する対象： [!DNL Internet Explorer]に設定します `window.Promise` [ポリフィル](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Adobe Experience Platform SDK は、プロミスを使用します。プロミスは、非同期タスクの完了を伝える手段です。 SDK で使用される [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) 実装は、[!DNL Internet Explorer] 以外のすべてのターゲットブラウザーでネイティブにサポートされています。 [!DNL Internet Explorer] で SDK を使用するには、`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill) が必要です。
 
-promise をポリフィルするために使用できるライブラリの 1 つに、promise-polyfill があります。 を参照してください。 [promise-polyfill ドキュメント](https://www.npmjs.com/package/promise-polyfill) npm と共にインストールする方法の詳細については、を参照してください。
+promise をポリフィルするために使用できるライブラリの 1 つに、promise-polyfill があります。 NPM を使用したインストール方法について詳しくは、[promise-polyfill のドキュメント ](https://www.npmjs.com/package/promise-polyfill) を参照してください。
 
 >[!NOTE]
 >
->別の Promise 実装を読み込む場合は、がサポートしていることを確認してください `Promise.prototype.finally`.
+>別の Promise 実装を読み込む場合は、`Promise.prototype.finally` をサポートしていることを確認してください。

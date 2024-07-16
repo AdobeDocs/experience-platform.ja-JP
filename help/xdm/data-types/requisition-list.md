@@ -1,28 +1,29 @@
 ---
-title: 購買依頼リスト・データ・タイプ
-description: 購買依頼リストエクスペリエンスデータモデル (XDM) のデータタイプについて説明します。
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+title: 要求リストのデータ タイプ
+description: 購買依頼リストエクスペリエンスデータモデル（XDM）データタイプについて説明します。
+exl-id: cbea6b08-9d4d-4cbe-b0c5-506bccc6df67
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '125'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL 購買依頼リスト] データタイプ
+# [!UICONTROL  購買依頼一覧 ] データ タイプ
 
-[!UICONTROL 購買依頼リスト] は、調達または購入のためのキュレーションされた品目のコレクションを記述する標準の Experience Data Model(XDM) データタイプです。 以下を使用します。 [!UICONTROL 購買依頼リスト] 購買依頼リストを識別および記述するデータ・タイプ。
+[!UICONTROL  購買依頼リスト ] は、調達または購入のためにキュレートされた品目のコレクションを記述する、標準の Experience Data Model （XDM）データタイプです。 [!UICONTROL  購買依頼リスト ] データ・タイプを使用して、購買依頼リストを識別および記述します。
 
-![の図 [!UICONTROL 購買依頼リスト] データタイプ。](../images/data-types/requisition-list.png)
+![[!UICONTROL  購買依頼リスト ] データ型のダイアグラム ](../images/data-types/requisition-list.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |---------------------------|-------------------|-----------|--------------------------------------------------|
-| [!UICONTROL 購買依頼リスト ID] | `ID` | 文字列 | 購買依頼リストの一意の ID。 |
-| [!UICONTROL 購買依頼リスト名] | `name` | 文字列 | 顧客が指定した購買依頼リストの名前。 |
-| [!UICONTROL 購買依頼リスト摘要] | `description` | 文字列 | 顧客が指定した購買依頼リストの説明。 |
+| [!UICONTROL  購買依頼リスト ID] | `ID` | 文字列 | 要求リストの一意の ID。 |
+| [!UICONTROL  購買依頼一覧名 ] | `name` | 文字列 | 顧客によって指定された購買依頼リストの名称。 |
+| [!UICONTROL  購買依頼一覧摘要 ] | `description` | 文字列 | 顧客によって指定された要求リストの説明。 |
 
 {style="table-layout:auto"}
 
-データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
+データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.example.1.json)
-* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.schema.json)
+* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.example.1.json)
+* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.schema.json)

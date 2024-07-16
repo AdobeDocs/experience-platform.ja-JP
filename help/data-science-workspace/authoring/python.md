@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；データアクセス；python sdk；データアクセス api;read python;write python
+keywords: Experience Platform；ホーム；人気のトピック；data access;python sdk;data access api;python の読み取り；python の書き込み
 solution: Experience Platform
-title: Data Science Workspace の Python を使用したデータへのアクセス
+title: Data Science Workspaceで Python を使用してデータにアクセスする
 type: Tutorial
-description: 次のドキュメントには、Python で Data Science Workspace で使用するデータにアクセスする方法の例が含まれています。
+description: 次のドキュメントでは、Data Science Workspaceで使用する Python のデータにアクセスする方法の例を示します。
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 2%
+source-wordcount: '412'
+ht-degree: 0%
 
 ---
 
-# Data Science Workspace の Python を使用したデータへのアクセス
+# Data Science Workspaceでの Python を使用したデータへのアクセス
 
-次のドキュメントには、Data Science Workspace で Python を使用してデータにアクセスする方法の例が含まれています。 JupyterLab ノートブックを使用したデータへのアクセスについては、 [JupyterLab ノートブックのデータアクセス](../jupyterlab/access-notebook-data.md) ドキュメント。
+次のドキュメントでは、Data Science Workspaceで使用する Python を使用してデータにアクセスする方法の例を示します。 JupyterLab ノートブックを使用したデータへのアクセスについて詳しくは、[JupyterLab ノートブックのデータアクセス ](../jupyterlab/access-notebook-data.md) のドキュメントを参照してください。
 
 ## データセットの読み取り
 
-環境変数を設定し、インストールを完了すると、データセットを pandas データフレームに読み取れるようになります。
+環境変数を設定し、インストールを完了すると、データセットを pandas データフレームに読み込むことができるようになります。
 
 ```python
 import pandas as pd
@@ -40,7 +40,7 @@ df = dataset_reader.read()
 df = dataset_reader.select(['column-a','column-b']).read()
 ```
 
-### パーティション情報を取得する：
+### パーティション情報の取得：
 
 ```python
 client_context = get_client_context(config_properties)
@@ -51,9 +51,9 @@ partitions = dataset.get_partitions_info()
 
 ### DISTINCT 句
 
-DISTINCT 句を使用すると、行/列レベルですべてのユニーク値を取得し、応答からすべての重複値を削除できます。
+DISTINCT 句を使用すると、行/列レベルでユニークな値をすべて取得し、応答から重複する値をすべて削除できます。
 
-の使用例 `distinct()` 関数は次のように表示されます。
+`distinct()` 関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -61,7 +61,7 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 ### WHERE 句
 
-Python の特定の演算子を使用して、データセットをフィルタリングできます。
+Python では、データセットのフィルタリングに役立つ特定の演算子を使用できます。
 
 >[!NOTE]
 >
@@ -77,7 +77,7 @@ And = and operator
 Or = or operator
 ```
 
-これらのフィルタリング関数の使用例を以下に示します。
+これらのフィルター関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experience_ds['timestamp'].lt(87879779797)).Or(experience_ds['a'].eq(123)))
@@ -85,9 +85,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY 句
 
-ORDER BY 句を使用すると、受け取った結果を特定の順序（昇順または降順）で指定した列で並べ替えることができます。 これは、 `sort()` 関数に置き換えます。
+ORDER BY 句を使用すると、指定した列を指定した順序（昇順または降順）で並べ替えて、受信した結果を表示できます。 これを行うには、`sort()` 関数を使用します。
 
-の使用例 `sort()` 関数は次のように表示されます。
+`sort()` 関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -95,9 +95,9 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 ### LIMIT 句
 
-LIMIT 句を使用すると、データセットから受け取るレコードの数を制限できます。
+LIMIT 句を使用すると、データセットから受信するレコードの数を制限できます。
 
-の使用例 `limit()` 関数は次のように表示されます。
+`limit()` 関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -105,19 +105,19 @@ df = dataset_reader.limit(100).read()
 
 ### OFFSET 句
 
-OFFSET 句を使用すると、行を先頭からスキップし、後から行を返すようにできます。 LIMIT と組み合わせると、ブロック内の行を繰り返すのに使用できます。
+OFFSET 句を使用すると、先頭から行をスキップして、後の時点から行を返すことができます。 LIMIT と組み合わせて、これを使用してブロック内の行を繰り返すことができます。
 
-の使用例 `offset()` 関数は次のように表示されます。
+`offset()` 関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.offset(100).read()
 ```
 
-## データセットの書き込み
+## データセットの記述
 
 データセットに書き込むには、データセットに pandas データフレームを指定する必要があります。
 
-### pandas データフレームの書き込み
+### Pandas データフレームの作成
 
 ```python
 client_context = get_client_context(config_properties)
@@ -130,15 +130,15 @@ dataset_writer = DatasetWriter(client_context, dataset)
 write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 ```
 
-## Userspace ディレクトリ（チェックポイント）
+## ユーザー空間ディレクトリ （チェックポイント）
 
-ジョブの実行時間を長くするには、中間ステップの保存が必要になる場合があります。 このような場合、ユーザースペースに対して読み書きを行うことができます。
+ジョブを長時間実行する場合は、中間ステップの保存が必要になる場合があります。 このような場合、ユーザー空間に対して読み書きを行うことができます。
 
 >[!NOTE]
 >
->データへのパスは **not** 保存済み。 対応するパスをそれぞれのデータに保存する必要があります。
+>データへのパスは保存 **されません**。 対応するパスをそれぞれのデータに保存する必要があります。
 
-### ユーザースペースに書き込み
+### Userspace に書き込む
 
 ```python
 client_context = get_client_context(config_properties)
@@ -147,7 +147,7 @@ user_helper = UserSpaceHelper(client_context)
 user_helper.write(data_frame=<data_frame>, path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
 ```
 
-### ユーザースペースから読み取り
+### ユーザー空間から読み取り
 
 ```python
 client_context = get_client_context(config_properties)
@@ -158,4 +158,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## 次の手順
 
-Adobe Experience Platform Data Science Workspace は、上記のコードサンプルを使用してデータの読み取りと書き込みをおこなうレシピサンプルを提供しています。 Python を使用してデータにアクセスする方法の詳細については、 [Data Science Workspace Python GitHub リポジトリ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Adobe Experience Platform Data Science Workspaceは、上記のコードサンプルを使用してデータの読み取りと書き込みを行うレシピサンプルを提供します。 Python を使用してデータにアクセスする方法について詳しくは、[Data Science Workspace Python GitHub リポジトリ ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail) を参照してください。

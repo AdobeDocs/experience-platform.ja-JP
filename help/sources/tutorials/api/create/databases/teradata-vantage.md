@@ -27,24 +27,24 @@ ht-degree: 57%
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
 
-次の節では、に正常に接続するために必要な追加情報を示します [!DNL Teradata Vantage] の使用 [!DNL Flow Service] API です。
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Teradata Vantage] す。
 
 ### 必要な資格情報の収集
 
-の目的で [!DNL Flow Service] を接続する [!DNL Teradata Vantage]は、次の接続プロパティを指定する必要があります。
+[!DNL Flow Service] を [!DNL Teradata Vantage] に接続するには、次の接続プロパティを指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `connectionString` | 接続文字列は、データ ソースとその接続方法に関する情報を提供する文字列です。 の接続文字列パターン [!DNL Teradata Vantage] 等しい `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Teradata Vantage] は： `2fa8af9c-2d1a-43ea-a253-f00a00c74412` |
+| `connectionString` | 接続文字列は、データ ソースとその接続方法に関する情報を提供する文字列です。 [!DNL Teradata Vantage] の接続文字列のパターンは `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Teradata Vantage] の接続仕様 ID は `2fa8af9c-2d1a-43ea-a253-f00a00c74412` です。 |
 
-基本について詳しくは、こちらを参照してください [[!DNL Teradata Vantage] 文書](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
+基本について詳しくは、この [[!DNL Teradata Vantage]  ドキュメント ](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options) を参照してください。
 
 ## ベース接続の作成
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、次に対してPOSTリクエストを実行します。 `/connections` を指定する際のエンドポイント [!DNL Teradata Vantage] リクエスト本文の一部としての認証資格情報。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、その際にリクエスト本文の一部として [!DNL Teradata Vantage] 認証資格情報を指定します。
 
 **API 形式**
 
@@ -82,12 +82,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | への接続に使用する接続文字列 [!DNL Teradata Vantage] インスタンス。 の接続文字列パターン [!DNL Teradata Vantage] 等しい `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
-| `connectionSpec.id` | この [!DNL Teradata Vantage] 接続仕様 ID: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
+| `auth.params.connectionString` | [!DNL Teradata Vantage] インスタンスへの接続に使用する接続文字列。 [!DNL Teradata Vantage] の接続文字列のパターンは `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}` です。 |
+| `connectionSpec.id` | [!DNL Teradata Vantage] 接続仕様 ID: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`。 |
 
 **応答**
 
-リクエストが成功した場合は、一意の接続識別子（`id`）に設定します。 この ID は、次のチュートリアルでデータを調べるために必要です。
+応答が成功すると、一意の接続識別子（`id`）を含む、新しく作成された接続が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -99,4 +99,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Teradata Vantage] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [を使用した、データベースデータを Platform に取り込むデータフローの作成 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)

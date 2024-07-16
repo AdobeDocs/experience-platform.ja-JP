@@ -4,7 +4,7 @@ description: Reactor API で /search エンドポイントを呼び出す方法�
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 100%
 
 ---
@@ -36,7 +36,6 @@ Reactor API の `/search` エンドポイントは、クエリとして表現さ
 >* meta は検索できず、検索結果で返されません。
 >* 拡張機能パッケージデリゲート（アクション、条件など）のスキーマフィールドは、ネストしたデータ構造としてではなく、テキストとして検索可能です。
 >* 現在、範囲クエリは整数のみをサポートしています。
-
 
 この機能の使用方法について詳しくは、 [検索ガイド](../guides/search.md) を参照してください。
 

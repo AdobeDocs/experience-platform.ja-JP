@@ -4,7 +4,7 @@ description: Reactor API で /app_configurations エンドポイントを呼び�
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '550'
 ht-degree: 96%
 
 ---
@@ -215,7 +215,7 @@ curl -X POST \
 | `platform` | アプリケーションが実行されるプラットフォーム（Web またはモバイル）。使用可能なメッセージングサービスを決定します。 |
 | `messaging_service` | [Apple プッシュ通知サービス（APN）](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html)や[Firebase Cloud Messaging（FCM）](https://firebase.google.com/docs/cloud-messaging)など、アプリに関連付けられたメッセージングサービスです。使用できるキーのタイプを決定します。 |
 | `key_type` | プッシュサービスベンダーがサポートするプロトコルを表し、`push_credential` オブジェクトの形式を決定します。メッセージングサービスのプロトコルが進化するにつれ、更新されたプロトコルをサポートする新しい `key_type` 値が作成されます。 |
-| `push_credential` | 保存時に暗号化される、実際の秘密鍵証明書の値。このフィールドは通常、復号化されたり、API 応答に含まれたりすることはありません。 特定の Adobe サービスのみが、復号化されたプッシュ秘密鍵証明書を含む応答を取得できます。 |
+| `push_credential` | 保存時に暗号化される、実際の資格情報の値。このフィールドは通常、復号化されたり、API 応答に含まれたりすることはありません。 特定の Adobe サービスのみが、復号化されたプッシュ資格情報を含む応答を取得できます。 |
 
 {style="table-layout:auto"}
 
@@ -258,7 +258,7 @@ curl -X POST \
 
 ## アプリ設定の更新
 
-アプリ設定を更新するには、アプリリクエストのパスに ID を含めます。PATCH
+PATCHリクエストのパスに ID を含めることで、アプリ設定を更新できます。
 
 **API 形式**
 

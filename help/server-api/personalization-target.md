@@ -1,6 +1,6 @@
 ---
 title: Adobe Target を使用したパーソナライゼーション
-description: Server API を使用して、Adobe Targetで作成したパーソナライズされたエクスペリエンスを提供し、レンダリングする方法を説明します。
+description: Server API を使用して、Adobe Targetで作成されたパーソナライズされたエクスペリエンスを配信およびレンダリングする方法について説明します。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
 source-git-commit: ddffe9bf30741b457f7de1099b50ac1624fca927
 workflow-type: tm+mt
@@ -13,30 +13,30 @@ ht-degree: 3%
 
 ## 概要 {#overview}
 
-Edge Network Server API を使用すると、Adobe Targetで作成されたパーソナライズされたエクスペリエンスを、 [フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+Edge Networkサーバー API は、[ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) を利用して、Adobe Targetで作成されたパーソナライズされたエクスペリエンスを配信およびレンダリングできます。
 
 >[!IMPORTANT]
 >
->を通じて作成されたパーソナライゼーションエクスペリエンス [Target Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は、Server API で完全にはサポートされていません。 Server API では、 **取得** アクティビティが VEC で作成されたが、Server API では作成されない **render** VEC で作成されたアクティビティ。 VEC で作成されたアクティビティをレンダリングする場合は、 [ハイブリッドパーソナライズ](../web-sdk/personalization/hybrid-personalization.md) Web SDK と Edge Network Server API を使用して、
+>[Target Visual Experience Composer （VEC）を使用して作成されたPersonalization エクスペリエンスは ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)Server API では完全にはサポートされません。 Server API は、VEC で作成されたアクティビティを **取得** できますが、Server API は、VEC で作成されたアクティビティを **レンダリング** できません。 VEC で作成されたアクティビティをレンダリングする場合は、Web SDK とEdge Networkサーバー API を使用して [ ハイブリッドパーソナライゼーション ](../web-sdk/personalization/hybrid-personalization.md) を実装してください。
 
 ## データストリームの設定 {#configure-your-datastream}
 
-Server API をAdobe Targetと組み合わせて使用する前に、データストリーム設定でAdobe Targetのパーソナライゼーションを有効にする必要があります。
+Server API をAdobe Targetと組み合わせて使用する前に、データストリーム設定でAdobe Target パーソナライゼーションを有効にする必要があります。
 
-詳しくは、 [データストリームへのサービスの追加に関するガイド](../datastreams/overview.md#adobe-target-settings)(Adobe Targetを有効にする方法について詳しくは、を参照 )。
+Adobe Targetを有効にする方法について詳しくは、[ データストリームへのサービスの追加に関するガイド ](../datastreams/overview.md#adobe-target-settings) を参照してください。
 
-データストリームを設定する際に、次の値を（オプションで）指定できます。 [!DNL Property Token], [!DNL Target Environment ID]、および [!DNL Target Third Party ID Namespace].
+データストリームを設定する際に、[!DNL Property Token]、[!DNL Target Environment ID]、[!DNL Target Third Party ID Namespace] の値を（オプションで）指定できます。
 
-![Adobe Targetを選択した状態で、データストリームサービス設定画面を示す UI 画像](assets/target-datastream.png)
+![Adobe Targetが選択された状態のデータストリームサービス設定画面を示す UI 画像 ](assets/target-datastream.png)
 
 ## カスタムパラメーター {#custom-parameters}
 
-のほとんどのフィールド [!DNL XDM] 各リクエストの一部は、ドット表記にシリアル化され、カスタムまたはとして Target に送信されます。 [!DNL mbox] パラメーター。
+各リクエストの [!DNL XDM] 部分にあるほとんどのフィールドは、ドット表記にシリアル化され、カスタムパラメーターまたは [!DNL mbox] パラメーターとして Target に送信されます。
 
 
 ### 例 {#custom-parameters-example}
 
-次の XDM サンプルを考えてみましょう。
+以下の XDM サンプルを考えると、
 
 ```json
 "xdm":{
@@ -48,7 +48,7 @@ Server API をAdobe Targetと組み合わせて使用する前に、データス
 }
 ```
 
-Target でオーディエンスを作成する場合、次の値がカスタムパラメーターとして使用できます。
+Target でオーディエンスを作成する場合、次の値をカスタムパラメーターとして使用できます。
 
 * `marketing.campaignGroup`
 * `marketing.campaignName`
@@ -56,7 +56,7 @@ Target でオーディエンスを作成する場合、次の値がカスタム�
 
 ## Target プロファイルの更新 {#profile-update}
 
-The [!DNL Server API] では、Target プロファイルの更新を許可します。 Target プロファイルを更新するには、必ず `data` リクエストの一部を次の形式で記述します。
+[!DNL Server API] を使用すると、Target プロファイルを更新できます。 ターゲットプロファイルを更新するには、プロファイルデータがリクエストの `data` の部分に次の形式で渡されます。
 
 ```json
 "data":  {
@@ -67,30 +67,30 @@ The [!DNL Server API] では、Target プロファイルの更新を許可しま
 }
 ```
 
-## Target アクティビティに対するクエリ {#querying-target-activities}
+## Target アクティビティのクエリ {#querying-target-activities}
 
 ### スキーマ {#schemas}
 
-リクエストのクエリ部分は、Target から返されるコンテンツを決定します。 の下 `personalization` オブジェクト、 `schemas` は、Target から返されるコンテンツのタイプを決定します。
+リクエストのクエリ部分によって、Target から返されるコンテンツが決まります。 `personalization` オブジェクトの下で、`schemas` によって返されるコンテンツのタイプが決定されます。
 
-どのようなオファーを取得するかが不明な場合は、パーソナライゼーションクエリに次の 4 つのスキーマをすべて Edge ネットワークに含める必要があります。
+取得するオファーの種類が不明な場合は、パーソナライゼーションクエリに次の 4 つのスキーマをすべてEdge Networkに含める必要があります。
 
 * **HTMLベースのオファー：**
 https://ns.adobe.com/personalization/html-content-item
 * **JSON ベースのオファー：**
 https://ns.adobe.com/personalization/json-content-item
-* **Target のリダイレクトオファー**
+* **Target リダイレクトオファー**
 https://ns.adobe.com/personalization/redirect-item
 * **Target DOM 操作オファー**
 https://ns.adobe.com/personalization/dom-action
 
 ### 決定範囲 {#decision-scopes}
 
-Adobe Target [!DNL mbox] 名前は `decisionScopes` 配列を使用して、適切なコンテンツを返します。
+適切なコンテンツを返すには、Adobe Target [!DNL mbox] 名を `decisionScopes` 配列に含める必要があります。
 
 #### 例 {#decision-scopes-example}
 
-以下の例では、4 つのオファータイプすべてが、「 」という Target アクティビティと共にリクエストされます。 `serverapimbox`.
+次の例では、4 つのオファータイプすべてと、`serverapimbox` という Target アクティビティがリクエストされます。
 
 ```json
 "query":{
@@ -118,7 +118,7 @@ POST /ee/v2/interact
 
 ### リクエスト {#request}
 
-完全な XDM オブジェクト、プロファイルパラメーター、および適切な Target クエリを含む完全なリクエストの概要を以下に示します。
+完全な XDM オブジェクト、プロファイルパラメーターおよび適切な Target クエリを含む完全なリクエストの概要を以下に示します。
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -199,7 +199,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### 応答 {#response}
 
-Edge ネットワークは、次のような応答を返します。
+Edge Networkは、以下のような応答を返します。
 
 ```json
 {
@@ -270,26 +270,26 @@ Edge ネットワークは、次のような応答を返します。
 }
 ```
 
-訪問者がAdobe Targetに送信されたデータに基づいてパーソナライゼーションアクティビティの対象となる場合、関連するアクティビティのコンテンツは `handle` オブジェクト ( タイプは `personalization:decisions`.
+Adobe Targetに送信されたデータに基づいて、訪問者がパーソナライゼーションアクティビティの対象となった場合、関連するアクティビティのコンテンツは `handle` オブジェクトの下に見つかり、タイプは `personalization:decisions` になります。
 
-その他のコンテンツは、 `handle` 同様に。 その他のコンテンツタイプは、Target のパーソナライゼーションとは関係ありません。 訪問者が複数のアクティビティに該当する場合、各アクティビティは個別の `personalization` オブジェクトを指定します。
+その他のコンテンツも `handle` の下に返される場合があります。 その他のコンテンツタイプは、Target のパーソナライゼーションには関係ありません。 訪問者が複数のアクティビティの対象となる場合、各アクティビティは、配列内の個別の `personalization` オブジェクトになります。
 
-次の表に、応答のその部分の主な要素を示します。
+次の表に、応答のその部分の主な要素を説明します。
 
 | プロパティ | 説明 | 例 |
 |---|---|---|
-| `scope` | 提案されたオファーに結び付いた Target mbox 名。 | `"scope": "serverapimbox"` |
-| `items[].schema` | 提案されたオファーに関連付けられたコンテンツのスキーマ。 これは、パーソナライゼーションアクティビティの作成時に選択したアクティビティタイプに関連します。 | `"schema": "https://ns.adobe.com/personalization/json-content-item",` |
+| `scope` | 提案されたオファーが生成された Target mbox 名。 | `"scope": "serverapimbox"` |
+| `items[].schema` | 提案されたオファーに関連付けられたコンテンツのスキーマ。 これは、パーソナライゼーションアクティビティの作成時に選択したアクティビティタイプに関連しています。 | `"schema": "https://ns.adobe.com/personalization/json-content-item",` |
 | `items[].meta.activity.id` | オファーアクティビティの一意の ID。 通常は 6 桁の数値です。 | `"activity.id": "140281"` |
-| `items[].meta.activity.name` | ユーザー指定のオファーアクティビティの名前。 これは、アクティビティの作成手順で提供されます。 | `"activity.name": "Server API Form"` |
+| `items[].meta.activity.name` | ユーザー指定のオファーアクティビティの名前。 これは、アクティビティ作成手順の最中に行います。 | `"activity.name": "Server API Form"` |
 | `items[].meta.experience.id` | パーソナライゼーションエクスペリエンスの一意の ID。 | `"experience.id": "0"` |
 | `items[].meta.experience.name` | パーソナライゼーションエクスペリエンスの一意の名前。 | `"experience.name": "Experience A"` |
 | `items[].data.id` | 提案されたオファーの ID。 | `"id": "282484"` |
 | `items[].data.format` | 提案されたオファーに関連付けられたコンテンツの形式。 | `"format: "application/json` |
 | `items[].data.content` | 提案されたオファーに関連付けられたコンテンツ。 これは、呼び出し元のアプリケーションのコンテンツのパーソナライゼーションに使用されます。 | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
 
-## サーバー側パーソナライゼーションサンプルアプリケーション {#sample}
+## サーバーサイドパーソナライゼーションサンプルアプリケーション {#sample}
 
-次の場所にあるサンプルアプリケーション： [この URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) Adobe Experience Platformを使用してAdobe Targetからパーソナライゼーションコンテンツを取得する方法を示します。 Web ページは、返されるパーソナライゼーションコンテンツに基づいて変化します。
+[ この URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) にあるサンプルアプリケーションは、Adobe Experience Platformを使用してAdobe Targetからパーソナライゼーションコンテンツを取得する方法を示しています。 Web ページは、返されるパーソナライゼーションコンテンツに基づいて変更されます。
 
-このサンプルでは、 _not_ 次のようなクライアント側ライブラリに依存する [!DNL Web SDK] パーソナライゼーションコンテンツを取得します。 代わりに、Adobe Experience Platform API を使用してパーソナライゼーションコンテンツを取得します。 次に、返されたHTMLコンテンツに基づいて、パーソナライゼーションサーバーサイドが生成されます。
+このサンプルは _パーソナライゼーションコンテンツの取得に [!DNL Web SDK] のようなクライアントサイドライブラリに依存していません_。 代わりに、Adobe Experience Platform API を使用してパーソナライゼーションコンテンツを取得します。 次に、実装は、返されたパーソナライゼーションコンテンツに基づいて、サーバーサイドでHTMLを生成します。

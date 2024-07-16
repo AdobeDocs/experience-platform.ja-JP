@@ -19,7 +19,7 @@ ht-degree: 89%
 >
 >エッジセグメント化は、すべての Platform ユーザーが一般に使用できるようになりました。ベータ版でエッジセグメント定義を作成した場合、これらのセグメント定義は引き続き動作します。
 
-エッジセグメント化は、Adobe Experience Platform内のセグメント定義をエッジ上で即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
+Edgeのセグメント化は、Adobe Experience Platformのセグメント定義をエッジ上で即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ ht-degree: 89%
 この開発者ガイドでは、エッジのセグメント化に関連する様々な [!DNL Adobe Experience Platform] サービスについての十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合された消費者プロファイルをリアルタイムで提供します。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：からオーディエンスを作成できます [!DNL Real-Time Customer Profile] データ。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 Experience Platform API エンドポイントへの呼び出しを正常に行うには、[Platform API の基本を学ぶ](../../landing/api-guide.md)のガイドを読み、必要なヘッダーとサンプル API 呼び出しの読み方を確認してください。
@@ -68,7 +68,7 @@ Experience Platform API エンドポイントへの呼び出しを正常に行�
 
 ## エッジセグメント化で有効なすべてのセグメントの取得
 
-にGETリクエストを行うことで、組織内でエッジセグメント化が有効になっているすべてのセグメントのリストを取得できます。 `/segment/definitions` エンドポイント。
+`/segment/definitions` エンドポイントにGETリクエストを行うことで、組織内でエッジセグメント化が有効になっているすべてのセグメントのリストを取得できます。
 
 **API 形式**
 

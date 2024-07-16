@@ -1,12 +1,12 @@
 ---
-keywords: Qualtrics;Qualtrics;Qualtrics Website Feedback;Qualtrics Website Feedback;Qualtrics Web サイトのフィードバック；Qualtrics Web サイトのフィードバック
+keywords: Qualtrics;qualtrics;Qualtrics Web サイトフィードバック；qualtrics Web サイトフィードバック；Qualtricks Web サイトフィードバック
 title: Qualtrics Website Feedback 拡張機能
-description: Qualtrics Website Feedback 拡張機能は、Adobe Experience Platformの調査の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Qualtrics Website Feedback 拡張機能は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 70cf315c-2c96-4c3a-bf80-511024964986
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 89%
+source-wordcount: '516'
+ht-degree: 87%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 89%
 
 ## 概要 {#overview}
 
-[!DNL Qualtrics Website Feedback] を使用すると、適切なメッセージと適格なタイミングで web サイトの訪問者を引き付けることができます。Web サイトのフィードバック調査で訪問者エクスペリエンスを向上させるか、コンバージョンを増やすか。 [!DNL Qualtrics Website Feedback] カバーを取った
+[!DNL Qualtrics Website Feedback] を使用すると、適切なメッセージを適切なタイミングで web サイト訪問者に提供できます。 Web サイトのフィードバック調査を使用して訪問者のエクスペリエンスを向上させる場合でも、コンバージョンを向上させる場合でも、[!DNL Qualtrics Website Feedback] の点をカバーしています。
 
 直感的なポイント＆クリックインターフェイスで、ターゲットを絞り込んだ、ブランド化された web メッセージを数分で作成して展開します。web サイトから収集したデータとインサイトは、すべてのチャネルの顧客フィードバックデータと共に表示され、1 つのプラットフォームで顧客体験の全体像が提示されます。
 
-[!DNL Qualtrics Website Feedback] は、Adobe Experience Platformの調査の拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html) の拡張機能のページを参照してください。
+[!DNL Qualtrics Website Feedback] は、Adobe Experience Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -32,7 +32,7 @@ ht-degree: 89%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Qualtrics Website Feedback] 拡張子：
+[!DNL Qualtrics Website Feedback] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

@@ -4,14 +4,14 @@ description: イベント転送で使用する Reactor API の秘密鍵を設定
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 89%
+source-wordcount: '1206'
+ht-degree: 88%
 
 ---
 
 # Reactor API の秘密鍵
 
-Reactor API では、秘密鍵は認証情報を表すリソースです。秘密鍵は、安全なデータ交換のために別のシステムに認証するために、イベント転送で使用されます。したがって、秘密鍵は、イベント転送プロパティ（`platform` 属性が `edge` に設定されているプロパティ）内でのみ作成できます。
+Reactor API では、秘密鍵は資格情報を表すリソースです。秘密鍵は、安全なデータ交換のために別のシステムに認証するために、イベント転送で使用されます。したがって、秘密鍵は、イベント転送プロパティ（`platform` 属性が `edge` に設定されているプロパティ）内でのみ作成できます。
 
 現在、`type_of` 属性で示されているサポートされている秘密鍵タイプは次の 3 つです。
 
@@ -27,9 +27,9 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 
 ## 資格情報
 
-各秘密鍵には、それぞれの認証情報の値を保持する `credentials` 属性が含まれます。条件 [API でのシークレットの作成](../endpoints/secrets.md#create)の場合、各タイプのシークレットには、以下の節で示すように、必要な属性が異なります。
+各秘密鍵には、それぞれの資格情報の値を保持する `credentials` 属性が含まれます。[API で秘密鍵を作成 ](../endpoints/secrets.md#create) する場合、以下の節に示すように、秘密鍵のタイプごとに異なる必須属性があります。
 
-* [`token`](#token)
+* [&#39;トークン&#39;](#token)
 * [&#39;simple-http&#39;](#simple-http)
 * [&#39;oauth2-client_credentials&#39;](#oauth2-client_credentials)
 * [&#39;oauth2-google&#39;](#oauth2-google)
@@ -38,7 +38,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 
 `type_of` の値が `token` の秘密鍵には、`credentials` の下に 1 つの属性のみが必要です。
 
-| 認証情報属性 | データタイプ | 説明 |
+| 資格情報属性 | データタイプ | 説明 |
 | --- | --- | --- |
 | `token` | 文字列 | 宛先システムによって認識される秘密鍵トークン。 |
 
@@ -50,7 +50,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 
 `type_of` の値が `simple-http` の秘密鍵には、`credentials` の下に次の属性が必要です。
 
-| 認証情報属性 | データタイプ | 説明 |
+| 資格情報属性 | データタイプ | 説明 |
 | --- | --- | --- |
 | `username` | 文字列 | ユーザー名。 |
 | `password` | 文字列 | パスワード。 この値は API 応答には含まれません。 |
@@ -63,15 +63,15 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 
 `type_of` の値が `oauth2-client_credentials` の秘密鍵には、`credentials` の下に次の属性が必要です。
 
-| 認証情報属性 | データタイプ | 説明 |
+| 資格情報属性 | データタイプ | 説明 |
 | --- | --- | --- |
 | `client_id` | 文字列 | OAuth 統合のクライアント ID。 |
 | `client_secret` | 文字列 | OAuth 統合用のクライアント秘密鍵。この値は API 応答には含まれません。 |
 | `token_url` | 文字列 | OAuth 統合の認証 URL。 |
 | `refresh_offset` | 整数 | *（オプション）*&#x200B;更新操作をオフセットする値（秒単位）。秘密鍵の作成時にこの属性を省略すると、デフォルトで値は `14400`（4 時間）に設定されます。 |
-| `options` | オブジェクト | *（オプション）* OAuth 統合の追加オプションを指定します。<ul><li>`scope`：認証情報の [OAuth 2.0 スコープ](https://oauth.net/2/scope/)を表す文字列。</li><li>`audience`：[Auth0 アクセストークン](https://auth0.com/docs/protocols/protocol-oauth2)を表す文字列</li></ul> |
+| `options` | オブジェクト | *（オプション）* OAuth 統合の追加オプションを指定します。<ul><li>`scope`：資格情報の [OAuth 2.0 スコープ](https://oauth.net/2/scope/)を表す文字列。</li><li>`audience`：[Auth0 アクセストークン](https://auth0.com/docs/protocols/protocol-oauth2)を表す文字列</li></ul> |
 
-`oauth2-client_credentials` 秘密鍵が作成または更新されると、OAuth プロトコルのクライアント認証情報フローに従って、`client_id` と `client_secret`（および場合によっては `options`）が POST リクエストで `token_url` に交換されます。
+`oauth2-client_credentials` 秘密鍵が作成または更新されると、OAuth プロトコルのクライアント資格情報フローに従って、`client_id` と `client_secret`（および場合によっては `options`）が POST リクエストで `token_url` に交換されます。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 
 承認サービスが `200 OK` と JSON 応答本文で応答する場合、本文が解析され、`access_token` がエッジ環境にプッシュされ、`expires_in` を使用して秘密鍵の `expires_at` 属性と `refresh_at` 属性が計算されます。秘密鍵に環境の関連付けがない場合、 `access_token` は破棄されます。
 
-認証情報の交換は、次の条件下で成功したと見なされます。
+資格情報の交換は、次の条件下で成功したと見なされます。
 
 * `expires_in` は `28800`（8 時間）より大きい値です。
 * `refresh_offset` は、`expires_in` から `14400` を引いた値（4 時間）未満です。例えば、`expires_in` が `36000`（10 時間）で、`refresh_offset` が `28800`（8 時間）の場合、`28800` は `36000` - `14400`（`21600`）より大きいため交換は失敗したとみなされます。
@@ -93,7 +93,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 
 #### `oauth2-client_credentials` 秘密鍵の更新
 
-`oauth2-client_credentials` 秘密鍵が環境に割り当てられ、そのステータスが（認証情報が正常に交換された）`succeeded` の場合、`refresh_at` で新しい交換が自動的に実行されます。
+`oauth2-client_credentials` 秘密鍵が環境に割り当てられ、そのステータスが（資格情報が正常に交換された）`succeeded` の場合、`refresh_at` で新しい交換が自動的に実行されます。
 
 交換が成功すると、`meta` オブジェクトの `refresh_status` 属性が `succeeded` に設定され、`expires_at`、`refresh_at` および `activated_at` が更新されます。
 
@@ -101,19 +101,19 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 
 ### `oauth2-google` {#oauth2-google}
 
-を使用したシークレット `type_of` 値 `oauth2-google` には、以下の属性が必要です。 `credentials`:
+`type_of` の値が `oauth2-google` の秘密鍵には、`credentials` の下に次の属性が必要です。
 
-| 認証情報属性 | データタイプ | 説明 |
+| 資格情報属性 | データタイプ | 説明 |
 | --- | --- | --- |
-| `scopes` | 配列 | 認証用のGoogle製品範囲を一覧表示します。 次のスコープがサポートされています。<ul><li>[Google 広告](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+| `scopes` | 配列 | 認証用のGoogle製品スコープを一覧表示します。 次の範囲がサポートされています。<ul><li>[Google広告 ](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-作成後 `oauth2-google` シークレット。応答には `meta.authorization_url` プロパティ。 Google認証フローを完了するには、この URL をコピーしてブラウザーに貼り付ける必要があります。
+`oauth2-google` 秘密鍵を作成した後、応答には `meta.authorization_url` プロパティが含まれます。 Google認証フローを完了するには、この URL をコピーしてブラウザーに貼り付ける必要があります。
 
-#### 再認証： `oauth2-google` 秘密鍵
+#### `oauth2-google` 秘密鍵の再認証
 
-の認証 URL `oauth2-google` シークレットは、シークレットの作成後 1 時間で有効期限が切れます ( `meta.authorization_url_expires_at`) をクリックします。 この時間が過ぎると、認証プロセスを更新するために秘密鍵を再認証する必要があります。
+`oauth2-google` 秘密鍵の認証 URL は、秘密鍵が作成されてから 1 時間が経過すると有効期限が切れます（`meta.authorization_url_expires_at` で示されます）。 この期間を過ぎると、認証プロセスを更新するために秘密鍵の再認証を行う必要があります。
 
-詳しくは、 [secrets エンドポイントガイド](../endpoints/secrets.md#reauthorize) 再認証方法の詳細 `oauth2-google` シークレットを保持する必要があります。
+Reactor API に対して認証リクエストを行うことで `oauth2-google` 秘密鍵を再PATCHする方法について詳しくは、[ 秘密鍵エンドポイントガイド ](../endpoints/secrets.md#reauthorize) を参照してください。
 
 ## 環境の関係
 
@@ -125,7 +125,7 @@ Reactor API では、秘密鍵は認証情報を表すリソースです。秘�
 >
 >このルールの唯一の例外は、問題の環境が削除された場合です。この場合、関係は解除され、秘密鍵を別の環境に割り当てることができます。
 
-秘密鍵の認証情報が正常に交換された後、秘密鍵を環境に関連付けるには、交換アーティファクト（`token` トークン文字列、`simple-http`の Base64 エンコード文字列または `oauth2-client_credentials` のアクセストークン）を、環境に安全に保存します。
+秘密鍵の資格情報が正常に交換された後、秘密鍵を環境に関連付けるには、交換アーティファクト（`token` トークン文字列、`simple-http`の Base64 エンコード文字列または `oauth2-client_credentials` のアクセストークン）を、環境に安全に保存します。
 
 交換アーティファクトが環境に正常に保存されると、秘密鍵の `activated_at` 属性が現在の UTC 時間に設定され、データ要素を使用して参照できるようになります。秘密鍵の参照について詳しくは、[次の節](#referencing-secrets)を参照してください。
 

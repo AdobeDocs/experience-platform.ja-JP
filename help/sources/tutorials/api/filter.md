@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；フローサービス API；ソース；ソース
-title: フローサービス API を使用してソースの行レベルのデータをフィルタリングする
-description: このチュートリアルでは、フローサービス API を使用してソースレベルでデータをフィルタリングする手順を説明します
+keywords: Experience Platform；ホーム；人気のトピック；flow service;Flow Service API；ソース；ソース
+title: Flow Service API を使用したSourceの行レベルのデータのフィルタリング
+description: このチュートリアルでは、Flow Service API を使用してソースレベルでデータをフィルタリングする手順を説明します
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 17%
+source-wordcount: '778'
+ht-degree: 14%
 
 ---
 
-# を使用してソースの行レベルのデータをフィルタリングする [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用したソースの行レベルのデータのフィルタリング
 
 >[!IMPORTANT]
 >
->現在、行レベルのデータのフィルタリングのサポートは、次のソースでのみ利用できます。
+>行レベルのデータのフィルタリングのサポートは、現在、次のソースでのみ使用できます。
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
 >* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
-このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してソースの行レベルのデータをフィルタリングする手順を説明します。
 
 ## はじめに
 
@@ -36,13 +36,13 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 ## ソースデータをフィルター
 
-次に、ソースの行レベルのデータをフィルタリングする手順の概要を示します。
+ソースの行レベルのデータをフィルタリングするための手順の概要を次に示します。
 
 ### 接続仕様の検索
 
-API を使用してソースの行レベルのデータをフィルタリングする前に、まず、ソースの接続仕様の詳細を取得して、特定のソースがサポートする演算子と言語を決定する必要があります。
+API を使用してソースの行レベルのデータをフィルタリングする前に、まずソースの接続仕様の詳細を取得して、特定のソースがサポートする演算子と言語を決定する必要があります。
 
-特定のソースの接続仕様を取得するには、に対してGETリクエストを実行します。 `/connectionSpecs` エンドポイント [!DNL Flow Service] API を使用して、ソースのプロパティ名をクエリパラメーターの一部として指定する場合。
+特定のソースの接続仕様を取得するには、[!DNL Flow Service] API の `/connectionSpecs` エンドポイントにGETリクエストを行い、その際にソースのプロパティ名をクエリパラメーターの一部として指定します。
 
 **API 形式**
 
@@ -52,11 +52,11 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUERY_PARAMS}` | 結果をフィルタリングするためのオプションのクエリパラメーターです。 次を取得： [!DNL Google BigQuery] 接続仕様 `name` プロパティと指定 `"google-big-query"` を使用して検索できます。 |
+| `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 [!DNL Google BigQuery] 接続仕様を取得するには、`name` プロパティを適用して、検索で `"google-big-query"` を指定します。 |
 
 **リクエスト**
 
-次のリクエストは、 [!DNL Google BigQuery].
+次のリクエストは、[!DNL Google BigQuery] の接続仕様を取得します。
 
 ```shell
 curl -X GET \
@@ -69,7 +69,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、 [!DNL Google BigQuery]（サポートされるクエリ言語や論理演算子に関する情報を含む）
+応答が成功すると、サポートされるクエリ言語や論理演算子の情報を含め、[!DNL Google BigQuery] の接続仕様が返されます。
 
 >[!NOTE]
 >
@@ -102,12 +102,12 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `attributes.filterAtSource.enabled` | クエリされたソースが行レベルのデータのフィルタリングをサポートするかどうかを決定します。 |
+| `attributes.filterAtSource.enabled` | クエリされたソースが行レベルのデータのフィルタリングをサポートしているかどうかを判断します。 |
 | `attributes.filterAtSource.queryLanguage` | クエリされたソースがサポートするクエリ言語を決定します。 |
 | `attributes.filterAtSource.logicalOperators` | ソースの行レベルのデータをフィルタリングするために使用できる論理演算子を決定します。 |
-| `attributes.filterAtSource.comparisonOperators` | ソースの行レベルのデータをフィルタリングする際に使用できる比較演算子を決定します。 比較演算子について詳しくは、次の表を参照してください。 |
+| `attributes.filterAtSource.comparisonOperators` | ソースの行レベルのデータをフィルタリングするために使用できる比較演算子を決定します。 比較演算子について詳しくは、次の表を参照してください。 |
 | `attributes.filterAtSource.columnNameEscapeChar` | 列のエスケープに使用する文字を決定します。 |
-| `attributes.filterAtSource.valueEscapeChar` | SQL クエリを書き込む際に値を取り囲む方法を決定します。 |
+| `attributes.filterAtSource.valueEscapeChar` | SQL クエリを記述するときに値をどのように囲むかを指定します。 |
 
 {style="table-layout:auto"}
 
@@ -115,22 +115,22 @@ curl -X GET \
 
 | 演算子 | 説明 |
 | --- | --- |
-| `==` | プロパティが指定された値と等しいかどうかでフィルターします。 |
-| `!=` | プロパティが指定された値と等しくないかどうかでフィルターします。 |
-| `<` | プロパティが指定された値より小さいかどうかでフィルターします。 |
-| `>` | プロパティが指定された値より大きいかどうかでフィルターします。 |
-| `<=` | プロパティが指定された値以下かどうかでフィルターします。 |
-| `>=` | プロパティが指定された値以上かどうかでフィルターします。 |
-| `like` | で使用されていることによるフィルター `WHERE` 句を使用して、指定したパターンを検索します。 |
-| `in` | プロパティが指定した範囲内にあるかどうかでフィルターします。 |
+| `==` | プロパティが指定された値に等しいかどうかを基準にフィルタリングします。 |
+| `!=` | プロパティが指定された値に等しくないかどうかをフィルタリングします。 |
+| `<` | プロパティが指定された値より小さいかどうかを基準にフィルタリングします。 |
+| `>` | プロパティが指定された値より大きいかどうかを基準にフィルタリングします。 |
+| `<=` | プロパティが指定された値以下であるかによってフィルタリングします。 |
+| `>=` | プロパティが指定された値以上であるかによってフィルタリングします。 |
+| `like` | `WHERE` 句で使用され、指定したパターンを検索することでフィルタリングします。 |
+| `in` | プロパティが指定した範囲内にあるかどうかを基準にフィルタを適用します。 |
 
 {style="table-layout:auto"}
 
 ### 取り込みのフィルター条件を指定
 
-ソースがサポートする論理演算子とクエリ言語を特定したら、プロファイルクエリ言語 (PQL) を使用して、ソースデータに適用するフィルター条件を指定できます。
+ソースがサポートする論理演算子とクエリ言語を識別したら、Profile Query Language（PQL）を使用して、ソースデータに適用するフィルター条件を指定できます。
 
-次の例では、条件は、パラメーターとしてリストされたノードタイプに指定された値と等しい選択データにのみ適用されます。
+以下の例では、パラメーターとしてリストされているノードタイプに指定された値と等しいデータのみを選択するために条件が適用されます。
 
 ```json
 {
@@ -155,7 +155,7 @@ curl -X GET \
 
 ### データのプレビュー
 
-データリクエストを `/explore` エンドポイント [!DNL Flow Service] を提供する際の API `filters` をクエリパラメーターの一部として追加し、 [!DNL Base64].
+[!DNL Flow Service] API の `/explore` エンドポイントに対してデータリクエストを行い、その際にクエリパラメーターの一部として `filters` を指定し、[!DNL Base64] でPQL入力条件を指定することで、GETをプレビューできます。
 
 **API 形式**
 
@@ -166,8 +166,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | パラメーター | 説明 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | ソースのベース接続 ID。 |
-| `{TABLE_PATH}` | 検査するテーブルの path プロパティです。 |
-| `{FILTERS}` | でエンコードされた PQL フィルター条件。 [!DNL Base64]. |
+| `{TABLE_PATH}` | 検査するテーブルのパスプロパティ。 |
+| `{FILTERS}` | PQLのフィルター条件が [!DNL Base64] でエンコードされている。 |
 
 **リクエスト**
 
@@ -328,9 +328,9 @@ curl -X GET \
 }
 ```
 
-### フィルター済みデータのソース接続を作成する
+### フィルターされたデータのソース接続の作成
 
-ソース接続を作成し、フィルターされたデータを取り込むには、 `/sourceConnections` エンドポイントを使用して、body パラメーターの一部としてフィルター条件を指定できます。
+ソース接続を作成し、フィルターされたデータを取り込むには、`/sourceConnections` エンドポイントに対してPOSTリクエストを実行し、その際にフィルタリング条件を本文パラメーターの一部として指定します。
 
 **API 形式**
 
@@ -340,7 +340,7 @@ POST /sourceConnections
 
 **リクエスト**
 
-次のリクエストは、データを取り込むためのソース接続を作成します。 `test1.fasTestTable` 場所 `city` = `DDN`.
+次のリクエストでは、`city` = `DDN` の `test1.fasTestTable` からデータを取り込むソース接続を作成しています。
 
 ```shell
 curl -X POST \
@@ -387,7 +387,7 @@ curl -X POST \
 
 **応答**
 
-リクエストが成功した場合は、新たに作成されたソース接続の一意の ID（`id`）が返されます。
+リクエストが成功した場合は、新しく作成されたソース接続の一意の ID （`id`）が返されます。
 
 ```json
 {
@@ -398,11 +398,11 @@ curl -X POST \
 
 ## 付録
 
-この節では、様々なペイロードのフィルタリングのその他の例を示します。
+この節では、フィルタリングに使用する様々なペイロードの例をさらに示します。
 
 ### 特異条件
 
-最初の `fnApply` を返します。
+1 つの条件のみを必要とするシナリオでは、初期 `fnApply` を省略できます。
 
 ```json
 {
@@ -425,9 +425,9 @@ curl -X POST \
 }
 ```
 
-### の使用 `in` 演算子
+### `in` 演算子の使用
 
-演算子の例については、以下のサンプルペイロードを参照してください `in`.
+演算子 `in` の例については、以下のサンプルペイロードを参照してください。
 
 ```json
 {
@@ -459,9 +459,9 @@ curl -X POST \
 }
 ```
 
-### の使用 `isNull` 演算子
+### `isNull` 演算子の使用
 
-演算子の例については、以下のサンプルペイロードを参照してください `isNull`.
+演算子 `isNull` の例については、以下のサンプルペイロードを参照してください。
 
 ```json
 {
@@ -480,9 +480,9 @@ curl -X POST \
 }
 ```
 
-### の使用 `NOT` 演算子
+### `NOT` 演算子の使用
 
-演算子の例については、以下のサンプルペイロードを参照してください `NOT`.
+演算子 `NOT` の例については、以下のサンプルペイロードを参照してください。
 
 ```json
 {
@@ -507,7 +507,7 @@ curl -X POST \
 }
 ```
 
-### ネストされた条件の例
+### ネストされた条件を使用した例
 
 複雑なネスト条件の例については、以下のサンプルペイロードを参照してください。
 

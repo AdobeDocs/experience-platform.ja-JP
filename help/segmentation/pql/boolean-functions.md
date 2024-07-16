@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: PQL ブール関数
-description: ブール関数は、プロファイルクエリ言語（PQL）の異なる要素にブール論理を実行するために使用されます。
+title: PQLのブール関数
+description: ブール関数を使用すると、Profile Query Language（PQL）の様々な要素に対してブール論理を実行できます。
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 88%
+source-wordcount: '239'
+ht-degree: 81%
 
 ---
 
 # ブール関数
 
-ブール関数は、 [!DNL Profile Query Language] (PQL) を参照してください。  その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+ブール関数を使用すると、[!DNL Profile Query Language] （PQL）の様々な要素に対してブール論理を実行できます。  その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## および
 

@@ -1,22 +1,23 @@
 ---
-title: エラー詳細コレクションのデータタイプ
-description: エラー詳細収集エクスペリエンスデータモデル (XDM) データタイプについて説明します。
-source-git-commit: 899c656a7295896b291ac5c80df873711bc6f149
+title: エラーの詳細コレクション データ型
+description: エラー詳細収集エクスペリエンスデータモデル（XDM）データタイプについて説明します。
+exl-id: 54b03147-9bca-46af-86c8-90e42b4de26b
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 8%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL エラーの詳細] コレクションデータタイプ
+# [!UICONTROL  エラーの詳細 ] 収集データタイプ
 
-[!UICONTROL エラーの詳細] コレクションは、エラーの詳細を説明する標準の Experience Data Model(XDM) データ型です。 以下を使用します。 [!UICONTROL エラーの詳細] エラーソースと ID の詳細をキャプチャするためのコレクションデータ型です。 エラー ID はエラーを識別し、エラーソースは、エラーの送信元がプレーヤーか外部ソースかを指定します。
+[!UICONTROL  エラーの詳細 ] コレクションは、エラーの詳細を説明する標準の Experience Data Model （XDM）データタイプです。 [!UICONTROL  エラーの詳細 ] 収集データタイプを使用して、エラーソースと ID の詳細をキャプチャします。 エラー ID がエラーを識別し、エラーソースが、プレーヤーと外部ソースのどちらから発生したかを特定します。
 
-![Error Details Information データ型の図です。](../images/data-types/error-details-collection.png)
+![ エラーの詳細情報のデータタイプを示す図。](../images/data-types/error-details-collection.png)
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |----------------------------|--------------|-----------|----------|-----------------------------------------------|
-| [!UICONTROL エラー ID] | `name` | 文字列 | × | エラー ID。 |
-| [!UICONTROL エラーソース] | `source` | 文字列 | × | エラーソース。 列挙：「プレーヤー」、「外部」、それぞれの意味を持つ。 |
+| [!UICONTROL  エラー ID] | `name` | 文字列 | × | エラー ID。 |
+| [!UICONTROL  エラーSource] | `source` | 文字列 | × | エラーソース。 列挙：「player」、「external」とそれぞれの意味。 |
 
 {style="table-layout:auto"}

@@ -1,43 +1,43 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；和集合；和集合；Union;SegmentMembership;timeSeriesEvents;
+keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；和集合；和集合；segmentMembership;timeSeriesEvents;
 solution: Experience Platform
-title: 和集合 API エンドポイント
-description: Schema Registry API の/unions エンドポイントを使用すると、エクスペリエンスアプリケーションで XDM 和集合スキーマをプログラムで管理できます。
+title: 結合 API エンドポイント
+description: スキーマレジストリ API の/unions エンドポイントを使用すると、エクスペリエンスアプリケーションの XDM 結合スキーマをプログラムで管理できます。
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 42%
+source-wordcount: '899'
+ht-degree: 39%
 
 ---
 
-# 和集合エンドポイント
+# 結合エンドポイント
 
-和集合（または和集合表示）は、同じクラス ([!DNL XDM ExperienceEvent] または [!DNL XDM Individual Profile]) とが有効で、 [[!DNL Real-Time Customer Profile]](../../profile/home.md).
+和集合（または和集合ビュー）は、同じクラス（[!DNL XDM ExperienceEvent] または [!DNL XDM Individual Profile]）を共有し、ス [[!DNL Real-Time Customer Profile]](../../profile/home.md) ーマが有効になっているすべてのスキーマのフィールドを集計する、システム生成の読み取り専用スキーマです。
 
 このドキュメントでは、Schema Registry API で和集合を操作するための基本的な概念と、様々な操作のサンプル呼び出しを示しています。XDM の和集合に関する一般的な情報については、「[Basics of schema composition](../schema/composition.md#union)」の和集合に関する節を参照してください。
 
-## スキーマフィールドを結合
+## 結合スキーマフィールド
 
-The [!DNL Schema Registry] 和集合スキーマ内に 3 つのキーフィールドを自動的に含めます。 `identityMap`, `timeSeriesEvents`、および `segmentMembership`.
+[!DNL Schema Registry] には、結合スキーマ内に、`identityMap`、`timeSeriesEvents`、`segmentMembership` の 3 つのキーフィールドが自動的に含まれます。
 
 ### ID マップ
 
-和集合スキーマの `identityMap` は、和集合に関連付けられているレコードスキーマ内の既知の ID を表します。ID マップは、名前空間で特定された異なる配列に ID を分離します。リストされる ID 自体は、一意の `id` 値を含むオブジェクトです。詳しくは、[ID サービスに関するドキュメント](../../identity-service/home.md)を参照してください。
+和集合スキーマの `identityMap` は、和集合に関連付けられているレコードスキーマ内の既知の ID を表します。ID マップは、名前空間で特定された異なる配列に ID を分離します。リストされた各 ID は、それ自体が一意の `id` 値を含むオブジェクトです。 詳しくは、[ID サービスに関するドキュメント](../../identity-service/home.md)を参照してください。
 
 ### 時系列イベント
 
-`timeSeriesEvents` 配列は、和集合に関連付けられているレコードスキーマに関連する時系列イベントのリストです。プロファイルデータをデータセットに書き出す場合、レコードごとにこの配列が含まれます。 これは、様々な使用事例に役立ちます。例えば、モデルがレコード属性に加えてプロファイルの行動履歴全体を必要とする機械学習などに役立ちます。
+`timeSeriesEvents` 配列は、和集合に関連付けられているレコードスキーマに関連する時系列イベントのリストです。プロファイルデータをデータセットに書き出すと、この配列が各レコードに含まれます。 これは、様々な使用事例に役立ちます。例えば、モデルがレコード属性に加えてプロファイルの行動履歴全体を必要とする機械学習などに役立ちます。
 
 ### セグメントメンバーシップマップ
 
-The `segmentMembership` map は、セグメント定義の評価結果を格納します。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。`segmentMembership` また、には、Platform に取り込まれた評価済みのオーディエンスも格納されます。これにより、Adobe Audience Managerなどの他のソリューションと統合することができます。 に関するチュートリアルを参照してください。 [API を使用したオーディエンスの作成](../../segmentation/tutorials/create-a-segment.md) を参照してください。
+`segmentMembership` マップには、セグメント定義の評価結果が格納されます。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。また、Platform に取 `segmentMembership` 込まれた事前評価済みオーディエンスを格納して、Adobe Audience Managerなどの他のソリューションと統合できます。 詳しくは、[API を使用したオーディエンスの作成 ](../../segmentation/tutorials/create-a-segment.md) に関するチュートリアルを参照してください。
 
 ## 和集合のリストの取得 {#list}
 
-次の場合、 `union` タグを使用して、 [!DNL Schema Registry] は、スキーマの基となるクラスの和集合にスキーマを自動的に追加します。 問題のクラスに和集合が存在しない場合、新しい和集合が自動的に作成されます。 The `$id` の場合、和集合は標準に似ています `$id` その他 [!DNL Schema Registry] リソースで使用されます。ただし、2 つのアンダースコアと「和集合」という単語が付加されるという点が異なります (`__union`) をクリックします。
+スキーマに `union` タグを設定すると、スキーマの基 [!DNL Schema Registry] となっているクラスの和集合に、スキーマが自動的に追加されます。 該当するクラスに和集合が存在しない場合は、新しい和集合が自動的に作成されます。 和集合の `$id` は、他の [!DNL Schema Registry] リソースの標準 `$id` と似ていますが、唯一の違いは、2 つのアンダースコアと「union」（`__union`）という単語が付加されていることです。
 
-使用可能な和集合のリストを表示するには、 `/tenant/unions` endpoint.
+`/tenant/unions` エンドポイントに対してGETリクエストをおこなうと、使用可能な結合のリストを表示できます。
 
 **API 形式**
 
@@ -57,18 +57,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 次の `Accept` 和集合のリストには、次のヘッダーを使用できます。
+応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 和集合のリストには、次の `Accept` ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 （上限：300） |
-| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON クラスを元のと共に返します `$ref` および `allOf` 含まれる。 （上限：300） |
+| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースをリストする場合は、このヘッダーをお勧めします。 （上限：300） |
+| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON クラスを、元の `$ref` と `allOf` を含めて返します。 （上限：300） |
 
 {style="table-layout:auto"}
 
 **応答**
 
-リクエストが成功した場合は、HTTP ステータス 200（OK）、およびレスポンス本文に `results` 配列が返されます。和集合が定義されている場合、各和集合の詳細は配列内にオブジェクトとして表示されます。 和集合が定義されていない場合も、HTTP ステータス 200（OK）が返されますが、`results` 配列は空になります。
+リクエストが成功した場合は、HTTP ステータス 200（OK）、およびレスポンス本文に `results` 配列が返されます。結合が定義されている場合、各結合の詳細は配列内のオブジェクトとして提供されます。 和集合が定義されていない場合も、HTTP ステータス 200（OK）が返されますが、`results` 配列は空になります。
 
 ```JSON
 {
@@ -89,13 +89,13 @@ curl -X GET \
 }
 ```
 
-## 和集合の検索 {#lookup}
+## 結合の検索 {#lookup}
 
 特定の和集合を表示するには、`$id` と、和集合の詳細の一部またはすべて（Accept ヘッダーにより異なる）を含む GET リクエストを実行します。
 
 >[!NOTE]
 >
->和集合の検索は、 `/unions` および `/schemas` エンドポイントがでの使用を有効にします。 [!DNL Profile] をデータセットに書き出します。
+>和集合検索は `/unions` エンドポイントと `/schemas` エンドポイントを使用して使用でき、データセットへの [!DNL Profile] 書き出しで使用できます。
 
 **API 形式**
 
@@ -106,7 +106,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{UNION_ID}` | URL エンコードされた `$id` 検索する和集合の URI。 和集合スキーマの URI には「__union」が追加されます。 |
+| `{UNION_ID}` | 検索する和集合の URL エンコードされた `$id` URI。 和集合スキーマの URI には「__union」が追加されます。 |
 
 {style="table-layout:auto"}
 
@@ -180,11 +180,11 @@ curl -X GET \
 
 ## 和集合メンバーシップのスキーマを有効にする {#enable}
 
-スキーマをそのクラスの和集合に含めるには、 `union` タグをスキーマの `meta:immutableTags` 属性。 これを実現するには、PATCHリクエストを実行し、 `meta:immutableTags` 次の単一の文字列値を持つ配列： `union` を問題のスキーマに追加します。 詳しくは、 [スキーマエンドポイントガイド](./schemas.md#union) 詳しい例を示します。
+スキーマをそのクラスの和集合に含めるには、`union` タグをスキーマの `meta:immutableTags` 属性に追加する必要があります。 これを実現するには、`union` という単一の文字列値を持つ `meta:immutableTags` 配列を、当該のスキーマに追加するPATCHリクエストを行います。 詳しい例については、[ スキーマエンドポイントガイド ](./schemas.md#union) を参照してください。
 
 ## 和集合でのスキーマのリスト {#list-schemas}
 
-特定の和集合に含まれるスキーマを確認するには、 `/tenant/schemas` endpoint. `property` クエリパラメーターを使用すると、アクセス先の和集合があるクラスと同等の `meta:immutableTags` フィールドおよび `meta:class` を含むスキーマのみを返すようにレスポンスを設定できます。
+特定の結合の一部であるスキーマを確認するには、`/tenant/schemas` エンドポイントに対してGETリクエストを実行します。 `property` クエリパラメーターを使用すると、アクセス先の和集合があるクラスと同等の `meta:immutableTags` フィールドおよび `meta:class` を含むスキーマのみを返すようにレスポンスを設定できます。
 
 **API 形式**
 
@@ -194,13 +194,13 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CLASS_ID}` | The `$id` のスキーマを設定します。 |
+| `{CLASS_ID}` | 和集合対応スキーマのリストを取得するクラスの `$id`。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエストは、 [!DNL XDM Individual Profile] クラス。
+次のリクエストは、[!DNL XDM Individual Profile] クラスの和集合に含まれるすべてのスキーマのリストを取得します。
 
 ```SHELL
 curl -X GET \
@@ -212,18 +212,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、 `Accept` ヘッダーがリクエストで送信されました。 次の `Accept` ヘッダーを使用してスキーマをリストできます。
+応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 スキーマの一覧表示には、次の `Accept` ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースを一覧表示する場合は、これが推奨されるヘッダーです。 （上限：300） |
-| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON スキーマを元のと共に返します `$ref` および `allOf` 含まれる。 （上限：300） |
+| `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースをリストする場合は、このヘッダーをお勧めします。 （上限：300） |
+| `application/vnd.adobe.xed+json` | 各リソースの完全な JSON スキーマを返します。元の `$ref` と `allOf` が含まれます。 （上限：300） |
 
 {style="table-layout:auto"}
 
 **応答**
 
-正常な応答は、フィルターされたスキーマのリストを返します。この中には、和集合のメンバーシップが有効になっている、指定されたクラスに属するスキーマのみが含まれます。 複数のクエリーパラメーターを使用する場合は、AND が想定されることに注意してください。
+応答が成功すると、フィルターされたスキーマのリストが返されます。このリストには、和集合メンバーシップが有効になっている指定されたクラスに属するスキーマのみが含まれます。 複数のクエリパラメーターを使用する場合、AND 関係が想定されることに注意してください。
 
 ```JSON
 {

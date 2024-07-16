@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform、製品の推奨レシピ、Data Science Workspace、人気の高いトピック、レシピ、事前作成レシピ
+keywords: Experience Platform；製品レコメンデーションレシピ；Data Science Workspace；人気のトピック；レシピ；ビルド前のレシピ
 solution: Experience Platform
-title: 製品のレコメンデーションレシピ
+title: 製品レコメンデーションレシピ
 description: 製品レコメンデーションレシピを使用すると、顧客のニーズや関心に合わせてカスタマイズした製品レコメンデーションを提供できます。正確な予測モデルを使用すると、顧客の購入履歴から、興味を持つ可能性のある製品に関するインサイトを得ることができます。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '466'
 ht-degree: 90%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 90%
 
 ## 使用を始めるにはどうすればよいですか。
 
-Adobe Experience Platform ラボのチュートリアル（下のラボリンクを参照）に従って基本を学べます。このチュートリアルでは、次の手順を実行して、Jupyter ノートブックでRecommendations製品レシピを作成する方法を示します [レシピへのノート](../jupyterlab/create-a-model.md) ワークフローと、 [!DNL Experience Platform] [!DNL Data Science Workspace].
+Adobe Experience Platform ラボのチュートリアル（下のラボリンクを参照）に従って基本を学べます。このチュートリアルでは、Jupyter Notebook で [notebook to recipe](../jupyterlab/create-a-model.md) ワークフローに従って Product Recommendations レシピを作成し、[!DNL Data Science Workspace] でレシピを実装する方法 [!DNL Experience Platform] 説明します。
 
 * [実習：Data Science Workspace　で未来を予測](https://expleague.azureedge.net/labs/L777/index.html)
 * [ラボリソース](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)

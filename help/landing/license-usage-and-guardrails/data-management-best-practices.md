@@ -19,7 +19,7 @@ Platform は、作成できるプロファイルの数や取り込めるデー�
 
 ## Adobe Experience Platform データストレージについて
 
-Experience Platformは、主に次の 2 つのデータリポジトリで構成されています。 [!DNL data lake] とプロファイルストアに追加されます。
+Experience Platformは、主に [!DNL data lake] とプロファイルストアの 2 つのデータリポジトリで構成されています。
 
 **[!DNL data lake]** は、主に次のような目的で使用されます。
 
@@ -27,7 +27,7 @@ Experience Platformは、主に次の 2 つのデータリポジトリで構成�
 * すべての Experience Platform データのための長期間のデータストレージとして機能させる。
 * データ分析およびデータサイエンスなどのユースケースを有効にする。
 
-この **プロファイルストア** は、顧客プロファイルを作成する場所であり、主に次のような目的で使用されます。
+**プロファイルストア** は、顧客プロファイルを作成する場所であり、主に次のような目的で使用されます。
 
 * リアルタイムエクスペリエンスをサポートするために使用されるプロファイルのデータストレージとして機能させる。
 * セグメント化、アクティベーション、パーソナライゼーションなどのユースケースを有効にする。
@@ -46,8 +46,8 @@ Experience Platform のライセンスを取得すると、SKU によって異�
 
 [!DNL Profile Richness] 指標は、購入したライセンスによって異なります。[!DNL Profile Richness] では、2 つの計算方法を利用できます。
 
-* Adobe Real-time Customer Data Platform（つまり、リアルタイム顧客プロファイルと ID サービス）内に格納された任意の時点のすべての実稼動データの合計を、で割る [!DNL Addressable Audience];
-* Platform 内に保存されているすべてのデータの合計（を含むが、 [!DNL data lake]、リアルタイム顧客プロファイルおよび ID サービス）の任意の時点と、過去 12 か月間に（内に保存するのではなく） Platform を通じてストリーミングされた任意のデータを、で割る [!DNL Addressable Audience].
+* Adobe Real-time Customer Data Platform内に保存された任意の時点のすべての実稼動データ（つまり、リアルタイム顧客プロファイルと ID サービス）の合計を、[!DNL Addressable Audience] で割る。
+* 任意の時点における Platform 内に保存されたすべてのデータ（[!DNL data lake]、リアルタイム顧客プロファイルおよび ID サービスを含みますが、これらに限定されません）と、過去 12 か月間に Platform を介して（内に保存するのではなく）ストリーミングしたデータの合計を、[!DNL Addressable Audience] で割ります。
 
 これらの指標の可用性と各指標の具体的な定義は、お客様の組織が購入したライセンスによって異なります。
 
@@ -79,7 +79,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 ### どのデータを Platform に取り込むか？
 
-データは、Platform の 1 つまたは複数のシステム、つまり [!DNL data lake] またはプロファイルストア。 これは、様々なユースケースに対する様々なデータが両方のシステムに存在する可能性があることを意味します。例えば、履歴データを次の場所に保持する必要があります。 [!DNL data lake]ただし、プロファイルストアには含まれません。 プロファイル取り込みのためのデータセットを有効にすることで、どのデータをプロファイルストアに送信するかを選択できます。
+データは、Platform の 1 つまたは複数のシステム（[!DNL data lake] またはプロファイルストア）に取り込むことができます。 これは、様々なユースケースに対する様々なデータが両方のシステムに存在する可能性があることを意味します。例えば、履歴データを [!DNL data lake] に保持し、プロファイルストアには保持しない可能性があります。 プロファイル取り込みのためのデータセットを有効にすることで、どのデータをプロファイルストアに送信するかを選択できます。
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 アドレス可能なオーディエンスは顧客プロファイルの合計数を参照するので、ID グラフはアドレス可能なオーディエンスの使用権限の合計にはカウントされません。
 
-ただし、ID グラフの制限は、ID の分割が原因で、アドレス可能なオーディエンスに影響を与える可能性があります。 例えば、最も古い ECID がグラフから削除された場合、ECID は、偽名プロファイルとしてリアルタイム顧客プロファイルに引き続き存在します。 次を設定できます [偽名プロファイルデータの有効期限](../../profile/pseudonymous-profiles.md) この動作を回避します。 詳しくは、 [id サービスデータ用のガードレール](../../identity-service/guardrails.md).
+ただし、ID グラフの制限は、ID の分割が原因で、アドレス可能なオーディエンスに影響を与える可能性があります。 例えば、最も古い ECID がグラフから削除された場合、ECID は、偽名プロファイルとしてリアルタイム顧客プロファイルに引き続き存在します。 この動作を回避するには、[ 偽名プロファイルデータの有効期限 ](../../profile/pseudonymous-profiles.md) を設定します。 詳しくは、[ID サービスデータのガードレール ](../../identity-service/guardrails.md) を参照してください。
 
 ### 取り込みフィルター {#ingestion-filters}
 
@@ -106,12 +106,12 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 | 取り込みフィルター | 説明 |
 | --- | --- |
-| Adobe Audience Manager ソースフィルタリング | Adobe Audience Manager ソースコネクションを作成する際は、に取り込むセグメントと特性を選択することができます [!DNL data lake] Audience Managerデータ全体を取り込むのではなく、リアルタイム顧客プロファイルを作成する。 詳しくは、[Audience Manager ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)に関するガイドを参照してください。 |
+| Adobe Audience Manager ソースフィルタリング | Adobe Audience Manager ソースAudience Managerを作成すると、接続データをすべて取り込むのではなく、どのセグメントおよび特性を [!DNL data lake] およびリアルタイム顧客プロファイルに取り込むかを選択できます。 詳しくは、[Audience Manager ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)に関するガイドを参照してください。 |
 | Adobe Analytics データ準備 | Analytics ソース接続を作成する際に [!DNL Data Prep] 機能を使用すると、ユースケースに必要のないデータをフィルターで除外できます。[!DNL Data Prep] を使用して、どの属性／列をプロファイルに公開する必要があるかを定義できます。また、条件文を記述して、データをプロファイルに公開するのか、それとも [!DNL data lake] にだけ公開するのかを Platform に通知できます。詳しくは、[Analytics ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md)に関するガイドを参照してください。 |
 | プロファイル用データセットの有効化／無効化のサポート | リアルタイム顧客プロファイルにデータを取り込むには、プロファイルストアで使用するデータセットを有効にする必要があります。 そうすることで、[!DNL Addressable Audience] と [!DNL Profile Richness] の使用権限が追加されます。データセットが顧客プロファイルのユースケースで不要になったら、そのデータセットのプロファイルへの統合を無効にして、データが確実にライセンスへの準拠を維持するようにできます。詳しくは、[プロファイル用データセットの有効化および無効化](../../catalog/datasets/enable-for-profile.md)に関するガイドを参照してください。 |
 | Web SDK と Mobile SDK のデータ除外 | Web および Mobile SDK によって収集されるデータには、自動的に収集されるデータと、お客様の開発者が明示的に収集するデータの 2 つのタイプがあります。ライセンスのコンプライアンスをより適切に管理するために、コンテキスト設定により、SDK の設定で自動データ収集を無効にすることができます。また、カスタムデータは、開発者が削除したり、設定しないことも可能です。 |
 | サーバーサイド転送のデータ除外 | サーバーサイド転送を使用して Platform にデータを送信する場合、ルールアクションのマッピングを削除してすべてのイベントにわたって除外するか、ルールに条件を追加して特定のイベントでのみデータを送信するようにすることで、送信するデータを除外できます。詳しくは、[イベントおよび条件](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if)に関するドキュメントを参照してください。 |
-| ソースレベルでのデータのフィルタリング | 接続を作成してデータをExperience Platformに取り込む前に、論理演算子と比較演算子を使用してソースから行レベルのデータをフィルタリングできます。 詳しくは、のガイドを参照してください。 [を使用したソースの行レベルのデータのフィルタリング [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
+| ソースレベルでのデータのフィルタリング | 接続を作成してデータをExperience Platformに取り込む前に、論理演算子と比較演算子を使用してソースから行レベルのデータをフィルタリングできます。 詳しくは、[API を使用したソースの行レベルのデータのフィルタリング ](../../sources/tutorials/api/filter.md) に関するガイドを参照し  [!DNL Flow Service]  ください。 |
 
 {style="table-layout:auto"}
 
@@ -132,18 +132,18 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 プロファイルストアの構成を理解するのに役立つ、様々なレポートが用意されています。 これらのレポートは、ライセンス使用状況をより最適化するために、エクスペリエンスイベントの有効期限を設定する方法と場所について、情報に基づいた決定を支援します。
 
-* **Dataset Overlap Report API**：アドレス可能なオーディエンスに最も貢献するデータセットを公開します。このレポートを使用して、次を特定できます [!DNL ExperienceEvent] 有効期限を設定するデータセット。 詳しくは、[データセット重複レポートの生成](../../profile/tutorials/dataset-overlap-report.md)に関するチュートリアルを参照してください。
+* **Dataset Overlap Report API**：アドレス可能なオーディエンスに最も貢献するデータセットを公開します。このレポートを使用して、どの [!DNL ExperienceEvent] データセットに有効期限を設定するかを特定できます。 詳しくは、[データセット重複レポートの生成](../../profile/tutorials/dataset-overlap-report.md)に関するチュートリアルを参照してください。
 * **Identity Overlap Report API**：アドレス可能なオーディエンスに最も貢献する ID 名前空間を公開します。詳しくは、[ID 重複レポートの生成](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report)に関するチュートリアルを参照してください。
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 #### 偽名プロファイルデータの有効期限 {#pseudonymous-profile-expirations}
 
-この機能を使用すると、古くなった偽名プロファイルをプロファイルストアから自動的に削除できます。 この機能について詳しくは、を参照してください。 [偽名プロファイルデータの有効期限の概要](../../profile/pseudonymous-profiles.md).
+この機能を使用すると、古くなった偽名プロファイルをプロファイルストアから自動的に削除できます。 この機能について詳しくは、[ 偽名プロファイルデータの有効期限の概要 ](../../profile/pseudonymous-profiles.md) を参照してください。
 
 #### エクスペリエンスイベントの有効期限 {#event-expirations}
 
-この機能を使用すると、ユースケースにとって価値のなくなったプロファイル対応データセットから行動データを自動的に削除できます。 概要を参照してください [エクスペリエンスイベントの有効期限](../../profile/event-expirations.md) このプロセスをデータセットに対して有効にすると機能する方法の詳細については、を参照してください。
+この機能を使用すると、ユースケースにとって価値のなくなったプロファイル対応データセットから行動データを自動的に削除できます。 このプロセスをデータセットに対して有効にすると機能する方法について詳しくは、[ エクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) に関する概要を参照してください。
 
 ## ライセンス使用状況のコンプライアンスに関するベストプラクティスのまとめ {#best-practices}
 
@@ -152,8 +152,8 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 * [ライセンス使用状況ダッシュボード](../../dashboards/guides/license-usage.md)を使用して、顧客の使用状況のトレンドを追跡および監視する。これにより、発生する可能性のある超過分に事前に対処できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要なイベントを特定して、[取り込みフィルター](#ingestion-filters)を設定する。これにより、ユースケースに必要な重要なイベントのみを送信できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要な[プロファイルのデータセットのみを有効](#ingestion-filters)にしていることを確認する。
-* 設定 [エクスペリエンスイベントの有効期限](#event-expirations) および [偽名プロファイルデータの有効期限](#pseudonymous-profile-expirations) （web データなどの高周波データの場合）。
-* を定期的に確認する [プロファイル構成レポート](#profile-store-composition-reports) プロファイルストアの構成を理解する場合。 これにより、ライセンス使用量に最も貢献しているデータソースを把握できます。
+* Web データのような高頻度のデータには、[ エクスペリエンスイベントの有効期限 ](#event-expirations) および [ 偽名プロファイルデータの有効期限 ](#pseudonymous-profile-expirations) を設定します。
+* [ プロファイル構成レポート ](#profile-store-composition-reports) を定期的に確認し、プロファイルストアの構成を把握する。 これにより、ライセンス使用量に最も貢献しているデータソースを把握できます。
 
 ## 機能の概要と可用性 {#feature-summary}
 
@@ -164,7 +164,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 | 機能 | 説明 |
 | --- | --- |
 | [プロファイル用のデータセットを有効／無効にする](../../catalog/datasets/user-guide.md) | リアルタイム顧客プロファイルへのデータセット取り込みを有効または無効にします。 |
-| [エクスペリエンスイベントの有効期限](../../profile/event-expirations.md) | プロファイル対応データセットに取り込まれるすべてのイベントに有効期限を適用できます。 この機能を有効にするには、Adobeアカウントチームまたはカスタマーケアにお問い合わせください。 |
+| [ エクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) | プロファイル対応データセットに取り込まれるすべてのイベントに有効期限を適用できます。 この機能を有効にするには、Adobeアカウントチームまたはカスタマーケアにお問い合わせください。 |
 | [Adobe Analytics データ準備フィルター](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します |
 | [Adobe Audience Manager ソースコネクタフィルター](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager ソース接続フィルターを適用して、不要なデータを取り込みから除外します |
 | [イベント転送データフィルター](../../tags/ui/event-forwarding/overview.md) | サーバーサイド [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します詳しくは、[タグルール](../../tags/ui/managing-resources/rules.md)に関するドキュメントを参照してください。 |

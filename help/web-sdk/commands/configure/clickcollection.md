@@ -11,68 +11,68 @@ ht-degree: 0%
 
 # `clickCollection`
 
-この `clickCollection` オブジェクトには、自動的に収集されたリンクデータの制御に役立つ変数がいくつか含まれています。 これらの変数は、データ収集にリンクタイプを含める場合や除外する場合に使用します。
+`clickCollection` オブジェクトには、自動的に収集されたリンクデータの制御に役立つ変数がいくつか含まれています。 これらの変数は、データ収集にリンクタイプを含める場合や除外する場合に使用します。
 
-それには次が必要です [`clickCollectionEnabled`](clickcollectionenabled.md) を有効にします。
+[`clickCollectionEnabled`](clickcollectionenabled.md) を有効にする必要があります。
 
 Web SDK 2.25.0 以降でサポートされています。
 
-では次の変数を使用できます。 `clickCollection` オブジェクト :
+`clickCollection` オブジェクトでは、次の変数を使用できます。
 
-* **`clickCollection.internalLinkEnabled`**：現在のドメイン内のリンクを自動的に追跡するかどうかを決定するブール値です。 例： `https://example.com/index.html` 対象： `https://example.com/product.html`.
-* **`clickCollection.downloadLinkEnabled`**：に基づいてダウンロードと認定されるリンクをライブラリが追跡するかどうかを決定するブール値 [`downloadLinkQualifier`](downloadlinkqualifier.md) プロパティ。
-* **`clickCollection.externalLinkEnabled`**：外部ドメインへのリンクを自動的に追跡するかどうかを決定するブール値です。 例： `https://example.com` 対象： `https://example.net`.
-* **`clickCollection.eventGroupingEnabled`**：リンクトラッキングデータを送信するために、次のページまでライブラリが待機するかどうかを決定するブール値です。 次のページが読み込まれたら、リンクトラッキングデータをページ読み込みイベントと組み合わせます。 このオプションを有効にすると、Adobeに送信されるイベントの数が減ります。 次の場合 `internalLinkEnabled` が無効になっている場合は、この変数は何も行いません。
-* **`clickCollection.sessionStorageEnabled`**：リンクトラッキングデータをローカル変数ではなくセッションストレージに保存するかどうかを決定するブール値。 次の場合 `internalLinkEnabled` または `eventGroupingEnabled` が無効になっている場合は、この変数は何も行いません。
+* **`clickCollection.internalLinkEnabled`**：現在のドメイン内のリンクを自動的に追跡するかどうかを決定するブール値です。 例えば、`https://example.com/index.html` を `https://example.com/product.html` に設定します。
+* **`clickCollection.downloadLinkEnabled`**: [`downloadLinkQualifier`](downloadlinkqualifier.md) プロパティに基づいてダウンロードとして認定されるリンクをライブラリが追跡するかどうかを決定するブール値。
+* **`clickCollection.externalLinkEnabled`**：外部ドメインへのリンクを自動的に追跡するかどうかを決定するブール値です。 例えば、`https://example.com` を `https://example.net` に設定します。
+* **`clickCollection.eventGroupingEnabled`**: リンクトラッキングデータを送信するために、次のページまでライブラリが待機するかどうかを決定するブール値です。 次のページが読み込まれたら、リンクトラッキングデータをページ読み込みイベントと組み合わせます。 このオプションを有効にすると、Adobeに送信されるイベントの数が減ります。 `internalLinkEnabled` が無効になっている場合、この変数は何も行いません。
+* **`clickCollection.sessionStorageEnabled`**: リンクトラッキングデータをローカル変数ではなくセッションストレージに保存するかどうかを決定するブール値。 `internalLinkEnabled` または `eventGroupingEnabled` が無効になっている場合、この変数は何も行いません。
 
-  Adobeでは、を使用する場合にこの変数を有効にすることを強くお勧めします `eventGroupingEnabled`. 次の場合 `eventGroupingEnabled` は次の場合に有効になります `sessionStorageEnabled` が無効になっている場合、セッションストレージに保持されないので、新しいページをクリックすると、リンクトラッキングデータが失われます。 無効にすることは可能ですが `sessionStorageEnabled` 単一ページアプリケーションでは、非SPA ページに対しては理想的ではありません。
+  Adobeでは、`eventGroupingEnabled` を使用する場合にこの変数を有効にすることを強くお勧めします。 `sessionStorageEnabled` が無効な状態で `eventGroupingEnabled` が有効になっている場合、新しいページをクリックすると、セッションストレージに保持されないので、リンクトラッキングデータが失われます。 シングルページアプリケーションでは `sessionStorageEnabled` を無効にすることは可能ですが、SPA以外のページには理想的ではありません。
 * **`filterClickDetails`**：収集するリンクトラッキングデータを完全に制御できるコールバック関数。 このコールバック関数を使用して、リンクトラッキングデータの送信を変更、難読化または中止できます。 このコールバックは、リンク内の個人を特定できる情報など、特定の情報を省略する場合に役立ちます。
 
 ## Web SDK タグ拡張機能を使用したコレクション設定のクリック
 
-「」を選択します **[!UICONTROL クリックデータ収集の有効化]** 次の場合にチェックボックス [タグ拡張機能の設定](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). このチェックボックスをオンにすると、クリックコレクションに関する次のオプションが表示されます。
+[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを選択します。 このチェックボックスをオンにすると、クリックコレクションに関する次のオプションが表示されます。
 
-* [!UICONTROL 内部リンク]
-   * [!UICONTROL イベント グループ化を有効にする]
-   * [!UICONTROL セッションストレージの有効化]
-* [!UICONTROL 外部リンク]
-* [!UICONTROL ダウンロードリンク]
-* [!UICONTROL フィルタークリックのプロパティ]
+* [!UICONTROL  内部リンク ]
+   * [!UICONTROL  イベント グループ化を有効にする ]
+   * [!UICONTROL  セッションストレージの有効化 ]
+* [!UICONTROL  外部リンク ]
+* [!UICONTROL  ダウンロードリンク ]
+* [!UICONTROL  フィルタークリックのプロパティ ]
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL 拡張機能]**&#x200B;を選択し、 **[!UICONTROL 設定]** 日 [!UICONTROL Adobe Experience Platform Web SDK] カード。
-1. にスクロール ダウンします。 [!UICONTROL データ収集] 「」セクションで、「」チェックボックスを選択します **[!UICONTROL クリックデータ収集の有効化]**.
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. 「[!UICONTROL  データ収集 ]」セクションまでスクロールし、「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを選択します。
 1. 目的のクリックコレクション設定を選択します。
-1. クリック **[!UICONTROL 保存]**&#x200B;を作成してから、変更を公開します。
+1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 
-この [!UICONTROL フィルタークリックのプロパティ] コールバックをクリックすると、目的のコードを挿入できるカスタムコードエディターが開きます。 コードエディター内で、次の変数にアクセスできます。
+[!UICONTROL  フィルタークリックのプロパティ ] コールバックにより、目的のコードを挿入できるカスタムコードエディターが開きます。 コードエディター内で、次の変数にアクセスできます。
 
 * **`content.clickedElement`**：クリックされた DOM 要素。
-* **`content.pageName`**：クリック時のページ名。
-* **`content.linkName`**：クリックされたリンクの名前。
+* **`content.pageName`**：クリックが発生した際のページ名。
+* **`content.linkName`**: クリックされたリンクの名前。
 * **`content.linkRegion`**：クリックされたリンクの領域。
-* **`content.linkType`**：リンクのタイプ（離脱、ダウンロードまたはその他）。
+* **`content.linkType`**: リンクのタイプ（離脱、ダウンロードまたはその他）。
 * **`content.linkURL`**：クリックされたリンクの宛先 URL。
 * **`return true`**：現在の変数値でコールバックを直ちに終了します。
 * **`return false`**：直ちにコールバックを終了し、データの収集を中止します。
 
-の外部で定義された変数 `content` を使用できますが、Adobeに送信されるペイロードには含まれません。
+`content` 外で定義された変数は使用できますが、Adobeに送信されるペイロードには含まれません。
 
 ## Web SDK JavaScript ライブラリを使用したコレクション設定のクリック
 
-内で必要な変数を設定します。 `clickCollection` を実行しているときのオブジェクト [`configure`](overview.md) コマンド。 設定されていない場合、このオブジェクトのデフォルト設定は、 [`clickCollectionEnabled`](clickcollectionenabled.md).
+[`configure`](overview.md) コマンドを実行するときに、`clickCollection` オブジェクト内に必要な変数を設定します。 設定されていない場合、このオブジェクトのデフォルト設定は [`clickCollectionEnabled`](clickcollectionenabled.md) の値によって異なります。
 
-* `internalLinkEnabled`：次に一致 `clickCollectionEnabled`
-* `downloadLinkEnabled`：次に一致 `clickCollectionEnabled`
-* `externalLinkEnabled`：次に一致 `clickCollectionEnabled`
-* `eventGroupingEnabled`：デフォルトは `false`。明示的に有効にする必要があります
-* `sessionStorageEnabled`：デフォルトは `false`。明示的に有効にする必要があります
-* `filterClickDetails`：関数が含まれていません。明示的に登録する必要があります
+* `internalLinkEnabled`：次に一致 `clickCollectionEnabled` ます：
+* `downloadLinkEnabled`：次に一致 `clickCollectionEnabled` ます：
+* `externalLinkEnabled`：次に一致 `clickCollectionEnabled` ます：
+* `eventGroupingEnabled`：デフォルトは `false` です。明示的に有効にする必要があります
+* `sessionStorageEnabled`：デフォルトは `false` です。明示的に有効にする必要があります
+* `filterClickDetails`：関数が含まれていません。明示的に登録する必要があります。
 
 >[!TIP]
->Adobeでは、を有効にすることをお勧めします `eventGroupingEnabled`を使用できます。これは、契約上の使用状況にカウントされるイベントの数を減らすのに役立ちます。
+>Adobeでは、`eventGroupingEnabled` を有効にすることをお勧めします。これは、契約上の使用にカウントされるイベントの数を減らすのに役立つからです。
 
 ```js
 alloy("configure", {

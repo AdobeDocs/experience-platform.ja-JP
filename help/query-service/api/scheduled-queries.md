@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform、ホーム、人気の高いトピック、クエリサービス、クエリサービス、クエリサービス、スケジュール済みクエリ、スケジュール済みクエリ
+keywords: Experience Platform；ホーム；人気のトピック；Query Service;Query Service；スケジュール済みクエリ；スケジュール済みクエリ；
 solution: Experience Platform
-title: Schedules エンドポイント
-description: 以下の節では、クエリサービス API を使用してスケジュールされたクエリに対して実行できる様々な API 呼び出しについて説明します。
+title: スケジュールエンドポイント
+description: 以下の節では、Query Service API を使用してスケジュールされたクエリに対して実行できる様々な API 呼び出しについて説明します。
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,15 +12,15 @@ ht-degree: 59%
 
 ---
 
-# Schedules エンドポイント
+# スケジュールエンドポイント
 
 ## サンプル API 呼び出し
 
-使用するヘッダーを理解できたので、[!DNL Query Service] API への呼び出しを開始できます。以下の節では、 [!DNL Query Service] API. 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+使用するヘッダーを理解できたので、[!DNL Query Service] API への呼び出しを開始できます。次の節では、[!DNL Query Service] API を使用して作成できる様々な API 呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### スケジュールされたクエリのリストの取得
 
-組織に対してスケジュールされたすべてのクエリのリストを取得するには、 `/schedules` endpoint.
+`/schedules` エンドポイントに対してGETリクエストを行うことで、組織でスケジュールされたすべてのクエリのリストを取得できます。
 
 **API 形式**
 
@@ -41,12 +41,12 @@ GET /schedules?{QUERY_PARAMETERS}
 | --------- | ----------- |
 | `orderby` | 結果の並べ替えに使用するフィールドを指定します。サポートされているフィールドは `created` と `updated` です。例えば、`orderby=created` は、昇順で結果を並べ替えます。作成前に `-` を追加する（`orderby=-created`）と、項目が作成日の降順で並べ替えられます。 |
 | `limit` | ページサイズの制限を指定して、ページに含める結果の数を制御します。（*デフォルト値：20*） |
-| `start` | ISO 形式のタイムスタンプを指定して、結果を並べ替えます。 開始日が指定されていない場合、API 呼び出しは最も古く作成されたスケジュール済みクエリを最初に返し、続けて最新の結果のリストを返します。<br> ISO タイムスタンプは、日時の様々な精度レベルを許可します。 基本的な ISO タイムスタンプの形式は次のとおりです。 `2020-09-07` 日付を表すには、2020 年 9 月 7 日。 より複雑な例は次のように記述されます。 `2022-11-05T08:15:30-05:00` 2022 年 11 月 5 日 (PT)、8 日 (PT) に相当:15:午前 30 時、米国東部標準時。 タイムゾーンは UTC オフセットで指定でき、サフィックス「Z」(`2020-01-01T01:01:01Z`) をクリックします。 タイムゾーンを指定しない場合、デフォルトは 0 に設定されます。 |
+| `start` | 結果を並べ替える ISO 形式タイムスタンプを指定します。 開始日が指定されていない場合、API 呼び出しでは、最も古く作成されたスケジュール済みクエリが最初に返され、次に、より新しい結果が引き続きリストされます。ISO タイムスタンプ <br> 使用すると、日付と時間に様々なレベルの精度を設定できます。 基本の ISO タイムスタンプは、2020 年 9 月 7 日を表すために `2020-09-07` の形式を取ります。 より複雑な例は、`2022-11-05T08:15:30-05:00` と記述され、2022 年 11 月 5 日午前 8:15:30 分（米国東部標準時）に対応します。 タイムゾーンには UTC オフセットを指定でき、サフィックス「Z」（`2020-01-01T01:01:01Z`）で示されます。 タイムゾーンが指定されない場合は、デフォルトで 0 に設定されます。 |
 | `property` | フィールドに基づいて結果をフィルタリングします。フィルターは HTML エスケープする&#x200B;**必要があります**。複数のフィルターのセットを組み合わせるには、コンマを使用します。サポートされるフィールドは `created`、`templateId`、および `userId` です。サポートされる演算子のリストは `>`（より大きい）、`<`（より小さい）、および `==`（等しい）です。例えば、`userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` は、指定されたものと同じたユーザー ID を持つスケジュール済みクエリをすべて返します。 |
 
 **リクエスト**
 
-次のリクエストは、組織に対して作成された最新のスケジュール済みクエリを取得します。
+次のリクエストでは、組織に対して作成された最新のスケジュール済みクエリを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定した組織に対してスケジュールされたクエリのリストを返します。 次の応答は、組織に対して作成された最新のスケジュール済みクエリを返します。
+応答が成功すると、HTTP ステータス 200 が、指定された組織に対してスケジュールされたクエリのリストと共に返されます。 次の応答では、組織に対して作成された最新のスケジュール済みクエリが返されます。
 
 ```json
 {
@@ -124,7 +124,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 新しいスケジュール済みクエリの作成
 
-新しいスケジュール済みクエリを作成するには、 `/schedules` endpoint. API でスケジュール済みクエリを作成すると、クエリエディターでもクエリを表示できます。 UI でのスケジュール済みクエリについて詳しくは、 [クエリエディターのドキュメント](../ui/user-guide.md#scheduled-queries).
+`/schedules` エンドポイントにPOSTリクエストをおこなうと、新しいスケジュール済みクエリを作成できます。 API でスケジュールされたクエリを作成すると、クエリエディターでも表示できます。 UI のスケジュール済みクエリについて詳しくは、[ クエリエディターのドキュメント ](../ui/user-guide.md#scheduled-queries) を参照してください。
 
 **API 形式**
 
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | スケジュール済みクエリを作成するデータベースの名前。 |
 | `query.sql` | 作成する SQL クエリ。 |
 | `query.name` | スケジュール済みクエリの名前。 |
-| `schedule.schedule` | クエリの cron スケジュール。Cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。この例では、「30 * * * *」は、クエリが毎時 30 分に実行されることを意味します。<br><br>また、次の短縮形の式を使用することもできます。<ul><li>`@once`：クエリは 1 回のみ実行されます。</li><li>`@hourly`：クエリは、毎時、時間の初めに実行されます。 これは、Cron 式と同じです。 `0 * * * *`.</li><li>`@daily`：クエリは、1 日 1 回午前 0 時に実行されます。 これは、Cron 式と同じです。 `0 0 * * *`.</li><li>`@weekly`：クエリは、週に 1 回、日曜日の午前 0 時に実行されます。 これは、Cron 式と同じです。 `0 0 * * 0`.</li><li>`@monthly`：クエリは、月に 1 回、月の最初の日の午前 0 時に実行されます。 これは、Cron 式と同じです。 `0 0 1 * *`.</li><li>`@yearly`：クエリは、年に 1 回、1 月 1 日午前 0 時に実行されます。 これは、Cron 式と同じです。 `1 0 0 1 1 *`. |
+| `schedule.schedule` | クエリの cron スケジュール。Cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。この例では、「30 * * * *」は、クエリが毎時 30 分に実行されることを意味します。<br><br> または、次の短縮形の式を使用することもできます。<ul><li>`@once`：クエリは 1 回だけ実行されます。</li><li>`@hourly`：クエリは 1 時間ごとに、その時間の初めに実行されます。 これは cron 式 `0 * * * *` と同等です。</li><li>`@daily`：クエリは 1 日 1 回午前 0 時に実行されます。 これは cron 式 `0 0 * * *` と同等です。</li><li>`@weekly`：クエリは、週に 1 回、日曜日、深夜に実行されます。 これは cron 式 `0 0 * * 0` と同等です。</li><li>`@monthly`：クエリは月に 1 回、月の初日の午前 0 時に実行されます。 これは cron 式 `0 0 1 * *` と同等です。</li><li>`@yearly`: クエリは、年に 1 回、1 月 1 日、深夜に実行されます。 これは cron 式 `1 0 0 1 1 *` と同等です。 |
 | `schedule.startDate` | スケジュール済みクエリの開始日（UTC タイムスタンプ形式）です。 |
 
 **応答**
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 >[!NOTE]
 >
->この場合、 `_links.delete` から [作成したスケジュール済みクエリを削除](#delete-a-specified-scheduled-query).
+>`_links.delete` の値を使用して、[ 作成したスケジュール済みクエリを削除 ](#delete-a-specified-scheduled-query) できます。
 
 ### 指定したスケジュール済みクエリの詳細のリクエスト
 
@@ -302,7 +302,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->この場合、 `_links.delete` から [作成したスケジュール済みクエリを削除](#delete-a-specified-scheduled-query).
+>`_links.delete` の値を使用して、[ 作成したスケジュール済みクエリを削除 ](#delete-a-specified-scheduled-query) できます。
 
 ### 指定したスケジュール済みクエリの詳細の更新
 
@@ -312,7 +312,7 @@ PATCH リクエストは、`/state` と `/schedule/schedule` の 2 つのパス�
 
 ### スケジュール済みクエリの状態の更新
 
-選択したスケジュール済みクエリの状態は、 `path` プロパティを `/state` そして `value` プロパティは次のいずれかになります。 `enable` または `disable`.
+選択したスケジュール済みクエリの状態を更新するには、`path` プロパティを `/state` に設定し、`value` プロパティを `enable` または `disable` に設定します。
 
 **API 形式**
 
@@ -322,7 +322,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` PATCHするスケジュール済みクエリの値。 |
+| `{SCHEDULE_ID}` | PATCHを設定するスケジュール済みクエリの `id` 値。 |
 
 
 **リクエスト**
@@ -348,7 +348,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `op` | クエリスケジュールに対して実行する操作。 指定できる値は次のとおりです。 `replace`. |
+| `op` | クエリ スケジュールに対して実行する操作。 指定できる値は、`replace` です。 |
 | `path` | パッチを適用する値のパス。この場合、スケジュール済みクエリの状態を更新することになるので、`path` の値を `/state` に設定する必要があります。 |
 | `value` | `/state` の更新された値。この値は、`enable` または `disable` に設定して、スケジュール済みクエリを有効または無効にすることができます。 |
 
@@ -365,7 +365,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### スケジュール済みクエリスケジュールの更新
 
-スケジュール済みクエリの cron スケジュールは、 `path` プロパティを `/schedule/schedule` リクエスト本文内で使用されます。 cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。
+リクエスト本文で `path` プロパティを `/schedule/schedule` に設定することで、スケジュールされたクエリの cron スケジュールを更新できます。 cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。
 
 **API 形式**
 
@@ -375,7 +375,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` PATCHするスケジュール済みクエリの値。 |
+| `{SCHEDULE_ID}` | PATCHを設定するスケジュール済みクエリの `id` 値。 |
 
 **リクエスト**
 
@@ -400,7 +400,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `op` | クエリスケジュールに対して実行する操作。 指定できる値は次のとおりです。 `replace`. |
+| `op` | クエリ スケジュールに対して実行する操作。 指定できる値は、`replace` です。 |
 | `path` | パッチを適用する値のパス。この場合、スケジュール済みクエリのスケジュールを更新するので、`path` の値を `/schedule/schedule` に設定する必要があります。 |
 | `value` | `/schedule` の更新された値。この値は、cron スケジュールの形式で指定する必要があります。この例では、スケジュールされたクエリは毎時 45 分に実行されます。 |
 
@@ -421,7 +421,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 >[!NOTE]
 >
->スケジュール **必須** を無効にしてから削除してください。
+>スケジュール **削除する前に** 無効にする必要があります。
 
 **API 形式**
 
@@ -431,7 +431,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` DELETEするスケジュール済みクエリの値。 |
+| `{SCHEDULE_ID}` | DELETEを設定するスケジュール済みクエリの `id` 値。 |
 
 **リクエスト**
 

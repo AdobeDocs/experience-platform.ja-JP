@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;psql；クエリサービス；クエリサービス；メタデータ；コマンド；メタデータコマンド；
+keywords: Experience Platform；ホーム；人気のトピック；PSQL;psql;Query service；クエリサービス；メタデータ；コマンド；メタデータコマンド；
 solution: Experience Platform
-title: クエリサービスでのメタデータ PostgreSQL コマンド
-description: Adobe Experience Platformクエリサービスでメタデータのクエリが現在サポートされている PostgreSQL コマンドのリストです。
+title: クエリサービスのメタデータ PostgreSQL コマンド
+description: Adobe Experience Platform クエリサービスでのメタデータのクエリで現在サポートされている PostgreSQL コマンドのリスト。
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 78%
+source-wordcount: '332'
+ht-degree: 75%
 
 ---
 
-# メタデータ [!DNL PostgreSQL] クエリサービスのコマンド
+# クエリサービスのメタデータ [!DNL PostgreSQL] コマンド
 
-データセットのメタデータの場合、次の操作を行います。 [!DNL PostgreSQL] コマンドは現在、次のクエリに対してサポートされています。
+データセットのメタデータの場合、現在、クエリで次の [!DNL PostgreSQL] コマンドがサポートされています。
 
 >[!NOTE]
 >
-> 以下に示すコマンドでは、大文字と小文字が区別されます。
+>以下に示すコマンドでは、大文字と小文字が区別されます。
 
 | コマンド | 説明 |
 |------- | ------------|
@@ -42,4 +42,4 @@ ht-degree: 78%
 
 `\d` で開始するすべてのコマンドを組み合わせることができます。例えば、すべてのテーブル、シーケンスおよびリストの `\dtsn` スキーマを表示できます。`\d` を使用すると、すべての表示可能な表、表示、マテリアライズドビュー、シーケンスが表示されます。
 
-上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。ただし、 [!DNL PostgreSQL] ドキュメントは、 [!DNL Experience Platform].
+上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。ただし、[!DNL PostgreSQL] のドキュメントに示されているすべてのオプションが [!DNL Experience Platform] でサポートされているわけではないことに注意してください。

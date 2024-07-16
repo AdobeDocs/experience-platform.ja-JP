@@ -4,7 +4,7 @@ description: Adobe Experience Platform の Adobe Media Analytics (3.x SDK) for A
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '707'
 ht-degree: 98%
 
 ---
@@ -24,7 +24,7 @@ Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 3.
 
 >[!IMPORTANT]
 >
->この拡張機能は、Media 3.x SDK でデプロイされ、Media 2.x SDK との下位互換性はありません。2.x は非推奨となったので、3.x に更新してください。
+>この拡張機能は、Media 3.x SDK でデプロイされ、Media 2.x SDK との下位互換性はありません。2.x は非推奨（廃止予定）となったので、3.x にアップデートしてください。
 
 上記の 3 つの拡張機能をすべて、タグが有効になっているプロジェクトに含めたら、次の 2 つの方法のいずれかで実行できます。
 

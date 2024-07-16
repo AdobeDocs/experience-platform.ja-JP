@@ -15,13 +15,13 @@ Experience Platform は、ID 名前空間を使用して、特定の ID のタ�
 
 作成する宛先のタイプ（ストリーミングまたはファイルベース）に応じて、次の ID 名前空間要件に注意してください。
 
-* Destination SDKを通じてリアルタイム（ストリーミング）宛先を作成する場合、に加えて、 [パートナースキーマの設定](schema-configuration.md) ユーザーがプロファイル属性と ID をマッピングするには、次の項目も定義する必要があります *少なくとも 1 つ* 宛先プラットフォームでサポートされている ID 名前空間。 例えば、宛先プラットフォームがハッシュ化されたメールを受け入れる場合、および [!DNL IDFA]の場合、これら 2 つの id を次のように定義する必要があります [このドキュメントで後述](#supported-parameters).
+* Destination SDKを通じてリアルタイム（ストリーミング）宛先を作成する場合、ユーザーがプロファイル属性や ID をマッピングできる [ パートナースキーマの設定 ](schema-configuration.md) に加えて、宛先プラットフォームでサポートされている *少なくとも 1 つ* ID 名前空間も定義する必要があります。 例えば、宛先プラットフォームがハッシュ化されたメールと [!DNL IDFA] を受け入れる場合、これら 2 つの ID をとして定義する必要があります [ 詳しくは、このドキュメントの後半で説明します ](#supported-parameters)。
 
   >[!IMPORTANT]
   >
-  >ストリーミング宛先に対してオーディエンスをアクティブ化する場合、ユーザーはをマッピングする必要もあります _少なくとも 1 つのターゲット ID_&#x200B;ターゲットプロファイル属性に加えて。 そうでない場合、オーディエンスは宛先プラットフォームに対してアクティブ化されません。
+  >ストリーミング宛先に対してオーディエンスをアクティブ化する場合、ユーザーは、ターゲットプロファイル属性に加えて、_少なくとも 1 つのターゲット ID_ もマッピングする必要があります。 そうでない場合、オーディエンスは宛先プラットフォームに対してアクティブ化されません。
 
-* Destination SDKを使用してファイルベースの宛先を作成する場合、ID 名前空間の設定は次のようになります _optional_.
+* Destination SDKを使用してファイルベースの宛先を作成する場合、ID 名前空間の設定は _オプション_ です。
 
 Experience Platform の ID 名前空間について詳しくは、[ID 名前空間ドキュメント](../../../../identity-service/features/namespaces.md)を参照してください。
 
@@ -31,7 +31,7 @@ Experience Platform の ID 名前空間について詳しくは、[ID 名前空�
 * ユーザーは、[標準的な ID 名前空間](../../../../identity-service/features/namespaces.md#standard)を独自の ID 名前空間にマッピングできます。
 * ユーザーは、[カスタム ID 名前空間](../../../../identity-service/features/namespaces.md#manage-namespaces)を独自の ID 名前空間にマッピングできます。
 
-このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、の図を参照してください。 [設定オプション](../configuration-options.md) の方法については、ドキュメントを参照してください。 [Destination SDKを使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介して、サポートされる ID 名前空間を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

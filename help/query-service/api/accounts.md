@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；API ガイド；クエリサービス；クエリサービスアカウント；アカウント；
+keywords: Experience Platform；ホーム；人気のトピック；query service;api ガイド；Query service;Query service アカウント；アカウント；
 solution: Experience Platform
 title: アカウント API エンドポイント
-description: 永続的なのクエリサービスアカウントを作成できます。
+description: 永続のクエリサービスアカウントを作成できます。
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # アカウントエンドポイント
 
-Adobe Experience Platformクエリサービスでは、外部 SQL クライアントで使用できる、有効期限の切れない資格情報を作成するためにアカウントが使用されます。 以下を使用すると、 `/accounts` エンドポイント（クエリサービス API 内）。クエリサービス統合アカウント（テクニカルアカウントとも呼ばれます）を、プログラムによって作成、取得、編集および削除できます。
+Adobe Experience Platform クエリサービスでは、アカウントを使用して、有効期限のない資格情報を作成し、外部 SQL クライアントで使用できます。 Query Service API の `/accounts` エンドポイントを使用すると、Query Service 統合アカウント（テクニカルアカウントとも呼ばれます）をプログラムによって作成、取得、編集、削除できます。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、クエリサービス API の一部です。 続行する前に、 [入門ガイド](./getting-started.md) を参照してください。
+このガイドで使用するエンドポイントは、Query Service API の一部です。 続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 ## アカウントの作成
 
-クエリサービス統合アカウントを作成するには、 `/accounts` endpoint.
+`/accounts` エンドポイントにPOSTリクエストを行うことで、クエリサービス統合アカウントを作成できます。
 
 **API 形式**
 
@@ -32,7 +32,7 @@ POST /accounts
 
 **リクエスト**
 
-次のリクエストでは、組織の新しいクエリサービス統合アカウントが作成されます。
+次のリクエストは、組織の新しいクエリサービス統合アカウントを作成します。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
@@ -53,13 +53,13 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `accountName` | **必須** クエリサービス統合アカウントの名前。 |
-| `assignedToUser` | **必須** クエリサービス統合アカウントを作成するAdobe ID。 |
-| `credential` | *（オプション）* クエリサービスの統合に使用する資格情報。 指定しなかった場合は、システムによって自動的に証明書が生成されます。 |
-| `description` | *（オプション）* クエリサービス統合アカウントの説明です。 |
+| `assignedToUser` | **必須** クエリサービス統合アカウントを作成する対象のAdobe ID。 |
+| `credential` | *（任意）* クエリサービスの統合に使用する資格情報。 指定しない場合、システムにより自動的に資格情報が生成されます。 |
+| `description` | *（オプション）* クエリサービス統合アカウントの説明。 |
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、新しく作成したクエリサービス統合アカウントの詳細を返します。 これらのアカウントの詳細を使用して、クエリサービスを外部クライアントと接続できます。
+応答が成功すると、HTTP ステータス 200 が、新しく作成されたクエリサービス統合アカウントの詳細と共に返されます。 これらのアカウントの詳細を使用して、クエリサービスを外部クライアントと接続できます。
 
 ```json
 {
@@ -72,12 +72,12 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `technicalAccountName` | クエリサービス統合アカウントの名前。 |
-| `technicalAccountId` | クエリサービス統合アカウントの ID。 これは、 `credential`は、アカウントのパスワードを作成します。 |
-| `credential` | クエリサービス統合アカウントの資格情報。 これは、 `technicalAccountId`は、アカウントのパスワードを作成します。 |
+| `technicalAccountId` | クエリサービス統合アカウントの ID。 これは、`credential` と一緒に、あなたのアカウントのパスワードを構成します。 |
+| `credential` | クエリサービス統合アカウントの資格情報。 これは、`technicalAccountId` と一緒に、あなたのアカウントのパスワードを構成します。 |
 
 ## アカウントの更新
 
-クエリサービス統合アカウントを更新するには、 `/accounts` endpoint.
+`/accounts` エンドポイントにPUTリクエストを行うことで、クエリサービス統合アカウントを更新できます。
 
 **API 形式**
 
@@ -110,13 +110,13 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `accountName` | *（オプション）* クエリサービス統合アカウントの更新された名前。 |
-| `assignedToUser` | *（オプション）* クエリサービス統合アカウントがリンクされている更新済みのAdobe ID。 |
-| `credential` | *（オプション）* クエリサービスアカウント用に更新された資格情報。 |
-| `description` | *（オプション）* クエリサービス統合アカウントの説明を更新しました。 |
+| `assignedToUser` | *（任意）* クエリサービス統合アカウントがリンクされている更新済みAdobe ID。 |
+| `credential` | *（オプション）* クエリサービスアカウントの更新された資格情報。 |
+| `description` | *（オプション）* クエリサービス統合アカウントの更新された説明。 |
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、新しく更新されたクエリサービス統合アカウントに関する情報を返します。
+応答が成功すると、HTTP ステータス 200 が、新しく更新されたクエリサービス統合アカウントに関する情報と共に返されます。
 
 ```json
 {
@@ -135,7 +135,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 ## すべてのアカウントをリスト
 
-に対してGETリクエストをおこなうことで、すべてのクエリサービス統合アカウントのリストを取得できます `/accounts` endpoint.
+`/accounts` エンドポイントにGETリクエストを行うことで、すべてのクエリサービス統合アカウントのリストを取得できます。
 
 **API 形式**
 
@@ -155,7 +155,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、すべてのクエリサービス統合アカウントのリストを返します。
+応答に成功すると、HTTP ステータス 200 が、すべてのクエリサービス統合アカウントのリストと共に返されます。
 
 ```json
 {
@@ -206,7 +206,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 ## アカウントの削除
 
-クエリサービス統合アカウントを削除するには、 `/accounts` endpoint.
+`/accounts` エンドポイントにDELETEリクエストを行うことで、クエリサービス統合アカウントを削除できます。
 
 **API 形式**
 
@@ -230,7 +230,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/accounts/E09A
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、アカウントが正常に削除されたことを示すメッセージを返します。
+応答が成功すると、HTTP ステータス 200 が、アカウントが正常に削除されたことを示すメッセージと共に返されます。
 
 ```json
 {

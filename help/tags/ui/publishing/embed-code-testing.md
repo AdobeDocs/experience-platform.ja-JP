@@ -21,7 +21,7 @@ Adobe Experience Platform のタグライブラリビルドに変更を加える
 
 このチュートリアルでは、タグの環境と埋め込みコードの使用に関する十分な知識が必要です。 「[環境の概要](./environments.md) 」で詳細情報を参照してください。
 
-また、このチュートリアルでは、Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Platform Debugger は、Chrome ブラウザーで使用できます。 チュートリアルを開始する前に、次のリンクを使用して、拡張機能をインストールします。
+また、このチュートリアルでは、Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Platform Debugger は、Chrome ブラウザーで使用できます。 チュートリアルを開始する前に、次のリンクを使用して拡張機能をインストールします。
 
 * [クロム用 Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 

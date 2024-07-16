@@ -11,28 +11,28 @@ ht-degree: 0%
 
 # `renderDecisions`
 
-この `renderDecisions` プロパティを使用すると、自動レンダリングの対象となるパーソナライズされたコンテンツを Web SDK で強制的にレンダリングできます。
+`renderDecisions` プロパティを使用すると、自動レンダリングの対象となるパーソナライズされたコンテンツを Web SDK で強制的にレンダリングできます。
 
 ## Web SDK タグ拡張機能を使用してパーソナライズされたコンテンツをレンダリング
 
-「」を選択します **[!UICONTROL ビジュアルパーソナライゼーションの決定のレンダリング]** タグルールのアクション内のチェックボックス。
+タグルールのアクション内の **[!UICONTROL ビジュアルパーソナライゼーション決定をレンダリング]** チェックボックスを選択します。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL ルール]**&#x200B;を選択してから、目的のルールを選択します。
-1. 次の下 [!UICONTROL アクション]、既存のアクションを選択するか、アクションを作成します。
-1. を [!UICONTROL 拡張機能] ドロップダウンフィールドの移動先 **[!UICONTROL Adobe Experience Platform Web SDK]**、を設定します。 [!UICONTROL アクションタイプ] 対象： **[!UICONTROL イベントを送信]**.
-1. にスクロール ダウンします。 [!UICONTROL Personalization] 「」セクションを選択し、 **[!UICONTROL ビジュアルパーソナライゼーションの決定のレンダリング]** チェックボックス。
-1. クリック **[!UICONTROL 変更を保持]**&#x200B;次に、公開ワークフローを実行します。
+1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
+1. [!UICONTROL  アクション ] で、既存のアクションを選択するか、アクションを作成します。
+1. 「[!UICONTROL  拡張機能 ]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL  アクションタイプ ] を **[!UICONTROL イベントを送信]** に設定します。
+1. 「[!UICONTROL Personalization]」セクションまでスクロールダウンし、「**[!UICONTROL ビジュアルパーソナライゼーションの決定をレンダリング]** チェックボックスを選択します。
+1. 「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 
 ## Web SDK JavaScript ライブラリを使用してパーソナライズされたコンテンツをレンダリング
 
-を `renderDecisions` を実行している場合はブール値 `sendEvent` コマンド。 省略すると、このプロパティのデフォルト値はになります `false`. このプロパティをに設定 `true` パーソナライズされたコンテンツを自動的にレンダリングする場合。
+`sendEvent` コマンドを実行するときは、`renderDecisions` のブール値を設定します。 省略すると、このプロパティは既定で `false` に設定されます。 パーソナライズされたコンテンツを自動的にレンダリングする場合は、このプロパティを `true` に設定します。
 
 >[!IMPORTANT]
 >
->この `renderDecisions` プロパティは、と互換性がありません [`documentUnloading`](documentunloading.md) プロパティ。 両方のプロパティをに設定しないでください。 `true` 同時。
+>`renderDecisions` プロパティは [`documentUnloading`](documentunloading.md) プロパティと互換性がありません。 両方のプロパティを同時に `true` に設定しないでください。
 
 ```js
 alloy("sendEvent", {

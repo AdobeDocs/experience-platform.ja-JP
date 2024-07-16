@@ -1,12 +1,12 @@
 ---
 keywords: dialogtech 拡張機能；dialogtech;dialogtech 宛先；DialogTech;DialogTech SourceTrak
 title: DialogTech 拡張機能
-description: DialogTech 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: DialogTech 拡張機能は、Adobe Experience Platformの Analytics の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 88%
+source-wordcount: '408'
+ht-degree: 91%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 88%
 
 ## 概要 {#overview}
 
-[!DNL DialogTech] は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能の詳細については、[Dialogtech の Web サイト](https://www.dialogtech.com/)を参照してください。
+[!DNL DialogTech] は、Adobe Experience Platform の分析拡張機能です。拡張機能の詳細については、[Dialogtech の Web サイト](https://www.dialogtech.com/)を参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -22,13 +22,13 @@ ht-degree: 88%
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、Platform を購入したすべての顧客が、宛先カタログで使用できます。
+プラットフォームを購入したすべての顧客は、この拡張機能を宛先カタログから利用できます。
 
 この拡張機能を使用するには、Adobe Experience Platform でタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてタグへのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL DialogTech] 拡張子：
+[!DNL DialogTech] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

@@ -1,22 +1,22 @@
 ---
-title: UI での Pendo ソース接続の作成
+title: UI での Pendo Source接続の作成
 description: Adobe Experience Platform UI を使用して Pendo ソース接続を作成する方法を説明します。
 badge: ベータ版
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
 source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1212'
-ht-degree: 21%
+source-wordcount: '1193'
+ht-degree: 20%
 
 ---
 
-# の作成 [!DNL Pendo] ソース接続データフローと UI
+# UI での [!DNL Pendo] ソース接続データフローおよびの作成
 
 >[!NOTE]
 >
->[!DNL Pendo] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Pendo] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-このチュートリアルでは、 [!DNL Pendo] Adobe Experience Platformユーザーインターフェイスを使用したソース接続とデータフロー。
+このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Pendo] ソース接続とデータフローを作成する手順について説明します。
 
 ## はじめに {#getting-started}
 
@@ -29,11 +29,11 @@ ht-degree: 21%
 
 ## 前提条件 {#prerequisites}
 
-次の節では、 [!DNL Pendo] ソース接続。
+次の節では、[!DNL Pendo] ソース接続を作成する前に完了すべき前提条件について説明します。
 
-### のソーススキーマを定義するサンプル JSON [!DNL Pendo] {#prerequisites-json-schema}
+### [!DNL Pendo] のソーススキーマを定義するサンプル JSON {#prerequisites-json-schema}
 
-を作成する前に [!DNL Pendo] ソース接続の場合は、ソーススキーマを指定する必要があります。 以下の JSON を使用できます。
+[!DNL Pendo] ソース接続を作成する前に、ソーススキーマを指定する必要があります。 以下の JSON を使用できます。
 
 ```
 {
@@ -49,64 +49,64 @@ ht-degree: 21%
 }
 ```
 
-詳しくは、 [[!DNL Pendo] ウェブフックのガイド](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks).
+詳しくは、[[!DNL Pendo] Webhook に関するガイド ](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks) を参照してください。
 
-### 用の Platform スキーマの作成 [!DNL Pendo] {#create-platform-schema}
+### [!DNL Pendo] 用の Platform スキーマの作成 {#create-platform-schema}
 
-また、最初に、ソースに使用する Platform スキーマを作成する必要があります。 に関するチュートリアルを参照してください。 [Platform スキーマの作成](../../../../../xdm/schema/composition.md) スキーマの作成方法に関する包括的な手順を参照してください。
+また、ソースに使用する Platform スキーマを最初に作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-![Pendo のスキーマ例を示す Platform UI。](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
+![Pendo のスキーマの例を示す Platform UI。](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
 ## [!DNL Pendo] アカウントを接続 {#connect-account}
 
-Platform UI で、「 」を選択します。 **[!UICONTROL ソース]** 左側のナビゲーションから、 [!UICONTROL ソース] workspace を参照し、Experience Platformで使用可能なソースのカタログを確認します。
+Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ]」ワークスペースにアクセスし、Experience Platformで使用可能なソースのカタログを確認します。
 
-以下を使用します。 *[!UICONTROL カテゴリ]* メニューを使用して、ソースをカテゴリでフィルタリングできます。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
+*[!UICONTROL カテゴリ]* メニューを使用して、カテゴリ別にソースをフィルタリングします。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
-次に移動： [!UICONTROL Analytics] 表示するカテゴリ [!DNL Pendo] ソースカード。 最初に、「 」を選択します。 **[!UICONTROL データを追加]**.
+[!UICONTROL Analytics] カテゴリに移動して、[!DNL Pendo] ソースカードを表示します。 開始するには、「**[!UICONTROL データを追加]**」を選択します。
 
-![ペンドカード付きの Platform UI ソースカタログ。](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
+![Pendo カードを含む Platform UI ソースカタログ ](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
 ## データの選択 {#select-data}
 
-The **[!UICONTROL データを選択]** の手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが提供されます。
+**[!UICONTROL データを選択]** 手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが表示されます。
 
-* インターフェイスの左側には、アカウント内で使用可能なデータストリームを表示できるブラウザーがあります。
-* インターフェイスの右側では、JSON ファイルから最大 100 行のデータをプレビューできます。
+* インターフェイスの左側は、アカウント内で利用可能なデータストリームを表示できるブラウザーです。
+* インターフェイスの右側の部分では、JSON ファイルから最大 100 行のデータをプレビューできます。
 
-選択 **[!UICONTROL ファイルをアップロード]** をクリックして、ローカルシステムから JSON ファイルをアップロードします。 または、アップロードする JSON ファイルをにドラッグ&amp;ドロップすることもできます [!UICONTROL ファイルをドラッグ&amp;ドロップ] パネル。
+**[!UICONTROL ファイルをアップロード]** を選択して、ローカルシステムから JSON ファイルをアップロードします。 または、アップロードする JSON ファイルを [!UICONTROL  ファイルをドラッグ&amp;ドロップ ] パネルにドラッグ&amp;ドロップすることもできます。
 
-![ソースワークフローのデータ追加手順。](../../../../images/tutorials/create/analytics-pendo-webhook/add-data.png)
+![ ソースワークフローのデータを追加ステップ ](../../../../images/tutorials/create/analytics-pendo-webhook/add-data.png)
 
-ファイルがアップロードされると、プレビューインターフェイスが更新され、アップロードしたスキーマのプレビューが表示されます。 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 また、 [!UICONTROL 検索フィールド] スキーマ内から特定の項目にアクセスするユーティリティ。
+ファイルがアップロードされると、プレビューインターフェイスが更新され、アップロードしたスキーマのプレビューが表示されます。 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 また、[!UICONTROL  フィールドを検索 ] ユーティリティを使用して、スキーマ内から特定の項目にアクセスすることもできます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのプレビューステップ。](../../../../images/tutorials/create/analytics-pendo-webhook/preview.png)
+![ ソースワークフローのプレビュー手順 ](../../../../images/tutorials/create/analytics-pendo-webhook/preview.png)
 
 ## データフローの詳細 {#dataflow-detail}
 
-The **データフローの詳細** 手順が表示され、既存のデータセットを使用するか、データフローの新しいデータセットを確立するか、およびデータフローの名前と説明を指定する機会が提供されます。 この手順では、プロファイルの取り込み、エラー診断、部分取り込み、アラートの設定も指定できます。
+**データフローの詳細** 手順が表示され、既存のデータセットを使用するか、データフローの新しいデータセットを確立するかのオプションと、データフローの名前と説明を入力する機会が提供されます。 この手順では、プロファイルの取り込み、エラー診断、部分取り込み、アラートの設定も指定できます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのデータフローの詳細ステップ。](../../../../images/tutorials/create/analytics-pendo-webhook/dataflow-detail.png)
+![ ソースワークフローのデータフローの詳細手順。](../../../../images/tutorials/create/analytics-pendo-webhook/dataflow-detail.png)
 
 ## マッピング {#mapping}
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対するインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
+Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
-以下に示すマッピングは必須で、 [!UICONTROL レビュー] ステージ。
+以下にリストされているマッピングは必須であり、[!UICONTROL  レビュー ] 段階に進む前に設定する必要があります。
 
 | ターゲットフィールド | 説明 |
 | --- | --- |
-| `uniqueId` | The [!DNL Pendo] イベントの識別子。 |
+| `uniqueId` | イベントの [!DNL Pendo] 識別子。 |
 
-ソースデータが正常にマッピングされたら、「 」を選択します。 **[!UICONTROL 次へ]**.
+ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのマッピング手順です。](../../../../images/tutorials/create/analytics-pendo-webhook/mapping.png)
+![ ソースワークフローのマッピングステップ ](../../../../images/tutorials/create/analytics-pendo-webhook/mapping.png)
 
 ## レビュー {#review}
 
@@ -117,61 +117,61 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 データフローをレビューしたら、「**[!UICONTROL 終了]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
-![ソースワークフローのレビューステップ。](../../../../images/tutorials/create/analytics-pendo-webhook/review.png)
+![ ソースワークフローのレビュー手順。](../../../../images/tutorials/create/analytics-pendo-webhook/review.png)
 
-## ストリーミングエンドポイント URL を取得する {#get-streaming-endpoint-url}
+## ストリーミングエンドポイント URL の取得 {#get-streaming-endpoint-url}
 
-ストリーミングデータフローを作成したら、ストリーミングエンドポイント URL を取得できます。 このエンドポイントは、Webhook を購読するために使用され、ストリーミングソースとExperience Platformが通信できます。
+ストリーミングデータフローを作成したので、ストリーミングエンドポイント URL を取得できるようになりました。 このエンドポイントは、Webhook をサブスクライブするために使用され、ストリーミングソースがExperience Platformと通信できるようになります。
 
-Webhook の設定に使用する URL を構築するために [!DNL Pendo] 次を取得する必要があります。
+で Webhook の設定に使用する URL を作成するには [!DNL Pendo] 次を取得する必要があります。
 
 * **[!UICONTROL データフロー ID]**
 * **[!UICONTROL ストリーミングエンドポイント]**
 
-次の手順で **[!UICONTROL データフロー ID]** および **[!UICONTROL ストリーミングエンドポイント]**、に移動します。 [!UICONTROL データフローアクティビティ] 作成したデータフローのページを開き、詳細を [!UICONTROL プロパティ] パネル。
+**[!UICONTROL データフロー ID]** および **[!UICONTROL ストリーミングエンドポイント]** を取得するには、作成したばかりのデータフローの [!UICONTROL  データフローアクティビティ ] ページに移動し、[!UICONTROL  プロパティ ] パネルの下部から詳細をコピーします。
 
-![データフローアクティビティのストリーミングエンドポイント。](../../../../images/tutorials/create/analytics-pendo-webhook/endpoint-test.png)
+![ データフローアクティビティのストリーミングエンドポイント。](../../../../images/tutorials/create/analytics-pendo-webhook/endpoint-test.png)
 
-ストリーミングエンドポイントとデータフロー ID を取得したら、次のパターンに基づいて URL を作成します。 ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. 例えば、生成される Webhook URL は次のようになります。 ```https://dcs.adobedc.net/collection/0c61859cc71939a0caf01123f91b2fc52589018800ad46b6c76c2dff3595ee95```
+ストリーミングエンドポイントとデータフロー ID を取得したら、パターン ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}``` に基づいて URL を作成します。 例えば、作成された Webhook URL は次のようになります。```https://dcs.adobedc.net/collection/0c61859cc71939a0caf01123f91b2fc52589018800ad46b6c76c2dff3595ee95```
 
-## で Webhook を設定します。 [!DNL Pendo] {#set-up-webhook}
+## [!DNL Pendo] での Webhook の設定 {#set-up-webhook}
 
-次に、次の日にアカウントにログインします。 [[!DNL Pendo]](https://pendo.io/) ウェブフックを作成します。 を使用して Webhook を作成する手順については、 [!DNL Pendo] ユーザーインターフェイスについては、 [[!DNL Pendo] webhook の作成に関するガイド](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+次に、[[!DNL Pendo]](https://pendo.io/) でアカウントにログインし、Webhook を作成します。 [!DNL Pendo] ユーザーインターフェイスを使用して Webhook を作成する手順については、[[!DNL Pendo] Webhook の作成に関するガイド ](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4) を参照してください。
 
-Webhook を作成したら、 [!DNL Pendo] Webhook を開き、Webhook の URL を [!DNL URL] フィールドに入力します。
+Webhook が作成されたら、[!DNL Pendo] Webhook の設定ページに移動し、Webhook の URL を [!DNL URL] フィールドに入力します。
 
-![Pendo UI のスクリーンショットに、Webhook エンドポイントフィールドが表示されています。](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
+![Webhook エンドポイントフィールドを示す Pendo UI のスクリーンショット ](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
 
 >[!TIP]
 >
->様々なイベントカテゴリを購読して、送信するイベントの種類を [!DNL Pendo] インスタンスから Platform へ。 各イベントについて詳しくは、 [[!DNL Pendo] ドキュメント](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+>様々なイベントカテゴリを購読して、[!DNL Pendo] インスタンスから Platform に送信するイベントの種類を決定できます。 様々なイベントについて詳しくは、[[!DNL Pendo]  ドキュメント ](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うことで、 [!DNL Pendo] データをExperience Platformに送信します。 取り込まれるデータを監視するには、 [Platform UI を使用したストリーミングデータフローの監視](../../monitor-streaming.md).
+このチュートリアルでは、[!DNL Pendo] データをExperience Platformに取り込むためのストリーミングデータフローを正常に設定しました。 取り込まれるデータを監視するには、[Platform UI を使用したストリーミングデータフローの監視 ](../../monitor-streaming.md) のガイドを参照してください。
 
 ## その他のリソース {#additional-resources}
 
-以下の節では、 [!DNL Pendo] ソース。
+以下の節では、[!DNL Pendo] ソースを使用する際に参照できるその他のリソースを示します。
 
 ### 検証 {#validation}
 
-ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL Pendo] メッセージを取り込むには、次の手順に従います。
+ソースを正しく設定したことと、メッセージが取り込まれてい [!DNL Pendo] ことを検証するには、次の手順に従います。
 
-* 次の項目を確認できます。 [!DNL Pendo] **[!UICONTROL レポート]** > **[!UICONTROL チャット履歴]** がキャプチャしたイベントを識別するページ [!DNL Pendo].
+* [!DNL Pendo] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** ページをチェックすると、[!DNL Pendo] によってキャプチャされているイベントを識別できます。
 
-![Pendo UI のスクリーンショットにチャット履歴が表示されました](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
+![ チャット履歴を示す Pendo UI のスクリーンショット ](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
-* Platform UI で、「 」を選択します。 **[!UICONTROL データフローを表示]** の横に [!DNL Pendo] ソースカタログのカードメニュー 次に、「 **[!UICONTROL データセットをプレビュー]** で設定した web フック用に取り込まれたデータを検証するには、以下を実行します。 [!DNL Pendo].
+* Platform UI で、ソースカタログの [!DNL Pendo] ーザーカードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 次に、「**[!UICONTROL データセットをプレビュー]**」をクリックして、[!DNL Pendo] 内で設定した Webhook 用に取り込まれたデータを検証します。
 
-![取り込んだイベントを示す Platform UI のスクリーンショット](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
+![ 取り込んだイベントを示す Platform UI のスクリーンショット ](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
 
 ### エラーとトラブルシューティング {#errors-and-troubleshooting}
 
-データフローの実行をチェックする際に、次のエラーメッセージが表示される場合があります。 `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
+データフローの実行を確認すると、次のエラーメッセージが表示される場合があります。`The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-![エラーを示す Platform UI のスクリーンショット。](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
+![ エラーを示す Platform UI のスクリーンショット。](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
-このエラーを修正するには、 *uniqueID* マッピングが設定されました。 追加のガイダンスについては、 [Mmpping](#mapping) 」セクションに入力します。
+このエラーを修正するには、*uniqueID* マッピングが設定されていることを確認する必要があります。 その他のガイダンスについては、[Mmpping](#mapping) の節を参照してください。
 
-詳しくは、 [[!DNL Pendo] ヘルプセンター](https://www.pendo.io/help-center/).
+詳しくは、[[!DNL Pendo]  ヘルプセンター ](https://www.pendo.io/help-center/) を参照してください。

@@ -15,7 +15,7 @@ ht-degree: 94%
 
 >[!IMPORTANT]
 >
->The [!DNL SFTP] Adobe Experience Platformが接続するサーバーは、chunking（単一のファイルへの複数の接続を意味する）をサポートできる必要があります。 次の場合、 [!DNL SFTP] サーバーが chunking をサポートしていない場合は、エラーが発生してファイルの取り込みが妨げられる可能性があります。
+>Adobe Experience Platformが接続する [!DNL SFTP] サーバーは、チャンク（1 つのファイルに対して複数の接続を意味する）をサポートできる必要があります。 [!DNL SFTP] サーバーがチャンクをサポートしていない場合、ファイルの取り込みを防ぐエラーが発生する可能性があります。
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 

@@ -13,11 +13,11 @@ ht-degree: 26%
 
 ## 概要 {#overview}
 
-[Snapchat 広告](https://forbusiness.snapchat.com/) 規模や業界に関係なく、あらゆるビジネスに対して作成されます。 Snapchatters の日常会話の一部となり、フルスクリーンのデジタル広告を使用して、ビジネスにとって最も重要な人々の行動を呼び起こします。
+[Snapchat 広告 ](https://forbusiness.snapchat.com/) は、規模や業界に関係なく、あらゆるビジネス向けに作られています。 ビジネスにとって最も重要な人々の行動を刺激するフルスクリーンのデジタル広告で、Snapchatters の日常会話の一部になります。
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、 *Snap Inc* チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 *dev-support@snap.com*
+>この宛先コネクタとドキュメントページは、*Snap Inc* チームによって作成および管理されます。 お問い合わせや更新のリクエストについては、*dev-support@snap.comまで直接ご連絡ください*
 
 ## ユースケース {#use-cases}
 
@@ -27,23 +27,23 @@ ht-degree: 26%
 
 この宛先を使用するには、Snapchat 広告アカウントが必要です。 作成方法については、このドキュメントを参照してください。
 
-[Snapchat 広告の概要](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
+[Snapchat Advertisingの概要 ](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
 ## 制限事項 {#limitations}
 
 * Snap Inc は、特定のオーディエンスセグメントに対して複数の ID をサポートしていません。 セグメントをアクティブ化する際は、1 つの ID のみをマッピングしてください。
-* Snap Inc はセグメント名の変更をサポートしていません。 セグメント名を変更するには、非アクティブ化して名前を変更してからアクティブ化する必要があります。
-* オーディエンスセグメントのメンバーのリテンション期間を定義することはできません。 すべてのメンバーは全期間保持し、削除されるまでオーディエンスに含まれます。
+* Snap Inc は、セグメント名の変更をサポートしていません。 セグメントの名前を変更するには、セグメントをアクティベート解除し、名前を変更してから、アクティベートする必要があります。
+* オーディエンスセグメントのメンバーの保持期間は定義できません。 すべてのメンバーにはライフタイムリテンションがあり、削除されるまでオーディエンスに残ります。
 
 ## サポートされている ID {#supported-identities}
 
-The *Snap Inc* の宛先では、以下の表で説明する id のアクティブ化がサポートされます。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+*Snap Inc* の宛先では、以下の表に示す ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
-に送信されたすべての識別子 *Snap Inc* の宛先は、SHA-256 形式でハッシュ化する必要があります。 プレーンテキストの識別子をハッシュ化してから宛先に送信するには、 **[!UICONTROL 変換を適用]** オプションを使用します。
+*Snap Inc* の宛先に送信されるすべての識別子は、SHA-256 形式でハッシュ化する必要があります。 宛先に送信する前にプレーンテキスト識別子をハッシュ化するには、宛先のターゲット識別子をマッピングする際に、「**[!UICONTROL 変換を適用]**」オプションをオンにします。
 
 >[!WARNING]
 > 
-> ハッシュ化されていない識別子は、Snap Inc の宛先で受け付けられず、送信するとエラーが発生する可能性があります。
+> ハッシュ化されていない ID は Snap Inc の宛先に受け入れられず、送信するとエラーが発生する可能性があります。
 
 
 >[!IMPORTANT]
@@ -52,10 +52,10 @@ The *Snap Inc* の宛先では、以下の表で説明する id のアクティ�
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| メールアドレス | SHA-256 ハッシュ化された電子メールアドレス | ターゲット ID フィールドへの電子メールアドレスのマッピング *emailAddress*. |
-| 電話番号 | SHA-256 ハッシュ化された電話番号 | ターゲット ID フィールドへの電子メールアドレスのマッピング *phoneNumber*. |
-| GAID | SHA-256 ハッシュ化されたGoogle Advertising ID | Google Advertising ID をターゲット ID フィールドにマッピングする *ガイド*. |
-| IDFA | SHA-256 ハッシュ化されたApple Advertising ID | Apple Advertising ID をターゲット ID フィールドにマッピングする *idfa*. |
+| メールアドレス | SHA-256 でハッシュ化されたメールアドレス | メールアドレスをターゲット ID フィールド *emailAddress* にマッピングします。 |
+| 電話番号 | SHA-256 でハッシュ化された電話番号 | メールアドレスをターゲット ID フィールド *phoneNumber* にマッピングします。 |
+| GAID | SHA-256 でハッシュ化されたGoogle Advertising ID | Google Advertising ID をターゲット ID フィールド *gaid* にマッピングします。 |
+| IDFA | SHA-256 でハッシュ化されたApple Advertising ID | Apple Advertising ID をターゲット ID フィールド *idfa* にマッピングします。 |
 
 {style="table-layout:auto"}
 
@@ -65,44 +65,44 @@ The *Snap Inc* の宛先では、以下の表で説明する id のアクティ�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディエンスのすべてのメンバーを、 *YOURDESTINATION* 宛先。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | *YOURDESTINATION* 宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
-## Snap Inc に接続中 {#connect}
+## Snap Inc.への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ### 宛先に対する認証 {#authenticate}
 
 宛先を認証するには、次の手順に従います。
 
-1. 次を検索： *Snap Inc* Adobe Experience Platformの宛先カタログからの宛先を選択し、「 **設定**.
-2. 選択 **[!UICONTROL 宛先に接続]**. 次の画面にリダイレクトされます。
-   ![認証画面 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
-3. Snapchat の認証情報を入力し、[ ] を選択します。 **ログイン**.
-4. Adobe Experience Platformがアクセスできる Snapchat データが表示されます。 選択 **続行** をクリックして、接続プロセスを続行します。
+1. Adobe Experience Platformの宛先カタログから *Snap Inc* の宛先を見つけて、「**設定**」を選択します。
+2. **[!UICONTROL 宛先に接続]** を選択します。 次の画面にリダイレクトされます：
+   ![ 認証画面 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
+3. Snapchat の認証情報を入力し、「**ログイン**」を選択します。
+4. Adobe Experience Platformがアクセスできる Snapchat データが表示されます。 「**続行**」を選択して、接続プロセスを続行します。
 
-![認証画面 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
+![ 認証画面 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
 「続行」を選択した後、Adobe Experience Platformにリダイレクトされるまで待ちます。
 
 ### 宛先の詳細の入力 {#destination-details}
 
-![宛先の詳細](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
+![ 宛先の詳細 ](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
-宛先の詳細を設定するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 次へ]**.
+宛先の詳細を設定するには、必須フィールドに入力し、「**[!UICONTROL 次へ]**」を選択します。
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**：オーディエンスのインポート先の広告アカウントに関連付けられている広告アカウント ID。 これの見つけ方について詳しくは、 [Snapchat Business ヘルプセンターに関するこのドキュメント](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL アカウント ID]**：オーディエンスの読み込み先となる広告アカウントに関連付けられている広告アカウント ID。 見つける方法の詳細については、[Snapchat ビジネスヘルプセンターのこのドキュメント ](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US) を参照してください。
 
 >[!IMPORTANT]
 > 
->不正なまたは無効な Snapchat 広告アカウント ID を入力すると、オーディエンスのアクティベーションが失敗します。 正しい広告アカウント ID を入力したことを再確認してください。
+>Snapchat 広告アカウント ID が正しくないか無効な場合、オーディエンスのアクティベーションが失敗します。 適切な広告アカウント ID を入力したことを再確認してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -114,21 +114,21 @@ The *Snap Inc* の宛先では、以下の表で説明する id のアクティ�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## データの書き出しを検証する {#exported-data}
 
-オーディエンスを *Snap Inc* の宛先に設定すると、スナップ広告マネージャーの [**オーディエンス** セクション](https://businesshelp.snapchat.com/s/article/audience-sharing). このセクションに移動するには、次の手順に従います。
+*Snap Inc* 宛先に対してオーディエンスをアクティブ化すると、Snap Ads Manager の [**オーディエンス** セクション ](https://businesshelp.snapchat.com/s/article/audience-sharing) でオーディエンスを表示できるようになります。 このセクションに移動するには、次の手順に従います。
 
-1. にログインします。 [スナップ広告マネージャ](https://ads.snapchat.com/)
-2. 選択 **オーディエンス** 画面の左上隅にあるプルダウンメニューから、 オーディエンスライブラリに、Adobe Experience Platformでアクティブ化したオーディエンスが表示されます。
+1. [Snap Ads Manager](https://ads.snapchat.com/) にログインします
+2. 画面の左上隅にあるプルダウンメニューから「**オーディエンス**」を選択します。 Adobe Experience Platformでアクティブ化したオーディエンスがオーディエンスライブラリに表示されます。
 
 ![オーディエンス](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe・オーディエンスが Snap Inc に対して最初にアクティブ化されたとき、最初は空のオーディエンスとして表示されます。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、 [セグメント化サービスの概要](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Adobeオーディエンスが最初に Snap Inc に対してアクティブ化されると、最初は空のオーディエンスとして表示されることに注意してください。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[ セグメント化サービスの概要 ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

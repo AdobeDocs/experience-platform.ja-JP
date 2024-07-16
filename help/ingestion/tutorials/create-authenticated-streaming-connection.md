@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；認証済みストリーミング接続；ストリーミング接続；ストリーミング接続の作成；認証済みストリーミング接続の作成；ストリーミング取り込み；取り込み；
+keywords: Experience Platform；ホーム；人気のトピック；認証済みストリーミング接続；ストリーミング接続；ストリーミング接続の作成；認証済みストリーミング接続の作成；ストリーミング取得；取り込み；
 solution: Experience Platform
 title: 認証済みストリーミング接続の作成
 type: Tutorial
-description: 認証済みのデータ収集を使用すると、リアルタイム顧客プロファイルや ID などのAdobe Experience Platformサービスで、信頼できるソースからのレコードと信頼できないソースからのレコードを区別できます。
+description: 認証済みデータ収集を使用すると、リアルタイム顧客プロファイルや ID などのAdobe Experience Platform サービスを使用して、信頼できるソースと信頼できないソースのレコードを区別できます。
 exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
@@ -14,6 +14,6 @@ ht-degree: 23%
 
 # 認証済みストリーミング接続の作成
 
-認証済みのデータ収集を使用すると、Adobe Experience Platformのサービス ( [!DNL Real-Time Customer Profile] および [!DNL Identity]：信頼できるソースからのレコードと信頼できないソースからのレコードを区別します。 個人を特定できる情報（PII）を送信するクライアントがレコードを区別するには、POST リクエストの一部としてアクセストークンを送信します。
+認証済みデータ収集を使用すると、[!DNL Real-Time Customer Profile] や [!DNL Identity] などのAdobe Experience Platform サービスで、信頼できるソースと信頼できないソースのレコードを区別できます。 個人を特定できる情報（PII）を送信するクライアントがレコードを区別するには、POST リクエストの一部としてアクセストークンを送信します。
 
-認証済みのストリーミング接続を作成する方法については、 [HTTP API ソース API ガイド](../../sources/tutorials/api/create/streaming/http.md).
+認証済みストリーミング接続を作成する方法については、[HTTP API ソース API ガイド ](../../sources/tutorials/api/create/streaming/http.md) を参照してください。

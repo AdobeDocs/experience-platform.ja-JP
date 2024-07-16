@@ -1,7 +1,8 @@
 ---
 title: getLibraryInfo
 description: 現在の Web SDK ライブラリバージョンに関する情報を取得します。
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: f2bc0185-71c9-4d77-b9d2-b777a41a20e5
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -10,17 +11,17 @@ ht-degree: 0%
 
 # `getLibraryInfo`
 
-The `getLibraryInfo` コマンドには、現在使用されている Web SDK ライブラリのバージョンに関する情報が表示されます。 このコマンドを使用して、様々な Web プロパティにデプロイする Web SDK のバージョンを追跡できます。
+`getLibraryInfo` コマンドは、現在使用されている Web SDK ライブラリのバージョンに関する情報を提供します。 このコマンドを使用して、様々な web プロパティにデプロイする Web SDK のバージョンを追跡できます。
 
-## Web SDK タグ拡張機能を使用するライブラリ情報
+## Web SDK タグ拡張機能を使用したライブラリ情報
 
-タグ拡張機能は、このコマンドを送信するためのインターフェイスを提供しません。 JavaScript ライブラリ構文に従って、カスタムコードエディターを使用します。
+タグ拡張機能には、このコマンドを送信するためのインターフェイスはありません。 JavaScript ライブラリ構文に従って、カスタムコードエディターを使用します。
 
-タグ拡張を使用してこのコマンドを実行すると、タグ拡張バージョンとライブラリバージョンの両方が含まれ、 `+` 記号。 Web SDK ライブラリのバージョンが最初に表示され、その後にタグ拡張のバージョンが表示されます。
+タグ拡張機能を使用してこのコマンドを実行すると、タグ拡張機能のバージョンとライブラリのバージョンの両方が含まれ、`+` 記号で連結されます。 Web SDK ライブラリのバージョンが最初に表示され、次にタグ拡張機能のバージョンが表示されます。
 
 ## Web SDK JavaScript ライブラリを使用したライブラリ情報
 
-を実行します。 `getLibraryInfo` コマンドを使用して、Web SDK の設定済みインスタンスを呼び出す際に呼び出すことができます。 このコマンドは、通常、入力されるオブジェクトを取得できる JavaScript プロミスと組み合わせられます。
+設定済みの Web SDK インスタンスを呼び出す際に、`getLibraryInfo` コマンドを実行します。 このコマンドは、通常、入力されたオブジェクトを取得できるJavaScript promise とペアで使用されます。
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -32,7 +33,7 @@ alloy("getLibraryInfo").then(function(result) {
 
 ## 応答オブジェクト
 
-もしあなたが [応答を処理する](command-responses.md) このコマンドを使用すると、次のプロパティが応答オブジェクトで使用できます。
+このコマンドを使用して [ 応答を処理 ](command-responses.md) する場合、応答オブジェクトで次のプロパティを使用できます。
 
 * **`libraryInfo.commands`**：このバージョンの Web SDK がサポートするコマンドの配列。
 * **`libraryInfo.configs`**：このバージョンの Web SDK がサポートする設定の配列。

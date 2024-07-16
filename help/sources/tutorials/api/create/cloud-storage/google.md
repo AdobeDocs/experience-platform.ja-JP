@@ -1,10 +1,10 @@
 ---
-title: フローサービス API を使用したGoogle Cloud Storage Base 接続の作成
-description: フローサービス API を使用してAdobe Experience PlatformをGoogleクラウドストレージアカウントに接続する方法を説明します。
+title: Flow Service API を使用したGoogle Cloud Storage ベース接続の作成
+description: Flow Service API を使用してAdobe Experience PlatformをGoogle クラウドストレージアカウントに接続する方法について説明します。
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 source-git-commit: 3636b785d82fa2e49f76825650e6159be119f8b4
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '550'
 ht-degree: 48%
 
 ---
@@ -22,20 +22,20 @@ ht-degree: 48%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してGoogle Cloud Storage アカウントに正常に接続するために必要な追加情報を示します。
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] を [!DNL Google Cloud Storage] アカウントの場合、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を [!DNL Google Cloud Storage] アカウントに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | 61 文字の英数字から成る文字列で、 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 |
-| `secretAccessKey` | ユーザーの認証に使用される 40 文字のベース 64 エンコードされた文字列 [!DNL Google Cloud Storage] アカウントを Platform に送信します。 |
-| `bucketName` | お客様の [!DNL Google Cloud Storage] バケット。 クラウドストレージ内の特定のサブフォルダーへのアクセスを提供する場合は、バケット名を指定する必要があります。 |
-| `folderPath` | アクセス権を付与するフォルダーのパスです。 |
+| `accessKeyId` | [!DNL Google Cloud Storage] アカウントを Platform に認証するために使用される 61 文字の英数字の文字列。 |
+| `secretAccessKey` | [!DNL Google Cloud Storage] アカウントを Platform に認証するために使用される 40 文字の base-64 エンコード文字列。 |
+| `bucketName` | [!DNL Google Cloud Storage] バケットの名前。 クラウドストレージ内の特定のサブフォルダーへのアクセスを提供する場合は、バケット名を指定する必要があります。 |
+| `folderPath` | アクセス権を付与するフォルダーへのパス。 |
 
-これらの値について詳しくは、[Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。独自のアクセスキー ID と秘密アクセスキーを生成する手順については、 [[!DNL Google Cloud Storage] 概要](../../../../connectors/cloud-storage/google-cloud-storage.md).
+これらの値について詳しくは、[Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage]  概要 ](../../../../connectors/cloud-storage/google-cloud-storage.md) を参照してください。
 
 ### Platform API の使用
 
@@ -49,7 +49,7 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 >[!TIP]
 >
->この手順では、サブフォルダーのバケット名とパスを定義して、アカウントがアクセスできるサブフォルダーを指定することもできます。
+>この手順では、バケット名とサブフォルダーへのパスを定義して、アカウントがアクセスできるサブフォルダーを指定することもできます。
 
 **API 形式**
 
@@ -90,10 +90,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | に関連付けられたアクセスキー ID [!DNL Google Cloud Storage] アカウント |
-| `auth.params.secretAccessKey` | に関連付けられた秘密アクセスキー [!DNL Google Cloud Storage] アカウント |
-| `auth.params.bucketName` | お客様の [!DNL Google Cloud Storage] バケット。 クラウドストレージ内の特定のサブフォルダーへのアクセスを提供する場合は、バケット名を指定する必要があります。 |
-| `auth.params.folderPath` | アクセス権を付与するフォルダーのパスです。 |
+| `auth.params.accessKeyId` | [!DNL Google Cloud Storage] アカウントに関連付けられたアクセスキー ID。 |
+| `auth.params.secretAccessKey` | [!DNL Google Cloud Storage] アカウントに関連付けられた秘密アクセスキー。 |
+| `auth.params.bucketName` | [!DNL Google Cloud Storage] バケットの名前。 クラウドストレージ内の特定のサブフォルダーへのアクセスを提供する場合は、バケット名を指定する必要があります。 |
+| `auth.params.folderPath` | アクセス権を付与するフォルダーへのパス。 |
 | `connectionSpec.id` | [!DNL Google Cloud Storage] 接続仕様 ID：`32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **応答**
@@ -109,4 +109,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Google Cloud Storage] 応答本文の一部として、API と一意の ID を使用した接続を取得しました。 この接続 ID を [フローサービス API を使用したクラウドストレージの調査](../../explore/cloud-storage.md).
+このチュートリアルでは、API を使用して [!DNL Google Cloud Storage] 接続を作成し、一意の ID を応答本文の一部として取得しました。 この接続 ID を使用して [Flow Service API を使用したクラウドストレージの調査 ](../../explore/cloud-storage.md) を行うことができます。

@@ -1,7 +1,8 @@
 ---
 title: debugEnabled
-description: Web SDK でデバッグ機能を有効にするには、コードを使用します。
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+description: コードを使用して、Web SDK でデバッグ機能を有効にします。
+exl-id: 89392d16-9a0d-427b-86b6-70005f63f440
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -10,17 +11,17 @@ ht-degree: 0%
 
 # `debugEnabled`
 
-The `debugEnabled` プロパティを使用すると、Web SDK コードを使用したデバッグを有効または無効にできます。 これは、 [デバッグ](../../use-cases/debugging.md). 常にデバッグを有効にする場合、Web サイト開発時に他の方法よりも実装内でデバッグを有効にする方が便利です。 このデバッグ方法では、すべての訪問者に対してこの機能が有効になるので、実稼動ページにはお勧めしません。
+`debugEnabled` プロパティを使用すると、Web SDK コードを使用したデバッグを有効または無効にできます。 これは、[ デバッグ ](../../use-cases/debugging.md) を有効にするための利用可能な方法の 1 つです。 実装内でデバッグを有効にすると、常にデバッグを有効にする必要がある場合に、web サイトの開発時に他の方法よりも便利です。 このデバッグ方法はすべての訪問者に対して有効なので、実稼動ページには推奨されません。
 
-詳しくは、 [デバッグ](../../use-cases/debugging.md) デバッグを有効にするその他の方法については、使用例のページを参照してください。
+デバッグを有効にするその他の方法については、[ デバッグ ](../../use-cases/debugging.md) ユースケースページを参照してください。
 
 ## Web SDK タグ拡張機能を使用したデバッグの有効化
 
-Web SDK タグ拡張をネイティブで使用できるデバッグオプションはありません。 を使用します。 [代替デバッグ方法](../../use-cases/debugging.md).
+Web SDK タグ拡張機能を使用してネイティブに利用できるデバッグオプションはありません。 [ 代替デバッグ方法 ](../../use-cases/debugging.md) を使用します。
 
 ## Web SDK JavaScript ライブラリを使用したデバッグの有効化
 
-を設定します。 `debugEnabled` ブール値 `true` （実行時） `configure` コマンドを使用します。 SDK を設定する際にこのプロパティを省略した場合、デフォルトはになります。 `false`.
+`configure` コマンドの実行時に、`debugEnabled` ブール値を `true` に設定します。 SDK の設定時にこのプロパティを省略すると、デフォルトは `false` になります。
 
 ```js
 alloy("configure", {

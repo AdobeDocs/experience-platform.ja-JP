@@ -1,11 +1,11 @@
 ---
 title: Offer Decisioning を使用したパーソナライゼーション
-description: Server API を使用して、パーソナライズされたエクスペリエンスをOffer decisioning経由で配信およびレンダリングする方法を説明します。
+description: Server API を使用して、Offer decisioningを介してパーソナライズされたエクスペリエンスを配信およびレンダリングする方法について説明します。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 7%
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
@@ -13,35 +13,35 @@ ht-degree: 7%
 
 ## 概要 {#overview}
 
-Edge Network Server API は、 [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=ja) を web チャネルに追加します。
+Edge Networkサーバー API は、[Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=ja) で管理されるパーソナライズされたエクスペリエンスを web チャネルに配信できます。
 
-[!DNL Offer Decisioning] は、アクティビティとパーソナライゼーションエクスペリエンスを作成、アクティブ化、配信するための、非視覚的なインターフェイスをサポートしています。
+[!DNL Offer Decisioning] は、アクティビティとパーソナライゼーションエクスペリエンスを作成、アクティブ化および配信するための非ビジュアルインターフェイスをサポートしています。
 
 ## 前提条件 {#prerequisites}
 
-パーソナライゼーション経由 [!DNL Offer Decisioning] には、次のアクセス権が必要です： [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) 統合を設定する前に、
+[!DNL Offer Decisioning] を介したPersonalizationでは、統合を設定する前に、[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) へのアクセス権が必要です。
 
 ## データストリームの設定 {#configure-your-datastream}
 
-Server API をOffer decisioningと組み合わせて使用する前に、データストリーム設定でAdobe Experience Platformのパーソナライゼーションを有効にし、 **[!UICONTROL Offer decisioning]** オプション。
+Server API を Personalization と組み合わせて使用する前に、データストリームOffer decisioningでAdobe Experience Platformのパーソナライゼーションを有効にして、**[!UICONTROL Offer decisioning]** オプションを有効にする必要があります。
 
-詳しくは、 [データストリームへのサービスの追加に関するガイド](../datastreams/overview.md#adobe-experience-platform-settings)(Offer decisioningの有効化方法の詳細 )
+offer decisioningを有効にする方法について詳しくは、[ データストリームへのサービスの追加に関するガイド ](../datastreams/overview.md#adobe-experience-platform-settings) を参照してください。
 
-![データストリームサービス設定画面を示す UI 画像 (Offer decisioningを選択 )](assets/aep-od-datastream.png)
+![Offer decisioningが選択された状態のデータストリームサービス設定画面を示す UI 画像 ](assets/aep-od-datastream.png)
 
 ## オーディエンスの作成 {#audience-creation}
 
-[!DNL Offer Decisioning] は、Adobe Experience Platform Segmentation Service を使用してオーディエンスを作成します。 次のドキュメントを参照してください： [!DNL Segmentation Service] [ここ](../segmentation/home.md).
+[!DNL Offer Decisioning] は、オーディエンスの作成にAdobe Experience Platform Segmentation Service を利用しています。 [!DNL Segmentation Service] のドキュメントについては、[ こちら ](../segmentation/home.md) を参照してください。
 
 ## 決定範囲の定義 {#creating-decision-scopes}
 
-The [!DNL Offer Decision Engine] はAdobe Experience Platformデータを使用し、 [リアルタイム顧客プロファイル](../profile/home.md)、および [!DNL Offer Library]：適切な顧客およびチャネルに適切なタイミングでオファーを配信する。
+[!DNL Offer Decision Engine] は、Adobe Experience Platform データおよび [ リアルタイム顧客プロファイル ](../profile/home.md) を [!DNL Offer Library] と共に使用して、適切な顧客およびチャネルに適切なタイミングでオファーを提供します。
 
-詳しくは、 [!DNL Offer Decisioning Engine]、該当する [ドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=ja).
+[!DNL Offer Decisioning Engine] について詳しくは、該当する [ ドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=ja) を参照してください。
 
-後 [データストリームの設定](#configure-your-datastream)に値を入力する場合は、パーソナライゼーションキャンペーンで使用する決定範囲を定義する必要があります。
+[ データストリームの設定 ](#configure-your-datastream) 後、パーソナライゼーションキャンペーンで使用する決定範囲を定義する必要があります。
 
-[決定範囲](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) は、 [!DNL Offer Decisioning Service] オファーを提案する際に使用します。
+[ 決定範囲 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) は、オファーの提案時に [!DNL Offer Decisioning Service] ーザーに使用させるアクティビティ ID とプレースメント ID を含む、Base64 でエンコードされた JSON 文字列です。
 
 **決定範囲 JSON**
 
@@ -52,17 +52,17 @@ The [!DNL Offer Decision Engine] はAdobe Experience Platformデータを使用�
 }
 ```
 
-**決定範囲 Base64 でエンコードされた文字列**
+**決定範囲 Base64 エンコードされた文字列**
 
 ```shell
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-オファーとコレクションを作成したら、 [決定範囲](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
+オファーとコレクションを作成したら、[ 決定範囲 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) を定義する必要があります。
 
-Base64 でエンコードされた決定範囲をコピーします。 これは、 `query` オブジェクトに含める必要があります。
+Base64 でエンコードされた決定範囲をコピーします。 Server API リクエストの `query` オブジェクトで使用します。
 
-![決定範囲をハイライト表示し、Offer decisioningUI を示す UI 画像。](assets/decision-scope.png)
+![ 決定範囲をハイライト表示したOffer decisioningUI を示す UI 画像。](assets/decision-scope.png)
 
 ```json
 "query":{
@@ -84,11 +84,11 @@ POST /ee/v2/interact
 
 ### リクエスト {#request}
 
-完全な XDM オブジェクト、データオブジェクトおよびOffer decisioningクエリを含む完全なリクエストを以下に示します。
+完全な XDM オブジェクト、データオブジェクト、Offer decisioningクエリを含む完全なリクエストの概要を以下に示します。
 
 >[!NOTE]
 >
->The `xdm` および `data` オブジェクトはオプションで、Offer decisioningに必要なのは、これらのオブジェクトのいずれかにフィールドを使用する条件を持つセグメントを作成した場合のみです。
+>`xdm` オブジェクトと `data` オブジェクトはオプションで、いずれかのオブジェクトのフィールドを使用する条件でセグメントを作成した場合にのみ、Offer decisioningのために必要です。
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -181,7 +181,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### 応答 {#response}
 
-Edge ネットワークは、次のような応答を返します。
+Edge Networkは、以下のような応答を返します。
 
 ```json
 {
@@ -244,22 +244,22 @@ Edge ネットワークは、次のような応答を返します。
 }
 ```
 
-訪問者が、に送信されたデータに基づいてパーソナライゼーションアクティビティの対象となる場合 [!DNL Offer Decisioning]関連するアクティビティのコンテンツは、 `handle` オブジェクト ( タイプは `personalization:decisions`.
+[!DNL Offer Decisioning] に送信されたデータに基づいて、訪問者がパーソナライゼーションアクティビティの対象となる場合、関連するアクティビティのコンテンツは `handle` オブジェクトの下にあり、タイプは `personalization:decisions` です。
 
-その他のコンテンツは、 `handle` オブジェクトも同様に扱います。 その他のコンテンツタイプは、 [!DNL Offer Decisioning] パーソナライゼーション。 訪問者が複数のアクティビティに該当する場合、それらは配列に含まれます。
+その他のコンテンツも `handle` オブジェクトの下に返されます。 その他のコンテンツタイプは、パーソナライゼーション [!DNL Offer Decisioning] は関係ありません。 訪問者が複数のアクティビティの対象となる場合、訪問者は配列に含まれます。
 
-次の表に、応答のその部分の主な要素を示します。
+次の表に、応答のその部分の主な要素を説明します。
 
 | プロパティ | 説明 | 例 |
 |---|---|---|
-| `scope` | 返された提案されたオファーに関連付けられた決定範囲。 | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `scope` | 返された提案オファーに関連付けられた決定範囲。 | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
 | `activity.id` | オファーアクティビティの一意の ID。 | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
-| `placement.id` | オファー配置の一意の ID。 | `"id": "xcore:offer-placement:1175009612b0100c"` |
+| `placement.id` | オファープレースメントの一意の ID。 | `"id": "xcore:offer-placement:1175009612b0100c"` |
 | `items.id` | 提案されたオファーの一意の ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
 | `schema` | 提案されたオファーに関連付けられたコンテンツのスキーマ。 | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
 | `data.id` | 提案されたオファーの一意の ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
 | `format` | 提案されたオファーに関連付けられたコンテンツの形式。 | `"format": "text/html"` |
 | `language` | 提案されたオファーのコンテンツに関連付けられた言語の配列。 | `"language": [ "en-US" ]` |
-| `content` | 提案されたオファーに関連付けられた、文字列の形式のコンテンツ。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
+| `content` | 提案されたオファーに関連付けられたコンテンツ（文字列の形式）。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | 提案されたオファーに関連付けられた画像コンテンツ（URL 形式）。 | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | 提案されたオファーに関連付けられた特性を含む JSON オブジェクト。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |

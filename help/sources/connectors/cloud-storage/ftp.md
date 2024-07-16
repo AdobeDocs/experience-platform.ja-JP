@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；FTP;ftp;
+keywords: Experience Platform；ホーム；人気のトピック；FTP;ftp;
 solution: Experience Platform
-title: FTP ソースコネクタの概要
+title: FTP Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して FTP サーバーをAdobe Experience Platformに接続する方法について説明します。
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '453'
 ht-degree: 73%
 
 ---
 
-# （ベータ版）FTP コネクタ
+# （Beta） FTP コネクタ
 
 >[!NOTE]
 >
->FTP コネクタはベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
+>FTP コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 
@@ -23,7 +23,7 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 
 >[!IMPORTANT]
 >
->FTP ソースコネクタを使用してデータフローを作成する場合、FTP サーバー内で発生する増分更新に関する問題が残るので、1 回限りの取り込みスケジュールに設定することを強くお勧めします。
+>FTP ソースコネクタを使用してデータフローを作成する場合、FTP サーバー内で増分更新に関する問題が長引くため、1 回限りの取り込みスケジュールを設定することを強くお勧めします。
 
 ## IP アドレス許可リスト
 
@@ -40,13 +40,13 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 - 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、一部の ASCII 文字や Unicode 文字、例えば制御文字（0x00 ～ 0x1F、\u0081 など）も使用できません。HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
 - 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
-## FTP の接続先 [!DNL Platform]
+## [!DNL Platform] への FTP の接続
 
-以下のドキュメントでは、FTP サーバーをに接続する方法に関する情報を提供します。 [!DNL Platform] API またはユーザーインターフェイスを使用する場合：
+以下のドキュメントでは、API またはユーザーインターフェイスを使用して、FTP サーバーを [!DNL Platform] に接続する方法に関する情報を提供します。
 
 ### API の使用
 
-- [フローサービス API を使用した FTP ベース接続の作成](../../tutorials/api/create/cloud-storage/ftp.md)
+- [Flow Service API を使用した FTP ベース接続の作成](../../tutorials/api/create/cloud-storage/ftp.md)
 - [Flow Service API を使用して、クラウドストレージソースのデータ構造とコンテンツを探索](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service API を使用して、クラウドストレージソースのデータフローを作成](../../tutorials/api/collect/cloud-storage.md)
 

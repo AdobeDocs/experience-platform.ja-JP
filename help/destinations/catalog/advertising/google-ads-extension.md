@@ -1,12 +1,12 @@
 ---
-keywords: Google広告；google 広告；google 広告拡張；Google広告拡張
+keywords: Google広告；google 広告；google ads 拡張機能；Google Ads 拡張機能
 title: Google Ads 拡張機能
-description: Google Ads 拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Google Ads 拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: b563ce68-7b04-4cfb-b0c3-151f34ec7c1a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 83%
+source-wordcount: '464'
+ht-degree: 84%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 83%
 
 ## 概要 {#overview}
 
-この拡張機能は、 [!DNL Google Ads]. また、gtag.js 拡張機能をインストールし、ライブラリに追加する必要があります。 [!DNL Google Ads] それに依存している。
+この拡張機能は、[!DNL Google Ads] をクリックしたユーザーからのコンバージョンを追跡します。 また、gtag.js 拡張機能をインストールして、依存するの [!DNL Google Ads]、ライブラリに追加する必要があります。
 
 [!DNL Google Ads] は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html) の拡張機能のページを参照してください。
 
@@ -24,13 +24,13 @@ ht-degree: 83%
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、Platform を購入したすべての顧客が、宛先カタログで使用できます。
+プラットフォームを購入したすべての顧客は、この拡張機能を宛先カタログから利用できます。
 
 この拡張機能を使用するには、Adobe Experience Platform でタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてタグへのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Google Ads] 拡張子：
+[!DNL Google Ads] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

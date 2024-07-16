@@ -4,7 +4,7 @@ description: Adobe Experience Platform の Cloud Connector イベント転送拡
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1356'
 ht-degree: 100%
 
 ---
@@ -63,11 +63,11 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 
 | ヘッダー | 説明 |
 |---|---|
-| [A-IM](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept-Charset](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Charset) |  |
-| [Accept-Encoding](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Encoding) |  |
-| [Accept-Language](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Language) |  |
+| [A-IM](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) | |
+| [Accept](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) | |
+| [Accept-Charset](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Charset) | |
+| [Accept-Encoding](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Encoding) | |
+| [Accept-Language](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept-Language) | |
 | [Accept-Datetime](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Accept) | 元のリソースの過去の状態にアクセスしたい旨を示すため、ユーザエージェントによって送信されます。このため、`Accept-Datetime` ヘッダーは、元のリソースの TimeGate に対して発行される HTTP リクエストで伝送され、その値はアクセスを希望する元のリソースの過去の状態の日時を示します。 |
 | Access-Control-Request-Headers | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に、クライアントがどの [HTTP ヘッダー](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers)を送信する可能性があるかがサーバーに通知されます。 |
 | Access-Control-Request-Method | [プリフライトリクエスト](https://developer.mozilla.org/ja-jp/docs/Glossary/preflight_request)を発行する際にブラウザーによって使用され、実際のリクエストの際に使用される [HTTP メソッド](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods)がサーバーに通知されます。プリフライトリクエストは常に[オプション](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/OPTIONS)であり、実際のリクエストと同じメソッドを使用しないので、このヘッダーが必要です。 |
@@ -83,24 +83,24 @@ Cloud Connector イベント転送拡張機能を使用すると、宛先にデ�
 | Forwarded | [リバースプロキシサーバー](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Proxy_servers_and_tunneling)からの情報が含まれます。この情報は、プロキシがリクエストのパスに関連している場合に変更または失われます。 |
 |  から | 要求元のユーザーエージェントを制御するユーザーのインターネット電子メールアドレスが含まれます。 |
 | ホスト | リクエストの送信先サーバーのホスト番号とポート番号を指定します。 |
-| If-Match |  |
-| If-Modified-Since |  |
-| [If-None-Match](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-None-Match) |  |
-| [if-Range](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Range) |  |
-| [If-Unmodified-Since](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Max-Forwards](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Origin](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Origin) |  |
-| [Pragma](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Pragma) | 実装固有のヘッダー。リクエスト応答チェーンの任意の場所で様々な効果を持つ場合があります。Cache-Control ヘッダーが存在しない HTTP/1.0 キャッシュとの下位互換性を確保するために使用されます。 |  |
+| If-Match | |
+| If-Modified-Since | |
+| [If-None-Match](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-None-Match) | |
+| [if-Range](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Range) | |
+| [If-Unmodified-Since](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Max-Forwards](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Origin](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Origin) | |
+| [Pragma](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Pragma) | 実装固有のヘッダー。リクエスト応答チェーンの任意の場所で様々な効果を持つ場合があります。Cache-Control ヘッダーが存在しない HTTP/1.0 キャッシュとの下位互換性を確保するために使用されます。 | |
 | [Proxy-Authorization](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [範囲](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Range) | サーバーが返すドキュメントの一部を示します。 |  |
-| [参照元](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Referer) | 現在要求されているページへのリンク元である、前の Web ページのアドレス。 |  |
+| [範囲](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Range) | サーバーが返すドキュメントの一部を示します。 | |
+| [参照元](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Referer) | 現在要求されているページへのリンク元である、前の Web ページのアドレス。 | |
 | TE | ユーザーエージェントが受け入れる転送エンコーディングを指定します。（非公式に、より直感的に `Accept-Transfer-Encoding` と呼ぶこともできます） |
-| Upgrade | [`Upgrade` ヘッダーフィールドに関連する RFC ドキュメントは、RFC 7230、6.7 項](https://tools.ietf.org/html/rfc7230#section-6.7)です。この規格では、現在のクライアント、サーバー、転送プロトコル接続で、別のプロトコルにアップグレードまたは変更するためのルールが定められています。例えば、このヘッダーの規格では、クライアントは HTTP 1.1 から HTTP 2.0 に変更できます（サーバーで `Upgrade` ヘッダーフィールドを確認して実装する場合）。 どちらも、`Upgrade` ヘッダーフィールドについて指定されている条項に同意する必要はありません。クライアントヘッダーとサーバーヘッダーの両方で使用できます。`Upgrade` ヘッダーフィールドを指定した場合、送信者は `upgrade` オプションを指定して `Connection` ヘッダーフィールドも送信する必要があります。 |  |
+| Upgrade | [`Upgrade` ヘッダーフィールドに関連する RFC ドキュメントは、RFC 7230、6.7 項](https://tools.ietf.org/html/rfc7230#section-6.7)です。この規格では、現在のクライアント、サーバー、転送プロトコル接続で、別のプロトコルにアップグレードまたは変更するためのルールが定められています。例えば、このヘッダーの規格では、クライアントは HTTP 1.1 から HTTP 2.0 に変更できます（サーバーで `Upgrade` ヘッダーフィールドを確認して実装する場合）。 どちらも、`Upgrade` ヘッダーフィールドについて指定されている条項に同意する必要はありません。クライアントヘッダーとサーバーヘッダーの両方で使用できます。`Upgrade` ヘッダーフィールドを指定した場合、送信者は `upgrade` オプションを指定して `Connection` ヘッダーフィールドも送信する必要があります。 | |
 | [User-Agent](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/User-Agent) | ネットワークプロトコルピアが、要求元のソフトウェアユーザーエージェントのアプリケーションタイプ、オペレーティングシステム、ソフトウェアベンダー、またはソフトウェアバージョンを識別できる、特徴的な文字列が含まれます。 |
 | [Via](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Via) | フォワードプロキシとリバースプロキシの両方によって追加されます。これは、リクエストヘッダーと応答ヘッダーに表示できます。 |
 | [警告](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Headers/Warning) | 発生する可能性がある問題についての一般的な警告情報。 |
-| X-CSRF-Token |  |
-| X-Requested-With |  |
+| X-CSRF-Token | |
+| X-Requested-With | |
 
 #### 本文（JSON）
 

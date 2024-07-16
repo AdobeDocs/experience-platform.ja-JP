@@ -1,12 +1,12 @@
 ---
 keywords: Marketo;marketo;Marketo拡張機能；marketo 拡張機能
 title: Marketo 拡張機能
-description: Marketo拡張機能は、Adobe Experience Platformの電子メールの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Marketo拡張機能は、Adobe Experience Platformのメールの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 87%
+source-wordcount: '445'
+ht-degree: 89%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 87%
 
 ## 概要 {#overview}
 
-[!DNL Marketo]の強力なマーケティングオートメーションソフトウェアは、マーケターがデジタルマーケティングの技術と科学を習得し、顧客や見込み客を惹きつけるのに役立ちます。
+[!DNL Marketo] の強力なマーケティング自動化ソフトウェアは、マーケターがデジタルマーケティングの技術と科学を習得して、顧客や見込み客を惹きつけることができます。
 
-[!DNL Marketo] は、Adobe Experience Platformの電子メール拡張機能です。 拡張機能について詳しくは、[Adobe Exchange の拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)を参照してください。
+[!DNL Marketo] は、Adobe Experience Platformのメール拡張機能です。 拡張機能について詳しくは、[Adobe Exchange の拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)を参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 87%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Marketo] 拡張子：
+[!DNL Marketo] 拡張機能をインストールします。
 
 1. [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 2. カタログから拡張機能を選択するか、検索バーを使用します。

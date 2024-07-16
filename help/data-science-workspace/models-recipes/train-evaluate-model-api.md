@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform、トレーニングと評価、Data Science Workspace、人気の高いトピック、Sensei Machine Learning API
+keywords: Experience Platform；トレーニングと評価；Data Science Workspace；人気のトピック；Sensei機械学習 API
 solution: Experience Platform
 title: Sensei Machine Learning API を使用したモデルのトレーニングと評価
 type: Tutorial
-description: このチュートリアルでは、Sensei Machine Learning API 呼び出しを使用して、モデルの作成、トレーニング、評価をおこなう方法について説明します。
+description: このチュートリアルでは、Sensei機械学習 API 呼び出しを使用して、モデルを作成、トレーニング、評価する方法を説明します。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1227'
-ht-degree: 85%
+source-wordcount: '1217'
+ht-degree: 81%
 
 ---
 
-# を使用したモデルのトレーニングと評価 [!DNL Sensei Machine Learning] API
+# [!DNL Sensei Machine Learning] API を使用したモデルのトレーニングと評価
 
 
 このチュートリアルでは、API 呼び出しを使用してモデルを作成、トレーニング、評価する方法を示します。API ドキュメントの詳しいリストについては、[こちらのドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を参照してください。
@@ -21,25 +21,25 @@ ht-degree: 85%
 
 API を使用したモデルのトレーニングと評価に必要なエンジンを作成するには、[API を使用してパッケージ化されたレシピをインポート](./import-packaged-recipe-api.md)します。
 
-フォロー： [Experience PlatformAPI 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) をクリックして、API 呼び出しの開始を試みます。
+API 呼び出しの作成を開始するには ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)[Experience PlatformAPI 認証のチュートリアルに従います。
 
 このチュートリアルから、次の値を入手できます。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
-- `{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
+- `{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。
 - `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。
 
 - インテリジェントサービスの Docker イメージへのリンク
 
 ## API ワークフロー
 
-この API を使用して、トレーニング用の Experiment Run を作成します。このチュートリアルでは、エンジン、MLInstance および Experiment の各エンドポイントに重点を置いています。次の図に、これら 3 つのエンドポイントの関係を示し、Run とモデルの概念を示します。
+この API を使用して、トレーニング用の Experiment Run を作成します。このチュートリアルでは、Engines、MLInstances、および Experiments エンドポイントに焦点を当てます。 次の図に、これら 3 つのエンドポイントの関係を示し、Run とモデルの概念を示します。
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
 >[!NOTE]
 >
->「エンジン」、「MLInstance」、「MLService」、「Experiment」、「モデル」という用語は、UI では別の用語になります。UI からアクセスする場合、次の表に違いを示します。
+>「エンジン」、「MLInstance」、「MLService」、「実験」、「モデル」という用語は、UI では別の用語として使用されます。 UI を使用する場合の違いを次の表に示します。
 
 | UI 用語 | API 用語 |
 | --- | --- |
@@ -65,7 +65,7 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
+`{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：MLInstance の設定。次に、このチュートリアルで使用する例を示します。
 
@@ -122,9 +122,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->`{JSON_PAYLOAD}` では、トレーニングとスコアリングに使用するパラメーターを `tasks` 配列で定義します。`{ENGINE_ID}` は使用するエンジンの ID で、`tag` フィールドはインスタンスの識別に使用するオプションのパラメーターです。
+>`{JSON_PAYLOAD}` では、`tasks` 配列でトレーニングとスコアリングに使用するパラメーターを定義します。 `{ENGINE_ID}` は使用するエンジンの ID で、`tag` フィールドはインスタンスの識別に使用するオプションのパラメーターです。
 
-応答には `{INSTANCE_ID}` 作成される MLInstance を表す 設定が異なる複数のモデル MLInstance を作成できます。
+応答には、作成された MLInstance を表す `{INSTANCE_ID}` が含まれます。 設定が異なる複数のモデル MLInstance を作成できます。
 
 **応答** 
 
@@ -176,7 +176,7 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
+`{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：作成する Experiment オブジェクト。次に、このチュートリアルで使用する例を示します。
@@ -231,7 +231,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
+`{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：使用するデータセット。次に、このチュートリアルで使用する例を示します。
@@ -319,7 +319,7 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`：目的の Experiment に対応する ID。これは、Experiment を作成した際のレスポンスに含まれています。\
-`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
+`{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
 `{JSON_PAYLOAD}`：トレーニング Run を作成するには、本文に次の内容を含める必要があります。
@@ -390,7 +390,7 @@ curl -X GET \
 `{EXPERIMENT_ID}`：Experiment を表す ID。\
 `{EXPERIMENT_RUN_ID}`：Experiment Run を表す ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。\
+`{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。\
 `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。
 
 **応答** 
@@ -453,7 +453,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`：目的の Experiment Run に対応する ID。これは、Experiment Run を作成した際のレスポンスに含まれています。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
+`{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。
 
 レスポンスは、作成されたトレーニング済みモデルを表します。
 
@@ -500,11 +500,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`：Experiment に対応する ID。\
 `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
-`{ORG_ID}`:固有のAdobe Experience Platform統合で見つかった組織の資格情報。
+`{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。
 
 >[!NOTE]
 >
->API 呼び出しを実行すると、新しい Experiment Run の作成が無効になります。ただし、既に実行中の Experiment Run は停止されません。
+>API 呼び出しにより、新しい実験実行の作成が無効になります。 ただし、既に実行中の Experiment Run は停止されません。
 
 次に、Experiment が正常に削除されたことを通知するレスポンスを示します。
 

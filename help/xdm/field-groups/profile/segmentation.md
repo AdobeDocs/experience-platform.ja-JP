@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: セグメントメンバーシップの詳細スキーマフィールドグループ
-description: 「セグメントメンバーシップの詳細」スキーマフィールドグループについて説明します。
+description: セグメントメンバーシップの詳細スキーマフィールドグループについて説明します。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -11,27 +11,27 @@ ht-degree: 20%
 ---
 
 
-# [!UICONTROL セグメントメンバーシップの詳細] スキーマフィールドグループ
+# [!UICONTROL  セグメントメンバーシップの詳細 ] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL セグメントメンバーシップの詳細] は、 [[!DNL XDM Individual Profile] クラス](../../classes/individual-profile.md). フィールドグループは、セグメントメンバーシップに関する情報（個人が属するセグメント、最終認定時間、メンバーシップが有効になるまで）を取得する単一のマップフィールドを提供します。
+[!UICONTROL  セグメントメンバーシップの詳細 ] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、セグメントメンバーシップに関する情報（個人が属するセグメント、最終選定時間、メンバーシップの有効期限など）を取得する単一のマップフィールドを提供します。
 
 >[!WARNING]
 >
->また、 `segmentMembership` フィールドは、このフィールドグループを使用してプロファイルスキーマに手動で追加する必要があります。このフィールドに手動で入力または更新しないでください。 自動的に更新されます `segmentMembership` セグメント化ジョブの実行時に各プロファイルのマッピングをおこないます。
+>`segmentMembership` フィールドは、このフィールドグループを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドに手動で入力したり、更新したりしないでください。 セグメント化ジョブの実行時に、システムによって各プロファイルの `segmentMembership` マップが自動的に更新されます。
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `segmentMembership` | マップ | 個人のセグメントメンバーシップを記述するマップオブジェクト。このオブジェクトの構造について、以下で詳しく説明します。 |
+| `segmentMembership` | マップ | 個人のセグメントメンバーシップを記述するマップオブジェクト。このオブジェクトの構造については、以下で詳しく説明します。 |
 
 {style="table-layout:auto"}
 
-次に例を示します `segmentMembership` 特定のプロファイルに対してシステムが入力したマップ。 セグメントメンバーシップは、名前空間で並べ替えられます。名前空間は、オブジェクトのルートレベルのキーで示されます。 次に、各名前空間の下の個々のキーは、プロファイルがメンバーとして含まれるセグメントの ID を表します。 各セグメントオブジェクトには、メンバーシップに関する詳細を提供するいくつかのサブフィールドが含まれます。
+次に、特定のプロファイルに対してシステムが入力した `segmentMembership` マップの例を示します。 セグメントメンバーシップは、オブジェクトのルートレベルキーで示される名前空間で並べ替えられます。 次に、各名前空間の下の個々のキーは、プロファイルがメンバーとして属するセグメントの ID を表します。 各セグメントオブジェクトには、メンバーシップに関する詳細を提供する次のサブフィールドが含まれています。
 
 ```json
 {
@@ -72,19 +72,19 @@ ht-degree: 20%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `xdm:version` | このプロファイルが適合するセグメントのバージョン。 |
+| `xdm:version` | このプロファイルが選定したセグメントのバージョン。 |
 | `xdm:lastQualificationTime` | 前回、このプロファイルがセグメントに選定された際のタイムスタンプ。 |
-| `xdm:validUntil` | セグメントメンバーシップが有効であると見なされなくなったときのタイムスタンプ。 外部オーディエンスの場合、このフィールドを設定しないと、セグメントのメンバーシップは、 `lastQualificationTime`. |
-| `xdm:status` | セグメントメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`：プロファイルはセグメントに適合します。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてセグメントから外れています。</li></ul> |
-| `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれています。 各メンバーシップに指定できるペイロードは、1 つのタイプのみです。 `xdm:payloadType` ペイロードのタイプを示します (`boolean`, `number`, `propensity`または `string`) の代わりに、兄弟プロパティがペイロードタイプの値を提供します。 |
+| `xdm:validUntil` | セグメントメンバーシップが有効であると見なされなくなった際のタイムスタンプ。 外部オーディエンスの場合、このフィールドが設定されていないと、セグメントメンバーシップは `lastQualificationTime` から 30 日間のみ保持されます。 |
+| `xdm:status` | セグメントメンバーシップが現在のリクエストの一環として実現されたかどうかを示す文字列フィールド。以下の値を使用できます。 <ul><li>`realized`：プロファイルがセグメントに適合します。</li><li>`exited`：プロファイルは、現在のリクエストの一環としてセグメントから外れています。</li></ul> |
+| `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれています。 各メンバーシップに指定できる特定のタイプのペイロードは 1 つだけです。 `xdm:payloadType` はペイロードのタイプ（`boolean`、`number`、`propensity` または `string`）を示し、その兄弟プロパティはペイロードタイプの値を提供します。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->次に属する任意のセグメントメンバーシップ： `exited` 30 日を超えるステータス ( `lastQualificationTime`、は削除される可能性があります。
+>`lastQualificationTime` に基づき、30 日を超えて「`exited`」ステータスにあるセグメントメンバーシップは、削除の対象となります。
 
-フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
+フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [入力された例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

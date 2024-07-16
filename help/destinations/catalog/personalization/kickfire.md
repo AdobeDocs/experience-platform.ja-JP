@@ -1,12 +1,12 @@
 ---
 keywords: kickfire;Kickfire;kickfire 拡張機能；Kickfire 拡張機能
 title: KickFire 拡張機能
-description: KickFire 拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: KickFire 拡張機能は、Adobe Experience Platformのパーソナライズ機能の提供先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 85%
+source-wordcount: '437'
+ht-degree: 86%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 85%
 
 ## 概要 {#overview}
 
-[!DNL KickFire's] IP アドレスインテリジェンスおよび B2B ファーストグラフィックデータを使用すると、IP アドレスを会社に変換したり、匿名の Web 訪問者を特定したり、アカウントデータをテクノロジースタックに統合したりできます。すべては会社の IP アドレスに基づきます。
+[!DNL KickFire's] の IP アドレスインテリジェンスと B2B ファームグラフィックデータを使用すると、IP アドレスを会社に変換し、匿名の web 訪問者を識別し、アカウントデータをテクノロジースタックに統合できます。これらはすべて、会社の IP アドレスに基づいています。
 
 [!DNL KickFire] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[Kickfire の web サイト](https://www.kickfire.com/)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 85%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL KickFire] 拡張子：
+[!DNL KickFire] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

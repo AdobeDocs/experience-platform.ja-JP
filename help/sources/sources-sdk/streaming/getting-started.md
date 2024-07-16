@@ -1,6 +1,6 @@
 ---
-title: セルフサービスソース（ストリーミング SDK）の概要
-description: このドキュメントでは、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の情報について説明します。
+title: セルフサービスソースの概要（ストリーミング SDK）
+description: このドキュメントでは、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の情報の概要を説明します。
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: ベータ版
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
@@ -10,33 +10,33 @@ ht-degree: 34%
 
 ---
 
-# セルフサービスソース（ストリーミング SDK）の概要
+# セルフサービスソースの概要（ストリーミング SDK）
 
 >[!NOTE]
 >
->セルフサービスソースストリーミング SDK はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>セルフサービスソース Streaming SDK はベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-セルフサービスソース（ストリーミング SDK）を使用すると、独自のソースを統合して、ストリーミングデータをAdobe Experience Platformに取り込むことができます。 このドキュメントでは、 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+セルフサービスソース（Streaming SDK）を使用すると、独自のソースを統合して、ストリーミングデータをAdobe Experience Platformに取り込むことができます。 このドキュメントでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 
 ## プロセスの概要
 
-Experience Platformでソースを設定する手順を以下に示します。
+Experience Platformでソースを設定する手順の概要を次に示します。
 
 ### 統合
 
-* [ストリーミング SDK 用の新しい接続仕様の作成](create.md).
-* [新しい接続仕様 ID でストリーミングフロー仕様を更新する](update-flow-specs.md).
-* [ストリーミングソースをテストして送信する](submit.md).
+* [ ストリーミング SDK の新しい接続仕様を作成 ](create.md) します。
+* [ 新しい接続仕様 ID でストリーミングフロー仕様を更新します ](update-flow-specs.md)。
+* [ ストリーミングソースをテストして送信します ](submit.md)。
 
 ### ドキュメント
 
-* ソースのドキュメント化を開始するには、 [セルフサービスソースのドキュメント作成の概要](../documentation/doc-overview.md).
-* 次のガイドを読む： [GitHub Web インターフェイスの使用](../documentation/github.md) を参照してください。
-* 次のガイドを読む： [テキストエディターの使用](../documentation/text-editor.md) ローカルマシンを使用してドキュメントを作成する手順については、を参照してください。
-* [ストリーミング SDK API ドキュメントテンプレートを使用して、API でソースをドキュメント化する](streaming-template-api.md).
-* [ストリーミング SDK UI ドキュメントテンプレートを使用して、UI でソースをドキュメント化する](streaming-template-ui.md).
+* ソースのドキュメント化を開始するには、[ セルフサービスソースのドキュメント作成の概要 ](../documentation/doc-overview.md) を参照してください。
+* GitHub を使用してドキュメントを作成する手順については、[GitHub web インターフェイスの使用 ](../documentation/github.md) に関するガイドを参照してください。
+* ローカルマシンを使用してドキュメントを作成する手順については、[ テキストエディターの使用 ](../documentation/text-editor.md) に関するガイドを参照してください。
+* [ ストリーミング SDK API ドキュメントテンプレートを使用して、API にソースをドキュメント化します ](streaming-template-api.md)。
+* [ ストリーミング SDK UI ドキュメントテンプレートを使用して、UI にソースをドキュメント化します ](streaming-template-ui.md)。
 
-また、以下のドキュメントテンプレートをダウンロードすることもできます。
+以下のドキュメントテンプレートもダウンロードできます。
 
 * [API ドキュメントのテンプレート](../assets/streaming/streaming-template-api.zip)
 * [UI ドキュメントテンプレート](../assets/streaming/streaming-template-ui.zip)
@@ -45,18 +45,18 @@ Experience Platformでソースを設定する手順を以下に示します。
 
 >[!IMPORTANT]
 >
->Experience Platformと統合するソースは、更新を送信するために、エンドポイントが購読できる Webhook をサポートできる必要があります。
+>エンドポイントと統合するソースは、Experience Platformが購読できる Webhook をサポートして更新を送信できる必要があります。
 
-セルフサービスソース（ストリーミング SDK）を使用するには、Adobe Experience Platform Sources でプロビジョニングされたサンドボックス組織に対するアクセス権があることを確認する必要があります。
+セルフサービスソース（ストリーミング SDK）を使用するには、Adobe Experience Platform ソースでプロビジョニングされたサンドボックス組織にアクセスできる必要があります。
 
-また、このガイドでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+このガイドには、Adobe Experience Platformの次のコンポーネントに関する十分な知識も必要です。
 
 * [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## API 呼び出し例の読み取り
 
-セルフサービスソース（ストリーミング SDK）および [!DNL Flow Service] API ドキュメントには、API 呼び出しの例が記載されており、リクエストの形式を設定する方法を示しています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+セルフサービスソース（ストリーミング SDK）と [!DNL Flow Service] API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ## 必須ヘッダーの値の収集
 
@@ -66,13 +66,13 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Platform のすべてのリソース ( [!DNL Flow Service]は、特定の仮想サンドボックスに分離されています。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service] に属するリソースを含む、Platform のすべてのリソースは、特定の仮想サンドボックスに分離されます。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform のサンドボックスについて詳しくは、 [サンドボックスドキュメント](../../../sandboxes/home.md).
+>Platform のサンドボックスについて詳しくは、[ サンドボックスのドキュメント ](../../../sandboxes/home.md) を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
@@ -80,4 +80,4 @@ Platform のすべてのリソース ( [!DNL Flow Service]は、特定の仮想�
 
 ## 次の手順
 
-セルフサービスソース（ストリーミング SDK）を使用して新しいソースの作成を開始するには、 [新しいソースの作成](./create.md).
+セルフサービスソース（ストリーミング SDK）を使用した新しいソースの作成を開始するには、[ 新しいソースの作成 ](./create.md) に関するチュートリアルを参照してください。

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;ホーム;人気のあるトピック;データ準備;api ガイド;スキーマ;
 title: 関数 API エンドポイント
-description: Data Prep API で「/functions」エンドポイントを使用して、マッピング式を検証し、使用可能なマッピングセット関数を一覧表示できます。
+description: Data Prep API で「/functions」エンドポイントを使用して、マッピング式を検証し、使用可能なマッピングセット関数をリストできます。
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 88%
+source-wordcount: '213'
+ht-degree: 87%
 
 ---
 

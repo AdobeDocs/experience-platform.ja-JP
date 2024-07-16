@@ -17,7 +17,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->販売注文のライセンスの使用権限と対応するを確認します [製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html) 実際の使用制限に関して、このガードレール ページに加えて説明します。
+>このガードレール ページに加えて、販売注文と対応する [ 製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html) でライセンスの使用権限を確認してください。
 
 このページでは、アクティベーション動作に関するデフォルトの使用方法とレートの制限について説明します。次のガードレールを確認する際は、正しく[宛先に接続されている](/help/destinations/ui/connect-destination.md)とみなされます。
 
@@ -51,7 +51,7 @@ ht-degree: 51%
 | --- | --- | --- | --- |
 | 単一の宛先に対するオーディエンスの最大数 | 250 | パフォーマンスガードレール | データフロー内の単一の宛先に最大 250 個のオーディエンスをマッピングすることをお勧めします。 <br><br> 宛先に対して 250 を超えるオーディエンスをアクティブ化する必要がある場合は、次のいずれかを実行できます。 <ul><li> アクティブ化をやめるオーディエンスのマッピングを解除する。または</li><li>新しいデータフローを目的の宛先に作成し、オーディエンスをこの新しいデータフローにマッピングします。</li></ul> <br> 一部の宛先では、その宛先にマッピングされたオーディエンスの数が 250 個未満に制限される場合があることに注意してください。 これらの宛先は、ページの下の各セクションで呼び出されます。 |
 | 宛先にマッピングされる属性の最大数 | 50 | パフォーマンスガードレール | 複数の宛先および宛先タイプの場合、書き出し用にマッピングするプロファイル属性および ID を選択できます。最適なパフォーマンスを得るには、最大 50 個の属性をデータフローで宛先にマッピングする必要があります。 |
-| 宛先の最大数 | 100 | システムに適用されたガードレール | 接続してデータをアクティブ化できる宛先は、最大 100 個まで作成できます。 *サンドボックスごと*. [エッジパーソナライゼーションの宛先（カスタムパーソナライゼーション）](#edge-destinations-activation)は、100 件の推奨される宛先のうち、最大 10 件を構成できます。 |
+| 宛先の最大数 | 100 | システムに適用されたガードレール | *サンドボックスごとに*、接続してデータをアクティブ化できる宛先を最大 100 個作成できます。 [エッジパーソナライゼーションの宛先（カスタムパーソナライゼーション）](#edge-destinations-activation)は、100 件の推奨される宛先のうち、最大 10 件を構成できます。 |
 | 宛先に対してアクティブ化されるデータのタイプ | プロファイルデータ（ID および ID マップを含む） | システムに適用されたガードレール | 現在、宛先へ&#x200B;*プロファイルレコード属性*&#x200B;の書き出しのみ可能です。イベントデータを記述する XDM 属性は、現時点では書き出しでサポートされていません。 |
 | 宛先に対してアクティブ化されるデータのタイプ - 配列およびマップ属性のサポート | 使用不可 | システムに適用されたガードレール | 現時点では、*配列またはマップ属性*&#x200B;を宛先に書き出すことは&#x200B;**不可能**&#x200B;です。このルールの例外は、ストリーミングとファイルベースの両方のアクティベーションで書き出される [ID マップ](/help/xdm/field-groups/profile/identitymap.md)です。 |
 
@@ -98,13 +98,13 @@ ht-degree: 51%
 | --- | --- | --- | --- |
 | [カスタムパーソナライゼーション](/help/destinations/catalog/personalization/custom-personalization.md)の宛先の最大数 | 10 | パフォーマンスガードレール | データフローは、サンドボックスあたり 10 個のカスタムパーソナライゼーションの宛先に設定できます。 |
 | サンドボックスごとにパーソナライゼーションの宛先にマッピングされる属性の最大数 | 30 | システムに適用されたガードレール | サンドボックスごとに、データフローでパーソナライゼーションの宛先にマッピングできる属性は最大 30 個です。 |
-| 1 つのオーディエンスにマッピングされるオーディエンスの最大数 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 宛先 | 50 | パフォーマンスガードレール | 1 つのAdobe Targetの宛先に対して、アクティベーションフローで最大 50 個のオーディエンスをアクティブ化できます。 |
+| 1 つの [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) の宛先にマッピングされるオーディエンスの最大数 | 50 | パフォーマンスガードレール | 1 つのAdobe Targetの宛先に対して、アクティベーションフローで最大 50 個のオーディエンスをアクティブ化できます。 |
 
 {style="table-layout:auto"}
 
 ### データセットの書き出し {#dataset-exports}
 
-現在、ではデータセットの書き出しがサポートされています。 **[!UICONTROL 最初はフル、次にインクリメンタル]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). この節で説明するガードレール *最初の完全書き出しに適用* これは、データセット書き出しワークフローが設定された後で発生します。
+データセットの書き出しは現在、**[!UICONTROL 最初の完全かつ増分]**[ パターン ](/help/destinations/ui/export-datasets.md#scheduling) でサポートされています。 この節で説明しているガードレールは *データセット書き出しワークフローの設定後に発生する* 最初の完全書き出しに適用される）。
 
 <!--
 
@@ -121,16 +121,16 @@ ht-degree: 51%
 データセット書き出しガードレールは、以下に説明するように、Experience Platformから書き出された 2 種類のデータセットに適用されます。
 
 **XDM エクスペリエンスイベントスキーマに基づくデータセット**
-XDM エクスペリエンスイベントスキーマに基づくデータセットの場合、データセットスキーマにはトップレベルが含まれます *timestamp* 列。 データは、追加専用で取り込まれます。
+XDM エクスペリエンスイベントスキーマに基づくデータセットの場合、データセットスキーマには最上位の *timestamp* 列が含まれます。 データは、追加専用で取り込まれます。
 
 **XDM 個人プロファイルスキーマに基づくデータセット**
-XDM 個人プロファイルスキーマに基づくデータセットの場合、データセットスキーマには最上位レベルは含まれません *timestamp* 列。 データはアップサート方式で取り込まれます。
+XDM 個人プロファイルスキーマに基づくデータセットの場合、データセットスキーマには最上位の *timestamp* 列が含まれません。 データはアップサート方式で取り込まれます。
 
 以下のソフトガードレールは、Experience Platformから書き出されたすべてのデータセットに適用されます。 様々なデータセットと圧縮タイプに固有の、後述するハードガードレールも確認してください。
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --- | --- | --- | --- |
-| 書き出されたデータセットのサイズ | 50 億件のレコード | パフォーマンスガードレール | ここで説明するデータセット書き出しの制限は、です *ソフトガードレール*. 例えば、ユーザーインターフェイスでは 50 億レコードを超えるデータセットの書き出しはブロックされませんが、動作は予測できず、書き出しが失敗したり、非常に長い書き出し待ち時間が発生したりする場合があります。 |
+| 書き出されたデータセットのサイズ | 50 億件のレコード | パフォーマンスガードレール | ここで説明するデータセット書き出しの制限は *ソフトガードレール* です。 例えば、ユーザーインターフェイスでは 50 億レコードを超えるデータセットの書き出しはブロックされませんが、動作は予測できず、書き出しが失敗したり、非常に長い書き出し待ち時間が発生したりする場合があります。 |
 
 {style="table-layout:auto"}
 
@@ -144,8 +144,8 @@ XDM 個人プロファイルスキーマに基づくデータセットの場合�
 
 | データセットタイプ | ガードレール | ガードレール タイプ | 説明 |
 ---------|----------|---------|-------|
-| に基づくデータセット **XDM エクスペリエンスイベントスキーマ** | 過去 365 日間のデータ | システムに適用されたガードレール | 昨年のデータが書き出されます。 |
-| に基づくデータセット **XDM 個人プロファイルスキーマ** | データフローで書き出されたすべてのファイルで 100 億件のレコード | システムに適用されたガードレール | 圧縮された JSON ファイルまたは parquet ファイルの場合はデータセットのレコード数が 100 億未満、非圧縮の parquet ファイルの場合は 100 万未満である必要があり、そうでない場合は書き出しが失敗します。 書き出そうとしているデータセットが許可されるしきい値を超えている場合は、そのデータセットのサイズを小さくします。 |
+| **XDM エクスペリエンスイベントスキーマ** に基づくデータセット | 過去 365 日間のデータ | システムに適用されたガードレール | 昨年のデータが書き出されます。 |
+| **XDM 個人プロファイルスキーマ** に基づくデータセット | データフローで書き出されたすべてのファイルで 100 億件のレコード | システムに適用されたガードレール | 圧縮された JSON ファイルまたは parquet ファイルの場合はデータセットのレコード数が 100 億未満、非圧縮の parquet ファイルの場合は 100 万未満である必要があり、そうでない場合は書き出しが失敗します。 書き出そうとしているデータセットが許可されるしきい値を超えている場合は、そのデータセットのサイズを小さくします。 |
 
 {style="table-layout:auto"}
 
@@ -168,7 +168,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 -->
 
-詳細を読む： [データセットの書き出し](/help/destinations/ui/export-datasets.md).
+詳しくは、[ データセットの書き出し ](/help/destinations/ui/export-datasets.md) を参照してください。
 
 
 ### Destination SDK ガードレール {#destination-sdk-guardrails}
@@ -197,7 +197,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 他のExperience Platformサービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* [エンドツーエンドの待ち時間図](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) （様々なExperience Platformサービス用）
-* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ）](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 様々なExperience Platformサービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

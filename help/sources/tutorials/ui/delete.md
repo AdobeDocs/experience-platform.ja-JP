@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データフローを削除
-description: 「ソース」ワークスペースでは、エラーが含まれる、または古くなった既存のバッチおよびストリーミングデータフローを削除できます。
+keywords: Experience Platform；ホーム；人気のトピック；データフローの削除
+description: ソースワークスペースを使用すると、エラーが含まれていたり古くなったりした既存のバッチおよびストリーミングのデータフローを削除できます。
 solution: Experience Platform
 title: UI でのデータフローの削除
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 19%
+source-wordcount: '367'
+ht-degree: 18%
 
 ---
 
 # UI でのデータフローの削除
 
-この [!UICONTROL ソース] workspace では、エラーを含む、または古くなった既存のバッチおよびストリーミングのデータフローを削除できます。
+[!UICONTROL  ソース ] ワークスペースを使用すると、エラーが含まれていたり古くなったりした既存のバッチおよびストリーミングデータフローを削除できます。
 
-このチュートリアルでは、 [!UICONTROL ソース] ワークスペース。
+このチュートリアルでは、[!UICONTROL  ソース ] ワークスペースを使用してデータフローを削除する手順を説明します。
 
 ## はじめに
 
@@ -27,38 +27,38 @@ ht-degree: 19%
 
 ## データフローの削除
 
-内 [Experience PlatformUI](https://platform.adobe.com)を選択します。 **[!UICONTROL ソース]** 左側のナビゲーションから [!UICONTROL ソース] ワークスペースを選択し、 **[!UICONTROL データフロー]** を上部のヘッダーから削除します。
+[Experience PlatformUI](https://platform.adobe.com) で、左側のナビゲーションから **[!UICONTROL Sources]** を選択して [!UICONTROL Sources] ワークスペースにアクセスし、上部のヘッダーから **[!UICONTROL Dataflows]** を選択します。
 
 ![カタログ](../../images/tutorials/delete/catalog.png)
 
-この **[!UICONTROL データフロー]** ページが表示されます。 このページには、表示可能なデータフローのリストが表示されます。このリストには、ターゲットデータセット、ソース、アカウント名、作成日に関する情報が含まれます。
+**[!UICONTROL データフロー]** ページが表示されます。 このページには、ターゲットデータセット、ソース、アカウント名、作成日に関する情報を含め、表示可能なデータフローがリストされます。
 
-フィルターアイコン (![filter-icon](../../images/tutorials/delete/filter.png)) をクリックして、並べ替えパネルを起動します。
+左上のフィルターアイコン（![filter-icon](../../images/tutorials/delete/filter.png)）を選択して、並べ替えパネルを開きます。
 
-![データフロー](../../images/tutorials/delete/dataflows.png)
+![ データフロー ](../../images/tutorials/delete/dataflows.png)
 
-並べ替えパネルには、すべてのソースのリストが表示されます。 リストから複数のソースを選択して、選択した特定のソースに関連付けられた、フィルタリングされた選択のデータフローにアクセスできます。
+並べ替えパネルには、すべてのソースのリストが表示されます。 リストから複数のソースを選択して、選択した特定のソースに関連付けられたフィルター適用済みのデータフローの選択にアクセスできます。
 
-既存のデータフローのリストを表示するソースを選択します。 削除するデータフローを特定したら、省略記号 (`...`) をクリックします。
+操作するソースを選択して、既存のデータフローのリストを表示します。 削除するデータフローを特定したら、データフロー名の横にある省略記号（`...`）を選択します。
 
 ![dataflows-filter](../../images/tutorials/delete/dataflows-filter.png)
 
-ドロップダウンメニューが表示され、データフローのスケジュールを編集したり、データフローを無効にしたり、完全に削除したりするオプションが提供されます。
+ドロップダウンメニューが表示され、データフローのスケジュールを編集、データフローを無効にする、または完全に削除するためのオプションが提供されます。
 
-選択 **[!UICONTROL 削除]** をクリックして、データフローを削除します。
+データフローを削除する場合は、「**[!UICONTROL 削除]**」を選択します。
 
 ![削除](../../images/tutorials/delete/delete.png)
 
-最終確認ダイアログボックスが表示されます。 選択 **[!UICONTROL 削除]** をクリックしてプロセスを完了します。
+最終確認ダイアログボックスが表示されます。 「**[!UICONTROL 削除]**」を選択してプロセスを完了します。
 
-![confirm](../../images/tutorials/delete/confirm.png)
+![ 確認 ](../../images/tutorials/delete/confirm.png)
 
-しばらくすると、削除が成功したことを確認する確認ボックスが画面の下部に表示されます。
+しばらくすると、画面の下部に確認ボックスが表示され、削除が成功したことを確認します。
 
-![確認済み](../../images/tutorials/delete/confirmed.png)
+![ 確認 ](../../images/tutorials/delete/confirmed.png)
 
 ## 次の手順
 
-このチュートリアルでは、 [!UICONTROL ソース] ワークスペースを使用して、既存のデータフローを削除します。
+このチュートリアルでは、[!UICONTROL Sources] ワークスペースを使用して既存のデータフローを正常に削除しました。
 
-に関するチュートリアルを参照してください。 [フローサービス API を使用したデータフローの削除](../../tutorials/api/delete-dataflows.md) を参照してください。
+API 呼び出しを使用してプログラムでこれらの操作を実行する手順については、[Flow Service API を使用したデータフローの削除 ](../../tutorials/api/delete-dataflows.md) に関するチュートリアルを参照してください。

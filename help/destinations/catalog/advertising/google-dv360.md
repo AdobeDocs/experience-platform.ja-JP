@@ -13,30 +13,30 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 >
-> Googleは、に対する変更をリリースしています [Google広告 API](https://developers.google.com/google-ads/api/docs/start), [カスタマーマッチ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、および [ディスプレイおよびビデオ 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) に基づいて定義されるコンプライアンスおよび同意関連の要件をサポートするため [デジタル市場法](https://digital-markets-act.ec.europa.eu/index_en) （DMA）の適用（[EU ユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)）に設定します。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
+> Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA](https://digital-markets-act.ec.europa.eu/index_en)）（[EU ユーザー同意ポリシー ](https://www.google.com/about/company/user-consent-policy/)）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、[Google Ads API](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、[Customer Match および [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
 ><br/>
 >EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーとして、Adobeは、欧州連合の DMA に基づくこれらの同意要件に準拠するために必要なツールを提供します。
 ><br/>
->Adobeのプライバシーとセキュリティシールドを購入し、 [同意ポリシー](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 同意されていないプロファイルを除外するには、何もする必要はありません。
+>Adobeのプライバシーとセキュリティシールドを購入し、同意のないプロファイルを除外する [ 同意ポリシー ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定しているお客様は、何もする必要はありません。
 ><br/>
->Adobeプライバシーおよびセキュリティシールドを購入していないお客様は、を使用する必要があります [セグメント定義](../../../segmentation/home.md#segment-definitions) 内の機能 [セグメントビルダー](../../../segmentation/ui/segment-builder.md) 中断することなく既存のReal-Time CDP Google宛先を引き続き使用するために、同意されていないプロファイルを除外します。
+>Adobeのプライバシーとセキュリティシールドを購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断なく使用するには、[ セグメントビルダー ](../../../segmentation/home.md#segment-definitions) 内の [ セグメント定義 ](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
 
-[!DNL Display & Video 360]（旧称：） [!DNL DoubleClick Bid Manager]は、ディスプレイ、ビデオ、モバイルの各インベントリソースをまたいでリターゲティングやオーディエンスターゲティングしたデジタルキャンペーンを実行するために使用されるツールです。
+[!DNL Display & Video 360] （以前の [!DNL DoubleClick Bid Manager]）は、ディスプレイ、ビデオ、モバイルの各インベントリソースをまたいでリターゲティングやオーディエンスをターゲットにしたデジタルキャンペーンを実行するために使用されるツールです。
 
 ## 宛先の詳細 {#specifics}
 
 [!DNL Google Display & Video 360] の宛先に固有な次の詳細に注意ください。
 
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラムを使用して作成されます。
-* へのオーディエンスバックフィルのアクティブ化 [!DNL Google Display & Video 360] 宛先は、オーディエンスが最初に宛先接続にマッピングされてから 24～48 時間後に発生するようにスケジュールされています。 この更新は、データの取り込みまで 24 時間待機するというGoogleのポリシーに対応するものであり、Real-Time CDPとの間の一致率を向上させることを目的としています [!DNL Google Display & Video 360]. これは、この宛先にのみ適用されるバックエンド設定で、UI でお客様が設定可能なスケジュールオプションとは無関係です。
+* [!DNL Google Display & Video 360] の宛先へのオーディエンスバックフィルのアクティベーションは、オーディエンスが最初に宛先接続にマッピングされてから 24～48 時間後に行われるようにスケジュールされています。 この更新は、データの取り込みまで 24 時間待機するというGoogleのポリシーに対応するものであり、Real-Time CDPと [!DNL Google Display & Video 360] の間の一致率を向上させることを目的としています。 これは、この宛先にのみ適用されるバックエンド設定で、UI でお客様が設定可能なスケジュールオプションとは無関係です。
 
 >[!IMPORTANT]
 >
->Google ディスプレイ&amp;ビデオ 360 で最初の宛先を作成しようとしており、を有効にしていない場合は、 [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) 過去のExperience CloudID サービス（Adobe Audience Managerなどのアプリケーションを使用）では、Adobe Consultingまたはカスタマーケアに連絡して、ID 同期を有効にしてもらいます。 以前に Audience Manager で Google 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>Google ディスプレイ&amp;ビデオ 360 を使用して最初の宛先を作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）Experience CloudID サービスで [ID 同期機能 ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前に Audience Manager で Google 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Google Display & Video 360] では、以下の表に示す ID に基づいたオーディエンスのアクティベーションがサポートされています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL Google Display & Video 360] では、以下の表に示す ID に基づいたオーディエンスのアクティベーションをサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ID | 説明 | 注意点 |
 |---|---|---|
@@ -54,7 +54,7 @@ ht-degree: 55%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -74,10 +74,10 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Platform で最初の [!DNL Google Display & Video 360] の宛先を設定する前に、許可リストへの登録は必須です。が、以下に説明する許可リストへの登録プロセスを完了していることを確認します。 [!DNL Google] 宛先を作成する前に以下を行います。
+>Platform で最初の [!DNL Google Display & Video 360] の宛先を設定する前に、許可リストへの登録は必須です。宛先を作成する前に、[!DNL Google] が以下に説明する許可リストへの登録プロセスを完了していることを確認してください。
 >このルールの例外は、[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) 顧客の場合です。この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
 
-を作成する前に [!DNL Google Display & Video 360] platform の宛先ユーザーは、Googleに連絡して、許可されたデータプロバイダーのリストに含めるAdobeと、アカウントを許可リストに追加する権限を依頼する必要があります。 Google に連絡し、次の情報を提供します。
+Platform で [!DNL Google Display & Video 360] の宛先を作成する前に、Googleに連絡して、許可されたデータプロバイダーのリストに追加するAdobeと、お使いのアカウントを許可リストに追加する許可を求める必要があります。 Google に連絡し、次の情報を提供します。
 
 * **アカウント ID**：アドビの Google アカウント ID です。アカウント ID：87933855。
 * **顧客 ID**：アドビの Google 顧客アカウント ID です。顧客 ID：89690775。
@@ -87,7 +87,7 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -104,7 +104,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->の設定時 [!DNL Google Display & Video 360] 宛先、との連携 [!DNL Google Account Manager] またはAdobe担当者：お持ちのアカウントの種類を把握します。
+>[!DNL Google Display & Video 360] の宛先を設定する際は、[!DNL Google Account Manager] またはAdobeの担当者にお問い合わせの上、お持ちのアカウントの種類をご確認ください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -116,7 +116,7 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -132,4 +132,4 @@ ht-degree: 55%
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-このエラーは、カスタマーアカウントが準拠していない場合に発生します [前提条件](#prerequisites). この問題を修正するには、Googleに連絡して、自分のアカウントが許可リストに登録されていることを確認してください。
+このエラーは、顧客アカウントが [ 前提条件 ](#prerequisites) に準拠していない場合に発生します。 この問題を修正するには、Googleに連絡して、自分のアカウントが許可リストに登録されていることを確認してください。

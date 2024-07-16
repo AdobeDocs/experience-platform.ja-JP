@@ -1,20 +1,20 @@
 ---
-title: フローサービス API を使用したAmazon Kinesisソース接続の作成
-description: フローサービス API を使用してAdobe Experience PlatformをAmazon Kinesisソースに接続する方法を説明します。
+title: Flow Service API を使用したAmazon Kinesis Source接続の作成
+description: Flow Service API を使用してAdobe Experience PlatformをAmazon Kinesis ソースに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 66%
+source-wordcount: '726'
+ht-degree: 59%
 
 ---
 
-# の作成 [!DNL Amazon Kinesis] フローサービス API を使用したソース接続
+# Flow Service API を使用した [!DNL Amazon Kinesis] ソース接続の作成
 
 >[!IMPORTANT]
 >
->The [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Amazon Kinesis] ソースを利用できます。
 
 このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Amazon Kinesis]（以下「[!DNL Kinesis]」）を Experience Platform に接続する手順を詳しく説明します。
 
@@ -22,23 +22,23 @@ ht-degree: 66%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md)[!DNL Platform]：Experience を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)[!DNL Platform]：Experience には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md):Experience Platformには、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 以下の節では、[!DNL Flow Service] API を使用して [!DNL Kinesis] を Platform に正しく接続するために必要な追加情報を示します。
 
 ### 必要な資格情報の収集
 
-次の条件を満たすため [!DNL Flow Service] を [!DNL Amazon Kinesis] アカウントの場合、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を [!DNL Amazon Kinesis] アカウントに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | アクセスキー ID は、 [!DNL Kinesis] アカウントを Platform に送信します。 |
-| `secretKey` | 秘密アクセスキーは、ユーザーの認証に使用するアクセスキーペアの残りの半分です。 [!DNL Kinesis] アカウントを Platform に送信します。 |
-| `region` | の地域 [!DNL Kinesis] アカウント。 次のガイドを参照してください： [許可リストへの IP アドレスの追加](../../../../ip-address-allow-list.md) 地域の詳細については、を参照してください。 |
+| `accessKeyId` | アクセスキー ID は、[!DNL Kinesis] アカウントを Platform に認証するために使用されるアクセスキーのペアの一方です。 |
+| `secretKey` | 秘密アクセスキーは、[!DNL Kinesis] アカウントを Platform に認証するために使用されるアクセスキーのペアの残りの半分です。 |
+| `region` | [!DNL Kinesis] アカウントの地域。 地域について詳しくは、[許可リストへの IP アドレスの追加 ](../../../../ip-address-allow-list.md) に関するガイドを参照してください。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Kinesis] 接続仕様 ID は `86043421-563b-46ec-8e6c-e23184711bf6` です。 |
 
-詳しくは、 [!DNL Kinesis] アクセスキーとその生成方法については、こちらを参照してください。 [[!DNL AWS] IAM ユーザーのアクセスキーの管理に関するガイド](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html).
+アクセスキーとその生成方法について詳 [!DNL Kinesis] くは、この [[!DNL AWS] IAM ユーザーのアクセスキーの管理に関するガイド ](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html) を参照してください。
 
 ### Platform API の使用
 
@@ -87,9 +87,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | のアクセスキー ID [!DNL Kinesis] アカウント。 |
-| `auth.params.secretKey` | の秘密アクセスキー [!DNL Kinesis] アカウント。 |
-| `auth.params.region` | の地域 [!DNL Kinesis] アカウント。 |
+| `auth.params.accessKeyId` | [!DNL Kinesis] アカウントのアクセスキー ID。 |
+| `auth.params.secretKey` | [!DNL Kinesis] アカウントの秘密アクセスキー。 |
+| `auth.params.region` | [!DNL Kinesis] アカウントの地域。 |
 | `connectionSpec.id` | [!DNL Kinesis] 接続仕様 ID：`86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **応答**
@@ -153,7 +153,7 @@ curl -X POST \
 | `data.format` | 取り込む [!DNL Kinesis] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
 | `params.stream` | レコードを取り込むデータストリームの名前。 |
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。`raw` および `xdm` を含むデータタイプがサポートされています。 |
-| `params.reset` | このパラメーターは、データの読み取り方法を定義します。 用途 `latest` 最新のデータから読み込みを開始するには、 `earliest` をクリックして、ストリーム内の最初の使用可能なデータから読み取りを開始します。 |
+| `params.reset` | このパラメーターは、データの読み取り方法を定義します。 `latest` を使用すると、最新のデータから読み取りを開始でき、`earliest` を使用すると、ストリーム内の最初の使用可能なデータから読み取りを開始できます。 |
 
 **応答**
 

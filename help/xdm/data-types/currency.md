@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；デバイス；データ型；データ型；データ型；通貨；
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；デバイス；データタイプ；データタイプ；データタイプ；通貨；
 solution: Experience Platform
 title: 通貨データタイプ
 description: 通貨 XDM データタイプについて説明します。
@@ -11,21 +11,21 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL 通貨] データタイプ
+# [!UICONTROL  通貨 ] データタイプ
 
-[!UICONTROL 通貨] は、通貨タイプや換算日などの金額を表す標準的な XDM データ型です。
+[!UICONTROL  通貨 ] は、通貨タイプや変換日を含む通貨量を記述する標準の XDM データタイプです。
 
 ![](../images/data-types/currency.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `amount` | Double | 通貨の金額。 `currencyCode`. |
-| `conversionDate` | 日時 | 通貨換算が行われた時点を示すタイムスタンプ。 |
-| `currencyCode` | 文字列 | 通貨のタイプを示す ISO 4217 コード `amount` は、を表します。 |
+| `amount` | Double | `currencyCode` で定義された通貨の金額。 |
+| `conversionDate` | 日時 | 通貨換算が行われた際のタイムスタンプ。 |
+| `currencyCode` | 文字列 | `amount` が表す通貨のタイプを示す ISO 4217 コード。 |
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
+フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.example.1.json)
-* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.schema.json)
+* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.example.1.json)
+* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.schema.json)

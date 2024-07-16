@@ -303,7 +303,7 @@ SELECT count(1) FROM myTableName
 
 また、[UI でのスケジュール済みクエリの実行](./ui/user-guide.md#scheduled-queries)と [API](./api/scheduled-queries.md) を使用したスケジュール済みクエリの実行の方法については、ドキュメントを参照してください。
 
-を使用する場合は、次の点に注意してください [!DNL Query Editor] 既に作成および保存されているクエリにのみスケジュールを追加できます。 これは、[!DNL Query Service] API には適用されません。
+[!DNL Query Editor] を使用する場合、既に作成および保存されたクエリにのみスケジュールを追加できます。 これは、[!DNL Query Service] API には適用されません。
 +++
 
 ### 「セッション制限に達しました」エラーはどういう意味ですか？
@@ -587,18 +587,20 @@ WHERE T2.ID IS NULL
 
 ### ライセンス使用状況ダッシュボードに表示されている使用状況データが、Data Distillerのコンピューティング時間に対して更新される頻度はどれくらいですか？
 
-+++回答 Data Distillerのコンピューター時間のライセンス使用状況ダッシュボードは、6 時間ごとに 1 日 4 回更新されます。
++++回答
+Data Distillerのコンピューター時間のライセンス使用状況ダッシュボードは、6 時間ごとに 1 日 4 回更新されます。
 +++
 
 ### データDistillerへのアクセス権を持たずに CREATE VIEW コマンドを使用できますか？
 
-+++回答はい、次を使用できます `CREATE VIEW` データDistillerへのアクセス権を持たないコマンド。 このコマンドは、データの論理ビューを提供しますが、データレイクには書き戻しません。
++++回答
+はい、データDistillerへのアクセス権 `CREATE VIEW` 持たずにコマンドを使用できます。 このコマンドは、データの論理ビューを提供しますが、データレイクには書き戻しません。
 +++
 
 ### DbVisualizer で匿名ブロックを使用できますか？
 
 +++回答
-はい。 ただし、DbVisualizer などの特定のサードパーティクライアントでは、SQL ブロックの前後に別の識別子が必要になる場合があり、スクリプトの一部を 1 つのステートメントとして処理する必要があることを示します。 詳しくは、 [匿名ブロックドキュメント](./key-concepts/anonymous-block.md) または [dbVisualizer の公式ドキュメント](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
+はい。 ただし、DbVisualizer などの特定のサードパーティクライアントでは、SQL ブロックの前後に別の識別子が必要になる場合があり、スクリプトの一部を 1 つのステートメントとして処理する必要があることを示します。 詳しくは、[ 匿名ブロックのドキュメント ](./key-concepts/anonymous-block.md) または [ 公式の DbVisualizer ドキュメント ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) を参照してください。
 +++
 
 ## データの書き出し {#exporting-data}

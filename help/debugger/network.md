@@ -1,7 +1,7 @@
 ---
 title: 「ネットワーク」タブ
-description: Adobe Experience Platform Debugger の「ネットワーク」タブの使用方法について説明します。
-keywords: debugger;experience Platform Debugger 拡張機能；chrome；拡張機能；ネットワーク；情報
+description: Adobe Experience Platform Debuggerの「ネットワーク」タブの使用方法を説明します。
+keywords: デバッガー；Experience Platform Debugger 拡張機能；Chrome；拡張機能；ネットワーク；情報
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
@@ -15,7 +15,7 @@ ht-degree: 59%
 
 # 「ネットワーク」タブ
 
-この **ネットワーク** 「 」タブは、ページでおこなわれたすべてのAdobe Experience Cloudソリューション呼び出しを集計し、左から右の順に表示します。 標準パラメーターは、わかりやすい名前で自動的にラベル付けされ、同じ役割の共通パラメーターにグループ化されて配置されます。
+「**ネットワーク**」タブは、ページ上で行われたすべてのAdobe Experience Cloud ソリューション呼び出しを集計し、左から右の順序で表示します。 標準パラメーターは、わかりやすい名前で自動的にラベル付けされ、同じ役割の共通パラメーターにグループ化されて配置されます。
 
 ![](images/network.jpg)
 
@@ -29,9 +29,9 @@ ht-degree: 59%
 
 ![](images/network-analytics.jpg)
 
-すべてのソリューションの表示に戻るには、「 」を選択します。 **[!UICONTROL ネットワーク]**
+すべてのソリューションの表示に戻るには、「**[!UICONTROL ネットワーク]**」を選択します
 
-ネットワーク表示の項目を選択すると、展開された表示が表示されます。 展開された表示ウィンドウから、表示された情報をクリップボードにコピーできます。
+ネットワーク・ビューでアイテムを選択すると、展開されたビューが表示されます。 展開された表示ウィンドウから、表示された情報をクリップボードにコピーできます。
 
 ![](images/network-expand.jpg)
 
@@ -39,6 +39,6 @@ ht-degree: 59%
 
 ![](images/copy.jpg)-->
 
-リストを消去するには、 **[!UICONTROL イベントを削除]**.
+リストをクリアするには、「**[!UICONTROL イベントを削除]**」を選択します。
 
-この画面に関する情報を含む Excel ファイルをダウンロードするには、「 **[!UICONTROL ダウンロード]**.
+この画面に表示される情報を含む Excel ファイルをダウンロードするには、「**[!UICONTROL ダウンロード]**」を選択します。

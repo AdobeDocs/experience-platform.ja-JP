@@ -4,8 +4,8 @@ title: サンプルプロファイルを使用したストリーミング宛先�
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 97%
+source-wordcount: '607'
+ht-degree: 99%
 
 ---
 

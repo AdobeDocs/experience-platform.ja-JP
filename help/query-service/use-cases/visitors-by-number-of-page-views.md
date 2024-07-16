@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；experienceevent クエリ；experienceevent クエリ；ExperienceEvent クエリ；
-title: 訪問者をページビュー数別にリスト表示
-description: エクスペリエンスイベントを使用して、ページビュー数別に整理された訪問者のリストを取得するクエリを記述する方法について説明します。
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；Query Service;Experienceevent クエリ；Experienceevent クエリ；Experience Event クエリ；
+title: ページビュー数別の訪問者のリスト
+description: エクスペリエンスイベントを使用してクエリを記述し、ページビュー数で整理された訪問者のリストを取得する方法について説明します。
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
 
-# 訪問者をページビュー数別にリスト表示
+# ページビュー数別の訪問者のリスト
 
-このドキュメントでは、ページビュー数別に整理された訪問者のリストを取得するために必要な SQL の例を示します。 Adobe Experience Platformクエリサービスを使用すると、 [!DNL Experience Events] を使用して、様々なユースケースを取り込むことができます。 エクスペリエンスイベントは、エクスペリエンスデータモデル (XDM)ExperienceEvent クラスで表されます。ユーザーが Web サイトまたはサービスを操作したときに、不変で集計されないシステムのスナップショットを取り込みます。 エクスペリエンスイベントは、時間ドメイン分析にも使用できます。 詳しくは、 [次の手順の節](#next-steps) を含むその他の使用例 [!DNL Experience Events] 訪問者レポートを生成するために使用します。
+このドキュメントでは、ページビュー数で整理された訪問者のリストを取得するために必要な SQL の例を示します。 Adobe Experience Platform クエリサービスを使用すると、[!DNL Experience Events] を使用してさまざまなユースケースをキャプチャするクエリを作成できます。 エクスペリエンスイベントは、エクスペリエンスデータモデル（XDM） ExperienceEvent クラスで表されます。このクラスは、ユーザーが web サイトまたはサービスとやり取りする際に、システムの不変スナップショットと非集計スナップショットをキャプチャします。 エクスペリエンスイベントは、タイムドメイン分析にも使用できます。 訪問者レポートの生成に関するユースケースについて [!DNL Experience Events]、[ 次の手順の節 ](#next-steps) を参照してください。
 
-XDM と [!DNL Experience Events] は [[!DNL XDM System] 概要](../../xdm/home.md). クエリサービスと [!DNL Experience Events]を使用すると、ユーザー間の行動傾向を効果的に追跡できます。 次のドキュメントは、 [!DNL Experience Events].
+XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 ](../../xdm/home.md) を参照してください。 クエリサービスと [!DNL Experience Events] を組み合わせることで、ユーザー間の行動のトレンドを効果的に追跡できます。 次のドキュメントでは、[!DNL Experience Events] を含むクエリの例を示します。
 
 ## 目的
 
-次の例では、最も多くのページを閲覧したユーザーの 10 個の ID をリストするレポートを作成します。
+次の例では、最も多くページを表示したユーザーの 10 個の ID をリストするレポートを作成します。
 
 ```sql
 SELECT 
@@ -30,7 +30,7 @@ ORDER BY pageViews DESC
 LIMIT 10;
 ```
 
-クエリ結果は、次の表に表示されます。
+クエリ結果が次のテーブルに表示されます。
 
 ```console
                id                  | pageViews
@@ -50,10 +50,10 @@ LIMIT 10;
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、 [!DNL Experience Events] をクリックすると、最も多くのページを閲覧したユーザーが一覧表示されます。
+このドキュメントでは、[!DNL Experience Events] でクエリサービスを使用して、最も多くのページを表示したユーザーをリストする方法をより深く理解しました。
 
 その他の訪問者ベースの使用例については、次の使用例を参照してください。
 
-- [訪問者の以前のセッションのリストを表示します。](./list-visitor-sessions.md)
+- [訪問者の以前のセッションをリストします。](./list-visitor-sessions.md)
 - [訪問者のロールアップレポートを表示します。](./roll-up-report-of-a-visitor.md)
-- [イベントのトレンドレポートを日別に作成します。](./trended-report-of-events.md)
+- [日別のイベントのトレンドレポートを作成します。](./trended-report-of-events.md)

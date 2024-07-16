@@ -1,45 +1,45 @@
 ---
 title: streamingMedia
 description: Web SDK を設定して、web プロパティでのメディア使用に関連するデータを収集します。
-source-git-commit: c0cb244221215f78f9ef13d8a54a8799ab15df6c
+exl-id: f7733619-d35e-43eb-ac90-052717310c39
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 6%
 
 ---
 
-
 # `streamingMedia`
 
-この `streamingMedia` コンポーネントは、web サイト上のメディアセッションに関連するデータを収集するのに役立ちます。
+`streamingMedia` コンポーネントは、web サイト上のメディアセッションに関連するデータを収集するのに役立ちます。
 
 収集されたデータには、メディアプレイバック、一時停止、完了およびその他の関連イベントに関する情報を含めることができます。 収集したら、このデータをAdobe Experience PlatformやAdobe Analyticsに送信して、レポートを生成できます。 この機能は、web サイトでのメディア消費行動を追跡および把握するための包括的なソリューションを提供します。
 
 ## 前提条件 {#prerequisites}
 
-を使用するには `streamingMedia` web SDK のコンポーネントです。次の前提条件を満たす必要があります。
+Web SDK の `streamingMedia` コンポーネントを使用するには、次の前提条件を満たす必要があります。
 
 * Adobe Experience PlatformやAdobe Analyticsにアクセスできることを確認します。
-* Web SDK バージョン 2.20.0 以降を使用する必要があります。 を参照してください。 [Web SDK インストールの概要](../../install/overview.md) を参照して、最新バージョンのインストール方法を確認してください。
-* を有効にする **[[!UICONTROL Media Analytics]](../../../datastreams/configure.md#advanced-options)** 使用しているデータストリームのオプション。
+* Web SDK バージョン 2.20.0 以降を使用する必要があります。 最新バージョンのインストール方法については、[Web SDK インストールの概要 ](../../install/overview.md) を参照してください。
+* 使用しているデータストリームの「**[[!UICONTROL Media Analytics]](../../../datastreams/configure.md#advanced-options)**」オプションを有効にします。
 * データストリームで使用するスキーマに、メディアコレクションのスキーマフィールドが含まれていることを確認してください。
-* このページで示されているように、次のいずれかを使用して、Web SDK 設定でストリーミングメディア機能を設定します。 [タグ拡張機能](#tag-extension) または [JavaScript ライブラリ](#library).
+* [ タグ拡張機能 ](#tag-extension) または [JavaScript ライブラリ ](#library) を使用して、このページで示すように Web SDK 設定でストリーミングメディア機能を設定します。
 
 ## Web SDK タグ拡張機能を使用したストリーミングメディアの設定 {#tag-extension}
 
 Web SDK タグ拡張機能でストリーミングメディアを設定するには、次の手順に従います。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL 拡張機能]**&#x200B;を選択し、 **[!UICONTROL 設定]** 日 [!UICONTROL Adobe Experience Platform Web SDK] カード。
-1. の設定 **[!UICONTROL ストリーミングメディア]** の説明に従って設定 [Web SDK タグ拡張機能の設定ページ](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection).
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. **[!UICONTROL Web SDK タグ拡張機能設定ページ]** の説明に従って、[ ストリーミングメディア ](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection) 設定を行います。
 
 ## Web SDK JavaScript ライブラリを使用したストリーミングメディアの設定 {#library}
 
 Web SDK でストリーミングメディアを設定するには、以下に説明するプロパティを使用します。
 
-呼び出し時 `configure` コマンド、を追加 `streamingMedia` オブジェクト。
+`configure` コマンドを呼び出す場合は、`streamingMedia` オブジェクトを追加します。
 
 ```js
 alloy("configure", {
@@ -58,5 +58,5 @@ alloy("configure", {
 | `channel` | 文字列 | ○ | ストリーミングメディアコレクションが発生するチャネルの名前。 例：`Video channel`。 |
 | `playerName` | 文字列 | ○ | メディアプレーヤーの名前。 |
 | `appVersion` | 文字列 | × | メディアプレーヤーアプリケーションのバージョン。 |
-| `mainPingInterval` | 整数 | × | メインコンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は次のとおりです `10` 対象： `50` 秒。  値を指定しない場合、を使用するとデフォルト値が使用されます。 [自動的に追跡されたセッション](../createmediasession.md#automatic). |
-| `adPingInterval` | 整数 | × | 広告コンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は次のとおりです `1` 対象： `10` 秒。 値を指定しない場合、を使用するとデフォルト値が使用されます。 [自動的に追跡されたセッション](../createmediasession.md#automatic). |
+| `mainPingInterval` | 整数 | × | メインコンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `10` ～ `50` 秒です。  値を指定しない場合、[ 自動的にトラッキングされるセッション ](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |
+| `adPingInterval` | 整数 | × | 広告コンテンツに対する ping の頻度（秒）。 デフォルト値は `10` です。値の範囲は `1` ～ `10` 秒です。 値を指定しない場合、[ 自動的にトラッキングされるセッション ](../createmediasession.md#automatic) を使用するときにデフォルト値が使用されます。 |

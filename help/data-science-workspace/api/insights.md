@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、インサイト、sensei 機械学習 API
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のトピック；インサイト；sensei machine learning api
 solution: Experience Platform
 title: Insights API エンドポイント
 description: インサイトには、関連する評価指標を表示することにより、データサイエンティストが最適な ML モデルを評価および選択できるようにするための指標が含まれています。
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 ---
 
-# インサイトエンドポイント
+# Insights エンドポイント
 
 インサイトには、関連する評価指標を表示することにより、データサイエンティストが最適な ML モデルを評価および選択できるようにするための指標が含まれています。
 

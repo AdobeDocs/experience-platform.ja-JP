@@ -7,7 +7,7 @@ description: データのデータ使用ラベルを作成し、これらのラ�
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '998'
 ht-degree: 100%
 
 ---

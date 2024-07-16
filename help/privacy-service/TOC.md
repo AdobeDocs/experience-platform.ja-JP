@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Privacy Service ヘルプ
-breadcrumb-title: Privacy Serviceガイド
+breadcrumb-title: Privacy Service ガイド
 user-guide-description: GDPR や CCPA などの法的プライバシー規制に準拠するための、顧客データリクエストを管理します。
 feature: Privacy
 role: User,Admin
 source-git-commit: 306f7fcd09f395895fde241b668c41a2479a8d2d
 workflow-type: tm+mt
 source-wordcount: '92'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 

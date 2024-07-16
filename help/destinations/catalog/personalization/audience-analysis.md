@@ -12,7 +12,7 @@ ht-degree: 38%
 
 # オーディエンス分析の宛先
 
-この [!UICONTROL オーディエンス分析] 宛先を使用すると、Adobe Experience Platform オーディエンスデータをにエンリッチメントできます [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja). 結果のエンリッチメントされたデータに含めるオーディエンスを選択できます。 オーディエンスの選定は、次の場所でディメンションとして使用できます [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) レポート。
+[!UICONTROL Audience Analysis] 宛先を使用すると、Adobe Experience Platform オーディエンスデータを [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja) に強化できます。 結果のエンリッチメントされたデータに含めるオーディエンスを選択できます。 オーディエンスの選定は、[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) レポートでディメンションとして使用できるようになります。
 
 >[!AVAILABILITY]
 >
@@ -34,7 +34,7 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
-| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。次のドキュメントを参照してください： [ECID](/help/identity-service/features/ecid.md) を参照してください。 |
+| ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](/help/identity-service/features/ecid.md) に関する次のドキュメントを参照してください。 |
 | phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 | email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
@@ -47,7 +47,7 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -67,24 +67,24 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 >[!IMPORTANT]
 > 
->宛先を作成するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先を作成するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この宛先を作成するには、 [宛先設定のチュートリアル](../../ui/connect-destination.md).
+この宛先を作成するには、[ 宛先設定のチュートリアル ](../../ui/connect-destination.md) に示されている手順に従います。
 
 ### 宛先の詳細
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-* **[!UICONTROL 名前]**：宛先名。
+* **[!UICONTROL 名前]**：宛先の名前。
 * **[!UICONTROL 説明]**：宛先の説明。
-* **[!UICONTROL データストリーム ID]**：絞り込み可能なオーディエンスでエンリッチメントするデータストリーム ID。 この ID は、 [データストリームマネージャー](/help/datastreams/overview.md).
+* **[!UICONTROL データストリーム ID]**：選定オーディエンスでエンリッチメントするデータストリーム ID。 この ID は、[ データストリームマネージャー ](/help/datastreams/overview.md) で取得できます。
 * **[!UICONTROL 統合エイリアス]**：統合エイリアス。
 
 ### アラート
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-* **[!UICONTROL アクティベーションスキップ率超過]**：アクティブ化のスキップ率がしきい値を超えると通知されます。
+* **[!UICONTROL アクティベーションスキップ率超過]**: アクティベーションスキップ率がしきい値を超えると通知されます。
 
 宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
 
@@ -92,19 +92,19 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 このオプションのセクションを使用すると、データガバナンスポリシーを定義し、オーディエンスが送信されてアクティブな場合に使用するデータが準拠していることを確認できます。
 
-宛先に対する目的のマーケティングアクションの選択が終了したら、次を選択します。 **[!UICONTROL 作成]**.
+宛先に対する目的のマーケティングアクションの選択が終了したら、「**[!UICONTROL 作成]**」を選択します。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 宛先を作成したら、宛先に必要なオーディエンスをアクティブ化できます。
 
-1. 作成した宛先にまだ移動していない場合は、に移動して再度見つけることができます。 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]**.
-1. を選択 **[!UICONTROL オーディエンスをアクティベート]**.
+1. 作成した宛先にまだ移動していない場合は、**[!UICONTROL 宛先]**/**[!UICONTROL 参照]** に移動して、もう一度見つけることができます。
+1. **[!UICONTROL オーディエンスをアクティブ化]** を選択します。
 1. 選定を分析する対象オーディエンスを選択します。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
-1. 宛先設定とオーディエンス設定を確認し、選択します。 **[!UICONTROL 終了]**.
+1. 宛先設定とオーディエンス設定を確認し、「**[!UICONTROL 完了]**」を選択します。
 
-に戻ると、将来にわたって分析するオーディエンスをさらに追加できます。 **[!UICONTROL オーディエンスをアクティベート]** ページ。 オーディエンスは、一度アクティブ化すると削除できません。
+**[!UICONTROL オーディエンスのアクティブ化]** ページに戻ると、今後の分析の対象となるオーディエンスを追加できます。 オーディエンスは、一度アクティブ化すると削除できません。

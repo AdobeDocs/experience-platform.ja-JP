@@ -1,6 +1,6 @@
 ---
-title: LinkedIn コンバージョン API イベント転送拡張機能
-description: このAdobe Experience Platformイベント転送拡張機能を使用すると、Linkedin マーケティングキャンペーンのパフォーマンスを測定できます。
+title: Linkedin Conversions API イベント転送拡張機能
+description: このAdobe Experience Platform イベント転送拡張機能を使用すると、Linkedin マーケティングキャンペーンのパフォーマンスを測定できます。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
 source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
@@ -12,80 +12,80 @@ ht-degree: 3%
 
 # [!DNL LinkedIn] Conversions API 拡張機能
 
-[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) は、広告主のサーバーから、 [!DNL LinkedIn]. これにより、広告主は、 [!DNL LinkedIn] コンバージョンの場所に関係なく、マーケティングキャンペーンを作成し、この情報を利用してキャンペーンの最適化を推進します。 The [!DNL LinkedIn Conversions API] 拡張機能は、より完全な属性を提供し、データの信頼性を向上し、配信を最適化して、パフォーマンスを強化し、アクションあたりのコストを削減するのに役立ちます。
+[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) は、広告主のサーバーと [!DNL LinkedIn] からのマーケティングデータの間に直接接続を作成するコンバージョントラッキングツールです。 これにより、広告主は、コンバージョンの場所に関係なく、[!DNL LinkedIn] ールマーケティングキャンペーンの有効性を評価し、その情報を利用してキャンペーンの最適化を推進できます。 [!DNL LinkedIn Conversions API] 拡張機能は、より完全なアトリビューション、データ信頼性の向上、最適化された配信により、パフォーマンスを強化し、アクションあたりのコストを削減するのに役立ちます。
 
 ## 前提条件 {#prerequisites}
 
-次の条件を満たす必要があります。 [コンバージョンルールの作成](https://www.linkedin.com/help/lms/answer/a1657171) の [!DNL LinkedIn Campaign Manager] アカウント。 [!DNL Adobe] では、会話ルール名の先頭に「CAPI」を含めて、設定した他のコンバージョンルールタイプと切り離すことをお勧めします。
+[!DNL LinkedIn Campaign Manager] アカウントで [ コンバージョンルールを作成 ](https://www.linkedin.com/help/lms/answer/a1657171) する必要があります。 [!DNL Adobe] では、設定した他のコンバージョンルールタイプとは別に設定するために、会話ルール名の先頭に「CAPI」を含めることをお勧めします。
 
-### シークレットとデータ要素の作成
+### 秘密鍵およびデータ要素の作成
 
-新規作成 [!DNL LinkedIn] [イベント転送秘密鍵](../../../ui/event-forwarding/secrets.md) 認証するメンバーを示す一意の名前を付けます。 これは、値のセキュリティを維持しながら、アカウントへの接続を認証するために使用されます。
+新しい [!DNL LinkedIn][ イベント転送の秘密鍵 ](../../../ui/event-forwarding/secrets.md) を作成し、認証メンバーを示す一意の名前を指定します。 これは、値を保護しながら、アカウントへの接続を認証するために使用されます。
 
-次に、 [データ要素の作成](../../../ui/managing-resources/data-elements.md#create-a-data-element) の使用 [!UICONTROL コア] 拡張機能と [!UICONTROL 秘密鍵] を参照するデータ要素タイプ `LinkedIn` 作成した秘密鍵。
+次に、[Core] 拡張機能と [!UICONTROL Secret] データ要素タイプを使用して ](../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成 [!UICONTROL  し、作成した `LinkedIn` シークレットを参照します。
 
-## のインストールと設定 [!DNL LinkedIn] 拡張 {#install}
+## [!DNL LinkedIn] 拡張機能のインストールと設定 {#install}
 
-拡張機能をインストールするには、以下を実行します。 [イベント転送プロパティの作成](../../../ui/event-forwarding/overview.md#properties) または、編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[ イベント転送プロパティを作成 ](../../../ui/event-forwarding/overview.md#properties) するか、編集する既存のプロパティを選択します。
 
-左側のナビゲーションの「**[!UICONTROL 拡張機能]**」をクリックします。Adobe Analytics の **[!UICONTROL カタログ]** タブで、 **[!UICONTROL LinkedIn]** 拡張機能を選択し、「 **[!UICONTROL インストール]**.
+左側のナビゲーションの「**[!UICONTROL 拡張機能]**」をクリックします。「**[!UICONTROL カタログ]**」タブで、**[!UICONTROL LinkedIn]** 拡張機能を選択してから「**[!UICONTROL インストール]**」を選択します。
 
-![次を表示する拡張機能カタログ： [!DNL LinkedIn] 拡張機能カードのハイライト表示のインストール。](../../../images/extensions/server/linkedin/install-extension.png)
+![ インストールを強調表示した [!DNL LinkedIn] 拡張機能カードを示す拡張機能カタログ ](../../../images/extensions/server/linkedin/install-extension.png)
 
-次の画面で、前の手順で作成したデータ要素秘密鍵を `Access Token` フィールドに入力します。 データ要素の秘密鍵には、 [!DNL LinkedIn] OAuth 2 トークン。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
+次の画面で、前に作成したデータ要素の秘密鍵を「`Access Token`」フィールドに入力します。 データ要素の秘密鍵には、[!DNL LinkedIn] の OAuth 2 トークンが含まれます。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
-![The [!DNL LinkedIn] を含む拡張機能の設定ページ [!UICONTROL アクセストークン] フィールドと [!UICONTROL 保存] ハイライト表示されました。](../../../images/extensions/server/linkedin/configure-extension.png)
+![ 「[!UICONTROL  アクセストークン ] フィールドと「[!UICONTROL  保存 ] がハイライト表示された [!DNL LinkedIn] 拡張機能の設定ページ ](../../../images/extensions/server/linkedin/configure-extension.png)
 
-## の作成 [!DNL Send Conversion] ルール {#tracking-rule}
+## [!DNL Send Conversion] ルールの作成 {#tracking-rule}
 
-すべてのデータ要素を設定したら、イベントの送信先と送信方法を決定するイベント転送ルールの作成を開始できます。 [!DNL LinkedIn].
+すべてのデータ要素を設定したら、イベントを [!DNL LinkedIn] に送信するタイミングと方法を決定するイベント転送ルールの作成を開始できます。
 
-新しいイベント転送の作成 [ルール](../../../ui/managing-resources/rules.md) を設定します。 の下 **[!UICONTROL アクション]**、新しいアクションを追加し、拡張機能をに設定します。 **[!UICONTROL LinkedIn]**. 次に、「 **[!UICONTROL 変換を送信]** （の） **[!UICONTROL アクションタイプ]**.
+イベント転送プロパティに新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 「**[!UICONTROL アクション]**」で、新しいアクションを追加し、拡張機能を「**[!UICONTROL LinkedIn]**」に設定します。 次に、「アクションタイプ **[!UICONTROL で「**[!UICONTROL  コンバージョンを送信 ]**」を選択]** ます。
 
-![[Event Forwarding Property Rules] ビューで、イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されています。](../../../images/extensions/server/linkedin/linkedin-event-action.png)
+![ イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されたイベント転送プロパティルール ビュー。](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
-選択後、イベントをさらに設定するための追加のコントロールが表示されます。 選択 **[!UICONTROL 変更を保持]** 」と入力してルールを保存します。
+選択後、追加のコントロールが表示され、イベントをさらに設定できます。 「**[!UICONTROL 変更を保持]**」を選択して、ルールを保存します。
 
 **[!UICONTROL ユーザーデータ]**
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL メール] | コンバージョンイベントに関連付けられた連絡先の電子メールアドレス。 電子メール値は、指定された値が既に SHA256 文字列でない限り、SHA256 の拡張コードによってエンコードされます。 |
-| [!UICONTROL LinkedInファーストパーティ広告トラッキング UUID] | これはファーストパーティ Cookie ID です。 広告主は、次の拡張コンバージョントラッキングを有効にする必要があります： [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) クリック ID パラメーターを追加したファーストパーティ cookie をアクティブ化するために `li_fat_id` をクリックして、「URL」をクリックします。 |
-| [!UICONTROL 顧客情報データ] | このフィールドには、メッセージと共に送信される追加の属性を含む JSON オブジェクトが含まれています。<br><br>の下 **[!UICONTROL 生データ]** 」オプションを使用する場合は、指定したテキストフィールドに JSON オブジェクトを直接貼り付けるか、データ要素アイコン (![データセットアイコン](../../../images/extensions/server/aws/data-element-icon.png)) をクリックして、データを表す既存のデータ要素のリストから選択します。<br><br>また、 **[!UICONTROL JSON キーと値のペアエディター]** UI エディターを使用して各キーと値のペアを手動で追加するオプションが追加されました。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 使用できるキー値は次のとおりです。 `firstName`, `lastName`, `companyName`, `title` および `country`. |
+| [!UICONTROL メール] | コンバージョンイベントに関連付けられた連絡先のメールアドレス。 指定した値が既に SHA256 文字列でない限り、メール値は SHA256 の拡張機能コードでエンコードされます。 |
+| [!UICONTROL LinkedInのファーストパーティ広告トラッキング UUID] | これはファーストパーティ cookie ID です。 クリック URL にクリック ID パラメーター `li_fat_id` を付加したファーストパーティ Cookie を有効化するには、広告主は [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) からの拡張コンバージョントラッキングを有効にする必要があります。 |
+| [!UICONTROL  顧客情報データ ] | このフィールドには、メッセージと共に送信される追加の属性を含む JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](../../../images/extensions/server/aws/data-element-icon.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 使用できるキー値は、`firstName`、`lastName`、`companyName`、`title`、`country` です。 |
 
 {style="table-layout:auto"}
 
-![The [!DNL User Data] セクションに、フィールドへのデータ入力例を示します。](../../../images/extensions/server/linkedin/configure-extension-user-data.png)
+![ フィールドへのデータ入力の例を示す [!DNL User Data] の節。](../../../images/extensions/server/linkedin/configure-extension-user-data.png)
 
 **[!UICONTROL コンバージョンデータ]**
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL コンバージョン] | 作成されたコンバージョンルールの ID。 [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). ID を取得する変換ルールを選択し、ブラウザー URL から ID をコピーします ( 例： `/campaignmanager/accounts/508111232/conversions/15588877`) として `/conversions/<id>`. |
-| [!UICONTROL コンバージョン時間] | コンバージョンイベントが発生した各タイムスタンプ（ミリ秒単位）。 <br><br> 注意：ソースが変換タイムスタンプを秒単位で記録している場合、最後に 000 を挿入して、ミリ秒に変換してください。 |
+| [!UICONTROL  コンバージョン ] | [LinkedIn Campaign Manager} で作成されたコンバージョンルール ](https://www.linkedin.com/help/lms/answer/a1657171)ID。 コンバージョンルールを選択して ID を取得し、ブラウザーの URL から ID をコピーします（例：`/campaignmanager/accounts/508111232/conversions/15588877`）。`/conversions/<id>` |
+| [!UICONTROL  コンバージョン時間 ] | コンバージョンイベントが発生した各タイムスタンプ（ミリ秒単位）。 <br><br> メモ：ソースがコンバージョンタイムスタンプを秒単位で記録する場合は、末尾に 000 を挿入してミリ秒に変換してください。 |
 | [!UICONTROL 通貨] | ISO 形式の通貨コード。 |
-| [!UICONTROL 量] | 10 進数文字列での変換の値（例：「100.05」）。 |
-| [!UICONTROL イベント ID] | 各イベントを示す広告主によって生成される一意の ID。 これはオプションのフィールドで、 [重複の除外](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
+| [!UICONTROL  量 ] | 10 進文字列でのコンバージョンの値（例：「100.05」）。 |
+| [!UICONTROL  イベント ID] | 各イベントを示すために広告主によって生成される一意の ID。 これはオプションのフィールドで、[ 重複排除 ](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02) に使用されます。 |
 
 {style="table-layout:auto"}
 
-![The [!DNL Conversion Data] セクションに、フィールド内のサンプルデータが表示されます。](../../../images/extensions/server/linkedin/configure-extension-conversions-data.png)
+![ フィールドにサンプルデータを表示する [!DNL Conversion Data] のセクション。](../../../images/extensions/server/linkedin/configure-extension-conversions-data.png)
 
 **[!UICONTROL 設定の上書き]**
 
 >メモ
 >
->The [!UICONTROL 設定の上書き] フィールドを使用すると、ユーザーは [!DNL LinkedIn] 各ルールのアクセストークン（異なるルールへのアクセス権を持つアクセストークンを各ルールで使用可能） [!DNL LinkedIn] 広告アカウント。
+>[!UICONTROL  設定の上書き ] フィールドを使用すると、ユーザーはルールごとに異なる [!DNL LinkedIn] アクセストークンを設定でき、各ルールで、異なる [!DNL LinkedIn] ad アカウントへのアクセス権を持つアクセストークンを使用できます。
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL アクセストークン] | The [!DNL LinkedIn] アクセストークン。 |
+| [!UICONTROL  アクセストークン ] | [!DNL LinkedIn] アクセストークン。 |
 
-![The [!DNL Configuration Overrides] 「 」セクションに、フィールドに入力されたデータの例を示します。](../../../images/extensions/server/linkedin/configure-extension-configuration-override.png)
+![ フィールドへのデータ入力の例を示す [!DNL Configuration Overrides] の節。](../../../images/extensions/server/linkedin/configure-extension-configuration-override.png)
 
 ## 次の手順
 
-このガイドでは、にデータを送信する方法について説明しました。 [!DNL LinkedIn] の使用 [!DNL LinkedIn Conversions API] イベント転送拡張機能。 でのイベント転送機能の詳細については、 [!DNL Adobe Experience Platform]を読む [イベント転送の概要](../../../ui/event-forwarding/overview.md).
+このガイドでは、[!DNL LinkedIn Conversions API] イベント転送拡張機能を使用して [!DNL LinkedIn] にデータを送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。
 
-Event Debugger およびイベント転送監視ツールを使用したExperience Platformのデバッグ方法について詳しくは、 [Adobe Experience Platform Debuggerの概要](../../../../debugger/home.md) および [イベント転送のアクティビティの監視](../../../ui/event-forwarding/monitoring.md).
+イベント デバッガーとExperience Platform転送モニタリング ツールを使用して実装をデバッグする方法について詳しくは、[Adobe Experience Platform Debuggerの概要 ](../../../../debugger/home.md) および [ イベント転送でのアクティビティの監視 ](../../../ui/event-forwarding/monitoring.md) を参照してください。

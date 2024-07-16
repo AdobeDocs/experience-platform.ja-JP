@@ -1,22 +1,22 @@
 ---
-title: UI でのAmazon Kinesisソース接続の作成
-description: Adobe Experience Platform UI を使用してAmazon Kinesisソース接続を作成する方法を説明します。
+title: UI でのAmazon Kinesis Source接続の作成
+description: Adobe Experience Platform UI を使用してAmazon Kinesis ソース接続を作成する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 44%
+source-wordcount: '468'
+ht-degree: 41%
 
 ---
 
-# の作成 [!DNL Amazon Kinesis] UI のソース接続
+# UI での [!DNL Amazon Kinesis] ソース接続の作成
 
 >[!IMPORTANT]
 >
->The [!DNL Amazon Kinesis] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Amazon Kinesis] ソースを利用できます。
 
-Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Amazon Kinesis] ( 以下「 [!DNL "Kinesis"]) を使用したソースコネクタ [!DNL Platform] ユーザーインターフェイス。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Amazon Kinesis] （以下「[!DNL "Kinesis"]」と呼びます）ソースコネクタを認証する手順について説明します。
 
 ## はじめに
 
@@ -31,42 +31,42 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
 
 ### 必要な資格情報の収集
 
-を認証するために、 [!DNL Kinesis] ソースコネクタの場合、次の接続プロパティの値を指定する必要があります。
+[!DNL Kinesis] ソースコネクタを認証するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | のアクセスキー ID [!DNL Kinesis] アカウント。 |
-| `Secret access key` | の秘密アクセスキー [!DNL Kinesis] アカウント。 |
-| `region` | AWSサーバーの地域です。 |
+| `accessKeyId` | [!DNL Kinesis] アカウントのアクセスキー ID。 |
+| `Secret access key` | [!DNL Kinesis] アカウントの秘密アクセスキー。 |
+| `region` | AWS サーバーの地域。 |
 
-これらの値について詳しくは、 [この [!DNL Kinesis] 文書](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
+これらの値について詳しくは、[ この  [!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html) を参照してください。
 
 ## [!DNL Kinesis] アカウントの接続
 
 必要な資格情報が揃ったら、次の手順に従って、[!DNL Kinesis] アカウントを [!DNL Platform] にリンクします。
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、 **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 **[!UICONTROL クラウドストレージ]** カテゴリ、選択 **[!UICONTROL Amazon Kinesis]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい [!DNL Kinesis] コネクタ。
+**[!UICONTROL クラウドストレージ]** カテゴリで、「**[!UICONTROL Amazon Kinesis]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい [!DNL Kinesis] コネクタを作成します。
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-The **[!UICONTROL Amazon Kinesisに接続]** ダイアログが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Amazon Kinesisに接続]** ダイアログが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新規アカウント
 
-新しい資格情報を使用している場合は、「 」を選択します。 **[!UICONTROL 新しいアカウント]**. 表示される入力フォームで、名前、説明（オプション）および [!DNL Kinesis] 認証情報。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、名前、説明（オプション）、[!DNL Kinesis] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![](../../../../images/tutorials/create/kinesis/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、 [!DNL Kinesis] 接続するアカウントを選択し、 **[!UICONTROL 次へ]** をクリックして続行します。
+既存のアカウントに接続するには、接続する [!DNL Kinesis] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
 ![](../../../../images/tutorials/create/kinesis/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Kinesis] アカウント [!DNL Platform]. 次のチュートリアルに進み、 [データフローを設定して、クラウドストレージからにデータを取り込みます。 [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
+このチュートリアルでは、[!DNL Kinesis] アカウントに接続し [!DNL Platform] す。 次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md) を行いましょう。

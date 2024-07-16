@@ -3,8 +3,8 @@ description: 宛先テスト API を使用して、宛先を公開する前に�
 title: メッセージ変換テンプレートの作成とテスト
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
-source-wordcount: '950'
+workflow-type: tm+mt
+source-wordcount: '948'
 ht-degree: 100%
 
 ---

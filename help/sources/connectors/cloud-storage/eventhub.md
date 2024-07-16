@@ -1,6 +1,6 @@
 ---
-title: Azure Event Hubs ソースコネクタの概要
-description: API またはユーザーインターフェイスを使用して Azure Event Hubs をAdobe Experience Platformに接続する方法を説明します。
+title: Azure Event Hubs Source コネクタの概要
+description: API またはユーザーインターフェイスを使用して Azure Event Hubs をAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
@@ -14,39 +14,39 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
->The [!DNL Azure Event Hubs] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Azure Event Hubs] ソースを利用できます。
 
-Adobe Experience Platformは、AWSなどのクラウドプロバイダーにネイティブの接続を提供します。 [!DNL Google Cloud Platform]、および [!DNL Azure]. これらのシステムのデータを Platform に取り込むことができます。
+Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続を提供します。 これらのシステムから Platform にデータを取り込むことができます。
 
 クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。Platform では、[!DNL Event Hubs] からリアルタイムにデータを取り込むことができます。
 
-## 拡大/縮小 [!DNL Event Hubs]
+## [!DNL Event Hubs] を使用したスケーリング
 
-のスケール係数 [!DNL Event Hubs] 大量のデータに入る、並列性を高める、取り込みプラットフォームの速度を上げる必要がある場合は、インスタンスを増やす必要があります。
+大量のデータを取り込む、並列性を高める、取り込みプラットフォームの速度を上げる必要がある場合は、[!DNL Event Hubs] インスタンスのスケールファクターを上げる必要があります。
 
-### 入力の高いボリュームデータ
+### 大量のデータを取り込む
 
-現在、 [!DNL Event Hubs] Platform へのアカウントは、1 秒あたり 2,000 レコードです。 大量のデータをスケールアップして取り込むには、Adobe担当者にお問い合わせください。
+現在、[!DNL Event Hubs] アカウントから Platform に取り込めるデータの最大量は、1 秒あたり 2,000 レコードです。 大量のデータをスケールアップして取り込むには、Adobe担当者にお問い合わせください。
 
-### の並列性の向上 [!DNL Event Hubs] および Platform
+### [!DNL Event Hubs] と Platform の並列処理を強化
 
-並列処理とは、複数の処理単位で同じタスクを同時に実行し、速度とパフォーマンスを向上させることを指します。 並列性を [!DNL Event Hubs] パーティションを増やす、またはより多くの処理単位を取得することで、並んで [!DNL Event Hubs] アカウント。 詳しくは、 [[!DNL Event Hubs] 拡大・縮小に関する文書](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) を参照してください。
+並列処理とは、複数の処理ユニットで同じタスクを同時に実行することで、処理の高速化と高性能化を図ることを指します。 パーティションを増やすか、[!DNL Event Hubs] アカウントの処理単位を増やすことで、[!DNL Event Hubs] 側の並列処理を増やすことができます。 詳しくは、この [[!DNL Event Hubs]  拡大縮小に関するドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) を参照してください。
 
-Platform 側での取り込み速度を上げるには、Platform で、ソースコネクタで読み込むタスクの数を増やす必要があります [!DNL Event Hubs] パーティション。 次に、 [!DNL Event Hubs] 新しいパーティションに基づいてAdobeタスクをスケールするには、Platform 担当者にお問い合わせください。 現在、この処理は自動化されていません。
+Platform 側で取り込み速度を上げるには、Platform はソースコネクタ内のタスク数を増やして、[!DNL Event Hubs] パーティションから読み取る必要があります。 [!DNL Event Hubs] 側の並列性を高めたら、Adobe担当者に連絡して、新しいパーティションに基づいて Platform タスクを拡張してください。 現在、このプロセスは自動化されていません。
 
-## 仮想ネットワークを使用して接続する [!DNL Event Hubs] Platform へ
+## 仮想ネットワークを使用して [!DNL Event Hubs] と Platform を接続する
 
-仮想ネットワークを設定して接続できます [!DNL Event Hubs] ファイアウォール対策を有効にしている間に、Platform に接続します。 仮想ネットワークを設定するには、次の手順に従います。 [[!DNL Event Hubs] ネットワークルールセットドキュメント](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) およびは、次に示す手順に従います。
+ファイアウォール測定を有効にしながら [!DNL Event Hubs] を Platform に接続するように、仮想ネットワークを設定できます。 仮想ネットワークを設定するには、この [[!DNL Event Hubs]  ネットワークのルールセットのドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照し、次の手順に従います。
 
-* 選択 **所要時間** （REST API パネルから）
-* の認証 [!DNL Azure] 同じブラウザーの資格情報を使用するアカウント
-* を選択します。 [!DNL Event Hubs] Platform に取り込んでから選択する名前空間、リソースグループ、購読 **実行**;
-* 表示される JSON 本文で、次の Platform サブネットをの下に追加します。 `virtualNetworkRules` inside `properties`:
+* REST API パネルから **試す** を選択します。
+* 同じブラウザーの資格情報を使用して [!DNL Azure] アカウントを認証します。
+* Platform に取り込む [!DNL Event Hubs] 名前空間、リソースグループ、サブスクリプションを選択してから、「**実行**」を選択します。
+* 表示される JSON 本文で、`properties` 内の `virtualNetworkRules` の下に次のプラットフォームサブネットを追加します。
 
 
 >[!IMPORTANT]
 >
->を更新する前に、受け取る JSON 本文のバックアップを作成する必要があります `virtualNetworkRules` 既存の IP フィルタリングルールを含むプラットフォームサブネットを使用します。 それ以外の場合、ルールは呼び出しの後で削除されます。
+>既存の IP フィルタリングルールが含まれているので、Platform サブネットで `virtualNetworkRules` を更新する前に、受信する JSON 本文のバックアップを作成する必要があります。 それ以外の場合、ルールは呼び出し後に削除されます。
 
 
 ```json
@@ -117,7 +117,7 @@ Platform サブネットの様々な地域については、以下のリスト�
 }
 ```
 
-次を参照してください。 [[!DNL Event Hubs] 文書](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照してください。
+ネットワーク ルール セットの詳細については、次の [[!DNL Event Hubs]  ドキュメント ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) を参照してください。
 
 ## [!DNL Event Hubs] を Platform に接続
 
@@ -125,7 +125,7 @@ Platform サブネットの様々な地域については、以下のリスト�
 
 ### API の使用
 
-* [フローサービス API を使用したイベントハブソース接続の作成](../../tutorials/api/create/cloud-storage/eventhub.md)
+* [Flow Service API を使用した Event Hubs ソース接続の作成](../../tutorials/api/create/cloud-storage/eventhub.md)
 * [Flow Service API を用いたストリーミングデータの収集](../../tutorials/api/collect/streaming.md)
 
 ### UI の使用

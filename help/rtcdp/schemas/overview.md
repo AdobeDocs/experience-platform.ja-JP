@@ -5,7 +5,7 @@ feature: Get Started, Data Management, Schemas
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '143'
 ht-degree: 100%
 
 ---

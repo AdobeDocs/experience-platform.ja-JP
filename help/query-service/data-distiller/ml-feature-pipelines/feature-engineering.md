@@ -1,30 +1,30 @@
 ---
-title: 機械学習の機能を開発する
-description: Adobe Experience Platformのデータを、機械学習モデルで使用できる機能や変数に変換する方法を説明します。 Data Distillerを使用して、ML 機能を大規模に計算し、機械学習環境と共有します。
+title: 機械学習のエンジニア機能
+description: Adobe Experience Platformのデータを、機械学習モデルで使用できる機能または変数に変換する方法を説明します。 Data Distillerを使用して、ML 機能を大規模に計算し、それらの機能をマシンラーニング環境と共有します。
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 14%
+source-wordcount: '1140'
+ht-degree: 13%
 
 ---
 
-# 機械学習の機能を開発する
+# 機械学習のエンジニア機能
 
-このドキュメントでは、Adobe Experience Platformのデータを **機能**、または変数（機械学習モデルで使用できる変数）。 このプロセスは、 **特徴工学**. Data Distillerを使用して ML 機能を大規模に計算し、それらの機能を機械学習環境で共有します。 これには、以下が含まれます。
+このドキュメントでは、Adobe Experience Platformのデータを、機械学習モデルで使用できる **feature** または変数に変換する方法について説明します。 このプロセスは、**フィーチャーエンジニアリング** と呼ばれます。 Data Distillerを使用して、ML 機能を大規模に計算し、それらの機能を機械学習環境と共有します。 これには以下が含まれます。
 
-1. クエリテンプレートを作成して、モデルに対して計算するターゲットラベルとフィーチャを定義します。
-2. クエリを実行し、結果をトレーニングデータセットに保存する
+1. クエリテンプレートを作成して、モデルに対して計算するターゲットラベルおよび機能を定義します
+2. クエリを実行し、結果をトレーニングデータセットに保存します
 
 ## トレーニングデータを定義 {#define-training-data}
 
-次の例は、モデルのエクスペリエンスイベントデータセットからトレーニングデータを取得し、ニュースレターを購読するユーザーの傾向を予測するクエリを示しています。 購読イベントは、イベントタイプで表されます `web.formFilledOut`や、データセット内の他の行動イベントを使用して、購読を予測するためのプロファイルレベルの機能を導き出します。
+次の例では、ニュースレターを購読するユーザーの傾向を予測するモデルのエクスペリエンスイベントデータセットからトレーニングデータを取得するクエリを示しています。 購読イベントはイベントタイプ `web.formFilledOut` で表され、データセット内の他の行動イベントを使用して、購読を予測するためのプロファイルレベルの機能を派生させます。
 
-### 正と負のラベルをクエリ {#query-positive-and-negative-labels}
+### 正のラベルと負のラベルのクエリ {#query-positive-and-negative-labels}
 
-（監視対象の）機械学習モデルをトレーニングするための完全なデータセットには、予測する結果を表すターゲット変数またはラベルと、モデルのトレーニングに使用するサンプルプロファイルを説明する一連の機能または説明変数が含まれます。
+（監視対象の）機械学習モデルをトレーニングするための完全なデータセットには、予測する結果を表すターゲット変数またはラベルと、モデルのトレーニングに使用されるサンプルプロファイルを記述するために使用される一連の特徴または説明変数が含まれる。
 
-この場合、ラベルは `subscriptionOccurred` ユーザープロファイルにタイプのイベントがある場合、1 に等しい `web.formFilledOut` 、それ以外の場合は 0。 次のクエリは、イベントデータセットから 50,000 人のユーザーのセットを返します。この中に、正のラベル (`subscriptionOccurred = 1`) に加えて、ランダムに選択されたユーザーのセット（負のラベルを持つ）を指定し、50,000 ユーザーのサンプルサイズを完了します。 これにより、トレーニングデータには、学習するモデルの正と負の例の両方が含まれます。
+この場合、ラベルは `subscriptionOccurred` という変数になります。これは、ユーザープロファイルにタイプ `web.formFilledOut` のイベントがある場合は 1、それ以外の場合は 0 に等しくなります。 次のクエリは、イベントデータセットから 50,000 人のユーザーのセットを返します。このセットには、正のラベル（`subscriptionOccurred = 1`）を持つすべてのユーザーと、50,000 ユーザーサンプルサイズを満たすために負のラベルを持つランダムに選択されたユーザーのセットが含まれます。 これにより、トレーニングデータに、モデルの学習対象となるポジティブな例とネガティブな例の両方が含まれるようになります。
 
 ```python
 from aepp import queryservice
@@ -52,7 +52,7 @@ print(f"Number of classes: {len(df_labels)}")
 df_labels.head()
 ```
 
-**サンプル出力**
+**出力例**
 
 クラス数：50000
 
@@ -66,28 +66,28 @@ df_labels.head()
 
 {style="table-layout:auto"}
 
-### ML の機能を定義するイベントを集計 {#define-features}
+### イベントを集計して ML の機能を定義します {#define-features}
 
-適切なクエリを使用して、データセット内のイベントを、傾向モデルのトレーニングに使用できる、意味のある数値的な機能に収集できます。 イベントの例を以下に示します。
+適切なクエリを使用すると、データセット内のイベントを、傾向モデルのトレーニングに使用できる意味のある数値特性に収集できます。 イベントの例を次に示します。
 
-- **E メール数** マーケティング目的で送信され、ユーザーが受け取ったもの。
-- これらの E メールのうち、 **開封済み**.
-- ユーザーが以下をおこなう部分の電子メール **選択済み** リンク。
-- **製品数** それが閲覧された。
-- 数 **～とやり取りされた提案**.
-- 数 **却下された提案**.
-- 数 **選択されたリンク**.
-- 2 回連続で受信した電子メールの間隔（分）。
-- 2 回連続して開封された電子メールの間隔（分）。
-- ユーザーが実際にリンクを選択した、2 回の連続した E メールの間隔（分）。
-- 2 回の連続した製品表示の間の分数。
-- やり取りされた 2 つの提案間の分数。
+- マーケティング目的で送信され、ユーザーが受信した **メールの数**。
+- これらのメールのうち、**開封** された部分。
+- ユーザーが **選択** したリンクを含む、これらのメールの一部。
+- 表示された **製品**。
+- 操作された **提案** の数。
+- 却下された **提案** の数。
+- **選択されたリンク** 数。
+- 2 つの連続した E メールが受信された間隔（分）。
+- 開かれた 2 つの連続した E メールの間隔（分）。
+- ユーザーが実際にリンクを選択した、連続する 2 通のメール間の分数。
+- 2 つの連続した製品表示間の分数。
+- 操作された 2 つの提案の間の分数。
 - 破棄された 2 つの提案の間の分数。
 - 選択された 2 つのリンク間の分数。
 
 次のクエリは、これらのイベントを集計します。
 
-+++選択してクエリ例を表示
++++選択するとサンプルクエリが表示されます
 
 ```python
 query_features = f"""
@@ -144,23 +144,23 @@ df_features.head()
 
 +++
 
-**サンプル出力**
+**出力例**
 
-|   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDispoised | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
+|   | userId | emailsReceived | emailOpened | emailsClicked | productsViewed | propositionInteractes | propositionDiscelled | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
-| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | なし | NaN |
-| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | なし | NaN |
-| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | なし | NaN |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0.0 | NaN | NaN | NaN | なし | NaN |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0.0 | NaN | NaN | NaN | なし | NaN |
+| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 該当なし | 該当なし | 該当なし | 該当なし | なし | 該当なし |
+| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 該当なし | 該当なし | 該当なし | 該当なし | なし | 該当なし |
+| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 該当なし | 該当なし | 該当なし | 該当なし | なし | 該当なし |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0.0 | 該当なし | 該当なし | 該当なし | なし | 該当なし |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0.0 | 該当なし | 該当なし | 該当なし | なし | 該当なし |
 
 {style="table-layout:auto"}
 
-#### ラベルと機能のクエリを組み合わせる {#combine-queries}
+#### ラベルとフィーチャ クエリーを組み合わせる {#combine-queries}
 
-最後に、ラベルクエリと機能クエリを組み合わせて、次のように、ラベルと機能のトレーニングデータセットを返す単一のクエリにすることができます。
+最後に、ラベルクエリと機能クエリを 1 つのクエリに組み合わせ、ラベルと機能のトレーニングデータセットを返すことができます。
 
-+++選択してクエリ例を表示
++++選択するとサンプルクエリが表示されます
 
 ```python
 query_training_set = f"""
@@ -227,32 +227,32 @@ df_training_set.head()
 
 +++
 
-**サンプル出力**
+**出力例**
 
-|  | userId | eventType | タイムスタンプ | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDispoised | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
+|  | userId | eventType | タイムスタンプ | subscriptionOccurred | emailsReceived | emailOpened | emailsClicked | productsViewed | propositionInteractes | propositionDiscelled | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | なし | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | NaN | 1703.0 | NaN | なし | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | NaN | NaN | なし | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | なし | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | なし | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 該当なし | 該当なし | 該当なし | 該当なし | なし | 該当なし | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | 該当なし | 1703.0 | 該当なし | なし | 該当なし | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | 該当なし | 該当なし | なし | 該当なし | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 該当なし | 該当なし | 該当なし | 該当なし | なし | 該当なし | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 該当なし | 該当なし | 該当なし | 該当なし | なし | 該当なし | 1 |
 
 {style="table-layout:auto"}
 
-## クエリテンプレートを作成して、トレーニングデータを増分的に計算します。
+## クエリテンプレートを作成して、トレーニングデータを増分的に計算します
 
-一般的に、更新されたトレーニングデータを使用してモデルを定期的に再トレーニングし、時間の経過と共にモデルの正確性を維持します。 トレーニングデータセットを効率的に更新するためのベストプラクティスとして、新しいトレーニングデータを増分的に計算するために、トレーニングセットクエリからテンプレートを作成できます。 これにより、トレーニングデータが最後に更新された後に元のエクスペリエンスイベントデータセットに追加されたデータからのみラベルと機能を計算し、新しいラベルと機能を既存のトレーニングデータセットに挿入できます。
+定期的に更新されたトレーニングデータでモデルを再トレーニングし、モデルの精度を経時的に維持するのが一般的です。 トレーニングデータセットを効率的に更新するためのベストプラクティスとして、トレーニングセットクエリからテンプレートを作成して、新しいトレーニングデータを増分的に計算することができます。 これにより、トレーニングデータが最後に更新された以降に元のエクスペリエンスイベントデータセットに追加されたデータからのみラベルと機能を計算し、新しいラベルと機能を既存のトレーニングデータセットに挿入できます。
 
-そのためには、トレーニングセットクエリを少し変更する必要があります。
+それには、トレーニングセットクエリにいくつかの変更を加える必要があります。
 
-- 存在しない場合は新しいトレーニングデータセットを作成するロジックを追加し、存在しない場合は既存のトレーニングデータセットに新しいラベルと機能を挿入します。 これには、トレーニングセットクエリの一連の 2 つのバージョンが必要です。
-   - まず、 `CREATE TABLE IF NOT EXISTS {table_name} AS` 文
-   - 次に、 `INSERT INTO {table_name}` トレーニングデータセットが既に存在する場合のステートメント
-- を追加します。 `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` ステートメントを使用して、クエリを特定の間隔内に追加されたイベントデータに制限します。 The `$` スナップショット ID のプレフィックスは、クエリテンプレートの実行時に渡される変数であることを示します。
+- 存在しない場合は、新しいトレーニングデータセットを作成するロジックを追加し、存在しない場合は、新しいラベルと機能を既存のトレーニングデータセットに挿入します。 これには、次の 2 つのバージョンのトレーニングセットクエリが必要です。
+   - まず、`CREATE TABLE IF NOT EXISTS {table_name} AS` ステートメントを使用します。
+   - 次に、トレーニングデータセットが既に存在する場合は、`INSERT INTO {table_name}` 文を使用します
+- `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` ステートメントを追加して、指定した期間内に追加されたイベントデータにクエリを制限します。 スナップショット ID の `$` プレフィックスは、クエリテンプレートの実行時に渡される変数であることを示します。
 
-これらの変更を適用すると、次のクエリが実行されます。
+これらの変更を適用すると、次のクエリが表示されます。
 
-+++選択してクエリ例を表示
++++選択するとサンプルクエリが表示されます
 
 ```python
 ctas_table_name = "propensity_training_set"
@@ -390,7 +390,7 @@ END $$;
 
 +++
 
-最後に、次のコードは、クエリテンプレートを Data Distillerに保存します。
+最後に、次のコードでデータDistillerにクエリテンプレートを保存します。
 
 ```python
 template_res = dd.createQueryTemplate({
@@ -403,11 +403,11 @@ template_id = template_res["id"]
 print(f"Template for propensity training data created as ID {template_id}")
 ```
 
-**サンプル出力**
+**出力例**
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
-テンプレートを保存すると、テンプレート ID を参照し、クエリに含めるスナップショット ID の範囲を指定することで、クエリをいつでも実行できます。 次のクエリは、元の Experience Events データセットのスナップショットを取得します。
+テンプレートを保存しておくと、テンプレート ID を参照して、クエリに含めるスナップショット ID の範囲を指定することで、いつでもクエリを実行できます。 次のクエリでは、元のエクスペリエンスイベントデータセットのスナップショットを取得します。
 
 ```python
 query_snapshots = f"""
@@ -422,7 +422,7 @@ ORDER BY snapshot_generation ASC
 df_snapshots = dd_cursor.query(query_snapshots, output="dataframe")
 ```
 
-次のコードは、最初と最後のスナップショットを使用してデータセット全体に対するクエリを実行する、クエリテンプレートの実行方法を示しています。
+次のコードは、最初と最後のスナップショットを使用してデータセット全体をクエリする、クエリテンプレートの実行を示しています。
 
 ```python
 snapshot_start_id = str(df_snapshots["snapshot_id"].iloc[0])
@@ -441,11 +441,11 @@ query_final_id = query_final_res["id"]
 print(f"Query started successfully and got assigned ID {query_final_id} - it will take some time to execute")
 ```
 
-**サンプル出力**
+**出力例**
 
 `Query started successfully and got assigned ID c6ea5009-1315-4839-b072-089ae01e74fd - it will take some time to execute`
 
-次の関数を定義して、クエリのステータスを定期的にチェックできます。
+次の関数を定義して、クエリのステータスを定期的に確認できます。
 
 ```python
 def wait_for_query_completion(query_id):
@@ -468,7 +468,7 @@ def wait_for_query_completion(query_id):
 wait_for_query_completion(query_final_id)
 ```
 
-**サンプル出力**
+**出力例**
 
 ```console
 Query is still in progress, sleeping…
@@ -482,6 +482,6 @@ Query is still in progress, sleeping…
 Query completed successfully in 473.8 seconds
 ```
 
-## 次の手順:
+## 次の手順：
 
-このドキュメントでは、Adobe Experience Platformのデータを機械学習モデルで使用できる機能（変数）に変換する方法を学びました。 機械学習環境でExperience Platformからカスタムモデルをフィードするための機能パイプラインを作成する次の手順は、次のとおりです。 [機能データセットを書き出し](./export-data.md).
+このドキュメントを読むことで、Adobe Experience Platformのデータを機械学習モデルで使用できる機能（変数）に変換する方法を学びました。 Experience Platformから機能パイプラインを作成して、機械学習環境でカスタムモデルにフィードする次の手順は、[ 機能データセットの書き出し ](./export-data.md) です。

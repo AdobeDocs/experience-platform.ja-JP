@@ -5,7 +5,7 @@ feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '864'
 ht-degree: 84%
 
 ---
@@ -29,9 +29,9 @@ Edge ネットワークにデータを送信した後、Adobeソリューショ�
 
 ## 前提条件
 
-* Adobe Real-Time CDP Connections、Prime、または Ultimate( 価格については、Adobeのアカウントチームにお問い合わせください )
+* Adobe Real-Time CDP Connections、Prime または Ultimate （価格については、Adobeアカウントチームにお問い合わせください）
 * Adobe Experience Platform でのイベント転送
-* Edge ネットワークにデータを送信するように設定されたAdobe Experience Platform Web SDK、Mobile SDK、Edge Network Server API
+* Edge Networkにデータを送信するように設定されたAdobe Experience Platform Web SDK、Mobile SDK またはEdge Networkサーバー API
 * エクスペリエンスデータモデル（XDM）へのデータのマッピング（このマッピングはタグを使用しておこなうことができます）
 
 ## XDM スキーマの作成
@@ -42,7 +42,7 @@ Adobe Experience Platform で、スキーマを作成します。
 
 1. スキーマに名前を付け、簡単な説明を追加します。
 
-1. 「ExperienceEvent Web 詳細」フィールドグループを追加するには、 **[!UICONTROL 追加]** 次の **[!UICONTROL フィールドグループ]**.
+1. 「フィールドグループ」の横にある「**[!UICONTROL 追加]** を選択して、「ExperienceEvent web details **[!UICONTROL フィールドグループを追加]** できます。
 
    >[!NOTE]
    >
@@ -54,7 +54,7 @@ Adobe Experience Platform で、スキーマを作成します。
 
 ## イベント転送プロパティの作成
 
-Adobe Analytics の **[!UICONTROL タグ]** ワークスペース、タイプのプロパティを作成します **[!UICONTROL Edge]**.
+**[!UICONTROL タグ]** ワークスペースで、タイプ **[!UICONTROL Edge]** のプロパティを作成します。
 
 1. 「**[!UICONTROL 新しいプロパティ]**」を選択します。
 
@@ -71,7 +71,7 @@ Adobe Analytics の **[!UICONTROL タグ]** ワークスペース、タイプの
 
 Adobe Experience Platform でデータストリームを作成するには、イベント転送プロパティの作成時に生成された環境 ID を使用します。
 
-1. 選択 **[!UICONTROL データストリーム]** をクリックします。
+1. 左側のナビゲーションで **[!UICONTROL データストリーム]** を選択します。
 
 1. 設定に名前を付け、必要に応じて説明を入力します。
 この説明は、複数の設定を含むリストで目的の設定を識別するのに役立ちます。
@@ -82,7 +82,7 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 次に、Edge ネットワークを設定して、イベント転送や他のアドビ製品にデータを送信します。
 
-1. Adobe Analytics の **[!UICONTROL データストリーム]** ワークスペースで、作成したプロパティを選択します。
+1. **[!UICONTROL データストリーム]** ワークスペースで、作成したプロパティを選択します。
 
 1. 「開発」、「実稼働」、または「ステージング」環境を選択します。
 
@@ -98,9 +98,9 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 ## Platform Web SDK 拡張機能を設定して、以前作成したデータストリームにデータを送信します。
 
-プロパティを **[!UICONTROL タグ]** workspace に移動して、に移動します。 **[!UICONTROL 拡張機能]** をクリックし、カタログからExperience PlatformWeb SDK 拡張機能を選択して、設定およびインストールします。
+**[!UICONTROL Tags]** ワークスペースでプロパティを作成し、**[!UICONTROL Extensions]** に移動して、カタログからExperience PlatformWeb SDK 拡張機能を選択して、設定とインストールを行います。
 
-詳しくは、 [Web SDK 拡張機能のドキュメント](../../extensions/client/web-sdk/overview.md) 設定オプションの詳細については、を参照してください。
+設定オプションについて詳しくは、[Web SDK 拡張機能のドキュメント ](../../extensions/client/web-sdk/overview.md) を参照してください。
 
 ## Platform Web SDK にデータを送信するタグルールを作成する
 

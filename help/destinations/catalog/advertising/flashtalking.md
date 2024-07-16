@@ -1,12 +1,12 @@
 ---
-keywords: Flashtalking OneTag 拡張機能；Flashtalking OneTag 拡張機能；Flashtalking OneTag の宛先；Flashtalking OneTag;flashtalking OneTag;flashtalking onetag
+keywords: Flashtalking OneTag 拡張機能；Flashtalking OneTag 拡張機能；Flashtalking OneTag 宛先；Flashtalking OneTag;flashtalking onetag
 title: Flashtalking OneTag 拡張機能
-description: Flashtalking OneTag 拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Flashtalking OneTag 拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: e0dcbe9d-6fed-4b86-839e-661b7df8580e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 86%
+source-wordcount: '461'
+ht-degree: 87%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 86%
 
 ## 概要 {#overview}
 
-この [!DNL Flashtalking OneTag] タグ拡張機能を使用すると、サイトのアクションを簡単に属性化して、表示、ビデオ、モバイルの広告アクティビティを表示できます。 をデプロイします。 [!DNL Flashtalking OneTag] タグを使用して web プロパティに追加します。
+[!DNL Flashtalking OneTag] タグ拡張機能を使用すると、表示、ビデオおよびモバイル広告アクティビティに対するサイトのアクションの属性を簡単に設定できます。 タグを使用して [!DNL Flashtalking OneTag] を web プロパティにデプロイします。
 
 [!DNL Flashtalking OneTag] は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html) の拡張機能のページを参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 86%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Flashtalking OneTag] 拡張子：
+[!DNL Flashtalking OneTag] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

@@ -4,7 +4,7 @@ description: タグとイベント転送を使用して、web サイトやモバ
 exl-id: fe39cff2-2b0a-405b-aa89-0a3330f40ca1
 source-git-commit: 885a8d4fb0bcc82d23b040cf5c44d0ecd4887686
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '160'
 ht-degree: 100%
 
 ---

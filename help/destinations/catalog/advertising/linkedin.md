@@ -1,12 +1,12 @@
 ---
-keywords: linkedIn;linkedin;Linkedin;LinkedIn Insight タグ；insight タグ；Insight タグ
+keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight タグ；Insight タグ
 title: LinkedIn Insight Tag 拡張機能
-description: LinkedIn Insight タグ拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: linkedIn Insight タグ拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 89%
+source-wordcount: '441'
+ht-degree: 90%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 ## 概要 {#overview}
 
-のインストール [!DNL LinkedIn Insight Tag] コンバージョントラッキング、リターゲティング、web サイト人口統計機能を使用するには、以下を実行します。
+コンバージョントラッキング、リターゲティング、web サイトの人口統計学機能を使用するには、[!DNL LinkedIn Insight Tag] をインストールしてください。
 
 [!DNL LinkedIn Insight Tag] は、Adobe Experience Platformの広告拡張機能です。 この拡張機能について詳しくは、「[LinkedIn Insight タグ](https://business.linkedin.com/marketing-solutions/insight-tag)」を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 89%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL LinkedIn Insight Tag] 拡張子：
+[!DNL LinkedIn Insight Tag] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

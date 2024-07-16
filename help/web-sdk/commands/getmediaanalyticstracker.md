@@ -1,19 +1,19 @@
 ---
 title: getMediaAnalyticsTracker
 description: Media Analytics トラッカーオブジェクトを作成し、それを使用してメディアイベントをトラッキングする方法を説明します。
-source-git-commit: 9384c1cc15441199e898d6cc0850e5422253f106
+exl-id: ae968da8-7763-4b2a-a716-3014ba0d270d
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 3%
 
 ---
 
-
 # `getMediaAnalyticsTracker`
 
-この Web SDK コマンドは、Media Analytics トラッカーを取得します。 このコマンドを使用してオブジェクトインスタンスを作成し、から提供されるのと同じ API を使用することができます。 [Media JS ライブラリ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)、メディアイベントを追跡
+この Web SDK コマンドは、Media Analytics トラッカーを取得します。 このコマンドを使用してオブジェクトインスタンスを作成し、[Media JS ライブラリ ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html) で提供される API と同じ API を使用してメディアイベントを追跡できます。
 
-この `getMediaAnalyticsTracker` コマンドは、従来の Media Analytics API を返します。
+`getMediaAnalyticsTracker` コマンドは、従来の Media Analytics API を返します。
 
 
 | メソッド名 | 説明 | 構文 |

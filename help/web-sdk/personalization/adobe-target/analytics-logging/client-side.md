@@ -1,9 +1,9 @@
 ---
-title: Platform Web SDK での A4T データのクライアント側ログ
-description: Experience PlatformWeb SDK を使用して、Adobe Analytics for Target(A4T) のクライアント側ログを有効にする方法について説明します。
+title: Platform Web SDK での A4T データのクライアントサイドログ
+description: Experience Platform Web SDK を使用してAdobe Analytics for Target （A4T）のクライアントサイドログを有効にする方法を説明します。
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
-keywords: target;A4T；ログ；Web SDK;Experience;Platform;
+keywords: target;a4t；ログ；web sdk；エクスペリエンス；platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
@@ -12,49 +12,49 @@ ht-degree: 0%
 
 ---
 
-# Platform Web SDK での A4T データのクライアント側ログ
+# Platform Web SDK での A4T データのクライアントサイドログ
 
 ## 概要 {#overview}
 
-Adobe Experience Platform Web SDK を使用すると、 [Adobe Analytics for Target(A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) web アプリケーションのクライアント側のデータ。
+Adobe Experience Platform Web SDK を使用すると、web アプリケーションのクライアント側で [Adobe Analytics for Target （A4T） ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) データを収集できます。
 
-クライアント側のログは、 [!DNL Target] データがクライアント側で返され、データを収集して Analytics と共有できます。 を使用して Analytics に手動でデータを送信する場合は、このオプションを有効にする必要があります [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
+クライアントサイドログとは、関連する [!DNL Target] データがクライアントサイドで返され、ユーザーがデータを収集して Analytics と共有できることを意味します。 [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) を使用して手動で Analytics にデータを送信する場合は、このオプションを有効にしてください。
 
 >[!NOTE]
 >
->を使用してこれを実行するメソッド [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) は現在開発中で、近い将来に提供される予定です。
+>[method.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) を使用してこれを実行するAppMeasurementは、現在開発中で、近い将来に利用可能になる予定です。
 
-このドキュメントでは、Web SDK 用のクライアント側 A4T ログを設定する手順を説明し、一般的な使用例の実装例をいくつか示します。
+このドキュメントでは、Web SDK のクライアントサイド A4T ログの設定手順を説明し、一般的なユースケースの実装例を示します。
 
 ## 前提条件 {#prerequisites}
 
-このチュートリアルでは、パーソナライゼーションのための Web SDK の使用に関する基本的な概念とプロセスに精通していることを前提としています。 紹介が必要な場合は、次のドキュメントを確認してください。
+このチュートリアルは、パーソナライゼーションのために Web SDK を使用することに関連する基本的な概念とプロセスについて、十分に理解していることを前提としています。 概要については、次のドキュメントを参照してください。
 
 * [Web SDK の設定](/help/web-sdk/commands/configure/overview.md)
 * [イベントの送信](/help/web-sdk/commands/sendevent/overview.md)
 * [パーソナライゼーションコンテンツのレンダリング](../../rendering-personalization-content.md)
 
-## Analytics クライアント側ログの設定 {#set-up-client-side-logging}
+## Analytics クライアントサイドログの設定 {#set-up-client-side-logging}
 
-以下のサブセクションでは、Web SDK 実装で Analytics のクライアント側ログを有効にする方法について説明します。
+次のサブセクションでは、Web SDK 実装に対して Analytics のクライアントサイドログを有効にする方法の概要を説明します。
 
-### Analytics クライアント側ログを有効にする {#enable-analytics-client-side-logging}
+### Analytics クライアントサイドログを有効にする {#enable-analytics-client-side-logging}
 
-お使いの実装で Analytics クライアント側ログを有効にしたと見なすには、 [datastream](../../../../datastreams/overview.md).
+実装で Analytics クライアントサイドログが有効であると見なすには、[ データストリーム ](../../../../datastreams/overview.md) でAdobe Analytics設定を無効にする必要があります。
 
-![Analytics データストリーム設定が無効です](../assets/disable-analytics-datastream.png)
+![Analytics データストリーム設定が無効 ](../assets/disable-analytics-datastream.png)
 
-### 取得 [!DNL A4T] SDK からのデータを取得し、Analytics に送信します。 {#a4t-to-analytics}
+### SDK[!DNL A4T] データを取得して、Analytics に送信します {#a4t-to-analytics}
 
-このレポート方法が正しく機能するには、 [!DNL A4T] から取得した関連データ [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) 」コマンドを使用して、Analytics ヒットに追加されました。
+このレポート方法が正しく機能するには、Analytics ヒットの [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) コマンドから取得した [!DNL A4T] 関連データを送信する必要があります。
 
-Target Edge が提案応答を計算する際に、Analytics クライアント側のログが有効かどうか（つまり、データストリームで Analytics が無効な場合）を確認します。 クライアント側ログが有効な場合、応答の各提案に Analytics トークンが追加されます。
+Target Edgeは、提案レスポンスを計算する際、Analytics のクライアントサイドログが有効になっているか（つまり、データストリームで Analytics が無効になっているか）を確認します。 クライアントサイドログが有効になっている場合、システムは応答の各提案に Analytics トークンを追加します。
 
 フローは次のようになります。
 
-![クライアント側ログのフロー](../assets/analytics-client-side-logging.png)
+![ クライアントサイドログフロー ](../assets/analytics-client-side-logging.png)
 
-次に例を示します。 `interact` Analytics クライアント側ログが有効な場合の応答。 Analytics レポートを持つアクティビティの提案の場合、 `scopeDetails.characteristics.analyticsToken` プロパティ。
+次に、Analytics クライアントサイドログが有効になっている場合の `interact` 応答の例を示します。 Analytics レポートを使用するアクティビティに関する提案の場合は、`scopeDetails.characteristics.analyticsToken` のプロパティが表示されます。
 
 ```json
 {
@@ -136,7 +136,7 @@ Target Edge が提案応答を計算する際に、Analytics クライアント�
 }
 ```
 
-フォームベースの Experience Composer アクティビティの提案には、同じ提案の下に、コンテンツとクリック指標項目の両方を含めることができます。 したがって、コンテンツの分析トークンを単一でで表示する代わりに、 `scopeDetails.characteristics.analyticsToken` プロパティの代わりに、 `scopeDetails.characteristics.analyticsDisplayToken` および `scopeDetails.characteristics.analyticsClickToken` 対応するプロパティ。
+フォームベースの Experience Composer アクティビティの提案では、コンテンツとクリック指標項目の両方を同じ提案の下に含めることができます。 したがって、`scopeDetails.characteristics.analyticsToken` のプロパティでコンテンツ表示用の分析トークンを 1 つだけ用意するのではなく、`scopeDetails.characteristics.analyticsDisplayToken` プロパティと `scopeDetails.characteristics.analyticsClickToken` プロパティで、表示用とクリック用分析トークンの両方を指定することができます。
 
 ```json
 {
@@ -204,13 +204,13 @@ Target Edge が提案応答を計算する際に、Analytics クライアント�
 }
 ```
 
-次の値すべて： `scopeDetails.characteristics.analyticsToken`、および `scopeDetails.characteristics.analyticsDisplayToken` （表示されたコンテンツの場合）および `scopeDetails.characteristics.analyticsClickToken` （クリック指標の場合）は、収集され、 `tnta` タグを [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を呼び出します。
+`scopeDetails.characteristics.analyticsToken` のすべての値と `scopeDetails.characteristics.analyticsDisplayToken` （表示されたコンテンツの場合）および `scopeDetails.characteristics.analyticsClickToken` （クリック指標の場合）は、A4T ペイロードで、[Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 呼び出しでタグとして収集し `tnta` 含める必要があります。
 
 >[!IMPORTANT]
 >
->The `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` プロパティには、複数のトークンを含めることができます。複数のトークンは、コンマで区切られた 1 つの文字列として連結されます。
+>`analyticsToken`、`analyticsDisplayToken`、`analyticsClickToken` の各プロパティには、複数のトークンを含め、1 つのコンマで区切られた文字列として連結できます。
 >
->次の節で示す実装例では、複数の Analytics トークンが反復的に収集されています。 Analytics トークンの配列を連結するには、次のような関数を使用します。
+>次の節に示す実装例では、複数の Analytics トークンが繰り返し収集されています。 Analytics トークンの配列を連結するには、次のような関数を使用します。
 >
 >```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
@@ -223,15 +223,15 @@ Target Edge が提案応答を計算する際に、Analytics クライアント�
 
 ## 実装例 {#implementation-examples}
 
-以下のサブセクションでは、一般的な使用例に対して Analytics のクライアント側ログを実装する方法を示します。
+次のサブセクションでは、一般的なユースケースに対する Analytics クライアントサイドログの実装方法について説明します。
 
 ### フォームベースの Experience Composer アクティビティ {#form-based-composer}
 
-Web SDK を使用して、提案の実行を [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) アクティビティ。
+Web SDK を使用して、[Adobe Target フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) アクティビティからの提案の実行を制御できます。
 
-特定の決定範囲の提案をリクエストする場合、返される提案には適切な Analytics トークンが含まれます。 ベストプラクティスは、Platform Web SDK を連携させることです `sendEvent` コマンドを実行し、返された提案を繰り返し処理して、Analytics トークンを同時に収集しながら実行します。
+特定の決定範囲の提案をリクエストすると、返される提案には、適切な Analytics トークンが含まれます。 ベストプラクティスは、Platform Web SDK `sendEvent` コマンドを連結し、返された提案を繰り返し処理して、Analytics トークンを同時に収集しながら実行することです。
 
-次のトリガーを設定できます。 `sendEvent` コマンドを使用して、次のようなフォームベースの Experience Composer アクティビティ範囲を設定できます。
+次のように、フォームベースの Experience Composer アクティビティ範囲に対して `sendEvent` コマンドをトリガーできます。
 
 ```javascript
 alloy("sendEvent", {
@@ -251,7 +251,7 @@ alloy("sendEvent", {
 });
 ```
 
-ここから、提案を実行するコードを実装し、最終的に Analytics に送信されるペイロードを構築する必要があります。 これは例です `results.propositions` 次を含む可能性があります。
+ここから、提案を実行し、最終的に Analytics に送信されるペイロードを構築するコードを実装する必要があります。 次に、`results.propositions` に含まれる可能性のある例を示します。
 
 ```json
 [
@@ -376,7 +376,7 @@ alloy("sendEvent", {
 ]
 ```
 
-コンテンツ項目を使用した提案から Analytics トークンを抽出するには、次のような関数を実装します。
+コンテンツ項目を含む提案から Analytics トークンを抽出するには、次のような関数を実装します。
 
 ```javascript
 function getDisplayAnalyticsPayload(proposition) {
@@ -391,7 +391,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-提案は、 `schema` 対象の項目のプロパティ。 フォームベースの Experience Composer アクティビティでは、次の 4 つの提案項目スキーマがサポートされます。
+提案には、問題の項目の `schema` プロパティで示されるように、様々なタイプの項目を含めることができます。 フォームベースの Experience Composer アクティビティでは、次の 4 つの提案項目スキーマがサポートされます。
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -400,11 +400,11 @@ var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
 var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item";
 ```
 
-`HTML_SCHEMA` および `JSON_SCHEMA` は、オファーのタイプを反映するスキーマです。 `MEASUREMENT_SCHEMA` は、DOM 要素に添付する必要がある指標を反映します。
+`HTML_SCHEMA` と `JSON_SCHEMA` はオファーのタイプを反映するスキーマで、`MEASUREMENT_SCHEMA` は DOM 要素に添付する必要がある指標を反映します。
 
-訪問者が実際に以前に表示したコンテンツをクリックした時点で、クリック指標の Analytics ペイロードを収集し、コンテンツ項目とは別に Analytics に送信する必要があります。
+クリック指標に対する Analytics ペイロードは、訪問者が以前に表示されたコンテンツを実際にクリックした瞬間に、コンテンツ項目とは別に収集して Analytics に送信する必要があります。
 
-この場合、A4T ペイロード数のクリック指標を取得する次のヘルパー関数が役に立ちます。
+この場合、クリック指標の A4T ペイロードを取得するための次のヘルパー関数が便利です。
 
 ```javascript
 function getClickAnalyticsPayload(proposition) {
@@ -421,16 +421,16 @@ function getClickAnalyticsPayload(proposition) {
 
 #### 実装の概要 {#implementation-summary}
 
-要約すると、フォームベースの Experience Composer アクティビティを Platform Web SDK で適用する際には、次の手順を実行する必要があります。
+要約すると、Platform Web SDK でフォームベースの Experience Composer アクティビティを適用する場合は、次の手順を実行する必要があります。
 
 1. フォームベースの Experience Composer アクティビティオファーを取得するイベントを送信する。
-1. コンテンツの変更をページに適用する。
-1. 次を送信： `decisioning.propositionDisplay` 通知イベント；
-1. SDK 応答から Analytics 表示トークンを収集し、Analytics ヒットのペイロードを作成する。
-1. を使用してペイロードを Analytics に送信します。 [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
-1. 配信された提案にクリック指標がある場合、クリックが実行されたときに `decisioning.propositionInteract` 通知イベント。 The `onBeforeEventSend` ハンドラーは、傍受時に `decisioning.propositionInteract` イベント、次のアクションが発生します。
-   1. クリック分析トークンの収集元 `xdm._experience.decisioning.propositions`
-   1. クリック分析ヒットを、収集した Analytics ペイロードと共にを介して送信する。 [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+1. ページにコンテンツの変更を適用する。
+1. `decisioning.propositionDisplay` 通知イベントの送信
+1. SDK 応答から Analytics 表示トークンを収集し、Analytics ヒットのペイロードを作成します。
+1. [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を使用してペイロードを Analytics に送信する
+1. 配信された提案にクリック指標がある場合は、クリックが実行されたときに `decisioning.propositionInteract` の通知イベントが送信されるようにクリックリスナーを設定する必要があります。 `onBeforeEventSend` ハンドラーは、イベントをインターセプトすると次のアクションが発生するように設定 `decisioning.propositionInteract` る必要があります。
+   1. `xdm._experience.decisioning.propositions` からのクリック分析トークンの収集
+   1. [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して、収集された Analytics ペイロードでクリック Analytics ヒットを送信する
 
 ```javascript
 alloy("sendEvent", {
@@ -465,15 +465,15 @@ alloy("sendEvent", {
 });
 ```
 
-### Visual Experience Composer のアクティビティ {#visual-experience-composer-acitivties}
+### Visual Experience Composer アクティビティ {#visual-experience-composer-acitivties}
 
-Web SDK を使用すると、 [Visual Experience Composer(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+Web SDK を使用すると、[Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) を使用して作成されたオファーを処理できます。
 
 >[!NOTE]
 >
->この使用例を実装する手順は、 [フォームベースの Experience Composer アクティビティ](#form-based-composer). 詳しくは、前の節を参照してください。
+>このユースケースの実装手順は、[ フォームベースの Experience Composer アクティビティ ](#form-based-composer) の手順と非常によく似ています。 詳しくは、前の節を参照してください。
 
-自動レンダリングが有効な場合、ページ上で実行された提案から Analytics トークンを収集できます。 ベストプラクティスは、Platform Web SDK を連携させることです `sendEvent` コマンドを繰り返し処理して、返された提案を繰り返し処理し、Web SDK がレンダリングしようとした提案をフィルタリングします。
+自動レンダリングが有効になっている場合は、ページで実行された提案から Analytics トークンを収集できます。 ベストプラクティスは、Platform Web SDK `sendEvent` コマンドを連結し、返された提案を繰り返し処理して、Web SDK がレンダリングしようとしたものをフィルタリングすることです。
 
 **例**
 
@@ -509,13 +509,13 @@ alloy("sendEvent", {
 });
 ```
 
-### 使用 `onBeforeEventSend` ページ指標を処理するには {#using-onbeforeeventsend}
+### `onBeforeEventSend` を使用したページ指標の処理 {#using-onbeforeeventsend}
 
-Adobe Targetアクティビティを使用すると、DOM に手動で関連付けるか、DOM に自動的に関連付ける（VEC が作成したアクティビティ）など、ページ上で様々な指標を設定できます。 どちらのタイプも、Web ページでのエンドユーザーの操作が遅延します。
+Adobe Target アクティビティを使用すると、DOM に手動で添付するか、DOM （VEC が作成したアクティビティ）に自動的に添付するかして、ページ上で異なる指標を設定できます。 どちらのタイプも、web ページ上でのエンドユーザーのインタラクションが遅延します。
 
-これを考慮するためのベストプラクティスは、 `onBeforeEventSend` Adobe Experience Platform Web SDK フック。 The `onBeforeEventSend` フックは、 `configure` コマンドに含まれ、データストリームを介して送信されるすべてのイベントに反映されます。
+これに対処するために、ベストプラクティスは、`onBeforeEventSend` Adobe Experience Platform Web SDK フックを使用して Analytics ペイロードを収集することです。 `onBeforeEventSend` フックは、`configure` コマンドを使用して設定する必要があり、データストリームを通じて送信されるすべてのイベントに反映されます。
 
-次に例を示します `onBeforeEventSent` は、Analytics のヒットをトリガーするように設定できます。
+次に、Analytics のヒットをトリガーにす `onBeforeEventSent` ように設定する方法の例を示します。
 
 ```javascript
 alloy("configure", {
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Web SDK の A4T データのクライアント側ログについて説明しました。 次のガイドを参照してください： [サーバー側ログ](server-side.md) を参照してください。
+このガイドでは、Web SDK の A4T データのクライアントサイドログについて説明しました。 サーバー上の A4T データの処理方法について詳しくは、[Edge Networkサイドログ ](server-side.md) に関するガイドを参照してください。

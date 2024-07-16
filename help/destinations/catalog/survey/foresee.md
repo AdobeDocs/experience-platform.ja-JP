@@ -1,12 +1,12 @@
 ---
-keywords: foresee;foresee extension;foresee destination
+keywords: foresee;foresee 拡張機能；foresee 宛先
 title: Foresee 拡張機能の宛先
 description: Foresee 拡張機能は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 3eca9e2e-fd41-4dca-a38f-8e281c45a01b
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 92%
+source-wordcount: '429'
+ht-degree: 93%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 92%
 
 ## 概要 {#overview}
 
-設定 [!DNL ForeSee] タグを使用した製品デプロイメント。
+タグを使用して [!DNL ForeSee] 製品のデプロイメントを設定します。
 
-[!DNL Foresee] は、Adobe Experience Platformの調査の拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html) の拡張機能のページを参照してください。
+[!DNL Foresee] は、Adobe Experience Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 92%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Foresee] 拡張子：
+[!DNL Foresee] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

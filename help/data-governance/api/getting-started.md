@@ -18,7 +18,7 @@ ht-degree: 95%
 
 ## 前提条件
 
-開発者ガイドを使用するには、 [!DNL Experience Platform] データガバナンス機能の操作に関わるサービス。 [!DNL Policy Service API] の使用を開始する前に、次のサービスのドキュメントを確認してください。
+デベロッパーガイドを使用するには、データガバナンス機能の操作に関わる様々な [!DNL Experience Platform] サービスについて実際に理解しておく必要があります。 [!DNL Policy Service API] の使用を開始する前に、次のサービスのドキュメントを確認してください。
 
 * [データガバナンス](../home.md)：[!DNL Experience Platform] がデータ使用コンプライアンスを実施するためのフレームワーク。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。

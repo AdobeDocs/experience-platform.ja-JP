@@ -1,19 +1,19 @@
 ---
-title: フローサービス API を使用した SFTP ベース接続の作成
-description: フローサービス API を使用して、Adobe Experience Platformを SFTP(Secure File Transfer Protocol) サーバーに接続する方法について説明します。
+title: Flow Service API を使用した SFTP ベース接続の作成
+description: Flow Service API を使用してAdobe Experience Platformを SFTP （Secure File Transfer Protocol）サーバーに接続する方法について説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 28%
+ht-degree: 26%
 
 ---
 
-# を使用した SFTP ベース接続の作成 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した SFTP ベース接続の作成
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL SFTP] （セキュアファイル転送プロトコル） [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL SFTP] （セキュアファイル転送プロトコル）のベース接続を作成する手順について説明します。
 
 ## はじめに
 
@@ -24,9 +24,9 @@ ht-degree: 28%
 
 >[!IMPORTANT]
 >
->JSON オブジェクトを [!DNL SFTP] ソース接続。 この制限を回避するには、1 行に 1 つの JSON オブジェクトを使用し、その後のファイルに複数行を使用します。
+>[!DNL SFTP] ソース接続を持つ JSON オブジェクトを取り込む場合は、改行や改行を避けることをお勧めします。 この制限を回避するには、1 行に 1 つの JSON オブジェクトを使用し、複数の行を使用してファイルを送信します。
 
-以下の節では、 [!DNL SFTP] サーバーの [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用して [!DNL SFTP] サーバーに正常に接続するために必要な追加情報を示しています。
 
 ### 必要な資格情報の収集
 
@@ -34,14 +34,14 @@ ht-degree: 28%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | に関連付けられている名前または IP アドレス [!DNL SFTP] サーバー。 |
-| `port` | 接続先の SFTP サーバーポート。 指定しない場合、値はデフォルトでになります。 `22`. |
-| `username` | へのアクセス権を持つユーザー名 [!DNL SFTP] サーバー。 |
-| `password` | ユーザーのパスワード [!DNL SFTP] サーバー。 |
-| `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
-| `passPhrase` | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 次の場合、 `privateKeyContent` はパスワードで保護されているので、このパラメーターは秘密鍵コンテンツのパスフレーズを値として使用する必要があります。 |
-| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP が設定した制限を下回るように設定する必要があります。 **注意**：この設定を既存の SFTP アカウントに対して有効にすると、今後のデータフローにのみ影響し、既存のデータフローには影響しません。 |
-| `folderPath` | アクセス権を付与するフォルダーのパスです。 [!DNL SFTP] ソースの場合は、選択したサブフォルダーへのユーザーアクセスを指定するためのフォルダーパスを指定できます。 |
+| `host` | [!DNL SFTP] サーバーに関連付けられた名前または IP アドレス。 |
+| `port` | 接続先の SFTP サーバーポート。 指定しない場合、値はデフォルトで `22` になります。 |
+| `username` | [!DNL SFTP] サーバーにアクセスできるユーザー名。 |
+| `password` | [!DNL SFTP] サーバーのパスワード。 |
+| `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
+| `passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 `privateKeyContent` がパスワードで保護されている場合、このパラメーターは秘密鍵のコンテンツのパスフレーズを値として使用する必要があります。 |
+| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
+| `folderPath` | アクセス権を付与するフォルダーへのパス。 ソース [!DNL SFTP]、フォルダーパスを指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |
 
 ### Platform API の使用
@@ -52,17 +52,17 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 >[!TIP]
 >
->作成後は、 [!DNL SFTP] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
+>作成した後は、[!DNL SFTP] ベース接続の認証タイプを変更できません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-The [!DNL SFTP] ソースは、SSH 公開鍵を介した基本認証と認証の両方をサポートします。 この手順の間に、アクセスを許可するサブフォルダーのパスを指定することもできます。
+[!DNL SFTP] ソースは、基本認証と SSH 公開鍵を使用した認証の両方をサポートしています。 この手順では、アクセス権を付与するサブフォルダーへのパスを指定することもできます。
 
 ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL SFTP] 認証資格情報をリクエストパラメーターの一部として使用します。
 
 >[!IMPORTANT]
 >
->The [!DNL SFTP] コネクタは、RSA または DSA タイプの OpenSSH キーをサポートします。 鍵となるファイルコンテンツが `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` およびで終わる `"-----END [RSA/DSA] PRIVATE KEY-----"`. 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して PPK から OpenSSH 形式に変換します。
+>[!DNL SFTP] コネクタは、RSA または DSA タイプの OpenSSH キーをサポートしています。 主要なファイルの内容が `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で始まり、`"-----END [RSA/DSA] PRIVATE KEY-----"` で終わることを確認してください。 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して、PPK 形式から OpenSSH 形式に変換します。
 
 **API 形式**
 
@@ -72,7 +72,7 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB 基本認証]
+>[!TAB  基本認証 ]
 
 +++リクエスト
 
@@ -108,18 +108,18 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.host` | SFTP サーバーのホスト名。 |
-| `auth.params.port` | SFTP サーバーのポート。 この整数値のデフォルト値は 22 です。 |
+| `auth.params.port` | SFTP サーバーのポート。 この整数値のデフォルトは 22 です。 |
 | `auth.params.username` | SFTP サーバーに関連付けられたユーザー名。 |
 | `auth.params.password` | SFTP サーバーに関連付けられたパスワード。 |
-| `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定された同時接続の最大数です。 有効にした場合、この値は少なくとも 1 に設定する必要があります。 |
-| `auth.params.folderPath` | アクセス権を付与するフォルダーのパスです。 |
-| `connectionSpec.id` | SFTP サーバー接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
+| `auth.params.folderPath` | アクセス権を付与するフォルダーへのパス。 |
+| `connectionSpec.id` | SFTP サーバー接続仕様 ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
 
 +++応答
 
-正常な応答は、一意の識別子 (`id`) に含まれます。 この ID は、次のチュートリアルで SFTP サーバーを調べるために必要です。
+リクエストが成功した場合は、新しく作成した接続の一意の ID （`id`）が返されます。 この ID は、次のチュートリアルで SFTP サーバーを探索するために必要になります。
 
 ```json
 {
@@ -130,7 +130,7 @@ curl -X POST \
 
 +++
 
->[!TAB SSH 公開鍵認証]
+>[!TAB SSH 公開鍵認証 ]
 
 +++リクエスト
 
@@ -166,20 +166,20 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.host` | のホスト名 [!DNL SFTP] サーバー。 |
-| `auth.params.port` | SFTP サーバーのポート。 この整数値のデフォルト値は 22 です。 |
-| `auth.params.username` | に関連付けられたユーザー名 [!DNL SFTP] サーバー。 |
-| `auth.params.privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵コンテンツ。 OpenSSH キーのタイプは、RSA または DSA に分類する必要があります。 |
-| `auth.params.passPhrase` | キーファイルまたはキーコンテンツがパスフレーズで保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターを PrivateKeyContent のパスフレーズと共に値として使用する必要があります。 |
-| `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定された同時接続の最大数です。 有効にした場合、この値は少なくとも 1 に設定する必要があります。 |
-| `auth.params.folderPath` | アクセス権を付与するフォルダーのパスです。 |
-| `connectionSpec.id` | The [!DNL SFTP] サーバ接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.host` | [!DNL SFTP] サーバーのホスト名。 |
+| `auth.params.port` | SFTP サーバーのポート。 この整数値のデフォルトは 22 です。 |
+| `auth.params.username` | [!DNL SFTP] サーバーに関連付けられたユーザー名。 |
+| `auth.params.privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
+| `auth.params.passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターは、PrivateKeyContent のパスフレーズを値として使用する必要があります。 |
+| `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
+| `auth.params.folderPath` | アクセス権を付与するフォルダーへのパス。 |
+| `connectionSpec.id` | [!DNL SFTP] サーバー接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
 
 +++応答
 
-正常な応答は、一意の識別子 (`id`) に含まれます。 この ID は、次のチュートリアルで SFTP サーバーを調べるために必要です。
+リクエストが成功した場合は、新しく作成した接続の一意の ID （`id`）が返されます。 この ID は、次のチュートリアルで SFTP サーバーを探索するために必要になります。
 
 ```json
 {
@@ -194,4 +194,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL SFTP] を使用した接続 [!DNL Flow Service] API で、接続の一意の ID 値を取得している。 この接続 ID を [フローサービス API を使用したクラウドストレージの調査](../../explore/cloud-storage.md).
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL SFTP] 接続を作成し、接続の一意の ID 値を取得しました。 この接続 ID を使用して [Flow Service API を使用したクラウドストレージの調査 ](../../explore/cloud-storage.md) を行うことができます。

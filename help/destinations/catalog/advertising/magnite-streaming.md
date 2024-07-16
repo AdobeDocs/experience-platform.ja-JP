@@ -16,22 +16,22 @@ ht-degree: 32%
 
 ## 概要 {#overview}
 
-この [!DNL Magnite Streaming: Real-Time] また、Adobe Experience Platformの Magnite ストリーミング：バッチ宛先は、Magnite ストリーミングプラットフォームでターゲティングとアクティブ化のためにオーディエンスをマッピングおよび書き出すのに役立ちます。
+Adobe Experience Platformの [!DNL Magnite Streaming: Real-Time] と Magnite ストリーミング：バッチ宛先は、Magnite ストリーミングプラットフォームでターゲティングとアクティブ化のためにオーディエンスをマッピングおよび書き出すのに役立ちます。
 
-へのオーディエンスのアクティブ化 [!DNL Magnite Streaming] platform は、Magnite Streaming: Real-Time と Magnite Streaming: Batch の両方の宛先を使用する必要がある 2 つの手順のプロセスです。
+[!DNL Magnite Streaming] プラットフォームへのオーディエンスのアクティブ化は、Magnite ストリーミング：リアルタイムと Magnite ストリーミング：バッチの両方の宛先を使用する必要がある 2 つの手順のプロセスです。
 
-オーディエンスをに対してアクティブ化するには [!DNL Magnite Streaming]は、以下を行う必要があります。
+[!DNL Magnite Streaming] に対してオーディエンスをアクティブ化するには、次の手順を実行します。
 
-* でオーディエンスをアクティブ化 [!DNL Magnite Streaming: Real-Time] 宛先（このページを参照）。
-* Magnite ストリーミング：バッチ宛先で同じオーディエンスを有効化します。 この [!DNL Magnite Streaming: Batch] 宛先は必須コンポーネントです。 でオーディエンスをアクティベートできませんでした [!DNL Magnite Streaming] バッチの宛先の場合、統合に失敗し、オーディエンスはアクティブ化されません。
+* このページに示すように、[!DNL Magnite Streaming: Real-Time] 宛先のオーディエンスをアクティブ化します。
+* Magnite ストリーミング：バッチ宛先で同じオーディエンスを有効化します。 [!DNL Magnite Streaming: Batch] の宛先は必須コンポーネントです。 [!DNL Magnite Streaming] バッチ宛先でオーディエンスをアクティブ化できないと、統合に失敗し、オーディエンスはアクティブ化されません。
 
-メモ：リアルタイム宛先を使用する場合、 [!DNL Magnite: Streaming] オーディエンスはリアルタイムで受け取りますが、リアルタイムオーディエンスは一時的にプラットフォームに保存することしかできず、数日以内にシステムから削除されます。 このため、Magnite：ストリーミングリアルタイム宛先を使用する場合は、次のようになります *また* magnite ストリーミングを使用する必要があります：バッチ宛先 – リアルタイム宛先に対して有効化する各オーディエンスは、バッチ宛先に対しても有効化する必要があります。
+メモ：リアルタイムの宛先を使用する場合、オーディエンスはリアルタイムで受信されま [!DNL Magnite: Streaming] が、リアルタイムのオーディエンスはプラットフォームに一時的に保存することしかできず、数日以内にシステムから削除されます。 このため、Magnite:Streaming Real-Time 宛先を使用する場合は、*また* Magnite Streaming:Batch 宛先 – リアルタイム宛先に対してアクティブ化する各オーディエンスを使用する必要があります。
 
 >[!IMPORTANT]
 >
 >この宛先コネクタはベータ版で、一部のお客様のみご利用いただけます。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。
 >
->宛先コネクタとドキュメントページは、によって作成および管理されます。 [!DNL Magnite] チーム。 お問い合わせや更新のリクエストについては、 `adobe-tech@magnite.com`.
+>宛先コネクタとドキュメントページは、[!DNL Magnite] チームが作成および管理します。 お問い合わせや更新のリクエストについては、`adobe-tech@magnite.com` まで直接ご連絡ください。
 
 ## ユースケース {#use-cases}
 
@@ -43,12 +43,12 @@ ht-degree: 32%
 
 ## 前提条件 {#prerequisites}
 
-を使用するには [!DNL Magnite] Adobe Experience Platformの宛先では、最初にが必要です [!DNL Magnite Streaming] アカウント。 次がある場合： [!DNL Magnite Streaming] アカウント、にお問い合わせください [!DNL Magnite] アクセスするための資格情報を提供するアカウント マネージャー [!DNL Magnite's] 宛先。
-を持っていない場合 [!DNL Magnite Streaming] アカウント、adobe-tech@magnite.comまでお問い合わせください
+Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、まず [!DNL Magnite Streaming] アカウントが必要です。 [!DNL Magnite Streaming] アカウントをお持ちの場合は、[!DNL Magnite] アカウントマネージャーに連絡して、宛先にアクセスするための資格情報を取得し [!DNL Magnite's] ください。
+[!DNL Magnite Streaming] アカウントをお持ちでない場合は、adobe-tech@magnite.comにお問い合わせください。
 
 ## サポートされている ID {#supported-identities}
 
-この [!DNL Magnite Streaming: Real-Time] 宛先では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL Magnite Streaming: Real-Time] の宛先では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ ht-degree: 32%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -82,7 +82,7 @@ ht-degree: 32%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -90,10 +90,10 @@ ht-degree: 32%
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![宛先設定認証フィールドが未入力](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
+![ 宛先設定認証フィールドが未入力 ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
-* **[!UICONTROL ユーザー名]**：から提供されたユーザー名 [!DNL Magnite].
-* **[!UICONTROL パスワード]**：によって指定されたパスワード [!DNL Magnite].
+* **[!UICONTROL ユーザー名]**:[!DNL Magnite] から提供されたユーザー名。
+* **[!UICONTROL パスワード]**:[!DNL Magnite] から提供されたパスワード。
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -101,13 +101,13 @@ ht-degree: 32%
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL ソースパートナーの名前]**：顧客または会社名。 サポート対象のみ [!DNL Magnite Streaming] クライアントを選択できます。
+* **[!UICONTROL ソースパートナーの名前]**：顧客または会社名。 サポートされている [!DNL Magnite Streaming] クライアントのみを選択できます。
 
-![宛先設定認証フィールドに値が入力されています](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
+![ 宛先設定認証フィールドに値が入力されています ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
-完了したら、 **[!UICONTROL 作成]** ボタン。
+完了したら、「**[!UICONTROL 作成]** ボタンを選択します。
 
-![オプションのガバナンスポリシーと実施アクション](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
+![ オプションのガバナンスポリシーと実施アクション ](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -119,8 +119,8 @@ ht-degree: 32%
 
 >[!IMPORTANT]
 >
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* エクスポートする *id*、が必要です **[!UICONTROL ID グラフの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png "宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -130,27 +130,27 @@ ht-degree: 32%
 
 次の手順では、ソース識別子を Magnite device_id 識別子にマッピングします。
 
-* 選択することで、必要な数のマッピングを追加できます。 **[!UICONTROL 新しいマッピングを追加]**.
+* 「**[!UICONTROL 新しいマッピングを追加]**」を選択して、必要な数のマッピングを追加できます。
 
-リアルタイム宛先を使用したこの例では、Magnite device_id ターゲットフィールドにマッピングされた汎用の deviceId ソース識別子を含む行を表示しています。 マッピングを操作している場合は、 [!UICONTROL 次].
+リアルタイム宛先を使用したこの例では、Magnite device_id ターゲットフィールドにマッピングされた汎用の deviceId ソース識別子を含む行を表示しています。 マッピングを行ったら、「[!UICONTROL  次へ ]」を選択します。
 
-![目的のデータフィールドを device_ID フィールドにマッピングする](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
+![ 目的のデータフィールドを device_ID フィールドにマッピングする ](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
 必ず、アクティブ化されたすべてのオーディエンスにマッピング ID を設定するか、マッピング ID が存在しない場合は「なし」を設定します。
 
-![必ず、アクティブ化されたすべてのオーディエンスにマッピング ID を設定するか、マッピング ID が存在しない場合は「なし」を設定します](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
+![ 必ず、アクティブ化されたすべてのオーディエンスにマッピング ID を設定するか、マッピング ID が存在しない場合は「なし」を設定します ](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)。
 
 各オーディエンスの開始日（必須）、終了日（オプション）、マッピング ID を設定する必要があります。
 
 **マッピング ID**
 
-* の使用 **[!UICONTROL マッピング ID]** オーディエンスに Magnite と呼ばれる既存のセグメント ID がある場合のフィールド。
+* オーディエンスに Magnite と呼ばれる既存のセグメント ID がある場合は、**[!UICONTROL マッピング ID]** フィールドを使用します。
 
-* を追加します **[!UICONTROL マッピング ID]** オーディエンスに対して、各オーディエンス行を個別に選択し、右側の列にデータを入力します（上の画像を参照）。 マッピング ID を追加しない場合は、「マッピング ID」フィールドに「なし」を入力します。
+* **[!UICONTROL マッピング ID]** をオーディエンスに追加するには、各オーディエンス行を個別に選択し、右側の列にデータを入力します（上の画像を参照）。 マッピング ID を追加しない場合は、「マッピング ID」フィールドに「なし」を入力します。
 
-を選択 **[!UICONTROL 次]** そして、アクティベーションフローを最終決定します。
+「**[!UICONTROL 次へ]**」を選択し、アクティベーションフローを完了します。
 
-![「次へ」を選択して、アクティベーションフローを完了します。](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
+![ 「次へ」を選択して、アクティベーションフローを完了します ](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
@@ -162,11 +162,11 @@ ht-degree: 32%
 
 -->
 
-* Postを取り込む場合、オーディエンスはに表示されると想定されます [!DNL Magnite Streaming] 数分以内に、を取引に適用できます。 これを確認するには、Adobe Experience Platformのアクティベーション手順で共有されたセグメント ID を検索します。
+* Postを取り込む場合、オーディエンスは数分以内に [!DNL Magnite Streaming] に表示され、取引に適用できることが期待されます。 これを確認するには、Adobe Experience Platformのアクティベーション手順で共有されたセグメント ID を検索します。
 
-## を使用して同じオーディエンスをアクティブ化 [!DNL Magnite Streaming: Batch]宛先
+## [!DNL Magnite Streaming: Batch] 宛先を介して同じオーディエンスをアクティブ化
 
-と共有されるオーディエンス [!DNL Magnite Streaming] リアルタイム宛先の使用は、Magnite ストリーミング：バッチ宛先を使用して共有する必要があります。 正しく設定されている場合、のセグメント名 [!DNL Magnite Streaming] UI が更新され、毎日の更新後にAdobe Experience Platformで使用される UI が反映されます。
+リアルタイム宛先を使用して [!DNL Magnite Streaming] と共有されるオーディエンスも、Magnite ストリーミング：バッチ宛先を使用して共有する必要があります。 正しく設定されると、[!DNL Magnite Streaming] UI のセグメント名が更新され、毎日の更新後のAdobe Experience Platformで使用されるセグメント名が反映されます。
 
 最後に、バッチ宛先が統合用に設定されていない場合は、Magnite ストリーミング：バッチ宛先ドキュメントを使用して今すぐ設定します。
 
@@ -176,4 +176,4 @@ ht-degree: 32%
 
 ## その他のリソース {#additional-resources}
 
-その他のヘルプドキュメントについては、 [Magnite ヘルプセンター](https://help.magnite.com/help).
+その他のヘルプドキュメントについては、[Magnite ヘルプセンター ](https://help.magnite.com/help) を参照してください。

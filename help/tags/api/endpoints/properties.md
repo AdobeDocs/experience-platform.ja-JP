@@ -4,7 +4,7 @@ description: Reactor API で /properties エンドポイントを呼び出す方
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1100'
 ht-degree: 99%
 
 ---
@@ -1406,7 +1406,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたプロパティの会社の詳細を返します。
+応答が成功すると、指定したプロパティの会社の詳細が返されます。
 
 ```json
 {

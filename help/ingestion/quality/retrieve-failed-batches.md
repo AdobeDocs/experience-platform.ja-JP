@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；失敗したバッチの取得；失敗したバッチ；失敗したバッチ；バッチ取得；失敗したバッチの取得；失敗したバッチの取得；失敗したバッチのダウンロード；失敗したバッチのダウンロード；
+keywords: Experience Platform；ホーム；人気のトピック；失敗したバッチの取得；失敗したバッチ；バッチ取得；バッチ取得；失敗したバッチ；失敗したバッチの取得；失敗したバッチの取得；失敗したバッチのダウンロード；失敗したバッチのダウンロード；
 solution: Experience Platform
-title: データアクセス API を使用した失敗したバッチの取得
+title: Data Access API を使用した失敗したバッチの取得
 type: Tutorial
 description: このチュートリアルでは、データ取得 API を使用して、失敗したバッチに関する情報を取得する手順を説明します。
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 80%
+source-wordcount: '643'
+ht-degree: 79%
 
 ---
 
-# データアクセス API を使用した、失敗したバッチの取得
+# Data Access API を使用した失敗したバッチの取得
 
-Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチ取り込みを使用すると、様々なファイルタイプ（CSV など）を使用してデータを挿入できます。また、ストリーミング取り込みを使用すると、データをに挿入できます。 [!DNL Platform] リアルタイムでのストリーミングエンドポイントの使用
+Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチ取り込みを使用すると、様々なファイルタイプ（CSV など）でデータを挿入でき、ストリーミング取り込みを使用すると、ストリーミングエンドポイントを使用してリアルタイムにデータを [!DNL Platform] に挿入できます。
 
-このチュートリアルでは、 [!DNL Data Ingestion] API
+このチュートリアルでは、[!DNL Data Ingestion] API を使用して、失敗したバッチに関する情報を取得する手順を説明します。
 
 ## はじめに
 
@@ -37,7 +37,7 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-のすべてのリソース [!DNL Experience Platform]( [!DNL Schema Registry]は、特定の仮想サンドボックスに分離されています。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Schema Registry] に属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -194,9 +194,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 前述の例のフローのタイムスタンプエラーと同様に、これらのエラーの原因は XDM の形式が正しくないことです。これらのエラーメッセージは、問題の性質によって異なります。その結果、特定のエラー例は表示されません。
 
-### 組織 ID がないか、無効です
+### 組織 ID が見つからないか無効です
 
-このエラーは、組織 ID がペイロードにないか、無効な場合に表示されます。
+このエラーは、組織 ID がペイロードにない場合は無効な場合に表示されます。
 
 ```json
 {

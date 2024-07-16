@@ -1,78 +1,78 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；通信；購読；データ型；データ型；
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；通信；購読；データタイプ；データタイプ；データタイプ；
 solution: Experience Platform
-title: テレコムサブスクリプションデータタイプ
-description: 通信サブスクリプションエクスペリエンスデータモデル (XDM) のデータタイプについて説明します。
+title: 通信購読データタイプ
+description: 通信購読エクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 13%
+ht-degree: 20%
 
 ---
 
-# [!UICONTROL 通信配信登録] データタイプ
+# [!UICONTROL  通信購読 ] データタイプ
 
-[!UICONTROL 通信配信登録] は、インターネット、モバイル、メディア、固定電話など、特定の通信サブスクリプションの種類の詳細を記述する標準の Experience Data Model(XDM) データ型です。
+[!UICONTROL  通信購読 ] は、特定の通信購読タイプ（インターネット、モバイル、メディア、固定電話など）の詳細を記述する標準の Experience Data Model （XDM）データタイプです。
 
 >[!NOTE]
 >
->このドキュメントでは、データタイプについて説明します。 同じ名前のフィールドグループについては、 [[!UICONTROL 通信配信登録] フィールドグループリファレンスガイド](../field-groups/profile/telecom-subscription.md).
+>このドキュメントでは、データタイプについて説明します。 同じ名前のフィールドグループについては、[[!UICONTROL Telecom Subscription] フィールドグループリファレンスガイド ](../field-groups/profile/telecom-subscription.md) を参照してください。
 >
->通信業界とは無関係なサブスクリプションタイプを記述する場合は、汎用の [[!UICONTROL 購読] データタイプ](./subscription.md) 代わりに、
+>通信業界に関係のないサブスクリプションタイプを説明している場合は、代わりに汎用 [[!UICONTROL  サブスクリプション ] データタイプ ](./subscription.md) を使用してください。
 
-![通信購読構造](../images/data-types/telecom-subscription/structure.png)
+![Telecom Subscription structure](../images/data-types/telecom-subscription/structure.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `devices` | オブジェクトの配列 | プランに関連するデバイスやアクセサリのリストを表します。 詳しくは、 [以下の節](#devices) を参照してください。 |
-| `subscriber` | [[!UICONTROL ユーザー]](./person.md) | 購読の所有者を表します。 |
-| `ID` | 文字列 | サブスクリプションインスタンスの一意の ID。 |
+| `devices` | オブジェクトの配列 | プランに関連付けられたデバイスやアクセサリのリストを表します。 各配列項目の想定される構造について詳しくは、以下の [ 節 ](#devices) を参照してください。 |
+| `subscriber` | [[!UICONTROL  人物 ]](./person.md) | サブスクリプションの所有者を表します。 |
+| `ID` | 文字列 | 購読インスタンスの一意の ID。 |
 | `billingPeriod` | 文字列 | 請求の間隔。 |
-| `billingStartDate` | 日付 | 請求期間が開始される日付。 日付形式（時刻なし）は、 [RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準。 |
-| `chargeMethod` | 文字列 | 顧客に対する請求の設定方法。 |
-| `contractID` | 文字列 | この購読を管理する契約の一意の ID。 |
-| `country` | 文字列 | サブスクリプションの契約条件および契約条件が根付いている国。 |
-| `endDate` | 日付 | 現在の購読期間が終了する日付。 日付形式（時刻なし）は、 [RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準。 |
-| `paymentDueDate` | 日付 | サブスクリプションの支払い期日。 日付形式（時刻なし）は、 [RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準。 |
+| `billingStartDate` | 日付 | 請求期間が開始される日付。 日付形式（時間なし）は、[RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準に従う必要があります。 |
+| `chargeMethod` | 文字列 | 顧客に請求するための請求書の設定方法。 |
+| `contractID` | 文字列 | このサブスクリプションに適用される契約の一意の ID。 |
+| `country` | 文字列 | サブスクリプションの契約条件および合意条件が定着している国。 |
+| `endDate` | 日付 | 現在のサブスクリプション期間が終了する日付。 日付形式（時間なし）は、[RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準に従う必要があります。 |
+| `paymentDueDate` | 日付 | サブスクリプションの支払い期日。 日付形式（時間なし）は、[RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準に従う必要があります。 |
 | `paymentMethod` | 文字列 | 定期支払の支払方法。 |
-| `paymentStatus` | 文字列 | アカウントの支払い状態。 |
-| `planName` | 文字列 | 人間が読み取り可能なサブスクリプションの名前。 |
-| `reason` | 文字列 | メンバーがサブスクリプションの使用に対して持つ一般的な目的。 |
+| `paymentStatus` | 文字列 | アカウントの支払い状況。 |
+| `planName` | 文字列 | サブスクリプションの人間が読み取れる名前。 |
+| `reason` | 文字列 | メンバーがサブスクリプションの使用に対して持っている一般的な目的。 |
 | `renew` | 文字列 | 購読が終了日後も継続するという合意された方法。 |
-| `startDate` | 日付 | サブスクリプションが開始される日付。 日付形式（時刻なし）は、 [RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準。 |
-| `status` | 文字列 | 配信登録の現在のステータス。 |
-| `subscriptionCategory` | 文字列 | このタイプのサブスクリプションの主な最上位レベルの分類。 |
-| `subscriptionSKU` | 文字列 | 購読の在庫管理単位 (SKU)。 |
-| `subscriptionSubCategory` | 文字列 | 購読の特定のサブカテゴリ。 |
-| `term` | 整数 | 購読期間の数値。 |
+| `startDate` | 日付 | サブスクリプションが開始する日付。 日付形式（時間なし）は、[RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準に従う必要があります。 |
+| `status` | 文字列 | サブスクリプションの現在のステータス。 |
+| `subscriptionCategory` | 文字列 | このタイプの購読の主なトップレベルの分類。 |
+| `subscriptionSKU` | 文字列 | サブスクリプションの最小在庫管理単位（SKU）。 |
+| `subscriptionSubCategory` | 文字列 | サブスクリプションの具体的なサブカテゴリ。 |
+| `term` | 整数 | サブスクリプション期間の数値。 |
 | `termUnitOfTime` | 文字列 | 期間の時間の単位。 |
-| `topUp` | 文字列 | 請求期間中にサブスクリプションの消耗品を再購入する方法に関して同意された条件を説明します。 |
-| `type` | 文字列 | サブスクリプションの対象となる人数に関するエンタイトルメントの範囲。 |
+| `topUp` | 文字列 | 請求期間中のサブスクリプションの消耗品要素の再購入方法に関して合意した条件を説明します。 |
+| `type` | 文字列 | サブスクリプションでカバーされる人数に関する使用権限の範囲。 |
 
 {style="table-layout:auto"}
 
-データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
+データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)
-* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.schema.json)
+* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)
+* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.schema.json)
 
 ## `devices` {#devices}
 
 `devices` はオブジェクトの配列で、各オブジェクトはサブスクリプションに関連付けられたデバイスまたはアクセサリを表します。
 
-![デバイスの配列構造](../images/data-types/telecom-subscription/devices.png)
+![ デバイスアレイ構造 ](../images/data-types/telecom-subscription/devices.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `deviceFees` | オブジェクト | ルーター、モデム、レシーバーなどの項目のデバイス料金を取り込むオブジェクト。 次のプロパティが必要です。<ul><li>`amount`：金額を `currencyCode`.</li><li>`conversionDate`：通貨換算がおこなわれた日付。</li><li>`currencyCode`: [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) 通貨コード `amount`.</li></ul> |
+| `deviceFees` | オブジェクト | ルーター、モデム、受信機など、任意のデバイス料金をキャプチャするオブジェクトです。 では、次のプロパティが必要です。<ul><li>`amount`:`currencyCode` で表される金額。</li><li>`conversionDate`：通貨換算が行われた日付。</li><li>`currencyCode`:`amount` の [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) 通貨コード。</li></ul> |
 | `ID` | 文字列 | デバイスの一意の ID。 |
 | `OS` | 文字列 | デバイスのオペレーティングシステム。 |
 | `deviceInsurance` | 文字列 | 顧客がこのデバイスの保険にオプトインしたかどうかを示します。 |
 | `manufacturer` | 文字列 | デバイスの製造元。 |
 | `name` | 文字列 | デバイスの名前。 |
-| `paymentOptions` | 文字列 | デバイスが分割払いで支払われるか、定価で支払われるかを示します。 |
-| `serialNumber` | 文字列 | デバイスのシリアル番号。 |
+| `paymentOptions` | 文字列 | デバイスが分割払いまたは定価のどちらで支払われるかを示します。 |
+| `serialNumber` | 文字列 | デバイスのシリアル番号 |
 | `status` | 文字列 | デバイスのステータス。 |
 | `storageCapacity` | 文字列 | デバイスのストレージ容量。 |
 | `type` | 文字列 | デバイスタイプ。 |

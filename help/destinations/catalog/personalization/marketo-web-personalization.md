@@ -1,12 +1,12 @@
 ---
-keywords: Marketo Web パーソナライゼーション；marketo Web パーソナライゼーション；Marketo Web パーソナライゼーション拡張機能；marketo Web パーソナライゼーション拡張機能；marketo;Marketo
+keywords: Marketo Web Personalization;Marketo Web パーソナライゼーション；Marketo Web Personalization拡張機能；Marketo web パーソナライゼーション拡張機能；Marketo;Marketo
 title: Marketo web パーソナライゼーション拡張機能
-description: Marketo Web パーソナライゼーション拡張機能は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Marketo Web Personalization拡張機能は、Adobe Experience Platformのパーソナライズ機能の提供先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 85%
+source-wordcount: '485'
+ht-degree: 76%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 85%
 
 ## 概要 {#overview}
 
-この拡張機能は、のスクリプトをデプロイします [!DNL Marketo's] Web パーソナライゼーションおよび ContentAI アプリケーション。 [!DNL Marketo] Web パーソナライゼーションは、匿名訪問者用の企業特性や、既知の訪問者用の Engagement Platform 内の幅広い行動属性など、Web 訪問者の特性を一意に識別子、コンテンツをパーソナライズします。[!DNL Marketo][!DNL Marketo] ContentAI には、B2B のお客様に固有の Web キャンペーンやメールキャンペーンで、AI を活用したレコメンデーションやパーソナライズをおこなう機能が備わっています。
+この拡張機能は、Web Personalizationおよびコンテンツ AI アプリケーション用 [!DNL Marketo's] スクリプトをデプロイします。 Web Personalization[!DNL Marketo]、コンテンツを一意に識別し、web 訪問者特性に合わせてパーソナライズします。例えば、匿名訪問者に対する firstmographics や、既知の訪問者に対する [!DNL Marketo] Engagement Platform 内の様々な行動属性などです。 [!DNL Marketo] ContentAI には、B2B の顧客に固有の、web およびメールキャンペーン用の AI を活用したレコメンデーションおよびパーソナライゼーションの機能が含まれています。
 
-[!DNL Marketo Web Personalization] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 Marketoでの Web パーソナライゼーションと ContentAI について詳しくは、 [Web パーソナライゼーションの概要](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
+[!DNL Marketo Web Personalization] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 Marketoの web パーソナライゼーションとコンテンツ AI について詳しくは、[Web Personalizationの概要 ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html) を参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 

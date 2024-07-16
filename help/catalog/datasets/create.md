@@ -6,8 +6,8 @@ description: このドキュメントでは、Adobe Experience Platform API を�
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 81%
+source-wordcount: '1302'
+ht-degree: 80%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 81%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [バッチ取得](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] では、データをバッチファイルとして取り込むことができます。
+* [ バッチ取り込み ](../../ingestion/batch-ingestion/overview.md)：データ [!DNL Experience Platform] バッチファイルとして取り込むことができます。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Platform] API
+次の節では、[!DNL Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -45,7 +45,7 @@ ht-degree: 81%
 >
 >[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、追加の `Content-Type: application/json` ヘッダーが必要です。JSON+PATCH要求の場合、 `Content-Type` は、 `application/json-patch+json`.
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、追加の `Content-Type: application/json` ヘッダーが必要です。JSON+PATCHリクエストの場合、`Content-Type` を `application/json-patch+json` にする必要があります。
 
 ## チュートリアル
 
@@ -57,9 +57,9 @@ ht-degree: 81%
 
 このチュートリアルは、[スキーマレジストリ API チュートリアル](../../xdm/tutorials/create-schema-api.md)が終わったところから始まり、チュートリアルの中で作成したロイヤルティメンバースキーマを利用します。
 
-まだ [!DNL Schema Registry] チュートリアルを開始し、必要なスキーマを構成した後で、このデータセットチュートリアルを続行してください。
+[!DNL Schema Registry] のチュートリアルをまだ完了していない場合は、まずを参照し、必要なスキーマを作成したら、このデータセットチュートリアルを続行してください。
 
-次の呼び出しを使用して、 [!DNL Schema Registry] API チュートリアル：
+次の呼び出しを使用して、[!DNL Schema Registry] API チュートリアルで作成したロイヤルティメンバースキーマを表示できます。
 
 **API 形式**
 
@@ -211,7 +211,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->このチュートリアルでは、 [Apache Parquet](https://parquet.apache.org/docs/) ファイル形式を参照してください。 JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
+>このチュートリアルでは、すべての例で [Apache Parquet](https://parquet.apache.org/docs/) ファイル形式を使用します。 JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
 
 **応答** 
 
@@ -252,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **応答** 
 
-正常な応答は、HTTP ステータス 201（作成済み）と応答オブジェクトを返します。 応答オブジェクトは、新しく作成されたバッチの ID をの形式で含む配列で構成されます `"@/batches/{BATCH_ID}"`. バッチ ID は、API 呼び出しでバッチを参照するために使用される、読み取り専用のシステム生成文字列です。
+リクエストが成功した場合は、HTTP ステータス 201 （作成済み）と応答オブジェクトが返されます。 応答オブジェクトは、新しく作成されたバッチの ID を含む配列で構成されます（形式 `"@/batches/{BATCH_ID}"`。 バッチ ID は、API 呼び出しでバッチを参照するために使用される、読み取り専用のシステム生成文字列です。
 
 ```JSON
 {
@@ -291,11 +291,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 ## ファイルのバッチへのアップロード
 
-アップロード用の新しいバッチが正常に作成されたら、特定のデータセットにファイルをアップロードできるようになりました。データセットを定義する際に、ファイル形式を Parquet に指定したことを忘れないでください。 したがって、アップロードするファイルはその形式である必要があります。
+アップロード用の新しいバッチが正常に作成されたら、特定のデータセットにファイルをアップロードできるようになりました。データセットを定義した際に、ファイル形式を Parquet と指定したことを覚えておくことが重要です。 したがって、アップロードするファイルはその形式である必要があります。
 
 >[!NOTE]
 >
-> サポートされるデータアップロードファイルの最大サイズは 512 MB です。データファイルのサイズがこれより大きい場合は、512 MB 以下のチャンクに分割し、一度に 1 つずつアップロードする必要があります。同じバッチ ID を使用して、各ファイルに対してこの手順を繰り返すことで、各ファイルを同じバッチにアップロードできます。ファイルをバッチの一部としてアップロードできる場合、数に制限はありません。
+>サポートされる最大のデータアップロードファイルは 512 MB です。 データファイルのサイズがこれより大きい場合は、512 MB 以下のチャンクに分割し、一度に 1 つずつアップロードする必要があります。同じバッチ ID を使用して、各ファイルに対してこの手順を繰り返すことで、各ファイルを同じバッチにアップロードできます。ファイルをバッチの一部としてアップロードできる場合、数に制限はありません。
 
 **API 形式**
 
@@ -326,7 +326,7 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 ## シグナルバッチ完了
 
-すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。完了を通知すると、サービスが作成されます [!DNL Catalog] `DataSetFile` アップロードされたファイルのエントリを追加し、それらを以前に生成されたバッチに関連付けます。 The [!DNL Catalog] バッチが成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータに対して使用できるようになります。
+すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。シグナリング完了を使用すると、サービスはアップロードされたファイルの [!DNL Catalog] `DataSetFile` エントリを作成し、それらを以前に生成されたバッチに関連付けます。 [!DNL Catalog] のバッチは成功とマークされ、使用可能になったデータを処理できるダウンストリームフローがトリガーになります。
 
 **API 形式**
 
@@ -353,7 +353,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 
 ## 取得の監視
 
-データのサイズに応じて、バッチ取得には様々な時間がかかります。バッチの ID をに追加することで、バッチのステータスを監視できます `GET /batches` リクエスト。
+データのサイズに応じて、バッチ取得には様々な時間がかかります。`GET /batches` リクエストにバッチの ID を追加することで、バッチのステータスを監視できます。
 
 **API 形式**
 
@@ -454,7 +454,7 @@ curl -X GET \
 
 >[!NOTE]
 >
-> 推奨されるポーリング間隔は 2 分です。
+>推奨されるポーリング間隔は 2 分です。
 
 ## データセットからのデータの読み取り
 

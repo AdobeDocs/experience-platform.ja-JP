@@ -15,7 +15,7 @@ ht-degree: 33%
 
 >[!TIP]
 >
->の使用 [Adobe Experience Platform用語集](/help/landing/glossary.md) Real-time Customer Data PlatformとAdobe Experience Platformで使用される用語を理解します。 探している用語が見つからない場合は、ページのフィードバックオプションを使用して、用語集に新しい用語を追加するようにリクエストします。
+>Real-time Customer Data PlatformおよびAdobe Experience Platformで使用される用語については ](/help/landing/glossary.md)[Adobe Experience Platform用語集 } を参照してください。 探している用語が見つからない場合は、ページのフィードバックオプションを使用して、用語集に新しい用語を追加するようにリクエストします。
 
 Experience Platformの既存の機能に対するアップデート：
 
@@ -33,7 +33,7 @@ Experience Platformの既存の機能に対するアップデート：
 
 | 機能 | 説明 |
 | --- | --- |
-| その他のアクション | 操作の柔軟性を高め、データの管理に役立つように、詳細ビューの「その他のアクション」機能を使用して、データセットに対して追加のタスクを実行できるようになりました。 選択したデータセットの詳細ページから、データセットを削除するか、リアルタイム顧客プロファイルで使用できるようにします。<br>**注意：** プロファイル取り込みに対してデータセットを有効にする場合、データセットのスキーマは、リアルタイム顧客プロファイルと互換性がある必要があります。<br>![を使用したデータセットワークスペース [!UICONTROL ...詳細] ドロップダウンメニューがハイライト表示されている。](../2024/assets/march/more-actions.png "「詳細」ドロップダウンメニューがハイライト表示されたデータセットワークスペース。"){width="100" zoomable="yes"}。<br>を読み取る [データセットユーザーガイド](../../catalog/datasets/user-guide.md) 追加情報のドキュメント。 |
+| その他のアクション | 操作の柔軟性を高め、データの管理に役立つように、詳細ビューの「その他のアクション」機能を使用して、データセットに対して追加のタスクを実行できるようになりました。 選択したデータセットの詳細ページから、データセットを削除するか、リアルタイム顧客プロファイルで使用できるようにします。<br>**メモ：** プロファイル取り込みに対してデータセットを有効にする場合、データセットのスキーマはリアルタイム顧客プロファイルと互換性がある必要があります。<br>![[!UICONTROL  を持つデータセットワークスペース詳細 ] ドロップダウンメニューがハイライト表示されている。](../2024/assets/march/more-actions.png " 詳細ドロップダウンメニューがハイライト表示されたデータセットワークスペース。"){width="100" zoomable="yes"}。詳しくは、<br> データセットユーザーガイド ](../../catalog/datasets/user-guide.md) ドキュメントを参 [ してください。 |
 
 {style="table-layout:auto"}
 
@@ -47,11 +47,11 @@ Catalog Service について詳しくは、[Catalog Service の概要](../../cat
 
 | 機能 | 説明 |
 | --- | --- |
-| Adobe Analyticsの新しいマッパー関数 | Adobe Analyticsからイベントデータを抽出するために、次の関数を使用できるようになりました。 <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> これらの関数について詳しくは、 [データ準備関数ガイド](../../data-prep/functions.md#analytics-functions) |
+| Adobe Analyticsの新しいマッパー関数 | Adobe Analyticsからイベントデータを抽出するために、次の関数を使用できるようになりました。 <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> これらの関数の詳細については、[ データ準備関数ガイド ](../../data-prep/functions.md#analytics-functions) を参照してください。 |
 
 {style="table-layout:auto"}
 
-データ準備について詳しくは、 [データ準備の概要](../../data-prep/home.md).
+データ準備について詳しくは、[ データ準備の概要 ](../../data-prep/home.md) を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -61,11 +61,11 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
-| 拡張機能 | [!DNL Merkury] タグ拡張機能 | この [[!DNL Merkury] タグ拡張機能](https://exchange.adobe.com/apps/ec/600027/merkury-tag) は、への匿名 web サイト訪問者に、業界をリードする一致率を提供します [!DNL Merkury] ID。 ブランドは、の機能を活用できます [!DNL Merkury] タグ付けおよびAdobeして、パーソナライズされた web サイトエクスペリエンスをリアルタイムで提供します。 さらに、 [!DNL Merkury] タグを使用すると、ファーストパーティのデジタルデータを、オンラインおよびオフラインの接続された顧客プロファイルと共に成長させることができます。 |
+| 拡張機能 | [!DNL Merkury] タグ拡張機能 | [[!DNL Merkury]  タグ拡張機能 ](https://exchange.adobe.com/apps/ec/600027/merkury-tag) は、[!DNL Merkury] ID に対する匿名 web サイト訪問者の一致率を業界トップクラスに高めます。 ブランドは、[!DNL Merkury] タグとAdobeの機能を活用して、パーソナライズされた web サイトエクスペリエンスをリアルタイムで提供できます。 さらに、[!DNL Merkury] タグを使用すると、ファーストパーティデジタルデータに加えて、オンラインおよびオフラインの接続された顧客プロファイルを拡張できます。 |
 
 {style="table-layout:auto"}
 
-データ収集について詳しくは、を参照してください。 [データ収集の概要](../../tags/home.md).
+データ収集について詳しくは、[ データ収集の概要 ](../../tags/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -75,10 +75,10 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 宛先 | タイプ | 説明 |
 | ----------- | --------- | ----------- |
-| [（Beta） Acxiom Data Enhancement Connection](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新規 | このコネクタを使用して、Real-Time CDPから Acxiom に対してファーストパーティ・プロファイルをアクティブ化し、データのエンリッチメントとマーケティング・チャネル全体での使用を実現します。 その後、Acxiom ソースを使用して、拡張データを含むプロファイルをインポートし、Real-Time CDPで操作できます。 |
-| [（Beta） Acxiom Prospect Suppression connection](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新規 | ファーストパーティオーディエンスを Acxiom の宛先にエクスポートして、Acxiom が既知の顧客やコンバート済み顧客を抑制できるようにします。 次に、を使用します [Acxiom prospecting データのインポート](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) ソース・コネクタ：既知のお客様またはコンバート済みのお客様を削除して、Acxiom から見込み客リストを取り込み、アクティブ化します。 |
-| [Amazon Ads 接続](../../destinations/catalog/advertising/amazon-ads.md) | 更新 | Amazon Ads のMarketing Cloudにデータを書き出す際に、Amazon DSPまたはAmazon宛先（新規）にデータをルーティングできるようになりました。 |
-| [LiveRamp オンボーディング接続](../../destinations/catalog/advertising/liveramp-onboarding.md) | 更新 | LiveRamp オンボーディング宛先で、ヨーロッパおよびオーストラリアへの配信がサポートされるようになりました [!DNL LiveRamp] [!DNL SFTP] インスタンス。 また、書き出されるファイルの最大サイズも 1,000 万行に増えました（以前は 500 万行でした）。 |
+| [ （Beta） Acxiom Data Enhancement Connection](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新規 | このコネクタを使用して、Real-Time CDPから Acxiom に対してファーストパーティ・プロファイルをアクティブ化し、データのエンリッチメントとマーケティング・チャネル全体での使用を実現します。 その後、Acxiom ソースを使用して、拡張データを含むプロファイルをインポートし、Real-Time CDPで操作できます。 |
+| [ （Beta） Acxiom Prospect Suppression connection](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新規 | ファーストパーティオーディエンスを Acxiom の宛先にエクスポートして、Acxiom が既知の顧客やコンバート済み顧客を抑制できるようにします。 次に、[Acxiom prospecting data import](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) ソース・コネクタを使用して、既知のお客様またはコンバート済みのお客様を削除した状態で、Acxiom から見込み客リストを取り込んでアクティブ化します。 |
+| [Amazon Ads 接続 ](../../destinations/catalog/advertising/amazon-ads.md) | 更新 | Amazon Ads のMarketing Cloudにデータを書き出す際に、Amazon DSPまたはAmazon宛先（新規）にデータをルーティングできるようになりました。 |
+| [LiveRamp オンボーディング接続 ](../../destinations/catalog/advertising/liveramp-onboarding.md) | 更新 | LiveRamp オンボーディングの宛先で、[!DNL SFTP] インスタンスを [!DNL LiveRamp] 用したヨーロッパおよびオーストラリアへの配信がサポートされるようになりました。 また、書き出されるファイルの最大サイズも 1,000 万行に増えました（以前は 500 万行でした）。 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| Experience Platform UI マップのデータタイプのサポート | Platform UI でマップフィールドを定義することで、エクスペリエンスデータモデル（XDM）データ構造をさらにカスタマイズできます。 スキーマエディターでマップフィールドを作成して、柔軟なデータ構造をモデル化したり、キーと値のペアを効率的に保存したりできるようになりました。 新しいフィールドを定義してサブフィールドを設定し、フィールドグループに割り当てるには、タイプ ドロップダウンから「マップ」を選択します。 サポートされるマップ値のタイプは文字列および整数です。<br>![タイプおよびマップ値タイプのフィールドがハイライト表示されたスキーマエディター。](../2024/assets/march/maps.png "タイプおよびマップ値タイプのフィールドがハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"}<br> 方法を説明します [ui でのマップフィールドの定義](../../xdm/ui/fields/map.md)、UI ガイドを参照してください。 |
+| Experience Platform UI マップのデータタイプのサポート | Platform UI でマップフィールドを定義することで、エクスペリエンスデータモデル（XDM）データ構造をさらにカスタマイズできます。 スキーマエディターでマップフィールドを作成して、柔軟なデータ構造をモデル化したり、キーと値のペアを効率的に保存したりできるようになりました。 新しいフィールドを定義してサブフィールドを設定し、フィールドグループに割り当てるには、タイプ ドロップダウンから「マップ」を選択します。 サポートされるマップ値のタイプは文字列および整数です。<br>![ タイプおよびマップ値タイプのフィールドがハイライト表示されたスキーマエディター。](../2024/assets/march/maps.png " タイプおよびマップ値タイプのフィールドがハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"}<br> UI でマップフィールドを定義 [ する方法については ](../../xdm/ui/fields/map.md) UI ガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -112,11 +112,11 @@ Platform の XDM について詳しくは、[XDM システムの概要](../../xd
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 一括アクション | オーディエンスインベントリで一括アクションがサポートされるようになりました。 一括アクションを使用すると、複数のオーディエンスをすばやく選択して、それらをフォルダーに移動、タグを適用、アクセスラベルを適用または削除できます。 <br> ![オーディエンス UI ワークスペースでの一括アクション。](../2024/assets/march/bulk-actions.png "オーディエンス UI ワークスペースでの一括アクション。"){width="100" zoomable="yes"} <br>この機能について詳しくは、 [オーディエンスポータルの概要](../../segmentation/ui/audience-portal.md#bulk-actions). |
+| 一括アクション | オーディエンスインベントリで一括アクションがサポートされるようになりました。 一括アクションを使用すると、複数のオーディエンスをすばやく選択して、それらをフォルダーに移動、タグを適用、アクセスラベルを適用または削除できます。<br> ![ オーディエンス UI ワークスペースでの一括アクション。](../2024/assets/march/bulk-actions.png " オーディエンス UI ワークスペースでの一括アクション。"){width="100" zoomable="yes"} <br> この機能について詳しくは、[Audience Portal の概要 ](../../segmentation/ui/audience-portal.md#bulk-actions) を参照してください。 |
 
 {style="table-layout:auto"}
 
-セグメント化サービスの詳細については、 [セグメント化サービスの概要](../../segmentation/home.md).
+セグメント化サービスについて詳しくは、[ セグメント化サービスの概要 ](../../segmentation/home.md) を参照してください。
 
 ## ソース {#sources}
 
@@ -126,10 +126,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | タイプ | 説明 |
 | --- | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | 新規 | の使用 [[!DNL Acxiom Data Ingestion] ソース](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) 取り込む [!DNL Acxiom] データをReal-time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化します。 その後、を使用できます [!DNL Acxiom] – の強化されたファーストパーティプロファイルにより、オーディエンスを向上させ、複数のマーケティングチャネルをまたいでアクティブ化します。 <br> ![Acxiom データ取り込みソース。](../2024/assets/march/acxiom-data-ingestion.png "新しい Acxiom データ取り込みソース。"){width="100" zoomable="yes"} <br> を読み取る [[!DNL Acxiom Data Ingestion] の概要](../../sources/connectors/data-partners/acxiom-data-ingestion.md) を開始する方法について説明します。 |
-| [!BADGE Beta]{type=Informative} [!DNL Stripe] | 新規 | の使用 [[!DNL Stripe] ソース](../../sources/connectors/payments/stripe.md) 顧客の購入フロー中に取り込んだデータをExperience Platformに取り込みます。 取り込んだら、このデータを使用して、パーソナライズされたオファーを作成し、より豊富なビジネスインサイトを活用できます。 <br> ![Stripeソース。](../2024/assets/march/stripe.png "新しいStripeソース。"){width="100" zoomable="yes"} <br> を読み取る [[!DNL Stripe] の概要](../../sources/connectors/payments/stripe.md) を開始する方法について説明します。 |
-| の UI サポート [!DNL Snowflake Streaming] | 新規 | これで、を使用できます [[!DNL Snowflake Streaming] ソース](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) Experience PlatformUI で、からデータをストリーミングするには [!DNL Snowflake] データベース。 <br> ![Snowflakeストリーミングソース。](../2024/assets/march/snowflake-streaming.png "新しいSnowflakeストリークソース。"){width="100" zoomable="yes"} <br> を読み取る [[!DNL Snowflake Streaming] の概要](../../sources/connectors/databases/snowflake-streaming.md) を開始する方法について説明します。 |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | 新規 | [[!DNL Acxiom Data Ingestion]  ソース ](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) を使用して、[!DNL Acxiom] データをReal-time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化します。 その後、エンリッチメントされ [!DNL Acxiom] ファーストパーティプロファイルを使用して、オーディエンスを向上させ、すべてのマーケティングチャネルをアクティブ化できます。<br> ![Acxiom データ取り込みソース。](../2024/assets/march/acxiom-data-ingestion.png " 新しい Acxiom データ取り込みソース。"){width="100" zoomable="yes"} <br> 始める方法については、[[!DNL Acxiom Data Ingestion]  概要 ](../../sources/connectors/data-partners/acxiom-data-ingestion.md) を参照してください。 |
+| [!BADGE Beta]{type=Informative} [!DNL Stripe] | 新規 | [[!DNL Stripe]  ソース ](../../sources/connectors/payments/stripe.md) を使用すると、顧客の購入フロー中に取り込まれたデータをExperience Platformに取り込むことができます。 取り込んだら、このデータを使用して、パーソナライズされたオファーを作成し、より豊富なビジネスインサイトを活用できます。<br> ![Stripeソース。](../2024/assets/march/stripe.png " 新しいStripeソース。"){width="100" zoomable="yes"} <br> 始める方法については、[[!DNL Stripe]  概要 ](../../sources/connectors/payments/stripe.md) を参照してください。 |
+| [!DNL Snowflake Streaming] の UI サポート | 新規 | Experience PlatformUI で [[!DNL Snowflake Streaming] source](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) を使用して、[!DNL Snowflake] データベースからデータをストリーミングできるようになりました。<br> ![Snowflakeストリーミングソース。](../2024/assets/march/snowflake-streaming.png " 新しいSnowflakeストリークソース。"){width="100" zoomable="yes"} <br> 始める方法については、[[!DNL Snowflake Streaming]  概要 ](../../sources/connectors/databases/snowflake-streaming.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
-ソースについて詳しくは、 [ソースの概要](../../sources/home.md).
+ソースについて詳しくは、[ ソースの概要 ](../../sources/home.md) を参照してください。

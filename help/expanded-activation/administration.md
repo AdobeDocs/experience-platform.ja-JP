@@ -1,13 +1,13 @@
 ---
 title: 有効化アカウント管理の拡張
 description: 拡張されたアクティベーションアカウントに対して、ライセンスの使用状況の監視や正しい権限の割り当てなどの管理タスクを実行する方法を説明します。
-source-git-commit: 5bc8d6c7173f221c2830a9b15c8ec6241e8bc59d
+exl-id: ee0ec4b9-a083-447b-b7a7-e1307e90c646
+source-git-commit: 2222e9fbf75f3082d331868f820247e0c0ce3ba2
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
 
 ---
-
 
 # アカウント管理
 
@@ -17,51 +17,51 @@ Audience Managerからオーディエンスを取り込み、ソーシャルお�
 
 ## ユーザーアカウントの作成 {#create-users}
 
-使用する前に [!DNL Audience Manager Expanded Activation]の場合、ユーザーアカウントを作成する必要があります。
+[!DNL Audience Manager Expanded Activation] を使用するには、まずユーザーアカウントを作成する必要があります。
 
-のユーザーアカウントを作成するには [!DNL Expanded Activation]のユーザー管理の手順に従います。 [Adobe Admin Console](https://helpx.adobe.com/jp/enterprise/using/manage-users-individually.html) ドキュメント。
+[!DNL Expanded Activation] のユーザーアカウントを作成するには、[Adobe Admin Console](https://helpx.adobe.com/jp/enterprise/using/manage-users-individually.html) ドキュメントのユーザーの管理の手順に従ってください。
 
 ## 権限ロールにユーザーを追加 {#permissions}
 
-ユーザーアカウントの作成後、そのユーザーアカウントをに追加する必要があります [!DNL Expanded Activation] 権限の役割（内） [!DNL Expanded Activation] ユーザーインターフェイス。
+ユーザーアカウントを作成したら、[!DNL Expanded Activation] ユーザーインターフェイスで、そのユーザーアカウントを [!DNL Expanded Activation] 権限ロールに追加する必要があります。
 
-に移動 **[!UICONTROL 管理]** -> **[!UICONTROL 権限]** -> **[!UICONTROL 役割]**&#x200B;を選択し、 **[!UICONTROL 展開されたアクティブ化の既定の役割]**.
+**[!UICONTROL 管理]**/**[!UICONTROL 権限]**/**[!UICONTROL 役割]** に移動し、「**[!UICONTROL 拡張アクティベーションのデフォルトの役割]**」を選択します。
 
-![役割ページを示す、アクティベーションユーザーインターフェイスの拡張画像。](assets/expanded-activation-role.png)
+![ 役割ページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/expanded-activation-role.png)
 
-に移動します **[!UICONTROL ユーザー]** tab キーを押して選択 **[!UICONTROL ユーザーを追加]**.
+「**[!UICONTROL ユーザー]**」タブに移動し、「**[!UICONTROL ユーザーを追加]**」を選択します。
 
-![「ユーザー」ページを示すアクティベーションのユーザーインターフェイス画像を拡張しました。](assets/add-users.png)
+![ ユーザーページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/add-users.png)
 
-使用可能なリストから新しく作成したユーザーを選択し、次のオプションを選択します **[!UICONTROL 保存]**.
+使用可能なリストから新しく作成したユーザーを選択し、「**[!UICONTROL 保存]**」を選択します。
 
-![ユーザーを追加ページを示す、アクティベーションユーザーインターフェイスの拡張画像。](assets/add-user.png)
+![ ユーザーを追加ページを示す、拡張されたアクティベーションユーザーインターフェイスの画像。](assets/add-user.png)
 
-これでユーザーアカウントが作成され、正しい役割に割り当てられました。 これで、にアクセスする準備ができました **[!UICONTROL アクティベーションの拡張]** ユーザーインターフェイス。
+これでユーザーアカウントが作成され、正しい役割に割り当てられました。 これで、**[!UICONTROL 拡張アクティベーション]** ユーザーインターフェイスにアクセスする準備が整いました。
 
 ## ライセンス使用状況の監視 {#license-usage}
 
-あなたの [!DNL Audience Manager Expanded Activation] 契約では、アカウントに取り込むことができるハッシュ化されたメールの最大数を指定します。
+[!DNL Audience Manager Expanded Activation] 契約では、アカウントに取り込むことができるハッシュ化されたメールの最大数を指定します。
 
-この情報を見つけるには、 **[!UICONTROL 管理]** -> **[!UICONTROL ライセンス使用状況]** ページ。
+この情報は、**[!UICONTROL 管理]**/**[!UICONTROL ライセンスの使用状況]** ページに移動すると確認できます。
 
-![ライセンス使用画面を示すアクティベーションユーザーインターフェイスの画像を拡張しました。](assets/license-usage.png)
+![ ライセンス使用画面を示す拡張アクティベーションユーザーインターフェイス画像。](assets/license-usage.png)
 
 このページには、次の情報が表示されます。
 
-* **[!UICONTROL 製品]**：ライセンスを取得しているAdobe。 これは常に **[!UICONTROL Audience Managerの拡張有効化]**.
-* **[!UICONTROL プライマリ指標]**：使用について追跡される指標の名前。 これは常に **[!UICONTROL アドレス可能オーディエンス]**.
-* **[!UICONTROL ライセンス量]**：取り込みのライセンスを持つ、ハッシュ化されたメールの最大数。
+* **[!UICONTROL Product]**：ライセンスを取得したAdobe。 これは常に、**[!UICONTROL Audience Managerで展開されたライセンス認証]** になります。
+* **[!UICONTROL プライマリ指標]**：使用状況について追跡されている指標の名前。 これは常に **[!UICONTROL アドレス可能なオーディエンス]** になります。
+* **[!UICONTROL ライセンス量]**：取り込みライセンスがある、ハッシュ化されたメールの最大数です。
 
   >[!TIP]
   >
-  >ハッシュ化されたメールは、 [Audience Managerソースコネクタ](../sources/connectors/adobe-applications/audience-manager.md). のドキュメントを参照してください。 [オーディエンスのアクティブ化方法](activate-audiences.md) を参照してください。
+  >[Audience Managerソースコネクタ ](../sources/connectors/adobe-applications/audience-manager.md) を介してハッシュ化されたメールを取り込みます。 詳しくは、[ オーディエンスのアクティブ化方法 ](activate-audiences.md) に関するドキュメントを参照してください。
 
-* **[!UICONTROL 使用方法]**：取り込んだハッシュ化されたメールの数。
+* **[!UICONTROL 使用状況]**：取り込んだハッシュ化されたメールの数。
 * **[!UICONTROL 使用状況 %]**：使用したライセンス量の割合。
 
-Experience Platformでのライセンス使用状況について詳しくは、 [ライセンス使用状況ドキュメント](../dashboards/guides/license-usage.md).
+Experience Platformでのライセンスの使用について詳しくは、[ ライセンスの使用に関するドキュメント ](../dashboards/guides/license-usage.md) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-展開されたアクティベーションへの適切なアクセス権を持つユーザーアカウントを少なくとも 1 つ設定したので、そのアカウントを使用して、にアクセスできます。 [オーディエンスをアクティブ化](activate-audiences.md).
+展開されたアクティベーションへの適切なアクセス権を持つユーザーアカウントを少なくとも 1 つ設定したので、そのアカウントを使用して [ オーディエンスをアクティブ化 ](activate-audiences.md) できます。

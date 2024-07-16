@@ -1,52 +1,52 @@
 ---
 title: Adobe Experience Platform Assurance の使用
-description: このガイドでは、Adobe Experience Platform Assurance をインストールして実装した後の使用方法を説明します。
+description: このガイドでは、インストールおよび実装が完了した後のAdobe Experience Platform Assurance の使用方法について説明します。
 exl-id: 872c83d1-82e8-40d8-9b66-3e51a91a955f
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform Assurance の使用
 
-このチュートリアルでは、Adobe Experience Platform Assurance の使用方法を説明します。 Adobe Experience Platform Assurance 拡張機能のインストールと実装の手順については、 [Assurance 拡張機能の実装](./implement-assurance.md).
+このチュートリアルでは、Adobe Experience Platform Assurance の使用方法について説明します。 Adobe Experience Platform Assurance 拡張機能のインストールおよび実装方法について詳しくは、[Assurance 拡張機能の実装 ](./implement-assurance.md) に関するチュートリアルを参照してください。
 
-## セッションの作成
+## セッションを作成
 
-へのログイン後、 [アシュランス UI](https://experience.adobe.com/assurance)を選択すると、 **[!UICONTROL セッションを作成]** をクリックして、セッションの作成を開始します。
+[Assurance UI](https://experience.adobe.com/assurance) にログインした後、**[!UICONTROL セッションを作成]** を選択してセッションの作成を開始できます。
 
-![「セッションを作成」ボタンがハイライト表示され、セッションを作成できる場所が示されます。](./images/using-assurance/create-session.png)
+![ 「セッションを作成」ボタンがハイライト表示され、セッションを作成できる場所が示されている様子。](./images/using-assurance/create-session.png)
 
-この **[!UICONTROL 新しいセッションを作成]** ダイアログが表示されます。 指示を確認し、次の手順に進んでください： **[!UICONTROL 開始]**.
+**[!UICONTROL 新規セッションを作成]** ダイアログが表示されます。 指示を確認し、「**[!UICONTROL 開始]**」を選択して続行してください。
 
-![Create New Session ダイアログが表示され、Assurance の使用方法に関する手順が示されます。](./images/using-assurance/create-new-session.png)
+![ 新規セッションの作成ダイアログが表示され、Assurance の使用方法が示されます。](./images/using-assurance/create-new-session.png)
 
-セッションを識別する名前を入力し、 **[!UICONTROL ベース URL]** （アプリのディープリンク URL）。 これらの詳細を入力した後、 **[!UICONTROL 次へ]**.
+セッションを識別する名前を入力し、**[!UICONTROL ベース URL]** （アプリのディープリンク URL）を指定できるようになりました。 これらの詳細を入力したら、「**[!UICONTROL 次へ]**」を選択します。
 
 >[!INFO]
 >
->ベース URL は、URL からアプリを起動するために使用されるルート定義です。 セッション URL は、アシュランスセッションを開始するために生成されます。 値の例を次に示します。 `myapp://default` 内 **[!UICONTROL ベース URL]** 「 」フィールドに、アプリのベースディープリンク定義を入力します。
+>ベース URL は、URL からアプリを起動するために使用されるルート定義です。 セッション URL は、アシュランスセッションを開始するために生成されます。 値の例は次のようになります。`myapp://default` **[!UICONTROL ベース URL]** フィールドに、アプリのベースのディープリンク定義を入力します。
 
-![新しいセッションを作成するための完全なワークフローが表示されます。](./images/using-assurance/create-session.gif)
+![ 新しいセッションの作成に関する完全なワークフローが表示されます。](./images/using-assurance/create-session.gif)
 
-## セッションに接続
+## セッションへの接続
 
-セッションを作成した後、必ず **[!UICONTROL 新しいセッションを作成]** ダイアログに、リンク、QR コード、PIN が表示されます。
+セッションを作成したら、**[!UICONTROL 新しいセッションを作成]** ダイアログに、リンク、QR コード、PIN が表示されます。
 
-![アシュランスセッションに接続するためのオプションを示すダイアログが表示されます。](./images/using-assurance/create-new-session-pin.png)
+![Assurance セッションへの接続オプションを示すダイアログが表示されます。](./images/using-assurance/create-new-session-pin.png)
 
-このダイアログが表示された場合は、デバイスのカメラアプリを使用して QR コードをスキャンし、アプリを開くか、リンクをコピーしてアプリで開くことができます。 アプリが起動すると、PIN エントリ画面がオーバーレイ表示されます。 前の手順の PIN を入力し、を押します。 **[!UICONTROL 接続]**.
+このダイアログが表示された場合は、デバイスのカメラアプリを使用して QR コードをスキャンし、アプリを開くか、リンクをコピーしてアプリで開くことができます。 アプリが起動すると、PIN 入力画面がオーバーレイ表示されます。 前の手順で入力した PIN を入力し、**[!UICONTROL 接続]** キーを押します。
 
-Adobe Experience Platformアイコン ( 赤いAdobe「A」) がアプリに表示されている場合、アプリがアシュランスに接続されていることを確認できます。
+Adobe Experience Platformアイコン（赤Adobe「A」）がアプリに表示されると、アプリが Assurance に接続されていることを確認できます。
 
-![アプリケーションをアシュランスセッションに接続するための完全なワークフローが表示されます。](./images/using-assurance/connect-session.gif)
+![ アプリケーションをアシュランスセッションに接続する完全なワークフローが表示されます。](./images/using-assurance/connect-session.gif)
 
 ## セッションのエクスポート
 
-アシュランスセッションを書き出すには、アプリのセッションの詳細ページで、 **[!UICONTROL JSON に書き出し]** セッション内：
+Assurance セッションを書き出すには、アプリのセッションの詳細ページで、セッションの「**[!UICONTROL JSON に書き出し]**」を選択します。
 
-![セッションのエクスポート](./images/using-assurance/export-session.png)
+![ セッションのエクスポート ](./images/using-assurance/export-session.png)
 
-書き出しオプションは、検索フィルター結果に従い、イベントビューに表示されたイベントのみを書き出します。 例えば、「track」イベントを検索し、「 **[!UICONTROL JSON に書き出し]**&#x200B;に設定すると、「track」イベントの結果のみが書き出されます。
+書き出しオプションは、検索フィルターの結果に従い、イベント表示に表示されるイベントのみを書き出します。 例えば、「トラック」イベントを検索してから「JSON に書き出し **[!UICONTROL を選択すると、「トラック」イベントの結果のみ]** 書き出されます。

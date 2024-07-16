@@ -15,7 +15,7 @@ ht-degree: 48%
 
 Adobe Experience Platformのドキュメントは複数の言語で利用できます。
 
-ドキュメントの言語を変更するには、上部のナビゲーションで言語アイコンを選択します。
+ドキュメントの表示言語を変更するには、上部ナビゲーションの「言語」アイコンを選択します。
 
 ![](../images/overview/documentation-language.png)
 

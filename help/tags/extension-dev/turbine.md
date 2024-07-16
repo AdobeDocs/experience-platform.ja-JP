@@ -112,7 +112,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-ログユーティリティは、コンソールにメッセージを記録するために使用します。ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). 別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド `_satellite.setDebug(true)` を実行できます。ロガーには次のメソッドがあります。
+ログユーティリティは、コンソールにメッセージを記録するために使用します。ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) を使用することをお勧めします。 別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド `_satellite.setDebug(true)` を実行できます。ロガーには次のメソッドがあります。
 
 * `logger.log(message: string)`：コンソールにメッセージを記録します。
 * `logger.info(message: string)`：コンソールに情報メッセージを記録します。

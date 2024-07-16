@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API
-title: エンティティ（プロファイルアクセス）API エンドポイント
+title: エンティティ（プロファイルアクセス） API エンドポイント
 type: Documentation
-description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、プロファイル API を使用してエンティティ（より一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
+description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、Profile API を使用してエンティティ（一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,9 +12,9 @@ ht-degree: 89%
 
 ---
 
-# エンティティエンドポイント（プロファイルアクセス）
+# エンティティエンドポイント （プロファイルアクセス）
 
-Adobe Experience Platformを使用すると、 [!DNL Real-Time Customer Profile] RESTful API またはユーザーインターフェイスを使用するデータ。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。を使用したプロファイルへのアクセスに関する詳細 [!DNL Platform] UI については、 [プロファイルユーザーガイド](../ui/user-guide.md).
+Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
 
 ## はじめに
 
@@ -22,7 +22,7 @@ Adobe Experience Platformを使用すると、 [!DNL Real-Time Customer Profile]
 
 ## ID によるプロファイルデータへのアクセス
 
-次の項目にアクセスすると、 [!DNL Profile] エンティティに対してGETリクエストを行う `/access/entities` エンドポイントを作成し、一連のクエリパラメーターとしてエンティティの id を指定することができます。 この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
+[!DNL Profile] エンドポイントに対してGETリクエストを実行し、エンティティの ID を一連のクエリパラメーターとして指定することで、`/access/entities` エンティティにアクセスできます。 この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
 
 クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -769,7 +769,7 @@ curl -X POST \
 
 この例の応答では、最初にリストされたプロファイル（「GkouAW-yD9aoRCPhRYROJ-TetAFW」）が `_links.next.payload` の値を提供します。つまり、このプロファイルの結果には他のページが含まれます。その他の結果へのアクセス方法について詳しくは、次の「[その他の結果へのアクセス](#access-additional-results)」の節を参照してください。
 
-### その他の結果へのアクセス {#access-additional-results}
+### 追加の結果へのアクセス {#access-additional-results}
 
 時系列のイベントを取得すると、多くの結果が返される場合があるので、結果はページ付けされることがよくあります。特定のプロファイルの結果の後続のページがある場合、そのプロファイルの `_links.next.payload` 値にはペイロードオブジェクトが含まれます。
 
@@ -777,7 +777,7 @@ curl -X POST \
 
 ## 複数スキーマエンティティの時系列イベントへのアクセス
 
-関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、 [!DNL Schema Registry] API 開発者ガイド [記述子エンドポイントガイド](../../xdm/api/descriptors.md).
+関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、[!DNL Schema Registry] API 開発者ガイド [ 記述子エンドポイントガイド ](../../xdm/api/descriptors.md) を参照してください。
 
 リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -887,11 +887,11 @@ curl -X GET \
 
 ## 次の手順
 
-このガイドに従うことで、次にアクセスできました： [!DNL Real-Time Customer Profile] データフィールド、プロファイル、時系列データ。 に保存されている他のデータリソースにアクセスする方法を学ぶには [!DNL Platform]を参照し、 [データアクセスの概要](../../data-access/home.md).
+このガイドに従うと、[!DNL Real-Time Customer Profile] のデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 [!DNL Platform] に保存されている他のデータリソースにアクセスする方法については、[ データアクセスの概要 ](../../data-access/home.md) を参照してください。
 
 ## 付録 {#appendix}
 
-次の節では、へのアクセスに関する補足情報を示します [!DNL Profile] データを取得することができます。
+次の節では、API を使用した [!DNL Profile] データへのアクセスに関する補足情報を提供します。
 
 ### クエリパラメーター {#query-parameters}
 
@@ -911,5 +911,5 @@ curl -X GET \
 | `startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 | `startTime=1539838505` |
 | `endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 | `endTime=1539838510` |
 | `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 | `limit=100` |
-| `property` | プロパティの値でフィルターします。 次の評価演算子をサポートします： =, !=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大 3 つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `property` | プロパティ値でフィルタリングします。 次のエバリュエーターをサポートしています：=、!=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大 3 つのプロパティをサポートしています。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 | `withCA=true` |

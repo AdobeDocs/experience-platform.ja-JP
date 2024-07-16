@@ -4,7 +4,7 @@ title: 宛先サーバー設定の削除
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '330'
 ht-degree: 100%
 
 ---

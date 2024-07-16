@@ -1,24 +1,24 @@
 ---
-title: フローサービス API を使用して、Pinterest Ads のソース接続とデータフローを作成する
-description: フローサービス API を使用してAdobe Experience PlatformをPinterest広告に接続する方法を説明します。
+title: Flow Service API を使用したPinterest Ads のソース接続とデータフローの作成
+description: Flow Service API を使用してAdobe Experience PlatformをPinterest Ads に接続する方法について説明します。
 badge: ベータ版
 hide: true
 hidefromtoc: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 60%
+source-wordcount: '2265'
+ht-degree: 59%
 
 ---
 
-# のソース接続とデータフローの作成 [!DNL Pinterest Ads] の使用 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Pinterest Ads] のソース接続とデータフローの作成
 
 >[!NOTE]
 >
->[!DNL Pinterest Ads] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Pinterest Ads] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-次のチュートリアルでは、 [!DNL Pinterest Ads] 取り込むソース接続とデータフロー [[!DNL Pinterest Ads]](https://ads.pinterest.com/) Adobe Experience Platformに [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+以下のチュートリアルでは、[!DNL Pinterest Ads] ソース接続とデータフローを作成し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してAdobe Experience Platformにデータを取り [[!DNL Pinterest Ads]](https://ads.pinterest.com/) む手順を詳しく説明します。
 
 ## はじめに {#getting-started}
 
@@ -27,27 +27,27 @@ ht-degree: 60%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Pinterest Ads] の使用 [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Pinterest Ads] ています。
 
 ### 前提条件 {#prerequisites}
 
-接続するには [!DNL Pinterest Ads] をExperience Platformするには、次の接続プロパティの値を指定する必要があります。
+[!DNL Pinterest Ads] をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
-* The [!DNL Pinterest] `accessToken`.
-* The [!DNL Pinterest] `adAccountId`.
-* 次のいずれか [!DNL Pinterest] `campaign`, `adGroup` または `ad` 必要に応じて ID を設定します。
+* [!DNL Pinterest]`accessToken`。
+* [!DNL Pinterest]`adAccountId`。
+* 必要 [!DNL Pinterest] 応じて、`campaign`、`adGroup`、`ad` のいずれかの ID。
 
-これらの接続プロパティの詳細については、 [[!DNL Pinterest Ads] 概要](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
+これらの接続プロパティについて詳しくは、[[!DNL Pinterest Ads]  概要 ](../../../../connectors/advertising/pinterest-ads.md#prerequisites) を参照してください。
 
-## 接続 [!DNL Pinterest Ads] を使用して Platform に [!DNL Flow Service] API {#connect-platform-to-flow-api}
+## [!DNL Flow Service] API を使用した [!DNL Pinterest Ads] の Platform への接続 {#connect-platform-to-flow-api}
 
-次に、接続のために実行する手順の概要を示します [!DNL Pinterest Ads] をExperience Platformに追加します。
+[!DNL Pinterest Ads] をExperience Platformに接続するために実行する手順の概要を次に示します。
 
 ### ベース接続の作成 {#base-connection}
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、 `/connections` エンドポイントを [!DNL Pinterest Ads] 認証資格情報をリクエスト本文の一部として使用します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、その際にリクエスト本文の一部として [!DNL Pinterest Ads] 認証資格情報を指定します。
 
 **API 形式**
 
@@ -85,10 +85,10 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
-| `description` | ベース接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
+| `description` | 含めることでベース接続に関する詳細情報を提供できるオプションの値です。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
-| `auth.params.accessToken` | 次を含む [!DNL Pinterest] ソースの認証にはアクセストークンの値が必要です。 |
+| `auth.params.accessToken` | ソースの認証に必要な [!DNL Pinterest] アクセストークンの値が含まれます。 |
 
 **応答**
 
@@ -103,7 +103,8 @@ curl -X POST \
 
 ### ソースを参照 {#explore}
 
-前の手順で生成したベース接続 ID を使用することで、GET リクエストを実行してファイルとディレクトリを調べることができます。次の呼び出しを使用して、Platform に取り込むファイルのパスを見つけます。
+前の手順で生成したベース接続 ID を使用すると、GETリクエストを実行してファイルとディレクトリを調べることができます。
+次の呼び出しを使用して、Platform に取り込むファイルのパスを検索します。
 
 **API 形式**
 
@@ -117,13 +118,13 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
-| `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常にに設定されています。 `rest`. |
+| `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常に `rest` に設定されています。 |
 | `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 |
-| `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、 `json` は、サポートされている唯一のファイルタイプです。 |
+| `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、サポートされているファイルタイプは `json` のみです。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
 | `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、`{"ad_account_id":"{PINTEREST_AD_ACCOUNT_ID}","object_ids":"{COMMA_SEPERATED_OBJECT_IDS}","object_type":"{OBJECT_TYPE}}"}` 文字列全体を base64 にエンコードする必要があります。 |
 
-[!DNL Pinterest Ads] 複数の [!DNL Pinterest] Analytics API エンドポイント。 送信するリクエストを活用するオブジェクトのタイプに応じて、次のようになります。
+[!DNL Pinterest Ads] では、複数の [!DNL Pinterest] Analytics API エンドポイントをサポートしています。 送信するリクエストを活用しているオブジェクトタイプに応じて、次のリクエストを行います。
 
 **リクエスト**
 
@@ -131,7 +132,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 
 >[!TAB キャンペーン]
 
-の場合 [!DNL Pinterest Ads]（Campaign Analytics API を活用する場合）、 `{SOURCE_PARAMS}` が `{"ad_account_id":"123456789000","object_ids":"000123456789","object_type":"campaigns"}`. base64 でエンコードされた場合、はと同じ値になります。 `YHsiYWRfYWNjb3VudF9pZCI6IjEyMzQ1Njc4OTAwMCIsIm9iamVjdF9pZHMiOiIwMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImNhbXBhaWducyJ9` 以下に示すように。
+[!DNL Pinterest Ads] えば、Campaign Analytics API を利用する場合、`{SOURCE_PARAMS}` の値は `{"ad_account_id":"123456789000","object_ids":"000123456789","object_type":"campaigns"}` として渡されます。 base64 でエンコードされた場合、次に示すように、`YHsiYWRfYWNjb3VudF9pZCI6IjEyMzQ1Njc4OTAwMCIsIm9iamVjdF9pZHMiOiIwMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImNhbXBhaWducyJ9` と等しくなります。
 
 ```shell
 curl -X GET \
@@ -142,9 +143,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
->[!TAB 広告グループ]
+>[!TAB  広告グループ ]
 
-の場合 [!DNL Pinterest Ads]（広告グループ分析 API を活用する場合）、 `{SOURCE_PARAMS}` が `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}`. base64 でエンコードされる場合、はと同じ値になります。 `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` 以下に示すように。
+[!DNL Pinterest Ads] えば、広告グループ分析 API を利用する場合、`{SOURCE_PARAMS}` の値は `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}` として渡されます。 base64 でエンコードされた場合、次に示すように、`eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` と等しくなります。
 
 ```shell
 curl -X GET \
@@ -157,7 +158,7 @@ curl -X GET \
 
 >[!TAB 広告]
 
-の場合 [!DNL Pinterest Ads]（ Ads Analytics API を活用する場合）、 `{SOURCE_PARAMS}` が `{"ad_account_id":"123456789000","object_ids":"687247811001,687247811002,687247815005,687247834765","object_type":"ads"}`. base64 でエンコードされる場合、はと同じ値になります。 `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjY4NzI0NzgxMTAwMSw2ODcyNDc4MTEwMDIsNjg3MjQ3ODE1MDA1LDY4NzI0NzgzNDc2NSIsIm9iamVjdF90eXBlIjoiYWRzIn0=` 以下に示すように。
+[!DNL Pinterest Ads] えば、Ads Analytics API を利用する場合、`{SOURCE_PARAMS}` の値は `{"ad_account_id":"123456789000","object_ids":"687247811001,687247811002,687247815005,687247834765","object_type":"ads"}` として渡されます。 base64 でエンコードされた場合、次に示すように、`eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjY4NzI0NzgxMTAwMSw2ODcyNDc4MTEwMDIsNjg3MjQ3ODE1MDA1LDY4NzI0NzgzNDc2NSIsIm9iamVjdF90eXBlIjoiYWRzIn0=` と等しくなります。
 
 ```shell
 curl -X GET \
@@ -174,13 +175,13 @@ curl -X GET \
 
 >[!NOTE]
 >
->一部のレコードが切り捨てられ、プレゼンテーションの質が向上しました。
+>プレゼンテーションを向上させるために、一部のレコードが切り捨てられました。
 
 >[!BEGINTABS]
 
 >[!TAB キャンペーン]
 
-正常な応答は、対応する [!DNL Pinterest Ads] 呼び出した API。
+応答が成功すると、呼び出された対応する [!DNL Pinterest Ads] API のデータ構造が返されます。
 
 ```json
 {
@@ -247,7 +248,7 @@ curl -X GET \
 }
 ```
 
->[!TAB 広告グループ]
+>[!TAB  広告グループ ]
 
 ```json
 {
@@ -448,7 +449,7 @@ POST /sourceConnections
 
 **リクエスト**
 
-The [!DNL Pinterest Ads] ソースは複数の [!DNL Pinterest] Analytics API エンドポイント。 次のリクエストを利用するオブジェクトの種類に応じて、ソース接続が作成されます。
+[!DNL Pinterest Ads] ソースは、複数の [!DNL Pinterest] Analytics API エンドポイントをサポートしています。 活用しているオブジェクトタイプに応じて、次のリクエストでソース接続が作成されます。
 
 >[!BEGINTABS]
 
@@ -488,11 +489,11 @@ curl -X POST \
 | `baseConnectionId` | [!DNL Pinterest Ads] のベース接続 ID。この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
 | `data.format` | 取り込む [!DNL Pinterest Ads] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `params.ad_account_id` | The [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | を [!DNL Pinterest] Campaign Analytics API エンドポイントが必要です。値は次のようになります。 `campaigns`. |
-| `params.object_ids` | のコンマ区切りリスト [!DNL Pinterest] キャンペーン ID。 |
+| `params.ad_account_id` | [!DNL Pinterest]`Ad account ID`。 |
+| `params.object_type` | [!DNL Pinterest] Campaign Analytics API エンドポイントが必要なので、値は `campaigns` になります。 |
+| `params.object_ids` | キャンペーン ID のコンマ区切 [!DNL Pinterest] リスト。 |
 
->[!TAB 広告グループ]
+>[!TAB  広告グループ ]
 
 ```shell
 curl -X POST \
@@ -528,9 +529,9 @@ curl -X POST \
 | `baseConnectionId` | [!DNL Pinterest Ads] のベース接続 ID。この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
 | `data.format` | 取り込む [!DNL Pinterest Ads] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `params.ad_account_id` | The [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | を [!DNL Pinterest] 広告グループ Analytics API エンドポイントが必要です。値は次のようになります。 `ad_groups`. |
-| `params.object_ids` | のコンマ区切りリスト [!DNL Pinterest] 広告グループ ID。 |
+| `params.ad_account_id` | [!DNL Pinterest]`Ad account ID`。 |
+| `params.object_type` | [!DNL Pinterest] Ad Groups Analytics API エンドポイントが必要なので、値は `ad_groups` になります。 |
+| `params.object_ids` | 広告グループ ID のコンマ区切 [!DNL Pinterest] リスト。 |
 
 >[!TAB 広告]
 
@@ -568,9 +569,9 @@ curl -X POST \
 | `baseConnectionId` | [!DNL Pinterest Ads] のベース接続 ID。この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
 | `data.format` | 取り込む [!DNL Pinterest Ads] データの形式。現在、サポートされているデータ形式は `json` のみです。 |
-| `params.ad_account_id` | The [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | を [!DNL Pinterest] Ad Analytics API エンドポイントが必要です。値は次のようになります。 `ads`. |
-| `params.object_ids` | のコンマ区切りリスト [!DNL Pinterest] 広告 ID。 |
+| `params.ad_account_id` | [!DNL Pinterest]`Ad account ID`。 |
+| `params.object_type` | [!DNL Pinterest] Ad Analytics API エンドポイントが必要なので、値は `ads` になります。 |
+| `params.object_ids` | [!DNL Pinterest] 広告 ID のコンマ区切りリスト。 |
 
 >[!ENDTABS]
 
@@ -601,9 +602,9 @@ curl -X POST \
 
 ### ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込んだデータの保存先への接続を表します。 ターゲット接続を作成するには、データレイクに対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続は、取り込まれたデータが保存される宛先への接続を表します。 ターゲット接続を作成するには、データレイクに対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
-これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様 ID の一意の識別子が得られました。 これらの識別子を使用すると、受信ソースデータを格納するデータセットを指定する [!DNL Flow Service] API を使用して、ターゲット接続を作成することができます。
+これで、一意の識別子、ターゲットスキーマ、ターゲットデータセット、およびデータレイクに対する接続仕様 ID が得られました。 これらの識別子を使用すると、受信ソースデータを格納するデータセットを指定する [!DNL Flow Service] API を使用して、ターゲット接続を作成することができます。
 
 **API 形式**
 
@@ -660,7 +661,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、次に対してPOSTリクエストを実行する [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これを実現するには、リクエストペイロード内で定義されたデータマッピングを使用して、[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) に対してPOSTリクエストを実行します。
 
 **API 形式**
 
@@ -757,7 +758,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `outputSchema.schemaRef.id` | 以前の手順で生成された[ターゲット XDM スキーマ](#target-schema)の ID。 |
-| `mappings.sourceType` | マッピングするソース属性タイプ。 |
+| `mappings.sourceType` | マッピングされるソース属性タイプ。 |
 | `mappings.source` | 宛先 XDM パスにマッピングする必要があるソース属性。 |
 | `mappings.destination` | ソース属性がマッピングされている宛先 XDM パス。 |
 
@@ -778,7 +779,7 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-からデータを取り込むための最後の手順 [!DNL Pinterest Ads] を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
+[!DNL Pinterest Ads] から Platform にデータを取り込むための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -786,7 +787,7 @@ curl -X POST \
 
 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。間隔の値は、2 つの連続した取り込み間隔を指定します。ただし、1 回限りの取り込みを作成する場合は、間隔を設定する必要はありません。 それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。インターバルの値は、2 つの連続した取り込みの間隔を指定しますが、1 回のみの取り込みを作成する場合は、インターバルを設定する必要はありません。 それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
 
 **API 形式**
 
@@ -836,7 +837,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | データフローの名前。データフローの情報を検索する際に使用できるので、データフローはわかりやすい名前にしてください。 |
-| `description` | データフローの詳細を指定するために含めることができるオプションの値です。 |
+| `description` | データフローの詳細を提供するために含めることができるオプションの値です。 |
 | `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。この修正済み ID は `6499120c-0b15-42dc-936e-847ea3c24d72` です。 |
 | `flowSpec.version` | フロー仕様 ID の対応するバージョン。この値のデフォルトは `1.0` です。 |
 | `sourceConnectionIds` | 以前の手順で生成された[ソース接続 ID](#source-connection)。 |
@@ -862,24 +863,24 @@ curl -X POST \
 
 ## 付録 {#appendix}
 
-次の節では、データフローを監視、更新、削除する手順について説明します。
+次の節では、データフローの監視、更新、削除を行う手順について説明します。
 
 ### データフローの監視 {#monitor-dataflow}
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。API の完全な例については、 [API を使用したソースデータフローの監視](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html) に関するガイドを参照してください。
 
 ### データフローの更新 {#update-dataflow}
 
-に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` の終点 [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+データフローの ID を指定しながら API の `/flows` エンドポイントにPATCHリクエストを実行することで、名前や説明、実行スケジュールや関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新できます。 データフローをリクエストする場合は、PATCHの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html) に関するガイドを参照してください
 
 ### アカウントを更新 {#update-account}
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+ベースPATCHID をクエリパラメーターとして指定して [!DNL Flow Service] API に接続リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCHリクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html) に関するガイドを参照してください。
 
 ### データフローの削除 {#delete-dataflow}
 
-に対してDELETEリクエストを実行して、データフローを削除する [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETEリクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html) に関するガイドを参照してください。
 
 ### アカウントを削除 {#delete-account}
 
-アカウントを削除するには、 [!DNL Flow Service] 削除するアカウントのベース接続 ID を指定する際の API。 API の完全な例については、 [API を使用したソースアカウントの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+削除するアカウントのベースDELETEID を指定したうえで、[!DNL Flow Service] API に接続リクエストを実行してアカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html) に関するガイドを参照してください。

@@ -180,7 +180,7 @@ ht-degree: 97%
          * [概要](./extensions/client/marketo/overview.md)
          * [リリースノート](./extensions/client/marketo/release-notes.md)
       * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [Merkury タグ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury タグ ](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [概要](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -249,7 +249,7 @@ ht-degree: 97%
          * [概要](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [概要](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] Web イベント API {#tiktok}
+      * [!DNL Tiktok] Web Events API {#tiktok}
          * [概要](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [概要](./extensions/server/tradedesk/overview.md)

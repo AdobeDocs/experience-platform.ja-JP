@@ -4,7 +4,7 @@ title: バッチ設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1052'
 ht-degree: 96%
 
 ---
@@ -22,7 +22,7 @@ Destination SDK でファイルベースの宛先を作成する場合、デフ�
 
 バッチ設定は、ファイルベースの宛先に対する宛先設定の一部です。
 
-Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介してファイル名および書き出しスケジュールを設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -115,7 +115,7 @@ Destination SDKを使用して作成された統合で、このコンポーネ�
 | `DESTINATION` | [!UICONTROL 宛先] | UI の宛先名。 | Amazon S3 |
 | `SEGMENT_ID` | [!UICONTROL セグメント ID] | 一意の、Platform で生成されたオーディエンス ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL セグメント名] | ユーザー定義のオーディエンス名 | VIP subscriber |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL 宛先 ID] | 一意の、宛先インスタンスの Platform で生成された ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL 宛先 ID] | 一意の、宛先インスタンスの Platform で生成された ID | 77b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL 宛先名] | 宛先インスタンスのユーザー定義の名前。 | My 2022 Advertising Destination |
 | `ORGANIZATION_NAME` | [!UICONTROL 組織名] | Adobe Experience Platform でのお客様の組織の名前。 | My Organization Name |
 | `SANDBOX_NAME` | [!UICONTROL サンドボックス名] | 顧客によって使用されるサンドボックスの名前。 | prod |

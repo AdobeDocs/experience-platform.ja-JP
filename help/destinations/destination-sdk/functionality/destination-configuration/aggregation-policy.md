@@ -4,7 +4,7 @@ title: 集計ポリシー
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1006'
 ht-degree: 96%
 
 ---
@@ -17,7 +17,7 @@ API エンドポイントにデータを書き出す際に最大の効率を確�
 
 Destination SDK を使用してリアルタイム（ストリーミング）宛先を作成する際に、書き出されたプロファイルを結果の書き出しにどのように組み合わせるかを設定できます。この動作は、集計ポリシー設定によって決まります。
 
-Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したストリーミング先の設定](../../guides/configure-destination-instructions.md#create-destination-configuration).
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 ](../../guides/configure-destination-instructions.md#create-destination-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介して集計ポリシー設定を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

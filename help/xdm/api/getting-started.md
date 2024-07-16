@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；
+keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；
 solution: Experience Platform
-title: スキーマレジストリ API の概要
-description: このドキュメントでは、スキーマレジストリ API を呼び出す前に知っておく必要があるコア概念の概要を示します。
+title: Schema Registry API の概要
+description: このドキュメントでは、スキーマレジストリ API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1350'
-ht-degree: 45%
+source-wordcount: '1345'
+ht-degree: 42%
 
 ---
 
 # [!DNL Schema Registry] API の概要
 
-この [!DNL Schema Registry] API を使用すると、様々な Experience Data Model(XDM) リソースを作成および管理できます。 このドキュメントでは、[!DNL Schema Registry] API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
+[!DNL Schema Registry] API を使用すると、様々な Experience Data Model （XDM）リソースを作成および管理できます。 このドキュメントでは、[!DNL Schema Registry] API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 
 ## 前提条件
 
-開発者ガイドを使用するには、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
+この開発者ガイドを使用するには、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの基本的な構成要素について説明します。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-XDM では、JSON スキーマの形式を使用して、取り込んだ顧客体験データの構造を記述し、検証します。 したがって、 [公式の JSON スキーマドキュメント](https://json-schema.org/) この基盤となる技術をより深く理解するために
+XDM は、JSON スキーマ形式を使用して、取り込んだ顧客体験データの構造を記述および検証します。 したがって、この基盤となるテクノロジーをより深く理解するために、[ 公式の JSON スキーマのドキュメント ](https://json-schema.org/) を確認することを強くお勧めします。
 
 ## API 呼び出し例の読み取り
 
@@ -38,23 +38,23 @@ XDM では、JSON スキーマの形式を使用して、取り込んだ顧客�
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-のすべてのリソース [!DNL Experience Platform]( [!DNL Schema Registry]は、特定の仮想サンドボックスに分離されています。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Schema Registry] に属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->でのサンドボックスについて詳しくは、 [!DNL Platform]を参照し、 [サンドボックスドキュメント](../../sandboxes/home.md).
+>[!DNL Platform] のサンドボックスについて詳しくは、[ サンドボックスのドキュメント ](../../sandboxes/home.md) を参照してください。
 
-に対するすべての検索 (GET) リクエスト [!DNL Schema Registry] 追加の `Accept` ヘッダー。この値は、API から返される情報の形式を決定します。 詳しくは、この後の [Accept ヘッダー](#accept)の節を参照してください。
+[!DNL Schema Registry] へのすべての参照（GET）リクエストには、追加の `Accept` ヘッダーが必要です。このヘッダーの値によって、API から返される情報の形式が決まります。 詳しくは、この後の [Accept ヘッダー](#accept)の節を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 * `Content-Type: application/json`
 
-## 使用する TENANT_ID {#know-your-tenant_id}
+## Tenant_ID を把握する {#know-your-tenant_id}
 
-API ガイド全体を通して、 `TENANT_ID`. この ID は、作成したリソースの名前空間が適切に付けられ、組織内に含まれるようにするために使用されます。 ID が不明な場合は、次の GET リクエストを実行して ID にアクセスします。
+API ガイド全体を通して、`TENANT_ID` への参照を確認できます。 この ID は、作成したリソースの名前空間が適切に設定され、組織内に格納されていることを確認するために使用されます。 ID が不明な場合は、次の GET リクエストを実行して ID にアクセスします。
 
 **API 形式**
 
@@ -75,7 +75,7 @@ curl -X GET \
 
 **応答**
 
-成功時の応答は、組織の [!DNL Schema Registry]. この中には `TENANT_ID` の値である `tenantId` 属性が含まれています。
+応答が成功すると、組織での [!DNL Schema Registry] の使用に関する情報が返されます。 この中には `TENANT_ID` の値である `tenantId` 属性が含まれています。
 
 ```JSON
 {
@@ -152,15 +152,15 @@ curl -X GET \
  }
 ```
 
-## `CONTAINER_ID` について  {#container}
+## `CONTAINER_ID` について {#container}
 
-への呼び出し [!DNL Schema Registry] API では `CONTAINER_ID`. API 呼び出しを実行できるコンテナは 2 つあります。の `global` コンテナと `tenant` コンテナ。
+[!DNL Schema Registry] API の呼び出しには、`CONTAINER_ID` を使用する必要があります。 API 呼び出しを実行できるコンテナには、`global` コンテナと `tenant` コンテナの 2 つがあります。
 
 ### グローバルコンテナ
 
-この `global` コンテナにはすべての標準Adobeと [!DNL Experience Platform] パートナーが提供したクラス、スキーマフィールドグループ、データタイプ、スキーマ。 リストリクエストと参照 (GET) リクエストは、 `global` コンテナ。
+`global` コンテナには、すべての標準Adobeと、パートナー提供のクラス、スキーマフィールドグループ、データタイプおよびスキーマが [!DNL Experience Platform] まれます。 リストおよびルックアップ（GET）リクエストは、`global` コンテナに対してのみ実行できます。
 
-を使用する呼び出しの例 `global` コンテナは次のようになります。
+`global` コンテナを使用する呼び出しの例は、次のようになります。
 
 ```http
 GET /global/classes
@@ -168,19 +168,19 @@ GET /global/classes
 
 ### テナントコンテナ
 
-ユニークな `TENANT_ID`、 `tenant` コンテナには、組織で定義されたすべてのクラス、フィールドグループ、データ型、スキーマ、および記述子が格納されます。 これらは各組織に固有のもので、他の組織では表示も管理もできません。 で作成したリソースに対して、すべての CRUD 操作 (GET、POST、PUT、PATCH、DELETE) を実行できます。 `tenant` コンテナ。
+一意の `TENANT_ID` と混同しないように、`tenant` コンテナには、組織で定義されるすべてのクラス、フィールドグループ、データタイプ、スキーマおよび記述子が含まれます。 これらは各組織に固有なので、他の組織では表示や管理できません。 `tenant` コンテナ内で作成したリソースに対して、すべての CRUD 操作（GET、POST、PUT、PATCH、DELETE）を実行できます。
 
-を使用する呼び出しの例 `tenant` コンテナは次のようになります。
+`tenant` コンテナを使用する呼び出しの例は、次のようになります。
 
 ```http
 POST /tenant/fieldgroups
 ```
 
-クラス、フィールドグループ、スキーマ、データ型を `tenant` コンテナの場合は、 [!DNL Schema Registry] そして割り当てられた `$id` を含む URI `TENANT_ID`. この `$id` は、API 全体で特定のリソースを参照する際に使用されます。`$id` 値の例については、次の節で説明します。
+クラス、フィールドグループ、スキーマまたはデータタイプを `tenant` コンテナに作成すると、作成したデータは [!DNL Schema Registry] に保存され、`TENANT_ID` を含む `$id` URI が割り当てられます。 この `$id` は、API 全体で特定のリソースを参照する際に使用されます。`$id` 値の例については、次の節で説明します。
 
 ## リソースの識別 {#resource-identification}
 
-XDM リソースは、 `$id` 属性を URI 形式で記述します。次に例を示します。
+XDM リソースは、次の例のように、URI 形式の `$id` 属性で識別されます。
 
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
@@ -190,16 +190,16 @@ URI をより REST に適したものにするために、スキーマでは、`
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-への呼び出し [!DNL Schema Registry] API は、URL エンコードされた `$id` URI または `meta:altId` （ドット表記形式）。 API への REST 呼び出しを実行する際には、URL エンコードされた `$id` URI を使用することをお勧めします。
+[!DNL Schema Registry] API への呼び出しでは、URL エンコードされた `$id` URI または `meta:altId` （ドット表記形式）をサポートしています。 API への REST 呼び出しを実行する際には、URL エンコードされた `$id` URI を使用することをお勧めします。
 
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
 ## Accept ヘッダー {#accept}
 
-リスト操作およびルックアップ (GET) 操作を [!DNL Schema Registry] API、 `Accept` API から返されるデータの形式を決定するには、ヘッダーが必要です。 特定のリソースを検索する場合は、バージョン番号も `Accept` ヘッダー。
+[!DNL Schema Registry] API でリストおよび参照（GET）操作を実行する場合、API から返されるデータの形式を決定するために、`Accept` ヘッダーが必要です。 特定のリソースを検索する場合は、`Accept` ヘッダーにバージョン番号も含める必要があります。
 
-次の表に、互換性のあるリストを示します `Accept` ヘッダー値（バージョン番号を持つヘッダー値を含む）と、それらを使用したときに API が返す内容の説明。
+次の表に、バージョン番号を含む、互換性のある `Accept` ヘッダー値と、それらが使用されたときに API が返す内容の説明を示します。
 
 | Accept | 説明 |
 | ------- | ------------ |
@@ -210,32 +210,32 @@ URI をより REST に適したものにするために、スキーマでは、`
 | `application/vnd.adobe.xed-notext+json; version=1` | `$ref` と `allOf` を含む未処理の XDM です。タイトルや説明はありません。 |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 属性と解決された `allOf`。タイトルや説明はありません。 |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 属性と解決された `allOf`。記述子が含まれます。 |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` および `allOf` を解決、タイトルと説明を含む非推奨のフィールドは、 `meta:status` 属性 `deprecated`. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` と `allOf` の解決には、タイトルと説明があります。 非推奨フィールドは、`meta:status` 属性が `deprecated` で示されます。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Platform は現在、各スキーマ (`1`) をクリックします。 したがって、 `version` は常に `1` 検索リクエストを実行して、スキーマの最新のマイナーバージョンを返す場合。 スキーマのバージョン管理について詳しくは、以下のサブセクションを参照してください。
+>Platform は現在、各スキーマに対して 1 つのメジャーバージョンのみをサポートしています（`1`）。 したがって、スキーマの最新のマイナーバージョンを返すために、参照リクエストを実行する際には、`version` の値を常に `1` す必要があります。 スキーマバージョン管理について詳しくは、次のサブセクションを参照してください。
 
-### スキーマのバージョン管理 {#versioning}
+### スキーマバージョン管理 {#versioning}
 
-スキーマのバージョンはで参照されています `Accept` スキーマレジストリ API および `schemaRef.contentType` ダウンストリーム Platform サービス API ペイロードのプロパティ。
+スキーマバージョンは、Schema Registry API の `Accept` ヘッダーと、ダウンストリーム Platform サービス API ペイロードの `schemaRef.contentType` プロパティで参照されます。
 
-現在、Platform は 1 つのメジャーバージョン (`1`) を使用します。 以下に従って： [スキーマ進化のルール](../schema/composition.md#evolution)に設定する場合、スキーマを更新するたびに非破壊的にする必要があります。つまり、スキーマの新しいマイナーバージョン (`1.2`, `1.3`など ) は、常に以前のマイナーバージョンとの後方互換性を維持します。 したがって、 `version=1`に値を指定しない場合、スキーマレジストリは常に **latest** メジャーバージョン `1` スキーマの。つまり、以前のマイナーバージョンは返されません。
+現在、Platform では、各スキーマに対して 1 つのメジャーバージョン（`1`）のみをサポートしています。 [ スキーマ進化のルール ](../schema/composition.md#evolution) に従い、スキーマの各更新は非破壊的である必要があります。つまり、スキーマの新しいマイナーバージョン（`1.2`、`1.3` など）です は常に、以前のマイナーバージョンとの下位互換性があります。 したがって、`version=1` を指定すると、スキーマレジストリは常にスキーマの **最新** メジャーバージョン `1` を返します。つまり、以前のマイナーバージョンは返されません。
 
 >[!NOTE]
 >
->スキーマの進化に対する非破壊的な要件は、スキーマがデータセットによって参照され、次のいずれかの場合に該当するときにのみ適用されます。
+>スキーマ進化の非破壊要件は、スキーマがデータセットによって参照され、次のいずれかの場合が当てはまる場合にのみ適用されます。
 >
 >* データがデータセットに取り込まれました。
->* データセットは、（データが取り込まれていない場合でも）リアルタイム顧客プロファイルで使用できるようになっています。
+>* データセットは、（データが取り込まれていない場合でも）リアルタイム顧客プロファイルでの使用が有効になっています。
 >
->上記の条件の 1 つを満たすデータセットにスキーマが関連付けられていない場合は、スキーマに対して任意の変更を加えることができます。 ただし、どの場合でも `version` コンポーネントは、まだ次の場所に残っています： `1`.
+>上記の条件のいずれかを満たすデータセットにスキーマが関連付けられていない場合は、任意の変更を加えることができます。 ただし、どの場合でも、`version` コンポーネントは `1` のままです。
 
 ## XDM フィールドの制約とベストプラクティス
 
-スキーマのフィールドは、その `properties` オブジェクト内にリストされます。各フィールド自体はオブジェクトで、フィールドに格納できるデータを記述および制約する属性を含みます。に関するガイドを参照してください。 [API でのカスタムフィールドの定義](../tutorials/custom-fields-api.md) 最も一般的に使用されるデータ型のコードサンプルとオプションの制約を参照してください。
+スキーマのフィールドは、その `properties` オブジェクト内にリストされます。各フィールドは、それ自体がオブジェクトであり、フィールドに含めることができるデータを記述および制限する属性が含まれています。 コードサンプルについては [API でのカスタムフィールドの定義 ](../tutorials/custom-fields-api.md) に関するガイドを、最も一般的に使用されるデータタイプについてはオプション制約を参照してください。
 
 以下のサンプルフィールドは、適切に形式が設定された XDM フィールドを表しています。サンプルコードの下に、命名時の制約とベストプラクティスが示されています。これらのベストプラクティスは、同様の属性を含むその他のリソースを定義する際にも適用できます。
 
@@ -259,7 +259,7 @@ URI をより REST に適したものにするために、スキーマでは、`
 * フィールドには `type` が必要です。
    * 特定のタイプを定義する場合、オプションの `format` が必要なことがあります。
    * データに特定の形式を設定する必要がある場合は、`examples` を配列として追加できます。
-   * フィールドの種類は、レジストリで任意のデータタイプを使用して定義することもできます。詳しくは、 [データ型の作成](./data-types.md#create) （データタイプエンドポイントガイド）を参照してください。
+   * フィールドの種類は、レジストリで任意のデータタイプを使用して定義することもできます。詳しくは、データタイプエンドポイントガイドの [ データタイプの作成 ](./data-types.md#create) の節を参照してください。
 * `description` では、フィールドとフィールドデータについての関連情報を表します。スキーマにアクセスした人が誰でもフィールドの意図を理解できるように、明確な言葉で記述する必要があります。
 
 ## 次の手順

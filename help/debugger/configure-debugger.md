@@ -1,6 +1,6 @@
 ---
 description: Experience Platform Debugger の設定方法
-keywords: debugger;experience platform debugger 拡張機能；chrome；拡張機能；設定
+keywords: デバッガー；experience platform デバッガー拡張機能；chrome；拡張機能；設定
 seo-description: How to configure Experience Platform Debugger
 seo-title: Configure Experience Platform Debugger
 title: Experience Platform Debugger の設定
@@ -12,23 +12,23 @@ ht-degree: 45%
 
 ---
 
-# Platform Debugger の設定
+# Platform デバッガーの設定
 
-Adobe Experience Platform Debugger の外観と動作に関する特定の要素を設定できます。
+Adobe Experience Platform Debuggerの外観や動作に関する特定の要素を設定できます。
 
 ![](images/settings.jpg)
 
 ## ライトモードとダークモード
 
-Platform Debugger が開いたら、 **[!UICONTROL 設定]** を選択し、 **ダークモード** （デフォルト）または **ライトモード**.
+Platform Debugger が開いたら、「設定 **[!UICONTROL に移動して、「****ダークモード]**」（デフォルト）または「**ライトモード** を選択することで、好みの外観を選択できます。
 
 ## リセット
 
-選択 **[!UICONTROL すべてのデータと設定をリセット]** をクリアしてデフォルト設定に戻す。
+すべてのデータを消去してデフォルト設定に戻るには、「**[!UICONTROL すべてのデータと設定をリセット]**」を選択します。
 
 ## あるページに Experience Platform Debugger をロックする
 
-サイト上のページを変更すると、Experience Platform Debugger ウィンドウが更新され、そのページの情報が表示されます。接続しているページの名前が画面の下部に表示されます。1 つのページでExperience Platformデバッガーをロックしたままにするには、「 」を選択します。 **[!UICONTROL ロック]** をクリックします。
+サイト上のページを変更すると、Experience Platform Debugger ウィンドウが更新され、そのページの情報が表示されます。接続しているページの名前が画面の下部に表示されます。Experience Platformデバッガーを 1 ページにロックしたままにするには、Platform Debugger ウィンドウの右下隅にある **[!UICONTROL ロック]** を選択します。
 
 ![](images/lock.jpg)
 

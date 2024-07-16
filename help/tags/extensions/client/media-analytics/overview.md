@@ -5,7 +5,7 @@ exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
 source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
 source-wordcount: '949'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -71,7 +71,7 @@ MA 拡張機能は、[!UICONTROL 設定] ページ内の「Windows オブジェ�
 
    | メソッド |  説明 |
    | :--- | :--- |
-   | `getQoSObject()` | 現在の QoS 情報を含む `theMediaObject` インスタンスを返します。このメソッドは、再生セッション中に複数回呼び出されます。プレーヤー実装は、常に、利用可能な最新の QoS データを返す必要があります。 |
+   | `getQoSObject()` | 現在の QoS 情報を含む `theMediaObject` インスタンスを返します。このメソッドは、再生セッション中に複数回呼び出されます。プレーヤーの実装では、常に使用可能な最新の QoS データを返す必要があります。 |
    | `getCurrentPlaybackTime()` | 再生ヘッドの現在の位置を返します。VOD 追跡の場合は、メディアアイテムの開始時からの時間（秒）を返します。ライブ追跡の場合は、プログラムの開始時からの時間（秒）を返します。 |
 
    **戻り値：** `MediaHeartbeat` インスタンスで解決されるか、エラーメッセージが表示されて拒否されるプロミス。

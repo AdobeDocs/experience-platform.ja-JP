@@ -101,7 +101,7 @@ ht-degree: 93%
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-次のビデオは、新しい役割の作成と、その役割のユーザーの管理に関する理解を深めることを目的としています。
+次のビデオは、新しい役割の作成とその役割のユーザーの管理に関する理解を深めることを目的としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
@@ -155,15 +155,15 @@ API 資格情報を役割から削除するには、API 資格情報名の横に
 
 「**[!UICONTROL ユーザーグループ]**」タブに戻されます。
 
-## 役割を使用したExperience Platformへのユーザーの追加
+## ロールを使用したExperience Platformへのユーザーの追加
 
-役割にユーザーを追加するには、ユーザーにログインし、「Admin Console」を選択します。 **[!UICONTROL ユーザーを追加]**
+ロールにユーザーを追加するには、Admin Consoleにログインし、「**[!UICONTROL ユーザーを追加]**」を選択します
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
 **[!UICONTROL チームにユーザーを追加]**&#x200B;ダイアログが表示されます。 ユーザーのメールアドレス、名（オプション）および姓（オプション）を入力します。
 
-鉛筆アイコンを選択して、製品およびユーザーグループを選択し、「 」を選択します。 **[!UICONTROL Adobe Experience Platform]**&#x200B;を選択し、「 **[!UICONTROL AEP-Default-All-Users]**&#x200B;を選択し、「  **[!UICONTROL 保存]**.
+鉛筆アイコンを選択して、製品およびユーザーグループを選択し、**[!UICONTROL Adobe Experience Platform]** を選択します。次に、**[!UICONTROL AEP-Default-All-Users]**、「**[!UICONTROL 保存]** の順に選択します。
 
 ![product-profile](../../images/flac-ui/product-profile.png)
 

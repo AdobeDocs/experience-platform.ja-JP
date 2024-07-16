@@ -6,8 +6,8 @@ description: Adobe Experience Platform API で「/mappingSets」エンドポイ�
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 90%
+source-wordcount: '859'
+ht-degree: 88%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 90%
 
 ## マッピングセットのリスト
 
-組織のすべてのマッピングセットのリストを取得するには、 `/mappingSets` endpoint.
+`/mappingSets` エンドポイントにGETリクエストをおこなうと、組織のすべてのマッピングセットのリストを取得できます。
 
 **API 形式**
 
@@ -218,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | 参照する XDM スキーマの ID。 |
 | `outputSchema.schemaRef.contentType` | 参照されるスキーマの応答形式を決定します。このフィールドについて詳しくは、[スキーマレジストリ開発者ガイド](../../xdm/api/schemas.md#lookup)を参照してください。 |
-| `mappings.sourceType` | ソースタイプは、ソースから宛先に値を抽出する方法を示します。ソースタイプは、次の 2 つの値をサポートします。 <ul><li>`ATTRIBUTE`:ソースタイプ `ATTRIBUTE` は、入力属性がソーススキーマからのものである場合に使用されます。</li><li>`EXPRESSION`:ソースタイプ `EXPRESSION` は、計算フィールドを使用してマッピングが完了する際に使用されます。</li></ul> **警告**:ソースタイプの値を正しく設定しないと、マッピングセットが編集不可能になります。 |
+| `mappings.sourceType` | ソースタイプは、ソースから宛先に値を抽出する方法を示します。 ソースタイプは、次の 2 つの値をサポートしています。 <ul><li>`ATTRIBUTE`: ソースタイプ `ATTRIBUTE` は、入力属性がソーススキーマからのものである場合に使用されます。</li><li>`EXPRESSION`：計算フィールドを使用してマッピングが完了する際に使用されるソースタイプ `EXPRESSION`。</li></ul> **警告**：ソースタイプの値を正しく設定しないと、マッピングセットが編集できなくなる可能性があります。 |
 | `mappings.source` | データのマッピング元となる場所。 |
 | `mappings.destination` | データのマッピング先となる場所。 |
 

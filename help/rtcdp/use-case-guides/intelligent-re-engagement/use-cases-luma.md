@@ -1,17 +1,18 @@
 ---
 title: インテリジェントな再エンゲージメント Luma の例
-description: インテリジェントな再エンゲージメントの使用例に関するビデオの例。
+description: インテリジェント再エンゲージメントのユースケースに関するビデオの例。
 feature: Use Cases
-source-git-commit: ffa049f1650e9592bda934822cce8565db40c013
+exl-id: 635ac7ce-2059-4fed-8a4a-e32b2cd7ceea
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 1%
 
 ---
 
-# 顧客をインテリジェントに再び関与させる：Luma の例
+# 顧客をインテリジェントに再エンゲージ：Luma の例
 
-Adobeが Luma デモサイトを操作するためにインテリジェント再エンゲージメントの使用例を適合させ、データアーキテクトとデータエンジニアのチュートリアルおよび Platform Web SDK のチュートリアルで説明されている基盤実装を基に構築した方法について説明します。
+データアーキテクトとデータエンジニアのチュートリアル、および Platform Web SDK のチュートリアルに記載されている基盤実装に基づいて、Adobeが Luma デモサイトを操作するためにインテリジェントな再エンゲージメントのユースケースを適応させた方法を説明します。
 
 ## 実装
 

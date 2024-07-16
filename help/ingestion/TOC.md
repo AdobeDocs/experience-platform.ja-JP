@@ -27,7 +27,7 @@ ht-degree: 95%
    - [部分バッチ取得](batch-ingestion/partial.md)
    - [トラブルシューティング](batch-ingestion/troubleshooting.md)
 - チュートリアル {#tutorials}
-   - XDM への CSV ファイルのマッピング {#map-csv}
+   - CSV ファイルの XDM {#map-csv} へのマッピング
       - [概要](./tutorials/map-csv/overview.md)
       - [既存のスキーマへの CSV ファイルのマッピング](./tutorials/map-csv/existing-schema.md)
       - [AI で生成されたレコメンデーションを使用した CSV ファイルのマッピング](./tutorials/map-csv/recommendations.md)
@@ -49,4 +49,4 @@ ht-degree: 95%
 - [ソースコネクタ](source-connectors.md)
 - [バッチ取り込み API リファレンス](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [ストリーミング取得 API リファレンス](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

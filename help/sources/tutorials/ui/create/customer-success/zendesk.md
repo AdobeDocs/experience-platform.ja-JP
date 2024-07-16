@@ -1,17 +1,17 @@
 ---
-title: UI での Zendesk Source 接続の作成
+title: UI での Zendesk Source接続の作成
 description: Adobe Experience Platform UI を使用して Zendesk ソース接続を作成する方法を説明します。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 36%
+source-wordcount: '736'
+ht-degree: 35%
 
 ---
 
 # UI での [!DNL Zendesk] ソース接続の作成
 
-このチュートリアルでは、 [!DNL Zendesk] Adobe Experience Platformユーザーインターフェイスを使用したソース接続
+このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Zendesk] ソース接続を作成する手順について説明します。
 
 ## はじめに
 
@@ -24,24 +24,24 @@ ht-degree: 36%
 
 ### 必要な資格情報の収集
 
-次の項目にアクセスするには、 [!DNL Zendesk] プラットフォームのアカウントで、次の資格情報の値を指定する必要があります。
+Platform で [!DNL Zendesk] アカウントにアクセスするには、次の資格情報の値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| サブドメイン | 登録プロセス中に作成されたアカウントに固有の一意のドメイン。 | `yoursubdomain` |
+| サブドメイン | 登録プロセス中に作成された、アカウントに固有の一意のドメイン。 | `yoursubdomain` |
 | アクセストークン | Zendesk API トークン。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
-認証の詳細については、 [!DNL Zendesk] ソース、「 [[!DNL Zendesk] ソースの概要](../../../../connectors/customer-success/zendesk.md).
+[!DNL Zendesk] ソースの認証について詳しくは、[[!DNL Zendesk]  ソースの概要 ](../../../../connectors/customer-success/zendesk.md) を参照してください。
 
-![Zendesk API トークン](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![Zendesk API トークン ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### 用の Platform スキーマの作成 [!DNL Zendesk]
+### [!DNL Zendesk] 用の Platform スキーマの作成
 
-を作成する前に [!DNL Zendesk] ソース接続の場合は、まず、ソースに使用する Platform スキーマを作成する必要もあります。 に関するチュートリアルを参照してください。 [Platform スキーマの作成](../../../../../xdm/schema/composition.md) スキーマの作成方法に関する包括的な手順を参照してください。
+また、[!DNL Zendesk] ソース接続を作成する前に、まずソースに使用する Platform スキーマを作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-詳しいガイダンス [!DNL Zendesk] に必要なスキーマ [!DNL Zendesk Search API]（を参照） [制限](#limits) 」の節を参照してください。
+[!DNL Zendesk Search API] に必要な [!DNL Zendesk] スキーマに関する追加のガイダンスについては、以下の [limits](#limits) の節を参照してください。
 
-![スキーマを作成](../../../../images/tutorials/create/zendesk/schema.png)
+![ スキーマを作成 ](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## [!DNL Zendesk] アカウントの接続
 
@@ -49,65 +49,65 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 *顧客の成功* カテゴリ、選択 **[!UICONTROL Zendesk]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+*カスタマーサクセス* カテゴリで、「**[!UICONTROL Zendesk]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
 ![カタログ](../../../../images/tutorials/create/zendesk/catalog.png)
 
-The **[!UICONTROL Zendesk アカウントに接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Zendesk アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
-既存のアカウントを使用するには、 *Zendesk* 新しいデータフローを作成するアカウントを選択し、 **[!UICONTROL 次へ]** をクリックして続行します。
+既存のアカウントを使用するには、新しいデータフローの作成に使用する *Zendesk* アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
 ![既存](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### 新しいアカウント
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の資格情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../../../../images/tutorials/create/zendesk/new.png)
 
 ### データの選択
 
-ソースが認証されると、ページはインタラクティブスキーマツリーに更新され、データの階層を調べたり調べたりできます。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
+ソースが認証されると、ページが更新されてインタラクティブスキーマツリーに変わり、データの階層を調べることができます。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
 ## 次の手順
 
-このチュートリアルでは、認証を行い、お使いの [!DNL Zendesk] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、 [データフローを作成して、顧客の成功データを Platform に取り込む](../../dataflow/customer-success.md).
+このチュートリアルでは、認証を行い、お使いの [!DNL Zendesk] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、[ カスタマーサクセスデータを Platform に取り込むためのデータフローの作成 ](../../dataflow/customer-success.md) を行いましょう。
 
 ## その他のリソース
 
-以下の節では、 [!DNL Zendesk] ソース。
+以下の節では、[!DNL Zendesk] ソースを使用する際に参照できるその他のリソースを示します。
 
 ### 検証 {#validation}
 
-次に、 [!DNL Zendesk] 出所とそれ [!DNL Zendesk] プロファイルが Platform に取り込まれています。
+次に、[!DNL Zendesk] ソースに正常に接続したことと、[!DNL Zendesk] のプロファイルが Platform に取り込まれていることを検証する手順の概要を説明します。
 
-Platform UI で、「 」を選択します。 **[!UICONTROL データセット]** 左側のナビゲーションから、 [!UICONTROL データセット] ワークスペース。 The [!UICONTROL データセットアクティビティ] screen には、実行の詳細が表示されます。
+Platform の UI で、左側のナビゲーションから **[!UICONTROL データセット]** を選択し、[!UICONTROL  データセット ] ワークスペースにアクセスします。 [!UICONTROL  データセットアクティビティ ] 画面には、実行の詳細が表示されます。
 
-![アクティビティページ](../../../../images/tutorials/create/zendesk/dataset-activity.png)
+![ アクティビティページ ](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
-次に、表示するデータフローのデータフロー実行 ID を選択して、そのデータフロー実行に関する具体的な詳細を確認します。
+次に、表示するデータフローのデータフロー実行 ID を選択して、そのデータフロー実行に関する特定の詳細を確認します。
 
-![データフローページ](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
+![ データフローページ ](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-最後に、 **[!UICONTROL データセットをプレビュー]** をクリックして、取り込まれたデータを表示します。
+最後に、「**[!UICONTROL データセットをプレビュー]**」を選択して、取り込まれたデータを表示します。
 
-![Zendesk データセット](../../../../images/tutorials/create/zendesk/preview-dataset.png)
+![Zendesk データセット ](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-また、Platform データを、 [!DNL Zendesk] > [!DNL Customers] ページに貼り付けます。
+また、[!DNL Zendesk] / [!DNL Customers] ページのデータに対して Platform データを検証することもできます。
 
 ![zendesk-customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 
 ### Zendesk スキーマ
 
-次の表に、Zendesk 用に設定する必要がある、サポートされているマッピングを示します。
+次の表に、Zendesk 用に設定する必要がある、サポートされるマッピングを示します。
 
 >[!TIP]
 >
->詳しくは、 [Zendesk Search API > 検索結果の書き出し](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) を参照してください。
+>API について詳しくは、[Zendesk Search API/検索結果の書き出し ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) を参照してください。
 
 | ソース | タイプ |
 |---|---|
@@ -152,8 +152,8 @@ Platform UI で、「 」を選択します。 **[!UICONTROL データセット]
 
 ### 制限 {#limits}
 
-* The [Zendesk Search API > 検索結果の書き出し](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) は、1 ページにつき最大 1,000 個のレコードを返します。
-   * の値 ``filter[type]`` パラメーターがに設定されている ``user`` したがって、Zendesk 接続はユーザーを返すだけです。
-   * 1 ページあたりの結果の数は、 ``page[size]`` パラメーター。 値はに設定されます。 ``100``. これは、Zendesk が設定した減速拘束の影響を軽減するために行われます。
-   * 詳しくは、 [制限](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) および [ページ編集](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).
-   * また、 [カーソルのページネーションを使用したリスト間のページ分割](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).
+* [Zendesk Search API/検索結果の書き出し ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) は、1 ページあたり最大 1000 レコードを返します。
+   * ``filter[type]`` パラメーターの値は ``user`` に設定されているので、Zendesk 接続はユーザーのみを返します。
+   * ページごとの結果の数は、``page[size]`` パラメーターで管理されます。 値は ``100`` に設定されます。 これは、Zendesk によって設定された速度低下制約の影響を軽減するために行われます。
+   * [ 制限 ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) および [ ページネーション ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1) を参照してください。
+   * また、[ カーソルのページネーションを使用したリスト内のページ分割 ](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/) も参照してください。

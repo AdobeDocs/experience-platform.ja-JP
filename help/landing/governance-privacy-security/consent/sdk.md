@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Web SDK を使用した顧客の同意データの処理
-description: Adobe Experience Platform Web SDK を統合して、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
+title: Adobe Experience Platform Web SDK を使用して顧客同意データを処理する
+description: Adobe Experience Platform Web SDK を統合して、Adobe Experience Platformで顧客同意データを処理する方法を説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 2%
 
 ---
 
-# Platform Web SDK を統合して、顧客の同意データを処理する
+# Platform Web SDK を統合して顧客同意データを処理する
 
-Adobe Experience Platform Web SDK を使用すると、同意管理プラットフォーム (CMP) で生成された顧客の同意シグナルを取得し、同意変更イベントが発生した場合にそれらをAdobe Experience Platformに送信できます。
+Adobe Experience Platform Web SDK を使用すると、Consent Management Platform （CMP）によって生成された顧客の同意信号を取得し、同意変更イベントが発生するたびにAdobe Experience Platformに送信できます。
 
-**SDK は、標準の CMP とのインターフェイスを提供しません**. SDK を Web サイトに統合する方法を決定し、CMP で同意の変更をリッスンして、適切なコマンドを呼び出すかどうかは、ユーザーが決定します。 このドキュメントでは、CMP を Platform Web SDK と統合する方法に関する一般的なガイダンスを提供します。
+**SDK は、初期設定では、どの CMP ともインターフェイスを行いません**。 SDK を web サイトに統合する方法を決定し、CMP で同意の変更をリッスンして適切なコマンドを呼び出すかどうかは、ユーザー次第です。 このドキュメントでは、CMP と Platform Web SDK を統合する方法に関する一般的なガイダンスを提供します。
 
 ## 前提条件 {#prerequisites}
 
-このチュートリアルは、CMP 内で同意データを生成する方法が既に決定済みであり、Adobe標準または IAB Transparency and Consent Framework(TCF)2.0 標準に準拠する同意フィールドを含むデータセットが作成されていることを前提としています。 このデータセットをまだ作成していない場合は、このガイドに戻る前に、次のチュートリアルを参照してください。
+このチュートリアルでは、CMP 内で同意データを生成する方法を既に決定しており、Adobe標準または IAB Transparency and Consent Framework （TCF） 2.0 標準に準拠する同意フィールドを含むデータセットを作成していることを前提としています。 このデータセットをまだ作成していない場合は、このガイドに戻る前に次のチュートリアルを参照してください。
 
 * [Adobe標準を使用したデータセットの作成](./adobe/dataset.md)
 * [TCF 2.0 標準を使用したデータセットの作成](./iab/dataset.md)
 
-このガイドでは、UI のタグ拡張を使用した SDK のセットアップワークフローに従います。 拡張機能を使用しない場合で、スタンドアロンバージョンの SDK をサイトに直接埋め込む場合は、このガイドではなく、次のドキュメントを参照してください。
+このガイドは、UI のタグ拡張機能を使用して SDK を設定するワークフローに従います。 拡張機能を使用せず、スタンドアロンバージョンの SDK をサイトに直接埋め込む場合は、このガイドではなく次のドキュメントを参照してください。
 
 * [データストリームの設定](/help/datastreams/overview.md)
 * [SDK のインストール](/help/web-sdk/install/overview.md)
-* [同意コマンド用の SDK の設定](/help/web-sdk/commands/configure/defaultconsent.md)
+* [同意コマンドに対応する SDK の設定](/help/web-sdk/commands/configure/defaultconsent.md)
 
-このガイドのインストール手順では、タグの拡張機能と、Web アプリケーションでのタグのインストール方法に関する十分な知識が必要です。 詳しくは、次のドキュメントを参照してください。
+このガイドのインストール手順では、タグ拡張機能と、web アプリケーションへのインストール方法について、実際に理解しておく必要があります。 詳しくは、次のドキュメントを参照してください。
 
 * [タグの概要](/help/tags/home.md)
 * [クイックスタートガイド](/help/tags/quick-start/quick-start.md)
@@ -36,83 +36,83 @@ Adobe Experience Platform Web SDK を使用すると、同意管理プラット�
 
 ## データストリームの設定
 
-SDK がデータをExperience Platformに送信するには、まずデータストリームを設定する必要があります。 データ収集 UI またはExperience PlatformUI で、 **[!UICONTROL データストリーム]** をクリックします。
+SDK がExperience Platformにデータを送信するには、まずデータストリームを設定する必要があります。 データ収集 UI またはExperience PlatformUI で、左側のナビゲーションから **[!UICONTROL データストリーム]** を選択します。
 
-新しいデータストリームを作成するか、編集する既存のデータストリームを選択した後、の横にある切り替えボタンを選択します。 **[!UICONTROL Adobe Experience Platform]**. 次に、以下に示す値を使用して、フォームに入力します。
+新しいデータストリームを作成するか、既存のデータストリームを選択して編集した後、**[!UICONTROL Adobe Experience Platform]** の横にある切り替えボタンを選択します。 次に、以下に示す値を使用してフォームを完成させます。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| Datastream フィールド | 値 |
+| データストリームフィールド | 値 |
 | --- | --- |
-| [!UICONTROL サンドボックス] | プラットフォームの名前 [sandbox](../../../sandboxes/home.md) データストリームを設定するために必要なストリーミング接続とデータセットを含む |
-| [!UICONTROL イベントデータセット] | An [!DNL XDM ExperienceEvent] SDK を使用してにイベントデータを送信する予定のデータセット。 Platform データストリームを作成するにはイベントデータセットを提供する必要がありますが、イベントを介して送信される同意データは、ダウンストリーム実施ワークフローでは受け入れられないことに注意してください。 |
-| [!UICONTROL プロファイルデータセット] | The [!DNL Profile]作成した顧客の同意フィールドを含む有効なデータセット [以前](#prerequisites). |
+| [!UICONTROL  サンドボックス ] | データストリームを設定するために必要なストリーミング接続とデータセットを含む、Platform[ サンドボックス ](../../../sandboxes/home.md) の名前。 |
+| [!UICONTROL イベントデータセット] | SDK を使用してイベントデータをに送信する予定の [!DNL XDM ExperienceEvent] データセット。 Platform データストリームを作成するにはイベントデータセットを指定する必要がありますが、イベントを介して送信された同意データは、ダウンストリーム実施ワークフローでは順守されないことに注意してください。 |
+| [!UICONTROL プロファイルデータセット] | 作成した顧客同意フィールドを持つ [!DNL Profile] 対応データセット [ 以前 ](#prerequisites)。 |
 
-終了したら、「 」を選択します。 **[!UICONTROL 保存]** 画面の下部で、追加のプロンプトに従って設定を完了します。
+終了したら、画面の下部にある「**[!UICONTROL 保存]**」を選択し、追加のプロンプトに従って続行して設定を完了します。
 
 ## Platform Web SDK のインストールと設定
 
-前の節で説明したようにデータストリームを作成したら、最終的にサイトにデプロイする Platform Web SDK 拡張機能を設定する必要があります。 タグプロパティに SDK 拡張機能がインストールされていない場合は、「 **[!UICONTROL 拡張機能]** 左のナビゲーションで、 **[!UICONTROL カタログ]** タブをクリックします。 次に、 **[!UICONTROL インストール]** をクリックします。
+前の節で説明したようにデータストリームを作成したら、最終的にサイトにデプロイする Platform Web SDK 拡張機能を設定する必要があります。 タグプロパティに SDK 拡張機能がインストールされていない場合は、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択してから **[!UICONTROL カタログ]** タブを選択します。 次に、使用可能な拡張機能のリスト内の Platform SDK 拡張機能の下にある「**[!UICONTROL インストール]**」を選択します。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-SDK を設定する際に、 **[!UICONTROL エッジ設定]**」で、前の手順で作成したデータストリームを選択します。
+SDK を設定する際、「**[!UICONTROL Edge設定]**」で、前の手順で作成したデータストリームを選択します。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-選択 **[!UICONTROL 保存]** をクリックして、拡張機能をインストールします。
+「**[!UICONTROL 保存]**」を選択して、拡張機能をインストールします。
 
-### デフォルトの同意を設定するデータ要素の作成
+### データ要素を作成してデフォルトの同意を設定
 
-SDK 拡張機能がインストールされている場合、デフォルトのデータ収集同意値 (`collect.val`) を使用します。 これは、ユーザーに応じて異なるデフォルト値 ( `pending` （EU ユーザー向け）および `in` （北米のユーザー向け）
+SDK 拡張機能がインストールされている状態で、デフォルトのデータ収集同意値（`collect.val`）をユーザーに対して表すデータ要素を作成するオプションがあります。 これは、欧州連合（EU）ユーザーの `pending` や北米ユーザーの `in` など、ユーザーに応じて異なるデフォルト値を使用する場合に便利です。
 
-この使用例では、次の機能を実装して、ユーザーの地域に基づいてデフォルトの同意を設定できます。
+このユースケースでは、次のコードを実装して、ユーザーの地域に基づいてデフォルトの同意を設定できます。
 
 1. Web サーバー上のユーザーの地域を特定します。
-1. の前に `script` タグ（埋め込みコード）を Web ページ上で設定し、 `script` タグを設定します。 `adobeDefaultConsent` 変数の値を指定します。
-1. を使用するデータ要素を設定する `adobeDefaultConsent` JavaScript 変数を使用し、このデータ要素をユーザーのデフォルトの同意値として使用します。
+1. Web ページの `script` タグ（埋め込みコード）の前に、ユーザーの地域に基づいて `adobeDefaultConsent` 変数を設定する個別の `script` タグをレンダリングします。
+1. `adobeDefaultConsent` JavaScript変数を使用するデータ要素を設定し、このデータ要素をユーザーのデフォルトの同意値として使用します。
 
-ユーザーの領域が CMP によって決定される場合は、代わりに次の手順を使用できます。
+ユーザーの地域が CMP によって決定される場合は、代わりに次の手順を使用できます。
 
-1. ページ上の「CMP loaded」イベントを処理します。
-1. イベントハンドラーで、 `adobeDefaultConsent` 変数を読み込み、JavaScript を使用してタグライブラリスクリプトを読み込みます。
-1. を使用するデータ要素を設定する `adobeDefaultConsent` JavaScript 変数を使用し、このデータ要素をユーザーのデフォルトの同意値として使用します。
+1. ページ上の「CMP の読み込み」イベントを処理します。
+1. イベントハンドラーで、ユーザーのリージョンに基づいて `adobeDefaultConsent` 変数を設定し、JavaScriptを使用してタグライブラリスクリプトを読み込みます。
+1. `adobeDefaultConsent` JavaScript変数を使用するデータ要素を設定し、このデータ要素をユーザーのデフォルトの同意値として使用します。
 
-UI でデータ要素を作成するには、「 **[!UICONTROL データ要素]** 左側のナビゲーションで、「 **[!UICONTROL データ要素を追加]** をクリックして、データ要素作成ダイアログに移動します。
+UI でデータ要素を作成するには、左側のナビゲーションで **[!UICONTROL データ要素]** を選択してから、「**[!UICONTROL データ要素の追加]** を選択して、データ要素作成ダイアログに移動します。
 
-ここから、 [!UICONTROL JavaScript 変数] に基づくデータ要素 `adobeDefaultConsent`. 完了したら、「**[!UICONTROL 保存]**」をクリックします。
+ここから、`adobeDefaultConsent` に基づいて [!UICONTROL JavaScript変数 ] データ要素を作成する必要があります。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-データ要素を作成したら、 Web SDK 拡張機能の設定ページに戻ります。 の下 [!UICONTROL プライバシー] セクション、選択 **[!UICONTROL データ要素によって提供されます]**&#x200B;を選択し、指定したダイアログを使用して、前に作成したデフォルトの同意データ要素を選択します。
+データ要素が作成されたら、Web SDK 拡張機能の設定ページに戻ります。 「[!UICONTROL  プライバシー ]」セクションで **[!UICONTROL データ要素によって提供]** を選択し、提供されたダイアログを使用して、前に作成したデフォルトの同意データ要素を選択します。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
-### Web サイトに拡張機能をデプロイする
+### Web サイトへの拡張機能のデプロイ
 
-拡張機能の設定が完了したら、Web サイトに統合できます。 詳しくは、 [公開ガイド](../../../tags/ui/publishing/overview.md) タグに関するドキュメントを参照してください。
+拡張機能の設定が完了したら、web サイトに統合できます。 更新されたライブラリビルドのデプロイ方法について詳しくは、タグのドキュメントの [ 公開ガイド ](../../../tags/ui/publishing/overview.md) を参照してください。
 
 ## 同意変更コマンドの実行 {#commands}
 
-SDK 拡張機能を Web サイトに統合したら、Platform Web SDK の使用を開始できます `setConsent` 」コマンドを使用して、Platform に同意データを送信する必要があります。
+SDK 拡張機能を web サイトに統合したら、Platform Web SDK `setConsent` コマンドを使用して、同意データを Platform に送信できます。
 
-The `setConsent` コマンドは、次の 2 つのアクションを実行します。
+`setConsent` コマンドは、次の 2 つのアクションを実行します。
 
-1. ユーザーのプロファイル属性をプロファイルストアで直接更新します。 データレイクにはデータは送信されません。
-1. を作成します。 [エクスペリエンスイベント](../../../xdm/classes/experienceevent.md) には、同意の変更イベントのタイムスタンプ付きのアカウントが記録されます。 このデータはデータレイクに直接送信され、経時的に同意設定の変更を追跡するために使用できます。
+1. プロファイルストア内でユーザーのプロファイル属性を直接更新します。 これは、データレイクにデータを送信しません。
+1. 同意変更イベントのタイムスタンプ付きアカウントを記録する [ エクスペリエンスイベント ](../../../xdm/classes/experienceevent.md) を作成します。 このデータはデータレイクに直接送信され、同意の環境設定の変化を経時的に追跡するために使用できます。
 
-### を呼び出すタイミング `setConsent`
+### `setConsent` を呼び出すタイミング
 
-次の 2 つのシナリオが考えられます。 `setConsent` サイトでを呼び出す必要があります。
+サイトで `setConsent` を呼び出す必要があるシナリオは 2 つあります。
 
-1. 同意がページに読み込まれた場合（つまり、ページが読み込まれるたび）
+1. 同意がページに読み込まれる（つまり、ページが読み込まれるたびに読み込まれる）場合
 1. 同意設定の変更を検出する CMP フックまたはイベントリスナーの一部として
 
 ### `setConsent` 構文
 
-The [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドは、単一の配列タイプのプロパティを含むペイロードオブジェクトを受け取ります。 `consent`. The `consent` 配列には、Adobe標準に必要な同意フィールドを提供するオブジェクトが少なくとも 1 つ含まれている必要があります。
+[`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドは、単一の配列タイプのプロパティ `consent` を含むペイロードオブジェクトを想定しています。 `consent` 配列には、Adobe標準に必要な同意フィールドを提供するオブジェクトが少なくとも 1 つ含まれている必要があります。
 
-次の例に、Adobe標準に必要な同意フィールドを示します `setConsent` 呼び出し
+次の呼び出しの例では、Adobe標準に必須の同意フィールド `setConsent` 示しています。
 
 ```js
 alloy("setConsent", {
@@ -141,15 +141,15 @@ alloy("setConsent", {
 
 | ペイロードプロパティ | 説明 |
 | --- | --- |
-| `standard` | 使用される同意の規格。 Adobe標準の場合、この値をに設定する必要があります。 `Adobe`. |
-| `version` | 以下に示す同意標準のバージョン番号 `standard`. この値はに設定する必要があります。 `2.0` (Adobe標準の同意処理用 ) |
-| `value` | プロファイルが有効なデータセットの同意フィールドの構造に準拠する XDM オブジェクトとして提供される、顧客の更新された同意情報。 |
+| `standard` | 使用されている同意標準。 Adobe標準の場合、この値は `Adobe` に設定する必要があります。 |
+| `version` | `standard` に示されている同意標準のバージョン番号。 Adobe標準の同意処理では、この値を `2.0` に設定する必要があります。 |
+| `value` | 顧客の更新された同意情報（プロファイル対応データセットの同意フィールドの構造に準拠する XDM オブジェクトとして提供）。 |
 
 >[!NOTE]
 >
->他の同意標準を `Adobe` ( 例： `IAB TCF`) を追加する場合、 `consent` 配列を作成します。 各オブジェクトには、 `standard`, `version`、および `value` 彼らが表す同意基準のために。
+>`Adobe` （`IAB TCF` など）と他の同意標準を組み合わせて使用している場合は、各標準の `consent` 配列にオブジェクトを追加できます。 各オブジェクトには、表す同意標準の `standard`、`version`、`value` に適した値が含まれている必要があります。
 
-次の JavaScript は、Web サイトで同意設定の変更を処理する関数の例を示しています。この関数は、イベントリスナーまたは CMP フック内のコールバックとして使用できます。
+次のJavaScriptは、web サイト上の同意環境設定の変更を処理する関数の例を示しています。この関数は、イベントリスナーまたは CMP フック内のコールバックとして使用できます。
 
 ```js
 var setConsent = function () {
@@ -193,13 +193,13 @@ var setConsent = function () {
 
 ## SDK 応答の処理
 
-すべて [!DNL Platform SDK] コマンドは、呼び出しが成功したか失敗したかを示す promise を返します。 その後、これらの応答を、顧客への確認メッセージの表示などの追加ロジックに使用できます。 詳しくは、 [コマンド応答](/help/web-sdk/commands/command-responses.md) を参照してください。
+すべての [!DNL Platform SDK] コマンドは、呼び出しが成功したか失敗したかを示すプロミスを返します。 その後、これらの応答を使用して、顧客に確認メッセージを表示するなどの追加のロジックを実行できます。 詳細については、「[ コマンドの応答 ](/help/web-sdk/commands/command-responses.md)」を参照してください。
 
-正常に `setConsent` SDK を呼び出す場合、Platform UI のプロファイルビューアを使用して、データがプロファイルストアにランディングしているかどうかを検証できます。 詳しくは、 [ID によるプロファイルの参照](../../../profile/ui/user-guide.md#browse-identity) を参照してください。
+SDK を使用した `setConsent` 呼び出しが正常に完了したら、Platform UI のプロファイルビューアを使用して、データがプロファイルストアにランディングされているかどうかを確認できます。 詳しくは、[ID によるプロファイルの参照 ](../../../profile/ui/user-guide.md#browse-identity) の節を参照してください。
 
 ## 次の手順
 
-このガイドに従うことで、同意データをExperience Platformに送信するように Platform Web SDK 拡張機能を設定しました。 実装のテストに関するガイダンスについては、実装する同意標準のドキュメントを参照してください。
+このガイドに従って、同意データをExperience Platformに送信するように Platform Web SDK 拡張機能を設定しました。 実装のテストに関するガイダンスについては、実装している同意標準のドキュメントを参照してください。
 
 * [Adobe標準](./adobe/overview.md#test)
-* [TCF 2.0 標準](./iab/overview.md#test)
+* [TCF 2.0 規格](./iab/overview.md#test)

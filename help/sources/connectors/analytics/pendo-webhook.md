@@ -1,12 +1,12 @@
 ---
-title: ペンドソースの概要
-description: Web フックを活用して API またはユーザーインターフェイスを使用して Pendo をAdobe Experience Platformに接続する方法を説明します
+title: Pendo Sourceの概要
+description: API や Webhook を使ったユーザーインターフェイスを使ってAdobe Experience Platformに Pendo を接続する方法を学ぶ
 badge: ベータ版
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
 source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 20%
+source-wordcount: '347'
+ht-degree: 18%
 
 ---
 
@@ -14,40 +14,40 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->[!DNL Pendo] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Pendo] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platformは、サードパーティの分析アプリケーションからデータを取り込む機能を提供しています。 Analytics プロバイダーのサポートには以下が含まれます。 [!DNL Pendo].
+Experience Platformでは、サードパーティの analytics アプリケーションからデータを取り込むことができます。 Analytics プロバイダーのサポートには、[!DNL Pendo] が含まれます。
 
-[[!DNL Pendo]](https://pendo.io/) は、ソフトウェア会社が顧客の共感を呼ぶ製品を開発するのに役立つように構築された、製品分析アプリです。 このアプリを使用すると、ソフトウェアメーカーは様々なツールを使用して製品を埋め込むことができ、ユーザーにとっての製品エクスペリエンスの向上と、製品チームの新しいインサイトの向上の両方につながります。
+[[!DNL Pendo]](https://pendo.io/) は、ソフトウェア企業が顧客の共感を得られる製品を開発するのに役立つように構築された製品分析アプリです。 このアプリを使用すると、ソフトウェアメーカーは、ユーザーの製品体験の向上と製品チームの新しいインサイトの両方につながる可能性のある幅広いツールを製品に埋め込むことができます。
 
-The [!DNL Pendo] ソースを使用すると、サポートされる webhook イベントスキーマとそれに関連するイベントデータを [!DNL Pendo.io] の使用 [[!DNL Pendo] ウェブフック](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). The [!DNL Pendo] ソースは次の場合に使用します。 [!DNL Pendo] URL Web フック。
+[!DNL Pendo] ソースを使用すると、[[!DNL Pendo] Webhook](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks) を使用して、サポートされている Webhook イベントスキーマとそれに関連するイベントデータを [!DNL Pendo.io] から取り込むことができます。 [!DNL Pendo] ソースは、URL Webhook[!DNL Pendo] 使用します。
 
-次の Web フックがサポートされています。
+サポートされている Webhook は次の通りです。
 
-* [ガイド](https://support.pendo.io/hc/en-us/articles/8146679315867-Creating-a-Guide) 表示済み
-* [投票](https://support.pendo.io/hc/en-us/articles/360031867152-Polls-Classic-) 表示済み/送信済み
-* [ネットプロモータースコア](https://support.pendo.io/hc/en-us/articles/360033527151-Set-up-an-NPS-Survey) 表示済み/送信済み
+* [ ガイド ](https://support.pendo.io/hc/en-us/articles/8146679315867-Creating-a-Guide) が表示されました
+* [ 投票 ](https://support.pendo.io/hc/en-us/articles/360031867152-Polls-Classic-) 表示/送信
+* [ ネットプロモータースコア ](https://support.pendo.io/hc/en-us/articles/360033527151-Set-up-an-NPS-Survey) 表示/送信済み
 
 ## 前提条件 {#prerequisites}
 
-事前に [!DNL Pendo] ソース接続を使用する場合は、まず次の点を確認する必要があります。
+[!DNL Pendo] ソース接続を作成する前に、次の点を確認する必要があります。
 
-A [!DNL Pendo] アカウント。 まだ [[!DNL Pendo] 登録者](https://app.pendo.io/register) 登録してアカウントを作成するページ。
+[!DNL Pendo] アカウント。 アカウントをまだお持ちでない場合は、アカウントを登録および作成するための [[!DNL Pendo]  登録 ](https://app.pendo.io/register) ページが表示されます。
 
-### 設定 [!DNL Pendo] ウェブフック {#set-up-webhook}
+### Webhook[!DNL Pendo] 設定 {#set-up-webhook}
 
-データフローを正常に作成したら、次の情報を Platform に知らせる Webhook を設定する必要があります。 [!DNL Pendo] イベント。 [!DNL Pendo] Web フックは、特定のイベントが発生した場合にリアルタイム通知を他のサービスにプッシュし、この情報を [!DNL Pendo] ソース。 詳しくは、 [ストリーミングエンドポイント URL の取得](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) および [設定 [!DNL Pendo] ウェブフック](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+データフローが正常に作成されたら、イベントについて Platform に通知する Webhook を設定する必要 [!DNL Pendo] あります。 [!DNL Pendo] Webhook は、特定のイベントが発生したときにリアルタイム通知を他のサービスにプッシュし、この情報を [!DNL Pendo] ソースに送信できます。 詳しくは、[ ストリーミングエンドポイント URL の取得 ](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) および [Webhook の設定 ](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook) に関するチュ  [!DNL Pendo]  トリアルを参照してください。
 
-## 接続中 [!DNL Pendo] Platform へ {#connect-to-platform}
+## Platform への [!DNL Pendo] の接続 {#connect-to-platform}
 
-以下のドキュメントでは、 [!DNL Pendo] 接続するストリーミングコネクタ [!DNL Platform] API またはユーザーインターフェイスを使用する場合：
+以下のドキュメントでは、API またはユーザーインターフェイスを使用してと接続する、[!DNL Pendo] ストリーミングコネクタを作成する方法に関する情報を提供し [!DNL Platform] す。
 
 ### API を使用して [!DNL Pendo] と Platform を接続する {#connect-to-platform-using-api}
 
-* [ソース接続を作成し [!DNL Pendo] 、API を使用して Platform にデータを取得します。](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [API を使用してデータを Platform に取り込む  [!DNL Pendo]  めのソース接続を作成します。](../../tutorials/api/create/analytics/pendo-webhook.md)
 
 ### UI を使用した [!DNL Pendo] の Platform への接続 {#connect-to-platform-using-ui}
 
-* [ソース接続を作成して [!DNL Pendo] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [ユーザーインターフェイスを使用した、Platform にデータを取り込むソ  [!DNL Pendo]  ス接続の作成](../../tutorials/ui/create/analytics/pendo-webhook.md)

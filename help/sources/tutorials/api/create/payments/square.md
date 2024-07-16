@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；正方形；四角形
-title: フローサービス API を使用した正方形ベース接続の作成
-description: フローサービス API を使用して Square をAdobe Experience Platformに接続する方法を説明します。
+keywords: Experience Platform；ホーム；人気のトピック；正方形；正方形
+title: Flow Service API を使用した Square ベース接続の作成
+description: Flow Service API を使用して Square をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '536'
 ht-degree: 45%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 45%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ サンドボックス ](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Square] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Square] ています。
 
 ### 必要な資格情報の収集
 
@@ -31,14 +31,14 @@ ht-degree: 45%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `host` | の URL [!DNL Square] インスタンス。 |
-| `clientId` | 次に関連付けられたクライアント ID: [!DNL Square] アカウント |
-| `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Square] アカウント |
-| `accessToken` | アクセストークンは、 [!DNL Square] アカウントを OAuth 2.0 認証で使用します。 アクセストークンは、 [!DNL Square]. |
-| `refreshToken` | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは、 [!DNL Square]. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Square] 次に該当： `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` |
+| `host` | [!DNL Square] インスタンスの URL。 |
+| `clientId` | [!DNL Square] アカウントに関連付けられたクライアント ID。 |
+| `clientSecret` | [!DNL Square] アカウントに関連付けられたクライアントの秘密鍵。 |
+| `accessToken` | アクセストークンは、OAuth 2.0 認証で [!DNL Square] アカウントを認証するために使用されます。 アクセストークンは [!DNL Square] から取得できます。 |
+| `refreshToken` | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは [!DNL Square] から取得できます。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。[!DNL Square] の接続仕様 ID は `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` です。 |
 
-これらの資格情報とその取得方法について詳しくは、 [[!DNL Square] OAuth に関するドキュメント](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
+これらの資格情報とその取得方法について詳しくは、[[!DNL Square] OAuth に関するドキュメント ](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens) を参照してください。
 
 ### Platform API の使用
 
@@ -90,16 +90,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | の URL [!DNL Square] インスタンス。 |
-| `auth.params.clientId` | 次に関連付けられたクライアント ID: [!DNL Square] アカウント |
-| `auth.params.clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Square] アカウント |
-| `auth.params.accessToken` | アクセストークンは、 [!DNL Square] アカウントを OAuth 2.0 認証で使用します。 アクセストークンは、 [!DNL Square]. |
-| `auth.params.refreshToken` | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは、 [!DNL Square]. |
-| `connectionSpec.id` | この [!DNL Square] 接続仕様 ID: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
+| `auth.params.host` | [!DNL Square] インスタンスの URL。 |
+| `auth.params.clientId` | [!DNL Square] アカウントに関連付けられたクライアント ID。 |
+| `auth.params.clientSecret` | [!DNL Square] アカウントに関連付けられたクライアントの秘密鍵。 |
+| `auth.params.accessToken` | アクセストークンは、OAuth 2.0 認証で [!DNL Square] アカウントを認証するために使用されます。 アクセストークンは [!DNL Square] から取得できます。 |
+| `auth.params.refreshToken` | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは [!DNL Square] から取得できます。 |
+| `connectionSpec.id` | [!DNL Square] 接続仕様 ID: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`。 |
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の接続識別子 (`id`) をクリックします。 この ID は、次のチュートリアルでデータを調べるために必要です。
+応答が成功すると、一意の接続識別子（`id`）を含む、新しく作成された接続が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -110,4 +110,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Square] を使用した接続 [!DNL Flow Service] API を介して取得され、接続の一意の ID 値を取得している。 この ID は、次のチュートリアルで、 [フローサービス API を使用した支払い申請の調査](../../explore/payments.md).
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Square] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した、[Flow Service API を使用した支払い申請の調査 ](../../explore/payments.md) 方法を説明します。

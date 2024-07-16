@@ -1,48 +1,48 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；postico;Postico；クエリサービスへの接続；
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；query service;postico;Postico;query service への接続；
 solution: Experience Platform
-title: Postico をクエリサービスに接続
-description: このドキュメントには、Adobe Experience Platform Query Service 用のバックアップクライアント Postico をインストールするためのリンクが含まれています。
+title: クエリサービスへの Postico の接続
+description: このドキュメントには、Adobe Experience Platform クエリサービスのバックアップクライアント Postico をインストールするためのリンクが含まれています。
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 8%
+source-wordcount: '405'
+ht-degree: 4%
 
 ---
 
-# 接続 [!DNL Postico] クエリサービス (Mac) へ
+# クエリサービス（Mac）への [!DNL Postico] の接続
 
-このドキュメントでは、 [!DNL Postico] Adobe Experience Platform [!DNL Query Service].
+このドキュメントでは、[!DNL Postico] とAdobe Experience Platform [!DNL Query Service] を接続する手順について説明します。
 
 >[!NOTE]
 >
-> このガイドは、ユーザーが既に [!DNL Postico] インターフェイスの操作方法を熟知している。 詳細情報： [!DNL Postico] は [公式 [!DNL Postico] ドキュメント](https://eggerapps.at/postico/docs).
+> このガイドは、[!DNL Postico] へのアクセス権を既に持ち、そのインターフェイスの操作方法に精通していることを前提としています。 [!DNL Postico] について詳しくは、[official [!DNL Postico] documentation](https://eggerapps.at/postico/docs) を参照してください。
 > 
-> また、 [!DNL Postico] が **のみ** はmacOSデバイスで使用できます。
+> さらに、[!DNL Postico] はmacOS デバイスで **のみ** 使用できます。
 
-接続するには [!DNL Postico] クエリサービスにアクセスするには、 [!DNL Postico] を選択し、 **[!DNL New Favorite]**. 接続設定のダイアログが表示されます。 ここから、Adobe Experience Platformに接続するためのパラメーター値を入力できます。 以下に示す接続設定を入力します。 方法に関する説明 [Postico を使用した PostgreSQL サーバーへの接続](https://eggerapps.at/postico/docs/v1.5.21/favorite-window.html) また、ポスティコの公式ウェブサイトからもご利用いただけます。
+[!DNL Postico] をクエリサービスに接続するには、[!DNL Postico] を開き、「**[!DNL New Favorite]**」を選択します。 接続設定のダイアログが表示されます。 ここから、Adobe Experience Platformに接続するパラメーター値を入力できます。 以下の接続設定を入力します。 [Postico を使用して PostgreSQL サーバに接続する ](https://eggerapps.at/postico/docs/v1.5.21/favorite-window.html) 方法は、公式の Postico Web サイトからも参照できます。
 
 | 接続パラメーター | 説明 |
 |---|---|
 | **[!DNL Host]:** | PostgreSQL サーバーのホスト名。 |
-| **[!DNL Port]:** | のポート [!DNL Query Service]. ポートを使用する必要があります **80** または **5432** ～とつながる [!DNL Query Service]. |
-| **[!DNL User]** | 特定の接続の名前を作成します。 このフィールドを空白のままにして、Macのログイン名を使用します。 |
-| **[!DNL Password]** | この英数字の文字列はExperience Platform **[!UICONTROL パスワード]** 資格情報。 有効期限のない資格情報を使用する場合、この値は `technicalAccountID` そして `credential` 設定 JSON ファイルにダウンロードされました。 パスワードの値は次の形式で指定します。{technicalAccountId}:{credential}。 有効期限のない資格情報の設定 JSON ファイルは、Adobeがのコピーを保持しない、初期化中に 1 回限りのダウンロードです。 |
-| **[!DNL Database]** | Experience Platform **[!UICONTROL データベース]** 資格情報の値： `prod:all`. |
+| **[!DNL Port]:** | [!DNL Query Service] のポート。 [!DNL Query Service] に接続するには、ポート **80** または **5432** を使用する必要があります。 |
+| **[!DNL User]** | 特定の接続の名前を作成します。 Macのログイン名を使用する場合は、フィールドを空白のままにします。 |
+| **[!DNL Password]** | この英数字の文字列は、Experience Platformの **[!UICONTROL パスワード]** 資格情報です。 有効期限のない認証情報を使用する場合、この値は `technicalAccountID` からの連結引数と、設定 JSON ファイルでダウンロードされた `credential` です。 パスワードの値は {technicalAccountId}:{credential} 形式で指定します。 有効期限のない資格情報用の設定 JSON ファイルは、Adobeがコピーを保持しない、初期化中の 1 回限りのダウンロードです。 |
+| **[!DNL Database]** | Experience Platform **[!UICONTROL データベース]** 資格情報の値 `prod:all` を使用します。 |
 
-データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[資格情報ガイド](../ui/credentials.md)を参照してください。資格情報を検索するには、にログインします。 [!DNL Platform]を選択し、「 **[!UICONTROL クエリ]**&#x200B;に続いて **[!UICONTROL 資格情報]**.
+データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。 資格情報を見つけるには、[!DNL Platform] にログインし、「**[!UICONTROL クエリ]**」を選択してから、「**[!UICONTROL 資格情報]** を選択します。
 
-資格情報を挿入したら、「 」を選択します。 **[!DNL Connect]** をクリックして、クエリサービスに接続します。
+資格情報を挿入したら、「**[!DNL Connect]**」を選択してクエリサービスに接続します。
 
-Platform に接続すると、以前にクエリサービスでおこなわれたすべての関係のリストを表示できます。
+Platform に接続すると、クエリサービスで以前に作成したすべての関係のリストが表示されます。
 
 ## SQL 文の作成
 
-新しい SQL クエリを作成するには、 **[!DNL SQL Query]** サイドバーから。 または、キーボードショートカット (⇧ ⌘ T) を使用してクエリビューに移動し、実行するクエリを入力します。 終了したら、「 」を選択します。 **[!DNL Execute Statement]** をクリックしてクエリを実行します。 完了したクエリの実行結果が表に表示されます。
+新しい SQL クエリを作成するには、サイドバーから「**[!DNL SQL Query]**」を選択します。 または、キーボードショートカット（⇧⌘T）を使用してクエリビューに移動し、実行するクエリを入力します。 終了したら、「**[!DNL Execute Statement]**」を選択してクエリを実行します。 完了したクエリ実行の結果を示すテーブルが表示されます。
 
-詳しくは、ポスティコの公式ドキュメントを参照してください。 [クエリビューの使用](https://eggerapps.at/postico/docs/v1.3.1/sql-query-view.html).
+[ クエリビューの使用 ](https://eggerapps.at/postico/docs/v1.3.1/sql-query-view.html) について詳しくは、公式の Postico ドキュメントを参照してください。
 
 ## 次の手順
 
-これで、 [!DNL Query Service]を使用する場合、 [!DNL Postico] クエリを書き込みます。 クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../best-practices/writing-queries.md)』を参照してください。
+[!DNL Query Service] に接続したので、[!DNL Postico] を使用してクエリを記述できます。 クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../best-practices/writing-queries.md)』を参照してください。

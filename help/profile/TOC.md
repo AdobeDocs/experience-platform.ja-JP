@@ -18,7 +18,7 @@ ht-degree: 91%
 * [プロファイルの概要（ビデオ）](video/profile-overview.md)
 * [[!DNL Profile] とセグメント化ガードレール](guardrails.md)
 * [[!DNL Profile] ダッシュボード](ui/profile-dashboard.md)
-* [エッジプロファイル](edge-profiles.md)
+* [Edge プロファイル](edge-profiles.md)
 * [エクスペリエンスイベントの有効期限](event-expirations.md)
 * [偽名プロファイルの有効期限](pseudonymous-profiles.md)
 * [顧客タイムスタンプの順序](customer-timestamp-ordering.md)

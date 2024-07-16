@@ -4,8 +4,8 @@ title: Destination SDK で作成される宛先のテンプレート仕様
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 93%
+source-wordcount: '511'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 93%
 
 テンプレート仕様は、リアルタイム（ストリーミング）宛先用の宛先サーバー設定の一部です。
 
-Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したストリーミング先の設定](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 ](../../guides/configure-destination-instructions.md#create-server-template-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destination-servers` エンドポイントを介して宛先用のテンプレート仕様を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 

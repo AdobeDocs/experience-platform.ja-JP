@@ -1,27 +1,27 @@
 ---
 title: 書き出し API エンドポイント
-description: スキーマレジストリ API の/export エンドポイントを使用すると、サンドボックス間で XDM リソースを共有できます。
+description: Schema Registry API の/export エンドポイントを使用すると、サンドボックス間で XDM リソースを共有できます。
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 13%
+source-wordcount: '406'
+ht-degree: 12%
 
 ---
 
 # 書き出しエンドポイント
 
-内のすべてのリソース [!DNL Schema Library] は、Adobe Experience Platform内の特定のサンドボックスに含まれます。 サンドボックスと組織の間で Experience Data Model(XDM) リソースを共有する必要が生じる場合があります。 この `/rpc/export` エンドポイント [!DNL Schema Registry] API を使用すると、 [!DNL Schema Library]を使用し、そのペイロードを使用して、 [`/rpc/import` endpoint](./import.md).
+[!DNL Schema Library] 内のすべてのリソースは、Adobe Experience Platform内の特定のサンドボックスに含まれています。 場合によっては、サンドボックスと組織の間で Experience Data Model （XDM）リソースを共有する必要があります。 [!DNL Schema Registry] API の `/rpc/export` エンドポイントを使用すると、[!DNL Schema Library] 内の任意のスキーマ、スキーマフィールドグループ、データタイプの書き出しペイロードを生成し、そのペイロードを使用して、[`/rpc/import` エンドポイントを介してターゲットサンドボックスと組織にそのリソース（およびすべての依存リソース）を読み込むことができま ](./import.md)。
 
 ## はじめに
 
-この `/rpc/export` エンドポイントが [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+`/rpc/export` エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。 先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
-この `/rpc/export` endpoint は、 [!DNL Schema Registry]. の他のエンドポイントとは異なり、 [!DNL Schema Registry] API、RPC エンドポイントは、 `Accept` または `Content-Type`、およびを使用しない `CONTAINER_ID`. 代わりに、 `/rpc` 名前空間と呼ばれます。
+`/rpc/export` エンドポイントは、[!DNL Schema Registry] でサポートされているリモート プロシージャ コール （RPC）の一部です。 [!DNL Schema Registry] API の他のエンドポイントとは異なり、RPC エンドポイントには `Accept` や `Content-Type` などの追加のヘッダーは必要なく、`CONTAINER_ID` も使用しません。 代わりに、以下の API 呼び出しで示すように、`/rpc` 名前空間を使用する必要があります。
 
 ## リソースの書き出しペイロードの生成 {#export}
 
-内の既存のスキーマ、フィールドグループまたはデータタイプの場合 [!DNL Schema Library]に値を指定しない場合、 `/export` エンドポイント：パスにリソースの ID を指定します。
+パス内の既存のスキーマ、フィールドグループまたはデータタイプの場合、[!DNL Schema Library] エンドポイントに対してGETリクエストを行い、パスにリソースの ID を指定することで、書き出しペイロードを `/export` 成できます。
 
 **API 形式**
 
@@ -31,13 +31,13 @@ GET /rpc/export/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_ID}` | この `meta:altId` または URL エンコード済み `$id` 書き出す XDM リソースの XDM リソース。 |
+| `{RESOURCE_ID}` | 書き出す XDM リソースの `meta:altId` または URL エンコードされた `$id`。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエストは、 `Restaurant` フィールドグループを使用します。
+次のリクエストは、`Restaurant` フィールドグループの書き出しペイロードを取得します。
 
 ```shell
 curl -X GET \
@@ -51,9 +51,9 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、オブジェクトの配列を返します。この配列は、ターゲット XDM リソースとその依存リソースをすべて表します。 この例では、配列の最初のオブジェクトはテナントが作成します `Property` データタイプ `Restaurant` フィールドグループが使用され、2 番目のオブジェクトが `Restaurant` フィールドグループ自体を使用します。 このペイロードは、 [リソースをインポート](#import) を別のサンドボックスまたは組織に追加します。
+応答が成功すると、オブジェクトの配列が返されます。この配列は、ターゲット XDM リソースとその依存リソースをすべて表します。 この例では、配列内の最初のオブジェクトが、`Restaurant` フィールドグループが採用するテナントで作成された `Property` データタイプであり、2 番目のオブジェクトは `Restaurant` フィールドグループ自体です。 その後、このペイロードを使用して、別のサンドボックスまたは組織に [ リソースを読み込み ](#import) ことができます。
 
-リソースのテナント ID のすべてのインスタンスが、 `<XDM_TENANTID_PLACEHOLDER>`. これにより、スキーマレジストリで、後続の読み込み呼び出しでの送信先に応じて、正しいテナント ID をリソースに自動的に適用できます。
+リソースのテナント ID のインスタンスはすべて `<XDM_TENANTID_PLACEHOLDER>` に置き換えられます。 これにより、スキーマレジストリは、後続の読み込み呼び出しでの送信先に応じて、正しいテナント ID をリソースに自動的に適用できます。
 
 ```json
 [
@@ -193,8 +193,8 @@ curl -X GET \
 ]
 ```
 
-## リソースをインポート {#import}
+## リソースの読み込み {#import}
 
-CSV ファイルから書き出しペイロードを生成したら、そのペイロードを `/rpc/import` endpoint ：スキーマを生成します。
+CSV ファイルから書き出しペイロードを生成したら、そのペイロードを `/rpc/import` エンドポイントに送信して、スキーマを生成できます。
 
-詳しくは、 [インポートエンドポイントガイド](./import.md) を参照してください。
+エクスポートペイロードからスキーマを生成する方法について詳しくは、[ インポートエンドポイントガイド ](./import.md) を参照してください。

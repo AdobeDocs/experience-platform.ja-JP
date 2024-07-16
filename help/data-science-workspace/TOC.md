@@ -9,7 +9,7 @@ role: User, Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -65,4 +65,4 @@ ht-degree: 99%
    * [サービス（UI）の自動トレーニングとスコアリングのスケジュール設定](models-recipes/schedule-models-ui.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

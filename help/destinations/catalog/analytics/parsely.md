@@ -1,12 +1,12 @@
 ---
-keywords: 解析。 ly;parsely;Parse.ly;Parse.ly
+keywords: 解析。 ly;parsally;Parsly;parse.ly;Parse.ly
 title: Parse.ly Analytics 拡張機能
-description: Parse.ly Analytics 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Parse.ly Analytics 拡張機能は、Adobe Experience Platformの Analytics の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 92%
+source-wordcount: '434'
+ht-degree: 91%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 92%
 
 ## 概要 {#overview}
 
-[!DNL Parse.ly Analytics] は、2,500 を超える企業がデータを使用してオンラインユーザーを理解するのに役立っています。この拡張機能は JavaScript スニペットをインストールし、訪問者がサイトのコンテンツをどのように操作したかを追跡します。
+[!DNL Parse.ly Analytics] は、2,500 以上の企業がデータを使用してオンラインオーディエンスを理解するのに役立ちます。 この拡張機能は JavaScript スニペットをインストールし、訪問者がサイトのコンテンツをどのように操作したかを追跡します。
 
-Parse.ly は、Adobe Experience Platformの Analytics 拡張機能です。 拡張機能の機能について詳しくは、「[Parse.ly Analytics](https://www.parse.ly/)」を参照してください。
+Parse.ly はAdobe Experience Platformの Analytics 拡張機能です。 拡張機能の機能について詳しくは、「[Parse.ly Analytics](https://www.parse.ly/)」を参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ Parse.ly は、Adobe Experience Platformの Analytics 拡張機能です。 拡�
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Parse.ly] 拡張子：
+[!DNL Parse.ly] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

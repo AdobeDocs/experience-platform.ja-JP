@@ -1,6 +1,6 @@
 ---
 title: Pega プロファイルコネクタ
-description: Adobe Experience PlatformのAmazon S3 用 Pega Profile Connector を使用して、プロファイルデータをAmazon S3 クラウドストレージに完全または増分で書き出すか、両方に書き出します。 Pega Customer Decision Hub では、顧客プロファイルデザイナーでデータジョブをスケジュールして、Amazon S3 ストレージからプロファイルデータを定期的に読み込むことができます。
+description: Adobe Experience PlatformのAmazon S3 用 Pega プロファイルコネクタを使用して、完全または増分（あるいはその両方）のプロファイルデータをAmazon S3 クラウドストレージに書き出します。 Pega Customer Decision Hub では、カスタマープロファイル Designerでデータジョブをスケジュールして、Amazon S3 ストレージからプロファイルデータを定期的に読み込むことができます。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
@@ -14,42 +14,42 @@ ht-degree: 39%
 
 ## 概要 {#overview}
 
-以下を使用します。 [!DNL Pega Profile Connector] Adobe Experience Platformで、 [!DNL Amazon Web Services] (AWS)S3 ストレージを使用し、Adobe Experience Platformから独自の S3 バケットにプロファイルデータを CSV ファイルに定期的に書き出します。 [!DNL Pega Customer Decision Hub] では、データジョブをスケジュールして、このプロファイルデータを S3 ストレージから読み込み、[!DNL Pega Customer Decision Hub] プロファイルを更新できます。
+Adobe Experience Platformの [!DNL Pega Profile Connector] を使用して [!DNL Amazon Web Services] （AWS） S3 ストレージへのライブアウトバウンド接続を作成し、Adobe Experience Platformから CSV ファイルにプロファイルデータを定期的に書き出して、独自の S3 バケットに入れます。 [!DNL Pega Customer Decision Hub] では、データジョブをスケジュールして、このプロファイルデータを S3 ストレージから読み込み、[!DNL Pega Customer Decision Hub] プロファイルを更新できます。
 
-このコネクタは、プロファイルデータの初期書き出しを設定するのに役立ち、新しいプロファイルを定期的ににに同期するのに役立ちます。 [!DNL Pega Customer Decision Hub].  顧客の Decision Hub に最新のデータを持つことで、次に最適な判定をおこなうために、顧客ベースのより優れた最新の表示を提供します。
+このコネクタは、プロファイルデータの最初の書き出しを設定するのに役立ち、[!DNL Pega Customer Decision Hub] に新しいプロファイルを定期的に同期するのにも役立ちます。  Customer Decision Hub に最新のデータを含めることで、次善のアクションの意思決定のための、顧客ベースに関するより優れた更新ビューが提供されます。
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、Pegasystems によって作成および管理されます。 お問い合わせや更新のご依頼は、Pega に直接お問い合わせください [ここ](mailto:support@pega.com).
+>この宛先コネクタとドキュメントページは、Pegasystems が作成および管理します。 お問い合わせや更新のリクエストについては、Pega に直接お問い合わせください [ こちら ](mailto:support@pega.com)。
 
 ## ユースケース
 
-をいつどのように使用するかをより深く理解するのに役立ちます。 [!DNL Pega Profile Connector] の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+[!DNL Pega Profile Connector] の宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
 
-### 使用例 1
+### ユースケース 1
 
-マーケターが最初に [!DNL Pega Customer Decision Hub] Adobe Experience Platformから読み込まれたプロファイルデータを含む これは、最初のフル負荷に続いて、スケジュールに沿ったデルタ負荷が発生します。
+マーケターは、最初に、Adobe Experience Platformから読み込まれたプロファイルデータを使用して [!DNL Pega Customer Decision Hub] を設定したいと考えています。 これは、最初のフル・ロードと、スケジュールに従ったデルタ・ロードです。
 
-### 使用例 2
+### ユースケース 2
 
-マーケターがAdobe Experience Platformの最新のプロファイルデータを [!DNL Pega Customer Decision Hub] これにより、顧客プロファイルに関する Pega のインサイトが継続的に強化されます。
+マーケターは、顧客プロファイルに関する Pega インサイトを継続的に強化する、Adobe Experience Platformの最新のプロファイルデータを [!DNL Pega Customer Decision Hub] で入手したいと考えています。
 
 ## 前提条件 {#prerequisites}
 
-この宛先を使用してAdobe Experience Platformからデータを書き出し、プロファイルをに読み込む前に [!DNL Pega Customer Decision Hub]次の前提条件を満たしていることを確認します。
+この宛先を使用してAdobe Experience Platformからデータを書き出し、プロファイルを [!DNL Pega Customer Decision Hub] に読み込む前に、次の前提条件を満たしていることを確認してください。
 
-* 設定 [!DNL Amazon S3] バケットおよびデータファイルの書き出しと読み込みに使用するフォルダーパス。
-* を設定します。 [!DNL Amazon S3] アクセスキーと [!DNL Amazon S3] 秘密鍵：内 [!DNL Amazon S3]、 `access key - secret access key` ペアを使用して、 [!DNL Amazon S3] アカウント。
-* データを正常に接続してに書き出すには、以下を実行します。 [!DNL Amazon S3] ストレージの場所、次の IAM (Identity and Access Management) ユーザーを作成する [!DNL Platform] in [!DNL Amazon S3] 権限の割り当て： `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
-* 次を確認します。 [!DNL Pega Customer Decision Hub] インスタンスが 8.8 バージョン以降にアップグレードされています。
+* バケット [!DNL Amazon S3]、データファイルのエクスポートおよびインポートに使用するフォルダーパスを設定します。
+* [!DNL Amazon S3] アクセスキーと [!DNL Amazon S3] 秘密鍵を設定する：[!DNL Amazon S3] で `access key - secret access key` ペアを生成して、[!DNL Amazon S3] アカウントに Platform アクセス権を付与します。
+* [!DNL Amazon S3] ストレージの場所に正常に接続してデータを書き出すには、[!DNL Amazon S3] で [!DNL Platform] の IAM （Identity and Access Management） ユーザーを作成し、`s3:DeleteObject`、`s3:GetBucketLocation`、`s3:GetObject`、`s3:ListBucket`、`s3:PutObject`、`s3:ListMultipartUploadParts` などの権限を割り当てます
+* [!DNL Pega Customer Decision Hub] インスタンスが 8.8 バージョン以降にアップグレードされていることを確認します。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] では、以下の表で説明するカスタムユーザー ID のアクティベーションをサポートしています。 詳しくは、 [id](/help/identity-service/features/namespaces.md).
+[!DNL Pega Customer Decision Hub] では、以下の表で説明するカスタムユーザー ID のアクティベーションをサポートしています。 詳しくは、[ID](/help/identity-service/features/namespaces.md) を参照してください。
 
 | ターゲット ID | 説明 |
 |---|---|
-| *CustomerID* | プロファイルを一意に識別する共通のユーザー ID [!DNL Pega Customer Decision Hub] とAdobe Experience Platform |
+| *顧客 ID* | [!DNL Pega Customer Decision Hub] およびAdobe Experience Platformでプロファイルを一意に識別する共通のユーザー ID |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ ht-degree: 39%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -76,25 +76,25 @@ ht-degree: 39%
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-* **[!DNL Amazon S3]アクセスキー** および **[!DNL Amazon S3]秘密鍵**：内 [!DNL Amazon S3]、 `access key - secret access key` のペアにより、Adobe Experience Platformへのアクセス権が [!DNL Amazon S3] アカウント。 詳しくは、[Amazon Web Services に関するドキュメント](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
+* **[!DNL Amazon S3]アクセスキー** および秘密鍵 **: [!DNL Amazon S3] で `access key - secret access key` ペア**[!DNL Amazon S3] 生成して、[!DNL Amazon S3] アカウントにAdobe Experience Platform アクセス権を付与します。 詳しくは、[Amazon Web Services に関するドキュメント](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 
 ### 宛先の詳細の入力 {#destination-details}
 
-への認証接続を確立した後 [!DNL Amazon S3]に設定し、宛先に次の情報を入力します。
+[!DNL Amazon S3] への認証接続を確立したら、宛先の次の情報を指定します。
 
-![Pega Profile Connector の宛先の詳細に関する完了済みフィールドを示す UI 画面の画像](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
+![Pega プロファイルコネクタの宛先の詳細に関する入力済みフィールドを示す UI 画面の画像 ](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
-宛先の詳細を設定するには、必須フィールドに入力し、「 」を選択します。 **[!UICONTROL 次へ]**. UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
+宛先の詳細を設定するには、必須フィールドに入力し、「**[!UICONTROL 次へ]**」を選択します。 UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
 * **[!UICONTROL 名前]**：この宛先を識別するのに役立つ名前を入力します。
 * **[!UICONTROL 説明]**：この宛先の説明を入力します。
 * **[!UICONTROL バケット名]**：この宛先で使用する [!DNL Amazon S3] バケットの名前を入力します。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパスを入力します。
-* **[!UICONTROL 圧縮タイプ]**：圧縮タイプとして「GZIP」または「なし」を選択します。
+* **[!UICONTROL 圧縮タイプ]**：圧縮タイプとして GZIP または NONE を選択します。
 
 >[!TIP]
 >
->宛先の接続ワークフローでは、書き出したオーディエンスファイルごとにAmazon S3 ストレージにカスタムフォルダーを作成できます。 手順については、[マクロを使用して、ストレージの場所にフォルダーを作成する](/help/destinations/catalog/cloud-storage/overview.md#use-macros)を参照してください。
+>宛先に接続ワークフローでは、書き出したオーディエンスファイルごとにAmazon S3 ストレージにカスタムフォルダーを作成できます。 手順については、[マクロを使用して、ストレージの場所にフォルダーを作成する](/help/destinations/catalog/cloud-storage/overview.md#use-macros)を参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -106,10 +106,10 @@ ht-degree: 39%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
@@ -117,17 +117,17 @@ ht-degree: 39%
 
 ## データの書き出しを検証する {#exported-data}
 
-の場合 [!DNL Pega Profile Connector] 宛先、 [!DNL Platform] を作成 `.csv` 指定したAmazon S3 ストレージの場所にあるファイル。 ファイルについて詳しくは、 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) （ audience activation チュートリアル）を参照してください。
+[!DNL Pega Profile Connector] の宛先の場合、[!DNL Platform] は、指定されたAmazon S3 ストレージの場所に `.csv` ファイルを作成します。 ファイルについて詳しくは、オーディエンスの有効化チュートリアルの [ プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
-S3 からのプロファイルデータのインポートが成功すると、 [!DNL Pega Customer] プロファイルデータストア。 インポートした顧客プロファイルデータは、 [!DNL Pega Customer Profile Designer] （次の図を参照）。
-![顧客プロファイルデザイナーで顧客プロファイルデータを検証できる UI 画面のAdobe](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+S3 からプロファイルデータが正常に読み込まれると、[!DNL Pega Customer] プロファイルデータストアにデータが挿入されます。 次の図に示すように、読み込まれた顧客プロファイルデータを [!DNL Pega Customer Profile Designer] で検証できます。
+![ 顧客プロファイルDesignerでAdobeプロファイルデータを検証できる UI 画面の画像 ](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In [!DNL Pega Customer Decision Hub]に設定でき、データ管理者が [!DNL Customer Profile Designer] 次の図に示すように、S3 からプロファイルデータを定期的に読み込む。 詳しくは、 [その他のリソース](#additional-resources) プロファイルデータをインポートするデータジョブの設定方法の詳細 [!DNL Amazon S3].
-![顧客プロファイルデザイナーでデータジョブを設定する UI 画面の画像](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
+ま [!DNL Pega Customer Decision Hub]、データ管理者は、次の図に示 [!DNL Customer Profile Designer] ように、S3 からプロファイルデータを定期的に読み込むように、データジョブを設定できます。 データジョブを設定して [!DNL Amazon S3] からプロファイルデータをインポートする方法について詳しくは、[ その他のリソース ](#additional-resources) を参照してください。
+![ 顧客プロファイルDesignerでデータジョブを設定する UI 画面の画像 ](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、 [データジョブの読み込み](https://academy.pega.com/topic/import-data-jobs/v1) in [!DNL Pega Customer Decision Hub].
+[!DNL Pega Customer Decision Hub] の [ データジョブのインポート ](https://academy.pega.com/topic/import-data-jobs/v1) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

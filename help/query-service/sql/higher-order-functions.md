@@ -1,32 +1,33 @@
 ---
-title: 上位関数を使用した配列の管理とデータ型のマッピング
-description: クエリサービスで、配列を管理し、より上位の関数を使用してデータ型をマッピングする方法について説明します。 実用的な例と一般的な使用例が示されています。
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+title: 高階関数を使用した配列およびマップ データ タイプの管理
+description: クエリサービスの高階関数を使用して、配列とマップのデータタイプを管理する方法を説明します。 実用的な例については、一般的なユースケースを参照してください。
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 1%
 
 ---
 
-# 上位関数を使用した配列の管理とデータ型のマッピング
+# 高階関数を使用した配列およびマップ データ タイプの管理
 
-このガイドでは、上位関数が配列やマップなどの複雑なデータ型を処理する方法について説明します。 これらの関数は、配列を分解し、関数を実行して、結果を組み合わせる必要をなくします。 高次関数は、時系列データセットや分析の分析や処理に特に役立ちます。多くの場合、複雑にネストされた構造、配列、マップ、多様な使用例が含まれます。
+このガイドでは、高階関数を使用して、配列やマップなどの複雑なデータ型を処理する方法を説明します。 これらの関数は、配列を展開し、関数を実行してから、結果を組み合わせる必要がなくなります。 高階関数は、複雑なネストされた構造、配列、マップおよび様々なユースケースを特徴とすることが多い時系列データセットおよび分析を分析または処理する場合に特に役立ちます。
 
-次の使用例には、上位の配列およびマップ操作関数の例が含まれています。
+次のユースケースには、高階配列およびマップ操作関数の例が含まれています。
 
-## 変換を使用して価格合計を n で調整します {#adjust-price-total}
+## トランスフォームを使用して価格合計を n で調整 {#adjust-price-total}
 
 `transform(array<T>, function<T, U>): array<U>`
 
-上記のスニペットでは、配列の各要素に関数を適用し、変換された要素の新しい配列を返します。 特に、 `transform` 関数は、型 T の配列を取り、各要素を型 T から型 U に変換します。次に、U 型の配列を返します。実際の型 T と U は、変換関数の使用によって異なります。
+上記のスニペットは、配列の各要素に関数を適用し、変換された要素の新しい配列を返します。 具体的には、`transform` 関数は T 型の配列を取り、各要素を T 型から U 型に変換します。次に、U 型の配列を返します。実際の型 T と U は、変換関数の具体的な使用方法によって異なります。
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
-この配列変換関数は前の例と似ていますが、関数には 2 つの引数があります。 この関数の 2 番目の引数は、変換されるだけでなく、配列内の要素のインデックスも受け取ります。
+この配列変換関数は前の例と似ていますが、関数には 2 つの引数があります。 この関数の 2 番目の引数は、変換される以外に、配列内の要素のインデックスも受け取ります。
 
 **例**
 
-次の SQL の例は、この使用例を示しています。 クエリは、指定したテーブルから限定された行セットを取得し、 `productListItems` 配列に `priceTotal` 73 個の項目の属性。 結果には、 `_id`, `productListItems`、変換済み `price_in_inr` 列。 特定のタイムスタンプ範囲に基づいて選択されます。
+次の SQL の例は、このユースケースを示しています。 クエリは、指定したテーブルから限定されたローのセットを取得し、各項目の `priceTotal` 属性に 73 を掛けて `productListItems` の配列を変換します。 結果には、`_id`、`productListItems`、変換後の `price_in_inr` 列が含まれます。 選択は、特定のタイムスタンプ範囲に基づいて行われます。
 
 ```sql
 SELECT _id,
@@ -41,7 +42,7 @@ LIMIT  10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
  productListItems | price_in_inr
@@ -55,15 +56,15 @@ LIMIT  10;
 (10 rows)
 ```
 
-## は、特定の SKU を持つ製品が存在するかどうかを確認するために存在します {#confirm-product-exists}
+## 特定の SKU を持つ製品が存在するかどうかを検出するには、既存を使用します {#confirm-product-exists}
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-上記のスニペットでは、 `exists` 関数が配列の各要素に適用され、ブール値を返します。 ブール値は、指定された条件を満たす要素が配列内に 1 つ以上存在するかどうかを示します。 この場合、特定の SKU を持つ製品が存在するかどうかを確認します。
+上記のスニペットでは、`exists` 関数が配列の各要素に適用され、ブール値を返します。 ブール値は、指定した条件を満たす 1 つ以上の要素が配列にあるかどうかを示します。 この場合、特定の SKU を持つ製品が存在するかどうかを確認します。
 
 **例**
 
-以下の SQL の例では、クエリは `productListItems` から `geometrixxx_999_xdm_pqs_1batch_10k_rows` テーブルを参照し、SKU がと等しい要素かどうかを評価します `123679` （内） `productListItems` 配列が存在します。 次に、特定のタイムスタンプの範囲に基づいて結果をフィルタリングし、最終結果を 10 行に制限します。
+以下の SQL の例では、クエリは `geometrixxx_999_xdm_pqs_1batch_10k_rows` テーブルから `productListItems` を取得し、`productListItems` 配列に `123679` と等しい SKU を持つ要素が存在するかどうかを評価します。 次に、特定のタイムスタンプレンジに基づいて結果をフィルタリングし、最終結果を 10 行に制限します。
 
 ```sql
 SELECT productListItems
@@ -75,7 +76,7 @@ AND timestamp < to_timestamp('2017-11-02 00:00:00')limit 10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems
@@ -94,15 +95,15 @@ productListItems
 (10 rows)
 ```
 
-## フィルターを使用して、SKU > 100000の製品を検索します。 {#find-specific-products}
+## フィルターを使用して SKU/100000 の商品を検索する {#find-specific-products}
 
 `filter(array<T>, function<T, boolean>): array<T>`
 
-この関数は、各要素をブール値として評価する特定の条件に基づいて要素の配列をフィルタリングします。 次に、条件が true 値を返した要素のみを含む新しい配列を返します。
+この関数は、各要素をブール値として評価する指定の条件に基づいて、要素の配列をフィルタリングします。 次に、条件が true 値を返した要素のみを含む新しい配列を返します。
 
 **例**
 
-以下のクエリでは、 `productListItems` 列でフィルターを適用して、SKU が100000を超える要素のみを含め、特定のタイムスタンプ範囲内の行に結果セットを制限します。 次に、フィルターされた配列は次のようにエイリアスされます。 `_filter` 出力に含まれます。
+次のクエリでは、`productListItems` 列を選択し、SKU が 100000 より大きい要素のみを含めるフィルターを適用し、特定のタイムスタンプ範囲内の行に結果セットを制限します。 フィルタリングされた配列は、出力の `_filter` としてエイリアス化されます。
 
 ```sql
 SELECT productListItems,
@@ -115,7 +116,7 @@ LIMIT 10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems | _filter
@@ -128,15 +129,15 @@ productListItems | _filter
 (10 rows)
 ```
 
-## 集計を使用して、特定の ID に関連付けられているすべての製品リスト項目の SKU を合計し、結果の合計を 2 倍にします {#sum-specific-skus-and-double-the-resulting-total}
+## 集計を使用すると、特定の ID に関連付けられたすべての製品リスト項目の SKU を合計し、結果の合計を 2 倍にすることができます {#sum-specific-skus-and-double-the-resulting-total}
 
 `aggregate(array<T>, A, function<A, T, A>[, function<A, R>]): R`
 
-この集計操作は、初期状態と配列内のすべての要素にバイナリ演算子を適用します。 また、複数の値を 1 つの状態に減らします。 この削減後、最終状態は、仕上げ関数を用いて最終的な結果に変換されます。 finish 関数は、バイナリ演算子をすべての配列要素に適用した後に取得された最後の状態を取得し、それを使用して最終結果を生成します。
+この集計操作では、初期状態と配列内のすべての要素にバイナリ演算子が適用されます。 また、複数の値を 1 つの状態に減らします。 この縮小後、最終状態は仕上げ関数を使用して最終結果に変換されます。 finish 関数は、すべての配列要素にバイナリ演算子を適用した後に取得した最後の状態を取り、それを使用して最終的な結果を生成します。
 
 **例**
 
-このクエリの例では、 `productListItems` 指定されたタイムスタンプ範囲内の配列で、結果を 2 倍にします。 出力には元の `productListItems` 配列と計算済みの `max_value`.
+このクエリの例では、指定されたタイムスタンプ範囲内の `productListItems` 配列から最大 SKU 値を計算し、結果を 2 倍にします。 出力には、元の `productListItems` 配列と計算された `max_value` が含まれます。
 
 ```sql
 SELECT productListItems,
@@ -154,7 +155,7 @@ LIMIT 50;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems | max_value
@@ -167,15 +168,15 @@ productListItems | max_value
 (10 rows)
 ```
 
-## zip_with を使用して、製品リスト内のすべての品目にシーケンス番号を割り当てます。 {#assign-a-sequence-number}
+## zip_with を使用して、製品リスト内のすべての項目にシーケンス番号を割り当てます {#assign-a-sequence-number}
 
 `zip_with(array<T>, array<U>, function<T, U, R>): array<R>`
 
-このスニペットは、2 つの配列の要素を 1 つの新しい配列に組み合わせます。 この操作は、配列の各要素に対して個別に実行され、値のペアが生成されます。 1 つの配列が短い場合、長い方の配列の長さに合わせて null 値が追加されます。 これは、関数が適用される前に発生します。
+このスニペットは、2 つの配列の要素を 1 つの新しい配列に組み合わせます。 操作は、配列の各要素で独立して実行され、値のペアを生成します。 1 つの配列が短い場合、長い配列の長さに一致するように null 値が追加されます。 これは、関数が適用される前に行われます。
 
 **例**
 
-次のクエリでは、 `zip_with` 関数を使用して、2 つの配列から値のペアを作成します。 これをおこなうには、 `productListItems` 配列を整数シーケンスに変換します。整数シーケンスは、 `Sequence` 関数に置き換えます。 結果は、元の `productListItems` 列に含まれ、タイムスタンプの範囲に基づいて制限されます。
+次のクエリでは、`zip_with` 関数を使用して、2 つの配列から値のペアを作成します。 これを行うには、`Sequence` 関数を使用して生成された整数シーケンスに `productListItems` 配列の SKU 値を追加します。 結果は、元の `productListItems` 列と共に選択され、タイムスタンプの範囲に基づいて制限されます。
 
 ```sql
 SELECT productListItems,
@@ -188,7 +189,7 @@ limit 10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems     | zip_with
@@ -207,15 +208,15 @@ productListItems     | zip_with
 (10 rows)
 ```
 
-## map_from_entries を使用して、製品リスト内の各品目にシーケンス番号を割り当て、最終結果をマップとして取得します {#assign-a-sequence-number-return-result-as-map}
+## 製品リスト内の各項目にシーケンス番号を割り当て、最終的な結果をマップとして取得するには、map_from_entries を使用します {#assign-a-sequence-number-return-result-as-map}
 
 `map_from_entries(array<struct<K, V>>): map<K, V>`
 
-このスニペットは、キーと値のペアの配列をマップに変換します。 より整理された効率的な構造からメリットを得られるキーと値のペアのデータを扱う場合に役立ちます。
+このスニペットは、キーと値のペアの配列をマップに変換します。 これは、より整理され効率的な構造のメリットが得られるキーと値のペアのデータを処理する際に役立ちます。
 
 **例**
 
-次のクエリは、シーケンスと productListItems 配列から値のペアを作成し、map_from_entries を使用してこれらのペアを map に変換し、新しく作成した map_from_entries 列と共に元の productListItems 列を選択します。 結果は、指定したタイムスタンプの範囲に基づいてフィルタリングされ、制限されます。
+次のクエリは、シーケンスと productListItems 配列から値のペアを作成し、map_from_entries を使用してこれらのペアをマップに変換し、元の productListItems 列を、新しく作成された map_from_entries 列とともに選択します。 結果は、指定したタイムスタンプ範囲に基づいてフィルタリングされ、制限されます。
 
 ```sql
 SELECT productListItems,      map_from_entries(zip_with(Sequence(1,Size(productListItems)), productListItems, (x,y) -> struct(x, y))) AS map_from_entries
@@ -227,7 +228,7 @@ LIMIT 10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems     | map_from_entries
@@ -246,19 +247,19 @@ productListItems     | map_from_entries
 (10 rows)
 ```
 
-## map_form_arrays を使用して、製品リスト内の項目にシーケンス番号を割り当て、結果をマップとして返します。 {#assign-sequence-numbers-to-items-return-the-result-as-a-map}
+## 製品リスト内の項目にシーケンス番号を割り当て、結果をマップとして返すには、map_form_arrays を使用します {#assign-sequence-numbers-to-items-return-the-result-as-a-map}
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-The `map_form_arrays` 関数は、2 つの配列からペア値を使用してマップを作成します。
+`map_form_arrays` 関数は、2 つの配列からペアになった値を使用してマップを作成します。
 
 >[!IMPORTANT]
 >
->キーに null 要素を含めないでください。
+>キーには null 要素を含めないでください。
 
 **例**
 
-以下の SQL は、 `Sequence` 関数の値は `productListItems` 配列。 クエリによって `productListItems` 列と `Map_from_arrays` 関数を使用して、生成された数値のシーケンスと配列の要素に基づいてマップを作成します。 結果は 10 行に制限され、タイムスタンプの範囲に基づいてフィルタリングされます。
+次の SQL は、`Sequence` 関数を使用して生成されたキーがシーケンス番号であり、値が `productListItems` 配列の要素であるマップを作成します。 クエリは `productListItems` 列を選択し、`Map_from_arrays` 関数を使用して、生成された一連の数値と配列の要素に基づいてマップを作成します。 結果は 10 行に制限され、タイムスタンプの範囲に基づいてフィルタリングされます。
 
 ```sql
 SELECT productListItems,
@@ -273,7 +274,7 @@ LIMIT  10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems     | map_from_entries
@@ -292,15 +293,15 @@ productListItems     | map_from_entries
 (10 rows)
 ```
 
-## map_concat を使用して、2 つのマップを 1 つのマップとして連結します。 {#concatenate-two-maps-into-as-single-map}
+## 2 つのマップを単一のマップとして連結するには、map_concat を使用します {#concatenate-two-maps-into-as-single-map}
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-The `map_concat` 関数は、上記のスニペットの中で複数のマップを引数として受け取り、入力マップからすべてのキーと値のペアを組み合わせた新しいマップを返します。 関数は、複数のマップを 1 つのマップに連結し、結果のマップには、入力マップからのすべてのキーと値のペアが含まれます。
+上記のスニペットの `map_concat` 関数は、複数のマップを引数として受け取り、入力マップからすべてのキーと値のペアを組み合わせた新しいマップを返します。 この関数は、複数のマップを 1 つのマップに連結し、結果のマップには、入力マップからすべてのキーと値のペアが含まれます。
 
 **例**
 
-以下の SQL は、 `productListItems` はシーケンス番号に関連付けられ、別のマップと連結され、特定のシーケンス範囲でキーが生成されます。
+次の SQL は、`productListItems` 内の各項目がシーケンス番号に関連付けられたマップを作成し、次に、特定のシーケンス範囲でキーが生成される別のマップと連結されます。
 
 ```sql
 SELECT productListItems,
@@ -316,7 +317,7 @@ limit 10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems     | map_from_entries
@@ -339,13 +340,13 @@ productListItems     | map_from_entries
 
 `element_at(array<T>, Int): T / element_at(map<K, V>, K): V`
 
-配列の場合、スニペットは、指定された（1 から始まる）インデックスの要素、またはマップ内のキーに関連付けられた値を返します。 インデックスが 0 未満の場合は、最後から最初の要素にアクセスし、インデックスが配列の長さを超える場合は null を返します。
+配列の場合、スニペットは、指定された（1 ベースの）インデックスの要素、またはマップ内のキーに関連付けられた値を返します。 インデックスが &lt;0 の場合、最後から最初の要素にアクセスし、インデックスが配列の長さを超えると null を返します。
 
-マップの場合は、指定されたキーの値を返すか、マップにキーが含まれていない場合は null を返します。
+マップの場合、指定されたキーの値を返すか、キーがマップに含まれていない場合は null を返します。
 
 **例**
 
-クエリによって `identitymap` テーブルの列 `geometrixxx_999_xdm_pqs_1batch_10k_rows` を抽出し、キーに関連付けられた値を抽出します。 `AAID` 各行に対して 結果は、指定されたタイムスタンプ範囲内の行に制限され、クエリは出力を 10 行に制限します。
+クエリは、テーブル `geometrixxx_999_xdm_pqs_1batch_10k_rows` から `identitymap` 列を選択し、各行のキー `AAID` に関連付けられた値を抽出します。 結果は、指定したタイムスタンプ範囲内の行に制限され、クエリは出力を 10 行に制限します。
 
 ```sql
 SELECT identitymap,
@@ -358,7 +359,7 @@ LIMIT 10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
                                                                   identitymap                                            |  element_at(identitymap, AAID) 
@@ -375,15 +376,15 @@ LIMIT 10;
 (10 rows)
 ```
 
-## 基数を使用して ID マップで ID の数を検索 {#find-the-number-of-identities-in-the-identity-map}
+## カーディナリティを使用して、ID マップ内の ID の数を調べます {#find-the-number-of-identities-in-the-identity-map}
 
 `cardinality(array<T>): Int / cardinality(map<K, V>): Int`
 
-このスニペットは、指定された配列またはマップのサイズを返し、エイリアスを提供します。 値が null の場合は —1 を戻します。
+このスニペットは、指定された配列またはマップのサイズを返し、エイリアスを提供します。 値が null の場合は–1 を返します。
 
 **例**
 
-以下のクエリは、 `identitymap` 列、および `Cardinality` 関数は、 `identitymap`. 結果は 10 行に制限され、指定したタイムスタンプ範囲に基づいてフィルタリングされます。
+次のクエリは、`identitymap` 列を取得し、`Cardinality` 関数は、`identitymap` 内の各マップ内の要素数を計算します。 結果は 10 行に制限され、指定したタイムスタンプ範囲に基づいてフィルタリングされます。
 
 ```sql
 SELECT identitymap,
@@ -396,7 +397,7 @@ LIMIT  10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
                                                                   identitymap                                            |  size(identitymap) 
@@ -413,15 +414,15 @@ LIMIT  10;
 (10 rows)
 ```
 
-## array_distinct を使用して productListItems 内の個別の要素を見つけます {#find-distinct-elements}
+## productListItems 内のユニーク要素を検索するには、array_distinct を使用します {#find-distinct-elements}
 
 `array_distinct(array<T>): array<T>`
 
-上記のスニペットは、指定された配列から重複値を削除します。
+上記のスニペットは、指定された配列から重複した値を削除します。
 
 **例**
 
-以下のクエリでは、 `productListItems` 列内で重複する項目が削除され、指定したタイムスタンプ範囲に基づいて出力が 10 行に制限されます。
+次のクエリでは、`productListItems` 列を選択し、配列から重複項目を削除し、指定したタイムスタンプ範囲に基づいて 10 行に出力を制限します。
 
 ```sql
 SELECT productListItems,
@@ -434,7 +435,7 @@ LIMIT 10;
 
 **結果**
 
-この SQL の結果は、次に示すようになります。
+この SQL の結果は、次に示すような結果になります。
 
 ```console
 productListItems     | array_distinct(productListItems)
@@ -453,12 +454,12 @@ productListItems     | array_distinct(productListItems)
 (10 rows)
 ```
 
-### その他の上位関数 {#additional-higher-order-functions}
+### その他の高階関数 {#additional-higher-order-functions}
 
-次に示す高次関数の例は、類似したレコードの取得の使用例の一部として説明しています。 各関数の使用例と説明は、このドキュメントの各セクションに記載されています。
+類似レコードの取得のユースケースの一部として、高階関数の次の例を説明します。 各関数の使用例と使用方法の説明は、このドキュメントの各セクションに記載されています。
 
-The [`transform` 関数の例](../use-cases/retrieve-similar-records.md#length-adjustment) 製品リストのトークン化について説明します。
+[`transform` 関数の例では ](../use-cases/retrieve-similar-records.md#length-adjustment) 製品リストのトークン化について説明しています。
 
-The [`filter` 関数の例](../use-cases/retrieve-similar-records.md#filter-results) では、テキストデータから関連情報をより絞り込んで正確に抽出する方法を示します。
+[`filter` 関数の例では ](../use-cases/retrieve-similar-records.md#filter-results) テキストデータから関連情報をより詳細かつ正確に抽出する方法を示しています。
 
-The [`reduce` 関数](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) は、様々な分析および計画プロセスでピボット可能な、累積値または集計を導き出す方法を提供します。
+[`reduce` 関数は ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) 様々な分析および計画プロセスでピボット可能な累積値または集計を導出する方法を提供します。

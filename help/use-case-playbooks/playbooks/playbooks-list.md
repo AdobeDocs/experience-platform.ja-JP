@@ -77,4 +77,4 @@ Real-time Customer Data PlatformとAdobe Journey Optimizerで見つけて使用�
 
 ## 次の手順
 
-使用可能なプレイブックを把握したので、次を読んでください [ガイド](/help/use-case-playbooks/playbooks/choose.md) プレイブックの使用を開始する方法を理解し、ユーザーインターフェイスで適切なプレイブックを選択する方法。
+使用可能なプレイブックを把握したので、この [ ガイド ](/help/use-case-playbooks/playbooks/choose.md) を読んで、プレイブックの使用を開始する方法を理解し、ユーザーインターフェイスで適切なプレイブックを選択します。

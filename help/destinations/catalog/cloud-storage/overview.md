@@ -1,12 +1,12 @@
 ---
 keywords: クラウドストレージの宛先;クラウドストレージ
 title: クラウドストレージの宛先の概要
-description: Adobe Experience Platformは、Amazon S3、AWS Kinesis、Azure Event Hubs、または SFTP クラウドのストレージの場所に、オーディエンスをデータファイルとして配信できます。
+description: Adobe Experience Platformは、オーディエンスをデータファイルとして、Amazon S3、AWS Kinesis、Azure Event Hubs または SFTP クラウドストレージの場所に配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 49%
+source-wordcount: '387'
+ht-degree: 50%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platformは、オーディエンスをデータファイルと�
 
 ## サポートされているクラウドストレージの宛先 {#supported-destinations}
 
-Adobe Experience Platformは、次のクラウドストレージの宛先へのデータの書き出しをサポートします。
+Adobe Experience Platformは、次のクラウドストレージの宛先へのデータの書き出しをサポートしています。
 
 * [Amazon Kinesis 接続](amazon-kinesis.md)
 * [Amazon S3 接続](amazon-s3.md)
@@ -33,7 +33,7 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 
 ## 新しいクラウドストレージの宛先への接続 {#connect-destination}
 
-キャンペーンのクラウドストレージの宛先にオーディエンスを送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
+キャンペーン用に、オーディエンスをクラウドストレージの宛先に送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
 
 
 ## マクロを使用して、ストレージの場所にフォルダーを作成する {#use-macros}
@@ -42,11 +42,11 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 >
 > この節で説明する機能は、現在、[Amazon S3](amazon-s3.md) の宛先でのみ使用できます。
 
-オーディエンスファイルごとにストレージの場所にカスタムフォルダーを作成するには、フォルダーパスの入力フィールドでマクロを使用します。 次に示すように、入力フィールドの末尾にマクロを挿入します。
+ストレージの場所にあるオーディエンスファイルごとにカスタムフォルダーを作成するには、フォルダーパスの入力フィールドでマクロを使用します。 次に示すように、入力フィールドの末尾にマクロを挿入します。
 
 ![マクロを使用してストレージにフォルダーを作成する方法](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-以下の例は、サンプルオーディエンスを参照しています `Luxury Audience` ID を持つ `25768be6-ebd5-45cc-8913-12fb3f348615`.
+以下の例では、ID `25768be6-ebd5-45cc-8913-12fb3f348615` を持つサンプルオーディエンス `Luxury Audience` を参照しています。
 
 **マクロ 1：`%SEGMENT_NAME%`**
 
@@ -66,9 +66,9 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 ## データの書き出しのタイプ {#export-type}
 
 クラウドストレージの宛先では、次の書き出しタイプをサポートしています。
-* **プロファイルベースの書き出し**. これはオーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、オーディエンスのメンバーシップなどを含めることができます。
-* **データセットの書き出し**. この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 [詳細を表示](/help/destinations/ui/export-datasets.md) 機能について。
+* **プロファイルベースの書き出**。 これはオーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、オーディエンスメンバーシップなどを含めることができます。
+* **データセットの書き出し**。 この機能を使用すると、データセット全体をクラウドストレージの宛先に書き出すことができます。 機能について ](/help/destinations/ui/export-datasets.md) 詳細を参照 [。
 
 ## 次の手順 {#next-steps}
 
-次のいずれかを選択した後： [サポートされるクラウドの宛先](#supported-destinations) を使用したい場合は、 [宛先への接続チュートリアル](/help/destinations/ui/connect-destination.md) を参照して、宛先への接続を確立する方法を確認してください。 次に、ファイルベースの宛先に対するアクティベーションのチュートリアルを読んで、の開始方法を学びます [書き出し](/help/destinations/ui/activate-batch-profile-destinations.md) データをクラウドストレージの宛先に送信します。
+使用する [ サポートされているクラウド宛先 ](#supported-destinations) の 1 つを選択した後、[ 宛先への接続チュートリアル ](/help/destinations/ui/connect-destination.md) を読み、宛先への接続を確立する方法を学びます。 次に、ファイルベースの宛先へのアクティベーションチュートリアルを読んで、クラウドストレージの宛先へのデータの [ 書き出し ](/help/destinations/ui/activate-batch-profile-destinations.md) を開始する方法を学びます。

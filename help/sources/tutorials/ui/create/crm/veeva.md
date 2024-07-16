@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Veeva CRM;veeva
+keywords: Experience Platform；ホーム；人気のトピック；Veeva CRM;veeva
 solution: Experience Platform
-title: UI での Veeva CRM ソース接続の作成
+title: UI での Veeva CRM Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Veeva CRM ソース接続を作成する方法を説明します。
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 78%
+source-wordcount: '425'
+ht-degree: 79%
 
 ---
 
@@ -27,30 +27,30 @@ Adobe Experience Platform のソースコネクタには、外部ソースの CR
 
 有効な [!DNL Veeva CRM] アカウントを既にお持ちの場合は、このドキュメントの残りの部分をスキップし、[データフローの設定](../../dataflow/crm.md)に関するチュートリアルに進んでください。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `environmentUrl` | の URL [!DNL Veeva CRM] ソースインスタンス。 |
-| `username` | のユーザー名 [!DNL Veeva CRM] ユーザーアカウント。 |
-| `password` | のパスワード [!DNL Veeva CRM] ユーザーアカウント。 |
-| `securityToken` | のセキュリティトークン [!DNL Veeva CRM] ユーザーアカウント。 |
+| `environmentUrl` | [!DNL Veeva CRM] ソースインスタンスの URL。 |
+| `username` | [!DNL Veeva CRM] ユーザーアカウントのユーザー名。 |
+| `password` | [!DNL Veeva CRM] ユーザーアカウントのパスワード。 |
+| `securityToken` | [!DNL Veeva CRM] ユーザーアカウントのセキュリティ トークン。 |
 
-導入の詳細については、 [[!DNL Veeva CRM] 文書](https://developer.veevacrm.com/doc/Content/rest-api.htm).
+基本について詳しくは、この [[!DNL Veeva CRM]  ドキュメント ](https://developer.veevacrm.com/doc/Content/rest-api.htm) を参照してください。
 
 ## [!DNL Veeva CRM] アカウントの接続
 
-必要な認証情報が揃ったら、次の手順に従って、[!DNL Veeva CRM] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL Veeva CRM] アカウントを [!DNL Platform] にリンクします。
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 [!UICONTROL CRM] カテゴリ、選択 **[!UICONTROL Veeva CRM]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+[!UICONTROL CRM] カテゴリ内で、「**[!UICONTROL Veeva CRM]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
 ![カタログ](../../../../images/tutorials/create/veeva/catalog.png)
 
-この **[!UICONTROL Veeva CRM アカウントの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Veeva CRM アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
@@ -60,7 +60,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 新しいアカウント
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、[!DNL Veeva CRM] の認証情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、[!DNL Veeva CRM] の資格情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../../../../images/tutorials/create/veeva/new.png)
 

@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；experienceevent クエリ；experienceevent クエリ；ExperienceEvent クエリ；
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；Query Service;Experienceevent クエリ；Experienceevent クエリ；Experience Event クエリ；
 title: ユーザーのページビューのリスト
-description: エクスペリエンスイベントを使用して、指定したユーザーが使用した最新 100 ページのリストを作成するクエリの記述方法を説明します。
+description: エクスペリエンスイベントを使用して、指定したユーザーが使用した最新の 100 ページのリストを作成するクエリを記述する方法について説明します。
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '268'
 ht-degree: 8%
 
 ---
 
 # ユーザーのページビューのリスト
 
-このドキュメントでは、指定したユーザーがページビューをリストするのに必要な SQL の例を示します。 Adobe Experience Platformクエリサービスを使用すると、 [!DNL Experience Events] を使用して、様々なユースケースを取り込むことができます。 エクスペリエンスイベントは、エクスペリエンスデータモデル (XDM)ExperienceEvent クラスで表されます。ユーザーが Web サイトまたはサービスを操作したときに、不変で集計されないシステムのスナップショットを取り込みます。 エクスペリエンスイベントは、時間ドメイン分析にも使用できます。 詳しくは、 [次の手順の節](#next-steps) を含むその他の使用例 [!DNL Experience Events] 訪問者レポートを生成するために使用します。
+このドキュメントでは、指定したユーザーがページビューをリストするために必要な SQL の例を示します。 Adobe Experience Platform クエリサービスを使用すると、[!DNL Experience Events] を使用してさまざまなユースケースをキャプチャするクエリを作成できます。 エクスペリエンスイベントは、エクスペリエンスデータモデル（XDM） ExperienceEvent クラスで表されます。このクラスは、ユーザーが web サイトまたはサービスとやり取りする際に、システムの不変スナップショットと非集計スナップショットをキャプチャします。 エクスペリエンスイベントは、タイムドメイン分析にも使用できます。 訪問者レポートの生成に関するユースケースについて [!DNL Experience Events]、[ 次の手順の節 ](#next-steps) を参照してください。
 
-XDM と [!DNL Experience Events] は [[!DNL XDM System] 概要](../../xdm/home.md). クエリサービスと [!DNL Experience Events]を使用すると、ユーザー間の行動傾向を効果的に追跡できます。 次のドキュメントは、 [!DNL Experience Events].
+XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 ](../../xdm/home.md) を参照してください。 クエリサービスと [!DNL Experience Events] を組み合わせることで、ユーザー間の行動のトレンドを効果的に追跡できます。 次のドキュメントでは、[!DNL Experience Events] を含むクエリの例を示します。
 
 ## 目的
 
@@ -36,7 +36,7 @@ ORDER BY timestamp
 LIMIT 100;
 ```
 
-このクエリの結果は、次のように表示されます。
+このクエリの結果は、次のようになります。
 
 ```console
       timestamp       |  referrerType  |                            referrer                                |                 pageName            |  A  |  B  |  C  | pageViews
@@ -65,10 +65,10 @@ LIMIT 100;
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、 [!DNL Experience Events] 指定したユーザーとしてのページビューをリスト表示します。
+このドキュメントでは、[!DNL Experience Events] でクエリサービスを使用して、ページビューを指定されたユーザーとしてリストする方法をより深く理解しました。
 
 その他の訪問者ベースの使用例については、次の使用例を参照してください。
 
-- [ページビュー数別に整理された訪問者のリストを取得します。](./visitors-by-number-of-page-views.md)
+- [ページビュー数で整理された訪問者のリストを取得します。](./visitors-by-number-of-page-views.md)
 - [訪問者のロールアップレポートを表示します。](./roll-up-report-of-a-visitor.md)
-- [イベントのトレンドレポートを日別に作成します。](./trended-report-of-events.md)
+- [日別のイベントのトレンドレポートを作成します。](./trended-report-of-events.md)

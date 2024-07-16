@@ -17,7 +17,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->このフィールドグループ内で繰り返される要素のサイズと数のため、このガイドで示される多くのフィールドは、スペースを節約するために折りたたまれています。このフィールドグループの完全な構造を見るには、次の操作を実行します [platform UI での検索](../../ui/explore.md) または、でスキーマ全体を表示します。 [公開 XDM リポジトリ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>このフィールドグループ内で繰り返される要素のサイズと数のため、このガイドで示される多くのフィールドは、スペースを節約するために折りたたまれています。このフィールドグループの完全な構造を見るには [Platform UI で検索するか ](../../ui/explore.md)[ パブリック XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) で完全なスキーマを表示します。
 
 ## フィールドグループ構造
 

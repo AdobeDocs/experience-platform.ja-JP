@@ -1,9 +1,10 @@
 ---
-title: マークエンタープライズ ID 解決ソースの概要
-description: ユーザーインターフェイスを使用して Merkury Enterprise ID 解決をAdobe Experience Platformに接続する方法を説明します。
+title: Merkury エンタープライズ Id 解決Sourceの概要
+description: ユーザーインターフェイスを使用して Merkury Enterprise Identity Resolution をAdobe Experience Platformに接続する方法を説明します。
 last-substantial-update: 2023-12-12T00:00:00Z
 badge: ベータ版
-source-git-commit: 2f277e835333343ea22e52e05aa84a63f1d3d8ec
+exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 44%
@@ -14,21 +15,21 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->[!DNL Merkury Enterprise Identity Resolution] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Merkury Enterprise Identity Resolution] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-Adobe Experience Platformは、データパートナーアプリケーションからデータを取り込む機能を備えています。 データパートナーのサポートには以下が含まれます。 [!DNL Merkury Enterprise Identity Resolution].
+Adobe Experience Platformは、データパートナーアプリケーションからのデータ取り込みをサポートしています。 データパートナーのサポートには、[!DNL Merkury Enterprise Identity Resolution] が含まれます。
 
-以下を使用できます。 [!DNL Merkury] 作成者 [!DNL Merkle] を使用すれば、cookie を使用しなくても、より多くのデジタル訪問者を認識し、顧客が必要とする、関連性の高いパーソナライズされたエクスペリエンスを配信できます。
+[!DNL Merkury] by [!DNL Merkle] を使用すると、Cookie を使用しなくても、より多くのデジタル訪問者を認識し、顧客のニーズに合わせてパーソナライズされた適切なエクスペリエンスを提供できます。
 
-以下を利用できます。 **ユーザー ID** の一部として [!DNL Merkury] 組織が個人に関して把握しているすべての情報を 1 つの包括的なプロファイルに組み合わせるソース。 以下の詳細が含まれます。
+**ユーザー ID** を [!DNL Merkury] ソースの一部として利用し、組織が個人について知っているすべてを 1 つの包括的なプロファイルに結合できます。 これには、次のような詳細が含まれます。
 
 - デジタル動作
-- 購入環境設定
-- 名前、電子メールアドレス、物理アドレス、デバイス ID などの情報の識別。
+- 購買環境設定
+- 識別情報（名前、メールアドレス、物理アドレス、デバイス ID など）。
 
-取り込んだデータは、Experience Data Model(XDM)JSON、XDM Parquet、または区切り形式で書式設定できます。 プロセスの各ステップは、ソース作業に統合されます
+取り込んだデータを、Experience Data Model （XDM） JSON、XDM Parquet または区切り形式で書式設定できます。 プロセスのすべての手順がソース作業に統合されます
 
-![マークソースのデータ処理ワークフローの図です。](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
+![Merkury ソースのデータ処理ワークフローの図。](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
 
 ## IP アドレス許可リスト
 
@@ -47,15 +48,15 @@ Adobe Experience Platformは、データパートナーアプリケーション�
 
 ## 前提条件
 
-使用を開始する前に、次の前提条件を満たす必要があります。 [!DNL Merkury] ソース：
+[!DNL Merkury] ソースの使用を開始するには、次の前提条件を満たしている必要があります。
 
-- 次を完了する必要があります： [!DNL Merkury] の設定と [!DNL Merkury] チーム。
-- 資格情報（アクセスキー、秘密鍵、バケット名）を [!DNL Merkury] チーム。 
+- [!DNL Merkury] の設定を [!DNL Merkury] チームと完了する必要があります。
+- [!DNL Merkury] チームから資格情報（アクセスキー、秘密鍵、バケット名）を取得する必要があります。 
 
 >[!NOTE]
 >
->次のようなファイルパス： `myBucket/folder/subfolder/subsubfolder/abc.csv` 次にのみアクセスするように設定します： `subsubfolder/abc.csv`. サブフォルダーにアクセスする場合は、 bucket パラメーターを myBucket に、 folderPath を folder/subfolder に指定して、ではなく、サブフォルダーでファイルの調査が開始されるようにします。 `subsubfolder/abc.csv`.
+>`myBucket/folder/subfolder/subsubfolder/abc.csv` のようなファイルパスを使用すると、`subsubfolder/abc.csv` にのみアクセスする場合があります。 サブフォルダーにアクセスする場合は、バケットパラメーターを myBucket に、folderPath を folder/subfolder に指定して、ファイルの探索を `subsubfolder/abc.csv` ではなくサブフォルダーで開始できるようにします。
 
 ## 次の手順
 
-このドキュメントを読むと、データをから取り込むために必要な前提条件の設定が完了します。 [!DNL Merkury] アカウントからExperience Platformへ。 次のガイドに進むことができます： [接続 [!DNL Merkury] ユーザーインターフェイスを使用してExperience Platformを設定するには](../../tutorials/ui/create/data-partners/merkury.md).
+このドキュメントでは、[!DNL Merkury] アカウントからExperience Platformにデータを取り込むために必要な、前提条件の設定を完了しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL Merkury]  に関するガイドに進むことができ ](../../tutorials/ui/create/data-partners/merkury.md) す。

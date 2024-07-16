@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;ソース;コネクタ;ソースコネクタ;Campaign;Campaign Managed Services
-title: Platform UI を使用したAdobe Campaign Managed Cloud Servicesソース接続の作成
-description: Platform UI を使用してAdobe Experience PlatformをAdobe Campaign Managed Cloud Servicesに接続する方法を説明します。
+title: Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
+description: Platform UI を使用してAdobe Experience PlatformをAdobe Campaign Managed Cloud Servicesに接続する方法について説明します。
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,9 +10,9 @@ ht-degree: 46%
 
 ---
 
-# Platform UI を使用したAdobe Campaign Managed Cloud Servicesソース接続の作成
+# Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
 
-このチュートリアルでは、Adobe Campaign Managed Cloud ServicesデータをAdobe Experience Platformに取り込むためのソース接続を作成する手順を説明します。
+このチュートリアルでは、ソース接続を作成してAdobe Campaign Managed Cloud Services データをAdobe Experience Platformに取り込む手順について説明します。
 
 ## はじめに
 
@@ -24,15 +24,15 @@ ht-degree: 46%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [サンドボックス](../../../../../sandboxes/home.md)：Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-## Adobe Campaign Managed Cloud Servicesを Platform に接続
+## Adobe Campaign Managed Cloud Servicesを Platform に接続する
 
 Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。また、検索バーを使用して、表示されるソースを絞り込むこともできます。
 
-の下 **[!UICONTROL Adobe]** カテゴリ、選択 **[!UICONTROL Adobe Campaign Managed Cloud Services]** 次に、「 **[!UICONTROL データを追加]**.
+**[!UICONTROL Adobeアプリケーション]** カテゴリで、「**[!UICONTROL Adobe Campaign Managed Cloud Services」を選択し]** 「**[!UICONTROL データを追加]**」を選択します。
 
-![Adobe Campaign Managed Cloud Servicesカードを表示するソースカタログ。](../../../../images/tutorials/create/campaign/catalog.png)
+![Adobe Campaign Managed Cloud Servicesカードを表示しているソースカタログ ](../../../../images/tutorials/create/campaign/catalog.png)
 
 ### データの選択 {#select-data}
 
@@ -54,57 +54,57 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 >abstract="Adobe Campaign データベースで定義されたエンティティの名前。"
 >text="Learn more in documentation"
 
-The [!UICONTROL データを選択] 手順が表示され、 [!UICONTROL Adobe Campaignインスタンス], [!UICONTROL ターゲットマッピング]、および [!UICONTROL スキーマ名].
+[!UICONTROL  データの選択 ] 手順が表示され、[!UICONTROL Adobe Campaign インスタンス ]、[!UICONTROL  ターゲットマッピング ]、および [!UICONTROL  スキーマ名 ] を設定するためのインターフェイスが利用できます。
 
 | プロパティ | 説明 |
 | --- | --- |
-| Adobe Campaignインスタンス | 使用しているAdobe Campaign環境インスタンスの名前。 |
-| ターゲットマッピング | メッセージを配信するために Campaign で使用されるテクニカルオブジェクト。配信の送信に必要なすべての技術設定が含まれます。 |
-| スキーマ名 | Platform に取り込むスキーマエンティティの名前。 オプションには、配信ログとトラッキングログがあります。 |
+| Adobe Campaign インスタンス | 使用しているAdobe Campaign環境インスタンスの名前。 |
+| ターゲットマッピング | メッセージの配信に使用される技術的なオブジェクトで、配信の送信に必要なすべての技術的な設定が含まれます。 |
+| スキーマ名 | Platform に取り込むスキーマエンティティの名前。 オプションには、「配信ログ」と「トラッキングログ」があります。 |
 
-![Adobe Campaignインスタンス、ターゲットマッピングおよびスキーマ名を設定できるインターフェイス。](../../../../images/tutorials/create/campaign/select-data.png)
+![Adobe Campaign インスタンス、ターゲットマッピング、およびスキーマ名を設定できるインターフェイス ](../../../../images/tutorials/create/campaign/select-data.png)。
 
-Campaign インスタンスの値、ターゲットマッピング、スキーマ名を指定すると、画面が更新され、スキーマのプレビューとサンプルデータセットが表示されます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
+Campaign インスタンス、ターゲットマッピング、スキーマ名の値を指定したら、画面が更新されて、スキーマのプレビューとサンプルデータセットが表示されます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![スキーマ階層のプレビューとデータセットの例](../../../../images/tutorials/create/campaign/preview.png)
+![ スキーマ階層のプレビューとデータセットのサンプル ](../../../../images/tutorials/create/campaign/preview.png)
 
 ### 既存のデータセットを使用する
 
-The [!UICONTROL データフローの詳細] ページでは、既存のデータセットを使用するか、データフローの新しいデータセットを設定するかを選択できます。
+この [!UICONTROL  データフローの詳細 ] ページでは、既存のデータセットを使用するか、データフロー用の新しいデータセットを設定するかを選択できます。
 
-既存のデータセットを使用するには、「 」を選択します。 **[!UICONTROL 既存のデータセット]**. 既存のデータセットは、「[!UICONTROL 詳細検索]」オプションを使用するか、ドロップダウンメニュー内の既存のデータセットのリストをスクロールして取得することができます。
+既存のデータセットを使用するには、「**[!UICONTROL 既存のデータセット]**」を選択します。 既存のデータセットは、「[!UICONTROL 詳細検索]」オプションを使用するか、ドロップダウンメニュー内の既存のデータセットのリストをスクロールして取得することができます。
 
 データセットを選択し、データフローの名前と説明（オプション）を入力します。
 
-![既存のデータセットオプションを表示するインターフェイス。](../../../../images/tutorials/create/campaign/existing-dataset.png)
+![ 既存のデータセットオプションを表示するインターフェイス ](../../../../images/tutorials/create/campaign/existing-dataset.png)
 
 ### 新しいデータセットの使用
 
-新しいデータセットを使用するには、「 **[!UICONTROL 新しいデータセット]** 次に、出力データセット名とオプションの説明を入力します。 次に、「[!UICONTROL 詳細検索]」オプションを使用するか、ドロップダウンメニューで既存のスキーマのリストをスクロールして、マッピングするスキーマを選択します。終了したら、「**[!UICONTROL 次へ]**」を選択します。
+新しいデータセットを使用するには、「**[!UICONTROL 新しいデータセット]**」を選択して、出力データセット名とオプションの説明を入力します。 次に、「[!UICONTROL 詳細検索]」オプションを使用するか、ドロップダウンメニューで既存のスキーマのリストをスクロールして、マッピングするスキーマを選択します。終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![新しい「データセット」オプションを表示するインターフェイス。](../../../../images/tutorials/create/campaign/new-dataset.png)
+![ 新しいデータセットオプションを表示するインターフェイス。](../../../../images/tutorials/create/campaign/new-dataset.png)
 
 ### アラートの有効化
 
-アラートを有効にすると、データフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を購読および受け取ります。 アラートについて詳しくは、[UI を使用したソースアラートの購読](../../alerts.md)についてのガイドを参照してください。
+アラートを有効にすると、データフローのステータスに関する通知を受け取ることができます。リストからアラートを選択すると、データフローのステータスに関する通知を登録して受け取ることができます。 アラートについて詳しくは、[UI を使用したソースアラートの購読](../../alerts.md)についてのガイドを参照してください。
 
 データフローへの詳細の入力を終えたら「**[!UICONTROL 次へ]** 」を選択します。
 
-![データフローに対して有効にできる様々なアラートタイプの選択。](../../../../images/tutorials/create/campaign/alerts.png)
+![ データフローに対して有効にできる様々なアラートタイプの選択。](../../../../images/tutorials/create/campaign/alerts.png)
 
 ### XDM スキーマへのデータフィールドのマッピング
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対するインテリジェントなレコメンデーションを提供します。 マッピングルールは、使用例に合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
+Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 >[!IMPORTANT]
 >
->ソースフィールドをターゲット XDM フィールドにマッピングする場合、指定されたプライマリ ID フィールドを適切なターゲット XDM フィールドにマッピングする必要があります。
+>ソースフィールドをターゲット XDM フィールドにマッピングする場合は、指定したプライマリ ID フィールドを適切なターゲット XDM フィールドにマッピングする必要があります。
 
-ソースデータが正常にマッピングされたら、「 」を選択します。 **[!UICONTROL 次へ]**.
+ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
-![4 つのソースデータフィールドが対応する XDM スキーマフィールドにマッピングされたマッピングツリー。](../../../../images/tutorials/create/campaign/mapping.png)
+![ 対応する XDM スキーマフィールドにマッピングされた 4 つのソースデータフィールドを含むマッピングツリー。](../../../../images/tutorials/create/campaign/mapping.png)
 
 ### データフローのレビュー
 
@@ -115,29 +115,29 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 データフローをレビューしたら、「**[!UICONTROL 終了]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
-![接続とデータセットの情報を示すレビューページ。](../../../../images/tutorials/create/campaign/review.png)
+![ 接続とデータセットの情報を表示するレビューページ ](../../../../images/tutorials/create/campaign/review.png)
 
 ### データセットアクティビティの監視
 
-データフローを作成したら、データフローを通じて取り込まれるデータを監視して、取り込まれた率、成功および失敗したバッチに関する情報を確認できます。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込まれた割合や成功したバッチおよび失敗したバッチに関する情報を確認できます。
 
-データセットアクティビティの表示を開始するには、「 **[!UICONTROL データフロー]** ソースカタログ内。
+データセットアクティビティの表示を開始するには、ソースカタログで **[!UICONTROL データフロー]** を選択します。
 
-![データフローヘッダータブが選択されたソースカタログページ。](../../../../images/tutorials/create/campaign/dataflows.png)
+![ データフローヘッダータブが選択されたソースカタログページ ](../../../../images/tutorials/create/campaign/dataflows.png)
 
 次に、表示されるデータフローのリストからターゲットデータセットを選択します。
 
-![Adobe Campaign配信ログのターゲットデータセットが選択された既存のデータフローのリスト。](../../../../images/tutorials/create/campaign/target-dataset.png)
+![Adobe Campaign配信ログターゲットデータセットが選択された既存のデータフローのリスト。](../../../../images/tutorials/create/campaign/target-dataset.png)
 
-「データセットアクティビティ」ページが表示されます。 ここから、取得率、成功したバッチ、失敗したバッチなど、データフローのパフォーマンスに関する情報を確認できます。
+データセットアクティビティ ページが表示されます。 ここから、取り込み率、成功したバッチ、失敗したバッチなど、データフローのパフォーマンスに関する情報を確認できます。
 
-また、このページには、データフローのメタデータ記述を更新し、部分取得とエラー診断を有効にし、新しいデータをデータセットに追加するためのインターフェイスも用意されています。
+また、このページには、データフローのメタデータの説明を更新したり、部分取り込みやエラー診断を有効にしたり、データセットに新しいデータを追加したりするためのインターフェイスも用意されています。
 
-![選択したデータセットの取り込み率を表すグラフを含むインターフェイス。](../../../../images/tutorials/create/campaign/dataset-activity.png)
+![ 選択したデータセットの取り込み率を表すグラフを備えたインターフェイス。](../../../../images/tutorials/create/campaign/dataset-activity.png)
 
 ## 次の手順
 
-このチュートリアルでは、Campaign v8 配信ログとトラッキングログデータを Platform に取り込むためのデータフローを正常に作成しました。 受信データは、[!DNL Real-Time Customer Profile] および [!DNL Data Science Workspace] のようなダウンストリームの Platform サービスで使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、Campaign v8 の配信ログとトラッキングログのデータを Platform に取り込むデータフローを正常に作成しました。 受信データは、[!DNL Real-Time Customer Profile] および [!DNL Data Science Workspace] のようなダウンストリームの Platform サービスで使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [[!DNL Real-Time Customer Profile] 概要](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 概要](../../../../../data-science-workspace/home.md)

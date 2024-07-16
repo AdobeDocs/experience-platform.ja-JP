@@ -4,7 +4,7 @@ description: Adobe Experience Platform の Adobe Audience Manager タグ拡張�
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '451'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,7 @@ Data Integration Library（DIL）のバージョンを表示します。
 
 この設定は変更できません。
 
-#### Exclude Specific Paths
+#### 指定のパスを除外
 
 除外されたパスのいずれかと URL 一致する場合、拡張機能は読み込まれません。
 

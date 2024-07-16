@@ -1,5 +1,5 @@
 ---
-title: UI でのGoogle PubSub ソース接続の作成
+title: UI でのGoogle PubSub Source接続の作成
 description: Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->この [!DNL Google PubSub] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログから利用できます。
+>Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
 
 このチュートリアルでは、Platform ユーザーインターフェイスを使用して、[!DNL Google PubSub]（以下「[!DNL PubSub]」と呼びます）を作成する手順について説明します。
 
@@ -29,25 +29,25 @@ ht-degree: 36%
 
 ### 必要な資格情報の収集
 
-を接続するには、以下に説明する接続プロパティの値を指定する必要があります [!DNL PubSub] Experience Platformするアカウント。 認証と前提条件の設定について詳しくは、以下を参照してください [[!DNL PubSub source] の概要](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+[!DNL PubSub] アカウントをExperience Platformに接続するには、以下に説明する接続プロパティの値を指定する必要があります。 認証と前提条件の設定について詳しくは、[[!DNL PubSub source]  概要 ](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites) を参照してください。
 
 
 >[!BEGINTABS]
 
->[!TAB プロジェクトベースの認証]
+>[!TAB  プロジェクトベースの認証 ]
 
 | 資格情報 | 説明 |
 | --- | --- |
 | プロジェクト ID | [!DNL PubSub] の認証に必要なプロジェクト ID。 |
-| 資格情報 | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、必ず完全な JSON ファイルを配置してください。 |
+| 資格情報 | [!DNL PubSub] の認証に必要な資格情報。 資格情報から空白を削除した後、必ず完全な JSON ファイルを配置してください。 |
 
->[!TAB トピックと購読ベースの認証]
+>[!TAB  トピックおよび購読ベースの認証 ]
 
 | 資格情報 | 説明 |
 | --- | --- |
-| 資格情報 | 認証に必要な資格情報 [!DNL PubSub]. 資格情報から空白を削除した後、必ず完全な JSON ファイルを配置してください。 |
-| トピック名 | の名前 [!DNL PubSub] 登録。 対象： [!DNL PubSub]購読では、メッセージの公開先のトピックを購読することで、メッセージを受信できます。 **注意**：単一 [!DNL PubSub] 購読は、1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数の購読が必要です。 |
-| 登録名 | の名前 [!DNL PubSub] 登録。 対象： [!DNL PubSub]購読では、メッセージの公開先のトピックを購読することで、メッセージを受信できます。 |
+| 資格情報 | [!DNL PubSub] の認証に必要な資格情報。 資格情報から空白を削除した後、必ず完全な JSON ファイルを配置してください。 |
+| トピック名 | [!DNL PubSub] サブスクリプションの名前。 ま [!DNL PubSub]、購読を使用すると、メッセージの公開先のトピックを購読することで、メッセージを受信できます。 **メモ**:1 つの [!DNL PubSub] 購読は、1 つのデータフローに対してのみ使用できます。 複数のデータフローを作成するには、複数の購読が必要です。 |
+| サブスクリプション名 | [!DNL PubSub] サブスクリプションの名前。 ま [!DNL PubSub]、購読を使用すると、メッセージの公開先のトピックを購読することで、メッセージを受信できます。 |
 
 >[!ENDTABS]
 
@@ -61,13 +61,13 @@ ht-degree: 36%
 
 ## [!DNL PubSub] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。この [!UICONTROL カタログ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 [!UICONTROL クラウドストレージ]カテゴリで、**[!UICONTROL Google PubSub]** を選択し、次に&#x200B;**[!UICONTROL データを追加]**&#x200B;を選択します。
 
-![Experience PlatformUI のソースカタログ。](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Experience PlatformUI のソースカタログ ](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 **[!UICONTROL Google PubSub に接続]**&#x200B;ページが表示されます。このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -75,65 +75,65 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL PubSub] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![ソースワークフローの既存のアカウントの選択。](../../../../images/tutorials/create/google-pubsub/existing.png)
+![ ソースワークフローでの既存のアカウントの選択。](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### 新規アカウント
 
 >[!TIP]
 >
 >* アクセスが制限されたアカウントを作成する場合は、トピック名またはサブスクリプション名の少なくとも 1 つを指定する必要があります。 両方の値がない場合、認証は失敗します。
->* 作成後は、の認証タイプを変更できません [!DNL Google PubSub] ベース接続。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
+>* 作成した後は、[!DNL Google PubSub] ベース接続の認証タイプを変更できません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
-新しいアカウントを作成する場合は、 **[!UICONTROL 新しいアカウント]**&#x200B;を選択し、新しいの名前と説明（オプション）を入力します [!DNL PubSub] アカウント。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL PubSub] アカウントの名前と説明（オプション）を入力します。
 
-![ソースワークフローのGoogle PubSub ソースの新しいアカウントインターフェイス](../../../../images/tutorials/create/google-pubsub/new.png)
+![ ソースワークフローのGoogle PubSub ソースの新しいアカウントインターフェイス ](../../../../images/tutorials/create/google-pubsub/new.png)
 
-この [!DNL PubSub] ソース：認証時に許可するアクセスのタイプを指定できます。 アカウントを設定して、プロジェクトベースの認証か、トピックおよび購読ベースの認証を持つことができます。 プロジェクトベースの認証では、アカウントのルートレベルのプロジェクトへのアクセスを許可でき、トピックおよび購読ベースの認証では、特定のプロジェクトへのアクセスを制限できます [!DNL PubSub] トピックと購読。
+[!DNL PubSub] ソースでは、認証時に許可するアクセスの種類を指定できます。 アカウントを設定して、プロジェクトベースの認証か、トピックおよび購読ベースの認証を持つことができます。 プロジェクトベースの認証では、アカウントのルートレベルのプロジェクトへのアクセス権を付与でき、トピックおよび購読ベースの認証では、特定の [!DNL PubSub] トピックおよび購読へのアクセスを制限できます。
 
 >[!BEGINTABS]
 
->[!TAB プロジェクトベースの認証]
+>[!TAB  プロジェクトベースの認証 ]
 
-ルートにアクセスできるアカウントを作成するには [!DNL PubSub] プロジェクトフォルダー。 を選択 **[!UICONTROL Google PubSub 認証資格情報]** 認証タイプとして、およびプロジェクト ID と資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+ルート [!DNL PubSub] プロジェクトフォルダーへのアクセス権を持つアカウントを作成するには： 認証の種類として **[!UICONTROL Google PubSub 認証資格情報]** を選択し、プロジェクト ID と資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![ルートアクセスが選択されたGoogle PubSub ソースの新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-pubsub/root.png)
+![ ルートアクセスが選択されたGoogle PubSub ソースの新しいアカウントインターフェイス ](../../../../images/tutorials/create/google-pubsub/root.png)
 
->[!TAB トピックと購読ベースの認証]
+>[!TAB  トピックおよび購読ベースの認証 ]
 
-特定のユーザーにのみアクセスが制限されたアカウントを作成するには、次の手順に従います [!DNL PubSub] トピックと購読、選択 **[!UICONTROL Google PubSub スコープ認証資格情報]** 次に、認証情報、トピック名、サブスクリプション名を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+特定の [!DNL PubSub] トピックおよびサブスクリプションに対してのみアクセスが制限されたアカウントを作成するには、**[!UICONTROL Google PubSub スコープ認証資格情報を選択してから]** 資格情報、トピック名、サブスクリプション名を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![スコープ指定アクセスが選択されたGoogle PubSub ソースの新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-pubsub/scoped.png)
+![ スコープアクセスが選択されたGoogle PubSub ソースの新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-pubsub/scoped.png)
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->に割り当てられたプリンシパル（役割） [!DNL PubSub] プロジェクトは、内で作成されたすべてのトピックと購読に継承されます。 [!DNL PubSub] プロジェクト。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、 [[!DNL PubSub] アクセス制御に関するドキュメント](<https://cloud.google.com/pubsub/docs/access-control>).
+>[!DNL PubSub] プロジェクトに割り当てられたプリンシパル（役割）は、[!DNL PubSub] プロジェクト内で作成されたすべてのトピックと購読に継承されます。 プリンシパル（役割）に特定のトピックへのアクセス権を付与する場合は、そのプリンシパル（役割）もトピックの対応するサブスクリプションに追加する必要があります。 詳しくは、[[!DNL PubSub]  アクセス制御に関するドキュメント ](<https://cloud.google.com/pubsub/docs/access-control>) を参照してください。
 
 ## データの選択
 
-認証が成功すると、に移動します [!UICONTROL データを選択] 手順に移動する [!DNL PubSub] データ階層を選択し、Experience Platformにするデータを選択します。
+正常に認証されると、[!UICONTROL  データを選択 ] ステップに移動します。このステップでは、[!DNL PubSub] データ階層内を移動し、Experience Platformにするデータを選択できます。
 
 >[!BEGINTABS]
 
->[!TAB プロジェクトベースの認証]
+>[!TAB  プロジェクトベースの認証 ]
 
-プロジェクトベースのアクセスで認証した場合、 [!UICONTROL データを選択] インターフェイスには、トピックが添付されたプロジェクト内のすべての購読が表示されます。
+プロジェクトベースのアクセスで認証した場合、[!UICONTROL  データを選択 ] インターフェイスには、トピックが添付されたプロジェクト内のすべての購読が表示されます。
 
-![プロジェクトベースの認証を使用したソースワークフローのデータ選択ステップ。](../../../../images/tutorials/create/google-pubsub/root-folders.png)
+![ プロジェクトベースの認証を使用したソースワークフローのデータ選択ステップ ](../../../../images/tutorials/create/google-pubsub/root-folders.png)
 
->[!TAB トピックと購読ベースの認証]
+>[!TAB  トピックおよび購読ベースの認証 ]
 
-トピックおよび購読ベースのアクセスで認証された場合、 [!UICONTROL データを選択] インターフェイスの表示は、指定した情報によって異なる場合があります。
+トピックおよび購読ベースのアクセスで認証されている場合、[!UICONTROL  データを選択 ] インターフェイスの表示は、指定した情報によって異なる場合があります。
 
 * トピック名のみを指定した場合、インターフェイスには、指定されたトピックに対応するすべてのトピックと購読のペアが表示されます。
 * 購読名のみを指定した場合、インターフェイスには、指定された購読名に対応するすべてのトピックと購読のペアが表示されます。
 * トピック名と購読名の両方が指定されている場合、インターフェイスには、指定された値の両方に対応するトピックと購読のペアが表示されます。
 
-![トピックおよびサブスクリプションベースの認証を含むソースワークフローのデータ選択ステップ。](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
+![ トピックおよびサブスクリプションベースの認証を含むソースワークフローのデータ選択ステップ ](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、との間に接続を作成しました [!DNL PubSub] アカウントとプラットフォーム。 次のチュートリアルに進み、[データフローを設定して、クラウドストレージから Platform にストリーミングデータを取り込みます](../../dataflow/streaming/cloud-storage-streaming.md)。
+このチュートリアルでは、[!DNL PubSub] アカウントと Platform の間に接続を作成しました。 次のチュートリアルに進み、[データフローを設定して、クラウドストレージから Platform にストリーミングデータを取り込みます](../../dataflow/streaming/cloud-storage-streaming.md)。

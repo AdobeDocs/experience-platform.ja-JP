@@ -5,12 +5,12 @@ description: Flow Service API を使用して Adobe Experience Platform を Orac
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
 source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '511'
 ht-degree: 98%
 
 ---
 
-# を使用してOracleサービスクラウドのソース接続を作成する [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用したOracleサービスクラウドソース接続の作成
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -25,7 +25,7 @@ ht-degree: 98%
 
 次の節では、[!DNL Flow Service] API を使用して Oracle Service Cloud に正しく接続するために必要な追加情報を示します。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を Oracle Service Cloud に接続するには、次の接続プロパティの値を指定する必要があります。
 

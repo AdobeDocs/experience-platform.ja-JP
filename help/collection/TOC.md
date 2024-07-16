@@ -18,7 +18,7 @@ ht-degree: 89%
 
 - [データ収集の概要](home.md)
 - [エンドツーエンドの概要](e2e.md)
-- [イベントの重複処理](event-duplication.md)
+- [イベント複製処理](event-duplication.md)
 - [権限管理](permissions.md)
 - [クライアント状態の管理](client-state.md)
 - 訪問者の識別 {#visitor-identification}

@@ -3,8 +3,8 @@ description: このページでは、/testing/destinationInstance API エンド�
 title: サンプルプロファイルを使用したファイルベースの宛先のテスト
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
-workflow-type: ht
-source-wordcount: '827'
+workflow-type: tm+mt
+source-wordcount: '829'
 ht-degree: 100%
 
 ---

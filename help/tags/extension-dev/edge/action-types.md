@@ -4,7 +4,7 @@ description: エッジプロパティでタグ拡張機能用にアクション�
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '377'
 ht-degree: 94%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 94%
 
 通常、アクションタイプは次の要素で構成されます。
 
-1. Experience PlatformUI とデータ収集 UI 内に表示されるビューで、ユーザーはアクションの設定を変更できます。
+1. Experience PlatformUI およびデータ収集 UI に表示されるビュー。アクションの設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、アクションを実行します。
 
 例えば、一部のデータをサードパーティのエンドポイントに転送するモジュールは、次のようになります。

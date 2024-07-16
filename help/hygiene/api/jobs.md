@@ -1,5 +1,5 @@
 ---
-title: データ衛生 API を使用したレコードの削除
+title: Data Hygiene API を使用したレコードの削除
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 role: Developer
 hide: true
@@ -12,7 +12,7 @@ ht-degree: 96%
 
 ---
 
-# データ衛生 API を使用したレコードの削除
+# Data Hygiene API を使用したレコードの削除
 
 <!-- >[!IMPORTANT]
 >

@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;
 solution: Experience Platform
-title: フローサービス API を使用したデータランディングゾーンとAdobe Experience Platformの接続
+title: Flow Service API を使用したAdobe Experience Platformへのデータランディングゾーンの接続
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformをデータランディングゾーンに接続する方法を説明します。
+description: Flow Service API を使用してAdobe Experience Platformを Data Landing Zone に接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1300'
 ht-degree: 18%
 
 ---
 
-# 接続 [!DNL Data Landing Zone] フローサービス API を使用してAdobe Experience Platformに送信する
+# Flow Service API を使用した [!DNL Data Landing Zone] のAdobe Experience Platformへの接続
 
 >[!IMPORTANT]
 >
->このページは、 [!DNL Data Landing Zone] *ソース* コネクタのExperience Platform に接続する方法については、 [!DNL Data Landing Zone] *宛先* コネクタ ( [[!DNL Data Landing Zone] 宛先のドキュメントページ](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ ](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
 
-[!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込む、クラウドベースの安全なファイルストレージ機能です。 データは [!DNL Data Landing Zone] 7 日後
+[!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能です。 データは、7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
 
-このチュートリアルでは、 [!DNL Data Landing Zone] を使用したソース接続 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). このチュートリアルでは、 [!DNL Data Landing Zone]を参照し、資格情報を表示および更新します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Data Landing Zone] ソース接続を作成する手順を説明します。 このチュートリアルでは、[!DNL Data Landing Zone] ールの取得方法、資格情報の表示と更新方法に関する手順も説明します。
 
 ## はじめに
 
@@ -29,13 +29,13 @@ ht-degree: 18%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Data Landing Zone] を使用したソース接続 [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用して [!DNL Data Landing Zone] ソース接続を正常に作成するために必要な追加情報を示しています。
 
-また、このチュートリアルでは、 [Platform API の概要](../../../../../landing/api-guide.md) を参照して、Platform API に対する認証方法と、ドキュメントに記載されている呼び出し例の解釈方法について確認してください。
+また、このチュートリアルでは [Platform API の基本を学ぶ ](../../../../../landing/api-guide.md) に関するガイドを読んで、Platform API への認証方法と、ドキュメントに記載されている呼び出し例を解釈する方法も確認する必要があります。
 
 ## 使用可能なランディングゾーンの取得
 
-API を使用してにアクセスする際の最初の手順 [!DNL Data Landing Zone] は、 `/landingzone` エンドポイント [!DNL Connectors] を提供する際の API `type=user_drop_zone` をリクエストヘッダーの一部として追加する必要があります。
+API を使用して [!DNL Data Landing Zone] にアクセスする最初の手順は、[!DNL Connectors] API の `/landingzone` エンドポイントに対してGETリクエストを行い、その際にリクエストヘッダーの一部として `type=user_drop_zone` を指定することです。
 
 **API 形式**
 
@@ -45,11 +45,11 @@ GET /data/foundation/connectors/landingzone?type=user_drop_zone
 
 | ヘッダー | 説明 |
 | --- | --- |
-| `user_drop_zone` | The `user_drop_zone` タイプを使用すると、API はランディングゾーンコンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `user_drop_zone` | `user_drop_zone` タイプを使用すると、ランディングゾーンコンテナを、使用可能な他のタイプのコンテナと区別できます。 |
 
 **リクエスト**
 
-次のリクエストは、既存のランディングゾーンを取得します。
+次のリクエストでは、既存のランディングゾーンが取得されます。
 
 ```shell
 curl -X GET \
@@ -63,7 +63,7 @@ curl -X GET \
 
 **応答**
 
-次の応答は、ランディングゾーンに関する情報（対応するランディングゾーンも含む）を返します `containerName` および `containerTTL`.
+次の応答は、ランディングゾーンに関する情報（対応する `containerName` と `containerTTL` を含む）を返します。
 
 ```json
 {
@@ -75,11 +75,11 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `containerName` | 取得したランディングゾーンの名前。 |
-| `containerTTL` | ランディングゾーン内のデータに適用される有効期限（日数）。 特定のランディングゾーン内のすべては、7 日後に削除されます。 |
+| `containerTTL` | ランディングゾーン内のデータに適用される有効期限（日数）。 特定のランディングゾーン内のはすべて、7 日後に削除されます。 |
 
-## 取得 [!DNL Data Landing Zone] 資格情報
+## 資格情報 [!DNL Data Landing Zone] 取得
 
-の資格情報を取得するには [!DNL Data Landing Zone]を使用して、 `/credentials` エンドポイント [!DNL Connectors] API.
+[!DNL Data Landing Zone] の資格情報を取得するには、[!DNL Connectors] API の `/credentials` エンドポイントにGETリクエストを実行します。
 
 **API 形式**
 
@@ -89,7 +89,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 
 **リクエスト**
 
-次のリクエストの例では、既存のランディングゾーンの資格情報を取得します。
+次のリクエスト例では、既存のランディングゾーンの資格情報を取得します。
 
 ```shell
 curl -X GET \
@@ -103,7 +103,7 @@ curl -X GET \
 
 **応答**
 
-次の応答は、現在の `SASToken`, `SASUri`, `storageAccountName`、および有効期限日。
+次の応答では、現在の `SASToken`、`SASUri`、`storageAccountName`、有効期限など、データランディングゾーンの資格情報情報が返されます。
 
 ```json
 {
@@ -118,14 +118,14 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `containerName` | ランディングゾーンの名前。 |
-| `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストの承認に必要な情報がすべて含まれています。 |
-| `SASUri` | ランディングゾーンの共有アクセス署名 URI です。 この文字列は、認証先のランディングゾーンへの URI と、対応する SAS トークンの組み合わせです。 |
-| `expiryDate` | SAS トークンの有効期限が切れる日付です。 データランディングゾーンにデータをアップロードするためにアプリケーションでトークンを引き続き使用するには、有効期限の前にトークンを更新する必要があります。 指定した有効期限より前に手動でトークンを更新しない場合、GET資格情報の呼び出しが実行されると、自動的に更新され、新しいトークンが提供されます。 |
+| `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストの認証に必要なすべての情報が含まれます。 |
+| `SASUri` | ランディングゾーンの共有アクセス署名 URI。 この文字列は、認証対象のランディングゾーンの URI とそれに対応する SAS トークンの組み合わせです。 |
+| `expiryDate` | SAS トークンの有効期限が切れる日付。 データランディングゾーンにデータをアップロードするためにアプリケーションで引き続き使用するには、有効期限の前にトークンを更新する必要があります。 指定された有効期限の前にトークンを手動で更新しない場合、GET資格情報の呼び出しが実行されると、自動的に更新され、新しいトークンが提供されます。 |
 
 
-## 更新 [!DNL Data Landing Zone] 資格情報
+## 資格情報 [!DNL Data Landing Zone] 更新
 
-次の項目を更新： `SASToken` に対してPOSTリクエストを行う `/credentials` エンドポイント [!DNL Connectors] API.
+[!DNL Connectors] API の `/credentials` エンドポイントにPOSTリクエストを行うことで、`SASToken` を更新できます。
 
 **API 形式**
 
@@ -135,12 +135,12 @@ POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&act
 
 | ヘッダー | 説明 |
 | --- | --- |
-| `user_drop_zone` | The `user_drop_zone` タイプを使用すると、API はランディングゾーンコンテナを、使用可能な他のタイプのコンテナと区別できます。 |
-| `refresh` | The `refresh` 「 」アクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい `SASToken`. |
+| `user_drop_zone` | `user_drop_zone` タイプを使用すると、ランディングゾーンコンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `refresh` | `refresh` のアクションを使用すると、ランディングゾーンの資格情報をリセットし、新しい `SASToken` を自動的に生成できます。 |
 
 **リクエスト**
 
-次のリクエストは、ランディングゾーンの資格情報を更新します。
+次のリクエストは、ランディングゾーン資格情報を更新します。
 
 ```shell
 curl -X POST \
@@ -154,7 +154,7 @@ curl -X POST \
 
 **応答**
 
-次の応答は、 `SASToken` および `SASUri`.
+次の応答は、`SASToken` および `SASUri` の更新された値を返します。
 
 ```json
 {
@@ -166,9 +166,9 @@ curl -X POST \
 }
 ```
 
-## ランディングゾーンのファイル構造とコンテンツの参照
+## ランディングゾーンのファイル構造と内容の探索
 
-に対してGETリクエストをおこなうことで、ランディングゾーンのファイル構造とコンテンツを確認できます。 `connectionSpecs` エンドポイント [!DNL Flow Service] API.
+[!DNL Flow Service] API の `connectionSpecs` エンドポイントに対してGETリクエストを実行することで、ランディングゾーンのファイル構造と内容を調べることができます。
 
 **API 形式**
 
@@ -193,7 +193,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、クエリされたディレクトリ内で見つかったファイルとフォルダーの配列を返します。 次の項目をメモします。 `path` プロパティを指定してファイルの構造を検査する必要があるので、アップロードするファイルのプロパティを設定します。
+応答が成功すると、クエリされたディレクトリ内にあるファイルとフォルダーの配列が返されます。 構造を検査するために次の手順でアップロードするファイルを指定する必要があるので、アップロードするファイルの `path` プロパティをメモします。
 
 ```json
 [
@@ -221,9 +221,9 @@ curl -X GET \
 ]
 ```
 
-## ランディングゾーンのファイル構造とコンテンツをプレビュー
+## ランディングゾーンファイルの構造と内容をプレビュー
 
-ランディングゾーン内のファイルの構造を調べるには、ファイルのパスと型をクエリパラメーターとして指定し、GETリクエストを実行します。
+ランディングゾーン内のファイルの構造を調べるには、GETリクエストを実行し、その際にファイルのパスとタイプをクエリパラメーターとして指定します。
 
 **API 形式**
 
@@ -237,7 +237,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 | `{OBJECT_TYPE}` | アクセスするオブジェクトのタイプ。 | `file` |
 | `{OBJECT}` | アクセスするオブジェクトのパスと名前。 | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | ファイルのタイプ。 | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
-| `{PREVIEW}` | ファイルのプレビューがサポートされるかどうかを定義する boolean 値です。 | </ul><li>`true`</li><li>`false`</li></ul> |
+| `{PREVIEW}` | ファイルのプレビューがサポートされているかどうかを定義するブール値。 | </ul><li>`true`</li><li>`false`</li></ul> |
 
 **リクエスト**
 
@@ -252,7 +252,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、クエリされたファイルの構造（ファイル名とデータ型を含む）を返します。
+応答が成功すると、ファイル名とデータタイプを含む、クエリされたファイルの構造が返されます。
 
 ```json
 {
@@ -315,20 +315,20 @@ curl -X GET \
 }
 ```
 
-### 用途 `determineProperties` ファイルのプロパティ情報を自動検出するには [!DNL Data Landing Zone]
+### `determineProperties` を使用して、[!DNL Data Landing Zone] のファイルプロパティ情報を自動検出します
 
-以下を使用すると、 `determineProperties` ファイルコンテンツのプロパティ情報を自動検出するためのパラメータ [!DNL Data Landing Zone] GET呼び出しを実行してソースのコンテンツと構造を調べる場合。
+`determineProperties` パラメーターを使用すると、ソースの内容と構造を調べるためにGET呼び出しを行う際に、[!DNL Data Landing Zone] ータのファイル内容のプロパティ情報を自動検出できます。
 
-#### `determineProperties` 使用例
+#### `determineProperties` の使用例
 
-次の表に、 `determineProperties` クエリパラメーターを使用するか、手動でファイルに関する情報を指定します。
+次の表は、`determineProperties` クエリパラメーターを使用する際や、ファイルに関する情報を手動で指定する際に発生する可能性がある様々なシナリオの概要を説明しています。
 
 | `determineProperties` | `queryParams` | 応答 |
 | --- | --- | --- |
-| True | なし | 次の場合 `determineProperties` がクエリパラメーターとして指定された場合、ファイルのプロパティの検出が発生し、応答が新しい `properties` ファイルタイプ、圧縮タイプおよび列区切り文字に関する情報を含むキー。 |
-| なし | True | ファイルタイプ、圧縮タイプ、列区切りの値が `queryParams`の場合、スキーマの生成に使用され、同じプロパティが応答の一部として返されます。 |
+| True | なし | `determineProperties` がクエリパラメーターとして指定されている場合、ファイルプロパティの検出が行われ、応答は、ファイルタイプ、圧縮タイプ、列の区切り文字に関する情報を含んだ新しい `properties` キーを返します。 |
+| なし | True | ファイルタイプ、圧縮タイプ、列区切り文字の値が `queryParams` の一部として手動で指定された場合、これらの値がスキーマの生成に使用され、同じプロパティが応答の一部として返されます。 |
 | True | True | 両方のオプションが同時に実行された場合は、エラーが返されます。 |
-| なし | なし | 2 つのオプションのどちらも指定されていない場合は、応答のプロパティを取得する方法がないので、エラーが返されます。 |
+| なし | なし | 2 つのオプションのどちらも指定されていない場合、応答のプロパティを取得する方法がないため、エラーが返されます。 |
 
 **API 形式**
 
@@ -338,7 +338,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | パラメーター | 説明 | 例 |
 | --- | --- | --- |
-| `determineProperties` | このクエリパラメーターを使用すると、 [!DNL Flow Service] ファイルタイプ、圧縮タイプ、列区切り文字に関する情報など、ファイルのプロパティに関する情報を検出する API です。 | `true` |
+| `determineProperties` | このクエリパラメーターを使用すると、[!DNL Flow Service] API でファイルタイプ、圧縮タイプ、列の区切り文字に関する情報など、ファイルのプロパティに関する情報を検出できます。 | `true` |
 
 **リクエスト**
 
@@ -353,7 +353,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、クエリされたファイルの構造と、ファイル名、データ型、および `properties` キー、次の情報を含む `fileType`, `compressionType`、および `columnDelimiter`.
+応答が成功すると、クエリされたファイルの構造（ファイル名とデータタイプを含む）と、`fileType`、`compressionType`、`columnDelimiter` に関する情報を含む `properties` キーが返されます。
 
 +++ここをクリック
 
@@ -448,9 +448,9 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `properties.fileType` | クエリされたファイルの対応するファイルタイプ。 次のファイルタイプがサポートされています。 `delimited`, `json`、および `parquet`. |
-| `properties.compressionType` | 問い合わせたファイルに使用される、対応する圧縮タイプ。 サポートされている圧縮タイプは次のとおりです。 <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `properties.columnDelimiter` | クエリされたファイルに使用される、対応する列区切り文字です。 あらゆる単一の文字の値を、列の区切り文字として使用できます。デフォルト値はコンマです。 `(,)`. |
+| `properties.fileType` | クエリされたファイルの対応するファイルタイプ。 サポートされているファイルタイプは、`delimited`、`json`、`parquet` です。 |
+| `properties.compressionType` | クエリされたファイルに使用される、対応する圧縮タイプ。 サポートされている圧縮タイプは次の通りです。 <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `properties.columnDelimiter` | クエリされたファイルに使用される、対応する列区切り文字。 あらゆる単一の文字の値を、列の区切り文字として使用できます。デフォルト値はコンマ `(,)` です。 |
 
 
 ## ソース接続の作成
@@ -493,7 +493,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | お客様の [!DNL Data Landing Zone] ソース接続。 |
+| `name` | [!DNL Data Landing Zone] ソース接続の名前。 |
 | `data.format` | Platform に取り込むデータの形式。 |
 | `params.path` | Platform に取り込むファイルへのパス。 |
 | `connectionSpec.id` | [!DNL Data Landing Zone] に対応する接続仕様 ID。 この修正済み ID は `26f526f2-58f4-4712-961d-e41bf1ccc0e8` です。 |
@@ -511,4 +511,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Data Landing Zone] 資格情報は、Platform に取り込むファイルを見つけるためにファイル構造を調べ、ソース接続を作成してデータの Platform への取り込みを開始します。 次のチュートリアルに進み、次の方法を学ぶことができます。 [を使用してデータフローを作成し、クラウドストレージデータを Platform に取り込みます。 [!DNL Flow Service] API](../../collect/cloud-storage.md).
+このチュートリアルでは、[!DNL Data Landing Zone] 資格情報を取得し、そのファイル構造を調べて、Platform に取り込むファイルを見つけ、Platform へのデータの取り込みを開始するためのソース接続を作成しました。 次のチュートリアルに進むことができます。ここでは、[API を使用してクラウドストレージデータを Platform に取り込むためのデータフローを作成 ](../../collect/cloud-storage.md) する方法を説明し  [!DNL Flow Service]  す。

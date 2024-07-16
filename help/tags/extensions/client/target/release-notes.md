@@ -4,7 +4,7 @@ description: Adobe Experience Platform の Adobe Target タグ拡張機能に関
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '578'
 ht-degree: 98%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 98%
 
 ### Adobe Target Extension 0.11.4
 
-* at.js v1.8.3 に更新しました。
-* 追加済み `SameSite=None` および `Secure` 属性， cookie の設定時に
+* at.js v1.8.3 に更新しました
+* Cookie を設定する際の `SameSite=None` 属性と `Secure` 属性を追加しました
 
 ## 2020 年 7 月 24 日（PT）
 
@@ -156,5 +156,5 @@ ht-degree: 98%
 
 #### **機能**
 
-* 拡機能設定画面のビューを更新しました。
+* 拡張機能設定画面のビューを更新しました。
 * at.js はバージョン 1.2.3 に更新されました（JSON オファーのサポートを追加しました）。

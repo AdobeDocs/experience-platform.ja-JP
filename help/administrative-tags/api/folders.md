@@ -2,19 +2,19 @@
 title: フォルダーエンドポイント
 description: Adobe Experience Platform API を使用してフォルダーを作成、更新、管理、削除する方法について説明します。
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
 
 ---
 
-
 # フォルダーエンドポイント
 
 >[!IMPORTANT]
 >
->このエンドポイントのセットのエンドポイント URL は次のとおりです `https://experience.adobe.io`.
+>このエンドポイントのセットのエンドポイント URL は `https://experience.adobe.io` です。
 
 フォルダーは、ビジネスオブジェクトを整理して、ナビゲーションや分類を容易にする機能です。
 
@@ -22,11 +22,11 @@ ht-degree: 5%
 
 ## はじめに
 
-続行する前に、を確認してください [はじめる前に](./getting-started.md) は、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API に対する呼び出しを正常に実行するために知っておく必要がある重要な情報です。
+続行する前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正常に実行するために必要な重要な情報を確認してください。
 
 ## フォルダーのリストの取得 {#list}
 
-に対してGETリクエストを実行すると、組織に属するフォルダーのリストを取得できます `/folder` エンドポイントを指定し、フォルダータイプと親フォルダー ID を指定します。
+組織に属するフォルダーのリストを取得するには、`/folder` エンドポイントにGETリクエストを実行し、フォルダータイプと親フォルダー ID を指定します。
 
 **API 形式**
 
@@ -36,8 +36,8 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 次の値がサポートされています `segment` および `dataset`. |
-| `{PARENT_FOLDER_ID}` | フォルダーのリストを取得する親フォルダーの ID。 すべての親フォルダーのリストを表示するには、フォルダー ID を使用します `root`. |
+| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 サポートされている値には、`segment` と `dataset` があります。 |
+| `{PARENT_FOLDER_ID}` | フォルダーのリストを取得する親フォルダーの ID。 すべての親フォルダーのリストを表示するには、フォルダー ID `root` を使用します。 |
 
 **リクエスト**
 
@@ -113,7 +113,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfo
 
 ## 新しいフォルダーを作成 {#create}
 
-フォルダーに対してPOSTリクエストを実行することで、新しいフォルダーを作成できます。 `/folder` エンドポイントを指定し、フォルダータイプを指定します。
+`/folder` エンドポイントに対してPOSTリクエストを行い、フォルダーのタイプを指定することで、新しいフォルダーを作成できます。
 
 **API 形式**
 
@@ -123,7 +123,7 @@ POST /folder/{FOLDER_TYPE}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 次の値がサポートされています `segment` および `dataset`. |
+| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 サポートされている値には、`segment` と `dataset` があります。 |
 
 **リクエスト**
 
@@ -185,7 +185,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
 
 ## 特定のフォルダーの取得 {#get}
 
-組織に属する特定のフォルダーを取得するには、にGETリクエストを行います。 `/folder` エンドポイントを使用し、フォルダータイプとフォルダーの ID を指定します。
+組織に属する特定のフォルダーを取得するには、`/folder` エンドポイントにGETリクエストを実行し、フォルダータイプとフォルダーの ID を指定します。
 
 **API 形式**
 
@@ -195,7 +195,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 次の値がサポートされています `segment` および `dataset`. |
+| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 サポートされている値には、`segment` と `dataset` があります。 |
 | `{FOLDER_ID}` | 取得するフォルダーの ID。 |
 
 **リクエスト**
@@ -250,13 +250,13 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 | `createdAt` | フォルダーが作成されたときのタイムスタンプ。 |
 | `modifiedBy` | フォルダーを最後に更新したユーザーの ID。 |
 | `modifiedAt` | フォルダーが最後に更新された際のタイムスタンプ。 |
-| `status` | リクエストされたフォルダーのステータス。 次の値がサポートされています `IN_USE` および `ARCHIVED`. |
+| `status` | リクエストされたフォルダーのステータス。 サポートされる値は `IN_USE` と `ARCHIVED` です。 |
 
 +++
 
 ## 指定したフォルダーの検証 {#validate}
 
-に対してGETリクエストを行うことで、フォルダーにオブジェクトを含める資格があるかどうかを検証できます。 `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` エンドポイントに、フォルダータイプと ID の両方を指定します。
+`/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` エンドポイントに対してGETリクエストを行い、フォルダータイプと ID の両方を指定することで、フォルダーにオブジェクトを含める資格があるかどうかを検証できます。
 
 **API 形式**
 
@@ -266,7 +266,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 次の値がサポートされています `segment` および `dataset`. |
+| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 サポートされている値には、`segment` と `dataset` があります。 |
 | `{FOLDER_ID}` | 検証するフォルダーの ID。 |
 
 **リクエスト**
@@ -316,7 +316,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 ## 特定のフォルダーの更新 {#update}
 
-組織に属する特定のフォルダーの詳細を更新するには、に対してPATCHリクエストを行います。 `/folder` エンドポイントを使用し、フォルダータイプとフォルダーの ID を指定します。
+`/folder` エンドポイントにPATCHリクエストを実行し、フォルダータイプとフォルダーの ID を指定することで、組織に属する特定のフォルダーの詳細を更新できます。
 
 **API 形式**
 
@@ -326,7 +326,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 次の値がサポートされています `segment` および `dataset`. |
+| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 サポートされている値には、`segment` と `dataset` があります。 |
 | `{FOLDER_ID}` | 更新するフォルダーの ID。 |
 
 **リクエスト**
@@ -378,7 +378,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 ## 特定のフォルダーの削除 {#delete}
 
-組織に属する特定のフォルダーを削除するには、次の項目に対してDELETEリクエストを行います。 `/folder` フォルダーのタイプと ID を指定します。
+組織に属する特定のフォルダーを削除するには、`/folder` にDELETEリクエストを実行し、フォルダータイプとフォルダーの ID を指定します。
 
 ***API 形式**
 
@@ -388,7 +388,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 次の値がサポートされています `segment` および `dataset`. |
+| `{FOLDER_TYPE}` | フォルダーに含まれるオブジェクトのタイプ。 サポートされている値には、`segment` と `dataset` があります。 |
 | `{FOLDER_ID}` | 削除するフォルダーの ID。 |
 
 **リクエスト**

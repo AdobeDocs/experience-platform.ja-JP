@@ -1,12 +1,12 @@
 ---
-keywords: Audience ManagerDIL拡張機能；宛先 audience manager;dil 拡張機能
+keywords: Audience ManagerDIL拡張機能；destination audience manager;dil 拡張機能
 title: Audience Manager DIL 拡張機能
-description: Audience ManagerDIL拡張機能は、Adobe Experience Platformのデータ管理プラットフォーム (DMP) の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Audience ManagerDIL拡張機能は、Adobe Experience Platformの Data Management Platform （DMP）の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 64%
+source-wordcount: '511'
+ht-degree: 58%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 64%
 
 ## 概要 {#overview}
 
-これは、Adobe Audience Manager データ統合ライブラリ拡張機能（クライアントサイド実装）です。メモ：この拡張機能は、Adobe Analytics データのサーバーサイド転送（SSF）で使用するためのものではありません。SSF の場合は、Adobe Analytics 拡張機能を使用します。重要：バージョン 8.0 以降、DILは [!DNL Experience Cloud] ID サービスのバージョン 3.3 以降。 両方を実装してください [!DNL Experience Cloud] ID サービスとDIL（完全版） [!DNL Audience Manager] データ統合機能を使用します。
+これは、Adobe Audience Manager データ統合ライブラリ拡張機能（クライアントサイド実装）です。メモ：この拡張機能は、Adobe Analytics データのサーバーサイド転送（SSF）で使用するためのものではありません。SSF の場合は、Adobe Analytics 拡張機能を使用します。重要：バージョン 8.0 以降、DILは [!DNL Experience Cloud] ID サービス バージョン 3.3 以降に強く依存します。 [!DNL Audience Manager] のデータ統合機能を完全に使用するには、[!DNL Experience Cloud] ID サービスとDILの両方を実装してください。
 
-[!DNL Audience Manager] DILは、Adobe Experience Platformのデータ管理プラットフォーム (DMP) 拡張機能です。 拡張機能について詳しくは、 [Audience Manager拡張ページ](../../../tags/extensions/client/audience-manager/overview.md) （タグドキュメント）を参照してください。
+DIL[!DNL Audience Manager]、Adobe Experience Platformの Data Management Platform （DMP）拡張機能です。 拡張機能について詳しくは、タグドキュメントの [Audience Manager拡張機能ページ ](../../../tags/extensions/client/audience-manager/overview.md) を参照してください。
 
-この宛先はタグ拡張機能です。 Platform での拡張機能について詳しくは、 [タグ拡張機能の概要](../launch-extensions/overview.md).
+この宛先はタグ拡張機能です。 Platform での拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
 
 ![Audience Manager DIL 拡張機能](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 
@@ -30,7 +30,7 @@ ht-degree: 64%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Audience Manager] DIL拡張：
+[!DNL Audience Manager] DIL拡張機能をインストールするには：
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 
@@ -38,17 +38,17 @@ ht-degree: 64%
 
 宛先をクリックしてハイライトしてから、右側のパネルで「**[!UICONTROL 設定]**」を選択します。**[!UICONTROL 設定]**&#x200B;コントロールがグレー表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
 
-拡張機能をインストールするプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。のプロパティについて [タグドキュメント](../../../tags/ui/administration/companies-and-properties.md#properties-page).
+拡張機能をインストールするプロパティを選択します。 また、新しいプロパティを作成するオプションもあります。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについて詳しくは、[ タグのドキュメント ](../../../tags/ui/administration/companies-and-properties.md#properties-page) を参照してください。
 
 このワークフローでは、インストールを完了する手順について説明します。
 
-拡張機能の設定オプションについて詳しくは、 [Audience Manager拡張ページ](../../../tags/extensions/client/audience-manager/overview.md) （タグドキュメント）を参照してください。
+拡張機能の設定オプションについて詳しくは、タグドキュメントの [Audience Manager拡張機能ページ ](../../../tags/extensions/client/audience-manager/overview.md) を参照してください。
 
-拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、 [新しい拡張機能の追加](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) を参照してください。
+拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、[ 新しい拡張機能の追加 ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) のガイドを参照してください。
 
 ## 拡張機能の使用方法 {#how-to-use}
 
-拡張機能をインストールしたら、ルールの設定を開始できます。データ収集 UI では、特定の状況でのみ拡張機能の宛先にイベントデータを送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、「 [ルール](../../../tags/ui/managing-resources/rules.md) （タグドキュメント）を参照してください。
+拡張機能をインストールしたら、ルールの設定を開始できます。 データ収集 UI では、特定の状況でのみ拡張機能の宛先にイベントデータを送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、タグドキュメントの [ ルール ](../../../tags/ui/managing-resources/rules.md) の概要を参照してください。
 
 ## 拡張機能の設定、アップグレード、削除 {#configure-upgrade-delete}
 
@@ -56,6 +56,6 @@ ht-degree: 64%
 
 >[!TIP]
 >
->拡張機能がいずれかのプロパティに既にインストールされている場合、 UI ではその拡張機能に引き続き「**[!UICONTROL インストール]**」が表示されます。[拡張機能のインストール](#install-extension)の説明に従ってインストールワークフローを開始し、拡張機能を設定または削除します。
+>拡張機能がいずれかのプロパティに既にインストールされている場合、UI ではその拡張機能に引き続き **[!UICONTROL インストール]** が表示されます。 [拡張機能のインストール](#install-extension)の説明に従ってインストールワークフローを開始し、拡張機能を設定または削除します。
 
 拡張機能をアップグレードするには、[拡張機能のアップグレードプロセス](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) （タグドキュメント）のガイドを参照してください。

@@ -5,7 +5,7 @@ description: Contentsquare 拡張機能は、Adobe Experience Platform におけ
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '468'
 ht-degree: 100%
 
 ---

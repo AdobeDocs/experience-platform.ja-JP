@@ -1,12 +1,12 @@
 ---
-keywords: Talk URL Inbox,Talk URL Inbox,Talk URL inbox,Talk URL inbox,Talk URL,Talk URL,Talk URL
+keywords: Talk URL インボックス；Talk URL インボックス；Talk URL インボックス；Talk URL インボックス；Talk URL;Talk URL;Talk URL
 title: Talk URL Inbox 拡張機能
-description: Talk URL Inbox 拡張機能は、Adobe Experience Platformの顧客の声の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Talk URL Inbox 拡張機能は、Adobe Experience Platformのお客様の宛先のボイスです。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 89%
+source-wordcount: '475'
+ht-degree: 90%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 Web ページ訪問者から音声メッセージを受信します。ホスト UI とクラウドベースの機械学習機能を含み、音声メッセージをテキストインサイトへと即座に書き起こします。
 
-[!DNL Talk URL Inbox] は、Adobe Experience Platformの顧客の声拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html) の拡張機能のページを参照してください。
+[!DNL Talk URL Inbox] は、Adobe Experience Platformのカスタマーエクステンションの声です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -28,7 +28,7 @@ Web ページ訪問者から音声メッセージを受信します。ホスト 
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Talk URL Inbox] 拡張子：
+[!DNL Talk URL Inbox] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

@@ -24,7 +24,7 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 このドキュメントでは、 Platform のイベント転送の概要を説明します。
 
-![データ収集エコシステムでのイベント転送。](../../../collection/images/home/event-forwarding.png)
+![ データ収集エコシステムでのイベント転送 ](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
@@ -53,13 +53,13 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 ### プロパティ {#properties}
 
-イベント転送は、タグとは別に独自のプロパティのストアを保持し、以下を選択してExperience PlatformUI またはデータ収集 UI で表示できます **[!UICONTROL イベントの転送]** 左側のナビゲーションの
+イベント転送は、タグとは別に独自のプロパティのストアを保持し、左側のナビゲーションで **[!UICONTROL イベント転送]** を選択して、Experience PlatformUI またはデータ収集 UI で表示できます。
 
 >[!TIP]
 >
 >右側のパネルの製品ヘルプのを使用して、イベント転送の詳細を確認し、その他の使用可能なリソースを表示します。
 
-![データ収集 UI のイベント転送プロパティ。](../../images/ui/event-forwarding/overview/properties.png)
+![ データ収集 UI のイベント転送プロパティ。](../../images/ui/event-forwarding/overview/properties.png)
 
 すべてのイベント転送プロパティには、プラットフォームとして **[!UICONTROL Edge]** がリストされています。Web とモバイルは、Platform Edge Network から受信したデータのみを処理するため区別されません。Platform Edge Network 自体は、web プラットフォームとモバイルプラットフォームの両方からイベントデータを受信できます。
 
@@ -67,9 +67,9 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 イベント転送には、[Core](../../extensions/server/core/overview.md) 拡張機能や [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) 拡張機能など、互換性のある拡張機能の独自のカタログがあります。左側のナビゲーションで「**[!UICONTROL 拡張機能]**」、「**[!UICONTROL カタログ]**」の順に選択すると、UI にイベント転送プロパティで使用可能な拡張機能を表示できます。
 
-次のオプションを選択すると、この機能の詳細を確認できる追加のリソースを表示できます ![について](../../images/ui/event-forwarding/overview/about.png) 右パネルから。
+右側のパネルから ![ 説明 ](../../images/ui/event-forwarding/overview/about.png) を選択すると、この機能の詳細を確認できる追加のリソースを表示できます。
 
-![データ収集 UI のイベント転送拡張機能。](../../images/ui/event-forwarding/overview/extensions.png)
+![ データ収集 UI のイベント転送拡張機能。](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### データ要素 {#data-elements}
 
@@ -83,9 +83,9 @@ Platform Edge Network からデータを参照するには、そのデータへ�
 
 データ要素の&#x200B;**[!UICONTROL パス]**&#x200B;値は、パターン `arc.event.{ELEMENT}` に従う必要があります（例：`arc.event.xdm.web.webPageDetails.URL`）。データを送信するには、このパスを正しく指定する必要があります。
 
-次のオプションを選択すると、この機能の詳細を確認できる追加のリソースを表示できます ![について](../../images/ui/event-forwarding/overview/about.png) 右パネルから。
+右側のパネルから ![ 説明 ](../../images/ui/event-forwarding/overview/about.png) を選択すると、この機能の詳細を確認できる追加のリソースを表示できます。
 
-![イベント転送のパスタイプデータ要素の例。](../../images/ui/event-forwarding/overview/data-reference.png)
+![ イベント転送のパスタイプデータ要素の例。](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### ルール {#rules}
 
@@ -93,17 +93,17 @@ Platform Edge Network からデータを参照するには、そのデータへ�
 
 さらに、イベント転送プロパティ内のすべてのルール（およびすべてのアクション）で処理されるので、1 つのイベントに適用される 30 秒のタイムアウトがあります。 つまり、単一のイベントのすべてのルールとすべてのアクションは、この期間内に完了する必要があります。
 
-次のオプションを選択すると、この機能の詳細を確認できる追加のリソースを表示できます ![について](../../images/ui/event-forwarding/overview/about.png) 右パネルから。
+右側のパネルから ![ 説明 ](../../images/ui/event-forwarding/overview/about.png) を選択すると、この機能の詳細を確認できる追加のリソースを表示できます。
 
-![データ収集 UI のイベント転送ルール。](../../images/ui/event-forwarding/overview/rules.png)
+![ データ収集 UI のイベント転送ルール ](../../images/ui/event-forwarding/overview/rules.png)
 
 #### データ要素のトークン化 {#tokenization}
 
 タグルールでは、データ要素名の先頭と末尾に `%` を付けてデータ要素をトークン化します（例：`%viewportHeight%`）。イベント転送ルールでは、データ要素は代わりにデータ要素名の先頭に `{{`、末尾に `}}` を付けてトークン化します（例：`{{viewportHeight}}`）。
 
-次のオプションを選択すると、この機能の詳細を確認できる追加のリソースを表示できます ![について](../../images/ui/event-forwarding/overview/about.png) 右パネルから。
+右側のパネルから ![ 説明 ](../../images/ui/event-forwarding/overview/about.png) を選択すると、この機能の詳細を確認できる追加のリソースを表示できます。
 
-![イベント転送のパスタイプデータ要素の例。](../../images/ui/event-forwarding/overview/tokenization.png)
+![ イベント転送のパスタイプデータ要素の例。](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### ルールアクションのシーケンス {#action-sequencing}
 

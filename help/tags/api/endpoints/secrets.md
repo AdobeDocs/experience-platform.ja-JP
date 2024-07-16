@@ -4,7 +4,7 @@ description: Reactor API で /secrets エンドポイントを呼び出す方法
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1239'
 ht-degree: 89%
 
 ---
@@ -302,7 +302,7 @@ POST リクエストを行うことで、秘密鍵を作成できます。
 
 >[!NOTE]
 >
->新しい秘密鍵を作成すると、API はそのリソースの情報を含む応答を即座に返します。同時に、秘密鍵の交換タスクがトリガーされ、資格情報の交換が機能しているかどうかをテストします。このタスクは非同期で処理され、シークレットの status 属性をに更新します。 `succeeded` または `failed` 結果に応じて。
+>新しい秘密鍵を作成すると、API はそのリソースの情報を含む応答を即座に返します。同時に、秘密鍵の交換タスクがトリガーされ、資格情報の交換が機能しているかどうかをテストします。このタスクは非同期で処理され、秘密鍵のステータス属性が結果に応じて `succeeded` または `failed` に更新されます。
 
 **API 形式**
 
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、シークレットの詳細を返し、認証サービスの応答はの下に含まれます。 `meta.test_exchange`.
+応答が成功すると、秘密鍵の詳細と、`meta.test_exchange` 配下に格納される認証サービスの応答が返されます。
 
 ```json
 { 
@@ -644,11 +644,11 @@ curl -X PATCH \
 }
 ```
 
-## 再認証： `oauth2-google` 秘密鍵 {#reauthorize}
+## `oauth2-google` 秘密鍵の再認証 {#reauthorize}
 
-各 `oauth2-google` シークレットには次が含まれます： `meta.authorization_url_expires_at` 認証 URL の有効期限を示すプロパティ。 この時間が過ぎると、秘密鍵を再認証して認証プロセスを更新する必要があります。
+各 `oauth2-google` シークレットには、認証 URL の有効期限を示す `meta.authorization_url_expires_at` プロパティが含まれます。 この時間が経過すると、秘密鍵が認証プロセスを更新するために、秘密鍵の再認証が必要になります。
 
-を再認証するには、以下を実行します。 `oauth2-google` シークレット：問題の秘密のPATCHリクエストを作成します。
+`oauth2-google` 秘密鍵を再認証するには、該当する秘密鍵のPATCHリクエストを行います。
 
 **API 形式**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SECRET_ID}` | The `id` 再認証する秘密鍵の数を指定します。 |
+| `{SECRET_ID}` | 再認証する秘密鍵の `id`。 |
 
 **リクエスト**
 
-The `data` リクエストペイロードのオブジェクトには、 `meta.action` プロパティをに設定 `reauthorize`.
+リクエストペイロードの `data` オブジェクトには、`reauthorize` に設定された `meta.action` プロパティが含まれている必要があります。
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、更新された秘密鍵の詳細を返します。 ここから、 `meta.authorization_url` をブラウザーに追加して、認証プロセスを完了します。
+応答が成功すると、更新された秘密鍵の詳細が返されます。 ここから、`meta.authorization_url` をコピーしてブラウザーに貼り付け、認証プロセスを完了する必要があります。
 
 ```json
 {

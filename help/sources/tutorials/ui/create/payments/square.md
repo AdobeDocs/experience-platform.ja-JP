@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；正方形；四角形
-title: UI での正方形ソース接続の作成
-description: Adobe Experience Platform UI を使用して Square ソース接続を作成する方法を説明します。
+keywords: Experience Platform；ホーム；人気のトピック；正方形；正方形
+title: UI での Square Source接続の作成
+description: Adobe Experience Platform UI を使用して Square ソースコネクタを作成する方法を説明します。
 exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 55%
+source-wordcount: '452'
+ht-degree: 56%
 
 ---
 
 # UI での [!DNL Square] ソース接続の作成
 
-このチュートリアルでは、 [!DNL Square] Platform ユーザーインターフェイスを使用したソースコネクタ
+このチュートリアルでは、Platform ユーザーインターフェイスを使用して [!DNL Square] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -25,17 +25,17 @@ ht-degree: 55%
 
 ### 必要な資格情報の収集
 
-次の項目にアクセスするには、 [!DNL Square] アカウントプラットフォームの場合は、次の値を指定する必要があります。
+[!DNL Square] アカウントプラットフォームにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
-| ホスト | の URL [!DNL Square] インスタンス。 |
-| クライアント ID | 次に関連付けられたクライアント ID: [!DNL Square] アカウント |
-| クライアントシークレット | に関連付けられたクライアント秘密鍵 [!DNL Square] アカウント |
-| アクセストークン | アクセストークンは、 [!DNL Square] アカウントを OAuth 2.0 認証で使用します。 アクセストークンは、 [!DNL Square]. |
-| 更新トークン | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは、 [!DNL Square]. |
+| ホスト | [!DNL Square] インスタンスの URL。 |
+| クライアント ID | [!DNL Square] アカウントに関連付けられたクライアント ID。 |
+| クライアントシークレット | [!DNL Square] アカウントに関連付けられたクライアントの秘密鍵。 |
+| アクセストークン | アクセストークンは、OAuth 2.0 認証で [!DNL Square] アカウントを認証するために使用されます。 アクセストークンは [!DNL Square] から取得できます。 |
+| 更新トークン | 更新トークンは、現在のアクセストークンの有効期限が切れた後に新しいアクセストークンを生成するために使用されます。 更新トークンは [!DNL Square] から取得できます。 |
 
-これらの資格情報とその取得方法について詳しくは、 [[!DNL Square] OAuth に関するドキュメント](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
+これらの資格情報とその取得方法について詳しくは、[[!DNL Square] OAuth に関するドキュメント ](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens) を参照してください。
 
 必要な資格情報を収集したら、以下の手順に従って [!DNL Square] アカウントを Platform にリンクできます。
 
@@ -45,11 +45,11 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-以下 [!UICONTROL 支払い] カテゴリ、選択 **[!UICONTROL 四角形]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+[!UICONTROL  支払い ] カテゴリで、「**[!UICONTROL Square]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
 ![カタログ](../../../../images/tutorials/create/square/catalog.png)
 
-この **[!UICONTROL Square に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Square に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
@@ -59,10 +59,10 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 新しいアカウント
 
-新しいアカウントを作成する場合は、「 **[!UICONTROL 新しいアカウント]**&#x200B;をクリックし、名前、説明（オプション）および [!DNL Square] 資格情報。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、[!DNL Square] しい資格情報の名前、説明（オプション）、適切な値を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 ![新規](../../../../images/tutorials/create/square/new.png)
 
 ## 次の手順
 
-このチュートリアルでは、認証を行い、お使いの [!DNL Square] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、 [データフローを作成して支払いデータを Platform に取り込む](../../dataflow/payments.md).
+このチュートリアルでは、認証を行い、お使いの [!DNL Square] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、[ 支払いデータを Platform に取り込むためのデータフローの作成 ](../../dataflow/payments.md) を行いましょう。

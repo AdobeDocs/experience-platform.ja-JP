@@ -4,7 +4,7 @@ description: Adobe Experience Platform のタグに関するよくある質問�
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1032'
 ht-degree: 89%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 89%
 
 同じ拡張機能開発手法を使用して、自社内でのみ使用できる独自のプライベート拡張機能を構築する方を選択するお客様も多くいます。
 
-拡張機能を開発するには、 [拡張機能の開発の概要](./extension-dev/overview.md) ページ。
+拡張機能を開発するには、[ 拡張機能の開発の概要 ](./extension-dev/overview.md) ページを参照してください。
 
 ## タグは会社のセキュリティ基準を満たしているか？
 
@@ -73,7 +73,7 @@ ht-degree: 89%
 
 ## タグはどのブラウザーをサポートしていますか？
 
-サポートされているブラウザーを参照する [ここ](./extension-dev/browsers.md).
+サポートされているブラウザーを [ こちら ](./extension-dev/browsers.md) 参照してください。
 
 ほとんどの Adobe クライアントは、ユーザーエクスペリエンスを向上させるため、シングルページアプリケーション、およびインタラクティブな Ajax を多用した Web サイトやページなど、現在のブラウザーの最新の Web プラットフォーム機能を活用しています。ほとんどの顧客が自社のサイトでより新しいアプローチを使用しようと移行する中で、こうしたアプローチを可能にするタグのようなソリューションを求めています。
 
@@ -83,14 +83,14 @@ ht-degree: 89%
 
 ## マイアカウントの読み込み中に UI でエラーが発生したのはなぜですか？
 
-アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。詳しくは、 [権限の管理](../collection/permissions.md) を参照して、UI のデータ収集機能へのアクセスを許可するためにAdobe Admin Consoleで製品プロファイルを設定する方法を確認してください。
+アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。Adobe Admin Consoleで製品プロファイルを設定して UI のデータ収集機能へのアクセスを許可する方法については、[ 権限の管理 ](../collection/permissions.md) に関するガイドを参照してください。
 
 ## UI でプロパティを追加できないのはなぜですか？
 
-UI にログインしても新しいプロパティを作成できない場合は、アカウントが、プロパティの管理権限を持つ製品プロファイルに属していないことを意味します。
+UI にログインしたときに新しいプロパティを作成できない場合は、アカウントが「プロパティの管理」権限を持つ製品プロファイルに属していません。
 
 Adobe Admin Console で製品プロファイルを設定して「プロパティの管理」権限を付与する方法については、 [権限の管理](../collection/permissions.md) に関するガイドを参照してください。タグの様々な権限について詳しくは、 [タグのユーザー権限](./ui/administration/user-permissions.md) の概要を参照してください。
 
 ## 他に質問がある場合
 
-他に質問がある場合は、 [Adobe Experience Platform Data Collection コミュニティページ](https://adobe.com/go/launchme) Experience Leagueで、または [コミュニティSlackワークスペース](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) 開発者向けおよび技術的な実装に関するトピックを参照してください。
+他に質問がある場合は、[Adobe Experience Platform Data Collection コミュニティページ ](https://adobe.com/go/launchme) のExperience Leagueで質問するか、[ コミュニティSlackワークスペース ](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) に参加して、開発者や技術実装に関するトピックを検索できます。

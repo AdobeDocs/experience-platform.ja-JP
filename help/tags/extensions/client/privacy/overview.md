@@ -17,15 +17,15 @@ ht-degree: 89%
 
 Adobe Privacy タグ拡張機能を使用すると、クライアントサイドデバイス上のアドビソリューションによってエンドユーザーに割り当てられているユーザー ID を収集および削除できます。 その後、収集した ID を[Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) に送信し、Adobe Experience Cloud のサポート対象アプリケーションにある関連する個人データにアクセスしたり削除したりできます。
 
-このガイドでは、Experience PlatformUI またはデータ収集 UI でAdobeプライバシー拡張機能をインストールして設定する方法について説明します。
+このガイドでは、Experience PlatformUI またはデータ収集 UI でAdobeプライバシー拡張機能をインストールおよび設定する方法について説明します。
 
 >[!NOTE]
 >
->タグを使用せずにこれらの機能をインストールする場合は、 [プライバシー JavaScript ライブラリの概要](../../../../privacy-service/js-library.md) raw コードを使用したを実装する手順を参照してください。
+>タグを使用せずにこれらの機能をインストールする場合は、[Privacy のJavaScript ライブラリの概要 ](../../../../privacy-service/js-library.md) を参照し、ローコードを使用して実装する手順を確認してください。
 
 ## 拡張機能のインストールと設定
 
-選択 **[!UICONTROL 拡張機能]** 左のナビゲーションで、 **[!UICONTROL カタログ]** タブをクリックします。 検索バーを使用して使用可能な拡張機能のリストを絞り込み、Adobe Privacy を見つけます。「**[!UICONTROL インストール]**」を選択して続行します。
+左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択してから、「**[!UICONTROL カタログ]** タブを選択します。 検索バーを使用して使用可能な拡張機能のリストを絞り込み、Adobe Privacy を見つけます。「**[!UICONTROL インストール]**」を選択して続行します。
 
 ![拡張機能のインストール](../../../images/extensions/client/privacy/install.png)
 
@@ -34,7 +34,7 @@ Adobe Privacy タグ拡張機能を使用すると、クライアントサイド
 * Adobe Analytics（AA）
 * Adobe Audience Manager（AAM）
 * Adobe Target
-* Adobe Experience Cloud Identity Service（訪問者または ECID）
+* Adobe Experience Cloud ID サービス（訪問者または ECID）
 * Adobe Advertising Cloud（AdCloud）
 
 1 つ以上のソリューションを選択してから、「**[!UICONTROL 更新]**」を選択します。
@@ -71,7 +71,7 @@ Adobe Privacy タグ拡張機能を使用する場合、必要なコールバッ
 
 ### ID を処理するデータ要素の定義
 
-新しいデータ要素の作成プロセスを開始するには、次を選択します。 **[!UICONTROL データ要素]** 左のナビゲーションで、の後にが続きます。 **[!UICONTROL データ要素を追加]**. 設定画面が表示されたら、拡張機能で「**[!UICONTROL Core]**」を選択し、データ要素タイプで「**[!UICONTROL カスタムコード]**」を選択します。ここから、右側のパネルの「**[!UICONTROL 編集画面を開く]**」を選択します。
+左側のナビゲーションで「**[!UICONTROL データ要素]**」を選択してから「**[!UICONTROL データ要素の追加]** を選択し、新しいデータ要素を作成するプロセスを開始します。 設定画面が表示されたら、拡張機能で「**[!UICONTROL Core]**」を選択し、データ要素タイプで「**[!UICONTROL カスタムコード]**」を選択します。ここから、右側のパネルの「**[!UICONTROL 編集画面を開く]**」を選択します。
 
 ![データ要素タイプの選択](../../../images/extensions/client/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Adobe Privacy タグ拡張機能を使用する場合、必要なコールバッ
 
 ## 次の手順
 
-このガイドでは、UI でのAdobeプライバシータグ拡張の使用について説明しました。 ローコードを使用して適用する方法をはじめ、拡張機能に用意されている各機能について詳しくは、Privacy Serviceドキュメントにある [Privacy の JavaScript ライブラリの概要](../../../../privacy-service/js-library.md)を参照してください。
+このガイドでは、UI でAdobeプライバシータグ拡張機能を使用する方法について説明しました。 ローコードを使用して適用する方法をはじめ、拡張機能に用意されている各機能について詳しくは、Privacy Serviceドキュメントにある [Privacy の JavaScript ライブラリの概要](../../../../privacy-service/js-library.md)を参照してください。

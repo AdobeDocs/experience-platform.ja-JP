@@ -4,7 +4,7 @@ description: Adobe Experience Platform における独自タグ拡張機能の�
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '448'
 ht-degree: 95%
 
 ---
@@ -61,7 +61,6 @@ npx @adobe/reactor-scaffold
 >* 各イベント、条件、アクションを複数追加できます。
 >* 設定ビューは 1 つのみです。
 
-
 ## 次の手順
 
-* フォロー： [送信プロセスの概要](./submit/overview.md) そして準備をして [validate](./submit/upload-and-test.md#validate) および [アップロード](./submit/upload-and-test.md#integration) タグエコシステム内でのテスト用に拡張機能を使用します。
+* [ 送信プロセスの概要 ](./submit/overview.md) に従い、タグエコシステム内でテストするための拡張機能を [ 検証 ](./submit/upload-and-test.md#validate) および [ アップロード ](./submit/upload-and-test.md#integration) する準備をします。

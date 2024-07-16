@@ -29,7 +29,7 @@ ht-degree: 30%
 
 ## 概要 {#overview}
 
-[!UICONTROL ユースケースプレイブック] は、Real-Time CDPまたはAdobe Journey Optimizerを使い始めたときに、何から始めればよいのか、目的のユースケースを達成するために適切なアセットをどのように作成すればよいのか正確に分からない場合の問題を克服するのに役立ちます。 ユースケースプレイブックは、次の方法で役に立ちます。
+[!UICONTROL  ユースケースプレイブック ] は、Real-Time CDPまたはAdobe Journey Optimizerを使い始めた際に、何から始めればよいかわからない場合や、目的のユースケースを達成するために適切なアセットを作成する方法がわからない場合に、問題を解決するのに役立ちます。 ユースケースプレイブックは、次の方法で役に立ちます。
 
 * インスピレーションのためのユースケースの表示
 * 準備が整ったら、使用、テスト、実稼動環境への昇格に使用する様々なアセットを作成する。
@@ -50,11 +50,11 @@ ht-degree: 30%
 
 ## 対象 {#availability}
 
-一部 [!UICONTROL ユースケースプレイブック] はReal-Time CDPのユースケースに合わせて調整されていますが、その他はJourney Optimizerを使用するお客様に最適です。 カタログを参照して、製品とユースケースに最適なプレイブックを見つけます。 Real-Time CDPとJourney Optimizerの詳細については、を参照してください [Adobe製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html).
+一部の [!UICONTROL  ユースケースプレイブック ] はReal-Time CDPのユースケースに合わせて調整されていますが、その他はJourney Optimizerを使用するお客様に最適です。 カタログを参照して、製品とユースケースに最適なプレイブックを見つけます。 Real-Time CDPとJourney Optimizerについて詳しくは、[Adobeの製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html) を参照してください。
 
 ## UI ガイド {#ui-guides}
 
-使用するプレイブックを決定したら、UI から選択して基本を学びます。の UI ガイドを参照してください [選択範囲から適切なプレイブックを選択する方法](/help/use-case-playbooks/playbooks/choose.md) お客様と [プレイブックインスタンスを作成、共有、再利用する方法](/help/use-case-playbooks/playbooks/create-share-reuse.md) インスタンスを作成しプレイブックを最大限に活用する方法に関する完全な情報については、を参照してください。 様々なアセットをインスピレーション用サンドボックスから他の開発用サンドボックスに昇格させ、さらに実稼動用に昇格させる方法については、次のドキュメントを参照してください。 [データ認知](/help/use-case-playbooks/playbooks/data-awareness.md).
+使用するプレイブックを決定したら、UI から選択して基本を学びます。インスタンスを作成してプレイブックを最大限に活用する方法について詳しくは、[ 選択から適切なプレイブックを選択する方法 ](/help/use-case-playbooks/playbooks/choose.md) と [ プレイブックインスタンスを作成、共有、再利用する方法 ](/help/use-case-playbooks/playbooks/create-share-reuse.md) の UI ガイドを参照してください。 様々なアセットをインスピレーション用サンドボックスから他の開発用サンドボックスに昇格させ、さらに実稼動用に昇格させる方法については、[ データ認識機能 ](/help/use-case-playbooks/playbooks/data-awareness.md) に関するドキュメントを参照してください。
 
 ## トラブルシューティングと既知の制限事項 {#trouble-shooting-known-limitations}
 

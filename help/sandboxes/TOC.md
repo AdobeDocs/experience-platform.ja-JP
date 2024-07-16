@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 85%
+ht-degree: 87%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 85%
    * [はじめに](api/getting-started.md)
    * [使用可能なサンドボックス](api/available.md)
    * [サンドボックス管理](api/sandboxes.md)
-   * [サンドボックスのタイプ](api/types.md)
+   * [サンドボックスタイプ](api/types.md)
    * [付録](api/appendix.md)
-* サンドボックスツール API {#sandbox-tooling-api}
+* Sandbox Tooling API {#sandbox-tooling-api}
    * [概要](sandbox-tooling-api/overview.md)
    * [はじめに](sandbox-tooling-api/getting-started.md)
    * [パッケージ](sandbox-tooling-api/packages.md)
@@ -34,4 +34,4 @@ ht-degree: 85%
    * [付録](sandbox-tooling-api/appendix.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

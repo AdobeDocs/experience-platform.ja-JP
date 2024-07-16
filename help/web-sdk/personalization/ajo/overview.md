@@ -1,7 +1,7 @@
 ---
 title: Platform Web SDK でのAdobe Journey Optimizerの使用
-description: Adobe Journey Optimizerを使用してExperience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
-keywords: ajo;ajoweb;adobe journey optimizer;renderDecisions;surfaces;decisions;propositions;scope;schema
+description: Adobe Journey Optimizerを使用して、Experience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
+keywords: ajo;ajo web;adobe journey optimizer;renderDecisions；サーフェス；決定；提案；範囲；スキーマ
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
@@ -10,30 +10,30 @@ ht-degree: 1%
 
 ---
 
-# 使用 [!DNL Adobe Journey Optimizer] と [!DNL Platform Web SDK]
+# [!DNL Platform Web SDK] での [!DNL Adobe Journey Optimizer] の使用
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] では、で管理されるパーソナライズされたエクスペリエンスを配信およびレンダリングできます [!DNL Adobe Journey Optimizer] を web チャネルに追加します。 WYSIWYG エディタを使用できます。 [!DNL Adobe Journey Optimizer] [Web チャネル](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)または非ビジュアルインターフェイス [コードベースの Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) を作成、アクティブ化、配信するには、以下を実行します。 [!DNL Journey Optimizer Web] キャンペーンとパーソナライゼーションエクスペリエンス。
+[!DNL Adobe Experience Platform] [!DNL Web SDK] は、web チャネルに [!DNL Adobe Journey Optimizer] して管理され、パーソナライズされたエクスペリエンスを配信およびレンダリングできます。 WYSIWYG エディターである [!DNL Adobe Journey Optimizer] [Web チャネル ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)、非ビジュアルインターフェイスである [ コードベースのエクスペリエンスチャネル ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) を使用して、[!DNL Journey Optimizer Web] キャンペーンとパーソナライゼーションエクスペリエンスを作成、アクティブ化および配信できます。
 
 >[!IMPORTANT]
 >
->詳しくは、 [Adobe Journey Optimizer Web チャネルドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=ja) の基本を学ぶには [!DNL Journey Optimizer Web] エクスペリエンスのオーサリングとレポート。
+>エクスペリエンスのオーサリングとレポートの概要については ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=ja)[Adobe Journey Optimizer web チャネルのドキュメ [!DNL Journey Optimizer Web] トをお読みください。
 
 ## 用語 {#terminology}
 
-**[!UICONTROL サーフェス]**:Web サーフェスは、URI で識別される Web ページまたはページ上の場所で、 [!DNL Adobe Journey Optimizer] エクスペリエンスコンテンツが配信されます。
+**[!UICONTROL サーフェス]**:Web サーフェスは、[!DNL Adobe Journey Optimizer] エクスペリエンスコンテンツが配信される Web ページまたはページ上の場所を URI で特定したものです。
 
-**[!UICONTROL 提案]**：内 [!DNL Adobe Journey Optimizer]、提案は、 [!DNL Journey Optimizer Campaign].
+**[!UICONTROL 提案]**:[!DNL Adobe Journey Optimizer] では、提案は、[!DNL Journey Optimizer Campaign] ールから選択されたエクスペリエンスに関連付けられます。
 
-## 有効化 [!DNL Adobe Journey Optimizer] {#enable-ajo}
+## [!DNL Adobe Journey Optimizer] の有効化 {#enable-ajo}
 
-を使用し始めるには [!DNL Adobe Journey Optimizer]、次の手順に従います。
+[!DNL Adobe Journey Optimizer] の使用を開始するには、次の手順に従います。
 
-1. 詳しくは、 [前提条件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) から [!DNL Adobe Journey Optimizer] [Web エクスペリエンスガイド](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)具体的には、次のようになります。
-   * 設定 [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * 有効にする [!DNL Adobe Journey Optimizer] の [datastream](../../../datastreams/overview.md).
-   * を有効にします。 [!UICONTROL エッジ上でのアクティブな結合ポリシー] オプション。
+1. [!DNL Adobe Journey Optimizer] の [web エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) から [ 前提条件 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) を確認します。具体的には次のとおりです。
+   * [!DNL Adobe Experience Cloud Visual Editing Helper] を設定します。
+   * [ データストリーム ](../../../datastreams/overview.md) で [!DNL Adobe Journey Optimizer] を有効にします。
+   * 「[!UICONTROL Edge上でアクティブ化結合ポリシー ]」オプションを有効にします。
 
-2. 次を追加： `renderDecisions` オプションをイベントに追加できます。 設定 `renderDecisions` から `true` 配信されたJourney Optimizerコンテンツ提案を web ページ上に自動レンダリングする場合。
+2. イベントに「`renderDecisions`」オプションを追加します。 Web ページサーフェス上に配信されたJourney Optimizer コンテンツの提案を自動レンダリングするには、`renderDecisions` を `true` に設定します。
 
    ```javascript
    alloy("sendEvent", {
@@ -42,7 +42,7 @@ ht-degree: 1%
    })
    ```
 
-3. 必要に応じて、イベントに追加のサーフェスを指定します。 デフォルトでは、Web SDK は現在の Web ページの Web サーフェスを自動的に生成し、Edge Network へのリクエストに含めます。 必要に応じて、リクエストに追加のサーフェスを含めるには、 `personalization.surfaces` オプション `sendEvent` コマンド、または対応する **[!UICONTROL サーフェス]** [[!UICONTROL イベントを送信] アクション](../../../tags/extensions/client/web-sdk/action-types.md#send-event) Web SDK 拡張機能の設定。
+3. オプションで、イベントに追加のサーフェスを指定します。 デフォルトでは、Web SDK は現在の web ページの web サーフェスを自動的に生成し、Edge Networkに対するリクエストに含めます。 必要に応じて、`sendEvent` コマンドの `personalization.surfaces` オプション、または Web SDK 拡張機能の対応する **[!UICONTROL サーフェス]** [[!UICONTROL  イベントを送信 ] アクション ](../../../tags/extensions/client/web-sdk/action-types.md#send-event) 設定で追加のサーフェスを指定して、リクエストに含めることができます。
 
    ```javascript
    alloy("sendEvent", {
@@ -55,7 +55,7 @@ ht-degree: 1%
 
    ![extension-add-surface](./assets/extension-add-surface.png)
 
-   イベントサーフェスは、 `query.personalization.surfaces` リクエストフィールド：
+   イベントサーフェスは、`query.personalization.surfaces` リクエストフィールドに含まれています。
 
    ```json
    {
@@ -80,19 +80,19 @@ ht-degree: 1%
    }
    ```
 
-4. 他のパーソナライゼーション機能と同様に、 **[スニペットを非表示にする](../manage-flicker.md)** エクスペリエンスを取得する際に、ページの特定の部分のみを非表示にする。
+4. 他のパーソナライゼーション機能と同様に、**[事前非表示スニペット](../manage-flicker.md)** を追加して、エクスペリエンスを取得する際に、ページの特定の部分のみを非表示にすることができます。
 
 ## Adobe Journey Optimizer Web エクスペリエンスの作成 {#create-ajo-web-experiences}
 
-フォロー： [web キャンペーンのオーサリング](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) からの指示 [!DNL Adobe Journey Optimizer] [Web エクスペリエンスガイド](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) を作成します。 [!DNL Journey Optimizer Web] キャンペーンとエクスペリエンス。
+[!DNL Adobe Journey Optimizer] の [Web エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) の [Web キャンペーンオーサリング ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 手順に従って、キャンペーンとエクスペリエンス [!DNL Journey Optimizer Web] 作成します。
 
 ## パーソナライズされたコンテンツのレンダリング {#rendering-personalized-content}
 
-次のドキュメントを参照してください： [パーソナライゼーションコンテンツのレンダリング](../rendering-personalization-content.md) を参照してください。
+詳しくは、[ パーソナライゼーションコンテンツのレンダリング ](../rendering-personalization-content.md) に関するドキュメントを参照してください。
 
-Adobe Journey Optimizerの Web サーフェスの提案は、 `__view__` 決定範囲の提案。 特に、 `renderDecisions` オプションが `true` （内） `sendEvent` コマンドを使用すると、Web SDK によって自動的にレンダリングされます。
+web サーフェスに対するAdobe Journey Optimizerの提案は、`__view__` の決定範囲の提案と同様の方法で処理されます。 特に、`sendEvent` コマンド `renderDecisions` オプションが `true` に設定されている場合、これらは Web SDK によって自動的にレンダリングされます。
 
-Journey Optimizerのコンテンツ提案の例：
+Journey Optimizer コンテンツ提案のサンプル：
 
 ```json
 {
@@ -145,6 +145,6 @@ Journey Optimizerのコンテンツ提案の例：
 
 ## デバッグ {#debugging}
 
-Adobe Journey Optimizerのパーソナライゼーション実装をデバッグするには、 [Web SDK のデバッグ](/help/web-sdk/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] を使用したトラブルシューティング時に、デバッグトレースを利用できます [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). でのイベントを確認します。 `AJO:` プレフィックス。
+Adobe Journey Optimizer パーソナライゼーション実装をデバッグするには、[Web SDK デバッグ ](/help/web-sdk/use-cases/debugging.md) を使用してください。 [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/) を使用したトラブルシューティングの際には、[!DNL Adobe Journey Optimizer] のデバッグトレースを利用できます。 `AJO:` プレフィックスが付いたイベントを確認します。
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)

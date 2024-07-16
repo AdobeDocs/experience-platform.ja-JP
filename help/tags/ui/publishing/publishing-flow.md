@@ -42,7 +42,7 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 * [[!UICONTROL Approved]](#approved)
 * [[!UICONTROL Published]](#published)
 
-これらの 4 つの状態は、 **[!UICONTROL 公開フロー]** タブをクリックします。
+これらの 4 つの状態は、「公開フロー **[!UICONTROL タブ内に列として表示さ]** ます。
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Adobe Experience Platform のタグ公開フローは、ライブラリを作成
 
 ![](./images/approval-workflow/upstream.png)
 
-UI でライブラリを編集する場合、アップストリームから継承されるすべてのリソースは、 **[!UICONTROL リソースのアップストリーム]** 」セクションに入力します。 これらのリソースを表示するには、セクションの見出しの下にある「拡張」タブを選択します。
+UI でライブラリを編集する際、アップストリームから継承されたすべてのリソースが「**[!UICONTROL リソースのアップストリーム]**」セクションに表示されます。 これらのリソースを表示するには、セクションの見出しの下にある「拡張」タブを選択します。
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

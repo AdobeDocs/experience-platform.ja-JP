@@ -2,7 +2,7 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: 同意 API エンドポイント
-description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションの顧客の同意リクエストを管理する方法について説明します。
+description: Privacy ServiceAPI を使用して、Experience Cloudアプリケーションの顧客同意リクエストを管理する方法について説明します。
 role: Developer
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # 同意エンドポイント
 
-特定の規制では、個人データを収集する前に、明示的なお客様の同意が必要です。 The `/consent` エンドポイント [!DNL Privacy Service] API を使用すると、顧客の同意リクエストを処理し、プライバシーワークフローに統合できます。
+特定の規制では、個人データを収集する前に、顧客の明示的な同意が必要です。 [!DNL Privacy Service] API の `/consent` エンドポイントを使用すると、顧客同意リクエストを処理し、それらをプライバシーワークフローに統合できます。
 
-このガイドを使用する前に、 [はじめに](./getting-started.md) 以下の API 呼び出し例で示す、必要な認証ヘッダーに関する情報を参照してください。
+このガイドを使用する前に、以下の API 呼び出しの例に示されている必要な認証ヘッダーについて詳しくは、[ はじめに ](./getting-started.md) ガイドを参照してください。
 
-## 顧客の同意要求の処理
+## 顧客の同意リクエストの処理
 
-同意リクエストは、 `/consent` endpoint.
+同意リクエストは、`/consent` エンドポイントに対してPOSTリクエストを行うことで処理されます。
 
 **API 形式**
 
@@ -30,7 +30,7 @@ POST /consent
 
 **リクエスト**
 
-次のリクエストでは、 `entities` 配列。
+次のリクエストは、`entities` 配列で指定されたユーザー ID に対して新しい同意ジョブを作成します。
 
 ```shell
 curl -X POST \
@@ -61,17 +61,17 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `optOutOfSale` | true に設定した場合、は、ユーザーが `entities` 個人データの販売または共有のオプトアウトを希望しています。 |
-| `entities` | 同意リクエストが適用されるユーザーを示すオブジェクトの配列。 各オブジェクトには、 `namespace` と、 `values` を追加して、個々のユーザーをその名前空間に一致させます。 |
-| `nameSpace` | 各オブジェクト ( `entities` 配列には、次のいずれかを含める必要があります： [標準 id 名前空間](./appendix.md#standard-namespaces) はPrivacy ServiceAPI で認識される。 |
-| `values` | 各ユーザーの値の配列で、指定した `nameSpace`. |
+| `optOutOfSale` | true に設定した場合、に基づいて提供されたユーザーが個人データの販売 `entities` たは共有をオプトアウトすることを希望することを示します。 |
+| `entities` | 同意リクエストが適用されるユーザーを示すオブジェクトの配列。 各オブジェクトには、`namespace` と、個々のユーザーをその名前空間に一致させる `values` の配列が含まれます。 |
+| `nameSpace` | `entities` 配列の各オブジェクトには、Privacy ServiceAPI で認識される [ 標準 ID 名前空間 ](./appendix.md#standard-namespaces) の 1 つが含まれている必要があります。 |
+| `values` | 指定された `nameSpace` に対応する、各ユーザーの値の配列。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->送信先の顧客 ID 値を決定する方法の詳細 [!DNL Privacy Service]詳しくは、 [id データの提供](../identity-data.md).
+>[!DNL Privacy Service] に送信する顧客 ID 値を決定する方法について詳しくは、[ID データの提供 ](../identity-data.md) に関するガイドを参照してください。
 
 **応答**
 
-正常な応答は、ペイロードなしで HTTP ステータス 202（許可済み）を返し、リクエストがによって受け入れられたことを示します。 [!DNL Privacy Service] 処理中です。
+応答が成功すると、ペイロードのない HTTP ステータス 202 （許可済み）が返され、リクエストが [!DNL Privacy Service] によって受け入れられ、処理中であることを示します。

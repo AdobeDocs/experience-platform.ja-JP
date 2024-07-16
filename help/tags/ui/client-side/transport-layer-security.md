@@ -1,28 +1,29 @@
 ---
-title: Transport Layer Security(TLS) 情報
-description: TLS バージョンおよび暗号に関する情報
-source-git-commit: 35ee2aca2b92cb8abe1fc69ad6cbc66b0e241e89
+title: Transport Layer Security （TLS）情報
+description: 使用される TLS バージョンおよび暗号に関する情報
+exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 24%
 
 ---
 
-# Transport Layer Security(TLS) 情報
+# Transport Layer Security （TLS）情報
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更の統合参照については、 [用語の更新](../../term-updates.md) 文書。
+>Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、[ 用語の更新 ](../../term-updates.md) ドキュメントを参照してください。
 
-Transport Layer Security(TLS) は、インターネットを介してアプリケーション間で送信されるデータに対してエンドツーエンドのセキュリティを提供する暗号化プロトコルです。 TLS の詳細については、 [TLS の基本](https://www.internetsociety.org/deploy360/tls/basics/) ドキュメント。
+Transport Layer Security （TLS）は、インターネット経由でアプリケーション間で送信されるデータのエンドツーエンドのセキュリティを提供する暗号化プロトコルです。 TLS について詳しくは、[TLS の基本 ](https://www.internetsociety.org/deploy360/tls/basics/) ドキュメントを参照してください。
 
-Adobe Experience Platform のタグは、Web サイトにスクリプトを動的に読み込むように設計されたタグ管理システムです。TLS は、Adobe・ホスト間の通信を保護 `assets.adobedtm.com` および Web サイトに書き込まれます。
+Adobe Experience Platform のタグは、Web サイトにスクリプトを動的に読み込むように設計されたタグ管理システムです。TLS は、これらのスクリプトが読み込まれる際にAdobeホスト `assets.adobedtm.com` と Web サイト間の通信を保護します。
 
-複数の TLS バージョンが利用可能で、様々な暗号をサポートしています。 一部のバージョンと暗号が、他のバージョンと同じでも、他のバージョンよりも安全でもないと考えられる場合もあります。
+複数の TLS バージョンが使用可能で、サポートする暗号は多数あります。 すべてのバージョンと暗号が同じとは限らず、一部のバージョンは他のバージョンよりも安全であると見なされます。
 
-## サポートされる TLS バージョンと暗号
+## サポートされる TLS のバージョンと暗号
 
-「Adobeホスト」オプションは現在、以下の TLS バージョンと暗号をサポートしています。
+Adobeホストオプションでは、現在、次の TLS バージョンと暗号をサポートしています。
 
 ```
 PORT    STATE SERVICE
@@ -50,9 +51,9 @@ PORT    STATE SERVICE
 
 ### 自己ホスト
 
-次の場合、 [自己ホスト型](../publishing/hosts/self-hosting-libraries.md) ライブラリの場合、サポートされる TLS バージョンは、独自のホスティングサービスによって決定されます。
+ライブラリを [ セルフホスティング ](../publishing/hosts/self-hosting-libraries.md) している場合、サポートされる TLS バージョンは、独自のホスティングサービスによって決定されます。
 
-## TLS 暗号は 2024 年 5 月 1 日に削除予定
+## 削除される TLS 暗号（2024 年 5 月 1 日（PT））
 
 ```
 PORT    STATE SERVICE

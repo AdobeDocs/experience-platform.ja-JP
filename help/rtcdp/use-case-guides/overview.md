@@ -1,29 +1,30 @@
 ---
-title: Real-Time CDPの使用例
-description: クロスサービスの使用例を参照して、Real-Time CDPの実装を最大限に活用してください。
+title: Real-Time CDPのサンプルユースケース
+description: サンプルのクロスサービスユースケースを表示して、Real-Time CDPの実装を最大限に活用します。
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
 
 ---
 
-# Real-Time CDPの使用例
+# Real-Time CDPのサンプルユースケース
 
-クロスサービスの使用例を参照して、Real-Time CDPの実装を最大限に活用してください。 このページでは、様々なAdobe Experience Platformサービスを使用して可能にした使用例をいくつか紹介します。
+サンプルのクロスサービスユースケースを表示して、Real-Time CDPの実装を最大限に活用します。 このページでは、様々なAdobe Experience Platform サービスを使用することで可能になったユースケースの例をいくつか取り上げています。
 
 >[!IMPORTANT]
 >
->このページで説明する使用例は、Real-Time CDPで実現できる企業の使用例の一部です。 その他の使用例については、ドキュメントの追加に取り組んでいます。 その間に、Adobe担当者に問い合わせて、現在ページに記載されている使用例に加えて、さらに多くの使用例を調べます。
+>このページで示すユースケースは、Real-Time CDPを使用して実現できるエンタープライズユースケースのサブセットです。 アドビでは、より多くのサンプルユースケースに関するドキュメントを追加する作業を進めています。 その間は、Adobe担当者に連絡して、このページで現在ドキュメント化されているユースケースに加えてより多くのユースケースを検討してもらってください。
 
-## パートナーデータのサポート {#partner-data-support}
+## パートナーデータサポート {#partner-data-support}
 
-今後数年以内にサードパーティ cookie が消去されるように設定された場合、パートナーデータサポートは、サードパーティ cookie の廃止によって残された無効期間を埋めることができます。
+今後数年以内にサードパーティ cookie が廃止される予定で、パートナーデータサポートは、サードパーティ cookie の廃止によって残された空白を埋めることができます。
 
-Adobe Real-Time CDPは、パートナー識別子を広範にサポートし、見込み客のオーディエンスを作成したり、パートナーの属性を使用して既知のオーディエンスを強化したりできます。
+Adobe Real-Time CDPは、パートナー識別子を幅広くサポートしており、見込み客のオーディエンスを作成したり、パートナーからの属性で既知のオーディエンスを強化したりできます。
 
-サンプルの使用例は、顧客獲得とプロファイルエンリッチメントの例にグループ化できます。 詳細な実装情報については、以下のドキュメントリンクを参照してください。
+サンプルのユースケースは、顧客獲得ケースとプロファイルエンリッチメントケースにグループ化できます。 詳細な実装情報については、以下のドキュメントリンクを参照してください。
 
 ### 顧客獲得 {#customer-acquisition}
 
@@ -31,24 +32,24 @@ Adobe Real-Time CDPは、パートナー識別子を広範にサポートし、�
 <tr>
   <td>
     <a href="../partner-data/prospecting.md">
-      <img alt="サードパーティ cookie に依存せずに新規顧客を惹きつけ、獲得する" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
+      <img alt="サードパーティ cookie に依存せずに新規顧客を獲得" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>新しい顧客獲得</strong>
+    <strong> 新規顧客獲得 </strong>
     </a>
     </div>
     <p>
-    <em>サードパーティ cookie に依存せずに新規顧客を惹きつけ、獲得する</em>
+    <em> サードパーティ cookie に依存せずに新規顧客を獲得および獲得 </em>
     <p>
   </td>
   <td>
     <a href="../partner-data/onsite-personalization.md">
-      <img alt="パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする" src="/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png" />
+      <img alt="パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする" src="/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png" />
     </a>
     <div>
       <a href="../partner-data/onsite-personalization.md">
-    <strong>オンサイトパーソナライゼーション</strong>
+    <strong> オンサイトのパーソナライズ機能 </strong>
     </a>
     </div>
     <p>
@@ -57,15 +58,15 @@ Adobe Real-Time CDPは、パートナー識別子を広範にサポートし、�
   </td>
   <td>
     <a href="../partner-data/offsite-retargeting.md">
-      <img alt="未認証の訪問者のオーディエンスを構築し、パートナー提供の永続 ID を使用して再ターゲティングする方法を説明します。" src="../assets/offsite-retargeting/header.png" />
+      <img alt="認証されていない訪問者のオーディエンスを作成し、パートナーが提供した永続的な ID を使用して再ターゲットにする方法を説明します。" src="../assets/offsite-retargeting/header.png" />
     </a>
     <div>
       <a href="../partner-data/offsite-retargeting.md">
-    <strong>未認証訪問者のオフサイトリターゲティング</strong>
+    <strong> 未認証の訪問者のオフサイトリターゲティング </strong>
     </a>
     </div>
     <p>
-    <em>未認証の訪問者のオーディエンスを構築し、パートナー提供の永続 ID を使用して再ターゲティングする方法を説明します。</em>
+    <em> 認証されていない訪問者のオーディエンスを作成し、パートナーが提供した永続的な ID を使用して再ターゲットにする方法を説明します。</em>
     <p>
   </td>
   </tr>
@@ -81,17 +82,17 @@ Adobe Real-Time CDPは、パートナー識別子を広範にサポートし、�
     </a>
     <div>
       <a href="../partner-data/supplement-first-party-profiles.md">
-    <strong>パートナーが指定した属性でファーストパーティプロファイルを補完する</strong>
+    <strong> パートナー提供の属性を使用したファーストパーティプロファイルの補完 </strong>
     </a>
     </div>
     <p>
-    <em>信頼できるデータパートナーの属性でファーストパーティプロファイルを補完し、データ基盤を強化し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。</em>
+    <em> 信頼できるデータパートナーの属性を使用してファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を向上させます。</em>
     <p>
   </td>
   </tr>
   </table>
 
-## パーソナライゼーション、インサイト、エンゲージメント {#personalization-insights-engagement}
+## Personalization, インサイト，エンゲージメント {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -101,11 +102,11 @@ Adobe Real-Time CDPは、パートナー識別子を広範にサポートし、�
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>インテリジェントな再エンゲージメント</strong>
+    <strong> インテリジェントな再エンゲージメント </strong>
     </a>
     </div>
     <p>
-    <em>インテリジェントで責任ある方法でコンバージョンを放棄した顧客を再び惹きつけます。 経験を持つラップした顧客を惹きつけ、コンバージョンを増やし、クライアントのライフタイムバリューを高めます。</em>
+    <em> コンバージョンを放棄した顧客を、インテリジェントかつ責任ある方法で再び関与させます。 失効した顧客にエクスペリエンスをエンゲージして、コンバージョンを増やし、クライアントのライフタイムバリューを高めます。</em>
     <p>
   </td>
   </tr>

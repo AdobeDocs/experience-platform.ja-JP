@@ -6,7 +6,7 @@ description: このドキュメントでは、Adobe Admin Console の製品プ�
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '293'
 ht-degree: 98%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 98%
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
-- [!DNL Adobe Real-Time Customer Data Platform] UI(Real-Time CDPのみ )
+- [!DNL Adobe Real-Time Customer Data Platform] UI （Real-Time CDPのみ）
 - B2B UI
 
 特定のサービスの右側にある切り替えボタンをクリックして、有効または無効にします。「**[!UICONTROL すべて選択]**」チェックボックスで、一覧表示されているすべてのサービスを有効または無効にすることもできます。

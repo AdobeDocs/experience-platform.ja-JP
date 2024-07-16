@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；hubspot;Hubspot
 solution: Experience Platform
-title: フローサービス API を使用した HubSpot ベース接続の作成
+title: Flow Service API を使用した HubSpot ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを HubSpot に接続する方法を説明します。
+description: Flow Service API を使用してAdobe Experience Platformを HubSpot に接続する方法を説明します。
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '479'
 ht-degree: 63%
 
 ---
@@ -25,21 +25,21 @@ ht-degree: 63%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL HubSpot] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL HubSpot] ています。
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] ～とつながる [!DNL HubSpot]に値を入力する場合は、次の接続プロパティを指定する必要があります。
+[!DNL Flow Service] を [!DNL HubSpot] に接続するには、次の接続プロパティを指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `clientId` | 次に関連付けられたクライアント ID: [!DNL HubSpot] アプリケーション。 |
-| `clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL HubSpot] アプリケーション。 |
-| `accessToken` | OAuth 統合を最初に認証したときに取得されたアクセストークン。 |
-| `refreshToken` | OAuth 統合の初回認証時に取得された更新トークン。 |
+| `clientId` | [!DNL HubSpot] アプリケーションに関連付けられたクライアント ID。 |
+| `clientSecret` | [!DNL HubSpot] アプリケーションに関連付けられたクライアント秘密鍵。 |
+| `accessToken` | OAuth 統合を最初に認証する際に取得したアクセストークン。 |
+| `refreshToken` | OAuth 統合を最初に認証する際に取得した更新トークン。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL HubSpot] の接続仕様 ID は `cc6a4487-9e91-433e-a3a3-9cf6626c1806` です。 |
 
-導入の詳細については、 [HubSpot ドキュメント](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
+基本について詳しくは、この [HubSpot ドキュメント ](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview) を参照してください。
 
 ### Platform API の使用
 
@@ -90,15 +90,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.clientId` | 次に関連付けられたクライアント ID: [!DNL HubSpot] アプリケーション。 |
-| `auth.params.clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL HubSpot] アプリケーション。 |
-| `auth.params.accessToken` | OAuth 統合を最初に認証したときに取得されたアクセストークン。 |
-| `auth.params.refreshToken` | OAuth 統合の初回認証時に取得された更新トークン。 |
-| `connectionSpec.id` | この [!DNL HubSpot] 接続仕様 ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `auth.params.clientId` | [!DNL HubSpot] アプリケーションに関連付けられたクライアント ID。 |
+| `auth.params.clientSecret` | [!DNL HubSpot] アプリケーションに関連付けられたクライアント秘密鍵。 |
+| `auth.params.accessToken` | OAuth 統合を最初に認証する際に取得したアクセストークン。 |
+| `auth.params.refreshToken` | OAuth 統合を最初に認証する際に取得した更新トークン。 |
+| `connectionSpec.id` | [!DNL HubSpot] 接続仕様 ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`。 |
 
 **応答**
 
-正常な応答は、新しく作成された接続を返します。この接続には、一意の接続識別子 (`id`) をクリックします。 この ID は、次のチュートリアルでデータを調べるために必要です。
+応答が成功すると、一意の接続識別子（`id`）を含む、新しく作成された接続が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {

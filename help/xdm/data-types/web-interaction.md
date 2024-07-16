@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；XDM；フィールド；スキーマ；スキーマ；Web インタラクション；データ型；データ型；データ型；
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；XDM；フィールド；スキーマ；スキーマ；Web インタラクション；データタイプ；データタイプ；データタイプ；
 solution: Experience Platform
-title: Web インタラクションのデータタイプ
-description: Web インタラクションの Experience Data Model(XDM) データタイプについて説明します。
+title: Web インタラクションデータタイプ
+description: Web インタラクションエクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL Web インタラクション] データタイプ
+# [!UICONTROL Web インタラクション ] データタイプ
 
-[!UICONTROL Web インタラクション] は標準の Experience Data Model(XDM) データ型で、最初のページ読み込みが完了した後に Web ページで発生したインタラクションに関する情報を記述します。 これは、単一ページ Web アプリ (SPA) などの新しいページ読み込みをトリガーしない、リッチ Web アプリケーションでのインタラクションの記録を目的としています。
+[!UICONTROL Web インタラクション ] は、最初のページ読み込みが完了した後に Web ページで発生したインタラクションに関する情報を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 単一ページ web アプリ（SPA）など、新しいページ読み込みをトリガーとしないリッチ web アプリケーションでのインタラクションを記録することを目的としています。
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `linkClicks` | [[!UICONTROL 測定]](./measure.md) | Web リンクのクリックを追跡する指標です。 |
+| `linkClicks` | [[!UICONTROL 測定]](./measure.md) | Web リンクのクリックをトラッキングする測定値。 |
 | `URL` | 文字列 | この Web インタラクションに使用される実際のリンクまたは URL。 |
-| `name` | 文字列 | この Web リンクに使用される基準となる名前。 これは分類の目的で使用されます。 |
-| `type` | 文字列 | リンクタイプ。 このプロパティは、次の列挙値のいずれかと等しい必要があります。 <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
+| `name` | 文字列 | この Web リンクに使用される基準となる名前。 これは分類目的で使用されます。 |
+| `type` | 文字列 | リンクタイプ。 このプロパティは、次の列挙値のいずれかに等しい必要があります： <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
 
 {style="table-layout:auto"}
 
-データタイプについて詳しくは、パブリック XDM リポジトリを参照してください。
+データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
-* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)
+* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
+* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)

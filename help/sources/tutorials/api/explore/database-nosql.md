@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；サードパーティのデータベース；データベースフローサービス
+keywords: Experience Platform；ホーム；人気のトピック；サードパーティのデータベース；データベースフローサービス
 solution: Experience Platform
-title: フローサービス API を使用したデータベースの調査
-description: このチュートリアルでは、フローサービス API を使用して、サードパーティのデータベースのコンテンツとファイル構造を調べます。
+title: Flow Service API を使用したデータベースの参照
+description: このチュートリアルでは、Flow Service API を使用して、サードパーティのデータベースの内容とファイル構造を調べます。
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '560'
 ht-degree: 38%
 
 ---
 
-# を使用してデータベースを調査 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用したデータベースの参照
 
-このチュートリアルでは、 [!DNL Flow Service] サードパーティのデータベースのコンテンツとファイル構造を調べるための API。
+このチュートリアルでは、[!DNL Flow Service] API を使用して、サードパーティのデータベースの内容とファイル構造を調べます。
 
 ## はじめに
 
@@ -22,11 +22,11 @@ ht-degree: 38%
 * [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してサードパーティデータベースに正常に接続するために必要な追加情報を示しています。
 
 ### 必要な資格情報の収集
 
-このチュートリアルでは、データを取り込むサードパーティのデータベースとの有効な接続が必要です。 有効な接続は、データベースの接続仕様 ID と接続 ID に関係します。 データベース接続の作成とこれらの値の取得について詳しくは、 [ソースコネクタの概要](./../../../home.md#database).
+このチュートリアルでは、データの取り込み元のサードパーティデータベースに対する有効な接続が必要です。 有効な接続には、データベースの接続仕様 ID と接続 ID が含まれます。 データベース接続の作成とこれらの値の取得について詳しくは、[ ソースコネクタの概要 ](./../../../home.md#database) を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -34,7 +34,7 @@ ht-degree: 38%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての E の必要な各ヘッダーの値がわかります。[!DNL xperience Platform] API 呼び出し（下図を参照）
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての E[!DNL xperience Platform] API 呼び出しで必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -48,9 +48,9 @@ ht-degree: 38%
 
 * `Content-Type: application/json`
 
-## データテーブルの調査
+## データテーブルの探索
 
-データベースの接続 ID を使用して、データリクエストを実行することでGETテーブルを調べることができます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを見つけます。 [!DNL Platform].
+データベースの接続 ID を使用すると、データリクエストを実行してGETテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Platform] に取り込むテーブルのパスを検索します。
 
 **API 形式**
 
@@ -75,7 +75,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、データベースからテーブルの配列を返します。 に取り込むテーブルを探します。 [!DNL Platform] そしてそれを書き留める `path` プロパティに含める必要がある場合は、次の手順で指定して、その構造を調べます。
+応答が成功すると、データベースからテーブルの配列が返されます。 [!DNL Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
 
 ```json
 [
@@ -96,9 +96,9 @@ curl -X GET \
 ]
 ```
 
-## Inspectテーブルの構造
+## テーブルの構造のInspect
 
-データベースからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定し、GETリクエストを実行します。
+データベースからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定してGETリクエストを実行します。
 
 **API 形式**
 
@@ -124,7 +124,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、 `columns` 配列。
+応答が成功すると、指定されたテーブルの構造が返されます。 テーブルの各列に関する詳細は、`columns` 配列の要素内にあります。
 
 ```json
 {
@@ -152,4 +152,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、データベースを調べ、に取り込むテーブルのパスを見つけました [!DNL Platform]、およびその構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して、 [データベースからデータを収集し、Platform に取り込む](../collect/database-nosql.md).
+このチュートリアルに従って、データベースを探索し、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [ データベースからデータを収集し、Platform に取り込む ](../collect/database-nosql.md) ことができます。

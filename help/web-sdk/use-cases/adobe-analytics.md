@@ -14,35 +14,35 @@ ht-degree: 2%
 
 Experience PlatformWeb SDK は、Experience PlatformEdge Networkを介してAdobe Analyticsにデータを送信できます。 Adobeでは、Web SDK を使用してAdobe Analyticsにデータを送信するためのいくつかのオプションを提供しています。
 
-* を追加 [**[!UICONTROL Adobe Analytics ExperienceEvent フィールドグループ]**](../../xdm/field-groups/event/analytics-full-extension.md) スキーマに追加した後、 [`XDM` オブジェクト](../commands/sendevent/xdm.md).
-* の使用 [`data` オブジェクト](../commands/sendevent/data.md) xdm スキーマを使用せずにAdobe Analyticsにデータを送信する。
-* 自動生成されたを使用 [コンテキストデータ変数](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) および [処理ルール](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about).
+* [**[!UICONTROL Adobe Analytics ExperienceEvent フィールドグループ ]**](../../xdm/field-groups/event/analytics-full-extension.md) をスキーマに追加してから、[`XDM` オブジェクト ](../commands/sendevent/xdm.md) を使用します。
+* [`data` オブジェクトを使用して ](../commands/sendevent/data.md)XDM スキーマを使用せずにAdobe Analyticsにデータを送信します。
+* 自動生成された [ コンテキストデータ変数 ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) および [ 処理ルール ](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) を使用します。
 
-## の使用 `XDM` オブジェクト {#use-xdm-object}
+## `XDM` オブジェクトの使用 {#use-xdm-object}
 
-Adobe Analytics固有の事前定義済みスキーマを使用する場合は、 [Adobe Analytics ExperienceEvent スキーマフィールドグループ](../../xdm/field-groups/event/analytics-full-extension.md) をスキーマに追加します。 追加したら、を使用してこのスキーマにデータを入力できます。 `xdm` web SDK でレポートスイートにデータを送信するためのオブジェクトです。 Edge Networkにデータが到達すると、XDM オブジェクトがAdobe Analyticsで認識できる形式に変換されます。
+Adobe Analyticsに特有の事前定義済みスキーマを使用する場合は、[Adobe Analytics ExperienceEvent スキーマフィールドグループ ](../../xdm/field-groups/event/analytics-full-extension.md) をスキーマに追加できます。 追加したら、Web SDK の `xdm` オブジェクトを使用してこのスキーマにデータを入力し、レポートスイートにデータを送信できます。 Edge Networkにデータが到達すると、XDM オブジェクトがAdobe Analyticsで認識できる形式に変換されます。
 
 Web SDK を使用してAdobe Analyticsにデータを送信する方法は 2 つあります。
 
-* [Web SDK タグ拡張機能を使用したAdobe Analyticsへのデータの送信](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
-* [Web SDK JavaScript ライブラリを使用したAdobe Analyticsへのデータの送信](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
+* [Web SDK タグ拡張機能を使用したAdobe Analyticsへのデータの送信 ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
+* [Web SDK JavaScript ライブラリを使用したAdobe Analyticsへのデータの送信 ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
 
-参照： [Adobe Analyticsへの XDM オブジェクト変数のマッピング](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) XDM フィールドの完全なリファレンスと、それらが Analytics 変数にマッピングされる方法については、Adobe Analytics実装ガイドを参照してください。
+XDM フィールドの詳細とAdobe Analytics変数へのマッピング方法については、Adobe Analytics実装ガイドの [XDM オブジェクト変数の Analytics へのマッピング ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) を参照してください。
 
-## の使用 `data` オブジェクト {#use-data-object}
+## `data` オブジェクトの使用 {#use-data-object}
 
 XDM オブジェクトを使用する代わりに、データオブジェクトを使用することもできます。 データオブジェクトは、現在AppMeasurementを使用している実装に向けられているので、Web SDK へのアップグレードがはるかに容易になります。
 
 Web SDK への移行方法の詳細については、AppMeasurementと Analytics タグ拡張機能のどちらを使用しているかにより、次のガイドを参照してください。
 
-* [Adobe Analyticsのタグ拡張機能から Web SDK のタグ拡張機能への移行](https://experienceleague.adobe.com/ja/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
-* [AppMeasurementから Web SDK への移行](https://experienceleague.adobe.com/ja/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
+* [Adobe Analyticsのタグ拡張機能から Web SDK のタグ拡張機能に移行する ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
+* [AppMeasurementから Web SDK への移行 ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
 
-のドキュメントを参照してください。 [Adobe Analyticsへのデータオブジェクト変数のマッピング](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) データオブジェクトフィールドとその Analytics 変数へのマッピング方法について詳しくは、Adobe Analytics実装ガイドを参照してください。
+データオブジェクトフィールドの完全なリファレンスとAdobe Analytics変数へのマッピング方法については、Adobe Analytics実装ガイドの [Analytics へのデータオブジェクト変数のマッピング ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) に関するドキュメントを参照してください。
 
 ## コンテキストデータ変数の使用 {#use-context-data-variables}
 
-自動的にマッピングされない変数は、次のように使用できます [コンテキストデータ変数](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata). その後、を使用できます [処理ルール](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) コンテキストデータ変数を Analytics 変数にマッピングする 例えば、次のようなカスタム XDM スキーマがあるとします。
+自動的にマッピングされない変数は、[ コンテキストデータ変数 ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) として使用できます。 その後、[ 処理ルール ](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) を使用して、コンテキストデータ変数を Analytics 変数にマッピングできます。 例えば、次のようなカスタム XDM スキーマがあるとします。
 
 ```json
 {
@@ -84,17 +84,17 @@ a.x.objectarray.2.ad3 //600x50
 
 +++ページビューコールを Web SDK のリンクトラッキングコールと区別するにはどうすればよいですか？
 
-Adobe AnalyticsのAppMeasurementでは、ページビューに対して個別のメソッド呼び出しを使用します（[`t()` メソッド](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/t-method)）とリンクトラッキングコール （[`tl()` メソッド](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)）に設定します。 Web SDK は、代わりにを提供するだけです [`sendEvent`](../commands/sendevent/overview.md) ページビューとリンクトラッキングの両方を送信するコマンド。 イベントに含めるデータによって、そのデータが [ページビュー](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-views) または [ページイベント](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-events) Adobe Analyticsで。
+Adobe AnalyticsのAppMeasurementでは、ページビューの呼び出し（[`t()` メソッド ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/t-method)）とリンクトラッキングコールの呼び出し（[`tl()` メソッド ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)）が別々に使用されます。 代わりに、Web SDK は、ページビューとリンクトラッキングの両方を送信するための [`sendEvent`](../commands/sendevent/overview.md) コマンドのみを提供します。 イベントに含めるデータによって、そのデータがAdobe Analyticsの [ ページビュー ](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-views) または [ ページイベント ](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-events) かどうかが決まります。
 
 デフォルトでは、すべてのイベントは、Adobe Analyticsではページビューと見なされます。 Web SDK イベントをAdobe Analytics リンクトラッキング呼び出しに設定する場合は、次のフィールドを設定します。
 
-* **XDM オブジェクト**: `xdm.web.webInteraction.name`, `web.webInteraction.type`、および `web.webInteraction.URL`
-* **データオブジェクト**: `data.__adobe.analytics.linkName`, `data.__adobe.analytics.linkType`、および `data.__adobe.analytics.linkURL`
-* **コンテキストデータ**：サポート対象外
+* **XDM オブジェクト**:`xdm.web.webInteraction.name`、`web.webInteraction.type`、`web.webInteraction.URL`
+* **データオブジェクト**:`data.__adobe.analytics.linkName`、`data.__adobe.analytics.linkType` および `data.__adobe.analytics.linkURL`
+* **コンテキストデータ**：サポートされていません
 
-を参照してください。 [`tl()` メソッド](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method) を参照してください。Adobe Analytics実装ガイド
+詳しくは ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)Adobe Analytics導入ガイドの [`tl()` メソッドを参照してください。
 
-有効にする場合 [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) が含まれる `configure` コマンドを実行すると、これらのフィールドに値が入力されます。
+`configure` コマンドで [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) を有効にすると、これらのフィールドに値が設定されます。
 
 +++
 
@@ -102,6 +102,6 @@ Adobe AnalyticsのAppMeasurementでは、ページビューに対して個別の
 
 データストリームに送信されたすべてのイベントは、設定済みのすべてのサービスに渡されます。 例えば、パーソナライゼーションと Analytics に対して個別の呼び出しを行う場合、両方のイベントが Analytics と Target に送信されます。 これらのイベントは、Analytics レポートに記録され、バウンス率などの指標に影響を与える可能性があります。
 
-Web SDK を使用する場合、通常、これらの呼び出しは [`sendEvent`](../commands/sendevent/overview.md) コマンド。
+Web SDK を使用する場合、通常、これらの呼び出しは [`sendEvent`](../commands/sendevent/overview.md) コマンドで組み合わされます。
 
 +++

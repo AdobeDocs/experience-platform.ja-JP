@@ -1,7 +1,8 @@
 ---
 title: AI アシスタントに関するよくある質問
 description: AI アシスタントに関するよくある質問への回答を説明します
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
+source-git-commit: da5a4e099909d7994b9bbe408a70039d34c14b50
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -16,14 +17,14 @@ ht-degree: 0%
 
 AI アシスタントの応答で表示されるデータは、毎日更新されます。 つまり、応答内のデータは、応答時のExperience Platformユーザーインターフェイスに表示されるデータよりも最大 24 時間古くなる可能性があります。
 
-同じ原則がアクセス制御にも当てはまります。 AI アシスタントがアクセス制御および権限設定に加えられた変更を反映するには、最大 24 時間かかる場合があります。 詳しくは、のガイドを参照してください。 [ai アシスタントのプライバシー](./privacy.md).
+同じ原則がアクセス制御にも当てはまります。 AI アシスタントがアクセス制御および権限設定に加えられた変更を反映するには、最大 24 時間かかる場合があります。 詳しくは、[AI アシスタントのプライバシー ](./privacy.md) に関するガイドを参照してください。
 
 ## AI アシスタントはどのAdobeアプリケーションをサポートしていますか？
 
 現在、AI アシスタントの範囲は次のとおりです。
 
-* [製品に関する知識](./home.md#product-knowledge):AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizerの製品ナレッジに関する質問に回答できます。 また、Customer Journey AnalyticsUI を通じてのみ、Customer Journey Analyticsに関する製品のナレッジトピックを掘り下げることもできます。
-* [運用インサイト](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースといったデータオブジェクトに関する運用上のインサイトについて、AI アシスタントに質問することができます。
+* [ 商品に関する知識 ](./home.md#product-knowledge):AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizerの商品に関する知識の質問に回答できます。 また、Customer Journey AnalyticsUI を通じてのみ、Customer Journey Analyticsに関する製品のナレッジトピックを掘り下げることもできます。
+* [ 運用インサイト ](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースのデータオブジェクトに関する運用インサイトについて、AI アシスタントに質問できます。
 
 ## AI アシスタントの機能とは？
 

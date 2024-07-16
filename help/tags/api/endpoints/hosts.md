@@ -4,7 +4,7 @@ description: Reactor API で /hosts エンドポイントを呼び出す方法�
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 91%
 
 ---
@@ -228,7 +228,7 @@ curl -X POST \
 | `attributes.path` | `server` URL に追加するパス。 |
 | `attributes.port` | 使用する特定のサーバーポートを示す整数。 |
 | `attributes.server` | サーバーのホスト URL。 |
-| `attributes.skip_symlinks`<br><br>（SFTP ホストのみ） | デフォルトでは、すべての SFTP ホストは、サーバーに保存されているライブラリビルドを参照するために、シンボリックリンク (symlinks) を使用します。 ただし、一部のサーバでは symlinks の使用がサポートされているわけではありません。 この属性が含まれ、に設定されている場合 `true`の場合、ホストはコピー操作を使用して、symlinks を使用する代わりに、ビルドアセットを直接更新します。 |
+| `attributes.skip_symlinks`<br><br> （SFTP ホストのみ） | デフォルトでは、すべての SFTP ホストは、サーバーに保存されたライブラリビルドを参照するためにシンボリックリンク（symlinks）を使用します。 ただし、すべてのサーバーがシンボリックリンクの使用をサポートしているわけではありません。 この属性が含まれて `true` に設定されている場合、ホストは、シンボリックリンクを使用する代わりに、コピー操作を使用してビルドアセットを直接更新します。 |
 | `attributes.username` | 認証用のオプションのユーザー名。 |
 | `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `hosts` にする必要があります。 |
 
@@ -430,7 +430,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたホストのプロパティの詳細を返します。
+応答が成功すると、指定されたホストのプロパティの詳細が返されます。
 
 ```json
 {

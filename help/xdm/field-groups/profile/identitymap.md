@@ -18,7 +18,7 @@ ht-degree: 76%
 
 [!UICONTROL IdentityMap] は、[[!DNL XDM Individual Profile] クラス](../../classes/individual-profile.md)の標準スキーマフィールドグループです。 フィールドグループは単一のマップフィールドを提供します。これには、名前空間でキー設定された一連のユーザー ID が含まれます。
 
-![の図 [!UICONTROL IdentityMap] スキーマフィールドグループ](../../images/field-groups/identitymap.png)
+![[!UICONTROL IdentityMap] スキーマフィールドグループの図 ](../../images/field-groups/identitymap.png)
 
 メリットとデメリットを含むそのユースケースについては、[スキーマ構成の基本](../../schema/composition.md#identityMap)の ID マップの節を参照してください。
 
@@ -38,4 +38,4 @@ ht-degree: 76%
 }
 ```
 
-フィールドグループについて詳しくは、 [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) パブリック XDM リポジトリー内に保存されます。
+フィールドグループについて詳しくは、公開 XDM リポジトリの [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) を参照してください。

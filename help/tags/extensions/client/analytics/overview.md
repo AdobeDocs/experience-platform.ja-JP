@@ -3,9 +3,9 @@ title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: ht
-source-wordcount: '2275'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '2105'
+ht-degree: 98%
 
 ---
 
@@ -124,7 +124,7 @@ EU コンプライアンスのチェックボックスをオンにすると、�
 _satellite.cookie.set("sat_track", "false");
 ```
 
-また、後で訪問者によるオプトイン操作ができるようにするには、この Cookie を次のようにしてtrue に設定するための仕組みを用意する必要があります。
+また、訪問者が後でオプトインできるようにする場合は、その cookie を true に設定するメカニズムも必要です。
 
 ```javascript
 _satellite.cookie.set("sat_track", "true");
@@ -188,7 +188,7 @@ Web アプリケーションが通常 1 ページに 1 つのビーコンを送�
 
 ### 離脱リンクを追跡
 
-選択されたリンクのいずれかが他のサイトへのリンクであるかどうかが判断されます。
+選択されたリンクのいずれかが離脱リンクであるかどうかが判断されます。
 
 「[s.trackExternalLinks](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackexternallinks.html?lang=ja)」を参照してください。
 
@@ -196,7 +196,7 @@ Web アプリケーションが通常 1 ページに 1 つのビーコンを送�
 
 SPA サイトから外部へのリンクは、次のいずれかの方法でトラッキングできます。
 
-* SPA からの外部リンクをトラッキングする必要がない場合は、「Never Track」セクションにエントリを追加します。例：`http://testsite.com/spa/\#`。このホストへのすべての \# リンクは無視されます。その他のホストに対するすべての外部リンク（例：[https://www.google.com](https://www.google.com)）は追跡されます。
+* SPA からの外部リンクをトラッキングする必要がない場合は、「Never Track」セクションにエントリを追加します。たとえば、`http://testsite.com/spa/\#` のように設定します。このホストへのすべての\# リンクは無視されます。 その他のホストに対するすべての外部リンク（例：[https://www.google.com](https://www.google.com)）は追跡されます。
 * SPA 上にある一部のリンクをトラッキングする必要がある場合は、「Always Track」セクションを使用します。
 
 例えば、spa/\#/about にあるページをトラッキングするには、「about」を「Always Track」セクションに登録します。
@@ -209,7 +209,7 @@ SPA サイトから外部へのリンクは、次のいずれかの方法でト�
 
 ### URL パラメーターを保持
 
-クエリー文字列を維持します。
+クエリ文字列を保持します。
 
 「[s.linkLeaveQueryString](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkleavequerystring.html?lang=ja)」を参照してください。
 

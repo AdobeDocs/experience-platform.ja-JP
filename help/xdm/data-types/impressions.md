@@ -1,6 +1,6 @@
 ---
-title: インプレッションデータタイプ
-description: Impressions XDM データタイプについて説明します。
+title: インプレッション数データタイプ
+description: インプレッション XDM データタイプについて説明します。
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Impressions] データタイプ
+# [!UICONTROL  インプレッション数 ] データタイプ
 
-[!UICONTROL Impressions] はマーケティングインプレッションを表す標準的な XDM データ型です。マーケティングインプレッションは、広告、デジタル投稿、Web ページなどのコンテンツのデジタルビューやエンゲージメントの数を定量化するために使用される指標です。
+[!UICONTROL  インプレッション ] は、マーケティングインプレッションを表す標準 XDM データタイプです。マーケティングインプレッションは、広告、デジタル投稿、web ページなどの、コンテンツのデジタルビューまたはエンゲージメントの数を定量化するために使用される指標です。
 
 ![](../images/data-types/impressions.png)
 
@@ -24,7 +24,7 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、パブリック XDM リポジトリを参照してください。
+フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。
 
-* [入力された例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
-* [完全なスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)
+* [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
+* [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)

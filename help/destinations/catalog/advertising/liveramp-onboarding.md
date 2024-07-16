@@ -38,7 +38,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -58,7 +58,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -70,9 +70,9 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 ![パスワードによる SFTP を使用して宛先に対する認証を行う方法を示すサンプルスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
-* **[!UICONTROL ポート]**：に使用するポート [!DNL LiveRamp - Onboarding] 保存場所。  次に示すように、地理的な場所に対応するポートを使用します。
-   * **[!UICONTROL 該当なし]**：ポートを使用 `22`
-   * **[!UICONTROL AU]**：ポートを使用 `2222`
+* **[!UICONTROL ポート]**:[!DNL LiveRamp - Onboarding] ストレージの場所に使用されるポート。  次に示すように、地理的な場所に対応するポートを使用します。
+   * **[!UICONTROL NA]**: ポート `22` を使用します
+   * **[!UICONTROL AU]**: ポート `2222` を使用します
 * **[!UICONTROL ユーザー名]**：[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
 * **[!UICONTROL パスワード]**：[!DNL LiveRamp - Onboarding] ストレージの場所のパスワード。
 * **[!UICONTROL PGP／GPG 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
@@ -83,8 +83,8 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 ![SSH キーを使用して宛先に対する認証を行う方法を示すサンプルスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL ポート]**：に使用するポート [!DNL LiveRamp - Onboarding] 保存場所。  次に示すように、地理的な場所に対応するポートを使用します。
-   * **[!UICONTROL EU]**：ポートを使用 `4222`
+* **[!UICONTROL ポート]**:[!DNL LiveRamp - Onboarding] ストレージの場所に使用されるポート。  次に示すように、地理的な場所に対応するポートを使用します。
+   * **[!UICONTROL EU]**：ポート `4222` を使用する
 * **[!UICONTROL ユーザー名]**：[!DNL LiveRamp - Onboarding] ストレージの場所のユーザー名。
 * **[!UICONTROL SSH キー]**：[!DNL LiveRamp - Onboarding] ストレージの場所へのログインに使用する [!DNL SSH] 秘密鍵。この秘密鍵は、[!DNL Base64] でエンコードされた文字列の形式にする必要があり、パスワードで保護しないでください。
 
@@ -123,7 +123,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -185,7 +185,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 データは、設定した [!DNL LiveRamp - Onboarding] ストレージの場所に CSV ファイルとして書き出されます。
 
-書き出されるファイルの最大サイズは 1,000 万行です。 選択したオーディエンスが 1,000 万行を超える場合、Experience Platformでは配信ごとに複数のファイルが生成されます。 単一ファイルの上限を超える可能性がある場合は、にお問い合わせください [!DNL LiveRamp] を代表して、バッチ取得の設定を依頼します。
+書き出されるファイルの最大サイズは 1,000 万行です。 選択したオーディエンスが 1,000 万行を超える場合、Experience Platformでは配信ごとに複数のファイルが生成されます。 単一ファイルの上限を超える可能性がある場合は、[!DNL LiveRamp] 担当者に連絡して、バッチ取り込みを設定するように依頼してください。
 
 ファイルを [!DNL LiveRamp - Onboarding] 宛先に書き出す場合、Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成します。
 
@@ -255,7 +255,7 @@ Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2024年3月 | 機能とドキュメントの更新 | <ul><li>ヨーロッパおよびオーストラリアへの配信がサポートされるようになりました [!DNL LiveRamp] [!DNL SFTP] インスタンス。</li><li>新しくサポートされる地域に特有の設定について説明するようにドキュメントを更新しました。</li><li>最大ファイルサイズが 1,000 万行に増加しました（以前は 500 万行でした）。</li><li>ファイルサイズの増加を反映するようにドキュメントを更新しました。</li></ul> |
+| 2024年3月 | 機能とドキュメントの更新 | <ul><li>[!DNL SFTP] インスタンスを [!DNL LiveRamp] 用したヨーロッパおよびオーストラリアへの配信がサポートされるようになりました。</li><li>新しくサポートされる地域に特有の設定について説明するようにドキュメントを更新しました。</li><li>最大ファイルサイズが 1,000 万行に増加しました（以前は 500 万行でした）。</li><li>ファイルサイズの増加を反映するようにドキュメントを更新しました。</li></ul> |
 | 2023年7月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |
 
 {style="table-layout:auto"}

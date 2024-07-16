@@ -11,30 +11,30 @@ ht-degree: 0%
 
 # `documentUnloading`
 
-この `documentUnloading` プロパティでは JavaScript のを使用できます [`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon) Adobeにデータを送信する方法。 一般的なリクエストの所要時間が長すぎる場合、ブラウザーはリクエストをキャンセルできます。 使用するように Web SDK に指示できます `sendBeacon` そのため、ページから移動した後、リクエストはバックグラウンドで実行されます。 このプロパティを有効にすると、アンロード時にブラウザーによってデータリクエストがキャンセルされるのを防ぐことができます。
+`documentUnloading` プロパティを使用すると、JavaScript [`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon) メソッドを使用してデータをAdobeに送信できます。 一般的なリクエストの所要時間が長すぎる場合、ブラウザーはリクエストをキャンセルできます。 ページから移動した後にリクエストがバックグラウンドで実行されるように、`sendBeacon` を使用するように Web SDK に指示できます。 このプロパティを有効にすると、アンロード時にブラウザーによってデータリクエストがキャンセルされるのを防ぐことができます。
 
-複数のブラウザーでは、で送信できるデータ量に 64 KB の制限が適用されます `sendBeacon` 一度に。 ペイロードが大きすぎるためにブラウザーがイベントを拒否した場合、Web SDK はフォールバックして、通常のトランスポート方法を使用します。
+複数のブラウザーでは、`sendBeacon` と一度に送信できるデータ量に 64 KB の制限が課されています。 ペイロードが大きすぎるためにブラウザーがイベントを拒否した場合、Web SDK はフォールバックして、通常のトランスポート方法を使用します。
 
 ## Web SDK タグ拡張機能を使用したドキュメントのアンロードの設定
 
-を有効にする **[!UICONTROL ドキュメントはアンロードされます]** タグルールのアクション内のチェックボックス。
+タグルールのアクション内の「**[!UICONTROL ドキュメントをアンロードします]**」チェックボックスを有効にします。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL ルール]**&#x200B;を選択してから、目的のルールを選択します。
-1. 次の下 [!UICONTROL アクション]、既存のアクションを選択するか、アクションを作成します。
-1. を [!UICONTROL 拡張機能] ドロップダウンフィールドの移動先 **[!UICONTROL Adobe Experience Platform Web SDK]**、を設定します。 [!UICONTROL アクションタイプ] 対象： **[!UICONTROL イベントを送信]**.
-1. を有効にする **[!UICONTROL ドキュメントはアンロードされます]** のチェックボックス [!UICONTROL データ] セクション。
-1. クリック **[!UICONTROL 変更を保持]**&#x200B;次に、公開ワークフローを実行します。
+1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
+1. [!UICONTROL  アクション ] で、既存のアクションを選択するか、アクションを作成します。
+1. 「[!UICONTROL  拡張機能 ]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL  アクションタイプ ] を **[!UICONTROL イベントを送信]** に設定します。
+1. 「[!UICONTROL  データ ]」セクションの「**[!UICONTROL ドキュメントはアンロードされます]**」チェックボックスを有効にします。
+1. 「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 
 ## Web SDK JavaScript ライブラリを使用したドキュメントのアンロードの設定
 
-を `documentUnloading` を実行している場合はブール値 `sendEvent` コマンド。 デフォルト値はです `false`. このプロパティをに設定 `true` を使用する場合 `sendBeacon` Adobeにデータを送信する方法。
+`sendEvent` コマンドを実行するときは、`documentUnloading` のブール値を設定します。 デフォルト値は `false` です。 `sendBeacon` メソッドを使用してデータをAdobeに送信する場合は、このプロパティを `true` に設定します。
 
 >[!IMPORTANT]
 >
->この `documentUnloading` プロパティは、と互換性がありません [`renderDecisions`](renderdecisions.md) プロパティ。 両方のプロパティをに設定しないでください。 `true` 同時。
+>`documentUnloading` プロパティは [`renderDecisions`](renderdecisions.md) プロパティと互換性がありません。 両方のプロパティを同時に `true` に設定しないでください。
 
 ```js
 alloy("sendEvent", {

@@ -1,12 +1,12 @@
 ---
-keywords: 宛先；experience cloud ソリューション；ターゲット；ターゲットの宛先； ad cloud; advertising cloud; audience manager; adobe target の宛先；ターゲット； audience manager の宛先；
+keywords: 宛先；experience cloud ソリューション；target；ターゲット宛先；ad cloud; advertising cloud; audience manager; adobe target 宛先；ターゲット；audience manager 宛先；
 title: アドビの宛先の概要
-description: Platform のデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこない、顧客体験を管理します
+description: Platform のデータを他のAdobe Experience Cloud ソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動処理などを行うことで、カスタマーエクスペリエンスを管理します
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 33%
+source-wordcount: '224'
+ht-degree: 29%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 33%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformのデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動化などをおこない、顧客体験を管理します。
+広告ターゲティング、パーソナライゼーション、マーケティング自動化などのために、Adobe Experience Platformのデータを他のAdobe Experience Cloud ソリューションに接続して、カスタマーエクスペリエンスを管理します。
 
 ## サポートされるAdobeの宛先 {#supported-destinations}
 
-現在、Platform は、以下に示す宛先をAdobeできます。
+現在、Platform は、以下に示すAdobeの宛先をサポートしています。
 
-接続と拡張機能の違いについては、 [接続](../../destination-types.md#connections) 」をクリックします。
+接続と拡張機能の違いを理解するには、宛先のタイプとカテゴリ ページの [ 接続 ](../../destination-types.md#connections) を参照してください。
 
 ### 接続
 
-* [Adobe Advertising Cloud DSP Connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising Cloud DSP接続](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign 接続](../email-marketing/adobe-campaign.md)
 * [Adobe Target 接続](/help/destinations/catalog/personalization/adobe-target-connection.md)
 * [（ベータ版）Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
@@ -44,8 +44,8 @@ Adobe Experience Platformのデータを他のAdobe Experience Cloudソリュー
 * [Marketo Munchkin 拡張機能](../email/marketo-munchkin.md)
 * [Marketo web パーソナライゼーション拡張機能](../personalization/marketo-web-personalization.md)
 
-## Experience Platform オーディエンスの共有
+## Experience Platformオーディエンスの共有
 
-Experience Platformオーディエンス共有機能を使用して、Experience Platformのオーディエンスを追加のAdobe先と共有します。 詳しくは、以下のページを参照してください (Audience Managerドキュメントポータルで開く )。
+Experience Platformオーディエンス共有機能を使用すると、Experience Platformオーディエンスを他のAdobeの宛先と共有できます。 詳しくは、次のページ（Audience Managerドキュメントポータルで開く）を参照してください。
 
-* [コアサービスの統合を通じて、Adobe Audience Manager、Adobe Advertising Cloud、Adobe TargetとExperience Platformオーディエンスを共有する](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
+* [ コアサービスの統合を通じて、Adobe Audience Manager、Adobe Advertising CloudおよびAdobe Targetとのオーディエンスの共有をExperience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)

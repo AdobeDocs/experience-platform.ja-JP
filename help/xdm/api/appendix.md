@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；互換性；互換性モード；フィールドタイプ；
+keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；互換性；互換性；互換性モード；互換性モード；フィールドタイプ；フィールドタイプ；
 solution: Experience Platform
 title: スキーマレジストリ API ガイドの付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 36%
+source-wordcount: '986'
+ht-degree: 28%
 
 ---
 
 # スキーマレジストリ API ガイドの付録
 
-このドキュメントでは、 [!DNL Schema Registry] API.
+このドキュメントでは、[!DNL Schema Registry] API の操作に関する補足情報を提供します。
 
 ## クエリパラメーターの使用 {#query}
 
-The [!DNL Schema Registry] では、リソースをリストする際のページへのクエリパラメーターの使用、および結果のフィルタリングをサポートしています。
+[!DNL Schema Registry] では、リソースをリスト表示する際に、クエリパラメーターを使用して結果をページ化およびフィルタリングする機能をサポートしています。
 
 >[!NOTE]
 >
@@ -29,37 +29,37 @@ The [!DNL Schema Registry] では、リソースをリストする際のペー�
 
 | パラメーター | 説明 |
 | --- | --- |
-| `orderby` | 特定のプロパティで結果を並べ替えます。例：`orderby=title` は昇順（A ～ Z）のタイトルで結果を並べ替えます。の追加 `-` パラメータ値 (`orderby=-title`) は、降順 (Z ～ A) のタイトルで項目を並べ替えます。 |
-| `limit` | を `orderby` パラメータ `limit` は、特定のリクエストに対して返す項目の最大数を制限します。 このパラメーターは、 `orderby` パラメーターが存在する。<br><br>The `limit` パラメータは正の整数を指定します ( `0` および `500`) として *ヒント* 返す項目の最大数に関して。 例： `limit=5` は、リスト内の 5 つのリソースのみを返します。 ただし、この値は厳密に遵守されているわけではありません。 実際の応答サイズは、 `start` パラメーターを指定する場合は、その値を指定します。 |
-| `start` | を `orderby` パラメータ `start` サブセット化された項目リストの開始位置を指定します。 このパラメーターは、 `orderby` パラメーターが存在する。 この値は、 `_page.next` リスト応答の属性で、結果の次のページへのアクセスに使用されます。 次の場合、 `_page.next` の値が null の場合、追加のページは使用できません。<br><br>通常、結果の最初のページを取得するために、このパラメーターは省略されます。 その後 `start` は、 `orderby` 前のページで受け取ったフィールド。 次に、API 応答は、プライマリ並べ替えプロパティを持つエントリで始まるエントリを返します。 `orderby` 厳密により大きい（昇順の場合）か、厳密により小さい（降順の場合）。<br><br>例えば、 `orderby` パラメーターがに設定されている `orderby=name,firstname`、 `start` パラメーターには `name` プロパティ。 この場合、「Miller」という名前の直後に、リソースの次の 20 個のエントリを表示するには、次のように指定します。 `?orderby=name,firstname&start=Miller&limit=20`. |
+| `orderby` | 特定のプロパティで結果を並べ替えます。例：`orderby=title` は昇順（A ～ Z）のタイトルで結果を並べ替えます。パラメーター値（`orderby=-title`）の前に `-` を追加すると、項目がタイトルで降順（Z ～ A）に並べ替えられます。 |
+| `limit` | `orderby` パラメーターと共に使用す `limit` と、特定のリクエストに対して返される項目の最大数が制限されます。 このパラメーターは、`orderby` パラメーターが存在しない場合は使用できません。<br><br>`limit` パラメーターは、返される項目の最大数に関して、*ヒント* として正の整数（`0` ～ `500`）を指定します。 例えば、`limit=5` はリスト内の 5 つのリソースのみを返します。 ただし、この値は厳密には適用されません。 実際の応答サイズは、`start` パラメーターの信頼性の高い動作を提供する必要がある（提供されている場合）という制約の下で、小さくなることも大きくなることもあります。 |
+| `start` | `orderby` パラメーターと共に使用すると、`start` は項目のサブセット化されたリストを開始する場所を指定します。 このパラメーターは、`orderby` パラメーターが存在しない場合は使用できません。 この値は、リスト応答の `_page.next` 属性から取得でき、結果の次のページにアクセスするために使用できます。 `_page.next` の値が null の場合、使用可能な追加のページはありません。<br><br> 通常、結果の最初のページを取得するために、このパラメーターは省略されます。 その後、前のページ `start` 受け取った `orderby` フィールドのプライマリソートプロパティの最大値に設定する必要があります。 次に、API 応答は、指定された値より厳密に大きい（昇順の場合）または厳密 `orderby` 小さい（降順の場合）プライマリ並べ替えプロパティを持つエントリで始まるエントリを返します。<br><br> 例えば、`orderby` パラメーターが `orderby=name,firstname` に設定されている場合、`start` パラメーターには `name` プロパティの値が含まれます。 この場合、「Miller」という名前の直後にリソースの次の 20 個のエントリを表示する場合は、`?orderby=name,firstname&start=Miller&limit=20` を使用します。 |
 
 {style="table-layout:auto"}
 
-### フィルター {#filtering}
+### フィルタリング {#filtering}
 
-結果のフィルタリングは、 `property` パラメーター。取得したリソース内の特定の JSON プロパティに対して特定の演算子を適用するために使用されます。 次の演算子がサポートされます。
+`property` パラメーターを使用して結果をフィルタリングできます。このパラメーターは、取得したリソース内の特定の JSON プロパティに対して特定の演算子を適用するために使用されます。 次の演算子がサポートされています。
 
 | 演算子 | 説明 | 例 |
 | --- | --- | --- |
-| `==` | プロパティが指定された値と等しいかどうかでフィルターします。 | `property=title==test` |
-| `!=` | プロパティが指定された値と等しくないかどうかでフィルターします。 | `property=title!=test` |
-| `<` | プロパティが指定された値より小さいかどうかでフィルターします。 | `property=version<5` |
-| `>` | プロパティが指定された値より大きいかどうかでフィルターします。 | `property=version>5` |
-| `<=` | プロパティが指定された値以下かどうかでフィルターします。 | `property=version<=5` |
-| `>=` | プロパティが指定された値以上かどうかでフィルターします。 | `property=version>=5` |
+| `==` | プロパティが指定された値に等しいかどうかを基準にフィルタリングします。 | `property=title==test` |
+| `!=` | プロパティが指定された値に等しくないかどうかをフィルタリングします。 | `property=title!=test` |
+| `<` | プロパティが指定された値より小さいかどうかを基準にフィルタリングします。 | `property=version<5` |
+| `>` | プロパティが指定された値より大きいかどうかを基準にフィルタリングします。 | `property=version>5` |
+| `<=` | プロパティが指定された値以下であるかによってフィルタリングします。 | `property=version<=5` |
+| `>=` | プロパティが指定された値以上であるかによってフィルタリングします。 | `property=version>=5` |
 | なし | プロパティ名のみを指定すると、プロパティが存在するエントリのみが返されます。 | `property=title` |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->以下を使用すると、 `property` 互換性のあるクラスでスキーマフィールドグループをフィルタリングするためのパラメーター。 例： `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` は、 [!DNL XDM Individual Profile] クラス。
+>`property` パラメーターを使用して、互換性のあるクラスでスキーマフィールドグループをフィルタリングできます。 例えば、`property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` は [!DNL XDM Individual Profile] クラスと互換性のあるフィールドグループのみを返します。
 
 ## 互換性モード {#compatibility}
 
-[!DNL Experience Data Model] （XDM）は、アドビが推進する公式に文書化された仕様であり、デジタルエクスペリエンスの相互運用性、表現力およびパワーを向上させます。アドビは、[GitHub のオープンソースプロジェクト](https://github.com/adobe/xdm/)でソースコードと公式の XDM 定義を公開しています。これらの定義は XDM 標準表記で記述され、JSON-LD （JavaScript Object Notation for Linked Data）および JSON スキーマを XDM スキーマを定義する文法として使用しています。
+[!DNL Experience Data Model] （XDM）はパブリックに文書化された仕様であり、デジタルエクスペリエンスの相互運用性、表現力、パワーを向上させるためのAdobeによって推進されています。 アドビは、[GitHub のオープンソースプロジェクト](https://github.com/adobe/xdm/)でソースコードと公式の XDM 定義を公開しています。これらの定義は XDM 標準表記で記述され、JSON-LD （JavaScript Object Notation for Linked Data）および JSON スキーマを XDM スキーマを定義する文法として使用しています。
 
-パブリックリポジトリーで公式の XDM 定義を見ると、標準 XDM は Adobe Experience Platform での表示とは異なることがわかります。に表示される内容 [!DNL Experience Platform] は互換性モードと呼ばれ、標準 XDM と内での使用方法との間の単純なマッピングを提供します [!DNL Platform].
+パブリックリポジトリーで公式の XDM 定義を見ると、標準 XDM は Adobe Experience Platform での表示とは異なることがわかります。[!DNL Experience Platform] に表示されるものは互換性モードと呼ばれ、標準 XDM と [!DNL Platform] 内での使用方法との間の簡単なマッピングを提供します。
 
 ### 互換性モードの仕組み
 
@@ -75,33 +75,50 @@ The [!DNL Schema Registry] では、リソースをリストする際のペー�
   <tr>
   <td>
   <pre class=" language-json">
-{ "xdm:birthDate": { "title": "生年月日", "タイプ": "文字列", "形式": "日付" }, "xdm:birthDayAndMonth": { "title": "タイプ", "文字列", "パターン": "[0-1][0-9]-[0-9]-[0]9]" }, "xdm:birthYear": { "title": "Birth year", "type": "integer", "minimum": 1, "maximum": 32767 }
+{
+  "xdm:birthDate": {
+    "title": "生年月日",
+    "type": "string",
+    "format": "date"
+  }、
+  "xdm:birthDayAndMonth": {
+    "title": "生年月日",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9]"
+  }、
+  "xdm:birthYear": {
+    "title": "Birth year",
+    "type": "integer",
+    "minimum":1,
+    "maximum": 32767
+  }
+}
   </pre>
   </td>
   <td>
   <pre class=" language-json">
 {
   "birthDate": {
-              "title": "Birth Date",
-              "type": "string",
-              "format": "date",
-              "meta:xdmField": "xdm:birthDate",
-              "meta:xdmType": "date"
-          },
-          "birthDayAndMonth": {
-              "title": "Birth Date",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-              "meta:xdmField": "xdm:birthDayAndMonth",
-              "meta:xdmType": "string"
-          },
-          "birthYear": {
-              "title": "Birth year",
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767,
-              "meta:xdmField": "xdm:birthYear",
-              "meta:xdmType": "short"
+    "title": "生年月日",
+    "type": "string",
+    "format": "date",
+    "meta:xdmField": "xdm:birthDate",
+    "meta:xdmType": "date"
+  }、
+  "birthDayAndMonth": {
+    "title": "生年月日",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9]",
+    "meta:xdmField": "xdm:birthDayAndMonth",
+    "meta:xdmType": "string"
+  }、
+  "birthYear": {
+    "title": "Birth year",
+    "type": "integer",
+    "minimum":1,
+    「maximum」:32767、
+    "meta:xdmField": "xdm:birthYear",
+    "meta:xdmType": "short"
   }
 }
       </pre>
@@ -113,8 +130,8 @@ The [!DNL Schema Registry] では、リソースをリストする際のペー�
 
 Adobe Experience Platform は、複数のソリューションやサービスと連携するように設計されており、各ソリューションおよびサービスには固有の技術的課題と制限（特定のテクノロジーが特殊文字を処理する方法など）があります。これらの制限を克服するために、互換モードが開発されました。
 
-最も多い [!DNL Experience Platform] 次を含むサービス [!DNL Catalog], [!DNL Data Lake]、および [!DNL Real-Time Customer Profile] use [!DNL Compatibility Mode] 標準の XDM の代わりに使用します。 The [!DNL Schema Registry] API は [!DNL Compatibility Mode]を使用し、このドキュメントの例はすべて [!DNL Compatibility Mode].
+[!DNL Catalog]、[!DNL Data Lake]、[!DNL Real-Time Customer Profile] など、ほとんどの [!DNL Experience Platform] サービスは、標準の XDM の代わりに [!DNL Compatibility Mode] を使用します。 [!DNL Schema Registry] API でも [!DNL Compatibility Mode] を使用しています。このドキュメントの例はすべて、[!DNL Compatibility Mode] を使用して示しています。
 
-標準 XDM とでの運用方法との間でマッピングがおこなわれることを知っておくことをお勧めします。 [!DNL Experience Platform]を使用している場合は、 [!DNL Platform] サービス。
+標準 XDM と [!DNL Experience Platform] での運用化の方法の間でマッピングが行われることを知っておくことは価値がありますが、[!DNL Platform] サービスの使用には影響しません。
 
-オープンソースプロジェクトを使用できますが、次の操作を通じてリソースを操作する場合には、 [!DNL Schema Registry]には、このドキュメントの API の例が、理解し従う必要のあるベストプラクティスを示します。
+オープンソースプロジェクトは利用可能ですが、[!DNL Schema Registry] を通じてリソースを操作する場合、このドキュメントの API の例では、知っていて従う必要があるベストプラクティスを提供しています。

@@ -4,8 +4,8 @@ description: Adobe Experience Platform の 2023年8月のリリースノート�
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 48%
+source-wordcount: '1739'
+ht-degree: 43%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Experience Platform 上に構築された Real-time Customer Data Platform（[!DNL Real-Time CDP]）は、企業が既知および未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな意思決定により顧客プロファイルをアクティブ化するのに役立ちます。
+Experience Platform上に構築されたReal-time Customer Data Platform（[!DNL Real-Time CDP]）は、企業が既知および未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな意思決定によりカスタマープロファイルをアクティブ化するのに役立ちます。
 
 [!DNL Real-Time CDP] では、複数のエンタープライズデータソースを組み合わせて、リアルタイムで顧客プロファイルを作成します。これらのプロファイルから構築されたセグメントをダウンストリームの宛先に送信し、すべてのチャネルとデバイスにわたって 1 対 1 のパーソナライズされた顧客体験を提供できます。
 
@@ -37,12 +37,12 @@ Experience Platform 上に構築された Real-time Customer Data Platform（[!D
 
 | 機能 | 説明 |
 | --- | --- |
-| インテリジェントな再エンゲージメントの使用例ガイド | The [インテリジェントな再エンゲージメント](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) インテリジェントで責任のある方法でコンバージョンを完了する前に、コンバージョンを放棄した顧客を再び関与させる方法の詳細を、使用例ガイドで説明します。 このガイドでは、次のジャーニーの例を使用して、顧客を再び関与させます。 <ul><li>再エンゲージメントジャーニー — 製品の閲覧を中止した顧客をターゲティングします。</li><li>カート放棄のジャーニー — 買い物かごに製品を入れたが購入を完了していない顧客をターゲティングします。</li><li>注文確認のジャーニー — 製品購入に重点を置く</li></ul> 詳細なフィードバックオプションリンクは、 [インテリジェントな再エンゲージメントの使用例ガイド](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) フィードバックを提供する。 |
-| パートナーデータサポート | 新しい顧客にリーチし、ファーストパーティデータをエンリッチメントするために、パートナーソースの見込み客プロファイルとパートナー ID を使用して、Real-Time CDPで上位ファネルマーケティングを実行します。 <ul><li>顧客の獲得とアドレス可能性：選択したデータパートナーからの cookie にも対応できない識別子とハッシュ化された PII を活用して、新しい顧客にリーチし、サードパーティ cookie への依存を減らします。</li><li>単一システムでの完全なファネルマーケティング：セルフサービスのセグメント化、オーディエンスのキュレーション、単一システムでの見込み客と既知の顧客に対するネイティブアクティベーション。</li><li>信頼の基盤：特許取得済みのデータの使用、ラベル付け、アクセス制御などを使用して、パートナーのデータとプロファイルを責任を持って市場に提供します。 詳しくは、次の使用例ガイドを参照してください。今後の見込みの使用例ガイドが利用できます。 見込み客の使用例を通じて新しい顧客を惹きつけ、獲得する方法については、見込み客の使用例ガイドを参照してください。<ul><li>[見込み](../../rtcdp/partner-data/prospecting.md)</li><li>[オンサイトのパーソナライズ機能](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[ファーストパーティプロファイルを補完](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[見込み客オーディエンスの有効化](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| インテリジェントな再エンゲージメントユースケースのガイド | [ インテリジェントな再エンゲージメント ](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) ユースケースガイドでは、コンバージョンを完了する前にコンバージョンを放棄した顧客を、インテリジェントかつ責任ある方法で再エンゲージする方法の詳細を提供します。 このガイドでは、次のジャーニーの例を使用して、顧客を再び引き付けます。 <ul><li>再エンゲージメントジャーニー – 製品閲覧を放棄した顧客をターゲティングします。</li><li>放棄された買い物かごジャーニー – 商品を買い物かごに入れたが、購入をまだ完了していない顧客をターゲティングします。</li><li>注文確認ジャーニー – 製品購入に重点</li></ul> [ インテリジェント再エンゲージメントユースケースガイド ](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) の下部にある詳細なフィードバックオプションのリンクを使用して、フィードバックを提供してください。 |
+| パートナーデータサポート | Real-Time CDPでパートナーをソースとする見込み客プロファイルとパートナー ID を使用して上位ファネルマーケティングを実施し、新規顧客にリーチしてファーストパーティデータを強化します。 <ul><li>顧客の獲得とアドレス可能性：任意のデータパートナーから提供されるクッキーなしの識別子とハッシュ化された PII を活用して、新規顧客にリーチし、サードパーティ cookie の依存関係を軽減します。</li><li>単一システムでの完全なファネルマーケティング：単一システムでの見込み顧客と既知顧客に対するセルフサービスのセグメント化、オーディエンスキュレーション、ネイティブアクティベーション。</li><li>信頼の基盤：特許取得済みのデータの使用、ラベル付け、アクセス制御などを通じて、パートナーデータおよびプロファイルを管理し、責任を持って市場に提供します。 詳しくは、以下のユースケースガイドを参照してください。見込み客のユースケースガイドが使用できるようになりました。 見込み客のユースケースを通じて新規顧客を獲得およびエンゲージメントする方法については、見込み客のユースケースのガイドを参照してください。<ul><li>[ 試掘等 ](../../rtcdp/partner-data/prospecting.md)</li><li>[オンサイトのパーソナライズ機能](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[ ファーストパーティプロファイルの補足 ](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[ 見込み客オーディエンスのアクティブ化 ](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
-詳しくは、 [Real-Time CDPの概要](../../rtcdp/overview.md).
+詳しくは、[Real-Time CDPの概要 ](../../rtcdp/overview.md) を参照してください。
 
 ## 属性ベースのアクセス制御 {#abac}
 
@@ -54,7 +54,7 @@ Experience Platform 上に構築された Real-time Customer Data Platform（[!D
 
 | 機能 | 説明 |
 | --- | --- |
-| 権限ポリシーのサンドボックス設定 | 新しい [権限ポリシーサンドボックスの設定](../../access-control/abac/ui/policies.md) 機能を使用すると、ニーズと要件に応じて、すべてのサンドボックスまたは選択した数のサンドボックスに対して、属性ベースのアクセス制御ポリシーを適用できます。 |
+| 権限ポリシーサンドボックス設定 | 新しい [ 権限ポリシーサンドボックス設定 ](../../access-control/abac/ui/policies.md) 機能を使用すると、要件に応じて、すべてのサンドボックスまたは選択した数のサンドボックスに属性ベースのアクセス制御ポリシーを適用できます。 |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| 同意分析およびトラッキングの使用例 | を使用して、Real-Time CDPデータの様々なマーケティングユースケースに対する同意ダッシュボードを作成する方法を説明します。 [同意分析および追跡ドキュメント](../../dashboards/insights-use-cases/consent-analysis.md). ビジネスニーズに適した属性でオーディエンスを作成し、Adobe Experience Platform UI で事前設定済みのウィジェットを使用してインサイトを利用する方法について詳しく説明します。 また、ユーザー定義のダッシュボード機能を使用して独自のカスタムウィジェットを作成する方法についても説明します。 このドキュメントでは、同意トレンドと同意重複の使用例について説明します。 |
+| 同意分析とトラッキングのユースケース | [ 同意分析とトラッキングドキュメント ](../../dashboards/insights-use-cases/consent-analysis.md) を使用して、Real-Time CDP データの様々なマーケティング使用例に対する同意ダッシュボードを作成する方法を説明します。 ビジネスニーズに適した属性でオーディエンスを作成し、Adobe Experience Platform UI の事前設定済みウィジェットを使用してインサイトを利用する方法について詳しく説明します。 また、ユーザー定義ダッシュボード機能を使用して独自のカスタムウィジェットを作成する方法についても説明します。 このドキュメントでは、同意のトレンドと同意の重複のユースケースについて説明します。 |
 
 {style="table-layout:auto"}
 
@@ -82,11 +82,11 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
-| タグとイベント転送 | [Experience Platformタグ（中国）](/help/tags/ui/publishing/premium-cdn.md) | 新しいExperience Platformタグ（中国）機能により、Web サイトの信頼性と遅延が向上し、中国の Web サイトにタグをデプロイするお客様の応答時間が速くなります。 お客様は、中国で Web サイトを実装する際に、タグライブラリの JavaScript コードを利用できるようになりました。 この機能は、統合プロビジョニングプロトコル (UPP) にも追加され、購入後に製品のデプロイメントを自動化できます。 |
+| タグとイベント転送 | [Experience Platformタグ （中国） ](/help/tags/ui/publishing/premium-cdn.md) | 新しいExperience Platformタグ（中国）機能により、Web サイトの信頼性と待ち時間が向上し、中国の Web サイトにタグを導入するお客様の応答時間が短縮されます。 お客様は、中国で web サイトを実装する際に、タグライブラリのJavaScript コードを利用できるようになりました。 この機能は Unified Provisioning Protocol （UPP）にも追加されており、購入後の製品の導入を自動化できます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、 [データコレクションの概要](../../tags/home.md).
+詳しくは、[ データ収集の概要 ](../../tags/home.md) を参照してください。
 
 ## データ取得 {#data-ingestion}
 
@@ -96,9 +96,9 @@ Adobe Experience Platform は、あらゆる種類および遅延のデータを
 
 | 機能 | 説明 |
 | --- | --- |
-| データ取り込みワークフローの変更 | 指定したデータ型より大きい値を含むデータの行（例えば、整数データ型として渡された長いデータ）は、拒否され、エラーメッセージがレポートされるようになりました。 以前は、これらの行は警告なしで拒否されていました。 |
+| データ取り込みワークフローの変更 | 指定されたデータタイプを超える値を含むデータの行（整数データタイプとして渡される long データなど）は拒否され、エラーメッセージがレポートされるようになりました。 以前は、これらの行は警告なしで拒否されていました。 |
 
-詳しくは、 [データ取得の概要](../../ingestion/home.md).
+詳しくは、[ データ取り込みの概要 ](../../ingestion/home.md) を参照してください。
 
 ## データ準備 {#data-prep}
 
@@ -108,11 +108,11 @@ Adobe Experience Platform は、あらゆる種類および遅延のデータを
 
 | 機能 | 説明 |
 | --- | --- |
-| セカンダリ ID のフィルタリングのサポート | Data Prep を使用して、AAID や AACUSTOMID など、Adobe Analyticsからの ID を除外できるようになりました。 除外した場合、これらの ID はリアルタイム顧客プロファイルに取り込まれません。 フィルターを適用していないデータは、引き続きデータレイクに取り込まれます。 |
+| セカンダリ ID のフィルタリングのサポート | Data Prep を使用して、AAID や AACUSTOMID など、Adobe Analyticsからの ID をフィルタリングできるようになりました。 除外した場合、これらの ID はリアルタイム顧客プロファイルに取り込まれません。 フィルタリングされていないデータは、引き続きデータレイクに取り込まれます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、 [データ準備の概要](../../data-prep/home.md).
+詳しくは、[ データ準備の概要 ](../../data-prep/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -120,8 +120,8 @@ Adobe Experience Platform は、あらゆる種類および遅延のデータを
 
 **新機能または更新された機能** {#destinations-new-updated-functionality}
 
-- 次の操作を実行できます。 [見込み客オーディエンスの有効化](../../destinations/ui/activate-prospect-audiences.md) クラウドストレージの宛先へのアクセス。
-- 将軍 [活性化ガードレール](../../destinations/guardrails.md#general-activation-guardrails) サンドボックスあたり最大 100 件の宛先が、 _ハードリミット_.
+- クラウドストレージの宛先に対して、[ 見込み客オーディエンスをアクティブ化 ](../../destinations/ui/activate-prospect-audiences.md) できるようになりました。
+- サンドボックスごとに最大 100 個の宛先という一般的な [ アクティベーションガードレール ](../../destinations/guardrails.md#general-activation-guardrails) が、_ハード制限_ に更新されました。
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -133,7 +133,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用して、データベンダーの上位顧客獲得の事例から得た見込み客プロファイルを取り込みます。詳しくは、 [[!UICONTROL XDM 個別見込み客プロファイル]](../../xdm/classes/prospect.md) 例を参照し、詳細を確認するドキュメントです。 |
+| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用すると、データベンダーの最上位層の顧客獲得ユースケースをソースとする見込み客プロファイルを取り込むことができます。 例と詳細については、[[!UICONTROL XDM 個人見込み客プロファイル ]](../../xdm/classes/prospect.md) のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -141,12 +141,12 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明のアップデート |
 | --- | --- | --- |
-| 拡張子 ([!UICONTROL Adobe Analytics ExperienceEvent Full 拡張機能]) | [[!UICONTROL コンテキストデータ]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL コンテキストデータ] マップオブジェクトを [!UICONTROL Adobe Analytics ExperienceEvent Full 拡張機能] Adobe Analyticsのコンテキストデータを提供する。 |
-| フィールドグループ | 複数 | 複数のフィールドが [[!UICONTROL 強化されたイベントセグメントの詳細]](https://github.com/adobe/xdm/pull/1760/files). |
+| 拡張機能（[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 ]） | [[!UICONTROL  コンテキストデータ ]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL  コンテキストデータ ]Adobe Analyticsのコンテキストデータを提供するために、[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 ] に追加されたマップオブジェクト。 |
+| フィールドグループ | 複数 | いくつかのフィールドが [[!UICONTROL  エンリッチメントされたイベントセグメントの詳細 ]](https://github.com/adobe/xdm/pull/1760/files) に追加されました。 |
 
 {style="table-layout:auto"}
 
-詳しくは、 [XDM システムの概要](../../xdm/home.md).
+詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
 
 ## ID サービス {#identity-service}
 
@@ -156,9 +156,9 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| ID グラフの制限の変更 | 9 月末までに、ID グラフはグラフごとに 50 個の ID に変更され、最新の ID が取り込まれます。 その結果、取り込みタイムスタンプと ID タイプに基づいて最も古い ID が削除され、Cookie の ID タイプが最初に削除されます。 現在、ID グラフには、グラフあたり 150 個の ID という制限があり、この制限に達すると、グラフは更新されなくなります。 実稼働用サンドボックスに次の情報が含まれている場合は、アカウント担当者に連絡して、ID タイプの変更をリクエストしてください。 <ul><li>ユーザー識別子（CRM ID など）を cookie/デバイス id タイプとして設定するカスタム名前空間。</li><li>cookie/device 識別子がクロスデバイス id タイプとして設定されるカスタム名前空間。</li></ul> Adobeエンジニアリングがこれらのリクエストを手動で処理します。 詳しくは、 [ID サービスデータのガードレール](../../identity-service/guardrails.md). |
+| ID グラフの制限の変更 | 9 月末までに ID グラフはグラフあたり 50 個の ID に変更され、最新の ID が取り込まれます。 そのため、最も古い ID が取り込みタイムスタンプと ID タイプに基づいて削除され、cookie ID タイプが最初に削除されます。 現在、ID グラフには 1 つのグラフあたり 150 個の ID という制限があり、この制限に達すると、グラフは更新されなくなります。 実稼動サンドボックスに次の ID タイプが含まれる場合は、アカウント担当者に連絡して、ID タイプの変更をリクエストしてください。 <ul><li>ユーザー識別子（CRM ID など）が cookie/デバイス ID タイプとして設定されるカスタム名前空間。</li><li>cookie とデバイスの識別子がクロスデバイス id タイプとして設定されるカスタム名前空間。</li></ul> これらのリクエストは、Adobeエンジニアリングによって手動で処理されます。 詳しくは、[ID サービスデータのガードレール ](../../identity-service/guardrails.md) を参照してください。 |
 
-詳しくは、 [ID サービスの概要](../../identity-service/home.md).
+詳しくは、[ID サービスの概要 ](../../identity-service/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
@@ -168,11 +168,11 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| 類似オーディエンス（限定的に利用可能） | 類似オーディエンスは、機械学習ベースのインサイトを活用して、価値の高い顧客を特定しマーケティングキャンペーンでターゲット設定し、各オーディエンスに関するインテリジェントなインサイトを提供します。 類似オーディエンスを使用すると、パフォーマンスの高いオーディエンスに類似した顧客をターゲットにしたり、以前にコンバージョンされたオーディエンスに類似した顧客をターゲットにしたりする、拡張オーディエンスを作成できます。 類似オーディエンスの詳細については、 [類似オーディエンスの概要](../../segmentation/ui/lookalike-audiences.md). |
+| 類似オーディエンス（限定提供） | 類似オーディエンスは、各オーディエンスに関するインテリジェントなインサイトを提供し、機械学習ベースのインサイトを活用して、マーケティングキャンペーンで高価値顧客を特定してターゲットを設定します。 類似オーディエンスを使用すると、パフォーマンスの高いオーディエンスに類似した顧客をターゲットにしたり、以前にコンバージョンされたオーディエンスに類似した顧客をターゲットにしたりして、拡張オーディエンスを作成できます。 類似オーディエンスについて詳しくは、[ 類似オーディエンスの概要 ](../../segmentation/ui/lookalike-audiences.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
-詳しくは、 [セグメント化の概要](../../segmentation/home.md).
+詳しくは、「セグメント化の概要 [ を参照してください ](../../segmentation/home.md)。
 
 ## ソース {#sources}
 
@@ -182,10 +182,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| の一般公開 [!DNL SugarCRM] | [!DNL SugarCRM] ソースが使用できるようになりました。 [!DNL SugarCRM Accounts & Contacts] および [!DNL SugarCRM Events] ソースを使用して、[!DNL SugarCRM] アカウントから Experience Platform にデータを取り込みます。詳しくは、[[!DNL SugarCRM] 概要](../../sources/connectors/crm/sugarcrm.md)を参照してください。 |
-| UI でのソースデータフローのオンデマンド取り込みのサポート | UI で、既存のソースのデータフローに対して、フロー実行をオンデマンドで作成できるようになりました。 詳しくは、 [UI を使用したソースに対するオンデマンドフロー実行の作成](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| Adobe Analytics の新しい `correlationID` フィールドのサポート | `_experience.decisioning.propositions.scopeDetails.correlationID` フィールドが Adobe Analytics ソースコネクタスキーマで使用できるようになりました。このフィールドは、A4T 分類のサポートに使用し、2023年9月から入力される予定です。 |
+| [!DNL SugarCRM] の一般提供 | [!DNL SugarCRM] ソースが利用可能になりました。 [!DNL SugarCRM Accounts & Contacts] および [!DNL SugarCRM Events] ソースを使用して、[!DNL SugarCRM] アカウントから Experience Platform にデータを取り込みます。詳しくは、[[!DNL SugarCRM] 概要](../../sources/connectors/crm/sugarcrm.md)を参照してください。 |
+| UI でのソースデータフローのオンデマンド取り込みのサポート | UI で、既存のソースデータフローに対して、オンデマンドでフロー実行を作成できるようになりました。 詳しくは、[UI を使用したソースのオンデマンドフロー実行の作成 ](../../sources/tutorials/ui/on-demand-ingestion.md) に関するガイドを参照してください。 |
+| Adobe Analyticsの新しい `correlationID` フィールドのサポート | `_experience.decisioning.propositions.scopeDetails.correlationID` フィールドが Adobe Analytics ソースコネクタスキーマで使用できるようになりました。このフィールドは、A4T 分類をサポートするために使用され、2023 年 9 月から設定されます。 |
 
 {style="table-layout:auto"}
 
-詳しくは、 [ソースの概要](../../sources/home.md).
+詳しくは、[ ソースの概要 ](../../sources/home.md) を参照してください。

@@ -1,6 +1,6 @@
 ---
 title: 監査イベント API エンドポイント
-description: Audit Query API を使用して、Experience Platformで監査イベントを取得する方法を説明します。
+description: Audit Query API を使用してExperience Platform内の監査イベントを取得する方法について説明します。
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 20%
 
 # 監査イベントエンドポイント
 
-監査ログは、様々なサービスや機能のユーザーアクティビティの詳細を提供するために使用されます。 ログに記録される各アクションには、アクションのタイプ、日時、アクションを実行したユーザーの電子メール ID、アクションのタイプに関連する追加の属性を示すメタデータが含まれます。この `/audit/events` エンドポイント [!DNL Audit Query] API を使用すると、で組織のアクティビティのイベントデータをプログラムによって取得できます。 [!DNL Platform].
+監査ログは、様々なサービスや機能に関するユーザーアクティビティの詳細を提供するために使用されます。 ログに記録される各アクションには、アクションのタイプ、日時、アクションを実行したユーザーの電子メール ID、アクションのタイプに関連する追加の属性を示すメタデータが含まれます。[!DNL Audit Query] API の `/audit/events` エンドポイントを使用すると、組織のアクティビティのイベントデータを [!DNL Platform] でプログラムによって取得できます。
 
 ## はじめに
 
@@ -19,7 +19,7 @@ ht-degree: 20%
 
 ## 監査イベントのリスト
 
-イベントデータを取得するには、 `/audit/events` エンドポイントで、ペイロードで取得するイベントを指定します。
+イベントデータを取得するには、`/audit/events` エンドポイントに対してGETリクエストを実行し、取得するイベントをペイロードで指定します。
 
 **API 形式**
 
@@ -27,13 +27,13 @@ ht-degree: 20%
 GET /audit/events
 ```
 
-この [!DNL Audit Query] API では、イベントをリストする際のページへのクエリパラメーターの使用、および結果のフィルタリングをサポートしています。
+[!DNL Audit Query] API では、イベントをリストする際にクエリパラメーターを使用して結果をページおよびフィルターする機能をサポートしています。
 
 | パラメーター | 説明 |
 | --- | --- |
 | `limit` | 応答で返されるレコードの最大数。 デフォルト `limit` は 50 です。 |
-| `start` | 返された検索結果の最初の項目へのポインタ。 結果の次のページにアクセスするには、このパラメーターを limit で示されるのと同じ量だけ増やす必要があります。 例：limit=50 のリクエストの結果の次のページにアクセスするには、start=50 パラメーターを使用し、その後のページで start=100 というように指定します。 |
-| `queryId` | /audit/events エンドポイントに対してクエリを実行する場合、応答には queryId 文字列プロパティが含まれます。 別の呼び出しで同じクエリを実行する場合、検索パラメーターを再び手動で設定する代わりに、ID 値を単一のクエリパラメーターとして含めることができます。 |
+| `start` | 返される検索結果の最初の項目へのポインター。 結果の次のページにアクセスするには、このパラメーターを limit で示されるのと同じ量だけ増分する必要があります。 例：limit=50 を指定したリクエストの結果の次のページにアクセスするには、パラメーター start=50 を使用し、その後のページにはパラメーター start=100 を使用します。 |
+| `queryId` | /audit/events エンドポイントに対してクエリを実行する場合、応答には queryId 文字列プロパティが含まれます。 同じクエリを別の呼び出しで実行するには、検索パラメーターを手動で再度設定する代わりに、ID 値を単一のクエリパラメーターとして含めることができます。 |
 
 **リクエスト**
 
@@ -49,7 +49,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、リクエストで指定された指標およびフィルターに関する結果のデータポイントを返します。
+応答が成功すると、リクエストで指定された指標とフィルターの結果のデータポイントが返されます。
 
 ```json
 {
@@ -144,16 +144,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `customerAuditLogList` | リクエストで指定された各イベントを表すオブジェクトを持つ配列。 各オブジェクトには、フィルター設定に関する情報と、返されたイベントデータが含まれます。 |
+| `customerAuditLogList` | リクエストで指定された各イベントをオブジェクトが表す配列。 各オブジェクトには、フィルター設定に関する情報と返されたイベントデータが含まれます。 |
 | `userEmail` | イベントを実行したユーザーの電子メール。 |
-| `eventType` | イベントのタイプ。 イベントのタイプは次のとおりです `Core` および `Enhanced`. |
+| `eventType` | イベントのタイプ。 イベントのタイプには、`Core` と `Enhanced` があります。 |
 | `imsOrgId` | イベントが発生した組織の ID。 |
-| `permissionResource` | アクションを実行する権限を付与した製品または機能。 リソースには、次のいずれかを指定できます。 <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
-| `permissionType` | アクションに関連する権限タイプ。 |
+| `permissionResource` | 権限を付与した製品または機能がアクションを実行します。 リソースは次のいずれかになります。 <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
+| `permissionType` | アクションに関係する権限タイプ。 |
 | `assetType` | アクションが実行された Platform リソースのタイプ。 |
-| `assetId` | アクションが実行された Platform リソースの一意の識別子です。 |
+| `assetId` | アクションが実行された Platform リソースの一意の ID。 |
 | `assetName` | アクションが実行された Platform リソースの名前。 |
 | `action` | イベントに対して記録されたアクションのタイプ。 アクションは、次のいずれかになります。 <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
-| `status` | アクションのステータス。 ステータスは、次のいずれかになります。 </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
+| `status` | アクションのステータス。 ステータスは次のいずれかになります。 </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 
 {style="table-layout:auto"}

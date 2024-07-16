@@ -1,36 +1,36 @@
 ---
-title: DNL The Weather Channel からの天気データを使用してデータ収集を強化する
-description: DNL The Weather Channel の気象データを使用して、データストリームを通じて収集するデータを拡張します。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+title: DNL The Weather Channel からの気象データによるデータ収集の強化
+description: DNL The Weather Channel の天気データを使用して、データストリームで収集したデータを強化します。
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 68%
 
 ---
 
+# [!DNL The Weather Channel] からの気象データによるデータ収集の強化
 
-# からの気象データを使用してデータ収集を強化する [!DNL The Weather Channel]
+アドビは [!DNL [The Weather Company]](https://www.ibm.com/weather) と提携し、データストリームを通じて収集されたデータに、米国の気象に関するコンテキストを追加しました。このデータは、Experience Platformでの分析、ターゲティングおよびオーディエンスの作成に使用できます。
 
-アドビは [!DNL [The Weather Company]](https://www.ibm.com/weather) と提携し、データストリームを通じて収集されたデータに、米国の気象に関するコンテキストを追加しました。このデータは、分析、ターゲティングおよびExperience Platformでのオーディエンス作成に使用できます。
+[!DNL The Weather Channel] から使用できるデータには、次の 3 つのタイプがあります。
 
-次の 3 種類のデータを使用できます。 [!DNL The Weather Channel]:
-
-* **[!UICONTROL 現在の天候]**：ユーザーの所在地に基づく、ユーザーの現在の気象状況。これには、現在の温度、降水、雲の範囲などが含まれます。
-* **[!UICONTROL 予測天気]**：予測には、ユーザーの所在地の 1 日、2 日、3 日、5 日、7 日および 10 日の予測が含まれます。
+* **[!UICONTROL 現在の天候]**：ユーザーの所在地に基づく、ユーザーの現在の気象状況。これには、現在の気温、降水量、雲の範囲などが含まれます。
+* **[!UICONTROL 予測天気]**：予測には、ユーザーの場所に関する 1、2、3、5、7 および 10 日間の予測が含まれます。
 * **[!UICONTROL トリガー]**：トリガーとは、違った意味での気象条件に対応する、特定の組み合わせのことです。天候トリガーは 3 種類あります。
 
    * **[!UICONTROL 天候トリガー]**：寒い日や雨の日など、天候として意味のある条件。これらの定義は、気候によって異なる場合があります。
-   * **[!UICONTROL 製品トリガー]**：様々な種類の製品の購入につながる条件。例えば、寒気予報は、雨のコートの購入の可能性が高いことを意味する可能性があります。
+   * **[!UICONTROL 製品トリガー]**：様々な種類の製品の購入につながる条件。例えば、寒い天候の予測は、レインコートの購入がより可能性が高いことを意味する可能性があります。
    * **[!UICONTROL 荒天トリガー]**：荒天の警告（冬の嵐や台風の警告など）。
 
 ## 前提条件 {#prerequisites}
 
 気象データを使用する前に、次の前提条件を満たしていることを確認してください。
 
-* 使用する天気データのライセンスを取得する必要があります [!DNL The Weather Channel]. その後、アカウントで有効にします。
-* 気象データは、データストリームを通じてのみ使用できます。天気データを使用するには、 [!DNL Web SDK], [!DNL Mobile Edge Extension] または [サーバー API](../../server-api/overview.md) を追加してこのデータを含めます。
+* [!DNL The Weather Channel] から使用する気象データのライセンスを取得する必要があります。 その後、アカウントで有効にします。
+* 気象データは、データストリームを通じてのみ使用できます。気象データを使用するには、[!DNL Web SDK]、[!DNL Mobile Edge Extension] または [Server API](../../server-api/overview.md) を使用してこのデータを含める必要があります。
 * データストリームは、[[!UICONTROL 位置情報]](../configure.md#advanced-options)を有効にしておく必要があります。
-* 次を追加： [気象場群](#schema-configuration) を使用しているスキーマに追加します。
+* 使用しているスキーマに [ 天気フィールドグループ ](#schema-configuration) を追加します。
 
 ## プロビジョニング {#provisioning}
 
@@ -62,15 +62,15 @@ ht-degree: 68%
 
 ### Adobe Customer Journey Analytics {#cja}
 
-[!DNL Adobe Customer Journey Analytics] では、データストリームで指定されたデータセットで気象データを利用できます。天気属性が [をスキーマに追加しました](#prerequisites-prerequisites)を使用する場合、 [データビューに追加](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=ja) in [!DNL Customer Journey Analytics].
+[!DNL Adobe Customer Journey Analytics] では、データストリームで指定されたデータセットで気象データを利用できます。天気属性が [ スキーマに追加 ](#prerequisites-prerequisites) されている限り、[!DNL Customer Journey Analytics] で [ データビューに追加 ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=ja) できます。
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-天気データは [Real-time Customer Data Platform](../../rtcdp/overview.md)：オーディエンスで使用します。 気象データはイベントに関連付けられます。
+天気データは、[Real-time Customer Data Platform](../../rtcdp/overview.md) でオーディエンス用に使用できます。 気象データはイベントに関連付けられます。
 
 ![気象イベントを表示するセグメントビルダー](../assets/data-enrichment/weather/schema-builder.png)
 
-天候の状況は頻繁に変化するので、Adobeでは、上の例に示すように、オーディエンスに対して時間制限を設定することをお勧めします。 ここ 1 ～ 2 日の気温が低くなることは、6 か月前に気温が低いことよりもはるかに影響が大きくなります。
+天気の状態は頻繁に変化するので、Adobeでは、上記の例に示すように、オーディエンスに時間制約を設定することをお勧めします。 ここ 1 ～ 2 日の気温が低くなることは、6 か月前に気温が低いことよりもはるかに影響が大きくなります。
 
 利用可能なフィールドについては、[気象リファレンス](weather-reference.md)を参照してください。
 

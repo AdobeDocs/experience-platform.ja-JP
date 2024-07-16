@@ -1,12 +1,12 @@
 ---
-title: Customer.io ソースの概要
-description: Web フックを活用して、API またはユーザーインターフェイスを使用して Customer.io をAdobe Experience Platformに接続する方法を説明します。
+title: Customer.io Sourceの概要
+description: API や Webhook を活用したユーザーインターフェイスを使用して Customer.io をAdobe Experience Platformに接続する方法について説明します
 badge: ベータ版
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 16%
+source-wordcount: '375'
+ht-degree: 17%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->[!DNL Customer.io] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Customer.io] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platformは、ストリーミングアプリケーションからデータを取り込む機能を備えています。 ストリーミングプロバイダーのサポートには以下が含まれます。 [!DNL Customer.io].
+Experience Platformは、ストリーミングアプリケーションからのデータ取り込みをサポートしています。 ストリーミングプロバイダーのサポートには、[!DNL Customer.io] が含まれます。
 
-[[!DNL Customer.io]](https://customer.io/) は、データ駆動型の E メール、プッシュ通知、アプリ内メッセージおよび SMS をより制御し柔軟に作成して送信できるようにする、マーケター向けの自動メッセージングプラットフォームです。
+[[!DNL Customer.io]](https://customer.io/) は、データ駆動型メール、プッシュ通知、アプリ内メッセージ、SMS を作成して送信するコントロールと柔軟性を高めたいマーケター向けの自動メッセージングプラットフォームです。
 
-The [!DNL Customer.io] ソースを使用すると、サポートされる webhook イベントスキーマとそれに関連するイベントデータを [!DNL Customer.io] の使用 [[!DNL Customer.io] ウェブフックのレポート](https://customer.io/docs/api/webhooks/).
+[!DNL Customer.io] ソースを使用すると、[[!DNL Customer.io]  レポート Webhook](https://customer.io/docs/api/webhooks/) を使用して、サポートされている Webhook イベントスキーマとそれに関連するイベントデータを [!DNL Customer.io] から取り込むことができます。
 
-サポートされる Webhook イベントスキーマは次のとおりです。
+サポートされている Webhook イベントスキーマは次のとおりです。
 
 * 顧客イベント
 * メールイベント
@@ -34,27 +34,27 @@ The [!DNL Customer.io] ソースを使用すると、サポートされる webho
 * Slackイベント
 * Webhook イベント
 
-Web フックで使用できるイベントのリストについては、 [[!DNL Customer.io] Webhook イベントのレポート](https://customer.io/docs/webhooks/#events) ドキュメント。
+Webhook を通じて使用できるイベントのリストについては、[[!DNL Customer.io] Webhook イベントのレポート ](https://customer.io/docs/webhooks/#events) ドキュメントを参照してください。
 
 ## 前提条件 {#prerequisites}
 
-事前に [!DNL Customer.io] ソース接続を使用する場合は、まず次の点を確認する必要があります。
+[!DNL Customer.io] ソース接続を作成する前に、次の点を確認する必要があります。
 
-* A [!DNL Customer.io] アカウント。 もし誰も読んでいないなら [[!DNL Customer.io] 登録ページ](https://fly.customer.io/signup) をクリックして、アカウントを登録および作成します。
-* アカウントを作成したら、アカウントの検証もおこなう必要があります。 次に示す手順に従います： [[!DNL Customer.io] アカウントの検証](https://customer.io/docs/account-verification/) ページを開き、プロセスを完了します。
+* [!DNL Customer.io] アカウント。 アカウントをお持ちでない場合は [[!DNL Customer.io]  登録ページ ](https://fly.customer.io/signup) を読み、アカウントを登録、作成してください。
+* アカウントを作成したら、アカウントを検証する必要もあります。 [[!DNL Customer.io]  アカウントの検証 ](https://customer.io/docs/account-verification/) ページに記載されている手順に従って、プロセスを完了します。
 
-### 設定 [!DNL Customer.io] ウェブフック {#set-up-webhook}
+### Webhook[!DNL Customer.io] 設定 {#set-up-webhook}
 
-データフローを正常に作成したら、次の情報を Platform に知らせるレポート Webhook を設定する必要があります。 [!DNL Customer.io] イベント。 Web フックは、顧客属性が変更されたときや、メッセージが開かれたときに即座に通知し、この情報を [!DNL Customer.io] ソース。 詳しくは、 [ストリーミングエンドポイント URL の取得](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) および [設定 [!DNL Customer.io] ウェブフック](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
+データフローが正常に作成されたら、イベントについて Platform に通知するレポート Webhook を設定する必要 [!DNL Customer.io] あります。 Webhook は、顧客属性が変更されたとき、またはユーザーがメッセージを開いたときにすぐに通知を受け取り、この情報を [!DNL Customer.io] ソースに送信できます。 詳しくは、[ ストリーミングエンドポイント URL の取得 ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) および [Webhook の設定 ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook) に関するチュ  [!DNL Customer.io]  トリアルを参照してください。
 
-## 接続中 [!DNL Customer.io] Platform へ {#connect-to-platform}
+## Platform への [!DNL Customer.io] の接続 {#connect-to-platform}
 
-以下のドキュメントでは、 [!DNL Customer.io] 接続するストリーミング接続 [!DNL Platform] API またはユーザーインターフェイスを使用する場合：
+以下のドキュメントでは、API やユーザーインターフェイスを使用してと接続するための [!DNL Customer.io] ストリーミング接続を作成する方法につ [!DNL Platform] て説明します。
 
 ### API を使用して [!DNL Customer.io] と Platform を接続する {#connect-to-platform-using-api}
 
-* [ソース接続とデータフローを作成して、 [!DNL Customer.io] API を使用して Platform にデータを送信する方法について説明します。](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
+* [ソース接続とデータフローを作成し、API を使用して Platform にデータを取り込みます  [!DNL Customer.io] ](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
 
 ### UI を使用した [!DNL Customer.io] の Platform への接続 {#connect-to-platform-using-ui}
 
-* [ソース接続とデータフローを作成して、 [!DNL Customer.io] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
+* [ユーザーインターフェイスを使用した、Platform にデータを取り込むソ  [!DNL Customer.io]  ス接続とデータフローの作成](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)

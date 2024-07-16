@@ -1,41 +1,41 @@
 ---
 title: Edge Network Server API の概要
 description: Edge Network Server API の概要と使用方法について説明します。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 9%
 
 ---
 
-
 # Edge Network Server API の概要 {#overview}
 
-Adobe Experience Platform Edge Network は、Adobe Experience CloudまたはAdobe Experience Platform Edge サービスを顧客が操作できるように最適化された方法を提供します。
+Adobe Experience Platform Edge Networkは、Adobe Experience CloudまたはAdobe Experience Platform Edge サービスの最適な利用方法をお客様に提供します。
 
-The [!DNL Edge Network Server API] は、様々なデータ収集、パーソナライゼーション、広告、マーケティングの使用例に使用できます。 The [!DNL Server API] はサーバーで使用できます。 [!DNL IoT] デバイス、セットトップボックスなど、様々なデバイスを使用できます。
+[!DNL Edge Network Server API] は、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースに使用できます。 [!DNL Server API] は、サーバー、[!DNL IoT] デバイス、セットトップボックス、その他の様々なデバイスで使用できます。
 
-以降 [!DNL Server API] は、読み込みにどのライブラリにも依存せず、Adobe Experience Platform Edge Network やサポートされているソリューションとの迅速なやり取りを提供します。
+この [!DNL Server API] は、読み込むライブラリに依存しないので、Adobe Experience Platform Edge Networkやサポートされているソリューションを素早く操作できます。
 
-の利点 [!DNL Server API] アーキテクチャには以下が含まれます。
+[!DNL Server API] アーキテクチャのメリットには、次のようなものがあります。
 
-* ページ読み込み時間の短縮
-* 遅延の改善
+* ページの読み込み時間の短縮
+* 待ち時間の改善
 * ファーストパーティデータ収集
-* 合理化された、サーバー側でのサービス間通信
+* サービス間の合理化されたサーバーサイドの通信
 
-The [!DNL Server API] は、2 つの専用エンドポイントを介したインタラクティブなデータ収集とバッチデータ収集をサポートします。
+[!DNL Server API] は、次の 2 つの専用エンドポイントを介したインタラクティブなバッチのデータ収集をサポートしています。
 
-1. インタラクティブエンドポイントは、高度なセグメント化、パーソナライゼーション、その他のマーケティングの使用例をサポートする、Adobe Experience PlatformおよびAdobe Experience Cloudのサービスとの通信をサポートします。
-2. バッチエンドポイントを使用すると、呼び出されるアプリケーションからの応答を受信せずにデータをオンボードする必要がある場合に、リクエストをバッチで送信できます。
+1. インタラクティブエンドポイントは、高度なセグメント化、パーソナライゼーション、その他のマーケティングユースケースをサポートするAdobe Experience PlatformおよびAdobe Experience Cloud サービスとのコミュニケーションをサポートします。
+2. バッチエンドポイントを使用すると、呼び出されるアプリケーションから応答を受け取ることなくデータをオンボードする必要がある場合、リクエストをバッチで送信できます。
 
-The [!DNL Server API] は、次のタイプのリクエストをサポートします。
+[!DNL Server API] は、次のタイプのリクエストをサポートしています。
 
-* 認証済みリクエスト（経由） [Adobe Developer](https://developer.adobe.com/)、 `server.adobedc.net` endpoint.
-* を介した未認証のリクエスト `edge.adobedc.net` endpoint.
+* `server.adobedc.net` エンドポイントを使用して、[Adobe Developer](https://developer.adobe.com/) 経由で認証済みのリクエスト。
+* `edge.adobedc.net` エンドポイントを介した未認証のリクエスト。
 
-これにより、組織のプライバシーポリシーに従って、機密データの安全で認証済みの収集を許可するユースケースが可能になります。 認証に加え、Server API は、API を介した認証済みの通信のみを受け入れるためのマーキングデータストリームをサポートします。
+これにより、組織のプライバシーポリシーに従って、機密データの安全で認証された収集を可能にするユースケースが可能になります。 認証に加えて、Server API は、API 経由での認証済み通信のみを受け入れるようにデータストリームのマークをサポートしています。
 
-Server API の効率的な概要については、以下のビデオをご覧ください。
+Server API の合理化された概要については、以下のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/341448/)

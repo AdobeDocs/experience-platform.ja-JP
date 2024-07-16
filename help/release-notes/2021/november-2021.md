@@ -4,8 +4,8 @@ description: Adobe Experience Platform の 2021年11月 のリリースノート
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '799'
-ht-degree: 89%
+source-wordcount: '776'
+ht-degree: 86%
 
 ---
 
@@ -41,9 +41,9 @@ Real-Time CDP B2B Edition とそれに対応する B2C Edition を区別する�
 
 ### B2B と B2P の新しいエディション {#editions}
 
-B2B のデータと機能をReal-Time CDPと Platform Activation の両方の製品に取り込む新しい B2B エディションと B2P エディションを購入できます。
+B2B のデータと機能をReal-Time CDPと Platform アクティベーションの両製品に提供する B2B と B2P の新しいエディションを購入できます。
 
-Real-Time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overview.md).
+Real-Time CDP B2B エディションについて詳しくは、[ 概要 ](../../rtcdp/overview.md) を参照してください。
 
 ### 新しい Marketo データソースおよび宛先コネクタ {#marketo}
 
@@ -60,9 +60,9 @@ Real-Time CDP B2B Edition の詳細については、 [概要](../../rtcdp/overv
 
 | 機能 | 説明 |
 |-----------|--------------|
-| 標準 B2B XDM クラス | Real-time Customer Data Platform B2B Edition は、アカウント、商談、キャンペーンなど、B2B の重要なデータエンティティに関する詳細をキャプチャする、いくつかの標準 XDM を提供します。 |
+| 標準 B2B XDM クラス | Real-time Customer Data Platform B2B Edition には、アカウント、オポチュニティ、キャンペーンなどといった、基本的な B2B データエンティティに関する詳細をキャプチャする複数の標準 XDM が用意されています。 |
 
-詳しくは、 [Real-time Customer Data Platform B2B Edition のスキーマ](../../rtcdp/schemas/b2b.md) B2B データエンティティのキャプチャに関する詳細は、ドキュメントを参照してください。
+B2B データエンティティのキャプチャについて詳しくは、[Real-time Customer Data Platform B2B Edition のスキーマ ](../../rtcdp/schemas/b2b.md) ドキュメントを参照してください。
 
 ### （ベータ版）アドホックアクティベーション API を介して、バッチ配信先に対するオーディエンスセグメントをアクティブ化します {#ad-hoc-activation}
 
@@ -88,6 +88,6 @@ Real-Time Customer Data Platform で使用できる顧客 AI は、個々のプ�
 | 機能 | 説明 |
 |-----------|-------------|
 | 複数のデータセットのサポート | 顧客 AI は、各データセットをマッピングして結び付けなくても、容易に複数のデータセットを直接 UI に取り込めるようになりました。 この時間を節約できる新機能により、複数のデータセットから豊富なデータを取得して、より強力で正確なスコアを得ることができます。 |
-| カスタムプロファイル属性 | 顧客 AI では、標準のイベントフィールドに加えて、カスタムプロファイルデータセットフィールド（タイムスタンプ付き）をデータに定義できるようになりました。 このオプションを使用すると、モデルの品質向上やより正確な結果の提供につながる可能性のあるプロファイル属性を追加できます。。 |
+| カスタムプロファイル属性 | 顧客 AI では、標準のイベントフィールドに加えて、カスタムプロファイルデータセットフィールド（タイムスタンプ付き）をデータに定義できるようになりました。 このオプションを使用すると、モデルの品質を向上させ、より正確な結果を提供する可能性のある、影響を与えると思われる追加のプロファイル属性を追加できます。 |
 
 顧客 AI について詳しくは、[顧客 AI のドキュメント](../../intelligent-services/customer-ai/overview.md)を参照してください。

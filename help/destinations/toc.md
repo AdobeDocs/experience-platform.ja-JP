@@ -23,7 +23,7 @@ ht-degree: 87%
    * [様々な宛先タイプのプロファイル書き出し動作](./how-destinations-work/profile-export-behavior.md)
    * [宛先アクティブ化ワークフローでの ID の処理](./how-destinations-work/identity-handling.md)
 * API チュートリアル {#api}
-   * [Flow Service API を使用して、ファイルベースの宛先に対するデータをアクティブ化する](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [Flow Service API を使用した、ファイルベースの宛先に対するデータのアクティブ化 ](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
    * [Flow Service API でファイルベースのメールマーケティングの宛先に接続してデータを有効化する](./api/connect-activate-batch-destinations.md)
    * [アドホックアクティベーション API を介して、バッチ宛先に対するオーディエンスをアクティブ化します。](./api/ad-hoc-activation-api.md)
@@ -32,11 +32,11 @@ ht-degree: 87%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットを書き出し](/help/destinations/api/export-datasets.md)
-   * [宛先の API 応答の並べ替えとフィルタリング](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
-   * 宛先へのデータのアクティブ化{#activate}
+   * 宛先へのデータのアクティブ化 {#activate}
       * [有効化の概要](./ui/activation-overview.md)
       * [ストリーミングオーディエンスの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-segment-streaming-destinations.md)
       * [ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-streaming-profile-destinations.md)
@@ -144,7 +144,7 @@ ht-degree: 87%
       * [データ管理プラットフォーム（DMP）の宛先の概要](./catalog/data-management/overview.md)
       * [Audience Manager DIL 拡張機能](./catalog/data-management/aam-dil-extension.md)
       * [Zeta マーケティングプラットフォーム](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
-   * データおよび ID パートナー {#data-partner}
+   * Data &amp; Identity Partner {#data-partner}
       * [Acxiom 見込み客の抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom データの機能強化](./catalog/data-partner/acxiom-data-enhancement.md)
       * [Merkury エンタープライズ接続](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)

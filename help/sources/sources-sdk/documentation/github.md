@@ -2,81 +2,81 @@
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
 title: GitHub Web インターフェイスを使用したソースドキュメントページの作成
-description: このドキュメントでは、GitHub Web インターフェイスを使用してドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
+description: このドキュメントでは、GitHub web インターフェイスを使用して、ドキュメントを作成し、プルリクエスト（PR）を送信する手順を説明します。
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 5%
+source-wordcount: '564'
+ht-degree: 2%
 
 ---
 
-# GitHub Web インターフェイスを使用してソースドキュメントページを作成する
+# GitHub web インターフェイスを使用したソースドキュメントページの作成
 
-このドキュメントでは、GitHub Web インターフェイスを使用してドキュメントを作成し、プル要求 (PR) を送信する手順を説明します。
+このドキュメントでは、GitHub web インターフェイスを使用して、ドキュメントを作成し、プルリクエスト（PR）を送信する手順を説明します。
 
 >[!TIP]
 >
->ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューションガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[ドキュメント用のローカル Git リポジトリの設定](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[大きな変更をする際の GitHub コントリビューションワークフロー](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>ドキュメントプロセスをさらにサポートするには、Adobeコントリビューション ガイドの次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[ 大幅な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## GitHub 環境の設定
 
-GitHub 環境を設定する最初の手順は、 [Adobe Experience Platform GitHub リポジトリ](https://github.com/AdobeDocs/experience-platform.en).
+GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitHub リポジトリ ](https://github.com/AdobeDocs/experience-platform.en) に移動することです。
 
 ![platform-repo](../assets/platform-repo.png)
 
-次に、「 **分岐**.
+次に、「**分岐**」を選択します。
 
-![フォーク](../assets/fork.png)
+![ 分岐 ](../assets/fork.png)
 
-分岐が完了したら、「 」を選択します。 **プライマリ** をクリックし、表示されるドロップダウンメニューに新しいブランチの名前を入力します。 ブランチは作業内容を含むために使用されるので、分岐にわかりやすい名前を付けてから、「 」を選択します。 **ブランチを作成**.
+分岐が完了したら、「**マスター**」を選択し、表示されるドロップダウンメニューに新しいブランチの名前を入力します。 ブランチの名前は作業を格納するために使用されるため、わかりやすい名前を指定し、「**ブランチを作成**」を選択します。
 
 ![create-branch](../assets/create-branch.png)
 
-フォークされたリポジトリの GitHub フォルダー構造で、に移動します。 [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) 次に、ソースに適したカテゴリをリストから選択します。 例えば、新しい CRM ソースのドキュメントを作成する場合は、 **crm**.
+フォークしたリポジトリーの GitHub フォルダー構造で、[`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) に移動し、リストからソースに適したカテゴリを選択します。 例えば、新しい CRM ソースのドキュメントを作成する場合は、「**crm**」を選択します。
 
 >[!TIP]
 >
->UI 用のドキュメントを作成している場合は、に移動します。 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) をクリックし、ソースに適したカテゴリを選択します。 画像を追加するには、以下に移動します。 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) 次に、 `sdk` フォルダー。
+>UI 用のドキュメントを作成する場合は、[`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) に移動して、ソースに適したカテゴリを選択します。 画像を追加するには、に移動 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create)、スクリーンショットを `sdk` フォルダーに追加します。
 
 ![crm](../assets/crm.png)
 
-既存の CRM ソースのフォルダが表示されます。 新しいソースのドキュメントを追加するには、 **ファイルを追加** 次に、「 **新しいファイルを作成** を選択します。
+既存の CRM ソースのフォルダーが表示されます。 新しいソースのドキュメントを追加するには、「**ファイルを追加**」を選択し、表示されるドロップダウンメニューから「**新しいファイルを作成**」を選択します。
 
 ![create-new-file](../assets/create-new-file.png)
 
-ソースファイルに名前を付ける `YOURSOURCE.md` ここで、YOURSOURCE は、Platform でのソースの名前です。 例えば、会社が ACME CRM の場合、ファイル名は `acme-crm.md`.
+ソースファイルに `YOURSOURCE.md` という名前を付けます。YOURSOURCE は、Platform でのソースの名前です。 例えば、会社が ACME CRM の場合、ファイル名は `acme-crm.md` にします。
 
-![git-interface](../assets/git-interface.png)
+![git インターフェイス ](../assets/git-interface.png)
 
-## ソースに関するドキュメントページの作成
+## ソースのドキュメントページを作成する
 
-新しいソースのドキュメント化を開始するには、 [ソースドキュメントテンプレート](./template.md) を GitHub Web エディターに移動します。 また、テンプレートをダウンロードすることもできます [ここ](../assets/api-template.zip).
+新しいソースのドキュメント化を開始するには、[sources documentation template](./template.md) のコンテンツを GitHub web エディターに貼り付けます。 テンプレートは [ こちら ](../assets/api-template.zip) からダウンロードすることもできます。
 
-テンプレートを GitHub Web エディターインターフェイスにコピーした状態で、テンプレートに記載されている手順に従い、ソースに関連する情報を含む値を編集します。
+テンプレートを GitHub web エディターインターフェイスにコピーしたら、テンプレートに記載されている手順に従って、ソースに関連する情報を含んだ値を編集します。
 
 ![paste-template](../assets/paste-template.png)
 
-完了したら、ブランチ内のファイルをコミットします。
+完了したら、ブランチでファイルをコミットします。
 
-![コミット](../assets/commit.png)
+![ コミット ](../assets/commit.png)
 
-## ドキュメントを送信してレビューします
+## レビュー用にドキュメントを送信
 
-ファイルがコミットされたら、プルリクエスト (PR) を開き、作業ブランチをAdobeドキュメントリポジトリの master ブランチにマージできます。 作業中のブランチが選択されていることを確認し、「 」を選択します。 **リクエストの比較とプル**.
+ファイルがコミットされたら、プルリクエスト（PR）を開いて、作業中のブランチをAdobeドキュメントリポジトリのマスターブランチに結合できます。 作業中のブランチが選択されていることを確認し、「**比較してプル要求**」を選択します。
 
 ![compare-pr](../assets/compare-pr.png)
 
-ベースと比較ブランチが正しいことを確認します。 PR にメモを追加し、更新内容を説明してから、「 」を選択します。 **プル要求の作成**. PR を開き、作業の作業ブランチをAdobeリポジトリの master ブランチにマージします。
+ベースおよび比較ブランチが正しいことを確認します。 更新を説明するメモを PR に追加してから、「**プルリクエストを作成**」を選択します。 これにより、作業の作業ブランチをAdobeリポジトリのマスターブランチに結合する PR が開きます。
 
 >[!TIP]
 >
->を残します。 **メンテナーによる編集を許可する** チェックボックスをオンにして、Adobeドキュメントチームが PR を編集できるようにします。
+>**メンテナーによる編集を許可** チェックボックスを選択したままにして、Adobeドキュメントチームが PR を編集できるようにします。
 
 ![create-pr](../assets/create-pr.png)
 
-この時点で、Adobeコントリビューター使用許諾契約 (CLA) に署名するよう求める通知が表示されます。 これは必須の手順です。 CLA に署名した後、PR ページを更新し、プル要求を送信します。
+この時点で、Adobe投稿者使用許諾契約（CLA）への署名を求める通知が表示されます。 これは必須の手順です。 CLA に署名したら、PR ページを更新し、プルリクエストを送信します。
 
-https://github.com/AdobeDocs/experience-platform.enの「プルリクエスト」タブを調べて、プルリクエストが送信されたことを確認できます。
+https://github.com/AdobeDocs/experience-platform.enの「プルリクエスト」タブを調べると、プルリクエストが送信されたことを確認できます。
 
 ![confirm-pr](../assets/confirm-pr.png)

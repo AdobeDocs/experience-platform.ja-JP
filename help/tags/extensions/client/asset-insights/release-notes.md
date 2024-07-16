@@ -4,7 +4,7 @@ description: Adobe Experience Platform の AEM Assets Insights タグ拡張機�
 exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '136'
 ht-degree: 77%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 77%
 
 - この拡張機能は、AEM Asset Insights と共に使用することを意図しています。
 - 具体的には、この拡張機能によって ***pageTracker*** プロセスとページコードが置き換えられます。
-- 設定およびアクティベートすると、この拡張機能はAEM Asset のインプレッションとクリック指標をAdobe Analyticsに送信します。これは、AEMの Asset Insights レポートに自動的に読み込まれます。
+- 設定してアクティブ化すると、この拡張機能は、AEM Asset のインプレッションとクリック指標をAdobe Analyticsに送信します。これは、その後、AEMの Asset Insights レポートに自動的に読み込まれます。
 
 **バグの修正**
 

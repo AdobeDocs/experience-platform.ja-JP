@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のトピック；
 solution: Experience Platform
-title: Sensei Machine Learning API ガイドの付録
+title: Sensei機械学習 API ガイドの付録
 description: 以下の節では、Sensei Machine Learning API の様々な機能に関するリファレンス情報を提供します。
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
@@ -14,11 +14,11 @@ ht-degree: 66%
 
 # [!DNL Sensei Machine Learning] API ガイドの付録
 
-以下の節では、の様々な機能に関するリファレンス情報を示します [!DNL Sensei Machine Learning] API.
+次の節では、[!DNL Sensei Machine Learning] API の様々な機能のリファレンス情報を示します。
 
 ## アセット取得用のクエリパラメーター {#query}
 
-The [!DNL Sensei Machine Learning] API は、アセットの取得に関するクエリパラメーターをサポートしています。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
+[!DNL Sensei Machine Learning] API は、アセットの取得時にクエリパラメーターをサポートしています。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
 
 | クエリーパラメーター | 説明 | デフォルト値 |
 | --------------- | ----------- | ------- |
@@ -29,9 +29,9 @@ The [!DNL Sensei Machine Learning] API は、アセットの取得に関する�
 
 >[!NOTE]
 >
->複数のクエリパラメーターを組み合わせる場合は、アンパサンド (**&amp;**) をクリックします。
+>複数のクエリパラメーターを組み合わせる場合は、アンパサンドで区切る必要があります（**&amp;**）。
 
-## Python CPU と GPU の設定 {#cpu-gpu-config}
+## Python の CPU と GPU の設定 {#cpu-gpu-config}
 
 Python Engines は、トレーニングまたはスコアリングの目的で CPU または GPU のいずれかを選択でき、[MLInstance](./mlinstances.md) でタスク仕様（`tasks.specification`）として定義されます。
 
@@ -70,11 +70,11 @@ Python Engines は、トレーニングまたはスコアリングの目的で C
 
 >[!NOTE]
 >
->の値 `cpus` および `gpus` では、CPU や GPU の数ではなく、物理マシンの数を示します。 これらの値は許容できる`"1"`であり、それ以外の場合は例外がスローされます。
+>`cpus` と `gpus` の値は CPU や GPU の数ではなく、物理マシンの数を示します。 これらの値は許容できる`"1"`であり、それ以外の場合は例外がスローされます。
 
-## PySpark および Spark のリソース設定 {#resource-config}
+## PySpark と Spark のリソース設定 {#resource-config}
 
-Spark Engines には、トレーニングやスコアリングの目的で計算リソースを変更する機能があります。 次の表に、これらのリソースを示します。
+Spark エンジンには、トレーニングやスコアリングのために計算リソースを変更する機能があります。 これらのリソースについて、次の表で説明します。
 
 | リソース | 説明 | タイプ |
 | -------- | ----------- | ---- |

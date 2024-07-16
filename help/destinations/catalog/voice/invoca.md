@@ -1,12 +1,12 @@
 ---
 keywords: Invoca;invoca
 title: Invoca Tags 拡張機能
-description: Invoca Tags 拡張機能は、Adobe Experience Platformの顧客の宛先を示す声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Invoca Tags 拡張機能は、Adobe Experience Platformのお客様の声の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f66a2e74-8d94-4b3a-9627-083ca875fad7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 88%
+source-wordcount: '462'
+ht-degree: 86%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 88%
 
 ## 概要 {#overview}
 
-[!DNL Invoca] は、通話データと音声の洞察をデジタルカスタマージャーニーに提供します。を使用 [!DNL Invoca’s] コールインテリジェンスプラットフォームを使用すると、マーケターはついに、通話の結果を測定し、オフラインのコンバージョンをデジタル支出に結び付ける分析を行うことができます。
+[!DNL Invoca] は、デジタルカスタマージャーニーに通話データと音声インサイトをもたらします。 Call Intelligence Platform[!DNL Invoca’s] 使用すれば、マーケターは最終的に通話結果を測定し、オフラインコンバージョンをデジタル支出に結び付ける分析を入手できます。
 
-[!DNL Invoca Tags] は、Adobe Experience Platformの顧客の声拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html) の拡張機能のページを参照してください。
+[!DNL Invoca Tags] は、Adobe Experience Platformのカスタマーエクステンションの声です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
-![Invoca 拡張機能](../../assets/catalog/voice/invoca/catalog.png)
+![Invoca 拡張機能 ](../../assets/catalog/voice/invoca/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
@@ -30,7 +30,7 @@ ht-degree: 88%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Invoca Tags] 拡張子：
+[!DNL Invoca Tags] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

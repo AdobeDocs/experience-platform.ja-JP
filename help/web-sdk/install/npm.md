@@ -1,25 +1,25 @@
 ---
-title: NPM パッケージを使用した Web SDK のインストール
-description: NPM パッケージを使用して、Web SDK ライブラリをインストールし、参照します。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+title: NPM パッケージを使用して Web SDK をインストール
+description: NPM パッケージを使用して、Web SDK ライブラリをインストールおよび参照します。
+exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
+# NPM パッケージを使用して Web SDK をインストール
 
-# NPM パッケージを使用した Web SDK のインストール
-
-Adobe Experience Platform Web SDK は、 [NPM パッケージ](https://www.npmjs.com). NPM パッケージをインストールすると、Adobe Experience Platform Web SDK JavaScript ライブラリのビルドプロセスを制御できます。 NPM パッケージは、ブラウザーで実行する EcmaScript バージョン 5 モジュールまたは EcmaScript バージョン 2015(ES6) モジュールを公開します。
+Adobe Experience Platform Web SDK は、[NPM パッケージ ](https://www.npmjs.com) として入手できます。 NPM パッケージをインストールすると、Adobe Experience Platform Web SDK JavaScript ライブラリのビルドプロセスを制御できます。 NPM パッケージは、ブラウザーで実行する EcmaScript バージョン 5 モジュールまたは EcmaScript バージョン 2015 （ES6）モジュールを公開します。
 
 ```bash
 npm install @adobe/alloy
 ```
 
-Adobe Experience Platform Web SDK の NPM パッケージは、 `createInstance` 関数に置き換えます。 関数に渡される name オプションは、ログに記録されるプレフィックスを制御します。 パッケージの使用例を以下に示します。
+Adobe Experience Platform Web SDK の NPM パッケージは、`createInstance` 関数を公開します。 関数に渡される name オプションは、ログに使用されるプレフィックスを制御します。 パッケージの使用例を以下に示します。
 
-## パッケージを ECMAScript 2015(ES6) モジュールとして使用
+## パッケージを ECMAScript 2015 （ES6）モジュールとして使用する
 
 ```js
 import { createInstance } from "@adobe/alloy";
@@ -30,7 +30,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->NPM パッケージは CommonJS モジュールに依存しているので、バンドラーを使用する場合は、バンドラーが CommonJS モジュールをサポートしていることを確認してください。 一部のバンドラー（例： ） [ロールアップ](https://rollupjs.org)、が必要 [プラグイン](https://www.npmjs.com/package/@rollup/plugin-commonjs) を使用すれば、CommonJS のサポートを提供できます。
+>NPM パッケージは CommonJS モジュールに依存しているので、バンドラーを使用する場合は、バンドラーが CommonJS モジュールをサポートしていることを確認します。 [Rollup](https://rollupjs.org) などの一部のバンドラーには、CommonJS のサポートを提供する [ プラグイン ](https://www.npmjs.com/package/@rollup/plugin-commonjs) が必要です。
 
 ## ECMAScript 5 モジュールとしてのパッケージの使用
 

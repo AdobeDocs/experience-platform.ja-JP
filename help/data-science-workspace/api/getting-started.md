@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、Data Science Workspace、Data Science Workspace
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のトピック；data science workspace;data science
 solution: Experience Platform
-title: Sensei Machine Learning API ガイド
+title: Sensei機械学習 API ガイド
 description: Sensei Machine Learning API を使用すると、開発者は様々な Data Science Workspace リソースに対して CRUD 操作を実行できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
@@ -14,13 +14,13 @@ ht-degree: 62%
 
 # [!DNL Sensei Machine Learning] API ガイド
 
-The [!DNL Sensei Machine Learning] API は、データサイエンティストが機械学習サービスを編成および管理するメカニズムを提供します。これは、アルゴリズムのオンボーディングから実験まで、さらにはサービスのデプロイメントまでを対象としています。
+[!DNL Sensei Machine Learning] API は、データサイエンティストが、アルゴリズムのオンボーディングから実験、サービスのデプロイメントに至るまで、機械学習サービスを整理および管理するためのメカニズムを提供します。
 
 この開発者ガイドは、[Sensei 機械学習 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) の使用を開始する際に役立つ手順を提供し、様々な Data Science Workspace リソースに対して CRUD 操作を実行するための API 呼び出しの例を示します。
 
 ## はじめに
 
-完了している必要があります [認証](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) 次のリクエストヘッダーにアクセスしてへの呼び出しをおこなうためのチュートリアル [!DNL Adobe Experience Platform] API:
+API を呼び出すために次のリクエストヘッダーにアクセスするには、[authentication](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要 [!DNL Adobe Experience Platform] あります。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -43,7 +43,7 @@ The [!DNL Sensei Machine Learning] API は、データサイエンティスト�
 * [エンジン](./engines.md)
 * [実験](./experiments.md)
 * [Insights](./insights.md)
-* [MLInstance（レシピ）](./mlinstances.md)
+* [MLInstances （レシピ）](./mlinstances.md)
 * [MLServices](./mlservices.md)
 * [モデル](./models.md)
 * [付録](./appendix.md)

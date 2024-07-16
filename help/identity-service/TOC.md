@@ -22,7 +22,7 @@ ht-degree: 75%
    - [ID リンクロジック](./features/identity-linking-logic.md)
    - [ID グラフビューア](./features/identity-graph-viewer.md)
    - [ID サービスでの削除](./features/deletion.md)
-   - ID グラフリンクルール {#identity-graph-linking-rules}
+   - のルールをリンクする ID グラフ {#identity-graph-linking-rules}
       - [機能の概要](./identity-graph-linking-rules/overview.md)
       - [ID 最適化アルゴリズム](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [名前空間の優先度](./identity-graph-linking-rules/namespace-priority.md)

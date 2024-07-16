@@ -1,6 +1,6 @@
 ---
 title: Mailchimp の興味カテゴリ
-description: Mailchimp（Intuit Mailchimp とも呼ばれます）は、メーリングリストやメールマーケティングキャンペーンを使用して連絡先（顧客、顧客、または他の関心者）を管理し、連絡を取るために企業が使用する一般的なマーケティングオートメーションプラットフォームです。 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
+description: Mailchimp （Intuit Mailchimp とも呼ばれます）は、企業がメーリングリストやメールマーケティングキャンペーンを使用して連絡先（クライアント、顧客、その他の興味のある関係者）を管理し、連絡を取るために使用する、人気のあるマーケティング自動化プラットフォームおよびメールマーケティングサービスです。 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
@@ -12,77 +12,77 @@ ht-degree: 19%
 
 # [!DNL Mailchimp Interest Categories] 接続
 
-[[!DNL Mailchimp]](https://mailchimp.com) は、企業が連絡先の管理や連絡に使用する、人気の高いマーケティングオートメーションプラットフォームおよび電子メールマーケティングサービスです *（顧客、顧客その他の利害関係人）* メーリングリストと電子メールマーケティングキャンペーンの使用 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
+[[!DNL Mailchimp]](https://mailchimp.com) は、企業がメーリングリストやメールマーケティングキャンペーンを使用して連絡先 *（クライアント、顧客、その他の興味のある関係者）を管理し、連絡を取るために使用する* 人気のあるマーケティング自動化プラットフォームおよびメールマーケティングサービスです。 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
 
-[!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/), [グループ](https://mailchimp.com/help/getting-started-with-groups/)、および興味カテゴリ *（グループ名またはグループタイトルとも呼ばれます）。*. 各 [!DNL Mailchimp] 「グループ」は、関心のあるカテゴリのリストです。 連絡先は、Web サイトのサインアップフォームを通じて 1 つ以上の興味カテゴリを購読する際に、興味カテゴリに関連付けられます。 オーディエンス内で、連絡先をグループに整理し、関心のあるカテゴリに関連付けることもできます。これらを使用して、セグメントを作成できます。 これらのオーディエンスを使用して、購読済みの連絡先にターゲットキャンペーン E メールをブロードキャストできます。
+[!DNL Mailchimp Interest Categories] では、[audiences](https://mailchimp.com/help/getting-started-audience/)、[groups](https://mailchimp.com/help/getting-started-with-groups/) および interest カテゴリ *（グループ名またはグループタイトルとも呼ばれます）* を使用します。 各 [!DNL Mailchimp] グループは、興味のあるカテゴリのリストです。 連絡先は、web サイト上のサインアップフォームを通じて 1 つ以上の興味カテゴリを購読すると、興味カテゴリに関連付けられます。 オーディエンス内では、連絡先をグループ化して興味のあるカテゴリに関連付け、それらの連絡先を使用してセグメントを作成することもできます。 これらのオーディエンスを使用して、ターゲットキャンペーンメールを登録した連絡先にブロードキャストできます。
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-この [!DNL Adobe Experience Platform] [宛先](/help/destinations/home.md) は [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 作成する API [興味カテゴリ](https://mailchimp.com/developer/marketing/api/interest-categories/) 次に、選択した各 Platform オーディエンスからの連絡先を、対応する関心カテゴリに追加します。 以下が可能です。 **新規連絡先の追加** または **既存の情報を更新する [!DNL Mailchimp] 連絡先**&#x200B;を、 **目的のグループに追加または削除します。** 既存の [!DNL Mailchimp] オーディエンスに反映されます。 [!DNL Mailchimp Interest Groups] は、Platform から選択したオーディエンス名を、 [!DNL Mailchimp].
+この [!DNL Adobe Experience Platform] [ 宛先 ](/help/destinations/home.md) は、[[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API を使用して [ 興味のあるカテゴリ ](https://mailchimp.com/developer/marketing/api/interest-categories/) を作成し、選択した各 Platform オーディエンスから対応する興味のあるカテゴリに連絡先を追加します。 新しいセグメント内でアクティブ化した後、既存のオーディエンス内で **新しい連絡先を追加** または **既存の [!DNL Mailchimp] しい連絡先の情報を更新** し、その後 **目的のグループに追加したり** 既存の [!DNL Mailchimp] オーディエンスから削除したりできます。 [!DNL Mailchimp Interest Groups] は、Platform から選択したオーディエンス名を [!DNL Mailchimp] 内の関心のあるカテゴリとして使用します。
 
 ## ユースケース {#use-cases}
 
 [!DNL Mailchimp Interest Categories] 宛先を使用する方法とタイミングを理解しやすくするために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
 
-### マーケティングキャンペーン用の連絡先へのメールの送信 {#use-case-send-emails}
+### マーケティングキャンペーンの連絡先へのメールの送信 {#use-case-send-emails}
 
-スポーツグッズの Web サイトの販売部門は、サッカーに興味を持つと自己識別した連絡先のリストに、電子メールベースのマーケティングキャンペーンを放送したいと考えています。 連絡先のリストは、Web サイトの開発チームから受け取ったデータ書き出しでバッチとして分けられるので、トラッキングする必要があります。 チームが既存の [!DNL Mailchimp] オーディエンスを作成し、各Experience Platformの連絡先を追加するリストオーディエンスの作成を開始します。 これらのオーディエンスをに送信した後 [!DNL Mailchimp Interest Categories]選択したに存在しない連絡先がある場合は、 [!DNL Mailchimp] オーディエンス訪問者が、その連絡先が属するオーディエンス名のグループに追加されます。 既に [!DNL Mailchimp] オーディエンスまたはグループを選択した場合、その情報が更新されます。 データがに送信された後 [!DNL Mailchimp Interest Categories]を使用している場合、セールスチームはマーケティングキャンペーンの電子メールを選択し、 [!DNL Mailchimp] オーディエンス。
+スポーツグッズのウェブサイトの販売部門は、サッカーに興味があると自分自身を識別した連絡先のリストにメールベースのマーケティングキャンペーンを放送したいと考えています。 連絡先のリストは、web サイトの開発チームから受け取ったデータ書き出しのバッチとして分離されているので、追跡する必要があります。 チームは、既存の [!DNL Mailchimp] オーディエンスを特定し、各リストの連絡先が追加されるExperience Platformオーディエンスの構築を開始します。 これらのオーディエンスを [!DNL Mailchimp Interest Categories] に送信した後、選択した [!DNL Mailchimp] オーディエンスに連絡先が存在しない場合、連絡先が属するオーディエンス名を持つグループに追加されます。 [!DNL Mailchimp] オーディエンスまたはグループに既に連絡先が存在する場合、その情報は更新されます。 データが [!DNL Mailchimp Interest Categories] に送信されると、セールスチームは、マーケティングキャンペーンメールを選択して、[!DNL Mailchimp] オーディエンス内のサッカーの興味グループに送信できます。
 
 ## 前提条件 {#prerequisites}
 
-Experience Platformおよびで設定する必要がある前提条件については、以下の節を参照してください。 [!DNL Mailchimp] また、を使用する前に収集する必要がある情報についても説明します。 [!DNL Mailchimp Interest Categories] 宛先。
+Experience Platformと [!DNL Mailchimp] で設定する必要がある前提条件と、[!DNL Mailchimp Interest Categories] の宛先を使用する前に収集する必要がある情報については、以下の節を参照してください。
 
 ### Experience Platformの前提条件 {#prerequisites-in-experience-platform}
 
-[!DNL Mailchimp Interest Categories] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
+[!DNL Mailchimp Interest Categories] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
 
-### の前提条件 [!DNL Mailchimp Interest Categories] 宛先 {#prerequisites-destination}
+### [!DNL Mailchimp Interest Categories] の宛先の前提条件 {#prerequisites-destination}
 
-Platform からにデータを書き出すための次の前提条件に注意してください。 [!DNL Mailchimp] アカウント：
+Platform から [!DNL Mailchimp] アカウントにデータを書き出すには、次の前提条件に注意してください。
 
-#### 次をお持ちの場合は、 [!DNL Mailchimp] アカウント {#prerequisites-account}
+#### [!DNL Mailchimp] アカウントが必要です {#prerequisites-account}
 
-事前に [!DNL Mailchimp Interest Categories] 宛先の名前を指定する場合は、まず [!DNL Mailchimp] アカウント。 まだない場合は、 [[!DNL Mailchimp] 登録ページ](https://login.mailchimp.com/signup/) をクリックして、アカウントを登録および作成します。
+[!DNL Mailchimp Interest Categories] の宛先を作成する前に、まず [!DNL Mailchimp] アカウントがあることを確認する必要があります。 アカウントをまだお持ちでない場合は、[[!DNL Mailchimp]  サインアップページ ](https://login.mailchimp.com/signup/) にアクセスし、アカウントを登録、作成してください。
 
-#### 収集 [!DNL Mailchimp] API キー {#gather-credentials}
+#### API キー [!DNL Mailchimp] 収集 {#gather-credentials}
 
-次が必要です： [!DNL Mailchimp] **API キー** 認証を行う [!DNL Mailchimp Interest Categories] の宛先に対して、 [!DNL Mailchimp] アカウント。 The **API キー** ～の役割を果たす **パスワード** いつ [宛先の認証](#authenticate).
+[!DNL Mailchimp] アカウントに対して [!DNL Mailchimp Interest Categories] の宛先を認証するには、[!DNL Mailchimp] **API キー** が必要です。 **宛先を認証** する際、**API キー** は [ パスワード ](#authenticate) として機能します。
 
-次の条件を満たしていない場合、 **API キー**、アカウントにログインして、 [[!DNL Mailchimp] API キーを生成する](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) ドキュメントを参照してください。
+**API キー** がない場合は、アカウントにログインし、[[!DNL Mailchimp] API キーの生成 ](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) ドキュメントを参照して作成してください。
 
-API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us14`.
+API キーの例は `0123456789abcdef0123456789abcde-us14` です。
 
 >[!IMPORTANT]
 >
->次の場合、 **API キー**&#x200B;生成後はアクセスできなくなるので、書き留めてください。
+>**API キー** を生成した場合は、生成後にアクセスできなくなるので、書き留めておきます。
 
-#### 特定 [!DNL Mailchimp] データセンター {#identify-data-center}
+#### データセンター [!DNL Mailchimp] 特定 {#identify-data-center}
 
-次に、 [!DNL Mailchimp] データセンター これをおこなうには、 [!DNL Mailchimp] アカウントに移動し、 **API キーの節** 」をクリックします。
+次に、[!DNL Mailchimp] データセンターを特定する必要があります。 これをおこなうには、[!DNL Mailchimp] アカウントにログインし、アカウントの **API キーセクション** に移動します。
 
-値は、ブラウザーに表示される URL の最初の部分です。 URL が *https://`us14`.mailchimp.com/account/api/*&#x200B;を設定した場合、データセンターは `us14`.
+値は、ブラウザーに表示される URL の最初の部分です。 URL が *https://`us14`.mailchimp.com/account/api/* の場合、データセンターは `us14` です。
 
-また、フォームの API キーにも追加されます *key-dc*; API キーが `0123456789abcdef0123456789abcde-us14`を設定した場合、データセンターは `us14`.
+また、API キーにも *key-dc* の形式で追加されます。API キーが `0123456789abcdef0123456789abcde-us14` の場合、データセンターは `us14` になります。
 
-データセンターの価値を書き留める *(`us14` （この例では）*&#x200B;に値を指定しない場合、 [宛先の詳細を入力](#destination-details).
+データセンターの値 *（この例では `us14`）を書き留めておきます*、この値は [ 宛先の詳細を入力 ](#destination-details) する際に必要になります。
 
-詳しいガイダンスが必要な場合は、 [[!DNL Mailchimp] 基本ドキュメント](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
+詳細なガイダンスが必要な場合は、[[!DNL Mailchimp]  基本ドキュメント ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure) を参照してください。
 
 ### ガードレール {#guardrails}
 
-各 [!DNL Mailchimp] オーディエンスには、1 つのグループに最大 60 個のグループ名（または関心カテゴリ）を含めることができます。また、同じオーディエンス内の複数のグループをまたいで、複数のグループを含めることもできます。 参照： [!DNL Mailchimp] [グループ](https://mailchimp.com/help/getting-started-with-groups/) 必要な明確化を行うために この上限に達すると、 `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` 次のエラー応答としてのメッセージ： [!DNL Mailchimp] API.
+各 [!DNL Mailchimp] オーディエンスには、1 つのグループまたは同じオーディエンス内の複数のグループにわたって、最大 60 個のグループ名（または興味のあるカテゴリ）を含めることができます。 詳しくは、[!DNL Mailchimp][groups](https://mailchimp.com/help/getting-started-with-groups/) を参照してください。 この制限に達すると、[!DNL Mailchimp] API から `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` メッセージがエラー応答として返されます。
 
-さらに、 [!DNL Mailchimp] [レート制限](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) を参照してください。 [!DNL Mailchimp] API.
+また、[!DNL Mailchimp] API によって課せられる制限について詳しくは、[!DNL Mailchimp] の [ レート制限 ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Mailchimp] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL Mailchimp] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| メール | 連絡先の電子メールアドレス | 必須 |
+| メール | 連絡先メールアドレス | 必須 |
 
 {style="table-layout:auto"}
 
@@ -92,8 +92,8 @@ API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us1
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各オーディエンスに対して、 [!DNL Mailchimp Interest Categories] セグメントのステータスは、Platform からのオーディエンスのステータスに合わせて更新されます。</li></ul> |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンスの評価に基づいてExperience Platformでプロファイルが更新されると、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> Platform で選択した各オーディエンスについて、対応する [!DNL Mailchimp Interest Categories] セグメントのステータスが、Platform のオーディエンスステータスで更新されます。</li></ul> |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンスの評価に基づいてExperience Platform内でプロファイルが更新されると、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -101,20 +101,20 @@ API キーの例は次のとおりです。 `0123456789abcdef0123456789abcde-us1
 
 >[!IMPORTANT]
 >
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
-Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索します。 [!DNL Mailchimp Interest Categories]. または、 **[!UICONTROL 電子メールマーケティング]** カテゴリ。
+**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]** 内で、[!DNL Mailchimp Interest Categories] を検索します。 または、**[!UICONTROL メールマーケティング]** カテゴリの下に配置することもできます。
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先を認証するには、以下の必須フィールドに入力し、を選択します。 **[!UICONTROL 宛先に接続]**.
+宛先に対して認証するには、以下の必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
 | フィールド | 説明 |
 | --- | --- |
-| **[!UICONTROL ユーザー名]** | お使いの [!DNL Mailchimp Interest Categories] ユーザー名。 |
-| **[!UICONTROL パスワード]** | お使いの [!DNL Mailchimp] **API キー**&#x200B;君が書いていた [収集 [!DNL Mailchimp] 資格情報](#gather-credentials) 」セクションに入力します。<br> API キーは、 `{KEY}-{DC}`( ここで `{KEY}` 部分は、 [[!DNL Mailchimp] API キー](#gather-credentials) セクションおよび `{DC}` 部分は [[!DNL Mailchimp] データセンター](#identify-data-center). <br>次のいずれかを指定できます。 `{KEY}` の一部またはフォーム全体を読み込みます。<br> 例えば、API キーが <br>*`0123456789abcdef0123456789abcde-us14`*,<br> 次のいずれかを指定できます。*`0123456789abcdef0123456789abcde`*または&#x200B;*`0123456789abcdef0123456789abcde-us14`*を値として使用します。 |
+| **[!UICONTROL ユーザー名]** | [!DNL Mailchimp Interest Categories] ユーザー名。 |
+| **[!UICONTROL パスワード]** | [ 収集  [!DNL Mailchimp]  資格情報 **セクションでメモした [!DNL Mailchimp]** API キー ](#gather-credentials)。API キー <br>`{KEY}-{DC}` の形式を取ります。`{KEY}` の部分は [[!DNL Mailchimp] API キー ](#gather-credentials) セクションに記載されている値を参照し、`{DC}` の部分は [[!DNL Mailchimp]  データセンター ](#identify-data-center) を参照します。 <br>`{KEY}` の部分またはフォーム全体を指定できます。<br> 例えば、API キーが <br>*`0123456789abcdef0123456789abcde-us14`*の場合 <br>*`0123456789abcdef0123456789abcde`*または&#x200B;*`0123456789abcdef0123456789abcde-us14`*のいずれかを値として指定できます。 |
 
 {style="table-layout:auto"}
 
@@ -130,17 +130,17 @@ Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索しま
 
 | フィールド | 説明 |
 | --- | --- |
-| **[!UICONTROL 名前]** | 将来この宛先を認識するための名前。 |
+| **[!UICONTROL 名前]** | 今後この宛先を認識するための名前。 |
 | **[!UICONTROL 説明]** | 今後この宛先を識別するのに役立つ説明。 |
-| **[!UICONTROL データセンター]** | お使いの [!DNL Mailchimp] アカウント `data center`. 詳しくは、 [特定 [!DNL Mailchimp] データセンター](#identify-data-center) 」の節を参照してください。 |
-| **[!UICONTROL オーディエンス名（最初にデータセンターを選択してください）]** | 次の項目を選択した後、 **[!UICONTROL データセンター]**&#x200B;の場合、このドロップダウンには、 [!DNL Mailchimp] アカウント。 Platform のデータで更新するオーディエンスを選択します。 |
-| **[!UICONTROL 関心のあるカテゴリ（最初にデータセンターとオーディエンス名を選択してください）]** | 次の項目を選択した後、 **[!UICONTROL オーディエンス名]**&#x200B;の場合、このドロップダウンには、 [!DNL Mailchimp] アカウント。 Platform のデータで更新するカテゴリ名を選択します。 |
+| **[!UICONTROL データセンター]** | [!DNL Mailchimp] アカウント `data center`。 詳しくは、[ データセンターの特定  [!DNL Mailchimp]  に関する節 ](#identify-data-center) 参照してください。 |
+| **[!UICONTROL オーディエンス名（最初にデータセンターを選択してください）]** | **[!UICONTROL データセンター]** を選択すると、このドロップダウンに [!DNL Mailchimp] アカウントのオーディエンス名が自動的に入力されます。 Platform のデータで更新するオーディエンスを選択します。 |
+| **[!UICONTROL 関心のあるカテゴリ（データセンターとオーディエンス名を最初に選択してください）]** | **[!UICONTROL オーディエンス名]** を選択すると、このドロップダウンには [!DNL Mailchimp] アカウントの興味/関心グループのカテゴリ名が自動的に入力されます。 Platform のデータで更新するカテゴリ名を選択します。 |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> API キーが **[!UICONTROL パスワード]** フィールドまたは **[!UICONTROL データセンター]** の値が正しくない場合、UI に [!DNL Mailchimp] API エラー応答： *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* 以下に示すように。 この場合、 **[!UICONTROL オーディエンス名（最初にデータセンターを選択してください）]** フィールドに入力します。 このエラーを修正するには、正しい値を指定します。
+> 「**[!UICONTROL パスワード]**」フィールドに指定した API キーまたは **[!UICONTROL データセンター]** の値が正しくない場合、UI は [!DNL Mailchimp] しい API エラー応答を表示します。*`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* を以下に示します。 この場合、「オーディエンス名 **[!UICONTROL フィールドから値を選択することはできません（最初にデータセンターを選択してください）]**。 このエラーを修正するには、正しい値を指定します。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -152,26 +152,32 @@ Within **[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**、を検索しま
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platformからにオーディエンスデータを正しく送信するには、以下を実行します。 [!DNL Mailchimp Interest Categories] の宛先の場合は、フィールドマッピングの手順を実行する必要があります。 マッピングは、Platform アカウント内の Experience Data Model(XDM) スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成することで構成されます。
+Adobe Experience Platformから [!DNL Mailchimp Interest Categories] の宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。 マッピングは、Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
 
-XDM フィールドを [!DNL Mailchimp Interest Categories] 宛先フィールドには、次の手順に従います。
+XDM フィールドを [!DNL Mailchimp Interest Categories] の宛先フィールドに正しくマッピングするには、次の手順に従います。
 
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。これで、新しいマッピング行が画面に表示されます。
-1. Adobe Analytics の **[!UICONTROL ソースフィールドを選択]** ウィンドウで、 **[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、 **[!UICONTROL ID 名前空間を選択]** ID を選択します。
-1. Adobe Analytics の **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、 **[!UICONTROL ID 名前空間を選択]** ID を選択するか、 **[!UICONTROL 属性を選択]** カテゴリを選択し、 [!DNL Mailchimp] API. *選択したに追加したカスタム属性 [!DNL Mailchimp] オーディエンスは、ターゲットフィールドとして選択することもできます。*
+1. **[!UICONTROL ソースフィールドを選択]** ウィンドウで、**[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、**[!UICONTROL ID 名前空間を選択]** を選択して ID を選択します。
+1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、**[!UICONTROL ID 名前空間を選択]** を選択して、ID を選択するか、**[!UICONTROL 属性を選択]** カテゴリを選択して、[!DNL Mailchimp] API から入力された属性のリストから選択します。 *選択した [!DNL Mailchimp] オーディエンスに追加したカスタム属性も、ターゲットフィールドとして選択できます。*
 
-   XDM プロファイルスキーマと [!DNL Mailchimp Interest Categories] は次のとおりです。 | ソースフィールド | ターゲットフィールド | メモ | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 必須：はい | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+   XDM プロファイルスキーマと [!DNL Mailchimp Interest Categories] の間で使用できるマッピングは次のとおりです。
+|Sourceフィールド | ターゲットフィールド |備考 |
+| — | — | — |
+|`IdentityMap: Email`|`Identity: email`|必須：はい |
+|`xdm: person.name.firstName`|`Attribute: FNAME`| |
+|`xdm: person.name.lastName`|`Attribute: LNAME`| |
+|`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
-   また、 `ADDRESS` は、 `merge field` の [!DNL Mailchimp] オーディエンス。 The [[!DNL Mailchimp] ドキュメント](https://mailchimp.com/developer/marketing/docs/merge-fields/) 必要なキーを次のように定義します。 `addr1`, `city`, `state`、および `zip`、およびオプションのキー `addr2` および `country`. これらのフィールドの値は、文字列である必要があります。 次のいずれかの `ADDRESS` フィールドマッピングが存在する場合、宛先は `ADDRESS` オブジェクトを [!DNL Mailchimp] 更新用の API。 任意 `ADDRESS` マッピングされていないフィールドの値はデフォルトではに設定されます `NULL` デフォルトの国を除いて `US`.
+   さらに、[!DNL Mailchimp] オーディエンス内のターゲットと呼ばれる特別なター `merge field` ットフィールドも `ADDRESS` ります。 [[!DNL Mailchimp]  ドキュメント ](https://mailchimp.com/developer/marketing/docs/merge-fields/) では、必要なキーとして `addr1`、`city`、`state`、`zip`、およびオプションのキー `addr2` と `country` を定義しています。 これらのフィールドの値は、文字列にする必要があります。 `ADDRESS` のいずれかのフィールドマッピングが存在する場合、宛先は `ADDRESS` オブジェクトを [!DNL Mailchimp] API に渡して更新します。 マッピングされない `ADDRESS` フィールドの値は、デフォルトで `NULL` になる国を除き、デフォルトで `US` になります。
 
-   に使用できるマッピング `ADDRESS` フィールドは次のとおりです。
+   「`ADDRESS`」フィールドで使用できるマッピングは次のとおりです。
 
    | ソースフィールド | ターゲットフィールド |
    | --- | --- |
@@ -182,27 +188,27 @@ XDM フィールドを [!DNL Mailchimp Interest Categories] 宛先フィール�
    | `xdm: workAddress.postalCode` | `Attribute: ADDRESS.zip` |
    | `xdm: workAddress.country` | `Attribute: ADDRESS.country` |
 
-   例えば、 `country` 連絡先の既存の住所フィールド `addr1`, `city`, `state`、および `zip` の値 `132, My Street, Kingston`, `New York`, `New York` および `12401`. 次の手順で `country` 既存の値を変更と共に渡す必要があります *（存在する場合）* 国の新しい価値を したがって、データセットの値は次のようになります。 `132, My Street, Kingston`, `New York`, `New York`, `12401`、および `US`. 繰り返すには、 `country` に値を指定しない `addr1`, `city`, `state`、および `zip` 次の条件で上書きされます。 `NULL`.
+   例えば、`country` の値を連絡先の既存の住所フィールド `addr1`、`city`、`state` で更新し、`zip` の値を `132, My Street, Kingston`、`New York`、`New York`、`12401` で更新するとします。 `country` を更新するには、変更 *（存在する場合）を使用して既存の値を渡し* 国の新しい値を渡す必要があります。 したがって、データセットの値は、`132, My Street, Kingston`、`New York`、`New York`、`12401` および `US` である必要があります。 繰り返しになりますが、`country` のみを渡し、`addr1`、`city`、`state` および `zip` の値を指定しない場合、これらは `NULL` によって上書きされます。
 
    完了したマッピングの例を次に示します。
-   ![フィールドマッピングを示す Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
+   ![ フィールドマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
-宛先接続のマッピングの指定が完了したら、「 」を選択します。 **[!UICONTROL 次へ]**.
+宛先接続のマッピングの指定が完了したら、「**[!UICONTROL 次へ]**」を選択します。
 
 ## データの書き出しを検証する {#exported-data}
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
-* にログインします。 [[!DNL Mailchimp]](https://login.mailchimp.com/) アカウント。 次に、 **[!DNL Audience]** ページに貼り付けます。 次に、 **[!DNL Manage Contacts]** メニューと選択 **[!DNL Groups]**.
+* [[!DNL Mailchimp]](https://login.mailchimp.com/) アカウントにログインします。 次に、**[!DNL Audience]** ページに移動します。 次に、**[!DNL Manage Contacts]** メニューを展開し、「**[!DNL Groups]**」を選択します。
 
-![Audience グループページを示す mailchimp UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
+![ オーディエンスグループページを示す Mailchimp UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* 「グループ」を選択し、選択したオーディエンスが、Platform のオーディエンス名を持つカテゴリとして作成されているかどうかを確認します。カテゴリの後に、自動生成されたサフィックスが付く場合があります。
-   * この宛先では、選択したセグメントの名前を使用して、 [[!DNL Mailchimp] 興味カテゴリ API を追加](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). 新しい宛先を作成し、同じオーディエンスを再度アクティブ化した場合、 [!DNL Mailchimp] 既存のセグメントと新しいセグメントを区別するためのサフィックスが追加されます。
-* グループに E メールが存在しなかった連絡先は、新しく作成されたカテゴリに追加されます。
-* グループ内に既に存在する連絡先の場合、属性フィールドのデータが更新され、新しく作成したカテゴリに追加された連絡先が更新されます。
+* グループを選択し、選択したオーディエンスが、Platform のオーディエンス名の後に自動生成されたサフィックスを持つカテゴリとして作成されているかどうかを確認します。
+   * この宛先は、選択したセグメントの名前を使用して、[[!DNL Mailchimp]  興味カテゴリの追加 API](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/) を使用して、興味カテゴリを作成します。 新しい宛先を作成し、同じオーディエンスを再度アクティブ化する場合、[!DNL Mailchimp] では、既存のセグメントと新しいセグメントを区別するためにサフィックスが追加されます。
+* グループにメールが存在しない連絡先は、新しく作成されたカテゴリに追加されます。
+* グループ内に既に存在する連絡先の場合、属性フィールドのデータが更新され、新しく作成されたカテゴリに連絡先が追加されます。
 
-![Audience グループカテゴリを示す mailchimp UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups-category.png)
+![ オーディエンスグループのカテゴリを示した Mailchimp UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups-category.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -210,30 +216,30 @@ XDM フィールドを [!DNL Mailchimp Interest Categories] 宛先フィール�
 
 ## エラーとトラブルシューティング {#errors-and-troubleshooting}
 
-### 次の場合にエラーが発生しました： [!DNL Mailchimp] API キーまたはデータセンターの値が正しくありません {#incorrect-credentials-error}
+### API キーまたはデ [!DNL Mailchimp] タセンターの値が正しくない場合にエラーが発生しました {#incorrect-credentials-error}
 
-API キーが **[!UICONTROL パスワード]** フィールドまたは **[!UICONTROL データセンター]** の値が正しくない場合、UI に [!DNL Mailchimp] API エラー応答： *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* 以下に示すように。 この場合、 **[!UICONTROL オーディエンス名（最初にデータセンターを選択してください）]** フィールドに入力します。
+「**[!UICONTROL パスワード]**」フィールドに指定した API キーまたは **[!UICONTROL データセンター]** の値が正しくない場合、UI は [!DNL Mailchimp] しい API エラー応答を表示します。*`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* を以下に示します。 この場合、「オーディエンス名 **[!UICONTROL フィールドから値を選択することはできません（最初にデータセンターを選択してください）]**。
 
-![Mailchimp API キーまたはデータセンターの値が正しくない場合に、Platform UI のスクリーンショットにエラーが表示されます。](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+![Mailchimp API キーまたはデータセンターの値が正しくない場合のエラーを示す Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
-このエラーを修正して次の手順に進むには、正しい値を指定する必要があります。 詳しくは、 [特定 [!DNL Mailchimp] データセンター](#identify-data-center) および
-[収集 [!DNL Mailchimp] API キー](#gather-credentials) セクションを参照してください。
+このエラーを修正して次の手順に進むには、正しい値を指定する必要があります。 [Identify [!DNL Mailchimp] data center](#identify-data-center) を参照してください。
+ガイダンスが必要な場合は [Gather [!DNL Mailchimp] API キー ](#gather-credentials) の節を参照してください。
 
-### 次の場合にエラーが発生しました： [!DNL Mailchimp] グループ名の制限を超えています {#group-name-limits-error}
+### グループ名の制限 [!DNL Mailchimp] 超えるとエラーが発生する {#group-name-limits-error}
 
-宛先を作成する際に、次のエラーメッセージが表示される場合があります。 *`Cannot have more than 60 interests per list (Across all categories)`* または *`400 BAD_REQUEST`*. これは、1 つのグループで 60 個のグループ名（または関心カテゴリ）を超えた場合、または同じオーディエンス制限内の複数のグループにわたって 60 個を超えた場合に発生します。詳しくは、 [guardrail](#guardrails) 」セクションに入力します。 このエラーを修正するには、 [!DNL Mailchimp].
+宛先を作成すると、「*`Cannot have more than 60 interests per list (Across all categories)`*」または「*`400 BAD_REQUEST`*」というエラーメッセージが表示される場合があります。 これは、[ ガードレール ](#guardrails) セクションで説明しているように、1 つのグループ内または同じオーディエンス制限内の複数のグループにわたって 60 個のグループ名（または興味のあるカテゴリ）を超えた場合に発生します。 このエラーを修正するには、[!DNL Mailchimp] のグループ名の制限を超えていないことを確認してください。
 
 ### [!DNL Mailchimp] ステータスおよびエラーコード
 
-詳しくは、 [[!DNL Mailchimp] エラーページ](https://mailchimp.com/developer/marketing/docs/errors/) を参照してください。
+ステータスとエラーコードの一覧と説明については、[[!DNL Mailchimp]  エラーページ ](https://mailchimp.com/developer/marketing/docs/errors/) を参照してください。
 
 ## その他のリソース {#additional-resources}
 
-以下に示すその他の役に立つ情報 [!DNL Mailchimp] 以下のドキュメントです。
-* [の概要 [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
-* [Audiences の概要](https://mailchimp.com/help/getting-started-audience/)
-* [オーディエンスの作成](https://mailchimp.com/help/create-audience/)
-* [グループの概要](https://mailchimp.com/help/getting-started-with-groups/)
-* [新しいオーディエンスグループを作成](https://mailchimp.com/help/create-new-audience-group/)
-* [興味のカテゴリ](https://mailchimp.com/developer/marketing/api/interest-categories/)
-* [マーケティング API](https://mailchimp.com/developer/marketing/api/)
+[!DNL Mailchimp] ドキュメントからのその他の役に立つ情報は次のとおりです。
+* [ はじめに  [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
+* [ オーディエンスの概要 ](https://mailchimp.com/help/getting-started-audience/)
+* [ オーディエンスの作成 ](https://mailchimp.com/help/create-audience/)
+* [ グループ使用の手引き ](https://mailchimp.com/help/getting-started-with-groups/)
+* [ 新しいオーディエンスグループの作成 ](https://mailchimp.com/help/create-new-audience-group/)
+* [ 興味のカテゴリ ](https://mailchimp.com/developer/marketing/api/interest-categories/)
+* [ マーケティング API](https://mailchimp.com/developer/marketing/api/)

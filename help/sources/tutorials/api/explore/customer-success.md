@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；cs;CS；顧客成功システム
+keywords: Experience Platform；ホーム；人気のトピック；cs;CS；カスタマーサクセスシステム
 solution: Experience Platform
-title: フローサービス API を使用した顧客成功システムの調査
-description: このチュートリアルでは、フローサービス API を使用して顧客成功 (CS) システムを調べます。
+title: Flow Service API を使用したカスタマーサクセスシステムの調査
+description: このチュートリアルでは、Flow Service API を使用して、カスタマーサクセス（CS）システムを調べます。
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '593'
 ht-degree: 39%
 
 ---
 
-# を使用した顧客成功システムの調査 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用したカスタマーサクセスシステムの調査
 
-[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされるすべてのソースから接続できます。
+[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Adobe Experience Platformで一元化できます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] カスタマーサクセス (CS) システムを調査する API。
+このチュートリアルでは、[!DNL Flow Service] API を使用して、カスタマーサクセス（CS）システムについて調べます。
 
 ## はじめに
 
@@ -24,11 +24,11 @@ ht-degree: 39%
 * [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用して CS システムに正常に接続するために必要な追加情報を示しています。
 
-### ベース接続を取得する
+### ベース接続の取得
 
-を使用して CS システムを調べるには、以下を実行します。 [!DNL Platform] API を使用する場合は、有効なベース接続 ID が必要です。 使用する CS システムのベース接続がまだない場合は、次のチュートリアルを通じて CS システムを作成できます。
+[!DNL Platform] API を使用して CS システムを探索するには、有効なベース接続 ID が必要です。 使用する CS システムのベース接続がまだない場合は、次のチュートリアルを通じてベース接続を作成できます。
 
 * [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
@@ -53,9 +53,9 @@ ht-degree: 39%
 
 * Content-Type: `application/json`
 
-## データテーブルの調査
+## データテーブルの探索
 
-CS システムのベース接続を使用して、GETリクエストを実行することで、データテーブルを調べることができます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを見つけます。 [!DNL Platform].
+CS システムのベース接続を使用すると、データリクエストを実行してGETテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Platform] に取り込むテーブルのパスを検索します。
 
 **API 形式**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、CS システムからテーブルの配列を返します。 に取り込むテーブルを探します。 [!DNL Platform] そしてそれを書き留める `path` プロパティに含める必要がある場合は、次の手順で指定して、その構造を調べます。
+応答が成功すると、CS システムからテーブルの配列が返されます。 [!DNL Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
 
 ```json
 [
@@ -115,7 +115,7 @@ curl -X GET \
 ]
 ```
 
-## Inspectテーブルの構造
+## テーブルの構造のInspect
 
 CS システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定してGETリクエストを実行します。
 
@@ -141,7 +141,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、 `columns` 配列。
+応答が成功すると、指定されたテーブルの構造が返されます。 テーブルの各列に関する詳細は、`columns` 配列の要素内にあります。
 
 ```json
 {
@@ -176,4 +176,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、CS システムを調べ、に取り込むテーブルのパスを見つけました。 [!DNL Platform]、およびその構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して、 [CS システムからデータを収集し、Platform に取り込む](../collect/customer-success.md).
+このチュートリアルに従って、CS システムを探索し、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [CS システムからデータを収集し、Platform に取り込む ](../collect/customer-success.md) ことができます。

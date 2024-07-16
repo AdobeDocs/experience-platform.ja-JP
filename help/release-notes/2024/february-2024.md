@@ -13,7 +13,7 @@ ht-degree: 29%
 
 **リリース日：2024年2月21日（PT）**
 
-Experience Platformの既存の機能の更新：
+Experience Platformの既存の機能に対するアップデート：
 
 - [アラート](#alerts)
 - [データ収集](#data-collection)
@@ -30,11 +30,11 @@ Experience Platform では、様々な Platform アクティビティに関す�
 
 | 機能 | 説明 |
 | --- | --- |
-| 「アラート履歴」タブ | Experience Platform管理者は、アラート購読者の管理機能を使用して、Adobeユーザー ID、外部電子メールアドレス、または電子メールグループリストにアラートを割り当てることができます。 詳しくは、 [アラート UI ドキュメント](../../observability/alerts/ui.md) 「履歴」タブの詳細を参照してください。 |
+| 「アラートの履歴」タブ | Experience Platform管理者は、アラート購読者の管理機能を使用してAdobeのユーザー ID、外部のメールアドレス、メールグループリストのいずれかにアラートを割り当てることができます。 「履歴」タブについて詳しくは、[ アラート UI ドキュメント ](../../observability/alerts/ui.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
-アラートの詳細については、 [[!DNL Observability Insights] 概要](../../observability/home.md).
+アラートについて詳しくは、[[!DNL Observability Insights]  概要 ](../../observability/home.md) を参照してください。
 
 ## データ収集 {#data-collection}
 
@@ -44,7 +44,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| [Web SDK での Web アプリ内メッセージのサポート](../../web-sdk/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK で、Adobe Journey Optimizerキャンペーン用の Web アプリ内メッセージ設定がサポートされるようになりました。 |
+| [Web SDK での Web アプリ内メッセージのサポート ](../../web-sdk/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK で、Adobe Journey Optimizer キャンペーン用の Web アプリ内メッセージ設定がサポートされるようになりました。 |
 
 {style="table-layout:auto"}
 
@@ -72,9 +72,9 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [Gainsight PX 接続](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX は、製品チームが製品の使用方法を理解し、フィードバックを収集し、製品のチュートリアルなどのアプリ内エンゲージメントを作成して、ユーザーのオンボーディングと製品の採用を促進できる製品エクスペリエンスプラットフォームです。 |
-| [Mailchimp タグ接続](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp は、人気のあるマーケティングオートメーションプラットフォームおよび電子メールマーケティングサービスです。 Mailchimp タグコネクタを使用して、連絡先の構造化、ラベル付け、分類を行うことができます。 |
-| [SAP Commerce 接続](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce は、B2B および B2C 企業向けのクラウドベースの e コマースプラットフォームソリューションで、SAP Customer Experience ポートフォリオの一部として利用できます。 この宛先を使用して、既存の顧客オーディエンスから SAP Commerce 内の顧客の詳細を更新することができます。 |
+| [Gainsight PX 接続 ](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX は、製品チームがユーザーがどのように製品を使用しているかを理解し、フィードバックを収集し、製品ウォークスルーなどのアプリ内エンゲージメントを作成して、ユーザーのオンボーディングと製品採用を促進できるようにする製品エクスペリエンスプラットフォームです。 |
+| [Mailchimp タグ接続 ](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp は、人気のあるマーケティング自動化プラットフォームおよびメールマーケティングサービスです。 Mailchimp タグコネクタを使用して、連絡先の構造化、ラベル付け、分類を行うことができます。 |
+| [SAP Commerce接続 ](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerceは、B2B および B2C 企業向けのクラウドベースの e コマースプラットフォームソリューションで、SAP カスタマーエクスペリエンス（顧客体験）ポートフォリオの一部として利用できます。 このExperience Platformを使用して、既存の宛先オーディエンスから SAP Commerce内のお客様の詳細を更新できます。 |
 
 {style="table-layout:auto"}
 
@@ -82,12 +82,12 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| 一般に使用可能なアカウントオーディエンスを有効化 | 特定の宛先に対してアカウントオーディエンスをアクティブ化する機能は、 [B2B](/help/rtcdp/overview.md#rtcdp-b2b) および [B2P](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platformの各エディション。 に関するチュートリアルをお読みください。 [アカウントオーディエンスの有効化](/help/destinations/ui/activate-account-audiences.md) ：サポートされる宛先を含む完全な情報を取得します。 |
-| Googleの宛先のデジタル市場法同意実施ツール | Googleは [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、および [ディスプレイおよびビデオ 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) コンプライアンスおよび同意関連の要件をサポートするために、 [デジタル市場法](https://digital-markets-act.ec.europa.eu/index_en) 欧州連合 (EU) の (DMA)[EU ユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)) をクリックします。 同意要件に対するこれらの変更の適用は、2024 年 3 月 6 日から施行される予定です。 <br/><br/> EU ユーザーの同意ポリシーに従い、欧州経済圏 (EEA) のユーザーに対してオーディエンスリストを作成し続けるには、広告主やパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡す必要があります。 GoogleパートナーのAdobeは、EU の DMA に基づくこれらの同意要件を満たすために必要なツールを提供します。<br/><br/>Adobeのプライバシーとセキュリティシールドを購入し、 [同意ポリシー](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 同意しないプロファイルを除外するには、何のアクションも実行する必要はありません。<br/><br/>Adobeプライバシーとセキュリティシールドを購入していないお客様は、 [セグメント定義](../../segmentation/home.md#segment-definitions) 内の機能 [セグメントビルダー](../../segmentation/ui/segment-builder.md) を使用して、同意されていないプロファイルを除外し、既存のReal-Time CDP Googleの宛先を中断することなく使用し続けます。 |
-| [!BADGE ベータ版]{type=Informative} バッチ保存先のマッピングフィールドを並べ替える | CSV エクスポートの列の順序を変更するには、 [マッピング](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 手順 UI でマッピングされたフィールドの順序は、書き出された CSV ファイル内の列の順序に上から下へと反映されます。上の行は CSV ファイル内の一番左の列になります。 <br/><br/> この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。 |
-| [!BADGE ベータ版]{type=Informative} バッチ保存先用に事前に選択されたデフォルトの書き出しスケジュール | Experience Platformは、各ファイル書き出しのデフォルトスケジュールを自動的に設定するようになりました。 次のドキュメントを参照してください： [オーディエンスの書き出しをスケジュール](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) を参照して、デフォルトのスケジュールを変更する方法を確認してください。 <br/><br/> この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。 |
-| [!BADGE ベータ版]{type=Informative} バッチ保存先のオーディエンスアクティベーションスケジュールを一括編集します | 複数のオーディエンスのアクティベーションスケジュールを一括で編集できるようになりました。 [アクティベーションデータ](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) ページに貼り付けます。 <br/><br/> この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。 |
-| [!BADGE ベータ版]{type=Informative} 一括書き出しファイルをオンデマンドでバッチ保存先に | を使用して、オーディエンスを一括でバッチ保存先に書き出せるようになりました。 [オンデマンドでのファイルの書き出し](../../destinations/ui/export-file-now.md) 機能。 <br/><br/> この機能はベータ版で、一部のお客様のみが利用できます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。 |
+| 一般入手可能なアカウントオーディエンスの有効化 | Real-time Customer Data Platformの [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) エディションと [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) エディションを購入する企業は、特定の宛先に対してアカウントオーディエンスをアクティブ化する機能を使用できるようになりました。 サポートされる宛先を含む完全な情報については、[ アカウントオーディエンスのアクティブ化 ](/help/destinations/ui/activate-account-audiences.md) に関するチュートリアルをお読みください。 |
+| Google宛先のデジタル市場法に基づく同意実施ツール | Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA](https://digital-markets-act.ec.europa.eu/index_en)）（[EU ユーザー同意ポリシー ](https://www.google.com/about/company/user-consent-policy/)）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、[Google Ads API](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、[Customer Match および [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は、2024 年 3 月 6 日（PT）から有効になる予定です。 <br/><br/> EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーとして、Adobeは、欧州連合の DMA に基づくこれらの同意要件に準拠するために必要なツールを提供します。<br/><br/>Adobeのプライバシーとセキュリティシールドを購入し、同意のないプロファイルを除外する [ 同意ポリシー ](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定しているお客様は、何もする必要はありません。<br/><br/>Adobeのプライバシーとセキュリティシールドを購入していないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断なく使用するには、[ セグメントビルダー ](../../segmentation/ui/segment-builder.md) 内の [ セグメント定義 ](../../segmentation/home.md#segment-definitions) 機能を使用して、同意のないプロファイルを除外する必要があります。 |
+| [!BADGE Beta]{type=Informative} バッチ宛先のマッピングフィールドの並べ替え | [ マッピング ](../../destinations/ui/activate-batch-profile-destinations.md#mapping) ステップのマッピングフィールドをドラッグ&amp;ドロップして、CSV 書き出しの列の順序を変更できるようになりました。 UI でマッピングされたフィールドの順序は、書き出された CSV ファイルの列の順序で上から下に反映されます。一番上の行は CSV ファイルの左端の列です。 <br/><br/> この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
+| [!BADGE Beta]{type=Informative} バッチ宛先のデフォルトの書き出しスケジュールがあらかじめ選択されています | Experience Platformは、各ファイル書き出しのデフォルトのスケジュールを自動的に設定するようになりました。 デフォルトのスケジュールを変更する方法については、[ オーディエンスの書き出しのスケジュール設定 ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) に関するドキュメントを参照してください。 <br/><br/> この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
+| [!BADGE Beta]{type=Informative} バッチ宛先のオーディエンス有効化スケジュールを一括編集 | [ アクティベーションデータ ](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) ページから、複数のオーディエンスのアクティベーションスケジュールを一括で編集できるようになりました。 <br/><br/> この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
+| [!BADGE Beta]{type=Informative} オンデマンドでファイルをバッチ宛先に一括書き出し | [ オンデマンドでのファイルの書き出し ](../../destinations/ui/export-file-now.md) 機能を使用して、オーディエンスを一括でバッチ宛先に書き出すことができるようになりました。 <br/><br/> この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
 
 {style="table-layout:auto"}
 
@@ -95,17 +95,17 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対処するため、Experience Platformは、1 つの Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援するサンドボックスを提供します。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformでは、1 つの Platform インスタンスを別々の仮想環境に分割するサンドボックスを提供し、デジタルエクスペリエンスアプリケーションの開発と発展を支援しています。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| サンドボックスツール | 同意ルールとガバナンスルールのオブジェクトタイプに加えて、サンドボックスツールを使用して、統合プロファイルを有効にせずにスキーマをインポートし、セグメントのインポート時にターゲットサンドボックスに見つからない属性を確認し、デフォルトで既存の結合ポリシーを使用します。 これらの機能について詳しくは、 [サンドボックスツール UI ガイド](../../sandboxes/ui/sandbox-tooling.md). |
+| サンドボックスツール | 同意ルールとガバナンスルールのオブジェクトタイプをサポートする以外に、サンドボックスツールを使用して、統合プロファイルを有効にせずにスキーマをインポートしたり、セグメントをインポートする際にターゲットサンドボックスに属性が見つからない有無を確認したり、デフォルトで既存の結合ポリシーを使用したりできるようになりました。 これらの機能について詳しくは、[ サンドボックスツール UI ガイド ](../../sandboxes/ui/sandbox-tooling.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
-サンドボックスについて詳しくは、 [サンドボックスの概要](../../sandboxes/home.md).
+サンドボックスについて詳しくは、[ サンドボックスの概要 ](../../sandboxes/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
@@ -115,7 +115,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| アカウントオーディエンス | アカウントオーディエンスが一般公開されました。 アカウントのセグメント化を使用して、リアルタイム顧客プラットフォームの B2B エディションと B2P エディションの両方で、ユーザーベースのオーディエンスからアカウントベースのオーディエンスに、マーケティングセグメント化の完全な簡単性と高度化を提供できます。 このリリースでは、ユーザーベースのオーディエンスをアカウントベースのオーディエンスの述語として使用し、検索機能を追加し、カスタムエンティティの使用をサポートし、データガバナンスに準拠できます。 この機能の詳細については、 [アカウントオーディエンスの概要](../../segmentation/ui/account-audiences.md). |
+| アカウントオーディエンス | アカウントオーディエンスの一般公開 Real-Time Customer Platform の B2B エディションと B2P エディションの両方で、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングセグメント化エクスペリエンスの完全な使いやすさと洗練を実現するために、アカウントのセグメント化を使用できるようになりました。 このリリースでは、ユーザーベースのオーディエンスをアカウントベースのオーディエンスに対する述語として使用でき、検索機能を追加し、カスタムエンティティの使用をサポートするほか、データガバナンスに準拠しています。 この機能について詳しくは、[ アカウントオーディエンスの概要 ](../../segmentation/ui/account-audiences.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -127,8 +127,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE ベータ版]{type=Informative} [!DNL Acxiom] ソース | 以下を使用します。 [[!DNL Acxiom Prospecting Data Import] ソース](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) データの取得とマッピング [!DNL Acxiom] 見込み客のサービスからExperience Platformへ。 |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom] ソース | [[!DNL Acxiom Prospecting Data Import] source](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) を使用して、見込み客サービスからExperience Platformにデータ [!DNL Acxiom] 取得し、マッピングします。 |
 
 {style="table-layout:auto"}
 
-ソースの詳細については、 [ソースの概要](../../sources/home.md).
+ソースについて詳しくは、[ ソースの概要 ](../../sources/home.md) を参照してください。

@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## インストール
 
-拡張機能をインストールするには、Experience PlatformUI またはデータ収集 UI の拡張機能カタログに移動し、「クライアントデータレイヤーをAdobe」を選択します。
+拡張機能をインストールするには、拡張機能 UI またはデータ収集 UI のExperience Platformカタログに移動し、「Adobeクライアントデータレイヤー」を選択します。
 
 ![カタログ内の ACDL 拡張機能ビュー](./images/catalog.png)
 

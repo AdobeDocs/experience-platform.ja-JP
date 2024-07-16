@@ -1,35 +1,35 @@
 ---
-title: ヘルスケア薬スキーマフィールドグループ
-description: ヘルスケアの薬のスキーマフィールドグループについて説明します。
+title: ヘルスケア薬品スキーマフィールドグループ
+description: ヘルスケア薬品スキーマフィールドグループについて説明します。
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 9%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL 医療薬] スキーマフィールドグループ
+# [!UICONTROL  ヘルスケア薬品 ] スキーマフィールドグループ
 
-[!UICONTROL 医療薬] は、 [[!UICONTROL 薬] クラス](../../classes/medication.md). 単一のオブジェクトタイプフィールドを提供します。 `medication` ブランド名、ロット番号、数量などの詳細を取り込む
+[!UICONTROL  ヘルスケア薬品 ] は、[[!UICONTROL  投薬 ] クラス ](../../classes/medication.md) の標準スキーマフィールドグループです。 ブランド名、ロット番号、数量などの詳細を収集する単一のオブジェクトタイプのフィールド `medication` を提供します。
 
 ![](../../images/field-groups/healthcare-medication.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `ingredients` | オブジェクトの配列 | 薬の中に存在する成分のリストを表示します。 各オブジェクトには、次のプロパティが含まれます。 <ul><li>`isActive`: (Boolean) この成分がこの薬でまだ積極的に使用されているかどうかを示します。</li><li>`name`: (String) 原料の名前。</li><li>`quantity`: (String) 薬物に含まれる成分の量。</li></ul> |
-| `brandName` | 文字列 | 薬物のブランド名。 |
+| `ingredients` | オブジェクトの配列 | 薬に存在する成分を一覧表示します。 各オブジェクトには、次のプロパティが含まれます。 <ul><li>`isActive`: （ブール値）この成分がこの薬でまだアクティブに使用されているかどうかを示します。</li><li>`name`: （文字列）原料の名前。</li><li>`quantity`: （文字列）薬に含まれる成分の量。</li></ul> |
+| `brandName` | 文字列 | 薬のブランド名。 |
 | `codes` | 文字列の配列 | この薬を識別するコードのリスト。 |
-| `dosageUnitNumber` | Double | 薬剤の投与単位番号。 |
-| `dosageUnitOfMeasurement` | 文字列 | 剤数の測定単位。 |
-| `expiryDate` | 日時 | 薬の有効期限。 |
-| `genericName` | 文字列 | 薬物の総称。 |
-| `lotNumber` | 文字列 | 薬物のバッチの一意の識別子。 |
-| `manufacturerName` | 文字列 | 薬の製造元の名前。 |
-| `quantity` | Double | パッケージ内の薬の量。 |
-| `status` | 文字列 | 薬物/薬物が有効かどうかを示す一般的なステータス。 |
-| `volume` | Double | 薬の量。 |
+| `dosageUnitNumber` | Double | 薬の投与単位番号。 |
+| `dosageUnitOfMeasurement` | 文字列 | 投与数の測定単位。 |
+| `expiryDate` | 日時 | 投薬の有効期限。 |
+| `genericName` | 文字列 | 薬の一般名。 |
+| `lotNumber` | 文字列 | 薬のバッチの一意の ID。 |
+| `manufacturerName` | 文字列 | 製薬会社の名前。 |
+| `quantity` | Double | パッケージに含まれる薬物の量。 |
+| `status` | 文字列 | 薬物/薬が有効かどうかを示す一般的なステータス。 |
+| `volume` | Double | 薬の分量。 |
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).
+フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) を参照してください。

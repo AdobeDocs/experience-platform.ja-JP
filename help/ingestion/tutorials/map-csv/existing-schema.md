@@ -7,7 +7,7 @@ description: このチュートリアルでは、Adobe Experience Platform ユ�
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '944'
 ht-degree: 100%
 
 ---

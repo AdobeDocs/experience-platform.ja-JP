@@ -1,12 +1,12 @@
 ---
-keywords: Quantum Metric 拡張機能；Quantum Metric;quantum metric;Quantum metric
+keywords: Quantum Metric 拡張機能；Quantum Metric;Quantum metric;Quantum metric
 title: Quantum Metric 拡張機能
-description: Quantum Metric 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Quantum Metric 拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: b88df05f-0559-4568-9251-2d00f9223edb
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 87%
+source-wordcount: '460'
+ht-degree: 89%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 87%
 
 ## 概要 {#overview}
 
-この [!DNL Quantum Metric] タグ拡張機能は、コードレスでのデプロイを容易にします。 [!DNL Quantum Metric's] データ収集機能 さらに、この拡張機能を使用すると、有用な情報を含むデータ要素を [!DNL Quantum Metric] API
+[!DNL Quantum Metric] タグ拡張機能を使用すると、[!DNL Quantum Metric's] のデータ収集機能のコードレスなデプロイメントが容易になります。 さらに、この拡張機能は、[!DNL Quantum Metric] API から有用な情報を含むデータ要素をキャプチャする機能を提供します。
 
-[!DNL Quantum Metric] は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html) の拡張機能のページを参照してください。
+[!DNL Quantum Metric] は、Adobe Experience Platform の分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 87%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Quantum Metric] 拡張子：
+[!DNL Quantum Metric] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

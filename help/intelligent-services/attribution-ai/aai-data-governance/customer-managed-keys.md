@@ -10,7 +10,7 @@ ht-degree: 88%
 
 ---
 
-# 顧客管理キー (Attribution AI内 )
+# Attribution AI内の顧客管理キー
 
 アトリビューション AI は、[Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) および Privacy &amp; Security Shield のお客様に、Azure 顧客管理キー（CMK）を利用してアトリビューション AI データに適用するオプションを提供します。設定プロセスは [Adobe Experience Platform CMK の設定](../../../landing/governance-privacy-security/customer-managed-keys/overview.md)と同じであり、このリンク先で説明する手順に従うことができます。
 
@@ -18,6 +18,6 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] は、現在、 [!DNL Healthcare Shield or Privacy & Security Shield] アドオンの機能。
+>現在、[!DNL Customer Managed Keys] は、[!DNL Healthcare Shield or Privacy & Security Shield] のアドオン機能を購入した組織でのみ利用できます。
 
 Platform で使用されるすべてのデータは、CMK の有無にかかわらず、転送時および保管時に暗号化され、データのセキュリティを維持します。Adobe Experience Platform の暗号化については、[データの暗号化](../../../landing/governance-privacy-security/encryption.md)に関するドキュメントを参照してください。

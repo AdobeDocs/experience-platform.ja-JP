@@ -1,107 +1,108 @@
 ---
 title: Query Pro モード
 description: Adobe Experience Platform UI で SQL クエリを使用して、カスタムダッシュボードのグラフを生成する方法を説明します。
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
+source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
 workflow-type: tm+mt
 source-wordcount: '1060'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Query pro モード {#query-pro-mode}
+# クエリプロモード {#query-pro-mode}
 
-Query pro モードは、Adobe Experience Platform UI でカスタム SQL クエリを使用してインサイトを生成するプロセスをガイドする、SQL エディターベースのワークフローです。 カスタム SQL クエリでインサイトを生成する前に、まず以下を行う必要があります [ダッシュボードの作成](./overview.md#create-custom-dashboard).
+Query pro モードは、Adobe Experience Platform UI でカスタム SQL クエリを使用してインサイトを生成するプロセスをガイドする、SQL エディターベースのワークフローです。 カスタム SQL クエリでインサイトを生成する前に、まず [ ダッシュボードを作成 ](./overview.md#create-custom-dashboard) する必要があります。
 
 ## SQL を作成 {#compose-sql}
 
-Query pro モードでのダッシュボードの作成を選択すると、 **[!UICONTROL SQL を入力]** ダイアログが表示されます。 ドロップダウンメニューからクエリするデータベース（インサイトデータモデル）を選択し、query pro エディターでデータセットに適したクエリを入力します。
+Query pro モードでダッシュボードを作成することを選択すると、「**[!UICONTROL SQL を入力]**」ダイアログが表示されます。 ドロップダウンメニューからクエリするデータベース（インサイトデータモデル）を選択し、query pro エディターでデータセットに適したクエリを入力します。
 
 >[!NOTE]
 >
->Query pro モードは、Data Distiller SKU を購入したユーザーのみが使用できます。 この [[!UICONTROL ガイド付きデザインモード]](../../user-defined-dashboards.md) は、すべてのユーザーが既存のデータモデルからインサイトを作成できます。
+>Query pro モードは、Data Distiller SKU を購入したユーザーのみが使用できます。 [[!UICONTROL  ガイド付きデザインモード ]](../../user-defined-dashboards.md) は、すべてのユーザーが既存のデータモデルからインサイトを作成できます。
 
-を参照してください。 [クエリエディターユーザーガイド](../../../query-service/ui/user-guide.md#query-authoring) ui 要素について説明します。
+UI 要素について詳しくは、[ クエリエディターユーザーガイド ](../../../query-service/ui/user-guide.md#query-authoring) を参照してください。
 
-![この [!UICONTROL SQL を入力] データセットのドロップダウンメニューと「実行」アイコンがハイライト表示されたダイアログ。ダイアログには SQL クエリが入力され、「クエリパラメーター」タブが表示されます。](../../images/customizable-insights/enter-sql-database-dropdown.png)
+![ データセットのドロップダウンメニューと「実行」アイコンがハイライト表示された [!UICONTROL SQL を入力 ] ダイアログには、SQL クエリが入力され、「クエリパラメーター」タブが表示されます。](../../images/customizable-insights/enter-sql-database-dropdown.png)
 
 ### クエリパラメーター {#query-parameters}
 
-次を含める [global](./filters/global-filter.md) または [日付フィルター](./filters/date-filter.md) クエリ **が** クエリパラメーターの使用 query pro モードで文を作成する場合、クエリでクエリパラメーターを使用する場合は、サンプル値を指定する必要があります。 サンプル値を使用すると、SQL ステートメントを実行してグラフを作成できます。 ステートメントを作成するときに指定するサンプル値は、実行時に日付またはグローバルフィルターに選択する実際の値に置き換えられます。
+[ グローバル ](./filters/global-filter.md) または [ 日付フィルターを含めるには ](./filters/date-filter.md) クエリ **必須** でクエリパラメーターを使用します。 query pro モードで文を作成する場合、クエリでクエリパラメーターを使用する場合は、サンプル値を指定する必要があります。 サンプル値を使用すると、SQL ステートメントを実行してグラフを作成できます。 ステートメントを作成するときに指定するサンプル値は、実行時に日付またはグローバルフィルターに選択する実際の値に置き換えられます。
 
 
 
 >[!IMPORTANT]
 >
->グローバルフィルターを使用する場合は、SQL にクエリパラメーターを配置し、そのクエリパラメーターをウィジェットコンポーザーのグローバルフィルターにリンクする必要があります。 以下のスクリーンショットでは、 `CONSENT_VALUE_FILTER` SQL でグローバルフィルターのクエリパラメーターとして使用されます。 を参照してください。 [グローバルフィルタードキュメント](./filters/global-filter.md#enable-global-filter) この方法について詳しくは、こちらを参照してください。
+>グローバルフィルターを使用する場合は、SQL にクエリパラメーターを配置し、そのクエリパラメーターをウィジェットコンポーザーのグローバルフィルターにリンクする必要があります。 以下のスクリーンショットでは、SQL でグローバルフィルターのクエリパラメーターとして `CONSENT_VALUE_FILTER` が使用されています。 これを行う方法について詳しくは、[ グローバルフィルタードキュメント ](./filters/global-filter.md#enable-global-filter) を参照してください。
 
-クエリを実行するには、「実行」アイコン（![実行アイコン。](../../images/customizable-insights/run-icon.png) ）サードパーティリクエストを待機する、特別なコア Adobe JavaScript モジュールです。クエリエディターに「結果」タブが表示されます。 次に、設定を確認してウィジェットコンポーザーを開き、を選択します。 **[!UICONTROL を選択]**.
+クエリを実行するには、実行アイコン（![ 実行アイコン](../../images/customizable-insights/run-icon.png)）に設定します。 クエリエディターに「結果」タブが表示されます。 次に、設定を確認してウィジェットコンポーザーを開き、「**[!UICONTROL 選択]**」を選択します。
 
 >[!TIP]
 >
 >クエリでクエリパラメーターを使用する場合は、クエリを 1 回実行して、使用されるすべてのクエリパラメーターキーを事前入力します。 クエリは失敗しますが、UI には自動的に「クエリパラメーター」タブが表示され、含まれているすべてのキーが一覧表示されます。 キーに適切な値を追加します。
 
-![この [!UICONTROL SQL を入力] sql 入力を含むダイアログ、結果タブが表示され、「選択」がハイライト表示されます。](../../images/customizable-insights/enter-sql-select.png)
+![SQL 入力を含む [!UICONTROL SQL を入力 ] ダイアログと「結果」タブが表示され、「選択」がハイライト表示されます。](../../images/customizable-insights/enter-sql-select.png)
 
 ## ウィジェットを入力 {#populate-widget}
 
-ウィジェットコンポーザーに、実行した SQL の列が入力されるようになりました。 ダッシュボードのタイプは、左上に示されます（この場合は） [!UICONTROL 手動 SQL 入力]. 鉛筆アイコン（![鉛筆アイコン。](../../images/customizable-insights/edit-icon.png)）を選択して、任意の時点で SQL を編集できます。
+ウィジェットコンポーザーに、実行した SQL の列が入力されるようになりました。 ダッシュボードのタイプは左上に示されます。この場合は [!UICONTROL  手動 SQL 入力 ] です。 鉛筆アイコン（![ 鉛筆アイコンを選択します。](../../images/customizable-insights/edit-icon.png)）を選択して、任意の時点で SQL を編集できます。
 
 >[!TIP]
 >
 >使用可能な属性は、実行された SQL から取得された列です。
 
-ウィジェットを作成するには、にリストされている属性を使用します [!UICONTROL 属性] 列。 検索バーを使用して、属性を検索したり、リストをスクロールしたりできます。
+ウィジェットを作成するには、[!UICONTROL  属性 ] 列に一覧表示された属性を使用します。 検索バーを使用して、属性を検索したり、リストをスクロールしたりできます。
 
-![作成方法と属性列がハイライト表示されたウィジェットコンポーザー](../../images/customizable-insights/creation-method-and-attribute-column.png)
+![ 作成メソッドと属性列がハイライト表示されたウィジェットコンポーザー。](../../images/customizable-insights/creation-method-and-attribute-column.png)
 
 ### 属性を追加 {#add-attributes}
 
-ウィジェットに属性を追加するには、プラスアイコン（![プラスアイコン。](../../images/customizable-insights/add-icon.png)）を選択します。 表示されるドロップダウンメニューを使用すると、SQL で決定されたオプションからグラフに属性を追加できます。 グラフのタイプが異なると、X 軸や Y 軸のドロップダウンなど、オプションが異なります。
+ウィジェットに属性を追加するには、プラスアイコン（![A プラスアイコン](../../images/customizable-insights/add-icon.png)）を選択します。 表示されるドロップダウンメニューを使用すると、SQL で決定されたオプションからグラフに属性を追加できます。 グラフのタイプが異なると、X 軸や Y 軸のドロップダウンなど、オプションが異なります。
 
-このドーナツグラフの例では、オプションはサイズと色です。 色はドーナツグラフの結果を色分けし、サイズは使用される実際の指標です。 に属性を追加します [!UICONTROL カラー] フィールドで、その属性の構成に基づいて結果を異なる色に分割します。
+このドーナツグラフの例では、オプションはサイズと色です。 色はドーナツグラフの結果を色分けし、サイズは使用される実際の指標です。 [!UICONTROL  カラー ] フィールドに属性を追加し、その属性の構成に基づいて結果を異なる色に分割します。
 
 >[!TIP]
 >
->上下の矢印アイコン（![上下の矢印アイコン。](../../images/customizable-insights/switch-axis-icon.png)）を選択して、棒グラフまたは折れ線グラフの X 軸と Y 軸の配置を切り替えます。
+>上向き矢印アイコンと下向き矢印アイコン（![ 上向き矢印と下向き矢印アイコン](../../images/customizable-insights/switch-axis-icon.png)）を選択して、棒グラフまたは折れ線グラフの X 軸と Y 軸の配置を切り替えます。
 
-![アドアイコンドロップダウンと切り替え矢印がハイライト表示されたウィジェットコンポーザー。](../../images/customizable-insights/add-icon-and-switch-arrows.png)
+![ 追加アイコンのドロップダウンと切り替え矢印がハイライト表示されたウィジェットコンポーザー。](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
-ウィジェットのグラフまたはグラフのタイプを変更するには、の使用可能なオプションから選択します [!UICONTROL マーク] ドロップダウン。 次のオプションがあります [!UICONTROL ライン], [!UICONTROL ドーナツ], [!UICONTROL 大きい数]、および [!UICONTROL 棒グラフ]. 選択すると、ウィジェットの現在の設定のプレビュービジュアライゼーションが生成されます。
+ウィジェットのグラフまたはグラフのタイプを変更するには、[!UICONTROL  マーク ] ドロップダウンの使用可能なオプションから選択します。 オプションには、[!UICONTROL  行 ]、[!UICONTROL  ドーナツ ]、[!UICONTROL  大きい数値 ]、[!UICONTROL  棒 ] があります。 選択すると、ウィジェットの現在の設定のプレビュービジュアライゼーションが生成されます。
 
-![ウィジェットのプレビューがハイライト表示されたウィジェットコンポーザー。](../../images/customizable-insights/widget-preview.png)
+![ ウィジェットのプレビューがハイライト表示されたウィジェットコンポーザー。](../../images/customizable-insights/widget-preview.png)
 
 ## ウィジェットのプロパティ {#properties}
 
-プロパティアイコン（![プロパティアイコン。](../../images/customizable-insights/properties-icon.png)）を選択し、プロパティ パネルを開きます。 が含まれる [!UICONTROL プロパティ] パネルで、ウィジェットの名前を **[!UICONTROL ウィジェットのタイトル]** テキストフィールド。 グラフのさまざまな要素の名前を変更することもできます。
+「プロパティ」アイコン（![ 「プロパティ」アイコン](../../images/customizable-insights/properties-icon.png)）を選択し、プロパティパネルを開きます。 [!UICONTROL  プロパティ ] パネルの **[!UICONTROL ウィジェットタイトル]** テキストフィールドにウィジェットの名前を入力します。 グラフのさまざまな要素の名前を変更することもできます。
 
 >[!NOTE]
 >
 >プロパティ サイドバーで使用できる特定のフィールドは、編集しているグラフのタイプによって異なります。
 
-![プロパティアイコンと「ウィジェットタイトル」フィールドがハイライト表示されたウィジェットコンポーザー。](../../images/customizable-insights/widget-properties-title-text.png)
+![ プロパティアイコンと「ウィジェットタイトル」フィールドがハイライト表示されたウィジェットコンポーザー。](../../images/customizable-insights/widget-properties-title-text.png)
 
 ## ウィジェットを保存 {#save-widget}
 
-ウィジェットコンポーザーで保存すると、ウィジェットがダッシュボードにローカルに保存されます。 作業内容を保存し、後で再開する場合は、 **[!UICONTROL 保存]**. ウィジェット名の下のチェックマークアイコンは、ウィジェットが保存されたことを示します。 または、ウィジェットの設定が完了したら、を選択します。 **[!UICONTROL 保存して閉じる]** をクリックして、ダッシュボードにアクセスできるその他すべてのユーザーがウィジェットを使用できるようにします。 「キャンセル」を選択して作業を中断し、カスタムダッシュボードに戻ります。
+ウィジェットコンポーザーで保存すると、ウィジェットがダッシュボードにローカルに保存されます。 作業内容を保存し、後で再開する場合は、「**[!UICONTROL 保存]**」を選択します。 ウィジェット名の下のチェックマークアイコンは、ウィジェットが保存されたことを示します。 または、ウィジェットの設定が完了したら、「**[!UICONTROL 保存して閉じる]** を選択して、ダッシュボードにアクセスできる他のすべてのユーザーにウィジェットを公開します。 「キャンセル」を選択して作業を中断し、カスタムダッシュボードに戻ります。
 
-![「保存」、「ウィジェットを保存」、「保存して閉じる」がハイライト表示されたウィジェットコンポーザー](../../images/customizable-insights/insight-saved.png)
+![ 「保存」、「ウィジェットを保存」、「保存して閉じる」がハイライト表示されたウィジェットコンポーザー ](../../images/customizable-insights/insight-saved.png)
 
 ## ダッシュボードとグラフの編集 {#edit}
 
-を選択 **[!UICONTROL 編集]** ダッシュボード全体または任意のインサイトを編集できます。 編集モードでは、ウィジェットのサイズ変更、SQL の編集、グローバルおよび時間フィルターの作成と適用を行うことができます。 これらのフィルターは、ダッシュボードウィジェットに表示されるデータを制限します。 これは、様々なユースケースに合わせてインサイトをすばやく更新し、微調整する便利な方法です。
+「**[!UICONTROL 編集]**」を選択して、ダッシュボード全体または任意のインサイトを編集します。 編集モードでは、ウィジェットのサイズ変更、SQL の編集、グローバルおよび時間フィルターの作成と適用を行うことができます。 これらのフィルターは、ダッシュボードウィジェットに表示されるデータを制限します。 これは、様々なユースケースに合わせてインサイトをすばやく更新し、微調整する便利な方法です。
 
-![「編集」がハイライト表示されたカスタムダッシュボード。](../../images/customizable-insights/edit-dashboard.png)
+![ 「編集」がハイライト表示されたカスタムダッシュボード。](../../images/customizable-insights/edit-dashboard.png)
 
-を選択 **[!UICONTROL フィルターを追加]** 次のいずれかを作成します。 [[!UICONTROL 日付フィルター]](#create-date-filter) または [[!UICONTROL グローバルフィルター]](#create-global-filter). 作成したら、すべてのグローバルフィルターおよび日付フィルターを次の場所から使用できます [フィルターアイコン](#select-global-filter) （![フィルターアイコン。](../../images/customizable-insights/filter.png)）を選択します。
+**[!UICONTROL フィルターを追加]** を選択して、[[!UICONTROL  日付フィルター ]](#create-date-filter) または [[!UICONTROL  グローバルフィルター ]](#create-global-filter) を作成します。 作成したら、すべてのグローバルフィルターおよび日付フィルターを [ フィルターアイコン ](#select-global-filter) （![A フィルターアイコンから使用できます。](../../images/customizable-insights/filter.png)）を選択します。
 
-![「フィルターを追加」ドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../../images/customizable-insights/add-filter.png)
+![ 「フィルターを追加」ドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../../images/customizable-insights/add-filter.png)
 
 ## インサイトの編集、複製または削除
 
-方法については、カスタムダッシュボードガイドを参照してください [既存のウィジェットを編集、複製または削除](../../user-defined-dashboards.md#duplicate).
+[ 既存のウィジェットを編集、複製、削除する ](../../user-defined-dashboards.md#duplicate) 方法については、カスタムダッシュボードガイドを参照してください。
 
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platform UI で SQL クエリを記述して、カスタムダッシュボードのグラフを生成する方法を確認しました。 次に、以下を行ってデータをさらに充実させる方法を学習します [日付フィルターの作成](./filters/date-filter.md)、または [グローバルフィルターの作成](./filters/global-filter.md).
+このドキュメントでは、Adobe Experience Platform UI で SQL クエリを記述して、カスタムダッシュボードのグラフを生成する方法を確認しました。 次に、[ 日付フィルターの作成 ](./filters/date-filter.md) または [ グローバルフィルターの作成 ](./filters/global-filter.md) を使用して、データをさらに充実させる方法を説明します。
 
-また、以下に示す他のカスタマイズされたインサイト機能についても確認できます [sql で分析したデータに対する様々な表示オプション](./view-more.md) または方法 [カスタムインサイトの背後にある SQL の表示](./view-sql.md).
+また、[SQL で分析したデータに対する様々な表示オプション ](./view-more.md) または [ カスタムインサイトの背後にある SQL を表示 ](./view-sql.md) など、他のカスタムインサイト機能についても説明します。

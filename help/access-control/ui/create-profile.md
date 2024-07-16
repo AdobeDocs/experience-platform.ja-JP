@@ -6,7 +6,7 @@ description: このドキュメントでは、Adobe Admin Console で新しい�
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '313'
 ht-degree: 100%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ![new-profile](../images/new-profile.png)
 
-**[!UICONTROL 新しい製品プロファイルの作成]**&#x200B;ダイアログが表示され、プロファイル、オプションの表示名、オプションの説明を入力するように求められます。「**[!UICONTROL ユーザー通知]**」では、ユーザーが追加または削除されたときに E メールで通知を受け取るかどうかを切り替えることができます。
+**[!UICONTROL 新しい製品プロファイルの作成]**&#x200B;ダイアログが表示され、プロファイル、オプションの表示名、オプションの説明を入力するように求められます。「**[!UICONTROL ユーザー通知]**」では、ユーザーが追加または削除されたときにメールで通知を受け取るかどうかを切り替えることができます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 

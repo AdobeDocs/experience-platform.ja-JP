@@ -1,12 +1,12 @@
 ---
-keywords: Google Global Site Tag;gtag;google gtag;google 拡張機能；google gtag 拡張；GTAG
+keywords: Google グローバルサイトタグ；gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google Global Site Tag 拡張機能
-description: Google Global Site Tag 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Googleのグローバルサイトタグ拡張機能は、Adobe Experience Platformの Analytics の提供先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 9643adc5-997d-45b3-a2b6-e365164022b8
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 89%
+source-wordcount: '453'
+ht-degree: 92%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 89%
 
 ## 概要 {#overview}
 
-データ送信先 [!DNL Google Analytics], [!DNL Google Ads]、および [!DNL Google Marketing Platform] 経由 [!DNL Google's Global Site Tag]、または gtag.js。 製品ごとに複数のアカウントを設定できます。
+[!DNL Google's Global Site Tag] または gtag.js を介して [!DNL Google Analytics]、[!DNL Google Ads] および [!DNL Google Marketing Platform] にデータを送信します。 製品ごとに複数のアカウントを設定できます。
 
-[!DNL Google Global Site Tag] は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html) の拡張機能のページを参照してください。
+[!DNL Google Global Site Tag] は、Adobe Experience Platform の分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 89%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Google Global Site Tag] 拡張子：
+[!DNL Google Global Site Tag] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

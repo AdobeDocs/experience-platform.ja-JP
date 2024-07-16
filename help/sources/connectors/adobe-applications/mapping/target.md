@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Adobe Targetイベントデータの XDM へのマッピング
-description: Adobe Experience Platformで使用するAdobe Targetイベントフィールドを Experience Data Model(XDM) スキーマにマッピングする方法について説明します。
+title: Adobe Target イベントデータの XDM へのマッピング
+description: Adobe Experience Platformで使用するために、Adobe Target イベントフィールドをエクスペリエンスデータモデル（XDM）スキーマにマッピングする方法について説明します。
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 82%
+source-wordcount: '431'
+ht-degree: 79%
 
 ---
 
 # ターゲットマッピングフィールドのマッピング
 
-次の表に、エクスペリエンスデータモデル (XDM) エクスペリエンスイベントスキーマのフィールドと、マッピング先のAdobe Targetの対応するフィールドの概要を示します。 一部のマッピングに関する追加のメモも示します。
+次の表に、エクスペリエンスデータモデル（XDM）エクスペリエンスイベントスキーマのフィールドと、マッピング先のAdobe Targetの対応するフィールドの概要を示します。 一部のマッピングに関する追加のメモも示します。
 
 >[!NOTE]
 >
->テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+>左右にスクロールして、テーブルの内容をすべて表示してください。
 
 | XDM ExperienceEvent フィールド | Target Request フィールド | メモ |
 | ------------------------- | -------------------- | ----- |
@@ -29,7 +29,7 @@ ht-degree: 82%
 | **`channel`** | `context.channel` | 表示配信のみで機能します。オプションは「web」と「mobile」で、「web」がデフォルトです。 |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | Experience CloudID(ECID) は MCID とも呼ばれ、名前空間で引き続き使用されます。 |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | Experience CloudID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。 |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |

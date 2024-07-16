@@ -4,14 +4,14 @@ description: Reactor API でリソースをリストする際に結果のペー�
 exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '102'
 ht-degree: 100%
 
 ---
 
 # Reactor API での応答のページ分割
 
-Reactor API から返される応答は、ページ分割されます。デフォルトのページサイズは 25 エレメントです。ページネーションに関する詳細は、API 応答オブジェクトの `meta.pagination `セクションに記載されています。
+Reactor API から返される応答は、ページ分割されます。デフォルトのページサイズは 25 要素です。ページネーションに関する詳細は、API 応答オブジェクトの `meta.pagination `セクションに記載されています。
 
 ```json
 "meta": {

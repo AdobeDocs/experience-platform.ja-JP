@@ -1,6 +1,6 @@
 ---
-title: （ベータ版）トレードデスク — CRM 接続
-description: CRM データに基づいて、オーディエンスのターゲティングと抑制のために、トレードデスクアカウントにプロファイルをアクティブ化します。
+title: （Beta） The Trade Desk - CRM 接続
+description: CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを Trade Desk アカウントに対してアクティブ化します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
@@ -10,62 +10,62 @@ ht-degree: 18%
 
 ---
 
-# （ベータ版） [!DNL Trade Desk] - CRM 接続
+# （Beta） [!DNL Trade Desk] と CRM の接続
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk - CRM] の宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>Platform[!DNL The Trade Desk - CRM] 宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 >
 >EUID（European Unified ID）のリリースにより、[宛先カタログ](/help/destinations/catalog/overview.md)に 2 つの [!DNL The Trade Desk - CRM] 宛先が表示されるようになりました。
 >* EU でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (EU)]** の宛先を使用してください。
 >* APAC または NAMER 地域でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]** の宛先を使用してください。
 >
->現在、Experience Platformの両方の宛先はベータ版です。 この宛先コネクタとドキュメントページは、 *[!DNL Trade Desk]* チーム。 お問い合わせや更新のご依頼については、 [!DNL Trade Desk] 担当者は、ドキュメントと機能を変更する場合があります。
+>Experience Platformの両方の宛先は、現在ベータ版です。 この宛先コネクタとドキュメントページは、*[!DNL Trade Desk]* チームが作成および管理します。 お問い合わせや更新のリクエストについては、[!DNL Trade Desk] 担当者にお問い合わせください。ドキュメントや機能は変更される場合があります。
 
 ## 概要 {#overview}
 
-このドキュメントは、 [!DNL Trade Desk] CRM データに基づくオーディエンスのターゲティングおよび抑制のアカウント。
+このドキュメントは、CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを [!DNL Trade Desk] アカウントにアクティベートする際に役立つように設計されています。
 
-[!DNL The Trade Desk(TTD)] は、いつでも電子メールアドレスのアップロードファイルを直接処理しません。また、 [!DNL The Trade Desk] 生の（ハッシュ化されていない）電子メールを保存します。
+[!DNL The Trade Desk(TTD)] は、メールアドレスのアップロードファイルをいつでも直接処理したり、生の（ハッシュ化され [!DNL The Trade Desk] いない）メールを保存したりしません。
 
 >[!TIP]
 >
->用途 [!DNL The Trade Desk] CRM データマッピング用の CRM の宛先（電子メールやハッシュ化された電子メールアドレスなど）。 以下を使用します。 [その他のトレードデスクの宛先](/help/destinations/catalog/advertising/tradedesk.md) ( Adobe Experience Platformカタログの cookie とデバイス ID のマッピング )
+>CRM 宛先 [!DNL The Trade Desk]、メールやハッシュ化されたメールアドレスなどの CRM データマッピングに使用します。 Cookie とデバイス ID のマッピングには、Adobe Experience Platform カタログの [ その他の Trade Desk 宛先 ](/help/destinations/catalog/advertising/tradedesk.md) を使用します。
 
 ## 前提条件 {#prerequisites}
 
-オーディエンスをアクティブ化する前に [!DNL The Trade Desk]を使用する場合は、 [!DNL The Trade Desk] CRM オンボーディング契約に署名するアカウントマネージャー。 [!DNL The Trade Desk] が権限を付与し、広告主 ID を共有して宛先を設定します。
+[!DNL The Trade Desk] へのオーディエンスをアクティブ化する前に、[!DNL The Trade Desk] アカウントマネージャーに連絡して CRM オンボーディング契約に署名する必要があります。 [!DNL The Trade Desk] の後、権限が付与され、広告主 ID を共有して宛先を設定します。
 
-## ID 一致の要件 {#id-matching-requirements}
+## ID の一致要件 {#id-matching-requirements}
 
-Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件を満たす必要があります。 詳しくは、 [ID 名前空間の概要](/help/identity-service/features/namespaces.md) を参照してください。
+Adobe Experience Platformに取り込む ID の種類に応じて、対応する要件に従う必要があります。 詳しくは、[ID 名前空間の概要 ](/help/identity-service/features/namespaces.md) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL The Trade Desk] では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL The Trade Desk] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
-Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。「 ID 一致要件」の節の手順に従い、プレーンテキストとハッシュ化された電子メールアドレスにそれぞれ適切な名前空間を使用します。
+Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ID の一致要件の節の手順に従って、プレーンテキストとハッシュ化されたメールアドレスに適切な名前空間をそれぞれ使用します。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| メール | E メールアドレス（クリアテキスト） | 入力 `email` ソース id が E メールの名前空間または属性の場合、をターゲット id として使用します。 |
-| Email_LC_SHA256 | 電子メールアドレスは、SHA256 を使用してハッシュ化し、小文字にする必要があります。 後でこの設定を変更することはできません。 | 入力 `hashed_email` ソース id が Email_LC_SHA256 名前空間または属性の場合、をターゲット id として設定します。 |
+| メール | メールアドレス（クリアテキスト） | ソース ID がメール名前空間または属性の場合は、`email` をターゲット ID として入力します。 |
+| Email_LC_SHA256 | メールアドレスは、SHA256 を使用してハッシュ化し、小文字で区切る必要があります。 この設定は、後で変更することはできません。 | ソース ID が Email_LC_SHA256 名前空間または属性の場合は、`hashed_email` をターゲット ID として入力します。 |
 
 {style="table-layout:auto"}
 
-## 電子メールのハッシュ要件 {#hashing-requirements}
+## メールハッシュ要件 {#hashing-requirements}
 
-電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、生の電子メールアドレスを使用したりできます。
+メールアドレスは、Adobe Experience Platformに取り込む前にハッシュ化したり、生のメールアドレスを使用したりできます。
 
-E メールアドレスの取り込みについては、Experience Platform [バッチ取得の概要](/help/ingestion/batch-ingestion/overview.md).
+Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) を参照してください。
 
-電子メールアドレスを自分でハッシュ化する場合は、次の要件に従ってください。
+メールアドレスを自分でハッシュ化することを選択する場合は、次の要件に必ず従ってください。
 
-* 先頭と末尾の空白を削除します。
-* すべての ASCII 文字を小文字に変換します。
-* In `gmail.com` 電子メールアドレスで、電子メールアドレスのユーザー名部分から次の文字を削除します。
-   * ピリオド (. （ASCII コード 46）)。 例えば、normalize `jane.doe@gmail.com` から `janedoe@gmail.com`.
-   * プラス記号 (+ （ASCII コード 43）) とそれ以降のすべての文字。 例えば、normalize `janedoe+home@gmail.com` から `janedoe@gmail.com`.
+* 先頭と末尾のスペースを削除します。
+* ASCII 文字をすべて小文字に変換します。
+* メ `gmail.com` ルアドレスのユーザー名部分から、以下の文字を削除します。
+   * ピリオド（. （ASCII コード 46））。 例えば、`jane.doe@gmail.com` を `janedoe@gmail.com` に正規化します。
+   * プラス記号（+ （ASCII コード 43））とそれに続くすべての文字。 例えば、`janedoe+home@gmail.com` を `janedoe@gmail.com` に正規化します。
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -73,8 +73,8 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | トレードデスクの宛先で使用される識別子（電子メールまたはハッシュ化された電子メール）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL 日別バッチ]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルが更新されると、プロファイル (ID) は、宛先プラットフォームの下流にある 1 日 1 回更新されます。 詳細を表示： [バッチエクスポート](/help/destinations/destination-types.md#file-based). |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | Trade Desk 宛先で使用される識別子（メールまたはハッシュ化されたメール）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL 日別バッチ]** | オーディエンスの評価に基づいてExperience Platform内でプロファイルを更新すると、プロファイル（ID）は 1 日 1 回ダウンストリームの宛先プラットフォームで更新されます。 詳しくは、[ バッチエクスポート ](/help/destinations/destination-types.md#file-based) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -82,68 +82,68 @@ E メールアドレスの取り込みについては、Experience Platform [バ
 
 ### 宛先に対する認証 {#authenticate}
 
-[!DNL The Trade Desk] CRM 宛先は毎日のバッチファイルアップロードで、ユーザーによる認証は必要ありません。
+CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロードであり、ユーザーによる認証を必要としません。
 
-### 宛先の詳細を入力 {#fill-in-details}
+### 宛先の詳細の入力 {#fill-in-details}
 
-オーディエンスデータを宛先に送信またはアクティブ化する前に、独自の宛先プラットフォームへの接続を設定する必要があります。 この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)するとき、次の情報を指定する必要があります。
+オーディエンスデータを宛先に送信または有効化する前に、独自の宛先プラットフォームへの接続を設定する必要があります。 この宛先を[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL アカウントタイプ]**：を選択してください。 **[!UICONTROL 既存のアカウント]** オプション。
+* **[!UICONTROL アカウントタイプ]**: 「**[!UICONTROL 既存のアカウント]**」オプションを選択してください。
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL 広告主 ID]**: [!DNL Trade Desk Advertiser ID]は、 [!DNL Trade Desk] アカウントマネージャーまたは次の場所にあります： [!DNL Advertiser Preferences] （内） [!DNL Trade Desk] UI
+* **[!UICONTROL 広告主 ID]**：お使いの [!DNL Trade Desk Advertiser ID]。[!DNL Trade Desk] アカウントマネージャーで共有するか、[!DNL Trade Desk] UI の [!DNL Advertiser Preferences] にあります。
 
-![宛先の詳細を入力する方法を示す Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![ 宛先の詳細を入力する方法を示す Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 Experience Platform [データガバナンスの概要](/help/data-governance/policies/overview.md) を参照してください。
+宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform[ データガバナンスの概要 ](/help/data-governance/policies/overview.md) を参照してください。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* 書き出す *id*、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-読み取り [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md) 宛先に対するオーディエンスのアクティブ化の手順については、を参照してください。
+宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
 
-Adobe Analytics の **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールおよびファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
+**[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
-![オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![ オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->アクティブ化されたすべてのオーディエンス [!DNL The Trade Desk] CRM の宛先は、毎日の頻度とフルファイルエクスポートに自動的に設定されます。
+>CRM 宛先に対してアクティブ化 [!DNL The Trade Desk] れたすべてのオーディエンスは、毎日の頻度と完全なファイル書き出しに自動的に設定されます。
 
-![オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![ オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
-Adobe Analytics の **[!UICONTROL マッピング]** 」ページで、属性または id 名前空間をソース列から選択し、ターゲット列にマッピングする必要があります。
+**[!UICONTROL マッピング]** ページでは、ソース列から属性または ID 名前空間を選択し、ターゲット列にマッピングする必要があります。
 
-![オーディエンスのアクティベーションをマッピングするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Audience Activation をマッピングするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-以下に、オーディエンスをアクティブ化する際の正しい ID マッピングの例を示します。 [!DNL The Trade Desk] CRM の宛先。
+以下に、オーディエンスを CRM 宛先に対してアクティブ化する際の、正しい ID マッピング [!DNL The Trade Desk] 例を示します。
 
 >[!IMPORTANT]
 >
-> [!DNL The Trade Desk] CRM 宛先は、同じアクティベーションフロー内の ID として、生の電子メールアドレスおよびハッシュ化された電子メールアドレスを受け取りません。 生の電子メールアドレスとハッシュ化された電子メールアドレスに対して、個別のアクティベーションフローを作成します。
+> CRM 宛先 [!DNL The Trade Desk]、生のメールアドレスとハッシュ化されたメールアドレスを、同じアクティベーションフローの ID として受け入れません。 生のメールアドレスとハッシュ化されたメールアドレスに対して別々のアクティベーションフローを作成します。
 
-ソースフィールドを選択しています。
+ソースフィールドを選択中：
 
-* を選択します。 `Email` データ取り込み時に生の電子メールアドレスを使用する場合は、名前空間または属性をソース id として指定します。
-* を選択します。 `Email_LC_SHA256` 名前空間または属性（Platform へのデータ取り込み時に顧客の電子メールアドレスをハッシュ化した場合）。
+* データ取り込み時に生のメールアドレスを使用する場合は、ソース ID として `Email` 名前空間または属性を選択します。
+* Platform へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、`Email_LC_SHA256` 名前空間または属性をソース ID として選択します。
 
-ターゲットフィールドの選択：
+ターゲットフィールドを選択：
 
-* 入力  `email` ソースの名前空間または属性がターゲット ID として使用される場合 `Email`.
-* 入力  `hashed_email` ソースの名前空間または属性がターゲット ID として使用される場合 `Email_LC_SHA256`.
+* ソース名前空間または属性が `Email` 定されている場合に、ターゲット ID として `email` を入力します。
+* ソース名前空間または属性が `Email_LC_SHA256` 定されている場合に、ターゲット ID として `hashed_email` を入力します。
 
-## データ書き出しの検証 {#validate}
+## データの書き出しを検証 {#validate}
 
-データがExperience Platformから、およびに正しくエクスポートされたことを検証するには、以下を実行します。 [!DNL The Trade Desk]を使用する場合は、内のAdobe1PD データタイルの下にオーディエンスを探してください。 [!DNL The Trade Desk] データ管理プラットフォーム (DMP)。 次に、内で対応する ID を見つける手順を示します。 [!DNL Trade Desk] UI:
+データがExperience Platformからおよび [!DNL The Trade Desk] に正しく書き出されていることを検証するには、[!DNL The Trade Desk] Data Management Platform （DMP）内のAdobe 1PD データタイルの下にあるオーディエンスを見つけてください。 [!DNL Trade Desk] UI 内で対応する ID を見つける手順は次のとおりです。
 
-1. まず、 **[!UICONTROL データ]** タブとレビュー **[!UICONTROL ファーストパーティ]**.
-2. ページを下にスクロールし、の下に移動します。 **[!UICONTROL インポートされたデータ]**&#x200B;を見つけると、 **[!UICONTROL Adobe1PD タイル]**.
-3. をクリックします**[!UICONTROL ADOBE1PD]**タイルに表示され、 [!DNL Trade Desk] 広告主の宛先。 また、検索機能を使用することもできます。
-4. セグメント ID # fromExperience Platformは、 [!DNL Trade Desk] UI
+1. まず、「**[!UICONTROL Data]**」タブをクリックし、「**[!UICONTROL First-Party]**」を確認します。
+2. ページを下にスクロールして、**[!UICONTROL Imported Data]** の下に **[!UICONTROL Adobe 1PD タイル]** があります。
+3. **[!UICONTROL  広告 1PD]** タイルをクリックすると、Adobe主の [!DNL Trade Desk] の宛先に対してアクティブ化されたすべてのオーディエンスが一覧表示されます。 検索機能を使用することもできます。
+4. Experience Platformのセグメント ID #が、[!DNL Trade Desk] UI でセグメント名として表示されます。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

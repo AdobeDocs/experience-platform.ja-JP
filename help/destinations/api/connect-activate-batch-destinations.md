@@ -8,7 +8,7 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3411'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
@@ -16,23 +16,23 @@ ht-degree: 73%
 
 >[!IMPORTANT]
 > 
->* 宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
 >
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions).
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
 >
->* エクスポートする *id*、が必要です **[!UICONTROL ID グラフの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png "宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。"){width="100" zoomable="yes"}
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 >
 >[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-このチュートリアルでは、Flow Service API を使用してファイルベースを作成する方法を実演します [メールマーケティングの宛先](../catalog/email-marketing/overview.md)を選択し、新しく作成した宛先へのデータフローを作成し、CSV ファイルを使用して新しく作成した宛先にデータを書き出します。
+このチュートリアルでは、Flow Service API を使用して、ファイルベースの [ メールマーケティングの宛先 ](../catalog/email-marketing/overview.md) を作成し、新しく作成した宛先にデータフローを作成し、CSV ファイルを使用してデータを書き出す方法を実演します。
 
 >[!TIP]
 > 
->Flow Service API を使用してクラウドストレージ宛先に対してデータをアクティブ化する方法については、以下を参照してください [専用 API チュートリアル](/help/destinations/api/activate-segments-file-based-destinations.md).
+>Flow Service API を使用してクラウドストレージの宛先に対してデータをアクティブ化する方法については、[ 専用 API チュートリアル ](/help/destinations/api/activate-segments-file-based-destinations.md) を参照してください。
 
-このチュートリアルでは、を使用します [!DNL Adobe Campaign] 宛先すべての例では同じですが、ファイルベースのメールマーケティングの宛先の場合は手順が同じです。
+このチュートリアルでは、すべての例で [!DNL Adobe Campaign] の宛先を使用しますが、手順はファイルベースのメールマーケティングの宛先で同じです。
 
-![概要 – 宛先の作成およびオーディエンスの有効化の手順](../assets/api/email-marketing/overview.png)
+![ 概要 – 宛先の作成およびオーディエンスのアクティブ化の手順 ](../assets/api/email-marketing/overview.png)
 
 Platform ユーザーインターフェイスを使用して宛先に接続し、データを有効化する場合は、[宛先の接続](../ui/connect-destination.md)および[プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](../ui/activate-batch-profile-destinations.md)に関するチュートリアルを参照してください。
 
@@ -41,7 +41,7 @@ Platform ユーザーインターフェイスを使用して宛先に接続し�
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] では、でオーディエンスを作成できます [!DNL Adobe Experience Platform] から [!DNL Real-Time Customer Profile] データ。
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md):[!DNL Adobe Experience Platform Segmentation Service] を使用すると、[!DNL Real-Time Customer Profile] データから [!DNL Adobe Experience Platform] でオーディエンスを作成できます。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 以下の節では、Platform でバッチ宛先に対してデータを有効化するために必要な追加情報を示します。
@@ -65,7 +65,7 @@ Platform ユーザーインターフェイスを使用して宛先に接続し�
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values-headers}
 
-に対して呼び出しを行うため [!DNL Platform] API を使用する場合、最初にを完了する必要があります。 [認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja). 認証チュートリアルを完了すると、必要な各ヘッダーの値がすべて提供されます [!DNL Experience Platform] API 呼び出し（下図を参照）。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -113,7 +113,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答** 
 
-リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、オーディエンスをに接続して配信する場合 [!DNL Adobe Campaign]で、応答で次のスニペットを探します。
+リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、オーディエンスを接続して [!DNL Adobe Campaign] に配信する場合、応答で次のスニペットを探します。
 
 ```json
 {
@@ -175,7 +175,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `name` | Experience Platform [!DNL Profile store] へのベース接続の名前を指定します。 |
 | `description` | オプションで、ベース接続の説明を指定できます。 |
-| `connectionSpec.id` | の接続仕様 ID を使用します [Experience Platformプロファイルストア](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | [Experience Platformプロファイルストア ](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1` の接続仕様 ID を使用します。 |
 
 {style="table-layout:auto"}
 
@@ -226,7 +226,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `name` | Adobe Experience Platform [!DNL Profile store] へのソース接続の名前を指定します。 |
 | `description` | オプションで、ソース接続の説明を指定できます。 |
-| `connectionSpec.id` | の接続仕様 ID を使用します [Experience Platformプロファイルストア](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | [Experience Platformプロファイルストア ](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1` の接続仕様 ID を使用します。 |
 | `baseConnectionId` | 前の手順で取得したベース接続 ID を使用します。 |
 | `data.format` | `CSV` は現時点で、サポートされている唯一のファイル書き出し形式です。 |
 
@@ -1028,10 +1028,10 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | プロパティ | 説明 |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
-| `{ETAG}` | を取得 `{ETAG}` 前の手順の応答から、 [データフローの作成](#create-dataflow). 前の手順の応答形式には、引用符がエスケープされています。 リクエストのヘッダーには、エスケープされていない値を使用する必要があります。 以下の例を参照してください。 <br> <ul><li>応答の例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag の値は、データフローが正常に更新されるたびに更新されます。 |
-| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス ID を指定します。 アクティブ化するオーディエンスのオーディエンス ID を取得するには、以下を参照してください。 [オーディエンス定義の取得](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) Experience PlatformAPI リファレンスで、を参照してください。 |
+| `{ETAG}` | 前の手順 [ データフローの作成 ](#create-dataflow) の応答から `{ETAG}` を取得します。 前の手順の応答形式には、引用符がエスケープされています。 リクエストのヘッダーには、エスケープされていない値を使用する必要があります。 以下の例を参照してください。<br> <ul><li>応答の例：`"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値：`"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag 値は、データフローが正常に更新されるたびに更新されます。 |
+| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス ID を指定します。 アクティブ化するオーディエンスのオーディエンス ID を取得するには、Experience PlatformAPI リファレンスの [ オーディエンス定義の取得 ](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) を参照してください。 |
 | `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
-| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローにオーディエンスを追加するには、 `add` 操作。 |
+| `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローにオーディエンスを追加するには、`add` 操作を使用します。 |
 | `path` | 更新するフローの部分を定義します。オーディエンスをデータフローに追加するときは、例で指定したパスを使用します。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 | `id` | 宛先データフローに追加するオーディエンスの ID を指定します。 |
@@ -1040,15 +1040,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | 必須。`"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの「[完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」および「[増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
 | `startDate` | オーディエンスが宛先へのプロファイルの書き出しを開始する日付を選択します。 |
 | `frequency` | 必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
-| `triggerType` | の場合 *バッチ宛先* のみ。 このフィールドは、 `"DAILY_FULL_EXPORT"` モード `frequency` セレクター。 <br> 必須。 <br> <ul><li>を選択 `"AFTER_SEGMENT_EVAL"` 毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブをすぐに実行するには： これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>を選択 `"SCHEDULED"` 特定の時間にアクティベーションジョブを実行する これにより、Experience Platformプロファイルデータは毎日同じ時刻に書き出されます。アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合、を追加する必要があります。 `startTime` は、毎日の書き出しが発生する UTC の時刻を示します。</li></ul> |
-| `endDate` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> 選択時には適用されません `"exportMode":"DAILY_FULL_EXPORT"` および `"frequency":"ONCE"`. <br> オーディエンスメンバーが宛先への書き出しを停止する日付を設定します。 |
-| `startTime` | の場合 *バッチ宛先* のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> 必須。 オーディエンスのメンバーを含んだファイルを生成し、宛先に書き出す時間を選択します。 |
+| `triggerType` | *バッチ宛先* の場合のみ。 このフィールドは、`frequency` セレクターで `"DAILY_FULL_EXPORT"` モードを選択する場合にのみ必要です。 <br> 必須。<br> <ul><li>毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行するには、「`"AFTER_SEGMENT_EVAL"`」を選択します。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>`"SCHEDULED"` を選択して、特定の時間にアクティベーションジョブを実行します。 これにより、Experience Platformプロファイルデータは毎日同じ時刻に書き出されます。アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、`startTime` を追加して、日次書き出しが発生する UTC の時間を示す必要もあります。</li></ul> |
+| `endDate` | *バッチ宛先* の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> `"exportMode":"DAILY_FULL_EXPORT"` と `"frequency":"ONCE"` を選択している場合は適用されません。 <br> オーディエンスメンバーが宛先への書き出しを停止する日付を設定します。 |
+| `startTime` | *バッチ宛先* の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> 必須。 オーディエンスのメンバーを含んだファイルを生成し、宛先に書き出す時間を選択します。 |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> 参照： [データフロー内のオーディエンスのコンポーネントを更新](/help/destinations/api/update-destination-dataflows.md#update-segment) 書き出したオーディエンスの様々なコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法を説明します。
+> 書き出したオーディエンスの様々なコンポーネント（ファイル名テンプレート、書き出し時間など）を更新する方法について詳しくは、[ データフロー内のオーディエンスのコンポーネントの更新 ](/help/destinations/api/update-destination-dataflows.md#update-segment) を参照してください。
 
 **応答**
 
@@ -1085,7 +1085,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **応答** 
 
-返される応答にはを含める必要があります。 `transformations` 前の手順で送信したオーディエンスとプロファイル属性をパラメーター化します。 レスポンス内のサンプル `transformations` パラメーターは次のようになります。
+返される応答には、前の手順で送信したオーディエンスとプロファイル属性が `transformations` パラメーターに含まれている必要があります。 レスポンス内のサンプル `transformations` パラメーターは次のようになります。
 
 ```json
 "transformations":[
@@ -1240,7 +1240,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 こちらを参照してください [API ステータスコード](/help/landing/troubleshooting.md#api-status-codes) および [リクエストヘッダーエラー](/help/landing/troubleshooting.md#request-header-errors) エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドを参照してください。
+このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

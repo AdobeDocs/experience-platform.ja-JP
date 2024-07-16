@@ -4,8 +4,8 @@ description: Adobe Experience Platform でタグをすぐに稼動させる方�
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1525'
-ht-degree: 92%
+source-wordcount: '1521'
+ht-degree: 90%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 92%
 
 タグは Adobe ID と完全に統合されています。 ユーザー権限は、他のアドビ製品や [!DNL Creative Cloud]、[!DNL Document Cloud]、Experience Cloud のソリューションで、Admin Console を通じて管理されます。
 
-タグには、権限ベースのユーザー管理システムがあります。つまり、個々の権限を明示的に付与する必要があります。これらの権限はグループに割り当てられ、ユーザーはアクセス権を取得するために適切なグループに追加されます。組織がデータ収集にアクセスできる場合でも、管理者が明示的に権限を付与するまで、個々のユーザーは何も実行できません。
+タグには、権限ベースのユーザー管理システムがあります。つまり、個々の権限を明示的に付与する必要があります。これらの権限はグループに割り当てられ、ユーザーはアクセス権を取得するために適切なグループに追加されます。組織がデータ収集へのアクセス権を持っている場合でも、管理者から明示的に権限が付与されるまで、個々のユーザーは何も実行できません。
 
-グループを作成し、タグのユーザーを追加する方法について詳しくは、 [データ収集権限ガイド](../../collection/permissions.md).
+グループを作成し、タグのユーザーを追加する方法について詳しくは、[ データ収集権限ガイド ](../../collection/permissions.md) を参照してください。
 
 ## 2. にログインする
 
-タグ権限をAdobe IDに追加したら、Experience PlatformUI またはデータ収集 UI にログインする必要があります。 これをおこなうには、 [Experience Cloudログイン画面](https://experience.adobe.com/)を選択し、 **[!UICONTROL データ収集]** または **[!UICONTROL Experience Platform]**.
+タグ権限がAdobe IDに追加されたら、Experience PlatformUI またはデータ収集 UI にログインする必要があります。 これを行うには、[Experience Cloudログイン画面 ](https://experience.adobe.com/) に直接移動し、「**[!UICONTROL データ収集]**」または「]**4}Experience Platform」を選択します。**[!UICONTROL 
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Platform のタグを真一意にするのは、誰でもこれらの拡張機�
 * セッションとローカルストレージ
 * その他すべて
 
-データ要素が定義されている場合は、UI の任意の場所で、任意の拡張機能で要素を使用できます。 詳しくは、 [データ要素](../ui/managing-resources/data-elements.md) のドキュメントを参照してください。
+データ要素が定義されたら、UI の任意の場所で要素を使用し、任意の拡張機能を実行できます。 詳しくは、 [データ要素](../ui/managing-resources/data-elements.md) のドキュメントを参照してください。
 
 **ルール**&#x200B;は、実装の論理的な中心であり、サイト上のすべてのタグの内容、タイミング、場所、および方法を制御します。イベントを定義し、条件と例外を設定して、アクションと順序を定義します。最後に、変更をパブリッシュして結果を確認します。詳しくは、 [ルール](../ui/managing-resources/rules.md) を参照してください。
 
@@ -135,5 +135,5 @@ Web ページ、ホスティング場所、タグの間の関係を理解する�
 タグについて詳しくは、次のリソースを参照してください。
 
 * **[データ収集コミュニティ](https://forums.adobe.com/community/experience-cloud/platform/launch)**：質問に回答、アイデアを送信、他のユーザーのアイデアに投票します。Adobe ID でログインします。
-* **[開発者向けドキュメント](../api/overview.md)**：タグ開発者コミュニティに参加し、拡張機能を作成またはタグ API を使用します
+* **[開発者ドキュメント](../api/overview.md)**: タグ開発者コミュニティに参加して、拡張機能を構築したり、タグ API を使用したりします
 * **[Tutorials の概要](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=ja)**：これらのドキュメントでは、Android アプリのイベント転送や Mobile SDK など、タグの概念について説明します。

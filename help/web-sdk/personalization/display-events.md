@@ -1,6 +1,6 @@
 ---
 title: Web SDK での表示イベントの管理
-description: この記事では、表示イベントの概要と、Web SDK での表示イベントの使用方法について説明します。
+description: この記事では、表示イベントの概要と、Web SDK での使用方法について説明します。
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
@@ -11,51 +11,51 @@ ht-degree: 0%
 
 # Web SDK での表示イベントの管理
 
-Web SDK は、表示イベントを使用して、特定のパーソナライゼーションコンテンツがページに表示された際に、パーソナライゼーションまたは Analytics サービスに通知します。
+表示イベントは、特定のパーソナライゼーションコンテンツがページに表示されたときに、パーソナライゼーションサービスまたは分析サービスに通知するために Web SDK で使用されます。
 
-表示イベントを送信すると、パーソナライゼーション指標の精度が向上し、ページに表示される内容の正確な概要が得られます。
+表示イベントを送信すると、パーソナライゼーション指標の精度が向上し、ページ上でユーザーに表示される内容の正確な概要を把握できます。
 
-Web SDK では、次の 2 つの方法で表示イベントを送信できます。
+Web SDK を使用すると、次の 2 つの方法で表示イベントを送信できます。
 
-* [自動](#send-automatically)に含まれるのは、パーソナライズされたコンテンツがページにレンダリングされた直後です。 方法に関するドキュメントを参照してください。 [パーソナライズされたコンテンツをレンダリング](rendering-personalization-content.md) を参照してください。
-* [手動](#send-sendEvent-calls)、以降 `sendEvent` 呼び出し。
+* パーソナライズされたコンテンツがページにレンダリングされた直後、[ 自動的に ](#send-automatically)。 詳しくは、パーソナライズされたコンテンツの [ レンダリング ](rendering-personalization-content.md) 方法に関するドキュメントを参照してください。
+* [ 手動 ](#send-sendEvent-calls)、後続の `sendEvent` 呼び出しを使用して実行します。
 
 >[!NOTE]
 >
->イベントの `applyPropositions` 関数に置き換えます。
+>`applyPropositions` 関数を呼び出しても、表示イベントは自動的には送信されません。
 
-## 表示イベントを自動的に送信する {#send-automatically}
+## 表示イベントの自動送信 {#send-automatically}
 
-イベントはパーソナライゼーションが読み込まれた直後に送信されるので、表示イベントを送信すると、より正確な Analytics 指標が自動的に提供されます。 また、この実装では、実装方法がより効率的になります。
+表示イベントを送信すると、パーソナライゼーションが読み込まれた直後にイベントが送信されるので、より正確な分析指標が自動的に提供されます。 また、この実装により、より効率的な実装方法が提供されます。
 
-パーソナライズされたコンテンツがページにレンダリングされた後で表示イベントを自動的に送信するには、次のパラメーターを設定する必要があります。
+パーソナライズされたコンテンツがページにレンダリングされた後に表示イベントを自動的に送信するには、次のパラメーターを設定する必要があります。
 
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: true` または指定されていません
 
-Web SDK は、 `sendEvent` を呼び出します。
+Web SDK は、`sendEvent` 呼び出しの結果パーソナライゼーションがレンダリングされた直後に表示イベントを送信します。
 
-## 後続の sendEvent 呼び出しで表示イベントを送信する {#send-sendEvent-calls}
+## 後続の sendEvent 呼び出しで表示イベントを送信 {#send-sendEvent-calls}
 
-比較対象 [自動的に](#send-automatically) 表示イベントの送信 ( 後続の `sendEvent` 呼び出しでは、この呼び出しにページ読み込みに関する詳細を含めることもできます。 これは、パーソナライズされたコンテンツを要求する際に利用できなかった、追加の情報である可能性があります。
+表示イベントを [ 自動的に ](#send-automatically) 送信する場合と比較して、後続の `sendEvent` 呼び出しに含める場合は、呼び出しにページの読み込みに関する詳細な情報を含めることもできます。 これは、パーソナライズされたコンテンツのリクエスト時には利用できなかった追加情報の場合があります。
 
-また、 `sendEvent` 呼び出しを使用すると、Adobe Analyticsの使用時に発生するバウンス率のエラーを最小限に抑えることができます。
+さらに、`sendEvent` 呼び出しで表示イベントを送信することで、Adobe Analyticsを使用する際のバウンス率エラーを最小限に抑えることができます。
 
 >[!IMPORTANT]
 >
->手動でレンダリングした提案を使用する場合、表示イベントは、 `sendEvent` 呼び出し。 この場合、表示イベントを自動的に送信することはできません。
+>手動でレンダリングされた提案を使用する場合、表示イベントは `sendEvent` 呼び出しを介してのみサポートされます。 この場合、表示イベントを自動的に送信することはできません。
 
 ### 自動的にレンダリングされた提案の表示イベントを送信 {#auto-rendered-propositions}
 
-自動的にレンダリングされた提案に対して表示イベントを送信するには、 `sendEvent` 呼び出し
+自動的にレンダリングされた提案の表示イベントを送信するには、`sendEvent` 呼び出しで次のパラメーターを設定する必要があります。
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` （ページヒットの上位）
+* ページヒット数の上位に対する `personalization.sendDisplayNotifications: false`
 
-表示イベントを送信するには、 `sendEvent` 次を使用 `personalization.includePendingDisplayNotifications: true`
+表示イベントを送信するには、`personalization.includePendingDisplayNotifications: true` で `sendEvent` を呼び出します
 
-### 手動でレンダリングした提案の表示イベントを送信 {#manually-rendered-propositions}
+### 手動でレンダリングされた提案の表示イベントを送信 {#manually-rendered-propositions}
 
-手動でレンダリングした提案の表示イベントを送信するには、それらを `_experience.decisioning.propositions` XDM フィールド ( `id`, `scope`、および `scopeDetails` 提案からのフィールド。
+手動でレンダリングした提案の表示イベントを送信するには、提案の `id`、`scope`、`scopeDetails` のフィールドを含め、`_experience.decisioning.propositions` XDM フィールドにそれらを含める必要があります。
 
-さらに、 `include _experience.decisioning.propositionEventType.display` ～に向かって `1`.
+さらに、「`include _experience.decisioning.propositionEventType.display`」フィールドを `1` に設定します。

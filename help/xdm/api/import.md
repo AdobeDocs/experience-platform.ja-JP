@@ -1,32 +1,32 @@
 ---
-title: 読み込み API エンドポイント
-description: スキーマレジストリ API の/import エンドポイントを使用すると、組織とサンドボックスの間で XDM リソースを共有できます。
+title: API エンドポイントのインポート
+description: Schema Registry API の/import エンドポイントを使用すると、組織とサンドボックスの間で XDM リソースを共有できます。
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 18%
+source-wordcount: '288'
+ht-degree: 17%
 
 ---
 
-# インポートエンドポイント
+# 読み込みエンドポイント
 
-この `/rpc/import` エンドポイント [!DNL Schema Registry] API を使用すると、生成された書き出しペイロードから Experience Data Model(XDM) リソースを作成できます。 書き出しペイロードは、次の 2 つのソースから作成できます。
+[!DNL Schema Registry] API の `/rpc/import` エンドポイントを使用すると、生成された書き出しペイロードからエクスペリエンスデータモデル（XDM）リソースを作成できます。 書き出しペイロードは、次の 2 つのソースから作成できます。
 
-* この [`/rpc/export` endpoint](./export.md) 既存の XDM リソースから書き出しペイロードを作成し、サンドボックス間でリソースを共有できます。
-* この [`/rpc/csv2schema` endpoint](./csv-to-schema.md) CSV テンプレートから書き出しペイロードを作成します。
+* [`/rpc/export` エンドポイントは ](./export.md) 既存の XDM リソースから書き出しペイロードを作成し、サンドボックス間でリソースを共有できるようにします。
+* [`/rpc/csv2schema` エンドポイント ](./csv-to-schema.md) は、CSV テンプレートから書き出しペイロードを作成します。
 
-書き出しペイロードを作成したら、 `/rpc/import` エンドポイント：任意のサンドボックスでリソース（およびすべての依存リソース）を生成します。
+書き出しペイロードを作成したら、`/rpc/import` エンドポイントを使用して、選択したサンドボックスにリソース（およびすべての依存リソース）を生成できます。
 
 ## はじめに
 
-この `/rpc/import` エンドポイントが [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+`/rpc/import` エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。 先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
-この `/rpc/import` endpoint は、 [!DNL Schema Registry]. の他のエンドポイントとは異なり、 [!DNL Schema Registry] API、RPC エンドポイントは、 `Accept` または `Content-Type`、およびを使用しない `CONTAINER_ID`. 代わりに、 `/rpc` 名前空間と呼ばれます。
+`/rpc/import` エンドポイントは、[!DNL Schema Registry] でサポートされているリモート プロシージャ コール （RPC）の一部です。 [!DNL Schema Registry] API の他のエンドポイントとは異なり、RPC エンドポイントには `Accept` や `Content-Type` などの追加のヘッダーは必要なく、`CONTAINER_ID` も使用しません。 代わりに、以下の API 呼び出しで示すように、`/rpc` 名前空間を使用する必要があります。
 
-## リソースのインポート {#import}
+## リソースの読み込み {#import}
 
-XDM リソースの書き出しペイロードを生成したら、そのペイロードを `/import` エンドポイントを使用して、そのリソースをターゲット組織とサンドボックスに読み込みます。
+XDM リソースの書き出しペイロードを生成したら、`/import` エンドポイントに対するPOSTリクエストでそのペイロードを使用して、そのリソースをターゲット組織およびサンドボックスに読み込むことができます。
 
 **API 形式**
 
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **リクエスト**
 
-次のリクエストは、の呼び出しから返されたペイロードを [`/rpc/export` endpoint](./export.md) フィールドグループをインポートするには (`Restaurant`) を新しい組織とサンドボックスに追加します。これは、 `x-gw-ims-org-id` および `x-sandbox-name` ヘッダーと呼ばれます。
+次のリクエストは、[`/rpc/export` エンドポイントへの呼び出しから返されたペイロードを受け取り ](./export.md) それぞれ `x-gw-ims-org-id` ヘッダーと `x-sandbox-name` ヘッダーによって決定されるように、フィールドグループ（`Restaurant`）を新しい組織とサンドボックスに読み込みます。
 
 ```shell
 curl -X POST \
@@ -187,7 +187,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、読み込まれたリソースのリストと、適切なテナント ID および組織の値が適用された状態で返されます。
+応答が成功すると、読み込んだリソースのリストと、適切なテナント ID および組織の値が返されます。
 
 ```json
 [

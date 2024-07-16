@@ -1,6 +1,6 @@
 ---
-title: ソースをテストして送信する
-description: 次のドキュメントでは、フローサービス API を使用して新しいソースをテストおよび検証し、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを統合する手順を説明します。
+title: Sourceのテストと送信
+description: 次のドキュメントでは、Flow Service API を使用して新しいソースをテストおよび検証し、セルフサービスソース（ストリーミング SDK）を通じて新しいソースを統合する手順を説明します。
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
 badge: ベータ版
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
@@ -14,99 +14,99 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->セルフサービスソースストリーミング SDK はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>セルフサービスソース Streaming SDK はベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-セルフサービスソース（ストリーミング SDK）を使用して新しいソースをAdobe Experience Platformに統合する最後の手順は、新しいソースをテストして送信することです。 接続の仕様を完了し、ストリーミングフローの仕様を更新したら、API または UI を使用して、ソースの機能のテストを開始できます。 成功したら、Adobe担当者に問い合わせて、新しいソースを送信できます。
+セルフサービスソース（ストリーミング SDK）を使用して新しいソースをAdobe Experience Platformに統合する最後の手順は、新しいソースをテストして送信することです。 接続仕様を完了し、ストリーミングフロー仕様を更新したら、API または UI を使用してソースの機能のテストを開始できます。 成功したら、Adobe担当者に連絡して、新しいソースを送信できます。
 
-次のドキュメントでは、 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+次のドキュメントでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してソースをテストおよびデバッグする手順を説明します。
 
 ## はじめに
 
 * Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)のガイドを参照してください。
-* Platform API の資格情報を生成する方法について詳しくは、 [Experience PlatformAPI の認証とアクセス](../../../landing/api-authentication.md).
-* の設定方法について詳しくは、 [!DNL Postman] Platform API については、 [開発者コンソールの設定および [!DNL Postman]](../../../landing/postman.md).
-* テストおよびデバッグプロセスに役立つように、 [セルフサービスソースの検証コレクションと環境をここに配置](../assets/sdk-verification.zip) およびは、以下に示す手順に従います。
+* Platform API の資格情報の生成方法について詳しくは、[Experience PlatformAPI の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
+* Platform API の [!DNL Postman] の設定方法について詳しくは、[ 開発者コンソールとの設定  [!DNL Postman]](../../../landing/postman.md) のチュートリアルを参照してください。
+* テストとデバッグプロセスに役立つように、[ セルフサービスソースの検証コレクションと環境をこちらからダウンロードし ](../assets/sdk-verification.zip) 以下の手順に従ってください。
 
 ## API を使用したソースのテスト
 
-API を使用してソースをテストするには、 [セルフサービスソースの検証コレクションと環境](../assets/sdk-verification.zip) オン [!DNL Postman] を使用して、ソースに関連する適切な環境変数を指定する場合。
+API を使用してソースをテストするには、ソースに関連する適切な環境変数を指定しながら、[!DNL Postman] で [ セルフサービスソース検証コレクションおよび環境 ](../assets/sdk-verification.zip) を実行する必要があります。
 
-テストを開始するには、まず、次のようにしてコレクションと環境を設定する必要があります。 [!DNL Postman]. 次に、テストする接続仕様 ID を指定します。
+テストを開始するには、まず [!DNL Postman] でコレクションと環境を設定する必要があります。 次に、テストする接続仕様 ID を指定します。
 
 >[!NOTE]
 >
->以下の変数の例はすべて、更新が必要なプレースホルダー値です ( ただし、 `flowSpecificationId` および `targetConnectionSpecId`：固定値です。
+>以下に示すサンプル変数はすべて、更新が必要なプレースホルダー値です。ただし、`flowSpecificationId` と `targetConnectionSpecId` は固定値です。
 
 | パラメーター | 説明 | 例 |
 | --- | --- | --- |
-| `x-api-key` | Experience PlatformAPI の呼び出しを認証するために使用される一意の識別子。 に関するチュートリアルを参照してください。 [Experience PlatformAPI の認証とアクセス](../../../landing/api-authentication.md) 」を参照してください。 `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `x-gw-ims-org-id` | 製品やサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる企業エンティティ。 に関するチュートリアルを参照してください。 [開発者コンソールの設定および [!DNL Postman]](../../../landing/postman.md) を参照してください。 `x-gw-ims-org-id` 情報。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Experience PlatformAPI の呼び出しを完了するために必要な認証トークン。 に関するチュートリアルを参照してください。 [Experience PlatformAPI の認証とアクセス](../../../landing/api-authentication.md) 」を参照してください。 `authorizationToken`. | `Bearer authorizationToken` |
+| `x-api-key` | Experience PlatformAPI への呼び出しの認証に使用される一意の ID。 サー `x-api-key` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-gw-ims-org-id` | 製品およびサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる法人組織。 `x-gw-ims-org-id` ーザー情報の取得方法については、[Developer Console の設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `authorizationToken` | Experience PlatformAPI を呼び出すために必要な認証トークン。 サー `authorizationToken` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer authorizationToken` |
 | `schemaId` | ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。 | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | スキーマに対応する一意のバージョン。 | `application/vnd.adobe.xed-full-notext+json; version=1` |
-| `schemaAltId` | The `meta:altId` それは横に返される  `schemaId` 新しいスキーマを作成する際に使用します。 | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `schemaAltId` | 新しいスキーマを作成する際に `schemaId` と共に返される `meta:altId`。 | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。 | `5f3c3cedb2805c194ff0b69a` |
-| `mappings` | マッピングセットを使用すると、ソーススキーマ内のデータと宛先スキーマのデータとのマッピング方法を定義できます。マッピングの作成方法について詳しくは、 [API を使用したマッピングセットの作成](../../../data-prep/api/mapping-set.md). | `[{"destinationXdmPath":"person.name.firstName","sourceAttribute":"email.email_id","identity":false,"version":0},{"destinationXdmPath":"person.name.lastName","sourceAttribute":"email.activity.action","identity":false,"version":0}]` |
+| `mappings` | マッピングセットを使用すると、ソーススキーマ内のデータと宛先スキーマのデータとのマッピング方法を定義できます。マッピングの作成方法に関する詳細な手順については、[API を使用したマッピングセットの作成 ](../../../data-prep/api/mapping-set.md) に関するチュートリアルを参照してください。 | `[{"destinationXdmPath":"person.name.firstName","sourceAttribute":"email.email_id","identity":false,"version":0},{"destinationXdmPath":"person.name.lastName","sourceAttribute":"email.activity.action","identity":false,"version":0}]` |
 | `mappingId` | マッピングセットに対応する一意の ID。 | `bf5286a9c1ad4266baca76ba3adc9366` |
-| `connectionSpecId` | ソースに対応する接続仕様 ID。 これは、次の後に生成された ID です [新しい接続仕様の作成](./create.md). | `2e8580db-6489-4726-96de-e33f5f60295f` |
-| `flowSpecificationId` | のフロー仕様 ID `GenericStreamingAEP`. **これは固定値です**. | `e77fde5a-22a8-11ed-861d-0242ac120002` |
-| `targetConnectionSpecId` | 取り込んだデータが格納されるデータレイクのターゲット接続 ID。 **これは固定値です**. | `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
-| `verifyWatTimeInSecond` | フロー実行の完了を確認する際に従う指定された時間間隔です。 | `40` |
-| `startTime` | データフローの指定された開始時間。 開始時刻は UNIX 時刻でフォーマットする必要があります。 | `1597784298` |
+| `connectionSpecId` | ソースに対応する接続仕様 ID。 これは、[ 新しい接続仕様の作成 ](./create.md) 後に生成した ID です。 | `2e8580db-6489-4726-96de-e33f5f60295f` |
+| `flowSpecificationId` | `GenericStreamingAEP` のフロー仕様 ID。 **固定値です**。 | `e77fde5a-22a8-11ed-861d-0242ac120002` |
+| `targetConnectionSpecId` | 取り込まれたデータが取り込まれたデータレイクのターゲット接続 ID。 **固定値です**。 | `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
+| `verifyWatTimeInSecond` | フロー実行の完了を確認するときに従う、指定された時間間隔です。 | `40` |
+| `startTime` | データフローに指定された開始時間。 開始時間は UNIX 時間でフォーマットする必要があります。 | `1597784298` |
 
-すべての環境変数を指定したら、 [!DNL Postman] インターフェイス。 Adobe Analytics の [!DNL Postman] インターフェイスで、省略記号 (**...**&#x200B;の横に ) [!DNL Sources SSSs Verification Collection] 次に、「 **コレクションを実行**.
+環境変数をすべて指定したら、[!DNL Postman] インターフェイスを使用してコレクションの実行を開始できます。 [!DNL Postman] インターフェイスで、[!DNL Sources SSSs Verification Collection] の横にある省略記号（**...**）を選択し、「**コレクションを実行**」を選択します。
 
-![ランナー](../assets/runner.png)
+![ ランナー ](../assets/runner.png)
 
-The [!DNL Runner] インターフェイスが表示され、データフローの実行順序を設定できます。 選択 **SSS 検証コレクションを実行** コレクションを実行します。
+[!DNL Runner] インターフェイスが表示され、データフローの実行順序を設定できます。 「**SSS 検証コレクションを実行**」を選択して、コレクションを実行します。
 
 >[!NOTE]
 >
->無効にできます **フローを削除** Platform UI でソース監視ダッシュボードを使用する場合は、実行順序チェックリストから ただし、テストが完了したら、テストフローが削除されていることを確認する必要があります。
+>Platform UI でソース監視ダッシュボードを使用する場合は、実行順序チェックリストから **フローを削除** を無効にできます。 ただし、テストが完了したら、テストフローが削除されていることを確認する必要があります。
 
 ![run-collection](../assets/run-collection.png)
 
 ## UI を使用したソースのテスト
 
-UI でソースをテストするには、Platform UI で組織のサンドボックスのソースカタログに移動します。 ここから、新しいソースが *ストリーミング* カテゴリ。
+UI でソースをテストするには、Platform UI で組織のサンドボックスのソースカタログに移動します。 ここから、新しいソースが *ストリーミング* カテゴリの下に表示されます。
 
-新しいソースがサンドボックスで使用できるようになったら、ソースワークフローに従って機能をテストする必要があります。 最初に、「 」を選択します。 **[!UICONTROL 設定]**.
+サンドボックスで新しいソースを使用できるようになったら、ソースワークフローに従って機能をテストする必要があります。 開始するには、「**[!UICONTROL 設定]**」を選択します。
 
-![新しいストリーミングソースを表示するソースカタログ。](../assets/testing/catalog-test.png)
+![ 新しいストリーミングソースを表示するソースカタログ ](../assets/testing/catalog-test.png)
 
-[!UICONTROL データを追加]手順が表示されます。ソースがデータをストリーミングできるかどうかをテストするには、インターフェイスの左側を使用して、をアップロードします。 [サンプルの JSON データ](../assets/testing/raw.json.zip). データがアップロードされると、インターフェイスの右側が更新され、データのファイル階層のプレビューが表示されます。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
+[!UICONTROL データを追加]手順が表示されます。ソースがデータをストリーミングできるかどうかをテストするには、インターフェイスの左側を使用して [ サンプル JSON データ ](../assets/testing/raw.json.zip) をアップロードします。 データがアップロードされると、インターフェイスの右側が更新され、データのファイル階層のプレビューが表示されます。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
-![ソースワークフローのデータ追加手順。取り込み前にデータをアップロードしてプレビューできます。](../assets/testing/add-data-test.png)
+![ 取り込み前にデータのアップロードとプレビューを行えるソースワークフローのデータを追加ステップ ](../assets/testing/add-data-test.png)
 
-[!UICONTROL データフロー詳細]ページでは、既存のデータセットと新しいデータセットのどちらを使用するかを選択できます。このプロセスの間に、データをプロファイルに取り込むように設定し、次のような設定を有効にすることもできます。 [!UICONTROL エラー診断] および [!UICONTROL 部分取り込み].
+[!UICONTROL データフロー詳細]ページでは、既存のデータセットと新しいデータセットのどちらを使用するかを選択できます。このプロセスの間に、プロファイルに取り込むデータを設定し、[!UICONTROL  エラー診断 ] や [!UICONTROL  部分取り込み ] などの設定を有効にすることもできます。
 
-テストの場合は、「 」を選択します。 **[!UICONTROL 新しいデータセット]** 出力データセット名を指定します。 この手順の間に、オプションで説明を入力して、データセットにさらに情報を追加することもできます。 次に、「[!UICONTROL 詳細検索]」オプションを使用するか、ドロップダウンメニューで既存のスキーマのリストをスクロールして、マッピングするスキーマを選択します。スキーマを選択したら、データフローの名前と説明を指定します。
+テストするには、「**[!UICONTROL 新しいデータセット]**」を選択し、出力データセット名を入力します。 この手順では、データセットにさらに情報を追加するためのオプションの説明を入力することもできます。 次に、「[!UICONTROL 詳細検索]」オプションを使用するか、ドロップダウンメニューで既存のスキーマのリストをスクロールして、マッピングするスキーマを選択します。スキーマを選択したら、データフローの名前と説明を指定します。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのデータフローの詳細手順。](../assets/testing/dataflow-details-test.png)
+![ ソースワークフローのデータフローの詳細手順。](../assets/testing/dataflow-details-test.png)
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対するインテリジェントなレコメンデーションを提供します。 マッピングルールは、使用例に合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](../../../data-prep/ui/mapping.md)
+Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド」を参照してください ](../../../data-prep/ui/mapping.md)
 
-ソースデータが正常にマッピングされたら、「 」を選択します。 **[!UICONTROL 次へ]**.
+ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのマッピング手順です。](../assets/testing/mapping-test.png)
+![ ソースワークフローのマッピングステップ ](../assets/testing/mapping-test.png)
 
 **[!UICONTROL レビュー]**&#x200B;手順が表示され、新しいデータフローを作成する前に確認できます。詳細は、次のカテゴリに分類されます。
 
-* **[!UICONTROL 接続]**：アカウント名、ソースのタイプ、および使用しているストリーミングクラウドストレージソースに固有のその他の情報が表示されます。
+* **[!UICONTROL 接続]**：アカウント名、ソースのタイプ、および使用しているストリーミングクラウドストレージソースに固有のその他の情報を表示します。
 * **[!UICONTROL データセットの割り当てとフィールドのマッピング]**：データフローに使用するターゲットデータセットとスキーマを表示します。
 
 データフローをレビューしたら、「**[!UICONTROL 終了]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
-![ソースワークフローのレビューステップ。](../assets/testing/review-test.png)
+![ ソースワークフローのレビュー手順。](../assets/testing/review-test.png)
 
-最後に、データフローのストリーミングエンドポイントを取得する必要があります。 このエンドポイントは、Webhook を購読するために使用され、ストリーミングソースとExperience Platformが通信できます。 ストリーミングエンドポイントを取得するには、 [!UICONTROL データフローアクティビティ] 作成したデータフローのページで、エンドポイントをの下部からコピーします。 [!UICONTROL プロパティ] パネル。
+最後に、データフローのストリーミングエンドポイントを取得します。 このエンドポイントは、Webhook をサブスクライブするために使用され、ストリーミングソースがExperience Platformと通信できるようになります。 ストリーミングエンドポイントを取得するには、作成したデータフローの [!UICONTROL  データフローアクティビティ ] ページに移動し、[!UICONTROL  プロパティ ] パネルの下部からエンドポイントをコピーします。
 
-![データフローアクティビティのストリーミングエンドポイント。](../assets/testing/endpoint-test.png)
+![ データフローアクティビティのストリーミングエンドポイント。](../assets/testing/endpoint-test.png)
 
 ## ソースの送信
 
-ソースがワークフロー全体を完了したら、Adobe担当者に問い合わせて、他のExperience Platform組織間で統合するソースを送信できます。
+ソースがワークフロー全体を完了できるようになったら、Adobe担当者に連絡し、他のExperience Platform組織と統合するためにソースを送信します。

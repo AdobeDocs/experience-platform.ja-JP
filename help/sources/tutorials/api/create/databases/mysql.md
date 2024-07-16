@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；MySQL;mysql
+keywords: Experience Platform；ホーム；人気のトピック；MySQL;mysql
 solution: Experience Platform
-title: の作成 [!DNL MySQL] フローサービス API を使用したベース接続
+title: Flow Service API [!DNL MySQL]  使用した A ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを MySQL に接続する方法を説明します。
+description: Flow Service API を使用してAdobe Experience Platformを MySQL に接続する方法を説明します。
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 67%
+source-wordcount: '441'
+ht-degree: 65%
 
 ---
 
@@ -25,18 +25,18 @@ ht-degree: 67%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL MySQL] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL MySQL] ています。
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] を [!DNL MySQL] ストレージの場合は、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を [!DNL MySQL] ストレージに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | この [!DNL MySQL] アカウントに関連付けられた接続文字列。 この [!DNL MySQL] 接続文字列のパターン： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL MySQL] が `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `connectionString` | アカウントに関連付けられた [!DNL MySQL] の接続文字列。 [!DNL MySQL] の接続文字列パターンは `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL MySQL] の接続仕様 ID は `26d738e0-8963-47ea-aadf-c60de735468a` です。 |
 
-接続文字列の取得について詳しくは、 [[!DNL MySQL] 文書](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
+接続文字列の取得について詳しくは、この [[!DNL MySQL]  ドキュメント ](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html) を参照してください。
 
 ### Platform API の使用
 
@@ -84,8 +84,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | この [!DNL MySQL] アカウントに関連付けられた接続文字列。 この [!DNL MySQL] 接続文字列のパターン： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | この [!DNL MySQL] 接続仕様 ID: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `auth.params.connectionString` | アカウントに関連付けられた [!DNL MySQL] の接続文字列。 [!DNL MySQL] の接続文字列パターンは `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 |
+| `connectionSpec.id` | [!DNL MySQL] 接続仕様 ID: `26d738e0-8963-47ea-aadf-c60de735468a`。 |
 
 **応答**
 
@@ -100,8 +100,8 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL MySQL] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL MySQL]base 接続を作成しました。 このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)
 

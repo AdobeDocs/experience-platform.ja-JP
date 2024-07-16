@@ -1,12 +1,12 @@
 ---
-keywords: google universal analytics;Google Universal Analytics;Google universal analytics
+keywords: google Universal Analytics;Google Universal Analytics;Google Universal Analytics
 title: Google Universal Analytics 拡張機能
-description: Google Universal Analytics 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Google Universal Analytics 拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 72576a0f-f2da-46d6-a722-33a0cf17f2c4
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 92%
+source-wordcount: '454'
+ht-degree: 90%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 92%
 
 ## 概要 {#overview}
 
-[!DNL Google Universal Analytics] を使用すると、広告の ROI を測定するとともに、フラッシュ、ビデオ、ソーシャルネットワーキングのサイトやアプリケーションを追跡できます。
+広告 [!DNL Google Universal Analytics]ROI を測定できるほか、Flash、ビデオ、ソーシャルネットワーキングサイトおよびアプリケーションをトラッキングすることもできます。
 
-[!DNL Google Universal Analytics] は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html) の拡張機能のページを参照してください。
+[!DNL Google Universal Analytics] は、Adobe Experience Platform の分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 92%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Google Universal Analytics] 拡張子：
+[!DNL Google Universal Analytics] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

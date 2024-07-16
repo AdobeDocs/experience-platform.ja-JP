@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Oracle;oracle
+keywords: Experience Platform；ホーム；人気のトピック；Oracle;oracle
 solution: Experience Platform
-title: フローサービス API を使用したOracleベース接続の作成
+title: Flow Service API を使用したOracleベース接続の作成
 type: Tutorial
-description: フローサービス API を使用してOracleをExperience Platformに接続する方法を説明します。
+description: Flow Service API を使用してOracleをExperience Platformに接続する方法を説明します。
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 68%
+source-wordcount: '419'
+ht-degree: 69%
 
 ---
 
-# の作成 [!DNL Oracle] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Oracle] ベース接続の作成
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -25,14 +25,14 @@ ht-degree: 68%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Oracle] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Oracle] ています。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | 接続に使用する接続文字列 [!DNL Oracle]. この [!DNL Oracle] 接続文字列のパターン： `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL Oracle] が `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `connectionString` | [!DNL Oracle] への接続に使用する接続文字列。 [!DNL Oracle] の接続文字列パターンは `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Oracle] の接続仕様 ID は `d6b52d86-f0f8-475f-89d4-ce54c8527328` です。 |
 
-導入の詳細については、こちらを参照してください。 [[!DNL Oracle] 文書](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
+はじめに詳しくは、この [[!DNL Oracle]  ドキュメント ](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) を参照してください。
 
 ### Platform API の使用
 
@@ -80,8 +80,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | の [!DNL Oracle] データベース。 この [!DNL Oracle] 接続文字列のパターン： `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | この [!DNL Oracle] 接続仕様 ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `auth.params.connectionString` | [!DNL Oracle] データベースへの接続に使用する接続文字列。 [!DNL Oracle] の接続文字列パターンは `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}` です。 |
+| `connectionSpec.id` | [!DNL Oracle] 接続仕様 ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`。 |
 
 **応答**
 
@@ -99,4 +99,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Oracle] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)

@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: PQL その他の関数
-description: 次の関数は、プロファイルクエリ言語（PQL）のその他の関数です。
+title: PQLのその他の関数
+description: 次の関数は、Profile Query Language（PQL）のその他の関数です。
 exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 79%
+source-wordcount: '117'
+ht-degree: 69%
 
 ---
 
 # その他の関数
 
-次の関数は、 [!DNL Profile Query Language] (PQL) を参照してください。 その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+次の関数は、[!DNL Profile Query Language] （PQL）のその他の関数です。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## Let
 

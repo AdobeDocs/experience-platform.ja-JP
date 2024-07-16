@@ -22,42 +22,42 @@ ht-degree: 37%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、正常に接続するために必要な追加情報を示します [!DNL Platform] から [!DNL Salesforce] を使用したアカウント [!DNL Flow Service] API です。
+次の節では、[!DNL Flow Service] API を使用して [!DNL Salesforce] アカウントに正しく接続するために必要 [!DNL Platform] 追加情報を示しています。
 
 ### 必要な資格情報の収集
 
-この [!DNL Salesforce] ソースは、基本認証および OAuth2 クライアント資格情報をサポートします。
+[!DNL Salesforce] ソースは、基本認証と OAuth2 クライアント資格情報をサポートしています。
 
 >[!BEGINTABS]
 
->[!TAB 基本認証]
+>[!TAB  基本認証 ]
 
-を接続するには [!DNL Salesforce] 移動先の口座 [!DNL Flow Service] 基本認証を使用して、次の資格情報の値を指定します。
-
-| 資格情報 | 説明 |
-| --- | --- |
-| `environmentUrl` | の URL [!DNL Salesforce] ソースインスタンス。 |
-| `username` | のユーザー名 [!DNL Salesforce] ユーザーアカウント。 |
-| `password` | パスワード： [!DNL Salesforce] ユーザーアカウント。 |
-| `securityToken` | のセキュリティトークン [!DNL Salesforce] ユーザーアカウント。 |
-| `apiVersion` | （オプション）の REST API バージョン [!DNL Salesforce] 使用しているインスタンス。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョンを使用している場合 `52`の場合、値をに入力する必要があります `52.0`. このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
-
-基本について詳しくは、を参照してください。 [この Salesforce ドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
-
->[!TAB OAuth 2 クライアント資格情報]
-
-を接続するには [!DNL Salesforce] 移動先の口座 [!DNL Flow Service] oauth 2 クライアント資格情報を使用して、次の資格情報の値を指定します。
+基本認証を使用して [!DNL Salesforce] アカウントを [!DNL Flow Service] に接続するには、次の資格情報の値を指定します。
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `environmentUrl` | の URL [!DNL Salesforce] ソースインスタンス。 |
-| `clientId` | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、アプリケーションを識別して、アカウントに代わってアプリケーションを動作させることができます [!DNL Salesforce]. |
-| `clientSecret` | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、アプリケーションを識別して、アカウントに代わってアプリケーションを動作させることができます [!DNL Salesforce]. |
-| `apiVersion` | の REST API バージョン [!DNL Salesforce] 使用しているインスタンス。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョンを使用している場合 `52`の場合、値をに入力する必要があります `52.0`. このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 この値は、OAuth2 クライアント資格情報認証に必須です。 |
+| `environmentUrl` | [!DNL Salesforce] ソースインスタンスの URL。 |
+| `username` | [!DNL Salesforce] ユーザーアカウントのユーザー名。 |
+| `password` | [!DNL Salesforce] ユーザーアカウントのパスワード。 |
+| `securityToken` | [!DNL Salesforce] ユーザーアカウントのセキュリティ トークン。 |
+| `apiVersion` | （オプション）使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
-用の OAuth の使用の詳細 [!DNL Salesforce]、を読み取ります [[!DNL Salesforce] oauth 認証フローのガイド](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+基本について詳しくは、[ この Salesforce ドキュメント ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm) を参照してください。
+
+>[!TAB OAuth 2 クライアント資格情報 ]
+
+OAuth 2 クライアント資格情報を使用して [!DNL Salesforce] アカウントを [!DNL Flow Service] に接続するには、次の資格情報の値を指定します。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `environmentUrl` | [!DNL Salesforce] ソースインスタンスの URL。 |
+| `clientId` | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
+| `clientSecret` | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
+| `apiVersion` | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 この値は、OAuth2 クライアント資格情報認証に必須です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
+
+[!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5) を参照してください。
 
 >[!ENDTABS]
 
@@ -69,7 +69,7 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、次に対してPOSTリクエストを実行します。 `/connections` エンドポイントと提供 [!DNL Salesforce] リクエスト本文の認証資格情報。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、リクエスト本文に [!DNL Salesforce] 認証資格情報を指定します。
 
 **API 形式**
 
@@ -81,9 +81,9 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB 基本認証]
+>[!TAB  基本認証 ]
 
-次のリクエストは、のベース接続を作成します [!DNL Salesforce] 基本認証を使用：
+次のリクエストは、基本認証を使用して [!DNL Salesforce] のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -114,15 +114,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `auth.params.environmentUrl` | の URL [!DNL Salesforce] インスタンス。 |
-| `auth.params.username` | に関連付けられたユーザー名 [!DNL Salesforce] アカウント。 |
-| `auth.params.password` | に関連付けられたパスワード [!DNL Salesforce] アカウント。 |
-| `auth.params.securityToken` | に関連付けられたセキュリティトークン [!DNL Salesforce] アカウント。 |
-| `connectionSpec.id` | この [!DNL Salesforce] 接続仕様 ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `auth.params.environmentUrl` | [!DNL Salesforce] インスタンスの URL。 |
+| `auth.params.username` | [!DNL Salesforce] アカウントに関連付けられたユーザー名。 |
+| `auth.params.password` | [!DNL Salesforce] アカウントに関連付けられたパスワード。 |
+| `auth.params.securityToken` | [!DNL Salesforce] アカウントに関連付けられたセキュリティトークン。 |
+| `connectionSpec.id` | [!DNL Salesforce] 接続仕様 ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
 
->[!TAB OAuth 2 クライアント資格情報]
+>[!TAB OAuth 2 クライアント資格情報 ]
 
-次のリクエストは、のベース接続を作成します [!DNL Salesforce] oauth 2 クライアント資格情報を使用：
+次のリクエストは、OAuth 2 クライアント資格情報を使用して、[!DNL Salesforce] のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -153,11 +153,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `auth.params.environmentUrl` | の URL [!DNL Salesforce] インスタンス。 |
-| `auth.params.clientId` | に関連付けられたクライアント ID [!DNL Salesforce] アカウント。 |
-| `auth.params.clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL Salesforce] アカウント。 |
-| `auth.params.apiVersion` | の REST API バージョン [!DNL Salesforce] 使用しているインスタンス。 |
-| `connectionSpec.id` | この [!DNL Salesforce] 接続仕様 ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `auth.params.environmentUrl` | [!DNL Salesforce] インスタンスの URL。 |
+| `auth.params.clientId` | [!DNL Salesforce] アカウントに関連付けられたクライアント ID。 |
+| `auth.params.clientSecret` | [!DNL Salesforce] アカウントに関連付けられたクライアントの秘密鍵。 |
+| `auth.params.apiVersion` | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 |
+| `connectionSpec.id` | [!DNL Salesforce] 接続仕様 ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
 
 >[!ENDTABS]
 
@@ -177,4 +177,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Salesforce] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [を使用した、CRM データを Platform に取り込むデータフローの作成 [!DNL Flow Service] API](../../collect/crm.md)
+* [ [!DNL Flow Service] API を使用した、CRM データを Platform に取り込むデータフローの作成](../../collect/crm.md)

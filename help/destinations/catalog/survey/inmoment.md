@@ -1,12 +1,12 @@
 ---
-keywords: InMoment;inmoment;Inmoment;Launch 統合
+keywords: InMoment;Inmoment;Inmoment；ローンチ統合
 title: InMoment 拡張機能
 description: InMoment 拡張機能は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 90%
+source-wordcount: '464'
+ht-degree: 91%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 90%
 
 ## 概要 {#overview}
 
-この [!DNL InMoment] タグ拡張機能を使用すると、Digital Intercept 製品を介したオンラインフィードバックをすばやく簡単に有効にできます。 このアプリでは、CXI Cloud Admin を介してインターセプトの設定と管理を行い、CX マネージャーがプログラムをより詳細に制御できるようにします。
+[!DNL InMoment] タグ拡張機能を使用すると、Digital Intercept 製品を介したオンラインフィードバックをすばやく簡単に有効にできます。 このアプリでは、CXI Cloud Admin を介してインターセプトの設定と管理を行い、CX マネージャーがプログラムをより詳細に制御できるようにします。
 
-[!DNL InMoment] は、Adobe Experience Platformの調査の拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html) の拡張機能のページを参照してください。
+[!DNL InMoment] は、Adobe Experience Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 90%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL InMoment] 拡張子：
+[!DNL InMoment] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

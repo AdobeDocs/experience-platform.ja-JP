@@ -110,7 +110,7 @@ age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) 
 
 メタデータ列名の説明を次に示します。
 
-| 列名 | 説明 |
+| 列の名前 | 説明 |
 |---|---|
 | `statsId` | この ID は、`COMPUTE STATISTICS` コマンドによって生成された一時的な統計のテーブルを参照します。 |
 | `tableName` | 分析に使用する元のテーブル。 |

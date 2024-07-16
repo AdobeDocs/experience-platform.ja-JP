@@ -4,7 +4,7 @@ description: Reactor API で /data_elements エンドポイントを呼び出す
 exl-id: ea346682-441b-415b-af06-094158eb7c71
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1364'
 ht-degree: 99%
 
 ---
@@ -1314,7 +1314,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたデータ要素の接触チャネルの詳細を返します。
+応答が成功すると、指定されたデータ要素のオリジンの詳細が返されます。
 
 ```json
 {

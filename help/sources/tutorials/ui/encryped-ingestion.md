@@ -1,5 +1,5 @@
 ---
-title: ソース UI ワークスペースへの暗号化されたデータの取り込み
+title: ソース UI のWorkspaceでの暗号化されたデータの取り込み
 description: ソース UI ワークスペースで暗号化されたデータを取り込む方法を説明します。
 hide: true
 hidefromtoc: true
@@ -7,7 +7,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: a11f469cb54421e0ca30c7c5878128e216470f7f
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 9%
+ht-degree: 54%
 
 ---
 
@@ -29,10 +29,10 @@ ht-degree: 9%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_sampleFile"
->title="サンプルファイルを選択"
->abstract="マッピングを作成するために、暗号化されたデータを取り込む際は、サンプルファイルを取り込む必要があります。"
+>title="サンプルファイルの選択"
+>abstract="マッピングを作成するには、暗号化されたデータを取り込む際にサンプルファイルを取り込む必要があります。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_createCustomKey"
->title="カスタムキーを作成"
->abstract="オプションで、署名検証キーペアを作成し、暗号化されたデータのカスタムキーを作成することもできます。"
+>title="カスタムキーの作成"
+>abstract="オプションで、署名検証キーペアを作成して、暗号化されたデータ用のカスタムキーを作成することができます。"

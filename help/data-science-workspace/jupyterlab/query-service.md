@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;JupyterLab；ノートブック；Data Science Workspace；人気の高いトピック；クエリサービス
+keywords: Experience Platform;JupyterLab；ノートブック；データサイエンスWorkspace；人気のトピック；クエリサービス
 solution: Experience Platform
-title: Jupyter ノートブックでのクエリサービス
+title: Jupyter Notebook のクエリサービス
 type: Tutorial
-description: Adobe Experience Platform を使用すると、クエリサービスを標準機能として JupyterLab に統合することにより、Data Science Workspace で構造化照会言語（SQL）を使用できます。このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例に対する SQL クエリの例を示します。
+description: Adobe Experience Platformでは、クエリサービスを JupyterLab に標準機能として統合することで、Data Science Workspaceで構造化照会言語（SQL）を使用できます。 このチュートリアルでは、Adobe Analytics データを調査、変換、分析するための一般的なユースケースに対して、SQL クエリの例を示します。
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 58%
+source-wordcount: '822'
+ht-degree: 50%
 
 ---
 
-# Jupyter ノートブックでのクエリサービス
+# Jupyter Notebook のクエリサービス
 
-[!DNL Adobe Experience Platform] では、構造化クエリ言語 (SQL) を [!DNL Data Science Workspace] 統合によって [!DNL Query Service] into [!DNL JupyterLab] を標準フィーチャとして使用します。
+[!DNL Adobe Experience Platform] では、[!DNL Query Service] を標準機能として [!DNL JupyterLab] に統合することで、[!DNL Data Science Workspace] で構造化クエリ言語（SQL）を使用できます。
 
-このチュートリアルでは、調査、変換、分析をおこなう一般的な使用例に対する SQL クエリの例を示します [!DNL Adobe Analytics] データ。
+このチュートリアルでは、[!DNL Adobe Analytics] データの調査、変換および分析を行う一般的なユースケースに対して、SQL クエリの例を示します。
 
 ## はじめに
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-- アクセス先 [!DNL Adobe Experience Platform]. の組織に対するアクセス権がない場合、 [!DNL Experience Platform]先に進む前に、システム管理者にお問い合わせください。
+- [!DNL Adobe Experience Platform] へのアクセス。 [!DNL Experience Platform] の組織へのアクセス権がない場合は、続行する前にシステム管理者に問い合わせてください
 
-- An [!DNL Adobe Analytics] データセット
+- [!DNL Adobe Analytics] データセット
 
 - このチュートリアルで使用する次の主要概念に対する十分な理解
    - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
@@ -32,15 +32,15 @@ ht-degree: 58%
    - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## アクセス [!DNL JupyterLab] および [!DNL Query Service] {#access-jupyterlab-and-query-service}
+## [!DNL JupyterLab] および [!DNL Query Service] へのアクセス {#access-jupyterlab-and-query-service}
 
-1. In [[!DNL Experience Platform]](https://platform.adobe.com)に移動します。 **[!UICONTROL ノートブック]** をクリックします。 JupyterLab が読み込まれるまで、しばらく待ちます。
+1. [[!DNL Experience Platform]](https://platform.adobe.com) で、左側のナビゲーション列から **[!UICONTROL ノートブック]** に移動します。 JupyterLab が読み込まれるまで、しばらく待ちます。
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >新しい「ランチャー」タブが自動的に表示されなかった場合は、新しい「ランチャー」タブを開き、 **[!UICONTROL ファイル]** 次に、 **[!UICONTROL 新規ランチャー]**.
+   >新しいランチャータブが自動的に表示されなかった場合は、「ファイル **[!UICONTROL 」をクリックして新しいランチャータブを開き]** 「新しいランチャー **[!UICONTROL を選択し]** す。
 
 2. 「ランチャー」タブで、Python 3 環境の「**[!UICONTROL 空白]**」アイコンをクリックして、空のノートブックを開きます。
 
@@ -48,19 +48,19 @@ ht-degree: 58%
 
    >[!NOTE]
    >
-   > 現在、ノートブックのクエリサービスでサポートされている環境は Python 3 のみです。
+   >現在、ノートブックでのクエリサービスでサポートされている環境は、Python 3 のみです。
 
 3. 左側の選択パネルで、**[!UICONTROL データ]**&#x200B;アイコンをクリックし、「**[!UICONTROL データセット]**」ディレクトリをダブルクリックして、すべてのデータセットをリストします。
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 検索 [!DNL Adobe Analytics] 調査するデータセットを選択し、リストを右クリックして、 **[!UICONTROL ノートブックでのデータのクエリ]** 空のノートブックで SQL クエリを生成する。
+4. 調査する [!DNL Adobe Analytics] データセットを見つけてリストを右クリックし、「**[!UICONTROL ノートブックのデータのクエリ]**」をクリックして空のノートブックに SQL クエリを生成します。
 
-5. `qs_connect()` 関数が含まれる最初の生成済みセルをクリックし、再生ボタンをクリックして実行します。この関数は、ノートブックインスタンスと [!DNL Query Service].
+5. `qs_connect()` 関数が含まれる最初の生成済みセルをクリックし、再生ボタンをクリックして実行します。この関数は、ノートブックインスタンスと [!DNL Query Service] の間に接続を作成します。
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. を [!DNL Adobe Analytics] 2 番目に生成された SQL クエリのデータセット名。 `FROM`.
+6. 2 番目に生成された SQL クエリから [!DNL Adobe Analytics] のデータセット名をコピーし、`FROM` の後の値にします。
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -85,22 +85,22 @@ ht-degree: 58%
    target_day = "01"
    ```
 
-   - `target_table`:の名前 [!DNL Adobe Analytics] データセット。
-   - `target_year`：ターゲットデータの元の年。
-   - `target_month`：ターゲットデータの元の月。
-   - `target_day`：ターゲットデータの元の日。
+   - `target_table`:[!DNL Adobe Analytics] データセットの名前。
+   - `target_year`：ターゲットデータが含まれる特定の年。
+   - `target_month`：ターゲットを開始する特定の月。
+   - `target_day`：ターゲットデータが含まれる特定の日。
 
    >[!NOTE]
    >
-   > これらの値はいつでも変更できます。値を変更する場合は、変数セルを実行して、変更を適用する必要があります。
+   >これらの値はいつでも変更できます。 値を変更する場合は、変数セルを実行して、変更を適用する必要があります。
 
 ## データのクエリ {#query-your-data}
 
-個々のノートブックセルに次の SQL クエリを入力します。クエリを実行するには、セルで「 」を選択し、次に「 」を選択します **[!UICONTROL play]** 」ボタンをクリックします。 成功したクエリの結果またはエラーログは、実行されたセルの下に表示されます。
+個々のノートブックセルに次の SQL クエリを入力します。セルを選択してクエリを実行したあと、「**[!UICONTROL 再生]**」ボタンを選択します。 成功したクエリの結果またはエラーログは、実行されたセルの下に表示されます。
 
-ノートブックが長期間非アクティブになった場合、ノートブックと [!DNL Query Service] 壊れるかもしれない その場合は、を再起動します。 [!DNL JupyterLab] 選択 **再起動** ボタン ![再起動ボタン](../images/jupyterlab/user-guide/restart_button.png) は、電源ボタンの隣の右上隅にあります。
+ノートブックが長時間非アクティブになっていると、ノートブックと [!DNL Query Service] の間の接続が切断される場合があります。 その場合は、電源ボタンの横の右上隅にある **再起動** ボタン ![ 再起動ボタン ](../images/jupyterlab/user-guide/restart_button.png) を選択して [!DNL JupyterLab] を再起動します。
 
-ノートブックのカーネルはリセットされますが、セルは保持され、すべてのセルを再実行して、中断した場所から続行します。
+ノートブックのカーネルはリセットされますが、セルは残ります。すべてのセルを再実行して、中断した位置から続行します。
 
 ### 1 時間ごとの訪問者数 {#hourly-visitor-count}
 
@@ -120,9 +120,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-上記のクエリで、 `WHERE` 句が `target_year`. 変数を中括弧（`{}`）で囲んで、SQL クエリに含めます。
+上記のクエリでは、`WHERE` 句のタイムスタンプが `target_year` の値に設定されます。 変数を中括弧（`{}`）で囲んで、SQL クエリに含めます。
 
-オプションの変数 `hourly_visitor` は、クエリの最初の行に含まれます。クエリの結果は、この変数に Pandas データフレームとして保存されます。結果をデータフレームに保存すると、後で目的の [!DNL Python] パッケージ。 以下を実行します。 [!DNL Python] 新しいセルのコードを使用して棒グラフを生成します。
+オプションの変数 `hourly_visitor` は、クエリの最初の行に含まれます。クエリの結果は、この変数に Pandas データフレームとして保存されます。結果をデータフレームに保存すると、後で目的の [!DNL Python] パッケージを使用してクエリ結果を視覚化できます。 新しいセルに次の [!DNL Python] コードを実行して、棒グラフを生成します。
 
 ```python
 trace = go.Bar(
@@ -184,7 +184,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-変更したクエリを実行すると、結果がに保存されます。 `hourly_actions_date_range` をデータフレームとして使用します。 新しいセルで次の関数を実行し、結果をプレビューします。
+変更したクエリを実行すると、結果がデータフレームとして `hourly_actions_date_range` に保存されます。 新しいセルで次の関数を実行し、結果をプレビューします。
 
 ```python
 hourly_actions_date_rage.head()
@@ -208,7 +208,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-以下を実行します。 [!DNL Python] 訪問セッションごとのイベント数のヒストグラムを生成するコード：
+次の [!DNL Python] コードを実行して、訪問セッションあたりのイベント数のヒストグラムを生成します。
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -276,4 +276,4 @@ LIMIT  10;
 
 ## 次の手順
 
-このチュートリアルでは、を使用する場合の使用例をいくつか示しました [!DNL Query Service] in [!DNL Jupyter] ノートブック。 「[Jupyter ノートブックによるデータの分析](./analyze-your-data.md)」のチュートリアルに従って、Data Access SDK を使用して同様の操作がどのように実行されるかを確認します。
+このチュートリアルでは、[!DNL Jupyter] notebooks で [!DNL Query Service] を使用するユースケースのサンプルを示しました。 「[Jupyter ノートブックによるデータの分析](./analyze-your-data.md)」のチュートリアルに従って、Data Access SDK を使用して同様の操作がどのように実行されるかを確認します。

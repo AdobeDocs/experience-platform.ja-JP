@@ -1,29 +1,29 @@
 ---
-title: 機械学習で生成された予測モデルを使用した傾向スコアの決定
-description: クエリサービスを使用して、予測モデルを Platform データに適用する方法を説明します。 このドキュメントでは、Platform データを使用して、各訪問での顧客の購入傾向を予測する方法を説明します。
+title: 機械学習で生成された予測モデルを使用して傾向スコアを決定する
+description: クエリサービスを使用して予測モデルを Platform データに適用する方法を説明します。 このドキュメントでは、Platform データを使用して、各訪問で購入する顧客の傾向を予測する方法を説明します。
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
 
-# 機械学習で生成された予測モデルを使用した傾向スコアの決定
+# 機械学習で生成された予測モデルを使用して傾向スコアを決定する
 
 クエリサービスを使用すると、機械学習プラットフォーム上に構築された傾向スコアなどの予測モデルを活用して、Experience Platformデータを分析できます。
 
-このガイドでは、クエリサービスを使用してデータを機械学習プラットフォームに送信し、計算ノートブックでモデルをトレーニングする方法について説明します。 トレーニング済みモデルは、SQL を使用してデータに適用し、訪問ごとに顧客が購入する傾向を予測できます。
+このガイドでは、クエリサービスを使用して、計算ノートブックでモデルをトレーニングするために機械学習プラットフォームにデータを送信する方法について説明します。 トレーニング済みモデルを SQL を使用してデータに適用し、各訪問で顧客が購入する傾向を予測できます。
 
 ## はじめに
 
-このプロセスの一環として、機械学習モデルをトレーニングする必要があります。このドキュメントでは、1 つ以上の機械学習環境に関する実務知識を前提としています。
+このプロセスの一部として機械学習モデルのトレーニングが必要なため、このドキュメントでは 1 つ以上の機械学習環境に関する実務知識を前提としています。
 
-この例では、 [!DNL Jupyter Notebook] を開発環境として使用する。 多くのオプションを使用できますが、 [!DNL Jupyter Notebook] の計算要件が小さいオープンソース web アプリケーションなので、をお勧めします。 次のことが可能です。 [公式サイトからダウンロードされる](https://jupyter.org/).
+この例では、[!DNL Jupyter Notebook] を開発環境として使用します。 使用できるオプションは多数ありますが、[!DNL Jupyter Notebook] れはオープンソースの web アプリケーションであり、計算要件が低いので、推奨されます。 [ 公式サイトからダウンロード ](https://jupyter.org/) できます。
 
-まだおこなっていない場合は、次の手順に従います。 [接続 [!DNL Jupyter Notebook] Adobe Experience Platform Query Service を使用](../clients/jupyter-notebook.md) このガイドを続行する前に。
+まだ行っていない場合は、このガイドに進む前に、Adobe Experience Platform クエリサービスに [ 接続  [!DNL Jupyter Notebook]  する ](../clients/jupyter-notebook.md) の手順に従ってください。
 
-この例で使用されるライブラリには、以下が含まれます。
+この例で使用されるライブラリは次のとおりです。
 
 ```console
 python=3.6.7
@@ -35,21 +35,21 @@ numpy
 tqdm
 ```
 
-## Platform からに分析テーブルをインポート [!DNL Jupyter Notebook] {#import-analytics-tables}
+## Platform から [!DNL Jupyter Notebook] への分析テーブルの読み込み {#import-analytics-tables}
 
-傾向スコアモデルを生成するには、Platform に保存された分析データの投影を [!DNL Jupyter Notebook]. から [!DNL Python] 3 [!DNL Jupyter Notebook] クエリサービスに接続した次のコマンドは、架空の衣料品店 Luma から顧客行動データセットをインポートします。 Platform データは Experience Data Model(XDM) 形式を使用して保存されるので、スキーマの構造に準拠するサンプル JSON オブジェクトを生成する必要があります。 手順については、ドキュメントを参照してください。 [サンプルの JSON オブジェクトを生成します。](../../xdm/ui/sample.md).
+傾向スコアモデルを生成するには、Platform に保存された分析データの投影を [!DNL Jupyter Notebook] に読み込む必要があります。 クエリサービスに接続された [!DNL Python] 3 [!DNL Jupyter Notebook] から、次のコマンドは架空の衣料品ストアである Luma から顧客行動データセットを読み込みます。 Platform データは Experience Data Model （XDM）形式を使用して保存されるので、スキーマの構造に準拠するサンプル JSON オブジェクトを生成する必要があります。 [ サンプル JSON オブジェクトの生成 ](../../xdm/ui/sample.md) 方法については、ドキュメントを参照してください。
 
-![この [!DNL Jupyter Notebook] 複数のコマンドがハイライト表示されたダッシュボード](../images/use-cases/jupyter-commands.png)
+![ 複数のコマンドがハイライト表示された [!DNL Jupyter Notebook] ダッシュボード ](../images/use-cases/jupyter-commands.png)
 
-出力には、Luma の行動データセット内のすべての列の表形式の表示が [!DNL Jupyter Notebook] ダッシュボード。
+出力には、[!DNL Jupyter Notebook] ダッシュボード内の Luma の行動データセットのすべての列を表形式で表示します。
 
-![Luma が読み込んだ顧客行動データセットの、 [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
+![[!DNL Jupyter Notebook] 内の Luma が読み込んだ顧客行動データセットを表形式で出力したもの。](../images/use-cases/behavioural-dataset-results.png)
 
-## 機械学習用のデータの準備 {#prepare-data-for-machine-learning}
+## 機械学習のためのデータの準備 {#prepare-data-for-machine-learning}
 
-機械学習モデルをトレーニングするには、ターゲット列を識別する必要があります。 購入傾向がこのユースケースの目標なので、 `analytic_action` 列が Luma の結果からターゲット列として選択されます。 値 `productPurchase` は、顧客購入の指標です。 この `purchase_value` および `purchase_num` 列も、製品購入アクションに直接関連するので、削除されます。
+機械学習モデルをトレーニングするには、ターゲット列を特定する必要があります。 このユースケースでは購入傾向が目標なので、`analytic_action` 列が Luma の結果からターゲット列として選択されます。 値 `productPurchase` は、顧客の購入の指標です。 `purchase_value` 列と `purchase_num` 列も、製品購入アクションに直接関連するので削除されます。
 
-これらの操作を実行するコマンドは次のとおりです。
+これらのアクションを実行するコマンドを次に示します。
 
 ```python
 #define the target label for prediction
@@ -60,8 +60,8 @@ df.drop(['analytic_action','purchase_value'],axis=1,inplace=True)
 
 次に、Luma データセットのデータを適切な表現に変換する必要があります。 次の 2 つの手順が必要です。
 
-1. 数値を表す列を数値列に変換します。 これをおこなうには、 `dataframe`.
-1. 分類された列も数値列に変換します。
+1. 数値を表す列を数値列に変換します。 これを行うには、`dataframe` でデータ型を明示的に変換します。
+1. カテゴリ列を数値列にも変換します。
 
 ```python
 #convert columns that represent numbers
@@ -69,7 +69,7 @@ num_cols = ['purchase_num', 'value_cart', 'value_lifetime']
 df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
 ```
 
-という技術 *1 つのホットエンコーディング* は、機械学習およびディープラーニングアルゴリズムで使用する分類データ変数を変換するために使用されます。 これにより、予測とモデルの分類精度が向上します。 以下を使用： `Sklearn` ライブラリを使用して、各カテゴリ値を別々の列で表すことができます。
+*ワンホットエンコーディング* と呼ばれる技術を使用して、機械およびディープラーニングアルゴリズムで使用するカテゴリデータ変数を変換します。 これにより、モデルの予測と分類精度が向上します。 `Sklearn` ライブラリを使用して、各カテゴリ値を個別の列に表します。
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -98,14 +98,14 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-次のように定義されたデータ： `X` はタブ化され、次のように表示されます。
+`X` と定義されたデータは表形式で表示され、次のように表示されます。
 
-![X の X が [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
+![[!DNL Jupyter Notebook] 内の X の表形式の出力 ](../images/use-cases/x-output-table.png)
 
 
-これで、機械学習に必要なデータが利用できるようになったので、 [!DNL Python]&#39;s `sklearn` ライブラリ。 [!DNL Logistics Regression] は、傾向モデルのトレーニングに使用され、テストデータの精度を確認できます。 この場合、約 85%です。
+機械学習に必要なデータが利用可能になったので、[!DNL Python] の `sklearn` ライブラリに事前設定された機械学習モデルに適合させることができます。 傾向モデルのトレーニングに [!DNL Logistics Regression] を使用すると、テストデータの精度を確認できます。 この場合、約 85% です。
 
-この [!DNL Logistic Regression] 機械学習アルゴリズムのパフォーマンスの予測に使用するアルゴリズムとトレーニングテスト分割方法は、次のコードブロックにインポートされます。
+機械学習アルゴリズムのパフォーマンスの推定に使用される [!DNL Logistic Regression] アルゴリズムと train-test split メソッドは、以下のコードブロックに読み込まれます。
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -119,11 +119,11 @@ clf = LogisticRegression(max_iter=2000, random_state=0).fit(X_train, y_train)
 print("Test data accuracy: {}".format(clf.score(X_test, y_test)))
 ```
 
-テストデータの精度は 0.8518518518518519です。
+テストデータの精度は 0.8518518518518519 です。
 
-物流回帰を使用すると、購入の理由を視覚化し、降順でのランクの重要度別に傾向を判断する機能を並べ替えることができます。 最初の列は、購入行動につながる高い因果関係を示します。 後者の列は、購入行動につながらない要因を示します。
+ロジスティクス リグレッションを使用すると、購入の理由を視覚化し、降順でのランク付けの重要度によって傾向を決定する機能を並べ替えることができます。 最初の列は、購買行動につながる高い因果関係を示しています。 後者の列は、購買行動につながらない要因を示しています。
 
-結果を 2 つの棒グラフとして視覚化するコードは、次のとおりです。
+結果を 2 つの棒グラフとして視覚化するコードを次に示します。
 
 ```python
 from matplotlib import pyplot as plt
@@ -153,19 +153,19 @@ ax2.set_title("Top 10 features to define \n a propensity to NOT purchase")
 plt.show()
 ```
 
-結果の縦棒グラフビジュアライゼーションを次に示します。
+結果の縦棒グラフのビジュアライゼーションを次に示します。
 
-![購入傾向を定義する上位 10 の機能のビジュアライゼーション。](../images/use-cases/visualized-results.png)
+![ 購入の傾向と購入しない傾向を定義する上位 10 の機能のビジュアライゼーション。](../images/use-cases/visualized-results.png)
 
-棒グラフからは、複数のパターンを識別できます。 チャネルの POS（販売時点管理）と呼び出しのトピックは、購入行動を決定する最も重要な要素です。 通話トピックを苦情と請求書として扱うのは、購入しない行動を定義する上で重要な役割です。 これらは、マーケターがマーケティングキャンペーンの実施に活用し、顧客の購入傾向に対処できる、定量化可能で実用的なインサイトです。
+棒グラフからは、いくつかのパターンを識別できます。 償還としてのチャネルの販売時点（POS）と通話のトピックは、購買行動を決定する最も重要な要因です。 Call のトピックは苦情と請求書ですが、購買行動を定義するための重要な役割です。 これらは、マーケターがマーケティングキャンペーンを実施して、これらの顧客の購入傾向に対処するために活用できる、定量化可能で実用的なインサイトです。
 
 ## クエリサービスを使用したトレーニング済みモデルの適用 {#use-query-service-to-apply-trained-model}
 
-トレーニング済みモデルを作成したら、Experience Platformで保持されるデータに適用する必要があります。 これをおこなうには、機械学習パイプラインのロジックを SQL に変換する必要があります。 このトランジションの 2 つの主な構成要素を次に示します。
+トレーニング済みモデルを作成したら、Experience Platformに保持されるデータに適用する必要があります。 それには、機械学習パイプラインのロジックを SQL に変換する必要があります。 この移行の 2 つの主要なコンポーネントは次のとおりです。
 
-- まず、SQL が [!DNL Logistics Regression] モジュールを使用して、予測ラベルの確率を取得する。 ロジスティクス回帰で作成されたモデルが回帰モデルを生成しました `y = wX + c`  重み付けを行う `w` および切片 `c` はモデルの出力です。 SQL 機能を使用して、重みを乗算し、確率を取得できます。
+- まず、予測ラベルの確率を取得するには、SQL が [!DNL Logistics Regression] モジュールの代わりになる必要があります。 ロジスティクス回帰で作成されたモデルは、重み付け `w` と切片 `c` がモデルの出力である回帰モデル `y = wX + c` を生成しました。 SQL 関数を使用すると、重みを掛けて確率を求めることができます。
 
-- 第 2 に、で達成されたエンジニアリングプロセスです。 [!DNL Python] また、1 つのホットエンコードを SQL に組み込む必要があります。 例えば、元のデータベースには、 `geo_county` 列を保存するが、列は `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. 次の SQL 文は、同じ変換を実行します。ここで、 `w1`, `w2`、および `w3` は、 [!DNL Python]:
+- 次に、1 つのホットエンコーディングで [!DNL Python] 成されたエンジニアリングプロセスも SQL に組み込む必要があります。 例えば、元のデータベースには郡を格納する列が `geo_county` りますが、列は `geo_county=Bexar`、`geo_county=Dallas`、`geo_county=DeKalb` に変換されます。 次の SQL 文は、同じ変換を行います。ここでは、`w1`、`w2`、`w3` を、[!DNL Python] のモデルから学習した重みで置き換えることができます。
 
 ```sql
 SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
@@ -173,13 +173,13 @@ SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
         CASE WHEN geo_state = 'Bexar' THEN FLOAT(w3) ELSE 0 END AS f3,
 ```
 
-数値フィーチャの場合は、以下の SQL 文で示すように、列に重みを直接乗算できます。
+数値特性の場合は、次の SQL 文に示すように、列に重み付けを直接乗算できます。
 
 ```sql
 SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```
 
-数値が得られた後、それらは、ロジスティクス回帰アルゴリズムが最終予測を生成する S 状結合関数に移植することができます。 以下の文で、 `intercept` は、回帰の切片の数です。
+数値が得られたら、S字型関数に移植することができ、ロジスティクス回帰アルゴリズムが最終的な予測を生成します。 次のステートメントでは、回帰のインターセプトの番号は `intercept` です。
         
 
 ```sql
@@ -188,14 +188,14 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
  
 ### エンドツーエンドの例
 
-列が 2 つある場合 (`c1` および `c2`) `c1` には、 [!DNL Logistic Regression] アルゴリズムは、次の関数を使用して学習します。
+2 つの列（`c1` と `c2`）がある状況で、2 つのカテゴリが `c1` る場合、[!DNL Logistic Regression] のアルゴリズムは次の関数でトレーニングされます。
  
 
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
 ```
  
-SQL では、次のように同等です。
+SQL での同等の関数は次のとおりです。
 
 ```sql
 SELECT
@@ -210,7 +210,7 @@ FROM
   )
 ```
  
-この [!DNL Python] 翻訳プロセスを自動化するコードは次のとおりです。
+翻訳プロセスを自動化するための [!DNL Python] のコードを以下に示します。
 
 ```python
 def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
@@ -235,7 +235,7 @@ def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
     return final_sql
 ```
 
-SQL を使用してデータベースを推論する場合、出力は次のようになります。
+SQL を使用してデータベースを推測する場合、出力は次のようになります。
 
 ```python
 sql = generate_lr_inference_sql(ohc_columns, num_cols, clf, "fdu_luma_raw")
@@ -245,13 +245,13 @@ colnames = [desc[0] for desc in cur.description]
 pd.DataFrame(samples,columns=colnames)
 ```
 
-集計した結果は、顧客セッションごとに購入傾向を表示します。 `0` 買う傾向がなく `1` というのは、確かに購入傾向を意味している。
+表形式の結果は、顧客セッションごとに購入傾向を表示し、`0` れは購入傾向がないことを意味し、`1` れは確認された購入傾向を意味します。
 
-![SQL を使用したデータベースの推論の集計結果。](../images/use-cases/inference-results.png)
+![SQL を使用したデータベース推論の表形式の結果です。](../images/use-cases/inference-results.png)
 
-## サンプル済みデータの操作：ブートストラップ {#working-on-sampled-data}
+## サンプル データを使用する：ブートストラップ {#working-on-sampled-data}
 
-ローカルマシンがモデルトレーニング用のデータを保存するにはデータサイズが大きすぎる場合は、クエリサービスの完全なデータの代わりにサンプルを取得できます。 クエリサービスからサンプリングするために必要なデータ量を知るには、ブートストラップと呼ばれる手法を適用します。 この点で、ブートストラップとは、モデルが様々なサンプルを使用して複数回トレーニングされ、異なるサンプル間でのモデルの精度の相違が調べられることを意味します。 上記の傾向モデルの例を調整するには、まず、機械学習ワークフロー全体を関数にカプセル化します。 コードは次のようになります。
+ローカルマシンでモデルトレーニング用のデータを保存するには、データサイズが大きすぎる場合は、クエリサービスの完全なデータではなくサンプルを取得できます。 クエリサービスからサンプリングするために必要なデータの量を把握するには、ブートストラップと呼ばれる手法を適用します。 ブートストラップとは、モデルをさまざまなサンプルで複数回トレーニングし、異なるサンプル間でのモデルの精度のばらつきを調べることを意味します。 上記の傾向モデルの例を調整するには、まず、機械学習ワークフロー全体を関数にカプセル化します。 コードは次のようになります。
 
 ```python
 def end_to_end_pipeline(df):
@@ -295,7 +295,7 @@ def end_to_end_pipeline(df):
     return clf.score(X_test, y_test)
 ```
 
-その後、この関数は、1 回のループで複数回実行できます（例：10 回）。 前のコードとの違いは、サンプルがテーブル全体から取り出されるのではなく、行のサンプルのみが取り出される点です。 例えば、以下のサンプルコードでは 1000 行しか取りません。 各反復の精度を保存できます。
+その後、この関数をループで複数回実行できます（例：10 回）。 前のコードとの違いは、現在のサンプルはテーブル全体から取得されるのではなく、行のサンプルのみが取得されることです。 例えば、以下のサンプルコードでは、1000 行しか取得できません。 各反復の精度を保存できます。
 
 ```python
 from tqdm import tqdm
@@ -320,8 +320,8 @@ for i in tqdm(range(100)):
 bootstrap_accuracy = np.sort(bootstrap_accuracy)
 ```
 
-次に、ブートストラップされたモデルの精度が並べ替えられます。 その後、モデルの精度の 10 番目と 90 番目のクォールは、指定されたサンプルサイズを持つモデルの精度の 95%信頼区間になります。
+ブートストラップされたモデルの精度がソートされます。 その後、モデルの精度の 10 番目と 90 番目の分量は、指定されたサンプルサイズでのモデルの精度の 95% の信頼区間になります。
 
-![傾向スコアの信頼区間を表示する印刷コマンド。](../images/use-cases/confidence-interval.png)
+![ 傾向スコアの信頼区間を表示する印刷コマンド。](../images/use-cases/confidence-interval.png)
 
-上記の図では、モデルのトレーニングに 1000 行しかかからない場合、精度は約 84%～88%に低下すると予想されます。 次の項目を調整できます。 `LIMIT` 句を使用して、モデルのパフォーマンスを確保する必要がある場合に役立ちます。
+上の図では、モデルのトレーニングに 1000 行しか使用しない場合、精度は約 84～88% に低下すると予想されます。 モデルのパフォーマンスを確保するために、必要に応じて、クエリサービスクエリの `LIMIT` 句を調整できます。

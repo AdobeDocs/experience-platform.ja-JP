@@ -1,59 +1,59 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: ドキュメントのセルフサービステンプレート
-description: フローサービス API を使用してAdobe Experience Platformを YOURSOURCE に接続する方法を説明します。
+description: Flow Service API を使用してAdobe Experience Platformをソースに接続する方法を説明します。
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2135'
+source-wordcount: '2072'
 ht-degree: 56%
 
 ---
 
-# の作成 *YOURSOURCE* を使用した接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した *YOURSOURCE* 接続の作成
 
-*このテンプレートの操作中に、斜体のすべての段落を置き換えるか削除します（この段落から始まります）。*
+*このテンプレートを使用する場合は、（この段落から始めて）斜体のすべての段落を置き換えるか削除します。*
 
-*まず、ページ上部のメタデータ（タイトルと説明）を更新します。 このページにある DNL のインスタンスをすべて無視してください。 これは、機械翻訳プロセスがページをサポートする複数の言語に正しく翻訳するのに役立つタグです。 お客様がドキュメントを送信した後、ドキュメントにタグを追加します。*
+*まず、ページ上部のメタデータ（タイトルと説明）を更新します。 このページの DNL のインスタンスをすべて無視してください。 これは、機械翻訳プロセスが、サポートする複数の言語にページを正しく翻訳するのに役立つタグです。 ドキュメントを送信したら、タグをドキュメントに追加します。*
 
 ## 概要
 
-*顧客に提供する価値を含め、会社の概要を短く示します。 詳しくは、製品ドキュメントのホームページへのリンクを参照してください。*
+*顧客に提供する価値を含め、会社の概要を入力します。 さらに読むために、製品ドキュメントのホームページへのリンクを含めます。*
 
 >[!IMPORTANT]
 >
->このソースコネクタとドキュメントページは、 *YourSource* チーム。 お問い合わせや更新のご依頼は、直接お問い合わせください。 *更新用にアクセスできるリンクまたは電子メールアドレスを挿入します*.
+>このソースコネクタとドキュメントページは、*YourSource* チームによって作成および管理されます。 お問い合わせや更新のリクエストについては、*リンクまたはメールアドレスを挿入* まで直接ご連絡ください。
 
 ## 前提条件
 
-*Adobe Experience Platformユーザーインターフェイスでソースの設定を開始する前に顧客が認識しておく必要がある事項に関する情報を、この節に追加します。 次のような場合が考えられます。*
+*Adobe Experience Platform ユーザーインターフェイスでソースの設定を開始する前にお客様が認識しておく必要のある情報については、この節で説明します。 次に示す内容を使用できます。*
 
-* *許可リストに追加する必要がある*
-* *電子メールハッシュの要件*
-* *お客様側のアカウントの詳細*
-* *プラットフォームに接続するための API キーの取得方法*
+* *許可リストに追加する必要があります*
+* *メールハッシュの要件*
+* *お客様側のアカウント詳細*
+* *プラットフォームに接続するための API キーを取得する方法*
 
 ### 必要な資格情報の収集
 
-接続するには *YOURSOURCE* をExperience Platformするには、次の接続プロパティの値を指定する必要があります。
+*YOURSOURCE* をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| *資格情報 1* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
-| *資格情報 2* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
-| *資格 3* | *ここでソースの認証資格情報に簡単な説明を追加してください* | *ここにソースの認証資格情報の例を追加してください* |
+| *認証情報 1* | *ソースの認証情報に簡単な説明を追加してください* | *ソースの認証情報の例をここに追加してください* |
+| *認証情報 2* | *ソースの認証情報に簡単な説明を追加してください* | *ソースの認証情報の例をここに追加してください* |
+| *認証情報 3* | *ソースの認証情報に簡単な説明を追加してください* | *ソースの認証情報の例をここに追加してください* |
 
-これらの資格情報について詳しくは、 *YOURSOURCE* 認証に関するドキュメント。 *ここにプラットフォームの認証に関するドキュメントへのリンクを追加してください*.
+これらの資格情報について詳しくは、*YOURSOURCE* 認証ドキュメントを参照してください。 *プラットフォームの認証ドキュメントへのリンクをここに追加してください*。
 
-## 接続 *YOURSOURCE* を使用して Platform に [!DNL Flow Service] API
+## [!DNL Flow Service] API を使用した Platform への *YOURSOURCE* の接続
 
-次のチュートリアルでは、 *YOURSOURCE* ソース接続と、 *YOURSOURCE* を使用して Platform にデータを送信する [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+以下のチュートリアルでは、*YOURSOURCE* ソース接続を作成し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して *YOURSOURCE* データを Platform に取り込むためのデータフローを作成する手順を詳しく説明します。
 
 ### ベース接続の作成 {#base-connection}
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、 `/connections` エンドポイントを *YOURSOURCE* 認証資格情報をリクエスト本文の一部として使用します。
+ベースPOSTID を作成するには、`/connections` エンドポイントに接続リクエストを実行し、その際に *YOURSOURCE* 認証資格情報をリクエスト本文の一部として指定します。
 
 **API 形式**
 
@@ -63,7 +63,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、のベース接続を作成します。 *YOURSOURCE*:
+次のリクエストは、*YOURSOURCE* のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -94,7 +94,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
-| `description` | ベース接続に関する詳細情報を提供するために含めることができるオプションの値です。 |
+| `description` | 含めることでベース接続に関する詳細情報を提供できるオプションの値です。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
 | `auth.params.` | ソースの認証に必要な資格情報が含まれます。 |
@@ -112,7 +112,8 @@ curl -X POST \
 
 ### ソースを参照 {#explore}
 
-前の手順で生成したベース接続 ID を使用することで、GET リクエストを実行してファイルとディレクトリを調べることができます。次の呼び出しを使用して、に取り込むファイルのパスを見つけます。 [!DNL Platform]:
+前の手順で生成したベース接続 ID を使用すると、GETリクエストを実行してファイルとディレクトリを調べることができます。
+次の呼び出しを使用して、[!DNL Platform] に取り込むファイルのパスを検索します。
 
 **API 形式**
 
@@ -126,11 +127,11 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
-| `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常にに設定されています。 `rest`. |
+| `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常に `rest` に設定されています。 |
 | `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 |
-| `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、 `json` は、サポートされている唯一のファイルタイプです。 |
+| `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、サポートされているファイルタイプは `json` のみです。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
-| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、`list_id` 文字列全体を base64 にエンコードする必要があります。次の例では、 `"list_id": "10c097ca71"` base64 でエンコードされた値は、次の値と等しくなります。 `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
+| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、`list_id` 文字列全体を base64 にエンコードする必要があります。次の例では、base64 にエンコードされた `"list_id": "10c097ca71"` は `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=` と等しくなります。 |
 
 
 **リクエスト**
@@ -245,7 +246,7 @@ POST /sourceConnections
 
 **リクエスト**
 
-次のリクエストは、 *YOURSOURCE*:
+次のリクエストは、*YOURSOURCE* のソース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -277,9 +278,9 @@ curl -X POST \
 | --- | --- |
 | `name` | ソース接続の名前。 ソース接続の情報を検索する際に使用できるので、ソース接続の名前はわかりやすいものにしてください。 |
 | `description` | 含めることでソース接続に関する詳細情報を提供できるオプションの値です。 |
-| `baseConnectionId` | のベース接続 ID *YOURSOURCE*. この ID は、前の手順で生成されました。 |
+| `baseConnectionId` | *YOURSOURCE* のベース接続 ID。 この ID は、前の手順で生成されました。 |
 | `connectionSpec.id` | ソースに対応する接続仕様の ID。 |
-| `data.format` | の形式 *YOURSOURCE* 取り込むデータ。 現在、サポートされているデータ形式は `json` のみです。 |
+| `data.format` | 取り込む *YOURSOURCE* データの形式。 現在、サポートされているデータ形式は `json` のみです。 |
 
 **応答**
 
@@ -308,7 +309,7 @@ curl -X POST \
 
 ### ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込んだデータの保存先への接続を表します。 ターゲット接続を作成するには、[!DNL Data Lake] に対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続は、取り込まれたデータが保存される宛先への接続を表します。 ターゲット接続を作成するには、[!DNL Data Lake] に対応する固定接続仕様 ID を指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
 これで、一意の識別子、ターゲットスキーマ、ターゲットデータセット、および [!DNL Data Lake] の接続仕様 ID が用意できました。これらの識別子を使用することで、[!DNL Flow Service] API を使用してターゲット接続を作成し、受信ソースデータを格納するデータセットを指定できます。
 
@@ -320,7 +321,7 @@ POST /targetConnections
 
 **リクエスト**
 
-次のリクエストは、のターゲット接続を作成します。 *YOURSOURCE*:
+次のリクエストは、*YOURSOURCE* のターゲット接続を作成します。
 
 ```shell
 curl -X POST \
@@ -351,7 +352,7 @@ curl -X POST \
 | `name` | ターゲット接続の名前。ターゲット接続の情報を検索に使用できるように、ターゲット接続はわかりやすい名前にしてください。 |
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
 | `connectionSpec.id` | [!DNL Data Lake]に対応する接続仕様 ID。この修正済み ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
-| `data.format` | の形式 *YOURSOURCE* Platform に取り込むデータです。 |
+| `data.format` | Platform に取り込む *YOURSOURCE* データの形式。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセット ID。 |
 
 
@@ -368,7 +369,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これは、次に対してPOSTリクエストを実行する [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) リクエストペイロード内で定義されたデータマッピングを使用して、
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これを実現するには、リクエストペイロード内で定義されたデータマッピングを使用して、[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) に対してPOSTリクエストを実行します。
 
 **API 形式**
 
@@ -444,7 +445,7 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-からデータを取り込むための最後の手順 *YOURSOURCE* を Platform に送信する場合、データフローを作成します。 現時点で、次の必要な値の準備ができています。
+*YOURSOURCE* から Platform にデータを取り込むための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -452,7 +453,7 @@ curl -X POST \
 
 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。ペイロードに前述の値を提供しながら POST リクエストを実行することで、データフローを作成することができます。
 
-取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。間隔の値は、2 つの連続した取り込み間隔を指定します。ただし、1 回限りの取り込みを作成する場合は、間隔を設定する必要はありません。 それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
+取り込みをスケジュールするには、まず開始時刻の値をエポック時間（秒）に設定する必要があります。次に、頻度の値を次の 5 つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day` または `week`。インターバルの値は、2 つの連続した取り込みの間隔を指定しますが、1 回のみの取り込みを作成する場合は、インターバルを設定する必要はありません。 それ以外の頻度では、間隔の値を `15` 以上に設定する必要があります。
 
 
 **API 形式**
@@ -503,7 +504,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | データフローの名前。データフローの情報を検索する際に使用できるので、データフローはわかりやすい名前にしてください。 |
-| `description` | データフローの詳細を指定するために含めることができるオプションの値です。 |
+| `description` | データフローの詳細を提供するために含めることができるオプションの値です。 |
 | `flowSpec.id` | データフローの作成に必要なフロー仕様 ID。この修正済み ID は `6499120c-0b15-42dc-936e-847ea3c24d72` です。 |
 | `flowSpec.version` | フロー仕様 ID の対応するバージョン。この値のデフォルトは `1.0` です。 |
 | `sourceConnectionIds` | 以前の手順で生成された[ソース接続 ID](#source-connection)。 |
@@ -529,24 +530,24 @@ curl -X POST \
 
 ## 付録
 
-次の節では、データフローを監視、更新、削除する手順について説明します。
+次の節では、データフローの監視、更新、削除を行う手順について説明します。
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。API の完全な例については、 [API を使用したソースデータフローの監視](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html) に関するガイドを参照してください。
 
 ### データフローの更新
 
-に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` の終点 [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+データフローの ID を指定しながら API の `/flows` エンドポイントにPATCHリクエストを実行することで、名前や説明、実行スケジュールや関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新できます。 データフローをリクエストする場合は、PATCHの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html) に関するガイドを参照してください
 
 ### アカウントを更新
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` （内） `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+ベースPATCHID をクエリパラメーターとして指定して [!DNL Flow Service] API に接続リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCHリクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html) に関するガイドを参照してください。
 
 ### データフローの削除
 
-に対してDELETEリクエストを実行して、データフローを削除する [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETEリクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-アカウントを削除するには、 [!DNL Flow Service] 削除するアカウントのベース接続 ID を指定する際の API。 API の完全な例については、 [API を使用したソースアカウントの削除](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+削除するアカウントのベースDELETEID を指定したうえで、[!DNL Flow Service] API に接続リクエストを実行してアカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html) に関するガイドを参照してください。

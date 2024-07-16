@@ -4,8 +4,8 @@ description: このガイドでは、Admin Console を通じて管理するこ�
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 100%
+source-wordcount: '199'
+ht-degree: 91%
 
 ---
 
@@ -21,7 +21,7 @@ Assurance への中断のないアクセスを受信または保持するには�
 
 ## 製品プロファイルを使用した Experience Platform へのユーザーの追加
 
-製品プロファイルにユーザーを追加するには、Admin Console にログインし、「**ユーザーを追加**」を選択します。。
+製品プロファイルにユーザーを追加するには、Admin Consoleにログインし、「**ユーザーを追加**」を選択します。
 
 ![「ユーザーを追加」ボタンがハイライト表示されます。](./images/get-access/product-profile-add-users.png)
 

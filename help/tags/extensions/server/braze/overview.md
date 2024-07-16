@@ -1,209 +1,209 @@
 ---
 keywords: イベント転送拡張機能；braze;braze イベント転送拡張機能
 title: Braze イベント転送拡張機能
-description: このAdobe Experience Platformイベント転送拡張機能は、Edge ネットワークイベントを Braze に送信します。
+description: このAdobe Experience Platform イベント転送拡張機能は、Edge Networkイベントを Braze に送信します。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
 source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
 source-wordcount: '1692'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
 # [!DNL Braze Track Events API] イベント転送拡張機能
 
-[[!DNL Braze]](https://www.braze.com) は、消費者とブランド間の顧客中心のインタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。 使用 [!DNL Braze]を使用すると、次の操作を実行できます。
+[[!DNL Braze]](https://www.braze.com) は、消費者とブランドの間の顧客中心インタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。 [!DNL Braze] を使用すると、次の操作を実行できます。
 
-- 言語の好みや場所の好みなどに基づいてターゲットユーザーにデータ（マーケティングメッセージなど）を配信し、コンバージョン率を高め、主要なビジネス目標をサポートします。
-- 電子メール、プッシュ通知、アプリ内メッセージなど、複数のチャネルをまたいで、お客様向けにパーソナライズされたメッセージを、ちょうど適切なタイミングで、お客様の希望の言語で送信できます。
-- マーケティングキャンペーンやプロモーションキャンペーンの特定のユーザーをターゲットにして、リピート顧客数を増やします。
-- ユーザーの行動とパターンを調べ、カスタマイズされたメッセージを使用して特定のオーディエンスをターゲット設定し、売上高の増加に役立てます。
+- 言語の好み、場所の好みなどに基づいてターゲットユーザーにデータ（マーケティングメッセージなど）を配信して、コンバージョン率を高め、主要なビジネス目標をサポートします。
+- 顧客は、メール、プッシュ通知、アプリ内メッセージなど、複数のチャネルをまたいで、適切なタイミングで、好みの言語でパーソナライズされたメッセージを送信します。
+- マーケティングおよびプロモーションキャンペーンの特定のユーザーをターゲットにして、リピート顧客の数を増やします。
+- ユーザーの行動とパターンを調査し、カスタマイズされたメッセージで特定のオーディエンスをターゲットに設定します。これは、売上高の増加に役立つ可能性があります。
 
-The [!DNL Braze Track Events API] [イベント転送](../../../ui/event-forwarding/overview.md) 拡張機能を使用すると、 Adobe Experience Platform Edge Network で取得したデータを活用し、に送信できます。 [!DNL Braze] を使用して、サーバー側のイベントの形式で [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
+[!DNL Braze Track Events API] [ イベント転送 ](../../../ui/event-forwarding/overview.md) 拡張機能を使用すると、Adobe Experience Platform Edge Networkで取得したデータを活用したり、[[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API を使用してサーバーサイドイベントの形式で [!DNL Braze] に送信したりできます。
 
-このドキュメントでは、拡張機能の使用例、イベント転送ライブラリでのインストール方法、イベント転送での拡張機能の使用方法について説明します [ルール](../../../ui/managing-resources/rules.md).
+このドキュメントでは、拡張機能のユースケース、イベント転送ライブラリへのインストール方法およびイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) でその機能を使用する方法について説明します。
 
 ## ユースケース
 
-この拡張機能は、 [!DNL Braze] を使用して、顧客分析およびターゲティング機能を活用します。
+この拡張機能は、Edge Networkのデータを使用して、カスタマー分析とターゲティング機能を活用 [!DNL Braze] る場合に使用します。
 
-例えば、マルチチャネルの存在（Web サイトとモバイル）があり、Web サイトやモバイルプラットフォームからイベントデータとしてトランザクション入力や会話入力を取り込む小売組織について考えてみましょう。 各種の [タグ](../../../home.md) ルールを使用する場合、このデータはリアルタイムで Edge ネットワークに送信されます。 ここから、 [!DNL Braze] イベント転送拡張機能は、関連イベントをに自動的に送信します。 [!DNL Braze] をサーバー側から削除します。
+例えば、マルチチャネルプレゼンス（web サイトとモバイル）を持ち、web サイトやモバイルプラットフォームからイベントデータとしてトランザクション入力や会話入力を取り込む小売組織について考えてみます。 様々な [ タグ ](../../../home.md) ルールを使用して、このデータはリアルタイムでEdge Networkに送信されます。 ここから、[!DNL Braze] イベント転送拡張機能は、関連するイベントをサーバーサイドから [!DNL Braze] に自動的に送信します。
 
-データを送信したら、組織の分析チームは [!DNL Braze's] データセットを処理し、ビジネスインサイトを導き出してグラフ、ダッシュボード、その他のビジュアライゼーションを生成し、ビジネス関係者に通知する機能です。 詳しくは、 [[!DNL Braze] 顧客](https://www.braze.com/customers) ページを参照してください。
+データが送信されたら、組織の分析チームはその機能を活用してデータセットを処理し、ビジネスインサイトを導き出して、グラフ、ダッシュボード、その他のビジュアライゼーションを生成し、ビジネス関係者に情報を提供で [!DNL Braze's] ます。 プラットフォームの様々なユースケースについて詳しくは、[[!DNL Braze]  顧客 ](https://www.braze.com/customers) ページを参照してください。
 
-## [!DNL Braze] 前提条件とガードレール {#prerequisites}
+## [!DNL Braze] の前提条件とガードレール {#prerequisites}
 
-次をお持ちの場合は、 [!DNL Braze] その技術を使用するためのアカウント。 アカウントがない場合は、 [はじめにページ](https://www.braze.com/get-started/) オン [!DNL Braze] 接続する [!DNL Braze Sales] アカウント作成プロセスを開始します。
+そのテクノロジーを使用するには、[!DNL Braze] アカウントが必要です。 アカウントをお持ちでない場合は、[!DNL Braze] の [ 基本を学ぶ ](https://www.braze.com/get-started/) ページに移動し、[!DNL Braze Sales] に接続してアカウント作成プロセスを開始します。
 
 ### API ガードレール
 
-拡張機能では、次の 2 つを使用します。 [!DNL Braze]の API とその制限について、以下で概要を説明します。
+この拡張機能では、[!DNL Braze] の API のうち 2 つを使用します。その制限について以下に概説します。
 
 | API | レート制限 |
 | --- | --- |
-| [!DNL User Track] | 1 分あたり 50,000 件のリクエスト。 <br>詳しくは、 [[!DNL User Track] API ドキュメント](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) 」を参照してください。 |
-| [!DNL User Identify] | 1 分あたり 20,000 件のリクエスト。 <br>詳しくは、 [[!DNL User Identify] API ドキュメント](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#rate-limit) 」を参照してください。 |
+| [!DNL User Track] | 1 分あたり 50,000 リクエスト。 <br> 詳しくは、[[!DNL User Track] API ドキュメント ](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) を参照してください。 |
+| [!DNL User Identify] | 1 分あたり 20,000 リクエスト。 <br> 詳しくは、[[!DNL User Identify] API ドキュメント ](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#rate-limit) を参照してください。 |
 
 >[!NOTE]
 >
-> に関するガイドを参照してください。 [[!DNL Braze] API の制限](https://www.braze.com/docs/api/api_limits/) 制限の詳細については、
+> 適用される制限について詳しくは、[[!DNL Braze] API 制限 ](https://www.braze.com/docs/api/api_limits/) に関するガイドを参照してください。
 
-### 課金対象のデータポイント
+### 請求可能なデータポイント
 
-追加のカスタム属性をに送信する [!DNL Braze] を増やすかもしれません [!DNL Braze] データポイントの使用。 詳しくは、 [!DNL Braze] 追加のカスタム属性を送信する前に、アカウントマネージャーに問い合わせてください。 詳しくは、 [!DNL Braze] に関するドキュメント [課金対象のデータポイント](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) を参照してください。
+追加のカスタム属性を [!DNL Braze] に送信すると、[!DNL Braze] データポイントの消費量が増える可能性があります。 追加のカスタム属性を送信する前に、[!DNL Braze] アカウントマネージャーにお問い合わせください。 詳しくは、[ 請求可能なデータポイント ](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) に関する [!DNL Braze] のドキュメントを参照してください。
 
 ### 必要な設定の詳細の収集 {#configuration-details}
 
-Edge ネットワークをに接続するには [!DNL Braze]の場合、次の入力が必要です。
+Edge Networkを [!DNL Braze] に接続するには、次の入力が必要です。
 
 | キータイプ | 説明 | 例 |
 | --- | --- | --- |
-| [!DNL Braze] インスタンス | に関連付けられた REST エンドポイント [!DNL Braze] アカウント。 詳しくは、 [!DNL Braze] に関するドキュメント [インスタンス](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 指導のために | `https://rest.iad-03.braze.com` |
-| API キー | The [!DNL Braze] に関連付けられた API キー [!DNL Braze] アカウント。 <br/>詳しくは、 [!DNL Braze] に関するドキュメント [REST API キー](https://www.braze.com/docs/api/basics/#rest-api-key) 指導のために | `YOUR-BRAZE-REST-API-KEY` |
+| [!DNL Braze] Instance | [!DNL Braze] アカウントに関連付けられた REST エンドポイント。 詳しくは、[ インスタンス ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) に関する [!DNL Braze] のドキュメントを参照してください。 | `https://rest.iad-03.braze.com` |
+| API キー | [!DNL Braze] アカウントに関連付けられた [!DNL Braze] API キー。 <br/> 詳しくは、[REST API キー ](https://www.braze.com/docs/api/basics/#rest-api-key) に関する [!DNL Braze] ドキュメントを参照してください。 | `YOUR-BRAZE-REST-API-KEY` |
 
 ### 秘密鍵の作成
 
-新規作成 [イベント転送秘密鍵](../../../ui/event-forwarding/secrets.md) の値を [[!DNL Braze] API キー](#configuration-details). これは、値のセキュリティを維持しながら、アカウントへの接続を認証するために使用されます。
+新しい [ イベント転送の秘密鍵 ](../../../ui/event-forwarding/secrets.md) を作成し、値を [[!DNL Braze] API キー ](#configuration-details) に設定します。 これは、値を保護しながら、アカウントへの接続を認証するために使用されます。
 
-## のインストールと設定 [!DNL Braze] 拡張 {#install}
+## [!DNL Braze] 拡張機能のインストールと設定 {#install}
 
-拡張機能をインストールするには、以下を実行します。 [イベント転送プロパティの作成](../../../ui/event-forwarding/overview.md#properties) または、代わりに編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[ イベント転送プロパティを作成 ](../../../ui/event-forwarding/overview.md#properties) するか、代わりに編集する既存のプロパティを選択します。
 
-左側のナビゲーションの「**[!UICONTROL 拡張機能]**」をクリックします。Adobe Analytics の **[!UICONTROL カタログ]** タブ、選択 **[!UICONTROL インストール]** ～のためのカードで [!DNL Braze] 拡張子。
+左側のナビゲーションの「**[!UICONTROL 拡張機能]**」をクリックします。「**[!UICONTROL カタログ]**」タブで、[!DNL Braze] 拡張機能のカードの **[!UICONTROL インストール]** を選択します。
 
-![をインストールします。 [!DNL Braze] 拡張子。](../../../images/extensions/server/braze/install-extension.png)
+![[!DNL Braze] 拡張機能をインストールします。](../../../images/extensions/server/braze/install-extension.png)
 
-次の画面で、次の情報を入力します。 [設定値](#configuration-details) 以前に集めた [!DNL Braze]:
+次の画面で、以前に [!DNL Braze] から収集した次の [ 設定値 ](#configuration-details) を入力します。
 
-- **[!UICONTROL Rest エンドポイント URL をブレーズ]**：の値を入力できます。 [!DNL Braze] rest エンドポイント URL を指定された入力内のプレーンテキストとして指定します。
-- **[!UICONTROL API キー]**：を選択します。 [シークレットデータ要素](#create-a-secret) 先ほど作成したが、 [!DNL Braze] API キー。
+- **[!UICONTROL Braze Rest エンドポイント URL]**:[!DNL Braze] REST エンドポイント URL の値を、指定された入力にプレーンテキストとして入力できます。
+- **[!UICONTROL API キー]**:[!DNL Braze] API キーを含む、以前に作成した [ 秘密鍵データ要素 ](#create-a-secret) を選択します。
 
 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
-![The [!DNL Braze] 拡張機能の設定ページ。](../../../images/extensions/server/braze/configure-extension.png)
+![[!DNL Braze] 拡張機能の設定ページ ](../../../images/extensions/server/braze/configure-extension.png)
 
-## の作成 [!DNL Send Event] ルール {#tracking-rule}
+## [!DNL Send Event] ルールの作成 {#tracking-rule}
 
-拡張機能をインストールしたら、新しいイベント転送を作成します。 [ルール](../../../ui/managing-resources/rules.md) 必要に応じて、条件を設定します。 ルールのアクションを設定する際に、 **[!UICONTROL ブレーズ]** 拡張機能、「 **[!UICONTROL イベントの送信]** （アクションタイプ用）。
+拡張機能をインストールした後、新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成し、必要に応じてその条件を設定します。 ルールのアクションを設定する場合は、**[!UICONTROL Braze]** 拡張機能を選択してから、アクションタイプとして **[!UICONTROL イベントを送信]** を選択します。
 
-![イベント転送ルールのアクション設定を追加します。](../../../images/extensions/server/braze/braze-event-action.png)
+![ イベント転送ルールアクション設定を追加します ](../../../images/extensions/server/braze/braze-event-action.png)。
 
-**[!UICONTROL ユーザー ID]**
+**[!UICONTROL ユーザーの識別]**
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL 外部ユーザー ID] | 長く、ランダムで分散された UUID または GUID。 別の方法でユーザー ID に名前を付ける場合は、長い、ランダムで、十分に分散されている必要もあります。 詳細情報： [推奨されるユーザー ID の命名規則](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
-| [!UICONTROL ユーザー ID をブレーズ] | ユーザー ID をブレーズします。 |
-| [!UICONTROL ユーザーエイリアス] | エイリアスは、別の一意のユーザー識別子として機能します。 エイリアスを使用して、コアユーザー ID とは異なるディメンションでユーザーを識別します。 <br><br> ユーザーの alias オブジェクトは、識別子自体の alias_name と、エイリアスの種類を示す alias_label の 2 つの部分で構成されます。 ユーザーは異なるラベルを持つ複数の別名を持つことができますが、 alias_label 1 つにつき alias_name は 1 つだけです。 |
+| [!UICONTROL  外部ユーザー ID] | 長く、ランダムで、分散した UUID または GUID です。 ユーザー ID に名前を付ける別の方法を選択する場合は、長く、ランダムで、分散している必要があります。 詳しくは、[ 推奨されるユーザー ID 命名規則 ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention) を参照してください。 |
+| [!UICONTROL Braze ユーザー ID] | Braze ユーザー識別子。 |
+| [!UICONTROL  ユーザーエイリアス ] | エイリアスは、一意のユーザー ID の代替として機能します。 エイリアスを使用して、コアユーザー ID とは異なるディメンションに沿ってユーザーを識別します。 <br><br> ユーザーの alias オブジェクトは、識別子自体の alias_name と、エイリアスのタイプを示す alias_label の 2 つの部分で構成されています。 ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、alias_label ごとに 1 つの alias_name のみです。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> イベントをユーザーに提供する場合は、 [!UICONTROL 外部ユーザー ID] フィールド、または [!UICONTROL ユーザー識別子を編集] フィールドまたは [!UICONTROL ユーザーエイリアス] 」セクションに入力します。
+> ユーザーにイベントを結び付けるには、「[!UICONTROL  外部ユーザー ID]」フィールド、「[!UICONTROL Braze ユーザー識別子 ]」フィールドまたは「[!UICONTROL  ユーザーエイリアス ]」セクションのいずれかを入力する必要があります。
 
 **[!UICONTROL イベントデータ]**
 
 | 入力 | 説明 | 必須 |
 | --- | --- | --- |
-| [!UICONTROL イベント名&#x200B;] | イベントの名前。 | ○ |
-| [!UICONTROL イベント時刻] | ISO 8601 またはでの文字列としての日時。 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式を使用します。 | ○ |
-| [!UICONTROL アプリ識別子] | アプリの識別子または <strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作しているアプリグループ内のアプリを指定します。 詳しくは、 [API 識別子のタイプ](https://www.braze.com/docs/api/identifier_types/). | |
-| [!UICONTROL イベントのプロパテ&#x200B;ィ] | イベントのカスタムプロパティを含む JSON オブジェクト。 |  |
+| [!UICONTROL  イベント名&#x200B;] | イベントの名前。 | ○ |
+| [!UICONTROL  イベント時間 ] | ISO 8601 形式または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としての日時。 | ○ |
+| [!UICONTROL  アプリ識別子 ] | アプリ識別子（<strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作するアプリグループ内のアプリを指定します。 [API 識別子のタイプ ](https://www.braze.com/docs/api/identifier_types/) について詳しく説明します。 | |
+| [!UICONTROL  イベントのプロパティ &#x200B;] | イベントのカスタムプロパティを含む JSON オブジェクト。 |  |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> The **[!UICONTROL 送信イベントをブレーズ]** アクションに必要なのは、 **[!UICONTROL イベント名]** および **[!UICONTROL イベント時刻]** を指定する必要がありますが、カスタムプロパティフィールドにできる限り多くの情報を含める必要があります。 詳しくは、 [!DNL Braze] イベントオブジェクト ( [公式文書](https://www.braze.com/docs/api/objects_filters/event_object/).
+> **[!UICONTROL Braze イベントの送信]** アクションでは、**[!UICONTROL イベント名]** と **[!UICONTROL イベント時間]** のみを指定する必要がありますが、カスタムプロパティフィールドにはできるだけ多くの情報を含める必要があります。 [!DNL Braze] イベントオブジェクトについて詳しくは、[ 公式ドキュメント ](https://www.braze.com/docs/api/objects_filters/event_object/) を参照してください。
 
 **[!UICONTROL ユーザー属性]**
 
-ユーザー属性は、指定したユーザープロファイルで指定した名前と値で属性を作成または更新するフィールドを含む JSON オブジェクトにすることができます。 次のプロパティがサポートされています。
+ユーザー属性は、指定されたユーザープロファイル上で、指定された名前と値で属性を作成または更新するフィールドを含む JSON オブジェクトにすることができます。 次のプロパティがサポートされています。
 
 | ユーザー属性 | 説明 |
 | --- | --- |
-| [!UICONTROL 名] | |
-| [!UICONTROL 姓] | |
+| [!UICONTROL  名 ] | |
+| [!UICONTROL  姓 ] | |
 | [!UICONTROL 電話] | |
 | [!UICONTROL メール] | |
-| [!UICONTROL 性別] | 「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（特に指定しない）のいずれかの文字列。 |
-| [!UICONTROL 市区町村] | |
-| [!UICONTROL 国] | 国を文字列として [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式を使用します。 |
-| [!UICONTROL 言語] | の文字列としての言語 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 形式を使用します。 |
-| [!UICONTROL 生年月日] | 形式「YYYY-MM-DD」の文字列 ( 例：1980-12-21)。 |
-| [!UICONTROL タイムゾーン] | タイムゾーン名： [IANA タイムゾーンデータベース](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ( 例：「アメリカ/ニューヨーク」または「東部標準時（米国およびカナダ）」)。 |
-| [!UICONTROL Facebook] | id （文字列）、likes （文字列の配列）、num_friends （整数）のいずれかを含むハッシュ。 |
-| [!UICONTROL Twitter] | id（整数）、screen_name( 文字列、Twitterハンドル )、followers_count（整数）、friends_count（整数）、statuses_count（整数）のいずれかを含むハッシュ。 |
+| [!UICONTROL  性別 ] | 次の文字列の 1 つ：「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（言いたくない）。 |
+| [!UICONTROL  市区町村 ] | |
+| [!UICONTROL 国] | [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式の文字列としての国。 |
+| [!UICONTROL 言語] | [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 形式の文字列としての言語。 |
+| [!UICONTROL  生年月日 ] | 「YYYY-MM-DD」形式の文字列（例：1980-12-21）。 |
+| [!UICONTROL タイムゾーン] | [IANA タイムゾーンデータベース ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) からのタイムゾーン名（「アメリカ/ニューヨーク」や「東部時間（米国およびカナダ）」など）。 |
+| [!UICONTROL Facebook] | ID （文字列）、likes （文字列の配列）、num_friends （整数）のいずれかを含むハッシュ。 |
+| [!UICONTROL Twitter] | ID （整数）、screen_name （文字列、Twitterハンドル）、followers_count （整数）、friends_count （整数）、states_count （整数）のいずれかを含むハッシュ。 |
 
 {style="table-layout:auto"}
 
-## の作成 [!DNL Send Purchase Event] ルール {#purchase-rule}
+## [!DNL Send Purchase Event] ルールの作成 {#purchase-rule}
 
-拡張機能をインストールしたら、新しいイベント転送を作成します。 [ルール](../../../ui/managing-resources/rules.md) 必要に応じて、条件を設定します。 ルールのアクションを設定する際に、 **[!UICONTROL ブレーズ]** 拡張機能、「 **[!UICONTROL 購入イベントの送信]** （アクションタイプ用）。
+拡張機能をインストールした後、新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成し、必要に応じてその条件を設定します。 ルールのアクションを設定する際に、**[!UICONTROL Braze]** 拡張機能を選択してから、アクションタイプに **[!UICONTROL 購入イベントを送信]** を選択します。
 
-![「Braze Purchase」アクションタイプのイベント転送ルールアクション設定を追加します。](../../../images/extensions/server/braze/braze-purchase-event-action.png)
+![Braze 購入アクションタイプのイベント転送ルールアクション設定を追加します。](../../../images/extensions/server/braze/braze-purchase-event-action.png)
 
-**[!UICONTROL ユーザー ID]**
+**[!UICONTROL ユーザーの識別]**
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL 外部ユーザー ID] | 長く、ランダムで分散された UUID または GUID。 別の方法でユーザー ID に名前を付ける場合は、長い、ランダムで、十分に分散されている必要もあります。 詳細情報： [推奨されるユーザー ID の命名規則](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
-| [!UICONTROL ユーザー ID をブレーズ] | ユーザー ID をブレーズします。 |
-| [!UICONTROL ユーザーエイリアス] | エイリアスは、別の一意のユーザー識別子として機能します。 エイリアスを使用して、コアユーザー ID とは異なるディメンションでユーザーを識別します。 <br><br> ユーザーの alias オブジェクトは、識別子自体の alias_name と、エイリアスの種類を示す alias_label の 2 つの部分で構成されます。 ユーザーは異なるラベルを持つ複数の別名を持つことができますが、 alias_label 1 つにつき alias_name は 1 つだけです。 |
+| [!UICONTROL  外部ユーザー ID] | 長く、ランダムで、分散した UUID または GUID です。 ユーザー ID に名前を付ける別の方法を選択する場合は、長く、ランダムで、分散している必要があります。 詳しくは、[ 推奨されるユーザー ID 命名規則 ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention) を参照してください。 |
+| [!UICONTROL Braze ユーザー ID] | Braze ユーザー識別子。 |
+| [!UICONTROL  ユーザーエイリアス ] | エイリアスは、一意のユーザー ID の代替として機能します。 エイリアスを使用して、コアユーザー ID とは異なるディメンションに沿ってユーザーを識別します。 <br><br> ユーザーの alias オブジェクトは、識別子自体の alias_name と、エイリアスのタイプを示す alias_label の 2 つの部分で構成されています。 ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、alias_label ごとに 1 つの alias_name のみです。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> イベントをユーザーにリンクするには、 [!UICONTROL 外部ユーザー ID] フィールド、 [!UICONTROL ユーザー識別子を編集] フィールド、または [!UICONTROL ユーザーエイリアス] 」セクションに入力します。
+> イベントをユーザーにリンクするには、「[!UICONTROL  外部ユーザー ID]」フィールド、「[!UICONTROL Braze ユーザー識別子 ]」フィールド、「[!UICONTROL  ユーザーエイリアス ]」セクションのいずれかを入力する必要があります。
 
 **[!UICONTROL 購入データ]**
 
 | 入力 | 説明 | 必須 |
 | --- | --- | --- |
-| [!UICONTROL 製品 ID&#x200B;] | 購入の識別子。 （例：製品名または製品カテゴリ） | ○ |
-| [!UICONTROL 購入時間] | ISO 8601 またはでの文字列としての日時。 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式を使用します。 | ○ |
-| [!UICONTROL 通貨&#x200B;] | 通貨を文字列として [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) 英字通貨コード形式。 | ○ |
-| [!UICONTROL 価格&#x200B;] | 価格。 | ○ |
-| [!UICONTROL 数&#x200B;量] | 指定しない場合、デフォルト値は 1 です。 最大値は 100 より小さい値にする必要があります。 | |
-| [!UICONTROL アプリ識別子] | アプリの識別子または <strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作しているアプリグループ内のアプリを指定します。 詳しくは、 [API 識別子のタイプ](https://www.braze.com/docs/api/identifier_types/). | |
-| [!UICONTROL 購入プロパティ&#x200B;] | 購入のカスタムプロパティを含む JSON オブジェクト。 |  |
+| [!UICONTROL  製品 ID &#x200B;] | 購入の識別子。 （例：製品名または製品カテゴリ） | ○ |
+| [!UICONTROL  購入時間 ] | ISO 8601 形式または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としての日時。 | ○ |
+| [!UICONTROL  通貨&#x200B;] | [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) アルファベット通貨コード形式の文字列としての通貨。 | ○ |
+| [!UICONTROL  価&#x200B;] | 価格： | ○ |
+| [!UICONTROL  数量&#x200B;] | 指定しない場合、デフォルト値は 1 になります。 最大値は 100 未満である必要があります。 | |
+| [!UICONTROL  アプリ識別子 ] | アプリ識別子（<strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作するアプリグループ内のアプリを指定します。 [API 識別子のタイプ ](https://www.braze.com/docs/api/identifier_types/) について詳しく説明します。 | |
+| [!UICONTROL  購入プロパティ &#x200B;] | 購入のカスタムプロパティを含む JSON オブジェクト。 |  |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> The **[!UICONTROL 送信イベントをブレーズ]** アクションに必要なのは、 **[!UICONTROL イベント名]** および **[!UICONTROL イベント時刻]** を指定する必要がありますが、カスタムプロパティフィールドにできる限り多くの情報を含める必要があります。 詳しくは、 [!DNL Braze] イベントオブジェクト ( [公式文書](https://www.braze.com/docs/api/objects_filters/event_object/).
+> **[!UICONTROL Braze イベントの送信]** アクションでは、**[!UICONTROL イベント名]** と **[!UICONTROL イベント時間]** のみを指定する必要がありますが、カスタムプロパティフィールドにはできるだけ多くの情報を含める必要があります。 [!DNL Braze] イベントオブジェクトについて詳しくは、[ 公式ドキュメント ](https://www.braze.com/docs/api/objects_filters/event_object/) を参照してください。
 
 **[!UICONTROL ユーザー属性]**
 
-ユーザー属性は、指定したユーザープロファイルで指定した名前と値で属性を作成または更新するフィールドを含む JSON オブジェクトにすることができます。 次のプロパティがサポートされています。
+ユーザー属性は、指定されたユーザープロファイル上で、指定された名前と値で属性を作成または更新するフィールドを含む JSON オブジェクトにすることができます。 次のプロパティがサポートされています。
 
 | ユーザー属性 | 説明 |
 | --- | --- |
-| [!UICONTROL 名] | |
-| [!UICONTROL 姓] | |
+| [!UICONTROL  名 ] | |
+| [!UICONTROL  姓 ] | |
 | [!UICONTROL 電話] | |
 | [!UICONTROL メール] | |
-| [!UICONTROL 性別] | 「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（特に指定しない）のいずれかの文字列。 |
-| [!UICONTROL 市区町村] | |
-| [!UICONTROL 国] | 国を文字列として [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式を使用します。 |
-| [!UICONTROL 言語] | の文字列としての言語 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 形式を使用します。 |
-| [!UICONTROL 生年月日] | 形式「YYYY-MM-DD」の文字列 ( 例：1980-12-21)。 |
-| [!UICONTROL タイムゾーン] | タイムゾーン名： [IANA タイムゾーンデータベース](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ( 例：「アメリカ/ニューヨーク」または「東部標準時（米国およびカナダ）」)。 |
-| [!UICONTROL Facebook] | id （文字列）、likes （文字列の配列）、num_friends （整数）のいずれかを含むハッシュ。 |
-| [!UICONTROL Twitter] | id（整数）、screen_name( 文字列、Twitterハンドル )、followers_count（整数）、friends_count（整数）、statuses_count（整数）のいずれかを含むハッシュ。 |
+| [!UICONTROL  性別 ] | 次の文字列の 1 つ：「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（言いたくない）。 |
+| [!UICONTROL  市区町村 ] | |
+| [!UICONTROL 国] | [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式の文字列としての国。 |
+| [!UICONTROL 言語] | [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 形式の文字列としての言語。 |
+| [!UICONTROL  生年月日 ] | 「YYYY-MM-DD」形式の文字列（例：1980-12-21）。 |
+| [!UICONTROL タイムゾーン] | [IANA タイムゾーンデータベース ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) からのタイムゾーン名（「アメリカ/ニューヨーク」や「東部時間（米国およびカナダ）」など）。 |
+| [!UICONTROL Facebook] | ID （文字列）、likes （文字列の配列）、num_friends （整数）のいずれかを含むハッシュ。 |
+| [!UICONTROL Twitter] | ID （整数）、screen_name （文字列、Twitterハンドル）、followers_count （整数）、friends_count （整数）、states_count （整数）のいずれかを含むハッシュ。 |
 
 {style="table-layout:auto"}
 
-## 内のデータの検証 [!DNL Braze] {#validate}
+## [!DNL Braze] 内のデータの検証 {#validate}
 
-イベント収集および [!DNL Adobe Experience Platform] 統合に成功した場合は、 [!DNL Braze] コンソールの場合： [ユーザープロファイルの表示](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). 特に、に送信される新しいイベントデータ [!DNL Braze] が [!DNL Purchases] 特定のユーザーの [「概要」タブ](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
+イベントの収集と [!DNL Adobe Experience Platform] の統合が成功した場合は、[ ユーザープロファイルの表示 ](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/) 時に [!DNL Braze] コンソール内にイベントが表示されます。 特に、[!DNL Braze] に送信された新しいイベントデータは、特定のユーザーの [ 概要タブ ](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab) の [!DNL Purchases] セクションに反映されます。
 
 ## 次の手順
 
-このガイドでは、コンバージョンイベントをに送信する方法について説明しました。 [!DNL Braze] イベント転送を使用しています。 に送信されたイベントデータのダウンストリームアプリケーションの詳細 [!DNL Braze]（を参照） [公式文書](https://www.braze.com/docs).
+このガイドでは、イベント転送を使用してコンバージョンイベントを [!DNL Braze] に送信する方法について説明しました。 [!DNL Braze] に送信されるイベントデータのダウンストリームアプリケーションについて詳しくは、[ 公式ドキュメント ](https://www.braze.com/docs) を参照してください。
 
-Experience Platformのイベント転送機能について詳しくは、 [イベント転送の概要](../../../ui/event-forwarding/overview.md).
+Experience Platformのイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。

@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；API;XDM;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；動作；動作；動作；動作；
+keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；動作；動作；動作；
 solution: Experience Platform
-title: ビヘイビアー API エンドポイント
-description: スキーマレジストリ API の/behaviors エンドポイントを使用すると、グローバルコンテナ内の使用可能なすべてのビヘイビアーを取得できます。
+title: 動作 API エンドポイント
+description: スキーマレジストリ API の/behaviors エンドポイントを使用すると、グローバルコンテナで使用可能なすべての動作を取得できます。
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 27%
+source-wordcount: '417'
+ht-degree: 23%
 
 ---
 
 # 動作エンドポイント
 
-エクスペリエンスデータモデル (XDM) では、ビヘイビアーは、スキーマが記述するデータの特性を定義します。 各 XDM クラスは、特定の動作を参照する必要があります。この動作は、そのクラスを使用するすべてのスキーマが継承します。 Platform のほとんどの使用例に対して、次の 2 つの動作を使用できます。
+エクスペリエンスデータモデル（XDM）では、動作によって、スキーマが記述するデータの特性が定義されます。 各 XDM クラスは、特定の動作を参照する必要があります。この動作は、そのクラスを使用するすべてのスキーマに継承されます。 Platform のほぼすべてのユースケースに対して、次の 2 つの動作を使用できます。
 
 * **[!UICONTROL レコード]**：主体の属性に関する情報を提供します。主体は、組織または個人にすることができます。
 * **[!UICONTROL 時系列]**：レコードの主体によって直接または間接的にアクションが実行された時点のシステムのスナップショットを提供します。
 
 >[!NOTE]
 >
->Platform の一部の使用例では、上記のいずれの動作も使用しないスキーマを使用する必要があります。 この場合、3 つ目の「アドホック」動作を使用できます。 に関するチュートリアルを参照してください。 [アドホックスキーマの作成](../tutorials/ad-hoc.md) を参照してください。
+>Platform には、上記のどちらかの動作を使用しないスキーマの使用を必要とするユースケースがあります。 このような場合は、3 つ目の「アドホック」動作を使用できます。 詳しくは、[ アドホックスキーマの作成 ](../tutorials/ad-hoc.md) に関するチュートリアルを参照してください。
 >
->スキーマの構成に対するデータ動作の影響について詳しくは、 [スキーマ構成の基本](../schema/composition.md).
+>データの動作がスキーマ構成に与える影響について詳しくは、[ スキーマ構成の基本 ](../schema/composition.md) に関するガイドを参照してください。
 
-この `/behaviors` エンドポイント [!DNL Schema Registry] API を使用すると、 `global` コンテナ。
+[!DNL Schema Registry] API の `/behaviors` エンドポイントを使用すると、`global` コンテナで使用可能な動作を表示できます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml) の一部です。先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml) の一部です。 先に進む前に、[はじめる前に](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 動作のリストの取得 {#list}
 
-使用可能なすべての動作のリストを取得するには、GETリクエストを `/behaviors` endpoint.
+`/behaviors` エンドポイントに対してGETリクエストをおこなうと、使用可能なすべてのビヘイビアーのリストを取得できます。
 
 **API 形式**
 
@@ -87,9 +87,9 @@ curl -X GET \
 }
 ```
 
-## 動作の検索 {#lookup}
+## 行動の検索 {#lookup}
 
-特定の動作を検索するには、 `/behaviors` endpoint.
+`/behaviors` エンドポイントに対するGETリクエストのパスで ID を指定することで、特定の動作を検索できます。
 
 **API 形式**
 
@@ -99,13 +99,13 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{BEHAVIOR_ID}` | この `meta:altId` または URL エンコード済み `$id` 検索する動作の数を指定します。 |
+| `{BEHAVIOR_ID}` | 検索する動作の `meta:altId` または URL エンコードされた `$id`。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエストでは、レコードの動作の詳細を取得するために、レコードの `meta:altId` リクエストパス内で使用します。
+次のリクエストは、リクエストパスに `meta:altId` を指定して、レコードの動作の詳細を取得します。
 
 ```shell
 curl -X GET \
@@ -119,7 +119,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、動作の詳細（バージョン、説明、動作を使用するクラスに提供される属性を含む）を返します。
+応答が成功すると、バージョン、説明、動作が使用するクラスに提供する属性など、動作の詳細が返されます。
 
 ```json
 {
@@ -172,4 +172,4 @@ curl -X GET \
 
 ## 次の手順
 
-このガイドでは、 API の `/behaviors` エンドポイントの使用について説明しました。[!DNL Schema Registry]API を使用して動作をクラスに割り当てる方法については、 [クラスエンドポイントガイド](./classes.md).
+このガイドでは、[!DNL Schema Registry] API の `/behaviors` エンドポイントの使用について説明しました。 API を使用してクラスにビヘイビアーを割り当てる方法については、[ クラスエンドポイントガイド ](./classes.md) を参照してください。

@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、EU 一般データ保護�
 
 >[!NOTE]
 >
->このガイドでは、Experience Platform の ID データストアに対してプライバシーリクエストを行う方法についてのみ説明します。また、Platform データレイクに対してプライバシーリクエストをおこなう予定の場合、または [!DNL Real-Time Customer Profile]（に関するガイドを参照） [データレイクでのプライバシーリクエストの処理](../catalog/privacy.md) そして [プロファイルのプライバシーリクエストの処理](../profile/privacy.md) このチュートリアルに加えて、
+>このガイドでは、Experience Platform の ID データストアに対してプライバシーリクエストを行う方法についてのみ説明します。Platform Data Lake または [!DNL Real-Time Customer Profile] に対してもプライバシーリクエストを行う予定の場合、このチュートリアルに加えて、[Data Lake でのプライバシーリクエストの処理 ](../catalog/privacy.md) および [Profile でのプライバシーリクエストの処理 ](../profile/privacy.md) に関する各ガイドも参照してください。
 >
 >他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
@@ -104,19 +104,19 @@ UI でジョブリクエストを作成する場合は、[!DNL Identity Service]
 
 ## リクエスト処理の削除
 
-[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。各 ID の削除は、指定した名前空間または ID の値に基づいて行われます。 さらに、特定の組織に関連付けられているすべてのサンドボックスに対して、削除が実行されます。
+[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。各 ID の削除は、指定した名前空間または ID の値に基づいて行われます。 さらに、特定の組織に関連付けられているすべてのサンドボックスに対して削除が行われます。
 
-リアルタイム顧客プロファイル (`ProfileService`) とデータレイク (`aepDataLake`) を ID サービス (`identity`) の場合、id に関連する様々なデータセットが、次のように異なるタイミングでシステムから削除されます。
+ID サービスのプライバシーリクエスト（`identity`）に製品としてリアルタイム顧客プロファイル（`ProfileService`）とデータレイク（`aepDataLake`）も含めたかどうかに応じて、ID に関連する様々なデータセットが、場合によっては異なる時間にシステムから削除されます。
 
-| 含まれる製品 | 効果 |
+| 含まれる製品 | エフェクト |
 | --- | --- |
-| `identity` のみ | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。 その ID グラフから構築されたプロファイルは、引き続き残りますが、ID 関連付けが削除されたので、新しいデータが取り込まれるたびに更新されません。 プロファイルに関連付けられたデータも、データレイクに残ります。 |
-| `identity` および `ProfileService` | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。 プロファイルに関連付けられたデータは、データレイクに残ります。 |
-| `identity` および `aepDataLake` | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。 その ID グラフから構築されたプロファイルは、引き続き残りますが、ID 関連付けが削除されたので、新しいデータが取り込まれるたびに更新されません。<br><br>データレイク製品が要求を受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、誰もがアクセスできません [!DNL Platform] サービス。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
-| `identity`、`ProfileService` および `aepDataLake` | 指定された ID は、削除リクエストを受け取ったことを示す確認メッセージが Platform から送信されるとすぐに削除されます。<br><br>データレイク製品が要求を受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、誰もがアクセスできません [!DNL Platform] サービス。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
+| `identity` のみ | 指定された ID は、削除リクエストが受信されたという確認を Platform が送信するとすぐに削除されます。 その ID グラフから構築されたプロファイルは引き続き残りますが、ID の関連付けが削除されたので、新しいデータが取り込まれても、更新されません。 プロファイルに関連付けられたデータもデータレイクに残ります。 |
+| `identity` および `ProfileService` | 指定された ID は、削除リクエストが受信されたという確認を Platform が送信するとすぐに削除されます。 プロファイルに関連付けられたデータは、データレイクに残ります。 |
+| `identity` および `aepDataLake` | 指定された ID は、削除リクエストが受信されたという確認を Platform が送信するとすぐに削除されます。 その ID グラフから構築されたプロファイルは引き続き残りますが、ID の関連付けが削除されたので、新しいデータが取り込まれても、更新されません。<br><br> データレイク製品がリクエストを受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、[!DNL Platform] サービスからアクセスできません。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
+| `identity`、`ProfileService` および `aepDataLake` | 指定された ID は、削除リクエストが受信されたという確認を Platform が送信するとすぐに削除されます。<br><br> データレイク製品がリクエストを受信し、現在処理中であることを応答すると、プロファイルに関連付けられたデータはソフト削除されるので、[!DNL Platform] サービスからアクセスできません。 ジョブが完了すると、データはデータレイクから完全に削除されます。 |
 
-詳しくは、 [[!DNL Privacy Service] ドキュメント](../privacy-service/home.md#monitor) を参照してください。
+ジョブステータスのトラッキングについて詳しくは、[[!DNL Privacy Service]  ドキュメント ](../privacy-service/home.md#monitor) を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Identity Service] におけるプライバシーリクエストの処理に関する重要な概念について説明します。その他のユーザーのプライバシーリクエストの処理に関する情報 [!DNL Experience Cloud] アプリケーション、次のドキュメントを参照 [[!DNL Privacy Service] および [!DNL Experience Cloud] アプリ](../privacy-service/experience-cloud-apps.md).
+このドキュメントでは、[!DNL Identity Service] におけるプライバシーリクエストの処理に関する重要な概念について説明します。他の [!DNL Experience Cloud] アプリケーションにおけるプライバシーリクエストの処理について詳しくは、[[!DNL Privacy Service] and [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md) のドキュメントを参照してください。

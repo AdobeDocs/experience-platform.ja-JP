@@ -1,26 +1,27 @@
 ---
-title: 広告ポッド詳細レポートのデータタイプ
-description: 広告ポッドの詳細レポートのエクスペリエンスデータモデル (XDM) データタイプについて説明します。
-source-git-commit: b6b916c76d1b2babb673d419ab69ae414dd42f20
+title: Advertising ポッドの詳細レポートデータタイプ
+description: Advertising ポッド詳細レポートの Experience Data Model （XDM）データタイプについて説明します。
+exl-id: 5164520f-8c48-4eb0-a0b0-66dc10b68356
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL 広告ポッドの詳細レポート] データタイプ
+# [!UICONTROL Advertising ポッド詳細レポート ] データタイプ
 
-[!UICONTROL 広告ポッドの詳細レポート] は、標準の Experience Data Model(XDM) データタイプです。 通常、コンテンツの時間中に連続して再生される広告のシーケンスまたはグループを定義します。 以下を使用します。 [!UICONTROL 広告ポッドの詳細レポート] 広告ブレーク ID、広告ブレークのわかりやすい名前、広告ブレーク内の広告のインデックス、コンテンツのタイムライン内の広告ブレークのオフセット（秒）などの詳細を取り込むデータ型です。
+[!UICONTROL Advertising ポッド詳細レポート ] は、標準のエクスペリエンスデータモデル（XDM）データタイプです。 通常、コンテンツブレーク中に連続して再生される広告のシーケンスまたはグループを定義します。 [!UICONTROL Advertising ポッド詳細レポート ] データタイプを使用して、広告ブレーク ID、広告ブレークのわかりやすい名前、ブレーク内の広告のインデックス、コンテンツのタイムライン内の広告ブレークのオフセット （秒）などの詳細をキャプチャします。
 
-![広告ポッドの詳細レポートのデータタイプを示す図です。](../images/data-types/advertising-pod-details-information.png)
+![Advertising ポッド詳細レポートデータタイプの図。](../images/data-types/advertising-pod-details-information.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |----------------------------|------------------------|-----------|-------------------------------------------------------|
-| [!UICONTROL 広告ブレーク ID] | `ID` | 文字列 | 広告ブレークの ID。 |
-| [!UICONTROL ポッドのわかりやすい名前] | `friendlyName` | 文字列 | 広告ブレークのわかりやすい名前。 |
-| [!UICONTROL ポッド位置の広告] | `index` | 整数 | 親広告ブレーク開始内の広告のインデックス。 |
-| [!UICONTROL ポッドオフセット] | `offset` | 整数 | **必須** コンテンツ内の広告ブレークのオフセット（秒）。 |
+| [!UICONTROL  広告ブレーク ID] | `ID` | 文字列 | 広告ブレークの ID。 |
+| [!UICONTROL  ポッドのわかりやすい名前 ] | `friendlyName` | 文字列 | 広告ブレークのわかりやすい名前。 |
+| [!UICONTROL  ポッド位置の広告 ] | `index` | 整数 | 親広告の改ページ内の広告のインデックスが開始されます。 |
+| [!UICONTROL  ポッド オフセット ] | `offset` | 整数 | **必須** コンテンツ内の広告ブレークのオフセット （秒単位）。 |
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json)
+フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) を参照してください。

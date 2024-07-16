@@ -4,8 +4,8 @@ description: Adobe Experience Platform の Adobe Experience Cloud ID サービ�
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 77%
+source-wordcount: '688'
+ht-degree: 79%
 
 ---
 
@@ -15,32 +15,32 @@ ht-degree: 77%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-このドキュメントでは、 Adobe Experience Cloud ID サービスタグ拡張のリリースノートについて説明します。 Experience CloudID サービス自体のリリースノートについては、 [ID サービスドキュメント](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja).
+このドキュメントでは、Adobe Experience Cloud ID サービスタグ拡張機能のリリースノートについて説明します。 Experience Cloud ID サービス自体のリリースノートについては、[ID サービスのドキュメント ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
 
-## 2022 年 10 月 18 日
+## 2022 年 10 月 17 日（PT）
 
 ### Experience Cloud ID Extension 5.5.0
 
-* 拡張機能で、バージョン 5.5.0 の [Visitor JS Client](https://github.com/Adobe-Marketing-Cloud/id-service). 詳しくは、 [訪問者リリースノート](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) を参照してください。
+* この拡張機能で、[ 訪問者 JS クライアント ](https://github.com/Adobe-Marketing-Cloud/id-service) のバージョン 5.5.0 がサポートされるようになりました。 詳しくは、[ 訪問者のリリースノート ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) を参照してください。
 
-## 2022 年 3 月 9 日（PT）
+## 2022 年 3 月 9 日（Pt）
 
 ### Experience Cloud ID Extension 5.4.0
 
-* このバージョンには、次の更新が含まれる最新の Visitor 5.4.0 が含まれています。
+* このバージョンには、次の更新を含む最新の Visitor 5.4.0 が含まれています。
 
-   * ライフタイムの設定機能 `s_ecid` cookieLifetime 設定を使用した cookie
-   * ページが子 iFrame に読み込まれる際に発生する Firefox ブラウザーの問題に対する更新
+   * cookieLifetime 設定を使用して、`s_ecid` cookie の有効期間を設定する機能
+   * ページが子 iFrame に読み込まれる際に発生する Firefox ブラウザーの問題の更新
 
-## 2021年10月10日
+## 2021 年 10 月 10 日（PT）
 
 ### Experience Cloud ID Extension 5.3.1
 
-* このバージョンには、次の新しいアップデートが適用された最新の Visitor 5.3.0 が含まれています。
+* このバージョンには、最新の Visitor 5.3.0 が含まれており、次の新しい更新が含まれています。
 
-   * ローカル ECID を生成するアルゴリズムを更新しました
-   * での最新のオプトイン `Secure` および `SameSite` プライバシー cookie のフラグ
-   * ページが子 iFrame に読み込まれる際の Firefox ブラウザーの問題を修正しました。
+   * ローカル ECID を生成するようにアルゴリズムを更新しました
+   * プライバシー cookie の `Secure` および `SameSite` フラグを使用した最新のオプトイン
+   * ページが子 iFrame に読み込まれる際の Firefox ブラウザーの問題を修正しました
 
 ## 2021 年 1 月 12 日（PT）
 
@@ -111,7 +111,7 @@ ht-degree: 77%
 * オプトイン preApprovals 入力の取得に関するバグを修正しました
 * preOptInApprovals の VIDEO_ANALYTICS to MEDIA_ANALYTICS の名前を変更しました。
 
-   ![](../../../images/ecid-media-analytics.png)
+  ![](../../../images/ecid-media-analytics.png)
 
 ## 2019 年 7 月 17 日（PT）
 
@@ -120,7 +120,7 @@ ht-degree: 77%
 * visitor.js を 4.4.0 に更新しました
 * setCustomerIDs の SHA256 ハッシュサポートを追加しました
 
-   ![](../../../images/ecid-setCustomerIDs-hash.png)
+  ![](../../../images/ecid-setCustomerIDs-hash.png)
 
 ## 2019 年 5 月 13 日（PT）
 
@@ -129,7 +129,7 @@ ht-degree: 77%
 * visitor.js を 4.3 に更新しました
 * タグ拡張機能の一部として、ECID にデータ要素タイプを追加しました
 
-   ![](../../../images/ecid-data-element.png)
+  ![](../../../images/ecid-data-element.png)
 
 ## 2019 年 4 月 9 日（PT）
 
@@ -150,7 +150,7 @@ ht-degree: 77%
 * visitor.js を 4.0 に更新しました
 * 新しい組み込みオプトインオブジェクトの設定オプションを追加しました。オプトイン設定を使用して、GDPR などのサポート規則を改善するために、アドビソリューションの cookie やビーコン呼び出しを抑制することができます
 
-   ![](../../../images/ext-mcid-opt-in.png)
+  ![](../../../images/ext-mcid-opt-in.png)
 
 ## 2018 年 3 月 20 日（PT）
 

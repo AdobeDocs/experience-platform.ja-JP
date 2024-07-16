@@ -5,7 +5,7 @@ title: スキーマ API エンドポイント
 description: Adobe Experience Platform API で「/schemas」エンドポイントを使用し、Platform のマッパーで使用するスキーマをプログラムにより取得、作成および更新できます。
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '616'
 ht-degree: 94%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 94%
 
 ## すべてのスキーマを取得
 
-組織で使用可能なすべてのマッパースキーマのリストを取得するには、 `/schemas` endpoint.
+`/schemas` エンドポイントに対してGETリクエストを行うことで、組織で使用可能なすべてのマッパースキーマのリストを取得できます。
 
 **API 形式**
 
@@ -43,7 +43,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 **リクエスト**
 
-次のリクエストでは、組織で最後に作成された 2 つのスキーマを取得します。
+次のリクエストでは、組織で作成された最後の 2 つのスキーマを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \

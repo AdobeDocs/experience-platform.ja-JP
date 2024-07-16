@@ -6,7 +6,7 @@ description: Flow Service API を使用して Adobe Experience Platform を Mail
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2102'
 ht-degree: 86%
 
 ---
@@ -29,7 +29,7 @@ OAuth 2 のリフレッシュコードを使用して Adobe Experience Platform 
 
 ### 基本認証を使用した [!DNL Mailchimp] ベース接続の作成
 
-を作成するには、以下を実行します。 [!DNL Mailchimp] 基本認証を使用したベース接続、 `/connections` エンドポイント [!DNL Flow Service] の資格情報を指定する際の API `authorizationTestUrl`, `username`、および `password`.
+基本認証を使用した [!DNL Mailchimp] ベース接続を作成するには、API の `/connections` エンドポイントにPOSTリクエスト [!DNL Flow Service] 行います。その際、`authorizationTestUrl`、`username`、`password` の資格情報を提供を提供を提供します。
 
 **API 形式**
 
@@ -73,7 +73,7 @@ curl -X POST \
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
 | `auth.specName` | ソースを Platform に接続するために使用する認証タイプ。 |
-| `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に認証情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
+| `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
 | `auth.params.username` | [!DNL Mailchimp] アカウントに対応するユーザー名。これは、基本認証に必要です。 |
 | `auth.params.password` | [!DNL Mailchimp] アカウントに対応するパスワード。これは、基本認証に必要です。 |
 
@@ -90,7 +90,7 @@ curl -X POST \
 
 ### OAuth 2 更新コードコードを使って [!DNL Mailchimp] ベース接続を作成します
 
-を作成するには、以下を実行します。 [!DNL Mailchimp] OAuth 2 更新コードを使用したベース接続。 `/connections` が `authorizationTestUrl`、および `accessToken`.
+OAuth 2 更新コードを使用して [!DNL Mailchimp] ベース接続を作成するには、`/connections` エンドポイントにPOSTリクエストを送信し、その際、`authorizationTestUrl` ーザーの資格情報を提供し、`accessToken` 信します。
 
 **API 形式**
 
@@ -133,7 +133,7 @@ curl -X POST \
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、[!DNL Flow Service] API を使用してソースを登録した後に取得することができます。 |
 | `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
-| `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に認証情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
+| `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
 | `auth.params.accessToken` | ソースの認証に使用された、対応するアクセストークン。これは、OAuth ベースの認証に必要です。 |
 
 **応答**
@@ -620,24 +620,24 @@ curl -X POST \
 
 ## 付録
 
-次の節では、データフローを監視、更新、削除する手順について説明します。
+次の節では、データフローの監視、更新、削除を行う手順について説明します。
 
 ### データフローの監視
 
-データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。API の完全な例については、 [API を使用したソースデータフローの監視](../../monitor.md).
+データフローが作成されると、それを通して取り込まれるデータを監視し、フローの実行状況、完了状況、エラーなどの情報を確認することができます。完全な API の例については、[API を使用したソースデータフローのモニタリング ](../../monitor.md) に関するガイドを参照してください。
 
 ### データフローの更新
 
-に対するPATCHリクエストを実行して、データフローの名前や説明、実行スケジュールおよび関連するマッピングセットなどの詳細を更新します。 `/flows` エンドポイント [!DNL Flow Service] API を使用してデータフローの ID を指定します。 PATCHリクエストをおこなう場合、データフローの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースデータフローの更新](../../update-dataflows.md).
+データフローの ID を指定しながら API の `/flows` エンドポイントにPATCHリクエストを実行することで、名前や説明、実行スケジュールや関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新できます。 データフローをリクエストする場合は、PATCHの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを更新
 
-に対してPATCHリクエストを実行して、ソースアカウントの名前、説明および資格情報を更新します。 [!DNL Flow Service] ベース接続 ID をクエリパラメーターとして指定する際の API。 PATCHリクエストをおこなう場合、ソースアカウントの一意の `etag` 内 `If-Match` ヘッダー。 API の完全な例については、 [API を使用したソースアカウントの更新](../../update.md).
+ベースPATCHID をクエリパラメーターとして指定して [!DNL Flow Service] API に接続リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCHリクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
 
 ### データフローの削除
 
-に対してDELETEリクエストを実行して、データフローを削除 [!DNL Flow Service] クエリパラメーターの一部として削除するデータフローの ID を指定する際の API。 API の完全な例については、 [API を使用したデータフローの削除](../../delete-dataflows.md).
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETEリクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-アカウントを削除するには、 [!DNL Flow Service] 削除するアカウントのベース接続 ID を指定する際の API。 API の完全な例については、 [API を使用したソースアカウントの削除](../../delete.md).
+削除するアカウントのベースDELETEID を指定したうえで、[!DNL Flow Service] API に接続リクエストを実行してアカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。

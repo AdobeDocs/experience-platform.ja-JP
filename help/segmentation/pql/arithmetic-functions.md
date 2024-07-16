@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: PAL 演算関数
-description: 演算関数は、プロファイルクエリ言語（PQL）の値に対する基本的な計算を実行するために使用されます。
+description: 数論的関数は、Profile Query Language（PQL）の値に対する基本的な計算を実行するために使用されます。
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 93%
+ht-degree: 82%
 
 ---
 
 # 演算関数
 
-数論的関数は、[!DNL Profile Query Language]（PQL）の値に対する基本的な計算を実行するために使用されます。その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+数論的関数は、[!DNL Profile Query Language] （PQL）の値に対する基本的な計算を実行するために使用されます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## 加算
 

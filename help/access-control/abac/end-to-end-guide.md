@@ -19,7 +19,7 @@ Adobe Experience Platformの属性ベースのアクセス制御を使用する�
 
 >[!NOTE]
 >
->このドキュメントでは、アクセス制御ポリシーのユースケースに焦点を当てています。 を管理するポリシーを設定しようとしている場合 **use** どの Platform ユーザーがアクセスするかではなく、データの詳細については、に関するエンドツーエンドガイドを参照してください。 [データガバナンス](../../data-governance/e2e.md) その代わり。
+>このドキュメントでは、アクセス制御ポリシーのユースケースに焦点を当てています。 データへのアクセス権を持つ Platform ユーザーではなく、データの **使用** を管理するポリシーを設定しようとしている場合は、代わりに [ データガバナンス ](../../data-governance/e2e.md) に関するエンドツーエンドガイドを参照してください。
 
 ## はじめに
 
@@ -36,31 +36,31 @@ Adobe Experience Platformの属性ベースのアクセス制御を使用する�
 
 医療提供者で、組織内のリソースへのアクセスを設定したい場合。
 
-* 社内マーケティングチームから、 **[!UICONTROL PHI/規制医療データ]** データ。
-* 外部エージェンシーはにアクセスできません **[!UICONTROL PHI/規制医療データ]** データ。
+* 社内マーケティングチームは、**[!UICONTROL PHI/規制対象の医療データ]** データにアクセスできる必要があります。
+* 外部機関は、**[!UICONTROL PHI/規制医療データ]** データにアクセスできません。
 
 そのためには、役割、リソース、ポリシーを設定する必要があります。
 
 以下を行います。
 
-* [ユーザーの役割のラベル付け](#label-roles)：マーケティンググループが外部の代理店と連携するヘルスケアプロバイダー（ACME ビジネスグループ）の例を使用します。
-* [リソースのラベル付け（スキーマフィールドとセグメント）](#label-resources)：を割り当てます **[!UICONTROL PHI/規制医療データ]** スキーマのリソースとセグメントにラベルを付けます。
+* [ ユーザーの役割のラベル付け ](#label-roles)：マーケティンググループが外部の代理店と連携するヘルスケアプロバイダー（ACME ビジネスグループ）の例を使用します。
+* [ リソース（スキーマフィールドとセグメント）のラベル付け ](#label-resources):**[!UICONTROL PHI/規制医療データ]** ラベルをスキーマのリソースとセグメントに割り当てます。
 * 
-   * [相互にリンクするポリシーをアクティベートします。](#policy)：デフォルトのポリシーを有効にして、リソースのラベルを役割のラベルに接続することでスキーマフィールドおよびセグメントへのアクセスを防ぎます。 ラベルが一致するユーザーには、すべてのサンドボックスでスキーマフィールドとセグメントにアクセスできます。
+   * [ それらをリンクするポリシーをアクティブ化します：](#policy): リソースのラベルを役割のラベルに接続することで、スキーマフィールドおよびセグメントへのアクセスを防止するデフォルトポリシーを有効にします。 ラベルが一致するユーザーには、すべてのサンドボックスでスキーマフィールドとセグメントにアクセスできます。
 
 ## 権限
 
-[!UICONTROL 権限] は、管理者がユーザーロールとポリシーを定義して、プロダクトアプリケーション内の機能とオブジェクトのパーミッションを管理できるExperience Cloud領域です。
+[!UICONTROL  権限 ] は、Experience Cloud者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる管理エリアです。
 
-から [!UICONTROL 権限]を使用すると、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。 [!UICONTROL 権限] また、では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。
+[!UICONTROL  権限 ] を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。 [!UICONTROL  権限 ] を使用すると、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。
 
 管理者権限がない場合は、システム管理者に連絡してアクセス権を取得してください。
 
-管理者権限があれば、に移動します。 [Adobe Experience Cloud](https://experience.adobe.com/) Adobe資格情報を使用してログインします。 ログイン後、 **[!UICONTROL 概要]** ページが、管理者権限を持つ組織に対して表示されます。 このページには、組織が購読している製品と、組織にユーザーと管理者を追加するための他のコントロールが表示されます。 を選択 **[!UICONTROL 権限]** をクリックして、Platform 統合用のワークスペースを開きます。
+管理者権限があれば、[Adobe Experience Cloud](https://experience.adobe.com/) に移動し、Adobe資格情報を使用してログインします。 ログインすると、管理者権限を持つ組織の **[!UICONTROL 概要]** ページが表示されます。 このページには、組織が購読している製品と、組織にユーザーと管理者を追加するための他のコントロールが表示されます。 **[!UICONTROL 権限]** を選択して、Platform 統合用のワークスペースを開きます。
 
-![Adobe Experience Cloudで「権限」製品が選択されている様子を示す画像](../images/flac-ui/flac-select-product.png)
+![Adobe Experience Cloudで「権限」製品が選択されている様子を示す画像 ](../images/flac-ui/flac-select-product.png)
 
-Platform UI の権限ワークスペースが表示され、で開きます **[!UICONTROL 役割]** ページ。
+Platform UI の権限ワークスペースが表示され、**[!UICONTROL 役割]** ページが開きます。
 
 ## 役割にラベルを適用 {#label-roles}
 
@@ -95,17 +95,17 @@ Platform UI の権限ワークスペースが表示され、で開きます **[!
 
 役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素です。 役割には特定の権限セットが付与され、必要なアクセス範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
 
-開始するには、を選択します **[!UICONTROL ACME ビジネス グループ]** から **[!UICONTROL 役割]** ページ。
+開始するには、**[!UICONTROL 役割]** ページから **[!UICONTROL ACME ビジネスグループ]** を選択します。
 
-![役割で「ACME ビジネスロール」が選択されている様子を示す画像](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![ 役割で ACME ビジネスロールが選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-次に、を選択します **[!UICONTROL ラベル]** を選択してから、 **[!UICONTROL ラベルを追加]**.
+次に、「**[!UICONTROL ラベル]**」を選択し、「**[!UICONTROL ラベルを追加]**」を選択します。
 
-![「ラベル」タブで「ラベルを追加」が選択されている様子を示す画像](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![ 「ラベル」タブで「ラベルを追加」が選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-組織のすべてのラベルのリストが表示されます。 を選択 **[!UICONTROL RHD]** ラベルを追加： **[!UICONTROL PHI/規制医療データ]**. ラベルの横に青いチェックマークが表示されるまでしばらく待ってから、 **[!UICONTROL 保存]**.
+組織のすべてのラベルのリストが表示されます。 **[!UICONTROL RHD]** を選択して、**[!UICONTROL PHI/規制医療データ]** のラベルを追加します。 ラベルの横に青いチェックマークが表示されるまでしばらく待ってから、「**[!UICONTROL 保存]**」を選択します。
 
-![RHD ラベルが選択および保存されていることを示す画像](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
+![RHD ラベルが選択され、保存されていることを示す画像 ](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
 >[!NOTE]
 >
@@ -113,19 +113,19 @@ Platform UI の権限ワークスペースが表示され、で開きます **[!
 
 ## スキーマフィールドへのラベルの適用 {#label-resources}
 
-これで、のユーザーロールが設定されました [!UICONTROL RHD] ラベル。次の手順では、その役割で制御するリソースに同じラベルを追加します。
+[!UICONTROL RHD] ラベルを使用してユーザーの役割を設定したので、次の手順は、その役割で制御するリソースに同じラベルを追加することです。
 
-を選択 **[!UICONTROL スキーマ]** 左側のナビゲーションからを選択し、 **[!UICONTROL ACME ヘルスケア]** 表示されるスキーマのリストから。
+左側のナビゲーションから **[!UICONTROL スキーマ]** を選択し、表示されるスキーマのリストから **[!UICONTROL ACME Healthcare]** を選択します。
 
-![「スキーマ」タブから ACME Healthcare スキーマが選択されている様子を示す画像](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![ 「スキーマ」タブから ACME Healthcare スキーマが選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-次に、を選択します **[!UICONTROL ラベル]** をクリックして、スキーマに関連付けられているフィールドを表示するリストを表示します。 ここから、1 つまたは複数のフィールドに一度にラベルを割り当てることができます。 「」を選択します **[!UICONTROL 血糖]** および **[!UICONTROL InsulinLevel]** フィールドを選択してから、 **[!UICONTROL アクセスラベルとデータガバナンスラベルを適用]**.
+次に、「**[!UICONTROL ラベル]**」を選択して、スキーマに関連付けられたフィールドを表示するリストを表示します。 ここから、1 つまたは複数のフィールドに一度にラベルを割り当てることができます。 **[!UICONTROL BloodGlucose]** フィールドと **[!UICONTROL InsulinLevel]** フィールドを選択し、**[!UICONTROL アクセスラベルとデータガバナンスラベルを適用]** を選択します。
 
-![血糖値とインスリンレベルが選択され、アクセスラベルとデータガバナンスラベルが選択されていることを示す画像](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![ 血糖値とインスリンレベルが選択され、アクセスラベルとデータガバナンスラベルを適用が選択されていることを示す画像 ](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-この **[!UICONTROL ラベルを編集]** ダイアログが表示され、スキーマフィールドに適用するラベルを選択できます。 このユースケースでは、 **[!UICONTROL PHI/規制医療データ]** ラベルを付け、次を選択します **[!UICONTROL 保存]**.
+**[!UICONTROL ラベルを編集]** ダイアログが表示され、スキーマフィールドに適用するラベルを選択できます。 このユースケースでは、「**[!UICONTROL PHI/規制医療データ]**」ラベルを選択し、「**[!UICONTROL 保存]**」を選択します。
 
-![RHD ラベルが選択および保存されていることを示す画像](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
+![RHD ラベルが選択され、保存されていることを示す画像 ](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
 >[!NOTE]
 >
@@ -139,44 +139,44 @@ Platform UI の権限ワークスペースが表示され、で開きます **[!
 
 スキーマフィールドのラベル設定が完了したら、セグメントのラベル設定を開始できます。
 
-を選択 **[!UICONTROL セグメント]** 左側のナビゲーションから。 組織で使用可能なセグメントのリストが表示されます。 この例では、次の 2 つのセグメントに機密ヘルスデータが含まれているため、ラベルが付けられます。
+左側のナビゲーションから **[!UICONTROL セグメント]** を選択します。 組織で使用可能なセグメントのリストが表示されます。 この例では、次の 2 つのセグメントに機密ヘルスデータが含まれているため、ラベルが付けられます。
 
 * 血糖値が 100 を超える
 * インスリン 50 未満
 
-を選択 **[!UICONTROL 血糖値が 100 を超える]** をクリックして、セグメントのラベル付けを開始します。
+**[!UICONTROL 血糖値 > 100]** を選択して、セグメントのラベル付けを開始します。
 
-![「セグメント」タブから血糖値が 100 を超えて選択されている様子を示す画像](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![ 「セグメント」タブから血糖値が 100 を超えて選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-segment.png)
 
-セグメント **[!UICONTROL 詳細]** 画面が表示されます。 を選択 **[!UICONTROL アクセスを管理]**.
+セグメント **[!UICONTROL 詳細]** 画面が表示されます。 **[!UICONTROL アクセスを管理]** を選択します。
 
-![管理アクセスの選択を示す画像](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![ 管理アクセスの選択を示す画像 ](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
 
-この **[!UICONTROL ラベルを編集]** ダイアログが表示され、セグメントに適用するラベルを選択できます。 このユースケースでは、 **[!UICONTROL PHI/規制医療データ]** ラベルを付け、次を選択します **[!UICONTROL 保存]**.
+**[!UICONTROL ラベルを編集]** ダイアログが表示され、セグメントに適用するラベルを選択できます。 このユースケースでは、「**[!UICONTROL PHI/規制医療データ]**」ラベルを選択し、「**[!UICONTROL 保存]**」を選択します。
 
-![RHD ラベルの選択と保存が選択されていることを示す画像](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![RHD ラベルの選択と保存が選択されていることを示す画像 ](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
-で上記の手順を繰り返します **[!UICONTROL インスリン 50 未満]**.
+上記の手順を **[!UICONTROL インスリン &lt;50]** で繰り返します。
 
 ## アクセス制御ポリシーのアクティブ化 {#policy}
 
 デフォルトのアクセス制御ポリシーは、ラベルを活用して、特定の Platform リソースにアクセスできるユーザーの役割を定義します。 この例では、スキーマフィールドに対応するラベルを持つ役割に属していないユーザーに対しては、すべてのサンドボックスでスキーマフィールドおよびセグメントへのアクセスが拒否されます。
 
-アクセス制御ポリシーをアクティブにするには、以下を選択します [!UICONTROL 権限] 左側のナビゲーションからを選択し、 **[!UICONTROL ポリシー]**.
+アクセス制御ポリシーをアクティブにするには、左側のナビゲーションから [!UICONTROL  権限 ] を選択し、次に **[!UICONTROL ポリシー]** を選択します。
 
-![表示されたポリシーのリスト](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![ 表示されたポリシーのリスト ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-次に、省略記号（`...`）、ポリシー名の横にあるドロップダウンに、役割を編集、アクティブ化、削除または複製するためのコントロールが表示されます。 を選択 **[!UICONTROL Activate]** ドロップダウンから。
+次に、ポリシー名の横にある省略記号（`...`）を選択すると、役割を編集、アクティブ化、削除または複製するためのコントロールがドロップダウンに表示されます。 ドロップダウンから「**[!UICONTROL アクティブ化]**」を選択します。
 
-![ポリシーをアクティブ化するドロップダウン](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![ ポリシーをアクティブ化するためのドロップダウン ](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-ポリシーのアクティブ化ダイアログが表示され、アクティベーションを確認するプロンプトが表示されます。 を選択 **[!UICONTROL 確認]**.
+ポリシーのアクティブ化ダイアログが表示され、アクティベーションを確認するプロンプトが表示されます。 「**[!UICONTROL 確認]**」を選択します。
 
-![ポリシーダイアログをアクティベート](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+![ ポリシーをアクティベートダイアログ ](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-ポリシーのアクティベーションの確認を受信し、に戻ります [!UICONTROL ポリシー] ページ。
+ポリシーのアクティベーションの確認を受け取り、「[!UICONTROL  ポリシー ] ページに戻ります。
 
-![ポリシーの有効化の確認](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+![ ポリシーのアクティブ化の確認 ](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 <!-- ## Create an access control policy {#policy}
 

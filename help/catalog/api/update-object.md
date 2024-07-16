@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；カタログ；API；オブジェクトの更新
+keywords: Experience Platform；ホーム；人気のトピック；カタログ；api；オブジェクトの更新
 solution: Experience Platform
-title: カタログオブジェクトの更新
-description: PATCH リクエストのパスに ID を含めることで、カタログオブジェクトの一部を更新できます。このドキュメントでは、フィールドの使用、およびカタログオブジェクトに対してPATCH操作を実行するための JSON パッチ表記を使用する方法について説明します。
+title: カタログ オブジェクトを更新する
+description: PATCH リクエストのパスに ID を含めることで、カタログオブジェクトの一部を更新できます。このドキュメントでは、フィールドの使用と、カタログオブジェクトに対してPATCH操作を実行するための JSON パッチ表記の使用について説明します。
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
 source-git-commit: 296a988a67871933723ad0474c113cb93fdbf255
 workflow-type: tm+mt
@@ -11,16 +11,16 @@ ht-degree: 74%
 
 ---
 
-# カタログオブジェクトの更新
+# Catalog オブジェクトの更新
 
-以下の項目の一部を更新できます： [!DNL Catalog] オブジェクト内の ID を指定します。PATCHリクエストのパスに ID を含めます。 このドキュメントでは、カタログオブジェクトに対して PATCH 操作を実行する次の 2 つの方法について説明します。
+PATCHリクエストのパスに ID を含めることで、[!DNL Catalog] オブジェクトの一部を更新できます。 このドキュメントでは、カタログオブジェクトに対して PATCH 操作を実行する次の 2 つの方法について説明します。
 
 * フィールドを使用する
 * JSON パッチ表記を使用する
 
 >[!NOTE]
 >
->オブジェクトに対するPATCH操作では、相互に関連するオブジェクトを表す拡張可能フィールドは変更できません。 相互に関連するオブジェクトは、直接変更する必要があります。
+>オブジェクトのPATCH操作では、相互に関連するオブジェクトを表す展開可能なフィールドを修正することはできません。 相互に関連するオブジェクトは、直接変更する必要があります。
 
 ## フィールドを使用した更新
 
@@ -34,7 +34,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 更新するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 更新するオブジェ [!DNL Catalog] トのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -69,7 +69,7 @@ curl -X PATCH \
 
 次の呼び出し例は、[RFC-6902](https://tools.ietf.org/html/rfc6902) で説明されている JSON パッチを使用してオブジェクトを更新する方法を示しています。
 
-JSON パッチの構文について詳しくは、 [API の基本事項ガイド](../../landing/api-fundamentals.md#json-patch).
+JSON パッチ構文について詳しくは、[API の基本ガイド ](../../landing/api-fundamentals.md#json-patch) を参照してください。
 
 **API 形式**
 
@@ -79,7 +79,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 更新するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 更新するオブジェ [!DNL Catalog] トのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**

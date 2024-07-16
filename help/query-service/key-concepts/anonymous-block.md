@@ -56,11 +56,11 @@ END
 $$;
 ```
 
-## サードパーティクライアントでの匿名ブロック {#third-party-clients}
+## サードパーティクライアントを使用した匿名ブロック {#third-party-clients}
 
-特定のサードパーティクライアントでは、スクリプトの一部を 1 つの文として処理する必要があることを示す SQL ブロックの前後に別々の識別子が必要になる場合があります。 クエリサービスをサードパーティのクライアントと共に使用する際にエラーメッセージが表示される場合は、SQL ブロックの使用に関するサードパーティのクライアントのドキュメントを参照する必要があります。
+特定のサードパーティクライアントでは、スクリプトの一部を単一の文として処理する必要があることを示すために、SQL ブロックの前後に別の識別子が必要な場合があります。 サードパーティクライアントでクエリサービスを使用するときにエラーメッセージが表示された場合は、SQL ブロックの使用に関するサードパーティクライアントのドキュメントを参照してください。
 
-例： **DbVisualizer** では、行上のテキストのみを区切り文字にする必要があります。 DbVisualizer では、Begin Identifier のデフォルト値はです。 `--/` また、終了識別子の場合は、 `/`. DbVisualizer での匿名ブロックの例を次に示します。
+たとえば、**DbVisualizer** では、区切り文字が行の唯一のテキストである必要があります。 DbVisualizer では、Begin Identifier のデフォルト値は `--/` で、End Identifier のデフォルト値は `/` です。 DbVisualizer の匿名ブロックの例を以下に示します。
 
 ```SQL
 --/
@@ -74,10 +74,10 @@ $$;
 /
 ```
 
-特に DbVisualizer の場合、UI には、「[!DNL Execute the complete buffer as one SQL statement]&quot;. 詳しくは、 [DbVisualizer ドキュメント](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) を参照してください。
+特に DbVisualizer の場合は、UI に「[!DNL Execute the complete buffer as one SQL statement]」というオプションもあります。 詳しくは、[DbVisualizer のドキュメント ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) を参照してください。
 
 ## 次の手順
 
-このドキュメントを参照することで、匿名ブロックとその構造を明確に理解できます。詳しくは、 [クエリ実行ガイド](../best-practices/writing-queries.md) を参照してください。
+このドキュメントを参照することで、匿名ブロックとその構造を明確に理解できます。クエリの作成について詳しくは、[ クエリ実行ガイド ](../best-practices/writing-queries.md) を参照してください。
 
-また、 [増分読み込み設計パターンで匿名ブロックを使用する方法](./incremental-load.md) をクリックして、クエリの効率を高めます。
+また、クエリの効率を高めるために、[ 増分読み込みデザインパターンで匿名ブロックを使用する方法 ](./incremental-load.md) についても参照してください。

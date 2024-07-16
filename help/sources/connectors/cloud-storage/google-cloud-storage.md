@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Google Cloud Storage;google クラウドストレージ
+keywords: Experience Platform；ホーム；人気のトピック；Google Cloud Storage;google cloud storage
 solution: Experience Platform
-title: Google Cloud Storage Source Connector の概要
-description: API またはユーザーインターフェイスを使用してGoogle Cloud Storage をAdobe Experience Platformに接続する方法について説明します。
+title: Google Cloud Storage Source コネクタの概要
+description: API またはユーザーインターフェイスを使用してGoogle クラウドストレージをAdobe Experience Platformに接続する方法について説明します。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '565'
 ht-degree: 78%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 78%
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、Experience Data Model(XDM) に準拠している JSON または Parquet 形式にするか、区切り形式にすることができます。 プロセスのすべての手順がソースワークフローに統合されます。 Platform では、次の場所からデータを取り込むことができます： [!DNL Google Cloud Storage] バッチを使用します。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、Experience Data Model （XDM）に準拠した JSON や Parquet として書式設定することも、区切り形式として書式設定することもできます。 プロセスのすべての手順がソースワークフローに統合されます。 Platform では、[!DNL Google Cloud Storage] からバッチでデータを取り込むことができます。
 
 ## IP アドレス許可リスト
 
@@ -23,7 +23,7 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 
 ## [!DNL Google Cloud Storage] アカウントを接続するための前提条件の設定
 
-Platform に接続するには、まず、 [!DNL Google Cloud Storage] アカウント 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL クラウドストレージ]**」オプションから「**[!UICONTROL 設定]**」を選択します。
+を Platform に接続するには、まず [!DNL Google Cloud Storage] アカウントの相互運用性を有効にする必要があります。 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL クラウドストレージ]**」オプションから「**[!UICONTROL 設定]**」を選択します。
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
@@ -37,7 +37,7 @@ Platform に接続するには、まず、 [!DNL Google Cloud Storage] アカウ
 
 新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、[!DNL Google Cloud Storage] アカウントを Platform に接続できます。
 
-詳しくは、 [サービスアカウントキーの作成と管理](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) から [!DNL Google Cloud] ドキュメント。
+詳しくは、[!DNL Google Cloud] ドキュメントの [ サービスアカウントキーの作成と管理 ](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) に関するガイドを参照してください。
 
 ## ファイルとディレクトリの命名制約
 
@@ -56,11 +56,11 @@ Platform に接続するには、まず、 [!DNL Google Cloud Storage] アカウ
 
 ### API の使用
 
-- [フローサービス API を使用したGoogle Cloud Storage ベース接続の作成](../../tutorials/api/create/cloud-storage/google.md)
+- [Flow Service API を使用したGoogle クラウドストレージベース接続の作成](../../tutorials/api/create/cloud-storage/google.md)
 - [Flow Service API を使用して、クラウドストレージソースのデータ構造とコンテンツを探索](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service API を使用して、クラウドストレージソースのデータフローを作成](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
-- [UI でのGoogle Cloud ストレージソース接続の作成](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [UI でのGoogle Cloud Storage ソース接続の作成](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
 - [UI でクラウドストレージ接続のデータフローを作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)

@@ -17,4 +17,4 @@ ht-degree: 86%
 
 Adobe Experience Platform Web SDK 拡張機能は、Adobe Experience Platform Edge Network を通じて、Web プロパティから Adobe Experience Cloud にデータを送信します。 Platform Web SDK 拡張機能を使用すると、プラットフォームへのデータのストリーミング、ID の同期、オプトイン、およびコンテキストデータの自動収集が可能になります。
 
-Platform Web SDK 拡張機能の設定について詳しくは、 [Web SDK タグ拡張機能の設定](web-sdk-extension-configuration.md).
+Platform Web SDK 拡張機能の設定について詳しくは、[Web SDK タグ拡張機能の設定 ](web-sdk-extension-configuration.md) を参照してください。

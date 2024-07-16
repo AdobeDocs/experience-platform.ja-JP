@@ -1,5 +1,5 @@
 ---
-title: パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする
+title: パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
@@ -10,23 +10,23 @@ ht-degree: 89%
 
 ---
 
-# パートナー支援による訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする
+# パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする
 
 >[!AVAILABILITY]
 >
->この機能は、Real-Time CDP(App Service)、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを持つお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを取得したお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 パートナー支援による認識を使用して、パーソナライズされたエクスペリエンスを web プロパティ訪問者に提供する方法を説明します。このチュートリアルを使用すると、Experience Platform および他の Experience Cloud ソリューションにおける様々な要素の実装シーケンスを理解して、パーソナライズされたエクスペリエンスを認証済みおよび未認証の訪問者に表示できます。
 
 ![パートナーが提供する属性を使用して、パーソナライズされたエクスペリエンスを訪問者に提供する方法を説明するインフォグラフィック。](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
 
-## この使用例を検討する理由 {#why-this-use-case}
+## このユースケースを検討する理由 {#why-this-use-case}
 
-消費者が様々な方法でブランドとやり取りする際のデジタルエクスペリエンスの断片化は非常に現実的で、解決がより難しくなっています。 まとまったエクスペリエンス、ターゲットを絞ったレコメンデーション、およびカスタマイズされたインタラクションに対する最高の顧客エンゲージメント戦略は、すべてユーザーの認識によって制限されます。
+消費者が様々な方法でブランドとやり取りする際のデジタルエクスペリエンスの断片化は非常に現実的であり、解決するのがますます難しくなっています。 包括的なエクスペリエンス、ターゲットを絞ったレコメンデーション、カスタマイズされたインタラクションに対する最適な顧客エンゲージメント戦略はすべて、ユーザーの認識によって制約を受けます。
 
-パートナーが支援するリアルタイム認識が、意味のある違いを生み出す場所です。 Adobeにより、ID パートナーは、高度なクライアント側のデータ収集および市場最先端のエクスペリエンス最適化サービスにプラグインし、以前の履歴や認証なしに、初回訪問以降のエクスペリエンス配信の範囲を効果的に拡大できます。
+そこで、パートナー支援によるリアルタイム認識が有意義な違いを生み出すことができます。 Adobeを利用すれば、ID パートナーは、高度なクライアントサイドのデータ収集と市場をリードするエクスペリエンス最適化ソリューションにプラグインして、事前の履歴や認証なしで、初回訪問以降のエクスペリエンス配信の水準を効果的に引き上げることができます。
 
-これは、消費者パッケージ商品やオンライン小売など、低い認証率を持つ業種にとって特に役立ちます。
+これは、消費財、オンライン小売など、認証率の低い業界で特に価値があります。
 
 ## ある業界の例 {#industry-example}
 
@@ -39,7 +39,7 @@ ht-degree: 89%
 パートナー提供の属性を使用して、パーソナライズされたエクスペリエンスを認証済みおよび未認証の訪問者に提供することを計画する際は、計画プロセスで次の前提条件を考慮します。
 
 * パートナーの認識技術では、追加の属性に重ねることができるように、どのような入力を想定しているか。
-* 各種チャネルや、決定論的に確認された属性に対し、確率論的に導き出されたデータセットに基づく様々な使用例に対して、どの程度パーソナライゼーションを提供するのが適しているか。
+* 確率的に導出されたデータセットと確定的に確認された属性のどちらに基づいて、様々なチャネルやユースケースでパーソナライゼーションを快適に配信できるか。
 * 認証前の認識済み訪問者に対するエクスペリエンスは、認証後にどのように変更されるべきか。
 
 ### 使用する UI 機能、プラットフォームコンポーネントおよび Experience Cloud 製品 {#ui-functionality-and-elements}
@@ -62,7 +62,7 @@ ht-degree: 89%
 
 ## ビデオチュートリアル {#video-walkthrough}
 
-不明な訪問者に対するオンサイトエクスペリエンスのパーソナライズ方法に関するチュートリアルについては、以下のビデオチュートリアルを参照してください。
+不明な訪問者に対するオンサイトエクスペリエンスのパーソナライズ方法を説明する以下のビデオチュートリアルをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
@@ -209,7 +209,7 @@ Web SDK を設定する画面で、「**[!UICONTROL データストリーム]**�
 
 2 番目のデータ要素を設定するには、新しい変数に `pageVisit` という名前を付け、**[!UICONTROL 拡張機能]**&#x200B;を「**[!UICONTROL Adobe Experience Platform]**」に設定し、データタイプとして「**[!UICONTROL XDM オブジェクト]**」を選択します。
 
-![選択項目が強調表示され、pageVisit データ要素が正しく設定されています。](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![pageVisit データ要素を正しく設定するためのハイライト表示された選択項目。](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 スキーマから、データパートナーに期待する値に対応するサードパーティ属性を選択します。次に、「**[!UICONTROL オブジェクト全体を提供]**」というタイトルのラジオボタンを選択します。データベースに似たアイコンを選択し、前に作成した `partnerData` データ要素を選択します。
 
@@ -259,11 +259,11 @@ XDM データの横にあるデータベースアイコンを選択し、`pageVi
 
 #### オーディエンスの作成とエッジセグメント化の設定
 
-Platform UI で、に移動します。 **[!UICONTROL 顧客]** > **[!UICONTROL オーディエンス]** をクリックして、web サイトの訪問者をキャプチャするためのオーディエンスを作成します。
+Platform UI で、**[!UICONTROL 顧客]**/**[!UICONTROL オーディエンス]** に移動し、web サイトの訪問者をキャプチャするオーディエンスを作成します。
 
-![オーディエンスへの移動方法のビュー。](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![ オーディエンスに移動する方法の表示 ](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-オーディエンスを設定するには、 [エッジセグメント化](/help/segmentation/ui/edge-segmentation.md) したがって、訪問者のオーディエンスメンバーシップは、Web プロパティを訪問する際にリアルタイムに評価されます。
+訪問者が web プロパティを訪問した際にオーディエンスメンバーシップがリアルタイムで評価されるように、[ エッジセグメント化 ](/help/segmentation/ui/edge-segmentation.md) でオーディエンスを設定する必要があります。
 
 エッジオーディエンスに対しては、必ず [active-on-edge 結合ポリシー](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)も設定してください。
 
@@ -287,4 +287,4 @@ Real-Time CDP のパートナーデータサポートを通じて達成される
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Real-Time CDP のサードパーティデータのサポートを使用して、[データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客の獲得またはリーチのために見込み客との関わりを深めます](/help/rtcdp/partner-data/prospecting.md)。
-* [見込み客プロファイルと見込み客オーディエンスのアクティブ化の拡張](/help/destinations/ui/activate-prospect-audiences.md) をクリックして、宛先を選択します。
+* [ 見込み客プロファイルと見込み客オーディエンスのアクティベーションを拡張 ](/help/destinations/ui/activate-prospect-audiences.md) し、宛先を選択できるようになりました。

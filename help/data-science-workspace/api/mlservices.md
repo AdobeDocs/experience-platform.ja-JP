@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；mlservices;sensei 機械学習 api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のトピック；mlservices;sensei machine learning api
 solution: Experience Platform
 title: MLServices API エンドポイント
 description: MLService は、組織が開発済みのモデルにアクセスし再利用できるようにするための、公開されているトレーニング済みモデルです。MLService の主要な特長は、トレーニングとスコアリングをスケジュールに従って自動化できる点です。スケジュールされたトレーニングの実行は、モデルの効率と精度を維持するのに役立ちます。また、スケジュールされたスコアリングの実行で、新しいインサイトを一貫して生成できるようになります。
@@ -215,7 +215,7 @@ curl -X GET \
 
 >[!TIP]
 >
->このPUTリクエストを確実に成功させるために、まず次に対してGETリクエストを実行することをお勧めします。 [ID を使用した MLService の取得](#retrieve-a-specific-mlservice). 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
+>このPUTリクエストが正常に実行されるようにするには、まずGETリクエストを実行して [ID で MLService を取得 ](#retrieve-a-specific-mlservice) することをお勧めします。 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
 
 **API 形式**
 

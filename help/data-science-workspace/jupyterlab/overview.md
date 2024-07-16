@@ -6,8 +6,8 @@ description: JupyterLab は、プロジェクト Jupyter の web ベースのユ
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1821'
-ht-degree: 100%
+source-wordcount: '1812'
+ht-degree: 99%
 
 ---
 
@@ -218,7 +218,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
         <td >いいえ</td>
     </tr>
       <tr>
-        <th  ><strong>PySpark 3（[!DNL Spark] 2.4）</strong></th>
+        <th  ><strong>PySpark 3 （[!DNL Spark] 2.4）</strong></th>
         <td >いいえ</td>
         <td >○</td>
         <td >いいえ</td>

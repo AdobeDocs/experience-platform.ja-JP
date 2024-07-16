@@ -14,15 +14,15 @@ ht-degree: 37%
 
 ## 概要 {#overview}
 
-のプロファイルのアクティブ化 [!DNL LinkedIn] ハッシュ化されたメールとモバイル ID に基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を実現するキャンペーン。
+ハッシュ化された電子メールとモバイル ID に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のために、[!DNL LinkedIn] キャンペーン用のプロファイルをアクティブ化します。
 
-![Adobe Experience Platform UI でのLinkedInの宛先](../../assets/catalog/social/linkedin/catalog.png)
+![Adobe Experience Platform UI のLinkedInの宛先 ](../../assets/catalog/social/linkedin/catalog.png)
 
 ## ユースケース
 
-を使用する方法とタイミングをより深く理解するために [!DNL LinkedIn Matched Audiences] 出力先、ここでは、Adobe Experience Platformのお客様がこの機能を使用して解決できるユースケースを示します。
+[!DNL LinkedIn Matched Audiences] の宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの機能を使用して解決できるユースケースを以下に示します。
 
-あるソフトウェア会社は、会議を開催し、参加者と連絡を取り合い、会議の出席ステータスに基づいてパーソナライズされたオファーを表示したいと考えています。 会社はメールアドレスまたはモバイルデバイス ID を会社から取り込むことができます [!DNL CRM] Adobe Experience Platformに追加します。 その後、独自のオフラインデータからオーディエンスを作成し、それらのオーディエンスをに送信できます。 [!DNL LinkedIn] ソーシャルプラットフォーム、広告支出の最適化。
+あるソフトウェア会社は、会議を開催し、参加者と連絡を取り合い、会議の出席ステータスに基づいてパーソナライズされたオファーを表示したいと考えています。 会社は、メールアドレスまたはモバイルデバイス ID を [!DNL CRM] からAdobe Experience Platformに取り込むことができます。 その後、独自のオフラインデータからオーディエンスを作成し、これらのオーディエンスを [!DNL LinkedIn] ソーシャルプラットフォームに送信して、広告費用を最適化できます。
 
 ## サポートされている ID {#supported-identities}
 
@@ -32,7 +32,7 @@ ht-degree: 37%
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。の指示に従います [ID の一致要件](#id-matching-requirements-id-matching-requirements) セクションを設定し、プレーンテキストとハッシュ化されたメールに適切な名前空間を使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストとハッシュ化されたメールに適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 
 {style="table-layout:auto"}
 
@@ -42,7 +42,7 @@ ht-degree: 37%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platformを通じて生成されたオーディエンス [セグメント化サービス](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -53,71 +53,71 @@ ht-degree: 37%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します [!DNL LinkedIn Matched Audiences] の宛先。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | オーディ [!DNL LinkedIn Matched Audiences] ンスの宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
 
 ## LinkedIn アカウントの前提条件 {#LinkedIn-account-prerequisites}
 
-使用する前に [!UICONTROL LinkedInでマッチしたオーディエンス] 宛先、必ずを [!DNL LinkedIn Campaign Manager] アカウントの条件 [!DNL Creative Manager] 権限レベル以上。
+[!UICONTROL LinkedInでマッチしたオーディエンス ] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントの権限レベルが [!DNL Creative Manager] 以上であることを確認してください。
 
-を編集する方法を学ぶには [!DNL LinkedIn Campaign Manager] ユーザー権限、を参照 [Advertising アカウントのユーザー権限の追加、編集、削除](https://www.linkedin.com/help/lms/answer/5753) linkedInのドキュメントで説明しています。
+[!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、LinkedIn ドキュメントの [Advertising アカウントのユーザー権限の追加、編集、削除 ](https://www.linkedin.com/help/lms/answer/5753) を参照してください。
 
 ## ID の一致要件 {#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audiences] では、個人を特定できる情報（PII）を明確に送信しないようにする必要があります。 したがって、オーディエンスはに対してアクティブ化されました [!DNL LinkedIn Matched Audiences] キーオフできる *ハッシュ化* 識別子（メールアドレス、モバイルデバイス ID など）。
+[!DNL LinkedIn Matched Audiences] では、個人を特定できる情報（PII）が明確に送信されないことが必要です。 したがって、[!DNL LinkedIn Matched Audiences] に対してアクティブ化されたオーディエンスは、メールアドレスやモバイルデバイス ID などの *ハッシュ化された* 識別子）をキーオフにすることができます。
 
 Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件に従う必要があります。
 
 ## メールハッシュ要件 {#email-hashing-requirements}
 
-メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、メールアドレスをExperience Platformで明確に使用したりできます。 [!DNL Platform] アクティブ化時にハッシュ化します。
+メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、メールアドレスをExperience Platformで明確に使用して、アクティベーション時 [!DNL Platform] ハッシュ化したりできます。
 
-Experience Platformでのメールアドレスの取り込みについては、以下を参照してください [バッチ取り込みの概要](/help/ingestion/batch-ingestion/overview.md) および [ストリーミング取得の概要](/help/ingestion/streaming-ingestion/overview.md).
+Experience Platformでメールアドレスを取り込む方法については、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) および [ ストリーミング取り込みの概要 ](/help/ingestion/streaming-ingestion/overview.md) を参照してください。
 
 メールアドレスを自分でハッシュ化することを選択する場合は、次の要件に必ず従ってください。
 
-* メール文字列から先頭と末尾のすべてのスペースをトリミングします。 例： `johndoe@example.com`ではなく `<space>johndoe@example.com<space>`;
+* メール文字列から先頭と末尾のすべてのスペースをトリミングします。 （例：`<space>johndoe@example.com<space>` ではなく `johndoe@example.com`）
 * メール文字列をハッシュ化する場合は、小文字の文字列もハッシュ化します。
-   * 例： `example@email.com`ではなく `EXAMPLE@EMAIL.COM`;
+   * 例：`EXAMPLE@EMAIL.COM` ではなく `example@email.com`;
 * ハッシュ化された文字列がすべて小文字であることを確認します
-   * 例： `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`ではなく `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+   * 例：`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149` ではなく `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`;
 * ひもに塩をかけるな。
 
 >[!NOTE]
 >
->ハッシュ化されていない名前空間のデータは、によって自動的にハッシュ化されます [!DNL Platform] アクティブ化時。
+>ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Platform] によって自動的にハッシュ化されます。
 > 属性ソースデータは、自動的にはハッシュ化されません。
 > 
-> 期間中に [ID マッピング](../../ui/activate-segment-streaming-destinations.md#mapping) 手順で、ハッシュ化されていない属性がソースフィールドに含まれている場合は、 **[!UICONTROL 変換を適用]** 選択肢、持つこと [!DNL Platform] アクティブ化時にデータを自動的にハッシュ化します。
+> [ID マッピング ](../../ui/activate-segment-streaming-destinations.md#mapping) 手順で、ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時にデータを自動的 [!DNL Platform] ハッシュ化するように設定します。
 > 
-> この **[!UICONTROL 変換を適用]** オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
+> 「**[!UICONTROL 変換を適用]**」オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
 
-![ID マッピング変換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![ID マッピング変換 ](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
-次のビデオでは、の設定手順も示しています。 [!DNL LinkedIn Matched Audiences] オーディエンスの宛先とアクティブ化。
+次のビデオでは、[!DNL LinkedIn Matched Audiences] しい宛先を設定し、オーディエンスをアクティブ化する手順も示します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、を参照してください [宛先設定のチュートリアル](../../ui/connect-destination.md).
+>Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[ 宛先設定のチュートリアル ](../../ui/connect-destination.md) を参照してください。
 
 ### 宛先に対する認証 {#authenticate}
 
-1. の検索 [!DNL LinkedIn Matched Audiences] 宛先カタログでの宛先と選択 **[!UICONTROL 設定]**.
-2. を選択 **[!UICONTROL 宛先への接続]**.
-   ![linkedInに対する認証](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
-3. linkedInの資格情報を入力し、を選択します。 **ログイン**.
+1. 宛先カタログで [!DNL LinkedIn Matched Audiences] の宛先を見つけて、「**[!UICONTROL 設定]**」を選択します。
+2. **[!UICONTROL 宛先に接続]** を選択します。
+   ![LinkedInへの認証 ](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+3. linkedInの資格情報を入力し、「**ログイン**」を選択します。
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -130,7 +130,7 @@ Experience Platformでのメールアドレスの取り込みについては、�
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL アカウント ID]**：あなたの [!DNL LinkedIn Campaign Manager Account ID]. この ID は、 [!DNL LinkedIn Campaign Manager] アカウント。
+* **[!UICONTROL アカウント ID]**：お使いの [!DNL LinkedIn Campaign Manager Account ID]。 この ID は [!DNL LinkedIn Campaign Manager] アカウントで確認できます。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -142,15 +142,15 @@ Experience Platformでのメールアドレスの取り込みについては、�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* エクスポートする *id*、が必要です **[!UICONTROL ID グラフの表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png "宛先に対してオーディエンスをアクティブ化するために、ワークフローで強調表示されている ID 名前空間を選択します。"){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## 書き出したデータ {#exported-data}
 
-アクティベーションが成功すると、 [!DNL LinkedIn] カスタムオーディエンスは、次の場所でプログラムにより作成されます [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). オーディエンスメンバーシップは、アクティブ化されたオーディエンスに対してユーザーが適格となったり不適格になったりすると、追加および削除されます。
+アクティベーションに成功すると、[[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login) で [!DNL LinkedIn] しいカスタムオーディエンスがプログラムで作成されます。 オーディエンスメンバーシップは、アクティブ化されたオーディエンスに対してユーザーが適格となったり不適格になったりすると、追加および削除されます。
 
 >[!TIP]
 >
->Adobe Experience Platformとの統合 [!DNL LinkedIn Matched Audiences] は、履歴オーディエンスバックフィルをサポートします。 すべてのオーディエンス選定履歴はに送信されます [!DNL LinkedIn] 宛先に対してオーディエンスをアクティブ化するとき。
+>Adobe Experience Platformと [!DNL LinkedIn Matched Audiences] の統合は、履歴オーディエンスバックフィルをサポートします。 宛先に対してオーディエンスをアクティブ化すると、すべてのオーディエンス選定履歴が [!DNL LinkedIn] に送信されます。

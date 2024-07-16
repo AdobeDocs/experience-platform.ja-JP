@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；DB2;db2;IBM DB2;ibm db2
+keywords: Experience Platform；ホーム；人気のトピック；DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
-title: UI でのIBM DB2 ソース接続の作成
+title: UI でのIBM DB2 Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用してIBM DB2 ソース接続を作成する方法を説明します。
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 36%
+source-wordcount: '527'
+ht-degree: 29%
 
 ---
 
-# UI でのIBM DB2 ソース接続の作成
+# UI でのIBM DB2 ソースコネクタの作成
 
 >[!NOTE]
 >
-> IBM DB2 コネクタはベータ版です。 詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
+> IBM DB2 コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-Adobe Experience Platform のソースコネクタには、外部ソースの データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、 [!DNL Platform] ユーザーインターフェイス。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して、IBM DB2 （以下「DB2」と呼びます）ソースコネクタを作成する手順について説明します。
 
 ## はじめに
 
@@ -29,47 +29,47 @@ Adobe Experience Platform のソースコネクタには、外部ソースの �
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な DB2 接続がある場合は、このドキュメントの残りの部分をスキップし、次のドキュメントのチュートリアルに進んでください。 [データフローの設定](../../dataflow/databases.md).
+既に有効な DB2 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-以下の節では、 [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用して DB2 に正しく接続するために必要な追加情報を示します。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `server` | DB2 サーバーの名前。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例： server:port |
+| `server` | DB2 サーバーの名前。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例：server:port |
 | `database` | DB2 データベースの名前。 |
 | `username` | DB2 データベースへの接続に使用するユーザー名。 |
 | `password` | ユーザー名に指定したユーザーアカウントのパスワード。 |
 
-の導入について詳しくは、 [この DB2 ドキュメント](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
+基本について詳しくは、[ この DB2 ドキュメント ](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html) を参照してください。
 
 ## IBM DB2 アカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って、DB2 アカウントをにリンクできます。 [!DNL Platform].
+必要な資格情報を収集したら、次の手順に従って DB2 アカウントを [!DNL Platform] にリンクできます。
 
-にログインします。 [Adobe Experience Platform](https://platform.adobe.com) 次に、「 **[!UICONTROL ソース]** 左側のナビゲーションバーから、 **[!UICONTROL ソース]** ワークスペース。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 **[!UICONTROL データベース]** カテゴリ、選択 **[!UICONTROL IBM DB2]**. このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**. それ以外の場合は、「 **[!UICONTROL データを追加]** 新しい DB2 コネクタを作成します。
+**[!UICONTROL Databases]** カテゴリで、**[!UICONTROL IBM DB2]** を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい DB2 コネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/ibm-db2/catalog.png)
 
-The **[!UICONTROL IBM DB2 に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL IBM DB2 に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）および DB2 資格情報を入力します。 終了したら、「 」を選択します。 **[!UICONTROL 接続]** その後、新しい接続が確立されるまでしばらく時間をかけます。
+新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、DB2 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![接続](../../../../images/tutorials/create/ibm-db2/new.png)
+![ 接続 ](../../../../images/tutorials/create/ibm-db2/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続する DB2 アカウントを選択し、「 」を選択します。 **[!UICONTROL 次へ]** をクリックして続行します。
+既存のアカウントに接続するには、接続する DB2 アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
 ![既存](../../../../images/tutorials/create/ibm-db2/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、DB2 アカウントへの接続を確立しました。 次のチュートリアルに進み、[データを に取り込むためのデータフローの設定 [!DNL Platform]](../../dataflow/databases.md)を行いましょう。
+このチュートリアルでは、DB2 アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/databases.md) を行いましょう。

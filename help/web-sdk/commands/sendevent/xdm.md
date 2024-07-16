@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `xdm`
 
-この `xdm` オブジェクトには、Adobeに送信されたデータペイロードが含まれます。 このオブジェクト内で設定されたフィールドは、データセットのスキーマに定義された要素に直接マッピングされます。
+`xdm` オブジェクトには、Adobeに送信されたデータペイロードが含まれています。 このオブジェクト内で設定されたフィールドは、データセットのスキーマに定義された要素に直接マッピングされます。
 
 Adobe Experience Platformでは、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。 システム間で一貫してデータを定義することで、意味を保持しやすく、データから価値を得やすくなります。
 
@@ -19,20 +19,20 @@ Adobe Experience Platformでは、スキーマを使用して、一貫性のあ�
 
 ## Web SDK 拡張機能を使用して XDM オブジェクトを設定
 
-を **[!UICONTROL XDM]** タグルールのアクション内のオブジェクト。 この [XDM オブジェクト](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) には、他のデータ要素をそれぞれの XDM フィールドにマッピングするための直感的なインターフェイスが用意されています。
+タグルールのアクション内で **[!UICONTROL XDM]** オブジェクトを設定します。 [XDM オブジェクト ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) は、他のデータ要素をそれぞれの XDM フィールドにマッピングするための直感的なインターフェイスを提供します。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL ルール]**&#x200B;を選択してから、目的のルールを選択します。
-1. 次の下 [!UICONTROL アクション]、既存のアクションを選択するか、アクションを作成します。
-1. を [!UICONTROL 拡張機能] ドロップダウンフィールドの移動先 **[!UICONTROL Adobe Experience Platform Web SDK]**、を設定します。 [!UICONTROL アクションタイプ] 対象： **[!UICONTROL イベントを送信]**.
-1. 目的のオブジェクトを含むデータ要素を **[!UICONTROL XDM]** フィールド。
-1. クリック **[!UICONTROL 変更を保持]**&#x200B;次に、公開ワークフローを実行します。
+1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
+1. [!UICONTROL  アクション ] で、既存のアクションを選択するか、アクションを作成します。
+1. 「[!UICONTROL  拡張機能 ]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL  アクションタイプ ] を **[!UICONTROL イベントを送信]** に設定します。
+1. 目的のオブジェクトを含むデータ要素を **[!UICONTROL XDM]** フィールドで指定します。
+1. 「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 
-## Web SDK JavaScript ライブラリを使用して XDM オブジェクトを設定
+## Web SDK JavaScript ライブラリを使用して XDM オブジェクトを設定します
 
-を `xdm` を実行しているときのオブジェクト `sendEvent` コマンド。 このオブジェクトの階層が、設定済みのデータセットのスキーマと一致することを確認します。 次の両方を含めることができます `xdm` オブジェクトと [`data`](data.md) 同じオブジェクト `sendEvent` コマンド。
+`sendEvent` コマンドの実行時に `xdm` オブジェクトを設定します。 このオブジェクトの階層が、設定済みのデータセットのスキーマと一致することを確認します。 `xdm` オブジェクトと [`data`](data.md) オブジェクトの両方を同じ `sendEvent` コマンドに含めることができます。
 
 ```js
 alloy("sendEvent", {
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-次の例では、 [Commerceの詳細スキーマフィールドグループ](/help/xdm/field-groups/event/commerce-details.md):
+次の例では、[Commerceの詳細スキーマフィールドグループ ](/help/xdm/field-groups/event/commerce-details.md) を使用しています。
 
 ```javascript
 alloy("sendEvent",{

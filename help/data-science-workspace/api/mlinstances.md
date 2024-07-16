@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、mlinstance、sensei 機械学習 api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のトピック；インスタンス；sensei machine learning api
 solution: Experience Platform
-title: MLInstance API エンドポイント
-description: MLInstance は、既存のエンジンと適切な設定セット（トレーニングパラメーター、スコアリングパラメーター、またはハードウェアリソース設定を定義する）とのペアリングです。
+title: MLInstances API エンドポイント
+description: MLInstance は、トレーニング パラメータ、スコアリング パラメータ、またはハードウェア リソース構成を定義する適切な構成のセットを持つ既存のエンジンのペアです。
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,7 +12,7 @@ ht-degree: 87%
 
 ---
 
-# MLInstance エンドポイント
+# MLInstances エンドポイント
 
 MLInstance は、既存の[エンジン](./engines.md)と適切な設定セット（トレーニングパラメーター、スコアリングパラメーター、またはハードウェアリソース設定を定義する）とのペアリングです。
 
@@ -275,7 +275,7 @@ curl -X GET \
 
 >[!TIP]
 >
->このPUTリクエストを確実に成功させるために、まず次に対してGETリクエストを実行することをお勧めします。 [ID による MLInstance の取得](#retrieve-specific). 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
+>このPUTリクエストが正常に実行されるようにするには、まずGETリクエストを実行して [ID で MLInstance を取得 ](#retrieve-specific) することをお勧めします。 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
 
 以下のサンプル API 呼び出しは、MLInstance のトレーニングパラメーターとスコアリングパラメーターを更新し、これらのプロパティを最初に次のように設定します。
 

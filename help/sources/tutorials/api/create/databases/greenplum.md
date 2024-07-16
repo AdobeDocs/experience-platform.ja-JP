@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；greenplum;Greenplum
 solution: Experience Platform
-title: フローサービス API を使用した GreenPlum ベース接続の作成
+title: Flow Service API を使用した GreenPlum ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用して GreenPlum をAdobe Experience Platformに接続する方法を説明します。
+description: Flow Service API を使用して GreenPlum をAdobe Experience Platformに接続する方法を説明します。
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 68%
+source-wordcount: '426'
+ht-degree: 69%
 
 ---
 
@@ -25,14 +25,14 @@ ht-degree: 68%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL GreenPlum] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL GreenPlum] ています。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | の [!DNL GreenPlum] インスタンス。 次の接続文字列パターン： [!DNL GreenPlum] が `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL GreenPlum] が `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionString` | [!DNL GreenPlum] インスタンスへの接続に使用する接続文字列。 [!DNL GreenPlum] の接続文字列パターンは `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` です |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL GreenPlum] の接続仕様 ID は `37b6bf40-d318-4655-90be-5cd6f65d334b` です。 |
 
-接続文字列の取得について詳しくは、 [この GreenPlum ドキュメント](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
+接続文字列の取得について詳しくは、[ この GreenPlum ドキュメント ](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html) を参照してください。
 
 ### Platform API の使用
 
@@ -80,8 +80,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 接続に使用する接続文字列 [!DNL GreenPlum] アカウント 接続文字列のパターンは次のとおりです。 `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | この [!DNL GreenPlum] 接続仕様 ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | [!DNL GreenPlum] アカウントへの接続に使用する接続文字列。 接続文字列のパターンは `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 |
+| `connectionSpec.id` | [!DNL GreenPlum] 接続仕様 ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`。 |
 
 **応答**
 
@@ -99,4 +99,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL GreenPlum] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)

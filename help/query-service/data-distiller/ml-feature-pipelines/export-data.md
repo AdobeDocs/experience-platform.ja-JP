@@ -1,23 +1,23 @@
 ---
 title: 外部 ML 環境へのデータの書き出し
-description: Data Distillerと共に作成した準備済みのトレーニングデータセットを、ML 環境が読み取ってモデルのトレーニングとスコアリングをおこなえるクラウドストレージの場所と共有する方法について説明します。
+description: Data Distillerで作成した準備済みのトレーニングデータセットを、ML 環境がモデルのトレーニングとスコアリングのために読み取ることができるクラウドストレージの場所に共有する方法を説明します。
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 5%
+source-wordcount: '457'
+ht-degree: 6%
 
 ---
 
 # 外部 ML 環境へのデータの書き出し
 
-このドキュメントでは、Data Distillerと共に作成した準備済みトレーニングデータセットを、ML 環境がモデルのトレーニングとスコアリングのために読み取ることのできるクラウドストレージの場所に共有する方法を説明します。 次の例では、トレーニングデータセットを [データランディングゾーン (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). 必要に応じて、ストレージの宛先を変更し、機械学習環境で作業できます。
+このドキュメントでは、Data Distillerで作成された準備済みトレーニングデータセットを、ML 環境がモデルのトレーニングとスコアリングのために読み取ることができるクラウドストレージの場所に共有する方法を説明します。 この例では、トレーニングデータセットを [ データランディングゾーン（DLZ） ](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) に書き出しています。 必要に応じて、機械学習環境を操作するためにストレージの宛先を変更できます。
 
-The [宛先のフローサービス](https://developer.adobe.com/experience-platform-apis/references/destinations/) は、計算済み機能のデータセットを適切なクラウドストレージの場所にランディングすることで、機能パイプラインを完了するために使用されます。
+[ 宛先用のフローサービス ](https://developer.adobe.com/experience-platform-apis/references/destinations/) は、計算された機能のデータセットを適切なクラウドストレージの場所にランディングすることで、機能パイプラインを完了するために使用されます。
 
-## ソース接続を作成 {#create-source-connection}
+## ソース接続の作成 {#create-source-connection}
 
-ソース接続は、Adobe Experience Platformデータセットへの接続を設定し、結果のフローがデータの場所と形式を正確に把握できるようにします。
+ソース接続は、Adobe Experience Platform データセットへの接続を設定する役割を果たし、結果として得られるフローがデータの検索場所と形式を正確に把握できるようにします。
 
 ```python
 from aepp import flowservice
@@ -35,15 +35,15 @@ source_connection_id = source_res["id"]
 
 ## ターゲット接続の作成 {#create-target-connection}
 
-ターゲット接続は、宛先ファイルシステムへの接続を担当します。 この場合、まずクラウドストレージアカウント（この例ではデータランディングゾーン）へのベース接続を作成し、次に、指定した圧縮および形式オプションを使用して、特定のファイルパスへのターゲット接続を作成する必要があります。
+ターゲット接続は、宛先ファイルシステムへの接続を担当します。 これには、まずクラウドストレージアカウント（この例ではデータランディングゾーン）へのベース接続を作成し、次に、指定された圧縮および形式オプションを持つ特定のファイルパスへのターゲット接続を作成する必要があります。
 
 使用可能なクラウドストレージの宛先は、それぞれ接続仕様 ID で識別されます。
 
 | クラウドストレージタイプ | 接続仕様 ID |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 4fce964d-3f37-408f-9778-e597338a21ee |
-| Azure Blob Storage | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
-| Azure Data Lake | be2c3209-53bc-47e7-ab25-145db8b873e1 |
+| Azure Blob ストレージ | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
+| Azure データレイク | be2c3209-53bc-47e7-ab25-145db8b873e1 |
 | Data Landing Zone | 10440537-2a7b-4583-ac39-ed38d4b848e8 |
 | Google Cloud Storage | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
 | SFTP | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
@@ -81,20 +81,20 @@ target_connection_id = target_res["id"]
 
 ## データフローの作成 {#create-data-flow}
 
-最後の手順では、ソース接続で指定したデータセットと、ターゲット接続で指定した宛先ファイルパスとの間にデータフローを作成します。
+最後の手順では、ソース接続で指定されたデータセットとターゲット接続で指定された宛先ファイルパスの間でデータフローを作成します。
 
-使用可能な各クラウドストレージタイプは、フロー仕様 ID で識別されます。
+使用可能な各クラウドストレージタイプは、フロー仕様 ID によって識別されます。
 
 | クラウドストレージタイプ | フロー仕様 ID |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 269ba276-16fc-47db-92b0-c1049a3c131f |
-| Azure Blob Storage | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
-| Azure Data Lake | 17be2013-2549-41ce-96e7-a70363bec293 |
-| Data Landing Zone | cd2fc47e-e838-4f38-a581-8ff2f99b63a |
+| Azure Blob ストレージ | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Azure データレイク | 17be2013-2549-41ce-96e7-a70363bec293 |
+| Data Landing Zone | cd2fc47e-e838-4f38-a581-8fff2f99b63a |
 | Google Cloud Storage | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
 | SFTP | 354d6aad-4754-46e4-a576-1b384561c440 |
 
-次のコードは、将来的に開始するように設定されたスケジュールを持つデータフローを作成します。 これにより、モデル開発中にアドホックフローをトリガーすることができます。 トレーニング済みモデルが用意できたら、データフローのスケジュールを更新して、目的のスケジュールで機能データセットを共有できます。
+次のコードでは、遠い将来に開始するようにスケジュールが設定されたデータフローを作成します。 これにより、モデル開発中にアドホックフローをトリガー設定できます。 トレーニング済みモデルが完成したら、データフローのスケジュールを更新して、目的のスケジュールで機能データセットを共有できます。
 
 ```python
 import time
@@ -168,9 +168,9 @@ activation_res = connector.postData(endpoint=endpoint, data=payload)
 activation_res
 ```
 
-## データランディングゾーンへの共有を合理化
+## データランディングゾーンへの共有を効率化
 
-データセットをデータランディングゾーンとより簡単に共有するには、 `aepp` ライブラリは、 `exportDatasetToDataLandingZone` 1 回の関数呼び出しで上記の手順を実行する関数：
+データセットをデータランディングゾーンでより簡単に共有するために、`aepp` ライブラリには、上記の手順を 1 回の関数呼び出しで実行する `exportDatasetToDataLandingZone` 関数が用意されています。
 
 ```python
 from aepp import exportDatasetToDataLandingZone
@@ -188,4 +188,4 @@ dataflow_id = export.createDataFlowRunIfNotExists(
 )
 ```
 
-このコードは、指定されたパラメーターに基づいてソース接続、ターゲット接続、データフローを作成し、データフローのアドホック実行を 1 回の手順で実行します。
+このコードは、指定されたパラメーターに基づいてソース接続、ターゲット接続およびデータフローを作成し、データフローのアドホック実行を 1 つの手順で実行します。

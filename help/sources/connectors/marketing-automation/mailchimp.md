@@ -26,9 +26,9 @@ Experience Platform は、サードパーティのマーケティング自動化
 ## [!DNL Mailchimp Campaigns] を Platform に接続する
 
 * [ソース接続を作成し [!DNL Mailchimp Campaigns] 、API を使用して Platform にデータを取得します](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md)。
-* [ソース接続を作成して [!DNL Mailchimp Campaigns] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+* [ ユーザーインターフェイスを使用してデータを Platform に取り込む  [!DNL Mailchimp Campaigns]  めのソース接続を作成します ](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)。
 
 ## [!DNL Mailchimp Members] を Platform に接続する
 
 * [ソース接続を作成し [!DNL Mailchimp Members] 、API を使用して Platform にデータを取得します](../../tutorials/api/create/marketing-automation/mailchimp-members.md)。
-* [ソース接続を作成して [!DNL Mailchimp Members] ユーザーインターフェイスを使用した Platform へのデータの取得](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+* [ ユーザーインターフェイスを使用してデータを Platform に取り込む  [!DNL Mailchimp Members]  めのソース接続を作成します ](../../tutorials/ui/create/marketing-automation/mailchimp-members.md)。

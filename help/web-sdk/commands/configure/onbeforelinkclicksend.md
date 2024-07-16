@@ -14,11 +14,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->このコールバックは非推奨（廃止予定）です。 使用方法 [`filterClickDetails`](clickcollection.md) その代わり。
+>このコールバックは非推奨（廃止予定）です。 代わりに [`filterClickDetails`](clickcollection.md) を使用します。
 
-この `onBeforeLinkClickSend` callback を使用すると、データがAdobeに送信される直前に送信したリンクトラッキングデータを変更できるJavaScript関数を登録できます。 このコールバックを使用すると、 `xdm` または `data` オブジェクト （要素を追加、編集、削除する機能を含む）。 クライアントサイドのボットトラフィックが検出された場合など、データの送信を完全に条件付きでキャンセルすることもできます。 Web SDK 2.15.0 以降でサポートされています。
+`onBeforeLinkClickSend` コールバックを使用すると、JavaScript関数を登録して、データがAdobeに送信される直前に送信したリンクトラッキングデータを変更できます。 このコールバックを使用すると、要素の追加、編集、削除の機能を含め、`xdm` オブジェクトまたは `data` オブジェクトを操作できます。 クライアントサイドのボットトラフィックが検出された場合など、データの送信を完全に条件付きでキャンセルすることもできます。 Web SDK 2.15.0 以降でサポートされています。
 
-このコールバックは、次の場合にのみ実行されます [`clickCollectionEnabled`](clickcollectionenabled.md) が有効になっており、 [`filterClickDetails`](clickcollection.md) 登録済みの関数が含まれていません。 次の場合 `clickCollectionEnabled` が無効になっている、または `filterClickDetails` 登録済みの関数が含まれると、このコールバックは実行されません。 次の場合 `onBeforeEventSend` および `onBeforeLinkClickSend` どちらも登録済みの関数を含んでいます。 `onBeforeLinkClickSend` が最初に実行されます。
+このコールバックは、[`clickCollectionEnabled`](clickcollectionenabled.md) が有効で、登録済みの関数が含まれ [`filterClickDetails`](clickcollection.md) いない場合にのみ実行されます。 `clickCollectionEnabled` が無効になっている場合、または `filterClickDetails` に登録済みの関数が含まれている場合、このコールバックは実行されません。 `onBeforeEventSend` と `onBeforeLinkClickSend` の両方に登録済みの関数が含まれている場合、`onBeforeLinkClickSend` が最初に実行されます。
 
 >[!WARNING]
 >
@@ -26,26 +26,26 @@ ht-degree: 0%
 
 ## Web SDK タグ拡張機能を使用して、「リンクの前に設定」クリックでコールバックを送信 {#tag-extension}
 
-「」を選択します **[!UICONTROL リンククリックイベント送信時のコールバックコードを提供]** ボタン条件 [タグ拡張機能の設定](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). このボタンをクリックすると、目的のコードを挿入できるモーダルウィンドウが開きます。
+[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL リンククリック前に提供イベント コールバックコードを送信]**」ボタンを選択します。 このボタンをクリックすると、目的のコードを挿入できるモーダルウィンドウが開きます。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL 拡張機能]**&#x200B;を選択し、 **[!UICONTROL 設定]** 日 [!UICONTROL Adobe Experience Platform Web SDK] カード。
-1. にスクロール ダウンします。 [!UICONTROL データ収集] 「」セクションで、「」チェックボックスを選択します **[!UICONTROL クリックデータ収集の有効化]**.
-1. というラベルの付いたボタンを選択します **[!UICONTROL リンククリックイベント送信時のコールバックコードを提供]**.
-1. このボタンをクリックすると、コードエディターでモーダルウィンドウが開きます。 目的のコードを挿入し、をクリックします **[!UICONTROL 保存]** をクリックして、モーダルウィンドウを閉じます。
-1. クリック **[!UICONTROL 保存]** 「拡張機能設定」で、変更を公開します。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. 「[!UICONTROL  データ収集 ]」セクションまでスクロールし、「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを選択します。
+1. **[!UICONTROL リンククリックイベントの前に提供するコールバックコードの送信]** というラベルの付いたボタンを選択します。
+1. このボタンをクリックすると、コードエディターでモーダルウィンドウが開きます。 目的のコードを挿入し、「**[!UICONTROL 保存]**」をクリックしてモーダルウィンドウを閉じます。
+1. 拡張機能設定の **[!UICONTROL 保存]** をクリックして、変更を公開します。
 
 コードエディター内で、次の変数にアクセスできます。
 
 * **`content.clickedElement`**：クリックされた DOM 要素。
 * **`content.xdm`**：イベントの XDM ペイロード。
 * **`content.data`**：イベントのデータオブジェクトペイロード。
-* **`return true`**：現在の変数値でコールバックを直ちに終了します。 この `onBeforeEventSend` コールバックは、登録済みの関数が含まれている場合に実行されます。
-* **`return false`**：直ちにコールバックを終了し、Adobeへのデータの送信を中止します。 この `onBeforeEventSend` コールバックは実行されません。
+* **`return true`**：現在の変数値でコールバックを直ちに終了します。 `onBeforeEventSend` コールバックは、登録済みの関数が含まれている場合に実行されます。
+* **`return false`**：直ちにコールバックを終了し、Adobeへのデータの送信を中止します。 `onBeforeEventSend` コールバックは実行されません。
 
-の外部で定義された変数 `content` を使用できますが、Adobeに送信されるペイロードには含まれません。
+`content` 外で定義された変数は使用できますが、Adobeに送信されるペイロードには含まれません。
 
 ```js
 // Set an already existing value to something else
@@ -65,11 +65,11 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-次と同様 [`onBeforeEventSend`](onbeforeeventsend.md)の場合は、次のことができます `return true` 関数をすぐに完了する場合、または `return false` を指定して、Adobeへのデータの送信を中止します。 でのデータの送信を中止した場合 `onBeforeLinkClickSend` 両方の場合 `onBeforeEventSend` および `onBeforeLinkClickSend` 登録済みの関数を含む `onBeforeEventSend` 関数が実行されません。
+[`onBeforeEventSend`](onbeforeeventsend.md) と同様に、関数を直ちに終了する `return true`、Adobeへのデータの送信を中止する `return false` を指定できます。 `onBeforeEventSend` と `onBeforeLinkClickSend` の両方に登録済みの関数が含まれている場合に `onBeforeLinkClickSend` でのデータの送信を中止すると、`onBeforeEventSend` の関数は実行されません。
 
 ## Web SDK JavaScript ライブラリを使用して、「リンクの前にコールバックを送信」をクリックして設定します。 {#library}
 
-を登録 `onBeforeLinkClickSend` を実行するときのコールバック `configure` コマンド。 を変更できます `content` インライン関数内のパラメーター変数を変更して、必要な任意の値に変数名を変更します。
+`configure` コマンドの実行時に `onBeforeLinkClickSend` コールバックを登録します。 インライン関数内のパラメーター変数を変更することで、`content` 変数の名前を任意の値に変更できます。
 
 ```js
 alloy("configure", {

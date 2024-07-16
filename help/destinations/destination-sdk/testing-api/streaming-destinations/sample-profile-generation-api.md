@@ -4,8 +4,8 @@ title: ソーススキーマに基づくサンプルプロファイルの生成
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 97%
+source-wordcount: '979'
+ht-degree: 99%
 
 ---
 

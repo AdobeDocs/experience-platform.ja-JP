@@ -8,7 +8,7 @@ role: User
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -55,4 +55,4 @@ ht-degree: 97%
       - [顧客管理キー](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [データガバナンス](customer-ai/cai-data-governance/data-governance.md)
       - [ガバナンスポリシー](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

@@ -4,7 +4,7 @@ description: Adobe Experience Platform でフィールドやデータセット�
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
 source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1882'
 ht-degree: 100%
 
 ---

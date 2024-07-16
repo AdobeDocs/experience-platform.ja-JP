@@ -13,34 +13,34 @@ ht-degree: 40%
 
 # プライバシーリクエストの ID データ
 
-Adobe Experience Platformのため [!DNL Privacy Service] 非公開データに対する顧客要求（アクセス、削除、販売のオプトアウトの要求など）を処理するには、特定の顧客をAdobe Experience Cloud対応アプリケーションに保存されている非公開データにリンクする一意の ID を提供する必要があります。 [!DNL Privacy Service] 次に、これらの識別子を使用して、顧客の ID の下に保存されているすべてのデータを [!DNL Experience Cloud]を選択し、顧客のリクエストに従って処理します。
+Adobe Experience Platform [!DNL Privacy Service] がプライベートデータ（アクセス、削除、またはセールのオプトアウトリクエストを含む）に対する顧客リクエストを処理するには、Adobe Experience Cloud対応アプリケーションに保存されているプライベートデータに特定の顧客をリンクする一意の ID を提供する必要があります。 次に、[!DNL Privacy Service] はこれらの識別子を使用して、[!DNL Experience Cloud] 内で顧客の id に保存されているすべてのデータを収集し、顧客の要求に応じて処理します。
 
 このドキュメントでは、データ操作を設定し、アドビのテクノロジーを活用して、顧客のプライバシー要求に適した ID 情報を効果的に取得する方法について、一般的なガイダンスを提供しています。
 
 ## ID と名前空間
 
-顧客が複数の異なるチャネルを通じてブランドとやり取りできる場合、多数のインタラクションから記録される様々な識別子を紐付けるのは困難なことがあります。その結果、特定の個人に属するデータを特定するのが困難になる場合があります [!DNL Experience Cloud] アプリケーション。
+顧客が複数の異なるチャネルを通じてブランドとやり取りできる場合、多数のインタラクションから記録される様々な識別子を紐付けるのは困難なことがあります。これにより、[!DNL Experience Cloud] アプリケーションの特定のユーザーに属するデータを判断するのが難しくなる可能性があります。
 
-例えば、 [!DNL Privacy Service]の場合、id は、Adobeが管理するドメインの下に設定された cookie 値、サードパーティドメインの下に設定され、Adobeと共有される cookie 値、または組織内で明示的に定義したカスタム識別子を表す場合があります。
+例えば、[!DNL Privacy Service] で顧客データリクエストを処理する場合、ID は、Adobeが制御するドメイン下で設定された Cookie 値、サードパーティドメイン下でAdobeと共有される Cookie 値、または組織内で明示的に定義するカスタム ID を表す場合があります。
 
-したがって、各 ID はに送信する必要があります。 [!DNL Privacy Service] は、id 値を元のシステムに関連付けることでコンテキストを提供する名前空間を伴います。 名前空間では、電子メールアドレス（「電子メール」）などの汎用概念を表したり、ID を特定のアプリケーションに関連付けたりすることができます（Adobe Advertising Cloud ID（「AdCloud」）、Adobe Target ID（「TNTID」）など）。
+したがって、[!DNL Privacy Service] に送信される各 ID は、ID 値を元のシステムに関連付けてコンテキストを提供する名前空間を伴う必要があります。 名前空間では、電子メールアドレス（「電子メール」）などの汎用概念を表したり、ID を特定のアプリケーションに関連付けたりすることができます（Adobe Advertising Cloud ID（「AdCloud」）、Adobe Target ID（「TNTID」）など）。
 
-Adobe Experience Platform ID サービスは、グローバルに定義された、またユーザー定義の ID 名前空間を管理します。名前空間について詳しくは、[ID 名前空間の概要](../identity-service/features/namespaces.md)を参照してください。標準名前空間と、 [!DNL Privacy Service]を参照し、 [付録の節](api/appendix.md) （ API ガイド）を参照してください。
+Adobe Experience Platform ID サービスは、グローバルに定義された、またユーザー定義の ID 名前空間を管理します。名前空間について詳しくは、[ID 名前空間の概要](../identity-service/features/namespaces.md)を参照してください。[!DNL Privacy Service] で一般的に使用される標準名前空間と名前空間修飾子のリストについては、API ガイドの [ 付録の節 ](api/appendix.md) を参照してください。
 
 ## ECID とオプトインサービス
 
-Adobe Experience Cloud [!DNL Identity Service] ～の共通の識別枠組みとして機能する [!DNL Experience Cloud]をクリックし、各サイト訪問者に一意の永続的 ID を割り当てます。 The [!DNL Experience Cloud] ID(ECID) は、ファーストパーティ Cookie を使用して顧客のアクティビティを追跡し、複数のアプリケーションでデバイスを一意に識別でき、同じサイト訪問者とそのデータを異なる場所で識別できます [!DNL Experience Cloud] アプリケーション。 詳しくは、[Experience Cloud ID サービスの概要](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja)を参照してください。
+Adobe Experience Cloud [!DNL Identity Service] は、[!DNL Experience Cloud] の共通の ID フレームワークとして機能し、各サイト訪問者に一意の永続的な ID を割り当てます。 [!DNL Experience Cloud] ID （ECID）は、ファーストパーティ cookie を使用して顧客のアクティビティを追跡し、複数のアプリケーションをまたいでデバイスを一意に識別できます。また、同じサイト訪問者と、異なる [!DNL Experience Cloud] アプリケーションにあるそのデータを識別できます。 詳しくは、[Experience Cloud ID サービスの概要](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja)を参照してください。
 
-オプトインサービス、の拡張 [!DNL Experience Cloud Identity Service]を使用すると、アプリケーションでプロトコルを設定し、訪問者が訪問者のデバイスまたはブラウザーに cookie を設定できるかどうかを訪問者が決定できるようにします。 アプリケーションでのサービスの設定方法など、オプトインサービスについて詳しくは、[オプトインサービスに関するドキュメント](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ja)を参照してください。
+[!DNL Experience Cloud Identity Service] の拡張機能であるオプトインサービスを使用すると、アプリケーション上でプロトコルを設定し、訪問者のデバイスまたはブラウザーで cookie を設定できるかどうかを訪問者が決定できます。 アプリケーションでのサービスの設定方法など、オプトインサービスについて詳しくは、[オプトインサービスに関するドキュメント](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ja)を参照してください。
 
-サイト訪問者に ECID が割り当てられると、Adobe [!DNL Privacy JavaScript Library] を使用してプライバシーリクエストで使用する ID を取得することもできます（次の節で説明）。
+サイト訪問者に ECID が割り当てられたら、次の節で説明するように、Adobe [!DNL Privacy JavaScript Library] を使用してこれらの ID を取得し、プライバシーリクエストで使用できます。
 
 ## [!DNL Privacy JS Library]
 
-The [!DNL Adobe Privacy JavaScript Library] には、ブラウザーに保存されている顧客 ID を取得および削除できる機能がいくつか用意されています。 複数のアドビアプリケーションから ECID を含む ID 情報を取得するように、ライブラリを設定できます。コールバックや promise を使用することで、正常に取得された ID をプログラムで処理し、それらをに送信できます。 [!DNL Privacy Service] API.
+[!DNL Adobe Privacy JavaScript Library] には、ブラウザーに保存されている顧客 ID を取得および削除できる機能がいくつか用意されています。 複数のアドビアプリケーションから ECID を含む ID 情報を取得するように、ライブラリを設定できます。コールバックまたは Promises を使用すると、正常に取得された ID をプログラムで処理して [!DNL Privacy Service] API に送信できます。
 
-詳しくは、 [!DNL Privacy JS Library]（一般的な使用例のコードサンプルを含む） [プライバシー JS ライブラリの概要](js-library.md).
+いくつかの一般的なユースケースのコードサンプルなど、[!DNL Privacy JS Library] について詳しくは、[ プライバシー JS ライブラリの概要 ](js-library.md) を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、プライバシーリクエストで使用する顧客 ID データの取得に関する主要概念を簡単に説明しました。これらの概念とサービスについて詳しくは、各節に記載されているドキュメントへのリンクを確認することをお勧めします。取得した ID をに送信する手順については、を参照してください。 [!DNL Privacy Service] アクセス、削除、販売オプトアウトの各リクエストの作成については、 [Privacy ServiceAPI ガイド](api/overview.md).
+このドキュメントでは、プライバシーリクエストで使用する顧客 ID データの取得に関する主要概念を簡単に説明しました。これらの概念とサービスについて詳しくは、各節に記載されているドキュメントへのリンクを確認することをお勧めします。取得した ID を [!DNL Privacy Service] に送信して、アクセス、削除、販売のオプトアウトリクエストを作成する手順については、[Privacy ServiceAPI ガイド ](api/overview.md) を参照してください。

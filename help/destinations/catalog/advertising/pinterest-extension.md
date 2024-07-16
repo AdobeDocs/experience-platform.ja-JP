@@ -1,11 +1,11 @@
 ---
 title: Pinterest Conversion Tracking 拡張機能
-description: pinterest Conversion Tracking 拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: pinterest コンバージョントラッキング拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: c2a78f79-99c8-4aca-892e-fb40f9281f2d
 source-git-commit: 0d0f1afcc1cc259d3f3feae2584329ef030f1902
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 94%
+source-wordcount: '453'
+ht-degree: 95%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 94%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Pinterest Conversion Tracking] 拡張子：
+[!DNL Pinterest Conversion Tracking] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

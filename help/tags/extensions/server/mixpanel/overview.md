@@ -1,113 +1,113 @@
 ---
 keywords: イベント転送拡張機能；mixpanel;mixpanel イベント転送拡張機能
 title: Mixpanel Track Events API イベント転送拡張機能
-description: このAdobe Experience Platformイベント転送拡張機能は、Edge ネットワークイベントを Mixpanel に送信します。
+description: このAdobe Experience Platform イベント転送拡張機能は、Edge Networkイベントを Mixpanel に送信します。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '892'
 ht-degree: 2%
 
 ---
 
 # [!DNL Mixpanel Track Events] API イベント転送拡張機能
 
-[[!DNL Mixpanel]](https://www.mixpanel.com) は、ユーザーがデジタル製品とどのようにやり取りするかに関するデータをキャプチャできる、製品分析ツールです。 数回のクリックでデータをクエリし視覚化できる、シンプルでインタラクティブなレポートを使用して製品データを分析できます。 [!DNL Mixpanel] 誰もがリアルタイムでユーザーデータを分析し、傾向を特定し、ユーザー行動を把握し、製品に関する意思決定をおこなうことで、チームをより効率的にします。
+[[!DNL Mixpanel]](https://www.mixpanel.com) は、ユーザーによるデジタル製品とのやり取りに関するデータを取得できる製品分析ツールです。 数回クリックするだけでデータをクエリして視覚化できるシンプルでインタラクティブなレポートを使用して、製品データを分析できます。 すべてのユーザー [!DNL Mixpanel] ユーザーデータをリアルタイムで分析し、傾向を特定し、ユーザーの行動を把握し、製品に関する意思決定を行えるようにすることで、チームの効率を高めるように設計されています。
 
-[!DNL Mixpanel] は、各インタラクションを 1 人のユーザーに接続する、イベントベースのユーザー中心モデルを採用しています。 The [!DNL Mixpanel] データモデルは、ユーザー、イベント、プロパティの概念に基づいて構築されます。
+[!DNL Mixpanel] には、各インタラクションを 1 人のユーザーに接続する、イベントベースのユーザー中心型モデルが採用されています。 [!DNL Mixpanel] データモデルは、ユーザー、イベント、プロパティの概念に基づいて構築されています。
 
 >[!NOTE]
 >
->詳しくは、 [!DNL Mixpanel] に関するドキュメント [id 管理](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) どうやって理解するか [!DNL Mixpanel] イベントを結合して id クラスターを作成します。 また、 [個別 ID](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) を参照して、イベントデータでユーザーを識別するためにユーザーがどのように使用されているかを理解します。
+>イベントを結合して ID クラスターを作成する方法については、[ID 管理 ](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) に関する [!DNL Mixpanel] のドキュメント [!DNL Mixpanel] 参照してください。 また、[ 個別の ID](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) に関するドキュメントを確認して、イベントデータでユーザーを識別する際にどのように使用されるかを理解することをお勧めします。
 
 ## ユースケース
 
-この拡張機能は、 [!DNL Mixpanel] を使用して、製品分析機能を活用できます。
+この拡張機能は、Edge Networkのデータを使用して製品分析機能を活用す [!DNL Mixpanel] 場合に使用します。
 
-例えば、マルチチャネルの存在（Web サイトおよびモバイル）を持つ小売組織について考えてみましょう。 組織は、プラットフォームからトランザクション入力または会話入力をイベントデータとしてキャプチャし、 [!DNL Mixpanel] イベント転送拡張機能の使用
+例えば、マルチチャネルプレゼンス（web サイトとモバイル）を持つ小売組織について考えてみます。 組織は、プラットフォームからイベントデータとしてトランザクション入力や会話入力を取得し、イベント転送拡張機能を使用して [!DNL Mixpanel] に読み込みます。
 
-分析チームは、 [!DNL Mixpanel's] データセットを処理し、ビジネスインサイトを導き出す機能。グラフ、ダッシュボード、その他のビジュアライゼーションを生成して、ビジネス関係者に知らせることができます。
+その後、分析チームは [!DNL Mixpanel's] の機能を活用してデータセットを処理し、ビジネスインサイトを得ることができます。これを使用して、グラフ、ダッシュボード、その他のビジュアライゼーションを生成し、ビジネス関係者に情報を提供できます。
 
-特有の使用例について詳しくは、 [!DNL Mixpanel]（次のドキュメントを参照）。
+[!DNL Mixpanel] 固有のユースケースについて詳しくは、次のドキュメントを参照してください。
 
-* [新規ユーザー [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
-* [ [!DNL Mixpanel] とは？](https://developer.mixpanel.com/docs)
-* [12 の必須 [!DNL Mixpanel] 機能](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
+* [ 新規  [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
+* [ [!DNL Mixpanel] について](https://developer.mixpanel.com/docs)
+* [12 [!DNL Mixpanel]  必見 ](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
 ## [!DNL Mixpanel] 前提条件 {#prerequisites-mixpanel}
 
-有効な [!DNL Mixpanel] アカウントを使用して、この拡張機能を使用する必要があります。 次に移動： [[!DNL Mixpanel] 登録ページ](https://mixpanel.com/register/) をクリックして、アカウントを作成します（まだ持っていない場合）。
+この拡張機能を使用するには、有効な [!DNL Mixpanel] アカウントが必要です。 アカウントをまだお持ちでない場合は、[[!DNL Mixpanel]  登録ページ ](https://mixpanel.com/register/) に移動し、アカウントを登録して作成してください。
 
-次の点を確認します。 [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/articles/9648680824852-ID-Merge-Implementation-Best-Practices) の設定がプロジェクトで有効になっている。 に移動します。 **[!DNL Settings]** > **[!DNL Project Setting]** > **[!DNL Identity Merge]** 設定を切り替えます。
+[[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/articles/9648680824852-ID-Merge-Implementation-Best-Practices) 設定がプロジェクトに対して有効になっていることを確認します。 **[!DNL Settings]**/**[!DNL Project Setting]**/**[!DNL Identity Merge]** に移動し、設定を切り替えます。
 
-### での ID クラスターについて [!DNL Mixpanel]
+### [!DNL Mixpanel] の ID クラスターについて
 
-In [!DNL Mixpanel]の場合、id クラスターには、 `distinct_id` 個々のユーザーに接続する値。 [!DNL Mixpanel] は、各ユーザーの ID のクラスターを処理し、1 つの標準の `distinct_id` レポートで使用する各クラスターから。 また、独自の識別子（ローカルと呼ばれる）を含めることもできます `distinct_id`) を使用します。
+ま [!DNL Mixpanel]、ID クラスターには、個々のユーザーに接続する `distinct_id` 値のコレクションが含まれます。 [!DNL Mixpanel] はユーザーごとに ID のクラスターを処理し、レポートで使用される各クラスターから 1 つの正規 `distinct_id` を解決します。 ユーザー ID イベントの前に発生する匿名イベントに、独自の ID （ローカル `distinct_id` と呼ばれます）を含めることもできます。
 
-[!DNL Mixpanel] 次の 2 つの方法で id クラスターを解決します。
+[!DNL Mixpanel] は、次の 2 つの方法で id クラスターを解決します。
 
-* **特定** : [!DNL Mixpanel] 選択した識別子を匿名に接続します `distinct_id`. Web サイトが [!DNL Mixpanel] SDK が有効な場合、Platform は `distinct_id` 現在ログインしているユーザーに割り当てられました。
-* **エイリアス**: [!DNL Mixpanel] 2 つの非匿名を組み合わせる `distinct id`を組み合わせます。
+* **ID**：選択した ID[!DNL Mixpanel] 匿名 `distinct_id` に接続します。 Web サイトで [!DNL Mixpanel] SDK が有効になっている場合、Platform は、現在ログインしているユーザーに割り当てられた `distinct_id` を使用します。
+* **エイリアス**：追加の結合条件 [!DNL Mixpanel] 満たされた場合に、2 つの非匿名 `distinct id` を組み合わせます。
 
 >[!NOTE]
 >
->詳しくは、 [!DNL Mixpanel] ～に関する文書 [id 管理](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) を参照してください。
+>これらの方法について詳しくは、[identity management](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) に関する [!DNL Mixpanel] ドキュメントを参照してください。
 >
->を有効にしていることを確認します。 [[!DNL Mixpanel] ID 結合機能](#prerequisites-mixpanel) id クラスタが適切に解決されるようにします。
+>[[!DNL Mixpanel] ID 結合機能 ](#prerequisites-mixpanel) が有効になっていることを確認して、ID クラスターが適切に解決されていることを確認します。
 
 ### 必要な設定の詳細の収集 {#configuration-details}
 
-Experience Platformを [!DNL Mixpanel] 次の入力が必要です。
+Experience Platformを [!DNL Mixpanel] に接続するには、次の入力が必要です。
 
 | キータイプ | 説明 | 例 |
 | --- | --- | --- |
-| プロジェクトトークン | に関連付けられたプロジェクトトークン。 [!DNL Mixpanel] アカウント。 詳しくは、 [!DNL Mixpanel] に関するドキュメント [プロジェクトトークンの検索](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) 指導のために | `25470xxxxxxxxxxxxxxxxxxx1289` |
+| プロジェクトトークン | [!DNL Mixpanel] アカウントに関連付けられたプロジェクトトークン。 詳しくは、[ プロジェクトトークンの検索 ](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) に関する [!DNL Mixpanel] ドキュメントを参照してください。 | `25470xxxxxxxxxxxxxxxxxxx1289` |
 
-## のインストールと設定 [!DNL Mixpanel] 拡張 {#install}
+## [!DNL Mixpanel] 拡張機能のインストールと設定 {#install}
 
-拡張機能をインストールするには、以下を実行します。 [イベント転送プロパティの作成](../../../ui/event-forwarding/overview.md#properties) または、代わりに編集する既存のプロパティを選択します。
+拡張機能をインストールするには、[ イベント転送プロパティを作成 ](../../../ui/event-forwarding/overview.md#properties) するか、代わりに編集する既存のプロパティを選択します。
 
-左側のナビゲーションの「**[!UICONTROL 拡張機能]**」をクリックします。Adobe Analytics の **[!UICONTROL カタログ]** タブ、選択 **[!UICONTROL インストール]** ～のためのカードで [!DNL Mixpanel] 拡張子。
+左側のナビゲーションの「**[!UICONTROL 拡張機能]**」をクリックします。「**[!UICONTROL カタログ]**」タブで、[!DNL Mixpanel] 拡張機能のカードの **[!UICONTROL インストール]** を選択します。
 
-![のインストール [!DNL Mixpanel] 拡張子。](../../../images/extensions/server/mixpanel/install-extension.png)
+![[!DNL Mixpanel] 拡張機能のインストール ](../../../images/extensions/server/mixpanel/install-extension.png)
 
-## の作成 [!DNL Send Event] ルール
+## [!DNL Send Event] ルールの作成
 
-イベント転送プロパティで新しいルールの作成を開始します。 の下 **[!UICONTROL アクション]**、新しいアクションを追加し、拡張機能をに設定します。 **[!UICONTROL Mixpanel]**. 次に、アクションタイプをに設定します。 **[!UICONTROL イベントの追跡]** Edge ネットワークイベントをに送信するには、以下を実行します。 [!DNL Mixpanel].
+イベント転送プロパティで新しいルールの作成を開始します。 **[!UICONTROL アクション]** の下に新しいアクションを追加し、拡張機能を **[!UICONTROL Mixpanel]** に設定します。 次に、アクションタイプを **[!UICONTROL トラックイベント]** に設定して、Edge Networkイベントを [!DNL Mixpanel] に送信します。
 
 | 入力 | 説明 | 必須 |
 | --- | --- | --- |
-| [!UICONTROL プロジェクトトークン] | このフィールドは、 [!DNL Mixpanel] アカウント。 | ○ |
+| [!UICONTROL  プロジェクトトークン ] | このフィールドは、[!DNL Mixpanel] アカウントに関連付けられたプロジェクトトークンにマッピングする必要があります。 | ○ |
 | [!UICONTROL イベントタイプ] | イベント名。 | ○ |
-| [!UICONTROL イベント時刻] | イベント時間。  | |
-| [!UICONTROL Mixpanel Distinct ID] | イベントを実行したユーザーの一意の識別子。 | |
-| [!UICONTROL ID を挿入] | 重複排除に使用される、イベントの一意の識別子。 | |
-| [!UICONTROL イベントのプロパティ] | イベントのカスタムプロパティを含む JSON オブジェクト。 生の JSON を提供するか、シンプル化されたキーと値の入力セットを使用するかを選択します。 | |
+| [!UICONTROL  イベント時間 ] | イベント時間。 | |
+| [!UICONTROL Mixpanel の個別 ID] | イベントを実行したユーザーの一意の ID。 | |
+| [!UICONTROL ID を挿入 ] | 重複排除に使用される、イベントの一意の ID。 | |
+| [!UICONTROL  イベントのプロパティ ] | イベントのカスタムプロパティを含む JSON オブジェクト。 生の JSON を提供するか、キー値の入力のシンプルなセットを使用するかを選択します。 | |
 
 >[!NOTE]
 >
->標準フィールドの詳細については、 [!DNL Mixpanel] イベント ( [公式文書](https://developer.mixpanel.com/reference/import-events#event).
+>[!DNL Mixpanel] イベントの標準フィールドについて詳しくは、[ 公式ドキュメント ](https://developer.mixpanel.com/reference/import-events#event) を参照してください。
 
-![イベント転送ルールのアクション設定を追加します。](../../../images/extensions/server/mixpanel/track-event-action.png)
+![ イベント転送ルールアクション設定を追加します ](../../../images/extensions/server/mixpanel/track-event-action.png)。
 
-1 回 [!UICONTROL イベントの追跡] アクションをルールに追加する場合は、特定のイベントに対してのみ実行するようにルールの条件を設定できます。また、「条件」セクションを空のままにして、すべてのイベントに対してルールを実行することもできます。
+[!UICONTROL  イベントの追跡 ] アクションがルールに追加されたら、特定のイベントに対してのみ発生するようにルールの条件を設定したり、条件セクションを空のままにして、すべてのイベントに対してルールを発生させることができます。
 
 >[!IMPORTANT]
 >
->Web サイトが [!DNL Mixpanel] SDK を使用する場合は、次の手順 ( [内のデータの検証 [!DNL Mixpanel]](#validate). を使用しない場合、 [!DNL Mixpanel] SDK の場合は、 [個別の id トラッキングルールの作成](#create-an-identity-tracking-rule) 適切なイベントと `distinct_id` の値が次の場所に送信される： [!DNL Mixpanel] ユーザー識別イベントが発生したとき。
+>Web サイトで [!DNL Mixpanel] SDK を使用している場合は、次の手順 [ 内でのデータの検証  [!DNL Mixpanel]](#validate) に進むことができます。 [!DNL Mixpanel] SDK を使用していない場合は、[ 個別の ID トラッキングルールを作成 ](#create-an-identity-tracking-rule) して、ユーザー ID イベントが発生したときに適切なイベントと `distinct_id` 値が [!DNL Mixpanel] に送信されるようにする必要があります。
 
-## 内のデータの検証 [!DNL Mixpanel] {#validate}
+## [!DNL Mixpanel] 内のデータの検証 {#validate}
 
-実装が成功し、イベントが収集された場合、 [[!DNL Mixpanel] コンソール](https://help.mixpanel.com/hc/en-us/articles/4402837164948).
+実装が成功し、イベントが収集された場合は、[[!DNL Mixpanel] console](https://help.mixpanel.com/hc/en-us/articles/4402837164948) 内にイベントが表示されます。
 
-次の場合に確認 [!DNL Mixpanel] は、電子メールの値と、 **[!UICONTROL イベントの送信]**. 正しく実装されている場合は、 [!DNL Mixpanel] 彼らをシングルに関連付ける [ユーザープロファイル](https://help.mixpanel.com/hc/en-us/articles/115004501966).
+メール値 [!DNL Mixpanel] 入力されたログイン後イベントと、**[!UICONTROL イベントを送信]** を使用する際に作成されたイベントを結合したかどうかを確認します。 正しく実装され [!DNL Mixpanel] 場合は、それらを単一の [ ユーザープロファイル ](https://help.mixpanel.com/hc/en-us/articles/115004501966) に関連付けます。
 
 ## 次の手順
 
-このガイドでは、コンバージョンイベントをに送信する方法について説明しました。 [!DNL Mixpanel] イベント転送を使用しています。 このイベント転送拡張機能では、 [!DNL Mixpanel] SDK および JavaScript API これらの基盤となるテクノロジーについて詳しくは、次の公式ドキュメントを参照してください。
+このガイドでは、イベント転送を使用してコンバージョンイベントを [!DNL Mixpanel] に送信する方法について説明しました。 このイベント転送拡張機能は、[!DNL Mixpanel] SDK とJavaScript API を活用します。 これらの基盤となるテクノロジーについて詳しくは、次の公式ドキュメントを参照してください。
 
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] JavaScript API](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
 
-Experience Platformのイベント転送機能について詳しくは、 [イベント転送の概要](../../../ui/event-forwarding/overview.md).
+Experience Platformのイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。

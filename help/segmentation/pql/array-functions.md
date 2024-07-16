@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: 配列、リスト、および設定 PQL 関数
-description: プロファイルクエリ言語（PQL）は、配列、リスト、および文字列とのやり取りを容易にする関数を提供します。
+title: PQLの関数を配列、リスト、設定する
+description: Profile Query Language（PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 97%
+source-wordcount: '753'
+ht-degree: 94%
 
 ---
 
 # 配列、リスト、およびセットの関数
 
-[!DNL Profile Query Language]（PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+[!DNL Profile Query Language] （PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## 次に含まれる
 

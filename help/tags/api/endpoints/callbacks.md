@@ -4,7 +4,7 @@ description: Reactor API で /callbacks エンドポイントを呼び出す方�
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '606'
 ht-degree: 97%
 
 ---
@@ -263,7 +263,7 @@ curl -X POST \
 
 ## コールバックの更新
 
-コールバックを更新するには、コールバックリクエストのパスに ID を含めるPATCHを更新します。
+コールバックを更新するには、PATCHリクエストのパスにその ID を含めます。
 
 **API 形式**
 

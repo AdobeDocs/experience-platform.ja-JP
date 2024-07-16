@@ -7,7 +7,7 @@ description: このチュートリアルでは、Flow Service API を使用し�
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '519'
 ht-degree: 100%
 
 ---

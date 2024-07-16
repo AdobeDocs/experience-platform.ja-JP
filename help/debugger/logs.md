@@ -1,6 +1,6 @@
 ---
-description: Adobe Experience Platform Debugger での「ログ」タブの使用方法について説明します。
-keywords: debugger;experience Platform Debugger 拡張機能；chrome；拡張機能；ログ
+description: Adobe Experience Platform Debuggerの「ログ」タブの使用方法を説明します。
+keywords: デバッガー；Experience Platform Debugger 拡張機能；Chrome；拡張機能；ログ
 seo-description: Experience Platform Debugger Logs screen
 seo-title: Logs
 title: 「ログ」タブ
@@ -15,25 +15,25 @@ ht-degree: 28%
 
 # 「ログ」タブ
 
-この **ログ** 「 」タブには、タグとAdobe Experience Platform Web SDK の実装に関する情報が表示されます。 関連するツールを通じて実装したソリューションでフィルタリングできます。
+「**ログ**」タブには、タグとAdobe Experience Platform Web SDK 実装に固有の情報が表示されます。 関連するツールを通じて実装したソリューションでフィルタリングできます。
 
 ![](images/logs.jpg)
 
-「ログ」タブには、情報が 4 つの列に表示されます。
+「ログ」タブには、次の 4 つの列で情報が表示されます。
 
-**[!UICONTROL ソリューション]:** ログに記録された項目の影響を受けるExperience Cloudソリューションのアイコンを表示します。 アイコンにマウスポインターを重ねると、テキストの説明が表示されます。
+**[!UICONTROL ソリューション ]:** ログに記録された項目の影響を受けるExperience Cloudソリューションのアイコンを表示します。 アイコンにマウスポインターを重ねると、テキストの説明が表示されます。
 
-**[!UICONTROL 発生時刻]:** セッション中、ログに記録された問題がいつ発生したかを示します。
+**[!UICONTROL 発生場所 ]:** ログに記録された問題がセッション中に発生したタイミングを表示します。
 
-**[!UICONTROL ログレベル]:** 問題の重大度を表示します。 重大度は、次のレベルのいずれかです。
+**[!UICONTROL ログレベル ]:** イシューの重要度を表示します。 重大度は、次のレベルのいずれかです。
 
 * ログ
 * 情報
 * 警告
 * エラー
 
-**[!UICONTROL ログメッセージ]:** 問題について説明します。
+**[!UICONTROL ログメッセージ ]:** 問題について説明します。
 
-一部のログメッセージには「コードを表示」オプションが含まれています。選択 **[!UICONTROL コードを表示]** をクリックして、ルールを実行するかどうかを判定する条件付きコードを表示します。
+一部のログメッセージには「コードを表示」オプションが含まれています。「**[!UICONTROL コードを表示]**」を選択して、ルールを実行するかどうかを決定する条件付きコードを表示します。
 
-ログを消去するには、 **[!UICONTROL ログを削除]**.
+ログを消去するには、「**[!UICONTROL ログを削除]**」を選択します。

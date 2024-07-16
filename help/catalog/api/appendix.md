@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；カタログサービス；カタログ api；付録
+keywords: Experience Platform；ホーム；人気のトピック；Catalog service;catalog api;appendix
 solution: Experience Platform
-title: カタログサービス API ガイドの付録
-description: このドキュメントには、Adobe Experience Platformでカタログ API を使用する際に役立つ追加情報が含まれています。
+title: Catalog Service API ガイドの付録
+description: このドキュメントには、Adobe Experience Platformで Catalog API を使用する際に役立つ追加情報が含まれています。
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 77%
+source-wordcount: '459'
+ht-degree: 76%
 
 ---
 
 # [!DNL Catalog Service] API ガイドの付録
 
-このドキュメントでは、 [!DNL Catalog] API.
+このドキュメントには、[!DNL Catalog] API の操作に役立つ追加情報が含まれています。
 
 ## 相互に関連するオブジェクトの表示 {#view-interrelated-objects}
 
-一部 [!DNL Catalog] オブジェクトは他のオブジェクトと相互に関連付けることができます [!DNL Catalog] オブジェクト。 応答ペイロードの先頭に `@` プリフィックスが付いたフィールドは、関連オブジェクトを表します。これらのフィールドの値は URI の形式をとります。それらが表す関連オブジェクトは、個別の GET リクエストで取得できます。
+一部の [!DNL Catalog] オブジェクトは、他の [!DNL Catalog] オブジェクトと相互に関連付けることができます。 応答ペイロードの先頭に `@` プリフィックスが付いたフィールドは、関連オブジェクトを表します。これらのフィールドの値は URI の形式をとります。それらが表す関連オブジェクトは、個別の GET リクエストで取得できます。
 
 [特定のデータセットの検索](look-up-object.md)時にドキュメントに返されるデータセットの例には、URI 値 `"@/datasetFiles?datasetId={DATASET_ID}"` を持つ `files` フィールドが含まれています。この URI を新しい GET リクエストのパスとして使用すると、`files` フィールドの内容を表示できます。
 
@@ -91,7 +91,7 @@ curl -X GET \
 
 ## 追加のリクエストヘッダー
 
-[!DNL Catalog] には、更新時にデータの整合性を維持するのに役立つ、いくつかのヘッダー規則が用意されています。
+[!DNL Catalog] には、更新中にデータの整合性を維持するのに役立つ、いくつかのヘッダー規則が用意されています。
 
 ### If-Match
 
@@ -107,6 +107,6 @@ curl -X GET \
 
 ## データの圧縮
 
-圧縮は [!DNL Experience Platform] データを変更せずに小さいファイルのデータを大きいファイルに結合するサービス。 パフォーマンス上の理由から、小さなファイルのセットを大きなファイルに組み合わせて、クエリを実行する際にデータへのアクセスを高速化する方が有益な場合があります。
+コンパクションは、データを変更せずに小さなファイルから大きなファイルにデータを結合する [!DNL Experience Platform] サービスです。 パフォーマンス上の理由から、小さなファイルのセットを大きなファイルに組み合わせて、クエリを実行する際にデータへのアクセスを高速化する方が有益な場合があります。
 
-取り込まれたバッチ内のファイルが圧縮されると、関連付けられた [!DNL Catalog] オブジェクトが、監視目的で更新されます。
+取り込んだバッチ内のファイルが圧縮されている場合は、監視目的で、その関連する [!DNL Catalog] オブジェクトが更新されます。

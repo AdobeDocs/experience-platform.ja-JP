@@ -4,8 +4,8 @@ description: Adobe Experience Platform の拡張機能の開発を開始する�
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 95%
+source-wordcount: '573'
+ht-degree: 90%
 
 ---
 
@@ -37,14 +37,14 @@ Marketplace に表示される Adobe Experience Platform の公開タグ拡張�
 >
 >Exchange の契約には、Adobe Experience Platform の拡張機能開発に関する利用条件が含まれているので、ソリューションパートナーは Exchange パートナープログラムに[登録](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html)する必要があります。
 >
->Exchange への登録を完了する前に、Exchange 管理者（<ExchangeHelpEC@adobe.com>）に電子メールを送信し、 の拡張機能を宣伝するために登録しようとしていることを説明してください。これをおこなわないと、アプリケーションが却下され、代わりに SPP を参照する可能性があります。
+>Exchange への登録を完了する前に、Exchange 管理者（<ExchangeHelpEC@adobe.com>）にメールを送信し、拡張機能のプロモーションを行うために登録しようとしていることを説明してください。これをおこなわないと、アプリケーションが却下され、代わりに SPP を参照する可能性があります。
 >
 >現在、会社の電子メールは一度に 1 つのパートナープログラムでのみ使用できるので、各プログラムの登録連絡先には、それぞれ別の電子メールを使用する必要があります。
 
-会社が Exchange パートナープログラムに参加したら、[Exchange パートナーサイト](https://partners.adobe.com/exchangeprogram/experiencecloud)にサインインし、次の手順に従うことで、アドビソリューションへのアクセスを要求できます。
+Exchange パートナープログラムに参加している会社は、[Exchange パートナーサイト ](https://partners.adobe.com/exchangeprogram/experiencecloud) にサインインして次の手順に従うことで、Adobeソリューションへのアクセスをリクエストできます。
 
-データ収集 UI とExperience CloudUI にアクセスする必要があるExperience Platformアカウントがある場合は、 [データ収集権限ガイド](../../../collection/permissions.md).
+Experience Cloudアカウントでデータ収集 UI およびExperience PlatformUI へのアクセスが必要な場合は、[ データ収集権限ガイド ](../../../collection/permissions.md) を参照してください。
 
 ## 個人の開発者
 
-独立した開発者、またはリストに記載されたパートナープログラムの 1 つに参加できない場合で、Adobe Experience Platform のタグ拡張機能を構築したい場合は、launch-ext-dev@adobe.com に電子メールを送信してアクセスをリクエストしてください。Adobe Experience Platform のタグでのエクスペリエンスに関する背景と、予定している拡張機能プロジェクトのロードマップを提供してください。
+独立した開発者、またはリストに記載されたパートナープログラムの 1 つに参加できない場合で、Adobe Experience Platform のタグ拡張機能を構築したい場合は、launch-ext-dev@adobe.com にメールを送信してアクセスをリクエストしてください。Adobe Experience Platform のタグでのエクスペリエンスに関する背景と、予定している拡張機能プロジェクトのロードマップを提供してください。

@@ -5,7 +5,7 @@ description: Google gtag 拡張機能は、Adobe Experience Platform の広告�
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
 source-git-commit: c3f6650df5fabe9736e4b11a43c41ae39f014425
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '514'
 ht-degree: 100%
 
 ---

@@ -17,7 +17,7 @@ ht-degree: 58%
 
 ## 前提条件 {#prerequisites}
 
-以下に示す手順に進む前に、を読んでください。 [Destination SDKを開始する](../getting-started.md) Destination SDKAPI を使用するために必要なAdobe I/O認証資格情報およびその他の前提条件の取得に関する情報については、を参照してください。 ここでは、パートナーシップと権限の前提条件を満たし、宛先開発を開始する準備が整っていることを前提としています。
+以下に示す手順に進む前に、[Destination SDKの概要 ](../getting-started.md) ページを参照して、Adobe I/ODestination SDK資格情報および認証 API を使用するためのその他の前提条件について確認してください。 ここでは、パートナーシップと権限の前提条件を満たし、宛先開発を開始する準備が整っていることを前提としています。
 
 ## Destination SDK の構成オプションを使用して宛先を設定する手順 {#steps}
 
@@ -25,7 +25,7 @@ ht-degree: 58%
 
 ## 手順 1：サーバーとテンプレートの構成を作成する {#create-server-template-configuration}
 
-開始方法 [サーバーとテンプレート設定の作成](../authoring-api/destination-server/create-destination-server.md) の使用 `/destinations-server` エンドポイント。
+まず、`/destinations-server` エンドポイントを使用して [ サーバーとテンプレートの設定を作成 ](../authoring-api/destination-server/create-destination-server.md) します。
 
 次に構成の例を示します。 `requestBody.value` パラメーターでのメッセージ変換テンプレートは、手順 3 の[変換テンプレートの作成](#create-transformation-template)で対応します。
 
@@ -56,13 +56,13 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## 手順 2：宛先の構成の作成 {#create-destination-configuration}
 
-以下に、`/destinations` API エンドポイントを使用して作成された、宛先テンプレートの構成の例を示します。 参照： [宛先設定の作成](../authoring-api/destination-configuration/create-destination-configuration.md) を参照してください。
+以下に、`/destinations` API エンドポイントを使用して作成された、宛先テンプレートの構成の例を示します。 詳しくは、[ 宛先設定の作成 ](../authoring-api/destination-configuration/create-destination-configuration.md) を参照してください。
 
 手順 1 のサーバーとテンプレート設定をこの宛先構成に接続するには、サーバーのインスタンス ID とテンプレート設定を、`destinationServerId` として追加します。
 
 >[!IMPORTANT]
 >
->正しく設定されたリアルタイム（ストリーミング）宛先を作成するには、 *が* に 1 つ以上のターゲット ID を追加 `identityNamespaces`を参照してください。 ターゲット ID が設定されていない場合、ユーザーはアクティベーションワークフローの[マッピング手順](../../ui/activate-segment-streaming-destinations.md#mapping)以降に進むことができません。
+>正しく設定されたリアルタイム（ストリーミング）宛先を作成するには、次に示すように *少なくとも 1 つのターゲット ID を `identityNamespaces` に追加する* 必要があります）。 ターゲット ID が設定されていない場合、ユーザーはアクティベーションワークフローの[マッピング手順](../../ui/activate-segment-streaming-destinations.md#mapping)以降に進むことができません。
 
 ```shell
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 手順 3：メッセージ変換テンプレートの作成。テンプレート言語を使用して、メッセージの出力形式を指定します {#create-transformation-template}
 
-宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 セクションのテンプレートの例を参照してください [ID、属性、オーディエンスメンバーシップを変換するためのテンプレート言語の使用](../functionality/destination-server/message-format.md#using-templating) を使用する [テンプレートオーサリングツール](../testing-api/streaming-destinations/create-template.md) Adobeが提供。
+宛先がサポートするペイロードに基づいて、AdobeXDM 形式から書き出されたデータの形式を、宛先でサポートされる形式に変換するテンプレートを作成する必要があります。 [ID、属性、オーディエンスメンバーシップの変換にテンプレート言語を使用する ](../functionality/destination-server/message-format.md#using-templating) の節のテンプレートの例を参照し、Adobeの [ テンプレートオーサリングツール ](../testing-api/streaming-destinations/create-template.md) を使用します。
 
 自分の用途に合ったメッセージ変換テンプレートを作成したら、そのテンプレートを手順 1 で作成したサーバーおよびテンプレートの構成に追加します。
 
@@ -267,11 +267,11 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 >[!NOTE]
 >
->`CUSTOMER_AUTHENTICATION` は、2 つの認証ルールのうち一般的で、接続を設定してデータを書き出す前に、ユーザーが宛先に何らかの形の認証を提供する必要がある場合に使用するルールです。
+>`CUSTOMER_AUTHENTICATION` は、2 つの認証ルールの中でより一般的で、接続の設定やデータの書き出しを行う前に、ユーザーが宛先に何らかの形の認証を提供する必要がある場合に使用するルールです。
 
-を選択した場合 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 宛先設定で、宛先が OAuth 2 認証方法をサポートしている場合は、以下を参照してください。 [OAuth 2 認証](../functionality/destination-configuration/oauth2-authorization.md).
+宛先設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` を選択し、宛先が OAuth 2 認証方式をサポートしている場合は、[OAuth 2 認証 ](../functionality/destination-configuration/oauth2-authorization.md) をお読みください。
 
-を選択した場合 `"authenticationRule": "PLATFORM_AUTHENTICATION"`。を作成する必要があります [資格情報設定](../credentials-api/create-credential-configuration.md).
+`"authenticationRule": "PLATFORM_AUTHENTICATION"` を選択した場合、[ 資格情報設定 ](../credentials-api/create-credential-configuration.md) を作成する必要があります。
 
 ## 手順 6：宛先のテスト {#test-destination}
 
@@ -280,7 +280,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、以下の 2 つのリソースを参照してください。
 
 * [オーディエンスドキュメントページの作成](/help/segmentation/ui/audience-portal.md#create-audience)
-* [オーディエンスの作成のビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [ オーディエンスの作成のビデオチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 手順 7：宛先を公開する {#publish-destination}
 
@@ -304,4 +304,4 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 >
 >自分で使用するためにプライベートな宛先を作成していて、他の顧客が使用できるように宛先カタログに公開する予定がない場合は、この手順は必要ありません。
 
-最後に、宛先をExperience Platformカタログに公開して、すべてのExperience Platform顧客に表示する前に、Adobeのレビュー用に宛先を正式に送信する必要があります。 方法に関する詳細な情報を確認する [Destination SDKで作成した製品化された宛先をレビュー用に送信](../guides/submit-destination.md).
+最後に、宛先をExperience Platformカタログに公開して、すべてのExperience Platform顧客に表示する前に、Adobeのレビュー用に宛先を正式に送信する必要があります。 [Destination SDKで作成した製品化された宛先をレビュー用に送信 ](../guides/submit-destination.md) する方法に関する詳細を確認します。

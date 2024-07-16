@@ -5,8 +5,8 @@ title: サンプルデータ API エンドポイント
 description: Adobe Experience Platform API で「/samples」エンドポイントを使用し、マッピングのサンプルデータをプログラムにより取得、作成、更新および検証できます。
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 90%
+source-wordcount: '405'
+ht-degree: 91%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 90%
 
 ## サンプルデータのリスト
 
-組織のすべてのマッピングサンプルデータのリストを取得するには、 `/samples` endpoint.
+`/samples` エンドポイントに対してデータリクエストをおこなうと、組織のすべてのマッピングサンプルGETのリストを取得できます。
 
 **API 形式**
 
@@ -81,8 +81,8 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `sampleData` |  |
-| `sampleType` |  |
+| `sampleData` | |
+| `sampleType` | |
 
 ## サンプルデータの作成
 

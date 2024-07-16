@@ -4,7 +4,7 @@ description: Reactor API でのエラーの処理方法を説明します。
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1057'
 ht-degree: 100%
 
 ---
@@ -72,7 +72,7 @@ Reactor API を呼び出す際に問題が発生した場合は、次のいず�
 | `extension-package-zip-error` | ExtensionPackage を解凍中、または配布用にファイルを圧縮中にエラーが発生しました。 |
 | `host-in-use` | 1 つ以上の環境がホストを使用している場合、ホストは削除されない場合があります。 |
 | `host-required` | このライブラリに割り当てられた環境に有効なホストがありません。ライブラリに割り当てられている環境を確認します。次に、その環境に有効なホストを割り当てます。 |
-| `host-type-error` | SFTP ホストのみが使用前に認証情報を検証する必要があるため、事前テストはそのホストタイプでのみ使用できます。 |
+| `host-type-error` | SFTP ホストのみが使用前に資格情報を検証する必要があるため、事前テストはそのホストタイプでのみ使用できます。 |
 | `illegal-custom-code-transform` | customCode 変換を使用することはできません。関数またはファイル変換を指定してください。 |
 | `ims-not-authorized` | アカウントの認証中に不明なエラーが発生しました。後でもう一度やり直してください。 |
 | `ims-session-error` | ログインセッションに問題があります。ログアウトしてから、もう一度ログインしてください。 |

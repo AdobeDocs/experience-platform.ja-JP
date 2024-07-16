@@ -1,31 +1,31 @@
 ---
-title: MediaAnalytics インタラクション詳細スキーマフィールドグループ
-description: MediaAnalytics インタラクション詳細スキーマフィールドグループについて説明します。
+title: MediaAnalytics インタラクションの詳細スキーマフィールドグループ
+description: MediaAnalytics インタラクションの詳細スキーマフィールドグループについて説明します。
 exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
 source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL MediaAnalytics インタラクションの詳細] スキーマフィールドグループ
+# [!UICONTROL MediaAnalytics インタラクションの詳細 ] スキーマフィールドグループ
 
-[!UICONTROL MediaAnalytics インタラクションの詳細] は、 [[!DNL XDM ExperienceEvent] クラス](../../classes/experienceevent.md). このフィールドグループを使用して、様々なプラットフォームやチャネルにわたるメディアコンテンツとのやり取りを包括的に監視および分析する、エンリッチメントされたデータフィールドをキャプチャします。
+[!UICONTROL MediaAnalytics インタラクションの詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 このフィールドグループを使用すると、様々なプラットフォームやチャネルをまたいでメディアコンテンツとのインタラクションを包括的に監視および分析する、強化されたデータフィールドをキャプチャできます。
 
-![のスキーマ図 [!UICONTROL MediaAnalytics インタラクションの詳細] スキーマフィールドグループを使用します。](../../images/field-groups/mediaanalytics-interaction.png)
+![MediaAnalytics インタラクションの詳細 [!UICONTROL  スキーマフィールドグループ ] スキーマ図 ](../../images/field-groups/mediaanalytics-interaction.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |---| --- | --- | --- |
-| [!UICONTROL メディアコレクションの詳細] | `mediaCollection` | [[!UICONTROL メディアコレクションの詳細]](../../data-types/media-collection-details.md) | メディア項目のコレクションに関連する属性。 メディアコレクションフィールドを使用してデータをキャプチャし、他のAdobe サービスに送信してさらに処理します。 |
-| [!UICONTROL メディアレポートの詳細] | `mediaReporting` | [[!UICONTROL メディアレポートの詳細]](../../data-types/media-reporting-details.md) | メディアコンテンツに関連付けられているレポートの詳細と指標。 *メディアレポートフィールドは、Adobe サービスが送信したメディアコレクションフィールドを分析するために使用します。 このデータは、他の特定のユーザー指標と共に、計算され、レポートされます。 |
-| [!UICONTROL メディアコレクションダウンロードされたコンテンツイベントのリスト] | `mediaDownloadedEvents` | [!UICONTROL 配列] / [[!UICONTROL mediaEvent]](../../data-types/media-event-information.md) | メディアコレクション内のコンテンツのダウンロードを追跡するイベント。 |
+| [!UICONTROL  メディアコレクションの詳細 ] | `mediaCollection` | [[!UICONTROL  メディアコレクションの詳細 ]](../../data-types/media-collection-details.md) | メディア項目のコレクションに関連する属性。 Media Collection フィールドを使用してデータをキャプチャし、他のAdobe サービスに送信してさらに処理を行います。 |
+| [!UICONTROL  メディアレポートの詳細 ] | `mediaReporting` | [[!UICONTROL  メディアレポートの詳細 ]](../../data-types/media-reporting-details.md) | メディアコンテンツに関連付けられているレポートの詳細と指標。 * メディアレポートフィールドは、Adobe サービスが送信したメディアコレクションフィールドを分析するためにユーザーが使用します。 このデータは、他の特定のユーザー指標と共に計算され、レポートされます。 |
+| [!UICONTROL  メディアコレクションでダウンロードされたコンテンツイベントのリスト ] | `mediaDownloadedEvents` | [[!UICONTROL mediaEvent]](../../data-types/media-event-information.md) の [!UICONTROL  配列 ] | メディアコレクション内のコンテンツのダウンロードをトラッキングするイベント。 |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->Media Edge API で使用されていないフィールドを非表示にできます。 これらのフィールドを非表示にすると、スキーマが読み取りやすく、理解しやすくなりますが、必須ではありません。 これらのフィールドは、 [!UICONTROL MediaAnalytics インタラクションの詳細] fieldgroup. Platform UI の読みやすさを向上させるには、 [未使用フィールドを非表示にする方法に関する Media Analytics ドキュメント](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+>Media Edge API で使用されないフィールドを非表示にできます。 これらのフィールドを非表示にすると、スキーマが読みやすく理解しやすくなりますが、必須ではありません。 これらのフィールドは、[!UICONTROL MediaAnalytics インタラクションの詳細 ] フィールドグループのフィールドのみを参照します。 Platform UI での読みやすくするには、[Media Analytics ドキュメントで未使用フィールドを非表示にする方法 ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) の手順に従います。
 
 <!-- 
 >[!NOTE]

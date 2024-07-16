@@ -1,28 +1,29 @@
 ---
-title: Chapter Details コレクションのデータタイプ
-description: Chapter Details Collection Experience Data Model(XDM) のデータ型について説明します。
-source-git-commit: c6108bb692c80c79e115ac7b1488d95a7039ffcf
+title: チャプターの詳細コレクションのデータタイプ
+description: チャプター詳細収集エクスペリエンスデータモデル（XDM）データタイプについて説明します。
+exl-id: 4f841f5a-3840-4da5-a3a4-ceecde87c684
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '193'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
-# [!UICONTROL チャプターの詳細] コレクションデータタイプ
+# [!UICONTROL  チャプターの詳細 ] 収集データタイプ
 
-[!UICONTROL チャプターの詳細] コレクションは、メディアコンテンツ内のチャプターまたはセグメントに関連する様々な属性を記述する標準の Experience Data Model(XDM) データ型です。 以下を使用します。 [!UICONTROL チャプターの詳細] チャプター名、オフセット、期間、チャプターインデックスなどの詳細をキャプチャするためのコレクションデータ型です。 メディアコレクションフィールドは、データをキャプチャして他のAdobe サービスに送信し、さらに処理します。
+[!UICONTROL  チャプターの詳細 ] コレクションは、メディアコンテンツ内のチャプターまたはセグメントに関連する様々な属性を記述する、標準の Experience Data Model （XDM）データタイプです。 [!UICONTROL  チャプターの詳細 ] コレクション データ型を使用すると、チャプター名、オフセット、期間、チャプターインデックスなどの詳細をキャプチャできます。 メディアコレクションフィールドは、データをキャプチャし、さらに処理するために他のAdobe サービスに送信します。
 
-![Chapter Details Collection データ型の図です。](../images/data-types/chapter-details-collection.png)
+![ チャプター詳細コレクションのデータタイプを示す図。](../images/data-types/chapter-details-collection.png)
 
 >[!NOTE]
 >
->各ディスプレイ名には、オーディオおよびビデオパラメーターに関する詳細情報へのリンクが含まれます。 リンクされたページには、Adobe、実装値、ネットワークパラメーター、レポートおよび重要な考慮事項によって収集されるビデオ広告データの詳細が含まれます。
+>各表示名には、オーディオおよびビデオパラメーターに関する詳細情報へのリンクが含まれています。 リンク先のページには、Adobeで収集された動画広告データの詳細、実装値、ネットワークパラメーター、レポート、重要な検討事項が含まれています。
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL チャプターの長さまたは期間]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | 整数 | ○ | チャプターの長さ（秒）。 |
-| [[!UICONTROL チャプター名]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | 文字列 | × | チャプターまたはセグメントの名前。 |
-| [[!UICONTROL チャプターオフセット]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | 整数 | ○ | 開始時からのコンテンツ内のチャプターのオフセット（秒）。 |
-| [[!UICONTROL チャプター位置]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | 整数 | ○ | コンテンツ内のチャプターの位置（インデックス、整数）。 |
+| [[!UICONTROL  章の長さ又は存続期間 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | 整数 | ○ | チャプターの長さ（秒）。 |
+| [[!UICONTROL  チャプター名 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | 文字列 | × | チャプターまたはセグメント（あるいはその両方）の名前。 |
+| [[!UICONTROL  チャプターオフセット ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | 整数 | ○ | 開始時からのコンテンツ内のチャプターのオフセット （秒）。 |
+| [[!UICONTROL  章の位置 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | 整数 | ○ | コンテンツ内のチャプターの位置（インデックス、整数）。 |
 
 {style="table-layout:auto"}

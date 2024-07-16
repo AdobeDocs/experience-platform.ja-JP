@@ -4,7 +4,7 @@ description: Adobe Experience Platform の 2021年9月のリリースノート�
 exl-id: 96375409-803f-45af-805e-900207d972e4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '379'
 ht-degree: 95%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform のデータ取得は、Platform が様々なソース
 
 | 機能 | 説明 |
 |------- | -----------|
-| バッチ取得を使用したプロファイルレコードのアップサートまたはパッチ適用 | リアルタイム顧客プロファイルを使用すると、バッチ取得を介して、個々のプロファイルレコードデータのプロファイル属性を更新できるようになりました。 詳しくは、[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。 |
+| バッチ取得を使用したプロファイルレコードのアップサートまたはパッチ適用 | リアルタイム顧客プロファイルで、バッチ取り込みを使用して個々のプロファイルレコードデータのプロファイル属性を更新できるようになりました。 詳しくは、[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。 |
 
 データを Platform に取り込む方法については、[データ取得に関するドキュメント](../../ingestion/home.md)を参照してください。
 

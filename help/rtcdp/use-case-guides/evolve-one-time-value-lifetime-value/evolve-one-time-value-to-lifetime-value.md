@@ -15,9 +15,9 @@ ht-degree: 2%
 >[!IMPORTANT]
 > 
 >* このページでは、記載されているユースケースを実現するための、Real-Time CDPおよびAdobe Journey Optimizerの実装例を示します。 ページに記載されている数値、認定条件、その他のフィールドは、規範的な数値としてではなく、ガイドとして使用してください。
->* このユースケースを完了するには、Real-Time CDPおよびAdobe Journey Optimizerのライセンスを取得している必要があります。 詳しくは、を参照してください。 [前提条件と計画セクション](#prerequisites-and-planning) さらに下。
+>* このユースケースを完了するには、Real-Time CDPおよびAdobe Journey Optimizerのライセンスを取得している必要があります。 詳しくは、以下の [ 前提条件と計画の節 ](#prerequisites-and-planning) を参照してください。
 
-生涯価値のユースケースに 1 回限りの顧客価値を実装して、ブランドエンゲージメントとブランドロイヤルティを推進します。 によって強化されたExperience Platformの力を使用して、複数のチャネルまたはジャーニーで接続されたカスタマーエクスペリエンスを構築します。 [Real-Time CDP](/help/rtcdp/home.md) および [Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home).
+生涯価値のユースケースに 1 回限りの顧客価値を実装して、ブランドエンゲージメントとブランドロイヤルティを推進します。 [Real-Time CDP](/help/rtcdp/home.md) および [Journey Optimizer} で拡張されたExperience Platformの機能を使用して、複数のチャネルまたはジャーニーで接続されたカスタマーエクスペリエンスを構築し ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home) す。
 
 ターゲットとしているペルソナは、過去 3 か月以内に購入を行った、プロパティへのまれな訪問者です。
 
@@ -27,13 +27,13 @@ ht-degree: 2%
 * オーディエンスを作成
 * Adobe Journey Optimizerでこれらのオーディエンスをターゲットにし、Real-Time CDPでアクティブ化するジャーニーを作成します。
 
-![ステップバイステップ ワンタイム値をライフタイム値に進化する高レベルの視覚的な概要。](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
+![ ステップバイステップの 1 回限りの値をライフタイム値に進化させる高レベルの視覚的な概要 ](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## 前提条件と計画 {#prerequisites-and-planning}
 
 社内で、ブランドロイヤルティを高めるビジネス目標と目標を定義していることを考慮します。 これは、顧客エンゲージメントとロイヤルティを高めるためにユースケースを実行することを意味します。
 
-そのために必要な技術は、2 つのExperience Platformアプリで構成されています [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja) および [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja). 以下に、ユースケースの実装時に使用する 2 つのアプリの様々な機能と UI 要素を示します。
+これを実現するために必要なテクノロジは、2 つのExperience Platformアプリ [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja) と [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja) で構成されています。 以下に、ユースケースの実装時に使用する 2 つのアプリの様々な機能と UI 要素を示します。
 
 >[!TIP]
 >
@@ -46,15 +46,15 @@ ht-degree: 2%
    * [オーディエンス](/help/segmentation/home.md)
    * [宛先](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)：ジャーニーを設計し、トリガーを設定して、訪問者に対処する適切なメッセージを作成します。
-   * [イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [オーディエンスとイベント](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=ja)
+   * [ イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [ オーディエンスとイベント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=ja)
    * [ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Real-Time CDPとJourney Optimizerのアーキテクチャ
 
 以下は、Real-Time CDPとJourney Optimizerの様々なコンポーネントのアーキテクチャの概要です。 次の図は、このページで説明するユースケースを達成するために、データ収集からジャーニーやキャンペーンを通じてアクティブ化された宛先に至るまでの、2 つのExperience Platformアプリを介したデータのフローを示しています。
 
-![アーキテクチャの大まかなビジュアルの概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
+![ アーキテクチャの全体的なビジュアルの概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
 ## ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 
@@ -66,17 +66,17 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->このページで後述するように、を使用します。 [スキーマ内の専用の同意フィールドグループ](#customer-attributes-schema) および基準 [同意ポリシーの実装](#privacy-consent)を使用すると、すべてのアクションとワークフローが、プライバシーと同意を優先する方法で実装されます。
+>このページで後述するように、スキーマに [ 専用の同意フィールドグループ ](#customer-attributes-schema) を含め、[ 同意ポリシーの実装 ](#privacy-consent) により、すべてのアクションとワークフローがプライバシーと同意ファーストの方法で実装されます。
 
 >[!BEGINSHADEBOX]
 
-![ステップバイステップ ワンタイム値をライフタイム値に進化する高レベルの視覚的な概要。](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
+![ ステップバイステップの 1 回限りの値をライフタイム値に進化させる高レベルの視覚的な概要 ](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
-1. スキーマとデータセットを作成し、次の目的でマークします [!UICONTROL Profile].
+1. スキーマとデータセットを作成し、これらを [!UICONTROL  プロファイル ] 用にマークします。
 2. データは、Web SDK、Mobile Edge SDK または API を介して収集され、Experience Platformに統合されます。 Analytics Data Connector も利用できますが、ジャーニー遅延が発生する可能性があります。
 3. プロファイルをReal-Time CDPに読み込み、責任ある使用を確保するためにガバナンスポリシーを構築します。
 4. プロファイルのリストから焦点を当てたオーディエンスを作成し、価値の高い顧客と頻度の低い顧客を確認します。
-5. で 2 つのジャーニーを作成します。 [!DNL Adobe Journey Optimizer]1 つは新しいサブスクリプションプログラムについてユーザーにメッセージを送信するためのもので、もう 1 つは後で購入を確認するようメッセージを送信するためのものです。
+5. [!DNL Adobe Journey Optimizer] で 2 つのジャーニーを作成します。1 つは新しい購読プログラムについてユーザーにメッセージを送信するため、もう 1 つは後で購入を確認するようメッセージを送信するためです。
 6. 必要に応じて、サブスクリプションを購入していない顧客のオーディエンスを、目的の有料メディアの宛先に対してアクティブ化します。
 
 >[!ENDSHADEBOX]
@@ -91,57 +91,57 @@ ht-degree: 2%
 
 ### スキーマデザインの作成とフィールドグループの指定 {#schema-design}
 
-エクスペリエンスデータモデル（XDM）リソースは、 [!UICONTROL スキーマ] ワークスペース： [!DNL Adobe Experience Platform]. が提供するコアリソースを表示および調査できます。 [!DNL Adobe] （例： [!UICONTROL フィールドグループ]）を選択して、組織のカスタムリソースおよびスキーマを作成します。
+エクスペリエンスデータモデル（XDM）リソースは、[!DNL Adobe Experience Platform] の [!UICONTROL  スキーマ ] ワークスペースで管理されます。 [!DNL Adobe] が提供するコアリソース（例：[!UICONTROL  フィールドグループ ]）を表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
 
-の作成について詳しくは、 [スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)、を読み取ります [スキーマの作成チュートリアル。](/help/xdm/tutorials/create-schema-ui.md)
+[ スキーマ ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) の作成について詳しくは、[ スキーマの作成チュートリアル ](/help/xdm/tutorials/create-schema-ui.md) を参照してください。
 
 このサンプル実装では、1 回限りの値をライフタイム値に進化させるユースケースに使用できるスキーマデザインがいくつかあります。 各スキーマには、設定が必要な特定の必須フィールドと、提案される一部のフィールドが含まれています。
 
 Adobeでは、サンプル実装に基づいて、このユースケースを達成するために次の 3 つのスキーマを作成することをお勧めします。
 
-* [顧客属性スキーマ](#customer-attributes-schema) （プロファイルスキーマ）
-* [顧客デジタルトランザクションスキーマ](#customer-digital-transactions-schema) （エクスペリエンスイベントスキーマ）
-* [顧客のオフライントランザクションスキーマ](#customer-offline-transactions-schema) （エクスペリエンスイベントスキーマ）
+* [ 顧客属性スキーマ ](#customer-attributes-schema) （プロファイルスキーマ）
+* [ 顧客デジタルトランザクションスキーマ ](#customer-digital-transactions-schema) （エクスペリエンスイベントスキーマ）
+* [ 顧客オフライントランザクションスキーマ ](#customer-offline-transactions-schema) （エクスペリエンスイベントスキーマ）
 
 #### 顧客属性スキーマ {#customer-attributes-schema}
 
-このスキーマを使用して、顧客情報を構成するプロファイルデータを構造化および参照します。 このデータは通常、に取り込まれます。 [!DNL Adobe Experience Platform] crm または同様のシステムを通じて、パーソナライゼーション、マーケティングの同意、強化されたセグメント化機能に使用される顧客の詳細を参照するために必要です。
+このスキーマを使用して、顧客情報を構成するプロファイルデータを構造化および参照します。 このデータは、通常、CRM または同様のシステムを介して [!DNL Adobe Experience Platform] に取り込まれ、パーソナライゼーション、マーケティングの同意、強化されたセグメント化機能に使用される顧客の詳細を参照するために必要です。
 
-![フィールドグループがハイライト表示された顧客属性スキーマ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
+![ フィールドグループがハイライト表示された顧客属性スキーマ ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
 
-顧客属性スキーマは、 [!UICONTROL XDM 個人プロファイル] 以下のフィールドグループを含むクラス。
+顧客属性スキーマは、次のフィールドグループを含む [!UICONTROL XDM 個人プロファイル ] クラスで表されます。
 
 +++人口統計の詳細（フィールドグループ）
 
-[人口統計の詳細](/help/xdm/field-groups/profile/demographic-details.md) は、XDM 個人プロファイルクラスの標準スキーマフィールドグループです。 フィールドグループは、ルートレベルの person オブジェクトを提供し、そのサブフィールドは個々のユーザーに関する情報を記述します。
+[ デモグラフィックの詳細 ](/help/xdm/field-groups/profile/demographic-details.md) は、XDM 個人プロファイル クラスの標準スキーマフィールドグループです。 フィールドグループは、ルートレベルの person オブジェクトを提供し、そのサブフィールドは個々のユーザーに関する情報を記述します。
 
 +++
 
 +++個人の連絡先の詳細（フィールドグループ）
 
-[個人の連絡先の詳細](/help/xdm/field-groups/profile/personal-contact-details.md) は、XDM 個人プロファイル クラスの標準スキーマフィールドグループで、個々のユーザーの連絡先情報を記述します。
+[ 個人の連絡先の詳細 ](/help/xdm/field-groups/profile/personal-contact-details.md) は、XDM 個人プロファイル クラスの標準スキーマフィールドグループで、個人の連絡先情報を説明します。
 
 +++
 
-+++外部ソースシステム監査詳細（フィールドグループ）
++++外部Source システム監査の詳細（フィールドグループ）
 
-[外部ソースシステム監査属性](/help/xdm/data-types/external-source-system-audit-attributes.md) は、外部ソースシステムに関する監査詳細をキャプチャする標準のエクスペリエンスデータモデル（XDM）データタイプです。
+[ 外部Source システム監査属性 ](/help/xdm/data-types/external-source-system-audit-attributes.md) は、外部ソースシステムに関する監査詳細を取得する標準の Experience Data Model （XDM）データタイプです。
 
 +++
 
 +++同意および環境設定フィールドグループ（フィールドグループ）
 
-[同意および環境設定](/help/xdm/field-groups/profile/consents.md) フィールドグループは、同意と環境設定に関する情報を取り込むために、単一のオブジェクトタイプのフィールド「同意」を提供します。
+[ 同意および環境設定 ](/help/xdm/field-groups/profile/consents.md) フィールドグループには、同意と環境設定の情報を取り込むために、単一のオブジェクトタイプのフィールドである同意が用意されています。
 
 +++
 
 #### 顧客デジタルトランザクションスキーマ {#customer-digital-transactions-schema}
 
-このスキーマは、Web サイトまたは他の関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは通常、に取り込まれます。 [!DNL Adobe Experience Platform] 経由 [Web SDK](/help/web-sdk/home.md) は、ジャーニーのトリガーに使用される様々な参照およびコンバージョンイベント、詳細なオンライン顧客分析、強化されたセグメント化機能を参照する際に必要です。
+このスキーマは、Web サイトまたは他の関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常 [Web SDK](/help/web-sdk/home.md) を介して [!DNL Adobe Experience Platform] に取り込まれ、ジャーニーのトリガーに使用される様々な参照およびコンバージョンイベント、詳細なオンライン顧客分析、強化されたセグメント化機能を参照するために必要です。
 
-![フィールドグループがハイライト表示された顧客デジタルトランザクションスキーマ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
+![ フィールドグループがハイライト表示された顧客デジタルトランザクションスキーマ ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
-顧客デジタルトランザクションスキーマは、 [!UICONTROL XDM ExperienceEvent] 以下のフィールドグループを含むクラス。
+顧客のデジタルトランザクションスキーマは、次のフィールドグループを含む [!UICONTROL XDM ExperienceEvent] クラスで表されます。
 
 +++Adobe Experience Platform Web SDK ExperienceEvent （フィールドグループ）
 
@@ -154,7 +154,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 +++Web 詳細（フィールドグループ）
 
-[Web の詳細](/help/xdm/field-groups/event/web-details.md) は、XDM ExperienceEvent クラスの標準スキーマフィールドグループで、インタラクション、ページの詳細、リファラーなどの、web の詳細イベントに関する情報を記述するために使用されます。
+[Web の詳細 ](/help/xdm/field-groups/event/web-details.md) は、XDM ExperienceEvent クラスの標準スキーマフィールドグループで、インタラクション、ページの詳細、リファラーなどの web の詳細イベントに関する情報を記述するために使用されます。
 
 +++
 
@@ -198,39 +198,39 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 +++エンドユーザー ID 詳細（フィールドグループ）
 
-この [エンドユーザー ID 詳細](/help/xdm/field-groups/event/enduserids.md) フィールドグループには、訪問時にサイトで認証されているかどうか、ユーザーの id に関する情報など、ユーザーに関する様々な情報が含まれています。
+[ エンドユーザー ID 詳細 ](/help/xdm/field-groups/event/enduserids.md) フィールドグループには、訪問時にサイトで認証されているかどうか、ユーザーの ID に関する情報など、ユーザーに関する様々な情報が含まれています。
 
 +++
 
-+++外部ソースシステム監査詳細（フィールドグループ）
++++外部Source システム監査の詳細（フィールドグループ）
 
-外部ソースシステム監査属性は、外部ソースシステムに関する監査詳細を取得する標準の Experience Data Model （XDM）データタイプです。
+外部Source システム監査属性は、外部ソースシステムに関する監査詳細を取得する標準の Experience Data Model （XDM）データタイプです。
 
 +++
 
 #### 顧客のオフライントランザクションスキーマ {#customer-offline-transactions-schema}
 
-このスキーマは、web サイト外のプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは通常、に取り込まれます。 [!DNL Adobe Experience Platform] POS （または同様のシステム）から、ほとんどの場合、API 接続を介して Platform にストリーミングされます。 詳細を読む [バッチ取り込み](/help/ingestion/batch-ingestion/getting-started.md). その目的は、ジャーニーのトリガー、オンラインとオフラインの詳細な顧客分析、強化されたセグメント化機能に使用される様々なオフラインコンバージョンイベントを参照することです。
+このスキーマは、web サイト外のプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常、POS （または類似のシステム）から [!DNL Adobe Experience Platform] に取り込まれ、ほとんどの場合、API 接続を介して Platform にストリーミングされます。 [ バッチ取り込み ](/help/ingestion/batch-ingestion/getting-started.md) を参照してください。 その目的は、ジャーニーのトリガー、オンラインとオフラインの詳細な顧客分析、強化されたセグメント化機能に使用される様々なオフラインコンバージョンイベントを参照することです。
 
-![フィールドグループがハイライト表示された顧客のオフライントランザクションスキーマ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
+![ フィールドグループがハイライト表示された顧客のオフライントランザクションスキーマ ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
-顧客のオフライントランザクションスキーマは、 [!UICONTROL XDM ExperienceEvent] 以下のフィールドグループを含むクラス。
+顧客のオフライントランザクションスキーマは、次のフィールドグループを含む [!UICONTROL XDM ExperienceEvent] クラスによって表されます。
 
 +++Commerceの詳細（フィールドグループ）
 
-[Commerceの詳細](/help/xdm/field-groups/event/commerce-details.md) は、の標準スキーマフィールドグループです。 [!DNL XDM ExperienceEvent] 商品情報（SKU、名前、数量）や標準の買い物かご操作（注文、チェックアウト、放棄）などのコマースデータを記述するために使用されるクラス。
+[Commerceの詳細 ](/help/xdm/field-groups/event/commerce-details.md) は、商品 [!DNL XDM ExperienceEvent] 報（SKU、名前、数量）や標準の買い物かご操作（注文、チェックアウト、放棄）などのコマースデータを表すために使用される、商品クラスの標準スキーマフィールドグループです。
 
 +++
 
 +++個人の連絡先の詳細（フィールドグループ）
 
-[[!UICONTROL 個人の連絡先の詳細]](/help/xdm/field-groups/profile/personal-contact-details.md) は、の標準スキーマフィールドグループです。 [!DNL XDM Individual Profile] クラス。個人の連絡先情報を記述します。
+[[!UICONTROL  個人の連絡先の詳細 ]](/help/xdm/field-groups/profile/personal-contact-details.md) は、[!DNL XDM Individual Profile] クラスの標準スキーマフィールドグループで、個人の連絡先情報を説明します。
 
 +++
 
-+++外部ソースシステム監査詳細（フィールドグループ）
++++外部Source システム監査の詳細（フィールドグループ）
 
-外部ソースシステム監査属性は、外部ソースシステムに関する監査詳細を取得する標準の Experience Data Model （XDM）データタイプです。
+外部Source システム監査属性は、外部ソースシステムに関する監査詳細を取得する標準の Experience Data Model （XDM）データタイプです。
 
 +++
 
@@ -238,17 +238,17 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 >[!NOTE]
 >
->を使用する場合、これはオプションの実装です。 [!DNL Adobe Analytics Data Connector].
+>[!DNL Adobe Analytics Data Connector] を使用している場合、これはオプションの実装です。
 
-このスキーマは、Web サイトまたは他の関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このスキーマは、顧客デジタルトランザクションスキーマに似ていますが、Web SDK がデータ収集用のオプションでない場合に、このスキーマが可能であるという点が異なります。 そのため、を利用する際にこのスキーマを使用できます [!DNL Adobe Analytics Data Connector] オンラインデータをに送信する [!DNL Adobe Experience Platform] プライマリまたはセカンダリデータストリームとして。
+このスキーマは、Web サイトまたは他の関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このスキーマは、顧客デジタルトランザクションスキーマに似ていますが、Web SDK がデータ収集用のオプションでない場合に、このスキーマが可能であるという点が異なります。 そのため、[!DNL Adobe Analytics Data Connector] を利用してオンラインデータを [!DNL Adobe Experience Platform] にプライマリまたはセカンダリデータストリームとして送信する場合に、このスキーマを使用できます。
 
-![フィールドグループがハイライト表示されたAdobe web コネクタスキーマ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
+![ フィールドグループがハイライト表示されたAdobe web コネクタスキーマ ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
-この [!DNL Adobe] web コネクタスキーマはで表されます [!UICONTROL XDM ExperienceEvent] 以下のフィールドグループを含むクラス。
+[!DNL Adobe] web コネクタスキーマは、次のフィールドグループを含む [!UICONTROL XDM ExperienceEvent] クラスで表されます。
 
 +++Adobe Analytics ExperienceEvent テンプレート（フィールドグループ）
 
-[[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能]](/help/xdm/field-groups/event/analytics-full-extension.md) は、Adobe Analyticsが収集する共通のメトリクスをキャプチャする、標準スキーマフィールドグループです。
+[[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張 ]](/help/xdm/field-groups/event/analytics-full-extension.md) は、Adobe Analyticsが収集する共通のメトリクスをキャプチャする標準スキーマフィールドグループです。
 
 +++
 
@@ -256,11 +256,11 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 データセットは、データグループのストレージと管理の構造です。 このサンプル実装の実行に使用される各スキーマには、1 つのデータセットがあります。
 
-を作成する方法について詳しくは、 [データセット](/help/catalog/datasets/overview.md) スキーマから、を読み取ります。 [データセット UI ガイド](/help/catalog/datasets/user-guide.md).
+スキーマから [ データセット ](/help/catalog/datasets/overview.md) を作成する方法について詳しくは、[ データセット UI ガイド ](/help/catalog/datasets/user-guide.md) を参照してください。
 
 >[!NOTE]
 >
->スキーマを作成する手順と同様に、データセットをリアルタイム顧客プロファイルに含めることができるようにする必要があります。 リアルタイム顧客プロファイルで使用するデータセットを有効にする方法について詳しくは、 [スキーマの作成チュートリアル。](/help/xdm/tutorials/create-schema-ui.md#profile).
+>スキーマを作成する手順と同様に、データセットをリアルタイム顧客プロファイルに含めることができるようにする必要があります。 リアルタイム顧客プロファイルで使用するデータセットを有効にする方法について詳しくは、[ スキーマの作成チュートリアル ](/help/xdm/tutorials/create-schema-ui.md#profile) を参照してください。
 
 ### プライバシー、同意、データガバナンス {#privacy-consent}
 
@@ -268,28 +268,28 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 >[!IMPORTANT]
 >
->ブランドからの連絡を登録解除する機能を顧客に提供し、この選択を確実に行うことは、法的要件です。 適用される法律の詳細については、を参照してください [プライバシー規制の概要](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>ブランドからの連絡を登録解除する機能を顧客に提供し、この選択を確実に行うことは、法的要件です。 適用される法律について詳しくは、[ プライバシー規制の概要 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html) を参照してください。
 
-次の実装を検討してください [同意ポリシー](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) さらに、訪問者に連絡する前に同意を求めます。
+次の [ 同意ポリシー ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) を実装し、訪問者に連絡する前に同意を求めることを検討してください。
 
-* 次の場合 `consents.marketing.email.val = "Y"` その後、電子メールで送信できます
-* 次の場合 `consents.marketing.sms.val = "Y"` その後、SMS を送信できる
-* 次の場合 `consents.marketing.push.val = "Y"` その後、プッシュできます
-* 次の場合 `consents.share.val = "Y"` 次に、広告可能
+* 電子メール `consents.marketing.email.val = "Y"` 送信できる場合
+* その `consents.marketing.sms.val = "Y"`、SMS は可能です
+* プッシュでき `consents.marketing.push.val = "Y"` 場合
+* `consents.share.val = "Y"` の場合は、次のように広告できます
 
 #### データガバナンスのラベルと適用
 
-次の項目を追加し、適用することを検討してください [データガバナンスラベル](/help/data-governance/labels/overview.md):
+次の [ データガバナンスラベル ](/help/data-governance/labels/overview.md) の追加と適用を検討します。
 
 * 個人のメールアドレスは、デバイスではなく特定の個人を識別したり、その個人と連絡を取ったりするために使用される、直接識別可能なデータとして利用されます。
    * `personalEmail.address = I1`
 
 #### マーケティングポリシー
 
-がありません [マーケティングポリシー](/help/data-governance/policies/overview.md) このユースケースの一部として作成するジャーニーで必要です。 ただし、必要に応じて次のポリシーを考慮できます。
+このユースケースの一部として作成するジャーニーには、[ マーケティングポリシー ](/help/data-governance/policies/overview.md) は必要ありません。 ただし、必要に応じて次のポリシーを考慮できます。
 
 * 機密データの制限
-* オンサイト広告の制限
+* オンサイトAdvertisingの制限
 * 電子メールターゲティングの制限
 * クロスサイトターゲティングを制限
 * 直接識別可能なデータと匿名データの組み合わせを制限
@@ -298,40 +298,40 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 このユースケースでは、2 つのオーディエンスを作成して、プロファイルストアのプロファイルのサブセットで共有される特定の属性や行動を定義し、マーケティング可能なユーザーグループを区別する必要があります。 オーディエンスは、Adobe Experience Platformで複数の方法で作成できます。
 
-* オーディエンスの作成方法について詳しくは、 [Audience Service UI ガイド](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
-* 作成方法については [オーディエンス](/help/segmentation/home.md)、を読み取ります [オーディエンス構成 UI ガイド](/help/segmentation/ui/audience-composition.md).
-* Platform 派生セグメント定義を使用してオーディエンスを作成する方法について詳しくは、以下を参照してください [Audience Builder UI ガイド](/help/segmentation/ui/segment-builder.md).
+* オーディエンスの作成方法について詳しくは、[ オーディエンスサービス UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience) を参照してください。
+* [ オーディエンス ](/help/segmentation/home.md) の作成方法について詳しくは、[ オーディエンス構成 UI ガイド ](/help/segmentation/ui/audience-composition.md) を参照してください。
+* Platform 派生セグメント定義を使用してオーディエンスを作成する方法について詳しくは、[Audience Builder UI ガイド ](/help/segmentation/ui/segment-builder.md) を参照してください。
 
 特に、次の画像に示すように、ユースケースの異なる手順で 2 つのオーディエンスを作成し使用する必要があります。
 
-![ハイライト表示されたオーディエンス](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
+![ ハイライト表示されたオーディエンス ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
->[!TAB Adobe Journey Optimizerの対象読者]
+>[!TAB Adobe Journey Optimizerの選定対象オーディエンス ]
 
 この高価値かつ低頻度のオーディエンスには、新しい購読プログラムについて知らせるために、ジャーニーを通じて連絡するプロファイルが含まれています。 オーディエンスの詳細は次のとおりです。
 
 * 説明：過去 3 か月間に合計 250 ドルを超える費用を費やしたプロファイル
 * オーディエンスで必要なフィールドと条件：
-   * イベント： `commerce.order.payments.paymentamount`
+   * イベント：`commerce.order.payments.paymentamount`
 *集計合計：>= $250
-   * EventType: `commerce.purchases`
+   * イベントの種類：`commerce.purchases`
 * タイムスタンプ：今から 3 か月前
 
 
->[!TAB 有料メディアオーディエンス]
+>[!TAB  有料メディアオーディエンス ]
 
 このオーディエンスは、過去 3 か月間に合計 250 ドルを超える費用を費やし、過去 7 日間に購入を行っていないプロファイルを含めるように作成されます。 オーディエンスの詳細は次のとおりです。
 
 * 説明：過去 3 か月間に合計 250 ドル以上を費やし、過去 7 日間に購入していないプロファイル。
 * 必要なフィールドと条件：
-   * EventType: `journey.feedback`
+   * イベントの種類：`journey.feedback`
       * オペランド：= true
    * イベント：`experience.journeyOrchestration.stepEvents.nodeName`
       * オペランド : = JourneyStepEventTracker – 購読は購入されていません
       * タイムスタンプ：過去 7 日間
-   * EventType が次の値ではありません： `commerce.purchases`
+   * EventType が `commerce.purchases` ではありません
       * タイムスタンプ：今から 7 日前
    * イベント：SKU
       * 値：= `subscription`
@@ -342,7 +342,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] 図に示されているすべての内容が含まれるわけではありません。 すべて [有料メディア広告](/help/destinations/catalog/social/overview.md) は、に作成されます。 [!UICONTROL 宛先] [workspace](/help/destinations/ui/destinations-workspace.md).
+>図に示されているすべてが [!DNL Adobe Journey Optimizer] に含まれるわけではありません。 すべての [ 有料メディア広告 ](/help/destinations/catalog/social/overview.md) は、[!UICONTROL  宛先 ] [ ワークスペース ](/help/destinations/ui/destinations-workspace.md) に作成されます。
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) は、顧客とのつながり、コンテキスト、パーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーは、顧客がブランドとやり取りするプロセス全体です。 各ユースケースのジャーニーには、特定の情報が必要です。
 
@@ -351,39 +351,39 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 * ライフタイムジャーニー：高価値で低頻度の顧客に送信するメッセージが含まれます
 * 電話に応答してサブスクリプションを購入するユーザーの注文確認ジャーニー。
 
-![ハイライト表示されたジャーニー](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
+![ ハイライト表示されたジャーニー](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 以下に、各ジャーニーブランチに必要な正確なデータを示します。
 
 >[!BEGINTABS]
 
->[!TAB 生涯ジャーニー]
+>[!TAB  ライフタイムジャーニー]
 
 ライフタイムジャーニーは、過去 30 日以内にターゲットとならなかった高価値および低頻度の顧客のオーディエンスに対応します。 これらの顧客にメッセージが表示され、7 日間経過してもまだ購入されない場合は、有料メディア広告を表示できるオーディエンスに未購入者を含めることができます。 購入した場合は、注文確認ジャーニー（詳細は別のタブで説明）で購入者を設定できます。
 
-![ライフタイムジャーニーの概要レベルのビジュアル概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "ライフタイムジャーニーに 1 回限りの値を提供する、視覚的な概要の説明。"){zoomable="yes"}
+![ ライフタイムジャーニーの大まかなビジュアル概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png " ライフタイムジャーニーに対する 1 回限りの価値の概要の視覚的な概要。"){zoomable="yes"}
 
 +++詳細なジャーニーロジック
 
 上記のジャーニーは、次のロジックに従います。
 
-1. オーディエンスを読み取り：を使用 [オーディエンスを読み取りアクティビティ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) 上記のオーディエンスの節で作成した最初のオーディエンスの場合。
+1. オーディエンスを読み取り：上記のオーディエンスの節で作成した最初のオーディエンスに対して、[ オーディエンスを読み取りアクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) を使用します。
 
-2. 条件 – 優先チャネル：を使用します [条件アクティビティ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) メール、SMS、プッシュ通知などを介して顧客に連絡する方法を決定します。 3 つのアクションアクティビティを使用して、3 つのブランチを作成します。
+2. 条件 – 優先チャネル：[ 条件アクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) を使用して、メール、SMS、プッシュ通知のどれを介して顧客に連絡するかを決定します。 3 つのアクションアクティビティを使用して、3 つのブランチを作成します。
 
-3. 待機：を使用 [待機アクティビティ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) 購入をリッスンするまで待ちます。
+3. 待機：購入をリッスンするまで待機するには、[ 待機アクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) を使用します。
 
 4. 条件 – 過去 7 日間に購入したサブスクリプション :「条件」アクティビティを使用して、過去 7 日間に製品が購入されたかどうかをリッスンします。
 
-5. JourneyStepEventTracker - サブスクリプションが購入されていません：を使用します [カスタムアクション](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) メッセージを受信したにもかかわらず、まだサブスクリプションを購入していない訪問者の場合。 ジャーニーの最後のカスタム条件の一部として、を作成します `journey.feedback` イベントを有効化し、に基づいてデータセットに追加します [!UICONTROL ジャーニーステップイベント] スキーマ。 このイベントを使用して、サブスクリプションを購入していないオーディエンスをセグメント化し、有料メディア広告を介してターゲットにすることができます。
+5. JourneyStepEventTracker - サブスクリプションが購入されていません：メッセージを受信したにもかかわらずサブスクリプションをまだ購入していない訪問者には [ カスタムアクション ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) を使用します。 ジャーニーの最後のカスタム条件の一部として、`journey.feedback` イベントを作成し、[!UICONTROL ジャーニーステップイベント ] スキーマに基づいてデータセットに追加します。 このイベントを使用して、サブスクリプションを購入していないオーディエンスをセグメント化し、有料メディア広告を介してターゲットにすることができます。
 
 +++
 
->[!TAB 注文確認ジャーニー]
+>[!TAB  注文確認ジャーニー]
 
 注文確認ジャーニーでは、購入が web サイトまたはモバイルアプリを通じて行われたかどうかに焦点を当てています。 顧客が会社のサブスクリプションなどの購入を正常に完了したら、注文確認ジャーニーにそれらを設定できます。
 
-![顧客注文確認ジャーニーの大まかなビジュアル概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "顧客注文確認ジャーニーの大まかなビジュアル概要。"){zoomable="yes"}
+![ 顧客注文確認ジャーニーの大まかなビジュアル概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png " 顧客注文確認ジャーニーの大まかなビジュアルの概要 "){zoomable="yes"}
 
 +++ジャーニーロジック
 
@@ -429,22 +429,22 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
       * プッシュ
       * SMS
 
-   * チャネルコンテンツのパーソナライゼーション
+   * チャネルコンテンツPersonalization
       * 注文の詳細情報を表示し、テーブル形式を使用して商品のリストを表示できます。
 
 +++
 
 >[!ENDTABS]
 
-でのジャーニーの作成について詳しくは、こちらを参照してください [!DNL Adobe Journey Optimizer]、を読み取ります [ジャーニーの概要](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ガイド。
+[!DNL Adobe Journey Optimizer] でジャーニーを作成する方法について詳しくは、[ ジャーニーの概要 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ガイドを参照してください。
 
 ### 有料メディア広告を表示する宛先の設定 {#paid-media-ads}
 
 一部のユーザーは、新しいプログラムについてメッセージを送信した後も、サブスクリプションを購入していない可能性があります。 日数を待った後（このユースケースでは 7 日）、それらのユーザーに有料のメディア広告を表示して、サブスクリプションの購入を促すことができます。
 
-有料メディア広告には、Real-Time CDPの宛先フレームワークを使用します。 多数ある広告宛先の 1 つを選択して、顧客に有料メディア広告を表示し、顧客の有料メディアオーディエンスをアクティブ化します [作成日時](#create-audiences) を任意の宛先に設定します。 利用可能なの概要を確認する [広告](/help/destinations/catalog/advertising/overview.md) および [ソーシャル](/help/destinations/catalog/social/overview.md) 宛先。
+有料メディア広告には、Real-Time CDPの宛先フレームワークを使用します。 利用可能な多数の広告宛先の 1 つを選択して、顧客に有料メディア広告を表示し、選択した宛先に対して [ 以前に作成した ](#create-audiences) 有料メディアオーディエンスをアクティブ化します。 使用可能な [ 広告 ](/help/destinations/catalog/advertising/overview.md) 宛先と [ ソーシャル ](/help/destinations/catalog/social/overview.md) 宛先の概要を参照してください。
 
-宛先へのデータをアクティブ化する方法を説明します（例：） [Trade Desk](/help/destinations/catalog/advertising/tradedesk.md) または [Google カスタマーマッチ](/help/destinations/catalog/advertising/google-customer-match.md)）を参照する場合は、以下のドキュメントを参照してください。
+宛先へのデータをアクティブ化する方法（例：[The Trade Desk](/help/destinations/catalog/advertising/tradedesk.md) または [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md)）については、以下のドキュメントを参照してください。
 
 * [新しい宛先接続の作成](/help/destinations/ui/connect-destination.md)
 * [ストリーミングオーディエンスの書き出し先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-segment-streaming-destinations.md)
@@ -453,4 +453,4 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 ジャーニーで低頻度ユーザーと高価値ユーザーを設定し、そのサブセットに有料メディア広告を表示することで、一部のユーザーを 1 回限りの価値から生涯価値の顧客に変え、ブランドロイヤルティと顧客エンゲージメントの指標を改善できればと考えています。
 
-次に、Real-Time CDPでサポートされている他のユースケース（例えば、以下のもの）を確認できます [インテリジェントに顧客をリエンゲージ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) または [認証されていないユーザーに対するパーソナライズされたコンテンツの表示](/help/rtcdp/partner-data/onsite-personalization.md) web プロパティで。
+次に、Real-Time CDPでサポートされている他の使用例、例えば [ インテリジェントに顧客をリエンゲージする ](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) または [ 認証されていないユーザーにパーソナライズされたコンテンツを表示する ](/help/rtcdp/partner-data/onsite-personalization.md) を web プロパティで調べることができます。

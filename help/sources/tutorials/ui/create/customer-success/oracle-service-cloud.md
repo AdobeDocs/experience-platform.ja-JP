@@ -5,7 +5,7 @@ description: Adobe Experience Platform の UI を使用して Oracle サービ�
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
 source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '468'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 既に有効な Oracle Service Cloud 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/customer-success.md)に関するチュートリアルに進むことができます。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Platform] で Oracle Service Cloud アカウントにアクセスするには、次の値を指定する必要があります。
 

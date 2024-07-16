@@ -16,7 +16,7 @@ ht-degree: 84%
 
 ハイブリッドパーソナライゼーションでは、[Edge Network Server API](../../server-api/overview.md) を使用してパーソナライゼーションコンテンツをサーバーサイドで取得し、[Web SDK](../home.md) を使用してクライアント側でレンダリングするプロセスについて説明します。
 
-ハイブリッドパーソナライゼーションを、Adobe Target、Adobe Journey Optimizer、Offer decisioningなどのパーソナライゼーションソリューションと共に使用できます。違いは、 [!UICONTROL サーバー API] ペイロード。
+ハイブリッドパーソナライゼーションを、Adobe Target、Adobe Journey Optimizer、Offer Decisioningなどのパーソナライゼーションソリューションと共に使用できますが、違いは、[!UICONTROL Server API] ペイロードの内容です。
 
 ## 前提条件 {#prerequisites}
 
@@ -25,7 +25,7 @@ Web プロパティにハイブリッドパーソナライゼーションを実�
 * 使用するパーソナライゼーションソリューションを決定しました。 これは、[!UICONTROL Server API] ペイロードの内容に影響を与えます。
 * アプリケーションサーバーにアクセスし、そのサーバーを使用して [!UICONTROL Server API] 呼び出しを行います。
 * [Edge Network Server API](../../server-api/authentication.md) にアクセスできます。
-* 正しい [設定済み](/help/web-sdk/commands/configure/overview.md) パーソナライズするページに Web SDK をデプロイしました。
+* パーソナライズするページに Web SDK を正しく [ 設定 ](/help/web-sdk/commands/configure/overview.md) およびデプロイしている。
 
 ## フロー図 {#flow-diagram}
 
@@ -39,9 +39,9 @@ Web プロパティにハイブリッドパーソナライゼーションを実�
 1. Server API は、パーソナライゼーションコンテンツをアプリケーションサーバーに返します。
 1. アプリケーションサーバーは、[ID とクラスターの Cookie](#cookies) を含んだ HTML 応答をクライアントブラウザーに返します。
 1. クライアントページでは、[!DNL Web SDK] `applyResponse` コマンドが呼び出され、前のステップの [!UICONTROL Server API] 応答のヘッダーと本文が渡されます。
-1. The [!DNL Web SDK] renders Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) オファーとJourney Optimizer Web チャネルの項目は、 `renderDecisions` フラグが `true`.
-1. Target フォームベース [!DNL HTML]/[!DNL JSON] オファーとJourney Optimizerのコードベースのエクスペリエンスは、 `applyProposition` メソッドを使用して、 [!DNL DOM] 提案内のパーソナライゼーションコンテンツに基づいて
-1. Target フォームベースの場合 [!DNL HTML]/[!DNL JSON] オファーおよびJourney Optimizerのコードベースのエクスペリエンスでは、表示イベントを手動で送信して、返されたコンテンツがいつ表示されたかを示す必要があります。 これは、`sendEvent` コマンドを使用して行われます。
+1. `renderDecisions` フラグが `true` に設定されているので、[!DNL Web SDK] は Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) オファーおよびJourney Optimizer web チャネル項目を自動的にレンダリングします。
+1. Target フォームベースの [!DNL HTML]/[!DNL JSON] オファーとJourney Optimizer コードベースのエクスペリエンスは、`applyProposition` メソッドを使用して手動で適用され、提案のパーソナライゼーションコンテンツに基づいて [!DNL DOM] を更新します。
+1. Target フォームベースの [!DNL HTML]/[!DNL JSON] オファーおよびJourney Optimizer コードベースのエクスペリエンスの場合、返されたコンテンツがいつ表示されたかを示すために、表示イベントを手動で送信する必要があります。 これは、`sendEvent` コマンドを使用して行われます。
 
 ## Cookie {#cookies}
 

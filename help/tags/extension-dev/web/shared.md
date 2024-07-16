@@ -4,7 +4,7 @@ description: Adobe Experience Platform で Web 拡張機能の共有ライブラ
 exl-id: ec013a39-966c-43f3-bc36-31198990a17e
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '263'
 ht-degree: 100%
 
 ---

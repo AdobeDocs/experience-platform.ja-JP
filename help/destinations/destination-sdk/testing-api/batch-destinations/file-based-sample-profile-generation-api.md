@@ -3,8 +3,8 @@ description: このページでは、Destination SDK から /sample-profiles API
 title: ソーススキーマに基づくサンプルプロファイルの生成
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
-workflow-type: ht
-source-wordcount: '651'
+workflow-type: tm+mt
+source-wordcount: '652'
 ht-degree: 100%
 
 ---

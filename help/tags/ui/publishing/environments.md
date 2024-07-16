@@ -4,7 +4,7 @@ description: タグ環境の概念と Adobe Experience Platform 内でタグ環�
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1462'
 ht-degree: 98%
 
 ---
@@ -91,7 +91,7 @@ Web プロパティを使用する場合は、ドキュメントの `<head>` タ
 
 ![](./images/environments/select-host.png)
 
-ビルドが作成されると、そのビルドは割り当てられたホストに指定した場所に配信されます。タグホストの作成および設定方法について詳しくは、 [ホストの概要](./hosts/hosts-overview.md).
+ビルドが作成されると、そのビルドは割り当てられたホストに指定した場所に配信されます。タグホストの作成および設定方法について詳しくは、[ ホストの概要 ](./hosts/hosts-overview.md) を参照してください。
 
 ### アーカイブ設定 {#archive}
 

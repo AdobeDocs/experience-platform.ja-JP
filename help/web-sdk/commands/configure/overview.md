@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # Adobe Experience Platform Web SDK の設定
 
-Web SDK の設定は、次を使用して行います `configure` コマンド。 Web SDK の設定は必須の重要な手順であり、ライブラリまたはタグ拡張機能が使用されるたびに実行する必要があります。
+Web SDK の設定は、`configure` コマンドで行います。 Web SDK の設定は必須の重要な手順であり、ライブラリまたはタグ拡張機能が使用されるたびに実行する必要があります。
 
 ## タグ拡張機能を使用した Web SDK の設定 {#configure-tag-extension}
 
 タグ拡張機能を使用して Web SDK を設定するには、次の手順に従います。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL 拡張機能]**&#x200B;を選択し、 **[!UICONTROL 設定]** 日 [!UICONTROL Adobe Experience Platform Web SDK] カード。
-1. に移動します [Web SDK タグ拡張機能の設定ページ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) すべての設定オプションについて詳しくは、を参照してください。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. すべての設定オプションについて詳しくは、[Web SDK タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) ページを参照してください。
 
 これらの設定は、Adobeを使用して拡張機能にデータを送信する場合に常に指定されます。
 
 ## JavaScript ライブラリを使用した Web SDK の設定 {#configure-js}
 
-を実行 `configure` コマンド。 このコマンドは、次のような他の Web SDK コマンドを呼び出す前に必要です [`sendEvent`](../sendevent/overview.md).
+`configure` コマンドを実行します。 このコマンドは、[`sendEvent`](../sendevent/overview.md) などの他の Web SDK コマンドを呼び出す前に必要です。
 
-この [`edgeConfigId`](edgeconfigid.md) および [`orgId`](orgid.md) プロパティが必要です。 その他のプロパティはすべてオプションです。組織の実装要件に応じて指定します。
+[`edgeConfigId`](edgeconfigid.md) プロパティと [`orgId`](orgid.md) プロパティは必須です。 その他のプロパティはすべてオプションです。組織の実装要件に応じて指定します。
 
 サポートされている各コマンドの詳細については、このユーザーガイドの目次を参照してください。
 

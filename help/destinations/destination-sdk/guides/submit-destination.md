@@ -33,11 +33,11 @@ ht-degree: 36%
 * 宛先の送信理由の説明。 これは、既存の宛先設定を更新する場合にのみ必要です。
 * 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。宛先エンドポイントへの API 呼び出しと、宛先エンドポイントから受信した API 応答をAdobeにお知らせください。
 * ファイルベースの宛先に関するその他の要件：
-   * テスト API を使用して次の操作を行った後、リクエストと応答サンプルを共有する： [サンプルプロファイルを使用したファイルベースの宛先のテスト](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * テスト API を使用して [ サンプルプロファイルを使用してファイルベースの宛先をテストする ](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを共有します。
    * 宛先で生成され、ストレージの場所に書き出されたサンプルファイルを添付します。
    * 書き出したファイルをストレージの場所からシステムに正常に取り込んだことを証明するフォームを送信します。
 * [destination publishing API](../publishing-api/create-publishing-request.md) を使用して、宛先の公開リクエストを提出したことの証明。 
-* に記載された手順に従った、ドキュメント PR （プルリクエスト） [セルフサービスドキュメントプロセス](../docs-framework/documentation-instructions.md).
+* [ セルフサービスドキュメントプロセス ](../docs-framework/documentation-instructions.md) に記載されている手順に従った、ドキュメント PR （プルリクエスト）。
 * Experience Platform 宛先カタログに宛先カードのロゴとして表示される画像ファイル。
 
 各項目の詳細については、以下の節を参照してください。
@@ -47,7 +47,7 @@ ht-degree: 36%
 Experience Platform の顧客用に宛先が解決するユースケースを説明します。 説明は、既存のパートナーのユースケースと類似した内容でも構いません。
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md)：顧客リスト、サイトを訪問した人、またはPinterest上のコンテンツとインタラクションを既に経験した人からオーディエンスを作成します。
-* [Yahoo データ X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media （VMG）のメールアドレスをキーに特定のオーディエンスグループをターゲットにしたい広告主が、VMG のほぼリアルタイムの API を使用して新しいオーディエンスをすばやく作成し、目的のオーディエンスグループをプッシュする際には、DataX API を使用できます。
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases):Verizon Media （VMG）のメールアドレスをキーに特定のオーディエンスグループをターゲットにしたい広告主が、VMG のほぼリアルタイムの API を使用して新しいオーディエンスをすばやく作成し、目的のオーディエンスグループをプッシュする際には、DataX API を使用できます。
 
 ## 更新の理由 {#reason-for-update}
 
@@ -233,11 +233,11 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ### API 応答のテスト {#testing-api-response-file-based}
 
-テスト API を使用して次の操作を行った後、リクエストと応答サンプルを含めます [サンプルプロファイルを使用したファイルベースの宛先のテスト](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+テスト API を使用して [ サンプルプロファイルを使用してファイルベースの宛先をテストする ](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを含めます。
 
 ### 書き出したファイルを添付 {#attach-exported-file}
 
-あなたの [送信メール](#download-sample-email)で、設定した宛先によってお使いのストレージの場所に書き出された CSV ファイルを添付します。
+[ 送信メール ](#download-sample-email) に、設定した宛先によってお使いのストレージの場所に書き出された CSV ファイルを添付します。
 
 ### 取り込みが成功した証拠 {#proof-of-successful-ingestion}
 
@@ -251,11 +251,11 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 宛先を正常にテストした後、[Destination Publishing API](../publishing-api/create-publishing-request.md) を使用してアドビに送信し、レビューと公開を行う必要があります。
 
-宛先の公開リクエストの ID を指定します。 公開リクエスト ID の取得方法について詳しくは、次の方法を参照してください。 [宛先公開リクエストの取得](../publishing-api/retrieve-publishing-request.md).
+宛先の公開リクエストの ID を指定します。 公開リクエスト ID の取得方法について詳しくは、[ 宛先公開リクエストの取得 ](../publishing-api/retrieve-publishing-request.md) 方法を参照してください。
 
 ## 製品化された統合の宛先ドキュメント PR（プルリクエスト） {#documentation-pr}
 
-独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）の場合、 [製品化された統合](../overview.md#productized-custom-integrations)を使用する必要があります [セルフサービスドキュメントプロセス](../docs-framework/documentation-instructions.md) 宛先用に製品ドキュメントページを作成するには、次の手順に従います。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
+独立系ソフトウェアベンダー（ISV）またはシステムインテグレーター（SI）の場合、[ 製品化統合 ](../overview.md#productized-custom-integrations)、[ セルフサービスドキュメントプロセス ](../docs-framework/documentation-instructions.md) を使用して、宛先用に製品ドキュメントページを作成する必要があります。 送信プロセスの一環として、宛先ドキュメントのプルリクエスト（PR）を提供します。
 
 ## 宛先のロゴ {#logo}
 

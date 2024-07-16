@@ -6,7 +6,7 @@ description: Adobe Experience Platform のアクセス制御では、Adobe Admin
 exl-id: 6d83cbf5-c09f-4e2a-9678-b124981f8e83
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '193'
 ht-degree: 100%
 
 ---

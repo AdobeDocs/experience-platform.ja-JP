@@ -6,8 +6,8 @@ description: このドキュメントでは、Data Prep における様々なデ
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 98%
+source-wordcount: '602'
+ht-degree: 99%
 
 ---
 
@@ -108,4 +108,4 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 
 ## マップ {#maps}
 
-現在、ではマップはサポートされていません。 [!DNL Data Prep].
+マップは現在 [!DNL Data Prep] ではサポートされていません。

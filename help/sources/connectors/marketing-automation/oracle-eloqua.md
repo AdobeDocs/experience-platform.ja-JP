@@ -1,6 +1,6 @@
 ---
-title: OracleEloqua コネクタの概要
-description: API またはユーザーインターフェイスを使用してOracleEloqua をAdobe Experience Platformに接続する方法を説明します。
+title: Oracle Eloqua コネクタの概要
+description: API またはユーザーインターフェイスを使用してOracle Eloqua をAdobe Experience Platformに接続する方法を説明します。
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
 source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
@@ -23,11 +23,11 @@ Experience Platform は、サードパーティのマーケティング自動化
 
 ## API を使用して [!DNL Oracle Eloqua] と Platform を接続する
 
-* [フローサービス API を使用したOracleEloqua ベース接続の作成](../../tutorials/api/create/marketing-automation/oracle-eloqua.md)
+* [Flow Service API を使用したOracleEloqua ベース接続の作成](../../tutorials/api/create/marketing-automation/oracle-eloqua.md)
 * [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 * [Flow Service API を使用して、マーケティングの自動処理ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
 ## UI を使用した [!DNL Oracle Eloqua] の Platform への接続
 
-* [UI でのOracleEloqua ソース接続の作成](../../tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+* [UI でのOracle Eloqua ソースコネクタの作成](../../tutorials/ui/create/marketing-automation/oracle-eloqua.md)
 * [UI でのマーケティングの自動処理ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform、開発者ガイド、エンドポイント、Data Science Workspace、人気の高いトピック、実験、sensei 機械学習 api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のトピック；実験；sensei machine learning api
 solution: Experience Platform
-title: Experiment API エンドポイント
+title: 実験 API エンドポイント
 description: モデルの開発とトレーニングは、実験レベルで行われます。実験は、MLInstance、トレーニング実行、スコア付け実行で構成されます。
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
@@ -22,7 +22,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->UI のモデルトレーニングとは異なり、明示的な API 呼び出しを使用して実験を作成しても、トレーニング実行が自動的に作成および実行されることはありません。
+>UI のモデルトレーニングとは異なり、明示的な API 呼び出しを通じて実験を作成しても、トレーニング実行は自動的には作成および実行されません。
 
 **API 形式**
 
@@ -246,7 +246,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->複数のクエリパラメーターを組み合わせる場合は、アンパサンド (&amp;) で区切る必要があります。
+>複数のクエリパラメーターを組み合わせる場合は、アンパサンド（&amp;）で区切る必要があります。
 
 **API 形式**
 
@@ -307,7 +307,7 @@ curl -X GET \
 
 >[!TIP]
 >
->このPUTリクエストを確実に成功させるために、まず次に対してGETリクエストを実行することをお勧めします。 [ID による実験の取得](#retrieve-specific). 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
+>このPUTリクエストが正常に行われるようにするために、まずGETリクエストを行って [ID による実験の取得 ](#retrieve-specific) を行うことをお勧めします。 次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
 
 次のサンプル API 呼び出しは、初期状態で次のプロパティを持つと同時に、実験の名前を更新します。
 

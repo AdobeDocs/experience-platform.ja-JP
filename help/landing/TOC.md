@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
-user-guide-description: Experience Platformを利用して、ガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
+user-guide-description: Experience Platform でガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
 source-git-commit: a926560f3c5f765090046313ec7a7431b5ce69c6
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 78%
+ht-degree: 86%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 78%
 * Platform ドキュメント {#documentation}
    * [概要](documentation/overview.md)
    * [言語サポート](documentation/language-support.md)
-* Platform で構築されたアプリケーション {#ecosystem}
+* Platform {#ecosystem} 上に構築されたアプリケーション
    * [概要](application-services.md)
    * [Adobe Real-time Customer Data Platform（すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=ja)
    * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)
@@ -74,9 +74,9 @@ ht-degree: 78%
 * ライセンスの使用とガードレール {#license}
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
    * [ライセンス使用状況ダッシュボード](./license-usage-and-guardrails/license-usage-dashboard.md)
-   * [Adobe Journey Optimizer ガードレール](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
-   * [Customer Journey Analyticsガードレール](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
-   * [Real-Time CDP ガードレール](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
+   * [Adobe Journey Optimizerガードレール ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analyticsガードレール ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Real-Time CDPガードレール ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [Gen2 Data Lake の移行](adls2-gen2-migration.md)
 * [用語集](glossary.md)

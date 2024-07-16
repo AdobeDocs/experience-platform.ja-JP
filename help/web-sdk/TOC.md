@@ -24,7 +24,7 @@ ht-degree: 52%
    * [JavaScript ライブラリを使用して Web SDK をインストールします](install/library.md)
    * [NPM パッケージを使用して Web SDK をインストール](install/npm.md)
 * コマンド {#commands}
-   * 設定 {#configure}
+   * {#configure} の設定
       * [概要](commands/configure/overview.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)

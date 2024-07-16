@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；teradata;teradataの利点
-title: Teradataバントージソースコネクタの概要
+title: Teradataの Vantage Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してTeradata活用をAdobe Experience Platformに接続する方法について説明します。
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
 source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
@@ -14,7 +14,7 @@ ht-degree: 60%
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Platform は、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートは次のとおりです [!DNL Teradata Vantage].
+Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Platform は、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには、[!DNL Teradata Vantage] が含まれます。
 
 ## IP アドレス許可リスト
 

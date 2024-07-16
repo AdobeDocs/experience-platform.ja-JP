@@ -1,57 +1,57 @@
 ---
-title: ストリーミングメディア用 Adobe Analytics Assurance での表示
-description: このガイドでは、ストリーミングメディア用 Adobe AnalyticsをAdobe Experience Platform Assurance と共に使用する方法を説明します。
+title: Assurance のストリーミングメディア用 Adobe Analytics表示
+description: このガイドでは、Adobe Experience Platform Assurance とストリーミングメディア用 Adobe Analyticsの使用方法について説明します。
 exl-id: 9a9c2c64-e9ed-4d58-b936-d802f1c3b7d3
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
-# アシュランスのストリーミングメディア用 Adobe Analytics表示
+# Assurance のストリーミングメディア用 Adobe Analytics ビュー
 
-ストリーミングメディア用 Adobe AnalyticsとAdobe Experience Platform Assurance の統合により、モバイルアプリで Media Analytics の実装を検証できるようになりました。 Media Analytics ビューには、次のようなメディアセッションで追跡されたものが表示されます。
+ストリーミングメディア用 Adobe AnalyticsとAdobe Experience Platform Assurance の統合により、モバイルアプリで Media Analytics 実装を検証できるようになりました。 Media Analytics ビューには、メディアセッションで追跡された内容が次のように表示されます。
 
-- すべてのコンテンツコア、標準メタデータ、カスタムメタデータのプロパティと、セッション終了およびセッション完了イベントを含むセッション開始イベント。
-- すべての広告プロパティが添付された広告ブレーク開始イベントおよび広告開始イベント、および両方のスキップイベントと完了イベント。
-- チャプター開始には、すべてのプロパティが添付され、チャプタースキップイベントとチャプター完了イベントも追加されます。
+- すべてのコンテンツコア、標準メタデータ、カスタムメタデータプロパティおよびセッション終了イベントとセッション完了イベントを含むセッション開始イベント。
+- すべての広告プロパティが添付された広告ブレーク開始イベントと広告開始イベント、および両方のスキップイベントと完了イベント。
+- すべてのプロパティが添付されたチャプター開始イベント、およびチャプタースキップ イベントとチャプター完了イベント。
 - すべての再生変更イベント（再生、一時停止、バッファー、エラー、ビットレート変更）。
-- すべてのプレーヤーステート変更トラッキングイベント（開始、終了）。
+- すべてのプレーヤーステート変更トラッキングイベント （開始、終了）。
 
-Analytics でデータが処理されると、後処理済みのステータスとデータ（メディア視聴時間、合計一時停止時間など）もイベントの詳細表示で使用できます。
+Analytics でデータが処理されると、処理後のステータスとデータ（メディア視聴時間や合計一時停止時間など）をイベントの詳細ビューでも使用できるようになります。
 
 ## はじめに
 
-続行する前に、次のサービスを使用していることを確認してください。
+続行する前に、次のサービスを利用していることを確認してください。
 
-- この [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/)
-- [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
+- [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/)
+- [Adobe Experience Platform アシュランス ](https://experience.adobe.com/assurance)
 
-アプリケーションに Assurance をインストールする方法については、 [アシュランスの実装ガイド](../tutorials/implement-assurance.md).
+アプリケーションに Assurance をインストールする方法については、[Assurance 実装ガイド ](../tutorials/implement-assurance.md) を参照してください。
 
-## ストリーミングメディア用 Adobe Analyticsでアシュランスを使用
+## ストリーミングメディア用 Adobe Analyticsでの Assurance の使用
 
-接続してAdobe Analytics用にアプリを設定したら、ストリーミングメディア分析用にアプリを設定する準備が整いました。 左側のパネルの下部で、を選択します。 **[!UICONTROL 設定]** Media Analytics イベントビューを追加するには、以下を実行します。 **保存** それは。
+接続してアプリを Streaming Media 用に設定したら、Adobe Analytics用に設定する準備が整います。 左側のパネルの下部にある **[!UICONTROL 設定]** を選択して、Media Analytics イベント表示を追加し **保存** します。
 
 ![設定](./images/adobe-analytics-streaming-media/configure.png)
 
-追加したら、 **[!UICONTROL Media Analytics イベント]** 表示 **[!UICONTROL Adobe Analytics]** 」セクションを使用して、セッショントラッキングを検証します。
+追加したら、「**[!UICONTROL Adobe Analytics**[!UICONTROL 」セクションの ]**Media Analytics イベント]** ビューを選択して、セッショントラッキングを検証します。
 
-![選択](./images/adobe-analytics-streaming-media/select.png)
+![ 選択 ](./images/adobe-analytics-streaming-media/select.png)
 
-内 **[!UICONTROL Media Analytics イベント]** を表示する場合は、セッション ID(VSID) で検索およびフィルタリングして、特定のメディアセッションを表示できます。 追加のイベントの詳細を表示するには、特定のイベントを選択します。
+**[!UICONTROL Media Analytics イベント]** ビューでは、セッション ID （VSID）で検索およびフィルタリングして、特定のメディアセッションを表示できます。 追加のイベントの詳細を表示するには、特定のイベントを選択します。
 
-![メディアイベント](./images/adobe-analytics-streaming-media/media-events.png)
+![ メディアイベント ](./images/adobe-analytics-streaming-media/media-events.png)
 
-API 呼び出しをより簡潔に表示するには、 **[!UICONTROL 再生ヘッドの更新イベントを非表示にする]** フィルター。
+API 呼び出しをより簡単に確認するには、**[!UICONTROL 再生ヘッド更新イベントを非表示にする]** フィルターを選択して再生ヘッド更新イベントを非表示にすることもできます。
 
-![再生ヘッドを非表示](./images/adobe-analytics-streaming-media/hide-playhead.png)
+![ 再生ヘッドを非表示 ](./images/adobe-analytics-streaming-media/hide-playhead.png)
 
 >[!INFO]
 >
->後処理された Media Analytics データを表示するには、次の SDK バージョンが必要です。Android Media 2.1.2 およびiOS AEPMedia 3.0.1（またはそれ以降）
+>処理後の Media Analytics データを表示するには、SDK バージョン（Android Media 2.1.2 およびiOS AEPMedia 3.0.1 以降）を使用する必要があります
 
-後処理されたデータを表示するには、セッション開始イベントを見つけ、「ステータス」列でセッションが完了したことを検証します。 完了した場合は、イベントをクリックして、イベントの詳細ビューでメディアセッションの概要を表示します。 詳しくは、下にスクロールして後処理した詳細を確認してください。
+後処理されたデータを表示するには、セッション開始イベントを見つけ、セッションが完了したことをステータス列で検証します。 完了したら、イベントをクリックして、イベントの詳細表示でメディアセッションの概要を表示します。 詳細については、下にスクロールして、後処理の詳細を見つけます。
 
-![後処理済みのビュー](./images/adobe-analytics-streaming-media/post-processed-view.png)
+![Postで処理されたビュー ](./images/adobe-analytics-streaming-media/post-processed-view.png)

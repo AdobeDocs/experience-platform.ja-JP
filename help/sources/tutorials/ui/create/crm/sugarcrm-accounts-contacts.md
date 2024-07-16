@@ -1,17 +1,17 @@
 ---
 title: UI での SugarCRM アカウントおよび連絡先ソース接続の作成
-description: Adobe Experience Platform UI を使用して SugarCRM アカウントと連絡先ソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用して SugarCRM アカウントおよび連絡先ソース接続を作成する方法を説明します。
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
 source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 41%
+source-wordcount: '764'
+ht-degree: 37%
 
 ---
 
 # UI での [!DNL SugarCRM Accounts & Contacts] ソース接続の作成
 
-このチュートリアルでは、 [!DNL SugarCRM Accounts & Contacts] Adobe Experience Platformユーザーインターフェイスを使用したソース接続
+このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL SugarCRM Accounts & Contacts] ソース接続を作成する手順について説明します。
 
 ## はじめに
 
@@ -36,19 +36,19 @@ ht-degree: 41%
 
 ### Platform スキーマの作成
 
-を作成する前に [!DNL SugarCRM] ソース接続の場合は、まず、ソースに使用する Platform スキーマを作成する必要もあります。 に関するチュートリアルを参照してください。 [Platform スキーマの作成](../../../../../xdm/schema/composition.md) スキーマの作成方法に関する包括的な手順を参照してください。
+また、[!DNL SugarCRM] ソース接続を作成する前に、まずソースに使用する Platform スキーマを作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-The [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 つまり、活用するオブジェクトタイプに応じて、別のスキーマを作成する必要があります。 アカウントスキーマと連絡先スキーマの両方について、以下の例を参照してください。
+[!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 つまり、活用しているオブジェクトタイプに応じて、個別のスキーマを作成する必要があります。 アカウントおよび連絡先スキーマの両方については、以下の例を参照してください。
 
 >[!BEGINTABS]
 
 >[!TAB アカウント]
 
-![アカウントのスキーマ例を示した Platform UI のスクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
+![ アカウントのスキーマの例を示す Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
 
->[!TAB 連絡先]
+>[!TAB  連絡先 ]
 
-![連絡先のサンプルスキーマを示す Platform UI のスクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
+![ 連絡先のスキーマの例を示す Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
 
 >[!ENDTABS]
 
@@ -58,42 +58,42 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-の下 *CRM* カテゴリ、選択 **[!UICONTROL SugarCRM アカウントおよび連絡先]**&#x200B;を選択し、 **[!UICONTROL データを追加]**.
+*CRM* カテゴリ内で、「**[!UICONTROL SugarCRM アカウントと連絡先]**」、「**[!UICONTROL データを追加]**」の順に選択します。
 
-![SugarCRM アカウントおよび連絡先カードを含むカタログの Platform UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![SugarCRM アカウントと連絡先カードを含んだカタログの Platform UI スクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
-The **[!UICONTROL SugarCRM アカウントと連絡先アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL SugarCRM アカウントと連絡先アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL SugarCRM Accounts & Contacts] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![SugarCRM アカウントと連絡先アカウントを既存のアカウントに接続するための Platform UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+![SugarCRM アカウントと連絡先アカウントを既存のアカウントに接続するの Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### 新規アカウント
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、 の資格情報を指定します。終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![SugarCRM アカウントと連絡先アカウントを新しいアカウントに接続するための Platform UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+![SugarCRM アカウントと連絡先アカウントを新しいアカウントに接続するための Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### データの選択
 
-最後に、Platform に取り込むオブジェクトタイプを選択する必要があります。
+最後に、Platform に取得するオブジェクトタイプを選択する必要があります。
 
 | オブジェクトタイプ | 説明 |
 | --- | --- |
 | `Accounts` | 組織が関係を持つ会社。 |
-| `Contacts` | 組織と既に関係が構築されている個人。 |
+| `Contacts` | 組織と確立された関係を持つ個人。 |
 
 >[!BEGINTABS]
 
 >[!TAB アカウント]
 
-![SugarCRM アカウントおよび連絡先用のプラットフォーム UI スクリーンショットが、「アカウント」オプションが選択された状態で設定されていることを示しています](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
+![ アカウントオプションが選択された設定を示す SugarCRM アカウントおよび連絡先の Platform UI スクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
 
->[!TAB 連絡先]
+>[!TAB  連絡先 ]
 
-![「連絡先」オプションが選択された設定を示す SugarCRM アカウントおよび連絡先用の Platform UI スクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
+![ 「連絡先」オプションが選択された設定を示す、SugarCRM アカウントおよび連絡先の Platform UI スクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 
@@ -103,32 +103,32 @@ The **[!UICONTROL SugarCRM アカウントと連絡先アカウントを接続]*
 
 ## その他のリソース
 
-以下の節では、 [!DNL SugarCRM] ソース。
+以下の節では、[!DNL SugarCRM] ソースを使用する際に参照できるその他のリソースを示します。
 
 ### ガードレール {#guardrails}
 
-The [!DNL SugarCRM] API スロットル率は、1 分あたり 90 呼び出し、または 1 日あたり 2,000 呼び出し（いずれか最初に実行される方）です。 ただし、この制限は、レート制限に達しないようにリクエスト時間を遅延させるパラメーターを接続仕様に追加することで回避されました。
+[!DNL SugarCRM] API のスロットル率は、1 分あたりの呼び出し 90 回か 1 日あたりの呼び出し 2000 回のいずれか早い方です。 ただし、この制限は、接続仕様にパラメーターを追加することで回避されました。このパラメーターはリクエスト時間を遅延させるので、レート制限に到達することはありません。
 
 ### 検証 {#validation}
 
-ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL SugarCRM Accounts & Contacts] データを取り込む場合は、次の手順に従います。
+ソースを正しく設定し、データが取り込まれてい [!DNL SugarCRM Accounts & Contacts] ことを検証するには、次の手順に従います。
 
-* Platform UI で、「 」を選択します。 **[!UICONTROL データフローを表示]** の横に [!DNL SugarCRM Accounts & Contacts] ソースカタログのカードメニュー 次に、「 **[!UICONTROL データセットをプレビュー]** をクリックして、取り込まれたデータを確認します。
+* Platform UI で、ソースカタログの [!DNL SugarCRM Accounts & Contacts] ーザーカードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 次に、「**[!UICONTROL データセットをプレビュー]**」をクリックして、取り込まれたデータを確認します。
 
-* 操作しているオブジェクトタイプに応じて、集計データを、 [!DNL SugarMarket] 以下のアカウントまたは連絡先ページ：
+* 使用しているオブジェクト・タイプに応じて、集計データを次の [!DNL SugarMarket] の「アカウント」ページまたは「連絡先」ページに表示されるカウントと照合して検証できます。
 
 >[!BEGINTABS]
 
 >[!TAB アカウント]
 
-![SugarMarket アカウントページのスクリーンショットに、アカウントのリストが表示されています。](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
+![ アカウントのリストを表示する SugarMarket アカウントページからのスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
 
->[!TAB 連絡先]
+>[!TAB  連絡先 ]
 
-![連絡先のリストが表示された SugarMarket 連絡先ページのスクリーンショット](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png)
+![ 連絡先のリストを表示する SugarMarket 連絡先ページからのスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png)
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->The [!DNL SugarMarket] ページには、削除されたオブジェクトの数は含まれません。 ただし、このソースを通じて取得されたデータには削除された数も含まれるので、削除済みフラグが付けられます。
+>[!DNL SugarMarket] ページには、削除されたオブジェクトの数は含まれません。 ただし、このソースを通じて取得されたデータには、削除されたカウントも含まれ、これらは削除されたフラグでマークされます。

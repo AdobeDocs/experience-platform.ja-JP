@@ -14,7 +14,7 @@ ht-degree: 46%
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-のベース接続を作成する方法については、このドキュメントを参照してください。 [!DNL PathFactory] の使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+このドキュメントでは、[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して [!DNL PathFactory] のベース接続を作成する方法について説明します。
 
 ## 基本を学ぶ
 
@@ -27,7 +27,7 @@ ht-degree: 46%
 
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
 
-次の節では、に正常に接続するために必要な追加情報を示します [!DNL PathFactory] の使用 [!DNL Flow Service] API です。
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示し [!DNL PathFactory] す。
 
 ### 必要な資格情報の収集 {#gather-credentials}
 
@@ -35,19 +35,19 @@ Platform で PathFactory アカウントにアクセスするには、次の値�
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| ユーザー名 | あなたの [!DNL PathFactory] アカウントのユーザー名。 これは、システム内のアカウントを識別するために不可欠です。 |
-| パスワード | に関連付けられたパスワード [!DNL PathFactory] アカウント。 権限のないアクセスを防ぐために、これが安全に保たれていることを確認します。 |
-| ドメイン | に関連付けられたドメイン [!DNL PathFactory] アカウント。 これは通常、内の一意の ID を指します [!DNL PathFactory] URL。 |
-| アクセストークン | システムとシステムの間の安全な通信を確保するために、API 認証に使用される一意のトークン [!DNL PathFactory]. |
-| API エンドポイント | データにアクセスするための特定の API エンドポイント：訪問者、セッションおよびページビュー。 各エンドポイントは、取得可能な様々なデータセットに対応します。 **注意：** これらは、次の方法で事前定義されています [!DNL PathFactory] およびは、アクセスしようとしているデータに固有です。 <ul><li>**訪問者エンドポイント**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**セッションエンドポイント**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**ページビューエンドポイント**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
+| ユーザー名 | [!DNL PathFactory] アカウントのユーザー名。 これは、システム内のアカウントを識別するために不可欠です。 |
+| パスワード | [!DNL PathFactory] アカウントに関連付けられたパスワード。 権限のないアクセスを防ぐために、これが安全に保たれていることを確認します。 |
+| ドメイン | [!DNL PathFactory] アカウントに関連付けられたドメイン。 これは通常、[!DNL PathFactory] URL 内の一意の ID を参照します。 |
+| アクセストークン | システムと [!DNL PathFactory] ーザー間の安全な通信を確保するために、API 認証に使用される一意のトークン。 |
+| API エンドポイント | データにアクセスするための特定の API エンドポイント：訪問者、セッションおよびページビュー。 各エンドポイントは、取得可能な様々なデータセットに対応します。 **メモ：** これらは [!DNL PathFactory] で事前定義され、アクセスする予定のデータに固有です。 <ul><li>**訪問者エンドポイント**:`/api/public/v3/data_lake_apis/visitors.json`</li><li>**セッション エンドポイント**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**ページビューエンドポイント**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-資格情報の保護および使用方法、アクセストークンの取得および更新方法について詳しくは、を参照してください。 [[!DNL PathFactory] サポートセンター](https://support.pathfactory.com/categories/adobe/). このリソースでは、資格情報の管理と、効果的で安全な API 統合の確保に関する包括的なガイドを提供します。
+資格情報の保護および使用方法、アクセストークンの取得および更新方法について詳しくは、[[!DNL PathFactory]  サポートセンター ](https://support.pathfactory.com/categories/adobe/) を参照してください。 このリソースでは、資格情報の管理と、効果的で安全な API 統合の確保に関する包括的なガイドを提供します。
 
 ## ベース接続の作成
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、次に対してPOSTリクエストを実行します。 `/connections` を指定する際のエンドポイント [!DNL PathFactory] リクエスト本文の一部としての認証資格情報。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、その際にリクエスト本文の一部として [!DNL PathFactory] 認証資格情報を指定します。
 
 **API 形式**
 
@@ -87,13 +87,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.clientId` | に関連付けられたクライアント ID [!DNL PathFactory] アプリケーション。 |
-| `auth.params.clientSecret` | に関連付けられたクライアント秘密鍵 [!DNL PathFactory] アプリケーション。 |
-| `connectionSpec.id` | この [!DNL PathFactory] 接続仕様 ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `auth.params.clientId` | [!DNL PathFactory] アプリケーションに関連付けられたクライアント ID。 |
+| `auth.params.clientSecret` | [!DNL PathFactory] アプリケーションに関連付けられたクライアント秘密鍵。 |
+| `connectionSpec.id` | [!DNL PathFactory] 接続仕様 ID: `ea1c2a08-b722-11eb-8529-0242ac130003`。 |
 
 **応答**
 
-リクエストが成功した場合は、一意の接続識別子（`id`）に設定します。 この ID は、次のチュートリアルでデータを調べるために必要です。
+応答が成功すると、一意の接続識別子（`id`）を含む、新しく作成された接続が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {

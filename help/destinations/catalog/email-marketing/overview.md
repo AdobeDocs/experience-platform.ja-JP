@@ -2,7 +2,7 @@
 keywords: メール;メール;メール;メールの宛先
 title: メールマーケティングの宛先の概要
 type: Tutorial
-description: 電子メールサービスプロバイダー (ESP) を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。 宛先としてサポートされる ESP をExperience Platformします。
+description: メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。 Experience Platformの宛先としてサポートされている ESP について説明します。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 60%
 
 ## 概要 {#overview}
 
-メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。Adobe Experience Platformは、電子メールマーケティングの宛先に対するオーディエンスをアクティブ化できるようにすることで、ESP と統合されます。
+メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。Adobe Experience Platformは、メールマーケティングの宛先に対してオーディエンスをアクティブ化できるようにすることで、ESP と統合されます。
 
 ## サポートされているメールマーケティングの宛先 {#supported-destinations}
 
@@ -25,17 +25,17 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Mailchimp の興味カテゴリ](mailchimp-interest-categories.md)
 * [Mailchimp タグ](mailchimp-tags.md)
-* [(API)OracleEloqua](oracle-eloqua-api.md)
-* [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
+* [（API）OracleEloqua](oracle-eloqua-api.md)
+* [ （API）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [（ファイル）OracleEloqua](oracle-eloqua.md)
-* [（ファイル） [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
+* [（ファイル）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [SendGrid](sendgrid.md)
 
 ## 新しいメールマーケティングの宛先への接続 {#connect-destination}
 
-キャンペーンの電子メールマーケティングの宛先にオーディエンスを送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
+キャンペーン用のメールマーケティングの宛先に対するオーディエンスを送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
 
 ## メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス {#best-practices}
 
@@ -68,13 +68,13 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 
 {style="table-layout:auto"}
 
-## 電子メールマーケティングの宛先に対してオーディエンスをアクティブ化 {#activate}
+## メールマーケティングの宛先に対するオーディエンスのアクティブ化 {#activate}
 
-カタログの書き出しプロファイルの一部の電子メールマーケティングの宛先は、宛先との API 統合を通じて、ストリーミング方式で行われます。
+カタログ内の一部のメールマーケティング宛先では、宛先との API 統合を通じて、プロファイルをストリーミング方式で書き出します。
 
-クラウドストレージの場所に、その他の宛先の書き出しファイルを書き出します。 書き出しが完了したら、クラウドストレージの場所から電子メールマーケティングの宛先にデータを読み込む必要があります。
+その他の宛先では、クラウドストレージの場所にファイルを書き出します。 書き出しが完了したら、クラウドストレージの場所からメールマーケティングの宛先にデータを読み込む必要があります。
 
-次のリンクをたどります： [サポートされる電子メールマーケティングの宛先](#supported-destinations) 各電子メールマーケティングの宛先に対してオーディエンスをアクティブ化する方法については、「 」セクションを参照してください。
+各メールマーケティングの宛先に対してオーディエンスをアクティブ化する方法については、[ サポートされているメールマーケティングの宛先 ](#supported-destinations) の節のリンクに従ってください。
 
 ## その他のリソース {#additional-resources}
 

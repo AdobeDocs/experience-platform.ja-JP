@@ -7,12 +7,12 @@ description: このドキュメントでは、アトリビューション AI の
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 99%
+source-wordcount: '492'
+ht-degree: 98%
 
 ---
 
-# アクセス制御 Attribution AI
+# Attribution AIのアクセス制御
 
 アトリビューション AI のアクセス制御は、[Adobe Admin Console](https://adminconsole.adobe.com/) の Adobe Experience Platform を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 

@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: PQL マップ関数
-description: Profile Query Language（PQL）には、マップとのやり取りを容易にする関数が用意されています。
+description: Profile Query Language（PQL）には、マップとのやり取りを容易にする機能が用意されています。
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 90%
+ht-degree: 76%
 
 ---
 
 # マップ関数
 
-[!DNL Profile Query Language]（PQL）の機能を使用すると、マップの操作が容易になります。その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+[!DNL Profile Query Language] （PQL）には、マップとのやり取りを容易にする機能が用意されています。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## 取得
 

@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Azure;Azure File Storage;Azure ファイルストレージ
+keywords: Experience Platform；ホーム；人気のトピック；Azure;Azure File Storage;Azure file storage
 solution: Experience Platform
-title: フローサービス API を使用した Azure ファイルストレージベース接続の作成
+title: Flow Service API を使用した Azure File Storage ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用して Azure ファイルストレージをAdobe Experience Platformに接続する方法を説明します。
+description: Flow Service API を使用して Azure File Storage をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 62%
+source-wordcount: '463'
+ht-degree: 63%
 
 ---
 
-# の作成 [!DNL Azure File Storage] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Azure File Storage] ベース接続の作成
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -25,7 +25,7 @@ ht-degree: 62%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Azure File Storage] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Azure File Storage] ています。
 
 ### 必要な資格情報の収集
 
@@ -33,12 +33,12 @@ ht-degree: 62%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | のエンドポイント [!DNL Azure File Storag]アクセスしているインスタンス。 |
-| `userId` | 十分な [!DNL Azure File Storage] endpoint. |
-| `password` | ユーザーのパスワード [!DNL Azure File Storage] インスタンス |
+| `host` | アクセスする [!DNL Azure File Storag]e インスタンスのエンドポイント。 |
+| `userId` | [!DNL Azure File Storage] エンドポイントに十分なアクセス権を持つユーザー。 |
+| `password` | [!DNL Azure File Storage] インスタンスのパスワード |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Azure File Storage] の接続仕様 ID は `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` です。 |
 
-の導入について詳しくは、 [この Azure File Storage ドキュメント](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
+基本について詳しくは、[Azure ファイルストレージのドキュメント ](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) を参照してください。
 
 ### Platform API の使用
 
@@ -88,10 +88,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | のエンドポイント [!DNL Azure File Storage] アクセスしているインスタンス… |
-| `auth.params.userId` | 十分な [!DNL Azure File Storage] endpoint. |
-| `auth.params.password` | この [!DNL Azure File Storage] アクセスキー。 |
-| `connectionSpec.id` | この [!DNL Azure File Storage] 接続仕様 ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `auth.params.host` | アクセスする [!DNL Azure File Storage] インスタンスのエンドポイント。 |
+| `auth.params.userId` | [!DNL Azure File Storage] エンドポイントに十分なアクセス権を持つユーザー。 |
+| `auth.params.password` | [!DNL Azure File Storage] アクセスキー。 |
+| `connectionSpec.id` | [!DNL Azure File Storage] 接続仕様 ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`。 |
 
 **応答**
 
@@ -106,4 +106,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、 [!DNL Azure File Storage] を使用した接続 [!DNL Flow Service] API を介して取得され、接続の一意の ID 値を取得している。 この ID は、次のチュートリアルで、 [フローサービス API を使用したサードパーティクラウドストレージの調査](../../explore/cloud-storage.md).
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Azure File Storage] 接続を作成し、接続の一意の ID 値を取得しました。 次のチュートリアルでは、この ID を使用した、[Flow Service API を使用したサードパーティのクラウドストレージの調査 ](../../explore/cloud-storage.md) 方法を説明します。

@@ -1,37 +1,37 @@
 ---
 title: タグの有無のテストリファレンス
-description: Adobe Experience Platform Debugger でのタグの有無をテストする Auditor の機能について説明します。
+description: Auditor 機能がAdobe Experience Platform Debuggerでタグの有無をテストする方法について説明します。
 exl-id: 8f01f89e-2a3b-41bc-b971-f3c60d0ae3fa
 source-git-commit: 10a5605c40143b58f6ba0108cc087956aa929866
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 34%
+source-wordcount: '537'
+ht-degree: 17%
 
 ---
 
-# タグの有無のテストに関するリファレンス
+# タグの有無に関するテストリファレンス
 
-このリファレンスでは、Adobe Experience Platform Debugger の Auditor 機能がタグの有無をテストする方法の詳細を説明します。
+このリファレンスでは、Adobe Experience Platform Debuggerでのタグの有無に関する auditor 機能のテスト方法について詳しく説明します。
 
 >[!NOTE]
 >
->Platform Debugger での監査テストについて詳しくは、 [auditor 機能の概要](./overview.md).
+>Platform Debugger の Auditor テストについて詳しくは、[auditor 機能の概要 ](./overview.md) を参照してください。
 
-タグの有無テストでは、特定のタグがページ上に存在するかどうか、およびタグがページコード内の適切な場所に配置されているかどうかを評価します。
+タグの有無テストは、特定のタグがページに存在するかどうか、およびページのコード内でそれらが適切な場所にあるかどうかを評価します。
 
-| テスト | 重み付け | 条件 | 推奨 |
+| テスト | 重み | 条件 | レコメンデーション |
 | --- | --- | --- | --- |
-| Advertising Cloud - コードの有無 | 5 | Advertising Cloud タグは DOM では使用できません。 | を使用したAdvertising Cloudタグの実装 [Advertising Cloudタグ拡張機能](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
-| Advertising Cloud - セグメントピクセルが実装されている | 5 | Advertising Cloud セグメントピクセルを新しい Advertising Cloud の画像専用コンバージョンタグにアップグレードしてください。非推奨の AMO セグメントタグを使用すると、データが失われる可能性があります。 | を使用したAdvertising Cloudセグメントピクセルの実装 [Advertising Cloudタグ拡張機能](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
-| Analytics - DOM に読み込まれている | 5 | Adobe Analytics タグが検出されませんでした。 | 最新バージョンの Analytics をインストールしてください。<br><br>[追加情報](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=ja) |
-| Launch - ライブラリが読み込まれている | 5 | A `global _satellite` オブジェクトが DOM 内に見つかりませんでした。つまり、タグライブラリがインストールされていないか、実行に失敗します。 | ページでタグライブラリが実装され、後続のスクリプトアクティビティによってブロックされていないことを確認します。 |
-| Launch - 複数の埋め込みスクリプトがない | 5 | 実稼動サイトでは、ページごとに 1 つの埋め込みコードのみを読み込みます。 | 実稼動ライブラリのみがページに読み込まれていることを確認してください。 |
-| 起動 — `pageBottom` コールバックが次に存在する： `<body>` | 5 | 必須 `_satellite.pageBottom()` 内にコールバックが見つかりませんでした `<body>` 」と入力します。 このテストは、 `pageBottom` の呼び出しがページで見つからない、またはページ内にある場合は `<head>` タグ（または他の予期しない場所）に貼り付けます。 次の場合にのみ通過します。 `pageBottom` が `<body>` タグを使用します。 | 終了の直前にインラインスクリプトを追加する `</body>` タグを使用して、適切なタグ機能を確保します。<br><br>[追加情報](../../tags/ui/client-side/asynchronous-deployment.md) |
-| 起動 — `pageBottom` 非同期でデプロイした場合はコールバックを存在させない | 5 | この `_satellite.pageBottom()` コールバックがページで見つかりました。タグが非同期でデプロイされている場合は、このようにはなりません。 | を削除します。 `_satellite.pageBottom()` スクリプトを使用して、適切なタグ機能を有効にします。 <br><br>[追加情報](../../tags/ui/client-side/asynchronous-deployment.md) |
-| Experience Cloud ID サービス - コードの有無 | 5 | Experience Cloud ID サービスコードが見つかりませんでした。Experience CloudID(ECID) の使用は、Experience Cloudソリューションから最大限の価値を引き出すために強く推奨され、Experience Cloudソリューション全体の ID 管理にとって重要です。 | 最新バージョンの ECID をインストールします。<br><br>[追加情報](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja) |
-| Experience Cloud ID サービス - Cookie の有無 | 5 | この `AMCV_` cookie が見つかりませんでした。 訪問者オブジェクトは、`VisitorAPI.js` コードからインスタンス化する必要があります。 | これがタグ実装の場合は、AdobeOrg ID が ECID ツールに正しく入力されていることを確認します。 <br><br>[追加情報](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=ja) |
-| Experience Cloud ID サービス - MID 値が存在する | 5 | MID 値がに見つかりませんでした `AMCV_` cookie. | もう一度テストして、ECID API の遅延を確認してください。 問題が解決しない場合は、アドビカスタマーケアにお問い合わせください。<br><br>[追加情報](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=ja) |
-| Target - コードの有無 | 5 | Adobe Targetは DOM で定義する必要があります。 | 最新バージョンの Target（at.js）をインストールします。<br><br>[追加情報](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
-| Target — でライブラリが読み込まれました `<head>` | 4 | Target ライブラリは、 `<head>` タグを使用します。 | Target ライブラリが `<head>` タグを使用します。 <br><br>[追加情報](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
+| Advertising Cloud - コードプレゼンス | 5 | Advertising Cloud タグは DOM では使用できません。 | [Advertising Cloud タグ拡張機能 ](../../destinations/catalog/advertising/adobe-advertising-cloud.md) を使用してAdvertising Cloud タグを実装します。 |
+| Advertising Cloud - セグメントピクセルが実装されました | 5 | Advertising Cloud セグメントピクセルを新しい Advertising Cloud の画像専用コンバージョンタグにアップグレードしてください。非推奨の AMO セグメントタグを使用すると、データが失われる可能性があります。 | [Advertising Cloud タグ拡張機能 ](../../destinations/catalog/advertising/adobe-advertising-cloud.md) を使用してAdvertising Cloud セグメントピクセルを実装します。 |
+| Analytics - DOM にロード済み | 5 | Adobe Analytics タグが検出されませんでした。 | 最新バージョンの Analytics をインストールします。 <br><br>[追加情報](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=ja) |
+| Launch - ライブラリが読み込まれました | 5 | `global _satellite` オブジェクトが DOM に見つかりませんでした。つまり、タグライブラリがインストールされていないか、実行に失敗しています。 | タグライブラリがページに実装されており、後続のスクリプトアクティビティでブロックされていないことを確認します。 |
+| Launch – 複数の埋め込みスクリプトを持たない | 5 | 実稼動サイトでは、ページごとに 1 つの埋め込みコードのみを読み込む必要があります。 | 実稼動ライブラリのみがページに読み込まれていることを確認してください。 |
+| Launch - `pageBottom` コールバックが `<body>` に存在する | 5 | 必要な `_satellite.pageBottom()` コールバックがページの `<body>` 内に見つかりませんでした。 このテストは、`pageBottom` 呼び出しがページでまったく見つからない場合、または `<head>` タグ（または他の予期しない場所）にある場合は失敗します。 `<body>` タグ内のどこか `pageBottom` 見つかった場合にのみ渡されます。 | タグが適切に機能するように、`</body>` タグを閉じる直前にインラインスクリプトを追加します。<br><br>[追加情報](../../tags/ui/client-side/asynchronous-deployment.md) |
+| Launch – 非同期 `pageBottom` プロイする場合、コールバックは存在できません | 5 | ページで `_satellite.pageBottom()` コールバックが見つかりました。これは、タグが非同期でデプロイされる場合には当てはまりません。 | `_satellite.pageBottom()` スクリプトを削除して、適切なタグ機能を有効にします。 <br><br>[追加情報](../../tags/ui/client-side/asynchronous-deployment.md) |
+| Experience CloudID サービス – コードの有無 | 5 | Experience Cloud ID サービスコードが見つかりませんでした。Experience Cloudソリューションから最大限の価値を引き出すためにはExperience CloudID （ECID）の使用を強くお勧めします。これは、Experience Cloudソリューション全体での ID 管理に不可欠です。 | 最新バージョンの ECID をインストールします。<br><br>[追加情報](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja) |
+| Experience CloudID サービス - Cookie の存在 | 5 | `AMCV_` の Cookie が見つかりませんでした。 `VisitorAPI.js` コードから訪問者オブジェクトをインスタンス化する必要があります。 | タグ実装の場合は、AdobeOrg ID が ECID ツールに正しく入力されていることを確認します。 <br><br>[追加情報](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html) |
+| Experience CloudID サービス - MID 値が存在します | 5 | MID 値が `AMCV_` Cookie に見つかりませんでした。 | もう一度テストして、ECID API の待ち時間を確認します。 この状態が解決しない場合は、Adobeカスタマーケアにお問い合わせください。 <br><br>[追加情報](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html) |
+| Target - コードプレゼンス | 5 | Adobe Targetは DOM で定義する必要があります。 | Target （at.js）の最新バージョンをインストールします。 <br><br>[追加情報](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
+| Target - `<head>` に読み込まれたライブラリ | 4 | Target ライブラリを `<head>` タグに読み込む必要があります。 | Target ライブラリが `<head>` タグに読み込まれていることを確認してください。 <br><br>[追加情報](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
 
 {style="table-layout:auto"}

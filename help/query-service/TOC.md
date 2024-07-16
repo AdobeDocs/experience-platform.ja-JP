@@ -8,7 +8,7 @@ role: User,Developer
 source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 82%
+ht-degree: 83%
 
 ---
 
@@ -27,12 +27,12 @@ ht-degree: 82%
       - [概要](data-distiller/derived-datasets/overview.md)
       - [SQL を使用した派生データセットの作成](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [デシルベースの派生データセットの作成](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 拡張アプリレポート用のカスタマイズ可能なインサイト {#customizable-insights}
+   - 拡張アプリレポートスイート向けのカスタマイズ可能 {#customizable-insights} インサイト
       - [概要](data-distiller/customizable-insights/overview.md)
-      - [Query pro モード](data-distiller/customizable-insights/query-pro-mode.md)
+      - [クエリプロモード](data-distiller/customizable-insights/query-pro-mode.md)
       - [高速クエリの送信](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [レポートインサイトデータモデルガイド](data-distiller/customizable-insights/reporting-insights-data-model.md)
-   - AI/ML 機能パイプライン {#ml-feature-pipelines}
+   - の AI/ML 機能パイプライン {#ml-feature-pipelines}
       - [概要](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks への接続](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [探索的データ分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)

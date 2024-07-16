@@ -110,7 +110,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | Platform UI での左ナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）は、カテゴリ&#x200B;**[!UICONTROL データ収集]**&#x200B;下の Experience Platform の左ナビゲーションからも利用できるようになりました。これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
 | タグとイベント転送におけるユーザー属性 | タグとイベント転送で使用可能な[!UICONTROL プロパティ]を一覧表示すると、一覧表示された各プロパティが最終更新日時と、更新を行ったユーザーが表示されるようになりました。 |
 | イベント転送用 [[!DNL Snap Conversions API] 拡張機能](https://exchange.adobe.com/apps/ec/108550) | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Snapchat Conversions API] にデータを送信できるようになりました。認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。 |
-| [Web SDK の User-Agent Client Hints](/help/web-sdk/use-cases/client-hints.md) | Web SDK は、 [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
+| [Web SDK の User-Agent Client Hints](/help/web-sdk/use-cases/client-hints.md) | Web SDK で [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) がサポートされるようになりました。 Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
 | [Web SDK のページごとの移行](../../web-sdk/home.md#migrating-to-web-sdk) | 既存の web プロパティを、[!DNL at.js] などの他の Experience Cloud ライブラリから Web SDK に一度に 1 ページずつ移行できるようになりました。これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
 | [[!DNL Adobe Journey Optimizer] によるデータストリームのサポート](../../datastreams/overview.md#aep) | Adobe Experience Platform のデータストリーム用サービスでは、[!DNL Adobe Journey Optimizer] がサポートされるようになりました。このオプションでは、[!DNL Adobe Journey Optimizer] で web およびアプリベースのインバウンドチャネルを使用できます。 |
 

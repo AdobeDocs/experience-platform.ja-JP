@@ -11,23 +11,23 @@ ht-degree: 0%
 
 # `sendEvent`
 
-この `sendEvent` コマンドは、Adobeにデータを送信し、パーソナライズされたコンテンツ、ID およびオーディエンスの宛先を取得する主な方法です。 の使用 [`xdm`](xdm.md) Adobe Experience Platform スキーマにマッピングするデータを送信するオブジェクト。 の使用 [`data`](data.md) xdm 以外のデータを送信するオブジェクト。 データストリームマッパーを使用して、このオブジェクト内のデータをスキーマフィールドに合わせることができます。
+`sendEvent` コマンドは、Adobeにデータを送信して、パーソナライズされたコンテンツ、ID およびオーディエンスの宛先を取得する主な方法です。 [`xdm`](xdm.md) オブジェクトを使用して、Adobe Experience Platform スキーマにマッピングするデータを送信します。 [`data`](data.md) オブジェクトを使用して、XDM 以外のデータを送信します。 データストリームマッパーを使用して、このオブジェクト内のデータをスキーマフィールドに合わせることができます。
 
 ## Web SDK タグ拡張機能を使用したイベントデータの送信
 
 イベントデータの送信は、Adobe Experience Platform Data Collection タグインターフェイスのルール内のアクションとして実行されます。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL ルール]**&#x200B;を選択してから、目的のルールを選択します。
-1. 次の下 [!UICONTROL アクション]、既存のアクションを選択するか、アクションを作成します。
-1. を [!UICONTROL 拡張機能] ドロップダウンフィールドの移動先 **[!UICONTROL Adobe Experience Platform Web SDK]**、を設定します。 [!UICONTROL アクションタイプ] 対象： **[!UICONTROL イベントを送信]**.
-1. 目的のフィールドを設定し、 **[!UICONTROL 変更を保持]**&#x200B;次に、公開ワークフローを実行します。
+1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
+1. [!UICONTROL  アクション ] で、既存のアクションを選択するか、アクションを作成します。
+1. 「[!UICONTROL  拡張機能 ]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL  アクションタイプ ] を **[!UICONTROL イベントを送信]** に設定します。
+1. 必要なフィールドを設定し、「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 
 ## Web SDK JavaScript ライブラリを使用したイベントデータの送信
 
-を実行 `sendEvent` コマンドは、設定した Web SDK のインスタンスを呼び出す際に使用します。 必ずを [`configure`](../configure/overview.md) コマンドを実行してから、 `sendEvent` コマンド。
+設定済みの Web SDK インスタンスを呼び出す際に、`sendEvent` コマンドを実行します。 `sendEvent` コマンドを呼び出す前に、必ず [`configure`](../configure/overview.md) コマンドを呼び出してください。
 
 ```js
 alloy("sendEvent", {
@@ -42,8 +42,8 @@ alloy("sendEvent", {
 
 ## 応答オブジェクト
 
-以下を行う場合 [応答を処理](../command-responses.md) このコマンドを使用すると、応答オブジェクトで次のプロパティを使用できます。
+このコマンドを使用して [ 応答を処理 ](../command-responses.md) する場合、応答オブジェクトで次のプロパティを使用できます。
 
-* **`propositions`**:Edge Networkによって返される提案の配列。 自動的にレンダリングされる提案にはフラグが含まれます `renderAttempted` をに設定 `true`.
-* **`inferences`**：推論オブジェクトの配列。このオブジェクトには、このユーザーに関する機械学習情報が含まれています。
-* **`destinations`**:Edge Networkによって返される宛先オブジェクトの配列。
+* **`propositions`**:Edge Networkによって返される提案の配列。 自動的にレンダリングされる提案には、`true` に設定され `renderAttempted` フラグが含まれます。
+* **`inferences`**：このユーザーに関する機械学習情報を含む、推論オブジェクトの配列。
+* **`destinations`**:Edge Networkによって返される対象オブジェクトの配列。

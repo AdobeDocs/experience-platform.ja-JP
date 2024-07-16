@@ -4,7 +4,7 @@ title: 宛先設定の削除
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '279'
 ht-degree: 100%
 
 ---

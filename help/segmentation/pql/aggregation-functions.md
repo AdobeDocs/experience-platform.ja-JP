@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: PQL 集計関数
-description: 集約関数は、プロファイルクエリ言語（PQL）配列内で複数の値をグループ化して単一の要約値を形成するために使用されます。
+title: PQL集計関数
+description: 集計関数は、Profile Query Language（PQL）配列内の複数の値をグループ化して、1 つの要約値を形成するために使用されます。
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 93%
+ht-degree: 76%
 
 ---
 
 # 集計関数
 
-集計関数は、[!DNL Profile Query Language]（PQL）配列内の複数の値をグループ化して、単一の要約値を形成するために使用されます。その他の PQL 関数について詳しくは、 [[!DNL Profile Query Language] 概要](./overview.md).
+集計関数は、[!DNL Profile Query Language] （PQL）配列内の複数の値をグループ化して、1 つの要約値を形成するために使用されます。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
 ## カウント
 

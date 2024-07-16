@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；OneTrust;onetrust；同意；同意と環境設定；コンプライアンス
 solution: Experience Platform
-title: OneTrust 統合ソースコネクタの概要
+title: OneTrust 統合Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して、OneTrust 統合をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
@@ -16,17 +16,17 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->この [!DNL OneTrust Integration] ソースは、同意および環境設定データの取り込みのみをサポートし、cookie はサポートしていません。 ソースコネクタの問題については、OneTrust サポート（https://support.onetrust.com）にお問い合わせください
+>[!DNL OneTrust Integration] ソースは、同意および環境設定データの取り込みのみをサポートし、cookie はサポートしていません。 ソースコネクタの問題については、OneTrust サポート（https://support.onetrust.com）にお問い合わせください
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform は、サードパーティの同意および環境設定管理プラットフォームからデータを取り込む機能を備えています。同意および環境設定プロバイダーのサポートには、次のものが含まれます [!DNL OneTrust Integration].
+Experience Platform は、サードパーティの同意および環境設定管理プラットフォームからデータを取り込む機能を備えています。同意および環境設定プロバイダーのサポートには、[!DNL OneTrust Integration] が含まれます。
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL OneTrust Integration] と Platform を接続する方法について説明します。
 
 ## API を使用して [!DNL OneTrust Integration] と Platform を接続する
 
-- [を作成 [!DNL OneTrust Integration] flow Service API を使用したソース接続とデータフロー](../../tutorials/api/create/consent-and-preferences/onetrust.md)
+- [Flow Service API [!DNL OneTrust Integration]  使用したソース接続とデータフローの作成](../../tutorials/api/create/consent-and-preferences/onetrust.md)
 
 ## UI を使用した [!DNL OneTrust Integration] の Platform への接続
 

@@ -4,7 +4,7 @@ description: Experience Platform 内でスキーマエディターを使用し�
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '695'
 ht-degree: 100%
 
 ---

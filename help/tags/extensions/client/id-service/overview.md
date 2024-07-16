@@ -4,7 +4,7 @@ description: Adobe Experience Platform の Adobe Experience Cloud ID サービ�
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '792'
 ht-degree: 100%
 
 ---
@@ -37,7 +37,7 @@ Experience Cloud 組織の ID。
 
 この ID は 24 文字の英数字から成る文字列で、その後に `@AdobeOrg` が続きます。この ID がわからない場合は、カスタマーケアにお問合せください。
 
-### Exclude specific paths
+### 指定のパスを除外
 
 URL が指定されたパスと一致する場合、Experience Cloud ID は読み込まれません。
 
@@ -45,7 +45,7 @@ URL が指定されたパスと一致する場合、Experience Cloud ID は読�
 
 別のパスを除外するには、「**[!UICONTROL 追加]**」をクリックします。
 
-### Opt In
+### オプトイン
 
 「Opt In」オプションを使用して、訪問者がサイトでアドビのサービスをオプトインする必要があるかどうか（訪問者のアクティビティを追跡する cookie を作成するかどうかなど）を決定します。
 
@@ -65,11 +65,11 @@ URL が指定されたパスと一致する場合、Experience Cloud ID は読�
 
 有効にすると、同意は、ドメイン上のファーストパーティ cookie に保存されます。有効になっていない場合、同意設定は管理対象の CMP または管理対象のcookie に保存されます。
 
-**Opt In Cookie Domain?**
+**Cookie ドメインをオプトインしますか？**
 
 このオプション設定を使用して、ストレージが有効になっている場合にオプトイン cookie の保存先となるドメインを指定します。ドメインを入力するか、ドメインを含むデータ要素を選択することができます。
 
-**Opt In Storage Expiry?**
+**ストレージ有効期限をオプトインしますか？**
 
 ストレージが有効になっている場合にオプトイン cookie の有効期限を秒単位で指定します。
 
@@ -83,7 +83,7 @@ URL が指定されたパスと一致する場合、Experience Cloud ID は読�
 
 `"{"aa":true,"aam":true,"ecid":true}"`
 
-**Pre Opt In Approvals?**
+**承認を事前オプトインしますか？**
 
 訪問者が環境設定を行っていない場合に、承認または拒否されるカテゴリーを定義します。同意は、ページが読み込まれた時点から選択したソリューションに対して想定されます。要素のタイプは、オブジェクトまたは JSON 文字列にする必要があります（例：`{aam: true}`）。
 

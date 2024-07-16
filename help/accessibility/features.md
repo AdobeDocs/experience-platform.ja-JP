@@ -6,7 +6,7 @@ description: キーボードナビゲーション、カラーパレットとコ�
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '481'
 ht-degree: 100%
 
 ---

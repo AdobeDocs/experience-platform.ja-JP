@@ -4,8 +4,8 @@ description: このドキュメントでは、タグ拡張機能開発プロセ�
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 100%
+source-wordcount: '473'
+ht-degree: 97%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 100%
 * [拡張機能チュートリアルビデオ](https://youtu.be/rxjtC9o4rl0) は、仕様を開始する際に非常に役立ちます。
 * YouTube プレイリストの「[拡張機能の概要](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m)」では、拡張機能パッケージの作成プロセスを順を追って説明しています。
 * 記事「[JSON スキーマの理解](https://spacetelescope.github.io/understanding-json-schema/index.html#)」を参照してください。
-* 「[JSON Lint/Validator](https://jsonlint.com/)」を参照してください。。
+* [JSON リント/バリデーター ](https://jsonlint.com/)。
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome 拡張機能を使用して、JSON および JSONP をハイライト表示および印刷してください。
-* [jsonschema.net](https://jsonschema.net/#/editor) エディターは、オブジェクトから JSON スキーマを作成するのに役立ちます。
+* オブジェクトから JSON スキーマを作成するのに役立つ [jsonschema.net](https://jsonschema.net/#/editor) エディター。
 * [JSON スキーマバリデータ](https://www.jsonschemavalidator.net) は、オンラインのインタラクティブな JSON スキーマ検証ツールです。
 
 ## ツール

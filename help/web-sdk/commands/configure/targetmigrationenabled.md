@@ -1,7 +1,8 @@
 ---
 title: targetMigrationEnabled
-description: Web SDK がAdobe Target Cookie を読み書きできるようにします。
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+description: Web SDK がAdobe Target Cookie の読み取りおよび書き込みを行えるようにします。
+exl-id: 4b9203c6-31b7-45af-a6a6-a206d7edac3f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -10,22 +11,22 @@ ht-degree: 0%
 
 # `targetMigrationEnabled`
 
-The `targetMigrationEnabled` プロパティは、Web SDK がAdobe Target 1.x および 2.x ライブラリが使用する mbox Cookie と mboxEdgeCluster Cookie の読み取りと書き込みを可能にするブール値です。 このオプションを使用すると、以前のAdobe Target実装を使用したページと Web SDK を使用したページの間で訪問者プロファイルを保持できます。
+`targetMigrationEnabled` プロパティは、Adobe Target 1.x および 2.x ライブラリが使用する mbox および mboxEdgeCluster Cookie の読み取りと書き込みを Web SDK に許可するブール値です。 このオプションを使用すると、以前のAdobe Target実装を使用したページと、Web SDK を使用したページとの間で訪問者プロファイルを保持できます。
 
-## Web SDK タグ拡張機能を使用した at.js からの Target 移行の有効化
+## Web SDK タグ拡張機能を使用して at.js から Target の移行を有効にする
 
-を選択します。 **[!UICONTROL at.js から Web SDK への Target の移行]** チェックボックス [タグ拡張の設定](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL at.js から Web SDK にターゲットを移行]**」チェックボックスを選択します。
 
-1. にログインします。 [experience.adobe.com](https://experience.adobe.com) Adobe ID資格情報を使用して。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL 拡張機能]**&#x200B;を選択し、次に **[!UICONTROL 設定]** の [!UICONTROL Adobe Experience Platform Web SDK] カード。
-1. 下にスクロールして、 [!UICONTROL パーソナライズ] 「 」セクションで、「 」チェックボックスをオンにします。 **[!UICONTROL at.js から Web SDK への Target の移行]**.
-1. クリック **[!UICONTROL 保存]**&#x200B;をクリックし、変更を公開します。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. 「[!UICONTROL Personalization]」セクションまでスクロールし、「**[!UICONTROL Target を at.js から Web SDK に移行]**」チェックボックスをオンにします。
+1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 
-## Web SDK JavaScript ライブラリを使用した at.js からの Target の移行の有効化
+## Web SDK JavaScript ライブラリを使用して、at.js から Target の移行を有効にします
 
-を設定します。 `targetMigrationEnabled` 実行時のブール値 `configure` コマンドを使用します。 Web SDK を設定する際にこのプロパティを省略した場合、デフォルトはになります。 `false`. この値をに設定します。 `true` Adobe Target 1.x または 2.x ライブラリをまだ使用しているページがある場合。
+`configure` コマンドを実行するときは、`targetMigrationEnabled` のブール値を設定します。 Web SDK の設定時にこのプロパティを省略すると、デフォルトは `false` になります。 一部のページでAdobe Target 1.x または 2.x ライブラリが使用されている場合は、この値を `true` に設定します。
 
 ```js
 alloy("configure", {

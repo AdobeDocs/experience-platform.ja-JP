@@ -6,7 +6,7 @@ keywords: クライアント;状態;管理;edge;network;ゲートウェイ;API
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '825'
 ht-degree: 98%
 
 ---
@@ -70,7 +70,7 @@ Edge Network は状態管理プロトコルを使用することで、ストレ�
 | --- | --- | --- |
 | `key` | 文字列 | **必須**。エントリ名。 |
 | `value` | 文字列 | *オプション*。エントリ値。 |
-| `maxAge` | 整数 | *オプション* エントリの有効期限が切れるまでの時間（秒）です。 ない場合、エントリを現在のセッションに対してのみ保存する必要があります。 |
+| `maxAge` | 整数 | *任意* エントリの有効期限が切れるまでの時間（秒単位）。 ない場合、エントリを現在のセッションに対してのみ保存する必要があります。 |
 | `attrs` | `Map<String, String>` | *オプション*。エントリ属性のオプションのリスト。セキュアリファラー HTTP ヘッダーを使用するセキュリティで保護されたすべての接続の場合、`SameSite` 属性を `None` に設定します。 |
 
 
@@ -129,7 +129,7 @@ Edge Network は状態管理プロトコルを使用することで、ストレ�
 | 属性 | タイプ | 説明 |
 | --- | --- | --- |
 | `cookiesEnabled` | ブール値 | 設定すると、cookie のサポートが有効になります。デフォルト値は `false` です。 |
-| `domain` | 文字列 | 必須の場合 `cookiesEnabled: true`. Cookie を書き込むトップレベルドメイン。Edge Network はこの値を使用して、状態を cookie で保持できるかどうかを判定します。 |
+| `domain` | 文字列 | `cookiesEnabled: true` の場合は必須です。 Cookie を書き込むトップレベルドメイン。Edge Network はこの値を使用して、状態を cookie で保持できるかどうかを判定します。 |
 
 `cookiesEnabled` フラグで cookie サポートが有効になっていても、Adobe Experience Platform Edge Network は、リクエストのトップレベルドメインが呼び出し元によって指定された `domain` に一致する場合にのみ、状態エントリを書き込みます。不一致がある場合、エントリは `state:store` ハンドルで返されます。
 

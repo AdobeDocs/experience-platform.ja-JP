@@ -2,7 +2,7 @@
 keywords: インサイト;Attribution AI;アトリビューション AI インサイト;AAI クエリサービス;アトリビューションクエリ;アトリビューションスコア
 feature: Attribution AI
 title: クエリサービスを使用したアトリビューションスコアの分析
-description: Adobe Experience Platformクエリサービスを使用してAttribution AIスコアを分析する方法について説明します。
+description: Adobe Experience Platform クエリサービスを使用してAttribution AIスコアを分析する方法について説明します。
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
@@ -13,59 +13,59 @@ ht-degree: 2%
 
 # クエリサービスを使用したアトリビューションスコアの分析
 
-データの各行はコンバージョンを表し、このコンバージョンでは、関連するタッチポイントの情報が、 `touchpointsDetail` 列。
+データの各行はコンバージョンを表し、関連するタッチポイントの情報が `touchpointsDetail` 列の下に構造体の配列として格納されます。
 
 | タッチポイント情報 | 列 |
 | ---------------------- | ------ |
 | タッチポイント名 | `touchpointsDetail. touchpointName` |
 | タッチポイントチャネル | `touchpointsDetail.touchPoint.mediaChannel` |
-| タッチポイントAttribution AIのアルゴリズムスコア | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| タッチポイントAttribution AIアルゴリズムスコア | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## データパスの検索
 
-Adobe Experience Platform UI で、 **[!UICONTROL データセット]** をクリックします。 この **[!UICONTROL データセット]** ページが表示されます。 次に、 **[!UICONTROL 参照]** 」タブに移動し、データスコアの出力Attribution AIセットを探します。
+Adobe Experience Platform UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択します。 **[!UICONTROL データセット]** ページが表示されます。 次に、「**[!UICONTROL 参照]**」タブを選択し、データスコアの出力Attribution AIセットを見つけます。
 
-![モデルへのアクセス](./images/aai-query/datasets_browse.png)
+![ モデルへのアクセス ](./images/aai-query/datasets_browse.png)
 
-出力データセットを選択します。 「データセットアクティビティ」ページが表示されます。
+出力データセットを選択します。 データセットアクティビティ ページが表示されます。
 
-![データセットアクティビティページ](./images/aai-query/select_preview.png)
+![ データセットアクティビティページ ](./images/aai-query/select_preview.png)
 
-データセットアクティビティページで、「 」を選択します。 **[!UICONTROL データセットをプレビュー]** 右上隅に表示され、データが期待どおりに取り込まれていることを確認します。
+データセットアクティビティページで、右上隅の **[!UICONTROL データセットをプレビュー]** を選択し、データが期待どおりに取り込まれていることを確認します。
 
-![プレビューデータセット](./images/aai-query/preview_dataset.JPG)
+![ データセットをプレビュー ](./images/aai-query/preview_dataset.JPG)
 
-データをプレビューした後、右側のパネルでスキーマを選択します。 スキーマ名と説明がポップオーバーに表示されます。 スキーマ名のハイパーリンクを選択して、スコアリングスキーマにリダイレクトします。
+データのプレビュー後、右側のパネルでスキーマを選択します。 ポップオーバーが開き、スキーマ名と説明が表示されます。 スコアリングスキーマにリダイレクトするには、スキーマ名のハイパーリンクを選択します。
 
-![スキーマを選択](./images/aai-query/select_schema.png)
+![ スキーマを選択 ](./images/aai-query/select_schema.png)
 
-スコア付けスキーマを使用して、値を選択または検索できます。 選択した後、 **[!UICONTROL フィールドプロパティ]** サイドレールが開き、クエリの作成で使用するパスをコピーできます。
+スコアリングスキーマを使用すると、値を選択または検索できます。 選択すると、**[!UICONTROL フィールドプロパティ]** サイドパネルが開き、クエリの作成に使用するパスをコピーできます。
 
-![パスをコピー](./images/aai-query/copy_path.png)
+![ パスをコピー ](./images/aai-query/copy_path.png)
 
 ## クエリサービスにアクセス
 
-Platform UI 内からクエリサービスにアクセスするには、まず「 」を選択します。 **[!UICONTROL クエリ]** 左側のナビゲーションで、 **[!UICONTROL 参照]** タブをクリックします。 以前に保存したクエリのリストが読み込まれます。
+Platform UI 内からクエリサービスにアクセスするには、左側のナビゲーションで **[!UICONTROL クエリ]** を選択してから、「**[!UICONTROL 参照]** タブを選択します。 以前に保存したクエリのリストが読み込まれます。
 
-![クエリサービスの参照](./images/aai-query/query_tab.png)
+![ クエリサービスの参照 ](./images/aai-query/query_tab.png)
 
-次に、 **[!UICONTROL クエリを作成]** をクリックします。 クエリエディターが読み込まれます。 クエリエディターを使用して、スコアリングデータを使用してクエリの作成を開始できます。
+次に、右上隅の「**[!UICONTROL クエリを作成]**」を選択します。 クエリエディターが読み込まれます。 クエリエディターを使用すると、スコアリングデータを使用したクエリの作成を開始できます。
 
-![クエリエディター](./images/aai-query/query_example.png)
+![ クエリエディター ](./images/aai-query/query_example.png)
 
-クエリエディターについて詳しくは、 [クエリエディターユーザーガイド](../../query-service/ui/user-guide.md).
+クエリエディターについて詳しくは、[ クエリエディターユーザーガイド ](../../query-service/ui/user-guide.md) を参照してください。
 
-## 属性スコア分析用のクエリテンプレート
+## アトリビューションスコア分析用のクエリテンプレート
 
-以下のクエリは、様々なスコア分析シナリオのテンプレートとして使用できます。 次を `_tenantId` および `your_score_output_dataset` を、スコアリング出力スキーマに見つかった適切な値に置き換えます。
+以下のクエリは、様々なスコア分析シナリオのテンプレートとして使用できます。 `_tenantId` と `your_score_output_dataset` を、スコアリング出力スキーマにある適切な値に置き換える必要があります。
 
 >[!NOTE]
 >
-> データの取り込み方法に応じて、次のような値が使用されます。 `timestamp` の形式が異なる場合があります。
+> データの取り込み方法に応じて、次で使用する値（`timestamp` など）が異なる形式になる場合があります。
 
 ### 検証の例
 
-**（コンバージョンウィンドウ内の）コンバージョンイベントごとのコンバージョンの合計数**
+**（コンバージョンウィンドウ内の）コンバージョンイベント別のコンバージョンの合計数**
 
 ```sql
     SELECT conversionName,
@@ -88,7 +88,7 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
         conversionName
 ```
 
-**（コンバージョンウィンドウ内の）コンバージョンのみのイベントの合計数。**
+**（コンバージョンウィンドウ内の）コンバージョン専用イベントの合計数**
 
 ```sql
     SELECT
@@ -129,7 +129,7 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
 
 ### 配分分析の例
 
-**（コンバージョンウィンドウ内で）定義されたタイプ別のコンバージョンパスのタッチポイントの数**
+**定義済みのタイプ別（コンバージョンウィンドウ内）のコンバージョンパス上のタッチポイントの量**
 
 ```sql
     SELECT conversionName,
@@ -153,9 +153,9 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
         conversionName, tp_count DESC
 ```
 
-### Insight 生成の例
+### インサイト生成の例
 
-**増分単位の分類をタッチポイントおよびコンバージョン日別に（コンバージョンウィンドウ内で）おこなう**
+**タッチポイントおよびコンバージョン日（コンバージョンウィンドウ内）による増分単位の分類**
 
 ```sql
     SELECT conversionName,
@@ -180,7 +180,7 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**増分単位の分類をタッチポイントおよびタッチポイント日別（コンバージョンウィンドウ内）に表示します。**
+**タッチポイントおよびタッチポイント日（コンバージョンウィンドウ内）による増分単位の分類**
 
 ```sql
     SELECT conversionName,
@@ -206,7 +206,7 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
     LIMIT 20
 ```
 
-**（コンバージョンウィンドウ内で）すべてのスコアリングモデルに関する特定のタイプのタッチポイントに関する集計されたスコアです**
+**すべてのスコアリングモデルの特定タイプのタッチポイントの集計スコア（コンバージョンウィンドウ内）**
 
 ```sql
     SELECT
@@ -237,9 +237,9 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
         conversionName, touchpointName
 ```
 
-**詳細 — パス長分析**
+**詳細 – パスの長さの分析**
 
-各コンバージョンイベントタイプのパスの長さの配分を取得します。
+各コンバージョンイベントタイプのパスの長さの分布を取得します。
 
 ```sql
     WITH agg_path AS (
@@ -268,9 +268,9 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
         conversionName, path_length
 ```
 
-**高度 — コンバージョンパス分析のタッチポイントの個別数**
+**詳細 – コンバージョンパス分析に関する個別のタッチポイント数**
 
-各コンバージョンイベントタイプのコンバージョンパスの個別タッチポイント数の配分を取得します。
+各コンバージョンイベントタイプについて、コンバージョンパス上の個別タッチポイント数の分布を取得します。
 
 ```sql
     WITH agg_path AS (
@@ -301,11 +301,11 @@ Platform UI 内からクエリサービスにアクセスするには、まず�
 
 ### スキーマの統合と展開の例
 
-このクエリでは、構造体列が複数の単数列に統合され、配列が複数の行に分解されます。 これは、アトリビューションスコアを CSV 形式に変換する際に役立ちます。 このクエリの出力には、1 つのコンバージョンと、各行のそのコンバージョンに対応するタッチポイントの 1 つが含まれます。
+このクエリでは、構造体列を複数の単一列に統合し、配列を複数の行に分解します。 これは、アトリビューションスコアを CSV 形式に変換する際に役立ちます。 このクエリの出力には、各行に 1 つのコンバージョンと、そのコンバージョンに対応する 1 つのタッチポイントがあります。
 
 >[!TIP]
 >
-> この例では、 `{COLUMN_NAME}` に加えて `_tenantId` および `your_score_output_dataset`. この `COLUMN_NAME` 変数は、Attribution AIモデルの設定時に追加されたオプションのパススルー列名（レポート列）の値を取得できます。 スコアリング出力スキーマを確認し、 `{COLUMN_NAME}` このクエリの完了に必要な値。
+> この例では、`_tenantId` と `your_score_output_dataset` に加えて `{COLUMN_NAME}` も置き換える必要があります。 `COLUMN_NAME` 変数は、Attribution AIモデルの設定時に追加されたオプションのパススルー列名（レポート列）の値を取ることができます。 スコアリング出力スキーマを確認して、このクエリを完了するために必要な `{COLUMN_NAME}` の値を見つけてください。
 
 ```sql
 SELECT 

@@ -4,7 +4,7 @@ description: 様々なタグ拡張タイプの主要コンポーネントと、A
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '935'
 ht-degree: 95%
 
 ---
@@ -37,11 +37,11 @@ Adobe Experience Platform のタグが持つ 1 つの目的は、Adobe 外のエ
 
 ### 件数
 
-ビューは、HTMLファイルで、 [`iframe` 要素](https://developer.mozilla.org/ja-JP/docs/Web/HTML/Element/iframe) タグアプリケーション内、特に Platform UI とデータ収集 UI を通じて。 ビューには、拡張機能が提供するスクリプトが含まれ、アプリケーションと通信するために小さな API に対応している必要があります。
+ビューは、Platform UI や Data Collection UI を通じて ](https://developer.mozilla.org/ja-JP/docs/Web/HTML/Element/iframe) タグアプリケーション内の [`iframe`HTMLに読み込むことができる要素ファイルです。 ビューには、拡張機能が提供するスクリプトが含まれ、アプリケーションと通信するために小さな API に対応している必要があります。
 
 拡張機能で最も重要なビューファイルは、設定です。 詳しくは、 [拡張機能の設定](#configuration) の節を参照してください。
 
-ビュー内で使用するライブラリに関して制限はありません。 つまり、jQuery、Underscore、React、Angular、Bootstrap などを使用できます。ただし、拡張機能のルックアンドフィールを UI と同じにすることをお勧めします。
+ビュー内で使用するライブラリに関して制限はありません。 つまり、jQuery、Underscore、React、Angular、Bootstrap などを使用できます。ただし、拡張機能のルックアンドフィールを UI と似たものにすることをお勧めします。
 
 すべての表示関連ファイル（HTML、CSS、JavaScript）は、ライブラリモジュールファイルから分離された 1 つのサブディレクトリ内に配置することをお勧めします。 `extension.json` に、このビューのサブディレクトリの場所を記述します。その後、Platform は、web サーバーからこのサブディレクトリ（このサブディレクトリのみ）を提供します。
 

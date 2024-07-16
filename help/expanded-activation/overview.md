@@ -11,19 +11,19 @@ ht-degree: 6%
 
 # Audience Manager の拡張アクティベーション
 
-Adobe Experience Platform上に構築されたAudience Manager拡張アクティベーションは、既存のものを支援 [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) ユーザーは、次の目的でオーディエンスをアクティブ化します [ソーシャル](../destinations/catalog/social/overview.md) および [広告](../destinations/catalog/advertising/overview.md) Real-Time CDPからの出力先プラットフォーム（例：） [Facebook](../destinations/catalog/social/facebook.md), [Google広告](../destinations/catalog/advertising/google-ads-destination.md)、など。
+Adobe Experience Platform上に構築されたAudience Manager拡張アクティベーションは、既存の [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) ユーザーが [Facebook[、[Google広告 ](../destinations/catalog/social/overview.md) などの、Real-Time CDPから提供される ](../destinations/catalog/social/facebook.md) ソーシャル ](../destinations/catalog/advertising/overview.md) 宛先および ](../destinations/catalog/advertising/google-ads-destination.md) 広告 [ 宛先プラットフォームにオーディエンスをアクティブ化するのに役立ちます。
 
 >[!IMPORTANT]
 >
->[!DNL Audience Manager Expanded Activation] 既存のユーザーのみが使用できます [!DNL Audience Manager] ユーザー。
+>[!DNL Audience Manager Expanded Activation] は、既存の [!DNL Audience Manager] ユーザーのみが使用できます。
 
 ## 用語 {#terminology}
 
 Audience Managerの拡張アクティベーションは、Adobe Experience Platformの概念とコンポーネントを使用します。 拡張アクティベーションのワークフローと使用するコンポーネントをより深く理解するには、次の概念に関する基本的な知識を持っている必要があります。
 
-* [オーディエンス](../segmentation/ui/overview.md)：オーディエンスは、類似の行動や特性を共有する人々の集まりです。 このユーザーグループは、セグメント定義またはオーディエンス構成（Adobe Experience Platformで生成されたオーディエンス）を使用して Platform によって生成することも、カスタムアップロードなどの外部ソース（外部で生成されたオーディエンス）から生成することもできます。 拡張されたアクティベーションでは、Audience Managerセグメント（オーディエンス）は次のように読み込まれます。 [カスタムアップロード](../segmentation/ui/audience-portal.md#import-audience).
-* [Source コネクタ](../sources/home.md):Source コネクタ（ソースとも呼ばれます）を使用すると、Experience Platformユーザーが複数のソースからデータを簡単に取り込むことができ、Experience Platformサービスを使用したデータの構造化、ラベル付け、拡張が可能になります。 データは、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、さまざまなソースから取り込むことができます。
-* [宛先コネクタ](../destinations/home.md)：宛先は、オーディエンスがアクティブ化されて配信される任意のエンドポイント（Adobeアプリケーション、広告プラットフォーム、クラウドストレージサービス、マーケティングサービスなど）を表します。 [!DNL Expanded Activation] は、に対するオーディエンスのアクティブ化をサポートします [広告](../destinations/catalog/advertising/overview.md) および [ソーシャル](../destinations/catalog/social/overview.md) 宛先コネクタ。
+* [ オーディエンス ](../segmentation/ui/overview.md)：オーディエンスとは、類似の行動や特徴を共有する人々の集まりです。 このユーザーグループは、セグメント定義またはオーディエンス構成（Adobe Experience Platformで生成されたオーディエンス）を使用して Platform によって生成することも、カスタムアップロードなどの外部ソース（外部で生成されたオーディエンス）から生成することもできます。 展開されたアクティベーションでは、Audience Managerセグメント（オーディエンス）は [ カスタムアップロード ](../segmentation/ui/audience-portal.md#import-audience) としてインポートされます。
+* [Source コネクタ ](../sources/home.md): Source コネクタ（ソースとも呼ばれます）を使用すると、Experience Platformユーザーが複数のソースからデータを簡単に取り込むことができ、Experience Platformサービスを使用したデータの構造化、ラベル付け、拡張が可能になります。 データは、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、さまざまなソースから取り込むことができます。
+* [ 宛先コネクタ ](../destinations/home.md)：宛先は、オーディエンスがアクティブ化されて配信される任意のエンドポイント（Adobeアプリケーション、広告プラットフォーム、クラウドストレージサービス、マーケティングサービスなど）を表します。 [!DNL Expanded Activation] では、[advertising](../destinations/catalog/advertising/overview.md) および [social](../destinations/catalog/social/overview.md) 宛先コネクタに対するオーディエンスのアクティベーションをサポートしています。
 
 ## 前提条件 {#prerequisites}
 
@@ -31,15 +31,15 @@ Audience Managerの拡張アクティベーションは、Adobe Experience Platf
 
 ### ユーザーと役割の要件 {#permission-requirements}
 
-使用する前に [!DNL Expanded Activation]の場合は、Admin Consoleからユーザーアカウントを作成し、それに割り当てる必要があります。 [!DNL Expanded Activation] 役割。 を参照してください。 [管理](administration.md) この方法に関する詳細な手順については、このページを参照してください。
+[!DNL Expanded Activation] を使用する前に、Admin Consoleからユーザーアカウントを作成して、[!DNL Expanded Activation] ロールに割り当てる必要があります。 これを行う方法について詳しくは、[ 管理 ](administration.md) ページを参照してください。
 
 ### オーディエンス要件 {#audience-requirements}
 
-を使用してオーディエンスをアクティブ化するには [!DNL Expanded Activation]を使用する場合は、Audience Managerオーディエンスがに基づいていることを確認します **ハッシュ化されたメールアドレス**. これを確認するには、Audience Managerの使用状況に応じて、次の 2 つの方法があります。
+[!DNL Expanded Activation] を通じてオーディエンスをアクティブ化するには、Audience Managerオーディエンスが **ハッシュ化されたメールアドレス** に基づいていることを確認します。 これを確認するには、Audience Managerの使用状況に応じて、次の 2 つの方法があります。
 
-* を使用する場合 [People-based Destinations のAudience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 機能を使用すると、ハッシュ化されたメールアドレスをAudience Managerで既に取り込むことができます。 この場合、追加の手順は必要ありません。 次にスキップできます： [拡張されたアクティベーションによるオーディエンスのアクティブ化](activate-audiences.md).
-* 次の場合： _ではない_ の使用 [People-based Destinations のAudience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 機能を使用するには、Audience Managerで新しいデータソースを作成し、それを使用してハッシュ化されたメールアドレスを保存する必要があります。 のドキュメントを参照してください。 [ハッシュ化されたメールワークフロー用のデータソースの設定](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails) その方法については、こちらを参照してください。 ハッシュ化されたメールアドレスをAudience Managerデータソースに取り込んだら、次のドキュメントを参照してください [拡張されたアクティベーションによるオーディエンスのアクティブ化](activate-audiences.md).
+* [People-based Destinations](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) のAudience Manager機能を使用している場合は、既にハッシュ化されたメールアドレスをAudience Managerで取り込んでいます。 この場合、追加の手順は必要ありません。 [ 拡張されたアクティベーションによるオーディエンスのアクティブ化 ](activate-audiences.md) にスキップできます。
+* _2_ People-based Destinations のAudience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 機能を使用していない場合は、Audience Managerで新しいデータソースを作成し、それを使用してハッシュ化されたメールアドレスを保存する必要があります。 [これを行う方法については、[ ハッシュ化されたメールワークフローのデータソースの設定 ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails) に関するドキュメントを参照してください。 ハッシュ化されたメールアドレスをAudience Managerデータソースに取り込んだら、[ 拡張されたアクティベーションによるオーディエンスのアクティブ化 ](activate-audiences.md) に関するドキュメントを参照してください。
 
 ## 次の手順 {#next-steps}
 
-これで、の使用例とメリットについてより深く理解できました [!DNL Expanded Activation]、開始 [アカウントの設定](administration.md) その後 [オーディエンスのアクティベート](activate-audiences.md).
+ユースケースとオーディエンスを使用する利点をより深く理解できたので、まず [ アカウントの設定 ](administration.md) 次に [ オーディ [!DNL Expanded Activation] ンスのアクティブ化 ](activate-audiences.md) を行います。

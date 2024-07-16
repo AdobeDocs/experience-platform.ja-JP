@@ -18,6 +18,6 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] は、現在、 [!DNL Healthcare Shield or Privacy & Security Shield] アドオンの機能。
+>現在、[!DNL Customer Managed Keys] は、[!DNL Healthcare Shield or Privacy & Security Shield] のアドオン機能を購入した組織でのみ利用できます。
 
 Platform で使用されるすべてのデータは、CMK の有無にかかわらず、転送時および保管時に暗号化され、データのセキュリティを維持します。Adobe Experience Platform の暗号化については、[データの暗号化](../../../landing/governance-privacy-security/encryption.md)に関するドキュメントを参照してください。

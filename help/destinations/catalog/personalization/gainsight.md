@@ -1,12 +1,12 @@
 ---
-keywords: foresee;foresee extension;foresee destination
+keywords: foresee;foresee 拡張機能；foresee 宛先
 title: Gainsight 拡張機能
 description: Gainsight 拡張機能は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f73042e0-e540-4373-86c2-60be3749c049
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 93%
+source-wordcount: '443'
+ht-degree: 90%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 93%
 
 ## 概要 {#overview}
 
-[!DNL Gainsight] は、ユーザーのビヘイビアーを深く理解し、製品の採用を促進し、ユーザーのフィードバックを収集するためのツールを製品所有者に提供します。
+[!DNL Gainsight] のツールは、製品所有者がユーザーの行動を深く理解し、製品の採用を促進し、ユーザーのフィードバックを収集するのに役立ちます。
 
 [!DNL Gainsight] は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html) の拡張機能のページを参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 93%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Gainsight] 拡張子：
+[!DNL Gainsight] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

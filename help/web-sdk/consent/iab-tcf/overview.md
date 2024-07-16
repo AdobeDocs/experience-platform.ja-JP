@@ -23,20 +23,20 @@ Adobe Experience Platform Web SDK は、Interactive Advertising Bureau Transpare
 
 IAB TCF 2.0 で Web SDK を実装するには、エクスペリエンスデータモデル（XDM）とエクスペリエンスイベントに関する十分な知識が必要です。 開始する前に、次のドキュメントを確認してください。
 
-- [エクスペリエンスデータモデル（XDM）システムの概要](../../../xdm/home.md)：標準化と相互運用性は、Adobe Experience Platformを支える重要な概念です。 [!DNL Experience Data Model (XDM)]Adobeを中心に、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
+- [ エクスペリエンスデータモデル（XDM）システムの概要 ](../../../xdm/home.md)：標準化と相互運用性は、Adobe Experience Platformを支える重要な概念です。 Adobeが推進する [!DNL Experience Data Model (XDM)] は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
 ## Experience Platformの統合
 
 SDK を使用してAdobe Experience Platformに同意データを送信するには、次が必要です。
 
-- スキーマがに基づいているデータセット [!DNL XDM Individual Profile] クラスであり、で使用できるよう有効化された TCF 2.0 同意フィールドを含む [!DNL Real-Time Customer Profile].
+- スキーマが [!DNL XDM Individual Profile] クラスに基づいており、[!DNL Real-Time Customer Profile] で使用できるよう有効化された TCF 2.0 同意フィールドが含まれるデータセット。
 - Platform と前述のプロファイル対応データセットで設定されたデータストリーム。
 
-のガイドを参照してください。 [TCF 2.0 への準拠](../../../landing/governance-privacy-security/consent/iab/overview.md) 必要なデータセットとデータストリームの作成手順については、を参照してください。
+必要なデータセットとデータストリームの作成方法については、[TCF 2.0 への準拠 ](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。
 
 ## Audience Managerの統合
 
-Adobe Audience Manager（AAM）には、IAB TCF 2.0 のサポートが含まれています。これにより、お客様のプライバシーに関する選択肢を評価、順守、ダウンストリームのパートナーに転送できます。 <!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
+Adobe Audience Manager（AAM）には、IAB TCF 2.0 のサポートが含まれています。これにより、お客様のプライバシーに関する選択肢を評価、順守、ダウンストリームのパートナーに転送できます。<!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
 
 >[!TIP]
 >
@@ -48,10 +48,10 @@ Real-Time CDPとAudience Managerのオーディエンスは、顧客の現在の
 
 イベントに関する同意情報を収集するには、次の操作が必要です。
 
-- に基づくデータセット [!DNL XDM Experience Event] クラス（を使用） [!DNL Experience Event] プライバシースキーマフィールドグループ。
-- で設定されたデータストリーム [!DNL XDM Experience Event] 上記のデータセット。
+- [!DNL Experience Event] プライバシースキーマフィールドグループを持つ、[!DNL XDM Experience Event] クラスに基づくデータセット。
+- 上記の [!DNL XDM Experience Event] データセットで設定されたデータストリーム。
 
-XDM エクスペリエンスイベントを Analytics ヒットに変換する方法について詳しくは、を参照してください。 [Web SDK を使用したAdobe Analyticsへのデータの送信](/help/web-sdk/use-cases/adobe-analytics.md).
+XDM エクスペリエンスイベントを Analytics ヒットに変換する方法について詳しくは、[Web SDK を使用したAdobe Analyticsへのデータ送信 ](/help/web-sdk/use-cases/adobe-analytics.md) を参照してください。
 
 ## Adobe Experience Platform Web SDK の統合
 
@@ -65,25 +65,25 @@ XDM エクスペリエンスイベントを Analytics ヒットに変換する�
 
 顧客に同意設定が既に保存されていない場合は、デフォルトの同意が使用されます。 つまり、デフォルトの同意オプションが、Adobe Experience Platform Web SDK の動作を制御し、顧客の地域に基づいて変化する可能性があります。
 
-例えば、EU 一般データ保護規則（GDPR）の管轄権外の顧客がいる場合、デフォルトの同意を次のように設定できます。 `in`ただし、GDPR の管轄権内では、デフォルトの同意をに設定できます。 `pending`. 同意管理プラットフォーム（CMP）が顧客の地域を検出し、フラグを提供する場合があります `gdprApplies` IAB TCF 2.0 にアップグレードします。このフラグは、デフォルトの同意を設定するために使用できます。 参照： [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) を参照してください。
+例えば、お客様が EU 一般データ保護規則（GDPR）の管轄権外にある場合、デフォルトの同意は `in` に設定されますが、GDPR の管轄権内にある場合はデフォルトの同意を `pending` に設定できます。 お客様の同意管理プラットフォーム（CMP）が顧客の地域を検出し、IAB TCF 2.0 に `gdprApplies` するフラグを提供している場合があります。このフラグは、デフォルトの同意を設定するために使用できます。 詳細は、[`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) を参照してください。
 
 ### 変更時の同意の設定
 
-Adobe Experience Platform Web SDK には、 `setConsent` コマンド：IAB TCF 2.0 を使用するすべてのAdobe サービスに顧客の同意環境設定を伝えます。Real-Time CDPと統合している場合は、顧客プロファイルが更新されます。 をAudience Managerと統合すると、お客様の情報が更新されます。 これを呼び出すと、今後のエクスペリエンスイベントの送信を許可するかどうかを制御する、all-or-nothing の同意環境設定を持つ Cookie も設定されます。 このアクションは、同意が変更されるたびに呼び出されることを目的としています。 今後のページ読み込み時に、Edge Network同意 Cookie が読み取られ、エクスペリエンスイベントを送信できるかどうか、および ID Cookie を設定できるかどうかを判断します。
+Adobe Experience Platform Web SDK には `setConsent` コマンドがあり、IAB TCF 2.0 を使用するすべてのAdobe サービスに顧客の同意環境設定を伝えます。Real-Time CDPと統合している場合は、顧客プロファイルが更新されます。 をAudience Managerと統合すると、お客様の情報が更新されます。 これを呼び出すと、今後のエクスペリエンスイベントの送信を許可するかどうかを制御する、all-or-nothing の同意環境設定を持つ Cookie も設定されます。 このアクションは、同意が変更されるたびに呼び出されることを目的としています。 今後のページ読み込み時に、Edge Network同意 Cookie が読み取られ、エクスペリエンスイベントを送信できるかどうか、および ID Cookie を設定できるかどうかを判断します。
 
 Audience Managerが次の目的に明示的に同意している場合、IAB TCF 2.0 統合と同様に、Edge Networkは同意を与えます。
 
-- **目的 1:** デバイス上での情報の保存やアクセス
-- **目的 10:** 製品の開発と改善
-- **特別な目的 1:** セキュリティの確保、不正の防止、デバッグ （IAB TCF 規制に従い、これは常に同意されます）
-- **Adobe ベンダーのアクセス許可：** Adobeの同意（ベンダー 565）
+- **目的 1:** デバイス上の情報の保存やアクセス
+- **目的 10:** 製品の開発・改良
+- **特別な目的 1:** セキュリティの確保、詐欺の防止、デバッグ。 （IAB TCF 規制に従い、これは常に同意されます）
+- **Adobe仕入先のアクセス許可：** Adobeの同意（仕入先 565）
 
-の詳細 `setConsent` コマンド。に関する専用 Web SDK ドキュメントを参照してください [setConsent](../../../web-sdk/commands/setconsent.md).
+`setConsent` コマンドについて詳しくは、[setConsent](../../../web-sdk/commands/setconsent.md) に関する専用の Web SDK ドキュメントを参照してください。
 
 ### エクスペリエンスイベントへの同意の追加
 
-Adobe Experience Platform Web SDK には、 [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) エクスペリエンス イベントを収集するコマンド。 エクスペリエンスイベントまたはAdobe Analyticsと統合し、すべてのエクスペリエンスイベントで同意環境設定が必要な場合は、すべてに同意情報を追加します `sendEvent` コマンド。
+Adobe Experience Platform Web SDK には、エクスペリエンスイベントを収集する [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) コマンドがあります。 エクスペリエンスイベントまたはAdobe Analyticsと統合し、すべてのエクスペリエンスイベントで同意環境設定が必要な場合は、すべての `sendEvent` コマンドに同意情報を追加します。
 
 ## 次の手順
 
-これで、IAB Transparency &amp; Consent Framework 2.0 の基本的な理解が整ったので、IAB TCF 2.0 の使用に関するガイドのいずれかを参照してください [タグ付き](./with-tags.md) または [タグなし](./without-tags.md).
+これで、IAB Transparency &amp; Consent Framework 2.0 の基本的な理解が整いました。IAB TCF 2.0 の使用に関するガイド [ タグ付き ](./with-tags.md) または [ タグなし ](./without-tags.md) のいずれかを参照してください。

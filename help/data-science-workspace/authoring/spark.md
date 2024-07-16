@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；データアクセス；spark sdk；データアクセス api;spark レシピ；read spark;write spark
+keywords: Experience Platform；ホーム；人気のトピック；データアクセス；spark sdk;data access api;spark レシピ；spark の読み取り；spark の書き込み
 solution: Experience Platform
-title: Data Science Workspace の Spark を使用したデータへのアクセス
+title: Data Science Workspaceでの Spark を使用したデータへのアクセス
 type: Tutorial
-description: 次のドキュメントには、Spark を使用して Data Science Workspace でデータにアクセスし、使用する方法の例が含まれています。
+description: 次のドキュメントでは、Data Science Workspaceで使用する Spark を使用してデータにアクセスする方法の例を示します。
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
 
-# Data Science Workspace の Spark を使用したデータへのアクセス
+# データサイエンスWorkspaceでの Spark を使用したデータへのアクセス
 
-次のドキュメントには、Spark を使用して Data Science Workspace でデータにアクセスし、使用する方法の例が含まれています。 JupyterLab ノートブックを使用したデータへのアクセスについては、 [JupyterLab ノートブックのデータアクセス](../jupyterlab/access-notebook-data.md) ドキュメント。
+次のドキュメントでは、Data Science Workspaceで使用する Spark を使用してデータにアクセスする方法の例を示します。 JupyterLab ノートブックを使用したデータへのアクセスについて詳しくは、[JupyterLab ノートブックのデータアクセス ](../jupyterlab/access-notebook-data.md) のドキュメントを参照してください。
 
 ## はじめに
 
-使用 [!DNL Spark] には、 `SparkSession`. また、 `configProperties` 後でデータセットに読み書きする場合に使用します。
+[!DNL Spark] を使用するには、`SparkSession` に追加する必要があるパフォーマンスの最適化が必要です。 また、データセットに対する読み取りと書き込みを後で行うように `configProperties` を設定することもできます。
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -47,13 +47,13 @@ Class Helper {
 
 ## データセットの読み取り
 
-Spark を使用する場合は、次の 2 つの読み取りモードにアクセスできます。インタラクティブおよびバッチ。
+Spark を使用する際は、インタラクティブとバッチの 2 つの読み取りモードにアクセスできます。
 
-インタラクティブモードは、Java Database Connectivity(JDBC) 接続を [!DNL Query Service] とは、通常の JDBC を通じて結果を取得します。 `ResultSet` が `DataFrame`. このモードは、組み込みの [!DNL Spark] メソッド `spark.read.jdbc()`. このモードは、小さなデータセットにのみ使用します。 データセットの行数が 500 万行を超える場合は、バッチモードに置き換えることをお勧めします。
+インタラクティブモードは、[!DNL Query Service] への Java Database Connectivity （JDBC）接続を作成し、`DataFrame` に自動変換される通常の JDBC `ResultSet` を通じて結果を取得します。 このモードは、組み込みの [!DNL Spark] メソッド `spark.read.jdbc()` と同様に機能します。 このモードは、小規模なデータセットのみを対象としています。 データセットが 500 万行を超える場合は、バッチモードにスワップすることをお勧めします。
 
-バッチモードでは [!DNL Query Service]の COPY コマンドを使用して、共有場所に Parquet 結果セットを生成します。 これらの Parquet ファイルは、後で処理できます。
+バッチモードでは、[!DNL Query Service] の COPY コマンドを使用して、共有場所に Parquet 結果セットを生成します。 その後、これらの Parquet ファイルをさらに処理できます。
 
-インタラクティブモードでのデータセットの読み取りの例を次に示します。
+インタラクティブモードでのデータセットの読み取り例を以下に示します。
 
 ```scala
   // Read the configs
@@ -78,7 +78,7 @@ Spark を使用する場合は、次の 2 つの読み取りモードにアク�
   }
 ```
 
-同様に、バッチモードでのデータセットの読み取りの例を次に示します。
+同様に、バッチモードでデータセットを読み取る例を次に示します。
 
 ```scala
 val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
@@ -101,9 +101,9 @@ df = df.select("column-a", "column-b").show()
 
 ### DISTINCT 句
 
-DISTINCT 句を使用すると、行/列レベルですべてのユニーク値を取得し、応答からすべての重複値を削除できます。
+DISTINCT 句を使用すると、行/列レベルでユニークな値をすべて取得し、応答から重複する値をすべて削除できます。
 
-の使用例 `distinct()` 関数は次のように表示されます。
+`distinct()` 関数の使用例を次に示します。
 
 ```scala
 df = df.select("column-a", "column-b").distinct().show()
@@ -111,9 +111,9 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### WHERE 句
 
-この [!DNL Spark] SDK では、次の 2 つのフィルタリング方法を使用できます。SQL 式を使用するか、条件をフィルタリングして使用します。
+[!DNL Spark] SDK でフィルタリングできる方法は、SQL 式を使用する方法と、条件を使用したフィルタリング方法の 2 つです。
 
-これらのフィルタリング関数の使用例を以下に示します。
+これらのフィルター関数の使用例を次に示します。
 
 #### SQL 式
 
@@ -129,9 +129,9 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### ORDER BY 句
 
-ORDER BY 句を使用すると、受け取った結果を特定の順序（昇順または降順）で指定した列で並べ替えることができます。 内 [!DNL Spark] SDK の場合、これは `sort()` 関数に置き換えます。
+ORDER BY 句を使用すると、指定した列を指定した順序（昇順または降順）で並べ替えて、受信した結果を表示できます。 [!DNL Spark] SDK では、`sort()` 関数を使用してこれを行います。
 
-の使用例 `sort()` 関数は次のように表示されます。
+`sort()` 関数の使用例を次に示します。
 
 ```scala
 df = df.sort($"column1", $"column2".desc)
@@ -139,9 +139,9 @@ df = df.sort($"column1", $"column2".desc)
 
 ### LIMIT 句
 
-LIMIT 句を使用すると、データセットから受け取るレコードの数を制限できます。
+LIMIT 句を使用すると、データセットから受信するレコードの数を制限できます。
 
-の使用例 `limit()` 関数は次のように表示されます。
+`limit()` 関数の使用例を次に示します。
 
 ```scala
 df = df.limit(100)
@@ -149,7 +149,7 @@ df = df.limit(100)
 
 ## データセットへの書き込み
 
-を使用して、 `configProperties` マッピングを使用する場合は、次を使用してExperience Platform内のデータセットに書き込むことができます `QSOption`.
+`configProperties` マッピングを使用すると、`QSOption` を使用してExperience Platformのデータセットに書き込むことができます。
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
@@ -169,4 +169,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## 次の手順
 
-Adobe Experience Platform Data Science Workspace には、上記のコードサンプルを使用してデータの読み取りと書き込みをおこなう Scala(Spark) レシピのサンプルが用意されています。 Spark を使用してデータにアクセスする方法の詳細については、 [Data Science Workspace Scala GitHub リポジトリ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).
+Adobe Experience Platform Data Science Workspaceは、上記のコードサンプルを使用してデータの読み取りと書き込みを行う Scala （Spark）レシピサンプルを提供します。 Spark を使用してデータにアクセスする方法について詳しくは、[ データサイエンス Workspace Scala GitHub リポジトリ ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala) を参照してください。

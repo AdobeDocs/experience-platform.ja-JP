@@ -4,8 +4,8 @@ title: Destination SDK の概要
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 89%
+source-wordcount: '583'
+ht-degree: 86%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 89%
 
 Destination SDK では、認証に [Adobe I/O](https://www.adobe.io/) ゲートウェイを使用します。 Destination SDK エンドポイントへの API 呼び出しを行うには、API 呼び出しで特定のヘッダーを指定する必要があります。 Adobe Exchange チームと協力して、[Adobe デベロッパーコンソール](https://developer.adobe.com/console)への認証を設定してください。
 
-Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。チュートリアルは、「[API キー、組織 ID、クライアントの秘密鍵を生成する](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret)&quot;ステップ。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
+Destination SDK API エンドポイントへの呼び出しを成功させるには、 [Experience Platform 認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)に従います。[API キー、組織 ID およびクライアント秘密鍵の生成」ステップからチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#api-ims-secret) 開始します。 Adobe Exchange チームが、それ以前の手順を代行します。 認証チュートリアルを完了すると、以下に示すような Destination SDK API 呼び出しで必要な各ヘッダーの値が提供されます。
 
 * `x-api-key: {API_KEY}`（クライアント ID とも呼ばれます）
 * `x-gw-ims-org-id: {ORG_ID}`（組織 ID とも呼ばれます）
@@ -68,7 +68,7 @@ Adobe Exchange チームが提供するサンドボックス名は、Destination
 
 ## その他の留意事項 {#additional-considerations}
 
-* 製品化された/公開先の場合、宛先設定に対しておこなった変更（宛先設定の作成または編集を問わず）は、Adobeが確認および承認する必要があります。 変更内容は、審査が完了した後にのみ、宛先に反映されます。これは、自分だけが利用できるプライベートの宛先には適用されません。
+* 製品化された宛先や公開されている宛先の場合、宛先設定を作成したり編集したりして宛先設定に加える変更は、Adobeによるレビューと承認が必要です。 変更内容は、レビューが完了した後にのみ、宛先に反映されます。 自分だけが使用できるプライベート宛先には適用されません。
 * 宛先設定を編集できるのは、同じ組織に所属し、サンドボックスにアクセスできるユーザーのみです。
 
 ## 次の手順 {#next-steps}

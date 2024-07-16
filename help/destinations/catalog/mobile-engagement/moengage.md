@@ -1,6 +1,6 @@
 ---
-title: 接続を移動
-description: Moengage は、消費者とブランドの間の顧客中心のインタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。
+title: Moengage 接続
+description: Moengage は、消費者とブランドの間の顧客中心インタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
 source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
@@ -14,23 +14,23 @@ ht-degree: 37%
 
 ## 概要 {#overview}
 
-以下を使用します。 [!DNL Moengage] 宛先を使用して、Adobeデータ（ユーザー属性、セグメントおよびイベント）を MoEngage にリアルタイムで接続およびマッピングします。 その後、顧客はこのデータに基づいて行動し、パーソナライズされたターゲット設定されたエクスペリエンスを提供できます。
+[!DNL Moengage] の宛先を使用して、Adobeデータ（ユーザー属性、セグメント、イベント）を MoEngage にリアルタイムに接続およびマッピングします。 その後、顧客はこのデータに基づいて行動し、パーソナライズされたターゲット設定されたエクスペリエンスを提供できます。
 
-Adobeにより、統合は非常にシンプルで直感的です。 任意のAdobeユーザープロファイルを取得し、MoEngage ユーザー属性にマッピングするだけです。
+Adobeを使用すると、統合は非常にシンプルで直感的になります。 任意のAdobeユーザープロファイルを取得し、MoEngage ユーザー属性にマッピングするだけです。
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、 *Moengage* チーム。 お問い合わせや更新のリクエストについては、*`https://help.moengage.com/hc/en-us`まで直接ご連絡ください。*
+>この宛先コネクタとドキュメントページは、*Moengage* チームが作成および管理します。 お問い合わせや更新のリクエストについては、*`https://help.moengage.com/hc/en-us`まで直接ご連絡ください。*
 
 ## ユースケース {#use-cases}
 
-マーケターは、を介して (Adobe Experience Platformに組み込まれた ) ユーザーセグメントをターゲティングしたいと考えています。 [!DNL Moengage] キャンペーン。 また、Adobe Experience Platformプロファイルの属性に基づいてキャンペーンのコンテンツをパーソナライズする必要があります。 この統合により、Adobe Experience Platformでセグメントとプロファイルが更新されると、ユーザーと属性がすぐに MoEngage で更新されます。
+マーケターが [!DNL Moengage] キャンペーンを通じて、（Adobe Experience Platformで作成された）ユーザーセグメントのターゲットを設定したいと考えています。 また、Adobe Experience Platform プロファイルの属性に基づいてキャンペーンコンテンツをパーソナライズする必要もあります。 この統合により、Adobe Experience Platformでセグメントとプロファイルが更新されるとすぐに、MoEngage でユーザーと属性が更新されます。
 
 ## 前提条件 {#prerequisites}
 
-にAdobe Experience Platformデータを送信する前に [!DNL Moengage]に設定する場合は、次の前提条件に注意します。
+Adobe Experience Platform データを [!DNL Moengage] に送信する前に、次の前提条件に注意してください。
 
-* Adobe Experience Platformで MoEngage の宛先を使用するには、最初にユーザーが、 [!DNL Moengage] アカウント。 MoEngage アカウントに登録またはログインするには、次のページにアクセスしてください。 https://app.moengage.com
+* Adobe Experience Platformで MoEngage の宛先を使用するには、まず [!DNL Moengage] アカウントにアクセスできる必要があります。 次のページにアクセスして、MoEngage アカウントに新規登録またはログインしてください：https://app.moengage.com
 
 
 ## サポートされる ID {#supported-identities}
@@ -39,8 +39,8 @@ Adobeにより、統合は非常にシンプルで直感的です。 任意のAd
 
 | ターゲット ID | 説明 | 注意点 |
 |---|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| user_id | 内のユーザープロファイルを一意に識別する一意の識別子 [!DNL Moengage] システム。 | この識別子は文字列タイプをサポートします。 user_id または anonymous_id のいずれかが必要です |
-| anonymous_id | 不明なユーザープロファイルの別の識別子 — システムに存在しないプロファイルを表します。 | この識別子は文字列タイプをサポートします。 user_id または anonymous_id のいずれかが必要です |
+| user_id | [!DNL Moengage] システム内のユーザープロファイルを一意に識別する一意の識別子。 | この識別子は、文字列タイプをサポートします。 user_id または anonymous_id のいずれかが必要です |
+| anonymous_id | 不明なユーザープロファイルのもう 1 つの識別子（システムに存在しないプロファイルを意味します）。 | この識別子は、文字列タイプをサポートします。 user_id または anonymous_id のいずれかが必要です |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Adobeにより、統合は非常にシンプルで直感的です。 任意のAd
 
 | 項目 | タイプ | メモ |
 ---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメント（オーディエンス）のすべてのメンバーを、識別子 (user_id、anonymous_id) と共に、に書き出した際に定義したカスタム属性と共に書き出します。 [!DNL Moengage]. |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | 識別子（user_id、anonymous_id）と、で定義されたカスタム属性を [!DNL Moengage] に書き出したセグメント（オーディエンス）のすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -59,7 +59,7 @@ Adobeにより、統合は非常にシンプルで直感的です。 任意のAd
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -67,20 +67,20 @@ Adobeにより、統合は非常にシンプルで直感的です。 任意のAd
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![宛先の認証を移動](../../assets/catalog/mobile-engagement/moengage/authentication.png)
+![Moengage 宛先認証 ](../../assets/catalog/mobile-engagement/moengage/authentication.png)
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-![宛先の認証を移動](../../assets/catalog/mobile-engagement/moengage/settings.png)
-* **[!UICONTROL ユーザー名]**：の設定ページのデータアプリ ID [!DNL Moengage] ダッシュボード。
-* **[!UICONTROL パスワード]**：の設定ページのデータアプリキー [!DNL Moengage] ダッシュボード。
+![Moengage 宛先認証 ](../../assets/catalog/mobile-engagement/moengage/settings.png)
+* **[!UICONTROL ユーザー名]**：ダッシュボードの設定ページのデータアプリ ID[!DNL Moengage] す。
+* **[!UICONTROL パスワード]**：ダッシュボードの設定ページのデータアプリキー [!DNL Moengage] す。
 
-![宛先の認証を移動](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
+![Moengage 宛先認証 ](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL 地域]**：アプリ *データセンター*.
+* **[!UICONTROL 地域]**：アプリ *データセンター*。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -92,60 +92,60 @@ Adobeにより、統合は非常にシンプルで直感的です。 任意のAd
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-オーディエンスデータを次の場所から正しく送信するには： [!DNL Adobe Experience Platform] から [!DNL Moengage] の宛先に移動する場合は、フィールドマッピングの手順を実行する必要があります。
+オーディエンスデータを [!DNL Adobe Experience Platform] から [!DNL Moengage] の宛先に正しく送信するには、フィールドマッピングの手順を実行する必要があります。
 
-マッピングは、 [!DNL Experience Data Model] (XDM) スキーマフィールド ( [!DNL Platform] アカウントおよびターゲット宛先からの対応する同等物。
+マッピングは、[!DNL Platform] アカウントの [!DNL Experience Data Model] （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
 
 XDM フィールドを [!DNL Moengage] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
-Adobe Analytics の [!UICONTROL マッピング] ステップ、選択 **[!UICONTROL チェックボックス]**.
+[!UICONTROL  マッピング ] ステップで、「**[!UICONTROL チェックボックス]**」を選択します。
 
-![宛先の追加マッピングを移動](../../assets/catalog/mobile-engagement/moengage/segments.png)
+![Moengage 宛先追加マッピング ](../../assets/catalog/mobile-engagement/moengage/segments.png)
 
-Adobe Analytics の [!UICONTROL マッピング] ステップ、選択 **[!UICONTROL 新しいマッピングを追加]**.
+[!UICONTROL  マッピング ] 手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。
 
-![宛先の追加マッピングを移動](../../assets/catalog/mobile-engagement/moengage/mapping.png)
+![Moengage 宛先追加マッピング ](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 
-Adobe Analytics の [!UICONTROL ソースフィールド] 「 」セクションで、空のフィールドの横にある矢印ボタンを選択します。
+「[!UICONTROL Source フィールド ]」セクションで、空のフィールドの横にある矢印ボタンを選択します。
 
-![宛先ソースマッピングの移動](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
+![Moengage 宛先Sourceのマッピング ](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
-Adobe Analytics の [!UICONTROL ソースフィールドを選択] ウィンドウで、次の 2 つのカテゴリの XDM フィールドを選択できます。
-* [!UICONTROL 属性を選択]：このオプションを使用して、XDM スキーマの特定のフィールドをにマッピングします。 [!DNL Moengage] 属性。
+[!UICONTROL  ソースフィールドを選択 ] ウィンドウでは、XDM フィールドの次の 2 つのカテゴリから選択できます。
+* [!UICONTROL  属性を選択 ]：このオプションを使用して、XDM スキーマから特定のフィールドを属性にマッピン [!DNL Moengage] します。
 
-![宛先マッピングソース属性を移動](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
+![Moengage 宛先マッピングSource属性 ](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
 
-ソースフィールドを選択し、「 」を選択します。 **[!UICONTROL 選択]**.
+ソースフィールドを選択してから、「**[!UICONTROL 選択]** を選択します。
 
-Adobe Analytics の [!UICONTROL ターゲットフィールド] 「 」セクションで、「 」フィールドの右側にあるマッピングアイコンを選択します。
+「[!UICONTROL  ターゲットフィールド ]」セクションで、フィールドの右側にあるマッピングアイコンを選択します。
 
-![宛先ターゲットマッピングの移動](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
+![Moengage 宛先ターゲットマッピング ](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
-Adobe Analytics の [!UICONTROL ターゲットフィールドを選択] ウィンドウで、次の 2 つのカテゴリのターゲットフィールドを選択できます。
-* [!UICONTROL ID 名前空間を選択]：このオプションを使用して、マッピングします。 [!DNL Platform] ID 名前空間への変換 [!DNL Moengage] ID 名前空間。
-* [!UICONTROL カスタム属性を選択]：このオプションを使用して、XDM 属性をカスタムにマッピングします [!DNL Moengage] 属性 [!DNL Moengage] アカウント。 <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Moengage]. 例えば、 `lastName` カスタムの XDM 属性 `Last_Name` 属性 [!DNL Moengage]、を作成します。 `Last_Name` 属性 [!DNL Moengage]（まだ存在しない場合）、および `lastName` XDM 属性を含めています。
+[!UICONTROL  ターゲットフィールドを選択 ] ウィンドウでは、次の 2 つのカテゴリのターゲットフィールドから選択できます。
+* [!UICONTROL ID 名前空間を選択 ]：このオプションを使用して、ID 名前空間 [!DNL Platform]ID 名前空間にマッピン [!DNL Moengage] します。
+* [!UICONTROL  カスタム属性を選択 ]：このオプションを使用して、XDM 属性を [!DNL Moengage] アカウントで定義したカスタム [!DNL Moengage] 属性にマッピングします。 <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Moengage] に変更することもできます。 例えば、`lastName` XDM 属性を [!DNL Moengage] のカスタム `Last_Name` 属性にマッピングすると、`Last_Name` 属性が存在しない場合は [!DNL Moengage] に作成し、`lastName` XDM 属性をマッピングします。
 
-![宛先ターゲットマッピングフィールドの移動](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
+![Moengage 宛先ターゲットマッピングフィールド ](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 
-ターゲットフィールドを選択し、「 」を選択します。 **[!UICONTROL 選択]**.
+ターゲットフィールドを選択し、「**[!UICONTROL 選択]** を選択します。
 
 これで、リストにフィールドマッピングが表示されます。
 
-![移動先マッピング完了](../../assets/catalog/mobile-engagement/moengage/mapping-complete.png)
+![Moengage 宛先マッピングの完了 ](../../assets/catalog/mobile-engagement/moengage/mapping-complete.png)
 
-さらにマッピングを追加するには、上記の手順を繰り返します。
+さらにマッピングを追加するには、前の手順を繰り返します。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-データがに正常に書き出されたかどうかを確認するには、以下を実行します。 [!DNL Moengage] の宛先に移動するには、 [!DNL Moengage] アカウント。 AEP セグメントと呼ばれるユーザー属性が表示されます。
+データがに正常に [!DNL Moengage] の宛先に書き出されたかどうかを確認するには、[!DNL Moengage] アカウントのユーザープロファイルに移動します。 AEP セグメントというユーザー属性が表示されます。
 
-![移動先マッピング完了](../../assets/catalog/mobile-engagement/moengage/validation.png)
+![Moengage 宛先マッピングの完了 ](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 

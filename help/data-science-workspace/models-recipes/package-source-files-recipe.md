@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；ソースファイルのパッケージ化；Data Science Workspace；人気の高いトピック；Docker;Docker イメージ
+keywords: Experience Platform；パッケージソースファイル；Data Science Workspace；人気のトピック；Docker;docker image
 solution: Experience Platform
-title: ソースファイルのレシピへのパッケージ化
+title: Source ファイルのレシピへのパッケージ化
 type: Tutorial
 description: このチュートリアルでは、用意されている Retail Sales サンプルソースファイルをアーカイブファイルにパッケージ化する方法について説明します。このアーカイブファイルは、UI のレシピインポートワークフローに従うか API を使用して、Adobe Experience Platform の Data Science Workspace でレシピを作成するのに使用できます。
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 47%
+source-wordcount: '1143'
+ht-degree: 44%
 
 ---
 
 # ソースファイルのレシピへのパッケージ化
 
-このチュートリアルでは、提供された Retail Sales のサンプルソースファイルをアーカイブファイルにパッケージ化する方法を説明します。アーカイブファイルは、Adobe Experience Platformでレシピを作成するために使用できます [!DNL Data Science Workspace] （UI または API を使用してレシピのインポートワークフローに従う）
+このチュートリアルでは、提供された Retail Sales サンプルソースファイルをアーカイブファイルにパッケージ化する方法について説明します。このファイルを使用して、UI または API でレシピの読み込みワークフローに従って、Adobe Experience Platform [!DNL Data Science Workspace] でレシピを作成できます。
 
 理解しておくべき概念：
 
@@ -30,62 +30,61 @@ ht-degree: 47%
 
 ## レシピの作成
 
-レシピを作成するには、まず、ソースファイルをパッケージ化してアーカイブファイルを作成します。ソースファイルは、現在抱えている特定の問題の解決に使用される機械学習ロジックとアルゴリズムを定義し、次のいずれかの方法で記述されます。 [!DNL Python]、R、PySpark、Scala のいずれかです。 作成されたアーカイブファイルは、Docker イメージの形式を取ります。 パッケージ化されたアーカイブファイルは、作成後、 [!DNL Data Science Workspace] レシピを作成するには [UI 内](./import-packaged-recipe-ui.md) または [API の使用](./import-packaged-recipe-api.md).
+レシピを作成するには、まず、ソースファイルをパッケージ化してアーカイブファイルを作成します。Source ファイルは、特定の問題を目の前で解決するために使用される機械学習ロジックとアルゴリズムを定義し、[!DNL Python]、R、PySpark、Scala のいずれかで記述されます。 構築されたアーカイブファイルは、Docker イメージの形式を取ります。 ビルドが完了すると、パッケージ化されたアーカイブファイルが [!DNL Data Science Workspace] に読み込まれ、[UI で ](./import-packaged-recipe-ui.md) または [API を使用して ](./import-packaged-recipe-api.md) レシピが作成されます。
 
 ### Docker ベースのモデルオーサリング {#docker-based-model-authoring}
 
 Docker イメージを使用すると、開発者は、ライブラリや他の依存コンポーネントなど、必要なすべての構成要素を含めてアプリケーションをパッケージ化し、1 つのパッケージとして提供できます。
 
-作成された Docker イメージは、レシピ作成ワークフロー時に提供された資格情報を使用して、Azure Container Registry にプッシュされます。
+ビルドされた Docker イメージは、レシピ作成ワークフロー中に提供された資格情報を使用して、Azure コンテナレジストリにプッシュされます。
 
-Azure Container Registry の資格情報を取得するには、[Adobe Experience Platform](https://platform.adobe.com) にログインします。左側のナビゲーション列で、「**[!UICONTROL Workflows]**」に移動します。選択 **[!UICONTROL レシピを読み込む]** 続いて選択する **[!UICONTROL 起動]**. 以下のスクリーンショットを参照してください。
+Azure Container Registry の資格情報を取得するには、[Adobe Experience Platform](https://platform.adobe.com) にログインします。左側のナビゲーション列で、「**[!UICONTROL Workflows]**」に移動します。**[!UICONTROL レシピを読み込み]** を選択してから、「**[!UICONTROL 起動]** を選択します。 以下のスクリーンショットを参照してください。
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-この **[!UICONTROL 設定]** ページが開きます。 適切なレシピ名（「Retail Sales recipe」など）を「**[!UICONTROL Recipe name]**」に入力し、オプションで説明やドキュメント URL を入力します。完了したら、「**[!UICONTROL Next]**」をクリックします。
+**[!UICONTROL 設定]** ページが開きます。 適切なレシピ名（「Retail Sales recipe」など）を「**[!UICONTROL Recipe name]**」に入力し、オプションで説明やドキュメント URL を入力します。完了したら、「**[!UICONTROL Next]**」をクリックします。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-適切な *ランタイム*&#x200B;を選択し、 **[!UICONTROL 分類]** 対象 *タイプ*. Azure Container Registry の資格情報は、完了すると生成されます。
+適切な *Runtime* を選択してから、「タイプ *に&#x200B;**[!UICONTROL 分類]**を選択し* す。 Azure コンテナレジストリ資格情報は、完了すると生成されます。
 
 >[!NOTE]
 >
->*タイプ* は、レシピが設計される機械学習の問題のクラスで、トレーニングの後に使用され、トレーニングの実行状況の評価に役立ちます。
+>*タイプ* は、レシピの設計対象である機械学習問題のクラスで、トレーニング後にトレーニング実行の評価を調整するために使用されます。
 
 >[!TIP]
 >
->- の場合 [!DNL Python] レシピ選択 **[!UICONTROL Python]** ランタイム。
->- R レシピの場合は、 **[!UICONTROL R]** ランタイム。
->- PySpark のレシピの場合、 **[!UICONTROL PySpark]** ランタイム。 アーティファクトタイプが自動入力されます。
->- Scala レシピの場合は、 **[!UICONTROL Spark]** ランタイム。 アーティファクトタイプが自動入力されます。
-
+>- [!DNL Python] のレシピには、**[!UICONTROL Python]** ランタイムを選択します。
+>- R レシピの場合は、**[!UICONTROL R]** ランタイムを選択します。
+>- PySpark レシピの場合は、**[!UICONTROL PySpark]** ランタイムを選択します。 アーティファクトタイプが自動入力されます。
+>- Scala レシピの場合は、**[!UICONTROL Spark]** ランタイムを選択します。 アーティファクトタイプが自動入力されます。
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Docker ホスト、ユーザー名、パスワードの値をメモします。 これらは、 [!DNL Docker] 以下に概要を示すワークフローの画像を参照してください。
+Docker ホスト、ユーザー名、パスワードの値を書き留めます。 これらは、以下に概要を示すワークフローで、[!DNL Docker] イメージを作成およびプッシュするために使用されます。
 
 >[!NOTE]
 >
->ソース URL は、以下の手順を完了すると表示されます。 設定ファイルについては、 [次の手順](#next-steps).
+>Sourceの URL は、以下に概説されている手順を完了した後に提供されます。 設定ファイルについては、以降の [ 次の手順 ](#next-steps) のチュートリアルで説明します。
 
 ### ソースファイルのパッケージ化
 
-まず、<a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a> リポジトリーにあるサンプルコードベースを取得します。
+まず、<a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience PlatformデータサイエンスWorkspace リファレンス </a> リポジトリにあるサンプルコードベースを取得します。
 
 - [Python Docker イメージの作成](#python-docker)
 - [R Docker イメージの作成](#r-docker)
-- [PySpark Docker イメージの作成](#pyspark-docker)
-- [Scala(Spark)Docker イメージの作成](#scala-docker)
+- [PySpark Docker イメージのビルド](#pyspark-docker)
+- [Scala （Spark） Docker イメージの作成](#scala-docker)
 
-### ビルド [!DNL Python] Docker 画像 {#python-docker}
+### Docker イメージ [!DNL Python] ビルド {#python-docker}
 
-まだクローンしていない場合は、 [!DNL GitHub] 次のコマンドを使用して、ローカルシステムにリポジトリーを設定します。
+まだ行っていない場合は、次のコマンドを使用して、[!DNL GitHub] リポジトリをローカルシステムにクローンします。
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-`experience-platform-dsw-reference/recipes/python/retail` ディレクトリに移動します。ここに、スクリプトがあります `login.sh` および `build.sh` Docker にログインし、 [!DNL Python Docker] 画像。 [Docker の資格情報](#docker-based-model-authoring)が既にある場合は、次のコマンドを順に入力します。
+`experience-platform-dsw-reference/recipes/python/retail` ディレクトリに移動します。ここには、Docker へのログインと [!DNL Python Docker] イメージの構築に使用されるスクリプト `login.sh` と `build.sh` があります。 [Docker の資格情報](#docker-based-model-authoring)が既にある場合は、次のコマンドを順に入力します。
 
 ```BASH
 # for logging in to Docker
@@ -95,7 +94,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ./build.sh
 ```
 
-ログインスクリプトを実行する際には、Docker のホスト、ユーザー名、パスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
+ログインスクリプトを実行する際は、Docker のホスト、ユーザー名およびパスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
 
 ビルドスクリプトが完了したら、Docker ソースファイルの URL がコンソール出力に表示されます。この例では、次のようになります。
 
@@ -106,15 +105,15 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 この URL をコピーして、[次の手順](#next-steps)に進みます。
 
-### ビルド R [!DNL Docker] 画像 {#r-docker}
+### ビルド R [!DNL Docker] イメージ {#r-docker}
 
-まだクローンしていない場合は、 [!DNL GitHub] 次のコマンドを使用して、ローカルシステムにリポジトリーを設定します。
+まだ行っていない場合は、次のコマンドを使用して、[!DNL GitHub] リポジトリをローカルシステムにクローンします。
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-クローンリポジトリー内の `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` ディレクトリに移動します。ここで、ファイルが見つかります `login.sh` および `build.sh` Docker にログインする際や、R Docker イメージを作成する際に使用する [Docker の資格情報](#docker-based-model-authoring)が既にある場合は、次のコマンドを順に入力します。
+クローンリポジトリー内の `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` ディレクトリに移動します。ここでは、Docker へのログインと R Docker イメージの構築に使用するファイル `login.sh` と `build.sh` を見つけます。 [Docker の資格情報](#docker-based-model-authoring)が既にある場合は、次のコマンドを順に入力します。
 
 ```BASH
 # for logging in to Docker
@@ -124,7 +123,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ./build.sh
 ```
 
-ログインスクリプトを実行する際には、Docker のホスト、ユーザー名、パスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
+ログインスクリプトを実行する際は、Docker のホスト、ユーザー名およびパスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
 
 ビルドスクリプトが完了したら、Docker ソースファイルの URL がコンソール出力に表示されます。この例では、次のようになります。
 
@@ -135,15 +134,15 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 この URL をコピーして、[次の手順](#next-steps)に進みます。
 
-### PySpark Docker イメージの作成 {#pyspark-docker}
+### PySpark Docker イメージのビルド {#pyspark-docker}
 
-最初に、 [!DNL GitHub] 次のコマンドを使用して、ローカルシステムにリポジトリーを設定します。
+まず、次のコマンドを使用して、[!DNL GitHub] リポジトリをローカルシステムにクローンします。
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-`experience-platform-dsw-reference/recipes/pyspark/retail` ディレクトリに移動します。スクリプト `login.sh` および `build.sh` はここにあり、Docker にログインしたり、Docker イメージを作成したりするために使用されます。 [Docker の資格情報](#docker-based-model-authoring)が既にある場合は、次のコマンドを順に入力します。
+`experience-platform-dsw-reference/recipes/pyspark/retail` ディレクトリに移動します。スクリプト `login.sh` と `build.sh` は、Docker へのログインと Docker イメージの構築に使用されます。 [Docker の資格情報](#docker-based-model-authoring)が既にある場合は、次のコマンドを順に入力します。
 
 ```BASH
 # for logging in to Docker
@@ -153,7 +152,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ./build.sh
 ```
 
-ログインスクリプトを実行する際には、Docker のホスト、ユーザー名、パスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
+ログインスクリプトを実行する際は、Docker のホスト、ユーザー名およびパスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
 
 ビルドスクリプトが完了したら、Docker ソースファイルの URL がコンソール出力に表示されます。この例では、次のようになります。
 
@@ -164,15 +163,15 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 この URL をコピーして、[次の手順](#next-steps)に進みます。
 
-### Scala Docker イメージの作成 {#scala-docker}
+### Scala Docker イメージのビルド {#scala-docker}
 
-最初に、 [!DNL GitHub] ターミナルで次のコマンドを使用して、ローカルシステムにリポジトリを追加します。
+ターミナルで次のコマンドを使用して、[!DNL GitHub] リポジトリをローカルシステムにクローンして開始します。
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-次に、ディレクトリに移動します。 `experience-platform-dsw-reference/recipes/scala` スクリプトの場所 `login.sh` および `build.sh`. これらのスクリプトは、Docker にログインし、Docker イメージを作成するために使用されます。 次の条件を満たしている場合、 [Docker 資格情報](#docker-based-model-authoring) 準備が整ったら、次のコマンドをターミナルに順に入力します。
+次に、ディレクトリ `experience-platform-dsw-reference/recipes/scala` に移動すると、スクリプト `login.sh` および `build.sh` が見つかります。 これらのスクリプトは、Docker へのログインと Docker イメージのビルドに使用されます。 [Docker 資格情報 ](#docker-based-model-authoring) の準備ができている場合は、次のコマンドをターミナルに順に入力します。
 
 ```BASH
 # for logging in to Docker
@@ -184,9 +183,9 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 >[!TIP]
 >
->を使用して Docker にログインしようとした際に、権限エラーが表示される場合は、 `login.sh` スクリプトを使用する場合は、コマンドを使用してみてください `bash login.sh`.
+>`login.sh` スクリプトを使用して Docker にログインしようとすると権限エラーが発生した場合は、コマンド `bash login.sh` を使用してみてください。
 
-ログインスクリプトを実行する際に、Docker のホスト、ユーザー名、パスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
+ログインスクリプトを実行する際は、Docker のホスト、ユーザー名、パスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
 
 ビルドスクリプトが完了したら、Docker ソースファイルの URL がコンソール出力に表示されます。この例では、次のようになります。
 
@@ -199,7 +198,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、ソースファイルをレシピにパッケージ化する方法について説明しました。これは、レシピをにインポートするための前提条件の手順です。 [!DNL Data Science Workspace]. これで、Azure Container Registry に Docker イメージと対応するイメージ URL が作成されました。 これで、パッケージ化されたレシピをにインポートする方法に関するチュートリアルを開始する準備が整いました。 [!DNL Data Science Workspace]. 以下のチュートリアルリンクの 1 つを選択して、作業を開始します。
+このチュートリアルでは、ソースファイルのレシピへのパッケージ化を確認しました。これは、レシピを [!DNL Data Science Workspace] に読み込むための前提条件です。 これで、Azure コンテナレジストリに、対応する画像 URL と共に Docker イメージが作成されました。 これで、パッケージ化されたレシピの [!DNL Data Science Workspace] への読み込みに関するチュートリアルを開始する準備が整いました。 開始するには、以下のいずれかのチュートリアルリンクを選択します。
 
-- [パッケージ化されたレシピのインポート（UI 版）](./import-packaged-recipe-ui.md)
-- [パッケージ化されたレシピのインポート（API 版）](./import-packaged-recipe-api.md)
+- [UI でのパッケージ化されたレシピの読み込み](./import-packaged-recipe-ui.md)
+- [API を使用したパッケージ化されたレシピの読み込み](./import-packaged-recipe-api.md)

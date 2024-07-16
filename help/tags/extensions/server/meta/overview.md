@@ -11,110 +11,110 @@ ht-degree: 0%
 
 # [!DNL Meta Conversions API] 拡張機能の概要
 
-この [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) では、サーバーサイドのマーケティングデータをに接続できます [!DNL Meta] 広告のターゲティングを最適化し、アクションあたりのコストを削減し、結果を測定するためのテクノロジーです。 イベントはにリンクされています [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID およびは、クライアントサイドイベントと同様の方法で処理されます。
+[[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) を使用すると、サーバーサイドのマーケティングデータを [!DNL Meta] テクノロジーに接続して、広告ターゲティングの最適化、アクションあたりのコストの削減、結果の測定を行うことができます。 イベントは [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID にリンクされ、クライアントサイドイベントと同様の方法で処理されます。
 
-使用， [!DNL Meta Conversions API] 拡張機能を使用すると、で API の機能を利用できます [イベント転送](../../../ui/event-forwarding/overview.md) にデータを送信するためのルール [!DNL Meta] Adobe Experience Platform Edge Networkから変更します。 このドキュメントでは、拡張機能をインストールし、イベント転送でその機能を使用する方法について説明します [ルール](../../../ui/managing-resources/rules.md).
+[!DNL Meta Conversions API] 拡張機能を使用すると、[ イベント転送 ](../../../ui/event-forwarding/overview.md) ルールで API 機能を活用して、Adobe Experience Platform Edge Networkから [!DNL Meta] にデータを送信できます。 このドキュメントでは、拡張機能をインストールし、イベント転送 [ ルール ](../../../ui/managing-resources/rules.md) でその機能を使用する方法について説明します。
 
 ## デモ
 
-次のビデオは、に関する理解を深めるためのものです [!DNL Meta Conversions API].
+次のビデオは、[!DNL Meta Conversions API] について理解を深めるためのものです。
 
 >[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
 
 ## 前提条件
 
-を使用することを強くお勧めします。 [!DNL Meta Pixel] および [!DNL Conversions API] で取得されなかったイベントの回復に役立つ可能性があるので、クライアントサイドとサーバーサイドでそれぞれ同じイベントを共有および送信します [!DNL Meta Pixel]. のインストール前に [!DNL Conversions API] 拡張機能については、のガイドを参照してください [[!DNL Meta Pixel] 拡張子](../../client/meta/overview.md) を参照して、クライアントサイドのタグ実装に統合する手順を確認してください。
+[!DNL Meta Pixel] と [!DNL Conversions API] を使用して、クライアント側とサーバー側で同じイベントを共有して送信することを強くお勧めします。[!DNL Meta Pixel] で取得されなかったイベントの回復に役立つ可能性があるからです。 [!DNL Conversions API] 拡張機能をインストールする前に、[[!DNL Meta Pixel]  拡張機能 ](../../client/meta/overview.md) に関するガイドを参照して、クライアントサイドのタグ実装に統合する手順を確認してください。
 
 >[!NOTE]
 >
->の節 [イベントの重複排除](#deduplication) このドキュメントの後半では、ブラウザーとサーバーの両方から受信する可能性があるので、同じイベントが 2 回使用されないようにする手順について説明します。
+>このドキュメントの後半の [ イベントの重複排除 ](#deduplication) の節では、ブラウザーとサーバーの両方から受信する可能性があるので、同じイベントが二度と使用されないようにする手順を説明します。
 
-を使用するには [!DNL Conversions API] 拡張機能を使用するには、イベント転送にアクセスでき、有効なが [!DNL Meta] ～へのアクセス権を持つアカウント [!DNL Ad Manager] および [!DNL Event Manager]. 特に、既存のの ID をコピーする必要があります [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) （または [新しいを作成 [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) 代わりに）を使用して、アカウントに拡張機能を設定できます。
+[!DNL Conversions API] 拡張機能を使用するには、イベント転送にアクセスでき、[!DNL Ad Manager] および [!DNL Event Manager] にアクセスできる有効な [!DNL Meta] アカウントが必要です。 特に、既存の [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) の ID をコピー（または [ 新しく作成）して  [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) アカウントに拡張機能を設定できるようにする必要があります。
 
 >[!INFO]
 >
->この拡張機能をモバイルアプリデータで使用する場合や、 [!DNL Meta] キャンペーンの場合は、既存のアプリを使用してデータセットを作成し、以下を選択する必要があります。 **ピクセル ID から作成** プロンプトが表示されたら、 記事を参照してください [ビジネスに最適なデータセット作成オプションの決定](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) を参照してください。 を参照してください。 [アプリイベント用 Conversions API](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) すべての必須およびオプションのアプリトラッキングパラメーターに関するドキュメント。
+>この拡張機能をモバイルアプリデータで使用する場合や、[!DNL Meta] キャンペーンでオフラインイベントデータも使用する場合は、既存のアプリを使用してデータセットを作成し、プロンプトが表示されたら **ピクセル ID から作成** を選択する必要があります。 詳しくは、[ ビジネスに適したデータセット作成オプションの決定 ](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) の記事を参照してください。 必須およびオプションのすべてのアプリトラッキングパラメーターについては、[Conversions API for App Events](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) ドキュメントを参照してください。
 
 ## 拡張機能のインストール
 
-をインストールするには [!DNL Meta Conversions API] 拡張機能でデータ収集 UI またはExperience PlatformUI に移動し、以下を選択します。 **[!UICONTROL イベントの転送]** 左側のナビゲーションから。 ここから、拡張機能を追加するプロパティを選択するか、代わりに新しいプロパティを作成します。
+[!DNL Meta Conversions API] 拡張機能をインストールするには、データ収集 UI またはExperience PlatformUI に移動し、左側のナビゲーションから **[!UICONTROL イベント転送]** を選択します。 ここから、拡張機能を追加するプロパティを選択するか、代わりに新しいプロパティを作成します。
 
-目的のプロパティを選択または作成したら、 **[!UICONTROL 拡張機能]** 左側のナビゲーションで、 **[!UICONTROL カタログ]** タブ。 を検索 [!UICONTROL Meta Conversions API] カードを選択してから、を選択します **[!UICONTROL インストール]**.
+目的のプロパティを選択または作成したら、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 [!UICONTROL Meta Conversions API] カードを検索し、「**[!UICONTROL インストール]**」を選択します。
 
-![この [!UICONTROL インストール] に対して選択されているオプション [!UICONTROL Meta Conversions API] データ収集 UI の拡張機能。](../../../images/extensions/server/meta/install.png)
+![ データ収集 UI の [!UICONTROL Meta Conversions API] 拡張機能用に選択されている [!UICONTROL  インストール ] オプション ](../../../images/extensions/server/meta/install.png)
 
-表示される設定ビューで、を指定する必要があります [!DNL Pixel] 拡張機能をアカウントにリンクするために以前にコピーした ID。 ID を入力に直接貼り付けることも、代わりにデータ要素を使用することもできます。
+表示される設定ビューで、拡張機能をアカウントにリンクするには、以前にコピーした [!DNL Pixel] ID を指定する必要があります。 ID を入力に直接貼り付けることも、代わりにデータ要素を使用することもできます。
 
-また、を使用するには、アクセストークンを指定する必要があります [!DNL Conversions API] 具体的には。 を参照してください。 [!DNL Conversions API] のドキュメント [アクセストークンの生成](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) この値を取得する手順を説明します。
+また、特に [!DNL Conversions API] を使用するためにアクセストークンを提供する必要があります。 この値を取得する手順については、[ アクセストークンの生成 ](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) に関する [!DNL Conversions API] ドキュメントを参照してください。
 
-終了したら、 **[!UICONTROL 保存]**
+終了したら「**[!UICONTROL 保存]**」を選択します
 
-![この [!DNL Pixel] 拡張機能の設定ビューでデータ要素として提供された ID。](../../../images/extensions/server/meta/configure.png)
+![ 拡張機能の設定ビューでデータ要素として提供された [!DNL Pixel] ID。](../../../images/extensions/server/meta/configure.png)
 
 拡張機能がインストールされ、イベント転送ルールでその機能を使用できるようになりました。
 
 ## facebookおよびInstagram拡張機能との統合 {#facebook}
 
-facebookとInstagramの拡張機能を使用した統合により、Meta ビジネスアカウントにすばやく認証できます。 これで、 [!UICONTROL ピクセル ID] および Meta Conversions API [!UICONTROL アクセストークン]を使用すると、Meta Conversions API のインストールと設定が容易になります。
+facebookとInstagramの拡張機能を使用した統合により、Meta ビジネスアカウントにすばやく認証できます。 これにより、[!UICONTROL Pixel ID] と Meta Conversions API[!UICONTROL  アクセストークン ] が自動入力され、Meta Conversions API のインストールと設定が容易になります。
 
-のインストール時に、FacebookとInstagramでの認証を求めるダイアログプロンプトが表示されます [!UICONTROL Meta Conversions API] 拡張機能。
+[!UICONTROL Meta Conversions API] 拡張機能をインストールすると、FacebookとInstagramでの認証を求めるダイアログプロンプトが表示されます。
 
-![この [!UICONTROL Meta Conversions API 拡張機能] インストールページのハイライト表示 [!UICONTROL Meta に接続].](../../../images/extensions/server/meta/mbe-extension-install.png)
+![Meta への接続 [!UICONTROL  がハイライト表示された ]Meta Conversions API 拡張機能 [!UICONTROL  インストールページ ]。](../../../images/extensions/server/meta/mbe-extension-install.png)
 
 facebookとInstagramでの認証を求めるダイアログプロンプトは、イベント転送内のクイックスタートワークフロー UI にも表示されます。
 
-![強調表示されたクイックスタートワークフロー UI [!UICONTROL Meta に接続].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+![ ハイライト表示されたクイックスタートワークフロー UI[!UICONTROL Meta に接続 ].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
 ## イベント品質一致スコア （EMQ）との統合 {#emq}
 
-イベント品質一致スコア（EMQ）との統合により、EMQ スコアを表示して実装の有効性を簡単に確認できます。 この統合により、コンテキストの切り替えが最小限に抑えられ、Meta Conversions API 実装の成功を向上させることができます。 これらのイベントスコアは [!UICONTROL Meta Conversions API 拡張機能] 設定画面。
+イベント品質一致スコア（EMQ）との統合により、EMQ スコアを表示して実装の有効性を簡単に確認できます。 この統合により、コンテキストの切り替えが最小限に抑えられ、Meta Conversions API 実装の成功を向上させることができます。 これらのイベントスコアは、[!UICONTROL Meta Conversions API 拡張機能 ] 設定画面に表示されます。
 
-![この [!UICONTROL Meta Conversions API 拡張機能] 設定ページのハイライト表示 [!UICONTROL EMQ スコアを表示].](../../../images/extensions/server/meta/emq-score.png)
+![[!UICONTROL Meta Conversions API 拡張機能 ] 設定ページのハイライト表示 [!UICONTROL EMQ スコアの表示 ].](../../../images/extensions/server/meta/emq-score.png)
 
 ## LiveRamp との統合（Alpha） {#alpha}
 
-[!DNL LiveRamp] 次の顧客： [!DNL LiveRamp]サイトにデプロイされたの認証済みトラフィックソリューション（ATS）は、顧客情報パラメーターとして RampID の共有を選択する場合があります。 ご協力ください [!DNL Meta] この機能のAlphaプログラムに参加するには、アカウントチームに連絡してください。
+[!DNL LiveRamp] の認証済みトラフィックソリューション（ATS）をサイトにデプロイしている [!DNL LiveRamp] のお客様は、顧客情報パラメーターとして RampID を共有することを選択できます。 [!DNL Meta] アカウントチームと協力して、この機能のAlphaプログラムに参加してください。
 
-![メタイベント転送 [!UICONTROL ルール] 設定ページのハイライト表示 [!UICONTROL パートナー名（アルファ版）] および [!UICONTROL パートナー ID （アルファ版）].](../../../images/extensions/server/meta/live-ramp.png)
+![Meta イベント転送 [!UICONTROL  ルール ] 設定ページで [!UICONTROL  パートナー名（アルファ） ] および [!UICONTROL  パートナー ID （アルファ） ] がハイライト表示される。](../../../images/extensions/server/meta/live-ramp.png)
 
 ## イベント転送ルールの設定 {#rule}
 
-この節では、の使用方法について説明します [!DNL Conversions API] 汎用イベント転送ルールの拡張機能。 実際には、許可されたすべてを送信するために、いくつかのルールを設定する必要があります [標準イベント](https://developers.facebook.com/docs/meta-pixel/reference) 経由 [!DNL Meta Pixel] および [!DNL Conversions API]. モバイルアプリデータの場合は、必須フィールド、アプリデータフィールド、顧客情報パラメーター、カスタムデータの詳細を参照してください [こちら](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
+この節では、一般的なイベント転送ルールで [!DNL Conversions API] 拡張機能を使用する方法について説明します。 実際には、受け入れ可能なすべての [ 標準イベント ](https://developers.facebook.com/docs/meta-pixel/reference) を [!DNL Meta Pixel] と [!DNL Conversions API] で送信するために、いくつかのルールを設定する必要があります。 モバイルアプリデータについては、必須フィールド、アプリデータフィールド、顧客情報パラメーター、カスタムデータの詳細を参照してください [ こちら ](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events)。
 
 >[!NOTE]
 >
->イベントは [リアルタイムで送信](https://www.facebook.com/business/help/379226453470947?id=818859032317965) または、広告キャンペーンの最適化を向上させるために、できるだけリアルタイムに近づけます。
+>広告キャンペーンを最適化するには、イベントを [ リアルタイムで送信 ](https://www.facebook.com/business/help/379226453470947?id=818859032317965) するか、できるだけリアルタイムに近いタイミングで送信する必要があります。
 
-新しいイベント転送ルールの作成を開始し、必要に応じてその条件を設定します。 ルールのアクションを選択する場合は、 **[!UICONTROL Meta Conversions API 拡張機能]** 拡張機能の場合、を選択します **[!UICONTROL Conversions API イベントの送信]** アクションタイプの場合。
+新しいイベント転送ルールの作成を開始し、必要に応じてその条件を設定します。 ルールのアクションを選択する場合、拡張機能で **[!UICONTROL Meta Conversions API 拡張機能]** を選択し、アクションタイプで **[!UICONTROL Conversions API イベントを送信]** を選択します。
 
-![この [!UICONTROL ページビューを送信] データ収集 UI のルールに対して選択されているアクションタイプ。](../../../images/extensions/server/meta/select-action.png)
+![ データ収集 UI でルールに対して選択されている [!UICONTROL  ページビューを送信 ] アクションタイプ ](../../../images/extensions/server/meta/select-action.png)
 
-送信先のイベントデータを設定できるコントロールが表示されます [!DNL Meta] 経由： [!DNL Conversions API]. これらのオプションは、指定された入力に直接入力することも、代わりに値を表す既存のデータ要素を選択することもできます。 設定オプションは、以下に示すように、4 つの主なセクションに分かれています。
+[!DNL Conversions API] 経由で [!DNL Meta] ーザーに送信されるイベントデータを設定できるコントロールが表示されます。 これらのオプションは、指定された入力に直接入力することも、代わりに値を表す既存のデータ要素を選択することもできます。 設定オプションは、以下に示すように、4 つの主なセクションに分かれています。
 
 | Config セクション | 説明 |
 | --- | --- |
-| [!UICONTROL サーバーイベントのパラメーター] | 発生した時刻やトリガーしたソースアクションなど、イベントに関する一般情報。 を参照してください。 [!DNL Meta] の詳細については、開発者向けドキュメントを参照してください。 [標準イベントパラメーター](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) が承諾しました [!DNL Conversions API].<br><br>両方を使用している場合 [!DNL Meta Pixel] および [!DNL Conversions API] イベントを送信するには、必ず次の両方を含めてください。 **[!UICONTROL イベント名]** （`event_name`）および **[!UICONTROL イベント ID]** （`event_id`）に設定します。これらの値はに使用されるため、 [イベントの重複排除](#deduplication).<br><br>次のオプションもあります。 **[!UICONTROL 制限付きデータ使用を有効にする]** 顧客のオプトアウトへの準拠を支援します。 を参照してください。 [!DNL Conversions API] のドキュメント [データ処理オプション](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) この機能について詳しくは、を参照してください。 |
-| [!UICONTROL 顧客情報パラメーター] | イベントを顧客に関連付けるために使用されるユーザー ID データ。 これらの値の一部は、API に送信する前にハッシュ化する必要があります。<br><br>良好な共通 API 接続と高いイベントマッチ品質（EMQ）を確保するために、すべてを送信することをお勧めします [承認された顧客情報パラメーター](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) サーバーイベントと共に。 これらのパラメーターは、 [重要度と EMQ への影響に基づいて優先順位が付けられる](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
-| [!UICONTROL カスタムデータ] | 広告配信の最適化に使用する追加データ（JSON オブジェクトの形式で提供）。 を参照してください。 [[!DNL Conversions API] 詳細を見る](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) このオブジェクトで使用可能なプロパティの詳細を参照してください。<br><br>購入イベントを送信する場合、このセクションを使用して必要な属性を指定する必要があります `currency` および `value`. |
-| [!UICONTROL テストイベント] | このオプションは、の設定が原因でサーバーイベントがによって受信されているかどうかを確認するために使用されます [!DNL Meta] 期待どおりだ。 この機能を使用するには、 **[!UICONTROL テストイベントとして送信]** 次に、以下の入力で任意のテストイベントコードを指定します。 イベント転送ルールがデプロイされると、拡張機能とアクションを正しく設定した場合は、内にアクティビティが表示されます **[!DNL Test Events]** で表示 [!DNL Meta Events Manager]. |
+| [!UICONTROL  サーバーイベントパラメーター ] | 発生した時刻やトリガーしたソースアクションなど、イベントに関する一般情報。 [!DNL Conversions API] が受け入れる [ 標準イベントパラメーター ](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) について詳しくは、[!DNL Meta] 開発者向けドキュメントを参照してください。<br><br>[!DNL Meta Pixel] と [!DNL Conversions API] の両方を使用してイベントを送信する場合は、すべてのイベントに **[!UICONTROL イベント名]** （`event_name`）と **[!UICONTROL イベント ID]** （`event_id`）の両方を必ず含めてください。これらの値は [ イベントの重複排除 ](#deduplication) に使用されるからです。<br><br> 顧客のオプトアウトに準拠するために、**[!UICONTROL 制限付きデータ使用を有効にする]** オプションもあります。 この機能について詳しくは、[ データ処理オプション ](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) に関する [!DNL Conversions API] ドキュメントを参照してください。 |
+| [!UICONTROL  顧客情報パラメーター ] | イベントを顧客に関連付けるために使用されるユーザー ID データ。 これらの値の一部は、API に送信する前にハッシュ化する必要があります。<br><br> 良好な共通 API 接続と高いイベント一致品質（EMQ）を確保するために、サーバーイベントと共にすべての [ 許可された顧客情報パラメーター ](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) を送信することをお勧めします。 また、これらのパラメータは [ 重要度と EMQ への影響に基づいて優先順位を付ける ](https://www.facebook.com/business/help/765081237991954?id=818859032317965) 必要があります。 |
+| [!UICONTROL  カスタムデータ ] | 広告配信の最適化に使用する追加データ（JSON オブジェクトの形式で提供）。 このオブジェクトの使用可能なプロパティの詳細については、[[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) を参照してください。<br><br> 購入イベントを送信する場合は、このセクションを使用して `currency` および `value` に必要な属性を指定する必要があります。 |
+| [!UICONTROL  テストイベント ] | このオプションは、設定が原因で [!DNL Meta] がサーバーイベントを想定どおりに受信しているかどうかを検証するために使用されます。 この機能を使用するには、「**[!UICONTROL テストイベントとして送信]**」チェックボックスをオンにし、以下の入力で選択したテストイベントコードを指定します。 イベント転送ルールがデプロイされると、拡張機能とアクションを正しく設定した場合は、[!DNL Meta Events Manager] の **[!DNL Test Events]** ビュー内にアクティビティが表示されます。 |
 
 {style="table-layout:auto"}
 
-終了したら、 **[!UICONTROL 変更を保持]** をクリックして、ルール設定にアクションを追加します。
+完了したら、「**[!UICONTROL 変更を保持]**」を選択して、アクションをルール設定に追加します。
 
-![[!UICONTROL 変更を保持] アクション設定用に選択されています。](../../../images/extensions/server/meta/keep-changes.png)
+![[!UICONTROL  変更を保持 ] アクション設定に対して選択されています。](../../../images/extensions/server/meta/keep-changes.png)
 
-ルールに満足したら、を選択します。 **[!UICONTROL ライブラリに保存]**. 最後に、新しいイベント転送を公開します [ビルド](../../../ui/publishing/builds.md) をクリックして、ライブラリに加えられた変更を有効にします。
+ルールの設定が完了したら、「**[!UICONTROL ライブラリに保存]**」を選択します。 最後に、新しいイベント転送 [ ビルド ](../../../ui/publishing/builds.md) を公開して、ライブラリに加えられた変更を有効にします。
 
 ## イベントの重複排除 {#deduplication}
 
-に記載されているように [前提条件セクション](#prerequisites)の場合は、両方を使用することをお勧めします [!DNL Meta Pixel] タグ拡張機能と [!DNL Conversions API] 冗長な設定でクライアントとサーバーから同じイベントを送信するイベント転送拡張機能。 これは、いずれかの拡張機能で取得されなかったイベントを回復するのに役立ちます。
+[ 前提条件の節 ](#prerequisites) で説明したように、[!DNL Meta Pixel] タグ拡張機能と [!DNL Conversions API] イベント転送拡張機能の両方を使用して、同じイベントをクライアントとサーバーから冗長な設定で送信することをお勧めします。 これは、いずれかの拡張機能で取得されなかったイベントを回復するのに役立ちます。
 
-クライアントとサーバーから異なるイベントタイプを送信し、両者が重複していない場合は、重複排除は必要ありません。 ただし、単一のイベントが両方のユーザーによって共有される場合は、 [!DNL Meta Pixel] および [!DNL Conversions API]を使用している場合は、レポートに悪影響が及ばないよう、これらの冗長なイベントの重複が排除されるようにする必要があります。
+クライアントとサーバーから異なるイベントタイプを送信し、両者が重複していない場合は、重複排除は必要ありません。 ただし、[!DNL Meta Pixel] と [!DNL Conversions API] の両方が 1 つのイベントを共有する場合は、レポートに悪影響が及ばないよう、これらの冗長なイベントの重複を排除する必要があります。
 
-共有イベントを送信する場合は、クライアントとサーバーの両方から送信するすべてのイベントに、イベント ID と名前が含まれていることを確認してください。 同じ ID と名前を持つ複数のイベントを受信した場合、 [!DNL Meta] では、重複を排除して最も関連性の高いデータを保持するために、いくつかの戦略を自動的に採用しています。 を参照してください。 [!DNL Meta] のドキュメント [の重複排除 [!DNL Meta Pixel] および [!DNL Conversions API] イベント](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) このプロセスについて詳しくは、を参照してください。
+共有イベントを送信する場合は、クライアントとサーバーの両方から送信するすべてのイベントに、イベント ID と名前が含まれていることを確認してください。 同じ ID と名前を持つ複数のイベントを受け取った場合、[!DNL Meta] では、自動的に、重複を排除して最も関連性の高いデータを保持するために、複数の戦略を採用します。 このプロセスについて詳しくは、[ イベント  [!DNL Meta Pixel]  よびイベントの重複排除 ](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) に関する [!DNL Meta] のドキュメ  [!DNL Conversions API]  トを参照してください。
 
-## クイックスタートワークフロー：Meta Conversions API 拡張機能（ベータ版） {#quick-start}
+## クイックスタートワークフロー：Meta Conversions API 拡張機能（Beta） {#quick-start}
 
 >[!IMPORTANT]
 >
@@ -144,63 +144,63 @@ facebookとInstagramでの認証を求めるダイアログプロンプトは、
 このセットアップでは、Meta Conversions API と Meta Pixel 拡張機能の両方が自動でインストールされます。 Meta では、このハイブリッド実装を使用して、イベントコンバージョンサーバーサイドでイベントを収集および転送することをお勧めします。
 クイックセットアップ機能は、お客様がイベント転送の実装を開始するのを支援するように設計されており、すべてのユースケースに対応するエンドツーエンドの完全に機能する実装を提供するものではありません。
 
-この機能をインストールするには、 **[!UICONTROL はじめに]** （用） **[!DNL Send Conversions Data to Meta]** Adobe Experience Platform Data Collection 上 **[!UICONTROL ホーム]** ページ。
+この機能をインストールするには、Adobe Experience Platform Data Collection **[!UICONTROL ホーム]** ページで「**[!UICONTROL はじめに]**」を選択して **[!DNL Send Conversions Data to Meta]** ださい。
 
-![meta へのコンバージョンデータを表示するデータ収集ホームページ](../../../images/extensions/server/meta/conversion-data-to-meta.png)
+![meta へのコンバージョンデータを示すデータ収集ホームページ ](../../../images/extensions/server/meta/conversion-data-to-meta.png)
 
-を入力 **[!UICONTROL ドメイン]**&#x200B;を選択してから、 **[!UICONTROL 次]**. このドメインは、自動生成されるタグとイベント転送のプロパティ、ルール、データ要素、データストリームなどの命名規則として使用されます。
+**[!UICONTROL ドメイン]** を入力し、「**[!UICONTROL 次へ]**」を選択します。 このドメインは、自動生成されるタグとイベント転送のプロパティ、ルール、データ要素、データストリームなどの命名規則として使用されます。
 
-![ドメイン名を要求するようこそ画面](../../../images/extensions/server/meta/welcome.png)
+![ ドメイン名をリクエストするようこそ画面 ](../../../images/extensions/server/meta/welcome.png)
 
-が含まれる **[!UICONTROL 初期設定]** ダイアログ入力する **[!UICONTROL メタピクセル ID]**, **[!UICONTROL メタ変換 API アクセストークン]**、および **[!UICONTROL データレイヤーのパス]**&#x200B;を選択してから、 **[!UICONTROL 次]**.
+**[!UICONTROL 初期設定]** ダイアログで、「**[!UICONTROL メタピクセル ID]**」、「**[!UICONTROL メタ変換 API アクセストークン]**」、「**[!UICONTROL データレイヤーパス]**」を入力して、「**[!UICONTROL 次へ]**」を選択します。
 
-![初期設定ダイアログ](../../../images/extensions/server/meta/initial-setup.png)
+![ 初期設定ダイアログ ](../../../images/extensions/server/meta/initial-setup.png)
 
-初期設定プロセスが完了するまで数分待ってから、を選択します。 **[!UICONTROL 次]**.
+初期セットアッププロセスが完了するまで数分待ってから、「**[!UICONTROL 次へ]**」を選択します。
 
 ![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
 
-から **[!UICONTROL サイトへのコードの追加]** ダイアログコピーを使用して提供されたコードをコピーします ![コピー](../../../images/extensions/server/meta/copy-icon.png) 関数を使用して、これを `<head>` （ソース web サイトの）。 実装が完了したら、以下を選択します。 **[!UICONTROL 検証を開始]**
+**[!UICONTROL サイトにコードを追加]** ダイアログで、コピー ![ コピー ](../../../images/extensions/server/meta/copy-icon.png) 関数を使用して提供されたコードをコピーして、ソース web サイトの `<head>` に貼り付けます。 実装が完了したら、「**[!UICONTROL 検証を開始]**」を選択します。
 
-![サイトダイアログへのコードの追加](../../../images/extensions/server/meta/add-code-on-your-site.png)
+![ サイトダイアログへのコードの追加 ](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-この [!UICONTROL 検証結果] ダイアログにメタ拡張機能の実装結果が表示されます。 を選択 **[!UICONTROL 次]**. を選択して、追加の検証結果を確認することもできます **[!UICONTROL Assurance]** リンク。
+[!UICONTROL  検証結果 ] ダイアログに、メタ拡張機能の実装結果が表示されます。 「**[!UICONTROL 次へ]**」を選択します。 また、「**[!UICONTROL Assurance]**」リンクを選択すると、追加の検証結果を確認できます。
 
-![実装結果を表示する「テスト結果」ダイアログ](../../../images/extensions/server/meta/test-results.png)
+![ 実装結果を表示するテスト結果ダイアログ ](../../../images/extensions/server/meta/test-results.png)
 
-この **[!UICONTROL 次の手順]** 画面を表示して、設定が完了したことを確認します。 ここから、新しいイベントを追加して実装を最適化するオプションがあります。このイベントについては、次の節で説明します。
+「**[!UICONTROL 次の手順]**」画面が表示され、設定が完了したことが確認されます。 ここから、新しいイベントを追加して実装を最適化するオプションがあります。このイベントについては、次の節で説明します。
 
-イベントを追加しない場合は、 **[!UICONTROL 閉じる]**.
+イベントを追加しない場合は、「**[!UICONTROL 閉じる]**」を選択します。
 
-![次の手順ダイアログ](../../../images/extensions/server/meta/next-steps.png)
+![ 次の手順に進むダイアログ ](../../../images/extensions/server/meta/next-steps.png)
 
 #### 追加イベントの追加
 
-新しいイベントを追加するには、次を選択します **[!UICONTROL タグの Web プロパティを編集]**.
+新しいイベントを追加するには、「**[!UICONTROL タグの web プロパティを編集]**」を選択します。
 
-![タグの web プロパティを編集することを示す次の手順ダイアログ](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
+![ タグの web プロパティを編集する方法を示す次の手順ダイアログ ](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
 
-編集するメタイベントに対応するルールを選択します。 例： **MetaConversion_AddToCart**.
+編集するメタイベントに対応するルールを選択します。 例えば、「**MetaConversion_AddToCart**」と入力します。
 
 >[!NOTE]
 >
->イベントがない場合、このルールは実行されません。 これは、以下を含むすべてのルールに当てはまります **MetaConversion_PageView** ルールは例外です。
+>イベントがない場合、このルールは実行されません。 これは、すべてのルールに当てはまります。ただし、**MetaConversion_PageView** ルールは例外です。
 
-イベントを追加するには、以下を選択します **[!UICONTROL 追加]** の下 [!UICONTROL イベント] 見出し。
+イベントを追加するには、「**[!UICONTROL イベント]** 見出しの下にある「[!UICONTROL  追加 ] を選択します。
 
-![イベントが表示されていないタグプロパティページ](../../../images/extensions/server/meta/edit-rule.png)
+![ イベントが表示されていないタグプロパティページ ](../../../images/extensions/server/meta/edit-rule.png)
 
-「」を選択します [!UICONTROL イベントタイプ]. この例では、 [!UICONTROL クリック] イベントを取得し、次の場合にトリガーするように設定 **.add-to-cart-button** が選択されました。 「**[!UICONTROL 変更を保持]**」を選択します。
+[!UICONTROL  イベントタイプ ] を選択します。 この例では、[!UICONTROL Click] イベントを選択し、**.add-to-cart-button** が選択されている場合にトリガーするように設定しました。 「**[!UICONTROL 変更を保持]**」を選択します。
 
-![クリックイベントを表示するイベント設定画面](../../../images/extensions/server/meta/event-configuration.png)
+![ クリックイベントを表示するイベント設定画面 ](../../../images/extensions/server/meta/event-configuration.png)
 
-新しいイベントが保存されました。 を選択 **[!UICONTROL 作業ライブラリを選択]** ビルド先のライブラリを選択します。
+新しいイベントが保存されました。 「**[!UICONTROL 作業ライブラリを選択]**」を選択し、ビルド先のライブラリを選択します。
 
-![作業ライブラリのドロップダウンを選択](../../../images/extensions/server/meta/working-library.png)
+![ 作業ライブラリの選択ドロップダウン ](../../../images/extensions/server/meta/working-library.png)
 
-次に、の横にあるドロップダウンを選択します **[!UICONTROL ライブラリに保存]** を選択して、 **[!UICONTROL ライブラリに保存してビルド]**. これにより、ライブラリに変更が公開されます。
+次に、「**[!UICONTROL ライブラリに保存]**」の横にあるドロップダウンを選択し、「**[!UICONTROL ライブラリおよびビルドに保存]**」を選択します。 これにより、ライブラリに変更が公開されます。
 
-![「ライブラリに保存してビルド」を選択します](../../../images/extensions/server/meta/save-and-build.png)
+![ 「ライブラリに保存してビルド」を選択する ](../../../images/extensions/server/meta/save-and-build.png)
 
 設定したい他のメタコンバージョンイベントに対して、これらの手順を繰り返します。
 
@@ -208,29 +208,29 @@ facebookとInstagramでの認証を求めるダイアログプロンプトは、
 
 >[!IMPORTANT]
 >
->このグローバルデータレイヤーを更新する方法は、web サイトのアーキテクチャによって異なります。 単一ページアプリケーションは、サーバーサイドレンダリングアプリケーションとは異なります。 また、タグ製品内でこのデータの作成と更新を完全に担当する可能性もあります。 すべての場合、を実行してから次の実行までの間にデータレイヤーを更新する必要があります `MetaConversion_* rules`. ルール間でデータを更新しない場合は、最後のルールから古いデータを送信する場合もあります `MetaConversion_* rule` 現在の `MetaConversion_* rule`.
+>このグローバルデータレイヤーを更新する方法は、web サイトのアーキテクチャによって異なります。 単一ページアプリケーションは、サーバーサイドレンダリングアプリケーションとは異なります。 また、タグ製品内でこのデータの作成と更新を完全に担当する可能性もあります。 すべての場合、各 `MetaConversion_* rules` ークフローの実行間にデータレイヤーを更新する必要があります。 ルール間でデータを更新しない場合は、現在のルー `MetaConversion_* rule` の最後の `MetaConversion_* rule` ージから古いデータを送信している場合もあります。
 
-設定時に、データレイヤーの保存場所を尋ねられました。 デフォルトでは、のようになります `window.dataLayer.meta`内および `meta` オブジェクトの場合、データは次に示すように求められます。
+設定時に、データレイヤーの保存場所を尋ねられました。 デフォルトでは、これは `window.dataLayer.meta` であり、`meta` オブジェクト内では、次に示すように、データが想定されます。
 
-![データレイヤーのメタ情報](../../../images/extensions/server/meta/data-layer-meta.png)
+![ データレイヤーのメタ情報 ](../../../images/extensions/server/meta/data-layer-meta.png)
 
-これは、すべてのものとして理解することが重要です `MetaConversion_*` ルールでは、このデータ構造を使用して、関連するデータをに渡します [!DNL Meta Pixel] およびの拡張 [!DNL Meta Conversions API]. のドキュメントを参照してください。 [標準イベント](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) 様々なメタイベントが必要とするデータの詳細については、こちらを参照してください。
+これは、すべての `MetaConversion_*` ルールでこのデータ構造を使用して、関連するデータを [!DNL Meta Pixel] 拡張機能と [!DNL Meta Conversions API] に渡すので、理解することが重要です。 様々なメタイベントに必要なデータについて詳しくは、[ 標準イベント ](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) に関するドキュメントを参照してください。
 
-例えば、を使用する場合 `MetaConversion_Subscribe` ルールを更新する必要があります `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`、および `window.dataLayer.meta.value` のドキュメントに記載されているオブジェクトプロパティに従って、 [標準イベント](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+例えば、`MetaConversion_Subscribe` ルールを使用する場合は、[ 標準イベント ](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) に関するドキュメントに記載されているオブジェクトプロパティに従って、`window.dataLayer.meta.currency`、`window.dataLayer.meta.predicted_ltv`、`window.dataLayer.meta.value` を更新する必要があります。
 
 以下は、ルールを実行する前にデータレイヤーを更新するために web サイトで実行する必要がある処理の例です。
 
-![データレイヤーのメタ情報の更新](../../../images/extensions/server/meta/update-data-layer-meta.png)
+![ データレイヤーのメタ情報の更新 ](../../../images/extensions/server/meta/update-data-layer-meta.png)
 
-デフォルトでは、 `<datalayerpath>.conversionData.eventId` いずれかのに対する「新しいイベント ID を生成」アクションによってランダムに生成されます `MetaConversion_* rules`.
+デフォルトでは、どの `MetaConversion_* rules` ージでも、「新しいイベント ID を生成」アクションによって `<datalayerpath>.conversionData.eventId` ータがランダムに生成されます。
 
-データレイヤーの外観のローカル参照については、でカスタムコードエディターを開きます。 `MetaConversion_DataLayer` プロパティのデータ要素。
+データレイヤーの外観のローカル参照については、プロパティの `MetaConversion_DataLayer` データ要素でカスタムコードエディターを開きます。
 
 ## 次の手順
 
-このガイドでは、サーバーサイドイベントデータをに送信する方法について説明しました。 [!DNL Meta] の使用 [!DNL Meta Conversions API] 拡張機能。 ここから、さらに接続して統合を拡張することをお勧めします [!DNL Pixels] 該当する場合は、さらにイベントを共有します。 次のいずれかの操作を行うと、広告パフォーマンスをさらに向上させることができます。
+このガイドでは、[!DNL Meta Conversions API] 拡張機能を使用してサーバーサイドのイベントデータを [!DNL Meta] に送信する方法について説明しました。 ここから、より多くの [!DNL Pixels] を接続し、該当する場合はより多くのイベントを共有することで、統合を拡張することをお勧めします。 次のいずれかの操作を行うと、広告パフォーマンスをさらに向上させることができます。
 
-* その他を接続 [!DNL Pixels] まだに接続されていないもの [!DNL Conversions API] 統合。
-* 特定のイベントを経由でのみ送信する場合 [!DNL Meta Pixel] クライアント側では、これらと同じイベントをに送信します。 [!DNL Conversions API] サーバー側からも同様です。
+* [!DNL Conversions API] 統合にまだ接続されていない他の [!DNL Pixels] を接続します。
+* 特定のイベントをクライアントサイドの [!DNL Meta Pixel] でのみ送信する場合は、サーバーサイドからも同じイベントを [!DNL Conversions API] に送信します。
 
-を参照してください。 [!DNL Meta] のドキュメント [のベストプラクティス [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) 統合を効果的に実装する方法に関するガイダンスが必要です。 Adobe Experience Cloudのタグとイベント転送の一般的な情報については、を参照してください。 [タグの概要](../../../home.md).
+統合を効果的に実装する方法について詳しくは、[ のベストプラクティス  [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) に関する [!DNL Meta] のドキュメントを参照してください。 Adobe Experience Cloudのタグとイベント転送の一般的な情報については、[ タグの概要 ](../../../home.md) を参照してください。

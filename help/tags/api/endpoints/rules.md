@@ -4,7 +4,7 @@ description: Reactor API で /rules エンドポイントを呼び出す方法�
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '893'
 ht-degree: 95%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->このドキュメントでは、Reactor API でルールを管理する方法について説明します。 UI でルールを操作する方法について詳しくは、 [UI ガイド](../../ui/managing-resources/rules.md).
+>このドキュメントでは、Reactor API でルールを管理する方法について説明します。 UI でルールを操作する方法については、[UI ガイド ](../../ui/managing-resources/rules.md) を参照してください。
 
 ルールは、1 つの[プロパティ](./properties.md)のみに属します。 プロパティには多くのルールを設定できます。
 
@@ -858,7 +858,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたルールの拡張の詳細を返します。
+応答が成功すると、指定されたルールの拡張機能の詳細が返されます。
 
 ```json
 {
@@ -960,7 +960,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたルールのプロパティの詳細を返します。
+応答が成功すると、指定されたルールのプロパティの詳細が返されます。
 
 ```json
 {

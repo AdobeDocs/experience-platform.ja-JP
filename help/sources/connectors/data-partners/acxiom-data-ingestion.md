@@ -1,11 +1,12 @@
 ---
 title: Acxiom データ取り込み
-description: 取り込み方法を学ぶ [!DNL Acxiom] データをReal-time Customer Data Platformに送信し、ファーストパーティプロファイルを強化し、オーディエンスを向上させて、マーケティングチャネル全体でアクティブ化します。
+description: Real-time Customer Data Platformにデータを取り込み  [!DNL Acxiom]  ファーストパーティプロファイルをエンリッチメントし、オーディエンスを向上させ、複数のマーケティングチャネルにわたってアクティブ化する方法について説明します。
 badge: ベータ版
-source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
+exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -13,36 +14,36 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->[!DNL Acxiom Prospecting Data Import] ソースはベータ版です。詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Acxiom Prospecting Data Import] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-以下を使用します。 [!DNL Acxiom Data Ingestion] 取り込むソース [!DNL Acxiom] データをReal-time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化します。 次に、 [!DNL Acxiom] — 強化されたファーストパーティプロファイル：オーディエンスを改善し、マーケティングチャネルをまたいでアクティブ化します。
+[!DNL Acxiom Data Ingestion] ソースを使用すると、[!DNL Acxiom] データをReal-time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化できます。 その後、エンリッチメントされ [!DNL Acxiom] ファーストパーティプロファイルを使用して、オーディエンスを向上させ、すべてのマーケティングチャネルをアクティブ化できます。
 
 ![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
-の設定方法については、以下のドキュメントをお読みください。 [!DNL Acxiom Data Ingestion] ソースアカウント。
+[!DNL Acxiom Data Ingestion] ソースアカウントの設定方法については、以下のドキュメントを参照してください。
 
 ## 前提条件 {#prerequisites}
 
-接続するには [!DNL Acxiom Data Ingestion] アカウントからExperience Platformに、次の認証資格情報の値を指定する必要があります。
+[!DNL Acxiom Data Ingestion] アカウントをExperience Platformに接続するには、次の認証資格情報の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
-| [!DNL Acxiom] 認証キー | 認証キー。 この値は、 [!DNL Acxiom] チーム。 |
-| [!DNL Amazon S3] アクセスキー | バケットのアクセスキー ID。 この値は、 [!DNL Acxiom] チーム。 |
-| [!DNL Amazon S3] 秘密鍵 | バケットの秘密鍵 ID。 この値は、 [!DNL Acxiom] チーム。 |
-| バケット名 | これはファイルが共有されるグループです。 この値は、 [!DNL Acxiom] チーム。 |
+| [!DNL Acxiom] 認証キー | 認証キー。 この値は [!DNL Acxiom] チームから取得できます。 |
+| [!DNL Amazon S3] アクセスキー | バケットのアクセスキー ID。 この値は [!DNL Acxiom] チームから取得できます。 |
+| [!DNL Amazon S3] 秘密鍵 | バケットの秘密鍵 ID。 この値は [!DNL Acxiom] チームから取得できます。 |
+| バケット名 | これは、ファイルが共有されるバケットです。 この値は [!DNL Acxiom] チームから取得できます。 |
 
 ## IP アドレス許可リスト
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-### Experience Platformの権限の設定
+### Experience Platformーに対する権限の設定
 
-次の両方を持つ必要があります。 **[!UICONTROL ソースを表示]** および **[!UICONTROL ソースの管理]** アカウントに対して有効になっている権限で、 [!DNL Acxiom Data Ingestion] アカウントからExperience Platformへ。 製品管理者に問い合わせて、必要な権限を取得してください。 詳しくは、 [アクセス制御 UI ガイド](../../../access-control/ui/overview.md).
+[!DNL Acxiom Data Ingestion] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
 
 ### ファイルとディレクトリの命名制約
 
-クラウドストレージファイルまたはディレクトリに名前を付ける際は、以下の制限事項を考慮に入れる必要があります。
+クラウドストレージファイルまたはディレクトリに名前を付ける場合は、次の制限事項を考慮する必要があります。
 
 - ディレクトリ名とファイルコンポーネント名は 255 文字を超えてはなりません。
 - ディレクトリ名とファイル名の末尾にスラッシュ（`/`）は使用できません。使用した場合、自動的に削除されます。
@@ -53,5 +54,4 @@ ht-degree: 42%
 
 ## 次の手順
 
-このドキュメントを読むと、データを [!DNL Acxiom] アカウントからExperience Platformへ。 次のガイドに進むことができます： [接続 [!DNL Acxiom Data Ingestion] ユーザーインターフェイスを使用してExperience Platformを設定するには](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
-
+このドキュメントでは、[!DNL Acxiom] アカウントからExperience Platformにデータを取り込むために必要な、前提条件の設定を完了しました。 これで、ユーザーインターフェイスを使用した [Experience Platformへの接続  [!DNL Acxiom Data Ingestion]  に関するガイドに進むことができ ](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md) す。

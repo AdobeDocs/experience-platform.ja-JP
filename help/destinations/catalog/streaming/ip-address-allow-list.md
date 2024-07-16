@@ -1,8 +1,8 @@
 ---
-keywords: IP アドレス、IP 範囲、許可リスト宛先、許可リストに加える、ストリーミング宛先の許可リストに加える
+keywords: IP アドレス、IP 範囲、許可リスト許可リストに加える 許可リストに加えるの宛先、
 title: ストリーミング宛先の IP アドレス許可リスト
 type: Documentation
-description: このページでは、許可リストに追加できる IP 範囲を提供し、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesisまたは Azure Event Hubs インスタンスにデータを安全に書き出すことができます。
+description: このページでは、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesisまたは Azure Event Hubs インスタンスにデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
 workflow-type: tm+mt
@@ -15,8 +15,8 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
-> * Adobeでは、このページをブックマークし、3 か月ごとに再度アクセスして、最新の IP アドレスを確認することをお勧めします。 Adobeは、新しい IP 範囲の通知を提供しません。
-> * ここに記載されている IP のリスト *次の値と等しくない* を使用して作成した宛先に適用する [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
+> * Adobeでは、このページをブックマークに追加し、3 か月ごとに再訪問して最新の IP アドレスを確認することをお勧めします。 Adobeは新しい IP 範囲を通知しません。
+> * ここで説明する IP のリストは、[[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md) を使用して作成するすべての宛先に適用されます *適用されません*。
 
 ## 概要 {#overview}
 
@@ -26,13 +26,13 @@ ht-degree: 9%
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
-Experience Platformからこれらの宛先へのアウトバウンドトラフィックは、常に、このページにリストされている IP を経由します。
+Experience Platformからこれらの宛先への送信トラフィックは、常にこのページにリストされている IP を経由します。
 
-このページには、Experience Platformから HTTP エンドポイントに安全にデータを書き出すた許可リストに加えるめに、に追加できる IP 範囲が含まれています。 [!DNL Amazon Kinesis]または [!DNL Azure Event Hubs] インスタンス。 この機能は、HTTP エンドポイントがエンタープライズファイアウォールの内側にある場合や、会社のセキュリティおよびコンプライアンス標準で IP 範囲のリストを許可リストに加えるする必要がある場合に特に役立ちます。
+このページでは、Experience Platformから HTTP エンドポイント、[!DNL Amazon Kinesis] または [!DNL Azure Event Hubs] インスタンスにデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。 この機能は、HTTP エンドポイントがエンタープライズファイアウォールの内側にある場合や、会社のセキュリティおよびコンプライアンスの標準で、IP 範囲のリストの許可リストに加えるが必要な場合に特に便利です。
 
 ネットワークファイアウォールを介して、ネットワークアクセス制御を定義できます。 適切な IP 範囲を指定することで、データ転送サービスのトラフィックを許可できます。
 
-Adobeでは、上記の宛先を操作する前に、許可リストに加えるに次の IP 範囲を追加することをお勧めします。 地域固有の IP 範囲をに追加しないと、これらのスト許可リストに加えるリーミング宛先を使用する際にエラーやパフォーマンスが低下する可能性があります。
+Adobeでは、このページで前述の宛先を使用する前に、次の IP 範囲を許可リストに追加することをお勧めします。 地域固有の IP 範囲を許可リストに追加しないと、これらのストリーミング宛先を使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
 
 ## VA7：米国およびアメリカのお客様 {#us-americas}
 
@@ -58,7 +58,7 @@ Adobeでは、上記の宛先を操作する前に、許可リストに加える
 `52.254.107.144/28`
 `20.22.83.112`
 
-## NLD2:EMEA のお客様 {#emea}
+## NLD2: EMEA のお客様 {#emea}
 
 `40.74.4.160/28`
 `40.74.6.128/28`
@@ -141,7 +141,7 @@ Adobeでは、上記の宛先を操作する前に、許可リストに加える
 `20.200.94.116`
 `20.200.94.83`
 
-## GBR9：英国の顧客 {#gbr}
+## GBR9：英国のお客様 {#gbr}
 
 `20.254.3.48/28`
 `20.254.4.0/28`

@@ -1,58 +1,58 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；クエリサービス；Aqua Data Studio;Aqua Data Studio；クエリサービスへの接続；
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；Query service;Aqua Data Studio;Aqua Data Studio；クエリサービスへの接続；
 solution: Experience Platform
-title: Aqua Data Studio をクエリサービスに接続
+title: Aqua Data Studio のクエリサービスへの接続
 description: このドキュメントでは、Aqua Data Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 11%
+source-wordcount: '499'
+ht-degree: 8%
 
 ---
 
 # クエリサービスへの [!DNL Aqua Data Studio] の接続
 
-このドキュメントでは、 [!DNL Aqua Data Studio] Adobe Experience Platform [!DNL Query Service].
+このドキュメントでは、[!DNL Aqua Data Studio] とAdobe Experience Platform [!DNL Query Service] を接続する手順について説明します。
 
 ## はじめに
 
-このガイドでは、に対するアクセス権を既に持っている必要があります [!DNL Aqua Data Studio] インターフェイスの操作方法を理解している必要があります。 詳細情報： [!DNL Aqua Data Studio] は [公式 [!DNL Aqua Data Studio] ドキュメント](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
+このガイドでは、[!DNL Aqua Data Studio] へのアクセス権を既に持ち、そのインターフェイスの操作方法に精通している必要があります。 [!DNL Aqua Data Studio] について詳しくは、[official [!DNL Aqua Data Studio] documentation](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1) を参照してください。
 
 >[!NOTE]
 >
->次のものがあります。 [!DNL Windows] および [!DNL macOS] のバージョン [!DNL Aqua Data Studio]. このガイドのスクリーンショットは、 [!DNL macOS] デスクトップアプリケーション。 UI のバージョン間で若干の相違が生じる場合があります。
+>[!DNL Aqua Data Studio] には [!DNL Windows] バージョンと [!DNL macOS] バージョンがあります。 このガイドのスクリーンショットは、[!DNL macOS] デスクトップアプリを使用して撮影したものです。 UI とバージョンの間に小さな不一致が生じる場合があります。
 
-[!DNL Aqua Data Studio] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在、 [!UICONTROL クエリ] ワークスペース。
+[!DNL Aqua Data Studio] を Platform に接続するために必要な資格情報を取得するには、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースにアクセスできる必要があります。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ## サーバーを登録 {#register-server}
 
-インストール後 [!DNL Aqua Data Studio]を使用する場合、まずサーバーを登録する必要があります。 方法については、公式の Aqua Data Studio ドキュメントを参照してください。 [を起動します。 [!DNL Register Server] ダイアログ](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog) および [サーバーの登録](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio).
+[!DNL Aqua Data Studio] をインストールしたら、まずサーバーを登録する必要があります。 [ ダイアログを起動 ](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog)、[ サーバーを登録 ](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio) する方法については、Aqua Data Studio の公式ドキュメ  [!DNL Register Server]  トを参照してください。
 
-一度 **[!DNL Register Server]** PostgresSQL サーバ用のダイアログが表示され、サーバ設定の次の詳細を指定します。
+PostgresSQL サーバの **[!DNL Register Server]** ダイアログが表示されたら、サーバ設定の次の詳細を入力します。
 
-- **[!DNL Name]**:接続の名前。 接続を認識するわかりやすい名前を付けることをお勧めします。
-- **[!DNL Login Name]**:ログイン名は、Platform 組織 ID です。 次の形式を取ります。 `ORG_ID@AdobeOrg`.
-- **[!DNL Password]**:これは、 [!DNL Query Service] 認証情報ダッシュボード。
-- **[!DNL Host and Port]**:ホストエンドポイントと、そののポート [!DNL Query Service]. 接続には、ポート 80 を使用する必要があります [!DNL Query Service].
-- **[!DNL Database]:** 使用するデータベース。 Platform UI の資格情報の値を使用します。 `dbname`: `prod:all`.
+- **[!DNL Name]**：接続名。 接続を認識するために、わかりやすい名前を付けることをお勧めします。
+- **[!DNL Login Name]**: ログイン名は Platform 組織 ID です。 `ORG_ID@AdobeOrg` の形式です。
+- **[!DNL Password]**：これは、[!DNL Query Service] 資格情報ダッシュボードで見つかった英数字の文字列です。
+- **[!DNL Host and Port]**:[!DNL Query Service] のホストエンドポイントとそのポート。 [!DNL Query Service] に接続するには、ポート 80 を使用する必要があります。
+- **[!DNL Database]:** 使用するデータベース。 Platform UI 資格情報 `dbname` の値を使用します：`prod:all`。
 
 ### [!DNL Query Service] 資格情報
 
-資格情報を確認するには、にログインします。 [!DNL Platform] UI とを選択します。 **[!UICONTROL クエリ]** 左のナビゲーションから、の後に **[!UICONTROL 資格情報]**. ログイン資格情報、ホスト、ポート、データベース名の確認方法については、 [資格情報ガイド](../ui/credentials.md).
+資格情報を見つけるには、[!DNL Platform] UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 ログイン資格情報、ホスト、ポートおよびデータベース名の検索に関する詳細な手順については、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。
 
-[!DNL Query Service] また、は、期限切れでない資格情報を提供して、サードパーティクライアントとの 1 回限りのセットアップを可能にします。 詳しくは、 [有効期限のない資格情報の生成および使用方法に関する完全な手順](../ui/credentials.md#non-expiring-credentials).
+[!DNL Query Service] では、有効期限のない資格情報も提供され、サードパーティのクライアントとの 1 回限りのセットアップが可能になります。 詳しくは、ドキュメント [ 有効期限のない資格情報の生成と使用の方法に関する完全な手順 ](../ui/credentials.md#non-expiring-credentials) を参照してください。
 
 ### SSL モードの設定
 
-次に、SSL モードの値を `?sslmode=require`. これは、 [!DNL Driver] タブ [!DNL Edit Server Properties] ダイアログ。 方法については、公式の Aqua Data Studio ドキュメントを参照してください。 [ドライバのプロパティを編集](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) および [用の SSL の設定 [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). 検索バーを使用して `sslmode` プロパティ。
+次に、SSL モードの値を `?sslmode=require` に設定する必要があります。 これは、[!DNL Edit Server Properties] ダイアログの「[!DNL Driver]」タブから行います。 [ ドライバープロパティの編集 ](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) および [SSL の構成  [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration) の手順については、Aqua Data Studio の公式ドキュメントを参照してください。 検索バーを使用して、`sslmode` プロパティを検索します。
 
 >[!IMPORTANT]
 >
->詳しくは、 [[!DNL Query Service] SSL ドキュメント](./ssl-modes.md) を参照して、Adobe Experience Platform Query Service へのサードパーティ接続の SSL サポートと、 `verify-full` SSL モード。
+>Adobe Experience Platform クエリサービスへのサードパーティ接続での SSL サポートと、SSL モードを使用した接続方法については、[[!DNL Query Service] SSL ドキュメント ](./ssl-modes.md) を参照し `verify-full` ください。
 
-接続の詳細を入力したら、同じタブで、「 」を選択します。 **[!DNL Test Connection]** 認証情報が正しく機能するようにします。 接続テストが成功した場合は、 **[!DNL Save]** サーバーを登録します。 接続を確認する確認ダイアログが表示され、接続アイコンがダッシュボードに表示されます。 これで、サーバーに接続し、そのスキーマオブジェクトを表示できます。
+接続の詳細を入力した後、同じタブから「**[!DNL Test Connection]**」を選択して、資格情報が正しく機能することを確認します。 接続テストが成功した場合は、「**[!DNL Save]**」を選択してサーバーを登録します。 接続を確認する確認ダイアログが表示され、ダッシュボードに接続アイコンが表示されます。 これで、サーバーに接続し、そのスキーマオブジェクトを表示できます。
 
 ## 次の手順
 
-これで、 [!DNL Query Service]を使用する場合、 **[!DNL Query Analyzer]** 範囲 [!DNL Aqua Data Studio] SQL 文を実行および編集する場合。 クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../best-practices/writing-queries.md)』を参照してください。
+[!DNL Query Service] に接続したので、[!DNL Aqua Data Studio] 内の **[!DNL Query Analyzer]** を使用して SQL 文を実行および編集できます。 クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../best-practices/writing-queries.md)』を参照してください。

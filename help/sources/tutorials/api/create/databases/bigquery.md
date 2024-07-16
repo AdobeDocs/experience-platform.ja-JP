@@ -1,11 +1,11 @@
 ---
-title: フローサービス API を使用したGoogle BigQuery ベース接続の作成
-description: フローサービス API を使用してAdobe Experience PlatformをGoogle BigQuery に接続する方法を説明します。
+title: Flow Service API を使用したGoogle BigQuery ベース接続の作成
+description: Flow Service API を使用してAdobe Experience PlatformをGoogle BigQuery に接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '524'
 ht-degree: 59%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 59%
 
 >[!IMPORTANT]
 >
->The [!DNL Google BigQuery] ソースは、Real-time Customer Data Platform Ultimate を購入したユーザーがソースカタログで利用できます。
+>Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Google BigQuery] ソースを利用できます。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -27,22 +27,22 @@ ht-degree: 59%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL Google BigQuery] の使用 [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Google BigQuery] ています。
 
 ### 必要な資格情報の収集
 
-次の条件を満たすため [!DNL Flow Service] 接続する [!DNL Google BigQuery] Platform では、次の OAuth 2.0 認証値を指定する必要があります。
+[!DNL Flow Service] が [!DNL Google BigQuery] を Platform に接続するには、次の OAuth 2.0 認証値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `project` | デフォルトのプロジェクト ID [!DNL Google BigQuery] クエリ対象のプロジェクト。 |
-| `clientID` | 更新トークンの生成に使用する ID 値。 |
+| `project` | クエリ対象となるデフォルトの [!DNL Google BigQuery] プロジェクトのプロジェクト ID。 |
+| `clientID` | 更新トークンの生成に使用される ID 値。 |
 | `clientSecret` | 更新トークンの生成に使用するシークレット値。 |
-| `refreshToken` | から取得した更新トークン [!DNL Google] ～へのアクセスを許可するために使用される [!DNL Google BigQuery]. |
-| `largeResultsDataSetId` | 事前作成済み  [!DNL Google BigQuery] 大きな結果セットのサポートを有効にするために必要なデータセット ID。 |
+| `refreshToken` | [!DNL Google] から取得された更新トークンは、[!DNL Google BigQuery] へのアクセスを許可するために使用されます。 |
+| `largeResultsDataSetId` | 大きな結果セットのサポートを有効にするために必要な、事前に作成された [!DNL Google BigQuery] データセット ID。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Google BigQuery] の接続仕様 ID は `3c9b37f8-13a6-43d8-bad3-b863b941fedd` です。 |
 
-これらの値について詳しくは、 [[!DNL Google BigQuery] 文書](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+これらの値について詳しくは、この [[!DNL Google BigQuery]  ドキュメント ](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing) を参照してください。
 
 ### Platform API の使用
 
@@ -94,11 +94,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.project` | デフォルトのプロジェクト ID [!DNL Google BigQuery] プロジェクトをクエリします。 対して |
-| `auth.params.clientId` | 更新トークンの生成に使用する ID 値。 |
-| `auth.params.clientSecret` | 更新トークンの生成に使用するクライアント値。 |
-| `auth.params.refreshToken` | から取得した更新トークン [!DNL Google] ～へのアクセスを許可するために使用される [!DNL Google BigQuery]. |
-| `connectionSpec.id` | The [!DNL Google BigQuery] 接続仕様 ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `auth.params.project` | 照会する既定の [!DNL Google BigQuery] プロジェクトのプロジェクト ID。 に対して。 |
+| `auth.params.clientId` | 更新トークンの生成に使用される ID 値。 |
+| `auth.params.clientSecret` | 更新トークンの生成に使用されるクライアント値。 |
+| `auth.params.refreshToken` | [!DNL Google] から取得された更新トークンは、[!DNL Google BigQuery] へのアクセスを許可するために使用されます。 |
+| `connectionSpec.id` | [!DNL Google BigQuery] 接続仕様 ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`。 |
 
 **応答**
 
@@ -116,4 +116,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Google BigQuery] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)

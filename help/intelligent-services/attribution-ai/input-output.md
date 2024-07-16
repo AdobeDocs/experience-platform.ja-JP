@@ -1,49 +1,49 @@
 ---
-keywords: Experience Platform；はじめに；Attribution Ai；人気のトピック；Attribution Ai 入力；Attribution Ai 出力；
+keywords: Experience Platform；はじめに；Attribution AI；人気のトピック；Attribution AI の入力；Attribution AI の出力；
 feature: Attribution AI
 title: Attribution AIの入出力
-description: 次のドキュメントでは、Attribution AIで使用される様々な入力と出力の概要を説明します。
+description: 次のドキュメントでは、Attribution AIで使用される様々な入力および出力の概要を説明します。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
-source-wordcount: '2504'
-ht-degree: 14%
+source-wordcount: '2467'
+ht-degree: 15%
 
 ---
 
-# での入力と出力 [!DNL Attribution AI]
+# [!DNL Attribution AI] の入出力
 
-次のドキュメントでは、 [!DNL Attribution AI].
+次のドキュメントでは、[!DNL Attribution AI] で使用される様々な入力および出力の概要を説明します。
 
 ## [!DNL Attribution AI] 入力データ
 
 Attribution AIは、次のデータセットを分析してアルゴリズムスコアを計算することで機能します。
 
-- Adobe Analyticsデータセット（を使用） [Analytics ソースコネクタ](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Adobe Experience Platformスキーマの一般的なエクスペリエンスイベント (EE) データセット
-- 消費者エクスペリエンスイベント (CEE) データセット
+- [Analytics ソースコネクタ ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用したAdobe Analytics データセット
+- Adobe Experience Platform スキーマからのエクスペリエンスイベント（EE）データセット一般
+- 消費者エクスペリエンスイベント（CEE）データセット
 
-これで、 **id マップ** （フィールド）。各データセットが ECID などの同じ ID タイプ（名前空間）を共有する場合に使用します。 ID と名前空間を選択すると、ID 列の完全性指標が表示され、結び付けられるデータの量が示されます。 複数のデータセットの追加について詳しくは、 [Attribution AIユーザーガイド](./user-guide.md#identity).
+各データセットが ECID など同じ ID タイプ（名前空間）を共有している場合、**ID マップ** （フィールド）に基づいて異なるソースから複数のデータセットを追加できるようになりました。 ID と名前空間を選択すると、ステッチされるデータの量を示す ID 列の完了度指標が表示されます。 複数のデータセットの追加について詳しくは、[Attribution AIユーザーガイド ](./user-guide.md#identity) を参照してください。
 
-チャネル情報は、デフォルトではマッピングされない場合があります。 場合によっては、 mediaChannel （フィールド）が空白の場合、必須の列なので、フィールドを mediaChannel にマッピングするまで「続行」できません。 データセットでチャネルが検出された場合、デフォルトで mediaChannel にマッピングされます。 その他の列は、 **メディアタイプ** および **メディアアクション** はオプションです。
+チャネル情報は、デフォルトでは常にマッピングされるわけではありません。 場合によっては、mediaChannel （フィールド）が空白の場合、フィールドを mediaChannel にマッピングしないと、必須の列ではないため、「続行」できません。 データセットでチャネルが検出されると、デフォルトで mediaChannel にマッピングされます。 **メディアタイプ** や **メディアアクション** など、その他の列は引き続きオプションです。
 
-チャネルフィールドのマッピング後、「イベントの定義」の手順に進み、コンバージョンイベントとタッチポイントイベントを選択して、個々のデータセットから特定のフィールドを選択できます。
+チャネルフィールドをマッピングしたら、「イベントを定義」の手順に進みます。この手順で、コンバージョンイベント、タッチポイントイベントを選択し、個々のデータセットから特定のフィールドを選択できます。
 
 >[!IMPORTANT]
 >
->Adobe Analyticsソースコネクタでは、データのバックフィルに最大 4 週間かかる場合があります。 コネクタを最近設定した場合は、Attribution AIセットに必要な最小長のデータが含まれていることを確認する必要があります。 次を確認してください： [履歴データ](#data-requirements) 」セクションを参照して、正確なアルゴリズムスコアを計算するのに十分なデータがあることを確認してください。
+>Adobe Analytics ソースコネクタでは、データのバックフィルに最大 4 週間かかる場合があります。 最近コネクタを設定した場合は、Attribution AIセットに、データに必要な最小限のデータ長があることを確認する必要があります。 [ 履歴データ ](#data-requirements) の節を確認して、正確なアルゴリズムスコアを計算するのに十分なデータがあることを確認してください。
 
-の設定の詳細については、 [!DNL Consumer Experience Event] (CEE) スキーマについては、 [インテリジェントサービスのデータ準備](../data-preparation.md) ガイド。 Adobe Analyticsデータのマッピングについて詳しくは、 [Analytics フィールドのマッピング](../../sources/connectors/adobe-applications/analytics.md) ドキュメント。
+[!DNL Consumer Experience Event] （CEE）スキーマの設定について詳しくは、「[ インテリジェントサービスデータ準備 ](../data-preparation.md) ガイドを参照してください。 Analytics データのマッピングについて詳しくは、[Adobe Analytics フィールドのマッピング ](../../sources/connectors/adobe-applications/analytics.md) に関するドキュメントを参照してください。
 
-すべての列が [!DNL Consumer Experience Event] (CEE) スキーマはAttribution AIに必須です。
+[!DNL Consumer Experience Event] （CEE）スキーマ内の一部の列が、Attribution AIに必須ではありません。
 
-タッチポイントは、スキーマ内または選択したデータセット内で以下に推奨されるフィールドを使用して設定できます。
+スキーマまたは選択したデータセットで、以下で推奨する任意のフィールドを使用して、タッチポイントを設定できます。
 
-| 推奨列 | 必要な条件： |
+| 推奨される列 | に必要 |
 | --- | --- |
 | プライマリID フィールド | タッチポイント/コンバージョン |
 | タイムスタンプ | タッチポイント/コンバージョン |
-| チャネル._タイプ | タッチポイント |
+| チャネル。_type | タッチポイント |
 | Channel.mediaAction | タッチポイント |
 | Channel.mediaType | タッチポイント |
 | Marketing.trackingCode | タッチポイント |
@@ -51,118 +51,116 @@ Attribution AIは、次のデータセットを分析してアルゴリズムス
 | Marketing.campaigngroup | タッチポイント |
 | Commerce | 変換 |
 
-通常、アトリビューションは、「コマース」下の注文、購入、チェックアウトなどのコンバージョン列で実行されます。 「チャネル」および「マーケティング」の列は、Attribution AIのタッチポイント ( 例： `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`) をクリックします。 最適な結果とインサイトを得るには、できる限り多くのコンバージョン列とタッチポイント列を含めることを強くお勧めします。 また、上記の列に限定されるわけではありません。 その他の推奨列またはカスタム列をコンバージョンまたはタッチポイント定義として含めることができます。
+通常、アトリビューションは、「コマース」の注文、購入、チェックアウトなどのコンバージョン列で実行されます。 「チャネル」と「マーケティング」の列は、Attribution AIのタッチポイントの定義に使用されます（例：`channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`）。 最適な結果とインサイトを得るには、できるだけ多くのコンバージョン列とタッチポイント列を含めることを強くお勧めします。 また、上記の列に限定されません。 その他の推奨列やカスタム列をコンバージョンまたはタッチポイントの定義として含めることができます。
 
-タッチポイントの設定に関連するチャネルまたはキャンペーン情報がいずれかの Mixin に存在するか、フィールドを通過する場合、エクスペリエンスイベント (EE) データセットには、チャネルとマーケティングの Mixin を明示的に含める必要はありません。
+タッチポイントの設定に関連するチャネルまたはキャンペーン情報が Mixin フィールドまたはパススルーフィールドのいずれかに存在する限り、エクスペリエンスイベント（EE）データセットにチャネルおよびマーケティング Mixin を明示的に指定する必要はありません。
 
 >[!TIP]
 >
->CEE スキーマでAdobe Analyticsデータを使用している場合、通常、Analytics のタッチポイント情報は `channel.typeAtSource` ( 例： `channel.typeAtSource = 'email'`) をクリックします。
+>CEE スキーマでAdobe Analytics データを使用している場合、Analytics のタッチポイント情報は通常、`channel.typeAtSource` （例：`channel.typeAtSource = 'email'`）に保存されます。
 
 ## 履歴データ {#data-requirements}
 
 >[!IMPORTANT]
 >
-> Attribution AIの機能に最低限必要なデータ量は、次のとおりです。
-> - 適切なモデルを実行するには、少なくとも 3 か月（90 日）のデータを提供する必要があります。
-> - 少なくとも 1,000 個のコンバージョンが必要です。
+> データが機能するために必要な最小Attribution AI量は次のとおりです。
+> - 適切なモデルを実行するには、少なくとも 3 か月（90 日）のデータを指定する必要があります。
+> - 1,000 以上のコンバージョンが必要です。
 
+Attribution AIには、モデルトレーニングの入力として履歴データが必要です。 必要なデータ期間は、主にトレーニングウィンドウとルックバックウィンドウの 2 つの主要な要因によって決定されます。 トレーニングウィンドウが短い入力は最近のトレンドの影響を受けやすくなりますが、トレーニングウィンドウが長いほど、より安定した正確なモデルを作成するのに役立ちます。 ビジネス目標を最も的確に表す履歴データを使用して目標をモデル化することが重要です。
 
-Attribution AIには、モデルトレーニングの入力として履歴データが必要です。 必要なデータの期間は、主に次の 2 つの主要な要因によって決まります。トレーニングウィンドウとルックバックウィンドウ。 トレーニング期間が短い入力は、最近のトレンドに対する感度が高くなります。トレーニング期間が長いと、より安定した正確なモデルを作成できます。 ビジネス目標を最も適切に表す履歴データを使用して目標をモデル化することが重要です。
+[ トレーニングウィンドウ設定 ](./user-guide.md#training-window) は、モデルトレーニングに含める設定コンバージョンイベントを、発生時間に基づいてフィルタリングします。 現在、最小トレーニングウィンドウは 1 四半期（90 日）です。 [ ルックバックウィンドウ ](./user-guide.md#lookback-window) は、このコンバージョンイベントに関連するコンバージョンイベントタッチポイントまでの日数を示す時間枠を提供します。 これら 2 つの概念の組み合わせによって、アプリケーションに必要な入力データの量（日数）が決まります。
 
-この [トレーニングウィンドウ設定](./user-guide.md#training-window) 発生時間に基づいて、モデルトレーニングに含めるように設定されたコンバージョンイベントをフィルタリングします。 現在、トレーニング期間は最小 1 四半期（90 日）です。 この [ルックバックウィンドウ](./user-guide.md#lookback-window) は、このコンバージョンイベントに関連するコンバージョンイベントの何日前からのタッチポイントを含めるかを示す時間枠を提供します。 これら 2 つの概念を組み合わせて、アプリケーションに必要な入力データの量（日数で測定）を決定します。
-
-デフォルトでは、Attribution AIはトレーニング期間を最新の 2 四半期（6 ヶ月）として定義し、ルックバック期間を 56 日として定義します。 つまり、モデルでは、過去 2 四半期に発生した定義済みのコンバージョンイベントをすべて考慮し、関連するコンバージョンイベントの 56 日前に発生したすべてのタッチポイントを探します。
+デフォルトでは、Attribution AIは、トレーニングウィンドウを最新の 2 四半期（6 か月）として定義し、ルックバックウィンドウを 56 日として定義します。 つまり、モデルでは、過去 2 四半期に発生した、定義済みのコンバージョンイベントをすべて考慮し、関連するコンバージョンイベントの前 56 日以内に発生したすべてのタッチポイントを探します。
 
 **数式**:
 
-必要なデータの最小長=トレーニングウィンドウ+ルックバックウィンドウ
+必要なデータの最小長= トレーニングウィンドウ + ルックバックウィンドウ
 
 >[!TIP]
 >
-> デフォルト設定を使用するアプリケーションで必要なデータの最小長は次のとおりです。2 四半期（180 日）+ 56 日= 236 日。
+> デフォルト設定のアプリケーションに必要なデータの最小長は、2 四半期（180 日）+ 56 日= 236 日です。
 
 例：
 
-- 過去 90 日（3 ヶ月）以内に発生したコンバージョンイベントを属性に設定し、コンバージョンイベントの 4 週間前に発生したすべてのタッチポイントを追跡する必要があります。 入力データの期間は、過去 90 日+ 28 日（4 週間）に及びます。 トレーニング期間は 90 日で、ルックバック期間は 28 日で、合計 118 日です。
+- 過去 90 日間（3 か月）に発生したコンバージョンイベントを属性化し、コンバージョンイベント前の 4 週間以内に発生したすべてのタッチポイントを追跡する必要があります。 入力データ期間は、過去 90 日+ 28 日（4 週間）に及ぶ必要があります。 トレーニングウィンドウは 90 日で、ルックバックウィンドウは合計 118 日で 28 日です。
 
 ## Attribution AI出力データ
 
-Attribution AIは次の出力を行います。
+Attribution AIの出力は次のようになります。
 
-- [未加工の精度スコア](#raw-granular-scores)
+- [生の詳細なスコア](#raw-granular-scores)
 - [集計スコア](#aggregated-attribution-scores)
 
 **出力スキーマの例：**
 
 ![](./images/input-output/schema_output.gif)
 
-### 未加工の精度スコア {#raw-granular-scores}
+### 生の詳細なスコア {#raw-granular-scores}
 
-Attribution AIは、任意のスコア列でスコアをスライスしてディスコアリングできるように、アトリビューションスコアをできる限り詳細なレベルで出力します。 UI でこれらのスコアを表示するには、 [raw スコアパスの表示](#raw-score-path). API を使用してスコアをダウンロードするには、 [スコアのダウンロード，Attribution AI](./download-scores.md) 文書。
+Attribution AIは、アトリビューションスコアをできる限り詳細なレベルで出力するので、任意のスコア列でスコアをスライスし、多角的に分析できます。 これらのスコアを UI に表示するには、[ 生のスコアパスの表示 ](#raw-score-path) に関する節を参照してください。 API を使用してスコアをダウンロードするには、[Attribution AIでのスコアのダウンロード ](./download-scores.md) ドキュメントにアクセスしてください。
 
 >[!NOTE]
 >
-> 次のいずれかに該当する場合にのみ、スコア出力データセットの入力データセットから目的のレポート列を確認できます。
-> - レポート列は、タッチポイントまたはコンバージョン定義設定の一部として、設定ページに含まれます。
-> - レポート列は、追加のスコアデータセット列に含まれます。
+> 次のいずれかが当てはまる場合にのみ、スコア出力データセットの入力データセットから目的のレポート列を確認できます。
+> - レポート列は、タッチポイントまたはコンバージョン定義設定の一部として、設定ページに含まれています。
+> - レポート列は、追加のスコアデータセット列に含まれています。
 
+次の表に、生のスコアのサンプル出力のスキーマフィールドの概要を示します。
 
-次の表に、生のスコアの例の出力のスキーマフィールドの概要を示します。
-
-| 列名（データタイプ） | Nullable | 説明 |
+| 列名（データタイプ） | 無効可能 | 説明 |
 | --- | --- | --- |
-| timestamp (DateTime) | False | コンバージョンイベントまたは観測が発生した時間。 <br> **例：** 2020-06-09T00:01:51.000Z |
-| identityMap （マップ） | True | CEE XDM 形式に類似したユーザーの identityMap。 |
-| eventType（文字列） | True | この時系列レコードの主なイベントタイプ。 <br> **例：** &quot;注文&quot;, &quot;購入&quot;, &quot;訪問&quot; |
-| eventMergeId （文字列） | True | 複数のクロス集計または結合する ID [!DNL Experience Events] を結合します。 これは、取り込み前にデータプロデューサーによって設定されることを目的としています。 <br> **例：** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _id （文字列） | False | 時系列イベントの一意の ID。 <br> **例：** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _tenantId （オブジェクト） | False | テンタント ID に対応する最上位のオブジェクトコンテナ。 <br> **例：** _atsdsnrmmsv2 |
-| your_schema_name (Object) | False | コンバージョンイベントに関連付けられているすべてのタッチポイントイベントとそのメタデータを含むスコア行。 <br> **例：** Attribution AIスコア — モデル名__2020 |
-| セグメント化（文字列） | True | モデルが構築される地理特性などのコンバージョンセグメント。 セグメントが存在しない場合、セグメントは conversionName と同じになります。 <br> **例：** ORDER_US |
-| conversionName (String) | True | セットアップ中に設定された変換の名前。 <br> **例：** 注文、リード、訪問 |
-| conversion (Object) | False | コンバージョンメタデータ列。 |
-| dataSource (String) | True | データソースのグローバルに一意の ID。 <br> **例：** Adobe Analytics |
-| eventSource （文字列） | True | 実際のイベントが発生したソース。 <br> **例：** Adobe.com |
-| eventType（文字列） | True | この時系列レコードの主なイベントタイプ。 <br> **例：** 注文 |
-| geo (String) | True | コンバージョンが配信された地域 `placeContext.geo.countryCode`. <br> **例：** US |
-| priceTotal (Double) | True | コンバージョンによって得られた売上高 <br> **例：** 99.9 |
-| product (String) | True | 製品自体の XDM 識別子。 <br> **例：** RX 1080 ti |
-| productType (String) | True | この製品表示のユーザーに提示された製品の表示名。 <br> **例：** グプス |
-| 数量（整数） | True | コンバージョン中に購入された数量。 <br> **例：** 1 1080 分の 1 |
-| receivedTimestamp (DateTime) | True | コンバージョンのタイムスタンプを受け取りました。 <br> **例：** 2020-06-09T00:01:51.000Z |
-| skuId（文字列） | True | 在庫管理単位 (SKU)。ベンダーによって定義された製品の一意の ID。 <br> **例：** MJ-03-XS-Black |
-| timestamp (DateTime) | True | 変換のタイムスタンプ。 <br> **例：** 2020-06-09T00:01:51.000Z |
-| passThrough （オブジェクト） | True | モデルの設定時にユーザーが指定した追加のスコアデータセット列。 |
-| commerce_order_purchaseCity （文字列） | True | 追加のスコアデータセット列。 <br> **例：** 市区町村：サンノゼ |
-| customerProfile (Object) | False | モデルの構築に使用されたユーザーの ID 詳細。 |
-| id (Object) | False | モデルの構築に使用されるユーザーの詳細が含まれます。例： `id` および `namespace`. |
-| id （文字列） | True | ユーザーの ID ID(Cookie ID、Adobe Analytics ID(AAID)、Experience CloudID（ECID、MCID、訪問者 ID とも呼ばれます）など。 <br> **例：** 17348762725408656344688320891369597404 |
-| namespace (String) | True | パスを構築し、それによってモデルを構築するために使用される ID 名前空間。 <br> **例：** aaid |
-| touchpointsDetail (Object Array) | True | 次の順で並べ替えられたコンバージョンにつながるタッチポイントの詳細のリスト | タッチポイントの発生またはタイムスタンプ。 |
-| touchpointName (String) | True | セットアップ中に設定されたタッチポイントの名前。 <br> **例：** PAID_SEARCH_CLICK |
-| scores (Object) | True | スコアとしてのこのコンバージョンへのタッチポイントの貢献度。 このオブジェクト内で生成されるスコアについて詳しくは、 [集計されたアトリビューションスコア](#aggregated-attribution-scores) 」セクションに入力します。 |
-| touchPoint （オブジェクト） | True | タッチポイントメタデータ。 このオブジェクト内で生成されるスコアについて詳しくは、 [集計スコア](#aggregated-scores) 」セクションに入力します。 |
+| タイムスタンプ （日時） | False | コンバージョンイベントまたは観測が発生した時間。<br> **例：** 2020-06-09T00:01:51.000Z |
+| identityMap （マップ） | True | cee XDM 形式に類似したユーザーの identityMap。 |
+| eventType （String） | True | この時系列レコードの主なイベントタイプ。<br> **例：** &quot;Order&quot;, &quot;Purchase&quot;, &quot;Visit&quot; |
+| eventMergeId （String） | True | 本質的に同じイベントである、または結合する必要がある複数の [!DNL Experience Events] を相互に関連付けたり結合したりするための ID。 これは、取り込み前に、データプロデューサーによって入力されることを目的としています。<br> **例：** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _id （文字列） | False | 時系列イベントの一意の ID。<br> **例：** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _tenantId （オブジェクト） | False | テナント ID に対応する最上位のオブジェクトコンテナ。<br> **例：** _atsdsnrmmsv2 |
+| your_schema_name （オブジェクト） | False | コンバージョンイベントに関連するすべてのタッチポイントイベントとそのメタデータを含む行をスコアに付けます。<br> **例：** Attribution AIスコア – モデル名__2020 |
+| セグメント化（文字列） | True | コンバージョンセグメント（地理セグメントなど） – モデルの構築対象。 セグメントがない場合、segment は conversionName と同じです。<br> **例：** ORDER_US |
+| conversionName （String） | True | セットアップ時に設定されたコンバージョンの名前。<br> **例：** 注文、リード、訪問 |
+| conversion （オブジェクト） | False | 変換メタデータ列。 |
+| dataSource （String） | True | データソースのグローバルに一意の ID。<br> **例：** Adobe Analytics |
+| eventSource （String） | True | 実際のイベントが発生したソース。<br> **例：** Adobe.com |
+| eventType （String） | True | この時系列レコードの主なイベントタイプ。<br> **例：** 順序 |
+| geo （String） | True | コンバージョンが配信された地理的 `placeContext.geo.countryCode` 場所。<br> **例：** US |
+| priceTotal （Double） | True | コンバージョン <br> を通じて得られた収益 **例：** 99.9 |
+| product （String） | True | 製品自体の XDM 識別子。<br> **例：** RX 1080 ti |
+| productType （String） | True | この商品表示でユーザーに提示される商品の表示名。<br> **例：** Gpu |
+| 数量（整数） | True | コンバージョン中に購入された数量。<br> **例：** 1 1080 ti |
+| receivedTimestamp （DateTime） | True | コンバージョンのタイムスタンプを受信しました。<br> **例：** 2020-06-09T00:01:51.000Z |
+| skuId （String） | True | 最小在庫管理単位（SKU）。ベンダーによって定義された商品の一意の ID。<br> **例：** MJ-03-XS-Black |
+| タイムスタンプ （日時） | True | コンバージョンのタイムスタンプ。<br> **例：** 2020-06-09T00:01:51.000Z |
+| passThrough （オブジェクト） | True | モデルの設定時にユーザーによって指定された、追加のスコアデータセットの列。 |
+| commerce_order_purchaseCity （String） | True | 追加のスコアデータセット列。<br> **例：** city: サンノゼ |
+| customerProfile （オブジェクト） | False | モデルの構築に使用されるユーザーの ID の詳細。 |
+| identity （オブジェクト） | False | `id` や `namespace` など、モデルの構築に使用されるユーザーの詳細が含まれます。 |
+| id （文字列） | True | Cookie ID、Adobe Analytics ID （AAID）、Experience CloudID （ECID、MCID または訪問者 ID とも呼ばれます）など、ユーザーの ID <br> **例：** 17348762725408656344688320891369597404 |
+| 名前空間（文字列） | True | パスを構築し、それによってモデルを構築するために使用される ID 名前空間。<br> **例：** aaid |
+| touchpointsDetail （オブジェクト配列） | True | 並べ替え順のコンバージョンにつながるタッチポイント詳細のリスト | タッチポイント発生またはタイムスタンプ。 |
+| touchpointName （String） | True | 設定時に設定されたタッチポイントの名前。<br> **例：** PAID_SEARCH_CLICK |
+| scores （オブジェクト） | True | このコンバージョンに対するタッチポイントの貢献度（スコア）。 このオブジェクト内で生成されるスコアについて詳しくは、[ 集計アトリビューションスコア ](#aggregated-attribution-scores) の節を参照してください。 |
+| touchPoint （オブジェクト） | True | タッチポイントメタデータ。 このオブジェクト内で生成されるスコアについて詳しくは、[ 集計スコア ](#aggregated-scores) の節を参照してください。 |
 
-### 生のスコアパスの表示 (UI) {#raw-score-path}
+### 生のスコアパスの表示（UI） {#raw-score-path}
 
-生のスコアへのパスは、UI で表示できます。 最初に選択 **[!UICONTROL スキーマ]** 次に、Platform UI で、 **[!UICONTROL 参照]** タブをクリックします。
+生のスコアへのパスを UI に表示できます。 Platform UI で「**[!UICONTROL スキーマ]**」を選択してから、「**[!UICONTROL 参照]**」タブ内からアトリビューション AI スコアスキーマを検索して選択します。
 
-![スキーマを選択](./images/input-output/schemas_browse.png)
+![ スキーマを選択 ](./images/input-output/schemas_browse.png)
 
-次に、 **[!UICONTROL 構造]** UI のウィンドウ、 **[!UICONTROL フィールドプロパティ]** タブが開きます。 内 **[!UICONTROL フィールドプロパティ]** は、未加工のスコアにマッピングされるパスフィールドです。
+次に、UI の **[!UICONTROL 構造]** ウィンドウでフィールドを選択すると、「**[!UICONTROL フィールドプロパティ]**」タブが開きます。 **[!UICONTROL フィールドプロパティ]** 内には、生のスコアにマッピングされるパスフィールドがあります。
 
-![スキーマを選択](./images/input-output/field_properties.png)
+![ スキーマを選択 ](./images/input-output/field_properties.png)
 
-### 集計されたアトリビューションスコア {#aggregated-attribution-scores}
+### 集計アトリビューションスコア {#aggregated-attribution-scores}
 
-日付範囲が 30 日未満の場合は、集計スコアを CSV 形式で Platform UI からダウンロードできます。
+集計スコアは、日付範囲が 30 日未満の場合、Platform UI から CSV 形式でダウンロードできます。
 
 Attribution AI は、アトリビューションスコアの 2 つのカテゴリ（アルゴリズムスコアとルールベーススコア）をサポートしています。
 
 Attribution AI では、増分スコアと影響スコアの 2 種類のアルゴリズムスコアを生成します。影響スコアは、各マーケティングタッチポイントがコンバージョンに寄与している割合です。増分スコアは、マーケティングタッチポイントで直接引き起こされたわずかな影響の量です。増分スコアと影響スコアの主な違いは、増分スコアがベースライン効果を考慮に入れていることです。コンバージョンが、先行するマーケティングタッチポイントによってのみ生じるとは考えられません。
 
-Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡単に見てみましょう。
+以下は、Adobe Experience Platform UI からのAttribution AIスキーマ出力の例です。
 
 ![](./images/input-output/schema_screenshot.png)
 
@@ -178,14 +176,14 @@ Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡�
 | U 字形 | ルールベースのアトリビューションスコアで、クレジットの 40% を最初のタッチポイントに、40% を最後のタッチポイントに割り当て、残りの 20% を他のタッチポイントに均等に分配します。 |
 | タイムディケイ | コンバージョンに近いタッチポイントが、コンバージョンから遠いタッチポイントよりも多くのクレジットを受け取るルールベースのアトリビューションスコアです。 |
 
-**未加工スコアリファレンス（アトリビューションスコア）**
+**生のスコア参照（アトリビューションスコア）**
 
-次の表に、アトリビューションのスコアと生のスコアのマッピングを示します。 生のスコアをダウンロードする場合は、 [スコアのダウンロード，Attribution AI](./download-scores.md) ドキュメント。
+次の表に、アトリビューションスコアを生のスコアにマッピングします。 生のスコアをダウンロードする場合は、[Attribution AIでのスコアのダウンロード ](./download-scores.md) ドキュメントを参照してください。
 
 | アトリビューションスコア | 生のスコア参照列 |
 | --- | --- |
-| 影響（アルゴリズム） | _tenantID.your_schema_name.element.touchpoint.algorithmicInfluced |
-| 増分（アルゴリズム） | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.algorithmicInfluced |
+| 影響（アルゴリズム） | _tenantID.your_schema_name.element.touchpoint.algorithmicInfected |
+| 増分（アルゴリズム） | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.algorithmicInfected |
 | ファーストタッチ | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.firstTouch |
 | ラストタッチ | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.lastTouch |
 | 線形 | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.linear |
@@ -194,37 +192,37 @@ Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡�
 
 ### 集計スコア {#aggregated-scores}
 
-日付範囲が 30 日未満の場合は、集計スコアを CSV 形式で Platform UI からダウンロードできます。 これらの各集計列の詳細については、以下の表を参照してください。
+集計スコアは、日付範囲が 30 日未満の場合、Platform UI から CSV 形式でダウンロードできます。 これらの各集計列の詳細については、次の表を参照してください。
 
-| 列名 | 制約 | Nullable | 説明 |
+| 列名 | 制約 | 無効可能 | 説明 |
 | --- | --- | --- | --- |
-| customerevents_date (DateTime) | ユーザー定義および固定形式 | False | YYYY-MM-DD 形式の顧客イベント日。 <br> **例**:2016-05-02 |
-| mediatouchpoints_date (DateTime) | ユーザー定義および固定形式 | True | メディアタッチポイント日（YYYY-MM-DD 形式） <br> **例**:2017-04-21 |
-| セグメント（文字列） | 計算済み | False | コンバージョンセグメント（モデルが構築される地理特性など）。 セグメントが存在しない場合、セグメントは conversion_scope と同じです。 <br> **例**:ORDER_AMER |
-| conversion_scope (String) | ユーザー定義 | False | ユーザーが設定したコンバージョンの名前。 <br> **例**:注文 |
-| touchpoint_scope（文字列） | ユーザー定義 | True | ユーザーが設定したタッチポイントの名前 <br> **例**:PAID_SEARCH_CLICK |
-| product (String) | ユーザー定義 | True | 製品の XDM 識別子。 <br> **例**:CC |
-| product_type（文字列） | ユーザー定義 | True | この製品表示のユーザーに提示された製品の表示名。 <br> **例**:gpu、ノートパソコン |
-| geo (String) | ユーザー定義 | True | コンバージョンが配信された地理的な場所 (placeContext.geo.countryCode) <br> **例**:US |
-| event_type(String) | ユーザー定義 | True | この時系列レコードの主なイベントタイプ <br> **例**:有料コンバージョン |
-| media_type (String) | ENUM | False | メディアタイプが有料か、所有か、獲得かを表します。 <br> **例**:有料、所有 |
-| channel （文字列） | ENUM | False | この `channel._type` プロパティを使用して、 [!DNL Consumer Experience Event] XDM。 <br> **例**:検索 |
-| action (String) | ENUM | False | この `mediaAction` プロパティは、エクスペリエンスイベントのメディアアクションのタイプを提供するために使用されます。 <br> **例**:クリック |
-| campaign_group（文字列） | ユーザー定義 | True | 複数のキャンペーンがグループ化されたキャンペーングループの名前（「50%_DISCOUNT」など）。 <br> **例**:商用 |
-| campaign_name（文字列） | ユーザー定義 | True | マーケティングキャンペーンの識別に使用するキャンペーンの名前（「50%_DISCOUNT_USA」や「50%_DISCOUNT_ASIA」など）。 <br> **例**:感謝祭の販売 |
+| customerevents_date （DateTime） | ユーザー定義および固定フォーマット | False | 顧客イベント日付（YYYY-MM-DD 形式）。<br> **例**:2016-05-02 |
+| mediatouchpoints_date （DateTime） | ユーザー定義および固定フォーマット | True | YYYY-MM-DD 形式 <br> のメディアタッチポイント日 **例**:2017-04-21 |
+| セグメント（文字列） | 計算日時 | False | コンバージョンセグメント （モデルの構築対象となる地理セグメント化など）。 セグメントがない場合、セグメントは conversion_scope と同じです。<br> **例**: ORDER_AMER |
+| conversion_scope （String） | ユーザー定義 | False | ユーザーが設定したコンバージョンの名前。<br> **例**:ORDER |
+| touchpoint_scope （String） | ユーザー定義 | True | ユーザー <br> で設定されたタッチポイントの名前 **例**:PAID_SEARCH_CLICK |
+| product （String） | ユーザー定義 | True | 商品の XDM 識別子。<br> **例**: CC |
+| product_type （String） | ユーザー定義 | True | この商品表示でユーザーに提示される商品の表示名。<br> **例**:gpu、ラップトップ |
+| geo （String） | ユーザー定義 | True | コンバージョンが配信された地理的な場所（placeContext.geo.countryCode） <br> **例**:US |
+| event_type （String） | ユーザー定義 | True | この時系列レコード <br> の主なイベントタイプ **例**：有料コンバージョン |
+| media_type （String） | 列挙 | False | メディアタイプがペイド、オウンドまたはアーンドのいずれかを表します。<br> **例**：有料、所有 |
+| チャネル （文字列） | 列挙 | False | XDM で類似のプロパティを持つチャネルの大まかな分類を提供するために使用される `channel._type` プロパティ [!DNL Consumer Experience Event] す。<br> **例**：検索 |
+| アクション（String） | 列挙 | False | `mediaAction` プロパティは、エクスペリエンスイベントメディアアクションのタイプを提供するために使用されます。<br> **例**：クリックする |
+| campaign_group （String） | ユーザー定義 | True | 複数のキャンペーンがグループ化されたキャンペーングループの名前（「50%_DISCOUNT」など）。<br> **例**：商用 |
+| campaign_name （String） | ユーザー定義 | True | マーケティングキャンペーンを識別するために使用されるキャンペーンの名前（「50%_DISCOUNT_USA」や「50%_DISCOUNT_ASIA」など）。<br> **例**：感謝祭の販売 |
 
-**生のスコアの参照（集計）**
+**生のスコア参照（集計）**
 
-次の表に、集計されたスコアを生のスコアにマッピングします。 生のスコアをダウンロードする場合は、 [スコアのダウンロード，Attribution AI](./download-scores.md) ドキュメント。 UI 内から生のスコアパスを表示するには、 [raw スコアパスの表示](#raw-score-path) 」と入力します。
+次の表は、集計されたスコアを生のスコアにマッピングします。 生のスコアをダウンロードする場合は、[Attribution AIでのスコアのダウンロード ](./download-scores.md) ドキュメントを参照してください。 UI 内から生のスコアパスを表示するには、このドキュメント内の [ 生のスコアパスの表示 ](#raw-score-path) の節を参照してください。
 
-| 列名 | 生のスコアの参照列 |
+| 列名 | 生のスコア参照列 |
 | --- | --- |
-| customrevents_date | タイムスタンプ |
+| customerevents_date | タイムスタンプ |
 | mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
 | セグメント | _tenantID.your_schema_name.segmentation |
 | conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
-| touchpoint_scope | _tenantID.your_schema_name.touchpointsDetail.element.touchpointName |
-| product | _tenantID.your_schema_name.conversion.product |
+| touchpoint_scope | _tenantID.your_schema_name.タッチポイントの詳細.element.タッチポイント名 |
+| 製品 | _tenantID.your_schema_name.conversion.product |
 | product_type | _tenantID.your_schema_name.conversion.product_type |
 | 地域 | _tenantID.your_schema_name.conversion.geo |
 | event_type | eventType |
@@ -236,11 +234,10 @@ Adobe Experience Platform UI からのAttribution AIスキーマ出力例を簡�
 
 >[!IMPORTANT]
 >
-> - Attribution AIは、更なるトレーニングとスコアリングに、更新されたデータのみを使用します。 同様に、データの削除をリクエストする場合、顧客 AI は削除されたデータを使用しないようにします。
+> - Attribution AIでは、追加のトレーニングとスコアリングに更新されたデータのみを使用します。 同様に、データの削除をリクエストすると、顧客 AI は削除されたデータの使用を控えます。
 > - アトリビューション AI では Platform データセットを活用します。 ブランドが受け取る可能性のある消費者の権利リクエストをサポートするには、Platform Privacy Service を使用して、アクセスおよび削除に対する消費者のリクエストを送信し、データレイク、ID サービス、リアルタイム顧客プロファイルをまたいでデータを削除する必要があります。
-> - モデルの入出力に使用するすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。詳しくは、ドキュメントを参照してください。 [データ暗号化](../../../help/landing/governance-privacy-security/encryption.md)
-
+> - モデルの入出力に使用するすべてのデータセットは、Platform のガイドラインに従います。 Platform データ暗号化は、保存中および送信中のデータに適用されます。[ データ暗号化 ](../../../help/landing/governance-privacy-security/encryption.md) について詳しくは、ドキュメントを参照してください
 
 ## 次の手順 {#next-steps}
 
-データを準備し、すべての資格情報とスキーマを設定したら、次の手順に従って開始します。 [Attribution AIユーザーガイド](./user-guide.md). このガイドでは、Attribution AIのインスタンスの作成手順を説明します。
+データを準備し、すべての資格情報とスキーマを設定したら、[Attribution AIユーザーガイド ](./user-guide.md) に従って開始します。 このガイドでは、Attribution AIのインスタンスを作成する手順について説明します。

@@ -14,11 +14,11 @@ ht-degree: 82%
 
 Adobe Experience Platform では、複数のダッシュボードを使用して、組織のデータを表示し、操作できます。また、ダッシュボードビューに新しいウィジェットを追加することで、特定のダッシュボードを更新することもできます。アドビでは、選択してダッシュボードに追加できる標準ウィジェットを用意しています。
 
-The [[!UICONTROL プロファイル]](../guides/profiles.md#default-widgets), [[!UICONTROL オーディエンス]](../guides/audiences.md#default-widgets)、および [[!UICONTROL 宛先]](../guides/destinations.md#default-widgets) 各ダッシュボードには、新しい Platform インスタンスの作成時にデフォルトのウィジェットが読み込まれます。 このガイドでは、標準ウィジェットを追加して [!UICONTROL プロファイル], [!UICONTROL オーディエンス]、および [!UICONTROL 宛先] ダッシュボードを使用して、Platform UI に表示できます。
+[[!UICONTROL  プロファイル ]](../guides/profiles.md#default-widgets)、[[!UICONTROL  オーディエンス ]](../guides/audiences.md#default-widgets) および [[!UICONTROL  宛先 ]](../guides/destinations.md#default-widgets) ダッシュボードには、それぞれ、新しい Platform インスタンスの作成時にデフォルトのウィジェットが読み込まれます。 このガイドでは、標準ウィジェットを追加して、Platform UI の [!UICONTROL  プロファイル ]、[!UICONTROL  オーディエンス ]、[!UICONTROL  宛先 ] ダッシュボードをカスタマイズするためのステップバイステップの手順を説明します。
 
 >[!NOTE]
 >
->ダッシュボードに対しておこなわれた更新は、組織ごとおよびサンドボックスごとにおこなわれます。
+>ダッシュボードに加えられた更新は、組織ごとおよびサンドボックス別に行われます。
 
 標準ウィジェットについて詳しくは、 [標準ウィジェットの作成](custom-widgets.md) に関するガイドを参照してください。
 
@@ -38,7 +38,7 @@ The [[!UICONTROL プロファイル]](../guides/profiles.md#default-widgets), [[
 >
 >ウィジェットは、選択したカテゴリに一致するダッシュボードにのみ追加できます。例えば、 [!UICONTROL プロファイル] カテゴリのウィジェットのみを [!UICONTROL プロファイル] ダッシュボードに追加できます。
 
-![「標準」タブと使用可能なカテゴリがハイライトされたウィジェットライブラリワークスペース。](../images/customization/standard-widgets.png)
+![ 「標準」タブと使用可能なカテゴリがハイライト表示されたウィジェットライブラリワークスペース ](../images/customization/standard-widgets.png)
 
 ## ダッシュボードへの標準ウィジェットの追加
 
@@ -50,7 +50,7 @@ The [[!UICONTROL プロファイル]](../guides/profiles.md#default-widgets), [[
 
 「**[!UICONTROL ウィジェットを追加]**」を選択して、選択したウィジェットをダッシュボードに追加します。
 
-![ウィジェットが選択されたウィジェットライブラリワークスペースと、ウィジェットの追加とキャンセルがハイライトされている。](../images/customization/add-widget.png)
+![ ウィジェットが選択され、「ウィジェットを追加」と「キャンセル」がハイライト表示されているウィジェットライブラリワークスペース ](../images/customization/add-widget.png)
 
 ## 次の手順
 

@@ -19,7 +19,7 @@ ht-degree: 97%
 この開発者ガイドでは、[[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/) へのリクエストのフォーマット方法に関する情報を提供し、次の操作について説明します。
 
 - [権限名とリソースタイプのリスト](./permissions-and-resource-types.md)
-- [現在のユーザーに対して有効なアクセスポリシーを表示します](./effective-policies.md)
+- [現在のユーザーに有効なアクセスポリシーの表示](./effective-policies.md)
 
 ## はじめに
 

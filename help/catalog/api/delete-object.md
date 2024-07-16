@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；オブジェクトの削除；カタログサービス；API
+keywords: Experience Platform；ホーム；人気のトピック；オブジェクトの削除；catalog service;api
 solution: Experience Platform
 title: API でのオブジェクトの削除
 description: DELETE リクエストのパスに ID を指定することで、カタログオブジェクトを削除できます。
@@ -13,11 +13,11 @@ ht-degree: 48%
 
 # API でのオブジェクトの削除
 
-次の項目を削除できます。 [!DNL Catalog] オブジェクト内に含める必要があります。
+DELETEリクエストのパスに ID を指定することで、[!DNL Catalog] オブジェクトを削除できます。
 
 >[!WARNING]
 >
->オブジェクトの削除は元に戻せず、内の他の場所で破壊的な変更が生じる可能性があるので、特に注意が必要です。 [!DNL Experience Platform].
+>オブジェクトを削除する際は元に戻すことができず、[!DNL Experience Platform] の他の場所で重大な変更が発生する可能性があるので、慎重に行ってください。
 
 **API 形式**
 
@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->The `DELETE /batches/{ID}` エンドポイントは非推奨になりました。 バッチを削除するには、 [バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>`DELETE /batches/{ID}` エンドポイントは非推奨（廃止予定）になりました。 バッチを削除するには、[ バッチ取得 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) を使用する必要があります。
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 削除するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 削除するオブジェ [!DNL Catalog] トのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -59,4 +59,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->いいえの場合 [!DNL Catalog] オブジェクトはリクエストで指定された ID に一致します。HTTP ステータスコード 200 が表示される場合がありますが、応答配列は空になります。
+>リクエストで指定された ID に一致する [!DNL Catalog] オブジェクトがない場合でも、HTTP ステータスコード 200 を受け取ることはできますが、応答配列は空になります。

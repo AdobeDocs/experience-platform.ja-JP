@@ -1,20 +1,20 @@
 ---
 title: Adobe Experience Platform Web SDK を使用したレスポンストークンへのアクセス
-description: Adobe Experience Platform Web SDK を使用してレスポンストークンにアクセスする方法について説明します。
-keywords: パーソナライゼーション；target;adobe target;renderDecisions;sendEvent;decisionScopes;result.decisions，レスポンストークン；
+description: Adobe Experience Platform Web SDK を使用して応答トークンにアクセスする方法を説明します。
+keywords: パーソナライゼーション；Target;Adobe Target;renderDecisions;sendEvent;decisionScopes;result.decisions、応答トークン；
 exl-id: fc9d552a-29ba-4693-9ee2-599c7bc76cdf
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '264'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
 # レスポンストークンへのアクセス
 
-Adobe Targetから返されるパーソナライゼーションコンテンツには次が含まれます [レスポンストークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)：アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細です。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンはAdobe Targetユーザーインターフェイスで設定できます。
+Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
 
-パーソナライゼーションコンテンツにアクセスするには、イベントの送信時にコールバック関数を指定します。 このコールバックは、SDK がサーバーから成功した応答を受け取った後に呼び出されます。 コールバックには `result` オブジェクト ( `propositions` 返されたパーソナライゼーションコンテンツを含むプロパティ。 以下に、コールバック関数を指定する例を示します。
+任意のパーソナライゼーションコンテンツにアクセスするには、イベントの送信時にコールバック関数を指定します。 このコールバックは、SDK がサーバーから正常に応答を受信した後に呼び出されます。 コールバックには `result` オブジェクトが提供され、このオブジェクトには、返されたパーソナライゼーションコンテンツを含む `propositions` プロパティを含めることができます。 コールバック関数の提供例を以下に示します。
 
 ```javascript
 alloy("sendEvent", {
@@ -27,15 +27,15 @@ alloy("sendEvent", {
   });
 ```
 
-この例では、 `result.propositions`が存在する場合、は、イベントに関連するパーソナライゼーションの提案を含む配列です。 詳しくは、 [パーソナライゼーションコンテンツのレンダリング](../rendering-personalization-content.md) の内容に関する詳細 `result.propositions`.
+この例では、`result.propositions` が存在する場合、はイベントに関連するパーソナライゼーションの提案を含む配列です。 パーソナライゼーションコンテンツのコンテンツについて詳しくは、[ パーソナライゼーションコンテ `result.propositions` のレンダリング ](../rendering-personalization-content.md) を参照してください。
 
-Web SDK によって自動的にレンダリングされたすべての提案からすべてのアクティビティ名を収集し、単一の配列にプッシュするとします。 その後、単一の配列をサードパーティに送信できます。 この場合の解決策は、次のとおりです。
+Web SDK によって自動的にレンダリングされたすべての提案からすべてのアクティビティ名を収集し、1 つの配列にプッシュするとします。 その後、単一のアレイをサードパーティに送信できます。 この場合の解決策は、次のとおりです。
 
-1. 提案を `result` オブジェクト。
-1. 各提案をループします。
-1. SDK が提案をレンダリングしたかどうかを判断します。
+1. `result` オブジェクトから提案を抽出します。
+1. 各提案をループ処理します。
+1. SDK によって提案がレンダリングされたかどうかを判断します。
 1. その場合は、提案の各項目をループします。
-1. からアクティビティ名を取得します。 `meta` プロパティ。レスポンストークンを含むオブジェクトです。
+1. `meta` プロパティからアクティビティ名を取得します。これは、応答トークンを含むオブジェクトです。
 1. アクティビティ名を配列にプッシュします。
 1. アクティビティ名をサードパーティに送信します。
 

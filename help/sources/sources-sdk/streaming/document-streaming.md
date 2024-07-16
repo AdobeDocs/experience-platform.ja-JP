@@ -1,6 +1,6 @@
 ---
-title: ソースのドキュメント化（ストリーミング SDK）
-description: Adobe Experience Platformで新しいソースをライブにする前の最後の手順は、新しいソースをドキュメント化することです。
+title: Sourceのドキュメント化（ストリーミング SDK）
+description: 新しいソースをAdobe Experience Platformでライブにするには、最後に新しいソースをドキュメント化する必要があります。
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
 badge: ベータ版
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
@@ -14,41 +14,41 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->セルフサービスソースストリーミング SDK はベータ版です。 詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>セルフサービスソース Streaming SDK はベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-Adobe Experience Platformで新しいソースをライブに設定する前の最後の手順は、新しいソースをドキュメント化することです。
+新しいソースをAdobe Experience Platformでライブ設定する前に行う最後の手順は、新しいソースをドキュメント化することです。
 
-このドキュメントガイドには、以下が含まれます。
+このドキュメントガイドには、次のものが含まれます。
 
-* 新しいソースのドキュメントページを作成するために従うことのできるチュートリアル。
+* 新しいソースのドキュメントページを作成する際に従うことができるチュートリアル。
 * 新しいソースに入力するためのドキュメントテンプレート。
-* [Markdown を使用して技術ドキュメントを記述する方法に関する説明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Markdown のフレーバーの理解Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [ 技術ドキュメントの執筆に Markdown を使用する方法に関する手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)
+* [Adobeマークダウンフレーバーを理解するための手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions)。
 
 ## 前提条件
 
 新しいソースのドキュメント化を開始する前に、次の項目が必要です。
 
-* **有効な GitHub ユーザーアカウント**：既存の GitHub アカウントを持っていない場合、 [GitHub の新規登録ページ](https://github.com/);
-* **GitHub Desktop へのアクセス**：を使用する必要があります [GitHub Desktop アプリ](https://desktop.github.com/) ローカル環境でソースドキュメントを作成する場合。
-* Adobeとの統合は、Platform のステージング環境にデプロイされたソースとのテストフェーズにある必要があります。
+* **有効な GitHub ユーザーアカウント**：既存の GitHub アカウントがない場合は、[GitHub サインアップ ページ ](https://github.com/) から作成する必要があります。
+* **GitHub デスクトップへのアクセス**：ローカル環境でソースドキュメントを作成するには、[GitHub デスクトップアプリ ](https://desktop.github.com/) を使用する必要があります。
+* Adobeとの統合は、Platform のステージング環境にソースをデプロイして、テスト段階にある必要があります。
 
-## Platform でソースに関するドキュメントを作成するための概要手順
+## Platform でソースのドキュメントを作成するための高度な手順
 
-ソースのドキュメントを作成するには、Platform ドキュメントリポジトリのフォークを作成し、提供されたドキュメントテンプレートを新しいブランチで編集する必要があります。 Adobeが提供するテンプレートを使用して、新しいソースページを作成し、準備が整ったらプルリクエスト (PR) を開きます。 これをおこなう手順は、新しいソースページを作成する手順で詳しく説明します。
+大まかに言えば、ソースのドキュメントを作成するには、Platform ドキュメントリポジトリのフォークを作成し、提供されたドキュメントテンプレートを新しいブランチで編集する必要があります。 Adobe提供のテンプレートを使用して新しいソースページを作成し、準備が整ったらプルリクエスト（PR）を開きます。 これを行う手順は、新しいソースページを作成する手順で後述します。
 
 ## ドキュメントテンプレート
 
-事前入力された [API ドキュメントのテンプレート](streaming-template-api.md) または [UI ドキュメントテンプレート](streaming-template-ui.md) を使用して、ソースのドキュメントを作成できます。 以下では、テンプレートの編集方法とプル要求の開き方について説明します。 新しいソース用に送信されたドキュメントは、Adobeドキュメントチームがレビューおよび公開します。
+ソースのドキュメントの作成に役立つように ](streaming-template-api.md) 事前入力された [API ドキュメントテンプレート [ または ](streaming-template-ui.md)UI ドキュメントテンプレート）を使用することができます。 さらに下では、テンプレートを編集してプルリクエストを開く方法を説明します。 新しいソース用に送信されたドキュメントは、Adobeドキュメントチームによってレビューおよび公開されます。
 
-また、以下のドキュメントテンプレートをダウンロードすることもできます。
+以下のドキュメントテンプレートもダウンロードできます。
 
 * [API ドキュメントのテンプレート](../assets/streaming/streaming-template-api.zip)
 * [UI ドキュメントテンプレート](../assets/streaming/streaming-template-ui.zip)
 
-## 新しいソースページを作成します
+## 新しいソースページを作成
 
-GitHub Web インターフェイスまたはローカル環境を使用して、Platform での新しいソースに関するドキュメントを作成できます。 両方のオプションの手順については、次のリンクを参照してください。
+GitHub web インターフェイスまたはローカル環境を使用して、Platform の新しいソース用のドキュメントを作成できます。 以下のリンクに、両方のオプションの手順が記載されています。
 
-* [GitHub Web インターフェイスを使用してソースドキュメントページを作成する](../documentation/github.md)
-* [ローカル環境でテキストエディターを使用して、ソースドキュメントページを作成します。](../documentation/text-editor.md)
+* [GitHub web インターフェイスを使用したソースドキュメントページの作成](../documentation/github.md)
+* [ローカル環境でのテキストエディターを使用したソースドキュメントページの作成](../documentation/text-editor.md)

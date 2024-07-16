@@ -23,7 +23,7 @@ ht-degree: 83%
 * Experience Cloud 訪問者 ID サービス
 * Core 拡張機能
 
-の使用 [「を使用したプレーヤーの埋め込み\&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) ビデオプレーヤーがレンダリングされる各 web ページのHTMLにあるGoogle開発者ドキュメントのコードスニペット。
+ビデオプレーヤーがレンダリングされる各 web ページのHTMLーで、Google開発者ドキュメントの [ 「\&lt;iframe\> タグを使用してプレーヤーを埋め込む」 ](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) コードスニペットを使用します。
 
 この拡張機能バージョン 2.0.1 は、iframe script タグに一意の値を持つ `id` 属性を挿入し、`src` 属性値の末尾にまだ含まれていない場合は `enablejsapi=1` と `rel=0` を付加することで、単一の Web ページに 1 つ以上の YouTube 動画を埋め込むことができます。次に例を示します。
 
@@ -86,7 +86,7 @@ document.onreadystatechange = function () {
 
 * **条件**：なし
 
-* **アクション**：を使用します **Analytics 拡張機能** 「変数を設定」アクションをマッピングするには：
+* **アクション**: **Analytics 拡張機能** を使用して「変数を設定」アクションを使用し、次のようにマッピングします。
 
    * ビデオ開始のイベント、
    * ビデオデュレーションデータ要素の prop／eVar
@@ -94,7 +94,7 @@ document.onreadystatechange = function () {
    * ビデオ名データ要素の prop／eVar
    * ビデオ URL データ要素の prop／eVar
 
-  次に、「ビーコンを送信」アクション （`s.tl`）を選択し、リンク名「ビデオ開始」を選択して、その後に「変数をクリア」アクションを選択します。
+  次に、「ビーコンを送信」アクション（`s.tl`）をリンク名「ビデオスタート」と共に追加し、その後に「変数をクリア」アクションを続けます。
 
 >[!TIP]
 > 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Platform 内でデータ要素を効果的に作成および活用する方法について詳しくは、以下を参照してください [データ要素](../../../ui/managing-resources/data-elements.md) ドキュメント。
+Platform 内でデータ要素を効果的に作成および活用する方法について詳しくは、[ データ要素 ](../../../ui/managing-resources/data-elements.md) ドキュメントを参照してください。

@@ -1,15 +1,15 @@
 ---
-title: フローサービス API を使用したOracleEloqua ベース接続の作成
-description: フローサービス API を使用してAdobe Experience PlatformをOracleEloqua に接続する方法を説明します。
+title: Flow Service API を使用したOracle Eloqua ベース接続の作成
+description: Flow Service API を使用してAdobe Experience PlatformをOracle Eloqua に接続する方法を説明します。
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '546'
 ht-degree: 81%
 
 ---
 
-# の作成 [!DNL Oracle Eloqua] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Oracle Eloqua] ベース接続の作成
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -30,9 +30,9 @@ ht-degree: 81%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `endpoint` | のエンドポイント [!DNL Oracle Eloqua]. |
-| `username` | ユーザー名 [!DNL Oracle Eloqua] アカウント ユーザー名は、 `siteName + \\ + username`で、 `siteName` は、ログインに使用した会社名です [!DNL Oracle Eloqua] および `username` はユーザー名です。 例えば、ログインユーザー名は次のようになります。 `adobe\\emily`. |
-| `password` | 次に対応するパスワード： [!DNL Oracle Eloqua] ユーザー名。 |
+| `endpoint` | [!DNL Oracle Eloqua] のエンドポイント。 |
+| `username` | [!DNL Oracle Eloqua] アカウントのユーザー名。 ユーザー名は `siteName + \\ + username` の形式にする必要があります。`siteName` は、[!DNL Oracle Eloqua] へのログインに使用した会社名で、`username` はユーザー名です。 例えば、ログインのユーザー名は `adobe\\emily` のようになります。 |
+| `password` | [!DNL Oracle Eloqua] ユーザー名に対応するパスワード。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Oracle Eloqua] ソースの接続仕様 ID の値は、`35d6c4d8-c9a9-11eb-b8bc-0242ac130003` に固定されています。 |
 
 [!DNL Oracle Eloqua] の認証資格情報について詳しくは、[[!DNL Oracle Eloqua] 認証に関するガイド](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)を参照してください。
@@ -89,7 +89,7 @@ curl -X POST \
 | `description` | （オプション）ベース接続に関する補足情報を提供するために含めることができるプロパティ。 |
 | `auth.specName` | 接続に使用する認証タイプ。 |
 | `auth.params.endpoint` | [!DNL Oracle Eloqua] サーバーのエンドポイント。 |
-| `auth.params.username` | の [!DNL Oracle Eloqua] アカウント |
+| `auth.params.username` | [!DNL Oracle Eloqua] アカウントに対応するサイト名とユーザー名を含む、連結された資格情報。 |
 | `auth.params.password` | [!DNL Oracle Eloqua] アカウントに対応するパスワード。 |
 | `connectionSpec.id` | [!DNL Oracle Eloqua] ソースの接続仕様 ID の値は、`35d6c4d8-c9a9-11eb-b8bc-0242ac130003` に固定されています。 |
 

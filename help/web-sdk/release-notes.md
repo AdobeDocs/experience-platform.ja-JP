@@ -18,15 +18,15 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 >[!IMPORTANT]
 >
->Google [が発表しました](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) は、2024 年後半にサードパーティ cookie の Chrome サポートを廃止する予定です。 その結果、主要なブラウザーでサードパーティ cookie がサポートされなくなります。
+>Google[ 発表しました ](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) は、2024 年後半にサードパーティ cookie に対するChromeのサポートを廃止する計画です。 その結果、主要なブラウザーでサードパーティ cookie がサポートされなくなります。
 >
->この変更が実装されると、Adobeはのサポートを停止します `demdex` 現在 Web SDK でサポートされている cookie。
+>この変更が実装されると、Adobeでは、Web SDK で現在サポートされている `demdex` Cookie のサポートを停止します。
 
 ## バージョン 2.20.0 - 2024年5月21日（PT）
 
 **新機能**
 
-* をサポートするようになりました [ストリーミングメディアコレクション](../web-sdk/commands/configure/streamingmedia.md).
+* [ ストリーミングメディアコレクション ](../web-sdk/commands/configure/streamingmedia.md) のサポートを追加。
 
 **修正点および改善点**
 
@@ -37,22 +37,22 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 **修正点および改善点**
 
 * ID エラーが他のエラーをマスクし、ID エラーを警告に変更していた問題を修正しました。
-* でページ上部呼び出しがあった場合にページ下部呼び出しが送信されない問題を修正しました `renderDecisions` をに設定 `false`.
-* 複数がある場合に Web SDK がクロスドメイン ID を読み取れない問題を修正しました `adobe_mc` クエリ文字列パラメーター。
+* `renderDecisions` が `false` に設定された top of page 呼び出しがある場合に、bottom of page 呼び出しが送信されない問題を修正しました。
+* 複数の `adobe_mc` クエリ文字列パラメーターがある場合に、Web SDK がクロスドメイン ID を読み取れない問題を修正しました。
 
 ## バージョン 2.19.1 - 2023年11月10日（PT）
 
 **修正点および改善点**
 
-* 提案配列がから返される問題を修正しました `sendEvent` 呼び出しは常に空でした。
+* `sendEvent` の呼び出しから返された提案配列が常に空である問題を修正しました。
 
 ## バージョン 2.19.0 - 2023年11月1日（PT）
 
 **新機能**
 
 * Adobe Journey Optimizerからのアプリ内メッセージのレンダリングがサポートされるようになりました。
-* をサポートするようになりました [ページイベントの上部と下部](use-cases/top-bottom-page-events.md).
-* 追加済み [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) のオプション `sendEvent` ページ全体の範囲とデフォルトサーフェスの要求を制御するコマンド。
+* [ ページイベントの上部と下部 ](use-cases/top-bottom-page-events.md) のサポートを追加しました。
+* `sendEvent` コマンドに [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) ページ全体の範囲とデフォルトサーフェスの要求を制御するオプションを追加しました。
 
 **修正点および改善点**
 
@@ -117,7 +117,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 * [ページごとの完全移行](home.md#migrating-to-web-sdk)のサポートを追加しました。訪問者が at.js ページと Web SDK ページの間を移動しても、Adobe Target プロファイルが保持されるようになりました。
 * [高エントロピーの User-Agent クライアントヒント](/help/web-sdk/use-cases/client-hints.md)の設定可能なサポートを追加しました。
-* をサポートするようになりました [`applyResponse`](/help/web-sdk/commands/applyresponse.md) コマンド。 これにより、[Edge Network Server API](../server-api/overview.md) を使用してハイブリッドパーソナライゼーションが可能になります。
+* [`applyResponse`](/help/web-sdk/commands/applyresponse.md) コマンドのサポートを追加。 これにより、[Edge Network Server API](../server-api/overview.md) を使用してハイブリッドパーソナライゼーションが可能になります。
 * QA モードのリンクが複数のページで機能するようになりました。
 
 **修正点および改善点**
@@ -174,7 +174,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.7.0 - 2021年10月26日（PT）
 
-* Edge Networkからの追加情報をからの戻り値で公開する `sendEvent`を含む `inferences` および `destinations`. これらの機能は現在、ベータ版の一部として公開されているので、これらのプロパティの形式は変更される可能性があります。
+* `inferences` や `destinations` など、Edge Networkからの追加情報を `sendEvent` からの戻り値で公開します。 これらの機能は現在、Betaの一部としてロールアウトされているので、これらのプロパティの形式は変わる可能性があります。
 
 ## バージョン 2.6.4 - 2021年9月7日（PT）
 
@@ -205,13 +205,13 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.4.0 - 2021年3月
 
-* SDK をとしてインストールできるようになりました [NPM パッケージ](/help/web-sdk/install/npm.md).
+* SDK を [NPM パッケージ ](/help/web-sdk/install/npm.md) としてインストールできるようになりました。
 * [デフォルトの同意を設定](/help/web-sdk/commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションは、同意が得られるとイベントをキューに入れ、送信します）。
-* この [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) コールバックを使用して、イベントが送信されないようにすることができるようになりました。
+* [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) コールバックを使用して、イベントが送信されないようにすることができるようになりました。
 * レンダリングまたはクリックされたパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization` の代わりに XDM スキーマフィールドグループを使用するようになりました。
-* この [`getIdentity`](/help/web-sdk/commands/getidentity.md) コマンドは、ID と共にエッジ地域 ID を返すようになりました。
+* [`getIdentity`](/help/web-sdk/commands/getidentity.md) コマンドは、ID と共にエッジ地域 ID を返すようになりました。
 * サーバーから受信した警告とエラーが改善され、より適切な方法で処理されます。
-* のAdobeの同意 2.0 標準をサポートするようになりました [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンド。
+* [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドに対するAdobeの同意 2.0 標準のサポートを追加。
 * 同意環境設定を受信すると、CMP、Platform Web SDK および Platform Edge Network 間の統合を最適化するために、ハッシュされてローカルストレージに保存されます。同意環境設定を収集している場合は、ページが読み込まれるたびに `setConsent` を呼び出すことをお勧めします。
 * `onCommandResolved` と `onCommandRejected` の 2 つの[モニタリングフック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)を追加しました。
 * バグ修正：パーソナライゼーションインタラクション通知イベントには、ユーザーが新しいシングルページアプリビューに移動し、元のビューに戻り、コンバージョンの対象となる要素をクリックした際に、同じアクティビティに関する重複した情報が含まれていました。
@@ -229,7 +229,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.2.0 - 2020年10月
 
-* バグ修正：次の場合、オプトインオブジェクトが Web SDK の呼び出しをブロックしていました `idMigrationEnabled` 等しい `true`.
+* バグ修正：`idMigrationEnabled` が `true` 定されている場合、オプトインオブジェクトが Web SDK の呼び出しをブロックしていました。
 * バグ修正：ちらつきの問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストを Web SDK が認識できるようにします。
 
 ## バージョン 2.1.0 - 2020年8月
@@ -238,5 +238,5 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 * IAB 2.0 同意標準をサポートします。
 * `setConsent` コマンドで追加の ID を渡すことをサポートします。
 * `sendEvent` コマンドでの `datasetId` の上書きをサポートします。
-* モニタリングフックのサポート（[詳細情報](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
+* モニタリングフックのサポート（[ 詳細を表示 ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
 * 実装の詳細コンテキストデータで `environment: browser` を渡します。

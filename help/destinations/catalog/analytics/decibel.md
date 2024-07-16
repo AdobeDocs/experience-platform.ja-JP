@@ -1,12 +1,12 @@
 ---
-keywords: Decibel 拡張機能；Decibel;Decibel 宛先
+keywords: decibel 拡張機能；decibel;decibel 宛先
 title: Decibel 拡張機能
-description: Decibel 拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Decibel 拡張機能は、Adobe Experience Platformの Analytics の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 92%
+source-wordcount: '447'
+ht-degree: 94%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 92%
 
 ## 概要 {#overview}
 
-迅速かつシームレスに導入 [!DNL Decibel] を Web プロパティに設定します。 また、拡張機能を通じて使用可能なアクションを使用して、追加の高度な設定をルールと共にデプロイすることもできます。
+Web プロパティに [!DNL Decibel] をすばやくシームレスにデプロイします。 また、拡張機能を通じて使用可能なアクションを使用して、追加の高度な設定をルールと共にデプロイすることもできます。
 
-[!DNL Decibel] は、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html) の拡張機能のページを参照してください。
+[!DNL Decibel] は、Adobe Experience Platform の分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ ht-degree: 92%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Decibel] 拡張子：
+[!DNL Decibel] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

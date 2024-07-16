@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；experienceevent クエリ；experienceevent クエリ；ExperienceEvent クエリ；
+keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；Query Service;Experienceevent クエリ；Experienceevent クエリ；Experience Event クエリ；
 title: イベントのトレンドレポートの作成
-description: エクスペリエンスイベントを使用して、指定した日付範囲のイベントのトレンドレポートを日付別にグループ化して作成するクエリの作成方法を説明します。
+description: エクスペリエンスイベントを使用するクエリを記述して、指定した日付範囲のイベントのトレンドレポートを日付別にグループ化して作成する方法を説明します。
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -12,17 +12,17 @@ ht-degree: 6%
 
 # イベントのトレンドレポートの作成
 
-このドキュメントでは、特定の日付範囲で日別のイベントのトレンドレポートを作成するために必要な SQL の例を示します。 Adobe Experience Platformクエリサービスを使用すると、 [!DNL Experience Events] を使用して、様々なユースケースを取り込むことができます。 エクスペリエンスイベントは、エクスペリエンスデータモデル (XDM)ExperienceEvent クラスで表されます。ユーザーが Web サイトまたはサービスを操作したときに、不変で集計されないシステムのスナップショットを取り込みます。 エクスペリエンスイベントは、時間ドメイン分析にも使用できます。 詳しくは、 [次の手順の節](#next-steps) を含むその他の使用例 [!DNL Experience Events] 訪問者レポートを生成するために使用します。
+このドキュメントでは、特定の日付範囲での日別イベントのトレンドレポートを作成するために必要な SQL の例を示します。 Adobe Experience Platform クエリサービスを使用すると、[!DNL Experience Events] を使用してさまざまなユースケースをキャプチャするクエリを作成できます。 エクスペリエンスイベントは、エクスペリエンスデータモデル（XDM） ExperienceEvent クラスで表されます。このクラスは、ユーザーが web サイトまたはサービスとやり取りする際に、システムの不変スナップショットと非集計スナップショットをキャプチャします。 エクスペリエンスイベントは、タイムドメイン分析にも使用できます。 訪問者レポートの生成に関するユースケースについて [!DNL Experience Events]、[ 次の手順の節 ](#next-steps) を参照してください。
 
-レポートを使用すると、Platform データにアクセスして、組織の戦略的ビジネスインサイトに役立ちます。 これらのレポートを使用すると、様々な方法で Platform データを調べ、主要指標をわかりやすい形式で表示し、結果のインサイトを共有できます。
+レポートを使用すると、組織の戦略的なビジネスインサイトに役立つ Platform データにアクセスできます。 これらのレポートを使用すると、Platform データを様々な方法で調べ、主要な指標をわかりやすい形式で表示し、結果として得られるインサイトを共有できます。
 
-XDM と [!DNL Experience Events] は [[!DNL XDM System] 概要](../../xdm/home.md). クエリサービスと [!DNL Experience Events]を使用すると、ユーザー間の行動傾向を効果的に追跡できます。 次のドキュメントは、 [!DNL Experience Events].
+XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 ](../../xdm/home.md) を参照してください。 クエリサービスと [!DNL Experience Events] を組み合わせることで、ユーザー間の行動のトレンドを効果的に追跡できます。 次のドキュメントでは、[!DNL Experience Events] を含むクエリの例を示します。
 
 ## 目標
 
-次の例では、指定した日付範囲のイベントのトレンドレポートを日付別にグループ化して作成します。特に、この SQL の例では、様々な分析値を `A`, `B`、および `C`を検索し、1 ヶ月の間にパーカが閲覧された回数を合計します。
+次の例では、指定した日付範囲のイベントのトレンドレポートを日付別にグループ化して作成します。特に、この SQL の例では、`A`、`B`、`C` などの様々な Analytics 値を合計し、1 か月におけるパークの閲覧回数を合計します。
 
-にあるタイムスタンプ列 [!DNL Experience Event] データセットは UTC 形式です。 この例では、 `from_utc_timestamp()` 関数を使用して、タイムスタンプを UTC から EDT に変換し、 `date_format()` 関数を使用して、残りのタイムスタンプから日付を分離します。
+データセットで見つかっ [!DNL Experience Event] タイムスタンプ列は UTC 形式です。 この例では、`from_utc_timestamp()` 関数を使用してタイムスタンプを UTC から EDT に変換し、`date_format()` 関数を使用して日付を残りのタイムスタンプから分離します。
 
 ```sql
 SELECT 
@@ -43,7 +43,7 @@ GROUP BY Day
 ORDER BY Day ASC, pageViews DESC;
 ```
 
-このクエリの結果は、次のように表示されます。
+このクエリの結果は、次のようになります。
 
 ```console
      Day     | pageViews |   A    |   B   |    C    | viewedParkas
@@ -84,10 +84,10 @@ ORDER BY Day ASC, pageViews DESC;
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、 [!DNL Experience Events] ユーザー間の行動傾向を効果的に追跡する。
+このドキュメントを参照することで、[!DNL Experience Events] でクエリサービスを使用してユーザー間の行動のトレンドを効果的に追跡する方法をより深く理解できます。
 
-を使用する他の訪問者ベースの使用例について学ぶには [!DNL Experience Events]、次のドキュメントをお読みください。
+[!DNL Experience Events] を使用するその他の訪問者ベースのユースケースについては、次のドキュメントを参照してください。
 
-- [ページビュー数別に整理された訪問者のリストを取得します。](./visitors-by-number-of-page-views.md)
-- [訪問者の以前のセッションのリストを表示します。](./list-visitor-sessions.md)
+- [ページビュー数で整理された訪問者のリストを取得します。](./visitors-by-number-of-page-views.md)
+- [訪問者の以前のセッションをリストします。](./list-visitor-sessions.md)
 - [訪問者のロールアップレポートを表示します。](./roll-up-report-of-a-visitor.md)

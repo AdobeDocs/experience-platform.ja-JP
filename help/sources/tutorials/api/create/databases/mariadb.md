@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；MariaDB;mariadb
+keywords: Experience Platform；ホーム；人気のトピック；MariaDB;mariadb
 solution: Experience Platform
-title: フローサービス API を使用した MariaDB ベース接続の作成
+title: Flow Service API を使用した MariaDB ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを MariaDB に接続する方法を説明します。
+description: Flow Service API を使用してAdobe Experience Platformを MariaDB に接続する方法を説明します。
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '438'
 ht-degree: 69%
 
 ---
@@ -25,18 +25,18 @@ ht-degree: 69%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、に正常に接続するために知っておく必要がある追加情報を示します。 [!DNL MariaDB] の使用 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL MariaDB] ています。
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] ～とつながる [!DNL MariaDB]を使用する場合は、次の接続プロパティを指定する必要があります。
+[!DNL Flow Service] を [!DNL MariaDB] に接続するには、次の接続プロパティを指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `connectionString` | 次に示すように、 [!DNL MariaDB] 認証。 この [!DNL MariaDB] 接続文字列のパターン： `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。の接続仕様 ID [!DNL MariaDB] が `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionString` | [!DNL MariaDB] 認証に関連付けられた接続文字列。 [!DNL MariaDB] の接続文字列パターンは `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL MariaDB] の接続仕様 ID は `3000eb99-cd47-43f3-827c-43caf170f015` です。 |
 
-接続文字列の取得について詳しくは、 [[!DNL MariaDB] 文書](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+接続文字列の取得について詳しくは、この [[!DNL MariaDB]  ドキュメント ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) を参照してください。
 
 ### Platform API の使用
 
@@ -84,12 +84,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | 次に示すように、 [!DNL MariaDB] 認証。 この [!DNL MariaDB] 接続文字列のパターン： `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `auth.params.connectionString` | [!DNL MariaDB] 認証に関連付けられた接続文字列。 [!DNL MariaDB] の接続文字列パターンは `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 |
 | `connectionSpec.id` | [!DNL MariaDB] 接続仕様 ID は `3000eb99-cd47-43f3-827c-43caf170f015` です。 |
 
 **応答**
 
-リクエストが成功した場合は、一意の ID（`id`）を含め、新しく作成されたベース接続の詳細が返されます。この ID は、次の手順でデータベースを調べるために必要です。
+リクエストが成功した場合は、一意の ID（`id`）を含め、新しく作成されたベース接続の詳細が返されます。この ID は、次の手順でデータベースを探索するために必要になります。
 
 ```json
 {
@@ -103,4 +103,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL MariaDB] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [データフローを作成し、 [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API を使用した、データベースデータを Platform に取り込むデータフローの作成](../../collect/database-nosql.md)

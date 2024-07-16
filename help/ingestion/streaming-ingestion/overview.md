@@ -13,33 +13,33 @@ ht-degree: 14%
 
 # ストリーミングインジェストの概要
 
-Adobe Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスからにデータを送信する手段をユーザーに提供します [!DNL Experience Platform] リアルタイム。
+Adobe Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスから [!DNL Experience Platform] にリアルタイムでデータを送信する手段をユーザーに提供します。
 
 ## ストリームインジェストの機能
 
-Adobe Experience Platformでは、以下を生成することで、調整され、一貫性のある、適切なエクスペリエンスを提供できます [!DNL Real-Time Customer Profile] 個々の顧客ごとに。 ストリーミング取り込みは、を配信できるようにすることで、これらのプロファイルを作成するうえで重要な役割を果たします [!DNL Profile] データをに [!DNL Data Lake] できるだけ少ない待ち時間で。
+Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL Real-Time Customer Profile] を生成することで、調整された一貫性のある関連性の高いエクスペリエンスを提供できます。 ストリーミング取得は、可能な限り少ない待ち時間で [!DNL Profile] しいデータを [!DNL Data Lake] に配信できるようにすることで、これらのプロファイルを作成する上で重要な役割を果たします。
 
 次のビデオは、ストリーミング取得に関する理解を深めるために用意されており、上記の概念の概要を説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### プロファイルレコードのストリーミングと [!DNL ExperienceEvents]
+### プロファイルレコードと [!DNL ExperienceEvents] のストリーミング
 
-ストリーミング取り込みを使用すると、ユーザーはプロファイルレコードおよびをストリーミングできます [!DNL ExperienceEvents] 対象： [!DNL Platform] 数秒でリアルタイムのパーソナライゼーションを促進します。 ストリーミング取得 API に送信されるすべてのデータは、に自動的に保持されます。 [!DNL Data Lake].
+ストリーミング取り込みを使用すると、ユーザーはプロファイルレコードをストリーミングし、数秒で [!DNL ExperienceEvents] ータを [!DNL Platform] き出して、リアルタイムのパーソナライゼーションを促進できます。 ストリーミング取得 API に送信されるすべてのデータは、[!DNL Data Lake] に自動的に保持されます。
 
 詳しくは、[ストリーミング接続の作成に関するガイド](../tutorials/create-streaming-connection.md)を参照してください。
 
 ### データセットへのストリーミング
 
-データがクリーンであると確信したら、次のデータセットを有効にできます [!DNL Real-Time Customer Profile] および [!DNL Identity Service].
+データがクリーンであると確信したら、データセットで [!DNL Real-Time Customer Profile] と [!DNL Identity Service] を有効にできます。
 
-のデータセットの有効化について詳しくは、 [!DNL Profile] および [!DNL Identity Service]を読んでください。 [データセットガイドの設定](../../profile/tutorials/dataset-configuration.md).
+[!DNL Profile] および [!DNL Identity Service] のデータセットの有効化に関する詳細については、[ データセットガイドの設定 ](../../profile/tutorials/dataset-configuration.md) を参照してください。
 
 ## Experience Platformでのストリーミング取得に想定される待ち時間はどれくらいですか？
 
 >[!IMPORTANT]
 >
->ストリーミング取り込みのガードレールは、サンドボックスレベルではなく、組織レベルで計算されます。 つまり、サンドボックスごとのデータ使用状況は、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスでのデータ使用は、プロファイル全体の 10% に制限されています。 ライセンス使用権限について詳しくは、を参照してください [データ管理のベストプラクティスガイド](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>ストリーミング取り込みのガードレールは、サンドボックスレベルではなく、組織レベルで計算されます。 つまり、サンドボックスごとのデータ使用状況は、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスでのデータ使用は、プロファイル全体の 10% に制限されています。 ライセンス使用権限について詳しくは、[ データ管理のベストプラクティスガイド ](../../landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。
 
 | 宛先 | 予想遅延時間 |
 | --------- | ---------------- |
@@ -52,13 +52,13 @@ Adobe Experience Platformでは、以下を生成することで、調整され�
 
 | RPS 制限 | メモ |
 | --- | --- |
-| 1 秒あたり 1,000 リクエスト | を使用する場合、これらは複数のメッセージを含むことができます `/collection/batch` エンドポイント。 |
-| 1 秒あたり 10000 件の個別メッセージ | を使用すると、メッセージをグループ化して、実際のリクエストの数を減らすことができます `/collection/batch` エンドポイント。 |
+| 1 秒あたり 1,000 リクエスト | エンドポイントを使用する場合、これらは複数のメッセージ `/collection/batch` 含むことができます。 |
+| 1 秒あたり 10000 件の個別メッセージ | `/collection/batch` エンドポイントを使用すると、メッセージをグループ化して、実際のリクエストの数を減らすことができます。 |
 
 >[!IMPORTANT]
 >
->適用される制限はになります **1 分あたり 60 リクエスト** デバッグの目的で同期検証を使用する場合。
+>デバッグ目的で同期検証を使用する場合 **適用される制限は 1 分あたり** 60 リクエストになります。
 
 ## Adobe Experience Platform 拡張機能
 
-Adobe Experience Platform 拡張機能を使用して、新しいストリーミング接続を作成できます。この [!DNL Experience Platform] 拡張機能には、でフォーマットされたビーコンを送信するアクションが用意されています。 [!DNL Experience Data Model] （XDM）による次へのリアルタイム取り込み [!DNL Experience Platform]. 詳しくは、[Experience Platform 拡張機能](../../tags/extensions/client/web-sdk/overview.md)に関するドキュメントを参照してください。
+Adobe Experience Platform 拡張機能を使用して、新しいストリーミング接続を作成できます。[!DNL Experience Platform] 拡張機能には、[!DNL Experience Platform] にリアルタイムに取り込まれるように [!DNL Experience Data Model] （XDM）形式のビーコンを送信するアクションが用意されています。 詳しくは、[Experience Platform 拡張機能](../../tags/extensions/client/web-sdk/overview.md)に関するドキュメントを参照してください。

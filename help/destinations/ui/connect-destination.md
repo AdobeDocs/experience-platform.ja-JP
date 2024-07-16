@@ -14,12 +14,12 @@ ht-degree: 73%
 
 >[!IMPORTANT]
 > 
->* 宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* データセットの書き出しをサポートする宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データセットの書き出しをサポートする宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 
-オーディエンスデータを宛先に送信する前に、宛先プラットフォームへの接続を設定する必要があります。 この記事では、新しい宛先接続を設定し、Adobe Experience Platformユーザーインターフェイスを使用してオーディエンスをアクティブ化したりデータセットを書き出したりする方法について説明します。
+オーディエンスデータを宛先に送信する前に、宛先プラットフォームへの接続を設定する必要があります。 この記事では、Adobe Experience Platform ユーザーインターフェイスを使用して、オーディエンスをアクティブ化したり、データセットを書き出したりできる、新しい宛先接続を設定する方法について説明します。
 
 ## カタログで目的の宛先を検索します。 {#setup}
 
@@ -27,23 +27,23 @@ ht-degree: 73%
 
    ![宛先カタログページを表示する Experience Platform UI のスクリーンショット。](../assets/ui/connect-destinations/catalog.png)
 
-2. カタログ内の宛先カードには、宛先への既存の接続があるかどうか、および宛先がオーディエンスのアクティブ化、データセットの書き出し、またはその両方をサポートしているかどうかに応じて、異なるアクション制御が含まれる場合があります。 宛先カードには、次のいずれかのコントロールが表示されます。
+2. カタログ内の宛先カードには、宛先への既存の接続があるかどうか、宛先がオーディエンスのアクティブ化、データセットの書き出し、またはその両方をサポートしているかどうかに応じて、異なるアクション制御が含まれる場合があります。 宛先カードには、次のいずれかのコントロールが表示されます。
 
-   * **[!UICONTROL 設定]**. オーディエンスをアクティブ化またはデータセットを書き出す前に、まず接続をこの宛先に設定する必要があります。
-   * **[!UICONTROL アクティブ化]**. この宛先への接続は既に設定されています。 この宛先では、オーディエンスのアクティベーションとデータセットの書き出しがサポートされます。
-   * **[!UICONTROL オーディエンスをアクティブ化]**. この宛先への接続は既に設定されています。 この宛先では、オーディエンスのアクティベーションのみサポートされます。
+   * **[!UICONTROL 設定]**. オーディエンスをアクティブ化したりデータセットを書き出したりするには、まずこの宛先への接続を設定する必要があります。
+   * **[!UICONTROL アクティブ化]**. この宛先への接続は既に設定されています。 この宛先では、オーディエンスのアクティベーションとデータセットの書き出しをサポートしています。
+   * **[!UICONTROL オーディエンスをアクティブ化]**. この宛先への接続は既に設定されています。 この宛先では、オーディエンスのアクティベーションのみがサポートされます。
 
    これらのコントロールの違いについて詳しくは、宛先ワークスペードキュメントの[カタログ](../ui/destinations-workspace.md#catalog)の節を参照してください。
 
-   次のいずれかを選択 **[!UICONTROL 設定]**, **[!UICONTROL 有効化]**&#x200B;または **[!UICONTROL オーディエンスをアクティブ化]**&#x200B;を使用できます。
+   使用可能なコントロールに応じて、**[!UICONTROL 設定]**、**[!UICONTROL アクティブ化]** または **[!UICONTROL オーディエンスをアクティブ化]** のいずれかを選択します。
 
    ![「設定」コントロールが強調表示された宛先カタログページを示す、Experience Platform UI のスクリーンショット。](../assets/ui/connect-destinations/set-up.png)
 
-   ![Experience PlatformUI のスクリーンショット。「オーディエンスをアクティブ化」コントロールがハイライト表示された宛先カタログページが表示されています。](../assets/ui/connect-destinations/activate-segments.png)
+   ![ 「オーディエンスをアクティブ化」コントロールが強調表示された宛先カタログページを示す、Experience PlatformUI のスクリーンショット。](../assets/ui/connect-destinations/activate-segments.png)
 
 3. 「**[!UICONTROL 設定]**」を選択した場合、次の手順にスキップして、宛先に対して「[認証](#authenticate)」を行います。
 
-   次を選択した場合： **[!UICONTROL 有効化]**, **[!UICONTROL オーディエンスをアクティブ化]**&#x200B;または **[!UICONTROL データセットを書き出し]**&#x200B;に設定すると、既存の宛先接続のリストが表示されるようになります。
+   **[!UICONTROL アクティブ化]**、**[!UICONTROL オーディエンスをアクティブ化]** または **[!UICONTROL データセットを書き出し]** を選択した場合、既存の宛先接続のリストが表示されるようになります。
 
    「**[!UICONTROL 新しい宛先を設定]**」を選択すると、宛先への新しい接続を確立します。
 
@@ -83,15 +83,15 @@ ht-degree: 73%
 
 ![ファイルタイプの選択と CSV ファイルの各種オプションを示す画像](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### オーディエンスのアクティベーション、アカウントのアクティブ化、見込み客のアクティブ化、データセットのエクスポートの宛先接続を設定します {#segment-activation-or-dataset-exports}
+### Audience Activation、アカウントのアクティベーション、見込み客のアクティベーション、データセットの書き出しのための宛先接続の設定 {#segment-activation-or-dataset-exports}
 
-一部のファイルベースの宛先は、既知の顧客、アカウントの顧客、見込み客に対するオーディエンスのアクティブ化や、データセットの書き出しをサポートしています。 これらの宛先について、次のことを可能にする接続を作成するかどうかを選択できます。 [オーディエンスをアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md), [アカウント](/help/destinations/ui/activate-account-audiences.md), [見込み客](/help/destinations/ui/activate-prospect-audiences.md)または [データセットを書き出し](/help/destinations/ui/export-datasets.md).
+一部のファイルベース宛先では、既知の顧客、アカウント顧客または見込み客への Audience Activation や、データセットの書き出しをサポートしています。 これらの宛先については、[ オーディエンスのアクティブ化 ](/help/destinations/ui/activate-batch-profile-destinations.md)、[ アカウント ](/help/destinations/ui/activate-account-audiences.md)、[ 見込み客 ](/help/destinations/ui/activate-prospect-audiences.md) または [ データセットの書き出し ](/help/destinations/ui/export-datasets.md) を可能にする接続を作成するかどうかを選択できます。
 
 >[!WARNING]
 >
->データセットを書き出す場合、JSON ファイルへの書き出しは圧縮モードでのみサポートされることに注意してください。 への書き出し先 [!DNL Parquet] ファイルは、圧縮モードと非圧縮モードでサポートされます。
+>データセットを書き出す場合、JSON ファイルへの書き出しは、圧縮モードでのみサポートされます。 [!DNL Parquet] ファイルへの書き出しは、圧縮モードと非圧縮モードでサポートされています。
 
-![ユーザーがオーディエンスのアクティベーションとデータセットの書き出しのどちらかを選択できるデータタイプ選択コントロールを示す画像です。](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![ オーディエンスアクティベーションかデータセット書き出しを選択できるデータタイプ選択コントロールを示す画像 ](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### 宛先アラートの有効化 {#enable-alerts}
 
@@ -115,4 +115,4 @@ ht-degree: 73%
 
 このドキュメントでは、Experience Platform UI を使用して宛先への接続を確立する方法について説明しました。使用可能な接続パラメーターと必要な接続パラメーターは、宛先によって異なります。宛先タイプごとに必要な入力と使用可能なオプションについて詳しくは、[宛先カタログ](/help/destinations/catalog/overview.md)の宛先ドキュメントページも参照してください。
 
-次に、 [オーディエンスのアクティブ化](/help/destinations/ui/activation-overview.md) または [データセットの書き出し](/help/destinations/ui/export-datasets.md) を宛先に追加します。
+次は、宛先への [ オーディエンスのアクティブ化 ](/help/destinations/ui/activation-overview.md) または [ データセットの書き出し ](/help/destinations/ui/export-datasets.md) に進むことができます。

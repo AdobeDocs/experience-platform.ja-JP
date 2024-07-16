@@ -28,7 +28,7 @@ ht-degree: 1%
 | 公開キオスク | 空港で搭乗者がロイヤルティ ID を使用してログインし、手荷物をチェックインして搭乗券を印刷した。 |
 | コールセンター | カスタマーサポートに連絡して問題を解決するお客様の代わりに、コールセンターの担当者が 1 台のデバイスでログインします。 |
 
-![shared-devices](../images/identity-settings/shared-devices.png)
+![ 共有デバイス ](../images/identity-settings/shared-devices.png)
 
 この場合、グラフの観点から見ると、制限なしで、1 つの ECID が複数の CRM ID にリンクされます。
 

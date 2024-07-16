@@ -1,31 +1,31 @@
 ---
-title: Web およびモバイルでのインタラクションに関する Analytics インサイト
-description: このドキュメントでは、取り込んだAdobe Analyticsデータから実用的なインサイトを作成するクエリサービスの使用方法を説明します。
+title: Web およびモバイルインタラクションに関する分析インサイト
+description: このドキュメントでは、クエリサービスを使用して、取り込んだAdobe Analytics データから実用的なインサイトを作成する方法について説明します。
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
-# Web およびモバイルインタラクションに関する Analytics インサイト
+# Web およびモバイルインタラクションに関する分析インサイト
 
-Adobe Experience Platformでは、エクスペリエンスデータモデル (XDM) フィールドを使用して、Adobe Analyticsレポートスイートからデータを取り込み、データセットを設定できます。 この分析データは、 [!DNL XDM ExperienceEvent] クラス。 その後、クエリサービスは、SQL クエリを実行して、デジタルプラットフォーム上でのユーザーの行動から有益なインサイトを生成することで、このデータを利用できます。
+Adobe Experience Platformでは、エクスペリエンスデータモデル（XDM）フィールドを使用してAdobe Analytics レポートスイートからデータを取り込み、データセットに入力できます。 この分析データは、[!DNL XDM ExperienceEvent] クラスに準拠するように変更されます。 その後、クエリサービスで SQL クエリを実行してこのデータを利用し、デジタルプラットフォームでのユーザーの行動から貴重なインサイトを生成できます。
 
-このドキュメントでは、Web およびモバイルの Analytics データからインサイトを作成する際の一般的な使用例を示す、様々な SQL クエリ例を提供します。
+このドキュメントでは、web およびモバイル分析データからインサイトを作成する際の一般的なユースケースを示す、様々な SQL クエリのサンプルを提供します。
 
-詳しくは、 [Analytics フィールドマッピングドキュメント](../../sources/connectors/adobe-applications/mapping/analytics.md) analytics データの取り込みとマッピングについて詳しくは、こちらを参照してください。
+分析データの取り込みとマッピングについて詳しくは、[Analytics フィールドのマッピングに関するドキュメント ](../../sources/connectors/adobe-applications/mapping/analytics.md) を参照してください。
 
 ## はじめに
 
-次の各使用例では、パラメーター化された SQL クエリの例が、カスタマイズ用のテンプレートとして提供されています。 が表示される場所にパラメーターを入力 `{ }` ( 評価するデータセット、eVar、イベントまたは時間枠の SQL 例 ) を参照してください。
+次の各ユースケースについて、パラメーター化された SQL クエリの例をテンプレートとして提供し、カスタマイズします。 評価したいデータセット、eVar、イベント、時間枠の SQL 例で `{ }` が表示される場所にパラメーターを指定します。
 
 ## 目標
 
-次の例は、Adobe Analyticsデータを分析する一般的な使用例に関する SQL クエリを示しています。
+次の例は、Adobe Analytics データを分析するための一般的なユースケースに対する SQL クエリを示しています。
 
-### 指定した日の 1 時間ごとの訪問者数を生成します
+### 特定の日の 1 時間ごとの訪問者数の生成
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
@@ -49,7 +49,7 @@ ORDER BY page_views DESC
 LIMIT  10;
 ```
 
-### 最もアクティブな 10 人のユーザーを特定します。
+### 最もアクティブな 10 人のユーザーを特定
 
 ```sql
 SELECT enduserids._experience.aaid.id AS aaid,
@@ -61,7 +61,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### ユーザアクティビティに基づいて、最も望ましい 10 の都市を特定する
+### ユーザーアクティビティに基づいて、最も必要な 10 の都市を特定します。
 
 ```sql
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city,
@@ -73,7 +73,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### 最も多く閲覧された 10 個の製品を特定する
+### 最も閲覧された 10 製品の特定
 
 ```sql
 SELECT Product_SKU,
@@ -88,7 +88,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-### 最も売上高の高い 10 件を特定
+### 上位 10 件の売上高の特定
 
 ```sql
 SELECT Purchase_ID,

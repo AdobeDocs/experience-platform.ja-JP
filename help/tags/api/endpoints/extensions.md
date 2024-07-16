@@ -4,7 +4,7 @@ description: Reactor API で /extensions エンドポイントを呼び出す方
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 98%
 
 ---
@@ -1205,7 +1205,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された拡張機能の接触チャネルの詳細を返します。
+応答が成功すると、指定された拡張機能のオリジンの詳細が返されます。
 
 ```json
 {

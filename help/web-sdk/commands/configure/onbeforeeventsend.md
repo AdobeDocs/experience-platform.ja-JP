@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `onBeforeEventSend`
 
-この `onBeforeEventSend` callback を使用すると、データがAdobeに送信される直前に送信したデータを変更できるJavaScript関数を登録できます。 このコールバックを使用すると、 `xdm` または `data` オブジェクト （要素を追加、編集、削除する機能を含む）。 クライアントサイドのボットトラフィックが検出された場合など、データの送信を完全に条件付きでキャンセルすることもできます。
+`onBeforeEventSend` コールバックを使用すると、データがAdobeに送信される直前に送信したデータを変更できるJavaScript関数を登録できます。 このコールバックを使用すると、要素の追加、編集、削除の機能を含め、`xdm` オブジェクトまたは `data` オブジェクトを操作できます。 クライアントサイドのボットトラフィックが検出された場合など、データの送信を完全に条件付きでキャンセルすることもできます。
 
 >[!WARNING]
 >
@@ -19,24 +19,24 @@ ht-degree: 0%
 
 ## Web SDK タグ拡張機能を使用して、イベント送信コールバックの前にを設定します {#tag-extension}
 
-「」を選択します **[!UICONTROL イベント送信前にコールバックコードを提供]** ボタン条件 [タグ拡張機能の設定](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). このボタンをクリックすると、目的のコードを挿入できるモーダルウィンドウが開きます。
+[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL イベントの前に提供するコールバックコード]**」ボタンを選択します。 このボタンをクリックすると、目的のコードを挿入できるモーダルウィンドウが開きます。
 
-1. へのログイン [experience.adobe.com](https://experience.adobe.com) Adobe IDの資格情報を使用します。
-1. に移動します。 **[!UICONTROL データ収集]** > **[!UICONTROL タグ]**.
+1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
+1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. に移動します。 **[!UICONTROL 拡張機能]**&#x200B;を選択し、 **[!UICONTROL 設定]** 日 [!UICONTROL Adobe Experience Platform Web SDK] カード。
-1. にスクロール ダウンします。 [!UICONTROL データ収集] 「」セクションで、「」ボタンを選択します **[!UICONTROL イベント送信前にコールバックコードを提供]**.
-1. このボタンをクリックすると、コードエディターでモーダルウィンドウが開きます。 目的のコードを挿入し、をクリックします **[!UICONTROL 保存]** をクリックして、モーダルウィンドウを閉じます。
-1. クリック **[!UICONTROL 保存]** 「拡張機能設定」で、変更を公開します。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. 「[!UICONTROL  データ収集 ]」セクションまでスクロールし、「**[!UICONTROL イベント送信前に提供コールバックコード]**」ボタンを選択します。
+1. このボタンをクリックすると、コードエディターでモーダルウィンドウが開きます。 目的のコードを挿入し、「**[!UICONTROL 保存]**」をクリックしてモーダルウィンドウを閉じます。
+1. 拡張機能設定の **[!UICONTROL 保存]** をクリックして、変更を公開します。
 
 コードエディター内で、次の変数にアクセスできます。
 
-* **`content.xdm`**：です [XDM](../sendevent/xdm.md) イベントのペイロード。
-* **`content.data`**：です [データ](../sendevent/data.md) イベントのオブジェクトペイロード。
-* **`return true`**：すぐにコールバックを終了し、現在の値を使用してデータをAdobeに送信します。 `content` オブジェクト。
+* **`content.xdm`**：イベントの [XDM](../sendevent/xdm.md) ペイロード。
+* **`content.data`**：イベントの [data](../sendevent/data.md) オブジェクトペイロード。
+* **`return true`**：直ちにコールバックを終了し、`content` オブジェクト内の現在の値を使用してデータをAdobeに送信します。
 * **`return false`**：直ちにコールバックを終了し、Adobeへのデータの送信を中止します。
 
-の外部で定義された変数 `content` を使用できますが、Adobeに送信されるペイロードには含まれません。
+`content` 外で定義された変数は使用できますが、Adobeに送信されるペイロードには含まれません。
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -64,11 +64,11 @@ if (myBotDetector.isABot()) {
 ```
 
 >[!TIP]
->戻らない `false` ページの最初のイベントで。 復帰 `false` 最初のイベントでを実行すると、パーソナライゼーションに悪影響を及ぼす可能性があります。
+>ページの最初のイベントで `false` を返さないようにします。 最初のイベントで `false` を返すと、パーソナライゼーションに悪影響を与える可能性があります。
 
 ## Web SDK JavaScript ライブラリを使用して、イベント送信コールバックの前にを設定します {#library}
 
-を登録 `onBeforeEventSend` を実行するときのコールバック `configure` コマンド。 を変更できます `content` インライン関数内のパラメーター変数を変更して、必要な任意の値に変数名を変更します。
+`configure` コマンドの実行時に `onBeforeEventSend` コールバックを登録します。 インライン関数内のパラメーター変数を変更することで、`content` 変数の名前を任意の値に変更できます。
 
 ```js
 alloy("configure", {

@@ -1,12 +1,12 @@
 ---
-keywords: ブランチ；ブランチ拡張；ブランチ先
+keywords: ブランチ；ブランチ拡張機能；ブランチの宛先
 title: Branch 拡張機能
-description: Branch 拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: ブランチ拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 19cbd410-e1c9-4510-8b04-b4c0bf7ff6a7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 93%
+source-wordcount: '428'
+ht-degree: 94%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 93%
 
 Branch は、すべてのデバイス、チャネル、プラットフォームにわたって顧客を獲得し、関心を引き付けて測定するための強力なリンクとソリューションを提供します。
 
-Branch は、Adobe Experience Platformの広告拡張機能です。 この拡張機能の詳細については、Branch の Web サイトの[機能ページ](https://branch.io/features/)を参照してください。
+ブランチは、Adobe Experience Platformの広告拡張機能です。 この拡張機能の詳細については、Branch の Web サイトの[機能ページ](https://branch.io/features/)を参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -30,7 +30,7 @@ Branch は、Adobe Experience Platformの広告拡張機能です。 この拡�
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Branch] 拡張子：
+[!DNL Branch] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

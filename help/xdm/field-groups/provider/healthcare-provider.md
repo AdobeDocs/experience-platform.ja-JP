@@ -1,35 +1,35 @@
 ---
 title: ヘルスケアプロバイダースキーマフィールドグループ
-description: ヘルスケアプロバイダースキーマフィールドグループの詳細を説明します。
+description: ヘルスケアプロバイダーのスキーマフィールドグループについて説明します。
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '254'
-ht-degree: 7%
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL 医療機関] スキーマフィールドグループ
+# [!UICONTROL  ヘルスケア提供組織 ] スキーマフィールドグループ
 
-[!UICONTROL 医療機関] は、 [[!UICONTROL プロバイダー] クラス](../../classes/provider.md). 単一のオブジェクトタイプフィールドを提供します。 `healthcareProvider` これは、個々の医療専門家または医療機関に関する財産をキャプチャし、医療診断および治療サービスを提供することを許可されます。
+[!UICONTROL Healthcare Provider] は、[[!UICONTROL Provider] クラス ](../../classes/provider.md) の標準スキーマフィールドグループです。 診断および治療のヘルスケアサービスを提供するための免許を持つ医療従事者個人または医療施設組織に関連するプロパティを収集する単一のオブジェクトタイプのフィールド `healthcareProvider` ードを提供します。
 
 ![](../../images/field-groups/healthcare-provider.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `addressDetails` | オブジェクトの配列 | プロバイダーのアドレスの詳細を表示します。 各オブジェクトには、次のプロパティが含まれます。 <ul><li>`address`: ([[!UICONTROL 郵送先住所]](../../data-types/postal-address.md))：プロバイダーの郵送先住所。</li><li>`addressType`: (String) プロバイダーがサービスを提供する場所を示すアドレスのタイプ。</li></ul> |
-| `emailAddress` | [[!UICONTROL メールアドレス]](../../data-types/email-address.md) | プロバイダーの電子メールアドレス。 |
-| `fax` | [[!UICONTROL 電話番号]](../../data-types/phone-number.md) | プロバイダーの FAX 番号。 |
-| `phoneNumber` | [[!UICONTROL 電話番号]](../../data-types/phone-number.md) | プロバイダーの電話番号。 |
-| `qualifications` | オブジェクトの配列 | ケアの提供に関する証明書、ライセンス、またはトレーニングをリストします。 各オブジェクトには、次のプロパティが含まれます。 <ul><li>`issuer`: ([[!UICONTROL アカウントの詳細]](../../data-types/account-details.md))：認定を調整および発行する組織。</li><li>`activePeriod`: （整数）認定が有効になるまでの年。</li><li>`code`: (String) 認定のコード化された表現。</li></ul> |
-| `classification` | 文字列 | クラスまたはカテゴリ（患者ケア、非患者ケアなど）に基づくサービスプロバイダーの分類。 |
-| `isActive` | ブール値 | プロバイダーがアクティブかどうかを示します。 |
+| `addressDetails` | オブジェクトの配列 | プロバイダのアドレスの詳細を一覧表示します。 各オブジェクトには、次のプロパティが含まれます。 <ul><li>`address`: （[[!UICONTROL  郵送先住所 ]](../../data-types/postal-address.md)）：プロバイダーの郵送先住所。</li><li>`addressType`: （文字列）プロバイダーがサービスを提供する場所を示す、アドレスのタイプ。</li></ul> |
+| `emailAddress` | [[!UICONTROL  メールアドレス ]](../../data-types/email-address.md) | プロバイダーのメールアドレス。 |
+| `fax` | [[!UICONTROL  電話番号 ]](../../data-types/phone-number.md) | プロバイダの FAX 番号。 |
+| `phoneNumber` | [[!UICONTROL  電話番号 ]](../../data-types/phone-number.md) | プロバイダーの電話番号。 |
+| `qualifications` | オブジェクトの配列 | 介護の提供に関する認定、ライセンス、またはトレーニングを一覧表示します。 各オブジェクトには、次のプロパティが含まれます。 <ul><li>`issuer`:（[[!UICONTROL  アカウントの詳細 ]](../../data-types/account-details.md)）：選定を規制し、発行する組織。</li><li>`activePeriod`: （整数）検証が有効になるまでの年。</li><li>`code`:（文字列）選定のコード化された表現。</li></ul> |
+| `classification` | 文字列 | サービスプロバイダーのクラスまたはカテゴリに基づく分類（患者のケア、患者のいないケアなど）。 |
+| `isActive` | ブール値 | プロバイダがアクティブかどうかを示します。 |
 | `languages` | 文字列の配列 | プロバイダーが操作を実行する言語のリスト。 |
-| `practiceGroupName` | 文字列 | サービスプロバイダーのプラクティスグループ名。 |
-| `practiceGroupType` | 文字列 | サービスプロバイダーのプラクティスグループタイプ。 |
-| `practiceType` | 文字列 | サービスプロバイダーのプラクティスのタイプ。 |
-| `specialties` | 文字列の配列 | このプロバイダーが提供する特産品のリスト。 |
+| `practiceGroupName` | 文字列 | サービスプロバイダーの練習グループ名。 |
+| `practiceGroupType` | 文字列 | サービスプロバイダーの練習グループのタイプ。 |
+| `practiceType` | 文字列 | サービスプロバイダーの練習タイプ。 |
+| `specialties` | 文字列の配列 | このプロバイダーが提供するスペシャルティのリスト。 |
 
 {style="table-layout:auto"}
 
-フィールドグループについて詳しくは、 [パブリック XDM リポジトリ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).
+フィールドグループについて詳しくは、[ 公開 XDM リポジトリ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) を参照してください。

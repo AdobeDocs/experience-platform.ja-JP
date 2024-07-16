@@ -1,41 +1,41 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Marketo Engage;marketo engage;marketo
+keywords: Experience Platform；ホーム；人気のトピック；Marketo Engage;marketo engage;marketo
 solution: Experience Platform
-title: Marketoソースコネクタの認証
-description: このドキュメントでは、Marketo認証資格情報の生成方法に関する情報を提供します。
+title: Marketo ソースコネクタの認証
+description: このドキュメントでは、Marketo認証資格情報の生成方法について説明します。
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 1%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
-# の認証 [!DNL Marketo Engage] ソースコネクタ
+# [!DNL Marketo Engage] ソースコネクタの認証
 
-事前に [!DNL Marketo Engage] （以下「」という。）[!DNL Marketo]&quot;) ソースコネクタの場合、最初に [!DNL Marketo] インターフェイスに加えて、Munchkin ID、クライアント ID、クライアントシークレットの値を取得します。
+[!DNL Marketo Engage] （以下「[!DNL Marketo]」）ソースコネクタを作成する前に、まず [!DNL Marketo] インターフェイスを通じてカスタムサービスを設定し、Munchkin ID、クライアント ID、クライアントシークレットの値を取得する必要があります。
 
-以下のドキュメントでは、 [!DNL Marketo] ソースコネクタ。
+以下のドキュメントでは、[!DNL Marketo] ソースコネクタを作成するために認証資格情報を取得する手順を説明します。
 
 ## 新しい役割の設定
 
-認証資格情報を取得する最初の手順は、 [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) インターフェイス。
+認証資格情報を取得する最初の手順は、[[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) インターフェイスを使用して新しい役割を設定することです。
 
-にログインします。 [!DNL Marketo] を選択し、 **[!DNL Admin]** 上部ナビゲーションバーから。
+[!DNL Marketo] にログインし、上部のナビゲーションバーから「**[!DNL Admin]**」を選択します。
 
-![新しいロールの管理者](../images/marketo/home.png)
+![ 新しい役割の管理者 ](../images/marketo/home.png)
 
-この *[!DNL Users & Role]s* ページには、ユーザー、役割、ログイン履歴に関する情報が含まれています。 新しいロールを作成するには、「 」を選択します。 **[!DNL Roles]** 上部のヘッダーから、「 」を選択します。 **[!DNL New Role]**.
+*[!DNL Users & Role]s* ページには、ユーザー、ロール、およびログイン履歴に関する情報が含まれています。 新しい役割を作成するには、上部のヘッダーから「**[!DNL Roles]**」を選択し、「**[!DNL New Role]**」を選択します。
 
-![新規ロール](../images/marketo/new-role.png)
+![new-role](../images/marketo/new-role.png)
 
-**[!DNL Create New Role]**&#x200B;ダイアログボックスが開きます。名前と説明を入力し、この役割に付与する権限を選択します。 権限は特定のワークスペースに制限され、ユーザーは、権限を持つワークスペースでのみアクションを実行できます。
+**[!DNL Create New Role]** ダイアログボックスが表示されます。 名前と説明を入力したあと、この役割に付与したい権限を選択します。 権限は特定のワークスペースに制限され、ユーザーは、権限を持つワークスペースでアクションのみを実行できます。
 
-付与する権限を選択したら、 **[!DNL Create]**.
+付与する権限を選択したら、「**[!DNL Create]**」を選択します。
 
 ![create-new-role](../images/marketo/create-new-role.png)
 
-でロールを作成する際に、API で制限付き権限を管理できます。 [!DNL Marketo]. 「Access API」を選択する代わりに、次の権限を選択して、ロールに最小限のアクセスレベルを付与できます。
+[!DNL Marketo] を使用して役割を作成する場合、API で制限付き権限を管理できます。 「API にアクセス」を選択する代わりに、次の権限を選択して、最小限のアクセスレベルで役割を提供できます。
 
 * [!DNL Read-Only Activity]
 * [!DNL Read-Only Assets]
@@ -51,11 +51,11 @@ ht-degree: 1%
 
 ## 新しいユーザーの設定
 
-役割と同様に、新しいユーザーを **[!DNL Users & Roles]** ページ。 この **[!DNL Users]** ページには、現在Marketoでプロビジョニングされているアクティブなユーザーのリストが表示されます。 選択 **[!DNL Invite New User]** 新しいユーザーをプロビジョニングする。
+役割と同様に、**[!DNL Users & Roles]** のページから新しいユーザーを設定できます。 **[!DNL Users]** のページには、現在Marketoでプロビジョニングされているアクティブなユーザーのリストが表示されます。 「**[!DNL Invite New User]**」を選択して、新しいユーザーをプロビジョニングします。
 
 ![invite-new-user](../images/marketo/invite-new-user.png)
 
-ポップオーバーダイアログメニューが表示されます。 電子メールに適した情報、名、姓、理由を入力します。 この手順の間に、招待する新しいユーザーアカウントのアクセスの有効期限を設定することもできます。 終了したら「**[!DNL Next]**」を選択します。
+ポップオーバーダイアログメニューが表示されます。 メール、名、姓、理由に適した情報を入力します。 この手順では、招待する新しいユーザーアカウントのアクセスの有効期限を設定することもできます。 終了したら「**[!DNL Next]**」を選択します。
 
 >[!IMPORTANT]
 >
@@ -63,46 +63,46 @@ ht-degree: 1%
 
 ![user-info](../images/marketo/new-user-info.png)
 
-適切なフィールドを **[!DNL Permissions]** ステップと選択 **[!DNL API Only]** 」チェックボックスをオンにして、新しいユーザーに API の役割を割り当てます。 選択 **[!DNL Next]** をクリックして続行します。
+**[!DNL Permissions]** の手順で適切なフィールドを選択し、「**[!DNL API Only]**」チェックボックスをオンにして、新しいユーザーに API の役割を指定します。 「**[!DNL Next]**」を選択して次に進みます。
 
 ![permissions](../images/marketo/permissions.png)
 
-プロセスを完了するには、「 **[!DNL Send]**.
+プロセスを完了するには、「**[!DNL Send]**」を選択します。
 
-![メッセージ](../images/marketo/message.png)
+![message](../images/marketo/message.png)
 
 ## カスタムサービスの設定
 
-新しいユーザーを確立したら、カスタムサービスを設定して新しい資格情報を取得できます。 管理ページで、「 」を選択します。 **[!DNL LaunchPoint]**.
+新しいユーザーを確立したら、カスタムサービスを設定して新しい資格情報を取得できます。 管理ページで「**[!DNL LaunchPoint]**」を選択します。
 
 ![admin-launchpoint](../images/marketo/admin-launchpoint.png)
 
-この **[!DNL Installed services]** ページに既存のサービスの一覧が含まれる場合、新しいカスタムサービスを作成するには、「 」を選択します。 **[!DNL New]** 次に、 **[!DNL New Service]**.
+**[!DNL Installed services]** ページには既存のサービスのリストが含まれます。新しいカスタムサービスを作成するには、「**[!DNL New]**」を選択し、「**[!DNL New Service]**」を選択します。
 
-![新規サービス](../images/marketo/new-service.png)
+![new-service](../images/marketo/new-service.png)
 
-新しいサービスにわかりやすい表示名を付け、「 」を選択します。 **[!DNL Custom]** から **[!DNL Service]** ドロップダウンメニュー。 適切な説明を入力し、プロビジョニングするユーザーを **[!DNL API Only User]** ドロップダウンメニュー。 必要な情報を入力したら、「 」を選択します。 **[!DNL Create]** をクリックして、新しいカスタムサービスを作成します。
+新しいサービスにわかりやすい表示名を指定し、**[!DNL Service]** ドロップダウンメニューから「**[!DNL Custom]**」を選択します。 適切な説明を入力し、プロビジョニングするユーザーを **[!DNL API Only User]** ドロップダウンメニューから選択します。 必要な詳細を入力したら、「**[!DNL Create]**」を選択して新しいカスタムサービスを作成します。
 
-![create](../images/marketo/create.png)
+![ 作成 ](../images/marketo/create.png)
 
-## クライアント ID とクライアント秘密鍵を取得する
+## クライアント ID とクライアントシークレットの取得
 
-新しいカスタムサービスを作成したら、クライアント ID とクライアント秘密鍵の値を取得できるようになりました。 次の **[!DNL Installed Services]** メニューで、アクセスするカスタムサービスを探し、 **[!DNL View Details]**.
+新しいカスタムサービスを作成すると、クライアント ID とクライアント秘密鍵の値を取得できるようになりました。 **[!DNL Installed Services]** メニューから、アクセスするカスタムサービスを探し、**[!DNL View Details]** を選択します。
 
 ![view-details](../images/marketo/view-details.png)
 
-ダイアログボックスが開き、クライアント ID とクライアントの秘密鍵が表示されます。
+クライアント ID とクライアント秘密鍵を含むダイアログボックスが表示されます。
 
-![資格情報](../images/marketo/credentials.png)
+![ 資格情報 ](../images/marketo/credentials.png)
 
 ## Munchkin ID の取得
 
-最後の手順を完了して、 [!DNL Marketo] ソースコネクタは、Munchkin ID を取得します。 管理ページで、「 」を選択します。 **[!DNL Munchkin]** の下に **[!DNL Integration]** パネル。
+[!DNL Marketo] ソースコネクタを認証するために完了する必要がある最後の手順は、Munchkin ID を取得することです。 管理ページで、**[!DNL Integration]** ントロールパネルの下の「**[!DNL Munchkin]**」を選択します。
 
 ![admin-munchkin](../images/marketo/admin-munchkin.png)
 
-この *[!DNL Munchkin]* 」ページが表示され、一意の Munchkin ID がパネルの上部に表示されます。
+*[!DNL Munchkin]* ページが表示され、パネルの上部に一意の Munchkin ID がリストされます。
 
 ![munchkin-Id](../images/marketo/munchkin-id.png)
 
-お使いのクライアント ID とクライアントの秘密鍵を組み合わせて、Munchkin ID を使用して新しいアカウントを設定し、 [新しい [!DNL Marketo] ソース接続](../../../tutorials/ui/create/adobe-applications/marketo.md) Experience Platform
+クライアント ID とクライアントシークレットを組み合わせると、Munchkin ID を使用して、Experience Platform時に新しいアカウントを設定し、[ 新しいソース接続を作成 ](../../../tutorials/ui/create/adobe-applications/marketo.md) するこ  [!DNL Marketo]  ができます。

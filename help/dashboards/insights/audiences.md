@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 オーディエンスを強化する SQL にアクセスしてオーディエンスのインサイトを理解し、オーディエンスを構成する ID とプロファイルをさらに詳しく調べるために独自のインサイトを生成します。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 
-を参照してください。 [SQL ドキュメントを表示](../view-sql.md) platform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、こちらを参照してください。
+PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 ](../view-sql.md) を参照してください。
 
-次のインサイトはすべて [オーディエンスダッシュボード](../guides/audiences.md) またはカスタム [ユーザー定義ダッシュボード](../user-defined-dashboards.md). を参照してください。 [カスタマイズの概要](../customize/overview.md) ダッシュボードをカスタマイズする方法、または [新しいウィジェットの作成と編集](../customize/custom-widgets.md) ウィジェットライブラリ内および [ユーザー定義ダッシュボード](../user-defined-dashboards.md#create-widget).
+次のインサイトはすべて、[ オーディエンスダッシュボード ](../guides/audiences.md) またはカスタム [ ユーザー定義ダッシュボード ](../user-defined-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../user-defined-dashboards.md#create-widget) を参照してください。
 
-次のインサイトはすべて [オーディエンスダッシュボード](../guides/audiences.md) またはカスタムダッシュボード。
+次のインサイトはすべて、[ オーディエンスダッシュボード ](../guides/audiences.md) またはカスタムダッシュボードの一部として使用できます。
 
-## オーディエンスの重複レポート {#audience-overlap-report}
+## オーディエンス重複レポート {#audience-overlap-report}
 
 このインサイトによって回答された質問：
 
@@ -86,7 +86,7 @@ SELECT source_segment_name,
 
 +++
 
-を参照してください。 [オーディエンス重複レポートウィジェットのドキュメント](../guides/audiences.md#audience-overlap-report) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ オーディエンスの重複レポートウィジェットのドキュメント ](../guides/audiences.md#audience-overlap-report) を参照してください。
 
 ## オーディエンスの重複 {#audience-overlap}
 
@@ -133,9 +133,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-を参照してください。 [オーディエンス重複ウィジェットのドキュメント](../guides/audiences.md#audience-overlap) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ オーディエンスの重複ウィジェットのドキュメント ](../guides/audiences.md#audience-overlap) を参照してください。
 
-## オーディエンスサイズの変更のトレンド {#audience-size-change-trend}
+## オーディエンスサイズ変化トレンド {#audience-size-change-trend}
 
 このインサイトによって回答された質問：
 
@@ -174,9 +174,9 @@ SELECT date_key,
 
 +++
 
-を参照してください。 [オーディエンスサイズ変更トレンドウィジェットのドキュメント](../guides/audiences.md#audience-size-change-trend) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ オーディエンスサイズの変化のトレンドウィジェットのドキュメント ](../guides/audiences.md#audience-size-change-trend) を参照してください。
 
-## ID 別のオーディエンスサイズのトレンド {#audience-size-trend-by-identity}
+## オーディエンスサイズのトレンド (ID 別) {#audience-size-trend-by-identity}
 
 このインサイトによって回答された質問：
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-を参照してください。 [ID ウィジェットドキュメント別のオーディエンスサイズのトレンド](../guides/audiences.md#audience-size-trend-by-identity) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ID ウィジェット別のオーディエンスサイズのトレンド ](../guides/audiences.md#audience-size-trend-by-identity) のドキュメントを参照してください。
 
 ## オーディエンスサイズのトレンド {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-を参照してください。 [オーディエンスサイズのトレンドウィジェットのドキュメント](../guides/audiences.md#audience-size-trend) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ オーディエンスサイズのトレンドウィジェットのドキュメント ](../guides/audiences.md#audience-size-trend) を参照してください。
 
 ## オーディエンスサイズ {#audience-size}
 
@@ -266,7 +266,7 @@ WHERE
 
 +++
 
-を参照してください。 [オーディエンスサイズウィジェットのドキュメント](../guides/audiences.md#audience-size) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ オーディエンスサイズウィジェットのドキュメント ](../guides/audiences.md#audience-size) を参照してください。
 
 ## スコアの顧客 AI 分布 {#customer-ai-distribution-of-scores}
 
@@ -409,9 +409,9 @@ SELECT b.model_name,
 
 +++
 
-を参照してください。 [スコアの顧客 AI 分布ウィジェットのドキュメント](../guides/audiences.md#customer-ai-distribution-of-scores) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ スコアの顧客 AI 分布ウィジェットのドキュメント ](../guides/audiences.md#customer-ai-distribution-of-scores) を参照してください。
 
-## 顧客 AI スコア付けの概要 {#customer-ai-scoring-summary}
+## 顧客 AI スコアリングの概要 {#customer-ai-scoring-summary}
 
 このインサイトによって回答された質問：
 
@@ -454,13 +454,13 @@ SELECT model_name,
 
 +++
 
-を参照してください。 [顧客 AI スコア付けの概要ウィジェットドキュメント](../guides/audiences.md#customer-ai-scoring-summary) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ 顧客 AI スコアの概要ウィジェットのドキュメント ](../guides/audiences.md#customer-ai-scoring-summary) を参照してください。
 
 ## ID の重複 {#identity-overlap}
 
 このインサイトによって回答された質問：
 
-- A と B の一般的な積集合 [!UICONTROL Id タイプ A] および [!UICONTROL ID タイプ B] フィルタリングされたオーディエンスの場合
+- フィルタリングされたオーディエンスに対する [!UICONTROL ID タイプ A] と [!UICONTROL ID タイプ B] の一般的な共通部分は何ですか。
 - 特定の ID タイプの重複に基づいて顧客オーディエンスを絞り込み、ターゲット設定されたマーケティング戦略を強化するには、どうすればよいですか？
 - 交差領域内のキャンペーンのパフォーマンスを評価することで、どのようなインサイトを得ることができますか？
 - これらのインサイトに基づいて、今後のマーケティング活動をどのように最適化できますか？
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-を参照してください。 [ID 重複ウィジェットのドキュメント](../guides/audiences.md#identity-overlap) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ID の重複ウィジェットのドキュメント ](../guides/audiences.md#identity-overlap) を参照してください。
 
 ## ID 別プロファイル {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-を参照してください。 [ID ウィジェット別プロファイルのドキュメント](../guides/audiences.md#profiles-by-identity) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ID 別プロファイル ウィジェットのドキュメント ](../guides/audiences.md#profiles-by-identity) を参照してください。
 
 ## 予定されているアクティベーション {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-を参照してください。 [スケジュールされたアクティベーションウィジェットのドキュメント](../guides/audiences.md#scheduled-activations) このインサイトの外観と機能について説明します。
+このインサイトの外観と機能について詳しくは、[ 予定されているアクティベーションウィジェットのドキュメント ](../guides/audiences.md#scheduled-activations) を参照してください。
 
 ## 次の手順
 
 このドキュメントでは、ダッシュボードインサイトを生成する SQL と、この分析で解決される一般的な質問について説明しました。 SQL を編集および繰り返して、独自のインサイトを生成できるようになりました。
 
-を参照してください。 [SQL ドキュメントを表示](../view-sql.md) platform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、こちらを参照してください。
+PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 ](../view-sql.md) を参照してください。
 
-また、のインサイトを生成する SQL を読んで理解することもできます [プロファイル](./profiles.md), [アカウントプロファイル](./account-profiles.md) および [宛先](./destinations.md) ダッシュボード。
+また、[ プロファイル ](./profiles.md)、[ アカウントプロファイル ](./account-profiles.md) および [ 宛先 ](./destinations.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。

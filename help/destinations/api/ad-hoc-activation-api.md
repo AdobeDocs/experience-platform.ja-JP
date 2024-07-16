@@ -16,19 +16,19 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->ベータ版フェーズの完了後、 [!DNL ad-hoc activation API] すべてのExperience Platformユーザーが一般公開（GA）されるようになりました。 GA バージョンでは、API がバージョン 2 にアップグレードされました。 手順 4 （[最新のオーディエンスエクスポートジョブ ID の取得](#segment-export-id)API が書き出し ID を必要としなくなったので、）は不要になりました。
+>Beta フェーズを完了すると、すべてのExperience Platformのお客様が [!DNL ad-hoc activation API] を一般公開（GA）できるようになりました。 GA バージョンでは、API がバージョン 2 にアップグレードされました。 API が書き出し ID を必要としなくなったので、手順 4 （[ 最新のオーディエンスエクスポートジョブ ID の取得 ](#segment-export-id)）は不要になりました。
 >
->参照： [アドホックアクティベーションジョブの実行](#activation-job) 詳しくは、このチュートリアルの後半を参照してください。
+>詳しくは、このチュートリアルの後述の [ アドホックアクティベーションジョブの実行 ](#activation-job) を参照してください。
 
 ## 概要 {#overview}
 
 アドホックアクティベーション API を使用すると、マーケターは、即時にアクティベーションが必要な状況で、宛先へのオーディエンスオーディエンスをプログラムによってすばやく効率的にアクティブ化できます。
 
-アドホックアクティベーション API を使用して、完全なファイルを目的のファイル受信システムに書き出します。 アドホックオーディエンスのアクティベーションは、でのみサポートされます。 [バッチファイルベースの宛先](../destination-types.md#file-based).
+アドホックアクティベーション API を使用して、完全なファイルを目的のファイル受信システムに書き出します。 アドホックオーディエンスのアクティベーションは、[ バッチファイルベースの宛先 ](../destination-types.md#file-based) でのみサポートされています。
 
 次の図は、アドホックアクティベーション API を介してオーディエンスをアクティブ化するためのエンドツーエンドのワークフローを示しています。これには、24 時間ごとに Platform で行われるセグメント化ジョブが含まれます。
 
-![アドホックアクティベーション](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
+![ アドホックアクティベーション ](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
 
 
@@ -51,7 +51,7 @@ IT 管理者は、Experience Platformアドホックアクティベーション 
 アドホックアクティベーション API を使用する場合は、次のガードレールに注意してください。
 
 * 現在、各アドホックアクティベーションジョブは、最大 80 個のオーディエンスをアクティベートできます。 1 つのジョブにつき 80 個を超えるオーディエンスをアクティベートしようとすると、ジョブが失敗します。 この動作は、今後のリリースで変更される可能性があります。
-* アドホックアクティベーションジョブを、スケジュール済みと並行して実行することはできません [オーディエンス書き出しジョブ](../../segmentation/api/export-jobs.md). アドホックアクティベーションジョブを実行する前に、スケジュールされたオーディエンス書き出しジョブが完了していることを確認します。 参照： [宛先データフローの監視](../../dataflows/ui/monitor-destinations.md) アクティブ化フローのステータスの監視方法について説明します。 例えば、アクティベーションデータフローにが表示されている場合は次のようになります。 **[!UICONTROL 処理]** ステータス。アドホックアクティベーションジョブを実行する前に、完了するまで待ちます。
+* アドホックアクティベーションジョブを、スケジュールされた [ オーディエンス書き出しジョブ ](../../segmentation/api/export-jobs.md) と並行して実行することはできません。 アドホックアクティベーションジョブを実行する前に、スケジュールされたオーディエンス書き出しジョブが完了していることを確認します。 アクティブ化フローのステータスを監視する方法については、[ 宛先データフローの監視 ](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** ステータスが表示されている場合は、完了するまで待ってからアドホックアクティベーションジョブを実行します。
 * オーディエンスごとに複数のアドホックアクティベーションジョブを同時に実行しないでください。
 
 ## セグメント化に関する考慮事項 {#segmentation-considerations}
@@ -63,8 +63,8 @@ Adobe Experience Platformは、スケジュールされたセグメント化ジ�
 Adobe Experience Platform API を呼び出す前に、次の前提条件を満たしていることを確認してください。
 
 * Adobe Experience Platformにアクセスできる組織アカウントがある。
-* お使いのExperience Platformアカウントには、 `developer` および `user` Adobe Experience Platform API 製品プロファイルに対して有効になっている役割。 に連絡してください [Admin Console](../../access-control/home.md) 管理者：アカウントでこれらの役割を有効にします。
-* Adobe IDがある。 Adobe IDがない場合は、 [Adobe Developer コンソール](https://developer.adobe.com/console) 新しいアカウントを作成します。
+* Experience Platformアカウントでは、`developer` ロールと `user` ロールがAdobe Experience Platform API 製品プロファイルに対して有効になっています。 アカウントでこれらのロールを有効にするには、[Admin Console](../../access-control/home.md) 管理者にお問い合わせください。
+* Adobe IDがある。 Adobe IDがない場合は、[Adobe Developer Consoleに移動して ](https://developer.adobe.com/console) 新しいアカウントを作成します。
 
 ## 手順 2：資格情報の収集 {#credentials}
 
@@ -105,7 +105,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 アドホックアクティベーションジョブを実行する前に、最新のオーディエンスエクスポートジョブの ID を取得する必要があります。 この ID をアドホックアクティベーションジョブリクエストに渡す必要があります。
 
-説明された手順に従います [こちら](../../segmentation/api/export-jobs.md#retrieve-list) すべてのオーディエンス書き出しジョブのリストを取得します。
+すべてのオーディエンス書き出しジョブのリストを取得するには、[ こちら ](../../segmentation/api/export-jobs.md#retrieve-list) に記載されている手順に従います。
 
 応答で、以下のスキーマプロパティを含む最初のレコードを探します。
 
@@ -115,9 +115,9 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 }
 ```
 
-オーディエンスエクスポートジョブ ID はにあります `id` プロパティ（下図を参照）。
+次に示すように、オーディエンス書き出しジョブ ID は `id` プロパティにあります。
 
-![オーディエンス書き出しジョブ ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
+![ オーディエンスエクスポートジョブ ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
 ## 手順 5：アドホックアクティベーションジョブの実行 {#activation-job}
@@ -126,9 +126,9 @@ Adobe Experience Platformは、スケジュールされたセグメント化ジ�
 
 >[!IMPORTANT]
 >
->次の 1 回限りの制約に注意してください。アドホックアクティベーションジョブを実行する前に、設定したスケジュールに従って、オーディエンスが最初にアクティベートされた時点から少なくとも 20 分が経過していることを確認してください [手順 3 - Platform UI でのアクティベーションフローの作成](#activation-flow).
+>次の 1 回限りの制約に注意します。アドホックアクティベーションジョブを実行する前に、[ 手順 3 - Platform UI でのアクティベーションフローの作成 ](#activation-flow) で設定したスケジュールに従って、オーディエンスが最初にアクティベートされた時点から少なくとも 20 分が経過していることを確認します。
 
-アドホックアクティベーションジョブを実行する前に、オーディエンスのスケジュールされたオーディエンス書き出しジョブが完了していることを確認します。 参照： [宛先データフローの監視](../../dataflows/ui/monitor-destinations.md) アクティブ化フローのステータスの監視方法について説明します。 例えば、アクティベーションデータフローにが表示されている場合は次のようになります。 **[!UICONTROL 処理]** ステータス。完了するまで待ってから、アドホックアクティベーションジョブを実行して完全なファイルを書き出します。
+アドホックアクティベーションジョブを実行する前に、オーディエンスのスケジュールされたオーディエンス書き出しジョブが完了していることを確認します。 アクティブ化フローのステータスを監視する方法については、[ 宛先データフローの監視 ](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** ステータスが表示された場合は、完了するまで待ってから、アドホックアクティベーションジョブを実行して完全なファイルを書き出します。
 
 オーディエンスの書き出しジョブが完了したら、アクティベーションをトリガーできます。
 
@@ -140,7 +140,7 @@ Adobe Experience Platformは、スケジュールされたセグメント化ジ�
 
 >[!IMPORTANT]
 >
->を含める必要があります `Accept: application/vnd.adobe.adhoc.activation+json; version=2` アドホックアクティベーション API の v2 を使用するためのリクエストのヘッダー。
+>アドホックアクティベーション API v2 を使用するには、リクエストに `Accept: application/vnd.adobe.adhoc.activation+json; version=2` ヘッダーを含める必要があります。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun' \
@@ -166,8 +166,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティベートする宛先インスタンスの ID。 これらの ID は、に移動することで、Platform UI から取得できます。 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]** タブをクリックし、目的の宛先行をクリックして、右側のパネルに宛先 ID を表示します。 詳しくは、 [宛先 workspace ドキュメント](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するオーディエンスの ID。 アドホック API を使用して、Platform で生成されたオーディエンスと外部（カスタムアップロード）オーディエンスを書き出すことができます。 外部オーディエンスをアクティブ化する場合は、オーディエンス ID ではなく、システムで生成された ID を使用します。 システム生成 ID は、オーディエンス UI のオーディエンスの概要ビューで確認できます。 <br> ![選択すべきでないオーディエンス ID の表示。](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "選択すべきでないオーディエンス ID の表示。"){width="100" zoomable="yes"} <br> ![使用する必要があるシステム生成オーディエンス ID の表示。](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "使用する必要があるシステム生成オーディエンス ID の表示。"){width="100" zoomable="yes"} |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティベートする宛先インスタンスの ID。 Platform UI からこれらの ID を取得するには、「**[!UICONTROL 宛先]**/**[!UICONTROL 参照]** タブに移動し、目的の宛先行をクリックして、右側のパネルに宛先 ID を表示します。 詳しくは、[ 宛先ワークスペードキュメント ](/help/destinations/ui/destinations-workspace.md#browse) を参照してください。 |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するオーディエンスの ID。 アドホック API を使用して、Platform で生成されたオーディエンスと外部（カスタムアップロード）オーディエンスを書き出すことができます。 外部オーディエンスをアクティブ化する場合は、オーディエンス ID ではなく、システムで生成された ID を使用します。 システム生成 ID は、オーディエンス UI のオーディエンスの概要ビューで確認できます。<br> ![ 選択すべきでないオーディエンス ID のビュー。](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png " 選択すべきでないオーディエンス ID のビュー "){width="100" zoomable="yes"}<br> ![ 使用する必要があるシステム生成オーディエンス ID の表示。](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png " 使用する必要があるシステム生成オーディエンス ID の表示 "){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -207,9 +207,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティベートする宛先インスタンスの ID。 これらの ID は、に移動することで、Platform UI から取得できます。 **[!UICONTROL 宛先]** > **[!UICONTROL 参照]** タブをクリックし、目的の宛先行をクリックして、右側のパネルに宛先 ID を表示します。 詳しくは、 [宛先 workspace ドキュメント](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | オーディエンスをアクティベートする宛先インスタンスの ID。 Platform UI からこれらの ID を取得するには、「**[!UICONTROL 宛先]**/**[!UICONTROL 参照]** タブに移動し、目的の宛先行をクリックして、右側のパネルに宛先 ID を表示します。 詳しくは、[ 宛先ワークスペードキュメント ](/help/destinations/ui/destinations-workspace.md#browse) を参照してください。 |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 選択した宛先に対してアクティブ化するオーディエンスの ID。 |
-| <ul><li>`exportId1`</li></ul> | の応答で返された ID [オーディエンスの書き出し](../../segmentation/api/export-jobs.md#retrieve-list) ジョブ。 参照： [手順 4：最新のオーディエンスエクスポートジョブ ID の取得](#segment-export-id) この ID の検索方法については、を参照してください。 |
+| <ul><li>`exportId1`</li></ul> | [ オーディエンスの書き出し ](../../segmentation/api/export-jobs.md#retrieve-list) ジョブの応答で返された ID。 [ 手順 4：最新のオーディエンスエクスポートジョブ ID を取得する ](#segment-export-id) を参照して、この ID を見つける方法を確認してください。 |
 
 {style="table-layout:auto"}
 
@@ -233,7 +233,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | -------- | ----------- |
 | `segment` | アクティブ化されたオーディエンスの ID。 |
 | `order` | オーディエンスがアクティブ化された宛先の ID。 |
-| `statusURL` | アクティベーションフローのステータス URL。 を使用して、フローの進行状況を追跡できます [フローサービス API](../../sources/tutorials/api/monitor.md). |
+| `statusURL` | アクティベーションフローのステータス URL。 [Flow Service API](../../sources/tutorials/api/monitor.md) を使用して、フローの進行状況を追跡できます。 |
 
 {style="table-layout:auto"}
 
@@ -247,8 +247,8 @@ Destination SDK API エンドポイントは、一般的な Experience Platform 
 
 | エラーメッセージ | 解決策 |
 |---------|----------|
-| オーディエンス向けに実行は既に行われています `segment ID` 注文 `dataflow ID` 実行 id を使用 `flow run ID` | このエラーメッセージは、アドホックアクティベーションフローが現在オーディエンスに対して進行中であることを示しています。 ジョブが終了するのを待ってから、アクティベーションジョブを再度トリガーします。 |
-| セグメント `<segment name>` はこのデータフローの一部ではないか、スケジュール範囲外です。 | このエラーメッセージは、アクティブ化するように選択したオーディエンスがデータフローにマッピングされていないか、オーディエンスに対して設定されたアクティベーションスケジュールが期限切れか、まだ開始されていないことを示しています。 オーディエンスが実際にデータフローにマッピングされているかどうかを確認し、オーディエンスのアクティベーションスケジュールが現在の日付と重なっていることを確認します。 |
+| 実行 ID `flow run ID` の注文 `dataflow ID` に対して、オーディエンス `segment ID` に対する実行は既に行われています | このエラーメッセージは、アドホックアクティベーションフローが現在オーディエンスに対して進行中であることを示しています。 ジョブが終了するのを待ってから、アクティベーションジョブを再度トリガーします。 |
+| セグメント `<segment name>` このデータフローの一部ではないか、スケジュール範囲外です。 | このエラーメッセージは、アクティブ化するように選択したオーディエンスがデータフローにマッピングされていないか、オーディエンスに対して設定されたアクティベーションスケジュールが期限切れか、まだ開始されていないことを示しています。 オーディエンスが実際にデータフローにマッピングされているかどうかを確認し、オーディエンスのアクティベーションスケジュールが現在の日付と重なっていることを確認します。 |
 
 ## 関連情報 {#related-information}
 

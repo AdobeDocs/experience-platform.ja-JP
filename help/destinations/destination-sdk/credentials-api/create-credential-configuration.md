@@ -4,7 +4,7 @@ title: 資格情報設定の作成
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '564'
 ht-degree: 100%
 
 ---

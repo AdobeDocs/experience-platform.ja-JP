@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；データアクセス；python sdk;spark sdk；データアクセス api;export;Export
+keywords: Experience Platform；ホーム；人気のトピック；データアクセス；python sdk;spark sdk;data access api；エクスポート；エクスポート
 solution: Experience Platform
 title: データアクセス API ガイド
-description: データアクセス API は、Adobe Experience Platformをサポートし、Experience Platform内に取り込んだデータセットの検出性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供します。
+description: Data Access API は、Experience Platform内に取り込んだデータセットの検出可能性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供することで、Adobe Experience Platformをサポートします。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 49%
 
 # データアクセス API ガイド
 
-データアクセス API は、Adobe Experience Platformをサポートし、内に取り込んだデータセットの検出性とアクセシビリティに重点を置いた RESTful インターフェイスをユーザーに提供します [!DNL Experience Platform].
+Data Access API は、[!DNL Experience Platform] 内に取り込んだデータセットの検出可能性とアクセシビリティに重点を置いた RESTful インターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートします。
 
-![データアクセスを使用すると、取り込んだデータセットをExperience Platform内で検出し、アクセシビリティを容易にする方法を示す図です。](images/Data_Access_Experience_Platform.png)
+![Data Access により、Experience Platform内に取り込んだデータセットの検出性とアクセス性がどのように促進されるかを示す図。](images/Data_Access_Experience_Platform.png)
 
 ## API 仕様リファレンス
 
@@ -23,16 +23,16 @@ Swagger API リファレンスドキュメントは、[こちら](https://develo
 
 ## 用語 {#terminology}
 
-次の表に、このドキュメントでよく使用される用語の説明を示します。
+次の表は、このドキュメント全体で一般的に使用される用語の説明です。
 
 | 用語 | 説明 |
 | ----- | ------------ |
-| データセット | スキーマとフィールドを含むデータのコレクションです。 |
+| データセット | スキーマとフィールドを含むデータのコレクション。 |
 | バッチ | 一定期間に収集され、1 つの単位として処理される一連のデータ。 |
 
 ## バッチ内のファイルのリストの取得 {#retrieve-list-of-files-in-a-batch}
 
-特定のバッチに属するファイルのリストを取得するには、データアクセス API でバッチ識別子 (batchID) を使用します。
+特定のバッチに属するファイルのリストを取得するには、データアクセス API でバッチ識別子（batchID）を使用します。
 
 **API 形式**
 
@@ -102,7 +102,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 ## バッチ内のファイルへのアクセスとダウンロード
 
-ファイルの特定の詳細にアクセスするには、ファイル識別子 (`{FILE_ID}`) を Data Access API に置き換えます。
+ファイルの特定の詳細にアクセスするには、Data Access API でファイル識別子（`{FILE_ID}`）を使用します（名前、バイト単位のサイズ、ダウンロードするリンクなど）。
 
 応答にはデータ配列が含まれています。 ID で指すファイルが個々のファイルかディレクトリかに応じて、返されるデータ配列には、1 つのエントリか、そのディレクトリに属するファイルのリストが含まれます。各ファイル要素には、ファイルの詳細が含まれます。
 
@@ -150,7 +150,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.name` | ファイルの名前 ( 例： `profiles.csv`) をクリックします。 |
+| `data.name` | ファイルの名前（例：`profiles.csv`）。 |
 | `data.length` | ファイルのサイズ（バイト単位）。 |
 | `data._links.self.href` | ファイルをダウンロードするための URL です。 |
 
@@ -197,12 +197,12 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.name` | ファイルの名前 ( 例： `profiles.csv`) をクリックします。 |
+| `data.name` | ファイルの名前（例：`profiles.csv`）。 |
 | `data._links.self.href` | ファイルをダウンロードするための URL です。 |
 
 ## ファイルのコンテンツへのアクセス {#access-file-contents}
 
-また、 [!DNL Data Access] ファイルのコンテンツにアクセスする API。 その後、コンテンツを外部ソースにダウンロードできます。
+[!DNL Data Access] API を使用してファイルのコンテンツにアクセスすることもできます。 その後、コンテンツを外部ソースにダウンロードできます。
 
 **API 形式**
 
@@ -227,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `{FILE_ID}` | データセット内のファイルの ID です。 |
-| `{FILE_NAME}` | ファイルの完全名 ( 例： `profiles.csv`) をクリックします。 |
+| `{FILE_NAME}` | ファイルのフルネーム （例：`profiles.csv`）。 |
 
 **応答**
 
@@ -235,8 +235,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## その他のコードサンプル
 
-その他のサンプルについては、 [データアクセスのチュートリアル](tutorials/dataset-data.md).
+その他の例については、[ データアクセスのチュートリアル ](tutorials/dataset-data.md) を参照してください。
 
 ## データ取得イベントへのサブスクライブ {#subscribe-to-data-ingestion-events}
 
-を通じて、価値の高い特定のイベントに登録できます。 [Adobe Developer Console](https://developer.adobe.com/console/). 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[データ取得通知のサブスクライブ](../ingestion/quality/subscribe-events.md)のチュートリアルを参照してください。
+[Adobe Developer Console](https://developer.adobe.com/console/) を通じて、特定の価値の高いイベントを購読できます。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[データ取得通知のサブスクライブ](../ingestion/quality/subscribe-events.md)のチュートリアルを参照してください。

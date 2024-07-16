@@ -1,6 +1,6 @@
 ---
-title: Experience Platformの主な使用例
-description: このビデオでは、Adobe Experience Platform&mdash、リアルタイム顧客データプラットフォーム、カスタマージャーニーインテリジェンス、配信およびクロスチャネルエクスペリエンス、顧客体験アプリケーション開発の 4 つの主な使用例の概要を説明します。
+title: Experience Platformの主なユースケース
+description: このビデオでは、Adobe Experience Platform&mdash;real-time customer data platform、customer journey intelligence、配信とクロスチャネルエクスペリエンス、customer experience application development の 4 つの主要なユースケースの概要を説明します。
 kt: 4337
 audience: all
 doc-type: video
@@ -9,17 +9,17 @@ thumbnail: 32806.jpg
 exl-id: 400280bd-3366-4982-b5a6-9f68c85de5e0
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 0%
+source-wordcount: '73'
+ht-degree: 8%
 
 ---
 
-# Experience Platformの主な使用例
+# Experience Platform の主なユースケース
 
-このビデオでは、Experience Platformの 4 つの主な使用例の概要を説明します。
+このビデオでは、Experience Platformの 4 つの主要なユースケースの概要を説明します。
 
 * Adobe Real-time Customer Data Platform
-* カスタマージャーニーインテリジェンス
+* Customer journey intelligence
 * 配信とクロスチャネルエクスペリエンス
 * 顧客体験アプリケーションの開発
 

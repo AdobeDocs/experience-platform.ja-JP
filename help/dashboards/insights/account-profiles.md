@@ -7,19 +7,19 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # アカウントプロファイルインサイト
 
-[アカウントプロファイル](../../rtcdp/accounts/account-profile-overview.md) は、複数のマーケティングチャネルや組織システムなど、様々なソースからのアカウント情報を統合するために使用されます。 この統合ビューにより、顧客アカウントの包括的な把握が可能になり、B2B マーケティングキャンペーンが強化されます。 データモデルの分析から得られるインサイトにより、Adobe Real-time Customer Data Platform B2B データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
+[ アカウントプロファイル ](../../rtcdp/accounts/account-profile-overview.md) は、複数のマーケティングチャネルや組織システムなど、様々なソースのアカウント情報を統合するために使用されます。 この統合ビューにより、顧客アカウントの包括的な把握が可能になり、B2B マーケティングキャンペーンが強化されます。 データモデルの分析から得られるインサイトにより、Adobe Real-time Customer Data Platform B2B データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
 
 インサイトを強化する SQL へのアクセスにより、B2B データをより深く理解し、高度にカスタマイズされた再利用可能なインサイトを生成して、顧客アカウント情報をさらに詳しく調べることができます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-次のインサイトはすべて [アカウントプロファイルダッシュボード](../guides/account-profiles.md) または [カスタムダッシュボード](../user-defined-dashboards.md). を参照してください。 [カスタマイズの概要](../customize/overview.md) ダッシュボードをカスタマイズする方法、または [新しいウィジェットの作成と編集](../customize/custom-widgets.md) ウィジェットライブラリ内および [ユーザー定義ダッシュボード](../user-defined-dashboards.md#create-widget).
+次のインサイトはすべて、[ アカウントプロファイルダッシュボード ](../guides/account-profiles.md) または [ カスタムダッシュボード ](../user-defined-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../user-defined-dashboards.md#create-widget) を参照してください。
 
 ## 追加されたアカウントプロファイル {#account-profiles-added}
 
@@ -287,4 +287,4 @@ ORDER BY  d.date_key limit 5000;
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-また、のインサイトを生成する SQL を読んで理解することもできます [プロファイル](./profiles.md), [オーディエンス](./audiences.md)、および [宛先](./destinations.md) ダッシュボード。
+また、[Profiles](./profiles.md)、[Audiences](./audiences.md) および [Destinations](./destinations.md) ダッシュボードのインサイトを生成する SQL を読み、理解することもできます。

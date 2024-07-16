@@ -4,7 +4,7 @@ description: Adobe Experience Platform のエッジ拡張機能の条件タイ�
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '403'
 ht-degree: 94%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 94%
 
 通常、条件タイプは次の要素で構成されます。
 
-1. Experience PlatformUI とデータ収集 UI 内に表示されるビューで、条件の設定を変更できます。
+1. Experience PlatformUI とデータ収集 UI に表示されるビュー。条件の設定を変更できます。
 2. タグのランタイムライブラリ内で生成されるライブラリモジュール。設定を解釈し、条件を評価します。
 
 例えば、ユーザーがホスト `example.com` にいるかどうかを評価したい場合、モジュールは次のようになります。

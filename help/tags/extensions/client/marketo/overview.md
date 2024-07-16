@@ -1,11 +1,11 @@
 ---
-title: Marketo Munchkin 拡張機能 概要
+title: Marketo Munchkin 拡張機能の概要
 description: Adobe Experience Platform の Marketo Munchkin 拡張機能について説明します。
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 100%
+source-wordcount: '210'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 100%
 
 **url：（必須）**&#x200B;ページ訪問の記録に使用する URL ファイルパス。
 
-**params：**&#x200B;記録する必要のあるパラメーターのクエリー文字列。
+**params：**&#x200B;記録する必要のあるパラメーターのクエリ文字列。
 
 **name：** Web ページアセットのカスタム名。
 

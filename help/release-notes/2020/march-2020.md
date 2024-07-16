@@ -4,18 +4,18 @@ description: Adobe Experience Platform の 2020年3月のリリースノート�
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
-keywords: リリースノート;
+keywords: リリースノート；
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 70%
+source-wordcount: '858'
+ht-degree: 63%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020年3月11日（PT）**
+**リリース日：2020年3月11日**
 
 Adobe Experience Platform の既存の機能に対するアップデート：
 
@@ -27,7 +27,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## データガバナンス {#governance}
 
-[!DNL Experience Platform] を使用すると、会社は複数のエンタープライズシステムからデータを統合し、マーケティング担当者が顧客をより良く識別、理解し、惹きつけることができるようになります。[!DNL Experience Platform] には、内でのデータの適切な使用を保証するエンドツーエンドのデータガバナンスインフラストラクチャが含まれます [!DNL Platform] とは、システム間で共有される場合に使用されます。
+[!DNL Experience Platform] を使用すると、企業は複数の企業システムのデータを統合して、マーケターが顧客を識別かつ理解し、惹きつけられるようになります。 [!DNL Experience Platform] には、システム内およびシステム間で共有される際にデータが適切に使用されるように、エンドツーエンドのデータガバナンスインフラストラクチャが含まれて [!DNL Platform] ます。
 
 Adobe Experience Platform データガバナンスは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。これは、[!DNL Experience Platform] において様々なレベルで重要な役割を果たします。例えば、カタログ作成、データ系列、データ使用のラベル付け、データアクセスポリシー、マーケティングアクションのデータに関するアクセス制御などです。
 
@@ -35,12 +35,12 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 >[!NOTE]
 >
->現在、次の新機能の一部はベータ版です。このため、一部のユーザーにはご利用いただけません。ベータ版の機能は変更されることがあります。
+>次の新機能の一部は現在ベータ版で、すべてのユーザーが利用できるわけではありません。 ベータ版の機能は変更されることがあります。
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| のデータ使用ポリシーの自動適用 [!DNL Real-Time Customer Data Platform] | 宛先に対してデータをアクティブ化するワークフローにデータ使用ポリシーが適用されるようになりました。また、データガバナンスは、既存のアクティベーションに影響を与える変更（データセットラベル、結合ポリシー、セグメント定義の変更など）をおこなう場合にも、組み込まれて適用されます。 |
-| データリネージの適用 | Real-Time CDPでデータ使用ポリシーが違反されると、UI にはデータ系列情報を含む通知が表示され、ポリシー違反の理由と、違反を解決するためにユーザーが実行できる操作を理解するのに役立ちます。 |
+| [!DNL Real-Time Customer Data Platform] のデータ使用ポリシーの自動適用 | 宛先に対してデータをアクティブ化するワークフローにデータ使用ポリシーが適用されるようになりました。また、データガバナンスは、既存のアクティベーションに影響を与える変更（データセットラベル、結合ポリシー、セグメント定義の変更など）をおこなう場合にも、組み込まれて適用されます。 |
+| データリネージの適用 | Real-Time CDPでデータ使用ポリシーに違反すると、UI にデータ系列情報を含む通知が表示されます。この通知は、ポリシー違反の理由と違反解決に役立ちます。 |
 
 
 **既知の問題**
@@ -51,7 +51,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 ## データ取得 {#ingestion}
 
-Adobe Experience Platform には、あらゆる種類のデータやデータのレイテンシを取り込むための豊富な機能が用意されています。Adobe Experience Platform [!DNL Data Ingestion] では、Batch API、Streaming API、ネイティブAdobeコネクタ、データ統合パートナー、Adobe Experience Platform UI など、データを取り込むための複数の方法を提供します。
+Adobe Experience Platform には、あらゆる種類のデータやデータのレイテンシを取り込むための豊富な機能が用意されています。Adobe Experience Platform [!DNL Data Ingestion] では、データ取り込みに複数の代替手段を提供しています。これには、バッチ API、ストリーミング API、ネイティブAdobeコネクタ、データ統合パートナー、Adobe Experience Platform UI などがあります。
 
 **新機能**
 
@@ -68,7 +68,7 @@ Adobe Experience Platform には、あらゆる種類のデータやデータの
 
 ## 宛先 {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対するデータをシームレスにアクティブ化します。
+[Real-time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前定義済みの統合であり、シームレスな方法でこれらのパートナーにデータをアクティブ化します。
 
 **新しい宛先**
 
@@ -76,8 +76,8 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md)の宛先は、宛
 
 | 宛先 | 説明 |
 |--- | ---|
-| クラウドストレージの宛先 | Real-Time CDPは、セグメントをデータファイルとして [!DNL Amazon S3] または SFTP クラウドのストレージの場所。 これにより、オーディエンスとそのプロファイル属性を CSV またはタブ区切りファイル経由で内部システムに送信できます。 |
-| 広告の宛先 | この [!DNL Google] 宛先カードは、3 つの異なる [!DNL Google] 現在Real-Time CDPでサポートされているプラットフォーム： [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360。 |
+| クラウドストレージの宛先 | Real-Time CDPは、セグメントをデータファイルとして [!DNL Amazon S3] または SFTP クラウドストレージの場所に配信できるようになりました。 これにより、オーディエンスとそのプロファイル属性を CSV またはタブ区切りファイル経由で内部システムに送信できます。 |
+| 広告の宛先 | [!DNL Google] の宛先カードは、現在Real-Time CDPでサポートされている 3 つの異なる [!DNL Google] プラットフォーム（[!DNL Google Ads]、[!DNL Google Ad Manager]、[!DNL Google] Display &amp; Video 360）に対して、3 つの宛先カードに分割されるようになりました。 |
 
 詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 
@@ -91,19 +91,19 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 強化されたプライベートグラフ | プライベートグラフ機能が強化され、週別のバッチ処理から日別の更新済みグラフにグラフ生成の待ち時間が短縮され、 [!DNL Identity Service] をご利用のお客様が最新の id グラフおよびリンクにアクセスできるようになりました。 |
+| 強化されたプライベートグラフ | プライベートグラフの機能が強化され、毎週のバッチプロセスから毎日更新されるグラフに至るまで、グラフ生成の待ち時間が短縮されました。これにより、[!DNL Identity Service] 顧客は、より新しい最新の ID グラフとリンクにアクセスできるようになりました。 |
 
 **既知の問題**
 
 * なし
 
-詳しくは、 [!DNL Identity Service]を参照し、 [ID サービスの概要](../../identity-service/home.md).
+[!DNL Identity Service] について詳しくは、「[ID サービスの概要 ](../../identity-service/home.md)」を参照してください。
 
 ## ソース {#sources}
 
-Adobe Experience Platformで外部ソースからデータを取り込みながら、を使用してデータの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
+[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を提供します。 これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 **新機能**
 
@@ -111,10 +111,10 @@ Adobe Experience Platformで外部ソースからデータを取り込みなが�
 | ------- | ----------- |
 | Adobe Audience Manager コネクタの廃止された信号 | Audience Manager から信号レベルのデータは送信されなくなります。特性とセグメントのセグメントメンバーシップは、引き続き送信されることに注意してください。この変更の結果、受信データセットは生成されなくなります。 |
 | データセット名の変更 | Audience Manager コネクタで生成されたデータセットの名前と説明が更新されます。 |
-| 有効にする [!DNL Profile] Audience Manager で切り替え | [!DNL Profile] 切り替えは、有効または無効にして、データセットを次に昇格させることができます。 [!DNL Real-Time Customer Profile]. デフォルトでは、切り替えが有効になっています。 |
-| クラウドストレージシステムの UI のサポート | 用の新しいソースコネクタ [!DNL Azure Data Lake Storage Gen2] を使用します。 |
-| CRM システムの UI のサポート | 用の新しいソースコネクタ [!DNL HubSpot], [!DNL Salesforce Service Cloud]、および [!DNL ServiceNow] を使用します。 |
-| データベースシステムの UI のサポート | 用の新しいソースコネクタ [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]、および [!DNL MySQL] を使用します。 |
+| Audience Manger[!DNL Profile] 有効にする切り替え | デ [!DNL Profile] タセットを [!DNL Real-Time Customer Profile] に昇格させるには、切替スイッチを有効または無効にできます。 デフォルトでは、切り替えが有効になっています。 |
+| クラウドストレージシステムの UI のサポート | UI の [!DNL Azure Data Lake Storage Gen2] の新しいソースコネクタ。 |
+| CRM システムの UI のサポート | UI の [!DNL HubSpot]、[!DNL Salesforce Service Cloud] および [!DNL ServiceNow] の新しいソースコネクタ。 |
+| データベースシステムの UI のサポート | UI の [!DNL AWS Redshift]、[!DNL Google BigQuery]、[!DNL MariaDB]、[!DNL Microsoft SQL Server] および [!DNL MySQL] 用の新しいソースコネクタ。 |
 
 **既知の問題**
 

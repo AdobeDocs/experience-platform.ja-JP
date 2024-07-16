@@ -1,7 +1,7 @@
 ---
-keywords: ストリーミング、Qualtrics の宛先
-title: Qualtrics 自動化
-description: エクスペリエンスと運用上の顧客データを同期して、パーソナライゼーションの規模を拡大/縮小できます。 Adobe Experience Platformの複数の運用データソースの集計を Qualtrics Experience ID の入力として使用すると、顧客をより深く理解し、目的、感情、エクスペリエンスの推進要因を把握する際に、ターゲットを絞ったアウトリーチを可能にしてギャップを埋めることができます。
+keywords: ストリーミング、Qualtrics 宛先
+title: Qualtrics の自動化
+description: エクスペリエンスと運用顧客データを同期して、大規模にパーソナライゼーションを解き放ちます。 Qualtrics Experience iD では、Adobe Experience Platformの複数のオペレーショナルデータソースの集計を入力として使用することで、顧客をより深く理解し、目的、感情、エクスペリエンスの要因を理解する際に、ターゲットを絞ったアウトリーチによってギャップを埋めることができます。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
@@ -11,57 +11,57 @@ ht-degree: 29%
 
 ---
 
-# Qualtrics 自動化
+# Qualtrics の自動化
 
 ## 概要 {#overview}
 
-エクスペリエンスと運用上の顧客データを同期して、パーソナライゼーションの規模を拡大/縮小できます。
+エクスペリエンスと運用顧客データを同期して、大規模にパーソナライゼーションを解き放ちます。
 
-Adobe Experience Platformの複数の運用データソースの集計を Qualtrics Experience ID の入力として使用すると、顧客をより深く理解し、目的、感情、エクスペリエンスの推進要因を把握する際に、ターゲットを絞ったアウトリーチを可能にしてギャップを埋めることができます。
+Qualtrics Experience iD では、Adobe Experience Platformの複数のオペレーショナルデータソースの集計を入力として使用することで、顧客をより深く理解し、目的、感情、エクスペリエンスの要因を理解する際に、ターゲットを絞ったアウトリーチによってギャップを埋めることができます。
 
 >[!IMPORTANT]
 >
->宛先コネクタとドキュメントページは、Qualtrics チームが作成および管理します。 お問い合わせや更新のご依頼については、 [カスタマーサクセスハブ](https://support-portal.qualtrics.com/).
+>宛先コネクタとドキュメントページは、Qualtrics チームが作成および管理します。 お問い合わせや更新のリクエストについては、[ カスタマーサクセスハブ ](https://support-portal.qualtrics.com/) にログインして直接ご連絡ください。
 
 ## ユースケース {#use-cases}
 
-をいつどのように使用するかをより深く理解するのに役立ちます。 *Qualtrics 自動化* の宛先について、Adobe Experience Platformのお客様がこの宛先を使用して解決できる使用例を以下に示します。
+*Qualtrics Automations* 宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
 
-### 使用例#1 {#use-case-1}
+### のユースケース#1 {#use-case-1}
 
-**シナリオ**：会社は、Web サイトやモバイルアプリなど、様々なデジタルタッチポイントをまたいで顧客満足度を測定したいと考えています。 ユーザーのインタラクション（購入の完了、特定の Web ページへの訪問など）に基づいてAdobe Experience Platformを使用して Qualtrics 調査をトリガー化します。
+**シナリオ**：企業は、web サイトやモバイルアプリなど、様々なデジタルタッチポイントをまたいで顧客満足度を測定したいと考えています。 Adobe Experience Platformを使用して、購入の完了や特定の web ページへのアクセスなど、ユーザーとのインタラクションに基づく Qualtrics 調査をトリガーします。
 
-**結果**：リアルタイムでフィードバックを収集することで、顧客体験に対するデータ駆動型の改善を実現し、満足度とロイヤルティを向上させます。
+**成果**：リアルタイムのフィードバックを収集することで、企業は顧客体験をデータに基づいて改善し、満足度とロイヤルティの向上につなげることができます。
 
-### 使用例#2 {#use-case-2}
+### のユースケース#2 {#use-case-2}
 
-**シナリオ**：組織は、従業員のオンボーディングプロセスの強化を目指しています。 Adobe Experience Platformを利用して、Qualtrics 調査を通じて新しい採用者からフィードバックを収集します。 事前定義されたオンボーディング期間の後、調査が自動的にトリガーされます。
+**シナリオ**：組織は、従業員のオンボーディングプロセスの強化を目指します。 Adobe Experience Platformを活用し、Qualtrics 調査を通じて新規採用者の声を収集しています。 調査は、事前に定義されたオンボーディング期間の後に自動的にトリガーされます。
 
-**結果**：継続的なフィードバックにより、組織はオンボーディングプロセスを適応および改善でき、新規従業員間のエンゲージメントと生産性が向上します。
+**結果**：継続的なフィードバックにより、組織はオンボーディングプロセスを適応させ、改善できるので、新入社員間のエンゲージメントと生産性が向上します。
 
 ## 前提条件
 
 Adobe Experience Platformで Qualtrics の宛先を設定する前に、次の前提条件が満たされていることを確認してください。
 
-* Qualtrics アカウントがある。
-* 必要な API トークンを Qualtrics から取得している。
+* Qualtrics アカウントを持っています。
+* Qualtrics から必要な API トークンを取得しています。
 
 ### API トークンの取得
 
-Qualtrics から API トークンを取得するために必要な手順を以下に示します。
+Qualtrics から API トークンを取得するために必要な手順は次のとおりです。
 
 1. Qualtrics アカウントにログインします。
-2. に移動します。 **アカウント設定**.
-3. 選択 **Qualtrics ID**.
-4. このページで、 **API** セクションの **トークン** フィールドに入力します。 これは API トークンで、宛先の設定時に必要になります。
+2. **アカウント設定** に移動します。
+3. 「**Qualtrics IDs**」を選択します。
+4. このページでは、「**API**」セクションを探します。「**トークン**」フィールドが含まれています。 これは API トークンで、宛先の設定時に必要になります。
 
 ## サポートされている ID {#supported-identities}
 
-*Qualtrics 自動化* では、以下の表で説明する id のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+*Qualtrics オートメーション* では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| メール | プレーンテキストの E メールアドレス | Qualtrics では、プレーンテキストの E メールアドレスのみがサポートされます。 |
+| メール | プレーンテキストのメールアドレス | Qualtrics では、プレーンテキストのメールアドレスのみがサポートされています。 |
 | external_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
 {style="table-layout:auto"}
@@ -72,7 +72,7 @@ Qualtrics から API トークンを取得するために必要な手順を以�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | セグメント（オーディエンス）のすべてのメンバーを、 *Qualtrics 自動化* 宛先。 |
+| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | *Qualtrics Automations* 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -81,13 +81,13 @@ Qualtrics から API トークンを取得するために必要な手順を以�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-認証の一環として、 **ユーザー名** および **パスワード**. ユーザー名は Qualtrics のユーザー名、パスワードは Qualtrics アカウントの API トークンです。 API トークンを取得するには、 **前提条件** 」の節を参照してください。
+認証の一環として、**ユーザー名** と **パスワード** を入力する必要があります。 ユーザー名は Qualtrics のユーザー名で、パスワードは Qualtrics アカウントの API トークンです。 API トークンを取得するには、上記の **前提条件** 節の手順に従います。
 
 ![認証](/help/destinations/assets/catalog/survey/qualtrics/authentication.png)
 
@@ -97,7 +97,7 @@ Qualtrics から API トークンを取得するために必要な手順を以�
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL URL]**: [JSON イベント](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) トリガーする [Qualtrics でのワークフロー](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). 例については、以下のスクリーンショットを参照してください。
+* **[!UICONTROL URL]**: [ ワークフローをトリガーする [JSON イベント ](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) で検出された URL を Qualtrics で ](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About) ます。 例については、以下のスクリーンショットを参照してください。
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
@@ -111,40 +111,40 @@ Qualtrics から API トークンを取得するために必要な手順を以�
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 属性と ID のマッピング {#map}
 
-この宛先にはオープンスキーマがあるので、プロパティを Qualtrics に送信できます。
+この宛先には開かれたスキーマがあるので、任意のプロパティを Qualtrics に送信できます。
 
-#### マップ属性
+#### 属性のマッピング
 
-マッピングに属性を追加するには、 **カスタム属性** 新しいマッピングを追加する際に使用します。 属性には任意の名前を入力できます。 Qualtrics は、 *camelCase* 属性名の命名規則（例は下のスクリーンショットを参照）。
+マッピングに属性を追加するには、新しいマッピングを追加する際に **カスタム属性** を選択するだけです。 属性には任意の名前を入力できます。 Qualtrics は、属性名に *camelCase* の命名規則を推奨しています（例については、以下のスクリーンショットを参照してください）。
 
-![カスタム属性](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![ カスタム属性 ](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
-以下のスクリーンショットに、使用可能な属性マッピングの例を示します。
+可能な属性マッピングの例については、以下のスクリーンショットを参照してください。
 
-![マッピングの例](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
+![ マッピングの例 ](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
 #### ID のマッピング
 
-この宛先の ID 名前空間の選択は必須です。 ターゲットフィールドマッピングに使用できるソースフィールドは次の 2 つです。
+この宛先の ID 名前空間を選択する必要があります。 ターゲットフィールドにマッピングできるソースフィールドは次の 2 つです。
 
 | ソースフィールド | ターゲットフィールド |
 |--------------------|-----------------------|
-| ID マップ：電子メール | ID : E メール |
-| ID マップ： ECID | ID: external_id |
+| IdentityMap：メール | ID : メール |
+| IdentityMap:ECID | ID : external_id |
 
 例については、以下のスクリーンショットを参照してください。
 
-![ID 名前空間](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
+![ID 名前空間 ](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-前述のように、この宛先では開いたスキーマが使用されるので、プロパティは Qualtrics に送信される場合があります。 それにもかかわらず、Qualtrics に送信されるデータは次の構造に従います。
+前述のように、この宛先ではオープンスキーマを使用しているので、プロパティは Qualtrics に送信できます。 ただし、Qualtrics に送信されるデータは、次の構造に従います。
 
 ```json
 {
@@ -178,9 +178,9 @@ Qualtrics から API トークンを取得するために必要な手順を以�
 }
 ```
 
-データが Qualtrics に取り込まれたことを確認するには、 **JSON イベント**、そこから、に移動します。 **実行履歴** ここで、ワークフローの実行を確認します。 各ワークフローのステータスは次のいずれかです： **成功** または **失敗**. 特定の実行を選択すると、その実行に関する詳細情報が表示され、問題が発生した場合のトラブルシューティングをおこなうことができます。
+データが Qualtrics に取り込まれたことを確認するには、**JSON イベント** を含むワークフローに移動し、そこから **実行履歴** に移動して、ワークフローの実行を確認します。 各ワークフローのステータスは **成功** または **失敗** です。 特定の実行を選択すると、その実行に関する詳細情報が表示され、問題が発生した場合にトラブルシューティングをおこなうことができます。
 
-で実行が表示されない場合 **実行履歴**&#x200B;とは、まだワークフローがトリガーされておらず、問題が発生している可能性があることを示しています。 ワークフローが有効になっていること、および **URL** の宛先がAdobe Experience Platformで正しい場合。 ワークフローの実行はすぐには完了しないので、完了するまでしばらく待つ必要が生じる場合があります。
+**実行履歴** に実行が表示されない場合は、ワークフローがまだトリガーされておらず、問題がある可能性があることを示しています。 ワークフローが有効であること、およびAdobe Experience Platformのコピー先の **URL** が正しいことを確認します。 ワークフローの実行は即座には行われないので、完了するまで少し待つ必要がある場合があります。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

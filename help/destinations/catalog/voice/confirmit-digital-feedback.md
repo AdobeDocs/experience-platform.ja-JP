@@ -1,12 +1,12 @@
 ---
-keywords: Confirmit Digital Feedback;confirmit 拡張機能；confirmit
+keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Confirmit Digital Feedback 拡張機能
-description: Confirmit Digital Feedback 拡張機能は、Adobe Experience Platformの「Voice of the Customer」の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Confirmit Digital Feedback 拡張機能は、Adobe Experience Platformのお客様の声の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 86%
+source-wordcount: '489'
+ht-degree: 85%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 86%
 
 ## 概要 {#overview}
 
-[!DNL Confirmit Digital Feedback] ソリューションは、web サイトのトラフィックをリアルタイムのインサイトに変えるのに役立ちます。 を使用 [!DNL Confirmit]を使用すると、控えめで高度にターゲットを絞った調査を要件に応じて表示し、訪問者に次のようなフィードバックを提供するよう促すことができます。
+[!DNL Confirmit Digital Feedback] のソリューションは、web サイトのトラフィックをリアルタイムのインサイトに変えるのに役立ちます。 [!DNL Confirmit] を使用すると、要件に応じて、目立たないターゲットを絞った調査を表示でき、訪問者に次のようなフィードバックを促すことができます。
 
 * Web サイトのフィードバック
 * 取引満足度
@@ -23,7 +23,7 @@ ht-degree: 86%
 * 全体的な顧客満足度
 * その他多数
 
-[!DNL Confirmit] デジタルフィードバックは、Adobe Experience Platformの Voice of the Customer 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html) の拡張機能のページを参照してください。
+デジタルフィードバック [!DNL Confirmit]、Adobe Experience Platformの Voice of the Customer 拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html) の拡張機能のページを参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -37,7 +37,7 @@ ht-degree: 86%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Confirmit] Digital Feedback 拡張機能：
+[!DNL Confirmit] デジタルフィードバック拡張機能をインストールするには：
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

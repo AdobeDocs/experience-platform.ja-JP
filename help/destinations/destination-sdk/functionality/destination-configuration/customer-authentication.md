@@ -4,7 +4,7 @@ title: 顧客認証設定
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1101'
 ht-degree: 97%
 
 ---
@@ -26,7 +26,7 @@ Destination SDK で[宛先を作成](../../authoring-api/destination-configurati
 
 * [基本認証](#basic)を使用する宛先の場合、ユーザーは、Experience Platform UI 認証ページで直接ユーザー名およびパスワードを指定する必要があります。
 * [ベアラー認証](#bearer)を使用する宛先の場合、ユーザーは、ベアラートークンを指定する必要があります。
-* を使用する宛先の場合 [OAuth2 認証](#oauth2)の場合、ユーザーはログインページにリダイレクトされ、自分の資格情報でログインできます。
+* [OAuth2 認証 ](#oauth2) を使用する宛先の場合、ユーザーは、資格情報を使用してログインできる、宛先のログインページにリダイレクトされます。
 * [Amazon S3](#s3) 宛先の場合、ユーザーは、[!DNL Amazon S3] アクセスキーおよび秘密鍵を指定する必要があります。
 * [Azure Blob](#blob) 宛先の場合、ユーザーは、[!DNL Azure Blob] 接続文字列を指定する必要があります。
 

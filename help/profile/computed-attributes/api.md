@@ -1,42 +1,42 @@
 ---
-title: 計算済み属性 API エンドポイント
-description: リアルタイム顧客プロファイル API を使用して、計算済み属性を作成、表示、更新および削除する方法について説明します。
+title: 計算属性 API エンドポイント
+description: リアルタイム顧客プロファイル API を使用して計算済み属性を作成、表示、更新、削除する方法について説明します。
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 12%
+source-wordcount: '1664'
+ht-degree: 10%
 
 ---
 
-# 計算済み属性 API エンドポイント
+# 計算属性 API エンドポイント
 
 >[!IMPORTANT]
 >
 >API へのアクセスは制限されています。 計算済み属性 API へのアクセス方法については、Adobeサポートにお問い合わせください。
 
-計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。このガイドには、 `/attributes` endpoint.
+計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。このガイドには、`/attributes` エンドポイントを使用して基本的な CRUD 操作を実行するための API 呼び出しのサンプルが含まれています。
 
-計算済み属性の詳細については、まず [計算済み属性の概要](overview.md).
+計算属性の詳細については、まず [ 計算属性の概要 ](overview.md) を参照してください。
 
 ## はじめに
 
-このガイドで使用される API エンドポイントは、 [リアルタイム顧客プロファイル API](https://www.adobe.com/go/profile-apis-en).
+このガイドで使用する API エンドポイントは、[ リアルタイム顧客プロファイル API](https://www.adobe.com/go/profile-apis-en) の一部です。
 
-続行する前に、 [プロファイル API 入門ガイド](../api/getting-started.md) 推奨ドキュメントへのリンク、このドキュメントに表示される API 呼び出し例の読み方のガイド、および任意のExperience PlatformAPI を正しく呼び出すために必要な必須ヘッダーに関する重要な情報。
+先に進む前に、[Profile API 入門ガイド ](../api/getting-started.md) を参照し、推奨ドキュメントへのリンク、このドキュメントに表示されるサンプル API 呼び出しを読み取るためのガイドおよび任意のExperience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 さらに、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
-   - [スキーマレジストリ入門ガイド](../../xdm/api/getting-started.md#know-your-tenant_id): `{TENANT_ID}`は、このガイド全体での応答として表示されます。
+   - [ スキーマレジストリ入門ガイド ](../../xdm/api/getting-started.md#know-your-tenant_id)：このガイド全体の応答に表示される、`{TENANT_ID}` ーザーに関する情報が提供されます。
 
-## 計算済み属性のリストの取得 {#list}
+## 計算属性のリストの取得 {#list}
 
-組織のすべての計算済み属性のリストを取得するには、 `/attributes` endpoint.
+`/attributes` エンドポイントに対してGETリクエストを行うことで、組織のすべての計算済み属性のリストを取得できます。
 
 **API 形式**
 
-`/attributes` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、リソースをリストする際の高価なオーバーヘッドを削減するために、パラメーターの使用を強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての計算済み属性が取得されます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+`/attributes` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターはオプションですが、リソースをリストする際の高価なオーバーヘッドを削減するために、使用することを強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての計算属性が取得されます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /attributes
@@ -47,16 +47,16 @@ GET /attributes?{QUERY_PARAMETERS}
 
 | クエリーパラメーター | 説明 | 例 |
 | --------------- | ----------- | ------- |
-| `limit` | 応答の一部として返される項目の最大数を指定するパラメーター。 このパラメーターの最小値は 1 で、最大値は 40 です。 このパラメーターを含めない場合、デフォルトでは 20 個の項目が返されます。 | `limit=20` |
-| `offset` | 項目を返す前にスキップする項目の数を指定するパラメーター。 | `offset=5` |
-| `sortBy` | 返された項目の並べ替え順序を指定するパラメーター。 次のオプションを使用できます。 `name`, `status`, `updateEpoch`、および `createEpoch`. 昇順と降順のどちらで並べ替えるかを、 `-` をクリックします。 デフォルトでは、項目は次の順に並べ替えられます。 `updateEpoch` 降順で並べ替えます。 | `sortBy=name` |
-| `property` | 様々な計算済み属性フィールドに対してフィルター処理をおこなうためのパラメーター。 次のプロパティがサポートされています。 `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`、および `status`. サポートされる操作は、一覧に表示されるプロパティによって異なります。 <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `limit` | 応答の一部として返される項目の最大数を指定するパラメーター。 このパラメーターの最小値は「1」、最大値は「40」です。 このパラメーターを含めない場合、デフォルトでは 20 個の項目が返されます。 | `limit=20` |
+| `offset` | 項目を返す前にスキップする項目数を指定するパラメーター。 | `offset=5` |
+| `sortBy` | 返された項目が並べ替えられる順序を指定するパラメーター。 使用可能なオプションには、`name`、`status`、`updateEpoch`、`createEpoch` などがあります。 並べ替えオプションの前に `-` を含めるか含めないかで、昇順または降順で並べ替えるかどうかを選択することもできます。 デフォルトでは、項目は `updateEpoch` 順に降順で並べ替えられます。 | `sortBy=name` |
+| `property` | 様々な計算属性フィールドでフィルタリングできるパラメーター。 サポートされるプロパティには、`name`、`createEpoch`、`mergeFunction.value`、`updateEpoch`、`status` などがあります。 サポートされる操作は、表示されるプロパティによって異なります。 <ul><li>`name`: `EQUAL` （=）、`NOT_EQUAL` （!=）、`CONTAINS` （=contains （））、`NOT_CONTAINS` （=!contains （））</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` （&lt;=）、`LESS_THAN_OR_EQUALS` （>=） </li><li>`mergeFunction.value`: `EQUAL` （=）、`NOT_EQUAL` （!=）、`CONTAINS` （=contains （））、`NOT_CONTAINS` （=!contains （））</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` （&lt;=）、`LESS_THAN_OR_EQUALS` （>=）</li><li>`status`: `EQUAL` （=）、`NOT_EQUAL` （!=）、`CONTAINS` （=contains （））、`NOT_CONTAINS` （=!contains （））</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **リクエスト**
 
-次のリクエストは、組織内で更新された最後の 3 つの計算済み属性を取得します。
+次のリクエストでは、組織で更新された最後の 3 つの計算済み属性を取得します。
 
-+++ 計算済み属性のリストを取得するリクエストのサンプルです。
++++ 計算済み属性のリストを取得するリクエストの例です。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
@@ -70,9 +70,9 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、組織およびサンドボックスに属する、更新された最新 3 つの計算済み属性のリストを返します。
+応答が成功すると、HTTP ステータス 200 が、組織およびサンドボックスに属する最新の 3 つの更新済み計算属性のリストと共に返されます。
 
-+++ 計算済み属性のリストを取得するためのサンプルレスポンスです。
++++ 計算済み属性のリストを取得するためのサンプル応答。
 
 ```json
 {
@@ -210,15 +210,15 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `_links` | 結果の最後のページ、結果の次のページ、結果の前のページ、または結果の現在のページへのアクセスに必要なページネーション情報を含むオブジェクト。 |
-| `computedAttributes` | クエリパラメーターに基づく計算済み属性を含む配列。 計算済み属性配列の詳細については、 [特定の計算済み属性セクションの取得](#get). |
-| `_page` | 返される結果に関するメタデータを含むオブジェクト。 これには、現在のオフセット、返される計算済み属性の数、計算済み属性の総数、返される計算済み属性の制限に関する情報が含まれます。 |
+| `_links` | 結果の最後のページ、結果の次のページ、結果の前のページ、結果の現在のページにアクセスするために必要なページネーション情報を含むオブジェクト。 |
+| `computedAttributes` | クエリパラメーターに基づいて計算された属性を含む配列。 計算属性の配列について詳しくは、[ 特定の計算属性の取得 ](#get) を参照してください。 |
+| `_page` | 返される結果に関するメタデータを含むオブジェクト。 これには、現在のオフセット、返される計算済み属性の数、計算済み属性の合計の数、および返される計算済み属性の制限に関する情報が含まれます。 |
 
 +++
 
-## 計算済み属性の作成 {#create}
+## 計算属性の作成 {#create}
 
-計算済み属性を作成するには、まず `/attributes` エンドポイント：作成する計算済み属性の詳細が含まれるリクエスト本文を持ちます。
+計算属性を作成するには、まず、作成する計算属性の詳細を含むリクエスト本文を使用して、`/attributes` エンドポイントに対してPOSTリクエストを行います。
 
 **API 形式**
 
@@ -228,7 +228,7 @@ POST /attributes
 
 **リクエスト**
 
-+++ 新しい計算済み属性を作成するリクエストのサンプルです。
++++ 新しい計算属性を作成するリクエストのサンプル
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ca/attributes \
@@ -257,26 +257,26 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | 計算済み属性フィールドの名前（文字列）。計算済み属性の名前は、スペースやアンダースコアを含まない英数字でのみ構成できます。 この値 **必須** は、すべての計算済み属性の中で一意です。 ベストプラクティスとして、この名前はキャメルケースバージョンの `displayName`. |
-| `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
-| `displayName` | 計算済み属性の表示名。 これは、Adobe Experience Platform UI 内に計算済み属性をリストする際に表示される名前です。 |
-| `expression` | 作成しようとしている計算済み属性のクエリ式を表すオブジェクト。 |
-| `expression.type` | 式のタイプ。 現在、PQL のみがサポートされています。 |
+| `name` | 文字列としての計算属性フィールドの名前。 計算属性の名前は、英数字（スペースやアンダースコアを含まない）のみで構成できます。 この値は **必ず** すべての計算済み属性の中で一意です。 ベストプラクティスとして、この名前は `displayName` の camelCase バージョンにしてください。 |
+| `description` | 計算済み属性の説明。これは、組織内の他のユーザーが使用する正しい計算属性を決定するのに役立つので、複数の計算属性が定義された後で特に便利です。 |
+| `displayName` | 計算属性の表示名。 これは、Adobe Experience Platform UI 内で計算済み属性をリストする際に表示される名前です。 |
+| `expression` | 作成しようとしている計算属性のクエリ式を表すオブジェクト。 |
+| `expression.type` | 式のタイプ。 現在は、PQLのみがサポートされています。 |
 | `expression.format` | 式の形式。 現在は、`pql/text` のみがサポートされています。 |
 | `expression.value` | 式の値。 |
-| `keepCurrent` | 計算済み属性の値を、高速更新を使用して最新の状態に保つかどうかを決定するブール値です。 現在、この値は `false`. |
-| `duration` | 計算済み属性のルックバック期間を表すオブジェクト。 ルックバック期間は、計算済み属性を計算するために遡って参照できる距離を表します。 |
-| `duration.count` | ルックバック期間の期間を表す数値。 指定可能な値は、 `duration.unit` フィールドに入力します。 <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
-| `duration.unit` | ルックバック期間に使用される時間の単位を表す string。 次の値を指定できます。 `HOURS`, `DAYS`, `WEEKS`、および `MONTHS`. |
-| `status` | 計算済み属性のステータス。 以下の値を指定できます。 `DRAFT` および `NEW`. |
+| `keepCurrent` | 高速更新を使用して計算属性の値を最新の状態に保つかどうかを決定するブール値。 現在、この値は `false` に設定する必要があります。 |
+| `duration` | 計算属性のルックバック期間を表すオブジェクト。 ルックバック期間は、計算属性を計算するために遡ることができる期間を表します。 |
+| `duration.count` | ルックバック期間の期間を表す数値。 使用可能な値は、`duration.unit` フィールドの値によって異なります。 <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
+| `duration.unit` | ルックバック期間に使用される時間単位を表す文字列。 使用可能な値：`HOURS`、`DAYS`、`WEEKS`、`MONTHS` |
+| `status` | 計算属性のステータス。 使用可能な値は `DRAFT` および `NEW` です。 |
 
 +++
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、新しく作成された計算済み属性に関する情報を返します。
+応答に成功すると、HTTP ステータス 200 と、新しく作成された計算属性に関する情報が返されます。
 
-+++ 新しい計算済み属性を作成する際のレスポンスのサンプルです。
++++ 新しい計算属性を作成する際のサンプル応答。
 
 ```json
 {
@@ -315,17 +315,17 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | 新しく作成した計算済み属性のシステム生成 ID。 |
-| `status` | 計算済み属性のステータス。 これは、 `DRAFT` または `NEW`. |
-| `createEpoch` | 計算済み属性が作成された時刻（秒）。 |
-| `updateEpoch` | 計算済み属性が最後に更新された時刻（秒）。 |
-| `createdBy` | 計算済み属性を作成したユーザーの ID。 |
+| `id` | 新しく作成した計算属性のシステム生成 ID。 |
+| `status` | 計算属性のステータス。 `DRAFT` または `NEW` のいずれかを指定できます。 |
+| `createEpoch` | 計算属性が作成された時間（秒）。 |
+| `updateEpoch` | 計算属性が最後に更新された時間（秒）。 |
+| `createdBy` | 計算属性を作成したユーザーの ID。 |
 
 +++
 
-## 特定の計算済み属性の取得 {#get}
+## 特定の計算属性の取得 {#get}
 
-特定の計算済み属性に関する詳細な情報を取得するには、に対してGETリクエストを実行します。 `/attributes` エンドポイントを作成し、リクエストパスで取得する計算済み属性の ID を指定します。
+特定の計算属性に関する詳細な情報を取得するには、`/attributes` エンドポイントにGETリクエストを実行し、取得する計算属性の ID をリクエストパスで指定します。
 
 **API 形式**
 
@@ -335,7 +335,7 @@ GET /attributes/{ATTRIBUTE_ID}
 
 **リクエスト**
 
-+++ 特定の計算済み属性を取得するサンプルリクエストです。
++++ 特定の計算属性を取得するリクエストの例です。
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631' \
@@ -349,9 +349,9 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、指定された計算済み属性に関する詳細情報を返します。
+応答が成功すると、指定された計算属性の詳細情報とともに HTTP ステータス 200 が返されます。
 
-+++ 特定の計算済み属性を取得する際のレスポンスのサンプルです。
++++ 特定の計算属性を取得する際のサンプル応答。
 
 ```json
 {
@@ -391,32 +391,32 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | 他の API 操作中に計算済み属性を参照するために使用できる、システムで生成された一意の読み取り専用 ID が含まれます。 |
-| `type` | 返されるオブジェクトが計算済み属性であることを示す文字列。 |
-| `name` | 計算済み属性の名前。 |
-| `displayName` | 計算済み属性の表示名。 これは、Adobe Experience Platform UI 内に計算済み属性をリストする際に表示される名前です。 |
-| `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
-| `imsOrgId` | 計算済み属性が属する組織の ID。 |
+| `type` | 返されたオブジェクトが計算属性であることを示す文字列。 |
+| `name` | 計算属性の名前。 |
+| `displayName` | 計算属性の表示名。 これは、Adobe Experience Platform UI 内で計算済み属性をリストする際に表示される名前です。 |
+| `description` | 計算済み属性の説明。これは、組織内の他のユーザーが使用する正しい計算属性を決定するのに役立つので、複数の計算属性が定義された後で特に便利です。 |
+| `imsOrgId` | 計算属性が属する組織の ID。 |
 | `sandbox` | サンドボックスオブジェクトには、計算済み属性が設定されたサンドボックスの詳細が含まれます。この情報は、リクエストで送信されるサンドボックスヘッダーから取得されます。詳しくは、[サンドボックスの概要](../../sandboxes/home.md)を参照してください。 |
-| `path` | The `path` を計算済み属性に追加します。 |
-| `keepCurrent` | 計算済み属性の値を、高速更新を使用して最新の状態に保つかどうかを決定するブール値です。 |
-| `expression` | 計算済み属性の式を含むオブジェクト。 |
-| `mergeFunction` | 計算済み属性の結合関数を含むオブジェクト。 この値は、計算済み属性の式内の対応する集計パラメーターに基づきます。 以下の値を指定できます。 `SUM`, `MIN`, `MAX`、および `MOST_RECENT`. |
-| `status` | 計算済み属性のステータス。 次のいずれかの値を指定できます。 `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`または `DISABLED`. |
-| `schema` | 式が評価されるスキーマに関する情報を格納するオブジェクト。 現在は、`_xdm.context.profile` のみがサポートされています。 |
-| `lastEvaluationTs` | 計算済み属性が最後に評価された日時を表すタイムスタンプ。 |
-| `createEpoch` | 計算済み属性が作成された時刻（秒）。 |
-| `updateEpoch` | 計算済み属性が最後に更新された時刻（秒）。 |
-| `createdBy` | 計算済み属性を作成したユーザーの ID。 |
+| `path` | 計算属性の `path`。 |
+| `keepCurrent` | 高速更新を使用して計算属性の値を最新の状態に保つかどうかを決定するブール値。 |
+| `expression` | 計算属性の式を含むオブジェクト。 |
+| `mergeFunction` | 計算属性の結合関数を含むオブジェクト。 この値は、計算属性の式内の対応する集計パラメーターに基づいています。 使用可能な値は、`SUM`、`MIN`、`MAX`、`MOST_RECENT` などです。 |
+| `status` | 計算属性のステータス。 `DRAFT`、`NEW`、`INITIALIZING`、`PROCESSING`、`PROCESSED`、`FAILED`、`DISABLED` のいずれかの値を指定できます。 |
+| `schema` | 式が評価されるスキーマに関する情報を含むオブジェクト。 現在は、`_xdm.context.profile` のみがサポートされています。 |
+| `lastEvaluationTs` | 計算属性が最後に評価された日時を表すタイムスタンプ。 |
+| `createEpoch` | 計算属性が作成された時間（秒）。 |
+| `updateEpoch` | 計算属性が最後に更新された時間（秒）。 |
+| `createdBy` | 計算属性を作成したユーザーの ID。 |
 
 +++
 
-## 特定の計算済み属性の削除 {#delete}
+## 特定の計算属性の削除 {#delete}
 
-特定の計算済み属性を削除するには、 `/attributes` エンドポイントを作成し、リクエストパスで削除する計算済み属性の ID を指定します。
+DELETE `/attributes` エンドポイントに対して削除リクエストを実行し、リクエストパスで削除する計算属性の ID を指定することで、特定の計算属性を削除できます。
 
 >[!IMPORTANT]
 >
->削除リクエストは、ステータスが「 **下書き** (`DRAFT`) をクリックします。 このエンドポイント **できません** を使用して、他の状態の計算済み属性を削除できます。
+>削除リクエストは、ステータスが **ドラフト** （`DRAFT`）の計算済み属性の削除にのみ使用できます。 このエンドポイントは **使用できません** 他の状態の計算属性を削除するために使用します。
 
 **API 形式**
 
@@ -426,11 +426,11 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | The `id` 削除する計算済み属性の値。 |
+| `{ATTRIBUTE_ID}` | 削除する計算属性の `id` 値。 |
 
 **リクエスト**
 
-+++ 計算済み属性を削除するリクエストの例です。
++++ 計算属性を削除するリクエストのサンプル。
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631 \
@@ -444,9 +444,9 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
 
 **応答**
 
-正常な応答は、削除された計算済み属性の詳細と共に HTTP ステータス 202 を返します。
+応答が成功すると、HTTP ステータス 202 が、削除された計算属性の詳細と共に返されます。
 
-+++ 計算済み属性を削除する際のレスポンスのサンプルです。
++++ 計算属性を削除する際のサンプル応答。
 
 ```json
 {
@@ -485,17 +485,17 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
 
 +++
 
-## 特定の計算済み属性の更新
+## 特定の計算属性の更新
 
-特定の計算済み属性を更新するには、 `/attributes` エンドポイントを作成し、リクエストパスで更新する計算済み属性の ID を指定します。
+`/attributes` エンドポイントに計算リクエストを実行し、リクエストパスで更新するPATCH属性の ID を指定することで、特定の計算属性を更新できます。
 
 >[!IMPORTANT]
 >
->計算済み属性を更新する場合、更新できるのは次のフィールドのみです。
+>計算属性を更新する場合、次のフィールドのみを更新できます。
 >
->- 現在のステータスが `NEW`の場合、ステータスは次の値にのみ変更できます： `DISABLED`.
->- 現在のステータスが `DRAFT`に値を入力すると、次のフィールドの値を変更できます。 `name`, `description`, `keepCurrent`, `expression`、および `duration`. ステータスは、 `DRAFT` から `NEW`. システム生成フィールドに対する変更（例： ） `mergeFunction` または `path` はエラーを返します。
->- 現在のステータスが `PROCESSING` または `PROCESSED`の場合、ステータスは次の値にのみ変更できます： `DISABLED`.
+>- 現在のステータスが `NEW` の場合、ステータスは `DISABLED` にのみ変更できます。
+>- 現在のステータスが `DRAFT` の場合、フィールド `name`、`description`、`keepCurrent`、`expression`、`duration` の値を変更できます。 また、ステータスを `DRAFT` から `NEW` に変更することもできます。 `mergeFunction` や `path` など、システム生成フィールドに変更を加えるとエラーが返されます。
+>- 現在のステータスが `PROCESSING` または `PROCESSED` の場合、ステータスは `DISABLED` にのみ変更できます。
 
 **API 形式**
 
@@ -505,13 +505,13 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | The `id` 更新する計算済み属性の値。 |
+| `{ATTRIBUTE_ID}` | 更新する計算属性の `id` 値。 |
 
 **リクエスト**
 
-次のリクエストは、計算済み属性のステータスを更新します： `DRAFT` から `NEW`.
+次のリクエストは、計算属性のステータスを `DRAFT` から `NEW` に更新します。
 
-+++ 計算済み属性を更新するリクエストのサンプルです。
++++ 計算属性を更新するリクエストのサンプル。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631 \
@@ -536,9 +536,9 @@ curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b
 
 **応答**
 
-正常な応答は、HTTP ステータス 200 と、新しく更新された計算済み属性に関する情報を返します。
+応答に成功すると、HTTP ステータス 200 と、新しく更新された計算属性に関する情報が返されます。
 
-+++ 計算済み属性を更新する際のレスポンスのサンプルです。
++++ 計算属性を更新する際のサンプル応答。
 
 ```json
 {
@@ -579,4 +579,4 @@ curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b
 
 ## 次の手順
 
-これで、計算済み属性の基本について学び、組織に合わせて定義を開始する準備が整いました。Experience PlatformUI で計算済み属性を使用する方法については、 [計算済み属性 UI ガイド](./ui.md).
+計算属性の基本を理解したので、次は組織の定義を開始します。 Experience PlatformUI で計算済み属性を使用する方法については、[ 計算属性 UI ガイド ](./ui.md) を参照してください。

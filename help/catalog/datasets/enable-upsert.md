@@ -7,7 +7,7 @@ exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1067'
-ht-degree: 87%
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->このチュートリアルで説明するワークフローは、バッチ取り込みでのみ機能します。 ストリーミング取得のアップサートについては、のガイドを参照してください。 [データ準備を使用したリアルタイム顧客プロファイルへの部分行の更新の送信](../../data-prep/upserts.md).
+>このチュートリアルで説明するワークフローは、バッチ取り込みでのみ機能します。 ストリーミング取得のアップサートについては、[ データ準備を使用したリアルタイム顧客プロファイルへの部分行の更新の送信 ](../../data-prep/upserts.md) に関するガイドを参照してください。
 
 ## はじめに
 
@@ -36,7 +36,7 @@ ht-degree: 87%
 
 ### 必須ヘッダーの値の収集
 
-に対して呼び出しを行うため [!DNL Platform] API を使用する場合、最初にを完了する必要があります。 [認証のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja). 認証チュートリアルを完了すると、必要な各ヘッダーの値がすべて提供されます [!DNL Experience Platform] API 呼び出し（下図を参照）。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`

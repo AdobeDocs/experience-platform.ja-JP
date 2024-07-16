@@ -7,12 +7,12 @@ description: Adobe Experience Platform には、ビジネスプラクティス�
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 98%
+source-wordcount: '206'
+ht-degree: 96%
 
 ---
 
-# アトリビューション AI とデータガバナンス Attribution AI
+# Attribution AIにおけるAttribution AIとデータガバナンス
 
 アトリビューション AI のデータガバナンス関連の設定は、Adobe Experience Platform から継承されます。
 

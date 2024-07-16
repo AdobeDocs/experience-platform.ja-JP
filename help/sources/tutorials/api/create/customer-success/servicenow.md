@@ -7,7 +7,7 @@ description: Flow Service API を使用して Adobe Experience Platform を Serv
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '468'
 ht-degree: 100%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 100%
 
 次の節では、[!DNL Flow Service] API を使用して [!DNL ServiceNow] サーバーに正常に接続するために必要な追加情報を示しています。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL ServiceNow] に接続するには、次の接続プロパティの値を指定する必要があります。
 

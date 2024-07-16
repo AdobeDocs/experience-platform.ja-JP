@@ -6,7 +6,7 @@ description: API またはユーザーインターフェイスを使用して Zo
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '496'
 ht-degree: 100%
 
 ---
@@ -21,9 +21,9 @@ Experience Platform は、サードパーティの CRM システムからのデ�
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)のページを参照してください。
 
-## [!DNL Zoho CRM] の認証情報を取得します。
+## [!DNL Zoho CRM] の資格情報を取得します。
 
-データを [!DNL Zoho CRM] アカウントを Platform にを持ち込む前に、まず [!DNL Zoho CRM] ソースを認証するための認証情報を取得する必要があります。次の手順に従って、クライアント ID、クライアントの秘密鍵、アクセストークン、更新トークンを取得します。
+データを [!DNL Zoho CRM] アカウントを Platform にを持ち込む前に、まず [!DNL Zoho CRM] ソースを認証するための資格情報を取得する必要があります。次の手順に従って、クライアント ID、クライアントの秘密鍵、アクセストークン、更新トークンを取得します。
 
 ### アプリケーションを登録
 
@@ -43,7 +43,7 @@ Experience Platform は、サードパーティの CRM システムからのデ�
 
 リクエストが成功すると、アクセストークンと更新トークンが返され、これを使用して認証することができます。
 
-認証情報の取得に関する詳細な手順については、[[!DNL Zoho CRM] 認証ガイド](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html)を参照してください。
+資格情報の取得に関する詳細な手順については、[[!DNL Zoho CRM] 認証ガイド](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html)を参照してください。
 
 ## API を使用して [!DNL Zoho CRM] と [!DNL Platform] を接続する
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；API;API;XDM;XDM システム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；
+keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；
 solution: Experience Platform
 title: スキーマ UI の概要
-description: この概要では、スキーマのスキーマワークスペースの主な機能についてExperience Platformします。
+description: この概要では、Experience Platformのスキーマ ワークスペースの主な機能を説明します。
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
@@ -11,23 +11,23 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL スキーマ] UI の概要
+# [!UICONTROL  スキーマ ] UI の概要
 
-The [!UICONTROL スキーマ] Adobe Experience Platformユーザーインターフェイスの workspace を使用すると、スキーマ、クラス、スキーマフィールドグループ、データ型などの Experience Data Model(XDM) リソースを管理できます。 アドビから提供されるコアリソースを表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
+Adobe Experience Platform ユーザーインターフェイスの [!UICONTROL  スキーマ ] ワークスペースを使用すると、スキーマ、クラス、スキーマフィールドグループ、データタイプなどの Experience Data Model （XDM）リソースを管理できます。 アドビから提供されるコアリソースを表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
 
-Platform UI のワークスペースにアクセスするには、「 **[!UICONTROL スキーマ]** をクリックします。
+Platform UI でワークスペースにアクセスするには、左パネルで **[!UICONTROL スキーマ]** を選択します。
 
 ![](../images/ui/overview/schemas-tab.png)
 
 ## はじめに
 
-初めてワークスペースを使用する場合は、まず [UI の既存のリソースの詳細](./explore.md) を参照して、様々なタブとスキーマキャンバスについて理解します。
+初めてワークスペースを使用する場合は、まず [UI での既存のリソースの調査 ](./explore.md) に関するガイドから始めて、様々なタブとスキーマキャンバスを理解してください。
 
-また、 [スキーマ作成チュートリアル](../tutorials/create-schema-ui.md) サンプルスキーマを作成し、 [!DNL Schema Editor]プロセス内のの機能。
+また、[ スキーマ作成チュートリアル ](../tutorials/create-schema-ui.md) に従って、サンプルスキーマを作成し、プロセス内の [!DNL Schema Editor] の機能について完全に確認することもお勧めします。
 
 ## XDM リソースの作成と管理
 
-The [!UICONTROL スキーマ] workspace は、組織の XDM リソースを作成およびカスタマイズするための強力なツールを提供します。 UI で各リソースタイプを作成および編集する方法については、次のドキュメントを参照してください。
+[!UICONTROL  スキーマ ] ワークスペースは、組織の XDM リソースを作成およびカスタマイズするための強力なツールを提供します。 UI で各リソースタイプを作成および編集する方法については、次のドキュメントを参照してください。
 
 * [スキーマ](./resources/schemas.md)
 * [クラス](./resources/classes.md)
@@ -36,8 +36,8 @@ The [!UICONTROL スキーマ] workspace は、組織の XDM リソースを作�
 
 ## XDM フィールドの定義
 
-クラス、フィールドグループ、データ型はすべて、フィールドをスキーマに提供します。 これらのリソースにフィールドを追加する際に、標準のフィールドタイプのリストから選択できます。また、特定の使用例に対して特殊なフィールドを定義することもできます。 に関するガイドを参照してください。 [UI での XDM フィールドの定義](./fields/overview.md) を参照してください。
+クラス、フィールドグループおよびデータタイプは、すべてスキーマにフィールドを提供します。 これらのリソースにフィールドを追加するときの標準フィールドタイプのリストから選択できます。また、特定のユースケースに特化したフィールドを定義することもできます。 詳しくは、[UI での XDM フィールドの定義 ](./fields/overview.md) に関するガイドを参照してください。
 
 ## 次の手順
 
-このドキュメントでは、 [!UICONTROL スキーマ] ワークスペース（Platform UI 内） スキーマおよびその他の XDM リソースの管理方法の詳細については、この概要でリンクされたドキュメントを参照してください。
+このドキュメントでは、Platform UI の [!UICONTROL  スキーマ ] ワークスペースの概要を説明しました。 スキーマやその他の XDM リソースの管理方法について詳しくは、この概要を通じてリンクされているドキュメントを参照してください。

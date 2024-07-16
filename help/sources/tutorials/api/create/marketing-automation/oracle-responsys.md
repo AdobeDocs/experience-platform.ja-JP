@@ -7,8 +7,8 @@ hidefromtoc: true
 exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 98%
+source-wordcount: '539'
+ht-degree: 97%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->[!DNL Oracle Responsys] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータ版のコネクタの使用に関する詳細は、を参照してください。
+>[!DNL Oracle Responsys] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

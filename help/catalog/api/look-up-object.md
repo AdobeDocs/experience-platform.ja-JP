@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；カタログ；オブジェクト参照；API
+keywords: Experience Platform；ホーム；人気のトピック；カタログ；オブジェクト参照；api
 solution: Experience Platform
-title: カタログオブジェクトの検索
+title: Catalog オブジェクトを検索する
 description: 特定のカタログオブジェクトの一意の ID がわかっている場合は、GET リクエストを実行してそのオブジェクトの詳細を表示できます。
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
 source-git-commit: 0331b6bbd22255cab92c93070dda1ffaed5bbbcb
@@ -11,13 +11,13 @@ ht-degree: 44%
 
 ---
 
-# カタログオブジェクトの検索
+# Catalog オブジェクトを検索する
 
-特定の [!DNL Catalog] オブジェクトの場合は、GETリクエストを実行して、そのオブジェクトの詳細を表示できます。
+特定の [!DNL Catalog] オブジェクトの一意の ID がわかっている場合は、GETリクエストを実行してそのオブジェクトの詳細を表示できます。
 
 >[!NOTE]
 >
->特定のオブジェクトを表示する場合は、次の操作を行うことをお勧めします。 [プロパティでフィルター](filter-data.md) を呼び出し、目的のプロパティのみを返します。
+>特定のオブジェクトを表示する場合でも、[ プロパティでフィルタリング ](filter-data.md) して、目的のプロパティのみを返すことがベストプラクティスです。
 
 **API 形式**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 次のタイプの [!DNL Catalog] 取得するオブジェクト。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 取得 [!DNL Catalog] るオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 取得する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストでは、ID でデータセットを取得し、その ID を返します `name`, `description`, `tags`、および `files` プロパティ。
+次のリクエストでは、ID でデータセットを取得し、その `name`、`description`、`tags` および `files` のプロパティを返しています。
 
 ```shell
 curl -X GET \
@@ -65,4 +65,4 @@ curl -X GET \
 
 >[!NOTE]
 >
->値の前にが付いているプロパティ `@` は、相互に関連するオブジェクトを表します。 これらのオブジェクトの詳細を表示する手順については、付録の「[相互関連オブジェクトの表示](appendix.md#view-interrelated-objects)」の節を参照してください。
+>値の先頭にが付くプロパティは `@` 相互に関連するオブジェクトを表します。 これらのオブジェクトの詳細を表示する手順については、付録の「[相互関連オブジェクトの表示](appendix.md#view-interrelated-objects)」の節を参照してください。

@@ -5,8 +5,8 @@ description: Marketo Munchkin 拡張機能は、Adobe Experience Platformのパ�
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 84%
+source-wordcount: '458'
+ht-degree: 80%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 84%
 
 ## 概要 {#overview}
 
-リード管理からアカウントベースドマーケティングに至るまで、 [!DNL Marketo Engagement Platform] は、エクスペリエンスのあらゆる段階で、顧客や見込み客とのエンゲージメントの計画、調整、測定を簡単におこなえます。
+リード管理からアカウントベースのマーケティングに至るまで、[!DNL Marketo Engagement Platform] は、顧客や見込み客のエクスペリエンスのあらゆる段階において、エンゲージメントの計画、調整、測定の方法を簡素化します。
 
-[!DNL Marketo’s Munchkin][!DNL Marketo] JavaScript を使用すると、 ランディングページと外部 We bページに対するエンドユーザーのページ訪問回数およびクリック数を追跡できます。
+[!DNL Marketo’s Munchkin] JavaScriptを使用すると、[!DNL Marketo] ランディングページや外部 web ページへのエンドユーザーページの訪問およびクリックをトラッキングできます。
 
-[!DNL Marketo Munchkin] は、Adobe Experience Platformの電子メール拡張機能です。 Marketo Munchkin の詳細は、 [リードトラッキング](https://developers.marketo.com/javascript-api/lead-tracking/) (Marketoドキュメント ) を参照してください。
+[!DNL Marketo Munchkin] は、Adobe Experience Platformのメール拡張機能です。 Marketo Munchkin について詳しくは、Marketo ドキュメントの [ リードトラッキング ](https://developers.marketo.com/javascript-api/lead-tracking/) を参照してください。
 
 この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -32,7 +32,7 @@ ht-degree: 84%
 
 ## 拡張機能のインストール {#install-extension}
 
-をインストールするには、以下を実行します。 [!DNL Marketo Munchkin] 拡張子：
+[!DNL Marketo Munchkin] 拡張機能をインストールします。
 
 [Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
 

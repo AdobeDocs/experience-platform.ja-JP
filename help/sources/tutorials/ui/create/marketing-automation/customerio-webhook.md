@@ -1,22 +1,22 @@
 ---
-title: UI での Customer.io ソース接続とデータフローの作成
+title: UI での Customer.io Source接続とデータフローの作成
 description: Adobe Experience Platform UI を使用して Customer.io ソース接続を作成する方法を説明します。
 badge: ベータ版
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1213'
 ht-degree: 20%
 
 ---
 
-# の作成 [!DNL Customer.io] UI でのソース接続とデータフロー
+# UI での [!DNL Customer.io] ソース接続とデータフローの作成
 
 >[!NOTE]
 >
->[!DNL Customer.io] ソースはベータ版です。詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) ベータラベル付きのソースの使用に関する詳細
+>[!DNL Customer.io] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-このチュートリアルでは、 [!DNL Customer.io] Adobe Experience Platformユーザーインターフェイスを使用したソース接続とデータフロー。
+このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Customer.io] ソース接続とデータフローを作成する手順について説明します。
 
 ## はじめに {#getting-started}
 
@@ -29,11 +29,11 @@ ht-degree: 20%
 
 ## 前提条件 {#prerequisites}
 
-次の節では、 [!DNL Customer.io] ソース接続。
+次の節では、[!DNL Customer.io] ソース接続を作成する前に完了すべき前提条件について説明します。
 
-### のソーススキーマを定義するサンプル JSON [!DNL Customer.io] {#prerequisites-json-schema}
+### [!DNL Customer.io] のソーススキーマを定義するサンプル JSON {#prerequisites-json-schema}
 
-を作成する前に [!DNL Customer.io] ソース接続の場合は、ソーススキーマを指定する必要があります。 以下の JSON を使用できます。
+[!DNL Customer.io] ソース接続を作成する前に、ソーススキーマを指定する必要があります。 以下の JSON を使用できます。
 
 ```
 {
@@ -53,72 +53,72 @@ ht-degree: 20%
 }
 ```
 
-### 用の Platform スキーマの作成 [!DNL Customer.io] {#create-platform-schema}
+### [!DNL Customer.io] 用の Platform スキーマの作成 {#create-platform-schema}
 
-また、ソースに使用する Platform スキーマを作成する必要があります。 に関するチュートリアルを参照してください。 [Platform スキーマの作成](../../../../../xdm/schema/composition.md) スキーマの作成方法に関する包括的な手順を参照してください。
+また、ソースに使用する Platform スキーマを作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-![Customer.io のスキーマの例を示す Platform UI のスクリーンショット](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
+![Customer.io のスキーマの例を示す Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ## [!DNL Customer.io] アカウントを接続 {#connect-account}
 
-Platform UI で、「 」を選択します。 **[!UICONTROL ソース]** 左側のナビゲーションから、 [!UICONTROL ソース] workspace を参照し、Experience Platformで使用可能なソースのカタログを確認します。
+Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ]」ワークスペースにアクセスし、Experience Platformで使用可能なソースのカタログを確認します。
 
-以下を使用します。 *[!UICONTROL カテゴリ]* メニューを使用して、ソースをカテゴリでフィルタリングできます。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
+*[!UICONTROL カテゴリ]* メニューを使用して、カテゴリ別にソースをフィルタリングします。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
-次に移動： [!UICONTROL マーケティングの自動化] 表示するカテゴリ [!DNL Customer.io] ソースカード。 最初に、「 」を選択します。 **[!UICONTROL データを追加]**.
+[!UICONTROL  マーケティング自動化 ] カテゴリに移動して、[!DNL Customer.io] ソースカードを表示します。 開始するには、「**[!UICONTROL データを追加]**」を選択します。
 
-![Customer.io カードを含むカタログの Platform UI スクリーンショット](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
+![Customer.io カードを含むカタログの Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## データの選択 {#select-data}
 
-The **[!UICONTROL データを選択]** の手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが提供されます。
+**[!UICONTROL データを選択]** 手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが表示されます。
 
-* インターフェイスの左側には、アカウント内で使用可能なデータストリームを表示できるブラウザーがあります。
-* インターフェイスの右側では、JSON ファイルから最大 100 行のデータをプレビューできます。
+* インターフェイスの左側は、アカウント内で利用可能なデータストリームを表示できるブラウザーです。
+* インターフェイスの右側の部分では、JSON ファイルから最大 100 行のデータをプレビューできます。
 
-選択 **[!UICONTROL ファイルをアップロード]** をクリックして、ローカルシステムから JSON ファイルをアップロードします。 または、アップロードする JSON ファイルをにドラッグ&amp;ドロップすることもできます [!UICONTROL ファイルをドラッグ&amp;ドロップ] パネル。
+**[!UICONTROL ファイルをアップロード]** を選択して、ローカルシステムから JSON ファイルをアップロードします。 または、アップロードする JSON ファイルを [!UICONTROL  ファイルをドラッグ&amp;ドロップ ] パネルにドラッグ&amp;ドロップすることもできます。
 
-![ソースワークフローのデータ追加手順。](../../../../images/tutorials/create/marketing-automation/customerio-webhook//add-data.png)
+![ ソースワークフローのデータを追加ステップ ](../../../../images/tutorials/create/marketing-automation/customerio-webhook//add-data.png)
 
-ファイルがアップロードされると、プレビューインターフェイスが更新され、アップロードしたスキーマのプレビューが表示されます。 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 また、 [!UICONTROL 検索フィールド] スキーマ内から特定の項目にアクセスするユーティリティ。
+ファイルがアップロードされると、プレビューインターフェイスが更新され、アップロードしたスキーマのプレビューが表示されます。 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 また、[!UICONTROL  フィールドを検索 ] ユーティリティを使用して、スキーマ内から特定の項目にアクセスすることもできます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのプレビューステップ。](../../../../images/tutorials/create/marketing-automation/customerio-webhook//preview.png)
+![ ソースワークフローのプレビュー手順 ](../../../../images/tutorials/create/marketing-automation/customerio-webhook//preview.png)
 
 ## データフローの詳細 {#dataflow-detail}
 
-The **データフローの詳細** 手順が表示され、既存のデータセットを使用するか、データフローの新しいデータセットを確立するか、およびデータフローの名前と説明を指定する機会が提供されます。 この手順では、プロファイルの取り込み、エラー診断、部分取り込み、アラートの設定も指定できます。
+**データフローの詳細** 手順が表示され、既存のデータセットを使用するか、データフローの新しいデータセットを確立するかのオプションと、データフローの名前と説明を入力する機会が提供されます。 この手順では、プロファイルの取り込み、エラー診断、部分取り込み、アラートの設定も指定できます。
 
 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのデータフローの詳細ステップ。](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
+![ ソースワークフローのデータフローの詳細手順。](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
 
 ## マッピング {#mapping}
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対するインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドを使用した包括的な手順については、 [データ準備 UI ガイド](../../../../../data-prep/ui/mapping.md).
+Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
-以下に示すすべてのマッピングは必須で、 [!UICONTROL レビュー] ステージ。
+以下にリストされているすべてのマッピングは必須であり、「レビュー [!UICONTROL  段階に進む前に設定する必要があ ] ます。
 
 | ターゲットフィールド | 説明 |
 | --- | --- |
-| `object_type` | オブジェクトのタイプ ( [!DNL Customer.io] [イベント](https://customer.io/docs/webhooks/#events) サポートされるタイプに関するドキュメント。 |
+| `object_type` | オブジェクトタイプ。サポートされるタイプについては、[!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) のドキュメントを参照してください。 |
 | `id` | オブジェクトの識別子。 |
-| `email` | オブジェクトに関連付けられている電子メールアドレス。 |
+| `email` | オブジェクトに関連付けられた電子メールアドレス。 |
 | `event_id` | イベントの一意の ID。 |
-| `cio_id` | The [!DNL Customer.io] イベントの識別子。 |
-| `metric` | イベントタイプ. 詳しくは、 [!DNL Customer.io] [イベント](https://customer.io/docs/webhooks/#events) サポートされるタイプに関するドキュメント。 |
+| `cio_id` | イベントの [!DNL Customer.io] 識別子。 |
+| `metric` | イベントタイプ。 詳しくは、[!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) ドキュメントでサポートされるタイプを参照してください。 |
 | `timestamp` | イベントが発生したときのタイムスタンプ。 |
 
 >[!IMPORTANT]
 >
->マッピングしない `cio_id` 実行時 [!DNL Customer.io] ウェブフック `test mode` 関連付けられたフィールドが送信されないので [!DNL Customer.io].
+>`test mode` で Webhook を実行する際は、`cio_id` から送信され [!DNL Customer.io] 関連するフィールドがないので、[!DNL Customer.io] をマッピングしないでください。
 
-ソースデータが正常にマッピングされたら、「 」を選択します。 **[!UICONTROL 次へ]**.
+ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ソースワークフローのマッピング手順です。](../../../../images/tutorials/create/marketing-automation/customerio-webhook/mapping.png)
+![ ソースワークフローのマッピングステップ ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/mapping.png)
 
 ## レビュー {#review}
 
@@ -129,55 +129,55 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 データフローをレビューしたら、「**[!UICONTROL 終了]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
-![ソースワークフローのレビューステップ。](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
+![ ソースワークフローのレビュー手順。](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
 
-## ストリーミングエンドポイント URL を取得する {#get-streaming-endpoint}
+## ストリーミングエンドポイント URL の取得 {#get-streaming-endpoint}
 
-ストリーミングデータフローを作成したら、ストリーミングエンドポイント URL を取得できます。 このエンドポイントは、Webhook を購読するために使用され、ストリーミングソースとExperience Platformが通信できます。
+ストリーミングデータフローを作成したので、ストリーミングエンドポイント URL を取得できるようになりました。 このエンドポイントは、Webhook をサブスクライブするために使用され、ストリーミングソースがExperience Platformと通信できるようになります。
 
-Webhook の設定に使用する URL を構築するために [!DNL Customer.io] 次を取得する必要があります。
+で Webhook の設定に使用する URL を作成するには [!DNL Customer.io] 次を取得する必要があります。
 
 * **[!UICONTROL データフロー ID]**
 * **[!UICONTROL ストリーミングエンドポイント]**
 
-次の手順で **[!UICONTROL データフロー ID]** および **[!UICONTROL ストリーミングエンドポイント]**、に移動します。 [!UICONTROL データフローアクティビティ] 作成したデータフローのページを開き、詳細を [!UICONTROL プロパティ] パネル。
+**[!UICONTROL データフロー ID]** および **[!UICONTROL ストリーミングエンドポイント]** を取得するには、作成したばかりのデータフローの [!UICONTROL  データフローアクティビティ ] ページに移動し、[!UICONTROL  プロパティ ] パネルの下部から詳細をコピーします。
 
-![データフローアクティビティのストリーミングエンドポイント。](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
+![ データフローアクティビティのストリーミングエンドポイント。](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
 
-ストリーミングエンドポイントとデータフロー ID を取得したら、次のパターンに基づいて URL を作成します。 ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. 例えば、生成される Webhook URL は次のようになります。 ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
+ストリーミングエンドポイントとデータフロー ID を取得したら、パターン ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}``` に基づいて URL を作成します。 例えば、作成された Webhook URL は次のようになります。``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
 
-## でのレポート Webhook の設定 [!DNL Customer.io] {#set-up-webhook}
+## [!DNL Customer.io] でのレポート Webhook の設定 {#set-up-webhook}
 
-Webhook URL を作成すると、 [!DNL Customer.io] ユーザーインターフェイス。 レポート用 Web フックの設定手順については、 [[!DNL Customer.io] ガイド](https://customer.io/docs/webhooks/#setup) をクリックします。
+Webhook URL を作成したので、[!DNL Customer.io] ユーザーインターフェイスを使用してレポート Webhook を設定できるようになりました。 レポート Webhook の設定手順については、Webhook の設定に関する [[!DNL Customer.io]  ガイド ](https://customer.io/docs/webhooks/#setup) を参照してください。
 
-Adobe Analytics の [!DNL Customer.io] ユーザーインターフェイス、 [webhook URL](#get-streaming-endpoint-url) （内） [!DNL WEBHOOK ENDPOINT] フィールドに入力します。
+[!DNL Customer.io] ユーザーインターフェイスの [!DNL WEBHOOK ENDPOINT] フィールドに [webhook URL](#get-streaming-endpoint-url) を入力します。
 
-![Webhook エンドポイントフィールドを表示する Customer.io ユーザーインターフェイス](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
+![Webhook エンドポイントフィールドを表示する Customer.io ユーザーインターフェイス ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
 
 >[!TIP]
 >
->レポート用 Webhook には、様々なイベントを購読できます。 各イベントのメッセージは、 [!DNL Customer.io] アクションイベントのトリガー条件が満たされている。 各イベントについて詳しくは、 [[!DNL Customer.io] イベントドキュメント](https://customer.io/docs/webhooks/#events).
+>レポート Webhook 用に様々なイベントを購読できます。 [!DNL Customer.io] のアクションイベントトリガー条件が満たされると、各イベントのメッセージが Platform に取り込まれます。 様々なイベントについて詳しくは、[[!DNL Customer.io]  イベントドキュメント ](https://customer.io/docs/webhooks/#events) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うことで、 [!DNL Customer.io] データをExperience Platformに送信します。 取り込まれるデータを監視するには、 [Platform UI を使用したストリーミングデータフローの監視](../../monitor-streaming.md).
+このチュートリアルでは、[!DNL Customer.io] データをExperience Platformに取り込むためのストリーミングデータフローを正常に設定しました。 取り込まれるデータを監視するには、[Platform UI を使用したストリーミングデータフローの監視 ](../../monitor-streaming.md) のガイドを参照してください。
 
 ## その他のリソース {#additional-resources}
 
-以下の節では、 [!DNL Customer.io] ソース。
+以下の節では、[!DNL Customer.io] ソースを使用する際に参照できるその他のリソースを示します。
 
 ### ガードレール {#guardrails}
 
-ガードレールについて詳しくは、 [[!DNL Customer.io] タイムアウトと失敗のページ](https://customer.io/docs/webhooks/#timeouts-and-failures).
+ガードレールについて詳しくは、[[!DNL Customer.io]  タイムアウトとエラーのページ ](https://customer.io/docs/webhooks/#timeouts-and-failures) を参照してください。
 
 ### 検証 {#validation}
 
-ソースとが正しく設定されていることを検証するには、以下を実行します。 [!DNL Customer.io] メッセージを取り込むには、次の手順に従います。
+ソースを正しく設定したことと、メッセージが取り込まれてい [!DNL Customer.io] ことを検証するには、次の手順に従います。
 
-* 次の項目を確認できます。 [!DNL Customer.io] **[!UICONTROL アクティビティログ]** がキャプチャしたイベントを識別するページ [!DNL Customer.io].
+* [!DNL Customer.io] **[!UICONTROL アクティビティログ]** ページをチェックすると、[!DNL Customer.io] によって取り込まれるイベントを特定できます。
 
-![アクティビティログを示す Customer.io UI のスクリーンショット](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
+![ アクティビティログを示す Customer.io UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
-* Platform UI で、「 」を選択します。 **[!UICONTROL データフローを表示]** の横に [!DNL Customer.io] ソースカタログのカードメニュー 次に、「 **[!UICONTROL データセットをプレビュー]** で選択したイベントに対して取り込まれたデータを検証するには、以下を実行します。 [!DNL Customer.io].
+* Platform UI で、ソースカタログの [!DNL Customer.io] ーザーカードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 次に、「**[!UICONTROL データセットをプレビュー]**」をクリックして、[!DNL Customer.io] で選択したイベントに対して取り込まれたデータを検証します。
 
-![取り込んだイベントを示す Platform UI のスクリーンショット](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
+![ 取り込んだイベントを示す Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)

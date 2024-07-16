@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # インサイト SQL を表示
 
-の使用 [!UICONTROL SQL を表示] プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを通じてオンデマンドでクエリを実行する機能。 40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから独自のインサイトを導き出す新しいクエリを作成します。
+[!UICONTROL SQL を表示 ] 機能を使用して、プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを通じてオンデマンドでクエリを実行します。 40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから独自のインサイトを導き出す新しいクエリを作成します。
 
 ## ダッシュボードの「概要」に移動します。 {#navigate-to-overview}
 
-選択したダッシュボードを開くには、次のいずれかを選択します **[!UICONTROL プロファイル]**, **[!UICONTROL オーディエンス]**、または **[!UICONTROL 宛先]** 左側のナビゲーションから。 次に選択 **[!UICONTROL 概要]** ワークスペースが自動的に表示されない場合は、タブのオプションから。
+選択したダッシュボードを開くには、**[!UICONTROL プロファイル]**、**[!UICONTROL オーディエンス]**、**[!UICONTROL 宛先]** のいずれかを左側のナビゲーションから選択します。 次に、ワークスペースが自動的に表示されない場合は、タブオプションから **[!UICONTROL 概要]** を選択します。
 
-または、以下を選択します。 **[!UICONTROL ダッシュボード]** 左側のナビゲーションから、カスタムダッシュボードの名前に続いて。 ユーザー定義ダッシュボードの概要が表示されます。
+または、左側のナビゲーションから **[!UICONTROL ダッシュボード]** を選択し、続いてカスタムダッシュボードの名前を選択します。 ユーザー定義ダッシュボードの概要が表示されます。
 
-![のExperience PlatformUI [!UICONTROL プロファイル], [!UICONTROL オーディエンス], [!UICONTROL 宛先]、および [!UICONTROL ダッシュボード] ハイライト表示](./images/view-sql/dashboard-navigation.png)
+![[!UICONTROL  プロファイル ]、[!UICONTROL  オーディエンス ]、[!UICONTROL  宛先 ]、および [!UICONTROL  ダッシュボード ] がハイライト表示されたExperience PlatformUI](./images/view-sql/dashboard-navigation.png)
 
 ## SQL を表示切替スイッチ {#toggle}
 
@@ -27,15 +27,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->を有効にする場合 [!UICONTROL SQL を表示] 切り替え：この機能を無効にするまでは、グローバルフィルターとウィジェットレベルのフィルターを変更できません。
+>[!UICONTROL SQL を表示 ] 切替スイッチを有効にした場合、この機能を無効にするまでは、グローバルフィルターおよびウィジェットレベルのフィルターを変更できません。
 
-![この [!UICONTROL SQL を表示] 切り替えがハイライト表示されています。](./images/view-sql/view-sql-toggle.png)
+![ 「[!UICONTROL SQL を表示 ]」切替スイッチがハイライト表示されています。](./images/view-sql/view-sql-toggle.png)
 
-表示する切り替えを有効にします [!UICONTROL SQL を表示] 個々のインサイトに関するテキスト。
+個々のインサイトに [!UICONTROL SQL を表示 ] テキストを表示する切替スイッチを有効にします。
 
-![～の洞察 [!UICONTROL SQL を表示] ハイライト表示](./images/view-sql/insight-view-sql.png)
+![ 「SQL を表示 [!UICONTROL  がハイライト表示され ] インサイト ](./images/view-sql/insight-view-sql.png)
 
-を選択 **[!UICONTROL SQL を表示]** ウィジェットの SQL を含むダイアログを開きます。
+**[!UICONTROL SQL を表示]** を選択して、ウィジェットの SQL を含むダイアログを開きます。
 
 ## SQL ダイアログ {#sql-dialog}
 
@@ -43,20 +43,20 @@ ht-degree: 0%
 
 >[!TIP]
 >
->コピーアイコン（![「コピー」アイコン](./images/view-sql/copy-icon.png)）を選択します。
+>コピーアイコン（![ コピーアイコンを選択すると、SQL 文全体をクリップボードにコピーできます。](./images/view-sql/copy-icon.png)）を選択します。
 
-![SQL 文がハイライト表示されたインサイトダイアログ](./images/view-sql/sql-dialog.png)
+![SQL 文がハイライト表示されたインサイトダイアログ ](./images/view-sql/sql-dialog.png)
 
-を選択 **[!UICONTROL SQL を実行]** クエリが事前入力された状態でクエリエディターを開きます。
+「**[!UICONTROL SQL を実行]**」を選択して、クエリが事前入力されたクエリエディターを開きます。
 
-![とのインサイトダイアログ [!UICONTROL SQL を実行] ハイライト表示](./images/view-sql/run-sql.png)
+![ 「[!UICONTROL SQL を実行 ] がハイライト表示されたインサイトダイアログ ](./images/view-sql/run-sql.png)
 
 ## 既存の SQL を編集 {#edit-sql}
 
 クエリエディターが表示されます。 レポートのニーズに合った方法で、ステートメントを編集し、platform データをクエリできるようになりました。 新しいクエリテンプレートを適切な名前で保存します。
 
-![選択したインサイト SQL が事前入力されたクエリエディター。](./images/view-sql/edit-sql.png)
+![ 選択したインサイト SQL が事前入力されたクエリエディター。](./images/view-sql/edit-sql.png)
 
 ## 次の手順
 
-このドキュメントでは、標準ダッシュボードまたはユーザー定義ダッシュボード内のインサイトに対して SQL にアクセスする方法を確認しました。 まだ読んでいない場合は、を読むことをお勧めします。 [Real-time Customer Data Platform Insights データモデルドキュメント](./data-models/cdp-insights-data-model-b2c.md). このドキュメントには、マーケティングおよび KPI のニーズに合わせてカスタマイズされた、Real-Time CDP レポート用の SQL テンプレートのカスタマイズに関するインサイトが含まれています。
+このドキュメントでは、標準ダッシュボードまたはユーザー定義ダッシュボード内のインサイトに対して SQL にアクセスする方法を確認しました。 [Real-time Customer Data Platform Insights データモデルのドキュメント ](./data-models/cdp-insights-data-model-b2c.md) を読むことをお勧めします。 このドキュメントには、マーケティングおよび KPI のニーズに合わせてカスタマイズされた、Real-Time CDP レポート用の SQL テンプレートのカスタマイズに関するインサイトが含まれています。

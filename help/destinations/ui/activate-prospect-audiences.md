@@ -1,7 +1,7 @@
 ---
 title: 見込み客のオーディエンスを宛先に対してアクティブ化する
 type: Tutorial
-description: 見込み客オーディエンスを宛先に対してアクティブ化する方法を説明します。
+description: 宛先への見込み客オーディエンスをアクティブ化する方法を学ぶ
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
 source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
@@ -10,30 +10,30 @@ ht-degree: 25%
 
 ---
 
-# 見込み客オーディエンスの有効化
+# 見込み客オーディエンスをアクティベート
 
 >[!AVAILABILITY]
 >
 >この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、Adobe担当者にお問い合わせください。
 
-この記事では、エクスポートに必要なワークフローについて説明します。 [見込み客オーディエンス](/help/segmentation/ui/prospect-audience.md) Adobe Experience Platformから目的の宛先に移動します。
+この記事では、Adobe Experience Platformから目的の宛先に [ 見込み客オーディエンス ](/help/segmentation/ui/prospect-audience.md) を書き出すために必要なワークフローについて説明します。
 
 ## サポートされる宛先 {#supported-destinations}
 
-**[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。以下を使用します。 **[!UICONTROL データタイプ]** フィルターと選択 **[!UICONTROL 見込み客]** を参照して、見込み客オーディエンスのアクティブ化をサポートする宛先を確認します。 現在、見込み客オーディエンスのエクスポートは、クラウドストレージの宛先でのみ使用できます。
+**[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。**[!UICONTROL データタイプ]** フィルターを使用し、**[!UICONTROL 見込み客]** を選択して、見込み客オーディエンスのアクティブ化をサポートする宛先を表示します。 現在、見込み客オーディエンスの書き出しは、クラウドストレージの宛先でのみ使用できます。
 
-![見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![ 見込み客オーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## 前提条件 {#prerequisites}
 
-* 最初に取り込む必要があります [見込み客プロファイル](/help/profile/ui/prospect-profile.md) を作成します。 [見込み客オーディエンス](/help/segmentation/ui/prospect-audience.md) これらをダウンストリームの宛先に対してアクティブ化する前に、次の手順を実行します。
-* 見込み客オーディエンスを宛先に対してアクティブ化するには、宛先に正常に接続している必要があります。 まだおこなっていない場合は、 [宛先カタログ](../catalog/overview.md)、サポートされている宛先を参照し、使用する宛先を設定します。 に関する UI チュートリアルをお読みください。 [宛先への接続](./connect-destination.md) を参照してください。
+* 最初に [ 見込み客プロファイル ](/help/profile/ui/prospect-profile.md) を取り込み、[ 見込み客オーディエンス ](/help/segmentation/ui/prospect-audience.md) を作成してから、ダウンストリームの宛先に対してアクティブ化する必要があります。
+* 宛先への見込み客オーディエンスをアクティブ化するには、正常に宛先に接続する必要があります。 まだ接続していない場合は、[ 宛先カタログ ](../catalog/overview.md) に移動し、サポートされている宛先を参照し、使用する宛先を設定します。 詳しくは、[ 宛先への接続 ](./connect-destination.md) に関する UI チュートリアルを参照してください。
 
 ### 必要な権限 {#permissions}
 
-見込み客オーディエンスをアクティブ化するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先のアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+見込み客オーディエンスをアクティブ化するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先のアクティブ化]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-見込み客オーディエンスをアクティブ化するために必要な権限を持っていることを確認するには、宛先カタログを参照します。 宛先に **[!UICONTROL 有効化]** コントロールを使用する場合、適切な権限を持っています。
+見込み客オーディエンスをアクティブ化するために必要な権限があることを確認するには、宛先カタログを参照します。 宛先に **[!UICONTROL アクティブ化]** コントロールがある場合、適切な権限を持っています。
 
 ## 宛先の選択 {#select-destination}
 
@@ -43,37 +43,37 @@ ht-degree: 25%
 
    ![カタログコントロールがハイライト表示された「宛先カタログ」タブ](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. 選択 **[!UICONTROL 有効化]** を、データセットの書き出し先の宛先に対応するカードに貼り付けます。
+2. データセットを書き出す宛先に対応するカードで「**[!UICONTROL アクティブ化]**」を選択します。
 
 >[!TIP]
 >
->プロファイルオーディエンスを書き出す宛先は、カードの右上隅にアイコン付きで表示されます。次に例を示します。また、データタイプフィルターを使用して、見込み客オーディエンスを書き出す宛先のみを表示できます。 [ページの上に表示される](#supported-destinations).
+>プロファイルオーディエンスを書き出せる宛先は、カードの右上隅にアイコンが表示されます。これは、以下でハイライト表示されている宛先と同様です。または、データタイプフィルターを使用して、見込み客オーディエンスを書き出せる宛先のみを表示することもできます [ ページの上部に表示されます ](#supported-destinations)。
 
-![ハイライト表示されたプロファイルオーディエンスをエクスポートできるAmazon S3 の宛先ページ。](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
+![ ハイライト表示されたプロファイルオーディエンスを書き出すことができるAmazon S3 の宛先ページ ](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
-1. 選択 **[!UICONTROL データタイプ見込み客]**&#x200B;に続いて、データセットの書き出し先の接続を選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
+1. **[!UICONTROL データタイプ見込み客]** を選択し、その後データセットを書き出す宛先接続を選択して、「**[!UICONTROL 次へ]**」を選択します。
 
 >[!TIP]
 > 
->見込み客オーディエンスをアクティブ化する新しい宛先を設定する場合は、「 **[!UICONTROL 新しい宛先の設定]** トリガーする [宛先に接続](/help/destinations/ui/connect-destination.md) ワークフロー。
+>見込み客オーディエンスをアクティブ化する新しい宛先を設定する場合は、「**[!UICONTROL 新しい宛先を設定]**」を選択して [ 宛先に接続 ](/help/destinations/ui/connect-destination.md) ワークフローをトリガーにします。
 
-![見込み客コントロールが強調表示された宛先のアクティブ化ワークフロー。](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
+![ 見込み客コントロールがハイライト表示された宛先アクティベーションワークフロー ](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
-1. 次のセクションに進み、 [プロファイルオーディエンスを選択](#select-profile-audiences) エクスポート用。
+1. 次の節に進んで、書き出し用に [ プロファイルオーディエンスを選択 ](#select-profile-audiences) します。
 
-## 見込み客のオーディエンスを選択 {#select-prospect-audiences}
+## 見込み客オーディエンスを選択 {#select-prospect-audiences}
 
-見込み客のオーディエンス名の左側にあるチェックボックスを使用して、宛先にエクスポートするオーディエンスを選択してから、を選択します。 **[!UICONTROL 次へ]**. このビューには見込み客のオーディエンスのみが表示され、他のオーディエンスは表示されないことに注意してください。
+見込み客オーディエンス名の左側にあるチェックボックスを使用して、宛先に書き出すオーディエンスを選択し、「**[!UICONTROL 次へ]**」を選択します。 このビューには、見込み客オーディエンスのみが表示され、他のオーディエンスは表示されません。
 
-![エクスポートする見込み客のオーディエンスを選択するオーディエンスの選択手順を表示するデータセットエクスポートワークフロー。](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
+![ 書き出す見込み客オーディエンスを選択できる「オーディエンスを選択」ステップが表示されているデータセット書き出しワークフロー ](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## スケジュールおよび次の手順
+## スケジュール設定と次の手順
 
-見込み客オーディエンスをエクスポートする残りのアクティベーションワークフローについては、ファイルベースの宛先へのデータのアクティブ化に関するチュートリアルを参照してください。 次から続行： [オーディエンスの書き出し手順をスケジュール](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+見込み客オーディエンスを書き出すための残りのアクティベーションワークフローについては、ファイルベースの宛先へのデータのアクティブ化に関するチュートリアルを参照してください。 [ オーディエンスの書き出しをスケジュール手順 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) から続行します。
 
 >[!NOTE]
 >
->スケジュール設定手順では、見込み客オーディエンスをアクティブ化するワークフローで許可されるのは次の操作のみです。 [完全なファイルをエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). 増分ファイルの書き出しはサポートされていません。
+>スケジュール設定ステップでは、見込み客オーディエンスをアクティブ化するワークフローでは [ 完全なファイルを書き出し ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) のみを実行できます。 増分ファイル書き出しはサポートされていません。
 
 <!--
 
@@ -87,4 +87,4 @@ Real-Time CDP のパートナーデータサポートを通じて達成される
 
 * [信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善します。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Real-Time CDP のサードパーティデータのサポートを使用して、[データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客の獲得またはリーチのために見込み客との関わりを深めます](/help/rtcdp/partner-data/prospecting.md)。
-* [パートナーの支援による認識を活用して、オンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証していない、または以前の履歴がない訪問中に発生した場合に発生していた問題を修正しました。
+* [ パートナー支援の認識を活用することで ](/help/rtcdp/partner-data/onsite-personalization.md) ユーザーがブランドを認証したり過去の履歴を持ったりすることなく、訪問中にオンサイトエクスペリエンスをパーソナライズできます。

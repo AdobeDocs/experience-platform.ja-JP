@@ -9,7 +9,7 @@ type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1812'
 ht-degree: 99%
 
 ---
@@ -68,7 +68,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## [!DNL Platform] の必要システム構成は何ですか？ {#what-are-the-system-requirements-for-platform}
 
-UI と API のどちらを使用しているかに応じて、次の必要システム構成が適用されます。
+UI と API のどちらを使用しているかによって、次のシステム要件が適用されます。
 
 **UI ベースの操作の場合：**
 - 最新の標準的な Web ブラウザー。最新バージョンの [!DNL Chrome] をお勧めしますが、[!DNL Firefox] の最新および以前のメジャーリリース、[!DNL Internet Explorer]、Safari もサポートされています。

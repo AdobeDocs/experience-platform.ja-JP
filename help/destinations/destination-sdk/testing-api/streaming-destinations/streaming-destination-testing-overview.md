@@ -4,7 +4,7 @@ title: ストリーミング宛先テスト API
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '512'
 ht-degree: 100%
 
 ---

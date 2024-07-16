@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；e コマース；e コマース
+keywords: Experience Platform；ホーム；人気のトピック；e コマース；e コマース
 solution: Experience Platform
-title: フローサービス API を使用した e コマース接続の調査
-description: このチュートリアルでは、フローサービス API を使用して e コマース接続を調べます。
+title: Flow Service API を使用した e コマース接続の探索
+description: このチュートリアルでは、Flow Service API を使用して e コマース接続を調べます。
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '570'
 ht-degree: 35%
 
 ---
 
-# を使用した e コマース接続の調査 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した e コマース接続の調査
 
-[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされるすべてのソースから接続できます。
+[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Adobe Experience Platformで一元化できます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] サードパーティを調べるための API **[!UICONTROL e コマース]** 接続。
+このチュートリアルでは、[!DNL Flow Service] API を使用して、サードパーティの **[!UICONTROL e コマース]** 接続を調査します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、次のコードを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。 [!DNL Platform] サービス。
+* [[!DNL Sources]](../../../home.md):[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 **[!UICONTROL e コマース]** を使用した接続 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用して **[!UICONTROL eCommerce]** 接続に正常に接続するために必要な追加情報を示します。
 
 ### 接続 ID の取得
 
-を参照するには、 **[!UICONTROL e コマース]** 接続 [!DNL Platform] API を使用する場合は、有効な接続 ID が必要です。 まだ **[!UICONTROL e コマース]** 操作する接続は、次のチュートリアルを通じて作成できます。
+[!DNL Platform] API を使用して **[!UICONTROL e コマース]** 接続を探索するには、有効な接続 ID が必要です。 使用する **[!UICONTROL e コマース]** 接続がまだない場合は、次のチュートリアルで作成できます。
 
 * [Shopify](../create/ecommerce/shopify.md)
 
@@ -52,9 +52,9 @@ ht-degree: 35%
 
 * `Content-Type: application/json`
 
-## データテーブルの調査
+## データテーブルの探索
 
-を使用して、 **[!UICONTROL e コマース]** 接続 ID を使用する場合、データリクエストを実行してGETテーブルを調査できます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを見つけます。 [!DNL Platform].
+**[!UICONTROL e コマース]** 接続 ID を使用すると、データリクエストを実行してGETテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Platform] に取り込むテーブルのパスを検索します。
 
 **API 形式**
 
@@ -64,7 +64,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONNECTION_ID}` | お使いの **[!UICONTROL e コマース]** 接続 ID。 |
+| `{CONNECTION_ID}` | **[!UICONTROL e コマース]** 接続 ID。 |
 
 **リクエスト**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、 **[!UICONTROL e コマース]** 接続。 に取り込むテーブルを探します。 [!DNL Platform] そしてそれを書き留める `path` プロパティに含める必要がある場合は、次の手順で指定して、その構造を調べます。
+応答が成功すると、**[!UICONTROL e コマース]** 接続からテーブルの配列が返されます。 [!DNL Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
 
 ```json
 [
@@ -114,9 +114,9 @@ curl -X GET \
 ]
 ```
 
-## Inspectテーブルの構造
+## テーブルの構造のInspect
 
-テーブルの構造を **[!UICONTROL e コマース]** 接続、GETリクエストを実行し、 `object` クエリパラメーター。
+**[!UICONTROL e コマース]** 接続からテーブルの構造を調べるには、`object` クエリパラメーター内でテーブルのパスを指定したうえで、GETリクエストを実行します。
 
 **API 形式**
 
@@ -126,8 +126,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | の接続 ID **[!UICONTROL e コマース]** 接続。 |
-| `{TABLE_PATH}` | 内のテーブルのパス **[!UICONTROL e コマース]** 接続。 |
+| `{CONNECTION_ID}` | **[!UICONTROL e コマース]** 接続の接続 ID。 |
+| `{TABLE_PATH}` | **[!UICONTROL e コマース]** 接続内のテーブルのパス。 |
 
 **リクエスト**
 
@@ -142,7 +142,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、 `columns` 配列。
+応答が成功すると、指定されたテーブルの構造が返されます。 テーブルの各列に関する詳細は、`columns` 配列の要素内にあります。
 
 ```json
 {
@@ -196,4 +196,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、 **[!UICONTROL e コマース]** 接続で、取り込むテーブルのパスが見つかりました [!DNL Platform]、およびその構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して、 [e コマースデータを収集して Platform に取り込む](../collect/ecommerce.md).
+このチュートリアルでは、**[!UICONTROL e コマース]** 接続を探索し、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [e コマースデータを収集し、Platform に取り込む ](../collect/ecommerce.md) ことができます。

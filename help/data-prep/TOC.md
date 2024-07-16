@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
@@ -25,6 +25,6 @@ ht-degree: 95%
    - [データ準備 UI ガイド](./ui/mapping.md)
 - [データ形式の取り扱い](./data-handling.md)
 - [マッピングセット](mapping-set.md)
-- [ストリームアップサート](upserts.md)
+- [アップサートをストリーミング](upserts.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
-- [Platform リリースノート](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

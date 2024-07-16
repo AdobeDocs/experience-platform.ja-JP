@@ -7,7 +7,7 @@ description: Adobe Experience Platform の UI を使用して Zoho CRM ソース
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '539'
 ht-degree: 100%
 
 ---
@@ -27,11 +27,11 @@ Adobe Experience Platform のソースコネクタには、外部ソースの CR
 
 有効な [!DNL Zoho CRM] アカウントを既にお持ちの場合は、このドキュメントの残りの部分をスキップし、[データフローの設定](../../dataflow/crm.md)に関するチュートリアルに進んでください。
 
-### 必要な認証情報の収集
+### 必要な資格情報の収集
 
 [!DNL Zoho CRM] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 認証情報 | 説明 |
+| 資格情報 | 説明 |
 | --- | --- |
 | エンドポイント | リクエスト先の [!DNL Zoho CRM] サーバーのエンドポイント。 |
 | アカウント URL | アカウント URL は、アクセスおよび更新トークンの生成に使用されます。URL は、ドメイン固有である必要があります。 |
@@ -44,7 +44,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの CR
 
 ## [!DNL Zoho CRM] アカウントの接続
 
-必要な認証情報が揃ったら、次の手順に従って、[!DNL Zoho CRM] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL Zoho CRM] アカウントを [!DNL Platform] にリンクします。
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -64,7 +64,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 新しいアカウント
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、[!DNL Zoho CRM] の認証情報を指定します。完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成する場合は、「**[!UICONTROL 新規アカウント]**」を選択し、続けて名前、説明（オプション）、[!DNL Zoho CRM] の資格情報を指定します。完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
 >[!TIP]
 >
