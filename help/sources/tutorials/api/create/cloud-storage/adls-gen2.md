@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Azure Data Lake Storage Gen2;azure data lake storage;Azure
+keywords: Experience Platform；ホーム；人気のトピック；Azure Data Lake Storage Gen2;azure data lake storage;Azure
 solution: Experience Platform
-title: フローサービス API を使用した Azure Data Lake Storage Gen2 ベース接続の作成
+title: Flow Service API を使用した Azure Data Lake Storage Gen2 ベース接続の作成
 type: Tutorial
-description: フローサービス API を使用してAdobe Experience Platformを Azure Data Lake Storage Gen2 に接続する方法を説明します。
+description: Flow Service API を使用してAdobe Experience Platformを Azure Data Lake Storage Gen2 に接続する方法を説明します。
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '502'
 ht-degree: 41%
 
 ---
 
-# の作成 [!DNL Azure Data Lake Storage Gen2] を使用したベース接続 [!DNL Flow Service] API
+# [!DNL Flow Service] API を使用した [!DNL Azure Data Lake Storage Gen2] ベース接続の作成
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、のベース接続を作成する手順を説明します。 [!DNL Azure Data Lake Storage Gen2] （以下「ADLS Gen2」という。） [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Azure Data Lake Storage Gen2] のベース接続（以下「ADLS Gen2」と呼びます）を作成する手順について説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [ サンドボックス ](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、 [!DNL Flow Service] API
+次の節では、[!DNL Flow Service] API を使用して ADLS Gen2 ソース接続を正しく作成するために必要な追加情報を示します。
 
 ### 必要な資格情報の収集
 
-次のために [!DNL Flow Service] ADLS Gen2 に接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service] を ADLS Gen2 に接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -37,9 +37,9 @@ ht-degree: 41%
 | `servicePrincipalId` | アプリケーションのクライアント ID。 |
 | `servicePrincipalKey` | アプリケーションのキー。 |
 | `tenant` | アプリケーションを含むテナント情報。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。ADLS Gen2 の接続仕様 ID は次のとおりです。 `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。ADLS Gen2 の接続仕様 ID は `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` です。 |
 
-これらの値について詳しくは、 [この ADLS Gen2 ドキュメント](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
+これらの値の詳細については、[ この ADLS Gen2 ドキュメント ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage) を参照してください。
 
 ### Platform API の使用
 
@@ -49,7 +49,7 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、 `/connections` エンドポイントを使用して、リクエストパラメーターの一部として ADLS Gen2 認証資格情報を指定します。
+ベースPOSTID を作成するには、`/connections` エンドポイントに接続リクエストを実行し、その際に ADLS Gen2 認証資格情報をリクエストパラメーターの一部として指定します。
 
 **API 形式**
 
@@ -91,10 +91,10 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.url` | ADLS Gen2 アカウントの URL エンドポイント。 |
-| `auth.params.servicePrincipalId` | ADLS Gen2 アカウントのサービスプリンシパル ID です。 |
+| `auth.params.servicePrincipalId` | ADLS Gen2 アカウントのサービスプリンシパル ID。 |
 | `auth.params.servicePrincipalKey` | ADLS Gen2 アカウントのサービスプリンシパルキー。 |
-| `auth.params.tenant` | ADLS Gen2 アカウントのテナント情報です。 |
-| `connectionSpec.id` | ADLS Gen2 接続仕様 ID: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
+| `auth.params.tenant` | ADLS Gen2 アカウントのテナント情報。 |
+| `connectionSpec.id` | ADLS Gen2 接続仕様 ID: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`。 |
 
 **応答**
 
@@ -109,4 +109,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、API を使用して ADLS Gen2 接続を作成し、応答本文の一部として一意の ID を取得しました。 この接続 ID を [フローサービス API を使用したクラウドストレージの調査](../../explore/cloud-storage.md).
+このチュートリアルでは、API を使用して ADLS Gen2 接続を作成し、一意の ID を応答本文の一部として取得しました。 この接続 ID を使用して [Flow Service API を使用したクラウドストレージの調査 ](../../explore/cloud-storage.md) を行うことができます。

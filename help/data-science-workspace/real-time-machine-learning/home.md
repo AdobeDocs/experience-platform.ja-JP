@@ -2,11 +2,11 @@
 keywords: Experience Platform;開発者ガイド;データサイエンスワークスペース;人気のトピック;リアルタイム機械学習;
 solution: Experience Platform
 title: リアルタイム機械学習の概要
-description: リアルタイム機械学習により、エンドユーザーに対するデジタルエクスペリエンスコンテンツの適切さが大幅に向上します。これは、Experience PlatformEdge ネットワーク上でリアルタイムの推論と継続的な学習を活用することで可能になります。
+description: リアルタイム機械学習により、エンドユーザーに対するデジタルエクスペリエンスコンテンツの適切さが大幅に向上します。これは、Experience PlatformEdge Networkでのリアルタイム推論と継続的なラーニングを活用することで可能になります。
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '553'
 ht-degree: 93%
 
 ---
@@ -43,7 +43,7 @@ Hub と [!DNL Edge] の両方でのシームレスな計算を組み合わせる
 
 ### デプロイメント
 
-にモデルをデプロイします。 [!DNL Edge Network] を使用して、 [!UICONTROL サービスギャラリー] 予測 API エンドポイントを使用します。
+モデルを [!DNL Edge Network] にデプロイして、予測 API エンドポイントで [!UICONTROL  サービスギャラリー ] にリアルタイム機械学習サービスを作成します。
 
 ### 推論
 

@@ -15,7 +15,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Experience Leagueに関する機能に関するドキュメントが存在する場合、すべてのお客様に対してその機能が使用できるとは限らないことに注意してください。 この機能は、Adobe Experience PlatformまたはAdobe Experience Platform Intelligence ライセンスを購入した既存のお客様のみが使用できます。 公式の製品説明を参照して、購入した SKU/製品に関連する機能やその他の詳細を把握してください。
+>Experience League上の機能に関するドキュメントが存在しても、すべてのお客様が使用できるとは限らないことに注意してください。 この機能は、Adobe Experience PlatformまたはAdobe Experience Platform Intelligence ライセンスを購入した既存のお客様のみが利用できます。 購入した SKU/製品に関連する機能やその他の詳細については、公式の製品の説明を参照してください。
 
 
 Adobe Experience Platform [!DNL Data Science Workspace] は機械学習と人工知能を使用して、データからインサイトを引き出します。Adobe Experience Platform に統合された [!DNL Data Science Workspace] は、アドビソリューションをまたいでコンテンツやデータアセットを使用し、予測をおこなうのに役立ちます。

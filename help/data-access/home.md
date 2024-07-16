@@ -6,7 +6,7 @@ description: Data Access は、取り込まれた Platform データセットの
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '180'
 ht-degree: 100%
 
 ---

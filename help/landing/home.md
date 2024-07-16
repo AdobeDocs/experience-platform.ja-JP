@@ -28,11 +28,11 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 
 ## [!DNL Experience Platform]ドキュメント
 
-[!DNL Experience Platform] ドキュメントは、様々な機能やアプリケーションのために複数の形式で提供されています。 使用可能なドキュメントの種類について詳しくは、 [Platform ドキュメントの概要](documentation/overview.md) を参照してください。
+ドキュメ [!DNL Experience Platform] トは、様々な機能やアプリケーションのために複数の形式で提供されています。 使用可能なドキュメントの種類について詳しくは、 [Platform ドキュメントの概要](documentation/overview.md) を参照してください。
 
 特定の [!DNL Platform] サービスに関する詳細な情報については、[ドキュメントランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)に戻って目的のガイドを選択してください。
 
-### 上で構築されたアプリケーションのドキュメント [!DNL Experience Platform]
+### [!DNL Experience Platform] 上で構築されたアプリケーションのドキュメント
 
 Adobeは、Experience Platformを基盤として複数のアプリケーションを構築しています。 これらのアプリケーションのドキュメントは、以下にリンクされている独自のガイドで確認できます。
 

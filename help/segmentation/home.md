@@ -92,7 +92,7 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 >abstract="エッジセグメント化は、 Platform のセグメントを Edge Network 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ja" text="エッジセグメント化 UI ガイド"
 
-Edgeのセグメント化は、Platform 内のセグメントを即座に評価する機能です [Edge Network上](../web-sdk/home.md)を使用する場合、同じページおよび次のページのパーソナライゼーションのユースケースが可能になります。
+Edgeのセグメント化は、Platform 内のセグメントを [Edge Network上で ](../web-sdk/home.md) 瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
 
 エッジのセグメント化について詳しくは、[API ドキュメント](./api/edge-segmentation.md)または [UI ドキュメント](./ui/edge-segmentation.md)を参照してください。
 

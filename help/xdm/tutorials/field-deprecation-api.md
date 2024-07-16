@@ -4,7 +4,7 @@ description: Schema Registry API でエクスペリエンスデータモデル�
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '584'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,6 @@ ht-degree: 100%
 >* [クラスの更新](../api/classes.md#patch)
 >* [フィールドグループの更新](../api/field-groups.md#patch)
 >* [データタイプの更新](../api/data-types.md#patch)
-
 
 以下の API 呼び出し例では、カスタムデータタイプのフィールドを非推奨（廃止予定）にしています。
 

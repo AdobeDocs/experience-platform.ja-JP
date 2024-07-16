@@ -11,7 +11,7 @@ ht-degree: 63%
 
 # [!DNL Destinations] の概要 {#overview}
 
-![宛先の概要バナー。](./assets/overview/destinations-overview-banner.png)
+![ 宛先の概要バナー ](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
@@ -29,7 +29,7 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 ## 宛先の手順 {#steps}
 
 * Platform で使用可能なすべての宛先の[セルフサービスカタログ](./catalog/overview.md)から選択します。
-* 宛先を使用して、オーディエンスやデータセットをマーケティング自動化プラットフォーム、デジタル広告プラットフォームなどに送信します。
+* 宛先を使用すると、オーディエンスやデータセットをマーケティング自動化プラットフォームやデジタル広告プラットフォームなどに送信できます。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
 ## コントロール {#controls}
@@ -39,13 +39,13 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 * データをアクティブ化できる宛先プラットフォームのカタログを参照する。
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
 * ストレージの場所にアカウントを作成するか、Platform を宛先プラットフォームのアカウントにリンクする。
-* 宛先に対してアクティブ化するオーディエンスまたはデータセットを選択する。
-* 選択 [エクスペリエンスデータモデル (XDM) フィールド](../xdm/home.md) ：電子メールマーケティングの宛先、CRM プラットフォーム、クラウドのストレージの場所など、特定の宛先にオーディエンスをアクティブ化する際に書き出します。
-* 様々なタイプのプロファイルやオーディエンスを宛先（ユーザー、アカウント、見込み客）に対してアクティブ化します。
+* 宛先に対してアクティブ化するオーディエンスまたはデータセットを選択します。
+* メールマーケティングの宛先、CRM プラットフォーム、クラウドストレージの場所などの特定の宛先に対してオーディエンスをアクティブ化する際に ](../xdm/home.md) 書き出す [ エクスペリエンスデータモデル（XDM）フィールド）を選択します。
+* 宛先（人物、アカウント、見込み客）に対して、様々なタイプのプロファイルとオーディエンスをアクティブ化します。
 
 ## 宛先のタイプとカテゴリ {#types-and-categories}
 
-Experience Platform を使用すると、様々なタイプの宛先に対してデータをアクティブ化して、アクティブ化のユースケースを満たすことができます。宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 使用可能なすべての宛先について詳しくは、 [宛先のタイプとカテゴリの概要](./destination-types.md).
+Experience Platform を使用すると、様々なタイプの宛先に対してデータをアクティブ化して、アクティブ化のユースケースを満たすことができます。宛先は、API ベースの統合、ファイル受信システムとの統合、プロファイル参照の宛先など、様々です。 使用可能なすべての宛先について詳しくは、[ 宛先のタイプとカテゴリの概要 ](./destination-types.md) を参照してください。
 
 ## アドビが作成した宛先とパートナーが作成した宛先 {#adobe-and-partner-built-destinations}
 
@@ -55,24 +55,24 @@ Experience Platform 宛先カタログのコネクタには、アドビによっ
 
 ## 宛先とアクセス制御 {#access-controls}
 
-Platform の宛先機能は、Adobe Experience Platform のアクセス制御権限と連携します。ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、 [Adobe Experience Platformでのアクセス制御](../access-control/home.md) をクリックし、ページの下部にあるテーブルまで下にスクロールします。
+Platform の宛先機能は、Adobe Experience Platform のアクセス制御権限と連携します。ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、[Adobe Experience Platformのアクセス制御 ](../access-control/home.md) を参照し、ページ下部のテーブルまで下にスクロールします。
 
-次の表に、宛先で特定のアクションを実行するために必要な権限と権限の組み合わせを示します。
+次の表に、宛先に対して特定のアクションを実行するために必要な権限と、権限の組み合わせをまとめます。
 
 | 権限レベル | 説明 |
 | ---- | ---- |
-| **[!UICONTROL 宛先の表示]** | Experience PlatformUI の「宛先」タブにアクセスするには、 **[!UICONTROL 宛先の表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先の管理]** | 宛先に接続するには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]** [アクセス制御権限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** | オーディエンスを宛先に対してアクティブ化し、 [マッピング手順](ui/activate-batch-profile-destinations.md#mapping) ワークフローの「 **[!UICONTROL 宛先の表示]**, **[!UICONTROL 宛先のアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 宛先の表示]**, **[!UICONTROL マッピングなしでのセグメントのアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** | へのアクセス権を持たずに、既存のデータフローにオーディエンスを追加または削除するには [マッピング手順](ui/activate-batch-profile-destinations.md#mapping) ワークフローの「 **[!UICONTROL 宛先の表示]**, **[!UICONTROL マッピングなしでのセグメントのアクティブ化]**, **[!UICONTROL プロファイルの表示]**、および **[!UICONTROL セグメントを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 宛先の表示]**, **[!UICONTROL データセットの宛先の管理とアクティブ化]** | データセットを宛先に書き出すには、 **[!UICONTROL 宛先の表示]** および **[!UICONTROL データセットの宛先の管理とアクティブ化]** [アクセス制御権限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL ID グラフの表示]** | 書き出す *id* 宛先に対して、 **[!UICONTROL ID グラフを表示]** [アクセス制御権限](/help/access-control/home.md#permissions). <br> ![ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。](/help/destinations/assets/overview/export-identities-to-destination.png "ワークフローでハイライト表示された ID 名前空間を選択して、宛先に対するオーディエンスをアクティブ化します。"){width="100" zoomable="yes"} |
+| **[!UICONTROL 宛先の表示]** | Experience PlatformUI の「宛先」タブにアクセスするには、**[!UICONTROL 宛先の表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの [ マッピングステップ ](ui/activate-batch-profile-destinations.md#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** | ワークフローの [ マッピングステップ ](ui/activate-batch-profile-destinations.md#mapping) へのアクセス権を持たない既存のデータフローにオーディエンスを追加または削除するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL 宛先の表示]**、**[!UICONTROL データセット宛先の管理とアクティブ化]** | データセットを宛先に書き出すには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL ID グラフの表示]** | *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-次の図は、宛先に対して実行する操作に応じて、必要な権限を視覚的に表示しています。
+次の図は、宛先に対して実行する操作に応じて、必要な権限を視覚的に示しています。
 
-![宛先に対して特定のアクションを実行するために必要な権限を示す図です。](/help/destinations/assets/overview/permissions-diagram.png)
+![ 宛先で特定のアクションを実行するために必要な権限を示す図。](/help/destinations/assets/overview/permissions-diagram.png)
 
 アクセス制御の詳細については、[アクセス制御ユーザーガイド](../access-control/ui/overview.md)を参照してください。
 
@@ -88,9 +88,9 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 宛先への接続を確立し、アクティベーションワークフローを完了した後、受信システムへのデータの書き出しを監視できます。詳しくは、[UI での宛先へのデータフローの監視に関するガイド](/help/dataflows/ui/monitor-destinations.md)を参照してください。
 
-![宛先の監視ページの例を参照してください。](./assets/overview/monitoring-page-example.png)
+![ 宛先の監視ページの例。](./assets/overview/monitoring-page-example.png)
 
-また、データが正常に宛先に送信されたかどうかを検証することもできます。 カタログ内のほとんどの宛先ドキュメントページには、 *「データエクスポートの検証」セクション*：データがExperience Platformから正常に取り込まれていることを宛先プラットフォームにチェックインする方法を示します。 このセクションの例を、 [Amazon Ads の宛先](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+また、データが正常に宛先に送信されたかどうかを検証することもできます。 カタログ内のほとんどの宛先ドキュメントページには *データ書き出しの検証* セクションがあり、Experience Platformからデータが正常に取り込まれていることを宛先プラットフォームで確認する方法を示しています。 [Amazon Ads の宛先 ](/help/destinations/catalog/advertising/amazon-ads.md#exported-data) に関するこの節の例を示します。
 
 ## 宛先へのデータのアクティブ化に関するデータガバナンス制限 {#data-governance}
 

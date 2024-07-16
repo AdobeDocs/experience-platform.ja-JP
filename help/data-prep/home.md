@@ -6,7 +6,7 @@ description: このドキュメントでは、Adobe Experience Platform 内で�
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '789'
 ht-degree: 100%
 
 ---

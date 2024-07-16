@@ -27,7 +27,7 @@ Experience Platform のアクセス制御を設定するには、Experience Plat
 
 - Adobe Experience Platform のライセンス認証、または Experience Platform を使用するアプリケーション／アプリケーションサービスのライセンス認証が完了すると、ライセンス認証時に指定した管理者に電子メールが送信されます。
 - 管理者は [Adobe Admin Console](#adobe-admin-console) にログインし、概要ページの製品のリストから **Adobe Experience Platform** を選択します。
-- Experience Platformへのアクセス権を付与するには、管理者がデフォルトの製品プロファイルにユーザーを追加することをお勧めします。 `AEP-Default-All-Users`.
+- Experience Platformへのアクセス権を付与するには、デフォルトの製品プロファイル `AEP-Default-All-Users` にユーザーを追加することをお勧めします。
 - Experience Platform の権限では、管理者は、新しい役割を作成したり、既存の役割の権限とユーザーを編集したりできます。
 - 役割を作成または編集する際、管理者は、**[!UICONTROL ユーザー]**&#x200B;タブを使用してユーザーを役割に追加し、役割の権限を編集してこれらのユーザーに権限（「[!UICONTROL データセットを読み取り]」や「[!UICONTROL スキーマを管理]」など）を付与します。同様に、管理者は、同じ編集オプションを使用してサンドボックスへのアクセス権を割り当てることができます。
 - ユーザーが Experience Platform ユーザーインターフェイスにログインすると、Experience Platform の機能へのアクセスは、前の手順で付与された権限によって決まります。例えば、ユーザーが[!UICONTROL データセットを表示]権限を持っていない場合、サイドメニューの「**[!UICONTROL データセット]**」タブはそのユーザーには表示されません。
@@ -79,17 +79,17 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 
 | カテゴリ | 権限 | 説明 |
 | --- | --- | --- |
-| [!DNL AI Assistant] | [!UICONTROL AI アシスタントを有効にする] | に質問する機能 [AI アシスタント](../ai-assistant/access.md) 質問。 |
-| [!DNL AI Assistant] | [!UICONTROL 運用インサイトの表示] | への応答を取得するためのアクセス [運用インサイト](../ai-assistant/home.md##operational-insights) クエリ。 |
+| [!DNL AI Assistant] | [!UICONTROL AI アシスタントを有効にする ] | [AI アシスタント ](../ai-assistant/access.md) に質問する機能 |
+| [!DNL AI Assistant] | [!UICONTROL  運用インサイトの表示 ] | へのアクセスで、[ 運用インサイト ](../ai-assistant/home.md##operational-insights) クエリに対する応答を取得します。 |
 | [!DNL Alerts] | [!UICONTROL アラート履歴の表示] | アラート履歴への読み取り専用アクセス。 |
 | [!DNL Alerts] | [!UICONTROL アラートの解決] | アラートの読み取り、編集、削除へのアクセス。 |
 | [!DNL Alerts] | [!UICONTROL アラートの表示] | アラートへの読み取り専用アクセス。 |
 | [!DNL Alerts] | [!UICONTROL アラートの管理] | アラート履歴の読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Computed Attributes] | [!UICONTROL 計算属性の表示] | 「計算属性」タブ、在庫および詳細への読み取り専用アクセス |
-| [!DNL Computed Attributes] | [!UICONTROL 計算属性の管理] | ドラフトの読み取り、作成、削除、計算属性の非アクティブ化へのアクセス。 |
+| [!DNL Computed Attributes] | [!UICONTROL  計算済み属性の表示 ] | 「計算属性」タブ、在庫および詳細への読み取り専用アクセス |
+| [!DNL Computed Attributes] | [!UICONTROL  計算属性の管理 ] | ドラフトの読み取り、作成、削除、計算属性の非アクティブ化へのアクセス。 |
 | [!DNL Dashboards] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] | ライセンス使用状況ダッシュボードを表示する読み取り専用アクセス。 |
 | [!DNL Dashboards] | [!UICONTROL 標準ダッシュボードの管理] | Data Warehouse にないカスタム属性の追加。 |
-| [!DNL Data Governance] | [!UICONTROL 使用ラベルを管理] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
+| [!DNL Data Governance] | [!UICONTROL  使用状況ラベルの管理 ] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの表示] | 組織に属するデータ使用ポリシーに対する読み取り専用アクセス。 |
 | [!DNL Data Governance] | [!UICONTROL ユーザーアクティビティログを表示] | Platform のアクティビティを記録した [監査ログ](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
@@ -97,8 +97,8 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 2 つの 組織を接続し [!DNL Segment Match] フローを有効にするパートナーハンドシェイクを作成、承認または拒否するためのアクセス権。 |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | アクティブなパートナーで [!DNL Segment Match] フィードを読み取り、作成、編集、公開するためのアクセス権。 |
-| [!DNL Data Lifecycle] | [!UICONTROL データのライフサイクルの表示] | データ ライフサイクルへの読み取り専用アクセス |
-| [!DNL Data Lifecycle] | [!UICONTROL データのライフサイクルの管理] | データ ライフサイクルの読み取り、作成、編集、および削除へのアクセス。 |
+| [!DNL Data Lifecycle] | [!UICONTROL  データのライフサイクルの表示 ] | データ ライフサイクルへの読み取り専用アクセス |
+| [!DNL Data Lifecycle] | [!UICONTROL  データのライフサイクルの管理 ] | データ ライフサイクルの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの管理] | 各スキーマと関連リソースへの読み取り、作成、編集および削除アクセス |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの表示] | スキーマおよび関連リソースへの読み取り専用アクセス |
 | [!DNL Data Modeling] | [!UICONTROL 関係の管理] | スキーマ関係の読み取り、作成、編集、および削除へのアクセス。 |
@@ -107,11 +107,11 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Data Management] | [!UICONTROL データセットの表示] | データセットおよびスキーマへの読み取り専用アクセス |
 | [!DNL Data Management] | [!UICONTROL データ監視] | 監視データセットおよびストリームへの読み取り専用アクセス |
 | [!DNL Data Science Workspace] | [!UICONTROL Data Science Workspace の管理] | [!DNL Data Science Workspace] での読み取り、作成、編集、および削除へのアクセス。 |
-| [!DNL Destinations] | [!UICONTROL 宛先の表示] | で使用可能な宛先を表示する読み取り専用アクセス **[!UICONTROL カタログ]** タブと認証済みの宛先 **[!UICONTROL 参照]** タブ。 |
+| [!DNL Destinations] | [!UICONTROL 宛先の表示] | 「**[!UICONTROL カタログ]**」タブの使用可能な宛先と「**[!UICONTROL 参照]**」タブの認証済みの宛先を表示する読み取り専用アクセス。 |
 | [!DNL Destinations] | [!UICONTROL 宛先の管理] | 宛先接続および宛先アカウントの読み取り、作成および削除へのアクセス。 |
-| [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | ユーザーが既存の宛先に対してセグメントをアクティブ化できるようにします。アクティブ化ワークフローのマッピングステップを有効にします。この権限には、 [!UICONTROL 宛先の表示] 宛先に対してデータをアクティブ化するユーザーに付与する権限。 |
-| [!DNL Destinations] | [!UICONTROL マッピングを使用しないセグメントアクティブ化] | [マッピングステップ](../destinations/ui/activate-batch-profile-destinations.md#mapping)が表示されない状態でユーザーがセグメントを既存の宛先に対してアクティブ化できるようにします。ユーザーは、アクティブ化ワークフローでセグメントを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。この権限には、 [!UICONTROL 宛先の表示] 宛先に対してデータをアクティブ化するユーザーに付与する権限。 |
-| [!DNL Destinations] | [!UICONTROL データセット宛先の管理とアクティブ化] | データセット書き出しフローを読み取り、作成、編集および無効化する機能。作成済みのアクティブなデータセットに対してデータもアクティブ化する機能。 この権限には、 [!UICONTROL 宛先の表示] 宛先に対してデータをアクティブ化するユーザーに付与する権限。 |
+| [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | ユーザーが既存の宛先に対してセグメントをアクティブ化できるようにします。アクティブ化ワークフローのマッピングステップを有効にします。また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL  宛先の表示 ] 権限を付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL マッピングを使用しないセグメントアクティブ化] | [マッピングステップ](../destinations/ui/activate-batch-profile-destinations.md#mapping)が表示されない状態でユーザーがセグメントを既存の宛先に対してアクティブ化できるようにします。ユーザーは、アクティブ化ワークフローでセグメントを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL  宛先の表示 ] 権限を付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL データセット宛先の管理とアクティブ化] | データセット書き出しフローを読み取り、作成、編集および無効化する機能。作成済みのアクティブなデータセットに対してデータもアクティブ化する機能。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL  宛先の表示 ] 権限を付与する必要があります。 |
 | [!DNL Destinations] | [!UICONTROL 宛先のオーサリング] | [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) を使用して宛先を作成する機能。 |
 | [!DNL Identity Management] | [!UICONTROL ID 名前空間の管理] | ID 名前空間への読み取り、作成、編集および削除アクセス |
 | [!DNL Identity Management] | [!UICONTROL ID 名前空間の表示] | ID 名前空間への読み取り専用アクセス |
@@ -122,13 +122,13 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Profile Management] | [!UICONTROL セグメントの表示] | 使用可能なセグメントへの読み取り専用アクセス。 |
 | [!DNL Profile Management] | [!UICONTROL 結合ポリシーの管理] | 結合ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Profile Management] | [!UICONTROL 結合ポリシーの表示] | 使用可能な結合ポリシーへの読み取り専用アクセス。 |
-| [!DNL Profile Management] | [!UICONTROL オーディエンスをインポート] | インポートしたオーディエンスの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Profile Management] | [!UICONTROL  オーディエンスのインポート ] | インポートしたオーディエンスの読み取り、作成、編集、削除へのアクセス。 |
 | [!DNL Profile Management] | [!UICONTROL セグメントのオーディエンスの書き出し] | 評価済みのデータセットセグメントをオーディエンスセットに書き出す機能 |
 | [!DNL Profile Management] | [!UICONTROL オーディエンスに対するセグメントの評価] | セグメント定義を評価して、オーディエンスのプロファイルを生成する機能。 |
-| [!DNL Profile Management] | [!UICONTROL B2B AI を表示] | すべての B2B AI/ML サービスの設定への読み取り専用アクセス。 |
-| [!DNL Profile Management] | [!UICONTROL B2B AI の管理] | すべての B2B AI/ML サービスの設定および設定の読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Profile Management] | [!UICONTROL B2B プロファイルの表示] | B2B エンティティプロファイル（アカウント、商談など）、すべての B2B AI/ML サービスの設定および設定、B2B ダッシュボードウィジェットへの読み取り専用アクセス。 |
-| [!DNL Profile Management] | [!UICONTROL B2B プロファイルの管理] | B2B エンティティプロファイル （アカウント、オポチュニティなど）の読み取り、作成、編集、および削除へのアクセス。 すべての B2B AI/ML サービスおよび B2B ダッシュボードウィジェットの設定と設定に対する読み取り専用アクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B AI を表示 ] | すべての B2B AI/ML サービスの設定への読み取り専用アクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B AI の管理 ] | すべての B2B AI/ML サービスの設定および設定の読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B プロファイルの表示 ] | B2B エンティティプロファイル（アカウント、商談など）、すべての B2B AI/ML サービスの設定および設定、B2B ダッシュボードウィジェットへの読み取り専用アクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B プロファイルの管理 ] | B2B エンティティプロファイル （アカウント、オポチュニティなど）の読み取り、作成、編集、および削除へのアクセス。 すべての B2B AI/ML サービスおよび B2B ダッシュボードウィジェットの設定と設定に対する読み取り専用アクセス。 |
 | [!DNL Query Service] | [!UICONTROL クエリの管理] | Platform データの構造化 SQL クエリの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Query Service] | [!UICONTROL クエリサービス統合の管理] | クエリサービスアクセスの有効期限が切れていない資格情報を作成、更新、削除するためのアクセス。 |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの管理] | サンドボックスへの読み取り、作成、編集、削除アクセス |

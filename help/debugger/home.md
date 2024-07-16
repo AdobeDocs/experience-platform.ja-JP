@@ -1,6 +1,6 @@
 ---
-description: Experience PlatformDebugger は Web ページを調べ、ユーザーがExperience Cloudソリューションの実装方法に関する問題を見つけられるよう支援します。
-keywords: debugger;experience Platform Debugger 拡張機能；chrome；拡張機能
+description: Experience Platformデバッガーは Web ページを調べ、ユーザーがExperience Cloudソリューションの実装方法に関する問題を見つけられるよう支援します。
+keywords: デバッガー；Experience Platform Debugger 拡張機能；Chrome；拡張機能
 seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
 seo-title: Adobe Experience Platform Debugger Chrome Extension
 title: Adobe Experience Platform Debugger 拡張機能
@@ -15,26 +15,26 @@ ht-degree: 5%
 
 # Adobe Experience Platform Debuggerの概要
 
-のAdobe Experience Platform Debugger拡張 [クロム](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) は web ページを調べ、Adobe Experience Cloudソリューションの実装方法に関する問題を見つけるのを支援します。
+[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) のAdobe Experience Platform Debugger拡張機能は web ページを調べ、ユーザーがAdobe Experience Cloud ソリューションの実装方法に関する問題を見つけられるよう支援します。
 
-Platform Debugger を他のプラットフォームアクティベーションソリューションと共にAdobeを使用して、以下を実行できます。
+Platform Debugger を他のAdobeアクティベーションソリューションと共に使用して、次の操作を実行できます。
 
-1. 用途 [タグ](../tags/home.md) 有効にするコードを挿入するには [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja) 製品を貼り付けます。
-1. 以下を使用します。 [**[!UICONTROL Auditor ]**タブ](./auditor/overview.md) Platform Debugger で実装をテストします。
-1. Platform Debugger のイベントベースおよびソリューション固有のツールを使用して、Auditor によって検出された問題をデバッグしたり、実装に関する他の情報を調べたりします。
+1. [tags](../tags/home.md) を使用して、ページ上で [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja) 製品をアクティベートするコードを挿入します。
+1. Platform Debugger の [**[!UICONTROL Auditor ]**タブ ](./auditor/overview.md) を使用して、実装をテストします。
+1. Platform Debugger のイベントベースおよびソリューション固有のツールを使用して、Auditor で見つかった問題をデバッグしたり、実装に関するその他の情報を調べたりします。
 
 >[!NOTE]
 >
->上記の手順は共通のプロセスを表しますが、必ずしも指定した順序で実行されるわけではありません。
+>上記の手順は一般的なプロセスを表していますが、必ずしも記載された順序で実行されるわけではありません。
 
-Web ページ上で Platform Debugger を実行すると、拡張機能は公開データにアクセスできます。 拡張機能を使用して非公開データにアクセスするには、「開いているブラウザー」タブでExperience Cloudの認証を受ける必要があります。
+任意の web ページで Platform Debugger を実行できます。拡張機能は公開データにアクセスできます。 拡張機能を使用して非公開データにアクセスするには、開いているブラウザータブでExperience Cloudへの認証を受ける必要があります。
 
 ## ユースケース {#section-9fcd0583ed184943a8f0c2d3c00658e0}
 
-Platform Debugger で収集された情報を使用して、Experience Cloudソリューションの実装方法をより深く理解できます。 以下に例を示します。
+Platform Debugger で収集された情報を使用すると、Experience Cloudソリューションの実装方法をより深く理解できます。 例：
 
-* **タグ**：ページにデプロイされるプロパティ、環境、ビルドを確認します。
-* **Adobe Target**：対象となるアクティビティと対象とならないアクティビティ、およびその理由を確認します。
+* **タグ**：ページにデプロイされているプロパティ、環境、ビルドを確認します。
+* **Adobe Target**：選定するアクティビティまたは選定しないアクティビティとその理由を確認します。
 * **Adobe Analytics**：現在のページでアクティブなレポートスイートを確認します。
 
 ## ビデオチュートリアル
