@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対するパートナースキーマの設定方法を説明します。
 title: パートナースキーマ設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f502631a3e97f3c90c13f188f3a4bb081f6db112
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 97%
+source-wordcount: '1939'
+ht-degree: 95%
 
 ---
 
@@ -21,7 +21,7 @@ Destination SDK で宛先を作成する場合、宛先プラットフォーム�
 * 宛先内のサポートされるすべての属性のリストを取得するために Experience Platform が動的に呼び出す、動的パートナースキーマを作成します。
 * 宛先プラットフォームが必要とする必須のフィールドマッピングを定義します。
 
-Destination SDKを使用して作成された統合で、このコンポーネントがどこに適合するかを把握するには、 [設定オプション](../configuration-options.md) ドキュメントを参照するか、 [Destination SDKを使用したファイルベースの宛先の設定](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したファイルベースの宛先の設定 ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) 方法に関するガイドを参照してください。
 
 `/authoring/destinations` エンドポイントを介してスキーマ設定を設定できます。このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -238,6 +238,19 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 ![UI アクティベーションフローでの必須のマッピングの画像。](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 >[!ENDTABS]
+
+## 外部オーディエンスのサポートの設定 {#external-audiences}
+
+[ 外部で生成されたオーディエンス ](../../../../segmentation/ui/audience-portal.md#import-audience) のアクティベーションをサポートするように宛先を設定するには、`schemaConfig` の節で以下のスニペットを含めます。
+
+```json
+"schemaConfig": {
+  "segmentNamespaceDenyList": [],
+  ...
+}
+```
+
+`segmentNamespaceDenyList` の機能について詳しくは、このページの前述の [table](#attributes-schema) のプロパティの説明を参照してください。
 
 ## 次の手順 {#next-steps}
 
