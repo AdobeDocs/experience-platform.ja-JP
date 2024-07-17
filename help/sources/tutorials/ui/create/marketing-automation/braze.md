@@ -4,10 +4,10 @@ description: Adobe Experience Platform UI を使用して Braze アカウント�
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: ベータ版
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 24%
+source-wordcount: '1001'
+ht-degree: 17%
 
 ---
 
@@ -41,7 +41,21 @@ UI で [!DNL Braze] アカウントからAdobe Experience Platformにエンゲ�
 
 既に [!DNL Braze] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
 
-## [!DNL Braze] アカウントをExperience Platformに接続する
+## XDM スキーマの作成
+
+>[!TIP]
+>
+>[!DNL Braze Currents] 接続を初めて作成する場合は、エクスペリエンスデータモデル（XDM）スキーマを作成する必要があります。 [!DNL Braze Currents] 用のスキーマを既に作成している場合は、この手順をスキップして、[ アカウントをExperience Platformに接続 ](#connect) に進むことができます。
+
+Platform UI で、左側のナビゲーションを使用し、「**[!UICONTROL スキーマ]**」を選択して、「[!UICONTROL  スキーマ ] ワークスペースにアクセスします。 次に、「**[!UICONTROL スキーマを作成]**」を選択し、「**[!UICONTROL エクスペリエンスイベント]**」を選択します。 続行するには、「**[!UICONTROL 次へ]**」を選択します。
+
+![ 完了したスキーマ。](../../../../images/tutorials/create/braze/schema.png)
+
+スキーマの名前と説明を指定します。 次に、[!UICONTROL  構成 ] パネルを使用して、スキーマ属性を設定します。 [!UICONTROL  フィールドグループ ] の下で「**[!UICONTROL 追加]**」を選択し、「[!UICONTROL Braze Currents User Event]」フィールドグループを追加します。 完了したら「**[!UICONTROL 保存]**」を選択します。
+
+スキーマについて詳しくは、[UI でのスキーマの作成 ](../../../../../xdm/tutorials/create-schema-ui.md) ガイドを参照してください。
+
+## [!DNL Braze] アカウントをExperience Platformに接続する {#connect}
 
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -53,18 +67,30 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ![ 「データを追加」画面 ](../../../../images/tutorials/create/braze/select-data.png)
 
-ファイルがアップロードされたら、データセットやマッピング先のスキーマに関する情報など、データフローの詳細を指定する必要があります。
+ファイルがアップロードされたら、データセットやマッピング先のスキーマに関する情報など、データフローの詳細を指定する必要があります。  Braze Current ソースを初めて接続する場合は、新しいデータセットを作成します。  それ以外の場合は、Braze スキーマを参照する既存のデータセットを使用できます。  新しいデータセットを作成する場合は、前の節で作成したスキーマを使用します。
 ![ 「データセットの詳細」を強調表示した「データフローの詳細」画面 ](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 次に、マッピングインターフェイスを使用して、データのマッピングを設定します。
 
-![ 「マッピング」画面 ](../../../../images/tutorials/create/braze/mapping.png)
+![ 「マッピング」画面 ](../../../../images/tutorials/create/braze/mapping_errors.png)
+
+マッピングには、解決が必要な次の問題があります。
+
+ソースデータでは、*id* が誤って *_braze.appID* にマッピングされます。 ターゲットマッピングフィールドをスキーマのルートレベルで *_id* に変更する必要があります。 次に、*properties.is_amp* が *_braze.messaging.email.isAMP* にマッピングされていることを確認します。
+
+次に、*time* を *timestamp* マッピングに削除し、追加（`+`）アイコンを選択してから、**[!UICONTROL 計算フィールドを追加]** を選択します。 表示されたボックスに *time \* 1000* と入力して **[!UICONTROL Save]** を選択します。
+
+新しい計算フィールドを追加したら、新しいソースフィールドの横にある **[!UICONTROL ターゲットフィールドをマッピング]** を選択し、スキーマのルートレベルで *タイムスタンプ* にマッピングします。 次に、「**[!UICONTROL 検証]**」を選択して、エラーがなくなったことを確認します。
 
 >[!IMPORTANT]
 >
 >Braze タイムスタンプはミリ秒単位ではなく、秒単位で表現されます。 Experience Platformのタイムスタンプを正確に反映するには、計算フィールドをミリ秒単位で作成する必要があります。 「time * 1000」の計算は、Experience Platform内のタイムスタンプフィールドへのマッピングに適した、ミリ秒に適切に変換されます。
 >
 >![ タイムスタンプ ](../../../../images/tutorials/create/braze/create-calculated-field.png) の計算フィールドの作成
+
+![ エラーのないマッピング。](../../../../images/tutorials/create/braze/completed_mapping.png)
+
+終了したら、「**[!UICONTROL 次へ]**」を選択します。 レビューページを使用してデータフローの詳細を確認し、「**[!UICONTROL 完了]**」を選択します。
 
 ### 必要な資格情報の収集
 
