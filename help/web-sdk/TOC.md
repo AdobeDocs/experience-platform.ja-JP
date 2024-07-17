@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
 role: Developer
-source-git-commit: 14f9c2240d1a650cc267bd997ea35d7923f71b2b
+source-git-commit: bb2c0b5483bf0b50e98e21bef23d1667660d1981
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 52%
+source-wordcount: '226'
+ht-degree: 51%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 52%
 * コマンド {#commands}
    * {#configure} の設定
       * [概要](commands/configure/overview.md)
+      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [context](commands/configure/context.md)
