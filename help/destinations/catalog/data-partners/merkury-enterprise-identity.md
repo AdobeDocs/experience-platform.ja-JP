@@ -1,10 +1,10 @@
 ---
 title: Merkury エンタープライズ Id の宛先
 description: Adobe Experience Platform UI を使用して Merkury エンタープライズ ID 宛先接続を作成する方法を説明します。
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -75,10 +75,11 @@ ht-degree: 17%
 ## 書き出しのタイプと頻度
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
-|**オーディエンス**|**サポート対象**|**説明元**|\
-|—|—|—|\
-✓ |セグメント化サービス|[|Experience Platformを通じて生成されたオーディエンス [ セグメント化サービス ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)。|
-CSV ファイルからExperience Platformへのカスタムアップロード|X|オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)。
+
+| **オーディエンス** | **サポート対象** | **説明の起源** |
+|---|---|---|      
+| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
+| カスタムアップロード | X | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポートします。 |
 
 {style="table-layout:auto"}
 
