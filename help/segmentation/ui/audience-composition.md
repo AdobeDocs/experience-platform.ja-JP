@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1913'
-ht-degree: 87%
+source-wordcount: '1951'
+ht-degree: 83%
 
 ---
 
@@ -268,14 +268,18 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## オーディエンスのパブリッシュ
 
-オーディエンスを作成したら、「 **[!UICONTROL 公開]**」を選択してオーディエンスを保存および公開できます。
+>[!IMPORTANT]
+>
+>オーディエンスコンポジションを公開する場合、Real-Time CDP宛先やAdobe Journey Optimizer チャネルなどのダウンストリームサービスで使用するために評価およびアクティブ化されるまで、最大 48 時間かかる場合があります。
 
-![「公開」ボタンがハイライト表示されて、オーディエンスの保存および公開方法が示される様子。](../images/ui/audience-composition/publish.png)
+コンポジションを作成したら、**[!UICONTROL Publish]** を選択して保存して公開できます。
+
+![ 「Publish」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子 ](../images/ui/audience-composition/publish.png)
 
 オーディエンスの作成でエラーが発生した場合は、アラートが表示され、問題の解決方法を知らせます。
 
-![「公開」ボタンがハイライト表示されて、オーディエンスの保存および公開方法が示される様子。](../images/ui/audience-composition/audience-alert.png)
+![ 「Publish」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子 ](../images/ui/audience-composition/audience-alert.png)
 
 ## 次の手順
 
-オーディエンス構成には、様々なブロックタイプからオーディエンスを作成できる豊富なワークフローが用意されています。セグメント化サービス UI の他の部分について詳しくは、[セグメント化サービスユーザーガイド](./overview.md)を参照してください。
+オーディエンスコンポジションには、様々なブロックタイプからコンポジションを作成できる機能豊富なワークフローが用意されています。 セグメント化サービス UI の他の部分について詳しくは、[セグメント化サービスユーザーガイド](./overview.md)を参照してください。

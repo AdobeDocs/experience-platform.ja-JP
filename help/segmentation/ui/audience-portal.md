@@ -1,10 +1,10 @@
 ---
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
-source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '3673'
-ht-degree: 66%
+source-wordcount: '3693'
+ht-degree: 65%
 
 ---
 
@@ -258,6 +258,10 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 ### オーディエンス合計 {#audience-total}
 
 「**[!UICONTROL オーディエンス合計]**」セクションには、オーディエンスに適合するプロファイルの合計数が表示されます。
+
+>[!NOTE]
+>
+>書き出しジョブが完了した後、オーディエンスの合計数が更新されるまで最大 30 分かかる場合があります。
 
 予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。プロファイルストアのエンティティ数が 100 万個未満の場合、完全なデータセットが使用されます。エンティティの数が 1～2,000 万の場合は 100 万のエンティティが使用され、2,000 万を超えるエンティティの場合は合計エンティティの 5% が使用されます。 予測値の生成について詳しくは、オーディエンスの作成に関するチュートリアルの[予測値の生成に関する節](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)を参照してください。
 
