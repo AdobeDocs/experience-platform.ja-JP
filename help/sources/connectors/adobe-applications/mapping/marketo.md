@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Marketo Engage ソースのマッピングフィールド
 description: Marketo データセットのフィールドとそれに対応する XDM フィールドとのマッピングを次の表に示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 94%
@@ -280,7 +280,7 @@ XDM クラスについて詳しくは、[XDM ビジネスアカウントの概�
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | プライマリ ID。`"${MUNCHKIN_ID}"` の値は自動的に置き換えられます。 |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` はセカンダリ ID です。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
+| `iif(externalSourceId != null && externalSourceId != "", to_object("sourceType", externalSourceType, "sourceInstanceID", externalSourceInstanceId, "sourceID", externalSourceId, "sourceKey", externalSourceKey), iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null))` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` はセカンダリ ID です。 `{CRM_ORG_ID}` と `{CRM_TYPE}` の値は自動的に置き換えられます。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
