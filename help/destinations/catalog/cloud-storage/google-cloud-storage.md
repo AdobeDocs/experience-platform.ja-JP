@@ -3,10 +3,10 @@ title: Google Cloud Storage 接続
 description: Google クラウドストレージに接続し、オーディエンスをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 63%
+source-wordcount: '1228'
+ht-degree: 62%
 
 ---
 
@@ -113,7 +113,23 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読](../../ui/alerts.md)についてのガイドを参照してください。
 
-宛先接続の詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+宛先接続への詳細の入力を終えたら「**[!UICONTROL 次へ]**」を選択します。
+
+### 必要な [!DNL Google Cloud Storage] 権限 {#required-google-cloud-storage-permission}
+
+[!DNL Google Cloud Storage] ストレージの場所に正常に接続してデータを書き出すには、バケットに対して次の [!DNL Google Cloud Storage] 権限が必要です。
+
+*`orgpolicy.policy.get`
+*`resourcemanager.projects.get`
+*`resourcemanager.projects.list`
+*`storage.managedFolders.create`
+*`storage.multipartUploads.abort`
+*`storage.multipartUploads.create`
+*`storage.multipartUploads.listParts`
+*`storage.objects.create`
+*`storage.objects.list`
+
+詳しくは、[!DNL Google Cloud Storage] の [ アクセス制御と権限 ](https://cloud.google.com/storage/docs/access-control/iam-permissions) を参照してください。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
