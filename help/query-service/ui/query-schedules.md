@@ -2,10 +2,10 @@
 title: クエリスケジュール
 description: Adobe Experience Platform UI を使用して、スケジュールされたクエリの実行を自動化する方法、クエリスケジュールを削除または無効にする方法、使用可能なスケジュールオプションを利用する方法について説明します。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
 workflow-type: tm+mt
-source-wordcount: '1822'
-ht-degree: 16%
+source-wordcount: '1848'
+ht-degree: 15%
 
 ---
 
@@ -46,6 +46,10 @@ ht-degree: 16%
 ### スケジュールの詳細を追加 {#schedule-details}
 
 スケジュールの詳細ページが表示されます。このページでは、スケジュールされたクエリの様々な詳細を編集できます。 詳細には [ スケジュールされたクエリの頻度と平日 ](#scheduled-query-frequency) 実行、開始日と終了日、結果の書き出し先のデータセット、[ クエリステータスアラート ](#alerts-for-query-status) が含まれます。
+
+>[!IMPORTANT]
+>
+>クエリスケジューラー UI は、無期限または無期限のスケジュール設定をサポートしていません。 終了日を指定してください。 終了日に上限はありません。
 
 ![ハイライト表示されたスケジュールの詳細パネル。](../images/ui/query-schedules/schedule-details.png)
 

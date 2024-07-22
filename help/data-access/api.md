@@ -4,14 +4,18 @@ solution: Experience Platform
 title: データアクセス API ガイド
 description: Data Access API は、Experience Platform内に取り込んだデータセットの検出可能性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供することで、Adobe Experience Platformをサポートします。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
+source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 49%
+source-wordcount: '554'
+ht-degree: 44%
 
 ---
 
 # データアクセス API ガイド
+
+>[!IMPORTANT]
+>
+>Data Access API が **非推奨** になりました。 Adobe Experience Platformからのデータの書き出しに Destinations を使用することをお勧めします。 詳しくは、[ データセット書き出し宛先のドキュメント ](../destinations/destination-types.md#dataset-export-destinations) を参照してください。
 
 Data Access API は、[!DNL Experience Platform] 内に取り込んだデータセットの検出可能性とアクセシビリティに重点を置いた RESTful インターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートします。
 
@@ -19,7 +23,7 @@ Data Access API は、[!DNL Experience Platform] 内に取り込んだデータ�
 
 ## API 仕様リファレンス
 
-Swagger API リファレンスドキュメントは、[こちら](https://developer.adobe.com/experience-platform-apis/references/data-access/)を参照してください。
+OpenAPI リファレンスドキュメントは、[ こちら ](https://developer.adobe.com/experience-platform-apis/references/data-access/) を参照してください。
 
 ## 用語 {#terminology}
 
