@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5086e6419c14356b47963b8445389a0048ad11d7
+source-git-commit: e874459cd3018e0cf2358e590c6ec5eb0f7b4c98
 workflow-type: tm+mt
-source-wordcount: '2158'
-ht-degree: 86%
+source-wordcount: '2192'
+ht-degree: 85%
 
 ---
 
@@ -13,6 +13,15 @@ ht-degree: 86%
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
+
+## バージョン 2.25.0 - 2024年7月18日（PT）
+
+**新機能**
+
+* Adobe Journey Optimizerで自動トラッキングパーソナライゼーションがサポートされるようになりました。
+* 改善されたクリックの収集を管理するための新しい設定が導入されました。
+
+Adobe Experience Platform Web SDK のバージョン 2.21.1 が含まれます。
 
 ## バージョン 2.24.0 - 2024年6月5日（PT）
 
