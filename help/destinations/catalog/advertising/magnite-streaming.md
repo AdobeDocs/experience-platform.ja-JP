@@ -1,31 +1,31 @@
 ---
-title: Magnite ストリーミングリアルタイム宛先接続
+title: Magnite リアルタイム宛先接続
 description: この宛先を使用すると、Adobe CDP オーディエンスを Magnite ストリーミングプラットフォームにリアルタイムで配信できます。
 badgeBeta: label="ベータ版" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1297'
 ht-degree: 32%
 
 ---
 
 
-# （Beta） Magnite Streaming: Real-Time destination connection
+# （Beta） Magnite: Real-Time destination connection
 
 ## 概要 {#overview}
 
-Adobe Experience Platformの [!DNL Magnite Streaming: Real-Time] と Magnite ストリーミング：バッチ宛先は、Magnite ストリーミングプラットフォームでターゲティングとアクティブ化のためにオーディエンスをマッピングおよび書き出すのに役立ちます。
+Adobe Experience Platformの [!DNL Magnite: Real-Time] および [Magnite：バッチ ](/help/destinations/catalog/advertising/magnite-batch.md) 宛先は、Magnite ストリーミングプラットフォームでターゲティングとアクティブ化のためにオーディエンスをマッピングおよび書き出すのに役立ちます。
 
-[!DNL Magnite Streaming] プラットフォームへのオーディエンスのアクティブ化は、Magnite ストリーミング：リアルタイムと Magnite ストリーミング：バッチの両方の宛先を使用する必要がある 2 つの手順のプロセスです。
+[!DNL Magnite Streaming] プラットフォームへのオーディエンスのアクティブ化は、Magnite:Real-Time 宛先と Magnite:Batch 宛先の両方を使用する必要がある 2 つの手順のプロセスです。
 
 [!DNL Magnite Streaming] に対してオーディエンスをアクティブ化するには、次の手順を実行します。
 
-* このページに示すように、[!DNL Magnite Streaming: Real-Time] 宛先のオーディエンスをアクティブ化します。
-* Magnite ストリーミング：バッチ宛先で同じオーディエンスを有効化します。 [!DNL Magnite Streaming: Batch] の宛先は必須コンポーネントです。 [!DNL Magnite Streaming] バッチ宛先でオーディエンスをアクティブ化できないと、統合に失敗し、オーディエンスはアクティブ化されません。
+* このページに示すように、[!DNL Magnite: Real-Time] 宛先のオーディエンスをアクティブ化します。
+* Magnite：バッチ宛先で同じオーディエンスを有効化します。 [!DNL Magnite: Batch] の宛先は必須コンポーネントです。 [!DNL Magnite Streaming] バッチ宛先でオーディエンスをアクティブ化できないと、統合に失敗し、オーディエンスはアクティブ化されません。
 
-メモ：リアルタイムの宛先を使用する場合、オーディエンスはリアルタイムで受信されま [!DNL Magnite: Streaming] が、リアルタイムのオーディエンスはプラットフォームに一時的に保存することしかできず、数日以内にシステムから削除されます。 このため、Magnite:Streaming Real-Time 宛先を使用する場合は、*また* Magnite Streaming:Batch 宛先 – リアルタイム宛先に対してアクティブ化する各オーディエンスを使用する必要があります。
+メモ：リアルタイムの宛先を使用する場合、[!DNL Magnite Streaming] はリアルタイムでオーディエンスを受け取りますが、Magnite は一時的にプラットフォームにリアルタイムオーディエンスを保存することしかできず、数日以内にシステムから削除されます。 このため、Magnite:Real-Time 宛先を使用する場合は、*また* Magnite:Batch 宛先 – リアルタイム宛先に対して有効化する各オーディエンスを、バッチ宛先に対して有効化する必要があります。
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Adobe Experience Platformの [!DNL Magnite Streaming: Real-Time] と Magnite ス
 
 ## ユースケース {#use-cases}
 
-[!DNL Magnite Streaming: Real-Time] 宛先を使用する方法とタイミングを理解しやすくするために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
+[!DNL Magnite: Real-Time] 宛先を使用する方法とタイミングを理解しやすくするために、Adobe Experience Platform のお客様がこの宛先を使用して解決できるユースケースのサンプルを以下に示します。
 
 ### アクティブ化とターゲティング {#activation-and-targeting}
 
@@ -48,11 +48,11 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Magnite Streaming: Real-Time] の宛先では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!DNL Magnite: Real-Time] の宛先では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id | デバイスまたは ID の一意の ID。 タイプに関係なく、任意のデバイス ID とファーストパーティ ID を受け入れます。 | サポートしている ID タイプには、PPUID、GAID、IDFA、TV デバイス ID などがありますが、これらに限定されません。 |
+| device_id | デバイスまたは ID の一意の ID。 タイプに関係なく、任意のデバイス ID とファーストパーティ ID を受け入れます。 | Magnite でサポートされている ID タイプには、PPUID、GAID、IDFA、TV デバイス ID などがありますが、これらに限定されません。 |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 | 項目 | タイプ | メモ |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | [!DNL Magnite Streaming: Real-Time] 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL セグメントの書き出し]** | [!DNL Magnite: Real-Time] 宛先で使用される識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。セグメント評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -162,13 +162,13 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 -->
 
-* Postを取り込む場合、オーディエンスは数分以内に [!DNL Magnite Streaming] に表示され、取引に適用できることが期待されます。 これを確認するには、Adobe Experience Platformのアクティベーション手順で共有されたセグメント ID を検索します。
+* 取り込み後、オーディエンスは数分以内に [!DNL Magnite Streaming] に表示され、取引に適用できることが期待されます。 これを確認するには、Adobe Experience Platformのアクティベーション手順で共有されたセグメント ID を検索します。
 
-## [!DNL Magnite Streaming: Batch] 宛先を介して同じオーディエンスをアクティブ化
+## [!DNL Magnite: Batch] 宛先を介して同じオーディエンスをアクティブ化
 
-リアルタイム宛先を使用して [!DNL Magnite Streaming] と共有されるオーディエンスも、Magnite ストリーミング：バッチ宛先を使用して共有する必要があります。 正しく設定されると、[!DNL Magnite Streaming] UI のセグメント名が更新され、毎日の更新後のAdobe Experience Platformで使用されるセグメント名が反映されます。
+リアルタイム宛先を使用して [!DNL Magnite Streaming] と共有されたオーディエンスも、Magnite：バッチ宛先を使用して共有する必要があります。 正しく設定されると、[!DNL Magnite Streaming] UI のセグメント名が更新され、毎日の更新後のAdobe Experience Platformで使用されるセグメント名が反映されます。
 
-最後に、バッチ宛先が統合用に設定されていない場合は、Magnite ストリーミング：バッチ宛先ドキュメントを使用して今すぐ設定します。
+最後に、バッチ宛先が統合用に設定されていない場合は、Magnite：バッチ宛先ドキュメントを使用して今すぐ設定します。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

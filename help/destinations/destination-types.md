@@ -3,10 +3,10 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 65%
+source-wordcount: '804'
+ht-degree: 55%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platformでは、接続、データセット書き出し、拡�
 
 最後に、接続は、宛先カタログ内のすべての組織で使用可能なパブリック宛先と、Real-Time CDP Ultimate のお客様が特定の書き出しのユースケースを満たすために作成できるプライベート宛先を区別することもできます。
 
-![ 宛先のタイプを示す図。](./assets/destination-types/types-of-destinations-no-highlight.png)
+![ 宛先のタイプを示します。](./assets/destination-types/types-of-destinations-no-highlight.png " 宛先のタイプを示す図。"){zoomable="yes"}
 
 ## 接続 {#connections}
 
@@ -33,17 +33,17 @@ Adobe Experience Platformの **[!UICONTROL プロファイル書き出し]**、*
 * [ストリーミングプロファイル書き出し宛先（エンタープライズ宛先）](#streaming-profile-export)
 * [バッチ（ファイルベース）宛先](#file-based)
 
-### ストリーミングプロファイル書き出し宛先（エンタープライズ宛先） {#streaming-profile-export}
+### 高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先） {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->エンタープライズ宛先（ストリーミングプロファイル書き出し宛先）は、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様のみが利用できます。
+>高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先）は、[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様のみが利用できます。
 
-エンタープライズ宛先データコネクタを使用すると、Adobe Real-Time Customer Data Platform プロファイルをほぼリアルタイムで社内システムや他のサードパーティシステムに配信して、データの同期、分析、さらにはプロファイルエンリッチメントのユースケースを実現します。
+高度なエンタープライズ宛先データコネクタを使用すると、Adobe Real-time Customer Data Platform プロファイルをほぼリアルタイムで社内システムや他のサードパーティシステムに配信して、データの同期、分析、さらにはプロファイルエンリッチメントのユースケースを実現できます。
 
 これらの宛先は、オーディエンスデータとプロファイルデータをExperience Platformデータストリームとして受け取ります。
 
-エンタープライズ宛先には、次のものが含まれます。
+高度なエンタープライズ宛先は次のとおりです。
 
 * [HTTP API 宛先](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ Experience Platformから様々な宛先に、次の 3 種類のオーディエ�
 
 宛先カードの記号は、各宛先に書き出すことができるオーディエンスのタイプを示します。
 
-![ 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例 ](/help/destinations/assets/destination-types/types-of-audiences.png)
+![ 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例。](/help/destinations/assets/destination-types/types-of-audiences.png " 書き出せるオーディエンスタイプを示す記号が付いた宛先カードの例 "){zoomable="yes"}
 
 
 ## データセット書き出し宛先 {#dataset-export-destinations}
@@ -114,4 +114,4 @@ Platform では、タグ管理の機能と柔軟性を活用しているので�
 
 [宛先カテゴリ](https://platform.adobe.com/destination/catalog)内の接続と拡張機能は、実現しようとしているマーケティングアクションに応じて、宛先カテゴリ（**広告**、**クラウドストレージ**、**調査プラットフォーム**、**メールマーケティング**&#x200B;など）別にグループ化されています。各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
 
-![ カタログページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png)
+![ カタログページでハイライト表示された宛先カテゴリ。](./assets/destination-types/destination-categories-menu.png " カタログページでハイライト表示された宛先カテゴリ。"){zoomable="yes"}
