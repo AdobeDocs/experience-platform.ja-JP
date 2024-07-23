@@ -3,10 +3,10 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 55%
+source-wordcount: '805'
+ht-degree: 54%
 
 ---
 
@@ -20,7 +20,11 @@ Adobe Experience Platformでは、接続、データセット書き出し、拡�
 
 最後に、接続は、宛先カタログ内のすべての組織で使用可能なパブリック宛先と、Real-Time CDP Ultimate のお客様が特定の書き出しのユースケースを満たすために作成できるプライベート宛先を区別することもできます。
 
+>[!BEGINSHADEBOX]
+
 ![ 宛先のタイプを示します。](./assets/destination-types/types-of-destinations-no-highlight.png " 宛先のタイプを示す図。"){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## 接続 {#connections}
 
@@ -30,8 +34,8 @@ Adobe Experience Platformの **[!UICONTROL プロファイル書き出し]**、*
 
 プロファイル書き出し宛先は生データを受け取ります。その際、多くの場合、メールアドレスがプライマリキーとなります。Experience Platform では、現在、次の 2 種類のプロファイル書き出し宛先をサポートしています。
 
-* [ストリーミングプロファイル書き出し宛先（エンタープライズ宛先）](#streaming-profile-export)
-* [バッチ（ファイルベース）宛先](#file-based)
+* [バッチ（ファイルベース）の宛先](#file-based)
+* [高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先）](#streaming-profile-export)
 
 ### 高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先） {#streaming-profile-export}
 
