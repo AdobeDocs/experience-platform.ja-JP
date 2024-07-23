@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 83%
+source-wordcount: '323'
+ht-degree: 82%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 83%
       - [ML のエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 環境へのデータの書き出し](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML データパイプラインのエンリッチメントエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- ユースケース {#use-cases}
+- 実例 {#use-cases}
    - [概要](use-cases/overview.md)
    - [参照を中止](use-cases/abandoned-browse.md)
    - [属性分析](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 83%
    - [イベントのトレンドレポートの作成](use-cases/trended-report-of-events.md)
    - [同意分析](use-cases/consent-analysis.md)
    - [顧客のライフタイムバリュー](use-cases/customer-lifetime-value.md)
+   - [データの調査](./use-cases/data-exploration.md)
    - [デシルベースの派生データセット](use-cases/deciles-use-case.md)
    - [あいまい一致](use-cases/fuzzy-match.md)
    - [ユーザーのページビューのリスト](use-cases/list-visitor-sessions.md)

@@ -1,16 +1,16 @@
 ---
-title: Adobe Experience Platform クエリサービスでサポートされているユースケース
+title: 実例
 description: Adobe Experience Platform クエリサービスでサポートされているユースケースについて説明します。
 keywords: クエリサービス；ユースケース
 exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 8d8cceafa5def20b64d06dcc3b52629f9ee4b39d
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 7%
+source-wordcount: '128'
+ht-degree: 5%
 
 ---
 
-# サポートされるユースケース
+# 実践的な例
 
 クエリサービスは、業界やビジネスシナリオをまたいだ様々なユースケースに対するソリューションを提供します。 これらの実例は、サービスが多様なニーズに対応する上で柔軟性と効果を発揮していることを示しています。 クエリサービスが特定のビジネスニーズにどのように価値をもたらすことができるかを明らかにするには、ユースケースドキュメントの包括的なコレクションを調べます。 クエリサービスを使用して、運用効率とビジネス成功を強化するためのインサイトとソリューションを提供する方法を説明します。
 

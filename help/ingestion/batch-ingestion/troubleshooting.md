@@ -4,10 +4,10 @@ solution: Experience Platform
 title: バッチ取得トラブルシューティングガイド
 description: このドキュメントは、Adobe Experience Platform バッチデータ取得 API に関するよくある質問に答えるのに役立ちます。
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 100%
+source-wordcount: '1426'
+ht-degree: 97%
 
 ---
 
@@ -212,11 +212,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### バッチが正常に取得されたかどうかを知る方法はありますか？
 
-バッチのステータスが「Active」であれば、バッチは正常に取得されています。バッチのステータスを確認するには、[前述](#how-is-batch-ingestion-monitored)の手順に従います。
+はい。バッチステータスが「アクティブ」になると、バッチは正常に取り込まれました。 バッチのステータスを確認するには、[前述](#how-is-batch-ingestion-monitored)の手順に従います。
 
-### バッチが失敗した後はどうなりますか？
+### バッチが失敗した後はどうなりますか？ {#what-if-a-batch-fails}
 
-バッチが失敗した場合、失敗の理由はペイロードの `errors` セクションで識別できます。エラーの例を次に示します。
+バッチが失敗すると、プロセスが停止し、`Failure` のステータスが返されます。 失敗する理由は、ペイロードの `errors` セクションで特定できます。 エラーの例を次に示します。
 
 ```json
     "errors":[
