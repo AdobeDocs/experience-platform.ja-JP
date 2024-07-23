@@ -2,9 +2,9 @@
 title: パーソナライゼーションのための Web SDK でのAdobe Targetの使用
 description: Adobe Targetを使用して、Experience PlatformWeb SDK でパーソナライズされたコンテンツをレンダリングする方法を説明します
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1364'
 ht-degree: 3%
 
 ---
@@ -192,77 +192,31 @@ alloy("sendEvent",
 
 例えば、Web サイトには、Web サイト上の 3 つのカテゴリリンク（男性、女性および子供）に対応する 3 つの決定範囲が含まれており、ユーザーが最終的に訪問したカテゴリを追跡したいとします。 コンテンツがリクエストされた時点でカテゴリが持続しないように、`__save` フラグを `false` に設定してこれらのリクエストを送信します。 コンテンツを視覚化したら、対応する属性が記録されるように、適切なペイロード（`eventToken` と `stateToken` を含む）を送信します。
 
-<!--Save profile or entity attributes by default with:
-
-```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "__save" : true // Optional. __save=true is the default 
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt",
-        "entity.id" : "1234",
-      }
-    }
-  }
-} ) ; 
-```
--->
-
 次の例では、trackEvent スタイルのメッセージを送信し、プロファイルスクリプトを実行して、属性を保存し、イベントを直ちに記録します。
 
 ```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt" ,
-        "entity.id" : "1234" ,
-        "track": {
-          "scopes": [ "mbox1", "mbox2"],
-          "type": "display|click|..."
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "data": {
+        "xdm": { // Experience Event XDM data },
+            "__adobe": {
+                "target": {
+                    " __save": true|false,
+                    //defaults to true if omitted 
+                    "profile.gender": "female",
+                    "profile.age": 30,
+                    "entity.name": "T-shirt",
+                    "entity.id": "1234"
+                }
+            }
         }
-      }
     }
-  }
-} ) ;
+})
 ```
 
 >[!NOTE]
 >
->`__save` ディレクティブが省略された場合、プロファイルとエンティティの属性の保存は、リクエストの残りがパーソナライゼーションのプリフェッチであっても、リクエストが実行されたかのように直ちに行われます。 `__save` ディレクティブは、プロファイル属性とエンティティ属性にのみ関連しています。 トラック オブジェクトが存在する場合、`__save` ディレクティブは無視されます。 データは直ちに保存され、通知が記録されます。
-
-プロファイルデータの **`sendEvent`合**
-
-```js
-alloy("sendEvent", {
-   renderDecisions: true|false,
-   xdm: { // Experience Event XDM data },
-   data: { // Freeform data }
-});
-```
-
-**プロファイル属性をAdobe Targetに送信する方法：**
-
-```js
-alloy("sendEvent", {
-  "renderDecisions": true,
-  "data": {
-    "__adobe": {
-      "target": {
-        "profile.gender": "female",
-        "profile.age": 30
-      }
-    }
-  }
-});
-```
+>`__save` ディレクティブが省略された場合、プロファイル属性とエンティティ属性の保存は直ちに行われます。 `__save` ディレクティブは、プロファイル属性とエンティティの詳細にのみ関連しています。
 
 ## お勧めをリクエスト
 
@@ -302,6 +256,34 @@ alloy("sendEvent", {
   }
 });
 ```
+
+## mbox コンバージョン指標の表示 {#display-mbox-conversion-metrics}
+
+以下のサンプルに、コンテンツやアクティビティの対象として認定される必要なく、表示 mbox コンバージョンを追跡し、プロファイルパラメーターをAdobe Targetに送信する方法を示します。
+
+```js
+alloy("sendEvent", {
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "conversion-step-1" //example scope name
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    }
+});
+```
+
+
+| プロパティ | 説明 |
+|---------|----------|
+| `xdm._experience.decisioning.propositions[x].scope` | 成功指標を関連付ける範囲（ターゲット側の特定のアクティビティに関連付けられます）。 |
+| `xdm._experience.decisioning.propositions[x].eventType` | 目的のイベントタイプを説明する文字列。 このユースケースでは、これを `"decisioning.propositionDisplay"` に設定します。 |
 
 ## デバッグ
 

@@ -3,9 +3,9 @@ title: at.js とExperience Platform Web SDK の比較
 description: at.js 機能とExperience Platform Web SDK の比較を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；範囲；スキーマ；システム図；図
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2182'
 ht-degree: 4%
 
 ---
@@ -614,20 +614,42 @@ alloy("sendEvent", {
 この例では、ボタンのクリックなど、特定のアクションの実行後に発生したイベントを追跡します。
 `__adobe.target` データオブジェクトを介して、追加のカスタムパラメーターを追加できます。
 
+`commerce` XDM オブジェクトを追加することもできます。
+
 ```js
-//replicates an at.js trackEvent call
 alloy("sendEvent", {
-    "type": "decisioning.propositionDisplay",
     "xdm": {
         "_experience": {
             "decisioning": {
-                "propositions": [{
-                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
-                }]
+                "propositions": [
+                    {
+                        "scope": "orderConfirm" //example scope name
+                    }
+                ],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    },
+    "commerce": {
+        "order": {
+            "purchaseID": "a8g784hjq1mnp3",
+            "purchaseOrderNumber": "VAU3123",
+            "currencyCode": "USD",
+            "priceTotal": 999.98
+        }
+    },
+    "data": {
+        "__adobe": {
+            "target": {
+                "pageType": "Order Confirmation",
+                "user.categoryId": "Insurance"
             }
         }
     }
-});
+})
 ```
 
 ## シングルページアプリケーションでビューの変更をトリガーする方法
