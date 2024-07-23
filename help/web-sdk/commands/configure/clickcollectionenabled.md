@@ -1,13 +1,13 @@
 ---
 title: clickCollectionEnabled
 description: リンククリックデータが自動的に収集されるかどうかを確認するように Web SDK を設定する方法を説明します。
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ ht-degree: 0%
 
 ## Web SDK タグ拡張機能を使用した自動リンクトラッキングの有効化 {#tag-extension}
 
-[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを選択します。
+この変数は、タグ拡張機能によって自動的に管理されるので、明示的に設定する必要はありません。 [ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に次のいずれかを選択すると、該当するリンクトラッキングデータが収集されます。
 
-1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
-1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
-1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
-1. 「[!UICONTROL  データ収集 ]」セクションまでスクロールし、「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを選択します。
-1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
+* [!UICONTROL  内部リンククリック数の収集 ]
+* [!UICONTROL  外部リンククリック数の収集 ]
+* [!UICONTROL  ダウンロードリンクのクリック数を収集 ]
+
+詳細は、[`clickCollection`](clickcollection.md) を参照してください。
 
 ## Web SDK JavaScript ライブラリを使用して自動リンクトラッキングを有効にします {#library}
 
@@ -48,7 +47,7 @@ ht-degree: 0%
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });

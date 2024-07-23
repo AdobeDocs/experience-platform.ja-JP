@@ -1,12 +1,12 @@
 ---
 title: 複数の Web SDK インスタンスの使用
 description: 複数のExperience Platform Web SDK プロパティを操作する方法を説明します。
-keywords: 複数のプロパティ；設定；sendEvent;edgeConfigId;orgId;
+keywords: 複数のプロパティ
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 63%
+source-wordcount: '215'
+ht-degree: 64%
 
 ---
 
@@ -38,24 +38,24 @@ SDK では、ベースコード内の配列に別の名前を追加すること�
 
 ```javascript
 titanium("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
 titanium("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 
 copper("configure", {
-  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
-  "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
+  datastreamId: "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  orgId: "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
 copper("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 ```
@@ -64,4 +64,4 @@ copper("sendEvent", {
 
 >[!IMPORTANT]
 >
->Cookie との競合を避けるために、各 Web SDK インスタンスは、独自の `edgeConfigId` と独自の `orgId` を持つ必要があります。
+>Cookie との競合を避けるために、各 Web SDK インスタンスは、独自の `datastreamId` と独自の `orgId` を持つ必要があります。

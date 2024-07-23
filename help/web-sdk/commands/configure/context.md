@@ -2,7 +2,7 @@
 title: context
 description: デバイス、環境、または場所のデータを自動的に収集します。
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 14%
@@ -129,8 +129,8 @@ ht-degree: 14%
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "context": ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
 });
 ```

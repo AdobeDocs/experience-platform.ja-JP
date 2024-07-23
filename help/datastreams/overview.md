@@ -2,7 +2,7 @@
 title: データストリームの概要
 description: データストリームが、クライアントサイドのExperience PlatformSDK 統合をAdobe製品やサードパーティの宛先と結び付ける上でどのように役立つかを説明します。
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 77%
@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # データストリームの概要
 
-データストリームは、Adobe Experience Platform Web および Mobile SDK を実装する際のサーバーサイド設定を表します。SDK の [`configure`](/help/web-sdk/commands/configure/overview.md) コマンドがクライアント上で処理される必要があるもの（`edgeDomain` など）を制御するのに対して、データストリームは、SDK のその他すべての設定を処理します。 リクエストが Adobe Experience Platform Edge Network に送付されると、データストリームを参照するために `edgeConfigId` が使用されます。これにより、web サイト上でコードを変更することなく、サーバーサイド設定を更新できます。
+データストリームは、Adobe Experience Platform Web および Mobile SDK を実装する際のサーバーサイド設定を表します。SDK の [`configure`](/help/web-sdk/commands/configure/overview.md) コマンドがクライアント上で処理される必要があるもの（`edgeDomain` など）を制御するのに対して、データストリームは、SDK のその他すべての設定を処理します。 リクエストが Adobe Experience Platform Edge Network に送付されると、データストリームを参照するために `datastreamId` が使用されます。これにより、web サイト上でコードを変更することなく、サーバーサイド設定を更新できます。
 
 Adobe Experience Platform UI またはデータ収集 UI 内の左側のナビゲーションの&#x200B;**[!UICONTROL データストリーム]**&#x200B;を選択することで、データストリームを作成および管理できます。
 

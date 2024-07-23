@@ -1,13 +1,13 @@
 ---
 title: clickCollection
 description: クリックコレクション設定を微調整します。
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollection`
 
@@ -25,26 +25,27 @@ Web SDK 2.25.0 以降でサポートされています。
 * **`clickCollection.eventGroupingEnabled`**: リンクトラッキングデータを送信するために、次のページまでライブラリが待機するかどうかを決定するブール値です。 次のページが読み込まれたら、リンクトラッキングデータをページ読み込みイベントと組み合わせます。 このオプションを有効にすると、Adobeに送信されるイベントの数が減ります。 `internalLinkEnabled` が無効になっている場合、この変数は何も行いません。
 * **`clickCollection.sessionStorageEnabled`**: リンクトラッキングデータをローカル変数ではなくセッションストレージに保存するかどうかを決定するブール値。 `internalLinkEnabled` または `eventGroupingEnabled` が無効になっている場合、この変数は何も行いません。
 
-  Adobeでは、`eventGroupingEnabled` を使用する場合にこの変数を有効にすることを強くお勧めします。 `sessionStorageEnabled` が無効な状態で `eventGroupingEnabled` が有効になっている場合、新しいページをクリックすると、セッションストレージに保持されないので、リンクトラッキングデータが失われます。 シングルページアプリケーションでは `sessionStorageEnabled` を無効にすることは可能ですが、SPA以外のページには理想的ではありません。
+  Adobeでは、シングルページアプリケーション以外で `eventGroupingEnabled` を使用する場合に、この変数を有効にすることを強くお勧めします。 `sessionStorageEnabled` が無効な状態で `eventGroupingEnabled` が有効になっている場合、新しいページをクリックすると、セッションストレージに保持されないので、リンクトラッキングデータが失われます。 シングルページアプリケーションは通常、新しいページに移動しないので、SPA ページにセッションストレージは必要ありません。
 * **`filterClickDetails`**：収集するリンクトラッキングデータを完全に制御できるコールバック関数。 このコールバック関数を使用して、リンクトラッキングデータの送信を変更、難読化または中止できます。 このコールバックは、リンク内の個人を特定できる情報など、特定の情報を省略する場合に役立ちます。
 
 ## Web SDK タグ拡張機能を使用したコレクション設定のクリック
 
-[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に、「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを選択します。 このチェックボックスをオンにすると、クリックコレクションに関する次のオプションが表示されます。
+[ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) の際には、次のいずれかのオプションを選択します。
 
-* [!UICONTROL  内部リンク ]
-   * [!UICONTROL  イベント グループ化を有効にする ]
-   * [!UICONTROL  セッションストレージの有効化 ]
-* [!UICONTROL  外部リンク ]
-* [!UICONTROL  ダウンロードリンク ]
+* [!UICONTROL  内部リンクの収集 ]
+   * [!UICONTROL  イベントのグループ化オプション ]:
+      * [!UICONTROL  イベントのグループ化なし ]
+      * [!UICONTROL  セッションストレージを使用したイベントのグループ化 ]
+      * [!UICONTROL  ローカルオブジェクトを使用したイベントのグループ化 ]
+* [!UICONTROL  外部リンクの収集 ]
+* [!UICONTROL  ダウンロードリンクの収集 ]
 * [!UICONTROL  フィルタークリックのプロパティ ]
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
 1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
-1. 「[!UICONTROL  データ収集 ]」セクションまでスクロールし、「**[!UICONTROL クリックデータ収集を有効にする]**」チェックボックスを選択します。
-1. 目的のクリックコレクション設定を選択します。
+1. 「[!UICONTROL  データ収集 ]」セクションまでスクロールし、目的のクリックコレクション設定を選択します。
 1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 
 [!UICONTROL  フィルタークリックのプロパティ ] コールバックにより、目的のコードを挿入できるカスタムコードエディターが開きます。 コードエディター内で、次の変数にアクセスできます。
@@ -72,11 +73,11 @@ Web SDK 2.25.0 以降でサポートされています。
 * `filterClickDetails`：関数が含まれていません。明示的に登録する必要があります。
 
 >[!TIP]
->Adobeでは、`eventGroupingEnabled` を有効にすることをお勧めします。これは、契約上の使用にカウントされるイベントの数を減らすのに役立つからです。
+>Adobeでは、`internalLinkEnabled` が有効な場合に `eventGroupingEnabled` を有効にすることをお勧めします。これにより、契約上の使用にカウントされるイベントの数が減るからです。
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {

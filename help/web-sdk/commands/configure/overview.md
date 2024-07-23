@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK の設定
 description: Web SDK を使用する場合は、configure コマンドを使用して必要な設定を行います。
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
-source-git-commit: 1c614ef525d55d7476d037c6838b35c3471e4501
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
@@ -29,13 +29,13 @@ Web SDK の設定は、`configure` コマンドで行います。 Web SDK の設
 
 `configure` コマンドを実行します。 このコマンドは、[`sendEvent`](../sendevent/overview.md) などの他の Web SDK コマンドを呼び出す前に必要です。
 
-[`edgeConfigId`](edgeconfigid.md) プロパティと [`orgId`](orgid.md) プロパティは必須です。 その他のプロパティはすべてオプションです。組織の実装要件に応じて指定します。
+[`datastreamId`](datastreamid.md) プロパティと [`orgId`](orgid.md) プロパティは必須です。 その他のプロパティはすべてオプションです。組織の実装要件に応じて指定します。
 
 サポートされている各コマンドの詳細については、このユーザーガイドの目次を参照してください。
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {

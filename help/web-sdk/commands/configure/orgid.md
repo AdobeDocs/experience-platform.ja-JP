@@ -2,7 +2,7 @@
 title: orgId
 description: orgId プロパティは、データの送信先の組織をAdobeに伝える文字列です。
 exl-id: 0e04e85a-800c-4927-a165-80a5a578f4c2
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
 });
 ```

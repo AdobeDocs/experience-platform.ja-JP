@@ -2,7 +2,7 @@
 title: onBeforeLinkClickSend
 description: リンクトラッキングデータが送信される直前に実行されるコールバック。
 exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
@@ -73,7 +73,7 @@ if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInterac
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   onBeforeLinkClickSend: function(content) {
     // Add, modify, or delete values
@@ -101,7 +101,7 @@ function lastChanceLinkLogic(content) {
 }
 
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   onBeforeLinkClickSend: lastChanceLinkLogic
 });    

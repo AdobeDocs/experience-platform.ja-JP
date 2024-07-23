@@ -1,13 +1,13 @@
 ---
 title: onBeforeEventSend
 description: Web SDK を設定して、データがAdobeに送信される直前に送信したデータを変更できるJavaScript関数を登録する方法を説明します。
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: 945f4fa1-380c-46aa-a92a-bbcfd6644751
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
 
 ---
-
 
 # `onBeforeEventSend`
 
@@ -72,7 +72,7 @@ if (myBotDetector.isABot()) {
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
@@ -114,7 +114,7 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   onBeforeEventSend: lastChanceLogic
 });    
