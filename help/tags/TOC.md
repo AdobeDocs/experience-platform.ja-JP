@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
+source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 97%
 
 ---
@@ -316,6 +316,7 @@ ht-degree: 97%
       * [デリゲート記述子 ID](./api/guides/delegate-descriptor-ids.md)
       * [値の暗号化](./api/guides/encrypting-values.md)
       * [エラー処理](./api/guides/error-handling.md)
+      * [プライベート拡張機能パッケージの共有](./api/guides/extension-packages.md)
       * [回答のフィルタリング](./api/guides/filtering.md)
       * [応答のページ分割](./api/guides/pagination.md)
       * [応答の並べ替え](./api/guides/sorting.md)
