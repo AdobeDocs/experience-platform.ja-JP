@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy ServiceUI でのプライバシージョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーションをまたいでプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 8ba06a5d572310e2822a5b3c9f82ff0721540f69
+source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1728'
 ht-degree: 46%
 
 ---
@@ -43,20 +43,19 @@ ht-degree: 46%
 | [!UICONTROL CCPA] | [!DNL California Consumer Privacy Act] |
 | [!UICONTROL CPRA_USA] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL FDBR_USA] | [!DNL Florida Digital Bill of Rights] |
 | [!UICONTROL GDPR] | 欧州連合 [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | ブラジル [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL MHMDA] | [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | ニュージーランド [!DNL Privacy Act] |
+| [!UICONTROL OCPA_USA] | [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA] | タイの [!DNL Personal Data Protection Act] |
+| [!UICONTROL TDPSA_USA] | [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA] | [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
-
-<!--Not released yet:
-| [!UICONTROL PDPA_VNM] | Vietnam's [!DNL Personal Data Protection Decree] |
- -->
 
 >[!NOTE]
 >
