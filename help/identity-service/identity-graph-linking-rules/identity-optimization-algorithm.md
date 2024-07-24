@@ -3,9 +3,9 @@ title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 badge: ベータ版
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1565'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->この機能はまだ使用できません。ID グラフリンクルールのベータ版プログラムは、開発用サンドボックスで 7 月に開始される予定です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在ベータ版です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。 機能とドキュメントは変更される場合があります。
 
 ID 最適化アルゴリズムは、ID グラフが個人を表すようにし、リアルタイム顧客プロファイルでの不要な ID の結合を防ぐ、ID サービス上のグラフアルゴリズムです。
 
@@ -162,6 +162,7 @@ ECID には未認証（匿名）イベントが格納され、CRM ID には認�
 ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
 
 * [ID グラフリンクルールの概要](./overview.md)
+* [名前空間の優先度](./namespace-priority.md)
 * [ID グラフリンクルールを設定するシナリオの例](./example-scenarios.md)
 * [ID リンクロジック](../features/identity-linking-logic.md)
 * [ID サービスとリアルタイム顧客プロファイル](../identity-and-profile.md)

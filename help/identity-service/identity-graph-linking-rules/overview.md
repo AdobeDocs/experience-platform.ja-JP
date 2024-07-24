@@ -3,9 +3,9 @@ title: ID グラフリンクルールの概要
 description: Id サービスでの ID グラフリンクルールについて説明します。
 badge: ベータ版
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,16 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->この機能はまだ使用できません。ID グラフリンクルールのベータ版プログラムは、開発用サンドボックスで 7 月に開始される予定です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在ベータ版です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。 機能とドキュメントは変更される場合があります。
 
 ## 目次 
 
 * [概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
+* [名前空間の優先度](./namespace-priority.md)
+* [グラフシミュレーション UI](./graph-simulation.md)
+* [ID 設定 UI](./identity-settings-ui.md)
+* [グラフ設定の例](./configuration.md)
 * [サンプルシナリオ](./example-scenarios.md)
 
 Adobe Experience Platform ID サービスとリアルタイム顧客プロファイルを使用すると、データが完全に取り込まれ、結合されたすべてのプロファイルが、CRM ID などの人物識別子を使用して 1 人の個人を表すと簡単に想定できます。 ただし、特定のデータが複数の異なるプロファイルを 1 つのプロファイルに結合しようとする可能性があるシナリオがあります（「グラフ折りたたみ」）。 これらの不要な結合を防ぐために、ID グラフリンクルールを通じて提供される設定を使用し、ユーザーに対して正確なパーソナライゼーションを可能にします。

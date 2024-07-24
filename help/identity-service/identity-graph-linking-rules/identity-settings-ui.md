@@ -2,10 +2,11 @@
 title: ID 設定 UI
 description: ID 設定ユーザーインターフェイスの使用方法を説明します。
 badge: ベータ版
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 0%
+source-wordcount: '517'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->この機能はまだ使用できません。ID グラフリンクルールのベータ版プログラムは、開発用サンドボックスで 7 月に開始される予定です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在ベータ版です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。 機能とドキュメントは変更される場合があります。
 
 ID 設定は、Adobe Experience Platform ID サービス UI の機能で、一意の名前空間を指定し、名前空間の優先度を設定するために使用できます。
 

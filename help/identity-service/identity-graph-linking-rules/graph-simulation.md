@@ -3,10 +3,10 @@ title: グラフシミュレーション UI ガイド
 description: ID サービス UI でグラフシミュレーションを使用する方法を説明します。
 badge: ベータ版
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 1%
+source-wordcount: '1436'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->この機能はまだ使用できません。ID グラフリンクルールのベータ版プログラムは、開発用サンドボックスで 7 月に開始される予定です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在ベータ版です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。 機能とドキュメントは変更される場合があります。
 
 [!DNL Graph Simulation] は、ID サービス UI のツールで、特定の ID の組み合わせでの ID グラフの動作と、[ID 最適化アルゴリズム ](./identity-optimization-algorithm.md) の設定方法をシミュレートするために使用できます。
 
@@ -172,6 +172,8 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 このドキュメントでは、[!DNL Graph Simulation] ツールを使用して、特定のルールセットと設定に基づいて ID データがどのように扱われるかを理解する方法を確認しました。 詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフリンクルール](overview.md)
-* [ID 最適化アルゴリズム](identity-optimization-algorithm.md)
-* [名前空間の優先度](namespace-priority.md)
+* [ID グラフリンクルール](./overview.md)
+* [設定ガイド](./configuration.md)
+* [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
+* [名前空間の優先度](./namespace-priority.md)
+* [グラフ設定の例](./example-configurations.md)
