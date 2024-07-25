@@ -3,7 +3,7 @@ title: Google Cloud Storage 接続
 description: Google クラウドストレージに接続し、オーディエンスをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
 source-wordcount: '1228'
 ht-degree: 62%
@@ -119,15 +119,15 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 [!DNL Google Cloud Storage] ストレージの場所に正常に接続してデータを書き出すには、バケットに対して次の [!DNL Google Cloud Storage] 権限が必要です。
 
-*`orgpolicy.policy.get`
-*`resourcemanager.projects.get`
-*`resourcemanager.projects.list`
-*`storage.managedFolders.create`
-*`storage.multipartUploads.abort`
-*`storage.multipartUploads.create`
-*`storage.multipartUploads.listParts`
-*`storage.objects.create`
-*`storage.objects.list`
+* `orgpolicy.policy.get`
+* `resourcemanager.projects.get`
+* `resourcemanager.projects.list`
+* `storage.managedFolders.create`
+* `storage.multipartUploads.abort`
+* `storage.multipartUploads.create`
+* `storage.multipartUploads.listParts`
+* `storage.objects.create`
+* `storage.objects.list`
 
 詳しくは、[!DNL Google Cloud Storage] の [ アクセス制御と権限 ](https://cloud.google.com/storage/docs/access-control/iam-permissions) を参照してください。
 
