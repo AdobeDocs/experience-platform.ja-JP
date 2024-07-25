@@ -5,10 +5,10 @@ title: 機械学習のインサイトによるリアルタイム顧客プロフ�
 type: Tutorial
 description: このドキュメントでは、機械学習のインサイトを使用してリアルタイム顧客プロファイルを強化する方法に関するガイドを提供します。
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: afa27069c7490848398c92973dd77810564b5993
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 15%
+source-wordcount: '630'
+ht-degree: 14%
 
 ---
 
@@ -16,11 +16,13 @@ ht-degree: 15%
 
 Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデルを作成、評価および活用してデータの予測とインサイトを生み出すためのツールとリソースを提供します。 機械学習のインサイトが [!DNL Profile] 対応データセットに取り込まれると、その同じデータが [!DNL Profile] レコードとして取り込まれ、[!DNL Adobe Experience Platform Segmentation Service] を使用してセグメント化できます。
 
+セグメント化のプロセスは、オーディエンスの評価方法に応じて異なります。 オーディエンスが **ストリーミング** として設定されている場合、モデルによってプロファイルに書き込まれた新しい更新はすべてリアルタイムで処理されます。 ただし、オーディエンスが **バッチ** 評価用に設定されている場合、新しい値は次のバッチで評価されます。
+
 このドキュメントでは、機械学習のインサイトを活用して [!DNL Real-Time Customer Profile] ーザーを強化できるチュートリアルへのリンクを提供します。
 
 ## はじめに
 
-以下のチュートリアルを完了するには、[!DNL Profile] データの取り込みとセグメントの作成に関する十分な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+以下のチュートリアルを完了するには、データの取り込みとオーディエンスの作成に関する十分な知識 [!DNL Profile] 必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、個々の顧客の完全で統一された表現を提供します。
 - [[!DNL Identity Service]](../../identity-service/home.md):Platform に取り込まれる様々なデータソースの ID を結合することで、[!DNL Real-Time Customer Profile] を有効にします。
@@ -41,20 +43,20 @@ Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデ
 
 スキーマとデータセットを準備したら、適切なモデルを使用してスコアリング実行を実行することで、スコアリングデータを生成してデータセットに取り込むことができます。
 
-## [!DNL Segment Builder] を使用したセグメントの作成 {#create-segments-using-the-segment-builder}
+## [!DNL Segment Builder] を使用したオーディエンスの作成 {#create-audiences-using-the-segment-builder}
 
-スコアリングデータインサイトを生成して [!DNL Profile] 対応データセットに取り込んだら、[!DNL Segment Builder] を使用して動的セグメントを作成できます。
+スコアリングデータインサイトを生成して [!DNL Profile] 対応データセットに取り込んだら、[!DNL Segment Builder] を使用して動的オーディエンスを作成できます。
 
 [!DNL Segment Builder] のワークスペースには、[!DNL Profile] のデータ要素を操作できる豊富な機能があります。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ&amp;ドロップタイルなどです。 [[!DNL Segment Builder]  ユーザーガイド ](../../segmentation/ui/segment-builder.md) に従って、次の内容を学習します。
 
 - 属性、イベント、既存オーディエンスの組み合わせを構成要素として使用して、セグメント定義を作成する。
-- ルールビルダーキャンバスとコンテナを使用して、セグメントルールの実行順序を制御します。
+- ルールビルダーキャンバスとコンテナを使用して、オーディエンスルールの実行順序を制御します。
 - 見込みオーディエンスの推定を表示し、必要に応じてセグメント定義を調整できます。
 - すべてのセグメント定義をスケジュールされたセグメント化で有効にする
 - ストリーミングセグメント化に対して指定したセグメント定義を有効にします。
 
 ## 次の手順 {#next-steps}
 
-セグメントとセグメントについて詳しくは、[ セグメン [!DNL Segment Builder] ョンサービスの概要 ](../../segmentation/home.md) を参照してください。
+オーディエンスと [!DNL Segment Builder] ーディエンスについて詳しくは、[ セグメント化サービスの概要 ](../../segmentation/home.md) を参照してください。
 
 [!DNL Real-Time Customer Profile] について詳しくは、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
