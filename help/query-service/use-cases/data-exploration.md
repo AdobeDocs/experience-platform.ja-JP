@@ -1,9 +1,10 @@
 ---
 title: SQL を使用したバッチ取り込みの調査、トラブルシューティング、検証
-description: Adobe Experience Platformのデータ取得プロセスを理解し、管理する方法を説明します。 このドキュメントでは、バッチの検証、エラーの処理、取り込まれたデータのクエリを行う方法について説明します。
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: Adobe Experience Platformのデータ取得プロセスを理解し、管理する方法を説明します。 このドキュメントには、バッチを検証し、取り込んだデータをクエリする方法が含まれています。
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 このドキュメントでは、取り込まれたバッチのレコードを SQL で検証および検証する方法を説明します。 このドキュメントでは、次の方法を説明します。
 
-- 取り込みプロセス中に発生する可能性のあるエラーの処理
 - データセットバッチメタデータへのアクセス
 - バッチのクエリによるトラブルシューティングとデータ整合性の確保
 
@@ -26,7 +26,6 @@ ht-degree: 0%
 
 - **データ取り込み**：様々な方法やプロセスなど、データを Platform に取り込む方法の基本については、[ データ取り込みの概要 ](../../ingestion/home.md) を参照してください。
 - **バッチ取り込み**：バッチ取り込みの基本概念については、[ バッチ取り込み API の概要 ](../../ingestion/batch-ingestion/overview.md) を参照してください。 特に、「バッチ」とは何か、および Platform のデータ取り込みプロセス内でどのように機能するかについて説明します。
-- **データ取り込みでのエラー処理**：データ取り込み中に [ 発生する可能性のある様々なタイプのエラー ](../../ingestion/quality/error-diagnostics.md#retrieve-errors) および [ その処理方法 ](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails) について説明します。
 - **データセット内のシステムメタデータ**：取り込んだデータを追跡およびクエリするためにシステムメタデータフィールドを使用する方法については、[ カタログサービスの概要 ](../../catalog/home.md) を参照してください。
 - **エクスペリエンスデータモデル（XDM）**:XDM スキーマと、それらが Platform に取り込まれたデータの構造と形式を表し検証する方法について詳しくは、[ スキーマ UI の概要 ](../../xdm/ui/overview.md) および [ のスキーマ構成の基本」 ](../../xdm/schema/composition.md) を参照してください。
 
@@ -57,11 +56,7 @@ GROUP BY _acp_system_metadata
 
 これらの結果は、システムがデータをバッチ化してデータレイクに保存する最も効率的な方法を決定するので、入力バッチの数が出力バッチの数と必ずしも一致しないことを示しています。
 
-次の例では、別のデータセットを使用して、この点について説明します。
-
->[!NOTE]
->
->この例を試す場合は、提供されたサンプルファイル（[`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)）を Platform に取り込み、スキーママッピングを設定できます。
+この例では、CSV ファイルを Platform に取り込み、`drug_checkout_data` というデータセットを作成したと想定しています。
 
 この `drug_checkout_data` ファイルは、35,000 件のレコードで構成される、深くネストされたセットです。 SQL 文 `SELECT * FROM drug_orders;` を使用して、JSON ベースの `drug_orders` データセット内のレコードの最初のセットをプレビューします。
 
@@ -97,7 +92,7 @@ GROUP  BY _acp_system_metadata
 
 >[!TIP]
 >
->バッチ ID を取得し、そのバッチ ID に関連付けられているクエリレコードを取得するには、まず Platform 内でバッチを作成する必要があります。 プロセスを自分でテストする場合は、CSV データを Platform に取り込むことができます。 [AI で生成されたレコメンデーションを使用して、既存の XDM スキーマに CSV ファイルをマッピングする ](../../ingestion/tutorials/map-csv/recommendations.md) 方法に関するガイドを参照してください。 [ サンプルプロファイル CSV ファイル ](../images/use-cases/sample-profiles.csv) は、こちらから入手できます。
+>バッチ ID を取得し、そのバッチ ID に関連付けられているクエリレコードを取得するには、まず Platform 内でバッチを作成する必要があります。 プロセスを自分でテストする場合は、CSV データを Platform に取り込むことができます。 [AI で生成されたレコメンデーションを使用して、既存の XDM スキーマに CSV ファイルをマッピングする ](../../ingestion/tutorials/map-csv/recommendations.md) 方法に関するガイドを参照してください。
 
 バッチを取り込んだら、データを取り込んだデータセットの [!UICONTROL  データセットアクティビティ ] タブ）に移動する必要があります。
 
