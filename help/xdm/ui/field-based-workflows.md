@@ -2,7 +2,7 @@
 title: スキーマエディターのフィールドベースのワークフロー
 description: 既存のフィールドグループのフィールドを Experience Data Model （XDM）スキーマに個別に追加する方法を説明します。
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Adobe Experience Platformは、エクスペリエンスデータモデル（XDM�
 
 一部の標準フィールドは同じ名前を共有しますが、構造は元のフィールドグループによって異なる場合があります。 標準フィールドがフィールドグループ構造内の親オブジェクト内にネストされている場合、子フィールドが追加されると、親フィールドもスキーマに含まれます。
 
-標準フィールドの横にあるプレビューアイコン（![ プレビューアイコン ](../images/ui/field-based-workflows/preview-icon.png)）を選択すると、そのフィールドグループの構造が表示され、ネストの仕組みをより深く理解できます。 標準フィールドをスキーマに追加するには、プラスアイコン（![ プラスアイコン ](../images/ui/field-based-workflows/add-icon.png)）を選択します。
+標準フィールドの横にあるプレビューアイコン（![ プレビューアイコン ](/help/images/icons/preview.png)）を選択すると、そのフィールドグループの構造が表示され、ネストの仕組みをより深く理解できます。 標準フィールドをスキーマに追加するには、プラスアイコン（![ プラスアイコン ](/help/images/icons/add-circle.png)）を選択します。
 
 ![ 提案された標準フィールドの項目でハイライト表示された追加アイコン。](../images/ui/field-based-workflows/add-standard-field.png)
 

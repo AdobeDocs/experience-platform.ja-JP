@@ -2,7 +2,7 @@
 title: アドホックスキーマの属性ベースのアクセス制御のサポート
 description: Adobe Experience Platform クエリサービスを通じて生成されたアドホックスキーマのデータフィールドへのアクセスを制限するためのガイドです。
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 7%
@@ -42,7 +42,7 @@ Adobe Experience Platformに取り込まれるデータは、エクスペリエ�
 
 ## Platform UI のスキーマインベントリでアドホックスキーマを検出します {#discover-ad-hoc-schemas}
 
-Platform UI でアドホックスキーマの表示を有効にするには、フィルターアイコン（![A フィルターアイコン](../images/data-governance/filter.png)）を選択し、表示される左側のパネルで「**[!UICONTROL  アドホックスキーマを表示 ]」を選択します。
+Platform UI でアドホックスキーマの表示を有効にするには、フィルターアイコン（![A フィルターアイコン](/help/images/icons/filter.png)）を選択し、表示される左側のパネルで「**[!UICONTROL  アドホックスキーマを表示 ]」を選択します。
 
 ![ 「アドホックスキーマを表示」切替スイッチが有効になっているスキーマダッシュボードのフィルターオプションの左側のパネル。](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -56,7 +56,7 @@ Platform UI でアドホックスキーマの表示を有効にするには、�
 
 ## スキーマまたはフィールドのラベルの編集
 
-スキーマ全体のラベルを編集するには、鉛筆アイコン（![ 鉛筆アイコン。](../images/data-governance/edit-icon.png)）を選択し、[!UICONTROL  ラベル ] タブのスキーマ名の横に移動します。
+スキーマ全体のラベルを編集するには、鉛筆アイコン（![ 鉛筆アイコン。](/help/images/icons/edit.png)）を選択し、[!UICONTROL  ラベル ] タブのスキーマ名の横に移動します。
 
 ![ 鉛筆アイコンがハイライト表示されたスキーマワークスペースのラベル表示。](../images/data-governance/edit-entire-schema-labels.png)
 

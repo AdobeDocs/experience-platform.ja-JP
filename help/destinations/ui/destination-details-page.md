@@ -3,7 +3,7 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたオーディエンス、アクティブ化を編集したり、データフローを有効または無効にしたりするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 9%
@@ -28,19 +28,19 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
    ![ 宛先の参照 ](../assets/ui/details-page/browse-destinations.png)
 
-1. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/details-page/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
    ![ 宛先のフィルタリング ](../assets/ui/details-page/filter-destinations.png)
 
-1. 詳細情報を表示する宛先の行を選択します。 これにより、宛先 ID、宛先接続を作成したユーザー、その他の情報など、宛先に関する情報を含む適切なパネルが表示されます。
+3. 詳細情報を表示する宛先の行を選択します。 これにより、宛先 ID、宛先接続を作成したユーザー、その他の情報など、宛先に関する情報を含む適切なパネルが表示されます。
 
    ![ 右側のパネルの宛先 ID](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. または、表示する *宛先の名前* を選択して、宛先に関する他の情報を表示することもできます。
+4. または、表示する *宛先の名前* を選択して、宛先に関する他の情報を表示することもできます。
 
    ![宛先を選択](../assets/ui/details-page/destination-select.png)
 
-1. 宛先の詳細ページが右側のパネルに表示され、使用可能なコントロールが表示されます。
+5. 宛先の詳細ページが右側のパネルに表示され、使用可能なコントロールが表示されます。
 
    ![ 宛先の詳細 ](../assets/ui/details-page/destination-details.png)
 

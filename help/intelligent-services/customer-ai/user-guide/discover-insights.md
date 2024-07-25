@@ -5,7 +5,7 @@ feature: Customer AI
 title: 顧客 AI でインサイトを見つける
 description: このドキュメントは、Intelligent Services 顧客 AI ユーザーインターフェイスのサービスインスタンスインサイトを操作するためのガイドとして機能します。
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 27%
@@ -180,7 +180,7 @@ Platform UI に新しいセグメントを表示するには、左側のナビ�
 
 ![ バケットの例 ](../images/insights/churn_tab.png)
 
-表示される予定レートおよび実際のレートについて期間をフィルタリングできます。 **カレンダーアイコン** ![icon](../images/insights/calendar_icon.png) を選択してから、新しい日付範囲を選択します。 各バケットの結果が更新され、新しい日付範囲内に表示されます。
+表示される予定レートおよび実際のレートについて期間をフィルタリングできます。 **カレンダーアイコン** ![icon](/help/images/icons/calendar.png) を選択してから、新しい日付範囲を選択します。 各バケットの結果が更新され、新しい日付範囲内に表示されます。
 
 ![ 日付セレクター ](../images/insights/date_selector.png)
 

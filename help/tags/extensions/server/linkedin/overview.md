@@ -3,7 +3,7 @@ title: Linkedin Conversions API イベント転送拡張機能
 description: このAdobe Experience Platform イベント転送拡張機能を使用すると、Linkedin マーケティングキャンペーンのパフォーマンスを測定できます。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 3%
@@ -52,7 +52,7 @@ ht-degree: 3%
 | --- | --- |
 | [!UICONTROL メール] | コンバージョンイベントに関連付けられた連絡先のメールアドレス。 指定した値が既に SHA256 文字列でない限り、メール値は SHA256 の拡張機能コードでエンコードされます。 |
 | [!UICONTROL LinkedInのファーストパーティ広告トラッキング UUID] | これはファーストパーティ cookie ID です。 クリック URL にクリック ID パラメーター `li_fat_id` を付加したファーストパーティ Cookie を有効化するには、広告主は [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) からの拡張コンバージョントラッキングを有効にする必要があります。 |
-| [!UICONTROL  顧客情報データ ] | このフィールドには、メッセージと共に送信される追加の属性を含む JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](../../../images/extensions/server/aws/data-element-icon.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 使用できるキー値は、`firstName`、`lastName`、`companyName`、`title`、`country` です。 |
+| [!UICONTROL  顧客情報データ ] | このフィールドには、メッセージと共に送信される追加の属性を含む JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 使用できるキー値は、`firstName`、`lastName`、`companyName`、`title`、`country` です。 |
 
 {style="table-layout:auto"}
 

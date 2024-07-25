@@ -2,7 +2,7 @@
 title: Adobe Privacy 拡張機能の概要
 description: Adobe Experience Platform の Adobe Privacy タグ拡張機能について説明します。
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 89%
@@ -95,7 +95,7 @@ Adobe Privacy タグ拡張機能を使用する場合、必要なコールバッ
 
 ![アクションタイプの選択](../../../images/extensions/client/privacy/action-type.png)
 
-右側のパネルでは、アクションのコールバックとして機能するデータ要素を選択するよう求められます。 「データベース」アイコン（![「データベース」アイコン](../../../images/extensions/client/privacy/database.png)）をクリックし、前に作成したデータ要素をリストから選択します。 「**[!UICONTROL 変更を保持]**」を選択して続行します。
+右側のパネルでは、アクションのコールバックとして機能するデータ要素を選択するよう求められます。 「データベース」アイコン（![「データベース」アイコン](/help/images/icons/database.png)）をクリックし、前に作成したデータ要素をリストから選択します。 「**[!UICONTROL 変更を保持]**」を選択して続行します。
 
 ![データ要素の選択](../../../images/extensions/client/privacy/add-data-element.png)
 

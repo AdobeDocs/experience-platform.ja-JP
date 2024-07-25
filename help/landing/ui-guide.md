@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience PlatformUI の概要
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 3%
@@ -75,17 +75,17 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 ### アプリケーションの切り替え
 
-上部ナビゲーションの右側の次の項目は **アプリケーションスイッチャー** で、![ アプリケーションスイッチャー ](./images/user-guide/app-switcher-icon.png) アイコンで表されます。 このアイコンを選択すると、Experience Platform、Analytics、Assetsなど、組織がアクセスできるAdobeアプリケーションを切り替えることができます。
+上部ナビゲーションの右側の次の項目は **アプリケーションスイッチャー** で、![ アプリケーションスイッチャー ](/help/images/icons/apps.png) アイコンで表されます。 このアイコンを選択すると、Experience Platform、Analytics、Assetsなど、組織がアクセスできるAdobeアプリケーションを切り替えることができます。
 
 ### ヘルプ
 
-アプリケーション切り替えボタンの右側には、「**ヘルプとサポート** メニューが表示されます。このメニューは、「![ 疑問符/ヘルプ ](./images/user-guide/help-icon.png)」アイコンで表されます。 このアイコンを選択すると、ポップオーバーメニューが表示され、いくつかのヘルプとサポートリソースが含まれます。 「**[!UICONTROL ヘルプ]**」タブには、現在アクセスしているページに関連するドキュメントのリストが表示されます。 「**[!UICONTROL サポート]**」タブを使用すると、Adobeサポートチームとのサポートチケットを作成できます。 「**[!UICONTROL フィードバック]**」タブを使用すると、Platform に関するフィードバックをAdobeに送信できます。
+アプリケーション切り替えボタンの右側には、「**ヘルプとサポート** メニューが表示されます。このメニューは、「![ 疑問符/ヘルプ ](/help/images/icons/help.png)」アイコンで表されます。 このアイコンを選択すると、ポップオーバーメニューが表示され、いくつかのヘルプとサポートリソースが含まれます。 「**[!UICONTROL ヘルプ]**」タブには、現在アクセスしているページに関連するドキュメントのリストが表示されます。 「**[!UICONTROL サポート]**」タブを使用すると、Adobeサポートチームとのサポートチケットを作成できます。 「**[!UICONTROL フィードバック]**」タブを使用すると、Platform に関するフィードバックをAdobeに送信できます。
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### 通知とお知らせ
 
-**ベル/通知とお知らせ** アイコンで表される ![ 通知セクション ](images/user-guide/notification-icon.png)。 「**[!UICONTROL 通知]**」タブには、製品に関する重要な情報やその他の関連する更新が表示され、「**[!UICONTROL お知らせ]**」タブには、サービスのメンテナンスに関する情報が表示されます。
+**ベル/通知とお知らせ** アイコンで表される ![ 通知セクション ](/help/images/icons/bell.png)。 「**[!UICONTROL 通知]**」タブには、製品に関する重要な情報やその他の関連する更新が表示され、「**[!UICONTROL お知らせ]**」タブには、サービスのメンテナンスに関する情報が表示されます。
 
 ### ユーザープロファイル
 

@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Real-Time CDPの [!UICONTROL  属性ベースのアクセス制御 ] 機能の�
 特定のデータフローにアクセスラベルを適用するには：
 
 1. **[!UICONTROL 宛先]**/**[!UICONTROL 参照]** に移動し、ユーザーのアクセスを制限する宛先データフローを見つけます。
-1. [!UICONTROL  名前 ] 列の省略記号（`...`）を選択し、![ 詳細を編集コントロール ](/help/access-control/images/olac/key-icon.svg)**[!UICONTROL アクセスラベルを適用]** コントロールを使用して新しいラベルを追加し、データフローの既存のラベルを管理します。
+1. [!UICONTROL  名前 ] 列の省略記号（`...`）を選択し、![ 詳細を編集コントロール ](/help/images/icons/key.png)**[!UICONTROL アクセスラベルを適用]** コントロールを使用して新しいラベルを追加し、データフローの既存のラベルを管理します。
    ![ 宛先ワークスペースの参照表示で「アクセスラベルを適用」を選択します。](/help/access-control/images/olac/apply-access-labels.png)
 1. 宛先データフローに追加するラベルを選択して、「**[!UICONTROL 保存]**」を選択します。
    ![ 宛先データフローに適用するのアクセスラベルを選択します。](/help/access-control/images/olac/view-access-labels.png)

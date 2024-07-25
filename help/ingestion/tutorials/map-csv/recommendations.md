@@ -2,7 +2,7 @@
 title: AI で生成されたRecommendationsを使用して、CSV ファイルを XDM スキーマにマッピングする
 description: このチュートリアルでは、AI で生成されたレコメンデーションを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 82%
@@ -90,7 +90,7 @@ ML モデルを使用すると、CSV フィールドは既存の XDM フィー�
 
 ![ スキーマツリーの横で選択されている「[!UICONTROL  編集 ]」ボタン ](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-ダイアログが表示され、マッピング内の任意のフィールドの表示名、データタイプ、フィールドグループを編集できます。ソースフィールドの横にある「編集」アイコン（![編集アイコン](../../images/tutorials/map-csv-recommendations/edit-icon.png)）を選択して、右側の列の詳細を編集してから、「**[!UICONTROL 適用]**」を選択します。
+ダイアログが表示され、マッピング内の任意のフィールドの表示名、データタイプ、フィールドグループを編集できます。ソースフィールドの横にある「編集」アイコン（![編集アイコン](/help/images/icons/edit.png)）を選択して、右側の列の詳細を編集してから、「**[!UICONTROL 適用]**」を選択します。
 
 ![ 変更されているソースフィールドの推奨フィールドグループ。](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

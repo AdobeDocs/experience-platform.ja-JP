@@ -1,13 +1,13 @@
 ---
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3693'
 ht-degree: 65%
 
 ---
-
 
 # オーディエンスポータルの概要
 
@@ -90,7 +90,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 
 ### Customize {#customize}
 
-![ フィルター属性アイコン ](../images/ui/audience-portal/filter-attribute.png) を選択することで、オーディエンスポータルにフィールドを追加できます。 追加のフィールドには、ライフサイクルステータス、更新頻度、最終更新者、説明、作成者、アクセスラベルなどがあります。
+![ フィルター属性アイコン ](/help/images/icons/column-settings.png) を選択することで、オーディエンスポータルにフィールドを追加できます。 追加のフィールドには、ライフサイクルステータス、更新頻度、最終更新者、説明、作成者、アクセスラベルなどがあります。
 
 | フィールド | 説明 |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 | [!UICONTROL 既存] | 前回バッチセグメントジョブを実行してから過去 24 時間に、セグメントに&#x200B;**残って**&#x200B;いたプロファイルの数です。 |
 | [!UICONTROL 離脱] | 前回バッチセグメントジョブを実行してから過去 24 時間に、セグメントから&#x200B;**離脱**&#x200B;したプロファイルの数です。 |
 
-表示するフィールドを選択した後で、表示される列の幅を変更することもできます。 サイズを変更するには、列間の領域をドラッグするか、サイズを変更する列の ![ 矢印アイコン ](../images/ui/audience-portal/arrow-icon.png) を選択してから **[!UICONTROL 列のサイズ変更]** を選択します。
+表示するフィールドを選択した後で、表示される列の幅を変更することもできます。 サイズを変更するには、列間の領域をドラッグするか、サイズを変更する列の ![ 矢印アイコン ](/help/images/icons/chevron-down.png) を選択してから **[!UICONTROL 列のサイズ変更]** を選択します。
 
 ![ 「列をサイズ変更」ボタンがハイライト表示されている様子 ](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 
 様々な設定に基づいてオーディエンスをフィルタリングすることもできます。
 
-使用可能なオーディエンスをフィルタリングするには、![フィルターアイコン](../images/ui/audience-portal/filter-icon.png)を選択します。
+使用可能なオーディエンスをフィルタリングするには、![フィルターアイコン](/help/images/icons/filter.png)を選択します。
 
 ![フィルターアイコンがハイライト表示され、オーディエンスの参照ページが表示されています。](../images/ui/audience-portal/browse-select-filter.png)
 

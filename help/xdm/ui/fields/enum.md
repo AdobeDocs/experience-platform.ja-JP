@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での列挙フィールドと推奨値の定義
 description: Experience Platformユーザーインターフェイスで文字列フィールドの列挙と推奨値を定義する方法について説明します。
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 8%
@@ -40,7 +40,7 @@ Adobe Experience Platform ユーザーインターフェイスで [ 新しいフ
 
 「**[!UICONTROL 値]**」列で、フィールドの制約対象となる正確な値を指定する必要があります。 オプションで、制約にも人間にとってわかりやすい **[!UICONTROL 表示名]** を指定できます。これは、セグメント化での値の表現方法に影響します。
 
-引き続き **[!UICONTROL 行を追加]** を使用して、必要な制約とオプションラベルを列挙に追加するか、以前に追加した行の横にある削除アイコン（![ 削除アイコンの画像 ](../../images/ui/fields/enum/remove-icon.png)）を選択して削除します。 終了したら、「**[!UICONTROL 適用]** を選択して、変更をスキーマに適用します。
+引き続き **[!UICONTROL 行を追加]** を使用して、必要な制約とオプションラベルを列挙に追加するか、以前に追加した行の横にある削除アイコン（![ 削除アイコンの画像 ](/help/images/icons/remove-circle.png)）を選択して削除します。 終了したら、「**[!UICONTROL 適用]** を選択して、変更をスキーマに適用します。
 
 ![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 ](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -52,7 +52,7 @@ Adobe Experience Platform ユーザーインターフェイスで [ 新しいフ
 
 ![UI で「推奨値」オプションが選択されていることを示す画像 ](../../images/ui/fields/enum/suggested-add-row.png)
 
-**[!UICONTROL 表示名]** 列の下で、セグメント化 UI に表示する値にわかりやすい名前を付けます。 推奨値をさらに追加するには、「**[!UICONTROL 行を追加]**」を再度選択し、必要に応じてプロセスを繰り返します。 以前に追加した行を削除するには、該当する行の横にある ![ 削除アイコン ](../../images/ui/fields/enum/remove-icon.png) を選択します。
+**[!UICONTROL 表示名]** 列の下で、セグメント化 UI に表示する値にわかりやすい名前を付けます。 推奨値をさらに追加するには、「**[!UICONTROL 行を追加]**」を再度選択し、必要に応じてプロセスを繰り返します。 以前に追加した行を削除するには、該当する行の横にある ![ 削除アイコン ](/help/images/icons/remove-circle.png) を選択します。
 
 終了したら、「**[!UICONTROL 適用]** を選択して、変更をスキーマに適用します。
 
@@ -68,7 +68,7 @@ Adobe Experience Platform ユーザーインターフェイスで [ 新しいフ
 
 ![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 ](../../images/ui/fields/enum/suggested-standard.png)
 
-標準フィールドに新しい推奨値を追加するには、「**[!UICONTROL 行を追加]**」を選択します。 組織が以前に追加した推奨値を削除するには、該当する行の横にある ![ 削除アイコン ](../../images/ui/fields/enum/remove-icon.png) を選択します。
+標準フィールドに新しい推奨値を追加するには、「**[!UICONTROL 行を追加]**」を選択します。 組織が以前に追加した推奨値を削除するには、該当する行の横にある ![ 削除アイコン ](/help/images/icons/remove-circle.png) を選択します。
 
 ![UI の文字列フィールドに入力されている列挙値と表示名を示す画像 ](../../images/ui/fields/enum/suggested-standard-add.png)
 

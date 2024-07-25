@@ -4,7 +4,7 @@ description: Adobe Experience Platform ID サービスを利用すると、デ�
 title: UI での ID のデータフローの監視
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 18%
@@ -62,7 +62,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL グラフが更新されました]** | 新しいエッジで更新された既存の ID グラフの数。 |
 | **[!UICONTROL 失敗したデータフローの合計]** | 失敗したデータフロー実行の数。 |
 
-ソース名の横にあるフィルターアイコン ![ フィルターアイコン ](../assets/ui/monitor-identities/filter.png) を選択して、選択したソースのデータフローの ID 処理情報を確認できます。
+ソース名の横にあるフィルターアイコン ![ フィルターアイコン ](/help/images/icons/filter.png) を選択して、選択したソースのデータフローの ID 処理情報を確認できます。
 
 ![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したソースのデータフローを表示できます。](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -87,7 +87,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL グラフが更新されました]** | 新しいエッジで更新された既存の ID グラフの数。 |
 | **[!UICONTROL 失敗したデータフローの合計]** | 失敗したデータフロー実行の数。 |
 
-データフロー実行開始時間の横にあるフィルターアイコン ![ フィルター ](../assets/ui/monitor-identities/filter.png) を選択して、[!DNL Identity] のデータフロー実行に関する詳細を表示します。
+データフロー実行開始時間の横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter.png) を選択して、[!DNL Identity] のデータフロー実行に関する詳細を表示します。
 
 ![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したデータフローの詳細を表示できます。](../assets/ui/monitor-identities/dataflows-filter.png)
 

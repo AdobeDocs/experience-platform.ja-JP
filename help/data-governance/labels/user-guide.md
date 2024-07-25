@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI でのデータ使用ラベルの管理
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 93%
@@ -71,7 +71,7 @@ ht-degree: 93%
 
 ![データガバナンスがハイライト表示された[!UICONTROL データセット]ワークスペースの「[!UICONTROL データガバナンス]」タブ。](../images/labels/dataset-governance.png)
 
-データセットレベルでデータ使用ラベルを編集するには、最初にデータセット名の行にある鉛筆アイコン（![鉛筆アイコン。](../images/labels/edit-icon.png)）を選択します。
+データセットレベルでデータ使用ラベルを編集するには、最初にデータセット名の行にある鉛筆アイコン（![鉛筆アイコン。](/help/images/icons/edit.png)）を選択します。
 
 ![編集鉛筆アイコンがハイライト表示された[!UICONTROL データセット]ワークスペースの「[!UICONTROL データガバナンス]」タブ。](../images/labels/dataset-level-edit.png)
 

@@ -4,7 +4,7 @@ title: クエリサービスを使用したダッシュボードデータセッ�
 type: Documentation
 description: クエリサービスを使用して、Experience Platformでプロファイル、オーディエンス、宛先ダッシュボードを機能させる未加工データセットを調査し、処理する方法を説明します。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 37%
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Query Service] は、標準の SQL を使用し�
 >
 >システム生成データセットは、デフォルトでは非表示です。 デフォルトでは、「[!UICONTROL  参照 ] タブには、データの取り込み先のデータセットのみが表示されます。
 
-システム生成データセットを表示するには、フィルターアイコン（![A フィルターアイコン](./images/query/filter.png)）は、検索バーの左側にあります。
+システム生成データセットを表示するには、フィルターアイコン（![A フィルターアイコン](/help/images/icons/filter.png)）は、検索バーの左側にあります。
 
 ![ フィルターアイコンがハイライト表示されたデータセットの「参照」タブ。](./images/query/filter-datasets.png)
 

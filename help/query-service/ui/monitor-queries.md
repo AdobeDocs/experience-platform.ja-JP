@@ -2,7 +2,7 @@
 title: スケジュール済みクエリの監視
 description: クエリサービス UI を使用してクエリを監視する方法について説明します。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 26%
@@ -25,7 +25,7 @@ Adobe Experience Platform では、UI を使用して、すべてのクエリジ
 
 >[!NOTE]
 >
->アラート購読アイコン（![ アラート購読アイコン。](../images/ui/monitor-queries/alert-subscription-icon.png)）が、名称未設定列の各行に含まれている。 詳しくは、[アラート配信登録](#alert-subscription)の節を参照してください。
+>アラート購読アイコン（![ アラート購読アイコン。](/help/images/icons/alert-add.png)）が、名称未設定列の各行に含まれている。 詳しくは、[アラート配信登録](#alert-subscription)の節を参照してください。
 
 | 列 | 説明 |
 |---|---|
@@ -45,7 +45,7 @@ Adobe Experience Platform では、UI を使用して、すべてのクエリジ
 
 ## スケジュール済みクエリのテーブル設定のカスタマイズ {#customize-table}
 
-「[!UICONTROL スケジュール済みクエリ]」タブの列は、必要に応じて調整できます。[!UICONTROL  テーブルをカスタマイズ ] 設定ダイアログを開いて使用可能な列を編集するには、設定アイコン（![A 設定アイコン](../images/ui/monitor-queries/settings-icon.png)）を選択します。
+「[!UICONTROL スケジュール済みクエリ]」タブの列は、必要に応じて調整できます。[!UICONTROL  テーブルをカスタマイズ ] 設定ダイアログを開いて使用可能な列を編集するには、設定アイコン（![A 設定アイコン](/help/images/icons/column-settings.png)）を選択します。
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Adobe Experience Platform では、UI を使用して、すべてのクエリジ
 
 ### アラートの配信を登録 {#alert-subscription}
 
-スケジュールされたクエリ実行のアラートを購読するには、`...` （省略記号）またはアラート購読アイコン（![ アラート購読アイコン）を選択します。](../images/ui/monitor-queries/alert-subscription-icon.png)）を選択します。 インラインアクション ドロップダウンメニューが表示されます。 次に、使用可能なオプションから **[!UICONTROL 購読]** を選択します。
+スケジュールされたクエリ実行のアラートを購読するには、`...` （省略記号）またはアラート購読アイコン（![ アラート購読アイコン）を選択します。](/help/images/icons/alert-add.png)）を選択します。 インラインアクション ドロップダウンメニューが表示されます。 次に、使用可能なオプションから **[!UICONTROL 購読]** を選択します。
 
 ![ 省略記号、アラート購読アイコン、インラインアクションドロップダウンメニューがハイライト表示されたスケジュール済みクエリワークスペース。](../images/ui/monitor-queries/subscribe.png)
 
@@ -115,7 +115,7 @@ Adobe Experience Platform では、UI を使用して、すべてのクエリジ
 
 ### クエリの詳細の表示 {#query-details}
 
-情報アイコン（![ 情報アイコン](../images/ui/monitor-queries/information-icon.png)）を選択して、クエリの詳細パネルを表示します。 詳細パネルには、スケジュールされたクエリテーブルに含まれるファクト以外の、クエリに関するすべての関連情報が含まれます。 追加情報には、クエリ ID、最終変更日、クエリの SQL、スケジュール ID、現在の設定スケジュールが含まれます。
+情報アイコン（![ 情報アイコン](/help/images/icons/info.png)）を選択して、クエリの詳細パネルを表示します。 詳細パネルには、スケジュールされたクエリテーブルに含まれるファクト以外の、クエリに関するすべての関連情報が含まれます。 追加情報には、クエリ ID、最終変更日、クエリの SQL、スケジュール ID、現在の設定スケジュールが含まれます。
 
 ![ 情報アイコンと詳細パネルがハイライト表示された「スケジュールされたクエリ」タブ。](../images/ui/monitor-queries/details-panel.png)
 
@@ -151,7 +151,7 @@ Adobe Experience Platform では、UI を使用して、すべてのクエリジ
 
 ## クエリのフィルタリング {#filter}
 
-実行頻度に基づいてクエリをフィルタリングできます。「[!UICONTROL スケジュールされたクエリ]」タブで、フィルターアイコン（![フィルターアイコン](../images/ui/monitor-queries/filter-icon.png)）を選択して、フィルターサイドバーを開きます。
+実行頻度に基づいてクエリをフィルタリングできます。「[!UICONTROL スケジュールされたクエリ]」タブで、フィルターアイコン（![フィルターアイコン](/help/images/icons/filter.png)）を選択して、フィルターサイドバーを開きます。
 
 ![フィルターアイコンがハイライト表示された「スケジュールされたクエリ」タブ。](../images/ui/monitor-queries/filter-queries.png)
 

@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UI でのSource接続アカウントの詳細の更新
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 16%
@@ -33,7 +33,7 @@ ht-degree: 16%
 
 **[!UICONTROL アカウント]** ページが表示されます。 このページには、ソース、ユーザー名、データフロー数、作成日などの、表示可能なアカウントのリストが表示されます。
 
-左上のフィルターアイコン ![ フィルター ](../../images/tutorials/update/filter.png) を選択して、並べ替えパネルを開きます。
+左上のフィルターアイコン ![ フィルター ](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 

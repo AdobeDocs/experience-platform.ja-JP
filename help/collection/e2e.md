@@ -2,7 +2,7 @@
 title: エンドツーエンドでのデータ収集の概要
 description: Adobe Experience Platformのデータ収集機能を使用して、Adobe Experience Cloud ソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2616'
 ht-degree: 93%
@@ -228,7 +228,7 @@ Web サイト上で発生する可能性のあるほぼすべてのイベント�
 
 ![アクションタイプ](./images/e2e/action-type.png)
 
-画面が更新され、イベント送信アクションを設定するための追加のオプションが表示されます。「**[!UICONTROL タイプ]**」から、`eventType` XDM フィールドに入力するカスタムタイプの値を指定できます。「**[!UICONTROL XDM データ]**」から、前に作成した XDM データタイプの名前（パーセント記号で囲まれています）を入力するか、データベースアイコン（![データベースアイコン](./images/e2e/database-symbol.png)）をクリックしてリストから選択します。これは、最終的に Edge ネットワークに送信されるデータです。
+画面が更新され、イベント送信アクションを設定するための追加のオプションが表示されます。「**[!UICONTROL タイプ]**」から、`eventType` XDM フィールドに入力するカスタムタイプの値を指定できます。「**[!UICONTROL XDM データ]**」から、前に作成した XDM データタイプの名前（パーセント記号で囲まれています）を入力するか、データベースアイコン（![データベースアイコン](/help/images/icons/database.png)）をクリックしてリストから選択します。これは、最終的に Edge ネットワークに送信されるデータです。
 
 終了したら「**[!UICONTROL 変更を保持]**」を選択します。
 

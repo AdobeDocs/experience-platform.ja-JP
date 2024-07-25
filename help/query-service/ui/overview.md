@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Service UI ガイド
 description: Adobe Experience Platform クエリサービスは、クエリの書き込みと実行、以前に実行したクエリの表示、組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 71%
@@ -81,7 +81,7 @@ Platform UI のテンプレートについて詳しくは、[ クエリテンプ
 
 >
 >
->鉛筆アイコン（![ 鉛筆アイコンを選択します。](../images/ui/overview/edit-icon.png)）を選択し、クエリログの任意の行から [!DNL Query Editor] に移動します。 クエリは、編集に便利なように事前設定されています。
+>鉛筆アイコン（![ 鉛筆アイコンを選択します。](/help/images/icons/edit.png)）を選択し、クエリログの任意の行から [!DNL Query Editor] に移動します。 クエリは、編集に便利なように事前設定されています。
 
 クエリイベントによって自動生成されるログファイルについて詳しくは、[ クエリログのドキュメント ](./query-logs.md) を参照してください。
 

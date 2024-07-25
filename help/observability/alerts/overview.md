@@ -4,7 +4,7 @@ title: アラートの概要
 description: アラートルールの定義方法など、Adobe Experience Platformでのアラートの概要を説明します。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 89%
@@ -83,7 +83,7 @@ Platform UI でアラートを操作するには、Adobe Admin Console を通じ
 >
 >Platform で権限を管理する方法について詳しくは、[アクセス制御に関するドキュメント](../../access-control/ui/overview.md)を参照してください。
 
-「アラートの表示」権限を使用すると、右上隅のベルアイコン（![ ベルアイコン ](../images/alerts/overview/icon.png)）を選択して、受信したアラートを表示できます。
+「アラートの表示」権限を使用すると、右上隅のベルアイコン（![ ベルアイコン ](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
 
 ![](../images/alerts/overview/ui.png)
 

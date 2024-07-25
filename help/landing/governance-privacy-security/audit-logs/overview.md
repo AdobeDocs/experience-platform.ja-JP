@@ -2,7 +2,7 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platform で誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 40%
@@ -94,7 +94,7 @@ Platform UI の **[!UICONTROL 監査]** ワークスペース内で、様々なE
 >これは新機能なので、表示されるデータは 2022 年 3 月までさかのぼります。 選択したリソースによっては、2022 年 1 月以降、以前のデータを使用できる場合があります。
 
 
-ファネルアイコン（![ フィルターアイコン ](../../images/audit-logs/icon.png)）を選択し、フィルターコントロールのリストを表示して、結果を絞り込みます。 選択した様々なフィルターに関係なく、最新 1000 件のレコードのみが表示されます。
+ファネルアイコン（![ フィルターアイコン ](/help/images/icons/filter.png)）を選択し、フィルターコントロールのリストを表示して、結果を絞り込みます。 選択した様々なフィルターに関係なく、最新 1000 件のレコードのみが表示されます。
 
 ![ フィルタリングされたアクティビティログがハイライト表示された監査ダッシュボード。](../../images/audit-logs/filters.png)
 

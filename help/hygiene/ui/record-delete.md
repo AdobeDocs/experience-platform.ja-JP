@@ -3,7 +3,7 @@ title: レコードを削除
 description: Adobe Experience Platform UI でレコードを削除する方法を説明します。
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 28%
@@ -51,7 +51,7 @@ Platform の ID について詳しくは、次のドキュメントを参照し�
 
 次の手順では、単一のデータセットとすべてのデータセットのどちらからレコードを削除するかを決定します。 このオプションを使用できない場合は、ガイドの [ID の提供 ](#provide-identities) の節に進みます。
 
-「**[!UICONTROL レコードの詳細]** セクションで、ラジオボタンを使用して、特定のデータセットとすべてのデータセットを選択します。 「**[!UICONTROL データセットを選択]**」を選択する場合は、データベースアイコン（![ データベースアイコン ](../images/ui/record-delete/database-icon.png)）に進んで、使用可能なデータセットのリストを提供するダイアログを開きます。 リストから目的のデータセットを選択し、続いて **[!UICONTROL 完了]** を選択します。
+「**[!UICONTROL レコードの詳細]** セクションで、ラジオボタンを使用して、特定のデータセットとすべてのデータセットを選択します。 「**[!UICONTROL データセットを選択]**」を選択する場合は、データベースアイコン（![ データベースアイコン ](/help/images/icons/database.png)）に進んで、使用可能なデータセットのリストを提供するダイアログを開きます。 リストから目的のデータセットを選択し、続いて **[!UICONTROL 完了]** を選択します。
 
 ![ データセットが選択され ] 完了 [!UICONTROL  がハイライト表示された [!UICONTROL  データセットを選択 ] ダイアログ ](../images/ui/record-delete/select-dataset.png)
 
@@ -130,7 +130,7 @@ ID を 1 つずつ入力できるコントロールが表示されます。 **[!
 
 ![ID フィールドを手動で追加したリクエスト作成ワークフロー ](../images/ui/record-delete/identity-added.png)
 
-さらに ID を追加するには、プラスアイコン（![A プラスアイコン。](../images/ui/record-delete/plus-icon.png)）を選択するか、**[!UICONTROL ID を追加]** を選択します。
+さらに ID を追加するには、プラスアイコン（![A プラスアイコン。](/help/images/icons/tree-expand-all.png)）を選択するか、**[!UICONTROL ID を追加]** を選択します。
 
 ![ プラスアイコンと ID を追加アイコンがハイライトされたリクエスト作成ワークフロー ](../images/ui/record-delete/more-identities.png)
 

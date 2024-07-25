@@ -3,7 +3,7 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 83%
@@ -20,7 +20,7 @@ ht-degree: 83%
 
 ![オーディエンス構成 UI.](../images/ui/audience-composition/audience-composition.png)
 
-タイトルや説明など、構成の詳細を変更するには、![スライダー](../images/ui/audience-composition/sliders.png) ボタンを選択します。
+タイトルや説明など、構成の詳細を変更するには、![スライダー](/help/images/icons/properties.png) ボタンを選択します。
 
 **[!UICONTROL 構成のプロパティ]**&#x200B;ポップオーバーが表示されます。タイトルや説明など、構成の詳細をここに挿入できます。
 
@@ -114,7 +114,7 @@ ht-degree: 83%
 
 ### 属性別に除外 {#exclude-attribute}
 
-属性別に除外する場合は、「**[!UICONTROL 除外ルール]**」セクションにある![フィルター](../images/ui/audience-composition/filter-attribute.png)アイコンを選択することで、除外する属性を選択できます。
+属性別に除外する場合は、「**[!UICONTROL 除外ルール]**」セクションにある![フィルター](/help/images/icons/project-edit.png)アイコンを選択することで、除外する属性を選択できます。
 
 ![属性セクションがハイライト表示され、除外する属性を選ぶために選択すべき場所が示されている様子。](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ ht-degree: 83%
 
 **[!UICONTROL 強化]**&#x200B;ブロックが追加されます。このブロックを選択すると、エンリッチメントに関する詳細が右側のパネルに表示されます。これには、ブロックのラベルとエンリッチメントデータセットが含まれます。
 
-オーディエンスの強化に使用するデータセットを選択するには、![フィルター](../images/ui/audience-composition/filter-attribute.png)アイコンを選択します。
+オーディエンスの強化に使用するデータセットを選択するには、![フィルター](/help/images/icons/project-edit.png)アイコンを選択します。
 
 ![フィルターボタンがハイライト表示されます。これを選択すると、[!UICONTROL データセットを選択]ポップオーバーが表示されます。](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ ht-degree: 83%
 
 ![[!UICONTROL エンリッチメント条件]領域がハイライト表示されます。](../images/ui/audience-composition/enrichment-criteria.png)
 
-「**[!UICONTROL ソース結合キー]**」を選択して、![フィルター](../images/ui/audience-composition/filter-attribute.png)アイコンを選択します。
+「**[!UICONTROL ソース結合キー]**」を選択して、![フィルター](/help/images/icons/project-edit.png)アイコンを選択します。
 
 ![[!UICONTROL ソース結合キー]のフィルターアイコンがハイライト表示されます。](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ ht-degree: 83%
 
 ![ソース結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-「**[!UICONTROL エンリッチメントデータセット結合キー]**」を選択し、![フィルター](../images/ui/audience-composition/filter-attribute.png)アイコンを選択します。
+「**[!UICONTROL エンリッチメントデータセット結合キー]**」を選択し、![フィルター](/help/images/icons/project-edit.png)アイコンを選択します。
 
 ![[!UICONTROL エンリッチメントデータセット結合キー]のフィルターアイコンがハイライト表示されます。](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -216,7 +216,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![ランクブロックがハイライト表示され、ランクブロックの詳細も表示されています。](../images/ui/audience-composition/rank.png)
 
-オーディエンスのランク付けの基準にする属性を選択するには、![フィルター](../images/ui/audience-composition/filter-attribute.png)アイコンを選択します。
+オーディエンスのランク付けの基準にする属性を選択するには、![フィルター](/help/images/icons/project-edit.png)アイコンを選択します。
 
 ![フィルターアイコンがハイライト表示され、プロファイル属性選択画面にアクセスするために選択すべき項目が示されている様子。](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ### 属性で分割 {#split-attribute}
 
-属性別に分割する場合、オーディエンスは指定された属性に基づいて分割されます分割の基準にする属性を選択するには、**[!UICONTROL 分割]**&#x200B;ブロック、![フィルター](../images/ui/audience-composition/filter-attribute.png)アイコンの順に選択します。
+属性別に分割する場合、オーディエンスは指定された属性に基づいて分割されます分割の基準にする属性を選択するには、**[!UICONTROL 分割]**&#x200B;ブロック、![フィルター](/help/images/icons/project-edit.png)アイコンの順に選択します。
 
 ![フィルターボタンが選択され、属性別にフィルターする方法が示されています。](../images/ui/audience-composition/select-split-attribute.png)
 

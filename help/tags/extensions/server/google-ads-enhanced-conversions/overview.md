@@ -3,7 +3,7 @@ title: Google Ads Enhanced Conversions 拡張機能
 description: Adobe Experience Platformのイベント転送用のGoogle Ads Enhanced Conversions 拡張機能について説明します。
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -103,7 +103,7 @@ ht-degree: 1%
 拡張機能を設定するには、次の 2 つの必須フィールドに入力する必要があります。
 
 1. **[!UICONTROL 顧客 ID]**:[!DNL Google Ads] アカウントを一意に識別する ID。 この値を見つけるには、[!DNL Google Ads] にログインし、**[!DNL Help]**/**[!DNL Customer ID]** に移動します。
-1. **[!UICONTROL アクセストークンデータ要素]**：データ要素アイコン（![ データ要素アイコン ](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)）を選択し、（前の手順で設定した [Google OAuth2 シークレットデータ要素をメニューから選択し ](#create-secret-data-element) す。
+2. **[!UICONTROL アクセストークンデータ要素]**：データ要素アイコン（![ データ要素アイコン ](/help/images/icons/database.png)）を選択し、（前の手順で設定した [Google OAuth2 シークレットデータ要素をメニューから選択し ](#create-secret-data-element) す。
 
 終了したら、「**[!UICONTROL 保存]**」を選択して拡張機能をインストールします。
 

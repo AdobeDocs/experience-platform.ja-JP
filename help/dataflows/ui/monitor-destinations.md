@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3337'
 ht-degree: 71%
@@ -178,7 +178,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >title="アクティブ化"
 >abstract="宛先アクティブ化ビューには、オーディエンスのアクティブ化ステータスに関する情報と、一意の ID を生成するリアルタイム顧客プロファイルから取得した指標が含まれます。"
 
-[!UICONTROL モニタリング]ダッシュボードにアクセスするには、左側のナビゲーションで「**[!UICONTROL モニタリング]**」（![モニタリングアイコン](../assets/ui/monitor-destinations/monitoring-icon.png)）を選択します。 [!UICONTROL モニタリング]ページで「[!UICONTROL 宛先]」を選択します。 [!UICONTROL モニタリング]ダッシュボードには、宛先実行ジョブに関する指標と情報が含まれています。
+[!UICONTROL モニタリング]ダッシュボードにアクセスするには、左側のナビゲーションで「**[!UICONTROL モニタリング]**」（![モニタリングアイコン](/help/images/icons/monitoring.png)）を選択します。 [!UICONTROL モニタリング]ページで「[!UICONTROL 宛先]」を選択します。 [!UICONTROL モニタリング]ダッシュボードには、宛先実行ジョブに関する指標と情報が含まれています。
 
 [!UICONTROL 宛先]ダッシュボードを使用すると、アクティブ化フローの正常性を全体的に把握できます。 まず、すべてのバッチ宛先とストリーミング宛先について集計レベルでインサイトを取得し、データフロー、データフロー実行およびアクティブ化されたオーディエンスの詳細ビューにドリルダウンして、アクティベーションデータを詳しく調べます。 [!UICONTROL モニタリング]ダッシュボードの画面では、指標やエラーの説明を通じて実用的なインサイトが提供され、アクティブ化シナリオで発生する可能性のある問題のトラブルシューティングに役立ちます。
 
@@ -199,7 +199,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 ![ アクティブ化された宛先の変更ルックバック日付範囲コントロールがハイライト表示されている様子 ](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-矢印アイコン（![矢印アイコン](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)）を使用すると、画面上部のカードを展開したり展開解除したりできます。このカードでは、宛先のタイプ（ストリーミングまたはバッチ）に基づいて、アクティブ化の詳細に関する情報を一目で確認できます。
+矢印アイコン（![矢印アイコン](/help/images/icons/chevron-up.png)）を使用すると、画面上部のカードを展開したり展開解除したりできます。このカードでは、宛先のタイプ（ストリーミングまたはバッチ）に基づいて、アクティブ化の詳細に関する情報を一目で確認できます。
 
 - **[!UICONTROL ストリーミングのアクティブ化率]**：正常にアクティブ化またはスキップされた受信 ID の割合を表します。この割合の計算に使用される数式について詳しくは、このページの[ストリーミング宛先のデータフロー実行](#dataflow-runs-for-streaming-destinations)節を参照してください。
 - **[!UICONTROL 失敗したデータフロー実行のバッチ]**：選択した時間枠での失敗したデータフロー実行の数を表します。
@@ -226,13 +226,13 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 ![ドロップダウンセレクターを使用した宛先のフィルタリング](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-さらに、検索バーに宛先を入力して、1 つの宛先に分離することもできます。宛先のデータフローを表示する場合は、その横にあるフィルター ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を選択して、アクティブなデータフローのリストを表示できます。
+さらに、検索バーに宛先を入力して、1 つの宛先に分離することもできます。宛先のデータフローを表示する場合は、その横にあるフィルター ![フィルター](/help/images/icons/filter-add.png) を選択して、アクティブなデータフローのリストを表示できます。
 
 ![ 監視表示でハイライト表示されている検索バーを使用して宛先をフィルタリング ](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 すべての宛先の既存のデータフローをすべて表示する場合は、「**[!UICONTROL データフロー]**」を選択します。
 
-データフローのリストが表示され、最後のデータフロー実行で並べ替えられます。監視する宛先を見つけ、その横にあるフィルター ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を選択してから、詳細情報が必要なデータフローの横にあるフィルター ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を選択すると、特定のデータフローの追加の詳細を表示できます。
+データフローのリストが表示され、最後のデータフロー実行で並べ替えられます。監視する宛先を見つけ、その横にあるフィルター ![フィルター](/help/images/icons/filter-add.png) を選択してから、詳細情報が必要なデータフローの横にあるフィルター ![フィルター](/help/images/icons/filter-add.png) を選択すると、特定のデータフローの追加の詳細を表示できます。
 
 ![ 監視ダッシュボードでハイライト表示されたすべてのデータフロー。](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 ![ データフローパネルでハイライト表示されているオーディエンス。](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 オーディエンスレベルのビューでは、指標は、選択した時間範囲内の複数のデータフロー実行にわたって集計されます。 複数のデータフロー実行がある場合、オーディエンスレベルからドリルダウンして、データフロー実行ごとの分類を、選択したオーディエンスでフィルタリングした結果を表示できます。
-フィルターボタン ![ フィルター ](../assets/ui/monitor-destinations/filter-add.png) を使用すると、データフロー内の各オーディエンスのデータフロー実行ビューにドリルダウンできます。
+フィルターボタン ![ フィルター ](/help/images/icons/filter-add.png) を使用すると、データフロー内の各オーディエンスのデータフロー実行ビューにドリルダウンできます。
 
 ### データフロー実行ページ {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 ![ オーディエンスのデータフロー実行をフィルタリングする方法を示すラジオボタン。](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-特定のデータフロー実行の詳細を表示するには、データフロー実行開始時間の横にあるフィルター ![フィルター](../assets/ui/monitor-destinations/filter-add.png) を選択して、データフロー実行の詳細ページを表示します。
+特定のデータフロー実行の詳細を表示するには、データフロー実行開始時間の横にあるフィルター ![フィルター](/help/images/icons/filter-add.png) を選択して、データフロー実行の詳細ページを表示します。
 
 ![ 監視ダッシュボードのデータフロー実行フィルターを使用して、特定のデータフロー実行の詳細情報をドリルインします。](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

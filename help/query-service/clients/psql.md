@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQL のクエリサービスへの接続
 description: PSQL は、お使いのマシンに PostgreSQL をインストールするときに提供されるコマンドラインインターフェイスです。 次の手順に従ってインストールできます。
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 11%
@@ -21,7 +21,7 @@ PSQL は、コンピューターに [!DNL PostgreSQL] をインストールす�
 
 お使いのコンピューターに PSQL をインストールしたら、PSQL をクエリサービスに接続する準備が整います。 [!DNL Platform] UI に戻り、「**[!UICONTROL クエリ]**」、「**[!UICONTROL 資格情報]** の順に選択します。
 
-「**[!UICONTROL PSQL コマンド]**」セクションで、**[!UICONTROL クリップボードにコピー]** アイコン（![ コピーアイコン ](../images/clients/psql/copy-icon.png)）を選択して、コマンド文字列をコピーします。
+「**[!UICONTROL PSQL コマンド]**」セクションで、**[!UICONTROL クリップボードにコピー]** アイコン（![ コピーアイコン ](/help/images/icons/copy.png)）を選択して、コマンド文字列をコピーします。
 
 ![ 「コピー」アイコンがハイライト表示されたクエリダッシュボードの「資格情報」タブ ](../images/clients/psql/connect-bi.png)
 

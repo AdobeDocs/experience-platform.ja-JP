@@ -4,7 +4,7 @@ description: リアルタイム顧客プロファイルを使用すると、オ�
 title: UI でのプロファイルのデータフローの監視
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 17%
@@ -63,7 +63,7 @@ ht-degree: 17%
 | **[!UICONTROL プロファイルフラグメントの合計]** | 更新された既存のすべての [!DNL Profile] フラグメントと作成された新しい [!DNL Profile] フラグメントを含む、[!DNL Profile] に書き込まれたレコードの合計数です。 |
 | **[!UICONTROL 失敗したデータフローの合計]** | 失敗したデータフロー実行の数。 |
 
-ソース名の横にあるフィルターアイコン ![ フィルターアイコン ](../assets/ui/monitor-profiles/filter.png) を選択して、選択したソースのデータフローのプロファイル処理情報を確認できます。
+ソース名の横にあるフィルターアイコン ![ フィルターアイコン ](/help/images/icons/filter.png) を選択して、選択したソースのデータフローのプロファイル処理情報を確認できます。
 
 ![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したソースのデータフローを表示できます。](../assets/ui/monitor-profiles/sources-filter.png)
 
@@ -86,7 +86,7 @@ ht-degree: 17%
 | **[!UICONTROL 失敗したフロー実行の合計]** | 失敗したデータフロー実行の数。 |
 | **[!UICONTROL 前回のアクティブ]** | 前回データフローが実行されたタイムスタンプ。 |
 
-データフロー実行開始時間の横にあるフィルターアイコン ![ フィルター ](../assets/ui/monitor-profiles/filter.png) を選択して、[!DNL Profile] のデータフロー実行に関する詳細を表示します。
+データフロー実行開始時間の横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter.png) を選択して、[!DNL Profile] のデータフロー実行に関する詳細を表示します。
 
 ![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したデータフローの詳細を表示できます。](../assets/ui/monitor-profiles/dataflows-filter.png)
 

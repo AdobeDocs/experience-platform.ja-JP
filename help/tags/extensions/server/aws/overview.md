@@ -3,7 +3,7 @@ title: AWS拡張機能の概要
 description: Adobe Experience Platformでのイベント転送用のAWS拡張機能について説明します。
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 7%
@@ -66,7 +66,7 @@ ht-degree: 7%
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  ペイロード ] | このフィールドには、[!DNL Kinesis] データストリームに転送されるデータが JSON 形式で格納されます。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](../../../images/extensions/server/aws/data-element-icon.png)）を選択して、ペイロードを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
+| [!UICONTROL  ペイロード ] | このフィールドには、[!DNL Kinesis] データストリームに転送されるデータが JSON 形式で格納されます。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、ペイロードを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
 
 {style="table-layout:auto"}
 

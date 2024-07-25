@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UI でのデータフローの削除
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 18%
@@ -33,7 +33,7 @@ ht-degree: 18%
 
 **[!UICONTROL データフロー]** ページが表示されます。 このページには、ターゲットデータセット、ソース、アカウント名、作成日に関する情報を含め、表示可能なデータフローがリストされます。
 
-左上のフィルターアイコン（![filter-icon](../../images/tutorials/delete/filter.png)）を選択して、並べ替えパネルを開きます。
+左上のフィルターアイコン（![filter-icon](/help/images/icons/filter.png)）を選択して、並べ替えパネルを開きます。
 
 ![ データフロー ](../../images/tutorials/delete/dataflows.png)
 

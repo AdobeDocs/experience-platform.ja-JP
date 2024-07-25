@@ -5,7 +5,7 @@ title: スキーマエディターを使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 80%
@@ -115,7 +115,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 >[!NOTE]
 >
->スキーマエディター内では、標準（Adobe生成）のクラスおよびフィールドグループは、南京錠アイコン（![A 南京錠アイコン）で示されます。](../images/ui/explore/padlock-icon.png)。南京錠は、クラスまたはフィールドグループ名の横の左側のパネルに表示されるほか、システム生成リソースの一部であるスキーマ図のフィールドの横にも表示されます。
+>スキーマエディター内では、標準（Adobe生成）のクラスおよびフィールドグループは、南京錠アイコン（![A 南京錠アイコン）で示されます。](/help/images/icons/lock-closed.png)。南京錠は、クラスまたはフィールドグループ名の横の左側のパネルに表示されるほか、システム生成リソースの一部であるスキーマ図のフィールドの横にも表示されます。
 >
 >![ 南京錠アイコンがハイライトされたスキーマエディター ](../images/ui/explore/padlock-icon-highlight.png)
 

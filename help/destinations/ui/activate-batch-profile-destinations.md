@@ -3,7 +3,7 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '3975'
 ht-degree: 57%
@@ -529,14 +529,14 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 各外部オーディエンスのエンリッチメント属性を選択するには、次の手順に従います。
 
-1. **[!UICONTROL エンリッチメント属性]** 列で、「![ 編集ボタン ](../assets/ui/activate-batch-profile-destinations/edit-button.svg) （編集）」ボタンを選択します。
-2. **[!UICONTROL エンリッチメント属性を追加]** を選択します。 新しい空のスキーマフィールドが表示されます。
+1. **[!UICONTROL エンリッチメント属性]** 列で、「![ 編集ボタン ](/help/images/icons/edit.png) （編集）」ボタンを選択します。
+1. **[!UICONTROL エンリッチメント属性を追加]** を選択します。 新しい空のスキーマフィールドが表示されます。
    ![ エンリッチメント属性モーダル画面を示す UI 画像。](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. 空のフィールドの右側にあるボタンを選択して、フィールド選択画面を開きます。
-4. オーディエンス用に書き出す属性を選択します。
+1. 空のフィールドの右側にあるボタンを選択して、フィールド選択画面を開きます。
+1. オーディエンス用に書き出す属性を選択します。
    ![ エンリッチメント属性リストを示す UI 画像。](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. 書き出すすべての属性を追加したら、「保存して閉じる **[!UICONTROL を選択し]** す。
-6. 外部オーディエンスごとに、これらの手順を繰り返します。
+1. 書き出すすべての属性を追加したら、「保存して閉じる **[!UICONTROL を選択し]** す。
+1. 外部オーディエンスごとに、これらの手順を繰り返します。
 
 属性を書き出さずに宛先に対して外部オーディエンスをアクティブ化する場合は、「エンリッチメント属性を除外 **[!UICONTROL 切替スイッチを有効に]** ます。 このオプションでは、外部オーディエンスからプロファイルが書き出されますが、対応する属性は宛先に送信されません。
 

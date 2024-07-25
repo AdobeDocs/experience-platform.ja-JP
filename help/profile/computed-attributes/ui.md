@@ -2,7 +2,7 @@
 title: 計算属性 UI ガイド
 description: Adobe Experience Platform UI を使用して計算済み属性を作成、表示、更新する方法について説明します。
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 7%
@@ -32,7 +32,7 @@ Experience PlatformUI で、左側のナビゲーションにある **[!UICONTRO
 
 ![ 「[!UICONTROL  プロファイル ]」セクションと [!UICONTROL  計算済み属性 ] タブがハイライト表示され、ユーザーが計算済み属性の参照ページにアクセスする方法が示されます。](./images/ui/browse.png)
 
-表示するフィールドを選択するには、![ 列を設定アイコン ](./images/ui/configure-icon.png) を選択して、表示するフィールドを追加または削除します。
+表示するフィールドを選択するには、![ 列を設定アイコン ](/help/images/icons/column-settings.png) を選択して、表示するフィールドを追加または削除します。
 
 | フィールド | 説明 |
 | ----- | ----------- |
@@ -47,7 +47,7 @@ Experience PlatformUI で、左側のナビゲーションにある **[!UICONTRO
 | [!UICONTROL 作成日] | 計算属性が作成された日時を示すタイムスタンプ。 |
 | [!UICONTROL 最終変更日] | 計算属性が最後に変更された日時を示すタイムスタンプ。 |
 
-また、表示される計算済み属性をライフサイクルステータスに基づいてフィルタリングすることもできます。 ![ ファネル ](./images/ui/filter-icon.png) アイコンを選択します。
+また、表示される計算済み属性をライフサイクルステータスに基づいてフィルタリングすることもできます。 ![ ファネル ](/help/images/icons/filter.png) アイコンを選択します。
 
 ![ フィルターアイコンがハイライト表示されている様子 ](./images/ui/select-filter.png)
 

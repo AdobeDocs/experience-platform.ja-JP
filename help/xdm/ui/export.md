@@ -4,7 +4,7 @@ title: UI での XDM スキーマの書き出し
 description: Adobe Experience Platform ユーザーインターフェイスで既存のスキーマを別のサンドボックスまたは組織に書き出す方法について説明します。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 11%
@@ -40,7 +40,7 @@ Platform UI では XDM リソースを書き出すことができますが、ワ
 >
 >探している XDM リソースを見つける方法について詳しくは、[XDM リソースの調査 ](./explore.md) に関するガイドを参照してください。
 
-次に、使用可能なオプションから「**[!UICONTROL JSON をコピー]**」アイコン（![ コピーアイコン ](../images/ui/export/icon.png)）を選択します。
+次に、使用可能なオプションから「**[!UICONTROL JSON をコピー]**」アイコン（![ コピーアイコン ](/help/images/icons/copy.png)）を選択します。
 
 ![ スキーマ行と [!UICONTROL JSON にコピー ] がハイライト表示されたスキーマワークスペース ](../images/ui/export/copy-json.png)
 

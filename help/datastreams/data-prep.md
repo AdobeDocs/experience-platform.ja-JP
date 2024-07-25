@@ -2,7 +2,7 @@
 title: データ収集のためのデータ準備
 description: Adobe Experience Platform Web および Mobile SDK のデータストリームを設定する際に、エクスペリエンスデータモデル（XDM）イベントスキーマにデータをマッピングする方法について説明します。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 60%
@@ -173,11 +173,11 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 ![ 新しいマッピングの追加 ](assets/data-prep/add-new-mapping.png)
 
-ソースアイコン（![ソースアイコン](assets/data-prep/source-icon.png)）を選択して、表示されるダイアログで、提供されたキャンバスにマッピングするソースフィールドを選択します。フィールドを選択したら、「**[!UICONTROL 選択]**」ボタンを使用して続行します。
+ソースアイコン（![ソースアイコン](/help/images/icons/source.png)）を選択して、表示されるダイアログで、提供されたキャンバスにマッピングするソースフィールドを選択します。フィールドを選択したら、「**[!UICONTROL 選択]**」ボタンを使用して続行します。
 
 ![ ソーススキーマのマッピングされるフィールドを選択。](assets/data-prep/source-mapping.png)
 
-次に、スキーマアイコン（![スキーマアイコン](assets/data-prep/schema-icon.png)）を選択して、ターゲットイベントスキーマ用の同様のダイアログを開きます。データをマッピングするフィールドを選択してから、「**[!UICONTROL 選択]**」で確定します。
+次に、スキーマアイコン（![スキーマアイコン](/help/images/icons/schema.png)）を選択して、ターゲットイベントスキーマ用の同様のダイアログを開きます。データをマッピングするフィールドを選択してから、「**[!UICONTROL 選択]**」で確定します。
 
 ![ ターゲットスキーマのマッピングされるフィールドを選択 ](assets/data-prep/target-mapping.png)
 

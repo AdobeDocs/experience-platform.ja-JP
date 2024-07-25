@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI でのクラスの作成と編集
 description: Experience Platformユーザーインターフェイスでクラスを作成および編集する方法を説明します。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 8%
@@ -74,7 +74,7 @@ Platform UI でクラスを作成するには、次の 2 つの方法があり�
 
 ![ 検索バー、[!UICONTROL  カスタム ]、[!UICONTROL  業界 ] がハイライト表示された [!UICONTROL  スキーマを作成 ] ワークフロー ](../../images/ui/resources/classes/filter-and-search.png)
 
-適切なクラスを決定するのに役立つように、情報（![ 情報アイコン](../../images/ui/resources/classes/info.png)）とプレビュー（![ プレビューアイコン。](../../images/ui/resources/classes/preview.png)）各クラスのアイコン。 情報アイコンをクリックすると、関連付けられているクラスと業界の説明を提供するダイアログが開きます。 プレビューアイコンをクリックすると、スキーマ図とそのプロパティを含むクラスのプレビューダイアログが開きます。
+適切なクラスを決定するのに役立つように、情報（![ 情報アイコン](/help/images/icons/info.png)）とプレビュー（![ プレビューアイコン。](/help/images/icons/preview.png)）各クラスのアイコン。 情報アイコンをクリックすると、関連付けられているクラスと業界の説明を提供するダイアログが開きます。 プレビューアイコンをクリックすると、スキーマ図とそのプロパティを含むクラスのプレビューダイアログが開きます。
 
 ![ 選択したクラスのプレビュー。スキーマダイアグラムとクラスプロパティがハイライト表示されています。](../../images/ui/resources/classes/class-preview.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での ID フィールドの定義
 description: Experience Platformユーザーインターフェイスで ID フィールドを定義する方法を説明します。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 16%
@@ -46,7 +46,7 @@ UI で [ 新しいフィールドを定義 ](./overview.md#define) する際に�
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-キャンバスが更新されて変更が反映され、選択したフィールドに ID を示す指紋記号（![](../../images/ui/fields/special/identity-symbol.png)）が表示されます。 左側のパネルで、スキーマにフィールドを提供するクラスまたはスキーマフィールドグループの名前の下に ID フィールドが表示されるようになりました。
+キャンバスが更新されて変更が反映され、選択したフィールドに ID を示す指紋記号（![](/help/images/icons/identity-service.png)）が表示されます。 左側のパネルで、スキーマにフィールドを提供するクラスまたはスキーマフィールドグループの名前の下に ID フィールドが表示されるようになりました。
 
 フィールドがプライマリ ID としても設定されている場合は、左パネルの **[!UICONTROL 必須フィールド]** にも表示されます。 ID フィールドがスキーマ構造内にネストされている場合、すべての親フィールドも必要に応じてリストされます。
 

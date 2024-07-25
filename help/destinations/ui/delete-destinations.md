@@ -4,7 +4,7 @@ title: 宛先の削除
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UI で既存の宛先を削除する手順を示します
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 32%
@@ -32,11 +32,11 @@ Adobe Experience Platform ユーザーインターフェイスでは、宛先へ
 
    ![ 宛先の参照 ](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/delete-destinations/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
    ![ 宛先のフィルタリング ](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 名前列の ![ その他ボタン ](../assets/ui/delete-destinations/more-icon.png) ボタンを選択し、![ 削除ボタン ](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL 削除]** を選択して、既存の宛先接続を削除します。
+3. 名前列の ![ その他ボタン ](/help/images/icons/more.png) ボタンを選択し、![ 削除ボタン ](/help/images/icons/delete.png) **[!UICONTROL 削除]** を選択して、既存の宛先接続を削除します。
    ![ 宛先の削除 ](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. 「**[!UICONTROL 削除]**」を選択して、宛先接続の削除を確定します。
@@ -51,7 +51,7 @@ Adobe Experience Platform ユーザーインターフェイスでは、宛先へ
 
    ![ 宛先の参照 ](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/delete-destinations/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
    ![ 宛先のフィルタリング ](../assets/ui/delete-destinations/filter-destinations.png)
 

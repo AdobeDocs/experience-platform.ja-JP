@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UI でのSource接続データフローの更新
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: cef5c203acf3318445399669336166e6627ebe66
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 20%
@@ -36,7 +36,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 [!UICONTROL  データフロー ] ページには、対応するターゲットデータセット、ソース、アカウント名など、既存のすべてのデータフローのリストが含まれています。
 
-リストを並べ替えるには、左上のフィルターアイコン ![ フィルター ](../../images/tutorials/update/filter.png) を選択して、並べ替えパネルを使用します。
+リストを並べ替えるには、左上のフィルターアイコン ![ フィルター ](/help/images/icons/filter.png) を選択して、並べ替えパネルを使用します。
 
 ![filter-dataflows](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

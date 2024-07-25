@@ -3,7 +3,7 @@ description: Adobe Experience Platform UI でテンプレートを使用して�
 title: UI のテンプレートを使用してソースのデータフローを作成する
 badge1: 「ベータ版」
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 44%
@@ -174,7 +174,7 @@ Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**
 
 +++
 
-選択したビジネスタイプに応じて、テンプレートのリストが表示されます。 テンプレート名の横にあるプレビューアイコン ![ プレビューアイコン ](../../images/tutorials/templates/preview-icon.png) を選択して、テンプレートからサンプルデータをプレビューします。
+選択したビジネスタイプに応じて、テンプレートのリストが表示されます。 テンプレート名の横にあるプレビューアイコン ![ プレビューアイコン ](/help/images/icons/preview.png) を選択して、テンプレートからサンプルデータをプレビューします。
 
 ![プレビューアイコンがハイライトされたテンプレートのリスト。](../../images/tutorials/templates/templates.png)
 

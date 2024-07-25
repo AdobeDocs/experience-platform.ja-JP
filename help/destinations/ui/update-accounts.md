@@ -4,7 +4,7 @@ title: 宛先アカウントの更新
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UI で宛先アカウントを更新する手順を示します
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 10%
@@ -33,11 +33,11 @@ ht-degree: 10%
 
    ![「アカウント」タブ](../assets/ui/update-accounts/accounts-tab.png)
 
-2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/update-accounts/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたフィルターされたアカウントの選択を表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたフィルターされたアカウントの選択を表示できます。
 
    ![ 宛先アカウントのフィルタリング ](../assets/ui/update-accounts/filter-accounts.png)
 
-3. 更新するアカウント名の横にある省略記号（`...`）を選択します。 ポップアップパネルが表示され、アカウントの **[!UICONTROL オーディエンスをアクティブ化]**、**[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** するオプションが提供されます。 「![ 詳細を編集ボタン ](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 詳細を編集]** ボタンを選択して、アカウント情報を編集します。
+3. 更新するアカウント名の横にある省略記号（`...`）を選択します。 ポップアップパネルが表示され、アカウントの **[!UICONTROL オーディエンスをアクティブ化]**、**[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** するオプションが提供されます。 「![ 詳細を編集ボタン ](/help/images/icons/edit.png)**[!UICONTROL 詳細を編集]** ボタンを選択して、アカウント情報を編集します。
 
    ![ アカウントを編集 ](../assets/ui/update-accounts/accounts-edit.png)
 

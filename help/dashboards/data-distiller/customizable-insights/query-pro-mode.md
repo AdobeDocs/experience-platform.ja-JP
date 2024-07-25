@@ -2,7 +2,7 @@
 title: Query Pro モード
 description: Adobe Experience Platform UI で SQL クエリを使用して、カスタムダッシュボードのグラフを生成する方法を説明します。
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -35,7 +35,7 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 >
 >グローバルフィルターを使用する場合は、SQL にクエリパラメーターを配置し、そのクエリパラメーターをウィジェットコンポーザーのグローバルフィルターにリンクする必要があります。 以下のスクリーンショットでは、SQL でグローバルフィルターのクエリパラメーターとして `CONSENT_VALUE_FILTER` が使用されています。 これを行う方法について詳しくは、[ グローバルフィルタードキュメント ](./filters/global-filter.md#enable-global-filter) を参照してください。
 
-クエリを実行するには、実行アイコン（![ 実行アイコン](../../images/customizable-insights/run-icon.png)）に設定します。 クエリエディターに「結果」タブが表示されます。 次に、設定を確認してウィジェットコンポーザーを開き、「**[!UICONTROL 選択]**」を選択します。
+クエリを実行するには、実行アイコン（![ 実行アイコン](/help/images/icons/play.png)）に設定します。 クエリエディターに「結果」タブが表示されます。 次に、設定を確認してウィジェットコンポーザーを開き、「**[!UICONTROL 選択]**」を選択します。
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 
 ## ウィジェットを入力 {#populate-widget}
 
-ウィジェットコンポーザーに、実行した SQL の列が入力されるようになりました。 ダッシュボードのタイプは左上に示されます。この場合は [!UICONTROL  手動 SQL 入力 ] です。 鉛筆アイコン（![ 鉛筆アイコンを選択します。](../../images/customizable-insights/edit-icon.png)）を選択して、任意の時点で SQL を編集できます。
+ウィジェットコンポーザーに、実行した SQL の列が入力されるようになりました。 ダッシュボードのタイプは左上に示されます。この場合は [!UICONTROL  手動 SQL 入力 ] です。 鉛筆アイコン（![ 鉛筆アイコンを選択します。](/help/images/icons/edit.png)）を選択して、任意の時点で SQL を編集できます。
 
 >[!TIP]
 >
@@ -57,13 +57,13 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 
 ### 属性を追加 {#add-attributes}
 
-ウィジェットに属性を追加するには、プラスアイコン（![A プラスアイコン](../../images/customizable-insights/add-icon.png)）を選択します。 表示されるドロップダウンメニューを使用すると、SQL で決定されたオプションからグラフに属性を追加できます。 グラフのタイプが異なると、X 軸や Y 軸のドロップダウンなど、オプションが異なります。
+ウィジェットに属性を追加するには、プラスアイコン（![A プラスアイコン](/help/images/icons/add-circle.png)）を選択します。 表示されるドロップダウンメニューを使用すると、SQL で決定されたオプションからグラフに属性を追加できます。 グラフのタイプが異なると、X 軸や Y 軸のドロップダウンなど、オプションが異なります。
 
 このドーナツグラフの例では、オプションはサイズと色です。 色はドーナツグラフの結果を色分けし、サイズは使用される実際の指標です。 [!UICONTROL  カラー ] フィールドに属性を追加し、その属性の構成に基づいて結果を異なる色に分割します。
 
 >[!TIP]
 >
->上向き矢印アイコンと下向き矢印アイコン（![ 上向き矢印と下向き矢印アイコン](../../images/customizable-insights/switch-axis-icon.png)）を選択して、棒グラフまたは折れ線グラフの X 軸と Y 軸の配置を切り替えます。
+>上向き矢印アイコンと下向き矢印アイコン（![ 上向き矢印と下向き矢印アイコン](/help/images/icons/switch.png)）を選択して、棒グラフまたは折れ線グラフの X 軸と Y 軸の配置を切り替えます。
 
 ![ 追加アイコンのドロップダウンと切り替え矢印がハイライト表示されたウィジェットコンポーザー。](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -73,7 +73,7 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 
 ## ウィジェットのプロパティ {#properties}
 
-「プロパティ」アイコン（![ 「プロパティ」アイコン](../../images/customizable-insights/properties-icon.png)）を選択し、プロパティパネルを開きます。 [!UICONTROL  プロパティ ] パネルの **[!UICONTROL ウィジェットタイトル]** テキストフィールドにウィジェットの名前を入力します。 グラフのさまざまな要素の名前を変更することもできます。
+「プロパティ」アイコン（![ 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択し、プロパティパネルを開きます。 [!UICONTROL  プロパティ ] パネルの **[!UICONTROL ウィジェットタイトル]** テキストフィールドにウィジェットの名前を入力します。 グラフのさまざまな要素の名前を変更することもできます。
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 
 ![ 「編集」がハイライト表示されたカスタムダッシュボード。](../../images/customizable-insights/edit-dashboard.png)
 
-**[!UICONTROL フィルターを追加]** を選択して、[[!UICONTROL  日付フィルター ]](#create-date-filter) または [[!UICONTROL  グローバルフィルター ]](#create-global-filter) を作成します。 作成したら、すべてのグローバルフィルターおよび日付フィルターを [ フィルターアイコン ](#select-global-filter) （![A フィルターアイコンから使用できます。](../../images/customizable-insights/filter.png)）を選択します。
+**[!UICONTROL フィルターを追加]** を選択して、[[!UICONTROL  日付フィルター ]](#create-date-filter) または [[!UICONTROL  グローバルフィルター ]](#create-global-filter) を作成します。 作成したら、すべてのグローバルフィルターおよび日付フィルターを [ フィルターアイコン ](#select-global-filter) （![A フィルターアイコンから使用できます。](/help/images/icons/filter.png)）を選択します。
 
 ![ 「フィルターを追加」ドロップダウンメニューがハイライト表示されたカスタムダッシュボード。](../../images/customizable-insights/add-filter.png)
 

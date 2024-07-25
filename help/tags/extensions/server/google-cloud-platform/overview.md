@@ -3,7 +3,7 @@ title: Google Cloud Platform イベント転送拡張機能
 description: このAdobe Experience Platform イベント転送拡張機能は、Edge NetworkイベントをGoogle Cloud Platform に送信します。
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 3%
@@ -47,8 +47,8 @@ ht-degree: 3%
 | 入力 | 説明 |
 | --- | --- |
 | [!UICONTROL  トピック ] | イベント転送からイベントを受信するトピック。 値の形式は `projects/{projectName}/topics/{topicName}` である必要があります。 |
-| [!UICONTROL データ] | このフィールドには、[!DNL Cloud Pub/Sub] トピックに JSON 形式で転送されるデータが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](../../../images/extensions/server/aws/data-element-icon.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
-| [!UICONTROL  属性 ] | このフィールドには、メッセージと共に送信される追加の属性を持つ JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](../../../images/extensions/server/aws/data-element-icon.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
+| [!UICONTROL データ] | このフィールドには、[!DNL Cloud Pub/Sub] トピックに JSON 形式で転送されるデータが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
+| [!UICONTROL  属性 ] | このフィールドには、メッセージと共に送信される追加の属性を持つ JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
 
 {style="table-layout:auto"}
 

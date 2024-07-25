@@ -2,7 +2,7 @@
 title: Meta Conversions API 拡張機能の概要
 description: Adobe Experience Platformでのイベント転送用の Meta Conversions API 拡張機能について説明します。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2583'
 ht-degree: 0%
@@ -160,7 +160,7 @@ facebookとInstagramでの認証を求めるダイアログプロンプトは、
 
 ![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
 
-**[!UICONTROL サイトにコードを追加]** ダイアログで、コピー ![ コピー ](../../../images/extensions/server/meta/copy-icon.png) 関数を使用して提供されたコードをコピーして、ソース web サイトの `<head>` に貼り付けます。 実装が完了したら、「**[!UICONTROL 検証を開始]**」を選択します。
+**[!UICONTROL サイトにコードを追加]** ダイアログで、コピー ![ コピー ](/help/images/icons/copy.png) 関数を使用して提供されたコードをコピーして、ソース web サイトの `<head>` に貼り付けます。 実装が完了したら、「**[!UICONTROL 検証を開始]**」を選択します。
 
 ![ サイトダイアログへのコードの追加 ](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

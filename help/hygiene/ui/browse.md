@@ -2,7 +2,7 @@
 title: データ ライフサイクル作業指示の参照
 description: Adobe Experience Platform ユーザーインターフェイスで既存のデータライフサイクル作業指示を表示および管理する方法について説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 80%
@@ -31,7 +31,7 @@ UI で最初に **[!UICONTROL データライフサイクル]** ワークスペ�
 
 ![「[!UICONTROL データセット]」タブを示す画像](../images/ui/browse/dataset-tab.png)
 
-ファネルアイコン（![ファネルアイコンの画像](../images/ui/browse/funnel-icon.png)）を選択すると、表示された作業指示のフィルターのリストが表示されます。
+ファネルアイコン（![ファネルアイコンの画像](/help/images/icons/filter.png)）を選択すると、表示された作業指示のフィルターのリストが表示されます。
 
 ![表示された作業指示フィルターの画像](../images/ui/browse/filters.png)
 

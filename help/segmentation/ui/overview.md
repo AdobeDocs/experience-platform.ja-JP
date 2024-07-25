@@ -3,7 +3,7 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 80%
@@ -69,7 +69,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 ](./audien
 | アクセスの管理 | オーディエンスに属するアクセスラベルを管理します。 アクセスラベルについて詳しくは、[ラベルの管理](../../access-control/abac/ui/labels.md)に関するドキュメントを参照してください。 |
 | 削除 | 選択したオーディエンスを削除します。 ダウンストリームの宛先で使用されているオーディエンス、または他のオーディエンスに依存しているオーディエンス **削除できません**。 オーディエンスの削除について詳しくは、[ セグメント化に関する FAQ](../faq.md#lifecycle-states) を参照してください。 |
 
-「![テーブルをカスタマイズ](../images/ui/overview/customize-table.png)」アイコンを選択して、表示するフィールドを変更できます。
+「![テーブルをカスタマイズ](/help/images/icons/column-settings.png)」アイコンを選択して、表示するフィールドを変更できます。
 
 ![「テーブルをカスタマイズ」ボタンがハイライト表示されます。このボタンを選択すると、オーディエンス構成ページに表示されるフィールドをカスタマイズできます。](../images/ui/overview/compositions-select-customize-table.png)
 

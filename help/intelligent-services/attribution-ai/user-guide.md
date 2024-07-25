@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Attribution AI UI ガイド
 description: このドキュメントは、インテリジェントサービスのユーザーインターフェイスでAttribution AIを操作するためのガイドとして機能します。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2450'
 ht-degree: 29%
@@ -63,7 +63,7 @@ Attribution AIは、設計上、Adobe Analytics、エクスペリエンスイベ
 
 ![ データセットを選択 ](./images/user-guide/select-datasets.png)
 
-データセットの横にある情報アイコン ![ 情報アイコン ](./images/user-guide/info-icon.png) を選択すると、データセットプレビューポップオーバーが開きます。
+データセットの横にある情報アイコン ![ 情報アイコン ](/help/images/icons/info.png) を選択すると、データセットプレビューポップオーバーが開きます。
 
 ![ データセットの選択と検索 ](./images/user-guide/dataset-preview.png)
 

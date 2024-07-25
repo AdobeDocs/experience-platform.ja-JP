@@ -5,7 +5,7 @@ feature: Customer AI
 title: 顧客 AI インスタンスの設定
 description: AI/ML サービスは、様々なユースケースに合わせて設定できる、使いやすいAdobe Sensei サービスとして顧客 AI を提供します。 次の節では、顧客 AI のインスタンスを設定する手順を説明します。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2827'
 ht-degree: 7%
@@ -72,7 +72,7 @@ Platform UI の左側のナビゲーションで「**[!UICONTROL サービス]**
 
 ![ データセットを選択 ](../images/user-guide/select-datasets.png)
 
-データセットの横にある情報アイコン ![ 情報アイコン ](../images/user-guide/info-icon.png) を選択すると、データセットのプレビューポップオーバーが開きます。
+データセットの横にある情報アイコン ![ 情報アイコン ](/help/images/icons/info.png) を選択すると、データセットのプレビューポップオーバーが開きます。
 
 ![ データセットの選択と検索 ](../images/user-guide/dataset-info.png)
 

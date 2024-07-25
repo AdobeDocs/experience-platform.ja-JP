@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ポリシーの自動適用
 description: このドキュメントでは、Experience Platform 内の宛先に対してオーディエンスをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2109'
 ht-degree: 84%
@@ -104,7 +104,7 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 ![ データ系列グラフがハイライト表示されたポリシー違反ダイアログ。](../images/enforcement/data-lineage.png)
 
-「**[!UICONTROL フィルター]**」アイコン（![A フィルターアイコンも使用できます。](../images/enforcement/filter.png)）を選択して、表示されたエンティティをカテゴリでフィルタリングします。 データを表示するには、少なくとも 2 つのカテゴリを選択する必要があります。
+「**[!UICONTROL フィルター]**」アイコン（![A フィルターアイコンも使用できます。](/help/images/icons/filter.png)）を選択して、表示されたエンティティをカテゴリでフィルタリングします。 データを表示するには、少なくとも 2 つのカテゴリを選択する必要があります。
 
 ![ データ系列フィルターとドロップダウンメニューがハイライト表示されたポリシー違反ダイアログ ](../images/enforcement/lineage-filter.png)
 

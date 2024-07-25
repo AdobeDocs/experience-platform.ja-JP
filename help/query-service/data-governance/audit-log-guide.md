@@ -2,7 +2,7 @@
 title: クエリサービス監査ログの統合
 description: クエリサービス監査ログは、問題のトラブルシューティングや企業のデータ管理ポリシーおよび規制要件への準拠のための監査証跡を形成するために、様々なユーザーアクションの記録を保持します。 このチュートリアルでは、クエリサービスに固有の監査ログ機能の概要を説明します。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 8%
@@ -31,7 +31,7 @@ Platform UI 内で監査ログダッシュボードを表示するには、[!DNL
 
 ## [!DNL Query Service] 監査ログの実行 {#perform-an-audit-log}
 
-[!DNL Query Service] のアクティビティの監査を実行するには、左側のナビゲーションから **[!UICONTROL 監査]** を選択し、次にファネルアイコン（![A フィルターアイコンを選択します。](../images/audit-log/filter.png)）を選択して、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。
+[!DNL Query Service] のアクティビティの監査を実行するには、左側のナビゲーションから **[!UICONTROL 監査]** を選択し、次にファネルアイコン（![A フィルターアイコンを選択します。](/help/images/icons/filter.png)）を選択して、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。
 
 ![ 左側のナビゲーションに「監査」が表示され、フィルターコントロールがハイライト表示された Platform UI 監査ログダッシュボード。](../images/audit-log/filter-controls.png)
 

@@ -4,7 +4,7 @@ title: アクティベーションデータフローを編集
 type: Tutorial
 description: Adobe Experience Platformの既存のアクティベーションデータフローを編集するには、この記事の手順に従います。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 25%
@@ -23,7 +23,7 @@ Adobe Experience Platformでは、書き出されたオーディエンスやプ�
 
    ![ 宛先の参照 ](../assets/ui/edit-activation/browse-destinations.png)
 
-2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/edit-activation/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
    ![ 宛先のフィルタリング ](../assets/ui/edit-activation/filter-destinations.png)
 

@@ -3,7 +3,7 @@ keywords: Platform;宛先;宛先ワークスペース;ワークスペース;UI;�
 title: 宛先ワークスペース
 description: 宛先ワークスペースは、「概要」、「カタログ」、「参照」、「アカウント」、「システム表示」の 5 つのセクションで構成されます。 以下の節で説明します。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 81%
@@ -69,9 +69,9 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 >[!TIP]
 >
-> * [!UICONTROL Platform] 列の省略記号（`...`）を選択し、![ アクティブ化コントロール ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL  アクティブ化 ]**/**[!UICONTROL  オーディエンスをアクティブ化 ]**/**[!UICONTROL  データセットを書き出し ]**コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
-> * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![詳細を編集コントロール](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 詳細を編集&#x200B;]**コントロールを使用して、既存の宛先アカウントの詳細を[更新](update-accounts.md)します。
-> * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![削除コントロール](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**コントロールを使用して、既存の宛先アカウントを[削除](delete-destination-account.md)します。
+> * [!UICONTROL Platform] 列の省略記号（`...`）を選択し、![ アクティブ化コントロール ](/help/images/icons/data-add.png)**[!UICONTROL  アクティブ化 ]**/**[!UICONTROL  オーディエンスをアクティブ化 ]**/**[!UICONTROL  データセットを書き出し ]**コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
+> * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![詳細を編集コントロール](/help/images/icons/edit.png)**[!UICONTROL 詳細を編集&#x200B;]**コントロールを使用して、既存の宛先アカウントの詳細を[更新](update-accounts.md)します。
+> * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![削除コントロール](/help/images/icons/delete.png)**[!UICONTROL 削除&#x200B;]**コントロールを使用して、既存の宛先アカウントを[削除](delete-destination-account.md)します。
 
 ![「アカウント」タブ](../assets/ui/workspace/destination-account-options.png)
 
@@ -91,10 +91,10 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 >[!TIP]
 >
-> * [!UICONTROL  名前 ] 列の省略記号（`...`）を選択し、![ オーディエンスをアクティブ化コントロール ](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL  アクティブ化 ]**コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
-> * [!UICONTROL 名前]列の省略記号（`...`）を選択し、![削除コントロール](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 削除&#x200B;]**コントロールを使用して、既存の宛先への接続を[削除](delete-destinations.md)できます。
-> * [!UICONTROL 名前]列の省略記号（`...`）を選択し、![モニタリングで表示コントロール](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL モニタリングで表示&#x200B;]**コントロールを使用して、[モニタリングダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)にこの宛先のアクティブ化情報を表示できます。
-> * [!UICONTROL 名前]列で省略記号（`...`）を選択し、![アラートを購読](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL アラートを購読&#x200B;]**コントロールを使用して、宛先データフローアラートを購読できます。アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 宛先データフローアラートの詳細については、[コンテキスト内の宛先アラートを購読](alerts.md)を参照してください。
+> * [!UICONTROL  名前 ] 列の省略記号（`...`）を選択し、![ オーディエンスをアクティブ化コントロール ](/help/images/icons/data-add.png)**[!UICONTROL  アクティブ化 ]**コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
+> * [!UICONTROL 名前]列の省略記号（`...`）を選択し、![削除コントロール](/help/images/icons/delete.png)**[!UICONTROL 削除&#x200B;]**コントロールを使用して、既存の宛先への接続を[削除](delete-destinations.md)できます。
+> * [!UICONTROL 名前]列の省略記号（`...`）を選択し、![モニタリングで表示コントロール](/help/images/icons/monitoring.png)**[!UICONTROL モニタリングで表示&#x200B;]**コントロールを使用して、[モニタリングダッシュボード](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)にこの宛先のアクティブ化情報を表示できます。
+> * [!UICONTROL 名前]列で省略記号（`...`）を選択し、![アラートを購読](/help/images/icons/alert-add.png)**[!UICONTROL アラートを購読&#x200B;]**コントロールを使用して、宛先データフローアラートを購読できます。アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 宛先データフローアラートの詳細については、[コンテキスト内の宛先アラートを購読](alerts.md)を参照してください。
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
 

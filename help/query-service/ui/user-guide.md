@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 31%
@@ -57,7 +57,7 @@ ht-degree: 31%
 >
 >クエリの作成中に進行状況を維持しながら [!UICONTROL  構文のオートコンプリートを無効にする ] ことができます。
 
-暗いテーマまたは明るいテーマを有効にするには、設定アイコン（![A 設定アイコン](../images/ui/query-editor/settings-icon.png)）に続いて、表示されるドロップダウンメニューのオプションを選択します。
+暗いテーマまたは明るいテーマを有効にするには、設定アイコン（![A 設定アイコン](/help/images/icons/settings.png)）に続いて、表示されるドロップダウンメニューのオプションを選択します。
 
 ![ 「設定」アイコンと「ダークテーマを有効にする」ドロップダウンメニューオプションがハイライト表示されたクエリエディター。](../images/ui/query-editor/query-editor-settings.png)
 

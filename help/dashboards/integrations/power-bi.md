@@ -2,10 +2,10 @@
 title: Platform ダッシュボードの Power BI レポートテンプレート
 description: Power BI を使用した Experience Platform データを、レポートテンプレートを使用して調べます。
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 92%
+source-wordcount: '1467'
+ht-degree: 91%
 
 ---
 
@@ -144,7 +144,7 @@ JSON 資格情報ファイルをアップロードして検証にパスするこ
 
 ## Power BI アプリケーション統合の削除
 
-ダッシュボードを削除するには、ダッシュボードインベントリに移動し、ダッシュボード名の横にある削除アイコン（![](../images/power-bi/delete-icon.png)）をクリックします。
+ダッシュボードを削除するには、ダッシュボードインベントリに移動し、ダッシュボード名の横にある削除アイコン（![ 削除アイコン ](/help/images/icons/delete.png)）を選択します。
 
 >[!NOTE]
 >

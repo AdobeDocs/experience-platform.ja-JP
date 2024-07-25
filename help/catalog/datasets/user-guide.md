@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータセットを操作する際に一般的なアクションを実行する方法について説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 14%
@@ -161,11 +161,11 @@ ht-degree: 14%
 
 >[!TIP]
 >
->また、データセットを移動ダイアログから直接フォルダーを作成することもできます。 フォルダーを作成するには、フォルダー作成アイコン（![ フォルダーを作成アイコン](../images/datasets/user-guide/create-folder-icon.png)）を選択します。
+>また、データセットを移動ダイアログから直接フォルダーを作成することもできます。 フォルダーを作成するには、フォルダー作成アイコン（![ フォルダーを作成アイコン](/help/images/icons/folder-add.png)）を選択します。
 >
 >![ フォルダー作成アイコンがハイライト表示された [!UICONTROL  移動 ] データセットダイアログ ](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-データセットがフォルダーに含まれたら、特定のフォルダーに属するデータセットのみを表示するように選択できます。 フォルダー構造を開くには、「フォルダーを表示」アイコン（![ 「フォルダーを表示」アイコン ](../images/datasets/user-guide/show-folders-icon.png)）を選択します。 次に、選択したフォルダーを選択して、関連するすべてのデータセットを表示します。
+データセットがフォルダーに含まれたら、特定のフォルダーに属するデータセットのみを表示するように選択できます。 フォルダー構造を開くには、「フォルダーを表示」アイコン（![ 「フォルダーを表示」アイコン ](/help/images/icons/rail-left.png)）を選択します。 次に、選択したフォルダーを選択して、関連するすべてのデータセットを表示します。
 
 ![ データセットフォルダー構造が表示され、フォルダーを表示アイコンと選択したフォルダーがハイライト表示された [!UICONTROL  データセット ] ダッシュボード ](../images/datasets/user-guide/folder-structure.png)
 
@@ -197,7 +197,7 @@ ht-degree: 14%
 
 ## データセットの検索とフィルタリング {#search-and-filter}
 
-使用可能なデータセットのリストを検索またはフィルタリングするには、フィルターアイコン（![ フィルターアイコン](../images/datasets/user-guide/icon.png)）を選択します。 左側のパネルに一連のフィルターオプションが表示されます。 使用可能なデータセットをフィルタリングするには、いくつかの方法があります。 例えば、[[!UICONTROL  システムデータセットを表示 ]](#show-system-datasets)、[[!UICONTROL  プロファイルに含まれる ]](#filter-profile-enabled-datasets)、[[!UICONTROL  タグ ]](#filter-by-tag)、[[!UICONTROL  作成日 ]](#filter-by-creation-date)、[[!UICONTROL  変更日 ]、[!UICONTROL  作成者 ]](#filter-by-creation-date)、[[!UICONTROL  スキーマ ]](#filter-by-schema) などです。
+使用可能なデータセットのリストを検索またはフィルタリングするには、フィルターアイコン（![ フィルターアイコン](/help/images/icons/filter.png)）を選択します。 左側のパネルに一連のフィルターオプションが表示されます。 使用可能なデータセットをフィルタリングするには、いくつかの方法があります。 例えば、[[!UICONTROL  システムデータセットを表示 ]](#show-system-datasets)、[[!UICONTROL  プロファイルに含まれる ]](#filter-profile-enabled-datasets)、[[!UICONTROL  タグ ]](#filter-by-tag)、[[!UICONTROL  作成日 ]](#filter-by-creation-date)、[[!UICONTROL  変更日 ]、[!UICONTROL  作成者 ]](#filter-by-creation-date)、[[!UICONTROL  スキーマ ]](#filter-by-schema) などです。
 
 適用されたフィルターのリストは、フィルタリングされた結果の上に表示されます。
 

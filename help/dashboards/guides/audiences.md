@@ -4,7 +4,7 @@ title: オーディエンスダッシュボード
 description: Adobe Experience Platformには、組織が作成したオーディエンスに関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 40%
@@ -235,7 +235,7 @@ Adobeには、オーディエンスに関連する様々な指標を視覚化す
 
 ![「さらに表示」がハイライト表示されたオーディエンスの重複レポートウィジェット。](../images/audiences/audience-overlap-report.png)
 
-[!UICONTROL オーディエンスの重複レポート]ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。設定アイコン（![設定アイコン](../images/audiences/settings-icon.png)）を選択して、テーブルから列を削除または追加します。
+[!UICONTROL オーディエンスの重複レポート]ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。設定アイコン（![設定アイコン](/help/images/icons/settings.png)）を選択して、テーブルから列を削除または追加します。
 
 ![オーディエンスの重複レポートダイアログ](../images/audiences/audience-overlap-report-dialog.png)
 

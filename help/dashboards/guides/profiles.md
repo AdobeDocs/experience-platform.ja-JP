@@ -4,7 +4,7 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformには、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4997'
 ht-degree: 45%
@@ -470,7 +470,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ![「さらに表示」がハイライト表示されたオーディエンスの重複レポートウィジェット。](../images/profiles/profiles-audience-overlap-report.png)
 
-[!UICONTROL オーディエンスの重複レポート]ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。テーブルから列を削除または追加するには、設定アイコン（![ 設定アイコン。](../images/profiles/settings-icon.png)）を選択します。
+[!UICONTROL オーディエンスの重複レポート]ダイアログが表示されます。 このダイアログには、最大 50 行のオーディエンスの重複分析を 6 つの列に分類して含めることができます。テーブルから列を削除または追加するには、設定アイコン（![ 設定アイコン。](/help/images/icons/settings.png)）を選択します。
 
 ![オーディエンスの重複レポートダイアログ](../images/profiles/profiles-audience-overlap-report-dialog.png)
 

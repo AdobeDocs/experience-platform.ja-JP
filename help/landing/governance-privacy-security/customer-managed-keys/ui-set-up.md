@@ -2,7 +2,7 @@
 title: Platform UI を使用した顧客管理キーの設定と設定
 description: Azure テナントで CMK アプリを設定し、暗号化キー ID をAdobe Experience Platformに送信する方法を説明します。
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 20%
@@ -42,7 +42,7 @@ Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリ
 
 登録プロセスを開始するには、[!UICONTROL  顧客管理キー設定 ] ビューから組織のアプリケーション認証 URL をコピーし、[!DNL Azure] 環境 **[!DNL Key Vault Crypto Service Encryption User]** ージに貼り付けます。 [ 役割の割り当て ](#assign-to-role) 方法について詳しくは、次の節を参照してください。
 
-コピーアイコン（![ コピーアイコンを選択します。](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)）を選択します [!UICONTROL  アプリケーション認証 URL]。
+コピーアイコン（![ コピーアイコンを選択します。](/help/images/icons/copy.png)）を選択します [!UICONTROL  アプリケーション認証 URL]。
 
 ![ アプリケーション認証 URL セクションがハイライト表示された [!UICONTROL  顧客管理キー設定 ] ビュー。](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 

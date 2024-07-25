@@ -2,7 +2,7 @@
 title: 自動データセット有効期限
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 49%
@@ -55,11 +55,11 @@ Advanced Data Lifecycle Management では、[ データセット有効期限エ�
 
 ### 日付およびデータセットの選択 {#select-date-and-dataset}
 
-「**[!UICONTROL リクエストされたアクション]**」セクションで、データセットを削除する日付を選択します。手動で日付を入力（`mm/dd/yyyy` の形式）するか、カレンダーアイコン（![A カレンダーアイコン）を選択します。](../images/ui/ttl/calendar-icon.png)）を選択して、ダイアログから日付を選択します。
+「**[!UICONTROL リクエストされたアクション]**」セクションで、データセットを削除する日付を選択します。手動で日付を入力（`mm/dd/yyyy` の形式）するか、カレンダーアイコン（![A カレンダーアイコン）を選択します。](/help/images/icons/calendar.png)）を選択して、ダイアログから日付を選択します。
 
 ![ データセット用に有効期限が選択されハイライト表示されたカレンダーダイアログ ](../images/ui/ttl/select-date.png)
 
-次に、「**[!UICONTROL データセットの詳細]** で、データベースアイコン（![ データベースアイコンを選択します。](../images/ui/ttl/database-icon.png)）を選択して、データセット選択ダイアログを開きます。 リストから有効期限を適用するデータセットを選択して、「**[!UICONTROL 完了]**」を選択します。
+次に、「**[!UICONTROL データセットの詳細]** で、データベースアイコン（![ データベースアイコンを選択します。](/help/images/icons/database.png)）を選択して、データセット選択ダイアログを開きます。 リストから有効期限を適用するデータセットを選択して、「**[!UICONTROL 完了]**」を選択します。
 
 ![ データセットが選択され ] 完了 [!UICONTROL  がハイライト表示された [!UICONTROL  データセットを選択 ] ダイアログ ](../images/ui/ttl/select-dataset.png)
 

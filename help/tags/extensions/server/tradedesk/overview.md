@@ -4,7 +4,7 @@ description: Adobe Experience Platformでのイベント転送用の Trade Desk 
 hide: true
 hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 3%
@@ -77,7 +77,7 @@ ht-degree: 3%
 | 通貨 | ISO 形式の通貨コード。 |
 | クライアント IP | クライアントの IPv4 または IPv6 IP アドレス。 |
 | 広告 ID | イベントの一意の広告 ID。 |
-| 広告 ID タイプ | 広告 ID プロパティで指定された広告 ID のタイプ：TDID、IDFA、AAID、DAID、NAID、IDL、EUID、UID2。 |
+| 広告 ID タイプ | 広告 ID プロパティで指定された広告 ID のタイプ（TDID、IDFA、AAID、DAID、NAID、IDL、EUID、UID2）。 |
 | インプレッション | イベントが関連付けられるインプレッションの一意の ID として機能する 36 文字の文字列（ダッシュを含む）。 |
 | 注文 ID | イベントに関連付けられたオーダー識別子。 |
 | td1-td10 | 追加のコンバージョンメタデータを提供するために使用できる、10 個の連続する番号が付いたカスタム動的プロパティ。 |
@@ -90,7 +90,7 @@ Real-Time Conversions API によって受け入れられる [ リクエストプ
 
 **[!UICONTROL オブジェクトリクエストパラメーター]**
 
-詳細情報を含む JSON オブジェクト。 キー値の入力の縮小セットを使用するか、生の JSON を提供するかを選択できます。 さらに、右側のディスク（![ ディスクアイコン ](../../../images/extensions/server/tradedesk/disk-icon.png)）を選択すると、データ要素から動的データを取得できます。
+詳細情報を含む JSON オブジェクト。 キー値の入力の縮小セットを使用するか、生の JSON を提供するかを選択できます。 さらに、右側のディスク（![ ディスクアイコン ](/help/images/icons/database.png)）を選択すると、データ要素から動的データを取得できます。
 
 
 ![ 使用可能なフィールドを示す [!DNL Object Request Parameters] のセクション。](../../../images/extensions/server/tradedesk/configure-object-request-params.png)

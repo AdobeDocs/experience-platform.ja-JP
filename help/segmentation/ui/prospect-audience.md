@@ -3,7 +3,7 @@ title: 見込み客オーディエンス
 description: 見込み客オーディエンスを作成および使用して、サードパーティ情報を使用して未知の顧客をターゲティングする方法について説明します。
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 89%
@@ -26,7 +26,7 @@ Adobe Experience Platform を使用すると、マーケターにとってわか
 
 この表示には、名前、プロファイル数、接触チャネル、ライフサイクルステータス、作成日、最終更新日、分類など、オーディエンスに関する情報が一覧表示されます。
 
-この表示にフィールドを追加するには、![フィルター属性アイコン](../images/ui/prospect-audience/filter-attribute.png) アイコンを選択します。これらの追加フィールドには、更新頻度と最終更新者が含まれます。
+この表示にフィールドを追加するには、![フィルター属性アイコン](/help/images/icons/column-settings.png) アイコンを選択します。これらの追加フィールドには、更新頻度と最終更新者が含まれます。
 
 リストされたフィールドに関する詳細情報を含む、参照ページに関する詳細については、[ オーディエンスポータルの概要 ](./audience-portal.md#list) を参照してください。
 

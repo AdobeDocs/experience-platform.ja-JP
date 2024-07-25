@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 93%
@@ -24,7 +24,7 @@ ht-degree: 93%
 
 ## 役割のフィルタリング
 
-ファネルアイコン（![フィルターアイコン](../../images/icon.png)）を選択し、フィルターコントロールのリストを表示して、結果を絞り込みます。
+ファネルアイコン（![フィルターアイコン](/help/images/icons/filter.png)）を選択し、フィルターコントロールのリストを表示して、結果を絞り込みます。
 
 ![flac-filters](../../images/flac-ui/flac-filters.png)
 

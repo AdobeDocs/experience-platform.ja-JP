@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プロファイルエンリッチメントジョブの監視
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 4%
@@ -77,7 +77,7 @@ ht-degree: 4%
 
 この節では、モニタリングインターフェイスの様々なユーザーインターフェイス（UI）オプションについて説明します。これらのオプションを使用すると、ページに表示される指標をフィルタリングできます。
 
-矢印アイコン（![ 矢印アイコン ](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)）を使用すると、画面上部のカードを展開したり展開解除したりできます。このカードには、プロファイルエンリッチメントジョブに関する情報が一目で確認できます。
+矢印アイコン（![ 矢印アイコン ](/help/images/icons/chevron-up.png)）を使用すると、画面上部のカードを展開したり展開解除したりできます。このカードには、プロファイルエンリッチメントジョブに関する情報が一目で確認できます。
 
 ![ 矢印アイコン UI コントロールを表示する画面録画。](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 

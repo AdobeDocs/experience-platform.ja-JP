@@ -4,7 +4,7 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 9%
@@ -101,7 +101,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 ![ ライセンス使用状況ダッシュボードの「詳細」タブ ](../images/license-usage/details-tab.png)
 
-このビューから、![ 検査アイコンを選択できます。サンドボックス名の横にあるを ](../images/license-usage/inspect-icon.png) リックすると、その指標のビジュアライゼーションが表示されます。 ダイアログが開き、その指標のビジュアライゼーションが表示されます。
+このビューから、![ 検査アイコンを選択できます。サンドボックス名の横にあるを ](/help/images/icons/inspect.png) リックすると、その指標のビジュアライゼーションが表示されます。 ダイアログが開き、その指標のビジュアライゼーションが表示されます。
 
 ### ビジュアライゼーション {#visualizations}
 

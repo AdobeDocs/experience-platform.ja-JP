@@ -2,7 +2,7 @@
 title: UI でカスタムアクティビティデータのMarketo Engage Source接続とデータフローを作成する
 description: このチュートリアルでは、UI でMarketo Engageソース接続とデータフローを作成し、カスタムアクティビティデータをAdobe Experience Platformに取り込む手順について説明します。
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 22%
@@ -127,7 +127,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ![ ソースデータ構造。](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-ターゲットフィールドを追加するには、スキーマアイコン ![ スキーマアイコン ](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) を選択し、ターゲットスキーマからカスタムアクティビティフィールドを選択します。
+ターゲットフィールドを追加するには、スキーマアイコン ![ スキーマアイコン ](/help/images/icons/schema.png) を選択し、ターゲットスキーマからカスタムアクティビティフィールドを選択します。
 
 ![ ターゲットスキーマの構造 ](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

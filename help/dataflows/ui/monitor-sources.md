@@ -2,7 +2,7 @@
 description: 監視ダッシュボードを使用して、ソースから取り込まれたデータを監視する方法について説明します。
 title: UI でのソースのデータフローの監視
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 24%
@@ -83,13 +83,13 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 {style="table-layout:auto"}
 
-特定のデータフローに取り込まれるデータを監視するには、ソースの横にあるフィルターアイコン ![ フィルター ](../assets/ui/monitor-sources/filter.png) を選択します。
+特定のデータフローに取り込まれるデータを監視するには、ソースの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
 
 ![ 特定のソースの横にあるフィルターアイコンを選択して、特定のデータフローを監視します。](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 指標テーブルは、選択したソースに対応するアクティブなデータフローのテーブルに更新されます。 この手順では、対応するデータセットやデータタイプなどのデータフローに関する追加情報と、最後にアクティブだった日時を示すタイムスタンプを表示できます。
 
-データフローをさらに詳しく調べるには、データフローの横にあるフィルターアイコン ![ フィルター ](../assets/ui/monitor-sources/filter.png) を選択します。
+データフローをさらに詳しく調べるには、データフローの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
 
 ![ 監視ダッシュボードのデータフローテーブル。](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 データフロー実行は、データフロー実行のインスタンスを表します。 例えば、データフローが 1 時間ごとに午前 9:00、午前 10:00、午前 11:00 に実行されるようにスケジュールされている場合、フロー実行のインスタンスが 3 つ存在します。 フロー実行は、特定の組織に固有です。
 
-特定のデータフロー実行イテレーションの指標を調べるには、データフローの横にあるフィルターアイコン ![ フィルター ](../assets/ui/monitor-sources/filter.png) を選択します。
+特定のデータフロー実行イテレーションの指標を調べるには、データフローの横にあるフィルターアイコン ![ フィルター ](/help/images/icons/filter-add.png) を選択します。
 
 ![ データフロー実行指標ページ ](../assets/ui/monitor-sources/dataflow-page.png)
 

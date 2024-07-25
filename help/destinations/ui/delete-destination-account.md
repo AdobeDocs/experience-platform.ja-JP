@@ -4,7 +4,7 @@ title: 宛先アカウントの削除
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UI で宛先アカウントを削除する手順を示します
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 18%
@@ -33,11 +33,11 @@ ht-degree: 18%
 
    ![「アカウント」タブ](../assets/ui/delete-accounts/accounts-tab.png)
 
-2. 左上のフィルターアイコン ![フィルターアイコン](../assets/ui/update-accounts/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたフィルターされたアカウントの選択を表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられたフィルターされたアカウントの選択を表示できます。
 
    ![ 宛先のフィルタリング ](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. 削除するアカウント名の横にある省略記号（`...`）を選択します。 ポップアップパネルが表示され、アカウントの **[!UICONTROL オーディエンスをアクティブ化]**、**[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** するオプションが提供されます。 ![ 削除ボタン ](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 削除]** ボタンを選択して、目的のアカウントを削除します。
+3. 削除するアカウント名の横にある省略記号（`...`）を選択します。 ポップアップパネルが表示され、アカウントの **[!UICONTROL オーディエンスをアクティブ化]**、**[!UICONTROL 詳細を編集]**、および **[!UICONTROL 削除]** するオプションが提供されます。 ![ 削除ボタン ](/help/images/icons/delete.png)**[!UICONTROL 削除]** ボタンを選択して、目的のアカウントを削除します。
 
    ![ 宛先アカウントを削除 ](../assets/ui/delete-accounts/delete-accounts.png)
 

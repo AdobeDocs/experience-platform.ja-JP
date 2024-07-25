@@ -2,7 +2,7 @@
 title: カスタムダッシュボード
 description: カスタムダッシュボードを作成および管理する方法を説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -30,7 +30,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 <!-- >[!NOTE]
 >
->To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 [!UICONTROL  ダッシュボードを作成 ] ダイアログが表示されます。 作成するウィジェットのコレクションにわかりやすい名前を入力し、「**[!UICONTROL 保存]**」を選択します。
@@ -68,7 +68,7 @@ Data Distiller SKU を購入したユーザーは、カスタム SQL クエリ�
 
 >[!TIP]
 >
->情報アイコン（![ 情報アイコン](./images/user-defined-dashboards/info-icon.png)）を選択し、データパネルに表示するには長すぎる場合に、完全なデータモデル名を表示します。
+>情報アイコン（![ 情報アイコン](/help/images/icons/info.png)）を選択し、データパネルに表示するには長すぎる場合に、完全なデータモデル名を表示します。
 
 ![ データを選択ダイアログ ](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -94,17 +94,17 @@ Data Distiller SKU を購入したユーザーは、カスタム SQL クエリ�
 
 これで、選択したテーブルのデータがウィジェットコンポーザーに入力されます。
 
-データモデルと現在選択されているテーブルが左側のパネルの上部に表示され、ウィジェットの作成に使用できる属性が「[!UICONTROL  属性 ]」列に一覧表示されます。 検索バーを使用して、リストをスクロールする代わりに属性を検索したり、鉛筆アイコン（![ 鉛筆アイコン。](./images/user-defined-dashboards/edit-icon.png)）を選択します。
+データモデルと現在選択されているテーブルが左側のパネルの上部に表示され、ウィジェットの作成に使用できる属性が「[!UICONTROL  属性 ]」列に一覧表示されます。 検索バーを使用して、リストをスクロールする代わりに属性を検索したり、鉛筆アイコン（![ 鉛筆アイコン。](/help/images/icons/edit.png)）を選択します。
 
 ![ ウィジェットコンポーザー内のデータが入力されたウィジェット。](./images/user-defined-dashboards/populated-widget-composer.png)
 
 #### 属性の追加とフィルター {#add-and-filter-attributes}
 
-追加アイコン（![ 追加アイコン](./images/user-defined-dashboards/add-icon.png)）を選択して、ウィジェットに属性を追加します。 表示されるドロップダウンメニューを使用すると、X 軸、Y 軸、色、ウィジェットのフィルターのいずれかとして属性を追加できます。 [!UICONTROL  色 ] 属性を使用すると、X 軸マークと Y 軸マークの結果を色に基づいて区別できます。 これを行うには、3 番目の属性の構成に基づいて、結果を異なる色に分割します。
+追加アイコン（![ 追加アイコン](/help/images/icons/add-circle.png)）を選択して、ウィジェットに属性を追加します。 表示されるドロップダウンメニューを使用すると、X 軸、Y 軸、色、ウィジェットのフィルターのいずれかとして属性を追加できます。 [!UICONTROL  色 ] 属性を使用すると、X 軸マークと Y 軸マークの結果を色に基づいて区別できます。 これを行うには、3 番目の属性の構成に基づいて、結果を異なる色に分割します。
 
 >[!TIP]
 >
->X 軸と Y 軸の配置を反転するには、上向き矢印アイコンと下向き矢印アイコン（![ 上向き矢印アイコンと下向き矢印アイコン](./images/user-defined-dashboards/switch-axis-icon.png)）を使用して配置を切り替えます。
+>X 軸と Y 軸の配置を反転するには、上向き矢印アイコンと下向き矢印アイコン（![ 上向き矢印アイコンと下向き矢印アイコン](/help/images/icons/switch.png)）を使用して配置を切り替えます。
 
 ![ アドアイコンドロップダウンがハイライト表示されたウィジェットコンポーザー。](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -132,7 +132,7 @@ Data Distiller SKU を購入したユーザーは、カスタム SQL クエリ�
 
 ### ウィジェットのプロパティ
 
-「プロパティ」アイコン（![ 「プロパティ」アイコン](./images/user-defined-dashboards/properties-icon.png)）を選択し、プロパティパネルを開きます。 [!UICONTROL  プロパティ ] パネルの [!UICONTROL  ウィジェットタイトル ] テキストフィールドにウィジェットの名前を入力します。
+「プロパティ」アイコン（![ 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択し、プロパティパネルを開きます。 [!UICONTROL  プロパティ ] パネルの [!UICONTROL  ウィジェットタイトル ] テキストフィールドにウィジェットの名前を入力します。
 
 ![ プロパティアイコンとウィジェットタイトルフィールドがハイライト表示されたプロパティパネル。](./images/user-defined-dashboards/properties-panel.png)
 
@@ -146,7 +146,7 @@ Data Distiller SKU を購入したユーザーは、カスタム SQL クエリ�
 
 >[!TIP]
 >
->「プロパティ」アイコン（![ 「プロパティ」アイコン](./images/user-defined-dashboards/properties-icon.png)）を選択すると、ダッシュボードの作成に関する詳細が表示されます。 表示されるダイアログでダッシュボードの名前を変更できます。
+>「プロパティ」アイコン（![ 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択すると、ダッシュボードの作成に関する詳細が表示されます。 表示されるダイアログでダッシュボードの名前を変更できます。
 
 このワークスペース内でウィジェットの並べ替えとサイズ変更を行うことができます。 「**[!UICONTROL 保存]**」を選択して、ダッシュボード名と設定済みレイアウトを保持します。
 
@@ -162,7 +162,7 @@ Adobe Real-time Customer Data Platform インサイトダッシュボードの�
 >
 >既存のカスタムダッシュボードを切り替えるには、左側のナビゲーションバーのダッシュボードを選択し、インベントリリストからダッシュボード名を選択します。
 
-鉛筆アイコン（![ 鉛筆アイコンを選択します。](./images/user-defined-dashboards/edit-icon.png)）を選択し、編集モードに入ります。
+鉛筆アイコン（![ 鉛筆アイコンを選択します。](/help/images/icons/edit.png)）を選択し、編集モードに入ります。
 
 ![ 鉛筆アイコンがハイライト表示されたカスタムダッシュボード。](./images/user-defined-dashboards/edit-mode.png)
 

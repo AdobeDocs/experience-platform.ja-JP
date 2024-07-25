@@ -2,7 +2,7 @@
 title: パラメーター化クエリ
 description: Adobe Experience Platform UI でパラメーター化クエリを使用する方法を説明します。
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 13%
@@ -47,7 +47,7 @@ SELECT
 
 UI でパラメーター化されたクエリを作成するには、クエリエディターに移動します。 詳しくは、[ クエリエディターへのアクセス ](./user-guide.md#accessing-query-editor) の節を参照してください。
 
-`'$'` の序文を使用して、テキストエディターでクエリにクエリパラメーターを入力します。次に、「[!UICONTROL  コンソール ]**の横にある「**[!UICONTROL  クエリパラメーター ]」タブを選択し、キーに欠落している値を追加します。 必要なキーに値を追加しない場合、クエリは実行できません。 アラートアイコン（![ アラートアイコン。](../images/ui/parameterized-queries/alert-icon.png)）が「クエリパラメーター」セクション内の空の [!UICONTROL  値 ] 入力フィールドの隣に表示されます。
+`'$'` の序文を使用して、テキストエディターでクエリにクエリパラメーターを入力します。次に、「[!UICONTROL  コンソール ]**の横にある「**[!UICONTROL  クエリパラメーター ]」タブを選択し、キーに欠落している値を追加します。 必要なキーに値を追加しない場合、クエリは実行できません。 アラートアイコン（![ アラートアイコン。](/help/images/icons/alert.png)）が「クエリパラメーター」セクション内の空の [!UICONTROL  値 ] 入力フィールドの隣に表示されます。
 
 >[!NOTE]
 >

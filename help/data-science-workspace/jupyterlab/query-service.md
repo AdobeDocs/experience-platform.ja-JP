@@ -5,7 +5,7 @@ title: Jupyter Notebook のクエリサービス
 type: Tutorial
 description: Adobe Experience Platformでは、クエリサービスを JupyterLab に標準機能として統合することで、Data Science Workspaceで構造化照会言語（SQL）を使用できます。 このチュートリアルでは、Adobe Analytics データを調査、変換、分析するための一般的なユースケースに対して、SQL クエリの例を示します。
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 50%
@@ -98,7 +98,7 @@ ht-degree: 50%
 
 個々のノートブックセルに次の SQL クエリを入力します。セルを選択してクエリを実行したあと、「**[!UICONTROL 再生]**」ボタンを選択します。 成功したクエリの結果またはエラーログは、実行されたセルの下に表示されます。
 
-ノートブックが長時間非アクティブになっていると、ノートブックと [!DNL Query Service] の間の接続が切断される場合があります。 その場合は、電源ボタンの横の右上隅にある **再起動** ボタン ![ 再起動ボタン ](../images/jupyterlab/user-guide/restart_button.png) を選択して [!DNL JupyterLab] を再起動します。
+ノートブックが長時間非アクティブになっていると、ノートブックと [!DNL Query Service] の間の接続が切断される場合があります。 その場合は、電源ボタンの横の右上隅にある **再起動** ボタン ![ 再起動ボタン ](/help/images/icons/restart.png) を選択して [!DNL JupyterLab] を再起動します。
 
 ノートブックのカーネルはリセットされますが、セルは残ります。すべてのセルを再実行して、中断した位置から続行します。
 

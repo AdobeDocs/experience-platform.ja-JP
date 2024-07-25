@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービス資格情報ガイド
 description: Adobe Experience Platform クエリサービスは、クエリの書き込みと実行、以前に実行したクエリの表示、組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1807'
 ht-degree: 3%
@@ -36,7 +36,7 @@ Adobe Experience Platform クエリサービスを使用すると、外部クラ
 - **[!UICONTROL ポート]**：接続先のホストのポート番号。
 - **[!UICONTROL Database]**: クライアントの接続先のデータベースの名前。
 - **[!UICONTROL ユーザー名]**：クエリサービスへの接続に使用するユーザー名。
-- **[!UICONTROL パスワード]**：クエリサービスへの接続に使用するパスワード。 UI のパスワードは、セキュリティのためにハッシュ化されています。 コピーアイコン（![ コピーアイコンを選択します。](../images/ui/credentials/copy-icon.png)）を選択して、ハッシュ化されていない完全な資格情報をクリップボードにコピーします。
+- **[!UICONTROL パスワード]**：クエリサービスへの接続に使用するパスワード。 UI のパスワードは、セキュリティのためにハッシュ化されています。 コピーアイコン（![ コピーアイコンを選択します。](/help/images/icons/copy.png)）を選択して、ハッシュ化されていない完全な資格情報をクリップボードにコピーします。
 - **[!UICONTROL PSQL コマンド]**：コマンドラインで PSQL を使用してクエリサービスに接続するために、すべての関連情報を自動的に挿入したコマンド。
 - **[!UICONTROL Expires]**：有効期限が切れる資格情報の有効期限の日時。 トークンのデフォルトの有効期間は 24 時間ですが、Admin Consoleの詳細設定で変更できます。
 
@@ -126,7 +126,7 @@ SQL を使用してCustomer Journey Analyticsデータビューにアクセス�
 
 ![ 有効期限のない資格情報セクションがハイライト表示されたクエリダッシュボードの「資格情報」タブ ](../images/ui/credentials/list-credentials.png)
 
-有効期限のない認証情報は、編集または削除できます。 有効期限のない認証情報を編集するには、鉛筆アイコン（![ 鉛筆アイコン。](../images/ui/credentials/edit-icon.png)）に設定します。 有効期限のない認証情報を削除するには、削除アイコン（![ ごみ箱アイコン。](../images/ui/credentials/delete-icon.png)）を選択します。
+有効期限のない認証情報は、編集または削除できます。 有効期限のない認証情報を編集するには、鉛筆アイコン（![ 鉛筆アイコン。](/help/images/icons/edit.png)）に設定します。 有効期限のない認証情報を削除するには、削除アイコン（![ ごみ箱アイコン。](/help/images/icons/delete.png)）を選択します。
 
 有効期限のない秘密鍵証明書を編集すると、モーダルが表示されます。 更新する次の詳細を指定できます。
 

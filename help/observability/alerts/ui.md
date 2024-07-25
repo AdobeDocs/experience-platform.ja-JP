@@ -4,7 +4,7 @@ title: アラート UI ガイド
 description: Experience Platform のユーザーインターフェイスでアラートを管理する方法を説明します。
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 8d63e9fa4c7eb09ffb90edca612a6e6d44dd18fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 40%
@@ -71,7 +71,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 アラート通知は、メールに直接配信できます。
 
-通知とお知らせを表示するには、右側の上部のリボンにあるベルアイコン（![ ベルアイコン ](../images/alerts/ui/bell-icon.png)）を選択します。 表示されるドロップダウンで、歯車アイコン（![ 歯車アイコン ](../images/alerts/ui/cog-icon.png)）を選択して、Experience Cloudの環境設定ページにアクセスします。
+通知とお知らせを表示するには、右側の上部のリボンにあるベルアイコン（![ ベルアイコン ](/help/images/icons/bell.png)）を選択します。 表示されるドロップダウンで、歯車アイコン（![ 歯車アイコン ](/help/images/icons/settings.png)）を選択して、Experience Cloudの環境設定ページにアクセスします。
 
 ![ ベルアイコンと歯車アイコンを強調表示したアラートのリスト。](../images/alerts/ui/edit-preferences.png)
 

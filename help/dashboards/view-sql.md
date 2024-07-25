@@ -2,7 +2,7 @@
 title: Insight SQL を表示
 description: プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを通じてクエリをオンデマンドで実行します。
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->コピーアイコン（![ コピーアイコンを選択すると、SQL 文全体をクリップボードにコピーできます。](./images/view-sql/copy-icon.png)）を選択します。
+>コピーアイコン（![ コピーアイコンを選択すると、SQL 文全体をクリップボードにコピーできます。](/help/images/icons/copy.png)）を選択します。
 
 ![SQL 文がハイライト表示されたインサイトダイアログ ](./images/view-sql/sql-dialog.png)
 

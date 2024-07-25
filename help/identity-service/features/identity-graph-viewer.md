@@ -2,7 +2,7 @@
 title: ID グラフビューア
 description: ID グラフは、特定の顧客の異なる ID 間の関係のマップで、顧客が様々なチャネルでブランドとどのようにやり取りするかを視覚的に表現します。
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 6%
@@ -46,7 +46,7 @@ ID グラフを表示するには、ID 名前空間とそれに対応する値�
 
 >[!TIP]
 >
->テーブルアイコン ![ テーブルアイコン ](../images/identity-graph-viewer/table-icon.png) を選択すると、組織で使用可能なすべての ID 名前空間のリストを含むパネルが表示されます。 有効な ID 値が接続されている限り、任意の ID 名前空間を使用できます。 詳しくは、[ID 名前空間ガイド ](./namespaces.md) を参照してください。
+>テーブルアイコン ![ テーブルアイコン ](/help/images/icons/table.png) を選択すると、組織で使用可能なすべての ID 名前空間のリストを含むパネルが表示されます。 有効な ID 値が接続されている限り、任意の ID 名前空間を使用できます。 詳しくは、[ID 名前空間ガイド ](./namespaces.md) を参照してください。
 
 ![ID グラフ参照画面で提供される ID 名前空間とそれに対応する値。](../images/graph-viewer/namespace-and-value.png)
 

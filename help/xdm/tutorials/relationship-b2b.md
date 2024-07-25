@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
 description: Adobe Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 18%
@@ -97,7 +97,7 @@ Adobe Real-time Customer Data Platform B2B Edition には、[ アカウント ](
 >
 >現在、ソーススキーマから参照スキーマに定義できるのは、多対 1 および 1 対 1 の関係のみです。 1 対多の関係の場合、「多」を表すスキーマで関係フィールドを定義する必要があります。
 
-関係フィールドを設定するには、キャンバス内で該当するフィールドの横にある矢印アイコン（![ 矢印アイコン ](../images/tutorials/relationship-b2b/arrow.png)）を選択します。 [!DNL Opportunities] スキーマの場合、目標はアカウントとの多対 1 の関係を確立することなので、これは `accountKey.sourceKey` のフィールドになります。
+関係フィールドを設定するには、キャンバス内で該当するフィールドの横にある矢印アイコン（![ 矢印アイコン ](/help/images/icons/alias.png)）を選択します。 [!DNL Opportunities] スキーマの場合、目標はアカウントとの多対 1 の関係を確立することなので、これは `accountKey.sourceKey` のフィールドになります。
 
 ![ 関係ボタン ](../images/tutorials/relationship-b2b/relationship-button.png)
 

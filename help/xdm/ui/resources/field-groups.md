@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI でのスキーマフィールドグループの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマフィールドグループを作成および編集する方法について説明します。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 8%
@@ -56,7 +56,7 @@ Adobe Experience Platformには、様々なマーケティングユースケー�
 
 >[!NOTE]
 >
->完全に編集およびカスタマイズできるのは、組織で定義されたカスタムフィールドグループのみです。 Adobeで定義されたコアフィールドグループの場合、個々のスキーマのコンテキスト内で編集できるのは、そのフィールドの表示名のみです。 これらのフィールドは、スキーマエディターで南京錠アイコン（![ 南京錠アイコン](../../images/ui/explore/padlock-icon.png)）に設定します。 詳しくは、[ スキーマフィールドの表示名の編集 ](./schemas.md#display-names) の節を参照してください。
+>完全に編集およびカスタマイズできるのは、組織で定義されたカスタムフィールドグループのみです。 Adobeで定義されたコアフィールドグループの場合、個々のスキーマのコンテキスト内で編集できるのは、そのフィールドの表示名のみです。 これらのフィールドは、スキーマエディターで南京錠アイコン（![ 南京錠アイコン](/help/images/icons/lock-closed.png)）に設定します。 詳しくは、[ スキーマフィールドの表示名の編集 ](./schemas.md#display-names) の節を参照してください。
 >
 >カスタムフィールドグループを保存し、データ取り込みのスキーマで使用すると、それ以降はフィールドグループに追加の変更を加えることのみ可能です。 詳しくは、[ スキーマ進化のルール ](../../schema/composition.md#evolution) を参照してください。
 
