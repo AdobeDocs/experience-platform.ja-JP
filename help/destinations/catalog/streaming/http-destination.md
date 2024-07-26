@@ -4,10 +4,10 @@ title: HTTP API 接続
 description: Adobe Experience Platform で HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。これによって、Experience Platform から書き出されたプロファイルデータに対して必要な独自の分析を実行したり、他の操作を実行したりできます。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
 workflow-type: tm+mt
-source-wordcount: '2639'
-ht-degree: 73%
+source-wordcount: '2664'
+ht-degree: 72%
 
 ---
 
@@ -76,6 +76,8 @@ Experience Platform からデータを書き出す際に HTTP API 宛先を使�
 [!DNL Common Name] （CN）と [!DNL Subject Alternative Names] （SAN）をチェックしてサードパーティの検証を追加する場合は、以下の証明書をダウンロードできます。
 
 * [HTTP API mTLS 公開証明書](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
+また、MTLS エンドポイントにGETリクエストを行うことで、公開証明書を安全に取得できます。 詳しくは、[ 公開証明書エンドポイントのドキュメント ](../../../data-governance/mtls-api/public-certificate-endpoint.md) を参照してください。
 
 ## IP アドレスの許可リスト {#ip-address-allowlist}
 

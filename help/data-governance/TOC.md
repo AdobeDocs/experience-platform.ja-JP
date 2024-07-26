@@ -5,10 +5,10 @@ breadcrumb-title: データガバナンスガイド
 user-guide-description: ラベル、マーケティングアクション、ガバナンスポリシーを使用して、データ使用制限を適用します。
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 100%
+source-wordcount: '99'
+ht-degree: 93%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 100%
    * [概要](enforcement/overview.md)
    * [自動適用](enforcement/auto-enforcement.md)
    * [API ベースの適用](enforcement/api-enforcement.md)
+* MTLS サービス API {#mtls-api}
+   * [概要](mtls-api/overview.md)
+   * [はじめに](mtls-api/getting-started.md)
+   * [公開証明書エンドポイント](mtls-api/public-certificate-endpoint.md)
 * Policy Service API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)

@@ -2,9 +2,9 @@
 title: Adobe Experience Platformでのデータ暗号化
 description: Adobe Experience Platformでの転送時および保存時のデータの暗号化の仕組みを説明します。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '737'
 ht-degree: 8%
 
 ---
@@ -54,6 +54,8 @@ CN または SAN をチェックしてサードパーティの検証を追加す
 
 - [Adobe Journey Optimizer公開証明書 ](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
 - [ 宛先サービスの公開証明書 ](../images/governance-privacy-security/encryption/destinations-public-cert.pem)。
+
+また、MTLS エンドポイントにGETリクエストを行うことで、公開証明書を安全に取得できます。 詳しくは、[ 公開証明書エンドポイントのドキュメント ](../../data-governance/mtls-api/public-certificate-endpoint.md) を参照してください。
 
 ## 保存中のデータ {#at-rest}
 
