@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger の最新のリリースノー�
 keywords: デバッガー;Experience Platform Debugger 拡張機能;Chrome;拡張機能;リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
+source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 65%
+source-wordcount: '781'
+ht-degree: 64%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
+
+## バージョン 1.6.1 - 2024年7月25日（PT）
+
+### 修正点および改善点
+
+* ユーザーが新しいタグ埋め込みコードを持たないページに追加できない問題を修正しました。
 
 ## バージョン 1.6.0 - 2024年7月11日（PT）
 
@@ -31,7 +37,7 @@ ht-degree: 65%
 ### 修正点および改善点
 
 * 設定が保持されない問題を修正しました。
-* Analytics Postで処理されたヒットを表示する際に、Debugger がクラッシュする問題を修正しました。
+* Analytics の後処理されたヒットを表示する際に、デバッガーがクラッシュする問題を修正しました。
 
 ## バージョン 1.5.3 - 2023年12月6日（PT）
 
