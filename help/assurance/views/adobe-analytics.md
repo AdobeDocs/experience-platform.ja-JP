@@ -2,14 +2,18 @@
 title: Assurance のAdobe Analytics表示
 description: このガイドでは、Adobe Experience Platform Assurance とAdobe Analyticsの使用方法について説明します。
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 515f58175a8ccba03581ce4d7faf23fdfed3571e
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '394'
 ht-degree: 1%
 
 ---
 
 # Assurance のAdobe Analytics ビュー
+
+>[!IMPORTANT]
+>
+>Analytics イベントビューは、**Analytics Events 2.0 （Beta） プラグイン** に統合されました。  これは、今後、アシュランスから削除される予定です。 Assurance セッションでの Analytics のデバッグには、**Analytics Events 2.0 （Beta）プラグイン** を使用することをお勧めします。
 
 Adobe Experience Platform Assurance とAdobe Analyticsの統合により、SDK イベントに関する豊富なビューが、Adobe Analytics実装のデバッグと検証を行うユーザーに提供されます。 ビューには、[Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/) からAdobe Analyticsに送信されたライフサイクルイベントとアクション/ステートイベントが表示されるようになりました。 また、このビューには、各レポートスイートの処理ルールを適用した後のイベントの処理方法に関する情報を提供する「応答」の詳細も含まれています。
 
@@ -24,7 +28,7 @@ Adobe Experience Platform Assurance とAdobe Analyticsの統合により、SDK �
 
 アプリケーションに Assurance をインストールする方法については、[Assurance 実装ガイド ](../tutorials/implement-assurance.md) を参照してください。
 
-## Post処理ステータス
+## 後処理ステータス
 
 SDK がAdobe Analyticsでネットワークリクエストを送信すると、Adobe Analyticsが Assurance リクエストの後処理データを取得できたかどうかをステータスが示します。
 
@@ -47,4 +51,4 @@ Analytics のトラックイベントの場合、詳細ビューには次のよ�
 
 - 起点となる SDK Analytics リクエストイベント。
 - リクエストからの OOTB メタおよびコンテキストデータ （レポートスイート ID、SDK 拡張機能バージョン、OOTB コンテキストデータなど）。
-- リポジトリ、eVar、prop などのマッピングを含む、Postが処理した Analytics イベントに関する情報。
+- リポジトリ、eVar、prop などのマッピングを含む、Analytics イベントに関する後処理情報。
