@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント化サービスの概要
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1607'
-ht-degree: 96%
+source-wordcount: '1700'
+ht-degree: 92%
 
 ---
 
@@ -51,6 +51,14 @@ API を使用したセグメント定義の作成について詳しくは、[API
 >イベントでは、スキーマが拡張され、以降のすべてのアップロードで、新しく追加されたフィールドを適宜更新する必要があります。[!DNL Experience Data Model]（XDM）のカスタマイズについて詳しくは、[スキーマエディターのチュートリアル](../xdm/tutorials/create-schema-ui.md)を参照してください。
 >
 >さらに、データセットでエクスペリエンスイベントの有効期限の値が有効になっている場合、これは、作成したセグメント定義のメンバーシップに影響を与える可能性があります。この機能がセグメント化に与える影響について詳しくは、[エクスペリエンスイベントの有効期限](../profile/event-expirations.md)に関するガイドを参照してください。
+
+### Federated Audience Composition {#fac}
+
+オーディエンスコンポジションとセグメント定義に加えて、AdobeFederated Audience コンポジションを使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [Federated Audience コンポジション ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home) に関するガイドを参照してください。
+
+>[!AVAILABILITY]
+>
+>連合オーディエンス構成は現在、一連の組織でのみ使用できます（限定的に利用可能）。詳しくは、アドビ担当者にお問い合わせください。
 
 ## オーディエンスを評価 {#evaluate-segments}
 

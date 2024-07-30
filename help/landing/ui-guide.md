@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Experience PlatformUI の概要
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1947'
 ht-degree: 3%
 
 ---
@@ -43,13 +43,13 @@ Adobe Experience Platformにログインしたら、[!UICONTROL  指標ダッシ
 
 ![](images/user-guide/homepage-recent.png)
 
-「**[!UICONTROL 最近のデータセット]**」セクションには、組織内で最近作成された 5 つのデータセットが一覧表示されます。 このリストは、新しいデータセットが作成されるたびに更新されます。 リストからデータセットを選択して、指定したデータセットの詳細を表示するか、「**[!UICONTROL すべて表示]**」を選択して、作成されたすべてのデータセットのリストを表示できます。 データセットについて詳しくは、[ データセットの概要 ](../catalog/datasets/overview.md) を参照してください。
+「**[!UICONTROL 最近のデータセット]**」セクションには、組織内で最近作成された 5 つのデータセットが一覧表示されます。 このリストは、新しいデータセットが作成されるたびに更新されます。 リストからデータセットを選択して表示できます。指定したデータセットの詳細を確認したり、「**[!UICONTROL すべて表示]**」を選択して、作成したすべてのデータセットのリストを表示したりできます。 データセットについて詳しくは、[ データセットの概要 ](../catalog/datasets/overview.md) を参照してください。
 
-「**[!UICONTROL 最新のソース]**」セクションには、組織内で最近作成された 5 つのソースコネクタが一覧表示されます。 このリストは、新しいソースコネクタが作成されるたびに更新されます。 リストからソース接続を選択して、指定したコネクタの詳細情報を表示するか、「**[!UICONTROL すべて表示]**」を選択して、作成したすべてのソース接続のリストを表示できます。 ソースについて詳しくは、[ ソースの概要 ](../sources/home.md) を参照してください。
+「**[!UICONTROL 最新のソース]**」セクションには、組織内で最近作成された 5 つのソースコネクタが一覧表示されます。 このリストは、新しいソースコネクタが作成されるたびに更新されます。 リストからソース接続を選択して表示できます。指定したコネクタの詳細を確認したり、「**[!UICONTROL すべて表示]**」を選択して、作成したすべてのソース接続のリストを表示したりできます。 ソースについて詳しくは、[ ソースの概要 ](../sources/home.md) を参照してください。
 
-「**[!UICONTROL 最近のセグメント]**」セクションには、組織内で最近作成された 5 つのセグメント定義が一覧表示されます。 このリストは、新しいセグメント定義が作成されるたびに更新されます。 リストからセグメント定義を選択して、指定したセグメント定義の詳細情報を表示するか、「**[!UICONTROL すべて表示]**」を選択して、作成したすべてのセグメント定義のリストを表示できます。 セグメントについて詳しくは、[ セグメント化サービスの概要 ](../segmentation/home.md) を参照してください。
+「**[!UICONTROL 最近のセグメント]**」セクションには、組織内で最近作成された 5 つのセグメント定義が一覧表示されます。 このリストは、新しいセグメント定義が作成されるたびに更新されます。 リストからセグメント定義を選択して表示できます。指定したセグメント定義の詳細を確認したり、「**[!UICONTROL すべて表示]**」を選択して、作成したすべてのセグメント定義のリストを表示したりできます。 セグメントについて詳しくは、[ セグメント化サービスの概要 ](../segmentation/home.md) を参照してください。
 
-**[!UICONTROL 最近の宛先]** セクションには、組織内で最近作成された 5 つの宛先が一覧表示されます。 このリストは、新しい宛先が作成されるたびに更新されます。 リストから宛先を選択して、指定した宛先に関する詳細を表示するか、「**[!UICONTROL すべて表示]**」を選択して、作成されたすべての宛先のリストを表示できます。 宛先について詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
+**[!UICONTROL 最近の宛先]** セクションには、組織内で最近作成された 5 つの宛先が一覧表示されます。 このリストは、新しい宛先が作成されるたびに更新されます。 リストから宛先を選択して表示できます。指定した宛先に関する詳細を確認したり、「**[!UICONTROL すべて表示]**」を選択して、作成したすべての宛先のリストを表示したりできます。 宛先について詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
 
 ### 推奨される学習
 
@@ -137,15 +137,15 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 「**[!UICONTROL ポリシー]**」セクションでは、データ使用ポリシーを作成および管理できます。 ポリシーの節の使用について詳しくは、[ データ使用ポリシーユーザーガイド ](../data-governance/policies/user-guide.md) を参照してください。 データ使用ポリシーについて詳しくは、[ データ使用ポリシーの概要 ](../data-governance/policies/overview.md) を参照してください。
 
-「**[!UICONTROL リクエスト]**」セクションでは、プライバシーリクエストを作成および管理できます。 Privacy ServiceUI にアクセスするには、許可リストに加えるする必要があることに注意してください。 リクエストのセクションの使用方法について詳しくは、[Privacy Serviceユーザーガイド ](../privacy-service/ui/user-guide.md) を参照してください。 Privacy Serviceの詳細については、[Privacy Serviceの概要 ](../privacy-service/home.md) を参照してください。
+「**[!UICONTROL リクエスト]**」セクションでは、プライバシーリクエストを作成および管理できます。 Privacy ServiceUI にアクセスするには、許可リストに加えるする必要があることに注意してください。 リクエストのセクションの使用方法について詳しくは、[Privacy Serviceユーザーガイド ](../privacy-service/ui/user-guide.md) を参照してください。 Privacy Serviceについて詳しくは、[Privacy Serviceの概要 ](../privacy-service/home.md) を参照してください。
 
 ### [!UICONTROL データサイエンス]
 
-「**[!UICONTROL ノートブック]**」セクションでは、データの調査、分析、モデル化を行えるインタラクティブ開発環境である JupyterLab にアクセスできます。 「ノートブック」の節の使用について詳しくは、[JupyterLab ユーザーガイド ](../data-science-workspace/jupyterlab/overview.md) を参照してください。 Data Science Workspaceについて詳しくは、[Data Science Workspaceの概要 ](../data-science-workspace/home.md) を参照してください。
+「**[!UICONTROL ノートブック]**」セクションでは、データの調査、分析、モデル化を行えるインタラクティブ開発環境である JupyterLab にアクセスできます。 「ノートブック」の節の使用について詳しくは、[JupyterLab ユーザーガイド ](../data-science-workspace/jupyterlab/overview.md) を参照してください。 Data Science Workspaceについて詳しくは、[Data Science Workspaceの概要 ](../data-science-workspace/home.md) を参照してください
 
 **[!UICONTROL モデル]** セクションでは、機械学習と人工知能を使用して、モデルを作成、開発、トレーニング、調整し、予測を行うことができます。 モデルの節について詳しくは、[ モデルのトレーニングと評価 ](../data-science-workspace/models-recipes/train-evaluate-model-ui.md) に関するチュートリアルを参照してください。
 
-**[!UICONTROL サービス]** セクションでは、スケジュールに沿ったトレーニングやスコアリング用に公開済みモデルを管理したり、Adobeのインテリジェントサービスを使用したりできます。インテリジェントサービスは、パーソナライズされたカスタマーエクスペリエンスをリアルタイムで提供する一連の AI サービスです。 サービスの節について詳しくは、[ サービスとしてのモデルの公開チュートリアル ](../data-science-workspace/models-recipes/publish-model-service-ui.md) を参照してください。
+**[!UICONTROL サービス]** セクションでは、スケジュールに沿ったトレーニングやスコアリング用に公開済みモデルを管理したり、Adobeのインテリジェントサービスを使用したりできます。インテリジェントサービスは、パーソナライズされたカスタマーエクスペリエンスをリアルタイムで提供する一連の AI サービスです。 サービスの節について詳しくは、[ サービスとしてのモデルの公開 ](../data-science-workspace/models-recipes/publish-model-service-ui.md) チュートリアルを参照してください。
 
 ### [!UICONTROL  データ管理 ]
 
@@ -155,7 +155,20 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 「**[!UICONTROL クエリ]**」セクションでは、クエリの作成と管理、Adobe Experience Platform クエリサービスによって作成された SQL クエリのログ記録、[!DNL PostgreSQL] 資格情報の表示を行うことができます。 クエリについて詳しくは、[ クエリサービスユーザーガイド ](../query-service/ui/overview.md) を参照してください。
 
-「**[!UICONTROL 監視]**」セクションでは、バッチ取得とストリーミング取得を監視できます。 監視について詳しくは、[ データ取り込みの監視ユーザーガイド ](../ingestion/quality/monitor-data-ingestion.md) を参照してください。
+「**[!UICONTROL 監視]**」セクションでは、バッチ取得とストリーミング取得を監視できます。 監視について詳しくは、[ データ取得ユーザーガイドの監視 ](../ingestion/quality/monitor-data-ingestion.md) を参照してください。
+
+### [!UICONTROL Federated Data] （限定提供）
+
+**[!UICONTROL モデル]** セクションでは、データの構造、関係、制約を定義するデータモデルとスキーマを設計および作成できます。 データモデルとスキーマについて詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas) を参照してください。
+
+**[!UICONTROL 監査記録]** セクションでは、環境に対してリアルタイムに実行されたすべてのアクションとイベントの詳細な時系列の記録が提供されます。 監査証跡について詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail) を参照してください。
+
+
+「**[!UICONTROL 連合データベース]**」セクションでは、Adobe Experience Platformを Enterprise Data Warehouse に接続できます。 連合データベースへの接続について詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db) を参照してください。
+
+>[!AVAILABILITY]
+>
+>連合オーディエンス構成は現在、一連の組織でのみ使用できます（限定的に利用可能）。詳しくは、アドビ担当者にお問い合わせください。
 
 ### [!UICONTROL 判定]
 

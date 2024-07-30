@@ -3,9 +3,9 @@ keywords: 宛先；experience cloud ソリューション；target；ターゲ�
 title: アドビの宛先の概要
 description: Platform のデータを他のAdobe Experience Cloud ソリューションに接続して、広告のターゲティング、パーソナライゼーション、マーケティングの自動処理などを行うことで、カスタマーエクスペリエンスを管理します
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '231'
 ht-degree: 29%
 
 ---
@@ -30,6 +30,7 @@ ht-degree: 29%
 * [（ベータ版）Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage 接続](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate 接続](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
+* [Federated Audience Composition 接続 ](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"} （限定提供）
 
 ### 拡張機能
 

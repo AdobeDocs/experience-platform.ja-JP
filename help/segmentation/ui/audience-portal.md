@@ -2,10 +2,10 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3725'
-ht-degree: 65%
+source-wordcount: '3826'
+ht-degree: 63%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 65%
 - [オーディエンスの作成](#create-audience)
    - [セグメントビルダーを使用したオーディエンスの作成](#segment-builder)
    - [オーディエンス構成を使用したオーディエンスの作成](#audience-composition)
+   - [Federated Audience コンポジションを使用して、既存の Data Warehouse のデータを使用するオーディエンスを作成します ](#fac) （使用制限あり）
 - [外部で生成されたオーディエンスのインポート](#import-audience)
 
 Audience Portal を開くには、「セグメント化」セクション内の **[!UICONTROL 参照]** タブを選択します。
@@ -339,6 +340,12 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 「**[!UICONTROL ルールを作成]**」を選択すると、セグメントビルダーに移動します。このワークスペースには、セグメント定義を作成および編集するための直感的なコントロール（データプロパティの表示に使用するドラッグ＆ドロップタイルなど）が含まれています。セグメント定義の作成について詳しくは、[セグメントビルダーガイド](./segment-builder.md)を参照してください。
 
 ![セグメントビルダーワークスペースが表示されています。](../images/ui/audience-portal/segment-builder.png)
+
+### Federated Audience Composition {#fac}
+
+オーディエンスコンポジションとセグメント定義に加えて、AdobeFederated Audience コンポジションを使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [Federated Audience コンポジション ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home) に関するガイドを参照してください。
+
+![ 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
 
 ## オーディエンスの読み込み {#import-audience}
 
