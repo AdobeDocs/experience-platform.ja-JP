@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent クラス
 description: XDM ExperienceEvent クラスと、イベントデータモデリングのベストプラクティスについて説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5537485206c1625ca661d6b33f7bba08538a0fa3
 workflow-type: tm+mt
-source-wordcount: '2672'
-ht-degree: 40%
+source-wordcount: '2761'
+ht-degree: 38%
 
 ---
 
@@ -105,6 +105,7 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 | `advertising.timePlayed` | このイベントは、特定のタイムドメディアアセットでユーザーが費やした時間を追跡します。 |
 | `application.close` | このイベントは、アプリケーションがいつクローズされたか、またはバックグラウンドに送信されたかを追跡します。 |
 | `application.launch` | このイベントは、アプリケーションがいつ起動されたか、またはフォアグラウンドに移動したかを追跡します。 |
+| `click` | **非推奨** 代わりに、`decisioning.propositionInteract` を使用してください。 |
 | `commerce.backofficeCreditMemoIssued` | このイベントは、顧客に対してクレジット通知が発行された際にトラッキングします。 |
 | `commerce.backofficeOrderCancelled` | このイベントは、以前に開始した購入プロセスが完了前に終了したタイミングを追跡します。 |
 | `commerce.backofficeOrderItemsShipped` | このイベントは、購入した品目が物理的に顧客に出荷された時期を追跡します。 |
@@ -119,11 +120,12 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 | `commerce.productViews` | このイベントは、製品が 1 つ以上のビューを受信した際に追跡します。 |
 | `commerce.purchases` | このイベントは、注文が受理されたタイミングを追跡します。 これはコマースコンバージョンで唯一必要なアクションです。購入イベントでは商品リストが参照されている必要があります。 |
 | `commerce.saveForLaters` | このイベントは、商品リストが今後の使用のために保存されたタイミング（例：商品ウィッシュリスト）を追跡します。 |
-| `decisioning.propositionDisplay` | このイベントは、ある人物に決定の提案がいつ表示されたかを追跡します。 |
-| `decisioning.propositionDismiss` | このイベントは、提示されたオファーにエンゲージしないことが決定された際にトラッキングします。 |
-| `decisioning.propositionInteract` | このイベントは、ユーザーが決定の提案をいつ操作したかを追跡します。 |
+| `decisioning.propositionDisplay` | このイベントは、Web SDK がページに表示されている内容に関する情報を自動的に送信する場合に使用されます。 ただし、ページヒットの上位と下位など、他の方法で表示情報を既に含めている場合は、このイベントタイプは必要ありません。 ページヒットの一番下では、任意のイベントタイプを選択できます。 |
+| `decisioning.propositionDismiss` | このイベントタイプは、Adobe Journey Optimizerのアプリ内メッセージまたはコンテンツカードが閉じられるときに使用されます。 |
+| `decisioning.propositionFetch` | イベントが主に決定を取得することを示すために使用されます。 Adobe Analyticsはこのイベントを自動的にドロップします。 |
+| `decisioning.propositionInteract` | このイベントタイプは、パーソナライズされたコンテンツに対するインタラクション（クリックなど）を追跡するために使用されます。 |
 | `decisioning.propositionSend` | このイベントは、見込み客に提案またはオファーを送信することを決定した際にトラッキングします。 |
-| `decisioning.propositionTrigger` | このイベントは、提案プロセスのアクティブ化をトラッキングします。 オファーの提示を促す特定の条件またはアクションが発生しました。 |
+| `decisioning.propositionTrigger` | このタイプのイベントは、[Web SDK](../../web-sdk/home.md) によってローカルストレージに保存されますが、Experience Edgeには送信されません。 ルールセットが満たされるたびに、イベントが生成されてローカルストレージに保存されます（その設定が有効な場合）。 |
 | `delivery.feedback` | このイベントは、メール配信など、配信のフィードバックイベントを追跡します。 |
 | `directMarketing.emailBounced` | このイベントは、人物へのメールがバウンスしたタイミングを追跡します。 |
 | `directMarketing.emailBouncedSoft` | このイベントは、人物へのメールがソフトバウンスしたタイミングを追跡します。 |
@@ -132,6 +134,7 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 | `directMarketing.emailOpened` | このイベントは、人物がマーケティングメールを開封したタイミングを追跡します。 |
 | `directMarketing.emailSent` | このイベントは、マーケティングメールが人物に送信されたタイミングを追跡します。 |
 | `directMarketing.emailUnsubscribed` | このイベントは、ユーザーがマーケティングメールの購読を解除したタイミングを追跡します。 |
+| `display` | **非推奨** 代わりに、`decisioning.propositionDisplay` を使用してください。 |
 | `inappmessageTracking.dismiss` | このイベントは、アプリ内メッセージが取り消されたタイミングを追跡します。 |
 | `inappmessageTracking.display` | このイベントは、アプリ内メッセージが表示されたタイミングを追跡します。 |
 | `inappmessageTracking.interact` | このイベントは、アプリ内メッセージがいつ操作されたかを追跡します。 |
@@ -146,33 +149,34 @@ UI を使用して手動で Platform にデータを取り込む場合、計算�
 | `leadOperation.statusInCampaignProgressionChanged` | このイベントは、キャンペーンでのリードのステータスが変更されたタイミングを追跡します。 |
 | `listOperation.addToList` | このイベントでは、人物がマーケティングリストに追加されたタイミングを追跡します。 |
 | `listOperation.removeFromList` | このイベントは、ある人物がマーケティングリストから削除されたタイミングを追跡します。 |
-| `media.adBreakComplete` | このイベントは、`adBreakComplete` イベントが発生した際に追跡します。 このイベントは、広告ブレークの開始時にトリガーされます。 |
-| `media.adBreakStart` | このイベントは、`adBreakStart` イベントが発生した際に追跡します。 このイベントは、広告ブレークの終了時にトリガーされます。 |
-| `media.adComplete` | このイベントは、`adComplete` イベントが発生した際に追跡します。 このイベントは、広告が完了したときにトリガーされます。 |
-| `media.adSkip` | このイベントは、`adSkip` イベントが発生した際に追跡します。 このイベントは、広告がスキップされたときにトリガーされます。 |
-| `media.adStart` | このイベントは、`adStart` イベントが発生した際に追跡します。 このイベントは、広告が開始されたときにトリガーされます。 |
-| `media.bitrateChange` | このイベントは、`bitrateChange` イベントが発生した際に追跡します。 このイベントは、ビットレートに変更がある場合にトリガーされます。 |
-| `media.bufferStart` | このイベントは、`bufferStart` イベントが発生した際に追跡します。 メディアのバッファー処理が開始されると、このイベントがトリガーされます。 |
-| `media.chapterComplete` | このイベントは、`chapterComplete` イベントが発生した際に追跡します。 このイベントは、メディアのチャプターが完了したときにトリガーされます。 |
-| `media.chapterSkip` | このイベントは、`chapterSkip` イベントが発生した際に追跡します。 このイベントは、ユーザーがメディアコンテンツ内の別のセクションまたはチャプターに進む、または戻る際にトリガーされます。 |
-| `media.chapterStart` | このイベントは、`chapterStart` イベントが発生した際に追跡します。 このイベントは、メディアコンテンツ内の特定のセクションまたはチャプターの開始時にトリガーされます。 |
+| `media.adBreakComplete` | このイベントは、広告ブレークが完了したことを示します。 |
+| `media.adBreakStart` | このイベントは、広告ブレークの開始を示します。 |
+| `media.adComplete` | このイベントは、広告の完了を示します。 |
+| `media.adSkip` | このイベントは、広告がスキップされた場合に通知します。 |
+| `media.adStart` | このイベントは、広告の開始を示します。 |
+| `media.bitrateChange` | このイベントは、ビットレートが変更された場合に通知します。 |
+| `media.bufferStart` | `media.bufferStart` イベントタイプは、バッファー処理の開始時に送信されます。 特定の `bufferResume` イベントタイプはありません。`bufferStart` イベントの後に `play` イベントが送信された場合、バッファリングは再開されたと見なされます。 |
+| `media.chapterComplete` | このイベントは、チャプターが完了したことを示します。 |
+| `media.chapterSkip` | このイベントは、ユーザーが別のセクションまたはチャプターに進む、または戻る際にトリガーされます。 |
+| `media.chapterStart` | このイベントは、チャプターの開始を示します。 |
 | `media.downloaded` | このイベントは、メディアダウンロード済みコンテンツが発生したタイミングを追跡します。 |
-| `media.error` | このイベントは、`error` イベントが発生した際に追跡します。 このイベントは、メディアの再生中にエラーまたは問題が発生するとトリガーされます。 |
-| `media.pauseStart` | このイベントは、`pauseStart` イベントが発生した際に追跡します。 このイベントは、ユーザーがメディア再生で一時停止を開始するとトリガーされます。 |
-| `media.ping` | このイベントは、`ping` イベントが発生した際に追跡します。 これにより、メディアリソースが使用可能かどうかが確認されます。 |
-| `media.play` | このイベントは、`play` イベントが発生した際に追跡します。 このイベントは、メディアコンテンツの再生中にトリガーされ、ユーザーによるアクティブな消費を示します。 |
-| `media.sessionComplete` | このイベントは、`sessionComplete` イベントが発生した際に追跡します。 このイベントは、メディア再生セッションの終了をマークします。 |
-| `media.sessionEnd` | このイベントは、`sessionEnd` イベントが発生した際に追跡します。 このイベントは、メディアセッションの終了を示します。 この結論には、メディアプレーヤーを閉じるか、再生を停止することが含まれる場合があります。 |
-| `media.sessionStart` | このイベントは、`sessionStart` イベントが発生した際に追跡します。 このイベントは、メディア再生セッションの開始をマークします。 ユーザーがメディアファイルの再生を開始するとトリガーされます。 |
-| `media.statesUpdate` | このイベントは、`statesUpdate` イベントが発生した際に追跡します。 プレーヤーステートトラッキング機能は、オーディオストリームまたはビデオストリームに付加することができる。 標準の状態は、fullscreen、mute、closedCaptioning、pictureInPicture、inFocus です。 |
+| `media.error` | このイベントは、メディアの再生中にエラーが発生した場合に通知します。 |
+| `media.pauseStart` | このイベントは、`pauseStart` イベントが発生した際に追跡します。 このイベントは、ユーザーがメディア再生で一時停止を開始するとトリガーされます。 再開イベントタイプはありません。 リク `pauseStart` ストの後に再生イベントを送信すると、再開が推論されます。 |
+| `media.ping` | `media.ping` イベントタイプは、進行中の再生ステータスを示すために使用されます。 メインコンテンツの場合、このイベントは再生中に 10 秒ごとに送信される必要があります。これは、再生が開始されてから 10 秒後に開始されます。 広告コンテンツの場合は、広告トラッキング中に 1 秒ごとに送信される必要があります。 ping イベントでは、リクエスト本文にパラメーターマップを含めないでください。 |
+| `media.play` | `media.play` イベントタイプは、プレーヤーが `buffering,` `paused` （ユーザーによって再開された場合）や `error` （自動再生などのシナリオを含む）などの別の状態から `playing` 状態に移行する際に送信されます。 このイベントは、プレーヤーの `on('Playing')` コールバックによってトリガーされます。 |
+| `media.sessionComplete` | このイベントは、メインコンテンツの終わりに達したときに送信されます。 |
+| `media.sessionEnd` | `media.sessionEnd` イベントタイプは、ユーザーが表示を放棄して戻る可能性が低いときに、セッションを直ちに閉じるように Media Analytics バックエンドに通知します。 このイベントが送信されない場合、セッションは、10 分間無操作状態が続いた後、または再生ヘッドを動かさずに 30 分後にタイムアウトします。 そのセッション ID を持つ後続のメディアコールは無視されます。 |
+| `media.sessionStart` | `media.sessionStart` イベントタイプは、セッション開始呼び出しで送信されます。 応答を受け取ると、セッション ID が Location ヘッダーから抽出され、収集サーバーに対する以降のすべてのイベント呼び出しに使用されます。 |
+| `media.statesUpdate` | このイベントは、`statesUpdate` イベントが発生した際に追跡します。 プレーヤーステートトラッキング機能は、オーディオストリームまたはビデオストリームに付加することができる。 標準の状態は、`fullscreen`、`mute`、`closedCaptioning`、`pictureInPicture`、`inFocus` です。 |
 | `opportunityEvent.addToOpportunity` | このイベントでは、人物がオポチュニティに追加されたタイミングを追跡します。 |
 | `opportunityEvent.opportunityUpdated` | このイベントは、オポチュニティが更新されたタイミングを追跡します。 |
 | `opportunityEvent.removeFromOpportunity` | このイベントでは、人物がオポチュニティから削除されたタイミングを追跡します。 |
+| `personalization.request` | **非推奨** 代わりに、`decisioning.propositionFetch` を使用してください。 |
 | `pushTracking.applicationOpened` | このイベントは、ユーザーがプッシュ通知からアプリを開いたタイミングを追跡します。 |
 | `pushTracking.customAction` | このイベントは、ユーザーがプッシュ通知でカスタムアクションを選択したタイミングを追跡します。 |
 | `web.formFilledOut` | このイベントは、人物が web ページ上のフォームに入力したタイミングを追跡します。 |
-| `web.webinteraction.linkClicks` | このイベントは、リンクが 1 回以上選択された際に追跡します。 |
-| `web.webpagedetails.pageViews` | このイベントは、Web ページが 1 つ以上のビューを受け取ったときに追跡されます。 |
+| `web.webinteraction.linkClicks` | イベントは、リンククリックが Web SDK によって自動的に記録されたことを示します。 |
+| `web.webpagedetails.pageViews` | このイベントタイプは、ヒットをページビューとしてマークするための標準的な方法です。 |
 | `location.entry` | このイベントは、特定の場所でのユーザーまたはデバイスのエントリを追跡します。 |
 | `location.exit` | このイベントは、特定の場所からの人物またはデバイスの出口を追跡します。 |
 
