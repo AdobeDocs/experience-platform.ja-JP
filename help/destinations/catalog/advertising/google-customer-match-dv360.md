@@ -3,9 +3,9 @@ title: Google Customer Match + Display & Video 360 connection
 description: Google Customer Match + Display & Video 360 宛先コネクタを使用すると、Experience Platformのオンラインおよびオフラインデータを使用して、検索、ショッピング、Gmail、YouTubeなど、Googleが所有および運営するプロパティをまたいで顧客にリーチし、再びエンゲージできます。
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1999'
 ht-degree: 18%
 
 ---
@@ -222,6 +222,12 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。
 
 ![ アクティベーションワークフローのマッピング手順でハイライト表示されている変換コントロールを適用 ](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
+
+## 宛先の監視
+
+宛先に接続し、宛先データフローを確立したら、Real-Time CDPの [ モニタリング機能 ](/help/dataflows/ui/monitor-destinations.md) を使用して、各データフロー実行で宛先に対してアクティブ化されたプロファイルレコードに関する詳細な情報を取得できます。
+
+[!DNL Google Customer Match + Display & Video 360] 接続の監視情報には、各データフローおよびデータフロー実行のアクティブ化、除外、失敗した ID に関するオーディエンスレベルの情報が含まれます。 機能について詳しくは、こちらを参照してください。
 
 ## Audience Activation が成功したことの確認 {#verify-activation}
 
