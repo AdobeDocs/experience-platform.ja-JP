@@ -4,7 +4,7 @@ title: アラート UI ガイド
 description: Experience Platform のユーザーインターフェイスでアラートを管理する方法を説明します。
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 40%
