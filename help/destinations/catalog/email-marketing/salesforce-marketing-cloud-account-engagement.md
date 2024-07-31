@@ -3,7 +3,7 @@ title: Salesforce Marketing Cloudアカウントエンゲージメント
 description: Salesforce Marketing Cloudアカウントエンゲージメント（旧称 Pardot）の宛先を使用してアカウントデータを書き出し、ビジネスニーズに合わせて Salesforce Marketing Cloudアカウントエンゲージメント内でアクティブ化する方法を説明します。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 30%
@@ -153,11 +153,12 @@ XDM フィールドを [!DNL Marketing Cloud Account Engagement] の宛先フィ
 1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、「**[!UICONTROL ID 名前空間を選択]**」を選択して ID を選択するか、「**[!UICONTROL カスタム属性を選択]**」カテゴリを選択して、使用可能なスキーマから [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) のリストから指定します。
 
    * これらの手順を繰り返して、XDM プロファイルスキーマと [!DNL Marketing Cloud Account Engagement] の間のマッピングを追加します。
-|Sourceフィールド | ターゲットフィールド |必須 |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`|はい |
-|`xdm: MailingAddress.city`|`xdm: city`| |
-|`xdm: person.name.firstName`|`Attribute: firstName`| |
+
+     | ソースフィールド | ターゲットフィールド | 必須 |
+     | --- | --- | --- |
+     | `IdentityMap: Email` | `Identity: email` | ○ |
+     | `xdm: MailingAddress.city` | `xdm: city` | |
+     | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * 上記のマッピングの例を以下に示します。
      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

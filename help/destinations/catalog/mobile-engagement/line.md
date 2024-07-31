@@ -4,10 +4,10 @@ title: 回線接続
 description: LINE 宛先を使用すると、Platform オーディエンスにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを提供できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -121,9 +121,10 @@ Platform が [!DNL LINE] リソースにアクセスできるようにするに�
 Adobe Experience Platform から [!DNL LINE] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL LINE] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
 ソース ID に応じて、次のターゲット ID 名前空間をマッピングする必要があります。
-| ターゲット ID |Sourceフィールド | ターゲットフィールド |
-| — | — | — |
-|広告主の ID | `IDFA` または `GAID` | `LineId` |
+
+| ターゲット ID | ソースフィールド | ターゲットフィールド |
+| --- | --- | --- |
+| 広告主（IFA）の ID | `IDFA` または `GAID` | `LineId` |
 | LINE ユーザー ID | `UserID` | `LineId` |
 
 ターゲット ID が *LINE ユーザー ID* の場合は、以下が必要です。

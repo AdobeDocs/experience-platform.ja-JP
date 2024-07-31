@@ -3,10 +3,10 @@ title: Mailchimp タグ
 description: Mailchimp タグの宛先を使用すると、アカウントデータを書き出し、Mailchimp 内でアクティブ化して、連絡先と関わり合うことができます。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1646'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
@@ -175,9 +175,10 @@ XDM フィールドを [!DNL Mailchimp Tags] の宛先フィールドに正し�
    ![ ターゲットフィールドを ID 名前空間のメールとして使用した Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    XDM プロファイルスキーマと [!DNL Mailchimp Tags] の間のマッピングは、次のようになります。
-|Sourceフィールド | ターゲットフィールド |必須 |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: Email`|はい |
+
+   | ソースフィールド | ターゲットフィールド | 必須 |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | ○ |
 
    完了したマッピングの例を次に示します。
    ![ フィールドマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

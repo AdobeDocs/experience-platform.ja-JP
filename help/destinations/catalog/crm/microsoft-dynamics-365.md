@@ -4,10 +4,10 @@ title: Microsoft Dynamics 365 接続
 description: Microsoft Dynamics 365 の宛先を使用すると、アカウントデータを書き出し、Microsoft Dynamics 365 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2019'
-ht-degree: 62%
+ht-degree: 60%
 
 ---
 
@@ -169,10 +169,11 @@ Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエン
    * **[!UICONTROL ID 名前空間を選択]**：このオプションを選択して、ソースフィールドをリストから ID 名前空間にマッピングします。
      ![contactid のターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * XDM プロファイルスキーマと [!DNL Dynamics 365] インスタンスの間の次のマッピングを追加：
-|XDM プロファイルスキーマ|[!DNL Dynamics 365] インスタンス| 必須|
-|—|—|—| 
-|`contactid`|`contactid`| はい |
+   * XDM プロファイルスキーマと [!DNL Dynamics 365] インスタンスの間に次のマッピングを追加します。
+
+     | XDM プロファイルスキーマ | [!DNL Dynamics 365] Instance | 必須 |
+     |---|---|---|
+     | `contactid` | `contactid` | ○ |
 
    * **[!UICONTROL カスタム属性を選択]**：このオプションを選択して、「**[!UICONTROL 属性名]**」フィールドに定義するカスタム属性にマッピングするソースフィールドを選択します。サポートされる属性の包括的なリストについては、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties)を参照してください。
      ![ メールのターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
@@ -182,15 +183,17 @@ Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエン
      > * ターゲットフィールド名は `lowercase` にする必要があります。
      > * さらに、[!DNL Dynamics 365] [ 日付またはタイムスタンプ ](https://docs.microsoft.com/ja-jp/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) ターゲットフィールドでマッピングされた日付またはタイムスタンプのソースフィールドがある場合、マッピングされた値が空でないことを確認します。 書き出されたフィールドの値が空の場合、*`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* のエラーメッセージが表示され、データは更新されません。 （これは [!DNL Dynamics 365] の制限です。）
 
-   * 例えば、更新する値に応じて、XDM プロファイルスキーマと [!DNL Dynamics 365] インスタンスの間に次のようにマッピングを追加します。
-|XDM プロファイルスキーマ|[!DNL Dynamics 365] インスタンス|
-|—|—| 
-|`person.name.firstName`|`firstname`| 
-|`person.name.lastName`|`lastname`| 
-|`personalEmail.address`|`emailaddress1`|
+   * 例えば、更新する値に応じて、XDM プロファイルスキーマと [!DNL Dynamics 365] インスタンスの間に次のようなマッピングを追加します。
+
+     | XDM プロファイルスキーマ | [!DNL Dynamics 365] Instance |
+     |---|---|
+     | `person.name.firstName` | `firstname` |
+     | `person.name.lastName` | `lastname` |
+     | `personalEmail.address` | `emailaddress1` |
 
    * これらのマッピングの使用例を次に示します。
-     ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+
+   ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-audience-export-example}
 

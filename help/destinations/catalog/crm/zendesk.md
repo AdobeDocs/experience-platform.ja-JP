@@ -3,10 +3,10 @@ title: Zendesk 接続
 description: Zendesk 宛先を使用すると、アカウントデータを書き出し、Zendesk 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -121,12 +121,14 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
 1. **[!UICONTROL ソースフィールドを選択]** ウィンドウで、**[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、**[!UICONTROL ID 名前空間を選択]** を選択して ID を選択します。
 1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、**[!UICONTROL ID 名前空間を選択]** カテゴリを選択してターゲット ID を選択するか、**[!UICONTROL 属性を選択]** カテゴリを選択して、サポートされているスキーマ属性の 1 つを選択します。
+
    * これらの手順を繰り返して、次の必須マッピングを追加します。また、XDM プロファイルスキーマと [!DNL Zendesk] インスタンスの間で更新したい他の属性を追加することもできます。
-|Sourceフィールド|ターゲットフィールド|必須|
-|—|—|—|
-|`xdm: person.name.lastName`|`xdm: last_name`|はい |
-|`IdentityMap: Email`|`Identity: email`|はい |
-|`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | ソースフィールド | ターゲットフィールド | 必須 |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | ○ |
+     | `IdentityMap: Email` | `Identity: email` | ○ |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * これらのマッピングの使用例を次に示します。
      ![ 属性マッピングを含む Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/mappings.png)

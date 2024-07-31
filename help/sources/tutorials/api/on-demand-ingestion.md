@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気のトピック;Flow Service;
 title: Flow Service API を使用したオンデマンド取り込み用のフロー実行の作成
 description: Flow Service API を使用して、オンデマンド取り込み用のフロー実行を作成する方法を説明します
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 13%
@@ -104,6 +104,7 @@ curl -X POST \
 | --- | --- |
 | `id` | 新しく作成されたフロー実行の ID。 テーブルベースの実行仕様について詳しくは、[ フロー仕様の取得 ](../api/collect/database-nosql.md#specs) に関するガイドを参照してください。 |
 | `etag` | フロー実行のリソースバージョン。 |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |

@@ -2,7 +2,7 @@
 title: （API）Salesforce Marketing Cloud 接続
 description: SalesforceMarketing Cloud（旧称 ExactTarget）の宛先を使用すると、アカウントデータをエクスポートして、Salesforce Marketing Cloud内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 22%
@@ -242,6 +242,7 @@ XDM フィールドを [!DNL (API) Salesforce Marketing Cloud] の宛先フィ�
 ![ 属性を示す SalesforceMarketing CloudUI のスクリーンショット。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 [!DNL (API) Salesforce Marketing Cloud] マッピング ID **[!UICONTROL の場所を示す例を以下に示し]** す。
+
 ![ オーディエンスの書き出しのスケジュールを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 [!DNL (API) Salesforce Marketing Cloud] に示すように、**[!UICONTROL マッピング ID]** は、**[!UICONTROL フィールド名]** 内で指定された値 [!DNL Salesforce Marketing Cloud] 完全に一致する必要があります。
@@ -249,8 +250,9 @@ XDM フィールドを [!DNL (API) Salesforce Marketing Cloud] の宛先フィ�
 アクティブ化された各 Platform セグメントに対して、このセクションを繰り返します。
 
 上記の画像に基づく典型的な例は、です。
-|[!DNL (API) Salesforce Marketing Cloud] セグメント名 | [!DNL Salesforce Marketing Cloud] **[!UICONTROL フィールド名]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL マッピング ID]** |
-| — | — | — |
+
+| [!DNL (API) Salesforce Marketing Cloud] セグメント名 | [!DNL Salesforce Marketing Cloud] **[!UICONTROL フィールド名]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL マッピング ID]** |
+| --- | --- | --- |
 | salesforce mc オーディエンス 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc オーディエンス 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 

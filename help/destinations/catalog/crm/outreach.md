@@ -3,10 +3,10 @@ keywords: crm;CRM;CRM 宛先；アウトリーチ；アウトリーチ CRM 宛�
 title: アウトリーチ接続
 description: アウトリーチの宛先を使用すると、アカウントデータを書き出し、ビジネスニーズに合わせてアウトリーチ内でアクティブ化できます。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1678'
-ht-degree: 43%
+ht-degree: 42%
 
 ---
 
@@ -154,19 +154,21 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
    * **[!UICONTROL ID 名前空間を選択]**：このオプションを選択して、ソースフィールドをリストから ID 名前空間にマッピングします。
      ![OutreachId を使用したターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/target-mapping.png)
 
-   * XDM プロファイルスキーマと [!DNL Outreach] インスタンスの間の次のマッピングを追加：
-|XDM プロファイルスキーマ|[!DNL Outreach] インスタンス| 必須|
-|—|—|—| 
-|`Oid`|`OutreachId`| はい |
+   * XDM プロファイルスキーマと [!DNL Outreach] インスタンスの間に次のマッピングを追加します。
+
+     | XDM プロファイルスキーマ | [!DNL Outreach] Instance | 必須 |
+     |---|---|---|
+     | `Oid` | `OutreachId` | ○ |
 
    * **[!UICONTROL カスタム属性を選択]**：このオプションを選択して、「[!UICONTROL 属性名]」フィールドに定義するカスタム属性にマッピングするソースフィールドを選択します。サポートされる属性の包括的なリストについては、[[!DNL Outreach]  見込み客ドキュメント ](https://api.outreach.io/api/v2/docs#prospect) を参照してください。
      ![LastName を使用したターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * 例えば、更新する値に応じて、XDM プロファイルスキーマと [!DNL Outreach] インスタンスの間に次のようなマッピングを追加します。
-|XDM プロファイルスキーマ|[!DNL Outreach] インスタンス|
-|—|—|
-|`person.name.firstName`|`firstName`|
-|`person.name.lastName`|`lastName`|
+
+     | XDM プロファイルスキーマ | [!DNL Outreach] Instance |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * これらのマッピングの使用例を次に示します。
      ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/outreach/mappings.png)

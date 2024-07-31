@@ -3,10 +3,10 @@ title: （API）Oracle Eloqua 接続
 description: （API）Oracleの Eloqua 宛先を使用すると、アカウントデータを書き出し、Oracleの Eloqua 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2033'
-ht-degree: 29%
+ht-degree: 30%
 
 ---
 
@@ -148,19 +148,21 @@ XDM フィールドを [!DNL Oracle Eloqua] の宛先フィールドにマッピ
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
 1. **[!UICONTROL ソースフィールドを選択]** ウィンドウで、**[!UICONTROL 属性を選択]** カテゴリを選択して XDM 属性を選択するか、**[!UICONTROL ID 名前空間を選択]** を選択して ID を選択します。
 1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、**[!UICONTROL ID 名前空間を選択]** を選択して ID を選択するか、**[!UICONTROL カスタム属性を選択]** を選択して **[!UICONTROL 属性名]** フィールドに目的の属性名を入力します。 指定する属性名は、[!DNL Oracle Eloqua] の既存の連絡先属性と一致する必要があります。 [!DNL Oracle Eloqua] で使用できる正確な属性名については、[[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) を参照してください。
+
    * これらの手順を繰り返して、XDM プロファイルスキーマと [!DNL Oracle Eloqua] の間に必要な属性マッピングと必要な属性マッピングの両方を追加します。
-|Sourceフィールド | ターゲットフィールド |必須 |
-|—|—|—|
-|`IdentityMap: Eid`|`Identity: EloquaId`|はい |
-|`xdm: personalEmail.address`|`Attribute: emailAddress`|はい |
-|`xdm: personName.firstName`|`Attribute: firstName`| |
-|`xdm: personName.lastName`|`Attribute: lastName`| |
-|`xdm: workAddress.street1`|`Attribute: address1`| |
-|`xdm: workAddress.street2`|`Attribute: address2`| |
-|`xdm: workAddress.street3`|`Attribute: address3`| |
-|`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
-|`xdm: workAddress.country`|`Attribute: country`| |
-|`xdm: workAddress.city`|`Attribute: city`| |
+
+     | ソースフィールド | ターゲットフィールド | 必須 |
+     |---|---|---|
+     | `IdentityMap: Eid` | `Identity: EloquaId` | ○ |
+     | `xdm: personalEmail.address` | `Attribute: emailAddress` | ○ |
+     | `xdm: personName.firstName` | `Attribute: firstName` | |
+     | `xdm: personName.lastName` | `Attribute: lastName` | |
+     | `xdm: workAddress.street1` | `Attribute: address1` | |
+     | `xdm: workAddress.street2` | `Attribute: address2` | |
+     | `xdm: workAddress.street3` | `Attribute: address3` | |
+     | `xdm: workAddress.postalCode` | `Attribute: postalCode` | |
+     | `xdm: workAddress.country` | `Attribute: country` | |
+     | `xdm: workAddress.city` | `Attribute: city` | |
 
    * 上記のマッピングの例を以下に示します。
      ![ 属性マッピングを含む Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)

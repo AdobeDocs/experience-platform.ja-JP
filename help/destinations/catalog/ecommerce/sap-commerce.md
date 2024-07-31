@@ -3,7 +3,7 @@ title: SAP Commerce接続
 description: SAP Commerce宛先コネクタを使用して、SAP アカウントの顧客レコードを更新します。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 26%
@@ -194,6 +194,7 @@ Adobe Experience Platformから [!DNL SAP Commerce] の宛先にオーディエ�
 #### `customerNumberSAP` ID のマッピング
 
 `customerNumberSAP` ID は、この宛先に対する必須のマッピングです。 マッピングするには、次の手順に従います。
+
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。これで、新しいマッピング行が画面に表示されます。
    ![ 「新しいマッピングを追加」ボタンがハイライト表示された Platform UI のスクリーンショット。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL ソースフィールドを選択]** ウィンドウで、「**[!UICONTROL ID 名前空間を選択]** を選択 `customerNumberSAP` ます。
@@ -211,6 +212,7 @@ ID マッピングの例を以下に示します。
 #### 属性のマッピング
 
 XDM プロファイルスキーマと [!DNL SAP Subscription Billing] アカウントの間で更新する他の属性を追加するには、次の手順を繰り返します。
+
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。これで、新しいマッピング行が画面に表示されます。
    ![ 「新しいマッピングを追加」ボタンがハイライト表示された Platform UI のスクリーンショット。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL ソースフィールドを選択]** ウィンドウで、**[!UICONTROL 属性を選択]** カテゴリを選択して、XDM 属性を選択します。
@@ -302,8 +304,9 @@ XDM プロファイルスキーマと [!DNL SAP Subscription Billing] アカウ�
 アクティブ化された各 Platform オーディエンスに対して、このセクションを繰り返します。
 
 2 つのオーディエンスを選択した場合の上記の画像に基づいて、マッピングは次のようになります。
+
 | [!DNL SAP Commerce] オーディエンス名 | [!DNL SAP Subscription Billing] **[!UICONTROL 参照タイプ]** | [!DNL SAP Commerce] **[!UICONTROL マッピング ID]** 値 |
-| — | — | — |
+| --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
 | SAP オーディエンス 2 | `SAP_2` | `SAP_2` |
 

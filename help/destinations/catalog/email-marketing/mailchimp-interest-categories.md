@@ -3,10 +3,10 @@ title: Mailchimp の興味カテゴリ
 description: Mailchimp （Intuit Mailchimp とも呼ばれます）は、企業がメーリングリストやメールマーケティングキャンペーンを使用して連絡先（クライアント、顧客、その他の興味のある関係者）を管理し、連絡を取るために使用する、人気のあるマーケティング自動化プラットフォームおよびメールマーケティングサービスです。 このコネクタを使用すると、興味や好みに基づいて連絡先を並べ替えることができます。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2299'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -168,12 +168,13 @@ XDM フィールドを [!DNL Mailchimp Interest Categories] の宛先フィー�
 1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、**[!UICONTROL ID 名前空間を選択]** を選択して、ID を選択するか、**[!UICONTROL 属性を選択]** カテゴリを選択して、[!DNL Mailchimp] API から入力された属性のリストから選択します。 *選択した [!DNL Mailchimp] オーディエンスに追加したカスタム属性も、ターゲットフィールドとして選択できます。*
 
    XDM プロファイルスキーマと [!DNL Mailchimp Interest Categories] の間で使用できるマッピングは次のとおりです。
-|Sourceフィールド | ターゲットフィールド |備考 |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`|必須：はい |
-|`xdm: person.name.firstName`|`Attribute: FNAME`| |
-|`xdm: person.name.lastName`|`Attribute: LNAME`| |
-|`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+
+   | ソースフィールド | ターゲットフィールド | メモ |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: email` | 必須：はい |
+   | `xdm: person.name.firstName` | `Attribute: FNAME` | |
+   | `xdm: person.name.lastName` | `Attribute: LNAME` | |
+   | `xdm: person.birthDayAndMonth` | `Attribute: BIRTHDAY` | |
 
    さらに、[!DNL Mailchimp] オーディエンス内のターゲットと呼ばれる特別なター `merge field` ットフィールドも `ADDRESS` ります。 [[!DNL Mailchimp]  ドキュメント ](https://mailchimp.com/developer/marketing/docs/merge-fields/) では、必要なキーとして `addr1`、`city`、`state`、`zip`、およびオプションのキー `addr2` と `country` を定義しています。 これらのフィールドの値は、文字列にする必要があります。 `ADDRESS` のいずれかのフィールドマッピングが存在する場合、宛先は `ADDRESS` オブジェクトを [!DNL Mailchimp] API に渡して更新します。 マッピングされない `ADDRESS` フィールドの値は、デフォルトで `NULL` になる国を除き、デフォルトで `US` になります。
 
