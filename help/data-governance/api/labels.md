@@ -5,10 +5,10 @@ title: ラベル API エンドポイント
 description: Policy Service API を使用して Experience Platform のデータ使用ラベルを管理する方法を説明します。
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 77d68a42b16c78cdc2b55f7776ba1c8ec98d8acd
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 100%
+source-wordcount: '536'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->`/labels` エンドポイントは、データ使用ラベルの取得、作成、更新のみに使用されます。API 呼び出しを使用してデータセットとフィールドにラベルを追加する方法の手順については、[データセットラベルの管理](../labels/dataset-api.md)のガイドを参照してください。
+>`/labels` エンドポイントは、データ使用ラベルの取得、作成、更新のみに使用されます。ラベルを削除することはできません。 ただし、API 呼び出しを使用して、データセットとフィールドにラベルを追加または削除できます。 手順については、[ データセットラベルの管理 ](../labels/dataset-api.md) ドキュメントのガイドを参照してください。
 
 ## はじめに
 
@@ -163,6 +163,10 @@ curl -X GET \
 ## カスタムラベル の作成または更新 {#create-update}
 
 カスタムラベルを作成または更新するには、[!DNL Policy Service] API に PUT リクエストをおこなう必要があります。
+
+>[!NOTE]
+>
+>データセットからラベルを削除する場合は、[Dataset Service API](../labels/dataset-api.md#remove) または [ データセット UI](../labels/user-guide.md#remove-labels-from-a-dataset) を使用して、PUTリクエストを実行できます。
 
 **API 形式**
 

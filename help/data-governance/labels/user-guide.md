@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI でのデータ使用ラベルの管理
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 93%
+source-wordcount: '1550'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 93%
 
 ## ラベルの管理 {#manage-labels}
 
-データにラベルを適用するには、「prod」と呼ばれるデフォルトの実稼動サンドボックスで使用する&#x200B;**[!UICONTROL 使用ラベルを管理]**&#x200B;権限が必要です。カスタムラベルを作成するには、製品プロファイルに対する管理権限も必要です。各組織には適用可能なラベルのリストが 1 つしかなく、現在、ラベルの削除はサポートされていません。
+データにラベルを適用するには、「prod」と呼ばれるデフォルトの実稼動サンドボックスで使用する&#x200B;**[!UICONTROL 使用ラベルを管理]**&#x200B;権限が必要です。カスタムラベルを作成するには、製品プロファイルに対する管理権限も必要です。各組織には、適用可能なラベルのリストが 1 つだけあります。 ラベルは削除 **できません**。 代わりに、適用先のデータセットやフィールドから削除することができます。
 
 権限を割り当てる方法について詳しくは、[権限の設定](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja)の方法に関するガイドまたは[アクセス制御の概要](../../access-control/home.md)を参照してください。組織の Admin Console へのアクセス権がない場合は、組織の管理者にお問い合わせください。
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API を使用したデータセットのデータ使用ラベルの管理
 description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
-ht-degree: 93%
+source-wordcount: '1340'
+ht-degree: 91%
 
 ---
 
@@ -166,6 +166,10 @@ curl -X POST \
 ## データセットからラベルを削除する {#remove}
 
 以前に適用されたフィールドラベルを削除するには、既存のフィールドラベルのサブセットで既存の `optionalLabels` 値を更新するか、空のリストを更新して完全に削除します。[!DNL Dataset Service] API に PUT リクエストを送信して、以前に適用されたラベルを更新または削除します。
+
+>[!NOTE]
+>
+>`labels` パラメーターに空のリストを指定することで、データセットのラベルを完全に削除できます。 データセットでラベルを保持する必要はありません。
 
 **API 形式**
 
