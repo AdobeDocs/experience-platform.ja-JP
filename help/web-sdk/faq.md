@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK に関するよくある質問
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 002a57d1d5cfb2e7bdbd9b587e77ca4487a28f65
+source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2184'
 ht-degree: 5%
 
 ---
@@ -198,16 +198,6 @@ Adobe Experience Platform Web SDK は、最新バージョンのGoogle Chrome、
 ```
 
 このタグは、`window.Promise` が有効な Promise 実装であることを確認するスクリプトを読み込みます。
-
->[!NOTE]
->
->別の Promise 実装を読み込む場合は、`Promise.prototype.finally` をサポートしていることを確認してください。
-
-### Internet Explorer のサポート
-
-Adobe Experience Platform SDK は、プロミスを使用します。プロミスは、非同期タスクの完了を伝える手段です。 SDK で使用される [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) 実装は、[!DNL Internet Explorer] 以外のすべてのターゲットブラウザーでネイティブにサポートされています。 [!DNL Internet Explorer] で SDK を使用するには、`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill) が必要です。
-
-promise をポリフィルするために使用できるライブラリの 1 つに、promise-polyfill があります。 NPM を使用したインストール方法について詳しくは、[promise-polyfill のドキュメント ](https://www.npmjs.com/package/promise-polyfill) を参照してください。
 
 >[!NOTE]
 >
