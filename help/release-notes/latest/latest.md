@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2024年7月
 description: Adobe Experience Platform の 2024年7月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8d25e396fc816546348268b8b4f2bb16175b4513
+source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 21%
+source-wordcount: '1225'
+ht-degree: 23%
 
 ---
 
@@ -23,7 +23,9 @@ Experience Platformの既存の機能およびドキュメントのアップデ�
 - [データ収集](#data-collection)
 - [データガバナンス](#data-governance)
 - [宛先](#destinations)
+- [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+- [統合タグ](#unified-tags)
 
 ## Federated Audience Composition {#federated-audience-composition}
 
@@ -105,6 +107,18 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。
 
+## セグメント化サービス {#segmentation}
+
+[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
+
+**新しいドキュメント**
+
+| 新しいドキュメント | 説明 |
+| ----------------- | ----------- | 
+| [ オーディエンスポータル ](../../segmentation/ui/audience-portal.md) | オーディエンスポータルを使用して、Adobe Experience Platform内のオーディエンスを一元的なハブで表示、管理、作成する方法について説明します。 |
+
+{style="table-layout:auto"}
+
 ## ソース
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
@@ -120,3 +134,18 @@ Experience Platformのソースを使用すると、Adobeアプリケーショ�
 {style="table-layout:auto"}
 
 詳しくは、[ ソースの概要 ](../../sources/home.md) を参照してください。
+
+## 統合タグ
+
+統合タグを使用すると、Adobe Experience Platform内のビジネスオブジェクトを分類および管理できます。 統合タグ API を使用すると、フォルダーとタグの両方を作成して、オーディエンスやデータセットなどの Platform オブジェクトをより適切に整理できます。
+
+**新しいドキュメント**
+
+| 新しいドキュメント | 説明 |
+| ----------------- | ----------- |
+| [ 統合タグ API ガイド ](../../administrative-tags/api/overview.md) | ビジネスオブジェクトを並べ替えるためのフォルダーとタグの作成方法については、統合タグ API ガイドを参照してください。 |
+| [ 統合タグ API リファレンス ](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | 統合タグ API リファレンスを使用して、統合タグエンドポイントをインタラクティブに試します。 |
+
+{style="table-layout:auto"}
+
+詳しくは、[ 統合タグの概要 ](../../administrative-tags/overview.md) を参照してください。
