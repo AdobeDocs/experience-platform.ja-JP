@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのデータ使用ラベルの管理
 description: このガイドでは、Adobe Experience Platform ユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
+source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1548'
 ht-degree: 92%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 92%
 >
 >![ 違反の概要とデータ系列の図がハイライト表示されたデータガバナンスポリシー違反が検出されたダイアログ。](../images/labels/policy-violation-dialog.png)
 >
->部分的なポリシー違反について詳しくは、[ データ使用ポリシー違反ドキュメント ](../enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
+>ポリシー違反について詳しくは、[ データ使用ポリシー違反のドキュメント ](../enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
 
 スキーマレベルでデータ使用ラベルを管理するには、既存のスキーマを選択するか、新しいスキーマを作成する必要があります。Adobe Experience Platform にログインした後、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して、**[!UICONTROL スキーマ]**&#x200B;ワークスペースを開きます。このページには、組織に属するすべての作成済みスキーマと、各スキーマに関する有用な詳細情報がリストされます。
 
