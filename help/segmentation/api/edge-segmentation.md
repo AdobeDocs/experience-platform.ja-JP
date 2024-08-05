@@ -4,7 +4,7 @@ title: API を使用したエッジのセグメント化
 description: このドキュメントでは、Adobe Experience Platform Segmentation Service API でエッジのセグメント化を使用する方法の例を示します。
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 89%
@@ -101,7 +101,6 @@ curl -X GET \
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -135,7 +134,6 @@ curl -X GET \
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -206,7 +204,6 @@ curl -X POST \
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "name": "Homepage_continuous",
     "description": "People who are on their homepage - continuous",
     "expression": {
@@ -238,7 +235,6 @@ curl -X POST \
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",

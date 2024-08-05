@@ -4,7 +4,7 @@ title: API を使用して、オーディエンスセグメントのデータ使
 type: Tutorial
 description: このチュートリアルでは、API を使用してデータ使用コンプライアンスセグメント定義を適用する手順を説明します。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 42%
@@ -91,7 +91,6 @@ curl -X GET \
     "schema": { 
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 90,
     "imsOrgId": "{ORG_ID}",
     "name": "Cart abandons in CA",
     "description": "",
