@@ -4,14 +4,20 @@ solution: Experience Platform
 title: 製品購入予測レシピ
 description: 製品購入予測レシピを使用すると、特定のタイプの顧客購入イベント（製品購入など）の確率を予測できます。
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 94%
+source-wordcount: '415'
+ht-degree: 89%
 
 ---
 
 # 製品購入予測レシピ
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 製品購入予測レシピを使用すると、特定のタイプの顧客購入イベント（製品購入など）の確率を予測できます。
 

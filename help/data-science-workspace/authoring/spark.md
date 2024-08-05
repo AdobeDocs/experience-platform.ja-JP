@@ -5,20 +5,26 @@ title: Data Science Workspaceでの Spark を使用したデータへのアク�
 type: Tutorial
 description: 次のドキュメントでは、Data Science Workspaceで使用する Spark を使用してデータにアクセスする方法の例を示します。
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 # データサイエンスWorkspaceでの Spark を使用したデータへのアクセス
 
-次のドキュメントでは、Data Science Workspaceで使用する Spark を使用してデータにアクセスする方法の例を示します。 JupyterLab ノートブックを使用したデータへのアクセスについて詳しくは、[JupyterLab ノートブックのデータアクセス ](../jupyterlab/access-notebook-data.md) のドキュメントを参照してください。
+>[!NOTE]
+>
+>データサイエンスワークスペースは購入できなくなりました。
+>
+>このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
+
+次のドキュメントには、データ Science ワークスペースで使用するために Spark を使用してデータにアクセスする方法の例が含まれています。 JupyterLab ノートブックを使用したデータへのアクセスについては、 [JupyterLab ノートブックのデータアクセス](../jupyterlab/access-notebook-data.md) ドキュメント訪問を参照してください。
 
 ## はじめに
 
-[!DNL Spark] を使用するには、`SparkSession` に追加する必要があるパフォーマンスの最適化が必要です。 また、データセットに対する読み取りと書き込みを後で行うように `configProperties` を設定することもできます。
+[!DNL Spark]を使用するには、`SparkSession`に追加する必要があるパフォーマンスの最適化が必要です。さらに、後でデータセットを読み書きできるように `configProperties` を設定することもできます。
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -45,15 +51,15 @@ Class Helper {
 }
 ```
 
-## データセットの読み取り
+## データセット読み上げ
 
 Spark を使用する際は、インタラクティブとバッチの 2 つの読み取りモードにアクセスできます。
 
 インタラクティブモードは、[!DNL Query Service] への Java Database Connectivity （JDBC）接続を作成し、`DataFrame` に自動変換される通常の JDBC `ResultSet` を通じて結果を取得します。 このモードは、組み込みの [!DNL Spark] メソッド `spark.read.jdbc()` と同様に機能します。 このモードは、小規模なデータセットのみを対象としています。 データセットが 500 万行を超える場合は、バッチモードにスワップすることをお勧めします。
 
-バッチモードでは、[!DNL Query Service] の COPY コマンドを使用して、共有場所に Parquet 結果セットを生成します。 その後、これらの Parquet ファイルをさらに処理できます。
+バッチモードでは、 [!DNL Query Service] の COPY コマンドを使用して、共有の場所に Parquet の結果セットを生成します。 これらの Parquet ファイルは、その後、さらに処理することができます。
 
-インタラクティブモードでのデータセットの読み取り例を以下に示します。
+インタラクティブモードでデータセットを読み取る例を以下に示します。
 
 ```scala
   // Read the configs
@@ -78,7 +84,7 @@ Spark を使用する際は、インタラクティブとバッチの 2 つの�
   }
 ```
 
-同様に、バッチモードでデータセットを読み取る例を次に示します。
+同様に、バッチモードでデータセットを読み取る例を以下に示します。
 
 ```scala
 val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
@@ -101,9 +107,9 @@ df = df.select("column-a", "column-b").show()
 
 ### DISTINCT 句
 
-DISTINCT 句を使用すると、行/列レベルでユニークな値をすべて取得し、応答から重複する値をすべて削除できます。
+DISTINCT 句を使用すると、行/列レベルですべての個別の値をフェッチし、応答からすべての重複値を削除できます。
 
-`distinct()` 関数の使用例を次に示します。
+`distinct()`関数の使用例を以下に示します。
 
 ```scala
 df = df.select("column-a", "column-b").distinct().show()
@@ -129,9 +135,9 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### ORDER BY 句
 
-ORDER BY 句を使用すると、指定した列を指定した順序（昇順または降順）で並べ替えて、受信した結果を表示できます。 [!DNL Spark] SDK では、`sort()` 関数を使用してこれを行います。
+ORDER BY 句を使用すると、受信した結果を指定された列で特定の順序 (昇順または降順順) で並べ替えることができます。 [!DNL Spark] SDK では、`sort()` 関数を使用してこれを行います。
 
-`sort()` 関数の使用例を次に示します。
+`sort()`関数の使用例を以下に示します。
 
 ```scala
 df = df.sort($"column1", $"column2".desc)
@@ -141,7 +147,7 @@ df = df.sort($"column1", $"column2".desc)
 
 LIMIT 句を使用すると、データセットから受信するレコードの数を制限できます。
 
-`limit()` 関数の使用例を次に示します。
+`limit()`関数の使用例を以下に示します。
 
 ```scala
 df = df.limit(100)
@@ -169,4 +175,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## 次の手順
 
-Adobe Experience Platform Data Science Workspaceは、上記のコードサンプルを使用してデータの読み取りと書き込みを行う Scala （Spark）レシピサンプルを提供します。 Spark を使用してデータにアクセスする方法について詳しくは、[ データサイエンス Workspace Scala GitHub リポジトリ ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala) を参照してください。
+Adobe Experience Platform データ Science ワークスペース には、上記のコード サンプルを使用してデータの読み取りと書き込みを行う Scala (Spark) レシピ サンプルが用意されています。 Spark を使用してデータにアクセスする方法の詳細については、 [データ Science ワークスペース Scala GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala) を参照してください。

@@ -1,75 +1,81 @@
 ---
-keywords: Experience Platform；ホーム；Data Science Workspace；人気のトピック；アクセス制御；サンドボックス；intelligence pack;dsw 機能；dsw アクセス；Adobe Experience Platform Intelligence;intelligence;aep intelligence パッケージ
+keywords: Experience Platform;家;データ科学ワークスペース;人気のあるトピック;アクセス制御;サンドボックス;インテリジェンスパック;DSW機能;DSWアクセス;Adobe Experience Platformインテリジェンス;知性;AEP インテリジェンス パッケージ
 solution: Experience Platform
-title: Data Science Workspaceのアクセスと機能
-description: 次のドキュメントでは、Data Science Workspaceの権限と機能へのアクセスの概要を説明します。
+title: データ科学ワークスペースアクセスと機能
+description: 次のドキュメントではデータワークスペース の権限と機能へのアクセスの概要を説明します。
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '715'
 ht-degree: 15%
 
 ---
 
 # Data Science Workspace のアクセスと機能
 
-次のドキュメントでは、Data Science Workspaceの権限と機能へのアクセスの概要を説明します。
+>[!NOTE]
+>
+>データサイエンスワークスペースは購入できなくなりました。
+>
+>このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
 
-![DSW タブ ](./images/access/platform-tabs.png)
+次のドキュメントではデータワークスペース の権限と機能へのアクセスの概要を説明します。
 
-- **Notebooks:** Experience Platform上のデータを調査、分析、モデル化するためのインタラクティブな開発環境（[JupyterLab](./jupyterlab/overview.md)）を提供します。
-- **モデル：** 高度な機械学習のレシピとモデルを作成、公開、保存するためのツールを提供します。 詳しくは、[ 機械学習モデルの作成と公開 ](./models-recipes/create-publish-model.md) チュートリアルを参照してください。
-- **サービス：** [AI/ML サービスなど、Adobeが提供するサービスと ](../intelligent-services/home.md)Data Science Workspaceで作成したカスタムサービスの両方が含まれます。
+![DSW タブ](./images/access/platform-tabs.png)
 
-「サービス」タブのみが表示されるのはなぜですか。
+- **ノートブック:** Experience Platformデータを探索、分析、モデル化するための対話型開発環境 ([JupyterLab](./jupyterlab/overview.md)) を提供します。
+- **モデル:** 高度な機械学習レシピとモデルの作成、公開する、ストアに使用するツールを提供します。 詳しくは、 [機械学習モデルの作成と公開する](./models-recipes/create-publish-model.md) チュートリアル訪問を参照してください。
+- **サービス:** [AI/ML サービスなどのAdobe Systemsが提供するサービスと](../intelligent-services/home.md) データ Science ワークスペース で作成したカスタム サービスの両方が含まれます。
 
-- 組織は、顧客 AI/ML サービスを含むAdobe Real-time Customer Data Platform（Real-Time CDP）のみを利用できる場合があります。
+なぜサービス タブしか表示されないのですか?
 
-「**Data Science**」タブが表示されず、Adobe Experience Platform Workspace機能を使用する場合は、会社の管理者に連絡して、Data Science ライセンスがあるかどうかを確認してください。
+- お客様の組織にはAdobe Systems顧客 AI AI/ML サービスを含む Real-時間 Customer データ Platform (Real-時間 CDP) のみが付与されている場合があります。
 
-## Data Science Workspaceのパッケージ
+**データ Science** タブが表示されず、データ Science ワークスペース 機能を使用したい場合は、会社 管理者に連絡して、Adobe Experience Platform インテリジェンス ライセンス版があるかどうかを確認してください。
 
-Data Science Workspaceの機能は、Adobe Experience Platform Intelligence パッケージと Advanced Intelligence Pack アドオンで利用できます
+## データサイエンスワークスペースパッケージング
 
-次の表に、Advanced Intelligence Pack アドオンを使用した場合と使用しない場合の、Data Science Workspaceの使用権限の主な違いを示します。
+データ Science ワークスペース の機能は、Adobe Experience Platform Intelligence パッケージと 詳細 Intelligence Pack 追加 で利用できます
+
+次の表は、詳細インテリジェンスパック追加オンの有無にかかわらず、データサイエンスワークスペースの資格の主な違いのいくつかを概説しています。
 
 >[!NOTE]
 >
->複数の Advanced Intelligence Pack アドオンのライセンスを取得でき、容量が増えて使用権限全体に追加されます。 例えば、2 つのAdobe Experience Platform Advanced Intelligence Pack アドオンのライセンスを取得した場合、ノートブックの合計 20 人の同時ユーザーに対する権限が付与されます。
+>複数の詳細インテリジェンスパックアドオンライセンス版ことができ、増加した容量が全体的な資格に追加されます。 たとえば、2 つの Adobe Experience Platform 詳細 インテリジェンス パック アドオンのライセンスを取得した場合、合計 20 人のノートブック ユーザーの同時使用が許可されます。
 
-| Data Science Workspaceの使用権限 | Adobe Experience Platform Intelligence パッケージのみ | Adobe Experience Platform Intelligence plus Advanced Intelligence Pack アドオン |
+| データ科学ワークスペース資格 | Adobe Experience Platformインテリジェンスパッケージのみ | Adobe Experience Platformインテリジェンスプラス詳細インテリジェンスパック追加オン |
 | --- | :---: | :---: |
-| サポートされるノートブック ユーザーの数です。 | 5 人の同時ユーザー | 最初のパックでは同時ユーザーが 5 人追加され、追加の購入ではパッケージあたり 10 人の同時ユーザーが追加されます。 |
-| 探索的なデータ分析とモデルオーサリングに統合された Jupyter Notebooks を利用できます。 | X （R、Python、Scala ライブラリをサポート） | X （PySpark および Spark ML ライブラリを追加） |
-| クエリサービスとのネイティブ統合。 ノートブックで SQL を使用して、データセットを調査し形作る機能。 | X | X |
-| 予測分析用の事前定義済みノートブックテンプレートにアクセスできます。 | X | X |
-| Jupyter Notebooks を使用して、モデルのトレーニングとスコアリングを手動で行います。 | X | X |
-| トレーニングと推論ジョブをスケジュールできる機能を備えたモデルのデプロイと運用 | | X |
-| モデルを容易に設定、評価、トレーニング、スコアリングおよび実稼動環境に公開するためのレシピフレームワーク。 |  | X |
-| UI 駆動モデルの実験と評価。 | | X |
-| Tensorflow モデル（GPU コンピューティング）のディープラーニング サポート。 | | X |
-| Spark ベースの分散コンピューティングで、大規模なデータセット（10 MM +行）に対してトレーニングとスコアリングを行います。 | | X |
+| Notebook ユーザー数数字がサポートされています。 | 5 人の同時ユーザー | 最初のパックでは 5 人の同時ユーザーが追加され、追加の購入ではパッケージごとに 10 人の同時ユーザーが追加されます。 |
+| 探索的データ分析とモデル作成のための統合された Jupyter Notebook を許可します。 | x(r、python、および scala ライブラリをサポート) | X(PySpark と Spark ML ライブラリを追加) |
+| Query サービス とのネイティブ統合。 ノートブックで SQL を使用してデータセットを探索および整形する機能。 | X | X |
+| 予測分析用の事前定義済みノートブックテンプレートへのアクセス。 | X | X |
+| Jupyter Notebook を使用してモデルを手動でトレーニングおよびスコアリングします。 | X | X |
+| トレーニングジョブと推論ジョブをスケジュールする機能を備えたモデルをデプロイして運用化します。 | | X |
+| モデルを簡単に構成、評価、トレーニング、スコア付け、本番環境に公開するするためのレシピフレームワーク。 |  | X |
+| UI駆動型モデルの実験と評価。 | | X |
+| Tensorflow モデル (GPU コンピューティング) のディープ ラーニングのサポート。 | | X |
+| 大規模なデータセット (10MM + 行) に対してトレーニングとスコアリングを行うための Spark ベースの分散コンピューティング。 | | X |
 
 ## アクセス制御
 
 Experience Platform のアクセス制御は、[Adobe Admin Console](https://adminconsole.adobe.com) で管理されます。この機能は、Admin Console の製品プロファイルを利用して、権限およびサンドボックスを持つユーザーをリンクします。詳しくは、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
 
-データサイエンスWorkspaceを使用するには、「データサイエンスWorkspaceの管理」権限を有効にする必要があります。 次の表に、この権限を有効または無効にした場合の影響を示します。
+データサイエンスワークスペースをご利用いただくには、「データサイエンスワークスペースの管理」権限を有効にする必要があります。 次の表に、この権限を有効または無効にした場合の影響を示します。
 
 | 権限 | 有効 | 無効 |
 |---|---|---|
-| Data Science Workspace の管理 | Data Science Workspace のすべてのサービスへのアクセスを提供します。 | Data Science Workspace内のすべてのサービスへの API および UI アクセスが無効になっています。 無効の場合、**ノートブック**、**モデル**、**サービス** ページの選択はできません。 <li>**サービス** へのアクセスは、Adobe Real-time Customer Data Platform（Real-Time CDP）を通じて引き続き利用できます。</li> |
+| Data Science Workspace の管理 | Data Science Workspace のすべてのサービスへのアクセスを提供します。 | データ Science ワークスペース 内のすべてのサービスへの API および UI アクセスが無効になっています。 無効にすると、 **ノートブック**、 **モデル**、および **サービス** ページを選択できなくなります。 <li>**サービス**&#x200B;へのアクセスは、Adobe Systems Real-時間 Customer データ Platform(Real-時間 CDP)を通じて引き続き利用できる場合があります。</li> |
 
 ## サンドボックスのサポート
 
-サンドボックスは、Experience Platform の単一のインスタンス内の仮想パーティションです。各 Platform インスタンスは、複数の実稼動用サンドボックスおよび非実稼動用サンドボックスをサポートしており、それぞれが Platform リソースの独自のライブラリを維持します。 非実稼動用サンドボックスを使用すると、実稼動用サンドボックスに影響を与えることなく、機能のテスト、実験の実行、カスタム設定を行うことができます。 サンドボックスについて詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
+サンドボックスは、Experience Platform の単一のインスタンス内の仮想パーティションです。各Platform インスタンスは複数の実稼働サンドボックスと非実稼働サンドボックスをサポートし、それぞれが独自のPlatformリソースのライブラリを維持します。 実稼働以外のサンドボックスを使用すると、実稼働サンドボックスに影響を与えることなく、機能のテスト、実験の実行、カスタム構成を行うことができます。 サンドボックスについて詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
 
-現在、Data Science Workspaceには、次のサンドボックス制限があります。
+現在、データ Science ワークスペース には次のサンドボックスの制限があります。
 
-- 計算リソースは、実稼動用サンドボックスと非実稼動用サンドボックスで共有されます。
+- コンピューティングリソースは、本番サンドボックスと非本番サンドボックスで共有されます。
 
 ## 次の手順
 
-このドキュメントでは、Data Science Workspaceで使用できる様々なタイプのアクセスと機能について説明しました。
+このドキュメントでは、データ Science ワークスペース で使用できるさまざまな種類のアクセスと機能の概要を説明しています。
 
-日常的なワークフロー全体など、Data Science Workspaceについて詳しくは、まず [Data Science Workspaceのチュートリアル ](./walkthrough.md) ドキュメントをお読みください。 一般的な情報については、[Data Science Workspaceの概要 ](./home.md) を参照してください。
+完全な日常ワークフローなど、データサイエンスワークスペースの詳細については、 [データサイエンスワークスペースのチュートリアル](./walkthrough.md) ドキュメントを読むことから始めてください。 より一般的な情報については、 [データ科学ワークスペースの概要訪問](./home.md)。

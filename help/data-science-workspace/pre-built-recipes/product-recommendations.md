@@ -4,14 +4,20 @@ solution: Experience Platform
 title: 製品レコメンデーションレシピ
 description: 製品レコメンデーションレシピを使用すると、顧客のニーズや関心に合わせてカスタマイズした製品レコメンデーションを提供できます。正確な予測モデルを使用すると、顧客の購入履歴から、興味を持つ可能性のある製品に関するインサイトを得ることができます。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 90%
+source-wordcount: '489'
+ht-degree: 86%
 
 ---
 
 # 製品レコメンデーションレシピ
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 製品レコメンデーションレシピを使用すると、顧客のニーズや関心に合わせてカスタマイズした製品レコメンデーションを提供できます。正確な予測モデルを使用すると、顧客の購入履歴から、興味を持つ可能性のある製品に関するインサイトを得ることができます。
 

@@ -4,14 +4,20 @@ solution: Experience Platform
 title: JupyterLab UI の概要
 description: JupyterLab は、プロジェクト Jupyter の web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データサイエンティストが Jupyter Notebook、コードおよびデータを扱うためのインタラクティブな開発環境を提供します。このドキュメントでは、JupyterLab とその機能の概要のほか、一般的なアクションを実行する手順を説明します。
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1812'
-ht-degree: 99%
+source-wordcount: '1835'
+ht-degree: 98%
 
 ---
 
 # [!DNL JupyterLab] UI の概要
+
+>[!NOTE]
+>
+>データサイエンスワークスペースは購入できなくなりました。
+>
+>このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
 
 [!DNL JupyterLab] は、[プロジェクト Jupyter](https://jupyter.org/) の web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データサイエンティストが Jupyter Notebook、コードおよびデータを扱うためのインタラクティブな開発環境を提供します。
 
@@ -218,7 +224,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
         <td >いいえ</td>
     </tr>
       <tr>
-        <th  ><strong>PySpark 3 （[!DNL Spark] 2.4）</strong></th>
+        <th  ><strong>PySpark 3 ([!DNL Spark] 2.4)</strong></th>
         <td >いいえ</td>
         <td >○</td>
         <td >いいえ</td>

@@ -5,15 +5,20 @@ title: Sensei Machine Learning API を使用したモデルのトレーニング
 type: Tutorial
 description: このチュートリアルでは、Sensei機械学習 API 呼び出しを使用して、モデルを作成、トレーニング、評価する方法を説明します。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 81%
+source-wordcount: '1240'
+ht-degree: 79%
 
 ---
 
 # [!DNL Sensei Machine Learning] API を使用したモデルのトレーニングと評価
 
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 このチュートリアルでは、API 呼び出しを使用してモデルを作成、トレーニング、評価する方法を示します。API ドキュメントの詳しいリストについては、[こちらのドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を参照してください。
 

@@ -5,14 +5,20 @@ title: Source ファイルのレシピへのパッケージ化
 type: Tutorial
 description: このチュートリアルでは、用意されている Retail Sales サンプルソースファイルをアーカイブファイルにパッケージ化する方法について説明します。このアーカイブファイルは、UI のレシピインポートワークフローに従うか API を使用して、Adobe Experience Platform の Data Science Workspace でレシピを作成するのに使用できます。
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 44%
+source-wordcount: '1166'
+ht-degree: 43%
 
 ---
 
 # ソースファイルのレシピへのパッケージ化
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 このチュートリアルでは、提供された Retail Sales サンプルソースファイルをアーカイブファイルにパッケージ化する方法について説明します。このファイルを使用して、UI または API でレシピの読み込みワークフローに従って、Adobe Experience Platform [!DNL Data Science Workspace] でレシピを作成できます。
 

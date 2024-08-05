@@ -5,14 +5,20 @@ title: MLServices API エンドポイント
 description: MLService は、組織が開発済みのモデルにアクセスし再利用できるようにするための、公開されているトレーニング済みモデルです。MLService の主要な特長は、トレーニングとスコアリングをスケジュールに従って自動化できる点です。スケジュールされたトレーニングの実行は、モデルの効率と精度を維持するのに役立ちます。また、スケジュールされたスコアリングの実行で、新しいインサイトを一貫して生成できるようになります。
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 94%
+source-wordcount: '910'
+ht-degree: 92%
 
 ---
 
 # MLServices エンドポイント
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 MLService は、組織が開発済みのモデルにアクセスし再利用できるようにするための、公開されているトレーニング済みモデルです。MLService の主要な特長は、トレーニングとスコアリングをスケジュールに従って自動化できる点です。スケジュールされたトレーニングの実行は、モデルの効率と精度を維持するのに役立ちます。また、スケジュールされたスコアリングの実行で、新しいインサイトを一貫して生成できるようになります。
 

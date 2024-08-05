@@ -5,14 +5,20 @@ title: Git を使用した JupyterLab での共同作業
 type: Tutorial
 description: Git は、ソフトウェア開発時にソースコードの変更を追跡するための分散バージョン管理システムです。 Git は、データサイエンスワークスペース JupyterLab 環境内に事前にインストールされています。
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 100%
+source-wordcount: '303'
+ht-degree: 92%
 
 ---
 
 # [!DNL Git] を使用した [!DNL JupyterLab] での共同作業
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 [!DNL Git] は、ソフトウェア開発時にソースコードの変更を追跡するための分散バージョン管理システムです。Git は [!DNL Data Science Workspace JupyterLab] 環境内に事前にインストールされています。
 

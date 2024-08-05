@@ -4,14 +4,20 @@ solution: Experience Platform
 title: リアルタイム機械学習の基本を学ぶ
 description: 次のドキュメントでは、Adobe Experience Platform でリアルタイム機械学習モデルを作成するために必要な手順の概要について説明します。
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 94%
+source-wordcount: '461'
+ht-degree: 89%
 
 ---
 
 # リアルタイム機械学習の基本を学ぶ（アルファ版）
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 >[!IMPORTANT]
 >

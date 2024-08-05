@@ -5,14 +5,20 @@ title: Data Science Workspace UI へのパッケージ化されたレシピの�
 type: Tutorial
 description: このチュートリアルでは、提供された「小売売上」の例を使用してパッケージ化されたレシピを設定およびインポートする方法に関するインサイトを提供します。このチュートリアルの最後までに、Adobe Experience Platform Data Science Workspace　でモデルの作成、トレーニング、評価をおこなう準備が整います。
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1855'
 ht-degree: 32%
 
 ---
 
 # Data Science Workspace UI へのパッケージ化されたレシピの読み込み
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 このチュートリアルでは、提供された「小売売上」の例を使用してパッケージ化されたレシピを設定およびインポートする方法に関するインサイトを提供します。このチュートリアルを終了すると、Adobe Experience Platform [!DNL Data Science Workspace] でモデルを作成、トレーニング、評価する準備が整います。
 

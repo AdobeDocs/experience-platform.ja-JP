@@ -5,14 +5,20 @@ title: 実験 API エンドポイント
 description: モデルの開発とトレーニングは、実験レベルで行われます。実験は、MLInstance、トレーニング実行、スコア付け実行で構成されます。
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 89%
+source-wordcount: '806'
+ht-degree: 86%
 
 ---
 
 # 実験エンドポイント
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 モデルの開発とトレーニングは、実験レベルで行われます。実験は、MLInstance、トレーニング実行、スコア付け実行で構成されます。
 

@@ -1,18 +1,24 @@
 ---
 keywords: Experience Platform；チュートリアル；Data Science Workspace；人気のトピック；データサイエンスコース；コース；dsw
 solution: Experience Platform
-title: データサイエンスWorkspaceコース
-description: このドキュメントでは、Adobe Experience Platform Data Science Workspace コースのリンクと説明を示します。
+title: データ科学ワークスペースコース
+description: このドキュメントは、Adobe Experience Platform データ科学ワークスペースコースのリンクと説明を提供します。
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Data Science Workspace] course
+# [!DNL Data Science Workspace] コース
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 このドキュメントでは、Adobe Experience Platform Data Science Workspace コースで期待される学習成果について説明します。 コースを表示するには、Adobe IDを使用してExperience Leagueにログインする必要があります。
 
@@ -26,7 +32,7 @@ ht-degree: 0%
 
 ### 期待される学習成果
 
-Data Science Workspace コースでは、次の学習成果について説明します。 さらに、コースに用意されている傾向モデルを作成して公開しながら、それに従うオプションがあります。
+以下の学習成果は、データ科学ワークスペースコースでカバーされています。 さらに、コースに提供される傾向モデルを作成および公開する際にフォローするするオプションがあります。
 
 - Data Science Workspaceのアーキテクチャ
 - JupyterLab の使用方法
@@ -35,11 +41,11 @@ Data Science Workspace コースでは、次の学習成果について説明し
 - レシピとモデルの作成方法
 - モデルのトレーニングとスコアリングに使用する方法
 - モデル開発におけるハイパーパラメーターの役割
-- トレーニング済みモデルをサービスとして公開する方法
-- Data Science Workspaceを使用してリアルタイム顧客プロファイルデータを強化する方法
-- モデル出力を使用したストリーミングセグメントの作成方法
+- トレーニング済みモデルをサービスとして公開するする方法
+- データ Science ワークスペース を使用して Real-時間 Customer プロフィール データを充実させる方法
+- モデル出力を使用してストリーミングセグメントを作成する方法
 
-## 教訓
+## レッスン
 
 データサイエンスのWorkspace コースは 5 つのレッスンに分かれています。
 
@@ -57,11 +63,11 @@ Data Science Workspace コースでは、次の学習成果について説明し
 
 ### レッスン 4
 
-**Data Science Workspaceを使用したモデルのトレーニングとスコアリング（6 分）:** モデルを作成し、Experience Platformでサービスとして公開する方法を説明します。
+**データ Science ワークスペース を使用してモデルをトレーニングし、スコアを付ける (6 分):** モデルを作成し、Experience Platform でサービスとして公開する方法について説明します。
 
 ### レッスン 5
 
-**データサイエンスインサイトの利用と提供（11 分）:** Data Science Workspace モデルの出力をリアルタイムAdobeプロファイルで使用して、顧客のアプリケーションやサービスに関するパーソナライズされたエクスペリエンスを提供する方法を説明します。
+**データ Science Insights の使用と配信 (11 分):** データ Science ワークスペース モデルの出力を Real-時間 Customer プロフィール で使用して、Adobe Systemsアプリケーションとサービスでパーソナライズされたエクスペリエンスを提供する方法について説明します。
 
 ## 次の手順
 

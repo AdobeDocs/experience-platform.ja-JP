@@ -5,14 +5,20 @@ title: MLInstances API エンドポイント
 description: MLInstance は、トレーニング パラメータ、スコアリング パラメータ、またはハードウェア リソース構成を定義する適切な構成のセットを持つ既存のエンジンのペアです。
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 87%
+source-wordcount: '642'
+ht-degree: 84%
 
 ---
 
 # MLInstances エンドポイント
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 MLInstance は、既存の[エンジン](./engines.md)と適切な設定セット（トレーニングパラメーター、スコアリングパラメーター、またはハードウェアリソース設定を定義する）とのペアリングです。
 

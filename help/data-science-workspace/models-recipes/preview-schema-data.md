@@ -5,14 +5,20 @@ title: 小売販売のスキーマとデータセットのプレビュー
 type: Tutorial
 description: 次のドキュメントでは、Adobe Experience Platformのスキーマとデータセットのプレビューの概要を説明します。
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 22%
+source-wordcount: '259'
+ht-degree: 20%
 
 ---
 
 # 小売販売のスキーマとデータセットのプレビュー
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 [retail sales schema and dataset](./create-retails-sales-dataset.md) チュートリアルの bootstrap スクリプトが正常に完了した場合。 出力スキーマおよびデータセットは、[!DNL Experience Platform] で表示できます。 スキーマとデータセットを表示するには、次の手順に従います。
 

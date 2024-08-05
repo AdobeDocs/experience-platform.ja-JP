@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform；パッケージ化されたレシピの読み込み；Data Science Workspace；人気のトピック；レシピ；api;sensei machine learning;create engine
+keywords: Experience Platform;パッケージ化されたレシピをインポートします。データ科学ワークスペース;人気のあるトピック;レシピ;api;先生の機械学習;エンジンの作成
 solution: Experience Platform
-title: Sensei Machine Learning API を使用したパッケージ化されたレシピの読み込み
+title: Sensei マシン 学習 API を使用したパッケージレシピインポート
 type: Tutorial
-description: このチュートリアルでは、Sensei機械学習 API を使用して、エンジン（ユーザーインターフェイスのレシピとも呼ばれます）を作成します。
+description: このチュートリアルでは、Sensei Machine 学習 API を使用して、ユーザー インターフェイスではレシピとも呼ばれるエンジンを作成します。
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '995'
-ht-degree: 51%
+source-wordcount: '1018'
+ht-degree: 50%
 
 ---
 
 # Sensei Machine Learning API を使用したパッケージ化されたレシピの読み込み
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 このチュートリアルでは、[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) を使用して、ユーザーインターフェイスのレシピとも呼ばれる [Engine](../api/engines.md) を作成します。
 
@@ -33,9 +39,9 @@ ht-degree: 51%
 
 このチュートリアルでは、Docker URL の形式のパッケージ化されたレシピファイルが必要です。 「[ソースファイルをレシピにパッケージ化する](./package-source-files-recipe.md)」チュートリアルに従ってパッケージ化されたレシピファイルを作成するか、独自のレシピファイルを提供します。
 
-- `{DOCKER_URL}`：インテリジェントサービスの Docker イメージへの URL アドレス。
+- `{DOCKER_URL}`: インテリジェント サービスの Docker イメージへのURLアドレス。
 
-このチュートリアルでは、[!DNL Platform] API を正しく呼び出すために、[Adobe Experience Platformへの認証 ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+このチュートリアルでは、[!DNL Platform] API の呼び出しを正常に行うために、Adobe Experience Platform チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)[Authenticationを完了している必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
 - `{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。
@@ -51,7 +57,7 @@ ht-degree: 51%
 
 >[!CAUTION]
 >
-> [!DNL Python] または R を使用している場合は、以下のリクエストを使用します。 PySpark または Scala を使用している場合は、Python/R の例の下にある PySpark/Scala リクエストの例を使用してください。
+> [!DNL Python]またはRを使用している場合は、以下のリクエストを使用してください。PySpark または Scala を使用している場合は、Python/R の例の下にある PySpark/Scala リクエスト の例を使用してください。
 
 **API 形式**
 
@@ -89,9 +95,9 @@ curl -X POST \
 | -------  | ----------- |
 | `engine.name` | エンジンの名前。このエンジンに対応するレシピは、この値を継承して、ユーザーインターフェイスにレシピ [!DNL Data Science Workspace] 名前として表示します。 |
 | `engine.description` | エンジンのオプションの説明。このエンジンに対応するレシピは、この値を継承して、ユーザーインターフェイス [!DNL Data Science Workspace] レシピの説明として表示します。 このプロパティを削除しないでください。説明を指定しない場合は、この値を空白の文字列にします。 |
-| `engine.type` | エンジンの実行タイプ。この値は、Docker イメージが開発される言語に対応しています。 エンジンを作成するために Docker URL が指定され `type` 場合、`Python`、`R`、`PySpark`、`Spark` （Scala）、`Tensorflow` のいずれかです。 |
-| `artifacts.default.image.location` | あなたの `{DOCKER_URL}` はここに行きます。 完全な Docker URL は、次の構造を持ちます。`your_docker_host.azurecr.io/docker_image_file:version` |
-| `artifacts.default.image.name` | Docker イメージファイルの追加名。 このプロパティを削除しないでください。Docker 画像ファイル名を指定しない場合は、この値を空白の文字列にします。 |
+| `engine.type` | エンジンの実行タイプ。この値は、Docker イメージが開発されている言語に対応します。 エンジンを作成するために Docker URLが提供されている場合、 `type` は、 `Python`、 `R`、 `PySpark`、 `Spark` (Scala)、または `Tensorflow` のいずれかになります。 |
+| `artifacts.default.image.location` | あなたの `{DOCKER_URL}` はここに行きます。 完全な Docker URLの構造は次のとおりです。 `your_docker_host.azurecr.io/docker_image_file:version` |
+| `artifacts.default.image.name` | Docker 画像ファイル の追加の名前。 このプロパティを削除しないでください。Docker 画像ファイル名を指定しない場合は、この値を空白の文字列にします。 |
 | `artifacts.default.image.executionType` | このエンジンの実行タイプ。 この値は、Docker イメージが開発される言語に対応しています。 エンジンを作成するために Docker URL が指定され `executionType` 場合、`Python`、`R`、`PySpark`、`Spark` （Scala）、`Tensorflow` のいずれかです。 |
 
 **PySpark をリクエスト**
@@ -131,7 +137,7 @@ curl -X POST \
 | `artifacts.default.image.location` | Docker URL によってリンクされた Docker イメージの場所。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、「Spark」に基づいて Docker イメージが構築される言語に対応します。 |
 
-**Scala を要求**
+**Request Scala**
 
 ```shell
 curl -X POST \
@@ -166,7 +172,7 @@ curl -X POST \
 | `type` | エンジンの実行タイプ。この値は、「Spark」に基づいて Docker イメージが構築される言語に対応します。 |
 | `mlLibrary` | PySpark と Scala のレシピ用のエンジンを作成する際に必要なフィールド。 |
 | `artifacts.default.image.location` | Docker URL によってリンクされた Docker イメージの場所。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、「Spark」に基づいて Docker イメージが構築される言語に対応します。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージが &quot;Spark&quot; に基づいて構築される言語に対応します。 |
 
 **応答**
 

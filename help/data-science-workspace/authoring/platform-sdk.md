@@ -1,17 +1,23 @@
 ---
-keywords: Experience Platform；開発者ガイド；SDK;Data Access SDK;Data Science Workspace；人気のトピック
+keywords: Experience Platform;開発者ガイド;SDK;データ Access SDK;データ科学ワークスペース;よく読まれるトピック
 solution: Experience Platform
-title: Adobe Experience Platform Platform SDK を使用したモデル制作
-description: このチュートリアルでは、Python と R の両方で data_access_sdk_python を新しい Python platform_sdk に変換する方法について説明します。
+title: Adobe Experience Platform Platform SDK を使用したモデルオーサリング
+description: このチュートリアルでは、Python と R の両方でdata_access_sdk_pythonを新しい Python platform_sdkに変換する方法について説明します。
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 60%
+source-wordcount: '509'
+ht-degree: 57%
 
 ---
 
 # Adobe Experience Platform [!DNL Platform] SDK を使用したモデルオーサリング
+
+>[!NOTE]
+>
+>データサイエンスワークスペースは購入できなくなりました。
+>
+>このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
 
 このチュートリアルでは、Python と R の両方で `data_access_sdk_python` を新しい Python `platform_sdk` に変換する方法について説明します。このチュートリアルでは、次の操作について説明します。
 
@@ -21,7 +27,7 @@ ht-degree: 60%
 
 ## 認証の構築 {#build-authentication}
 
-認証は [!DNL Adobe Experience Platform] への呼び出しに必要で、API キー、組織 ID、ユーザートークン、サービストークンで構成されています。
+Authenticationは [!DNL Adobe Experience Platform]を呼び出すために必要であり、API キー、組織 ID、ユーザー トークン、およびサービス トークンで構成されます。
 
 ### Python
 
@@ -31,7 +37,7 @@ Jupyter ノートブックを使用している場合は、次のコードを使
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Jupyter Notebook を使用していない場合や、組織を変更する必要がある場合は、以下のコードサンプルを使用してください。
+Jupyter Notebook を使用していない場合、または組織を変更する必要がある場合は、以下のコードサンプルを使用してください。
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -54,7 +60,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Jupyter Notebook を使用していない場合や、組織を変更する必要がある場合は、次のコードサンプルを使用してください。
+Jupyter Notebook を使用していない場合、または組織を変更する必要がある場合は、以下のコードサンプルを使用してください。
 
 ```r
 library(reticulate)
@@ -68,18 +74,18 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## データの基本読み取り {#basic-reading-of-data}
 
-新しい [!DNL Platform] SDK では、最大読み取りサイズは 32 GB、最大読み取り時間は 10 分です。
+新しい [!DNL Platform] SDK では、最大読み取りサイズは 32 GB で、最大読み取り時間は 10 分です。
 
 読み取り時間が長すぎる場合は、次のいずれかのフィルターオプションを使用してみてください。
 
 - [オフセットと制限によるデータのフィルタリング](#filter-by-offset-and-limit)
 - [日付によるデータのフィルタリング](#filter-by-date)
 - [列によるデータのフィルタリング](#filter-by-selected-columns)
-- [並べ替えられた結果を取得しています](#get-sorted-results)
+- [並べ替えられた結果を取得する](#get-sorted-results)
 
 >[!NOTE]
 >
->組織は `client_context` 内で設定されます。
+>組織は `client_context`内で設定されます。
 
 ### Python
 
@@ -145,7 +151,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-新しい [!DNL Platform] SDK は、次の操作をサポートしています。
+新しい [!DNL Platform] SDK では、次の操作をサポートしています。
 
 | 操作 | 関数 |
 | --------- | -------- |
@@ -195,7 +201,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->組織は `client_context` 内で設定されます。
+>組織は `client_context`内で設定されます。
 
 Python と R でデータを書き込むには、次の例を使用します。
 
@@ -220,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 次の手順
 
-`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データの準備と機能エンジニアリングについて詳しくは、[!DNL JupyterLab] ノートブックを使用したレシピの作成に関するチュートリアルの [ データの準備と機能エンジニアリング ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) の節を参照してください。
+`platform_sdk` データローダを設定すると、データは準備され、`train` データセットと `val` データセットに分割されます。データ準備と特徴エンジニアリングの詳細については、「[!DNL JupyterLab] ノートブックを使用してレシピを作成するためのチュートリアルの[データ準備と特徴エンジニアリング](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)に関するセクション訪問してください。

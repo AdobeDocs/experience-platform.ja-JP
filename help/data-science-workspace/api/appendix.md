@@ -1,24 +1,30 @@
 ---
-keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のトピック；
+keywords: Experience Platform;開発者ガイド;エンドポイント;データ科学ワークスペース;人気のあるトピック;
 solution: Experience Platform
-title: Sensei機械学習 API ガイドの付録
+title: Sensei マシン学習 API ガイド付録
 description: 以下の節では、Sensei Machine Learning API の様々な機能に関するリファレンス情報を提供します。
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 66%
+source-wordcount: '353'
+ht-degree: 62%
 
 ---
 
-# [!DNL Sensei Machine Learning] API ガイドの付録
+# [!DNL Sensei Machine Learning] API ガイド付録
 
-次の節では、[!DNL Sensei Machine Learning] API の様々な機能のリファレンス情報を示します。
+>[!NOTE]
+>
+>データサイエンスワークスペースは購入できなくなりました。
+>
+>このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
 
-## アセット取得用のクエリパラメーター {#query}
+以下の節では、 [!DNL Sensei Machine Learning] API の様々な機能に関するリファレンス情報を提供します。
 
-[!DNL Sensei Machine Learning] API は、アセットの取得時にクエリパラメーターをサポートしています。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
+## アセットを取得するためのクエリパラメーター {#query}
+
+[!DNL Sensei Machine Learning] API は、クエリパラメーターとアセットの取得をサポートします。使用可能なクエリパラメーターとその使用方法を次の表に示します。
 
 | クエリーパラメーター | 説明 | デフォルト値 |
 | --------------- | ----------- | ------- |
@@ -29,9 +35,9 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->複数のクエリパラメーターを組み合わせる場合は、アンパサンドで区切る必要があります（**&amp;**）。
+>複数のクエリパラメーターを組み合わせる場合は、アンパサンド(**&amp;**)で区切る必要があります。
 
-## Python の CPU と GPU の設定 {#cpu-gpu-config}
+## Python の CPU および GPU 構成 {#cpu-gpu-config}
 
 Python Engines は、トレーニングまたはスコアリングの目的で CPU または GPU のいずれかを選択でき、[MLInstance](./mlinstances.md) でタスク仕様（`tasks.specification`）として定義されます。
 
@@ -70,11 +76,11 @@ Python Engines は、トレーニングまたはスコアリングの目的で C
 
 >[!NOTE]
 >
->`cpus` と `gpus` の値は CPU や GPU の数ではなく、物理マシンの数を示します。 これらの値は許容できる`"1"`であり、それ以外の場合は例外がスローされます。
+>`cpus` と `gpus` の値は、CPU または GPU の数を示すのではなく、物理マシンの数を表します。これらの値は許容できる`"1"`であり、それ以外の場合は例外がスローされます。
 
-## PySpark と Spark のリソース設定 {#resource-config}
+## PySpark および Spark リソースの設定 {#resource-config}
 
-Spark エンジンには、トレーニングやスコアリングのために計算リソースを変更する機能があります。 これらのリソースについて、次の表で説明します。
+Spark エンジンには、トレーニングとスコアリングの目的で計算リソースを変更する機能があります。 これらのリソースについては、次の表で説明します。
 
 | リソース | 説明 | タイプ |
 | -------- | ----------- | ---- |

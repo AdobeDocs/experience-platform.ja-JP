@@ -5,14 +5,20 @@ title: Data Science Workspaceで Python を使用してデータにアクセス�
 type: Tutorial
 description: 次のドキュメントでは、Data Science Workspaceで使用する Python のデータにアクセスする方法の例を示します。
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
 # Data Science Workspaceでの Python を使用したデータへのアクセス
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 次のドキュメントでは、Data Science Workspaceで使用する Python を使用してデータにアクセスする方法の例を示します。 JupyterLab ノートブックを使用したデータへのアクセスについて詳しくは、[JupyterLab ノートブックのデータアクセス ](../jupyterlab/access-notebook-data.md) のドキュメントを参照してください。
 

@@ -5,14 +5,20 @@ title: Sensei機械学習 API を使用したサービスとしてのモデル�
 type: Tutorial
 description: このチュートリアルでは、Sensei Machine Learning API を使用してサービスとしてモデルを公開するプロセスについて説明します。
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1518'
-ht-degree: 45%
+source-wordcount: '1541'
+ht-degree: 44%
 
 ---
 
 # [!DNL Sensei Machine Learning API] を使用したサービスとしてのモデルのPublish
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 このチュートリアルでは、[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) を使用してモデルをサービスとして公開するプロセスについて説明します。
 

@@ -5,14 +5,20 @@ title: Sensei Machine Learning API を使用したモデルのスコアリング
 type: Tutorial
 description: このチュートリアルでは、Sensei Machine Learning API を活用して実験と実験実行を作成する方法を説明します。
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 77%
+source-wordcount: '570'
+ht-degree: 74%
 
 ---
 
 # [!DNL Sensei Machine Learning API] を使用したモデルのスコアリング
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 このチュートリアルでは、API を活用して実験を作成し、実行する方法を示します。Sensei Machine Learning API のすべてのエンドポイントのリストについては、[ このドキュメント ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) を参照してください。
 

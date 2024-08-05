@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気のトピック；インサイト；sensei machine learning api
+keywords: Experience Platform;開発者ガイド;エンドポイント;データ科学ワークスペース;人気のあるトピック;洞察 力;Sensei Machine Learning API
 solution: Experience Platform
 title: Insights API エンドポイント
 description: インサイトには、関連する評価指標を表示することにより、データサイエンティストが最適な ML モデルを評価および選択できるようにするための指標が含まれています。
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 96%
+source-wordcount: '537'
+ht-degree: 91%
 
 ---
 
-# Insights エンドポイント
+# Insightsエンドポイント
+
+>[!NOTE]
+>
+>データサイエンスワークスペースは購入できなくなりました。
+>
+>このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
 
 インサイトには、関連する評価指標を表示することにより、データサイエンティストが最適な ML モデルを評価および選択できるようにするための指標が含まれています。
 

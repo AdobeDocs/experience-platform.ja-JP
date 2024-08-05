@@ -4,14 +4,20 @@ solution: Experience Platform
 title: リアルタイム機械学習ノートブックの管理
 description: 次のガイドでは、Adobe Experience Platform JupyterLab でリアルタイム機械学習アプリケーションを作成するために必要な手順の概要を説明します。
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 100%
+source-wordcount: '1686'
+ht-degree: 98%
 
 ---
 
 # リアルタイム機械学習ノートブックの管理（アルファ版）
+
+>[!NOTE]
+>
+>Data Science Workspaceは購入できなくなりました。
+>
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 >[!IMPORTANT]
 >
