@@ -2,9 +2,9 @@
 title: Experience Platformユーザーインターフェイスを使用した Salesforce アカウントの接続
 description: ユーザーインターフェイスを使用して Salesforce アカウントを連携し、CRM データをExperience Platformに取り込む方法について説明します。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '841'
 ht-degree: 21%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 21%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| 環境 URL | [!DNL Salesforce] ソースインスタンスの URL。 |
+| 環境 URL | [!DNL Salesforce] ソースインスタンスの URL。 環境 URL の形式は `https://[domain].my.salesforce.com` です。 |
 | ユーザー名 | [!DNL Salesforce] ユーザーアカウントのユーザー名。 |
 | パスワード | [!DNL Salesforce] ユーザーアカウントのパスワード。 |
 | セキュリティトークン | [!DNL Salesforce] ユーザーアカウントのセキュリティ トークン。 |
@@ -50,7 +50,7 @@ OAuth2 クライアント資格情報を使用して [!DNL Salesforce] アカウ
 
 | 資格情報 | 説明 |
 | --- | --- |
-| 環境 URL | [!DNL Salesforce] ソースインスタンスの URL。 |
+| 環境 URL | [!DNL Salesforce] ソースインスタンスの URL。 環境 URL の形式は `https://[domain].my.salesforce.com` です。 |
 | クライアント ID | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | API バージョン | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |

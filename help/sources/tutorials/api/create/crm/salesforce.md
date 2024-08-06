@@ -2,10 +2,10 @@
 title: Flow Service API を使用した Salesforce ベース接続の作成
 description: Flow Service API を使用してAdobe Experience Platformを Salesforce アカウントに接続する方法について説明します。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 37%
+source-wordcount: '782'
+ht-degree: 36%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 37%
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `environmentUrl` | [!DNL Salesforce] ソースインスタンスの URL。 |
+| `environmentUrl` | [!DNL Salesforce] ソースインスタンスの URL。 `environmentUrl` の形式は `https://[domain].my.salesforce.com` です。 |
 | `username` | [!DNL Salesforce] ユーザーアカウントのユーザー名。 |
 | `password` | [!DNL Salesforce] ユーザーアカウントのパスワード。 |
 | `securityToken` | [!DNL Salesforce] ユーザーアカウントのセキュリティ トークン。 |
@@ -51,7 +51,7 @@ OAuth 2 クライアント資格情報を使用して [!DNL Salesforce] アカ�
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `environmentUrl` | [!DNL Salesforce] ソースインスタンスの URL。 |
+| `environmentUrl` | [!DNL Salesforce] ソースインスタンスの URL。 `environmentUrl` の形式は `https://[domain].my.salesforce.com` です |
 | `clientId` | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | `clientSecret` | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | `apiVersion` | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 この値は、OAuth2 クライアント資格情報認証に必須です。 |
