@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ準備のマッピング機能
 description: このドキュメントでは、Data Prep で使用されるマッピング機能について説明します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
+source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
 workflow-type: tm+mt
 source-wordcount: '5805'
 ht-degree: 9%
@@ -130,7 +130,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | set_date_part | 指定された日付のコンポーネントを置き換えます。次のコンポーネントが受け入れられます。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>COMPONENT: **必須** 日付の一部を表す文字列。 </li><li>値：**必須** 指定された日付にコンポーネントに対して設定する値。</li><li>日付：**必須** 標準形式の日付。</li></ul> | set_date_part&#x200B;（COMPONENT, VALUE, DATE） | set_date_part （&quot;m&quot;, 4, date （&quot;2016-11-09T11:44:44.797&quot;） | &quot;2016-04-09T11:44:44Z&quot; |
 | make_date_time | パーツから日付を作成します。 この関数は make_timestamp を使用して引き起こすこともできます。 | <ul><li>YEAR: **必須** 年（4 桁で記述）。</li><li>月：**必須** 月。 使用できる値は 1～12 です。</li><li>DAY: **必須** その日。 使用できる値は 1～31 です。</li><li>時間：**必須** 時間。 使用できる値は 0～23 です。</li><li>MINUTE: **必須** 分。 使用できる値は 0～59 です。</li><li>NANOSECOND: **必須** ナノ秒の値です。 使用できる値は 0～999999999 です。</li><li>TIMEZONE: **必須** 日時のタイムゾーン。</li></ul> | make_date_time&#x200B;（YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE） | make_date_time&#x200B;（2019, 10, 17, 11, 55, 12, 999, &quot;アメリカ / ロサンゼルス&quot;） | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 任意のタイムゾーンの日付を UTC の日付に変換します。 | <ul><li>日付：**必須** 変換しようとしている日付。</li></ul> | zone_date_to_utc&#x200B;（DATE） | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
-| zone_date_to_zone | あるタイムゾーンから別のタイムゾーンに日付を変換します。 | <ul><li>日付：**必須** 変換しようとしている日付。</li><li>ゾーン：**必須** 日付の変換先のタイムゾーン。</li></ul> | zone_date_to_zone&#x200B;（DATE, ZONE） | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
+| zone_date_to_zone | あるタイムゾーンから別のタイムゾーンに日付を変換します。 | <ul><li>日付：**必須** 変換しようとしている日付。</li><li>ゾーン：**必須** 日付の変換先のタイムゾーン。</li></ul> | zone_date_to_zone&#x200B;（DATE, ZONE） | `zone_date_to_zone(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
 
