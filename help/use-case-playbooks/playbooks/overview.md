@@ -4,9 +4,9 @@ title: ユースケースプレイブックの概要
 description: Experience Platform のユースケースプレイブック機能を使用して、様々なマーケティングユースケースの基本を学ぶ
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '529'
 ht-degree: 30%
 
 ---
@@ -29,10 +29,12 @@ ht-degree: 30%
 
 ## 概要 {#overview}
 
-[!UICONTROL  ユースケースプレイブック ] は、Real-Time CDPまたはAdobe Journey Optimizerを使い始めた際に、何から始めればよいかわからない場合や、目的のユースケースを達成するために適切なアセットを作成する方法がわからない場合に、問題を解決するのに役立ちます。 ユースケースプレイブックは、次の方法で役に立ちます。
+[!UICONTROL  ユースケースプレイブック ] は、Real-Time CDPまたはAdobe Journey Optimizerを使い始めた際に、何から始めればよいかわからない場合や、目的のユースケースを達成するために適切なアセットを作成する方法がわからない場合に、問題を解決するのに役立ちます。
 
-* インスピレーションのためのユースケースの表示
-* 準備が整ったら、使用、テスト、実稼動環境への昇格に使用する様々なアセットを作成する。
+ユースケースプレイブックは、次の方法で役に立ちます。
+
+* [利用可能なプレイブックのカタログを導入して、ユースケースをより迅速に開始](../playbooks/playbooks-list.md)
+* [様々なアセットの作成](../playbooks/create-share-reuse.md)
 
 ![すべてのプレイブックを表示](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 

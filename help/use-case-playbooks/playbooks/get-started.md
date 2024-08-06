@@ -4,10 +4,10 @@ title: ユースケースプレイブックの概要
 description: ユースケースプレイブック機能の基本を学ぶ方法を説明します。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 15%
+source-wordcount: '990'
+ht-degree: 14%
 
 ---
 
@@ -19,6 +19,8 @@ Real-time Customer Data PlatformおよびAdobe Journey Optimizer向けに設計�
 * サンドボックスの作成
 * ユーザー権限の設定
 * メール、プッシュ、SMS 通知用のJourney Optimizer チャネルサーフェスの設定（Journey Optimizer プレイブックを使用する予定の場合）
+
+Experience PlatformUI で豊富なユースケースプレイブックのギャラリーにアクセスするには、左側のナビゲーションから **[!UICONTROL プレイブック]** を選択します。 [ ユースケースプレイブックを操作する ](../playbooks/navigate.md) および [ インスピレーションにつながるサンドボックス ](../playbooks/navigate.md) の基本を学ぶ方法については、ドキュメントをお読みください。
 
 ## ユースケースプレイブックの設定 – ビデオチュートリアル {#video}
 
