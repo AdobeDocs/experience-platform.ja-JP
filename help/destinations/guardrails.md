@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 51%
@@ -92,7 +92,7 @@ ht-degree: 51%
 
 ### エッジパーソナライゼーションの宛先のアクティベーション {#edge-destinations-activation}
 
-以下のガードレールは、[エッジパーソナライゼーションの宛先](/help/destinations/destination-types.md#streaming-profile-export)を通じたアクティベーションに適用されます。
+以下のガードレールは、[エッジパーソナライゼーションの宛先](/help/destinations/destination-types.md#advanced-enterprise-destinations)を通じたアクティベーションに適用されます。
 
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --- | --- | --- | --- |

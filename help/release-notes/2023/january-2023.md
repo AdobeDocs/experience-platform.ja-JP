@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2023年1月）
 description: Adobe Experience Platform の 2023年1月のリリースノートです。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2224'
 ht-degree: 99%
@@ -175,7 +175,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 廃止後、セグメントで認定されたプロファイルは `Realized` として表され、不適格となったプロファイルは引き続き `Exited` として表されます。これにより、`Active` および `Expired` のセグメントステータスを持つファイルベースの送信先と同等になります。
 
-この変更は、[企業の宛先](../../destinations/destination-types.md#streaming-profile-export)（Amazon Kinesis、Azure Event Hubs、HTTP API）を使用していて、`Existing` ステータスに基づいて自動化されたダウンストリームプロセスを導入している場合に影響を与える可能性があります。このような場合は、ダウンストリームの統合を確認してください。特定の時間を超えて新たに認定されたプロファイルを識別することに関心がある場合は、セグメントメンバーシップマップで `Realized` ステータスと `lastQualificationTime` を組み合わせて使用することを検討してください。詳しくは、アドビ担当者にお問い合わせください。
+この変更は、[企業の宛先](../../destinations/destination-types.md#advanced-enterprise-destinations)（Amazon Kinesis、Azure Event Hubs、HTTP API）を使用していて、`Existing` ステータスに基づいて自動化されたダウンストリームプロセスを導入している場合に影響を与える可能性があります。このような場合は、ダウンストリームの統合を確認してください。特定の時間を超えて新たに認定されたプロファイルを識別することに関心がある場合は、セグメントメンバーシップマップで `Realized` ステータスと `lastQualificationTime` を組み合わせて使用することを検討してください。詳しくは、アドビ担当者にお問い合わせください。
 
 プロファイルデータを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルについて詳しくは、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
 

@@ -3,7 +3,7 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 54%
@@ -35,9 +35,9 @@ Adobe Experience Platformの **[!UICONTROL プロファイル書き出し]**、*
 プロファイル書き出し宛先は生データを受け取ります。その際、多くの場合、メールアドレスがプライマリキーとなります。Experience Platform では、現在、次の 2 種類のプロファイル書き出し宛先をサポートしています。
 
 * [バッチ（ファイルベース）の宛先](#file-based)
-* [高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先）](#streaming-profile-export)
+* [高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先）](#advanced-enterprise-destinations)
 
-### 高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先） {#streaming-profile-export}
+### 高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先） {#advanced-enterprise-destinations}
 
 >[!IMPORTANT]
 >

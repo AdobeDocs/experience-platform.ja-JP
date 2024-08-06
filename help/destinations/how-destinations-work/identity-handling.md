@@ -2,7 +2,7 @@
 title: 宛先アクティブ化ワークフローでの ID の処理
 description: 宛先のタイプに応じた、アクティベーションワークフローにおける ID の書き出しの処理方法を学ぶ
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 99%
@@ -92,7 +92,7 @@ ht-degree: 99%
 
 ## エンタープライズの宛先 {#enterprise-destinations}
 
-[エンタープライズの宛先](/help/destinations/destination-types.md#streaming-profile-export)（[!DNL Amazon Kinesis]、[!DNL Azure Event Hubs]、HTTP API）の場合は、データの書き出しに特定の ID は必要ありません。これらは、エンタープライズ統合のユースケース向けに設計されているからです。 ただし、必要に応じて、ID を XDM 属性として、または ID マップから書き出すことができます。 [HTTP の宛先に書き出されたデータの例](/help/destinations/catalog/streaming/http-destination.md#exported-data)を示します。この例では、`personalEmail.address` XDM 属性と ID `ECID` および `email_lc_sha256`（ハッシュ化されたメールアドレス）をどちらも含んでいます。
+[エンタープライズの宛先](/help/destinations/destination-types.md#advanced-enterprise-destinations)（[!DNL Amazon Kinesis]、[!DNL Azure Event Hubs]、HTTP API）の場合は、データの書き出しに特定の ID は必要ありません。これらは、エンタープライズ統合のユースケース向けに設計されているからです。 ただし、必要に応じて、ID を XDM 属性として、または ID マップから書き出すことができます。 [HTTP の宛先に書き出されたデータの例](/help/destinations/catalog/streaming/http-destination.md#exported-data)を示します。この例では、`personalEmail.address` XDM 属性と ID `ECID` および `email_lc_sha256`（ハッシュ化されたメールアドレス）をどちらも含んでいます。
 
 ## パーソナライゼーションの宛先 {#personalization-destinations}
 

@@ -4,7 +4,7 @@ type: Tutorial
 description: オーディエンスをストリーミングプロファイルベースの宛先に送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 23%
@@ -23,7 +23,7 @@ ht-degree: 23%
 
 ## 概要 {#overview}
 
-この記事では、Adobe Experience Platformのオーディエンスデータをストリーミングプロファイルベースの宛先（「エンタープライズ宛先 [ とも呼ばれます）に対してアクティブ化するために必要なワークフロー ](/help/destinations/destination-types.md#streaming-profile-export) ついて説明します。
+この記事では、Adobe Experience Platformのオーディエンスデータをストリーミングプロファイルベースの宛先（「エンタープライズ宛先 [ とも呼ばれます）に対してアクティブ化するために必要なワークフロー ](/help/destinations/destination-types.md#advanced-enterprise-destinations) ついて説明します。
 
 この記事は、次の 3 つの宛先に適用されます。
 

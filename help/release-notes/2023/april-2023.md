@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2023年4月
 description: Adobe Experience Platform の 2023年4月のリリースノート。
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -174,7 +174,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| セグメントメンバーシップマップ | 2月に行った前回のお知らせのフォローアップとして、2023年5月15日（PT）に、セグメントメンバーシップのライフサイクルの冗長性を取り除くため、セグメントメンバーシップマップから `Existing` ステータスが廃止される予定です。この変更後、セグメントで認定されたプロファイルは `Realized`、不適格となったプロファイルは引き続き `Exited` として表されます。<br/><br/>この変更は、[企業の宛先](../../destinations/destination-types.md#streaming-profile-export)（Amazon Kinesis、Azure Event Hubs、HTTP API）を使用していて、`Existing` ステータスに基づいて自動化されたダウンストリームプロセスを導入している可能性がある場合に影響を与える可能性があります。該当する場合は、ダウンストリーム統合を確認してください。特定の時間を超えて新たに認定されたプロファイルを識別することに関心がある場合は、セグメントメンバーシップマップで `Realized` ステータスと `lastQualificationTime` を組み合わせて使用することを検討してください。詳しくは、アドビ担当者にお問い合わせください。 |
+| セグメントメンバーシップマップ | 2月に行った前回のお知らせのフォローアップとして、2023年5月15日（PT）に、セグメントメンバーシップのライフサイクルの冗長性を取り除くため、セグメントメンバーシップマップから `Existing` ステータスが廃止される予定です。この変更後、セグメントで認定されたプロファイルは `Realized`、不適格となったプロファイルは引き続き `Exited` として表されます。<br/><br/>この変更は、[企業の宛先](../../destinations/destination-types.md#advanced-enterprise-destinations)（Amazon Kinesis、Azure Event Hubs、HTTP API）を使用していて、`Existing` ステータスに基づいて自動化されたダウンストリームプロセスを導入している可能性がある場合に影響を与える可能性があります。該当する場合は、ダウンストリーム統合を確認してください。特定の時間を超えて新たに認定されたプロファイルを識別することに関心がある場合は、セグメントメンバーシップマップで `Realized` ステータスと `lastQualificationTime` を組み合わせて使用することを検討してください。詳しくは、アドビ担当者にお問い合わせください。 |
 
 {style="table-layout:auto"}
 

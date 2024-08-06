@@ -2,7 +2,7 @@
 title: プロファイルの書き出し動作
 description: Experience Platform の宛先でサポートされている様々な統合パターン間でプロファイル書き出し動作がどのように異なるかを説明します。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 97%
@@ -44,7 +44,7 @@ Experience Platform の宛先では、データを HTTPS 呼び出しとして A
 >
 > エンタープライズ宛先を使用できるのは、[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様だけです。
 
-Experience Platform の[エンタープライズ宛先](/help/destinations/destination-types.md#streaming-profile-export)は、Amazon Kinesis、Azure Event Hubs および HTTP API です。
+Experience Platform の[エンタープライズ宛先](/help/destinations/destination-types.md#advanced-enterprise-destinations)は、Amazon Kinesis、Azure Event Hubs および HTTP API です。
 
 Experience Platform では、プロファイルに関係する更新が、オーディエンスの選定または他の重要なイベントの後に発生した際に API エンドポイントにデータを書き出すためにのみ、エンタープライズ宛先へのプロファイル書き出し動作を最適化します。プロファイルは、以下の状況で宛先に書き出されます。
 
