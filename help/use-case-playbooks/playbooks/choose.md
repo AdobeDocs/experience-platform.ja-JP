@@ -4,16 +4,16 @@ title: さまざまなプレイブックから選択できます
 description: ユースケースに適したプレイブックを選択してプレイブックを有効にする方法を説明します。
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '757'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
 # さまざまなプレイブックから選択できます
 
-プレイブックを使用するには、**[!UICONTROL ユースケースプレイブック]／[!UICONTROL プレイブック]**&#x200B;に移動します。ページ上の様々な検索およびフィルタリングオプションを参照して使用し、特定のプレイブックの基本を学びます。
+プレイブックを使用するには、左側のナビゲーションから **[!UICONTROL プレイブック]** を選択します。 ページ上の様々な検索およびフィルタリングオプションを参照して使用し、特定のプレイブックの基本を学びます。
 
 ## 検索とフィルター {#search-and-filter}
 
