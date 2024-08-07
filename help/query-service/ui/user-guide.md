@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2430'
 ht-degree: 31%
 
 ---
@@ -223,9 +223,9 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 ![クエリ実行の結果を表示するクエリエディターコンソールの「結果」タブ](../images/ui/query-editor/query-results.png)
 
-## ユースケース {#use-cases}
+## 例 {#examples}
 
-クエリサービスは、業界やビジネスシナリオをまたいだ様々なユースケースに対するソリューションを提供します。 これらの実例は、サービスが多様なニーズに対応する上で柔軟性と効果を発揮していることを示しています。 [ クエリサービスが特定のビジネスニーズにどのように価値をもたらすことができるかを明らかにする ](../use-cases/overview.md) には、ユースケースに関するドキュメントの包括的なコレクションを参照してください。 クエリサービスを使用して、運用効率とビジネス成功を強化するためのインサイトとソリューションを提供する方法を説明します。
+クエリサービスは、業界やビジネスシナリオをまたいだ様々なユースケースに対するソリューションを提供します。 これらの例は、サービスが多様なニーズに対応する上での柔軟性と影響を示しています。 [ クエリサービスが特定のビジネスニーズにどのように価値をもたらすことができるかを明らかにする ](../use-cases/overview.md) には、ユースケースに関するドキュメントの包括的なコレクションを参照してください。 クエリサービスを使用して、運用効率とビジネス成功を強化するためのインサイトとソリューションを提供する方法を説明します。
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 

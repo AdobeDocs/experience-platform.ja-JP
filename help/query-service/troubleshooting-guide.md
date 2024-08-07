@@ -4,10 +4,10 @@ solution: Experience Platform
 title: よくある質問
 description: このドキュメントには、クエリサービスに関するよくある質問と回答が含まれています。トピックには、データの書き出し、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
 workflow-type: tm+mt
-source-wordcount: '4425'
-ht-degree: 96%
+source-wordcount: '4564'
+ht-degree: 93%
 
 ---
 
@@ -18,7 +18,11 @@ ht-degree: 96%
 よくある質問に対する次の回答のリストは、次のカテゴリに分類されています。
 
 - [全般](#general)
+- [ クエリ UI](#queries-ui) 
+- [データセットのサンプル](#dataset-samples)
 - [データの書き出し](#exporting-data)
+- [SQL 構文 ](#sql-syntax) 
+- [ITAS クエリ ](#itas-queries)
 - [サードパーティツール](#third-party-tools)
 - [PostgreSQL API エラー](#postgresql-api-errors)
 - [REST API エラー](#rest-api-errors)
@@ -603,6 +607,22 @@ Data Distillerのコンピューター時間のライセンス使用状況ダッ
 はい。 ただし、DbVisualizer などの特定のサードパーティクライアントでは、SQL ブロックの前後に別の識別子が必要になる場合があり、スクリプトの一部を 1 つのステートメントとして処理する必要があることを示します。 詳しくは、[ 匿名ブロックのドキュメント ](./key-concepts/anonymous-block.md) または [ 公式の DbVisualizer ドキュメント ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) を参照してください。
 +++
 
+## クエリ UI
+
+### クエリサービスに接続しようとすると、「クエリを作成」が停止し、「接続を初期化中…」と表示される。 問題を修正するにはどうすればよいですか？
+
++++回答
+「クエリの作成」が「接続の初期化中」で停止している場合は、接続またはセッションの問題がある可能性があります。 Platform UI を使用している場合は、ブラウザーを更新して、もう一度試してください。
++++
+
+## データセットのサンプル
+
+### システムデータセットにサンプルを作成できますか？
+
++++回答
+いいえ。システムデータセットに対する書き込み権限は制限されているので、サンプルを作成できません。
++++
+
 ## データの書き出し {#exporting-data}
 
 この節では、データの書き出しと制限について説明します。
@@ -647,6 +667,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## SQL 構文
+
+### MERGE INTO は Data Distillerまたはクエリサービスでサポートされていますか？
+
++++回答
+MERGE INTO SQL コンストラクトは、Data Distillerまたはクエリ サービスではサポートされていません。
++++
+
+## ITAS クエリ
+
+### ITAS クエリとは
+
++++回答
+INSERT INTO クエリは、ITAS クエリと呼ばれます。 なお、CREATE TABLE クエリは CTAS クエリと呼ばれます。
 +++
 
 ## サードパーティツール {#third-party-tools}

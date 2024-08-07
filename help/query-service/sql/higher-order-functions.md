@@ -1,10 +1,10 @@
 ---
 title: 高階関数を使用した配列およびマップ データ タイプの管理
-description: クエリサービスの高階関数を使用して、配列とマップのデータタイプを管理する方法を説明します。 実用的な例については、一般的なユースケースを参照してください。
+description: クエリサービスの高階関数を使用して、配列とマップのデータタイプを管理する方法を説明します。 一般的なユースケースの例を示しています。
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 **例**
 
-次の SQL の例は、このユースケースを示しています。 クエリは、指定したテーブルから限定されたローのセットを取得し、各項目の `priceTotal` 属性に 73 を掛けて `productListItems` の配列を変換します。 結果には、`_id`、`productListItems`、変換後の `price_in_inr` 列が含まれます。 選択は、特定のタイムスタンプ範囲に基づいて行われます。
+次の SQL の例は、このユースケースを示しています。 クエリは、指定されたテーブルから限られた行のセットを取得し、各項目の `priceTotal` 属性に 73 を掛けて`productListItems`配列を変換します。結果には、 `_id`列、 `productListItems`列および変換された `price_in_inr` 列が含まれます。 選択は、特定のタイムスタンプ範囲に基づいています。
 
 ```sql
 SELECT _id,
@@ -42,7 +42,7 @@ LIMIT  10;
 
 **結果**
 
-この SQL の結果は、次に示すような結果になります。
+この SQL の結果は、以下のようになります。
 
 ```console
  productListItems | price_in_inr
@@ -133,11 +133,11 @@ productListItems | _filter
 
 `aggregate(array<T>, A, function<A, T, A>[, function<A, R>]): R`
 
-この集計操作では、初期状態と配列内のすべての要素にバイナリ演算子が適用されます。 また、複数の値を 1 つの状態に減らします。 この縮小後、最終状態は仕上げ関数を使用して最終結果に変換されます。 finish 関数は、すべての配列要素にバイナリ演算子を適用した後に取得した最後の状態を取り、それを使用して最終的な結果を生成します。
+この集計操作では、初期状態と配列内のすべての要素にバイナリ演算子が適用されます。 また、複数の値を 1 つの状態に減らします。 この縮小後、最終状態は仕上げ関数を使用して最終結果に変換されます。 終了関数は、すべての配列要素にバイナリ演算子を適用した後に取得された最後の状態を取得し、それを使用して最終結果を生成します。
 
 **例**
 
-このクエリの例では、指定されたタイムスタンプ範囲内の `productListItems` 配列から最大 SKU 値を計算し、結果を 2 倍にします。 出力には、元の `productListItems` 配列と計算された `max_value` が含まれます。
+この例ではクエリ指定されたタイムスタンプ範囲内の `productListItems` 配列から最大SKU値を計算し、結果を 2 倍にします。 出力には元の `productListItems` 配列と計算された `max_value`が含まれます。
 
 ```sql
 SELECT productListItems,
@@ -216,7 +216,7 @@ productListItems     | zip_with
 
 **例**
 
-次のクエリは、シーケンスと productListItems 配列から値のペアを作成し、map_from_entries を使用してこれらのペアをマップに変換し、元の productListItems 列を、新しく作成された map_from_entries 列とともに選択します。 結果は、指定したタイムスタンプ範囲に基づいてフィルタリングされ、制限されます。
+次のクエリでは、シーケンスと productListItems 配列から値のペアを作成し、map_from_entriesを使用してこれらのペアをマップに変換してから、新しく作成された map_from_entries 列と共に元の productListItems 列を選択します。 結果はフィルタリングされ、指定されたタイムスタンプ範囲に基づいて制限されます。
 
 ```sql
 SELECT productListItems,      map_from_entries(zip_with(Sequence(1,Size(productListItems)), productListItems, (x,y) -> struct(x, y))) AS map_from_entries
@@ -228,7 +228,7 @@ LIMIT 10;
 
 **結果**
 
-この SQL の結果は、次に示すような結果になります。
+この SQL の結果は、以下のようになります。
 
 ```console
 productListItems     | map_from_entries
@@ -346,7 +346,7 @@ productListItems     | map_from_entries
 
 **例**
 
-クエリは、テーブル `geometrixxx_999_xdm_pqs_1batch_10k_rows` から `identitymap` 列を選択し、各行のキー `AAID` に関連付けられた値を抽出します。 結果は、指定したタイムスタンプ範囲内の行に制限され、クエリは出力を 10 行に制限します。
+クエリは、テーブル`geometrixxx_999_xdm_pqs_1batch_10k_rows`から`identitymap`列を選択し、各行のキー`AAID`に関連付けられた値を抽出します。結果は指定されたタイム・スタンプ範囲内の行に制限され、クエリは出力を 10 行に制限します。
 
 ```sql
 SELECT identitymap,
@@ -359,7 +359,7 @@ LIMIT 10;
 
 **結果**
 
-この SQL の結果は、次に示すような結果になります。
+この SQL の結果は、以下のようになります。
 
 ```console
                                                                   identitymap                                            |  element_at(identitymap, AAID) 
@@ -462,4 +462,4 @@ productListItems     | array_distinct(productListItems)
 
 [`filter` 関数の例では ](../use-cases/retrieve-similar-records.md#filter-results) テキストデータから関連情報をより詳細かつ正確に抽出する方法を示しています。
 
-[`reduce` 関数は ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) 様々な分析および計画プロセスでピボット可能な累積値または集計を導出する方法を提供します。
+[`reduce`機能](../use-cases/retrieve-similar-records.md#higher-order-function-solutions)は、さまざまな分析および計画プロセスで極めて重要な累積値または集計を導出する方法を提供します。
