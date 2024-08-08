@@ -5,7 +5,7 @@ title: サンドボックス管理 API エンドポイント
 description: Sandbox API の/sandboxes エンドポイントを使用すると、Adobe Experience Platformのサンドボックスをプログラムで管理できます。
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
 workflow-type: tm+mt
 source-wordcount: '1474'
 ht-degree: 51%
@@ -42,7 +42,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
