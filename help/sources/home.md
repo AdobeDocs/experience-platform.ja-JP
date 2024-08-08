@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 74%
+source-wordcount: '1548'
+ht-degree: 73%
 
 ---
 
@@ -26,13 +26,26 @@ Experience Platform を使用すると、異なるソースから収集したデ
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
+## 高度なエンタープライズソース {#advanced-enterprise-sources}
+
+次のソースは、[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) のお客様のみが利用できます。
+
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE  ストリーミング ]{type=Positive}
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE  バッチ ]{type=Informative}
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE  ストリーミング ]{type=Positive}
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE  バッチ ]{type=Informative}
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE  バッチ ]{type=Informative}
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE  ストリーミング ]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE  ストリーミング ]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE  バッチ ]{type=Informative}
+
 ## Adobe構築およびパートナー構築のソース {#adobe-and-partner-built-sources}
 
 Experience Platformソースカタログ内のコネクタの一部はAdobeが構築および管理し、その他は [Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理します。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeが作成し、[RainFocus コネクタ ](/help/sources/connectors/analytics/rainfocus.md) は RainFocus チームが作成および管理します。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
-## ソースのタイプ
+## ソースカテゴリ
 
 Experience Platform のソースは、次のカテゴリに分類されます。
 
@@ -75,15 +88,12 @@ Experience Platform には、サードパーティの分析プラットフォー
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE  バッチ ]{type=Informative}
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE  ストリーミング ]{type=Positive}
 - [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE  バッチ ]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE  ストリーミング ]{type=Positive}
 - [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE  バッチ ]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE  ストリーミング ]{type=Positive}
 - [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE  バッチ ]{type=Informative}
 
@@ -116,14 +126,11 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE  バッチ ]{type=Informative}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE  バッチ ]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE  バッチ ]{type=Informative}
@@ -133,8 +140,6 @@ Experience Platform は、サードパーティのデータベースからデー
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE  バッチ ]{type=Informative}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE  ストリーミング ]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE  バッチ ]{type=Informative}
 
 ### データと ID のパートナー {#data-partner}
