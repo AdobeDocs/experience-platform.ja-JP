@@ -27,11 +27,11 @@ Experience Platformの既存の機能およびドキュメントのアップデ�
 - [ソース](#sources)
 - [統合タグ](#unified-tags)
 
-## Federated Audience Composition {#federated-audience-composition}
+## 連合オーディエンス構成 {#federated-audience-composition}
 
 Federated Audience Composition を使用すると、企業はデータを作成して、様々なユースケースでより優れたアプリケーションを実現できます。 この新しいアプローチでは、Adobe Real-time Customer Data PlatformまたはAdobe Journey Optimizerのユーザーとして、既存の Data Warehouse からデータセットを直接統合して、Adobe Experience Platform オーディエンスと属性をすべて 1 つのシステムで作成および強化できます。
 
-詳しくは、[Federated Audience Composition ドキュメント ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home) を参照してください。
+詳しくは、[Federated Audience Composition ドキュメント ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home) を参照してください。
 
 ## 高度なデータ・ライフサイクル管理 {#advanced-data-lifecycle-management}
 
