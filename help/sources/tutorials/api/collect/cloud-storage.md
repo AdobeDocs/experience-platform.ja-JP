@@ -5,10 +5,10 @@ title: Flow Service API を使用したクラウドストレージソースの�
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1741'
-ht-degree: 71%
+source-wordcount: '1742'
+ht-degree: 69%
 
 ---
 
@@ -661,7 +661,7 @@ curl -X POST \
 | `transformations.params.mappingId` | 前の手順で取得した[マッピング ID](#mapping)。 |
 | `scheduleParams.startTime` | エポック時間で表した、データフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
-| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必須ではありません。また、頻度は他の頻度の値に対して、`15` よりも大きいか、等しい必要があります。 |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。各頻度で許容される最小のインターバル値は次のとおりです。<ul><li>**1 回**：なし</li><li>**分**: 15</li><li>**時間**: 1</li><li>**日**: 1</li><li>**週**: 1</li></ul> |
 
 **応答**
 

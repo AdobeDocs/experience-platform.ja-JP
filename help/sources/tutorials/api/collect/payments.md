@@ -5,10 +5,10 @@ title: Flow Service API を使用した支払いソースのデータフロー�
 type: Tutorial
 description: このチュートリアルでは、支払い申請からデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順を説明します。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 90%
+source-wordcount: '1364'
+ht-degree: 89%
 
 ---
 
@@ -682,7 +682,7 @@ curl -X POST \
 | `transformations.params.mappingId` | データベースに関連付けられたマッピング ID。 |
 | `scheduleParams.startTime` | エポック時間で表した、データフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。指定できる値は、`once`、`minute`、`hour`、`day`、`week` です。 |
-| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。頻度が `once` に設定されている場合、間隔は必須ではありません。また、頻度は他の頻度の値に対して、`15` よりも大きいか、等しい必要があります。 |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。インターバルの値はゼロ以外の整数にしてください。各頻度で許容される最小のインターバル値は次のとおりです。<ul><li>**1 回**：なし</li><li>**分**: 15</li><li>**時間**: 1</li><li>**日**: 1</li><li>**週**: 1</li></ul> |
 
 **応答**
 

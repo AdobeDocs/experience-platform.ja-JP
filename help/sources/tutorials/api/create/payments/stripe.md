@@ -3,10 +3,10 @@ title: API を使用したアカウントからExperience Platformへ  [!DNL Str
 description: Flow Service API を使用してStripeアカウントからExperience Platformに支払いデータを取り込む方法を説明します
 badge: ベータ版
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1998'
-ht-degree: 45%
+source-wordcount: '2020'
+ht-degree: 44%
 
 ---
 
@@ -881,7 +881,7 @@ curl -X POST \
 | `transformations.params.mappingVersion` | マッピング ID の対応するバージョン。この値のデフォルトは `0` です。 |
 | `scheduleParams.startTime` | データフローが開始される時間です。 開始時間の値は、Unix タイムスタンプの形式で指定する必要があります。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。取り込み頻度は、次のように設定できます。  <ul><li>**1 回**：頻度を `once` に設定して、1 回限りの取り込みを作成します。 1 回限りの取り込みデータフローを作成する場合、間隔とバックフィルの設定は使用できません。 デフォルトでは、スケジュールの頻度は 1 回に設定されています。</li><li>**分**：頻度を `minute` に設定して、1 分ごとにデータを取り込むようにデータフローをスケジュールします。</li><li>**時間**：頻度を `hour` に設定して、1 時間ごとにデータを取り込むようにデータフローをスケジュールします。</li><li>**日**：頻度を `day` に設定して、1 日にデータを取り込むようにデータフローをスケジュールします。</li><li>**週**：頻度を `week` に設定して、データフローが週ごとにデータを取り込むようにスケジュールします。</li></ul> |
-| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。例えば、頻度を日に設定し、間隔を 15 に設定すると、データフローは 15 日ごとに実行されます。 インターバルの値は 0 以外の整数にしてください。 |
+| `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。例えば、頻度を日に設定し、間隔を 15 に設定すると、データフローは 15 日ごとに実行されます。 インターバルの値は 0 以外の整数にしてください。 各頻度で許容される最小のインターバル値は次のとおりです。<ul><li>**1 回**：なし</li><li>**分**: 15</li><li>**時間**: 1</li><li>**日**: 1</li><li>**週**: 1</li></ul> |
 
 **応答**
 
