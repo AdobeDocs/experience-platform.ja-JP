@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
+source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
 workflow-type: tm+mt
-source-wordcount: '3975'
-ht-degree: 57%
+source-wordcount: '4024'
+ht-degree: 56%
 
 ---
 
@@ -30,6 +30,11 @@ ht-degree: 57%
 宛先へのオーディエンスをアクティブ化するには、正常に [ 宛先に接続 ](./connect-destination.md) されている必要があります。 まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
 ## 書き出しでサポートされるファイル形式 {#supported-file-formats-export}
+
+>[!CONTEXTUALHELP]
+>id="legacy_dataflow_needs_schedule_end_date"
+>title="このデータフローの終了日を更新"
+>abstract="この宛先の最近の更新により、データフローには終了日が必要になりました。 Adobeでは、デフォルトの終了日を 2025 年 3 月 1 日（PT）に設定しています。 目的の終了日に更新してください。更新しない場合、データの書き出しはデフォルトの日付で停止します。"
 
 オーディエンスを書き出す場合、次のファイル形式がサポートされます。
 
