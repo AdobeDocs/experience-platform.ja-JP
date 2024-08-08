@@ -3,9 +3,9 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
+source-git-commit: 44848a250cb6020744b51dc0d0247f5fa91ab2ef
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1952'
 ht-degree: 83%
 
 ---
@@ -232,7 +232,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL 分割] {#split-block}
 
-**[!UICONTROL 分割]**&#x200B;ブロックタイプを使用すると、新しいオーディエンスを様々なサブオーディエンスに分割できます。オーディエンスは、割合に基づいて分割することも、属性別に分割することもできます。 オーディエンスをサブオーディエンスに分割する場合、この分割は **永続的** です。 つまり、プロファイルは、各評価で同じサブオーディエンスにあります。
+**[!UICONTROL 分割]**&#x200B;ブロックタイプを使用すると、新しいオーディエンスを様々なサブオーディエンスに分割できます。オーディエンスは、割合に基づいて分割することも、属性別に分割することもできます。 オーディエンスをサブオーディエンスに分割する場合、この分割は永続的 **ありません**。 つまり、プロファイルは、評価ごとに異なるサブオーディエンスにある可能性があります。
 
 **[!UICONTROL 分割]**&#x200B;ブロックを追加するには、「**+**」アイコン、「**[!UICONTROL 分割]**」の順に選択します。
 
