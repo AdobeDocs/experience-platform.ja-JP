@@ -3,10 +3,10 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 40%
+source-wordcount: '1591'
+ht-degree: 39%
 
 ---
 
@@ -57,6 +57,10 @@ ID 値の検証を成功させるために従う必要がある既存のルー�
 ### ID 名前空間の取り込み
 
 2023年3月31日（PT）以降、ID サービスは、新規のお客様について Adobe Analytics ID (AAID) の取り込みをブロックします。この ID は、通常、[Adobe Analytics ソース](../sources/connectors/adobe-applications/analytics.md)と [Adobe Audience Manager ソース](../sources//connectors/adobe-applications/audience-manager.md)を通じて取り込まれ、ECID が同じ web ブラウザーを表すため冗長です。このデフォルト設定を変更する場合は、Adobe アカウントチームにお問い合わせください。
+
+## パフォーマンスガードレール {#performance-guardrails}
+
+ID サービスは、受信データを継続的に監視して、大規模で高いパフォーマンスと信頼性を確保します。 ただし、短期間にエクスペリエンスイベントデータが流入すると、パフォーマンスが低下し、待ち時間が発生する可能性があります。 Adobeは、このようなパフォーマンス低下に対する責任を負いません。
 
 ## 処理能力の ID グラフが更新される際の削除ロジックについて {#deletion-logic}
 
