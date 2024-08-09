@@ -3,9 +3,9 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
+source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
 workflow-type: tm+mt
-source-wordcount: '4112'
+source-wordcount: '4077'
 ht-degree: 55%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 55%
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
 >title="このデータフローの終了日を更新"
->abstract="この宛先の最近の更新により、データフローには終了日が必要になりました。 Adobeでは、デフォルトの終了日を 2025 年 3 月 1 日（PT）に設定しています。 目的の終了日に更新してください。更新しない場合、データの書き出しはデフォルトの日付で停止します。"
+>abstract="このデータフローの終了日を更新"
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
