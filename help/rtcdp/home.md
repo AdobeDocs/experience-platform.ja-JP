@@ -4,9 +4,9 @@ description: Adobe Real-Time CDPの基本を学び、提供される豊富な機
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1175'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,12 @@ Adobe Real-time Customer Data Platform（Real-Time CDP）を使用すると、�
 Real-Time CDPの製品およびドキュメントの最新の機能強化を確認します。 機能、改善点、修正の包括的なリストについては、詳細な[リリースノート](/help/release-notes/latest/latest.md)を参照してください。[ 月次リリースノートのドキュメントの更新セクション ](/help/release-notes/latest/latest.md#documentation-updates) にアクセスして、ドキュメントの最新の変更について常に最新の状態に保ちます。
 
 >[!BEGINTABS]
+
+>[!TAB Federated Audience の構成 ]
+
+Federated Audience Composition を使用すると、企業はデータを作成して、様々なユースケースでより優れたアプリケーションを実現できます。 この新しいアプローチでは、Adobe Real-time Customer Data PlatformまたはAdobe Journey Optimizerのユーザーとして、既存の Data Warehouse からデータセットを直接統合して、Adobe Experience Platform オーディエンスと属性をすべて 1 つのシステムで作成および強化できます。
+
+[![画像](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)
 
 >[!TAB ユースケースのプレイブック]
 
