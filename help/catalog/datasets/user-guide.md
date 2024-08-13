@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータセットを操作する際に一般的なアクションを実行する方法について説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3111'
 ht-degree: 14%
 
 ---
@@ -92,6 +92,10 @@ ht-degree: 14%
 ![ 選択したデータセットの「省略記号とデータセットをプレビュー」オプションがハイライト表示されたデータセットワークスペースの「参照」タブ。](../images/datasets/user-guide/preview-dataset-option.png)
 
 これにより、プレビューウィンドウが開き、データセットのスキーマの階層ビューが右側に表示されます。
+
+>[!NOTE]
+>
+>ビューの左側のスキーマ図には、データを含んだフィールドのみが表示されます。 データのないフィールドは、UI を効率化し関連情報に集中するために、自動的に非表示になります。
 
 ![ データセットの構造に関する情報とサンプル値を含むデータセットプレビューダイアログが表示されます。](../images/datasets/user-guide/preview-dataset.png)
 
