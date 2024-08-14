@@ -3,9 +3,9 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 44848a250cb6020744b51dc0d0247f5fa91ab2ef
+source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1951'
 ht-degree: 83%
 
 ---
