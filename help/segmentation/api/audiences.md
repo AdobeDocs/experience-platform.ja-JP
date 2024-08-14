@@ -3,10 +3,10 @@ title: Audiences API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用して、組織のオーディエンスをプログラムで作成、管理および更新します。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 5%
+source-wordcount: '1406'
+ht-degree: 6%
 
 ---
 
@@ -207,10 +207,6 @@ POST /audiences
 
 **リクエスト**
 
->[!BEGINTABS]
-
->[!TAB Platform で生成されたオーディエンス ]
-
 +++ Platform で生成されたオーディエンスを作成するためのサンプルリクエスト
 
 ```shell
@@ -222,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
         "name": "People who ordered in the last 30 days",
-        "profileInstanceId": "ups",
+        "profileInstanceId": "AEPSegments",
         "description": "Last 30 days",
         "type": "SegmentDefinition",
         "expression": {
@@ -250,60 +246,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB  外部で生成されたオーディエンス ]
-
-+++ 外部で生成されたオーディエンスを作成するためのサンプルリクエスト
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
-        "audienceId":"test-external-audience-id",
-        "name":"externalAudience",
-        "namespace":"aam",
-        "description":"Last 30 days",
-        "type":"ExternalSegment",
-        "originName":"CUSTOM_UPLOAD",
-        "lifecycleState":"published",
-        "datasetId":"6254cf3c97f8e31b639fb14d",
-        "labels":[
-            "core/C1"
-        ],
-        "linkedAudienceRef":{
-            "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-        }
-    }'
-```
-
-| プロパティ | 説明 |
-| -------- | ----------- | 
-| `audienceId` | オーディエンスのユーザー指定の ID。 |
-| `name` | オーディエンスの名前。 |
-| `namespace` | オーディエンスの名前空間。 |
-| `description` | オーディエンスの説明。 |
-| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたものかを表示するフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
-| `originName` | オーディエンスの接触チャネルの名前。 外部で生成されたオーディエンスの場合、このデフォルト値は `CUSTOM_UPLOAD` です。 その他にサポートされている値には、`REAL_TIME_CUSTOMER_PROFILE`、`CUSTOM_UPLOAD`、`AUDIENCE_ORCHESTRATION`、`AUDIENCE_MATCH` などがあります。 |
-| `lifecycleState` | 作成しようとしているオーディエンスの初期状態を決定するオプションのフィールド。 サポートされる値は、`draft`、`published`、`inactive` です。 |
-| `datasetId` | オーディエンスを含むデータが見つかるデータセットの ID。 |
-| `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用と属性ベースのアクセス制御ラベル。 |
-| `audienceMeta` | 外部で生成されたオーディエンスに属するメタデータです。 |
-| `linkedAudienceRef` | 他のオーディエンス関連システムの識別子を含むオブジェクト。 これには以下が含まれます。 <ul><li>`flowId`：この ID は、オーディエンスデータの取り込みに使用されたデータフローにオーディエンスを接続するために使用されます。 必要な ID について詳しくは、[ データフローの作成ガイド ](../../sources/tutorials/api/collect/cloud-storage.md) を参照してください。</li><li>`aoWorkflowId`：この ID は、オーディエンスを関連する Audience Orchestration コンポジションに接続するために使用されます。&lt;/li/> <li>`payloadFieldGroupRef`：この ID は、オーディエンスの構造を説明する XDM フィールドグループスキーマを参照するために使用されます。 このフィールドの値について詳しくは、[XDM フィールドグループエンドポイントガイド ](../../xdm/api/field-groups.md) を参照してください。</li><li>`audienceFolderId`：この ID は、オーディエンスのAdobe Audience Managerのフォルダー ID を参照するために使用されます。 この API について詳しくは、[Adobe Audience Manager API ガイド ](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API) を参照してください。</ul> |
-
-+++
-
->[!ENDTABS]
-
 **応答**
 
 応答に成功すると、HTTP ステータス 200 と、新しく作成されたオーディエンスに関する情報が返されます。
-
->[!BEGINTABS]
-
->[!TAB Platform で生成されたオーディエンス ]
 
 +++Platform で生成されたオーディエンスを作成する際の応答のサンプル。
 
@@ -373,46 +318,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB  外部で生成されたオーディエンス ]
-
-+++外部で生成されたオーディエンスを作成する際の応答のサンプル。
-
-```json
-{
-   "id": "322f9f62-cd27-11ec-9d64-0242ac120002",
-   "audienceId": "test-external-audience-id",
-   "name": "externalAudience",
-   "namespace": "aam",
-   "imsOrgId": "{ORG_ID}",
-   "sandbox":{
-      "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-      "sandboxName": "prod",
-      "type": "production",
-      "default": true
-   },
-   "isSystem": false,
-   "description": "Last 30 days",
-   "type": "ExternalSegment",
-   "originName": "CUSTOM_UPLOAD",
-   "lifecycleState": "published",
-   "createdBy": "{CREATED_BY_ID}",
-   "datasetId": "6254cf3c97f8e31b639fb14d",
-   "labels": [
-      "core/C1"
-   ],
-   "linkedAudienceRef": {
-      "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-   },
-   "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-   "creationTime": 1650251290000,
-   "updateEpoch": 1650251290,
-   "updateTime": 1650251290000,
-   "createEpoch": 1650251290
-}
-```
-
-+++
-
 ## 指定したオーディエンスの検索 {#get}
 
 `/audiences` エンドポイントに対してGETリクエストを実行し、取得するオーディエンスの ID をリクエストパスで指定することで、特定のオーディエンスに関する詳細な情報を検索できます。
@@ -443,11 +348,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 **応答**
 
-応答に成功すると、HTTP ステータス 200 と、指定されたオーディエンスに関する情報が返されます。 オーディエンスがAdobe Experience Platformと外部ソースのどちらで生成されるかによって、応答は異なります。
-
->[!BEGINTABS]
-
->[!TAB Platform で生成されたオーディエンス ]
+応答に成功すると、HTTP ステータス 200 と、指定されたオーディエンスに関する情報が返されます。
 
 +++Platform で生成されたオーディエンスを取得する際の応答のサンプル。
 
@@ -516,161 +417,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 +++
 
->[!TAB  外部で生成されたオーディエンス ]
-
-+++外部で生成されたオーディエンスを取得する際の応答のサンプル。
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "test-external-audience-id",
-    "name": "externalAudience",
-    "namespace": "aam",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "isSystem": false,
-    "description": "Last 30 days",
-    "type": "ExternalSegment",
-    "lifecycleState": "active",
-    "createdBy": "{CREATED_BY_ID}",
-    "datasetId": "6254cf3c97f8e31b639fb14d",
-    "labels": [
-        "core/C1"
-    ],
-    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-    "creationTime": 1650251290000,
-    "updateEpoch": 1650251290,
-    "updateTime": 1650251290000,
-    "createEpoch": 1650251290
-}
-```
-
-+++
-
->[!ENDTABS]
-
-## オーディエンスのフィールドの更新 {#update-field}
-
-`/audiences` エンドポイントにPATCHリクエストを実行し、リクエストパスで更新するオーディエンスの ID を指定することで、特定のオーディエンスのフィールドを更新できます。
-
-**API 形式**
-
-```http
-PATCH /audiences/{AUDIENCE_ID}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
-
-**リクエスト**
-
-+++オーディエンスのフィールドを更新するリクエストの例。
-
-```shell
-curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-     [
-        {
-            "op": "add",
-            "path": "/expression",
-            "value": {
-                "type": "PQL",
-                "format": "pql/text",
-                "value": "workAddress.country = \"CA\""
-            }
-        }
-      ]'
-```
-
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `op` | オーディエンスを更新する場合、この値は常に `add` です。 |
-| `path` | 更新するフィールドのパス。 |
-| `value` | フィールドの更新先の値。 |
-
-+++
-
-**応答**
-
-応答に成功すると、HTTP ステータス 200 と、新しく更新されたオーディエンスに関する情報が返されます。
-
-+++オーディエンス内のフィールドを更新する際の応答例。
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "profileInstanceId": "ups",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "name": "People who ordered in the last 30 days",
-    "description": "Last 30 days",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "workAddress.country = \"CA\""
-    },
-    "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
-    "evaluationInfo": {
-        "batch": {
-          "enabled": false
-        },
-        "continuous": {
-          "enabled": true
-        },
-        "synchronous": {
-          "enabled": false
-        }
-    },
-    "dataGovernancePolicy": {
-      "excludeOptOut": true
-    },
-    "creationTime": 1650374572000,
-    "updateEpoch": 1650374573,
-    "updateTime": 1650374573000,
-    "createEpoch": 1650374572,
-    "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
-    "dependents": [],
-    "definedOn": [
-        {
-          "meta:resourceType": "unions",
-          "meta:containerId": "tenant",
-          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
-    "dependencies": [],
-    "type": "SegmentDefinition",
-    "overridePerformanceWarnings": false,
-    "createdBy": "{CREATED_BY_ID}",
-    "lifecycleState": "active",
-    "labels": [
-      "core/C1"
-    ],
-    "namespace": "AEPSegments"
-}
-```
-
-+++
-
 ## オーディエンスの更新 {#put}
 
 特定のエンドポイントに対してPUTリクエストを実行し、リクエストパスで更新するオーディエンスの ID を指定することで、`/audiences` 定のオーディエンスを更新（上書き）できます。
@@ -697,11 +443,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -732,9 +478,9 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```json
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
@@ -743,7 +489,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
         "default": true
     },
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
