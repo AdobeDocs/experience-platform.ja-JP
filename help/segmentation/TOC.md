@@ -5,10 +5,10 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
 role: User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 91%
+source-wordcount: '194'
+ht-degree: 93%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 91%
    - [オーディエンスポータル](ui/audience-portal.md)
    - [オーディエンス構成](ui/audience-composition.md)
    - [セグメントビルダー](ui/segment-builder.md)
-   - [Federated Audience Composition （限定提供） ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+   - [連合オーディエンス構成（限定提供）](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)
    - [アカウントオーディエンス](ui/account-audiences.md)
    - [類似オーディエンス](ui/lookalike-audiences.md)
    - [見込み客オーディエンス](ui/prospect-audience.md)
@@ -73,6 +73,7 @@ ht-degree: 91%
    - [外部オーディエンスの読み込みと使用](tutorials/using-external-audiences.md)
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
    - [セグメントでデータ使用のコンプライアンスを実施する](tutorials/governance.md)
+- [実施要件の条件の更新](./eligibility-criteria-update.md)
 - [よくある質問](./faq.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
