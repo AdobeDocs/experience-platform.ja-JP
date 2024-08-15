@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platform の 2024年4月のリリースノート。
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 22%
@@ -74,7 +74,7 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 | 機能 | 説明 |
 | ----------- | ----------- |
 | Destination SDK`isRequired` ネストされた顧客データフィールドでパラメーターを使用できるようになりました | Destination SDKで宛先を設定する際に、[ ネストされた顧客データフィールドを必要に応じて設定 ](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields) できるようになりました。 これにより、宛先を設定するユーザーは、そのフィールドの値を選択するまでアクティベーションフローを続行できません。 |
-| Edgeのセグメント化は、Web SDK でAdobe Targetの宛先を設定する場合の必須要件ではなくなりました | 以前は、Web SDK を使用して [Adobe Targetの宛先を設定する場合 ](/help/destinations/catalog/personalization/adobe-target-connection.md) パーソナライゼーションとエッジのセグメント化のためにデータストリームを有効にする必要がありました。 データストリームでエッジのセグメント化を有効にする必要がありました [ 現在は削除されました ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)。 この統合パターンを使用すると、Real-Time CDPでAdobe Targetを使用する際に、パーソナライゼーションのユースケースのサブセットのメリットを得ることができます。 詳しくは、[ 統合タイプで有効になるユースケース ](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters) を参照してください。 |
+| Edgeのセグメント化は、Web SDK でAdobe Targetの宛先を設定する場合の必須要件ではなくなりました | 以前は、Web SDK を使用して [Adobe Targetの宛先を設定する場合 ](/help/destinations/catalog/personalization/adobe-target-connection.md) パーソナライゼーションとエッジのセグメント化のためにデータストリームを有効にする必要がありました。 データストリームでエッジのセグメント化を有効にする必要がありました [ 現在は削除されました ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)。 この統合パターンを使用すると、Real-Time CDPでAdobe Targetを使用する際に、パーソナライゼーションのユースケースのサブセットのメリットを得ることができます。 詳しくは、[ 統合タイプで有効になるユースケース ](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases) を参照してください。 |
 | [!BADGE Beta]{type=Informative} アクティブ化フローから複数のオーディエンスとデータセットを削除 | 宛先アクティブ化フローから複数のオーディエンスとデータセットを選択して削除できるようになりました。 詳しくは、[ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-remove) および [ データセットの書き出し ](../../destinations/ui/export-datasets.md) ドキュメントを参照してください。 |
 
 {style="table-layout:auto"}

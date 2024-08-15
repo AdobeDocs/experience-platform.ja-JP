@@ -3,7 +3,7 @@ title: エッジパーソナライゼーションの宛先に対してオーデ�
 description: 同じページと次のページのパーソナライゼーションのユースケースに対して、Adobe Experience Platformからエッジパーソナライゼーションの宛先へのオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 15%
@@ -47,7 +47,7 @@ Adobe Targetとカスタムパーソナライゼーションの宛先に対し�
 
 ## ユースケース {#use-cases}
 
-Adobe TargetなどのAdobeのパーソナライゼーションソリューション、または独自のパーソナライゼーションパートナープラットフォーム（[!DNL Optimizely]、[!DNL Pega] など）および独自のシステム（社内の CMS など）を使用して、[ カスタム Personalization](../catalog/personalization/custom-personalization.md) 宛先を介してより深い顧客のパーソナライゼーションエクスペリエンスを強化します。 これらすべてを、Experience PlatformEdge Networkのデータ収集およびセグメント化機能も活用して行います。
+Adobe TargetなどのAdobeのパーソナライゼーションソリューション、または独自のパーソナライゼーションパートナープラットフォーム（[!DNL Optimizely]、[!DNL Pega] など）および独自のシステム（社内のCMSなど）を使用して、[ カスタム Personalization](../catalog/personalization/custom-personalization.md) 宛先を介してより深い顧客のパーソナライゼーションエクスペリエンスを強化します。 これらすべてを、Experience PlatformEdge Networkのデータ収集およびセグメント化機能も活用して行います。
 
 以下に説明するユースケースには、サイトのパーソナライゼーションとターゲットを設定したオンサイト広告の両方が含まれます。
 
@@ -112,7 +112,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 設定する宛先に応じて、次の記事で宛先固有の前提条件と関連情報について確認してください。
 
 * [Adobe Target 接続](../catalog/personalization/adobe-target-connection.md#parameters)
-* [カスタムパーソナライゼーション接続](../catalog/personalization/custom-personalization.md##parameters)
+* [カスタムパーソナライゼーション接続](../catalog/personalization/custom-personalization.md#parameters)
 
 ## 宛先の選択 {#select-destination}
 
