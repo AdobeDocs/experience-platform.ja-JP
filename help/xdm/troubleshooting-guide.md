@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM システムトラブルシューティングガイド
 description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル（XDM）に関するよくある質問への回答を示します。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 100%
+source-wordcount: '2446'
+ht-degree: 79%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 100%
 ## FAQ
 
 XDM システムと [!DNL Schema Registry] API の使用に関するよくある質問への回答を以下に示します。
+
+## スキーマの基本
+
+この節では、XDM システムでのスキーマ構造、フィールドの使用方法、識別に関する基本的な質問に対する回答を示します。
 
 ### スキーマにフィールドを追加するにはどうすればよいですか？
 
@@ -39,15 +43,59 @@ XDM システムと [!DNL Schema Registry] API の使用に関するよくある
 
 詳しくは、[!DNL Schema Registry] API ガイドの[リソースの識別](api/getting-started.md#resource-identification)の節を参照してください。
 
-### スキーマでは重大な変更の防止をどのような場合に開始しますか？
-
-データセットの作成に使用されていないか、[[!DNL Real-Time Customer Profile]](../profile/home.md) での使用が有効になっていない限り、スキーマに重大な変更を加えることができます。スキーマがデータセットの作成に使用されたり、[!DNL Real-Time Customer Profile] で使用できるようになったりすると、[スキーマ進化](schema/composition.md#evolution) のルールがシステムで厳密に適用されます。
-
 ### 長いフィールドタイプの最大サイズはどれくらいですか？
 
 長いフィールドタイプは、最大サイズが 53（+1）ビットの整数で、可能な範囲は -9007199254740992 ～ 9007199254740992 です。これは、JSON の JavaScript 実装が長整数を表す方法に制限があるためです。
 
 フィールドタイプについて詳しくは、[XDM フィールドタイプの制約](./schema/field-constraints.md)に関するドキュメントを参照してください。
+
+### meta:AltId とは何ですか？また、どのように取得すればよいですか？
+
+`meta:altId` は、スキーマの一意の ID です。 `meta:altId` は、API 呼び出しで使用する参照しやすい ID を提供します。 この ID を使用すると、JSON URI 形式と同様に使用するたびにエンコード/デコードする必要がなくなります。
+<!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
+
+<!-- ### How can I generate a sample payload for a schema? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+### データタイプを作成するためのサンプル JSON 表現を取得できますか？
+
+スキーマレジストリ API と Platform UI の両方を使用して、データタイプを作成できます。 次の方法の手順については、ドキュメントを参照してください。
+
+- [API を使用したデータタイプの作成](./api/data-types.md#create)
+- [UI を使用したデータタイプの作成](./ui/resources/data-types.md#create)
+
+### マップデータタイプの使用制限は何ですか。
+
+XDM は、このデータタイプの使用に次の制限を設けます。
+
+- マップの型はオブジェクト型でなければなりません。
+- マップの種類にはプロパティを定義できません（つまり、「空の」オブジェクトを定義します）。
+- マップタイプには、文字列または整数のいずれかでマップ内に配置できる値を記述する additionalProperties.type フィールドを含める必要があります。
+- マルチエンティティのセグメント化は、マップキーに基づいてのみ定義でき、値に基づいて定義することはできません。
+- マップは、アカウントオーディエンスではサポートされていません。
+
+詳しくは、[ マップオブジェクトの使用制限 ](./ui/fields/map.md#restrictions) を参照してください。
+
+>[!NOTE]
+>
+>マルチレベル マップまたはマップのマップはサポートされていません。
+
+<!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
+
+<!-- ### How do I create a complex map object using APIs? -->
+
+<!-- You cannot create a complex map object. -->
+
+<!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+## スキーマIdentity Management
+
+この節では、スキーマ内の ID の定義と管理に関するよくある質問に対する回答を示します。
 
 ### スキーマの ID を定義するにはどうすればよいですか？
 
@@ -55,7 +103,7 @@ XDM システムと [!DNL Schema Registry] API の使用に関するよくある
 
 フィールドは、API またはユーザーインターフェイスを使用して ID としてマークできます。
 
-#### API で ID を定義
+### API で ID を定義
 
 API では、ID は ID 記述子を作成することで確立されます。ID 記述子は、スキーマの特定のプロパティが一意の ID であることを示します。
 
@@ -63,7 +111,7 @@ ID 記述子は、/descriptors エンドポイントへの POST リクエスト�
 
 API での ID 記述子の作成について詳しくは、[!DNL Schema Registry] 開発者ガイドの[記述子](api/descriptors.md)に関する節を参照してください。
 
-#### UI での ID の定義
+### UI での ID の定義
 
 スキーマエディターにスキーマを開いた状態で、ID としてマークするフィールドをエディターの「**[!UICONTROL 構造]**」セクションで選択します。右側の「**[!UICONTROL フィールドプロパティ]**」で、「**[!UICONTROL ID]**」チェックボックスをオンにします。
 
@@ -73,22 +121,49 @@ UI で ID を管理する方法について詳しくは、スキーマエディ�
 
 スキーマにはプライマリ ID がないか 1 つのみ存在できるので、プライマリ ID はオプションです。ただし、スキーマを [!DNL Real-Time Customer Profile] で使用できるようにするには、スキーマにプライマリ ID が必要です。詳しくは、スキーマエディターのチュートリアルの [ID](./tutorials/create-schema-ui.md#identity-field) に関する節を参照してください。
 
+## スキーマプロファイルの有効化
+
+この節では、リアルタイム顧客プロファイルでスキーマを使用できるようにする際のガイダンスを示します。
+
 ### [!DNL Real-Time Customer Profile] でスキーマを使用できるようにするにはどうすればよいですか？
 
 スキーマの `meta:immutableTags` 属性内に「union」タグを追加すれば、スキーマを [[!DNL Real-Time Customer Profile]](../profile/home.md) で使用できるようになります。スキーマを [!DNL Profile] で使用できるようにするには、API またはユーザーインターフェイスを使用します。
 
-#### API を使用して既存のスキーマを [!DNL Profile] に有効にする方法
+### API を使用して既存のスキーマを [!DNL Profile] に有効にする方法
 
 PATCH リクエストを作成して、スキーマを更新し、値「union」を含む配列として `meta:immutableTags` 属性を追加します。更新が成功すると、応答に更新されたスキーマが表示され、スキーマに和集合タグが含まれるようになります。
 
 API を使用して、スキーマを [!DNL Real-Time Customer Profile] で使用できるようにする方法について詳しくは、[!DNL Schema Registry] 開発者ガイドの[結合](./api/unions.md)に関するドキュメントを参照してください。
 
-#### UI を使用して既存のスキーマを [!DNL Profile] に有効にする方法
+### UI を使用して既存のスキーマを [!DNL Profile] に有効にする方法
 
 [!DNL Experience Platform] で、左側のナビゲーションにある「**[!UICONTROL スキーマ]**」を選択し、有効にするスキーマの名前をスキーマのリストから選択します。次に、エディターの右側の「**[!UICONTROL スキーマプロパティ]**」で、「**[!UICONTROL プロファイル]**」を選択してオンに切り替えます。
 
-
 詳しくは、[!UICONTROL スキーマエディター]のチュートリアルの[リアルタイム顧客プロファイルでの使用](./tutorials/create-schema-ui.md#profile)に関する節を参照してください。
+
+### Adobe Analytics データをソースとしてインポートした場合、自動作成されたスキーマはプロファイルに対して有効になっていますか？
+
+リアルタイム顧客プロファイルに対してスキーマは自動的には有効になりません。 プロファイルに対して有効になっているスキーマに基づいて、プロファイルのデータセットを明示的に有効にする必要があります。 [ リアルタイム顧客プロファイルで使用するデータセットを有効にするために必要な手順と要件 ](../catalog/datasets/user-guide.md#enable-profile) については、ドキュメントを参照してください。
+
+### プロファイルが有効なスキーマを削除できますか？
+
+リアルタイム顧客プロファイルに対して有効にした後は、スキーマを削除できません。 プロファイルに対してスキーマを有効にすると、そのスキーマを無効にしたり削除したりすることはできず、スキーマからフィールドを削除することもできません。 したがって、プロファイルに対して有効にする前に、スキーマ設定を慎重に計画および検証することが重要です。 ただし、プロファイルが有効になっているデータセットは削除できます。 情報については、次を参照してください：<https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+
+>[!IMPORTANT]
+>
+>プロファイルが有効なスキーマを削除するには、XDM プラットフォームサポートチームの支援が必要であり、次の手順に従う必要があります。
+>
+> 1. （プロファイルに対して有効になっている） スキーマに関連付けられたすべてのデータセットを削除します
+> 2. サンドボックスからプロファイル書き出しスナップショットを削除します（これには、XDM プラットフォームサポートチームの支援が必要です）
+> 3. サンドボックスからスキーマを強制的に削除（XDM プラットフォームサポートチームのみが実行できます）
+
+## スキーマの変更と制限
+
+この節では、スキーマ変更ルールと重大な変更の防止に関する説明を示します。
+
+### スキーマでは重大な変更の防止をどのような場合に開始しますか？
+
+データセットの作成に使用されていないか、[[!DNL Real-Time Customer Profile]](../profile/home.md) での使用が有効になっていない限り、スキーマに重大な変更を加えることができます。スキーマがデータセットの作成に使用されたり、[!DNL Real-Time Customer Profile] で使用できるようになったりすると、[スキーマ進化](schema/composition.md#evolution) のルールがシステムで厳密に適用されます。
 
 ### 和集合スキーマを直接編集できますか？
 
@@ -99,6 +174,10 @@ XDM での結合について詳しくは、[!DNL Schema Registry] API ガイド�
 ### スキーマにデータを取り込むには、データファイルをどのような形式にする必要がありますか？
 
 [!DNL Experience Platform] では、[!DNL Parquet] または JSON 形式のデータファイルを受け入れます。これらのファイルの内容は、データセットが参照するスキーマに準拠している必要があります。データファイル取得に関するベストプラクティスについて詳しくは、「[バッチ取得の概要](../ingestion/home.md)」を参照してください。
+
+### スキーマを読み取り専用スキーマに変換するにはどうすればよいですか？
+
+現在、スキーマを読み取り専用に変換することはできません。
 
 ## エラーとトラブルシューティング
 
@@ -127,14 +206,14 @@ XDM での結合について詳しくは、[!DNL Schema Registry] API ガイド�
 >
 >取得するリソースタイプに応じて、このエラーは次の `type` URI のいずれかを使用できます。
 >
->* `http://ns.adobe.com/aep/errors/XDM-1010-404`
->* `http://ns.adobe.com/aep/errors/XDM-1011-404`
->* `http://ns.adobe.com/aep/errors/XDM-1012-404`
->* `http://ns.adobe.com/aep/errors/XDM-1013-404`
->* `http://ns.adobe.com/aep/errors/XDM-1014-404`
->* `http://ns.adobe.com/aep/errors/XDM-1015-404`
->* `http://ns.adobe.com/aep/errors/XDM-1016-404`
->* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 API での参照パスの作成について詳しくは、[!DNL Schema Registry] 開発者ガイドの[コンテナ](./api/getting-started.md#container)および[リソースの識別](api/getting-started.md#resource-identification)の節を参照してください。
 
@@ -182,17 +261,17 @@ API での参照パスの作成について詳しくは、[!DNL Schema Registry]
 >
 >このエラーでは、名前空間エラーの固有の性質に応じて、次の `type` URI のいずれかを、異なるメッセージ詳細と共に使用できます。
 >
->* `http://ns.adobe.com/aep/errors/XDM-1020-400`
->* `http://ns.adobe.com/aep/errors/XDM-1021-400`
->* `http://ns.adobe.com/aep/errors/XDM-1022-400`
->* `http://ns.adobe.com/aep/errors/XDM-1023-400`
->* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 XDM リソースの適切なデータ構造の詳細な例については、スキーマレジストリ API ガイドを参照してください。
 
-* [カスタムクラスの作成](./api/classes.md#create)
-* [カスタムフィールドグループの作成](./api/field-groups.md#create)
-* [カスタムデータタイプの作成](./api/data-types.md#create)
+- [カスタムクラスの作成](./api/classes.md#create)
+- [カスタムフィールドグループの作成](./api/field-groups.md#create)
+- [カスタムデータタイプの作成](./api/data-types.md#create)
 
 ### Accept ヘッダーが無効です
 
@@ -219,10 +298,10 @@ XDM リソースの適切なデータ構造の詳細な例については、ス�
 >
 >このエラーでは、使用しているエンドポイントに応じて、次の `type` URI のいずれかを使用できます。
 >
->* `http://ns.adobe.com/aep/errors/XDM-1006-400`
->* `http://ns.adobe.com/aep/errors/XDM-1007-400`
->* `http://ns.adobe.com/aep/errors/XDM-1008-400`
->* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 様々な API リクエストに適合する Accept ヘッダーのリストについては、[スキーマレジストリ開発者ガイド](./api/overview.md)の対応する節を参照してください。
 
