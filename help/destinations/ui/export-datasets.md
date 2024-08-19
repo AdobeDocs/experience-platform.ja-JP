@@ -3,10 +3,10 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
 workflow-type: tm+mt
-source-wordcount: '1891'
-ht-degree: 47%
+source-wordcount: '1836'
+ht-degree: 48%
 
 ---
 
@@ -56,7 +56,7 @@ Experience PlatformAPI を使用してデータセットを書き出すことも
   <tr>
     <td>Customer Journey Analytics</td>
     <td>すべて</td>
-    <td> ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerからデータを取り込んだり収集した後、Experience PlatformUI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。 <br> <p> <b> 可用性に関するメモ：</b> データセットをクラウドに書き出す機能は、リリースの限定的テスト段階にあり、お使いの環境ではまだ使用できない可能性があります。 機能が一般入手可能になったら、このメモは削除されます。 Customer Journey Analyticsリリースプロセスについて詳しくは、Customer Journey Analytics機能リリース <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> 参照してください </a> </p> </td>
+    <td> ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerからデータを取り込んだり収集した後、Experience PlatformUI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -215,7 +215,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
    >[!NOTE]
    >
-   >この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
 
    ![右側のパネルに「データセットの削除」コントロールが表示されているデータセットを削除ダイアログ](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
