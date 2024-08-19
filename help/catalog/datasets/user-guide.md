@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータセットを操作する際に一般的なアクションを実行する方法について説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
+source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
-source-wordcount: '3111'
+source-wordcount: '3203'
 ht-degree: 14%
 
 ---
@@ -38,6 +38,22 @@ ht-degree: 14%
 >id="platform_datasets_browse_daysRemaining"
 >title="データセットの有効期限"
 >abstract="この列は、ターゲットデータセットが自動的に期限切れになるまでの残り日数を示します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="データレイク保持"
+>abstract="各データセットの現在の保持ポリシーを表示します。 この値は、各データセットの保持設定で変更できます。 ExperienceEvent データセットの保持時間のみを設定できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="プロファイル保持"
+>abstract="各データセットの現在の保持ポリシーを表示します。 この値は、各データセットの保持設定で変更できます。 ExperienceEvent データセットの保持時間のみを設定できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="データセット保持"
+>abstract="データレイクの保持では、データを保存する期間と、異なるサービスでいつ削除するかのルールを設定します。 これにより、規制へのコンプライアンス、ストレージ・コストの管理、データ品質の維持が保証されます。"
+
 
 [!DNL Experience Platform] UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択して、**[!UICONTROL データセット]** ダッシュボードを開きます。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが適用されるスキーマ、最新の取得実行のステータスなど）が表示されます。
 

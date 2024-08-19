@@ -4,9 +4,9 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
+source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
 workflow-type: tm+mt
-source-wordcount: '2429'
+source-wordcount: '2466'
 ht-degree: 8%
 
 ---
@@ -89,6 +89,10 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 ![ 製品と予測される使用状況列がハイライト表示された [!UICONTROL  ライセンス使用状況 ] [!UICONTROL  概要 ]。](../images/license-usage/product-predicted-usage.png)
 
 「概要」タブが表示されます。 [!UICONTROL  概要 ] タブと [!UICONTROL  詳細 ] タブで使用できる詳細な予測を使用して、情報に基づいた意思決定を確保し、効率的なライセンス使用を実現できます。
+
+>[!NOTE]
+>
+ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。
 
 ![ 予測された使用状況列がハイライト表示された Platform 製品の概要ビュー。](../images/license-usage/summary-predicted-usage.png)
 
