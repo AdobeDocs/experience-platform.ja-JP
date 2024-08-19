@@ -2,7 +2,7 @@
 title: Web SDK のファーストパーティデバイス ID
 description: Adobe Experience Platform Web SDK 用にファーストパーティデバイス ID （FPID）を設定する方法について説明します。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
+source-git-commit: b35a4316ca4ef82e545a7718f1b986f978003a0e
 workflow-type: tm+mt
 source-wordcount: '1990'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Adobe Experience Cloudとの連携方法について詳しくは、[ ファー�
 
 * サーバーサイドスクリプティング言語を使用した cookie の生成
 * サイトのサブドメインまたは他のエンドポイントに対する API リクエストに応答して cookie を設定します
-* CMS を使用した Cookie の生成
+* CMSを使用した cookie の生成
 * CDN を使用した cookie の生成
 
 >[!IMPORTANT]
@@ -153,7 +153,7 @@ Platform Edge Networkに FPID cookie の値を読み取らせることを選択�
       {
         "id": "123e4567-e89b-42d3-9456-426614174000",
         "authenticatedState": "ambiguous",
-        "primary": true
+        "primary": false
       }
     ],
     "EMAIL": [
