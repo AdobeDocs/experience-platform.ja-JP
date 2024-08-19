@@ -2,10 +2,10 @@
 title: context
 description: デバイス、環境、または場所のデータを自動的に収集します。
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 14%
+source-wordcount: '915'
+ht-degree: 13%
 
 ---
 
@@ -89,21 +89,25 @@ ht-degree: 14%
 | 環境 | データが収集された環境。 これは常に `browser` に設定されています。 | `xdm.implementationDetails.environment` | `browser` |
 
 
-### 高エントロピーのクライアントヒント
+### 高エントロピーのクライアントヒント {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>設定方法について詳しくは、[user agent client hints](../../use-cases/client-hints.md) に関するドキュメントを参照してください。
 
 `"highEntropyUserAgentHints"` キーワードは、ユーザーのデバイスに関する詳細情報を収集します。 このデータは、Adobeに送信されるリクエストの HTTP ヘッダーに含まれます。 Edge ネットワーク内にデータが到着すると、XDM オブジェクトは、それぞれの XDM パスを入力します。 `sendEvent` 呼び出しでそれぞれの XDM パスを設定すると、HTTP ヘッダー値よりも優先されます。
 
 [ データストリームの設定 ](/help/datastreams/configure.md) 時にデバイス検索を使用する場合は、デバイス検索値を優先してデータを消去できます。 一部のクライアントヒントフィールドとデバイス検索フィールドは、同じヒットに存在できません。
 
-| ディメンション | 説明 | HTTP ヘッダー | XDM パス | 値の例 |
+| プロパティ | 説明 | HTTP ヘッダー | XDM パス | 例 |
 | --- | --- | --- | --- | --- |
-| オペレーティングシステムのバージョン | オペレーティングシステムのバージョン。 | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| アーキテクチャ | 基盤となる CPU アーキテクチャ。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| デバイスモデル | 使用されるデバイスの名前。 | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| ビット数 | 基になる CPU アーキテクチャがサポートするビット数です。 | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| ブラウザーベンダー | ブラウザーを作成した会社。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 | `Sec-CH-UA-Full-Version-List` | | |
-| ブラウザー名 | 使用されるブラウザー。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| ブラウザーバージョン | ブラウザーの重要なバージョン。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 正確なブラウザーバージョンは自動的に収集されません。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| オペレーティングシステムのバージョン | オペレーティングシステムのバージョン。 | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| アーキテクチャ | 基盤となる CPU アーキテクチャ。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| デバイスモデル | 使用されるデバイスの名前。 | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| ビット数 | 基になる CPU アーキテクチャがサポートするビット数です。 | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| ブラウザーベンダー | ブラウザーを作成した会社。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
+| ブラウザー名 | 使用されるブラウザー。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| ブラウザーバージョン | ブラウザーの重要なバージョン。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 正確なブラウザーバージョンは自動的に収集されません。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 

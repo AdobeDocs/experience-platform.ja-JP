@@ -3,10 +3,10 @@ title: User agent client hints
 description: Web SDK におけるユーザーエージェントクライアントヒントの仕組みを説明します。 Client Hints は、web サイト所有者に、ユーザーエージェント文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。
 keywords: user-agent;client hints；文字列；user-agent string；低エントロピー；高エントロピー
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 3%
+source-wordcount: '1245'
+ht-degree: 4%
 
 ---
 
@@ -98,13 +98,16 @@ Web SDK では、低エントロピーのクライアントヒントがデフォ
 
 高エントロピーのクライアントヒントは、プラットフォームのバージョン、アーキテクチャ、モデル、ビット数（64 ビットまたは 32 ビットプラットフォーム）、完全なオペレーティングシステムバージョンなど、クライアントデバイスに関するより詳細な情報です。 この情報は、フィンガープリントに使用できる可能性があります。
 
-| HTTP ヘッダー | JavaScript | デフォルトでユーザーエージェントに含まれる | デフォルトで client hints に含まれる |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | ○ | × |
-| `Sec-CH-UA-Arc` | `architecture` | ○ | × |
-| `Sec-CH-UA-Model` | `model` | ○ | × |
-| `Sec-CH-UA-Bitness` | `Bitness` | ○ | × |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | ○ | × |
+| プロパティ | 説明 | HTTP ヘッダー | XDM パス | 例 | デフォルトでユーザーエージェントに含まれる | デフォルトで client hints に含まれる |
+| --- | --- | --- | --- | --- |---|---|
+| オペレーティングシステムのバージョン | オペレーティングシステムのバージョン。 | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | ○ | × |
+| アーキテクチャ | 基盤となる CPU アーキテクチャ。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | ○ | × |
+| デバイスモデル | 使用されるデバイスの名前。 | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | ○ | × |
+| ビット数 | 基になる CPU アーキテクチャがサポートするビット数です。 | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | ○ | × |
+| ブラウザーベンダー | ブラウザーを作成した会社。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | ○ | × |
+| ブラウザー名 | 使用されるブラウザー。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | ○ | × |
+| ブラウザーバージョン | ブラウザーの重要なバージョン。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 正確なブラウザーバージョンは自動的に収集されません。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | ○ | × |
+
 
 Web SDK では、高エントロピーのクライアントヒントは、デフォルトで無効になっています。 これを有効にするには、高エントロピーのクライアントヒントをリクエストするように Web SDK を手動で設定する必要があります。
 
