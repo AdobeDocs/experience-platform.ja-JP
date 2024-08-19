@@ -2,9 +2,9 @@
 title: ECID へのアクセス
 description: Data Prep または Tags からExperience CloudID にアクセスする方法を説明します
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
+source-git-commit: e53ae6053a4b00e7e75242b95496c6795953005a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '283'
 ht-degree: 3%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 3%
 [ データ収集のためのデータ準備 ](../../../../datastreams/data-prep.md) （推奨）またはタグを使用して、ECID にアクセスできます。
 
 ## データ準備を使用した ECID へのアクセス（推奨される方法） {#accessing-ecid-data-prep}
+
+このメソッドは、[ データ収集のためのデータ準備 ](../../../../datastreams/data-prep.md) を使用して、`ECID` ータのカスタムマッピングを設定します。
+
+この機能の使用方法については、[ データ収集のためのデータ準備 ](../../../../datastreams/data-prep.md) のドキュメントを参照してください。
 
 ECID をカスタム XDM フィールドに設定する場合、ID マップに含める以外に、`source` を次のパスに設定することでこれを実行できます。
 
