@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 55%
+ht-degree: 58%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 55%
 
 宛先へのオーディエンスをアクティブ化するには、正常に [ 宛先に接続 ](./connect-destination.md) されている必要があります。 まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
-## 書き出しでサポートされるファイル形式 {#supported-file-formats-export}
+## 書き出しでサポートされているファイル形式 {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
@@ -39,11 +39,11 @@ ht-degree: 55%
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="このデータフロー本文の終了日を更新"
->abstract="この宛先の最近の更新により、データフローには終了日が必要になりました。 Adobeでは、デフォルトの終了日を 2025 年 3 月 1 日（PT）に設定しています。 目的の終了日に更新してください。更新しない場合、データの書き出しはデフォルトの日付で停止します。"
+>abstract="この宛先が最近更新されたので、データフローには終了日が必要になりました。アドビでは、デフォルトの終了日を 2025年3月1日（PT）に設定しています。目的の終了日に更新してください。更新しない場合、データの書き出しがデフォルトの日付で停止します。"
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
->title="フォルダーパスを編集"
+>title="フォルダーパスの編集"
 >abstract="提供されている複数のマクロを使用して、データセットが書き出されるフォルダーパスをカスタマイズします。"
 
 >[!CONTEXTUALHELP]
