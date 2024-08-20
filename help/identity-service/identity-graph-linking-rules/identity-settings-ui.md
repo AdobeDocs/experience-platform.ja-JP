@@ -3,9 +3,9 @@ title: ID 設定 UI
 description: ID 設定ユーザーインターフェイスの使用方法を説明します。
 badge: ベータ版
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '515'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ ID 設定ページは、[!UICONTROL  ユーザー名前空間 ] および [!UICO
 
 ![ 選択され、一意として定義された 2 つの名前空間。](../images/rules/unique-namespace.png)
 
-一意の名前空間が確立されると、グラフは、一意の名前空間を含む複数の ID を持つことができなくなります。 例えば、CRM ID を一意の名前空間として指定した場合、CRM ID 名前空間を持つ ID は 1 つだけグラフに含めることができます。 詳しくは、[ID 最適化アルゴリズムの概要 ](./identity-optimization-algorithm.md#unique-namespace) を参照してください。
+一意の名前空間が確立されると、グラフは、一意の名前空間を含む複数の ID を持つことができなくなります。 例えば、CRMID を一意の名前空間として指定した場合、グラフは、CRMID 名前空間を持つ 1 つの ID のみを持つことができます。 詳しくは、[ID 最適化アルゴリズムの概要 ](./identity-optimization-algorithm.md#unique-namespace) を参照してください。
 
 設定が完了したら、「**[!UICONTROL 次へ]**」を選択します。 確認メッセージが表示されます。この機会に、設定が正しいことを確認し、「**[!UICONTROL 完了]**」を選択します。
 

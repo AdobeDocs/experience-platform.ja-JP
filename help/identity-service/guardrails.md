@@ -3,10 +3,10 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1591'
-ht-degree: 39%
+source-wordcount: '1585'
+ht-degree: 40%
 
 ---
 
@@ -92,7 +92,7 @@ ID サービスは、受信データを継続的に監視して、大規模で�
 
 実稼動サンドボックスに次の ID が含まれている場合は、Adobeアカウントチームに連絡して、ID タイプの変更をリクエストしてください。
 
-* ユーザー識別子（CRM ID など）が cookie/デバイス ID タイプとして設定されるカスタム名前空間。
+* ユーザー識別子（CRMID など）が cookie/デバイス ID タイプとして設定されるカスタム名前空間。
 * Cookie とデバイスの識別子がクロスデバイス ID タイプとして設定されるカスタム名前空間。
 
 この機能が使用可能になると、50 個の ID の制限を超えているグラフが最大 50 個の ID に縮小されます。 Real-Time CDP B2C Edition の場合、以前はセグメント化とアクティベーションでこれらのプロファイルが無視されていたので、これにより、オーディエンスに適合するプロファイルの数が最小限に増える可能性があります。
@@ -106,7 +106,7 @@ ID サービスは、受信データを継続的に監視して、大規模で�
 
 #### リアルタイムプライマリプロファイルと WebSDK：顧客 ID 削除
 
-CRM ID に対して認証済みイベントを保持する場合は、プライマリ ID を ECID から CRM ID に変更することをお勧めします。 この変更を実装する手順については、次のドキュメントを参照してください。
+CRMID に対して認証済みイベントを保持する場合は、プライマリ ID を ECID から CRMID に変更することをお勧めします。 この変更を実装する手順については、次のドキュメントを参照してください。
 
 * [Experience Platformタグ用に ID マップを設定します ](../tags/extensions/client/web-sdk/data-element-types.md#identity-map)。
 * [Experience PlatformWeb SDK の ID データ](../web-sdk/identity/overview.md#using-identitymap)
@@ -149,7 +149,7 @@ CRM ID に対して認証済みイベントを保持する場合は、プライ�
 
 >[!TAB  グラフ出力 ]
 
-ECID:35577 を削除した結果、CRM ID:60013 および CRM ID:25212 が削除された ECID:35577 にリンクされていたエッジも削除されます。 この削除プロセスにより、グラフが 2 つの小さなグラフに分割されます。
+ECID:35577 を削除した結果、削除された ECID:35577 で CRMID:60013 および CRMID:25212 をリンクしていたエッジも削除されます。 この削除プロセスにより、グラフが 2 つの小さなグラフに分割されます。
 
 ![](./images/guardrails/after-split.png)
 
@@ -176,7 +176,7 @@ ECID:35577 を削除した結果、CRM ID:60013 および CRM ID:25212 が削除
 
 その結果、ID サービスは ID グラフ（この場合は ECID:35577）からのみ最も古い ID を削除します。 ECID:35577 を削除すると、次も削除されます。
 
-* CRM ID:60013 と削除済みの ECID:35577 間のリンクなので、グラフ分割のシナリオが発生します。
+* CRMID:60013 と削除済みの ECID:35577 の間のリンクなので、グラフ分割シナリオが発生します。
 * IDFA:32110、IDFA:02383 および `(...)` で表される残りの ID。 これらの ID は、個別にリンクされていないので削除され、他の ID にリンクされないので、グラフで表すことができません。
 
 ![](./images/guardrails/hub-and-spoke-process.png)

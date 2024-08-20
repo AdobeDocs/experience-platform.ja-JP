@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ID サービストラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問への回答のほか、一般的なエラーのトラブルシューティングガイドを示します。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '2166'
-ht-degree: 100%
+source-wordcount: '2165'
+ht-degree: 99%
 
 ---
 
@@ -31,7 +31,7 @@ ID データは、個人を識別するために使用できる任意のデー�
 
 ## 既知 ID と匿名 ID とは
 
-既知の ID とは、個人の識別、個人への連絡または個人の所在の特定を行うために単独でまたは他の情報と共に使用できる ID 値を指します。既知の ID の例としては、メールアドレス、電話番号、CRM ID などがあります。
+既知の ID とは、個人の識別、個人への連絡または個人の所在の特定を行うために単独でまたは他の情報と共に使用できる ID 値を指します。既知の ID の例としては、メールアドレス、電話番号、CRMID などがあります。
 
 匿名 ID とは、個人の識別、個人への連絡または個人の所在の特定を行うために単独でまたは他の情報と共に使用することができない ID 値を指します（Cookie ID など）。
 

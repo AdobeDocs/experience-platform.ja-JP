@@ -2,10 +2,10 @@
 title: ID サービスでの削除
 description: このドキュメントでは、Experience Platform での ID データの削除や、ID グラフがどのような影響を受ける可能性があるかを明確にするために使用できる様々なメカニズムの概要を説明します。
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 97%
+source-wordcount: '1198'
+ht-degree: 95%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform ID サービスでは、個々のユーザーのすべ
 
 * [ID サービス](../home.md)：デバイスやシステム間で ID を橋渡しすることで、個々の顧客とその行動をより確実に把握することができます。
    * [ID グラフ](./identity-graph-viewer.md)：ID グラフは、特定の顧客の異なる ID 間の関係のマップで、顧客が様々なチャネルでブランドとどのようにやり取りするかを視覚的に表現します。
-   * [ID 名前空間](./namespaces.md)：ID 名前空間は ID サービスのコンポーネントで、ID の関連先コンテキストのインジケーターとして機能します。例えば、「name<span>@email.com」の値をメールアドレスとして識別したり、「443522」を数値 CRM ID として識別したりします。
+   * [ID 名前空間](./namespaces.md)：ID 名前空間は ID サービスのコンポーネントで、ID の関連先コンテキストのインジケーターとして機能します。例えば、「name<span>@email.com」の値をメールアドレスとして識別したり、「443522」を数値 CRMID として識別したりします。
 * [カタログサービス](../../catalog/home.md)：データレイク内のデータ系列、メタデータ、ファイル記述、ディレクトリおよびデータセットを調べます。
 * [データハイジーン](../../hygiene/home.md)：データセットの自動的な有効期限切れをスケジュールするか、1 つのデータセットまたはすべてのデータセットから個々のレコードを削除することで、保存されている消費者データを管理します。
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)：すべての Adobe Experience Cloud アプリケーションにわたって、顧客自身の個人データのアクセス、販売のオプトアウトまたは削除を求める顧客リクエストを管理します。

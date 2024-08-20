@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 用 ETL 統合の開発
 description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '3978'
-ht-degree: 100%
+source-wordcount: '3977'
+ht-degree: 99%
 
 ---
 
@@ -789,5 +789,5 @@ Adobe Experience Platform は、現在、遅延データを識別していませ
 | ---- | ------ | ----------- |
 | 2019-01-19 | データセットから「fields」プロパティを削除しました。 | データセットには、以前は、スキーマのコピーを含む「fields」プロパティが含まれていました。この機能は使用しないでください。「fields」プロパティが見つかった場合は無視し、「observedSchema」または「schemaRef」を代わりに使用する必要があります。 |
 | 2019/03/15（PT） | 「schemaRef」プロパティをデータセットに追加しました。 | データセットの「schemaRef」プロパティには、データセットの基となる XDM スキーマを参照する URI が含まれ、そのデータセットで使用できるすべての潜在的なフィールドを表します。 |
-| 2019/03/15（PT） | すべてのエンドユーザー識別子が「identityMap」プロパティにマップされます。 | 「identityMap」は、CRM ID、ECID、ロイヤリティプログラム ID など、主体のすべての一意の ID をカプセル化したものです。このマップは、[[!DNL Identity Service]](../identity-service/home.md) で使用され、サブジェクトの既知の ID と匿名 ID をすべて解決し、各エンドユーザーの ID グラフを 1 つ作成します。 |
+| 2019/03/15（PT） | すべてのエンドユーザー識別子が「identityMap」プロパティにマップされます。 | 「identityMap」は、CRMID、ECID、ロイヤルティプログラム ID など、サブジェクトのすべての一意の識別子をカプセル化したものです。 このマップは、[[!DNL Identity Service]](../identity-service/home.md) で使用され、サブジェクトの既知の ID と匿名 ID をすべて解決し、各エンドユーザーの ID グラフを 1 つ作成します。 |
 | 2019/05/30（PT） | データセットから「schema」プロパティを EOL と削除しました。 | データセットの「schema」プロパティは、[!DNL Catalog] API の廃止済み `/xdms` エンドポイントを使用して、スキーマへの参照リンクを提供しました。これは、スキーマの「id」、「version」、「contentType」を提供する「schemaRef」に置き換えられ、新しい [!DNL Schema Registry] API で参照されます。 |
