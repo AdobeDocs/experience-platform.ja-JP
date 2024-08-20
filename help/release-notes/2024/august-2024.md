@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
-source-git-commit: b586edb3f8fc866c2bc0f8c387740490173174a0
+source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 30%
+source-wordcount: '1028'
+ht-degree: 29%
 
 ---
 
@@ -12,10 +12,53 @@ ht-degree: 30%
 
 **リリース日：2024年8月20日（PT）**
 
+>[!TIP]
+>
+>[ サンプルユースケースの概要ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) を参照して、Real-Time CDPで実現できる見込み調査や獲得などの様々なユースケースについて確認します。
+
 Experience Platformの既存の機能およびドキュメントのアップデート：
 
+- [宛先](#destinations)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
+- [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+
+## 宛先 {#destinations}
+
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能または更新された機能** {#destinations-new-updated-functionality}
+
+| 機能 | 説明 |
+| ----------- | ----------- |
+| オンデマンドでのファイルのバッチ宛先への書き出しが利用できるようになりました。 | オンデマンドでファイルをバッチ宛先に書き出すオプションを、すべてのお客様が使用できるようになりました。 詳しくは、[ 専用ドキュメント ](../../destinations/ui/export-file-now.md) を参照してください。 |
+| [ スケジュール設定ステップ ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) で、書き出された複数のオーディエンスの書き出しスケジュールを編集します。 | Audience Activation ワークフローのスケジューリング手順から直接複数の書き出しオーディエンスの書き出しスケジュールを編集するオプションを、すべてのお客様が使用できるようになりました。 ![ スケジュール設定手順の「スケジュールを編集」オプションを強調表示したExperience Platformユーザーインターフェイスの画像。](assets/august/edit-schedule.png){width="250" align="center" zoomable="yes"} |
+| [ スケジュール設定手順 ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) で、書き出された複数のオーディエンスのファイル名を編集します。 | Audience Activation ワークフローのスケジューリング手順から直接書き出された複数のファイルの名前を編集するオプションが、すべてのお客様が使用できるようになりました。 ![ スケジュール設定手順の「ファイル名を編集」オプションを強調表示したExperience Platformユーザーインターフェイスの画像。](assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-remove) ページで、データフローから複数のオーディエンスを削除します。 | **[!UICONTROL 宛先の詳細]** ページの既存のデータフローから複数のオーディエンスを削除するオプションが、すべてのお客様が利用できるようになりました。 ![ 宛先の詳細ページの「オーディエンスを削除」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-export) ページから、オンデマンドで複数のファイルをバッチ宛先に書き出します。 | **[!UICONTROL 宛先の詳細]** ページからオンデマンドで複数のファイルをバッチ宛先に書き出すオプションを、すべてのお客様が使用できるようになりました。 ![ 宛先の詳細ページの「今すぐファイルを書き出す」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) ページから、書き出された複数のオーディエンスのファイル名を編集します。 | 書き出された複数のファイルの名前を **[!UICONTROL 宛先の詳細]** ページから直接編集できるようになりました。 ![ 宛先の詳細ページの「ファイル名を編集」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/export-datasets.md#remove-dataset) ページで、データフローから複数のデータセットを削除します。 | データフローから複数のデータセットを削除するオプションは、すべてのお客様が利用できるようになりました。 ![ 宛先の詳細ページで「データセットを削除」オプションを強調表示したExperience Platformユーザーインターフェイスの画像 ](assets/august/bulk-remove-datasets.png){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。
+
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| ML で支援されるスキーマ作成フロー | 高度な機械学習アルゴリズムを使用して、サンプルの CSV データファイルを分析し、標準フィールドとカスタムフィールドを使用して最適化されたスキーマを自動的に作成します。<br> 主な機能：<br><ul><li>スキーマの迅速な作成：ML 推奨および生成された XDM フィールドを使用して、サンプルデータファイルから直接スキーマを生成します。</li><li>柔軟なスキーマ進化：生成されたスキーマ内のフィールドを簡単に追加または更新します。</li><li>シームレスな統合：スキーマ Ul のコアスキーマ作成フローと完全に統合され、スムーズでまとまりのあるユーザーエクスペリエンスを確保します。</li><li>効率的なレビューと編集：フラットビューエディターを使用してスキーマをすばやく表示および更新し、作成プロセスをより効率的で使いやすくします。</li></ul> |
+
+{style="table-layout:auto"}
+
+<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
 ## ID サービス {#identity-service}
 
@@ -30,6 +73,20 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 {style="table-layout:auto"}
 
 ID サービスについて詳しくは、[ID サービスの概要](../../identity-service/home.md)を参照してください。
+
+## セグメント化サービス {#segmentation}
+
+[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 取り込みの詳細 | カスタムアップロードオリジンを使用したオーディエンスの場合、オーディエンスの取り込みの詳細をオーディエンスの詳細ページでより包括的に表示できます。 さらに、スキーマを選択し、ラベル設定に必要な属性を選択することで、ペイロード属性にラベルを適用できます。 取り込みの詳細の節について詳しくは、[ オーディエンスポータルガイド ](../../segmentation/ui/audience-portal.md#ingestion-details) を参照してください。 |
+
+{style="table-layout:auto"}
+
+[!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## ソース
 

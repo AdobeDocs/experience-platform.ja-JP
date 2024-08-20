@@ -1,123 +1,93 @@
 ---
-title: Adobe Experience Platform リリースノート 2024年7月
-description: Adobe Experience Platform の 2024年7月のリリースノート。
+title: Adobe Experience Platform リリースノート 2024年8月
+description: Adobe Experience Platform の 2024年8月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
+source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 23%
+source-wordcount: '1028'
+ht-degree: 29%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2024年7月30日（PT）**
+**リリース日：2024年8月20日（PT）**
 
-Adobe Experience Platform の新機能：
-
-- [!BADGE 限定提供（LA）]{type=Informative}[Federated Audience の構成 ](#federated-audience-composition)
+>[!TIP]
+>
+>[ サンプルユースケースの概要ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) を参照して、Real-Time CDPで実現できる見込み調査や獲得などの様々なユースケースについて確認します。
 
 Experience Platformの既存の機能およびドキュメントのアップデート：
 
-- [高度なデータ・ライフサイクル管理](#advanced-data-lifecycle-management)
-- [データ収集](#data-collection)
-- [データガバナンス](#data-governance)
 - [宛先](#destinations)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
+- [ID サービス](#identity-service)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
-- [統合タグ](#unified-tags)
-
-## 連合オーディエンス構成 {#federated-audience-composition}
-
-Federated Audience Composition を使用すると、企業はデータを作成して、様々なユースケースでより優れたアプリケーションを実現できます。 この新しいアプローチでは、Adobe Real-time Customer Data PlatformまたはAdobe Journey Optimizerのユーザーとして、既存の Data Warehouse からデータセットを直接統合して、Adobe Experience Platform オーディエンスと属性をすべて 1 つのシステムで作成および強化できます。
-
-詳しくは、[Federated Audience Composition ドキュメント ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home) を参照してください。
-
-## 高度なデータ・ライフサイクル管理 {#advanced-data-lifecycle-management}
-
-Experience Platformは、消費者レコードとデータセットをプログラムで削除することで、保存されたデータを管理できる、一連のデータハイジーン機能を提供します。 UI のデータライフサイクルワークスペース、または Data Hygiene API への呼び出しを使用して、データストアを効果的に管理できます。 これらの機能を使用して、情報が期待どおりに使用され、必要な場合は不適切なデータの修正が更新され、組織のポリシーで必要と判断された場合は削除されるようにします。
-
-**新しいドキュメント**
-
-| 新しいドキュメント | 説明 |
-| --- | --- |
-| [!DNL Data Hygiene API] 参照 | Data Hygiene API を使用して、Experience Platformのデータストアを効果的に管理します。 これらの機能を使用すると、情報が期待どおりに使用され、誤っている場合は更新され、組織のポリシーで必要と判断された場合は削除されるようになります。<br><br>API の使用方法について詳しくは、[Data Hygiene API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/) を参照してください。 Data Hygiene API を使用すると、データセットの有効期限をスケジュール設定したり、保存された顧客の個人データをプログラムで修正または削除したり、データハイジーンの割り当て量を確認したりできます。 API リファレンスドキュメントには、保存された顧客データを効率的に管理するのに役立つ、使用可能なエンドポイント、リクエストパラメーター、応答形式が含まれています。</br></br> |
-
-詳しくは、[ 高度なデータライフサイクル管理の概要 ](../../hygiene/home.md) を参照してください。
-
-## データ収集 {#data-collection}
-
-Adobe Experience Platformは、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Experience PlatformEdge Networkに送信します。そこでデータを強化、変換、AdobeまたはAdobe以外の宛先への配信を可能にする一連のテクノロジーを提供します。
-
-**新機能または更新された機能**
-
-| タイプ | 機能 | 説明 |
-| --- | --- | --- |
-| Web SDK | 提案インタラクションを自動的に追跡 | Web SDK の `autoTrackPropositionInteractionsEnabled` プロパティを使用して、Web SDK が提案インタラクションを自動的に収集する必要があるかどうかを決定できるようになりました。 詳しくは、[`autoTrackPropositionInteractionsEnabled`](../../web-sdk/commands/configure/autotrackpropositioninteractionsenabled.md) のドキュメントを参照してください。 |
-
-{style="table-layout:auto"}
-
-**新規ドキュメントまたは更新されたドキュメント**
-
-| 新規ドキュメントまたは更新されたドキュメント | 説明 |
-| --- | --- |
-| Reactor API についてドキュメント化された新しい API エンドポイント | 拡張機能パッケージの使用権限エンドポイントは、[Reactor API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/reactor/) に記載されています。 拡張機能の所有者は、これらのエンドポイントを使用して、拡張機能パッケージのパッケージ権限を追加、削除および取得できます。 |
-| 新しい拡張機能パッケージ使用権限エンドポイントドキュメント | 拡張機能パッケージの所有者が、Reactor API のパッケージの非公開バージョンの使用を他の会社に許可する方法の概要については、[ 拡張機能パッケージの使用権限エンドポイント ](/help/tags/api/endpoints/extension-package-usage-authorizations.md) ドキュメントを参照してください。 |
-| 新しい共有プライベート拡張機能ガイド | Reactor API の拡張機能パッケージ承認の作成、承認、削除の手順については、[ プライベート拡張機能の共有 ](/help/tags/api/guides/extension-packages.md) ドキュメントで説明しています。 |
-
-{style="table-layout:auto"}
-
-詳しくは、[ データ収集の概要 ](../../collection/home.md) を参照してください。
-
-## データガバナンス {#data-governance}
-
-Adobe Experience Platform データガバナンスは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。これは Experience Platform 内の様々なレベルで重要な役割を果たします。例えば、カタログ化、データ系列、データ使用のラベル付け、データアクセスポリシー、マーケティングアクションのデータに関するアクセス制御などです。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| mTLS サービス API | [mTLS サービス API](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/overview) は、データ交換のセキュリティを強化するように設計されています。 この API を使用して、組織のアプリケーション用にAdobeから発行された公開証明書を安全に取得します。 これらの証明書は、すべての通信が認証および暗号化されていることを保証し、証明書の信頼性を外部で検証するために使用できます。 組織のAdobeアプリケーション用の公開証明書を安全に取得する方法については、[ 公開証明書エンドポイントガイド ](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/public-certificate-endpoint) を参照してください。 |
-
-{style="table-layout:auto"}
-
-詳しくは、[ データガバナンスの概要 ](../../data-governance/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-**新しい宛先** {#new-destinations}
-
-| 宛先 | 説明 |
-| ----------- | ----------- |
-| [ （Beta） Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md) | [!DNL Merkury Enterprise Connections] の宛先を使用すると、オーディエンスを [!DNL Merkury] に安全に配信できます。 [!DNL Merkury] を使用すると、マーケターは、ユーザーベースのオーディエンスを簡単にマッチングして [!DNL Merkury] の 80 以上のプレミアムなアドレス指定可能な TV/CTV、パブリッシャー、アドテックの接続に配信できます。 [!DNL Merkury] は、2 億 6,800 万人以上の包括的な米国の成人消費者 ID グラフを活用しています。 |
-| [ （Beta） Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md) | [!DNL Merkury Enterprise Identity] の宛先を使用して、より正確で包括的なインサイトに満ちた消費者プロファイルを作成します。 プロファイルデータが改善されたことで、マーケターはより優れたインサイト、セグメントおよびモデルを強化でき、より正確なターゲティングと予測モデリングが可能になりました。 |
-
-{style="table-layout:auto"}
-
 **新機能または更新された機能** {#destinations-new-updated-functionality}
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| オーディエンスレベルのデータフロー監視 | オーディエンス別にグループ化されたデータフローの監視は、以前はバッチ（ファイルベース）宛先でのみ使用できました。 このリリース以降、[ （Beta）Google Customer Match + DV360 ストリーミング宛先についても ](/help/destinations/catalog/advertising/google-customer-match-dv360.md) オーディエンスレベルのモニタリングを使用できます。 [ オーディエンスレベルのモニタリング ](/help/dataflows/ui/monitor-destinations.md#segment-level-view) の詳細を確認し、ベータ版プログラムに参加してGoogle カスタマーマッチ + DV360 のAdobeを使用する場合は、宛先の担当者にお問い合わせください。 |
-| Destination SDK用のオーディエンスメタデータマクロでのエンリッチメント属性のサポート | 専用のマクロを使用して、[Destination SDKオーディエンスメタデータテンプレートのエンリッチメント属性 ](../../destinations/destination-sdk/functionality/audience-metadata-management.md) アクセスできるようになりました。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](../../destinations/destination-sdk/functionality/destination-configuration/schema-configuration.md#external-audiences) に対してのみ使用できます。 エンリッチメント属性の選択の仕組みについては、[ バッチオーディエンスアクティベーションガイド ](../../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) を参照してください。 詳しくは、オーディエンステンプレート [ マクロリスト ](../../destinations/destination-sdk/functionality/audience-metadata-management.md#macros) を参照してください。 |
+| オンデマンドでのファイルのバッチ宛先への書き出しが利用できるようになりました。 | オンデマンドでファイルをバッチ宛先に書き出すオプションを、すべてのお客様が使用できるようになりました。 詳しくは、[ 専用ドキュメント ](../../destinations/ui/export-file-now.md) を参照してください。 |
+| [ スケジュール設定ステップ ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) で、書き出された複数のオーディエンスの書き出しスケジュールを編集します。 | Audience Activation ワークフローのスケジューリング手順から直接複数の書き出しオーディエンスの書き出しスケジュールを編集するオプションを、すべてのお客様が使用できるようになりました。 ![ スケジュール設定手順の「スケジュールを編集」オプションを強調表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/edit-schedule.png){width="250" align="center" zoomable="yes"} |
+| [ スケジュール設定手順 ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) で、書き出された複数のオーディエンスのファイル名を編集します。 | Audience Activation ワークフローのスケジューリング手順から直接書き出された複数のファイルの名前を編集するオプションが、すべてのお客様が使用できるようになりました。 ![ スケジュール設定手順の「ファイル名を編集」オプションを強調表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-remove) ページで、データフローから複数のオーディエンスを削除します。 | **[!UICONTROL 宛先の詳細]** ページの既存のデータフローから複数のオーディエンスを削除するオプションが、すべてのお客様が利用できるようになりました。 ![ 宛先の詳細ページの「オーディエンスを削除」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-export) ページから、オンデマンドで複数のファイルをバッチ宛先に書き出します。 | **[!UICONTROL 宛先の詳細]** ページからオンデマンドで複数のファイルをバッチ宛先に書き出すオプションを、すべてのお客様が使用できるようになりました。 ![ 宛先の詳細ページの「今すぐファイルを書き出す」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) ページから、書き出された複数のオーディエンスのファイル名を編集します。 | 書き出された複数のファイルの名前を **[!UICONTROL 宛先の詳細]** ページから直接編集できるようになりました。 ![ 宛先の詳細ページの「ファイル名を編集」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/export-datasets.md#remove-dataset) ページで、データフローから複数のデータセットを削除します。 | データフローから複数のデータセットを削除するオプションは、すべてのお客様が利用できるようになりました。 ![ 宛先の詳細ページで「データセットを削除」オプションを強調表示したExperience Platformユーザーインターフェイスの画像 ](../2024/assets/august/bulk-remove-datasets.png){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
 詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。
 
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Adobe Experience Platform に取り込むデータの共通構造および定義（スキーマ）を提供するオープンソース仕様です。XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| ML で支援されるスキーマ作成フロー | 高度な機械学習アルゴリズムを使用して、サンプルの CSV データファイルを分析し、標準フィールドとカスタムフィールドを使用して最適化されたスキーマを自動的に作成します。<br> 主な機能：<br><ul><li>スキーマの迅速な作成：ML 推奨および生成された XDM フィールドを使用して、サンプルデータファイルから直接スキーマを生成します。</li><li>柔軟なスキーマ進化：生成されたスキーマ内のフィールドを簡単に追加または更新します。</li><li>シームレスな統合：スキーマ Ul のコアスキーマ作成フローと完全に統合され、スムーズでまとまりのあるユーザーエクスペリエンスを確保します。</li><li>効率的なレビューと編集：フラットビューエディターを使用してスキーマをすばやく表示および更新し、作成プロセスをより効率的で使いやすくします。</li></ul> |
+
+{style="table-layout:auto"}
+
+<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+
+Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+
+## ID サービス {#identity-service}
+
+Adobe Experience Platform ID サービスを使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある、パーソナライズされたデジタル体験をリアルタイムで提供できます。
+
+**ドキュメントの更新**
+
+| 機能 | 説明 |
+| --- | --- |
+| グラフ設定ガイド | ID グラフリンクルールおよび ID データを使用する際に発生する可能性のある一般的なグラフシナリオについて詳しくは、[ グラフ設定ガイド ](../../identity-service/identity-graph-linking-rules/example-configurations.md) を参照してください。 グラフ設定ガイドでは、単純な 1 人の人物によるグラフシナリオから、複雑で階層的な複数人のグラフのシナリオまで、様々な例を示しています。 また、このガイドを使用して、[ グラフシミュレーション UI](../../identity-service/identity-graph-linking-rules/graph-simulation.md) で入力できるイベントやアルゴリズム設定の例、および特定のグラフシナリオでプライマリ ID を選択する方法の分類を使用することもできます。 |
+
+{style="table-layout:auto"}
+
+ID サービスについて詳しくは、[ID サービスの概要](../../identity-service/home.md)を参照してください。
+
 ## セグメント化サービス {#segmentation}
 
 [!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
 
-**新しいドキュメント**
+**更新された機能**
 
-| 新しいドキュメント | 説明 |
-| ----------------- | ----------- | 
-| [ オーディエンスポータル ](../../segmentation/ui/audience-portal.md) | オーディエンスポータルを使用して、Adobe Experience Platform内のオーディエンスを一元的なハブで表示、管理、作成する方法について説明します。 |
+| 機能 | 説明 |
+| ------- | ----------- |
+| 取り込みの詳細 | カスタムアップロードオリジンを使用したオーディエンスの場合、オーディエンスの取り込みの詳細をオーディエンスの詳細ページでより包括的に表示できます。 さらに、スキーマを選択し、ラベル設定に必要な属性を選択することで、ペイロード属性にラベルを適用できます。 取り込みの詳細の節について詳しくは、[ オーディエンスポータルガイド ](../../segmentation/ui/audience-portal.md#ingestion-details) を参照してください。 |
 
 {style="table-layout:auto"}
+
+[!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## ソース
 
@@ -129,23 +99,8 @@ Experience Platformのソースを使用すると、Adobeアプリケーショ�
 
 | ドキュメントの更新 | 説明 |
 | --- | --- |
-| [[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md) の拡張認証ガイド | 認証用の [ アカウント識別子 ](../../sources/connectors/databases/snowflake.md#retrieve-your-private-key) と [ 秘密鍵 ](../../sources/connectors/databases/snowflake.md#retrieve-your-account-identifier) を取得する方法については、拡張認証ガイドを [!DNL Snowflake] 照してください。 さらに、[ ウェアハウスとロールの設定を検証 ](../../sources/connectors/databases/snowflake.md#verify-configurations) する手順については、拡張された認証ガイドを参照してください。 |
+| データフローの更新に関するドキュメントを拡張しました | [UI での既存のソースデータフローの更新 ](../../sources/tutorials/ui/update-dataflows.md) に関するガイドが更新され、既存のデータフローに対して実行できる様々な設定に関する詳細が追加されました。 このガイドも更新され、無効になったデータフローが再度有効になる場合の期待される動作が明確になりました。 |
 
 {style="table-layout:auto"}
 
 詳しくは、[ ソースの概要 ](../../sources/home.md) を参照してください。
-
-## 統合タグ
-
-統合タグを使用すると、Adobe Experience Platform内のビジネスオブジェクトを分類および管理できます。 統合タグ API を使用すると、フォルダーとタグの両方を作成して、オーディエンスやデータセットなどの Platform オブジェクトをより適切に整理できます。
-
-**新しいドキュメント**
-
-| 新しいドキュメント | 説明 |
-| ----------------- | ----------- |
-| [ 統合タグ API ガイド ](../../administrative-tags/api/overview.md) | ビジネスオブジェクトを並べ替えるためのフォルダーとタグの作成方法については、統合タグ API ガイドを参照してください。 |
-| [ 統合タグ API リファレンス ](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | 統合タグ API リファレンスを使用して、統合タグエンドポイントをインタラクティブに試します。 |
-
-{style="table-layout:auto"}
-
-詳しくは、[ 統合タグの概要 ](../../administrative-tags/overview.md) を参照してください。
