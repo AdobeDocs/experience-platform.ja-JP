@@ -2,10 +2,10 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3826'
-ht-degree: 63%
+source-wordcount: '4125'
+ht-degree: 59%
 
 ---
 
@@ -254,17 +254,39 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 
 「**[!UICONTROL プロパティを編集]**」を選択すると、名前、説明、タグなど、オーディエンスの基本的な詳細を編集できます。
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![ オーディエンスの詳細ページ内で「プロパティを編集」ボタンがハイライト表示されます。](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### オーディエンス合計 {#audience-total}
 
-「**[!UICONTROL オーディエンス合計]**」セクションには、オーディエンスに適合するプロファイルの合計数が表示されます。
+Platform で生成されたオーディエンスおよびコンポジションの場合、「オーディエンスの合計 **[!UICONTROL セクションには、オーディエンスに該当するプロファイルの合計数が表示されます]**。
 
 >[!NOTE]
 >
 >書き出しジョブが完了した後、オーディエンスの合計数が更新されるまで最大 30 分かかる場合があります。
 
 予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。プロファイルストアのエンティティ数が 100 万個未満の場合、完全なデータセットが使用されます。エンティティの数が 1～2,000 万の場合は 100 万のエンティティが使用され、2,000 万を超えるエンティティの場合は合計エンティティの 5% が使用されます。 予測値の生成について詳しくは、オーディエンスの作成に関するチュートリアルの[予測値の生成に関する節](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)を参照してください。
+
+### 取り込みの詳細 {#ingestion-details}
+
+接触チャネルが **[!UICONTROL カスタムアップロード]** のオーディエンスの場合、**[!UICONTROL 取り込みの詳細]** セクションには、プロファイル合計と、外部で生成されたオーディエンスが取り込まれたデータセットの詳細の両方が表示されます。
+
+![ オーディエンスの詳細ページの取り込みの詳細セクションが表示されます。](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| プロファイル数 | オーディエンスに適合するプロファイルの合計数。 |
+| データセット名 | オーディエンスが取り込まれたデータセットの名前。 データセット名を選択すると、データセットの詳細を確認できます。 データセットについて詳しくは、[ データセット UI ガイド ](../../catalog/datasets/user-guide.md) を参照してください。 |
+| データセットバッチ | オーディエンスが取り込まれたデータセットの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[ データ取り込みの監視ガイド ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
+| プロファイルバッチ | Platform でプロファイルを作成したバッチの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[ データ取り込みの監視ガイド ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
+| スキーマ | オーディエンスが属するスキーマの名前。 スキーマの名前を選択して、スキーマの構造に関する情報を表示し、データ使用ラベルを適用できます。 詳しくは、[ スキーマガイドのデータ使用ラベルの管理 ](../../xdm/tutorials/labels.md) を参照してください。 |
+| 取り込まれたレコード | データセットに取り込まれたレコードの数。 |
+| 失敗したレコード | データセットに取り込むことができなかったレコードの数。 |
+| 新しいプロファイルフラグメント | 作成された新しいプロファイルの数。 |
+| 既存のプロファイルフラグメント | 更新された既存のプロファイルの数。 |
+
+>[!NOTE]
+>
+>データ使用ラベルをスキーマに適用することが、ベストプラクティスです。 データ使用ラベルをオーディエンスに直接適用することはできま **ん**。
 
 ### アクティブ化された宛先 {#activated-destinations}
 
@@ -341,9 +363,9 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 
 ![セグメントビルダーワークスペースが表示されています。](../images/ui/audience-portal/segment-builder.png)
 
-### Federated Audience Composition {#fac}
+### 連合オーディエンス構成 {#fac}
 
-オーディエンスコンポジションとセグメント定義に加えて、AdobeFederated Audience コンポジションを使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [Federated Audience コンポジション ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home) に関するガイドを参照してください。
+オーディエンスコンポジションとセグメント定義に加えて、AdobeFederated Audience コンポジションを使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
 
 ![ 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
 
