@@ -2,9 +2,9 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
+source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
 workflow-type: tm+mt
-source-wordcount: '4125'
+source-wordcount: '4162'
 ht-degree: 59%
 
 ---
@@ -386,6 +386,10 @@ Platform で生成されたオーディエンスおよびコンポジション�
 >[!NOTE]
 >
 >外部生成オーディエンスは CSV 形式で、**最大** 25 列かつ 1 GB 未満にする&#x200B;**必要があります**。
+>
+>また、CSV の最初の行または関連する列には、スペースやダッシュを使用 **できません**。
+>
+>例えば、最初の行の値は「FirstName」または「First_Name」にすることができますが、「First Name」または「First-Name」にすることはできません。
 
 読み込む CSV ファイルを選択すると、この外部で生成されたオーディエンスのサンプルデータのリストが表示されます。サンプルデータが正しいことを確認したら、「**[!UICONTROL 次へ]**」を選択します。
 
