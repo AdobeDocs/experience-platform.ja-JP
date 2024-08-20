@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ取り込みの概要
 description: このドキュメントでは、データを Platform に取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 73%
+source-wordcount: '578'
+ht-degree: 66%
 
 ---
 
@@ -42,6 +42,12 @@ Adobe Experience Platform では、複数のソースからのデータを統合
 ソース接続は、他の Adobe アプリケーション（Adobe Analytics や Adobe Audience Manager など）、サードパーティのクラウドストレージソース（[!DNL Azure Blob]、[!DNL Amazon]、S3、FTP サーバー、SFTP サーバーなど）、サードパーティの CRM システム（[!DNL Microsoft Dynamics] や [!DNL Salesforce] など）からデータを収集するように設定できます。
 
 詳しくは、[ソースの概要](../sources/home.md)を参照してください。
+
+### ML 支援スキーマの作成 {#ml-assisted-schema-creation}
+
+新しいデータソースをすばやく統合するために、機械学習アルゴリズムを使用して、サンプルデータからスキーマを生成できるようになりました。 この自動化により、正確なスキーマの作成が簡素化され、エラーが減り、データ収集から分析およびインサイトに至るプロセスが迅速化されます。
+
+このワークフローについて詳しくは ](../xdm/ui/ml-assisted-schema-creation.md) [ML-ASSISTED schema creation guide」を参照してください。
 
 ## 次の手順とその他のリソース
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '3736'
+source-wordcount: '3861'
 ht-degree: 3%
 
 ---
@@ -29,13 +29,23 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->この節では、UI で新しいスキーマを手動で作成する方法について説明します。 CSV データを Platform に取り込む場合は、スキーマを手動で作成することなく、[ そのデータを AI 生成のレコメンデーションで作成された XDM スキーマにマッピング ](../../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）することを選択できます。
+>この節では、UI で新しいスキーマを手動で作成する方法について説明します。 CSV データを Platform に取り込む場合は、機械学習（ML）アルゴリズムを使用して **サンプル CSV データからスキーマを生成** できます。 このワークフローはデータ形式に一致し、CSV ファイルの構造と内容に基づいて新しいスキーマを自動的に作成します。 このワークフローについて詳しくは、[ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) を参照してください。
 
 [!UICONTROL  スキーマ ] ワークスペースで、右上隅の **[!UICONTROL スキーマを作成]** を選択します。
 
 ![ 「スキーマを作成 [!UICONTROL  がハイライト表示されたスキーマワークスペース ]](../../images/ui/resources/schemas/create-schema.png)
 
-[!UICONTROL  スキーマを作成 ] ワークフローが表示されます。 **[!UICONTROL 個人プロファイル]**、**[!UICONTROL エクスペリエンスイベント]**、または **[!UICONTROL その他]** を選択し、その後 **[!UICONTROL 次へ]** を選択することで、スキーマの基本クラスを選択できます。 これらのクラスについて詳しくは、[XDM 個人プロファイル ](../../classes/individual-profile.md) および [XDM ExperienceEvent](../../classes/experienceevent.md) のドキュメントを参照してください。
+[!UICONTROL  スキーマを作成 ] ダイアログが表示されます。 このダイアログでは、フィールドとフィールドグループを追加して手動でスキーマを作成するか、CSV ファイルをアップロードして ML アルゴリズムを使用してスキーマを生成するかを選択できます。 ダイアログからスキーマ作成ワークフローを選択します。
+
+![ ワークフローオプションと「選択」がハイライト表示されたスキーマを作成ダイアログ ](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### 手動または ML 支援によるスキーマ作成 {#manual-or-assisted}
+
+ML アルゴリズムを使用して、CSV ファイルに基づいてスキーマ構造をレコメンデーションする方法については、[ 機械学習を利用したスキーマ作成ガイド ](../ml-assisted-schema-creation.md) を参照してください。 この UI ガイドは、手動作成ワークフローを中心としています。
+
+### 手動でのスキーマ作成 {#manual-creation}
+
+[!UICONTROL  スキーマを作成 ] ワークフローが表示されます。 **[!UICONTROL 個人プロファイル]**、**[!UICONTROL エクスペリエンスイベント]**、または **[!UICONTROL その他]** を選択し、その後 **[!UICONTROL 次へ]** を選択することで、スキーマの基本クラスを選択できます。 これらのクラスについて詳しくは、[[!UICONTROL XDM 個人プロファイル ]](../../classes/individual-profile.md) および [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) のドキュメントを参照してください。
 
 ![3 つのクラスオプションと [!UICONTROL  次へ ] がハイライト表示された [!UICONTROL  スキーマを作成 ] ワークフロー ](../../images/ui/resources/schemas/schema-class-options.png)
 

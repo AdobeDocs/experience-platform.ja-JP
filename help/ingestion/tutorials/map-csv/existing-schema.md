@@ -5,10 +5,10 @@ title: 既存の XDM スキーマへの CSV ファイルのマッピング
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して、既存の XDM スキーマに CSV ファイルをマッピングする方法について説明します。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 100%
+source-wordcount: '1018'
+ht-degree: 92%
 
 ---
 
@@ -121,3 +121,7 @@ CSV ファイルがマッピングされ、作成されたら、CSV ファイル
 ## 次の手順
 
 このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、[!DNL Platform] に取り込むことができます。[!DNL Real-Time Customer Profile] などのダウンストリームの [!DNL Platform] サービスで、このデータを使用できるようになりました。詳しくは、[[!DNL Real-Time Customer Profile]](../../../profile/home.md) の概要を参照してください。
+
+>[!TIP]
+>
+>また、機械学習（ML）アルゴリズムを使用して、スキーマ ワークスペースから **サンプルデータからスキーマを生成** することもできます。 このワークフローは、ファイルの構造とコンテンツに基づいて新しいスキーマを自動的に作成し、スキーマがデータの形式と一致するようにします。 これにより、大規模で複雑なデータセットの構造、フィールド、データタイプを定義する際の時間が節約され、精度が向上します。 このワークフローについて詳しくは、[ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) を参照してください。

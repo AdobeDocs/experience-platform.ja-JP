@@ -2,10 +2,10 @@
 title: AI で生成されたRecommendationsを使用して、CSV ファイルを XDM スキーマにマッピングする
 description: このチュートリアルでは、AI で生成されたレコメンデーションを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 82%
+source-wordcount: '1172'
+ht-degree: 77%
 
 ---
 
@@ -101,3 +101,5 @@ ML モデルを使用すると、CSV フィールドは既存の XDM フィー�
 このガイドでは、AI によって生成されたレコメンデーションを使用して CSV ファイルを XDM スキーマにマッピングし、バッチ取得を使用してそのデータを Platform に取り込む方法について説明しました。
 
 CSV ファイルを既存のスキーマにマッピングする手順については、[既存のスキーママッピングワークフロー](./existing-schema.md)を参照してください。事前に作成されたソース接続を使用した、リアルタイムでの Platform へのデータストリーミングについて詳しくは、[ソースの概要](../../../sources/home.md)を参照してください。
+
+また、機械学習（ML）アルゴリズムを使用して **サンプル CSV データからスキーマを生成** することもできます。 このワークフローでは、CSV ファイルの構造とコンテンツに基づいて、新しいスキーマが自動的に作成されます。 この新しく作成されたスキーマがデータの形式に一致することで、大規模で複雑なデータセットの構造、フィールド、データタイプを定義する際に、時間を節約し、精度を高めることができます。 このワークフローについて詳しくは、[ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) を参照してください。

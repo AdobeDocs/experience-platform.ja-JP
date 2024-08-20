@@ -5,10 +5,10 @@ title: スキーマエディターを使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '4813'
-ht-degree: 80%
+source-wordcount: '4922'
+ht-degree: 78%
 
 ---
 
@@ -46,14 +46,23 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 ![[!UICONTROL  スキーマ ] ワークスペース [!UICONTROL  参照 ] タブ [!UICONTROL  スキーマを作成 ] がハイライト表示されています。](../images/tutorials/create-schema/create-schema-button.png)
 
+[!UICONTROL  スキーマを作成 ] ダイアログが表示されます。 このダイアログでは、フィールドとフィールドグループを追加して手動でスキーマを作成するか、CSV ファイルをアップロードして ML アルゴリズムを使用してスキーマを生成するかを選択できます。 ダイアログからスキーマ作成ワークフローを選択します。
+
+![ ワークフローオプションと「選択」がハイライト表示されたスキーマを作成ダイアログ ](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### 手動または ML 支援によるスキーマ作成 {#manual-or-assisted}
+
+ML アルゴリズムを使用して、アップロードされたファイルに基づいてスキーマ構造をレコメンデーションする方法については、[ 機械学習を利用したスキーマ作成ガイド ](../ui/ml-assisted-schema-creation.md) を参照してください。 この UI ガイドは、手動作成ワークフローを中心としています。
+
+### 基本クラスを選択 {#choose-a-class}
+
 [!UICONTROL  スキーマを作成 ] ワークフローが表示されます。 次に、スキーマの基本クラスを選択します。 [!UICONTROL XDM 個人プロファイル ] のコアクラスと [!UICONTROL XDM ExperienceEvent] の間で、または [!UICONTROL  その他 ] のクラスが目的に合わない場合は、これらのクラスを選択できます。 [!UICONTROL  その他 ] クラスオプションを使用すると、[ 新しいクラスを作成 ](#create-new-class) するか、他の既存のクラスから選択できます。
 
-これらのクラスについて詳しくは、[XDM 個人プロファイル ](../classes/individual-profile.md) および [XDM ExperienceEvent](../classes/experienceevent.md) のドキュメントを参照してください。 このチュートリアルでは、「**[!UICONTROL XDM 個人プロファイル]**」に続いて「**[!UICONTROL 次へ]**」を選択します。
-
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
+これらのクラスについて詳しくは、[[!UICONTROL XDM 個人プロファイル ]](../classes/individual-profile.md) および [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) のドキュメントを参照してください。 このチュートリアルでは、「**[!UICONTROL XDM 個人プロファイル]**」に続いて「**[!UICONTROL 次へ]**」を選択します。
 
 ![[!UICONTROL XDM 個人プロファイル ] オプションと [!UICONTROL  次へ ] がハイライト表示された [!UICONTROL  スキーマを作成 ] ワークフロー ](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+### 名前とレビュー {#name-and-review}
 
 クラスを選択すると、「名前とレビュー [!UICONTROL  セクションが表示され ] す。 このセクションでは、スキーマを識別するための名前と説明を指定します。 スキーマの名前を決定する際に考慮すべき重要な点がいくつかあります。
 
@@ -68,6 +77,8 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 テキストフィールドに、人間にとってわかりやすい [!UICONTROL  スキーマ表示名 ] を入力します。 次に、スキーマの識別に役立つ適切な説明を入力します。 スキーマ構造をレビューし、設定に満足したら、「**[!UICONTROL 完了]**」を選択してスキーマを作成します。
 
 ![[!UICONTROL  スキーマ表示名 ]、[!UICONTROL  説明 ]、および [!UICONTROL  完了 ] がハイライト表示された [!UICONTROL  スキーマを作成 ] ワークフローの [!UICONTROL  名前とレビュー ] セクション ](../images/ui/resources/schemas/name-and-review.png)
+
+### スキーマの作成 {#compose-your-schema}
 
 [!DNL Schema Editor] が表示されます。これは、スキーマを作成するキャンバスです。エディターを開くと、選択した基本クラスに含まれている標準フィールドと共に、自己名のスキーマがキャンバスの **[!UICONTROL 構造]** セクションに自動的に作成されます。 スキーマに割り当てられたクラスは、「**[!UICONTROL 構成]**」セクションの「**[!UICONTROL クラス]**」にもリストされています。
 
