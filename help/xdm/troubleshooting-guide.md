@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM システムトラブルシューティングガイド
 description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル（XDM）に関するよくある質問への回答を示します。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
+source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
 workflow-type: tm+mt
-source-wordcount: '2446'
-ht-degree: 79%
+source-wordcount: '2390'
+ht-degree: 81%
 
 ---
 
@@ -49,7 +49,7 @@ XDM システムと [!DNL Schema Registry] API の使用に関するよくある
 
 フィールドタイプについて詳しくは、[XDM フィールドタイプの制約](./schema/field-constraints.md)に関するドキュメントを参照してください。
 
-### meta:AltId とは何ですか？また、どのように取得すればよいですか？
+### meta:AltId とは
 
 `meta:altId` は、スキーマの一意の ID です。 `meta:altId` は、API 呼び出しで使用する参照しやすい ID を提供します。 この ID を使用すると、JSON URI 形式と同様に使用するたびにエンコード/デコードする必要がなくなります。
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -58,13 +58,6 @@ XDM システムと [!DNL Schema Registry] API の使用に関するよくある
 
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
-
-### データタイプを作成するためのサンプル JSON 表現を取得できますか？
-
-スキーマレジストリ API と Platform UI の両方を使用して、データタイプを作成できます。 次の方法の手順については、ドキュメントを参照してください。
-
-- [API を使用したデータタイプの作成](./api/data-types.md#create)
-- [UI を使用したデータタイプの作成](./ui/resources/data-types.md#create)
 
 ### マップデータタイプの使用制限は何ですか。
 
