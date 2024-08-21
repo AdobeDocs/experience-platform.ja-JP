@@ -2,9 +2,9 @@
 title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
+source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1451'
 ht-degree: 74%
 
 ---
@@ -16,6 +16,14 @@ ht-degree: 74%
 >[!NOTE]
 >
 >[AppMeasurementのJavaScript ライブラリ ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) の更新に対応して Analytics タグ拡張機能が頻繁に更新される場合。 以下に説明する具体的なバージョンについて詳しくは ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)[AppMeasurementのリリースノート } を参照してください。
+
+## 2024 年 8 月 12 日（Pt）
+
+**Adobe Analytics Extension 1.9.5**
+
+**機能**:
+
+* [AppMeasurementに v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0) にアップグレードしました。
 
 ## 2024 年 3 月 4 日（Pt）
 
