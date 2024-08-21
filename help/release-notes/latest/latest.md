@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
-source-git-commit: cbfbac0ad2e43424b22a283d1a2f55bdcb11159b
+source-git-commit: 67152524c9448ad1c6cd1f25437e5ed69900ef84
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 27%
+source-wordcount: '1300'
+ht-degree: 29%
 
 ---
 
@@ -18,11 +18,28 @@ ht-degree: 27%
 
 Experience Platformの既存の機能およびドキュメントのアップデート：
 
+- [属性ベースのアクセス制御](#abac)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+
+## 属性ベースのアクセス制御 {#abac}
+
+属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platformの機能です。 ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
+
+属性ベースのアクセス制御により、組織の管理者は、すべての Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、およびその他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+
+**新機能**
+
+| 機能の更新 | 説明 |
+| --- | --- |
+| 権限マネージャーの新機能 | [ 権限マネージャー ](../../access-control/abac/permission-manager/overview.md) を使用して、簡単なクエリでレポートを生成できるようになりました。これにより、アクセス管理を理解し、複数のワークフローと精度レベルでアクセス権限を確認する時間を節約できます。 ユーザーおよびロールのレポート作成の詳細については、「[ 権限マネージャーユーザーガイド ](../../access-control/abac/permission-manager/permissions.md)」を参照してください。 ![ 左側のナビゲーションで Permission Manager をハイライト表示した画像Experience Platformーユーザーインターフェイス。](../2024/assets/august/permission-manager-rn.png " ユーザーインターフェイスの権限マネージャー。"){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。属性ベースのアクセス制御ワークフローの包括的なガイドについては、[属性ベースのアクセス制御エンドツーエンドガイド](../../access-control/abac/end-to-end-guide.md)を参照してください。
 
 ## 宛先 {#destinations}
 
