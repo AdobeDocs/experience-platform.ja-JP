@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d6eb2050cdc3d51cf8ff4189c6b9f78469f14fa9
+source-git-commit: 019d950e992e6e1ea3264fbc1f141a8bb6bc357a
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 29%
@@ -34,11 +34,11 @@ Experience Platformの既存の機能およびドキュメントのアップデ�
 | 機能 | 説明 |
 | ----------- | ----------- |
 | オンデマンドでのファイルのバッチ宛先への書き出しが利用できるようになりました。 | オンデマンドでファイルをバッチ宛先に書き出すオプションを、すべてのお客様が使用できるようになりました。 詳しくは、[ 専用ドキュメント ](../../destinations/ui/export-file-now.md) を参照してください。 |
-| [ スケジュール設定ステップ ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) で、書き出された複数のオーディエンスの書き出しスケジュールを編集します。 | Audience Activation ワークフローのスケジューリング手順から直接複数の書き出しオーディエンスの書き出しスケジュールを編集するオプションを、すべてのお客様が使用できるようになりました。 ![ スケジュール設定手順の「スケジュールを編集」オプションを強調表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/edit-schedule.png){width="250" align="center" zoomable="yes"} |
-| [ スケジュール設定手順 ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) で、書き出された複数のオーディエンスのファイル名を編集します。 | Audience Activation ワークフローのスケジューリング手順から直接書き出された複数のファイルの名前を編集するオプションが、すべてのお客様が使用できるようになりました。 ![ スケジュール設定手順の「ファイル名を編集」オプションを強調表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
-| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-remove) ページで、データフローから複数のオーディエンスを削除します。 | **[!UICONTROL 宛先の詳細]** ページの既存のデータフローから複数のオーディエンスを削除するオプションが、すべてのお客様が利用できるようになりました。 ![ 宛先の詳細ページの「オーディエンスを削除」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
-| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-export) ページから、オンデマンドで複数のファイルをバッチ宛先に書き出します。 | **[!UICONTROL 宛先の詳細]** ページからオンデマンドで複数のファイルをバッチ宛先に書き出すオプションを、すべてのお客様が使用できるようになりました。 ![ 宛先の詳細ページの「今すぐファイルを書き出す」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
-| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) ページから、書き出された複数のオーディエンスのファイル名を編集します。 | 書き出された複数のファイルの名前を **[!UICONTROL 宛先の詳細]** ページから直接編集できるようになりました。 ![ 宛先の詳細ページの「ファイル名を編集」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| [ スケジュール設定ステップ ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) で、書き出された複数のオーディエンスの書き出しスケジュールを編集します。 | Audience Activation ワークフローのスケジューリング手順から直接複数の書き出しオーディエンスの書き出しスケジュールを編集するオプションを、すべてのお客様が使用できるようになりました。 ![ スケジュール設定手順で「スケジュールを編集」オプションを強調表示したExperience Platformユーザーインターフェイスの画像 ](../2024/assets/august/edit-schedule.png){width="250" align="center" zoomable="yes"} |
+| [ スケジュール設定手順 ](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) で、書き出された複数のオーディエンスのファイル名を編集します。 | Audience Activation ワークフローのスケジューリング手順から直接書き出された複数のファイルの名前を編集するオプションが、すべてのお客様が使用できるようになりました。 ![ スケジュール設定手順で「ファイル名を編集」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/edit-file-name.png){width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-remove) ページで、データフローから複数のオーディエンスを削除します。 | **[!UICONTROL 宛先の詳細]** ページの既存のデータフローから複数のオーディエンスを削除するオプションが、すべてのお客様が利用できるようになりました。 ![ 宛先の詳細ページの「オーディエンスを削除」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/bulk-remove-audiences.png){width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-export) ページから、オンデマンドで複数のファイルをバッチ宛先に書き出します。 | **[!UICONTROL 宛先の詳細]** ページからオンデマンドで複数のファイルをバッチ宛先に書き出すオプションを、すべてのお客様が使用できるようになりました。 ![ 宛先の詳細ページの「今すぐファイルを書き出す」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/bulk-export-file-now.png){width="250" align="center" zoomable="yes"} |
+| [ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) ページから、書き出された複数のオーディエンスのファイル名を編集します。 | 書き出された複数のファイルの名前を **[!UICONTROL 宛先の詳細]** ページから直接編集できるようになりました。 ![ 宛先の詳細ページの「ファイル名を編集」オプションをハイライト表示したExperience Platformユーザーインターフェイスの画像。](../2024/assets/august/edit-file-name-destination-details.png){width="250" align="center" zoomable="yes"} |
 | [ 宛先の詳細 ](../../destinations/ui/export-datasets.md#remove-dataset) ページで、データフローから複数のデータセットを削除します。 | データフローから複数のデータセットを削除するオプションは、すべてのお客様が利用できるようになりました。 ![ 宛先の詳細ページで「データセットを削除」オプションを強調表示したExperience Platformユーザーインターフェイスの画像 ](../2024/assets/august/bulk-remove-datasets.png){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
