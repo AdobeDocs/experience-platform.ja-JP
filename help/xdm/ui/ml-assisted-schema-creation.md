@@ -1,14 +1,19 @@
 ---
 title: 機械学習によるスキーマ作成
 description: Experience Platformユーザーインターフェイスでスキーマを作成する方法を説明します。
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="ベータ版" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
 # 機械学習によるスキーマ作成
+
+>[!AVAILABILITY]
+>
+>* 機械学習によるスキーマ作成は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ML アルゴリズムを使用して、サンプルデータからスキーマを生成します。 このプロセスにより、大規模で複雑なデータセットの構造、フィールド、データタイプを定義する際の時間が節約され、精度が向上します。
 

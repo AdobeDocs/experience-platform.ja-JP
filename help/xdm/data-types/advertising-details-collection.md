@@ -2,7 +2,7 @@
 title: Advertisingの詳細コレクションのデータタイプ
 description: Advertising詳細収集エクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 14%
@@ -22,7 +22,7 @@ ht-degree: 14%
 >各表示名には、オーディオおよびビデオパラメーターに関する詳細情報へのリンクが含まれています。 リンク先のページには、Adobeで収集された動画広告データの詳細、実装値、ネットワークパラメーター、レポート、重要な検討事項が含まれています。
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
 | [[!UICONTROL  広告主 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | 文字列 | × | 広告で商品が取り上げられる会社またはブランド。 |
 | [[!UICONTROL  広告キャンペーン ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | 文字列 | × | 広告キャンペーンの ID。 |
 | [[!UICONTROL  広告クリエイティブ ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | 文字列 | × | 広告クリエイティブの ID。 |
@@ -33,3 +33,5 @@ ht-degree: 14%
 | [[!UICONTROL  広告プレースメント ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | 文字列 | × | 広告のプレースメント ID。 |
 | [[!UICONTROL  広告プレーヤー名 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | 文字列 | ○ | 広告のレンダリングを担当するプレイヤーの名前。 |
 | [[!UICONTROL  広告サイト ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | 文字列 | × | 広告サイトの ID。 |
+
+{style="table-layout:auto"}

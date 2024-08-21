@@ -2,10 +2,10 @@
 title: セッションの詳細コレクション データ タイプ
 description: セッション詳細収集エクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 15%
+source-wordcount: '857'
+ht-degree: 16%
 
 ---
 
@@ -31,9 +31,8 @@ ht-degree: 15%
 | [[!UICONTROL  放送コンテンツの種類 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | 文字列 | ○ | ストリーム配信の [!UICONTROL  ブロードキャストコンテンツタイプ ]。 [!UICONTROL  ストリームタイプ ] ごとに使用できる値は次のとおりです。<br> オーディオ：&quot;song&quot;、&quot;podcast&quot;、&quot;audiobook&quot;、および&quot;radio&quot;;<br> ビデオ：&quot;VoD&quot;、&quot;Live&quot;、&quot;Linear&quot;、&quot;UGC&quot;、および&quot;DVoD&quot;。<br> お客様は、このパラメーターにカスタム値を指定できます。 |
 | [[!UICONTROL  放送ネットワーク ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | 文字列 | × | ネットワーク/チャネル名。 |
 | [[!UICONTROL  コンテンツチャネル ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | 文字列 | ○ | [!UICONTROL  コンテンツチャネル ] は、コンテンツの再生元となる配信チャネルです。 |
-| [[!UICONTROL  コンテンツ完了 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | ブール値 | × | [!UICONTROL  コンテンツ完了 ] タイムドメディアアセットが最後まで視聴されたかどうかを示します。 このイベントは、視聴者がビデオ全体を視聴したことを必ずしも意味するものではなく、視聴者が先にスキップした可能性があります。 |
 | [!UICONTROL  コンテンツ配信ネットワーク ] | `cdn` | 文字列 | × | 再生されるコンテンツの [!UICONTROL  コンテンツ配信ネットワーク ]。 |
-| [[!UICONTROL  コンテンツ ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | 文字列 | ○ | [!UICONTROL  コンテンツ ID] は、コンテンツの一意の識別子です。 他の業界や CMS ID へのリンクに使用できます。 |
+| [[!UICONTROL  コンテンツ ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | 文字列 | ○ | [!UICONTROL  コンテンツ ID] は、コンテンツの一意の識別子です。 他の業界 ID やCMS ID へのリンクに使用できます。 |
 | [[!UICONTROL  コンテンツ名 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | 文字列 | × | [!UICONTROL  コンテンツ名 ] は、コンテンツの「わかりやすい」（人間が読み取れる）名前です。 |
 | [[!UICONTROL  コンテンツプレーヤー名 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-player-name) | `playerName` | 文字列 | ○ | コンテンツプレイヤーの名前。 |
 | [[!UICONTROL  作成者名 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#originator) | `originator` | 文字列 | × | コンテンツ作成者の名前。 |
@@ -45,7 +44,6 @@ ht-degree: 15%
 | [[!UICONTROL  ジャンル ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | 文字列 | × | コンテンツプロデューサーによって定義されたコンテンツのタイプまたはグループ。 値は、変数の実装でコンマで区切る必要があります。 |
 | [[!UICONTROL  メディア承認済み ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | 文字列 | × | ユーザーがAdobe認証によって認証されているかどうかを確認します。 |
 | [[!UICONTROL  メディアコンテンツの長さ ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | 整数 | ○ | [!UICONTROL  メディアコンテンツ長 ] には、クリップの長さ/ランタイムが含まれます。これは、消費されるコンテンツの最大長（またはデュレーション）です（秒単位）。 |
-| [[!UICONTROL  メディア開始 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | ブール値 | × | メディアの読み込みイベント。 この問題は、ビューアが再生ボタンを選択したときに発生します。 これは、プリロール広告、バッファリング、エラーなどが発生した場合でもカウントされます。 |
 | [[!UICONTROL MVPD 識別子 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | 文字列 | × | Adobe認証で提供された Multi-channel Video Programming Distributor （MVPD）識別子。 |
 | [[!UICONTROL  発行者 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | 文字列 | × | オーディオコンテンツパブリッシャーの名前。 |
 | [[!UICONTROL  無線局 ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | 文字列 | × | オーディオが再生されるラジオ局名。 |
@@ -60,10 +58,3 @@ ht-degree: 15%
 | [[!UICONTROL  バージョン ]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | 文字列 | × | プレーヤーが使用する SDK のバージョン。 これには、プレーヤーにとって意味のあるカスタム値を含めることができます。 |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

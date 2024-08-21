@@ -2,7 +2,7 @@
 title: Advertising ポッドの詳細コレクションのデータタイプ
 description: Advertising ポッドの詳細コレクション Experience Data Model （XDM）データタイプについて説明します。
 exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 8%
@@ -16,7 +16,9 @@ ht-degree: 8%
 ![Advertising Pod Details Information Collection データタイプの図。](../images/data-types/advertising-pod-details-collection.png)
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
-|-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|
+|-----------------------------------------|-----------------|-----------|----------|---------------------------------------------------------|
 | [!UICONTROL  ポッド位置の広告 ] | `index` | 整数 | ○ | 親広告の改ページ内の広告のインデックスが開始されます。 |
 | [!UICONTROL  ポッドのわかりやすい名前 ] | `friendlyName` | 文字列 | × | 広告ブレークのわかりやすい名前。 |
 | [!UICONTROL  ポッド オフセット ] | `offset` | 整数 | ○ | コンテンツ内の広告ブレークのオフセット （秒単位）。 |
+
+{style="table-layout:auto"}
