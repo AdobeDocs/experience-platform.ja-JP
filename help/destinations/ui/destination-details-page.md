@@ -3,9 +3,9 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたオーディエンス、アクティブ化を編集したり、データフローを有効または無効にしたりするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1286'
 ht-degree: 8%
 
 ---
@@ -144,11 +144,7 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
 ![ 「オーディエンスを削除」オプションを強調表示したアクティベーションデータ画面 ](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} 複数のファイルをオンデマンドでバッチ宛先にエクスポートする {#bulk-export}
-
->[!NOTE]
->
-この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+### オンデマンドでの複数ファイルのバッチ宛先への書き出し {#bulk-export}
 
 [ アクティベーションデータ ](../ui/export-file-now.md) ページから **[!UICONTROL オンデマンドで複数のファイルを書き出す]** ことができます。 これを行うには、オンデマンドでファイルを書き出すオーディエンスを選択し、「**[!UICONTROL ファイルを今すぐ書き出し]**」コントロールを選択して、1 回限りの書き出しをトリガーにします。これにより、選択した各オーディエンスのファイルがバッチ宛先に配信されます。
 
@@ -162,7 +158,7 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
 >[!NOTE]
 >
-オーディエンスの詳細ページの詳細については、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md#segment-details) を参照してください。
+>オーディエンスの詳細ページの詳細については、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md#segment-details) を参照してください。
 
 ### バッチ宛先に書き出された複数のオーディエンスのファイル名を編集します {#bulk-edit-file-names}
 

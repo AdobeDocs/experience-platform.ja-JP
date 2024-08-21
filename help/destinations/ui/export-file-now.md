@@ -3,20 +3,15 @@ title: Experience Platform UI を使用した、オンデマンドによるバ�
 type: Tutorial
 description: Experience PlatformUI を使用して、オンデマンドでファイルをバッチ宛先に書き出す方法を説明します。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 17%
+source-wordcount: '690'
+ht-degree: 16%
 
 ---
 
 
 # Experience Platform UI を使用した、オンデマンドによるバッチ宛先へのファイルの書き出し
-
->[!IMPORTANT]
->
->Adobe Experience Platformの **[!UICONTROL ファイルを今すぐ書き出す]** オプションは、現在Betaにあります。 ドキュメントと機能は変更される場合があります。
->この機能に対するアクセス権については、アドビ担当者にお問い合わせください。
 
 >[!IMPORTANT]
 > 
