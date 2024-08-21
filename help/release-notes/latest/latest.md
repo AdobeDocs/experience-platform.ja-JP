@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
-source-git-commit: f3004071f7e023cc3ddc8b5a4c8fefd5636fd9a8
+source-git-commit: cbfbac0ad2e43424b22a283d1a2f55bdcb11159b
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 27%
@@ -28,7 +28,7 @@ Experience Platformの既存の機能およびドキュメントのアップデ�
 
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-**新機能または更新された機能** {#destinations-new-updated-functionality}
+**新機能または更新された機能**
 
 | 機能 | 説明 |
 | ----------- | ----------- |
