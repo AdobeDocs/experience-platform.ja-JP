@@ -3,10 +3,10 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 48%
+source-wordcount: '1814'
+ht-degree: 49%
 
 ---
 
@@ -211,10 +211,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
    ![アクティベーションデータ列で強調表示されている使用可能なデータセットナビゲーションオプション](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. [!BADGE Beta] 宛先の **[!UICONTROL アクティベーションデータ]** ページが表示されます。 データセットリストの左側にあるチェックボックスを使用して削除するデータセットを選択し、右側のパネルで「**[!UICONTROL データセットを削除]**」を選択してデータセット削除の確認ダイアログをトリガーします。
-
-   >[!NOTE]
-   >この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+3. 宛先の&#x200B;**[!UICONTROL アクティベーションデータ]**&#x200B;ページが表示されます。 データセットリストの左側にあるチェックボックスを使用して削除するデータセットを選択し、右側のパネルで「**[!UICONTROL データセットを削除]**」を選択してデータセット削除の確認ダイアログをトリガーします。
 
    ![右側のパネルに「データセットの削除」コントロールが表示されているデータセットを削除ダイアログ](../assets/ui/export-datasets/bulk-remove-datasets.png)
 

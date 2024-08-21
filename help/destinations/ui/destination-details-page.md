@@ -3,10 +3,10 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたオーディエンス、アクティブ化を編集したり、データフローを有効または無効にしたりするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 9%
+source-wordcount: '1310'
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
    ![ 宛先の参照 ](../assets/ui/details-page/browse-destinations.png)
 
-2. 左上のフィルターアイコン ![フィルターアイコン](/help/images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
+2. 左上のフィルターアイコン ![フィルターアイコン](../../images/icons/filter.png) を選択して、並べ替えパネルを開きます。並べ替えパネルには、すべての宛先のリストが表示されます。 リストから複数の宛先を選択して、選択した宛先に関連付けられた特定のデータフローを表示できます。
 
    ![ 宛先のフィルタリング ](../assets/ui/details-page/filter-destinations.png)
 
@@ -103,33 +103,52 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
 データフローをファイルベースの宛先に対して実行する場合、**[!UICONTROL 処理時間]** は、書き出されるデータのサイズとシステムの読み込みによって異なります。 また、データフローがファイルベースの宛先に対して実行されるは、オーディエンスごとに分類されます。
 
-![ ファイルベースの宛先用に「処理時間」列がハイライト表示されたデータフロー実行ページの画像 ](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![ ファイルベースの宛先用に「処理時間」列がハイライト表示されたデータフロー実行ページの画像 ](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 詳しくは、監視ドキュメントの [ バッチ（ファイルベース）宛先に対するデータフローの実行 ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) を参照してください。
 
 ## [!UICONTROL  アクティベーションデータ ] {#activation-data}
 
-[!UICONTROL  アクティベーションデータ ] タブには、宛先にマッピングされたオーディエンスのリストが表示されます。これには、オーディエンスの開始日と終了日（該当する場合）やデータ書き出しに関連するその他の情報（書き出しタイプ、スケジュール、頻度など）が含まれます。 特定のオーディエンスに関する詳細を表示するには、リストから名前を選択します。
+**[!UICONTROL アクティベーションデータ]** タブには、宛先にマッピングされたオーディエンスのリストが表示されます。これには、オーディエンスの開始日と終了日（該当する場合）やデータ書き出しに関連するその他の情報（書き出しタイプ、スケジュール、頻度など）が含まれます。 特定のオーディエンスに関する詳細を表示するには、リストから名前を選択します。
 
 >[!TIP]
 >
 >宛先にマッピングされた属性と ID に関する詳細を表示および編集するには、[ 右側のパネル **[!UICONTROL オーディエンスをアクティブ化]** を選択 ](#right-rail) ます。
 
+>[!BEGINSHADEBOX]
+
+ファイルベースの宛先用の「**[!UICONTROL アクティベーションデータ]**」タブ。
+
 ![ 有効化データビューのバッチ宛先 ](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+ストリーミング宛先の **[!UICONTROL アクティベーションデータ]** タブ。
 
 ![ アクティベーションデータビューストリーミング宛先 ](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE Beta]{type=Informative} アクティブ化フローから複数のオーディエンスを削除します {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
-この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+### アクティブ化されたオーディエンスをフィルター {#filter-audiences}
+
+宛先に対してアクティブ化されたオーディエンスのリストをフィルタリングするには、検索ボックスにオーディエンス名を入力します。 検索結果に合わせて、オーディエンスのリストが自動的に更新されます。
+
+![ オーディエンスをフィルタリングするための検索ボックス。](../assets/ui/details-page/filter-audiences.png)
+
+### アクティベーションフローから複数のオーディエンスを削除 {#bulk-remove}
 
 既存のアクティベーションフローから複数のオーディエンスを削除するには、オーディエンスを選択してから、「**[!UICONTROL オーディエンスを削除]**」を選択します。
 
 ![ 「オーディエンスを削除」オプションを強調表示したアクティベーションデータ画面 ](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### オンデマンドでの複数ファイルのバッチ宛先への書き出し {#bulk-export}
+### [!BADGE Beta]{type=Informative} 複数のファイルをオンデマンドでバッチ宛先にエクスポートする {#bulk-export}
+
+>[!NOTE]
+>
+この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
 
 [ アクティベーションデータ ](../ui/export-file-now.md) ページから **[!UICONTROL オンデマンドで複数のファイルを書き出す]** ことができます。 これを行うには、オンデマンドでファイルを書き出すオーディエンスを選択し、「**[!UICONTROL ファイルを今すぐ書き出し]**」コントロールを選択して、1 回限りの書き出しをトリガーにします。これにより、選択した各オーディエンスのファイルがバッチ宛先に配信されます。
 
@@ -144,3 +163,9 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 >[!NOTE]
 >
 オーディエンスの詳細ページの詳細については、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md#segment-details) を参照してください。
+
+### バッチ宛先に書き出された複数のオーディエンスのファイル名を編集します {#bulk-edit-file-names}
+
+複数のオーディエンスの書き出されたファイル名を同時に編集するには、目的のオーディエンスを選択してから、「**[!UICONTROL ファイル名を編集]**」を選択します。 ファイル名の定義または編集方法について詳しくは、[ ファイル名の設定 ](../ui/activate-batch-profile-destinations.md#configure-file-names) の節を参照してください。
+
+![ 複数のオーディエンスのファイル名を編集するオプションをハイライト表示したアクティベーションデータ画面。](../assets/ui/details-page/bulk-edit-file-name.png)

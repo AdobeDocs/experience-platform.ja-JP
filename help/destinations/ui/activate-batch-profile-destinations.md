@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '4077'
-ht-degree: 58%
+source-wordcount: '4202'
+ht-degree: 56%
 
 ---
 
@@ -110,6 +110,10 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 ![ スケジュール設定ステップでハイライト表示されたスケジュール管理を編集 ](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+複数のスケジュールを同時に編集するには、画面の左側のチェックボックスを使用してオーディエンスを選択し、「**[!UICONTROL スケジュールを編集]**」を選択します。 設定したスケジュールは、選択したオーディエンスの書き出されたすべてのファイルに適用されます。
+
+![ 選択した複数のオーディエンスのスケジュールを編集オプションを示すExperience Platformユーザーインターフェイスの画像 ](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >既存のアクティベーションフローのオーディエンスアクティベーションスケジュールは、**[!UICONTROL アクティベーションデータ]** ページから編集できます。 詳しくは、[ アクティブ化スケジュールの一括編集 ](../ui/destination-details-page.md#bulk-edit-schedule) に関するドキュメントを参照してください。
@@ -200,7 +204,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 4. 「**[!UICONTROL 作成]**」を選択して、スケジュールを保存します。
 
-### ファイル名の設定
+### ファイル名の設定 {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 | **[!UICONTROL サンドボックス名]** | オーディエンスの書き出しに使用するサンドボックスの ID。 |
 
 {style="table-layout:auto"}
+
+複数のファイル名を同時に編集するには、画面左側のチェックボックスを使用してオーディエンスを選択し、「**[!UICONTROL ファイル名を編集]**」を選択します。 設定するファイル名オプションは、選択したオーディエンスの書き出されたすべてのファイルに適用されます。
+
+![ 選択した複数のオーディエンスのファイル名を編集オプションを示すExperience Platformユーザーインターフェイスの画像 ](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 **[!UICONTROL 変更を適用]**&#x200B;を選択して、確定します。
 
