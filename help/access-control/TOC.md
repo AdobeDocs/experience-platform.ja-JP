@@ -5,10 +5,10 @@ breadcrumb-title: アクセス制御ガイド
 user-guide-description: Adobe Admin Console の製品プロファイルを使用して、ユーザー権限を管理します。 ユーザーを製品とサンドボックスに割り当てる方法について説明します。
 feature: Access Control
 role: Admin
-source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
+source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 86%
+source-wordcount: '131'
+ht-degree: 85%
 
 ---
 
@@ -28,6 +28,9 @@ ht-degree: 86%
       * [役割](abac/ui/roles.md)
       * [サンドボックス](abac/ui/sandboxes.md)
       * [ユーザー](abac/ui/users.md)
+   * 権限マネージャー {#permissions-manager}
+      * [概要](abac/permission-manager/overview.md)
+      * [権限](abac/permission-manager/permissions.md)
    * 属性ベースのアクセス制御 API {#abac-api}
       * [概要](abac/api/overview.md)
       * [はじめに](abac/api/getting-started.md)
