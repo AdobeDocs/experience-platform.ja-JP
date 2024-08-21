@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
-source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
+source-git-commit: d6eb2050cdc3d51cf8ff4189c6b9f78469f14fa9
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1037'
 ht-degree: 29%
 
 ---
@@ -56,7 +56,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+詳しくは、[ML-ASSISTED スキーマ作成の概要を参照してください ](../../xdm/ui/ml-assisted-schema-creation.md)
 
 Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
 
