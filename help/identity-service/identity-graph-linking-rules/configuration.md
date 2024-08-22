@@ -3,9 +3,9 @@ title: ID グラフリンクルール設定ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 badge: ベータ版
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
+source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1358'
 ht-degree: 3%
 
 ---
@@ -76,7 +76,7 @@ ID 設定ツールを使用して、一意の名前空間を指定し、優先�
 >
 >* 事前実装プロセス中に、システムからExperience Platformに送信される認証済みイベントに、CRMID などの個人識別子が常に含まれていることを確認する必要があります。
 >* 実装時には、最も優先度が高い一意の名前空間が常にすべてのプロファイルに存在することを確認する必要があります。 すべてのプロファイルに最も優先度の高い一意の名前空間が含まれていることを確認して解決されるグラフシナリオの例については、[ 付録 ](#appendix) を参照してください。
->* [Adobe Analytics ソースコネクタ ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用してデータを取り込む場合は、ID サービスが AAID をブロックするので、ECID に AAID よりも高い優先度を与える必要があります。 ECID に優先順位を付けると、AAID ではなく ECID に未認証のイベントを保存するように ID サービスに指示できます。
+>* [Adobe Analytics ソースコネクタ ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用してデータを取り込む場合は、ID サービスが AAID をブロックするので、ECID に AAID よりも高い優先度を与える必要があります。 ECID に優先順位を付けることで、AAID ではなく ECID に未認証のイベントを保存するようリアルタイム顧客プロファイルに指示できます。
 
 この時点で、次の情報が得られます。
 
