@@ -3,10 +3,10 @@ keywords: 広告；トレードデスク；advertising トレードデスク
 title: Trade Desk 接続
 description: Trade Desk は、広告購入者がディスプレイ、ビデオ、モバイルの在庫ソースをまたいでリターゲティングやオーディエンスをターゲットにしたデジタルキャンペーンを実行するためのセルフサービスプラットフォームです。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 41%
+source-wordcount: '778'
+ht-degree: 40%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 41%
 
 ## 概要 {#overview}
 
-宛先 [!DNL The Trade Desk]、[!DNL The Trade Desk] にプロファイルデータを送信する場合に役立ちます。
+この宛先コネクタを使用して、プロファイルデータを [!DNL The Trade Desk] に送信します。 このコネクタは、[!DNL The Trade Desk] のファーストパーティエンドポイントにデータを送信します。 Adobe Experience Platformと [!DNL The Trade Desk] の統合では、[!DNL The Trade Desk] サードパーティのエンドポイントへのデータの書き出しはサポートされていません。
 
-[!DNL The Trade Desk] は、広告購入者がディスプレイ、ビデオ、モバイルの在庫ソースをまたいでリターゲティングやオーディエンスをターゲットにしたデジタルキャンペーンを実行するためのセルフサービスプラットフォームです。
+[!DNL The Trade Desk] は、広告購入者がディスプレイ、ビデオ、モバイルなどの在庫ソースをまたいで、リターゲティングやオーディエンスをターゲットにしたデジタルキャンペーンを実行するためのセルフサービスプラットフォームです。
 
-プロファイルデータを [!DNL Trade Desk] に送信するには、まず宛先に接続する必要があります。
+プロファイルデータを [!DNL Trade Desk] に送信するには、最初に宛先に接続する必要があります。このページの次の節で説明しています。
 
 ## ユースケース {#use-cases}
 
-マーケターは、[!DNL Trade Desk IDs] ーザー ID またはデバイス ID から作成されたオーディエンスを使用して、リターゲティングやオーディエンスターゲット設定のデジタルキャンペーンを作成できるようにしたいと考えています。
+マーケターは、[!DNL Trade Desk IDs] またはデバイス ID から作成されたオーディエンスを使用して、リターゲティングやオーディエンスターゲット設定のデジタルキャンペーンを作成できるようにしたいと考えています。
 
 ## サポートされている ID {#supported-identities}
 
@@ -62,7 +62,7 @@ ht-degree: 41%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk] での最初のExperience Cloudを作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）宛先 ID サービスで [ID 同期機能 ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ja) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前に Audience Manager で [!DNL The Trade Desk] 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
+>[!DNL The Trade Desk] での最初のExperience Cloudを作成しようとしており、これまで（Adobe Audience Managerなどのアプリケーションを使用して）宛先 ID サービスで [ID 同期機能 ](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) を有効にしたことがない場合は、Adobe Consultingまたはカスタマーケアに連絡して ID 同期を有効にしてもらってください。 以前に Audience Manager で [!DNL The Trade Desk] 統合を設定していた場合、設定した ID 同期は Platform に引き継がれます。
 
 ## 宛先への接続 {#connect}
 
@@ -104,7 +104,7 @@ ht-degree: 41%
 
 [ オーディエンススケジュール ](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順では、オーディエンスを、宛先プラットフォームの対応する ID またはわかりやすい名前に手動でマッピングする必要があります。
 
-セグメントをマッピングする際には、使いやすいように、Platform オーディエンス名またはより短い形式を使用することをお勧めします。 ただし、宛先のオーディエンス ID または名前は、Platform アカウントのオーディエンス ID または名前と一致する必要はありません。 マッピングフィールドに挿入する値は、すべて宛先に反映されます。
+オーディエンスをマッピングする場合、Adobeでは、使いやすくするために、Platform オーディエンス名または短い形式のオーディエンスを使用することをお勧めします。 ただし、宛先のオーディエンス ID または名前は、Platform アカウントのオーディエンス ID または名前と一致する必要はありません。 マッピングフィールドに挿入する値は、すべて宛先に反映されます。
 
 複数のデバイスマッピング（cookie ID、[!DNL IDFA]、[!DNL GAID]）を使用する場合は、3 つのマッピングすべてに同じマッピング値を使用してください。 [!DNL The Trade Desk] れらすべてを 1 つのセグメントに集計し、デバイスレベルの分類を行います。
 
@@ -112,4 +112,4 @@ ht-degree: 41%
 
 ## 書き出したデータ {#exported-data}
 
-データがに正常にに宛先に書き出されたかどうか [!DNL The Trade Desk] 確認するには、[!DNL Trade Desk] アカウントを確認します。 アクティベーションに成功すると、オーディエンスがお使いのアカウントに入力されます。
+データがに正常に [!DNL The Trade Desk] の宛先に書き出されたかどうかを確認するには、[!DNL Trade Desk] アカウントを確認します。 アクティベーションに成功すると、オーディエンスがお使いのアカウントに入力されます。

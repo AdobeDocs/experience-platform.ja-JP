@@ -3,9 +3,9 @@ title: （Beta） The Trade Desk - CRM 接続
 description: CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを Trade Desk アカウントに対してアクティブ化します。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1148'
 ht-degree: 18%
 
 ---
@@ -26,6 +26,8 @@ ht-degree: 18%
 
 このドキュメントは、CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを [!DNL Trade Desk] アカウントにアクティベートする際に役立つように設計されています。
 
+このコネクタは、[!DNL The Trade Desk] のファーストパーティエンドポイントにデータを送信します。 Adobe Experience Platformと [!DNL The Trade Desk] の統合では、[!DNL The Trade Desk] サードパーティのエンドポイントへのデータの書き出しはサポートされていません。
+
 [!DNL The Trade Desk(TTD)] は、メールアドレスのアップロードファイルをいつでも直接処理したり、生の（ハッシュ化され [!DNL The Trade Desk] いない）メールを保存したりしません。
 
 >[!TIP]
@@ -38,7 +40,7 @@ ht-degree: 18%
 
 ## ID の一致要件 {#id-matching-requirements}
 
-Adobe Experience Platformに取り込む ID の種類に応じて、対応する要件に従う必要があります。 詳しくは、[ID 名前空間の概要 ](/help/identity-service/features/namespaces.md) を参照してください。
+Adobe Experience Platformに取り込む ID のタイプに応じて、対応する要件に従う必要があります。 詳しくは、[ID 名前空間の概要 ](/help/identity-service/features/namespaces.md) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
@@ -138,9 +140,9 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 
 ## データの書き出しを検証 {#validate}
 
-データがExperience Platformからおよび [!DNL The Trade Desk] に正しく書き出されていることを検証するには、[!DNL The Trade Desk] Data Management Platform （DMP）内のAdobe 1PD データタイルの下にあるオーディエンスを見つけてください。 [!DNL Trade Desk] UI 内で対応する ID を見つける手順は次のとおりです。
+データがExperience Platformから [!DNL The Trade Desk] に正しく書き出されていることを検証するには、[!DNL The Trade Desk] Data Management Platform （DMP）内のAdobe 1PD データタイルの下にあるオーディエンスを見つけてください。 [!DNL Trade Desk] UI 内で対応する ID を見つける手順は次のとおりです。
 
-1. まず、「**[!UICONTROL Data]**」タブをクリックし、「**[!UICONTROL First-Party]**」を確認します。
+1. まず、「**[!UICONTROL データ]**」タブを選択し、「**[!UICONTROL ファーストパーティ]**」セクションを確認します。
 2. ページを下にスクロールして、**[!UICONTROL Imported Data]** の下に **[!UICONTROL Adobe 1PD タイル]** があります。
 3. **[!UICONTROL  広告 1PD]** タイルをクリックすると、Adobe主の [!DNL Trade Desk] の宛先に対してアクティブ化されたすべてのオーディエンスが一覧表示されます。 検索機能を使用することもできます。
 4. Experience Platformのセグメント ID #が、[!DNL Trade Desk] UI でセグメント名として表示されます。
