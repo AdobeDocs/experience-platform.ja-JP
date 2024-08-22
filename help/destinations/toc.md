@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 87%
+source-wordcount: '1247'
+ht-degree: 86%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 87%
       * [LiveRamp 識別子に基づいてキュレーションされた宛先に対するオーディエンスのアクティブ化](./ui/activate-curated-destinations.md)
       * [見込み客のオーディエンスを宛先に対してアクティブ化する](./ui/activate-prospect-audiences.md)
       * [宛先へのアカウントオーディエンスの有効化](./ui/activate-account-audiences.md)
-      * [（ベータ版）Experience Platform UI を使用した、オンデマンドによるバッチ保存先へのファイルの書き出し](./ui/export-file-now.md)
+      * [Experience Platform UI を使用した、オンデマンドによるバッチ宛先へのファイルの書き出し](./ui/export-file-now.md)
       * [Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
       * [（ベータ版）計算フィールドを使用したフラットスキーマファイルでの配列の書き出し](/help/destinations/ui/export-arrays-calculated-fields.md)
