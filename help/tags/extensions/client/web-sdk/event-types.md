@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 拡張機能のイベントタイプ
 description: Adobe Experience Platform LaunchのAdobe Experience Platform Web SDK 拡張機能で提供されるイベントタイプの使用方法について説明します。
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL  ルールセット項目を登録 ] {#subscribe-ruleset-items}
+
+**[!UICONTROL ルールセット項目を登録]** イベントタイプを使用すると、サーフェスのAdobe Journey Optimizer コンテンツカードを登録できます。 ルールセットが評価されるたびに、このコマンドに提供されるコールバックは、コンテンツカードデータを保持する提案を含む結果オブジェクトを受け取ります。
+
+![ 「購読ルールセット項目」イベントタイプを示すExperience Platformタグのユーザーインターフェイスの画像。](assets/subscribe-ruleset-items.png)
+
+このイベントタイプは、次の設定可能なプロパティをサポートしています。
+
+* **[!UICONTROL スキーマ]**：コンテンツカードを購読するスキーマの配列。 スキーマは手動で、またはデータ要素を指定して入力できます。
+* **[!UICONTROL サーフェス]**：コンテンツカードを購読するサーフェスの配列。 サーフェスは、手動で入力することも、データ要素を指定して入力することもできます。
