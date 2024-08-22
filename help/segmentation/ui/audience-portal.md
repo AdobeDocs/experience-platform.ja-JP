@@ -2,10 +2,10 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '4162'
-ht-degree: 59%
+source-wordcount: '4250'
+ht-degree: 57%
 
 ---
 
@@ -161,6 +161,18 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 #### フォルダー {#folders}
 
 オーディエンスをフォルダー内に配置すると、オーディエンスをより適切に管理できます。
+
+オーディエンスを保持するフォルダーを作成するには、「**[!UICONTROL フォルダーを作成]**」を選択します。
+
+![ 「フォルダーを作成」ボタンがハイライト表示されます。](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>別のフォルダー内にいる場合にのみ、フォルダーを作成できます。 つまり、左側のナビゲーションバーで **すべてのオーディエンス** が選択されている場合 **[!UICONTROL フォルダーを作成できない]** ことを意味します。
+
+ポップオーバーが表示され、新しく作成したフォルダーに名前を付けることができます。 フォルダーに名前を付けた後で「**[!UICONTROL 保存]**」を選択して、フォルダーの作成を完了します。 親フォルダーに対して一意の名前 **必須** であることに注意してください。
+
+![ フォルダーを作成ダイアログの「保存」ボタンがハイライト表示されます。](../images/ui/audience-portal/create-folder-dialog.png)
 
 オーディエンスをフォルダーに移動するには、移動するオーディエンスで「**[!UICONTROL フォルダーに移動]**」を選択します。
 
