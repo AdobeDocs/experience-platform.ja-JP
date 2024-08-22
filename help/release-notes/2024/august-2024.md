@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
-source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
+source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 30%
+source-wordcount: '1352'
+ht-degree: 29%
 
 ---
 
@@ -44,6 +44,14 @@ Experience Platformの既存の機能およびドキュメントのアップデ�
 ## 宛先 {#destinations}
 
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新規宛先または更新された宛先** {#new-updated-destinations}
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [ ブレーズ ](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] は、ダッシュボードと REST エンドポイント用に多数の異なるインスタンスを管理します。 [!UICONTROL Braze] のお客様は、プロビジョニング先のインスタンスに基づいて、正しい REST エンドポイントを使用する必要があります。 このリリースでは、[!UICONTROL Braze] に接続する際に選択できる新しい US-07 エンドポイントが追加されました。 |
+
+{style="table-layout:auto"}
 
 **新機能または更新された機能** {#destinations-new-updated-functionality}
 
