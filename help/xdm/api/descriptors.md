@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
+source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1920'
 ht-degree: 40%
 
 ---
@@ -291,7 +291,7 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->スキーマに適用できる記述子の最大数は 4000 です。
+>組織のサンドボックスに適用できる記述子の最大数は 4,000 です。
 
 以下の節では、使用可能な記述子の型の概要を示します。各型の記述子を定義するための必須フィールドも含まれます。
 
