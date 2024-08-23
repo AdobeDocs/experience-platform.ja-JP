@@ -1,11 +1,10 @@
 ---
 title: Adobe Experience Platform Web SDK に関するよくある質問
 description: Adobe Experience Platform Web SDK に関するよくある質問への回答を示します。
-exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
+source-git-commit: ed22c76b2805f1baab2ae3c82e1133e1fd8c9f72
 workflow-type: tm+mt
-source-wordcount: '2184'
-ht-degree: 5%
+source-wordcount: '2033'
+ht-degree: 2%
 
 ---
 
@@ -172,33 +171,9 @@ Web SDK を使用する場合、Edge Networkは上記の Cookie を 1 つ以上�
 
 ## Adobe Experience Platform Web SDK はどのブラウザーをサポートしていますか？
 
-Adobe Experience Platform Web SDK は、最新バージョンのGoogle Chrome、Safari、Firefox、Internet Explorer 11、Microsoft Edge Chromium で最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能を使用する際に問題が発生する場合があります。
+Adobe Experience Platform Web SDK は、最新バージョンのGoogle Chrome、Safari、Firefox およびMicrosoft Edge Chromium で最適に動作するように設計されています。 古いバージョンのブラウザーや、Internet Explorer などの非推奨（廃止予定）のブラウザーでは、特定の機能を使用する際に問題が発生する場合があります。
 
 ## Adobe Experience Platform Web SDK に関する詳細情報はどこで入手できますか？
 
 * [ドキュメント](/help/web-sdk/home.md)
 * [Source コード ](https://github.com/adobe/alloy)
-
-### Internet Explorer のサポート {#support-internet-explore}
-
-この SDK では、非同期タスクの完了を通信する方法である promises を使用します。 SDK で使用される [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) 実装は、[!DNL Internet Explorer] 以外のすべてのターゲットブラウザーでネイティブにサポートされています。 [!DNL Internet Explorer] で SDK を使用するには、`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill) が必要です。
-
-既に `window.Promise` がポリフィルされているかどうかを判断するには、次の手順を実行します。
-
-1. Web サイトを [!DNL Internet Explorer] で開きます。
-1. ブラウザーのデバッグコンソールを開きます。
-1. コンソールに「`window.Promise`」とに入力し、Enter キーを押します。
-
-`undefined` 以外が表示された場合は、既に `window.Promise`　がポリフィルされている可能性があります。上記のインストール手順を完了した後に Web サイトを読み込むことで、`window.Promise` がポリフィルされているかどうかを判断する方法もあります。SDK が promise に関するエラーをスローした場合、`window.Promise` がポリフィルされていない可能性が高くなります。
-
-`window.Promise` をポリフィルする必要があると判断した場合は、以前に指定したベースコードの上に次のスクリプトタグを含めます。
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-```
-
-このタグは、`window.Promise` が有効な Promise 実装であることを確認するスクリプトを読み込みます。
-
->[!NOTE]
->
->別の Promise 実装を読み込む場合は、`Promise.prototype.finally` をサポートしていることを確認してください。
