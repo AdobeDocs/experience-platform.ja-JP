@@ -2,9 +2,9 @@
 title: グラフ設定ガイド
 description: ID グラフリンクルールと ID データを使用する際に発生する可能性のある一般的なグラフシナリオについて説明します。
 badge: ベータ版
-source-git-commit: a1f12f266b74bd88fbb1c1a095bb6f6eb565612b
+source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
 workflow-type: tm+mt
-source-wordcount: '2757'
+source-wordcount: '2749'
 ht-degree: 6%
 
 ---
@@ -478,7 +478,7 @@ loginID: ID_C, ECID: 111
 
 | 使用されている名前空間 | Web 行動収集方法 |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics ソースコネクタ **メモ：** デフォルトでは、AAID は ID サービスでブロックされるので、Analytics ソースを使用する場合は、AAID よりも ECID を優先する必要があります。 詳しくは、[ 実装ガイド ](configuration.md#ingest-your-data) を参照してください。 |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics ソースコネクタ。<br> **メモ：** デフォルトでは、AAID は ID サービスでブロックされるので、Analytics ソースを使用する場合は、AAID よりも ECID を優先する必要があります。 詳しくは、[ 実装ガイド ](configuration.md#ingest-your-data) を参照してください。</br> |
 
 **イベント：**
 
@@ -488,11 +488,11 @@ loginID: ID_C, ECID: 111
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 ```
 
 **アルゴリズム設定：**
@@ -532,7 +532,7 @@ loginID: ID_C, ECID: 222, AAID: BBB
 
 >[!TAB  複数人グラフ：共有デバイス 1]
 
-次に、`{loginID:ID_A}` と `{loginID:ID_C}` の両方に `{ECID:111, AAID:AAA}` がリンクされている、複数人の共有デバイスのシナリオを示します。 この場合、古いリンクは削除され、新しいリンクが優先されます。
+次に、`{ECID:111}` が `{loginID:ID_A}` と `{loginID:ID_C}` の両方にリンクされている、複数人の共有デバイスのシナリオを示します。 この場合、古いリンクは削除され、新しいリンクが優先されます。
 
 ![ 複数人の共有デバイスグラフのシナリオ。](../images/graph-examples/complex_shared_device_one.png)
 
@@ -634,9 +634,9 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 >[!ENDTABS]
 
-## 他のAdobeアプリケーションでの使用
+## その他のAdobe Commerceでの使用
 
-この節のグラフ設定の例では、Real-time Customer Data Platform、Adobe Journey OptimizerおよびAdobe Commerceの使用例の概要を説明します。 以下の例は、2 つのユーザータイプを持つ小売顧客に焦点を当てています。
+この節のグラフ設定例では、Adobe Commerceのユースケースの概要を説明します。 以下の例は、2 つのユーザータイプを持つ小売顧客に焦点を当てています。
 
 * 登録済みユーザー（アカウントを作成したユーザー）
 * ゲストユーザー（メールアドレスのみを持つユーザー）
