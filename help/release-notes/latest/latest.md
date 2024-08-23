@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1502'
 ht-degree: 29%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 29%
 Experience Platformの既存の機能およびドキュメントのアップデート：
 
 - [属性ベースのアクセス制御](#abac)
+- [データ取り込み](#data-ingestion)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ID サービス](#identity-service)
@@ -40,6 +41,19 @@ Experience Platformの既存の機能およびドキュメントのアップデ�
 {style="table-layout:auto"}
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。属性ベースのアクセス制御ワークフローの包括的なガイドについては、[属性ベースのアクセス制御エンドツーエンドガイド](../../access-control/abac/end-to-end-guide.md)を参照してください。
+
+## データ取得（更新日：8 月 23 日（PT）） {#data-ingestion}
+
+Adobe Experience Platform は、あらゆる種類および遅延のデータを取得するための豊富な機能セットを提供します。取得は、Batch API または Streaming API、アドビの組み込みソース、データ統合パートナー、Adobe Experience Platform UI を使用して行うことができます。
+
+**バッチデータ取り込みでの日付形式の処理の更新**
+
+このリリースでは、バッチデータ取り込みの *日付形式の処理* に関する問題が修正されました。 以前は、クライアントによって挿入された日付フィールドが `Date` 形式に変換 `DateTime` れていました。 つまり、タイムゾーンがフィールドに自動的に追加され、`Date` 形式を好む、または必要とするユーザーにとって困難が生じました。 今後、タイムゾーンは `Date` タイプのフィールドに自動的に追加されません。 この更新により、書き出されたデータ形式が、顧客のリクエストに応じてそのフィールドのプロファイルで表される形式と一致するようになります。
+
+リリース前の `Date` フィールド : `"birthDate": "2018-01-12T00:00:00Z"`
+リリース後の `Date` 個のフィールド：`"birthDate": "2018-01-12"`
+
+詳しくは、[ バッチ取得 ](/help/ingestion/batch-ingestion/overview.md) を参照してください。
 
 ## 宛先 {#destinations}
 
