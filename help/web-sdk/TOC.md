@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
 role: Developer
-source-git-commit: 1a6d42fd1319828f5bb5d470f24ea5ee8bed4661
+source-git-commit: da0d9d0976dc0f7244500e62bb364b11fab7baca
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 51%
+ht-degree: 52%
 
 ---
 
