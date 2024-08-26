@@ -3,7 +3,7 @@ title: Web SDK と Edge Network Server API を使用したハイブリッドパ�
 description: この記事では、Web SDK を Server API と組み合わせて使用して、web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション;ハイブリッド;Server API;サーバーサイド;ハイブリッド実装;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
+source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 84%
@@ -260,20 +260,21 @@ function sendDisplayEvent(decision) {
     const { id, scope, scopeDetails = {} } = decision;
 
     alloy("sendEvent", {
-        xdm: {
-            eventType: "decisioning.propositionDisplay",
-            _experience: {
-                decisioning: {
-                    propositions: [
-                        {
-                            id: id,
-                            scope: scope,
-                            scopeDetails: scopeDetails,
-                        },
-                    ],
-                },
-            },
-        },
+        "xdm": {
+            "eventType": "decisioning.propositionDisplay",
+            "_experience": {
+                "decisioning": {
+                    "propositions": [{
+                        "id": id,
+                        "scope": scope,
+                        "scopeDetails": scopeDetails
+                    }],
+                    "propositionEventType": {
+                        "display": 1
+                    }
+                }
+            }
+        }
     });
 }
 ```

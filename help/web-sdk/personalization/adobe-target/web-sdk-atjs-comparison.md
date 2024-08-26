@@ -3,7 +3,7 @@ title: at.js とExperience Platform Web SDK の比較
 description: at.js 機能とExperience Platform Web SDK の比較を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；範囲；スキーマ；システム図；図
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
+source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
 workflow-type: tm+mt
 source-wordcount: '2182'
 ht-degree: 4%
@@ -539,19 +539,20 @@ alloy("sendEvent", {
         break;  
       }
     }
-      // Send a "decisioning.propositionDisplay" event signaling that the proposition has been rendered.
+    // Send a "decisioning.propositionDisplay" event signaling that the proposition has been rendered.
     alloy("sendEvent", {
-      xdm: {
-        eventType: "decisioning.propositionDisplay",
-        _experience: {
-          decisioning: {
-            propositions: [
-              {
-                id: discountProposition.id,
-                scope: discountProposition.scope,
-                scopeDetails: discountProposition.scopeDetails
-              }
-            ]
+      "xdm": {
+        "eventType": "decisioning.propositionDisplay",
+        "_experience": {
+          "decisioning": {
+            "propositions": [{
+              "id": id,
+              "scope": scope,
+              "scopeDetails": scopeDetails
+            }],
+            "propositionEventType": {
+              "display": 1
+            }
           }
         }
       }
