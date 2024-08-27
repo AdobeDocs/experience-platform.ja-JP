@@ -3,7 +3,7 @@ title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 badge: ベータ版
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 2%
@@ -68,7 +68,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
 * グラフは、上記の順序に基づいて再確立されます。 リンクを追加することが制限制約に違反している場合（例えば、グラフに一意の名前空間を持つ複数の ID が含まれている場合）、リンクは削除されます。
 * 結果のグラフは、設定した一意の名前空間制約に準拠します。
 
-![ID 最適化アルゴリズムを視覚化した図。](../images/ido.png)
+![ID 最適化アルゴリズムを視覚化した図。](../images/ido_algorithm.png)
 
 ## ID 最適化アルゴリズムのシナリオの例
 
