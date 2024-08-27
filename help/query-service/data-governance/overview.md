@@ -2,7 +2,7 @@
 title: クエリサービスでのデータガバナンス
 description: この概要では、Experience Platformクエリサービスのデータガバナンスの主な要素について説明します。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '3129'
 ht-degree: 1%
@@ -93,7 +93,7 @@ Adobe Experience Platformのアクセス制御では、[Adobe Admin Console](htt
 
 #### 高速データセットにフィールドベースのアクセス制限を作成 {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-[ 属性ベースのアクセス制御機能を使用すると ](../../access-control/abac/overview.md) [ 高速化ストア ](../data-distiller/customizable-insights/send-accelerated-queries.md) のファクトおよびディメンションデータセットに対して、組織またはデータの使用範囲を定義できます。 これにより、管理者は特定のセグメントへのアクセスを管理し、ユーザーまたはユーザーグループに付与するアクセスをより適切に管理できます。
+[ 属性ベースのアクセス制御機能を使用すると ](../../access-control/abac/overview.md) [ 高速化ストア ](../data-distiller/sql-insights/send-accelerated-queries.md) のファクトおよびディメンションデータセットに対して、組織またはデータの使用範囲を定義できます。 これにより、管理者は特定のセグメントへのアクセスを管理し、ユーザーまたはユーザーグループに付与するアクセスをより適切に管理できます。
 
 高速データセットにフィールドベースのアクセス制限を作成するには、クエリサービス CTAS クエリを使用して、高速データセットを作成し、既存の XDM スキーマまたはアドホックスキーマに基づいてこれらのデータセットを構造化します。 管理者はその後 [ スキーマまたは [ アドホックスキーマのデータ使用ラベルを追加 ](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) 編集 ](./ad-hoc-schema-labels.md#edit-governance-labels) できます。 [!UICONTROL  スキーマ ] UI の [!UICONTROL  ラベル ] ワークスペースからスキーマへのラベルの適用、作成および編集を行えます。
 

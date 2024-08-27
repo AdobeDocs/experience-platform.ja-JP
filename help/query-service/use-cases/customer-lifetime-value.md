@@ -2,7 +2,7 @@
 title: データシグナルを追跡して、顧客のライフタイムバリューを生成する
 description: このガイドでは、Data Distillerとユーザー定義ダッシュボードをReal-time Customer Data Platformで使用して、顧客のライフタイム値を測定および視覚化する方法のエンドツーエンドのデモを示します。
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 7%
@@ -47,7 +47,7 @@ CLV を確立する最初の手順は、ユーザーの操作から取得した�
 
 ## インサイトデータモデルの拡張と更新のスケジュール設定 {#extend-data-model-and-set-refresh-schedule}
 
-次に、カスタムデータモデルを作成するか、既存のAdobe Real-Time CDP データモデルを拡張して、CLV レポートインサイトに関与する必要があります。 [ クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する ](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model) 方法については、ドキュメントを参照してください。 このチュートリアルでは、次の手順について説明します。
+次に、カスタムデータモデルを作成するか、既存のAdobe Real-Time CDP データモデルを拡張して、CLV レポートインサイトに関与する必要があります。 [ クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する ](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model) 方法については、ドキュメントを参照してください。 このチュートリアルでは、次の手順について説明します。
 
 * Data Distillerを使用して、レポートインサイト用のモデルを作成します。
 * テーブル、関係の作成およびデータの入力

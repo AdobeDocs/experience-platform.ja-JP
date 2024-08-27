@@ -5,7 +5,7 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 83%
@@ -27,11 +27,11 @@ ht-degree: 83%
       - [概要](data-distiller/derived-datasets/overview.md)
       - [SQL を使用した派生データセットの作成](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [デシルベースの派生データセットの作成](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 拡張アプリレポートスイート向けのカスタマイズ可能 {#customizable-insights} インサイト
-      - [概要](data-distiller/customizable-insights/overview.md)
-      - [クエリプロモード](data-distiller/customizable-insights/query-pro-mode.md)
-      - [高速クエリの送信](data-distiller/customizable-insights/send-accelerated-queries.md)
-      - [レポートインサイトデータモデルガイド](data-distiller/customizable-insights/reporting-insights-data-model.md)
+   - 拡張アプリケーション レポート用 SQL インサイト {#sql-insights}
+      - [概要](data-distiller/sql-insights/overview.md)
+      - [クエリプロモード](data-distiller/sql-insights/query-pro-mode.md)
+      - [高速クエリの送信](data-distiller/sql-insights/send-accelerated-queries.md)
+      - [レポートインサイトデータモデルガイド](data-distiller/sql-insights/reporting-insights-data-model.md)
    - の AI/ML 機能パイプライン {#ml-feature-pipelines}
       - [概要](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks への接続](data-distiller/ml-feature-pipelines/establish-connection.md)

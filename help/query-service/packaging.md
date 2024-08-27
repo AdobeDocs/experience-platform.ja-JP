@@ -2,7 +2,7 @@
 title: クエリサービスのパッケージ化
 description: 次のドキュメントでは、クエリサービスで使用できる機能と製品のパッケージ化の概要と、アドホッククエリとバッチクエリの違いについて説明します。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 5%
@@ -67,9 +67,9 @@ Experience Platformのアクセス制御は、[Adobe Admin Consoleで管理さ�
 
 {style="table-layout:auto"}
 
-### 関連するカスタマイズ可能なインサイト権限 {#customizable-insights-permissions}
+### 関連する SQL Insights 権限 {#sql-insights-permissions}
 
-ダッシュボード内に Data Distiller[ カスタマイズ可能なインサイト ](./data-distiller/customizable-insights/overview.md) を作成するには、Admin Console内で次の権限 **必須** を有効にします。
+ダッシュボード内に Data Distiller[SQL Insights](./data-distiller/sql-insights/overview.md) を作成するには、Admin Console内で次の権限 **必須** を有効にします。
 
 | 権限 | 関数 |
 |---|---|

@@ -2,7 +2,7 @@
 title: カスタムダッシュボード
 description: カスタムダッシュボードを作成および管理する方法を説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -37,7 +37,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ![ ダッシュボードを作成ダイアログ。](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Data Distiller SKU を購入したユーザーは、カスタム SQL クエリを使用してインサイトを作成できます。 このワークフローの手順については、[ カスタマイズ可能なインサイト作成ガイド ](./data-distiller/customizable-insights/overview.md) を参照してください。
+Data Distiller SKU を購入したユーザーは、カスタム SQL クエリを使用してインサイトを作成できます。 このワークフローの手順については、[SQL Insight 作成ガイド ](./data-distiller/sql-insights/overview.md) を参照してください。
 
 新しく作成された空のダッシュボードが表示され、ビューの左上隅に選択した名前が表示されます。
 
