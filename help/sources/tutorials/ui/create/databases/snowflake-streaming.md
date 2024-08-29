@@ -4,9 +4,9 @@ type: Tutorial
 description: Snwoflake データベースからExperience Platformにデータをストリーミングする方法を説明します
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1648'
 ht-degree: 17%
 
 ---
@@ -54,7 +54,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 | 資格情報 | 説明 |
 | --- | --- |
-| アカウント | [!DNL Snowflake] アカウントの名前。 |
+| アカウント | [!DNL Snowflake] アカウントの名前。 アカウント名の規則については、[[!DNL Snowflake Streaming]  認証ガイド ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials) を参照してください。 |
 | ウェアハウス | [!DNL Snowflake] ウェアハウスの名前。 ウェアハウスは、[!DNL Snowflake] でのクエリの実行を管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込むには、個別にアクセスする必要があります。 |
 | データベース | [!DNL Snowflake] データベースの名前。 データベースには、Experience Platformに取り込むデータが含まれています。 |
 | スキーマ | （オプション） [!DNL Snowflake] アカウントに関連付けられたデータベーススキーマ。 |
@@ -78,7 +78,9 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!IMPORTANT]
 >
->ストリーミングデータフローを作成するには、ソーステーブルにタイムスタンプ列が存在する必要があります。 タイムスタンプは、データが取り込まれるタイミングと増分データがストリーミングされるタイミングをExperience Platformが把握するために必要です。 既存の接続のタイムスタンプ列を遡及的に追加し、新しいデータフローを作成できます。
+>* ストリーミングデータフローを作成するには、ソーステーブルにタイムスタンプ列が存在する必要があります。 タイムスタンプは、データが取り込まれるタイミングと増分データがストリーミングされるタイミングをExperience Platformが把握するために必要です。 既存の接続のタイムスタンプ列を遡及的に追加し、新しいデータフローを作成できます。
+>
+>* サンプルソースデータファイルのデータフィールドの大文字と小文字が、識別子の場合の解決に関する [!DNL Snowflake] のガイダンスに従っていることを確認してください。 詳しくは、[[!DNL Snowflake]  識別子の大文字/小文字の区別に関するドキュメント ](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) を参照してください。
 
 [!UICONTROL データを選択]ステップが表示されます。この手順では、Experience Platformに読み込むデータを選択し、タイムスタンプとタイムゾーンを設定し、生データを取り込むためのサンプルソースデータファイルを指定する必要があります。
 

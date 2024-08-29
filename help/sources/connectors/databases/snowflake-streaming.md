@@ -5,10 +5,10 @@ badgeBeta: label="ベータ版" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
+source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 11%
+source-wordcount: '791'
+ht-degree: 18%
 
 ---
 
@@ -33,13 +33,19 @@ Experience Platformは、[!DNL Snowflake] データベースからのストリ�
 
 次の節では、[!DNL Snowflake] データベースからExperience Platformにデータをストリーミングする前に実行する必要がある前提条件の手順について説明します。
 
+### IP アドレス許可リストの更新
+
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources)ページを参照してください。
+
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Amazon Redshift] と Platform を接続する方法について説明します。
+
 ### 必要な資格情報の収集
 
 [!DNL Flow Service] を [!DNL Snowflake] に接続するには、次の接続プロパティを指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
-| `account` | [!DNL Snowflake] アカウントに関連付けられた完全なアカウント名。 完全修飾 [!DNL Snowflake] アカウント名には、アカウント名、地域、クラウドプラットフォームが含まれます。 たとえば、`cj12345.east-us-2.azure` のように設定します。アカウント名の詳細については、この [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>) を参照してください。 |
+| `account` | サフィックス `snowflakecomputing.com` が付いた [!DNL Snowflake] アカウントの完全なアカウント識別子（アカウント名またはアカウントロケーター）。 アカウント識別子は、次のように異なる形式にすることができます。 <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com （例：`acme-abc12345.snowflakecomputing.com`）</li><li>{ACCOUNT_LOCATOR}。{CLOUD_REGION_ID}.snowflakecomputing.com （例：`acme12345.ap-southeast-1.snowflakecomputing.com`）</li><li>{ACCOUNT_LOCATOR}。{CLOUD_REGION_ID}。{CLOUD}.snowflakecomputing.com （例：`acme12345.east-us-2.azure.snowflakecomputing.com`）</li></ul> 詳しくは、[[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>) を参照してください。 |
 | `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データを Platform に取り込む際は個別にアクセスする必要があります。 |
 | `database` | [!DNL Snowflake] データベースには、Platform に取り込むデータが含まれています。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
@@ -47,6 +53,7 @@ Experience Platformは、[!DNL Snowflake] データベースからのストリ�
 | `role` | （オプション）特定の接続に対してユーザーに提供できる、カスタム定義の役割。 指定しない場合、この値はデフォルトで `public` になります。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Snowflake] の接続仕様 ID は `51ae16c2-bdad-42fd-9fce-8d5dfddaf140` です。 |
 
+{style="table-layout:auto"}
 
 ### 役割の設定 {#configure-role-settings}
 
