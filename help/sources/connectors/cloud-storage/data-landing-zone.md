@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Data Landing Zone Source
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を学ぶ
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: ecef17ed454c7b1f30543278bba6b0e3b70399da
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 35%
+source-wordcount: '889'
+ht-degree: 33%
 
 ---
 
@@ -17,9 +17,13 @@ ht-degree: 35%
 >
 >このページは、Experience Platformの [!DNL Data Landing Zone] *ソース* コネクタに固有のページです。 [!DNL Data Landing Zone] *宛先* コネクタへの接続について詳しくは、[[!DNL Data Landing Zone]  宛先ドキュメントページ ](/help/destinations/catalog/cloud-storage/data-landing-zone.md) を参照してください。
 
-[!DNL Data Landing Zone] は、Adobe Experience Platformによってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスであり、ファイルを Platform に取り込むための安全なクラウドベースのファイルストレージ機能にアクセスできます。 サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。Platform とそのアプリケーション（[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]、[!DNL Adobe Real-Time Customer Data Platform] など）のすべての顧客は、サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナを使用してプロビジョニングされます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
+[!DNL Data Landing Zone] は、Adobe Experience Platformによってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスであり、ファイルを Platform に取り込むための安全なクラウドベースのファイルストレージ機能にアクセスできます。 サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。Experience Platformのすべてのユーザーは、サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナを使用してプロビジョニングされます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
 
-[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークの許可リストや地域間設定は必要ありません。 Platform では、[!DNL Data Landing Zone] コンテナにアップロードされるすべてのファイルに対して厳密に 7 日間の有効期限が適用されます。 すべてのファイルは 7 日後に削除されます。
+[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークの許可リストや地域間設定は必要ありません。 Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロードされるすべてのファイルおよびフォルダーに対して厳密に 7 日間の有効期限が適用されます。 すべてのファイルとフォルダーは、7 日後に削除されます。
+
+>[!NOTE]
+>
+>[!DNL Azure Data Factory] から [!DNL Data Landing Zone] にアクセスする場合は、Experience Platformから提供される [SAS 資格情報 ](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) を使用して、[!DNL Data Landing Zone] 用にリンクされたサービスを作成する必要があります。 リンクされたサービスを作成したら、デフォルトのルートパスの代わりにコンテナパスを選択して、サー [!DNL Data Landing Zone] スを参照できます。
 
 ## ファイルとディレクトリの命名制約
 
