@@ -3,10 +3,10 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからオーディエンス情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルオーディエンスメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
+source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 57%
+source-wordcount: '962'
+ht-degree: 51%
 
 ---
 
@@ -35,7 +35,11 @@ ht-degree: 57%
 
 ## 前提条件 {#prerequisites}
 
-この統合は、[Adobe Experience Platform Web SDK](/help/web-sdk/home.md) または [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) によって実現されます。この宛先を使用するには、次の SDK のいずれかを使用する必要があります。
+この宛先では、実装に応じて、次のいずれかのデータ収集方法を使用する必要があります。
+
+* Web サイトからデータを収集する場合は ](/help/web-sdk/home.md)[Adobe Experience Platform Web SDK を使用します。
+* モバイルアプリケーションからデータを収集する場合は ](https://developer.adobe.com/client-sdks/documentation/)[Adobe Experience Platform Mobile SDK を使用します。
+* [Web SDK](/help/web-sdk/home.md) または [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) を使用していない場合や ](../../../server-api/overview.md) プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は、[Edge Networkサーバー API を使用します。
 
 >[!IMPORTANT]
 >
