@@ -1,9 +1,10 @@
 ---
 title: 属性ベースのアクセス制御権限マネージャー
 description: Adobe Experience Platformの権限マネージャーを使用して、レポートを生成し、アクセス権限を検証する方法を説明します。
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '603'
 ht-degree: 4%
 
 ---
@@ -40,7 +41,7 @@ ht-degree: 4%
 
 >[!INFO]
 >
->[!UICONTROL  リソース ]、[!UICONTROL  アクション ] および [!UICONTROL  サンドボックス ] は、必須フィールドではありません。 各レポートに対して選択できる [!UICONTROL  リソース ] は 1 つだけです。 アクションまたはサンドボックスは、追加したら、削除したい選択の横にある「**&#39;x&#39;** を選択することで削除できます。
+>[!UICONTROL  リソース ]、[!UICONTROL  アクション ] および [!UICONTROL  サンドボックス ] は、必須フィールドではありません。 アクションまたはサンドボックスは、追加したら、削除したい選択の横にある「**&#39;x&#39;** を選択することで削除できます。
 
 ![ ハイライト表示されたリソース、アクション、サンドボックスのドロップダウンおよび結果を表示 ](../../images/permission-manager/users-additional-attributes-select.png)
 
