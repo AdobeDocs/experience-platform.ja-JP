@@ -2,7 +2,7 @@
 title: AI アシスタントの質問ガイド
 description: このドキュメントでは、AI アシスタントに対するクエリ時に使用できる質問の例について説明します。
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 1%
@@ -33,6 +33,8 @@ AI アシスタントのクエリ時に使用できる一連の質問の例に�
 ## エンティティ別および製品別のオペレーショナルインサイトの知識に関する質問{#objects-questions}
 
 次の質問は、データオブジェクト別にグループ化され、[ 運用上のインサイト ](./home.md#operational-insights) または [ 製品に関する知識 ](./home.md#product-knowledge) のいずれかに分類されます。
+
+![](./images/prompt.png)
 
 * **オーディエンス – 運用インサイト**
    * 他のオーディエンスを使用するのは、どのオーディエンスですか？
