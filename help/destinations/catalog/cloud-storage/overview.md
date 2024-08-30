@@ -3,10 +3,10 @@ keywords: クラウドストレージの宛先;クラウドストレージ
 title: クラウドストレージの宛先の概要
 description: Adobe Experience Platformは、オーディエンスをデータファイルとして、Amazon S3、AWS Kinesis、Azure Event Hubs または SFTP クラウドストレージの場所に配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 50%
+source-wordcount: '453'
+ht-degree: 42%
 
 ---
 
@@ -62,6 +62,13 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 
 入力： `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 ストレージの場所のフォルダーパス： `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**その他のマクロ**
+
+上記の例と同様に、さらにマクロを使用して、フォルダーの場所にカスタムフォルダー構造を作成できます。
+
+* ファイルの書き出し時間に基づいてカスタムフォルダー名を追加するには、`%DATETIME%` または `%TIMESTAMP%` を指定します。 最初のマクロの形式は `MMDDYYYY_HHMMSS` で、2 番目のマクロの形式は UNIX の 10 桁の形式です。
+* 宛先データフローの名前に基づいてカスタムフォルダーを追加で `%DESTINATION_NAME%` ない。
 
 ## データの書き出しのタイプ {#export-type}
 
