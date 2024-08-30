@@ -4,7 +4,7 @@ title: プレビューサンプルのステータス（プロファイルプレ�
 description: リアルタイム顧客プロファイル API のプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功したサンプルをプレビューしたり、データセット別および ID 別のプロファイル分布をリストしたり、データセットの重複、ID の重複、ステッチされていないプロファイルを示すレポートを生成したりできます。
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 5%
@@ -84,7 +84,7 @@ curl -X GET \
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -101,7 +101,7 @@ curl -X GET \
 |---|---|
 | `numRowsToRead` | サンプル内の結合プロファイルの合計数。 |
 | `sampleJobRunning` | サンプルジョブが進行中の場合に `true` を返すブール値です。 バッチファイルがアップロードされてからプロファイルストアに実際に追加されるまでの待ち時間に対して、透明性を提供します。 |
-| `cosmosDocCount` | Cosmos での合計ドキュメント数。 |
+| `docCount` | データベース内のドキュメント総数。 |
 | `totalFragmentCount` | プロファイルストア内のプロファイルフラグメントの合計数。 |
 | `lastSuccessfulBatchTimestamp` | 前回成功したバッチ取り込みタイムスタンプ。 |
 | `streamingDriven` | *このフィールドは非推奨となり、応答に重要な意味はありません。* |
