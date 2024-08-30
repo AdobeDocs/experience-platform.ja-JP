@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
+source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1043'
 ht-degree: 97%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 97%
       - フィールドマッピング {#mapping}
          - [Analytics フィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager フィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Target フィールドのマッピング](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage フィールドのマッピング](connectors/adobe-applications/mapping/marketo.md)
          - [Microsoft Dynamics フィールドのマッピング](connectors/adobe-applications/mapping/dynamics.md)
          - [Salesforce フィールドのマッピング](connectors/adobe-applications/mapping/salesforce.md)
