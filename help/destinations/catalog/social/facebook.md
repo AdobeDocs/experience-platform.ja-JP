@@ -3,9 +3,9 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Facebook キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1985'
 ht-degree: 29%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 29%
   >[!IMPORTANT]
   >
   > Adobe Experience Cloudの権限を設定する場合は、**キャンペーンの管理** 権限を有効にする必要があります。 [!DNL Adobe Experience Platform] 統合には権限が必要です。
-* [!DNL Facebook Custom Audiences] のサービス利用規約を読み、署名します。 これを行うには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` に移動します。`accountID` れは [!DNL Facebook Ad Account ID] です。
+* [!DNL Facebook Custom Audiences] のサービス利用規約を読み、署名します。 これを行うには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973` に移動します。`accountID` れは [!DNL Facebook Ad Account ID] です。 サービス利用規約に署名する際は、URL に `business_id=206617933627973` セクションが存在することを確認してください。
   >[!IMPORTANT]
   >
   >[!DNL Facebook Custom Audiences] のサービス利用規約に署名する場合は、必ずFacebook API で認証に使用したのと同じユーザーアカウントを使用します。
@@ -251,4 +251,10 @@ Experience Platformでメールアドレスを取り込む方法については�
 
 このエラーは、顧客が新しく作成したアカウントを使用していて、[!DNL Facebook] の権限がまだアクティブでない場合に発生します。
 
+>[!IMPORTANT]
+>
+>「[ アカウントの前提条件 ](#facebook-account-prerequisites)」セクションの URL テンプレートに示されているように、`business ID 206617933627973` の下の [!DNL Facebook Custom Audience Terms of Service] を必ず受け入れてください。
+
 [Facebook アカウントの前提条件 ](#facebook-account-prerequisites) の手順に従った後に `400 Bad Request` のエラーメッセージが表示された場合は、[!DNL Facebook] の権限が有効になるまで数日間待ちます。
+
+
