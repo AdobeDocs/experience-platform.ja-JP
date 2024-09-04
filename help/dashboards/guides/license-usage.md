@@ -4,10 +4,10 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
+source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 8%
+source-wordcount: '2664'
+ht-degree: 9%
 
 ---
 
@@ -66,7 +66,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 | **[!UICONTROL 許可の金額]** | ライセンス契約で合意された、プライマリ指標の最大量に対する契約値。 |
 | **[!UICONTROL 用途]** | 使用されたプライマリ指標の量。 この値は、実稼動または開発のすべてのサンドボックスにおける、その指標の合計使用量を提供します。 |
 | **[!UICONTROL 使用方法 %]** | ライセンス量に応じて使用される主要指標の割合。 |
-| **[!UICONTROL 予測の使用]** | （**Beta**） ライセンス量に応じた主要指標の予測使用率。 |
+| **[!UICONTROL 予測の使用]** | ライセンス量に応じた主要指標の予測使用割合。 |
 
 >[!NOTE]
 >
@@ -74,31 +74,27 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 各製品は多数の指標を追跡できるので、表には各製品の主要指標が示されます。
 
-### [!BADGE Beta]{type=Informative} 予想される使用状況 {#predicted-usage}
+### 予測される使用状況 {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="予測される使用状況"
-abstract="予測は過去 6 ～ 7 か月の使用状況に基づき、毎月 15 日に生成されます。 ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。 使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>abstract="予測は過去 6 ～ 7 か月の使用状況に基づき、毎月 15 日に生成されます。 使用方法は、{startDate} から {endDate} の間に予測値に達すると予想されます。 データが最後に収集されたのは {collectionDate} です。 ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。 使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage_prediction"
-title="予測される使用状況"
-abstract="予測は過去 6 ～ 7 か月の使用状況に基づき、毎月 15 日に生成されます。 ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。 使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
-
->[!AVAILABILITY]
->
-今後のライセンス使用状況を予測する機能は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="予測される使用状況"
+>abstract="予測は過去 6 ～ 7 か月の使用状況に基づき、毎月 15 日に生成されます。 使用方法は、{startDate} から {endDate} の間に予測値に達すると予想されます。 データが最後に収集されたのは {collectionDate} です。 ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。 使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
 
 インサイトに満ちた使用状況の予測に基づいて、ライセンスリソースをプロアクティブに管理および最適化します。 この [!UICONTROL  予測使用状況 ] 列は、購入したすべての製品に対して、すべての実稼動および開発用サンドボックスにわたって、サンドボックスレベルで今後のライセンスの使用を正確に予測します。 このアラート機能は、今月の 15 日までの使用状況に基づいて、6 週間後のライセンス使用状況の予測を提供します。 予測には、下限と上限が設定されています。
 
 >[!IMPORTANT]
 >
-予測は毎月更新されます。 更新日は、情報アイコン（![ この情報アイコン](../images/license-usage/info-icon.png)）を選択します。
+>予測は毎月更新されます。 更新日は、情報アイコン（![ この情報アイコン](../images/license-usage/info-icon.png)）を選択します。
 
 製品の使用権限の概要を確認するには、[!UICONTROL  概要 ] リストから製品を選択します。
 
@@ -108,7 +104,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!NOTE]
 >
-ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。
+>ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。
 
 ![ 予測された使用状況列がハイライト表示された Platform 製品の概要ビュー。](../images/license-usage/summary-predicted-usage.png)
 
@@ -120,7 +116,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!NOTE]
 >
-このコンテキストの「ほぼ同一」とは、値が統計的に小数点以下 2 桁まで有意であることを意味します（例えば、下限が 0.342、上限が 0.344 の場合、どちらも 34% に丸められます）。
+>このコンテキストの「ほぼ同一」とは、値が統計的に小数点以下 2 桁まで有意であることを意味します（例えば、下限が 0.342、上限が 0.344 の場合、どちらも 34% に丸められます）。
 
 予測使用状況機能では、次の指標をサポートしています。
 
@@ -136,23 +132,23 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 ![ その製品で使用可能なすべての指標を表示する Platform 製品の概要ビュー ](../images/license-usage/summary-tab.png)
 
-「概要」タブで、テーブルには [!UICONTROL  指標 ] 列が含まれます。 これらの人間が読み取れる説明は、そのタイプに使用されるすべての指標を示します of サンドボックス。
+「概要」タブで、テーブルには [!UICONTROL  指標 ] 列が含まれます。 これらの人間が読み取れる説明は、そのタイプのサンドボックスに使用されるすべての指標を示します。
 
 ### サンドボックスを選択 {#select-sandbox}
 
-実稼動用および開発用サンドボックスタイプ間の表示を変更するには、 select [!UICONTROL  実稼動用サンドボックス ] または [!UICONTROL  開発用サンドボックス ]。 選択されたサンドボックスタイプ is サンドボックス名の横のラジオボタンで示されます。
+実稼動用サンドボックスと開発用サンドボックスのタイプ間で表示を変更するには、[!UICONTROL  実稼動用サンドボックス ] または [!UICONTROL  開発用サンドボックス ] を選択します。 選択したサンドボックスタイプは、サンドボックス名の横のラジオボタンで示されます。
 
-サンドボックスの消費レポートは、同じタイプのすべてのサンドボックスに対して累積的です。 In つまり、「[!UICONTROL  実稼動 ]」または「[!UICONTROL  開発 ]」を選択すると、それぞれ、すべての実稼動サンドボックスまたは開発用サンドボックスの消費レポートが表示されます。
+サンドボックスの消費レポートは、同じタイプのすべてのサンドボックスに対して累積的です。 つまり、「実稼動 [!UICONTROL  または  開発 ] を選択すると、それぞれ、すべての実稼動サンドボックスまたは開発用サンドボックスの消費レポートが表示されます。
 
 ![ 実稼動用サンドボックスと開発用サンドボックスがハイライト表示された Platform 製品の概要ビュー ](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
-ライセンス使用状況ダッシュボードを表示する権限は、サンドボックスレベルで指定する必要があります。 個々のサンドボックスに権限を追加して、ダッシュボード内で表示します。 この制限は、今後のリリースで対処される予定です。 それまでの間、次の回避策を使用できます。
+>ライセンス使用状況ダッシュボードを表示する権限は、サンドボックスレベルで指定する必要があります。 個々のサンドボックスに権限を追加して、ダッシュボード内で表示します。 この制限は、今後のリリースで対処される予定です。 それまでの間、次の回避策を使用できます。
 >
-1. Adobe Admin Consoleで製品プロファイルを作成します。
-2. サンドボックス カテゴリの権限で、表示するすべてのサンドボックスをライセンス使用状況ダッシュボードに追加します。
-3. ユーザーダッシュボード権限カテゴリで、「ライセンス使用状況ダッシュボードを表示」権限を追加します。
+>1. Adobe Admin Consoleで製品プロファイルを作成します。
+>2. サンドボックス カテゴリの権限で、表示するすべてのサンドボックスをライセンス使用状況ダッシュボードに追加します。
+>3. ユーザーダッシュボード権限カテゴリで、「ライセンス使用状況ダッシュボードを表示」権限を追加します。
 
 ## [!UICONTROL  詳細 ] タブ {#details-tab}
 
@@ -201,7 +197,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 | [!UICONTROL  データの書き出しサイズ ] | 1 年にデータセットのアクティベーションを通じて送信されるデータの量。 |
 | [!UICONTROL  データの書き出し ] | 1 年に（直接または間接的に）Adobe以外のソリューションに書き出すことができるデータセットの合計サイズ。 |
 | [!UICONTROL Data Lake ストレージ ] | Adobe Experience Platform内で使用される分析データストアの量です。 |
-| [!UICONTROL  エンゲージメント可能なオーディエンス ] | この指標は、エンゲージメント可能なプロファイルのオーディエンスを参照します。 エンゲージメント可能なプロファイルは、個人を表す情報のレコードで、プロファイルサービスで表されます。 これらのレコードは、過去 12 か月間に、Journey Optimizerのオーサリング、意思決定、配信、実験またはオーケストレーション機能を使用してエンゲージしようとしたプロファイルです。 |
+| [!UICONTROL  エンゲージメント可能なオーディエンス ] | この指標は、エンゲージメント可能なプロファイルのオーディエンスを参照します。 エンゲージメント可能なプロファイルは、個人を表す情報のレコードで、プロファイルサービスで表示されます。これらのレコードは、過去 12 か月間に、Journey Optimizer のオーサリング、意思決定、配信、実験またはオーケストレーション機能を使用してエンゲージしようとしたプロファイルです。 |
 | [!UICONTROL  類似オーディエンス ] | 既存の消費者オーディエンスをモデリングして、その既存の消費者オーディエンスに類似したユーザープロファイルを識別することで生成されるオーディエンスの数。 |
 | [!UICONTROL AMM モデルの数 ] | 投資に基づいて指定された成果を測定または予測するために使用される機械学習モデル（Adobe Mix Modelerで構築）のカウント。 |
 | [!UICONTROL  サンドボックスの数 ] | データと操作を分離してAdobe Experience PlatformにアクセスするAdobeのオンデマンドサービスのインスタンス内の論理分離の数。 |
@@ -213,7 +209,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!TIP]
 >
-販売注文でライセンスの使用権限を確認して、「ストレージ許可」などの指標を計算できます。<br> 例：<ul><li>ストレージ許可=契約内の「承認済みプロファイル」の数 X プロファイルの平均充実度</li></ul>
+>販売注文でライセンスの使用権限を確認して、「ストレージ許可」などの指標を計算できます。<br> 例：<ul><li>ストレージ許可=契約内の「承認済みプロファイル」の数 X プロファイルの平均充実度</li></ul>
 
 これらの指標の可用性と各指標の具体的な定義は、組織が購入したライセンスによって異なります。 各指標の定義について詳しくは、該当する製品説明ドキュメントを参照してください。
 
@@ -228,7 +224,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!WARNING]
 >
-ライセンス使用状況ダッシュボードは、組織にプロビジョニングされた最新のライセンスに関してのみレポートします。 組織にプロビジョニングされた最新のライセンスが上の表に表示されない場合、ライセンス使用状況ダッシュボードが正しく表示されない可能性があります。 今後のリリースで、1 つの組織での追加ライセンスと複数ライセンスのサポートが予定されています。
+>ライセンス使用状況ダッシュボードは、組織にプロビジョニングされた最新のライセンスに関してのみレポートします。 組織にプロビジョニングされた最新のライセンスが上の表に表示されない場合、ライセンス使用状況ダッシュボードが正しく表示されない可能性があります。 今後のリリースで、1 つの組織での追加ライセンスと複数ライセンスのサポートが予定されています。
 
 ## 次の手順
 
