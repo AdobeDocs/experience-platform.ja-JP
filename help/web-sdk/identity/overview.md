@@ -2,33 +2,43 @@
 title: Web SDK の ID データ
 description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID （ECID）を取得および管理する方法について説明します。
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1472'
 ht-degree: 2%
 
 ---
 
+
 # Web SDK の ID データ
 
-Adobe Experience Platform Web SDK は、[Adobe Experience Cloud ID （ECID） ](../../identity-service/features/ecid.md) を使用して訪問者の行動を追跡します。 ECID を使用すると、各デバイスに、複数のセッションにわたって保持できる一意の ID を設定し、web セッション中およびセッション間で発生するすべてのヒットを特定のデバイスに結び付けることができます。
+Adobe Experience Platform Web SDK は、[Adobe Experience Cloud ID （ECID） ](../../identity-service/features/ecid.md) を使用して訪問者の行動を追跡します。 [!DNL ECIDs] を使用すると、各デバイスに一意の ID を設定し、複数のセッションにわたって保持し、web セッション中およびセッション間で発生するすべてのヒットを特定のデバイスに結び付けることができます。
 
-このドキュメントでは、Platform Web SDK を使用して ECID を管理する方法の概要を説明します。
+このドキュメントでは、Web SDK を使用して [!DNL ECIDs] を管理する方法の概要を説明します。
 
-## SDK を使用した ECID のトラッキング
+## Web SDK を使用した ECID のトラッキング {#tracking-ecids-we-sdk}
 
-Platform Web SDK は、これらの cookie の生成方法を設定できる複数の方法を使用して、cookie を使用して ECID の割り当てと追跡を行います。
+Web SDK は、これらの cookie の生成方法を設定できる複数の方法を使用して、cookie を使用して [!DNL ECIDs] ータを割り当て、追跡します。
 
-新しいユーザーが web サイトにアクセスすると、Adobe Experience Cloud ID サービスは、そのユーザーのデバイス ID cookie の設定を試みます。 初回の訪問者の場合、ECID が生成され、Adobe Experience Platform Edge Networkからの最初の応答で返されます。 リピート訪問者の場合、ECID は `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie から取得され、Edge Networkによってペイロードに追加されます。
+Web サイトに新しいユーザーが到達すると、[Adobe Experience Cloud ID サービスは ](../../identity-service/home.md) そのユーザーのデバイス ID Cookie の設定を試みます。
 
-ECID を含む Cookie を設定すると、Web SDK で生成される後続の各リクエストでは、`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie にエンコードされた ECID が含まれます。
+* 初回の訪問者の場合、[!DNL ECID] が生成され、Experience PlatformEdge Networkからの最初の応答で返されます。
+* 再訪問者の場合、[!DNL ECID] は `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie から取得され、Edge Networkによってリクエストペイロードに追加されます。
 
-デバイスの識別に Cookie を使用する場合、Edge Networkを操作するには 2 つの選択肢があります。
+[!DNL ECID] を含む cookie が設定されると、Web SDK によって生成される後続の各リクエストでは、`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` の cookie にエンコードされた [!DNL ECID] が含まれます。
 
-1. データをEdge Networkドメイン `adobedc.net` に直接送信します。 この方法は、[ サードパーティのデータ収集 ](#third-party) と呼ばれます。
+デバイスの識別に Cookie を使用する場合、Edge Networkを操作するには次の 2 つの方法があります。
+
 1. `adobedc.net` を指す CNAME を独自のドメインに作成します。 このメソッドは、[ ファーストパーティデータ収集 ](#first-party) と呼ばれます。
+1. データをEdge Networkドメイン `adobedc.net` に直接送信します。 この方法は、[ サードパーティのデータ収集 ](#third-party) と呼ばれます。
 
 以下の節で説明するように、使用するデータ収集方法は、ブラウザー間の Cookie の有効期間に直接影響します。
+
+### ファーストパーティデータ収集 {#first-party}
+
+ファーストパーティデータ収集では、`adobedc.net` を指す独自のドメイン上の `CNAME` を使用して Cookie を設定します。
+
+ブラウザーは、サイトが所有するエンドポイントで設定された cookie と同様の方法で、`CNAME` エンドポイントで設定された cookie を長い間扱ってきましたが、ブラウザーが実装された最近の変更により、`CNAME` の cookie の処理方法が区別されるようになりました。 現在、デフォルトでファーストパーティ `CNAME` cookie をブロックするブラウザーはありませんが、一部のブラウザーでは、`CNAME` を使用して設定された cookie の有効期間が 7 日間に制限されています。
 
 ### サードパーティのデータ収集 {#third-party}
 
@@ -36,23 +46,17 @@ ECID を含む Cookie を設定すると、Web SDK で生成される後続の�
 
 近年、Web ブラウザーでは、サードパーティによって設定された Cookie の処理に対する制限がますます厳しくなっています。 一部のブラウザーでは、デフォルトでサードパーティ cookie がブロックされます。 サードパーティ cookie を使用してサイト訪問者を識別する場合、それらの cookie の有効期間は、ほとんどの場合、代わりにファーストパーティ cookie を使用して使用可能な場合よりも短くなります。 場合によっては、サードパーティ cookie の有効期限が 7 日以内に切れます。
 
-また、サードパーティのデータ収集が使用される場合、一部の広告ブロッカーは、Adobeのデータ収集エンドポイントへのトラフィックを完全に制限します。
-
-### ファーストパーティデータ収集 {#first-party}
-
-ファーストパーティデータ収集では、`adobedc.net` を指す独自のドメインで CNAME を使用して Cookie を設定します。
-
-ブラウザーは長い間、サイトが所有するエンドポイントと同様に、CNAME エンドポイントで設定された Cookie を処理してきましたが、ブラウザーで実装された最近の変更により、CNAME Cookie の処理方法に区別が生まれました。 現在、デフォルトでファーストパーティ CNAME Cookie をブロックするブラウザーはありませんが、一部のブラウザーでは、CNAME を使用して設定された Cookie の有効期間がわずか 7 日に制限されています。
+また、サードパーティのデータ収集を使用する場合、一部の広告ブロッカーは、Adobeのデータ収集エンドポイントへのトラフィックを完全に制限します。
 
 ### Adobe Experience Cloud アプリケーションへの cookie の有効期間の影響 {#lifespans}
 
-ファーストパーティとサードパーティのどちらのデータ収集を選択した場合でも、cookie が保持される期間は、Adobe AnalyticsとCustomer Journey Analyticsの訪問者数に直接影響します。 また、サイトでAdobe TargetまたはOffer decisioningを使用した際に、一貫性のないパーソナライゼーションエクスペリエンスがエンドユーザーに提供される可能性があります。
+ファーストパーティとサードパーティのどちらのデータ収集を選択したかに関係なく、cookie が保持できる期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/en/docs/target) または [Offer decisioning} を使用すると、エンドユーザーのパーソナライゼーションエクスペリエンスに一貫性がなくな ](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) 場合があります。
 
 例えば、過去 7 日間にユーザーが 3 回表示した項目を、ホームページに昇格させるパーソナライゼーションエクスペリエンスを作成した場合を考えてみましょう。
 
-エンドユーザーが週に 3 回訪問し、その後 7 日間サイトに戻らない場合、そのユーザーの Cookie はブラウザーポリシーによって削除された可能性があるので、サイトに戻ったときに新しいユーザーと見なされる場合があります（サイトを訪問したときに使用していたブラウザーによって異なります）。 この問題が発生した場合、Analytics ツールは、7 日前にサイトに訪問したばかりの訪問者でも、新しいユーザーとして扱います。 また、ユーザーのエクスペリエンスをパーソナライズする作業も再び開始されます。
+エンドユーザーが週に 3 回訪問し、その後 7 日間サイトに戻らない場合、そのユーザーの Cookie はブラウザーポリシーによって削除された可能性があるので、サイトに戻ったときに新しいユーザーと見なされる場合があります（サイトを訪問したときに使用していたブラウザーによって異なります）。 このような状況が発生した場合、Analytics ツールは、7 日以上前にサイトに訪問した訪問者であっても、その訪問者を新しいユーザーとして扱います。 また、ユーザーのエクスペリエンスをパーソナライズする作業も再び開始されます。
 
-### ファーストパーティデバイス ID
+### ファーストパーティデバイス ID （FPID） {#fpid}
 
 上記のように cookie の有効期間の影響を考慮して、代わりに、独自のデバイス識別子を設定および管理することを選択できます。 詳しくは、[ファーストパーティデバイス ID](./first-party-device-ids.md) に関するガイドを参照してください。
 
@@ -147,7 +151,7 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 
 `identityMap` フィールドを使用してデバイスまたはユーザーを識別すると、[!DNL ID Service API] から [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) メソッドを使用した場合と同じ結果が得られます。 詳しくは、[ID サービス API ドキュメント ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) を参照してください。
 
-## 訪問者 API から ECID への移行
+## 訪問者 API から ECID への移行 {#migrating-visitor-api-ecid}
 
 から Visitor API を使用して移行する場合、既存の AMCV Cookie も移行できます。 ECID 移行を有効にするには、設定で `idMigrationEnabled` パラメーターを設定します。 ID 移行により、次のユースケースが可能になります。
 
