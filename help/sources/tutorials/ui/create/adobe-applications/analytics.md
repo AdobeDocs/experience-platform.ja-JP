@@ -2,10 +2,10 @@
 title: UI での Adobe Analytics ソースコネクタの作成
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 40%
+source-wordcount: '2577'
+ht-degree: 42%
 
 ---
 
@@ -301,7 +301,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![ 組織内の既存のAdobe Analytics データフローのリスト。](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-[!UICONTROL  データセットアクティビティ ] ページには、Analytics からExperience Platformに送信されるデータの進行状況に関する情報が表示されます。 このインターフェイスには、取り込まれたレコード数、取り込まれたバッチ数、失敗したバッチ数などの指標が表示されます。
+[!UICONTROL  データセットアクティビティ ] ページには、Analytics からExperience Platformに送信されるデータの進行状況に関する情報が表示されます。 インターフェイスには、先月のレコードの合計、過去 7 日間に取り込んだレコードの合計、先月のデータのサイズなどの指標が表示されます。
 
 ソースは、2 つのデータセットフローをインスタンス化します。 1 つのフローはバックフィルデータ、もう 1 つはライブデータのフローを表します。 バックフィルデータは、リアルタイム顧客プロファイルへの取り込み用に設定されていませんが、分析およびデータサイエンスのユースケース用にデータレイクへと送信されます。
 
@@ -309,35 +309,9 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![Adobe Analytics データ用の特定のターゲットデータセットのデータセットアクティビティページ ](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++レガシー監視インターフェイスを使用した個々のバッチの表示
-
-データセットアクティビティページに個々のバッチのリストが表示されません。 個々のバッチのリストを表示するには、データセットアクティビティインターフェイスでグラフを選択します。
-
-![ グラフが選択されたデータセットアクティビティページ ](../../../../images/tutorials/create/analytics/select-chart.png)
-
-監視ダッシュボードが表示されます。 次に、「**[!UICONTROL 失敗の取り込みのみ：はい]**」を選択して、フィルターをクリアし、個々のバッチのリストを表示します。
-
-![ 失敗フィルターが選択された監視ダッシュボード。](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-インターフェイスは、個々のバッチのリスト（それぞれの指標に関する情報を含む）に対して更新されます。
-
-![ バッチデータの従来の監視ページ ](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| 指標 | 説明 |
-| --- | --- |
-| バッチ ID | 指定されたバッチの ID。 この値は内部的に生成されます。 |
-| データセット名 | Analytics データに使用される特定のデータセットの名前。 |
-| ソース | 取り込まれたデータのソース。 |
-| 更新済み | 最新のフロー実行イテレーションの日付。 |
-| データセットのレコード | データセット内のレコードの合計数。 **メモ**：このパラメーターには、場合によっては `in-progress` のステータスが表示されます。 このステータスは、レコードの取り込みプロセスがまだ完了していないことを示します。 |
-| 新しいプロファイルフラグメント | 取り込まれた新しいプロファイルフラグメントの合計数。 |
-| 既存のプロファイルフラグメント | 既存のプロファイルフラグメントの合計数。 |
-| ステッチされた ID レコード | 取り込み後にステッチされた ID レコードの合計数。 |
-| プロファイル内のレコード | リアルタイム顧客プロファイルに取り込まれたレコードの合計数。 |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>Analytics ソースコネクタは完全にAdobeによって管理されるので、データセットアクティビティページにバッチに関する情報が表示されません。 取り込んだレコードの周囲の指標を確認することで、データのフローを監視できます。
 
 ## 次の手順とその他のリソース
 

@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年8月
 description: Adobe Experience Platform の 2024年8月のリリースノート。
-source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
+exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
+source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 29%
+source-wordcount: '1562'
+ht-degree: 28%
 
 ---
 
@@ -130,6 +131,12 @@ ID サービスについて詳しくは、[ID サービスの概要](../../ident
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
 Experience Platformのソースを使用すると、Adobeアプリケーションまたはサードパーティのデータソースからデータを取り込むことができます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| Adobe Analytics ソースコネクタの更新 | Analytics Source コネクタはAdobeによって完全に管理されるので、データセットアクティビティページにバッチに関する情報が表示されません。 取り込んだレコードの周囲の指標を確認することで、データのフローを監視できます。 詳しくは、[Analytics データのソース接続 ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) の作成に関するガイドを参照してください。 |
 
 **ドキュメントの更新**
 
