@@ -5,9 +5,9 @@ breadcrumb-title: データ取り込みガイド
 user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Experience Platform に取り込みます。
 feature: Data Ingestion
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '142'
 ht-degree: 95%
 
 ---
@@ -44,7 +44,6 @@ ht-degree: 95%
    - [エラー診断の取得](quality/error-diagnostics.md)
    - [失敗したバッチの取得](quality/retrieve-failed-batches.md)
    - [ストリーミング取得検証](quality/streaming-validation.md)
-   - [データ取得通知](quality/subscribe-events.md)
 - [データ取り込みのガードレール](guardrails.md)
 - [ソースコネクタ](source-connectors.md)
 - [バッチ取り込み API リファレンス](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)

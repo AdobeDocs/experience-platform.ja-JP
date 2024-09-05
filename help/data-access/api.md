@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データアクセス API ガイド
 description: Data Access API は、Experience Platform内に取り込んだデータセットの検出可能性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供することで、Adobe Experience Platformをサポートします。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 44%
+ht-degree: 42%
 
 ---
 
@@ -243,4 +243,4 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## データ取得イベントへのサブスクライブ {#subscribe-to-data-ingestion-events}
 
-[Adobe Developer Console](https://developer.adobe.com/console/) を通じて、特定の価値の高いイベントを購読できます。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[データ取得通知のサブスクライブ](../ingestion/quality/subscribe-events.md)のチュートリアルを参照してください。
+[Adobe Developer Console](https://developer.adobe.com/console/) を通じて、特定の価値の高いイベントを購読できます。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[Adobeイベント通知の登録 ](../observability/alerts/subscribe.md) のチュートリアルを参照してください。

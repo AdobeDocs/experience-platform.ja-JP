@@ -4,9 +4,9 @@ title: Adobe I/O イベント通知の登録
 description: このドキュメントでは、Adobe Experience Platform サービスの Adobe I/O イベント通知を登録する手順を説明します。利用可能なイベントタイプに関する参照情報も、該当する各 [!DNL Platform] サービスに対して返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクとともに提供されます。
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '767'
 ht-degree: 90%
 
 ---
@@ -98,7 +98,6 @@ ht-degree: 90%
 このチュートリアルに従い、[!DNL Experience Platform] および／または [!DNL Privacy Service] の [!DNL I/O Event] 通知を受け取る Webhook を登録しました。使用可能なイベントと各サービスの通知ペイロードの解釈方法について詳しくは、次のドキュメントを参照してください。
 
 * [[!DNL Privacy Service] 通知](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] 通知](../../ingestion/quality/subscribe-events.md)
 * [[!DNL Flow Service] （ソース）通知](../../sources/notifications.md)
 
 [!DNL Experience Platform] と [!DNL Privacy Service] でアクティビティを監視する方法について詳しくは、[[!DNL Observability Insights] 概要](../home.md)を参照してください。

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データアクセスの概要
 description: Data Access は、取り込まれた Platform データセットの検出性とアクセス性に重点を置いたツールをユーザーに提供することで、Adobe Experience Platform をサポートします。
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -29,4 +29,4 @@ Data Science Workspace でのレシピおよびモデル開発の際、[!DNL Pyt
 
 ## データ取得イベントへのサブスクライブ
 
-[!DNL Platform] は、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) を介して特定の価値の高いイベントをサブスクリプションで利用できるようにします。例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[データ取得通知のサブスクライブ](../ingestion/quality/subscribe-events.md)のチュートリアルを参照してください。
+[!DNL Platform] は、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) を介して特定の価値の高いイベントをサブスクリプションで利用できるようにします。例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[Adobeイベント通知の登録 ](../observability/alerts/subscribe.md) のチュートリアルを参照してください。
