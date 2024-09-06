@@ -1,0 +1,297 @@
+---
+title: ID グラフリンクルールのトラブルシューティングガイド
+description: ID グラフリンクルールに関するよくある問題のトラブルシューティング方法を説明します。
+badge: ベータ版
+source-git-commit: cb0e229ac68f53d33b83d54df4062469252f06a3
+workflow-type: tm+mt
+source-wordcount: '2019'
+ht-degree: 0%
+
+---
+
+# ID グラフリンクルールのトラブルシューティングガイド
+
+>[!AVAILABILITY]
+>
+>ID グラフリンクルール機能は、現在ベータ版です。 パーティシペーションの条件については、Adobeアカウントチームにお問い合わせください。 機能とドキュメントは変更される場合があります。
+
+ID グラフのリンクルールをテストおよび検証すると、データの取り込みとグラフの動作に関連する問題が発生する場合があります。 このドキュメントでは、ID グラフリンクルールを使用する際に発生する可能性のあるいくつかの一般的な問題のトラブルシューティング方法について説明します。
+
+## データ取り込みフローの概要 {#data-ingestion-flow-overview}
+
+次の図は、データがAdobe Experience Platformとアプリケーションに送られる仕組みを簡単に表したものです。 このページの内容をより深く理解するために、この図を参考にしてください。
+
+![ID サービスでのデータ取り込みのフローを示す図。](../images/troubleshooting/dataflow_in_identity.png)
+
+次の要因に注意することが重要です。
+
+* ストリーミングデータの場合、リアルタイム顧客プロファイル、ID サービスおよびデータレイクは、データの送信時にデータの処理を開始します。 ただし、データの処理が完了するまでの待ち時間は、サービスによって異なります。 通常、データレイクは、プロファイルと ID に比べて、処理に時間がかかります。
+   * 数時間経ってもデータセットに対するクエリの実行時にデータが表示されない場合は、データがExperience Platformに取り込まれていない可能性があります。
+* バッチデータの場合、すべてのデータは最初にデータレイクに送られ、次に、データセットがプロファイルと ID で有効になっている場合、データはプロファイルと ID に伝播されます。
+* 取り込みに関連する問題については、正確なデバッグとトラブルシューティングを行うために、問題をサービスレベルで分離することが重要です。 考慮すべき潜在的な問題タイプは次の 3 つです。
+
+| 取り込み問題タイプ | データはデータレイクで取り込まれますか？ | データはプロファイルに取り込まれますか？ | データは ID サービスに取り込まれますか？ |
+| --- | --- | --- | --- |
+| 一般的な取り込みの問題 | × | × | × |
+| グラフの問題 | ○ | ○ | × |
+| プロファイルフラグメントの問題 | ○ | × | ○ |
+
+## データ取り込みの問題 {#data-ingestion-issues}
+
+>[!NOTE]
+>
+>* この節では、データがデータレイクに正常に取り込まれたこと、およびデータがまずExperience Platformに取り込まれるのを妨げる構文またはその他のエラーがないことを前提としています。
+>
+>* これらの例では、ECID を cookie 名前空間として、CRMID をユーザー名前空間として使用しています。
+
+### ID が ID サービスに取り込まれない{#my-identities-are-not-getting-ingested-into-identity-service}
+
+これが発生する理由には、次のように様々な理由があります（ただし、これらに限定されません）。
+
+* [ データセットはプロファイルに対して有効になっていません ](../../catalog/datasets/enable-for-profile.md)。
+* イベントには ID が 1 つしかないので、レコードはスキップされます。
+* [ID サービスで検証エラーが発生しました ](../guardrails.md#identity-value-validation)。
+   * 例えば、ECID が最大長の 38 文字を超えている場合があります。
+* デフォルトでは、[AAID の取り込みはブロックされます ](../guardrails.md#identity-namespace-ingestion)。
+* [ システムガードレール ](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) が原因で、ID が削除されます。
+
+受信イベントには同じ一意の名前空間を持つが ID 値が異なる 2 つ以上の ID があるので、ID グラフリンクルールのコンテキスト内で、レコードが ID サービスから拒否される場合があります。 このシナリオは通常、実装エラーが原因で発生します。
+
+次の 2 つの前提があるイベントについて考えてみます。
+
+* フィールド名 CRMID は、名前空間 CRMID で ID としてマークされます。
+* 名前空間 CRMID は、一意の名前空間として定義されます。
+
+次のイベントは、取り込みが失敗したことを示すエラーメッセージを返します。
+
+<!-- because the ingestion of this erroneous event would have resulted in graph collapse. In the following event, two entities (Alice and Bob) are both associated with the same namespace (CRMID). -->
+
+```json
+{ 
+  "_id": "random_string", 
+  "eventType": "web browsing event", 
+  "identityMap": { 
+    "ECID": [ 
+      { 
+        "id": "11111111111111111111111111111111111111", 
+        "primary": false 
+      } 
+    ], 
+    "CRMID": [ 
+      { 
+        "id": "Alice", 
+        "primary": true 
+      } 
+    ] 
+  }, 
+  "CRMID": "Bob", 
+  "timestamp": "2024-08-17T15:22:51+00:00", 
+  "web": { 
+    "webPageDetails": { 
+      "URL": "https://www.adobe.com/acrobat.html", 
+      "name": "Adobe Acrobat" 
+    } 
+  } 
+} 
+```
+
+**トラブルシューティング手順**
+
+このエラーを解決するには、まず次の情報を収集する必要があります。
+
+* ID グラフに取り込まれると想定される ID 値（`identity_value`）。
+* イベントが送信されたデータセット（`dataset_name`）。
+
+次に、[Adobe Experience Platform クエリサービスを使用して ](../../query-service/home.md) 次のクエリを実行します。
+
+>[!TIP]
+>
+>`dataset_name` と `identity_value` を、収集した情報に置き換えます。
+
+```sql
+  SELECT key, col.id as identityValue, timestamp, _id, identityMap, * 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id = 'identity_value' 
+```
+
+クエリを実行した後、グラフを生成するために必要なイベントレコードを見つけ、同じ行で ID 値が異なることを検証します。 例として、次の画像を表示します。
+
+![ 名前空間の重複を引き起こした名称未設定のクエリ。](../images/troubleshooting/duplicated_unique_namespace.png)
+
+>[!NOTE]
+>
+>2 つの ID が完全に同じで、イベントがストリーミング経由で取り込まれる場合、ID とプロファイルの両方で ID の重複が排除されます。
+
+### エクスペリエンスイベントフラグメントがプロファイルに取り込まれない {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
+
+エクスペリエンスイベントフラグメントがプロファイルに取り込まれない理由には、次のように様々な理由があります（ただし、これに限定されません）。
+
+* [ データセットはプロファイルに対して有効になっていません ](../../catalog/datasets/enable-for-profile.md)。
+* [ プロファイルで検証エラーが発生した可能性があります ](../../xdm/classes/experienceevent.md)。
+   * 例えば、エクスペリエンスイベントには、`_id` と `timestamp` の両方を含める必要があります。
+   * さらに、`_id` はイベント（レコード）ごとに一意である必要があります。
+
+名前空間の優先度のコンテキストでは、プロファイルは、名前空間の優先度が最も高い 2 つ以上の ID を含むイベントを拒否します。 例えば、GAID が一意の名前空間としてマークされておらず、GAID 名前空間と異なる ID 値の両方を持つ 2 つの ID が入った場合、プロファイルは、イベントを保存しません。
+
+**トラブルシューティング手順**
+
+このエラーを解決するには、上記のガイドで概説されているトラブルシューティング手順 [ID サービスに取り込まれないデータに関するエラーのトラブルシューティング ](#my-identities-are-not-getting-ingested-into-identity-service) を参照してください。
+
+### エクスペリエンスイベントフラグメントが取り込まれたが、プロファイルに「間違った」プライマリ ID がある
+
+名前空間の優先度は、イベントフラグメントがプライマリ ID を決定する方法において重要な役割を果たします。
+
+* 特定のサンドボックスに対して [ID 設定 ](./identity-settings-ui.md) を設定および保存すると、プロファイルは [ 名前空間優先度 ](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) を使用してプライマリ ID を決定します。 identityMap の場合、プロファイルは `primary=true` フラグを使用しなくなります。
+* プロファイルではこのフラグは参照されなくなりますが、Experience Platform上の他のサービスでは引き続き `primary=true` フラグを使用する場合があります。
+
+[ 認証済みユーザーイベント ](configuration.md#ingest-your-data) をユーザー名前空間に結び付けるには、すべての認証済みイベントにユーザー名前空間（CRMID）が含まれている必要があります。 つまり、ユーザーがログインした後も、認証済みのすべてのイベントにユーザーの名前空間が引き続き存在する必要があります。
+
+プロファイルビューアでプロファイル `primary=true` 検索する際に、「イベント」フラグが引き続き表示される場合があります。 ただし、これは無視され、プロファイルでは使用されません。
+
+AAID はデフォルトでブロックされます。 したがって、[Adobe Analytics ソースコネクタ ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用している場合は、未認証のイベントが ECID のプライマリ ID を持つように、ECID の優先順位が ECID よりも高くなるように設定する必要があります。
+
+**トラブルシューティング手順**
+
+* 認証済みイベントにユーザーと cookie の名前空間の両方が含まれていることを検証するには、[ID サービスに取り込まれないデータに関するエラーのトラブルシューティング ](#my-identities-are-not-getting-ingested-into-identity-service) に関する節で説明されている手順を読んでください。
+* 認証済みのイベントにユーザー名前空間のプライマリ ID （CRMID など）があることを検証するには、ステッチなし結合ポリシー（プライベートグラフを使用しない結合ポリシー）を使用して、プロファイルビューアでユーザー名前空間を検索します。 この検索では、ユーザー名前空間に関連付けられたイベントのみが返されます。
+
+## グラフの動作に関連する問題 {#graph-behavior-related-issues}
+
+この節では、ID グラフの動作に関して発生する可能性のある一般的な問題について説明します。
+
+### ID が「間違った」人物にリンクされています
+
+ID 最適化アルゴリズムは、[ 最近確立されたリンク ](./identity-optimization-algorithm.md#identity-optimization-algorithm-details) を優先し、最も古いリンクを削除します。 したがって、この機能を有効にすると、あるユーザーから別のユーザーに ECID を再割り当て（再リンク）できるようになります。 ID が時間の経過と共にどのようにリンクされるかの履歴を理解するには、次の手順に従います。
+
+**トラブルシューティング手順**
+
+>[!NOTE]
+>
+>以下の手順は、以下の前提に基づいて情報を取得します。
+>
+>* 単一のデータセットが使用されています（複数のデータセットはクエリされません）。
+>
+>* [Advanced Data Lifecycle Management](../../hygiene/home.md)、[Privacy Service](../../privacy-service/home.md)、または削除を実行するその他のサービスによる削除が原因で、データは Data Lake から削除されません。
+
+まず、次の情報を収集する必要があります。
+
+* 送信された cookie 名前空間（ECID など）とユーザー名前空間（CRMID など）の ID 記号（namespaceCode）。
+   * Web SDK 実装の場合、通常、identityMap に含まれる名前空間になります。
+   * Analytics ソースコネクタ実装の場合、identityMap に含まれる cookie 識別子です。 人物識別子は、ID としてマークされたeVarフィールドです。
+* イベントが送信されたデータセット （dataset_name）。
+* 検索する cookie 名前空間の ID 値（identity_value）。
+
+ID 記号（namespaceCode）は大文字と小文字が区別されます。 identityMap で特定のデータセットのすべての ID 記号を取得するには、次のクエリを実行します。
+
+```sql
+SELECT distinct explode(*)FROM (SELECT map_keys(identityMap) FROM dataset_name)
+```
+
+cookie 識別子の ID 値が不明な場合、複数のユーザー識別子にリンクされた cookie ID を検索するには、次のクエリを実行する必要があります。 このクエリでは、ECID を cookie 名前空間、CRMID を人物名前空間と想定しています。
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK の実装 ]
+
+```sql
+  SELECT identityMap['ECID'][0]['id'], count(distinct identityMap['CRMID'][0]['id']) as crmidCount FROM dataset_name GROUP BY identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
+```
+
+>[!TAB Analytics ソースコネクタの実装 ]
+
+```sql
+  SELECT identityMap['ECID'][0]['id'], count(distinct personID) as crmidCount FROM dataset_name group by identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
+```
+
+**メモ：personID** 記述子のパスを参照します。 この情報は、スキーマの下にあります。
+
+>[!ENDTABS]
+
+次に、次のクエリを実行して、タイムスタンプ順に cookie 名前空間の関連付けを確認します。
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK の実装 ]
+
+```sql
+  SELECT identityMap['CRMID'][0]['id'] as personEntity, * 
+  FROM dataset_name 
+  WHERE identitymap['ECID'][0].id ='identity_value' 
+  ORDER BY timestamp desc 
+```
+
+>[!TAB Analytics ソースコネクタの実装 ]
+
+```sql
+SELECT _experience.analytics.customDimensions.eVars.eVar10 as personEntity, * 
+FROM dataset_name 
+WHERE identitymap['ECID'][0].id ='identity_value' 
+ORDER BY timestamp desc 
+```
+
+**注意**：この例では、`eVar10` が ID としてマークされていることを前提としています。 設定に関しては、組織の実装に基づいてeVarを変更する必要があります。
+
+>[!ENDTABS]
+
+### ID 最適化アルゴリズムが期待どおりに「動作」していません
+
+**トラブルシューティング手順**
+
+詳しくは、[ID 最適化アルゴリズム ](./identity-optimization-algorithm.md) およびサポートされるグラフ構造のタイプに関するドキュメントを参照してください。
+
+* サポートされるグラフ構造の例については、[ グラフ設定ガイド ](./example-configurations.md) を参照してください。
+* また、サポートされていないグラフ構造の例については、[ 実装ガイド ](./configuration.md#appendix) を参照してください。 発生する可能性があるシナリオは次の 2 つです。
+   * すべてのプロファイルに単一の名前空間はありません。
+   * [ 「ダングリング ID」 ](./configuration.md#dangling-loginid-scenario) シナリオが発生します。 このシナリオでは、ID サービスは、ダングリング ID がグラフ内の人物エンティティのいずれかに関連付けられているかどうかを判断できません。
+
+また、UI の [ グラフシミュレーションツール ](./graph-simulation.md) を使用して、イベントをシミュレートし、独自の名前空間や名前空間の優先度設定を設定することもできます。 これにより、ID 最適化アルゴリズムの動作のベースラインを理解するのに役立ちます。
+
+シミュレーション結果がグラフの動作の期待と一致する場合は、[ID 設定 ](./identity-settings-ui.md) がシミュレーションで設定した設定と一致するかどうかを確認できます。
+
+### ID 設定を指定した後も、サンドボックスに折りたたまれたグラフが表示されます
+
+ID グラフは、設定された一意の名前空間と名前空間の優先度 _設定が保存された後_ に従います。 新しい設定を保存する _前_ に存在する「折りたたまれた」グラフは、折りたたまれたグラフが更新されるように新しいデータが取り込まれるまで、影響を受けません。 リアルタイム顧客プロファイルのイベントフラグメントのプライマリ ID は、名前空間の優先度が変更された後も更新されません。
+
+**トラブルシューティング手順**
+
+[ID グラフビューア ](../features/identity-graph-viewer.md) を使用すると、グラフが設定の前または後に取り込まれたかどうかを確認できます。 [!UICONTROL  リンクプロパティ ] の下で最終更新されたタイムスタンプを調べて、ID サービスがグラフを取り込んだタイミングを確認します。 タイムスタンプが設定前の場合は、機能を有効にする前に「折りたたまれた」グラフが作成されたことを示します。
+
+![ グラフの例を示す ID グラフビューア ](../images/troubleshooting/graph_viewer.png)
+
+### サンドボックス内に「折りたたまれた」グラフが何本存在するかを知りたい
+
+ID ダッシュボードを使用すると、ID の数やグラフなど、ID グラフの状態に関するインサイトを得ることができます。 折りたたまれたグラフの数については、指標「複数の名前空間を持つグラフの数」を参照してください。これらは、同じ名前空間を持つ複数の ID を含むグラフです。 サンドボックスにデータがなく、名前空間（CRMID など）を一意になるように設定した場合、2 つ以上の CRMID を持つグラフがゼロになることが想定されます。 次の例では、2 つ以上のメールアドレスを含んだ 2 つのグラフがあります。
+
+![ID 数、グラフ数、名前空間別の数、サイズ別のグラフ数、2 つ以上の名前空間を持つグラフのグラフ数に関する指標を持つ ID ダッシュボード。](../images/troubleshooting/identity_dashboard.png)
+
+以下のクエリを実行すると、データレイクの [ プロファイルスナップショット書き出しデータセット ](../../dashboards/query.md) で詳細な分類を確認できます。
+
+>[!NOTE]
+>
+>* `dataset_name` をデータセットの実際の名前に置き換えます。
+>
+>* カウントは完全には一致しない場合があります。 ID ダッシュボードは ID グラフ数に基づいており、次のクエリは 2 つ以上の ID を含むプロファイル数に基づいています。 データは独立して処理され、サービスによって更新されます。
+
+```sql
+  SELECT key, identityCountInGraph, count(identityCountInGraph) as graphCount 
+  FROM (SELECT key, cardinality(value) as identityCountInGraph 
+  FROM (SELECT explode(identityMap) 
+  FROM dataset_name 
+  WHERE cardinality(identityMap) > 1)) /* by definition, graphs have 2 or more identities */ 
+  WHERE key not in ('ecid', 'aaid', 'idfa', 'gaid') /* filter out common device/cookie namespaces */ 
+  GROUP BY 1, 2 
+  ORDER BY 1, 2 asc 
+```
+
+プロファイルスナップショット書き出しデータセットで次のクエリを使用して、「折りたたまれた」グラフからサンプル ID を取得できます。
+
+```sql
+  SELECT identityMap 
+  FROM dataset_name 
+  WHERE cardinality(identityMap['CRMID'])>1 /* any graphs with 2+ CRMID. Change CRMID namespace if needed */ 
+```
+
+>[!TIP]
+>
+>上記の 2 つのクエリは、サンドボックスが共有デバイスの暫定的なアプローチに対して有効になっていない場合、予期される結果を生じ、ID グラフリンクルールとは異なる動作をします。
