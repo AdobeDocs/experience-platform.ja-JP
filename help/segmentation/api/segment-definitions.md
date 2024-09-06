@@ -4,10 +4,10 @@ title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 28%
+source-wordcount: '1472'
+ht-degree: 25%
 
 ---
 
@@ -176,6 +176,61 @@ POST /segment/definitions
 
 **リクエスト**
 
+新しいセグメント定義を作成する際は、`pql/text` 形式または `pql/json` 形式で作成できます。
+
+>[!BEGINTABS]
+
+>[!TAB pql/text の使用 ]
+
++++ セグメント定義を作成するリクエストの例。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+    }'
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `name` | セグメント定義を参照するための一意の名前。 |
+| `description` | （任意）作成するセグメント定義の説明。 |
+| `expression` | セグメント定義に関するフィールド情報を含んだエンティティ。 |
+| `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
+| `expression.format` | 値内の式の構造を示します。サポートされる値は `pql/text` と `pql/json` です。 |
+| `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
+| `evaluationInfo` | （任意）作成しているセグメント定義のタイプ。 バッチセグメントを作成する場合は、`evaluationInfo.batch.enabled` を true に設定します。 ストリーミングセグメントを作成する場合は、`evaluationInfo.continuous.enabled` を true に設定します。 エッジセグメントを作成する場合は、`evaluationInfo.synchronous.enabled` を true に設定します。 空のままにすると、セグメント定義は **バッチ** セグメントとして作成されます。 |
+| `schema` | セグメント内のエンティティに関連付けられているスキーマ。 `id` か `name` のどちらかのフィールドで構成されます。 |
+
++++
+
+>[!TAB pql/json の使用 ]
+
 +++ セグメント定義を作成するリクエストの例。
 
 ```shell
@@ -191,8 +246,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "description": "Last 30 days",
         "expression": {
             "type": "PQL",
-            "format": "pql/text",
-            "value": "workAddress.country = \"US\""
+            "format": "pql/json",
+            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"a\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}},{\"nodeType\":\"fieldLookup\",\"fieldName\":\"b\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}]}"
         },
         "evaluationInfo": {
             "batch": {
@@ -215,15 +270,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `name` | セグメント定義を参照するための一意の名前。 |
-| `description` | （オプション。） 作成するセグメント定義の説明。 |
-| `evaluationInfo` | （オプション。） 作成しているセグメント定義のタイプ。 バッチセグメントを作成する場合は、`evaluationInfo.batch.enabled` を true に設定します。 ストリーミングセグメントを作成する場合は、`evaluationInfo.continuous.enabled` を true に設定します。 エッジセグメントを作成する場合は、`evaluationInfo.synchronous.enabled` を true に設定します。 空のままにすると、セグメント定義は **バッチ** セグメントとして作成されます。 |
+| `description` | （任意）作成するセグメント定義の説明。 |
+| `evaluationInfo` | （任意）作成しているセグメント定義のタイプ。 バッチセグメントを作成する場合は、`evaluationInfo.batch.enabled` を true に設定します。 ストリーミングセグメントを作成する場合は、`evaluationInfo.continuous.enabled` を true に設定します。 エッジセグメントを作成する場合は、`evaluationInfo.synchronous.enabled` を true に設定します。 空のままにすると、セグメント定義は **バッチ** セグメントとして作成されます。 |
 | `schema` | セグメント内のエンティティに関連付けられているスキーマ。 `id` か `name` のどちらかのフィールドで構成されます。 |
 | `expression` | セグメント定義に関するフィールド情報を含んだエンティティ。 |
 | `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
-| `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
+| `expression.format` | 値における式の構造を示します。 |
 | `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
 
 +++
+
+>[!ENDTABS]
 
 **応答**
 
