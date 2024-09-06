@@ -4,10 +4,10 @@ title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1228'
-ht-degree: 29%
+source-wordcount: '1328'
+ht-degree: 28%
 
 ---
 
@@ -36,17 +36,23 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **クエリパラメータ**
 
++++ 使用可能なクエリパラメーターのリスト。
+
 | パラメーター | 説明 | 例 |
 | --------- | ----------- | ------- |
 | `start` | 返されるセグメント定義の開始オフセットを指定します。 | `start=4` |
 | `limit` | 返される、1 ページあたりのセグメント定義の数を指定します。 | `limit=20` |
 | `page` | どのページからセグメント定義の結果を表示するかを指定します。 | `page=5` |
-| `sort` | 結果を並べ替えるフィールドを指定します。 `[attributeName]:[desc|asc]` の形式で記述されます。 | `sort=updateTime:desc` |
+| `sort` | 結果を並べ替えるフィールドを指定します。 `[attributeName]:[desc/asc]` の形式で記述されます。 | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | セグメント定義でストリーミングを有効にするかどうかを指定します。 | `evaluationInfo.continuous.enabled=true` |
+
++++
 
 **リクエスト**
 
 以下のリクエストは、組織内に投稿された最後の 2 つのセグメント定義を取得します。
+
++++ セグメント定義のリストを取得するリクエストの例です。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 応答に成功すると、HTTP ステータス 200 が、指定した組織のセグメント定義のリストと共に JSON として返されます。
+
++++ セグメント定義のリストを取得する際の応答例。
 
 ```json
 {
@@ -148,6 +158,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 }
 ```
 
++++
+
 ## 新しいセグメント定義の作成 {#create}
 
 新しいセグメント定義を作成するには、`/segment/definitions` エンドポイントに POST リクエストを実行します。
@@ -163,6 +175,8 @@ POST /segment/definitions
 ```
 
 **リクエスト**
+
++++ セグメント定義を作成するリクエストの例。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
@@ -209,15 +223,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
 | `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
 
-<!-- >[!NOTE]
->
->A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
->
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
++++
 
 **応答**
 
 リクエストが成功した場合は、新しく作成したセグメント定義の詳細と HTTP ステータス 200 が返されます。
+
++++ セグメント定義を作成する際のサンプルレスポンス。
 
 ```json
 {
@@ -265,6 +277,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `id` | 新しく作成したセグメント定義のシステム生成 ID。 |
 | `evaluationInfo` | セグメント定義が受ける評価のタイプを示すオブジェクト。 バッチ、ストリーミング（連続とも呼ばれます）、エッジ（同期とも呼ばれます）のセグメント化があります。 |
 
++++
+
 ## 特定のセグメント定義の取得 {#get}
 
 特定のセグメント定義に関する詳細な情報を取得するには、`/segment/definitions` エンドポイントにGETリクエストを実行し、取得するセグメント定義の ID をリクエストパスで指定します。
@@ -281,6 +295,8 @@ GET /segment/definitions/{SEGMENT_ID}
 
 **リクエスト**
 
++++ セグメント定義を取得するリクエストの例です。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -289,9 +305,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 リクエストが成功した場合は、特定のセグメント定義についての詳細情報と HTTP ステータス 200 が返されます。
+
++++ セグメント定義を取得する際の応答例。
 
 ```json
 {
@@ -346,6 +366,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | `description` | 人間にとってわかりやすい、定義の説明。 |
 | `evaluationInfo` | セグメント定義が受ける評価のタイプ、バッチ、ストリーミング（連続とも呼ばれます）、またはエッジ（同期とも呼ばれます）を示すオブジェクト。 |
 
++++
+
 ## セグメント定義の一括取得 {#bulk-get}
 
 `/segment/definitions/bulk-get` エンドポイントに対してPOSTリクエストを実行し、リクエスト本文にセグメント定義の `id` 値を指定することで、指定された複数のセグメント定義に関する詳細な情報を取得できます。
@@ -357,6 +379,8 @@ POST /segment/definitions/bulk-get
 ```
 
 **リクエスト**
+
++++ 一括取得エンドポイントを使用する際のサンプルリクエスト。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
@@ -377,9 +401,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
++++
+
 **応答**
 
 応答に成功すると、HTTP ステータス 207 と、リクエストされたセグメント定義が返されます。
+
++++ 一括取得エンドポイントを使用する場合のサンプル応答。
 
 ```json
 {
@@ -477,6 +505,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | `description` | 人間にとってわかりやすい、定義の説明。 |
 | `evaluationInfo` | セグメント定義が受ける評価のタイプ、バッチ、ストリーミング（連続とも呼ばれます）、またはエッジ（同期とも呼ばれます）を示すオブジェクト。 |
 
++++
+
 ## 特定のセグメント定義の削除 {#delete}
 
 リクエストパスで削除するセグメント定義の ID をリク `/segment/definitions` ストエンドポイントに指定して、DELETEリクエストを行うことで、特定のセグメント定義を削除するようにリクエストできます。
@@ -497,6 +527,8 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 **リクエスト**
 
++++ セグメント定義を削除するリクエストの例。
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -504,6 +536,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **応答**
 
@@ -526,6 +560,8 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **リクエスト**
 
 次のリクエストは、勤務先住所の国を米国からカナダに更新します。
+
++++ セグメント定義を更新するリクエストの例。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -555,9 +591,13 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }'
 ```
 
++++
+
 **応答**
 
-応答に成功すると、HTTP ステータス 200 が、新しく更新されたセグメント定義の詳細と共に返されます。 勤務先住所の国が米国（US）からカナダ（CA）に更新されたことに注意してください。
+リクエストが成功した場合は、更新したセグメント定義の詳細と HTTP ステータス 200 が返されます。
+
++++ セグメント定義を更新する際の応答例。
 
 ```json
 {
@@ -600,6 +640,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }
 ```
 
++++
+
 ## セグメント定義を変換
 
 セグメント定義を `pql/text` と `pql/json` の間で変換するか、`/segment/conversion` エンドポイントに対してPOSTリクエストを行って `pql/json` を `pql/text` に変換できます。
@@ -613,6 +655,8 @@ POST /segment/conversion
 **リクエスト**
 
 次のリクエストは、セグメント定義の形式を `pql/text` から `pql/json` に変更します。
+
++++ セグメント定義を変換するリクエストの例。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
@@ -637,9 +681,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
     }'
 ```
 
++++
+
 **応答**
 
 応答に成功すると、HTTP ステータス 200 が、新しく変換されたセグメント定義の詳細と共に返されます。
+
++++ セグメント定義を変換する際の応答例。
 
 ```json
 {
@@ -658,6 +706,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
     }
 }
 ```
+
++++
 
 ## 次の手順
 

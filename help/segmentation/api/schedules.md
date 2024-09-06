@@ -4,10 +4,10 @@ title: スケジュール API エンドポイント
 description: スケジュールは、バッチセグメント化ジョブを 1 日に 1 回自動的に実行するためのツールです。
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 16%
+source-wordcount: '2104'
+ht-degree: 15%
 
 ---
 
@@ -29,18 +29,25 @@ ht-degree: 16%
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{START}` | オフセットの元となるページを開始します。デフォルトでは、この値は 0 です。 |
-| `{LIMIT}` | 返されるスケジュールの数を指定します。デフォルトでは、この値は 100 です。 |
+**クエリパラメータ**
+
++++ 使用可能なクエリパラメーターのリスト。
+
+| パラメーター | 説明 | 例 |
+| --------- | ----------- | ------- |
+| `start` | オフセットの元となるページを開始します。デフォルトでは、この値は 0 です。 | `start=5` |
+| `limit` | 返されるスケジュールの数を指定します。デフォルトでは、この値は 100 です。 | `limit=20` |
+
++++
 
 **リクエスト**
 
 以下のリクエストは、組織内に投稿された最新の 10 件のスケジュールを取得します。
+
++++ スケジュールのリストを取得するリクエストのサンプル。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 応答に成功すると、HTTP ステータス 200 が、指定した組織のスケジュールのリストと共に JSON として返されます。
@@ -57,6 +66,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 >[!NOTE]
 >
 >次の応答はスペースを節約するために切り捨てられており、最初に返されたスケジュールのみを表示しています。
+
++++ スケジュールのリストを取得する際の応答例。
 
 ```json
 {
@@ -102,6 +113,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 | `children.schedule` | ジョブスケジュールを含む文字列。 ジョブは 1 日に 1 回だけ実行するようにスケジュールできます。つまり、24 時間に 1 つのジョブを複数回実行するようにスケジュールすることはできません。 cron スケジュールについて詳しくは、[cron 式形式 ](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 |
 | `children.state` | スケジュールの状態を含む文字列。 サポートされている 2 つの状態は、「アクティブ」と「非アクティブ」です。 デフォルトでは、状態は「非アクティブ」に設定されています。 |
 
++++
+
 ## 新しいスケジュールの作成 {#create}
 
 `/config/schedules` エンドポイントに POST リクエストをおこなうことで、新しいスケジュールを作成できます。
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **リクエスト**
+
++++ スケジュールを作成するリクエストのサンプル。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *オプション。* ジョブスケジュールを含む文字列。ジョブは 1 日に 1 回だけ実行するようにスケジュールできます。つまり、24 時間に 1 つのジョブを複数回実行するようにスケジュールすることはできません。 cron スケジュールについて詳しくは、[cron 式形式 ](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 <br><br> この文字列が指定されていない場合、システムで生成されたスケジュールが自動的に生成されます。 |
 | `state` | *オプション。* スケジュールの状態を含む文字列。サポートされている 2 つの状態は、「アクティブ」と「非アクティブ」です。 デフォルトでは、状態は「非アクティブ」に設定されています。 |
 
++++
+
 **応答**
 
 正常な応答では、新しく作成したスケジュールの詳細と共に HTTP ステータス 200 が返されます。
+
++++ スケジュール作成時の応答例。
 
 ```json
 {
@@ -172,6 +191,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 }
 ```
 
++++
+
 ## 特定のスケジュールの取得 {#get}
 
 `/config/schedules` エンドポイントに対してGETリクエストを実行し、取得するスケジュールの ID をリクエストパスで指定することで、特定のスケジュールに関する詳細な情報を取得できます。
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **リクエスト**
 
++++ スケジュールを取得するリクエストのサンプル。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 正常な応答では、指定されたスケジュールの詳細情報と共に HTTP ステータス 200 が返されます。
+
++++ スケジュール取得時の応答例。
 
 ```json
 {
@@ -233,15 +260,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 | `schedule` | ジョブスケジュールを含む文字列。 ジョブは 1 日に 1 回のみ実行するようにスケジュールできます。つまり、24 時間の間に 2 回以上実行するようにジョブをスケジュールすることはできません。cron スケジュールについて詳しくは、[cron 式形式 ](#appendix) に関する付録を参照してください。 この例では、「0 0 1 * *」とは、このスケジュールが毎日午前 1 時に実行されることを意味します。 |
 | `state` | スケジュールの状態を含む文字列。 サポートされている 2 つの状態は、`active` と `inactive` です。デフォルトでは、状態は `inactive` に設定されています。 |
 
++++
+
 ## 特定のスケジュールの詳細を更新 {#update}
 
 `/config/schedules` エンドポイントにPATCHリクエストを実行し、リクエストパスで更新しようとしているスケジュールの ID を指定することで、特定のスケジュールを更新できます。
 
 PATCHリクエストでは、個々のスケジュールの [state](#update-state) または [cron スケジュール ](#update-schedule) を更新できます。
-
-### スケジュール状態の更新 {#update-state}
-
-JSON Patch 操作を使用すると、スケジュールの状態を更新できます。 状態を更新するには、`path` プロパティを `/state` として宣言し、`value` を `active` または `inactive` に設定します。 JSON パッチについて詳しくは、[JSON パッチ ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメントを参照してください。
 
 **API 形式**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | 更新するスケジュールの `id` 値。 |
 
+>[!BEGINTABS]
+
+>[!TAB  スケジュール状態の更新 ]
+
+JSON Patch 操作を使用すると、スケジュールの状態を更新できます。 状態を更新するには、`path` プロパティを `/state` として宣言し、`value` を `active` または `inactive` に設定します。 JSON パッチについて詳しくは、[JSON パッチ ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメントを参照してください。
+
 **リクエスト**
+
++++ スケジュール状態を更新するリクエストの例。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `path` | パッチを適用する値のパス。この場合、スケジュールの状態を更新しているので、`path` の値を「/state」に設定する必要があります。 |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 正常な応答では、HTTP ステータス 204（コンテントなし）が返されます。
 
-### Cron スケジュールを更新 {#update-schedule}
+>[!TAB Cron スケジュールの更新 ]
 
 JSON Patch 操作を使用すると、cron スケジュールを更新できます。 スケジュールを更新するには、`path` プロパティを `/schedule` として宣言し、`value` を有効な cron スケジュールに設定します。 JSON パッチについて詳しくは、[JSON パッチ ](https://datatracker.ietf.org/doc/html/rfc6902) ドキュメントを参照してください。 cron スケジュールについて詳しくは、[cron 式形式 ](#appendix) に関する付録を参照してください。
 
-**API 形式**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | 更新するスケジュールの `id` 値。 |
+>[!ENDTABS]
 
 **リクエスト**
+
++++ スケジュールを更新するリクエストの例。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | 更新する値のパス。 この場合、cron スケジュールを更新しているので、`path` の値を `/schedule` に設定する必要があります。 |
 | `value` | cron スケジュールの更新された値。 この値は、Cron スケジュールの形式で指定する必要があります。この例では、スケジュールは毎月 2 日に実行されます。 |
 
++++
+
 **応答**
 
 正常な応答では、HTTP ステータス 204（コンテントなし）が返されます。
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **リクエスト**
 
++++ スケジュールを削除するリクエストのサンプル。
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **応答**
 

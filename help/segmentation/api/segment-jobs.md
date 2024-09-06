@@ -4,10 +4,10 @@ title: セグメントジョブ API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 17%
+source-wordcount: '1655'
+ht-degree: 16%
 
 ---
 
@@ -36,6 +36,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 
 **クエリパラメータ**
 
++++ 使用可能なクエリパラメーターのリスト。
+
 | パラメーター | 説明 | 例 |
 | --------- | ----------- | ------- |
 | `start` | 返されるセグメントジョブの開始オフセットを指定します。 | `start=1` |
@@ -44,7 +46,11 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `sort` | 返されたセグメントジョブを並べ替えます。`[attributeName]:[desc|asc]` の形式で書き込まれます。 | `sort=creationTime:desc` |
 | `property` | セグメントジョブをフィルターし、指定されたフィルターへの完全一致を取得します。次のいずれかの形式で書き込むことができます。 <ul><li>`[jsonObjectPath]==[value]` — オブジェクトキーに対するフィルター</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` — 配列内のフィルタ－</li></ul> | `property=segments~segmentId==workInUS` |
 
++++
+
 **リクエスト**
+
++++ セグメントジョブのリストを表示するリクエストのサンプルです。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -54,17 +60,23 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 応答に成功すると、HTTP ステータス 200 が、指定した組織のセグメントジョブのリストと共に JSON として返されます。 ただし、応答はセグメントジョブ内のセグメント定義の数によって異なります。
 
-**セグメントジョブの 1,500 個のセグメント定義以下**
+>[!BEGINTABS]
+
+>[!TAB  セグメントジョブの 1,500 個のセグメント定義以下 ]
 
 セグメントジョブで実行されているセグメント定義が 1,500 個未満の場合は、すべてのセグメント定義の完全なリストが `children.segments` 属性内に表示されます。
 
 >[!NOTE]
 >
 >次の応答はスペースを節約するために切り捨てられており、最初に返されたジョブのみが表示されます。
+
++++ セグメントジョブのリストを取得する際の応答例です。
 
 ```json
 {
@@ -166,13 +178,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
-**1500 を超えるセグメント定義**
++++
+
+>[!TAB 1500 を超えるセグメント定義 ]
 
 セグメントジョブで 1500 を超えるセグメント定義が実行されている場合は、`children.segments` 属性が `*` と表示され、すべてのセグメント定義が評価中であることを示します。
 
 >[!NOTE]
 >
 >次の応答はスペースを節約するために切り捨てられており、最初に返されたジョブのみが表示されます。
+
++++ セグメントジョブのリストを表示する際の応答例。
 
 ```json
 {
@@ -276,6 +292,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイルの数。 次の 3 つのステータスがサポートされています。 <ul><li>「実現済み」 – セグメント定義に適合するプロファイルの数。</li><li>「離脱済み」 – セグメント定義に存在しなくなったプロファイルの数。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 結合ポリシーごとの結合プロファイルの合計数。 |
 
++++
+
+>[!ENDTABS]
+
 ## 新しいセグメントジョブの作成 {#create}
 
 新しいセグメントジョブを作成するには、`/segment/jobs` エンドポイントにPOSTリクエストを行い、新しいオーディエンスを作成するセグメント定義の ID を本文に含めます。
@@ -288,9 +308,13 @@ POST /segment/jobs
 
 新しいセグメントジョブを作成する場合、リクエストと応答は、セグメントジョブ内のセグメント定義の数によって異なります。
 
-**セグメントジョブの 1,500 個のセグメント定義以下**
+>[!BEGINTABS]
+
+>[!TAB  セグメントジョブのセグメント数が 1,500 個以下 ]
 
 **リクエスト**
+
++++新しいセグメントジョブを作成するためのサンプルリクエスト
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -302,6 +326,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -d '[
     {
         "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    },
+    {
+        "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85"
     }
  ]'
 ```
@@ -310,9 +337,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | -------- | ----------- |
 | `segmentId` | セグメントジョブを作成するセグメント定義の ID。 これらのセグメント定義は、異なる結合ポリシーに属することができます。 セグメント定義について詳しくは、[ セグメント定義エンドポイントガイド ](./segment-definitions.md) を参照してください。 |
 
++++
+
 **応答**
 
 応答に成功すると、HTTP ステータス 200 と、新しく作成されたセグメントジョブに関する情報が返されます。
+
++++ 新しいセグメントジョブを作成する際のサンプル応答。
 
 ```json
 {
@@ -335,6 +366,22 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
             "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
                 "id": "7863c010-e092-41c8-ae5e-9e533186752e",
+                "expression": {
+                    "type": "PQL",
+                    "format": "pql/json",
+                    "value": "workAddress.country = \"US\""
+                },
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                "mergePolicy": {
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                    "version": 1
+                }
+            }
+        },
+        {
+            "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85",
+            "segment": {
+                "id": "07d39471-05d1-4083-a310-d96978fd7c85",
                 "expression": {
                     "type": "PQL",
                     "format": "pql/json",
@@ -411,13 +458,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments.segment.id` | 指定したセグメント定義の ID。 |
 | `segments.segment.expression` | セグメント定義の式に関する情報を含むオブジェクト（PQLで記述）。 |
 
-**1500 を超えるセグメント定義**
++++
+
+>[!TAB  セグメントジョブに 1,500 を超えるセグメント定義 ]
 
 **リクエスト**
 
 >[!NOTE]
 >
 >1,500 個を超えるセグメント定義を持つセグメントジョブを作成できますが、これは **強くお勧めしません**。
+
++++ セグメントジョブを作成するためのサンプルリクエスト。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -443,9 +494,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `schema.name` | セグメント定義のスキーマの名前。 |
 | `segments.segmentId` | 1500 個を超えるセグメントを含むセグメントジョブを実行する場合、すべてのセグメントを使用してセグメント化ジョブを実行することを示すために、`*` をセグメント ID として渡す必要があります。 |
 
++++
+
 **応答**
 
 正常な応答は、HTTP ステータス 200 と、新しく作成したセグメントジョブの詳細を返します。
+
++++ セグメントジョブ作成時の応答例
 
 ```json
 {
@@ -530,6 +585,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments` | このセグメントジョブが実行されているセグメント定義に関する情報を含むオブジェクト。 |
 | `segments.segment.id` | `*` は、このセグメントジョブが組織内のすべてのセグメント定義に対して実行されていることを意味します。 |
 
++++
+
+>[!ENDTABS]
+
+
 ## 特定のセグメントジョブの取得 {#get}
 
 特定のセグメントジョブに関する詳細な情報を取得するには、`/segment/jobs` エンドポイントにGETリクエストを実行し、取得するセグメントジョブの ID をリクエストパスで指定します。
@@ -546,6 +606,8 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 **リクエスト**
 
++++ セグメントジョブを取得するためのリクエストの例です。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -554,13 +616,19 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 リクエストが成功した場合は、指定されたセグメントジョブの詳細情報とともに HTTP ステータス 200 が返されます。  ただし、応答はセグメントジョブ内のセグメント定義の数によって異なります。
 
-**セグメントジョブの 1,500 個のセグメント定義以下**
+>[!BEGINTABS]
+
+>[!TAB  セグメントジョブの 1,500 個のセグメント定義以下 ]
 
 セグメントジョブで実行されているセグメント定義が 1,500 個未満の場合は、すべてのセグメント定義の完全なリストが `children.segments` 属性内に表示されます。
+
++++ セグメントジョブを取得するためのサンプル応答。
 
 ```json
 {
@@ -622,9 +690,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
-**1500 を超えるセグメント定義**
++++
+
+>[!TAB 1500 を超えるセグメント定義 ]
 
 セグメントジョブで 1500 を超えるセグメント定義が実行されている場合は、`children.segments` 属性が `*` と表示され、すべてのセグメント定義が評価中であることを示します。
+
++++ セグメントジョブを取得するためのサンプル応答。
 
 ```json
 {
@@ -711,6 +783,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 | `segments.segment.expression` | セグメント定義の式に関する情報を含むオブジェクト（PQLで記述）。 |
 | `metrics` | セグメントジョブに関する診断情報を含むオブジェクト。 |
 
++++
+
+>[!ENDTABS]
+
 ## セグメントジョブの一括取得 {#bulk-get}
 
 POST `/segment/jobs/bulk-get` エンドポイントに対してセグメントリクエストを実行し、リクエスト本文にセグメントジョブの `id` 値を指定することで、複数のセグメントジョブに関する詳細な情報を取得できます。
@@ -722,6 +798,8 @@ POST /segment/jobs/bulk-get
 ```
 
 **リクエスト**
+
++++ 一括取得エンドポイントを使用するためのサンプルリクエスト。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
@@ -742,6 +820,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
++++
+
 **応答**
 
 応答に成功すると、HTTP ステータス 207 とリクエストされたセグメントジョブが返されます。 ただし、`children.segments` 属性の値は、セグメントジョブが 1500 を超えるセグメント定義で実行されているかどうかによって異なります。
@@ -749,6 +829,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 >[!NOTE]
 >
 >次の応答はスペースを節約するために切り捨てられており、各セグメントジョブの一部の詳細のみを表示しています。 完全な応答には、リクエストされたセグメントジョブの詳細がリストされます。
+
++++ 一括取得応答を使用する場合の応答例。
 
 ```json
 {
@@ -804,6 +886,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 | `segments.segment.id` | セグメント定義の ID。 |
 | `segments.segment.expression` | セグメント定義の式に関する情報を含むオブジェクト（PQLで記述）。 |
 
++++
+
 ## 特定のセグメントジョブのキャンセルまたは削除 {#delete}
 
 特定のセグメントジョブを削除するには、`/segment/jobs` エンドポイントにDELETEリクエストを実行し、リクエストパスで削除するセグメントジョブの ID を指定します。
@@ -824,6 +908,8 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 **リクエスト**
 
++++ セグメントジョブを削除するリクエストの例。
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -832,9 +918,13 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 正常な応答は、HTTP ステータス 204 と次の情報を返します。
+
++++ セグメントジョブを削除する際の応答例です。
 
 ```json
 {
@@ -842,6 +932,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
     "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
 }
 ```
+
++++
 
 ## 次の手順
 

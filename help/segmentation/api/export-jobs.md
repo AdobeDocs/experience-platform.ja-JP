@@ -4,10 +4,10 @@ title: セグメント書き出しジョブ API エンドポイント
 description: 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに保持するために使用される非同期プロセスです。 Adobe Experience Platform Segmentation Service API で/export/jobs エンドポイントを使用できます。これにより、書き出しジョブをプログラムによって取得、作成およびキャンセルできます。
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 33%
+source-wordcount: '1678'
+ht-degree: 32%
 
 ---
 
@@ -33,20 +33,26 @@ ht-degree: 33%
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{LIMIT}` | 返される書き出しジョブの数を指定します。 |
-| `{OFFSET}` | 結果のページのオフセットを指定します。 |
-| `{STATUS}` | ステータスに基づいて結果をフィルターします。サポートされる値は、「NEW」、「SUCCEEDED」、「FAILED」です。 |
+**クエリパラメータ**
+
++++ 使用可能なクエリパラメーターのリスト。
+
+| パラメーター | 説明 | 例 |
+| --------- | ----------- | ------- |
+| `limit` | 返される書き出しジョブの数を指定します。 | `limit=10` |
+| `offset` | 結果のページのオフセットを指定します。 | `offset=1540974701302_96` |
+| `status` | ステータスに基づいて結果をフィルターします。サポートされる値は、「NEW」、「SUCCEEDED」、「FAILED」です。 | `status=NEW` |
+
++++
 
 **リクエスト**
 
 次のリクエストでは、組織内の最後の 2 つのエクスポートジョブを取得します。
+
++++ エクスポートジョブを取得するリクエストのサンプルです。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 次の応答は、リクエストパスで指定されたクエリパラメーターに基づいて、HTTP ステータス 200 と、正常に完了したエクスポートジョブのリストを返します。
+
++++ エクスポートジョブを取得する際のサンプル応答。
 
 ```json
 {
@@ -207,6 +217,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 | `page` | リクエストされた書き出しジョブのページネーションに関する情報。 |
 | `link.next` | 書き出しジョブの次のページへのリンク。 |
 
++++
+
 ## 新しい書き出しジョブの作成 {#create}
 
 `/export/jobs` エンドポイントに POST リクエストを実行することで、新しい書き出しジョブを作成できます。
@@ -220,6 +232,8 @@ POST /export/jobs
 **リクエスト**
 
 次のリクエストは、ペイロード内のパラメーター設定に基づいて、新しいエクスポートジョブを作成します。
+
++++ エクスポートジョブを作成するためのサンプルリクエスト。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **（必須）**&#x200B;データのエクスポート先のデータセットに関連付けられているスキーマの名前。 |
 | `evaluationInfo.segmentation` | *（任意）* ブール値。指定しない場合、デフォルトで `false` に設定されます。 値 `true` は、書き出しジョブでセグメント化を行う必要があることを示します。 |
 
++++
+
 **応答**
 
 正常な応答は、HTTP ステータス 200 と、新しく作成された書き出しジョブの詳細を返します。
+
++++ エクスポートジョブ作成時の応答例。
 
 ```json
 {
@@ -380,6 +398,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     }
 ```
 
++++
+
 ## 特定の書き出しジョブの取得 {#get}
 
 特定のエクスポートジョブに関する詳細な情報を取得するには、`/export/jobs` エンドポイントにGETリクエストを実行し、取得するエクスポートジョブの ID をリクエストパスで指定します。
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **リクエスト**
 
++++ エクスポートジョブを取得するリクエストのサンプルです。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 正常な応答は、HTTP ステータス 200 と、指定された書き出しジョブに関する詳細情報を返します。
+
++++ エクスポートジョブを取得する際のサンプル応答。
 
 ```json
 {
@@ -476,6 +502,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 | `metrics.profileExportTime` | プロファイルのエクスポートに要した時間を示すフィールド。 |
 | `totalExportedProfileCounter` | すべてのバッチでエクスポートされたプロファイルの合計数。 |
 
++++
+
 ## 特定の書き出しジョブのキャンセルまたは削除 {#delete}
 
 `/export/jobs` エンドポイントにDELETEリクエストを実行し、リクエストパスで削除するエクスポートジョブの ID を指定することで、指定したエクスポートジョブの削除をリクエストできます。
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **リクエスト**
 
++++ エクスポートジョブを削除するリクエストの例。
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **応答**
 

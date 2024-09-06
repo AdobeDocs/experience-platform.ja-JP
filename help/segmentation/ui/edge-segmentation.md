@@ -3,10 +3,10 @@ solution: Experience Platform
 title: エッジセグメント化 UI ガイド
 description: エッジセグメント化を使用して、Platform のセグメント定義をエッジ上で即座に評価し、同じページや次のページのパーソナライゼーションのユースケースを可能にする方法を説明します。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 94%
+source-wordcount: '569'
+ht-degree: 90%
 
 ---
 
@@ -34,22 +34,15 @@ ht-degree: 94%
 >
 >クエリが次の表のいずれかのクエリタイプと一致する場合、エッジセグメント化を使用して自動的に評価されます。クエリ式に基づいて、システムがこの機能を自動的に判断します。
 
-| クエリタイプ | 詳細 | 例 | PQL の例 |
-| ---------- | ------- | ------- | ----------- |
-| 単一イベント | 時間制限のない 1 つの受信イベントを参照するセグメント定義。 | 買い物かごにアイテムを追加した人物。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| 単一プロファイル | 単一プロファイルのみの属性を参照するセグメント定義 | 米国在住の人物。 | `homeAddress.countryCode = "US"` |
-| プロファイルを参照する単一のイベント | 1 つ以上のプロファイル属性と、時間制限のない単一の受信イベントを参照する任意のセグメント定義。 | ホームページを訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")])` |
-| プロファイル属性を持つ単一イベントの否定 | 単一の受信イベントの否定と 1 つ以上のプロファイル属性を参照する任意のセグメント定義 | ホームページを訪問&#x200B;**したことがない**&#x200B;米国在住の人物。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| 時間枠内での単一のイベント | 設定された期間内の単一の受信イベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを訪問した人物。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)])` |
-| 24 時間未満の相対時間枠内でのプロファイル属性を持つ単一のイベント | 1 つ以上のプロファイル属性を持つ 1 つの受信イベントを参照し、24 時間未満の相対時間枠内に発生するセグメント定義。 | 過去 24 時間以内にホームページを訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)])` |
-| 時間枠内でのプロファイル属性を持つ単一イベントの否定 | 1 つ以上のプロファイル属性と、期間内の単一受信イベントの否定を参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを訪問&#x200B;**していない**&#x200B;米国在住の人物。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]))` |
-| 24 時間の時間枠内での頻度イベント | 24 時間の時間枠内に特定の回数だけ発生するイベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを&#x200B;**少なくとも** 5 回訪問した人物。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 24 時間の時間枠内でのプロファイル属性を持つ頻度イベント | 1 つ以上のプロファイル属性と、24 時間の時間枠内に一定の回数だけ発生するイベントを参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを&#x200B;**少なくとも** 5 回訪問した米国在住の人物。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 24 時間の時間枠内でのプロファイルを持つ頻度イベントの否定 | 1 つ以上のプロファイル属性と、24 時間の時間枠内に特定の回数だけ発生するイベントの否定を参照する任意のセグメント定義。 | 過去 24 時間以内にホームページを 6 回&#x200B;**以上**&#x200B;訪問していない人物。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
-| 24 時間のタイムプロファイル以内での複数の受信ヒット | 24 時間の時間枠内に発生する複数のイベントを参照する任意のセグメント定義。 | ホームページを訪問した人、**または**&#x200B;過去 24 時間以内にチェックアウトページを訪問した人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| 24 時間の時間枠内にプロファイルを持つ複数のイベント | 1 つ以上のプロファイル属性と、24 時間以内に発生する複数のイベントを参照するセグメント定義。 | ホームページ&#x200B;**および**&#x200B;チェックアウトページにアクセスした、米国在住の人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 | 米国在住で、「既存のセグメント」のセグメントに属しているユーザー。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
-| マップを参照するクエリ | プロパティのマップを参照するセグメント定義。 | 外部セグメントデータに基づいて買い物かごに追加したユーザー。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+| クエリタイプ | 詳細 |
+| ---------- | ------- |
+| 単一イベント | 時間制限のない 1 つの受信イベントを参照するセグメント定義。 |
+| 相対時間枠内の単一のイベント | 1 つの受信イベントを参照するセグメント定義。 |
+| 時間枠を含む単一イベント | 時間枠を持つ 1 つの受信イベントを参照するセグメント定義。 |
+| プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 |
+| 24 時間未満の相対時間枠内でのプロファイル属性を持つ単一のイベント | 1 つ以上のプロファイル属性を持つ 1 つの受信イベントを参照し、24 時間未満の相対時間枠内に発生するセグメント定義。 |
+| セグメントのセグメント | 1 つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 **メモ：**&#x200B;セグメントのセグメントが使用される場合、**24 時間ごとに**&#x200B;プロファイルの不適合が発生します。 |
+| プロファイル属性を持つ複数のイベント | **過去 24 時間以内に**&#x200B;複数のイベントを参照し、（オプションで）1 つ以上のプロファイル属性を持つ任意のセグメント定義。 |
 
 次のシナリオでは、セグメント定義はエッジセグメント化に対して有効に&#x200B;**なりません**。
 

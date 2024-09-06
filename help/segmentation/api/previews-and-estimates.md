@@ -4,10 +4,10 @@ title: API エンドポイントのプレビューと見積もり
 description: セグメント定義の開発時に、Adobe Experience Platform内の予測ツールとプレビューツールを使用して概要レベルの情報を表示すると、期待されるオーディエンスを確実に分離するのに役立ちます。
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 19%
+source-wordcount: '1016'
+ht-degree: 18%
 
 ---
 
@@ -62,6 +62,8 @@ POST /preview
 
 **リクエスト**
 
++++ プレビューを作成するリクエストのサンプル
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | プロファイルデータの基となる [!DNL Experience Data Model] （XDM）スキーマクラスの名前。 |
 | `graphType` | クラスターの取得元のグラフタイプ。 サポートされている値は、`none` （ID ステッチを実行しない）および `pdg` （プライベート ID グラフに基づいて ID ステッチを実行する）です。 |
 
++++
+
 **応答**
 
 成功時の応答は、HTTP ステータス 201（Created）と共に、新しく作成されたプレビューの詳細を返します。
+
++++ プレビュー作成時の応答例。
 
 ```json
 {
@@ -103,6 +109,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `state` | プレビュージョブの現在の状態です。最初に作成されると、「新規」状態になります。 その後、処理が完了するまで「RUNNING」状態になり、その時点で「RESULT_READY」または「FAILED」になります。 |
 | `previewId` | 次の節で説明するように、見積もりやプレビューを表示する際にルックアップ目的で使用されるプレビュージョブの ID。 |
+
++++
 
 ## 特定のプレビュー結果の取得 {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **リクエスト**
 
++++ プレビューを取得するリクエストのサンプル。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
+
++++ プレビュー取得時の応答例。
 
 成功時の応答は、HTTP ステータス 200 と共に、指定されたプレビューに関する詳細な情報を返します。
 
@@ -181,6 +195,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 | -------- | ----------- |
 | `results` | エンティティ ID のリストと関連する ID。 提供されるリンクは、[ プロファイルアクセス API エンドポイント ](../../profile/api/entities.md) を使用して、指定したエンティティを検索するために使用できます。 |
 
++++
+
 ## 特定の見積ジョブの結果の取得 {#get-estimate}
 
 プレビュージョブを作成したら、`/estimate` エンドポイントへのGETリクエストのパスでその `previewId` を使用して、予測オーディエンスサイズ、信頼区間、エラー標準偏差など、セグメント定義に関する統計情報を表示できます。
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 次のリクエストは、特定の見積ジョブの結果を取得します。
 
++++ 推定ジョブを取得するためのサンプルリクエスト。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **応答**
 
 成功した応答は、見積ジョブの詳細を含む HTTP ステータス 200 を返します。
+
++++ 推定ジョブを取得する際のサンプル応答。
 
 ```json
 {
@@ -243,9 +265,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | セグメント内のプロファイル数を ID 名前空間別に分類して示すオブジェクトの配列。 1 つのプロファイルが複数の名前空間に関連付けられている可能性があるので、名前空間別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、プロファイル数指標よりも多くなる場合があります。 例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。 |
+| `estimatedNamespaceDistribution` | セグメント定義内のプロファイルの数を ID 名前空間別に分類して示すオブジェクトの配列。 1 つのプロファイルが複数の名前空間に関連付けられている可能性があるので、名前空間別のプロファイルの合計数（各名前空間に表示される値をまとめたもの）は、プロファイル数指標よりも多くなる場合があります。 例えば、顧客が複数のチャネルでブランドとやり取りする場合、複数の名前空間がその個々の顧客に関連付けられます。 |
 | `state` | プレビュージョブの現在の状態です。処理が完了するまで状態は「RUNNING」になり、その時点で「RESULT_READY」または「FAILED」になります。 |
 | `_links.preview` | `state` が「RESULT_READY」の場合、このフィールドには見積りを表示する URL が表示されます。 |
+
++++
 
 ## 次の手順
 
