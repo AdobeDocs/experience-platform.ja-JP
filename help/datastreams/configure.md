@@ -2,10 +2,10 @@
 title: データストリームの作成と設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
+source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 53%
+source-wordcount: '2813'
+ht-degree: 52%
 
 ---
 
@@ -189,7 +189,7 @@ Experience Platformで使用するデータストリームを設定し、さら�
 | --- | --- |
 | [!UICONTROL プロパティトークン] | [!DNL Target] を使用すると、お客様はプロパティを使用して権限を制御できます。 プロパティについて詳しくは、[!DNL Target] ドキュメントの[エンタープライズ権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja)に関するガイドを参照してください。<br><br>プロパティトークンは、Adobe Target UI の[!UICONTROL 設定]／[!UICONTROL プロパティ]にあります。 |
 | [!UICONTROL Target 環境 ID] | [Adobe Target の環境](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=ja)を使用すると、開発のすべてのステージを通じて実装を管理できます。この設定は、このデータストリームで使用しようとしている環境を指定します。<br><br>ベストプラクティスは、`dev`、`stage`、`prod` の各データストリーム環境ごとに異なる設定を行って、物事をシンプルに保つことです。ただし、既に Adobe Target 環境を定義している場合は、それを使用できます。 |
-| [!UICONTROL Target サードパーティ ID 名前空間] | このデータストリームに使用する `mbox3rdPartyId` の ID 名前空間。詳しくは、[Web SDK を使用した `mbox3rdPartyId` の実装](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md)に関するガイドを参照してください。 |
+| [!UICONTROL Target サードパーティ ID 名前空間] | このデータストリームに使用する `mbox3rdPartyId` の ID 名前空間。Adobe Targetとの [!DNL Customer Attributes] 統合を使用する場合、または `thirdPartyId` を使用して [Adobe Target プロファイル API](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api) を介してプロファイルを更新または作成する場合は、選択した名前空間値を指定する必要があります。 顧客属性ファイルのアップロードまたはプロファイル更新 API 呼び出しで使用される `customerID` または `thirdPartyId` を送信するには、XDM スキーマの `IdentityMap` セクションでこの名前空間を使用する必要があります。  詳しくは、[Web SDK を使用した `mbox3rdPartyId` の実装](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md)に関するガイドを参照してください。 |
 | [!UICONTROL プロパティトークンの上書き] | このセクションでは、デフォルトのプロパティトークンを上書きするために使用できる、追加のプロパティトークンを定義できます。 |
 
 ### [!UICONTROL イベント転送]設定
