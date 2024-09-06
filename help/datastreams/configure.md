@@ -2,9 +2,9 @@
 title: データストリームの作成と設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
+source-git-commit: b87cb25ac791bebbf865f8513f2b4b482a1531bc
 workflow-type: tm+mt
-source-wordcount: '2813'
+source-wordcount: '2817'
 ht-degree: 52%
 
 ---
@@ -49,7 +49,7 @@ Experience Platformで使用するデータストリームを設定し、さら�
 | 設定 | 説明 |
 | --- | --- |
 | [!UICONTROL 位置情報の検索] | 訪問者の IP アドレスに基づいて、選択したオプションの位置情報の検索を有効にします。 次のオプションを使用できます。 <ul><li>**Country**:`xdm.placeContext.geo.countryCode` を入力します</li><li>**郵便番号**:`xdm.placeContext.geo.postalCode` を入力します</li><li>**都道府県**:`xdm.placeContext.geo.stateProvince` を入力します</li><li>**DMA**:`xdm.placeContext.geo.dmaID` を入力します</li><li>**City**:`xdm.placeContext.geo.city` を入力します</li><li>**Latitude**: `xdm.placeContext.geo._schema.latitude` を入力します</li><li>**経度**:`xdm.placeContext.geo._schema.longitude` を入力します</li></ul>**[!UICONTROL 市区町村]**、**[!UICONTROL 緯度]**&#x200B;または&#x200B;**[!UICONTROL 経度]**&#x200B;を選択すると、他にどのようなオプションが選択されているかに関係なく、小数第 2 位までの座標が表示されます。これは、都市レベルの精度と見なされます。<br> <br> オプションを選択しないと、位置情報の検索が無効になります。 ジオロケーションは [!UICONTROL IP の不明化 ] の前に発生します。つまり、[!UICONTROL IP の不明化 ] 設定の影響を受けません。 |
-| [!UICONTROL ネットワークの検索] | 訪問者の IP アドレスに基づいて、選択したオプションのネットワーク検索を有効にします。 次のオプションを使用できます。 <ul><li>**Carrier**:`xdm.environment.carrier` を入力します</li><li>**Domain**:`xdm.environment.domain` を入力します</li><li>**ISP**:`xdm.environment.ISP` を入力する</li></ul> |
+| [!UICONTROL ネットワークの検索] | 訪問者の IP アドレスに基づいて、選択したオプションのネットワーク検索を有効にします。 次のオプションを使用できます。 <ul><li>**携帯電話会社**:`xdm.environment.carrier` を入力します</li><li>**Domain**:`xdm.environment.domain` を入力します</li><li>**ISP**:`xdm.environment.ISP` を入力する</li><li>**接続タイプ**:`xdm.environment.connectionType` を入力します</li></ul> |
 
 上記のフィールドのいずれかをデータ収集に対して有効にする場合は、Web SDK を設定する際に [`context`](/help/web-sdk/commands/configure/context.md) 配列プロパティを正しく設定していることを確認してください。
 
