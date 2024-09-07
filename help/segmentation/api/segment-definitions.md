@@ -4,9 +4,9 @@ title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1519'
 ht-degree: 25%
 
 ---
@@ -458,6 +458,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `ids` | 取得するセグメント定義の ID を格納するオブジェクトを含む配列。 |
+
 +++
 
 **応答**
@@ -617,6 +621,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **リクエスト**
 
 次のリクエストは、勤務先住所の国を米国からカナダに更新します。
+
+>[!NOTE]
+>
+>セグメント定義のコンテンツのこの API 呼び出し **置き換え** なので、保持するフィールド **すべて** がリクエスト本文の一部として含まれていることを確認してください。
 
 +++ セグメント定義を更新するリクエストの例。
 
