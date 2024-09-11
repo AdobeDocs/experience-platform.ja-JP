@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
+source-git-commit: 56971631eb7ab2ef3dd2dcf077ee3b52f131ffe7
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 55%
+source-wordcount: '1761'
+ht-degree: 52%
 
 ---
 
@@ -97,7 +97,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 >[!NOTE]
 >
->宛先設定を保存すると、Amazon アカウントを通じて再認証した場合でも、[!DNL Amazon Ads] 広告主 ID を変更できなくなります。 別の [!DNL Amazon Ads] 広告主 ID を使用するには、新しい宛先接続を作成する必要があります。
+>宛先設定を保存すると、Amazon アカウントを通じて再認証した場合でも、[!DNL Amazon Ads] 広告主 ID を変更できなくなります。 別の [!DNL Amazon Ads] 広告主 ID を使用するには、新しい宛先接続を作成する必要があります。 ADSP との統合に既に設定されていて、オーディエンスを AMC または別の ADSP アカウントに配信する場合は、新しい宛先フローを作成する必要がある広告主。
 
 * **[!UICONTROL 広告主地域]**：広告主がホストされている適切な地域を選択します。各地域でサポートされているマーケットプレイスについて詳しくは、[Amazon Ads ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。
 
@@ -129,6 +129,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 * ハッシュ化されたメールアドレスをマッピングするには、`Email_LC_SHA256` ID 名前空間をソースフィールドとして選択します。
 * ハッシュ化された電話番号をマッピングするには、`Phone_SHA256` ID 名前空間をソースフィールドとして選択します。
 * ハッシュ化されていないメールアドレスまたは電話番号をマッピングするには、対応する ID 名前空間をソースフィールドとして選択し、「`Apply Transformation`」オプションをオンにして、アクティブ化時に Platform で ID をハッシュ化するように設定します。
+* *2024 年 9 月リリース以降の新機能*:Amazon Ads では、ID 解決プロセスを容易にするために、`countryCode` 値を含むフィールドを 2 文字の ISO 形式（例：US、GB、MX、CA など）でマッピングする必要があります。 `countryCode` マッピングを持たない接続は、ID 一致率に悪影響を与えます。
 
 [!DNL Amazon Ads] コネクタの宛先設定では、特定のターゲットフィールドを 1 回だけ選択します。  例えば、ビジネスメールを送信する場合、個人のメールを同じ宛先設定にマッピングすることはできません。
 
@@ -148,7 +149,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 左側のスキーマブラウザーで、**[!UICONTROL Advertiser Uploaded]**/**[!UICONTROL aep_audiences]** の下にオーディエンスを見つけます。 その後、次の句を使用して AMC SQL エディターでオーディエンスに対してクエリを実行します。
 
-`select count(user_id) from aep_audiences where audienceId = '1234567'`
+`select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
 ![Amazon Marketing Cloudオーディエンス作成の検証 ](../../assets/catalog/advertising/amazon_ads_image_5.png)
 
@@ -171,6 +172,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
+| 2024年5月 | 機能とドキュメントの更新 | パラメーターをAmazon Ads に書き出 `countryCode` マッピングオプションを追加しました。 [ マッピング手順 ](#map) で `countryCode` を使用して、Amazonでの ID 一致率を改善します。 |
 | 2024年3月 | 機能とドキュメントの更新 | [!DNL Amazon Marketing Cloud] （AMC）で使用するオーディエンスを書き出すオプションを追加しました。 |
 | 2023年5月 | 機能とドキュメントの更新 | <ul><li>[宛先接続ワークフロー](#destination-details)での広告主地域選択のサポートを追加しました。</li><li>広告主地域の選択の追加を反映するようにドキュメントを更新しました。正しい広告主地域選択について詳しくは、[Amazon ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。</li></ul> |
 | 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントを公開しました。 |
