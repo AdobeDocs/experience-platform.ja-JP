@@ -3,9 +3,9 @@ title: Audiences API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用して、組織のオーディエンスをプログラムで作成、管理および更新します。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 6%
 
 ---
@@ -30,6 +30,10 @@ ht-degree: 6%
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>クエリパラメーターなしでこのエンドポイントを使用すると、非アクティブなオーディエンスは **返されません**。 ただし、このエンドポイントを `property=audienceId` クエリパラメーターと組み合わせて使用すると、非アクティブなオーディエンス **が返され** す。
 
 オーディエンスのリストを取得する際には、次のクエリパラメーターを使用できます。
 
