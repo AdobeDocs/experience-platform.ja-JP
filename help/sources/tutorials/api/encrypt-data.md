@@ -2,10 +2,10 @@
 title: 暗号化されたデータの取り込み
 description: API を使用して、クラウドストレージバッチソースを通じて暗号化されたファイルを取り込む方法を説明します。
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
+source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 76%
+source-wordcount: '1806'
+ht-degree: 72%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 76%
 
 暗号化されたデータの取り込みプロセスは次のとおりです。
 
-1. [Experience Platform API を使用して暗号化キーペアを作成](#create-encryption-key-pair)します。 暗号化キーペアは、秘密鍵と公開鍵で構成されます。 暗号化キーペアを作成したら、公開鍵を、それに対応する公開鍵 ID および有効期限と共にコピーまたはダウンロードできます。 このプロセス中に、秘密鍵は Experience Platform によってセキュアなコンテナに保存されます。**メモ：**&#x200B;応答内の公開鍵は Base64 でエンコードされており、使用する前に復号する必要があります。
+1. [Experience Platform API を使用して暗号化キーペアを作成](#create-encryption-key-pair)します。 暗号化キーペアは、秘密鍵と公開鍵で構成されます。 暗号化キーペアを作成したら、公開鍵を、それに対応する公開鍵 ID および有効期限と共にコピーまたはダウンロードできます。 このプロセス中に、秘密鍵は Experience Platform によってセキュアなコンテナに保存されます。**メモ：** 応答内の公開鍵は Base64 でエンコードされており、使用する前にデコードする必要があります。
 2. 公開鍵を使用して、取り込むデータファイルを暗号化します。
 3. 暗号化されたファイルをクラウドストレージに格納します。
 4. 暗号化されたファイルの準備が整ったら、[クラウドストレージソースのソース接続とデータフローを作成](#create-a-dataflow-for-encrypted-data)します。フロー作成手順で、`encryption` パラメーターを指定し、公開鍵 ID を含める必要があります。
@@ -64,6 +64,10 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 ## 暗号化キーペアの作成 {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>暗号化キーは、特定のサンドボックスに固有です。 したがって、暗号化されたデータを組織内の別のサンドボックスに取り込む場合は、新しい暗号化キーを作成する必要があります。
+
 暗号化されたデータを Experience Platform に取り込む最初の手順は、[!DNL Connectors] API の `/encryption/keys` エンドポイントに対して POST リクエストを実行して暗号化キーペアを作成することです。
 
 **API 形式**
@@ -87,6 +91,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -96,6 +101,7 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
+| `name` | 暗号化キーペアの名前。 |
 | `encryptionAlgorithm` | 使用する暗号化アルゴリズムのタイプ。 サポートされているタイプは `PGP` と `GPG` です。 |
 | `params.passPhrase` | パスフレーズは、暗号化キーにさらに保護レイヤーを追加します。 作成時に、Experience Platform は、公開鍵とは別のセキュアなコンテナにパスフレーズを保存します。 空白以外の文字列をパスフレーズとして指定する必要があります。 |
 
@@ -153,13 +159,15 @@ curl -X GET \
 
 +++応答の例を表示
 
-正常な応答では、暗号化アルゴリズム、公開鍵、公開鍵 ID および対応する鍵の有効期限が返されます。
+正常な応答では、暗号化アルゴリズム、名前、公開鍵、公開鍵 ID、鍵のタイプおよび鍵の対応する有効期限が返されます。
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -194,13 +202,15 @@ curl -X GET \
 
 +++応答の例を表示
 
-正常な応答では、暗号化アルゴリズム、公開鍵、公開鍵 ID および対応する鍵の有効期限が返されます。
+正常な応答では、暗号化アルゴリズム、名前、公開鍵、公開鍵 ID、鍵のタイプおよび鍵の対応する有効期限が返されます。
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -236,8 +246,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -261,6 +275,48 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `publicKeyId` | この公開鍵 ID は、顧客が管理する鍵を Experience Platform と共有する際に返されます。署名済みおよび暗号化されたデータのデータフローを作成する際に、この公開鍵 ID を署名検証鍵 ID として提供できます。 |
+
++++
+
+### 顧客管理キーペアの取得
+
+顧客管理キーを取得するには、`/customer-keys` エンドポイントに対してGETリクエストを行います。
+
+**API 形式**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**リクエスト**
+
++++リクエスト例を表示
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**応答**
+
++++応答の例を表示
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
