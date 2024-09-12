@@ -1,16 +1,16 @@
 ---
-title: ID グラフリンクルール設定ガイド
+title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 badge: ベータ版
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1361'
 ht-degree: 3%
 
 ---
 
-# ID グラフリンクルール設定ガイド
+# ID グラフリンクルールの実装ガイド
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ ID 設定ツールを使用して、一意の名前空間を指定し、優先�
 
 ID 設定と一意の名前空間を実装する際に参照できる追加情報については、この節を参照してください。
 
-### 共有デバイスのシナリオ {#shared-device-scenario}
+### 1 人のユーザーの名前空間要件 {#single-person-namespace-requirement}
 
 人物を表すすべてのプロファイルで 1 つの名前空間が使用されていることを確認する必要があります。 これにより、は ID サービスが特定のグラフ内で適切な人物識別子を検出できるようになります。
 
