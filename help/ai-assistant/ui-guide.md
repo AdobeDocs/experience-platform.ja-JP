@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタント
 description: AI アシスタントを使用して、Experience PlatformとReal-time Customer Data Platformの概念、およびオブジェクトの使用状況を移動および把握する方法について説明します。
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # AI アシスタント UI ガイド
 
 Adobe Experience Platform UI で AI アシスタントを使用する方法については、このガイドをお読みください。
-
-次のビデオは、AI アシスタントについて理解を深めるためのものです。
-
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Experience PlatformUI で AI アシスタントにアクセスする
 
