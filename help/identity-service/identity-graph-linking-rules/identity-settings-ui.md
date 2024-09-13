@@ -3,9 +3,9 @@ title: ID 設定 UI
 description: ID 設定ユーザーインターフェイスの使用方法を説明します。
 badge: ベータ版
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 2%
 
 ---
@@ -24,8 +24,10 @@ UI で ID 設定を指定する方法については、このガイドを参照�
 
 ID 設定の使用を開始する前に、次のドキュメントをお読みください。
 
-* [ID グラフリンクルール設定ガイド](./configuration.md)
+* [ID グラフリンクルール](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
+* [実装ガイド](./implementation-guide.md)
+* [グラフ設定の例](./example-configurations.md)
 * [名前空間の優先度](./namespace-priority.md)
 * [グラフシミュレーション](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ ID 設定ページは、[!UICONTROL  ユーザー名前空間 ] および [!UICO
 
 ## 次の手順
 
-これで、ID 設定 UI ページを使用して名前空間の優先度を設定し、一意の名前空間を指定しました。 詳しくは、[ID グラフリンクルールの概要 ](./overview.md) を参照してください。
+ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
+
+* [ID グラフリンクルールの概要](./overview.md)
+* [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
+* [実装ガイド](./implementation-guide.md)
+* [グラフ設定の例](./example-configurations.md)
+* [トラブルシューティングと FAQ](./troubleshooting.md)
+* [名前空間の優先度](./namespace-priority.md)
+* [グラフシミュレーション UI](./graph-simulation.md)

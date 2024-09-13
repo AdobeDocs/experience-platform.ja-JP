@@ -1,15 +1,16 @@
 ---
-title: グラフ設定ガイド
+title: グラフ設定の例
 description: ID グラフリンクルールと ID データを使用する際に発生する可能性のある一般的なグラフシナリオについて説明します。
 badge: ベータ版
-source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
+exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '2749'
+source-wordcount: '2786'
 ht-degree: 6%
 
 ---
 
-# グラフ設定ガイド
+# グラフ設定の例
 
 >[!AVAILABILITY]
 >
@@ -19,6 +20,7 @@ ht-degree: 6%
 >
 >* 「CRMID」と「loginID」は、カスタム名前空間です。 このドキュメントでは、「CRMID」はユーザー識別子で、「loginID」は特定のユーザーに関連付けられたログイン識別子です。
 >* このドキュメントで概要を説明するグラフシナリオの例をシミュレートするには、まず 2 つのカスタム名前空間を作成する必要があります。1 つは ID シンボル「CRMID」、もう 1 つは ID シンボル「loginID」です。 ID 記号では大文字と小文字が区別されます。
+
 
 このドキュメントでは、ID グラフリンクルールと ID データを使用する際に発生する可能性のある、一般的なシナリオのグラフ設定例について説明します。
 
@@ -478,7 +480,7 @@ loginID: ID_C, ECID: 111
 
 | 使用されている名前空間 | Web 行動収集方法 |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics ソースコネクタ。<br> **メモ：** デフォルトでは、AAID は ID サービスでブロックされるので、Analytics ソースを使用する場合は、AAID よりも ECID を優先する必要があります。 詳しくは、[ 実装ガイド ](configuration.md#ingest-your-data) を参照してください。</br> |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics ソースコネクタ。<br> **メモ：** デフォルトでは、AAID は ID サービスでブロックされるので、Analytics ソースを使用する場合は、AAID よりも ECID を優先する必要があります。 詳しくは、[ 実装ガイド ](./implementation-guide.md#ingest-your-data) を参照してください。</br> |
 
 **イベント：**
 
@@ -756,3 +758,15 @@ CRMID: Tom, ECID: 111
 ```
 
 >[!ENDTABS]
+
+## 次の手順
+
+ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
+
+* [ID グラフリンクルールの概要](./overview.md)
+* [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
+* [実装ガイド](./implementation-guide.md)
+* [トラブルシューティングと FAQ](./troubleshooting.md)
+* [名前空間の優先度](./namespace-priority.md)
+* [グラフシミュレーション UI](./graph-simulation.md)
+* [ID 設定 UI](./identity-settings-ui.md)

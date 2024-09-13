@@ -3,9 +3,9 @@ title: グラフシミュレーション UI ガイド
 description: ID サービス UI でグラフシミュレーションを使用する方法を説明します。
 badge: ベータ版
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1443'
 ht-degree: 2%
 
 ---
@@ -172,8 +172,10 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 このドキュメントでは、[!DNL Graph Simulation] ツールを使用して、特定のルールセットと設定に基づいて ID データがどのように扱われるかを理解する方法を確認しました。 詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフリンクルール](./overview.md)
-* [設定ガイド](./configuration.md)
+* [ID グラフリンクルールの概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
-* [名前空間の優先度](./namespace-priority.md)
+* [実装ガイド](./implementation-guide.md)
+* [トラブルシューティングと FAQ](./troubleshooting.md)
 * [グラフ設定の例](./example-configurations.md)
+* [名前空間の優先度](./namespace-priority.md)
+* [ID 設定 UI](./identity-settings-ui.md)

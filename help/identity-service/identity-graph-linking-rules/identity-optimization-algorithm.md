@@ -3,9 +3,9 @@ title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 badge: ベータ版
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 2%
 
 ---
@@ -162,7 +162,9 @@ ECID には未認証（匿名）イベントが格納されるのに対して、
 ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
 
 * [ID グラフリンクルールの概要](./overview.md)
+* [実装ガイド](./implementation-guide.md)
+* [グラフ設定の例](./example-configurations.md)
+* [トラブルシューティングと FAQ](./troubleshooting.md)
 * [名前空間の優先度](./namespace-priority.md)
-* [ID グラフリンクルールを設定するシナリオの例](./example-scenarios.md)
-* [ID リンクロジック](../features/identity-linking-logic.md)
-* [ID サービスとリアルタイム顧客プロファイル](../identity-and-profile.md)
+* [グラフシミュレーション UI](./graph-simulation.md)
+* [ID 設定 UI](./identity-settings-ui.md)

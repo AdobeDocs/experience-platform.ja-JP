@@ -5,10 +5,10 @@ breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
 role: Admin,Developer
-source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 68%
+source-wordcount: '146'
+ht-degree: 69%
 
 ---
 
@@ -25,13 +25,12 @@ ht-degree: 68%
    - のルールをリンクする ID グラフ {#identity-graph-linking-rules}
       - [機能の概要](./identity-graph-linking-rules/overview.md)
       - [ID 最適化アルゴリズム](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [ID グラフリンクルールの実装ガイド](./identity-graph-linking-rules/configuration.md)
+      - [ID グラフリンクルールの実装ガイド](./identity-graph-linking-rules/implementation-guide.md)
       - [グラフ設定の例](./identity-graph-linking-rules/example-configurations.md)
       - [ID グラフリンクルールのトラブルシューティング](./identity-graph-linking-rules/troubleshooting.md)
       - [名前空間の優先度](./identity-graph-linking-rules/namespace-priority.md)
       - [グラフシミュレーション UI](./identity-graph-linking-rules/graph-simulation.md)
       - [ID 設定 UI](./identity-graph-linking-rules/identity-settings-ui.md)
-      - [顧客シナリオの例](./identity-graph-linking-rules/example-scenarios.md)
    - [ECID の概要](./features/ecid.md)
 - [実装ガイド](implementation.md)
 - [ID データ用のガードレール](guardrails.md)
