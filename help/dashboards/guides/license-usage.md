@@ -4,10 +4,10 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2641'
-ht-degree: 10%
+source-wordcount: '2720'
+ht-degree: 9%
 
 ---
 
@@ -17,6 +17,16 @@ ht-degree: 10%
 >id="testy-mctestface"
 >title="表示してはいけないテストダイアログ"
 >abstract="{date} で表示され {name} オブジェクト。"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="コア製品テーブル"
+>abstract="テーブルにリストされているコア製品には、サンドボックスレベルでの独自の指標、使用状況トラッキングおよびドリルスルービューがあります。 これらのコア製品は、トラッキングの主要指標を提供し、これらの指標には任意のアドオンが含まれています。"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="アドオンテーブル"
+>abstract="アドオンテーブルには、ライセンス量がコア製品でサポートされる指標と組み合わされる製品が一覧表示されます。 これらのアドオンには、個別の指標はありませんが、関連付けられたコア製品の使用状況追跡を強化します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
