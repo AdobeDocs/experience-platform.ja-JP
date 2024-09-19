@@ -2,9 +2,9 @@
 title: thirdPartyCookiesEnabled
 description: 訪問者を識別するためのサードパーティ Cookie の使用を許可する。
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: a884790aa48fb97eebe2421124fc5d5f76c8a79d
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -12,14 +12,9 @@ ht-degree: 0%
 
 # `thirdPartyCookiesEnabled`
 
->[!IMPORTANT]
->
->Google[ 発表しました ](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) は、2024 年後半にサードパーティ cookie に対するChromeのサポートを廃止する計画です。 その結果、主要なブラウザーでサードパーティ cookie がサポートされなくなります。
->
->この変更が実装されると、Adobeでは、Web SDK で現在サポートされている `demdex` Cookie のサポートを停止します。
-
-
 `thirdPartyCookiesEnabled` プロパティは、Web SDK がサードパーティコンテキストで cookie を設定するかどうかを決定するブール値です。 このオプションを有効にすると、組織が所有するサブドメイン間またはドメイン間で訪問者を識別する場合に役立ちます。 ただし、最新のブラウザーの多くは、サードパーティ cookie の設定と有効期限を制限しています。
+
+`thirdPartyCookiesEnabled` プロパティは、[`getIdentity`](../getidentity.md) 呼び出しで [`CORE ID`](../../identity/overview.md#tracking-coreid-web-sdk) を要求できるかどうかを制御します。
 
 このオプションを有効にすると、Web SDK はAdobe Audience Managerを使用して訪問者の特定に役立ちます。 このオプションを無効にすると、コールトゥAudience Managerは無効になります。 詳しくは、Audience Managerユーザーガイドの [Demdex ドメインの呼び出しについて ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=ja) を参照してください。
 

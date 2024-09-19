@@ -2,10 +2,10 @@
 title: Web SDK の ID データ
 description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID （ECID）を取得および管理する方法について説明します。
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
+source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 2%
+source-wordcount: '1554'
+ht-degree: 1%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 Adobe Experience Platform Web SDK は、[Adobe Experience Cloud ID （ECID） ](../../identity-service/features/ecid.md) を使用して訪問者の行動を追跡します。 [!DNL ECIDs] を使用すると、各デバイスに一意の ID を設定し、複数のセッションにわたって保持し、web セッション中およびセッション間で発生するすべてのヒットを特定のデバイスに結び付けることができます。
 
-このドキュメントでは、Web SDK を使用して [!DNL ECIDs] を管理する方法の概要を説明します。
+このドキュメントでは、Web SDK を使用して [!DNL ECIDs] と [!DNL CORE IDs] を管理する方法の概要を説明します。
 
-## Web SDK を使用した ECID のトラッキング {#tracking-ecids-we-sdk}
+## Web SDK を使用した ECID のトラッキング {#tracking-ecids-web-sdk}
 
 Web SDK は、これらの cookie の生成方法を設定できる複数の方法を使用して、cookie を使用して [!DNL ECIDs] ータを割り当て、追跡します。
 
@@ -33,6 +33,12 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 1. データをEdge Networkドメイン `adobedc.net` に直接送信します。 この方法は、[ サードパーティのデータ収集 ](#third-party) と呼ばれます。
 
 以下の節で説明するように、使用するデータ収集方法は、ブラウザー間の Cookie の有効期間に直接影響します。
+
+## Web SDK を使用したコア ID のトラッキング {#tracking-coreid-web-sdk}
+
+サードパーティ cookie を有効にしたGoogle Chromeを使用し、`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` の cookie が設定されていない場合、最初のEdge Networkリクエストは `demdex.net` ドメインを通過し、demdex cookie が設定されます。 この cookie には [!DNL CORE ID] が含まれています。 これは一意のユーザー ID で、[!DNL ECID] とは異なります。
+
+実装によっては、[ にアクセス  [!DNL CORE ID]](#retrieve-coreid) する必要があります。
 
 ### ファーストパーティデータ収集 {#first-party}
 
@@ -84,7 +90,6 @@ xdm.identityMap.ECID[0].id
 
 ### `getIdentity()` コマンドを使用して [!DNL ECID] を取得します {#retrieve-ecid-getidentity}
 
-
 >[!IMPORTANT]
 >
 >クライアント側で ECID が必要な場合は、`getIdentity()` コマンドを使用してのみ [!DNL ECID] を取得する必要があります。 ECID のみを XDM フィールドにマッピングする場合は、代わりに [ データ収集のためのデータ準備 ](#retrieve-ecid-data-prep) を使用します。
@@ -107,6 +112,17 @@ alloy("getIdentity")
     // "error" will be an error object with additional information.
   });
 ```
+
+## 現在のユーザーのコア ID を取得します {#retrieve-coreid}
+
+ユーザーのコア ID を取得するには、以下に示すように、[`getIdentity()`](../commands/getidentity.md) コマンドを使用できます。
+
+```js
+alloy("getIdentity",{
+  "namespaces": ["CORE"]
+});
+```
+
 
 ## 使用 `identityMap` {#using-identitymap}
 
