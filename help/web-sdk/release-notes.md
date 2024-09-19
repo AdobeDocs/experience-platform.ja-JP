@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 78%
+source-wordcount: '1920'
+ht-degree: 77%
 
 ---
 
@@ -16,11 +16,21 @@ ht-degree: 78%
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
 
+## バージョン 2.23.0 - 2024年9月19日（PT）
+
+**新機能**
+
+- [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) コマンドでの [CORE ID](identity/overview.md#tracking-coreid-web-sdk) のリクエストに対するサポートを追加しました。
+
+**修正点および改善点**
+
+- Web SDK をローカルで実行した際に、cookie が正しく書き込まれない問題を修正しました。
+
 ## バージョン 2.22.0 - 2024年8月22日（PT）
 
 **新機能**
 
-- パーソナライゼーションモニターを追加しました。
+- パーソナライゼーション監視フックのサポートを追加しました。
 
 **修正点および改善点**
 
