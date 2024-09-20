@@ -4,9 +4,9 @@ title: リアルタイム顧客プロファイル API ガイド
 description: リアルタイム顧客プロファイル API を使用すると、開発者は、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータのエクスポートまたはサンプル、不要になったプロファイルデータまたはエラーで追加されたプロファイルデータの削除など、プロファイルデータを調査および操作できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '860'
 ht-degree: 19%
 
 ---
@@ -21,11 +21,7 @@ ht-degree: 19%
 
 [!DNL Experience Platform] UI で [!DNL Real-Time Customer Profile] データを操作する方法については、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
 
-## [!BADGE Beta]{type=Informative} 計算済み属性 {#computed-attributes}
-
->[!IMPORTANT]
->
-計算属性機能はベータ版で、すべてのユーザーが利用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+## 計算属性 {#computed-attributes}
 
 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティベーションおよびパーソナライゼーションで使用できます。
 
