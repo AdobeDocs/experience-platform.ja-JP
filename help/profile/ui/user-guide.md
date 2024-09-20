@@ -3,10 +3,10 @@ keywords: Experience Platform；プロファイル；リアルタイム顧客プ
 title: リアルタイム顧客プロファイル UI ガイド
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルを操作するためのガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
+source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
-source-wordcount: '2155'
-ht-degree: 7%
+source-wordcount: '2212'
+ht-degree: 6%
 
 ---
 
@@ -127,6 +127,11 @@ Experience PlatformUI で、左側のナビゲーションで「**[!UICONTROL �
 ![ID 値に一致するプロファイルがハイライト表示されます。](../images/user-guide/filtered-identity-value.png)
 
 ## プロファイルの詳細を表示 {#profile-detail}
+
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_201001_404"
+>title="エンティティが見つかりません"
+>abstract="これは、Platform がリクエストされたエンティティを見つけることができなかったことを意味します。 このエラーを解決するには、次のいずれかの解決策を試してください。<ul><li>アクセスしようとしているエンティティの URL に正しいプロファイル ID がリストされていることを確認します。</li><li>アクセスしようとしているエンティティの組織とサンドボックスの正しい組み合わせがあることを確認します。</li></ul>"
 
 **[!UICONTROL プロファイル ID]** を選択すると、「**[!UICONTROL 詳細]**」タブが開きます。 「**[!UICONTROL 詳細]**」タブに表示されるプロファイル情報は、複数のプロファイルフラグメントを結合し、個々の顧客の単一のビューを形成したものです。 これには、基本属性、リンクされた ID、チャネル環境設定などの顧客の詳細が含まれます。
 
