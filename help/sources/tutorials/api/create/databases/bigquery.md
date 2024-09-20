@@ -3,10 +3,10 @@ title: Flow Service API を使用したGoogle BigQuery ベース接続の作成
 description: Flow Service API を使用してAdobe Experience PlatformをGoogle BigQuery に接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 59%
+source-wordcount: '523'
+ht-degree: 53%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 59%
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、[!DNL Google BigQuery] のベース接続を作成する手順を説明します。
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Google BigQuery] のベース接続を作成する方法については、このガイドを参照してください。
 
-## はじめに
+## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -31,18 +31,7 @@ ht-degree: 59%
 
 ### 必要な資格情報の収集
 
-[!DNL Flow Service] が [!DNL Google BigQuery] を Platform に接続するには、次の OAuth 2.0 認証値を指定する必要があります。
-
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `project` | クエリ対象となるデフォルトの [!DNL Google BigQuery] プロジェクトのプロジェクト ID。 |
-| `clientID` | 更新トークンの生成に使用される ID 値。 |
-| `clientSecret` | 更新トークンの生成に使用するシークレット値。 |
-| `refreshToken` | [!DNL Google] から取得された更新トークンは、[!DNL Google BigQuery] へのアクセスを許可するために使用されます。 |
-| `largeResultsDataSetId` | 大きな結果セットのサポートを有効にするために必要な、事前に作成された [!DNL Google BigQuery] データセット ID。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Google BigQuery] の接続仕様 ID は `3c9b37f8-13a6-43d8-bad3-b863b941fedd` です。 |
-
-これらの値について詳しくは、この [[!DNL Google BigQuery]  ドキュメント ](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing) を参照してください。
+必要な認証情報の収集に関する詳細な手順については、[[!DNL Google BigQuery]  認証ガイド ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) を参照してください。
 
 ### Platform API の使用
 
@@ -60,9 +49,13 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 POST /connections
 ```
 
+>[!BEGINTABS]
+
+>[!TAB  基本認証の使用 ]
+
 **リクエスト**
 
-次のリクエストは、[!DNL Google BigQuery] のベース接続を作成します。
+次のリクエストは、基本認証を使用して [!DNL Google BigQuery] のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -73,8 +66,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google BigQuery connection",
-        "description": "Google BigQuery connection",
+        "name": "Google BigQuery connection with basic authentication",
+        "description": "Google BigQuery connection with basic authentication",
         "auth": {
             "specName": "Basic Authentication",
             "type": "OAuth2.0",
@@ -110,6 +103,59 @@ curl -X POST \
     "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
+
+>[!TAB  サービス認証の使用 ]
+
+
+**リクエスト**
+
+次のリクエストは、サービス認証を使用して [!DNL Google BigQuery] のベース接続を作成します。
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Google BigQuery base connection with service account",
+        "description": "Google BigQuery connection with service account",
+        "auth": {
+            "specName": "Service Authentication",
+            "params": {
+                    "projectId": "{PROJECT_ID}",
+                    "keyFileContent": "{KEY_FILE_CONTENT},
+                    "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
+                }
+        },
+        "connectionSpec": {
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "version": "1.0"
+        }
+    }'
+```
+
+| プロパティ | 説明 |
+| --------- | ----------- |
+| `auth.params.projectId` | 照会する既定の [!DNL Google BigQuery] プロジェクトのプロジェクト ID。 に対して。 |
+| `auth.params.keyFileContent` | サービスアカウントの認証に使用されるキーファイル。 キーファイルのコンテンツは [!DNL Base64] でエンコードする必要があります。 |
+| `auth.params.largeResultsDataSetId` | （オプション）大きな結果セットのサポートを有効にするために必要な、事前に作成された [!DNL Google BigQuery] データセット ID。 |
+
+**応答**
+
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。この ID は、次のチュートリアルでデータを調べるために必要です。
+
+```json
+{
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
+}
+```
+
+>[!ENDTABS]
+
 
 ## 次の手順
 
