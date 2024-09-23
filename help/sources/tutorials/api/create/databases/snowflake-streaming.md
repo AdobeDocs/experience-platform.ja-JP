@@ -1,13 +1,12 @@
 ---
 title: SnowflakeストリーミングアカウントのAdobe Experience Platformへの接続
 description: Flow Service API を使用してAdobe Experience PlatformをSnowflakeストリーミングに接続する方法について説明します。
-badgeBeta: label="ベータ版" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 26%
+source-wordcount: '845'
+ht-degree: 27%
 
 ---
 
@@ -15,8 +14,8 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 >
->* [!DNL Snowflake] ストリーミングソースはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
->* Real-time Customer Data Platform Ultimate を購入したユーザーは、API で [!DNL Snowflake] ストリーミングソースを利用できます。
+>
+> Real-time Customer Data Platform Ultimate を購入したユーザーは、API で [!DNL Snowflake] ストリーミングソースを利用できます。
 
 このチュートリアルでは、[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して、[!DNL Snowflake] アカウントからAdobe Experience Platformにデータを接続してストリーミングする手順について説明します。
 
