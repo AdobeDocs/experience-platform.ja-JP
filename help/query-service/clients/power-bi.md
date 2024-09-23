@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Power BI をクエリサービスに接続します。
 description: このドキュメントでは、Power BI と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
+source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1011'
 ht-degree: 96%
 
 ---
@@ -24,16 +24,6 @@ ht-degree: 96%
 > [!DNL Power BI] Desktop アプリケーションは、Windows デバイスで&#x200B;**のみ**&#x200B;使用できます。
 
 [!DNL Power BI] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在、クエリワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
-
-[!DNL Power BI] をインストールした後、PostgreSQL の .NET ドライバーパッケージである `Npgsql` をインストールする必要があります。Npgsql について詳しくは、[Npgsql のドキュメント](https://www.npgsql.org/doc/index.html)を参照してください。
-
->[!IMPORTANT]
->
->新しいバージョンではエラーが発生するので、v4.0.10 以前をダウンロードする必要があります。
-
-カスタム設定画面の「[!DNL Npgsql GAC Installation]」で「**[!DNL Will be installed on local hard drive]**」を選択します。
-
-Npgsql が正しくインストールされていることを確認するには、次の手順に進む前にコンピューターを再起動してください。
 
 ## クエリサービスへの [!DNL Power BI] の接続 {#connect-power-bi}
 
