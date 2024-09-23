@@ -2,10 +2,10 @@
 title: UI での Adobe Analytics ソースコネクタの作成
 description: UI でAdobe Analytics ソース接続を作成して、消費者データを Adobe Experience Platform に取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 42%
+source-wordcount: '2672'
+ht-degree: 41%
 
 ---
 
@@ -312,6 +312,13 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >[!NOTE]
 >
 >Analytics ソースコネクタは完全にAdobeによって管理されるので、データセットアクティビティページにバッチに関する情報が表示されません。 取り込んだレコードの周囲の指標を確認することで、データのフローを監視できます。
+
+## データフローの削除 {#delete-dataflow}
+
+Analytics データフローを削除するには、ソースワークスペースの上部のヘッダーから **[!UICONTROL データフロー]** を選択します。 データフローページを使用して、削除する Analytics データフローを見つけ、その横にある省略記号（`...`）を選択します。 次に、ドロップダウンメニューを使用して「**[!UICONTROL 削除]**」を選択します。
+
+* ライブ Analytics データフローを削除すると、基になるデータセットも削除されます。
+* Analytics データフローのバックフィルを削除しても、基になるデータセットは削除されませんが、対応するレポートスイートのバックフィルプロセスは停止します。 バックフィルデータフローを削除した場合でも、取り込まれたデータはデータセットを使用して表示できます。
 
 ## 次の手順とその他のリソース
 
