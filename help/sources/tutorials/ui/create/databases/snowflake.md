@@ -4,10 +4,10 @@ type: Tutorial
 description: Adobe Experience Platform UI を使用してSnowflakeソース接続を作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 18%
+source-wordcount: '886'
+ht-degree: 16%
 
 ---
 
@@ -104,6 +104,12 @@ Platform の UI で、左側のナビゲーションから **[!UICONTROL Sources
 ![ アカウントキーペア認証インターフェイス ](../../../../images/tutorials/create/snowflake/key-pair.png)
 
 >[!ENDTABS]
+
+### サンプルデータのプレビューをスキップ {#skip-preview-of-sample-data}
+
+データ選択手順で、大きなテーブルまたはファイルのデータを取り込む際にタイムアウトが発生することがあります。 データプレビューをスキップして、タイムアウトを回避し、サンプルデータがなくてもスキーマを表示できます。 データのプレビューをスキップするには、「サンプルデータのプレビューをスキップ **[!UICONTROL 切替スイッチを有効]** します。
+
+残りのワークフローは変わりません。 唯一の注意点は、データのプレビューをスキップすると、マッピングステップ中に計算フィールドと必須フィールドが自動検証されない可能性があり、マッピング中にこれらのフィールドを手動で検証する必要があるということです。
 
 ## 次の手順
 

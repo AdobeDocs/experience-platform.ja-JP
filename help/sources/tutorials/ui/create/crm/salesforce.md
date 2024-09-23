@@ -1,11 +1,11 @@
 ---
-title: Experience Platformユーザーインターフェイスを使用した Salesforce アカウントの接続
-description: ユーザーインターフェイスを使用して Salesforce アカウントを連携し、CRM データをExperience Platformに取り込む方法について説明します。
+title: Experience Platformユーザーインターフェイスを使用したSalesforce アカウントの接続
+description: ユーザーインターフェイスを使用してSalesforce アカウントを接続し、CRM データをExperience Platformに取り込む方法について説明します。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 21%
+source-wordcount: '935'
+ht-degree: 19%
 
 ---
 
@@ -71,21 +71,21 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![Salesforce ソースカードが選択されたExperience PlatformUI のソースカタログ ](../../../../images/tutorials/create/salesforce/catalog.png)
+![Experience PlatformUI のソースカタログで、Salesforce ソースカードが選択されています。](../../../../images/tutorials/create/salesforce/catalog.png)
 
-**[!UICONTROL Salesforce への接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Salesforceへの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウントを使用
 
 既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択し、表示されるリストから使用するアカウントを選択します。 終了したら、「**[!UICONTROL 次へ]** を選択して続行します。
 
-![ 組織に既に存在する、認証済みの Salesforce アカウントのリスト。](../../../../images/tutorials/create/salesforce/existing.png)
+![ 組織に既に存在する、認証済みのSalesforce アカウントのリスト。](../../../../images/tutorials/create/salesforce/existing.png)
 
 ### 新しいアカウントを作成
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL Salesforce] アカウントの名前と説明を入力します。
 
-![ 適切な認証資格情報を提供することで、新しい Salesforce アカウントを作成できるインターフェイス。](../../../../images/tutorials/create/salesforce/new.png)
+![ 適切な認証資格情報を提供することで、新しいSalesforce アカウントを作成できるインターフェイス。](../../../../images/tutorials/create/salesforce/new.png)
 
 次に、新しいアカウントに使用する認証タイプを選択します。
 
@@ -102,7 +102,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
 
-![Salesforce アカウント作成用の基本認証インターフェイス。](../../../../images/tutorials/create/salesforce/basic.png)
+![Salesforce アカウント作成用の基本認証インターフェイス ](../../../../images/tutorials/create/salesforce/basic.png)
 
 >[!TAB OAuth2 クライアント資格情報 ]
 
@@ -115,9 +115,15 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
 
-![Salesforce アカウント作成用の OAuth インターフェイス。](../../../../images/tutorials/create/salesforce/oauth2.png)
+![Salesforce アカウント作成用の OAuth インターフェイス ](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### サンプルデータのプレビューをスキップ {#skip-preview-of-sample-data}
+
+データ選択手順で、大きなテーブルまたはファイルのデータを取り込む際にタイムアウトが発生することがあります。 データプレビューをスキップして、タイムアウトを回避し、サンプルデータがなくてもスキーマを表示できます。 データのプレビューをスキップするには、「サンプルデータのプレビューをスキップ **[!UICONTROL 切替スイッチを有効]** します。
+
+残りのワークフローは変わりません。 唯一の注意点は、データのプレビューをスキップすると、マッピングステップ中に計算フィールドと必須フィールドが自動検証されない可能性があり、マッピング中にこれらのフィールドを手動で検証する必要があるということです。
 
 ## 次の手順
 

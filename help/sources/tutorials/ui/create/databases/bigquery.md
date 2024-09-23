@@ -3,10 +3,10 @@ title: UI でのGoogle Big Query Source接続の作成
 description: Adobe Experience Platform UI を使用してGoogle Big Query ソース接続を作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 39%
+source-wordcount: '620'
+ht-degree: 33%
 
 ---
 
@@ -74,6 +74,12 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 ![ サービス認証が選択された新しいアカウントインターフェイス。](../../../../images/tutorials/create/google-big-query/service_auth.png)
 
 >[!ENDTABS]
+
+### サンプルデータのプレビューをスキップ {#skip-preview-of-sample-data}
+
+データ選択手順で、大きなテーブルまたはファイルのデータを取り込む際にタイムアウトが発生することがあります。 データプレビューをスキップして、タイムアウトを回避し、サンプルデータがなくてもスキーマを表示できます。 データのプレビューをスキップするには、「サンプルデータのプレビューをスキップ **[!UICONTROL 切替スイッチを有効]** します。
+
+残りのワークフローは変わりません。 唯一の注意点は、データのプレビューをスキップすると、マッピングステップ中に計算フィールドと必須フィールドが自動検証されない可能性があり、マッピング中にこれらのフィールドを手動で検証する必要があるということです。
 
 ## 次の手順
 
