@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマ UI の概要
 description: この概要では、Experience Platformのスキーマ ワークスペースの主な機能を説明します。
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '307'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform ユーザーインターフェイスの [!UICONTROL  �
 
 Platform UI でワークスペースにアクセスするには、左パネルで **[!UICONTROL スキーマ]** を選択します。
 
-![](../images/ui/overview/schemas-tab.png)
+![Platform UI の左側のナビゲーションでスキーマがハイライト表示されたスキーマワークスペース。](../images/ui/overview/schemas-tab.png)
 
 ## はじめに
 

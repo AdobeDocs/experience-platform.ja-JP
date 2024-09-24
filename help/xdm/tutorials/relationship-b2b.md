@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
 description: Adobe Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 18%
+source-wordcount: '1769'
+ht-degree: 14%
 
 ---
 
@@ -65,19 +65,19 @@ Adobe Real-time Customer Data Platform B2B Edition には、[ アカウント ](
 
 参照目的で、次の節では、関係が定義される前に、このチュートリアルで使用する各スキーマの構造について説明します。 プライマリ ID が定義されているスキーマ構造と、それらが使用するカスタム名前空間に注意してください。
 
-### [!DNL Opportunities] スキーマ
+### 商談スキーマ
 
 ソーススキーマ「[!DNL Opportunities]」は、[!UICONTROL XDM Business Opportunity] クラスに基づいています。 クラス `opportunityKey` が提供するフィールドの 1 つは、スキーマの識別子として機能します。 特に、`opportunityKey` オブジェクトの `sourceKey` フィールドは、[!DNL B2B Opportunity] というカスタム名前空間でスキーマのプライマリ ID として設定されます。
 
-**[!UICONTROL スキーマプロパティ]** に示すように、このスキーマは [!DNL Real-Time Customer Profile] での使用が有効になっています。
+**[!UICONTROL フィールドプロパティ]** の節で示すように、このスキーマは [!DNL Real-Time Customer Profile] で使用できるようになりました。
 
-![ 商談スキーマ ](../images/tutorials/relationship-b2b/opportunities.png)
+![opportunityKey オブジェクトと「プロファイルを有効にする」切替スイッチがハイライト表示された、スキーマエディターの商談スキーマ ](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### [!DNL Accounts] スキーマ
 
 参照スキーマ「[!DNL Accounts]」は、[!UICONTROL XDM Account] クラスに基づいています。 ルートレベルの `accountKey` フィールドには、[!DNL B2B Account] と呼ばれるカスタム名前空間の下でプライマリ ID として機能する `sourceKey` が含まれています。 このスキーマは、プロファイルでも使用できるようになりました。
 
-![ アカウントスキーマ ](../images/tutorials/relationship-b2b/accounts.png)
+![accountKey オブジェクトと「プロファイルで有効にする」切替スイッチがハイライト表示されたスキーマエディターのアカウントスキーマ ](../images/tutorials/relationship-b2b/accounts.png)
 
 ## ソーススキーマで関係フィールドを定義 {#relationship-field}
 
@@ -97,29 +97,64 @@ Adobe Real-time Customer Data Platform B2B Edition には、[ アカウント ](
 >
 >現在、ソーススキーマから参照スキーマに定義できるのは、多対 1 および 1 対 1 の関係のみです。 1 対多の関係の場合、「多」を表すスキーマで関係フィールドを定義する必要があります。
 
-関係フィールドを設定するには、キャンバス内で該当するフィールドの横にある矢印アイコン（![ 矢印アイコン ](/help/images/icons/alias.png)）を選択します。 [!DNL Opportunities] スキーマの場合、目標はアカウントとの多対 1 の関係を確立することなので、これは `accountKey.sourceKey` のフィールドになります。
+関係フィールドを設定するには、キャンバス内で該当するフィールドを選択し、**[!UICONTROL スキーマプロパティ]** サイドバーで [!UICONTROL  関係を追加 ] を選択します。 [!DNL Opportunities] スキーマの場合、目標はアカウントとの多対 1 の関係を確立することなので、これは `accountKey.sourceKey` のフィールドになります。
 
-![ 関係ボタン ](../images/tutorials/relationship-b2b/relationship-button.png)
+![sourceKey フィールドと「関係を追加」がハイライト表示されたスキーマエディター ](../images/tutorials/relationship-b2b/add-relationship.png)
 
-関係の詳細を指定できるダイアログが表示されます。 関係タイプは自動的に **[!UICONTROL 多対 1]** に設定されます。
+[!UICONTROL  関係を追加 ] ダイアログが表示されます。 このダイアログを使用して、関係の詳細を指定します。 関係タイプは、デフォルトで **[!UICONTROL 多対 1]** に設定されます。
 
-![ 関係ダイアログ ](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![ 多対 1 のスキーマ関係がハイライト表示された関係を追加ダイアログ。](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-**[!UICONTROL 参照スキーマ]** の下で、検索バーを使用して参照スキーマの名前を見つけます。 参照スキーマの名前をハイライト表示すると、「**[!UICONTROL 参照 ID 名前空間]** フィールドが、スキーマのプライマリ ID の名前空間に自動的に更新されます。
+**[!UICONTROL 参照スキーマ]** の下で、検索バーまたはドロップダウンメニューを使用して、参照スキーマの名前を探します。 参照スキーマの名前をハイライト表示すると、「**[!UICONTROL 参照 ID 名前空間]** フィールドが、参照スキーマのプライマリ ID の名前空間に自動的に更新されます。
 
-![ 参照スキーマ ](../images/tutorials/relationship-b2b/reference-schema.png)
+>[!NOTE]
+>
+>使用可能な参照スキーマのリストが、適切なスキーマのみを含むようにフィルタリングされます。 スキーマ **必須** にはプライマリ ID が割り当てられ、B2B クラスまたは個人プロファイルクラスのいずれかである必要があります。 見込み客クラススキーマに関係を設定できません。
 
-**[!UICONTROL 現在のスキーマからの関係名]** および **[!UICONTROL 参照スキーマからの関係名]** で、それぞれソーススキーマおよび参照スキーマのコンテキストの関係にわかりやすい名前を指定します。 終了したら、「**[!UICONTROL 保存]**」を選択して変更を適用し、スキーマを保存します。
+![ 「参照スキーマ」フィールドと「参照 ID 名前空間」フィールドがハイライト表示された関係を追加ダイアログ ](../images/tutorials/relationship-b2b/reference-schema.png)
 
-![ 関係名 ](../images/tutorials/relationship-b2b/relationship-name.png)
+**[!UICONTROL 現在のスキーマからの関係名]** および **[!UICONTROL 参照スキーマからの関係名]** で、それぞれソーススキーマおよび参照スキーマのコンテキストの関係にわかりやすい名前を指定します。 終了したら、「**[!UICONTROL 適用]**」を選択して変更を確定し、関係を保存します。
 
-キャンバスが再び表示され、関係フィールドが、以前に指定したわかりやすい名前でマークされます。 関係名も左側のパネルの下に表示され、参照しやすくなっています。
+>[!NOTE]
+>
+>関係名は 35 文字以下にする必要があります。
 
-![ 適用された関係 ](../images/tutorials/relationship-b2b/relationship-applied.png)
+![ 関係名フィールドがハイライト表示された関係を追加ダイアログ。](../images/tutorials/relationship-b2b/relationship-name.png)
+
+キャンバスが再び表示され、関係フィールドが、以前に指定したわかりやすい名前でマークされます。 関係名も左側のパネルに表示され、簡単に参照できます。
+
+![ 新しい関係名が適用されたスキーマエディター。](../images/tutorials/relationship-b2b/relationship-applied.png)
 
 参照スキーマの構造を表示すると、スキーマのプライマリ ID フィールドの横にある左側のパネルに関係マーカーが表示されます。
 
-![ 宛先スキーマの関係マーカー ](../images/tutorials/relationship-b2b/destination-relationship.png)
+![ スキーマエディターの宛先スキーマで、新しい関係マーカーがハイライト表示されています。](../images/tutorials/relationship-b2b/destination-relationship.png)
+
+## B2B スキーマ関係の編集 {#edit-schema-relationship}
+
+スキーマの関係が確立されたら、ソーススキーマの関係フィールドを選択してから、**[!UICONTROL 関係を編集]** を選択します。
+
+>[!NOTE]
+>
+>関連するすべての関係を表示するには、参照スキーマのプライマリ ID フィールドに続いて [!UICONTROL  関係の表示 ] を選択します。
+>![関係フィールドが選択され、関係を表示がハイライト表示されたスキーマエディター。](../images/tutorials/relationship-b2b/view-relationships.png " 関係フィールドが選択され、関係を表示がハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"}
+
+![ 関係フィールドと「関係を編集」がハイライト表示されたスキーマエディター ](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
+
+[!UICONTROL  関係を編集 ] ダイアログが表示されます。 このダイアログから、参照スキーマと関係名を変更したり、関係を削除したりできます。 多対 1 関係タイプは変更できません。
+
+![ 関係を編集ダイアログ ](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
+
+データの整合性を維持し、セグメント化やその他のプロセスの中断を避けるために、リンクされたデータセットとのスキーマ関係を管理する際に、次のガイドラインを考慮してください。
+
+* スキーマがデータセットに関連付けられている場合は、セグメント化に悪影響を及ぼす可能性があるので、関係を直接削除しないでください。 代わりに、関係を削除する前に、関連するデータセットを削除します。
+* 最初に既存の関係を削除しないと、参照スキーマを変更できません。 ただし、関連するデータセットとの関係を削除すると、意図しない結果が生じる可能性があるので、慎重に行う必要があります。
+* 既存のリンクされたデータセットを使用してスキーマに新しい関係を追加すると、意図したとおりに動作せず、競合が発生する可能性があります。
+
+## 関係のフィルタリングと検索 {#filter-and-search}
+
+[!UICONTROL  スキーマ ] ワークスペースの「[!UICONTROL  関係 ]」タブから、スキーマ内の特定の関係をフィルタリングして検索できます。 このビューを使用すると、関係をすばやく見つけて管理できます。 フィルタリングオプションの手順について詳しくは、[ スキーマリソースの調査 ](../ui/explore.md#lookup) に関するドキュメントを参照してください。
+
+![ スキーマ ワークスペースの「関係」タブ ](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## 次の手順
 

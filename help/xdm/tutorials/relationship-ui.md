@@ -5,10 +5,10 @@ title: スキーマエディターを使用した 2 つのスキーマ間の関�
 description: このドキュメントでは、Experience Platformユーザーインターフェイスのスキーマエディターを使用して、2 つのスキーマ間の関係を定義するチュートリアルを提供します。
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 26%
+source-wordcount: '1376'
+ht-degree: 21%
 
 ---
 
@@ -109,19 +109,49 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->以下の手順では、キャンバスの右パネルのコントロールを使用して関係フィールドを定義する方法について説明します。 Real-Time CDP B2B Edition にアクセスできる場合は、多対 1 の関係を作成する場合と同様に、[ 同じダイアログ ](./relationship-b2b.md#relationship-field) を使用して 1 対 1 の関係を定義することもできます。
+>関係は、文字列フィールドまたは文字列配列フィールドでのみサポートできます。
 
-キャンバスで「`preferredHotel`」フィールドを選択し、「**[!UICONTROL フィールドのプロパティ]** の下を下にスクロールして、「**[!UICONTROL 関係]**」チェックボックスを表示します。 このチェックボックスを選択すると、関係フィールドを設定するために必要なパラメーターが表示されます。
+キャンバスで「`preferredHotel`」フィールドを選択し、**[!UICONTROL フィールドプロパティ]** サイドバーで **[!UICONTROL 関係を追加]** を選択します。
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![ フィールドプロパティのサイドバーで「関係を追加」がハイライト表示されたスキーマエディター。](../images/tutorials/relationship/add-relationship.png)
 
-**[!UICONTROL 参照スキーマ]** のドロップダウンを選択し、関係の参照スキーマを選択します（この例では「[!DNL Hotels]」）。 **[!UICONTROL 参照 ID 名前空間]** で、参照スキーマの ID フィールド（この場合は「[!DNL Hotel ID]」）の名前空間を選択します。 終了したら「**[!UICONTROL 適用]**」を選択します。
+[!UICONTROL  関係を追加 ] ダイアログが表示されます。 このダイアログから、関係フィールドを設定するために必要なパラメーターを設定できます。 Real-Time CDP B2C ユーザーの場合は、ソーススキーマと参照スキーマの間に 1 対 1 の関係を **のみ** 設定できます。
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>Real-Time CDP B2B Edition にアクセスできる場合は、キャンバスの右パネルのコントロールを使用して関係フィールドを定義したり、[ 同じダイアログ ](./relationship-b2b.md#relationship-field) を使用して多対 1 の関係を構築したりできます。
+
+![ 関係を追加ダイアログ ](../images/tutorials/relationship/add-relationship-dialog.png)
+
+**[!UICONTROL 参照スキーマ]** のドロップダウンを使用し、関係の参照スキーマを選択します（この例では「[!DNL Hotels]」）。
+
+>[!NOTE]
+>
+>プライマリ ID を含むスキーマのみが参照スキーマドロップダウンメニューに含まれます。 このセーフガードは、まだ適切に設定されていないスキーマと、誤って関係を作成するのを防ぎます。
+
+参照スキーマの ID 名前空間（この場合は「[!DNL Hotel ID]」）は、**[!UICONTROL 参照 ID 名前空間]** の下に自動的に入力されます。 終了したら「**[!UICONTROL 適用]**」を選択します。
+
+![ 関係パラメーターが設定され、「適用」がハイライト表示された関係を追加ダイアログ ](../images/tutorials/relationship/apply-relationship.png)
 
 キャンバスで「`preferredHotel`」フィールドが関係としてハイライト表示され、参照スキーマの名前が表示されるようになりました。 「**[!UICONTROL 保存]**」を選択して変更を保存し、ワークフローを完了します。
 
-![](../images/tutorials/relationship/relationship-save.png)
+![ 関係参照と「保存」がハイライト表示されたスキーマエディター ](../images/tutorials/relationship/relationship-save.png)
+
+### 既存の関係フィールドを編集 {#edit-relationship}
+
+参照スキーマを変更するには、既存の関係を持つフィールドを選択し、**[!UICONTROL フィールドプロパティ]** サイドバーで **[!UICONTROL 関係を編集]** を選択します。
+
+![ 「関係を編集」がハイライト表示されたスキーマエディター。](../images/tutorials/relationship/edit-relationship.png)
+
+[!UICONTROL  関係を編集 ] ダイアログが表示されます。 ここから、[ 関係フィールドの定義 ](#relationship-field) で説明されているプロセスに従うか、関係を削除できます。 「**[!UICONTROL 関係を削除]**」を選択して、参照スキーマへの関係を削除します。
+
+![ 関係を編集ダイアログ ](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## 関係のフィルタリングと検索 {#filter-and-search}
+
+[!UICONTROL  スキーマ ] ワークスペースの「[!UICONTROL  関係 ]」タブから、スキーマ内の特定の関係をフィルタリングして検索できます。 このビューを使用すると、関係をすばやく見つけて管理できます。 フィルタリングオプションの手順について詳しくは、[ スキーマリソースの調査 ](../ui/explore.md#lookup) に関するドキュメントを参照してください。
+
+![ スキーマ ワークスペースの「関係」タブ ](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## 次の手順
 
