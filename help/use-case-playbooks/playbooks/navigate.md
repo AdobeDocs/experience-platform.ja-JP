@@ -4,7 +4,7 @@ title: ユースケースプレイブックに移動
 description: プレイブックのギャラリーをナビゲートし、感動的なサンドボックスの使用を開始する方法を説明します。
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 2%
@@ -67,7 +67,7 @@ SMS チャネルサーフェスを作成するには、まず SMS API 認証情�
 
 ### チャネルサーフェスをプッシュ
 
-アプリサーフェスがExperience Platformまたはデータ収集インターフェイスのいずれかから設定されていることを確認します。 データ収集環境では、アプリのサーフェスはこのように表示されます。
+チャネル設定がExperience Platformまたはデータコレクションインターフェイスのいずれかから設定されていることを確認します。 データ収集環境では、チャネル設定は次のようになります。
 
 ## 次の手順 {#next-steps}
 

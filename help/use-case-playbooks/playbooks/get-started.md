@@ -4,9 +4,9 @@ title: ユースケースプレイブックの概要
 description: ユースケースプレイブック機能の基本を学ぶ方法を説明します。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 14%
 
 ---
@@ -105,11 +105,11 @@ SMS チャネルサーフェスを作成するには、まず SMS API 認証情�
 
 ### チャネルサーフェスをプッシュ
 
-アプリサーフェスがExperience Platformまたはデータ収集インターフェイスのいずれかから設定されていることを確認します。 データ収集環境では、アプリのサーフェスはこのように表示されます。
+チャネル設定がExperience Platformまたはデータコレクションインターフェイスのいずれかから設定されていることを確認します。 データ収集環境では、チャネル設定は次のようになります。
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-次に、アプリサーフェス設定で確認したチャネル、プラットフォーム、アプリを選択します。 **送信** を選択して、プッシュチャネルサーフェスを作成します。
+次に、チャネル設定で確認したチャネル、プラットフォームおよびアプリを選択します。 **送信** を選択して、プッシュチャネルサーフェスを作成します。
 
 [ プッシュチャネルサーフェスの設定方法 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html) に関するドキュメントを参照してください。
 
