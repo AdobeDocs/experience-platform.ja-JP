@@ -3,7 +3,7 @@ title: Adobe Analytics Product String 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics Product String タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '135'
 ht-degree: 100%
 
