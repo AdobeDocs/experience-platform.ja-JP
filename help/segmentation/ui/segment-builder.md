@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
+source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
 workflow-type: tm+mt
-source-wordcount: '4767'
-ht-degree: 67%
+source-wordcount: '4717'
+ht-degree: 66%
 
 ---
 
@@ -111,8 +111,6 @@ ht-degree: 67%
 
 ![フォルダー階層がオーディエンスに対してどのように機能するかを示す画像。](../images/ui/segment-builder/audience-folder-structure.png)
 
-また、検索バーを使用してオーディエンスを検索することもできます。その場合は、[Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)を使用します。「**[!UICONTROL オーディエンス]**」タブで最上位のフォルダーを選択すると、検索バーが表示され、そのフォルダー内を検索することができます。検索結果は、単語の入力が終わると同時に表示され始めます。例えば、`Online Shoppers` という名前のオーディエンスを検索するには、検索バーに「Online」と入力します。「Online」という単語を完全に入力すると、「Online」という単語を含む検索結果が表示されます。
-
 ## ルールビルダーキャンバス {#rule-builder-canvas}
 
 >[!IMPORTANT]
@@ -158,6 +156,11 @@ ht-degree: 67%
 ![値の最大数に達したことを示す警告が表示されます。](../images/ui/segment-builder/maximum-values.png)
 
 ### オーディエンスの追加
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="更新を検索"
+>abstract="既存の検索システムが更新されて、統合検索が使用されるようになりました。 統合検索を使用すると、セグメントメンバーシップについてオーディエンスをより簡単かつ確実に検索できます。"
 
 オーディエンスを「**[!UICONTROL オーディエンス]**」タブからルールビルダーキャンバスにドラッグ＆ドロップすることで、新しいセグメント定義でオーディエンスのメンバーシップを参照できます。これにより、オーディエンスのメンバーシップを新しいセグメント定義ルールの属性として含めたり除外したりできます。
 
