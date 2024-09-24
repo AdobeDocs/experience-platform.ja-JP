@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ準備のマッピング機能
 description: このドキュメントでは、Data Prep で使用されるマッピング機能について説明します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
+source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
 workflow-type: tm+mt
-source-wordcount: '5805'
-ht-degree: 9%
+source-wordcount: '6024'
+ht-degree: 8%
 
 ---
 
@@ -178,6 +178,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | size_of | 入力サイズを返します。 | <ul><li>入力：**必須** サイズの検索しようとしているオブジェクト。</li></ul> | size_of （INPUT） | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | この関数は、入力配列全体のすべての要素を Profile の配列の末尾に追加するために使用されます。 この関数は、更新時に **のみ** 適用されます。 挿入のコンテキストで使用される場合、この関数は入力をそのまま返します。 | <ul><li>配列：**必須** プロファイルに配列を追加する配列。</li></ul> | upsert_array_append （ARRAY） | `upsert_array_append([123, 456])` | [123、456] |
 | upsert_array_replace | この関数は、配列内の要素を置き換えるために使用されます。 この関数は、更新時に **のみ** 適用されます。 挿入のコンテキストで使用される場合、この関数は入力をそのまま返します。 | <ul><li>配列：**必須** プロファイル内の配列を置き換える配列。</li></li> | upsert_array_replace （ARRAY） | `upsert_array_replace([123, 456], 1)` | [123、456] |
+| [!BADGE Beta]{type=Informative} array_to_string | 指定された区切り文字を使用して、配列内の要素の文字列表現を結合します。 配列が多次元の場合、結合する前にフラット化されます。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>SEPARATOR: **必須** 配列の要素の結合に使用する区切り文字。</li><li>配列：**必須** 結合される配列（フラット化後）。</li></ul> | array_to_string （SEPARATOR, ARRAY） | `array_to_string(";", ["Hello", "world"])` | 「こんにちは；world」 |
+| [!BADGE Beta]{type=Informative} filterArray* | 述語に基づいて指定された配列をフィルタリングします。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>配列：**必須** フィルタリングされる配列</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | filterArray （ARRAY, PREDICATE） | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5、7] |
+| [!BADGE Beta]{type=Informative} transformArray* | 述語に基づいて指定された配列を変換します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>ARRAY: **必須** 変換する配列。</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | transformArray （ARRAY, PREDICATE） | ` transformArray([5, 6, 7], x -> x + 1)` | [6、7、8] |
+| [!BADGE Beta]{type=Informative} flattenArray* | 指定された（多次元の）配列を 1 次元配列にフラット化します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>ARRAY: **必須** フラット化する配列。</li></ul> | flattenArray （ARRAY） | flattenArray （[[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]]） | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
 
 {style="table-layout:auto"}
 
