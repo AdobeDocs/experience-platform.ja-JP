@@ -2,10 +2,10 @@
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platform で誰が何のアクションを実行したかを確認する方法を説明します。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 40%
+source-wordcount: '1350'
+ht-degree: 38%
 
 ---
 
@@ -133,6 +133,22 @@ UI の監査イベントには、次のフィルターを使用できます。
 表示されるダイアログで、目的の形式（**[!UICONTROL CSV]** または **[!UICONTROL JSON]**）を選択し、「**[!UICONTROL ダウンロード]**」を選択します。 ブラウザーが生成されたファイルをダウンロードし、お使いのマシンに保存します。
 
 ![[!UICONTROL  ダウンロード ] がハイライト表示されたファイル形式選択ダイアログ ](../../images/audit-logs/select-download-format.png)
+
+## アラートの有効化 {#enable-alerts}
+
+監査アラートを有効にすると、次のルールの通知を受信できます。
+
+* オーディエンス作成
+* オーディエンスの更新
+* オーディエンスの削除
+* データセットの作成
+* データセットの更新
+* データセット削除
+* スキーマ作成
+* スキーマの更新
+* スキーマの削除
+
+リストから目的のアラートを選択して、通知を受信するように登録します。 アラートについて詳しくは、[UI を使用したアラートの購読 ](../../../observability/alerts/ui.md) についてのガイドを参照してください。
 
 ## API での監査ログの管理
 
