@@ -2,10 +2,10 @@
 title: UI での SFTP Source接続の作成
 description: Adobe Experience Platform UI を使用して SFTP ソース接続を作成する方法を説明します。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 21%
+source-wordcount: '662'
+ht-degree: 25%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 21%
 
 このチュートリアルでは、Adobe Experience Platform UI を使用して [!DNL SFTP] ソース接続を作成する手順を説明します。
 
-## はじめに
+## 基本を学ぶ
 
 このチュートリアルでは、Platform の次のコンポーネントに関する十分な知識が必要です。
 
@@ -30,20 +30,7 @@ ht-degree: 21%
 
 ### 必要な資格情報の収集
 
-を [!DNL SFTP] に接続するには、次の接続プロパティの値を指定する必要があります。
-
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `host` | [!DNL SFTP] サーバーに関連付けられた名前または IP アドレス。 |
-| `port` | 接続先の [!DNL SFTP] サーバーポート。 指定しない場合、値はデフォルトで `22` になります。 |
-| `username` | [!DNL SFTP] サーバーにアクセスできるユーザー名。 |
-| `password` | [!DNL SFTP] サーバーのパスワード。 |
-| `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
-| `passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターは、PrivateKeyContent のパスフレーズを値として使用する必要があります。 |
-| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
-| フォルダーパス | アクセス権を付与するフォルダーへのパス。 ソース [!DNL SFTP]、フォルダーパスを指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
-
-必要な資格情報を収集したら、次の手順に従って Platform に接続する新しい [!DNL SFTP] アカウントを作成できます。
+認証資格情報の取得方法の手順について詳しくは、[[!DNL SFTP]  認証ガイド ](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) を参照してください。
 
 ## [!DNL SFTP] サーバーへの接続
 
@@ -81,13 +68,32 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TAB  基本認証 ]
 
-基本認証を使用するには、「**[!UICONTROL パスワード]**」を選択し、接続するホストとポートの値を、ユーザー名とパスワードと共に指定します。 この手順では、アクセス権を付与するサブフォルダーへのパスを指定することもできます。 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
+基本認証を使用するには、「**[!UICONTROL パスワード]**」を選択し、次の資格情報に適切な値を入力します。
+
+* host
+* ポート
+* ユーザー名
+* password
+
+この手順では、最大同時接続数を設定したり、フォルダーパスを定義したり、[!DNL SFTP] サーバーのチャンクを有効または無効にしたりすることもできます。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+
+認証について詳しくは、[ の必要な資格情報の収集  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) に関するガイドを参照してください。
 
 ![ 基本認証を使用した SFTP ソースの新しいアカウント画面 ](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB SSH 公開鍵認証 ]
 
-SSH 公開鍵ベースの資格情報を使用するには、「**[!UICONTROL SSH 公開鍵]**」を選択し、ホストとポートの値のほか、秘密鍵の内容とパスフレーズの組み合わせを指定します。 この手順では、アクセス権を付与するサブフォルダーへのパスを指定することもできます。 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
+SSH 公開鍵ベースの資格情報を使用するには、「**[!UICONTROL SSH 公開鍵]**」を選択して、次の資格情報に適切な値を入力します。
+
+* host
+* ポート
+* ユーザー名
+* 秘密鍵のコンテンツ
+* パスフレーズ
+
+この手順では、最大同時接続数を設定したり、フォルダーパスを定義したり、[!DNL SFTP] サーバーのチャンクを有効または無効にしたりすることもできます。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+
+認証について詳しくは、[ の必要な資格情報の収集  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) に関するガイドを参照してください。
 
 ![SSH 公開鍵を使用した SFTP ソースの新しいアカウント画面 ](../../../../images/tutorials/create/sftp/ssh.png)
 

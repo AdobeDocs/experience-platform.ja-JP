@@ -4,41 +4,49 @@ solution: Experience Platform
 title: SFTP ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して SFTP サーバーを Adobe Experience Platform に接続する方法について説明します。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
+source-git-commit: 52c1c8e6bc332bd6ee579cad52a7343007615efd
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 94%
+source-wordcount: '1228'
+ht-degree: 51%
 
 ---
 
 # SFTP コネクタ
 
->[!IMPORTANT]
+Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+
+[!DNL SFTP] アカウントをExperience Platformに正常に接続するために必要な前提条件の手順については、このドキュメントを参照してください。
+
+>[!TIP]
 >
->Adobe Experience Platformが接続する [!DNL SFTP] サーバーは、チャンク（1 つのファイルに対して複数の接続を意味する）をサポートできる必要があります。 [!DNL SFTP] サーバーがチャンクをサポートしていない場合、ファイルの取り込みを防ぐエラーが発生する可能性があります。
+>接続する前に、SFTP サーバー設定でキーボードインタラクティブ認証を無効にする必要があります。 この設定を無効にすると、パスワードをサービスやプログラムを通じて入力するのではなく、手動で入力できるようになります。
 
-Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
+## 前提条件 {#prerequisites}
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Platform] では、FTP または SFTP サーバーからデータをバッチで取り込むことができます。
+[!DNL SFTP] ソースをExperience Platformに正常に接続するために必要な前提条件の手順については、この節を参照してください。
 
-## IP アドレス許可リスト
+### IP アドレス許可リスト
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-## ファイルとディレクトリの命名制約
+### ファイルとディレクトリの命名制約
 
 クラウドストレージファイルまたはディレクトリに名前を付ける際に考慮する必要がある制約のリストを次に示します。
 
-- ディレクトリ名とファイルコンポーネント名は 255 文字を超えてはなりません。
-- ディレクトリ名とファイル名の末尾にスラッシュ（`/`）は使用できません。使用した場合、自動的に削除されます。
-- 次の予約 URL 文字は、適切にエスケープする必要があります。`! ' ( ) ; @ & = + $ , % # [ ]`
-- 次の文字は使用できません。`" \ / : | < > * ?`
-- 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、一部の ASCII 文字や Unicode 文字、例えば制御文字（0x00 ～ 0x1F、\u0081 など）も使用できません。HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
-- 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
+* ディレクトリ名とファイルコンポーネント名は 255 文字を超えてはなりません。
+* ディレクトリ名とファイル名の末尾にスラッシュ（`/`）は使用できません。使用した場合、自動的に削除されます。
+* 次の予約 URL 文字は、適切にエスケープする必要があります。`! ' ( ) ; @ & = + $ , % # [ ]`
+* 次の文字は使用できません。`" \ / : | < > * ?`
+* 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、一部の ASCII 文字や Unicode 文字、例えば制御文字（0x00 ～ 0x1F、\u0081 など）も使用できません。HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
+* 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
-## [!DNL SFTP] 用の Base64 にエンコードされた OpenSSH 秘密鍵の設定
+### [!DNL SFTP] 用の Base64 にエンコードされた OpenSSH 秘密鍵の設定
 
 [!DNL SFTP] ソースは [!DNL Base64] にエンコードされた OpenSSH 秘密鍵を使用した認証をサポートしています。Base64 にエンコードされた OpenSSH 秘密鍵を生成し、[!DNL SFTP] を Platform に接続する方法については、以下の手順を参照してください。
+
+>[!BEGINTABS]
+
+>[!TAB Windows]
 
 ### [!DNL Windows] ユーザー
 
@@ -92,6 +100,8 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 
 上記のコマンドにより、[!DNL Base64] でエンコードされた秘密鍵が指定したファイルパスに保存されます。これで、その秘密鍵を使用して [!DNL SFTP] への認証を行い、Platform に接続できます。
 
+>[!TAB Mac]
+
 ### [!DNL Mac] ユーザー
 
 [!DNL Mac] を使用している場合は、**ターミナル**&#x200B;を開き、次のコマンドを実行して秘密鍵を生成します（この場合、秘密鍵は `/Documents/id_rsa` に保存されます）。
@@ -142,21 +152,59 @@ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 more ~/.ssh/authorized_keys
 ```
 
-## SFTP の [!DNL Platform] への接続
+>[!ENDTABS]
 
->[!IMPORTANT]
->
->接続する前に、SFTP サーバー設定でキーボードインタラクティブ認証を無効にする必要があります。この設定を無効にすると、パスワードをサービスやプログラムを通じて入力するのではなく、手動で入力できるようになります。キーボードインタラクティブ認証について詳しくは、[Component Pro ドキュメント](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) を参照してください。
+### 必要な資格情報の収集 {#credentials}
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して、SFTP サーバーを [!DNL Platform] に接続する方法に関する情報を提供します。
+[!DNL SFTP] サーバーをExperience Platformに接続するには、次の資格情報の値を指定する必要があります。
+
+>[!BEGINTABS]
+
+>[!TAB  基本認証 ]
+
+基本認証を使用して [!DNL SFTP] サーバーを認証するには、次の資格情報に適切な値を指定します。
+
+| 資格情報 | 説明 |
+| ---------- | ----------- |
+| `host` | [!DNL SFTP] サーバーに関連付けられた名前または IP アドレス。 |
+| `port` | 接続先の [!DNL SFTP] サーバーポート。 指定しない場合、値はデフォルトで `22` になります。 |
+| `username` | [!DNL SFTP] サーバーにアクセスできるユーザー名。 |
+| `password` | [!DNL SFTP] サーバーのパスワード。 |
+| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
+| `folderPath` | アクセス権を付与するフォルダーへのパス。 ソース [!DNL SFTP]、フォルダーパスを指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
+| `disableChunking` | データ取り込み時に、[!DNL SFTP] ソースは最初にファイル長を取得し、ファイルを複数の部分に分割してから、並行して読み取ることができます。 この値を有効または無効にして、[!DNL SFTP] サーバーがファイル長を取得できるか、特定のオフセットからデータを読み取れるかを指定できます。 |
+| `connectionSpec.id` | （API のみ）接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |
+
+>[!TAB SSH 公開鍵認証 ]
+
+SSH 公開鍵認証を使用して [!DNL SFTP] サーバーを認証するには、次の資格情報に適切な値を指定します。
+
+| 資格情報 | 説明 |
+| ---------- | ----------- |
+| `host` | [!DNL SFTP] サーバーに関連付けられた名前または IP アドレス。 |
+| `port` | 接続先の [!DNL SFTP] サーバーポート。 指定しない場合、値はデフォルトで `22` になります。 |
+| `username` | [!DNL SFTP] サーバーにアクセスできるユーザー名。 |
+| `password` | [!DNL SFTP] サーバーのパスワード。 |
+| `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
+| `passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターは、PrivateKeyContent のパスフレーズを値として使用する必要があります。 |
+| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
+| `folderPath` | アクセス権を付与するフォルダーへのパス。 ソース [!DNL SFTP]、フォルダーパスを指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
+| `disableChunking` | データ取り込み時に、[!DNL SFTP] ソースは最初にファイル長を取得し、ファイルを複数の部分に分割してから、並行して読み取ることができます。 この値を有効または無効にして、[!DNL SFTP] サーバーがファイル長を取得できるか、特定のオフセットからデータを読み取れるかを指定できます。 |
+| `connectionSpec.id` | （API のみ）接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |
+
+>[!ENDTABS]
+
+## SFTP のExperience Platformへの接続
+
+以下のドキュメントでは、API またはユーザーインターフェイスを使用して、SFTP サーバーをExperience Platformに接続する方法に関する情報を提供します。
 
 ### API の使用
 
-- [Flow Service API を使用して SFTP ベース接続を作成](../../tutorials/api/create/cloud-storage/sftp.md)
-- [Flow Service API を使用して、クラウドストレージソースのデータ構造とコンテンツを探索](../../tutorials/api/explore/cloud-storage.md)
-- [Flow Service API を使用して、クラウドストレージソースのデータフローを作成](../../tutorials/api/collect/cloud-storage.md)
+* [Flow Service API を使用して SFTP ベース接続を作成](../../tutorials/api/create/cloud-storage/sftp.md)
+* [Flow Service API を使用して、クラウドストレージソースのデータ構造とコンテンツを探索](../../tutorials/api/explore/cloud-storage.md)
+* [Flow Service API を使用して、クラウドストレージソースのデータフローを作成](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
-- [UI で SFTP ソース接続を作成](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [UI でクラウドストレージ接続のデータフローを作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+* [UI で SFTP ソース接続を作成](../../tutorials/ui/create/cloud-storage/sftp.md)
+* [UI でクラウドストレージ接続のデータフローを作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)

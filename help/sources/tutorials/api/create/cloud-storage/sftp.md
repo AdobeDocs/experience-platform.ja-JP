@@ -2,10 +2,10 @@
 title: Flow Service API を使用した SFTP ベース接続の作成
 description: Flow Service API を使用してAdobe Experience Platformを SFTP （Secure File Transfer Protocol）サーバーに接続する方法について説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 919e2c34bf8b9b4646936fe8bfbd4ee33d44407a
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 26%
+source-wordcount: '753'
+ht-degree: 27%
 
 ---
 
@@ -30,19 +30,7 @@ ht-degree: 26%
 
 ### 必要な資格情報の収集
 
-[!DNL Flow Service] を [!DNL SFTP] に接続するには、次の接続プロパティの値を指定する必要があります。
-
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `host` | [!DNL SFTP] サーバーに関連付けられた名前または IP アドレス。 |
-| `port` | 接続先の SFTP サーバーポート。 指定しない場合、値はデフォルトで `22` になります。 |
-| `username` | [!DNL SFTP] サーバーにアクセスできるユーザー名。 |
-| `password` | [!DNL SFTP] サーバーのパスワード。 |
-| `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
-| `passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 `privateKeyContent` がパスワードで保護されている場合、このパラメーターは秘密鍵のコンテンツのパスフレーズを値として使用する必要があります。 |
-| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
-| `folderPath` | アクセス権を付与するフォルダーへのパス。 ソース [!DNL SFTP]、フォルダーパスを指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |
+認証資格情報の取得方法の手順について詳しくは、[[!DNL SFTP]  認証ガイド ](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) を参照してください。
 
 ### Platform API の使用
 
@@ -95,7 +83,8 @@ curl -X POST \
               "userName": "{USERNAME}",
               "password": "{PASSWORD}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -113,6 +102,7 @@ curl -X POST \
 | `auth.params.password` | SFTP サーバーに関連付けられたパスワード。 |
 | `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
 | `auth.params.folderPath` | アクセス権を付与するフォルダーへのパス。 |
+| `auth.params.disableChunking` | SFTP サーバーがチャンクをサポートするかどうかを決定するために使用されるブール値です。 |
 | `connectionSpec.id` | SFTP サーバー接続仕様 ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
@@ -154,7 +144,8 @@ curl -X POST \
               "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
               "passPhrase": "{PASSPHRASE}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -173,6 +164,7 @@ curl -X POST \
 | `auth.params.passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターは、PrivateKeyContent のパスフレーズを値として使用する必要があります。 |
 | `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
 | `auth.params.folderPath` | アクセス権を付与するフォルダーへのパス。 |
+| `auth.params.disableChunking` | SFTP サーバーがチャンクをサポートするかどうかを決定するために使用されるブール値です。 |
 | `connectionSpec.id` | [!DNL SFTP] サーバー接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
