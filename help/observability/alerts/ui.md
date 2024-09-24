@@ -4,10 +4,10 @@ title: アラート UI ガイド
 description: Experience Platform のユーザーインターフェイスでアラートを管理する方法を説明します。
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 40%
+source-wordcount: '797'
+ht-degree: 36%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 ![ 左側のナビゲーションのアラートページがハイライト表示された [!UICONTROL  アラート ]。](../images/alerts/ui/workspace.png)
 
-## アラートルールの管理
+## アラートルールの管理 {#manage-rules}
 
 「**[!UICONTROL 参照]**」タブには、アラートをトリガーする可能性のある使用可能なルールが一覧表示されます。
 
@@ -37,7 +37,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 ![ 選択した省略記号によってドロップダウンメニューが表示されます。](../images/alerts/ui/disable-subscribe.png)
 
-## アラートサブスクライバーを管理
+## アラートサブスクライバーを管理 {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 ![ 受信したアラート通知のメールの例。](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## メールアラートを有効にする
+## メールアラートを有効にする {#enable-email}
 
 アラート通知は、メールに直接配信できます。
 
@@ -85,7 +85,35 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 購読しているアラートは、Adobe ID アカウントに接続されているメールアドレスに配信されます。
 
-## アラート履歴の表示
+## アラートしきい値のカスタマイズ {#alert-threshold}
+
+アラートのしきい値は、次のアラートタイプに合わせてカスタマイズできます。
+
+| アラートタイプ | カスタマイズされたパラメーター |
+|---|---|
+| セグメントジョブの遅延 | 遅延しきい値 |
+| セグメントエクスポートの遅延 | 遅延しきい値 |
+| 宛先フロー実行の遅延 | 遅延しきい値 |
+| ID サービスフロー実行遅延 | 遅延しきい値 |
+| プロファイルフロー実行の遅延 | 遅延しきい値 |
+| ソースフロー実行遅延 | 遅延しきい値 |
+| クエリ実行遅延 | 遅延しきい値 |
+| アクティベーションスキップ率を超えています | エラーしきい値 |
+| ソース取り込みエラー率を超過 | エラーしきい値 |
+
+ルール名の横にある省略記号（**...**）を選択すると、ドロップダウンにコントロールが表示されます。 「**[!UICONTROL 編集]**」を選択します。
+
+![ 選択したルールの「[!UICONTROL  編集 ]」オプションがハイライト表示されている様子 ](../images/alerts/ui/threshold-edit.png)
+
+**[!UICONTROL アラートのカスタマイズ]** ページが表示されます。 しきい値を目的の分に更新し、「**[!UICONTROL 確認]**」を選択します。
+
+![ アラートページをカスタマイズの [!UICONTROL  しきい値 ] および [!UICONTROL  確認 ] オプションがハイライト表示されます。](../images/alerts/ui/threshold-update.png)
+
+「**[!UICONTROL アラート]**」ページに戻ります。 アラートのしきい値設定を表示するには、リストからルールを選択します。 右側のパネルに、ステータスや重大度などの詳細を含む、アラートのしきい値設定が表示されます。
+
+![ 右側のパネルで詳細を示すハイライト表示されたアラートとハイライト表示 [!UICONTROL  しきい値 ]。](../images/alerts/ui/threshold-view.png)
+
+## アラート履歴の表示 {#alert-history}
 
 「**[!UICONTROL 履歴]**」タブには、アラートをトリガーしたルール、トリガー日、解決日（該当する場合）など、組織で受信したアラートの履歴が表示されます。
 
