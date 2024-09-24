@@ -2,10 +2,10 @@
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 1b8fd7671146519fa66768aab3fe081adb0bd6c6
 workflow-type: tm+mt
-source-wordcount: '2237'
-ht-degree: 73%
+source-wordcount: '2145'
+ht-degree: 74%
 
 ---
 
@@ -42,12 +42,7 @@ Experience Platform のライセンスを取得すると、SKU によって異�
 
 **[!DNL Addressable Audience]** - Experience Platform で契約により許可される顧客プロファイルの合計数（既知のプロファイルと匿名プロファイルの両方を含む）。
 
-**[!DNL Profile Richness]** - Experience Platform におけるお客様のプロファイルデータの平均サイズ。リッチネスパックを購入することで、[!DNL Profile Richness] 使用権限を増やすことができます。
-
-[!DNL Profile Richness] 指標は、購入したライセンスによって異なります。[!DNL Profile Richness] では、2 つの計算方法を利用できます。
-
-* Adobe Real-time Customer Data Platform内に保存された任意の時点のすべての実稼動データ（つまり、リアルタイム顧客プロファイルと ID サービス）の合計を、[!DNL Addressable Audience] で割る。
-* 任意の時点における Platform 内に保存されたすべてのデータ（[!DNL data lake]、リアルタイム顧客プロファイルおよび ID サービスを含みますが、これらに限定されません）と、過去 12 か月間に Platform を介して（内に保存するのではなく）ストリーミングしたデータの合計を、[!DNL Addressable Audience] で割ります。
+**[!DNL Total Data Volume]** - Adobe Experience Platform プロファイルサービスがエンゲージメントワークフローで使用できるデータの総量。
 
 これらの指標の可用性と各指標の具体的な定義は、お客様の組織が購入したライセンスによって異なります。
 
@@ -108,7 +103,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 | --- | --- |
 | Adobe Audience Manager ソースフィルタリング | Adobe Audience Manager ソースAudience Managerを作成すると、接続データをすべて取り込むのではなく、どのセグメントおよび特性を [!DNL data lake] およびリアルタイム顧客プロファイルに取り込むかを選択できます。 詳しくは、[Audience Manager ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)に関するガイドを参照してください。 |
 | Adobe Analytics データ準備 | Analytics ソース接続を作成する際に [!DNL Data Prep] 機能を使用すると、ユースケースに必要のないデータをフィルターで除外できます。[!DNL Data Prep] を使用して、どの属性／列をプロファイルに公開する必要があるかを定義できます。また、条件文を記述して、データをプロファイルに公開するのか、それとも [!DNL data lake] にだけ公開するのかを Platform に通知できます。詳しくは、[Analytics ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/analytics.md)に関するガイドを参照してください。 |
-| プロファイル用データセットの有効化／無効化のサポート | リアルタイム顧客プロファイルにデータを取り込むには、プロファイルストアで使用するデータセットを有効にする必要があります。 そうすることで、[!DNL Addressable Audience] と [!DNL Profile Richness] の使用権限が追加されます。データセットが顧客プロファイルのユースケースで不要になったら、そのデータセットのプロファイルへの統合を無効にして、データが確実にライセンスへの準拠を維持するようにできます。詳しくは、[プロファイル用データセットの有効化および無効化](../../catalog/datasets/enable-for-profile.md)に関するガイドを参照してください。 |
+| プロファイル用データセットの有効化／無効化のサポート | リアルタイム顧客プロファイルにデータを取り込むには、プロファイルストアで使用するデータセットを有効にする必要があります。 そうすることで、[!DNL Addressable Audience] と [!DNL Total Data Volume] の使用権限が追加されます。データセットが顧客プロファイルのユースケースで不要になったら、そのデータセットのプロファイルへの統合を無効にして、データが確実にライセンスへの準拠を維持するようにできます。詳しくは、[プロファイル用データセットの有効化および無効化](../../catalog/datasets/enable-for-profile.md)に関するガイドを参照してください。 |
 | Web SDK と Mobile SDK のデータ除外 | Web および Mobile SDK によって収集されるデータには、自動的に収集されるデータと、お客様の開発者が明示的に収集するデータの 2 つのタイプがあります。ライセンスのコンプライアンスをより適切に管理するために、コンテキスト設定により、SDK の設定で自動データ収集を無効にすることができます。また、カスタムデータは、開発者が削除したり、設定しないことも可能です。 |
 | サーバーサイド転送のデータ除外 | サーバーサイド転送を使用して Platform にデータを送信する場合、ルールアクションのマッピングを削除してすべてのイベントにわたって除外するか、ルールに条件を追加して特定のイベントでのみデータを送信するようにすることで、送信するデータを除外できます。詳しくは、[イベントおよび条件](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if)に関するドキュメントを参照してください。 |
 | ソースレベルでのデータのフィルタリング | 接続を作成してデータをExperience Platformに取り込む前に、論理演算子と比較演算子を使用してソースから行レベルのデータをフィルタリングできます。 詳しくは、[API を使用したソースの行レベルのデータのフィルタリング ](../../sources/tutorials/api/filter.md) に関するガイドを参照し  [!DNL Flow Service]  ください。 |

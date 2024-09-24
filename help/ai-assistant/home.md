@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタントの概要
 description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '926'
 ht-degree: 6%
 
 ---
@@ -53,7 +53,7 @@ Experience League知識とは、製品ドキュメントに基づいた概念と
 
 | 製品に関する知識 | 例 |
 | --- | --- |
-| 先を見越した学習 | <ul><li>ID とプライマリキーまたは外部キーの違いは何ですか。</li><li>プロファイル充実度はどのように計算されますか？</li></ul> |
+| 先を見越した学習 | <ul><li>ID とプライマリキーまたは外部キーの違いは何ですか。</li><li>類似オーディエンスとは</li></ul> |
 | 検出を開く | <ul><li>このデータセットを書き出すにはどうすればよいですか？</li><li>ヘルスケア関連の顧客向けのスキーマはありますか？</li></ul> |
 | トラブルシューティング | <ul><li>Adobeが所有するスキーマをプロファイルに対して有効にできないのはなぜですか？</li><li>セグメントを削除できないのはなぜですか？</li></ul> |
 

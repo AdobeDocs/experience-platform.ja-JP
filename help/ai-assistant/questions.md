@@ -2,9 +2,9 @@
 title: AI アシスタントの質問ガイド
 description: このドキュメントでは、AI アシスタントに対するクエリ時に使用できる質問の例について説明します。
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,6 @@ AI アシスタントのクエリ時に使用できる一連の質問の例に�
    * ユーザーグループと役割にはどのような関係がありますか？
    * データタイプとフィールドグループのどちらを使用するべきか
    * ID とプライマリキーまたは外部キーの違いは何ですか。
-   * プロファイル充実度はどのように計算されますか？
 * **トラブルシューティング – 製品に関する知識（Real-Time CDPとJourney Optimizer）**
    * AI アシスタントは何に役立ちますか？
    * データの取り込み後にプロファイル対応スキーマを削除できますか？

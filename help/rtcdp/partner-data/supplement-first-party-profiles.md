@@ -3,10 +3,10 @@ title: パートナー提供の属性を使用してファーストパーティ�
 description: 信頼できるデータパートナーからの属性でファーストパーティプロファイルを補完し、データ基盤を改善し、顧客ベースに関する新しいインサイトを得て、オーディエンスの最適化を改善する方法を説明します。
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 79%
+source-wordcount: '1257'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ Adobeでは、万能のアプローチはないことを理解し、データお
 
 >[!WARNING]
 >
->Real-Time CDP に取り込まれたパートナー提供の追加属性は、*平均プロファイルリッチネス*&#x200B;に影響を与えます。プロファイルリッチネスについて詳しくは、[Real-Time Customer Data Platform の製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)を参照してください。
+>Real-Time CDPに取り込まれる追加のパートナー提供の属性は、*合計データボリューム* に影響を与えます。 合計データ量について詳しくは、[Real-time Customer Data Platformの製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) を参照してください。
 
 ## ビデオチュートリアル {#video-walkthrough}
 
