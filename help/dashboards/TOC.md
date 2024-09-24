@@ -5,9 +5,9 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
 role: Developer,User
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '135'
 ht-degree: 63%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 63%
       * フィルター {#filters}
          * [日付フィルター](data-distiller/query-pro-mode/filters/date-filter.md)
          * [ グローバルフィルター ](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [ドリルスルー](data-distiller/query-pro-mode/drill-through.md)
       * [さらに表示](data-distiller/query-pro-mode/view-more.md)
       * [SQL を表示](data-distiller/query-pro-mode/view-sql.md)
       * [CSV としてダウンロード](data-distiller/query-pro-mode/download-csv.md)
