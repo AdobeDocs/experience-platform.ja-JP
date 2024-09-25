@@ -2,10 +2,10 @@
 title: データセットのサンプル
 description: クエリサービスのサンプルデータセットを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。このガイドでは、近似クエリ処理のサンプルを管理する方法について説明します
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 100%
+source-wordcount: '632'
+ht-degree: 96%
 
 ---
 
@@ -17,12 +17,13 @@ Adobe Experience Platform クエリサービスは、近似クエリ処理機能
 
 クエリサービスでは、近似クエリ処理のためのサンプルの管理に役立つように、データセットサンプルに対して次の操作をサポートしています。
 
-- [均一なランダムデータセットのサンプルの作成。](#create-a-sample)
-- [フィルター条件の指定（オプション）](##optional-filter-criteria)
-- [ADLS テーブルに対するサンプルのリストの表示。](#view-list-of-samples)
-- [サンプルデータセットに対する直接クエリの実行。](#query-sample-datasets)
-- [サンプルの削除。](#delete-a-sample)
-- 元の ADLS テーブルが削除された場合の関連するサンプルの削除。
+- [データセットのサンプル](#dataset-samples)
+   - [はじめに {#get-started}](#getting-started-get-started)
+   - [均一なランダムデータセットのサンプル {#create-a-sample} ータの作成](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [必要に応じて、{#optional-filter-criteria} のフィルター条件を指定します](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [サンプルのリストの表示 {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [サンプルデータセット {#query-sample-datasets} のクエリ](#query-the-sample-dataset-query-sample-datasets)
+   - [データセットサンプル {#delete-a-sample} 削除](#delete-dataset-samples-delete-a-sample)
 
 ## はじめに {#get-started}
 
@@ -32,7 +33,7 @@ Adobe Experience Platform クエリサービスは、近似クエリ処理機能
 >
 >Platform にログインするたびにセッションフラグを有効にする必要があります。
 
-![「SET aqp=true;」コマンドがハイライト表示されたクエリエディター。](../images/essential-concepts/set-session-flag.png)
+![「SET aqp=true;」コマンドがハイライト表示されたクエリエディター。](../images/key-concepts/set-session-flag.png)
 
 ## 均一なランダムデータセットのサンプルの作成 {#create-a-sample}
 
