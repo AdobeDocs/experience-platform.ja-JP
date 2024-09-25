@@ -3,9 +3,9 @@ title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 badge: ベータ版
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
+source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1526'
 ht-degree: 3%
 
 ---
@@ -164,6 +164,10 @@ ID 設定ツールを使用して、一意の名前空間を指定し、優先�
 >データが取り込まれても、XDM 生データペイロードは変更されません。 プライマリ ID 設定は、UI に表示される場合があります。 ただし、これらの設定は ID 設定によって上書きされます。
 
 フィードバックについては、ID サービス UI ワークスペースの **[!UICONTROL Beta feedback]** オプションを使用してください。
+
+## グラフの検証 {#validate}
+
+ID ダッシュボードを使用すると、全体的な ID 数とグラフ数のトレンド、名前空間別の ID 数、グラフサイズ別のグラフ数など、ID グラフの状態に関するインサイトを得ることができます。 ID ダッシュボードを使用して、2 つ以上の ID を持つグラフのトレンドを名前空間別に整理して表示することもできます。
 
 ## 付録 {#appendix}
 
