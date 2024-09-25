@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 21fd5957da8914be8b4abfad5c78d1929f76d6f6
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '4202'
-ht-degree: 56%
+source-wordcount: '4095'
+ht-degree: 55%
 
 ---
 
@@ -30,26 +30,6 @@ ht-degree: 56%
 宛先へのオーディエンスをアクティブ化するには、正常に [ 宛先に接続 ](./connect-destination.md) されている必要があります。 まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
 
 ## 書き出しでサポートされているファイル形式 {#supported-file-formats-export}
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="このデータフローの終了日を更新"
->abstract="このデータフローの終了日を更新"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="このデータフロー本文の終了日を更新"
->abstract="この宛先が最近更新されたので、データフローには終了日が必要になりました。Adobeでは、デフォルトの終了日を 2025 年 5 月 1 日（PT）に設定しています。 目的の終了日に更新してください。更新しない場合、データの書き出しがデフォルトの日付で停止します。"
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="フォルダーパスの編集"
->abstract="提供されている複数のマクロを使用して、データセットが書き出されるフォルダーパスをカスタマイズします。"
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="データセットフォルダーパスのプレビュー"
->abstract="このウィンドウで追加したマクロに基づいて、ストレージの場所に作成されるフォルダー構造のプレビューを取得します。"
 
 オーディエンスを書き出す場合、次のファイル形式がサポートされます。
 

@@ -4,10 +4,10 @@ title: Flow Service API を使用したデータセットの書き出し
 description: Flow Service API を使用して、データセットを書き出し、宛先を選択する方法を説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
 workflow-type: tm+mt
-source-wordcount: '3524'
-ht-degree: 16%
+source-wordcount: '5107'
+ht-degree: 11%
 
 ---
 
@@ -16,6 +16,19 @@ ht-degree: 16%
 >[!AVAILABILITY]
 >
 >* この機能は、Real-Time CDP Prime および Ultimate パッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
+
+>[!IMPORTANT]
+>
+>**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローを書き出す `endTime` 定日を設定するオプションが導入されました。 また、Adobeでは、（9 月のリリースより前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日として、2025 年 5 月 1 日（PT* が導入されます。 これらのデータフローのいずれについても、終了日より前にデータフローの終了日を手動で更新する必要があります。そうしないと、書き出しがその日に停止します。 Experience PlatformUI を使用して、5 月 1 日に停止に設定されるデータフローを確認します。
+>
+>同様に、`endTime` 定日を指定せずに作成したデータフローの場合、デフォルトでは作成時点から 6 か月後の終了時刻になります。
+
+<!--
+
+>You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+>
+
+-->
 
 この記事では、[!DNL Flow Service API] を使用して、Adobe Experience Platformから目的のクラウドストレージの場所（[!DNL Amazon S3]、SFTP の場所または [!DNL Google Cloud Storage] など ](/help/catalog/datasets/overview.md) データセット [ を書き出すために必要なワークフローについて説明します。
 
@@ -49,7 +62,7 @@ ht-degree: 16%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md):Adobe Experience Platformに正常に取り込まれたすべてのデータは、[!DNL Data Lake] 内にデータセットとして保持されます。 データセットは、通常、スキーマ（列）とフィールド（行）を含むテーブルであるデータコレクションのストレージと管理をおこなう構成体です。データセットには、保存するデータの様々な側面を記述したメタデータも含まれます。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+   * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 以下の節では、Platform のクラウドストレージ宛先にデータセットを書き出すために知っておく必要がある追加情報を示します。
 
@@ -1955,13 +1968,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
         "interval": 3, // also supports 6, 9, 12 hour increments
-        "timeUnit": "hour", // also supports "day" for daily increments. Use "interval": 1 when you select "timeUnit": "day"
-        "startTime": 1675901210 // UNIX timestamp start time (in seconds)
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+次の表では、`scheduleParams` の節のすべてのパラメーターについて説明します。これにより、データセットの書き出しに関する書き出し時間、頻度、場所などをカスタマイズできます。
+
+| パラメーター | 説明 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
+| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
+| `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **応答**
@@ -2008,12 +2037,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+次の表では、`scheduleParams` の節のすべてのパラメーターについて説明します。これにより、データセットの書き出しに関する書き出し時間、頻度、場所などをカスタマイズできます。
+
+| パラメーター | 説明 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
+| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
+| `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2061,12 +2107,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+次の表では、`scheduleParams` の節のすべてのパラメーターについて説明します。これにより、データセットの書き出しに関する書き出し時間、頻度、場所などをカスタマイズできます。
+
+| パラメーター | 説明 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
+| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
+| `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2114,13 +2177,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+次の表では、`scheduleParams` の節のすべてのパラメーターについて説明します。これにより、データセットの書き出しに関する書き出し時間、頻度、場所などをカスタマイズできます。
+
+| パラメーター | 説明 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
+| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
+| `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **応答**
@@ -2167,12 +2246,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+次の表では、`scheduleParams` の節のすべてのパラメーターについて説明します。これにより、データセットの書き出しに関する書き出し時間、頻度、場所などをカスタマイズできます。
+
+| パラメーター | 説明 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
+| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
+| `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2220,12 +2316,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+次の表では、`scheduleParams` の節のすべてのパラメーターについて説明します。これにより、データセットの書き出しに関する書き出し時間、頻度、場所などをカスタマイズできます。
+
+| パラメーター | 説明 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
+| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
+| `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
+| `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2345,10 +2458,15 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 * 圧縮された JSON ファイルを書き出す場合、書き出されるファイルの形式は `json.gz` です
 * 圧縮 Parquet ファイルをエクスポートする場合、エクスポートされるファイル形式は `gz.parquet` です
+* JSON ファイルは、圧縮モードでのみ書き出すことができます。
 
 ## API エラー処理 {#api-error-handling}
 
 このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+
+## よくある質問 {#faq}
+
+データセットの書き出しに関する [ よくある質問のリスト ](/help/destinations/ui/export-datasets.md#faq) を表示します。
 
 ## 次の手順 {#next-steps}
 
