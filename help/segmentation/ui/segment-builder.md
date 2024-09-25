@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
+source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
-source-wordcount: '4717'
-ht-degree: 66%
+source-wordcount: '4784'
+ht-degree: 65%
 
 ---
 
@@ -98,6 +98,11 @@ ht-degree: 66%
 | 複数のレポートスイート | 汎用変数には、フレンドリ名記述子は含まれません。<br><br>**例：** eVar2 | <ul><li>複数の記述子を持つフィールドは、すべて汎用として表示されます。つまり、UI にフレンドリ名は表示されません。</li><li>クエリでは、eVar を含む任意のデータセットのデータを使用できます。これにより、結果が混在したり、不正確になったりする可能性があります。</li></ul> | クエリでは、複数のデータセットから正しく結合された結果を使用します。 |
 
 ### オーディエンス
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="複雑な評価"
+>abstract="次の式は複雑すぎて、単一のオーディエンスとして表現できません。 同じセグメント定義で B2B ルールと人物ベースのイベントの両方を使用するには、次の手順に従ってください。<ol><li>ユーザーベースのイベントのみを参照するセグメント定義を作成し、独自のセグメント定義として保存します。</li><li>新しいセグメント定義で、B2B ルールを参照しながら、以前に作成したセグメント定義を読み込みます。</li></ol>"
 
 >[!NOTE]
 >
