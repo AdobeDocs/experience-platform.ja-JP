@@ -2,7 +2,7 @@
 title: グローバルフィルターの作成
 description: カスタムのグローバルに適用されたフィルターを使用してデータインサイトをフィルタリングする方法を説明します。
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5dd821383e1b1a7bd4998a6cf14a941bfdf3f26c
+source-git-commit: 581eb2a33f9bdfddc89c9d8dbf9fca8eb3725b1d
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 1%
@@ -66,4 +66,3 @@ ht-degree: 1%
 すべてのカスタムグローバルフィルターをクリアするには、**[!UICONTROL フィルター]** ダイアログから [!UICONTROL  すべてクリア ] を選択します。
 
 ![ 「すべてクリア」がハイライト表示されたフィルターダイアログ ](../../../images/query-pro-mode/clear-all.png)
-
