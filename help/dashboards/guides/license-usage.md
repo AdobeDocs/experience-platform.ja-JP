@@ -4,9 +4,9 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2739'
 ht-degree: 9%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 9%
 
 Adobe Experience Platformの [!UICONTROL  ライセンスの使用状況 ] ダッシュボードを使用して、組織のライセンスの使用状況に関する重要な情報を表示できます。 ここに表示される情報は、Platform インスタンスの毎日のスナップショット中にキャプチャされます。
 
-ライセンス使用状況レポートを使用すると、ライセンス使用指標に対して高い精度でレポートを作成できます。 ダッシュボードには、購入した各製品の使用状況指標、すべての実稼動サンドボックスまたは開発サンドボックスにおける指標の統合使用状況、および特定のサンドボックスの使用状況指標が表示されます。 使用状況指標を使用して、Real-time Customer Data Platform、Adobe Journey Optimizer、Customer Journey AnalyticsのExperience Platformアプリケーションをトラッキングできます。
+ライセンス使用状況レポートを使用すると、ライセンス使用指標に対して高い精度でレポートを作成できます。 ダッシュボードには、購入した各製品（および関連するアドオン）の使用状況指標、すべての実稼動サンドボックスまたは開発サンドボックスでの指標の統合使用状況、特定のサンドボックスからの使用状況指標が表示されます。 使用状況指標を使用して、Real-time Customer Data Platform、Adobe Journey Optimizer、Customer Journey AnalyticsのExperience Platformアプリケーションをトラッキングできます。
 
 このガイドでは、UI でのライセンス使用状況ダッシュボードへのアクセス方法と操作方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションの詳細を説明します。
 
@@ -52,7 +52,7 @@ Platform UI の一般的な概要については、[Experience Platform UI ガ�
 
 ## [!UICONTROL  ライセンス使用状況 ] ダッシュボードデータ
 
-[!UICONTROL  ライセンスの使用状況 ] ダッシュボードには、購入したすべてのExperience Platform製品のリストが表示されます。 このリストから、関連付けられた任意のサンドボックス間でのExperience Platformに関する組織のライセンス関連データのスナップショットを見つけることができます。
+[!UICONTROL  ライセンスの使用状況 ] ダッシュボードには、購入したすべてのExperience Platform製品とそれらの製品のアドオンのリストが表示されます。 このダッシュボードから、関連する任意のサンドボックス間でのExperience Platformに関する組織のライセンス関連データのスナップショットを見つけることができます。
 
 このダッシュボードのデータは、スナップショットが作成された特定の時点とまったく同じように表示されます。 つまり、スナップショットはデータの近似やサンプルではなく、ダッシュボードはリアルタイムには更新されません。
 
@@ -72,12 +72,16 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 ## [!UICONTROL  概要 ] タブ {#overview-tab}
 
-このダッシュボードには、ライセンスを取得したすべてのAdobe Experience Platform製品（アドオンを含む）が表形式で表示されます。 この表には、使用可能なすべてのプロファイルをまたいだライセンス使用状況に関する主要な情報が表示されます。
+[!UICONTROL  ライセンスの使用状況 ] ダッシュボードには、「**コア製品**」と「**アドオン** の 2 つの異なるテーブルが表示されます。
+
+- **[!UICONTROL コア製品 ] テーブル**：このテーブルには、組織でライセンスされている主なAdobe Experience Platform製品が一覧表示されます。 各コア製品には、サンドボックスレベルで独自の指標、使用状況トラッキングおよびドリルスルービューがあります。 これらのコア製品は、トラッキングの主要指標を提供し、これらの指標には任意のアドオンが含まれています。
+
+- **[!UICONTROL アドオン ] テーブル**：このテーブルには、コア製品でサポートされている指標にライセンス量が結合される追加製品が一覧表示されます。 アドオンには、個別の指標はありませんが、関連付けられたコア製品の使用状況追跡を強化します。
 
 | 列の名前 | 説明 |
 |---|---|
 | **[!UICONTROL 製品]** | 組織でライセンスされたAdobeソリューション。 |
-| **[!UICONTROL プライマリ指標]** | その製品の内でのトラッキングに使用されるプライマリ指標。 |
+| **[!UICONTROL プライマリ指標]** | その製品内でのトラッキングに使用される主な指標。 |
 | **[!UICONTROL 許可の金額]** | ライセンス契約で合意された、プライマリ指標の最大量に対する契約値。 |
 | **[!UICONTROL 用途]** | 使用されたプライマリ指標の量。 この値は、実稼動または開発のすべてのサンドボックスにおける、その指標の合計使用量を提供します。 |
 | **[!UICONTROL 使用方法 %]** | ライセンス量に応じて使用される主要指標の割合。 |
@@ -85,9 +89,9 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 >[!NOTE]
 >
->アドオンによる [!UICONTROL  ライセンス額 ] の加算は、Real-time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsなどのベース商品の [!UICONTROL  ライセンス額 ] に加算されます。 そのライセンス金額の（アドオン後の）使用状況は、ベース製品を通じて追跡されます。 例えば、5 個のサンドボックスからなる 1 パックを購入した場合、5 個の数量が基本製品のに追加されます。この場合、アドオンには [!UICONTROL  ライセンス額 ] が 1 と表示され、そのアドオンの使用状況は基本製品全体で追跡されるので、「空白」になります。
+>アドオンのライセンス額は、コア製品の [!UICONTROL  ライセンス額 ] に含まれています。 例えば、5 つのサンドボックスのパックを 1 組をアドオンとして購入した場合、金額はベース製品の金額に追加されます。 アドオンテーブルには、アドオンに固有の [!UICONTROL  ライセンス額 ] が表示されますが、実際の使用状況は基本製品を通じて追跡されます。
 
-各製品は多数の指標を追跡できるので、表には各製品の主要指標が示されます。
+各製品は多数の指標を追跡できるので、表は各製品の主要指標を示しています。
 
 ### 予測される使用状況 {#predicted-usage}
 
@@ -111,8 +115,9 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 >
 >予測は毎月更新されます。 更新日は、情報アイコン（![ この情報アイコン](../images/license-usage/info-icon.png)）を選択します。
 
-製品の使用権限の概要を確認するには、[!UICONTROL  概要 ] リストから製品を選択します。
+製品の使用権限の概要を確認するには、「[!UICONTROL  コア製品 ]」テーブルから製品を選択します。
 
+<!-- update image ... -->
 ![ 製品と予測される使用状況列がハイライト表示された [!UICONTROL  ライセンス使用状況 ] [!UICONTROL  概要 ]。](../images/license-usage/product-predicted-usage.png)
 
 「概要」タブが表示されます。 [!UICONTROL  概要 ] タブと [!UICONTROL  詳細 ] タブで使用できる詳細な予測を使用して、情報に基づいた意思決定を確保し、効率的なライセンス使用を実現できます。
@@ -121,6 +126,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 >
 >ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。
 
+<!-- update image ... -->
 ![ 予測された使用状況列がハイライト表示された Platform 製品の概要ビュー。](../images/license-usage/summary-predicted-usage.png)
 
 予測される使用状況の割合は、次のように決定されます。
@@ -133,7 +139,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 >
 >このコンテキストの「ほぼ同一」とは、値が統計的に小数点以下 2 桁まで有意であることを意味します（例えば、下限が 0.342、上限が 0.344 の場合、どちらも 34% に丸められます）。
 
-予測使用状況機能では、次の指標をサポートしています。
+予測使用量機能は、次の指標をサポートしています。
 
 - [!UICONTROL  アドレス可能なオーディエンス ]
 - [!UICONTROL  平均プロファイル充実度 ]
@@ -229,7 +235,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 これらの指標の可用性と各指標の具体的な定義は、組織が購入したライセンスによって異なります。 各指標の定義について詳しくは、該当する製品説明ドキュメントを参照してください。
 
 | ライセンス | 商品の説明 |
-|---|---|
+| --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD 標準</li><li>ADOBE EXPERIENCE PLATFORM:OD ヘビー</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリ サービス、およびインテリジェント サービス ](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
