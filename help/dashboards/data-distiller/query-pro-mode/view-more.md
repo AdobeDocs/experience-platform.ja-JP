@@ -2,10 +2,10 @@
 title: さらに表示
 description: SQL 分析されたデータに対する様々な表示オプションについて説明します。 カスタムダッシュボードから、分析の表形式の結果を表示したり、処理されたデータを CSV 形式でダウンロードしたりできます。
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 2%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
@@ -30,6 +30,38 @@ SQL から Query pro モードを使用して作成したすべてのグラフ�
 >CSV のダウンロードは、最初の 500 レコードに制限されます。
 
 ![ インサイトのプレビューと、インサイトを生成した SQL の結果を表形式で表示するダイアログ。](../../images/query-pro-mode/view-more-download-csv.png)
+
+## 列で並べ替え {#sort-column}
+
+表形式の結果を表示する場合、並べ替え機能を使用して、列を昇順または降順で並べ替えることができます。 カスタムダッシュボードから、任意のテーブルの省略記号（`...`）を選択して、「[!UICONTROL  さらに表示 ] オプションにアクセスします。
+
+![ テーブルの省略記号ドロップダウンメニューと「さらに表示」オプションがハイライト表示されたカスタムダッシュボード。](../../images/query-pro-mode/advanced-ellipses-dropdown.png)
+
+列名の横にあるドロップダウンメニューを選択し、「昇順で並べ替え **[!UICONTROL または「降順で並べ替え]** を選択すると、列を並べ替えるこ **[!UICONTROL ができ]** す。
+
+>[!NOTE]
+>
+>[!UICONTROL  昇順で並べ替え ] および [!UICONTROL  降順で並べ替え ] オプションは、[ 並べ替え機能 ](../overview.md/#advanced-attributes) で設定された列にのみ表示されます。
+
+![ 「昇順で並べ替え」オプションと「降順で並べ替え」オプションがハイライト表示されたテーブル列のドロップダウン。](../../images/query-pro-mode/advanced-sort-dropdown.png)
+
+## 列のサイズ変更 {#resize-column}
+
+表形式の結果の列のサイズを変更して、データを読みやすくすることができます。 カスタムダッシュボードから、テーブルの省略記号（`...`）を選択して、「[!UICONTROL  詳細を表示 ]」オプションにアクセスします。 列名の横にあるドロップダウンメニューを使用して列名のサイズを変更し、「**[!UICONTROL 列のサイズを変更]**」を選択します。
+
+![ 「列をサイズ変更」オプションがハイライト表示されたテーブル列ドロップダウン。](../../images/query-pro-mode/advanced-resize-dropdown.png)
+
+スライダーを選択して左右にドラッグし、必要に応じて列サイズを調整します。
+
+![ 列のリサイズバーがハイライト表示されているテーブル。](../../images/query-pro-mode/advanced-resize-column.png)
+
+## テーブルのページネーション {#table-pagination}
+
+[!UICONTROL  詳細を表示 ] 機能で、ページネーションがテーブルに自動的に適用されるので、SQL クエリを手動で変更する必要はありません。 この機能により、より管理しやすい形式でデータが表示され、大きなデータセット間を簡単に移動できるようになります。
+
+1 ページにつき最大 500 件のレコードを表示できます。 レコード間を移動するには、ページ下部の **[!UICONTROL >]** を使用します。
+
+![ 結果とページネーションがハイライト表示された表形式の結果。](../../images/query-pro-mode/advanced-table-pagination.png)
 
 ## 次の手順
 

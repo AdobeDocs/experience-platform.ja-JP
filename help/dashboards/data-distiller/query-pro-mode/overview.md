@@ -2,9 +2,9 @@
 title: Query Pro モードの概要
 description: Adobe Experience Platform UI で SQL クエリを使用して、カスタムダッシュボードのグラフを生成する方法を説明します。
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ UI 要素について詳しくは、[ クエリエディターユーザーガイ
 ウィジェットのグラフまたはグラフのタイプを変更するには、[!UICONTROL  マーク ] ドロップダウンの使用可能なオプションから選択します。 オプションには、[!UICONTROL  行 ]、[!UICONTROL  ドーナツ ]、[!UICONTROL  大きい数値 ]、[!UICONTROL  棒 ] があります。 選択すると、ウィジェットの現在の設定のプレビュービジュアライゼーションが生成されます。
 
 ![ ウィジェットのプレビューがハイライト表示されたウィジェットコンポーザー。](../../images/sql-insights/widget-preview.png)
+
+## 高度なテーブル属性 {#advanced-attributes}
+
+テーブルの一部またはすべての列に自動ソート機能を適用するには、「**[!UICONTROL 編集]**」を選択してダッシュボード全体を編集します。
+
+![ 「編集」がハイライト表示されたカスタムダッシュボード。](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+列の並べ替えを追加するテーブルグラフで省略記号（`...`）を選択し、「**[!UICONTROL 編集]**」を選択します。
+
+![ 「編集」がハイライト表示された省略記号メニューを示す表。](../../images/query-pro-mode/advanced-table-edit.png)
+
+任意の列で並べ替えを有効にするには、「並べ替え可能 **[!UICONTROL ボックスをオンに]** ます。
+
+![ 並べ替え可能なチェックボックスがハイライト表示されたテーブル編集ページ。](../../images/query-pro-mode/advanced-table-sortable.png)
+
+「プロパティ」アイコン（![ 「プロパティ」アイコン](/help/images/icons/properties.png)）を選択し、[!UICONTROL  プロパティ ] パネルを開きます。 **[!UICONTROL プロパティ]** パネルで、ドロップダウンを使用して **[!UICONTROL デフォルトの並べ替え]** 列を選択し、ドロップダウンを使用して **[!UICONTROL 並べ替え方向]** を選択します。 最後に、「**[!UICONTROL 保存して閉じる]** を選択します。
+
+![ プロパティアイコン、デフォルトの並べ替え、並べ替え方向、保存して閉じるがハイライト表示されたウィジェットコンポーザー ](../../images/query-pro-mode/advanced-table-properties.png)
+
+並べ替え、列のサイズ変更、ページネーションの機能の使用について詳しくは、[ 詳細を表示 ](./view-more.md) を参照してください。
 
 ## ウィジェットのプロパティ {#properties}
 
