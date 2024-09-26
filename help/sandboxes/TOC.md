@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ヘルプのサンドボックス
 breadcrumb-title: サンドボックスガイド
 user-guide-description: サンドボックスの機能と、開発、テスト、アプリケーションのデプロイメントのための仮想環境への Platform インスタンスのパーティション化の仕組みを確認します。
 feature: Sandboxes
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 06f9846c2b58071827a1c1d5360eb49ba6b1c34a
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 87%
+source-wordcount: '74'
+ht-degree: 82%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 87%
    * [サンドボックス UI の概要](ui/overview.md)
    * [サンドボックスユーザーガイド](ui/user-guide.md)
    * [サンドボックスツール](ui/sandbox-tooling.md)
+   * [組織間でのパッケージの共有](ui/sharing-packages-across-orgs.md)
 * サンドボックス API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
