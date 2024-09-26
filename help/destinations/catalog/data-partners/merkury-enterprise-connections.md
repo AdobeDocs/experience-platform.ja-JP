@@ -1,13 +1,14 @@
 ---
 title: Merkury エンタープライズ接続の宛先
 description: Adobe Experience Platform UI を使用して Merkury Enterprise Connections の宛先接続を作成する方法を説明します。
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
-
 
 # Merkury エンタープライズ接続の宛先
 
@@ -60,7 +61,7 @@ ht-degree: 20%
 
 | **オーディエンス** | **サポート対象** | **説明の起源** |
 |---|---|---|      
-| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
+| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポートします。 |
 
 {style="table-layout:auto"}
@@ -127,7 +128,7 @@ Merkury エンタープライズ接続の宛先を使用して既に定義され
 
 ## アラートの有効化
 
-アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts) についてのガイドを参照してください。
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 ](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/alerts) についてのガイドを参照してください。
 
 宛先接続への詳細の入力を終えたら「**次へ**」を選択します。
 

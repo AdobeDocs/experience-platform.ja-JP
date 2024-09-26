@@ -1,13 +1,14 @@
 ---
 title: Merkury エンタープライズ Id の宛先
 description: Adobe Experience Platform UI を使用して Merkury エンタープライズ ID 宛先接続を作成する方法を説明します。
-source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 18%
 
 ---
-
 
 # Merkury エンタープライズ Id の宛先
 
@@ -67,7 +68,7 @@ ht-degree: 18%
 
 | **オーディエンス** | **サポート対象** | **説明** | **接触チャネル** |
 |---|---|---|---|
-| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
+| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | x | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポートします。 |
 
 {style="table-layout:auto"}
@@ -78,7 +79,7 @@ ht-degree: 18%
 
 | **オーディエンス** | **サポート対象** | **説明の起源** |
 |---|---|---|      
-| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
+| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポートします。 |
 
 {style="table-layout:auto"}
@@ -135,7 +136,7 @@ Merkury エンタープライズ ID 宛先を使用して既に定義されて�
 
 ### アラートの有効化
 
-アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts) についてのガイドを参照してください。
+アラートを有効にすると、宛先へのデータフローのステータスに関する通知を受け取ることができます。リストからアラートを選択して、データフローのステータスに関する通知を受け取るよう登録します。アラートについて詳しくは、[UI を使用した宛先アラートの購読 ](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/alerts) についてのガイドを参照してください。
 
 宛先接続への詳細の入力を終えたら「**次へ**」を選択します。
 

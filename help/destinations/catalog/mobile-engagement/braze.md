@@ -2,8 +2,9 @@
 keywords: モバイル；braze; メッセージング；
 title: Braze 接続
 description: Braze は、顧客と好きなブランドの間で関連性の高い思い出に残るエクスペリエンスを強化する包括的なカスタマーエンゲージメントプラットフォームです。
+last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 31%
