@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
 source-wordcount: '2739'
-ht-degree: 9%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="testy-mctestface"
 >title="表示してはいけないテストダイアログ"
->abstract="{date} で表示され {name} オブジェクト。"
+>abstract="オブジェクト {name} は {date} に表示されています。"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
@@ -32,15 +32,15 @@ ht-degree: 9%
 >id="platform_dashboards_licenseUsage"
 >title="ライセンス使用状況ダッシュボード"
 >abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="ライセンス使用状況ダッシュボード"
 >abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
 
 Adobe Experience Platformの [!UICONTROL  ライセンスの使用状況 ] ダッシュボードを使用して、組織のライセンスの使用状況に関する重要な情報を表示できます。 ここに表示される情報は、Platform インスタンスの毎日のスナップショット中にキャプチャされます。
 
@@ -98,16 +98,16 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="予測される使用状況"
->abstract="予測は過去 6 ～ 7 か月の使用状況に基づき、毎月 15 日に生成されます。 ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。 使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>abstract="予測は過去6～7か月の使用状況に基づき、毎月15日に生成されます。ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織における実際の使用状況を理解し、その使用状況がアドビとの組織のライセンスの範囲を超えないようにする責任があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは偽名プロファイルのデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="予測される使用状況"
->abstract="予測は過去 6 ～ 7 か月の使用状況に基づき、毎月 15 日に生成されます。 ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。 使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>abstract="予測は過去6～7か月の使用状況に基づき、毎月15日に生成されます。ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織における実際の使用状況を理解し、その使用状況がアドビとの組織のライセンスの範囲を超えないようにする責任があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは偽名プロファイルのデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
 
 インサイトに満ちた使用状況の予測に基づいて、ライセンスリソースをプロアクティブに管理および最適化します。 この [!UICONTROL  予測使用状況 ] 列は、購入したすべての製品に対して、すべての実稼動および開発用サンドボックスにわたって、サンドボックスレベルで今後のライセンスの使用を正確に予測します。 このアラート機能は、今月の 15 日までの使用状況に基づいて、6 週間後のライセンス使用状況の予測を提供します。 予測には、下限と上限が設定されています。
 
@@ -124,7 +124,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 >[!NOTE]
 >
->ライセンス使用状況の予測は過去の使用状況に基づく概算であることに注意してください。 お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。
+>ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。
 
 <!-- update image ... -->
 ![ 予測された使用状況列がハイライト表示された Platform 製品の概要ビュー。](../images/license-usage/summary-predicted-usage.png)

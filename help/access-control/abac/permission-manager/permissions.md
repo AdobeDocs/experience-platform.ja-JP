@@ -5,7 +5,7 @@ exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 4%
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 [!UICONTROL  権限マネージャー ] の簡単なクエリを使用して、アクセス管理の理解に役立つ簡潔なレポートを作成し、多くのワークフローと精度レベルでアクセス権限の検証を行う時間を節約します。 [!UICONTROL  権限マネージャー ] を使用して、ユーザーグループに属し、指定されたアクセス権限を持つユーザーと、特定のラベルを持つ役割を検索できます。
 
-## 指定したユーザーグループ内のユーザーを検索する {#search-users}
+## 指定したユーザーグループ内のユーザーの検索を実行 {#search-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"

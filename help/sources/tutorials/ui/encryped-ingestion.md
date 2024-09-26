@@ -6,7 +6,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
 source-wordcount: '1464'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 6%
    * 署名検証キーペアのメカニズムも使用した場合は、暗号化されたデータに対応する署名検証キー ID を指定する必要があります。
 * データフロー作成手順に進みます。
 
-## 暗号化キーペアの作成 {#create-an-encryption-key-pair}
+## 暗号化キーペアを作成 {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_encryptionKeyId"
@@ -80,7 +80,7 @@ Platform UI でソースワークスペースに移動し、上部のヘッダ�
 
 ![ キーペアページ。暗号化キーのリストが表示されます。 「acme-encryption-key」の横にある省略記号が選択され、ドロップダウンにキーの詳細を表示するオプションとキーを削除するオプションが表示されます。](../../images/tutorials/edi/configuration_options.png)
 
-### 署名検証キーの作成 {#create-a-sign-verification-key}
+### 署名検証キーを作成 {#create-a-sign-verification-key}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"
