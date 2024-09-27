@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Data Prep でのデータ形式の取り扱い
 description: このドキュメントでは、Data Prep における様々なデータ型の処理方法の概要について説明します。
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 99%
+source-wordcount: '626'
+ht-degree: 95%
 
 ---
 
@@ -75,6 +75,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 > Data Prep では、文字列をできるだけ日付に変換しようとします。ただし、これらの変換は、望ましくない結果を引き起こす可能性があります。例えば、文字列値「12112020」は「MMddyyyy」というパターンと一致しますが、ユーザーは「ddMMyyyy」というパターンで日付を読み取ることを意図している場合があります。そのため、文字列の日付形式について明示的に言及する必要があります。
 
 ### 日付 / 時刻形式の文字列 {#format}
+
+>[!TIP]
+>
+>現在、バッチ取り込みの date 関数は、日付値が `2024-05-05 20:39:00.005` PST の形式の場合、ミリ秒を削除します。 ミリ秒を保持するには、次の形式を使用します：`2024-05-05 20:39:00.005-0800`
 
 次の表に、書式文字列に対して定義されるパターン文字を示します。大文字と小文字が区別されることに注意してください。
 

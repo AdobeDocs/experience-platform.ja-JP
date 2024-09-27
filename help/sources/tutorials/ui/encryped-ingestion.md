@@ -3,9 +3,9 @@ title: ソース UI のWorkspaceでの暗号化されたデータの取り込み
 description: ソース UI ワークスペースで暗号化されたデータを取り込む方法を説明します。
 badge: ベータ版
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
+source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1456'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->ソース UI での暗号化されたデータ取り込みのサポートはベータ版であり、組織では使用できない場合があります。 機能とドキュメントは変更される場合があります。
+>ソース UI での暗号化されたデータ取り込みのサポートはベータ版です。 機能とドキュメントは変更される場合があります。
 
 クラウドストレージバッチソースを使用して、暗号化されたデータファイルとフォルダーをAdobe Experience Platformに取り込むことができます。 暗号化されたデータの取り込みでは、非対称暗号化メカニズムを利用して、バッチデータを Experience Platform に安全に転送できます。 サポートされている非対称暗号化メカニズムは PGP と GPG です。
 
