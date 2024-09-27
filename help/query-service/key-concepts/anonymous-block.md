@@ -2,10 +2,10 @@
 title: クエリサービスの匿名ブロック
 description: 匿名ブロックは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文であり、クエリのシーケンスを効率的に実行できます
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 73%
+source-wordcount: '603'
+ht-degree: 69%
 
 ---
 
@@ -44,9 +44,7 @@ $$;
 
 以下の例では、`SET` は指定されたローカル変数に `SELECT` クエリの結果を保持します。変数は、匿名ブロックに対してスコープ設定されます。
 
-スナップショット ID は、ローカル変数（`@current_sid`）として保存されます。その後、次のクエリで使用され、同じデータセット／テーブルからの SNAPSHOT に基づいて結果が返されます。
-
-データベーススナップショットは、SQL Server データベースの読み取り専用の静的ビューです。[スナップショット句に関する情報](../sql/syntax.md#SNAPSHOT-clause)については、SQL 構文のドキュメントを参照してください。
+スナップショット ID は、ローカル変数（`@current_sid`）として保存されます。その後、次のクエリで使用され、同じデータセット/テーブルからの SNAPSHOT に基づいて結果が返されます。 [スナップショット句に関する情報](../sql/syntax.md#SNAPSHOT-clause)については、SQL 構文のドキュメントを参照してください。
 
 ```SQL
 $$ BEGIN                                             

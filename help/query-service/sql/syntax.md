@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文の詳細と説明を説明します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '4305'
+source-wordcount: '4291'
 ht-degree: 5%
 
 ---
@@ -707,11 +707,7 @@ select inline(productListItems) from source_dataset limit 10;
 | product-id-2 | （「（（&quot;（AF, C, D,NULL）&quot;）&quot;） | 6 | 40 |
 | product-id-4 | （&quot;（&quot;（&quot;（BM, pass, NA,NULL）&quot;）&quot;） | 3 | 12 |
 
-## [!DNL Spark] SQL コマンド
-
-次のサブセクションでは、クエリサービスでサポートされる Spark SQL コマンドについて説明します。
-
-### SET
+## SET
 
 `SET` コマンドは、プロパティを設定し、既存のプロパティの値を返すか、既存のすべてのプロパティを一覧表示します。 既存プロパティのキーに値が指定された場合、古い値が上書きされます。
 
