@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年9月
 description: Adobe Experience Platform の 2024年9月のリリースノート。
-source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
+source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
 workflow-type: tm+mt
-source-wordcount: '2144'
+source-wordcount: '2149'
 ht-degree: 24%
 
 ---
@@ -14,15 +14,16 @@ ht-degree: 24%
 
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
-- [アラート](#alerts)
-- [ダッシュボード](#dashboards)
-- [データ準備](#data-prep)
-- [宛先](#destinations)
-- [エクスペリエンスデータモデル（XDM）](#xdm)
-- [ID サービス](#identity-service)
-- [クエリサービス](#query-service)
-- [セグメント化サービス](#segmentation-service)
-- [ソース](#sources)
+- [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
+   - [アラート {#alerts}](#alerts-alerts)
+   - [ダッシュボード {#dashboards}](#dashboards-dashboards)
+   - [Data Prep {#data-prep}](#data-prep-data-prep)
+   - [宛先 {#destinations}](#destinations-destinations)
+   - [エクスペリエンスデータモデル（XDM）{#xdm}](#experience-data-model-xdm-xdm)
+   - [ID サービス {#identity-service}](#identity-service-identity-service)
+   - [クエリサービス {#query-service}](#query-service-query-service)
+   - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
+   - [ソース {#sources}](#sources-sources)
 
 ## アラート {#alerts}
 
@@ -139,7 +140,7 @@ ID サービスについて詳しくは、[ID サービスの概要](../../ident
 | 機能 | 説明 |
 | --- | --- |
 | Data Distiller オーディエンス | Experience Platformの Data Distillerの SQL オーディエンス拡張機能を使用すると、オーディエンスを簡単に作成、管理、アクティブ化できます。 プロファイルに生データを必要とすることなく、データレイクから直接 SQL コマンドを使用してオーディエンスセグメントを定義します。 この柔軟でデータ駆動型のアプローチにより、ターゲティング戦略を絞り込み、オーディエンスをファイルベースの宛先に自動的に同期します。 ワークフローを合理化し、オーディエンス管理を最適化し、データの可能性を最大限に活用します。 [SQL オーディエンス拡張機能の使用に関するガイド ](../../query-service/data-distiller-audiences/overview.md) を参照して、オーディエンス戦略を強化します。 |
-| Data Distiller Statistics - ハイパーキューブ | ハイパーキューブを使用してビッグデータ分析を最適化します。 履歴データを再処理することなく、個別カウントや多次元分析などの複雑な計算を処理できます。 精度と効率を維持しながら、データの増分更新、ワークフローの合理化、処理時間の短縮を行います。 意思決定を変革する、より迅速、スケーラブル、かつコスト効率の高いインサイトを得ます。 [ ハイパーキューブの使用に関するガイド ](../../query-service/hypercubes.md) を参照して、高度な分析のロックを解除します。 |
+| Data Distiller Statistics - ハイパーキューブ | ハイパーキューブを使用してビッグデータ分析を最適化します。 履歴データを再処理することなく、個別カウントや多次元分析などの複雑な計算を処理できます。 精度と効率を維持しながら、データの増分更新、ワークフローの合理化、処理時間の短縮を行います。 意思決定を変革する、より迅速、スケーラブル、かつコスト効率の高いインサイトを得ます。 [ ハイパーキューブの使用に関するガイド ](../../query-service/hypercubes/overview.md) を参照して、高度な分析のロックを解除します。 |
 | クエリエディターオブジェクトブラウザー | クエリエディターの新しいオブジェクトブラウザーを使用して、クエリの効率を高めます。 データセットをすばやく検索、フィルタリングおよびアクセスして、クエリの書き込みと絞り込みをすばやく行います。 リアルタイムのスキーマ更新とテーブルのインスタントメタデータを使用すると、ワークフローを合理化し、ナビゲーション時間を短縮し、クエリエクスペリエンスを強化できます。 データの可能性を解放し、分析を最適化します。 詳しくは、[ オブジェクトブラウザーの使用に関するガイド ](../../query-service/ui/user-guide.md#object-browser) を参照してください。 |
 | 時間を計算 | スケジュール済みクエリの時間計算指標を新しく表示することで、リソース使用状況を制御できます。 クエリ実行レベルで計算時間を表示して、CTAS/ITAS バッチクエリのリソース使用を監視および最適化します。 各クエリ実行の開始時間、完了ステータスおよび計算時間を追跡します。 パフォーマンスを微調整し、コストを簡単に削減します。 クエリの効率を最大化する方法について詳しくは、[ 計算時間に関するガイド ](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) を参照してください。 |
 

@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: bdd3d37baa05c8da3213f425657a00fef6afecb8
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 81%
+source-wordcount: '339'
+ht-degree: 80%
 
 ---
 
@@ -41,7 +41,6 @@ ht-degree: 81%
       - [AI/ML データパイプラインのエンリッチメントエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Data Distillerのオーディエンス {#data-distiller-audiences}
    - [SQL を使用した外部オーディエンスの構築](data-distiller-audiences/overview.md)
-- [DATA DISTILLERのハイパーキューブ](hypercubes.md)
 - 例 {#use-cases}
    - [概要](use-cases/overview.md)
    - [参照を中止](use-cases/abandoned-browse.md)
@@ -70,6 +69,8 @@ ht-degree: 81%
    - [データ重複排除](key-concepts/deduplication.md)
    - [データセットのサンプル](key-concepts/dataset-samples.md)
    - [データセット統計の計算](key-concepts/dataset-statistics.md)
+- Data Distiller Hypercubes {#hypercubes}
+   - [ハイパーキューブによる効率的なビッグデータ分析](hypercubes/overview.md)
 - クエリサービスへのクライアントの接続 {#clients}
    - [クライアント接続の概要](clients/overview.md)
    - [SSL モード](./clients/ssl-modes.md)

@@ -2,9 +2,9 @@
 title: クエリスケジュール
 description: Adobe Experience Platform UI を使用して、スケジュールされたクエリの実行を自動化する方法、クエリスケジュールを削除または無効にする方法、使用可能なスケジュールオプションを利用する方法について説明します。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
+source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2066'
 ht-degree: 14%
 
 ---
@@ -163,6 +163,11 @@ CTAS/ITAS バッチクエリのクエリ実行レベルで消費される計算�
 | [!UICONTROL  時間を計算 ] | 各クエリの実行に使用される計算時間を時間単位で表示します。 これにより、リソース使用量を追跡し、クエリのパフォーマンスを最適化できます。 |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>時間の計算データは、2024 年 8 月 15 日（PT）から使用できます。 この日付より前のデータは、「利用できません」と表示されます。
+
 
 UI を使用してすべてのクエリジョブのステータスを監視する方法について詳しくは、[ スケジュール済みクエリの監視ガイド ](./monitor-queries.md#inline-actions) を参照してください。
 
