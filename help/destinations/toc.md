@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 5e2e8996ee48d7816d78fc9cacf6ba102f7ae66f
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 86%
+source-wordcount: '1253'
+ht-degree: 85%
 
 ---
 
@@ -77,6 +77,7 @@ ht-degree: 86%
       * [Bing Ads Universal Event Tracking（UET）拡張機能](./catalog/advertising/bing-ads.md)
       * [Branch 拡張機能](./catalog/advertising/branch.md)
       * [（ベータ版）Criteo 接続](./catalog/advertising/criteo.md)
+      * [Demandbase 接続](./catalog/advertising/demandbase.md)
       * [DoubleClick Floodlight（ベータ版）拡張機能](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook Pixel 拡張機能](./catalog/advertising/facebook-pixel.md)
       * [Flashtalking OneTag 拡張機能](./catalog/advertising/flashtalking.md)
