@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1686'
 ht-degree: 51%
 
 ---
@@ -178,7 +178,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --- | --- | --- | --- |
 | [プライベートカスタム宛先](/help/destinations/destination-sdk/overview.md#productized-custom-integrations)の最大数 | 5 | パフォーマンスガードレール | Destination SDK を使用して、最大 5 つのプライベートカスタムストリーミングまたはバッチの宛先を作成できます。宛先を 5 つ以上作成する必要がある場合は、カスタムケア担当者にお問い合わせください。 |
-| Destination SDK のプロファイル書き出しポリシー | <ul><li>`maxBatchAgeInSecs`（最小 1.800、最大 3.600）</li><li>`maxNumEventsInBatch`（最小 1.000、最大 10.000）</li></ul> | システムに適用されたガードレール | 「[設定可能な集計](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)」オプションを使用する場合は、HTTP メッセージが API ベースの宛先に送信される頻度と、メッセージに含めるプロファイル数を決定する最小値と最大値に注意してください。 |
+| Destination SDK のプロファイル書き出しポリシー | <ul><li>`maxBatchAgeInSecs`（最小 1,800、最大 3,600）</li><li>`maxNumEventsInBatch`（最小 1,000、最大 10,000）</li></ul> | システムに適用されたガードレール | 「[設定可能な集計](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)」オプションを使用する場合は、HTTP メッセージが API ベースの宛先に送信される頻度と、メッセージに含めるプロファイル数を決定する最小値と最大値に注意してください。 |
 
 {style="table-layout:auto"}
 

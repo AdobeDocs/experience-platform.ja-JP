@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2024年9月
 description: Adobe Experience Platform の 2024年9月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
+source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 24%
+source-wordcount: '2199'
+ht-degree: 23%
 
 ---
 
@@ -15,16 +15,15 @@ ht-degree: 24%
 
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
-- [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
-   - [アラート {#alerts}](#alerts-alerts)
-   - [ダッシュボード {#dashboards}](#dashboards-dashboards)
-   - [Data Prep {#data-prep}](#data-prep-data-prep)
-   - [宛先 {#destinations}](#destinations-destinations)
-   - [エクスペリエンスデータモデル（XDM）{#xdm}](#experience-data-model-xdm-xdm)
-   - [ID サービス {#identity-service}](#identity-service-identity-service)
-   - [クエリサービス {#query-service}](#query-service-query-service)
-   - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-   - [ソース {#sources}](#sources-sources)
+- [アラート {#alerts}](#alerts)
+- [ダッシュボード {#dashboards}](#dashboards)
+- [Data Prep {#data-prep}](#data-prep)
+- [宛先 {#destinations}](#destinations)
+- [エクスペリエンスデータモデル（XDM）{#xdm}](#xdm)
+- [ID サービス {#identity-service}](#identity-service)
+- [クエリサービス {#query-service}](#query-service)
+- [Segmentation Service {#segmentation-service}](#segmentation-service)
+- [ソース {#sources}](#sources)
 
 ## アラート {#alerts}
 
@@ -77,6 +76,8 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 
 ## 宛先 {#destinations}
 
+**更新日：2024 年 9 月 30 日（PT）**
+
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新規宛先または更新された宛先** {#new-updated-destinations}
@@ -84,6 +85,7 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 | 宛先 | 説明 |
 | --- | --- |
 | [Amazon広告 ](/help/destinations/catalog/advertising/amazon-ads.md) | 2024 年 9 月リリースでは、`countryCode` パラメーターをAmazon Ads に書き出すマッピングオプションが追加されました。 [ マッピング手順 ](/help/destinations/catalog/advertising/amazon-ads.md#map) で `countryCode` を使用して、Amazonでの ID 一致率を改善します。 |
+| [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 DemandBase の B2BDemand Side Platform（DSP）を使用して、ターゲットアカウント内の関連するペルソナやロールにアドバタイズします。 Target アカウントは、マーケティングや販売におけるその他のダウンストリームのユースケース向けに、Demandbase のサードパーティデータを使用して強化することもできます。 |
 
 {style="table-layout:auto"}
 

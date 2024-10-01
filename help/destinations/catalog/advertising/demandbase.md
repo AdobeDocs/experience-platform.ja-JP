@@ -3,7 +3,8 @@ title: Demandbase 接続
 description: この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 DemandBase の B2BDemand Side Platform（DSP）を使用して、ターゲットアカウント内の関連するペルソナやロールにアドバタイズします。 Target アカウントは、マーケティングや販売におけるその他のダウンストリームのユースケース向けに、Demandbase のサードパーティデータを使用して強化することもできます。
 badgeB2B: label="B2B エディション" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: 5c694dfab7e53cf8a78500e3ecd086a3986b9b91
+last-substantial-update: 2024-09-30T00:00:00Z
+source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 26%

@@ -2,7 +2,7 @@
 description: 集計ポリシーを設定して、宛先に対する HTTP リクエストがどのようにグループ化およびバッチ化されるかを説明します。
 title: 集計ポリシー
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 96%
@@ -109,8 +109,8 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 |---------|----------|------|
 | `aggregationType` | 文字列 | 宛先が使用する必要がある、集計ポリシーのタイプを示します。サポートされる集計タイプ： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | ブール値 | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。サーバーが 1 回の呼び出しで 1 つの ID しか受け入れない場合、特定の ID 名前空間に対して、このフラグを `true` に設定します。 |
-| `configurableAggregation.maxBatchAgeInSecs` | 整数 | このパラメーターは、`maxNumEventsInBatch` と共に使用して、Experience Platform がエンドポイントに API 呼び出しを送信するまで待機する時間を決定します。 <ul><li>最小値（秒）：1800</li><li>最大値（秒）：3600</li></ul> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は、API 呼び出しを行う前に、3,600 秒か、認定済みプロファイルが 10,000 個になるまで待機します（いずれか早い方）。 |
-| `configurableAggregation.maxNumEventsInBatch` | 整数 | このパラメーターは、`maxBatchAgeInSecs` と共に使用して API 呼び出しにいくつの認定プロファイルを集計するかを決定します。 <ul><li>最小値：1000</li><li>最大値：10000</li></ul> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は、API 呼び出しを行う前に、3,600 秒か、認定済みプロファイルが 10,000 個になるまで待機します（いずれか早い方）。 |
+| `configurableAggregation.maxBatchAgeInSecs` | 整数 | このパラメーターは、`maxNumEventsInBatch` と共に使用して、Experience Platform がエンドポイントに API 呼び出しを送信するまで待機する時間を決定します。 <ul><li>最小値（秒）：1,800</li><li>最大値（秒）：3,600</li></ul> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は、API 呼び出しを行う前に、3,600 秒か、認定済みプロファイルが 10,000 個になるまで待機します（いずれか早い方）。 |
+| `configurableAggregation.maxNumEventsInBatch` | 整数 | このパラメーターは、`maxBatchAgeInSecs` と共に使用して API 呼び出しにいくつの認定プロファイルを集計するかを決定します。 <ul><li>最小値：1,000</li><li>最大値：10,000</li></ul> 例えば、両方のパラメーターに最大値を使用した場合、Experience Platform は、API 呼び出しを行う前に、3,600 秒か、認定済みプロファイルが 10,000 個になるまで待機します（いずれか早い方）。 |
 | `configurableAggregation.aggregationKey` | - | 以下に記述するパラメーターに基づいて、宛先にマッピングされた書き出し済みプロファイルを集計できます。 |
 | `configurableAggregation.aggregationKey.includeSegmentId` | ブール値 | 宛先に書き出されたプロファイルをオーディエンス ID でグループ化する場合は、このパラメーターを `true` に設定します。 |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | ブール値 | 宛先に書き出されたプロファイルをオーディエンス ID とオーディエンスステータスでグループ化する場合は、このパラメーターと `includeSegmentId` の両方を `true` に設定します。 |
