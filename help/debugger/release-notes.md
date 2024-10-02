@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger の最新のリリースノー�
 keywords: デバッガー;Experience Platform Debugger 拡張機能;Chrome;拡張機能;リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
-workflow-type: ht
-source-wordcount: '781'
-ht-degree: 100%
+source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+workflow-type: tm+mt
+source-wordcount: '801'
+ht-degree: 98%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
+
+## バージョン 1.6.2 - 2024年10月1日（PT）
+
+### 修正点および改善点
+
+* デバッガーがすべての CSP エラーに対して過敏になる問題を修正しました
 
 ## バージョン 1.6.1 - 2024年7月25日（PT）
 
