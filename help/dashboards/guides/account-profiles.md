@@ -2,14 +2,14 @@
 title: アカウントプロファイルダッシュボード
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1827'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL  アカウントプロファイル ] ダッシュボード
+# アカウントプロファイルダッシュボード
 
 Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。 このガイドでは、UI での [!UICONTROL  アカウントプロファイル ] ダッシュボードへのアクセスおよび操作方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションの詳細を説明します。
 
@@ -64,6 +64,11 @@ Platform UI 内で [!UICONTROL  アカウントプロファイル ] ダッシュ
 「[!UICONTROL  詳細 ]」タブに表示されるアカウントプロファイル情報は、複数のプロファイルフラグメントを結合し、個々のアカウントの単一のビューを形成したものです。 Platform UI でのアカウントプロファイル表示機能について詳しくは、[Adobe Real-time Customer Data Platformでのアカウントプロファイルの参照 ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) に関するドキュメントを参照してください。
 
 ## 標準ウィジェット {#standard-widgets}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_accountprofiles_customersperaccountoverview"
+>title="アカウントあたりの顧客数の概要"
+>abstract="このドリルスルーウィジェットは、B2B データの構造に関するインサイトを提供します。 これは、顧客プロファイルがリンクされていない、または 1 つ以上の顧客プロファイルが関連付けられているアカウントプロファイルの数を特定するのに役立ちます。<ul><li>ダイレクト顧客：`personComponents` ルートを通じてアカウントに直接リンクされた顧客プロファイルです。</li><li>間接顧客：`Account-Person` ルートを介してアカウントにリンクされた顧客プロファイルです。</li></ul>"
 
 Adobeには、アカウントプロファイルに関連する様々な指標を視覚化するために使用できる標準ウィジェットが用意されています。
 
