@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2024年9月
 description: Adobe Experience Platform の 2024年9月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
+source-git-commit: 33d1305aef7c763e7b0bd8c6db6a1a9417cc2a9d
 workflow-type: tm+mt
 source-wordcount: '2199'
 ht-degree: 23%
@@ -15,15 +15,15 @@ ht-degree: 23%
 
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
-- [アラート {#alerts}](#alerts)
-- [ダッシュボード {#dashboards}](#dashboards)
-- [Data Prep {#data-prep}](#data-prep)
-- [宛先 {#destinations}](#destinations)
-- [エクスペリエンスデータモデル（XDM）{#xdm}](#xdm)
-- [ID サービス {#identity-service}](#identity-service)
-- [クエリサービス {#query-service}](#query-service)
-- [Segmentation Service {#segmentation-service}](#segmentation-service)
-- [ソース {#sources}](#sources)
+- [アラート](#alerts)
+- [ダッシュボード](#dashboards)
+- [データ準備](#data-prep)
+- [宛先](#destinations)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
+- [ID サービス](#identity-service)
+- [クエリサービス](#query-service)
+- [セグメント化サービス](#segmentation-service)
+- [ソース](#sources)
 
 ## アラート {#alerts}
 
