@@ -2,9 +2,9 @@
 title: Web SDK のファーストパーティデバイス ID
 description: Adobe Experience Platform Web SDK でファーストパーティデバイス ID （FPID）を設定する方法について説明します。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
@@ -219,6 +219,16 @@ Edge Networkに [!DNL FPID] cookie の値を読み取らせることを選択し
     }
 }
 ```
+
+## 独自ドメインでの FPID の設定 {#setting-fpid-domain}
+
+ファーストパーティのデータ収集 [!DNL CNAME] が設定されている場合、ID マップで [!DNL FPID] を設定するだけでなく、独自のドメインに [!DNL FPID] Cookie を設定することもできます。
+
+[!DNL CNAME] を使用してファーストパーティデータ収集が有効になっている場合、データ収集エンドポイントに対するリクエストにより、ドメインのすべての cookie が送信されます。
+
+Adobeのデータ収集目的に関係のない cookie はすべて削除されます。 [!DNL FPID]：データストリーム設定で [!DNL FPID] cookie の名前を指定できます。 これを行うと、Edge Networkは ID マップで [!DNL FPID] を探す代わりに、[!DNL FPID] Cookie の内容を読み取ります。
+
+この機能を使用するには、特定のサブドメインではなく、ドメインの最上位レベルに [!DNL FPID] を設定する必要があります。 サブドメインで設定すると、cookie の値はEdge Networkに送信されず、[!DNL FPID] のソリューションは意図したとおりに動作しません。
 
 ## ID 階層 {#id-hierarchy}
 
