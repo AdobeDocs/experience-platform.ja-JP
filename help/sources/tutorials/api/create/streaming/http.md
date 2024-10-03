@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；ストリー
 title: Flow Service API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、Flow Service API を使用して、生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
-ht-degree: 34%
+source-wordcount: '1646'
+ht-degree: 35%
 
 ---
 
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB  変換なし ]
+>[!TAB XDM]
 
-次のリクエストでは、データ変換を行わずに、HTTP API のストリーミングデータフローを作成しています。
+次のリクエストは、XDM データのストリーミングデータフローを作成します。
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB  変換を使用 ]
+>[!TAB RAW]
 
-次のリクエストは、データに適用されたマッピング変換を使用して、HTTP API 用のストリーミングデータフローを作成します。
+次のリクエストでは、生データのストリーミングデータフローを作成しています。
 
 変換を使用してデータフローを作成する場合、`name` パラメーターは変更できません。 この値は、常に `Mapping` に設定する必要があります。
 
@@ -559,7 +559,7 @@ curl -X POST \
 }
 ```
 
-## Platform に取り込まれるPost データ {#ingest-data}
+## Platform に取り込むデータを投稿する {#ingest-data}
 
 >[!NOTE]
 >
