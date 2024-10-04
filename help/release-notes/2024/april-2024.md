@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform リリースノート
+title: Adobe Experience Platform リリースノート 2024年4月
 description: Adobe Experience Platform の 2024年4月のリリースノート。
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1895'
-ht-degree: 22%
+source-wordcount: '1897'
+ht-degree: 25%
 
 ---
 
@@ -83,7 +83,7 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 
 ## ID サービス {#identity-service}
 
-Adobe Experience Platform ID サービスを使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある、パーソナライズされたデジタル体験をリアルタイムで提供できます。
+Adobe Experience Platform ID サービスを使用すると、デバイスやシステム間で ID を紐付けることで、顧客とその行動の全体像を把握し、インパクトのある、個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 
 **更新された機能**
 
@@ -160,7 +160,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
-Experience Platformのソースを使用すると、Adobeアプリケーションまたはサードパーティのデータソースからデータを取り込むことができます。
+Experience Platform のソースを使用して、Adobe アプリケーションまたはサードパーティのデータソースからデータを取り込みます。
 
 **新しいソース**
 

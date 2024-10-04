@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Platform リリースノート
+title: Adobe Experience Platform リリースノート 2023年8月
 description: Adobe Experience Platform の 2023年8月のリリースノート。
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1741'
 ht-degree: 43%
 
 ---
@@ -90,7 +90,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ## データ取得 {#data-ingestion}
 
-Adobe Experience Platform は、あらゆる種類および遅延のデータを取得するための豊富な機能セットを提供します。取得は、Batch API または Streaming API、アドビの組み込みソース、データ統合パートナー、Adobe Experience Platform UI を使用して行うことができます。
+Adobe Experience Platform は、あらゆるタイプ、あらゆる待ち時間のデータを取り込める、豊富な機能セットを提供します。取得は、Batch API または Streaming API、アドビの組み込みソース、データ統合パートナー、Adobe Experience Platform UI を使用して行うことができます。
 
 **新機能または更新された機能**
 

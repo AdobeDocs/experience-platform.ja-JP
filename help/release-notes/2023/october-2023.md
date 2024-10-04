@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Platform リリースノート
+title: Adobe Experience Platform リリースノート 2023年10月
 description: Adobe Experience Platform の 2023年10月のリリースノート。
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f2d0848952902d94b441566da677ef174518192e
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1054'
 ht-degree: 38%
 
 ---
@@ -98,7 +98,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| アカウントオーディエンス （限定 GA） | Real-time Customer Data Platform B2B Edition では、アカウントのセグメント化を使用して、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングのセグメント化エクスペリエンスを完全に簡単かつ高度にすることができます。 この機能について詳しくは、[ アカウントオーディエンスの概要 ](../../segmentation/ui/account-audiences.md) を参照してください。 |
+| アカウントオーディエンス （限定 GA） | Real-time Customer Data Platform B2B editionでは、アカウントセグメント化を使用して、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングセグメント化エクスペリエンスを完全に簡単かつ高度なものにすることができます。 この機能について詳しくは、[ アカウントオーディエンスの概要 ](../../segmentation/ui/account-audiences.md) を参照してください。 |
 
 セグメント化サービスの詳細については、「[セグメント化サービスの概要](../../segmentation/home.md)」を参照してください。
 
