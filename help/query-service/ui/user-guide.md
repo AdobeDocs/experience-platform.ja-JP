@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '2802'
-ht-degree: 24%
+source-wordcount: '2821'
+ht-degree: 23%
 
 ---
 
@@ -102,6 +102,10 @@ ht-degree: 24%
 ### 結果数 {#result-count}
 
 クエリエディターの出力行は最大 50,000 行です。 クエリエディターコンソールに一度に表示する行数を選択できます。 コンソールに表示される行数を変更するには、「**[!UICONTROL 結果数]**」ドロップダウンを選択し、50、100、150、300、500 の各オプションから選択します。
+
+>[!NOTE]
+>
+>Platform UI でサポートできる行は 500 行までなので、500 を超える LIMIT 値の渡しは無視されます。
 
 ![ 結果数のドロップダウンがハイライト表示されたクエリエディター。](../images/ui/query-editor/result-count.png)
 
