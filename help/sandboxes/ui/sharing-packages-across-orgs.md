@@ -2,9 +2,9 @@
 title: サンドボックスツールを使用した組織間でのパッケージの共有
 description: Adobe Experience Platformのサンドボックスツールを使用して、様々な組織でパッケージを共有する方法を説明します。
 badge: ベータ版
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ![ 「パートナー組織」タブと「パートナー組織を管理」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-[!UICONTROL  パッケージパートナー管理 ] ダイアログで、組織 ID を **[!UICONTROL 組織 ID を入力]** して、Enter キーを押します。 組織 ID は、以下の **[!UICONTROL 選択した組織 ID]** の節に表示されます。 ID を追加したら、「**[!UICONTROL 確認]**」を選択します。
+[!UICONTROL  パッケージパートナー管理 ] ダイアログで、組織 ID を「**[!UICONTROL 組織 ID を入力]**」に入力し、Enter キー（Windows）または return キー（Mac）を押します。 組織 ID は、以下の **[!UICONTROL 選択した組織 ID]** の節に表示されます。 ID を追加したら、「**[!UICONTROL 確認]**」を選択します。
 
 >[!TIP]
 >
