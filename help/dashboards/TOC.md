@@ -5,9 +5,9 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
 role: Developer,User
-source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
+source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '134'
 ht-degree: 63%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 63%
 * [ダッシュボード](user-defined-dashboards.md)
 * [ダッシュボードを PDF にダウンロード](download.md)
 * Data Distiller {#data-distiller}
-   * [概要](data-distiller/overview.md)
    * 拡張アプリレポートスイートに関する SQL インサイト {#sql-insights}
       * [概要](data-distiller/sql-insights/overview.md)
    * Query pro mode {#query-pro-mode}

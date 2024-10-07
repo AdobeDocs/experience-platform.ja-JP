@@ -2,7 +2,7 @@
 title: SQL インサイト
 description: Data Distillerを使用して SQL インサイトダッシュボードを作成するためのユースケース、基本的な機能、必要な手順について説明します。 Data Distillerの SQL Insights 機能により、プロファイル、オーディエンス、キャンペーン、ジャーニー、使用権限、同意など、様々なディメンションにわたって、透明性を高め、運用に関するインサイトを得る方法を説明します。
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 Data Distillerの SQL Insights を使用すると、より深いインサイトを引き出し、戦略を最適化し、分析を特定のビジネスニーズに合わせて適応させるための、カスタムのレポートデータモデルを作成できます。 SQL インサイト機能を使用すると、プロファイル、オーディエンス、キャンペーン、ジャーニー、使用権限、同意など、様々なディメンションにわたって、Adobe Experience Platform データから透明性を高め、運用に関するインサイトを得ることができます。 この機能は、特定のビジネスニーズに合わせて組織のレポートデータモデルをカスタマイズする、汎用性の高いアダプティブソリューションを提供します。
 
-SQL Insights を [ 視覚化 ](../../../dashboards/data-distiller/overview.md) するには、[query pro モード ](../../../dashboards/data-distiller/query-pro-mode/overview.md) を使用して、カスタム SQL クエリで複雑な分析を実行し、データを解釈しやすいグラフに変換します。 Query pro モードを使用して、ダッシュボードにカスタムのインサイトとビジュアライゼーションを作成し、インサイトを CSV ファイルとしてダウンロードすることで、技術オーディエンスと非技術オーディエンスの両方に対応します。
+SQL Insights を [ 視覚化 ](../../../dashboards/data-distiller/sql-insights/overview.md) するには、[query pro モード ](../../../dashboards/data-distiller/query-pro-mode/overview.md) を使用して、カスタム SQL クエリで複雑な分析を実行し、データを解釈しやすいグラフに変換します。 Query pro モードを使用して、ダッシュボードにカスタムのインサイトとビジュアライゼーションを作成し、インサイトを CSV ファイルとしてダウンロードすることで、技術オーディエンスと非技術オーディエンスの両方に対応します。
 
 このドキュメントでは、Data Distillerを使用して SQL Insights ダッシュボードを作成するためのユースケース、基本的な機能および必要な手順について説明します。
 

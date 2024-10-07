@@ -2,7 +2,7 @@
 title: さらに表示
 description: SQL 分析されたデータに対する様々な表示オプションについて説明します。 カスタムダッシュボードから、分析の表形式の結果を表示したり、処理されたデータを CSV 形式でダウンロードしたりできます。
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -41,7 +41,7 @@ SQL から Query pro モードを使用して作成したすべてのグラフ�
 
 >[!NOTE]
 >
->[!UICONTROL  昇順で並べ替え ] および [!UICONTROL  降順で並べ替え ] オプションは、[ 並べ替え機能 ](../overview.md/#advanced-attributes) で設定された列にのみ表示されます。
+>[!UICONTROL  昇順で並べ替え ] および [!UICONTROL  降順で並べ替え ] オプションは、[ 並べ替え機能 ](./overview.md#advanced-attributes) で設定された列にのみ表示されます。
 
 ![ 「昇順で並べ替え」オプションと「降順で並べ替え」オプションがハイライト表示されたテーブル列のドロップダウン。](../../images/query-pro-mode/advanced-sort-dropdown.png)
 
