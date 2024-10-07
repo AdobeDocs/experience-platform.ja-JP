@@ -2,10 +2,10 @@
 title: プロファイルの書き出し動作
 description: Experience Platform の宛先でサポートされている様々な統合パターン間でプロファイル書き出し動作がどのように異なるかを説明します。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
+source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
 workflow-type: tm+mt
-source-wordcount: '2930'
-ht-degree: 89%
+source-wordcount: '2939'
+ht-degree: 87%
 
 ---
 
@@ -192,7 +192,7 @@ Experience Platform の[ファイルベースの宛先](/help/destinations/desti
 
 >[!TIP]
 >
->プロファイルの属性値または ID マップを変更しても、増分ファイルの書き出しに含まれるプロファイルが適合されることはありません。
+>プロファイルの ID マップを変更すると、増分ファイルの書き出しに含まれることになります。 属性値を変更すると *変更しない*、増分ファイルの書き出しに含めることができます。
 
 ## 次の手順 {#next-steps}
 
