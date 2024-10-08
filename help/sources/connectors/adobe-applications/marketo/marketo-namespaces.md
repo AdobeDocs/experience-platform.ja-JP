@@ -2,28 +2,32 @@
 title: B2B 名前空間とスキーマ
 description: このドキュメントでは、B2B ソースコネクタの作成時に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
+source-git-commit: ebbed5c6ff7037b138588a79a05e6ef13d1856d7
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1651'
 ht-degree: 18%
 
 ---
 
 # B2B 名前空間とスキーマ
 
+>[!AVAILABILITY]
+>
+>B2B スキーマが { リアルタイム顧客プロファイル ](../../../../rtcdp/b2b-overview.md) に適合するには、{0[Adobe Real-time Customer Data Platform B2B edition](../../../../profile/home.md) へのアクセス権が必要です。[
+
 >[!NOTE]
 >
 >Adobe Experience Platform UI でテンプレートを使用すると、B2B および B2C データのアセット作成を迅速化できます。 詳しくは、[Platform UI でのテンプレートの使用 ](../../../tutorials/ui/templates.md) に関するガイドを参照してください。
 
-このドキュメントでは、B2B ソースで使用する名前空間およびスキーマの基盤となるセットアップに関する情報を提供します。 このドキュメントでは、B2B 名前空間とスキーマを生成するために必要なPostman自動化ユーティリティの設定に関する詳細も説明します。
-
->[!IMPORTANT]
->
->B2B スキーマを { リアルタイム顧客プロファイル ](../../../../rtcdp/b2b-overview.md) に加えるには、{0[Adobe Real-time Customer Data Platform B2B Edition](../../../../profile/home.md) へのアクセス権が必要です。[
+B2B ソースで使用する名前空間とスキーマの設定について詳しくは、このドキュメントを参照してください。 このドキュメントでは、B2B 名前空間とスキーマを生成するために必要なPostman自動化ユーティリティの設定に関する詳細も説明します。
 
 ## B2B 名前空間とスキーマ自動生成ユーティリティの設定
 
-B2B 名前空間とスキーマ自動生成ユーティリティを使用する最初の手順は、Platform 開発者コンソールと [!DNL Postman] 環境を設定することです。
+>[!IMPORTANT]
+>
+>サービスアカウント（JWT）資格情報は非推奨（廃止予定）となりました。 2025 年 1 月 27 日（PT）までに、アプリケーションまたは統合を新しい OAuth サーバー間資格情報に移行する必要があります。 [JWT 資格情報を OAuth サーバー間資格情報に移行する方法 ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/) に関する詳細な手順については、次のドキュメントを参照してください。
+
+B2B 名前空間とスキーマ自動生成ユーティリティをサポートするための [!DNL Postman] 環境の設定方法に関する前提条件の情報については、次のドキュメントを参照してください。
 
 - この [GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) から、名前空間およびスキーマ自動生成ユーティリティのコレクションと環境をダウンロードできます。
 - 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Platform API の使用について詳しくは、[Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
@@ -37,12 +41,10 @@ Platform 開発者コンソールをセットアップす [!DNL Postman] と、�
 | 変数 | 説明 | 例 |
 | --- | --- | --- |
 | `CLIENT_SECRET` | `{ACCESS_TOKEN}` ータの生成に使用される一意の ID。 サー `{CLIENT_SECRET}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON web トークン（JWT）は、{ACCESS_TOKEN} ータの生成に使用される認証資格情報です。 サー `{JWT_TOKEN}` スの生成方法について詳しくは、[Experience PlatformAPI の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{JWT_TOKEN}` |
 | `API_KEY` | Experience PlatformAPI への呼び出しの認証に使用される一意の ID。 サー `{API_KEY}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `ACCESS_TOKEN` | Experience PlatformAPI を呼び出すために必要な認証トークン。 サー `{ACCESS_TOKEN}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | [!DNL Marketo] に関しては、この値は固定で、常に `ent_dataservices_sdk` に設定されます。 | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | `global` コンテナには、標準AdobeおよびExperience Platformパートナー提供のすべてのクラス、スキーマフィールドグループ、データタイプおよびスキーマが格納されます。 [!DNL Marketo] に関しては、この値は固定で、常に `global` に設定されます。 | `global` |
-| `PRIVATE_KEY` | API に対する [!DNL Postman] インスタンスのExperience Platformに使用される資格情報。 コンテン {PRIVATE_KEY} の取得方法については、開発者コンソールの設定および [ 開発者コンソールの設定および  [!DNL Postman]](../../../../landing/postman.md) に関するチュートリアルを参照してください。 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/Oへの統合に使用する資格情報。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System （IMS）は、Adobe サービスに対して認証を行うためのフレームワークを提供します。 [!DNL Marketo] に関しては、この値は固定で、常に `ims-na1.adobelogin.com` に設定されます。 | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 製品およびサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる法人組織。 `{ORG_ID}` ーザー情報の取得方法については、[Developer Console の設定および  [!DNL Postman]](../../../../landing/postman.md) に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -58,11 +60,11 @@ Platform 開発者コンソールをセットアップす [!DNL Postman] と、�
 
 [!DNL Postman] インターフェイスで、自動生成ユーティリティのルートフォルダーを選択し、上部のヘッダーから「**[!DNL Run]**」を選択します。
 
-![root-folder](../images/marketo/root-folder.png)
+![Postman UI の名前空間およびスキーマジェネレーターのルートフォルダー。 上部メニューバーで「実行」がハイライト表示されます。](../images/marketo/root_folder.png)
 
 [!DNL Runner] インターフェイスが表示されます。 ここから、すべてのチェックボックスが選択されていることを確認してから選択し **[!DNL Run Namespaces and Schemas Autogeneration Utility]** す。
 
-![run-generator](../images/marketo/run-generator.png)
+![ 名前空間とスキーマ コレクションでいくつかのリクエストが確認され、右側に「名前空間とスキーマを実行」ボタンがハイライト表示された、Postman UI の Runner インターフェイス ](../images/marketo/run_generator.png)
 
 リクエストが成功すると、B2B に必要な名前空間とスキーマが作成されます。
 
