@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ準備のマッピング機能
 description: このドキュメントでは、Data Prep で使用されるマッピング機能について説明します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
+source-git-commit: 830aa01828785a9ae4dea71078ee418fc510253c
 workflow-type: tm+mt
-source-wordcount: '6024'
+source-wordcount: '6028'
 ht-degree: 8%
 
 ---
@@ -63,7 +63,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ltrim | 文字列の先頭から空白を削除します。 | <ul><li>STRING: **必須** 空白を削除する文字列。</li></ul> | ltrim （STRING） | ltrim （「こんにちは」） | &quot;hello&quot; |
 | rtrim | 文字列の末尾から空白を削除します。 | <ul><li>STRING: **必須** 空白を削除する文字列。</li></ul> | rtrim （STRING） | rtrim （&quot;hello &quot;） | &quot;hello&quot; |
 | trim | 文字列の先頭と末尾から空白を削除します。 | <ul><li>STRING: **必須** 空白を削除する文字列。</li></ul> | trim （STRING） | trim （&quot; hello &quot;） | &quot;hello&quot; |
-| 次と等しい | 2 つの文字列を比較して、等しいかどうかを確認します。 この関数では大文字と小文字が区別されます。 | <ul><li>STRING1: **必須** 比較する最初の文字列。</li><li>STRING2: **必須** 比較する 2 番目の文字列。</li></ul> | STRING1.&#x200B;equals （&#x200B;STRING2） | &quot;string1&quot;..&#x200B;equals&#x200B;（&quot;STRING1&quot;） | 偽 |
+| 次と等しい | 2 つの文字列を比較して、等しいかどうかを確認します。 この関数では大文字と小文字が区別されます。 | <ul><li>STRING1: **必須** 比較する最初の文字列。</li><li>STRING2: **必須** 比較する 2 番目の文字列。</li></ul> | STRING1.&#x200B;equals （&#x200B;STRING2） | &quot;string1&quot;..&#x200B;equals&#x200B;（&quot;STRING1&quot;） | false |
 | equalsIgnoreCase | 2 つの文字列を比較して、等しいかどうかを確認します。 この関数では、大文字と小文字は区別され **せん**。 | <ul><li>STRING1: **必須** 比較する最初の文字列。</li><li>STRING2: **必須** 比較する 2 番目の文字列。</li></ul> | STRING1.&#x200B;equalsIgnoreCase&#x200B;（STRING2） | &quot;string1&quot;..&#x200B;equalsIgnoreCase&#x200B;（&quot;STRING1） | true |
 
 {style="table-layout:auto"}
@@ -142,7 +142,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | オブジェクトが空かどうかを確認します。 | <ul><li>入力：**必須** 確認しようとしているオブジェクトが空です。</li></ul> | is_empty （INPUT） | `is_empty([1, null, 2, 3])` | 偽 |
+| is_empty | オブジェクトが空かどうかを確認します。 | <ul><li>入力：**必須** 確認しようとしているオブジェクトが空です。</li></ul> | is_empty （INPUT） | `is_empty([1, null, 2, 3])` | false |
 | arrays_to_object | オブジェクトのリストを作成します。 | <ul><li>入力：**必須** キーと配列のペアのグループ。</li></ul> | arrays_to_object （INPUT） | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | 指定されたフラットなキーと値のペアに基づいてオブジェクトを作成します。 | <ul><li>入力：**必須** キーと値のペアのフラットリスト。</li></ul> | to_object （INPUT） | to_object&#x200B;（&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;） | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | 入力文字列からオブジェクトを作成します。 | <ul><li>文字列：**必須** オブジェクトを作成するために解析される文字列。</li><li>VALUE_DELIMITER: *任意* フィールドを値から区切る区切り文字です。 デフォルトの区切り文字は `:` です。</li><li>FIELD_DELIMITER: *任意* フィールド値のペアを区切る区切り文字です。 デフォルトの区切り文字は `,` です。</li></ul> | str_to_object&#x200B;（STRING, VALUE_DELIMITER, FIELD_DELIMITER） **注意**: `get()` 関数と `str_to_object()` を使用して、文字列内のキーの値を取得できます。 | <ul><li>例#1: str_to_object （&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;）</li><li>例#2: str_to_object （&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;）.get （&quot;firstName&quot;）</li></ul> | <ul><li>例#1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>例#2: 「John」</li></ul> |
@@ -178,10 +178,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | size_of | 入力サイズを返します。 | <ul><li>入力：**必須** サイズの検索しようとしているオブジェクト。</li></ul> | size_of （INPUT） | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | この関数は、入力配列全体のすべての要素を Profile の配列の末尾に追加するために使用されます。 この関数は、更新時に **のみ** 適用されます。 挿入のコンテキストで使用される場合、この関数は入力をそのまま返します。 | <ul><li>配列：**必須** プロファイルに配列を追加する配列。</li></ul> | upsert_array_append （ARRAY） | `upsert_array_append([123, 456])` | [123、456] |
 | upsert_array_replace | この関数は、配列内の要素を置き換えるために使用されます。 この関数は、更新時に **のみ** 適用されます。 挿入のコンテキストで使用される場合、この関数は入力をそのまま返します。 | <ul><li>配列：**必須** プロファイル内の配列を置き換える配列。</li></li> | upsert_array_replace （ARRAY） | `upsert_array_replace([123, 456], 1)` | [123、456] |
-| [!BADGE Beta]{type=Informative} array_to_string | 指定された区切り文字を使用して、配列内の要素の文字列表現を結合します。 配列が多次元の場合、結合する前にフラット化されます。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>SEPARATOR: **必須** 配列の要素の結合に使用する区切り文字。</li><li>配列：**必須** 結合される配列（フラット化後）。</li></ul> | array_to_string （SEPARATOR, ARRAY） | `array_to_string(";", ["Hello", "world"])` | 「こんにちは；world」 |
-| [!BADGE Beta]{type=Informative} filterArray* | 述語に基づいて指定された配列をフィルタリングします。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>配列：**必須** フィルタリングされる配列</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | filterArray （ARRAY, PREDICATE） | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5、7] |
-| [!BADGE Beta]{type=Informative} transformArray* | 述語に基づいて指定された配列を変換します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>ARRAY: **必須** 変換する配列。</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | transformArray （ARRAY, PREDICATE） | ` transformArray([5, 6, 7], x -> x + 1)` | [6、7、8] |
-| [!BADGE Beta]{type=Informative} flattenArray* | 指定された（多次元の）配列を 1 次元配列にフラット化します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>ARRAY: **必須** フラット化する配列。</li></ul> | flattenArray （ARRAY） | flattenArray （[[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]]） | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
+| [!BADGE  宛先のみ ]{type=Informative} array_to_string | 指定された区切り文字を使用して、配列内の要素の文字列表現を結合します。 配列が多次元の場合、結合する前にフラット化されます。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>SEPARATOR: **必須** 配列の要素の結合に使用する区切り文字。</li><li>配列：**必須** 結合される配列（フラット化後）。</li></ul> | array_to_string （SEPARATOR, ARRAY） | `array_to_string(";", ["Hello", "world"])` | 「こんにちは；world」 |
+| [!BADGE  宛先のみ ]{type=Informative} filterArray* | 述語に基づいて指定された配列をフィルタリングします。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>配列：**必須** フィルタリングされる配列</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | filterArray （ARRAY, PREDICATE） | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5、7] |
+| [!BADGE  宛先のみ ]{type=Informative} transformArray* | 述語に基づいて指定された配列を変換します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>ARRAY: **必須** 変換する配列。</li><li>PREDICATE: **必須** 指定された配列の各要素に適用される述語。 | transformArray （ARRAY, PREDICATE） | ` transformArray([5, 6, 7], x -> x + 1)` | [6、7、8] |
+| [!BADGE  宛先のみ ]{type=Informative} flattenArray* | 指定された（多次元の）配列を 1 次元配列にフラット化します。 **メモ**：この関数は、宛先で使用されます。 詳しくは、[ ドキュメント ](../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 | <ul><li>ARRAY: **必須** フラット化する配列。</li></ul> | flattenArray （ARRAY） | flattenArray （[[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]]） | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
 
 {style="table-layout:auto"}
 
