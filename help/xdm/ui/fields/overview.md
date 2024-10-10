@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での XDM フィールドの定義
 description: Experience Platformユーザーインターフェイスで XDM フィールドを定義する方法を説明します。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,6 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 | フィールドプロパティ | 互換性のあるタイプ | 説明 |
 | --- | --- | --- |
 | [!UICONTROL  値タイプをマッピング ] | [!UICONTROL マップ] | [!UICONTROL  マップの値のタイプ ] プロパティは、「[!UICONTROL  タイプ ]」ドロップダウンオプションから「マップの値」を選択した場合にのみ UI に表示されます。 マップには文字列タイプと整数値タイプを選択できます。<br>![ タイプおよびマップ値タイプのフィールドがハイライト表示されたスキーマエディター。](../../images/ui/fields/overview/map-type.png " タイプおよびマップ値タイプのフィールドがハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"}<br> メモ：API で作成された、文字列タイプでも整数タイプでもないマップデータタイプは、「[!UICONTROL Complex]」データタイプとして表示されます。 UI を使用して「[!UICONTROL Complex]」データタイプを作成することはできません。 |
-| [!UICONTROL  デフォルト値 ] | [!UICONTROL String]、[!UICONTROL Double]、[!UICONTROL Long]、[!UICONTROL Integer]、[!UICONTROL Short]、[!UICONTROL Byte]、[!UICONTROL Boolean] | 取り込み中に他の値が指定されなかった場合に、このフィールドに割り当てられるデフォルト値。 この値は、フィールドで選択したタイプに準拠する必要があります。<br><br> デフォルト値は時間の経過と共に変化する可能性があるので、取り込み時にデータセットに保存されません。 スキーマに設定されたデフォルト値は、データセットからデータを読み取る際に、ダウンストリームの Platform サービスおよびアプリケーションによって推論されます。 例えば、クエリサービスを使用してデータに対してクエリを実行する際、属性に NULL 値が含まれているが、スキーマレベルでデフォルトが `5` に設定されている場合、クエリサービスは NULL ではなく `5` を返す必要があります。 この動作は、現在、すべての AEP サービスで同じというわけではありません。 |
 | [!UICONTROL  パターン ] | [!UICONTROL 文字列] | 取り込み中に受け入れるために、このフィールドの値が準拠する必要がある [ 正規表現 ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)。 |
 | [!UICONTROL 形式] | [!UICONTROL 文字列] | 値が準拠する必要がある文字列の事前定義済み形式のリストから選択します。 使用可能な形式は次のとおりです。 <ul><li>[[!UICONTROL  日時 ]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL  電子メール ]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL  ホスト名 ]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL  最小長 ] | [!UICONTROL 文字列] | 取り込み中に値を受け入れるために文字列に含める必要がある最小文字数。 |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文の詳細と説明を説明します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 5%
 
 ---
@@ -577,7 +577,7 @@ SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 
 ### 失敗時のフォールバックスナップショットの解決 {#resolve-fallback-snapshot-on-failure}
 
-`resolve_fallback_snapshot_on_failure` オプションは、期限切れのスナップショット ID の問題を解決するために使用します。 スナップショットメタデータは 2 日後に有効期限が切れます。期限切れのスナップショットは、スクリプトのロジックを無効にする可能性があります。 これは、匿名ブロックを使用する場合に問題となる可能性があります。
+`resolve_fallback_snapshot_on_failure` オプションは、期限切れのスナップショット ID の問題を解決するために使用します。
 
 スナップショットを以前のスナップショット ID で上書きするには、`resolve_fallback_snapshot_on_failure` オプションを true に設定します。
 
