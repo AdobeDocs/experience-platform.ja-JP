@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 商品リスト項目のデータタイプ
 description: 製品リスト項目 XDM データタイプについて説明します。
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba6c6eb2c6b0fc1dfc4e7440fd16a85bc7b46457
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 18%
+source-wordcount: '338'
+ht-degree: 21%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 18%
 | `discountAmount` | [!UICONTROL 倍精度浮動小数点] | 商品が割引される場合、これは商品の通常価格と特別価格の差を表します。 |
 | `name` | [!UICONTROL 文字列] | この商品表示でユーザーに提示される商品の表示名。 |
 | `priceTotal` | [!UICONTROL 倍精度浮動小数点] | 商品品目の合計価格。 |
-| `product` | [!UICONTROL  文字列 ] （URI） | 製品自体をキャプチャする XDM スキーマの URI`$id`。 |
+| `product` | [!UICONTROL  文字列 ] （URI） | 製品自体の XDM 識別子。 |
 | `productAddMethod` | [!UICONTROL 文字列] | 訪問者によってリストに商品項目を追加するために使用されたメソッド。 |
 | `productImageUrl` | [!UICONTROL 文字列] | 商品のメイン画像の URL。 |
 | `quantity` | [!UICONTROL  整数 ] | 顧客が製品を必要と示した数量。 |
