@@ -3,9 +3,9 @@ title: 計算フィールドを使用して、配列を文字列としてエク�
 type: Tutorial
 description: 計算フィールドを使用して、Real-Time CDPからクラウドストレージの宛先に配列を文字列として書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## Platform の配列およびその他のオブジェクトタイプ {#arrays-strings-other-objects}
 
-Experience Platformでは、[XDM スキーマ ](/help/xdm/home.md) を使用して、様々なフィールドタイプを管理できます。 以前は、Experience Platform外の文字列など、単純なキーと値のペアのフィールドを目的の宛先に書き出すことができました。 以前に書き出し用にサポートされていたフィールドの例は、`personalEmail.address`:`johndoe@acme.org` です。
+Experience Platformでは、[XDM スキーマ ](/help/xdm/home.md) を使用して、様々なフィールドタイプを管理できます。 配列の書き出しのサポートを追加する前は、Experience Platformの文字列などの単純なキーと値のペアのフィールドを目的の宛先に書き出すことができました。 以前に書き出し用にサポートされていたフィールドの例は、`personalEmail.address`:`johndoe@acme.org` です。
 
 Experience Platformのその他のフィールドタイプには、配列フィールドが含まれます。 詳しくは、[Experience PlatformUI での配列フィールドの管理 ](/help/xdm/ui/fields/array.md) を参照してください。 以前にサポートされていたフィールド型に加えて、`array_to_string` 関数を使用して、以下の例のように配列オブジェクトを文字列に連結して書き出すことができるようになりました。
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### フラット化された配列を書き出すための `flattenArray` 関数
-
-`flattenArray` 関数を使用して、書き出された多次元配列をフラット化します。 この関数は、上記の `array_to_string` 関数と組み合わせることができます。
-
-上記の `organizations` 配列オブジェクトを続けて、`array_to_string('_', flattenArray(organizations))` のような関数を記述できます。 `array_to_string` 関数は、デフォルトで入力配列を文字列にフラット化します。
-
-結果の出力は、上記の `array_to_string` 関数の場合と同じです。
-
-
 ### フィルターされた配列を書き出す `filterArray` 関数
 
 書き出された配列の要素をフィルターするには、`filterArray` 関数を使用します。 この関数は、上記の `array_to_string` 関数と組み合わせることができます。
@@ -210,6 +201,14 @@ John,Doe, johndoe@acme.org, "isMarketing"
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### フラット化された配列を書き出すための `flattenArray` 関数
+
+`flattenArray` 関数を使用して、書き出された多次元配列をフラット化します。 この関数は、上記の `array_to_string` 関数と組み合わせることができます。
+
+上記の `organizations` 配列オブジェクトを続けて、`array_to_string('_', flattenArray(organizations))` のような関数を記述できます。 `array_to_string` 関数は、デフォルトで入力配列を文字列にフラット化します。
+
+結果の出力は、前述の `array_to_string` 関数と同じです。
 
 ### 配列を書き出す `coalesce` 関数 {#coalesce-function-export-arrays}
 
