@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシー規制の概要
 description: このドキュメントでは、Adobe Experience Cloudでサポートされている様々なプライバシー規制の概要について説明します。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
+source-git-commit: 6b0ac184d8859b770f69b4758fa1cfae006dd755
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1537'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,14 @@ Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md)
 | FDBR （フロリダ州） | [[!DNL Florida Digital Bill of Rights]](https://flsenate.gov/Session/Bill/2023/262/BillText/er/HTML) （FDBR）は、フロリダ州の住民に包括的なデータプライバシー権を提供します。 この法律により、個人は、自分の個人データにアクセスし、修正し、削除し、コピーを取得する権利が確保されます。 また、消費者の同意を得ない監視などのオンラインプラットフォームによる特定の行為を禁止し、明確なプライバシー通知やターゲット広告のための個人データの販売または処理をオプトアウトする機能など、データ慣行の透明性を必要とします。 FDBR はフロリダ州法務省に対し、これらの権利を実施し、違反に対して民事罰を科すことを認可している。 法律の下で、データ管理者は、データ主体のリクエストを受信してから 45 日以内にリクエストに対応する義務があります。 |
 | GDPR （欧州連合） | [[!DNL General Data Protection Regulation (GDPR)]](https://gdpr-info.eu) は、アクセス権や忘れられる権利など、欧州経済領域（EEA）のメンバーに対するいくつかの新しいデータプライバシー権を導入しました。 これらの権利は、お客様のビジネスによって個人データが収集された EEA に住むすべての人が、いつでもデータへのアクセスまたは削除をリクエストできることを意味します。<br><br> 英国（Brexit 後）には独自の UK-GDPR 規制があり、EEA 版と同じ権利を国民に提供しています。 |
 | HIPAA （米国） | [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) は、医療の効率を向上させ、医療保険の携行性を向上させ、患者と医療保険メンバーのプライバシーを保護するために作成された米国連邦法です。 HIPAA の下では、個人は自分の情報にアクセスして修正し、医療記録や医療情報のコピーを取得する権利を有する。 対象となるエンティティおよび対象となるエンティティのビジネスアソシエートは、HIPAA 規制に従う必要があります。 |
+| ICDPA （アイオワ） | [[!DNL Iowa Consumer Data Protection Act]](https://www.legis.iowa.gov/legislation/BillBook?ga=90&amp;ba=SF%20262) は、アイオワ州の住民に個人データへのアクセス、削除、販売のオプトアウトの権利を提供している。 これは、10 万人以上のアイオワ州の住民のデータを処理する企業や、個人データの販売から収益の 50% 以上を生み出す企業に適用されます。 ICDPA は個人情報の消費者管理を重視していますが、非営利団体や教育機関などの特定の組織を除外しています。 また、この法律は、罰則が適用される前に違反を修正するための 90 日間の硬化期間を提供します。 |
 | LGPD （ブラジル） | この [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) は、ブラジルにおけるすべての個人または自然人の個人データの取り扱いを規制することを目的としています。 LGPD はブラジル国民に、自身の個人データにアクセスして削除する権利、自身の個人データが（誰に）販売または公開されているかどうかを知る権利、および自身のデータを第三者に販売することをオプトアウトする権利を与える。 |
 | MHMDA （ワシントン州） | [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) は、消費者の健康データに関するプライバシー権を強化します。 健康データの開示、消費者の同意、削除権を義務付け、許可なく健康データを販売することを禁止しています。 さらに同法は、医療施設の周辺でジオフェンスを使用することを違法にしている。 |
+| MCDPA （モンタナ） | [[!DNL The Montana Consumer Data Privacy Act]](https://legiscan.com/MT/text/SB384/id/2791095) は、事業者が収集、共有、販売する個人データの内容と、その使用目的を知る権利を住民に与えます。 また、収集したデータを修正、削除、またはコピーを取得する機能も付与されます。 この法律は、50,000 を超える Montana の消費者のデータを処理する企業に適用されます。 同法は、生体情報や遺伝情報を含む機密性の高い個人データの保護を重視している。 |
+| NDPA （ネブラスカ州） | [[!DNL Nebraska Data Protection Act]](https://nebraskalegislature.gov/FloorDocs/108/PDF/Slip/LB1074.pdf) は、ネブラスカ人に対し、自身の個人データに対する権利を提供しています。これには、アクセス、訂正、削除、販売のオプトアウトなどが含まれます。 この法律は、データ処理と個人情報の販売からの収益に関する特定の閾値を満たす企業に適用されます。 また、企業に対しては、適切なデータセキュリティ対策を実施すること、およびコンプライアンスに関する問題を解決するために罰則が科される 30 日間のキュア期間を義務付けています。 |
 | ニュージーランド [!DNL Privacy Act] | [ ニュージーランド  [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) は、ニュージーランドの市民や団体の個人情報の収集、使用、開示、保管、アクセスの方法を管理しています。 2020 年に同法の最新版は、これらのプライバシー法に大幅な更新を加えました。 この更新には、新たな犯罪、罰金の増加、データ侵害に対する通知の義務化、個人情報保護委員会の権限強化などが含まれている。 |
+| NHDPA （ニューハンプシャー州） | [[!DNL New Hampshire Data Privacy Act]](https://gencourt.state.nh.us/bill_status/billinfo.aspx?id=865&amp;inflect=1) は、データのアクセス、削除、ポータビリティに関する消費者権を確立することにより、ニューハンプシャー州の住民の個人情報を保護します。 組織はデータ収集と共有の慣行を開示する必要があり、消費者はデータ販売をオプトアウトできます。 この法律は、特定のデータ処理しきい値を満たすビジネスに適用されます。 |
+| NJDPA （ニュージャージー州） | [[!DNL New Jersey Data Protection Act]](https://pub.njleg.state.nj.us/Bills/2022/S0500/332_R6.PDF) は、ニュージャージー州の居住者に情報へのアクセス、訂正、および削除の権利を提供することにより、自身の個人データを管理することを許可します。 データ販売とターゲット広告のオプトアウトメカニズムが含まれます。 この法律は、大量の消費者データを処理し、データ使用の透明性を義務付ける企業を対象としています。 |
 | OCPA （オレゴン） | [[!DNL Oregon Consumer Privacy Act]](https://olis.oregonlegislature.gov/liz/2023R1/Downloads/PublicTestimonyDocument/59856#:~:text=The%20Act%20requires%20controllers%20to,data%3B%20and%20%E2%80%A2%20Contact%20information.) （OCPA）は、オレゴンの居住者に個人データの基本的権利を提供し、そのようなデータを処理する企業に義務を課します。 消費者は、自分のデータのコピーを知り、修正し、削除し、取得する権利を持ち、ターゲット広告や販売のためのデータ処理をオプトアウトします。 同法は、機密データの保護強化、特定の目的を超えたデータ処理に対する同意、データ管理者による包括的なプライバシー通知の提供を義務付けています。 |
 | PDPA （タイ） | この [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) は、タイのデータ所有者を個人データの違法な収集、使用、開示から保護するために導入されました。 欧州連合（EU）の GDPR に触発されたこの規制は、タイ国民に対し、保存されている個人データへのアクセスまたは削除をリクエストする権利を付与します。 |
 | TDPSA （テキサス州） | [[!DNL Texas Data Privacy and Security Act]](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=88R&amp;Bill=HB4) （TDPSA）は、テキサス州における消費者の個人データの収集、使用、処理、および処理を規制します。 2024 年 7 月 1 日より、データにアクセス、修正、削除、コピーの取得、ターゲット広告およびデータ販売のオプトアウトを行う権限を居住者に付与します。 この法律は、テキサス州で事業を行う事業体、またはテキサス州の居住者が消費する製品/サービスを製造する事業体に適用されます。中小企業やその他の特定の組織を除きます。 違反行為には民事罰が科されることがある。 |
@@ -37,10 +42,6 @@ Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md)
 | VCDPA （バージニア） | [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) は、個人データへのアクセス、削除、修正の権利を含む、新しいデータプライバシー権をバージニア州の居住者（「コンシューマー」）に提供します。 また、消費者は、個人データの販売のオプトアウト、個人データに基づくプロファイリングのオプトアウト、および個人広告目的の処理を行う権利を有します。 |
 
 {style="table-layout:auto"}
-
-<!-- Not yet released:
- | PDPD (Vietnam) | The [[!DNL Personal Data Protection Decree (PDPD)]]() .... | 
- -->
 
 ## 次の手順
 
