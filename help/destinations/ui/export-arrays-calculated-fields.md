@@ -3,9 +3,9 @@ title: 計算フィールドを使用して、配列を文字列としてエク�
 type: Tutorial
 description: 計算フィールドを使用して、Real-Time CDPからクラウドストレージの宛先に配列を文字列として書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
+source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,16 @@ organizations = [{
 [ 接続 ](/help/destinations/ui/connect-destination.md) を目的のクラウドストレージの宛先に対して行い、[ クラウドストレージの宛先のアクティベーション手順 ](/help/destinations/ui/activate-batch-profile-destinations.md) の手順を実行して、[ マッピング ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) の手順に進みます。
 
 ## 計算フィールドのエクスポート方法 {#how-to-export-calculated-fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_control"
+>title="階層出力スキーマを有効にする"
+>abstract="配列などの階層構造を書き出す場合は、オンにします。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_calculated_field_disabled"
+>title="計算フィールドの追加が無効"
+>abstract="宛先への接続時にフラット構造をエクスポートするよう選択したので、このコントロールは無効になっています。"
 
 クラウドストレージ宛先のアクティベーションワークフローのマッピング手順で、「**[!UICONTROL 計算フィールドを追加]**」を選択します。
 
