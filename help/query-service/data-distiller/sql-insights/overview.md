@@ -2,7 +2,7 @@
 title: SQL インサイト
 description: Data Distillerを使用して SQL インサイトダッシュボードを作成するためのユースケース、基本的な機能、必要な手順について説明します。 Data Distillerの SQL Insights 機能により、プロファイル、オーディエンス、キャンペーン、ジャーニー、使用権限、同意など、様々なディメンションにわたって、透明性を高め、運用に関するインサイトを得る方法を説明します。
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 5%
@@ -13,13 +13,13 @@ ht-degree: 5%
 
 Data Distillerの SQL Insights を使用すると、より深いインサイトを引き出し、戦略を最適化し、分析を特定のビジネスニーズに合わせて適応させるための、カスタムのレポートデータモデルを作成できます。 SQL インサイト機能を使用すると、プロファイル、オーディエンス、キャンペーン、ジャーニー、使用権限、同意など、様々なディメンションにわたって、Adobe Experience Platform データから透明性を高め、運用に関するインサイトを得ることができます。 この機能は、特定のビジネスニーズに合わせて組織のレポートデータモデルをカスタマイズする、汎用性の高いアダプティブソリューションを提供します。
 
-SQL Insights を [ 視覚化 ](../../../dashboards/data-distiller/sql-insights/overview.md) するには、[query pro モード ](../../../dashboards/data-distiller/query-pro-mode/overview.md) を使用して、カスタム SQL クエリで複雑な分析を実行し、データを解釈しやすいグラフに変換します。 Query pro モードを使用して、ダッシュボードにカスタムのインサイトとビジュアライゼーションを作成し、インサイトを CSV ファイルとしてダウンロードすることで、技術オーディエンスと非技術オーディエンスの両方に対応します。
+SQL Insights を [ 視覚化 ](../../../dashboards/sql-insights-query-pro-mode/overview.md) するには、[query pro モード ](../../../dashboards/sql-insights-query-pro-mode/overview.md) を使用して、カスタム SQL クエリで複雑な分析を実行し、データを解釈しやすいグラフに変換します。 Query pro モードを使用して、ダッシュボードにカスタムのインサイトとビジュアライゼーションを作成し、インサイトを CSV ファイルとしてダウンロードすることで、技術オーディエンスと非技術オーディエンスの両方に対応します。
 
 このドキュメントでは、Data Distillerを使用して SQL Insights ダッシュボードを作成するためのユースケース、基本的な機能および必要な手順について説明します。
 
 ## 前提条件
 
-このチュートリアルでは、ユーザー定義のダッシュボードを使用して、Platform UI 内のカスタムデータモデルからのデータを視覚化します。この機能について詳しくは、[ ユーザー定義ダッシュボードのドキュメント ](../../../dashboards/user-defined-dashboards.md) を参照してください。
+このチュートリアルでは、ユーザー定義のダッシュボードを使用して、Platform UI 内のカスタムデータモデルからのデータを視覚化します。この機能について詳しくは、[ ユーザー定義ダッシュボードのドキュメント ](../../../dashboards/standard-dashboards.md) を参照してください。
 
 ## はじめに
 
@@ -72,7 +72,7 @@ Data Distiller内で SQL Insights ダッシュボードを作成するには、�
 1. **アドホッククエリの調査：** まず、アドホッククエリを実行して、データレイク上の生データを調 `SELECT` ます。 これにより、その場で探索的なデータ分析を行い、クエリの結果がデータレイクに保存されないデータを検証できます。
 1. **バッチクエリ稼働率：** バッチクエリを使用して [ スケジュールされたジョブを作成 ](../../api/scheduled-queries.md#create-a-new-scheduled-query) し、インサイトの集計テーブルを生成して、データ処理に対する体系的かつ自動アプローチを確保します。 バッチクエリは、`INSERT TABLE AS SELECT` および `CREATE TABLE AS SELECT` クエリを実行して、データの消去、シェイプ、操作、エンリッチメントを行います。 これらのクエリの結果は、データレイクに保存されます。
 1. **集計インサイトの読み込み：** 生成された集計インサイトを高速ストアに読み込み、SQL を使用してクエリをテストし、データ取得の正確性と効率を確保します。 高速ストアに対してステートレスにクエリを実行する [ 方法については ](../../api/accelerated-queries.md) のドキュメントを参照してください。
-1. **アクセスと統合：** Adobe Experience Platform[ ユーザー定義ダッシュボード ](../../../dashboards/user-defined-dashboards.md) またはその他の推奨されるBusiness Intelligence（BI）ツールと統合することで、高速化ストアに保存されたインサイトにシームレスにアクセスします。 これらのサードパーティクライアントとの統合により、ユーザーは直感的でまとまりのあるエクスペリエンスを容易に得ることができます。
+1. **アクセスと統合：** Adobe Experience Platform[ ユーザー定義ダッシュボード ](../../../dashboards/standard-dashboards.md) またはその他の推奨されるBusiness Intelligence（BI）ツールと統合することで、高速化ストアに保存されたインサイトにシームレスにアクセスします。 これらのサードパーティクライアントとの統合により、ユーザーは直感的でまとまりのあるエクスペリエンスを容易に得ることができます。
 
 ![Data Distillerでの SQL インサイトへの 4 つの手順を示したインフォグラフィック ](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

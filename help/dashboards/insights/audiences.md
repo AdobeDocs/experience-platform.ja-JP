@@ -2,7 +2,7 @@
 title: オーディエンスインサイト
 description: オーディエンスインサイトを強化する SQL を確認し、これらのクエリを使用してカスタムインサイトを生成し、Adobe Experience Platformのオーディエンスデータをさらに詳しく調べます。
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 ](../view-sql.md) を参照してください。
 
-次のインサイトはすべて、[ オーディエンスダッシュボード ](../guides/audiences.md) またはカスタム [ ユーザー定義ダッシュボード ](../user-defined-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../user-defined-dashboards.md#create-widget) を参照してください。
+次のインサイトはすべて、[ オーディエンスダッシュボード ](../guides/audiences.md) またはカスタム [ ユーザー定義ダッシュボード ](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../standard-dashboards.md#create-widget) を参照してください。
 
 次のインサイトはすべて、[ オーディエンスダッシュボード ](../guides/audiences.md) またはカスタムダッシュボードの一部として使用できます。
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービスの概要
 description: Experience Platform内でのクエリサービスの役割について説明します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 20%
@@ -54,7 +54,7 @@ Adobe Experience Platform Segmentation Service を使用して、顧客を類似
 
 ## カスタムダッシュボードを使用したインサイトの生成 {#custom-dashboards}
 
-Adobe Experience Platform では、行動データ、CRM データ、POS データなどのすべての保存済みデータセットの取得、保存、構造化および取り込みをおこなうことができます。[!DNL Experience Platform's Query Service] を使用すると、これらのデータセットに対してクエリを実行して、ビジネスに関する特定の質問に回答し、重要なインサイトの生成を開始できます。カスタムダッシュボードを作成および管理する方法を説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、[ ユーザー定義のダッシュボード ](../dashboards/user-defined-dashboards.md) で主要指標を視覚化できます。 Real-Time CDP インサイトデータモデルで SQL クエリを使用することで、マーケティングや KPI の使用例に合わせて [ 独自のReal-time Customer Data Platform レポートをカスタマイズ ](../dashboards/data-models/cdp-insights-data-model-b2c.md) することもできます。
+Adobe Experience Platform では、行動データ、CRM データ、POS データなどのすべての保存済みデータセットの取得、保存、構造化および取り込みをおこなうことができます。[!DNL Experience Platform's Query Service] を使用すると、これらのデータセットに対してクエリを実行して、ビジネスに関する特定の質問に回答し、重要なインサイトの生成を開始できます。カスタムダッシュボードを作成および管理する方法を説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、[ ユーザー定義のダッシュボード ](../dashboards/standard-dashboards.md) で主要指標を視覚化できます。 Real-Time CDP インサイトデータモデルで SQL クエリを使用することで、マーケティングや KPI の使用例に合わせて [ 独自のReal-time Customer Data Platform レポートをカスタマイズ ](../dashboards/data-models/cdp-insights-data-model-b2c.md) することもできます。
 
 ## 次の手順とその他のリソース
 

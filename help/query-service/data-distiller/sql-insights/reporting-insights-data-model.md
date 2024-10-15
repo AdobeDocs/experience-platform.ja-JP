@@ -2,7 +2,7 @@
 title: クエリ高速化ストアレポートインサイトガイド
 description: クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する方法について説明します。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 82%
@@ -19,7 +19,7 @@ Adobe Experience PlatformのReal-Time CDP データモデルは、プロファ�
 
 ## 前提条件
 
-このチュートリアルでは、ユーザー定義のダッシュボードを使用して、Platform UI 内のカスタムデータモデルからのデータを視覚化します。この機能について詳しくは、[ユーザー定義ダッシュボードのドキュメント](../../../dashboards/user-defined-dashboards.md)を参照してください。
+このチュートリアルでは、ユーザー定義のダッシュボードを使用して、Platform UI 内のカスタムデータモデルからのデータを視覚化します。この機能について詳しくは、[ユーザー定義ダッシュボードのドキュメント](../../../dashboards/standard-dashboards.md)を参照してください。
 
 ## はじめに
 
@@ -228,4 +228,4 @@ LIMIT  5000
 
 ![ 新しいレポートインサイトデータモデルから作成された宛先およびオーディエンスウィジェット別の一致数。](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-カスタムデータモデルは、ユーザー定義のダッシュボードワークスペースで使用可能なデータモデルのリストに表示されます。カスタムデータモデルの活用方法について詳しくは、[ユーザー定義ダッシュボードガイド](../../../dashboards/user-defined-dashboards.md)を参照してください。
+カスタムデータモデルは、ユーザー定義のダッシュボードワークスペースで使用可能なデータモデルのリストに表示されます。カスタムデータモデルの活用方法について詳しくは、[ユーザー定義ダッシュボードガイド](../../../dashboards/standard-dashboards.md)を参照してください。

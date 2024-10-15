@@ -4,7 +4,7 @@ description: Real-time Customer Data Platform Insights データモデル（B2B 
 badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # Real-time Customer Data Platform Insights データモデル B2B エディション
 
-B2B Edition のReal-time Customer Data Platform Insights データモデルは、[ アカウントプロファイル ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) のインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、B2B マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 これらのインサイトは、ダッシュボードのカスタムウィジェットとして使用できます。
+B2B editionのReal-time Customer Data Platform Insights データモデルは、[ アカウントプロファイル ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) のインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、B2B マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 これらのインサイトは、ダッシュボードのカスタムウィジェットとして使用できます。
 
 >[!AVAILABILITY]
 >
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## 前提条件
 
-このガイドでは、カスタムダッシュボードに関する十分な知識が必要です。 このガイドに進む前に、[ カスタムダッシュボードの作成方法 ](../user-defined-dashboards.md) に関するドキュメントを参照してください。
+このガイドでは、カスタムダッシュボードに関する十分な知識が必要です。 このガイドに進む前に、[ カスタムダッシュボードの作成方法 ](../standard-dashboards.md) に関するドキュメントを参照してください。
 
 ## Real-Time CDP B2B インサイトレポートとユースケース {#B2B-insight-reports-and-use-cases}
 

@@ -3,7 +3,7 @@ title: 高速クエリエンドポイント
 description: クエリ高速化ストアにステートレスでアクセスし、集計データに基づいて結果をすばやく返す方法を説明します。このドキュメントでは、クエリサービス高速クエリエンドポイントに対する HTTP リクエストと応答のサンプルを示します。
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 97%
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 # 高速クエリエンドポイント
 
-Data Distiller SKU の一部である [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) では、高速ストアに対してステートレスにクエリを実行できます。返される結果は、集計データに基づいています。結果の待ち時間が短縮され、情報をよりインタラクティブに交換できるようになります。また、高速クエリ API は[ユーザー定義ダッシュボード](../../dashboards/user-defined-dashboards.md)の強化にも使われます。
+Data Distiller SKU の一部である [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) では、高速ストアに対してステートレスにクエリを実行できます。返される結果は、集計データに基づいています。結果の待ち時間が短縮され、情報をよりインタラクティブに交換できるようになります。また、高速クエリ API は[ユーザー定義ダッシュボード](../../dashboards/standard-dashboards.md)の強化にも使われます。
 
 このガイドを進める前に、Query Service API を正しく使用するために[Query Service API ガイド](./getting-started.md)を読み、内容を理解していることを確認してください。
 

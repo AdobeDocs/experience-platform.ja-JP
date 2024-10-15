@@ -2,7 +2,7 @@
 title: 宛先インサイト
 description: 宛先のインサイトを強化する SQL を確認し、これらのクエリを使用してカスタムインサイトを生成し、Adobe Experience Platformからのデータのアクティブ化をさらに詳しく調べます。
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 PLatform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL ドキュメントの表示 ](../view-sql.md) を参照してください。
 
-次のインサイトはすべて、[ 宛先ダッシュボード ](../guides/destinations.md) またはカスタム [ ユーザー定義ダッシュボード ](../user-defined-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../user-defined-dashboards.md#create-widget) を参照してください。
+次のインサイトはすべて、[ 宛先ダッシュボード ](../guides/destinations.md) またはカスタム [ ユーザー定義ダッシュボード ](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../standard-dashboards.md#create-widget) を参照してください。
 
 ## アクティブ化されたオーディエンス {#activated-audiences}
 

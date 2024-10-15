@@ -5,9 +5,9 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
 role: Developer,User
-source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '128'
 ht-degree: 63%
 
 ---
@@ -18,21 +18,18 @@ ht-degree: 63%
 * [ダッシュボードの概要](home.md)
 * [ダッシュボードへのアクセス権限](permissions.md)
 * [ダッシュボードインベントリ](inventory.md)
-* [ダッシュボード](user-defined-dashboards.md)
+* [標準ダッシュボード](standard-dashboards.md)
 * [ダッシュボードを PDF にダウンロード](download.md)
-* Data Distiller {#data-distiller}
-   * 拡張アプリレポートスイートに関する SQL インサイト {#sql-insights}
-      * [概要](data-distiller/sql-insights/overview.md)
-   * Query pro mode {#query-pro-mode}
-      * [概要](data-distiller/query-pro-mode/overview.md)
-      * フィルター {#filters}
-         * [日付フィルター](data-distiller/query-pro-mode/filters/date-filter.md)
-         * [ グローバルフィルター ](data-distiller/query-pro-mode/filters/global-filter.md)
-      * [ドリルスルー](data-distiller/query-pro-mode/drill-through.md)
-      * [さらに表示](data-distiller/query-pro-mode/view-more.md)
-      * [SQL を表示](data-distiller/query-pro-mode/view-sql.md)
-      * [CSV としてダウンロード](data-distiller/query-pro-mode/download-csv.md)
-      * [PDFとしてエクスポート](data-distiller/query-pro-mode/export-pdf.md)
+* SQL インサイト：クエリのプロ モード {#sql-insights-query-pro-mode}
+   * [概要](sql-insights-query-pro-mode/overview.md)
+   * フィルター {#filters}
+      * [日付フィルター](sql-insights-query-pro-mode/filters/date-filter.md)
+      * [ グローバルフィルター ](sql-insights-query-pro-mode/filters/global-filter.md)
+   * [ドリルスルー](sql-insights-query-pro-mode/drill-through.md)
+   * [さらに表示](sql-insights-query-pro-mode/view-more.md)
+   * [SQL を表示](sql-insights-query-pro-mode/view-sql.md)
+   * [CSV としてダウンロード](sql-insights-query-pro-mode/download-csv.md)
+   * [PDFとしてエクスポート](sql-insights-query-pro-mode/export-pdf.md)
 * 使用可能なダッシュボード {#guides}
    * [プロファイル](guides/profiles.md)
    * [アカウントプロファイル](guides/account-profiles.md)

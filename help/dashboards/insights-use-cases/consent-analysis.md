@@ -2,7 +2,7 @@
 title: 同意分析とトラッキング
 description: 同意分析ダッシュボードを作成して、ユーザーの同意の経時的なトレンドを追跡する方法を説明します。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -112,13 +112,13 @@ Adobeは、プロファイル、オーディエンス、宛先の各ダッシュ
 
 ユーザー定義のダッシュボードを使用して独自のウィジェットを作成することもできます。 独自のウィジェットを作成すると、ウィジェットのタイプを完全に制御できるほか、Adobe Real-Time CDP内で柔軟にフィルターなどを追加できます。
 
-例えば、同じグラフで複数の同意オーディエンスのトレンドを分析し、各同意環境設定の変化を経時的に確認できるようにする場合などです。 このタイプのビジュアライゼーションは、ユーザー定義のダッシュボードを最小限の手順と 1 回設定で使用できます。 まず、左側のナビゲーションで **[!UICONTROL ダッシュボード]** を選択します。 [!UICONTROL  ダッシュボード ] ワークスペースが表示されます。 次に、「**[!UICONTROL ダッシュボードを作成]**」を選択します。 [ ダッシュボードとカスタムウィジェットを作成 ](../user-defined-dashboards.md) する方法の完全な手順については、ユーザー定義ダッシュボードガイドを参照してください。
+例えば、同じグラフで複数の同意オーディエンスのトレンドを分析し、各同意環境設定の変化を経時的に確認できるようにする場合などです。 このタイプのビジュアライゼーションは、ユーザー定義のダッシュボードを最小限の手順と 1 回設定で使用できます。 まず、左側のナビゲーションで **[!UICONTROL ダッシュボード]** を選択します。 [!UICONTROL  ダッシュボード ] ワークスペースが表示されます。 次に、「**[!UICONTROL ダッシュボードを作成]**」を選択します。 [ ダッシュボードとカスタムウィジェットを作成 ](../standard-dashboards.md) する方法の完全な手順については、ユーザー定義ダッシュボードガイドを参照してください。
 
-![ ダッシュボードと作成ダッシュボードがハイライト表示されたダッシュボードワークスペース。](../images/user-defined-dashboards/create-dashboard.png)
+![ ダッシュボードと作成ダッシュボードがハイライト表示されたダッシュボードワークスペース。](../images/standard-dashboards/create-dashboard.png)
 
-ウィジェットコンポーザーで [ データモデルを選択 ](../user-defined-dashboards.md#select-data-model) したら、「`CDPInsights`」に続いて **[!UICONTROL 次へ]** を選択します。 [!UICONTROL  テーブルを選択 ] ダイアログが表示されます。
+ウィジェットコンポーザーで [ データモデルを選択 ](../standard-dashboards.md#select-data-model) したら、「`CDPInsights`」に続いて **[!UICONTROL 次へ]** を選択します。 [!UICONTROL  テーブルを選択 ] ダイアログが表示されます。
 
-![CDPInsights モデルがハイライト表示されたデータモデルを選択ダイアログ ](../images/user-defined-dashboards/select-data-model-dialog.png)
+![CDPInsights モデルがハイライト表示されたデータモデルを選択ダイアログ ](../images/standard-dashboards/select-data-model-dialog.png)
 
 次の表示では、使用可能なテーブルのリストが左パネルに表示されます。 「`adwh_fact_profile_by_segment_and_namespace_trendlines`」を選択します。
 
@@ -126,16 +126,16 @@ Adobeは、プロファイル、オーディエンス、宛先の各ダッシュ
 
 選択したテーブルのデータがウィジェットコンポーザーに入力されたら、次の手順を実行します。
 
-- [`[!UICONTROL date]` の [!UICONTROL  属性 ]](../user-defined-dashboards.md#add-filter-attributes) を検索し、「+」アイコンを使用して、ドロップダウンメニューから `[!UICONTROL date]` 属性を X 軸に追加します。
-  ![ 追加アイコンとドロップダウンメニューがハイライト表示されているウィジェットコンポーザー。](../images/user-defined-dashboards/attributes-dropdown.png)
+- [`[!UICONTROL date]` の [!UICONTROL  属性 ]](../standard-dashboards.md#add-filter-attributes) を検索し、「+」アイコンを使用して、ドロップダウンメニューから `[!UICONTROL date]` 属性を X 軸に追加します。
+  ![ 追加アイコンとドロップダウンメニューがハイライト表示されているウィジェットコンポーザー。](../images/standard-dashboards/attributes-dropdown.png)
 - `[!UICONTROL count_of_profiles]` の [!UICONTROL  属性 ] を検索し、「+」アイコンを使用して、ドロップダウンメニューから `[!UICONTROL count_of_profiles]` 属性を Y 軸に追加します。
 - 「[!UICONTROL Y 軸 ]」フィールドで「`...`」（省略記号）アイコンを選択し、ドロップダウンメニューから [!UICONTROL SUM] 集計関数を選択します。
   ![ データモデル、テーブル、Y 軸のドロップダウンメニュー、SUM 機能がハイライト表示されたウィジェットコンポーザーの同意トレンドウィジェット。](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - [!UICONTROL  マーク ] ドロップダウンメニューを選択し、グラフのタイプを [!UICONTROL  折れ線グラフ ] に変更します。
 - `[!UICONTROL segment_name]` の [!UICONTROL  属性 ] を検索し、「+」アイコンを使用して、ドロップダウンメニューから `segment_name` を [!UICONTROL  フィルター ] として追加します。 [!UICONTROL  フィルター：Segment_name] ダイアログが表示されます。 同意に関連する、以前に作成したオーディエンスを選択します。 この例では、「**[!UICONTROL ユーザーが呼び出しに同意した]**」、「**[!UICONTROL ユーザーが SMS に同意した]**」、「**[!UICONTROL ユーザーがメールに同意した]** **[!UICONTROL 」を選択した後、「適用]** を選択します。
 - `[!UICONTROL segment_name]` の [!UICONTROL  属性 ] を検索し、「+」アイコンを選択して、ドロップダウンメニューから `segment_name` を [!UICONTROL  カラー ] として追加します。
-- [ プロパティ [!UICONTROL  パネル ] を開き ](../user-defined-dashboards.md#widget-properties) 適切な [!UICONTROL  ウィジェットタイトル ] と [!UICONTROL  軸ラベル ] を入力します。
-  ![ プロパティアイコンとウィジェットタイトルがハイライト表示されたウィジェットコンポーザー。](../images/user-defined-dashboards/properties-panel.png)
+- [ プロパティ [!UICONTROL  パネル ] を開き ](../standard-dashboards.md#widget-properties) 適切な [!UICONTROL  ウィジェットタイトル ] と [!UICONTROL  軸ラベル ] を入力します。
+  ![ プロパティアイコンとウィジェットタイトルがハイライト表示されたウィジェットコンポーザー。](../images/standard-dashboards/properties-panel.png)
 - **[!UICONTROL 保存して閉じる]** を選択して、設定を確定します。
 
 >[!TIP]
