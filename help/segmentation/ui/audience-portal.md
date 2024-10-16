@@ -2,9 +2,9 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4320'
 ht-degree: 57%
 
 ---
@@ -286,6 +286,10 @@ Platform で生成されたオーディエンスおよびコンポジション�
 ### 取り込みの詳細 {#ingestion-details}
 
 接触チャネルが **[!UICONTROL カスタムアップロード]** のオーディエンスの場合、**[!UICONTROL 取り込みの詳細]** セクションには、プロファイル合計と、外部で生成されたオーディエンスが取り込まれたデータセットの詳細の両方が表示されます。
+
+>[!NOTE]
+>
+>書き出しジョブの後、オーディエンスのプロファイル数が完全に更新されるまで最大 30 分かかる場合があります。
 
 ![ オーディエンスの詳細ページの取り込みの詳細セクションが表示されます。](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
