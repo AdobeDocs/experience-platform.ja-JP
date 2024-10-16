@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema Registry API の概要
 description: このドキュメントでは、スキーマレジストリ API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1361'
 ht-degree: 42%
 
 ---
@@ -254,6 +254,7 @@ URI をより REST に適したものにするために、スキーマでは、`
 * フィールドオブジェクトの名前には、英数字、ダッシュ、アンダースコアの各文字を使用できますが、先頭にアンダースコアを配置することは&#x200B;**できません**。
    * **正しい：**`fieldName`、`field_name2`、`Field-Name`、`field-name_3`
    * **誤り：**`_fieldName`
+* フィールド名では大文字と小文字が区別されず、スキーマの同じレベルで異なる名前を持つ必要があります。
 * フィールドオブジェクトの名前には、キャメルケースを使用することをお勧めします。例：`fieldName`
 * フィールドには `title` が必要です。これは、単語の先頭のみ大文字で記述します。例：`Field Name`
 * フィールドには `type` が必要です。
