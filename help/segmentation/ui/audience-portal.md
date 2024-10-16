@@ -2,9 +2,9 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4250'
+source-wordcount: '4298'
 ht-degree: 57%
 
 ---
@@ -209,6 +209,11 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 ![使用可能なフィルターが表示され、オーディエンスを参照ページでハイライトされます。](../images/ui/audience-portal/filter-audiences.png)
 
 #### 一括アクション {#bulk-actions}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="柔軟なオーディエンス評価制限"
+>abstract="1 回の柔軟なオーディエンス評価実行で最大 20 個のオーディエンスを評価できます。<br/><br/> さらに、評価ジョブはできるだけ早く実行されますが、別のオンデマンドまたはバッチ評価と同時にオンデマンド評価が実行される <b> できない </b> ので、システムの遅延が発生する可能性があります。"
 
 さらに、最大 25 種類のオーディエンスを選択し、これらのオーディエンスに対して様々なアクションを実行できます。 これらのアクションには、[ フォルダーへの移動 ](#folders)、[ タグの編集または適用 ](#tags)、[ アクセスラベルの適用 ](../../access-control/abac/ui/labels.md)、[ 削除 ](#browse) が含まれます。
 
