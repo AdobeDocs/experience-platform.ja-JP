@@ -2,7 +2,7 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 2%
@@ -185,4 +185,4 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 
 ### Adobe Target
 
-有効化できるのは、Adobe Targetへのバッチセグメント化とストリーミングセグメント化のみです。
+Adobe Targetを使用すると、共有デバイスのシナリオで予期しないユーザーターゲティングが発生する場合があります。
