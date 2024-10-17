@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 指標 API エンドポイント
 description: Observability Insights API を使用してExperience Platformのオブザーバビリティ指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1278'
 ht-degree: 25%
 
 ---
@@ -56,8 +56,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -79,12 +78,11 @@ curl -X POST \
 | --- | --- |
 | `start` | 指標データを取得する最も古い日時。 |
 | `end` | 指標データを取得する最新の日時。 |
-| `granularity` | 指標データを除算する時間間隔を示すオプションのフィールド。 例えば、値が `DAY` の場合は、`start` 日から `end` 日までの各日の指標が返されますが、値が `MONTH` の場合は、指標の結果が月でグループ化されます。 このフィールドを使用する場合は、対応する `downsample` プロパティも指定して、データのグループ化基準となる集計関数を示す必要があります。 |
+| `granularity` | 指標データを除算する時間間隔を示すオプションのフィールド。 例えば、値が `DAY` の場合は、`start` 日から `end` 日までの各日の指標が返されますが、値が `MONTH` の場合は、指標の結果が月でグループ化されます。 |
 | `metrics` | 取得する指標ごとに 1 つ存在するオブジェクトの配列。 |
 | `name` | Observability Insights で認識される指標の名前。 許可された指標名の完全なリストについては、[ 付録 ](#available-metrics) を参照してください。 |
 | `filters` | 特定のデータセットで指標をフィルタリングできるオプションのフィールド。 フィールドはオブジェクトの配列（フィルターごとに 1 つ）で、各オブジェクトには次のプロパティが含まれます。 <ul><li>`name`：指標をフィルタリングするエンティティのタイプ。 現在は、`dataSets` のみがサポートされています。</li><li>`value`: 1 つ以上のデータセットの ID。 複数のデータセット ID を 1 つの文字列として指定し、各 ID を縦棒（`\|`）で区切ることができます。</li><li>`groupBy`: true に設定した場合、対応する `value` が、指標の結果を個別に返す必要がある複数のデータセットを表すことを示します。 false に設定した場合、これらのデータセットの指標の結果はグループ化されます。</li></ul> |
-| `aggregator` | 複数時系列レコードを 1 つの結果にグループ化するために使用する集計関数を指定します。 使用可能なアグリゲータについて詳しくは、[OpenTSDB ドキュメント ](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators) を参照してください。 |
-| `downsample` | フィールドを間隔（または「バケット」）に並べ替えることで、指標データのサンプリングレートを減らす集計関数を指定できるオプションのフィールドです。 ダウンサンプリングの間隔は、`granularity` プロパティによって決まります。 ダウンサンプリングについて詳しくは、[OpenTSDB ドキュメント ](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators) を参照してください。 |
+| `aggregator` | 複数時系列レコードを 1 つの結果にグループ化するために使用する集計関数を指定します。 現在サポートされているアグリゲータは、指標の定義に応じて、最小、最大、合計、および平均です。 |
 
 {style="table-layout:auto"}
 
@@ -221,8 +219,7 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | 1 つのデータセットまたはすべてのデータセットについて、[!DNL Identity Service] によってデータソースに書き込まれたレコードの数。 | データセット ID |
 | timeseries.identity.dataset.recordfailed.count | 1 つのデータセットまたはすべてのデータセットに対して、[!DNL Identity Service] で失敗したレコードの数。 | データセット ID |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | 名前空間が失敗した ID レコードの数。 | 名前空間 ID（**必須**） |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | 名前空間がスキップした ID レコードの数。 | 名前空間 ID（**必須**） |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | スキップされた ID レコードの数。 | 組織 ID |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | 組織の ID グラフに保存されている一意の ID の数。 | なし |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 名前空間の ID グラフに保存される一意の ID の数。 | 名前空間 ID（**必須**） |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 特定のグラフ強度（「不明」、「弱い」、「強い」）のために、組織の ID グラフに保存された一意の ID の数。 | グラフの強さ（**必須**） |
