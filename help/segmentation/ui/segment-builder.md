@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
 source-wordcount: '4955'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 65%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="概要データ"
->abstract="概要データはプロファイル属性にのみ表示され、イベント属性またはオーディエンス属性には表示 <b> されません </b>。<br/><br/> 次の状況では、プロファイル属性の概要データが表示されない場合があります。 <ol><li>属性の値の一部が 100 文字を超えています。</li><li>属性に 3,000 個を超える一意の値があります。</li></ol>"
+>abstract="概要データはプロファイル属性にのみ表示され、イベント属性またはオーディエンス属性には表示<b>されません</b>。<br/><br/>次の状況では、プロファイル属性の概要データが表示されない場合があります。 <ol><li>属性の値の一部が 100 文字を超えている。</li><li>属性に 3,000 を超える一意の値がある。</li></ol>"
 
 >[!NOTE]
 >

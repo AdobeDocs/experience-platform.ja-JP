@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
 source-wordcount: '1827'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -68,7 +68,7 @@ Platform UI 内で [!UICONTROL  アカウントプロファイル ] ダッシュ
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
 >title="アカウントあたりの顧客数の概要"
->abstract="このドリルスルーウィジェットは、B2B データの構造に関するインサイトを提供します。 これは、顧客プロファイルがリンクされていない、または 1 つ以上の顧客プロファイルが関連付けられているアカウントプロファイルの数を特定するのに役立ちます。<ul><li>ダイレクト顧客：`personComponents` ルートを通じてアカウントに直接リンクされた顧客プロファイルです。</li><li>間接顧客：`Account-Person` ルートを介してアカウントにリンクされた顧客プロファイルです。</li></ul>"
+>abstract="このドリルスルーウィジェットは、B2B データの構造に関するインサイトを提供します。これにより、顧客プロファイルがリンクされていない、または 1 つ以上の顧客プロファイルが関連付けられているアカウントプロファイルの数を特定できます。<ul><li>直接顧客：`personComponents` ルートを通じてアカウントに直接リンクされた顧客プロファイルです。</li><li>間接顧客：`Account-Person` ルートを介してアカウントにリンクされた顧客プロファイルです。</li></ul>"
 
 Adobeには、アカウントプロファイルに関連する様々な指標を視覚化するために使用できる標準ウィジェットが用意されています。
 
