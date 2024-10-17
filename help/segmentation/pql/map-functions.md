@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL マップ関数
 description: Profile Query Language（PQL）には、マップとのやり取りを容易にする機能が用意されています。
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 76%
+source-wordcount: '169'
+ht-degree: 46%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 76%
 
 ## 取得
 
-`get` 関数は、特定のキーのマップの値を取得するために使用されます。
+`get` 関数は、指定されたキーのマップの値をオブジェクトとして取得するために使用されます。
 
 **形式**
 
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## keys
 
-`keys` 関数は、特定のマップのすべてのキーを取得するために使用されます。
+`keys` 関数は、特定のマップのすべてのキーを配列またはリストとして取得するために使用します。
 
 **形式**
 
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## values
 
-`values` 関数は、特定のマップのすべての値を取得するために使用されます。
+`values` 関数は、特定のマップのすべての値を配列またはリストとして取得するために使用されます。
 
 **形式**
 

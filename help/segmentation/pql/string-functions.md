@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL文字列関数
 description: Profile Query Language（PQL）が提供する関数によって、文字列の操作が容易になります。
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 88%
+source-wordcount: '848'
+ht-degree: 66%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 88%
 
 [!DNL Profile Query Language] （PQL）が提供する関数によって、文字列の操作が容易になります。 その他のPQL関数について詳しくは、[[!DNL Profile Query Language]  概要 ](./overview.md) を参照してください。
 
-## 類似
+## 次に類似
 
-`like` 関数は、文字列が指定のパターンと一致するかどうかを判定するために使用されます。
+`like` 関数は、文字列がブール値として指定されたパターンに一致することを判別するために使用されます。
 
 **形式**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## startsWith
 
-`startsWith` 関数は、文字列が指定の部分文字列で始まるかどうかを判定するために使用されます。
+`startsWith` 関数は、文字列が、指定された部分文字列で始まるかどうかをブール値として判定するために使用されます。
 
 **形式**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## doesNotStartWith
 
-`doesNotStartWith` 関数は、文字列が指定の部分文字列で始まらないかどうかを判定するために使用されます。
+文字列の先頭が指定の部分文字列になっていないかどうかを判定するには、`doesNotStartWith` 関数を使用します。
 
 **形式**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## endsWith
 
-`endsWith` 関数は、文字列が指定の部分文字列で終わるかどうかを判定するために使用されます。
+`endsWith` 関数は、文字列が、指定された部分文字列で終わることをブール値として判別するために使用されます。
 
 **形式**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## doesNotEndWith
 
-`doesNotEndWith` 関数は、文字列が指定の部分文字列で終わらないかどうかを判定するために使用されます。
+文字列の末尾が指定の部分文字列になっていないかどうかをブール値として判定するには、`doesNotEndWith` 関数を使用します。
 
 **形式**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## contains
 
-`contains` 関数は、文字列が指定の部分文字列を含んでいるかどうかを判定するために使用されます。
+`contains` 関数は、文字列が、指定された部分文字列をブール値として含んでいるかどうかを判定するために使用されます。
 
 **形式**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## doesNotContain
 
-`doesNotContain` 関数は、文字列が指定の部分文字列を含んでいないかどうかを判定するために使用されます。
+文字列がブール値として指定の部分文字列を含んでいないかどうかを判定するには、`doesNotContain` 関数を使用します。
 
 **形式**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## equals
 
-`equals` 関数は、文字列が指定の文字列に等しいかどうかを判定するために使用されます。
+`equals` 関数は、文字列が、指定された文字列に等しいかどうかをブール値として判定するために使用されます。
 
 **形式**
 
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## notEqualTo
 
-`notEqualTo` 関数は、文字列が指定の文字列に等しくないかどうかを判定するために使用されます。
+`notEqualTo` 関数は、文字列が指定の文字列に等しくないかどうかをブール値として判定するために使用されます。
 
 **形式**
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## matches
 
-`matches` 関数は、文字列が特定の正規表現と一致するかどうかを判定するために使用されます。正規表現でのパターンマッチングについて詳しくは、[こちらのドキュメント](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)を参照してください。
+`matches` 関数は、文字列が特定の正規表現と一致するかどうかを判定するために使用されます。正規表現のマッチングパターンをブール値として使用する方法について詳しくは、[ このドキュメント ](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) を参照してください。
 
 **形式**
 
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## 正規表現グループ
 
-`regexGroup` 関数は、指定された正規表現に基づいて特定の情報を抽出するために使用されます。
+`regexGroup` 関数は、文字列として提供される正規表現に基づいて特定の情報を抽出するために使用されます。
 
 **形式**
 

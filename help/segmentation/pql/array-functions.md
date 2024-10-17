@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQLの関数を配列、リスト、設定する
 description: Profile Query Language（PQL）が提供する関数によって、配列、リストおよび文字列の操作が容易になります。
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 94%
+source-wordcount: '820'
+ht-degree: 57%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 94%
 
 ## 次に含まれる
 
-`in` 関数は、項目が配列またはリストのメンバーであるかどうかを判断するために使用されます。
+`in` 関数は、項目が配列またはリストのメンバーであるかどうかをブール値として判断するために使用されます。
 
 **形式**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Not in
 
-`notIn` 関数は、項目が配列またはリストのメンバーでないかどうかを判断するために使用されます。
+`notIn` 関数は、項目が配列またはリストのメンバーでないかどうかをブール値として判別するために使用されます。
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Intersects
 
-`intersects` 関数は、2つの配列またはリストに、共通メンバーが 1 つ以上あるかどうかを判断するために使用されます。
+`intersects` 関数は、2 つの配列またはリストに、ブール値として少なくとも 1 つの共通メンバーが含まれているかどうかを判断するために使用されます。
 
 **形式**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Intersection
 
-`intersection` 関数は、2 つの配列またはリストの共通メンバーを判断するために使用されます。
+`intersection` 関数は、2 つの配列またはリストの共通メンバーをリストとして決定するために使用されます。
 
 **形式**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subset of
 
-`subsetOf` 関数は、特定の配列（配列 A）が別の配列（配列 B）のサブセットであるかを判断するために使用されます。つまり、配列 A 内のすべての要素が配列 B の要素であるということです。
+`subsetOf` 関数は、特定の配列（配列 A）が別の配列（配列 B）のサブセットであるかを判断するために使用されます。つまり、配列 A のすべての要素は、ブール値として配列 B の要素になります。
 
 **形式**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset of
 
-`supersetOf` 関数は、特定の配列（配列 A）が別の配列（配列 B）のスーパーセットであるかを判断するために使用されます。つまり、その配列 Aには配列 B のすべての要素が含まれます。
+`supersetOf` 関数は、特定の配列（配列 A）が別の配列（配列 B）のスーパーセットであるかを判断するために使用されます。つまり、配列 A には、配列 B のすべての要素がブール値として含まれます。
 
 **形式**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Includes
 
-`includes` 関数は、配列またはリストに特定の項目が含まれているかどうかを判断るために使用されます。
+`includes` 関数は、配列またはリストが、ブール値として指定された項目を含んでいるかどうかを判定するために使用されます。
 
 **形式**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## Distinct
 
-`distinct` 関数は、配列またはリストから重複値を削除するために使用されます。
+`distinct` 関数は、配列またはリストから重複する値を配列として削除するために使用します。
 
 **形式**
 
@@ -164,12 +164,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## Group by
 
-`groupBy` 関数は、項目が配列またはリストのメンバーでないかどうかを判断するために使用されます。
+`groupBy` 関数は、グループ化式の一意の値から、配列式の値のパーティションである配列へのマップとしての式の値に基づいて、配列またはリストの値をグループに分割するために使用されます。
 
 **形式**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | 引数 | 説明 |
@@ -182,12 +182,12 @@ person.orders.storeId.distinct().count() > 1
 次の PQL クエリは、注文がおこなわれた店舗別にすべての注文をグループ化します。
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## Filter
 
-`filter` 関数は、式に基づいて配列やリストをフィルタリングするために使用します。
+`filter` 関数は、入力に応じて配列またはリストとして使用される式に基づいて配列またはリストをフィルタリングするために使用されます。
 
 **形式**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Map
 
-`map` 関数は、特定の配列内の各項目に式を適用して新しい配列を作成するために使用します。
+`map` 関数を使用すると、特定の配列内の各項目に式を配列として適用して新しい配列を作成できます。
 
 **形式**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## First `n` in array {#first-n}
 
-`topN` 関数は、指定した数値式に基づいて昇順で並べ替えられた場合、配列の最初の `N` 項目を返すために使用します。
+`topN` 関数は、配列として指定された数式に基づいて昇順で並べ替えられた場合に、配列の最初の `N` 項目を返すために使用されます。
 
 **形式**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## Last `n` in array
 
-`bottomN` 関数は、指定した数値式に基づいて昇順で並べ替えられた場合、配列の最後の `N` 項目を返すために使用します。
+`bottomN` 関数は、配列として指定された数式に基づいて昇順で並べ替えられた場合に、配列の最後の `N` 項目を返すために使用されます。
 
 **形式**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## First item
 
-`head` 関数は、配列またはリスト内の最初の項目を返すために使用されます。
+`head` 関数は、配列またはリスト内の最初の項目をオブジェクトとして返すために使用されます。
 
 **形式**
 

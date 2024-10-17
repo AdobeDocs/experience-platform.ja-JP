@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQLの日時関数
 description: 日時関数を使用すると、Profile Query Language（PQL）内の値に対して日時操作を実行できます。
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 88%
+source-wordcount: '496'
+ht-degree: 85%
 
 ---
 
@@ -124,7 +124,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## Occurs
 
-この`occurs`関数は、指定されたタイムスタンプ関数と一定期間を比較します。
+`occurs` 関数は、指定された timestamp 関数を固定期間とブール値として比較します。
 
 **形式**
 

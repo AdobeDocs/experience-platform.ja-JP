@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL集計関数
 description: 集計関数は、Profile Query Language（PQL）配列内の複数の値をグループ化して、1 つの要約値を形成するために使用されます。
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 76%
+source-wordcount: '242'
+ht-degree: 45%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 76%
 
 ## カウント
 
-`count` 関数は、渡された配列内の要素数を返します。
+`count` 関数は、指定された配列内の要素数を数値として返します。
 
 **形式**
 
@@ -34,7 +34,7 @@ orders.count()
 
 ## Sum
 
-`sum` 関数は、配列内の選択された値すべての合計を返します。
+`sum` 関数は、配列内の選択された値すべての合計を数値として返します。
 
 **形式**
 
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## Average
 
-`average` 関数は、配列内の選択された値すべての算術平均を返します。
+`average` 関数は、配列内の選択された値すべての算術平均を数値として返します。
 
 **形式**
 
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## Minimum
 
-`min` 関数は、配列内の選択された値すべての最小値を返します。
+`min` 関数は、配列内の選択された値すべての最小値を数値として返します。
 
 **形式**
 
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## Maximum
 
-`max` 関数は、配列内の選択された値すべての最大値を返します。
+`max` 関数は、配列内の選択された値すべての最大値を数値として返します。
 
 **形式**
 

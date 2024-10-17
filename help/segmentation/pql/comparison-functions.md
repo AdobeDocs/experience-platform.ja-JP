@@ -3,7 +3,7 @@ solution: Experience Platform
 title: PQL比較関数
 description: 比較関数は、様々な式と値を比較するために使用され、それに応じて「true」または「false」を返します。
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: a4385d8872b71ded7e9121d445e10f1ffbd83cfe
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 89%

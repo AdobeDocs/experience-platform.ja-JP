@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQLのブール関数
 description: ブール関数を使用すると、Profile Query Language（PQL）の様々な要素に対してブール論理を実行できます。
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 81%
+source-wordcount: '248'
+ht-degree: 64%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 81%
 
 ## および
 
-`and` 関数は、論理積を作成するために使用されます。
+`and` 関数は、論理積をブール値として作成するために使用されます。
 
 **形式**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## Or
 
-`or` 関数は、論理和を作成するために使用されます。
+`or` 関数は、論理和をブール値として作成するために使用されます。
 
 **形式**
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL オブジェクト関数
 description: Profile Query Language（PQL）は、オブジェクトとのインタラクションを簡単にする機能を提供します。
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 70%
+source-wordcount: '127'
+ht-degree: 52%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 70%
 
 ## null である
 
-`isNull` 関数は、オブジェクト参照が存在しないかどうかを判定します。
+`isNull` 関数は、オブジェクト参照がブール値として存在しないことを判別します。
 
 **形式**
 
@@ -34,7 +34,7 @@ person.homeAddress.isNull()
 
 ## isNotNull
 
-`isNotNull` 関数は、オブジェクト参照が存在するかどうかを判定します。
+`isNotNull` 関数は、オブジェクト参照がブール値として存在することを判別します。
 
 **形式**
 

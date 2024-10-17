@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL フィルター関数
 description: フィルター関数は、Profile Query Language（PQL）の配列内のデータをフィルタリングするために使用されます。
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 7c282594e66c8c7700471a94947448fd91596814
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 80%
+source-wordcount: '211'
+ht-degree: 66%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 80%
 
 ## フィルター
 
-`[]`（フィルター）関数を使用すると、フィルターを配列に適用し、指定した条件に一致する配列のサブセットを返すことができます。
+`[]` （filter）関数を使用すると、配列にフィルターを適用し、指定した条件に一致する配列のサブセットを返すことができます。 その結果、この関数は配列を返します。
 
 **形式**
 
