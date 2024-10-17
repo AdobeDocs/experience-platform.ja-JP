@@ -6,10 +6,10 @@ breadcrumb-title: データストリームガイド
 user-guide-description: Adobe Experience Platform でデータストリームを設定する方法を説明します。
 feature: Datastreams
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4f3bec03d26c7606e70db75320cf3ba39d9d2b0d
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 90%
+source-wordcount: '54'
+ht-degree: 83%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 90%
 
 * [データストリームの概要](overview.md)
 * [データストリームの設定](configure.md)
+* [動的データストリーム設定の作成](configure-dynamic-datastream.md)
 * [データストリームのボット検出の設定](bot-detection.md)
 * [データストリームの設定の上書き](overrides.md)
 * [データ収集のためのデータ準備](data-prep.md)
