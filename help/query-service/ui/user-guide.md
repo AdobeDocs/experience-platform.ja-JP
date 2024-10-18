@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
+source-git-commit: e66f3540d22a441089916183538921ea5654b312
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2843'
 ht-degree: 23%
 
 ---
@@ -200,12 +200,12 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >実行されなかったクエリは「ログ」に保存されません。クエリをクエリサービスで使用するには、クエリエディターでクエリを実行するか保存する必要があります。
 
-### [!BADGE Beta]{type=Informative} オブジェクト ブラウザー {#object-browser}
+### [!BADGE  限定提供 ]{type=Informative} オブジェクトブラウザー {#object-browser}
 
 >[!AVAILABILITY]
 >
 データセットナビゲーションパネルは、Data Distillerのお客様のみが使用できます。 Platform UI に左側のデータセットナビゲーションパネルが含まれていない可能性があります。 このドキュメント内の他の画像は、データセットナビゲーションパネルを反映していない場合があります。 詳しくは、Adobe担当者にお問い合わせください。<br>
-オブジェクトブラウザーは現在ベータ版で、**限定リリース** でのみ使用できます。 早期リリースアクセスを得るには、Adobe担当者にお問い合わせください。
+オブジェクトブラウザーは現在、**限定リリース** でのみ利用できます。 早期リリースアクセスを得るには、Adobe担当者にお問い合わせください。
 
 オブジェクトブラウザーを使用すると、データセットを簡単に検索およびフィルタリングできます。 オブジェクトブラウザーを使用すると、多数のデータセットがある大規模な環境で、テーブルやデータセットの検索に費やす時間を短縮できます。 関連するデータとメタデータへの効率的なアクセスにより、クエリのオーサリングに集中でき、ナビゲーションに集中できなくなります。
 
