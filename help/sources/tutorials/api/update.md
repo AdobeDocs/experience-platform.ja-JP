@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;ホーム;人気の高いトピック;フローサービス;アカウントの更新
-solution: Experience Platform
 title: Flow Service API を使用したアカウントの更新
-type: Tutorial
 description: このチュートリアルでは、Flow Service API を使用してアカウントの詳細と資格情報を更新する手順を説明します。
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 100%
+source-wordcount: '539'
+ht-degree: 91%
 
 ---
 
 # Flow Service API を使用したアカウントの更新
 
-状況によっては、既存のソース接続の詳細を更新する必要が生じる場合があります。[!DNL Flow Service] には、既存のバッチまたはストリーミング接続（名前、説明、資格情報など）の詳細を追加、編集および削除する機能が用意されています。
+状況によっては、既存のベース接続の詳細を更新する必要が生じる場合があります。 [!DNL Flow Service] には、既存のバッチまたはストリーミング接続（名前、説明、資格情報など）の詳細を追加、編集および削除する機能が用意されています。
 
 このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、接続の詳細と資格情報を更新する手順を説明します。
+
+>[!TIP]
+>
+>更新が必要な場合は、新しいベース接続を作成する必要はありません。 ベース接続に加えた変更は、関連するデータフローに反映されます。
 
 ## はじめに
 
@@ -151,7 +152,7 @@ curl -X PATCH \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `op` | 接続の更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。 |
+| `op` | 接続の更新に必要なアクションを定義するのに使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。 |
 | `path` | 更新するパラメーターのパス。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 

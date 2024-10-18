@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;ホーム;人気の高いトピック;フローサービス;データフローの更新
-solution: Experience Platform
 title: Flow Service API を使用したデータフローの更新
-type: Tutorial
-description: このチュートリアルでは、Flow Service API を使用して、名前、説明、スケジュールなど、データフローを更新する手順を説明します。
+description: Flow Service API を使用して、名前、説明、スケジュールなど、データフローを作成する方法を説明します。
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 100%
+source-wordcount: '656'
+ht-degree: 87%
 
 ---
 
 # Flow Service API を使用したデータフローの更新
 
 このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用した基本情報、スケジュール、マッピングセットなど、データフローの更新手順を説明します。
+
+>[!TIP]
+>
+>ソース接続とターゲット接続は、1 つのデータフローにマッピングする必要があります。 ソース接続とターゲット接続を個別に更新しないでください。変更内容は、対応するデータフローに反映されません。 ユースケースでソース接続とターゲット接続の更新が必要な場合は、ソース接続とターゲット接続の新しいペアと新しいデータフローを作成する必要があります。
 
 ## はじめに
 
@@ -49,11 +50,11 @@ GET /flows/{FLOW_ID}
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
