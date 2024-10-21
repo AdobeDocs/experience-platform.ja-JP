@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy ServiceUI でのプライバシージョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーションをまたいでプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 45%
@@ -52,7 +52,7 @@ ht-degree: 45%
 | [!UICONTROL MCDPA_USA （モンタナ） ] | [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL NDPA_USA （ネブラスカ州） ] | [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL （ニュージーランド） ] | ニュージーランド [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA （ニューハンプシャー州） ] | [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NHPA_USA （ニューハンプシャー州） ] | [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_USA （ニュージャージー州） ] | [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA （オレゴン） ] | [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA （タイ） ] | タイの [!DNL Personal Data Protection Act] |
