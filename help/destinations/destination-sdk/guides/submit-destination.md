@@ -2,10 +2,10 @@
 description: Destination SDKを使用して作成した製品化された宛先のレビュー用に提出する必要があるすべての情報が表示されます。
 title: Destination SDKで作成した製品化された宛先をレビュー用に送信
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 36%
+source-wordcount: '1052'
+ht-degree: 35%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 36%
 * 宛先が解決するユースケースの説明。 これは、新しい宛先設定を送信する場合にのみ必要です。
 * 宛先の送信理由の説明。 これは、既存の宛先設定を更新する場合にのみ必要です。
 * 宛先への HTTP 呼び出しを実行するため、テスト宛先 API エンドポイントを使用したテスト結果。宛先エンドポイントへの API 呼び出しと、宛先エンドポイントから受信した API 応答をAdobeにお知らせください。
+* 宛先に接続してアクティベーション手順を進めるユーザーのユーザーエクスペリエンスを示す画面録画。
 * ファイルベースの宛先に関するその他の要件：
    * テスト API を使用して [ サンプルプロファイルを使用してファイルベースの宛先をテストする ](../testing-api/batch-destinations/file-based-destination-testing-api.md) 後に、リクエストと応答サンプルを共有します。
    * 宛先で生成され、ストレージの場所に書き出されたサンプルファイルを添付します。
