@@ -4,9 +4,9 @@ description: 動的データストリーム設定を作成し、ルールに基�
 hide: true
 hidefromtoc: true
 badge: label="ベータ版" type="Informative"
-source-git-commit: 86416dc11f92a774cda5d95365d3981a637a5595
+source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 1%
 
    ![ 動的設定ルールを示すデータストリームのユーザーインターフェイスの画像 ](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. 「**[!UICONTROL 設定]**」セクションでは、データを各サービスに送信するかどうかに応じて、ルールごとに有効または無効にするサービスを切り替えます。 トグルをオフにすると、ルールは無効になり、*すべてのデータ* がアップストリームサービスに送信されます。
+1. 「**[!UICONTROL 設定]**」セクションでは、データを各サービスに送信するかどうかに応じて、ルールごとに有効または無効にするサービスを切り替えます。 トグルをオフにすると、サービスのルーティングが無効になり、アップストリームサービスに *データなし* が送信されます。
 
    ![ 動的設定ルールを示すデータストリームのユーザーインターフェイスの画像 ](assets/configure-dynamic-datastream/enable-service.png)
 
