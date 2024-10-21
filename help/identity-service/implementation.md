@@ -2,10 +2,10 @@
 title: ID サービスの実装ガイド
 description: Adobe Experience Platformに提供されるデータが、ID サービスで使用される前に処理されて ID グラフが作成される仕組みを説明します。
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 64%
+source-wordcount: '600'
+ht-degree: 62%
 
 ---
 
@@ -46,6 +46,7 @@ ID フィールドでは、共通の PII データを共有している ID を�
 >
 >* 配列およびマップタイプのフィールドはサポートされておらず、ID フィールドとしてマークおよびラベル付けできません。
 >*  結果の ID の名前空間は、フィールドにラベルが付けられた時点で提供されます。
+>* フィールドが配列オブジェクトの下にない限り、フィールドは ID としてマークできます。
 
 詳しくは、[UI での ID フィールドの定義 ](../xdm/ui/fields/identity.md) に関するガイドを参照してください。
 
