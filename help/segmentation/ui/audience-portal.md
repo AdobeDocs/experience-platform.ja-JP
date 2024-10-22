@@ -5,7 +5,7 @@ exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
 source-wordcount: '4320'
-ht-degree: 57%
+ht-degree: 58%
 
 ---
 
@@ -213,7 +213,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
 >title="柔軟なオーディエンス評価制限"
->abstract="1 回の柔軟なオーディエンス評価実行で最大 20 個のオーディエンスを評価できます。<br/><br/> さらに、評価ジョブはできるだけ早く実行されますが、別のオンデマンドまたはバッチ評価と同時にオンデマンド評価が実行される <b> できない </b> ので、システムの遅延が発生する可能性があります。"
+>abstract="1 回の柔軟なオーディエンス評価実行で最大 20 個のオーディエンスを評価できます。<br/><br/>さらに、評価ジョブはできるだけ早く実行されますが、オンデマンド評価は別のオンデマンドまたはバッチ評価と同時に実行<b>できない</b>ので、システムの遅延が発生する可能性があります。"
 
 さらに、最大 25 種類のオーディエンスを選択し、これらのオーディエンスに対して様々なアクションを実行できます。 これらのアクションには、[ フォルダーへの移動 ](#folders)、[ タグの編集または適用 ](#tags)、[ アクセスラベルの適用 ](../../access-control/abac/ui/labels.md)、[ 削除 ](#browse) が含まれます。
 

@@ -1,21 +1,21 @@
 ---
-title: 計算フィールドを使用して、配列を文字列としてエクスポートする
+title: 計算フィールドを使用して、配列を文字列として書き出し
 type: Tutorial
 description: 計算フィールドを使用して、Real-Time CDPからクラウドストレージの宛先に配列を文字列として書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
 source-wordcount: '1556'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
-# 計算フィールドを使用して、配列を文字列としてエクスポートする{#use-calculated-fields-to-export-arrays-as-strings}
+# 計算フィールドを使用して、配列を文字列として書き出し{#use-calculated-fields-to-export-arrays-as-strings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="配列の書き出しのサポート"
->abstract="<p>**計算フィールドを追加** コントロールを使用して、整数、文字列、ブール値、オブジェクト値の配列をExperience Platformから目的のクラウドストレージの宛先に書き出します。</p><p> 配列は、`array_to_string` 関数を使用して、文字列として書き出す必要があります。 広範な例やサポートされるその他の関数については、ドキュメントを参照してください。</p>"
+>title="書き出し配列のサポート"
+>abstract="<p>**計算フィールドを追加**&#x200B;コントロールを使用して、int、文字列、ブーリアン値およびオブジェクト値の配列を Experience Platform から目的のクラウドストレージの宛先に書き出します。</p><p> 配列は、`array_to_string` 関数を使用して、文字列として書き出す必要があります。広範な例とサポートされている関数について詳しくは、ドキュメントを参照してください。</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=ja#examples" text="例"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=ja#known-limitations" text="既知の制限事項"
 
@@ -75,17 +75,17 @@ organizations = [{
 
 [ 接続 ](/help/destinations/ui/connect-destination.md) を目的のクラウドストレージの宛先に対して行い、[ クラウドストレージの宛先のアクティベーション手順 ](/help/destinations/ui/activate-batch-profile-destinations.md) の手順を実行して、[ マッピング ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) の手順に進みます。
 
-## 計算フィールドのエクスポート方法 {#how-to-export-calculated-fields}
+## 計算フィールドの書き出し方法 {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
->title="階層出力スキーマを有効にする"
+>title="階層出力スキーマの有効化"
 >abstract="配列などの階層構造を書き出す場合は、オンにします。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
->title="計算フィールドの追加が無効"
->abstract="宛先への接続時にフラット構造をエクスポートするよう選択したので、このコントロールは無効になっています。"
+>title="計算フィールドの追加の無効化"
+>abstract="宛先への接続時にフラット構造を書き出すよう選択したので、このコントロールは無効になっています。"
 
 クラウドストレージ宛先のアクティベーションワークフローのマッピング手順で、「**[!UICONTROL 計算フィールドを追加]**」を選択します。
 
