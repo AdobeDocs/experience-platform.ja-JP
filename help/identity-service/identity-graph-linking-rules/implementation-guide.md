@@ -2,9 +2,9 @@
 title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1668'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 1. [実装の前提条件を満たす](#prerequisites-for-implementation)
 2. [必要な ID 名前空間の作成](#namespace)
 3. [グラフシミュレーションツールを使用して、ID 最適化アルゴリズムを理解します](#graph-simulation)
-4. [ID 設定ツールを使用して、一意の名前空間を指定し、名前空間の優先度ランキングを設定します](#identity-settings)
+4. [ID 設定 UI を使用して、一意の名前空間を指定し、名前空間の優先度ランキングを設定します](#identity-settings)
 5. [エクスペリエンスデータモデル（XDM）スキーマの作成](#schema)
 6. [データセットの作成](#dataset)
 7. [Experience Platformへのデータの取り込み](#ingest)
@@ -183,9 +183,13 @@ ID サービスの実装プロセスの最初の手順は、Experience Platform�
 
 ## ID 設定の指定 {#identity-settings}
 
-グラフがどのように動作するかを把握したら、ID サービス UI ワークスペースの [ID 設定ツール ](./identity-settings-ui.md) に移動します。
+グラフがどのように動作するかを把握したら、ID サービス UI ワークスペースの [ID 設定 UI](./identity-settings-ui.md) に移動します。 ID 設定 UI にアクセスするには、左側のナビゲーションから **[!UICONTROL ID]** を選択してから、**[!UICONTROL 設定]** を選択します。
 
-ID 設定ツールを使用して、一意の名前空間を指定し、優先順に名前空間を設定します。 設定の適用が完了したら、新しい設定が ID サービスに反映されるまで少なくとも 6 時間かかるので、データの取り込みに進むまでに少なくとも 6 時間待つ必要があります。
+![ 設定ボタンがハイライト表示された ID 参照ページ。](../images/implementation/settings.png)
+
+ID 設定 UI を使用して、一意の名前空間を指定し、優先順に名前空間を設定します。 設定の適用が完了したら、新しい設定が ID サービスに反映されるまで少なくとも 6 時間かかるので、データの取り込みに進むまでに少なくとも 6 時間待つ必要があります。
+
+詳しくは、[ID 設定 UI ガイド ](./identity-settings-ui.md) を参照してください。
 
 ## XDM スキーマの作成 {#schema}
 
