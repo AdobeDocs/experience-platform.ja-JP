@@ -2,9 +2,9 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -109,11 +109,11 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 | ユーザーアクション（エクスペリエンスイベント） | 認証状態 | データソース | イベントの名前空間 | プライマリ ID の名前空間 |
 | --- | --- | --- | --- | --- |
-| クレジット カード オファーページの表示 | 未認証（匿名） | Web SDK | {ECID} | ECID |
-| ヘルプページを表示 | 未認証 | Mobile SDK | {ECID, IDFA} | IDFA |
-| 当座預金口座残高の表示 | Authenticated | Web SDK | {CRMID, ECID} | CRMID |
-| 住宅ローンにサインアップ | Authenticated | Analytics ソースコネクタ | {CRMID, ECID, AAID} | CRMID |
-| 小切手から貯蓄に$1,000 を振り替える | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| クレジット カード オファーページの表示 | 未認証（匿名） | Web SDK | `{ECID}` | ECID |
+| ヘルプページを表示 | 未認証 | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| 当座預金口座残高の表示 | Authenticated | Web SDK | `{CRMID, ECID}` | CRMID |
+| 住宅ローンにサインアップ | Authenticated | Analytics ソースコネクタ | `{CRMID, ECID, AAID}` | CRMID |
+| 小切手から貯蓄に$1,000 を振り替える | Authenticated | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 

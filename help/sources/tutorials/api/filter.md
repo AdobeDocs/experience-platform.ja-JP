@@ -2,7 +2,7 @@
 title: Flow Service API を使用したSourceの行レベルのデータのフィルタリング
 description: このチュートリアルでは、Flow Service API を使用してソースレベルでデータをフィルタリングする手順を説明します
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 16%
@@ -687,12 +687,12 @@ curl -X GET \
 **API 形式**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | 取得するソース接続の ID。 |
+| `{SOURCE_CONNECTION_ID}` | 更新するソース接続の ID |
 
 +++リクエスト
 
