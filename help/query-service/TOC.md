@@ -5,9 +5,9 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 80%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 80%
    - [SSL モード](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
+   - [GitHub コパイロット](./clients/github-copilot.md)
    - [Jupyter Notebook](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
    - [Postico](clients/postico.md)
