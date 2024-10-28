@@ -3,10 +3,10 @@ keywords: google カスタマーマッチ；Google カスタマーマッチ；Go
 title: Google Customer Match 接続
 description: Google カスタマーマッチを使用すると、オンラインおよびオフラインのデータを使用して、検索、ショッピング、Gmail、YouTubeなど、Googleが所有および運営するプロパティをまたいで顧客にリーチし、再びエンゲージできます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 19%
+source-wordcount: '2100'
+ht-degree: 18%
 
 ---
 
@@ -215,6 +215,20 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。
 
 ![ アクティベーションワークフローのマッピング手順でハイライト表示されている変換コントロールを適用 ](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## 宛先の監視 {#monitor-destination}
+
+宛先に接続し、宛先データフローを確立したら、Real-Time CDPの [ モニタリング機能 ](/help/dataflows/ui/monitor-destinations.md) を使用して、各データフロー実行で宛先に対してアクティブ化されたプロファイルレコードに関する詳細な情報を取得できます。
+
+>[!IMPORTANT]
+>
+> 2024 年 10 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートをロールアウトしています。 この機能強化により、宛先とExperience Platformプラットフォームレポートの間の整合性が向上します。
+>
+> この更新の前は、すべてのアクティベーションの再試行が ]**ID 失敗**[!UICONTROL  に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。
+>
+> この機能強化は、現在 [Google カスタマーマッチの宛先に適用されますが ](google-customer-match.md) 他のExperience Platformストリーミングの宛先に徐々にロールアウトされる予定です。
+> この機能強化により、この宛先のユーザーでは、**[!UICONTROL 失敗した ID]** カウントが低下する可能性があります。
+
 
 ## Audience Activation が成功したことの確認 {#verify-activation}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 62%
+source-wordcount: '3639'
+ht-degree: 61%
 
 ---
 
@@ -94,6 +94,17 @@ ID は、プロファイルの様々なファセットを表します。例え�
 - **[!UICONTROL アクティブ化された ID]**：データフロー実行の一環として、選択した宛先に対して正常にアクティブ化されたプロファイル ID の合計数です。この指標には、書き出されたオーディエンスから作成、更新、削除された ID が含まれます。
 - **[!UICONTROL 除外された ID]**：属性の欠如と同意違反に基づいてアクティブ化から除外されたプロファイル ID の合計数です。
 - **[!UICONTROL 失敗した ID]**：エラーが原因で宛先に対してアクティブ化されなかったプロファイル ID の合計数です。
+
+  >[!IMPORTANT]
+  >
+  > 2024 年 10 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートをロールアウトしています。 この機能強化により、宛先とExperience Platformプラットフォームレポートの間の整合性が向上します。
+  >
+  > この更新の前は、すべてのアクティベーションの再試行が ]**ID 失敗**[!UICONTROL  に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。
+  > 
+  > この機能強化は、現在 [Google カスタマーマッチの宛先に適用されますが ](../../destinations/catalog/advertising/google-customer-match.md) 他のExperience Platformストリーミングの宛先に徐々にロールアウトされる予定です。
+  > この機能強化に伴い、[Google カスタマーマッチの宛先 ](../../destinations/catalog/advertising/google-customer-match.md) のユーザーでは、**[!UICONTROL ID 失敗]** カウントが低下する可能性があります。
+
+
 - **[!UICONTROL アクティブ化率]**：正常にアクティブ化されたかスキップされた受信 ID の割合です。次の数式は、この値の計算方法を示しています。
   ![ アクティブ化率の数式。](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL ステータス]**：データフローの状態（[!UICONTROL 完了]または[!UICONTROL 処理中]）を表します。[!UICONTROL 完了]は、対応するデータフロー実行のすべての ID が 1 時間以内に書き出されたことを意味します。[!UICONTROL 処理中]は、データフロー実行がまだ終了していないことを意味します。
