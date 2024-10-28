@@ -3,9 +3,9 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1768'
 ht-degree: 32%
 
 ---
@@ -126,7 +126,8 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
   >[!IMPORTANT]
   >
-  >データストリーム ID は、Adobe Target宛先接続ごとに一意です。 同じオーディエンスを複数のデータストリームにマッピングする必要がある場合は、データストリーム ID ごとに [ 新しい宛先接続を作成 ](../../ui/connect-destination.md) し、[ オーディエンスアクティベーションフロー ](#activate) を実行します。
+  >データストリーム ID は、Adobe Target宛先接続ごとに一意です。 複数のAdobe Target宛先接続に同じデータストリーム ID を使用することはできません。
+  >同じオーディエンスを複数のデータストリームにマッピングする必要がある場合は、データストリーム ID ごとに [ 新しい宛先接続を作成 ](../../ui/connect-destination.md) し、[ オーディエンスアクティベーションフロー ](#activate) を実行します。
 
    * **[!UICONTROL なし]**:Adobe Targetのパーソナライゼーションを設定する必要があるが、[Experience PlatformWeb SDK](/help/web-sdk/home.md) を実装できない場合は、このオプションを選択します。 このオプションを使用する場合、Target からExperience Platformに書き出されたオーディエンスは、次のセッションのパーソナライゼーションのみをサポートし、エッジのセグメント化は無効になります。 実装タイプごとに使用可能なユースケースの比較については、[ サポートされているユースケース ](#supported-use-cases) の節の表を参照してください。
 
