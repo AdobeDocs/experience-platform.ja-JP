@@ -3,10 +3,10 @@ keywords: クラウドストレージの宛先;クラウドストレージ
 title: クラウドストレージの宛先の概要
 description: Adobe Experience Platformは、オーディエンスをデータファイルとして、Amazon S3、AWS Kinesis、Azure Event Hubs または SFTP クラウドストレージの場所に配信できます。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
+source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 42%
+source-wordcount: '463'
+ht-degree: 38%
 
 ---
 
@@ -40,7 +40,7 @@ Adobe Experience Platformは、次のクラウドストレージの宛先への�
 
 >[!NOTE]
 >
-> この節で説明する機能は、現在、[Amazon S3](amazon-s3.md) の宛先でのみ使用できます。
+> この節で説明する機能は、すべてのクラウドストレージの宛先で使用できます。 ただし、[Amazon S3](amazon-s3.md) の宛先では、現在、`%SEGMENT_ID%` マクロと `%SEGMENT_NAME%` マクロのみがサポートされています。
 
 ストレージの場所にあるオーディエンスファイルごとにカスタムフォルダーを作成するには、フォルダーパスの入力フィールドでマクロを使用します。 次に示すように、入力フィールドの末尾にマクロを挿入します。
 
