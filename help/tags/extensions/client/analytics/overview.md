@@ -2,10 +2,10 @@
 title: Adobe Analytics 拡張機能の概要
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能について説明します。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 98%
+source-wordcount: '2331'
+ht-degree: 88%
 
 ---
 
@@ -288,7 +288,19 @@ Analytics 拡張機能は、次のアクションを提供します。
 
 ### 変数を設定 {#set-variables}
 
-重要: 「Set Variables」アクションを使用しても、ビーコンは送信されません。「Send Beacon」アクションを使用する必要があります。
+>[!IMPORTANT]
+>
+>「変数を設定」アクションを使用してビーコンを送信することはできません。 ビーコンを送信するには、「ビーコンを送信」アクションを選択する必要があります。
+
+「変数を設定 **では、次の 2 つの異なるビューから選択でき** す。
+
+>[!BEGINTABS]
+
+>[!TAB  個々の属性の指定 ]
+
+この表示では、`eVars`、`Props`、`Events` など、様々な変数を指定できます。
+
+![ 追加の属性が一覧表示されているAdobe Analytics フォームビューページ ](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVar
 
@@ -318,6 +330,25 @@ Analytics 拡張機能は、次のアクションを提供します。
 1. （オプション）[イベントのシリアル化](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=ja)に使用するデータ要素を選択または指定します。
 1. （オプション）「**[!UICONTROL イベントを追加]**」を選択してさらにイベントを設定します。
 1. 「**[!UICONTROL 変更を保持]**」を選択します。
+
+>[!TAB JSON ビュー ]
+
+このビューでは、「変数を設定 **アクションの JSON バージョンを表示および編集でき** す。
+
+![Adobe Analytics拡張機能の JSON 形式の現在の set variables 設定を表すビュー。](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+「**変数を設定**」アクションで、JSON ビューを使用して JSON データをアップロード、コピーまたはダウンロードし、デバイスに保存します。
+
+ただし、次のようないくつかの制限があります。
+
+* **カスタムコード**：カスタムコードを使用して変数を入力する場合、JSON ビューには表示されません。 代わりに、JSON の表示、コピー、ダウンロード時に、カスタムコードを使用して行われた変更は含まれないことを示すアラートが表示されます。
+* **URL 属性からコピー**:URL からの値のコピーは、JSON ビューではサポートされていません。 この制限を示すアラートが表示されます。
+* **廃止された変数**：廃止された変数または廃止された変数が JSON ビューに表示され、廃止された変数が設定されたことを知らせるアラートが表示されます。
+* **データ要素**：データ要素は、JSON ビューで表現されます。 JSON データが別のタグプロパティにコピーされると、対応するデータ要素が定義されていない可能性があり、実行時に正しく解決されません。
+
+>[!ENDTABS]
 
 #### 階層
 
