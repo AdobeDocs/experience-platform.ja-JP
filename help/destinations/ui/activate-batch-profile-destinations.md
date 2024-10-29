@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
-source-wordcount: '4095'
-ht-degree: 55%
+source-wordcount: '4151'
+ht-degree: 54%
 
 ---
 
@@ -133,11 +133,11 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 2. **[!UICONTROL 時間]** 切り替えスイッチを使用して、書き出しをオーディエンス評価直後に実行するか、指定した時間にスケジュールに沿って実行するかを選択します。 「**[!UICONTROL スケジュール済み]**」オプションを選択すると、セレクターを使用して書き出しを実行する時刻を [!DNL UTC] 形式で選択できます。
 
-   >[!NOTE]
-   >
-   >以下に説明する **[!UICONTROL セグメントの評価後]** オプションは、一部のBetaのお客様のみが利用できます。
+   「**[!UICONTROL セグメントの評価後]**」オプションを使用して、毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブをを実行します。このオプションを使用すると、アクティベーションジョブが実行されたときに、最新のプロファイルが確実に宛先に書き出されます。 これにより、オーディエンスが、アクションに基づいて 1 日に複数回書き出される可能性があります。
 
-   「**[!UICONTROL セグメントの評価後]**」オプションを使用して、毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブをを実行します。このオプションを使用すると、アクティベーションジョブが実行されたときに、最新のプロファイルが確実に宛先に書き出されます。
+   >[!IMPORTANT]
+   >
+   >セグメント評価後にアクティベートするように既に設定されているオーディエンスに対して [ 柔軟なオーディエンス評価 ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) を実行した場合、オーディエンスは、以前の日別アクティベーションジョブに関係なく、柔軟なオーディエンス評価ジョブが終了するとすぐにアクティベートされます。 これにより、オーディエンスが、アクションに基づいて 1 日に複数回エクスポートされる可能性があります。
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -485,7 +485,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 > 
 カタログ内のすべてのクラウドストレージの宛先では、改善された [[!UICONTROL  マッピング ] 手順を表示できます。この手順は ](#mapping) この節で説明している **[!UICONTROL 属性を選択]** 手順に代わるものです。
 >
-この **[!UICONTROL 属性を選択]** 手順は、Adobe Campaign、Oracle Responsys、Oracle Eloqua および Salesforce Marketing Cloudのメールマーケティングの宛先に対しても引き続き表示されます。
+この **[!UICONTROL 属性を選択]** 手順は、Adobe Campaign、Oracle Responsys、Oracle Eloqua およびSalesforce Marketing Cloudのメールマーケティングの宛先に対しても引き続き表示されます。
 
 プロファイルベースの宛先の場合、ターゲット宛先に送信するプロファイル属性を選択する必要があります。
 
