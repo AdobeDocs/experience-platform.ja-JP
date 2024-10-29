@@ -2,9 +2,9 @@
 title: サンドボックスツールパッケージ API エンドポイント
 description: サンドボックスツール API の/packages エンドポイントを使用すると、Adobe Experience Platformのパッケージをプログラムで管理できます。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
+source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '2541'
 ht-degree: 10%
 
 ---
@@ -58,7 +58,7 @@ curl -X POST \
 | `name` | パッケージの名前。 | 文字列 | ○ |
 | `description` | パッケージの詳細情報を提供する説明。 | 文字列 | × |
 | `packageType` | パッケージタイプは **PARTIAL** で、特定のアーティファクトをパッケージに含めることを示します。 | 文字列 | はい |
-| `sourceSandbox` | パッケージのソースサンドボックス。 | 文字列 | × |
+| `sourceSandbox` | パッケージのソースサンドボックス。 | オブジェクト | × |
 | `expiry` | パッケージの有効期限を定義するタイムスタンプ。 デフォルト値は作成日から 90 日間です。 応答の有効期限フィールドはエポック UTC 時間になります。 | 文字列（UTC タイムスタンプ形式） | × |
 | `artifacts` | パッケージにエクスポートされるアーティファクトのリスト。 `packageType` が `FULL` の場合、`artifacts` 値は **null** または **空** にする必要があります。 | 配列 | × |
 
@@ -200,7 +200,6 @@ curl -X PUT \
 
 パッケージからアーティファクトを削除するには、`id` を指定し、`action` に **DELETE** を含める必要があります。
 
-
 **API 形式**
 
 ```http
@@ -308,7 +307,7 @@ curl -X PUT \
 | `id` | 更新するパッケージの ID。 | 文字列 | ○ |
 | `action` | パッケージのメタデータフィールドを更新するには、アクション値を **UPDATE** にする必要があります。 このアクションは、**PARTIAL** パッケージタイプでのみサポートされます。 | 文字列 | ○ |
 | `name` | パッケージの更新された名前。 パッケージ名の重複は許可されていません。 | 配列 | ○ |
-| `sourceSandbox` | Source サンドボックスは、リクエストのヘッダーで指定されたのと同じ組織に属している必要があります。 | 文字列 | ○ |
+| `sourceSandbox` | Source サンドボックスは、リクエストのヘッダーで指定されたのと同じ組織に属している必要があります。 | オブジェクト | ○ |
 
 **応答**
 
@@ -356,7 +355,7 @@ DELETE /packages/{PACKAGE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| {PACKAGE_ID} | 削除するパッケージの ID。 |
+| `{PACKAGE_ID}` | 削除するパッケージの ID。 |
 
 **リクエスト**
 
@@ -392,7 +391,7 @@ GET /packages/{PACKAGE_ID}/export
 
 | パラメーター | 説明 |
 | --- | --- |
-| {PACKAGE_ID} | 公開するパッケージの ID。 |
+| `{PACKAGE_ID}` | 公開するパッケージの ID。 |
 
 **リクエスト**
 
@@ -441,7 +440,7 @@ GET /packages/{PACKAGE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| {PACKAGE_ID} | 検索するパッケージの ID。 |
+| `{PACKAGE_ID}` | 検索するパッケージの ID。 |
 
 **リクエスト**
 
@@ -508,7 +507,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| {QUERY_PARAMS} | 結果をフィルタリングするオプションのクエリパラメーター。 詳しくは、[ クエリパラメーター ](./appendix.md) の節を参照してください。 |
+| `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 詳しくは、[ クエリパラメーター ](./appendix.md) の節を参照してください。 |
 
 **リクエスト**
 
@@ -613,7 +612,7 @@ GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
 
 | パラメーター | 説明 |
 | --- | --- |
-| {PACKAGE_ID} | 検索するパッケージの ID。 |
+| `{PACKAGE_ID}` | 検索するパッケージの ID。 |
 
 **リクエスト**
 
@@ -632,7 +631,7 @@ curl -X GET \
 
 競合は、応答で返されます。 この応答では、元のパッケージと、ランキング順の配列として `alternatives` フラグメントが表示されます。
 
-応答を表示+++
++++応答を表示
 
 ```json
 [
@@ -826,7 +825,7 @@ POST /packages/{PACKAGE_ID}/children
 
 | パラメーター | 説明 |
 | --- | --- |
-| {PACKAGE_ID} | パッケージの ID。 |
+| `{PACKAGE_ID}` | パッケージの ID。 |
 
 **リクエスト**
 
@@ -905,7 +904,7 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 | パラメーター | 説明 |
 | --- | --- |
-| {PACKAGE_ID} | インポートするパッケージの ID。 |
+| `{PACKAGE_ID}` | インポートするパッケージの ID。 |
 
 **リクエスト**
 
@@ -924,7 +923,7 @@ curl -X GET \
 
 応答が成功すると、ターゲットサンドボックスのリソース権限が返されます。この権限には、必要な権限のリスト、権限がない場合、アーティファクトのタイプ、作成が許可されているかどうかの決定が含まれます。
 
-応答を表示+++
++++応答を表示
 
 ```json
 {
@@ -1053,7 +1052,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| {QUERY_PARAMS} | 結果をフィルタリングするオプションのクエリパラメーター。 詳しくは、[ クエリパラメーター ](./appendix.md) の節を参照してください。 |
+| `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 詳しくは、[ クエリパラメーター ](./appendix.md) の節を参照してください。 |
 
 **リクエスト**
 
@@ -1150,5 +1149,867 @@ curl -X GET \
             "createdBy": "{CREATED_BY}"
         }
     ]
+}
+```
+
+## 組織間でのパッケージの共有 {#org-linking}
+
+サンドボックスツール API の `/handshake` エンドポイントを使用すると、他の組織と提携してパッケージを共有できます。
+
+### 共有リクエストの送信 {#send-request}
+
+`/handshake/bulkCreate` エンドポイントに承認リクエストを行うことで、POST共有のリクエストをターゲットパートナー組織に送信します。 これは、プライベートパッケージを共有する前に必要です。
+
+**API 形式**
+
+```http
+POST /handshake/bulkCreate
+```
+
+**リクエスト**
+
+次のリクエストでは、ターゲットパートナー組織とソース組織の間で共有承認を開始します。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/handshake/bulkCreate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "targetIMSOrgIds":["acme@AdobeOrg"],
+      "sourceIMSDetails":{
+        "id":"acme@AdobeOrg",
+        "name":"acme_org"
+      } 
+  }' 
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `targetIMSOrgIds` | 共有リクエストを送信するターゲット組織のリスト。 | 配列 | ○ |
+| `sourceIMSDetails` | ソース組織に関する詳細。 | オブジェクト | ○ |
+
+**応答**
+
+応答が成功すると、共有リクエストに関する詳細が返されます。
+
+```json
+{
+    "successfulRequests": {
+        "acme@AdobeOrg": {
+            "id": "{ID}",
+            "version": 0,
+            "createdDate": 1724938816798,
+            "modifiedDate": 1724938816798,
+            "createdBy": "{CREATED_BY}",
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "sourceRegion": "va6",
+            "sourceIMSOrgName": "{SOURCE_NAME}",
+            "status": "APPROVAL_PENDING",
+            "createdByName": "{CREATED_BY}",
+            "modifiedByName": "{MODIFIED_BY}",
+            "modifiedByIMSOrgId": "{ORG_ID}",
+            "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
+            "linkingId": "{LINKIND_ID}"
+        }
+    },
+    "failedRequests": {}
+}
+```
+
+### 受信した共有リクエストの承認 {#approve-requests}
+
+`/handshake/action` エンドポイントに対して承認リクエストを行い、ターゲットパートナー組織からの共有リクエストをPOSTします。 承認後、ソースパートナー組織はプライベートパッケージを共有できます。
+
+**API 形式**
+
+```http
+POST /handshake/action
+```
+
+**リクエスト**
+
+次のリクエストは、ターゲットパートナー組織からの共有リクエストを承認します。
+
+```shell
+curl -X POST  \
+  https://platform.adobe.io/data/foundation/exim/handshake/action \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "linkingID":"{LINKING_ID}",
+      "status":"APPROVED",
+      "reason":"Done",
+      "targetIMSOrgDetails":{
+          "id":"acme@AdobeOrg",
+          "name":"acme",
+          "region":"va7"
+      }
+  }'
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `linkingID` | 応答する共有リクエストの ID。 | 文字列 | ○ |
+| `status` | 共有リクエストに対して実行されるアクション。 | 文字列 | ○ |
+| `reason` | アクションが実行されている理由。 | 文字列 | ○ |
+| `targetIMSOrgDetails` | ID 値がターゲット組織の **ID**、名前値がターゲット組織の **NAME**、地域値がターゲット組織の **REGION** である必要がある、ターゲット組織に関する詳細。 | オブジェクト | ○ |
+
+**応答**
+
+応答が成功すると、承認された共有リクエストに関する詳細が返されます。
+
+```json
+{
+    "id": "{ID}",
+    "version": 1,
+    "createdDate": 1726737474000,
+    "modifiedDate": 1726737541731,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "sourceRegion": "va7",
+    "targetRegion": "va7",
+    "sourceOrgName": "{SOURCE_ORG}",
+    "targetOrgName": "{TARGET_ORG}",
+    "status": "APPROVED",
+    "createdByName": "{CREATED_BY}",
+    "modifiedByIMSOrgId": "{MODIFIED_BY}",
+    "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"acme@AdobeOrg\",\"action\":\"INITIATED\",\"actionTimeStamp\":1726737474450,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":null,\"actionTakenByImsOrgID\":\"745F37C35E4B776E0A49421B@AdobeOrg\",\"action\":\"APPROVED\",\"actionTimeStamp\":1726737541818,\"reason\":\"Done\"}]",
+    "linkingId": "{LINKING_ID}"
+}
+```
+
+### 送信/受信の共有リクエストのリスト {#outgoing-and-incoming-requests}
+
+`handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` エンドポイントに対してGETリクエストを行い、送信および受信する共有リクエストを一覧表示します。
+
+**API 形式**
+
+```http
+POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+```
+
+| パラメーター | 許容値/デフォルト値 |
+| --- | --- |
+| `property` | ステータスなど、フィルタリングに使用するプロパティを指定します。 ステータスに指定できる値は、`APPROVED`、`REJECTED`、`IN_PROGRESS` です。 |
+| `start` | start のデフォルト値は `0` です。 |
+| `limit` | limit のデフォルト値は `20` です。 |
+| `orderBy` | レコードを昇順または降順に並べ替えます。 |
+| `requestType` | `INCOMING` または `OUTGOING` を受け入れます。 |
+
+**リクエスト**
+
+次のリクエストは、すべての送信および受信の共有リクエストのリストを返します。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id:{ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+**応答**
+
+応答が成功すると、送信および受信する共有リクエストとその詳細のリストが返されます。
+
+```json
+{
+    "totalElements": 1,
+    "currentPage": 0,
+    "totalPages": 1,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "data": [
+        {
+            "id": "{ID}",
+            "version": 1,
+            "createdDate": 1724929446000,
+            "modifiedDate": 1724929617000,
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "sourceRegion": "va7",
+            "targetRegion": "va6",
+             "sourceOrgName": "{SOURCE_ORG}",
+            "targetOrgName": "{TARGET_ORG}",
+            "status": "APPROVED",
+            "createdByName": "{CREATED_BY}",
+            "modifiedByName": "{MODIFIED_BY}",
+            "modifiedByIMSOrgId": "{MODIFIED_BY}",
+            "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724929442467,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"APPROVED\",\"actionTimeStamp\":1724929617531,\"reason\":\"Done\"}]",
+            "linkingId": "{LINKING_ID}"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
+## 転送パッケージ
+
+サンドボックスツール API の `/transfer` エンドポイントを使用して、新しいパッケージ共有リクエストを取得および作成します。
+
+### 新しい共有リクエスト {#share-request}
+
+公開済みのソース組織のパッケージを取得し、パッケージ ID とターゲット組織 ID を指定したうえで、`/transfer` エンドポイントに対してPOSTリクエストを行ってターゲット組織と共有します。
+
+**API 形式**
+
+```http
+POST /transfer
+```
+
+**リクエスト**
+
+次のリクエストでは、ソース組織パッケージを取得し、ターゲット組織と共有します。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/transfer/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "packageId": "{PACKAGE_ID}",
+      "targets": [
+          {
+              "imsOrgId": "{TARGET_IMS_ORG}"
+          }
+      ]
+  }'
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `packageId` | 共有するパッケージの ID。 | 文字列 | ○ |
+| `targets` | パッケージと共有する組織のリスト。 | 配列 | ○ |
+
+**応答**
+
+応答が成功すると、リクエストされたパッケージの詳細と共有ステータスが返されます。
+
+```json
+[
+    {
+        "id": "{ID}",
+        "version": 0,
+        "createdDate": 1726480559313,
+        "modifiedDate": 1726480559313,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceIMSOrgId": "{ORG_ID}",
+        "targetIMSOrgId": "{TARGET_ID}",
+        "packageId": "{PACKAGE_ID}",
+        "status": "PENDING",
+        "initiatedBy": "acme@3ec9197a65a86f34494221.e",
+        "transferDetails": {
+            "messages": [
+                "Fetched Package",
+                "Fetched Manifest"
+            ],
+            "additionalMetadata": null
+        },
+        "requestType": "PRIVATE"
+    }
+]
+```
+
+### ID による共有リクエストの取得 {#fetch-transfer-by-id}
+
+転送 ID を指定しながら `/transfer/{TRANSFER_ID}` エンドポイントに対してGETリクエストを実行して、共有リクエストの詳細を取得します。
+
+**API 形式**
+
+```http
+GET /transfer/{TRANSFER_ID}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{TRANSFER_ID}` | 取得する転送の ID。 |
+
+**リクエスト**
+
+次のリクエストは、{TRANSFER_ID} という ID の転送を取得します。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/0c843180a64c445ca1beece339abc04b \
+  -H 'x-api-key: {API__KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+**応答**
+
+成功の応答は、共有リクエストの詳細を返します。
+
+```json
+{
+    "id": "{ID}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "sourceOrgName": "{SOURCE_ORG}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "targetOrgName": "{TARGET_ORG}",
+    "packageId": "{PACKAGE_ID}",
+    "packageName": "{PACKAGE_NAME}",
+    "status": "COMPLETED",
+    "initiatedBy": "{INITIATED_BY}",
+    "createdDate": 1724442856000,
+    "transferDetails": {
+        "messages": [
+            "Fetched Package",
+            "Fetched Manifest",
+            "Tenant Identified",
+            "Fetched Sandbox Id",
+            "Fetched Blob Files",
+            "Message Published to Kafka",
+            "Completed Transfer"
+        ],
+        "additionalMetadata": null
+    },
+    "requestType": "PRIVATE"
+}
+```
+
+### 共有リストを取得 {#transfers-list}
+
+`/transfer/list?{QUERY_PARAMETERS}` エンドポイントに対してGETリクエストを実行し、必要に応じてクエリパラメーターを変更することで、転送リクエストのリストを取得します。
+
+**API 形式**
+
+```http
+GET `/transfer/list?{QUERY_PARAMETERS}`
+```
+
+| パラメーター | 許容値/デフォルト値 |
+| --- | --- |
+| `property` | ステータスなど、フィルタリングに使用するプロパティを指定します。 ステータスに指定できる値は、`COMPLETED`、`PENDING`、`IN_PROGRESS`、`FAILED` です。 |
+| `start` | start のデフォルト値は `0` です。 |
+| `limit` | limit のデフォルト値は `20` です。 |
+| `orderBy` | 順序には、`createdDate` フィールドのみ使用できます。 |
+
+**リクエスト**
+
+次のリクエストは、指定された検索パラメーターから転送リクエストのリストを取得します。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/list?property=status==COMPLETED&start=0&limit=2&orderBy=-createdDate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+**応答**
+
+応答が成功すると、指定された検索パラメーターからすべての転送リクエストのリストが返されます。
+
+```json
+{
+    "totalElements": 43,
+    "currentPage": 0,
+    "totalPages": 22,
+    "hasPreviousPage": false,
+    "hasNextPage": true,
+    "data": [
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_ORG}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "{PACKAGE_NAME}",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1726129077000,
+            "createdDate": 1726129062000,
+            "transferDetails": {
+                "messages": [
+                    "Fetched Package",
+                    "Fetched Manifest",
+                    "Tenant Identified",
+                    "Fetched Sandbox Id",
+                    "Fetched Blob Files",
+                    "Message Published to Kafka",
+                    "Completed Transfer",
+                    "Finished with status: COMPLETED"
+                ],
+                "additionalMetadata": null
+            },
+            "requestType": "PRIVATE"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_ORG}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "{PACKAGE_NAME}",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1726066046000,
+            "createdDate": 1726065936000,
+            "transferDetails": {
+                "messages": [
+                    "Fetched Package",
+                    "Fetched Manifest",
+                    "Tenant Identified",
+                    "Fetched Sandbox Id",
+                    "Fetched Blob Files",
+                    "Message Published to Kafka",
+                    "Completed Transfer",
+                    "Finished with status: COMPLETED"
+                ],
+                "additionalMetadata": null
+            },
+            "requestType": "PRIVATE"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
+### パッケージの可用性をプライベートからパブリックに更新 {#update-availability}
+
+`/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` エンドポイントに対してGETリクエストを実行して、パッケージをプライベートからパブリックに変更します。 デフォルトでは、パッケージは非公開で作成されます。
+
+**リクエスト**
+
+次のリクエストは、パッケージの可用性をプライベートからパブリックに変更します。
+
+```shell
+curl -X GET \
+  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -d '{
+      "id":"{ID}",
+      "action":"UPDATE",
+      "packageVisibility":"PUBLIC"
+  }'
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `id` | 更新するパッケージの ID。 | 文字列 | ○ |
+| `action` | 表示を公開に更新するには、アクション値を **UPDATE** にする必要があります。 | 文字列 | ○ |
+| `packageVisbility` | 表示を更新するには、packageVisibility の値を **PUBLIC** にする必要があります。 | 文字列 | ○ |
+
+**応答**
+
+応答が成功すると、パッケージとその表示に関する詳細が返されます。
+
+```json
+{
+    "id": "{ID}",
+    "version": 7,
+    "createdDate": 1729624618000,
+    "modifiedDate": 1729658596340,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "acme",
+    "imsOrgId": "{ORG_ID}",
+    "packageType": "PARTIAL",
+    "expiry": 1737434596325,
+    "status": "PUBLISH_FAILED",
+    "packageVisibility": "PUBLIC",
+    "artifactsList": [
+        {
+            "id": "{ID}",
+            "type": "PROFILE_SEGMENT",
+            "found": false,
+            "count": 0,
+            "title": "Acme Profile Segment"
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "acme-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    }
+}
+```
+
+### 公開パッケージをインポートするリクエスト {#pull-public-package}
+
+`/transfer/pullRequest` エンドポイントに対してPOSTリクエストを行うことで、公開されているソース組織からパッケージを読み込みます。
+
+**API 形式**
+
+```http
+POST /transfer/pullRequest
+```
+
+**リクエスト**
+
+次のリクエストは、パッケージをインポートし、可用性をパブリックに設定します。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/transfer/pullRequest \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
+  }'
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `imsOrgId` | パッケージのソース組織の ID。 | 文字列 | ○ |
+| `packageId` | インポートするパッケージの ID。 | 文字列 | ○ |
+
+**応答**
+
+応答が成功すると、読み込んだパブリックパッケージの詳細が返されます。
+
+```json
+{
+    "id": "{ID}",
+    "version": 0,
+    "createdDate": 1729658890425,
+    "modifiedDate": 1729658890425,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "packageId": "{PACKAGE_ID}",
+    "status": "PENDING",
+    "initiatedBy": "{INITIATED_BY}",
+    "pipelineMessageId": "{MESSAGE_ID}",
+    "requestType": "PUBLIC"
+}
+```
+
+### 公開パッケージのリスト {#list-public-packages}
+
+`/transfer/list?{QUERY_PARAMS}` エンドポイントに対してGETリクエストを実行することで、公開された可視性を持つパッケージのリストを取得します。
+
+**API 形式**
+
+```http
+GET /transfer/list?{QUERY_PARAMS}
+```
+
+| パラメーター | 許容値/デフォルト値 |
+| --- | --- |
+| `property` | ステータスなど、フィルタリングに使用するプロパティを指定します。 ステータスに指定できる値は、`COMPLETED` および `FAILED` です。 |
+| `start` | start のデフォルト値は `0` です。 |
+| `limit` | limit のデフォルト値は `20` です。 |
+| `orderBy` | 順序には、`createdDate` フィールドのみ使用できます。 |
+| `requestType` | `PUBLIC` または `PRIVATE` を受け入れます。 |
+
+**リクエスト**
+
+次のリクエストは、公開されているパッケージのリストを取得します。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+**応答**
+
+応答が成功すると、公開パッケージとその詳細のリストが返されます。
+
++++応答を表示
+
+```json
+{
+    "totalElements": 14,
+    "currentPage": 0,
+    "totalPages": 1,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "data": [
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public package demo",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729359318000,
+            "createdDate": 1729359316000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public package demo",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729359284000,
+            "createdDate": 1729359283000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Test Private Flow Final",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284462000,
+            "createdDate": 1729275962000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOUCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Fest",
+            "status": "FAILED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284104000,
+            "createdDate": 1729253854000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284667000,
+            "createdDate": 1729253421000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284957000,
+            "createdDate": 1729253143000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284562000,
+            "createdDate": 1729252975000,
+            "requestType": "PUBLIC"
+        },
+        {
+               "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Private Package Test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284262000,
+            "createdDate": 1729229755000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Demo Package 1016",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284784000,
+            "createdDate": 1729208888000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284934000,
+            "createdDate": 1729153097000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284912000,
+            "createdDate": 1729153043000,
+            "requestType": "PUBLIC"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
++++
+
+## パッケージペイロード（#package-payload）をコピー
+
+リクエストパスにパッケージの対応する ID を含む `/packages/payload` エンドポイントに対してGETリクエストを実行することで、公開パッケージのペイロードをコピーできます。
+
+**API 形式**
+
+```http
+GET /packages/payload/{PACKAGE_ID}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{PACKAGE_ID}` | コピーするパッケージの ID。 |
+
+**リクエスト**
+
+次のリクエストでは、{PACKAGE_ID} という ID を持つパッケージのペイロードを取得しています。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
+  }'
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `imsOrdId` | パッケージが属する組織の ID。 | 文字列 | ○ |
+| `packageId` | リクエストするペイロードのパッケージの ID。 | 文字列 | ○ |
+
+**応答**
+
+応答が成功すると、パッケージのペイロードが返されます。
+
+```json
+{
+    "imsOrgId": "{ORG_ID}",
+    "packageId": "{PACKAGE_ID}"
 }
 ```
