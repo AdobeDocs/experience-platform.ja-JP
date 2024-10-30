@@ -2,10 +2,10 @@
 title: 拡張機能のエンドツーエンドテストのアップロードと実装
 description: Adobe Experience Platform で拡張機能を検証、アップロード、テストする方法について説明します。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 92%
+source-wordcount: '2345'
+ht-degree: 86%
 
 ---
 
@@ -43,9 +43,9 @@ Adobe Experience Platformでタグに使用するテクニカルアカウント�
 
 >[!IMPORTANT]
 >
->Adobe I/O で統合を作成するには、Experience Cloud 組織管理者または Experience Cloud 組織開発者である必要があります。
+>Adobe I/OでExperience Cloudを作成するには、統合組織管理者またはExperience Cloud組織開発者である必要があります。
 
-統合を作成できない場合は、適切な権限を持っていない可能性があります。この場合は、組織管理者が手順を完了するか、開発者として割り当てる必要があります。
+統合を作成できない場合は、適切な権限がない可能性があります。 この場合は、組織管理者が手順を完了するか、開発者として割り当てる必要があります。
 
 ## 拡張機能パッケージのアップロード {#upload}
 
@@ -61,14 +61,16 @@ npx @adobe/reactor-uploader
 
 `npx`：npm パッケージをダウンロードして実行できます。実際にはこのパッケージをコンピューターにインストールする必要はありません。これは、アップローダを実行する最も簡単な方法です。
 
-アップローダでは、複数の情報を入力する必要があります。テクニカルアカウント ID、API キー、およびその他の情報は、Adobe I/O コンソールから取得できます。I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL 表示]**」を選択します。
+>[!NOTE]
+> デフォルトでは、アップローダは、サーバー間 OAuth フローのAdobe I/O資格情報を想定します。 従来の `jwt-auth` 資格情報
+> 2025 年 1 月 1 日（PT）に廃止されるまで `npx @adobe/reactor-uploader@v5.2.0` を実行して使用できます。 必要なパラメーター
+> `jwt-auth` のバージョンを実行するには、[ こちら ](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) を参照してください。
 
-- 秘密鍵へのパス：/path/to/private.keyこれは、前述の手順 2 で秘密鍵を保存した場所です。
-- 組織 ID：先ほど開いた I/O コンソールの概要ページからコピーして貼り付けます。
-- テクニカルアカウント ID：これを I/O コンソールからコピーして貼り付けます。
-- API キー：これを I/O コンソールからコピーして貼り付けます。
-- クライアントシークレットとはこれを I/O コンソールからコピーして貼り付けます。
-- アップロードする拡張機能パッケージへのパス：/path/to/extension_package.zip.zip パッケージを含むディレクトリ内からアップローダを呼び出す場合は、パスを入力する代わりに、リストからアップローダを選択するだけで済みます。
+アップローダでは、いくつかの情報のみを入力するように求められます。 `clientId` と `clientSecret` は、Adobe I/Oコンソールから取得できます。 I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL 表示]**」を選択します。
+
+- あなたの `clientId` は何ですか。 これを I/O コンソールからコピーして貼り付けます。
+- あなたの `clientSecret` は何ですか。 これを I/O コンソールからコピーして貼り付けます。
+- .zip パッケージを含むディレクトリ内からアップローダを呼び出す場合は、パスを入力する代わりに、リストからアップローダを選択するだけで済みます。
 
 拡張機能パッケージがアップロードされ、アップローダによって拡張パッケージの ID が提供されます。
 
@@ -79,6 +81,8 @@ npx @adobe/reactor-uploader
 >[!NOTE]
 >
 >アップローダを頻繁に実行する予定がある場合、毎回これらの情報を入力するのが負担になる場合があります。これらは、コマンドラインから引数として渡すこともできます。詳細については、NPM ドキュメントの[コマンドラインの引数に関する節](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments)を参照してください。
+
+API を使用して拡張機能のアップロードを直接管理する場合は、拡張機能パッケージの [ 作成 ](../../api/endpoints/extension-packages.md/#create) または [ 更新 ](../../api/endpoints/extension-packages.md#update) 呼び出し例の詳細を API ドキュメントで参照してください。
 
 ## 開発プロパティの作成 {#property}
 

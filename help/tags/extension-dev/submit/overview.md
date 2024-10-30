@@ -2,10 +2,10 @@
 title: 拡張機能の送信プロセスの概要
 description: 開発からリリースまで、Adobe Experience Platform で拡張機能を送信する手順について説明します。
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 100%
+source-wordcount: '231'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 1. [拡張機能開発のためのユーザーアクセスを付与する](./access.md)
 1. [拡張機能の開発](./develop.md)
 1. [Exchange リストの作成](./create-listing.md)
-1. 拡張機能パッケージを作成する
+1. [拡張機能パッケージの zip の作成](./create-extension-package-zip.md)
 1. [拡張機能をアップロードしてテストする](./upload-and-test.md)
 1. [拡張機能をリリースする](./release.md)
 

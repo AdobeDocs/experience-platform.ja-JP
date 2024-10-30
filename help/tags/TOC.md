@@ -6,10 +6,10 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 97%
+source-wordcount: '778'
+ht-degree: 96%
 
 ---
 
@@ -265,6 +265,7 @@ ht-degree: 97%
       * [ユーザーアクセスの許可](./extension-dev/submit/access.md)
       * [拡張機能の開発](./extension-dev/submit/develop.md)
       * [Exchange リストの作成](./extension-dev/submit/create-listing.md)
+      * [拡張機能パッケージ zip の作成](./extension-dev/submit/create-extension-package-zip.md)
       * [エンドツーエンドテストのアップロードと実装](./extension-dev/submit/upload-and-test.md)
       * [拡張機能のリリース](./extension-dev/submit/release.md)
    * [拡張機能の設定](./extension-dev/configuration.md)
