@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2024年10月
 description: Adobe Experience Platform の 2024年10月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 25%
@@ -15,12 +15,12 @@ ht-degree: 25%
 
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
-- [ ダッシュボード {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [データ収集 {#collection}](#data-collection-collection)
-- [宛先 {#destinations}](#destinations-destinations)
-- [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-- [サンドボックス {#sandboxes}](#sandboxes-sandboxes)
-- [ソース {#sources}](#sources-sources)
+- [ダッシュボード](#dashboards)
+- [データ収集](#data-collection-)
+- [宛先](#destinations)
+- [セグメント化サービス](#segmentation-service)
+- [サンドボックス](#sandboxes)
+- [ソース](#sources)
 
 ## ダッシュボード {#dashboards}
 
@@ -40,7 +40,7 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 
 アクセス権限の付与方法やカスタムウィジェットの作成方法など、ダッシュボードの詳細については、まず[ダッシュボードの概要](../../dashboards/home.md)を参照してください。
 
-## データ収集 {#collection}
+## データ収集 {#data-collection}
 
 Adobe Experience Platformは、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Experience PlatformEdge Networkに送信します。そこでデータを強化、変換、AdobeまたはAdobe以外の宛先への配信を可能にする一連のテクノロジーを提供します。
 
