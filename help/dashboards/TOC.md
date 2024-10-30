@@ -5,10 +5,10 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
 role: Developer,User
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 63%
+source-wordcount: '142'
+ht-degree: 64%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 63%
 * [ダッシュボードを PDF にダウンロード](download.md)
 * SQL インサイト：クエリのプロ モード {#sql-insights-query-pro-mode}
    * [概要](sql-insights-query-pro-mode/overview.md)
+   * Data Distiller テンプレート {#templates}
+      * [概要](sql-insights-query-pro-mode/templates/overview.md)
+      * [高度なオーディエンスの重複](sql-insights-query-pro-mode/templates/overlaps.md)
+      * [オーディエンスの比較](sql-insights-query-pro-mode/templates/comparison.md)
+      * [オーディエンスのトレンド](sql-insights-query-pro-mode/templates/trends.md)
+      * [オーディエンス ID の重複](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * フィルター {#filters}
       * [日付フィルター](sql-insights-query-pro-mode/filters/date-filter.md)
       * [ グローバルフィルター ](sql-insights-query-pro-mode/filters/global-filter.md)
@@ -51,7 +57,7 @@ ht-degree: 63%
 * のインサイトのユースケー {#insights-use-cases}
    * [同意分析](insights-use-cases/consent-analysis.md)
 * で使用可能なデータモデ {#data-models}
-   * [Real-time Customer Data Platform Insights データモデル B2B エディション](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-time Customer Data Platform Insights データモデル B2B edition](data-models/cdp-insights-data-model-b2b.md)
    * [Real-time Customer Data Platform Insights データモデル B2C エディション](data-models/cdp-insights-data-model-b2c.md)
 * アプリケーションの統合 {#integrations}
    * [Power BI](integrations/power-bi.md)

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2024年10月
 description: Adobe Experience Platform の 2024年10月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a381bdc45ee9c3c7ffb32bb7a7ec43a1233d1556
+source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 31%
+source-wordcount: '1159'
+ht-degree: 25%
 
 ---
 
@@ -15,29 +15,30 @@ ht-degree: 31%
 
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
-- [データ収集](#data-collection)
-- [宛先](#destinations)
-- [セグメント化サービス](#segmentation-service)
-- [サンドボックス](#sandboxes)
-- [ソース](#sources)
+- [ ダッシュボード {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
+- [データ収集 {#collection}](#data-collection-collection)
+- [宛先 {#destinations}](#destinations-destinations)
+- [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
+- [サンドボックス {#sandboxes}](#sandboxes-sandboxes)
+- [ソース {#sources}](#sources-sources)
 
-<!-- ## Dashboards {#dashboards}
+## ダッシュボード {#dashboards}
 
-Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+Experience Platformでは、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを表示できる複数のダッシュボードを提供しています。
 
-**New or updated features**
+**新機能または更新された機能**
 
-| Feature | Description |
+| 機能 | 説明 |
 | --- | --- |
-| Data Distiller Templates | Explore multiple templates to gain structured insights into audience data. Use dashboards like **Advanced [!UICONTROL Audience Overlaps]**, **[!UICONTROL Audience Comparison]**, **[!UICONTROL Audience Trends]**, and **[!UICONTROL Audience Identity Overlaps]** to make data-driven decisions, optimize segmentation, and enhance engagement strategies. See the [Data Distiller Templates guide](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) for more details. |
-| Advanced Audience Overlaps | Quickly analyze audience intersections for specific audiences or view all overlaps to uncover valuable insights across your entire audience set. Use these insights to refine segmentation, reduce redundant messaging, and create more targeted campaigns for improved marketing efficiency. See the [Advanced Audience Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) for more details. |
-| Audience Comparison enhancements | View a side-by-side comparison of key metrics between different audience groups using the **Audience Comparison** dashboard. With this dashboard you can select specific time frames and KPIs, such as audience size and identity composition, to make more informed decisions about audience segmentation and targeting strategies. Read the [Audience Comparison guide](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) for more information. |
-| Audience Trends Visualization | Analyze audience metrics over time with the **[!UICONTROL Audience Trends]** dashboard. Visualize trends for audience size, number of identities, and number of single identity profiles to help you monitor audience evolution, measure growth, and refine your engagement strategies. See the [Audience Trends guide](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) for more details. |
-| Identity Overlaps Analysis | Analyze identity overlaps in selected audiences with the **[!UICONTROL Audience Identity Overlaps]** dashboard. View identity trends and breakdowns to understand how different identity types relate within your audience, enhancing identity stitching and improving customer segmentation accuracy. Refer to the [Audience Identity Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) for more details. |
+| Data Distiller テンプレート | 複数のテンプレートを調べて、オーディエンスデータに対する構造化されたインサイトを得ます。 **詳細 [!UICONTROL  オーディエンスの重複]**、**[!UICONTROL オーディエンス比較]**、**[!UICONTROL オーディエンスの傾向]**、**[!UICONTROL オーディエンス ID の重複]** などのダッシュボードを使用して、データ駆動型の決定を行い、セグメント化を最適化し、エンゲージメント戦略を強化します。 詳しくは、[Data Distiller テンプレートガイド ](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) を参照してください。 |
+| 高度なオーディエンスの重複 | 特定のオーディエンスのオーディエンスの交差をすばやく分析したり、すべての重複を表示してオーディエンスセット全体にわたる有益なインサイトを明らかにしたりできます。 これらのインサイトを使用して、セグメント化を絞り込み、重複するメッセージを減らし、よりターゲットを絞り込んだキャンペーンを作成してマーケティング効率を向上させます。 詳しくは、[ 高度なオーディエンスの重複ガイド ](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) を参照してください。 |
+| オーディエンス比較の機能強化 | **オーディエンス比較** ダッシュボードを使用して、異なるオーディエンスグループ間で主要指標を並べて比較できます。 このダッシュボードを使用すると、オーディエンスサイズや ID 構成など、特定の時間枠と KPI を選択して、オーディエンスのセグメント化とターゲティング戦略に関して、より十分な情報に基づいた意思決定を行うことができます。 詳しくは、[ オーディエンス比較ガイド ](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) を参照してください。 |
+| オーディエンスのトレンドのビジュアライゼーション | **[!UICONTROL オーディエンスの傾向]** ダッシュボードを使用して、オーディエンス指標を経時的に分析します。 オーディエンスサイズ、ID 数および単一 ID プロファイル数の傾向を視覚化し、オーディエンスの進化を監視、成長を測定し、エンゲージメント戦略を絞り込むのに役立ちます。 詳しくは、[ オーディエンスの傾向ガイド ](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) を参照してください。 |
+| ID 重複分析 | **[!UICONTROL オーディエンス ID の重複]** ダッシュボードを使用して、選択したオーディエンスの ID の重複を分析します。 ID のトレンドと分類を表示して、様々な ID タイプがオーディエンス内でどのように関連するかを理解し、ID の関連付けを強化し、顧客のセグメント化の精度を向上させます。 詳しくは、[ オーディエンス ID の重複ガイド ](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md). -->
+アクセス権限の付与方法やカスタムウィジェットの作成方法など、ダッシュボードの詳細については、まず[ダッシュボードの概要](../../dashboards/home.md)を参照してください。
 
 ## データ収集 {#collection}
 
