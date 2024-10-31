@@ -2,9 +2,9 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1732'
 ht-degree: 2%
 
 ---
@@ -150,6 +150,8 @@ John と Jane がデバイスを共有する場合、ECID （web ブラウザー
 詳しくは、[ 高度なライフサイクル管理の概要 ](../../hygiene/home.md) を参照してください。
 
 ### 計算属性
+
+計算済み属性では、名前空間の優先順位を使用して計算属性値を保存します。 特定のイベントについて、名前空間の優先順位が最も高い ID には、計算属性の値が書き込まれます。 詳しくは、[ 計算属性 UI ガイド ](../../profile/computed-attributes/ui.md) を参照してください。
 
 計算済み属性では、名前空間の優先度を使用して値が計算されません。 計算属性を使用する場合は、CRMID が WebSDK のプライマリ ID として指定されていることを確認する必要があります。 詳しくは、[ 計算属性 UI ガイド ](../../profile/computed-attributes/ui.md) を参照してください。
 
