@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 77%
+source-wordcount: '2044'
+ht-degree: 73%
 
 ---
 
@@ -15,6 +15,26 @@ ht-degree: 77%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
+
+## バージョン 2.24.0 - 2024年10月31日（PT）
+
+**新機能**
+
+- [ データストリームの上書き ](../datastreams/overrides.md) がメディアセッションの開始時にサポートされるようになりました。
+
+- レンダリング成功モニタリングフックでAdobe Target応答トークンがサポートされるようになりました。
+
+**修正点および改善点**
+
+- 複数のアプリ内メッセージが返される場合は、優先度が最も高いメッセージのみが表示されます。 その他は抑制されたとおりに記録されます。
+- 空のデータストリームの上書きはサーバーに送信されなくなり、Edge Network側のルーティング設定との競合の可能性が減ります。
+- 他のAdobe SDK と整合させるために、次のログメッセージコンポーネント名を変更しました。
+   - `DecisioningEngine` の名前は `RulesEngine` に変更されました
+   - `LegacyMediaAnalytics` の名前は `MediaAnalyticsBridge` に変更されました
+   - `Privacy` の名前は `Consent` に変更されました
+- デフォルトのコンテンツ項目が [`applyPropositions`](../web-sdk/commands/applypropositions.md) を使用してレンダリングされる際に発生していたエラーを修正しました。
+- Adobe Targetの移動およびサイズ変更アクションにおける CSS エラーを修正しました。
+- 応答から `machineLearning` キー [`sendEvent`](../web-sdk/commands/sendevent/overview.md) 削除しました。
 
 ## バージョン 2.23.0 - 2024年9月19日（PT）
 

@@ -2,16 +2,25 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
 workflow-type: tm+mt
-source-wordcount: '2291'
-ht-degree: 83%
+source-wordcount: '2332'
+ht-degree: 82%
 
 ---
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
+
+## バージョン 2.27.0 - 2024年10月31日（PT）
+
+**新機能**
+
+- [ データストリームの上書き ](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) に、Experience CloudソリューションとAdobe Experience Platform サービスを無効にする設定が含まれるようになりました。
+- メディアセッションに [ データストリームの上書き ](../web-sdk/web-sdk-extension-configuration.md) を作成できるようになりました。
+
+Adobe Experience Platform Web SDK のバージョン 2.24.0 が含まれます。
 
 ## バージョン 2.26.1 - 2024年9月19日（PT）
 
