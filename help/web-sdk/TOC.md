@@ -6,7 +6,7 @@ breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
 role: Developer
-source-git-commit: 02ae1fce01895d83d9c68248397e5288613ffe58
+source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 52%
@@ -76,7 +76,6 @@ ht-degree: 52%
    * [パーソナライズされたコンテンツのレンダリング](personalization/rendering-personalization-content.md)
    * [ハイブリッド実装を使用したパーソナライゼーション](personalization/hybrid-personalization.md)
    * [フリッカーの管理](personalization/manage-flicker.md)
-   * [フックの監視](monitoring-hooks.md)
    * Adobe Target {#adobe-target}
       * [概要](personalization/adobe-target/target-overview.md)
       * [シングルページアプリケーションの実装](personalization/adobe-target/spa-implementation.md)
@@ -109,6 +108,6 @@ ht-degree: 52%
    * [デバッグメソッド](use-cases/debugging.md)
    * [複数の Web SDK インスタンスの使用](use-cases/multiple-instances.md)
    * [上位および下位のページイベントの設定](use-cases/top-bottom-page-events.md)
-
+* [フックの監視](monitoring-hooks.md)
 * [よくある質問](faq.md)
 * [リソース](resources.md)
