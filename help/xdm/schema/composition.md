@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマ構成の基本
 description: エクスペリエンスデータモデル（XDM）スキーマと、Adobe Experience Platformでスキーマを構成するための構成要素、原則およびベストプラクティスについて説明します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4365'
 ht-degree: 26%
 
 ---
@@ -223,6 +223,10 @@ Experience Platformには、多くの標準のAdobeフィールドグループ�
 
 使用可能な標準 XDM フィールドグループの最新のリストについては、[ 公式 XDM リポジトリ ](https://github.com/adobe/xdm/tree/master/components/fieldgroups) を参照してください。 または、UI でリソースを表示したい場合は、[XDM コンポーネントの調査 ](../ui/explore.md) に関するガイドを参照してください。
 
+>[!NOTE]
+>
+> 標準 XDM フィールドグループは常に進化しており、一部のフィールドグループは非推奨（廃止予定）になっています。 非推奨フィールドグループの最新のリストについては、公式の XDM リポジトリの [ 非推奨フィールドグループの節 ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) を参照してください。
+
 ### データタイプ {#data-type}
 
 データタイプは、基本リテラルフィールドと同様に、クラスやスキーマの参照フィールド型として使用されます。主な違いは、データタイプがフィールドグループと同じ方法で複数のサブフィールドを定義できることです。 これらの主な違いは、データタイプをフィールドの「データタイプ」として追加することで、スキーマ内の任意の場所に含めることができるということです。 フィールドグループは特定のクラスにのみ適合しますが、データタイプは任意の親クラスまたはフィールドグループに含めることができます。
@@ -238,6 +242,10 @@ Experience Platformでは、共通のデータ構造を記述するための標�
 ![ フルネームのオブジェクトと属性がハイライト表示された個々のユーザーのスキーマエディターの図。](../images/schema-composition/data-type.png)
 
 使用可能な標準 XDM データタイプの最新のリストについては、[ 公式 XDM リポジトリ ](https://github.com/adobe/xdm/tree/master/components/datatypes) を参照してください。 または、UI でリソースを表示したい場合は、[XDM コンポーネントの調査 ](../ui/explore.md) に関するガイドを参照してください。
+
+>[!NOTE]
+>
+> 標準 XDM データタイプは常に進化しており、一部のデータタイプは非推奨（廃止予定）になっています。 非推奨データタイプの最新のリストについては、公式の XDM リポジトリの [ 非推奨データタイプ ](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) の節を参照してください。
 
 ### フィールド {#field}
 
