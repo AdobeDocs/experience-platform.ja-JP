@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 拡張機能のイベントタイプ
 description: Adobe Experience Platform LaunchのAdobe Experience Platform Web SDK 拡張機能で提供されるイベントタイプの使用方法について説明します。
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # イベントタイプ
 
 ここでは、Adobe Experience Platform Web SDK タグ拡張機能で提供されるAdobe Experience Platform イベントタイプについて説明します。 これらは [ ルールの作成 ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=ja) に使用されるので、[`xdm` オブジェクトの `eventType` フィールドと混同しないでください ](/help/web-sdk/commands/sendevent/xdm.md)。
+
+## モニタリングフックのトリガー {#monitoring-hook-triggered}
+
+Adobe Experience Platform Web SDK には、様々なシステムイベントを監視するために使用できるモニタリングフックが含まれています。 これらのツールは、独自のデバッグツールを開発したり、Web SDK ログを取得したりするのに役立ちます。
+
+各モニタリングフックイベントに含まれるパラメーターについて詳しくは、[Web SDK モニタリングフックのドキュメント ](../../../../web-sdk/monitoring-hooks.md) を参照してください。
+
+![ 監視フックイベントタイプを示すタグユーザーインターフェイス画像 ](assets/monitoring-hook-triggered.png)
+
+Web SDK タグ拡張機能は、次の監視フックをサポートしています。
+
+* **[!UICONTROL onInstanceCreated]**：このモニタリングフックイベントは、新しい Web SDK インスタンスが正常に作成されたときにトリガーされます。
+* **[!UICONTROL onInstanceConfigured]**：このモニタリングフックイベントは、[`configure`](../../../../web-sdk/commands/configure/overview.md) コマンドが正常に解決された場合に Web SDK によってトリガーされます
+* **[!UICONTROL onBeforeCommand]**：このモニタリングフックイベントは、他のコマンドが実行される前に Web SDK によってトリガーされます。 このモニタリングフックを使用して、特定のコマンドの設定オプションを取得できます。
+* **[!UICONTROL onCommandResolved]**：このモニタリングフックイベントは、コマンドプロミスを解決する前にトリガーされます。 この関数を使用して、コマンド オプションと結果を確認できます。
+* **[!UICONTROL onCommandRejected]**：この監視フックイベントは、コマンドプロミスが拒否され、エラーの原因に関する情報が含まれる場合にトリガーされます。
+* **[!UICONTROL onBeforeNetworkRequest]**：このモニタリングフックイベントは、ネットワークリクエストが実行される前にトリガーされます。
+* **[!UICONTROL onNetworkResponse]**：このモニタリングフックイベントは、ブラウザーが応答を受信したときにトリガーされます。
+* **[!UICONTROL onNetworkError]**：このモニタリングフックイベントは、ネットワークリクエストが失敗した場合にトリガーされます。
+* **[!UICONTROL onBeforeLog]**：このモニタリングフックイベントは、Web SDK がコンソールに何かをログに記録する前にトリガーされます。
+* **[!UICONTROL onContentRendering]**：このモニタリングフックイベントは、`personalization` コンポーネントによってトリガーされ、パーソナライゼーションコンテンツのレンダリングをデバッグするのに役立ちます。 このイベントは、次のように異なるステータスを持つことができます。
+   * `rendering-started`:Web SDK が提案をレンダリングしようとしていることを示します。 Web SDK が決定範囲またはビューのレンダリングを開始する前に、`data` オブジェクトで `personalization` コンポーネントによってレンダリングされようとしている提案と範囲名を確認できます。
+   * `no-offers`：リクエストされたパラメーターのペイロードを受信しなかったことを示します。
+   * `rendering-failed`: Web SDK が提案をレンダリングできなかったことを示します。
+   * `rendering-succeeded`：決定範囲のレンダリングが完了したことを示します。
+   * `rendering-redirect`: Web SDK がリダイレクト提案を実行することを示します。
+* **[!UICONTROL onContentHiding]**：このモニタリングフックイベントは、事前非表示スタイルが適用または削除されたときにトリガーされます。
+
 
 ## [!UICONTROL  送信イベントの完了 ]
 
