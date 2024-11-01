@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
+source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 80%
+source-wordcount: '357'
+ht-degree: 78%
 
 ---
 
@@ -39,6 +39,16 @@ ht-degree: 80%
       - [ML のエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 環境へのデータの書き出し](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML データパイプラインのエンリッチメントエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Data Distiller統計 {#advanced-statistics}
+   - [概要](advanced-statistics/overview.md)
+   - [特徴エンジニアリング](advanced-statistics/feature-engineering.md)
+   - [ モデル ](advanced-statistics/models.md)
+モデルの実装 {#implement-models}
+      - [モデルの実装](advanced-statistics/implement-models/implement-models.md)
+      - [回帰](advanced-statistics/implement-models/regression.md)
+      - [分類](advanced-statistics/implement-models/classification.md)
+      - [クラスタリング](advanced-statistics/implement-models/clustering.md)
+   - [機能変換](advanced-statistics/feature-transformation.md)
 - Data Distillerのオーディエンス {#data-distiller-audiences}
    - [SQL を使用した外部オーディエンスの構築](data-distiller-audiences/overview.md)
 - 例 {#use-cases}
