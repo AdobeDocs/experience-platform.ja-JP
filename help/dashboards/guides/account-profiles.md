@@ -2,10 +2,10 @@
 title: アカウントプロファイルダッシュボード
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
+source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 8%
+source-wordcount: '2362'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform ユーザーインターフェイス（UI）には、�
 
 ## はじめに
 
-B2B [!UICONTROL  アカウントプロファイル ] ダッシュボードにアクセスするには、[Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) の権利が必要です。
+B2B [!UICONTROL  アカウントプロファイル ](../../rtcdp/b2b-overview.md) ダッシュボードにアクセスするには、[Adobe Real-time Customer Data Platform B2B edition] の権利が必要です。
 
 ## アカウントプロファイルデータ {#data}
 
@@ -79,6 +79,10 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 使用可能な各標準ウィジェットの詳細を確認するには、次のリストからウィジェットの名前を選択します。
 
 * [追加されたアカウントプロファイル](#account-profiles-added)
+* [アカウントあたりの顧客数の概要](#customers-per-account-overview)
+   * [アカウントごとのオポチュニティの概要](#opportunities-per-account-overview)
+   * [アカウントごとのオポチュニティの詳細](#opportunities-per-account-detail)
+   * [アカウントごとの顧客数の詳細](#customers-per-account-detail)
 * [業界別の新しいアカウント](#accounts-by-industry)
 * [タイプ別の新しいアカウント](#accounts-by-type)
 * [人物の役割別の新しい機会](#opportunities-by-person-role)
@@ -94,6 +98,52 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 [!UICONTROL  追加されたアカウントプロファイル ] ウィジェットは、折れ線グラフを使用して、1 日に追加されたアカウントプロファイルの数を一定期間にわたって表示します。 ダッシュボードの上部にあるグローバル日付フィルターを使用して、分析期間を決定します。 日付フィルターが指定されていない場合、デフォルトの動作には、1 年前の日に追加されたアカウントプロファイルが一覧表示されます。 結果を使用して、追加されたアカウントプロファイル数のトレンドを推測できます。
 
 ![ 追加されたアカウントプロファイル ウィジェット ](../images/account-profiles/account-profiles-added.png)
+
+### アカウントあたりの顧客数の概要 {#customers-per-account-overview}
+
+[!UICONTROL  アカウントごとの顧客の概要 ] グラフは、顧客タイプに基づいてアカウントの概要を提供します。 アカウントに直接または間接の顧客があるか、またはなしの顧客があるかを分類する 4 行のテーブルが表示されます。 各カテゴリのアカウントの合計数が表示されます。 グラフは、直接顧客と間接顧客のアカウントの配分を識別するのに役立ちます。
+
+ダイレクト顧客は、`personComponents` ルートを通じてアカウントに直接リンクされた顧客プロファイルです。 この関係はより単純で、顧客とアカウントの間の直接的かつ明示的な接続を伴います。
+
+間接顧客は、`Account-Person` ルートを介してアカウントにリンクされた顧客プロファイルです。 この関係は単純ではなく、通常、他のアカウントや関係を通じて、中間エンティティまたは顧客とアカウントの間のより複雑な接続が必要です。
+
+![ アカウントあたりの顧客数の概要ウィジェット ](../images/account-profiles/customers-per-account-overview-widget.png)
+
+より詳細なインサイトにアクセスするには、[!UICONTROL  アカウントごとの顧客の概要 ] グラフの楕円（**...**）を選択し、ドロップダウンメニューから **[!UICONTROL ドリルスルー]** を選択します。
+
+![ 省略記号ドロップダウンメニューとドリルスルーがハイライト表示されたアカウント別顧客概要ウィジェット ](../images/account-profiles/customers-per-account-overview-dropdown.png)
+
+ドリルスルー・ビューが表示されます。 次に、使用可能なドリルスルーグラフを調べて、B2B データの構造をより深く理解します。 これらのドリルスルーチャートを使用して、顧客プロファイルがリンクされていない、または 1 つ以上の顧客プロファイルが関連付けられているアカウントプロファイルの数を特定できます。 また、それらを使用して、アカウントに関連付けられている直接または間接的な顧客の数を特定することもできます。
+
+* [[!UICONTROL  アカウントごとの顧客詳細 ]](#customers-per-account-detail)
+* [[!UICONTROL  オポチュニティごとのアカウントの概要 ]](#accounts-per-opportunity-overview)
+* [[!UICONTROL  アカウントごとのオポチュニティの詳細 ]](#accounts-per-opportunity-detail)
+
+### [!UICONTROL  ダッシュボードビュー間の移動 ] {#dashboard-view-navigation}
+
+ドリルスルーとアカウントプロファイルダッシュボードを切り替えるには、フォルダーアイコン（![A フォルダーアイコン](../images/account-profiles/folder-icon.png)）を選択し、ドロップダウンメニューから正しい表示を選択します。
+
+![ ナビゲーションドロップダウンメニューがハイライト表示されたアカウントプロファイルダッシュボードのドリルスルー表示。](../images/account-profiles/navigation-dropdown.png)
+
+Platform UI のドリルスルーについて詳しくは、[ ドリルスルーガイド ](../sql-insights-query-pro-mode/drill-through.md) を参照してください。
+
+#### [!UICONTROL  アカウントごとの顧客詳細 ] {#customers-per-account-detail}
+
+[!UICONTROL  アカウントごとの顧客の詳細 ] グラフには、様々な顧客タイプに関連付けられたアカウント数に関する、より詳細な情報が表示されます。 顧客タイプ（直接または間接）別の口座数と、それらに関連付けられた顧客の範囲の詳細を示す 3 列の表が表示されます。 このグラフを使用すると、様々な顧客カテゴリをまたいで顧客が分散している仕組みと、それぞれに関連付けられているアカウントの合計数を把握できます。
+
+![ アカウントあたりの顧客数の詳細ウィジェット ](../images/account-profiles/customers-per-account-detail.png)
+
+#### [!UICONTROL  アカウントごとのオポチュニティの概要 ] {#opportunities-per-account-overview}
+
+[!UICONTROL  アカウントごとのオポチュニティの概要 ] グラフは、オポチュニティを持つ、または持たないアカウントの概要を示します。 この 2 行の表は、商談に関連するアカウントの数をすばやく判断するのに役立ち、アカウント間で商談のエンゲージメントのスナップショットを提供します。
+
+![ アカウントあたりのオポチュニティの概要ウィジェット ](../images/account-profiles/opportunities-per-account-overview.png)
+
+#### [!UICONTROL  アカウントごとのオポチュニティの詳細 ] {#opportunities-per-account-detail}
+
+[!UICONTROL  アカウントごとのオポチュニティの詳細 ] グラフでは、アカウントのオポチュニティの数に基づいて、アカウントのより詳細な分類が提供されます。 この表には、1 から 10 の商談または 100 以上の商談など、商談数の範囲でグループ化されたアカウント数が表示されます。 このグラフは、管理しているオポチュニティの数に基づいて、アカウントがどのように分配されているかを特定するのに役立ちます。
+
+![ アカウントあたりの商談の詳細ウィジェット。](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### 業界別の新しいアカウント {#accounts-by-industry}
 
@@ -185,4 +235,4 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 
 ## 次の手順
 
-このドキュメントでは、[!UICONTROL  アカウントプロファイル ] ダッシュボードの見つけ方と、使用可能なウィジェットに表示される指標について説明しました。 Experience PlatformUI で B2B データの一部としてアカウントプロファイルを使用する方法について詳しくは、Adobe Real-Time CDP B2B Edition の [ アカウントプロファイルの概要 ](../../rtcdp/accounts/account-profile-overview.md) を参照してください。
+このドキュメントでは、[!UICONTROL  アカウントプロファイル ] ダッシュボードの見つけ方と、使用可能なウィジェットに表示される指標について説明しました。 Experience PlatformUI で B2B データの一部としてアカウントプロファイルを使用する方法について詳しくは、B2B editionのAdobe Real-Time CDPの [ アカウントプロファイルの概要 ](../../rtcdp/accounts/account-profile-overview.md) を参照してください。
