@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
+source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
 workflow-type: tm+mt
-source-wordcount: '1951'
-ht-degree: 83%
+source-wordcount: '1952'
+ht-degree: 80%
 
 ---
 
@@ -88,7 +88,7 @@ ht-degree: 83%
 
 ## [!UICONTROL 除外] {#exclude-block}
 
-**[!UICONTROL 除外]**&#x200B;ブロックタイプを使用すると、指定したサブオーディエンスまたは属性を、より大きな新しいオーディエンスから除外できます。
+**[!UICONTROL 除外]** ブロックタイプを使用すると、指定したサブオーディエンスまたは属性を、より大きな新しいオーディエンスから除外できます。
 
 **[!UICONTROL 除外]**&#x200B;ブロックを追加するには、「**+**」アイコン、「**[!UICONTROL 除外]**」の順に選択します。
 
