@@ -1,13 +1,13 @@
 ---
 title: アカウントオーディエンス
 description: アカウントオーディエンスを作成および使用してダウンストリーム宛先でアカウントプロファイルをターゲットにする方法を説明します。
-badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 30%
+source-wordcount: '1518'
+ht-degree: 22%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 30%
 
 >[!AVAILABILITY]
 >
->アカウントオーディエンスは、Real-time Customer Data Platformの [B2B 版およびReal-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) の [B2P 版でのみ使用でき ](../../rtcdp/overview.md#rtcdp-b2p) す。
+>アカウントオーディエンスは、Real-time Customer Data Platformの [B2B edition](../../rtcdp/overview.md#rtcdp-b2b) およびReal-time Customer Data Platformの [B2P Edition](../../rtcdp/overview.md#rtcdp-b2p) でのみ使用できます。
 
 アカウントのセグメント化で、Adobe Experience Platformを使用すると、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングセグメント化エクスペリエンスの完全な使いやすさと洗練さを実現できます。
 
@@ -66,6 +66,39 @@ ht-degree: 30%
 ![ セグメントビルダー内の「オーディエンス」タブがハイライト表示されています。](../images/ui/account-audiences/audiences.png)
 
 セグメントビルダーの使用について詳しくは、[セグメントビルダー UI ガイド](./segment-builder.md)を参照してください。
+
+### 関係の確立 {#relationships}
+
+アカウントオーディエンスの場合、デフォルトでは、セグメントビルダー UI にアカウントとユーザーの間の直接の関係が表示されます。 ただし、アカウントオーディエンスには、他の関係タイプも使用できます。
+
+別の関係タイプを使用するには、![ 設定アイコン ](../../images/icons/settings.png) を選択します。
+
+![ 「フィールド」セクションで設定アイコンがハイライト表示されている様子 ](../images/ui/account-audiences/select-settings.png)
+
+「[!UICONTROL  設定 ]」タブの「**[!UICONTROL フィールドの関係]** セクションで「**[!UICONTROL 関係セレクターを表示]**」を選択します。
+
+![ 「関係セレクターを表示」切替スイッチは、「設定」タブの「フィールドの関係」セクションで選択します。](../images/ui/account-audiences/show-relation-selectors.png)
+
+![ 設定アイコン ](../../images/icons/settings.png) を再度選択して、「[!UICONTROL  フィールド ] タブに戻ります。 これで、「**[!UICONTROL 関係の確立]**」セクションが表示されます。このセクションでは、アカウントがユーザーに接続される方法と、ユーザーがオポチュニティに接続される方法を確立できます。
+
+![ 「関係の確立」セクションがハイライト表示され、アカウントを人物に接続する方法と人物を商談に接続する方法に関するオプションが表示されています。](../images/ui/account-audiences/establish-relationships.png)
+
+アカウントを人物に接続する際は、次のいずれかのオプションを選択できます。
+
+| オプション | 説明 |
+| ------ | ----------- |
+| 直接的な関係 | アカウントと人物の間の直接接続。 これは、人物スキーマの `personComponents` 配列に含まれる `accountID` 値の配列を介して、各ユーザーがリンクされているアカウントを指定します。 このパスは、最も頻繁に使用されます。 |
+| アカウントと人物の関係 | アカウントとユーザーの関係。`accountPersonRelation` オブジェクトで定義されます。 また、このパスを使用すると、各ユーザーを複数のアカウントに接続することもできます。 組織がソースデータから明示的な関係テーブルを定義した場合に使用されます。 |
+| 商談と担当者の関係 | オポチュニティと人物の関係。`opportunityPersonRelation` オブジェクトで定義されます。 これにより、opportunity-person から opportunity に移動してアカウントに接続されます。 これにより、その人物がどの会社の商談に関連付けられているかを説明できます。 |
+
+機会を人物に接続する際は、次のオプションから選択できます。
+
+| オプション | 説明 |
+| ------ | ----------- |
+| アカウント | アカウントとオポチュニティの間の直接接続。 アカウントオーディエンスでこれを使用する場合、このパスによって会社のすべてのユーザーが機会に接続されます。 |
+| 商談と担当者の関係 | 機会と人物の関係。機会 – 人物オブジェクトに基づいています。 このパスは、機会に関与したと特定されたユーザーのみをその機会につなげます。 |
+
+目的の関係を確立したら、必要な人物オーディエンスをセグメント定義に追加できます。
 
 ## オーディエンスをアクティベート {#activate}
 
