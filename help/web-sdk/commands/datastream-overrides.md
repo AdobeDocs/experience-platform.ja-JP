@@ -2,10 +2,10 @@
 title: データストリーム設定の上書き
 description: Web SDK を使用してデータストリームの上書きを設定する方法を説明します。
 exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 2b8ca4bc1d5cf896820a5de95dcdfcd15edc2392
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 14%
+source-wordcount: '1159'
+ht-degree: 10%
 
 ---
 
@@ -24,19 +24,14 @@ ht-degree: 14%
 1. 最初に、データストリーム UI 内の [ データストリーム設定ページ ](../../datastreams/configure.md) でデータストリーム設定の上書きを定義する必要があります。 上書きの設定方法については、[ データストリーム設定の上書き ](../../datastreams/overrides.md#configure-overrides) のドキュメントを参照してください。
 2. UI でデータストリームの上書きを設定したら、次のいずれかの方法で上書きをEdge Networkに送信する必要があります。
    * Web SDK 経由 [ タグ拡張機能 ](#tag-extension)。
-   * `sendEvent` または `configure` Web SDK コマンドを使用する。
-   * Mobile SDK `sendEvent` コマンドを使用します。
+   * [`sendEvent`](../commands/sendevent/overview.md) または [`configure`](../commands/configure/overview.md) Web SDK コマンドを使用する。
+   * Mobile SDK [`sendEvent`](https://developer.adobe.com/client-sdks/home/getting-started/track-events/#send-events-to-edge-network) コマンドを使用します。
 
 Web SDK 設定と特定のコマンド（[`sendEvent`](sendevent/overview.md) など）の両方でオーバーライドを設定した場合、特定のコマンドのオーバーライドが優先されます。
 
-## オブジェクトのプロパティ
-
-このオブジェクト内では次のプロパティを使用できます。
-
-* **データストリームの上書き**：別のデータストリームへの呼び出しを送信します。 この値を設定した場合、データストリーム設定を必要とする他の上書きは、ここで設定したデータストリームで設定する必要があります。
-* **サードパーティ ID 同期コンテナ**:Adobe Audience Managerの宛先サードパーティ ID 同期コンテナの ID。 このフィールドを使用する前に、データストリームの設定でサードパーティ ID コンテナの上書きを設定する必要があります。
-* **Target プロパティトークン**:Adobe Targetの destination プロパティのトークン。 このフィールドを使用する前に、データストリームの設定で Target プロパティトークンの上書きを設定する必要があります。
-* **レポートスイート**:Adobe Analyticsで上書きするレポートスイート ID。 このフィールドを使用する前に、データストリームの設定でレポートスイートの上書きを設定する必要があります。
+>[!NOTE]
+>
+>設定の上書きをExperience Cloudサービスに *無効* する場合は、そのサービスがデータストリーム設定で最初に *有効* されていることを確認する必要があります。 データストリームにサービスを追加する方法について詳しくは、[ データストリームの設定 ](../../datastreams/configure.md#add-services) 方法に関するドキュメントを参照してください。
 
 ## Web SDK タグ拡張機能を使用して、データストリームの上書きをEdge Networkに送信します {#tag-extension}
 
@@ -87,87 +82,143 @@ Web SDK を使用している場合、`edgeConfigOverrides` コマンドを使�
 
 ### Web SDK `sendEvent` コマンドを使用して設定の上書きを送信 {#send-event}
 
-以下の例は、`sendEvent` コマンド上でどのように設定の上書きが表示されるかを示します。
+次の例に、`sendEvent` 呼び出しでサポートされるすべての動的データストリーム設定オプションを示します。
 
-```js {line-numbers="true" highlight="5-25"}
+データストリーム設定でサポートされるすべてのサービスが有効になっている場合、以下のサンプルはこの設定を上書きし、すべてのサービスを無効にします（各サービスの `enabled: false` 設定を参照してください）。
+
+```js
 alloy("sendEvent", {
-  xdm: {
-    /* ... */
-  },
+  renderDecisions: true,
   edgeConfigOverrides: {
-    datastreamId: "{DATASTREAM_ID}"
+    datastreamId: "bfa8fe21-6157-42d3-b47a-78310920b39d",
     com_adobe_experience_platform: {
+      enabled: false,
       datasets: {
         event: {
-          datasetId: "SampleEventDatasetIdOverride"
-        }
-      }
+          datasetId: "64b6f949a8a6891ca8a28911",
+        },
+      },
+      com_adobe_edge_ode: {
+        enabled: false,
+      },
+      com_adobe_edge_segmentation: {
+        enabled: false,
+      },
+      com_adobe_edge_destinations: {
+        enabled: false,
+      },
+      com_adobe_edge_ajo: {
+        enabled: false,
+      },
     },
     com_adobe_analytics: {
-      reportSuites: [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-        ]
+      enabled: false,
+      reportSuites: ["ujslconfigoverrides3"],
     },
     com_adobe_identity: {
-      idSyncContainerId: "1234567"
+      idSyncContainerId: 34374,
     },
     com_adobe_target: {
-      propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  }
+      enabled: false,
+      propertyToken: "f3fd55e1-a06d-8650-9aa5-c8356c6e2223",
+    },
+    com_adobe_audience_manager: {
+      enabled: false,
+    },
+    com_adobe_launch_ssf: {
+      enabled: false,
+    },
+  },
 });
 ```
 
 | パラメーター | 説明 |
 |---|---|
+| `renderDecisions` |  |
 | `edgeConfigOverrides.datastreamId` | このパラメーターを使用して、`configure` コマンドで定義されたデータストリームとは異なるデータストリームに単一のリクエストを送ることができます。 |
+| `edgeConfigOverrides.com_adobe_experience_platform` | Experience Platformサービスの動的データストリーム設定を定義します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.enabled` | イベントがExperience Platformサービスに送信されるかどうかを指定します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.datasets` | イベントに使用するデータセットを定義します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ode.enabled` | イベントがOffer decisioningサービスに送信されるかどうかを指定します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_segmentation.enabled` | イベントがエッジセグメント化サービスに送信されるかどうかを定義します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_destinations.enabled` | イベントデータをエッジ宛先に送信するかどうかを定義します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled` | イベントデータをAdobe Journey Optimizer サービスに送信するかどうかを指定します。 |
+| `com_adobe_analytics.enabled` | イベントデータをAdobe Analyticsに送信するかどうかを指定します。 |
 | `com_adobe_analytics.reportSuites[]` | Analytics データの送信先のレポートスイートを決定する文字列の配列。 |
-| `com_adobe_identity.idSyncContainerId` | Audience Managerで使用するサードパーティ ID 同期コンテナ。 |
+| `com_adobe_identity.idSyncContainerId` | Audience Managerで使用するサードパーティ ID 同期コンテナ。 この ID 同期コンテナを機能させるには、`com_adobe_audience_manager.enabled` を `true` に設定する必要があります。 それ以外の場合、Audience Managerサービスは無効になります。 |
+| `com_adobe_target.enabled` | イベントデータをAdobe Targetに送信するかどうかを定義します。 |
 | `com_adobe_target.propertyToken` | Adobe Target宛先プロパティのトークン。 |
+| `com_adobe_audience_manager.enabled` | Audience Managerデータをイベントサービスに送信するかどうかを指定します。 |
+| `com_adobe_launch_ssf` | イベントデータをサーバーサイド転送に送信するかどうかを定義します。 |
 
 ### Web SDK `configure` コマンドを使用して設定の上書きを送信 {#send-configure}
 
 以下の例は、`configure` コマンド上でどのように設定の上書きが表示されるかを示します。
 
-```js {line-numbers="true" highlight="8-30"}
+データストリーム設定でサポートされるすべてのサービスが有効になっている場合、以下のサンプルはこの設定を上書きし、すべてのサービスを無効にします（各サービスの `enabled: false` 設定を参照してください）。
+
+```js
 alloy("configure", {
-  defaultConsent: "in",
-  edgeDomain: "etc",
-  edgeBasePath: "ee",
-  datastreamId: "{DATASTREAM_ID}",
-  orgId: "org",
-  debugEnabled: true,
+  orgId: "97D1F3F459CE0AD80A495CBE@AdobeOrg",
+  datastreamId: "db9c70a1-6f11-4563-b0e9-b5964ab3a858",
   edgeConfigOverrides: {
-    "com_adobe_experience_platform": {
-      "datasets": {
-        "event": {
-          datasetId: "SampleProfileDatasetIdOverride"
-        }
-      }
+    com_adobe_experience_platform: {
+      enabled: false,
+      datasets: {
+        event: {
+          datasetId: "64b6f930753dd41ca8d4fd77",
+        },
+      },
+      com_adobe_edge_ode: {
+        enabled: false,
+      },
+      com_adobe_edge_segmentation: {
+        enabled: false,
+      },
+      com_adobe_edge_destinations: {
+        enabled: false,
+      },
+      com_adobe_edge_ajo: {
+        enabled: false,
+      },
     },
-    "com_adobe_analytics": {
-      "reportSuites": [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-      ]
+    com_adobe_analytics: {
+      enabled: false,
+      reportSuites: ["ujslconfigoverrides2"],
     },
-    "com_adobe_identity": {
-      "idSyncContainerId": "1234567"
+    com_adobe_identity: {
+      idSyncContainerId: 34373,
     },
-    "com_adobe_target": {
-      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
+    com_adobe_target: {
+      enabled: false,
+      propertyToken: "01dbc634-07c1-d8f9-ca69-b489a5ac5e94",
+    },
+    com_adobe_audience_manager: {
+      enabled: false,
+    },
+    com_adobe_launch_ssf: {
+      enabled: false,
+    },
   },
-  onBeforeEventSend: function() { /* … */ });
-};
+});
 ```
 
 | パラメーター | 説明 |
 |---|---|
+| `orgId` | Adobeアカウントに対応する IMS 組織 ID。 |
 | `edgeConfigOverrides.datastreamId` | このパラメーターを使用して、`configure` コマンドで定義されたデータストリームとは異なるデータストリームに単一のリクエストを送ることができます。 |
+| `edgeConfigOverrides.com_adobe_experience_platform` | Experience Platformサービスの動的データストリーム設定を定義します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.enabled` | イベントがExperience Platformサービスに送信されるかどうかを指定します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.datasets` | イベントに使用するデータセットを定義します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ode.enabled` | イベントがOffer decisioningサービスに送信されるかどうかを指定します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_segmentation.enabled` | イベントがエッジセグメント化サービスに送信されるかどうかを定義します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_destinations.enabled` | イベントデータをエッジ宛先に送信するかどうかを定義します。 |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled` | イベントデータをAdobe Journey Optimizer サービスに送信するかどうかを指定します。 |
+| `com_adobe_analytics.enabled` | イベントデータをAdobe Analyticsに送信するかどうかを指定します。 |
 | `com_adobe_analytics.reportSuites[]` | Analytics データの送信先のレポートスイートを決定する文字列の配列。 |
-| `com_adobe_identity.idSyncContainerId` | Audience Managerで使用するサードパーティ ID 同期コンテナ。 |
+| `com_adobe_identity.idSyncContainerId` | Audience Managerで使用するサードパーティ ID 同期コンテナ。 この ID 同期コンテナを機能させるには、`com_adobe_audience_manager.enabled` を `true` に設定する必要があります。 それ以外の場合、Audience Managerサービスは無効になります。 |
+| `com_adobe_target.enabled` | イベントデータをAdobe Targetに送信するかどうかを定義します。 |
 | `com_adobe_target.propertyToken` | Adobe Target宛先プロパティのトークン。 |
+| `com_adobe_audience_manager.enabled` | Audience Managerデータをイベントサービスに送信するかどうかを指定します。 |
+| `com_adobe_launch_ssf` | イベントデータをサーバーサイド転送に送信するかどうかを定義します。 |
+

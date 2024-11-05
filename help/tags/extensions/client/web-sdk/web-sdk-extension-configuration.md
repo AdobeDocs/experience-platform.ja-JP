@@ -2,10 +2,10 @@
 title: Web SDK タグ拡張機能の設定
 description: タグ UI でExperience Platform Web SDK タグ拡張機能を設定する方法について説明します。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 5%
+source-wordcount: '2525'
+ht-degree: 4%
 
 ---
 
@@ -170,6 +170,66 @@ Web SDK コマンドを使用して上書きを渡す代わりに、以下に示
 データストリームの上書きは、環境ごとに設定する必要があります。 開発環境、ステージング環境および実稼動環境では、すべて別々のオーバーライドが行われます。 次の画面に示す専用オプションを使用して、設定間でコピーできます。
 
 ![Web SDK タグ拡張機能ページを使用したデータストリーム設定の上書きを示す画像。](assets/datastream-overrides.png)
+
+デフォルトでは、データストリーム設定の上書きは無効になっています。 「**[!UICONTROL データストリーム設定を一致させる]**」オプションがデフォルトで選択されています。
+
+![ データストリーム設定がデフォルト設定を上書きすることを示す Web SDK タグ拡張機能ユーザーインターフェイス ](assets/datastream-override-default.png)
+
+タグ拡張機能でデータストリームの上書きを有効にするには、ドロップダウンメニューから「**[!UICONTROL 有効]**」を選択します。
+
+![ データストリーム設定の上書きの有効設定を示す Web SDK タグ拡張機能ユーザーインターフェイス。](assets/datastream-override-enabled.png)
+
+データストリーム設定の上書きを有効にすると、以下に説明する各サービスの上書きを設定できます。
+
+以下のデータストリーム優先設定は、選択した環境のサーバーサイドのデータストリーム設定およびルールを上書きします。
+
+### Adobe Analytics {#analytics}
+
+このセクションの設定を使用して、Adobe Analytics サービスへのデータルーティングを上書きします。
+
+![Adobe Analytics データストリーム上書き設定を示す Web SDK タグ拡張機能 UI 画像。](assets/datastream-override-analytics.png)
+
+* **[!UICONTROL 有効]**/**[!UICONTROL 無効]**：このドロップダウンメニューを使用して、Adobe Analytics サービスへのデータルーティングを有効または無効にします。
+* **[!UICONTROL レポートスイート]**:Adobe Analyticsの宛先レポートスイートの ID。 値は、データストリーム設定から事前設定された上書きレポートスイート（またはレポートスイートのコンマ区切りリスト）である必要があります。 この設定は、プライマリレポートスイートを上書きします。
+* **[!UICONTROL レポートスイートを追加]**：レポートスイートを追加するには、このオプションを選択します。
+
+### Adobe Audience Manager {#audience-manager}
+
+このセクションの設定を使用して、Adobe Audience Manager サービスへのデータルーティングを上書きします。
+
+![Adobe Audience Manager データストリーム上書き設定を示す Web SDK タグ拡張機能 UI 画像。](assets/datastream-override-audience-manager.png)
+
+* **[!UICONTROL 有効]**/**[!UICONTROL 無効]**：このドロップダウンメニューを使用して、Adobe Audience Manager サービスへのデータルーティングを有効または無効にします。
+* **[!UICONTROL サードパーティ ID 同期コンテナ]**:Audience Manager内の宛先サードパーティ ID 同期コンテナの ID。 この値は、データストリーム設定から事前設定されたセカンダリコンテナである必要があり、プライマリコンテナを上書きします。
+
+### Adobe Experience Platform {#experience-platform}
+
+このセクションの設定を使用して、Adobe Experience Platform サービスへのデータルーティングを上書きします。
+
+![Adobe Experience Platform データストリーム上書き設定を示す Web SDK タグ拡張機能 UI 画像。](assets/datastream-override-experience-platform.png)
+
+* **[!UICONTROL 有効]**/**[!UICONTROL 無効]**：このドロップダウンメニューを使用して、Adobe Experience Platform サービスへのデータルーティングを有効または無効にします。
+* **[!UICONTROL イベントデータセット]**:Adobe Experience Platformの宛先イベントデータセットの ID。 値は、データストリーム設定の事前設定済みセカンダリデータセットである必要があります。
+* **[!UICONTROL Offer decisioning]**：このドロップダウン メニューを使用して、[!DNL Offer Decisioning] サービスへのデータ ルーティングを有効または無効にします。
+* **[!UICONTROL Edge セグメント化]**：このドロップダウンメニューを使用して、[!DNL Edge Segmentation] サービスへのデータルーティングを有効または無効にします。
+* **[!UICONTROL Personalizationの宛先]**：このドロップダウンメニューを使用して、パーソナライゼーションの宛先へのデータルーティングを有効または無効にします。
+* **[!UICONTROL Adobe Journey Optimizer]**：このドロップダウン メニューを使用して、[!DNL Adobe Journey Optimizer] サービスへのデータ ルーティングを有効または無効にします。
+
+### Adobeサーバーサイドイベント転送 {#ssf}
+
+このセクションの設定を使用して、Adobeサーバーサイドイベント転送サービスへのデータルーティングを上書きします。
+
+![Adobeサーバーサイドイベント転送データストリーム上書き設定を示す Web SDK タグ拡張機能 UI 画像。](assets/datastream-override-ssf.png)
+
+* **[!UICONTROL 有効]**/**[!UICONTROL 無効]**：このドロップダウンメニューを使用して、Adobeサーバーサイドイベント転送サービスへのデータルーティングを有効または無効にします。
+
+### Adobe Target {#target}
+
+このセクションの設定を使用して、Adobe Target サービスへのデータルーティングを上書きします。
+
+![Adobe Target データストリーム上書き設定を示す Web SDK タグ拡張機能 UI 画像。](assets/datastream-override-target.png)
+
+* **[!UICONTROL 有効]**/**[!UICONTROL 無効]**：このドロップダウンメニューを使用して、Adobe Target サービスへのデータルーティングを有効または無効にします。
 
 ## 詳細設定を指定
 
