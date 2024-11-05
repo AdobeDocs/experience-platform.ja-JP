@@ -3,14 +3,18 @@ title: Phoenix Sourceの概要
 description: API またはユーザーインターフェイスを使用して Phoenix アカウントをAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 32%
+source-wordcount: '203'
+ht-degree: 29%
 
 ---
 
 # [!DNL Phoenix]
+
+>[!IMPORTANT]
+>
+>[!DNL Phoenix] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
 
 Adobe Experience Platform ソースは、[[!DNL Phoenix]](https://phoenix.apache.org/index.html) などのサードパーティデータベースからのデータ取り込みをサポートしています。 このドキュメントでは、[!DNL Flow Service] API またはExperience Platformユーザーインターフェイスを使用して [!DNL Phoenix] アカウントに接続する前に、必要な情報を提供します。
 

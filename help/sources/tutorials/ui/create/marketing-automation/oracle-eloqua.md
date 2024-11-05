@@ -2,14 +2,18 @@
 title: Platform UI を使用したOracle Eloqua ソース接続の作成
 description: Platform UI を使用してAdobe Experience PlatformをOracle Eloqua に接続する方法を説明します。
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 60%
+source-wordcount: '531'
+ht-degree: 58%
 
 ---
 
 # Platform UI を使用した [!DNL Oracle Eloqua] ソース接続の作成
+
+>[!IMPORTANT]
+>
+>[!DNL Oracle Eloqua] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Oracle Eloqua] ソース接続を作成する手順について説明します。
 

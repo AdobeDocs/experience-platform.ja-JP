@@ -1,11 +1,11 @@
 ---
-title: Flow Service API を使用した Salesforce Marketing Cloudベース接続の作成
-description: Flow Service API を使用して、Experience Platformに対する Salesforce Marketing Cloudアカウントを認証する方法を説明します。
+title: Flow Service API を使用したSalesforce Marketing Cloudベース接続の作成
+description: Flow Service API を使用して、Experience Platformに対してSalesforce Marketing Cloudアカウントを認証する方法を説明します。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 58%
+source-wordcount: '508'
+ht-degree: 56%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
+>[!DNL Salesforce Marketing Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
@@ -46,6 +46,10 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 基本について詳しくは、この [[!DNL Salesforce Marketing Cloud]  ドキュメント ](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>) を参照してください。
 
 ## ベース接続の作成
+
+>[!IMPORTANT]
+>
+>カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 

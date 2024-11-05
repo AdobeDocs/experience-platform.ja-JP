@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Couchbase Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Couchbase をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '211'
 ht-degree: 33%
 
 ---
 
-# （Beta） [!DNL Couchbase] コネクタ
+# [!DNL Couchbase] コネクタ
 
->[!NOTE]
+>[!IMPORTANT]
 >
->[!DNL Couchbase] コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Couchbase] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
 
 Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure] などのデータベースプロバイダーとのネイティブ接続を提供し、これらのシステムからデータを取り込むことができます。 リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのサード・パーティ・データベースがサポートされています。 データベースプロバイダーのサポートには、[!DNL Couchbase] が含まれます。
 

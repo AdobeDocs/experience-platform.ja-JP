@@ -1,11 +1,11 @@
 ---
-title: Ui を使用して Salesforce Marketing CloudアカウントをExperience Platformに接続する
-description: UI を通じて Salesforce Marketing CloudアカウントをExperience Platformに接続する方法を説明します。
+title: SalesforceMarketing Cloudアカウントを UI を使用してExperience Platformに接続する
+description: UI を通じてSalesforceMarketing CloudアカウントをExperience Platformに接続する方法を説明します。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 27%
+source-wordcount: '517'
+ht-degree: 26%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
+>[!DNL Salesforce Marketing Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
 
 このチュートリアルでは、UI を通じて [!DNL Salesforce Marketing Cloud] アカウントをAdobe Experience Platformに接続する方法の手順を説明します。
 
@@ -42,15 +42,19 @@ Platform で [!DNL Salesforce Marketing Cloud] アカウントにアクセスす
 
 ## [!DNL Salesforce Marketing Cloud] アカウントを接続
 
+>[!IMPORTANT]
+>
+>カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
+
 Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] には、Experience Platformでサポートされている様々なソースが表示されます。
 
 カテゴリのリストから適切なカテゴリを選択できます。 検索バーを使用して、特定のソースをフィルタリングすることもできます。
 
-[!UICONTROL  マーケティングオートメーション ] カテゴリで、**[!UICONTROL Salesforce Marketing Cloud]** を選択してから **[!UICONTROL 設定]** を選択します。
+[!UICONTROL  マーケティング自動化 ] カテゴリで、「**[!UICONTROL SalesforceMarketing Cloud]**」を選択し、**[!UICONTROL 設定]** を選択します。
 
-![ ソースカタログと Salesforce Marketing Cloudソースが選択されています。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+![ ソースカタログとSalesforceMarketing Cloudソースが選択されています。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-**[!UICONTROL Salesforce への接続Marketing Cloud]** ページが表示されます。 このページでは、新しいアカウントを作成するか、既存のアカウントを使用できます。
+**[!UICONTROL SalesforceMarketing Cloudに接続]** ページが表示されます。 このページでは、新しいアカウントを作成するか、既存のアカウントを使用できます。
 
 ### 新規アカウント
 
@@ -58,13 +62,13 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![Salesforce Marketing Cloudの新しいアカウントを認証できる、新しいアカウントインターフェイス。](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+![Salesforce Marketing Cloudの新しいアカウントを認証できる新しいアカウントインターフェイス。](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
 
 ### 既存のアカウント
 
 既存のアカウントがある場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、表示されるリストから使用するアカウントを選択します。
 
-![ 既存の Salesforce Marketing Cloudアカウントのリストから選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![ 既存のSalesforce Marketing Cloudアカウントのリストから選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## 次の手順
 

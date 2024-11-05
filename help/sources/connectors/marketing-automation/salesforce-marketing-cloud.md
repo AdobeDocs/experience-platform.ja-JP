@@ -1,17 +1,21 @@
 ---
 solution: Experience Platform
 title: Salesforce Marketing CloudSourceの概要
-description: API またはユーザーインターフェイスを使用して Salesforce Marketing CloudをAdobe Experience Platformに接続する方法について説明します。
+description: API またはユーザーインターフェイスを使用してSalesforce Marketing CloudをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 44%
+source-wordcount: '341'
+ht-degree: 41%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud]
+
+>[!IMPORTANT]
+>
+>[!DNL Salesforce Marketing Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -40,7 +44,7 @@ Experience Platformでは、サードパーティのマーケティング自動�
 
 以下のドキュメントでは、API を使用してを Platform に接続する方法 [!DNL Salesforce Marketing Cloud] ついて説明します。
 
-* [Flow Service API を使用した Salesforce Marketing Cloudベース接続の作成](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Flow Service API を使用したSalesforce Marketing Cloudベース接続の作成](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 * [Flow Service API を使用して、マーケティングの自動処理ソースのデータフローを作成する](../../tutorials/api/collect/marketing-automation.md)
 
@@ -48,5 +52,5 @@ Experience Platformでは、サードパーティのマーケティング自動�
 
 以下のドキュメントでは、ユーザーインターフェイスを使用してと [!DNL Salesforce Marketing Cloud] を Platform に接続する方法について説明します。
 
-* [UI での Salesforce Marketing Cloudソースコネクタの作成](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+* [UI でのSalesforce Marketing Cloudソースコネクタの作成](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [UI でのマーケティングの自動処理ソース接続のデータフローの作成](../../tutorials/ui/dataflow/marketing-automation.md)
