@@ -2,9 +2,9 @@
 title: アカウントプロファイルダッシュボード
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
+source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2397'
 ht-degree: 6%
 
 ---
@@ -100,6 +100,10 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 ![ 追加されたアカウントプロファイル ウィジェット ](../images/account-profiles/account-profiles-added.png)
 
 ### アカウントあたりの顧客数の概要 {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>[!UICONTROL  アカウントごとの顧客概要 ] インサイトとそのドリルスルーグラフ（[!UICONTROL  アカウントごとの顧客詳細 ]、[!UICONTROL  アカウントごとの商談概要 ]、[!UICONTROL  アカウントごとの商談詳細 ]）は、設定したグローバル日付フィルターの影響を受けません。
 
 [!UICONTROL  アカウントごとの顧客の概要 ] グラフは、顧客タイプに基づいてアカウントの概要を提供します。 アカウントに直接または間接の顧客があるか、またはなしの顧客があるかを分類する 4 行のテーブルが表示されます。 各カテゴリのアカウントの合計数が表示されます。 グラフは、直接顧客と間接顧客のアカウントの配分を識別するのに役立ちます。
 
