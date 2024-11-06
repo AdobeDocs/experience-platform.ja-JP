@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zoho CRM ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Zoho CRM を Adobe Experience Platform に接続する方法を説明します。
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 96%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->[!DNL Zoho CRM] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
+>[!DNL Zoho CRM] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。 [!DNL Zoho CRM] ソースの代わりに [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) を使用できます。
 
 Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

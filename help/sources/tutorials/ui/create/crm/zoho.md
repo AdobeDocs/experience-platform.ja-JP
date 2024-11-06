@@ -5,9 +5,9 @@ title: UI での Zoho CRM ソース接続の作成
 type: Tutorial
 description: Adobe Experience Platform の UI を使用して Zoho CRM ソース接続を作成する方法を説明します。
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '559'
 ht-degree: 96%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->[!DNL Zoho CRM] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
+>[!DNL Zoho CRM] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。 [!DNL Zoho CRM] ソースの代わりに [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) を使用できます。
 
 Adobe Experience Platform のソースコネクタには、外部ソースの CRM データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] のユーザーインターフェイスを使用して [!DNL Zoho CRM] ソースコネクタを作成する手順を説明します。
 

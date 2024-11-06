@@ -2,9 +2,9 @@
 title: Experience Platformユーザーインターフェイスを使用して Phoenix アカウントを接続します
 description: ユーザーインターフェイスを使用して Phoenix アカウントを接続し、Phoenix データベースからExperience Platformにデータを取り込む方法を説明します。
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '622'
 ht-degree: 21%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->[!DNL Phoenix] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
+>[!DNL Phoenix] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 [!DNL Phoenix] ソースの代わりに [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) を使用できます。
 
 このチュートリアルでは、[!DNL Phoenix] アカウントを接続し、[!DNL Phoenix] データベースからExperience Platformにデータを取り込む手順について説明します。
 

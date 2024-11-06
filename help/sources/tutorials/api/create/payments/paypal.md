@@ -5,10 +5,10 @@ title: Flow Service API を使用した PayPal ベース接続の作成
 type: Tutorial
 description: Flow Service API を使用して PayPal をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 59%
+source-wordcount: '475'
+ht-degree: 58%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 59%
 
 >[!IMPORTANT]
 >
->[!DNL PayPal] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
+>[!DNL PayPal] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 [!DNL PayPal] ソースの代わりに [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) を使用できます。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

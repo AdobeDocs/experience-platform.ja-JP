@@ -5,9 +5,9 @@ title: UI での Couchbase Sourceの連携の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Couchbase ソース接続を作成する方法を説明します。
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 50%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 50%
 
 >[!IMPORTANT]
 >
->[!DNL Couchbase] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 別の方法として、[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) ソースを使用することもできます。
+>[!DNL Couchbase] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 [!DNL Couchbase] ソースの代わりに [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) を使用できます。
 
 [!DNL Adobe Experience Platform] のSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Couchbase] ソースコネクタを作成する手順を説明します。
 
