@@ -2,9 +2,9 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
+source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -177,6 +177,15 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 この設定の結果、スコアは認証済みイベントを使用してのみ計算されます。
 
 詳しくは、[Attribution AI](../../intelligent-services/attribution-ai/overview.md) および [ 顧客 AI](../../intelligent-services/customer-ai/overview.md) に関するドキュメントを参照してください。
+
+### パートナーが作成した宛先
+
+共有デバイスに関連付けられたプロファイルの更新されたオーディエンスの不適格が、ダウンストリーム宛先に送信されない場合があります。 これは、次のような稀な状況で発生する場合があります。
+
+* オーディエンスの選定は、匿名アクティビティにのみ基づきます。
+* 複数のプロファイルをまたいだログインは短期間で発生します。
+
+パートナーが作成した宛先について詳しくは、[ 宛先の概要 ](../../destinations/home.md#adobe-built-and-partner-built-destinations) を参照してください。
 
 ### Privacy Service
 
