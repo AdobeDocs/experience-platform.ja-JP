@@ -5,9 +5,9 @@ title: プライバシージョブ API エンドポイント
 description: Privacy API を使用してExperience CloudアプリケーションのPrivacy Serviceジョブを管理する方法について説明します。
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 02a95212ff8a018b2b7f0a06978307d08a6915af
+source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1810'
 ht-degree: 45%
 
 ---
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリする規制の種類。使用できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - メモ：これは、**ccpa** 規制に関連するリクエストにも使用されます。</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br> 上記の値が表すプライバシー規制について詳しくは、[ サポートされる規制 ](../regulations/overview.md) の概要を参照してください。 |
+| `{REGULATION}` | クエリする規制の種類。使用できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br> 上記の値が表すプライバシー規制について詳しくは、[ サポートされる規制 ](../regulations/overview.md) の概要を参照してください。 |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `100` で、最大は `1000` です。最大値を超えると、API は 400 コードエラーを返します。 |
 | `{status}` | デフォルトの動作では、すべてのステータスが含まれます。 ステータスタイプを指定すると、リクエストはそのステータスタイプに一致するプライバシージョブのみを返します。 指定できる値は次のとおりです。 <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |

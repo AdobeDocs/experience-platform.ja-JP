@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシー規制の概要
 description: このドキュメントでは、Adobe Experience Cloudでサポートされている様々なプライバシー規制の概要について説明します。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1676'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,7 @@ Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md)
 | CCPA （カリフォルニア州） | [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) は、米国カリフォルニア州の居住者のプライバシー権と消費者保護を強化します。 CCPA は、カリフォルニア州の居住者に新しいデータプライバシー権を提供します。 これには、個人データにアクセスして削除する権利、個人データが（誰に）販売または公開されているかどうかを知る権利、およびデータを第三者に販売することをオプトアウトする権利が含まれます。 |
 | CPRA （カリフォルニア州） | [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) は、カリフォルニア州消費者プライバシー法（CCPA）の一部を拡張および改正しています。 CPRA は、消費者の権利を拡大し、機密性の高い個人情報のより広い定義を通じてカバーされるデータの種類を拡大することにより、カリフォルニア州の消費者データプライバシーに対する新しいベースラインを確立します。 さらに、CPRA は、データプライバシールールの実装と実施に特化した新しい機関であるカリフォルニアプライバシー保護機関を設立しました。 |
 | CTDPA （コネチカット州） | [[!DNL Connecticut Data Privacy Act]](https://portal.ct.gov/AG/Sections/Privacy/The-Connecticut-Data-Privacy-Act) は、コネチカット州の住民のための包括的な消費者プライバシー法であり、個人データに対する一定の権利を住民に付与します。 また、個人データを処理するデータ管理者の責任とプライバシー保護基準も確立します。 CTDPA は、個人として、または世帯コンテキストで行動するコネチカット州の居住者を保護します。 CTDPA は、お客様に対し、お客様の個人データに対するアクセス、訂正、削除、コピーの取得、または販売のオプトアウト、処理、またはプロファイリングを行う権限を付与します。 |
+| DPDPA （デラウェア州） | [[!DNL Delaware Personal Data Privacy Act]](https://legis.delaware.gov/json/BillDetail/GenerateHtmlDocument?legislationId=140388&amp;legislationTypeId=1&amp;docTypeId=2&amp;legislationName=HB154) （DPDPA）は、デラウェア州の居住者に、個人データの販売とターゲット広告のオプトアウトに対するアクセス、修正、削除の権利を付与します。 これは、少なくとも 35,000 人の消費者のデータを処理する企業や、10,000 人以上の消費者に影響を与えるデータ販売から売上高の 20% 以上を獲得する企業に適用されます。 この法律は、消費者のデータ保護の実施、消費者のリクエストに対するタイムリーな対応、違反に対する 60 日間の治療期間を義務付けており、法務省によって施行されています。 |
 | FDBR （フロリダ州） | [[!DNL Florida Digital Bill of Rights]](https://flsenate.gov/Session/Bill/2023/262/BillText/er/HTML) （FDBR）は、フロリダ州の住民に包括的なデータプライバシー権を提供します。 この法律により、個人は、自分の個人データにアクセスし、修正し、削除し、コピーを取得する権利が確保されます。 また、消費者の同意を得ない監視などのオンラインプラットフォームによる特定の行為を禁止し、明確なプライバシー通知やターゲット広告のための個人データの販売または処理をオプトアウトする機能など、データ慣行の透明性を必要とします。 FDBR はフロリダ州法務省に対し、これらの権利を実施し、違反に対して民事罰を科すことを認可している。 法律の下で、データ管理者は、データ主体のリクエストを受信してから 45 日以内にリクエストに対応する義務があります。 |
 | GDPR （欧州連合） | [[!DNL General Data Protection Regulation (GDPR)]](https://gdpr-info.eu) は、アクセス権や忘れられる権利など、欧州経済領域（EEA）のメンバーに対するいくつかの新しいデータプライバシー権を導入しました。 これらの権利は、お客様のビジネスによって個人データが収集された EEA に住むすべての人が、いつでもデータへのアクセスまたは削除をリクエストできることを意味します。<br><br> 英国（Brexit 後）には独自の UK-GDPR 規制があり、EEA 版と同じ権利を国民に提供しています。 |
 | HIPAA （米国） | [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) は、医療の効率を向上させ、医療保険の携行性を向上させ、患者と医療保険メンバーのプライバシーを保護するために作成された米国連邦法です。 HIPAA の下では、個人は自分の情報にアクセスして修正し、医療記録や医療情報のコピーを取得する権利を有する。 対象となるエンティティおよび対象となるエンティティのビジネスアソシエートは、HIPAA 規制に従う必要があります。 |
@@ -37,6 +38,7 @@ Experience Cloudでは、[Adobe Experience Platform Privacy Service](../home.md)
 | NJDPA （ニュージャージー州） | [[!DNL New Jersey Data Protection Act]](https://pub.njleg.state.nj.us/Bills/2022/S0500/332_R6.PDF) は、ニュージャージー州の居住者に情報へのアクセス、訂正、および削除の権利を提供することにより、自身の個人データを管理することを許可します。 データ販売とターゲット広告のオプトアウトメカニズムが含まれます。 この法律は、大量の消費者データを処理し、データ使用の透明性を義務付ける企業を対象としています。 |
 | OCPA （オレゴン） | [[!DNL Oregon Consumer Privacy Act]](https://olis.oregonlegislature.gov/liz/2023R1/Downloads/PublicTestimonyDocument/59856#:~:text=The%20Act%20requires%20controllers%20to,data%3B%20and%20%E2%80%A2%20Contact%20information.) （OCPA）は、オレゴンの居住者に個人データの基本的権利を提供し、そのようなデータを処理する企業に義務を課します。 消費者は、自分のデータのコピーを知り、修正し、削除し、取得する権利を持ち、ターゲット広告や販売のためのデータ処理をオプトアウトします。 同法は、機密データの保護強化、特定の目的を超えたデータ処理に対する同意、データ管理者による包括的なプライバシー通知の提供を義務付けています。 |
 | PDPA （タイ） | この [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) は、タイのデータ所有者を個人データの違法な収集、使用、開示から保護するために導入されました。 欧州連合（EU）の GDPR に触発されたこの規制は、タイ国民に対し、保存されている個人データへのアクセスまたは削除をリクエストする権利を付与します。 |
+| ql25 （ケベック州） | [[!DNL Quebec Law 25]](https://www.canlii.org/en/qc/laws/astat/sq-2021-c-25/latest/sq-2021-c-25.html) （QL25）は、ケベックの居住者のプライバシー権を強化し、グローバル標準に準拠します。 同法は、居住者に対し、個人データへのアクセス、訂正、削除および移転について、明示的な同意、データの最小化および権利を義務付けている。 また、組織は、プライバシー責任者を任命し、プライバシー影響評価を実施し、違反を通知する必要があります。 法的に適用されるコンプライアンス期限と、コンプライアンス違反に対する相当の罰則が適用されます。 |
 | TDPSA （テキサス州） | [[!DNL Texas Data Privacy and Security Act]](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=88R&amp;Bill=HB4) （TDPSA）は、テキサス州における消費者の個人データの収集、使用、処理、および処理を規制します。 2024 年 7 月 1 日より、データにアクセス、修正、削除、コピーの取得、ターゲット広告およびデータ販売のオプトアウトを行う権限を居住者に付与します。 この法律は、テキサス州で事業を行う事業体、またはテキサス州の居住者が消費する製品/サービスを製造する事業体に適用されます。中小企業やその他の特定の組織を除きます。 違反行為には民事罰が科されることがある。 |
 | UCPA （ユタ州） | [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) は、企業が収集した個人データの内容、企業による個人データの使用方法、企業による個人データの販売の有無を消費者が把握できる権利を作成します。 消費者は、ビジネスに対して、自分の個人データの削除または販売の停止を要求できます。 |
 | VCDPA （バージニア） | [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) は、個人データへのアクセス、削除、修正の権利を含む、新しいデータプライバシー権をバージニア州の居住者（「コンシューマー」）に提供します。 また、消費者は、個人データの販売のオプトアウト、個人データに基づくプロファイリングのオプトアウト、および個人広告目的の処理を行う権利を有します。 |
