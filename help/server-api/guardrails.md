@@ -2,9 +2,9 @@
 title: Edge Network Server API のパフォーマンスガードレール
 description: 最適なパフォーマンスガードレール内で Server API を使用する方法を説明します。
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 5%
 
 ---
@@ -21,6 +21,8 @@ Adobeは、使用量の制限を超えたことによるパフォーマンスの
 >[!IMPORTANT]
 >
 >このガードレール ページに加えて、販売注文と対応する [ 製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html) でライセンスの使用権限を確認してください。
+
+このページで説明されているすべてのパフォーマンスガードレールは、IMS 組織レベルで適用されます。 複数の IMS 組織が設定されているユーザーの場合、以下のパフォーマンスガードレールの対象は、各組織に個別に適用されます。 [!DNL IMS Organizations] について詳しくは、[Experience Platform用語集 ](../landing/glossary.md) を参照してください。
 
 ## 定義
 
