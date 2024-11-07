@@ -4,10 +4,10 @@ title: Oracle Service Cloud ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Oracle Service Cloud を Adobe Experience Platform に接続する方法について説明します。
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 91%
+source-wordcount: '260'
+ht-degree: 94%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 91%
 
 >[!IMPORTANT]
 >
->[!DNL Oracle Service Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 [!DNL Oracle Service Cloud] ソースの代わりに [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) を使用できます。
+>[!DNL Oracle Service Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

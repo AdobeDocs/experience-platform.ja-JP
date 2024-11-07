@@ -5,10 +5,10 @@ title: UI での PayPal Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して PayPal ソース接続を作成する方法を説明します。
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 42%
+source-wordcount: '458'
+ht-degree: 43%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 42%
 
 >[!IMPORTANT]
 >
->[!DNL PayPal] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 [!DNL PayPal] ソースの代わりに [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) を使用できます。
+>[!DNL PayPal] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 
 Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、Platform ユーザーインターフェイスを使用して [!DNL PayPal] ソースコネクタを作成する手順を説明します。
 

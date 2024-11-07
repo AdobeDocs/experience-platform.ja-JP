@@ -2,10 +2,10 @@
 title: Flow Service API を使用した Phoenix ベース接続の作成
 description: Flow Service API を使用して Phoenix データベースをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 37%
+source-wordcount: '558'
+ht-degree: 38%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 37%
 
 >[!IMPORTANT]
 >
->[!DNL Phoenix] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。 [!DNL Phoenix] ソースの代わりに [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) を使用できます。
+>[!DNL Phoenix] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
