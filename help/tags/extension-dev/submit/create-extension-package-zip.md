@@ -1,14 +1,14 @@
 ---
-title: 拡張機能パッケージの Zip ファイルの準備
+title: 拡張機能パッケージの Zip ファイルの作成
 description: 拡張機能パッケージの zip ファイルを準備する方法を説明します。
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 92e519e0662c3c3521bfe5ca814b37464e55c7e1
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 50%
+source-wordcount: '102'
+ht-degree: 45%
 
 ---
 
-# エンドツーエンドテストのアップロードと実装
+# 拡張機能パッケージの zip ファイルを作成します。
 
 >[!NOTE]
 >
