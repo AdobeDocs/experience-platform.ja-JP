@@ -2,9 +2,9 @@
 title: サンドボックスツールパッケージ API エンドポイント
 description: サンドボックスツール API の/packages エンドポイントを使用すると、Adobe Experience Platformのパッケージをプログラムで管理できます。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
+source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2543'
 ht-degree: 10%
 
 ---
@@ -1595,7 +1595,13 @@ curl -X GET \
 
 ### パッケージの可用性をプライベートからパブリックに更新 {#update-availability}
 
-`/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` エンドポイントに対してGETリクエストを実行して、パッケージをプライベートからパブリックに変更します。 デフォルトでは、パッケージは非公開で作成されます。
+`/packages/update` エンドポイントに対してGETリクエストを実行して、パッケージをプライベートからパブリックに変更します。 デフォルトでは、パッケージは非公開で作成されます。
+
+**API 形式**
+
+```http
+GET `/packages/update`
+```
 
 **リクエスト**
 
@@ -1603,7 +1609,7 @@ curl -X GET \
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
