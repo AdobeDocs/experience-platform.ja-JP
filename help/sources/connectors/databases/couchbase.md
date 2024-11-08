@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Couchbase Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Couchbase をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 34%
@@ -13,7 +13,7 @@ ht-degree: 34%
 
 # [!DNL Couchbase] コネクタ
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Couchbase] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 

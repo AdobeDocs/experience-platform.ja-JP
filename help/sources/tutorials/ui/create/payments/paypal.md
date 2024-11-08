@@ -5,7 +5,7 @@ title: UI での PayPal Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して PayPal ソース接続を作成する方法を説明します。
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 43%
@@ -14,7 +14,7 @@ ht-degree: 43%
 
 # UI での [!DNL PayPal] ソース接続の作成
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL PayPal] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 

@@ -2,7 +2,7 @@
 title: SalesforceMarketing Cloudアカウントを UI を使用してExperience Platformに接続する
 description: UI を通じてSalesforceMarketing CloudアカウントをExperience Platformに接続する方法を説明します。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 27%
@@ -11,7 +11,7 @@ ht-degree: 27%
 
 # UI を使用して [!DNL Salesforce Marketing Cloud] アカウントをExperience Platformに接続する
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Salesforce Marketing Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 

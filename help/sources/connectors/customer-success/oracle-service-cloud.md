@@ -4,7 +4,7 @@ title: Oracle Service Cloud ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Oracle Service Cloud を Adobe Experience Platform に接続する方法について説明します。
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 94%
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 # Oracleサービスクラウドソース
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Oracle Service Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 

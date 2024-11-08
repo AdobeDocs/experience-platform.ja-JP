@@ -5,7 +5,7 @@ title: Flow Service API を使用した Zoho CRM ベース接続の作成
 type: Tutorial
 description: Flow Service API を使用して Adobe Experience Platform を Zoho CRM に接続する方法を説明します。
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 96%
@@ -14,7 +14,7 @@ ht-degree: 96%
 
 # [!DNL Flow Service] API を使用した [!DNL Zoho CRM] ベース接続の作成
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Zoho CRM] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
 

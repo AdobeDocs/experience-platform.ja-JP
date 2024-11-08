@@ -5,7 +5,7 @@ title: UI での Couchbase Sourceの連携の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Couchbase ソース接続を作成する方法を説明します。
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 51%
@@ -14,7 +14,7 @@ ht-degree: 51%
 
 # UI での [!DNL Couchbase] ソース接続の作成
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Couchbase] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 

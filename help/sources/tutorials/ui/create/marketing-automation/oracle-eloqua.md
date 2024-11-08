@@ -2,7 +2,7 @@
 title: Platform UI を使用したOracle Eloqua ソース接続の作成
 description: Platform UI を使用してAdobe Experience PlatformをOracle Eloqua に接続する方法を説明します。
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 59%
@@ -11,7 +11,7 @@ ht-degree: 59%
 
 # Platform UI を使用した [!DNL Oracle Eloqua] ソース接続の作成
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Oracle Eloqua] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 

@@ -2,7 +2,7 @@
 title: Flow Service API を使用したOracle Eloqua ベース接続の作成
 description: Flow Service API を使用してAdobe Experience PlatformをOracle Eloqua に接続する方法を説明します。
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 80%
@@ -11,7 +11,7 @@ ht-degree: 80%
 
 # [!DNL Flow Service] API を使用した [!DNL Oracle Eloqua] ベース接続の作成
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Oracle Eloqua] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 

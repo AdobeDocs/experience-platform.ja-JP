@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気の高いトピック;Oracle Servi
 title: Flow Service API を使用した Oracle Service Cloud ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Oracle Service Cloud に接続する方法について説明します。
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 95%
@@ -12,7 +12,7 @@ ht-degree: 95%
 
 # [!DNL Flow Service] API を使用したOracleサービスクラウドソース接続の作成
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Oracle Service Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
 
