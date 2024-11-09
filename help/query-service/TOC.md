@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
+source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 78%
+source-wordcount: '366'
+ht-degree: 77%
 
 ---
 
@@ -104,7 +104,7 @@ ht-degree: 78%
    - [スケジュール済みクエリの監視](ui/monitor-queries.md)
    - [資格情報ガイド](ui/credentials.md)
    - [クエリ結果からの出力データセットの生成](ui/create-datasets.md)
-- Query Service API エンドポイント {#api}
+- クエリサービス API {#api}
    - [はじめに](api/getting-started.md)
    - [クエリ](api/queries.md)
    - [接続パラメーター](api/connection-parameters.md)
@@ -113,6 +113,11 @@ ht-degree: 78%
    - [クエリテンプレート](api/query-templates.md)
    - [高速クエリ](api/accelerated-queries.md)
    - [アラート購読](api/alert-subscriptions.md)
+- クエリサービス認証 API {#auth-api}
+   - [概要](auth-api/overview.md)
+   - [はじめに](auth-api/getting-started.md)
+   - [IP アクセス](auth-api/ip-access.md)
+   - [検証](auth-api/validate.md)
 - データガバナンス {#data-governance}
    - [概要](data-governance/overview.md)
    - [監査ログガイド](data-governance/audit-log-guide.md)
