@@ -2,7 +2,7 @@
 title: ドキュメントのセルフサービステンプレート/を宛先の名前に置き換えます
 description: このテンプレートを使用して、Adobe Experience Platform カタログに宛先に関する公開ドキュメントを作成します。//概要セクションの段落で置き換えます。
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 10521602a5871419c0c49d54c8ed250af39a78a4
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 33%
