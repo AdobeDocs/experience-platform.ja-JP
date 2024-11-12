@@ -3,9 +3,9 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2603'
 ht-degree: 37%
 
 ---
@@ -238,7 +238,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 2 つのファイルタイプを圧縮した場合、ファイル形式に違いがあることに注意してください。
 
-* 圧縮された JSON ファイルを書き出す場合、書き出されるファイルの形式は `json.gz` です
+* 圧縮された JSON ファイルを書き出す場合、書き出されるファイルの形式は `json.gz` です。 書き出される JSON の形式は NDJSON であり、ビッグデータエコシステムの標準の交換形式です。 Adobeでは、書き出されたファイルを読み取るために NDJSON 互換のクライアントを使用することをお勧めします。
 * 圧縮 Parquet ファイルをエクスポートする場合、エクスポートされるファイル形式は `gz.parquet` です
 
 JSON ファイルへの書き出しはサポートされています *圧縮モードのみ*。 Parquet ファイルへの書き出しは、圧縮および非圧縮モードでサポートされます。

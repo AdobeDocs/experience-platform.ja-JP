@@ -4,9 +4,9 @@ title: Flow Service API を使用したデータセットの書き出し
 description: Flow Service API を使用して、データセットを書き出し、宛先を選択する方法を説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5107'
+source-wordcount: '5138'
 ht-degree: 11%
 
 ---
@@ -1163,9 +1163,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 次に、データセットの書き出しパラメーターを保存するターゲット接続を作成する必要があります。 書き出しパラメーターには、場所、ファイル形式、圧縮、その他の詳細が含まれます。 各宛先タイプでサポートされているプロパティについて理解するには、宛先の接続仕様に記載されている `targetSpec` のプロパティを参照します。 サポートされているすべての宛先の `targetSpec` プロパティについては、以下のタブを参照してください。
 
->[!WARNING]
+>[!IMPORTANT]
 >
->JSON ファイルへの書き出しは、圧縮モードでのみサポートされます。 [!DNL Parquet] ファイルへの書き出しは、圧縮モードと非圧縮モードでサポートされています。
+>JSON ファイルへの書き出しは、圧縮モードでのみサポートされます。 [!DNL Parquet] ファイルへの書き出しは、圧縮モードと非圧縮モードの両方でサポートされています。
+>
+>書き出される JSON ファイルの形式は NDJSON であり、ビッグデータエコシステムの標準の交換形式です。 Adobeでは、書き出されたファイルを読み取るために NDJSON 互換のクライアントを使用することをお勧めします。
 
 >[!BEGINTABS]
 
