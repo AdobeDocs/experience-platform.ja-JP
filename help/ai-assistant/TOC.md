@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ガイドの AI アシスタント
 user-guide-description: Adobe Experience Platform と Real-Time Customer Data Platform で AI アシスタントを使用して、ワークフローを迅速化する方法を説明します。
 description: ここでは、Adobe Experience Platformの AI アシスタントの目次を示します。
 role: Admin,User,Developer,Leader
-source-git-commit: 37d2886cc5d7b3a019d23f76973d79547865298b
+source-git-commit: f3606a265ac0fd143e1963a9511a27147284d625
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 36%
+source-wordcount: '90'
+ht-degree: 34%
 
 ---
 
@@ -23,5 +23,6 @@ ht-degree: 36%
 * の新機能 {#new-features}
    * [AlphaおよびBetaの AI アシスタント機能](./new-features/alpha-beta.md)
    * [重要な変更の監視とオーディエンスの予測](./new-features/audience-forecasting.md)
+   * [オーディエンス作成用の XDM フィールド検出](./new-features/xdm-field-discovery.md)
 * [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
 
