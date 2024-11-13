@@ -3,14 +3,19 @@ keywords: Experience Platform; セキュリティ；IP アクセス；検証；A
 title: IP 検証エンドポイント
 description: IP 検証 API エンドポイントを使用して、クエリサービスのサンドボックスの IP アクセスを検証する方法について説明します。
 role: Developer
-source-git-commit: ad1b6d8449a2a3ca9c8422e70769d12e33d8e255
+exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 1%
+source-wordcount: '229'
+ht-degree: 4%
 
 ---
 
 # IP 検証エンドポイント
+
+>[!AVAILABILITY]
+>
+>この機能は、Data Distiller アドオンを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
 IP 検証 API エンドポイントを使用して、指定した IP アドレスがクエリサービスで指定したサンドボックスへのアクセスを許可されているかどうかを確認します。 このチェックでは、アクセス制限が適用されるか、IP アドレスがサンドボックス内のデータへのアクセスを許可されるかを確認します。
 

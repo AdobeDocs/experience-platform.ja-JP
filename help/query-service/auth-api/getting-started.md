@@ -3,14 +3,19 @@ keywords: Experience Platform; クエリサービス；IP アクセス制御；�
 title: Query Service Authorization API ガイド
 description: Adobe Experience Platform クエリサービス内で安全にデータアクセスできるよう、認証と IP 範囲制限の開始に関する方法を説明します。
 role: Developer
-source-git-commit: eb6558c2cc3faebb2cb14f49f7517227d57f7162
+exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 4%
+source-wordcount: '482'
+ht-degree: 6%
 
 ---
 
 # Query Service Authorization API ガイド
+
+>[!AVAILABILITY]
+>
+>この機能は、Data Distiller アドオンを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
 Query Service Authorization API を使用すると、Adobe Experience Platformの SQL インターフェイスを介したデータアクセスをより厳密に制御できます。 この API を使用すると、IP 制限を定義し、指定したネットワークへのデータアクセスを制限し、セキュリティ監視を強化できます。
 

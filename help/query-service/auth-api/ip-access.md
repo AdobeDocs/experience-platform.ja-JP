@@ -3,14 +3,19 @@ keywords: Experience Platform; セキュリティ；IP アクセス；QS-Auth; A
 title: IP アクセス エンドポイント
 description: IP アクセス API エンドポイントを使用して、クエリサービスでサンドボックスアクセスの IP 範囲を管理する方法を説明します。
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 3%
+source-wordcount: '422'
+ht-degree: 5%
 
 ---
 
 # IP アクセスエンドポイント
+
+>[!AVAILABILITY]
+>
+>この機能は、Data Distiller アドオンを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
 指定したクエリサービスサンドボックス内でデータアクセスを保護するには、IP アクセスエンドポイントを使用して、許可された IP 範囲を管理します。 この API を使用して、組織 ID に関連付けられた IP 範囲を取得、設定または削除できます。
 
@@ -163,4 +168,3 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/security/ip-acces
   ]
 }
 ```
-
