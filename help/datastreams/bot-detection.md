@@ -2,24 +2,22 @@
 title: データストリームのボット検出の設定
 description: 人間トラフィックと非人間トラフィックを区別するために、データストリームのボット検出を設定する方法を説明します。
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # データストリームのボット検出の設定
 
-自動プログラム、Web スクレーパー、スパイダー、スクリプト化されたスキャナーなど、人間以外のエンティティから発生するトラフィックによって、人間の訪問者から発生するイベントの特定がより困難になる場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。
+自動プログラム、Web スクレーパー、スパイダー、スクリプト化されたスキャナーからの人間以外のトラフィックによって、訪問者からイベントを特定するのが難しくなる場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。
 
 ボット検出を使用すると、[Web SDK](../web-sdk/home.md)、[Mobile SDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Server API]](../server-api/overview.md) で生成されたイベントを、既知のスパイダーやボットによって生成されたものとして識別できます。
 
-データストリームのボット検出を設定することで、ボットイベントとして分類したい特定の IP アドレス、IP 範囲およびリクエストヘッダーを識別できます。
+データストリームのボット検出を設定することで、特定の IP アドレス、IP 範囲およびリクエストヘッダーを識別して、ボットイベントとして分類できます。 これにより、サイトまたはモバイルアプリケーションでのユーザーアクティビティをより正確に測定できます。
 
-ボットトラフィックを識別することで、サイトまたはモバイルアプリケーションのユーザーアクティビティをより正確に測定できます。
-
-Edge Networkへのリクエストが任意のボット検出ルールに一致すると、以下に示すように、XDM スキーマがボットスコアリングを使用して更新されます（常に 1 に設定されます）。
+Edge Networkへのリクエストが任意のボット検出ルールに一致すると、以下に示すように、XDM スキーマがボットスコアで更新されます（常に 1 に設定されます）。
 
 ```json
 {
@@ -66,9 +64,12 @@ Edge Networkへのリクエストが任意のボット検出ルールに一致�
 
 ### IAB/ABC International Spiders and Bot List の使用 {#iab-list}
 
-[IAB/ABC International Spiders and Bot List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) は、サードパーティの業界標準のインターネットスパイダーおよびボットのリストです。検索エンジンクローラー、監視ツール、その他の人以外のトラフィックなど、分析カウントに表示したくない自動トラフィックを特定するのに役立ちます。
+[IAB/ABC International Spiders and Bot List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) は、サードパーティの、業界標準のインターネットスパイダーおよびボットのリストです。 このリストは、検索エンジンのクローラー、監視ツール、分析カウントに含めたくない可能性のあるその他の非人間トラフィックなど、自動トラフィックを特定するのに役立ちます。
 
-データストリームで [!DNL IAB/ABC International Spiders and Bots List] を使用するように設定するには、「**[!UICONTROL このデータストリームでボット検出に IAB/ABC International Spiders and Bots List を使用]**」オプションを切り替えてから、「保存」を選択してデータストリームにボット検出設定を適用します。
+IAB/ABC International Spiders and Bot List を使用するようにデータストリームを設定するには：
+
+1. **[!UICONTROL このデータストリームでボット検出に IAB/ABC International Spiders and Bot List を使用]** オプションを切り替えます。
+2. 「**[!UICONTROL 保存]**」を選択して、データストリームにボット検出設定を適用します。
 
 ![IAB スパイダーとボットリストが有効になっています。](assets/bot-detection/bot-detection-list.png)
 
