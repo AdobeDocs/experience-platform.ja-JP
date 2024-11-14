@@ -3,13 +3,13 @@ title: Zeta マーケティングプラットフォーム
 description: Zeta Marketing Platform （ZMP）は、インテリジェンス（独自のデータと AI）を活用して、より効率的に顧客を獲得、成長、保持するのに役立つクラウドベースのシステムです。
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
+source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 28%
 
 ---
-
 
 # Zeta マーケティングプラットフォーム {#zeta-marketing-platform}
 
@@ -31,17 +31,17 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 
 ### 広告によるユーザーのターゲティング {#use-case-target-users}
 
-広告主は、ゼータDemand Side Platform（DSP）を通じて、特定のオーディエンス内のユーザーをターゲットにすることを目的としています。 ゼータDSPの詳細については、[ ここ ](https://knowledgebase.zetaglobal.com/programmatic-user-guide/) をクリックしてください。
+広告主は、ゼータDemand Side Platform（DSP）を通じて、特定のオーディエンス内のユーザーをターゲットにすることを目的としています。 ゼータDSPの詳細については、[ ここ ](https://knowledgebase.zetaglobal.com/pug/) をクリックしてください。
 
 ## 前提条件 {#prerequisites}
 
 ### Zeta Marketing Platform 前提条件
 
-* Zeta Marketing Platform の宛先への新しい接続を設定する前に、Zeta Marketing Platform アカウントに空の顧客リストを作成する必要があります。 送信するAdobe Experience Platform オーディエンスを受け取るターゲットとして、これらのカスタマーリストのいずれかを指定する必要があります。 [ こちら ](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList) の手順に従って、ZMP に空の顧客リストを作成できます。
+* Zeta Marketing Platform の宛先への新しい接続を設定する前に、Zeta Marketing Platform アカウントに空の顧客リストを作成する必要があります。 送信するAdobe Experience Platform オーディエンスを受け取るターゲットとして、これらのカスタマーリストのいずれかを指定する必要があります。 [ こちら ](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) の手順に従って、ZMP に空の顧客リストを作成できます。
 * Adobe Experience Platformでは、特定の ZMP 宛先インスタンスに対して複数のオーディエンスをアクティブ化できますが、各 ZMP 宛先インスタンスが受け取るExperience Platformオーディエンスは 1 つのみである必要があります。 Experience Platformから複数のオーディエンスを処理するには、各オーディエンスに対して追加の ZMP 宛先インスタンスを作成し、ドロップダウンから別の顧客リストを選択します。 このアプローチにより、ターゲットの ZMP オーディエンスが上書きされなくなります。 詳しくは、[ 宛先の詳細の入力 ](#destination-details) を参照してください。
 * 次の資格情報を使用して宛先を設定します。
    * ユーザー名：**api**
-   * パスワード：ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント ](https://knowledgebase.zetaglobal.com/zmp/integrations) を参照してください。
+   * パスワード：ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント ](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
 
 ## サポートされている ID {#supported-identities}
 
@@ -94,7 +94,7 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
 * **[!UICONTROL ユーザー名]**: `api`
-* **[!UICONTROL パスワード]**:ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント ](https://knowledgebase.zetaglobal.com/zmp/integrations) を参照してください。
+* **[!UICONTROL パスワード]**:ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント ](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -103,7 +103,7 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 ![ZMP 設定を示す画像 ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL ZMP アカウントサイト ID]**：オーディエンスの送信先となる ZMP **サイト ID**。 サイト ID を表示するには、**設定** / **統合** / **キーとアプリ** セクションに移動します。 詳しくは、[ こちら ](https://knowledgebase.zetaglobal.com/zmp/integrations) を参照してください。
+* **[!UICONTROL ZMP アカウントサイト ID]**：オーディエンスの送信先となる ZMP **サイト ID**。 サイト ID を表示するには、**設定** / **統合** / **キーとアプリ** セクションに移動します。 詳しくは、[ こちら ](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
 * **[!UICONTROL ZMP セグメント]**:Platform オーディエンスで更新する ZMP サイト ID アカウントの顧客リストセグメント。
 
 ### アラートの有効化 {#enable-alerts}
@@ -152,4 +152,4 @@ Experience Platformからアクティブ化された各オーディエンスメ�
 
 ## その他のリソース {#additional-resources}
 
-* [Zeta Knowledge Base](https://knowledgebase.zetaglobal.com/zmp/)
+* [Zeta Knowledge Base](https://knowledgebase.zetaglobal.com/kb/)
