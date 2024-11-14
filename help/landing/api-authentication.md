@@ -4,10 +4,10 @@ title: Experience Platform API の認証とアクセス
 type: Tutorial
 description: このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 6%
+source-wordcount: '2383'
+ht-degree: 5%
 
 ---
 
@@ -67,6 +67,10 @@ Experience Platform [[!DNL Admin Console]](https://adminconsole.adobe.com/) を�
 >[Privacy ServiceAPI ガイド ](../privacy-service/api/getting-started.md) のこのドキュメントを読む場合は、ガイドに戻って、[!DNL Privacy Service] に固有のアクセス認証情報を生成することができます。
 
 [!DNL Admin Console] を通じて開発者およびユーザーに Platform へのアクセス権を付与したら、次の手順は、Adobe Developer Consoleで `{ORG_ID}` と `{API_KEY}` の資格情報を生成することです。 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
+
+>[!TIP]
+>
+>Platform API を操作するために必要なすべての認証資格情報は、Developer Consoleに移動する代わりに、API リファレンスドキュメントページから直接取得できます。 機能について ](#get-credentials-functionality) 詳細を参照 [。
 
 ### プロジェクトにExperience Platformを追加する {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 >[!TIP]
 >
 また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、[Postmanを使用した API 呼び出しの認証とテスト ](#use-postman) に関する節を参照してください。
+
+## 認証資格情報の作成と取得については、API リファレンスドキュメントを参照してください。 {#get-credentials-functionality}
+
+Experience Platformの 2024 年 11 月リリース以降、[!UICONTROL Developer Console] にアクセスしなくても、API リファレンスページからExperience PlatformAPI を直接使用するための資格情報を取得できます。 [ フローサービス API – 宛先ページ ](https://developer.adobe.com/experience-platform-apis/references/destinations/) から、以下の例を表示します。
+
+![API リファレンスページの上部でハイライト表示された資格情報の取得機能。](././images/api-authentication/get-credentials-highlighted.png)
+
+Platform API を呼び出すための資格情報を取得するには、任意のExperience PlatformAPI リファレンスページに移動し、ページ上部の「**[!UICONTROL ログイン]**」を選択します。 **[!UICONTROL 個人用アカウント]** または **[!UICONTROL 会社または学校アカウント]** を使用してサインインします。
+
+ログイン後、「**[!UICONTROL 新しい認証情報を作成]**」を選択して、Platform API にアクセスするための新しい認証情報のセットを作成します。
+
+![Platform API にアクセスするための新しい資格情報の作成 ](././images/api-authentication/create-credentials.gif)
+
+次に、ドロップダウンセレクターを使用して、資格情報ウィンドウを開き、アクセストークンを生成して、API キーと組織 ID を取得します。 Platform API の使用を開始するには、API リファレンスページの [**[!UICONTROL  試す ]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) ブロックに資格情報をコピーします。
+
+![ ドロップダウンセレクターを使用して資格情報を表示し、アクセストークンを生成します。](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+Experience PlatformAPI リファレンスドキュメントの様々なエンドポイントページ間を移動しても、ページ上部の資格情報ブロックは表示されたままになります。
 
 ## [!BADGE  非推奨 ]{type=negative} JSON web トークン（JWT）を生成 {#jwt}
 
