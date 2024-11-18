@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Azure Blob Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Azure Blob をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 64%
+source-wordcount: '443'
+ht-degree: 67%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 
 >[!IMPORTANT]
 >
->[!DNL Azure Blob] ソースは、Experience Platformへの同じリージョンの接続をサポートしていません。 Azure インスタンスがExperience Platformと同じネットワーク地域を使用している場合、Experience Platformソースへの接続を確立できません。 [!DNL Azure Blob] ソースを設定する際は、Azure East US 2、Azure West Europe、Azure Australia East の地域を使用しないでください。 現在、クロス地域接続のみがサポートされています。
+>[!DNL Azure Blob] ソースは、Experience Platformへの同じリージョンの接続をサポートしていません。 [!DNL Azure] インスタンスがExperience Platformと同じネットワーク領域を使用している場合、Experience Platformソースへの接続を確立できません。 現在、クロス地域接続のみがサポートされています。
 
 ## ファイルとディレクトリの命名制約
 
