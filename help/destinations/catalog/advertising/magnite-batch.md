@@ -1,16 +1,14 @@
 ---
 title: Magnite バッチ宛先
 description: この宛先を使用して、Adobe CDP オーディエンスを Magnite ストリーミングプラットフォームにバッチで配信します。
-badgeBeta: label="ベータ版" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
+source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1680'
 ht-degree: 14%
 
 ---
-
 
 # Magnite：バッチ接続 {#magnite-streaming-batch}
 
@@ -31,8 +29,6 @@ Magnite：バッチの宛先、その宛先への接続方法およびバッチ�
 リアルタイムの宛先について詳しくは、代わりに [ このドキュメントページ ](magnite-streaming.md) を参照してください。
 
 >[!IMPORTANT]
->
->この宛先コネクタはベータ版で、一部のお客様のみご利用いただけます。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。
 >
 >宛先コネクタとドキュメントページは、[!DNL Magnite] チームが作成および管理します。 お問い合わせや更新のリクエストについては、`adobe-tech@magnite.com` まで直接ご連絡ください。
 
@@ -116,13 +112,17 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 未来。
 * **[!UICONTROL 説明]**：識別に役立つ説明
 今後の宛先接続/ インスタンス。
-* **[!UICONTROL ソースパートナーの名前]**:Magnite Streaming のプラットフォームでソースとして使用したい名前
+* **[!UICONTROL 会社名]**：顧客の名前または会社名。 サポートされている [!DNL Magnite Streaming] クライアントのみを選択できます。
+
+>[!NOTE]
+>
+>会社名は、Magnite で設定し、[ 宛先への認証 ](#authenticate) ステップで設定したAmazon S3 配信バケットの名前と一致する文字列にする必要があります。 サポートされる文字には、「a ～ z」、「A ～ Z」、「0 ～ 9」、「–」（ダッシュ）、「_」（アンダースコア）があります。
 
 ![ 宛先設定認証フィールドに値が入力されています ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
->複数の ID タイプ（GAID、IDFA など）を送信する予定がある場合 バッチ宛先を使用する場合、それぞれに新しい宛先接続/インスタンスが必要です。 詳しくは、Magnite アカウント担当者にお問い合わせください。
+>バッチ宛先を使用して複数の ID タイプ（GAID、IDFA など）を送信する場合は、それぞれに新しい宛先接続/インスタンスが必要です。 詳しくは、Magnite アカウント担当者にお問い合わせください。
 
 「**[!UICONTROL 次へ]**」を選択して続行できます
 
@@ -158,7 +158,7 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 
 >[!NOTE]
 >
->複数の ID タイプ（GAID、IDFA など）の送信やマッピングを計画している場合 バッチ宛先を使用する場合、それぞれに新しい宛先接続/インスタンスが必要です。 詳しくは、Magnite アカウント担当者にお問い合わせください。
+>バッチ宛先を使用して複数の ID タイプ（GAID、IDFA など）を送信またはマッピングする場合は、それぞれに新しい宛先接続/インスタンスが必要です。 詳しくは、Magnite アカウント担当者にお問い合わせください。
 
 
 「各オーディエンスのファイル名と書き出しスケジュールを設定」画面で、各オーディエンスの開始日（必須）、終了日（オプション）、マッピング ID （必須）を設定する必要があります。
