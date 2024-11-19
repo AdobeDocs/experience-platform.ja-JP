@@ -3,8 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；Adobe Experi
 solution: Experience Platform
 title: Adobe Experience Platform API の概要
 description: Adobe Experience Platformは、相互に密接にリンクした API サービスを提供します。 このガイドには、使用可能なサービス、CRUD 操作に必要なヘッダー、エラーメッセージ、Postman コレクションおよびサンプル API 呼び出しに関する情報が含まれています。
+role: Developer
+feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 27%

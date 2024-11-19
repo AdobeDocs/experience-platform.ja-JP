@@ -3,8 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；Adobe Experi
 solution: Experience Platform
 title: Adobe Experience PlatformのPostman
 description: このドキュメントには、Platform 環境のセットアップ、Postman コレクションのインポート、および各Postman サービスで使用可能なコレクションのリストを示す手順が含まれています。
+role: Developer
+feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

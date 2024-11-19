@@ -3,8 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Experience PlatformAPI の基本事項
 description: このドキュメントでは、Experience PlatformAPI に関連する基盤となるテクノロジーと構文のいくつかについて簡単に説明します。
+role: Developer
+feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 50%

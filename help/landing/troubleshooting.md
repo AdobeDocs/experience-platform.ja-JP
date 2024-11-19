@@ -6,11 +6,13 @@ description: よくある質問への回答、および Adobe Experience Platfor
 landing-page-description: よくある質問への回答、および Adobe Experience Platform の一般的なエラーのトラブルシューティングに関するガイドを見つけます。
 short-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドをご覧ください。
 type: Documentation
+role: Developer
+feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1812'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -92,7 +94,7 @@ UI と API のどちらを使用しているかによって、次のシステム
 | 401 | Authentication failed | リクエストが認証チェックに合格しませんでした。アクセストークンが見つからないか、無効です。詳しくは、以下の「[OAuth トークンエラー](#oauth-token-is-missing)」の節を参照してください。 |
 | 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。<br>このエラーの原因として考えられるのは、リソースへのアクセスまたは編集に必要な[アクセス制御権限](/help/access-control/home.md)がない可能性があることです。プラットフォーム API を使用するために[必要な属性ベースのアクセス制御権限を取得する](/help/landing/api-authentication.md#get-abac-permissions)方法をお読みください。 </p> |
 | 404 | Not found | リクエストされたリソースがサーバーで見つかりませんでした。リソースが削除されたか、リクエストされたパスが正しく入力されていない可能性があります。 |
-| 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、[!DNL Catalog Service] API 開発者ガイドの[データのフィルタリング](../catalog/api/filter-data.md)に関するサブガイドを参照してください。）リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
+| 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、[!DNL Catalog Service] API 開発者ガイドの [ データのフィルタリング ](../catalog/api/filter-data.md) に関するサブガイドを参照してください。） リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
 
 ## リクエストヘッダーエラー {#request-header-errors}
 

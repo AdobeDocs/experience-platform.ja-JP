@@ -1,8 +1,10 @@
 ---
 title: 監査イベント書き出し API エンドポイント
 description: Audit Query API を使用してExperience Platformに監査イベントを書き出す方法について説明します。
+role: Developer
+feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 4%

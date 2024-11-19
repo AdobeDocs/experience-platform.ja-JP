@@ -3,8 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: 同意データと基本設定データを取り込むためのデータセットの設定
 description: エクスペリエンスデータモデル（XDM）スキーマとデータセットを設定して、Adobe Experience Platformで同意データと基本設定データを取り込む方法を説明します。
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 4%

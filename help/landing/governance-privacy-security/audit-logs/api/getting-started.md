@@ -1,8 +1,10 @@
 ---
 title: 監査クエリ API の概要
 description: Audit Query API を使用すると、様々なAdobe Experience Platform機能の指標データを取得できます。 このドキュメントでは、監査クエリ API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
+role: Developer
+feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 40%

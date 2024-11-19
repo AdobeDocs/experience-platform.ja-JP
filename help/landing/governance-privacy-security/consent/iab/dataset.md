@@ -3,8 +3,10 @@ keywords: Experience Platform；ホーム；IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: IAB TCF 2.0 同意データを取得するためのデータセットの作成
 description: このドキュメントでは、IAB TCF 2.0 の同意データを収集するために必要な 2 つのデータセットを設定する手順を説明します。
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1674'
 ht-degree: 3%
