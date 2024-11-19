@@ -2,7 +2,7 @@
 title: applyPropositions
 description: sendEvent で既にレンダリングされている提案を再レンダリングします。
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 このコマンドは、次のフィールドをサポートしています。
 
 * **提案**：再レンダリングする提案オブジェクトの配列。
-* **ビュー名**: レンダリングするビューの名前。 これらの決定に対する表示通知はキャッシュされ、`personalization.includePendingDisplayNotifications` オプションを使用して、後続の `sendEvent` コマンドに含めることができます。
+* **ビュー名**: レンダリングするビューの名前。 これらの決定に対する表示通知はキャッシュされ、`personalization.includeRenderedPropositions` オプションを使用して、後続の `sendEvent` コマンドに含めることができます。
 * **メタデータ**:HTMLオファーの適用方法を指定するオブジェクト。 これには、次のプロパティが含まれます。
    * 範囲
    * セレクター
@@ -43,7 +43,7 @@ ht-degree: 0%
 * **`metadata`**:HTMLオファーの適用方法を決定します。 キーがスコープまたはサーフェスであり、値がキー `selector` と `actionType` を含むオブジェクトであるマップです。
    * `selector`:HTMLの適用先の CSS セレクターを含む文字列
    * `actionType`:HTMLで実行するアクション。 有効な値には、`setHtml`、`replaceHtml`、`appendHtml` などがあります。
-* **`viewName`**：単一ページアプリケーションでレンダリングするビューの名前。 これらの決定に対する表示通知はキャッシュされ、`personalization.includePendingDisplayNotifications` を使用して後続の `sendEvent` コマンドに含めることができます。
+* **`viewName`**：単一ページアプリケーションでレンダリングするビューの名前。 これらの決定に対する表示通知はキャッシュされ、`personalization.includeRenderedPropositions` を使用して後続の `sendEvent` コマンドに含めることができます。
 
 ```js
 alloy("applyPropositions",{

@@ -2,7 +2,7 @@
 title: Web SDK での表示イベントの管理
 description: この記事では、表示イベントの概要と、Web SDK での使用方法について説明します。
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Web SDK を使用すると、次の 2 つの方法で表示イベントを送信
 パーソナライズされたコンテンツがページにレンダリングされた後に表示イベントを自動的に送信するには、次のパラメーターを設定する必要があります。
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` または指定されていません
+* `personalization.sendDisplayEvent: true` または指定されていません
 
 Web SDK は、`sendEvent` 呼び出しの結果パーソナライゼーションがレンダリングされた直後に表示イベントを送信します。
 
@@ -50,9 +50,9 @@ Web SDK は、`sendEvent` 呼び出しの結果パーソナライゼーション
 自動的にレンダリングされた提案の表示イベントを送信するには、`sendEvent` 呼び出しで次のパラメーターを設定する必要があります。
 
 * `renderDecisions: true`
-* ページヒット数の上位に対する `personalization.sendDisplayNotifications: false`
+* ページヒット数の上位に対する `personalization.sendDisplayEvent: false`
 
-表示イベントを送信するには、`personalization.includePendingDisplayNotifications: true` で `sendEvent` を呼び出します
+表示イベントを送信するには、`personalization.includeRenderedPropositions: true` で `sendEvent` を呼び出します
 
 ### 手動でレンダリングされた提案の表示イベントを送信 {#manually-rendered-propositions}
 
