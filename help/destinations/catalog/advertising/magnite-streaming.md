@@ -1,18 +1,16 @@
 ---
 title: Magnite リアルタイム宛先接続
 description: この宛先を使用すると、Adobe CDP オーディエンスを Magnite ストリーミングプラットフォームにリアルタイムで配信できます。
-badgeBeta: label="ベータ版" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
+source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 32%
+source-wordcount: '1317'
+ht-degree: 31%
 
 ---
 
-
-# （Beta） Magnite: Real-Time destination connection
+# Magnite：リアルタイム宛先接続
 
 ## 概要 {#overview}
 
@@ -28,8 +26,6 @@ Adobe Experience Platformの [!DNL Magnite: Real-Time] および [Magnite：バ�
 メモ：リアルタイムの宛先を使用する場合、[!DNL Magnite Streaming] はリアルタイムでオーディエンスを受け取りますが、Magnite は一時的にプラットフォームにリアルタイムオーディエンスを保存することしかできず、数日以内にシステムから削除されます。 このため、Magnite:Real-Time 宛先を使用する場合は、*また* Magnite:Batch 宛先 – リアルタイム宛先に対して有効化する各オーディエンスを、バッチ宛先に対して有効化する必要があります。
 
 >[!IMPORTANT]
->
->この宛先コネクタはベータ版で、一部のお客様のみご利用いただけます。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。
 >
 >宛先コネクタとドキュメントページは、[!DNL Magnite] チームが作成および管理します。 お問い合わせや更新のリクエストについては、`adobe-tech@magnite.com` まで直接ご連絡ください。
 
@@ -101,7 +97,11 @@ Adobe Experience Platformで [!DNL Magnite] の宛先を使用するには、ま
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL ソースパートナーの名前]**：顧客または会社名。 サポートされている [!DNL Magnite Streaming] クライアントのみを選択できます。
+* **[!UICONTROL 会社名]**：顧客の名前または会社名。 サポートされている [!DNL Magnite Streaming] クライアントのみを選択できます。
+
+>[!NOTE]
+>
+>会社名は、Magnite で設定し、[ 宛先への認証 ](#authenticate) ステップで設定したAmazon S3 配信バケットの名前と一致する文字列にする必要があります。 サポートされる文字には、「a ～ z」、「A ～ Z」、「0 ～ 9」、「–」（ダッシュ）、「_」（アンダースコア）があります。
 
 ![ 宛先設定認証フィールドに値が入力されています ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 

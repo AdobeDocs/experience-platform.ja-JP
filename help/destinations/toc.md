@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 85%
+source-wordcount: '1248'
+ht-degree: 86%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 85%
       * [Experience Platform UI を使用した、オンデマンドによるバッチ宛先へのファイルの書き出し](./ui/export-file-now.md)
       * [Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
-      * [計算フィールドを使用して、配列を文字列としてエクスポートする](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [計算フィールドを使用して、配列を文字列として書き出し](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
@@ -92,8 +92,8 @@ ht-degree: 85%
       * [LinkedIn Insight Tag 拡張機能](./catalog/advertising/linkedin.md)
       * [LiveRamp - オンボーディング接続](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp – 配信接続](./catalog/advertising/liveramp-distribution.md)
-      * [（Beta）マグナイト・バッチ](/help/destinations/catalog/advertising/magnite-batch.md)
-      * [（Beta） Magnite Streaming Real-time Connection](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [マグナイト バッチ](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [Magnite ストリーミングリアルタイム接続](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing 接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List 接続](./catalog/advertising/pinterest.md)
