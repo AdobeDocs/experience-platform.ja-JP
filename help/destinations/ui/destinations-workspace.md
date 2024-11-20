@@ -3,10 +3,10 @@ keywords: Platform;宛先;宛先ワークスペース;ワークスペース;UI;�
 title: 宛先ワークスペース
 description: 宛先ワークスペースは、「概要」、「カタログ」、「参照」、「アカウント」、「システム表示」の 5 つのセクションで構成されます。 以下の節で説明します。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 81%
+source-wordcount: '1233'
+ht-degree: 79%
 
 ---
 
@@ -77,11 +77,11 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 | 要素 | 説明 |
 |---|---|
-| [!UICONTROL プラットフォーム] | 接続を設定した宛先。 |
+| [!UICONTROL 宛先] | 接続を設定した宛先コネクタ。 |
 | [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先へのアカウント接続タイプを表します。宛先に応じて、認証オプションは次のとおりです。 <ul><li>メールマーケティングの宛先の場合：S3、FTP、Azure Blob のいずれかです。</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li><li>OAuth 1 または OAuth 2 認証</li><li>ベアラートークン認証</li></ul> |
-| [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](../catalog/email-marketing/overview.md#connect-destination)で選択したユーザー名。 |
-| [!UICONTROL 宛先] | 宛先に対して作成された基本情報に接続された、一意の成功した宛先データフローの数を表します。 |
-| [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
+| [!UICONTROL ユーザー名] | [ 宛先に接続ワークフロー ](../catalog/email-marketing/overview.md#connect-destination) で選択したユーザー名。 |
+| [!UICONTROL 接続] | 宛先に対して作成された基本情報に接続された、一意の成功した宛先データフローの数を表します。 |
+| [!UICONTROL  認可日 ] | この宛先への接続が承認された日付。 |
 
 {style="table-layout:auto"}
 
