@@ -3,9 +3,10 @@ title: Adobe Experience Platformの AI アシスタント製品ドキュメン�
 description: Adobe Experience Platformの AI アシスタントの基本を学ぶ
 hide: true
 hidefromtoc: true
-source-git-commit: 4db38ebceaa7ac4ac46b2ac122b5869e6b28cab3
+exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
@@ -23,15 +24,15 @@ AI アシスタントは、Experience Platform、Real-time Customer Data Platfor
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong> データオブジェクトについて </strong><br/> データオブジェクトのステータス、使用状況およびページへの影響をより詳細に把握するために、データオブジェクトに関する運用のインサイトを取得します。</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong> 学習の向上 </strong><br/> ワークフローを中断することなく、製品の知識を発見、トラブルシューティング、および理解を深めることができます。</div>
     </td>
     <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png"></a>
+    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong> 使用状況に基づいて権限を適用 </strong><br/> チームメンバーの役割に応じて、アクセス権限を付与および取り消します。</div>
     </td>
   </tr>
@@ -41,6 +42,7 @@ AI アシスタントは、Experience Platform、Real-time Customer Data Platfor
     <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
 
 ## 新機能
 
@@ -118,6 +120,14 @@ AI アシスタントのユースケースの例については、以下を参�
 >[!ENDTABS]
 
 ## その他のリソース
+
+>[!BEGINSHADEBOX]
+
+**AI Assistant のセキュリティ ファクト シートを参照してください**
+
+AI アシスタントについて詳しくは、[Adobe Experience Platformの AI アシスタントのセキュリティファクトシート ](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf) を参照してください。
+
+>[!ENDSHADEBOX]
 
 以下のリンクを参照すると、AI アシスタントのユースケースや機能などをより深く理解できます。
 
