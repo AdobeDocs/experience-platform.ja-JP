@@ -4,9 +4,9 @@ title: 属性ベースのアクセス制御エンドツーエンドガイド
 description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関するエンドツーエンドガイドを提供します
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
+source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1762'
 ht-degree: 24%
 
 ---
@@ -156,6 +156,10 @@ Platform UI の権限ワークスペースが表示され、**[!UICONTROL 役割
 ![RHD ラベルの選択と保存が選択されていることを示す画像 ](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 上記の手順を **[!UICONTROL インスリン &lt;50]** で繰り返します。
+
+>[!NOTE]
+>
+> [!UICONTROL  オブジェクトレベルのアクセス制御 ]」を使用して、[ 権限 ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) ワークスペースで作成したラベル（上記のセグメントラベルなど）をAdobe Journey Optimizerの様々なオブジェクトに割り当てます。
 
 ## アクセス制御ポリシーのアクティブ化 {#policy}
 
