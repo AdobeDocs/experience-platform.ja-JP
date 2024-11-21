@@ -5,7 +5,7 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 77%
@@ -113,7 +113,7 @@ ht-degree: 77%
    - [クエリテンプレート](api/query-templates.md)
    - [高速クエリ](api/accelerated-queries.md)
    - [アラート購読](api/alert-subscriptions.md)
-- クエリサービス認証 API {#auth-api}
+- Data Distiller Authorization API {#auth-api}
    - [概要](auth-api/overview.md)
    - [はじめに](auth-api/getting-started.md)
    - [IP アクセス](auth-api/ip-access.md)

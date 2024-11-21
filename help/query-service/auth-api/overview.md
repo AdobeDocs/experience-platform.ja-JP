@@ -1,22 +1,22 @@
 ---
-title: Query Service Authorization API ガイド
-description: Query Service Authorization API を使用して、SQL を介した安全な接続のためにネットワークベースの IP 制限を適用する方法を説明します。 この API を使用して、Adobe Experience Platform データのデータアクセス制御を強化します。
+title: Data Distiller認証 API ガイド
+description: Data Distiller Authorization API を使用して、SQL を介した安全な接続のためにネットワークベースの IP 制限を適用する方法を説明します。 この API を使用して、Adobe Experience Platform データのデータアクセス制御を強化します。
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 2%
 
 ---
 
-# Query Service Authorization API ガイド
+# Data Distiller認証 API ガイド
 
 >[!AVAILABILITY]
 >
 >この機能は、Data Distiller アドオンを購入したお客様が利用できます。 詳しくは、アドビ担当者にお問い合わせください。
 
-Query Service Authorization API を使用して、IP ベースの制限を適用します。 これらの測定値を適用すると、承認されたネットワークとクライアントマシンのみがAdobe Experience Platformの SQL を介してデータにアクセスできるようになります。 これらの制御により、厳しいセキュリティ基準を満たしながら、リアルタイムのアクセス監視とアラートを提供できます。
+Data Distiller Authorization API を使用して、IP ベースの制限を適用します。 これらの測定値を適用すると、承認されたネットワークとクライアントマシンのみがAdobe Experience Platformの SQL を介してデータにアクセスできるようになります。 これらの制御により、厳しいセキュリティ基準を満たしながら、リアルタイムのアクセス監視とアラートを提供できます。
 
 この API を使用すると、SQL インターフェイスを介してデータにアクセスするための IP 制限を設定、適用、監視できます。 このドキュメントでは、API のコア機能、エンドポイント関数および今後の機能の概要を説明します。
 
@@ -39,4 +39,4 @@ Query Service Authorization API を使用して、IP ベースの制限を適用
 
 ## 次の手順
 
-クエリサービス認証 API の基本を学ぶには、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーや API 呼び出し規則などの基本的な設定手順を確認してください。 次に、安全なデータアクセスの設定と管理に関する [IP アクセス ](./ip-access.md) および [IP 検証 ](./validate.md) のエンドポイント固有のガイドを参照します。
+Data Distiller Authorization API の基本を学ぶには、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーや API 呼び出し規則などの基本的な設定手順を確認してください。 次に、安全なデータアクセスの設定と管理に関する [IP アクセス ](./ip-access.md) および [IP 検証 ](./validate.md) のエンドポイント固有のガイドを参照します。

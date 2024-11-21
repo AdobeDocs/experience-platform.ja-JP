@@ -3,7 +3,7 @@ keywords: IP アドレス，IP 範囲，許可リスト 許可リストに加え
 title: クエリサービスの IP アドレスの許可リスト
 description: このページでは、クエリサービスへの安全なアクセスのために、許可リストに追加できる更新された IP 範囲を提供します。
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: e6c148b943c68bff5330c7ff021ffa88ba131639
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 4%
@@ -47,7 +47,7 @@ Adobeでは、地域に応じて、次の地域固有の IP 範囲を許可リ�
 
 ## IP ベースの制限の設定 {#set-ip-restrictions}
 
-[ クエリサービス認証 API ガイド ](./auth-api/overview.md) を使用して、IP ベースの制限を設定します。 これらの IP ベースの制限により、承認されたネットワークとクライアントマシンのみがAdobe Experience Platformの SQL を使用してデータにアクセスできるようになります。 リアルタイムのアクセストラッキングおよびアラート機能を備えた、高いセキュリティ標準を維持するための IP 制限の設定、適用、監視方法について説明します。
+[Data Distiller Authorization API Guides](./auth-api/overview.md) を使用して、IP ベースの制限を設定します。 これらの IP ベースの制限により、承認されたネットワークとクライアントマシンのみがAdobe Experience Platformの SQL を使用してデータにアクセスできるようになります。 リアルタイムのアクセストラッキングおよびアラート機能を備えた、高いセキュリティ標準を維持するための IP 制限の設定、適用、監視方法について説明します。
 
 * [はじめる前に](./auth-api/getting-started.md)
 * [IP アクセスエンドポイントガイド](./auth-api/ip-access.md)
