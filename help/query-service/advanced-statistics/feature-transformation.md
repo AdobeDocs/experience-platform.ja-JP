@@ -2,9 +2,10 @@
 title: 特徴変換テクニック
 description: 統計モデルトレーニング用のデータを準備する、データ変換、エンコーディング、機能スケーリングなどの基本的な前処理手法について説明します。 ここでは、欠落値の処理と、モデルのパフォーマンスと精度を向上させるためのカテゴリデータの変換の重要性について説明します。
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '3437'
+source-wordcount: '3450'
 ht-degree: 9%
 
 ---
@@ -55,14 +56,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 `CREATE MODEL` ステートメントでカスタムデータの前処理を定義するには、`TRANSFORM` 句を使用可能な任意の数の変換関数と組み合わせて使用します。 これらの手動による前処理関数は、`TRANSFORM` 句の外部でも使用できます。 [ 以下のトランスフォーマーの節 ](#available-transformations) で説明するすべての変換を使用して、データを手動で前処理できます。
 
-### 主な特徴
+### 主な特徴 {#key-characteristics}
 
 前処理関数を定義する際に考慮すべきフィーチャー変換の主な特性を以下に示します。
 
 - **構文**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
    - エイリアス名は構文で必須です。 エイリアス名を指定する必要があります。指定しないと、クエリが失敗します。
 
-- **パラメーター**：パラメーターは位置引数です。 つまり、各パラメーターは特定の値のみを取ることができます。 どの関数がどの引数を取るかについては、関連するドキュメントを参照してください。
+- **パラメーター**：パラメーターは位置引数です。 つまり、各パラメーターは特定の値のみを取ることができ、カスタム値が指定されている場合は、先行するすべてのパラメーターを指定する必要があります。 どの関数がどの引数を取るかについては、関連するドキュメントを参照してください。
 
 - **チェーントランス**：あるトランスの出力が別のトランスの入力になる場合があります。
 
@@ -180,7 +181,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 | 1 | ml_unknown |
 | 2 | アリス |
 
-#### ブール演算子 {#imputer}
+#### ブール演算子 {#boolean-imputer}
 
 **ブール演算子** 変換は、ブール値列のデータセットの欠落値を補完します。 入力列と出力列は `Boolean` 型にする必要があります。
 

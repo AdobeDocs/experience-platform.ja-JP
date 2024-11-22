@@ -2,9 +2,10 @@
 title: 機能エンジニアリング SQL 拡張機能
 description: 高度な統計モデリング用にデータを前処理する Data Distiller機能エンジニアリング SQL 拡張機能について説明します。 使用可能な機能の抽出、変換、選択の手法について説明します。
 role: Developer
-source-git-commit: 1fcfb5c41750e853daaf036ceaae3527b805391c
+exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -41,9 +42,10 @@ ht-degree: 1%
 
 以下は、データの前処理ワークフローを強化するために様々なデータタイプを処理するツールのリストです。
 
-- **[数値入力](./feature-transformation.md#numeric-imputer)**：数値列の欠落値をに入力します
-- **[文字列演算子](./feature-transformation.md#string-imputer)**：欠落している文字列値を指定の値に置換します
-- **[ベクトルアセンブラー](./feature-transformation.md#vector-assembler)**：複数の列を 1 つのベクトル列に結合します。
+- **[数値入力](./feature-transformation.md#numeric-imputer)**：数値列の欠落値を、平均値や中央値などの指定した値で入力します。
+- **[文字列演算子](./feature-transformation.md#string-imputer)**：欠落している文字列値を、列の最も頻度の高い文字列などの、指定した値に置き換えます。
+- **[ベクトルアセンブラー](./feature-transformation.md#vector-assembler)**：複数の列を 1 つのベクトル列に組み合わせて、機械学習モデルのデータを準備します。
+- **[ブール値の入力](./feature-transformation.md#boolean-imputer)**：欠落しているブール値を、`true` や `false` などの指定した値で入力します。
 
 #### 数値変換
 
@@ -88,7 +90,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 ## OPTIONS句を実装します {#options-clause}
 
-モデルを定義する場合、`OPTIONS` 句を使用して、アルゴリズムとそのパラメーターを指定します。 最初に、使用しているアルゴリズムを示す `type` パラメーター（`K-Means` など）を設定します。 次に、`OPTIONS` 句で関連するパラメーターをキーと値のペアとして定義し、モデルを微調整します。 一部のパラメーターは位置的である可能性があり、カスタム値が指定されている場合は、先行するすべてのパラメーターを指定する必要があることに注意してください。 特定のパラメータをカスタマイズしない場合は、デフォルト設定が適用されます。 各パラメーターの関数とデフォルト値について詳しくは、関連するドキュメントを参照してください。
+モデルを定義する場合、`OPTIONS` 句を使用して、アルゴリズムとそのパラメーターを指定します。 最初に、使用しているアルゴリズムを示す `type` パラメーター（`K-Means` など）を設定します。 次に、`OPTIONS` 句で関連するパラメーターをキーと値のペアとして定義し、モデルを微調整します。 特定のパラメータをカスタマイズしない場合は、デフォルト設定が適用されます。 各パラメーターの関数とデフォルト値について詳しくは、関連するドキュメントを参照してください。
 
 ### 次の手順
 

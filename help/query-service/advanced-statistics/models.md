@@ -2,9 +2,10 @@
 title: モデル
 description: Data Distiller SQL 拡張機能を使用したモデルライフサイクル管理。 SQL を使用して、モデルのバージョン管理、評価、予測などの主要プロセスを含む高度な統計モデルを作成、トレーニング、管理し、データから実用的なインサイトを導き出す方法を説明します。
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
+source-git-commit: 6a61900b19543f110c47e30f4d321d0016b65262
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1229'
 ht-degree: 1%
 
 ---
@@ -76,19 +77,33 @@ SQL を使用して、トレーニングに使用するデータセットを参�
 
 ## モデルの更新 {#update}
 
-新しい機能エンジニアリング変換を適用し、アルゴリズムのタイプやラベル列などのオプションを設定することで、既存の機械学習モデルを更新する方法を説明します。 以下の SQL は、更新ごとにモデルのバージョン番号を増やす方法と、今後の評価または予測ステップでモデルが再利用できるように変更が追跡されていることを確認する方法を示しています。
+新しいフィーチャーエンジニアリング変換を適用し、アルゴリズムタイプやラベル列などのオプションを設定することで、既存の機械学習モデルを更新する方法を説明します。 更新のたびに、モデルの最新バージョンが作成され、最新バージョンから増分されます。 これにより、変更が追跡され、今後の評価や予測の手順でモデルを再利用できます。
+
+次の例は、新しい変換およびオプションを使用してモデルを更新する方法を示しています。
 
 ```sql
-UPDATE model <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) ASSELECT col1,
-       col2,
-       col3
-FROM   training-dataset.
+UPDATE MODEL <model_alias> TRANSFORM (vector_assembler(array(current_customers, previous_customers)) features)  OPTIONS(MODEL_TYPE='logistic_reg', LABEL='churn_rate')  AS SELECT * FROM churn_with_rate ORDER BY period;
 ```
 
-モデルのバージョンを管理し、変換を効果的に適用する方法を理解できるように、次のメモでは、モデル更新ワークフローの主要なコンポーネントとオプションについて説明します。
+**例**
 
-- `UPDATE model <model_alias>`：更新コマンドはバージョン管理を行い、更新のたびにモデルのバージョン番号を増やします。
-- `version`：モデルの新しいバージョンを作成するための更新時にのみ使用されるオプションのキーワード。
+バージョン管理プロセスを理解するために、次のコマンドを使用できます。
+
+```sql
+UPDATE MODEL model_vdqbrja OPTIONS(MODEL_TYPE='logistic_reg', LABEL='Survived') AS SELECT * FROM titanic_e2e_dnd;
+```
+
+このコマンドを実行すると、次の表に示すように、モデルのバージョンが新しくなります。
+
+| 更新されたモデル ID | 更新されたモデル | 新しいバージョン |
+|--------------------------------------------|---------------|-------------|
+| a8f6a254-8f28-42ec-8b26-94edeb4698e8 | model_vdqbrja | 2 |
+
+以下のメモでは、モデル更新ワークフローの主要なコンポーネントとオプションについて説明します。
+
+- `UPDATE model <model_alias>`：更新コマンドはバージョン管理を行い、最新バージョンから増分された新しいモデル バージョンを作成します。
+- `version`：更新時にのみ使用されるオプションのキーワードで、新しいバージョンを作成することを明示的に指定します。 省略すると、バージョンが自動的に増分されます。
+
 
 ## モデルの評価 {#evaluate-model}
 
