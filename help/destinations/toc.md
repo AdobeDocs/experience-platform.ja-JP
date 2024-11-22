@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 86%
+source-wordcount: '1257'
+ht-degree: 85%
 
 ---
 
@@ -42,6 +42,7 @@ ht-degree: 86%
       * [ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-streaming-profile-destinations.md)
       * [バッチプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-batch-profile-destinations.md)
       * [エッジパーソナライゼーションの宛先に対してオーディエンスをアクティブ化する](./ui/activate-edge-personalization-destinations.md)
+      * [エッジ上でのプロファイル属性のリアルタイム検索](./ui/activate-edge-profile-lookup.md)
       * [LiveRamp 識別子に基づいてキュレーションされた宛先に対するオーディエンスのアクティブ化](./ui/activate-curated-destinations.md)
       * [見込み客のオーディエンスを宛先に対してアクティブ化する](./ui/activate-prospect-audiences.md)
       * [宛先へのアカウントオーディエンスの有効化](./ui/activate-account-audiences.md)
