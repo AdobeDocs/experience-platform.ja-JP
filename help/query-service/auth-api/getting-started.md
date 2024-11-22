@@ -4,9 +4,9 @@ title: Data Distiller認証 API ガイド
 description: Adobe Experience Platform クエリサービス内で安全にデータアクセスできるよう、認証と IP 範囲制限の開始に関する方法を説明します。
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '507'
 ht-degree: 5%
 
 ---
@@ -66,3 +66,5 @@ Data Distiller認証 API を呼び出すには、API 呼び出しで必要なヘ
 各 API 呼び出しの例では、リクエストの形式を設定し応答を解釈する方法を示しているので、クエリサービスでのデータへの安全なアクセスを強制するのに役立ちます。
 
 IP 制限の設定と検証の具体的な手順については、[IP アクセスエンドポイントのドキュメント ](./ip-access.md) および [IP 検証エンドポイントのドキュメント ](./validate.md) を参照してください。
+
+統合、テスト、探索を容易にする標準化された機械読み取り可能な形式を表示するには、[Data Distiller認証 OpenAPI リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) を参照してください。

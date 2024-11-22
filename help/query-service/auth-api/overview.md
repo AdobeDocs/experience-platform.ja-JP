@@ -3,9 +3,9 @@ title: Data Distiller認証 API ガイド
 description: Data Distiller Authorization API を使用して、SQL を介した安全な接続のためにネットワークベースの IP 制限を適用する方法を説明します。 この API を使用して、Adobe Experience Platform データのデータアクセス制御を強化します。
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---
@@ -30,13 +30,17 @@ Data Distiller Authorization API を使用して、IP ベースの制限を適�
 
 ## 監査と監視の機能
 
-安全なデータアクセス手法をサポートするために、クエリサービスは、AEP にアクセスまたはアクセスを試みるすべてのクライアント IP をログに記録します。 拒否された接続を含む監査イベントは、Platform 監査ログに送信されます。 これにより、次のことが可能になります。
+安全なデータアクセス手法をサポートするために、クエリサービスは、Experience Platformにアクセスまたはアクセスを試みるすべてのクライアント IP をログに記録します。 拒否された接続を含む監査イベントは、Platform 監査ログに送信されます。 これにより、次のことが可能になります。
 
 - **リアルタイム監視**: IP ベースのアクセスパターンを追跡して、コンプライアンスを確保します。
 - **権限のないアクセスに関するアラート**：権限のない IP からのアクセス試行を識別して応答します。
 
-監査ログについて詳しくは、[ 監査サービスのドキュメント ](https://experienceleague.adobe.com/docs/experience-platform/audit/audit-overview.html) を参照してください。
+詳しくは、[ 監査ログの概要 ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
 
 ## 次の手順
 
 Data Distiller Authorization API の基本を学ぶには、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーや API 呼び出し規則などの基本的な設定手順を確認してください。 次に、安全なデータアクセスの設定と管理に関する [IP アクセス ](./ip-access.md) および [IP 検証 ](./validate.md) のエンドポイント固有のガイドを参照します。
+
+統合、テスト、探索を容易にする標準化された機械読み取り可能な形式を表示するには、[Data Distiller認証 OpenAPI リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) を参照してください。
+
+返される各データセットの様々な応答パラメーターについて詳しくは、[ データセット API 開発者向けドキュメント ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) を参照してください。
