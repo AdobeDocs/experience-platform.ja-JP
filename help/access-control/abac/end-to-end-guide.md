@@ -4,18 +4,18 @@ title: 属性ベースのアクセス制御エンドツーエンドガイド
 description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関するエンドツーエンドガイドを提供します
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
+source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
 workflow-type: tm+mt
-source-wordcount: '1762'
-ht-degree: 24%
+source-wordcount: '1794'
+ht-degree: 23%
 
 ---
 
 # 属性ベースのアクセス制御エンドツーエンドガイド
 
-Adobe Experience Platformの属性ベースのアクセス制御を使用すると、自分自身や他のマルチブランドのプライバシーを重視するお客様に、ユーザーアクセスをより柔軟に管理できます。 スキーマフィールドやセグメントなどの個々のオブジェクトへのアクセスは、オブジェクトの属性と役割に基づくポリシーで許可できます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
+Adobe Experience Platformの属性ベースのアクセス制御を使用すると、自分自身や他のマルチブランドのプライバシーを重視するお客様に、ユーザーアクセスをより柔軟に管理できます。 スキーマフィールドやオーディエンスなどの個々のオブジェクトへのアクセスは、オブジェクトの属性と役割に基づくポリシーで許可できます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
 
-この機能を使用すると、スキーマフィールドやセグメントなどを、組織またはデータの使用範囲を定義するラベルで分類できます。 Adobe Journey Optimizerのジャーニー、オファーおよびその他のオブジェクトに同じラベルを適用できます。 同時に、管理者は、エクスペリエンスデータモデル（XDM）スキーマフィールドに関するアクセスポリシーを定義し、それらのフィールドにアクセスできるユーザーまたはグループ（内部、外部、またはサードパーティのユーザー）をより適切に管理できます。
+この機能を使用すると、スキーマフィールドやオーディエンスなどを、組織またはデータの使用範囲を定義するラベルで分類できます。 Adobe Journey Optimizerのジャーニー、オファーおよびその他のオブジェクトに同じラベルを適用できます。 同時に、管理者は、エクスペリエンスデータモデル（XDM）スキーマフィールドに関するアクセスポリシーを定義し、それらのフィールドにアクセスできるユーザーまたはグループ（内部、外部、またはサードパーティのユーザー）をより適切に管理できます。
 
 >[!NOTE]
 >
@@ -44,8 +44,8 @@ Adobe Experience Platformの属性ベースのアクセス制御を使用する�
 以下を行います。
 
 * [ ユーザーの役割のラベル付け ](#label-roles)：マーケティンググループが外部の代理店と連携するヘルスケアプロバイダー（ACME ビジネスグループ）の例を使用します。
-* [ リソース（スキーマフィールドとセグメント）のラベル付け ](#label-resources):**[!UICONTROL PHI/規制医療データ]** ラベルをスキーマのリソースとセグメントに割り当てます。
-* [ それらをリンクするポリシーをアクティブ化 ](#policy)：リソースのラベルを役割のラベルに接続することで、スキーマフィールドおよびセグメントへのアクセスを防止するデフォルトポリシーを有効にします。 ラベルが一致するユーザーには、すべてのサンドボックスでスキーマフィールドとセグメントにアクセスできます。
+* [ リソース（スキーマフィールドとオーディエンス）にラベルを付けます ](#label-resources):**[!UICONTROL PHI/規制医療データ]** ラベルをスキーマのリソースとオーディエンスに割り当てます。
+* [ それらをリンクするポリシーをアクティブ化 ](#policy): リソースのラベルを役割のラベルに接続することで、スキーマフィールドやオーディエンスにアクセスできないようにするデフォルトポリシーを有効にします。 ラベルが一致するユーザーには、すべてのサンドボックスでスキーマフィールドとセグメントにアクセスできます。
 
 ## 権限
 
@@ -59,7 +59,7 @@ Adobe Experience Platformの属性ベースのアクセス制御を使用する�
 
 ![Adobe Experience Cloudで「権限」製品が選択されている様子を示す画像 ](../images/flac-ui/flac-select-product.png)
 
-Platform UI の権限ワークスペースが表示され、**[!UICONTROL 役割]** ページが開きます。
+Platform UI の権限ワークスペースが表示され、**[!UICONTROL 概要]** ページが開きます。
 
 ## 役割にラベルを適用 {#label-roles}
 
@@ -94,15 +94,15 @@ Platform UI の権限ワークスペースが表示され、**[!UICONTROL 役割
 
 役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素です。 役割には特定の権限セットが付与され、必要なアクセス範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
 
-開始するには、**[!UICONTROL 役割]** ページから **[!UICONTROL ACME ビジネスグループ]** を選択します。
+開始するには、左側のナビゲーションから **[!UICONTROL 役割]** を選択し、**[!UICONTROL ACME ビジネスグループ]** を選択します。
 
-![ 役割で ACME ビジネスロールが選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![ 役割で ACME ビジネスグループが選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
 次に、「**[!UICONTROL ラベル]**」を選択し、「**[!UICONTROL ラベルを追加]**」を選択します。
 
 ![ 「ラベル」タブで「ラベルを追加」が選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-組織のすべてのラベルのリストが表示されます。 **[!UICONTROL RHD]** を選択して、**[!UICONTROL PHI/規制医療データ]** のラベルを追加します。 ラベルの横に青いチェックマークが表示されるまでしばらく待ってから、「**[!UICONTROL 保存]**」を選択します。
+組織のすべてのラベルのリストが表示されます。 **[!UICONTROL RHD]** を選択して、**[!UICONTROL PHI/規制医療データ]** のラベルを追加し、**[!UICONTROL 保存]** を選択します。
 
 ![RHD ラベルが選択され、保存されていることを示す画像 ](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -113,6 +113,10 @@ Platform UI の権限ワークスペースが表示され、**[!UICONTROL 役割
 ## スキーマフィールドへのラベルの適用 {#label-resources}
 
 [!UICONTROL RHD] ラベルを使用してユーザーの役割を設定したので、次の手順は、その役割で制御するリソースに同じラベルを追加することです。
+
+上部ナビゲーションから、「**アプリケーションスイッチャー**」アイコンで表される「![ アプリケーションスイッチャー ](/help/images/icons/apps.png)」を選択し、「**[!UICONTROL Experience Platform]**」を選択します。
+
+![ アプリケーションスイッチャーのドロップダウンメニューからExperience Platformが選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 左側のナビゲーションから **[!UICONTROL スキーマ]** を選択し、表示されるスキーマのリストから **[!UICONTROL ACME Healthcare]** を選択します。
 
@@ -130,30 +134,30 @@ Platform UI の権限ワークスペースが表示され、**[!UICONTROL 役割
 >
 >ラベルがフィールドに追加されると、そのラベルは、そのフィールドの親リソース（クラスまたはフィールドグループ）に適用されます。 親クラスまたはフィールドグループが他のスキーマで使用されている場合、それらのスキーマは同じラベルを継承します。
 
-## セグメントへのラベルの適用
+## オーディエンスへのラベルの適用
 
 >[!NOTE]
 >
->同じアクセス制限を適用する場合、ラベル付き属性を利用するセグメントにも同じようにラベルを付ける必要があります。
+>同じアクセス制限を適用する場合、ラベル付き属性を利用するオーディエンスにも同じようにラベルを付ける必要があります。
 
-スキーマフィールドのラベル設定が完了したら、セグメントのラベル設定を開始できます。
+スキーマフィールドのラベル設定が完了したら、オーディエンスのラベル設定を開始できます。
 
-左側のナビゲーションから **[!UICONTROL セグメント]** を選択します。 組織で使用可能なセグメントのリストが表示されます。 この例では、次の 2 つのセグメントに機密ヘルスデータが含まれているため、ラベルが付けられます。
+左側のナビゲーションの **[!UICONTROL 顧客]** セクションの下にある **[!UICONTROL オーディエンス]** を選択します。 組織で使用可能なオーディエンスのリストが表示されます。 この例では、次の 2 つのオーディエンスに機密ヘルスデータが含まれているので、ラベルが付けられます。
 
 * 血糖値が 100 を超える
 * インスリン 50 未満
 
-**[!UICONTROL 血糖値 > 100]** を選択して、セグメントのラベル付けを開始します。
+（チェックボックスではなく、オーディエンス名に基づいて） **[!UICONTROL 血糖値 > 100]** を選択して、オーディエンスのラベル付けを開始します。
 
-![ 「セグメント」タブから血糖値が 100 を超えて選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![ 「オーディエンス」タブから血糖値が 100 を超えて選択されている様子を示す画像 ](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
 セグメント **[!UICONTROL 詳細]** 画面が表示されます。 **[!UICONTROL アクセスを管理]** を選択します。
 
-![ 管理アクセスの選択を示す画像 ](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![ 管理アクセスの選択を示す画像 ](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-**[!UICONTROL ラベルを編集]** ダイアログが表示され、セグメントに適用するラベルを選択できます。 このユースケースでは、「**[!UICONTROL PHI/規制医療データ]**」ラベルを選択し、「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL アクセスラベルとデータガバナンスラベルを適用]** ダイアログが表示され、オーディエンスに適用するラベルを選択できます。 このユースケースでは、「**[!UICONTROL PHI/規制医療データ]**」ラベルを選択し、「**[!UICONTROL 保存]**」を選択します。
 
-![RHD ラベルの選択と保存が選択されていることを示す画像 ](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![RHD ラベルの選択と保存が選択されていることを示す画像 ](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
 上記の手順を **[!UICONTROL インスリン &lt;50]** で繰り返します。
 
@@ -163,13 +167,13 @@ Platform UI の権限ワークスペースが表示され、**[!UICONTROL 役割
 
 ## アクセス制御ポリシーのアクティブ化 {#policy}
 
-デフォルトのアクセス制御ポリシーは、ラベルを活用して、特定の Platform リソースにアクセスできるユーザーの役割を定義します。 この例では、スキーマフィールドに対応するラベルを持つ役割に属していないユーザーに対しては、すべてのサンドボックスでスキーマフィールドおよびセグメントへのアクセスが拒否されます。
+デフォルトのアクセス制御ポリシーは、ラベルを活用して、特定の Platform リソースにアクセスできるユーザーの役割を定義します。 この例では、スキーマフィールドに対応するラベルを持つ役割に属していないユーザーに対しては、すべてのサンドボックスでスキーマフィールドおよびオーディエンスへのアクセスが拒否されます。
 
 アクセス制御ポリシーをアクティブにするには、左側のナビゲーションから [!UICONTROL  権限 ] を選択し、次に **[!UICONTROL ポリシー]** を選択します。
 
 ![ 表示されたポリシーのリスト ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-次に、ポリシー名の横にある省略記号（`...`）を選択すると、役割を編集、アクティブ化、削除または複製するためのコントロールがドロップダウンに表示されます。 ドロップダウンから「**[!UICONTROL アクティブ化]**」を選択します。
+次に、**[!UICONTROL Default-Field-Level-Access-Control-Policy）の横にある省略記号（`...`]** を選択すると、役割を編集、アクティブ化、削除または複製するためのコントロールがドロップダウンに表示されます。 ドロップダウンから「**[!UICONTROL アクティブ化]**」を選択します。
 
 ![ ポリシーをアクティブ化するためのドロップダウン ](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
@@ -216,7 +220,7 @@ Access control policies leverage labels to define which user roles have access t
 >[!NOTE]
 >
 >A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
-
+a
 To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
 ![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
@@ -260,7 +264,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## 次の手順
 
-役割、スキーマフィールド、セグメントへのラベルの適用が完了しました。 これらの役割に割り当てられる外部エージェンシーは、これらのラベルとその値をスキーマ、データセットおよびプロファイルビューで表示することが制限されています。 また、これらのフィールドは、セグメントビルダーを使用する場合、セグメント定義で使用することも制限されています。
+これで、役割、スキーマフィールド、オーディエンスに対するラベルの適用が完了しました。 これらの役割に割り当てられる外部エージェンシーは、これらのラベルとその値をスキーマ、データセットおよびプロファイルビューで表示することが制限されています。 また、これらのフィールドは、セグメントビルダーを使用する場合、セグメント定義で使用することも制限されています。
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](./overview.md)を参照してください。
 
