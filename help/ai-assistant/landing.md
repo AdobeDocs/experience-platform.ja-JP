@@ -1,12 +1,10 @@
 ---
 title: Adobe Experience Platformの AI アシスタント製品ドキュメント
-description: Adobe Experience Platformの AI アシスタントの基本を学ぶ
-hide: true
-hidefromtoc: true
+description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
+source-git-commit: 653c97c8632eeaf4cad02accc63d3e4dbffb54dd
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 1%
 
 Adobe Experience Platformの AI アシスタントは、Experience Platformのアプリケーションやサービスを使用してワークフローを高速化するために使用できる対話型ツールです。 AI アシスタントを使用すると、全体的な生産性を高め、製品の知識や運用上のインサイトに対する理解を深め、クエリやビジネスのユースケースに関連する推奨事項を収集できます。
 
-AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizer、およびCustomer Journey Analyticsをサポートします。
+AI アシスタントは、Experience Platform、Real-Time CDP、Adobe Journey Optimizer、およびCustomer Journey Analyticsをサポートします。
 
 ## 基本を学ぶ
 
