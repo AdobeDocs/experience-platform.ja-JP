@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service の概要
 description: Privacy Serviceを利用することで、Experience Cloudデータの運用に関する法的プライバシー規制への自動コンプライアンスを容易にする方法を説明します。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 19b33ddf2fc3f8d889d370eedfc732ac54178dcd
+source-git-commit: 61a5b4fd7af68e7379b456ddd37218d183e76256
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 48%
+source-wordcount: '1660'
+ht-degree: 45%
 
 ---
 
@@ -68,6 +68,14 @@ Privacy Serviceに使用できる ID 情報の種類について詳しくは、[
 
 ビジネスのプライバシーニーズを決定し、Privacy Serviceに送信する ID の値を決定したら、プライバシーリクエストの作成を開始することができます。 Privacy Serviceを使用して、API または UI を通じてプライバシーリクエストを送信します。
 
+#### リクエストファイルの詳細へのアクセス {#access-requests}
+
+正常なアクセスリクエストに対する応答として、複数のファイルを含む **ダウンロード URL** があります。 データがリクエストされたAdobeアプリケーションごとに 1 つのファイルが提供されます。 各アプリケーションのファイル形式は、アプリケーションのデータ構造によって異なる場合があります。
+
+#### 削除リクエスト – ダウンロード URL なし {#delete-requests}
+
+顧客データが取得されないので、**削除リクエスト** に対する応答には **ダウンロード URL がありません**。
+
 >[!IMPORTANT]
 >
 >以下のセクションでは、API または UI で一般的なプライバシーリクエストの実行方法を説明するドキュメントへのリンクを提供しています。ただし、使用している [!DNL Experience Cloud] アプリケーションによっては、リクエストペイロードで送信する必要があるフィールドが、これらのガイドに示す例と異なる場合があります。
@@ -97,6 +105,10 @@ Privacy Service UI のグラフィカルインターフェイスを使用して�
 | PRIVACY SERVICEUI | Privacy Service UI のモニタリング ダッシュボードを使用して、すべてのアクティブなリクエストのステータスを視覚的に表示できます。 詳しくは、『[Privacy Service ユーザガイド](ui/overview.md)』を参照してください。 |
 | PRIVACY SERVICEAPI | Privacy Service API が提供する参照エンドポイントを使用して、プライバシージョブのステータスをプログラムによってモニタリングできます。 API の使用方法の手順について詳しくは、[Privacy Service API ガイド](./api/overview.md)を参照してください。 |
 | [!DNL Privacy Events] | 設定済みの Webhook に送信されるAdobe I/Oイベントを使用して、効率的なジョブリクエストの自動処理を容易に行うことがで [!DNL Privacy Events] ます。 ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するためにPrivacy ServiceAPI をポーリングする必要性が削減される、または完全になくなります。 詳しくは、[プライバシーイベントの登録](./privacy-events.md)のチュートリアルを参照してください。 |
+
+#### 既存のユーザー以外への応答 {#non-existing-users}
+
+アクセスリクエストまたは削除リクエストを送信すると、ユーザーデータが見つからない場合でも、呼び出しが正常に完了すると、応答は常に `success` を返します。 つまり、データが存在しない場合でも、データを取得または削除することなく、アクセスまたは削除を正常に完了できます。
 
 ## 次の手順
 
