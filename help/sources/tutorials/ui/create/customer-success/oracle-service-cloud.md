@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気の高いトピック;Oracle Servi
 title: UI での Oracle Service Cloud ソース接続の作成
 description: Adobe Experience Platform の UI を使用して Oracle サービスクラウドソース接続を作成する方法を説明します。
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 97%
@@ -14,7 +14,7 @@ ht-degree: 97%
 
 >[!WARNING]
 >
->[!DNL Oracle Service Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
+>[!DNL Oracle Service Cloud] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して Oracle Service Cloud ソース接続を作成する手順について説明します。
 

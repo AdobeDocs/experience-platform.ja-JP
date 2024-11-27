@@ -5,7 +5,7 @@ title: Flow Service API を使用した Couchbase ベース接続の作成
 type: Tutorial
 description: Flow Service API を使用して Couchbase をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 64%
@@ -16,7 +16,7 @@ ht-degree: 64%
 
 >[!WARNING]
 >
->[!DNL Couchbase] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
+>[!DNL Couchbase] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 

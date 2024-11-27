@@ -2,7 +2,7 @@
 title: Flow Service API を使用したSalesforce Marketing Cloudベース接続の作成
 description: Flow Service API を使用して、Experience Platformに対してSalesforce Marketing Cloudアカウントを認証する方法を説明します。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 57%
@@ -13,7 +13,7 @@ ht-degree: 57%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud] ソースは 2025 年 5 月末に非推奨（廃止予定）になります。
+>[!DNL Salesforce Marketing Cloud] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
