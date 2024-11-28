@@ -2,10 +2,10 @@
 title: 外部Source システム監査属性データタイプ
 description: 外部Source システム監査属性エクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 03735e7099ffb2cfd44fc7fffd35e3a4a858e3ba
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 7%
+source-wordcount: '186'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 | `lastActivityDate` | 日時 | ソースシステムの最後のアクティビティの日付。 |
 | `lastReferencedDate` | 日時 | ソースシステムの最終参照日。 |
 | `lastUpdatedBy` | 文字列 | このレコードを最後に更新した人物の名前。 |
-| `lastUpdatedDate` | 日時 | ソースシステムの最終更新日。 |
+| `lastUpdatedDate` | 日時 | ソースシステムの最終更新日。 この値は、結合の競合が発生した場合の優先度を決定するために [ 属性結合ポリシー ](../../profile/api/merge-policies.md#attribute-merge) で使用されます。 |
 | `lastViewedDate` | 日時 | ソースシステムの最終表示日。 |
 
 {style="table-layout:auto"}
