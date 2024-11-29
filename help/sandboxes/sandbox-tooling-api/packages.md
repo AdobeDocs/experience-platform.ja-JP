@@ -2,9 +2,9 @@
 title: サンドボックスツールパッケージ API エンドポイント
 description: サンドボックスツール API の/packages エンドポイントを使用すると、Adobe Experience Platformのパッケージをプログラムで管理できます。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
+source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
 workflow-type: tm+mt
-source-wordcount: '2543'
+source-wordcount: '2547'
 ht-degree: 10%
 
 ---
@@ -367,6 +367,7 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **応答**
@@ -403,6 +404,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 | プロパティ | 説明 | タイプ | 必須 |
@@ -424,7 +426,8 @@ curl -X GET \
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -452,6 +455,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **応答**
@@ -809,7 +813,8 @@ curl -X POST \
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -833,10 +838,11 @@ POST /packages/{PACKAGE_ID}/children
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/children \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d'[
       {
         "id": "4d4c874ec3344d64bf8b3160e60ac78b",
@@ -1064,6 +1070,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **応答**
@@ -1261,7 +1268,7 @@ curl -X POST  \
 | プロパティ | 説明 | タイプ | 必須 |
 | --- | --- | --- | --- |
 | `linkingID` | 応答する共有リクエストの ID。 | 文字列 | ○ |
-| `status` | 共有リクエストに対して実行されるアクション。 | 文字列 | ○ |
+| `status` | 共有リクエストに対して実行されるアクション。 指定できる値は、`APPROVED` または `REJECTED` です。 | 文字列 | ○ |
 | `reason` | アクションが実行されている理由。 | 文字列 | ○ |
 | `targetIMSOrgDetails` | ID 値がターゲット組織の **ID**、名前値がターゲット組織の **NAME**、地域値がターゲット組織の **REGION** である必要がある、ターゲット組織に関する詳細。 | オブジェクト | ○ |
 
@@ -1298,7 +1305,7 @@ curl -X POST  \
 **API 形式**
 
 ```http
-POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+GET handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
 ```
 
 | パラメーター | 許容値/デフォルト値 |
@@ -1420,13 +1427,6 @@ curl -X POST \
         "packageId": "{PACKAGE_ID}",
         "status": "PENDING",
         "initiatedBy": "acme@3ec9197a65a86f34494221.e",
-        "transferDetails": {
-            "messages": [
-                "Fetched Package",
-                "Fetched Manifest"
-            ],
-            "additionalMetadata": null
-        },
         "requestType": "PRIVATE"
     }
 ]
@@ -1475,18 +1475,6 @@ curl -X GET \
     "status": "COMPLETED",
     "initiatedBy": "{INITIATED_BY}",
     "createdDate": 1724442856000,
-    "transferDetails": {
-        "messages": [
-            "Fetched Package",
-            "Fetched Manifest",
-            "Tenant Identified",
-            "Fetched Sandbox Id",
-            "Fetched Blob Files",
-            "Message Published to Kafka",
-            "Completed Transfer"
-        ],
-        "additionalMetadata": null
-    },
     "requestType": "PRIVATE"
 }
 ```
@@ -1545,19 +1533,6 @@ curl -X GET \
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726129077000,
             "createdDate": 1726129062000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         },
         {
@@ -1572,19 +1547,6 @@ curl -X GET \
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726066046000,
             "createdDate": 1726065936000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         }
     ],
@@ -1600,7 +1562,7 @@ curl -X GET \
 **API 形式**
 
 ```http
-GET `/packages/update`
+PUT `/packages/update`
 ```
 
 **リクエスト**
@@ -1608,8 +1570,8 @@ GET `/packages/update`
 次のリクエストは、パッケージの可用性をプライベートからパブリックに変更します。
 
 ```shell
-curl -X GET \
-  http://platform.adobe.io/data/foundation/exim/packages/update \
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/exim/packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -1998,10 +1960,6 @@ curl -X GET \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -d '{
-      "imsOrgId": "{ORG_ID}",
-      "packageId": "{PACKAGE_ID}"
-  }'
 ```
 
 | プロパティ | 説明 | タイプ | 必須 |
