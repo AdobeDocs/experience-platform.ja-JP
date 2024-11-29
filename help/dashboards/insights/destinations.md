@@ -2,16 +2,16 @@
 title: 宛先インサイト
 description: 宛先のインサイトを強化する SQL を確認し、これらのクエリを使用してカスタムインサイトを生成し、Adobe Experience Platformからのデータのアクティブ化をさらに詳しく調べます。
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
 
 # 宛先インサイト
 
-データモデルの分析から得られるインサイトにより、Adobe Real-time Customer Data Platform データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
+データモデルの分析から得られるインサイトにより、Adobe Real-Time CDP データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
 
 宛先を強化する SQL にアクセスして宛先インサイトを理解し、独自のインサイトを生成して、Adobe Experience Platformから宛先プラットフォームへのデータのアクティブ化をさらに詳しく調べます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 

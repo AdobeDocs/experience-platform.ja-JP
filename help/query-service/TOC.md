@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 77%
+source-wordcount: '369'
+ht-degree: 76%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 77%
       - [ML のエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 環境へのデータの書き出し](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML データパイプラインのエンリッチメントエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Data Distiller統計 {#advanced-statistics}
+- Data Distillerの統計情報と機械学習 {#advanced-statistics}
    - [概要](advanced-statistics/overview.md)
    - [特徴エンジニアリング](advanced-statistics/feature-engineering.md)
    - [ モデル ](advanced-statistics/models.md)

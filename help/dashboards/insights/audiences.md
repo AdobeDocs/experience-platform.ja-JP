@@ -2,16 +2,16 @@
 title: オーディエンスインサイト
 description: オーディエンスインサイトを強化する SQL を確認し、これらのクエリを使用してカスタムインサイトを生成し、Adobe Experience Platformのオーディエンスデータをさらに詳しく調べます。
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1122'
 ht-degree: 3%
 
 ---
 
 # オーディエンスインサイト
 
-データモデルの分析から得られるインサイトにより、Adobe Real-time Customer Data Platform データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
+データモデルの分析から得られるインサイトにより、Adobe Real-Time CDP データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
 
 オーディエンスを強化する SQL にアクセスしてオーディエンスのインサイトを理解し、オーディエンスを構成する ID とプロファイルをさらに詳しく調べるために独自のインサイトを生成します。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 

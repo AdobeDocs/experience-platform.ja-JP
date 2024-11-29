@@ -4,16 +4,16 @@ description: アカウントプロファイルのインサイトを強化する 
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
 # アカウントプロファイルインサイト
 
-[ アカウントプロファイル ](../../rtcdp/accounts/account-profile-overview.md) は、複数のマーケティングチャネルや組織システムなど、様々なソースのアカウント情報を統合するために使用されます。 この統合ビューにより、顧客アカウントの包括的な把握が可能になり、B2B マーケティングキャンペーンが強化されます。 データモデルの分析から得られるインサイトにより、Adobe Real-time Customer Data Platform B2B データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
+[ アカウントプロファイル ](../../rtcdp/accounts/account-profile-overview.md) は、複数のマーケティングチャネルや組織システムなど、様々なソースのアカウント情報を統合するために使用されます。 この統合ビューにより、顧客アカウントの包括的な把握が可能になり、B2B マーケティングキャンペーンが強化されます。 データモデルの分析から得られるインサイトにより、Adobe Real-Time CDP B2B データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。
 
 インサイトを強化する SQL へのアクセスにより、B2B データをより深く理解し、高度にカスタマイズされた再利用可能なインサイトを生成して、顧客アカウント情報をさらに詳しく調べることができます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 

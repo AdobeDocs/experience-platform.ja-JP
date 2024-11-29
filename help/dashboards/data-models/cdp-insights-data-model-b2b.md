@@ -1,19 +1,19 @@
 ---
-title: Real-time Customer Data Platform Insights データモデル B2B エディション
-description: Real-time Customer Data Platform Insights データモデル（B2B Edition）で SQL クエリを使用して、マーケティングおよび KPI のユースケースに合わせて独自のReal-Time CDP レポートをカスタマイズする方法を説明します。
-badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+title: Real-time Customer Data Platform Insights データモデル B2B edition
+description: Real-time Customer Data Platform Insights データモデル（B2B edition）で SQL クエリを使用して、マーケティングおよび KPI のユースケースに合わせて独自のReal-Time CDP レポートをカスタマイズする方法を説明します。
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '472'
 ht-degree: 3%
 
 ---
 
-# Real-time Customer Data Platform Insights データモデル B2B エディション
+# Real-Time CDP Insights データモデル B2B edition
 
-B2B editionのReal-time Customer Data Platform Insights データモデルは、[ アカウントプロファイル ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) のインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、B2B マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 これらのインサイトは、ダッシュボードのカスタムウィジェットとして使用できます。
+B2B editionのReal-Time CDP Insights データモデルは、[ アカウントプロファイル ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) のインサイトを強化するデータモデルと SQL を公開します。 これらの SQL クエリテンプレートをカスタマイズすると、B2B マーケティングおよび主要業績評価指標（KPI）のユースケースに関するReal-Time CDP レポートを作成できます。 これらのインサイトは、ダッシュボードのカスタムウィジェットとして使用できます。
 
 >[!AVAILABILITY]
 >
