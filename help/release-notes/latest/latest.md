@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2024年11月
 description: Adobe Experience Platform の 2024年11月 のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4786a1f33c76b6023f6e3edfd4f70c18230fda5f
+source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '852'
 ht-degree: 19%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 19%
 
 >[!TIP]
 >
->新しい [AI アシスタント製品ドキュメントのランディングページ ](../../ai-assistant/landing.md) が利用できるようになりました。 このページを、AI アシスタント関連のすべてのリソースのハブとして使用します。
+>新しい [AI アシスタント製品ドキュメント ](../../ai-assistant/landing.md) が利用できるようになりました。 このページを、AI アシスタント関連のすべてのリソースのハブとして使用します。
 
 **リリース日：2024年11月26日（PT）**
 
