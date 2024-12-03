@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 金融サービス業界のデータモデル ERD
 description: 銀行、金融サービス、および保険（BFSI）業界向けの標準化されたデータ モデルを記述するエンティティ関係図（ERD）を表示します。 このデータモデルは、Adobe Experience Platformで使用するエクスペリエンスデータモデル（XDM）と互換性があります。
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 2%
@@ -21,12 +21,12 @@ ht-degree: 2%
 次の凡例を使用して、この ERD を解釈します。
 
 * に示されている各エンティティは、基になる [ エクスペリエンスデータモデル（XDM）クラス ](../composition.md#class) に基づいています。
-* 特定のエンティティについて、**太字** でマークされた各行はフィールドグループまたはデータタイプを表し、その行が提供する関連フィールドが太字なしのテキストで表示されます。
+* 親フィールドの下にインデントされたフィールドは、親のフィールドグループに属する子フィールド（サブフィールド）を表します。
 * 特定のエンティティで最も重要なフィールドは、赤でハイライト表示されます。
 * 個々の顧客の識別に使用できるすべてのプロパティは「ID」としてマークされ、これらのプロパティの 1 つは「プライマリ ID」としてマークされます。
 * エンティティ関係は、cookie ベースのイベントでは多くの場合、トランザクションを行った個人を特定できないので、非依存としてマークされます。
 
-![](../../images/industries/financial.png)
+![ 金融業界のデータモデルの ERD の例 ](../../images/industries/financial.png)
 
 >[!NOTE]
 >

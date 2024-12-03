@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 旅行および接客業データモデル ERD
 description: Adobe Experience Platformで使用するためのエクスペリエンスデータモデル（XDM）と互換性のある、旅行および接客業向けの標準化されたデータモデルを表すエンティティ関係図（ERD）を表示します。
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 4%
@@ -21,12 +21,12 @@ ht-degree: 4%
 次の凡例を使用して、この ERD を解釈します。
 
 * に示されている各エンティティは、基になる [ エクスペリエンスデータモデル（XDM）クラス ](../composition.md#class) に基づいています。
-* 特定のエンティティについて、**太字** でマークされた各行はフィールドグループまたはデータタイプを表し、その行が提供する関連フィールドが太字なしのテキストで表示されます。
+* 親フィールドの下にインデントされたフィールドは、親のフィールドグループに属する子フィールド（サブフィールド）を表します。
 * 特定のエンティティで最も重要なフィールドは、赤でハイライト表示されます。
 * 個々の顧客の識別に使用できるすべてのプロパティは「ID」としてマークされ、これらのプロパティの 1 つは「プライマリ ID」としてマークされます。
 * エンティティ関係は、cookie ベースのイベントでは多くの場合、トランザクションを行った個人を特定できないので、非依存としてマークされます。
 
-![](../../images/industries/travel-hospitality.png)
+![ 旅行ホスピタリティデータモデルの ERD の例 ](../../images/industries/travel-hospitality.png)
 
 >[!NOTE]
 >

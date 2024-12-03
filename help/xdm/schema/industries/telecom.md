@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 通信業界のデータモデル ERD
 description: 通信業界向けの標準化されたデータモデルを記述し、Adobe Experience Platformで使用するエクスペリエンスデータモデル（XDM）と互換性のある ERD （Entity Relationship Diagram）を表示します。
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
@@ -21,13 +21,13 @@ ht-degree: 1%
 次の凡例を使用して、この ERD を解釈します。
 
 * に示されている各エンティティは、基になる [ エクスペリエンスデータモデル（XDM）クラス ](../composition.md#class) に基づいています。
-* 特定のエンティティについて、**太字** でマークされた各行はフィールドグループまたはデータタイプを表し、その行が提供する関連フィールドが太字なしのテキストで表示されます。
+* 親フィールドの下にインデントされたフィールドは、親のフィールドグループに属する子フィールド（サブフィールド）を表します。
 * 特定のエンティティで最も重要なフィールドは、赤でハイライト表示されます。
 * 個々の顧客の識別に使用できるすべてのプロパティは「ID」としてマークされ、これらのプロパティの 1 つは「プライマリ ID」としてマークされます。
 * エンティティ関係は、cookie ベースのイベントでは多くの場合、トランザクションを行った個人を特定できないので、非依存としてマークされます。
 
 
-![](../../images/industries/telecom.png)
+![ 通信業界のデータモデルの ERD の例 ](../../images/industries/telecom.png)
 
 >[!NOTE]
 >
