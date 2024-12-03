@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタントの概要
 description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '938'
 ht-degree: 6%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platformの AI アシスタントは、Adobeアプリケーシ�
 
 >[!IMPORTANT]
 >
->AI アシスタントを使用するには、[ ユーザー使用許諾契約 ](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) に同意する必要があります。 ユーザー契約には、パブリックベータ版の契約も含まれています。 これにより、ベータ版の容量で展開する際に、追加の AI アシスタント機能を使用できます。
+>AI アシスタントを使用するには、[ ユーザー使用許諾契約 ](https://www.adobe.com/jp/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) に同意する必要があります。 ユーザー契約には、パブリックベータ版の契約も含まれています。 これにより、ベータ版の容量で展開する際に、追加の AI アシスタント機能を使用できます。
 
 +++選択してユーザー契約インターフェイスを表示します
 
@@ -58,6 +58,10 @@ Experience League知識とは、製品ドキュメントに基づいた概念と
 | トラブルシューティング | <ul><li>Adobeが所有するスキーマをプロファイルに対して有効にできないのはなぜですか？</li><li>セグメントを削除できないのはなぜですか？</li></ul> |
 
 {style="table-layout:auto"}
+
+AI アシスタントの製品に関する知識について詳しくは、次のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### 運用上のインサイト {#operational-insights}
 

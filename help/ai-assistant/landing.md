@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタント製品ドキュメント
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
+source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -29,15 +29,10 @@ AI アシスタントは、Experience Platform、Real-Time CDP、Adobe Journey O
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong> 学習の向上 </strong><br/> ワークフローを中断することなく、製品の知識を発見、トラブルシューティング、および理解を深めることができます。</div>
     </td>
-    <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong> 使用状況に基づいて権限を適用 </strong><br/> チームメンバーの役割に応じて、アクセス権限を付与および取り消します。</div>
-    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -84,11 +79,23 @@ AI アシスタントの概要については、次のビデオをご覧くだ�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
+詳しくは、[AI アシスタント UI ガイド ](ui-guide.md) を参照してください。
+
 ### AI アシスタントにアクセスする
 
 組織とユーザーに AI アシスタントへのアクセスを設定する方法については、次のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
+詳しくは、『 [AI アシスタント アクセス ガイド ](access.md) 』を参照してください。
+
+### AI アシスタントの製品知識を使用して、オンボーディング時間を短縮する
+
+次のビデオでは、AI アシスタントの製品ナレッジを使用してオンボーディング時間を短縮する方法を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
+詳しくは、「AI アシスタントの製品知識 [ を参照してください ](home.md#product-knowledge)
 
 ### AI アシスタントを使用して、オーディエンスを整理します
 
