@@ -2,7 +2,7 @@
 title: ヘルスケア業界データモデル ERD
 description: ヘルスケア業界向けの標準化されたデータモデルを記述したエンティティ関係図（ERD）を表示します。 このデータモデルは、Adobe Experience Platformで使用するエクスペリエンスデータモデル（XDM）と互換性があります。
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
+source-git-commit: 8f026501cf5c8087cc512ac374163908cebd17c6
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 8%
