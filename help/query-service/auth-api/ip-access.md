@@ -4,7 +4,7 @@ title: IP アクセス エンドポイント
 description: IP アクセス API エンドポイントを使用して、クエリサービスでサンドボックスアクセスの IP 範囲を管理する方法を説明します。
 role: Developer
 exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: d0f4a295928b000b6091172800e453d79dc44e3a
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 5%
@@ -44,7 +44,7 @@ GET /security/ip-access
 **リクエスト**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/query/security/ip-access \
+curl -X GET https://platform.adobe.io/data/foundation/queryauth/security/ip-access \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -93,7 +93,7 @@ PUT /security/ip-access
 **リクエスト**
 
 ```shell
-curl -X PUT https://platform.adobe.io/data/foundation/query/security/ip-access \
+curl -X PUT https://platform.adobe.io/data/foundation/queryauth/security/ip-access \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -144,7 +144,7 @@ DELETE /security/ip-access
 **リクエスト**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/foundation/query/security/ip-access \
+curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/security/ip-access \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \

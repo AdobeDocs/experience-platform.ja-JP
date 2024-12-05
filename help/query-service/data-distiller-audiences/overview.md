@@ -2,24 +2,28 @@
 title: SQL を使用したオーディエンスの構築
 description: Adobe Experience Platformの Data Distillerで SQL オーディエンス拡張機能を使用して、SQL コマンドを使用してオーディエンスを作成、管理および公開する方法を説明します。 このガイドでは、プロファイルの作成、更新、削除、ファイルベースの宛先をターゲットにするためのデータ駆動型オーディエンス定義の使用など、オーディエンスのライフサイクルのすべての側面について説明します。
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 2%
+source-wordcount: '1481'
+ht-degree: 1%
 
 ---
 
 # SQL を使用したオーディエンスの構築
 
-このドキュメントでは、Adobe Experience Platformの Data Distillerの SQL オーディエンス拡張機能を使用して、SQL コマンドを使用してオーディエンスを作成、管理および公開する方法について説明します。
+SQL オーディエンス拡張機能を使用して、既存のディメンションエンティティ（顧客属性や製品情報など）を含む、データレイクからのデータでオーディエンスを作成します。
 
-SQL オーディエンス拡張機能を使用して、既存のディメンションエンティティを含むデータレイクのデータでオーディエンスを作成します。 この拡張機能を使用すると、SQL を使用してオーディエンスセグメントを直接定義でき、プロファイルに生データを必要とせずに柔軟性を提供できます。 この方法を使用して作成されたオーディエンスは、オーディエンスワークスペースに自動的に登録され、ファイルベースの宛先をさらにターゲット設定できます。
+この SQL 拡張機能を使用すると、オーディエンスセグメントを定義する際にプロファイルに生のデータを必要としないので、オーディエンスを作成する機能が向上します。 この方法を使用して作成されたオーディエンスは、オーディエンスワークスペースに自動的に登録され、ファイルベースの宛先をさらにターゲット設定できます。
 
 ![SQL オーディエンス拡張機能のワークフローを示すインフォグラフィック。 段階としては、SQL コマンドを使用してクエリサービスでオーディエンスを作成し、Platform UI で管理して、ファイルベースの宛先でアクティブ化する ](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png) が含まれます。
 
+このドキュメントでは、Adobe Experience Platformの Data Distillerの SQL オーディエンス拡張機能を使用して、SQL コマンドを使用してオーディエンスを作成、管理および公開する方法について説明します。
+
 ## Data Distillerでのオーディエンス作成のライフサイクル {#audience-creation-lifecycle}
 
-オーディエンスを効果的に管理するには、次の手順に従います。 作成されたオーディエンスはオーディエンスフローにシームレスに統合され、顧客ターゲティング用にこれらのベースオーディエンスとターゲットファイルベースの宛先からセグメントを作成できます。 次の SQL コマンドを使用して、Adobe Experience Platform内のオーディエンスを [ 作成 ](#create-audience)、[ 変更 ](#add-profiles-to-audience) および [ 削除 ](#delete-audience) します。
+オーディエンスを作成、管理およびアクティブ化するには、次の手順に従います。 作成されたオーディエンスは「オーディエンスフロー」にシームレスに統合されるので、ベースオーディエンスとターゲットファイルベースの宛先（CSV アップロードやクラウドストレージの場所など）からセグメントを作成して、顧客アウトリーチに活用できます。 「オーディエンスフロー」とは、オーディエンスを作成、管理およびアクティブ化し、宛先間のシームレスな統合を確保する完全なプロセスを指します。
+
+「オーディエンスフロー」の一部として、次の SQL コマンドを使用してAdobe Experience Platform内のオーディエンスを [ 作成 ](#create-audience)、[ 変更 ](#add-profiles-to-audience) および [ 削除 ](#delete-audience) します。
 
 ### オーディエンスの作成 {#create-audience}
 
@@ -27,7 +31,7 @@ SQL オーディエンス拡張機能を使用して、既存のディメンシ�
 
 ```sql
 CREATE AUDIENCE table_name  
-WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the identity used', [schema='target_schema_title']) 
+WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the identity used', [schema='target_schema_title'])
 AS (select_query)
 ```
 
@@ -40,35 +44,40 @@ AS (select_query)
 | `schema` | オプション。クエリによって作成されたデータセットの XDM スキーマを定義します。 |
 | `table_name` | テーブルとオーディエンスの名前。 |
 | `primary_identity` | オーディエンスのプライマリ ID 列を指定します。 |
-| `identity_namespace` | ID の名前空間。 |
+| `identity_namespace` | ID の名前空間。 既存の名前空間を使用することも、新しい名前空間を作成することもできます。 使用可能な名前空間を表示するには、`SHOW NAMESPACE` コマンドを使用します。 新しい名前空間を作成するには、`CREATE NAMESPACE` を使用します。 例：`CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`。 |
 | `select_query` | オーディエンスを定義する SELECT ステートメント。 SELECT クエリの構文は、[SELECT クエリ ](../sql/syntax.md#select-queries) セクションにあります。 |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>複雑なデータ構造の柔軟性を高めるために、オーディエンスを定義する際にエンリッチメントされた属性をネストできます。 `orders`、`total_revenue`、`recency`、`frequency`、`monetization` などのエンリッチメントされた属性を使用して、必要に応じてオーディエンスをフィルタリングできます。
 
 **例：**
 
 次の例は、SQL オーディエンス作成クエリの構築方法を示しています。
 
 ```sql
-CREATE Audience aud_test 
-WITH (primary_identity=month, identity_namespace=queryService) 
-AS SELECT month FROM profile_dim_date LIMIT 5;
+CREATE Audience aud_test
+WITH (primary_identity=userId, identity_namespace=lumaCrmId)
+AS SELECT userId, orders, total_revenue, recency, frequency, monetization FROM profile_dim_customer;
 ```
+
+この例では、`userId` 列が ID 列として識別され、適切な名前空間（`lumaCrmId`）が割り当てられます。 残りの列（`orders`、`total_revenue`、`recency`、`frequency` および `monetization`）は、オーディエンスに追加のコンテキストを提供するエンリッチメントされた属性です。
 
 **制限事項:**
 
 オーディエンス作成に SQL を使用する場合は、次の制限事項に注意してください。
 
-- プライマリ ID 列 **必須** はルートレベルにあります。
-- 新しいバッチは、既存のデータセットを上書きします。追加機能は現在サポートされていません。
-- ネストされた属性は現在サポートされていません。
+- プライマリ ID 列は、他の属性やカテゴリ内にネストされることなく、データセットの最高レベルに存在します **必須**。
+- SQL コマンドを使用して作成された外部オーディエンスの保持期間は 30 日です。 30 日後、これらのオーディエンスは自動的に削除されます。これは、オーディエンス管理戦略を計画する際の重要な考慮事項です。
 
 ### 既存オーディエンスへのプロファイルの追加 {#add-profiles-to-audience}
 
-`INSERT INTO` コマンドを使用して、プロファイルを既存のオーディエンスに追加します。
+`INSERT INTO` コマンドを使用して、プロファイル（またはオーディエンス全体）を既存のオーディエンスに追加します。
 
 ```sql
-INSERT INTO table_name 
+INSERT INTO table_name
 SELECT select_query
 ```
 
@@ -88,8 +97,80 @@ SELECT select_query
 次の例は、`INSERT INTO` コマンドを使用した既存のオーディエンスへのプロファイルの追加方法を示しています。
 
 ```sql
-INSERT INTO Audience aud_test 
-SELECT month FROM profile_dim_date LIMIT 10;
+INSERT INTO Audience aud_test
+SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
+```
+
+### RFM モデルオーディエンスの例 {#rfm-model-audience-example}
+
+次の例は、最新性、頻度、収益化（RFM）モデルを使用したオーディエンスの作成方法を示しています。 この例では、リーセンシー、頻度および収益化スコアに基づいて顧客をセグメント化し、常連客、新規顧客、高価値顧客などの主要なグループを識別します。
+
+<!--  Q) Since the focus of this document is on external audiences, or should I just include this temporarily? We could simply provide a link to the separate RFM modeling documentation rather than including the full example here. (Add link to new RFM document when it is published) -->
+
+次のクエリは、RFM オーディエンスのスキーマを作成します。 ステートメントは、`userId`、`days_since_last_purchase`、`orders`、`total_revenue` などの顧客情報を保持するフィールドを設定します。
+
+```sql
+CREATE Audience adls_rfm_profile
+WITH (primary_identity=userId, identity_namespace=lumaCrmId) AS
+SELECT
+    cast(NULL AS string) userId,
+    cast(NULL AS integer) days_since_last_purchase,
+    cast(NULL AS integer) orders,
+    cast(NULL AS decimal(18,2)) total_revenue,
+    cast(NULL AS integer) recency,
+    cast(NULL AS integer) frequency,
+    cast(NULL AS integer) monetization,
+    cast(NULL AS string) rfm_model
+WHERE false;
+```
+
+オーディエンスを作成したら、顧客データを入力し、RFM スコアに基づいてプロファイルをセグメント化します。 以下の SQL ステートメントでは、`NTILE(4)` 関数を使用して、RFM （最新性、頻度、収益化）スコアに基づいて顧客を四分位数にランク付けします。 これらのスコアでは、顧客を「コア」、「ロイヤルティ」、「クジラ」などの 6 つのセグメントに分類します。 次に、セグメント化された顧客データがオーディエンスの `adls_rfm_profile` テーブルに挿入されます。」
+
+```sql
+INSERT INTO Audience adls_rfm_profile
+SELECT
+    userId,
+    days_since_last_purchase,
+    orders,
+    total_revenue,
+    recency,
+    frequency,
+    monetization,
+    CASE
+        WHEN Recency=1 AND Frequency=1 AND Monetization=1 THEN '1. Core - Your Best Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency=1 AND Monetization IN (1,2,3,4) THEN '2. Loyal - Your Most Loyal Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency IN (1,2,3,4) AND Monetization=1 THEN '3. Whales - Your Highest Paying Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency IN(1,2,3) AND Monetization IN(2,3,4) THEN '4. Promising - Faithful Customers'
+        WHEN Recency=1 AND Frequency=4 AND Monetization IN (1,2,3,4) THEN '5. Rookies - Your Newest Customers'
+        WHEN Recency IN (2,3,4) AND Frequency=4 AND Monetization IN (1,2,3,4) THEN '6. Slipping - Once Loyal, Now Gone'
+    END AS rfm_model
+FROM (
+    SELECT
+        userId,
+        days_since_last_purchase,
+        orders,
+        total_revenue,
+        NTILE(4) OVER (ORDER BY days_since_last_purchase) AS recency,
+        NTILE(4) OVER (ORDER BY orders DESC) AS frequency,
+        NTILE(4) OVER (ORDER BY total_revenue DESC) AS monetization
+    FROM (
+        SELECT
+            userid,
+            DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
+            COUNT(purchaseid) AS orders,
+            CAST(SUM(total_revenue) AS double) AS total_revenue
+        FROM (
+            SELECT DISTINCT
+                ENDUSERIDS._EXPERIENCE.EMAILID.ID AS userid,
+                commerce.`ORDER`.purchaseid AS purchaseid,
+                commerce.`ORDER`.pricetotal AS total_revenue,
+                TO_DATE(timestamp) AS purchase_date
+            FROM sample_data_for_ootb_templates
+            WHERE commerce.`ORDER`.purchaseid IS NOT NULL
+        ) AS b
+        GROUP BY userId
+    )
+);
 ```
 
 ### オーディエンスを削除（オーディエンスを削除） {#delete-audience}
@@ -120,9 +201,11 @@ DROP AUDIENCE [IF EXISTS] [db_name.]table_name
 DROP AUDIENCE IF EXISTS aud_test;
 ```
 
-### オーディエンスの自動公開 {#auto-publish-audiences}
+### 自動オーディエンス登録と可用性 {#registration-and-availability}
 
-SQL 拡張機能を使用して作成されたオーディエンスは、オーディエンスワークスペースのデータDistillerに自動的に登録されます。 登録すると、これらのオーディエンスをターゲティングに使用したり、ファイルベースの宛先で使用したりできるようになり、セグメント化とターゲティング戦略が強化されます。
+SQL 拡張機能を使用して作成されたオーディエンスは、オーディエンスワークスペースの Data Distiller[!UICONTROL  オリジン ] に自動的に登録されます。 登録すると、これらのオーディエンスをファイルベースの宛先でのターゲティングに使用できるようになり、セグメント化とターゲティング戦略が強化されます。 このプロセスには追加の設定は必要なく、オーディエンス管理を合理化します。 Platform UI 内でのオーディエンスの表示、管理、作成方法について詳しくは、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md) を参照してください。
+
+<!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
 ![Adobe Experience Platformのオーディエンスワークスペース。自動公開され、すぐに使用できる Data Distiller オーディエンスが表示されます。](../images/data-distiller/sql-audiences/audiences.png)
 
@@ -190,7 +273,7 @@ SQL 拡張機能を使用して作成されたオーディエンスは、オー�
 
 +++回答
 
-Data Distiller オーディエンスは、現在、Adobe Journey Optimizerでは使用できません。 Adobe Journey Optimizerで使用できるように、Adobe Journey Optimizer ルールビルダーで新しいオーディエンスを作成する必要があります。
+Data Distiller オーディエンスは、Adobe Journey Optimizerでも使用できます。 Adobe Journey Optimizerで Data Distiller オーディエンスを使用し、エンリッチメントされた属性に基づいて結果をフィルタリングできます。
 
 +++
 
@@ -211,3 +294,4 @@ Data Distiller オーディエンスは、現在、Adobe Journey Optimizerでは
 - **オーディエンスの評価を調べる**:[Adobe Experience Platformのオーディエンス評価方法 ](../../segmentation/home.md#evaluate-segments)：リアルタイム更新のためのストリーミングセグメント化、スケジュールに沿った処理またはオンデマンド処理のためのバッチセグメント化、Edge Networkでの即時評価のためのエッジセグメント化）について説明します。
 - **宛先との統合**:Platform の宛先 UI を使用して、[ オンデマンドでファイルをバッチ宛先に書き出す ](../../destinations/ui/export-file-now.md) 方法に関するガイドを参照してください。
 - **オーディエンスパフォーマンスの確認**：様々なチャネルにおける SQL 定義オーディエンスのパフォーマンスを分析します。 データインサイトを使用すると、オーディエンスの定義とターゲティング戦略を調整および改善できます。 Adobe Real-Time CDPで SQL クエリにアクセスしてオーディエンスインサイトに適応させる方法については、[ オーディエンスインサイト ](../../dashboards/insights/audiences.md) に関するドキュメントを参照してください。 その後、オーディエンスダッシュボードをカスタマイズして独自のインサイトを作成し、生のデータを実用的な情報に変換することで、これらのインサイトを効果的に視覚化し、より良い意思決定に使用できます。
+
