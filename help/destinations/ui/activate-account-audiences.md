@@ -2,12 +2,12 @@
 title: 宛先へのアカウントオーディエンスの有効化
 type: Tutorial
 description: 宛先に対してアカウントオーディエンスをアクティブ化する方法を学ぶ
-badgeB2B: label="B2B エディション" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 7%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 7%
 
 ## サポートされる宛先 {#supported-destinations}
 
-**[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。**[!UICONTROL データタイプ]** フィルターを使用し、**[!UICONTROL アカウント]** を選択して、アカウントオーディエンスのアクティブ化をサポートする宛先を確認します。 現在、アカウントオーディエンスの書き出しは、特定のクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、および [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）と、[ （企業）LinkedInでマッチしたオーディエンス ](/help/destinations/catalog/social/linkedin.md) の宛先でのみ使用できます。
+**[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。**[!UICONTROL データタイプ]** フィルターを使用し、**[!UICONTROL アカウント]** を選択して、アカウントオーディエンスのアクティブ化をサポートする宛先を確認します。 現在、アカウントオーディエンスの書き出しは、特定のクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、および [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）と、[Demandbase](/help/destinations/catalog/advertising/demandbase.md) および [ （企業）LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) ストリーミング宛先でのみ使用できます。
 
 ![ アカウントオーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -57,7 +57,7 @@ ht-degree: 7%
 >
 >アカウントオーディエンスを書き出すことができる宛先は、カードの右上隅にあるアイコンで示されます。これは、以下で強調表示されている宛先と同様です。または、データタイプフィルターを使用して、アカウントオーディエンスを書き出すことができる宛先のみを表示することもできます [ ページの上部に表示されます ](#supported-destinations)。
 
-![ ハイライト表示されたプロファイルオーディエンスを書き出すことができるAmazon S3 の宛先ページ ](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
+![ プロファイルオーディエンスを書き出すことができる Demandbase 宛先ページがハイライト表示されています。](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. **[!UICONTROL データタイプ アカウント]** を選択し、続いてデータセットを書き出す宛先接続を選択して、「**[!UICONTROL 次へ]**」を選択します。
 
