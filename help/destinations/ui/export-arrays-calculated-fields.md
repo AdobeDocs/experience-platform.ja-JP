@@ -3,7 +3,7 @@ title: 計算フィールドを使用して、配列を文字列として書き�
 type: Tutorial
 description: 計算フィールドを使用して、Real-Time CDPからクラウドストレージの宛先に配列を文字列として書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 7%
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->* 計算フィールドを使用して配列を書き出す機能が一般利用可能になりました。
+>計算フィールドを使用して配列を書き出す機能が一般利用可能になりました。
 
 計算フィールドを使用して、Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/catalog/cloud-storage/overview.md) に配列を文字列として書き出す方法を説明します。 このドキュメントを読んで、この機能で有効になるユースケースを理解します。
 
