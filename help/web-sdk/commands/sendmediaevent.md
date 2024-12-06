@@ -2,7 +2,7 @@
 title: sendMediaEvent
 description: sendMediaEvent コマンドを使用して Web SDK でメディアセッションをトラッキングする方法を説明します。
 exl-id: a38626fd-4810-40a0-8893-e98136634fac
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 877e12f1d53bb4a8d7c2564490d4e8f3e9e34e34
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### 状態の更新 {#state-updates}
 
-`media.stateUpdate` イベントタイプは、プレーヤーの状態が変更されたタイミングを追跡するために使用されます。 このイベントは、プレーヤーの状態が変更されたときに送信する必要があります。
+`media.statesUpdate` イベントタイプは、プレーヤーの状態が変更されたタイミングを追跡するために使用されます。 このイベントは、プレーヤーの状態が変更されたときに送信する必要があります。
 
 >[!BEGINTABS]
 
@@ -636,7 +636,7 @@ sessionPromise.then(sessionID => {
 alloy("sendMediaEvent", {
     playerId: "movie-test",
     xdm: {
-        eventType: "media.stateUpdate",
+        eventType: "media.statesUpdate",
         mediaCollection: {
             statesStart: [{
                     name: "mute"
