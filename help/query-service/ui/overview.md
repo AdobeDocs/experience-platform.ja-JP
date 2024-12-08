@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Service UI ガイド
 description: Adobe Experience Platform クエリサービスは、クエリの書き込みと実行、以前に実行したクエリの表示、組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 25%
@@ -175,4 +175,3 @@ Platform UI のテンプレートについて詳しくは、[ クエリテンプ
 ## 次の手順
 
 これで [!DNL Platform] のクエリサービスのユーザーインターフェイスをよく理解したので、次に、クエリエディターにアクセスして、独自のクエリプロジェクトの作成を開始し、組織内の他のユーザーと共有することができます。 クエリエディターでのクエリの作成と実行について詳しくは、[クエリエディターのユーザーガイド](./user-guide.md)を参照してください。
-

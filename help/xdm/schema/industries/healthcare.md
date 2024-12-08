@@ -2,7 +2,7 @@
 title: ヘルスケア業界データモデル ERD
 description: ヘルスケア業界向けの標準化されたデータモデルを記述したエンティティ関係図（ERD）を表示します。 このデータモデルは、Adobe Experience Platformで使用するエクスペリエンスデータモデル（XDM）と互換性があります。
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 8f026501cf5c8087cc512ac374163908cebd17c6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 8%
@@ -42,3 +42,4 @@ ht-degree: 8%
 | 顧客が保険会社を見つけた方法を理解するために、異なるチャネルを通じて保険のマーケティングを追跡することで、医療プランへの登録とアカウント作成を改善します。 | <ul><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL  ヘルスケア会員の詳細 ]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 支払者]](../../classes/payer.md)**</li><li>**[[!UICONTROL 計画]](../../classes/plan.md)**:<ul><li>[[!UICONTROL  ヘルスケアプラン詳細 ]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Web 詳細]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertisingの詳細 ]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
 | 医療保険の適用の失効を避けます。 | <ul><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL  ヘルスケア会員の詳細 ]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 計画]](../../classes/plan.md)**:<ul><li>[[!UICONTROL  ヘルスケアプラン詳細 ]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li></ul> |
 | ダイレクト・トゥ・カスタマー（DTC）広告を使用して、医薬品の情報をプロバイダーに提供する。 | <ul><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL  ヘルスケア会員の詳細 ]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 医薬品]](../../classes/medication.md)**:<ul><li>[[!UICONTROL  ヘルスケア薬品 ]](../../field-groups/medication/healthcare-medication.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Web 詳細]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertisingの詳細 ]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
+
