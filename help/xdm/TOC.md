@@ -5,10 +5,10 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
+source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 74%
+source-wordcount: '705'
+ht-degree: 77%
 
 ---
 
@@ -29,30 +29,30 @@ ht-degree: 74%
       * [ヘルスケア](./schema/industries/healthcare.md)
       * [通信業](./schema/industries/telecom.md)
       * [旅行およびホスピタリティ](./schema/industries/travel-hospitality.md)
-   * ヘルスケアデータモデル V2 {#health-care-data-model-v2}
-      * [ヘルスケア V2](./schema/industries/healthcare-v2.md)
-      * クラス {#health-care-classes}
+   * ヘルスケアデータモデル V2 {#healthcare}
+      * [ヘルスケア V2](./schema/healthcare-v2.md)
+      * クラス {#classes}
          * [ロケーション](./classes/location.md)
-      * フィールドグループ {#health-care-v2-field-groups}
-         * XDM 個人プロファイル {#health-care-v2-profile}
-            * [ヘルスケアアカウント](./field-groups/profile/healthcare-account.md)
-            * [ヘルスケアプラン](./field-groups/profile/healthcare-care-plan.md)
-            * [ヘルスケア目標](./field-groups/profile/healthcare-goal.md)
-            * [医療機関](./field-groups/profile/healthcare-organization.md)
-            * [ヘルスケア患者](./field-groups/profile/healthcare-patient.md)
-            * [医療従事者](./field-groups/profile/healthcare-practioner.md)
-            * [ヘルスケアスケジュール](./field-groups/profile/healthcare-schedule.md)
-         * XDM Experience Event {#health-care-v2-event}
-            * [ヘルスケア免疫](./field-groups/event/healthcare-immunization.md)
-         * ロケーション {#health-care-v2-location}
-            * [ヘルスケア拠点](./field-groups/location/healthcare-location.md)
-         * 医薬品 {#health-care-v2-medication}
-            * [ヘルスケア薬品ディスペンス](./field-groups/medication/healthcare-medication-dispense.md)
-            * [ヘルスケア薬品リクエスト](./field-groups/medication/healthcare-medication-request.md)
-            * [ヘルスケア薬品](./field-groups/medication/healthcare-medication-v2.md)
-         * 計画 {#health-care-v2-plans}
-            * [ヘルスケア範囲](./field-groups/plan/healthcare-coverage.md)
-      * データタイプ {#health-care-v2-data-types}
+      * フィールドグループ {#field-groups}
+         * XDM 個人プロファイル {#profile}
+            * [アカウント](./field-groups/profile/healthcare-account.md)
+            * [ケアプラン](./field-groups/profile/healthcare-care-plan.md)
+            * [目標](./field-groups/profile/healthcare-goal.md)
+            * [組織](./field-groups/profile/healthcare-organization.md)
+            * [患者](./field-groups/profile/healthcare-patient.md)
+            * [担当者](./field-groups/profile/healthcare-practioner.md)
+            * [スケジュール](./field-groups/profile/healthcare-schedule.md)
+         * XDM Experience Event {#event}
+            * [免疫](./field-groups/event/healthcare-immunization.md)
+         * ロケーション {#location}
+            * [ロケーション](./field-groups/location/healthcare-location.md)
+         * 医薬品 {#medication}
+            * [薬剤調剤](./field-groups/medication/healthcare-medication-dispense.md)
+            * [投薬依頼](./field-groups/medication/healthcare-medication-request.md)
+            * [医薬品](./field-groups/medication/healthcare-medication-v2.md)
+         * プラン {#plan}
+            * [カバレッジ](./field-groups/plan/healthcare-coverage.md)
+      * データタイプ {#data-types}
          * [Address](./data-types/healthcare/address.md)
          * [注釈](./data-types/healthcare/annotation.md)
          * [対象](./data-types/healthcare/availability.md)
