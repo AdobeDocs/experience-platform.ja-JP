@@ -5,10 +5,10 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 81%
+source-wordcount: '719'
+ht-degree: 74%
 
 ---
 
@@ -29,6 +29,53 @@ ht-degree: 81%
       * [ヘルスケア](./schema/industries/healthcare.md)
       * [通信業](./schema/industries/telecom.md)
       * [旅行およびホスピタリティ](./schema/industries/travel-hospitality.md)
+   * ヘルスケアデータモデル V2 {#health-care-data-model-v2}
+      * [ヘルスケア V2](./schema/industries/healthcare-v2.md)
+      * クラス {#health-care-classes}
+         * [ロケーション](./classes/location.md)
+      * フィールドグループ {#health-care-v2-field-groups}
+         * XDM 個人プロファイル {#health-care-v2-profile}
+            * [ヘルスケアアカウント](./field-groups/profile/healthcare-account.md)
+            * [ヘルスケアプラン](./field-groups/profile/healthcare-care-plan.md)
+            * [ヘルスケア目標](./field-groups/profile/healthcare-goal.md)
+            * [医療機関](./field-groups/profile/healthcare-organization.md)
+            * [ヘルスケア患者](./field-groups/profile/healthcare-patient.md)
+            * [医療従事者](./field-groups/profile/healthcare-practioner.md)
+            * [ヘルスケアスケジュール](./field-groups/profile/healthcare-schedule.md)
+         * XDM Experience Event {#health-care-v2-event}
+            * [ヘルスケア免疫](./field-groups/event/healthcare-immunization.md)
+         * ロケーション {#health-care-v2-location}
+            * [ヘルスケア拠点](./field-groups/location/healthcare-location.md)
+         * 医薬品 {#health-care-v2-medication}
+            * [ヘルスケア薬品ディスペンス](./field-groups/medication/healthcare-medication-dispense.md)
+            * [ヘルスケア薬品リクエスト](./field-groups/medication/healthcare-medication-request.md)
+            * [ヘルスケア薬品](./field-groups/medication/healthcare-medication-v2.md)
+         * 計画 {#health-care-v2-plans}
+            * [ヘルスケア範囲](./field-groups/plan/healthcare-coverage.md)
+      * データタイプ {#health-care-v2-data-types}
+         * [Address](./data-types/healthcare/address.md)
+         * [注釈](./data-types/healthcare/annotation.md)
+         * [対象](./data-types/healthcare/availability.md)
+         * [コード化可能な概念](./data-types/healthcare/codeable-concept.md)
+         * [コード化可能な参照](./data-types/healthcare/codeable-reference.md)
+         * [コーディング](./data-types/healthcare/coding.md)
+         * [連絡先](./data-types/healthcare/contact-point.md)
+         * [用量](./data-types/healthcare/dosage.md)
+         * [期間](./data-types/healthcare/duration.md)
+         * [連絡先の詳細の拡張](./data-types/healthcare/extended-contact-detail.md)
+         * [人名](./data-types/healthcare/human-name.md)
+         * [識別子](./data-types/healthcare/identifier.md)
+         * [お金](./data-types/healthcare/money.md)
+         * [期間](./data-types/healthcare/period.md)
+         * [人物](./data-types/healthcare/person.md)
+         * [数量](./data-types/healthcare/quantity.md)
+         * [範囲](./data-types/healthcare/range.md)
+         * [比率](./data-types/healthcare/ratio.md)
+         * [リファレンス](./data-types/healthcare/reference.md)
+         * [繰り返し](./data-types/healthcare/repeat.md)
+         * [単純量](./data-types/healthcare/simple-quantity.md)
+         * [タイミング](./data-types/healthcare/timing.md)
+         * [仮想サービス](./data-types/healthcare/virtual-service-detail.md)
    * [XDM フィールドディクショナリ](schema/field-dictionary.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
@@ -54,9 +101,9 @@ ht-degree: 81%
    * XDM 個人プロファイル {#profile}
       * [同意および環境設定](./field-groups/profile/consents.md)
       * [デモグラフィックの詳細](./field-groups/profile/demographic-details.md)
+      * [ヘルスケア会員の詳細](./field-groups/profile/healthcare-member-details.md)
       * [IAB TCF 2.0 同意](./field-groups/profile/iab.md)
       * [identityMap](./field-groups/profile/identitymap.md)
-      * [ヘルスケア会員の詳細](./field-groups/profile/healthcare-member-details.md)
       * [ロイヤルティの詳細](./field-groups/profile/loyalty-details.md)
       * [個人の連絡先の詳細](./field-groups/profile/personal-contact-details.md)
       * [プロファイルパートナーエンリッチメント（サンプル）](./field-groups/profile/profile-partner-enrichment.md)
