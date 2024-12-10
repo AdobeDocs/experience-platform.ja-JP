@@ -5,9 +5,9 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
+source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '696'
 ht-degree: 77%
 
 ---
@@ -30,52 +30,47 @@ ht-degree: 77%
       * [通信業](./schema/industries/telecom.md)
       * [旅行およびホスピタリティ](./schema/industries/travel-hospitality.md)
    * ヘルスケアデータモデル V2 {#healthcare}
-      * [ヘルスケア V2](./schema/healthcare-v2.md)
+      * [ヘルスケア V2](./schema/healthcare/healthcare-v2.md)
       * クラス {#classes}
-         * [ロケーション](./classes/location.md)
+         * [ロケーション](./schema/healthcare/classes/location.md)
       * フィールドグループ {#field-groups}
-         * XDM 個人プロファイル {#profile}
-            * [アカウント](./field-groups/profile/healthcare-account.md)
-            * [ケアプラン](./field-groups/profile/healthcare-care-plan.md)
-            * [目標](./field-groups/profile/healthcare-goal.md)
-            * [組織](./field-groups/profile/healthcare-organization.md)
-            * [患者](./field-groups/profile/healthcare-patient.md)
-            * [担当者](./field-groups/profile/healthcare-practioner.md)
-            * [スケジュール](./field-groups/profile/healthcare-schedule.md)
-         * XDM Experience Event {#event}
-            * [免疫](./field-groups/event/healthcare-immunization.md)
-         * ロケーション {#location}
-            * [ロケーション](./field-groups/location/healthcare-location.md)
-         * 医薬品 {#medication}
-            * [薬剤調剤](./field-groups/medication/healthcare-medication-dispense.md)
-            * [投薬依頼](./field-groups/medication/healthcare-medication-request.md)
-            * [医薬品](./field-groups/medication/healthcare-medication-v2.md)
-         * プラン {#plan}
-            * [カバレッジ](./field-groups/plan/healthcare-coverage.md)
+         * [アカウント](./schema/healthcare/field-groups/account.md)
+         * [ケアプラン](./schema/healthcare/field-groups/care-plan.md)
+         * [カバレッジ](./schema/healthcare/field-groups/coverage.md)
+         * [目標](./schema/healthcare/field-groups/goal.md)
+         * [免疫](./schema/healthcare/field-groups/immunization.md)
+         * [ロケーション](./schema/healthcare/field-groups/location.md)
+         * [医薬品](./schema/healthcare/field-groups/medication.md)
+         * [薬剤調剤](./schema/healthcare/field-groups/medication-dispense.md)
+         * [投薬依頼](./schema/healthcare/field-groups/medication-request.md)
+         * [組織](./schema/healthcare/field-groups/organization.md)
+         * [患者](./schema/healthcare/field-groups/patient.md)
+         * [担当者](./schema/healthcare/field-groups/practioner.md)
+         * [スケジュール](./schema/healthcare/field-groups/schedule.md)
       * データタイプ {#data-types}
-         * [Address](./data-types/healthcare/address.md)
-         * [注釈](./data-types/healthcare/annotation.md)
-         * [対象](./data-types/healthcare/availability.md)
-         * [コード化可能な概念](./data-types/healthcare/codeable-concept.md)
-         * [コード化可能な参照](./data-types/healthcare/codeable-reference.md)
-         * [コーディング](./data-types/healthcare/coding.md)
-         * [連絡先](./data-types/healthcare/contact-point.md)
-         * [用量](./data-types/healthcare/dosage.md)
-         * [期間](./data-types/healthcare/duration.md)
-         * [連絡先の詳細の拡張](./data-types/healthcare/extended-contact-detail.md)
-         * [人名](./data-types/healthcare/human-name.md)
-         * [識別子](./data-types/healthcare/identifier.md)
-         * [お金](./data-types/healthcare/money.md)
-         * [期間](./data-types/healthcare/period.md)
-         * [人物](./data-types/healthcare/person.md)
-         * [数量](./data-types/healthcare/quantity.md)
-         * [範囲](./data-types/healthcare/range.md)
-         * [比率](./data-types/healthcare/ratio.md)
-         * [リファレンス](./data-types/healthcare/reference.md)
-         * [繰り返し](./data-types/healthcare/repeat.md)
-         * [単純量](./data-types/healthcare/simple-quantity.md)
-         * [タイミング](./data-types/healthcare/timing.md)
-         * [仮想サービス](./data-types/healthcare/virtual-service-detail.md)
+         * [Address](./schema/healthcare/data-types/address.md)
+         * [注釈](./schema/healthcare/data-types/annotation.md)
+         * [対象](./schema/healthcare/data-types/availability.md)
+         * [コード化可能な概念](./schema/healthcare/data-types/codeable-concept.md)
+         * [コード化可能な参照](./schema/healthcare/data-types/codeable-reference.md)
+         * [コーディング](./schema/healthcare/data-types/coding.md)
+         * [連絡先](./schema/healthcare/data-types/contact-point.md)
+         * [用量](./schema/healthcare/data-types/dosage.md)
+         * [期間](./schema/healthcare/data-types/duration.md)
+         * [連絡先の詳細の拡張](./schema/healthcare/data-types/extended-contact-detail.md)
+         * [人名](./schema/healthcare/data-types/human-name.md)
+         * [識別子](./schema/healthcare/data-types/identifier.md)
+         * [お金](./schema/healthcare/data-types/money.md)
+         * [期間](./schema/healthcare/data-types/period.md)
+         * [人物](./schema/healthcare/data-types/person.md)
+         * [数量](./schema/healthcare/data-types/quantity.md)
+         * [範囲](./schema/healthcare/data-types/range.md)
+         * [比率](./schema/healthcare/data-types/ratio.md)
+         * [リファレンス](./schema/healthcare/data-types/reference.md)
+         * [繰り返し](./schema/healthcare/data-types/repeat.md)
+         * [単純量](./schema/healthcare/data-types/simple-quantity.md)
+         * [タイミング](./schema/healthcare/data-types/timing.md)
+         * [仮想サービス](./schema/healthcare/data-types/virtual-service-detail.md)
    * [XDM フィールドディクショナリ](schema/field-dictionary.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
