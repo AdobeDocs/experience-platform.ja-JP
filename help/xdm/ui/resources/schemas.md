@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4056'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 [!UICONTROL  スキーマを作成 ] ダイアログが表示されます。 このダイアログでは、フィールドとフィールドグループを追加して手動でスキーマを作成するか、CSV ファイルをアップロードして ML アルゴリズムを使用してスキーマを生成するかを選択できます。 ダイアログからスキーマ作成ワークフローを選択します。
 
-![ ワークフローオプションと「選択」がハイライト表示されたスキーマを作成ダイアログ ](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![ ワークフローオプションと「選択」がハイライト表示されたスキーマを作成ダイアログ ](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} 手動または ML 支援によるスキーマ作成 {#manual-or-assisted}
 
@@ -49,15 +49,35 @@ ML アルゴリズムを使用して、CSV ファイルに基づいてスキー�
 
 ![3 つのクラスオプションと [!UICONTROL  次へ ] がハイライト表示された [!UICONTROL  スキーマを作成 ] ワークフロー ](../../images/ui/resources/schemas/schema-class-options.png)
 
+**[!UICONTROL その他]** を選択すると、使用可能なクラスのリストが表示されます。 ここから、既存のクラスを参照およびフィルタリングできます。
+
+![[!UICONTROL  スキーマの詳細 ] セクションでハイライト表示された [!UICONTROL  その他 ] を含む [!UICONTROL  スキーマを作成 ] ワークフロー ](../../images/ui/resources/schemas/other-schema-details.png)
+
+カスタムクラスと標準クラスのどちらかに基づいてクラスをフィルタリングするラジオボタンを選択します。 また、業界に基づいて使用可能な結果をフィルタリングしたり、検索フィールドを使用して特定のクラスを検索したりすることもできます。
+
+![ 検索バー、[!UICONTROL  カスタム ]、[!UICONTROL  業界 ] がハイライト表示された [!UICONTROL  スキーマを作成 ] ワークフロー ](../../images/ui/resources/schemas/filter-and-search.png)
+
+適切なクラスを決定できるように、各クラスには情報アイコンとプレビューアイコンがあります。 情報アイコン（![ 情報アイコン。](/help/images/icons/info.png)）をクリックすると、関連付けられているクラスと業界の説明を提供するダイアログが開きます。
+
+![ 選択したクラスの情報アイコンとツールヒントがハイライト表示されている様子 ](../../images/ui/resources/schemas/class-info.png)
+
+プレビューアイコン（![ プレビューアイコン。](/help/images/icons/preview.png)）を選択すると、スキーマ図とそのプロパティを含むクラスのプレビューダイアログが開きます。
+
+![ スキーマ図とクラスのプロパティを使用した、選択したクラスのプレビュー。](../../images/ui/resources/schemas/class-preview.png)
+
+任意の行を選択してクラスを選択し、「**[!UICONTROL 次へ]**」を選択して選択を確定します。
+
+![ 使用可能なクラスのテーブルから選択したクラスと ] 次へ [!UICONTROL  がハイライト表示された ] スキーマを作成 [!UICONTROL  ワークフロー ](../../images/ui/resources/schemas/select-class.png)
+
 クラスを選択すると、「名前とレビュー [!UICONTROL  セクションが表示され ] す。 このセクションでは、スキーマを識別するための名前と説明を指定します。&#x200B;キャンバスにスキーマの基本構造（クラスによって提供される）が表示され、選択したクラスとスキーマ構造を確認できます。
 
 テキストフィールドに、人間にとってわかりやすい [!UICONTROL  スキーマ表示名 ] を入力します。 次に、スキーマの識別に役立つ適切な説明を入力します。 スキーマ構造をレビューし、設定に満足したら、「**[!UICONTROL 完了]**」を選択してスキーマを作成します。
 
 ![[!UICONTROL  スキーマ表示名 ]、[!UICONTROL  説明 ]、および [!UICONTROL  完了 ] がハイライト表示された [!UICONTROL  スキーマを作成 ] ワークフローの [!UICONTROL  名前とレビュー ] セクション ](../../images/ui/resources/schemas/name-and-review.png)
 
-「[!UICONTROL  スキーマ ][!UICONTROL  参照 ]」タブが表示されます。 最近作成したスキーマがスキーマライブラリに一覧表示され、[!DNL Schema Editor] で編集できるようになりました。
+スキーマエディターが表示され、キャンバスにスキーマの構造が表示されます。 必要に応じて、[ クラスへのフィールドの追加 ](../../ui/resources/classes.md#add-fields) を開始できます。
 
-![ 最近作成したスキーマが表示されているスキーマワークスペースの「参照」タブ ](../../images/ui/resources/schemas/example-schema.png)
+![ キャンバスに表示されたスキーマの構造を持つスキーマエディター。](../../images/ui/resources/schemas/edit.png)
 
 ## 既存のスキーマの編集 {#edit}
 
