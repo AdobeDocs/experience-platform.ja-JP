@@ -5,10 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 36f1a443eda47917d5b6bd84d4765ff044b5093a
+source-git-commit: 8eaff2361e76a7856b3371156ed9fe5c542fec28
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 16%
+source-wordcount: '552'
+ht-degree: 4%
 
 ---
 
@@ -18,179 +18,13 @@ ht-degree: 16%
 
 次の表に、いくつかの一般的なヘルスケアユースケースで推奨されるクラスとスキーマフィールドグループの概要を示します。
 
-<table>
-  <thead>
-    <tr>
-      <th>ユースケース</th>
-      <th>フィールドグループ</th>
-      <th>互換性のあるクラス</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong> 患者の作成/更新 </strong>：患者が病院のフロントデスクに到着すると、識別子（オプション）、患者の名前、生年月日、性別、住所などの人口統計の詳細を含む、患者レコードが作成されます。 これは、医療 IT の重要な要素として機能します。</td>
-      <td><a href="./field-groups/patient.md">患者</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="6"><strong> ワクチン接種 </strong>：ワクチン接種プロセスの促進、患者の予防接種記録の管理、および EMR とワクチン管理システムの統合。</td>
-      <td><a href="./field-groups/immunization.md">免疫</a></td>
-      <td>
-        <li><a href="../../classes/experienceevent.md">XDM エクスペリエンスイベント</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/patient.md">患者</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">ロケーション</a></td>
-      <td>
-        <li><a href="./classes/location.md">ロケーション</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication.md">医薬品</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">医薬品</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-dispense.md">薬剤調剤</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">医薬品</a></li>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-request.md">投薬依頼</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">医薬品</a></li>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4"><strong> ポストケアのアドヒアランス </strong>：患者および介護者に治療計画の完了および送金率の低減を促す。</td>
-      <td><a href="./field-groups/patient.md">患者</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">ロケーション</a></td>
-      <td>
-        <li><a href="./classes/location.md">ロケーション</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/care-plan.md">ケアプラン</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/goal.md">目標</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="7"><strong> 保険における消費者エクスペリエンス </strong>：保険を購入する消費者間で、デジタル獲得とエクスペリエンスを向上させます。 以下に例を示します。 
-        <li> 一般的な情報（プラン、プラン名/層、メディケイド、ウェルネスプログラムなど）を含んだページにアクセスする人にプロモーションメールやターゲット設定されたサードパーティ広告を送信する消費者行動について
-        </li> 
-        <li> 心臓の健康に関するワクチン関連情報を送信して、ブランドの認知度を高めたり、心臓の健康とワクチンに関する情報を探している人にワクチンのスケジュールを設定したりするリクエストを送信する。
-        </li>
-      </td>
-      <td><a href="./field-groups/patient.md">患者</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/coverage.md">カバレッジ</a></td>
-      <td>
-        <li><a href="../../classes/plan.md">プラン</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/account.md">アカウント</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">ロケーション</a></td>
-      <td>
-        <li><a href="./classes/location.md">ロケーション</a></li>
-      </td>
-    </tr>
-      <tr>
-      <td><a href="./field-groups/medication.md">医薬品</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">医薬品</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-dispense.md">薬剤調剤</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">医薬品</a></li>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-request.md">投薬依頼</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">医薬品</a></li>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="5"><strong> プロバイダーエクスペリエンスの強化 </strong>:EMR システムのプロバイダーデータを使用して、予約の空き時間、場所、専門に基づいて代替プロバイダーを提案します。 <br> <br> プロバイダー検索を改善して、必要な可用性を持つ結果を表示し、選択したプロバイダーが支払い者ネットワークの一部であることを確認し、コストの見積もりを提供する。
-      </td>
-      <td><a href="./field-groups/patient.md">患者</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">ロケーション</a></td>
-      <td>
-        <li><a href="./classes/location.md">ロケーション</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/organization.md">組織</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/practioner.md">担当者</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/schedule.md">スケジュール</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">XDM 個人プロファイル</a></li>
-        <li><a href="../../classes/provider.md">プロバイダー</a></li>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| ユースケース | フィールドグループと互換性のあるクラス |
+| --- | --- |
+| **患者の作成/更新**：患者が病院のフロントデスクに到着すると、識別子（オプション）、患者の名前、生年月日、性別、住所などの人口統計の詳細を含む、患者レコードが作成されます。 これは、医療 IT の重要な要素として機能します。 | <ul><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 患者 ](./field-groups/patient.md)</li></ul></li></ul> |
+| **ワクチン接種**：ワクチン接種プロセスの促進、患者の予防接種記録の管理、および EMR とワクチン管理システムの統合。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[ 免疫 ](./field-groups/immunization.md)</li></ul></li><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li><li>[ 患者 ](./field-groups/patient.md)</li></ul></li><li>**[場所](./classes/location.md)**:<ul><li>[場所](./field-groups/location.md)</li></ul><li>**[医薬品](../../classes/medication.md)**:<ul><li>[ 医薬品 ](./field-groups/medication.md)</li><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li></ul></li><li>**[プロバイダー](../../classes/provider.md)**:<ul><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li></ul></li></ul> |
+| **ポストケアのアドヒアランス**：患者および介護者に治療計画の完了および送金率の低減を促す。 | <ul><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 介護計画 ](./field-groups/care-plan.md)</li><li>[ 目標 ](./field-groups/goal.md)</li><li>[ 患者 ](./field-groups/patient.md)</li></ul></li><li>**[場所](./classes/location.md)**:<ul><li>[場所](./field-groups/location.md)</li></ul><li>**[プロバイダー](../../classes/provider.md)**:<ul><li>[ 目標 ](./field-groups/goal.md)</li></ul></li></ul> |
+| **保険における消費者エクスペリエンス**：保険を購入する消費者間で、デジタル獲得とエクスペリエンスを向上させます。 以下に例を示します。 <li> 一般的な情報（プラン、プラン名/層、メディケイド、ウェルネスプログラムなど）を含んだページにアクセスする人にプロモーションメールやターゲット設定されたサードパーティ広告を送信する消費者行動について</li><li> 心臓の健康に関するワクチン関連情報を送信して、ブランドの認知度を高めたり、心臓の健康とワクチンに関する情報を探している人にワクチンのスケジュールを設定したりするリクエストを送信する。 </li> | <ul><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[アカウント](./field-groups/account.md)</li><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li><li>[ 患者 ](./field-groups/patient.md)</li></ul></li><li>**[場所](./classes/location.md)**:<ul><li>[場所](./field-groups/location.md)</li></ul><li>**[医薬品](../../classes/medication.md)**:<ul><li>[ 医薬品 ](./field-groups/medication.md)</li><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li></ul></li><li>**[プロバイダー](../../classes/provider.md)**:<ul><li>[アカウント](./field-groups/account.md)</li><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li></ul><li>**[計画](../../classes/plan.md)**:<ul><li>[ 目標 ](./field-groups/coverage.md)</li></ul></li></ul> |
+| **プロバイダーエクスペリエンスの強化**:EMR システムのプロバイダーデータを使用して、予約の空き時間、場所、専門に基づいて代替プロバイダーを提案します。<br> <br> プロバイダー検索を改善して必要な可用性で結果を表示し、選択したプロバイダーが支払い者ネットワークの一部であることを確認し、コストの見積もりを提供する。 | <ul><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 組織 ](./field-groups/organization.md)</li><li>[ 患者 ](./field-groups/patient.md)</li><li>[ 実務担当者 ](./field-groups/practioner.md)</li><li>[スケジュール](./field-groups/schedule.md)</li></ul></li><li>**[場所](./classes/location.md)**:<ul><li>[場所](./field-groups/location.md)</li></ul><li>**[プロバイダー](../../classes/provider.md)**:<ul><li>[ 組織 ](./field-groups/organization.md)</li><li>[ 実務担当者 ](./field-groups/practioner.md)</li><li>[スケジュール](./field-groups/schedule.md)</li></ul></li></ul> |
 
 ## データタイプ {#data-types}
 
