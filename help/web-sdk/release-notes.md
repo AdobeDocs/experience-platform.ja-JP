@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 73%
+source-wordcount: '2085'
+ht-degree: 72%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 73%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
+
+## バージョン 2.24.1 - 2024年12月6日（PT）
+
+**修正点および改善点**
+
+- 一部のお客様の統合でエラーが発生していた、[Adobe Experience Platform ルールエンジン ](https://github.com/adobe/aepsdk-rulesengine-typescript/) に関連する依存関係の問題を解決しました。 Web SDKには、[Adobe Experience Platform ルールエンジン ](https://github.com/adobe/aepsdk-rulesengine-typescript/) バージョン 2.0.3 以降が必要です。
 
 ## バージョン 2.24.0 - 2024年10月31日（PT）
 
@@ -44,7 +50,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **修正点および改善点**
 
-- Web SDK をローカルで実行した際に、cookie が正しく書き込まれない問題を修正しました。
+- Web SDKをローカルで実行すると、cookie が正しく書き込まれない問題を修正しました。
 
 ## バージョン 2.22.0 - 2024年8月22日（PT）
 
@@ -90,7 +96,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 - ID エラーが他のエラーをマスクし、ID エラーを警告に変更していた問題を修正しました。
 - `renderDecisions` が `false` に設定された top of page 呼び出しがある場合に、bottom of page 呼び出しが送信されない問題を修正しました。
-- 複数の `adobe_mc` クエリ文字列パラメーターがある場合に、Web SDK がクロスドメイン ID を読み取れない問題を修正しました。
+- 複数の `adobe_mc` クエリ文字列パラメーターが存在する場合に、web SDKがクロスドメイン ID を読み取れない問題を修正しました。
 
 ## バージョン 2.19.1 - 2023年11月10日（PT）
 
@@ -257,7 +263,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.4.0 - 2021年3月
 
-- SDK を [NPM パッケージ ](/help/web-sdk/install/npm.md) としてインストールできるようになりました。
+- これで、SDKを [NPM パッケージ ](/help/web-sdk/install/npm.md) としてインストールできます。
 - [デフォルトの同意を設定](/help/web-sdk/commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションは、同意が得られるとイベントをキューに入れ、送信します）。
 - [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) コールバックを使用して、イベントが送信されないようにすることができるようになりました。
 - レンダリングまたはクリックされたパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization` の代わりに XDM スキーマフィールドグループを使用するようになりました。
@@ -281,8 +287,8 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.2.0 - 2020年10月
 
-- バグ修正：`idMigrationEnabled` が `true` 定されている場合、オプトインオブジェクトが Web SDK の呼び出しをブロックしていました。
-- バグ修正：ちらつきの問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストを Web SDK が認識できるようにします。
+- バグ修正：`idMigrationEnabled` が `true` 効な場合、オプトインオブジェクトが web SDKの呼び出しをブロックしていました。
+- バグ修正：ちらつきの問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストを Web SDKに認識させます。
 
 ## バージョン 2.1.0 - 2020年8月
 
