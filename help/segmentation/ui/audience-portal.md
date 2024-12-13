@@ -2,10 +2,10 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
+source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
 workflow-type: tm+mt
-source-wordcount: '4547'
-ht-degree: 55%
+source-wordcount: '4557'
+ht-degree: 54%
 
 ---
 
@@ -236,6 +236,7 @@ abstract="1 回の柔軟なオーディエンス評価実行で最大 20 個の�
 - すべてのオーディエンス **必須** は、「セグメント化サービス」のオリジンを持ちます。
 - すべてのオーディエンス **必須** は、バッチセグメント化を使用して評価する必要があります。
 - すべてのオーディエンスは **人物ベースのオーディエンスである必要があります**。
+- オーディエンスは **のみ** Platform の宛先に対してアクティブ化できます。
 - 選択できるオーディエンスは最大 20 個です。
 
 ![ 柔軟なオーディエンス評価を使用するオーディエンスが選択されます。](../images/ui/audience-portal/evaluate-audiences.png)
