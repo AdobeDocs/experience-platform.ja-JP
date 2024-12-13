@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタント製品ドキュメント
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
+source-git-commit: 86edf0c8eeca5b3d2be5776664c397fcf5028e29
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '688'
 ht-degree: 1%
 
 ---
@@ -77,31 +77,57 @@ AI アシスタントを使用すると、エクスペリエンスデータモ�
 
 AI アシスタントの概要については、次のビデオをご覧ください。
 
++++選択すると、AI アシスタントの概要ビデオが表示されます
+
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 詳しくは、[AI アシスタント UI ガイド ](ui-guide.md) を参照してください。
+
++++
 
 ### AI アシスタントにアクセスする
 
 組織とユーザーに AI アシスタントへのアクセスを設定する方法については、次のビデオをご覧ください。
 
++++選択すると、AI アシスタントへのアクセス方法に関するビデオが表示されます
+
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 詳しくは、『 [AI アシスタント アクセス ガイド ](access.md) 』を参照してください。
+
++++
 
 ### AI アシスタントの製品知識を使用して、オンボーディング時間を短縮する
 
 次のビデオでは、AI アシスタントの製品ナレッジを使用してオンボーディング時間を短縮する方法を説明します。
 
++++選択すると、AI アシスタントを使用してオンボーディング時間を短縮する方法に関するビデオが表示されます
+
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 詳しくは、「AI アシスタントの製品知識 [ を参照してください ](home.md#product-knowledge)
+
++++
 
 ### AI アシスタントを使用して、オーディエンスを整理します
 
 次のビデオでは、AI アシスタントを使用してオーディエンスを整理し、マーケティング操作を最適化する方法を説明します。
 
++++選択すると、AI アシスタントを使用してオーディエンスを整理する方法に関するビデオが表示されます
+
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
+
++++
+
+### 検出性パネルを使用して、作業を開始します
+
+次のビデオでは、AI アシスタントの検出性パネルと、それを使用して AI アシスタントの使用を開始する方法について説明します
+
++++検出性に関するビデオを表示する場合に選択
+
+>[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
+
++++
 
 ## AI Assistant ユースケースライブラリ
 
@@ -133,6 +159,10 @@ AI アシスタントのユースケースの例については、以下を参�
 AI アシスタントについて詳しくは、[Adobe Experience Platformの AI アシスタントのセキュリティファクトシート ](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf) を参照してください。
 
 >[!ENDSHADEBOX]
+
+AI アシスタントのセキュリティ機能の詳細については、次のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 以下のリンクを参照すると、AI アシスタントのユースケースや機能などをより深く理解できます。
 
