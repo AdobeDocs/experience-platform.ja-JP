@@ -2,10 +2,10 @@
 title: コア拡張機能のリリースノート
 description: Adobe Experience Platform のコア拡張機能に関する最新のリリースノートです。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 89%
+source-wordcount: '1651'
+ht-degree: 88%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 89%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2024 年 10 月 23 日（Pt）
+
+v3.4.2
+
+* 「および特定のプロパティ値を持つ」がアクティブな場合の、フォーム/変更イベントのスキーマ検証エラーを修正しました。
 
 ## 2023年3月29日（PT）
 
