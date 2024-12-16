@@ -4,7 +4,7 @@ title: Flow Service API を使用したデータセットの書き出し
 description: Flow Service API を使用して、データセットを書き出し、宛先を選択する方法を説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
+source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
 workflow-type: tm+mt
 source-wordcount: '5138'
 ht-degree: 11%
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 >[!AVAILABILITY]
 >
->* この機能は、Real-Time CDP Prime および Ultimate パッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
+>* この機能は、Real-Time CDP PrimeとUltimateのパッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ ht-degree: 11%
 
 ## 書き出すことができるデータセット {#datasets-to-export}
 
-書き出し可能なデータセットは、Experience Platformアプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（Prime または Ultimate）、購入したアドオン（例：Data Distiller）によって異なります。
+書き出し可能なデータセットは、Experience Platformアプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（PrimeまたはUltimate）、購入したアドオン（例：Data Distiller）によって異なります。
 
 書き出し可能なデータセットについては、[UI チュートリアルページの表 ](/help/destinations/ui/export-datasets.md#datasets-to-export) を参照してください。
 
@@ -996,7 +996,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection"
+  "name": "Data Landing Zone Base Connection",
+  "connectionSpec": {
+    "id": "3567r537-2a7b-4583-ac39-ed38d4b848e8",
+    "version": "1.0"
+  }
 }'
 ```
 
