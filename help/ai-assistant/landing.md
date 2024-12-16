@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタント製品ドキュメント
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
+source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,14 @@ AI アシスタントの概要については、次のビデオをご覧くだ�
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 詳しくは、『 [AI アシスタント アクセス ガイド ](access.md) 』を参照してください。
+
+### AI アシスタントでの製品知識について
+
+AI アシスタントの製品知識については、次のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+詳しくは、「AI アシスタントの製品知識 [ を参照してください ](home.md#product-knowledge)
 
 ### AI アシスタントの製品知識を使用して、オンボーディング時間を短縮する
 
