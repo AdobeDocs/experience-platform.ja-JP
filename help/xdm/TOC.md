@@ -5,9 +5,9 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 25d74df335e3d7930b7f3a4f4836bd20556780ed
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 77%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 77%
          * [ロケーション](./schema/healthcare/classes/location.md)
       * フィールドグループ {#field-groups}
          * [アカウント](./schema/healthcare/field-groups/account.md)
+         * [予定](./schema/healthcare/field-groups/appointment.md)
          * [ケアプラン](./schema/healthcare/field-groups/care-plan.md)
          * [カバレッジ](./schema/healthcare/field-groups/coverage.md)
          * [目標](./schema/healthcare/field-groups/goal.md)
