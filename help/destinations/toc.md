@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
+source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
 workflow-type: tm+mt
-source-wordcount: '1262'
-ht-degree: 85%
+source-wordcount: '1267'
+ht-degree: 84%
 
 ---
 
@@ -175,6 +175,8 @@ ht-degree: 85%
       * [SendGrid 接続](./catalog/email-marketing/sendgrid.md)
    * タグ拡張機能 {#launch-extensions}
       * [タグ拡張機能の概要](./catalog/launch-extensions/overview.md)
+   * マーケティングの自動処理 {#marketing-automation}
+      * [RainFocus 参加者プロファイル ](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * モバイルエンゲージメントの宛先 {#mobile-engagement}
       * [モバイルエンゲージメントの宛先の概要](./catalog/mobile-engagement/overview.md)
       * [Airship Attributes 接続](./catalog/mobile-engagement/airship-attributes.md)
