@@ -4,7 +4,8 @@ description: 予定スキーマフィールドグループについて説明し�
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 2a58f6f1663e95c1c7576cd4909fa937b41ae099
+exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '1227'
 ht-degree: 5%
@@ -120,3 +121,4 @@ ht-degree: 5%
 | [!UICONTROL  月の n 週目 ] | `nthWeekOfMonth` | [[!UICONTROL  コーディング ]](../data-types/coding.md) | 予定を受け取る月の n 週目を示します。 |
 | [!UICONTROL  日付 ] | `dayOfMonth` | 整数 | その月のこの特定の日に予定が発生するように指定します。 |
 | [!UICONTROL  月の間隔 ] | `monthInterval` | 整数 | 定期的な予定が n か月ごとに発生するように指定します。 |
+
