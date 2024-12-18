@@ -4,9 +4,9 @@ title: Flow Service API を使用したデータセットの書き出し
 description: Flow Service API を使用して、データセットを書き出し、宛先を選択する方法を説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
+source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
 workflow-type: tm+mt
-source-wordcount: '5138'
+source-wordcount: '5146'
 ht-degree: 11%
 
 ---
@@ -2469,6 +2469,10 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 ## API エラー処理 {#api-error-handling}
 
 このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+
+## 既知の制限事項 {#known-limitations}
+
+データセットの書き出しに関する [ 既知の制限事項 ](/help/destinations/ui/export-datasets.md#known-limitations) を表示します。
 
 ## よくある質問 {#faq}
 

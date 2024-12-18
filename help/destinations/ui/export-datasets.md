@@ -3,10 +3,10 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
 workflow-type: tm+mt
-source-wordcount: '2612'
-ht-degree: 37%
+source-wordcount: '2594'
+ht-degree: 36%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 37%
 
 >[!AVAILABILITY]
 >
->* この機能は、Real-Time CDP Prime または Ultimate パッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
+>* この機能は、Real-Time CDP PrimeまたはUltimate パッケージ、Adobe Journey OptimizerまたはCustomer Journey Analyticsを購入したお客様が利用できます。 詳しくは、Adobe担当者にお問い合わせください。
 
 この記事では、Experience PlatformUI を使用して、Adobe Experience Platformから目的のクラウドストレージの場所（[!DNL Amazon S3]、SFTP の場所、[!DNL Google Cloud Storage] など）に [ データセット ](/help/catalog/datasets/overview.md) を書き出すために必要なワークフローについて説明します。
 
@@ -22,7 +22,7 @@ Experience PlatformAPI を使用してデータセットを書き出すことも
 
 ## 書き出すことができるデータセット {#datasets-to-export}
 
-書き出すことができるデータセットは、Experience Platformアプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（Prime または Ultimate）、購入したアドオン（例：Data Distiller）によって異なります。
+書き出すことができるデータセットは、Experience Platformアプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（PrimeまたはUltimate）、購入したアドオン（例：Data Distiller）によって異なります。
 
 次の表を使用して、アプリケーション、製品層、購入したアドオンに応じて、書き出すことができるデータセットのタイプを理解します。
 
@@ -271,7 +271,7 @@ JSON ファイルへの書き出しはサポートされています *圧縮モ�
 
 Experience Platformの説明文書を参照して、1 年にエクスポートできるデータの量を確認してください。 例えば、Real-Time CDPの製品説明を [ こちら ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) で確認できます。
 
-様々なアプリケーションのデータ書き出し権限は追加的ではないことに注意してください。 例えば、Real-Time CDP Ultimate とAdobe Journey Optimizer Ultimate を購入した場合、製品の説明に従って、プロファイルの書き出し権限は 2 つの権限のうち大きい方になります。 ボリューム使用権限は、ライセンス済みプロファイルの合計数を取得し、Real-Time CDP Prime の場合は 500 KB、Real-Time CDP Ultimate の場合は 700 KB を乗じて、使用資格のあるデータのボリュームを判断することで計算されます。
+様々なアプリケーションのデータ書き出し権限は追加的ではないことに注意してください。 例えば、Real-Time CDP UltimateとAdobe Journey Optimizer Ultimateを購入した場合、製品の説明に従って、プロファイルの書き出し権限は 2 つの権限のうち大きい方になります。 ボリューム使用権限は、ライセンス済みプロファイルの合計数を取得し、Real-Time CDP Ultimateの場合は 500 KB、Real-Time CDP Primeの場合は 700 KB を乗じて、使用資格のあるデータのボリュームを判断することで計算されます。
 
 一方、Data Distillerなどのアドオンを購入した場合、データ書き出し制限は、製品層とアドオンの合計を表します。
 
@@ -281,7 +281,6 @@ Experience Platformの説明文書を参照して、1 年にエクスポート�
 
 データセット書き出しの一般リリースについては、次の制限事項に注意してください。
 
-* 現在、増分ファイルの書き出しのみ可能で、データセット書き出しでは終了日を選択できません。
 * Experience Platformでは、小さなデータセットでも、複数のファイルを書き出す場合があります。 データセットの書き出しは、システム間の統合を目的として設計され、パフォーマンスに最適化されているため、書き出されるファイルの数をカスタマイズすることはできません。
 * 書き出すファイルの名前は現在、カスタマイズできません。
 * API を使用して作成したデータセットは、現在、書き出しには使用できません。
