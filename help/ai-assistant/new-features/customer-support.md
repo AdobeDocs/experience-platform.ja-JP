@@ -2,7 +2,8 @@
 title: カスタマーサポート用 AI アシスタント
 description: AI アシスタントを使用して、トラブルシューティングとカスタマーサポートチケット申請プロセスを合理化する方法を説明します。
 badge: アルファ版
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ ht-degree: 0%
 * 正確でライセンス指向の情報を提供する **製品法的文書**。
    * 質問の例：
       * 「Adobe Experience Platform Activation でのバッチセグメント化ジョブの制限は何ですか？」
-「Adobe Experience Platform Activation でのプロファイル充実度の平均制限は何ですか？」
+      * 「Adobe Experience Platform Activation でのプロファイル充実度の平均制限は何ですか？」
 
 ## サポートケースの作成
 
