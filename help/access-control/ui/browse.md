@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 製品プロファイルを選択してアクセス制御権限を編集する
 description: このドキュメントでは、アクセス制御ワークスペースを参照するために必要な手順について説明します。Adobe Admin Consoleを使用してExperience Platformのアクセス制御を設定するには、Experience Platformのサブスクリプションを取得している組織の管理者である必要があります。
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ca204a6bdbf867268e774d5db6f8e5941d38f0ae
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 60%
@@ -30,3 +30,4 @@ Adobe Experience Platform のアクセス制御ワークスペースが開き、
 ## 次の手順
 
 アクセス制御ワークスペースに移動したら、次の手順に進んで、[新しい製品プロファイルを作成](create-profile.md)します。
+
