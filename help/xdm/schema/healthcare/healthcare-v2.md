@@ -5,7 +5,7 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
+source-git-commit: 6d1745b93d2ad7cf6ef96510bd5128a43de9ef03
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 4%
@@ -26,7 +26,7 @@ ht-degree: 4%
 | **保険における消費者エクスペリエンス**：保険を購入する消費者間で、デジタル獲得とエクスペリエンスを向上させます。 以下に例を示します。 <li> 一般的な情報（プラン、プラン名/層、メディケイド、ウェルネスプログラムなど）を含んだページにアクセスする人にプロモーションメールやターゲット設定されたサードパーティ広告を送信する消費者行動について</li><li> 心臓の健康に関するワクチン関連情報を送信して、ブランドの認知度を高めたり、心臓の健康とワクチンに関する情報を探している人にワクチンのスケジュールを設定したりするリクエストを送信する。 </li> | <ul><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[アカウント](./field-groups/account.md)</li><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li><li>[ 患者 ](./field-groups/patient.md)</li></ul></li><li>**[場所](./classes/location.md)**:<ul><li>[場所](./field-groups/location.md)</li></ul><li>**[医薬品](../../classes/medication.md)**:<ul><li>[ 医薬品 ](./field-groups/medication.md)</li><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li></ul></li><li>**[プロバイダー](../../classes/provider.md)**:<ul><li>[アカウント](./field-groups/account.md)</li><li>[ 調剤 ](./field-groups/medication-dispense.md)</li><li>[ 投薬請求 ](./field-groups/medication-request.md)</li></ul><li>**[計画](../../classes/plan.md)**:<ul><li>[ 目標 ](./field-groups/coverage.md)</li></ul></li></ul> |
 | **プロバイダーエクスペリエンスの強化**:EMR システムのプロバイダーデータを使用して、予約の空き時間、場所、専門に基づいて代替プロバイダーを提案します。<br> <br> プロバイダー検索を改善して必要な可用性で結果を表示し、選択したプロバイダーが支払い者ネットワークの一部であることを確認し、コストの見積もりを提供する。 | <ul><li>**[XDM 個人プロファイル](../../classes/individual-profile.md)**:<ul><li>[ 選任 ](./field-groups/appointment.md)</li><li>[ 組織 ](./field-groups/organization.md)</li><li>[ 患者 ](./field-groups/patient.md)</li><li>[ 実務担当者 ](./field-groups/practioner.md)</li><li>[スケジュール](./field-groups/schedule.md)</li></ul></li><li>**[場所](./classes/location.md)**:<ul><li>[場所](./field-groups/location.md)</li></ul><li>**[プロバイダー](../../classes/provider.md)**:<ul><li>[ 選任 ](./field-groups/appointment.md)</li><li>[ 組織 ](./field-groups/organization.md)</li><li>[ 実務担当者 ](./field-groups/practioner.md)</li><li>[スケジュール](./field-groups/schedule.md)</li></ul></li></ul> |
 
-{style="table-layout:auto"}
+{style="table-layout:fixed"}
 
 ## データタイプ {#data-types}
 
