@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシー規制 FAQ
 description: このドキュメントでは、サポートされる法的プライバシー規制とAdobe Experience Cloudでの実装に関するよくある質問に対する回答を示します。
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: d643b2aeadd4080fa89d6a7b0f84a9f6882d7b89
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1606'
 ht-degree: 32%
 
 ---
@@ -87,7 +87,7 @@ GDPR などの多くの規制では、機密性の高い個人データを処理
 | 規則 | 応答期間 | メモ |
 | --- | --- | --- |
 | CCPA （カリフォルニア州） | 45 日 | |
-| GDPR （欧州連合） | 30 日 | リクエストが複雑な場合、または同じデータ主体から多数のリクエストが行われた場合は、リクエストを 60 日に拡張できます。 |
+| GDPR （欧州連合） | 30 日 | |
 | LGPD （ブラジル） | 15 日 | |
 | PDPA （タイ） | 30 日 | 企業がコンプライアンス期間内にデータ主体のリクエストに応答できない場合、データ主体に書面で応答するリクエストを実行できなかった日付から 30 日以内に、企業は追加の日数を請求されます。 |
 
