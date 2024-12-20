@@ -3,9 +3,9 @@ title: Audiences API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用して、組織のオーディエンスをプログラムで作成、管理および更新します。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1452'
 ht-degree: 6%
 
 ---
@@ -45,6 +45,7 @@ GET /audiences?{QUERY_PARAMETERS}
 | `property` | 属性の値に **正確に** 一致するオーディエンスを指定できるフィルター。 これは、`property=` の形式で記述されます | `property=audienceId==test-audience-id` |
 | `name` | 指定した値を名前に含む **オーディエンスを指定でき** フィルター。 この値では、大文字と小文字が区別されません。 | `name=Sample` |
 | `description` | 指定された値を説明 **含む** オーディエンスを指定できるフィルター。 この値では、大文字と小文字が区別されません。 | `description=Test Description` |
+| `entityType` | 検索するオーディエンスのタイプを指定できるフィルター。 | `entityType=_xdm.context.account` |
 
 **リクエスト**
 

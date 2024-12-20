@@ -2,9 +2,9 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4571'
 ht-degree: 54%
 
 ---
@@ -249,7 +249,7 @@ abstract="1 回の柔軟なオーディエンス評価実行で最大 20 個の�
 
 >[!NOTE]
 >
-[ セグメント評価後 ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) にアクティブ化するように既に設定されているオーディエンスに対して柔軟なオーディエンス評価を実行した場合、オーディエンスは、以前の日別アクティベーションジョブに関係なく、柔軟なオーディエンス評価ジョブが終了するとすぐにアクティブ化されます。
+柔軟なオーディエンス評価を実行する場合は、頻度を **[!UICONTROL セグメント評価後]** に設定する必要があります。 既にアクティブ化するように設定されているオーディエンス [ セグメント評価後 ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) に対して柔軟なオーディエンス評価を実行すると、以前の日別アクティベーションジョブの有無に関係なく、柔軟なオーディエンス評価ジョブが終了するとすぐにオーディエンスがアクティブ化されます。
 
 ## オーディエンスの詳細 {#audience-details}
 
