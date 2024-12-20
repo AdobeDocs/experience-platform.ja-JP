@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での ID フィールドの定義
 description: Experience Platformユーザーインターフェイスで ID フィールドを定義する方法を説明します。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
+source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 16%
@@ -59,3 +59,4 @@ UI で [ 新しいフィールドを定義 ](./overview.md#define) する際に�
 このガイドでは、UI で ID フィールドを定義する方法について説明しました。 このスキーマを使用してデータが取り込まれると、顧客 ID グラフが更新され、スキーマの ID フィールドが反映されます。 UI で組織のプライベートグラフを調べる方法については、[ID グラフビューア ](../../../identity-service/features/identity-graph-viewer.md) に関するガイドを参照してください。
 
 [!DNL Schema Editor] で他の XDM フィールドタイプを定義する方法については、[UI でのフィールドの定義 ](./overview.md#special) の概要を参照してください。
+
