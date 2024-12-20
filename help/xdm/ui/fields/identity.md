@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI での ID フィールドの定義
 description: Experience Platformユーザーインターフェイスで ID フィールドを定義する方法を説明します。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
+source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 16%
+source-wordcount: '651'
+ht-degree: 15%
 
 ---
 
@@ -43,6 +43,10 @@ UI で [ 新しいフィールドを定義 ](./overview.md#define) する際に�
 **[!UICONTROL ID 名前空間]** で、ドロップダウンメニューを使用して、ID フィールドに適した名前空間を選択します。 Adobeが提供する標準の名前空間と、組織が定義したカスタム名前空間が一覧表示されます。
 
 終了したら、「**[!UICONTROL 適用]**」を選択して、スキーマに変更を適用します。
+
+>[!IMPORTANT]
+>
+>プライマリ ID フィールドが既に設定されている場合は、上記の手順に従ってスキーマのプライマリ ID フィールドを変更できます。 ただし、変更を有効にするには、プロファイル内の関連データセットを無効にしてから再度有効にする必要があります。
 
 ![](../../images/ui/fields/special/identity-config.png)
 
