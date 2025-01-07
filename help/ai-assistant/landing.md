@@ -2,9 +2,9 @@
 title: Adobe Experience Platformの AI アシスタント製品ドキュメント
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
+source-git-commit: 9a8b1527f932e8b0091af7fb999ed638e28de2d0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,20 @@ AI アシスタントの製品知識については、次のビデオをご覧�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
 
+### AI アシスタントを使用した応答の検証
+
+次のビデオでは、AI アシスタントを使用して応答を検証する方法を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on)
+
+詳しくは、[AI アシスタントの回答の検証 ](ui-guide.md#verify-operational-insights-responses) に関するドキュメントを参照してください。
+
+### AI アシスタントを使用した影響分析
+
+次のビデオでは、データオブジェクトに変更を加える前に、AI アシスタントを使用してより効果的な影響分析を実行する方法を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
 ## AI Assistant ユースケースライブラリ
 
 >[!BEGINTABS]
@@ -136,6 +150,7 @@ AI アシスタントのユースケースの例については、以下を参�
 * [ チームの新しいメンバーのオンボーディング時間を短縮 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [ オーディエンスを整理し、マーケティング業務を最適化する ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [ 依存関係を確認し、データ更新中のリスクを最小限に抑える ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [ 依存関係を秒単位で確認することで、データ更新時のリスクを最小限に抑えます ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 >[!TAB  追加のビデオコンテンツ ]
 
