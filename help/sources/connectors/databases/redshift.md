@@ -3,10 +3,10 @@ title: Amazon Redshift Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してAmazon Redshift をAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: dbeeab9182ae67e5c9c691707faeddf04f4e94b2
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 58%
+source-wordcount: '308'
+ht-degree: 41%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Amazon Redshift] ソースを利用できます。
+>Real-time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Amazon Redshift] ソースを利用できます。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -24,7 +24,17 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Amazon Redshift] と Platform を接続する方法について説明します。
+## Amazon Web Services上でのExperience Platform用の [!DNL Amazon Redshift] ソースの設定 {#aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../landing/multi-cloud.md) を参照してください。
+
+[!DNL Amazon Redshift] アカウントをAmazon Web Services（AWS）のExperience Platformに接続するには、次の IP アドレスを許可リストに追加します。
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
 
 ## API を使用して [!DNL Amazon Redshift] と Platform を接続する
 
