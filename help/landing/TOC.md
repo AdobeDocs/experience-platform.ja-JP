@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform でガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
-source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
+source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '290'
 ht-degree: 84%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 84%
 
 * [Platform の概要](home.md)
 * [Platform の概要（ビデオ）](video/platform-overview.md)
+* [マルチクラウドの概要](multi-cloud.md)
 * [Platform チュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)
 * [Platform による顧客体験（ビデオ）](video/customer-experience.md)
 * [Platform による顧客体験の背景（ビデオ）](video/customer-experience-bts.md)
