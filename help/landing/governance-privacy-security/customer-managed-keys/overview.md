@@ -4,16 +4,20 @@ description: Adobe Experience Platform に保存されたデータ用に独自�
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 29%
+source-wordcount: '828'
+ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform の顧客管理キー
 
 Adobe Experience Platform に保存されたデータは、システムレベルのキーを使用して保存時に暗号化されます。 Platform 上に構築されたアプリケーションを使用している場合は、代わりに独自の暗号化キーを使用するよう選択すると、データのセキュリティをより詳細に制御できます。
+
+>[!AVAILABILITY]
+>
+>Experience Platformの実装がAmazon Web Services（AWS）で実行されている場合は、Platform データ暗号化に Key Management Service （KMS）を使用するオプションがあります。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。 AWS KMS での暗号化キーの作成と管理については、[AWS KMS データ暗号化ガイド ](../key-management-service/overview.md) を参照してください。
 
 >[!NOTE]
 >

@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform でガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
-source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
+source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 85%
+source-wordcount: '288'
+ht-degree: 84%
 
 ---
 
@@ -71,6 +71,8 @@ ht-degree: 85%
       * [Azure Key Vault の設定](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
       * [API を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [UI を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+   * Key Management Service {#key-management-service}
+      * [キー管理サービス](./governance-privacy-security/key-management-service/overview.md)
 * ライセンスの使用とガードレール {#license}
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
    * [ライセンス使用状況ダッシュボード](./license-usage-and-guardrails/license-usage-dashboard.md)
