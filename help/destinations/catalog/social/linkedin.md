@@ -3,10 +3,10 @@ keywords: linkedin 接続；linkedin 接続；linkedin の宛先；linkedin;
 title: Linkedin Matched Audiences 接続
 description: ハッシュ化されたメールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、LinkedIn キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
+source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 37%
+source-wordcount: '1201'
+ht-degree: 34%
 
 ---
 
@@ -118,6 +118,22 @@ Experience Platformでメールアドレスを取り込む方法については�
 2. **[!UICONTROL 宛先に接続]** を選択します。
    ![LinkedInへの認証 ](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. linkedInの資格情報を入力し、「**ログイン**」を選択します。
+
+### 認証資格情報を更新 {#refresh-authentication-credentials}
+
+LinkedIn トークンは 60 日ごとに期限切れになります。 トークンの有効期限が切れると、宛先へのデータの書き出しは機能しなくなります。 この状況を回避するには、次の手順を実行して再認証を行います。
+
+1. **[!UICONTROL 宛先]**/**[!UICONTROL アカウント]** に移動します。
+2. （任意）ページで使用可能なフィルターを使用して、LinkedIn アカウントのみを表示します。
+   ![LinkedIn アカウントのみを表示するようにフィルター ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. 更新するアカウントを選択し、省略記号を選択して **[!UICONTROL 詳細を編集]** を選択します。
+   ![ 詳細コントロールの編集を選択 ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+4. モーダルウィンドウで、「**[!UICONTROL OAuth に再接続]**」を選択し、LinkedIn資格情報を使用して再認証します。
+   ![ 「OAuth に再接続」オプションを使用したモーダルウィンドウ ](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>認証資格情報が更新され、有効期限が 60 日にリセットされます。
 
 ### 宛先の詳細の入力 {#destination-details}
 

@@ -2,10 +2,10 @@
 title: Pinterest Customer List 接続
 description: 顧客リスト、サイトを訪問した人、またはPinterest上のコンテンツとインタラクションを既に経験した人からオーディエンスを作成します。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 44%
+source-wordcount: '828'
+ht-degree: 37%
 
 ---
 
@@ -67,11 +67,27 @@ ht-degree: 44%
 
 ### 接続パラメーター {#parameters}
 
-この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
+この宛先を [ 設定 ](../../ui/connect-destination.md) する際は、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL 広告アカウント ID]**：お使いのPinterest広告主 ID。
+
+### 認証資格情報を更新 {#refresh-authentication-credentials}
+
+Pinterest トークンは 30 日ごとに期限切れになります。 トークンの有効期限が切れると、宛先へのデータの書き出しは機能しなくなります。 この状況を回避するには、次の手順を実行して再認証を行います。
+
+1. **[!UICONTROL 宛先]**/**[!UICONTROL アカウント]** に移動します。
+2. （任意）ページで使用可能なフィルターを使用して、Pinterest アカウントのみを表示します。
+   ![Pinterest アカウントのみを表示するようにフィルター ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. 更新するアカウントを選択し、省略記号を選択して **[!UICONTROL 詳細を編集]** を選択します。
+   ![ 詳細コントロールの編集を選択 ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+4. モーダルウィンドウで、「**[!UICONTROL OAuth に再接続]**」を選択し、Pinterest資格情報を使用して再認証します。
+   ![ 「OAuth に再接続」オプションを使用したモーダルウィンドウ ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>認証資格情報が更新され、有効期限が 30 日にリセットされます。
 
 ### アラートの有効化 {#enable-alerts}
 

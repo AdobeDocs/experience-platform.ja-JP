@@ -3,10 +3,10 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Facebook キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '1985'
-ht-degree: 29%
+source-wordcount: '2091'
+ht-degree: 27%
 
 ---
 
@@ -151,6 +151,22 @@ Experience Platformでメールアドレスを取り込む方法については�
 2. **[!UICONTROL 宛先に接続]** を選択します。
    ![ アクティベーションワークフローに表示されるFacebookへの認証手順 ](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. facebookの資格情報を入力し、「**ログイン**」を選択します。
+
+### 認証資格情報を更新 {#refresh-authentication-credentials}
+
+Facebook トークンは 60 日ごとに期限切れになります。 トークンの有効期限が切れると、宛先へのデータの書き出しは機能しなくなります。 この状況を回避するには、次の手順を実行して再認証を行います。
+
+1. **[!UICONTROL 宛先]**/**[!UICONTROL アカウント]** に移動します。
+2. （任意）ページで使用可能なフィルターを使用して、Facebook アカウントのみを表示します。
+   ![Facebook アカウントのみを表示するようにフィルター ](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+3. 更新するアカウントを選択し、省略記号を選択して **[!UICONTROL 詳細を編集]** を選択します。
+   ![ 詳細コントロールの編集を選択 ](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
+4. モーダルウィンドウで、「**[!UICONTROL OAuth に再接続]**」を選択し、Facebook資格情報を使用して再認証します。
+   ![ 「OAuth に再接続」オプションを使用したモーダルウィンドウ ](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>認証資格情報が更新され、有効期限が 60 日にリセットされます。
 
 ### 宛先の詳細の入力 {#destination-details}
 
