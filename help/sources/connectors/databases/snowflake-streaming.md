@@ -4,10 +4,10 @@ description: ソース接続とデータフローを作成して、Snowflakeイ�
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 18%
+source-wordcount: '816'
+ht-degree: 17%
 
 ---
 
@@ -15,7 +15,10 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
-> Real-time Customer Data Platform Ultimate を購入したユーザーは、API で [!DNL Snowflake] ストリーミングソースを利用できます。
+>* Real-Time CDP Ultimateを購入したユーザーは、API で [!DNL Snowflake] ストリーミングソースを利用できます。
+>
+>* Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Snowflake] ストリーミングソースを使用できるようになりました。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../landing/multi-cloud.md) を参照してください。
+
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

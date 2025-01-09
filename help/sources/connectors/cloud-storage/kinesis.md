@@ -3,10 +3,10 @@ title: Amazon Kinesis Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してAmazon KinesisをAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 14%
+source-wordcount: '529'
+ht-degree: 13%
 
 ---
 
@@ -14,7 +14,10 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Amazon Kinesis] ソースを利用できます。
+>- Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Amazon Kinesis] ソースを利用できます。
+>
+>- Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Amazon Kinesis] ソースを使用できるようになりました。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../landing/multi-cloud.md) を参照してください。
+
 
 Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続を提供します。 これらのシステムから [!DNL Platform] にデータを取り込むことができます。
 

@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Marketo Engage コネクタ
 description: このドキュメントでは、認証、マッピング、データ待ち時間に関する情報を含め、Marketo Engageソースコネクタの概要を説明します。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
+source-git-commit: 37e23b060c34c628b2be80256cffd1480c899ce7
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '728'
 ht-degree: 11%
 
 ---
 
 # [!DNL Marketo Engage] コネクタ
+
+>[!IMPORTANT]
+>
+>Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Marketo Engage] ソースを使用できるようになりました。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../../landing/multi-cloud.md) を参照してください。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -21,7 +25,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 >[!IMPORTANT]
 >
->[ リアルタイム顧客プロファイル ](../../../../profile/home.md) を使用したセグメント化にすべてのAdobe Real-time Customer Data Platform データセットを使用するには、[Marketo B2B Edition](../../../../rtcdp/b2b-overview.md) へのアクセス権が必要です。 Real-Time CDP B2B Edition がない場合でも、Marketo ソースを使用して、人物やアクティビティのデータセットからリアルタイム顧客プロファイルにデータを取り込んでセグメント化できます。
+>[ リアルタイム顧客プロファイル ](../../../../rtcdp/b2b-overview.md) を使用したセグメント化にすべてのMarketo データセットを使用するには、[Adobe Real-time Customer Data Platform B2B edition](../../../../profile/home.md) へのアクセス権が必要です。 Real-Time CDP B2B editionがない場合でも、Marketo ソースを使用して、人物およびアクティビティデータセットからリアルタイム顧客プロファイルにデータを取り込み、セグメント化できます。
 
 このドキュメントでは、コネクタの認証方法、[!DNL Marketo Engage] フィールドをエクスペリエンスデータモデル（XDM）にマッピングする方法、コネクタのデータ待ち時間など、[!DNL Marketo Engage] ソースコネクタの概要を説明します。
 

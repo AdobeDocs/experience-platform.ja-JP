@@ -3,9 +3,9 @@ title: Google PubSub Sourceの概要
 description: API またはユーザーインターフェイスを使用して、Google PubSub と Adobe Experience Platform を接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: c8fc447631f5382d49022b525a10edeadbd5ab46
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '825'
 ht-degree: 19%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
+>Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
 
 Adobe Experience Platform は、[!DNL AWS]、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続を提供し、これらのシステムからデータを Platform に取り込み、下流のサービスや配信先で使用できるようにします。
 
