@@ -3,18 +3,14 @@ keywords: Experience Platform；ホーム；人気のトピック；アラート
 description: データフローを作成する際にアラートの配信を登録して、フロー実行のステータス、成功または失敗に関するアラートメッセージを受信できます。
 title: UI でのコンテキスト内アラートの購読
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
+source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '819'
 ht-degree: 18%
 
 ---
 
 # UI でのソースデータフローのアラートの購読
-
->[!NOTE]
->
->アラートは、非実稼動サンドボックスではサポートされていません。 アラートを購読するには、実稼動用サンドボックスを使用していることを確認する必要があります。
 
 Adobe Experience Platform では、Adobe Experience Platform アクティビティに関するイベントベースのアラートを登録できます。 アラートにより、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、何らかのエラーが発生したかを確認するために、[[!DNL Observability Insights] API](../../../observability/api/overview.md) をポーリングする必要が低減される、またはなくなります。
 
