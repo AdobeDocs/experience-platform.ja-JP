@@ -3,10 +3,10 @@ title: データランディングゾーンの宛先
 description: データランディングゾーンに接続してオーディエンスをアクティブ化し、データセットを書き出す方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5362690047be6dd1f2d8f6f18d633e0a903807d2
+source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
 workflow-type: tm+mt
-source-wordcount: '1592'
-ht-degree: 44%
+source-wordcount: '1956'
+ht-degree: 35%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 44%
 
 ## 概要 {#overview}
 
-[!DNL Data Landing Zone] は Adobe Experience Platform によってプロビジョニングされた [!DNL Azure Blob] ストレージインターフェイスです。安全なクラウドベースのファイルストレージ機能にアクセスして、ファイルを Platform から書き出すことができます。サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。Platform とそのアプリケーション（[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]、[!DNL Real-Time Customer Data Platform] など）のすべての顧客は、サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナを使用してプロビジョニングされます。 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
-
-[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS は [ 共有アクセス署名 ](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers) を表します。
-
-SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークに対して許可リストの設定や地域間設定は必要ありません。
+[!DNL Data Landing Zone] は、Platform によってプロビジョニングされたクラウドストレージインターフェイスであり、Adobe Experience Platformからファイルを書き出すための安全なクラウドベースのファイルストレージ機能へのアクセスを許可します。 サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナに対するアクセス権があります。すべてのコンテナの合計データ量は、Platform 製品およびサービスライセンスで提供される合計データ量に制限されます。Platform とそのアプリケーション（[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]、[!DNL Real-Time Customer Data Platform] など）のすべての顧客は、サンドボックスごとに 1 つの [!DNL Data Landing Zone] コンテナを使用してプロビジョニングされます。
 
 Platform では、[!DNL Data Landing Zone] コンテナへアップロードされるすべてのファイルで厳密に 7 日間の有効期間（TTL）が適用されます。すべてのファイルは 7 日後に削除されます。
+
+[!DNL Data Landing Zone] 宛先コネクタは、Azure またはAmazon Web サービスクラウドサポートを使用するお客様が利用できます。 認証メカニズムは、宛先がプロビジョニングされるクラウドによって異なります。宛先に関するその他の要素とユースケースはすべて同じです。 2 つの異なる認証メカニズムの詳細については、[Azure Blob にプロビジョニングされたデータランディングゾーンに対する認証 ] および [AWSがプロビジョニングされたデータランディングゾーンに対する認証 ](#authenticate-dlz-aws) の節を参照してください。
+
+![ データランディングゾーン宛先の実装がクラウドのサポートに基づいてどのように異なるかを示す図。](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
 
 ## API または UI を介して [!UICONTROL  データランディングゾーン ] ストレージに接続 {#connect-api-or-ui}
 
@@ -67,9 +67,17 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 *データセット* を書き出す際、Platform は、指定されたストレージの場所に `.parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [ データセットの書き出しが成功したことを確認する ](../../ui/export-datasets.md#verify) の節を参照してください。
 
-## 前提条件 {#prerequisites}
+## Azure Blob にプロビジョニングされたデータランディングゾーンに対する認証 {#authenticate-dlz-azure}
 
-[!DNL Data Landing Zone] の宛先を使用するには、次の前提条件を満たす必要があります。
+>[!AVAILABILITY]
+>
+>この節の内容は、Microsoft Azure 上で動作するExperience Platformの実装に適用されます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
+
+[!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
+
+[!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS は [ 共有アクセス署名 ](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers) を表します。
+
+SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークに対して許可リストの設定や地域間設定は必要ありません。
 
 ### [!DNL Data Landing Zone] コンテナの [!DNL Azure Storage Explorer] への接続
 
@@ -197,6 +205,76 @@ curl -X POST \
 ![Azure UI でハイライト表示されている DLZ ユーザーコンテナの概要。](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 [!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続され、Experience Platform から [!DNL Data Landing Zone] コンテナへのファイルの書き出しを開始できるようになりました。ファイルを書き出すには、以下の節で説明されているように、Experience PlatformUI で [!DNL Data Landing Zone] の宛先への接続を確立する必要があります。
+
+## AWSがプロビジョニングしたデータランディングゾーンに対する認証 {#authenticate-dlz-aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
+
+以下の操作を実行して、AWSでプロビジョニングされたデータランディングゾーンインスタンスに資格情報を取得します。 次に、任意のクライアントを使用して、データランディングゾーンインスタンスに接続します。
+
+>[!BEGINSHADEBOX]
+
+### [!DNL Data Landing Zone] ーザーの資格情報の取得 {#retrieve-dlz-credentials-aws}
+
+[!DNL Data Landing Zone] 資格情報を取得するには、Platform API を使用する必要があります。 資格情報を取得するための API 呼び出しは、以下に説明されています。 ヘッダーに必要な値の取得について詳しくは、[Adobe Experience Platform API の概要 ](/help/landing/api-guide.md) ガイドを参照してください。
+
+**API 形式**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
+```
+
+| クエリパラメーター | 説明 |
+| --- | --- |
+| `dlz_destination` | `dlz_destination` タイプを使用すると、API は、ランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+
+{style="table-layout:auto"}
+
+**リクエスト**
+
+次のリクエスト例では、既存のランディングゾーンの資格情報を取得します。
+
+```shell
+curl --request GET \
+  --url 'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  --header 'Authorization: Bearer ***' \
+  --header 'Content-Type: application/json' \
+  --header 'x-api-key: your_api_key' \
+  --header 'x-gw-ims-org-id: yourorg@AdobeOrg'
+```
+
+**応答**
+
+次の応答では、現在の `awsAccessKeyId`、`awsSecretAccessKey`、その他の情報を含む、ランディングゾーンの資格情報が返されます。
+
+```json
+{
+    "credentials": {
+        "awsAccessKeyId": "ABCDW3MEC6HE2T73ZVKP",
+        "awsSecretAccessKey": "A1B2Zdxj6y4xfR0QZGtf/phj/hNMAbOGtzM/JNeE",
+        "awsSessionToken": "***"
+    },
+    "dlzPath": {
+        "bucketName": "your-bucket-name",
+        "dlzFolder": "dlz-destination"
+    },
+    "dlzProvider": "Amazon S3",
+    "expiryTime": 1734494017
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `credentials` | このオブジェクトには、Experience Platformがプロビジョニングされたデータランディングゾーンの場所にファイルを書き出すために使用する `awsAccessKeyId`、`awsSecretAccessKey` および `awsSessionToken` が含まれます。 |
+| `dlzPath` | このオブジェクトには、書き出されたファイルが格納される、AdobeがプロビジョニングしたAWSの場所のパスが含まれます。 |
+| `dlzProvider` | これがAmazon S3 でプロビジョニングされたデータランディングゾーンであることを示します。 |
+| `expiryTime` | 上記のオブジェクトの資格情報の有効期限が切れるタイミングを示します。 呼び出しを再度行うことで、これらを更新できます。 |
+
+{style="table-layout:auto"}
+
+>[!ENDSHADEBOX]
 
 ## 宛先への接続 {#connect}
 
