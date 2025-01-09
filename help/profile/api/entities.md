@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、Profile API を使用してエンティティ（一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 9f9823a23c488e63b8b938cb885f050849836e36
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 89%
+source-wordcount: '2181'
+ht-degree: 36%
 
 ---
 
@@ -20,11 +20,13 @@ Adobe Experience Platformでは、RESTful API またはユーザーインター�
 
 このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
-## ID によるプロファイルデータへのアクセス
+## エンティティの取得 {#retrieve-entity}
 
-[!DNL Profile] エンドポイントに対してGETリクエストを実行し、エンティティの ID を一連のクエリパラメーターとして指定することで、`/access/entities` エンティティにアクセスできます。 この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
+プロファイルエンティティまたはその時系列データを取得するには、必要なクエリパラメーターと共に `/access/entities` エンドポイントにGETリクエストを行います。
 
-クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
+>[!BEGINTABS]
+
+>[!TAB  プロファイルエンティティ ]
 
 **API 形式**
 
@@ -32,20 +34,37 @@ Adobe Experience Platformでは、RESTful API またはユーザーインター�
 GET /access/entities?{QUERY_PARAMETERS}
 ```
 
+クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
+
+プロファイルエンティティにアクセスするには、次のクエリパラメーターを指定する **必要があります**。
+
+- `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、`schema.name=_xdm.context.profile` です。
+- `entityId`：取得しようとしているエンティティの ID。
+- `entityIdNS`：取得しようとしているエンティティの名前空間。 `entityId` が XID ではない場合、この値を指定する必要があ **ま**。
+
+有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
+
 **リクエスト**
 
-次のリクエストでは、顧客の電子メールと名前を ID を使用して取得します。
+次のリクエストでは、ID を使用して、顧客のメールアドレスと名前を取得します。
+
++++ ID を使用してエンティティを取得するリクエスト例
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
++++
+
+**応答**
+
+応答に成功すると、HTTP ステータス 200 とリクエストされたエンティティが返されます。
+
++++ リクエストされたエンティティを含む応答のサンプル
 
 ```json
 {
@@ -69,7 +88,7 @@ curl -X GET \
                     }
                 },
                 {
-                    "id": "janesmith@example.com",
+                    "id": "johnsmith@example.com",
                     "namespace": {
                         "code": "email"
                     }
@@ -114,13 +133,305 @@ curl -X GET \
 }
 ```
 
++++
+
 >[!NOTE]
 >
 >関連するグラフが 50 個を超える ID をリンクする場合、このサービスは HTTP ステータス 422（処理できないエンティティ）と「関連 ID が多すぎます」というメッセージを返します。このエラーが表示される場合は、検索を絞り込むためにクエリパラメータを追加することを検討してください。
 
-## ID リストによるプロファイルデータへのアクセス
+>[!TAB  時系列イベント ]
 
-`/access/entities` エンドポイントに対して POST リクエストを送信し、ペイロードに ID を提供することで、ID によって複数のプロファイルエンティティにアクセスできます。これらの ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）で構成されます。
+**API 形式**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
+
+時系列イベントデータにアクセスするには、次のクエリパラメーターを指定する **必要があります**。
+
+- `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、この値は `schema.name=_xdm.context.experienceevent` です。
+- `relatedSchema.name`：関連するスキーマの名前。 スキーマ名はエクスペリエンスイベントなので、この **必須** の値は `relatedSchema.name=_xdm.context.profile` にする必要があります。
+- `relatedEntityId`：関連エンティティの ID。
+- `relatedEntityIdNS`：関連エンティティの名前空間。 `relatedEntityId` が XID ではない場合、この値を指定する必要があ **ま**。
+
+有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
+
+**リクエスト**
+
+次のリクエストでは、ID でプロファイルエンティティを検索し、エンティティに関連付けられているすべての時系列イベントの `endUserIDs`、`web`、`channel` プロパティの値を取得します。
+
++++ エンティティに関連付けられた時系列イベントを取得するサンプルリクエスト
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**応答**
+
+応答が成功すると、HTTP ステータス 200 が、リクエストクエリパラメーターで指定された時系列イベントと関連フィールドのページ分割リストと共に返されます。
+
+>[!NOTE]
+>
+>リクエストで上限の 1 が指定（`limit=1`）されたので、以下の応答の `count` は 1 で、1 つのエンティティのみが返されます。
+
++++ リクエストされた時系列イベントデータを含む応答のサンプル
+
+```json
+{
+    "_page": {
+        "orderby": "timestamp",
+        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
+        "count": 1,
+        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
+    },
+    "children": [
+        {
+            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
+            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
+            "timestamp": 1531260476000,
+            "entity": {
+                "endUserIDs": {
+                    "_experience": {
+                        "ecid": {
+                            "id": "89149270342662559642753730269986316900",
+                            "namespace": {
+                                "code": "ecid"
+                            }
+                        }
+                    }
+                },
+                "channel": {
+                    "_type": "web"
+                },
+                "web": {
+                    "webPageDetails": {
+                        "name": "Fernie Snow",
+                        "pageViews": {
+                            "value": 1
+                        }
+                    }
+                }
+            },
+            "lastModifiedAt": "2018-08-21T06:49:02Z"
+        }
+    ],
+    "_links": {
+        "next": {
+            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
+        }
+    }
+}
+```
+
++++
+
+>[!TAB B2B アカウント ]
+
+**API 形式**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
+
+B2B アカウントデータにアクセスするには、次のクエリパラメーターを指定する **必要があります**。
+
+- `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、この値は `schema.name=_xdm.context.account` です。
+- `entityId`：取得しようとしているエンティティの ID。
+- `entityIdNS`：取得しようとしているエンティティの名前空間。 `entityId` が XID ではない場合、この値を指定する必要があ **ま**。
+
+有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
+
+**リクエスト**
+
++++ B2B アカウントを取得するサンプルリクエスト
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.account&entityIdNs=b2b_account&entityId=2334262' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**応答**
+
+応答に成功すると、HTTP ステータス 200 とリクエストされたエンティティが返されます。
+
++++ リクエストされたエンティティを含む応答のサンプル
+
+```json
+{
+    "GuQ-AUFjgjaeIw": {
+        "entityId": "GuQ-AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "{SOURCE_ID}",
+                    "sourceKey": "{SOURCE_KEY}",
+                    "sourceInstanceID": "{SOURCE_INSTANCE_ID}",
+                    "sourceType": "{SOURCE_TYPE}"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "{SOURCE_ID}"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!TAB B2B オポチュニティ ]
+
+**API 形式**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
+
+B2B オポチュニティエンティティにアクセスするには、次のクエリパラメーターを指定する **必要があります**。
+
+- `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、`schema.name=_xdm.context.opportunity` です。
+- `entityId`：取得しようとしているエンティティの ID。
+- `entityIdNS`：取得しようとしているエンティティの名前空間。 `entityId` が XID ではない場合、この値を指定する必要があ **ま**。
+
+有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
+
+**リクエスト**
+
++++ B2B 商談エンティティを取得するリクエストのサンプル
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.opportunity&entityIdNs=b2b_opportunity&entityId=2334262' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**応答**
+
+応答に成功すると、HTTP ステータス 200 とリクエストされたエンティティが返されます。
+
++++ リクエストされたエンティティを含む応答のサンプル
+
+```json
+{
+  "Ggw_AUFjgjaeIw": {
+        "entityId": "Ggw_AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!ENDTABS]
+
+## 複数のエンティティの取得 {#retrieve-entities}
+
+`/access/entities` エンドポイントにPOSTリクエストを実行し、ペイロードに ID を指定することで、複数のプロファイルエンティティまたは時系列イベントを取得できます。
+
+>[!BEGINTABS]
+
+>[!TAB  プロファイルエンティティ ]
 
 **API 形式**
 
@@ -130,11 +441,12 @@ POST /access/entities
 
 **リクエスト**
 
-次のリクエストでは、複数の顧客の名前と電子メールアドレスを ID のリストで取得します。
+次のリクエストは、ID のリストから複数の顧客の名前とメールアドレスを取得します。
+
++++複数のエンティティを取得するサンプルリクエスト
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/access/entities \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -174,25 +486,29 @@ curl -X POST \
             "endTime": 1539838510
         },
         "limit": 10,
-        "orderby": "-timestamp",
-        "withCA": true
+        "orderby": "-timestamp"
       }'
 ```
 
-| プロパティ | 説明 |
-|---|---|
-| `schema.name` | ***（必須）*** エンティティが属する XDM スキーマの名前。 |
-| `fields` | 返される XDM フィールド（文字列の配列）。デフォルトでは、すべてのフィールドが返されます。 |
-| `identities` | ***（必須）*** アクセスするエンティティの ID のリストを含む配列。 |
-| `identities.entityId` | アクセスするエンティティの ID。 |
-| `identities.entityIdNS.code` | アクセスするエンティティ ID の名前空間。 |
-| `timeFilter.startTime` | 範囲フィルターの開始時間（含む）。精度はミリ秒にする必要があります。指定しなかった場合、デフォルトは使用可能な時間の始まりです。 |
-| `timeFilter.endTime` | 範囲フィルターの終了時間（除外）。精度はミリ秒にする必要があります。指定しなかった場合、デフォルトは使用可能な時間の終わりです。 |
-| `limit` | 返すレコードの数。返されたエクスペリエンスのイベント数にのみ適用。デフォルトは 1,000 です。 |
-| `orderby` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 |
-| `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 |
+| プロパティ | タイプ | 説明 |
+| -------- |----- | ----------- |
+| `schema.name` | 文字列 | **（必須）** エンティティが属する XDM スキーマの名前。 |
+| `fields` | 配列 | 返される XDM フィールド（文字列の配列）。デフォルトでは、すべてのフィールドが返されます。 |
+| `identities` | 配列 | **（必須）** アクセスするエンティティの ID のリストを含む配列。 |
+| `identities.entityId` | 文字列 | アクセスするエンティティの ID。 |
+| `identities.entityIdNS.code` | 文字列 | アクセスするエンティティ ID の名前空間。 |
+| `timeFilter.startTime` | 整数 | プロファイルエンティティをフィルタリングするための開始時間をミリ秒単位で指定します。 デフォルトでは、この値は、使用可能な時間の始めとして設定されます。 |
+| `timeFilter.endTime` | 整数 | プロファイルエンティティのフィルタリングの終了時間をミリ秒単位で指定します。 デフォルトでは、この値は利用可能な時間の終わりとして設定されています。 |
+| `limit` | 整数 | 返されるレコードの最大数。 デフォルトでは、この値は 1000 に設定されています。 |
+| `orderby` | 文字列 | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 |
 
-**応答**&#x200B;正常な応答は、リクエスト本文で指定されたエンティティのリクエストされたフィールドを返します。
++++
+
+**応答**
+
+応答が成功すると、HTTP ステータス 200 が、リクエスト本文で指定されたエンティティのリクエストフィールドと共に返されます。
+
++++ リクエストされたエンティティを含む応答のサンプル
 
 ```json
 {
@@ -331,171 +647,9 @@ curl -X POST \
 }
 ```
 
-## ID によるプロファイルの時系列イベントへのアクセス
++++
 
-`/access/entities` エンドポイントに対して GET リクエストを実行すると、関連するプロファイルイベントの ID で時系列エンティティにアクセスできます。この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
-
-クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
-
-**API 形式**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-**リクエスト**
-
-次のリクエストでは、ID でプロファイルエンティティを検索し、エンティティに関連付けられているすべての時系列イベントの `endUserIDs`、`web`、`channel` プロパティの値を取得します。
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答** 
-
-正常な応答は、リクエストクエリパラメーターで指定された時系列イベントと関連フィールドのページ付けされたリストを返します。
-
->[!NOTE]
->
->リクエストで上限の 1 が指定（`limit=1`）されたので、以下の応答の `count` は 1 で、1 つのエンティティのみが返されます。
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
-
-### 結果の後続ページへのアクセス
-
-時系列イベントを取得すると、結果はページ付けされます。結果の後続のページがある場合、`_page.next` プロパティには ID が含まれます。また、`_links.next.href` プロパティは次のページを取得するためのリクエスト URI を提供します。結果を取得するには、別の GET リクエストを `/access/entities` エンドポイントに対しておこないますが、必ず `/entities` を指定した URI の値に置き換える必要があります。
-
->[!NOTE]
->
->リクエストパスで誤って `/entities/` を繰り返さないようにしてください。これは一度だけ `/access/entities?start=...` のように存在するべきです。
-
-**API 形式**
-
-```http
-GET /access/{NEXT_URI}
-```
-
-| パラメーター | 説明 |
-|---|---|
-| `{NEXT_URI}` | `_links.next.href` から取得した URI 値。 |
-
-**リクエスト**
-
-次のリクエストでは、`_links.next.href` URI をリクエストパスとして使用して、次のページの結果を取得します。
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答** 
-
-正常な応答は、結果の次のページを返します。この応答には、`_page.next` および `_links.next.href` の空の文字列値で示される結果の後続ページはありません。
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236037",
-        "count": 1,
-        "next": ""
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236037",
-            "timestamp": 1531260477000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:50:01Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": ""
-        }
-    }
-}
-```
-
-## ID による複数プロファイルの時系列イベントへのアクセス
-
-`/access/entities` エンドポイントに対して POST リクエストを実行し、ペイロードでプロファイル ID を提供することで、複数の関連するプロファイルから時系列イベントにアクセスできます。これらの ID は、それぞれ ID 値（`entityId`）と ID 名前空間（`entityIdNS`）で構成されます。
+>[!TAB  時系列イベント ]
 
 **API 形式**
 
@@ -507,9 +661,10 @@ POST /access/entities
 
 次のリクエストでは、プロファイル ID のリストに関連付けられた時系列イベントのユーザー ID、現地時間、国コードを取得します。
 
++++ 時系列データを取得するサンプルリクエスト
+
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/access/entities \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -540,26 +695,29 @@ curl -X POST \
         "startTime": 11539838505
         "endTime": 1539838510
     },
-    "limit": 10
+    "limit": 10,
+    "orderby": "-timestamp"
 }'
 ```
 
-| プロパティ | 説明 |
-|---|---|
-| `schema.name` | **（必須）** 取得するエンティティの XDM スキーマ。 |
-| `relatedSchema.name` | `schema.name` が `_xdm.context.experienceevent` の場合、この値は、時系列イベントが関連するプロファイルエンティティのスキーマを指定する必要があります。 |
-| `identities` | **（必須）** 関連する時系列イベントを取得するプロファイルの配列リスト。配列内の各エントリは、1)ID 値と名前空間で構成される完全修飾 ID を使用する、または 2) XID を提供するという 2 つの方法のいずれかで設定されます。 |
-| `fields` | 指定したフィールドのセットに返されたデータを分離します。取得したデータに含まれるスキーマフィールドをフィルターする場合に使用します。例：personalEmail,person.name,person.gender |
-| `mergePolicyId` | 返されるデータを制御する結合ポリシーを指定します。サービス呼び出しで指定されていない場合は、組織のデフォルトのスキーマが使用されます。デフォルトの結合ポリシーが設定されていない場合、デフォルトでは、プロファイルの結合と ID の結合はおこなわれません。 |
-| `orderby` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 |
-| `timeFilter.startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 |
-| `timeFilter.endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 |
-| `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 |
-| `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 |
+| プロパティ | タイプ | 説明 |
+| -------- | ---- | ----------- |
+| `schema.name` | 文字列 | **（必須）** エンティティが属する XDM スキーマの名前。 |
+| `relatedSchema.name` | 文字列 | `schema.name` が `_xdm.context.experienceevent` の場合、この値は、時系列イベントが関連するプロファイルエンティティのスキーマを指定する必要があります。 |
+| `identities` | 配列 | **（必須）** 関連する時系列イベントを取得するプロファイルの配列リスト。 配列内の各エントリは、次の 2 つの方法のいずれかで設定されます。 <ol><li>ID 値および名前空間で構成される完全修飾 ID の使用</li><li>XID の指定</li></ol> |
+| `fields` | 文字列 | 返される XDM フィールド（文字列の配列）。デフォルトでは、すべてのフィールドが返されます。 |
+| `orderby` | 文字列 | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 |
+| `timeFilter.startTime` | 整数 | 時系列オブジェクトをフィルタリングするための開始時間をミリ秒単位で指定します。 デフォルトでは、この値は、使用可能な時間の始めとして設定されます。 |
+| `timeFilter.endTime` | 整数 | 時系列オブジェクトをフィルタリングするための終了時間をミリ秒単位で指定します。 デフォルトでは、この値は利用可能な時間の終わりとして設定されています。 |
+| `limit` | 整数 | 返されるレコードの最大数。 デフォルトでは、この値は 1,000 に設定されています。 |
 
-**応答** 
++++
 
-正常な応答は、リクエストクエリパラメータで指定された時系列イベントと関連フィールドのページ付けされたリストを返します。
+**応答**
+
+応答が成功すると、HTTP ステータス 200 が、リクエストで指定された複数のプロファイルに関連付けられた時系列イベントのページ分割リストと共に返されます。
+
++++ 時系列イベントを含む応答のサンプル
 
 ```json
 {
@@ -767,110 +925,625 @@ curl -X POST \
 }`
 ```
 
-この例の応答では、最初にリストされたプロファイル（「GkouAW-yD9aoRCPhRYROJ-TetAFW」）が `_links.next.payload` の値を提供します。つまり、このプロファイルの結果には他のページが含まれます。その他の結果へのアクセス方法について詳しくは、次の「[その他の結果へのアクセス](#access-additional-results)」の節を参照してください。
++++
 
-### 追加の結果へのアクセス {#access-additional-results}
+>[!NOTE]
+>
+>この応答の例では、最初にリストされたプロファイル（「GkouAW-yD9aoRCPhRYROJ-TetAFW」）が `_links.next.payload` の値を提供します。つまり、このプロファイルに対して結果のページが追加されます。
+>
+>これらの結果にアクセスするには、リストされたペイロードをリクエスト本文として、`/access/entities` エンドポイントに追加のPOSTリクエストを実行します。
 
-時系列のイベントを取得すると、多くの結果が返される場合があるので、結果はページ付けされることがよくあります。特定のプロファイルの結果の後続のページがある場合、そのプロファイルの `_links.next.payload` 値にはペイロードオブジェクトが含まれます。
-
-リクエスト本文でこのペイロードを使用して、追加の POST リクエストを `access/entities` エンドポイントに対して実行し、そのプロファイルの時系列データの後続のページを取得できます。
-
-## 複数スキーマエンティティの時系列イベントへのアクセス
-
-関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、[!DNL Schema Registry] API 開発者ガイド [ 記述子エンドポイントガイド ](../../xdm/api/descriptors.md) を参照してください。
-
-リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
+>[!TAB B2B アカウント ]
 
 **API 形式**
 
 ```http
-GET /access/entities?{QUERY_PARAMETERS}
+POST /access/entities
 ```
 
 **リクエスト**
 
-次のリクエストは、異なるエンティティ間の情報にアクセスするために、以前に確立された関係記述子を含むスキーマを取得します。
+次のリクエストは、リクエストされた B2B アカウントを取得します。
+
++++複数のエンティティを取得するサンプルリクエスト
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/access/entities?relatedSchema.name=_xdm.context.profile&schema.name=_xdm.context.experienceevent&relatedEntityId=GkouAW-2Xkftzer3bBtHiW8GkaFL \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "schema":{
+            "name":"_xdm.context.account"
+        },
+        "identities": [
+            {
+                "entityId": "2334262",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            },
+            {
+                "entityId": "2334263",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            },
+            {
+                "entityId": "2334264",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            }
+        ]
+    }'
 ```
+
+| プロパティ | タイプ | 説明 |
+| -------- |----- | ----------- |
+| `schema.name` | 文字列 | **（必須）** エンティティが属する XDM スキーマの名前。 |
+| `identities` | 配列 | **（必須）** アクセスするエンティティの ID のリストを含む配列。 |
+| `identities.entityId` | 文字列 | アクセスするエンティティの ID。 |
+| `identities.entityIdNS.code` | 文字列 | アクセスするエンティティ ID の名前空間。 |
+
++++
+
+**応答**
+
+応答に成功すると、HTTP ステータス 200 とリクエストされたエンティティが返されます。
+
++++ リクエストされたエンティティを含む応答のサンプル
+
+```json
+{
+    "GuQ-AUFjgjeeIw": {
+        "requestedIdentity": {
+            "entityId": "2334263",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjeeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "GuQ-AUFjgjaeIw": {
+        "requestedIdentity": {
+            "entityId": "2334262",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "GuQ-AUFjgjmeIw": {
+        "requestedIdentity": {
+            "entityId": "2334265",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjmeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334265",
+            "identityMap": {
+            "b2b_account": [
+                {
+                    "id": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                },
+                {
+                    "id": "2334265"
+                }
+            ]
+        },
+        "isDeleted": false,
+        "accountKey": {
+            "sourceID": "2334265",
+            "sourceKey": "2334265",
+            "sourceInstanceID": "2334265",
+            "sourceType": "Random"
+        }
+    }
+}
+```
+
++++
+
+>[!TAB B2B オポチュニティ ]
+
+**API 形式**
+
+```http
+POST /access/entities
+```
+
+**リクエスト**
+
+次のリクエストは、リクエストされた B2B オポチュニティを取得します。
+
++++ 複数のエンティティを取得するリクエストのサンプル
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "schema":{
+            "name":"_xdm.context.opportunity"
+        },
+        "identities": [
+            {
+                "entityId": "2334262",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334263",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334264",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334265",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            }
+        ]
+    }'
+```
+
+| プロパティ | タイプ | 説明 |
+| -------- |----- | ----------- |
+| `schema.name` | 文字列 | **（必須）** エンティティが属する XDM スキーマの名前。 |
+| `identities` | 配列 | **（必須）** アクセスするエンティティの ID のリストを含む配列。 |
+| `identities.entityId` | 文字列 | アクセスするエンティティの ID。 |
+| `identities.entityIdNS.code` | 文字列 | アクセスするエンティティ ID の名前空間。 |
+
++++
+
+**応答**
+
+応答に成功すると、HTTP ステータス 200 とリクエストされたエンティティが返されます。
+
++++ リクエストされたエンティティを含む応答のサンプル
+
+```json
+{
+    "Ggw_AUFjgjaeIw": {
+        "requestedIdentity": {
+            "entityId": "2334262",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "Ggw_AUFjgjieIw": {
+        "requestedIdentity": {
+            "entityId": "2334264",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjieIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334264",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "2334264"
+                    },
+                    {
+                        "id": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334264",
+                "sourceKey": "2334264",
+                "sourceInstanceID": "2334264",
+                "sourceType": "Salesforce"
+            }
+        }
+    },
+    "Ggw_AUFjgjeeIw": {
+        "requestedIdentity": {
+            "entityId": "2334263",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjeeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "Ggw_AUFjgjmeIw": {
+        "requestedIdentity": {
+            "entityId": "2334265",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjmeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334265",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "2334265"
+                    },
+                    {
+                        "id": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334265",
+                "sourceKey": "2334265",
+                "sourceInstanceID": "2334265",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!ENDTABS]
+
+### 結果の後続ページへのアクセス
+
+時系列イベントを取得すると、結果はページ付けされます。結果の後続のページがある場合、`_page.next` プロパティには ID が含まれます。また、`_links.next.href` プロパティは次のページを取得するためのリクエスト URI を提供します。結果を取得するには、`/access/entities` エンドポイントに対して別のGETリクエストを実行し、`/entities` を指定された URI の値に置き換えます。
+
+>[!NOTE]
+>
+>リクエストパスで誤ってリク `/entities/` ストを繰り返さないようにします。 これは一度だけ `/access/entities?start=...` のように存在するべきです。
+
+**API 形式**
+
+```http
+GET /access/{NEXT_URI}
+```
+
+| パラメーター | 説明 |
+|---|---|
+| `{NEXT_URI}` | `_links.next.href` から取得した URI 値。 |
+
+**リクエスト**
+
+次のリクエストでは、`_links.next.href` URI をリクエストパスとして使用して、次のページの結果を取得します。
+
++++ 結果の次のページにアクセスするためのサンプルリクエスト
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
 
 **応答** 
 
-正常な応答は、複数のエンティティに関連付けられた時系列イベントのページ付けされたリストを返します。
+正常な応答は、結果の次のページを返します。この応答には、`_page.next` および `_links.next.href` の空の文字列値で示される結果の後続ページはありません。
+
++++ エンティティの次のページを含む応答のサンプル
 
 ```json
 {
     "_page": {
         "orderby": "timestamp",
-        "start": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
+        "start": "c8d11988-6b56-4571-a123-b6ce74236037",
         "count": 1,
         "next": ""
     },
     "children": [
         {
-            "relatedEntityId": "GkouAW-2Xkftzer3bBtHiW8GkaFL",
-            "entityId": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
-            "timestamp": 1564614939000,
+            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
+            "entityId": "c8d11988-6b56-4571-a123-b6ce74236037",
+            "timestamp": 1531260477000,
             "entity": {
-                "environment": {
-                    "browserDetails": {}
-                },
-                "identityMap": {
-                    "CRMId": [
-                        {
-                            "id": "78520026455138218785449796480922109723",
-                            "primary": true
-                        }
-                    ]
-                },
-
-                "commerce": {
-                    "productViews": {
-                        "value": 1
-                    }
-                },
-                "productListItems": [
-                    {
-                        "name": "Red shoe",
-                        "quantity": 85,
-                        "storesAvailableIn": [
-                            "da6dced5-9574-4dda-89b5-9dc106903f80",
-                            "981bb433-2ee5-4db0-a19a-449ec9dbf39f"
-                        ],
-                        "SKU": "8f998279-797b-4da2-9e60-88bf73a9f15a",
-                        "priceTotal": 934.8
-                    }
-                ],
-                "_id": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
-                "commerce": {
-                    "order": {}
-                },
-                "placeContext": {
-                    "geo": {
-                        "_schema": {}
-                    }
-                },
-                "device": {},
-                "timestamp": "2019-07-31T23:15:39Z",
-                "_experience": {
-                    "profile": {
-                        "identityNamespaces": {
-                            "/productListItems[*]/SKU": {
-                                "namespace": {
-                                    "code": "ECID"
-                                }
+                "endUserIDs": {
+                    "_experience": {
+                        "ecid": {
+                            "id": "89149270342662559642753730269986316900",
+                            "namespace": {
+                                "code": "ecid"
                             }
+                        }
+                    }
+                },
+                "channel": {
+                    "_type": "web"
+                },
+                "web": {
+                    "webPageDetails": {
+                        "name": "Fernie Snow",
+                        "pageViews": {
+                            "value": 1
                         }
                     }
                 }
             },
-            "lastModifiedAt": "2019-10-10T00:14:19Z"
+            "lastModifiedAt": "2018-08-21T06:50:01Z"
         }
     ],
     "_links": {
@@ -881,9 +1554,46 @@ curl -X GET \
 }
 ```
 
-### 結果の後続ページへのアクセス
++++
 
-時系列イベントを取得すると、結果はページ付けされます。結果の後続のページがある場合、`_page.next` プロパティには ID が含まれます。また、`_links.next.href` プロパティは、`access/entities` エンドポイントに対して追加の GET リクエストを実行することで後続のページを取得するためのリクエスト URI を提供します。
+## エンティティを削除 {#delete-entity}
+
+プロファイルストアからエンティティを削除するには、必要なクエリパラメーターと共に `/access/entities` エンドポイントに対してDELETEリクエストを行います。
+
+**API 形式**
+
+```http
+DELETE /access/entities?{QUERY_PARAMETERS}
+```
+
+クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
+
+エンティティを削除するには、次のクエリパラメーターを指定する **必要があります**。
+
+- `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、`schema.name=_xdm.context.profile` を **のみ** 使用できます。
+- `entityId`：取得しようとしているエンティティの ID。
+- `entityIdNS`：取得しようとしているエンティティの名前空間。 `entityId` が XID ではない場合、この値を指定する必要があ **ま**。
+- `mergePolicyId`：エンティティの結合ポリシー ID。 結合ポリシーには、ID ステッチとキー値 XDM オブジェクト結合に関する情報が含まれています。 この値を指定しない場合、デフォルトの結合ポリシーが使用されます。
+
+**リクエスト**
+
+次のリクエストは、指定されたエンティティを削除します。
+
++++ エンティティを削除するリクエストのサンプル
+
+```shell
+curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**応答**
+
+応答が成功すると、HTTP ステータス 202 が、空の応答本文と共に返されます。
 
 ## 次の手順
 
@@ -898,18 +1608,17 @@ curl -X GET \
 次のパラメーターは、`/access/entities` エンドポイントに対する GET リクエストのパスで使用されます。アクセスするプロファイルエンティティを識別し、応答で返されるデータをフィルターします。必須パラメーターはラベル付けされますが、残りはオプションです。
 
 | パラメーター | 説明 | 例 |
-|---|---|---|
-| `schema.name` | **（必須）** 取得するエンティティの XDM スキーマ。 | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | `schema.name` が「_xdm.context.experienceevent」の場合、この値は時系列イベントが関連するプロファイルエンティティのスキーマを指定する必要があります。 | `relatedSchema.name=_xdm.context.profile` |
-| `entityId` | **（必須）** エンティティの ID。このパラメーターの値が XID でない場合は、ID 名前空間パラメーターも指定する必要があります（以下の `entityIdNS` 参照）。 | `entityId=janedoe@example.com` |
-| `entityIdNS` | `entityId` が XID として指定されていない場合、このフィールドで ID 名前空間の指定が必要です。 | `entityIdNE=email` |
-| `relatedEntityId` | `schema.name` が「_xdm.context.experienceevent」の場合、この値は関連するプロファイルエンティティの ID 名前空間を指定する必要があります。この値は、`entityId` と同じ規則に従います 。 | `relatedEntityId=69935279872410346619186588147492736556` |
+| --------- | ----------- | ------- |
+| `schema.name` | **（必須）** エンティティの XDM スキーマの名前。 | `schema.name=_xdm.context.experienceevent` |
+| `relatedSchema.name` | `schema.name` が `_xdm.context.experienceevent` の場合、この値は、時系列イベントが関連するプロファイルエンティティのスキーマを指定します **必須**。 | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **（必須）** エンティティの ID。 このパラメーターの値が XID でない場合、ID 名前空間パラメーター（`entityIdNS`）も指定する必要があります。 | `entityId=janedoe@example.com` |
+| `entityIdNS` | XID として `entityId` を指定しない場合、このフィールドは ID 名前空間を指定します **必須**。 | `entityIdNS=email` |
+| `relatedEntityId` | `schema.name` が `_xdm.context.experienceevent` の場合、この値は、関連するプロファイルエンティティの ID を指定します **必須**。 この値は、`entityId` と同じ規則に従います 。 | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | `schema.name` が「_xdm.context.experienceevent」の場合、この値は `relatedEntityId` で指定したエンティティの ID 名前空間を指定する必要があります。 | `relatedEntityIdNS=CRMID` |
-| `fields` | 応答で返されるデータをフィルターします。取得したデータに含めるスキーマフィールドの値を指定します。複数のフィールドの場合、値はコンマで区切り、間にスペースは入れません | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | 返されるデータを制御する結合ポリシーを指定します。呼び出しで指定されていない場合は、組織のデフォルトのスキーマが使用されます。デフォルトの結合ポリシーが設定されていない場合、デフォルトでは、プロファイルの結合と ID の結合はおこなわれません。 | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 | `orderby=-timestamp` |
-| `startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 | `startTime=1539838505` |
-| `endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 | `endTime=1539838510` |
-| `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 | `limit=100` |
-| `property` | プロパティ値でフィルタリングします。 次のエバリュエーターをサポートしています：=、!=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大 3 つのプロパティをサポートしています。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
-| `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 | `withCA=true` |
+| `fields` | 応答で返されるデータをフィルターします。取得したデータに含めるスキーマフィールドの値を指定します。複数のフィールドの場合、値はコンマで区切り、スペースは使用しません。 | `fields=personalEmail,person.name,person.gender` |
+| `mergePolicyId` | 返されるデータを制御する結合ポリシーを識別します。 呼び出しで指定されていない場合は、組織のデフォルトのスキーマが使用されます。デフォルトの結合ポリシーが設定されていない場合、デフォルトでは、プロファイル結合も ID ステッチも行われません。 | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `orderBy` | 取得したエンティティの並べ替え順（タイムスタンプ別）。 これは `(+/-)timestamp` として記述され、デフォルトは `+timestamp` です。 | `orderby=-timestamp` |
+| `startTime` | エンティティをフィルター処理する開始時間をミリ秒単位で指定します。 | `startTime=1539838505` |
+| `endTime` | エンティティのフィルタリングの終了時間をミリ秒単位で指定します。 | `endTime=1539838510` |
+| `limit` | 返されるエンティティの最大数を指定します。 デフォルトでは、この値は 1000 に設定されています。 | `limit=100` |
+| `property` | プロパティ値でフィルタリングします。 このクエリパラメーターでは、=、！のエバリュエーターがサポートされています。=、&lt;、&lt;=、>、>=。 これは、最大 3 つのプロパティをサポートするエクスペリエンスイベントでのみ使用できます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
