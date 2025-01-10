@@ -1,16 +1,16 @@
 ---
-title: 計算フィールドを使用して、配列を文字列として書き出し
+title: Real-Time CDPからクラウドストレージの宛先への配列オブジェクトの書き出し
 type: Tutorial
 description: 計算フィールドを使用して、Real-Time CDPからクラウドストレージの宛先に配列を文字列として書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 7%
+source-wordcount: '1622'
+ht-degree: 6%
 
 ---
 
-# 計算フィールドを使用して、配列を文字列として書き出し{#use-calculated-fields-to-export-arrays-as-strings}
+# Real-Time CDPからクラウドストレージの宛先への配列オブジェクトの書き出し {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -21,22 +21,16 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->計算フィールドを使用して配列を書き出す機能が一般利用可能になりました。
+>アレイをクラウドストレージの宛先に書き出す機能が一般提供されています。
 
-計算フィールドを使用して、Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/catalog/cloud-storage/overview.md) に配列を文字列として書き出す方法を説明します。 このドキュメントを読んで、この機能で有効になるユースケースを理解します。
+Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/catalog/cloud-storage/overview.md) に配列を書き出す方法を説明します。 このドキュメントでは、書き出しワークフロー、この機能で有効になるユースケース、既知の制限事項について説明します。
 
-計算フィールドの概要と重要性に関する情報を説明します。 データ準備の計算フィールドの概要と、使用可能なすべての関数の詳細については、以下にリンクしたページを参照してください。
+配列は、現在、`array_to_string` 関数を使用して、文字列として書き出す必要があります。
+
+配列を書き出すには、*配列の個々の要素を書き出す [ 場合以外は、書き出しワークフローのマッピング手順で計算フィールド機能を使用する必要があり](#index-based-array-access)* す。 計算フィールドについて詳しくは、以下にリンクされているページを参照してください。 これには、データ準備の計算フィールドの紹介と、使用可能なすべての関数の詳細情報が含まれます。
 
 * [UI ガイドと概要](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Data Prep 関数](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Platform の配列およびその他のオブジェクトタイプ {#arrays-strings-other-objects}
 
@@ -259,6 +253,10 @@ johndoe@acme.org,"5"
 ```
 
 ### インデックス・ベースのアレイ・アクセス {#index-based-array-access}
+
+>[!IMPORTANT]
+>
+>このページで説明している他の関数とは異なり、配列の個々の要素を書き出すには、UI で *計算フィールド&#x200B;**[!UICONTROL コントロールを使用する* 必要はありません]**。
 
 配列のインデックスにアクセスして、配列から 1 つの項目を書き出すことができます。 例えば、`size_of` 関数の前述の例と同様に、顧客が特定の製品を初めて購入したときにのみアクセスして書き出しを行う場合は、`purchaseTime[0]` を使用してタイムスタンプの最初の要素を書き出 `purchaseTime[1]`、タイムスタンプの 2 番目の要素を書き出 `purchaseTime[2]`、タイムスタンプの 3 番目の要素を書き出すことができます。
 

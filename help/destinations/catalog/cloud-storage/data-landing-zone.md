@@ -3,10 +3,10 @@ title: データランディングゾーンの宛先
 description: データランディングゾーンに接続してオーディエンスをアクティブ化し、データセットを書き出す方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
+source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 35%
+source-wordcount: '1968'
+ht-degree: 34%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 35%
 
 Platform では、[!DNL Data Landing Zone] コンテナへアップロードされるすべてのファイルで厳密に 7 日間の有効期間（TTL）が適用されます。すべてのファイルは 7 日後に削除されます。
 
-[!DNL Data Landing Zone] 宛先コネクタは、Azure またはAmazon Web サービスクラウドサポートを使用するお客様が利用できます。 認証メカニズムは、宛先がプロビジョニングされるクラウドによって異なります。宛先に関するその他の要素とユースケースはすべて同じです。 2 つの異なる認証メカニズムの詳細については、[Azure Blob にプロビジョニングされたデータランディングゾーンに対する認証 ] および [AWSがプロビジョニングされたデータランディングゾーンに対する認証 ](#authenticate-dlz-aws) の節を参照してください。
+[!DNL Data Landing Zone] 宛先コネクタは、Azure またはAmazon Web サービスクラウドサポートを使用するお客様が利用できます。 認証メカニズムは、宛先がプロビジョニングされるクラウドによって異なります。宛先に関するその他の要素とユースケースはすべて同じです。 2 つの異なる認証メカニズムの詳細については、[Azure Blob にプロビジョニングされたデータランディングゾーンに対する認証 ](#authenticate-dlz-azure) および [AWSがプロビジョニングされたデータランディングゾーンに対する認証 ](#authenticate-dlz-aws) の節を参照してください。
 
-![ データランディングゾーン宛先の実装がクラウドのサポートに基づいてどのように異なるかを示す図。](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
+![ データランディングゾーン宛先の実装がクラウドのサポートに基づいてどのように異なるかを示す図。](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png " クラウドサポートによるデータランディングゾーンの宛先実装 "){zoomable="yes"}
 
 ## API または UI を介して [!UICONTROL  データランディングゾーン ] ストレージに接続 {#connect-api-or-ui}
 
@@ -77,7 +77,7 @@ Platform では、[!DNL Data Landing Zone] コンテナへアップロードさ�
 
 [!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS は [ 共有アクセス署名 ](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers) を表します。
 
-SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークに対して許可リストの設定や地域間設定は必要ありません。
+パブリックインターネット接続を介してデータを保護するには、SAS ベースの認証を使用して [!DNL Data Landing Zone] コンテナに安全にアクセスします。 ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークに対して許可リストの設定や地域間設定は必要ありません。
 
 ### [!DNL Data Landing Zone] コンテナの [!DNL Azure Storage Explorer] への接続
 
@@ -212,7 +212,7 @@ curl -X POST \
 >
 >この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
 
-以下の操作を実行して、AWSでプロビジョニングされたデータランディングゾーンインスタンスに資格情報を取得します。 次に、任意のクライアントを使用して、データランディングゾーンインスタンスに接続します。
+以下の操作を実行して、AWSでプロビジョニングされた [!DNL Data Landing Zone] インスタンスに対する資格情報を取得します。 次に、任意のクライアントを使用して [!DNL Data Landing Zone] インスタンスに接続します。
 
 >[!BEGINSHADEBOX]
 
@@ -228,7 +228,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | クエリパラメーター | 説明 |
 | --- | --- |
-| `dlz_destination` | `dlz_destination` タイプを使用すると、API は、ランディングゾーンの宛先コンテナを、使用可能な他のタイプのコンテナと区別できます。 |
+| `dlz_destination` | `dlz_destination` クエリパラメーターを追加して、[!DNL Data Landing Zone] *宛先* タイプのコンテナ資格情報を取得することを指定します。 データランディングゾーン *source* の資格情報を接続して取得するには、[sources のドキュメント ](/help/sources/connectors/cloud-storage/data-landing-zone.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -270,7 +270,7 @@ curl --request GET \
 | `credentials` | このオブジェクトには、Experience Platformがプロビジョニングされたデータランディングゾーンの場所にファイルを書き出すために使用する `awsAccessKeyId`、`awsSecretAccessKey` および `awsSessionToken` が含まれます。 |
 | `dlzPath` | このオブジェクトには、書き出されたファイルが格納される、AdobeがプロビジョニングしたAWSの場所のパスが含まれます。 |
 | `dlzProvider` | これがAmazon S3 でプロビジョニングされたデータランディングゾーンであることを示します。 |
-| `expiryTime` | 上記のオブジェクトの資格情報の有効期限が切れるタイミングを示します。 呼び出しを再度行うことで、これらを更新できます。 |
+| `expiryTime` | `credentials` オブジェクトの資格情報の有効期限が切れるタイミングを示します。 資格情報を更新するには、もう一度リクエストを実行します。 |
 
 {style="table-layout:auto"}
 
