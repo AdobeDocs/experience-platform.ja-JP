@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;
-solution: Experience Platform
 title: Flow Service API を使用したAdobe Experience Platformへのデータランディングゾーンの接続
-type: Tutorial
 description: Flow Service API を使用してAdobe Experience Platformを Data Landing Zone に接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
+source-git-commit: 527e62e5fb90bc32ef3788f261e0a24b680f29c0
 workflow-type: tm+mt
-source-wordcount: '1326'
-ht-degree: 18%
+source-wordcount: '1375'
+ht-degree: 17%
 
 ---
 
@@ -29,9 +26,9 @@ ht-degree: 18%
 * [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、[!DNL Flow Service] API を使用して [!DNL Data Landing Zone] ソース接続を正常に作成するために必要な追加情報を示しています。
-
 また、このチュートリアルでは [Platform API の基本を学ぶ ](../../../../../landing/api-guide.md) に関するガイドを読んで、Platform API への認証方法と、ドキュメントに記載されている呼び出し例を解釈する方法も確認する必要があります。
+
+次の節では、[!DNL Flow Service] API を使用して [!DNL Data Landing Zone] ソース接続を正常に作成するために必要な追加情報を示しています。
 
 ## 使用可能なランディングゾーンの取得
 
@@ -63,7 +60,11 @@ curl -X GET \
 
 **応答**
 
-次の応答は、ランディングゾーンに関する情報（対応する `containerName` と `containerTTL` を含む）を返します。
+プロバイダーに応じて、リクエストが成功すると、次の値が返されます。
+
+>[!BEGINTABS]
+
+>[!TAB Azure での応答 ]
 
 ```json
 {
@@ -76,6 +77,26 @@ curl -X GET \
 | --- | --- |
 | `containerName` | 取得したランディングゾーンの名前。 |
 | `containerTTL` | ランディングゾーン内のデータに適用される有効期限（日数）。 特定のランディングゾーン内のはすべて、7 日後に削除されます。 |
+
+
+>[!TAB AWSに対する回答 ]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## 資格情報 [!DNL Data Landing Zone] 取得
 
@@ -103,7 +124,11 @@ curl -X GET \
 
 **応答**
 
-次の応答では、現在の `SASToken`、`SASUri`、`storageAccountName`、有効期限など、データランディングゾーンの資格情報情報が返されます。
+プロバイダーに応じて、リクエストが成功すると、次の値が返されます。
+
+>[!BEGINTABS]
+
+>[!TAB Azure での応答 ]
 
 ```json
 {
@@ -117,10 +142,43 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `containerName` | ランディングゾーンの名前。 |
-| `SASToken` | ランディングゾーンの共有アクセス署名トークン。 この文字列には、リクエストの認証に必要なすべての情報が含まれます。 |
-| `SASUri` | ランディングゾーンの共有アクセス署名 URI。 この文字列は、認証対象のランディングゾーンの URI とそれに対応する SAS トークンの組み合わせです。 |
-| `expiryDate` | SAS トークンの有効期限が切れる日付。 データランディングゾーンにデータをアップロードするためにアプリケーションで引き続き使用するには、有効期限の前にトークンを更新する必要があります。 指定された有効期限の前にトークンを手動で更新しない場合、GET資格情報の呼び出しが実行されると、自動的に更新され、新しいトークンが提供されます。 |
+| `containerName` | [!DNL Data Landing Zone] の名前。 |
+| `SASToken` | [!DNL Data Landing Zone] ーザーの共有アクセス署名トークン。 この文字列には、リクエストの認証に必要なすべての情報が含まれます。 |
+| `storageAccountName` | ストレージアカウントの名前。 |
+| `SASUri` | [!DNL Data Landing Zone] ーザーの共有アクセス署名 URI。 この文字列は、認証対象の [!DNL Data Landing Zone] への URI とそれに対応する SAS トークンの組み合わせです。 |
+| `expiryDate` | SAS トークンの有効期限が切れる日付。 [!DNL Data Landing Zone] へのデータのアップロードにアプリケーションで引き続き使用するには、有効期限の前にトークンを更新する必要があります。 指定された有効期限の前にトークンを手動で更新しない場合、GET資格情報の呼び出しが実行されると、自動的に更新され、新しいトークンが提供されます。 |
+
+>[!TAB AWSに対する回答 ]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `credentials.clientId` | AWSの [!DNL Data Landing Zone] のクライアント ID。 |
+| `credentials.awsAccessKeyId` | AWSの [!DNL Data Landing Zone] ーザーのアクセスキー ID。 |
+| `credentials.awsSecretAccessKey` | AWSでの [!DNL Data Landing Zone] の秘密アクセスキー。 |
+| `credentials.awsSessionToken` | AWS セッショントークン。 |
+| `dlzPath.bucketName` | AWS バケットの名前。 |
+| `dlzPath.dlzFolder` | アクセスする [!DNL Data Landing Zone] フォルダー。 |
+| `dlzProvider` | 使用している [!DNL Data Landing Zone] プロバイダー。 Amazonの場合は、[!DNL Amazon S3] になります。 |
+| `expiryTime` | Unix 時間の有効期限。 |
+
+>[!ENDTABS]
 
 ### API を使用した必須フィールドの取得
 
