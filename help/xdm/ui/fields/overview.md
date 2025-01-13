@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での XDM フィールドの定義
 description: Experience Platformユーザーインターフェイスで XDM フィールドを定義する方法を説明します。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
+source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1606'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ UI で新しい XDM フィールドを定義するには、まず [!DNL Schema E
 
 | フィールドプロパティ | 説明 |
 | --- | --- |
-| [!UICONTROL  フィールド名 ] | フィールドの一意でわかりやすい名前。 スキーマが保存されると、フィールドの名前は変更できません。 この値は、コード内および他のダウンストリームアプリケーションでフィールドを識別および参照するために使用されます <br><br> この名前は、キャメルケースで記述することが理想的です。 英数字、ダッシュまたはアンダースコア文字が含まれていますが、アンダースコアで始まる **ない** 場合があります。<ul><li>**正解**:`fieldName`</li><li>**指定できます：** `field_name2`、`Field-Name`、`field-name_3`</li><li>**間違った形式**: `_fieldName`</li></ul> |
+| [!UICONTROL  フィールド名 ] | フィールドの一意でわかりやすい名前。 スキーマが保存されると、フィールドの名前は変更できません。 この値は、コード内および他のダウンストリームアプリケーションでフィールドを識別および参照するために使用されます <br><br> この名前は、キャメルケースで記述することが理想的です。 英数字またはアンダースコア文字が含まれる場合がありますが、アンダースコアで始まる **ない** 場合があります。<ul><li>**正解**:`fieldName`</li><li>**指定できます：** `field_name2`、`fieldName_3`</li><li>**間違った形式**: `_fieldName`</li></ul> |
 | [!UICONTROL 表示名] | フィールドの表示名。 これは、スキーマエディターキャンバス内のフィールドを表すために使用される名前です。 [ 表示名の切り替え ](../resources/schemas.md#display-name-toggle) を使用して、フィールド名を表示名に変更できます。 |
 | [!UICONTROL タイプ] | フィールドに含まれるデータのタイプ。 このドロップダウンメニューから、XDM でサポートされている [ 標準スカラータイプ ](../../schema/field-constraints.md) の 1 つ、または [!DNL Schema Registry] で以前に定義されている複数フィールド [ データタイプ ](../resources/data-types.md) の 1 つを選択できます。<br> メモ：「マップ」データタイプを選択すると、「[!UICONTROL  マップ値タイプ ]」プロパティが表示されます。<br><br> また、**[!UICONTROL 高度なタイプ検索]** を選択して、既存のデータタイプを検索およびフィルタリングし、目的のタイプを見つけやすくすることもできます。 |
 | [!UICONTROL  値タイプをマッピング ] | フィールドのデータタイプとして [!UICONTROL  マップ ] を選択する場合、この値は必須です。 マップに使用できる値は [!UICONTROL  文字列 ] および [!UICONTROL  整数 ] です。 使用可能なオプションのドロップダウンリストから値を選択します。<br> タイプ固有のフィールドプロパティ [ について詳しくは ](#type-specific-properties) フィールド定義の概要を参照してください。 |
