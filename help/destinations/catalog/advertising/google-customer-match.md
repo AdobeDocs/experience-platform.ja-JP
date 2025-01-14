@@ -1,11 +1,11 @@
 ---
 keywords: google カスタマーマッチ；Google カスタマーマッチ；Google カスタマーマッチ
 title: Google Customer Match 接続
-description: Google カスタマーマッチを使用すると、オンラインおよびオフラインのデータを使用して、検索、ショッピング、Gmail、YouTubeなど、Googleが所有および運営するプロパティをまたいで顧客にリーチし、再びエンゲージできます。
+description: Google カスタマーマッチを使用すると、オンラインおよびオフラインのデータを使用して、検索、ショッピング、Gmail など、Googleが所有および運営するプロパティをまたいで顧客にリーチし、再びエンゲージできます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
 workflow-type: tm+mt
-source-wordcount: '2100'
+source-wordcount: '2140'
 ht-degree: 18%
 
 ---
@@ -22,7 +22,11 @@ ht-degree: 18%
 ><br/>
 >Adobeのプライバシーとセキュリティシールドを購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断なく使用するには、[ セグメントビルダー ](../../../segmentation/home.md#segment-definitions) 内の [ セグメント定義 ](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) を使用すると、Googleが所有および運営するプロパティ（[!DNL Search]、[!DNL Shopping]、[!DNL Gmail]、[!DNL YouTube] など）をまたいでオンラインおよびオフラインのデータを使用して、顧客にリーチし、再びエンゲージできます。
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) を使用すると、Googleが所有および運営するプロパティ（[!DNL Search]、[!DNL Shopping]、[!DNL Gmail] など）をまたいでオンラインおよびオフラインのデータを使用して、顧客にリーチし、再びエンゲージできます。
+
+>[!TIP]
+>
+>[!DNL YouTube] の在庫のお客様にリーチするには、[Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 宛先を使用します。この宛先には、Google Audience Partner API を使用します。
 
 ![Adobe Experience Platform UI のGoogle カスタマーマッチの宛先。](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -35,6 +39,10 @@ ht-degree: 18%
 アスレチックアパレルブランドは、過去の購入と閲覧履歴に基づいてオファーとアイテムをパーソナライズするために、[!DNL Google Search] ールと [!DNL Google Shopping] ールを通じて既存の顧客にリーチしたいと考えています。 アパレルブランドは、メールアドレスを独自の CRM からExperience Platformに取り込み、独自のオフラインデータからオーディエンスを作成できます。 その後、これらのオーディエンスを [!DNL Google Customer Match] に送信し、[!DNL Search] と [!DNL Shopping] で使用することで、広告費用を最適化できます。
 
 ### のユースケース#2
+
+>[!TIP]
+>
+>このユースケースを [!DNL YouTube] インベントリで実行するには、新しい [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 宛先を使用します。この宛先には、Google Audience Partner API が使用されます。
 
 ある有名なテクノロジー会社が新しい電話を発売しました。 この新しい電話モデルを宣伝するために、彼らは電話の新機能と機能を彼らの電話の以前のモデルを所有しているお客様に認識を高めることを目指しています。
 
