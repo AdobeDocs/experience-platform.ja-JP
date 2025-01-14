@@ -1,9 +1,9 @@
 ---
-title: ストリーミング SDK API 用ドキュメント セルフサービステンプレート
+title: ストリーミング SDK API のドキュメントセルフサービステンプレート
 description: Flow Service API を使用して、ソースからAdobe Experience Platformにストリーミングデータを取り込む方法を説明します。
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: ベータ版
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 43%
@@ -47,7 +47,7 @@ ht-degree: 43%
 
 ### *YOURSOURCE* と Webhook の統合
 
-*ストリーミング SDK では、Experience Platformと通信するために Webhook をサポートできるソースが必要です。 この節では、YOURSOURCE を Webhook と統合するためにユーザーが従う必要がある手順を指定する必要があります。*
+*ストリーミング SDKでは、Experience Platformと通信するために Webhook をサポートできるソースが必要です。 この節では、YOURSOURCE を Webhook と統合するためにユーザーが従う必要がある手順を指定する必要があります。*
 
 ## [!DNL Flow Service] API を使用した Platform への *YOURSOURCE* の接続
 
@@ -117,7 +117,7 @@ curl -X POST \
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
-[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
+[Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
 ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)に関するチュートリアルを参照してください。
 

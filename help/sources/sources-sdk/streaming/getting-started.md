@@ -1,22 +1,22 @@
 ---
-title: セルフサービスソースの概要（ストリーミング SDK）
-description: このドキュメントでは、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の情報の概要を説明します。
+title: セルフサービスソースの概要（ストリーミングSDK）
+description: このドキュメントでは、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の概要を説明します。
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: ベータ版
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 34%
 
 ---
 
-# セルフサービスソースの概要（ストリーミング SDK）
+# セルフサービスソースの概要（ストリーミングSDK）
 
 >[!NOTE]
 >
->セルフサービスソース Streaming SDK はベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
+>セルフサービスソースのストリーミング SDKはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-セルフサービスソース（Streaming SDK）を使用すると、独自のソースを統合して、ストリーミングデータをAdobe Experience Platformに取り込むことができます。 このドキュメントでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) を呼び出す前に知っておく必要があるコア概念の概要を説明します。
+セルフサービスソース（ストリーミング SDK）を使用すると、独自のソースを統合してストリーミングデータをAdobe Experience Platformに取り込むことができます。 このドキュメントでは、[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 
 ## プロセスの概要
 
@@ -24,7 +24,7 @@ Experience Platformでソースを設定する手順の概要を次に示しま�
 
 ### 統合
 
-* [ ストリーミング SDK の新しい接続仕様を作成 ](create.md) します。
+* [ ストリーミングSDKの新しい接続仕様を作成 ](create.md) します。
 * [ 新しい接続仕様 ID でストリーミングフロー仕様を更新します ](update-flow-specs.md)。
 * [ ストリーミングソースをテストして送信します ](submit.md)。
 
@@ -33,7 +33,7 @@ Experience Platformでソースを設定する手順の概要を次に示しま�
 * ソースのドキュメント化を開始するには、[ セルフサービスソースのドキュメント作成の概要 ](../documentation/doc-overview.md) を参照してください。
 * GitHub を使用してドキュメントを作成する手順については、[GitHub web インターフェイスの使用 ](../documentation/github.md) に関するガイドを参照してください。
 * ローカルマシンを使用してドキュメントを作成する手順については、[ テキストエディターの使用 ](../documentation/text-editor.md) に関するガイドを参照してください。
-* [ ストリーミング SDK API ドキュメントテンプレートを使用して、API にソースをドキュメント化します ](streaming-template-api.md)。
+* [ ストリーミング SDK API ドキュメントテンプレートを使用して、API にソースをドキュメント化する ](streaming-template-api.md)。
 * [ ストリーミング SDK UI ドキュメントテンプレートを使用して、UI にソースをドキュメント化します ](streaming-template-ui.md)。
 
 以下のドキュメントテンプレートもダウンロードできます。
@@ -80,4 +80,4 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 ## 次の手順
 
-セルフサービスソース（ストリーミング SDK）を使用した新しいソースの作成を開始するには、[ 新しいソースの作成 ](./create.md) に関するチュートリアルを参照してください。
+セルフサービスソース（ストリーミングSDK）を使用して新しいソースの作成を開始するには、[ 新しいソースの作成 ](./create.md) に関するチュートリアルを参照してください。

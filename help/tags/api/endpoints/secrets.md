@@ -2,7 +2,7 @@
 title: 秘密鍵エンドポイント
 description: Reactor API で /secrets エンドポイントを呼び出す方法を説明します。
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 89%
@@ -17,7 +17,7 @@ ht-degree: 89%
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、 [はじめる前に](../getting-started.md) で、API への認証方法に関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/) の一部です。続行する前に、 [はじめる前に](../getting-started.md) で、API への認証方法に関する重要な情報を確認してください。
 
 ## プロパティの秘密鍵のリストの取得 {#list-property}
 

@@ -2,7 +2,7 @@
 title: Flow Service API を使用して、SugarCRM アカウントおよび連絡先のソース接続とデータフローを作成
 description: Flow Service API を使用してAdobe Experience Platformを SugarCRM アカウントおよび連絡先に接続する方法について説明します。
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 54%
@@ -677,7 +677,7 @@ curl -X POST \
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
-[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
+[Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
 ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)に関するチュートリアルを参照してください。
 

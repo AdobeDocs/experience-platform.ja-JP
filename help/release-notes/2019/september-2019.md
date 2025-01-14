@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 45%
@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデ
 
 **既知の問題**
 
-* 現在、[!DNL Service Gallery] には、既存のサービスを削除するためのアクセス可能な方法はありません。 当面は、[Senesi の機械学習 API リファレンスを](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)参照して、API 呼び出しを通じて既存のサービスを削除してください。
+* 現在、[!DNL Service Gallery] には、既存のサービスを削除するためのアクセス可能な方法はありません。 当面は、[Senesi の機械学習 API リファレンスを](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)参照して、API 呼び出しを通じて既存のサービスを削除してください。
 * [!DNL Service Gallery] には、サービスのトレーニング実行とスコアリング実行をフィルタリングするページネーションのサポートがありません。
 * スケジュールされたトレーニングまたはスコアリングが [!DNL Service Gallery] を通じて実行されるように設定する場合、頻度を 1 時間ごとに設定すると、スケジュールが適用されなくなります。
 

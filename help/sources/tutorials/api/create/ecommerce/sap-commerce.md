@@ -3,7 +3,7 @@ title: Flow Service API を使用した SAP Commerceのソース接続とデー�
 description: Flow Service API を使用してソース接続とデータフローを作成し、SAP Commerce データをExperience Platformに取り込む方法について説明します。
 badge: ベータ版
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2314'
 ht-degree: 53%
@@ -692,7 +692,7 @@ curl -X POST \
 
 ### ターゲットデータセットの作成 {#target-dataset}
 
-[Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
+[Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/) に POST リクエストを実行し、その際にペイロード内でターゲットスキーマの ID を指定することで、ターゲットデータセットを作成できます。
 
 ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。
 

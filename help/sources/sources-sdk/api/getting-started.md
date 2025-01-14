@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 solution: Experience Platform
-title: セルフサービスソースの概要（Batch SDK）
-description: このドキュメントでは、セルフサービスソース（Batch SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の情報の概要を説明します。
+title: セルフサービスソースの概要（バッチ SDK）
+description: このドキュメントでは、セルフサービスソース（Batch SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の概要を説明します。
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 51%
 
 ---
 
-# セルフサービスソースの概要（Batch SDK）
+# セルフサービスソースの概要（バッチ SDK）
 
-Self-Serve Sources （Batch SDK）を使用すると、独自の REST ベースのソースを統合して、バッチデータをAdobe Experience Platformに取り込むことができます。 このドキュメントでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) を呼び出す前に知っておく必要があるコア概念の概要を説明します。
+セルフサービスソース（バッチ SDK）を使用すると、独自の REST ベースのソースを統合して、バッチデータをAdobe Experience Platformに取り込むことができます。 このドキュメントでは、[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を呼び出す前に知っておく必要があるコア概念の概要を説明します。
 
 ## 前提条件
 
-セルフサービスソース（Batch SDK）を使用するには、Adobe Experience Platform ソースをプロビジョニングされた組織サンドボックスへのアクセス権があることを確認する必要があります。
+セルフサービスソース（バッチ SDK）を使用するには、Adobe Experience Platform ソースをプロビジョニングされた組織サンドボックスへのアクセス権があることを確認する必要があります。
 
 このガイドには、Adobe Experience Platformの次のコンポーネントに関する十分な知識も必要です。
 
@@ -26,7 +26,7 @@ Self-Serve Sources （Batch SDK）を使用すると、独自の REST ベース�
 
 ## API 呼び出し例の読み取り
 
-セルフサービスソース（Batch SDK）と [!DNL Flow Service] API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+セルフサービスソース（バッチ SDK）と [!DNL Flow Service] API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ## 必須ヘッダーの値の収集
 
@@ -50,4 +50,4 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 ## 次の手順
 
-セルフサービスソース（Batch SDK）を使用した新しいソースの作成を開始するには、[ 新しいソースの作成 ](./create.md) に関するチュートリアルを参照してください。
+セルフサービスソース（バッチ SDK）を使用した新しいソースの作成を開始するには、[ 新しいソースの作成 ](./create.md) に関するチュートリアルを参照してください。
