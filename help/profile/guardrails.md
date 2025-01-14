@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 機能を最適に使用するための、プロファイルデータおよびセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
+source-git-commit: 22daff3f422cd4ec5bbf5c77583e24dac6c53c76
 workflow-type: tm+mt
-source-wordcount: '2461'
+source-wordcount: '2472'
 ht-degree: 59%
 
 ---
@@ -67,7 +67,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 | マルチエンティティ関係で使用する ID フィールドの JSON 深度 | 4 | パフォーマンスガードレール | 複数エンティティの関係で使用する ID フィールドの JSON 深度の推奨値は 4 です。 つまり、高度にネストされたスキーマでは、4 レベルを超える深度でネストされたフィールドを関係の ID フィールドとして使用しないでください。 |
 | プロファイルフラグメント内の配列基数 | &lt;=500 | パフォーマンスガードレール | プロファイルフラグメントの最適な配列基数（時間に依存しないデータ）は 500 未満です。 |
 | ExperienceEvent の配列基数 | &lt;=10 | パフォーマンスガードレール | ExperienceEvent（時系列データ）の最適な配列基数は 10 未満です。 |
-| 個人プロファイル ID グラフの ID 数 | 50 | システムに適用されたガードレール | **個人プロファイル用 ID グラフの最大 ID 数は 50 です。** ID が 50 を超えるプロファイルは、セグメント化、書き出し、検索から除外されます。 |
+| 個人プロファイル ID グラフの ID 数 | 50 | システムに適用されたガードレール | **個人プロファイル用 ID グラフの最大 ID 数は 50 です。** ID が 50 を超えるプロファイルは、セグメント化、書き出し、検索から除外されます。 詳しくは、[ID 削除ロジックについて ](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -186,6 +186,6 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
 * 様々なExperience Platformサービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
