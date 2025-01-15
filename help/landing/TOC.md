@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform でガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
-source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
+source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 84%
+source-wordcount: '304'
+ht-degree: 79%
 
 ---
 
@@ -69,11 +69,13 @@ ht-degree: 84%
    * [データ暗号化](./governance-privacy-security/encryption.md)
    * 顧客管理キー {#customer-managed-keys}
       * [顧客管理キー](./governance-privacy-security/customer-managed-keys/overview.md)
-      * [Azure Key Vault の設定](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
-      * [API を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/api-set-up.md)
-      * [UI を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
-   * Key Management Service {#key-management-service}
-      * [キー管理サービス](./governance-privacy-security/key-management-service/overview.md)
+      * Azure {#azure}
+         * [Azure Key Vault の設定](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
+         * [API を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
+         * [UI を使用した CMK の設定](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+      * Amazon Web Services {#aws}
+         * [CMK 用のAWS KMS の設定](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
+         * [UI を使用して、AWSに CMK を設定します](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
 * ライセンスの使用とガードレール {#license}
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
    * [ライセンス使用状況ダッシュボード](./license-usage-and-guardrails/license-usage-dashboard.md)
