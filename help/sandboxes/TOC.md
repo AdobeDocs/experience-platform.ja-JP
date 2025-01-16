@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ヘルプのサンドボックス
 breadcrumb-title: サンドボックスガイド
 user-guide-description: サンドボックスの機能と、開発、テスト、アプリケーションのデプロイメントのための仮想環境への Platform インスタンスのパーティション化の仕組みを確認します。
 feature: Sandboxes
-source-git-commit: 868800de5dc6dde6654ff5256c91bddc2997b11b
+source-git-commit: ecace5503fcd054ef992763044304b03b9661b3b
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 79%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -33,6 +33,9 @@ ht-degree: 79%
    * [パッケージ](sandbox-tooling-api/packages.md)
    * [ツール](sandbox-tooling-api/tools.md)
    * [付録](sandbox-tooling-api/appendix.md)
+* ユースケース {#use-cases}
+   * [オブジェクト設定のバックアップ](use-cases/backup-object-configuration.md)
+   * [センターオブエクセレンス](use-cases/center-of-excellence.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
