@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;ソース;コネ�
 title: Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
 description: Platform UI を使用してAdobe Experience PlatformをAdobe Campaign Managed Cloud Servicesに接続する方法について説明します。
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
 workflow-type: tm+mt
-source-wordcount: '1149'
-ht-degree: 46%
+source-wordcount: '1185'
+ht-degree: 45%
 
 ---
 
@@ -101,6 +101,8 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 >[!IMPORTANT]
 >
 >ソースフィールドをターゲット XDM フィールドにマッピングする場合は、指定したプライマリ ID フィールドを適切なターゲット XDM フィールドにマッピングする必要があります。
+>
+>オーディエンスごとに、最大 20 個のフィールドを追加してAdobe Campaignにマッピングできます。 この制限は、Campaign エクスプローラーの管理/プラットフォーム/オプション フォルダーで `NmsCdp_Aep_Sources_Max_Columns` オプションの値を更新することで変更できます。
 
 ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
