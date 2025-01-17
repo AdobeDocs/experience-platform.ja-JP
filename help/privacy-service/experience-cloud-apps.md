@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy ServiceおよびExperience Cloudアプリケーション
 description: このドキュメントでは、プライバシー関連の操作に対して様々なExperience Cloudアプリケーションを設定する方法について説明します。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 46ca46460de9211c3e876454c986d030b964646e
+source-git-commit: a1ac1f56a22b279aca6607a53dd1e44ffccd1877
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 26%
+source-wordcount: '900'
+ht-degree: 24%
 
 ---
 
@@ -42,6 +42,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | Adobe Journey Optimizer | ✓ | なし | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests)</li></ul> |
 | Adobe Pass 認証 | ✓ | なし | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>パスにはデータを転送する機能がないので、販売のオプトアウトリクエストは適用されません。</li></ul> |
 | Adobe Target | ✓ | なし | データ主体の ID に関連付けられているすべてのデータは、訪問者プロファイルから削除されます。 個人を識別しない、またはその他の無関係な集計データまたは匿名化データ（コンテンツデータなど）は、削除リクエストには適用されません。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=ja)</li><li>[!DNL Target] にはデータを転送する機能がないので、販売のオプトアウトリクエストは適用されません。</li></ul> |
+| Commerce（Personalization） | ✓ | なし | マーケティング目的 [!DNL Commerce]Commerce SaaS サービスに保存されたデータはPrivacy Serviceによって削除されます。つまり、データ主体のプロファイルと注文は、キャンペーンやカスタマージャーニーで使用するAdobeマーケティングアプリケーションに送信されなくなりました。 ただし、マーチャントトランザクションのニーズに引き続き必要な場合があるので、Privacy Serviceでは [!DNL Commerce] アプリケーション内のデータは削除されません。 マーチャントは、[!DNL Commerce] アプリケーション内のすべてのデータ削除/アクセスリクエストに対して責任を負います。 | <ul><li>[Commerceに関するドキュメントへのアクセスまたは削除 ](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/data-connection/handle-privacy-request)</li></ul> |
 | Marketo Engage | ✓ | なし | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] にはデータを転送する機能がないので、販売のオプトアウトリクエストは適用されません。</li></ul> |
 
 {style="table-layout:auto"}
@@ -54,7 +55,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | ------- | ----------- |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 顧客プライバシー管理者または AEM 管理者が GDPR リクエストを処理する方法の概要。 |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Livefyre を使用して GDPR にアクセスしたり、リクエストを削除したりする手順。 |
-| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Magento Commerceのインストールが特定のプライバシー法律の要件に準拠していることを確認します。 |
+| [Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview) | Adobe Commerceのインストールが特定のプライバシー法の要件に準拠していることを確認します。 |
 | [Adobe Experience Platformのタグ ](../tags/ui/client-side/consent.md) | 拡張機能とルールビルダーを使用してオプトインおよびオプトアウトソリューションを定義する方法。 |
 | [Workfront](https://www.workfront.com/privacy-notice) | Workfrontが個人データを収集する方法と、データ主体がフォームを使用してプライバシーリクエストを送信する方法について説明します。 |
 
