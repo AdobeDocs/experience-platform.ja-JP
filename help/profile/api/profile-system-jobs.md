@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platformを使用すると、プロファイルストアからデータセットやバッチを削除して、不要になった、または誤って追加されたリアルタイム顧客プロファイルデータを削除できます。 これには、プロファイル API を使用して、プロファイルシステムジョブまたは削除リクエストを作成する必要があります。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 3664d3d1f6433bce4678ab8b17c008c064d8e943
+source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 36%
+source-wordcount: '2020'
+ht-degree: 35%
 
 ---
 
@@ -64,6 +64,8 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!TAB Microsoft Azure]
 
++++ システムジョブを表示するためのサンプルリクエスト。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -72,11 +74,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 >[!TAB Amazon Web Services（AWS） ]
 
 >[!IMPORTANT]
 >
 >このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
+
++++ システムジョブを表示するためのサンプルリクエスト。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
@@ -85,6 +91,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-id: {SANDBOX_ID}' \
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -133,8 +141,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 }
 ```
 
-+++
-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `_page.count` | リクエストの合計数。この応答はスペースを節約するために切り捨てられています。 |
@@ -142,6 +148,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 | `jobType` | 作成されるジョブのタイプ。この場合、常に `"DELETE"` が返されます。 |
 | `status` | 削除リクエストのステータス。使用可能な値は、`"NEW"`、`"PROCESSING"`、`"COMPLETED"`、`"ERROR"` などです。 |
 | `metrics` | 処理されたレコードの数（`"recordsProcessed"`）、リクエストが処理された時間（秒）、またはリクエストが完了するまでにかかった時間（`"timeTakenInSec"`）を含むオブジェクト。 |
+
++++
 
 >[!TAB Amazon Web Services（AWS） ]
 
@@ -222,6 +230,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ データセットを削除するリクエストのサンプル。
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -235,6 +245,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `dataSetId` | 削除するデータセットの ID。 |
@@ -244,6 +256,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
+
++++ データセットを削除するリクエストのサンプル。
 
 ```shell
 curl -X POST \
@@ -257,6 +271,8 @@ curl -X POST \
         "dataSetId": "5c802d3cd83fc114b741c4b5"
       }'
 ```
+
++++
 
 | プロパティ | 説明 |
 | -------- | ----------- |
@@ -290,12 +306,12 @@ curl -X POST \
 }
 ```
 
-+++
-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | システムによって生成された、削除リクエストの一意の読み取り専用 ID。 |
 | `dataSetId` | POST リクエストで指定されたデータセットの ID。 |
+
++++
 
 >[!TAB Amazon Web Services（AWS） ]
 
@@ -322,14 +338,14 @@ curl -X POST \
 }
 ```
 
-+++
-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `requestId` | システムジョブの ID。 |
 | `requestType` | システムジョブのタイプ。 使用可能な値は、`BACKFILL_TTL`、`DELETE_EE_BATCH`、`TRUNCATE_DATASET` です。 |
 | `status` | システムジョブのステータス。 使用可能な値は、`NEW`、`SUCCESS`、`ERROR`、`FAILED`、`IN-PROGRESS` などです。 |
 | `properties` | システムジョブのバッチ ID やデータセット ID を含むオブジェクト。 |
+
++++
 
 >[!ENDTABS]
 
@@ -359,6 +375,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ バッチを削除するリクエストのサンプル。
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -373,6 +391,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `datasetId` | 削除するバッチのデータセットの ID。 |
@@ -383,6 +403,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
+
++++ バッチを削除するリクエストのサンプル。
 
 ```shell
 curl -X POST \
@@ -398,13 +420,14 @@ curl -X POST \
       }'
 ```
 
++++
+
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `datasetId` | 削除するバッチのデータセットの ID。 |
 | `batchId` | 削除するバッチの ID。 |
 
 >[!ENDTABS]
-
 
 **応答**
 
@@ -417,6 +440,8 @@ curl -X POST \
 >[!TAB Microsoft Azure]
 
 正常な応答は、新しく作成された削除リクエストの詳細を返します。この詳細には、システムで生成された一意の読み取り専用 ID が含まれます。これは、リクエストを検索し、そのステータスを確認するために使用できます。作成時のリクエストの `"status"` は、処理が開始されるまで `"NEW"` です。応答の `"batchId"` 値は、リクエストで送信された `"batchId"` 値と一致する必要があります。
+
++++ 削除リクエストの作成に成功した応答。
 
 ```json
 {
@@ -436,6 +461,8 @@ curl -X POST \
 | `id` | システムによって生成された、削除リクエストの一意の読み取り専用 ID。 |
 | `datasetId` | 指定したデータセットの ID。 |
 | `batchId` | POST リクエストで指定されたバッチの ID。 |
+
++++
 
 >[!TAB Amazon Web Services（AWS） ]
 
@@ -462,14 +489,14 @@ curl -X POST \
 }
 ```
 
-+++
-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `requestId` | システムジョブの ID。 |
 | `requestType` | システムジョブのタイプ。 使用可能な値は、`BACKFILL_TTL`、`DELETE_EE_BATCH`、`TRUNCATE_DATASET` です。 |
 | `status` | システムジョブのステータス。 使用可能な値は、`NEW`、`SUCCESS`、`ERROR`、`FAILED`、`IN-PROGRESS` などです。 |
 | `properties` | システムジョブのバッチ ID やデータセット ID を含むオブジェクト。 |
+
++++
 
 >[!ENDTABS]
 
@@ -517,13 +544,17 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!TAB Microsoft Azure]
 
++++ プロファイルジョブを表示するリクエストのサンプル。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 >[!TAB Amazon Web Services（AWS） ]
 
@@ -531,13 +562,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >
 >このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
 
++++ プロファイルジョブを表示するリクエストのサンプル。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -553,6 +588,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >[!TAB Microsoft Azure]
 
 応答には、更新されたステータスを含む、削除リクエストの詳細が表示されます。応答内の削除リクエストの ID （`"id"` 値）は、リクエストパスで送信された ID と一致する必要があります。
+
++++ 削除リクエストの表示に成功した応答。
 
 ```json
 {
@@ -572,6 +609,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 | `jobType` | 作成されるジョブのタイプ。この場合、常に `"DELETE"` を返します。 |
 | `status` | 削除リクエストのステータス。使用可能な値は、`NEW`、`PROCESSING`、`COMPLETED`、`ERROR` などです。 |
 | `metrics` | 処理されたレコードの数（`"recordsProcessed"`）、リクエストが処理された時間（秒）、またはリクエストが完了するまでにかかった時間（`"timeTakenInSec"`）を含む配列。 |
+
++++
 
 >[!TAB Amazon Web Services（AWS） ]
 
@@ -598,14 +637,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 }
 ```
 
-+++
-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `requestId` | システムジョブの ID。 |
 | `requestType` | システムジョブのタイプ。 使用可能な値は、`BACKFILL_TTL`、`DELETE_EE_BATCH`、`TRUNCATE_DATASET` です。 |
 | `status` | システムジョブのステータス。 使用可能な値は、`NEW`、`SUCCESS`、`ERROR`、`FAILED`、`IN-PROGRESS` などです。 |
 | `properties` | システムジョブのバッチ ID やデータセット ID を含むオブジェクト。 |
+
++++
 
 >[!ENDTABS]
 
@@ -626,45 +665,18 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 ```
 
 | パラメーター | 説明 |
-|---|---|
+| --------- | ----------- |
 | {DELETE_REQUEST_ID} | 削除する削除リクエストの ID。 |
 
 **リクエスト**
 
->[!IMPORTANT]
->
->次のリクエストは、Azure インスタンスとAWS インスタンスで異なります。
-
->[!BEGINTABS]
-
->[!TAB Microsoft Azure]
-
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
->[!TAB Amazon Web Services（AWS） ]
-
->[!IMPORTANT]
->
->このエンドポイントをAWSで使用する場合は **`x-sandbox-name` リクエストヘッダーではなく `x-sandbox-id` リクエストヘッダーを使用する** 必要があります）。
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
-```
-
->[!ENDTABS]
-
 
 **応答** 
 
