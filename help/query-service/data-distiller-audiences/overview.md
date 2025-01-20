@@ -2,7 +2,7 @@
 title: SQL を使用したオーディエンスの構築
 description: Adobe Experience Platformの Data Distillerで SQL オーディエンス拡張機能を使用して、SQL コマンドを使用してオーディエンスを作成、管理および公開する方法を説明します。 このガイドでは、プロファイルの作成、更新、削除、ファイルベースの宛先をターゲットにするためのデータ駆動型オーディエンス定義の使用など、オーディエンスのライフサイクルのすべての側面について説明します。
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 1%
@@ -44,7 +44,7 @@ AS (select_query)
 | `schema` | オプション。クエリによって作成されたデータセットの XDM スキーマを定義します。 |
 | `table_name` | テーブルとオーディエンスの名前。 |
 | `primary_identity` | オーディエンスのプライマリ ID 列を指定します。 |
-| `identity_namespace` | ID の名前空間。 既存の名前空間を使用することも、新しい名前空間を作成することもできます。 使用可能な名前空間を表示するには、`SHOW NAMESPACE` コマンドを使用します。 新しい名前空間を作成するには、`CREATE NAMESPACE` を使用します。 例：`CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`。 |
+| `identity_namespace` | ID の名前空間。 既存の名前空間を使用することも、新しい名前空間を作成することもできます。 使用可能な名前空間を表示するには、`SHOW NAMESPACES` コマンドを使用します。 新しい名前空間を作成するには、`CREATE NAMESPACE` を使用します。 例：`CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`。 |
 | `select_query` | オーディエンスを定義する SELECT ステートメント。 SELECT クエリの構文は、[SELECT クエリ ](../sql/syntax.md#select-queries) セクションにあります。 |
 
 {style="table-layout:auto"}
