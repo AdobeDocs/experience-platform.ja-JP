@@ -3,9 +3,9 @@ title: Adobe Experience Platformの AI アシスタント製品ドキュメン�
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3c100042ab828e10326d314fcaa00278cc8eb694
+source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
@@ -23,17 +23,22 @@ AI アシスタントは、Experience Platform、Real-Time CDP、Adobe Journey O
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style"="width:100%;max-height:100%&quot;"></a>
     <div><strong> データオブジェクトについて </strong><br/> データオブジェクトのステータス、使用状況およびページへの影響をより詳細に把握するために、データオブジェクトに関する運用のインサイトを取得します。</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"  style="width:100%;max-height:100%"></a>
     <div><strong> 学習の向上 </strong><br/> ワークフローを中断することなく、製品の知識を発見、トラブルシューティング、および理解を深めることができます。</div>
+    </td>
+    <td>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <div><strong>AI アシスタントのビデオ プレイリストを参照 </strong><br/>AI アシスタントで対処できる様々な課題やユースケースについて説明します。</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -152,6 +157,7 @@ AI アシスタントのユースケースの例については、以下を参�
 * [ オーディエンスを整理し、マーケティング業務を最適化する ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [ 依存関係を確認し、データ更新中のリスクを最小限に抑える ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [ 依存関係を秒単位で確認することで、データ更新時のリスクを最小限に抑えます ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [ 新機能の検出とデプロイを迅速化 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
 
 >[!TAB  追加のビデオコンテンツ ]
 
