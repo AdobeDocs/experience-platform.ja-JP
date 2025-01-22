@@ -2,9 +2,9 @@
 title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1585'
 ht-degree: 2%
 
 ---
@@ -119,31 +119,6 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 
 >[!ENDTABS]
-
-XDM エクスペリエンスイベントを使用してイベントを送信する場合は、空の文字列を ID 値として送信しないでください。 名前空間の優先度が最も高い名前空間の ID 値が空の文字列の場合、そのレコードはリアルタイム顧客プロファイルから無視されます。 これは、identityMap と、ID としてマークされたフィールドの両方に適用されます。
-
-+++選択すると、空の文字列を持つペイロードの例が表示されます
-
-次の例では、`Phone` の ID 値が空の文字列として送信されたため、エラーが返されます。
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
 
 XDM エクスペリエンスイベントを使用してイベントを送信する場合、完全修飾 ID を持っていることを確認する必要があります。
 

@@ -2,9 +2,9 @@
 title: ID グラフリンクルールのトラブルシューティングガイド
 description: ID グラフリンクルールに関するよくある問題のトラブルシューティング方法を説明します。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '3335'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -149,12 +149,8 @@ AAID はデフォルトでブロックされます。 したがって、[Adobe A
 * [ プロファイルで検証エラーが発生した可能性があります ](../../xdm/classes/experienceevent.md)。
    * 例えば、エクスペリエンスイベントには、`_id` と `timestamp` の両方を含める必要があります。
    * さらに、`_id` はイベント（レコード）ごとに一意である必要があります。
-* 最も優先度が高い名前空間は空の文字列です。
 
-名前空間の優先度のコンテキストでは、プロファイルは次を拒否します。
-
-* 名前空間の優先度が最も高い 2 つ以上の ID を含むイベント。 例えば、GAID が一意の名前空間としてマークされておらず、GAID 名前空間と異なる ID 値の両方を持つ 2 つの ID が入った場合、プロファイルは、イベントを保存しません。
-* 優先順位が最も高い名前空間が空の文字列であるイベント。
+名前空間の優先度のコンテキストでは、プロファイルは、名前空間の優先度が最も高い 2 つ以上の ID を含むイベントを拒否します。 例えば、GAID が一意の名前空間としてマークされておらず、GAID 名前空間と異なる ID 値の両方を持つ 2 つの ID が入った場合、プロファイルは、イベントを保存しません。
 
 **トラブルシューティング手順**
 
@@ -175,16 +171,7 @@ AAID はデフォルトでブロックされます。 したがって、[Adobe A
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-次のクエリを実行すると、最上位の名前空間に空の文字列が含まれていることが原因でプロファイルへの取り込みが行われていないかどうかを確認することもできます。
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-これらの 2 つのクエリでは、次のことを前提としています。
+このクエリでは、次のことを前提としています。
 
 * ある ID は identityMap から送信され、別の ID は ID 記述子から送信されます。 **メモ**：エクスペリエンスデータモデル（XDM）スキーマでは、ID 記述子は、ID としてマークされたフィールドです。
 * CRMID は identityMap を介して送信されます。 CRMID がフィールドとして送信された場合は、WHERE 句から `key='Email'` を削除します。
@@ -210,7 +197,7 @@ ID 最適化アルゴリズムは、[ 最近確立されたリンク ](./identit
 まず、次の情報を収集する必要があります。
 
 1. 送信された cookie 名前空間（ECID など）とユーザー名前空間（CRMID など）の ID 記号（namespaceCode）。
-1.1. Web SDK 実装の場合、通常、これらは identityMap に含まれる名前空間です。
+1.1. Web SDK実装の場合、通常、identityMap に含まれる名前空間になります。
 1.2. Analytics ソースコネクタ実装の場合、これらは identityMap に含まれる Cookie 識別子です。 人物識別子は、ID としてマークされたeVarフィールドです。
 2. イベントが送信されたデータセット （dataset_name）。
 3. 検索する cookie 名前空間の ID 値（identity_value）。
@@ -225,7 +212,7 @@ cookie 識別子の ID 値が不明な場合、複数のユーザー識別子に
 
 >[!BEGINTABS]
 
->[!TAB Web SDK の実装 ]
+>[!TAB Web SDKの実装 ]
 
 ```sql
   SELECT identityMap['ECID'][0]['id'], count(distinct identityMap['CRMID'][0]['id']) as crmidCount FROM dataset_name GROUP BY identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
@@ -245,7 +232,7 @@ cookie 識別子の ID 値が不明な場合、複数のユーザー識別子に
 
 >[!BEGINTABS]
 
->[!TAB Web SDK の実装 ]
+>[!TAB Web SDKの実装 ]
 
 ```sql
   SELECT identityMap['CRMID'][0]['id'] as personEntity, * 
