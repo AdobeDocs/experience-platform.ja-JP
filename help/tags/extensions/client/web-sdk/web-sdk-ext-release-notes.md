@@ -2,16 +2,29 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 82%
+source-wordcount: '2413'
+ht-degree: 79%
 
 ---
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
+
+## バージョン 2.28.0 - 2024年1月23日（PT）
+
+**修正点および改善点**
+
+- Audience Managerを有効にしないと ID 同期コンテナの上書きを設定できない問題を修正しました。
+- 最新バージョンにアップグレードする際に、データストリーム設定の上書きが無効になる問題を修正しました。
+- ユーザーが Target の自動クリックコレクション設定を保存できない問題を修正しました。
+
+**新機能**
+
+- XDM オブジェクト内の技術名と表示名を切り替える新機能が追加されました。
+- Adobe Experience Platform Web SDKの [ バージョン 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) が含まれます。
 
 ## バージョン 2.27.0 - 2024年10月31日（PT）
 
@@ -26,7 +39,7 @@ Adobe Experience Platform Web SDK のバージョン 2.24.0 が含まれます�
 
 **修正点および改善点**
 
-- Web SDK をローカルで実行した際に、cookie が正しく書き込まれない問題を修正しました。
+- Web SDKをローカルで実行すると、cookie が正しく書き込まれない問題を修正しました。
 
 Adobe Experience Platform Web SDK のバージョン 2.23.0 が含まれます。
 
@@ -139,7 +152,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **修正点および改善点**
 
-- `edgeConfigId` を非推奨（廃止予定）にし、SDK 設定の `datastreamId` を優先しました。
+- `edgeConfigId` を非推奨（廃止予定）にし、SDK設定の `datastreamId` を優先しました。
 - データストリーム設定の複数のユーザーエクスペリエンスを強化すると、ユーザーインターフェイスが上書きされます。
 
 ## バージョン 2.19.0 - 2023年6月21日（PT）
@@ -340,7 +353,8 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 - `Get Decisions` に関する変更：
    - `getDecisions` コマンドを削除しました。
    - `sendEvent` コマンドに `scopes` オプションを追加しました。決定は、`sendEvent` によって解決されたプロミスで返されます。
-   - 組み込みの `__view__` 範囲が追加され、ページ全体またはビュー全体のオファーを返すようになりました。（Target の VEC オファーなど）これらの決定は、`renderDecisions` が false に設定されている場合にのみ、`sendEvent` コマンドから返されます。
+   - 組み込みの `__view__` 範囲が追加され、ページ全体またはビュー全体のオファーを返すようになりました。（例えば、Target での VEC オファー）。
+これらの決定は、`renderDecisions` が false に設定されている場合にのみ、`sendEvent` コマンドから返されます。
    - 決定を利用可能になったときに実行する `Decisions Received` イベントを追加しました。
 - 1 回のサーバーコールで複数のパーソナライゼーション通知を組み合わせました。
 - データ要素が参照されるたびにイベント結合 ID がリセットされる問題を修正しました。
