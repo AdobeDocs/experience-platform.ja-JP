@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
+source-git-commit: c3065710e5f50541b074fc493df07130221d8078
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 76%
+source-wordcount: '382'
+ht-degree: 73%
 
 ---
 
@@ -42,13 +42,15 @@ ht-degree: 76%
 - Data Distillerの統計情報と機械学習 {#advanced-statistics}
    - [概要](advanced-statistics/overview.md)
    - [特徴エンジニアリング](advanced-statistics/feature-engineering.md)
-   - [ モデル ](advanced-statistics/models.md)
+   - [モデル](advanced-statistics/models.md)
+   - [ 機能の変換 ](advanced-statistics/feature-transformation.md)
 モデルの実装 {#implement-models}
       - [モデルの実装](advanced-statistics/implement-models/implement-models.md)
       - [回帰](advanced-statistics/implement-models/regression.md)
       - [分類](advanced-statistics/implement-models/classification.md)
-      - [クラスタリング](advanced-statistics/implement-models/clustering.md)
-   - [機能変換](advanced-statistics/feature-transformation.md)
+      - [ クラスタリング ](advanced-statistics/implement-models/clustering.md)
+{#examples} の例
+      - [SQL ベースのロジスティックリグレッションを使用して顧客のチャーンを予測](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distillerのオーディエンス {#data-distiller-audiences}
    - [SQL を使用した外部オーディエンスの構築](data-distiller-audiences/overview.md)
 - 例 {#use-cases}
@@ -64,6 +66,7 @@ ht-degree: 76%
    - [あいまい一致](use-cases/fuzzy-match.md)
    - [ユーザーのページビューのリスト](use-cases/list-visitor-sessions.md)
    - [ページビュー別の訪問者のリスト](use-cases/visitors-by-number-of-page-views.md)
+   - [SQL を使用して顧客チャーンを予測](use-cases/predict-customer-churn-stub.md)
    - [傾向スコア](use-cases/propensity-score.md)
    - [上位関数を持つ類似レコードの取得](use-cases/retrieve-similar-records.md)
    - [分析データからのマーチャンダイジング変数の返しと使用](use-cases/merchandising-variables.md)
