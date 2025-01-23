@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: c3065710e5f50541b074fc493df07130221d8078
+source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 73%
+source-wordcount: '397'
+ht-degree: 71%
 
 ---
 
@@ -50,6 +50,7 @@ ht-degree: 73%
       - [分類](advanced-statistics/implement-models/classification.md)
       - [ クラスタリング ](advanced-statistics/implement-models/clustering.md)
 {#examples} の例
+      - [統計と機械学習を使用したボットフィルタリング](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [SQL ベースのロジスティックリグレッションを使用して顧客のチャーンを予測](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distillerのオーディエンス {#data-distiller-audiences}
    - [SQL を使用した外部オーディエンスの構築](data-distiller-audiences/overview.md)
@@ -58,6 +59,7 @@ ht-degree: 73%
    - [参照を中止](use-cases/abandoned-browse.md)
    - [属性分析](use-cases/attribution-analysis.md)
    - [ボットフィルタリング](use-cases/bot-filtering.md)
+   - [統計と機械学習を使用したボットフィルタリングの概要](use-cases/statistics-and-ml-bot-filtering-stub.md)
    - [イベントのトレンドレポートの作成](use-cases/trended-report-of-events.md)
    - [同意分析](use-cases/consent-analysis.md)
    - [顧客のライフタイムバリュー](use-cases/customer-lifetime-value.md)
