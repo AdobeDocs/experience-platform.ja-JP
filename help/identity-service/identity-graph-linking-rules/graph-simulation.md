@@ -2,9 +2,9 @@
 title: グラフシミュレーション UI ガイド
 description: ID サービス UI でグラフシミュレーションを使用する方法を説明します。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1484'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,6 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 >id="platform_identities_graphsimulation"
 >title="イベントを追加"
 >abstract="グラフをシミュレートして、ID サービスが ID をリンクする方法と、ID 最適化アルゴリズムが機能する仕組みを理解します。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#understanding-data-usage-labels" text="データ使用ラベルの概要"
 
 開始するには、「**[!UICONTROL イベントを追加]**」を選択します。
 
