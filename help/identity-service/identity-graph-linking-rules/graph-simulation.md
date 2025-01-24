@@ -2,10 +2,10 @@
 title: グラフシミュレーション UI ガイド
 description: ID サービス UI でグラフシミュレーションを使用する方法を説明します。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 1%
+source-wordcount: '1489'
+ht-degree: 4%
 
 ---
 
@@ -50,6 +50,12 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 >[!ENDTABS]
 
 ## イベントを追加 {#add-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="イベントを追加"
+>abstract="グラフをシミュレートして、ID サービスが ID をリンクする方法と、ID 最適化アルゴリズムが機能する仕組みを理解します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#understanding-data-usage-labels" text="データ使用ラベルの概要"
 
 開始するには、「**[!UICONTROL イベントを追加]**」を選択します。
 
@@ -126,6 +132,16 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 ![ 削除イベントアイコンが選択されています。](../images/graph-simulation/delete.png)
 
 ## アルゴリズムの設定 {#configure-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="アルゴリズム設定"
+>abstract="取り込んだ ID に合わせて、一意の名前空間と名前空間の優先度を設定します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="アルゴリズム設定"
+>abstract="名前空間の優先度によって、ID グラフからリンクを削除する方法が決まります。"
 
 >[!IMPORTANT]
 >
