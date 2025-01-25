@@ -2,14 +2,19 @@
 title: 公開フロー
 description: Adobe Experience Platform でライブラリを作成、ビルドをテストし、実稼動環境用に承認するプロセスについて説明します。
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 97%
+source-wordcount: '1509'
+ht-degree: 96%
 
 ---
 
-# 公開フロー
+# 公開フロー {#publishing-flow}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_publishing_flow"
+>title="公開フロー"
+>abstract="公開フローに必要なユーザー権限のレベル（開発、承認、Publishの権限など）を把握します。"
 
 >[!NOTE]
 >

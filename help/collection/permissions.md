@@ -2,14 +2,19 @@
 title: Experience Platform内のデータ収集の権限管理
 description: Adobe Experience Platformの権限を管理し、データ収集機能へのアクセスを制御する方法の概要です。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 60590a77859320891717244eec58b556935354b5
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 28%
+source-wordcount: '1356'
+ht-degree: 27%
 
 ---
 
-# Experience Platform内のデータ収集の権限管理
+# Experience Platform内のデータ収集の権限管理 {#permission-management}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="権限"
+>abstract="Adobe Experience Platform内でデータストリーム、スキーマ、ID およびサンドボックスを使用するために必要な主要な権限について説明します。"
 
 [Adobe Experience Platformのデータ収集 ](./home.md) は、データを収集して転送するために連携するいくつかの異なるテクノロジーで構成されています。 これらのテクノロジーへのアクセスは、Adobe Admin Consoleの詳細な役割ベースの権限によって制御されます。
 
