@@ -2,10 +2,10 @@
 title: SFTP ホスト
 description: セキュリティで保護された自己ホスト SFTP サーバーにライブラリビルドを配信するように Adobe Experience Platform にタグを設定する方法について説明します。
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
+source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 38%
+source-wordcount: '810'
+ht-degree: 39%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 38%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-Adobe Experience Platformを使用すると、タグライブラリビルドを、ホストする保護された SFTP サーバーに配信でき、ビルドの保存および管理方法をより詳細に制御できます。 このガイドでは、Experience PlatformUI またはデータ収集 UI でタグプロパティの SFTP ホストを設定する方法について説明します。
+Experience Platformを使用すると、タグライブラリビルドを、ホストする保護された SFTP サーバーに配信でき、ビルドの保存および管理方法をより詳細に制御できます。 このガイドでは、Experience PlatformUI またはデータ収集 UI でタグプロパティの SFTP ホストを設定する方法について説明します。
 
 >[!NOTE]
 >
