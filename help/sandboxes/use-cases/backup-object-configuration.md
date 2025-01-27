@@ -1,10 +1,11 @@
 ---
 title: サンドボックスツールを使用したオブジェクト設定のバックアップ
 description: サンドボックスを安全にリセットし、バージョン管理のサポートを追加するには、サンドボックスツールパッケージを使用してオブジェクト設定（またはメタデータ）をバックアップします。 バックアップパッケージを使用すると、特に開発を反復する際に、スキーマ、データセット、オーディエンスなどの重要な設定の損失を防ぐことができます。
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
+source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1168'
+ht-degree: 3%
 
 ---
 
