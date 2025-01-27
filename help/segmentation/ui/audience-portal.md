@@ -2,9 +2,9 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '4571'
+source-wordcount: '4569'
 ht-degree: 54%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 54%
 - [オーディエンスの作成](#create-audience)
    - [セグメントビルダーを使用したオーディエンスの作成](#segment-builder)
    - [オーディエンス構成を使用したオーディエンスの作成](#audience-composition)
-   - [Federated Audience コンポジションを使用して、既存の Data Warehouse のデータを使用するオーディエンスを作成します ](#fac) （使用制限あり）
+   - [Federated Audience コンポジションを使用すると、既存のデータウェアハウスのデータを使用してオーディエンスを作成できます](#fac)
 - [外部で生成されたオーディエンスのインポート](#import-audience)
 
 Audience Portal を開くには、「セグメント化」セクション内の **[!UICONTROL 参照]** タブを選択します。

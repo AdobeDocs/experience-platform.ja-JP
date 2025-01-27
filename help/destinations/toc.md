@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1271'
 ht-degree: 84%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 84%
       * [（Beta）Marketo Engage人物同期接続](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 接続](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform オーディエンスの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
-      * [Federated Audience Composition 接続（限定提供） ](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Federated Audience Composition 接続 ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * 広告の宛先{#advertising}
       * [（Beta） Acxiom の Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
       * [広告の宛先の概要](./catalog/advertising/overview.md)

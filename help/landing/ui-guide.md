@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Experience PlatformUI の概要
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 3%
+source-wordcount: '1924'
+ht-degree: 2%
 
 ---
 
@@ -157,7 +157,7 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 「**[!UICONTROL 監視]**」セクションでは、バッチ取得とストリーミング取得を監視できます。 監視について詳しくは、[ データ取得ユーザーガイドの監視 ](../ingestion/quality/monitor-data-ingestion.md) を参照してください。
 
-### [!UICONTROL Federated Data] （限定提供）
+### [!UICONTROL  連合データ ]
 
 **[!UICONTROL モデル]** セクションでは、データの構造、関係、制約を定義するデータモデルとスキーマを設計および作成できます。 データモデルとスキーマについて詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas) を参照してください。
 
@@ -166,11 +166,7 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 「**[!UICONTROL 連合データベース]**」セクションでは、Adobe Experience Platformを Enterprise Data Warehouse に接続できます。 連合データベースへの接続について詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db) を参照してください。
 
->[!AVAILABILITY]
->
->連合オーディエンス構成は現在、一連の組織でのみ使用できます（限定的に利用可能）。詳しくは、アドビ担当者にお問い合わせください。
-
-### [!UICONTROL 判定]
+### [!UICONTROL 決定]
 
 Adobe Journey Optimizerは、Experience Platformを基に構築されたアプリケーションサービスです。 強力な意思決定テクノロジーを使用して、すべてのタッチポイントにわたって適切なタイミングで最高のオファーとエクスペリエンスを顧客に提供できます。 [!UICONTROL  オファー ] および [!UICONTROL  アクティビティの操作など、Journey Optimizerについて詳しくは ]4}Journey Optimizerのドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja) を参照してください。[
 
