@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
+source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
 workflow-type: tm+mt
 source-wordcount: '2413'
 ht-degree: 79%
@@ -13,7 +13,7 @@ ht-degree: 79%
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
 
-## バージョン 2.28.0 - 2024年1月23日（PT）
+## バージョン 2.28.0 - 2025年1月23日（PT）
 
 **修正点および改善点**
 

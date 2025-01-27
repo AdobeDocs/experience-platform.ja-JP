@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
+source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
 workflow-type: tm+mt
 source-wordcount: '2149'
 ht-degree: 70%
@@ -16,13 +16,13 @@ ht-degree: 70%
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
 
-## バージョン 2.25.0 - 2024年1月23日（PT） {#2-25-0}
+## バージョン 2.25.0 - 2025年1月23日（PT）
 
 **修正点および改善点**
 
 - `setDebug` コマンドにオプション検証を追加しました。
 - クリックコレクションが無効な場合に、`onBeforeLinkClickSend` 関数またはダウンロードリンク修飾子を設定する際の警告を追加しました。
-- レンダリングされた提案がディスプレイ通知に含まれていない問題を修正しました
+- レンダリングされた提案がディスプレイ通知に含まれていない問題を修正しました。
 
 **新機能**
 
