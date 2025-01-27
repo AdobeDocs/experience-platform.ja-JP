@@ -2,7 +2,7 @@
 title: Id グラフリンクルール
 description: ID サービスでの ID グラフリンクルールについて説明します。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 3%
@@ -37,7 +37,7 @@ ID グラフリンクルールを理解するには、次のドキュメント�
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="グラフ崩壊のシナリオ"
+>title="グラフ折りたたみシナリオ"
 >abstract="グラフが「崩れ」たり、複数の人物エンティティを表したりする理由は複数あります。"
 
 1 台のデバイスで複数のログインが発生する場合があります。

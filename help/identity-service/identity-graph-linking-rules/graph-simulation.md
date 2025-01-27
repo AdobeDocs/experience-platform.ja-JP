@@ -2,7 +2,7 @@
 title: グラフシミュレーション UI ガイド
 description: ID サービス UI でグラフシミュレーションを使用する方法を説明します。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1484'
 ht-degree: 4%
@@ -53,8 +53,9 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
->title="イベントを追加"
+>title="グラフシミュレーション"
 >abstract="グラフをシミュレートして、ID サービスが ID をリンクする方法と、ID 最適化アルゴリズムが機能する仕組みを理解します。"
+>text="Learn more in documentation"
 
 開始するには、「**[!UICONTROL イベントを追加]**」を選択します。
 
@@ -139,7 +140,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="アルゴリズム設定"
+>title="名前空間の優先度"
 >abstract="名前空間の優先度によって、ID グラフからリンクを削除する方法が決まります。"
 
 >[!IMPORTANT]

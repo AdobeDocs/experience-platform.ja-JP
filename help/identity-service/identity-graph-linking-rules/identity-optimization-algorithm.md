@@ -2,7 +2,7 @@
 title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -25,7 +25,7 @@ ID 最適化アルゴリズムは、ID グラフが個人を表すようにし�
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="アルゴリズム設定"
+>title="一意の名前空間"
 >abstract="グラフには、一意の名前空間を持つ 2 つの ID を含めることはできません。 グラフがこの制限を超えようとすると、最新のリンクが保持され、最も古いリンクが削除されます。"
 
 一意の名前空間は、グラフの折りたたみが発生した場合に削除されるリンクを決定します。
