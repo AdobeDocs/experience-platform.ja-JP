@@ -2,20 +2,15 @@
 title: コンテンツ API エンドポイント
 description: Privacy ServiceAPI を使用してアクセスデータを取得する方法について説明します。
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
+source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 6%
+source-wordcount: '669'
+ht-degree: 5%
 
 ---
 
 # コンテンツエンドポイント
-
->[!IMPORTANT]
->
->`/content` エンドポイントは現在ベータ版です。お客様の組織はまだアクセスできない可能性があります。 機能とドキュメントは変更される場合があります。
 
 `/content` エンドポイントを使用して、顧客の *アクセス情報* （プライバシーの主体がアクセスを正当にリクエストできる情報）を安全に取得します。 `/jobs/{JOB_ID}` GETリクエストへの応答で提供されるダウンロード URL は、Adobe サービスエンドポイントを指しています。 その後、`/jobs/:JOB_ID/content` に対してGETリクエストを実行し、顧客データを JSON 形式で返すことができます。 このアクセス方法は、セキュリティを強化するために、認証とアクセス制御の複数の層を実装する。
 
