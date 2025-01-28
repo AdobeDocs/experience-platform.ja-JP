@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
+source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
 workflow-type: tm+mt
-source-wordcount: '4151'
-ht-degree: 54%
+source-wordcount: '4395'
+ht-degree: 51%
 
 ---
 
@@ -431,14 +431,31 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 [!DNL CRM ID] やメールアドレスなどの ID 名前空間を重複排除キーとして選択して、すべてのプロファイルレコードが必ず一意に識別されるようにすることをお勧めします。
 
->[!NOTE]
-> 
->（データセット全体ではなく）データセット内の特定のフィールドのみに適用されたデータ使用ラベルがある場合、アクティベーション時のこれらのフィールドレベルラベルの適用は、次の条件で行われます。
->
->* フィールドは、オーディエンス定義で使用されます。
->* フィールドは、ターゲット先の予測属性として設定されます。
->
-> 例えば、フィールド `person.name.firstName` に宛先のマーケティングアクションと競合する特定のデータ使用ラベルがある場合、レビュー手順でデータ使用ポリシー違反が表示されます。詳しくは、[Adobe Experience Platform でのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)を参照してください。
+### 同じタイムスタンプを持つプロファイルの重複排除動作 {#deduplication-same-timestamp}
+
+ファイルベースの宛先にプロファイルを書き出す場合、重複排除では、複数のプロファイルが同じ重複排除キーと同じ参照タイムスタンプを共有している場合に、1 つのプロファイルのみが書き出されるようにします。 このタイムスタンプは、プロファイルのオーディエンスメンバーシップまたは ID グラフが最後に更新された瞬間を表します。 プロファイルの更新および書き出し方法について詳しくは、[ プロファイルの書き出し動作 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) ドキュメントを参照してください。
+
+#### 主な考慮事項
+
+* **決定論的選択**：複数のプロファイルの重複排除キーと参照タイムスタンプが同じ場合、重複排除ロジックは、選択した他の列（配列、マップ、オブジェクトなどの複雑なタイプを除く）の値を並べ替えて、書き出すプロファイルを決定します。 ソートされた値は辞書順に評価され、最初のプロファイルが選択されます。
+
+* **サンプルシナリオ**:\
+  次のデータについて考えてみます。重複排除キーは `Email` の列です。\
+  |電子メール*|first_name|last_name|timestamp|\
+  |—|—|—|—|\
+  |test1@test.com|John|Morris|2024-10-12T09:50|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|フランク|スミス|2024-10-12T09:50|
+
+  重複排除後、書き出しファイルには次の内容が含まれます。\
+  |電子メール*|first_name|last_name|timestamp|\
+  |—|—|—|—|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|フランク|スミス|2024-10-12T09:50|
+
+  **説明**:`test1@test.com` の場合、両方のプロファイルで同じ重複排除キーとタイムスタンプが共有されます。 アルゴリズムは、`first_name` と `last_name` の列の値を辞書順に並べ替えます。 名が同じであるため、タイは `last_name` 列を使用して解決されます。ここで、「Doe」は「Morris」の前にあります。
+
+* **信頼性の向上**：この更新された重複排除プロセスにより、同じ座標を持つ連続する実行で常に同じ結果が得られ、一貫性が向上します。
 
 ### [!BADGE Beta]{type=Informative} 計算フィールドから配列をエクスポートします {#export-arrays-calculated-fields}
 
@@ -553,7 +570,16 @@ abstract="このオプションを有効にすると、選択したカスタム�
 
 ## レビュー {#review}
 
-「**[!UICONTROL レビュー]**」ページには、選択内容の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
+>[!NOTE]
+> 
+（データセット全体ではなく）データセット内の特定のフィールドのみに適用されたデータ使用ラベルがある場合、アクティベーション時のこれらのフィールドレベルラベルの適用は、次の条件で行われます。
+>
+* フィールドは、オーディエンス定義で使用されます。
+* フィールドは、ターゲット先の予測属性として設定されます。
+>
+例えば、フィールド `person.name.firstName` に宛先のマーケティングアクションと競合する特定のデータ使用ラベルがある場合、レビュー手順でデータ使用ポリシー違反が表示されます。詳しくは、[Adobe Experience Platform でのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)を参照してください。
+
+「**[!UICONTROL 確認]**」ページには、選択の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
 ![ レビュー手順に表示される選択の概要。](../assets/ui/activate-batch-profile-destinations/review.png)
 
