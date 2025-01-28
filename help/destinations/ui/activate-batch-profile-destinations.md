@@ -3,9 +3,9 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4387'
 ht-degree: 51%
 
 ---
@@ -439,25 +439,32 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 * **決定論的選択**：複数のプロファイルの重複排除キーと参照タイムスタンプが同じ場合、重複排除ロジックは、選択した他の列（配列、マップ、オブジェクトなどの複雑なタイプを除く）の値を並べ替えて、書き出すプロファイルを決定します。 ソートされた値は辞書順に評価され、最初のプロファイルが選択されます。
 
-* **サンプルシナリオ**:\
-  次のデータについて考えてみます。重複排除キーは `Email` の列です。\
-  |電子メール*|first_name|last_name|timestamp|\
-  |—|—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|フランク|スミス|2024-10-12T09:50|
+* **サンプルシナリオ**
 
-  重複排除後、書き出しファイルには次の内容が含まれます。\
-  |電子メール*|first_name|last_name|timestamp|\
-  |—|—|—|—|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|フランク|スミス|2024-10-12T09:50|
+次のデータについて考えてみます。重複排除キーは `Email` の列です。
 
-  **説明**:`test1@test.com` の場合、両方のプロファイルで同じ重複排除キーとタイムスタンプが共有されます。 アルゴリズムは、`first_name` と `last_name` の列の値を辞書順に並べ替えます。 名が同じであるため、タイは `last_name` 列を使用して解決されます。ここで、「Doe」は「Morris」の前にあります。
+| メール* | first_name | last_name | タイムスタンプ |
+|---|---|---|---|  
+| `test1@test.com` | John | モリス | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
-* **信頼性の向上**：この更新された重複排除プロセスにより、同じ座標を持つ連続する実行で常に同じ結果が得られ、一貫性が向上します。
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} 計算フィールドから配列をエクスポートします {#export-arrays-calculated-fields}
+重複排除後、書き出しファイルには次の内容が含まれます。
+
+| メール* | first_name | last_name | タイムスタンプ |
+|---|---|---|---|  
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**説明**:`test1@test.com` の場合、両方のプロファイルで同じ重複排除キーとタイムスタンプが共有されます。 アルゴリズムは、`first_name` と `last_name` の列の値を辞書順に並べ替えます。 名が同じであるため、タイは `last_name` 列を使用して解決されます。ここで、「Doe」は「Morris」の前にあります。
+
+**信頼性の向上**：この更新された重複排除プロセスにより、同じ座標を持つ連続する実行で常に同じ結果が得られ、一貫性が向上します。
+
+### 計算フィールドを使用した配列の書き出し {#export-arrays-calculated-fields}
 
 一部のベータ版のお客様は、Experience Platformからクラウドストレージの宛先に配列オブジェクトを書き出すことができます。 詳しくは、[ 配列と計算フィールドの書き出し ](/help/destinations/ui/export-arrays-calculated-fields.md) を参照し、機能にアクセスするにはAdobe担当者にお問い合わせください。
 
@@ -474,10 +481,10 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 >[!NOTE]
 >
-クラウドストレージの宛先の場合、デフォルトでマッピングに追加される属性は次のとおりです。
+>クラウドストレージの宛先の場合、デフォルトでマッピングに追加される属性は次のとおりです。
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 ファイルのエクスポートは、`segmentMembership.seg_namespace.seg_id.status` が選択されているかどうかによって、次のように異なります。
 
@@ -500,9 +507,9 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 >[!IMPORTANT]
 > 
-カタログ内のすべてのクラウドストレージの宛先では、改善された [[!UICONTROL  マッピング ] 手順を表示できます。この手順は ](#mapping) この節で説明している **[!UICONTROL 属性を選択]** 手順に代わるものです。
+>カタログ内のすべてのクラウドストレージの宛先では、改善された [[!UICONTROL  マッピング ] 手順を表示できます。この手順は ](#mapping) この節で説明している **[!UICONTROL 属性を選択]** 手順に代わるものです。
 >
-この **[!UICONTROL 属性を選択]** 手順は、Adobe Campaign、Oracle Responsys、Oracle Eloqua およびSalesforce Marketing Cloudのメールマーケティングの宛先に対しても引き続き表示されます。
+>この **[!UICONTROL 属性を選択]** 手順は、Adobe Campaign、Oracle Responsys、Oracle Eloqua およびSalesforce Marketing Cloudのメールマーケティングの宛先に対しても引き続き表示されます。
 
 プロファイルベースの宛先の場合、ターゲット宛先に送信するプロファイル属性を選択する必要があります。
 
@@ -522,15 +529,15 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 >[!NOTE]
 >
-Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.seg_namespace.seg_id.status`）を事前に選択します。
+> Adobe Experience Platform は、スキーマから推奨される一般的に使用される属性 4 つ（`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.seg_namespace.seg_id.status`）を事前に選択します。
 
 ![Audience Activation ワークフローのマッピング手順で事前入力された推奨属性を示す画像 ](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.seg_namespace.seg_id.status` をファイル書き出しに追加できません。 代わりに、手動で値 `xdm: segmentMembership.seg_namespace.seg_id.status` をスキーマフィールドに貼り付ける必要があります（下図を参照）。
+>既知の制限により、現在、**[!UICONTROL フィールドを選択]**&#x200B;ウィンドウを使用して、`segmentMembership.seg_namespace.seg_id.status` をファイル書き出しに追加できません。 代わりに、手動で値 `xdm: segmentMembership.seg_namespace.seg_id.status` をスキーマフィールドに貼り付ける必要があります（下図を参照）。
 >
-![ アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面録画。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![ アクティベーションワークフローのマッピング手順でオーディエンスメンバーシップの回避策を示す画面録画。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 ファイルのエクスポートは、`segmentMembership.seg_namespace.seg_id.status` が選択されているかどうかによって、次のように異なります。
 * `segmentMembership.seg_namespace.seg_id.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全スナップショットでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;メンバーが含まれ、その後の増分エクスポートでは&#x200B;**[!UICONTROL アクティブ]**&#x200B;および&#x200B;**[!UICONTROL 期限切れ]**&#x200B;のメンバーが含まれます。
@@ -538,14 +545,14 @@ Adobe Experience Platform は、スキーマから推奨される一般的に使
 
 ## エンリッチメント属性を選択 {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="エンリッチメント属性の除外"
-abstract="このオプションを有効にすると、選択したカスタムアップロードオーディエンスのプロファイルを宛先に書き出すことはできますが、その属性はすべて除外されます。"
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="エンリッチメント属性の除外"
+>abstract="このオプションを有効にすると、選択したカスタムアップロードオーディエンスのプロファイルを宛先に書き出すことはできますが、その属性はすべて除外されます。"
 
 >[!IMPORTANT]
 >
-この手順は、「オーディエンスの選択 **[!UICONTROL 手順で]** カスタムアップロード [ オーディエンスを選択した場合にのみ表示さ ](#select-audiences) ます。
+>この手順は、「オーディエンスの選択 **[!UICONTROL 手順で]** カスタムアップロード [ オーディエンスを選択した場合にのみ表示さ ](#select-audiences) ます。
 
 エンリッチメント属性は、Experience Platformに **[!UICONTROL カスタムアップロード]** として取り込まれた、カスタムアップロードされたオーディエンスに対応します。 この手順では、選択した外部オーディエンスごとに、宛先に書き出す属性を選択できます。
 
@@ -572,12 +579,12 @@ abstract="このオプションを有効にすると、選択したカスタム�
 
 >[!NOTE]
 > 
-（データセット全体ではなく）データセット内の特定のフィールドのみに適用されたデータ使用ラベルがある場合、アクティベーション時のこれらのフィールドレベルラベルの適用は、次の条件で行われます。
+>（データセット全体ではなく）データセット内の特定のフィールドのみに適用されたデータ使用ラベルがある場合、アクティベーション時のこれらのフィールドレベルラベルの適用は、次の条件で行われます。
 >
-* フィールドは、オーディエンス定義で使用されます。
-* フィールドは、ターゲット先の予測属性として設定されます。
+>* フィールドは、オーディエンス定義で使用されます。
+>* フィールドは、ターゲット先の予測属性として設定されます。
 >
-例えば、フィールド `person.name.firstName` に宛先のマーケティングアクションと競合する特定のデータ使用ラベルがある場合、レビュー手順でデータ使用ポリシー違反が表示されます。詳しくは、[Adobe Experience Platform でのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)を参照してください。
+> 例えば、フィールド `person.name.firstName` に宛先のマーケティングアクションと競合する特定のデータ使用ラベルがある場合、レビュー手順でデータ使用ポリシー違反が表示されます。詳しくは、[Adobe Experience Platform でのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)を参照してください。
 
 「**[!UICONTROL 確認]**」ページには、選択の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
@@ -585,10 +592,10 @@ abstract="このオプションを有効にすると、選択したカスタム�
 
 ### 同意ポリシーの評価 {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="適用可能な同意ポリシーを表示"
-abstract="組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。会社が前述の SKU へのアクセス権を持っていない場合は、このコントロールを無効になります。"
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="適用可能な同意ポリシーを表示"
+>abstract="組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。会社が前述の SKU へのアクセス権を持っていない場合は、このコントロールを無効になります。"
 
 組織で **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した場合、**[!UICONTROL 適用可能な同意ポリシーを表示]**&#x200B;を選択すると、どの同意ポリシーが適用され、その結果、いくつのプロファイルがアクティベーションに含まれるかを確認することができます。詳しくは、[ 同意ポリシーの評価 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を参照してください。
 
