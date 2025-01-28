@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1270'
 ht-degree: 84%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 84%
       * [PubMatic Connect 接続](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads 接続](./catalog/advertising/snap-inc.md)
       * [Trade Desk 接続](./catalog/advertising/tradedesk.md)
-      * [（ベータ版）The Trade Desk CRM 接続](./catalog/advertising/tradedesk-emails.md)
+      * [Trade Desk CRM 接続](./catalog/advertising/tradedesk-emails.md)
       * [Twitter Universal Website Tag 拡張機能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 接続](./catalog/advertising/datax.md)
    * Analytics の宛先 {#analytics}

@@ -1,30 +1,28 @@
 ---
-title: （Beta） The Trade Desk - CRM 接続
+title: The Trade Desk - CRM 接続
 description: CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを Trade Desk アカウントに対してアクティブ化します。
-last-substantial-update: 2023-01-25T00:00:00Z
+last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
+source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
 workflow-type: tm+mt
-source-wordcount: '1148'
-ht-degree: 18%
+source-wordcount: '1117'
+ht-degree: 17%
 
 ---
 
-# （Beta） [!DNL Trade Desk] と CRM の接続
+# [!DNL Trade Desk] - CRM 接続
 
 >[!IMPORTANT]
->
->Platform[!DNL The Trade Desk - CRM] 宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 >
 >EUID（European Unified ID）のリリースにより、[宛先カタログ](/help/destinations/catalog/overview.md)に 2 つの [!DNL The Trade Desk - CRM] 宛先が表示されるようになりました。
 >* EU でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (EU)]** の宛先を使用してください。
 >* APAC または NAMER 地域でデータをソースにする場合は、**[!DNL The Trade Desk - CRM (NAMER & APAC)]** の宛先を使用してください。
 >
->Experience Platformの両方の宛先は、現在ベータ版です。 この宛先コネクタとドキュメントページは、*[!DNL Trade Desk]* チームが作成および管理します。 お問い合わせや更新のリクエストについては、[!DNL Trade Desk] 担当者にお問い合わせください。ドキュメントや機能は変更される場合があります。
+>この宛先コネクタとドキュメントページは、*[!DNL Trade Desk]* チームが作成および管理します。 お問い合わせや更新のリクエストについては、[!DNL Trade Desk] 担当者にお問い合わせください。
 
 ## 概要 {#overview}
 
-このドキュメントは、CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを [!DNL Trade Desk] アカウントにアクティベートする際に役立つように設計されています。
+CRM データに基づくオーディエンスのターゲティングおよび抑制のために、[!DNL Trade Desk] アカウントに対してプロファイルをアクティブ化する方法について説明します。
 
 このコネクタは、[!DNL The Trade Desk] のファーストパーティエンドポイントにデータを送信します。 Adobe Experience Platformと [!DNL The Trade Desk] の統合では、[!DNL The Trade Desk] サードパーティのエンドポイントへのデータの書き出しはサポートされていません。
 
@@ -36,7 +34,9 @@ ht-degree: 18%
 
 ## 前提条件 {#prerequisites}
 
-[!DNL The Trade Desk] へのオーディエンスをアクティブ化する前に、[!DNL The Trade Desk] アカウントマネージャーに連絡して CRM オンボーディング契約に署名する必要があります。 [!DNL The Trade Desk] の後、権限が付与され、広告主 ID を共有して宛先を設定します。
+>[!IMPORTANT]
+>
+>The Trade Desk に対してオーディエンスをアクティブ化する前に、[!DNL Trade Desk] アカウントマネージャーに連絡して CRM オンボーディング契約に署名する必要があります。 [!DNL The Trade Desk] では、UID2/EUID を使用できるようになります。また、他の詳細を共有して、宛先の設定に役立てます。
 
 ## ID の一致要件 {#id-matching-requirements}
 
