@@ -2,9 +2,9 @@
 title: Id グラフリンクルール
 description: ID サービスでの ID グラフリンクルールについて説明します。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1436'
 ht-degree: 3%
 
 ---
@@ -29,17 +29,16 @@ ID グラフリンクルールを理解するには、次のドキュメント�
 * [グラフシミュレーション UI](./graph-simulation.md)
 * [ID 設定 UI](./identity-settings-ui.md)
 
-## グラフの折りたたみが発生する可能性があるシナリオの例 {#example-scenarios-where-graph-collapse-could-happen}
-
-この節では、ID グラフリンクルールを設定する際に検討する可能性のあるシナリオ例の概要を説明します。
-
-### 共有デバイス {#shared-device}
+## グラフ崩壊のシナリオ {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="グラフ折りたたみシナリオ"
 >abstract="グラフが「崩れ」たり、複数の人物エンティティを表したりする理由は複数あります。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="詳細情報"
+
+この節では、ID グラフリンクルールを設定する際に検討する可能性のあるシナリオ例の概要を説明します。
+
+### 共有デバイス
 
 1 台のデバイスで複数のログインが発生する場合があります。
 

@@ -2,9 +2,9 @@
 title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_uniquenamespace"
 >title="一意の名前空間"
 >abstract="グラフには、一意の名前空間を持つ 2 つの ID を含めることはできません。 グラフがこの制限を超えようとすると、最新のリンクが保持され、最も古いリンクが削除されます。"
->additional-url="http://www.adobe.com/go/identity-ido-algo" text="詳細情報"
 
 >[!AVAILABILITY]
 >
