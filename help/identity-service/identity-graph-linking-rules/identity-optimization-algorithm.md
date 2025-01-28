@@ -2,14 +2,20 @@
 title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 2%
 
 ---
 
-# ID 最適化アルゴリズム
+# ID 最適化アルゴリズム {#identity-optimization-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="一意の名前空間"
+>abstract="グラフには、一意の名前空間を持つ 2 つの ID を含めることはできません。 グラフがこの制限を超えようとすると、最新のリンクが保持され、最も古いリンクが削除されます。"
+>additional-url="http://www.adobe.com/go/identity-ido-algo" text="詳細情報"
 
 >[!AVAILABILITY]
 >
@@ -22,11 +28,6 @@ ID 最適化アルゴリズムは、ID グラフが個人を表すようにし�
 一意の名前空間と名前空間の優先度について詳しくは、この節を参照してください。 これら 2 つの概念は、ID 最適化アルゴリズムで必要な入力パラメーターとして機能します。
 
 ### 一意の名前空間 {#unique-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identities_uniquenamespace"
->title="一意の名前空間"
->abstract="グラフには、一意の名前空間を持つ 2 つの ID を含めることはできません。 グラフがこの制限を超えようとすると、最新のリンクが保持され、最も古いリンクが削除されます。"
 
 一意の名前空間は、グラフの折りたたみが発生した場合に削除されるリンクを決定します。
 

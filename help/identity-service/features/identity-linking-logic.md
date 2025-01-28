@@ -2,14 +2,20 @@
 title: ID サービスリンクロジック
 description: ID サービスで様々な ID をリンクして顧客の包括的なビューを作成する方法について説明します。
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '971'
 ht-degree: 2%
 
 ---
 
-# ID サービスリンクロジック
+# ID サービスリンクロジック {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="シミュレートされたグラフ"
+>abstract="ID 名前空間と ID 値が一致すると、ID がリンクされます。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="詳細情報"
 
 ID 名前空間と ID 値が一致すると、2 つの ID 間のリンクが確立されます。
 
@@ -29,12 +35,7 @@ ID は、実際のエンティティを表します。 2 つの ID の間でリ�
 | エンドユーザーは、Google Chrome、次に Firefox を使用してログインします。 | CRMID は 2 つの異なる ECID にリンクされています。 | 人物（CRMID）は 2 つの web ブラウザーに関連付けられます（**メモ**：各ブラウザーには独自の ECID が割り当てられます）。 |
 | データエンジニアが、ID としてマークされた 2 つのフィールド（CRMID とメール）を含む CRM レコードを取り込みます。 | CRMID とメールがリンクされています。 | 人物（CRMID）がメールアドレスに関連付けられます。 |
 
-## ID サービスのリンクロジックについて {#identity-linking-logic}
-
->[!CONTEXTUALHELP]
->id="platform_identities_simulatedgraph"
->title="シミュレートされたグラフ"
->abstract="ID 名前空間と ID 値が一致すると、ID がリンクされます。"
+## ID サービスのリンクロジックについて
 
 ID は、ID 名前空間と ID 値で構成されます。
 

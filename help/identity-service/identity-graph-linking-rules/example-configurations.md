@@ -2,14 +2,20 @@
 title: グラフ設定の例
 description: ID グラフリンクルールと ID データを使用する際に発生する可能性のある一般的なグラフシナリオについて説明します。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '2783'
-ht-degree: 6%
+source-wordcount: '2799'
+ht-degree: 7%
 
 ---
 
-# グラフ設定の例
+# グラフ設定の例 {#examples-of-graph-configurations}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="アルゴリズム設定"
+>abstract="取り込んだ ID に合わせて、一意の名前空間と名前空間の優先度を設定します。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/example-configurations" text="詳細情報"
 
 >[!AVAILABILITY]
 >
