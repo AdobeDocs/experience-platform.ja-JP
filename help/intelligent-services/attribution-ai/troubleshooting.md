@@ -6,10 +6,10 @@ title: アトリビューション AI エラーのトラブルシューティン
 description: アトリビューション AI の一般的なエラーに対する回答を示します。
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 100%
+source-wordcount: '171'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Google Chrome の匿名モードセキュリティ設定が更新されたので、Google Chrome の匿名モードでの読み込みエラーが発生します。アドビでは、experience.adobe.com を信頼できるドメインにするために、Chrome でこの問題に鋭意取り組んでいるところです。
 
-<img src="./images/faq/error.PNG" width="500" /><br />
+![ エラー画像 ](./images/faq/error.PNG){width=500}
 
 ### 推奨される修正
 

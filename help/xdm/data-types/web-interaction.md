@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Web インタラクションデータタイプ
 description: Web インタラクションエクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '169'
 ht-degree: 10%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 [!UICONTROL Web インタラクション ] は、最初のページ読み込みが完了した後に Web ページで発生したインタラクションに関する情報を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 単一ページ web アプリ（SPA）など、新しいページ読み込みをトリガーとしないリッチ web アプリケーションでのインタラクションを記録することを目的としています。
 
-<img src="../images/data-types/web-interaction.PNG" width="500" /><br />
+![web インタラクション画像 ](../images/data-types/web-interaction.PNG){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

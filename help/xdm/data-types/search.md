@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データタイプを検索
 description: 検索エクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '164'
 ht-degree: 18%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 [!UICONTROL  検索 ] は、web 検索アクティビティに関する情報を含んだ標準の Experience Data Model （XDM）データタイプです。
 
-<img src="../images/data-types/search.PNG" width="500" /><br />
+![ 検索画像 ](../images/data-types/search.PNG){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

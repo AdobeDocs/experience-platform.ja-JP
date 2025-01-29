@@ -4,9 +4,9 @@ solution: Experience Platform
 title: アプリケーション データ タイプ
 description: アプリケーションエクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '420'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL  アプリケーション ] は、アプリケーションによって生成されるインタラクションに関連する詳細を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 アプリケーションとは、エンドユーザーがインストール、実行、閉じる、またはアンインストールできるモバイルアプリケーションやデスクトップアプリケーションなどのソフトウェアエクスペリエンスを指します。 このデータタイプのプロパティは、チャットボット、ブラウザーベースのプラグイン、アプリケーションに適用されないその他のエクスペリエンスなどのエージェントを記述するためのものではありません。
 
-<img src="../images/data-types/application.PNG" width="500" /><br />
+![ アプリケーション画像 ](../images/data-types/application.PNG){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

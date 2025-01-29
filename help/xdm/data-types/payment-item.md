@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 支払項目のデータ タイプ
 description: 支払項目エクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 20%
+source-wordcount: '144'
+ht-degree: 19%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 20%
 
 [!UICONTROL  支払い項目 ] は、注文に関連付けられた支払いを記述する標準の Experience Data Model （XDM）データタイプで、支払いのタイプ、金額、関連する通貨を定義します。
 
-<img src="../images/data-types/payment-item.PNG" width="400" /><br />
+![ 支払い項目の画像 ](../images/data-types/payment-item.PNG){width=400}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 人物データタイプ
 description: ユーザーエクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '322'
 ht-degree: 7%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 [!UICONTROL Person] は、個々のユーザーを記述する標準のエクスペリエンスデータモデル（XDM）データタイプです。 このデータタイプは、顧客、連絡先、所有者など、様々な役割を果たす人物を表すことができます。
 
-<img src="../images/data-types/person.PNG" width="500" /><br />
+![person 画像 ](../images/data-types/person.PNG){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

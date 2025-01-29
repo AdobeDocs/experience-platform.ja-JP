@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 測定データタイプ
 description: メジャーエクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '208'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!UICONTROL  測定 ] は、特定の指標の具体的な定量化可能なデータポイントを含んだ、標準の Experience Data Model （XDM）データタイプです。 測定は、一意の ID と値で構成されます。
 
-<img src="../images/data-types/measure.PNG" width="500" /><br />
+![ 画像を測定 ](../images/data-types/measure.PNG){ 幅=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

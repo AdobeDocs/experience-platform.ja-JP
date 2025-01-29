@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Web ページの詳細データタイプ
 description: Web ページの詳細についてエクスペリエンスデータモデル（XDM）データタイプを説明します。
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '386'
 ht-degree: 11%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 データタイプは、シングルページ web アプリケーション（SPA）のページの完全な詳細と初期ページの読み込みを目的としています。 読み込まれたページで発生し、新しいページ読み込みをトリガーしないインタラクションについては、[web インタラクション ](./web-interaction.md) データタイプを参照してください。
 
-<img src="../images/data-types/web-page-details.PNG" width="500" /><br />
+![Web ページの詳細 ](../images/data-types/web-page-details.PNG){width="500"}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
