@@ -4,14 +4,15 @@ description: エクスペリエンスデータモデル（XDM）フィールド�
 badge: アルファ版
 hide: true
 hidefromtoc: true
-source-git-commit: 2348001facd7ae3a95254130ae377b4ef3f2a749
+exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
+source-git-commit: 58cf5d90d70239a4b47c600bd3a7a37129b07dc3
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '356'
 ht-degree: 1%
 
 ---
 
-# AI アシスタントを使用したの XDM フィールド検出
+# AI アシスタントによる XDM フィールド検出
 
 >[!AVAILABILITY]
 >
