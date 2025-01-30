@@ -2,10 +2,10 @@
 title: Adobe Analytics 拡張機能のリリースノート
 description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
+source-git-commit: 5f4e157a39bf927b3821931d55f968862b2ed16d
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 74%
+source-wordcount: '1524'
+ht-degree: 70%
 
 ---
 
@@ -16,6 +16,14 @@ ht-degree: 74%
 >[!NOTE]
 >
 >[AppMeasurementのJavaScript ライブラリ ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) の更新に対応して Analytics タグ拡張機能が頻繁に更新される場合。 以下に説明する具体的なバージョンについて詳しくは ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)[AppMeasurementのリリースノート } を参照してください。
+
+## 2024 年 10 月 28 日（Pt）
+
+**Adobe Analytics Extension 1.9.6**
+
+**機能**:
+
+* ユーザーが [ 変数を設定アクション ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) の JSON バージョンを表示および編集できる新機能を追加しました。 Adobe Web SDK拡張機能には、JSON を提供することで [Analytics 変数への入力 ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) を行うアクションも含まれています。 JSON データを AA 拡張機能から Web SDK拡張機能にコピーすると、移行するお客様は各変数を手動で追加する代わりに、一度に複数の設定を簡単に転送できます。
 
 ## 2024 年 8 月 12 日（Pt）
 
