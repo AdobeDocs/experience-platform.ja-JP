@@ -4,13 +4,13 @@ description: 動的データストリーム設定を作成し、ルールに基�
 hide: true
 hidefromtoc: true
 badge: label="ベータ版" type="Informative"
-source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
+source-git-commit: 39e65f1f74b95fffffb3c5400ce1b7e60aa81bad
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
-
 
 # 動的データストリーム設定の作成
 
@@ -30,6 +30,14 @@ ht-degree: 1%
 * データストリームに *少なくとも* 1 つのExperience Cloudサービスを追加する必要があります。 詳しくは、データストリームに [ サービスを追加 ](configure.md#add-services) する方法のドキュメントを参照してください。
 
 データストリームを作成し、Experience Cloudサービスを追加したら、[ 動的設定を作成 ](#create-dynamic-configuration) できます。
+
+## 動的データストリーム設定とデータストリーム設定の上書き {#dynamic-versus-overrides}
+
+動的データストリーム設定と [ データストリーム設定の上書き ](overrides.md) は、相互に排他的な機能です。
+
+つまり、データストリーム設定の上書きと共に動的データストリーム設定を使用することはできません。 どちらかを選ばなければなりません。
+
+動的データストリーム設定およびデータストリーム設定の上書きの両方を有効にした場合は、設定の上書きが優先され、動的データストリーム設定のルールは無視されます。
 
 ## 動的データストリーム設定の作成 {#create-dynamic-configuration}
 
