@@ -2,10 +2,10 @@
 title: Adobe Target v2 拡張機能の概要
 description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能について説明します。
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 93%
+source-wordcount: '1351'
+ht-degree: 88%
 
 ---
 
@@ -69,13 +69,15 @@ Target 拡張機能は、ルールの「Then」部分に次のアクションを
 
 設定は不要です。
 
-### On-Device Decisioning を使用した Target の読み込み
+### オンデバイス判定を使用した Target の読み込み
 
-ルールのコンテキストで [on-device decisioning](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=ja) を有効にして Target を読み込むと効果的な場合、タグルールにこのアクションを追加します。 これにより、on-device decisioning が有効の at.js ライブラリがページに読み込まれます。 ほとんどの実装では、サイトの各ページに Target を読み込む必要があります。On-Device Decisioning を使用した Load Target アクションは、Target 呼び出しの後にのみ使用することをお勧めします。 そうしないと、Analytics 呼び出しが遅延するなどの問題が発生する可能性があります。
+ルールのコンテキストで [on-device decisioning](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=ja) を有効にして Target を読み込むと効果的な場合、タグルールにこのアクションを追加します。 これにより、on-device decisioning が有効の at.js ライブラリがページに読み込まれます。 ほとんどの実装では、サイトの各ページに Target を読み込む必要があります。Adobeでは、Target 呼び出しの後にのみ、on-device decisioning を使用した Load Target アクションを使用することをお勧めします。 そうしないと、Analytics 呼び出しが遅延するなどの問題が発生する可能性があります。
 
-設定は不要です。
+>[!IMPORTANT]
+>
+>オンデバイス判定でページ読み込みリクエストが既に設定されている場合にのみ使用します。 このアクションをルールに追加すると、オンデバイス判定ルールエンジンが含まれるので、最終的な Launch バンドルのサイズが大きくなります。
 
-### Add Params to All Requests
+### パラメーターのすべての要求への追加
 
 このアクションタイプを使用すると、すべての Target リクエストにパラメーターを追加できます。 これより前に、Load Target アクションを使用する必要があります。
 
