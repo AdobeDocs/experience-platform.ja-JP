@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
+source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 71%
+source-wordcount: '402'
+ht-degree: 70%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 71%
 - Data Distiller {#data-distiller}
    - [概要](data-distiller/overview.md)
    - [ライセンス使用状況](data-distiller/license-usage.md)
+   - [価値を最大化するためのヒント](data-distiller/top-tips-to-maximize-value.md)
    - 派生データセット {#derived-datasets}
       - [概要](data-distiller/derived-datasets/overview.md)
       - [SQL を使用した派生データセットの作成](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -43,13 +44,13 @@ ht-degree: 71%
    - [概要](advanced-statistics/overview.md)
    - [特徴エンジニアリング](advanced-statistics/feature-engineering.md)
    - [モデル](advanced-statistics/models.md)
-   - [ 機能の変換 ](advanced-statistics/feature-transformation.md)
-モデルの実装 {#implement-models}
+   - [機能変換](advanced-statistics/feature-transformation.md)
+   - モデルの実装 {#implement-models}
       - [モデルの実装](advanced-statistics/implement-models/implement-models.md)
       - [回帰](advanced-statistics/implement-models/regression.md)
       - [分類](advanced-statistics/implement-models/classification.md)
-      - [ クラスタリング ](advanced-statistics/implement-models/clustering.md)
-{#examples} の例
+      - [クラスタリング](advanced-statistics/implement-models/clustering.md)
+   - 例 {#examples}
       - [統計と機械学習を使用したボットフィルタリング](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [SQL ベースのロジスティックリグレッションを使用して顧客のチャーンを予測](advanced-statistics/examples/predict-customer-churn.md)
 - Data Distillerのオーディエンス {#data-distiller-audiences}
