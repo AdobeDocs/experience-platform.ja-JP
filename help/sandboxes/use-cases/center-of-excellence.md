@@ -1,10 +1,11 @@
 ---
 title: サンドボックスツールを使用した中核的な拠点の実現
 description: 複数のサンドボックスでベストプラクティスを標準化する「ゴールデンサンドボックス」パッケージを作成して、サンドボックスツールを使用した中核的な拠点（COE）を有効にします。
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '881'
+ht-degree: 7%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 複数のサンドボックスでベストプラクティスを標準化する「ゴールデンサンドボックス」パッケージを作成して、サンドボックスツールを使用した中核的な拠点（COE）を有効にします。
 
-![ 異なる組織間でのパッケージの書き出しの概要 ](../images/use-cases/packages-across-orgs.png)
+![ 異なる組織間でのパッケージの書き出しの概要 ](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## このユースケースを検討する理由 {#why-this-use-case}
 
