@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 93%
+source-wordcount: '1476'
+ht-degree: 35%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 93%
 
 ファネルアイコン（![フィルターアイコン](/help/images/icons/filter.png)）を選択し、フィルターコントロールのリストを表示して、結果を絞り込みます。
 
-![flac-filters](../../images/flac-ui/flac-filters.png)
+![ ロールのフィルターセクションがハイライト表示された権限 UI のロールダッシュボード。](../../images/flac-ui/flac-filters.png)
 
 役割には次のフィルターを UI で使用できます。
 
@@ -39,133 +39,151 @@ ht-degree: 93%
 
 フィルターを削除するには、該当するフィルターのピルアイコンの「X」を選択するか、「**[!UICONTROL すべてクリア]**」をクリックして、すべてのフィルターを削除します。
 
-![flac-clear-filters](../../images/flac-ui/flac-clear-filters.png)
+![ 選択したフィルターで「X」と「すべての選択をクリア」がハイライト表示された権限 UI の役割ダッシュボード ](../../images/flac-ui/flac-clear-filters.png)
 
 ## 役割の詳細
 
-「**[!UICONTROL 役割]**」タブから役割を選択すると、役割の詳細ページが開きます。
+「**[!UICONTROL 役割]**」タブから役割を選択すると、役割の [!UICONTROL  詳細 ] ダッシュボードが開きます。
 
-![flac-details](../../images/flac-ui/flac-details.png)
+![ 選択した役割の詳細ワークスペースが表示され、概要情報がハイライト表示されます。](../../images/flac-ui/flac-details.png)
 
-「詳細」タブには、役割の概要が表示されます。概要には、役割名、役割の説明、役割の作成者および変更者、役割の作成日時および変更日時、役割に関連付けられた権限が表示されます。 必要に応じて、役割名と役割の説明を変更できます。
+[!UICONTROL  詳細 ] ダッシュボードには、役割の概要が表示されます。 概要には、役割名、説明、作成者、最終変更者が、作成日と変更日と共に表示されます。 また、役割に関連付けられた権限と、割り当てられたサンドボックスのリストも表示されます。 必要に応じて、役割の名前と説明を変更できます。
 
 ## 役割のラベルの管理
 
-「**[!UICONTROL ラベル]** 」タブを選択して役割ラベルページを開き、「**[!UICONTROL ラベルを追加]** 」を選択して役割にラベルを割り当てます。
+**[!UICONTROL ラベル]** タブを選択して役割ラベルワークスペースを開き、「**[!UICONTROL ラベルを追加]**」を選択して役割にラベルを割り当てます。
 
-![flac-labels](../../images/flac-ui/flac-labels.png)
+![ 役割のラベル ワークスペースは、「ラベル」タブと「ラベルを追加」ボタンがハイライト表示されて表示されます。](../../images/flac-ui/flac-labels.png)
 
-このページにラベルが表示されます。 リストには、ラベル名、わかりやすい名前、カテゴリ、説明が表示されます。
+**[!UICONTROL アクセスラベルとデータガバナンスラベルを適用]** ダイアログが表示され、ラベルのリストが表示されます。 リストには、ラベル名、わかりやすい名前、カテゴリ、説明が表示されます。
 
 役割に追加するラベルをリストから選択し、「**[!UICONTROL 保存]**」を選択します。
 
-![flac-add-labels](../../images/flac-ui/flac-add-labels.png)
+![ ラベルが選択されたアクセスラベルとデータガバナンスラベルを適用ダイアログ。](../../images/flac-ui/flac-add-labels.png)
 
 追加されたラベルは、「**[!UICONTROL ラベル]**」タブに表示されます。
 
-![flac-added-labels](../../images/flac-ui/flac-added-labels.png)
+![ 追加されたラベルがハイライト表示された役割のラベルワークスペース。](../../images/flac-ui/flac-added-labels.png)
 
-役割からラベルを削除するには、ラベル名の横にある「**X**」アイコンを選択します。
+役割からラベルを削除するには、ラベルを選択して「**[!UICONTROL ラベルを削除]**」を選択します。
 
-![flac-delete-labels](../../images/flac-ui/flac-delete-labels.png)
+![ 役割が選択され、「ラベルを削除」オプションがハイライト表示されている役割のラベルワークスペース。](../../images/flac-ui/flac-delete-labels.png)
 
-## 役割用サンドボックスの管理
+## 役割のサンドボックスの管理
 
-「**[!UICONTROL サンドボックス]**」タブを選択して、役割サンドボックスページを開きます。ここには、役割に追加されたサンドボックスのリストが表示されます。
+「**[!UICONTROL 詳細]**」タブを選択し、「**[!UICONTROL サンドボックス]**」セクションに移動します。 **[!UICONTROL すべて表示]** を選択して、役割に追加されたサンドボックスの完全なリストを表示します。
 
-![flac-sandboxes](../../images/flac-ui/flac-sandboxes.png)
+![ サンドボックスセクションがハイライト表示された役割の詳細ワークスペース。](../../images/flac-ui/flac-sandboxes.png)
 
-役割にさらにサンドボックスを追加するには、「**[!UICONTROL 編集]**」を選択します。
+役割にさらにサンドボックスを追加するには、UI の右上から **[!UICONTROL 編集]** を選択します。
 
-![flac-add-sandboxes](../../images/flac-ui/flac-add-sandboxes.png)
+![ 「編集」オプションがハイライト表示された役割の詳細ワークスペース。](../../images/flac-ui/flac-add-sandboxes.png)
 
-次の画面では、サンドボックス内に存在するどのリソース権限を役割に含めるのか、ドロップダウンを使用して選択するよう求められます。終了したら、「**[!UICONTROL 保存して終了]**」を選択します。
+次の画面では、ドロップダウンを使用して、役割に含めるサンドボックスリソースを選択するように求められます。 終了したら、「**[!UICONTROL 保存]**」、「**[!UICONTROL 閉じる]** の順に選択します。
 
-![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
+![ サンドボックスリソース ドロップダウンメニューがハイライト表示されている役割のリソースダッシュボード。](../../images/flac-ui/flac-add-role-permission.png)
 
-## 役割でのユーザーの管理
+## 役割のユーザー管理
 
-「**[!UICONTROL ユーザー]**」タブをクリックして役割ユーザーページを開き、「**[!UICONTROL ユーザーを追加]**」を選択してユーザーを役割に割り当てます。
+「**[!UICONTROL ユーザー]**」タブを選択して役割 [!UICONTROL  ユーザー ] ワークスペースを開きます。次に、「**[!UICONTROL ユーザーを追加]**」を選択して、ユーザーを役割に割り当てます。
 
-![flac-users](../../images/flac-ui/flac-users.png)
+![ 役割のユーザーワークスペースは、「ユーザー」タブと「ユーザーを追加」オプションがハイライト表示された状態で表示されます。](../../images/flac-ui/flac-users.png)
 
-役割に追加するユーザーをリストから選択します。 または、検索バーを使用して名前またはメールアドレスを入力してユーザーを検索し、「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL ユーザーを追加]** ダイアログが表示されます。 役割に追加するユーザーをリストから選択します。 または、検索バーを使用して名前またはメールアドレスを入力してユーザーを検索し、「**[!UICONTROL 保存]**」を選択します。
 
-![flac-add-users](../../images/flac-ui/flac-add-users.png)
+![ ユーザーが選択され、検索バーと「保存」オプションがハイライト表示されたユーザーを追加ダイアログ ](../../images/flac-ui/flac-add-users.png)
 
 追加されたユーザーは「**[!UICONTROL ユーザー]**」タブの下に表示されます。
 
-![flac-added-users](../../images/flac-ui/flac-added-users.png)
+![ 役割に追加されたユーザーを示す役割のユーザーワークスペース。](../../images/flac-ui/flac-added-users.png)
 
-役割からユーザーを削除するには、ユーザー名の横の「**X**」アイコンを選択します。
+役割からユーザーを削除するには、ユーザー名の横にある「**X**」アイコンを選択します。
 
-![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
+![ 「X」オプションがハイライト表示されたユーザーを示す役割のユーザーワークスペース。](../../images/flac-ui/flac-remove-users.png)
 
 次のビデオは、新しい役割の作成とその役割のユーザーの管理に関する理解を深めることを目的としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
-## 役割での API 資格情報の管理 {#manage-api-credentials-for-role}
+## 役割の API 資格情報の管理 {#manage-api-credentials-for-role}
 
-「**[!UICONTROL API 資格情報]**」タブをクリックして役割 API 資格情報ページを開き、「**[!UICONTROL API 資格情報を追加]**」を選択して、API 資格情報を役割に割り当てます。
+>[!IMPORTANT]
+>
+> [!UICONTROL  権限 ] で API 資格情報を使用および管理するには、ユーザーにシステム管理者権限が必要です。
 
-![flac-api-credentials](../../images/flac-ui/flac-api-credentials.png)
+Experience PlatformAPI をユーザーまたは開発者として使用するには、役割の特定の権限セットに加えて API 資格情報を追加する必要があります。 API 認証情報の作成と割り当て、および必要な権限について詳しくは、[ 認証とExperience PlatformAPI へのアクセス ](../../../landing/api-authentication.md#generate-credentials) のステップバイステップのチュートリアルを参照してください。
 
-役割に追加するリストから API 資格情報を選択し、「**[!UICONTROL 保存]**」を選択します。 
+**[!UICONTROL API 資格情報]** タブを選択して役割 API 資格情報ワークスペースを開き、「**[!UICONTROL API 資格情報を追加]**」を選択して、API 資格情報を役割に割り当てます。
 
-![flac-add-api-credentials](../../images/flac-ui/flac-add-api-credentials.png)
+![ 「資格情報を追加」オプションがハイライト表示された役割の API 資格情報ワークスペース。](../../images/flac-ui/flac-api-credentials.png)
 
-追加された API 資格情報は、「**[!UICONTROL API 資格情報]**」タブの下に表示されます。 
+**[!UICONTROL API 資格情報を追加]** ダイアログが表示されます。 役割に追加するリストから API 資格情報を選択し、「**[!UICONTROL 保存]**」を選択します。
 
-![flac-added-api-credentials](../../images/flac-ui/flac-added-api-credentials.png)
+![ 認証情報が選択され、「保存」オプションがハイライト表示された API 認証情報を追加ダイアログ ](../../images/flac-ui/flac-add-api-credentials.png)
+
+追加された API 資格情報は、「**[!UICONTROL API 資格情報]**」タブの下に表示されます。
+
+![ 追加された資格情報が表示された役割の API 資格情報ワークスペース。](../../images/flac-ui/flac-added-api-credentials.png)
 
 API 資格情報を役割から削除するには、API 資格情報名の横にある「**X**」アイコンを選択します。
 
-![flac-remove-api-credentials](../../images/flac-ui/flac-remove-api-credentials.png)
+![ 資格情報を削除する X オプションがハイライト表示されている役割の API 資格情報ワークスペース。](../../images/flac-ui/flac-remove-api-credentials.png)
 
-**[!UICONTROL API 資格情報を削除]**&#x200B;ダイアログが表示され、削除を確認するよう求められます。 
+**[!UICONTROL API 資格情報を削除]** ダイアログが表示され、削除を確認するよう求められます。 「**[!UICONTROL 確認]**」を選択して、選択した秘密鍵証明書の削除を完了します。
 
-![flac-confirm-api-credentials-delete](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
+![ 資格情報の削除を確認するように促す「資格情報を削除」ポップオーバーがハイライト表示されます。](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
 
 「**[!UICONTROL API 資格情報]**」タブに戻されます。
 
-## 役割でのユーザーグループの管理
+## 役割のユーザーグループの管理
 
 ユーザーグループとは、同じ機能を実行するためのアクセス権を持つ、グループ化された複数のユーザーのことです。
 
-「**[!UICONTROL ユーザーグループ]**」タブを選択して役割のユーザーグループページを開きます。次に、「**[!UICONTROL グループを追加]**」を選択して、ユーザーグループを役割に割り当てます。
+「**[!UICONTROL ユーザーグループ]**」タブを選択して役割のユーザーグループワークスペースを開きます。次に、「**[!UICONTROL グループを追加]**」を選択して、ユーザーグループを役割に割り当てます。
 
-![flac-user-groups](../../images/flac-ui/flac-user-groups.png)
+![ 「グループを追加」オプションを使用した役割のユーザーグループワークスペース ](../../images/flac-ui/flac-user-groups.png)
 
-役割に追加するユーザーグループをリストから選択します。 または、検索バーを使用してグループ名を入力してユーザーグループを検索し、「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL グループを追加]** ダイアログが表示されます。 役割に追加するユーザーグループをリストから選択します。 または、検索バーを使用してグループ名を入力してユーザーグループを検索し、「**[!UICONTROL 保存]**」を選択します。
 
-![flac-add-user-groups](../../images/flac-ui/flac-add-user-groups.png)
+![ ユーザーグループが選択され、「検索と保存」オプションがハイライト表示されたグループを追加ダイアログ ](../../images/flac-ui/flac-add-user-groups.png)
 
 追加されたユーザーグループは「**[!UICONTROL ユーザーグループ]**」タブの下に表示されます。
 
-![flac-added-user-groups](../../images/flac-ui/flac-added-user-groups.png)
+![ 追加されたユーザーグループのリストを表示する役割のユーザーグループワークスペース。](../../images/flac-ui/flac-added-user-groups.png)
 
 役割からユーザーグループを削除するには、ユーザーグループ名の横にある「**X**」アイコンを選択します。
 
-![flac-remove-user-groups](../../images/flac-ui/flac-remove-user-groups.png)
+![ 特定のユーザーグループを削除する X オプションがハイライト表示されている役割のユーザーグループのワークスペース。](../../images/flac-ui/flac-remove-user-groups.png)
 
-**[!UICONTROL ユーザーグループを削除]**&#x200B;ダイアログが表示され、削除を確認するよう求められます。 
+**[!UICONTROL ユーザーグループを削除]** ダイアログが表示され、削除を確認するよう求められます。 「**[!UICONTROL 確認]**」を選択して、選択したユーザーグループを削除します。
 
-![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![ ユーザーグループを削除するためのポップオーバーが表示され、ハイライト表示されます。](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 「**[!UICONTROL ユーザーグループ]**」タブに戻されます。
 
-## ロールを使用したExperience Platformへのユーザーの追加
+## Experience Platformにユーザーを追加
 
-ロールにユーザーを追加するには、Admin Consoleにログインし、「**[!UICONTROL ユーザーを追加]**」を選択します
+システム管理者は、ユーザーがAdobe Developer Consoleで [ 統合を作成 ](../../../landing/api-authentication.md#generate-credentials) できるように、開発者にアクセス権を付与できます。
 
-![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+ユーザーExperience Platformを追加するには、[Admin Consoleにログインし ](https://adminconsole.adobe.com) 「**[!UICONTROL ユーザーを追加]**」を選択します。
 
-**[!UICONTROL チームにユーザーを追加]**&#x200B;ダイアログが表示されます。 ユーザーのメールアドレス、名（オプション）および姓（オプション）を入力します。
+![ 「ユーザーを追加」オプションがハイライト表示されたAdobe Admin Console ダッシュボード。](../../images/flac-ui/product-profile-add-users.png)
 
-鉛筆アイコンを選択して、製品およびユーザーグループを選択し、**[!UICONTROL Adobe Experience Platform]** を選択します。次に、**[!UICONTROL AEP-Default-All-Users]**、「**[!UICONTROL 保存]** の順に選択します。
+**[!UICONTROL チームにユーザーを追加]**&#x200B;ダイアログが表示されます。ユーザーのメールアドレス、名（オプション）および姓（オプション）を入力します。 次に、「**[!UICONTROL 製品]**」を選択します。
 
-![product-profile](../../images/flac-ui/product-profile.png)
+![ 「ユーザーフィールドと製品」オプションがハイライト表示されたチームにユーザーを追加ダイアログ ](../../images/flac-ui/product-profile-add-users-to-your-team.png)
+
+**[!UICONTROL 製品を選択]** ダイアログが表示されます。 「**[!UICONTROL Adobe Experience Platform]**」を選択します。
+
+![Adobe Experience Platformがハイライト表示された製品を選択ダイアログ ](../../images/flac-ui/product-profile-select-product.png)
+
+**[!UICONTROL 製品プロファイルを選択]** ダイアログが表示されます。 **[!UICONTROL AEP-Default-All-Users]** を選択してから、「**[!UICONTROL 保存]**」を選択します。
+
+![AEP-Default-All-Users が選択され、「適用」がハイライト表示された製品プロファイルを選択ダイアログ ](../../images/flac-ui/product-profile-select-product-profiles.png)
+
+情報を確認し、「**[!UICONTROL 保存]**」を選択してユーザーを追加します。
+
+![ ユーザー情報と選択した項目および「保存」オプションがハイライト表示されたチームにユーザーを追加ダイアログ ](../../images/flac-ui/product-profile-save-user.png)
 
 ## 次の手順
 

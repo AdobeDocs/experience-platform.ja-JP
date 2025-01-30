@@ -6,9 +6,9 @@ description: このドキュメントでは、Experience Platform API を呼び�
 role: Developer
 feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 48c75f88d6862fa602e43929b72a6eac27d20e07
+source-git-commit: 850a4ae82fda22a761a28ac9059d7dea57c9662a
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2487'
 ht-degree: 5%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 5%
 
 このチュートリアルでは、以下のフローチャートに示すように、Platform API 呼び出しの認証に必要な資格情報の収集方法を説明します。 必要な資格情報のほとんどは、1 回限りの初期設定で収集できます。 ただし、アクセストークンは 24 時間ごとに更新する必要があります。
 
-![](./images/api-authentication/authentication-flowchart.png)
+![1 回限りの初期設定と後続の各セッションの認証フローの要件 ](./images/api-authentication/authentication-flowchart.png)
 
 ## 前提条件 {#prerequisites}
 
@@ -52,15 +52,15 @@ Adobe Developer Consoleで統合を作成する前に、アカウントがAdobe 
 
 ### 開発者アクセス権の取得 {#gain-developer-access}
 
-Experience Platform [[!DNL Admin Console]](https://adminconsole.adobe.com/) を使用して開発者向け製品プロファイルに自分を追加する場合は、組織内の [!DNL Admin Console] 管理者にお問い合わせください。 [ 製品プロファイルの開発者アクセスの管理 ](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) の方法について詳しくは、[!DNL Admin Console] のドキュメントを参照してください。
+Admin ConsoleとしてExperience Platform製品プロファイルに追加する場合は、組織内の開発管理者に問い合わせてください。 [ 製品プロファイルの開発者アクセスの管理 ](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) を行う方法について詳しくは、Admin Consoleドキュメントを参照してください。
 
 開発者として割り当てられたら、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) で統合の作成を開始できます。 これらの統合は、外部のアプリやサービスからAdobeAPI へのパイプラインです。
 
 ### ユーザーアクセスの取得 {#gain-user-access}
 
-また、[!DNL Admin Console] 管理者も、同じ製品プロファイルにユーザーとして追加する必要があります。 ユーザーアクセスを使用すると、実行する API 操作の結果を UI で確認できます。
+また、Admin Console管理者も、同じ製品プロファイルにユーザーとして追加する必要があります。 ユーザーアクセスを使用すると、実行する API 操作の結果を UI で確認できます。
 
-詳しくは、[ でのユーザーグループの管理  [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) のガイドを参照してください。
+詳しくは、[Admin Consoleでのユーザーグループの管理 ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) のガイドを参照してください。
 
 ## API キー（クライアント ID）と組織 ID の生成 {#generate-credentials}
 
@@ -68,7 +68,7 @@ Experience Platform [[!DNL Admin Console]](https://adminconsole.adobe.com/) を�
 >
 >[Privacy ServiceAPI ガイド ](../privacy-service/api/getting-started.md) のこのドキュメントを読む場合は、ガイドに戻って、[!DNL Privacy Service] に固有のアクセス認証情報を生成することができます。
 
-[!DNL Admin Console] を通じて開発者およびユーザーに Platform へのアクセス権を付与したら、次の手順は、Adobe Developer Consoleで `{ORG_ID}` と `{API_KEY}` の資格情報を生成することです。 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
+Admin Consoleを通じて開発者およびユーザーに Platform へのアクセス権を付与したら、次の手順として、Adobe Developer Consoleで `{ORG_ID}` と `{API_KEY}` の資格情報を生成します。 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
 
 >[!TIP]
 >
@@ -86,9 +86,9 @@ Experience Platform [[!DNL Admin Console]](https://adminconsole.adobe.com/) を�
 
 ![ 「API を追加」オプションがハイライト表示されたDeveloper Console画面 ](./images/api-authentication/add-api.png)
 
-**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 Adobe Experience Platformの製品アイコンを選択し、「**[!UICONTROL Experience PlatformAPI]**」を選択してから「**[!UICONTROL 次へ]**」を選択します。
+**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 **[!UICONTROL Adobe Experience Platform]** の商品アイコンを選択し、「**[!UICONTROL Experience PlatformAPI]**」を選択してから **[!UICONTROL 次へ]** を選択します。
 
-![Experience PlatformAPI を選択します ](./images/api-authentication/platform-api.png)。
+![API を追加画面で「Experience PlatformAPI」を選択します。](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
@@ -96,22 +96,17 @@ Experience Platform [[!DNL Admin Console]](https://adminconsole.adobe.com/) を�
 
 ### [!UICONTROL OAuth サーバー間 ] 認証タイプを選択します {#select-oauth-server-to-server}
 
-次に、「[!UICONTROL OAuth サーバー間 ] 認証タイプ」を選択してアクセストークンを生成し、Experience PlatformAPI にアクセスします。
+次に、「**[!UICONTROL OAuth サーバー間]** 認証タイプ」を選択してアクセストークンを生成し、Experience PlatformAPI にアクセスします。 「**[!UICONTROL 次へ]**」を選択する前に、「**[!UICONTROL 資格情報名]**」テキストフィールドに資格情報に意味のある名前を付けます。
 
 >[!IMPORTANT]
 >
->今後サポートされるトークン生成方法は、**[!UICONTROL OAuth サーバー間]** メソッドのみです。 以前サポートされていた **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨となり、新しい統合用に選択することはできません。 JWT 認証方法を使用した既存の統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい [!UICONTROL OAuth サーバー間認証方法 ] に移行することを強くお勧めします。 詳しくは、「[!BADGE  非推奨 ]」の節を参照してください。{type=negative}[JSON web トークン（JWT）を生成 ](#jwt) ます。
+>今後サポートされるトークン生成方法は、**[!UICONTROL OAuth サーバー間]** メソッドのみです。 以前サポートされていた **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨となり、新しい統合用に選択することはできません。 JWT 認証方法を使用した既存の統合は 2025 年 6 月 30 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい [!UICONTROL OAuth サーバー間認証方法 ] に移行することを強くお勧めします。 詳しくは、「[!BADGE  非推奨 ]」の節を参照してください。{type=negative}[JSON web トークン（JWT）を生成 ](#jwt) ます。
 
 ![ 認証 API の OAuth サーバー間Experience Platform方式を選択します。](./images/api-authentication/oauth-authentication-method.png)
 
 ### 統合用の製品プロファイルの選択 {#select-product-profiles}
 
-**[!UICONTROL API の設定]** 画面で、「**[!UICONTROL AEP-Default-All-Users]**」を選択します。
-
-<!--
-Your integration's service account will gain access to granular features through the product profiles selected here.
-
--->
+**[!UICONTROL API の設定]** 画面で、「**[!UICONTROL AEP-Default-All-Users]**」を選択し、アクセス権を取得する追加の製品プロファイルも選択します。
 
 >[!IMPORTANT]
 >
@@ -127,7 +122,7 @@ Experience PlatformAPI との統合を設定するための上記の手順は、
 
 ### 資格情報の収集 {#gather-credentials}
 
-API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Experience PlatformAPI]** ページに、Experience PlatformAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
+API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL OAuth サーバー間]** ページに、Experience Platform API へのすべての呼び出しで必要な次の資格情報が表示されます。
 
 ![Developer Console で API を追加した後の統合情報 ](./images/api-authentication/api-integration-information.png)
 
@@ -150,7 +145,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 次の手順では、Platform API 呼び出しで使用する `{ACCESS_TOKEN}` 資格情報を生成します。 `{API_KEY}` と `{ORG_ID}` の値とは異なり、Platform API を引き続き使用するには、新しいトークンを 24 時間ごとに生成する必要があります。 「**[!UICONTROL アクセストークンを生成]**」を選択します（下図を参照）。
 
-![ アクセストークンの生成方法を表示 ](././images/api-authentication/generate-access-token.gif)
+![ アクセストークンの生成方法を表示 ](././images/api-authentication/generate-access-token.png)
 
 >[!TIP]
 >
@@ -180,7 +175,7 @@ Experience PlatformAPI リファレンスドキュメントの様々なエンド
 
 >[!WARNING]
 >
-アクセストークンを生成する JWT メソッドは非推奨（廃止予定）になりました。 すべての新しい統合は、[OAuth サーバー間認証方法 ](#select-oauth-server-to-server) を使用して作成する必要があります。 また、Adobeを引き続き機能させるには、2025 年 1 月 1 日（PT）までに既存の統合環境を OAuth 方式に移行する必要があります。 以下の重要なドキュメントをお読みください。
+アクセストークンを生成する JWT メソッドは非推奨（廃止予定）になりました。 すべての新しい統合は、[OAuth サーバー間認証方法 ](#select-oauth-server-to-server) を使用して作成する必要があります。 また、Adobeを引き続き機能させるには、2025 年 6 月 30 日（PT）までに既存の統合環境を OAuth 方式に移行する必要があります。 以下の重要なドキュメントをお読みください。
 > 
 * [JWT から OAuth へのアプリケーションの移行ガイド ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [OAuth を使用した新旧のアプリケーションの実装ガイド ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -331,71 +326,47 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 ## システム管理者：Experience Platform権限を使用して開発者と API のアクセス制御を付与します {#grant-developer-and-api-access-control}
 
+Adobe Developer ConsoleでExperience Platformを作成する前に、お使いのアカウントに、統合製品プロファイルの開発者権限とユーザー権限が必要です。
+
 >[!NOTE]
 >
 システム管理者のみが、権限の API 資格情報を表示および管理できます。
 
-Adobe Developer Consoleで統合を作成する前に、アカウントがAdobe Admin ConsoleのExperience Platform製品プロファイルの開発者権限とユーザー権限を持っている必要があります。
-
 ### 製品プロファイルへの開発者の追加 {#add-developers-to-product-profile}
 
-[[!DNL Admin Console]](https://adminconsole.adobe.com/) に移動し、Adobe IDでログインします。
+[Admin Consoleに移動し ](https://adminconsole.adobe.com/)Adobe IDでログインします。
 
-**[!UICONTROL 商品]** を選択して、商品のリストから ]**2}Adobe Experience Platform} を選択します。**[!UICONTROL 
+ナビゲーションバーの「**[!UICONTROL 製品]**」を選択して、製品のリストから「**[!UICONTROL Adobe Experience Platform]**」を選択します。
 
-![Admin Consoleに掲載されている製品リスト ](././images/api-authentication/products.png)
+![Adobe Experience Platform製品がハイライト表示されたAdobe Admin Consoleの製品ページ。](././images/api-authentication/products.png)
 
 「**[!UICONTROL 製品プロファイル]**」タブで、「**[!UICONTROL AEP-Default-All-Users]**」を選択します。 または、検索バーを使用して名前を入力して製品プロファイルを検索します。
 
-![ 製品プロファイルの検索 ](././images/api-authentication/select-product-profile.png)
+![ 検索バーと AEP-Default-All-Users 製品がハイライト表示された製品プロファイルページ。](././images/api-authentication/select-product-profile.png)
 
 「**[!UICONTROL 開発者]**」タブを選択し、「**[!UICONTROL 開発者を追加]**」を選択します。
 
-![ 「開発者」タブから開発者を追加 ](././images/api-authentication/add-developer1.png)
+![ 「開発者」タブが表示され、「開発者を追加」オプションがハイライト表示されます。](././images/api-authentication/add-developer1.png)
 
-開発者の **[!UICONTROL メールまたはユーザー名]** を入力します。 有効な [!UICONTROL  メールまたはユーザー名 ] には、開発者の詳細が表示されます。 「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL 開発者を追加]** ダイアログが表示されます。 開発者の **[!UICONTROL メールまたはユーザー名]** を入力します。 有効な [!UICONTROL  メールまたはユーザー名 ] に、開発者の詳細が表示されます。 「**[!UICONTROL 保存]**」を選択します。
 
-![ メールまたはユーザー名を使用して開発者を追加する ](././images/api-authentication/add-developer-email.png)
+![ 開発者情報が入力され、「保存」オプションがハイライト表示された開発者を追加ダイアログ ](././images/api-authentication/add-developer-email.png)
 
-開発者が正常に追加され、「[!UICONTROL  開発者 ]」タブに表示されます。
+開発者が正常に追加され、「**[!UICONTROL 開発者]**」タブに表示されます。
 
-![ 「開発者」タブに開発者が表示されます ](././images/api-authentication/developer-added.png)
+![ 新しく追加された開発者がハイライト表示された、追加されたすべての開発者のリストを表示する「開発者」タブ。](././images/api-authentication/developer-added.png)
 
-<!--
+### API 資格情報の役割への割り当て
 
-Commenting out this part since it duplicates information from the section Add Experience Platform to a project
+>[!NOTE]
+>
+システム管理者のみが、Experience PlatformUI で API をロールに割り当てることができます。
 
-### Set up an API
+Experience PlatformAPI を使用して操作を実行するには、システム管理者は、役割の特定の権限セットに加えて API 資格情報を追加する必要があります。 詳しくは、「役割の API 資格情報の管理 [ に関する節を参照し ](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role) ください。
 
-A developer can add and configure an API within a project in the Adobe Developer Console.
+製品プロファイルに開発者を追加し、API を役割に割り当てるための、上記の手順のチュートリアルを、次のビデオチュートリアルでも利用できます。
 
-Select your project, then select **[!UICONTROL Add API]**.
-
-![Add API to a project](././images/api-authentication/add-api-project.png)
-
-In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
-
-![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
-
-In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
-
--->
-
-### API を役割に割り当てる
-
-システム管理者は、Experience PlatformUI で API をロールに割り当てることができます。
-
-**[!UICONTROL 権限]** と、API を追加する役割を選択します。 「**[!UICONTROL API 資格情報]**」タブを選択し、「**[!UICONTROL API 資格情報を追加]**」を選択します。
-
-![ 選択した役割の「API 資格情報」タブ ](././images/api-authentication/api-credentials.png)
-
-役割に追加する API を選択して、「**[!UICONTROL 保存]**」を選択します。
-
-![ 選択可能な API のリスト ](././images/api-authentication/select-api.png)
-
-「[!UICONTROL API 資格情報 ]」タブに戻り、新しく追加された API が一覧表示されます。
-
-![ 新しく追加された API が表示された「API 資格情報」タブ ](././images/api-authentication/api-credentials-with-added-api.png)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## その他のリソース {#additional-resources}
 
