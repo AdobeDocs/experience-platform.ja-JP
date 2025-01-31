@@ -3,9 +3,9 @@ title: カスタマーサポート用 AI アシスタント
 description: AI アシスタントを使用して、トラブルシューティングとカスタマーサポートチケット申請プロセスを合理化する方法を説明します。
 badge: アルファ版
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
+source-git-commit: e224716f8fba59529c5d7634d4b4a3013a0986a3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,8 @@ ht-degree: 0%
    * 「チケット E67890 ールの更新点は？」
 
 カスタマーサポートの AI アシスタントにアクセスするには、Adobeアカウントチームにお問い合わせください。
+
+詳しくは、次のビデオをご覧ください。カスタマーサポート用 AI アシスタントを使用して、ワークフローを離れることなくシームレスにトラブルシューティングを行う方法を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
