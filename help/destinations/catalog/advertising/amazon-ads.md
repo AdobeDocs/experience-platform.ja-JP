@@ -1,16 +1,16 @@
 ---
 title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
-last-substantial-update: 2024-09-20T00:00:00Z
+last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 52%
+source-wordcount: '1837'
+ht-degree: 48%
 
 ---
 
-# （ベータ版）Amazon Ads 接続 {#amazon-ads}
+# Amazon Ads 接続 {#amazon-ads}
 
 ## 概要 {#overview}
 
@@ -24,7 +24,7 @@ AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーデ�
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、*[!DNL Amazon Ads]* チームが作成および管理します。 現在はベータ版の製品であり、機能は変更される可能性があります。お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`まで直接ご連絡ください。*
+>この宛先コネクタとドキュメントページは、*[!DNL Amazon Ads]* チームが作成および管理します。 お問い合わせや更新のリクエストについては、*`amc-support@amazon.com`まで直接ご連絡ください。*
 
 ## ユースケース {#use-cases}
 
@@ -85,8 +85,6 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 [!DNL Amazon Ads] 接続インターフェイスに移動するので、まず接続先の広告主アカウントを選択します。 接続すると、選択した広告主アカウントの ID が付与された新しい接続で Adobe Experience Platform にリダイレクトされます。宛先の設定画面で適切な広告主アカウントを選択して続行します。
 
-* **[!UICONTROL ベアラートークン]**：宛先を認証するためのベアラートークンを入力します。
-
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
@@ -101,9 +99,13 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 * **[!UICONTROL 広告主地域]**：広告主がホストされている適切な地域を選択します。各地域でサポートされているマーケットプレイスについて詳しくは、[Amazon Ads ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。
 
+>[!IMPORTANT]
+>
+>**[!UICONTROL Amazon広告の同意信号]** を含む更新は、2025 年 2 月 7 日までに公開される予定です。
 
+* **[!UICONTROL Amazon Ads 同意シグナル]**：この接続を通じて送信されたすべてのデータが、広告目的で個人データを使用することに同意していることを確認します。 「許可」とは、Amazonが顧客の個人情報を広告に使用することに同意することを示します。 指定できる値は、「GRANTED」と「DENIED」です。 「拒否」に設定されたコネクションを介して送信されたレコードは、Amazon Ads 内での使用を目的として拒否されます。
 
-![新しい宛先の設定](../../assets/catalog/advertising/amazon_ads_image_4.png)
+![新しい宛先の設定](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -124,7 +126,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 [!DNL Amazon Ads] 接続では、ID 照合のために、ハッシュ化されたメールアドレスとハッシュ化された電話番号をサポートしています。 以下のスクリーンショットは、[!DNL Amazon Ads] 接続と互換性のある照合の例を示しています。
 
-![アドビから Amazon Ads へのマッピング](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![アドビから Amazon Ads へのマッピング](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * ハッシュ化されたメールアドレスをマッピングするには、`Email_LC_SHA256` ID 名前空間をソースフィールドとして選択します。
 * ハッシュ化された電話番号をマッピングするには、`Phone_SHA256` ID 名前空間をソースフィールドとして選択します。
@@ -143,7 +145,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 **[!UICONTROL 広告主 ID]**/**[!UICONTROL オーディエンス]**/**[!UICONTROL 広告主オーディエンス]** に移動します。 オーディエンスが正常に作成され、オーディエンスメンバーの最小数を満たしている場合は、`Active` のステータスが表示されます。オーディエンスのサイズとリーチについて詳しくは、Amazon DSP ユーザーインターフェイスの右側にある予測リーチパネルを参照してください。
 
-![Amazon DSP オーディエンス作成の検証](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Amazon DSP オーディエンス作成の検証](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **[!DNL Amazon Marketing Cloud]** 用
 
@@ -151,8 +153,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Amazon Marketing Cloudオーディエンス作成の検証 ](../../assets/catalog/advertising/amazon_ads_image_5.png)
-
+![Amazon Marketing Cloudオーディエンス作成の検証 ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 
@@ -172,6 +173,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
+| 2025年2月 | データフローを書き出し、宛先をベータ版から一般公開に昇格するための ]**0}Amazon広告の同意シグナル } を追加する要件が追加されました。**[!UICONTROL  |
 | 2024年5月 | 機能とドキュメントの更新 | パラメーターをAmazon Ads に書き出 `countryCode` マッピングオプションを追加しました。 [ マッピング手順 ](#map) で `countryCode` を使用して、Amazonでの ID 一致率を改善します。 |
 | 2024年3月 | 機能とドキュメントの更新 | [!DNL Amazon Marketing Cloud] （AMC）で使用するオーディエンスを書き出すオプションを追加しました。 |
 | 2023年5月 | 機能とドキュメントの更新 | <ul><li>[宛先接続ワークフロー](#destination-details)での広告主地域選択のサポートを追加しました。</li><li>広告主地域の選択の追加を反映するようにドキュメントを更新しました。正しい広告主地域選択について詳しくは、[Amazon ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。</li></ul> |

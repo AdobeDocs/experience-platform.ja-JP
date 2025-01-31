@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
+source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
 workflow-type: tm+mt
-source-wordcount: '1270'
-ht-degree: 84%
+source-wordcount: '1269'
+ht-degree: 83%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 84%
       * [広告の宛先の概要](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 接続](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud 拡張機能](./catalog/advertising/adobe-advertising-cloud.md)
-      * [（ベータ版）Amazon Ads 接続](./catalog/advertising/amazon-ads.md)
+      * [Amazon Ads 接続](./catalog/advertising/amazon-ads.md)
       * [Awin Advertiser Conversion Tag 拡張機能](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag 拡張機能](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads Universal Event Tracking（UET）拡張機能](./catalog/advertising/bing-ads.md)
