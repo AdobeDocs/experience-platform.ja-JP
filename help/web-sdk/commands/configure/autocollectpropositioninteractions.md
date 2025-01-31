@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: リンクデータを自動収集するようにExperience Platform web SDKを設定する方法について説明します。
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## Web SDK タグ拡張機能を使用して、自動提案とインタラクションのクリックトラッキングを有効にします {#tag-extension}
 
 1. Adobe ID資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
-2. **データ収集**/**タグ** に移動します。
-3. Desire タグプロパティを選択します。
-4. **拡張機能** に移動し、Adobe Experience Platform Web SDK カードで **設定** を選択します。
-5. 「**[!UICONTROL データ収集]**」セクションまでスクロールし、「**提案とインタラクションリンクトラッキングを有効にする**」チェックボックスを選択します。
-6. 「**保存**」を選択して、変更を公開します。
+1. **データ収集**/**タグ** に移動します。
+1. Desire タグプロパティを選択します。
+1. **拡張機能** に移動し、Adobe Experience Platform Web SDK カードで **設定** を選択します。
+1. 「**[!UICONTROL データ収集]**」セクションまでスクロールし、「**提案とインタラクションリンクトラッキングを有効にする**」チェックボックスを選択します。
+1. 「**保存**」を選択して、変更を公開します。
 
 ## Web SDK JavaScript ライブラリを介した自動提案およびインタラクションのリンクトラッキングを有効にします {#library}
 
