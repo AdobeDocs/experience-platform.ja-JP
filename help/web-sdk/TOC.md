@@ -6,7 +6,7 @@ breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
 role: Developer
-source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
+source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 52%
@@ -18,15 +18,15 @@ ht-degree: 52%
 
 * [Web SDK の概要](home.md)
 * [リリースノート](release-notes.md)
-* Web SDK のインストール {#install}
+* Web SDKのインストール {#install}
    * [概要](install/overview.md)
-   * [タグ拡張機能を使用した Web SDK のインストール](install/extension.md)
-   * [JavaScript ライブラリを使用して Web SDK をインストールします](install/library.md)
-   * [NPM パッケージを使用して Web SDK をインストール](install/npm.md)
+   * [タグ拡張機能を使用した web SDKのインストール](install/extension.md)
+   * [JavaScript ライブラリを使用して web SDKをインストールします](install/library.md)
+   * [NPM パッケージを使用して web SDKをインストールします](install/npm.md)
 * コマンド {#commands}
    * {#configure} の設定
       * [概要](commands/configure/overview.md)
-      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+      * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [context](commands/configure/context.md)
@@ -91,7 +91,7 @@ ht-degree: 52%
    * Adobe Journey Optimizer {#ajo}
       * [概要](personalization/ajo/overview.md)
       * [シングルページアプリケーションの実装](personalization/ajo/web-spa-implementation.md)
-      * [Web SDK での Web アプリ内メッセージのサポートの設定](personalization/web-in-app-messaging.md)
+      * [Web SDKでの Web アプリ内メッセージのサポートの設定](personalization/web-in-app-messaging.md)
 
 * 同意 {#consent}
    * IAB の透明性および同意フレームワーク 2.0 {#iab-tcf}
@@ -101,7 +101,7 @@ ht-degree: 52%
 
 * ユースケース {#use-cases}
    * [概要](use-cases/overview.md)
-   * [Web SDK を使用したAdobe Analyticsへのデータの送信](use-cases/adobe-analytics.md)
+   * [Web SDKを使用したAdobe Analyticsへのデータの送信](use-cases/adobe-analytics.md)
    * [User agent client hints](use-cases/client-hints.md)
    * [コマースデータの収集](use-cases/collect-commerce-data.md)
    * [CSP の設定](use-cases/configuring-a-csp.md)
