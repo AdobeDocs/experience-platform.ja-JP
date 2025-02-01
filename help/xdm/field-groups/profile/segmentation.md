@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメントメンバーシップの詳細スキーマフィールドグループ
 description: セグメントメンバーシップの詳細スキーマフィールドグループについて説明します。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '402'
 ht-degree: 20%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 20%
 >
 >`segmentMembership` フィールドは、このフィールドグループを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドに手動で入力したり、更新したりしないでください。 セグメント化ジョブの実行時に、システムによって各プロファイルの `segmentMembership` マップが自動的に更新されます。
 
-<img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
+![ プロファイルセグメント化 ](../../images/data-types/profile-segmentation.png){width=400}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

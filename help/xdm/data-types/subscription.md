@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 購読データタイプ
 description: 購読エクスペリエンスデータモデル（XDM）データタイプについて説明します。
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '390'
 ht-degree: 29%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 29%
 
 [!UICONTROL  サブスクリプション ] は、標準のエクスペリエンスデータモデル（XDM）データタイプで、時間や使用状況に基づいて利用するソフトウェア、サービス、商品に対するライセンスされたエンタイトルメントを記述します。
 
-<img src="../images/data-types/subscription-data-type.png" width="500" /><br />
+![](../images/data-types/subscription-data-type.png){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

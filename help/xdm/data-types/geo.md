@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 地域データ タイプ
 description: Geo XDM データタイプについて説明します。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '176'
 ht-degree: 52%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 52%
 
 [!UICONTROL Geo] は、イベントが観測された地理的領域を記述する標準の XDM データタイプです。
 
-<img src="../images/data-types/geo.png" width="400" /><br />
+![](../images/data-types/geo.png){width=400}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

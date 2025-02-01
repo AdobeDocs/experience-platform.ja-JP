@@ -4,9 +4,9 @@ solution: Experience Platform
 title: デバイスのデータタイプ
 description: デバイス XDM データタイプについて説明します。
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '307'
 ht-degree: 19%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 19%
 
 [!UICONTROL  デバイス ] は、識別されたデバイスを記述する標準の XDM データタイプです。 デバイスは、セッションをまたいで（通常は cookie で）トラッキング可能なアプリケーションまたはブラウザーインスタンスです。
 
-<img src="../images/data-types/device.png" width="450" /><br />
+![](../images/data-types/device.png){width=450}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: エンドユーザー ID 詳細スキーマフィールドグループ
 description: エンドユーザー ID 詳細スキーマフィールドグループについて説明します。
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 16%
+source-wordcount: '202'
+ht-degree: 15%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 16%
 
 [!UICONTROL  エンドユーザー ID 詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、複数のAdobeアプリケーションをまたいで個人の ID 情報を記述するために使用されます。 フィールドグループは、ルートレベルの `endUserIDs` オブジェクトを提供します。このオブジェクトには、データが取り込まれると値が自動的に更新される読み取り専用の `_experience` フィールドが含まれています。
 
-<img src="../../images/field-groups/enduserids.png" width="700" /><br />
+![](../../images/field-groups/enduserids.png){width=700}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

@@ -6,9 +6,9 @@ title: 顧客 AI エラーのトラブルシューティング
 description: 顧客 AI の一般的なエラーに対する回答を示します。
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1755'
 ht-degree: 31%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 31%
 
 **[!UICONTROL 失敗]**&#x200B;または **[!UICONTROL トレーニングの問題]**&#x200B;が表示された場合は、実行ステータスを選択してサイドパネルを開くことができます。サイドパネルには、**[!UICONTROL 前回の実行ステータス]**&#x200B;と&#x200B;**[!UICONTROL 前回の実行詳細]**&#x200B;が含まれています。**[!UICONTROL 前回の実行詳細]**&#x200B;には、実行が失敗した理由に関する情報が含まれています。 エラーの詳細情報が顧客 AI から提供されない場合は、提供されたエラーコードをサポートに連絡してください。
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## Chrome の匿名モードで顧客 AI にアクセスできない
 
@@ -39,7 +39,7 @@ Google Chrome の匿名モードセキュリティ設定が更新されたので
 
 「[!UICONTROL モデルの品質が低いです。変更した設定で新しいアプリを作成することをお勧めします。]」というエラーが表示される場合は、以下の推奨手順に従って、トラブルシューティングを行ってください。
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### 推奨される修正
 

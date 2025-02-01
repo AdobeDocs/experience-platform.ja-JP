@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 環境データタイプ
 description: 環境 XDM データタイプについて説明します。
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '442'
 ht-degree: 19%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 19%
 >
 >すべての値は、Adobeでライセンスされている [DeviceAtlas](https://deviceatlas.com) データベースに合わせる必要があります。
 
-<img src="../images/data-types/environment.png" width="400" /><br />
+![](../images/data-types/environment.png){width=400}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ジオシェイプのデータタイプ
 description: ジオシェイプ XDM データタイプについて説明します。
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '240'
 ht-degree: 31%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 31%
 
 [!UICONTROL  ジオシェイプ ] は、地理的領域の形状を記述する標準 XDM データタイプです。 このデータタイプは、[schema.org](https://schema.org/GeoShape) に記載されている公開仕様に基づいています。
 
-<img src="../images/data-types/geo-shape.png" width="500" /><br />
+![](../images/data-types/geo-shape.png){width=500}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

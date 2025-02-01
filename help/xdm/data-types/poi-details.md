@@ -4,10 +4,10 @@ solution: Experience Platform
 title: POI の詳細データ タイプ
 description: 目標点の詳細 XDM データタイプについて説明します。
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 16%
+source-wordcount: '182'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 [!UICONTROL  目標点の詳細 ] は、イベントが観測された地理的関連データを記述する標準 XDM データタイプです。
 
-<img src="../images/data-types/poi-details.png" width="550" /><br />
+![](../images/data-types/poi-details.png){width=550}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

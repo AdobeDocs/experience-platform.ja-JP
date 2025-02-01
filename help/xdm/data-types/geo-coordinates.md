@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 地理座標のデータ タイプ
 description: 地理座標 XDM データタイプについて説明します。
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 13%
+source-wordcount: '124'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 [!UICONTROL  ジオコーディネート ] は、場所の地理的座標を表す標準 XDM データタイプです。 このデータタイプは、[schema.org](https://schema.org/GeoCoordinates) に記載されている公開仕様に基づいています。
 
-<img src="../images/data-types/geo-coordinates.png" width="400" /><br />
+![](../images/data-types/geo-coordinates.png){width=400}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |

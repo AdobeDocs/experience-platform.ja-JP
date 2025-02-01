@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy ServiceUI でのプライバシージョブの管理
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーションをまたいでプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1770'
-ht-degree: 45%
+source-wordcount: '1786'
+ht-degree: 44%
 
 ---
 
@@ -159,29 +159,29 @@ Waiting:
 
 **[!UICONTROL Create Request]** ダイアログが開き、現在選択されている規制タイプのプライバシージョブリクエストを送信するために使用できるオプションが表示されます。
 
-<img src="../images/user-guide/request-builder.png" width="500" /><br/>
+![](../images/user-guide/request-builder.png){width=500}
 
 リクエストの **[!UICONTROL ジョブタイプ]** （「削除」または「アクセス」）と 1 つ以上の使用可能な製品をリストから選択します。
 
 Privacy Serviceは、個人データに対して、[!UICONTROL  アクセス ] （読み取り）、[!UICONTROL  削除 ] の 2 種類のジョブリクエストをサポートしています。 お問い合わせの対象に関連する製品に保持されているすべての情報を受け取るリクエストを送信するか、お問い合わせの対象に関連するすべての情報を削除するリクエストを送信できます。
 
-<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
+![](../images/user-guide/type-and-products.png){width=500}
 
 **[!UICONTROL 名前空間タイプ]** で、[!DNL Privacy Service] に送信される顧客 ID に適した名前空間タイプを選択します。
 
-<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+![](../images/user-guide/namespace-type.png){width=500}
 
 標準の名前空間タイプを使用する場合、ドロップダウンメニュー（メール、ECID、AAID）から名前空間を選択し、右側のテキストボックスに ID 値を入力します。ID ごとに **\&lt;enter>** キーを押して、リストに追加します。
 
-<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+![](../images/user-guide/standard-namespace.png){width=500}
 
 カスタム名前空間タイプを使用する場合、以下の ID 値を指定する前に、名前空間を手動で入力する必要があります。
 
-<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+![](../images/user-guide/custom-namespace.png){width=500}
 
 完了したら、「**[!UICONTROL 作成]**」をクリックします。
 
-<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
+![](../images/user-guide/request-builder-create.png){width=500}
 
 ダイアログが閉じ、新しいジョブ（複数の場合あり）が現在の処理ステータスと共にジョブリクエストウィジェットにリスト表示されます。
 
@@ -195,12 +195,12 @@ Privacy Serviceは、個人データに対して、[!UICONTROL  アクセス ] �
 
 **[!UICONTROL Upload JSON]** ダイアログが開き、JSON ファイルをドラッグ＆ドロップできるウィンドウが表示されます。
 
-<img src="../images/user-guide/upload-json.png" width="500" /><br/>
+![](../images/user-guide/upload-json.png){width=500}
 
 アップロードする JSON ファイルがない場合は、「**[!UICONTROL ダウンロードAdobe-GDPR-Request.json]**」を選択して、データ主体から収集した値に従って入力できるテンプレートをダウンロードします。
 
 
-<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
+![](../images/user-guide/privacy-template.png){width=500}
 
 
 コンピューター上で JSON ファイルを探し、ダイアログウィンドウにドラッグします。アップロードが正常に完了すると、ダイアログにファイル名が表示されます。必要に応じて、引き続き JSON ファイルをダイアログにドラッグ＆ドロップして追加できます。
