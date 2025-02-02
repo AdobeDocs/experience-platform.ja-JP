@@ -2,7 +2,7 @@
 title: クイックスタートガイド
 description: Adobe Experience Platform でタグをすぐに稼動させる方法について説明します。
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
+source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 90%
@@ -134,6 +134,6 @@ Web ページ、ホスティング場所、タグの間の関係を理解する�
 
 タグについて詳しくは、次のリソースを参照してください。
 
-* **[データ収集コミュニティ](https://forums.adobe.com/community/experience-cloud/platform/launch)**：質問に回答、アイデアを送信、他のユーザーのアイデアに投票します。Adobe ID でログインします。
+* **[データ収集コミュニティ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**：質問に回答、アイデアを送信、他のユーザーのアイデアに投票します。Adobe ID でログインします。
 * **[開発者ドキュメント](../api/overview.md)**: タグ開発者コミュニティに参加して、拡張機能を構築したり、タグ API を使用したりします
 * **[Tutorials の概要](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=ja)**：これらのドキュメントでは、Android アプリのイベント転送や Mobile SDK など、タグの概念について説明します。
