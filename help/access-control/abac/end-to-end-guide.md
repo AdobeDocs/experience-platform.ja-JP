@@ -4,10 +4,10 @@ title: 属性ベースのアクセス制御エンドツーエンドガイド
 description: このドキュメントでは、Adobe Experience Platformの属性ベースのアクセス制御に関するエンドツーエンドガイドを提供します
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 23%
+source-wordcount: '1593'
+ht-degree: 10%
 
 ---
 
@@ -66,31 +66,8 @@ Platform UI の権限ワークスペースが表示され、**[!UICONTROL 概要
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="ラベルとは"
->abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Platform には、アドビ定義の「コア」データ使用状況ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。例えば、RHD (規制医療データ) などの、機密を意味する「S」ラベルを使用すると、保護された医療情報 (PHI) を参照するデータを分類できます。また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
+>abstract="ラベルを使用すると、データに適用される使用ポリシーおよびアクセスポリシーに従ってデータセットとフィールドを分類できます。 Platform には、Adobe定義の <strong> コア </strong> データ使用ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。 例えば、RHD （規制医療データ）などの、機密を意味する <strong>S</strong> ラベルを使用すると、保護された医療情報（PHI）を参照するデータを分類できます。 また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#understanding-data-usage-labels" text="データ使用ラベルの概要"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_labels_about_create"
->title="新しいラベルの作成"
->abstract="組織のニーズに合わせて独自のカスタムラベルを作成できます。カスタムラベルを使用して、データガバナンスとアクセス制御の両方の設定をデータに適用できます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#manage-labels" text="カスタムラベルの管理"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about"
->title="役割とは"
->abstract="役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素です。 役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja" text="役割の管理"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about_create"
->title="新しい役割の作成"
->abstract="新しい役割を作成するいことで、Platform インスタンスにアクセスするユーザーをより適切に分類することができます。例えば、社内マーケティングチーム用の役割を作成して、その役割に RHD ラベルを適用することで、社内マーケティングチームが保護された医療情報 (PHI) にアクセスできるようになります。また、外部エージェンシー用の役割を作成して、その役割に RHD ラベルを適用しないことで、医療情報 (PHI) データにアクセスするのを拒否することもできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja#create-a-new-role" text="新しい役割の作成"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_details"
->title="役割の概要"
->abstract="役割の概要ダイアログには、その役割へのアクセスが許可されているリソースとサンドボックスが表示されます。"
 
 役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素です。 役割には特定の権限セットが付与され、必要なアクセス範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
 

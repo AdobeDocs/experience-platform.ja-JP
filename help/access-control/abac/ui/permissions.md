@@ -3,14 +3,20 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
+source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1608'
 ht-degree: 35%
 
 ---
 
-# 役割の権限の管理
+# 役割の権限の管理 {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="役割とは"
+>abstract="役割は、管理者、スペシャリストまたはエンドユーザーが組織内のリソースに対して持つアクセスを定義します。 Platform インスタンスとやり取りするユーザーを分類し、アクセス制御ポリシーの構成要素にします。 役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja" text="役割の管理"
 
 >[!IMPORTANT]
 >
@@ -41,7 +47,14 @@ ht-degree: 35%
 
 ![ 選択したフィルターで「X」と「すべての選択をクリア」がハイライト表示された権限 UI の役割ダッシュボード ](../../images/flac-ui/flac-clear-filters.png)
 
-## 役割の詳細
+## 役割の詳細 {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="役割の概要"
+>abstract="役割の概要ダイアログには、特定の役割がアクセスできるリソースやサンドボックスなど、役割の詳細が表示されます。 役割のワークスペース内の対応するタブに移動すると、役割のラベル、ユーザー、ユーザーグループ、API 資格情報を管理できます。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="役割のラベルの管理"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="役割のユーザー管理"
 
 「**[!UICONTROL 役割]**」タブから役割を選択すると、役割の [!UICONTROL  詳細 ] ダッシュボードが開きます。
 
