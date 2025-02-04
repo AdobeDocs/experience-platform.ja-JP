@@ -4,10 +4,10 @@ solution: Experience Platform
 title: サンドボックス UI ガイド
 description: このドキュメントでは、Adobe Experience Platform ユーザーインターフェイスのサンドボックスに関連する様々な操作を実行する手順について説明します。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
+source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 51%
+source-wordcount: '1115'
+ht-degree: 49%
 
 ---
 
@@ -82,6 +82,7 @@ Experience PlatformUI で、左側のナビゲーションの **[!UICONTROL サ�
 >* Adobe Audience Manager または Audience Core Service での双方向のセグメント共有に使用される、ユーザー作成の実稼動用サンドボックスは、警告メッセージの後でリセットできます。
 >* サンドボックスのリセットを開始する前に、コンポジションを手動で削除して、関連するオーディエンスデータが適切にクリーンアップされるようにする必要があります。
 >* サンドボックス ID は、リセットが完了すると変更されます。
+>* [Journey Optimizer B2B edition](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview) の場合、サンドボックスのリセットは **現在サポートされていません**。 Journey Optimizer B2B editionにマッピングされているサンドボックスをリセットまたは削除すると、Journey Optimizer B2B editionのデータが恒久的に失われ、新しいJourney Optimizer B2B edition インスタンスのプロビジョニングが必要になる可能性があります。
 
 ### オーディエンス構成の削除
 
