@@ -3,7 +3,7 @@ title: イベント転送の概要
 description: Adobe Experience Platform でのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
 source-wordcount: '887'
 ht-degree: 84%
@@ -33,9 +33,9 @@ Edge ネットワークにデータを送信した後、Adobeソリューショ�
 
 ## 前提条件
 
-* Adobe Real-Time CDP Connections、Prime または Ultimate （価格については、Adobeアカウントチームにお問い合わせください）
+* Adobe Real-Time CDP Connections、Prime、Ultimateのいずれかです（価格については、Adobeアカウントチームにお問い合わせください）
 * Adobe Experience Platform でのイベント転送
-* Edge Networkにデータを送信するように設定されたAdobe Experience Platform Web SDK、Mobile SDK またはEdge Networkサーバー API
+* Edge Networkにデータを送信するように設定されたAdobe Experience Platform Web SDK、Mobile SDKまたはEdge Networkサーバー API
 * エクスペリエンスデータモデル（XDM）へのデータのマッピング（このマッピングはタグを使用しておこなうことができます）
 
 ## XDM スキーマの作成
@@ -82,7 +82,7 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 1. 「**[!UICONTROL 保存]**」を選択します。
 
-## イベント転送の有効化
+## イベント転送の有効化 {#enable-event-forwarding}
 
 次に、Edge ネットワークを設定して、イベント転送や他のアドビ製品にデータを送信します。
 
@@ -102,15 +102,15 @@ Adobe Experience Platform でデータストリームを作成するには、イ
 
 ## Platform Web SDK 拡張機能を設定して、以前作成したデータストリームにデータを送信します。
 
-**[!UICONTROL Tags]** ワークスペースでプロパティを作成し、**[!UICONTROL Extensions]** に移動して、カタログからExperience PlatformWeb SDK 拡張機能を選択して、設定とインストールを行います。
+**[!UICONTROL Tags]** ワークスペースにプロパティを作成し、**[!UICONTROL Extensions]** に移動して、カタログからExperience Platform Web SDK拡張機能を選択して、設定とインストールを行います。
 
-設定オプションについて詳しくは、[Web SDK 拡張機能のドキュメント ](../../extensions/client/web-sdk/overview.md) を参照してください。
+設定オプションについて詳しくは、[Web SDK拡張機能のドキュメント ](../../extensions/client/web-sdk/overview.md) を参照してください。
 
 ## Platform Web SDK にデータを送信するタグルールを作成する
 
 上記の手順を実行した後、イベント転送とタグを使用し、ページからのリクエストを 1 つだけ必要とするデータ定義やルールなどを作成します。
 
-Platform Web SDK 拡張機能と「イベントを送信」アクションタイプを使用して、ページ読み込みルールを作成します。
+Platform Web SDK拡張機能と「イベントを送信」アクションタイプを使用して、ページ読み込みルールを作成します。
 
 1. 「**[!UICONTROL ルール]**」タブを開き、「**[!UICONTROL 新しいルールを作成]**」を選択します。
 

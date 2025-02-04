@@ -1,10 +1,10 @@
 ---
-title: AdobeSnapchat Conversions API extension Integration
-description: このAdobe Experience Platform Web Events API を使用すると、Snapchat と直接 Web サイトのやり取りを共有できます。
+title: Snapchat Conversions API 拡張機能の概要
+description: Snapchat 変換を使用して、サーバーサイドのイベントデータを Snap に送信します。
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 6403c339b2407410e282a25a0382845214bb6a95
+source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '965'
 ht-degree: 4%
 
 ---
@@ -15,9 +15,12 @@ ht-degree: 4%
 
 ## [!DNL Snapchat] 前提条件 {#prerequisites}
 
-[!DNL Snapchat] Conversions API を使用するには、Adobe Experience Platformに [ イベント転送プロパティ ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) が設定されていて、このプロパティを編集するための [ 必要な権限 ](https://experienceleague.adobe.com/en/docs/experience-platform/collection/permissions) が必要です。
+[!DNL Snapchat] Conversions API を使用するには：
 
-[ データストリーム ](/help/tags/ui/event-forwarding/getting-started.md) を作成し、[ イベント転送サービス ](/help/tags/ui/event-forwarding/getting-started#enable-event-forwarding) を追加します。
+* Adobe Experience Platformで [ イベント転送プロパティ ](/help/tags/ui/event-forwarding/getting-started.md) を設定する必要があります。
+* また、プロパティを編集するには [ 必要な権限 ](/help/collection/permissions.md) が必要です。
+
+[ データストリーム ](/help/tags/ui/event-forwarding/getting-started.md) を作成し、[ イベント転送サービス ](/help/tags/ui/event-forwarding/getting-started.md#enable-event-forwarding) を追加します。
 
 Conversions API を使用するには、**[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) アカウントが必要です。 Business Manager は、広告主が **[!DNL Snapchat]** のマーケティング活動をビジネス全体および外部パートナーと統合するのに役立ちます。 Business Manager アカウントがない場合は、作成に関する **[!DNL Snapchat]** [ ヘルプセンターの記事 ](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) を参照してください。
 
@@ -34,7 +37,7 @@ Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.
 1. 左側のナビゲーションパネルで、「**[!UICONTROL 拡張機能]**」を選択します。
 2. **[!UICONTROL Snap Conversion API Extension]** を検索し、「**[!UICONTROL インストール]**」を選択します。
 
-   ![ インストールボタンを示す画像 ](../../../images/extensions/server/snap/install.png)。
+   ![ インストールボタンを示す画像 ](../../../images/extensions/server/snap/install.png)
 
 3. 設定画面で、次の値を入力します。
 
@@ -43,17 +46,17 @@ Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.
 
 完了したら「**[!UICONTROL 保存]**」を選択します。
 
-![ ピクセル ID と API トークンボタンを示す画像 ](../../../images/extensions/server/snap/configure.png)。
+![ ピクセル ID と API トークンボタンを示す画像 ](../../../images/extensions/server/snap/configure.png)
 <!-- 
 ![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) -->
 
 ## データ要素の作成 {#create-data-elements}
 
-データポイントをパラメーターとして [!DNL Snapchat] Conversions API 拡張機能に渡すには、データポイントごとに [ データ要素 ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) を作成する必要があります。 次の手順に従います。
+[!DNL Snapchat] Conversions API 拡張機能にデータを送信するには、データパラメーターごとに [ データ要素 ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) を作成します。 次の手順に従います。
 
 1. プロパティの **[!UICONTROL プロパティ情報]** 画面で **[!UICONTROL オーサリング]**>**[!UICONTROL データ要素]** に移動し、「**[!UICONTROL データ要素を追加]**」を選択します。
 
-   ![ 「データ要素を追加」ボタンを示す画像 ](../../../images/extensions/server/snap/add_data_element.png)。
+   ![ 「データ要素を追加」ボタンを示す画像 ](../../../images/extensions/server/snap/add_data_element.png)
 
 2. データ要素の名前を入力します。
 
@@ -61,19 +64,19 @@ Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.
 
 4. ドロップダウンメニューから適切な項目を選択し、右側のパネルの [!UICONTROL  パス ] フィールドに入力して、スキーマ内の目的のデータを参照します。
 
-   ![ データ要素の作成画面を示す画像 ](../../../images/extensions/server/snap/create_data_element.png)。
+   ![ データ要素の作成画面を示す画像 ](../../../images/extensions/server/snap/create_data_element.png)
 
 例えば、以下に示すスキーマの `snapClickId` を参照するデータ要素を作成するとします。
 
-![ スキーマ ](../../../images/extensions/server/snap/schema.png) を示す画像。
+![ スキーマ ](../../../images/extensions/server/snap/schema.png) を示す画像
 
 データ要素は XDM スキーマの `_snap.inc.exchange` の下に `snapClickId` るため、設定する必要があります。
 
-![ データ要素の編集画面を示す画像 ](../../../images/extensions/server/snap/edit_data_element.png)。
+![ データ要素の編集画面を示す画像 ](../../../images/extensions/server/snap/edit_data_element.png)
 
-データ要素の作成について詳しくは、[ イベント転送プロパティのドキュメント ](/help/tags/ui/event-forwarding/overview#data-elements.md) を参照してください。
+データ要素の作成について詳しくは、[ イベント転送プロパティのドキュメント ](/help/tags/ui/event-forwarding/overview.md#data-elements) を参照してください。
 
-## コンバージョンイベントをスナップに送信するためのルールを作成 {#create-snap-rules}
+## 変換イベントを Snap に送信するルールを作成する {#create-snap-rules}
 
 [ ルール ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) は、Platform で拡張機能をトリガーするために使用されます。 この節では、イベント転送プロパティ内でルールを作成し、Conversions API 拡張機能を使用してコンバージョンイベントを Snap に送信する方法について概説します。
 
@@ -81,11 +84,11 @@ Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.
 
 1. イベント転送プロパティに移動し、オーサリングメニューから **[!UICONTROL ルール]** を選択します。 次に、「**[!UICONTROL 新規ルールを作成]**」をクリックします。
 
-   ![ 左側のナビゲーションでルールを示す画像 ](../../../images/extensions/server/snap/create_new_rule.png)。
+   ![ 左側のナビゲーションのルールを示す画像 ](../../../images/extensions/server/snap/create_new_rule.png)
 
 2. ルールに名前を付け、スナップ・イベントをトリガーする条件を構成します。 例えば、イベントに注文番号が含まれる場合に `PURCHASE` イベントを送信するには、ユーザーインタラクションに有効な発注番号が含まれているかどうかを確認する条件を設定します。
 
-   ![ 条件設定画面を示す画像 ](../../../images/extensions/server/snap/action_configuration.png)。
+   ![ 条件設定画面を示す画像 ](../../../images/extensions/server/snap/action_configuration.png)
 
 3. 条件を保存した後、Snap Conversion API をトリガーするアクションを追加します。 左側のパネルで以下を行います。
 
@@ -95,7 +98,7 @@ Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.
 
    * ルールに適切な名前を付けます。
 
-   ![ アクション設定画面を示す画像 ](../../../images/extensions/server/snap/action_configuration.png)。
+   ![ アクション設定画面を示す画像 ](../../../images/extensions/server/snap/action_configuration.png)
 
 4. 右側のパネルの [ データバインディング ](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) セクションで、イベントに送信する **[!UICONTROL CAPI パラメーター値]** を設定します。 以下に示すように、拡張機能のフィールドは CAPI パラメーターにマッピングされます。 各パラメーターについて詳しくは、[Snapchat Conversions API ドキュメント ](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) を参照してください。
 
@@ -136,17 +139,15 @@ Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.
 | データ使用の制限 | `data_processing_options` |
 | ページ Url | `event_source_url` |
 
+{style="table-layout:auto"}
+
 ### 必須フィールドとオプションフィールド
 
-* 必須フィールド：
+各イベントには `event_source` が必要で、常に `WEB.` に設定されます。一致させるには、次のフィールドまたは組み合わせのうち少なくとも 1 つが必要です。
 
-   * すべてのイベントは `event_source` を `WEB` に設定する必要があります。
-
-   * 照合には、次のフィールドまたは組み合わせの少なくとも 1 つが必要です。
-
-      * メール
-      * 電話番号
-      * IP アドレスとユーザーエージェント
+* メール
+* 電話番号
+* IP アドレスとユーザーエージェント
 
 **その他のメモ：**
 
@@ -175,21 +176,21 @@ Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.
 }
 ```
 
-[ カスタムコンバージョン値と ROAS レポート ](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US) を使用するには、`contents` フィールドに関連するパラメーターを含めます。 例えば、`brand`、`item_price`、`id` です。
+[ カスタムコンバージョン値と ROAS レポート ](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US) を使用するには、`contents` フィールドに関連するパラメーターを含めます。 購入イベントの設定例は、`brand`、`item_price`、`id` のようになります。
 
 `Purchase` イベントの設定例：
 
-[データバインディングを示す画像](../../../images/extensions/server/snap/data_bindings.png)
+![ データバインディングを示す画像 ](../../../images/extensions/server/snap/data_bindings.png)
 
 オプションのフィールドは、次のように設定できます。
 
-[オプションフィールドを示す画像](../../../images/extensions/server/snap/optional_fields.png)
+![ オプションフィールドを示す画像 ](../../../images/extensions/server/snap/optional_fields.png)
 
 上記のようにルールの名前、条件、アクションを設定したら、ルールを保存して有効になっていることを確認します。
 
-[有効なルールを示す画像](../../../images/extensions/server/snap/enabled_rule.png)
+![ 有効なルールを示す画像 ](../../../images/extensions/server/snap/enabled_rule.png)
 
-これで、これらの変更をプロパティに公開できます。 詳しくは、[ 公開フロー ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) に関するドキュメントを参照してください。
+これで、これらの変更をプロパティに公開できます。 詳しくは、[ 公開フロー ](/help/tags/ui/publishing/overview.md) （https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview）のドキュメントを参照してください。
 
 ## トラブルシューティング {#troubleshoot}
 
