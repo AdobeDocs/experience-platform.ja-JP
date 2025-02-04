@@ -3,10 +3,10 @@ title: Amazon Redshift Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してAmazon Redshift をAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 36%
+source-wordcount: '378'
+ht-degree: 34%
 
 ---
 
@@ -23,7 +23,11 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。Platform は、リレーショナル、NoSQL、データウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには、[!DNL Amazon Redshift] が含まれます。
 
-## IP アドレス許可リスト
+## Azure にExperience Platformするための [!DNL Amazon Redshift] ソースの設定 {#azure}
+
+Azure にExperience Platformするための [!DNL Amazon Redshift] アカウントを設定する方法については、次の手順に従います。
+
+### IP アドレス許可リスト
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
@@ -41,7 +45,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ## API を使用して [!DNL Amazon Redshift] と Platform を接続する
 
-- [Flow Service API を使用したAmazon Redshift ベース接続の作成](../../tutorials/api/create/databases/redshift.md)
+- [Flow Service API を使用してAmazon Redshift をExperience Platformに接続](../../tutorials/api/create/databases/redshift.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 

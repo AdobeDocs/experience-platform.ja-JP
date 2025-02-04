@@ -2,9 +2,9 @@
 title: Salesforce Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してSalesforceをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
+source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1560'
 ht-degree: 11%
 
 ---
@@ -19,11 +19,15 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 Experience Platform は、サードパーティの CRM システムからのデータ取り込みをサポートしています。CRM プロバイダーのサポートは [!DNL Salesforce] を含みます。
 
-## IP アドレス許可リスト
+## Azure にExperience Platformするための [!DNL Salesforce] ソースの設定 {#azure}
+
+Azure にExperience Platformするための [!DNL Salesforce] アカウントを設定する方法については、次の手順に従います。
+
+### IP アドレス許可リスト
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-## [!DNL Salesforce] から XDM へのフィールドマッピング
+### [!DNL Salesforce] から XDM へのフィールドマッピング
 
 [!DNL Salesforce] と Platform の間にソース接続を確立するには、[!DNL Salesforce] のソースデータフィールドを、Platform に取り込む前に、適切なターゲット XDM フィールドにマッピングする必要があります。
 
@@ -38,7 +42,7 @@ Experience Platform は、サードパーティの CRM システムからのデ�
 - [キャンペーンメンバー](../adobe-applications/mapping/salesforce.md#campaign-member)
 - [アカウント連絡先の関係](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
-## [!DNL Salesforce] 名前空間とスキーマ自動生成ユーティリティの設定
+### [!DNL Salesforce] 名前空間とスキーマ自動生成ユーティリティの設定
 
 [!DNL Salesforce] ソースを [!DNL B2B-CDP] の一部として使用するには、まず [!DNL Postman] ユーティリティを設定して、[!DNL Salesforce] 名前空間とスキーマを自動生成する必要があります。 次のドキュメントでは、[!DNL Postman] ユーティリティの設定に関する追加情報を示します。
 
@@ -271,7 +275,7 @@ public class Main {
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Salesforce] と Platform を接続する方法について説明します。
 
-- [Flow Service API を使用したSalesforce ベース接続の作成](../../tutorials/api/create/crm/salesforce.md)
+- [Flow Service API を使用したSalesforceのExperience Platformへの接続](../../tutorials/api/create/crm/salesforce.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 

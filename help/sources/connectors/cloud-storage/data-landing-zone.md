@@ -2,10 +2,10 @@
 title: Data Landing Zone Source
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を学ぶ
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1530d7b9815688ab58fb6349ef77e92124741883
+source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 24%
+source-wordcount: '1282'
+ht-degree: 22%
 
 ---
 
@@ -19,11 +19,15 @@ ht-degree: 24%
 
 [!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークの許可リストや地域間設定は必要ありません。 Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロードされるすべてのファイルおよびフォルダーに対して厳密に 7 日間の有効期限が適用されます。 すべてのファイルとフォルダーは、7 日後に削除されます。
 
+## Azure にExperience Platformするための [!DNL Data Landing Zone] ソースの設定 {#azure}
+
+Azure にExperience Platformするための [!DNL Data Landing Zone] アカウントを設定する方法については、次の手順に従います。
+
 >[!NOTE]
 >
 >[!DNL Azure Data Factory] から [!DNL Data Landing Zone] にアクセスする場合は、Experience Platformから提供される [SAS 資格情報 ](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) を使用して、[!DNL Data Landing Zone] 用にリンクされたサービスを作成する必要があります。 リンクされたサービスを作成したら、デフォルトのルートパスの代わりにコンテナパスを選択して、サー [!DNL Data Landing Zone] スを参照できます。
 
-## ファイルとディレクトリの命名制約
+### ファイルとディレクトリの命名制約
 
 クラウドストレージファイルまたはディレクトリに名前を付ける際に考慮する必要がある制約のリストを次に示します。
 
@@ -34,17 +38,17 @@ ht-degree: 24%
 - 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。さらに、制御文字（`0x00` から `0x1F`、`\u0081` など）など、一部の ASCII 文字または Unicode 文字も許可されていません。 HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
 - 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
-## データランディングゾーンのコンテンツを管理{#manage-the-contents-of-your-data-landing-zone}
+### データランディングゾーンのコンテンツを管理{#manage-the-contents-of-your-data-landing-zone}
 
 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/ja-jp/features/storage-explorer/) を使用して [!DNL Data Landing Zone] コンテナのコンテンツを管理することができます。
 
 [!DNL Azure Storage Explorer] UI で、左側のナビゲーションにある「接続」アイコンを選択します。 **リソースを選択**&#x200B;ウィンドウが開き、接続するオプションが表示されます。[!DNL Data Landing Zone] に接続する **[!DNL Blob container]** を選択してください。
 
-![select-resource](../../images/tutorials/create/dlz/select-resource.png)
+![Azure エクスプローラーのリソース ワークスペースの選択。](../../images/tutorials/create/dlz/select-resource.png)
 
 次に、接続方法として「**共有アクセス署名 URL (SAS)**」を選択し、「**次へ**」をクリックします。
 
-![select-connection-method](../../images/tutorials/create/dlz/select-connection-method.png)
+![ 共有アクセス署名が選択された Azure エクスプローラーの接続方法を選択 ](../../images/tutorials/create/dlz/select-connection-method.png)
 
 接続方法を選択した後、次に、[!DNL Data Landing Zone] コンテナに対応する **表示名** および **[!DNL Blob]コンテナ SAS URL** を指定する必要があります。
 
@@ -54,19 +58,19 @@ ht-degree: 24%
 
 [!DNL Data Landing Zone] SAS URL を入力し、「次へ **を選択します**
 
-![enter-connection-info](../../images/tutorials/create/dlz/enter-connection-info.png)
+![ 表示名と SAS URL が入力されている Azure エクスプローラーの接続情報を入力ワークスペース。](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 **概要**&#x200B;ウィンドウが開き、[!DNL Blob] エンドポイントと権限を含む設定の概要が表示されます。準備ができたら、「**接続**」を選択します。
 
-![概要](../../images/tutorials/create/dlz/summary.png)
+![ リソース接続の設定を再度取り込む Azure エクスプローラーの概要ワークスペース。](../../images/tutorials/create/dlz/summary.png)
 
 接続が成功すると、[!DNL Azure Storage Explorer] UI と [!DNL Data Landing Zone] コンテナが更新されます。
 
-![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
+![Azure エクスプローラーのデータランディングゾーンナビゲーションワークスペース。](../../images/tutorials/create/dlz/dlz-user-container.png)
 
 [!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続され、[!DNL Data Landing Zone] コンテナへのファイルのアップロードを開始できるようになりました。 アップロードするには、「**アップロード**」を選択し、「**ファイルをアップロード**」を選択します。
 
-![ アップロード ](../../images/tutorials/create/dlz/upload.png)
+![Azure エクスプローラーのファイルのアップロードワークスペース。](../../images/tutorials/create/dlz/upload.png)
 
 アップロードするファイルを選択したら、そのファイルをアップロードする [!DNL Blob] タイプと目的の宛先ディレクトリを特定する必要があります。 終了したら「**アップロード**」を選択します。
 
@@ -75,9 +79,9 @@ ht-degree: 24%
 | ブロック [!DNL Blob] | ブロック [!DNL Blobs] は、大量のデータを効率的にアップロードするために最適化されています。 ブロック [!DNL Blobs] は、[!DNL Data Landing Zone] の既定のオプションです。 |
 | Append [!DNL Blob] | 追加 [!DNL Blobs] は、ファイルの最後にデータを追加する場合に最適化されています。 |
 
-![upload-files](../../images/tutorials/create/dlz/upload-files.png)
+![Azure エクスプローラーのファイルのアップロードウィンドウ。選択したファイル、BLOB タイプおよび宛先カテゴリが表示されます。](../../images/tutorials/create/dlz/upload-files.png)
 
-## コマンドラインインターフェイスを使用した [!DNL Data Landing Zone] へのファイルのアップロード
+### コマンドラインインターフェイスを使用した [!DNL Data Landing Zone] へのファイルのアップロード
 
 また、デバイスのコマンドラインインターフェイスを使用して、[!DNL Data Landing Zone] ーバーへのアップロードファイルにアクセスすることもできます。
 
