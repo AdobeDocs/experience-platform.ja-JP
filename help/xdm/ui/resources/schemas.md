@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4072'
 ht-degree: 3%
 
 ---
@@ -354,7 +354,7 @@ abstract="スキーマがプロファイルで有効になっている場合、�
 >
 スキーマのフィールドの表示名を変更すると、その変更は、そのスキーマに基づく既存のデータセットにすぐに反映されます。
 
-スキーマフィールドの表示名を編集するには、キャンバスでフィールドを選択します。 右側のパネルの **[!UICONTROL 表示名]** で、新しい名前を入力します。
+**[!UICONTROL フィールドの表示名を表示]** をオンにして、フィールド名を表示名に変更します。 スキーマフィールドの表示名を編集するには、キャンバスでフィールドを選択します。 右側のパネルの **[!UICONTROL 表示名]** で、新しい名前を入力します。
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
