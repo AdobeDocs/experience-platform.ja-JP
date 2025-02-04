@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="一意の名前空間"
->abstract="グラフには、一意の名前空間を持つ 2 つの ID を含めることはできません。 グラフがこの制限を超えようとすると、最新のリンクが保持され、最も古いリンクが削除されます。"
+>abstract="1 つのグラフに、一意の名前空間を使用した 2 つの ID を含めることはできません。グラフがこの制限を超えようとした場合、最新のリンクが保持され、最も古いリンクが削除されます。"
 
 >[!AVAILABILITY]
 >

@@ -5,7 +5,7 @@ exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1509'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 96%
 >[!CONTEXTUALHELP]
 >id="platform_tags_publishing_flow"
 >title="公開フロー"
->abstract="公開フローに必要なユーザー権限のレベル（開発、承認、Publishの権限など）を把握します。"
+>abstract="開発、承認、公開の権限など、公開フローに必要なユーザー権限のレベルについて説明します。"
 
 >[!NOTE]
 >

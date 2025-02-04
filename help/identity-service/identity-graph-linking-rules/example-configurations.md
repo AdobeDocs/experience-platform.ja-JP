@@ -5,7 +5,7 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '2796'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -13,8 +13,8 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
->title="アルゴリズム設定"
->abstract="取り込んだ ID に合わせて、一意の名前空間と名前空間の優先度を設定します。"
+>title="アルゴリズムの設定"
+>abstract="取り込んだ ID に合わせて、一意の名前空間と、名前空間の優先度を設定します。"
 
 >[!AVAILABILITY]
 >

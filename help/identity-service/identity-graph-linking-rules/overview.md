@@ -29,12 +29,12 @@ ID グラフリンクルールを理解するには、次のドキュメント�
 * [グラフシミュレーション UI](./graph-simulation.md)
 * [ID 設定 UI](./identity-settings-ui.md)
 
-## グラフ崩壊のシナリオ {#graph-collapse-scenarios}
+## グラフ折りたたみシナリオ {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="グラフ折りたたみシナリオ"
->abstract="グラフが「崩れ」たり、複数の人物エンティティを表したりする理由は複数あります。"
+>abstract="グラフが「折りたたむ」ことや、複数のユーザーエンティティを表すことがある理由は複数あります。"
 
 この節では、ID グラフリンクルールを設定する際に検討する可能性のあるシナリオ例の概要を説明します。
 

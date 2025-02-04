@@ -1,16 +1,16 @@
 ---
-title: Real-Time CDPからクラウドストレージの宛先への配列オブジェクトの書き出し
+title: Real-Time CDP からクラウドストレージの宛先への配列オブジェクトの書き出し
 type: Tutorial
 description: 計算フィールドを使用して、Real-Time CDPからクラウドストレージの宛先に配列を文字列として書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# Real-Time CDPからクラウドストレージの宛先への配列オブジェクトの書き出し {#export-arrays-cloud-storage}
+# Real-Time CDP からクラウドストレージの宛先への配列オブジェクトの書き出し {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"

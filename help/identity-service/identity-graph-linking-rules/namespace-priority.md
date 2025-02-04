@@ -14,7 +14,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
 >title="名前空間の優先度"
->abstract="名前空間の優先度によって、ID グラフからリンクを削除する方法が決まります。"
+>abstract="名前空間の優先度によって、ID グラフからリンクを削除する方法が決定します。"
 
 >[!AVAILABILITY]
 >
