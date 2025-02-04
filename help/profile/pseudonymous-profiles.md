@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 偽名プロファイルデータの有効期限
 description: このドキュメントでは、Adobe Experience Platform 内で偽名プロファイルデータの有効期限を設定する際の一般的なガイダンスを提供します。
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 9489156617f29d4aab2038b74f75a832ff4dc8eb
+source-git-commit: 208f327d35749c97ac77f337493d8759e8622dcd
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 69%
+source-wordcount: '1039'
+ht-degree: 67%
 
 ---
 
@@ -16,6 +16,12 @@ ht-degree: 69%
 Adobe Experience Platformでは、偽名プロファイルのデータの有効期限を設定できます。これにより、有効でなくなったデータや、ユースケースで役に立たなくなったデータをプロファイルストアから自動的に削除できます。
 
 ## 偽名プロファイル {#pseudonymous-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_pseudonymousprofile"
+>title="偽名プロファイルとは"
+>abstract="偽名プロファイルとは、偽名または不明な ID 名前空間を持つプロファイル、または一定時間アクティビティが発生していないプロファイルです。"
+>text="Learn more in documentation"
 
 次の条件を満たす場合、偽名データの有効期限についてプロファイルが考慮されます。
 
