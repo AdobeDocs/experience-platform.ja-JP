@@ -1,8 +1,8 @@
 ---
-title: Web SDK の ID データ
-description: Adobe Experience Platform Web SDK を使用してAdobe Experience Cloud ID （ECID）を取得および管理する方法について説明します。
+title: Web SDKの ID データ
+description: Adobe Experience Platform web SDKを使用してAdobe Experience Cloud ID （ECID）を取得および管理する方法について説明します。
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
+source-git-commit: 3724c43090e37d21384e9dfe45e60ee2eec68a81
 workflow-type: tm+mt
 source-wordcount: '1554'
 ht-degree: 1%
@@ -10,22 +10,22 @@ ht-degree: 1%
 ---
 
 
-# Web SDK の ID データ
+# Web SDKの ID データ
 
-Adobe Experience Platform Web SDK は、[Adobe Experience Cloud ID （ECID） ](../../identity-service/features/ecid.md) を使用して訪問者の行動を追跡します。 [!DNL ECIDs] を使用すると、各デバイスに一意の ID を設定し、複数のセッションにわたって保持し、web セッション中およびセッション間で発生するすべてのヒットを特定のデバイスに結び付けることができます。
+Adobe Experience Platform Web SDKは、[Adobe Experience Cloud ID （ECID） ](../../identity-service/features/ecid.md) を使用して訪問者の行動を追跡します。 [!DNL ECIDs] を使用すると、各デバイスに一意の ID を設定し、複数のセッションにわたって保持し、web セッション中およびセッション間で発生するすべてのヒットを特定のデバイスに結び付けることができます。
 
-このドキュメントでは、Web SDK を使用して [!DNL ECIDs] と [!DNL CORE IDs] を管理する方法の概要を説明します。
+このドキュメントでは、Web SDKを使用して [!DNL ECIDs] と [!DNL CORE IDs] を管理する方法の概要を説明します。
 
-## Web SDK を使用した ECID のトラッキング {#tracking-ecids-web-sdk}
+## Web SDKを使用した ECID のトラッキング {#tracking-ecids-web-sdk}
 
-Web SDK は、これらの cookie の生成方法を設定できる複数の方法を使用して、cookie を使用して [!DNL ECIDs] ータを割り当て、追跡します。
+Web SDKでは、Cookie を使用して [!DNL ECIDs] ーザーの割り当てとトラッキングを行います。この際、これらの Cookie がどのように生成されるかを設定できる複数の手段を使用できます。
 
 Web サイトに新しいユーザーが到達すると、[Adobe Experience Cloud ID サービスは ](../../identity-service/home.md) そのユーザーのデバイス ID Cookie の設定を試みます。
 
 * 初回の訪問者の場合、[!DNL ECID] が生成され、Experience PlatformEdge Networkからの最初の応答で返されます。
 * 再訪問者の場合、[!DNL ECID] は `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie から取得され、Edge Networkによってリクエストペイロードに追加されます。
 
-[!DNL ECID] を含む cookie が設定されると、Web SDK によって生成される後続の各リクエストでは、`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` の cookie にエンコードされた [!DNL ECID] が含まれます。
+[!DNL ECID] を含む Cookie が設定されると、Web SDKによって生成される後続の各リクエストでは、`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` の Cookie にエンコードされた [!DNL ECID] が含まれます。
 
 デバイスの識別に Cookie を使用する場合、Edge Networkを操作するには次の 2 つの方法があります。
 
@@ -34,7 +34,7 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 
 以下の節で説明するように、使用するデータ収集方法は、ブラウザー間の Cookie の有効期間に直接影響します。
 
-## Web SDK を使用したコア ID のトラッキング {#tracking-coreid-web-sdk}
+## Web SDKを使用したコア ID のトラッキング {#tracking-coreid-web-sdk}
 
 サードパーティ cookie を有効にしたGoogle Chromeを使用し、`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` の cookie が設定されていない場合、最初のEdge Networkリクエストは `demdex.net` ドメインを通過し、demdex cookie が設定されます。 この cookie には [!DNL CORE ID] が含まれています。 これは一意のユーザー ID で、[!DNL ECID] とは異なります。
 
@@ -171,9 +171,9 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 
 から Visitor API を使用して移行する場合、既存の AMCV Cookie も移行できます。 ECID 移行を有効にするには、設定で `idMigrationEnabled` パラメーターを設定します。 ID 移行により、次のユースケースが可能になります。
 
-* ドメインの一部のページが訪問者 API を使用し、他のページがこの SDK を使用している場合。 この場合をサポートするために、SDK は既存の AMCV Cookie を読み取り、既存の ECID を使用して新しい Cookie を書き込みます。 また、SDK で実装されたページで ECID が最初に取得された場合、訪問者 API で実装された後続のページの ECID が同じになるように、SDK では AMCV Cookie を作成します。
-* 訪問者 API も含むページにAdobe Experience Platform Web SDK が設定されている場合。 このケースをサポートするために、AMCV cookie が設定されていない場合、SDK はページで訪問者 API を検索し、呼び出して ECID を取得します。
-* サイト全体でAdobe Experience Platform Web SDK を使用しており、Visitor API がない場合は、返された訪問者情報が保持されるように ECID を移行すると便利です。 SDK を `idMigrationEnabled` と共にしばらくデプロイし、訪問者 Cookie のほとんどを移行した後で、設定をオフにできます。
+* ドメインの一部のページが訪問者 API を使用し、他のページがこのSDKを使用している場合。 この場合をサポートするために、SDKでは既存の AMCV Cookie を読み取り、既存の ECID を使用して新しい Cookie を書き込みます。 また、SDKで計測されるページで最初に ECID が取得された場合、SDK API で計測される後続のページの ECID が同じになるように、Visitor は AMCV Cookie を作成します。
+* 訪問者 API も含むページにAdobe Experience Platform web SDKが設定されている場合。 このケースをサポートするために、AMCV cookie が設定されていない場合、SDKはページ上で訪問者 API を検索し、呼び出して ECID を取得します。
+* サイト全体でAdobe Experience Platform Web SDKを使用しており、訪問者 API がない場合は、返された訪問者情報が保持されるように ECID を移行すると便利です。 ほとんどの訪問者 Cookie が移行されるように、SDKを `idMigrationEnabled` と共にしばらくデプロイした後で、設定をオフにできます。
 
 ### 移行する特性の更新
 
@@ -181,4 +181,4 @@ XDM 形式のデータをAudience Managerに送信する場合、このデータ
 
 ## イベント転送での使用
 
-現在 [ イベント転送 ](../../tags/ui/event-forwarding/overview.md) を有効にしており、`appmeasurement.js` と `visitor.js` を使用している場合は、イベント転送機能を有効にしておくことができ、問題は発生しません。 バックエンドでは、AdobeはAAM セグメントを取得し、それらを Analytics への呼び出しに追加します。 Analytics への呼び出しにこれらのセグメントが含まれている場合、Analytics はAudience Managerを呼び出してデータを転送しないため、重複したデータ収集はありません。 また、同じセグメント化エンドポイントがバックエンドで呼び出されるので、Web SDK を使用する際に場所のヒントは必要ありません。
+現在 [ イベント転送 ](../../tags/ui/event-forwarding/overview.md) を有効にしており、`appmeasurement.js` と `visitor.js` を使用している場合は、イベント転送機能を有効にしておくことができ、問題は発生しません。 バックエンドでは、AdobeはAAM セグメントを取得し、それらを Analytics への呼び出しに追加します。 Analytics への呼び出しにこれらのセグメントが含まれている場合、Analytics はAudience Managerを呼び出してデータを転送しないため、重複したデータ収集はありません。 また、同じセグメント化エンドポイントがバックエンドで呼び出されるので、web SDKを使用する際に場所のヒントは必要ありません。
