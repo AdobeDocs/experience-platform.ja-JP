@@ -2,9 +2,10 @@
 title: Snapchat Conversions API 拡張機能の概要
 description: Snapchat 変換を使用して、サーバーサイドのイベントデータを Snap に送信します。
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
+source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 4%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 4%
 
 Conversions API を使用するには、**[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) アカウントが必要です。 Business Manager は、広告主が **[!DNL Snapchat]** のマーケティング活動をビジネス全体および外部パートナーと統合するのに役立ちます。 Business Manager アカウントがない場合は、作成に関する **[!DNL Snapchat]** [ ヘルプセンターの記事 ](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) を参照してください。
 
-Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US）を設定し、`Pixel ID` を表示するためのアクセス権を持っている必要があります。 `Pixel ID` は、**[!UICONTROL イベントマネージャー]** （https://businesshelp.snapchat.com/s/article/events-manager?language=en_US） セクションにあります。
+Snapchat Ads Manager で [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) を設定し、`Pixel ID` を表示するためのアクセス権を持っている必要があります。 `Pixel ID` の詳細については、[!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) の節を参照してください。
 
 静的で長期間有効な API トークンが必要です。 このトークンを取得するには、[[!DNL Snapchat] Conversions API ドキュメント ](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) を参照してください。
 
@@ -190,7 +191,7 @@ Snapchat Ads Manager で **[!DNL Snap Pixel]** （https://businesshelp.snapchat.
 
 ![ 有効なルールを示す画像 ](../../../images/extensions/server/snap/enabled_rule.png)
 
-これで、これらの変更をプロパティに公開できます。 詳しくは、[ 公開フロー ](/help/tags/ui/publishing/overview.md) （https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview）のドキュメントを参照してください。
+これで、これらの変更をプロパティに公開できます。 詳しくは、[ 公開フロー ](/help/tags/ui/publishing/overview.md) に関するドキュメントを参照してください。
 
 ## トラブルシューティング {#troubleshoot}
 
