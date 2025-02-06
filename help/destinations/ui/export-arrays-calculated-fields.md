@@ -3,10 +3,10 @@ title: Real-Time CDP からクラウドストレージの宛先への配列オ�
 type: Tutorial
 description: 計算フィールドを使用して、Real-Time CDPからクラウドストレージの宛先に配列を文字列として書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
+source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 7%
+source-wordcount: '1698'
+ht-degree: 6%
 
 ---
 
@@ -72,6 +72,11 @@ organizations = [{
 ## 計算フィールドの書き出し方法 {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="階層出力スキーマの有効化"
+>abstract="<p> この設定 **オン** を切り替えて、配列、マップ、オブジェクトを JSON ファイルまたは Parquet ファイルに書き出せるようにします。</p><p>このトグルをオフにすると、オーディエンスをアクティブ化する際に「計算済みフィールド」オプションを使用できますが、配列、マップ、オブジェクトを JSON ファイルまたは Parquet ファイルに書き出すことはできません</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="階層出力スキーマの有効化"
 >abstract="配列などの階層構造を書き出す場合は、オンにします。"
@@ -79,7 +84,7 @@ organizations = [{
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="計算フィールドの追加の無効化"
->abstract="宛先への接続時にフラット構造を書き出すよう選択したので、このコントロールは無効になっています。"
+>abstract="このコントロールは、この宛先接続を設定するときに **配列、マップ、オブジェクトのエクスポート** 切り替え *オン* を選択しているため無効です。 計算フィールドと内で使用可能な関数を使用するには、**配列、マップ、オブジェクトの書き出し** 切り替え *オフ* を使用して新しい宛先接続を設定します。"
 
 クラウドストレージ宛先のアクティベーションワークフローのマッピング手順で、「**[!UICONTROL 計算フィールドを追加]**」を選択します。
 
