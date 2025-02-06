@@ -3,9 +3,9 @@ title: Adobe Experience Platformの AI アシスタント製品ドキュメン�
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '899'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,15 @@ AI アシスタントの製品知識については、次のビデオをご覧�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
 
-詳しくは、「AI アシスタントの製品知識 [ を参照してください ](home.md#product-knowledge)
+詳しくは、[AI アシスタントの製品知識 ](home.md#product-knowledge) を参照してください。
+
+### AI アシスタントのオペレーショナルインサイト
+
+次のビデオでは、AI アシスタントを使用して運用インサイトを取得し、データオブジェクトの包括的なビューを取得する方法を説明します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+
+詳しくは、[AI アシスタントのオペレーショナルインサイト ](home.md#operational-insights) を参照してください。
 
 ### AI アシスタントの製品知識を使用して、オンボーディング時間を短縮する
 
@@ -165,6 +173,7 @@ AI アシスタントのユースケースの例については、以下を参�
 * [ オーディエンスを整理し、マーケティング業務を最適化する ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [ 依存関係を確認し、データ更新中のリスクを最小限に抑える ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [ 新機能の検出とデプロイを迅速化 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
+* [AI アシスタントでカスタマーサポートに革命を起こす ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB  追加のビデオコンテンツ ]
 
