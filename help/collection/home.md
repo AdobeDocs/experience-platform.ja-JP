@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ収集の概要
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '472'
 ht-degree: 100%
 
 ---
@@ -51,10 +51,6 @@ Platform Edge Network とは、世界中に分散された信頼性の高い高�
 また、データストリームは、組織のポリシーや法規制を考慮して、送信する機密データが適切に処理されるようにするのに役立つ、複数の Platform 機能と統合されています。 詳しくは、データストリームに関するドキュメントの[機密データの処理](../datastreams/overview.md#sensitive)に関するセクションを参照してください。
 
 ![データストリームおよびアドビのソリューション](./images/home/adobe-solutions.png)
-
->[!NOTE]
->
->Platform Edge Network について詳しくは、次の[インタラクティブ製品ツアー](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1)を参照してください。
 
 ## イベント転送
 
