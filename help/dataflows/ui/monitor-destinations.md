@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
 workflow-type: tm+mt
-source-wordcount: '3639'
-ht-degree: 61%
+source-wordcount: '3636'
+ht-degree: 60%
 
 ---
 
@@ -105,7 +105,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
   > この機能強化に伴い、[Google カスタマーマッチの宛先 ](../../destinations/catalog/advertising/google-customer-match.md) のユーザーでは、**[!UICONTROL ID 失敗]** カウントが低下する可能性があります。
 
 
-- **[!UICONTROL アクティブ化率]**：正常にアクティブ化されたかスキップされた受信 ID の割合です。次の数式は、この値の計算方法を示しています。
+- **[!UICONTROL アクティブ化率]**：正常にアクティブ化された受信 ID の割合です。 次の数式は、この値の計算方法を示しています。
   ![ アクティブ化率の数式。](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL ステータス]**：データフローの状態（[!UICONTROL 完了]または[!UICONTROL 処理中]）を表します。[!UICONTROL 完了]は、対応するデータフロー実行のすべての ID が 1 時間以内に書き出されたことを意味します。[!UICONTROL 処理中]は、データフロー実行がまだ終了していないことを意味します。
 
@@ -216,7 +216,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 [!UICONTROL 宛先]ダッシュボードを使用すると、アクティブ化フローの正常性を全体的に把握できます。 まず、すべてのバッチ宛先とストリーミング宛先について集計レベルでインサイトを取得し、データフロー、データフロー実行およびアクティブ化されたオーディエンスの詳細ビューにドリルダウンして、アクティベーションデータを詳しく調べます。 [!UICONTROL モニタリング]ダッシュボードの画面では、指標やエラーの説明を通じて実用的なインサイトが提供され、アクティブ化シナリオで発生する可能性のある問題のトラブルシューティングに役立ちます。
 
-表示される情報は、データタイプ（顧客、アカウント（Adobe Real-Time CDP B2B エディションのみ）、見込み客、アカウントのエンリッチメント）でフィルタリングできます。 これらのオプションについて詳しくは、[ 監視ダッシュボードガイド ](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview) を参照してください。
+表示される情報は、データタイプ（顧客、アカウント（Adobe Real-Time CDP B2B editionのみ）、見込み客、アカウント強化）でフィルタリングできます。 これらのオプションについて詳しくは、[ 監視ダッシュボードガイド ](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview) を参照してください。
 
 ![ 監視ダッシュボード表示でハイライト表示されたデータタイプフィルター。](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
