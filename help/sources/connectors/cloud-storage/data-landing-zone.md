@@ -2,10 +2,10 @@
 title: Data Landing Zone Source
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を学ぶ
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 22%
+source-wordcount: '1316'
+ht-degree: 21%
 
 ---
 
@@ -299,6 +299,12 @@ print(f"Sign-in URL: {signin_url}")
 
 ## [!DNL Data Landing Zone] をExperience Platformに接続
 
+>[!IMPORTANT]
+>
+>- ソースに接続するには、**[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** アクセス制御権限が必要です。 詳しくは、[ アクセス制御の概要 ](../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
+>
+>- [!DNL Data Landing Zone] を使用してExperience Platformに接続する場合、プライベートリンクは現在サポートされていません。 アクセスでサポートされているメソッドは、[ こちら ](#manage-the-contents-of-your-data-landing-zone) に示すメソッドのみです。
+
 以下のドキュメントでは、API またはユーザーインターフェイスを使用して、[!DNL Data Landing Zone] コンテナからAdobe Experience Platformにデータを取り込む方法に関する情報を提供します。
 
 ### API の使用
@@ -310,8 +316,4 @@ print(f"Sign-in URL: {signin_url}")
 
 - [UI [!DNL Data Landing Zone]  使用したへの Platform の接続](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [UI でクラウドストレージ接続のデータフローを作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->[!DNL Data Landing Zone] を使用してExperience Platformに接続する場合、プライベートリンクは現在サポートされていません。 アクセスでサポートされているメソッドは、[ こちら ](#manage-the-contents-of-your-data-landing-zone) に示すメソッドのみです。
 

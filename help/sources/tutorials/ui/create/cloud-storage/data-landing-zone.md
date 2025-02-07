@@ -2,10 +2,10 @@
 title: UI を使用したデータランディングゾーンの Platform への接続
 description: Platform ユーザーインターフェイスを使用して、データランディングゾーンソースコネクタを作成する方法を説明します。
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: cdcce07a5adf08bf9d5e6a08d6bc965d37458a5d
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 19%
+source-wordcount: '767'
+ht-degree: 20%
 
 ---
 
@@ -27,6 +27,10 @@ ht-degree: 19%
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## [!DNL Data Landing Zone] から Platform にファイルを取り込む
+
+>[!IMPORTANT]
+>
+> ソースに接続するには、**[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** アクセス制御権限が必要です。 [アクセス制御の概要](../../../../../access-control/home.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
