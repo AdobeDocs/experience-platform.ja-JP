@@ -3,9 +3,9 @@ title: Real-Time CDP からクラウドストレージの宛先への配列オ�
 type: Tutorial
 description: 計算フィールドを使用して、Real-Time CDPからクラウドストレージの宛先に配列を文字列として書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1730'
 ht-degree: 6%
 
 ---
@@ -73,8 +73,8 @@ organizations = [{
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="階層出力スキーマの有効化"
->abstract="<p> この設定 **オン** を切り替えて、配列、マップ、オブジェクトを JSON ファイルまたは Parquet ファイルに書き出せるようにします。</p><p>このトグルをオフにすると、オーディエンスをアクティブ化する際に「計算済みフィールド」オプションを使用できますが、配列、マップ、オブジェクトを JSON ファイルまたは Parquet ファイルに書き出すことはできません</p>"
+>title="配列、マップ、オブジェクトのエクスポート"
+>abstract="<p> この設定 <b> オン </b> を切り替えて、配列、マップ、オブジェクトを JSON ファイルまたは Parquet ファイルに書き出せるようにします。 これらのオブジェクトタイプは、マッピングステップのソースフィールドビューで選択できます。</p><p>この切り替え <b> オフ </b> を使用すると、オーディエンスをアクティブ化する際に、計算フィールド オプションを使用して、様々なデータ変換関数を適用できます。 ただし、配列、マップ、オブジェクトを JSON ファイルまたは Parquet ファイルに書き出すことは <i> できません </i>。その場合は、別の宛先を設定する必要があります。</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"

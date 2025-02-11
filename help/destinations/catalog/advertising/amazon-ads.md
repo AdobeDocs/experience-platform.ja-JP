@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1837'
-ht-degree: 48%
+source-wordcount: '1819'
+ht-degree: 49%
 
 ---
 
@@ -98,10 +98,6 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 >宛先設定を保存すると、Amazon アカウントを通じて再認証した場合でも、[!DNL Amazon Ads] 広告主 ID を変更できなくなります。 別の [!DNL Amazon Ads] 広告主 ID を使用するには、新しい宛先接続を作成する必要があります。 ADSP との統合に既に設定されていて、オーディエンスを AMC または別の ADSP アカウントに配信する場合は、新しい宛先フローを作成する必要がある広告主。
 
 * **[!UICONTROL 広告主地域]**：広告主がホストされている適切な地域を選択します。各地域でサポートされているマーケットプレイスについて詳しくは、[Amazon Ads ドキュメント](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)を参照してください。
-
->[!IMPORTANT]
->
->**[!UICONTROL Amazon広告の同意信号]** を含む更新は、2025 年 2 月 7 日までに公開される予定です。
 
 * **[!UICONTROL Amazon Ads 同意シグナル]**：この接続を通じて送信されたすべてのデータが、広告目的で個人データを使用することに同意していることを確認します。 「許可」とは、Amazonが顧客の個人情報を広告に使用することに同意することを示します。 指定できる値は、「GRANTED」と「DENIED」です。 「拒否」に設定されたコネクションを介して送信されたレコードは、Amazon Ads 内での使用を目的として拒否されます。
 
