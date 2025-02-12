@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ポリシーの自動適用
 description: このドキュメントでは、Experience Platform 内の宛先に対してオーディエンスをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
+source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
 workflow-type: tm+mt
-source-wordcount: '2118'
-ht-degree: 80%
+source-wordcount: '2116'
+ht-degree: 78%
 
 ---
 
@@ -19,7 +19,7 @@ Platform は、潜在的なリスクと負債から組織を保護するため�
 
 >[!IMPORTANT]
 >
->同意ポリシーおよび同意ポリシーの自動適用は、**Adobeのヘルスケアシールド** または **Adobeのプライバシーとセキュリティシールド** を購入した組織でのみ利用できます。
+>同意ポリシーと自動同意ポリシー適用は、**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織でのみ使用できます。
 
 このドキュメントでは、データガバナンスと同意ポリシーの適用について重点的に説明しています。アクセス制御ポリシーについて詳しくは、[属性ベースのアクセス制御](../../access-control/abac/overview.md)に関するドキュメントを参照してください。
 
@@ -46,7 +46,7 @@ Platform は、潜在的なリスクと負債から組織を保護するため�
 
 >[!NOTE]
 >
->データセット内の特定のフィールド（データセット全体ではなく）のみに適用されたデータ使用ラベルがある場合、アクティブ化時のこれらのフィールドレベルラベルの適用は、次の条件のみで発生します。
+>特定のフィールドにのみ適用されたデータ使用ラベルがある場合、アクティベーション時のこれらのフィールドレベルのラベルの適用は、次の条件の 1 つ以上を満たした場合にのみ発生します。
 >
 >* これらのフィールドは、オーディエンスで使用されます。
 >* フィールドは、ターゲット先の予測属性として設定されます。
@@ -126,7 +126,7 @@ Experience Platform では、ポリシーの適用は次の系列に関係して
 
 >[!NOTE]
 >
->同意ポリシーは、Adobeの Healthcare Shield またはAdobeのプライバシーとセキュリティシールドを購入した組織でのみ使用できます。
+>同意ポリシーは、Adobe Healthcare Shield またはAdobe Privacy &amp; Security Shield を購入した組織でのみ使用できます。
 
 #### 有料メディアの同意ポリシーの強化 {#consent-policy-enhancement}
 
