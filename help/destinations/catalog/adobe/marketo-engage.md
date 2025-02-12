@@ -2,9 +2,9 @@
 title: Marketo Engage の宛先
 description: Marketo Engageは、マーケティング、広告、分析およびコマース用の唯一のエンドツーエンドのカスタマーエクスペリエンス管理（CXM）ソリューションです。 CRM リード管理と顧客エンゲージメントから、アカウントベースのマーケティングと収益属性に至るまで、アクティビティを自動化および管理できます。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '903'
 ht-degree: 26%
 
 ---
@@ -49,7 +49,7 @@ Marketo V2 の宛先の改善点は次のとおりです。
 
 ### サポートされる属性 {#supported-attributes}
 
-Experience Platformの属性を、Marketoでアクセスできる任意の属性にマッピングできます。 Marketoでは、[Describe API request](https://developers.marketo.com/rest-api/lead-database/leads/#describe) を使用して、組織がアクセスできる属性フィールドを取得できます。
+Experience Platformから、組織がMarketoでアクセス権を持つ任意の属性に属性をマッピングできます。 Marketoでは、[Describe API request](https://developers.marketo.com/rest-api/lead-database/leads/#describe) を使用して、組織がアクセスできる属性フィールドを取得できます。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -57,7 +57,7 @@ Experience Platformの属性を、Marketoでアクセスできる任意の属性
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -88,8 +88,8 @@ Experience Platformの属性を、Marketoでアクセスできる任意の属性
 >
 >ビデオには、現在の機能がすべて反映されているわけではありません。 最新の情報については、上記にリンクされているガイドを参照してください。 ビデオの次の部分は古くなっています。
 > 
->* Experience PlatformUI で使用する必要がある宛先カードは、**[!UICONTROL Marketo V2]** です。
->* このビデオでは、宛先に接続ワークフローの新しい **[!UICONTROL ユーザー作成]** セレクターフィールドが表示されません。
+>* Experience Platform UI で使用する必要がある宛先カードは、**[!UICONTROL Marketo V2]** です。
+>* このビデオでは、宛先に接続ワークフローの新しい **[!UICONTROL ユーザー作成]** セレクターフィールドが表示されません。 このフィールドを使用するには、属性マッピング手順で名と姓の両方をマッピングする必要があります。
 >* ビデオで言及されている 2 つの制限は、もはや適用されません。 ビデオの記録時にサポートされていたオーディエンスメンバーシップ情報に加えて、他の多くのプロファイル属性フィールドをマッピングできるようになりました。 Marketoの静的リストにまだ存在しないMarketoにオーディエンスメンバーを書き出すこともできます。これらはリストに追加されます。
 >* Marketo V1 では、アクティベーションワークフローの **[!UICONTROL オーディエンスをスケジュール設定ステップ]** で、**[!UICONTROL マッピング ID]** を手動で追加して、Marketoにデータを正常に書き出す必要がありました。 この手動の手順は、Marketo V2 では不要になりました。
 
