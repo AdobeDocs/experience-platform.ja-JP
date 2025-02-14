@@ -3,18 +3,18 @@ title: Adobe Experience Platformの AI アシスタント製品ドキュメン�
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: 49c06a1dfb3431ce8fe416d35a22567ce614107a
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '902'
+ht-degree: 0%
 
 ---
 
 # Adobe Experience Platformの AI アシスタント製品ドキュメント
 
-Adobe Experience Platformの AI アシスタントは、Experience Platformのアプリケーションやサービスを使用してワークフローを高速化するために使用できる対話型ツールです。 AI アシスタントを使用すると、全体的な生産性を高め、製品の知識や運用上のインサイトに対する理解を深め、クエリやビジネスのユースケースに関連する推奨事項を収集できます。
+Adobe Experience Platformの AI アシスタントは、Experience Platformのアプリケーションおよびサービスを使用してワークフローを高速化するために使用できる対話型ツールです。 AI アシスタントを使用すると、全体的な生産性を高め、製品の知識や運用上のインサイトに対する理解を深め、クエリやビジネスのユースケースに関連する推奨事項を収集できます。
 
-AI アシスタントは、Experience Platform、Real-Time CDP、Adobe Journey Optimizer、およびCustomer Journey Analyticsをサポートします。
+AI アシスタントは、Experience Platform、Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analyticsをサポートします。
 
 ## 基本を学ぶ
 
@@ -41,7 +41,6 @@ AI アシスタントは、Experience Platform、Real-Time CDP、Adobe Journey O
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
-
 
 ## 新機能
 
@@ -82,6 +81,21 @@ AI アシスタントを使用すると、エクスペリエンスデータモ�
 [![画像](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
+
+## AI アシスタントのセキュリティ機能 {#security}
+
+
+AI アシスタントのセキュリティ機能の詳細については、次のビデオをご覧ください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**AI Assistant のセキュリティ ファクト シートを参照してください**
+
+AI アシスタントについて詳しくは、[Adobe Experience Platformの AI アシスタントのセキュリティファクトシート ](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf) を参照してください。
+
+>[!ENDSHADEBOX]
 
 ## ビデオライブラリ
 
@@ -183,20 +197,6 @@ AI アシスタントのユースケースの例については、以下を参�
 * [AI Assistant for Audiences の概要 ](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
-
-## その他のリソース
-
->[!BEGINSHADEBOX]
-
-**AI Assistant のセキュリティ ファクト シートを参照してください**
-
-AI アシスタントについて詳しくは、[Adobe Experience Platformの AI アシスタントのセキュリティファクトシート ](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf) を参照してください。
-
->[!ENDSHADEBOX]
-
-AI アシスタントのセキュリティ機能の詳細については、次のビデオをご覧ください。
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 以下のリンクを参照すると、AI アシスタントのユースケースや機能などをより深く理解できます。
 
