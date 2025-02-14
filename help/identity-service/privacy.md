@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック
 title: ID サービスでのプライバシーリクエストの処理
 description: Adobe Experience Platform Privacy Service は、プライバシーに関する多数の規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、ID サービスのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 64%
+source-wordcount: '1000'
+ht-degree: 60%
 
 ---
 
@@ -52,7 +52,7 @@ API でジョブリクエストを作成する際は、`userIDs` 内で指定す
 
 >[!TIP]
 >
->API を使用してカスタム名前空間を削除する場合は、表示名の代わりに ID 記号を名前空間として指定する必要があります。
+>GDPR 削除を使用して ID を削除する場合は、表示名ではなく ID 記号を名前空間として指定する必要があります。
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->UI を使用してカスタム名前空間を削除する場合は、表示名ではなく ID 記号を名前空間として指定する必要があります。さらに、非実稼動サンドボックス用 UI では、カスタム名前空間を削除できません。
+>GDPR 削除を使用して ID を削除する場合は、表示名ではなく ID 記号を名前空間として指定する必要があります。
 
 UI でジョブリクエストを作成する場合は、[!DNL Identity Service] に保存されたデータのジョブを処理するために、必ず&#x200B;**[!UICONTROL 製品]**&#x200B;の下にある **[!UICONTROL ID]** を選択します。
 

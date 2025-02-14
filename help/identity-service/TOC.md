@@ -5,10 +5,10 @@ breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
 role: Admin,Developer
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 69%
+source-wordcount: '143'
+ht-degree: 70%
 
 ---
 
@@ -44,7 +44,6 @@ ht-degree: 69%
    - [カスタム名前空間の作成](api/create-custom-namespace.md)
    - [ID のネイティブ ID のリスト](api/list-native-id.md)
    - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [共有デバイスの検出](shared-device-detection.md)
 - [UI での ID フィールドの定義](label-identities.md)
 - [プライバシーリクエストの処理](privacy.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
