@@ -2,9 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；スキーマ；スキーマ；
 solution: Experience Platform
 title: UI でのスキーマの作成と編集
-description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
+description: Experience Platform ユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '4072'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、XDM システムに関する十分な知識が必要です。 スキーマエコシステムにおける XDM の役割の概要については [XDM の概要 ](../../home.md) を、Experience Platformの構築方法の概要については [ スキーマ構成の基本 ](../../schema/composition.md) を参照してください。
+このガイドでは、XDM システムに関する十分な知識が必要です。 Experience Platform エコシステムにおける XDM の役割の概要については [XDM の概要 ](../../home.md) を、スキーマの構築方法の概要については [ スキーマ構成の基本 ](../../schema/composition.md) を参照してください。
 
 ## 新しいスキーマの作成 {#create}
 
@@ -159,7 +159,7 @@ XDM での業界固有のデータモデリングに関するベストプラク�
 
 >[!NOTE]
 >
-スキーマエディター内では、標準（Adobe生成）のクラスおよびフィールドグループは、南京錠アイコン（![A 南京錠アイコン）で示されます。](/help/images/icons/lock-closed.png)。南京錠は、クラスまたはフィールドグループ名の横の左側のパネルに表示されるほか、システム生成リソースの一部であるスキーマ図のフィールドの横にも表示されます。
+スキーマエディター内では、標準（Adobeが生成した）クラスおよびフィールドグループは、南京錠アイコン ![ 南京錠アイコン](/help/images/icons/lock-closed.png)。南京錠は、クラスまたはフィールドグループ名の横の左側のパネルに表示されるほか、システム生成リソースの一部であるスキーマ図のフィールドの横にも表示されます。
 >
 ![ 南京錠アイコンがハイライトされたスキーマエディター ](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -374,7 +374,7 @@ abstract="スキーマがプロファイルで有効になっている場合、�
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-ダイアログが表示され、使用可能なすべてのクラスのリストが表示されます。このリストには、組織で定義されているクラス（「[!UICONTROL Customer]」を持つオーナー）と、Adobeで定義されている標準クラスが含まれます。
+使用可能なすべてのクラスのリストを表示するダイアログが表示されます。このリストには、組織で定義されているクラス（「[!UICONTROL Customer]」を持つ）と、Adobeで定義されている標準クラスが含まれます。
 
 リストからクラスを選択して、ダイアログの右側に説明を表示します。 **[!UICONTROL クラス構造をプレビュー]** を選択して、クラスに関連付けられたフィールドとメタデータを表示することもできます。 **[!UICONTROL クラスを割り当て]** を選択して続行します。
 
