@@ -1,22 +1,18 @@
 ---
-title: Platform Web SDK でのOffer decisioningの使用
-description: Adobe Experience Platform Web SDK は、Offer decisioningで管理された、パーソナライズされたオファーを配信およびレンダリングできます。 offer decisioningUI または API を使用して、オファーとその他の関連オブジェクトを作成できます。
+title: Platform Web SDKでのOffer Decisioningの使用
+description: Adobe Experience Platform Web SDKは、Offer Decisioningで管理される、パーソナライズされたオファーを配信およびレンダリングできます。 Offer Decisioningの UI または API を使用して、オファーとその他の関連オブジェクトを作成できます。
 keywords: offer decisioning；決定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファー配信；オファーのパーソナライゼーション；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
+source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 12%
+source-wordcount: '791'
+ht-degree: 11%
 
 ---
 
-# Platform Web SDK でのOffer decisioningの使用
+# Platform Web SDKでのOffer Decisioningの使用
 
->[!NOTE]
->
->Adobe Experience Platform Web SDK でのOffer decisioningの使用は、一部のユーザーへの早期アクセスで利用できます。 この機能は、一部の組織ではご利用いただけきません。
-
-Adobe Experience Platform [!DNL Web SDK] は、Offer decisioningで管理される、パーソナライズされたオファーを配信およびレンダリングできます。 offer decisioningユーザーインターフェイス（UI）または API を使用して、オファーとその他の関連オブジェクトを作成できます。
+Adobe Experience Platform [!DNL Web SDK] は、Offer Decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 Offer Decisioning ユーザーインターフェイス（UI）または API を使用して、オファーとその他の関連オブジェクトを作成できます。
 
 ## 前提条件
 
@@ -26,9 +22,9 @@ Adobe Experience Platform [!DNL Web SDK] は、Offer decisioningで管理され�
 
 ## 用語
 
-offer decisioningを扱う際には、以下の用語を理解することが重要です。 詳細および追加の用語については、[Offer decisioning用語集 ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html) を参照してください。
+Offer Decisioningを使用する際は、以下の用語を理解することが重要です。 詳細および追加の用語については、[Offer Decisioning用語集 ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html) を参照してください。
 
-* **決定範囲：** Offer decisioningの場合、決定範囲は、offer decisioningサービスでオファーの提案に使用するアクティビティ ID とプレースメント ID を含む、Base64 でエンコードされた JSON の文字列です。
+* **決定範囲：** Offer Decisioningの場合、決定範囲は、Offer Decisioning サービスでオファーを提案するために使用するアクティビティ ID とプレースメント ID を含む、Base64 でエンコードされた JSON の文字列です。
 
   *決定範囲 JSON:*
 
@@ -53,20 +49,20 @@ offer decisioningを扱う際には、以下の用語を理解することが重
 
 * **データストリーム：** 詳しくは、[ データストリーム ](/help/datastreams/overview.md) ドキュメントを参照してください。
 
-* **ID**：詳しくは、[Platform Web SDK が ID サービスを使用する ](../../identity/overview.md) 方法の概要についてこのドキュメントを参照してください。
+* **ID**：詳しくは、このドキュメントを参照して、[Platform Web SDKで ID サービスを使用 ](../../identity/overview.md) する方法を確認してください。
 
-## offer decisioningの有効化
+## Offer Decisioningの有効化
 
-offer decisioningを有効にするには、次の手順を実行します。
+Offer Decisioningを有効にするには、次の手順を実行します。
 
-1. [ データストリーム ](/help/datastreams/overview.md) でAdobe Experience Platformを有効にし、「Offer decisioning」ボックスをオンにします。
+1. [ データストリーム ](/help/datastreams/overview.md) でAdobe Experience Platformを有効にし、「Offer Decisioning」ボックスをオンにします。
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 手順に従って [SDK をインストール ](/help/web-sdk/install/overview.md) します（SDK は、スタンドアロンまたは UI を通じてインストールできます。 詳しくは、[ タグのクイックスタートガイド ](/help/tags/quick-start/quick-start.md)）を参照してください。
-1. `personalization.decisionScopes` を使用してOffer decisioning用に SDK を設定します。 その他のOffer decisioning固有の手順を以下に示します。
+1. 手順に従って [SDKをインストール ](/help/web-sdk/install/overview.md) します（SDKはスタンドアロンで、または UI を使用してインストールできます。 詳しくは、[ タグのクイックスタートガイド ](/help/tags/quick-start/quick-start.md)）を参照してください。
+1. `personalization.decisionScopes` を使用してOffer DecisioningのSDKを設定します。 Offer Decisioning固有のその他の手順を以下に示します。
 
-   * スタンドアロン SDK のインストール
+   * スタンドアロンのSDKのインストール
 
       1. `personalization.decisionScopes` を使用した「sendEvent」アクションの設定
 
@@ -82,11 +78,11 @@ offer decisioningを有効にするには、次の手順を実行します。
      });
      ```
 
-   * タグを使用した SDK のインストール
+   * タグを使用したSDKのインストール
 
       1. [タグプロパティの作成](/help/tags/ui/administration/companies-and-properties.md)
       1. [埋め込みコードの追加](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=ja)
-      1. 「データストリーム」ドロップダウンから設定を選択し、作成したデータストリームを使用して、Platform Web SDK 拡張機能をインストールして設定します。 詳しくは、[拡張機能](/help/tags/ui/managing-resources/extensions/overview.md)に関するドキュメントを参照してください。
+      1. 「データストリーム」ドロップダウンから設定を選択し、作成したデータストリームを使用して、Platform Web SDK拡張機能をインストールして設定します。 詳しくは、[拡張機能](/help/tags/ui/managing-resources/extensions/overview.md)に関するドキュメントを参照してください。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -100,7 +96,7 @@ offer decisioningを有効にするには、次の手順を実行します。
 
       1. [ ルール ](/help/tags/ui/managing-resources/rules.md) を作成します。
 
-         * Platform Web SDK のイベントの送信アクションを追加し、関連する `decisionScopes` をそのアクションの設定に追加します
+         * Platform Web SDKのイベントを送信アクションを追加し、関連する `decisionScopes` をアクションの設定に追加します。
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
@@ -332,4 +328,4 @@ offer decisioningを有効にするには、次の手順を実行します。
 
 ## 制限事項
 
-キャッピングなど、一部のオファー制約は現在、モバイルEdge Networkワークフローではサポートされていません。 キャッピングフィールド値は、1 つのオファーをすべてのユーザーに対して提示できる回数を指定します。詳しくは、[オファーの実施要件ルールと制約に関するドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)を参照してください。
+キャッピングなど、一部のオファー制約は現在、モバイル Edge Network ワークフローではサポートされていません。 キャッピングフィールド値は、1 つのオファーをすべてのユーザーに対して提示できる回数を指定します。詳しくは、[オファーの実施要件ルールと制約に関するドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)を参照してください。
