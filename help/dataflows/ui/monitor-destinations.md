@@ -1,19 +1,19 @@
 ---
-description: Experience Platformユーザーインターフェイスを使用して宛先のデータフローを監視する方法について説明します。
+description: Experience Platform ユーザーインターフェイスを使用して宛先のデータフローを監視する方法について説明します。
 solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
+source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
 workflow-type: tm+mt
-source-wordcount: '3636'
+source-wordcount: '3637'
 ht-degree: 60%
 
 ---
 
 # UI での宛先のデータフローの監視
 
-Experience Platformカタログの様々な宛先を使用して、Platform から無数の外部パートナーにデータをアクティベートします。 Platform では、データフローの透明性を提供することで、宛先へのデータフローの追跡プロセスを容易にします。
+Experience Platform カタログの様々な宛先を使用して、Platform から無数の外部パートナーに対してデータをアクティブ化します。 Platform では、データフローの透明性を提供することで、宛先へのデータフローの追跡プロセスを容易にします。
 
 監視ダッシュボードは、データフローのジャーニーを視覚的に表します。これには、データがアクティブ化されている宛先、表示しているデータのタイプ、データフロー実行ごとに書き出されたデータなどが含まれます。
 
@@ -97,11 +97,11 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
   >[!IMPORTANT]
   >
-  > 2024 年 10 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートをロールアウトしています。 この機能強化により、宛先とExperience Platformプラットフォームレポートの間の整合性が向上します。
+  > 2024 年 10 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートを展開しています。 この機能強化により、Experience Platformと宛先プラットフォームレポートの間の整合性が向上します。
   >
   > この更新の前は、すべてのアクティベーションの再試行が ]**ID 失敗**[!UICONTROL  に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。
   > 
-  > この機能強化は、現在 [Google カスタマーマッチの宛先に適用されますが ](../../destinations/catalog/advertising/google-customer-match.md) 他のExperience Platformストリーミングの宛先に徐々にロールアウトされる予定です。
+  > この機能強化は、現在 [Google カスタマーマッチの宛先に適用されますが ](../../destinations/catalog/advertising/google-customer-match.md) 他のExperience Platform ストリーミングの宛先に徐々にロールアウトされる予定です。
   > この機能強化に伴い、[Google カスタマーマッチの宛先 ](../../destinations/catalog/advertising/google-customer-match.md) のユーザーでは、**[!UICONTROL ID 失敗]** カウントが低下する可能性があります。
 
 
@@ -121,7 +121,12 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 #### （Beta）ストリーミング宛先のオーディエンスレベルのデータフロー実行の監視 {#audience-level-dataflow-runs-for-streaming-destinations}
 
-データフローの一部である各オーディエンスに対して、オーディエンスレベルで分類されたアクティブ化、除外、失敗した ID に関する情報を表示できます。 ストリーミング宛先のオーディエンスレベルの監視は、現在、[[!DNL Google Customer Match + Display & Video 360]  宛先 ](/help/destinations/catalog/advertising/google-customer-match-dv360.md) でのみ使用できます。
+データフローの一部である各オーディエンスに対して、オーディエンスレベルで分類されたアクティブ化、除外、失敗した ID に関する情報を表示できます。
+
+ストリーミング宛先のオーディエンスレベルの監視は、現在、次の宛先でのみ使用できます。
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![ ストリーミング宛先のオーディエンスレベルの監視。](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
