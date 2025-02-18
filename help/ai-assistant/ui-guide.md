@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformの AI アシスタント
-description: AI アシスタントを使用して、Experience PlatformとReal-time Customer Data Platformの概念、およびオブジェクトの使用状況を移動および把握する方法について説明します。
+description: AI アシスタントを使用して、Experience PlatformとReal-Time Customer Data Platformの概念、およびオブジェクトの使用状況情報を移動および理解する方法について説明します。
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Adobe Experience Platform UI で AI アシスタントを使用する方法については、このガイドをお読みください。
 
-## Experience PlatformUI で AI アシスタントにアクセスする
+## Experience Platform UI での AI アシスタントへのアクセス
 
-AI アシスタントを起動するには、Experience PlatformUI の上部の見出しから **[!UICONTROL AI アシスタント]** アイコンを選択します。
+AI アシスタントを起動するには、Experience Platform UI の上部ヘッダーから **[!UICONTROL AI アシスタント]** アイコンを選択します。
 
-![Experience Platformのホームページ。AI Assistant アイコンが選択され、AI Assistant インターフェイスが開いています。](./images/ai-assistant-full-icon.png)
+![Experience Platformのホームページ。AI アシスタントのアイコンが選択され、AI アシスタントのインターフェイスが開いています。](./images/ai-assistant-full-icon.png)
 
 AI アシスタントのインターフェイスが表示され、すぐに開始するための情報が表示されます。 「[!UICONTROL  アイデアを使って使い始める ] で提供されているオプションを使用して、次のような質問やコマンドに回答できます。
 
@@ -35,17 +35,17 @@ AI アシスタントのインターフェイスが表示され、すぐに開�
 
 開始するには、表示されたテキストボックスに質問を入力します。 次の例では、AI アシスタントに「**ExperienceEvent スキーマの eventType フィールドは何ですか？** という質問が提供されています。
 
-![ クエリ用に準備された次の質問を含むExperience Platform用 AI アシスタント：「ExperienceEvent スキーマの eventType フィールドは何ですか？](./images/question.png)
+![ クエリ用に準備されたExperience Platformの AI アシスタント：「ExperienceEvent スキーマの eventType フィールドとは何ですか？](./images/question.png)
 
 次に、AI アシスタントがナレッジベースに問い合わせて、回答を計算します。 しばらくすると、AI アシスタントが回答と関連する提案を返し、フォローアップのプロンプトとして使用できます。
 
-![ 前のクエリに対する回答を持つExperience Platform用 AI アシスタント。](./images/answer.png)
+![ 前のクエリへの回答を含むExperience Platform用 AI アシスタント。](./images/answer.png)
 
 AI アシスタントから応答を受け取ったら、多数のオプションから選択して、進め方を決定できます。
 
 ### AI アシスタントの機能 {#features}
 
-ここでは、Experience Platformのワークフローで使用できる AI アシスタントの様々な機能の概要を説明します。
+この節では、Experience Platform上のワークフローで使用できる AI アシスタントの様々な機能の概要を説明します。
 
 ### 運用データオブジェクトの表示 {#view-operational-data-objects}
 
@@ -87,7 +87,7 @@ AI アシスタントが運用インサイトに関する質問に十分に対�
 
 ![ オペレーショナルインサイトに関する質問。](./images/op-insights-question.png)
 
-次に、AI アシスタントは、データフローと対応する ID をリストしたテーブルを返します。 データのテーブル全体を表示するには、右上の展開アイコンを選択します。
+次に、AI アシスタントは、データフローと対応する ID をリストしたテーブルを返します。 ダウンロードアイコン（![ ダウンロードアイコン ](/help/images/icons/download.png)）を選択して、テーブルを CSV ファイルとしてダウンロードします。 テーブル全体を表示するには、展開アイコン（![ 展開アイコン ](/help/images/icons/expand.png)）を選択します。
 
 ![ オペレーショナルインサイトの回答 ](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ AI アシスタントが運用インサイトに関する質問に十分に対�
 ![AI アシスタントが、どのように答えを計算したかについて説明します。](./images/answer-explained.png)
 
 また、質問に対してフィルターや変更を提供したり、含めるフィルターに基づいて結果をレンダリングするように AI アシスタントに指示したりできます。 例えば、AI アシスタントに依頼して、セグメント定義の数のトレンドを作成日順に表示したり、合計プロファイルが 0 のセグメント定義を削除したり、データを表示する際に整数の代わりに月名を使用したりできます。
-
-**メモ：** オペレーショナルインサイトの回答は現在ベータ版です。 AI アシスタントのユーザーインターフェイスでツールチップアイコンを選択すると、Beta通知が表示され、ドキュメントへのリンクが表示されます。
-
-![AI アシスタントのツールチップアイコンが選択されています。](./images/op-insights-beta-note.png)
 
 +++
 

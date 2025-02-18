@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platformの AI アシスタントの概要
-description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
+description: AI アシスタント、そのニュアンスとユースケース、およびAdobe Experience PlatformとReal-Time Customer Data Platformを使用してワークフローを迅速化する方法について説明します。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '927'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 Adobe Experience Platformの AI アシスタントについては、このドキュメントを参照してください。
 
-Adobe Experience Platformの AI アシスタントは、Adobeアプリケーションのワークフローを高速化するために使用できる対話型エクスペリエンスです。 AI アシスタントを使用すると、製品の知識をより深く理解したり、問題をトラブルシューティングしたり、情報を検索して運用インサイトを見つけたりできます。 AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizer、およびCustomer Journey Analyticsをサポートします。
+Adobe Experience Platformの AI アシスタントは、Adobe アプリケーションでのワークフローの高速化に使用できる対話型エクスペリエンスです。 AI アシスタントを使用すると、製品の知識をより深く理解したり、問題をトラブルシューティングしたり、情報を検索して運用インサイトを見つけたりできます。 AI アシスタントは、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsをサポートします。
 
 ![ 初めてユーザーエクスペリエンスがトリガーされる AI アシスタント インターフェイス ](./images/ai-assistant-full.png)
 
@@ -43,19 +43,19 @@ AI アシスタントは、データベースにクエリを実行し、デー�
 
 * 顧客の運用インサイト。
 * 様々なメタストアにわたる顧客の運用インサイト。
-* Experience Leagueドキュメント。
+* Experience Leagueのドキュメント。
 
 AI アシスタントをクエリする前に考慮すべき質問には、次の 2 つのクラスがあります。
 
 ### 製品に関する知識 {#product-knowledge}
 
-Experience League知識とは、製品ドキュメントに基づいた概念とトピックを指します。 製品に関する知識の質問は、次のサブグループでさらに指定できます。
+製品に関する知識とは、Experience Leagueのドキュメントに基づいた概念やトピックを指します。 製品に関する知識の質問は、次のサブグループでさらに指定できます。
 
 | 製品に関する知識 | 例 |
 | --- | --- |
 | 先を見越した学習 | <ul><li>ID とプライマリキーまたは外部キーの違いは何ですか。</li><li>類似オーディエンスとは</li></ul> |
 | 検出を開く | <ul><li>このデータセットを書き出すにはどうすればよいですか？</li><li>ヘルスケア関連の顧客向けのスキーマはありますか？</li></ul> |
-| トラブルシューティング | <ul><li>Adobeが所有するスキーマをプロファイルに対して有効にできないのはなぜですか？</li><li>セグメントを削除できないのはなぜですか？</li></ul> |
+| トラブルシューティング | <ul><li>Adobeが所有するプロファイルのスキーマを有効にできないのはなぜですか？</li><li>セグメントを削除できないのはなぜですか？</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,10 +64,6 @@ AI アシスタントの製品に関する知識について詳しくは、次�
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### 運用上のインサイト {#operational-insights}
-
->[!IMPORTANT]
->
->オペレーショナルインサイトの回答はベータ版です。 **オペレーショナルインサイトを表示** 権限を持つユーザーは誰でも、オペレーショナルインサイトの回答にアクセスできます。
 
 運用インサイトとは、カウント、ルックアップ、系列の影響を含む、メタデータオブジェクト（属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマ、ソース）に関して AI Assistant が生成する回答を指します。 サンドボックス内のデータは参照されません。
 
@@ -100,7 +96,7 @@ AI アシスタントの操作インサイトについて詳しくは、次の�
 
 現在、AI アシスタントの範囲は次のとおりです。
 
-* [ 商品に関する知識 ](./home.md#product-knowledge):AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizerの商品に関する知識の質問に回答できます。 また、Customer Journey AnalyticsUI を通じてのみ、Customer Journey Analyticsに関する製品のナレッジトピックを掘り下げることもできます。
+* [ 製品ナレッジ ](./home.md#product-knowledge):AI アシスタントは、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizerの製品ナレッジに関する質問に回答できます。 また、Customer Journey Analyticsの UI を通じてのみ、Customer Journey Analyticsの製品知識のトピックを掘り下げることもできます。
 * [ 運用インサイト ](./home.md#operational-insights)：属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマおよびソースのデータオブジェクトに関する運用インサイトについて、AI アシスタントに質問できます。
 
 ## 次の手順
