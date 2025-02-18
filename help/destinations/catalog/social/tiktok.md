@@ -1,11 +1,11 @@
 ---
 title: TikTok 接続
-description: 広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 AdobeとTikTok Ads Manager のリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
+description: 広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 TikTok Ads Manager とAdobeのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1077'
 ht-degree: 39%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 39%
 
 ## 概要 {#overview}
 
-広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 AdobeとTikTok Ads Manager のリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。 詳しくは、[TikTokのビジネスヘルプセンター ](https://ads.tiktok.com/help/article/audiences) を参照してください。
+広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 TikTok Ads Manager とAdobeのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。 詳しくは、[TikTokのビジネスヘルプセンター ](https://ads.tiktok.com/help/article/audiences) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ TikTokの宛先を使用する方法とタイミングをより深く理解す�
 
 オーディエンスの送信先のTikTok Ads Manager アカウントに対するアクセス権が [!DNL Admin] または [!DNL Operator] である必要があります。 詳細については、[TikTok ヘルプセンター ](https://ads.tiktok.com/help/article/add-users-tiktok-business-center) を参照してください。
 
-TikTok Ads Manager アカウントにデータを送信する前に、`Audience Management` の広告アカウントにアクセスするための権限をAdobe Experience Platformに付与する必要があります。 この権限を付与するには、Experience PlatformUI で [Ads Manager ID を入力 ](#authenticate) し、TikTok Ads Manager アカウントにリダイレクトされた後に権限を付与します。
+TikTok Ads Manager アカウントにデータを送信する前に、`Audience Management` の広告アカウントにアクセスするための権限をAdobe Experience Platformに付与する必要があります。 この権限を付与するには、Experience Platform UI で [Ads Manager ID を入力 ](#authenticate) し、TikTok Ads Manager アカウントにリダイレクトされた後に権限を付与します。
 
 ## サポートされている ID {#supported-identities}
 
@@ -44,6 +44,18 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 | 電話番号 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 でハッシュ化された電話番号の両方がAdobe Experience Platformでサポートされており、E.164 形式である必要があります。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
 | メール | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+
+{style="table-layout:auto"}
+
+## サポートされるオーディエンス {#supported-audiences}
+
+この節では、この宛先に書き出すことができるオーディエンスのタイプについて説明します。
+
+| オーディエンスオリジン | サポートあり | 説明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
+| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -68,7 +80,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先への認証を行うと、[!DNL TikTok Ads Manager] アカウントへのログインにリダイレクトされ、代わりにオーディエンスを管理するAdobeを認証します。
+宛先への認証を行うと、[!DNL TikTok Ads Manager] アカウントへのログインにリダイレクトされ、お客様に代わってオーディエンスを管理するAdobeを認証します。
 
 ![TikTok権限の選択 ](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png " 権限を選択するためのTikTok UI の画像 ")
 
@@ -115,7 +127,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 ## 書き出したデータ {#exported-data}
 
-Experience Platformオーディエンスが正常に書き出されたかどうかを確認するには、（**Assets / オーディエンス** の下にある） [!DNL TikTok Ads Manager] アカウントを確認します。 オーディエンスは、オーディエンスタイプ `Partner Audience` として入力されます。
+（**Assets / Audiences** の下にある） [!DNL TikTok Ads Manager] アカウントを確認して、Experience Platform オーディエンスが正常に書き出されたかどうかを確認します。 オーディエンスは、オーディエンスタイプ `Partner Audience` として入力されます。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
