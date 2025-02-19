@@ -3,19 +3,14 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御の概要
 description: このドキュメントでは、Adobe Experience Platform の属性ベースのアクセス制御に関する情報を提供します
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1860'
 ht-degree: 82%
 
 ---
 
 # 属性ベースのアクセス制御の概要 {#attribute-based-access-control-overview}
-
->[!CONTEXTUALHELP]
->id="platform_accesscontrol_abac_labelusageaccesspolicy"
->title="ラベルの使用のアクセスポリシー"
->abstract=""
 
 属性ベースのアクセス制御は、管理者が属性に基づいて特定のオブジェクトや機能へのアクセスを制御できるようにする Adobe Experience Platform の機能です。属性は、スキーマフィールドやセグメントに追加されるラベルなど、オブジェクトに追加されるメタデータであることがあります。 管理者は、ユーザーアクセス権限を管理する属性を含めた、アクセスポリシーを定義します。
 
@@ -23,7 +18,7 @@ ht-degree: 82%
 
 >[!IMPORTANT]
 >
->属性ベースのアクセス制御をExperience Platformのデータガバナンス機能と混同しないでください。これにより、組織内のどのユーザーがアクセス権を持つかではなく、ラベルとポリシーを使用して Platform でのデータの使用方法を制御できます。 詳しくは、[ データガバナンスの概要 ](../../data-governance/home.md) を参照してください。
+>属性ベースのアクセス制御をExperience Platformのデータガバナンス機能と混同しないでください。つまり、組織内のどのユーザーがアクセス権を持つかではなく、ラベルとポリシーを使用して Platform でのデータの使用方法を制御できます。 詳しくは、[ データガバナンスの概要 ](../../data-governance/home.md) を参照してください。
 
 属性ベースのアクセス制御により、組織の管理者は、すべてのプラットフォームワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）およびカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
 
@@ -79,7 +74,7 @@ Admin Console から新しい権限インターフェイスへのすべての Ex
 
 >[!IMPORTANT]
 >
->役割は、組織が有効になると自動的に権限インターフェイスに移行されます。 Admin Consoleにおける役割は当分の間、そのまま維持されます。 組織が有効になった後で役割を変更 **しない** ください。
+>役割は、組織が有効になると自動的に権限インターフェイスに移行されます。 Admin Consoleの役割は当分の間、そのまま残ります。 組織が有効になった後で役割を変更 **しない** ください。
 
 アクセス制御について詳しくは、[アクセス制御の概要](../home.md)を参照してください。
 

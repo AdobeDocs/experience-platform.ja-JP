@@ -3,14 +3,20 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理ユーザー
 description: このドキュメントでは、Adobe Experience Cloudの権限インターフェイスを使用したユーザーとユーザーグループの管理について説明します
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '285'
 ht-degree: 5%
 
 ---
 
-# ユーザー管理
+# ユーザー管理 {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="ユーザーとは"
+>abstract="ユーザーは、Experience Platformにアクセスできる個人です。 個々のユーザーによる組織のリソースへのアクセスは、役割を通じて管理されます。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="役割の管理"
 
 ユーザーの詳細と割り当てられた役割を表示する場合は、「**[!UICONTROL ユーザー]**」タブを選択します。
 
@@ -26,7 +32,7 @@ ht-degree: 5%
 
 ![ 「役割 [!UICONTROL  タブと役割がハイライト表示された ] 役割ページ ](../../images/flac-ui/flac-users-roles.png)
 
-## Experience Platform権限を使用した開発者および API アクセス制御
+## Experience Platform権限による開発者および API アクセス制御
 
 >[!NOTE]
 >

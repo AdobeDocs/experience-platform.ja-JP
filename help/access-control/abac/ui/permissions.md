@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 35%
+source-wordcount: '1699'
+ht-degree: 33%
 
 ---
 
@@ -120,11 +120,17 @@ ht-degree: 35%
 
 ## 役割の API 資格情報の管理 {#manage-api-credentials-for-role}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_apicredentials_about"
+>title="API 資格情報とは"
+>abstract="API 資格情報は役割に割り当てられ、ユーザーと開発者に Platform API へのアクセスを許可します。 Platform API を使用すると、計算属性の設定、データやエンティティへのアクセス、データのエクスポート、不要なデータやバッチの削除など、データに対する基本的な CRUD （作成、読み取り、更新、削除）操作をプログラムで実行できます。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API ガイド"
+
 >[!IMPORTANT]
 >
 > [!UICONTROL  権限 ] で API 資格情報を使用および管理するには、ユーザーにシステム管理者権限が必要です。
 
-Experience PlatformAPI をユーザーまたは開発者として使用するには、役割の特定の権限セットに加えて API 資格情報を追加する必要があります。 API 認証情報の作成と割り当て、および必要な権限について詳しくは、[ 認証とExperience PlatformAPI へのアクセス ](../../../landing/api-authentication.md#generate-credentials) のステップバイステップのチュートリアルを参照してください。
+Experience Platform API をユーザーまたは開発者として使用するには、役割の特定の権限セットに加えて API 資格情報を追加する必要があります。 API 資格情報の作成と割り当て、および必要な権限について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md#generate-credentials) のステップバイステップのチュートリアルを参照してください。
 
 **[!UICONTROL API 資格情報]** タブを選択して役割 API 資格情報ワークスペースを開き、「**[!UICONTROL API 資格情報を追加]**」を選択して、API 資格情報を役割に割り当てます。
 
@@ -148,7 +154,13 @@ API 資格情報を役割から削除するには、API 資格情報名の横に
 
 「**[!UICONTROL API 資格情報]**」タブに戻されます。
 
-## 役割のユーザーグループの管理
+## 役割のユーザーグループの管理 {#manage-user-groups}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_usergroups_about"
+>title="ユーザーグループとは"
+>abstract="ユーザーグループは、同じ機能へのアクセス権を共有する複数のユーザーの集まりです。 組織内のリソースへのアクセスは、ユーザーグループに割り当てられた役割を通じて管理されます。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="役割の管理"
 
 ユーザーグループとは、同じ機能を実行するためのアクセス権を持つ、グループ化された複数のユーザーのことです。
 
@@ -174,7 +186,7 @@ API 資格情報を役割から削除するには、API 資格情報名の横に
 
 「**[!UICONTROL ユーザーグループ]**」タブに戻されます。
 
-## Experience Platformにユーザーを追加
+## Experience Platformへのユーザーの追加
 
 システム管理者は、ユーザーがAdobe Developer Consoleで [ 統合を作成 ](../../../landing/api-authentication.md#generate-credentials) できるように、開発者にアクセス権を付与できます。
 
