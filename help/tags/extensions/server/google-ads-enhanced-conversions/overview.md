@@ -3,7 +3,7 @@ title: Google Ads Enhanced Conversions 拡張機能
 description: Adobe Experience Platformのイベント転送用のGoogle Ads Enhanced Conversions 拡張機能について説明します。
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ### [!DNL Google Global Site Tag] 拡張機能の設定とインストール
 
-[!UICONTROL  データ収集 ] UI またはExperience PlatformUI に移動し、左側のナビゲーションで **[!UICONTROL タグ]** を選択します。 拡張機能をインストールするタグプロパティを選択し、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択します。 「**[!UICONTROL カタログ]**」タブで、[!UICONTROL Google グローバルサイトタグ（gtag） ] 拡張機能を探し、「**[!UICONTROL インストール]**」を選択します。
+[!UICONTROL  データ収集 ] UI またはExperience Platform UI に移動し、左側のナビゲーションで **[!UICONTROL タグ]** を選択します。 拡張機能をインストールするタグプロパティを選択し、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択します。 「**[!UICONTROL カタログ]**」タブで、[!UICONTROL Google グローバルサイトタグ（gtag） ] 拡張機能を探し、「**[!UICONTROL インストール]**」を選択します。
 
 ![[!UICONTROL Google グローバルサイトタグ（gtag） ] 拡張機能は、[!UICONTROL  データ収集 ] UI の [!UICONTROL  拡張機能 ] ビューで選択されています。](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
@@ -74,6 +74,7 @@ ht-degree: 1%
 1. **[!UICONTROL イベント名（アクション）]**：値として `conversion` を入力します。
 1. キーが `transaction_id` で、値が [ トランザクション ID[ 値を含む ](../../../ui/managing-resources/data-elements.md) データ要素 ](https://support.google.com/google-ads/answer/6386790) である新しいフィールドを追加します。
 1. **[!UICONTROL コンバージョンラベル]**:[!DNL Google Ads] アカウントから適切なコンバージョンラベルを入力します。 この値を見つけるには、Google Ads にログインし、**[!DNL Tools and Settings]**/**[!DNL Conversions]**/**[!DNL Select a conversion action]**/**[!DNL Tag Setup]**/**[!DNL Use Google Tag Manager]** に移動します。 コンバージョンラベルは [!DNL Instructions] の下にあります。
+
    >[!IMPORTANT]
    >
    >[!DNL Google Ads] アカウントのタグ設定エリアで、拡張コンバージョンが有効になっていることを確認します。 これを行うには、利用規約を確認して同意し、実装方法として **[!DNL Turn on enhanced conversions]** と **[!DNL API]** を選択します。

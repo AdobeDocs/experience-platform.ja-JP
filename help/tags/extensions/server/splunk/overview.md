@@ -2,7 +2,7 @@
 title: Splunk 拡張機能の概要
 description: Adobe Experience Platform でのイベント転送用の Splunk 拡張機能について説明します。
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 98%
@@ -38,6 +38,7 @@ Splunk は、Splunk Event Collector API と通信するための認証メカニ�
 
 * [イベントコレクタートークン](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform)。トークンは通常、`12345678-1234-1234-1234-1234567890AB` のような UUIDv4 形式です。
 * 組織の Splunk プラットフォームインスタンスのアドレスとポート。通常、プラットフォームインスタンスのアドレスとポートの形式は、`mysplunkserver.example.com:443` です。
+
   >[!IMPORTANT]
   >
   > イベント転送内で参照される Splunk エンドポイントは、ポート `443` のみを使用する必要があります 。非標準ポートは、現在、イベント転送の実装ではサポートされていません。

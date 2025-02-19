@@ -1,9 +1,9 @@
 ---
-keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagram;messenger;facebook messenger
+keywords: facebook 接続；facebook 接続；facebook 宛先；facebook;instagram;messenger;facebook messenger
 title: Facebook 接続
 description: ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Facebook キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 27%
@@ -18,7 +18,7 @@ ht-degree: 27%
 
 この宛先は、[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]、[!DNL Messenger] など、[!DNL Custom Audiences] でサポートされてい [!DNL Facebook's] アプリファミリ全体でのオーディエンスのターゲティングに使用できます。 Campaign を実行するアプリの選択は、[!DNL Facebook Ads Manager] のプレースメントレベルに示されます。
 
-![Adobe Experience Platform UI のFacebookの宛先。](../../assets/catalog/social/facebook/catalog.png)
+![Adobe Experience Platform UI での Facebook の宛先。](../../assets/catalog/social/facebook/catalog.png)
 
 ## ユースケース
 
@@ -54,7 +54,7 @@ ht-degree: 27%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -65,7 +65,7 @@ ht-degree: 27%
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | facebookの宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | Facebook の宛先で使用される識別子（名前、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
 {style="table-layout:auto"}
@@ -76,14 +76,17 @@ ht-degree: 27%
 
 * [!DNL Facebook] ユーザーアカウントには、使用している広告アカウントを所有する [!DNL Facebook Business Account] へのフルアクセス権が必要です。
 * 使用する広告アカウントに対して、[!DNL Facebook] ユーザーアカウントで **[!DNL Manage campaigns]** 権限が有効になっている必要があります。
-* **Adobe Experience Cloud** ビジネス アカウントは、広告パートナーとして [!DNL Facebook Ad Account] に追加される必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebook ドキュメントの [Business Manager へのパートナーの追加 ](https://www.facebook.com/business/help/1717412048538897) を参照してください。
+* **Adobe Experience Cloud** ビジネス アカウントは、広告パートナーとして [!DNL Facebook Ad Account] に追加される必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebook ドキュメントの [ ビジネスマネージャーへのパートナーの追加 ](https://www.facebook.com/business/help/1717412048538897) を参照してください。
+
   >[!IMPORTANT]
   >
   > Adobe Experience Cloudの権限を設定する場合は、**キャンペーンの管理** 権限を有効にする必要があります。 [!DNL Adobe Experience Platform] 統合には権限が必要です。
+
 * [!DNL Facebook Custom Audiences] のサービス利用規約を読み、署名します。 これを行うには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973` に移動します。`accountID` れは [!DNL Facebook Ad Account ID] です。 サービス利用規約に署名する際は、URL に `business_id=206617933627973` セクションが存在することを確認してください。
+
   >[!IMPORTANT]
   >
-  >[!DNL Facebook Custom Audiences] のサービス利用規約に署名する場合は、必ずFacebook API で認証に使用したのと同じユーザーアカウントを使用します。
+  >[!DNL Facebook Custom Audiences] サービス利用規約に署名する場合は、Facebook API での認証に使用したのと同じユーザーアカウントを使用してください。
 
 ## ID の一致要件 {#id-matching-requirements}
 
@@ -104,9 +107,9 @@ Adobe Experience Platformに取り込む ID のタイプに応じて、対応す
 
 ## メールハッシュ要件 {#email-hashing-requirements}
 
-メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、メールアドレスをExperience Platformで明確に使用して、アクティベーション時 [!DNL Platform] ハッシュ化したりできます。
+メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platformでメールアドレスを明確に使用して、アクティベーション時 [!DNL Platform] ハッシュ化したりできます。
 
-Experience Platformでメールアドレスを取り込む方法については、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) および [ ストリーミング取り込みの概要 ](/help/ingestion/streaming-ingestion/overview.md) を参照してください。
+Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) および [ ストリーミング取り込みの概要 ](/help/ingestion/streaming-ingestion/overview.md) を参照してください。
 
 メールアドレスを自分でハッシュ化することを選択する場合は、次の要件に必ず従ってください。
 
@@ -127,7 +130,7 @@ Experience Platformでメールアドレスを取り込む方法については�
 
 ## カスタム名前空間の使用 {#custom-namespaces}
 
-`Extern_ID` 名前空間を使用して [!DNL Facebook] にデータを送信する前に、[!DNL Facebook Pixel] を使用して独自の識別子を同期させる必要があります。 詳しくは、[Facebook公式ドキュメント ](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) を参照してください。
+`Extern_ID` 名前空間を使用して [!DNL Facebook] にデータを送信する前に、[!DNL Facebook Pixel] を使用して独自の識別子を同期させる必要があります。 詳しくは、[Facebook 公式ドキュメント ](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) を参照してください。
 
 ## 宛先への接続 {#connect}
 
@@ -147,21 +150,21 @@ Experience Platformでメールアドレスを取り込む方法については�
 
 ### 宛先に対する認証 {#authenticate}
 
-1. 宛先カタログでFacebookの宛先を見つけて、「**[!UICONTROL 設定]**」を選択します。
+1. 宛先カタログで Facebook の宛先を見つけて、「**[!UICONTROL 設定]**」を選択します。
 2. **[!UICONTROL 宛先に接続]** を選択します。
-   ![ アクティベーションワークフローに表示されるFacebookへの認証手順 ](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
-3. facebookの資格情報を入力し、「**ログイン**」を選択します。
+   ![ アクティベーションワークフローに表示される Facebook への認証手順 ](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Facebook の認証情報を入力し、「**ログイン**」を選択します。
 
 ### 認証資格情報を更新 {#refresh-authentication-credentials}
 
 Facebook トークンは 60 日ごとに期限切れになります。 トークンの有効期限が切れると、宛先へのデータの書き出しは機能しなくなります。 この状況を回避するには、次の手順を実行して再認証を行います。
 
 1. **[!UICONTROL 宛先]**/**[!UICONTROL アカウント]** に移動します。
-2. （任意）ページで使用可能なフィルターを使用して、Facebook アカウントのみを表示します。
+2. （オプション）ページで使用可能なフィルターを使用して、Facebook アカウントのみを表示します。
    ![Facebook アカウントのみを表示するようにフィルター ](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 更新するアカウントを選択し、省略記号を選択して **[!UICONTROL 詳細を編集]** を選択します。
    ![ 詳細コントロールの編集を選択 ](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. モーダルウィンドウで、「**[!UICONTROL OAuth に再接続]**」を選択し、Facebook資格情報を使用して再認証します。
+4. モーダルウィンドウで、「**[!UICONTROL OAuth に再接続]**」を選択し、Facebook の資格情報を使用して再認証します。
    ![ 「OAuth に再接続」オプションを使用したモーダルウィンドウ ](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -218,7 +221,7 @@ Facebook トークンは 60 日ごとに期限切れになります。 トーク
 
 **[!UICONTROL セグメントスケジュール]** ステップでは、オーディエンスを [!DNL Facebook Custom Audiences] に送信する際に [!UICONTROL  オーディエンスの接触チャネル ] を指定する必要があります。
 
-![Facebook アクティベーションステップに表示されるオーディエンスの接触チャネル ドロップダウン ](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Facebook アクティベーションステップに表示されるオーディエンスの接触チャネルドロップダウン。](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### マッピング例：[!DNL Facebook Custom Audience] でのオーディエンスデータのアクティブ化 {#example-facebook}
 
