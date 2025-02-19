@@ -49,13 +49,13 @@ Adobe Experience Platformの属性ベースのアクセス制御を使用する�
 
 ## 権限
 
-[!UICONTROL  権限 ] は、Experience Cloud者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる管理エリアです。
+[!UICONTROL  権限 ] は、管理者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる、Experience Cloudの領域です。
 
 [!UICONTROL  権限 ] を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。 [!UICONTROL  権限 ] を使用すると、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。
 
 管理者権限がない場合は、システム管理者に連絡してアクセス権を取得してください。
 
-管理者権限があれば、[Adobe Experience Cloud](https://experience.adobe.com/) に移動し、Adobe資格情報を使用してログインします。 ログインすると、管理者権限を持つ組織の **[!UICONTROL 概要]** ページが表示されます。 このページには、組織が購読している製品と、組織にユーザーと管理者を追加するための他のコントロールが表示されます。 **[!UICONTROL 権限]** を選択して、Platform 統合用のワークスペースを開きます。
+管理者権限があれば、[Adobe Experience Cloud](https://experience.adobe.com/) に移動し、Adobeの資格情報を使用してログインします。 ログインすると、管理者権限を持つ組織の **[!UICONTROL 概要]** ページが表示されます。 このページには、組織が購読している製品と、組織にユーザーと管理者を追加するための他のコントロールが表示されます。 **[!UICONTROL 権限]** を選択して、Platform 統合用のワークスペースを開きます。
 
 ![Adobe Experience Cloudで「権限」製品が選択されている様子を示す画像 ](../images/flac-ui/flac-select-product.png)
 
@@ -66,7 +66,7 @@ Platform UI の権限ワークスペースが表示され、**[!UICONTROL 概要
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="ラベルとは"
->abstract="ラベルを使用すると、データに適用される使用ポリシーおよびアクセスポリシーに従ってデータセットとフィールドを分類できます。 Platform には、Adobe定義の <strong> コア </strong> データ使用ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。 例えば、RHD （規制医療データ）などの、機密を意味する <strong>S</strong> ラベルを使用すると、保護された医療情報（PHI）を参照するデータを分類できます。 また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
+>abstract="ラベルを使用すると、データに適用される使用ポリシーおよびアクセスポリシーに従ってデータセットとフィールドを分類できます。 Platform には、Adobeが定義した <strong> コア </strong> データ使用ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。 例えば、RHD （規制医療データ）などの、機密を意味する <strong>S</strong> ラベルを使用すると、保護された医療情報（PHI）を参照するデータを分類できます。 また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#understanding-data-usage-labels" text="データ使用ラベルの概要"
 
 役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素です。 役割には特定の権限セットが付与され、必要なアクセス範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。

@@ -4,7 +4,7 @@ description: Amazon Web Services（AWS）S3 ストレージへのライブアウ
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1498'
 ht-degree: 49%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 49%
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
 | 2024年1月 | 機能とドキュメントの更新 | Amazon S3 宛先コネクタで、新しく想定されるロール認証タイプがサポートされるようになりました。 詳しくは、[ 認証の節 ](#assumed-role-authentication) を参照してください。 |
-| 2023年7月 | 機能とドキュメントの更新 | 2023 年 7 月のExperience Platformリリースでは、以下に示すように、[!DNL Amazon S3] の宛先が新しい機能を提供します。<br><ul><li>[ データセット書き出しのサポート ](/help/destinations/ui/export-datasets.md)</li><li>追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。</li><li>書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）</li><li>[書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> |
+| 2023年7月 | 機能とドキュメントの更新 | 2023 年 7 月のExperience Platform リリースでは、以下に示すように、[!DNL Amazon S3] の宛先が新しい機能を提供します。<br><ul><li>[ データセット書き出しのサポート ](/help/destinations/ui/export-datasets.md)</li><li>追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。</li><li>書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）</li><li>[書き出された CSV データファイルの形式をカスタマイズする機能](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -36,7 +36,7 @@ ht-degree: 49%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -89,7 +89,7 @@ ht-degree: 49%
 
 #### アクセスキーと秘密鍵の認証
 
-Amazon S3 アクセスキーと秘密鍵を入力して、Experience PlatformがAmazon S3 プロパティにデータを書き出せるようにする場合は、この認証方法を使用します。
+Experience PlatformがAmazon S3 プロパティにデータを書き出せるようにAmazon S3 アクセスキーと秘密鍵を入力する場合は、この認証方法を使用します。
 
 ![ アクセスキーと秘密鍵の認証を選択する際の必須フィールドの画像 ](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
@@ -109,9 +109,9 @@ Amazon S3 アクセスキーと秘密鍵を入力して、Experience Platformが
 
 アカウントキーと秘密鍵をアドビと共有したくない場合は、この認証タイプを使用します。代わりに、Experience Platformは、役割ベースのアクセスを使用してAmazon S3 の場所に接続します。
 
-これを行うには、AWS コンソールで、Amazon S3 バケットに書き込むための [ 必要な権限を持つ ](#minimum-permissions-iam-user)Adobeを想定したユーザーを作成する必要があります。 Adobeアカウント **[!UICONTROL 670664943635]** を使用して、AWSに **[!UICONTROL 信頼済みエンティティ]** を作成します。 詳しくは、[ 役割の作成に関するAWS ドキュメント ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) を参照してください。
+これを行うには、AWS コンソールで、Amazon S3 バケットに書き込む [ 必要な権限を持つ ](#minimum-permissions-iam-user)Adobeのユーザーを想定する必要があります。 Adobe アカウント **[!UICONTROL 670664943635]** を使用して、AWSに **[!UICONTROL 信頼済みエンティティ]** を作成します。 詳しくは、[ 役割の作成に関するAWS ドキュメント ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) を参照してください。
 
-* **[!DNL Role]**:AWSで作成したロールの ARN をAdobeユーザー用に貼り付けます。 パターンは `arn:aws:iam::800873819705:role/destinations-role-customer` に似ています。
+* **[!DNL Role]**:Adobe ユーザー用にAWSで作成したロールの ARN を貼り付けます。 パターンは `arn:aws:iam::800873819705:role/destinations-role-customer` に似ています。
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
 ### 宛先の詳細を入力 {#destination-details}
@@ -119,7 +119,7 @@ Amazon S3 アクセスキーと秘密鍵を入力して、Experience Platformが
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="バケット名"
->abstract="3～63 文字の長さにする必要があります。先頭および末尾は文字または数字にする必要があります。小文字、数字、ハイフン（-）のみを含める必要があります。IP アドレス（例：192.100.1.1）の形式にはできません。"
+>abstract="3～63 文字の長さにする必要があります。先頭および末尾は文字または数字にする必要があります。小文字、数字、ハイフン（-）のみを含める必要があります。IP アドレス （例：192.100.1.1）の形式にはできません。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
@@ -133,7 +133,7 @@ Amazon S3 アクセスキーと秘密鍵を入力して、Experience Platformが
 * **[!UICONTROL 説明]**：宛先の説明を入力します。
 * **[!UICONTROL バケット名]**：この宛先が使用する [!DNL Amazon S3] バケット名を入力します。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする保存先フォルダーのパス。
-* **[!UICONTROL ファイルの種類]**：書き出したファイルに使用するExperience Platformの形式を選択します。 [!UICONTROL CSV] オプションを選択する場合、[ ファイル形式オプションを設定 ](../../ui/batch-destinations-file-formatting-options.md) することもできます。
+* **[!UICONTROL ファイルの種類]**：書き出したファイルにExperience Platformで使用する形式を選択します。 [!UICONTROL CSV] オプションを選択する場合、[ ファイル形式オプションを設定 ](../../ui/batch-destinations-file-formatting-options.md) することもできます。
 * **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformで使用する圧縮タイプを選択します。
 * **[!UICONTROL マニフェストファイルを含める]**：書き出しに、書き出しの場所や書き出しのサイズなどに関する情報を含んだマニフェスト JSON ファイルを含めたい場合は、このオプションをオンに切り替えます。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 [ サンプル マニフェスト ファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。
    * `flowRunId`：書き出されたファイルを生成した [ データフロー実行 ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
@@ -220,4 +220,4 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## IP アドレスの許可リスト {#ip-address-allow-list}
 
-許可リストにAdobe許可リストに加える IP を登録する必要がある場合は、[IP アドレス ](ip-address-allow-list.md) を参照してください。
+許可リストにAdobe許可リストに加えるの IP を登録する必要がある場合は、[IP アドレス ](ip-address-allow-list.md) の記事を参照してください。
