@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
+source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 80%
+source-wordcount: '2228'
+ht-degree: 70%
 
 ---
 
@@ -36,7 +36,17 @@ ht-degree: 80%
 
 ## [!UICONTROL オーディエンス] {#audience-block}
 
-**[!UICONTROL オーディエンス]**&#x200B;ブロックタイプを使用すると、より大きな新しいオーディエンスを構成するサブオーディエンスを追加できます。 デフォルトでは、**[!UICONTROL オーディエンス]**&#x200B;ブロックは構成キャンバスの上部に含まれています。
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="オーディエンスブロック"
+>abstract="オーディエンス ブロックを使用すると、新しいオーディエンスの作成に使用するサブオーディエンスを指定できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="結合タイプ"
+>abstract="結合タイプによって、選択したサブオーディエンスの結合方法が決まります。 サポートされている値には、和集合、積集合、重複を除外などがあります。"
+
+**[!UICONTROL オーディエンス]** ブロックタイプを使用すると、より大きな新しいオーディエンスの作成に使用するサブオーディエンスを追加できます。 デフォルトでは、**[!UICONTROL オーディエンス]**&#x200B;ブロックは構成キャンバスの上部に含まれています。
 
 **[!UICONTROL オーディエンス]**&#x200B;ブロックを選択すると、右側のパネルには、オーディエンスにラベルを付けたり、ブロックにオーディエンスを追加したり、オーディエンスブロックのカスタムルールを作成したりするためのコントロールが表示されます。
 
@@ -88,6 +98,16 @@ ht-degree: 80%
 
 ## [!UICONTROL 除外] {#exclude-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="ブロックを除外"
+>abstract="除外ブロックを使用すると、指定したオーディエンスまたは属性をコンポジションから除外できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>title="除外タイプ"
+>abstract="特定のオーディエンスに属するプロファイルを除外（オーディエンス別に除外）するか、特定の属性に基づいてプロファイルを除外（属性別に除外）できます。"
+
 **[!UICONTROL 除外]** ブロックタイプを使用すると、指定したサブオーディエンスまたは属性を、より大きな新しいオーディエンスから除外できます。
 
 **[!UICONTROL 除外]**&#x200B;ブロックを追加するには、「**+**」アイコン、「**[!UICONTROL 除外]**」の順に選択します。
@@ -127,6 +147,26 @@ ht-degree: 80%
 >属性別に除外する場合は、除外する **one** 値のみを指定できます。 コンマやセミコロンなどの任意の種類の区切り記号を使用すると、その正確な値のみが除外されます。 例えば、値を `red, blue` に設定すると、属性から用語 `red, blue` が除外されますが、用語 `red` または `blue` のいずれかが除外されます **除外されません**。
 
 ## [!UICONTROL エンリッチメント] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="ブロックのエンリッチメント"
+>abstract="エンリッチメントブロックを使用すると、Adobe Experience Platform データセットから取得した追加の属性でオーディエンスを強化できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="エンリッチメントデータセット"
+>abstract="エンリッチメントデータセットには、コンポジションに関連付けるデータが含まれています。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="エンリッチメント条件"
+>abstract="エンリッチメント条件には、Source結合キーとエンリッチメントデータセット結合キーが含まれます。 これらの 2 つのキーは、ソースデータセットとエンリッチメントデータセットを紐付けします。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="エンリッチメント属性"
+>abstract="エンリッチメント属性は、コンポジションに関連付ける属性です。"
 
 >[!IMPORTANT]
 >
@@ -206,6 +246,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL ランク] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="ランクブロック"
+>abstract="ランク ブロックを使用すると、特定の属性に基づいてプロファイルをランク付けし、コンポジションに含めることができます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="プロファイル制限を追加"
+>abstract="「プロファイル制限を追加」切替スイッチを使用すると、ランキングプロセスの一部として含めるプロファイルの最大数を指定できます。"
+
 **[!UICONTROL ランク]**&#x200B;ブロックタイプを使用すると、指定した属性に基づいてプロファイルのランク付けと並べ替えを行い、これらのランク付けされたプロファイルを構成に含めることができます。
 
 **[!UICONTROL ランク]**&#x200B;ブロックを追加するには、「**+**」アイコン、「**[!UICONTROL ランク]**」の順に選択します。
@@ -231,6 +281,21 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 ![ 「プロファイル制限を追加」切替スイッチがハイライト表示されています。ここから、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL 分割] {#split-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="ブロックの分割"
+>abstract="分割ブロックを使用すると、コンポジションを複数のパスに分割できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="分割タイプ"
+>abstract="コンポジションは、パーセント分割または属性分割で分割できます。 パーセント分割は、プロファイルを複数のパスにランダムに分割します。 属性分割を使用すると、指定した属性に基づいてプロファイルを分割できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="その他のプロファイル"
+>abstract="「その他のプロファイル」切替スイッチを使用すると、他のパスで指定した条件に一致しない残りのプロファイルと共に、追加のパスを作成できます。"
 
 **[!UICONTROL 分割]**&#x200B;ブロックタイプを使用すると、新しいオーディエンスを様々なサブオーディエンスに分割できます。オーディエンスは、割合に基づいて分割することも、属性別に分割することもできます。 オーディエンスをサブオーディエンスに分割する場合、この分割は永続的 **ありません**。 つまり、プロファイルは、評価ごとに異なるサブオーディエンスにある可能性があります。
 
@@ -272,13 +337,13 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >
 >オーディエンスコンポジションを公開する場合、Real-Time CDP宛先やAdobe Journey Optimizer チャネルなどのダウンストリームサービスで使用するために評価およびアクティブ化されるまで、最大 48 時間かかる場合があります。
 
-コンポジションを作成したら、**[!UICONTROL Publish]** を選択して保存して公開できます。
+コンポジションを作成したら、「**[!UICONTROL 公開]**」を選択して保存および公開できます。
 
-![ 「Publish」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子 ](../images/ui/audience-composition/publish.png)
+![ 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/publish.png)
 
 オーディエンスの作成でエラーが発生した場合は、アラートが表示され、問題の解決方法を知らせます。
 
-![ 「Publish」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子 ](../images/ui/audience-composition/audience-alert.png)
+![ 「公開」ボタンがハイライト表示されて、コンポジションの保存および公開方法が示される様子。](../images/ui/audience-composition/audience-alert.png)
 
 ## 次の手順
 
