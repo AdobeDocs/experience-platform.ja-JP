@@ -3,10 +3,10 @@ keywords: 広告の宛先；宛先；Platform の宛先
 title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名オーディエンスをこれらのプラットフォームに共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 48%
+source-wordcount: '272'
+ht-degree: 47%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 48%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformを需要側プラットフォーム（DSP）、供給側プラットフォーム（SSP）、広告ネットワークなどの広告プラットフォームに接続して、既知のオーディエンスと偽名のオーディエンスをこれらのプラットフォームに共有します。
+Adobe Experience Platformをデマンドサイドプラットフォーム（DSP）、サプライサイドプラットフォーム（SSP）、アドネットワークなどの広告プラットフォームに接続して、既知のオーディエンスや偽名のオーディエンスをこれらのプラットフォームに共有します。
 
 広告の宛先に接続すると、オーディエンスは ID として宛先プラットフォームに送信され、宛先プラットフォームで知られている ID にマッピングされます。
 
@@ -29,7 +29,7 @@ Adobe Experience Platformを需要側プラットフォーム（DSP）、供給�
 * [（Beta） Acxiom の Audience Distribution](acxiom-audience-distribution.md)
 * [Adobe Advertising Cloud 接続](adobe-advertising-cloud-connection.md)
 * [Amazon Ads 接続](amazon-ads.md)
-* [（ベータ版）Criteo 接続](criteo.md)
+* [Criteo 接続](criteo.md)
 * [Google Display &amp; Video 360 接続](google-dv360.md)
 * [Google Ads 接続](google-ads-destination.md)
 * [Google Ad Manager の接続](google-ad-manager.md)

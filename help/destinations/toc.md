@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 83%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 83%
       * [見込み客のオーディエンスを宛先に対してアクティブ化する](./ui/activate-prospect-audiences.md)
       * [宛先へのアカウントオーディエンスの有効化](./ui/activate-account-audiences.md)
       * [Experience Platform UI を使用した、オンデマンドによるバッチ宛先へのファイルの書き出し](./ui/export-file-now.md)
-      * [Experience PlatformUI を使用したデータセットの書き出し](./ui/export-datasets.md)
+      * [Experience Platform UI を使用したデータセットの書き出し](./ui/export-datasets.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
       * [計算フィールドを使用して、配列を文字列として書き出し](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
@@ -78,7 +78,7 @@ ht-degree: 83%
       * [Awin Advertiser Mastertag 拡張機能](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads Universal Event Tracking（UET）拡張機能](./catalog/advertising/bing-ads.md)
       * [Branch 拡張機能](./catalog/advertising/branch.md)
-      * [（ベータ版）Criteo 接続](./catalog/advertising/criteo.md)
+      * [Criteo 接続](./catalog/advertising/criteo.md)
       * [Demandbase 接続](./catalog/advertising/demandbase.md)
       * [DoubleClick Floodlight（ベータ版）拡張機能](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook Pixel 拡張機能](./catalog/advertising/facebook-pixel.md)
@@ -204,7 +204,7 @@ ht-degree: 83%
    * ソーシャルの宛先{#social}
       * [ソーシャルの宛先の概要](./catalog/social/overview.md)
       * [Facebook 接続](./catalog/social/facebook.md)
-      * [（会社）LinkedIn Matched Audiences 接続](./catalog/social/linkedin-b2b.md)
+      * [（会社） LinkedIn Matched Audiences 接続](./catalog/social/linkedin-b2b.md)
       * [LinkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
       * [TikTok 接続](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
