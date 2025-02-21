@@ -2,7 +2,7 @@
 title: 同意分析とトラッキング
 description: 同意分析ダッシュボードを作成して、ユーザーの同意の経時的なトレンドを追跡する方法を説明します。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 同意分析とトラッキング
 
-現在のマーケティング環境では、顧客の同意環境設定を理解し、尊重する必要があります。 Adobe Real-time Customer Data Platformは、マーケターが顧客の同意を分析して、信頼を構築し、プライバシー規制を遵守し、よりパーソナライズされたエクスペリエンスを提供する機能を提供します。
+現在のマーケティング環境では、顧客の同意環境設定を理解し、尊重する必要があります。 Adobe Real-Time Customer Data Platformは、マーケターが顧客の同意を分析して、信頼を構築し、プライバシー規制を遵守し、よりパーソナライズされたエクスペリエンスを提供する機能を提供します。
 
 このドキュメントでは、Real-Time CDP データの様々なマーケティングユースケースに対応する同意ダッシュボードの作成方法について詳しく説明します。 特に、ビジネスニーズに適した属性でオーディエンスを作成し、Adobe Experience Platform UI の事前設定済みウィジェットを使用してインサイトを活用する方法に重点を置いています。 ユーザー定義ダッシュボード機能を使用して独自のカスタムウィジェットを作成する代替方法についても説明します。
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 同意したオーディエンスの作成 {#create-consent-audiences}
 
-同意ダッシュボードを作成するには、まず、連絡に同意したすべてのプロファイルのオーディエンスを作成する必要があります。 Real-time Customer Data Platform セグメントビルダーに移動するには、Platform UI の左側のナビゲーションで「**[!UICONTROL オーディエンス]**」を選択します。 [!UICONTROL  オーディエンス ] ダッシュボードの「[!UICONTROL  顧客 ]」タブで、表示の右上にある **[!UICONTROL オーディエンスを作成]** を選択したあと、**[!UICONTROL ルールを作成]** を選択します。
+同意ダッシュボードを作成するには、まず、連絡に同意したすべてのプロファイルのオーディエンスを作成する必要があります。 Real-Time Customer Data Platform セグメントビルダーに移動するには、Platform UI の左側のナビゲーションで「**[!UICONTROL オーディエンス]**」を選択します。 [!UICONTROL  オーディエンス ] ダッシュボードの「[!UICONTROL  顧客 ]」タブで、表示の右上にある **[!UICONTROL オーディエンスを作成]** を選択したあと、**[!UICONTROL ルールを作成]** を選択します。
 
 ![[!UICONTROL  顧客 ]、[!UICONTROL  オーディエンス ]、および [!UICONTROL  セグメントを作成 ] がハイライト表示された [!UICONTROL  オーディエンス ] ダッシュボード ](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -36,9 +36,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobeが推奨するフィールドグループとは異なる属性でユーザーの同意を保持している場合は、次に示す属性ではなく、それらの属性を選択する必要があります。
+>Adobeの推奨フィールドグループとは異なる属性でユーザーの同意を保持している場合は、以下に示す属性ではなく、それらの属性を選択する必要があります。
 
-詳しくは、[ セグメント化での同意の処理 ](../../segmentation/consents.md#handling-consent-in-segmentation) ドキュメントを参照してください。
+詳しくは、[ セグメント化での同意の処理 ](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation) ドキュメントを参照してください。
 
 ![ 「同意および環境設定 [!UICONTROL  属性フォルダーがハイライト表示されたセグメントビルダー ]](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ## インサイトの使用 {#consume-insights}
 
-Adobeは、プロファイル、オーディエンス、宛先の各ダッシュボードで自動的に使用可能な様々なインサイトを作成しています。 作成したオーディエンスは、これらの事前設定済みのインサイトで自動的に使用できます。 [ プロファイル ](../guides/profiles.md#standard-widgets)、[ オーディエンス ](../guides/audiences.md#standard-widgets) および [ 宛先 ](../guides/destinations.md) ダッシュボードで使用できるインサイトのリストについては、標準ウィジェットのドキュメントを参照してください。
+Adobeは、プロファイル、オーディエンス、宛先の各ダッシュボードで自動的に利用できる様々なインサイトを作成しています。 作成したオーディエンスは、これらの事前設定済みのインサイトで自動的に使用できます。 [ プロファイル ](../guides/profiles.md#standard-widgets)、[ オーディエンス ](../guides/audiences.md#standard-widgets) および [ 宛先 ](../guides/destinations.md) ダッシュボードで使用できるインサイトのリストについては、標準ウィジェットのドキュメントを参照してください。
 
 ## オーディエンスの重複 {#audience-overlap}
 
@@ -155,7 +155,7 @@ Adobeは、プロファイル、オーディエンス、宛先の各ダッシュ
 
 >[!NOTE]
 >
->**Adobeの Healthcare Shield** または **Adobeのプライバシーとセキュリティシールド** のお客様の場合、これらのダッシュボード **同意ポリシーのトラッキングを反映していません**。 使用可能なトラッキングには、作成および有効化されたポリシーの数、オーディエンスメンバーシップへの影響が含まれます。
+>**Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** のお客様の場合、これらのダッシュボード **同意ポリシーのトラッキングは反映されません**。 使用可能なトラッキングには、作成および有効化されたポリシーの数、オーディエンスメンバーシップへの影響が含まれます。
 
 ## 次の手順
 

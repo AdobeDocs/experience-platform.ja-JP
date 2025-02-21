@@ -5,10 +5,10 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
 role: User
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: be480fee733eb786c5488a9a10d04a62ef845566
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 93%
+source-wordcount: '200'
+ht-degree: 80%
 
 ---
 
@@ -22,14 +22,12 @@ ht-degree: 93%
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
    - [オーディエンス](api/audiences.md)
-   - [エッジセグメント化](api/edge-segmentation.md)
    - [ジョブの書き出し](api/export-jobs.md)
    - [プレビューと見積もり](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
    - [セグメントの定義](api/segment-definitions.md)
    - [セグメントジョブ](api/segment-jobs.md)
    - [セグメント検索](api/segment-search.md)
-   - [ストリーミングセグメント化](api/streaming-segmentation.md)
 - セグメント化 UI {#ui}
    - [概要](ui/overview.md)
    - [オーディエンスダッシュボード](ui/audience-dashboard.md)
@@ -37,19 +35,33 @@ ht-degree: 93%
    - [オーディエンス構成](ui/audience-composition.md)
    - [セグメントビルダー](ui/segment-builder.md)
    - [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)
-   - [アカウントオーディエンス](ui/account-audiences.md)
-   - [類似オーディエンス](ui/lookalike-audiences.md)
-   - [見込み客オーディエンス](ui/prospect-audience.md)
-   - [エッジセグメント化](ui/edge-segmentation.md)
-   - [ストリーミングセグメント化](ui/streaming-segmentation.md)
-   - [ストリーミングセグメント化（ビデオ）](video/streaming-segmentation-overview.md)
    - [年の時間制約を無視の更新](ui/ignore-year.md)
    - [時間制約のリファクタリング](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
       - [Segment Match の概要](ui/segment-match/overview.md)
       - [トラブルシューティング](ui/segment-match/troubleshooting.md)
-- [同意の遵守](consents.md)
-- [マルチエンティティのセグメント化](multi-entity-segmentation.md)
+- のセグメント化メソッ {#methods}
+   - [概要](methods/overview.md)
+   - [バッチセグメント化](methods/batch-segmentation.md)
+   - [ストリーミングセグメント化](methods/streaming-segmentation.md)
+   - [エッジセグメント化](methods/edge-segmentation.md)
+- オーディエンスタイプ {#types}
+   - [概要](types/overview.md)
+   - [人物オーディエンス](types/people-audiences.md)
+   - [見込み客オーディエンス](types/prospect-audiences.md)
+   - [アカウントオーディエンス](types/account-audiences.md)
+   - [類似オーディエンス](types/lookalike-audiences.md)
+- チュートリアル {#tutorials}
+   - [セグメント定義の作成](tutorials/create-a-segment.md)
+   - [セグメント定義の作成（ビデオ）](video/create-segment.md)
+   - [動的セグメント定義の作成（ビデオ）](video/create-a-dynamic-segment.md)
+   - [マルチエンティティセグメント定義の作成（ビデオ）](video/create-multi-entity-segments.md)
+   - [マルチエンティティのセグメント化](tutorials/multi-entity-segmentation.md)
+   - [同意の遵守](tutorials/consents.md)
+   - [セグメント定義の評価](tutorials/evaluate-a-segment.md)
+   - [外部オーディエンスの読み込みと使用](tutorials/using-external-audiences.md)
+   - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
+   - [オーディエンスに対してデータ使用のコンプライアンスを適用](tutorials/governance.md)
 - プロファイルクエリ言語 {#pql}
    - [概要](pql/overview.md)
    - [ブール関数](pql/boolean-functions.md)
@@ -64,15 +76,6 @@ ht-degree: 93%
    - [フィルター関数](pql/filter-functions.md)
    - [論理量指定子](pql/logical-quantifiers.md)
    - [その他の関数](pql/misc-functions.md)
-- チュートリアル {#tutorials}
-   - [セグメントの作成](tutorials/create-a-segment.md)
-   - [セグメントの作成（ビデオ）](video/create-segment.md)
-   - [動的セグメントの作成（ビデオ）](video/create-a-dynamic-segment.md)
-   - [マルチエンティティセグメントの作成（ビデオ）](video/create-multi-entity-segments.md)
-   - [セグメントの評価](tutorials/evaluate-a-segment.md)
-   - [外部オーディエンスの読み込みと使用](tutorials/using-external-audiences.md)
-   - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
-   - [セグメントでデータ使用のコンプライアンスを実施する](tutorials/governance.md)
 - [実施要件の条件の更新](./eligibility-criteria-update.md)
 - [よくある質問](./faq.md)
 - [API リファレンス](https://www.adobe.io/experience-platform-apis/references/segmentation/)

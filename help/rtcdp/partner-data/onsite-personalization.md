@@ -3,7 +3,7 @@ title: パートナー支援の訪問者認識を使用して、不明な訪問�
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 >[!AVAILABILITY]
 >
->この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを取得したお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform アクティベーション、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimateのライセンスを持つ顧客が使用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 パートナー支援による認識を使用して、パーソナライズされたエクスペリエンスを web プロパティ訪問者に提供する方法を説明します。このチュートリアルを使用すると、Experience Platform および他の Experience Cloud ソリューションにおける様々な要素の実装シーケンスを理解して、パーソナライズされたエクスペリエンスを認証済みおよび未認証の訪問者に表示できます。
 
@@ -24,7 +24,7 @@ ht-degree: 89%
 
 消費者が様々な方法でブランドとやり取りする際のデジタルエクスペリエンスの断片化は非常に現実的であり、解決するのがますます難しくなっています。 包括的なエクスペリエンス、ターゲットを絞ったレコメンデーション、カスタマイズされたインタラクションに対する最適な顧客エンゲージメント戦略はすべて、ユーザーの認識によって制約を受けます。
 
-そこで、パートナー支援によるリアルタイム認識が有意義な違いを生み出すことができます。 Adobeを利用すれば、ID パートナーは、高度なクライアントサイドのデータ収集と市場をリードするエクスペリエンス最適化ソリューションにプラグインして、事前の履歴や認証なしで、初回訪問以降のエクスペリエンス配信の水準を効果的に引き上げることができます。
+そこで、パートナー支援によるリアルタイム認識が有意義な違いを生み出すことができます。 Adobeを使用すれば、id パートナーは、高度なクライアントサイドのデータ収集および市場をリードするエクスペリエンス最適化ソリューションにプラグインして、事前の履歴や認証なしで、初回訪問以降のエクスペリエンス配信の水準を効果的に引き上げることができます。
 
 これは、消費財、オンライン小売など、認証率の低い業界で特に価値があります。
 
@@ -56,7 +56,7 @@ ht-degree: 89%
    * [データ使用ラベル](/help/data-governance/labels/overview.md)
    * [データセット](/help/catalog/datasets/overview.md)
 * Web プロパティのパーソナライゼーション
-   * [エッジセグメント化](/help/segmentation/ui/edge-segmentation.md)
+   * [エッジセグメント化](/help/segmentation/methods/edge-segmentation.md)
    * [エッジパーソナライゼーション宛先](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)（または、任意のパーソナライゼーションプラットフォーム。このユースケースのチュートリアルでは、パーソナライゼーションエンジンとして Adobe Target を使用）
 
@@ -263,7 +263,7 @@ Platform UI で、**[!UICONTROL 顧客]**/**[!UICONTROL オーディエンス]**
 
 ![ オーディエンスに移動する方法の表示 ](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-訪問者が web プロパティを訪問した際にオーディエンスメンバーシップがリアルタイムで評価されるように、[ エッジセグメント化 ](/help/segmentation/ui/edge-segmentation.md) でオーディエンスを設定する必要があります。
+訪問者が web プロパティを訪問した際にオーディエンスメンバーシップがリアルタイムで評価されるように、[ エッジセグメント化 ](/help/segmentation/methods/edge-segmentation.md) でオーディエンスを設定する必要があります。
 
 エッジオーディエンスに対しては、必ず [active-on-edge 結合ポリシー](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)も設定してください。
 

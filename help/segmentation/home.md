@@ -3,9 +3,9 @@ solution: Experience Platform
 title: セグメント化サービスの概要
 description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1665'
 ht-degree: 93%
 
 ---
@@ -54,7 +54,7 @@ API を使用したセグメント定義の作成について詳しくは、[API
 
 ### 連合オーディエンス構成 {#fac}
 
-オーディエンスコンポジションとセグメント定義に加えて、AdobeFederated Audience コンポジションを使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
+オーディエンスの構成とセグメントの定義に加えて、Adobe Federated Audience Composition を使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
 
 ## オーディエンスを評価 {#evaluate-segments}
 
@@ -67,7 +67,6 @@ API を使用したセグメント定義の作成について詳しくは、[API
 >id="platform_segments_evaluation_streaming"
 >title="ストリーミング評価"
 >abstract="ストリーミングセグメント化は、ユーザーアクティビティに応じてオーディエンスを更新する継続的なデータ選択プロセスです。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ja" text="ストリーミングセグメント化を使用したほぼリアルタイムのイベント評価"
 
 Platform では、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのオーディエンス評価方法をサポートしています。
 
@@ -75,7 +74,7 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 
 ストリーミングセグメント化は、ユーザーアクティビティに応じてオーディエンスを更新する継続的なデータ選択プロセスです。オーディエンスが作成され保存されると、受信データに対してセグメント定義が [!DNL Real-Time Customer Profile] に適用されます。ターゲットオーディエンスの関連性が維持されるよう、オーディエンスへの追加および削除は定期的に処理されます。
 
-ストリーミングセグメント化について詳しくは、[ストリーミングセグメント化のドキュメント](./api/streaming-segmentation.md)を参照してください。
+ストリーミングセグメント化について詳しくは、[ストリーミングセグメント化のドキュメント](./methods/streaming-segmentation.md)を参照してください。
 
 ### バッチセグメント化 {#batch}
 
@@ -94,11 +93,10 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 >id="platform_segments_evaluation_edge"
 >title="エッジ評価"
 >abstract="エッジセグメント化は、 Platform のセグメントを Edge Network 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ja" text="エッジセグメント化 UI ガイド"
 
-Edgeのセグメント化は、Platform 内のセグメントを [Edge Network上で ](../web-sdk/home.md) 瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
+Edgeのセグメント化は、Platform 内のセグメントを [Edge Network上で ](../landing/edge-and-hub-comparison.md) 瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
 
-エッジのセグメント化について詳しくは、[API ドキュメント](./api/edge-segmentation.md)または [UI ドキュメント](./ui/edge-segmentation.md)を参照してください。
+エッジのセグメント化について詳しくは、[API ドキュメント](./methods/edge-segmentation.md)または [UI ドキュメント](./methods/edge-segmentation.md)を参照してください。
 
 ## セグメント化の結果へのアクセス
 
@@ -165,7 +163,7 @@ Edgeのセグメント化は、Platform 内のセグメントを [Edge Network�
 
 ### マルチエンティティのセグメント化 {#multi-entity}
 
-高度なマルチエンティティのセグメント化機能により、製品、ストア、その他の非人物（「ディメンション」エンティティとも呼ばれる）に基づく追加データで [!DNL Real-Time Customer Profile] データを拡張できます。その結果、[!DNL Segmentation Service] は、セグメント定義時に、[!DNL Profile] データストア本来の方法と同じように、追加のフィールドにアクセスできます。マルチエンティティのセグメント化は、独自のビジネスニーズに関連するデータに基づいて、オーディエンスを識別する際に、柔軟性をもたらします。ユースケースおよびワークフローを含め、詳しくは[マルチエンティティのセグメント化ガイド](multi-entity-segmentation.md)を参照してください。
+高度なマルチエンティティのセグメント化機能により、製品、ストア、その他の非人物（「ディメンション」エンティティとも呼ばれる）に基づく追加データで [!DNL Real-Time Customer Profile] データを拡張できます。その結果、[!DNL Segmentation Service] は、セグメント定義時に、[!DNL Profile] データストア本来の方法と同じように、追加のフィールドにアクセスできます。マルチエンティティのセグメント化は、独自のビジネスニーズに関連するデータに基づいて、オーディエンスを識別する際に、柔軟性をもたらします。ユースケースおよびワークフローを含め、詳しくは[マルチエンティティのセグメント化ガイド](./tutorials/multi-entity-segmentation.md)を参照してください。
 
 ## [!DNL Segmentation Service] データタイプ
 

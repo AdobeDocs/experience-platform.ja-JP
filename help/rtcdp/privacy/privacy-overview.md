@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform のプライバシー
 description: Adobe Real-time Customer Data Platform を使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 86%
@@ -29,7 +29,7 @@ ht-degree: 86%
 
 [!DNL Real-Time CDP] を使用すると、顧客は個人データをセグメント化のユースケースに含めることをオプトアウトできます。顧客のオプトアウト環境設定は [!DNL Real-Time Customer Profile] によってキャプチャおよび保存され、セグメント述語でブーリアン論理（「AND NOT」）を使用してオーディエンスからオプトアウトしたユーザーを除外することによって適用できます。
 
-詳しくは、Adobe Experience Platform セグメント化サービスのドキュメントで、[オプトアウトリクエストの遵守](../../segmentation/consents.md)に関するドキュメントを参照してください。
+詳しくは、Adobe Experience Platform セグメント化サービスのドキュメントで、[オプトアウトリクエストの遵守](../../segmentation/tutorials/consents.md)に関するドキュメントを参照してください。
 
 ## IAB TCF 2.0 のサポート
 

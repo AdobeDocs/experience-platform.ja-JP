@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 機能を最適に使用するための、プロファイルデータおよびセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1f682fc5c109f3dc8a7ed8513260a1a3c3108bbb
+source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
 workflow-type: tm+mt
 source-wordcount: '2511'
 ht-degree: 58%
@@ -28,7 +28,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 ## はじめに
 
-次のExperience Platformサービスは、リアルタイム顧客プロファイルデータのモデリングに関係しています。
+次のExperience Platform サービスは、リアルタイム顧客プロファイルデータのモデリングに関係しています。
 
 * [[!DNL Real-Time Customer Profile]](home.md)：複数のソースからのデータを使用して、統合された消費者プロファイルを作成します。
 * [ID](../identity-service/home.md)：Platform に取り込まれる際に、異なるデータソースからの ID を結び付けます。
@@ -119,12 +119,12 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 | ガードレール | 上限 | 上限のタイプ | 説明 |
 | --------- | ----- | ---------- | ----------- |
 | サンドボックスあたりのオーディエンス数 | 4000 | パフォーマンスガードレール | サンドボックスあたり最大 4,000 個の **アクティブ** オーディエンスを持つことができます。 組織あたり 4,000 個を超えるサンドボックスを持つことができます（各 **個人** サンドボックスのオーディエンスの数が 4,000 個未満である必要があります）。 これは、バッチ、ストリーミング、エッジオーディエンスを含みます。 追加のオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、セグメントビルダーを使用した [ オーディエンスの作成 ](/help/segmentation/ui/segment-builder.md) を参照してください。 |
-| サンドボックスごとのEdge オーディエンス | 150 | パフォーマンスガードレール | サンドボックスあたり最大 150 個の **アクティブ** エッジオーディエンスを設定できます。 各 **個人** サンドボックスのエッジオーディエンスが 150 個未満である限り、組織あたり 150 個を超えるエッジオーディエンスを持つことができます。 追加のエッジオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/ui/edge-segmentation.md) を参照してください。 |
-| すべてのサンドボックスにわたるEdgeのスループット | 1500 RPS | パフォーマンスガードレール | Edgeのセグメント化では、Adobe Experience Platform Edge Networkに入るインバウンドイベント数のピーク値（1 秒あたり 1,500 件）がサポートされています。 Edgeのセグメント化は、インバウンドイベントがAdobe Experience Platform Edge Networkに入った後、処理するのに最大 350 ミリ秒かかる場合があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/ui/edge-segmentation.md) を参照してください。 |
-| サンドボックスごとのストリーミングオーディエンス | 500 | パフォーマンスガードレール | サンドボックスあたり最大 500 個の **アクティブ** ストリーミングオーディエンスを持つことができます。 各 **個別** サンドボックスのストリーミングオーディエンスの数が 500 未満である限り、組織あたり 500 個を超えるストリーミングオーディエンスを持つことができます。 これは、ストリーミングオーディエンスとエッジオーディエンスの両方を含んでいます。 追加のストリーミングオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/ui/streaming-segmentation.md) を参照してください。 |
-| すべてのサンドボックスでのストリーミングスループット | 1500 RPS | パフォーマンスガードレール | ストリーミングセグメント化では、1 秒あたり 1,500 インバウンドイベントのピーク値をサポートしています。 ストリーミングセグメント化は、セグメントメンバーシップのプロファイルを選定するのに最大 5 分かかる場合があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/ui/streaming-segmentation.md) を参照してください。 |
+| サンドボックスごとのEdge オーディエンス | 150 | パフォーマンスガードレール | サンドボックスあたり最大 150 個の **アクティブ** エッジオーディエンスを設定できます。 各 **個人** サンドボックスのエッジオーディエンスが 150 個未満である限り、組織あたり 150 個を超えるエッジオーディエンスを持つことができます。 追加のエッジオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/methods/edge-segmentation.md) を参照してください。 |
+| すべてのサンドボックスにわたるEdgeのスループット | 1500 RPS | パフォーマンスガードレール | Edgeのセグメント化では、Adobe Experience Platform Edge Networkに入るインバウンドイベント数のピーク値（1 秒あたり 1,500 件）がサポートされています。 Edgeのセグメント化は、インバウンドイベントがAdobe Experience Platform Edge Networkに入った後、処理するのに最大 350 ミリ秒かかる場合があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/methods/edge-segmentation.md) を参照してください。 |
+| サンドボックスごとのストリーミングオーディエンス | 500 | パフォーマンスガードレール | サンドボックスあたり最大 500 個の **アクティブ** ストリーミングオーディエンスを持つことができます。 各 **個別** サンドボックスのストリーミングオーディエンスの数が 500 未満である限り、組織あたり 500 個を超えるストリーミングオーディエンスを持つことができます。 これは、ストリーミングオーディエンスとエッジオーディエンスの両方を含んでいます。 追加のストリーミングオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/methods/streaming-segmentation.md) を参照してください。 |
+| すべてのサンドボックスでのストリーミングスループット | 1500 RPS | パフォーマンスガードレール | ストリーミングセグメント化では、1 秒あたり 1,500 インバウンドイベントのピーク値をサポートしています。 ストリーミングセグメント化は、セグメントメンバーシップのプロファイルを選定するのに最大 5 分かかる場合があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/methods/streaming-segmentation.md) を参照してください。 |
 | サンドボックスごとのバッチオーディエンス | 4000 | パフォーマンスガードレール | サンドボックスあたり最大 4,000 個の **アクティブ** バッチオーディエンスを持つことができます。 組織あたり 4000 個を超えるバッチオーディエンスを持つことができます（各 **個人** サンドボックスのバッチオーディエンスが 4000 個未満である必要があります）。 追加のバッチオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 |
-| サンドボックスごとのアカウントオーディエンス | 50 | システムに適用されたガードレール | 1 つのサンドボックスに作成できるアカウントオーディエンスは最大 50 個です。 サンドボックスで 50 個のオーディエンスに到達した場合、新しいアカウントオーディエンスを作成しようとすると、**[!UICONTROL オーディエンスを作成]** コントロールが無効になります。 詳しくは、[ アカウントオーディエンス ](/help/segmentation/ui/account-audiences.md) を参照してください。 |
+| サンドボックスごとのアカウントオーディエンス | 50 | システムに適用されたガードレール | 1 つのサンドボックスに作成できるアカウントオーディエンスは最大 50 個です。 サンドボックスで 50 個のオーディエンスに到達した場合、新しいアカウントオーディエンスを作成しようとすると、**[!UICONTROL オーディエンスを作成]** コントロールが無効になります。 詳しくは、[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) を参照してください。 |
 | サンドボックスごとの公開済みコンポジション | 10 | パフォーマンスガードレール | サンドボックスには、最大 10 個の公開済みコンポジションを含めることができます。 詳しくは、[UI ガイドのオーディエンス構成 ](/help/segmentation/ui/audience-composition.md) を参照してください。 |
 | 最大オーディエンスサイズ | 30% | パフォーマンスガードレール | オーディエンスの推奨される最大メンバーシップは、システム内のプロファイルの合計数の 30% です。 プロファイルの 30% 以上をメンバーまたは複数の大きなオーディエンスとしてオーディエンスを作成できますが、システムのパフォーマンスに影響を与える可能性があります。 |
 
@@ -158,9 +158,9 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 ![ レコードデータと時系列データの違いの概要を示したインフォグラフィック。](images/guardrails/profile-entity.png)
 
-#### Dimensionエンティティ
+#### Dimension エンティティ
 
-プロファイルデータを保持しているプロファイルデータストアはリレーショナルストアではありませんが、シンプルで直感的にオーディエンスを作成できるようにするために、プロファイルでは小さなディメンションエンティティとの統合が可能になっています。 この統合は、[ マルチエンティティセグメント化 ](../segmentation/multi-entity-segmentation.md) とも呼ばれます。
+プロファイルデータを保持しているプロファイルデータストアはリレーショナルストアではありませんが、シンプルで直感的にオーディエンスを作成できるようにするために、プロファイルでは小さなディメンションエンティティとの統合が可能になっています。 この統合は、[ マルチエンティティセグメント化 ](../segmentation/tutorials/multi-entity-segmentation.md) とも呼ばれます。
 
 組織では、店舗、製品、資産など、個人以外のものを記述する XDM クラスを定義することもできます。 これらの [!DNL XDM Individual Profile] 以外のスキーマは「ディメンションエンティティ」（「ルックアップエンティティ」とも呼ばれます）と呼ばれ、時系列データを含みません。 ディメンションエンティティを表すスキーマは、[ スキーマ関係 ](../xdm/tutorials/relationship-ui.md) を使用してプロファイルエンティティにリンクされます。
 
@@ -170,7 +170,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 ### プロファイルフラグメント
 
-このドキュメントでは、「プロファイルフラグメント」を参照するガードレールがいくつかあります。 Experience Platformでは、複数のプロファイルフラグメントが結合されて、リアルタイム顧客プロファイルが作成されます。 各フラグメントは、一意のプライマリ ID と、特定のデータセット内でその ID に対応するレコードまたはイベントデータの完全なセットを表します。 プロファイルフラグメントについて詳しくは、[プロファイルの概要](home.md#profile-fragments-vs-merged-profiles)を参照してください。
+このドキュメントでは、「プロファイルフラグメント」を参照するガードレールがいくつかあります。 Experience Platformでは、複数のプロファイルフラグメントが結合されて、リアルタイム顧客プロファイルが形成されます。 各フラグメントは、一意のプライマリ ID と、特定のデータセット内でその ID に対応するレコードまたはイベントデータの完全なセットを表します。 プロファイルフラグメントについて詳しくは、[プロファイルの概要](home.md#profile-fragments-vs-merged-profiles)を参照してください。
 
 ### 結合ポリシー {#merge-policies}
 
@@ -182,10 +182,10 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 ## 次の手順
 
-他のExperience Platformサービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
+他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platformサービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

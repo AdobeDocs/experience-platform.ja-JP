@@ -3,7 +3,7 @@ title: 見込み客のオーディエンスを宛先に対してアクティブ�
 type: Tutorial
 description: 宛先への見込み客オーディエンスをアクティブ化する方法を学ぶ
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 25%
@@ -16,7 +16,7 @@ ht-degree: 25%
 >
 >この機能は、Real-Time CDP Prime および Ultimate パッケージを購入したお客様が利用できます。詳しくは、Adobe担当者にお問い合わせください。
 
-この記事では、Adobe Experience Platformから目的の宛先に [ 見込み客オーディエンス ](/help/segmentation/ui/prospect-audience.md) を書き出すために必要なワークフローについて説明します。
+この記事では、Adobe Experience Platformから目的の宛先に [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) を書き出すために必要なワークフローについて説明します。
 
 ## サポートされる宛先 {#supported-destinations}
 
@@ -26,7 +26,7 @@ ht-degree: 25%
 
 ## 前提条件 {#prerequisites}
 
-* 最初に [ 見込み客プロファイル ](/help/profile/ui/prospect-profile.md) を取り込み、[ 見込み客オーディエンス ](/help/segmentation/ui/prospect-audience.md) を作成してから、ダウンストリームの宛先に対してアクティブ化する必要があります。
+* 最初に [ 見込み客プロファイル ](/help/profile/ui/prospect-profile.md) を取り込み、[ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) を作成してから、ダウンストリームの宛先に対してアクティブ化する必要があります。
 * 宛先への見込み客オーディエンスをアクティブ化するには、正常に宛先に接続する必要があります。 まだ接続していない場合は、[ 宛先カタログ ](../catalog/overview.md) に移動し、サポートされている宛先を参照し、使用する宛先を設定します。 詳しくは、[ 宛先への接続 ](./connect-destination.md) に関する UI チュートリアルを参照してください。
 
 ### 必要な権限 {#permissions}

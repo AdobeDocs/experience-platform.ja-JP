@@ -4,16 +4,16 @@ description: Adobe Real-Time CDPの基本を学び、提供される豊富な機
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1175'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 # Adobe [!DNL Real-Time CDP] のドキュメント {#rtcdp-documentation}
 
-Adobe Real-time Customer Data Platform（Real-Time CDP）を使用すると、複数の企業ソースから既知および匿名のデータを統合して顧客プロファイルを作成できます。顧客プロファイルを使用すれば、パーソナライズされた顧客エクスペリエンスをすべてのチャネルとデバイスにわたってリアルタイムに提供できます。 詳しくは、[Real-Time CDPの概要 ](/help/rtcdp/overview.md) を参照してください。
+Adobe Real-Time Customer Data Platform（Real-Time CDP）を使用すると、複数の企業ソースから既知および匿名のデータを統合して顧客プロファイルを作成できます。顧客プロファイルを使用すれば、パーソナライズされた顧客エクスペリエンスをすべてのチャネルとデバイスにわたってリアルタイムに提供できます。 詳しくは、[Real-Time CDPの概要 ](/help/rtcdp/overview.md) を参照してください。
 
 ## 新着情報 {#whats-new}
 
@@ -21,15 +21,15 @@ Real-Time CDPの製品およびドキュメントの最新の機能強化を確�
 
 >[!BEGINTABS]
 
->[!TAB Federated Audience の構成 ]
+>[!TAB 連合オーディエンス構成]
 
-Federated Audience Composition を使用すると、企業はデータを作成して、様々なユースケースでより優れたアプリケーションを実現できます。 この新しいアプローチでは、Adobe Real-time Customer Data PlatformまたはAdobe Journey Optimizerのユーザーとして、既存の Data Warehouse からデータセットを直接統合して、Adobe Experience Platform オーディエンスと属性をすべて 1 つのシステムで作成および強化できます。
+Federated Audience Composition を使用すると、企業はデータを作成して、様々なユースケースでより優れたアプリケーションを実現できます。 この新しいアプローチでは、Adobe Real-Time Customer Data PlatformまたはAdobe Journey Optimizerのユーザーとして、既存の Data Warehouse からデータセットを直接統合して、Adobe Experience Platform オーディエンスと属性をすべて 1 つのシステムで作成および強化できます。
 
 [![画像](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)
 
 >[!TAB ユースケースのプレイブック]
 
-[!UICONTROL  ユースケースプレイブック ] 機能が、すべてのReal-Time CDPおよびAdobe Journey Optimizerのお客様で一般公開されました。 [!UICONTROL  ユースケースプレイブック ] は、Real-time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題を克服するのを支援するように設計されています。 どこから始めればよいのか、目的のユースケースに合った適切なアセットの作成方法がわからない場合は、ユースケースプレイブックを使用すると、インスピレーションを得て様々なアセットを作成し、準備ができたときにテストして実稼動環境に読み込むことができます。
+[!UICONTROL  ユースケースプレイブック ] 機能が、すべてのReal-Time CDPおよびAdobe Journey Optimizerのお客様で一般公開されました。 [!UICONTROL  ユースケースプレイブック ] は、Real-Time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題を克服するのを支援するように設計されています。 どこから始めればよいのか、目的のユースケースに合った適切なアセットの作成方法がわからない場合は、ユースケースプレイブックを使用すると、インスピレーションを得て様々なアセットを作成し、準備ができたときにテストして実稼動環境に読み込むことができます。
 
 [![画像](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
 
@@ -47,7 +47,7 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 >[!TAB  データのエクスポート ]
 
-データセットの書き出し機能が一般提供されるようになりました。 購入した [Experience Platformアプリに基づいて書き出すことができるデータセット ](../destinations/ui/export-datasets.md#datasets-to-export) を確認し、[ データセットを書き出すためのガードレール ](/help/destinations/guardrails.md#dataset-exports) を確認します。
+データセットの書き出し機能が一般提供されるようになりました。 [ 購入したExperience Platform アプリに基づいて書き出すことができるデータセット ](../destinations/ui/export-datasets.md#datasets-to-export) を確認し、[ データセットを書き出すためのガードレール ](/help/destinations/guardrails.md#dataset-exports) を確認します。
 
 [![画像](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
@@ -136,7 +136,7 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong> クラウドおよび AI/ML 機能 </strong><br/>AI および ML 機能は、複数のダッシュボードでの移行のすべてのステップを支援します。 主なハイライトは以下の部分です。 <br/> <a href="/help/segmentation/ui/lookalike-audiences.md"> 類似オーディエンス </a> - <a href="/help/rtcdp/segmentation/customer-ai.md"> 顧客 AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md"> 関連アカウント </a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md"> リードおよびアカウントの予測スコアリング </a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md"> リードとアカウントのマッチング </a>
+      <strong> クラウドおよび AI/ML 機能 </strong><br/>AI および ML 機能は、複数のダッシュボードでの移行のすべてのステップを支援します。 主なハイライトは以下の部分です。 <br/> <a href="/help/segmentation/types/account-audiences.md"> 類似オーディエンス </a> - <a href="/help/rtcdp/segmentation/customer-ai.md"> 顧客 AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md"> 関連アカウント </a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md"> リードおよびアカウントの予測スコアリング </a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md"> リードとアカウントのマッチング </a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
@@ -144,7 +144,7 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
     </td>
     <td>
       <img src="assets/do-not-localize/icon-code.svg" width="35px"><br/>
-      <strong> 開発者 </strong><br/>Real-Time CDPから提供される様々な API および SDK を使用して、データ取り込みの設定、プロファイルの管理、オーディエンスの作成などを行います。 <br/><a href="/help/landing/api-authentication.md"> 認証と API の基本を学ぶ </a> - <a href="https://developer.adobe.com/experience-platform-apis/"> 完全な API リファレンス </a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md"> ソース SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/"> モバイル SDK</a>
+      <strong> 開発者 </strong><br/>Real-Time CDPから提供される様々な API および SDK を使用して、データ取り込みの設定、プロファイルの管理、オーディエンスの作成などを行います。 <br/><a href="/help/landing/api-authentication.md">API の認証と使用開始 </a> - <a href="https://developer.adobe.com/experience-platform-apis/"> 完全な API リファレンス </a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md"> ソースSDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/"> モバイルSDK</a>
     </td>
   </tr>
 </table>
@@ -203,7 +203,7 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> 製品説明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank"> セキュリティの概要（PDF） </a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ja" target="_blank"> 実装ブループリント </a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja" target="_blank"> 用語集 </a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja" target="_blank"> チュートリアル </a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> 製品説明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank"> セキュリティの概要（PDF） </a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ja" target="_blank"> 実装ブループリント </a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja" target="_blank"> 用語集 </a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja" target="_blank"> ドキュメント </a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API リファレンス - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank"> コース：Experience Platformの概要 </a></a>
@@ -211,4 +211,4 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b> 常に情報を提供してコミュニティに貢献し、Adobe Real-Time CDPのエクスペリエンスを向上</b><br/>Real-time Customer Data Platform コミュニティにアクセスして、他の実務担当者と機能について話し合います。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP"> 今すぐコミュニティに参加してください！</a></td></tr></table>
+<b> 常に情報を提供してコミュニティに貢献し、Adobe Real-Time CDPのエクスペリエンスを向上</b><br/>Real-Time Customer Data Platform コミュニティにアクセスして、他の実務担当者と機能について話し合います。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP"> 今すぐコミュニティに参加してください！</a></td></tr></table>

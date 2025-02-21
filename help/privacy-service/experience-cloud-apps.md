@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: Privacy ServiceおよびExperience Cloudアプリケーション
-description: このドキュメントでは、プライバシー関連の操作に対して様々なExperience Cloudアプリケーションを設定する方法について説明します。
+title: Privacy ServiceおよびExperience Cloud アプリケーション
+description: このドキュメントでは、様々なExperience Cloud アプリケーションをプライバシー関連の業務用に設定する方法について説明します。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: a1ac1f56a22b279aca6607a53dd1e44ffccd1877
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 24%
@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 
 このドキュメントでは、アプリケーションのドキュメント [!DNL Experience Cloud] 参照して、プライバシー関連の操作に合わせてアプリケーションを設定する方法の概要を説明します。 データの形式設定やラベル付けの方法も含まれます。次の 2 つのカテゴリのアプリケーションを対象としています。
 
-* [Privacy Serviceと連携するアプリ ](#integrated):[!DNL Privacy Service] ーザーに対してアクセスリクエスト、削除リクエスト、オプトアウトリクエストを行うことができるアプリ。
+* [Privacy Serviceと統合されたアプリケーション ](#integrated)：アクセス、削除またはオプトアウトリクエストを [!DNL Privacy Service] に送信できるアプリケーション。
 * [ セルフサービスアプリケーション ](#self-serve)：プライバシーリクエストを内部で管理する必要があり、[!DNL Privacy Service] ーザーと直接通信できないアプリケーション。
 
 プライバシーリクエストの形式を設定する方法と、[!DNL Experience Cloud] れらのリクエストでサポートされている値については、使用しているプライバシーアプリケーションのドキュメントを参照してください。
@@ -36,13 +36,13 @@ Adobe Experience Platform [!DNL Privacy Service] は、複数のAdobe Experience
 | Adobe Analytics | ✓ | ✓ | Adobe Analyticsには、データの機密性と契約上の制限に従ってデータをラベル付けするためのツールが用意されています。 ラベルは、次の場合に重要な手順です。<ol><li>データ主体の識別。</li><li>アクセスリクエストの一部として返すデータの決定。</li><li>削除リクエストの一環として削除する必要があるデータフィールドを識別します。</li></ol> | <ul><li>[ プライバシーワークフロー ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)</li><li>[Analytics のラベル付け ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/data-labels/gdpr-labels.html)</li><li>[Analytics オプトアウト ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/cm-opt-out.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | リクエストに含まれているAudience Manager ID に関連付けられているすべての特性とセグメントが削除されます。 また、個々の識別子は、更なるデータ収集からオプトアウトされ、各 ID マッピングが除去される。 | <ul><li>[ アクセス ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#access-data)/[ 削除 ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#delete-data) ドキュメント</li><li>[オプトアウトに関するドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html#opt-out-calls)</li><li>[ オプトアウトリクエスト ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests)</li></ul> |
 | Adobe Campaign Classic | ✓ | ✓ | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[ プライバシーの管理 ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=ja)。</li></ul> |
-| Adobe Campaign Standard | ✓ | ✓ | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://helpx.adobe.com/jp/campaign/kb/campaign-privacy.html)</li><li>[オプトアウトに関するドキュメント](../segmentation/consents.md)</li></ul> |
+| Adobe Campaign Standard | ✓ | ✓ | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://helpx.adobe.com/jp/campaign/kb/campaign-privacy.html)</li><li>[オプトアウトに関するドキュメント](../segmentation/tutorials/consents.md)</li></ul> |
 | Adobe顧客属性（CRS） | ✓ | なし | データ主体の属性がシステムから削除されます。 | <ul><li>[GDPR のドキュメントへのアクセス/削除 ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html?lang=ja)</li><li>[CCPA に関するドキュメントへのアクセス /削除 ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html?lang=ja)</li><li>顧客属性にはデータを転送する機能がないので、販売のオプトアウトリクエストは適用されません。</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | Experience Platform が Privacy Service から削除リクエストを受信すると、リクエストが受信され、影響を受けるデータに削除マークが付けられた旨の確認を Platform が Privacy Service に送信します。プライバシージョブが完了すると、レコードはその後、データレイクまたはプロファイルストアから削除されます。 ジョブが完了する前に、データはソフト削除されるので、どの Platform サービスからもアクセスできません。 | <ul><li>[データレイクのためのアクセス / 削除に関するドキュメント](../catalog/privacy.md)</li><li>[ID サービスのドキュメントへのアクセス/削除 ](../identity-service/privacy.md)</li><li>[ リアルタイム顧客プロファイルのドキュメントへのアクセス/削除 ](../profile/privacy.md)</li><li>[!DNL Experience Platform] は [ オーディエンスセグメントのオプトアウトリクエスト ](../segmentation/consents.md) に従います。</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | Experience Platform が Privacy Service から削除リクエストを受信すると、リクエストが受信され、影響を受けるデータに削除マークが付けられた旨の確認を Platform が Privacy Service に送信します。プライバシージョブが完了すると、レコードはその後、データレイクまたはプロファイルストアから削除されます。 ジョブが完了する前に、データはソフト削除されるので、どの Platform サービスからもアクセスできません。 | <ul><li>[データレイクのためのアクセス / 削除に関するドキュメント](../catalog/privacy.md)</li><li>[ID サービスのドキュメントへのアクセス/削除 ](../identity-service/privacy.md)</li><li>[ リアルタイム顧客プロファイルのドキュメントへのアクセス/削除 ](../profile/privacy.md)</li><li>[!DNL Experience Platform] は [ オーディエンスセグメントのオプトアウトリクエスト ](../segmentation/tutorials/consents.md) に従います。</li></ul> |
 | Adobe Journey Optimizer | ✓ | なし | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests)</li></ul> |
 | Adobe Pass 認証 | ✓ | なし | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>パスにはデータを転送する機能がないので、販売のオプトアウトリクエストは適用されません。</li></ul> |
 | Adobe Target | ✓ | なし | データ主体の ID に関連付けられているすべてのデータは、訪問者プロファイルから削除されます。 個人を識別しない、またはその他の無関係な集計データまたは匿名化データ（コンテンツデータなど）は、削除リクエストには適用されません。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=ja)</li><li>[!DNL Target] にはデータを転送する機能がないので、販売のオプトアウトリクエストは適用されません。</li></ul> |
-| Commerce（Personalization） | ✓ | なし | マーケティング目的 [!DNL Commerce]Commerce SaaS サービスに保存されたデータはPrivacy Serviceによって削除されます。つまり、データ主体のプロファイルと注文は、キャンペーンやカスタマージャーニーで使用するAdobeマーケティングアプリケーションに送信されなくなりました。 ただし、マーチャントトランザクションのニーズに引き続き必要な場合があるので、Privacy Serviceでは [!DNL Commerce] アプリケーション内のデータは削除されません。 マーチャントは、[!DNL Commerce] アプリケーション内のすべてのデータ削除/アクセスリクエストに対して責任を負います。 | <ul><li>[Commerceに関するドキュメントへのアクセスまたは削除 ](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/data-connection/handle-privacy-request)</li></ul> |
+| Commerce（Personalization） | ✓ | なし | Privacy Service[!DNL Commerce]、マーケティング目的でCommerce SaaS サービスに保存されたデータを削除します。つまり、データ主体のプロファイルと注文は、キャンペーンやカスタマージャーニーで使用するためにAdobe マーケティングアプリケーションに送信されなくなりました。 ただし、マーチャントトランザクションのニーズに引き続き必要となる可能性があるため、Privacy Serviceは [!DNL Commerce] アプリケーション内のデータを削除しません。 マーチャントは、[!DNL Commerce] アプリケーション内のすべてのデータ削除/アクセスリクエストに対して責任を負います。 | <ul><li>[Commerceに関するドキュメントへのアクセスまたは削除 ](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/data-connection/handle-privacy-request)</li></ul> |
 | Marketo Engage | ✓ | なし | データ主体の保存されたデータがシステムから削除されます。 | <ul><li>[アクセス / 削除に関するドキュメント](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] にはデータを転送する機能がないので、販売のオプトアウトリクエストは適用されません。</li></ul> |
 
 {style="table-layout:auto"}

@@ -1,28 +1,29 @@
 ---
-title: （各社）LinkedIn連携
+title: （事業者） LinkedIn 連携
 description: この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 ハッシュ化されたメールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、LinkedIn キャンペーン用のプロファイルをアクティブ化します。
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: e45c50a6447be4a60145eea6956d30d51166e675
+exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 25%
 
 ---
 
-# （会社）LinkedIn Match Audiences 接続 {#companies-linkedin}
+# （会社） LinkedIn Match Audiences 接続 {#companies-linkedin}
 
 >[!AVAILABILITY]
 >
->linkedInの（会社）宛先に対してアカウントオーディエンスをアクティブ化する機能は、Real-time Customer Data Platformの [B2B](/help/rtcdp/overview.md#rtcdp-b2b) エディションと [B2Person](/help/rtcdp/overview.md#rtcdp-b2p) エディションを購入する会社で使用できます。
+>Real-Time Customer Data Platformの [Business-to-Business）エディションと [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) エディションを購入する企業は、アカウントオーディエンスを（会社） LinkedIn 宛先に対してアクティブ化する機能を利用 ](/help/rtcdp/overview.md#rtcdp-b2p) きます。
 
-この宛先を使用して、Account-Based Marketing（ABM）のユースケースの [ アカウントオーディエンス ](/help/segmentation/ui/account-audiences.md) をアクティベートします。 **[!UICONTROL （企業）LinkedInの B2B 配信先を介して]** Target アカウントの関連するペルソナやロールにアドバタイズします。 linkedIn Platform で [ アカウントターゲティングについて詳しくは ](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting)LinkedIn ドキュメントを参照してください。
+この宛先を使用して、Account-Based Marketing（ABM）のユースケースの [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) をアクティベートします。 **[!UICONTROL （企業） LinkedIn （B2B）の宛先を介して、ターゲットアカウントの関連するペルソナ]** 役割に広告を行います。 LinkedIn プラットフォームの [ アカウントターゲティングの詳細については ](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting)、LinkedIn のドキュメントを参照してください。
 
 >[!TIP]
 >
->個人レベル（または B2Consumer）のユースケースの場合、Adobeでは、[LinkedInで一致するオーディエンス ](/help/destinations/catalog/social/linkedin.md) を使用することをお勧めします。
+>個々のレベル（または B2C）のユースケースについては、Adobeでは [LinkedIn でマッチしたオーディエンス ](/help/destinations/catalog/social/linkedin.md) の宛先を使用することをお勧めします。
 
-![Experience PlatformUI に表示されるLinkedIn アカウントの宛先。](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
+![Experience Platform UI に表示される LinkedIn アカウントの宛先。](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -30,7 +31,7 @@ ht-degree: 25%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -48,11 +49,11 @@ ht-degree: 25%
 
 ## 前提条件 {#prerequisites}
 
-アカウントオーディエンスをLinkedInに書き出すには、以下の前提条件を満たしていることを確認してください。
+アカウントオーディエンスを LinkedIn に書き出すには、以下の前提条件を満たしていることを確認してください。
 
 ### LinkedIn アカウントの前提条件 {#LinkedIn-account-prerequisites}
 
-[!UICONTROL  （会社）LinkedInでマッチしたオーディエンス ] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 以上の権限レベルがあることを確認してください。
+[!UICONTROL  （会社） LinkedIn でマッチしたオーディエンス ] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 以上の権限レベルがあることを確認してください。
 
 [!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、LinkedIn ドキュメントの [Advertising アカウントのユーザー権限の追加、編集、削除 ](https://www.linkedin.com/help/lms/answer/5753) を参照してください。
 
@@ -68,10 +69,10 @@ ht-degree: 25%
 
 1. 宛先カタログで [!DNL (Companies) LinkedIn Matched Audiences] の宛先を見つけて、「**[!UICONTROL 設定]**」を選択します。
 2. **[!UICONTROL 宛先に接続]** を選択します。
-   ![LinkedInへの認証 ](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
-3. linkedInの資格情報を入力し、「**ログイン**」を選択します。
+   ![LinkedIn への認証 ](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
+3. LinkedIn 資格情報を入力し、「**ログイン**」を選択します。
 
-linkedInでログインプロセスを完了したら、次の手順に進むことができます。
+LinkedIn によるログインプロセスが完了したら、次の手順に進むことができます。
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -81,7 +82,7 @@ linkedInでログインプロセスを完了したら、次の手順に進むこ
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL アカウント ID]**：お使いの [!DNL LinkedIn Campaign Manager Account ID]。 この ID は [!DNL LinkedIn Campaign Manager] アカウントで確認できます。
 
-これで、LinkedInに対してアカウントオーディエンスをアクティブ化する準備が整いました。
+これで、LinkedIn に対してアカウントオーディエンスをアクティブ化する準備が整いました。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
@@ -92,9 +93,9 @@ linkedInでログインプロセスを完了したら、次の手順に進むこ
 
 この宛先にアカウントオーディエンスをアクティブ化する手順については、[ アカウントオーディエンスのアクティブ化 ](/help/destinations/ui/activate-account-audiences.md) をお読みください。
 
-## **[!UICONTROL （会社）LinkedIn Matched Audiences]** 宛先に対してアカウントオーディエンスをアクティブ化する際に、マッピングステップで必要なマッピングペア {#required-mappings}
+## **[!UICONTROL （会社） LinkedIn Matched Audiences]** 宛先に対してアカウントオーディエンスをアクティブ化する際に、マッピング手順で必要なマッピングペア {#required-mappings}
 
-**[!UICONTROL （会社）LinkedIn一致オーディエンス]** 宛先に対してアカウントオーディエンスをアクティブ化する場合、データを正常に書き出すには、次の 2 つのマッピングペアが必須です。
+**[!UICONTROL （会社） LinkedIn Matched Audiences]** 宛先に対してアカウントオーディエンスをアクティブ化する場合、データを正常に書き出すには、次の 2 つのマッピングペアが必須です。
 
 ![LinkedIn マッピングの必須フィールド。](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 

@@ -3,7 +3,7 @@ title: エッジパーソナライゼーションの宛先に対してオーデ�
 description: 同じページと次のページのパーソナライゼーションのユースケースに対して、Adobe Experience Platformからエッジパーソナライゼーションの宛先へのオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 15%
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 ## 概要 {#overview}
 
-Adobe Experience Platformでは、[ エッジのセグメント化 ](../../segmentation/ui/edge-segmentation.md) と [ エッジの宛先 ](/help/destinations/destination-types.md#edge-personalization-destinations) を使用して、お客様が大規模かつリアルタイムでオーディエンスを作成およびターゲット化できるようにします。 この機能は、同じページおよび次のページのパーソナライゼーションのユースケースを設定するのに役立ちます。
+Adobe Experience Platformでは、[ エッジのセグメント化 ](../../segmentation/methods/edge-segmentation.md) と [ エッジの宛先 ](/help/destinations/destination-types.md#edge-personalization-destinations) を使用して、お客様が大規模かつリアルタイムでオーディエンスを作成およびターゲット化できるようにします。 この機能は、同じページおよび次のページのパーソナライゼーションのユースケースを設定するのに役立ちます。
 
 エッジの宛先の例としては、[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) や [ カスタムパーソナライゼーション ](../../destinations/catalog/personalization/custom-personalization.md) 接続があります。
 
@@ -31,7 +31,7 @@ Adobe Experience Platformでは、[ エッジのセグメント化 ](../../segme
 > 
 > [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-この記事では、Adobe Experience Platform Edge 宛先に対してオーディエンスをアクティブ化するために必要なワークフローについて説明します。 これらの宛先を [ エッジセグメント化 ](../../segmentation/ui/edge-segmentation.md) およびオプションの [ プロファイル属性マッピング ](#mapping) と併用すると、web プロパティやモバイルプロパティで、同じページおよび次のページのパーソナライゼーションのユースケースが可能になります。
+この記事では、Adobe Experience Platform Edge 宛先に対してオーディエンスをアクティブ化するために必要なワークフローについて説明します。 これらの宛先を [ エッジセグメント化 ](../../segmentation/methods/edge-segmentation.md) およびオプションの [ プロファイル属性マッピング ](#mapping) と併用すると、web プロパティやモバイルプロパティで、同じページおよび次のページのパーソナライゼーションのユースケースが可能になります。
 
 エッジパーソナライゼーション用にAdobe Target接続を設定する方法の概要については、以下のビデオをご覧ください。
 
@@ -47,15 +47,15 @@ Adobe Targetとカスタムパーソナライゼーションの宛先に対し�
 
 ## ユースケース {#use-cases}
 
-Adobe TargetなどのAdobeのパーソナライゼーションソリューション、または独自のパーソナライゼーションパートナープラットフォーム（[!DNL Optimizely]、[!DNL Pega] など）および独自のシステム（社内のCMSなど）を使用して、[ カスタム Personalization](../catalog/personalization/custom-personalization.md) 宛先を介してより深い顧客のパーソナライゼーションエクスペリエンスを強化します。 これらすべてを、Experience PlatformEdge Networkのデータ収集およびセグメント化機能も活用して行います。
+Adobe TargetなどのAdobe パーソナライゼーションソリューション、または独自のパーソナライゼーションパートナープラットフォーム（[!DNL Optimizely]、[!DNL Pega] など）および独自のシステム（社内CMSなど）を使用して、[ カスタム Personalization](../catalog/personalization/custom-personalization.md) 宛先を介してより深いカスタマーパーソナライゼーションエクスペリエンスを強化します。 これらをすべて、また、Experience Platform Edge Networkのデータ収集およびセグメント化機能も活用します。
 
 以下に説明するユースケースには、サイトのパーソナライゼーションとターゲットを設定したオンサイト広告の両方が含まれます。
 
-これらのユースケースを可能にするには、お客様はExperience Platformからオーディエンスとプロファイル属性の両方を取得し、その情報をExperience PlatformUI の [Adobe Target](../catalog/personalization/adobe-target-connection.md) または [ カスタム Personalization](../catalog/personalization/custom-personalization.md) 接続に送信する、迅速で合理化された方法を必要としています。
+これらの使用例を有効にするには、Experience Platformからオーディエンスとプロファイル属性情報の両方を取得し、その情報をExperience Platform UI の [Adobe Target](../catalog/personalization/adobe-target-connection.md) または [ カスタム Personalization](../catalog/personalization/custom-personalization.md) 接続に送信する、迅速で合理化された方法が必要です。
 
 ### 同じページのパーソナライゼーション {#same-page}
 
-ユーザーが web サイトのページにアクセスします。 非Adobeプラットフォーム（[!DNL Pega]、[!DNL Optimizely] など）用の [ カスタムパーソナライゼーション ](../catalog/personalization/custom-personalization.md) 接続を使用して、現在のページ訪問情報（URL、ブラウザーの言語、埋め込み商品情報など）を使用して、次のアクションまたは決定（パーソナライゼーションなど）を選択できます。
+ユーザーが web サイトのページにアクセスします。 Adobe以外のプラットフォーム（[!DNL Pega]、[!DNL Optimizely] など）では [ カスタムパーソナライゼーション ](../catalog/personalization/custom-personalization.md) 接続を使用して、現在のページ訪問情報（参照 URL、ブラウザー言語、埋め込み商品情報など）を使用して次の操作または決定（パーソナライゼーションなど）を選択できます。
 
 ### 次のページのパーソナライゼーション {#next-page}
 
@@ -89,7 +89,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 ### [!DNL Active-On-Edge] 結合ポリシーの作成 {#create-merge-policy}
 
-宛先接続を作成したら、[!DNL Active-On-Edge] 結合ポリシーを作成する必要があります。 [!DNL Active-On-Edge] 結合ポリシーは、オーディエンスが常に [ エッジ上で ](../../segmentation/ui/edge-segmentation.md) 評価され、リアルタイムおよび次のページのパーソナライゼーションのユースケースで利用できるようにします。
+宛先接続を作成したら、[!DNL Active-On-Edge] 結合ポリシーを作成する必要があります。 [!DNL Active-On-Edge] 結合ポリシーは、オーディエンスが常に [ エッジ上で ](../../segmentation/methods/edge-segmentation.md) 評価され、リアルタイムおよび次のページのパーソナライゼーションのユースケースで利用できるようにします。
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![Experience PlatformUI でハイライト表示された「宛先カタログ」タブ ](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![Experience Platform UI でハイライト表示された「宛先カタログ」タブ ](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. 以下の画像に示すように、オーディエンスをアクティベートするパーソナライゼーションの宛先に対応するカードで「**[!UICONTROL オーディエンスのアクティベート]**」を選択します。
 
@@ -142,7 +142,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 * **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md) を参照してください。
 * **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/audience-portal.md#import-audience) に関するドキュメントを参照してください。
-* [!DNL Audience Manager] などの他のAdobeソリューションから発生する、その他のタイプのオーディエンス。
+* その他のタイプのオーディエンス。他のAdobe ソリューション（[!DNL Audience Manager] など）から派生します。
 
 ![ 複数のオーディエンスがハイライト表示されたアクティベーションワークフローのオーディエンス選択手順。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
@@ -150,9 +150,9 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL カスタム Personalization]** の宛先では、属性ベースのパーソナライゼーション用に宛先を設定する際に ](../../server-api/overview.md)2}Edge Networkサーバー API} を使用する必要があります。 [すべての Server API 呼び出しは、[ 認証済みコンテキスト ](../../server-api/authentication.md) で行う必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL カスタム Personalization]** の宛先では、属性ベースのパーソナライゼーション用に宛先を設定する際に ](../../server-api/overview.md)2}Edge Network Server API} を使用する必要があります。 [すべての Server API 呼び出しは、[ 認証済みコンテキスト ](../../server-api/authentication.md) で行う必要があります。
 >
-><br> 既に統合に Web SDK または Mobile SDK を使用している場合は、サーバーサイド統合を追加することで、Server API を介して属性を取得できます。
+><br> 既に Web SDKまたは Mobile SDKを使用している場合は、サーバーサイド統合を追加することで、Server API を介して属性を取得できます。
 >
 ><br> 上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
 
@@ -204,7 +204,7 @@ Adobe TargetなどのAdobeのパーソナライゼーションソリューショ
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
-**[!UICONTROL レビュー]** 手順では、Experience Platformはデータ使用ポリシーの違反がないことも確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、データガバナンスに関するドキュメントの [ データ使用ポリシー違反 ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
+**[!UICONTROL レビュー]** 手順では、Experience Platformはデータ使用ポリシーの違反もチェックします。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、データガバナンスに関するドキュメントの [ データ使用ポリシー違反 ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
 
 ![ データポリシー違反の例 ](../assets/common/data-policy-violation.png)
 

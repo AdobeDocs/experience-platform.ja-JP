@@ -3,7 +3,7 @@ keywords: Experience Platform；プロファイル；リアルタイム顧客プ
 title: リアルタイム顧客プロファイル UI ガイド
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルを操作するためのガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '2212'
 ht-degree: 9%
@@ -24,7 +24,7 @@ ht-degree: 9%
 
 ## [!UICONTROL 概要]
 
-Experience PlatformUI で、左側のナビゲーションで「**[!UICONTROL プロファイル]**」を選択して、「**[!UICONTROL 概要]**」タブを開き、プロファイルダッシュボードを表示します。
+Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL プロファイル]**」を選択して「**[!UICONTROL 概要]**」タブを開き、プロファイルダッシュボードを表示します。
 
 >[!NOTE]
 >
@@ -171,11 +171,11 @@ Edgeで使用できる属性を表示するには、データロケーション�
 
 **[!UICONTROL オーディエンスメンバーシップ]** タブには、個々の顧客プロファイルが現在属しているオーディエンスの名前と説明が記載されたリストが表示されます。 このリストは、プロファイルがオーディエンスに適合するか、オーディエンスから期限切れになると、自動的に更新されます。 プロファイルが現在選定されているオーディエンスの合計数は、タブの右側に表示されます。
 
-Experience Platformのセグメント化について詳しくは、[AdobeExperience Platformセグメント化サービスのドキュメント ](../../segmentation/home.md) を参照してください。
+Experience Platformのセグメント化について詳しくは、[Experience Platform セグメント化サービスの Adobes ドキュメント ](../../segmentation/home.md) を参照してください。
 
 ![ 「オーディエンスメンバーシップ」タブがハイライト表示されます。 プロファイルのオーディエンスメンバーシップの詳細が表示されます。](../images/user-guide/audience-membership.png)
 
-Edgeで使用可能なプロファイルのオーディエンスメンバーシップを表示するには、データロケーションセレクターの ]**0}Edge} を選択します。**[!UICONTROL &#x200B;エッジセグメント化について詳しくは、[ エッジセグメント化ガイド ](../../segmentation/ui/edge-segmentation.md) を参照してください。
+Edgeで使用可能なプロファイルのオーディエンスメンバーシップを表示するには、データロケーションセレクターの ]**0}Edge} を選択します。**[!UICONTROL &#x200B;エッジセグメント化について詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
 
 ![ 「オーディエンスメンバーシップ」タブ内のデータロケーションセレクターがハイライト表示されます。](../images/user-guide/audience-membership-select.png)
 
@@ -205,4 +205,4 @@ Edgeで使用可能なプロファイルのオーディエンスメンバーシ�
 
 ## 次の手順
 
-このガイドを読むことで、Experience Platform UI を使用した組織のプロファイルデータの表示および管理方法を知ることができました。 Experience PlatformAPI を使用してプロファイルデータを操作する方法について詳しくは、[ リアルタイム顧客プロファイル API ガイド ](../api/overview.md) を参照してください。
+このガイドを読むことで、Experience Platform UI を使用した組織のプロファイルデータの表示および管理方法を知ることができました。 Experience Platform API を使用してプロファイルデータを操作する方法について詳しくは、[ リアルタイム顧客プロファイル API ガイド ](../api/overview.md) を参照してください。

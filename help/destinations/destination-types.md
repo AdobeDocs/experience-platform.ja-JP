@@ -3,7 +3,7 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 54%
@@ -18,7 +18,7 @@ ht-degree: 54%
 
 Adobe Experience Platformでは、接続、データセット書き出し、拡張機能など、様々な宛先タイプを区別します。 接続宛先には、API ベースの宛先、ソーシャル宛先、CRM プラットフォームなど、様々なタイプがあり、データを書き出すことができます。
 
-最後に、接続は、宛先カタログ内のすべての組織で使用可能なパブリック宛先と、Real-Time CDP Ultimate のお客様が特定の書き出しのユースケースを満たすために作成できるプライベート宛先を区別することもできます。
+最後に、接続は、宛先カタログのすべての組織で使用可能なパブリック宛先と、Real-Time CDP Ultimateのお客様が特定の書き出しのユースケースを満たすために作成できるプライベート宛先を区別することもできます。
 
 >[!BEGINSHADEBOX]
 
@@ -41,11 +41,11 @@ Adobe Experience Platformの **[!UICONTROL プロファイル書き出し]**、*
 
 >[!IMPORTANT]
 >
->高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先）は、[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様のみが利用できます。
+>高度なエンタープライズ宛先（ストリーミングプロファイル書き出し宛先）は、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) のお客様のみが利用できます。
 
-高度なエンタープライズ宛先データコネクタを使用すると、Adobe Real-time Customer Data Platform プロファイルをほぼリアルタイムで社内システムや他のサードパーティシステムに配信して、データの同期、分析、さらにはプロファイルエンリッチメントのユースケースを実現できます。
+高度なエンタープライズ宛先データコネクタを使用すると、Adobe Real-Time Customer Data Platform プロファイルをほぼリアルタイムで社内システムや他のサードパーティシステムに配信して、データの同期、分析、さらにはプロファイルエンリッチメントのユースケースを実現できます。
 
-これらの宛先は、オーディエンスデータとプロファイルデータをExperience Platformデータストリームとして受け取ります。
+これらの宛先は、オーディエンスおよびプロファイルデータをExperience Platform データストリームとして受け取ります。
 
 高度なエンタープライズ宛先は次のとおりです。
 
@@ -59,7 +59,7 @@ Adobe Experience Platformの **[!UICONTROL プロファイル書き出し]**、*
 
 ## ストリーミングオーディエンス書き出し宛先 {#streaming-destinations}
 
-オーディエンス書き出し宛先は、Experience Platformオーディエンスデータを受け取ります。 これらの宛先では、オーディエンス ID またはユーザー ID を使用します。 広告宛先やソーシャル宛先（[[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)、[[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)、[Facebook](catalog/social/facebook.md) など）は、このような宛先の例です。
+オーディエンス書き出し宛先は、Experience Platform オーディエンスデータを受け取ります。 これらの宛先では、オーディエンス ID またはユーザー ID を使用します。 広告宛先やソーシャル宛先（[[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)、[[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)、[Facebook](catalog/social/facebook.md) など）は、このような宛先の例です。
 
 ## エッジパーソナライゼーション宛先 {#edge-personalization-destinations}
 
@@ -81,7 +81,7 @@ Experience Platformから様々な宛先に、次の 3 種類のオーディエ�
 * アカウントオーディエンス
 * 見込み客オーディエンス
 
-[ 様々なオーディエンスタイプ ](/help/segmentation/ui/account-audiences.md#terminology) の詳細をご覧ください。
+[ 様々なオーディエンスタイプ ](/help/segmentation/types/account-audiences.md#terminology) の詳細をご覧ください。
 
 宛先カードの記号は、各宛先に書き出すことができるオーディエンスのタイプを示します。
 

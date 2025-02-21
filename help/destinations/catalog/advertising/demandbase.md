@@ -1,30 +1,30 @@
 ---
 title: Demandbase 接続
-description: この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 DemandBase の B2BDemand Side Platform（DSP）を使用して、ターゲットアカウント内の関連するペルソナやロールにアドバタイズします。 Target アカウントは、マーケティングや販売におけるその他のダウンストリームのユースケース向けに、Demandbase のサードパーティデータを使用して強化することもできます。
-badgeB2B: label="B2B エディション" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+description: この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 DemandBase の B2B Demand Side Platform（DSP）を使用して、ターゲットアカウント内の関連するペルソナやロールにアドバタイズします。 Target アカウントは、マーケティングや販売におけるその他のダウンストリームのユースケース向けに、Demandbase のサードパーティデータを使用して強化することもできます。
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
-source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
+exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
+source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 26%
 
 ---
 
-
 # Demandbase 接続 {#demandbase}
 
 >[!AVAILABILITY]
 >
->>Demandbase の宛先に対してアカウントオーディエンスをアクティブ化する機能は、Real-time Customer Data Platformの [B2B](/help/rtcdp/overview.md#rtcdp-b2b) エディションと [B2Person](/help/rtcdp/overview.md#rtcdp-b2p) エディションを購入する企業が利用できます。
+>>Demandbase の宛先に対してアカウントオーディエンスをアクティブ化する機能は、Real-Time Customer Data Platformの [B2B](/help/rtcdp/overview.md#rtcdp-b2b) エディションと [B2Person](/help/rtcdp/overview.md#rtcdp-b2p) エディションを購入する企業が利用できます。
 
-[ アカウントオーディエンス ](/help/segmentation/ui/account-audiences.md) に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のために、Demandbase キャンペーン用のプロファイルをアクティブ化します。
+[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のために、Demandbase キャンペーン用のプロファイルをアクティブ化します。
 
 ## ユースケース {#use-case}
 
-この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 DemandBase の B2BDemand Side Platform（DSP）を使用して、ターゲットアカウント内の関連するペルソナやロールにアドバタイズします。 Target アカウントは、マーケティングや販売におけるその他のダウンストリームのユースケース向けに、Demandbase のサードパーティデータを使用して強化することもできます。
+この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 DemandBase の B2B Demand Side Platform（DSP）を使用して、ターゲットアカウント内の関連するペルソナやロールにアドバタイズします。 Target アカウントは、マーケティングや販売におけるその他のダウンストリームのユースケース向けに、Demandbase のサードパーティデータを使用して強化することもできます。
 
-例えば、Demandbase のアドテック DSPを活用して、ファネルのトップのリードジェネレーション向けに特定のペルソナや主要アカウント内の役割をターゲットにしたり、購入グループを作成して成長させたりします。 Demandbase の宛先を使用して、アカウントを効果的にターゲットにする他のユースケースを検討します。
+例えば、Demandbase のアドテックDSPを活用して、ファネルのトップのリードジェネレーション向けに特定のペルソナや主要アカウント内の役割をターゲットにしたり、購入グループを作成して成長させたりします。 Demandbase の宛先を使用して、アカウントを効果的にターゲットにする他のユースケースを検討します。
 
 この統合を使用すると、リアルタイムのアカウント情報検索を使用して web サイトエクスペリエンスをパーソナライズし、エンゲージメントを最適化することもできます。
 
@@ -34,7 +34,7 @@ ht-degree: 26%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/overview.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -97,4 +97,4 @@ ht-degree: 26%
 ## 追加のメモと重要な引き出し {#additional-notes}
 
 * 同じ名前のアカウントオーディエンスが Demandbase に対して以前にアクティブ化された場合、Demandbase の宛先に対する別のデータフローを通じて再度アクティブ化することはできません。
-* Demandbase にオーディエンスを書き出し、書き出しがExperience Platformに成功しても、すべてのデータが Demandbase に到達するわけではない場合は、Demandbase 側で API スロットルに遭遇した可能性があります。 明確にするために彼らに連絡してください。
+* Demandbase にオーディエンスを書き出し、Experience Platformで書き出しが成功しても、すべてのデータが Demandbase に到達するわけではない場合は、Demandbase 側で API スロットルに遭遇した可能性があります。 明確にするために彼らに連絡してください。

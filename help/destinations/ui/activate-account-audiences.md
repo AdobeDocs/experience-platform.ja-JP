@@ -5,7 +5,7 @@ description: 宛先に対してアカウントオーディエンスをアクテ�
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 7%
@@ -16,13 +16,13 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->宛先に対してアカウントオーディエンスをアクティブ化する機能は、Real-time Customer Data Platformの [B2B](/help/rtcdp/overview.md#rtcdp-b2b) および [B2Person](/help/rtcdp/overview.md#rtcdp-b2p) エディションを購入する企業で利用できます。
+>宛先に対してアカウントオーディエンスをアクティブ化する機能は、Real-Time Customer Data Platformの [B2B](/help/rtcdp/overview.md#rtcdp-b2b) および [B2Person](/help/rtcdp/overview.md#rtcdp-b2p) エディションを購入する企業で利用できます。
 
-この記事では、Adobe Experience Platformから目的の宛先に [ アカウントオーディエンス ](/help/segmentation/ui/account-audiences.md) を書き出すために必要なワークフローについて説明します。
+この記事では、Adobe Experience Platformから目的の宛先に [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) を書き出すために必要なワークフローについて説明します。
 
 ## サポートされる宛先 {#supported-destinations}
 
-**[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。**[!UICONTROL データタイプ]** フィルターを使用し、**[!UICONTROL アカウント]** を選択して、アカウントオーディエンスのアクティブ化をサポートする宛先を確認します。 現在、アカウントオーディエンスの書き出しは、特定のクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、および [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）と、[Demandbase](/help/destinations/catalog/advertising/demandbase.md) および [ （企業）LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) ストリーミング宛先でのみ使用できます。
+**[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。**[!UICONTROL データタイプ]** フィルターを使用し、**[!UICONTROL アカウント]** を選択して、アカウントオーディエンスのアクティブ化をサポートする宛先を確認します。 現在、アカウントオーディエンスの書き出しを使用できるのは、特定のクラウドストレージの宛先（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) および [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）と、[Demandbase](/help/destinations/catalog/advertising/demandbase.md) および [ （Companies） LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) ストリーミング宛先のみです。
 
 ![ アカウントオーディエンスをサポートする宛先。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -34,7 +34,7 @@ ht-degree: 7%
 
 ## 前提条件 {#prerequisites}
 
-* ダウンストリームの宛先に対してアクティブ化するには、まず [ アカウントプロファイル ](/help/rtcdp/accounts/account-profile-overview.md) を取り込み [ アカウントオーディエンス ](/help/segmentation/ui/account-audiences.md) を作成する必要があります。
+* ダウンストリームの宛先に対してアクティブ化するには、まず [ アカウントプロファイル ](/help/rtcdp/accounts/account-profile-overview.md) を取り込み [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) を作成する必要があります。
 * 宛先へのアカウントオーディエンスをアクティブ化するには、正常に宛先に接続する必要があります。 まだ接続していない場合は、[ 宛先カタログ ](../catalog/overview.md) に移動し、サポートされている宛先を参照し、使用する宛先を設定します。 詳しくは、[ 宛先への接続 ](./connect-destination.md) に関する UI チュートリアルを参照してください。
 
 ### 必要な権限 {#permissions}
@@ -77,7 +77,7 @@ ht-degree: 7%
 
 ## スケジュール設定と次の手順
 
-アカウントオーディエンスを書き出すための残りのアクティベーションワークフローについては、ファイルベースの宛先に対するデータのアクティブ化に関するチュートリアルを参照してください。 [ オーディエンスの書き出しをスケジュール手順 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) から続行します。 **[!UICONTROL （会社）LinkedInでマッチしたオーディエンスの宛先に対してアカウントオーディエンスをアクティブ化する場合は]** ストリーミングの宛先のアクティブ化に関するチュートリアルを参照してください。 [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) から続行します。
+アカウントオーディエンスを書き出すための残りのアクティベーションワークフローについては、ファイルベースの宛先に対するデータのアクティブ化に関するチュートリアルを参照してください。 [ オーディエンスの書き出しをスケジュール手順 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) から続行します。 **[!UICONTROL （会社） LinkedIn Matched Audiences]** 宛先に対してアカウントオーディエンスをアクティブ化する場合は、ストリーミング宛先のアクティブ化に関するチュートリアルをお読みください。 [ マッピング手順 ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) から続行します。
 
 >[!NOTE]
 >
@@ -87,9 +87,9 @@ ht-degree: 7%
 
 アカウントオーディエンスをアクティブ化する機能の一般リリースについては、次の重要なコールアウトと既知の制限事項に注意してください。
 
-### **[!UICONTROL （会社）LinkedIn Matched Audiences]** 宛先に対してアカウントオーディエンスをアクティブ化する際に、マッピングステップで必要なマッピングペア {#required-mappings}
+### **[!UICONTROL （会社） LinkedIn Matched Audiences]** 宛先に対してアカウントオーディエンスをアクティブ化する際に、マッピング手順で必要なマッピングペア {#required-mappings}
 
-**[!UICONTROL （会社）LinkedIn一致オーディエンス]** 宛先に対してアカウントオーディエンスをアクティブ化する場合、データを正常に書き出すには、次の 2 つのマッピングペアが必須です。
+**[!UICONTROL （会社） LinkedIn Matched Audiences]** 宛先に対してアカウントオーディエンスをアクティブ化する場合、データを正常に書き出すには、次の 2 つのマッピングペアが必須です。
 
 ![LinkedIn マッピングの必須フィールド。](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 

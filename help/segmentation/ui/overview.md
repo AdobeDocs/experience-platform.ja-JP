@@ -3,7 +3,7 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 74%
@@ -90,9 +90,9 @@ Audience Portal について詳しくは、[Audience Portal の概要 ](./audien
 
 オーディエンス構成 ページが表示され、オーディエンスを構成する構成要素が表示されます。オーディエンス構成の使用方法について詳しくは、[オーディエンス構成 UI ガイド](./audience-composition.md)を参照してください。
 
-## Federated Audience Composition {#fac}
+## 連合オーディエンス構成 {#fac}
 
-オーディエンスコンポジションとセグメント定義に加えて、AdobeFederated Audience コンポジションを使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [Federated Audience コンポジション ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home) に関するガイドを参照してください。
+オーディエンスの構成とセグメントの定義に加えて、Adobe Federated Audience Composition を使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
 
 ![ 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
 
@@ -100,7 +100,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 ](./audien
 
 ストリーミングセグメント化は、データの豊富さを重視しながら、ほぼリアルタイムで [!DNL Platform] でセグメント化を実行する機能です。ストリーミングセグメント化を使用すると、データが [!DNL Platform] に到達する際にセグメントの選定が行われるようになり、セグメント化ジョブをスケジュールして実行する必要性が軽減されます。
 
-ストリーミングセグメント化について詳しくは、[ストリーミングセグメント化ユーザーガイド](./streaming-segmentation.md)を参照してください。
+ストリーミングセグメント化について詳しくは、[ストリーミングセグメント化ユーザーガイド](../methods/streaming-segmentation.md)を参照してください。
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 ](./audien
 
 エッジセグメント化は、Platform 内のオーディエンスをエッジ上で即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
 
-エッジセグメント化について詳しくは、[エッジセグメント化 UI ガイド](./edge-segmentation.md)を参照してください。
+エッジセグメント化について詳しくは、[エッジセグメント化 UI ガイド](../methods/edge-segmentation.md)を参照してください。
 
 ## ポリシー違反
 

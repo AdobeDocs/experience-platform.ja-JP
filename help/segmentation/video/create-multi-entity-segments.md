@@ -10,16 +10,16 @@ doc-type: video
 activity: understand
 thumbnail: null
 exl-id: f6d15ca7-375c-4c8a-96a8-9079e5a44810
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 630041a7ef82993038ef4510dd08d3bc67bfce41
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 17%
 
 ---
 
-# Experience PlatformUI での複数エンティティのセグメントの作成
+# Experience Platform UI での複数エンティティセグメントの作成
 
-次のビデオは、動的セグメントの作成について理解を深めるためのものです。 カスタマーエクスペリエンスの例と、その後の [!DNL Platform] インターフェイスの主な機能に関するクイックツアーを示します。 マルチエンティティのセグメント化について詳しくは、[ マルチエンティティのセグメント化 ](../multi-entity-segmentation.md) に関するガイドを参照してください。
+次のビデオは、動的セグメントの作成について理解を深めるためのものです。 カスタマーエクスペリエンスの例と、その後の [!DNL Platform] インターフェイスの主な機能に関するクイックツアーを示します。 マルチエンティティのセグメント化について詳しくは、[ マルチエンティティのセグメント化 ](../tutorials/multi-entity-segmentation.md) に関するガイドを参照してください。
 
 >[!NOTE]
 >

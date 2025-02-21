@@ -3,7 +3,7 @@ title: サードパーティ cookie に依存せずに新規顧客を獲得
 description: サードパーティ Cookie に依存せずに、見込み客のユースケースを通じて新規顧客をエンゲージおよび獲得する方法を説明します。
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 85%
@@ -14,7 +14,7 @@ ht-degree: 85%
 
 >[!AVAILABILITY]
 >
->* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスを取得したお客様が利用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
+>* この機能は、Real-Time CDP（アプリサービス）、Adobe Experience Platform アクティベーション、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimateのライセンスを持つ顧客が使用できます。 これらのパッケージについて詳しくは、[製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions.html)を参照し、アドビ担当者にお問い合わせください。
 
 Real-Time CDP でサードパーティデータのサポートを使用して、データパートナーの見込み客プロファイルでプロファイルベースを拡張し、新規顧客を獲得またはリーチできるよう見込み客にエンゲージします。
 
@@ -24,7 +24,7 @@ Real-Time CDP でサードパーティデータのサポートを使用して、
 
 ブランドは、サードパーティ cookie への依存、限られた予算、透明性と広告費用対効果への高い需要に依存することなく、ファネルの最上部の顧客獲得のユースケースを責任を持って実行するという困難な課題に同時に直面しています。
 
-Adobe Real-time Customer Data Platformを使用すると、企業は、Data Management Platform （DMP）でサポートされているユースケースを cookie のない代替手段に安全に移行し、セルフサービスのセグメント化、オーディエンスのキュレーション、アクティベーションの完全な高度化と機能を 1 つのシステムに導入できます。 特許取得済みのデータガバナンスと同意の枠組みを通じて、Adobeの責任あるデータの使用に対する揺るぎない焦点を妥協することなくすべて。
+Adobe Real-Time Customer Data Platformを使用すると、企業は、Data Management Platform （DMP）でサポートされているユースケースを cookie のない代替手段に安全に移行し、セルフサービスのセグメント化、オーディエンスキュレーション、アクティベーションの完全な高度化と機能を 1 つのシステムに導入できます。 特許取得済みのデータガバナンスと同意のフレームワークを通じて、Adobeの責任あるデータ使用に揺るぎない焦点を当てることに妥協することなく、これらすべてを実現します。
 
 例えば、見込み客を引き付けてユーザーまたは既知の顧客にするキャンペーンを実行する必要がある場合は、このユースケースで説明している手順に従ってください。
 
@@ -71,7 +71,7 @@ Real-Time CDP を拡張して新規顧客のエンゲージメントや獲得を
 * [データセット](/help/catalog/datasets/overview.md)
 * [ソース](/help/sources/home.md)
 * [見込み客プロファイル](/help/profile/ui/prospect-profile.md)
-* [見込み客オーディエンス](/help/segmentation/ui/prospect-audience.md)
+* [見込み客オーディエンス](/help/segmentation/types/prospect-audiences.md)
 * [宛先](/help/destinations/home.md)
 
 ### パートナーからサードパーティのプロファイル詳細のライセンスを取得する {#license-profiles-from-partner}
@@ -213,7 +213,7 @@ Real-Time CDP のセグメント化機能を使用して、見込み客プロフ
 * バッチプロファイル評価のみ。
 * 時系列イベントに基づくオーディエンスの作成をサポートしていません。
 
-詳しくは、[ 見込み客オーディエンス ](/help/segmentation/ui/prospect-audience.md) を参照してください。
+詳しくは、[ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) を参照してください。
 
 ### 宛先への見込み客のプロファイルをアクティブ化 {#activate-to-destinations}
 
