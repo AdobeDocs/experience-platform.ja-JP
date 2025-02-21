@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 類似オーディエンス
 description: 類似オーディエンスを使用して、Adobe Experience Platformで新しい高価値オーディエンスをターゲットにする方法を説明します。
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
+source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2192'
 ht-degree: 10%
 
 ---
@@ -118,6 +118,7 @@ y 軸は、x 軸の一致する値に対応する類似性の割合を持つプ�
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="影響を与える要因"
 >abstract="影響を与える要因は、属性、イベントおよびオーディエンスのメンバーシップで、基本オーディエンスのメンバーに対するプロファイルの類似性を説明する際に重要です。 データ使用ラベルとポリシーを使用すると、類似モデルで特定のデータが影響を与える要因と見なされるのを除外できます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="データを除外"
 
 「影響要因」セクションには、選択したベースオーディエンスの類似モデルに影響を与える上位 100 個の要因が表示されます。 これらの影響を与える要因は、プロファイル属性、エクスペリエンスイベントおよびオーディエンスメンバーシップで、ベースオーディエンスの類似点を説明する際に最も重要です。 上位の影響力のある要因を理解することで、このオーディエンスと、そこから作成した類似オーディエンスのマーケティングコンテンツをより適切にパーソナライズできます。 類似モデルに影響を与えるすべての要因が表示されるわけではないことに注意してください。
 
