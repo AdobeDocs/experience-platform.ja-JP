@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2025年2月）
 description: Adobe Experience Platform の 2025年2月のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b29c63942b00fdf597ebfd3ab105519a6b05a476
+source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
 workflow-type: tm+mt
-source-wordcount: '1378'
-ht-degree: 15%
+source-wordcount: '1481'
+ht-degree: 14%
 
 ---
 
@@ -74,7 +74,7 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 
 詳しくは、[ データ準備の概要 ](../../data-prep/home.md) を参照してください。
 
-## 宛先 {#destinations}
+## 宛先（更新日：2 月 20 日（PT）） {#destinations}
 
 [!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
@@ -97,6 +97,7 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 | アクセスラベルを使用した宛先データフローへのユーザーアクセスの管理 | Real-Time CDPの [[!UICONTROL  属性ベースのアクセス制御 ]](/help/access-control/abac/overview.md) 機能の一部として、[ 宛先データフロー ](/help/dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。<br> **重要**:Experience Platform ユーザーインターフェイスの上部にある検索ボックスを使用して宛先データフローを検索する場合、結果には、ユーザーアクセスラベルに表示が制限されている宛先データフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。 |
 | [2}Marketo Engage接続の ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) オーディエンスレベルのレポート ](/help/destinations/catalog/adobe/marketo-engage.md)[ | この宛先のデータフローに含まれる各オーディエンスに対して、オーディエンスレベルで分類されたアクティブ化された ID、除外された ID、失敗した ID に関する [ 情報を表示 ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) できるようになりました。 |
 | 外部オーディエンスは、[TikTok](/help/destinations/catalog/social/tiktok.md) および [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) 接続をサポートしています | [ カスタムアップロード ](../../segmentation/ui/audience-portal.md#import-audience) および [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) から、これらの宛先に対して外部オーディエンスをアクティブ化できます。 |
+| 配列、マップ、オブジェクトをクラウドストレージの宛先に書き出す | クラウドストレージの宛先に接続する際に、新しい **[!UICONTROL 配列、マップ、オブジェクトの書き出し]** トグルを使用すると、複雑なオブジェクトを新しく書き出して宛先を選択できます。 機能について ](/help/destinations/ui/export-arrays-calculated-fields.md) 詳細を参照 [。 |
 
 {style="table-layout:auto"}
 
@@ -104,6 +105,9 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 
 - Destination SDK テストツールの問題が修正されました。 一部のお客様またはパートナーで、[ サンプルプロファイル生成ツール ](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) で、プロファイルの生成に使用されるスキーマにデータタイプが含まれている際にサポートされていない形式が原因で問題が発生してい `No format` した。
 - Flow Service API を使用して宛先の `targetConnection` 仕様を更新する際の問題が修正されました。 場合によっては、PATCH操作が POST 操作と同様に動作し、既存のデータフローが破損することがあります。 この問題が修正され、すべてのお客様がフローサービス API を使用して `targetConnection` 仕様を更新できるようになりました。 [詳細情報](/help/destinations/api/edit-destination.md#patch-target-connection)。
+- ファイルベースの宛先にプロファイルを書き出す場合、重複排除では、複数のプロファイルが同じ重複排除キーと同じ参照タイムスタンプを共有している場合に、1 つのプロファイルのみが書き出されるようにします。 このリリースには重複排除プロセスの更新が含まれており、同じ座標で連続して実行すると、常に同じ結果が得られ、一貫性が向上します。 [詳細情報](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp)。
+
+詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## ソース {#sources}
 
