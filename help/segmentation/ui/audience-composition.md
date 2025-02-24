@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
+source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
-source-wordcount: '2228'
-ht-degree: 70%
+source-wordcount: '2342'
+ht-degree: 66%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 70%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="オーディエンスブロック"
->abstract="オーディエンス ブロックを使用すると、新しいオーディエンスの作成に使用するサブオーディエンスを指定できます。"
+>abstract="オーディエンス ブロックを使用すると、新しいオーディエンスの作成に使用するサブオーディエンスを追加できます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -83,6 +83,11 @@ ht-degree: 70%
 | [!UICONTROL 重複を除外] | オーディエンスが結合され、**すべてではなく、いずれか**&#x200B;のオーディエンスで共有されているオーディエンスのみが追加されます。これは XOR 演算と同じです。 |
 
 ### [!UICONTROL ルールの作成] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="セグメントビルダー"
+>abstract="セグメントビルダーを使用して、コンポジションにカスタムルールを追加できます。"
 
 オーディエンスブロックにカスタムルールを追加するには、「**[!UICONTROL ルールを作成]**」を選択します。
 
@@ -134,7 +139,12 @@ ht-degree: 70%
 
 ### 属性別に除外 {#exclude-attribute}
 
-属性別に除外する場合は、「**[!UICONTROL 除外ルール]**」セクションにある![フィルター](/help/images/icons/project-edit.png)アイコンを選択することで、除外する属性を選択できます。
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="属性別に除外"
+>abstract="属性別に除外する場合は、選択した属性に基づいて、特定のプロファイルをコンポジションに表示から除外できます。"
+
+属性別に除外する場合は、「除外ルール」セクションにある ![ フィルター ](/help/images/icons/project-edit.png) アイコンを選択することで、除外する属性を選択でき **[!UICONTROL す]**。 属性を除外すると、この属性を含むプロファイルを結果のオーディエンスから除外できます。
 
 ![属性セクションがハイライト表示され、除外する属性を選ぶために選択すべき場所が示されている様子。](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -307,6 +317,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ### 割合で分割 {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="割合で分割"
+>abstract="指定されたパスの数と割合に基づいて、オーディエンスを複数のオーディエンスにランダムに分割できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="持続的分割"
+>abstract="このオプションを有効にして、分割を永続化する ID 名前空間を選択すると、分割を永続化できます。"
+
 割合で分割する場合、オーディエンスは、指定されたパスの数と割合に基づいてランダムに分割されます。
 
 例えば、3 つのパスを作成し、それぞれのパスでプロファイルの割合を変えることができます。
@@ -331,7 +351,12 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![「その他のプロファイル」切替スイッチがハイライト表示されている様子。](../images/ui/audience-composition/split-other-profiles.png)
 
-## オーディエンスのパブリッシュ
+## オーディエンスのパブリッシュ {#publish}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="公開"
+>abstract="コンポジションを公開して、結果のオーディエンスをAdobe Experience Platformに作成できます。"
 
 >[!IMPORTANT]
 >
