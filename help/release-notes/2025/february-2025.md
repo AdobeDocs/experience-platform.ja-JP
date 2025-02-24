@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform リリースノート（2025年2月）
 description: Adobe Experience Platform の 2025年2月のリリースノートです。
-source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
+source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1542'
 ht-degree: 14%
 
 ---
@@ -38,14 +38,13 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 
 | 機能 | 説明 |
 | --- | --- |
+| 運用インサイトの一般提供 | AI アシスタントの運用インサイトが一般提供（GA）されるようになりました。 運用インサイトとは、カウント、ルックアップ、系列の影響を含む、メタデータオブジェクト（属性、オーディエンス、データフロー、データセット、宛先、ジャーニー、スキーマ、ソース）に関して AI Assistant が生成する回答を指します。 オペレーショナルインサイトでは、サンドボックス内のデータは参照されません。 詳しくは、[AI アシスタント UI ガイド ](../../ai-assistant/ui-guide.md) を参照してください。 |
 | 質問のオートコンプリートのサポート | AI アシスタントに質問を入力する際に、AI アシスタントが提供するおすすめの質問のリストから選択できるようになりました。 この機能を使用すると、AI アシスタントでワークフローをさらに高速化できます。 詳しくは、[AI アシスタントで質問のオートコンプリートを使用する ](../../ai-assistant/ui-guide.md#use-question-autocomplete) に関するガイドを参照してください。 |
 | データセットの可観測性のサポート | AI アシスタントを使用して、ストレージサイズや行数など、特定のデータセット指標に関する質問に回答できるようになりました。 データ観察性の質問は、特定の期間でクエリをフィルタリングするために使用できる修飾子をサポートします。 詳しくは、「[AI アシスタントの質問ガイド ](../../ai-assistant/questions.md)」を参照してください。 |
 
 {style="table-layout:auto"}
 
 詳しくは、[AI アシスタントの概要 ](../../ai-assistant/home.md) を参照してください。
-
-<!-- | General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). | -->
 
 ## カタログサービス {#catalog-service}
 
