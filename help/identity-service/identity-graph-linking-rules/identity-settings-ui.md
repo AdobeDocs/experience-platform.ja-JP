@@ -2,10 +2,10 @@
 title: ID 設定 UI
 description: ID 設定ユーザーインターフェイスの使用方法を説明します。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: ee0f6d6dbbbdf55a1a0f10038b785e48f2b41474
+source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobeアカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
 
 ID 設定は、Adobe Experience Platform ID サービス UI の機能で、一意の名前空間を指定し、名前空間の優先度を設定するために使用できます。
 
@@ -46,7 +46,7 @@ ID 設定ページは、[!UICONTROL  ユーザー名前空間 ] および [!UICO
 
 ### 一意の名前空間の指定
 
-一意の名前空間を指定するには、その名前空間に対応する [!UICONTROL  グラフごとに一意 ] チェックボックスを選択します。 ID 設定設定に複数の一意の名前空間を選択できます。
+一意の名前空間を指定するには、その名前空間に対応する [!UICONTROL  グラフごとに一意 ] チェックボックスを選択します。 ID 設定設定に対して最大 3 つの一意の名前空間を選択できます。
 
 ![ 選択され、一意として定義された 2 つの名前空間。](../images/rules/unique-namespace.png)
 
