@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Analytics Source コネクタのマッピングフィールド
 description: Analytics Source Connector を使用して、Adobe Analytics フィールドを XDM フィールドにマッピングします。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
+source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 71%
+source-wordcount: '2415'
+ht-degree: 70%
 
 ---
 
@@ -173,9 +173,9 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 | `ip` | `environment.ipV4` | 文字列 | イメージリクエストの HTTP ヘッダーに基づく IP アドレス。 |
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | ブール値 | 使用する JavaScript のバージョン。 |
 | `mcvisid_high` + `mcvisid_low` | identityMap | オブジェクト | Experience Cloud 訪問者 ID。 |
-| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | 文字列 | Experience CloudID （ECID）は、MCID とも呼ばれ、名前空間で使用されることもあります。 |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | ブール値 | Experience CloudID （ECID）は、MCID とも呼ばれ、名前空間で使用されることもあります。 |
-| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | 文字列 | Experience CloudID （ECID）は、MCID とも呼ばれ、名前空間で使用されることもあります。 |
+| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | 文字列 | Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で使用されることもあります。 |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | ブール値 | Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で使用されることもあります。 |
+| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | 文字列 | Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で使用されることもあります。 |
 | `mcvisid_low` | `identityMap` | オブジェクト | Experience Cloud 訪問者 ID。 |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | 文字列 | ヒットステッチ ID。解析フィールド sdid_high と sdid_low は、2 つ以上の受信ヒットを結合するために使用される補足的なデータ ID です。 |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | 文字列 | Mobile Services ビーコンの近接性. |
@@ -186,9 +186,11 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 
 ## 高度なマッピングフィールド
 
-「Select」フィールド（「post values」と呼ばれる）には、Adobeが処理ルール、VISTA ルール、ルックアップテーブルを使用して値を調整した後のデータが含まれます。 ほとんどの post 値には、事前に処理された対応策があります。 組織は、前処理フィールド、後処理フィールド、またはその両方を使用するかどうかを決定できます。
+「Select」フィールド（「post values」と呼ばれる）には、Adobeが処理ルール、VISTA ルール、ルックアップテーブルを使用して値を調整した後のデータが含まれます。 ほとんどの post 値には、事前に処理された対応策があります。
 
-クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の {0](/help/query-service/sql/adobe-defined-functions.md)Adobe定義関数 } を参照してください。[
+Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の ](/help/query-service/sql/adobe-defined-functions.md)0}Adobe定義関数 } を参照してください。[
+
+クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の ](/help/query-service/sql/adobe-defined-functions.md)0}Adobe定義関数 } を参照してください。[
 
 | Analytics フィールド | XDM フィールド | XDM タイプ | 説明 |
 | --------------- | --------- | -------- | ---------- |
