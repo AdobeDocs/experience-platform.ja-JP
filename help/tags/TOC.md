@@ -6,10 +6,10 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 96%
+source-wordcount: '776'
+ht-degree: 95%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 96%
    * [ライブラリ](./ui/publishing/libraries.md)
    * [自己ホスト型ライブラリ](./ui/publishing/hosts/self-hosting-libraries.md)
    * [ライブラリの再公開](./ui/publishing/republish.md)
-   * [Experience Platformタグ （中国）](./ui/publishing/premium-cdn.md)
+   * [Experience Platform Tags （中国）](./ui/publishing/premium-cdn.md)
 * クライアント側の情報 {#client-side}
    * [概要](./ui/client-side/overview.md)
    * [非同期デプロイメント](./ui/client-side/asynchronous-deployment.md)
@@ -90,6 +90,8 @@ ht-degree: 96%
       * Adobe Client Data Layer {#client-data-layer}
          * [概要](./extensions/client/client-data-layer/overview.md)
          * [リリースノート](./extensions/client/client-data-layer/release-notes.md)
+      * Adobe Content Analytics {#contentanalytics}
+         * [概要](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [概要](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
