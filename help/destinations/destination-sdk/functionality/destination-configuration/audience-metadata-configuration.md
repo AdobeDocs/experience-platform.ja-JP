@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対するオーディエンスメタデータ設定の設定方法を説明します。
 title: オーディエンスメタデータ設定
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 90%
+source-wordcount: '406'
+ht-degree: 86%
 
 ---
 
@@ -17,7 +17,7 @@ Destination SDK には、宛先プラットフォームのオーディエンス�
 
 このコンポーネントがDestination SDKで作成される統合のどこに適合するかを把握するには、[ 設定オプション ](../configuration-options.md) ドキュメントの図を参照するか、[Destination SDKを使用したストリーミング宛先の設定 ](../../guides/configure-destination-instructions.md#create-destination-configuration) 方法に関するガイドを参照してください。
 
-`/authoring/audience-templates` エンドポイントを介してオーディエンスメタデータテンプレートを設定できます。オーディエンスメタデータ設定を作成したら、`/authoring/destinations` エンドポイントを使用して、`audienceMetadataConfig` セクションを設定できます。このセクションは、オーディエンステンプレートにマッピングする必要があるオーディエンスメタデータを宛先に指示します。
+`/authoring/audience-templates` エンドポイントを介してオーディエンスメタデータテンプレートを設定できます。オーディエンスメタデータ設定を作成したら、`/authoring/destinations` エンドポイントを使用して、`segmentMappingConfig` セクションと `audienceMetadataConfig` セクションを設定できます。 このセクションは、オーディエンステンプレートにマッピングする必要があるオーディエンスメタデータを宛先に指示します。
 
 このページに表示されるコンポーネントを設定できる、詳細な API 呼び出しの例については、以下の API リファレンスページを参照してください。
 
@@ -44,10 +44,12 @@ Destination SDK には、宛先プラットフォームのオーディエンス�
 オーディエンスメタデータ設定を作成する際に、 以下の表で説明されているパラメーターを使用して、オーディエンスマッピング設定を設定できます。
 
 ```json
-  "audienceMetadataConfig":{
+"segmentMappingConfig": {
    "mapExperiencePlatformSegmentName":false,
    "mapExperiencePlatformSegmentId":false,
    "mapUserInput":false,
+ },
+"audienceMetadataConfig":{
    "audienceTemplateId":"YOUR_AUDIENCE_TEMPLATE_ID"
 }
 ```
