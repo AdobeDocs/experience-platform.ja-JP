@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2342'
-ht-degree: 66%
+source-wordcount: '2313'
+ht-degree: 65%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 66%
 
 オーディエンスブロックにオーディエンスを追加するには。「**[!UICONTROL オーディエンスを追加]**」を選択します。
 
-![「オーディエンスを追加」ボタンがハイライト表示されています。](../images/ui/audience-composition/add-audience.png)
+![「オーディエンスを追加」ボタンがハイライト表示されています。](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ ht-degree: 66%
 
 オーディエンスブロックにカスタムルールを追加するには、「**[!UICONTROL ルールを作成]**」を選択します。
 
-![「ルールを作成」ボタンがハイライト表示されています。](../images/ui/audience-composition/build-rule.png)
+![「ルールを作成」ボタンがハイライト表示されています。](../images/ui/audience-composition/select-build-rule.png)
 
 セグメントビルダーが表示されます。セグメントビルダーを使用して、オーディエンスが従うべきカスタムルールを作成できます。セグメントビルダーの使用について詳しくは、[セグメントビルダーガイド](./segment-builder.md)を参照してください。
 
@@ -196,7 +196,7 @@ ht-degree: 66%
 
 **[!UICONTROL データセットを選択]**&#x200B;ポップオーバーが表示されます。エンリッチメント用に追加するデータセットを選択し、「**[!UICONTROL 選択]**」を選択して、エンリッチメント用のデータセットを追加します。
 
-![選択したデータセットが選択されます。](../images/ui/audience-composition/enrich-dataset-selected.png)
+![選択したデータセットが選択されます。](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ ht-degree: 66%
 
 「**[!UICONTROL ソース結合キー]**」を選択して、![フィルター](/help/images/icons/project-edit.png)アイコンを選択します。
 
-![[!UICONTROL ソース結合キー]のフィルターアイコンがハイライト表示されます。](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 **[!UICONTROL プロファイル属性を選択]**&#x200B;ポップオーバーが表示されます。ソース結合キーとして使用するプロファイル属性を選択し、その後に「**[!UICONTROL 選択]**」を選択してその属性をソース結合キーとして選択します。
 
-![ソース結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![ソース結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/select-source-join-key.png)
 
 「**[!UICONTROL エンリッチメントデータセット結合キー]**」を選択し、![フィルター](/help/images/icons/project-edit.png)アイコンを選択します。
 
-![[!UICONTROL エンリッチメントデータセット結合キー]のフィルターアイコンがハイライト表示されます。](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
-
 **[!UICONTROL エンリッチメント属性]**&#x200B;ポップオーバーが表示されます。エンリッチメントデータセット結合キーとして使用する属性を選択し、その後に「**[!UICONTROL 選択]**」を使用して、その属性をエンリッチメントデータセット結合キーとして選択します。
 
-![エンリッチメントデータセット結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![エンリッチメントデータセット結合キーとして使用する属性がハイライト表示されます。](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 これで、2 つの結合キーが追加され、**[!UICONTROL エンリッチメント属性]**&#x200B;セクションが表示されます。これで、オーディエンスを強化する属性を追加できます。これらの属性を追加するには、「**[!UICONTROL 属性を追加]**」を選択します。
 
-![「[!UICONTROL 属性を追加]」ボタンがハイライト表示されます。](../images/ui/audience-composition/enrich-select-add-attribute.png)
-
 **[!UICONTROL エンリッチメント属性]**&#x200B;ポップオーバーが表示されます。データセットから属性を選択してオーディエンスを強化し、その後に「**[!UICONTROL 選択]**」を選択してオーディエンスに属性を追加します。
 
-![追加するエンリッチメント属性がハイライト表示されます。](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![追加するエンリッチメント属性がハイライト表示されます。](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 プロファイル属性のリストが表示されます。このポップオーバーで、オーディエンスのランク付けの基準にする属性タイプを選択できます。 「**[!UICONTROL 選択]**」を選択して、ランクブロックに追加します。選択した属性は、数字&#x200B;**のみ**&#x200B;であることに注意してください。
 
-![属性のリストが表示されています。](../images/ui/audience-composition/select-attribute-rank.png)
+![属性のリストが表示されています。](../images/ui/audience-composition/rank-attribute.png)
 
 属性を選択したら、ランク付けの順序を選択できます。 昇順（最小から最大）または降順（最大から最小）のいずれかです。
 
 さらに、「プロファイル制限を追加 **[!UICONTROL 切替スイッチを有効にすることで、返されるプロファイルの数を制限でき]** す。 この切替スイッチが有効になっている場合は、「**[!UICONTROL 含まれるプロファイル]**」フィールド内で、返されるプロファイルの最大数を設定できます。
 
-![ 「プロファイル制限を追加」切替スイッチがハイライト表示されています。ここから、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit.png)
+![ 「プロファイル制限を追加」切替スイッチがハイライト表示されています。ここから、返されるプロファイルの数を制限できます。](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL 分割] {#split-block}
 
@@ -307,7 +301,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >title="その他のプロファイル"
 >abstract="「その他のプロファイル」切替スイッチを使用すると、他のパスで指定した条件に一致しない残りのプロファイルと共に、追加のパスを作成できます。"
 
-**[!UICONTROL 分割]**&#x200B;ブロックタイプを使用すると、新しいオーディエンスを様々なサブオーディエンスに分割できます。オーディエンスは、割合に基づいて分割することも、属性別に分割することもできます。 オーディエンスをサブオーディエンスに分割する場合、この分割は永続的 **ありません**。 つまり、プロファイルは、評価ごとに異なるサブオーディエンスにある可能性があります。
+**[!UICONTROL 分割]**&#x200B;ブロックタイプを使用すると、新しいオーディエンスを様々なサブオーディエンスに分割できます。オーディエンスは、割合に基づいて分割したり、属性別に分割したりできます。
 
 **[!UICONTROL 分割]**&#x200B;ブロックを追加するには、「**+**」アイコン、「**[!UICONTROL 分割]**」の順に選択します。
 
@@ -325,23 +319,25 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="持続的分割"
->abstract="このオプションを有効にして、分割を永続化する ID 名前空間を選択すると、分割を永続化できます。"
+>abstract="このオプションを有効にして ID 名前空間を選択することで、パーセンテージ分割を永続的にすることができます。"
 
 割合で分割する場合、オーディエンスは、指定されたパスの数と割合に基づいてランダムに分割されます。
 
-例えば、3 つのパスを作成し、それぞれのパスでプロファイルの割合を変えることができます。
+![ 分割された割合がハイライト表示されている様子 ](../images/ui/audience-composition/split-by-percentage.png)
 
-![保存されたオーディエンスの数と割合の詳細が表示されている様子。](../images/ui/audience-composition/percentages.png)
+または、ID を指定することもできます。これにより、パーセンテージベースの分割が永続的になります。 使用可能な ID タイプには、組織で使用可能なすべての ID 名前空間が含まれます。
+
+![ 「ID で分割」チェックボックスがハイライト表示されている様子。 さらに、分割する ID を選択できるドロップダウンがハイライト表示されます。](../images/ui/audience-composition/split-by-identity.png)
 
 ### 属性で分割 {#split-attribute}
 
 属性別に分割する場合、オーディエンスは指定された属性に基づいて分割されます分割の基準にする属性を選択するには、**[!UICONTROL 分割]**&#x200B;ブロック、![フィルター](/help/images/icons/project-edit.png)アイコンの順に選択します。
 
-![フィルターボタンが選択され、属性別にフィルターする方法が示されています。](../images/ui/audience-composition/select-split-attribute.png)
+![フィルターボタンが選択され、属性別にフィルターする方法が示されています。](../images/ui/audience-composition/split-by-attribute.png)
 
 プロファイル属性のリストが表示されます。属性タイプ、「**[!UICONTROL 選択]**」の順に選択して、分割ブロックに追加します。
 
-![属性のリストが表示されている様子。](../images/ui/audience-composition/select-attribute-exclude.png)
+![属性のリストが表示されている様子。](../images/ui/audience-composition/select-attribute.png)
 
 属性を選択したら、「**[!UICONTROL 値]**」フィールド内に値を追加することで、どのプロファイルがどのサブオーディエンスに属するか選択できます。
 

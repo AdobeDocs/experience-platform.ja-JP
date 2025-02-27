@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート（2025年2月）
 description: Adobe Experience Platform の 2025年2月のリリースノートです。
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 14%
+source-wordcount: '1645'
+ht-degree: 16%
 
 ---
 
@@ -22,6 +23,7 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [カタログサービス](#catalog-service)
 - [データ準備](#data-prep)
 - [宛先](#destinations)
+- [セグメント化サービス](#segmentation)
 - [ソース](#sources)
 - [ドキュメントの更新](#documentation-updates)
    - [Edgeのネットワークとハブの比較](#edge)
@@ -107,6 +109,17 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 
 詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 
+## セグメント化サービス {#segmentation-service}
+
+[!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 持続的分割 | オーディエンス構成で、永続的な分割がサポートされるようになりました。 ID 名前空間を分割ブロックに追加することで、プロファイル別に分割する際に、分割オーディエンスを一定に保つことができます。 この機能について詳しくは、[ オーディエンス構成ドキュメント ](../../segmentation/ui/audience-composition.md) を参照してください。 |
+
+[!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 

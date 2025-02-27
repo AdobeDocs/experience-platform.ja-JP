@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2025年2月）
 description: Adobe Experience Platform の 2025年2月のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 14%
+source-wordcount: '1645'
+ht-degree: 16%
 
 ---
 
@@ -24,6 +24,7 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [データ準備](#data-prep)
 - [宛先](#destinations)
 - [ソース](#sources)
+- [セグメント化サービス](#segmentation)
 - [ドキュメントの更新](#documentation-updates)
    - [Edgeのネットワークとハブの比較](#edge)
    - [ソース用の拡張フローサービス API](#flow-service)
@@ -107,6 +108,18 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 - ファイルベースの宛先にプロファイルを書き出す場合、重複排除では、複数のプロファイルが同じ重複排除キーと同じ参照タイムスタンプを共有している場合に、1 つのプロファイルのみが書き出されるようにします。 このリリースには重複排除プロセスの更新が含まれており、同じ座標で連続して実行すると、常に同じ結果が得られ、一貫性が向上します。 [詳細情報](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp)。
 
 詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
+
+## セグメント化サービス {#segmentation-service}
+
+[!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 持続的分割 | オーディエンス構成で、永続的な分割がサポートされるようになりました。 ID 名前空間を分割ブロックに追加することで、プロファイル別に分割する際に、分割オーディエンスを一定に保つことができます。 この機能について詳しくは、[ オーディエンス構成ドキュメント ](../../segmentation/ui/audience-composition.md) を参照してください。 |
+
+[!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
