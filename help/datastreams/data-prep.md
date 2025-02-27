@@ -2,10 +2,10 @@
 title: データ収集のためのデータ準備
 description: Adobe Experience Platform Web および Mobile SDK のデータストリームを設定する際に、エクスペリエンスデータモデル（XDM）イベントスキーマにデータをマッピングする方法について説明します。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 60%
+source-wordcount: '1199'
+ht-degree: 59%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 60%
 
 データ準備は、[エクスペリエンスデータモデル（XDM）](../xdm/home.md)との間でデータのマッピング、変換、検証を可能にする、Adobe Experience Platform サービスです。Platform 対応の[データストリーム](./overview.md)を設定する場合、データ準備機能を使用して、Platform Edge Network に送信する際にソースデータを XDM にマッピングできます。
 
-Web ページから送信されるすべてのデータは、XDM としてExperience Platformされる必要があります。 ページ上のデータレイヤーからExperience Platformが受け入れる XDM にデータを変換する方法は 3 つあります。
+Web ページから送信されるすべてのデータは、XDM としてExperience Platformに届く必要があります。 ページ上のデータレイヤーからExperience Platformが受け入れる XDM にデータを変換する方法は 3 つあります。
 
 1. Web ページ自体で、データレイヤーを XDM に再フォーマットします。
 2. タグネイティブデータ要素機能を使用して、web ページの既存のデータレイヤー形式を XDM に再フォーマットします。
-3. データ収集のための Data Prep を使用して、Edge Networkを介して web ページの既存のデータレイヤー形式を XDM に再フォーマットします。
+3. データ収集のためのデータ準備を使用して、Edge Networkを通じて web ページの既存のデータレイヤー形式を XDM に再書式設定します。
 
 このガイドでは、3 番目のオプションに焦点を当てています。
 
@@ -25,14 +25,14 @@ Web ページから送信されるすべてのデータは、XDM としてExperi
 
 データ収集のためのデータ準備が役立つユースケースは 2 つあります。
 
-1. Web サイトには、適切に形成、管理、管理されたデータレイヤーがあり、JavaScript操作を使用してページ上で（タグデータ要素を使用して、または手動のJavaScript操作を使用して） XDM に変換する代わりに、Edge Networkに直接送信する環境設定があります。
+1. Web サイトには、適切に形成、管理、管理されたデータレイヤーがあり、JavaScript操作を使用してページ上で（タグデータ要素を使用して、または手動のEdge Network操作を使用して） XDM に変換する代わりに、JavaScriptに直接送信する環境設定があります。
 2. タグ以外のタグ付けシステムがサイトにデプロイされている。
 
 ## WebSDK を使用したEdge Networkへの既存のデータレイヤーの送信 {#send-datalayer-via-websdk}
 
 既存のデータレイヤーは、`sendEvent` コマンド内の [`data`](/help/web-sdk/commands/sendevent/data.md) オブジェクトを使用して送信する必要があります。
 
-タグを使用する場合は、**[!UICONTROL Web SDK タグ拡張機能ドキュメント ](/help/tags/extensions/client/web-sdk/action-types.md) に記載されているように、**[!UICONTROL  イベントを送信 ]**アクションタイプの [ データ]** フィールドを使用する必要があります。
+タグを使用する場合は、**[!UICONTROL Web SDK タグ拡張機能のドキュメント ](/help/tags/extensions/client/web-sdk/action-types.md) に記載されているように、**[!UICONTROL  イベントを送信 ]**アクションタイプの [ データ]** フィールドを使用する必要があります。
 
 このガイドの残りの部分では、WebSDK によって送信されたデータレイヤーを XDM 標準にマッピングする方法について重点的に説明します。
 
@@ -166,6 +166,10 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 * 手動のプロセスでこのデータストリームに対して [ マッピングルールを作成 ](#create-mapping) します。
 * 既存のデータストリームから[マッピングルールを読み込みます](#import-mapping)。
+
+>[!IMPORTANT]
+>
+>データ準備マッピングは XDM ペイロード `identityMap` 上書きします。これにより、Real-Time CDP オーディエンスに対するプロファイルのマッチングにさらに影響を与える可能性があります。
 
 ### マッピングルールの作成 {#create-mapping}
 
