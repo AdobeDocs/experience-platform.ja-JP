@@ -26,7 +26,7 @@ ht-degree: 37%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="Platform でのユーザーアクティビティの監視"
->abstract="<h2>説明</h2><p>監査ログの形式で、様々な Platform サービスと機能のユーザーアクティビティを監視できます。これらのログは、<b>誰</b>が<b>いつ</b>、<b>どの</b>アクションを実行したかを記録する監査証跡を形成します。監査ログは、Platform に関する問題のトラブルシューティングに役立ち、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。</p>"
+>abstract="<h2>説明</h2><p>監査ログの形式で、様々な Platform サービスと機能のユーザーアクティビティを監視できます。これらのログは、<b>誰</b>が<b>いつ</b>、<b>どの</b>アクションを実行したかを記録する監査記録を形成します。監査ログは、Platform に関する問題のトラブルシューティングに役立ち、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。</p>"
 
 システムで実行されるアクティビティの透明性と可視性を高めるために、Adobe Experience Platformでは、様々なサービスや機能に関するユーザーアクティビティを「監査ログ」の形式で監査できます。 これらのログは、Platform に関する問題のトラブルシューティングに役立つ監査証跡を形成し、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。
 
@@ -46,7 +46,7 @@ ht-degree: 37%
 | --- | --- |
 | [ アクセス制御ポリシー（属性ベースのアクセス制御） ](../../../access-control/home.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | [ アカウント （Adobe） ](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
-| [Attribution AI インスタンス ](../../../intelligent-services/attribution-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li></ul> |
+| [ アトリビューション AI インスタンス ](../../../intelligent-services/attribution-ai/overview.md) | <ul><li> の作成</li><li>更新</li><li>削除</li><li>有効にする</li><li>無効にする</li></ul> |
 | [監査ログ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>書き出し</li></ul> |
 | [クラス](../../../xdm/schema/composition.md#class) | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
 | 計算属性 | <ul><li> の作成</li><li>更新</li><li>削除</li></ul> |
@@ -166,7 +166,7 @@ Adobe Admin Consoleでアクティビティの監査ログを管理する方法�
 
 ## 次の手順とその他のリソース
 
-このガイドでは、Experience Platformで監査ログを管理する方法について説明しました。 Platform アクティビティの監視方法について詳しくは、[Observability Insights](../../../observability/home.md) および [ データ取り込みの監視 ](../../../ingestion/quality/monitor-data-ingestion.md) に関するドキュメントを参照してください。
+このガイドでは、Experience Platformでの監査ログの管理方法について説明しました。 Platform アクティビティの監視方法について詳しくは、[Observability Insights](../../../observability/home.md) および [ データ取り込みの監視 ](../../../ingestion/quality/monitor-data-ingestion.md) に関するドキュメントを参照してください。
 
 Experience Platformの監査ログの理解を深めるために、次のビデオを視聴してください。
 
