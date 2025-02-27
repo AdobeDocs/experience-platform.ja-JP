@@ -2,7 +2,7 @@
 title: appendIdentityToUrl
 description: アプリ間、web 間およびドメイン間で、パーソナライズされたエクスペリエンスをより正確に提供します。
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
+source-git-commit: 7c262e5819f8e3488c5ddd5a0221d1c52c28c029
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 3%
@@ -13,13 +13,13 @@ ht-degree: 3%
 
 `appendIdentityToUrl` コマンドを使用すると、ユーザー識別子をクエリ文字列として URL に追加できます。 このアクションにより、ドメイン間で訪問者の ID を持ち歩き、ドメインまたはチャネルの両方を含むデータセットに対して、重複した訪問者数を防ぐことができます。 Web SDK バージョン 2.11.0 以降で使用できます。
 
-生成され、URL に追加されたクエリ文字列は `adobe_mc` です。 Web SDK で ECID が見つからない場合は、`/acquire` エンドポイントを呼び出して ECID を生成します。
+生成され、URL に追加されたクエリ文字列は `adobe_mc` です。 Web SDKで ECID が見つからない場合は、`/acquire` エンドポイントを呼び出して ECID を生成します。
 
 >[!NOTE]
 >
 >同意が指定されていない場合、このメソッドからの URL は変更されずに返されます。 このコマンドは直ちに実行され、同意の更新を待つことはありません。
 
-## Web SDK 拡張機能を使用した URL への ID の追加 {#extension}
+## Web SDK拡張機能を使用して URL に ID を追加 {#extension}
 
 URL への ID の追加は、Adobe Experience Platform Data Collection タグインターフェイスのルール内のアクションとして実行されます。
 
@@ -77,7 +77,11 @@ URL に ID を追加します。
 URL をパラメーターとして使用して `appendIdentityToUrl` コマンドを実行します。 メソッドは、識別子がクエリ文字列として追加された URL を返します。
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 ページ上で受け取ったすべてのクリックに関するイベントリスナーを追加し、URL が目的のドメインに一致するかどうかを確認できます。 追加される場合は、URL に ID を追加し、ユーザーをリダイレクトします。
