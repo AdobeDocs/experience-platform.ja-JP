@@ -5,14 +5,18 @@ type: Documentation
 description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、Profile API を使用してエンティティ（一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 9f9823a23c488e63b8b938cb885f050849836e36
+source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
 workflow-type: tm+mt
-source-wordcount: '2181'
-ht-degree: 36%
+source-wordcount: '1706'
+ht-degree: 37%
 
 ---
 
 # エンティティエンドポイント （プロファイルアクセス）
+
+>[!IMPORTANT]
+>
+>プロファイルアクセス API を使用した ExperienceEvent 検索は非推奨（廃止予定）になります。 ExperienceEvents の検索が必要なユースケースには、計算属性などの機能を使用してください。 この変更について詳しくは、Adobe カスタマーケアにお問い合わせください。
 
 Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
 
@@ -22,7 +26,7 @@ Adobe Experience Platformでは、RESTful API またはユーザーインター�
 
 ## エンティティの取得 {#retrieve-entity}
 
-プロファイルエンティティまたはその時系列データを取得するには、必要なクエリパラメーターと共に `/access/entities` エンドポイントにGETリクエストを行います。
+プロファイルエンティティを取得するには、必要なクエリパラメーターと共に `/access/entities` エンドポイントに対してGET リクエストを行います。
 
 >[!BEGINTABS]
 
@@ -138,100 +142,6 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 >[!NOTE]
 >
 >関連するグラフが 50 個を超える ID をリンクする場合、このサービスは HTTP ステータス 422（処理できないエンティティ）と「関連 ID が多すぎます」というメッセージを返します。このエラーが表示される場合は、検索を絞り込むためにクエリパラメータを追加することを検討してください。
-
->[!TAB  時系列イベント ]
-
-**API 形式**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
-
-時系列イベントデータにアクセスするには、次のクエリパラメーターを指定する **必要があります**。
-
-- `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、この値は `schema.name=_xdm.context.experienceevent` です。
-- `relatedSchema.name`：関連するスキーマの名前。 スキーマ名はエクスペリエンスイベントなので、この **必須** の値は `relatedSchema.name=_xdm.context.profile` にする必要があります。
-- `relatedEntityId`：関連エンティティの ID。
-- `relatedEntityIdNS`：関連エンティティの名前空間。 `relatedEntityId` が XID ではない場合、この値を指定する必要があ **ま**。
-
-有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
-
-**リクエスト**
-
-次のリクエストでは、ID でプロファイルエンティティを検索し、エンティティに関連付けられているすべての時系列イベントの `endUserIDs`、`web`、`channel` プロパティの値を取得します。
-
-+++ エンティティに関連付けられた時系列イベントを取得するサンプルリクエスト
-
-```shell
-curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-+++
-
-**応答**
-
-応答が成功すると、HTTP ステータス 200 が、リクエストクエリパラメーターで指定された時系列イベントと関連フィールドのページ分割リストと共に返されます。
-
->[!NOTE]
->
->リクエストで上限の 1 が指定（`limit=1`）されたので、以下の応答の `count` は 1 で、1 つのエンティティのみが返されます。
-
-+++ リクエストされた時系列イベントデータを含む応答のサンプル
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
-
-+++
 
 >[!TAB B2B アカウント ]
 
@@ -427,7 +337,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 複数のエンティティの取得 {#retrieve-entities}
 
-`/access/entities` エンドポイントにPOSTリクエストを実行し、ペイロードに ID を指定することで、複数のプロファイルエンティティまたは時系列イベントを取得できます。
+`/access/entities` エンドポイントに対して POST リクエストを実行し、ペイロードに ID を指定することで、複数のプロファイルエンティティを取得できます。
 
 >[!BEGINTABS]
 
@@ -648,290 +558,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 ```
 
 +++
-
->[!TAB  時系列イベント ]
-
-**API 形式**
-
-```http
-POST /access/entities
-```
-
-**リクエスト**
-
-次のリクエストでは、プロファイル ID のリストに関連付けられた時系列イベントのユーザー ID、現地時間、国コードを取得します。
-
-+++ 時系列データを取得するサンプルリクエスト
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "schema": {
-        "name": "_xdm.context.experienceevent"
-    },
-    "relatedSchema": {
-        "name": "_xdm.context.profile"
-    },
-    "identities": [
-        {
-            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW"
-        }
-        {
-            "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY"
-        }
-    ],
-    "fields": [
-        "endUserIDs",
-        "placeContext.localTime",
-        "placeContext.geo.countryCode"
-    ],
-    
-    "timeFilter": {
-        "startTime": 11539838505
-        "endTime": 1539838510
-    },
-    "limit": 10,
-    "orderby": "-timestamp"
-}'
-```
-
-| プロパティ | タイプ | 説明 |
-| -------- | ---- | ----------- |
-| `schema.name` | 文字列 | **（必須）** エンティティが属する XDM スキーマの名前。 |
-| `relatedSchema.name` | 文字列 | `schema.name` が `_xdm.context.experienceevent` の場合、この値は、時系列イベントが関連するプロファイルエンティティのスキーマを指定する必要があります。 |
-| `identities` | 配列 | **（必須）** 関連する時系列イベントを取得するプロファイルの配列リスト。 配列内の各エントリは、次の 2 つの方法のいずれかで設定されます。 <ol><li>ID 値および名前空間で構成される完全修飾 ID の使用</li><li>XID の指定</li></ol> |
-| `fields` | 文字列 | 返される XDM フィールド（文字列の配列）。デフォルトでは、すべてのフィールドが返されます。 |
-| `orderby` | 文字列 | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 |
-| `timeFilter.startTime` | 整数 | 時系列オブジェクトをフィルタリングするための開始時間をミリ秒単位で指定します。 デフォルトでは、この値は、使用可能な時間の始めとして設定されます。 |
-| `timeFilter.endTime` | 整数 | 時系列オブジェクトをフィルタリングするための終了時間をミリ秒単位で指定します。 デフォルトでは、この値は利用可能な時間の終わりとして設定されています。 |
-| `limit` | 整数 | 返されるレコードの最大数。 デフォルトでは、この値は 1,000 に設定されています。 |
-
-+++
-
-**応答**
-
-応答が成功すると、HTTP ステータス 200 が、リクエストで指定された複数のプロファイルに関連付けられた時系列イベントのページ分割リストと共に返されます。
-
-+++ 時系列イベントを含む応答のサンプル
-
-```json
-{
-    "GkouAW-yD9aoRCPhRYROJ-TetAFW": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-            "count": 10,
-            "next": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-                "timestamp": 1537275882000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:42Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "a9e137b4-1348-4878-8167-e308af523d8b",
-                "timestamp": 1537275889000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:49Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": "/entities",
-                "payload": {
-                    "schema": {
-                        "name": "_xdm.context.experienceevent"
-                    },
-                    "relatedSchema": {
-                        "name": "_xdm.context.profile"
-                    },
-                    "timeFilter": {
-                        "startTime": 1537275882000
-                    },
-                    "fields": [
-                        "endUserIDs",
-                        "placeContext.localTime",
-                        "placeContext.geo.countryCode"
-                    ],
-                    "identities": [
-                        {
-                            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                            "start": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-                        }
-                    ],
-                    "limit": 10
-                }
-            }
-        }
-    },
-    "GkouAW-2u-7iWt5vQ9u2wm40JOZY": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "2746d0db-fa64-4e29-b67e-324bec638816",
-            "count": 9,
-            "next": ""
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "2746d0db-fa64-4e29-b67e-324bec638816",
-                "timestamp": 1537559483000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:23Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "9bf337a1-3256-431e-a38c-5c0d42d121d1",
-                "timestamp": 1537559486000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:26Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": ""
-            }
-        }
-    }
-}`
-```
-
-+++
-
->[!NOTE]
->
->この応答の例では、最初にリストされたプロファイル（「GkouAW-yD9aoRCPhRYROJ-TetAFW」）が `_links.next.payload` の値を提供します。つまり、このプロファイルに対して結果のページが追加されます。
->
->これらの結果にアクセスするには、リストされたペイロードをリクエスト本文として、`/access/entities` エンドポイントに追加のPOSTリクエストを実行します。
 
 >[!TAB B2B アカウント ]
 
@@ -1468,7 +1094,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 
 ### 結果の後続ページへのアクセス
 
-時系列イベントを取得すると、結果はページ付けされます。結果の後続のページがある場合、`_page.next` プロパティには ID が含まれます。また、`_links.next.href` プロパティは次のページを取得するためのリクエスト URI を提供します。結果を取得するには、`/access/entities` エンドポイントに対して別のGETリクエストを実行し、`/entities` を指定された URI の値に置き換えます。
+時系列イベントを取得すると、結果はページ付けされます。結果の後続のページがある場合、`_page.next` プロパティには ID が含まれます。また、`_links.next.href` プロパティは次のページを取得するためのリクエスト URI を提供します。結果を取得するには、`/access/entities` エンドポイントに対して別のGET リクエストを実行し、`/entities` を指定された URI の値に置き換えます。
 
 >[!NOTE]
 >
@@ -1558,7 +1184,7 @@ curl -X GET \
 
 ## エンティティを削除 {#delete-entity}
 
-プロファイルストアからエンティティを削除するには、必要なクエリパラメーターと共に `/access/entities` エンドポイントに対してDELETEリクエストを行います。
+プロファイルストアからエンティティを削除するには、必要なクエリパラメーターと共に `/access/entities` エンドポイントに対してDELETE リクエストを行います。
 
 **API 形式**
 
@@ -1609,7 +1235,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 | パラメーター | 説明 | 例 |
 | --------- | ----------- | ------- |
-| `schema.name` | **（必須）** エンティティの XDM スキーマの名前。 | `schema.name=_xdm.context.experienceevent` |
+| `schema.name` | **（必須）** エンティティの XDM スキーマの名前。 | `schema.name=_xdm.context.profile` |
 | `relatedSchema.name` | `schema.name` が `_xdm.context.experienceevent` の場合、この値は、時系列イベントが関連するプロファイルエンティティのスキーマを指定します **必須**。 | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **（必須）** エンティティの ID。 このパラメーターの値が XID でない場合、ID 名前空間パラメーター（`entityIdNS`）も指定する必要があります。 | `entityId=janedoe@example.com` |
 | `entityIdNS` | XID として `entityId` を指定しない場合、このフィールドは ID 名前空間を指定します **必須**。 | `entityIdNS=email` |
