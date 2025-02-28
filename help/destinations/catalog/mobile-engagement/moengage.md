@@ -3,10 +3,10 @@ title: Moengage 接続
 description: Moengage は、消費者とブランドの間の顧客中心インタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 37%
+source-wordcount: '1036'
+ht-degree: 35%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 37%
 
 ## 概要 {#overview}
 
-[!DNL Moengage] の宛先を使用して、Adobeデータ（ユーザー属性、セグメント、イベント）を MoEngage にリアルタイムに接続およびマッピングします。 その後、顧客はこのデータに基づいて行動し、パーソナライズされたターゲット設定されたエクスペリエンスを提供できます。
+[!DNL Moengage] の宛先を使用して、Adobe データ（ユーザー属性、セグメント、イベント）を MoEngage にリアルタイムに接続およびマッピングします。 その後、顧客はこのデータに基づいて行動し、パーソナライズされたターゲット設定されたエクスペリエンスを提供できます。
 
-Adobeを使用すると、統合は非常にシンプルで直感的になります。 任意のAdobeユーザープロファイルを取得し、MoEngage ユーザー属性にマッピングするだけです。
+Adobeを使用すると、統合は非常にシンプルで直感的になります。 任意のAdobe ユーザープロファイルを取得し、MoEngage ユーザー属性にマッピングするだけです。
 
 >[!IMPORTANT]
 >
@@ -143,7 +143,10 @@ XDM フィールドを [!DNL Moengage] 宛先フィールドに正しくマッ�
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-データがに正常に [!DNL Moengage] の宛先に書き出されたかどうかを確認するには、[!DNL Moengage] アカウントのユーザープロファイルに移動します。 AEP セグメントというユーザー属性が表示されます。
+データがに正常に [!DNL Moengage] の宛先に書き出されたかどうかを確認するには、[!DNL Moengage] アカウントのユーザープロファイルに移動します。 ここには、自動的に作成された `AEPSegments` という名前のユーザー属性と、Adobe Experience Platformの前の手順でマッピングされたその他のカスタム属性が表示されます。
+
+`AEPSegments` は、[!DNL Moengage] の配列型の属性です。 Experience Platformでユーザーが関連付けられているすべてのAdobe オーディエンス名が一覧表示されます。
+
 
 ![Moengage 宛先マッピングの完了 ](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
