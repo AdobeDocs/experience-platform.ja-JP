@@ -1,9 +1,10 @@
 ---
 title: TTL を使用してデータレイクでのエクスペリエンスイベントデータセット保持を管理
 description: Adobe Experience Platform API の Time-To-Live （TTL）設定を使用してデータレイクでのエクスペリエンスイベントデータセット保持を評価、設定、管理する方法について説明します。 このガイドでは、TTL 行レベルの有効期限がデータ保持ポリシーをサポートする方法、ストレージ効率を最適化する方法、効果的なデータライフサイクル管理を確実に行う方法について説明します。 また、TTL を効果的に適用するのに役立つユースケースとベストプラクティスも提供します。
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2196'
 ht-degree: 1%
 
 ---
@@ -28,6 +29,12 @@ TTL は、時間の経過と共に関連性が失われる時間依存データ�
 - 無関係なデータを最小限に抑えることで、クエリのパフォーマンスを向上させます。
 - 関連情報のみを保持することで、データハイジーンを維持します。
 - データ保持を最適化してビジネス目標をサポートします。
+
+>[!NOTE]
+>
+>エクスペリエンスイベントデータセット保持は、データレイクに保存されたイベントデータに適用されます。 Real-Time Customer Data Platformでリテンションを管理している場合は、データレイクのリテンション設定と共に [ エクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) および [ 偽名プロファイルの有効期限 ](../../profile/pseudonymous-profiles.md) を使用することを検討してください。
+>
+>TTL 設定は、使用権限に基づいてストレージを最適化するのに役立ちます。 （Real-Time CDPで使用される）プロファイルストアデータは古いと見なされ、30 日後に削除される可能性がありますが、Data Lake 内の同じイベントデータは、Analytics と Data Distillerのユースケースで 12 ～ 13 か月間（または使用権限に基づいて、それより長い期間）使用できます。
 
 ### ある業界の例 {#industry-example}
 
@@ -121,7 +128,7 @@ curl -X GET \
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ curl -X PATCH \
 | `extensions` | データセットに関連する追加のメタデータのコンテナ。 |
 | `extensions.adobe_lakeHouse` | 行レベルの有効期限設定など、ストレージアーキテクチャに関連する設定を指定します |
 | `rowExpiration` | オブジェクトには、データセットの保持期間を定義する TTL 設定が含まれています。 |
-| `rowExpiration.ttlValue` | データセット内のレコードが自動的に削除されるまでの期間を定義します。 ISO-8601 の期間形式を使用します（例：3 か月の場合は `P3M`、1 週間の場合は `P7D`）。 |
+| `rowExpiration.ttlValue` | データセット内のレコードが自動的に削除されるまでの期間を定義します。 ISO-8601 の期間形式を使用します（例：3 か月の場合は `P3M`、1 週間の場合は `P30D`）。 |
 | `rowExpiration.valueStatus` | 文字列は、TTL 設定がデフォルトのシステム値か、ユーザーが設定したカスタム値かを示します。 使用可能な値：`default`、`custom` |
 | `rowExpiration.setBy` | TTL 設定を最後に変更したユーザーを指定します。 使用可能な値：`user` （手動で設定）または `service` （自動的に割り当て）。 |
 | `rowExpiration.updated` | 前回の TTL 更新のタイムスタンプ。 この値は、TTL 設定が最後に変更された日時を示します。 |
@@ -418,4 +425,3 @@ XDM ExperienceEvent クラスを使用して作成されたデータセットに
 - 保持ジョブ：[ データライフサイクル UI ガイド ](../../hygiene/ui/dataset-expiration.md) を使用して、Platform UI でデータセットの有効期限をスケジュールおよび自動化する方法を説明します。または、データセットの保持設定を確認し、期限切れのレコードが削除されていることを確認します。
 - [Dataset Expiration API エンドポイントガイド ](../../hygiene/api/dataset-expiration.md)：行だけでなく、データセット全体を削除する方法を説明します。 API を使用してデータセットの有効期限をスケジュール、管理、自動化し、効率的なデータ保持を確保する方法を説明します。
 - [ データ使用ポリシーの概要 ](../../data-governance/policies/overview.md)：データ保持戦略を、より広範なコンプライアンス要件やマーケティング上の使用制限に合わせる方法について説明します。
-
