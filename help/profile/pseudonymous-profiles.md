@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
 workflow-type: tm+mt
 source-wordcount: '1065'
-ht-degree: 69%
+ht-degree: 71%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="偽名プロファイルデータの有効期限"
->abstract="偽名プロファイルデータの有効期限は、偽名プロファイルがAdobe Experience Platformに残ってから削除されるまでの日数を表します。"
+>abstract="偽名プロファイルデータの有効期限は、偽名プロファイルが削除されるまで Adobe Experience Platform に保持される日数を表します。"
 
 次の条件を満たす場合、偽名データの有効期限についてプロファイルが考慮されます。
 

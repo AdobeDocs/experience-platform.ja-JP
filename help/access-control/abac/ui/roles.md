@@ -6,22 +6,22 @@ exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '618'
-ht-degree: 15%
+ht-degree: 30%
 
 ---
 
 # 役割の管理
 
-役割は、管理者、スペシャリストまたはエンドユーザーが組織内のリソースに対して持つアクセスを定義します。 役割ベースのアクセス制御環境では、ユーザーアクセスプロビジョニングは、共通の責任とニーズによってグループ化されます。役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
+役割は、管理者、スペシャリストまたはエンドユーザーが組織内のリソースに対して持つアクセス権を定義します。役割ベースのアクセス制御環境では、ユーザーアクセスプロビジョニングは、共通の責任とニーズによってグループ化されます。役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
 
 ## 新しい役割の作成 {#create-new-role}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="新しい役割の作成"
->abstract="新しい役割を作成して、Platform インスタンスとやり取りするユーザーをより適切に分類します。 例えば、社内マーケティングチーム用の役割を作成して、その役割に規制医療データ（RHD）ラベルを適用すると、社内マーケティングチームが保護された医療情報（PHI）にアクセスできるようになります。 また、外部エージェンシーの役割を作成し、その役割に RHD ラベルを適用しないことで、その役割の PHI データへのアクセスを拒否することもできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja" text="役割の管理"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="役割にラベルを適用"
+>abstract="新しい役割を作成すると、Platform インスタンスとやり取りするユーザーをより適切に分類できます。 例えば、社内マーケティングチームの役割を作成し、その役割に規制医療データ（RHD）ラベルを適用して、社内マーケティングチームが保護された医療情報（PHI）にアクセスできるようにすることができます。または、外部エージェンシーの役割を作成したうえで、その役割に RHD ラベルを適用しないことにより、その役割の PHI データへのアクセスを拒否することもできます。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja" text="役割の作成"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="役割へのラベルの適用"
 
 新しい役割を作成するには、サイドバーの「**[!UICONTROL 役割]**」タブを選択し、「**[!UICONTROL 役割を作成]**」を選択します。
 

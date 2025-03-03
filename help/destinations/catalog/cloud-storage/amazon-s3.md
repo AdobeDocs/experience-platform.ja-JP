@@ -119,7 +119,7 @@ Experience PlatformがAmazon S3 プロパティにデータを書き出せるよ
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="バケット名"
->abstract="3～63 文字の長さにする必要があります。先頭および末尾は文字または数字にする必要があります。小文字、数字、ハイフン（-）のみを含める必要があります。IP アドレス （例：192.100.1.1）の形式にはできません。"
+>abstract="3～63 文字の長さにする必要があります。先頭および末尾は文字または数字にする必要があります。小文字、数字、ハイフン（-）のみを含める必要があります。IP アドレス（例：192.100.1.1）の形式にはできません。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"

@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '1593'
-ht-degree: 10%
+ht-degree: 13%
 
 ---
 
@@ -61,12 +61,12 @@ Adobe Experience Platformの属性ベースのアクセス制御を使用する�
 
 Platform UI の権限ワークスペースが表示され、**[!UICONTROL 概要]** ページが開きます。
 
-## 役割にラベルを適用 {#label-roles}
+## 役割へのラベルの適用 {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
->title="ラベルとは"
->abstract="ラベルを使用すると、データに適用される使用ポリシーおよびアクセスポリシーに従ってデータセットとフィールドを分類できます。 Platform には、Adobeが定義した <strong> コア </strong> データ使用ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。 例えば、RHD （規制医療データ）などの、機密を意味する <strong>S</strong> ラベルを使用すると、保護された医療情報（PHI）を参照するデータを分類できます。 また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
+>title="ラベルとは？"
+>abstract="ラベルを使用すると、そのデータに適用される使用状況ポリシーおよびアクセスポリシーに従ってデータセットとフィールドを分類できます。Platform には、アドビ定義の<strong>コア</strong>データ使用状況ラベルがいくつか用意されています。これらは、データガバナンスに適用できる様々な一般的制限に対応しています。例えば、RHD（規制医療データ）などの機密ラベルを意味する <strong>S</strong> ラベルを使用すると、保護された医療情報（PHI）を参照するデータを分類できます。また、組織のニーズに合わせて独自のカスタムラベルを定義することもできます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ja#understanding-data-usage-labels" text="データ使用ラベルの概要"
 
 役割は、Platform インスタンスとやり取りするユーザーのタイプを分類する方法で、アクセス制御ポリシーの構成要素です。 役割には特定の権限セットが付与され、必要なアクセス範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。
