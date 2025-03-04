@@ -1,16 +1,17 @@
 ---
 title: Adobe Experience Platform リリースノート 2024年10月
 description: Adobe Experience Platform の 2024年10月のリリースノート。
-source-git-commit: f30a124a40928abf69366d311131e353c2779191
+exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2024年10月29日（PT）**
+**リリース日：2024 年 10 月 29 日**
 
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
@@ -41,13 +42,13 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 
 ## データ収集 {#collection}
 
-Adobe Experience Platformは、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Experience PlatformEdge Networkに送信します。そこでデータを強化、変換、AdobeまたはAdobe以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+Adobe Experience Platformは、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Experience Platform Edge Networkに送信します。そこでデータを強化、変換、AdobeまたはAdobe以外の宛先への配信を可能にする一連のテクノロジーを提供します。
 
 **新機能**
 
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
-| タグと拡張機能 | Adobe Analyticsの JSON ビュー | Adobe Analytics タグ拡張機能を使用して、eVar、prop およびイベント設定を JSON として調べることができるようになりました。これらの情報を Web SDK 拡張機能に含め、編集用に書き出すことができるようになりました。 このデータをアップロードまたはコピーして、デバイスに保存することもできます。 詳しくは、[Adobe Analytics拡張機能のドキュメント ](../../tags/extensions/client/analytics/overview.md) を参照してください。 |
+| タグと拡張機能 | Adobe Analyticsの JSON ビュー | Adobe Analytics タグ拡張機能を使用して、eVar、prop、イベント設定を JSON として調べることができるようになりました。これにより、web SDK拡張機能に含め、編集のために書き出すことができるようになりました。 このデータをアップロードまたはコピーして、デバイスに保存することもできます。 詳しくは、[Adobe Analytics拡張機能のドキュメント ](../../tags/extensions/client/analytics/overview.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -61,8 +62,8 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| [ アレイのエクスポートのサポートが一般提供されました ](../../destinations/ui/export-arrays-calculated-fields.md) | すべてのお客様は、オーディエンスをアクティブ化する **[!UICONTROL ファイルベースの宛先に対して]***計算フィールドを追加* オプションを使用して、配列全体または配列の要素を書き出すことができるようになりました。 なお、配列をターゲットファイルの文字列にフラット化するには、`array_to_string` 関数を使用する必要があります。<br> ![ 関数とフィールドを使用して計算フィールドの選択を追加します。](../2024/assets/october/array-export.gif "array_to_string 関数と組織の配列を選択した計算フィールドを追加します。"){width="250" align="center" zoomable="yes"} |
-| [ ストリーミング宛先のレポート精度の強化 ](/help/destinations/ui/export-datasets.md) | 2024 年 10 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートをロールアウトしています。 この機能強化により、宛先とExperience Platformプラットフォームレポートの間の整合性が向上します。 <br> この更新の前は、すべてのアクティベーションの再試行が **[!UICONTROL ID 失敗]** に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。 <br> この強化機能は、現在、[Google カスタマーマッチの宛先に適用されますが ](../../destinations/catalog/advertising/google-customer-match.md) 他のExperience Platformストリーミングの宛先に徐々に展開される予定です。 この機能強化に伴い、[Google カスタマーマッチの宛先 ](../../destinations/catalog/advertising/google-customer-match.md) のユーザーでは、**[!UICONTROL ID 失敗]** カウントが低下する可能性があります。 |
+| [ アレイのエクスポートのサポートが一般提供されました ](../../destinations/ui/export-arrays-maps-objects.md) | すべてのお客様は、オーディエンスをアクティブ化する **[!UICONTROL ファイルベースの宛先に対して]***計算フィールドを追加* オプションを使用して、配列全体または配列の要素を書き出すことができるようになりました。 なお、配列をターゲットファイルの文字列にフラット化するには、`array_to_string` 関数を使用する必要があります。<br> ![ 関数とフィールドを使用して計算フィールドの選択を追加します。](../2024/assets/october/array-export.gif "array_to_string 関数と組織の配列を選択した計算フィールドを追加します。"){width="250" align="center" zoomable="yes"} |
+| [ ストリーミング宛先のレポート精度の強化 ](/help/destinations/ui/export-datasets.md) | 2024 年 10 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートを展開しています。 この機能強化により、Experience Platformと宛先プラットフォームレポートの間の整合性が向上します。 <br> この更新の前は、すべてのアクティベーションの再試行が **[!UICONTROL ID 失敗]** に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。 <br> この強化機能は、現在、[Google カスタマーマッチの宛先に適用されますが ](../../destinations/catalog/advertising/google-customer-match.md) 他のExperience Platform ストリーミング宛先に徐々に展開される予定です。 この機能強化に伴い、[Google カスタマーマッチの宛先 ](../../destinations/catalog/advertising/google-customer-match.md) のユーザーでは、**[!UICONTROL ID 失敗]** カウントが低下する可能性があります。 |
 | [ バッチオーディエンスアクティベーション ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) に対する柔軟なオーディエンス評価の影響 | セグメント評価後にアクティベートするように既に設定されているオーディエンスに対して [ 柔軟なオーディエンス評価 ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) を実行した場合、オーディエンスは、以前の日別アクティベーションジョブに関係なく、柔軟なオーディエンス評価ジョブが終了するとすぐにアクティベートされます。 <br> これにより、オーディエンスがアクションに基づいて 1 日に複数回エクスポートされる可能性があります。 |
 
 {style="table-layout:auto"}
@@ -77,7 +78,7 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| [!BADGE  限定提供 ]{type=Informative} 柔軟なオーディエンス評価 | 柔軟なオーディエンス評価を使用すると、時間依存の通信に対して、オンデマンドで新しいオーディエンスをすばやく作成できます。 この新機能について詳しくは、[Audience Portal ドキュメント ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) を参照してください。 |
+| [!BADGE 限定提供] {type=Informative} 柔軟なオーディエンス評価 | 柔軟なオーディエンス評価を使用すると、時間依存の通信に対して、オンデマンドで新しいオーディエンスをすばやく作成できます。 この新機能について詳しくは、[Audience Portal ドキュメント ](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -85,7 +86,7 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformでは、1 つの Platform インスタンスを別々の仮想環境に分割するサンドボックスを提供し、デジタルエクスペリエンスアプリケーションの開発と発展を支援しています。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つの Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
 
 **新機能または更新された機能**
 

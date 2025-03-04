@@ -3,9 +3,9 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4387'
+source-wordcount: '4374'
 ht-degree: 51%
 
 ---
@@ -65,7 +65,7 @@ CSV ファイルの書き出しでは、書き出したファイルの構造を�
 
 * **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md) を参照してください。
 * **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/audience-portal.md#import-audience) に関するドキュメントを参照してください。
-* [!DNL Audience Manager] などの他のAdobeソリューションから発生する、その他のタイプのオーディエンス。
+* その他のタイプのオーディエンス。他のAdobe ソリューション（[!DNL Audience Manager] など）から派生します。
 
 ![ アクティブ化する 1 つ以上のオーディエンスを選択する際に表示されるチェックボックス。](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -86,13 +86,13 @@ CSV ファイルの書き出しでは、書き出したファイルの構造を�
 
 [!DNL Adobe Experience Platform] は、メールマーケティングおよびクラウドストレージの宛先のデータを [ 様々なファイルタイプ ](#supported-file-formats-export) として書き出します。 **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。
 
-Experience Platformは、各ファイル書き出しのデフォルトのスケジュールを自動的に設定します。 各スケジュールの横にある鉛筆アイコンを選択し、カスタムスケジュールを定義することで、必要に応じてデフォルトのスケジュールを変更できます。
+Experience Platformでは、各ファイル書き出しのデフォルトのスケジュールを自動的に設定します。 各スケジュールの横にある鉛筆アイコンを選択し、カスタムスケジュールを定義することで、必要に応じてデフォルトのスケジュールを変更できます。
 
 ![ スケジュール設定ステップでハイライト表示されたスケジュール管理を編集 ](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
 複数のスケジュールを同時に編集するには、画面の左側のチェックボックスを使用してオーディエンスを選択し、「**[!UICONTROL スケジュールを編集]**」を選択します。 設定したスケジュールは、選択したオーディエンスの書き出されたすべてのファイルに適用されます。
 
-![ 選択した複数のオーディエンスのスケジュールを編集オプションを示すExperience Platformユーザーインターフェイスの画像 ](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+![ 選択した複数のオーディエンスのスケジュールを編集オプションを示すExperience Platform ユーザーインターフェイスの画像 ](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
@@ -142,7 +142,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![バッチ宛先のアクティベーションフローでの「セグメントの評価後」オプションを強調表示した画像。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-「**[!UICONTROL スケジュール済み]**」オプションを使用して、特定の時間にアクティベーションジョブを実行します。 このオプションを選択すると、Experience Platformプロファイルデータが毎日同じ時間に書き出されます。 ただし、アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新でない場合があります。
+「**[!UICONTROL スケジュール済み]**」オプションを使用して、特定の時間にアクティベーションジョブを実行します。 このオプションを選択すると、Experience Platform プロファイルデータが毎日同じ時間に書き出されます。 ただし、アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新でない場合があります。
 
    ![バッチ宛先のアクティベーションフローの「スケジュール済み」オプションが強調表示され、時間セレクターが表示されている画像。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -221,7 +221,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 複数のファイル名を同時に編集するには、画面左側のチェックボックスを使用してオーディエンスを選択し、「**[!UICONTROL ファイル名を編集]**」を選択します。 設定するファイル名オプションは、選択したオーディエンスの書き出されたすべてのファイルに適用されます。
 
-![ 選択した複数のオーディエンスのファイル名を編集オプションを示すExperience Platformユーザーインターフェイスの画像 ](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
+![ 選択した複数のオーディエンスのファイル名を編集オプションを示すExperience Platform ユーザーインターフェイスの画像 ](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 **[!UICONTROL 変更を適用]**&#x200B;を選択して、確定します。
 
@@ -270,7 +270,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
    >[!NOTE]
    >
-   >この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+   >この機能はベータ版で、一部のお客様のみご利用いただけます。 この機能へのアクセスをリクエストするには、Adobe担当者にお問い合わせください。
 
    ![ ドラッグ&amp;ドロップでマッピングフィールドの並べ替えを示す録画 ](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
@@ -464,9 +464,9 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 **信頼性の向上**：この更新された重複排除プロセスにより、同じ座標を持つ連続する実行で常に同じ結果が得られ、一貫性が向上します。
 
-### 計算フィールドを使用した配列の書き出し {#export-arrays-calculated-fields}
+### 計算フィールドを使用したデータ変換の実行 {#calculated-fields}
 
-一部のベータ版のお客様は、Experience Platformからクラウドストレージの宛先に配列オブジェクトを書き出すことができます。 詳しくは、[ 配列と計算フィールドの書き出し ](/help/destinations/ui/export-arrays-calculated-fields.md) を参照し、機能にアクセスするにはAdobe担当者にお問い合わせください。
+[ 計算フィールド ](/help/destinations/ui/data-transformations-calculated-fields.md) コントロールを使用して、ファイルベースの宛先に書き出されたデータに対して様々なデータ変換を実行できます。
 
 ### 既知の制限事項 {#known-limitations}
 
@@ -509,7 +509,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 > 
 >カタログ内のすべてのクラウドストレージの宛先では、改善された [[!UICONTROL  マッピング ] 手順を表示できます。この手順は ](#mapping) この節で説明している **[!UICONTROL 属性を選択]** 手順に代わるものです。
 >
->この **[!UICONTROL 属性を選択]** 手順は、Adobe Campaign、Oracle Responsys、Oracle Eloqua およびSalesforce Marketing Cloudのメールマーケティングの宛先に対しても引き続き表示されます。
+>この **[!UICONTROL 属性を選択]** 手順は、Adobe Campaign、Oracle Responsys、Oracle Eloqua およびSalesforce Marketing Cloudのメールマーケティング宛先に対しても引き続き表示されます。
 
 プロファイルベースの宛先の場合、ターゲット宛先に送信するプロファイル属性を選択する必要があります。
 
@@ -601,7 +601,7 @@ Experience Platformは、各ファイル書き出しのデフォルトのスケ�
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
-**[!UICONTROL レビュー]** 手順では、Experience Platformはデータ使用ポリシーの違反がないことも確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、データガバナンスに関するドキュメントの [ データ使用ポリシー違反 ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
+**[!UICONTROL レビュー]** 手順では、Experience Platformはデータ使用ポリシーの違反もチェックします。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、データガバナンスに関するドキュメントの [ データ使用ポリシー違反 ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
 
 ![ アクティブ化ワークフローに示すデータポリシー違反の例。](../assets/common/data-policy-violation.png)
 

@@ -3,10 +3,10 @@ title: 計算フィールドを使用して、クラウドストレージの宛�
 type: Tutorial
 description: 計算フィールド機能を使用して、クラウドストレージの宛先に書き出されたデータに対して変換を実行する方法を説明します
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
+source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
-source-wordcount: '1600'
-ht-degree: 4%
+source-wordcount: '1595'
+ht-degree: 3%
 
 ---
 
@@ -16,8 +16,15 @@ ht-degree: 4%
 >id="platform_destinations_export_arrays_flat_files"
 >title="計算フィールドを追加"
 >abstract="<p>**計算フィールドを追加** コントロールを使用して、クラウドストレージの宛先に書き出されたデータに対して様々なデータ変換を実行します。 例えば、データにハッシュ化を適用したり、配列を文字列に連結したりできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=ja#examples" text="例"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=ja#known-limitations" text="既知の制限事項"
+
+<!--
+
+disable additional URLs for a while
+
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#examples" text="Examples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#known-limitations" text="Known limitations"
+
+-->
 
 >[!AVAILABILITY]
 >
@@ -32,7 +39,7 @@ ht-degree: 4%
 
 データ変換に計算フィールドを使用するには：
 
-1. 目的のクラウドストレージの宛先に [ 接続 ](/help/destinations/ui/connect-destination.md) します。 目的のクラウドの宛先に接続する場合は、**[!UICONTROL 配列、マップ、オブジェクトを書き出し]**[ オプションをオフ ](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle) に切り替えます。
+1. 目的のクラウドストレージの宛先に [ 接続 ](/help/destinations/ui/connect-destination.md) します。 目的のクラウドの宛先に接続する場合は、**[!UICONTROL 配列、マップ、オブジェクトを書き出し]**[ オプションをオフ ](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle) に切り替えます。
 2. クラウドストレージ宛先の [ アクティベーション手順 ](/help/destinations/ui/activate-batch-profile-destinations.md) を実行し、[ マッピング ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 手順に進みます。
 
 ## 計算フィールドの操作方法 {#how-to-export-calculated-fields}
@@ -51,7 +58,7 @@ ht-degree: 4%
 
 >[!TIP]
 >
->**[!UICONTROL 配列、マップ、およびオブジェクトの書き出し]** コントロールがオフになっている宛先接続では、**[!UICONTROL 計算フィールドを追加]** コントロールは無効になっています。 [詳細情報](/help/destinations/ui/export-arrays-calculated-fields.md#export-arrays-maps-objects-toggle)。
+>**[!UICONTROL 配列、マップ、およびオブジェクトの書き出し]** コントロールがオフになっている宛先接続では、**[!UICONTROL 計算フィールドを追加]** コントロールは無効になっています。 [詳細情報](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)。
 
 ![ バッチアクティベーションワークフローのマッピング手順でハイライト表示された計算フィールドを追加。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 

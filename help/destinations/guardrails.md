@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 49%
@@ -53,7 +53,7 @@ ht-degree: 49%
 | 宛先にマッピングされる属性の最大数 | 50 | パフォーマンスガードレール | 複数の宛先および宛先タイプの場合、書き出し用にマッピングするプロファイル属性および ID を選択できます。最適なパフォーマンスを得るには、最大 50 個の属性をデータフローで宛先にマッピングする必要があります。 |
 | 宛先の最大数 | 100 | システムに適用されたガードレール | *サンドボックスごとに*、接続してデータをアクティブ化できる宛先を最大 100 個作成できます。 [エッジパーソナライゼーションの宛先（カスタムパーソナライゼーション）](#edge-destinations-activation)は、100 件の推奨される宛先のうち、最大 10 件を構成できます。 |
 | 宛先に対してアクティブ化されるデータのタイプ | プロファイルデータ（ID および ID マップを含む） | システムに適用されたガードレール | 現在、宛先へ&#x200B;*プロファイルレコード属性*&#x200B;の書き出しのみ可能です。イベントデータを記述する XDM 属性は、現時点では書き出しでサポートされていません。 |
-| 宛先に対してアクティブ化されるデータのタイプ - 配列およびマップ属性のサポート | 部分的に使用可能 | システムに適用されたガードレール | 配列属性を [ ファイルベースの宛先 ](/help/destinations/destination-types.md#file-based) に書き出すことができます。 機能について ](/help/destinations/ui/export-arrays-calculated-fields.md) 詳細を参照 [。 |
+| 宛先に対してアクティブ化されるデータのタイプ - 配列およびマップ属性のサポート | 部分的に使用可能 | システムに適用されたガードレール | 配列属性を [ ファイルベースの宛先 ](/help/destinations/destination-types.md#file-based) に書き出すことができます。 機能について ](/help/destinations/ui/export-arrays-maps-objects.md) 詳細を参照 [。 |
 
 {style="table-layout:auto"}
 

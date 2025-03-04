@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2023年9月
 description: Adobe Experience Platform の 2023年9月のリリースノート。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '2265'
 ht-degree: 31%
@@ -116,7 +116,7 @@ Platform のデータハイジーン機能について詳しくは、[データ�
 | [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | 新規 | モバイル、web、ディスプレイ、コネクテッドの各 TV メディアで、[!DNL LiveRamp] にオンボーディング済みのオーディエンスをアクティブ化し、プレミアム パブリッシャーに配信します。 <br> [LiveRamp - オンボーディング ](../../destinations/catalog/advertising/liveramp-onboarding.md) 接続を通じてオーディエンスを [!DNL LiveRamp] アカウントにオンボーディングした後、新しい [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) 接続を使用して、ダウンストリームの宛先に対してオーディエンスをアクティブ化します。 |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | 新規 | [[!DNL HubSpot]](https://www.hubspot.com) は、マーケティング、セールス、コンテンツ管理、カスタマーサービスを結び付けるために必要なすべてのソフトウェア、統合、リソースを備えた CRM プラットフォームです。 データ、チーム、顧客を 1 つの CRM プラットフォームに接続できます。 |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | 更新済み | [!DNL Dynamics 365] のデフォルトソリューション内 [!DNL Dynamics 365] 作成されなかったカスタムフィールドのカスタムフィールドプレフィックスに対するサポートを追加しました。 **[!UICONTROL 宛先の詳細の入力]** 手順に、新しい入力フィールド [Customization Prefix](#destination-details) が追加されました。 |
-| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 更新済み | Experience Cloudオーディエンスの宛先が一般公開されました。 この宛先を使用して、Real-Time CDPからAudience ManagerやAdobe Analyticsにオーディエンスをアクティブ化します。 オーディエンスをAdobe Analyticsに送信するには、Audience Managerライセンスが必要です。 |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 更新済み | Experience Cloud オーディエンスの宛先が一般公開されました。 この宛先を使用して、Real-Time CDPからAudience ManagerおよびAdobe Analyticsにオーディエンスをアクティブ化します。 オーディエンスをAdobe Analyticsに送信するには、Audience Manager ライセンスが必要です。 |
 
 {style="table-layout:auto"}
 
@@ -133,13 +133,13 @@ Add these to release notes as they go out
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| Real-Time CDPでのデータの書き出し | [ データセットの書き出し ](../../destinations/ui/export-datasets.md) 機能が一般公開されました。 購入した [Experience Platformアプリに基づいて書き出すことができるデータセット ](../../destinations/ui/export-datasets.md#datasets-to-export) を確認し、[ データセットを書き出すためのガードレール ](/help/destinations/guardrails.md#dataset-exports) を確認します。 |
-| （Beta）配列型オブジェクトの書き出しのサポート | プリミティブ値（文字列、整数またはブール値）の配列をフラットスキーマファイルとしてクラウドストレージ宛先に書き出します。 機能について詳しくは、[ ドキュメント ](../../destinations/ui/export-arrays-calculated-fields.md) を参照してください。 |
-| Destination SDKの動的ドロップダウンセレクター | Destination SDKを使用して宛先を作成する場合、[ 動的ドロップダウンセレクター ](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) を使用して、ドロップダウンセレクターのフィールドに、API から取得した値を入力できるようになりました。 |
+| Real-Time CDPでのデータの書き出し | [ データセットの書き出し ](../../destinations/ui/export-datasets.md) 機能が一般公開されました。 [ 購入したExperience Platform アプリに基づいて書き出すことができるデータセット ](../../destinations/ui/export-datasets.md#datasets-to-export) を確認し、[ データセットを書き出すためのガードレール ](/help/destinations/guardrails.md#dataset-exports) を確認します。 |
+| （Beta）配列型オブジェクトの書き出しのサポート | プリミティブ値（文字列、整数またはブール値）の配列をフラットスキーマファイルとしてクラウドストレージ宛先に書き出します。 機能について詳しくは、[ ドキュメント ](../../destinations/ui/export-arrays-maps-objects.md) を参照してください。 |
+| Destination SDKの動的ドロップダウンセレクター | Destination SDKを使用して宛先を作成する際に、[ 動的ドロップダウンセレクター ](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) を使用して、ドロップダウンセレクターのフィールドに、API から取得した値を入力できるようになりました。 |
 
 **修正および機能強化** {#destinations-fixes-and-enhancements}
 
-- データフロー実行レベルのエンタープライズ宛先（[HTTP API](../../destinations/catalog/streaming/http-destination.md)、[Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md) および [Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md)）で使用できる [ モニタリングの透明性 ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) を利用して、[ データフローの詳細ビュー ](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page) でアクティブ化指標とステータスを監視し、エラーコードやトラブルシューティング用のメッセージを含む追加情報を提供します。
+- データフロー実行レベルでエンタープライズ宛先（[HTTP API](../../destinations/catalog/streaming/http-destination.md)、[Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md) および [Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md)）で使用できる [ モニタリング透明性 ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) を利用して、[ データフローの詳細ビュー ](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page) でアクティブ化指標とステータスを監視し、エラーコードやトラブルシューティング用メッセージを介して追加情報を提供します。
 - [Google Ad Manager](../../destinations/catalog/advertising/google-ad-manager.md)、[Google ディスプレイおよびビデオ 360](../../destinations/catalog/advertising/google-dv360.md)、および [ オーディエンス更新テンプレート ](../../destinations/destination-sdk/metadata-api/update-audience-template.md) を使用するその他の宛先にマッピングされたオーディエンスの名前を更新すると、これらの名前の変更は宛先のダウンストリームに反映されるようになりました。
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
@@ -153,7 +153,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | 機能 | 説明 |
 | --- | --- |
 | スキーマエディターに追加されたクイックアクション | スキーマエディターのキャンバスに新しいクイックアクションが追加されました。 エディターから直接 JSON 構造をコピーしたり、スキーマを削除したりできるようになりました。<br>![ スキーマエディターのクイックアクション。](../2023/assets/schema-editor-copy-json.png " その他および「JSON にコピー」がハイライト表示されたスキーマエディター "){width="100" zoomable="yes"} |
-| カスタムまたは標準の作成者による XDM リソースのフィルタリング | 使用可能なスキーマ、フィールドグループ、データタイプおよびクラスのリストが、作成方法に基づいて事前にフィルタリングされるようになりました。 これにより、カスタムビルドかAdobeで作成したかに基づいてリソースをフィルタリングできます。<br>![ スキーマ ワークスペースの標準フィルターとカスタムフィルター。](../2023/assets/standard-and-custom-classes.png " 標準フィルターとカスタムフィルターがハイライト表示されたスキーマワークスペース。"){width="100" zoomable="yes"} <br> しくは、[ リソースの作成と編集 ](../../xdm/ui/resources/classes.md#filter.md) ドキュメントを参照してください。 |
+| カスタムまたは標準の作成者による XDM リソースのフィルタリング | 使用可能なスキーマ、フィールドグループ、データタイプおよびクラスのリストが、作成方法に基づいて事前にフィルタリングされるようになりました。 これにより、カスタムビルドされたか、Adobeで作成されたかに基づいてリソースをフィルタリングできます。<br>![ スキーマ ワークスペースの標準フィルターとカスタムフィルター。](../2023/assets/standard-and-custom-classes.png " 標準フィルターとカスタムフィルターがハイライト表示されたスキーマワークスペース。"){width="100" zoomable="yes"} <br> しくは、[ リソースの作成と編集 ](../../xdm/ui/resources/classes.md#filter.md) ドキュメントを参照してください。 |
 
 **更新された機能**
 
@@ -190,8 +190,8 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| ID サービス UI の機能強化 | Experience PlatformUI の改善されたカスタム名前空間の作成ツールを使用して、カスタム名前空間とそれに対応する ID タイプをより適切に管理します。 拡張 ID サービス UI には、次の機能が用意されています。 <ul><li>コンテキストエクスペリエンス：ID 名前空間と ID タイプの概要に関する視覚的な手がかり、明確さ、コンテキスト。</li><li>精度：ID 名の重複をなくし、エラー処理を向上しました。</li><li>検出性：製品内ダイアログ内からドキュメントにアクセスできます。</li></ul> 詳しくは、[ カスタム名前空間の作成 ](../../identity-service/features/namespaces.md#create-namespaces) に関するガイドを参照してください。 |
-| ID グラフの制限の変更 | ID グラフの制限は、150 個の ID から 50 個の ID に変更されました。 新しい ID がフルグラフに取り込まれると、取り込みタイムスタンプと ID タイプに基づく最も古い ID が削除されます。 cookie の ID タイプは削除に対して優先順位付けされます。 実稼動サンドボックスに次の ID が含まれる場合は、Adobeアカウントチームに連絡して、ID タイプの変更をリクエストしてください。 <ul><li>ユーザー識別子（CRM ID など）が cookie/デバイス ID タイプとして設定されるカスタム名前空間。</li><li>cookie とデバイスの識別子がクロスデバイス id タイプとして設定されるカスタム名前空間。</li></ul> これらのリクエストは、Adobeエンジニアリングによって手動で処理されます。 詳しくは、[ID サービスデータのガードレール ](../../identity-service/guardrails.md) および [ データ管理ライセンス使用権限のベストプラクティス ](../../landing/license-usage-and-guardrails/data-management-best-practices.md) に関するガイドを参照してください。 |
+| ID サービス UI の機能強化 | Experience Platform UI の改善されたカスタム名前空間作成ツールを使用して、カスタム名前空間とそれに対応する ID タイプをより適切に管理します。 拡張 ID サービス UI には、次の機能が用意されています。 <ul><li>コンテキストエクスペリエンス：ID 名前空間と ID タイプの概要に関する視覚的な手がかり、明確さ、コンテキスト。</li><li>精度：ID 名の重複をなくし、エラー処理を向上しました。</li><li>検出性：製品内ダイアログ内からドキュメントにアクセスできます。</li></ul> 詳しくは、[ カスタム名前空間の作成 ](../../identity-service/features/namespaces.md#create-namespaces) に関するガイドを参照してください。 |
+| ID グラフの制限の変更 | ID グラフの制限は、150 個の ID から 50 個の ID に変更されました。 新しい ID がフルグラフに取り込まれると、取り込みタイムスタンプと ID タイプに基づく最も古い ID が削除されます。 cookie の ID タイプは削除に対して優先順位付けされます。 実稼動サンドボックスに次の ID が含まれる場合は、Adobe アカウントチームに連絡して、ID タイプの変更をリクエストしてください。 <ul><li>ユーザー識別子（CRM ID など）が cookie/デバイス ID タイプとして設定されるカスタム名前空間。</li><li>cookie とデバイスの識別子がクロスデバイス id タイプとして設定されるカスタム名前空間。</li></ul> これらのリクエストは、Adobe エンジニアリングによって手動で処理されます。 詳しくは、[ID サービスデータのガードレール ](../../identity-service/guardrails.md) および [ データ管理ライセンス使用権限のベストプラクティス ](../../landing/license-usage-and-guardrails/data-management-best-practices.md) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -233,7 +233,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| セルフサービスソースでの `offset` ページネーションの新しいパラメーター（Batch SDK） | ページネーションを使用する際に、ソースの `endConditionName` と `endConditionValue` を指定できるように `offset` りました。 これらのパラメーターを使用すると、次の HTTP リクエストでページネーションループを終了させる条件を指定できます。 詳しくは、[ セルフサービスソースのページネーションガイド（Batch SDK） ](../../sources/sources-sdk/config/sourcespec.md#pagination) を参照してください。 |
+| セルフサービスソースでの `offset` ページネーションの新しいパラメーター（バッチ SDK） | ページネーションを使用する際に、ソースの `endConditionName` と `endConditionValue` を指定できるように `offset` りました。 これらのパラメーターを使用すると、次の HTTP リクエストでページネーションループを終了させる条件を指定できます。 詳しくは、[ セルフサービスソースのページネーションガイド（バッチ SDK） ](../../sources/sources-sdk/config/sourcespec.md#pagination) を参照してください。 |
 
 {style="table-layout:auto"}
 

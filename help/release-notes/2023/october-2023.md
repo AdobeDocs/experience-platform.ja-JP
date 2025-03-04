@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート 2023年10月
 description: Adobe Experience Platform の 2023年10月のリリースノート。
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 38%
@@ -69,7 +69,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| （Beta）計算フィールドでのハッシュ関数のサポート | 配列または配列から要素を書き出すための [ 特定の ](../../destinations/ui/export-arrays-calculated-fields.md) 関数に加えて、追加の [ ハッシュ関数 ](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) を使用して、書き出されたファイルの属性をハッシュ化できるようになりました。 サポートされているハッシュ関数は、`sha`、`sha256`、`sha512`、`hash`、`md5`、`crc32` です。 |
+| （Beta）計算フィールドでのハッシュ関数のサポート | 配列または配列から要素を書き出すための [ 特定の ](../../destinations/ui/export-arrays-maps-objects.md) 関数に加えて、追加の [ ハッシュ関数 ](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) を使用して、書き出されたファイルの属性をハッシュ化できるようになりました。 サポートされているハッシュ関数は、`sha`、`sha256`、`sha512`、`hash`、`md5`、`crc32` です。 |
 | （限定的な GA）特定の宛先に対するアカウントオーディエンスのアクティブ化 | Real-Time CDP B2B のお客様は、特定の宛先に対して [ アカウントオーディエンス ](../../segmentation/types/account-audiences.md) をアクティブ化できるようになりました。 この機能について詳しくは、[ アカウントオーディエンスの有効化チュートリアル ](/help/destinations/ui/activate-account-audiences.md) を参照してください。 |
 
 {style="table-layout:auto"}
