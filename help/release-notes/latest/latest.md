@@ -2,18 +2,14 @@
 title: Adobe Experience Platform リリースノート（2025年2月）
 description: Adobe Experience Platform の 2025年2月のリリースノートです。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 16%
+source-wordcount: '1628'
+ht-degree: 17%
 
 ---
 
 # Adobe Experience Platform リリースノート
-
->[!TIP]
->
->このリリースには、Federated Audience Composition アドオンの改善が含まれています。 詳しくは、[Federated Audience Composition リリースノート ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) を参照してください。
 
 **リリース日：2025年2月18日（PT）**
 
@@ -23,6 +19,7 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [カタログサービス](#catalog-service)
 - [データ準備](#data-prep)
 - [宛先](#destinations)
+- [Federated Audience の構成 ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [ソース](#sources)
 - [セグメント化サービス](#segmentation)
 - [ドキュメントの更新](#documentation-updates)
