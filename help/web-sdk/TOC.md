@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
 role: Developer
-source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
+source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 52%
+source-wordcount: '239'
+ht-degree: 50%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 52%
    * [タグ拡張機能を使用した web SDKのインストール](install/extension.md)
    * [JavaScript ライブラリを使用して web SDKをインストールします](install/library.md)
    * [NPM パッケージを使用して web SDKをインストールします](install/npm.md)
+   * [NPM パッケージを使用したカスタム web SDK ビルドの作成](install/create-custom-build.md)
 * コマンド {#commands}
    * {#configure} の設定
       * [概要](commands/configure/overview.md)
