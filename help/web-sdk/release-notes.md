@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 70%
+source-wordcount: '2285'
+ht-degree: 66%
 
 ---
 
@@ -15,6 +15,18 @@ ht-degree: 70%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
+
+## バージョン 2.26.0 - 2025年3月5日（PT）
+
+**新機能**
+
+- Web SDK NPM パッケージを使用して、カスタム Web SDK ビルドを作成し、必要なライブラリコンポーネントのみを選択できるようになりました。 これにより、ライブラリのサイズが縮小され、読み込み時間が最適化されます。 [NPM パッケージを使用してカスタム web SDK ビルドを作成する ](install/create-custom-build.md) 方法については、ドキュメントを参照してください。
+- [`getIdentity`](commands/getidentity.md) コマンドは、`kndctr` ID cookie から直接 ECID を自動的に読み取るようになりました。 `ECID` 名前空間を使用して `getIdentity` を呼び出すと、ID Cookie が既に存在する場合、web SDKは、ID を取得するためにEdge Networkに対してリクエストを実行しなくなりました。 これで、cookie から ID を読み取るようになりました。
+
+**修正点および改善点**
+
+- `collect` 呼び出しを送信した後、`getIdentity` コマンドが ID を返さない問題を修正しました。
+- リダイレクトが発生する前に、パーソナライゼーションのリダイレクトによってコンテンツがちらつく問題を修正しました。
 
 ## バージョン 2.25.0 - 2025年1月23日（PT）
 
@@ -45,7 +57,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 **修正点および改善点**
 
 - 複数のアプリ内メッセージが返される場合は、優先度が最も高いメッセージのみが表示されます。 その他は抑制されたとおりに記録されます。
-- 空のデータストリームの上書きはサーバーに送信されなくなり、Edge Network側のルーティング設定との競合の可能性が減ります。
+- 空のデータストリームの上書きはEdge Networkに送信されなくなり、サーバーサイドのルーティング設定との競合の可能性が減ります。
 - 他のAdobe SDK と整合させるために、次のログメッセージコンポーネント名を変更しました。
    - `DecisioningEngine` の名前は `RulesEngine` に変更されました
    - `LegacyMediaAnalytics` の名前は `MediaAnalyticsBridge` に変更されました
@@ -281,7 +293,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 - レンダリングまたはクリックされたパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization` の代わりに XDM スキーマフィールドグループを使用するようになりました。
 - [`getIdentity`](/help/web-sdk/commands/getidentity.md) コマンドは、ID と共にエッジ地域 ID を返すようになりました。
 - サーバーから受信した警告とエラーが改善され、より適切な方法で処理されます。
-- [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドに対するAdobeの同意 2.0 標準のサポートを追加。
+- [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドにAdobeの同意 2.0 標準をサポートするようになりました。
 - 同意環境設定を受信すると、CMP、Platform Web SDK および Platform Edge Network 間の統合を最適化するために、ハッシュされてローカルストレージに保存されます。同意環境設定を収集している場合は、ページが読み込まれるたびに `setConsent` を呼び出すことをお勧めします。
 - `onCommandResolved` と `onCommandRejected` の 2 つの[モニタリングフック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)を追加しました。
 - バグ修正：パーソナライゼーションインタラクション通知イベントには、ユーザーが新しいシングルページアプリビューに移動し、元のビューに戻り、コンバージョンの対象となる要素をクリックした際に、同じアクティビティに関する重複した情報が含まれていました。

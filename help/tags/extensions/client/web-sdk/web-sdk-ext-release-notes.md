@@ -2,16 +2,29 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 79%
+source-wordcount: '2580'
+ht-degree: 74%
 
 ---
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
+
+## バージョン 2.29.0 - 2025年3月5日（PT）
+
+**新機能**
+
+- カスタム Web SDK ビルドを作成し、必要なコンポーネントをタグ拡張機能ユーザーインターフェイスから選択できるようになりました。 その結果、未使用のコンポーネントを除外することで、ビルドのサイズが小さくなる可能性があります。 [ カスタム Web SDK ビルドの作成 ](web-sdk-extension-configuration.md#custom-build) に関するドキュメントを参照してください。
+- Adobe Experience Platform Web SDKの [ バージョン 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) が含まれます。
+
+**修正点および改善点**
+
+- [ 変数を更新 ](action-types.md#update-variable) アクションで欠落しているデータ要素の正常な処理を追加しました。 以前は、データ要素が欠落した「変数を更新」アクションを編集すると、エラーメッセージが表示されていました。 別のデータ要素を選択できるようになり、変数の更新アクションのすべての設定が引き続き適用されます。 データ要素は、削除された場合や、タグプロパティが重複している場合、欠落する可能性があります。
+- [ID でリダイレクト ](action-types.md#redirect-with-identity) アクションで新しいタブを開く機能のサポートを追加しました。 これで、アクションを使用する場合、ブラウザーをリダイレクトする際に、アンカータグの `target` 属性が使用されるようになりました。
+- 設定の上書きでAdobe Audience Managerを無効にできなかった問題を修正しました。
 
 ## バージョン 2.28.0 - 2025年1月23日（PT）
 
@@ -30,7 +43,7 @@ ht-degree: 79%
 
 **新機能**
 
-- [ データストリームの上書き ](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) に、Experience CloudソリューションとAdobe Experience Platform サービスを無効にする設定が含まれるようになりました。
+- [ データストリームの上書き ](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) に、Experience Cloud ソリューションとAdobe Experience Platform サービスを無効にする設定が含まれるようになりました。
 - メディアセッションに [ データストリームの上書き ](../web-sdk/web-sdk-extension-configuration.md) を作成できるようになりました。
 
 Adobe Experience Platform Web SDK のバージョン 2.24.0 が含まれます。
@@ -310,7 +323,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含
 - イベントを送信アクション UI に [ 「ドキュメントのアンロード中」 ](/help/web-sdk/commands/sendevent/documentunloading.md) チェックボックスを追加しました。
 - [デフォルトの同意を設定](/help/web-sdk/commands/configure/defaultconsent.md)する際に、同意が得られるまですべてのイベントをドロップする `out` オプションのサポートを追加しました（既存の `pending` オプションはイベントをキューに入れ、同意が得られると送信します）。
 - デフォルトの同意フィールドにツールヒントを追加しました。
-- [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドの使用時に、Adobeの同意 2.0 標準をサポートするようになりました。
+- [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドを使用する際のAdobeの同意 2.0 標準のサポートを追加しました。
 - ユーザーのアクセストークンが無効であるか、不適切にプロビジョニングされている場合に、XDM オブジェクトデータ要素 UI に表示されるエラーを改善しました。
 - XDM オブジェクトデータ要素を表示する際にブラウザーの開発者コンソールに表示されるクロスオリジンエラー（拡張機能の操作には影響しません）を修正しました。
 
