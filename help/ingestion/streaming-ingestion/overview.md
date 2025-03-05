@@ -2,9 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；データ取得；取得したデータ；ストリーミング；概要；ストリーミング取得；待ち時間；ストリーミング待ち時間；
 solution: Experience Platform
 title: ストリーミング取り込みの概要
-description: Adobe Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスから、リアルタイムでExperience Platformにデータを送信する手段を提供します。
+description: Adobe Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスからリアルタイムでExperience Platformにデータを送信する手段を提供します。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
+source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 14%
@@ -53,7 +53,7 @@ Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL 
 | RPS 制限 | メモ |
 | --- | --- |
 | 1 秒あたり 1,000 リクエスト | エンドポイントを使用する場合、これらは複数のメッセージ `/collection/batch` 含むことができます。 |
-| 1 秒あたり 10000 件の個別メッセージ | `/collection/batch` エンドポイントを使用すると、メッセージをグループ化して、実際のリクエストの数を減らすことができます。 |
+| 1 秒あたり 10000 件の個別メッセージ | `/collection/` エンドポイントを使用すると、メッセージをグループ化して、実際のリクエストの数を減らすことができます。 |
 
 >[!IMPORTANT]
 >
