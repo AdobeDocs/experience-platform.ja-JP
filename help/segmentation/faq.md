@@ -2,9 +2,9 @@
 title: オーディエンスに関するよくある質問（FAQ）
 description: オーディエンスやその他のセグメント化関連の概念に関するよくある質問への回答を示します。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4830'
+source-wordcount: '4832'
 ht-degree: 28%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Platform [!DNL Segmentation Service] には、[!DNL Real-Time C
 
 ### 外部で生成されたオーディエンスをアクティブ化する場所を教えてください。
 
-外部で生成されたオーディエンスは、任意の宛先にマッピングでき、Adobe Journey Optimizer キャンペーンで使用できます。
+外部で生成されたオーディエンスは、任意の宛先にマッピングでき、Adobe Journey Optimizer キャンペーンやジャーニーで使用できます。
 
 ### 外部で生成されたオーディエンスを削除できますか？
 
