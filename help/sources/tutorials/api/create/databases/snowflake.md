@@ -1,24 +1,22 @@
 ---
-title: Flow Service API を使用したSnowflakeベース接続の作成
+title: Flow Service API を使用したSnowflakeとExperience Platformの接続
 description: Flow Service API を使用してAdobe Experience PlatformをSnowflakeに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
+source-git-commit: cde31b692e9a11b15cf91a505133f75f69604cba
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 26%
+source-wordcount: '1187'
+ht-degree: 20%
 
 ---
 
-# [!DNL Flow Service] API を使用した [!DNL Snowflake] ベース接続の作成
+# [!DNL Flow Service] API を使用した [!DNL Snowflake] のExperience Platformへの接続
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Snowflake] ソースを利用できます。
+>Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Snowflake] ソースを利用できます。
 
-ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
-
-次のチュートリアルでは、[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して [!DNL Snowflake] のベース接続を作成する方法について説明します。
+[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Snowflake] ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
 
 ## はじめに
 
@@ -32,6 +30,10 @@ ht-degree: 26%
 Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
 
 次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Snowflake] す。
+
+## [!DNL Snowflake] を Azure 上のExperience Platformに接続 {#azure}
+
+[!DNL Snowflake] ソースを Azure 上のExperience Platformに接続する方法については、以下の手順を参照してください。
 
 ### 必要な資格情報の収集
 
@@ -59,10 +61,10 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 | --- | --- |
 | `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[ アカウント識別子の取得 ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) に関するガイドを参  [!DNL Snowflake]  してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
-| `privateKey` | [!DNL Snowflake] アカウントの [!DNL Base64-] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵のいずれかを生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対する認証の際に、秘密鍵のパスフレーズも指定する必要があります。 詳しくは、[ 秘密鍵の取得 ](../../../../connectors/databases/snowflake.md) に関す  [!DNL Snowflake]  ガイドを参照してください。 |
+| `privateKey` | [!DNL Snowflake] アカウントの [!DNL Base64-] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵のいずれかを生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対して認証を行う際に、秘密鍵のパスフレーズも指定する必要があります。 詳しくは、[ 秘密鍵の取得 ](../../../../connectors/databases/snowflake.md) に関す  [!DNL Snowflake]  ガイドを参照してください。 |
 | `privateKeyPassphrase` | 秘密鍵のパスフレーズは、暗号化された秘密鍵を使用して認証を行う場合に使用する必要がある、追加のセキュリティレイヤーです。 暗号化されていない秘密鍵を使用している場合は、パスフレーズを指定する必要はありません。 |
-| `database` | Experience Platformに取り込むデータを含む [!DNL Snowflake] データベース。 |
-| `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際には個別にアクセスする必要があります。 |
+| `database` | Experience Platformに取り込むデータを含んだ [!DNL Snowflake] データベース。 |
+| `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
 
 これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) を参照してください。
 
@@ -70,13 +72,13 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 >[!NOTE]
 >
->[!DNL Snowflake] データベースからデータをExperience Platformにアンロードできるようにするには、`PREVENT_UNLOAD_TO_INLINE_URL` フラグを `FALSE` に設定する必要があります。
+>[!DNL Snowflake] データベースからExperience Platformにデータをアンロードできるようにするには、`PREVENT_UNLOAD_TO_INLINE_URL` フラグを `FALSE` に設定する必要があります。
 
-## ベース接続の作成
+### Azure 上のExperience Platformに [!DNL Snowflake] のベース接続を作成する {#azure-base}
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、その際にリクエスト本文の一部として [!DNL Snowflake] 認証資格情報を指定します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際に [!DNL Snowflake] 認証資格情報をリクエスト本文の一部として指定します。
 
 **API 形式**
 
@@ -252,6 +254,85 @@ curl -X POST \
 +++
 
 >[!ENDTABS]
+
+## Experience Platform on Amazon Web Services（AWS）への [!DNL Snowflake] の接続 {#aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
+
+[!DNL Snowflake] ソースをAWS上のExperience Platformに接続する方法については、以下の手順を参照してください。
+
+### AWSでExperience Platform上に [!DNL Snowflake] のベース接続を作成する {#aws-base}
+
+**API 形式**
+
+```http
+POST /connections
+```
+
+**リクエスト**
+
+次のリクエストでは、AWS上のExperience Platformに日付を取り込む [!DNL Snowflake] のベース接続を作成しています。
+
++++選択すると例が表示されます
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection for Experience Platform on AWS",
+      "description": "Snowflake base connection for Experience Platform on AWS",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "host": "acme.snowflakecomputing.com",
+              "port": "443",
+              "username": "acme-cj123",
+              "password": "{PASSWORD}",
+              "database": "ACME_DB",
+              "warehouse": "COMPUTE_WH",
+              "schema": "{SCHEMA}"
+          }
+      },
+      "connectionSpec": {
+          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "version": "1.0"
+      }
+  }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `auth.params.host` | [!DNL Snowflake] アカウントが接続するホスト URL。 |
+| `auth.params.port` | インターネット経由でサーバーに接続するときに [!DNL Snowflake] が使用するポート番号です。 |
+| `auth.params.username` | [!DNL Snowflake] アカウントに関連付けられたユーザー名。 |
+| `auth.params.database` | データの取得元となる [!DNL Snowflake] データベース。 |
+| `auth.params.password` | [!DNL Snowflake] アカウントに関連付けられたパスワード。 |
+| `auth.params.warehouse` | 使用している [!DNL Snowflake] ウェアハウス。 |
+| `auth.params.schema` | [!DNL Snowflake] データベースに関連付けられたスキーマの名前。 データベースアクセス権を付与するユーザーが、このスキーマにもアクセスできることを確認する必要があります。 |
+
++++
+
+**応答**
+
+リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。この ID は、次のチュートリアルでストレージを調査するために必要になります。
+
++++選択すると例が表示されます
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700d77b-0000-0200-0000-5e3b41a10000\""
+}
+```
+
++++
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Snowflake] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
