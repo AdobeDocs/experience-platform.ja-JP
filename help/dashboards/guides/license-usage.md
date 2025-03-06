@@ -4,10 +4,10 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
+source-git-commit: 1c31ef58eec727638cab28202afc762da0e226a2
 workflow-type: tm+mt
-source-wordcount: '2947'
-ht-degree: 21%
+source-wordcount: '3125'
+ht-degree: 25%
 
 ---
 
@@ -32,32 +32,67 @@ ht-degree: 21%
 >id="platform_dashboards_licenseUsage"
 >title="ライセンス使用状況ダッシュボード"
 >abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="ライセンス使用状況ダッシュボード"
 >abstract="ライセンス使用状況ダッシュボードでは、購入した Adobe Experience Platform 製品に関するインサイトを得ることができます。ダッシュボードの概要には、各プライマリ指標の使用状況や契約済みのライセンス金額など、製品のプライマリ指標が表示されます。詳細ワークスペースは、特定のサンドボックス内の各製品の指標の分類を表示します。"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="予測される計算時間"
 >abstract="使用量がライセンス量に達する可能性があります。計算時間を評価または削減するには、クエリ／ログに移動してクエリ履歴を確認します。クエリワークスペースにアクセスする権限がない場合は、管理者にお問い合わせください。"
->additional-url="https://experience.adobe.com/#/platform/query/log" text="クエリログワークスペース"
+>additional-url="https://experience.adobe.com/#/platform/query/log.html" text="クエリログワークスペース"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="予測されるアドレス可能なオーディエンス"
 >abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/event-expirations" text="エクスペリエンスイベントの有効期限"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
+>title="予測エンゲージメント可能プロファイル"
+>abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
+>title="予測されるビジネスユーザープロファイル"
+>abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_corehours"
+>title="予測コア時間"
+>abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
+>title="予測合計データ量"
+>abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
+>title="使用可能な予測CJA行"
+>abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 Adobe Experience Platformの [!UICONTROL  ライセンスの使用状況 ] ダッシュボードを使用して、組織のライセンスの使用状況に関する重要な情報を表示できます。 ここに表示される情報は、Platform インスタンスの毎日のスナップショット中にキャプチャされます。
 
-ライセンス使用状況レポートを使用すると、ライセンス使用指標に対して高い精度でレポートを作成できます。 ダッシュボードには、購入した各製品（および関連するアドオン）の使用状況指標、すべての実稼動サンドボックスまたは開発サンドボックスでの指標の統合使用状況、特定のサンドボックスからの使用状況指標が表示されます。 使用状況指標を使用して、Real-time Customer Data Platform、Adobe Journey Optimizer、Customer Journey AnalyticsのExperience Platformアプリケーションをトラッキングできます。
+ライセンス使用状況レポートを使用すると、ライセンス使用指標に対して高い精度でレポートを作成できます。 ダッシュボードには、購入した各製品（および関連するアドオン）の使用状況指標、すべての実稼動サンドボックスまたは開発サンドボックスでの指標の統合使用状況、特定のサンドボックスからの使用状況指標が表示されます。 使用状況指標を使用して追跡できるExperience Platform アプリケーションは、Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsです。
 
 このガイドでは、UI でのライセンス使用状況ダッシュボードへのアクセス方法と操作方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションの詳細を説明します。
 
@@ -65,7 +100,7 @@ Platform UI の一般的な概要については、[Experience Platform UI ガ�
 
 ## [!UICONTROL  ライセンス使用状況 ] ダッシュボードデータ
 
-[!UICONTROL  ライセンスの使用状況 ] ダッシュボードには、購入したすべてのExperience Platform製品とそれらの製品のアドオンのリストが表示されます。 このダッシュボードから、関連する任意のサンドボックス間でのExperience Platformに関する組織のライセンス関連データのスナップショットを見つけることができます。
+[!UICONTROL  ライセンスの使用状況 ] ダッシュボードには、購入したすべてのExperience Platform製品とそれらの製品のアドオンのリストが表示されます。 このダッシュボードから、関連する任意のサンドボックスをまたいで、Experience Platformに関する組織のライセンス関連データのスナップショットを見つけることができます。
 
 このダッシュボードのデータは、スナップショットが作成された特定の時点とまったく同じように表示されます。 つまり、スナップショットはデータの近似やサンプルではなく、ダッシュボードはリアルタイムには更新されません。
 
@@ -93,7 +128,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 | 列の名前 | 説明 |
 |---|---|
-| **[!UICONTROL 製品]** | 組織でライセンスされたAdobeソリューション。 |
+| **[!UICONTROL 製品]** | お客様の組織でライセンスされたAdobe ソリューション。 |
 | **[!UICONTROL プライマリ指標]** | その製品内でのトラッキングに使用される主な指標。 |
 | **[!UICONTROL 許可の金額]** | ライセンス契約で合意された、プライマリ指標の最大量に対する契約値。 |
 | **[!UICONTROL 用途]** | 使用されたプライマリ指標の量。 この値は、実稼動または開発のすべてのサンドボックスにおける、その指標の合計使用量を提供します。 |
@@ -112,15 +147,15 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 >id="platform_dashboards_licenseUsage_prediction"
 >title="予測される使用状況"
 >abstract="予測は過去6～7か月の使用状況に基づき、毎月15日に生成されます。ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織における実際の使用状況を理解し、その使用状況がアドビとの組織のライセンスの範囲を超えないようにする責任があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="予測される使用状況"
 >abstract="予測は過去6～7か月の使用状況に基づき、毎月15日に生成されます。ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織における実際の使用状況を理解し、その使用状況がアドビとの組織のライセンスの範囲を超えないようにする責任があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="データセットの有効期限の自動化"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/profile/pseudonymous-profiles" text="偽名プロファイルデータの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセットの有効期限の自動化"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 インサイトに満ちた使用状況の予測に基づいて、ライセンスリソースをプロアクティブに管理および最適化します。 この [!UICONTROL  予測使用状況 ] 列は、購入したすべての製品に対して、すべての実稼動および開発用サンドボックスにわたって、サンドボックスレベルで今後のライセンスの使用を正確に予測します。 このアラート機能は、今月の 15 日までの使用状況に基づいて、6 週間後のライセンス使用状況の予測を提供します。 予測には、下限と上限が設定されています。
 
@@ -136,7 +171,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 >[!NOTE]
 >
->ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織の実際の使用状況を理解し、使用状況がAdobeでの組織のライセンスの範囲外にならないようにする責任があります。
+>ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織の実際の使用状況を理解し、Adobeで組織のライセンスの範囲外に使用状況が使用されないようにする責任を負います。
 
 ![ 予測された使用状況列がハイライト表示された Platform 製品の概要ビュー。](../images/license-usage/summary-predicted-usage.png)
 
@@ -226,7 +261,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 | [!UICONTROL  アドレス可能なオーディエンス ] | ビジネスオーディエンスの使用権限と消費者オーディエンスの使用権限の合計。 消費者オーディエンスは、販売注文で「消費者オーディエンス」として識別されるユーザープロファイルの数として定義されます。 ビジネスオーディエンスは、販売注文で「ビジネスオーディエンス」として識別されるビジネスユーザープロファイルの数として定義されます。 |
 | [!UICONTROL  アドホッククエリサービスユーザーパック ] | 承認された同時クエリサービスユーザーの使用権限を増やすアドオン。5 人の同時クエリサービスユーザーと、パックごとに 1 つの同時に実行されるアドホッククエリを追加できます。 複数の追加アドホック クエリ ユーザーパックがライセンスされている可能性があります。 |
 | [!UICONTROL  平均プロファイル充実度 ] | **非推奨** – 任意の時点でハブプロファイルサービス内に保存されたすべての実稼動データの合計を、許可されたビジネスユーザープロファイルの数の 5 倍で割った値です。 [!UICONTROL  平均的なプロファイル充実度 ] は共有機能です。 |
-| [!UICONTROL  使用可能な CJA 行 ] | Customer Journey Analytics内の分析に使用できる 1 日あたりの平均データ行数。 |
+| [!UICONTROL  使用可能なCJA行 ] | Customer Journey Analytics内で分析に使用できる 1 日あたりの平均データ行数。 |
 | [!UICONTROL  計算属性 ] | 集計されたプロファイル行動データの合計数。 集計プロファイルの行動データは、プロファイル属性に変換されるエクスペリエンスイベントに基づいており、ユーザープロファイルまたはビジネスユーザープロファイルに含めることができます。 |
 | [!UICONTROL  消費者オーディエンス ] | 販売注文で「消費者オーディエンス」として識別されたユーザープロファイルの数。 |
 | [!UICONTROL  データの書き出しサイズ ] | 1 年にデータセットのアクティベーションを通じて送信されるデータの量。 |
@@ -235,7 +270,7 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 | [!UICONTROL  エンゲージメント可能なオーディエンス ] | この指標は、エンゲージメント可能なプロファイルのオーディエンスを参照します。 エンゲージメント可能なプロファイルは、個人を表す情報のレコードで、プロファイルサービスで表示されます。これらのレコードは、過去 12 か月間に、Journey Optimizer のオーサリング、意思決定、配信、実験またはオーケストレーション機能を使用してエンゲージしようとしたプロファイルです。 |
 | [!UICONTROL  類似オーディエンス ] | 既存の消費者オーディエンスをモデリングして、その既存の消費者オーディエンスに類似したユーザープロファイルを識別することで生成されるオーディエンスの数。 |
 | [!UICONTROL AMM モデルの数 ] | 投資に基づいて指定された成果を測定または予測するために使用される機械学習モデル（Adobe Mix Modelerで構築）のカウント。 |
-| [!UICONTROL  サンドボックスの数 ] | データと操作を分離してAdobe Experience PlatformにアクセスするAdobeのオンデマンドサービスのインスタンス内の論理分離の数。 |
+| [!UICONTROL  サンドボックスの数 ] | データと操作を分離してAdobe Experience PlatformにアクセスするAdobe オンデマンドサービスのインスタンス内の論理分離の数。 |
 | [!UICONTROL  プロファイル充実度パック数 ] | 追加のプロファイル充実度パックごとに、プロファイルごとに認証済みの合計データボリュームが 25 KB 増加します。 |
 | [!UICONTROL  クエリサービス計算時間 ] | バッチクエリの実行時に、クエリサービスエンジンがデータの読み取り、処理およびデータレイクへの書き込みに要した時間の測定値。 |
 | [!UICONTROL  ストリーミングセグメント化パック数 ] | パックは、新しいデータがストリーミングフローを通じてセグメント化サービスに入ると、個人プロファイルのセグメントメンバーシップを更新します。 セグメントメンバーシップは、過去の行動を考慮せずに、現在の人物プロファイル属性と現在のイベントの値に基づいて評価されます。 ストリーミングセグメント化は共有機能です。 |
@@ -252,9 +287,9 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 | ライセンス | 商品の説明 |
 | --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD 標準</li><li>ADOBE EXPERIENCE PLATFORM:OD ヘビー</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリ サービス、およびインテリジェント サービス ](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD アクティベーション</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL （最大 50 M）</li></ul> | [Adobe Experience Platformのライセンス認証 ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform、アプリサービス、インテリジェントサービス ](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL ～ 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>AEP:OD アクティベーション</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL （最大 50M）</li></ul> | [Adobe Experience Platformのライセンス認証 ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform インテリジェンス ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZERPRIME:OD</li><li>JOURNEY OPTIMIZERULTIMATE:OD</li><li>UNP AJO PRIME スターター：OD</li><li>UNP AJO ULTIMATE スターター：OD</li><li>UNP Real-Time CDP:OD プロファイルオーケストレーション</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-journey-optimizer.html) |
 

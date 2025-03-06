@@ -2,9 +2,9 @@
 title: クエリスケジュール
 description: Adobe Experience Platform UI を使用して、スケジュールされたクエリの実行を自動化する方法、クエリスケジュールを削除または無効にする方法、使用可能なスケジュールオプションを利用する方法について説明します。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2027'
 ht-degree: 14%
 
 ---
@@ -118,10 +118,6 @@ ht-degree: 14%
 アラートルールの定義方法など、Adobe Experience Platformのアラートの概要については、[ アラートの概要 ](../../observability/alerts/overview.md) を参照してください。 Adobe Experience Platform UI 内のアラートとアラートルールの管理に関するガイダンスについては、[ アラート UI ガイド ](../../observability/alerts/ui.md) を参照してください。
 
 ### スケジュールされたパラメーター化クエリのパラメーターの設定 {#set-parameters}
-
->[!IMPORTANT]
->
->パラメーター化されたクエリ UI 機能は、現在 **限定リリースのみ** で利用でき、すべてのお客様が利用できるわけではありません。 パラメーター化クエリへのアクセス権がない場合は、引き続き [ スケジュールを削除または無効にする ](#delete-schedule) の節に進みます。
 
 パラメーター化クエリ用のスケジュールされたクエリを作成している場合は、これらのクエリの実行にパラメーター値を設定する必要があります。
 

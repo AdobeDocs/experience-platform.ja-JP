@@ -2,18 +2,14 @@
 title: クエリログ
 description: クエリログは、クエリが実行されるたびに自動的に生成され、UI から使用してトラブルシューティングに役立ちます。 このドキュメントでは、UI のクエリサービスログ セクションの使用方法と操作方法について説明します。
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '948'
 ht-degree: 3%
 
 ---
 
 # クエリログ
-
->[!IMPORTANT]
->
->特定のクエリログ機能は、現在、限定リリースになっており、すべてのお客様が使用できるわけではありません。 編集アイコンを使用しない場合、UI の表示が若干異なる場合があります。 また、クエリ名を選択するプロセスで、[!UICONTROL  クエリログの詳細 ] ビューではなくクエリエディターに移動する場合もあります。
 
 Adobe Experience Platformは、API と UI の両方を通じて発生したすべてのクエリイベントのログを保持します。 この情報は、クエリサービス UI の「[!UICONTROL  ログ ]」タブで確認できます。
 
@@ -52,10 +48,6 @@ Adobe Experience Platformは、API と UI の両方を通じて発生したす�
 >「[!UICONTROL CTAS として実行 ] するオプションは、SELECT クエリでのみ使用できます。
 
 ![ 行が選択されたクエリログワークスペース、「CTAS として実行」、「クエリを削除」および「SQL をコピー」アイコンがハイライト表示されます。](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->特定のクエリログ機能は、現在、限定リリースになっており、すべてのお客様が使用できるわけではありません。
 
 また、「[!UICONTROL  名前 ]」列からクエリテンプレート名を選択して、「[!UICONTROL  クエリログの詳細 ]」ビューに直接移動することもできます。
 

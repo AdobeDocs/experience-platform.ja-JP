@@ -3,9 +3,9 @@ keywords: Experience Platform；クエリ；クエリサービス；トラブル
 title: クエリサービスのガードレール
 description: このドキュメントでは、クエリの使用を最適化するのに役立つ、クエリサービスデータの使用制限に関する情報を提供します。
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 23c7a4590b365a49edb066567b6ebe2ac08c67e8
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 4%
 
 ---
@@ -27,15 +27,13 @@ ht-degree: 4%
 
 * **バッチクエリ**：データのク `INSERT TABLE AS SELECT` ーン、シェイプ、操作およびエンリッチメントを行うデータクエリと `CREATE TABLE AS SELECT` クエリを実行します。 これらのクエリの結果は、データレイク上で **保存され** す。 この機能の消費量を測定する指標は計算時間です。
 
-* **クエリサービスユーザー**:Customer Journey Analytics、Adobe Real-time Customer Data Platform、Adobe Journey Optimizerの現在のライセンス内で提供されているクエリサービスユーザーも、Data Distillerで使用できます。 クエリサービスのユーザーは、機能間で共有されます。
+* **クエリサービスユーザー**:Customer Journey Analytics、Adobe Real-Time Customer Data Platform、Adobe Journey Optimizerの現在のライセンスで提供されているクエリサービスユーザーも、Data Distillerで使用できます。 クエリサービスのユーザーは、機能間で共有されます。
 
 * **アドホックユーザー**：アドホックユーザーは、アドホッククエリを実行するユーザーです。
 
 * **バッチユーザー**：バッチユーザーは、バッチクエリを実行するユーザーです。
 
 * **レポート API**：データ取得の呼び出しを（内部または外部で）行うための API。 拡張レポートデータモデルは、Real-Time CDP ダッシュボードデータモデルなどの、Adobe Experience Platformのネイティブなレポートデータモデルから派生します。
-
-次の図は、クエリサービス機能が現在、どのようにパッケージ化され、ライセンスされているかをまとめたものです。
 
 ## ガードレール タイプ
 
@@ -101,10 +99,10 @@ ht-degree: 4%
 * [クエリサービス API](./api/getting-started.md)
 * [クエリサービス UI](./ui/overview.md)
 
-他のExperience Platformサービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
+他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platformサービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
