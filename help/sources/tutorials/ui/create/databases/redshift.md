@@ -1,22 +1,22 @@
 ---
-title: UI でのAmazon Redshift Source接続の作成
-description: Adobe Experience Platform UI を使用してAmazon Redshift ソース接続を作成する方法を説明します。
+title: UI を使用したAWS Redshift のExperience Platformへの接続
+description: ソース UI を使用してAWS Redshift アカウントをExperience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
+source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 41%
+source-wordcount: '715'
+ht-degree: 23%
 
 ---
 
-# ソースワークスペースを使用して [!DNL Amazon Redshift] アカウントに接続します
+# UI を使用した [!DNL AWS Redshift] のExperience Platformへの接続
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Amazon Redshift] ソースを利用できます。
+>Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL AWS Redshift] ソースを利用できます。
 
-このチュートリアルでは、ユーザーインターフェイスを使用して [!DNL Amazon Redshift] （以下「[!DNL Redshift]」）アカウントをAdobe Experience Platformに接続する手順について説明します。
+ユーザーインターフェイスを使用して [!DNL AWS Redshift] アカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
 
 ## はじめに
 
@@ -27,52 +27,71 @@ ht-degree: 41%
    - [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Redshift] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
+既に有効な [!DNL AWS Redshift] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
 
-### 必要な資格情報の収集
+## ソースカタログのナビゲート
 
-Experience Platformで [!DNL Redshift] アカウントにアクセスするには、次の値を指定する必要があります。
+Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-| **認証情報** | **説明** |
-| -------------- | --------------- |
-| サーバー | [!DNL Redshift] アカウントに関連付けられたサーバー。 |
-| ポート | クライアント接続をリッスンするために [!DNL Redshift] サーバーが使用する TCP ポート。 |
-| ユーザー名 | [!DNL Redshift] アカウントに関連付けられたユーザー名。 |
-| パスワード | [!DNL Redshift] アカウントに関連付けられたパスワード。 |
-| データベース | アクセスする [!DNL Redshift] データベース。 |
+*[!UICONTROL データベース]* カテゴリの下の「**[!DNL AWS Redshift]**」を選択し、「**[!UICONTROL 設定]**」を選択します。
 
-基本について詳しくは、[ このドキュメント  [!DNL Redshift]  を参照してください ](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)。
-
-必要な資格情報を収集したら、次の手順に従って [!DNL Redshift] アカウントをExperience Platformにリンクできます。
-
-## [!DNL Redshift] アカウントを接続
-
->[!NOTE]
+>[!TIP]
 >
->[!DNL Redshift] のデフォルトのエンコーディング規格は Unicode です。 これは変更できません。
+>ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+![AWS Redshift ソースカードが選択されているソースカタログ ](../../../../images/tutorials/create/redshift/catalog.png)
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+## 既存のアカウントを使用 {#existing}
 
-**[!UICONTROL Databases]** カテゴリで、**[!UICONTROL Amazon Redshift]** を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい [!DNL Redshift] コネクタを作成します。
+次に、ソースワークフローの認証手順に進みます。 ここでは、既存のアカウントを使用するか、新しいアカウントを作成できます。
 
-![](../../../../images/tutorials/create/redshift/catalog.png)
+既存のアカウントを使用するには、アカウントディレクトリから [!DNL AWS Redshift] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-**[!UICONTROL Amazon Redshift に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+![ ソースワークフローのアカウントディレクトリが表示されます。ここでは、既存のアカウントが表示されます。](../../../../images/tutorials/create/redshift/existing.png)
 
-### 新しいアカウント
+## 新しいアカウントを作成 {#create}
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL Redshift] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+既存のアカウントがない場合は、ソースに対応する必要な認証資格情報を指定して、新しいアカウントを作成する必要があります。
 
-![](../../../../images/tutorials/create/redshift/new.png)
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-### 既存のアカウント
+### Azure 上のExperience Platformへの接続 {#azure}
 
-既存のアカウントに接続するには、接続する [!DNL Redshift] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
+[!DNL AWS Redshift] アカウントを Azure 上のExperience Platformに接続するには、入力フォームに認証資格情報を入力し、「**（[!UICONTROL  ソースに接続 ]）**」を選択します。
 
-![](../../../../images/tutorials/create/redshift/existing.png)
+![AWS Redshift を Azure 上のExperience Platformに接続するための新しいアカウントインターフェイス ](../../../../images/tutorials/create/redshift/new.png)
+
+| 資格情報 | 説明 |
+| --- | --- |
+| サーバー | [!DNL AWS Redshift] インスタンスのサーバー名。 |
+| ポート | クライアント接続をリッスンするために [!DNL AWS Redshift] サーバーが使用する TCP ポート。 |
+| ユーザー名 | アクセス権を付与するアカウントのユーザー名。 |
+| パスワード | ユーザーアカウントに対応するパスワード。 |
+| データベース | データの取得元となる [!DNL AWS Redshift] データベース。 |
+
+基本について詳しくは、[ このドキュメント  [!DNL AWS Redshift]  を参照してください ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html)。
+
+### AWS上のExperience Platformへの接続 {#aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、AWS web サービス（AWS）上で動作するExperience Platformの実装に当てはまります。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
+
+新しい [!DNL AWS Redshift] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、認証に必要な資格情報を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
+
+![AWS Redshift をAWS上のExperience Platformに接続するための新しいアカウントインターフェイス ](../../../../images/tutorials/create/redshift/aws-auth.png)
+
+| 資格情報 | 説明 |
+| --- | --- |
+| サーバー | [!DNL AWS Redshift] インスタンスのサーバー名。 |
+| ポート | クライアント接続をリッスンするために [!DNL AWS Redshift] サーバーが使用する TCP ポート。 |
+| ユーザー名 | アクセス権を付与するアカウントのユーザー名。 |
+| パスワード | ユーザーアカウントに対応するパスワード。 |
+| データベース | データの取得元となる [!DNL AWS Redshift] データベース。 |
+| スキーマ | [!DNL AWS Redshift] データベースに関連付けられたスキーマの名前。 データベースアクセス権を付与するユーザーが、このスキーマにもアクセスできることを確認する必要があります。 |
+
+基本について詳しくは、[ このドキュメント  [!DNL AWS Redshift]  を参照してください ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html)。
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Redshift] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL AWS Redshift] データベースとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[ データフローを作成して、データベースからExperience Platformにデータを取り込む ](../../dataflow/databases.md) ことができます。
