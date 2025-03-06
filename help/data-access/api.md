@@ -2,9 +2,9 @@
 keywords: Experience Platform；ホーム；人気のトピック；データアクセス；python sdk;spark sdk;data access api；エクスポート；エクスポート
 solution: Experience Platform
 title: データアクセス API ガイド
-description: Data Access API は、Experience Platform内に取り込んだデータセットの検出可能性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供することで、Adobe Experience Platformをサポートします。
+description: Data Access API は、Adobe Experience Platform内に取り込んだデータセットの検出可能性とアクセシビリティに重点を置いた RESTful インターフェイスを開発者に提供することで、Experience Platformをサポートします。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: 78dbb735bad70e2115cbbaabb6cf74bf38983460
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 41%
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.name` | ファイルの名前（例：`profiles.csv`）。 |
+| `data.name` | ファイルの名前（例：`profiles.parquet`）。 |
 | `data.length` | ファイルのサイズ（バイト単位）。 |
 | `data._links.self.href` | ファイルをダウンロードするための URL です。 |
 
@@ -201,7 +201,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.name` | ファイルの名前（例：`profiles.csv`）。 |
+| `data.name` | ファイルの名前（例：`profiles.parquet`）。 |
 | `data._links.self.href` | ファイルをダウンロードするための URL です。 |
 
 ## ファイルのコンテンツへのアクセス {#access-file-contents}
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `{FILE_ID}` | データセット内のファイルの ID です。 |
-| `{FILE_NAME}` | ファイルのフルネーム （例：`profiles.csv`）。 |
+| `{FILE_NAME}` | ファイルのフルネーム （例：`profiles.parquet`）。 |
 
 **応答**
 
@@ -243,4 +243,4 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## データ取得イベントへのサブスクライブ {#subscribe-to-data-ingestion-events}
 
-[Adobe Developer Console](https://developer.adobe.com/console/) を通じて、特定の価値の高いイベントを購読できます。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[Adobeイベント通知の登録 ](../observability/alerts/subscribe.md) のチュートリアルを参照してください。
+[Adobe Developer Console](https://developer.adobe.com/console/) を通じて、特定の価値の高いイベントを購読できます。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[Adobe イベント通知の登録 ](../observability/alerts/subscribe.md) のチュートリアルを参照してください。
