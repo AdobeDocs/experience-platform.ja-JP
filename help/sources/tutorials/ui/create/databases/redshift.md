@@ -3,10 +3,10 @@ title: UI を使用したAWS Redshift のExperience Platformへの接続
 description: ソース UI を使用してAWS Redshift アカウントをExperience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
+source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 23%
+source-wordcount: '718'
+ht-degree: 22%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 23%
 >
 >Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL AWS Redshift] ソースを利用できます。
 
-ユーザーインターフェイスを使用して [!DNL AWS Redshift] アカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
+このガイドでは、UI のソースワークスペースを使用して [!DNL AWS Redshift] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
 ## はじめに
 
