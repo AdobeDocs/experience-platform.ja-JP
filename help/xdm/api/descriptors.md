@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；記述子；記述子；記述子；記述子；記述子；ID;ID；フレンドリ名；代替表示情報；参照；関係；関係
+keywords: Experience Platform；ホーム；人気のトピック；api;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；記述子；記述子；記述子；記述子；ID;ID；フレンドリ名；代替表示情報；参照；関係；関係
 solution: Experience Platform
 title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
+source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 40%
+source-wordcount: '2192'
+ht-degree: 38%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 40%
 
 ## 記述子のリストの取得 {#list}
 
-`/tenant/descriptors` に対してGETリクエストを行うことで、組織で定義されているすべての記述子をリストできます。
+`/tenant/descriptors` に対してGET リクエストを行うことで、組織で定義されているすべての記述子をリストできます。
 
 **API 形式**
 
@@ -139,7 +139,7 @@ curl -X GET \
 
 ## 記述子の作成 {#create}
 
-`/tenant/descriptors` エンドポイントに対してPOSTリクエストを実行することで、新しい記述子を作成できます。
+`/tenant/descriptors` エンドポイントに POST リクエストを実行することで、新しい記述子を作成できます。
 
 >[!IMPORTANT]
 >
@@ -195,7 +195,7 @@ curl -X POST \
 
 ## 記述子の更新 {#put}
 
-記述子を更新するには、PUTリクエストのパスに `@id` を含めます。
+PUT リクエストのパスに `@id` を含めることで、記述子を更新できます。
 
 **API 形式**
 
@@ -211,11 +211,11 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **リクエスト**
 
-このリクエストは、基本的に記述子を書き換えるので、リクエスト本文には、そのタイプの記述子を定義するために必要なすべてのフィールドを含める必要があります。 つまり、記述子を更新（PUT）するリクエストペイロードは、同じ種類の記述子を [ 作成（POST](#create) するペイロードと同じです。
+このリクエストは、基本的に記述子を書き換えるので、リクエスト本文には、そのタイプの記述子を定義するために必要なすべてのフィールドを含める必要があります。 つまり、記述子を更新（PUT）するリクエストペイロードは、同じタイプの記述子を [ 作成（POST](#create) するペイロードと同じです。
 
 >[!IMPORTANT]
 >
->POSTリクエストを使用して記述子を作成する場合と同様に、記述子タイプごとに固有のフィールドをPUTリクエストペイロードで送信する必要があります。 記述子の完全なリストと、記述子の定義に必要なフィールドについては、[ 付録 ](#defining-descriptors) を参照してください。
+>POST リクエストを使用して記述子を作成する場合と同様に、記述子タイプごとに専用のフィールドをPUT リクエストペイロードで送信する必要があります。 記述子の完全なリストと、記述子の定義に必要なフィールドについては、[ 付録 ](#defining-descriptors) を参照してください。
 
 次の例では、別の `xdm:sourceProperty` （`mobile phone`）を参照するように ID 記述子を更新し、`xdm:namespace` を `Phone` に変更します。
 
@@ -248,11 +248,11 @@ curl -X PUT \
 }
 ```
 
-記述子を表示するために [ 参照（GET）リクエスト ](#lookup) を実行すると、PUTリクエストで送信された変更を反映するようにフィールドが更新されたことを示します。
+記述子を表示するために [ 参照（GET）リクエスト ](#lookup) を実行すると、フィールドが更新され、PUT リクエストで送信された変更が反映されていることを示します。
 
 ## 記述子の削除 {#delete}
 
-[!DNL Schema Registry] から定義した記述子を削除する必要が生じる場合があります。 これは、削除したい記述子の `@id` を参照するDELETEリクエストを行うことで行います。
+[!DNL Schema Registry] から定義した記述子を削除する必要が生じる場合があります。 これは、削除する記述子の `@id` を参照するDELETE リクエストを実行することで行います。
 
 **API 形式**
 
@@ -364,12 +364,12 @@ ID 記述子は、[Adobe Experience Platform ID サービス ] で説明され�
 | `xdm:sourceProperty` | 詳細を変更する特定のプロパティへのパス。 パスは、スラッシュ（`/`）で始める必要があり、1 で終わる必要はありません。 パスに `properties` を含めないでください（例えば、`/properties/personalEmail/properties/address` の代わりに `/personalEmail/address` を使用します）。 |
 | `xdm:title` | このフィールドに表示する新しいタイトル。タイトルケースで記述されます。 |
 | `xdm:description` | オプションで、タイトルに説明を追加できます。 |
-| `meta:enum` | `xdm:sourceProperty` で示されるフィールドが文字列フィールドの場合、セグメント化 UI でフィールドの推奨値を追加するために `meta:enum` を使用できます。 XDM フィールドについては、定義済みリストを宣言 `meta:enum` たり、データ検証を行ったりしないことに注意してください。<br><br> これは、Adobeで定義されたコア XDM フィールドにのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、代わりに、PATCHリクエストを使用してフィールドの `meta:enum` プロパティをフィールドの親リソースに直接編集する必要があります。 |
+| `meta:enum` | `xdm:sourceProperty` で示されるフィールドが文字列フィールドの場合、セグメント化 UI でフィールドの推奨値を追加するために `meta:enum` を使用できます。 XDM フィールドについては、定義済みリストを宣言 `meta:enum` たり、データ検証を行ったりしないことに注意してください。<br><br> これは、Adobeで定義されたコア XDM フィールドにのみ使用してください。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、代わりに、PATCH リクエストを使用してフィールドの `meta:enum` プロパティをフィールドの親リソースに直接編集する必要があります。 |
 | `meta:excludeMetaEnum` | `xdm:sourceProperty` で示されるフィールドが、`meta:enum` フィールドの下で提供された既存の推奨値を持つ文字列フィールドである場合、このオブジェクトをフレンドリ名記述子に含めて、これらの値の一部またはすべてをセグメント化から除外できます。 エントリを除外するには、各エントリのキーと値が、フィールドの元の `meta:enum` に含まれる値と一致する必要があります。 |
 
 {style="table-layout:auto"}
 
-#### 関係記述子
+#### 関係記述子 {#relationship-descriptor}
 
 関係記述子は、`sourceProperty` と `destinationProperty` で説明されているプロパティに基づいて、2 つの異なるスキーマ間の関係を記述します。詳しくは、[2 つのスキーマ間の関係の定義](../tutorials/relationship-api.md)に関するチュートリアルを参照してください。
 
@@ -389,13 +389,49 @@ ID 記述子は、[Adobe Experience Platform ID サービス ] で説明され�
 
 | プロパティ | 説明 |
 | --- | --- |
-| `@type` | 定義する記述子のタイプ。 関係記述子の場合、この値は `xdm:descriptorOneToOne` に設定する必要があります。 |
+| `@type` | 定義する記述子のタイプ。 関係記述子の場合、Real-Time CDP B2B editionにアクセスできない限り、この値は `xdm:descriptorOneToOne` に設定される必要があります。 B2B editionでは、`xdm:descriptorOneToOne` または [`xdm:descriptorRelationship`](#b2b-relationship-descriptor) を使用できます。 |
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
-| `xdm:sourceProperty` | 関係を定義するソーススキーマ内のフィールドのパス。「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。。 |
+| `xdm:sourceProperty` | 関係を定義するソーススキーマ内のフィールドのパス。「/」で始まる必要があり、「/」で終わる必要はありません。 パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。。 |
 | `xdm:destinationSchema` | この記述子が関係を定義する参照スキーマの `$id` URI。 |
 | `xdm:destinationVersion` | 参照スキーマのメジャーバージョン。 |
-| `xdm:destinationProperty` | 参照スキーマ内のターゲットフィールドへのオプションのパス。 このプロパティを省略すると、ターゲットフィールドは、対応する参照 ID 記述子（以下を参照）を含むフィールドによって推論されます。 |
+| `xdm:destinationProperty` | （オプション）参照スキーマ内のターゲットフィールドへのパス。 このプロパティを省略すると、ターゲットフィールドは、対応する参照 ID 記述子（以下を参照）を含むフィールドによって推論されます。 |
+
+{style="table-layout:auto"}
+
+##### B2B 関係記述子 {#B2B-relationship-descriptor}
+
+Real-Time CDP B2B editionでは、スキーマ間の関係を定義する別の方法が導入されており、多対 1 の関係が可能になります。 この新しい関係のタイプは `@type: xdm:descriptorRelationship` である必要があり、ペイロードには `@type: xdm:descriptorOneToOne` の関係よりも多くのフィールドを含める必要があります。 詳しくは、[B2B editionのスキーマ関係の定義 ](../tutorials/relationship-b2b.md) に関するチュートリアルを参照してください。
+
+```json
+{
+   "@type": "xdm:descriptorRelationship",
+   "xdm:sourceSchema" : "https://ns.adobe.com/{TENANT_ID}/schemas/9f2b2f225ac642570a110d8fd70800ac0c0573d52974fa9a",
+   "xdm:sourceVersion" : 1,
+   "xdm:sourceProperty" : "/person-ref",
+   "xdm:destinationSchema" : "https://ns.adobe.com/{TENANT_ID/schemas/628427680e6b09f1f5a8f63ba302ee5ce12afba8de31acd7",
+   "xdm:destinationVersion" : 1,
+   "xdm:destinationProperty": "/personId",
+   "xdm:destinationNamespace" : "People", 
+   "xdm:destinationToSourceTitle" : "Opportunity Roles",
+   "xdm:sourceToDestinationTitle" : "People",
+   "xdm:cardinality": "M:1"
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `@type` | 定義する記述子のタイプ。 以下のフィールドを使用する場合、値は `xdm:descriptorRelationship` に設定する必要があります。 その他のタイプについて詳しくは、[ 関係記述子 ](#relationship-descriptor) の節を参照してください。 |
+| `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
+| `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
+| `xdm:sourceProperty` | 関係を定義するソーススキーマ内のフィールドのパス。「/」で始まる必要があり、「/」で終わる必要はありません。 パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。。 |
+| `xdm:destinationSchema` | この記述子が関係を定義する参照スキーマの `$id` URI。 |
+| `xdm:destinationVersion` | 参照スキーマのメジャーバージョン。 |
+| `xdm:destinationProperty` | （オプション）参照スキーマ内のターゲットフィールドへのパス。これは、スキーマのプライマリ ID である必要があります。 このプロパティを省略すると、ターゲットフィールドは、対応する参照 ID 記述子（以下を参照）を含むフィールドによって推論されます。 |
+| `xdm:destinationNamespace` | 参照スキーマからのプライマリ ID の名前空間。 |
+| `xdm:destinationToSourceTitle` | 参照スキーマからソーススキーマへの関係の表示名。 |
+| `xdm:sourceToDestinationTitle` | ソーススキーマから参照スキーマへの関係の表示名。 |
+| `xdm:cardinality` | スキーマ間の結合関係。 この値は、多対 1 の関係を参照して、`M:1` に設定する必要があります。 |
 
 {style="table-layout:auto"}
 
