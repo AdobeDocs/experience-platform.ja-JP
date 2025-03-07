@@ -3,9 +3,9 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4374'
+source-wordcount: '4405'
 ht-degree: 51%
 
 ---
@@ -64,18 +64,18 @@ CSV ファイルの書き出しでは、書き出したファイルの構造を�
 接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
 * **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/audience-portal.md#import-audience) に関するドキュメントを参照してください。
+* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/audience-portal.md#import-audience) に関するドキュメントを参照してください。 **[!UICONTROL カスタムアップロード]** からオーディエンスを選択すると、[ エンリッチメント属性を選択 ](#select-enrichment-attributes) 手順が自動的に有効になります。
 * その他のタイプのオーディエンス。他のAdobe ソリューション（[!DNL Audience Manager] など）から派生します。
+
+>[!IMPORTANT]
+>
+>バッチファイルベースの宛先に対してカスタムアップロードオーディエンスをアクティブ化する場合、データフローでアクティブ化できるオーディエンスは 10 個に制限されています。
 
 ![ アクティブ化する 1 つ以上のオーディエンスを選択する際に表示されるチェックボックス。](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->**[!UICONTROL カスタムアップロード]** からオーディエンスを選択すると、[ エンリッチメント属性を選択 ](#select-enrichment-attributes) 手順が自動的に有効になります。
-
->[!TIP]
->
->**[!UICONTROL アクティベーションデータ]** ページで、既存のアクティベーションフローからオーディエンスを削除できます。 詳しくは、[ 専用ドキュメント ](../ui/destination-details-page.md#bulk-remove) を参照してください。
+>既存のアクティベーションフローからオーディエンスを削除するには、**[!UICONTROL アクティベーションデータ]** ページを使用します。 詳しくは、[ アクティベーションフローから複数のオーディエンスを削除する ](../ui/destination-details-page.md#bulk-remove) 方法に関する節を参照してください。
 
 ## オーディエンスの書き出しのスケジュール {#scheduling}
 

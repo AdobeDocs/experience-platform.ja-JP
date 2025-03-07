@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: データアクティベーションのデフォルトの使用方法とレート制限について詳しく説明します。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 49%
+source-wordcount: '1718'
+ht-degree: 48%
 
 ---
 
@@ -76,6 +76,7 @@ ht-degree: 49%
 | アクティベーションの頻度 | 1 日に 1 回、またはより頻繁な 3 時間、6 時間、8 時間、12 時間ごとに 1 回の増分書き出しを行います。 | システムに適用されたガードレール | バッチ書き出しの増分頻度について詳しくは、[完全ファイルの書き出し](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)および[増分ファイルの書き出し](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)ドキュメントの節を参照してください。 |
 | 特定の時間に書き出せるオーディエンスの最大数 | 100 | パフォーマンスガードレール | バッチ宛先データフローに最大 100 個のオーディエンスを追加することをお勧めします。 |
 | アクティベートするファイルあたりの最大行数（レコード数） | 500 万 | システムに適用されたガードレール | Adobe Experience Platform は、書き出したファイルを、ファイルあたり 500 万件のレコード（行）で自動的に分割します。各行は 1 つのプロファイルを表します。`filename.csv`、`filename_2.csv`、`filename_3.csv` のように、分割ファイル名には、ファイルが大きな書き出しの一部であることを示す数字が付加されます。詳しくは、「バッチの宛先をアクティベート」チュートリアルの[スケジュールの節](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)を参照してください。 |
+| データフローでアクティブ化するカスタムアップロードオーディエンスの最大数 | 10 | システムに適用されたガードレール | バッチファイルベースの宛先に対して [ カスタムアップロードオーディエンス ](/help/segmentation/ui/audience-portal.md#import-audience) をアクティブ化する場合、データフローでアクティブ化できるオーディエンスは 10 個に制限されています。 詳しくは、ワークフロー [ バッチファイルベースの宛先に対するカスタムアップロードオーディエンスの有効化 ](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences) を参照してください。 |
 
 {style="table-layout:auto"}
 
