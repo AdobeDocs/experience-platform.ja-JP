@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;スキーマ;XDM;�
 title: IdentityMap スキーマフィールドグループ
 description: XDM Individual Profile クラスについて説明します。
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: cfa3e5c6811f148376a2d2012f5687be6fad2299
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 76%
+source-wordcount: '152'
+ht-degree: 63%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 76%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL IdentityMap] は、[[!DNL XDM Individual Profile] クラス](../../classes/individual-profile.md)の標準スキーマフィールドグループです。 フィールドグループは単一のマップフィールドを提供します。これには、名前空間でキー設定された一連のユーザー ID が含まれます。
+[!UICONTROL IdentityMap] は、[[!UICONTROL XDM ExperienceEvent] クラスの標準スキーマフィールドグループで ](../../classes/experienceevent.md)[[!UICONTROL XDM Individual Profile] クラス ](../../classes/individual-profile.md) の互換性のあるフィールドグループです。 フィールドグループは単一のマップフィールドを提供します。これには、名前空間でキー設定された一連のユーザー ID が含まれます。
 
 ![[!UICONTROL IdentityMap] スキーマフィールドグループの図 ](../../images/field-groups/identitymap.png)
 
