@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;ソース;コネ�
 title: Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
 description: Platform UI を使用してAdobe Experience PlatformをAdobe Campaign Managed Cloud Servicesに接続する方法について説明します。
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
+source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 45%
+source-wordcount: '1233'
+ht-degree: 43%
 
 ---
 
@@ -30,7 +30,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。また、検索バーを使用して、表示されるソースを絞り込むこともできます。
 
-**[!UICONTROL Adobeアプリケーション]** カテゴリで、「**[!UICONTROL Adobe Campaign Managed Cloud Services」を選択し]** 「**[!UICONTROL データを追加]**」を選択します。
+**[!UICONTROL Adobe アプリケーション]** カテゴリで、「**[!UICONTROL Adobe Campaign Managed Cloud Services」を選択し]** 「**[!UICONTROL データを追加]**」を選択します。
 
 ![Adobe Campaign Managed Cloud Servicesカードを表示しているソースカタログ ](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -136,6 +136,12 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 また、このページには、データフローのメタデータの説明を更新したり、部分取り込みやエラー診断を有効にしたり、データセットに新しいデータを追加したりするためのインターフェイスも用意されています。
 
 ![ 選択したデータセットの取り込み率を表すグラフを備えたインターフェイス。](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>古いイベントログをAdobe Campaign Managed Cloud Services ソースでバックフィルすることはできません。 バックフィルが必要な場合は、カスタムワークフローまたはカスタム実装を使用して、Amazon S3 または Azure Blob にデータを書き出すか、Amazon S3 または Azure Blob からAdobe Experience Platform データセットにデータを書き出します。
+
 
 ## 次の手順
 
