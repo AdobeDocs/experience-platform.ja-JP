@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '684'
-ht-degree: 12%
+ht-degree: 20%
 
 ---
 
@@ -189,8 +189,8 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="ポリシーとは"
->abstract="ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを確立するステートメントです。すべての組織には、ラベルに基づいて特定のオブジェクトへのアクセスの制御を開始するためにアクティブ化する必要がある、デフォルトのポリシーがあります。 リソースに適用されたラベルは、ラベルが一致する役割にユーザーが割り当てられていない限り、アクセスを拒否します。 デフォルトのポリシーは、編集または削除できませんが、アクティブ化または非アクティブ化は可能です。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="ラベルの管理"
+>abstract="ポリシーとは、属性を統合して、許容されるアクションと許容されないアクションを確立するステートメントです。どの組織にもデフォルトのポリシーがあります。このポリシーをアクティブ化して、ラベルに基づいて特定のオブジェクトへのアクセスの制御を開始する必要があります。リソースに適用されたラベルは、ラベルが一致する役割にユーザーが割り当てられていない限り、アクセスを拒否します。デフォルトのポリシーは編集または削除できませんが、有効または無効にすることはできます。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/permissions-ui/labels" text="ラベルの管理"
 
 既存のポリシーをアクティブにするには、「**[!UICONTROL ポリシー]**」タブをクリックします。
 

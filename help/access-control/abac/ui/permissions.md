@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 39%
+ht-degree: 45%
 
 ---
 
@@ -123,8 +123,8 @@ ht-degree: 39%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="API 資格情報とは"
->abstract="API 資格情報は役割に割り当てられ、ユーザーと開発者に Platform API へのアクセスを許可します。 Platform API を使用すると、計算属性の設定、データやエンティティへのアクセス、データのエクスポート、不要なデータやバッチの削除など、データに対する基本的な CRUD （作成、読み取り、更新、削除）操作をプログラムで実行できます。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API ガイド"
+>abstract="API 資格情報は、ユーザーと開発者に Platform API へのアクセス権を付与する役割に割り当てられます。Platform API を使用すると、計算属性の設定、データ／エンティティへのアクセス、データの書き出し、不要なデータやバッチの削除など、データに対する基本的な CRUD（作成、読み取り、更新、削除）操作をプログラムで実行できます。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API ガイド"
 
 >[!IMPORTANT]
 >
@@ -159,8 +159,8 @@ API 資格情報を役割から削除するには、API 資格情報名の横に
 >[!CONTEXTUALHELP]
 >id="platform_permissions_usergroups_about"
 >title="ユーザーグループとは"
->abstract="ユーザーグループは、同じ機能へのアクセス権を共有する複数のユーザーの集まりです。 組織内のリソースへのアクセスは、ユーザーグループに割り当てられた役割を通じて管理されます。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="役割の管理"
+>abstract="ユーザーグループは、同じ機能へのアクセス権を共有する複数のユーザーのコレクションです。組織内のリソースへのアクセスは、ユーザーグループに割り当てられた役割を通じて管理されます。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/permissions-ui/roles" text="役割の管理"
 
 ユーザーグループとは、同じ機能を実行するためのアクセス権を持つ、グループ化された複数のユーザーのことです。
 

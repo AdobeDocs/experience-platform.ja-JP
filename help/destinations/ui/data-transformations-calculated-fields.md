@@ -1,21 +1,21 @@
 ---
-title: 計算フィールドを使用して、クラウドストレージの宛先に書き出されたデータの変換を実行
+title: 計算フィールドを使用したクラウドストレージの宛先への書き出されたデータの変換の実行
 type: Tutorial
 description: 計算フィールド機能を使用して、クラウドストレージの宛先に書き出されたデータに対して変換を実行する方法を説明します
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
 source-wordcount: '1595'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
-# 計算フィールドを使用して、クラウドストレージの宛先に書き出されたデータの変換を実行 {#data-transformation-calculated-fields}
+# 計算フィールドを使用したクラウドストレージの宛先への書き出されたデータの変換の実行 {#data-transformation-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="計算フィールドを追加"
->abstract="<p>**計算フィールドを追加** コントロールを使用して、クラウドストレージの宛先に書き出されたデータに対して様々なデータ変換を実行します。 例えば、データにハッシュ化を適用したり、配列を文字列に連結したりできます。"
+>abstract="<p>**計算フィールドを追加**&#x200B;コントロールを使用して、クラウドストレージの宛先に書き出されたデータに対して様々なデータ変換を実行します。 例えば、データにハッシュを適用したり、配列を文字列に連結したりできます。"
 
 <!--
 
@@ -47,7 +47,7 @@ disable additional URLs for a while
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="階層出力スキーマの有効化"
->abstract="この設定をオンに切り替えると、配列、マップ、オブジェクトを JSON ファイルまたは Parquet ファイルに書き出すことができます。"
+>abstract="この設定をオンに切り替えると、配列、マップ、オブジェクトを JSON または Parquet ファイルに書き出すことができます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"

@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
 source-wordcount: '1678'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -67,7 +67,7 @@ API を使用したセグメント定義の作成について詳しくは、[API
 >id="platform_segments_evaluation_streaming"
 >title="ストリーミング評価"
 >abstract="ストリーミングセグメント化は、ユーザーアクティビティに応じてオーディエンスを更新する継続的なデータ選択プロセスです。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="ストリーミングセグメント化を使用してほぼリアルタイムでイベントを評価する"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=ja" text="ストリーミングセグメント化を使用してほぼリアルタイムでイベントを評価する"
 
 Platform では、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのオーディエンス評価方法をサポートしています。
 
@@ -94,7 +94,7 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 >id="platform_segments_evaluation_edge"
 >title="エッジ評価"
 >abstract="エッジセグメント化は、 Platform のセグメントを Edge Network 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Edge セグメントガイド"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=ja" text="エッジセグメント化ガイド"
 
 Edgeのセグメント化は、Platform 内のセグメントを [Edge Network上で ](../landing/edge-and-hub-comparison.md) 瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
 

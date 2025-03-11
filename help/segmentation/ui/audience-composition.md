@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
 source-wordcount: '2344'
-ht-degree: 64%
+ht-degree: 79%
 
 ---
 
@@ -49,12 +49,12 @@ ht-degree: 64%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="オーディエンスブロック"
->abstract="オーディエンス ブロックを使用すると、新しいオーディエンスの作成に使用するサブオーディエンスを追加できます。"
+>abstract="オーディエンスブロックを使用すると、新しいオーディエンスの作成に使用するサブオーディエンスを追加できます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
 >title="結合タイプ"
->abstract="結合タイプによって、選択したサブオーディエンスの結合方法が決まります。 サポートされている値には、和集合、積集合、重複を除外などがあります。"
+>abstract="結合タイプによって、選択したサブオーディエンスの結合方法が決まります。サポートされている値には、和集合、積集合、重複を除外が含まれます。"
 
 **[!UICONTROL オーディエンス]** ブロックタイプを使用すると、より大きな新しいオーディエンスの作成に使用するサブオーディエンスを追加できます。 デフォルトでは、**[!UICONTROL オーディエンス]**&#x200B;ブロックは構成キャンバスの上部に含まれています。
 
@@ -97,7 +97,7 @@ ht-degree: 64%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rule_builder"
 >title="セグメントビルダー"
->abstract="セグメントビルダーを使用して、コンポジションにカスタムルールを追加できます。"
+>abstract="セグメントビルダーを使用して、構成にカスタムルールを追加できます。"
 
 オーディエンスブロックにカスタムルールを追加するには、「**[!UICONTROL ルールを作成]**」を選択します。
 
@@ -116,12 +116,12 @@ ht-degree: 64%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
 >title="ブロックを除外"
->abstract="除外ブロックを使用すると、指定したオーディエンスまたは属性をコンポジションから除外できます。"
+>abstract="「ブロックを除外」を使用すると、指定したオーディエンスまたは属性を構成から除外できます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
 >title="除外タイプ"
->abstract="特定のオーディエンスに属するプロファイルを除外（オーディエンス別に除外）するか、特定の属性に基づいてプロファイルを除外（属性別に除外）できます。"
+>abstract="特定のオーディエンスに属するプロファイルを除外（オーディエンス別に除外）するか、特定の属性に基づいてプロファイルを除外（属性別に除外）することができます。"
 
 **[!UICONTROL 除外]** ブロックタイプを使用すると、指定したサブオーディエンスまたは属性を、より大きな新しいオーディエンスから除外できます。
 
@@ -152,7 +152,7 @@ ht-degree: 64%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_attribute"
 >title="属性別に除外"
->abstract="属性別に除外する場合は、選択した属性に基づいて、特定のプロファイルをコンポジションに表示から除外できます。"
+>abstract="属性別に除外すると、選択した属性に基づいて、特定のプロファイルが構成に表示されないように除外できます。"
 
 属性別に除外する場合は、「除外ルール」セクションにある ![ フィルター ](/help/images/icons/project-edit.png) アイコンを選択することで、除外する属性を選択でき **[!UICONTROL す]**。 属性を除外すると、この属性を含むプロファイルを結果のオーディエンスから除外できます。
 
@@ -170,23 +170,23 @@ ht-degree: 64%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich"
->title="ブロックのエンリッチメント"
+>title="エンリッチメントブロック"
 >abstract="エンリッチメントブロックを使用すると、Adobe Experience Platform データセットから取得した追加の属性でオーディエンスを強化できます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dataset"
 >title="エンリッチメントデータセット"
->abstract="エンリッチメントデータセットには、コンポジションに関連付けるデータが含まれています。"
+>abstract="エンリッチメントデータセットには、構成に関連付けるデータが含まれます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_criteria"
 >title="エンリッチメント条件"
->abstract="エンリッチメント条件には、Source結合キーとエンリッチメントデータセット結合キーが含まれます。 これらの 2 つのキーは、ソースデータセットとエンリッチメントデータセットを紐付けします。"
+>abstract="エンリッチメント条件には、ソース結合キーとエンリッチメントデータセット結合キーが含まれます。 これらの 2 つのキーは、ソースデータセットとエンリッチメントデータセットを紐付けます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_attributes"
 >title="エンリッチメント属性"
->abstract="エンリッチメント属性は、コンポジションに関連付ける属性です。"
+>abstract="エンリッチメント属性は、構成に関連付ける属性です。"
 
 >[!IMPORTANT]
 >
@@ -263,7 +263,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
 >title="ランクブロック"
->abstract="ランク ブロックを使用すると、特定の属性に基づいてプロファイルをランク付けし、コンポジションに含めることができます。"
+>abstract="ランクブロックを使用すると、特定の属性に基づいてプロファイルをランク付けし、構成に含めることができます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rank_profilelimit_text"
@@ -298,18 +298,18 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
->title="ブロックの分割"
->abstract="分割ブロックを使用すると、コンポジションを複数のパスに分割できます。"
+>title="ブロックを分割"
+>abstract="「ブロックを分割」を使用すると、構成を複数のパスに分割できます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_type"
 >title="分割タイプ"
->abstract="コンポジションは、パーセント分割または属性分割で分割できます。 パーセント分割は、プロファイルを複数のパスにランダムに分割します。 属性分割を使用すると、指定した属性に基づいてプロファイルを分割できます。"
+>abstract="構成は、割合の分割または属性の分割で分割できます。割合の分割は、プロファイルを複数のパスにランダムに分割します。属性の分割を使用すると、特定の属性に基づいてプロファイルを分割できます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="その他のプロファイル"
->abstract="「その他のプロファイル」切替スイッチを使用すると、他のパスで指定した条件に一致しない残りのプロファイルと共に、追加のパスを作成できます。"
+>abstract="「その他のプロファイル」切替スイッチを使用すると、他のパスで指定された条件に一致しない残りのプロファイルと共に、追加のパスを作成できます。"
 
 **[!UICONTROL 分割]**&#x200B;ブロックタイプを使用すると、新しいオーディエンスを様々なサブオーディエンスに分割できます。オーディエンスは、割合に基づいて分割したり、属性別に分割したりできます。
 
@@ -328,8 +328,8 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
->title="持続的分割"
->abstract="このオプションを有効にして ID 名前空間を選択することで、パーセンテージ分割を永続的にすることができます。"
+>title="永続的分割"
+>abstract="このオプションを有効にして ID 名前空間を選択することで、割合の分割を永続的にすることができます。"
 
 割合で分割する場合、オーディエンスは、指定されたパスの数と割合に基づいてランダムに分割されます。
 
@@ -362,7 +362,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_publish"
 >title="公開"
->abstract="コンポジションを公開して、結果のオーディエンスをAdobe Experience Platformに作成できます。"
+>abstract="構成を公開して、結果のオーディエンスを Adobe Experience Platform で作成できます。"
 
 >[!IMPORTANT]
 >

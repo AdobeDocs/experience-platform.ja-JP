@@ -6,17 +6,17 @@ exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
-# ユーザー管理 {#manage-users}
+# ユーザーの管理 {#manage-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_users_about"
 >title="ユーザーとは"
->abstract="ユーザーは、Experience Platformにアクセスできる個人です。 個々のユーザーによる組織のリソースへのアクセスは、役割を通じて管理されます。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="役割の管理"
+>abstract="ユーザーは、Experience Platform へのアクセス権が付与された個人です。個々のユーザーの組織のリソースへのアクセスは、役割を通じて管理されます。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/permissions-ui/roles" text="役割の管理"
 
 ユーザーの詳細と割り当てられた役割を表示する場合は、「**[!UICONTROL ユーザー]**」タブを選択します。
 
