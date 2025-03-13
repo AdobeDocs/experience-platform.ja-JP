@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: ユースケース用 AI アシスタント – 独自のプレイブックを作成して共有します。
+title: AI アシスタントを使用して独自のプレイブックを作成および共有する方法について説明します。
 description: 独自のユースケースプレイブックを作成および共有する方法。
 role: User
-source-git-commit: f813db7599409a8fc048480f7803ed86c9f397fe
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
+source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
 
-
 # 独自のプレイブックの作成と共有
 
-Adobeの AI アシスタントを活用した **プレイブックオーサリングフレームワーク** を使用すると、プレイブックをAdobe Experience Platform内で効率的に作成、管理および共有できます。
+Adobe Experience Platformの AI アシスタントを活用した [!DNL Playbook Authoring Framework] を使用すると、Adobe Experience Platform内でプレイブックを効率的に作成、管理、共有できます。
 
 このフレームワークは、次の 3 つの手順で構成されます。
 
@@ -23,35 +23,33 @@ Adobeの AI アシスタントを活用した **プレイブックオーサリ�
 
 3. **プレイブックの配布**：様々な組織でプレイブックを共有します。 例えば、ドイツの ACME の Martech Center of Excellence では、「ゴールデン」プレイブックを作成して、タイやオーストラリアなどの地域組織に配布できます。 マーケティングユースケースの標準化に役立ちます。
 
-## Adobeの AI アシスタントを使用したプレイブックの作成
+## プレイブックの作成
+
+プレイブックは、AI アシスタントを使用する方法と手動で作成する方法の 2 つで作成できます。 方法については、次の節を参照してください。
 
 ### プレイブックの概要
 
-プレイブックは、Adobeの AI アシスタントを使用するか、手動で作成するという 2 つの方法で作成できます。
+AI アシスタントでプレイブックを作成するには、次の手順に従います。
 
-Adobeの AI アシスタントを使用してプレイブックを作成するには、次の手順に従います。
-
-1. 左側のナビゲーションペインで、「**プレイブック**」を選択します。
+左側のナビゲーションパネルで、「**[!UICONTROL プレイブック]**」を選択します。
 
 ![UI の左側のナビゲーションパネルでハイライト表示された「プレイブック」 ](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. **新しいプレイブック** を選択し、次に **AI アシスタントでプレイブックを生成** を選択します。
+**[!UICONTROL 新しいプレイブック]** を選択し、次に **AI アシスタントでプレイブックを生成** を選択します。
 
-![ 「新しいプレイブック」ボタンを選択します。](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![ 「AI アシスタントでプレイブックを生成」が選択されているプレイブックインターフェイス ](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![ 「AI アシスタントでプレイブックを生成」ボタンがハイライト表示されていることを選択します。](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. 「プロンプト」フィールドで、ユースケースを説明します。
+「プロンプト」フィールドで、ユースケースを説明します。
 
 **例**:「ランニングシューズを閲覧したが購入を完了しなかった ACME 顧客を惹きつける。」
 
-![ 「AI アシスタントでプレイブックを生成」ボタンを選択します。](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![Web フォーム領域がハイライト表示されたプレイブックインターフェイス。](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. 「**生成**」を選択して、プレイブックのメタデータを作成します。
+「**[!UICONTROL 生成]**」を選択して、プレイブックのメタデータを作成します。
 
 ![ 「プレイブックを生成」ボタンがハイライト表示されたプロンプト領域 ](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. 生成したら、「**[!UICONTROL 編集]**」を選択して、生成されたタイトル、説明およびメタデータを必要に応じて変更できます。
+生成したら、「**[!UICONTROL 編集]**」を選択して、生成されたタイトル、説明およびメタデータを必要に応じて変更できます。
 
 ![ 「編集」ボタンがハイライト表示された生成されたプレイブック。](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -63,15 +61,13 @@ Adobeの AI アシスタントを使用してプレイブックを作成する�
 
 ![ 「編集」ボタンがハイライト表示されたプレイブックの詳細セクション。](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-メタデータが生成されたら、「**ジャーニーマップを編集**」ボタンを選択して、必要に応じてジャーニーマップの手順を調整します。
+メタデータを生成したら、「**[!UICONTROL ジャーニーマップを編集]** を選択して、必要に応じてジャーニーマップの手順を調整します。
 
 ![ 「ジャーニーマップを編集」ボタン ](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![ プレイブックのメタデータを取得したら、ジャーニーマップを編集します。](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-次に、プレイブックをテクニカルアセットに関連付けます。
-
-プレイブックを手動で作成するには、「**プレイブックを手動で作成**」を選択します。
+次に、プレイブックをテクニカルアセットに関連付けます。 プレイブックを手動で作成するには、「**[!UICONTROL プレイブックを手動で作成]**」を選択します。
 
 ![ プレイブックを手動で作成 ](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -83,7 +79,7 @@ Adobeの AI アシスタントを使用してプレイブックを作成する�
 
 >[!NOTE]
 >
-> Real-Time Customer Data Platformのサポートは、今後のリリースで追加される予定です。
+> Real-Time CDPのサポートは、今後のリリースで追加される予定です。
 
 ![ 「テクニカルアセット」タブと「必要な製品を追加」ボタンがハイライト表示されています。](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
@@ -162,4 +158,4 @@ AI アシスタントは、「プロジェクト名」や「背景」などの�
 
 ## 次の手順
 
-これで、Adobeの AI アシスタントを使用してプレイブックを作成して公開する方法を理解したので、使用可能なプレイブックの使用を開始する方法を説明し、ユースケースに適したプレイブックリストを選択します [ プレイブックリスト ](/help/use-case-playbooks/playbooks/choose.md)。
+これで、AI アシスタントを使用してプレイブックを作成および公開する方法を理解したので、使用可能なプレイブックの使用を開始する方法を説明し、ユースケースに適したものを [ プレイブックリスト ](/help/use-case-playbooks/playbooks/choose.md) から選択します。
