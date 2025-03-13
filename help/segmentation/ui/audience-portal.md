@@ -2,10 +2,10 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
+source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
 workflow-type: tm+mt
-source-wordcount: '4597'
-ht-degree: 54%
+source-wordcount: '4609'
+ht-degree: 52%
 
 ---
 
@@ -113,9 +113,9 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 
 | ステータス | 説明 |
 | ------ | ----------- |
-| [!UICONTROL 実現済み] | 前回バッチセグメントジョブを実行してから過去 24 時間に、セグメントに&#x200B;**選定**&#x200B;されたプロファイルの数です。 |
-| [!UICONTROL 既存] | 前回バッチセグメントジョブを実行してから過去 24 時間に、セグメントに&#x200B;**残って**&#x200B;いたプロファイルの数です。 |
-| [!UICONTROL 離脱] | 前回バッチセグメントジョブを実行してから過去 24 時間に、セグメントから&#x200B;**離脱**&#x200B;したプロファイルの数です。 |
+| [!UICONTROL 実現済み] | 前回バッチセグメントジョブを実行してから過去 24 時間に、オーディエンスに対して **選定** されたプロファイルの数です。 |
+| [!UICONTROL 既存] | 前回バッチセグメントジョブを実行してから過去 24 時間に、オーディエンスで **残って** いた）プロファイルの数です。 このフィールドは **計算済み** で、`segmentMembership` オブジェクトには表示されません。 |
+| [!UICONTROL 離脱] | 前回バッチセグメントジョブを実行してから過去 24 時間に **オーディエンスを離脱** したプロファイルの数です。 |
 
 表示するフィールドを選択した後で、表示される列の幅を変更することもできます。 サイズを変更するには、列間の領域をドラッグするか、サイズを変更する列の ![ 矢印アイコン ](/help/images/icons/chevron-down.png) を選択してから **[!UICONTROL 列のサイズ変更]** を選択します。
 
@@ -414,7 +414,7 @@ abstract="毎日のスケジュール済みアップデートに、バッチセ�
 
 ### 連合オーディエンス構成 {#fac}
 
-オーディエンスコンポジションとセグメント定義に加えて、AdobeFederated Audience コンポジションを使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
+オーディエンスの構成とセグメントの定義に加えて、Adobe Federated Audience Composition を使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
 
 ![ 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
 
