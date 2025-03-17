@@ -2,12 +2,12 @@
 keywords: IP アドレス、IP 範囲、許可リスト許可リストに加える 許可リストに加えるの宛先、
 title: ストリーミング宛先の IP アドレス許可リスト
 type: Documentation
-description: このページでは、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesisまたは Azure Event Hubs インスタンスにデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
+description: このページでは、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesis または Azure Event Hubs インスタンスにデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 9%
+source-wordcount: '307'
+ht-degree: 8%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
-> * Adobeでは、このページをブックマークに追加し、3 か月ごとに再訪問して最新の IP アドレスを確認することをお勧めします。 Adobeは新しい IP 範囲を通知しません。
+> * Adobeでは、このページをブックマークに追加し、3 か月ごとに再訪問して最新の IP アドレスを確認することをお勧めします。 Adobeは新しい IP 範囲の通知を行いません。
 > * ここで説明する IP のリストは、[[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md) を使用して作成するすべての宛先に適用されます *適用されません*。
 
 ## 概要 {#overview}
@@ -32,7 +32,7 @@ Experience Platformからこれらの宛先への送信トラフィックは、�
 
 ネットワークファイアウォールを介して、ネットワークアクセス制御を定義できます。 適切な IP 範囲を指定することで、データ転送サービスのトラフィックを許可できます。
 
-Adobeでは、このページで前述の宛先を使用する前に、次の IP 範囲を許可リストに追加することをお勧めします。 地域固有の IP 範囲を許可リストに追加しないと、これらのストリーミング宛先を使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
+Adobeでは、上記の宛先を使用する前に、次の IP 範囲を許可リストに追加することをお勧めします。 地域固有の IP 範囲を許可リストに追加しないと、これらのストリーミング宛先を使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
 
 ## VA7：米国およびアメリカのお客様 {#us-americas}
 
@@ -57,6 +57,12 @@ Adobeでは、このページで前述の宛先を使用する前に、次の IP
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+
+## VA6:AWSで稼働する米国およびアメリカのお客様 {#aws}
+
+以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 ](../../../landing/multi-cloud.md) を参照してください。
+
+`66.117.18.0/24`
 
 ## NLD2: EMEA のお客様 {#emea}
 

@@ -1,12 +1,12 @@
 ---
 title: ファイルベースのクラウドストレージの宛先の IP アドレスの許可リスト
 type: Documentation
-description: このページでは、Experience Platformからクラウドストレージの宛先にデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
+description: このページでは、Experience Platformからクラウドストレージの宛先に安全にデータを書き出すために、許可リストに追加できる IP 範囲を提供します。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 6%
+source-wordcount: '299'
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
-> * Adobeでは、このページをブックマークに追加し、3 か月ごとに再訪問して最新の IP アドレスを確認することをお勧めします。 Adobeは新しい IP 範囲を通知しません。
+> * Adobeでは、このページをブックマークに追加し、3 か月ごとに再訪問して最新の IP アドレスを確認することをお勧めします。 Adobeは新しい IP 範囲の通知を行いません。
 > * Adobeでは SFTP サーバーへのデータの書き出しをサポートしていますが、データを書き出す際に推奨されるクラウドストレージの場所は [!DNL Amazon S3] と [!DNL Azure Blob] です。
 
 ## 適用性 {#applicability}
@@ -31,7 +31,7 @@ ht-degree: 6%
 
 ## 概要 {#overview}
 
-このページでは、Experience Platformから複数のクラウドストレージの宛先にデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
+このページでは、Experience Platformから複数のクラウドストレージの宛先に安全にデータを書き出すために、許可リストに追加できる IP 範囲を提供します。
 
 ネットワークファイアウォールを介して、ネットワークアクセス制御を定義できます。 適切な IP 範囲を指定することで、データ転送サービスのトラフィックを許可できます。
 
@@ -40,6 +40,16 @@ Adobeでは、クラウドストレージの宛先接続を使用する前に、
 ## すべてのお客様に必須 {#all-customers}
 
 * `52.247.108.70`
+
+## AWSを使用している米国のお客様 {#aws}
+
+以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 ](../../../landing/multi-cloud.md) を参照してください。
+
+>[!NOTE]
+>
+>この IP 範囲は、AWSで稼動しているお客様がファイルベースの宛先を使用してAmazon S3 にデータを書き出す場合はサポートされません。
+
+* `66.117.18.0/24`
 
 ## 米国のお客様 {#us-customers}
 
