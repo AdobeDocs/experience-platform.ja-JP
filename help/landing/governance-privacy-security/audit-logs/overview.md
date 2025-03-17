@@ -4,7 +4,7 @@ description: 監査ログを使用して、Adobe Experience Platform で誰が�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 36%
@@ -89,7 +89,7 @@ Platform UI の **[!UICONTROL 監査]** ワークスペース内で、様々なE
 
 監査ログは、365 日間保持され、その後システムから削除されます。 365 日を超えるデータが必要な場合は、社内ポリシーの要件を満たすために定期的にログを書き出す必要があります。
 
-監査ログの要求方法によって、アクセスできる期間とレコード数が変わります。 [ ログの書き出し ](#export-audit-logs) を使用すると、365 日（90 日間隔）を最大 1,000 件のレコードまで遡ることができます。Experience Platformの [ アクティビティログ UI](#filter-audit-logs) には、過去 90 日から最大 1,000 件のレコードが表示されます。
+監査ログの要求方法によって、アクセスできる期間とレコード数が変わります。 [ ログの書き出し ](#export-audit-logs) を使用すると、365 日（90 日間隔）を遡って最大 10,000 件のレコードまで遡ることができます。Experience Platformの [ アクティビティログ UI](#filter-audit-logs) には、過去 90 日から最大 1,000 件のレコードが表示されます。
 
 リストからイベントを選択して、その詳細を右側のパネルに表示します。
 
