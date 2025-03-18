@@ -3,10 +3,10 @@ title: Real-Time CDPからクラウドストレージの宛先への配列、マ
 type: Tutorial
 description: Real-Time CDPからクラウドストレージの宛先に配列、マップ、オブジェクトを書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 15%
+source-wordcount: '862'
+ht-degree: 16%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->アレイをクラウドストレージの宛先に書き出す機能は、[[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md)、
+>配列やその他の複雑なオブジェクトをクラウドストレージの宛先に書き出す機能は、[[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md)、
 
-Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/catalog/cloud-storage/overview.md) に配列を書き出す方法を説明します。 このドキュメントでは、書き出しワークフロー、この機能で有効になるユースケース、既知の制限事項について説明します。
+Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/catalog/cloud-storage/overview.md) に配列、マップ、オブジェクトを書き出す方法を説明します。 このドキュメントでは、書き出しワークフロー、この機能で有効になるユースケース、既知の制限事項について説明します。
 
 配列、マップ、その他のオブジェクトタイプをExperience Platformから書き出す方法について知りたい場合は、このページを参照してください。
 
@@ -52,8 +52,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-様々な関数を使用して、配列の要素へのアクセス、配列の変換とフィルタリング、配列要素の文字列への結合などを行う方法については、後述の [ 広範な例 ](#examples) を参照してください。
 
 配列に加えて、Experience Platformから目的のクラウドストレージの宛先にマップやオブジェクトを書き出すこともできます。 詳しくは、Experience Platformの [ マップ ](/help/xdm/ui/fields/map.md) および [ オブジェクト ](/help/xdm/ui/fields/object.md) を参照してください。
 
