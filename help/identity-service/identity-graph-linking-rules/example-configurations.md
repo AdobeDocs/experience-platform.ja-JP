@@ -2,7 +2,7 @@
 title: グラフ設定の例
 description: ID グラフリンクルールと ID データを使用する際に発生する可能性のある一般的なグラフシナリオについて説明します。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '2796'
 ht-degree: 7%
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobeアカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
 
 >[!NOTE]
 >

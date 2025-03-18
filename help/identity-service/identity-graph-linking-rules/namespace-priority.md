@@ -2,7 +2,7 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobeアカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
 
 顧客の実装はすべて、特定の組織の目標を満たすようにカスタマイズされて一意です。そのため、特定の名前空間の重要性は、顧客によって異なります。 実際の例を次に示します。
 
@@ -82,7 +82,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 * 特定のサンドボックスの ID 設定を指定したら、エクスペリエンスイベントのプライマリ ID は、設定で最も高い名前空間の優先度によって決定されます。
    * これは、エクスペリエンスイベントが本質的に動的であるためです。 ID マップには 3 つ以上の ID を含めることができ、名前空間の優先度により、最も重要な名前空間がエクスペリエンスイベントに関連付けられます。
 * その結果、次の設定 **リアルタイム顧客プロファイルでは使用されなくなります**。
-   * Web SDK、モバイルSDK、Edge Networkサーバー API を使用して identityMap で ID を送信する場合のプライマリ ID 設定（`primary=true`）（ID 名前空間と ID 値は、引き続きプロファイルで使用されます）。 **メモ**：データレイクストレージやAdobe Targetなど、リアルタイム顧客プロファイル以外のサービスでは、引き続きプライマリ ID 設定（`primary=true`）を使用します。
+   * Web SDK、Mobile SDK、Edge Network Server API を使用して identityMap で ID を送信する場合のプライマリ ID 設定（`primary=true`）（ID 名前空間と ID 値は、引き続きプロファイルで使用されます）。 **メモ**：データレイクストレージやAdobe Targetなど、リアルタイム顧客プロファイル以外のサービスでは、引き続きプライマリ ID 設定（`primary=true`）を使用します。
    * XDM エクスペリエンスイベントクラススキーマでプライマリ ID としてマークされたすべてのフィールド。
    * Adobe Analytics ソースコネクタのデフォルトのプライマリ ID 設定（ECID または AAID）。
 * 一方、**名前空間の優先度は、プロファイルレコードのプライマリ ID を決定しません**。
@@ -141,9 +141,9 @@ John と Jane がデバイスを共有する場合、ECID （web ブラウザー
 
 セグメントの選定条件が ECID に対して保存された匿名イベントのみに基づいている場合、Jane はそのセグメントに適格となります
 
-## その他のExperience Platformサービスへの影響 {#implications}
+## 他のExperience Platform サービスへの影響 {#implications}
 
-この節では、名前空間の優先度が他のExperience Platformサービスに与える影響について説明します。
+この節では、名前空間の優先度が他のExperience Platform サービスに与える影響について説明します。
 
 ### 高度なデータ・ライフサイクル管理
 
@@ -162,7 +162,7 @@ ID 設定が有効な場合、計算済み属性は、名前空間の優先度�
 
 データレイクへのデータ取り込みは、引き続き [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) およびスキーマで設定されたプライマリ ID 設定に従います。
 
-データレイクは、名前空間の優先度に基づいてプライマリ ID を決定しません。 例えば、名前空間の優先度が有効になった後でも（新しい接続にデータセットを追加するなど）、Adobe Customer Journey Analyticsは ID マップ内で値を引き続き使用します。これは、Customer Journey Analyticsがデータレイクのデータを使用するからです。
+データレイクは、名前空間の優先度に基づいてプライマリ ID を決定しません。 例えば、Adobe Customer Journey Analyticsは、名前空間の優先順位が有効になった後でも（例えば、新しい接続にデータセットを追加した場合など）、ID マップで値を引き続き使用します。これは、Customer Journey Analyticsがデータレイクのデータを使用するからです。
 
 ### エクスペリエンスデータモデル（XDM）スキーマ
 
@@ -179,7 +179,7 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 
 この設定の結果、スコアは認証済みイベントを使用してのみ計算されます。
 
-詳しくは、[Attribution AI](../../intelligent-services/attribution-ai/overview.md) および [ 顧客 AI](../../intelligent-services/customer-ai/overview.md) に関するドキュメントを参照してください。
+詳しくは、[ アトリビューション AI](../../intelligent-services/attribution-ai/overview.md) および [ 顧客 AI](../../intelligent-services/customer-ai/overview.md) に関するドキュメントを参照してください。
 
 ### パートナーが作成した宛先
 
@@ -192,7 +192,7 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 
 ### Privacy Service
 
-[Privacy Service削除リクエスト ](../privacy.md) は、特定の ID に対して次のように機能します。
+[Privacy Service削除リクエスト ](../privacy.md) は、特定の id に対して次のように機能します。
 
 * リアルタイム顧客プロファイル：指定された ID 値をプライマリ ID として持つ、プロファイルフラグメントを削除します。 **プロファイルのプライマリ ID は、名前空間の優先度に基づいて決定されるようになりました。**
 * データレイク：指定した ID をプライマリまたはセカンダリ ID として持つレコードを削除します。

@@ -2,7 +2,7 @@
 title: ID グラフリンクルールのトラブルシューティングガイド
 description: ID グラフリンクルールに関するよくある問題のトラブルシューティング方法を説明します。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobeアカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
 
 ID グラフのリンクルールをテストおよび検証すると、データの取り込みとグラフの動作に関連する問題が発生する場合があります。 このドキュメントでは、ID グラフリンクルールを使用する際に発生する可能性のあるいくつかの一般的な問題のトラブルシューティング方法について説明します。
 
@@ -40,7 +40,7 @@ ID グラフのリンクルールをテストおよび検証すると、デー�
 
 >[!NOTE]
 >
->* この節では、データがデータレイクに正常に取り込まれたこと、およびデータがまずExperience Platformに取り込まれるのを妨げる構文またはその他のエラーがないことを前提としています。
+>* この節では、データがデータレイクに正常に取り込まれたこと、およびデータがまずExperience Platformに取り込まれるのを妨げる構文やその他のエラーがないことを前提としています。
 >
 >* これらの例では、ECID を cookie 名前空間として、CRMID をユーザー名前空間として使用しています。
 
@@ -128,7 +128,7 @@ ID グラフのリンクルールをテストおよび検証すると、デー�
 名前空間の優先度は、イベントフラグメントがプライマリ ID を決定する方法において重要な役割を果たします。
 
 * 特定のサンドボックスに対して [ID 設定 ](./identity-settings-ui.md) を設定および保存すると、プロファイルは [ 名前空間優先度 ](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) を使用してプライマリ ID を決定します。 identityMap の場合、プロファイルは `primary=true` フラグを使用しなくなります。
-* プロファイルではこのフラグは参照されなくなりますが、Experience Platform上の他のサービスでは引き続き `primary=true` フラグを使用する場合があります。
+* プロファイルはこのフラグを参照しなくなりますが、Experience Platform上の他のサービスは引き続き `primary=true` フラグを使用する場合があります。
 
 [ 認証済みユーザーイベント ](implementation-guide.md#ingest-your-data) をユーザー名前空間に結び付けるには、すべての認証済みイベントにユーザー名前空間（CRMID）が含まれている必要があります。 つまり、ユーザーがログインした後も、認証済みのすべてのイベントにユーザーの名前空間が引き続き存在する必要があります。
 
@@ -198,7 +198,7 @@ ID 最適化アルゴリズムは、[ 最近確立されたリンク ](./identit
 
 1. 送信された cookie 名前空間（ECID など）とユーザー名前空間（CRMID など）の ID 記号（namespaceCode）。
 1.1. Web SDK実装の場合、通常、identityMap に含まれる名前空間になります。
-1.2. Analytics ソースコネクタ実装の場合、これらは identityMap に含まれる Cookie 識別子です。 人物識別子は、ID としてマークされたeVarフィールドです。
+1.2. Analytics ソースコネクタ実装の場合、これらは identityMap に含まれる Cookie 識別子です。 人物識別子は、ID としてマークされたeVar フィールドです。
 2. イベントが送信されたデータセット （dataset_name）。
 3. 検索する cookie 名前空間の ID 値（identity_value）。
 
@@ -250,7 +250,7 @@ WHERE identitymap['ECID'][0].id ='identity_value'
 ORDER BY timestamp desc 
 ```
 
-**注意**：この例では、`eVar10` が ID としてマークされていることを前提としています。 設定に関しては、組織の実装に基づいてeVarを変更する必要があります。
+**注意**：この例では、`eVar10` が ID としてマークされていることを前提としています。 設定の場合、組織の実装に基づいてeVarを変更する必要があります。
 
 >[!ENDTABS]
 
@@ -373,7 +373,7 @@ ID ダッシュボードを使用すると、ID の数やグラフなど、ID �
 
 ### リアルタイム顧客プロファイルが identityMap で「プライマリ」フラグを使用しなくなった場合、この値を送信する必要がありますか？
 
-はい、identityMap の「プライマリ」フラグは他のサービスで使用されます。 詳しくは、のガイド [ 他のExperience Platformサービスにおける名前空間の優先度の影響 ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services) を参照してください。
+はい、identityMap の「プライマリ」フラグは他のサービスで使用されます。 詳しくは、のガイド [ 他のExperience Platform サービスにおける名前空間の優先度の影響 ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services) を参照してください。
 
 ### 名前空間の優先度は、リアルタイム顧客プロファイルのプロファイルレコードデータセットに適用されますか。
 

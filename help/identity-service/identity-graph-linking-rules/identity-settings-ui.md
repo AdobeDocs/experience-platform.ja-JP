@@ -2,10 +2,10 @@
 title: ID 設定 UI
 description: ID 設定ユーザーインターフェイスの使用方法を説明します。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: f2e2c094b42248369b4a59d0ad6f950e62e0a7c1
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 4%
+source-wordcount: '601'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,9 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
+>* ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
+>
+>* UI で ID 設定にアクセスするには、アカウントに **ID グラフの表示** 権限が必要です。 詳しくは、[ 属性ベースのアクセス制御における権限に関するガイド ](../../access-control/abac/ui/permissions.md) を参照してください。
 
 ID 設定は、Adobe Experience Platform ID サービス UI の機能で、一意の名前空間を指定し、名前空間の優先度を設定するために使用できます。
 
