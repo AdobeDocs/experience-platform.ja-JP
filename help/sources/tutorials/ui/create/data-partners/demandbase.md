@@ -3,10 +3,11 @@ title: UI を使用した Demandbase Intent のExperience Platformへの接続
 description: Demandbase Intent をExperience Platformに接続する方法を学ぶ
 hide: true
 hidefromtoc: true
-source-git-commit: 81a615b9826ed69bb050cae9c074a4e457ba128a
+exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
+source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 28%
+ht-degree: 53%
 
 ---
 
@@ -43,13 +44,13 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_domain"
 >title="ドメインソース"
->abstract="Adobeは XDM accountOrganization.website を使用しますが、一部のお客様は各 web サイトのカスタムフィールドを使用している場合があります。 したがって、ドメインソースが、Experience Platform アカウントに対する Demandbase アカウントレコードと一致するドメイン/web サイトフィールドであることを確認する必要があります。"
+>abstract="アドビでは XDM accountOrganization.website を使用していますが、各 Web サイトにカスタムフィールドを使用しているお客様が存在する場合があります。したがって、ドメインソースが Demandbase アカウントレコードを Experience Platform アカウントと一致させるドメイン／web サイトフィールドであることを確認する必要があります。"
 
-## データフローのスケジュール設定 {#schedule-dataflow}
+## データフローのスケジュール {#schedule-dataflow}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_schedule"
->title="データフローのスケジュール設定"
->abstract="Demandbase は、週に 1 回、月曜日の朝の午後 5 時（UTC）にデータをドロップします。 そのため、取り込み開始時刻を午後 5 時（UTC）以降に設定する必要があります。 さらに、ファイルをAdobeにドロップする際にスケジュールが変更される可能性があるので、Demandbase で取り込み時間を確認する必要があります。"
+>title="データフローのスケジュール"
+>abstract="Demandbase は、毎週月曜日の午後 5:00（UTC）にデータをドロップします。したがって、取り込み開始時刻を午後 5:00（UTC）以降に設定する必要があります。また、アドビにファイルをドロップする際にスケジュールを変更する場合があるので、取り込み時間を Demandbase に確認する必要があります。"
 
 ## データフローのレビュー {#review-dataflow}

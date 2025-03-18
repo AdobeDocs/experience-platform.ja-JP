@@ -57,35 +57,35 @@ ht-degree: 25%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
->title="予測エンゲージメント可能プロファイル"
+>title="予測されるエンゲージ可能なプロファイル"
 >abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
->title="予測されるビジネスユーザープロファイル"
+>title="予測されるビジネスユーザーのプロファイル"
 >abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
->title="予測コア時間"
+>title="予測されるコア時間"
 >abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
->title="予測合計データ量"
+>title="予測される合計データボリューム"
 >abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
->title="使用可能な予測CJA行"
+>title="予測される使用可能な CJA 行数"
 >abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
