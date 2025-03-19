@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Data Distillerで価値を最大化するためのヒント - OS656
 description: リアルタイム顧客プロファイルデータを強化し、行動インサイトを使用してターゲットオーディエンスを構築することで、Adobe Experience Platform Data Distillerの価値を最大限に高める方法を説明します。 このリソースには、顧客のセグメント化に最新性、頻度、通貨（RFM）モデルを適用する方法を示すサンプルデータセットとケーススタディが含まれています。
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
+source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3658'
 ht-degree: 0%
 
 ---
@@ -438,15 +438,15 @@ RFM 属性を保存し、プライマリ ID を割り当てるための空のデ
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
 
 INSERT INTO adls_rfm_profile
 SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
@@ -578,28 +578,9 @@ WITH (
 );
 ```
 
-#### オーディエンスの挿入 {#insert-an-audience}
+#### 空のオーディエンスデータセットの作成 {#create-empty-audience-dataset}
 
-既存のオーディエンスにプロファイルを追加するには、`INSERT INTO` コマンドを使用します。 これにより、個々のプロファイルまたはオーディエンス全体を既存のオーディエンスデータセットに追加できます。
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _{TENANT_ID}.userId, 
-    _{TENANT_ID}.days_since_last_purchase, 
-    _{TENANT_ID}.orders, 
-    _{TENANT_ID}.total_revenue, 
-    _{TENANT_ID}.recency, 
-    _{TENANT_ID}.frequency, 
-    _{TENANT_ID}.monetization 
-FROM adls_rfm_profile 
-WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### オーディエンスにプロファイルを追加 {#add-profiles-to-audience}
-
-次の SQL コマンドを使用して、オーディエンスを作成および入力します。
+プロファイルを追加する前に、空のデータセットを作成して、オーディエンスレコードを保存します。
 
 ```sql
 -- Create an empty audience dataset
@@ -620,11 +601,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### 既存オーディエンスへのプロファイルの挿入 {#insert-an-audience}
+
+既存のオーディエンスにプロファイルを追加するには、INSERT INTO コマンドを使用します。 これにより、既存のオーディエンスデータセットに、個々のプロファイルまたはオーディエンスセグメント全体を追加できます。
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### オーディエンスの削除 {#delete-an-audience}
 
-既存のオーディエンスを削除するには、`DROP AUDIENCE` コマンドを使用します。 オーディエンスが存在しない場合は、`IF EXISTS` が指定されていない限り例外が発生します。
-
-次の SQL コマンドを使用してオーディエンスを削除します。
+既存のオーディエンスを削除するには、DROP AUDIENCE コマンドを使用します。 オーディエンスが存在しない場合、IF EXISTS が指定されていない限り例外が発生します。
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
