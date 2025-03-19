@@ -1,17 +1,15 @@
 ---
-title: Adobe Experience Platform Data Distillerで価値を最大化するためのヒント
+title: Adobe Experience Platform Data Distillerで価値を最大化するためのヒント - OS656
 description: リアルタイム顧客プロファイルデータを強化し、行動インサイトを使用してターゲットオーディエンスを構築することで、Adobe Experience Platform Data Distillerの価値を最大限に高める方法を説明します。 このリソースには、顧客のセグメント化に最新性、頻度、通貨（RFM）モデルを適用する方法を示すサンプルデータセットとケーススタディが含まれています。
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: c7a6a37679541dc37bdfed33b72d2396db7ce054
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform Data Distillerの価値を最大化するためのヒント
+# Adobe Experience Platform Data Distillerで価値を最大限に高めるためのトップヒント - OS656
 
 このページには、Adobe Summit セッション「OS656 - Adobe Experience Platform Data Distillerで価値を最大化するためのトップヒント」で学んだことを適用できるサンプルデータセットが含まれています。 リアルタイム顧客プロファイルデータを強化して、Adobe Real-Time Customer Data PlatformとJourney Optimizerの実装を高速化する方法を説明します。 このエンリッチメントでは、顧客の行動パターンに関する深いインサイトを活用して、エクスペリエンスの配信および最適化のためのオーディエンスを構築します。
 
@@ -53,7 +51,7 @@ Luma のケーススタディを開始する前に、サンプルデータセッ
 
 #### CSV ファイルからのデータセットの作成 {#create-a-dataset}
 
-Experience Platform UI の左側のナビゲーションパネルで **[!UICONTROL ワークフロー]** を選択し、使用可能なオプションから **[!UICONTROL CSV ファイルからデータセットを作成]** を選択します。 画面の右側に新しいサイドバーが表示されるので、「**[!UICONTROL 起動]**」を選択します。
+Experience Platform UI の左側のナビゲーションパネルで **[!UICONTROL データセット]**」を選択し、次に **[!UICONTROL データセットを作成]** を選択します。 次に、使用可能なオプションから **[!UICONTROL CSV ファイルからデータセットを作成]** を選択します。
 
 [!UICONTROL  データセットを設定 ] パネルが表示されます。 「**[!UICONTROL 名前]**」フィールドにデータセット名「luma_web_data」と入力し、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -135,7 +133,7 @@ RFM モデルは、完了した購入に基づいてリーセンシー、頻度�
 この最初のクエリでは、キャンセルに関連付けられたすべての null 以外の購入 ID を選択し、`GROUP BY` を使用してそれらを集計します。 結果の購入 ID は、データセットから除外する必要があります。
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -241,7 +239,7 @@ GROUP BY userid;
 クエリの効率と再利用性を向上させるには、集計された RFM 値を格納する `VIEW` を作成します。
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -258,7 +256,7 @@ AS
 ここでも、ベストプラクティスとして、簡単な探索クエリを実行して、ビューのデータを調べます。 次のステートメントを使用します。
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 次のスクリーンショットは、各ユーザの計算された RFM 値を表示するクエリのサンプル結果を示しています。 結果は、`CREATE VIEW` クエリのビュー ID に対応します。
@@ -289,7 +287,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 結果は次の画像のようになります。
@@ -320,6 +318,10 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+結果は次の画像に似ていますが、ビュー ID が異なります。
+
+![ 「rfm_scores」ビューのクエリー結果ダイアログ ](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### RFM セグメントのモデル化 {#model-rfm-segments}
 
@@ -398,7 +400,7 @@ SELECT * FROM rfm_model_segment;
 
 ### 手順 4:SQL を使用して RFM データをリアルタイム顧客プロファイルにバッチ取り込む {#sql-batch-ingest-rfm-data}
 
-は、RFM でエンリッチメントされた顧客データをリアルタイム顧客プロファイルにバッチで取り込みます。 まず、プロファイル対応データセットを作成し、SQL を使用して変換されたデータを挿入します。
+次に、RFM でエンリッチメントされた顧客データをリアルタイム顧客プロファイルにバッチで取り込みます。 まず、プロファイル対応データセットを作成し、SQL を使用して変換されたデータを挿入します。
 
 #### RFM 属性を格納する派生データセットの作成 {#create-a-derived-dataset}
 
@@ -426,7 +428,13 @@ RFM 属性を保存し、プライマリ ID を割り当てるための空のデ
 >
 >ID フィールドの定義、および ID 名前空間の操作について詳しくは、[ID サービスドキュメント ](../../identity-service/home.md) または [Adobe Experience Platform UI での ID フィールドの定義 ](../../xdm/ui/fields/identity.md) に関するガイドを参照してください。
 
-次の SQL は、RFM 属性を格納するプロファイル対応テーブルを作成します
+クエリエディターは順次実行をサポートしているので、テーブル作成クエリとデータ挿入クエリを 1 つのセッションに含めることができます。 次の SQL では、まず、RFM 属性を格納するプロファイル対応テーブルを作成します。 次に、`rfm_model_segment` から RFM で強化された顧客データを `adls_rfm_profile` テーブルに挿入し、リアルタイム顧客プロファイルの取り込みに必要な、テナント固有の名前空間の下で各レコードを構造化します。
+
+クエリエディターは順次実行をサポートしているので、テーブル作成クエリとデータ挿入クエリを 1 つのセッションで実行できます。 次の SQL では、まず、RFM 属性を格納するプロファイル対応テーブルを作成します。 次に、`rfm_model_segment` から RFM を拡張した顧客データを `adls_rfm_profile` テーブルに挿入し、各レコードがテナント固有の名前空間（`_{TENANT_ID}`）の下で適切に構造化されるようにします。 この名前空間は、リアルタイム顧客プロファイルの取り込みと正確な ID 解決に不可欠です。
+
+>[!IMPORTANT]
+>
+>`_{TENANT_ID}` を組織のテナント名前空間に置き換えます。 この名前空間は組織に固有で、取り込まれたすべてのデータがAdobe Experience Platformで正しく割り当てられます。
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
@@ -439,11 +447,16 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
     monetization INTEGER, -- Monetary score
     rfm_model TEXT -- RFM segment classification
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 このクエリの結果は、このプレイブック内の以前のデータセットの作成に似ていますが、ID が異なります。
 
-データセットを作成したら、データセット /参照/ `adls_rfm_profile` に移動して、データセットが空であることを確認します。
+データセットを作成したら、**[!UICONTROL データセット]**/**[!UICONTROL 参照]**/`adls_rfm_profile` に移動して、データセットが空であることを確認します。
 
 ![ 「adls_rfm_profile」データセットの詳細が表示され、プロファイル対応の切り替えがハイライト表示されたデータセットワークスペース。](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
@@ -459,12 +472,12 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
 
 >[!NOTE]
 >
->このクエリはバッチモードで実行されます。このモードでは、プロセスを実行するためにクラスターを起動する必要があります。 この操作では、データレイクからデータを読み取り、クラスター内で処理し、結果をデータレイクに書き戻します。
+>このクエリはバッチモードで実行され、プロセスを実行するためにクラスターを起動する必要があります。 この操作では、データレイクからデータを読み取り、クラスター内で処理し、結果をデータレイクに書き戻します。
 
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -490,10 +503,10 @@ SQL を保存した後、「**[!UICONTROL テンプレート]**」タブに移�
 
 [!UICONTROL  スケジュールの詳細 ] ビューが表示されます。 ここから、次の詳細を入力してスケジュールを設定します。
 
-- **[!UICONTROL 実行頻度]**: **毎年**
-- **[!UICONTROL 実行の日]**:**4 月 30 日**
-- **[!UICONTROL スケジュール実行時間]**：午後 **11 時（UTC）**
-- **[!UICONTROL スケジュール期間]**:**2024 年 4 月 1 日～5 月 31 日**
+- **[!UICONTROL 実行頻度]**: **毎週**
+- **[!UICONTROL 実行の日]**:**月曜日と火曜日**
+- **[!UICONTROL スケジュール実行時間]**:**午前 10:10 UTC**
+- **[!UICONTROL 予定期間]**:**2025 年 3 月 17 日～4 月 30 日**
 
 「**[!UICONTROL 保存]**」を選択して、スケジュールを確定します。
 
@@ -518,11 +531,11 @@ SQL を保存した後、「**[!UICONTROL テンプレート]**」タブに移�
 
 `CREATE AUDIENCE AS SELECT` コマンドを使用して、新しいオーディエンスを定義します。 作成したオーディエンスはデータセットに保存され、**[!UICONTROL Data Distiller]** の下の **[!UICONTROL オーディエンス]** ワークスペースに登録されます。
 
-SQL 拡張機能を使用して作成されたオーディエンスは、[!UICONTROL  オーディエンス ] ワークスペースの [!UICONTROL Data Distiller] オリジンに自動的に登録されます。 [!UICONTROL  オーディエンス ] UI から、必要に応じてオーディエンスを表示、管理およびアクティブ化できます。
+SQL 拡張機能を使用して作成されたオーディエンスは、[!UICONTROL  オーディエンス ] ワークスペースの [!UICONTROL Data Distiller] オリジンに自動的に登録されます。 [ オーディエンスポータル ](../../segmentation/ui/audience-portal.md) から、必要に応じてオーディエンスを表示、管理およびアクティブ化できます。
 
-![ 使用可能なオーディエンスを表示するオーディエンスワークスペース。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![ 使用可能なオーディエンスを表示するオーディエンスポータル ](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![ フィルターサイドバーとデータDistillerが選択された使用可能なオーディエンスを示すオーディエンスワークスペース。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![ フィルターサイドバーとデータDistillerが選択された使用可能なオーディエンスを示すオーディエンスポータル。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
 SQL オーディエンスについて詳しくは、[Data Distiller Audiences ドキュメント ](../data-distiller-audiences/overview.md) を参照してください。 UI でオーディエンスを管理する方法については、[Audiences ポータルの概要 ](../../segmentation/ui/audience-portal.md#audience-list) を参照してください。
 
@@ -534,19 +547,19 @@ SQL オーディエンスについて詳しくは、[Data Distiller Audiences �
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -555,33 +568,33 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
 #### オーディエンスの挿入 {#insert-an-audience}
 
-既存のオーディエンスにプロファイルを追加するには、`INSERT INTO` コマンドを使用します。 これにより、既存のオーディエンスデータセットに、個々のプロファイルまたはオーディエンスセグメント全体を追加できます。
+既存のオーディエンスにプロファイルを追加するには、`INSERT INTO` コマンドを使用します。 これにより、個々のプロファイルまたはオーディエンス全体を既存のオーディエンスデータセットに追加できます。
 
 ```sql
 -- Insert profiles into the audience dataset
 INSERT INTO AUDIENCE adls_rfm_audience 
 SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
 FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
 #### オーディエンスにプロファイルを追加 {#add-profiles-to-audience}

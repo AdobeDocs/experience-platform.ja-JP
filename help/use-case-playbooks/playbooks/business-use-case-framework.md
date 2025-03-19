@@ -3,9 +3,10 @@ title: 顧客体験のユースケースを活用したビジネス目標の推�
 description: ビジネス目標を実際の顧客体験と結び付ける実用的なフレームワークを学びます。 含まれているワークシートを使用して、Adobe Experience Platform内でユースケースを効果的に戦略、調整、適用します。
 hide: true
 hidefromtoc: true
-source-git-commit: d8cfbbf7482a6501a58dfde8c8c25ee8d46b06d8
+exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -20,3 +21,5 @@ ht-degree: 0%
 - チーム間のコラボレーションを促進して、効果的なユースケースの成果を実現します。
 - 成熟度フレームワークを適用して、ビジネスへの影響を大きくするためにユースケースを発展させます。
 - Adobe Experience Platformを使用して、価値実現を加速させます。
+
+この [PDF リソースをダウンロードして ](../assets/summit/20250110-summit-session-s651-leave-behind.pdf) カスタマーエクスペリエンスのユースケースを定義、評価、進化させるための構造化されたアプローチを検討します。 ビジネス目標を測定可能な影響と関連付ける方法、パーソナライゼーションのためのデータを活用する方法、Adobe Experience Platform内でユースケースを効果的にアクティブ化する方法について説明します。

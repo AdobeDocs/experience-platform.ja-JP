@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 70%
+source-wordcount: '400'
+ht-degree: 71%
 
 ---
 
@@ -23,7 +23,6 @@ ht-degree: 70%
 - Data Distiller {#data-distiller}
    - [概要](data-distiller/overview.md)
    - [ライセンス使用状況](data-distiller/license-usage.md)
-   - [価値を最大化するためのヒント](data-distiller/top-tips-to-maximize-value.md)
    - 派生データセット {#derived-datasets}
       - [概要](data-distiller/derived-datasets/overview.md)
       - [SQL を使用した派生データセットの作成](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -40,6 +39,7 @@ ht-degree: 70%
       - [ML のエンジニア機能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 環境へのデータの書き出し](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML データパイプラインのエンリッチメントエンドツーエンドワークフロー](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [Summit 2025 セッション](data-distiller/top-tips-to-maximize-value.md)
 - Data Distillerの統計情報と機械学習 {#advanced-statistics}
    - [概要](advanced-statistics/overview.md)
    - [特徴エンジニアリング](advanced-statistics/feature-engineering.md)
