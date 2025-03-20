@@ -2,14 +2,19 @@
 title: Id グラフリンクルール
 description: ID サービスでの ID グラフリンクルールについて説明します。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 5%
+source-wordcount: '1476'
+ht-degree: 4%
 
 ---
 
-# ID グラフリンクルールの概要
+# ID グラフリンクルールの概要 {#identity-graph-linking-rules-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_overview"
+>title="ID グラフリンクルール"
+>abstract="これらの不要な結合を防ぐために、ID グラフリンクルールを通じて提供される設定を使用し、ユーザーに対して正確なパーソナライゼーションを可能にします。"
 
 >[!AVAILABILITY]
 >

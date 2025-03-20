@@ -2,9 +2,9 @@
 title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1725'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,12 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 [Adobe Analytics ソースコネクタ ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) を使用してデータを取り込む場合は、ID サービスが AAID をブロックするので、Adobe Analytics ID （AAID）よりも ECID の優先度を高める必要があります。 ECID に優先順位を付けることで、AAID ではなく ECID に未認証のイベントを保存するようリアルタイム顧客プロファイルに指示できます。
 
-### XDM エクスペリエンスイベント
+### XDM エクスペリエンスイベント {#xdm-experience-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_xdm"
+>title="ユーザー ID が 1 つあることを確認してください"
+>abstract="事前実装プロセス中に、システムがExperience Platformに送信する認証済みイベントに、CRMID などの **単一の** 人物識別子が常に含まれていることを確認する必要があります。"
 
 事前実装プロセス中に、システムがExperience Platformに送信する認証済みイベントに、CRMID などの人物識別子が常に含まれていることを確認してください。
 
