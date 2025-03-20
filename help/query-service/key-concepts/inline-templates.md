@@ -2,7 +2,7 @@
 title: インラインテンプレート
 description: インラインテンプレートを使用した多数のクエリで複数の条件を再利用する方法を説明します。
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 100%
@@ -42,7 +42,7 @@ ht-degree: 100%
 
 テンプレートを使用して、1 つまたは複数の条件を保存できます。クエリ単体で完全でなくてもかまいません。テンプレートに有効なクエリが含まれている場合は、ハッシュ記号が先頭に付いたテンプレート名を呼び出すだけで、クエリを実行できます。例えば、`SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` を `JUNE_2023_LOYALTY_MEMBERS` という名前のテンプレートとして保存した場合、コマンド `#JUNE_2023_LOYALTY_MEMBERS;` はテンプレート内に含まれる有効なクエリを実行します。
 
->
+>[!NOTE]
 >
 >Adobe Experience Platform UI 内では、パラメーター化されたクエリ形式のインラインテンプレートは親レベルでのみサポートされます。つまり、パラメーター化されたクエリは、元のテンプレートで使用された場合にのみ機能します。子テンプレートは、静的テンプレートである必要があり、動的パラメーターを持つことはできません。詳しくは、[パラメーター化されたクエリのドキュメント](../ui/parameterized-queries.md)を参照してください。
 

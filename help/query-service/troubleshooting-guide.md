@@ -4,16 +4,16 @@ solution: Experience Platform
 title: クエリサービスとデータDistillerに関するよくある質問
 description: このドキュメントには、クエリサービスとデータDistillerに関するよくある質問と回答が含まれています。 トピックには、データの書き出し、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5024'
 ht-degree: 83%
 
 ---
 
 # クエリサービスとデータDistillerに関するよくある質問
 
-このドキュメントでは、クエリサービスとデータDistillerに関するよくある質問に回答します。 また、データの検証や変換されたデータのデータレイクへの書き戻しに「クエリ」製品を使用する際に表示される一般的なエラーコードも含まれます。 その他のAdobe Experience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platformトラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
+このドキュメントでは、クエリサービスとデータDistillerに関するよくある質問に回答します。 また、データの検証や変換されたデータのデータレイクへの書き戻しに「クエリ」製品を使用する際に表示される一般的なエラーコードも含まれます。 その他のAdobe Experience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
 
 クエリサービスとデータDistillerがAdobe Experience Platform内でどのように連携するかを明確にするために、2 つの基本的な質問を以下に示します。
 
@@ -84,17 +84,6 @@ ht-degree: 83%
 
 +++回答
 いいえ。データサイズに制限はありませんが、インタラクティブセッションからのクエリタイムアウトは 10 分間に制限されています。クエリがバッチ CTAS として実行される場合、10 分間のタイムアウトは適用されません。詳しくは、[インタラクティブクエリの実行](./best-practices/writing-queries.md#interactive-query-execution)に関するガイダンスを参照してください。
-+++
-
-### SELECT クエリからの出力行数の制限を回避するにはどうすればよいですか？
-
-+++回答
-出力行数の制限を回避するには、クエリで「LIMIT 0」を適用します。以下に例を示します。
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
 +++
 
 ### クエリが 10 分でタイムアウトしないようにするにはどうすればよいですか？
