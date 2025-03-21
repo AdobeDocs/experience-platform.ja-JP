@@ -5,10 +5,10 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
 role: User
-source-git-commit: be480fee733eb786c5488a9a10d04a62ef845566
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 80%
+source-wordcount: '203'
+ht-degree: 79%
 
 ---
 
@@ -45,6 +45,7 @@ ht-degree: 80%
    - [バッチセグメント化](methods/batch-segmentation.md)
    - [ストリーミングセグメント化](methods/streaming-segmentation.md)
    - [エッジセグメント化](methods/edge-segmentation.md)
+   - [柔軟なオーディエンス評価](methods/flexible-audience-evaluation.md)
 - オーディエンスタイプ {#types}
    - [概要](types/overview.md)
    - [人物オーディエンス](types/people-audiences.md)

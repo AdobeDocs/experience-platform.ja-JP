@@ -2,9 +2,9 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '4609'
+source-wordcount: '4561'
 ht-degree: 52%
 
 ---
@@ -221,11 +221,6 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 - フィルターを選択すると、選択したオーディエンス **自動** リセットされます。
 
 #### [!BADGE  限定提供 ]{type=Informative} 柔軟なオーディエンス評価 {#flexible-audience-evaluation}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="柔軟なオーディエンス評価制限"
-abstract="1 回の柔軟なオーディエンス評価実行で最大 20 個のオーディエンスを評価できます。<br/><br/>さらに、評価ジョブはできるだけ早く実行されますが、オンデマンド評価は別のオンデマンドまたはバッチ評価と同時に実行<b>できない</b>ので、システムの遅延が発生する可能性があります。"
 
 柔軟なオーディエンス評価を使用すると、セグメント化ジョブをオンデマンドで実行できます。 評価するオーディエンスを選択し、「**[!UICONTROL オーディエンスを評価]**」を選択します。
 
