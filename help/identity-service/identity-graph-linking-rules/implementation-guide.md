@@ -2,9 +2,9 @@
 title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1778'
 ht-degree: 2%
 
 ---
@@ -65,11 +65,16 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 >title="ユーザー ID が 1 つあることを確認してください"
 >abstract="事前実装プロセス中に、システムがExperience Platformに送信する認証済みイベントに、CRMID などの **単一の** 人物識別子が常に含まれていることを確認する必要があります。"
 
-事前実装プロセス中に、システムがExperience Platformに送信する認証済みイベントに、CRMID などの人物識別子が常に含まれていることを確認してください。
+事前実装プロセス中に、システムがExperience Platformに送信する認証済みイベントに、CRMID などの **単一の** 人物識別子が常に含まれていることを確認する必要があります。
+
+* （推奨） 1 つのユーザー識別子を持つ認証済みイベント。
+* （非推奨） 2 人のユーザー識別子を持つ認証済みイベント。
+* （非推奨）ユーザー識別子を持たない認証済みイベント。
+
 
 >[!BEGINTABS]
 
->[!TAB  ユーザー識別子を持つ認証済みイベント ]
+>[!TAB 1 つのユーザー識別子を持つ認証済みイベント ]
 
 ```json
 {
@@ -98,8 +103,57 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 }
 ```
 
->[!TAB  ユーザー識別子なしの認証済みイベント ]
+>[!TAB 2 人のユーザー識別子を持つ認証済みイベント ]
 
+システムが 2 人の人物の識別子を送信した場合、実装が 1 人の人物による名前空間要件に失敗する可能性があります。 例えば、webSDK 実装の identityMap に CRMID、customerID および ECID 名前空間が含まれている場合、すべての単一のイベントに CRMID と customerID の両方が含まれるという保証はありません。
+
+理想的には、次のようなペイロードを送信する必要があります。
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ],
+      "customerID": [
+          {
+            "id": "Jane",
+            "primary": false
+          }
+      ],
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+ただし、2 人の人物 ID を送信できるとは言え、実装やデータエラーが原因で不要なグラフの折りたたみが防がれる保証はないことに注意してください。 次のシナリオについて考えてみます。
+
+* `timestamp1` = John がログイン -> システムが `CRMID: John, ECID: 111` をキャプチャします。 ただし、`customerID: John` はこのイベントペイロードには存在しません。
+* `timestamp2` = Jane がログイン – > システム キャプチャ `customerID: Jane, ECID: 111` ます。 ただし、`CRMID: Jane` はこのイベントペイロードには存在しません。
+
+したがって、認証済みイベントで送信するユーザー識別子は 1 つのみにすることをお勧めします。
+
+グラフのシミュレーションでは、この取り込みは次のようになります。
+
+![ レンダリングされたグラフの例を示すグラフシミュレーション UI](../images/implementation/example-graph.png)
+
+>[!TAB  ユーザー識別子のない認証済みイベント ]
 
 ```json
 {
@@ -122,27 +176,7 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 }
 ```
 
-
 >[!ENDTABS]
-
-事前実装プロセス中に、システムがExperience Platformに送信する認証済みイベントに、CRMID などの **単一の** 人物識別子が常に含まれていることを確認する必要があります。
-
-* （推奨） 1 つのユーザー識別子を持つ認証済みイベント。
-* （非推奨） 2 人のユーザー識別子を持つ認証済みイベント。
-* （非推奨）ユーザー識別子を持たない認証済みイベント。
-
-システムが 2 人の人物の識別子を送信した場合、実装が 1 人の人物による名前空間要件に失敗する可能性があります。 例えば、webSDK 実装の identityMap に CRMID、customerID および ECID 名前空間が含まれている場合、デバイスを共有する 2 人の個人が異なる名前空間に誤って関連付けられる可能性があります。
-
-ID サービス内では、この実装は次のようになります。
-
-* `timestamp1` = John がログイン -> システムが `CRMID: John, ECID: 111` をキャプチャします。
-* `timestamp2` = Jane がログイン – > システム キャプチャ `customerID: Jane, ECID: 111` ます。
-
-+++グラフシミュレーションで実装がどのように見えるかを表示する
-
-![ レンダリングされたグラフの例を示すグラフシミュレーション UI](../images/implementation/example-graph.png)
-
-+++
 
 ## 権限の設定 {#set-permissions}
 

@@ -2,9 +2,9 @@
 title: ID 設定 UI
 description: ID 設定ユーザーインターフェイスの使用方法を説明します。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '641'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
->
->* UI で ID 設定にアクセスするには、アカウントに **ID グラフの表示** 権限が必要です。 詳しくは、[ 属性ベースのアクセス制御における権限に関するガイド ](../../access-control/abac/ui/permissions.md) を参照してください。
+>ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
 
 ID 設定は、Adobe Experience Platform ID サービス UI の機能で、一意の名前空間を指定し、名前空間の優先度を設定するために使用できます。
 
@@ -31,6 +29,15 @@ ID 設定の使用を開始する前に、次のドキュメントをお読み�
 * [グラフ設定の例](./example-configurations.md)
 * [名前空間の優先度](./namespace-priority.md)
 * [グラフシミュレーション](./graph-simulation.md)
+
+### 権限の設定 {#set-permissions}
+
+次に、アカウントに次の権限がプロビジョニングされていることを確認する必要があります。
+
+* **[!UICONTROL ID 設定の表示]**：この権限を適用して、ID 名前空間の参照ページで一意の名前空間と名前空間の優先度を表示できるようにします。
+* **[!UICONTROL ID 設定の編集]**:ID 設定を編集および保存できるようにするには、この権限を適用します。
+
+これらの権限がない場合は、管理者にお問い合わせください。 詳しくは、[ 権限ガイド ](../../access-control/abac/ui/permissions.md) を参照してください。
 
 ## ID 設定の指定
 
