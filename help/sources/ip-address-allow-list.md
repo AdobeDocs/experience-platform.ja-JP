@@ -2,18 +2,20 @@
 description: Adobe Experience Platform ソースを正常に使用するために許可リストに追加する必要がある IP アドレスについて説明します。
 title: ソースの IP アドレス許可リスト
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 30%
+source-wordcount: '242'
+ht-degree: 11%
 
 ---
 
-# IP アドレス許可リスト
+# IP アドレスの許可リスト
 
-ネットワークファイアウォールを介して、ネットワークアクセス制御を定義できます。 適切なソース IP の範囲を指定することで、データ転送サービスのトラフィックフローを許可できます。 ソースコネクタを操作する前に、次の IP アドレスを許可リストに追加する必要があります。地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
+ネットワークファイアウォールを介して、ネットワークアクセス制御を定義できます。 適切なソース IP の範囲を指定することで、データ転送サービスのトラフィックフローを許可できます。 ソースコネクタを使用する前に、次の IP アドレスを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
 
-## バッチソースの IP アドレス許可リスト {#batch}
+## [!DNL Azure] 上のExperience Platformに接続するソースの IP アドレス許可リスト {#azure}
+
+### [!DNL Azure] 上のExperience Platformのバッチソース {#batch}
 
 バッチソースのデータ転送サービスにトラフィックを流すには、次の IP アドレスを許可リストに追加する必要があります。
 
@@ -21,7 +23,7 @@ ht-degree: 30%
 
 >[!TAB VA7：北米 ]
 
-### VA7：北米
+#### VA7：北米
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ ht-degree: 30%
 
 >[!TAB NLD2：ヨーロッパ ]
 
-### NLD2：ヨーロッパ
+#### NLD2：ヨーロッパ
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ ht-degree: 30%
 
 >[!TAB AUS5：オーストラリア ]
 
-### AUS5：オーストラリア
+#### AUS5：オーストラリア
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ ht-degree: 30%
 
 >[!TAB CAN2：カナダ ]
 
-### CAN2: カナダ
+#### CAN2: カナダ
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ ht-degree: 30%
 
 >[!TAB IND2: インド ]
 
-### IND2: インド
+#### IND2: インド
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,15 +104,15 @@ ht-degree: 30%
 
 >[!ENDTABS]
 
-## ストリーミングソースの IP アドレス許可リスト {#streaming}
+### [!DNL Azure] 上のExperience Platformでのストリーミングソース {#streaming}
 
-[[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md)、[[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md)、[[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md)、[[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) などのストリーミングソースのデータ転送サービスにトラフィックを流すには、次の IP アドレスを許可リストに追加する必要があります。
+[[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md)、[[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md)、[[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md)、[[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) などのストリーミングソースのデータ転送サービスにトラフィックを流すには、許可リストに次の IP アドレスを追加する必要があります。
 
 >[!BEGINTABS]
 
 >[!TAB VA7：北米 ]
 
-### VA7：北米
+#### VA7：北米
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ ht-degree: 30%
 
 >[!TAB NLD2：ヨーロッパ ]
 
-### NLD2：ヨーロッパ
+#### NLD2：ヨーロッパ
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ ht-degree: 30%
 
 >[!TAB AUS5：オーストラリア ]
 
-### AUS5：オーストラリア
+#### AUS5：オーストラリア
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ ht-degree: 30%
 
 >[!TAB CAN2：カナダ ]
 
-### CAN2: カナダ
+#### CAN2: カナダ
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ ht-degree: 30%
 
 >[!TAB GBR9：英国 ]
 
-### GBR9：英国
+#### GBR9：英国
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ ht-degree: 30%
 
 >[!TAB IND2: インド ]
 
-### IND2: インド
+#### IND2: インド
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ ht-degree: 30%
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## [!DNL Amazon Web Services] 上のExperience Platform（AWS）へのソース接続の許可リスト先 IP アドレス {#aws}
+
+ソースをAWSのエクスペリエンスに接続するには、許可リストに次の IP アドレスを追加する必要があります。
+
+- `66.117.18.0/24`

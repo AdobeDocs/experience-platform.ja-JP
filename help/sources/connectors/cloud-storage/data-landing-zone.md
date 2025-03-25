@@ -2,10 +2,10 @@
 title: Data Landing Zone Source
 description: データランディングゾーンをAdobe Experience Platformに接続する方法を学ぶ
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 21%
+source-wordcount: '1362'
+ht-degree: 20%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 21%
 
 [!DNL Data Landing Zone] は SAS ベースの認証をサポートし、そのデータは保存時および転送中は標準 [!DNL Azure Blob] ストレージセキュリティメカニズムで保護されます。SAS ベースの認証を使用すると、パブリックインターネット接続を介して [!DNL Data Landing Zone] コンテナに安全にアクセスできます。ユーザーが [!DNL Data Landing Zone] コンテナにアクセスする場合、ネットワークの変更は必要ありません。つまり、ネットワークの許可リストや地域間設定は必要ありません。 Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロードされるすべてのファイルおよびフォルダーに対して厳密に 7 日間の有効期限が適用されます。 すべてのファイルとフォルダーは、7 日後に削除されます。
 
-## Azure にExperience Platformするための [!DNL Data Landing Zone] ソースの設定 {#azure}
+## Azure 上のExperience Platformの [!DNL Data Landing Zone] ソースを設定する {#azure}
 
-Azure にExperience Platformするための [!DNL Data Landing Zone] アカウントを設定する方法については、次の手順に従います。
+Azure でExperience Platform用に [!DNL Data Landing Zone] アカウントを設定する方法については、次の手順に従います。
 
 >[!NOTE]
 >
@@ -155,13 +155,17 @@ set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
 azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ```
 
-## Amazon Web Services上でのExperience Platform用の [!DNL Data Landing Zone] ソースの設定 {#aws}
+## Amazon Web Services上のExperience Platform用の [!DNL Data Landing Zone] ソースの設定 {#aws}
 
 >[!AVAILABILITY]
 >
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
 
-Amazon Web Services（AWS）でExperience Platform用に [!DNL Data Landing Zone] アカウントを設定する方法については、次の手順に従います。
+Amazon Web Services（AWS）上のExperience Platform用に [!DNL Data Landing Zone] アカウントを設定する方法については、次の手順に従います。
+
+### 許可リストに加える AWSでの接続用 IP アドレス。
+
+ソースをAWSのExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[AWSでExperience Platformに接続するための IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ### AWS CLI の設定と操作の実行
 

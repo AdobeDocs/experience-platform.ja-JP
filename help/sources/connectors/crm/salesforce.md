@@ -2,9 +2,9 @@
 title: Salesforce Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してSalesforceをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1581'
 ht-degree: 11%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Salesforce] ソースを使用できるようになりました。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../landing/multi-cloud.md) を参照してください。
+>Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Salesforce] ソースを使用できるようになりました。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
 
 Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、サードパーティの CRM システムからのデータ取り込みをサポートしています。CRM プロバイダーのサポートは [!DNL Salesforce] を含みます。
 
-## Azure にExperience Platformするための [!DNL Salesforce] ソースの設定 {#azure}
+## Azure 上のExperience Platformの [!DNL Salesforce] ソースを設定する {#azure}
 
-Azure にExperience Platformするための [!DNL Salesforce] アカウントを設定する方法については、次の手順に従います。
+Azure でExperience Platform用に [!DNL Salesforce] アカウントを設定する方法については、次の手順に従います。
 
 ### IP アドレス許可リスト
 
@@ -48,7 +48,7 @@ Azure にExperience Platformするための [!DNL Salesforce] アカウントを
 
 - この [GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) から、名前空間およびスキーマ自動生成ユーティリティのコレクションと環境をダウンロードできます。
 - 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Platform API の使用について詳しくは、[Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
-- Platform API の資格情報の生成方法について詳しくは、[Experience PlatformAPI の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
+- Experience Platform API の資格情報の生成方法について詳しくは、[Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
 - Platform API の [!DNL Postman] の設定方法について詳しくは、[ 開発者コンソールとの設定  [!DNL Postman]](../../../landing/postman.md) のチュートリアルを参照してください。
 
 Platform 開発者コンソールをセットアップす [!DNL Postman] と、適切な環境値の [!DNL Postman] 環境への適用を開始できます。
@@ -60,12 +60,12 @@ Platform 開発者コンソールをセットアップす [!DNL Postman] と、�
 | 変数 | 説明 | 例 |
 | --- | --- | --- |
 | `CLIENT_SECRET` | `{ACCESS_TOKEN}` ータの生成に使用される一意の ID。 サー `{CLIENT_SECRET}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON web トークン（JWT）は、{ACCESS_TOKEN} ータの生成に使用される認証資格情報です。 サー `{JWT_TOKEN}` スの生成方法について詳しくは、[Experience PlatformAPI の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{JWT_TOKEN}` |
-| `API_KEY` | Experience PlatformAPI への呼び出しの認証に使用される一意の ID。 サー `{API_KEY}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Experience PlatformAPI を呼び出すために必要な認証トークン。 サー `{ACCESS_TOKEN}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
+| `JWT_TOKEN` | JSON web トークン（JWT）は、{ACCESS_TOKEN} ータの生成に使用される認証資格情報です。 サー `{JWT_TOKEN}` スの生成方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{JWT_TOKEN}` |
+| `API_KEY` | Experience Platform API への呼び出しの認証に使用される一意の ID。 サー `{API_KEY}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Experience Platform API を呼び出すために必要な認証トークン。 サー `{ACCESS_TOKEN}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | [!DNL Marketo] に関しては、この値は固定で、常に `ent_dataservices_sdk` に設定されます。 | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | `global` コンテナには、標準AdobeおよびExperience Platformパートナー提供のすべてのクラス、スキーマフィールドグループ、データタイプおよびスキーマが格納されます。 [!DNL Marketo] に関しては、この値は固定で、常に `global` に設定されます。 | `global` |
-| `PRIVATE_KEY` | API に対する [!DNL Postman] インスタンスのExperience Platformに使用される資格情報。 コンテン {PRIVATE_KEY} の取得方法については、開発者コンソールの設定および [ 開発者コンソールの設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `{PRIVATE_KEY}` |
+| `CONTAINER_ID` | `global` コンテナには、標準のAdobeおよびExperience Platform パートナー提供のすべてのクラス、スキーマフィールドグループ、データタイプおよびスキーマが含まれます。 [!DNL Marketo] に関しては、この値は固定で、常に `global` に設定されます。 | `global` |
+| `PRIVATE_KEY` | Experience Platform API に対する [!DNL Postman] インスタンスの認証に使用される資格情報。 コンテン {PRIVATE_KEY} の取得方法については、開発者コンソールの設定および [ 開発者コンソールの設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/Oへの統合に使用する資格情報。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System （IMS）は、Adobe サービスに対して認証を行うためのフレームワークを提供します。 [!DNL Marketo] に関しては、この値は固定で、常に `ims-na1.adobelogin.com` に設定されます。 | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 製品およびサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる法人組織。 `{ORG_ID}` ーザー情報の取得方法については、[Developer Console の設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -95,13 +95,13 @@ Platform 開発者コンソールをセットアップす [!DNL Postman] と、�
 
 リクエストが成功すると、ベータ版の仕様に従って B2B 名前空間とスキーマが作成されます。
 
-## Amazon Web Services上でのExperience Platform用の [!DNL Salesforce] ソースの設定 {#aws}
+## Amazon Web Services上のExperience Platform用の [!DNL Salesforce] ソースの設定 {#aws}
 
 >[!AVAILABILITY]
 >
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../landing/multi-cloud.md) を参照してください。
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
 
-Amazon Web Services（AWS）でExperience Platform用に [!DNL Salesforce] アカウントを設定する方法については、次の手順に従います。
+Amazon Web Services（AWS）上のExperience Platform用に [!DNL Salesforce] アカウントを設定する方法については、次の手順に従います。
 
 ### 前提条件
 
@@ -111,11 +111,9 @@ Amazon Web Services（AWS）でExperience Platform用に [!DNL Salesforce] ア�
 - その後、JWT_BEARER OAuth フローを有効にするために使用できる [!DNL Salesforce Connected App]。
 - データにアクセスするた [!DNL Salesforce] に必要な権限。
 
-また、[!DNL Salesforce] アカウントをAmazon Web Services（AWS）のExperience Platformに接続するには、次の IP アドレスを許可リストに追加する必要があります。
+### 許可リストに加える AWSでの接続用 IP アドレス。
 
-- `34.193.63.59`
-- `44.217.93.240`
-- `44.194.79.229`
+ソースをAWSのExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[AWSでExperience Platformに接続するための IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ### [!DNL Salesforce Connected App] の作成
 
@@ -147,7 +145,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 
 次に、「**[!DNL Save]**」、「**[!DNL Continue]**」の順に選択し、「**[!DNL Manage Customer Details]**」を選択します。 消費者の詳細パネルを使用して、以下を取得します。
 
-- **コンシューマーキー**：後でExperience Platformに対して [!DNL Salesforce] アカウントを認証する際に、このコンシューマーキーをクライアント ID として使用します。
+- **コンシューマーキー**：後でExperience Platformに [!DNL Salesforce] アカウントを認証する際に、このコンシューマーキーをクライアント ID として使用します。
 - **コンシューマーシークレット**：後でExperience Platformに対して [!DNL Salesforce] アカウントを認証する際に、このコンシューマーシークレットをクライアント ID として使用します。
 
 ### 接続されたアプリへの [!DNL Salesforce] ユーザーの認証
@@ -275,7 +273,7 @@ public class Main {
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Salesforce] と Platform を接続する方法について説明します。
 
-- [Flow Service API を使用したSalesforceのExperience Platformへの接続](../../tutorials/api/create/crm/salesforce.md)
+- [Flow Service API を使用したSalesforceとExperience Platformの接続](../../tutorials/api/create/crm/salesforce.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
