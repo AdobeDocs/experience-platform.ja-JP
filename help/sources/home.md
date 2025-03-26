@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 73%
+source-wordcount: '1552'
+ht-degree: 72%
 
 ---
 
@@ -28,7 +28,7 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 ## 高度なエンタープライズソース {#advanced-enterprise-sources}
 
-次のソースは、[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) のお客様のみが利用できます。
+次のソースは、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) のお客様のみが利用できます。
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE  ストリーミング ]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE  バッチ ]{type=Informative}
@@ -39,9 +39,9 @@ Experience Platform を使用すると、異なるソースから収集したデ
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE  ストリーミング ]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE  バッチ ]{type=Informative}
 
-## Adobe構築およびパートナー構築のソース {#adobe-and-partner-built-sources}
+## Adobeで構築されたソースとパートナーが構築したソース {#adobe-and-partner-built-sources}
 
-Experience Platformソースカタログ内のコネクタの一部はAdobeが構築および管理し、その他は [Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理します。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeが作成し、[RainFocus コネクタ ](/help/sources/connectors/analytics/rainfocus.md) は RainFocus チームが作成および管理します。
+Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、{RainFocus コネクタ ](/help/sources/connectors/analytics/rainfocus.md) は RainFocus チームによって作成および管理されます [。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
@@ -144,10 +144,12 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ### データと ID のパートナー {#data-partner}
 
-Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+Experience Platformは、データおよび ID パートナーからのデータ取り込みをサポートしています。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE  バッチ ]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE  バッチ ]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE  バッチ ]{type=Informative}
 
 ### e コマース {#ecommerce}

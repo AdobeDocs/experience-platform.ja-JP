@@ -2,9 +2,9 @@
 title: UI を使用して Bombora の目的をExperience Platformに接続する
 description: Bombora Intent をExperience Platformに結び付ける方法を学ぶ
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
-source-git-commit: 9f6f84d16c30c1e32184007ebc2a401db5f8b9ac
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '955'
 ht-degree: 9%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 9%
 * [Real-Time CDP B2B edition](../../../../../rtcdp/b2b-overview.md): Real-Time CDP B2B editionは、B2B サービスモデルで業務を行うマーケター向けに設計されています。 複数のソースからのデータをまとめて、人物とアカウントプロファイルの単一のビューに結合します。この統合されたデータにより、マーケターは特定のオーディエンスを正確にターゲットにして、利用可能なすべてのチャネルでそれらのオーディエンスを惹き付けることができます。
 * [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+
+### 前提条件
+
+認証資格情報の取得方法について詳しくは、[[!DNL Bombora Intent]  概要 ](../../../../connectors/data-partners/bombora.md) を参照してください。
 
 ## ソースカタログのナビゲート
 

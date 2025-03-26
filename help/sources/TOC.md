@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 86f17ed4dc012481c2b4a7f1a40b492bfac5e137
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1063'
 ht-degree: 95%
 
 ---
@@ -96,6 +96,7 @@ ht-degree: 95%
       - [Acxiom データ取り込み](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom プロスペクティングデータの読み込み](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [ボンボラの意図](connectors/data-partners/bombora.md)
+      - [Demandbase の目的](connectors/data-partners/demandbase.md)
       - [Merkury エンタープライズ ID 解決](connectors/data-partners/merkury.md)
    - e コマース {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)

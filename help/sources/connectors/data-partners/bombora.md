@@ -2,10 +2,11 @@
 title: ボンボラの意図
 description: Experience Platformの Bombora Intent ソースについて説明します。
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: c558ed7c5ce5fcb26d98a47ad7b7c1461192dc9b
+exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
+source-git-commit: 39bbd9505b931b82aa925cba0bf8675f25dbf498
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 13%
+source-wordcount: '1605'
+ht-degree: 10%
 
 ---
 
@@ -39,9 +40,9 @@ B2B マーケターは、Real-Time CDPでアカウントリストを作成して
 
 [!DNL Bombora] をExperience Platformに接続する前に、次の前提条件の手順をお読みください。
 
-### IP アドレス許可リスト
+### IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 許可リストに加える詳しくは、[IP アドレス ](../../ip-address-allow-list.md) ページを参照してください。
 
 ### Experience Platformに対する権限の設定
 
