@@ -1,13 +1,13 @@
 ---
 keywords: セグメント化;セグメント化 rtcdp;Real-Time Customer Data Platform セグメント化
 title: Real-Time Customer Data Platform におけるセグメント化サービス
-description: Adobe Real-time Customer Data Platformは、Adobe Experience Platformをベースに構築され、多くのExperience Platformサービスと機能を利用します。 セグメント化サービスを使用すると、顧客を類似の特性を持つ小さなグループに分けて、独自のマーケティングを提供できます。
+description: Adobe Real-Time Customer Data Platformは、Adobe Experience Platformをベースに構築され、Experience Platformの多くのサービスと機能を利用します。 セグメント化サービスを使用すると、顧客を類似の特性を持つ小さなグループに分けて、独自のマーケティングを提供できます。
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 96c5df4f172815d3b1904ab6614b1ce02d11dbaf
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 78%
+ht-degree: 75%
 
 ---
 
@@ -21,9 +21,9 @@ Real-Time CDP は Adobe Experience Platform をベースに構築され、多く
 
 セグメント化は、プロファイルストアからのプロファイルのサブセットで共有される特定の属性や行動を定義して、マーケティング可能なユーザーグループを顧客ベースと区別するプロセスです。 例えば、「スニーカーを購入し忘れましたか？」というメールキャンペーンでは、過去 30 日間にランニングシューズを検索したが購入を完了しなかったすべてのユーザーのオーディエンスが必要な場合があります。様々なセグメント定義を使用して、様々なオーディエンスに焦点を当て、よりカスタマイズされたマーケティングエクスペリエンスを提供できます。
 
-## [!DNL Segment Builder]
+## [!DNL Audience Builder]
 
-[!DNL Platform] を使用すると、セグメント定義を簡単に作成してアクセスでき、様々な構成要素を使用してオーディエンスをさらに特徴付けることができます。 セグメントビルダーの使用方法の詳細については、『[セグメントビルダーガイド](./segment-builder-guide.md)』を参照してください。
+[!DNL Platform] を使用すると、セグメント定義を簡単に作成してアクセスでき、様々な構成要素を使用してオーディエンスをさらに特徴付けることができます。 Audience Builder の使用方法について詳しくは、[Audience Builder ガイド ](./audience-builder.md) を参照してください。
 
 ## 顧客 AI
 

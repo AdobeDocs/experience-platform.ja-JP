@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスを作成し、それらのオーディエンスをサードパーティの宛先に活用します。
 role: Admin
-source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
+source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
 workflow-type: tm+mt
 source-wordcount: '301'
-ht-degree: 67%
+ht-degree: 66%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 67%
    * [管理の概要](administration/admin-overview.md)
 * オーディエンスとセグメント化 {#segmentation}
    * [セグメント化の概要](segmentation/segmentation-overview.md)
-   * [セグメントビルダーガイド](segmentation/segment-builder-guide.md)
+   * [Audience Builder ガイド](segmentation/audience-builder.md)
    * [Real-Time CDP B2B Edition のセグメント化](segmentation/b2b.md)
    * [顧客 AI](segmentation/customer-ai.md)
 * データセット {#datasets}
