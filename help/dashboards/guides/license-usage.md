@@ -4,10 +4,10 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 1c31ef58eec727638cab28202afc762da0e226a2
+source-git-commit: 7332b39b0e213632e595dc52eda390aa0b9a24ec
 workflow-type: tm+mt
-source-wordcount: '3125'
-ht-degree: 25%
+source-wordcount: '3483'
+ht-degree: 17%
 
 ---
 
@@ -45,48 +45,90 @@ ht-degree: 25%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="予測される計算時間"
->abstract="使用量がライセンス量に達する可能性があります。計算時間を評価または削減するには、クエリ／ログに移動してクエリ履歴を確認します。クエリワークスペースにアクセスする権限がない場合は、管理者にお問い合わせください。"
+>abstract="計算時間は、バッチクエリの実行時に、クエリサービスエンジンがデータの読み取り、処理、書き込みに費やした時間を測定します。<br> ライセンス量に達する可能性があります。 使用状況を評価または削減するには、クエリ/ログに移動してクエリ履歴を確認します。 クエリワークスペースへのアクセス権がない場合は、管理者にお問い合わせください。"
 >additional-url="https://experience.adobe.com/#/platform/query/log.html" text="クエリログワークスペース"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="予測されるアドレス可能なオーディエンス"
->abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>abstract="アドレス可能なオーディエンスは、組織が関与する資格のあるリアルタイム顧客プロファイルの一連のユーザープロファイルです。 これには、直接識別可能なプロファイルと偽名プロファイルの両方が含まれます。<br> ライセンス量に達する可能性があります。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
 >title="予測されるエンゲージ可能なプロファイル"
->abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>abstract="エンゲージメント可能なプロファイルは、過去 12 か月以内に組織がJourney Optimizerを使用してエンゲージメントを試みた、リアルタイム顧客プロファイルのユーザープロファイルです。<br> ライセンス量に達する可能性があります。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="予測されるビジネスユーザーのプロファイル"
->abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>abstract="ビジネスユーザープロファイルは、B2B コンテキストの個人を表す、リアルタイム顧客プロファイル内のレコードです。<br> ライセンス量に達する可能性があります。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
 >title="予測されるコア時間"
->abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>abstract="コア時間は、Experience Platform サービス全体で消費される処理時間を表します。<br> ライセンス量に達する可能性があります。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
 >title="予測される合計データボリューム"
->abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>abstract="合計データボリュームは、エンゲージメントワークフローおよびパーソナライゼーションワークフローで使用するために、リアルタイム顧客プロファイルで利用可能なデータの量です。<br> ライセンス量に達する可能性があります。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="予測される使用可能な CJA 行数"
->abstract="使用量がライセンス量に達する可能性があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>abstract="使用可能なCJA行は、Customer Journey Analyticsで分析に使用できるデータの 1 日当たりの平均行を表します。<br> ライセンス量に達する可能性があります。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
+>title="予測されるアドレス可能なオーディエンス"
+>abstract="アドレス可能なオーディエンスは、組織が関与する資格のあるリアルタイム顧客プロファイルの一連のユーザープロファイルです。 これには、直接識別可能なプロファイルと偽名プロファイルの両方が含まれます。<br> 使用状況がライセンス金額を超えています。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
+>title="予測されるエンゲージ可能なプロファイル"
+>abstract="エンゲージメント可能なプロファイルは、過去 12 か月以内に組織がJourney Optimizerを使用してエンゲージメントを試みた、リアルタイム顧客プロファイルのユーザープロファイルです。<br> 使用状況がライセンス金額を超えています。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
+>title="予測されるビジネスユーザーのプロファイル"
+>abstract="ビジネスユーザープロファイルは、B2B コンテキストの個人を表す、リアルタイム顧客プロファイル内のレコードです。<br> 使用状況がライセンス金額を超えています。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_corehours"
+>title="予測されるコア時間"
+>abstract="コア時間は、Experience Platform サービス全体で消費される処理時間を表します。<br> 使用状況がライセンス金額を超えています。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
+>title="予測される合計データボリューム"
+>abstract="合計データボリュームは、エンゲージメントワークフローおよびパーソナライゼーションワークフローで使用するために、リアルタイム顧客プロファイルで利用可能なデータの量です。<br> 使用状況がライセンス金額を超えています。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
+>title="予測される使用可能な CJA 行数"
+>abstract="使用可能なCJA行は、Customer Journey Analyticsで分析に使用できるデータの 1 日当たりの平均行を表します。<br> 使用状況がライセンス金額を超えています。 使用を減らすには、データセットまたは偽名プロファイルデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
@@ -146,22 +188,22 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="予測される使用状況"
->abstract="予測は過去6～7か月の使用状況に基づき、毎月15日に生成されます。ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織における実際の使用状況を理解し、その使用状況がアドビとの組織のライセンスの範囲を超えないようにする責任があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>abstract="予測は過去 6～7 か月間の使用状況に基づいており、毎週金曜日に毎週生成されます。 ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織における実際の使用状況を理解し、その使用状況がアドビとの組織のライセンスの範囲を超えないようにする責任があります。使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセットの有効期限の自動化"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="予測される使用状況"
->abstract="予測は過去6～7か月の使用状況に基づき、毎月15日に生成されます。ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織における実際の使用状況を理解し、その使用状況がアドビとの組織のライセンスの範囲を超えないようにする責任があります。使用量を減らすには、サンドボックスとデータセットに対するデータセットまたは匿名プロファイルのデータの有効期限を設定します。"
+>abstract="予測は過去6～7か月の使用状況に基づき、毎月15日に生成されます。ライセンス使用状況の予測は過去の使用状況に基づく概算です。お客様は、組織における実際の使用状況を理解し、その使用状況がアドビとの組織のライセンスの範囲を超えないようにする責任があります。使用量を減らすには、サンドボックスとデータセットのデータセットまたは偽名プロファイルデータの有効期限を設定します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ja" text="データセットの有効期限の自動化"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
-インサイトに満ちた使用状況の予測に基づいて、ライセンスリソースをプロアクティブに管理および最適化します。 この [!UICONTROL  予測使用状況 ] 列は、購入したすべての製品に対して、すべての実稼動および開発用サンドボックスにわたって、サンドボックスレベルで今後のライセンスの使用を正確に予測します。 このアラート機能は、今月の 15 日までの使用状況に基づいて、6 週間後のライセンス使用状況の予測を提供します。 予測には、下限と上限が設定されています。
+正確で最新の使用予測を使用して、ライセンスリソースをプロアクティブに管理および最適化します。 [!UICONTROL  予測使用状況 ] 列は、購入したすべての製品に関する、すべての実稼動および開発用サンドボックスにわたる、サンドボックスレベルでの将来のライセンス使用状況を予測します。 予測は毎週更新され、最新の使用状況データに基づいて 6 週間の予測が提供されるようになりました。 各予測には、情報に基づいた計画をサポートするための下限と上限の両方が含まれています。
 
 >[!IMPORTANT]
 >
->予測は毎月更新されます。 更新日は、情報アイコン（![ この情報アイコン](../images/license-usage/info-icon.png)）を選択します。
+>予測は毎週金曜日に更新されます。 更新日は、情報アイコン（![ この情報アイコン](../images/license-usage/info-icon.png)）を選択します。
 
 製品の使用権限の概要を確認するには、「[!UICONTROL  コア製品 ]」テーブルから製品を選択します。
 
@@ -188,8 +230,10 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 予測使用量機能は、次の指標をサポートしています。
 
 - [!UICONTROL  アドレス可能なオーディエンス ]
+- [!UICONTROL  ビジネスユーザープロファイル ]
 - [!UICONTROL  時間を計算 ]
 - [!UICONTROL  顧客ジャーニーオーディエンスの行数 ]
+- [!UICONTROL  エンゲージメント可能なプロファイル ]
 - [!UICONTROL  合計データ量 ]
 
 ## [!UICONTROL  概要 ] タブ {#summary-tab}
@@ -251,30 +295,34 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 >[!IMPORTANT]
 >
->8 月 20 日以降、「[!UICONTROL  平均プロファイル充実度 ]」および「[!UICONTROL  合計ストレージ ]」の資格を持つお客様には、ライセンス使用状況ダッシュボードに「[!UICONTROL  合計データ量 ]」が表示されるようになりました。 顧客の使用権限に変更はなく、トラッキング指標の簡略化のみでした。 [!UICONTROL  合計データ量 ] は、エンゲージメントワークフローとパーソナライゼーションワークフローにAdobe Experience Platform プロファイルサービスで使用できるデータを表します。 この簡略化された指標により、プロファイルサービスの使用に関する管理と測定が改善されました。 この変更に関する詳細については、Adobeの担当者に問い合わせることをお勧めします。
+>8 月 20 日以降、「[!UICONTROL  平均プロファイル充実度 ]」および「[!UICONTROL  合計ストレージ ]」の資格を持つお客様には、ライセンス使用状況ダッシュボードに「[!UICONTROL  合計データ量 ]」が表示されるようになりました。 顧客の使用権限に変更はなく、トラッキング指標の簡略化のみでした。 [!UICONTROL  合計データ量 ] は、エンゲージメントワークフローおよびパーソナライゼーションワークフローについて、リアルタイム顧客プロファイルで利用できるデータを表します。 このシンプル化された指標により、リアルタイム顧客プロファイルの使用に関する管理と測定が向上しました。 この変更に関する詳細については、Adobeの担当者に問い合わせることをお勧めします。
 
 ライセンス使用状況ダッシュボードでは、組織内の複数の製品に適用できるいくつかの一意の指標についてレポートします。 使用できる指標は次のとおりです。
 
 | 指標 | 説明 |
 |---|---|
 | [!UICONTROL Audience Activation サイズ ] | 1 年間に任意のファイルベースの宛先に対してアクティブ化されたプロファイルの合計サイズ。 注意：これには、ストリーミング宛先を介して送信されるプロファイルは含まれません。 |
-| [!UICONTROL  アドレス可能なオーディエンス ] | ビジネスオーディエンスの使用権限と消費者オーディエンスの使用権限の合計。 消費者オーディエンスは、販売注文で「消費者オーディエンス」として識別されるユーザープロファイルの数として定義されます。 ビジネスオーディエンスは、販売注文で「ビジネスオーディエンス」として識別されるビジネスユーザープロファイルの数として定義されます。 |
+| [!UICONTROL  アドレス可能なオーディエンス ] | 直接識別可能なプロファイルと偽名プロファイルの両方を含む、組織が関与する資格のあるリアルタイム顧客プロファイルのユーザープロファイルのセット。 これらのプロファイルには、属性、ビヘイビアー、セグメントメンバーシップデータを含めることができます。 プロファイルボリュームは、Adobe Experience Platformのデフォルトの決定論的 ID グラフを使用して計算され、共有機能と見なされます。 |
 | [!UICONTROL  アドホッククエリサービスユーザーパック ] | 承認された同時クエリサービスユーザーの使用権限を増やすアドオン。5 人の同時クエリサービスユーザーと、パックごとに 1 つの同時に実行されるアドホッククエリを追加できます。 複数の追加アドホック クエリ ユーザーパックがライセンスされている可能性があります。 |
 | [!UICONTROL  平均プロファイル充実度 ] | **非推奨** – 任意の時点でハブプロファイルサービス内に保存されたすべての実稼動データの合計を、許可されたビジネスユーザープロファイルの数の 5 倍で割った値です。 [!UICONTROL  平均的なプロファイル充実度 ] は共有機能です。 |
 | [!UICONTROL  使用可能なCJA行 ] | Customer Journey Analytics内で分析に使用できる 1 日あたりの平均データ行数。 |
-| [!UICONTROL  計算属性 ] | 集計されたプロファイル行動データの合計数。 集計プロファイルの行動データは、プロファイル属性に変換されるエクスペリエンスイベントに基づいており、ユーザープロファイルまたはビジネスユーザープロファイルに含めることができます。 |
+| [!UICONTROL  計算属性 ] | プロファイル属性に変換され、ユーザープロファイルに含めることができる、エクスペリエンスイベントに基づく集計プロファイル行動データ。 |
 | [!UICONTROL  消費者オーディエンス ] | 販売注文で「消費者オーディエンス」として識別されたユーザープロファイルの数。 |
 | [!UICONTROL  データの書き出しサイズ ] | 1 年にデータセットのアクティベーションを通じて送信されるデータの量。 |
 | [!UICONTROL  データの書き出し ] | 1 年に（直接または間接的に）Adobe以外のソリューションに書き出すことができるデータセットの合計サイズ。 |
 | [!UICONTROL Data Lake ストレージ ] | Adobe Experience Platform内で使用される分析データストアの量です。 |
-| [!UICONTROL  エンゲージメント可能なオーディエンス ] | この指標は、エンゲージメント可能なプロファイルのオーディエンスを参照します。 エンゲージメント可能なプロファイルは、個人を表す情報のレコードで、プロファイルサービスで表示されます。これらのレコードは、過去 12 か月間に、Journey Optimizer のオーサリング、意思決定、配信、実験またはオーケストレーション機能を使用してエンゲージしようとしたプロファイルです。 |
-| [!UICONTROL  類似オーディエンス ] | 既存の消費者オーディエンスをモデリングして、その既存の消費者オーディエンスに類似したユーザープロファイルを識別することで生成されるオーディエンスの数。 |
+| [!UICONTROL  エンゲージメント可能なオーディエンス ] | Journey Optimizerのオーサリング、意思決定、配信、実験またはオーケストレーションの機能を使用して、過去 12 か月以内に関与を試みたリアルタイム顧客プロファイルのユーザーグループ。 |
+| [!UICONTROL  類似オーディエンス ] | 消費者の類似オーディエンスは、既存の消費者オーディエンスをモデリングして類似の属性や行動を持つユーザープロファイルを識別することで生成されるオーディエンスです。 |
 | [!UICONTROL AMM モデルの数 ] | 投資に基づいて指定された成果を測定または予測するために使用される機械学習モデル（Adobe Mix Modelerで構築）のカウント。 |
 | [!UICONTROL  サンドボックスの数 ] | データと操作を分離してAdobe Experience PlatformにアクセスするAdobe オンデマンドサービスのインスタンス内の論理分離の数。 |
 | [!UICONTROL  プロファイル充実度パック数 ] | 追加のプロファイル充実度パックごとに、プロファイルごとに認証済みの合計データボリュームが 25 KB 増加します。 |
 | [!UICONTROL  クエリサービス計算時間 ] | バッチクエリの実行時に、クエリサービスエンジンがデータの読み取り、処理およびデータレイクへの書き込みに要した時間の測定値。 |
 | [!UICONTROL  ストリーミングセグメント化パック数 ] | パックは、新しいデータがストリーミングフローを通じてセグメント化サービスに入ると、個人プロファイルのセグメントメンバーシップを更新します。 セグメントメンバーシップは、過去の行動を考慮せずに、現在の人物プロファイル属性と現在のイベントの値に基づいて評価されます。 ストリーミングセグメント化は共有機能です。 |
-| [!UICONTROL  合計データ量 ] | Adobe Experience Platform プロファイルサービスがエンゲージメントワークフローで使用できるデータの総量。 詳しくは、[ 合計データ量に関するよくある質問 ](../../landing/license-usage-and-guardrails/total-data-volume.md) を参照してください。 |
+| [!UICONTROL  合計データ量 ] | リアルタイム顧客プロファイルがエンゲージメントワークフローで使用できるデータの総量。 詳しくは、[ 合計データ量に関するよくある質問 ](../../landing/license-usage-and-guardrails/total-data-volume.md) を参照してください。 |
+| [!UICONTROL  データエグレスの合計量 ] | Adobe Experience Platformからサードパーティのデータウェアハウスに書き出されたデータの年間累積量です。 |
+
+<!-- Approval needed on my revision above.
+Original PM version: | [!UICONTROL Total Volume of Data Egress] | The cumulative annual amount of data processed from third-party data warehouses. | -->
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
