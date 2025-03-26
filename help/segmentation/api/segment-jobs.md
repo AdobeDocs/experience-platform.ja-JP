@@ -4,10 +4,10 @@ title: セグメントジョブ API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメントジョブエンドポイントを使用すると、組織のセグメントジョブをプログラムで管理できます。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 15%
+source-wordcount: '1232'
+ht-degree: 18%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 15%
 
 ## セグメントジョッブリストの取得 {#retrieve-list}
 
-`/segment/jobs` エンドポイントにGETリクエストを行うことで、組織のすべてのセグメントジョブのリストを取得できます。
+`/segment/jobs` エンドポイントにGET リクエストを送信すると、組織のすべてのセグメントジョブのリストを取得できます。
 
 **API 形式**
 
@@ -64,13 +64,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **応答**
 
-応答に成功すると、HTTP ステータス 200 が、指定した組織のセグメントジョブのリストと共に JSON として返されます。 ただし、応答はセグメントジョブ内のセグメント定義の数によって異なります。
-
->[!BEGINTABS]
-
->[!TAB  セグメントジョブの 1,500 個のセグメント定義以下 ]
-
-セグメントジョブで実行されているセグメント定義が 1,500 個未満の場合は、すべてのセグメント定義の完全なリストが `children.segments` 属性内に表示されます。
+応答に成功すると、HTTP ステータス 200 が、指定した組織のセグメントジョブのリストと共に JSON として返されます。 すべてのセグメント定義の完全なリストが、`children.segments` 属性内に表示されます。
 
 >[!NOTE]
 >
@@ -178,105 +172,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
-+++
-
->[!TAB 1500 を超えるセグメント定義 ]
-
-セグメントジョブで 1500 を超えるセグメント定義が実行されている場合は、`children.segments` 属性が `*` と表示され、すべてのセグメント定義が評価中であることを示します。
-
->[!NOTE]
->
->次の応答はスペースを節約するために切り捨てられており、最初に返されたジョブのみが表示されます。
-
-+++ セグメントジョブのリストを表示する際の応答例。
-
-```json
-{
-    "_page": {
-        "totalCount": 14,
-        "pageSize": 14
-    },
-    "children": [
-        {
-            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-            "sandbox": {
-                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-                "sandboxName": "prod",
-                "type": "production",
-                "default": true
-            },
-            "profileInstanceId": "ups",
-            "source": "scheduler",
-            "status": "SUCCEEDED",
-            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-            "computeJobId": 8811,
-            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-            "segments": [
-                {
-                    "segmentId": "*",
-                }
-            ],
-            "metrics": {
-                "totalTime": {
-                    "startTimeInMs": 1573203617195,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 778460
-                },
-                "profileSegmentationTime": {
-                    "startTimeInMs": 1573204266727,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 128928
-                },
-                "totalProfiles": 13146432,
-                "segmentedProfileCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
-                },
-                "segmentedProfileByNamespaceCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "tenantiduserobjid":1033,
-                        "campaign_profile_mscom_mkt_prod2":1033
-                    }
-                },
-                "segmentedProfileByStatusCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "exited":144646,
-                        "realized":2056
-                    }
-                },
-                "totalProfilesByMergePolicy":{
-                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-                }
-            },
-            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-            "schema": {
-                "name": "_xdm.context.profile"
-            },
-            "properties": {
-                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-            },
-            "_links": {
-                "cancel": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "DELETE"
-                },
-                "checkStatus": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "GET"
-                }
-            },
-            "updateTime": 1573204395000,
-            "creationTime": 1573203600535,
-            "updateEpoch": 1573204395
-        }
-    ],
-    "_links": {
-        "next": {}
-    }
-}
-```
-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | セグメントジョブのシステム生成の読み取り専用識別子。 |
@@ -294,23 +189,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 +++
 
->[!ENDTABS]
-
 ## 新しいセグメントジョブの作成 {#create}
 
-新しいセグメントジョブを作成するには、`/segment/jobs` エンドポイントにPOSTリクエストを行い、新しいオーディエンスを作成するセグメント定義の ID を本文に含めます。
+新しいセグメントジョブを作成するには、`/segment/jobs` エンドポイントに POST リクエストを実行し、リクエスト本文にセグメント定義の ID を含めます。
 
 **API 形式**
 
 ```http
 POST /segment/jobs
 ```
-
-新しいセグメントジョブを作成する場合、リクエストと応答は、セグメントジョブ内のセグメント定義の数によって異なります。
-
->[!BEGINTABS]
-
->[!TAB  セグメントジョブのセグメント数が 1,500 個以下 ]
 
 **リクエスト**
 
@@ -335,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `segmentId` | セグメントジョブを作成するセグメント定義の ID。 これらのセグメント定義は、異なる結合ポリシーに属することができます。 セグメント定義について詳しくは、[ セグメント定義エンドポイントガイド ](./segment-definitions.md) を参照してください。 |
+| `segmentId` | 評価するセグメント定義の ID。 これらのセグメント定義は、異なる結合ポリシーに属することができます。 セグメント定義について詳しくは、[ セグメント定義エンドポイントガイド ](./segment-definitions.md) を参照してください。 |
 
 +++
 
@@ -460,139 +347,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 +++
 
->[!TAB  セグメントジョブに 1,500 を超えるセグメント定義 ]
-
-**リクエスト**
-
->[!NOTE]
->
->1,500 個を超えるセグメント定義を持つセグメントジョブを作成できますが、これは **強くお勧めしません**。
-
-+++ セグメントジョブを作成するためのサンプルリクエスト。
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '{
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ]
- }'
-```
-
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `schema.name` | セグメント定義のスキーマの名前。 |
-| `segments.segmentId` | 1500 個を超えるセグメントを含むセグメントジョブを実行する場合、すべてのセグメントを使用してセグメント化ジョブを実行することを示すために、`*` をセグメント ID として渡す必要があります。 |
-
-+++
-
-**応答**
-
-正常な応答は、HTTP ステータス 200 と、新しく作成したセグメントジョブの詳細を返します。
-
-+++ セグメントジョブ作成時の応答例
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "PROCESSING",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `id` | 新しく作成されたセグメントジョブのシステム生成の読み取り専用識別子。 |
-| `status` | セグメントジョブの現在のステータス。 セグメントジョブが新しく作成されるので、ステータスは常に `NEW` になります。 |
-| `segments` | このセグメントジョブが実行されているセグメント定義に関する情報を含むオブジェクト。 |
-| `segments.segment.id` | `*` は、このセグメントジョブが組織内のすべてのセグメント定義に対して実行されていることを意味します。 |
-
-+++
-
->[!ENDTABS]
-
-
 ## 特定のセグメントジョブの取得 {#get}
 
-特定のセグメントジョブに関する詳細な情報を取得するには、`/segment/jobs` エンドポイントにGETリクエストを実行し、取得するセグメントジョブの ID をリクエストパスで指定します。
+特定のセグメントジョブに関する詳細な情報を取得するには、`/segment/jobs` エンドポイントにGET リクエストを実行し、取得するセグメントジョブの ID をリクエストパスで指定します。
 
 **API 形式**
 
@@ -620,13 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **応答**
 
-リクエストが成功した場合は、指定されたセグメントジョブの詳細情報とともに HTTP ステータス 200 が返されます。  ただし、応答はセグメントジョブ内のセグメント定義の数によって異なります。
-
->[!BEGINTABS]
-
->[!TAB  セグメントジョブの 1,500 個のセグメント定義以下 ]
-
-セグメントジョブで実行されているセグメント定義が 1,500 個未満の場合は、すべてのセグメント定義の完全なリストが `children.segments` 属性内に表示されます。
+リクエストが成功した場合は、指定されたセグメントジョブの詳細情報とともに HTTP ステータス 200 が返されます。 すべてのセグメント定義の完全なリストが、`children.segments` 属性内に表示されます。
 
 +++ セグメントジョブを取得するためのサンプル応答。
 
@@ -690,90 +441,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
-+++
-
->[!TAB 1500 を超えるセグメント定義 ]
-
-セグメントジョブで 1500 を超えるセグメント定義が実行されている場合は、`children.segments` 属性が `*` と表示され、すべてのセグメント定義が評価中であることを示します。
-
-+++ セグメントジョブを取得するためのサンプル応答。
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "SUCCEEDED",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | セグメントジョブのシステム生成の読み取り専用識別子。 |
@@ -789,7 +456,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 ## セグメントジョブの一括取得 {#bulk-get}
 
-POST `/segment/jobs/bulk-get` エンドポイントに対してセグメントリクエストを実行し、リクエスト本文にセグメントジョブの `id` 値を指定することで、複数のセグメントジョブに関する詳細な情報を取得できます。
+複数のセグメントジョブに関する詳細な情報を取得するには、`/segment/jobs/bulk-get` エンドポイントに POST リクエストを実行し、リクエスト本文でセグメントジョブの `id` 値を指定します。
 
 **API 形式**
 
@@ -824,7 +491,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **応答**
 
-応答に成功すると、HTTP ステータス 207 とリクエストされたセグメントジョブが返されます。 ただし、`children.segments` 属性の値は、セグメントジョブが 1500 を超えるセグメント定義で実行されているかどうかによって異なります。
+応答に成功すると、HTTP ステータス 207 とリクエストされたセグメントジョブが返されます。
 
 >[!NOTE]
 >
@@ -867,7 +534,20 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "*"
+                    "segmentId": "30230300-d78c-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-d78c-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
                 }
             ],
             "updateTime": 1573204395000,
@@ -890,7 +570,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 ## 特定のセグメントジョブのキャンセルまたは削除 {#delete}
 
-特定のセグメントジョブを削除するには、`/segment/jobs` エンドポイントにDELETEリクエストを実行し、リクエストパスで削除するセグメントジョブの ID を指定します。
+`/segment/jobs` エンドポイントに対してDELETE リクエストを実行し、リクエストパスで削除するセグメントジョブの ID を指定することで、特定のセグメントジョブを削除できます。
 
 >[!NOTE]
 >

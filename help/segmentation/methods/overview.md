@@ -1,13 +1,13 @@
 ---
 title: オーディエンスの評価方法
 description: Adobe Experience Platformで使用できる様々なタイプの評価方法について説明します。
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 6%
+source-wordcount: '241'
+ht-degree: 5%
 
 ---
-
 
 # オーディエンスの評価方法
 
@@ -18,6 +18,10 @@ Adobe Experience Platformは、プロファイルをオーディエンスにセ�
 バッチセグメント化は、プロファイルデータを一度に移動して、対応するオーディエンスを作成するために使用できるセグメント化評価方法です。 バッチセグメント化を使用して、詳細で豊富なオーディエンスを作成し、大規模なプロファイルグループをターゲットにすることができます。
 
 バッチセグメント化について詳しくは、[ バッチセグメント化の概要 ](./batch-segmentation.md) を参照してください。
+
+### 柔軟なオーディエンス評価
+
+柔軟なオーディエンス評価を使用すると、バッチセグメント化ジョブをオンデマンドで実行できます。 詳しくは、[ 柔軟なオーディエンス評価ガイド ](./flexible-audience-evaluation.md) を参照してください。
 
 ## ストリーミングセグメント化
 
