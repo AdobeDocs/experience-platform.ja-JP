@@ -1,22 +1,36 @@
 ---
-title: Real-Time CDPからクラウドストレージの宛先への配列、マップ、オブジェクトの書き出し
+title: Real-Time CDPからの配列、マップ、オブジェクトの書き出し
 type: Tutorial
 description: Real-Time CDPからクラウドストレージの宛先に配列、マップ、オブジェクトを書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
+source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 16%
+source-wordcount: '1095'
+ht-degree: 13%
 
 ---
 
-# Real-Time CDPからクラウドストレージの宛先への配列、マップ、オブジェクトの書き出し {#export-arrays-cloud-storage}
+# Real-Time CDPからの配列、マップ、オブジェクトの書き出し {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->配列やその他の複雑なオブジェクトをクラウドストレージの宛先に書き出す機能は、[[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md)、
+>配列やその他の複雑なオブジェクトをクラウドストレージの宛先に書き出す機能は、[[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) の宛先で一般的に使用できます。
+>
+>さらに、マップタイプフィールドを次の宛先に書き出すことができます：[Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、[Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)。
 
-Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/catalog/cloud-storage/overview.md) に配列、マップ、オブジェクトを書き出す方法を説明します。 このドキュメントでは、書き出しワークフロー、この機能で有効になるユースケース、既知の制限事項について説明します。
+
+Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/catalog/cloud-storage/overview.md) に配列、マップ、オブジェクトを書き出す方法を説明します。 さらに、マップタイプのフィールドを [ エンタープライズ宛先 ](/help/destinations/destination-types.md#advanced-enterprise-destinations) および制限された [ エッジパーソナライゼーション宛先 ](/help/destinations/destination-types.md#edge-personalization-destinations) に書き出すことができます。 このドキュメントでは、書き出しワークフロー、この機能で有効になるユースケース、既知の制限事項について説明します。 宛先タイプごとに使用できる機能を理解するには、以下の表を参照してください。
+
+| 宛先のタイプ | 配列、マップ、その他のカスタムオブジェクトを書き出す機能 |
+|---|---|
+| Adobeが作成したクラウドストレージの宛先（Amazon S3、Azure Blob、Azure Data Lake Storage Gen2、Data Landing Zone、Google Cloud Storage、SFTP） | はい。宛先接続を設定するときは、[ 配列、マップ、およびオブジェクトの書き出しを有効にする ] トグルをオンにします。 |
+| ファイルベースのメールマーケティングの宛先（Adobe Campaign、Oracle Eloqua、Oracle Responsys、Salesforce Marketing Cloud） | × |
+| 既存のカスタムパートナー構築クラウドストレージの宛先（Destination SDKを介して構築されたカスタムファイルベースの宛先） | × |
+| エンタープライズ宛先（Amazon Kinesis、Azure Event Hubs、HTTP API） | 一部。 アクティベーションワークフローのマッピング手順で、マップタイプオブジェクトの選択および書き出しを行うことができます。 |
+| ストリーミングの宛先（例：Facebook、Braze、Google Customer Match など） | × |
+| Edge パーソナライゼーションの宛先（Adobe Target） | 一部。 アクティベーションワークフローのマッピング手順で、マップタイプオブジェクトの選択および書き出しを行うことができます。 |
+
+{style="table-layout:auto"}
 
 配列、マップ、その他のオブジェクトタイプをExperience Platformから書き出す方法について知りたい場合は、このページを参照してください。
 
@@ -24,9 +38,9 @@ Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/
 
 この節の機能に関する最も重要な情報を取得します。詳細については、このドキュメントの他の節に進みます。
 
-* 配列、マップ、オブジェクトを書き出す機能は、「配列、マップ、オブジェクトを書き出し **切替スイッチの選択によっ** 異なります。 詳しくは、このページの後半 [ を参照してください ](#export-arrays-maps-objects-toggle)。
-* 配列、マップおよびオブジェクトは、`JSON` および `Parquet` ファイル内のクラウドストレージの宛先にのみ書き出すことができます。 人物および見込み客オーディエンスはサポートされますが、アカウントオーディエンスはサポートされません。
-* 配列、マップ、オブジェクトを CSV ファイルに書き出す *ことができますが* そのためには、計算フィールド機能を使用し、`array_to_string` 関数を使用してそれらを文字列に連結します。
+* クラウドストレージの宛先の場合、配列、マップ、オブジェクトを書き出す機能は、「配列、マップ、オブジェクトを書き出し **切替スイッチの選択によっ** 異なります。 詳しくは、このページの後半 [ を参照してください ](#export-arrays-maps-objects-toggle)。
+* 配列、マップ、オブジェクトを、`JSON` および `Parquet` ファイルのクラウドストレージの宛先に書き出すことができます。 エンタープライズ宛先とエッジパーソナライゼーション宛先の場合、書き出されるデータタイプは `JSON` です。 人物および見込み客オーディエンスはサポートされますが、アカウントオーディエンスはサポートされません。
+* ファイルベースのクラウドストレージの宛先の場合は、配列、マップ、オブジェクトを CSV ファイルに書き出す *ことができます* ただし、計算フィールド機能を使用し、`array_to_string` 関数を使用してそれらを文字列に連結する必要があります。
 
 ## Platform の配列およびその他のオブジェクトタイプ {#arrays-strings-other-objects}
 
@@ -59,6 +73,10 @@ organizations = [{
 
 [ 接続 ](/help/destinations/ui/connect-destination.md) を目的のクラウドストレージの宛先に対して行い、[ クラウドストレージの宛先のアクティベーション手順 ](/help/destinations/ui/activate-batch-profile-destinations.md) の手順を実行して、[ マッピング ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) の手順に進みます。 目的のクラウドの宛先に接続する場合は、「配列、マップ、オブジェクトを書き出し **[!UICONTROL をオンに切り替える必要]** あります。 詳しくは、以下の節を参照してください。
 
+>[!NOTE]
+>
+>エンタープライズ宛先およびエッジパーソナライゼーション宛先の場合、「配列、マップ、オブジェクトを書き出し **[!UICONTROL をオンに切り替える必要なく、マップタイプのフィールドの書き出しサポ]** トを使用できます。 この切替スイッチは、これらのタイプの宛先に接続する場合は使用できないか、必要です。
+
 ## 配列、マップ、オブジェクトの書き出し切替スイッチ {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
@@ -66,7 +84,7 @@ organizations = [{
 >title="配列、マップ、オブジェクトの書き出し"
 >abstract="<p> この設定を<b>オン</b>に切り替えると、配列、マップ、オブジェクトを JSON または Parquet ファイルに書き出すことができます。マッピングステップのソースフィールドビューでこれらのオブジェクトタイプを選択できます。切替スイッチをオンにすると、マッピング手順で計算フィールドオプションを使用できません。</p><p>この切替スイッチを<b>オフ</b>にすると、計算フィールドオプションを使用して、オーディエンスをアクティブ化する際に様々なデータ変換関数を適用できます。ただし、配列、マップ、オブジェクトを JSON または Parquet ファイルに書き出すことはでき<i>ない</i>ので、その目的のためには別の宛先を設定する必要があります。</p>"
 
-クラウドストレージの宛先に接続する場合、「配列、マップ、オブジェクトを書き出し **[!UICONTROL をオンまたはオフに設定でき]** す。
+ファイルベースのクラウドストレージの宛先に接続する場合、「配列、マップ、オブジェクトを書き出し **[!UICONTROL をオンまたはオフ]** 切り替えることができます。
 
 ![ 配列、マップ、オブジェクトの書き出しは、オンまたはオフの設定で表示され、ポップオーバーをハイライト表示します ](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)。
 
