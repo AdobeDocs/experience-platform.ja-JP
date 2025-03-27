@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2025年3月）
 description: Adobe Experience Platform の 2025年3月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b96e1186669c77530a10f1f177c1d99947c27f3b
+source-git-commit: 445bf302baadf478a39b0c11a31ccfe25d5dd726
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 22%
@@ -16,6 +16,7 @@ ht-degree: 22%
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
 - [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
+
    - [ダッシュボード](#dashboards)
    - [宛先](#destinations)
    - [セグメント化サービス](#segmentation-service)
