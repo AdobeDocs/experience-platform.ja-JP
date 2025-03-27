@@ -1,62 +1,46 @@
 ---
-title: Flow Service API を使用したGoogle Ads ベース接続の作成
+title: API を使用したGoogle広告のExperience Platformへの接続
 description: Flow Service API を使用してAdobe Experience PlatformをGoogle Ads に接続する方法について説明します。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
+source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 27%
+source-wordcount: '457'
+ht-degree: 39%
 
 ---
 
-# [!DNL Flow Service] API を使用したGoogle Ads ベース接続の作成
-
->[!WARNING]
->
->[!DNL Google Ads] ソースは一時的に使用できません。 Adobeはこのソースに関する問題を解決するために取り組んでいます。
+# [!DNL Flow Service] API を使用した [!DNL Google Ads] のExperience Platformへの接続
 
 >[!NOTE]
 >
->Google Ads ソースはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Google Ads] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してGoogle Ads のベース接続を作成する手順について説明します。
+[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Google Ads] アカウントをAdobe Experience Platformに接続する方法については、このチュートリアルをお読みください。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
+このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platformサービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md):Experience Platformには、1 つのExperience Platformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、[!DNL Flow Service] API を使用してGoogle Ads に正常に接続するために必要な追加情報を示します。
-
-### 必要な資格情報の収集
-
-[!DNL Flow Service] をGoogle Ads に接続するには、次の接続プロパティの値を指定する必要があります。
-
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `clientCustomerId` | クライアントカスタマー ID は、Google Ads API で管理するGoogle Ads クライアントアカウントに対応するアカウント番号です。 この ID は `123-456-7890` のテンプレートに従います。 |
-| `loginCustomerId` | ログインカスタマー ID は、Google Ads Manager のアカウントに対応するアカウント番号で、特定の運用顧客からレポートデータを取得するために使用されます。 ログインカスタマー ID について詳しくは、[Google Ads API ドキュメント ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id) を参照してください。 |
-| `developerToken` | 開発者トークンを使用すると、Google Ads API にアクセスできます。 同じ開発者トークンを使用して、すべてのGoogle Ads アカウントに対してリクエストを行うことができます。 [ マネージャーアカウントにログイン ](https://ads.google.com/home/tools/manager-accounts/) してデベロッパートークンを取得し、[!DNL API Center] のページに移動します。 |
-| `refreshToken` | 更新トークンは認証の一部 [!DNL OAuth2] す。 このトークンを使用すると、有効期限が切れた後にアクセストークンを再生成できます。 |
-| `clientId` | クライアント ID は、クライアント秘密鍵と並行して、認証の一部として使用 [!DNL OAuth2] れます。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleに対するアプリケーションを識別し、お客様のアカウントに代わってアプリケーションを動作させることができます。 |
-| `clientSecret` | クライアントの秘密鍵は、クライアント ID と並行して、認証の一部として使用 [!DNL OAuth2] れます。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleに対するアプリケーションを識別し、お客様のアカウントに代わってアプリケーションを動作させることができます。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。Google Ads の接続仕様 ID は `d771e9c1-4f26-40dc-8617-ce58c4b53702` です。 |
-
-詳しくは、API の概要のドキュメント [Google Ads の使用の手引きについて詳しくは ](https://developers.google.com/google-ads/api/docs/first-call/overview) を参照してください。
+次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Google Ads] ています。
 
 ### Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
+Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
+
+### 必要な資格情報の収集
+
+認証について詳しくは、[[!DNL Google Ads]  ソースの概要 ](../../../../connectors/advertising/ads.md) を参照してください。
 
 ## ベース接続の作成
 
 ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベースPOSTID を作成するには、`/connections` エンドポイントに接続リクエストを実行し、その際にGoogle Ads 認証資格情報をリクエストパラメーターの一部として指定します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際にGoogle Ads 認証資格情報をリクエストパラメーターの一部として指定します。
 
 **API 形式**
 
@@ -85,10 +69,11 @@ curl -X POST \
               "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
               "loginCustomerID": "{LOGIN_CUSTOMER_ID}",
               "developerToken": "{DEVELOPER_TOKEN}",
-              "authenticationType": "{AUTHENTICATION_TYPE}"
+              "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "refreshToken": "{REFRESH_TOKEN}"
+              "googleAdsApiVersion": "v17"
+
           }
       },
       "connectionSpec": {
@@ -100,13 +85,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | Google Ads アカウントのクライアントカスタマー ID。 |
-| `auth.params.loginCustomerID` | Google Ads Manager アカウントに対応するログインカスタマー ID。 |
-| `auth.params.developerToken` | Google Ads アカウントの開発者トークン。 |
-| `auth.params.refreshToken` | Google Ads アカウントの更新トークン。 |
-| `auth.params.clientID` | Google Ads アカウントのクライアント ID。 |
-| `auth.params.clientSecret` | Google Ads アカウントのクライアント秘密鍵。 |
-| `connectionSpec.id` | Google Ads 接続仕様 ID:`d771e9c1-4f26-40dc-8617-ce58c4b53702`。 |
+| `auth.params.clientCustomerID` | [!DNL Google Ads] アカウントのクライアント顧客 ID。 |
+| `auth.params.loginCustomerID` | [!DNL Google Ads] manager アカウントに対応するログイン顧客 ID。 |
+| `auth.params.developerToken` | [!DNL Google Ads] アカウントの開発者トークン。 |
+| `auth.params.refreshToken` | [!DNL Google Ads] アカウントの更新トークン。 |
+| `auth.params.clientID` | [!DNL Google Ads] アカウントのクライアント ID。 |
+| `auth.params.clientSecret` | [!DNL Google Ads] アカウントのクライアント秘密鍵。 |
+| `auth.params.googleAdsApiVersion` | 使用している [!DNL Google Ads] API のバージョン。 Experience Platformでサポートされている最新バージョンは `v17` です。 |
+| `connectionSpec.id` | [!DNL Google Ads] 接続仕様 ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`。 |
 
 **応答**
 
@@ -119,9 +105,9 @@ curl -X POST \
 }
 ```
 
-## 次の手順
+## 広告データを取り込むデータフローの作成
 
-このチュートリアルでは、[!DNL Flow Service] API を使用してGoogle Ads ベース接続を作成しました。 このベース接続 ID は、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Google Ads] ベース接続を作成し、[!DNL Google Ads] アカウントをExperience Platformに接続しました。 このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
 * [ [!DNL Flow Service] API を使用した、広告データを Platform に取り込むデータフローの作成](../../collect/advertising.md)

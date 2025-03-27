@@ -1,27 +1,23 @@
 ---
-title: UI でのGoogle Ads Source接続の作成
-description: Adobe Experience Platform UI を使用してGoogle Ads ソース接続を作成する方法を説明します。
+title: UI を使用したGoogle Ads のExperience Platformへの接続
+description: UI でGoogle Ads アカウントをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
+source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 29%
+source-wordcount: '854'
+ht-degree: 11%
 
 ---
 
-# UI でのGoogle Ads ソースコネクタの作成
-
->[!WARNING]
->
->[!DNL Google Ads] ソースは一時的に使用できません。 Adobeはこのソースに関する問題を解決するために取り組んでいます。
+# UI を使用した [!DNL Google Ads] のExperience Platformへの接続
 
 >[!NOTE]
 >
->Google Ads ソースはベータ版です。 ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
+>[!DNL Google Ads] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用してGoogle Ads ソース接続を作成する手順について説明します。
+このガイドでは、Experience Platform UI のソースワークスペースを使用して [!DNL Google Ads] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
-## はじめに
+## 基本を学ぶ
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -30,47 +26,72 @@ ht-degree: 29%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効なGoogle Ads 接続がある場合は、このドキュメントの残りの部分をスキップし、[ データフローの設定 ](../../dataflow/advertising.md) に関するチュートリアルに進むことができます。
+既に有効な [!DNL Google Ads] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/advertising.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-Google Ads アカウントプラットフォームにアクセスするには、次の値を指定する必要があります。
-
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| クライアント顧客 ID | クライアントカスタマー ID は、Google Ads API で管理するGoogle Ads クライアントアカウントに対応するアカウント番号です。 この ID は `123-456-7890` のテンプレートに従います。 |
-| ログイン カスタマー ID | ログインカスタマー ID は、Google Ads Manager のアカウントに対応するアカウント番号で、特定の運用顧客からレポートデータを取得するために使用されます。 ログインカスタマー ID について詳しくは、[Google Ads API ドキュメント ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id) を参照してください。 |
-| 開発者トークン | 開発者トークンを使用すると、Google Ads API にアクセスできます。 同じ開発者トークンを使用して、すべてのGoogle Ads アカウントに対してリクエストを行うことができます。 [ マネージャーアカウントにログイン ](https://ads.google.com/home/tools/manager-accounts/) して API センターページに移動して、開発者トークンを取得します。 |
-| 更新トークン | 更新トークンは認証の一部 [!DNL OAuth2] す。 このトークンを使用すると、有効期限が切れた後にアクセストークンを再生成できます。 |
-| クライアント ID | クライアント ID は、クライアント秘密鍵と並行して、認証の一部として使用 [!DNL OAuth2] れます。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleに対するアプリケーションを識別し、お客様のアカウントに代わってアプリケーションを動作させることができます。 |
-| クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、認証の一部として使用 [!DNL OAuth2] れます。 クライアント ID とクライアント秘密鍵を組み合わせることで、Googleに対するアプリケーションを識別し、お客様のアカウントに代わってアプリケーションを動作させることができます。 |
-
-詳しくは、API の概要のドキュメント [Google Ads の使用の手引きについて詳しくは ](https://developers.google.com/google-ads/api/docs/first-call/overview) を参照してください。
+認証について詳しくは、[[!DNL Google Ads]  ソースの概要 ](../../../../connectors/advertising/ads.md) を参照してください。
 
 ## Google Ads アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]* パネルで適切なカテゴリを選択できます。 または、検索バーを使用して、使用する特定のソースに移動できます。
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+[!DNL Google Ads] を使用するには、*[!UICONTROL Advertisingの下にある&#x200B;**[!UICONTROL Google Ads]**ソースカードを選択してから]***[!UICONTROL データを追加]** を選択します。
 
-**[!UICONTROL Advertising]** カテゴリで、「**[!UICONTROL Google広告]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
-
-![Experience PlatformUI のソースカタログ ](../../../../images/tutorials/create/ads/catalog.png)
-
-**[!UICONTROL Google Ads への接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+![Experience Platform UI のソースカタログ ](../../../../images/tutorials/create/ads/catalog.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するGoogle Ads アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択し、インターフェイスのアカウントのリストから使用するアカウントを選択します。
+
+アカウントを選択したら、「**[!UICONTROL 次へ]**」を選択して次の手順に進みます。
 
 ![ ソースワークフローの既存のアカウントの選択ページ ](../../../../images/tutorials/create/ads/existing.png)..
 
-### 新しいアカウント
+### 新規アカウント
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、Google Ads の資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+既存のアカウントがない場合は、ソースに対応する必要な認証資格情報を指定して、新しいアカウントを作成する必要があります。
+
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウント名と、オプションでアカウントの詳細の説明を入力します。 次に、Experience Platformに対してソースを認証するための適切な認証値を指定します。
+
+* **クライアント顧客 ID**：クライアント顧客 ID は、[!DNL Google Ads] API で管理する [!DNL Google Ads] クライアントアカウントに対応するアカウント番号です。 この ID は `123-456-7890` のテンプレートに従います。
+* **ログインカスタマー ID**：ログインカスタマー ID は、[!DNL Google Ads] Manager アカウントに対応するアカウント番号で、特定の運用顧客からレポートデータを取得するために使用されます。 ログインカスタマー ID について詳しくは、[[!DNL Google Ads] API ドキュメント ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id) を参照してください。
+* **開発者トークン**：開発者トークンを使用すると、[!DNL Google Ads] API にアクセスできます。 同じ開発者トークンを使用して、すべての [!DNL Google Ads] アカウントに対してリクエストを行うことができます。 [ マネージャーアカウントにログイン ](https://ads.google.com/home/tools/manager-accounts/) して API センターページに移動して、開発者トークンを取得します。
+* **更新トークン**：更新トークンは、[!DNL OAuth2] 認証の一部です。 このトークンを使用すると、有効期限が切れた後にアクセストークンを再生成できます。
+* **クライアント ID**：クライアント ID は、認証の一環としてクライアント秘密鍵と並行して使用 [!DNL OAuth2] れます。 クライアント ID とクライアント秘密鍵を組み合わせると、[!DNL Google] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションを動作させることができます。
+* **クライアント秘密鍵**：クライアント秘密鍵は、クライアント ID と並行して、認証の一部として使用 [!DNL OAuth2] れます。 クライアント ID とクライアント秘密鍵を組み合わせると、[!DNL Google] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションを動作させることができます。
+* **[!DNL Google Ads]API version**: [!DNL Google Ads] でサポートされている現在の API バージョン。 最新バージョンは `v18` ですが、Experience Platformでサポートされている最新バージョンは `v17` です。
+
+資格情報を入力したら、「**[!UICONTROL ソースに接続]**」を選択し、接続が処理されるまでしばらく待ちます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
 ![ ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/ads/new.png)
 
-## 次の手順
+## データの選択 {#select-data}
+
+[!DNL Google Ads] では、ワークフローのデータ選択フェーズで取り込む属性のリストを指定する必要があります。 これらの属性を取得するには、[[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v17/overview_query_builder) を使用する必要があります。
+
+[!DNL Google Ads Query Builder] で、使用するリソースタイプに移動し、属性セレクターを使用して、属性、セグメントおよび指標を選択します。
+
+![Google Ads Query Builder の属性セレクター ](../../../../images/tutorials/create/ads/attributes.png)
+
+選択した属性が [!DNL Google Ads Query Language] パネルに入力されます。 [!DNL Standard] モードを使用していることを確認し、**[!DNL Enter or edit a query]** を選択します。
+
+![ 選択した属性。クエリ内でグループ化されます。](../../../../images/tutorials/create/ads/enter-query.png)
+
+次に、「**[!DNL Validate Query]**」を選択して、[!DNL Google Ads] クエリを検証します。
+
+![Google Ads Query Builder バリデーター ](../../../../images/tutorials/create/ads/validate-query.png)
+
+リクエストが成功した場合、[!DNL Google Ads Query Builder] はクエリが有効であることを示すメッセージを返します。 次に、クエリ内から **属性のみ** をコピーします。
+
+![ クエリが正常に検証されました。](../../../../images/tutorials/create/ads/copy-query.png)
+
+Experience Platform UI でソースワークフローのデータ選択フェーズに戻り、*[!UICONTROL リスト属性]* パネルに属性を貼り付けます。
+
+「**[!UICONTROL プレビュー]**」を選択してデータをプレビューし、「**[!UICONTROL 次へ]**」を選択して続行します。
+
+![ ソースワークフローのリスト属性パネル ](../../../../images/tutorials/create/ads/list-attributes.png)
+
+## 広告データを取り込むデータフローの作成
 
 このチュートリアルでは、Google Ads アカウントとの接続を確立しました。 次のチュートリアルに進み、[ 広告データを Platform に取り込むためのデータフローの設定 ](../../dataflow/advertising.md) を行いましょう。
