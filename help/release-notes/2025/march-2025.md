@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform リリースノート（2025年3月）
 description: Adobe Experience Platform の 2025年3月のリリースノート。
-source-git-commit: f0efd73830eac85936cb134ebb40dcd0f79aec52
+exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
+source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 22%
+source-wordcount: '1227'
+ht-degree: 21%
 
 ---
 
@@ -44,6 +45,8 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 
 | 宛先 | 説明 |
 | --- | --- |
+| [Demandbase People 接続 ](/help/destinations/catalog/advertising/demandbase-people.md) | [!DNL Demandbase People] 接続を使用して、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のために Demandbase キャンペーン用のプロファイルをアクティブ化します。 |
+| [Bombora アカウントの接続 ](/help/destinations/catalog/advertising/bombora.md) | [!DNL Bombora] 接続を使用して、[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のために、Bombora キャンペーン用のプロファイルをアクティブ化します。 |
 | [ 飛行船属性 ](/help/destinations/catalog/mobile-engagement/airship-attributes.md) のアップグレード | 2025 年 3 月 25 日（PT）以降、2 つの **[!UICONTROL 飛行船属性]** カードを宛先カタログに並べて表示できます。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!UICONTROL Airship Attributes]** 宛先コネクタの名前が **[!UICONTROL （非推奨） Airship Attributes に変更され]** 新しいカードが **[!UICONTROL Airship Attributes]** として使用できるようになりました。 <br> 新しいアクティベーションデータフローには、カタログの **[!UICONTROL Airship Attributes]** 接続を使用します。 [!DNL (Deprecated) Airship Attributes] の宛先へのアクティブなデータフローがある場合、それらは自動的に更新されるので、ユーザーからのアクションは必要ありません。 <br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。 <ul><li> フロー仕様 ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> 接続仕様 ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
