@@ -2,10 +2,10 @@
 title: Flow Service API を使用したMicrosoft Dynamics ベース接続の作成
 description: Flow Service API を使用して Platform をMicrosoft Dynamics アカウントに接続する方法を説明します。
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: bda26fa4ecf4f54cb36ffbedf6a9aa13faf7a09d
+source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 23%
+source-wordcount: '1330'
+ht-degree: 20%
 
 ---
 
@@ -264,6 +264,44 @@ curl -X GET \
 
 +++
 
+### プライマリキーを使用したデータ調査の最適化
+
+>[!NOTE]
+>
+>最適化にプライマリキーアプローチを使用する場合にのみ、参照以外の属性を使用できます。
+
+クエリをクエリパラメーターの一部として指定することで、検索クエリ `primaryKey` 最適化できます。 `primaryKey` をクエリパラメーターとして含める場合は、[!DNL Dynamics] テーブルのプライマリキーを指定する必要があります。
+
+**API 形式**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?preview=true&object={OBJECT}&objectType={OBJECT_TYPE}&previewCount=10&primaryKey={PRIMARY_KEY}
+```
+
+| クエリパラメーター | 説明 |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | ベース接続の ID。 この ID を使用して、ソースの内容と構造を調べます。 |
+| `preview` | データのプレビューを有効にするブール値。 |
+| `{OBJECT}` | 参照する [!DNL Dynamics] オブジェクト。 |
+| `{OBJECT_TYPE}` | オブジェクトのタイプ。 |
+| `previewCount` | 返されるプレビューを特定の数のレコードに制限する制限。 |
+| `{PRIMARY_KEY}` | プレビュー用に取得するテーブルの主キー。 |
+
+**リクエスト**
+
++++選択するとリクエストの例が表示されます
+
+```shell
+curl -X GET \
+  'https://platform-stage.adobe.io/data/foundation/flowservice/connections/dd668808-25da-493f-8782-f3433b976d1e/explore?preview=true&object=lead&objectType=table&previewCount=10&primaryKey=leadid' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
 
 ## テーブルの構造を検査する
 
@@ -581,6 +619,74 @@ curl -X POST \
 ```
 
 +++
+
+### プライマリキーを使用したデータフローの最適化
+
+また、リクエスト本文のパラメーターの一部としてプライマリキーを指定することで、[!DNL Dynamics] データフローを最適化することもできます。
+
+**API 形式**
+
+```http
+POST /sourceConnections
+```
+
+**リクエスト**
+
+次のリクエストは、プライマリキーを `contactid` として指定して、[!DNL Dynamics] ソース接続を作成します。
+
++++選択するとリクエストの例が表示されます
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics Source Connection",
+      "description": "Dynamics Source Connection",
+      "baseConnectionId": "dd668808-25da-493f-8782-f3433b976d1e",
+      "data": {
+          "format": "tabular"
+      },
+      "params": {
+          "tableName": "contact",
+          "primaryKey": "contactid"
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `baseConnectionId` | ベース接続の ID。 |
+| `data.format` | データの形式。 |
+| `params.tableName` | [!DNL Dynamics] のテーブル名。 |
+| `params.primaryKey` | クエリを最適化するテーブルのプライマリキー。 |
+| `connectionSpec.id` | [!DNL Dynamics] ソースに対応する接続仕様 ID。 |
+
++++
+
+**応答**
+
+正常な応答は、新しく生成されたソース接続 ID と、対応する etag を返します。
+
++++選択すると応答の例が表示されます
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
 
 ## 次の手順
 
