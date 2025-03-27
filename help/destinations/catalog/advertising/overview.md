@@ -3,9 +3,9 @@ keywords: 広告の宛先；宛先；Platform の宛先
 title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名オーディエンスをこれらのプラットフォームに共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
+source-git-commit: b193a7458e4e6e02a748dcac0bbf5550b2979899
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '274'
 ht-degree: 47%
 
 ---
@@ -29,6 +29,7 @@ Adobe Experience Platformをデマンドサイドプラットフォーム（DSP�
 * [（Beta） Acxiom の Audience Distribution](acxiom-audience-distribution.md)
 * [Adobe Advertising Cloud 接続](adobe-advertising-cloud-connection.md)
 * [Amazon Ads 接続](amazon-ads.md)
+* [ボンボラ接続](bombora.md)
 * [Criteo 接続](criteo.md)
 * [Google Display &amp; Video 360 接続](google-dv360.md)
 * [Google Ads 接続](google-ads-destination.md)
