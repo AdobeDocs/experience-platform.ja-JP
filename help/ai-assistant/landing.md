@@ -3,9 +3,9 @@ title: Adobe Experience Platformの AI アシスタント製品ドキュメン�
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
+source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -97,11 +97,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 >[!ENDSHADEBOX] -->
 
-## ビデオライブラリ
+## 基本について
 
-以下のビデオを視聴して、AI アシスタントの機能とユースケースに関する知識をさらに深めましょう。
-
-### 基本について
+以下のビデオでは、AI アシスタントの基本的な側面の一部について説明しています。
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -252,7 +250,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-### ユースケースライブラリ
+## ユースケースライブラリ
+
+AI アシスタントの使用例については、次のビデオをご覧ください。
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -416,7 +416,7 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## AI Assistant ユースケースライブラリ
+## その他の使用例
 
 >[!BEGINTABS]
 
@@ -439,6 +439,14 @@ AI アシスタントのユースケースの例については、以下を参�
 * [AI アシスタントで運用に関するインサイトを活用 ](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
+
+### AI アシスタントで生産性を向上
+
+AI アシスタントを使用して生産性を高める方法の実践ガイドについては、以下をお読みください。
+
+* [AI アシスタントで生産性を強化](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+## 次の手順
 
 以下のリンクを参照すると、AI アシスタントのユースケースや機能などをより深く理解できます。
 
