@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 同意および環境設定スキーマフィールドグループ
 description: 同意および環境設定スキーマフィールドグループについて説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->顧客の同意データと環境設定データのマッピング方法を視覚化するために、Experience Platformで定義した XDM スキーマのサンプル JSON データを生成できます。 詳しくは、次のドキュメントを参照してください。
+>顧客の同意データと環境設定データのマッピング方法を視覚化するために、Experience Platformで定義する XDM スキーマのサンプル JSON データを生成できます。 詳しくは、次のドキュメントを参照してください。
 >
 >* [UI でのサンプルデータの生成 ](../../ui/sample.md)
 >* [API でのサンプルデータの生成 ](../../api/sample-data.md)
@@ -169,7 +169,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->この値は、必要に応じてAdobe Experience Platform Mobile SDK が自動的に設定するので、直接設定する必要はありません。
+>この値は、必要に応じてAdobe Experience Platform Mobile SDKが自動的に設定するので、直接設定する必要はありません。
 
 ## フィールドグループを使用したデータの取り込み {#ingest}
 
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 ## 同意および環境設定の変更の処理
 
-お客様が web サイトに対する同意や環境設定を変更した場合は、変更内容を収集し、[Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md) を使用して直ちに適用する必要があります。 お客様がデータ収集をオプトアウトした場合、すべてのデータ収集は直ちに停止する必要があります。 顧客がパーソナライゼーションをオプトアウトする場合、訪問する次のページにはパーソナライゼーションが存在しないはずです。
+お客様が web サイトに対する同意や環境設定を変更した場合は、変更内容を収集し、[Adobe Experience Platform web SDK](../../../web-sdk/commands/setconsent.md) を使用して直ちに適用する必要があります。 お客様がデータ収集をオプトアウトした場合、すべてのデータ収集は直ちに停止する必要があります。 顧客がパーソナライゼーションをオプトアウトする場合、次に読み込まれるページにはパーソナライゼーションが存在しないはずです。
 
 ## 次の手順
 
