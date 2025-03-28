@@ -1,9 +1,8 @@
 ---
 title: API を使用したソースデータフローへのユーザーアクセスを管理するためのアクセスラベルの適用
 description: Flow Service API を使用してアクセスラベルを適用し、ソースデータフローへのユーザーアクセスを管理する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 572d6838-3e4c-4fd5-89fa-32cad6280325
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 11%

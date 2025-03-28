@@ -1,9 +1,8 @@
 ---
 title: アクセスラベルを適用して、UI でソースデータフローへのユーザーアクセスを管理します
 description: Experience Platform UI を使用してアクセスラベルを適用し、ソースデータフローへのユーザーアクセスを管理する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 3%

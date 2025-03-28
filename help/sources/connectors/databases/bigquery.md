@@ -3,10 +3,10 @@ title: Google BigQuery Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してGoogle BigQuery をAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
+source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 25%
+source-wordcount: '582'
+ht-degree: 4%
 
 ---
 
@@ -14,23 +14,21 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Google BigQuery] ソースを利用できます。
+>Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Google BigQuery] ソースを利用できます。
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
-
-[!DNL Google BigQuery] アカウントをExperience Platformに正常に接続するために必要な前提条件の手順については、このドキュメントを参照してください。
+[!DNL Google BigQuery] アカウントを Azure またはAmazon Web Services（AWS）上のAdobe Experience Platformに正常に接続するために必要な前提条件の手順については、このドキュメントをお読みください。
 
 ## 前提条件 {#prerequisites}
 
-次の節では、[!DNL Google BigQuery] ソース接続を作成する前に必要な前提条件の設定について詳しく説明します。
+[!DNL Google BigQuery] アカウントをExperience Platformに接続する前に完了する必要がある前提条件の設定については、次の節を参照してください。
 
-### IP アドレス許可リスト
+### IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースを Azure またはAmazon Web Services（AWS）上のExperience Platformに接続する前に、許可リストに地域固有の IP アドレスを追加する必要があります。 詳しくは、[Azure およびAWS上のExperience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
-### [!DNL Google BigQuery] 資格情報の生成 {#credentials}
+### Azure 上のExperience Platformに対する認証 {#azure}
 
-[!DNL Google BigQuery] をExperience Platformに接続するには、次の資格情報の値を生成する必要があります。
+[!DNL Google BigQuery] アカウントを Azure 上のExperience Platformに接続するには、次の資格情報を指定する必要があります。
 
 >[!BEGINTABS]
 
@@ -64,9 +62,19 @@ OAuth 2.0 認証と基本認証の組み合わせを使用して認証するに�
 
 >[!ENDTABS]
 
-## [!DNL Google BigQuery] を Platform に接続
+### AWSでExperience Platformに対する認証 {#aws}
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Google BigQuery] と Platform を接続する方法について説明します。
+[!DNL Google BigQuery] アカウントをAWS上のExperience Platformに接続するには、次の資格情報を指定する必要があります。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `projectId` | クエリ対象となる [!DNL Google BigQuery] の ID。 |
+| `keyFileContent` | サービスアカウントの認証に使用されるキーファイル。 この値は [[!DNL Google Cloud service accounts] dashboard](https://console.cloud.google.com) から取得できます。 キーファイルのコンテンツは JSON 形式です。 Experience Platformへの認証時に、[!DNL Base64] でこれをエンコードする必要があります。 |
+| `datasetId` | [!DNL Google BigQuery] データセット ID。 この ID は、データテーブルの場所を表します。 |
+
+## [!DNL Google BigQuery] をExperience Platformに接続
+
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Google BigQuery] をExperience Platformに接続する方法について説明しています。
 
 ### API の使用
 
