@@ -3,9 +3,9 @@ title: Audiences API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用して、組織のオーディエンスをプログラムで作成、管理および更新します。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1590'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 6%
 
 ## オーディエンスのリストの取得 {#list}
 
-`/audiences` エンドポイントに対してGETリクエストを行うことで、組織のすべてのオーディエンスのリストを取得できます。
+`/audiences` エンドポイントに対してGET リクエストを実行することで、組織のすべてのオーディエンスのリストを取得できます。
 
 **API 形式**
 
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 ## 新しいオーディエンスの作成 {#create}
 
-`/audiences` エンドポイントにPOSTリクエストを実行することで、新しいオーディエンスを作成できます。
+`/audiences` エンドポイントに POST リクエストを実行することで、新しいオーディエンスを作成できます。
 
 **API 形式**
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 ## 指定したオーディエンスの検索 {#get}
 
-`/audiences` エンドポイントに対してGETリクエストを実行し、取得するオーディエンスの ID をリクエストパスで指定することで、特定のオーディエンスに関する詳細な情報を検索できます。
+`/audiences` エンドポイントに対してGET リクエストを実行し、取得するオーディエンスの ID をリクエストパスで指定することで、特定のオーディエンスに関する詳細な情報を検索できます。
 
 **API 形式**
 
@@ -422,9 +422,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 +++
 
-## オーディエンスの更新 {#put}
+## オーディエンスを上書き {#put}
 
-特定のエンドポイントに対してPUTリクエストを実行し、リクエストパスで更新するオーディエンスの ID を指定することで、`/audiences` 定のオーディエンスを更新（上書き）できます。
+`/audiences` エンドポイントに対してPUT リクエストを実行し、リクエストパスで更新するオーディエンスの ID を指定することで、特定のオーディエンスを更新（上書き）できます。
 
 **API 形式**
 
@@ -453,6 +453,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "namespace": "AEPSegments",
     "description": "Last 30 days",
     "type": "SegmentDefinition",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country=\"US\""
+    }
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -468,6 +473,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | オーディエンスの名前空間。 |
 | `description` | オーディエンスの説明。 |
 | `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
+| `expression` | オーディエンスのPQL式を含むオブジェクト。 |
 | `lifecycleState` | オーディエンスのステータス。使用可能な値は、`draft`、`published`、`inactive` です。 `draft` は、オーディエンスが作成されたとき、オーディエンスが公開されたと `published`、オーディエンスがアクティブでなくなった `inactive` を表します。 |
 | `datasetId` | オーディエンスデータを検索できるデータセットの ID。 |
 | `labels` | オーディエンスに関連するオブジェクトレベルのデータ使用と属性ベースのアクセス制御ラベル。 |
@@ -508,9 +514,84 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 +++
 
+## オーディエンスの更新 {#patch}
+
+`/audiences` エンドポイントに対してPATCH リクエストを実行し、リクエストパスで更新するオーディエンスの ID を指定することで、特定のオーディエンスを更新できます。
+
+**API 形式**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
+
+**リクエスト**
+
++++ オーディエンスを更新するためのサンプルリクエスト。
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '[
+    {
+        "op": "add",
+        "path": "/lifecycleState",
+        "value": "inactive"
+    }
+ ]'
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `op` | 実行されるPATCH操作のタイプ。 このエンドポイントの場合、この値は **常に**`/add` です。 |
+| `path` | 更新するフィールドのパス。 `id`、`audienceId`、`namespace` などのシステム生成フィールドは編集できません **編集**。 |
+| `value` | `path` で指定されたプロパティに割り当てられた新しい値。 |
+
++++
+
+**応答**
+
+応答に成功すると、HTTP ステータス 200 と、更新されたオーディエンスが返されます。
+
++++オーディエンスのフィールドにパッチを適用する際の応答のサンプル。
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "SegmentDefinition",
+    "lifecycleState": "inactive",
+    "createdBy": "{CREATED_BY_ID}",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
++++
+
 ## オーディエンスの削除 {#delete}
 
-特定のオーディエンスを削除するには、`/audiences` エンドポイントにDELETEリクエストを実行し、リクエストパスで削除するオーディエンスの ID を指定します。
+特定のオーディエンスを削除するには、`/audiences` エンドポイントにDELETE リクエストを実行し、リクエストパスで削除するオーディエンスの ID を指定します。
 
 **API 形式**
 
@@ -542,7 +623,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4
 
 ## 複数のオーディエンスの取得 {#bulk-get}
 
-`/audiences/bulk-get` エンドポイントに対してPOSTリクエストを行い、取得するオーディエンスの ID を指定することで、複数のオーディエンスを取得できます。
+`/audiences/bulk-get` エンドポイントに POST リクエストを実行し、取得するオーディエンスの ID を指定することで、複数のオーディエンスを取得できます。
 
 **API 形式**
 
