@@ -3,9 +3,9 @@ title: Adobe Experience Platformの AI アシスタント製品ドキュメン�
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
+source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -441,6 +441,10 @@ AI アシスタントのユースケースの例については、以下を参�
 >[!ENDTABS]
 
 ### AI アシスタントで生産性を向上
+
+>[!NOTE]
+>
+>このワークブックの最終更新日は、2025 年 3 月 31 日（PT）です。 それ以降、一部の機能は進化または拡張した可能性があります。 さらに、このガイドで参照されるいくつかの機能が引き続き早期アクセスできる場合があります。 お使いの環境でまだ利用できない問題が発生し、その調査に興味がある場合は、Adobe アカウントチームに連絡して早期アクセスをリクエストしてください。
 
 AI アシスタントを使用して生産性を高める方法の実践ガイドについては、以下をお読みください。
 
