@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；フィールドグループ；フィールドグループ；フィールドグループ；フィールドグループ；データタイプ；データタイプ；データタイプ；データタイプ；スキーマデザイン；データタイプ；データタイプ；データタイプ；スキーマ；スキーマデザイン；マップ；
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；フィールドグループ；フィールドグループ；フィールドグループ；データタイプ；データタイプ；データタイプ；データタイプ；スキーマデザイン；データタイプ；データタイプ；データタイプ；スキーマ；スキーマデザイン；マップ；
 solution: Experience Platform
 title: XDM フィールドタイプ制約
 description: マッピング可能なその他のシリアル化形式や、API で独自のフィールドタイプを定義する方法など、エクスペリエンスデータモデル（XDM）のフィールドタイプ制約のリファレンスです。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 7%
@@ -130,7 +130,7 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td>[!UICONTROL ブール値 ]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "string"}</pre>
+{"type": "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
