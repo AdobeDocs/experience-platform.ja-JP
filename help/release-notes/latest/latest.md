@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート（2025年3月）
 description: Adobe Experience Platform の 2025年3月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
+source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1250'
 ht-degree: 21%
 
 ---
@@ -19,6 +19,7 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 
    - [ダッシュボード](#dashboards)
    - [宛先](#destinations)
+   - [連合オーディエンス構成](#federated-audience-composition)
    - [セグメント化サービス](#segmentation-service)
    - [ソース](#sources)
 
@@ -62,6 +63,10 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 {style="table-layout:auto"}
 
 詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
+
+## 連合オーディエンス構成 {#federated-audience-composition}
+
+Federated Audience Composition の最新の更新について詳しくは、こちら [ 専用リリースノート ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
