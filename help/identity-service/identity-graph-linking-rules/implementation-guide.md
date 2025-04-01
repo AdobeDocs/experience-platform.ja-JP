@@ -5,7 +5,7 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
 source-wordcount: '1819'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -62,10 +62,10 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
->title="ユーザー ID が 1 つあることを確認してください"
->abstract="事前実装プロセス中に、システムがExperience Platformに送信する認証済みイベントに、CRMID などの **単一の** 人物識別子が常に含まれていることを確認する必要があります。"
+>title="単一のユーザー識別子が含まれていることを確認"
+>abstract="実装前のプロセス中に、Experience Platform に送信される認証済みイベントに、CRMID などの&#x200B;**単一**&#x200B;のユーザー識別子が常に含まれていることを確認する必要があります。"
 
-事前実装プロセス中に、システムがExperience Platformに送信する認証済みイベントに、CRMID などの **単一の** 人物識別子が常に含まれていることを確認する必要があります。
+実装前のプロセス中に、Experience Platform に送信される認証済みイベントに、CRMID などの&#x200B;**単一**&#x200B;のユーザー識別子が常に含まれていることを確認する必要があります。
 
 * （推奨） 1 つの一意のユーザー識別子を持つ認証済みイベント。
 * （非推奨） 2 つの一意のユーザー識別子を持つ認証済みイベント。 一意のユーザー ID が複数ある場合、不要なグラフの折りたたみが発生する可能性があります。
@@ -290,7 +290,7 @@ ID 設定と一意の名前空間を実装する際に参照できる追加情�
 
 ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフリンクルールの概要](./overview.md)
+* [ID グラフのリンクルールの概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [グラフ設定の例](./example-configurations.md)
 * [トラブルシューティングと FAQ](./troubleshooting.md)
