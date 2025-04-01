@@ -1,12 +1,10 @@
 ---
 title: Adobe Content Analytics拡張機能の概要
 description: Adobe Experience PlatformのAdobe Content Analytics タグ拡張機能について説明します。
-hide: true
-hidefromtoc: true
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
+source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -79,6 +77,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 1. オプション。 web サイトでのコンテンツのレンダリング方法をパラメーターで指定します。 パラメーターは、0 個以上の **[!UICONTROL ドメイン正規表現]** と **[!UICONTROL クエリパラメーター]** の組み合わせです。
    1. **[!UICONTROL ドメイン正規表現]** を入力します（例：`^(?!.*\b(store|help|admin)\b)`）。
    1. **[!UICONTROL クエリパラメーター]** のコンマ区切りリスト（例：`outdoors, patio, kitchen`）を指定します。
+![ 閉じる ](./assets/CrossSize300.svg) を使用して個々のパラメータを削除するか、**[!UICONTROL すべてクリア]** を使用してすべてのパラメータを削除します。
 1. ドメイン正規表現とクエリパラメーターの組み合わせを削除する場合は、「**[!UICONTROL 削除]**」を選択します。
 1. 正規表現とクエリパラメーターの別の組み合わせを追加する場合は、「**[!UICONTROL 正規表現を追加]**」を選択します。
 
