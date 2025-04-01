@@ -1,9 +1,9 @@
 ---
 title: Experience Platform UI を使用した、オンデマンドによるバッチ宛先へのファイルの書き出し
 type: Tutorial
-description: Experience PlatformUI を使用して、オンデマンドでファイルをバッチ宛先に書き出す方法を説明します。
+description: Experience Platform UI を使用して、オンデマンドでファイルをバッチ宛先に書き出す方法を説明します。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: d3bd76f5b36b6a6afcb67fe923eb8e4f3d7a9415
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 16%
@@ -24,11 +24,11 @@ ht-degree: 16%
 >title="今すぐファイルを書き出し"
 >abstract="このコントロールを選択すると、以前にスケジュールされた書き出しに加えて完全なファイル書き出しが実行されます。ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化実行から最新の結果が取得されます。"
 
-この記事では、Experience PlatformUI を使用して、[ クラウドストレージ ](/help/destinations/catalog/cloud-storage/overview.md) や [ メールマーケティング ](/help/destinations/catalog/email-marketing/overview.md) の宛先など、オンデマンドでファイルをバッチ宛先に書き出す方法について説明します。
+この記事では、Experience Platform UI を使用して、[ クラウドストレージ ](/help/destinations/catalog/cloud-storage/overview.md) や [ メールマーケティング ](/help/destinations/catalog/email-marketing/overview.md) の宛先など、オンデマンドでファイルをバッチ宛先に書き出す方法について説明します。
 
 **[!UICONTROL 今すぐファイルを書き出し]** コントロールを使用すると、以前にスケジュールされたオーディエンスの現在の書き出しスケジュールを中断することなく、完全なファイルを書き出すことができます。 この書き出しは、以前にスケジュールされた書き出しに加えて行われ、オーディエンスの書き出し頻度は変更されません。 ファイルの書き出しが直ちにトリガーされ、Experience Platform のセグメント化実行から最新の結果が取得されます。
 
-この目的で、Experience PlatformAPI を使用することもできます。 [ アドホックアクティベーション API を使用して、オンデマンドでオーディエンスをバッチ宛先に対してアクティブ化する ](/help/destinations/api/ad-hoc-activation-api.md) 方法を参照してください。
+この目的で、Experience Platform API を使用することもできます。 [ アドホックアクティベーション API を使用して、オンデマンドでオーディエンスをバッチ宛先に対してアクティブ化する ](/help/destinations/api/ad-hoc-activation-api.md) 方法を参照してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -63,7 +63,7 @@ ht-degree: 16%
 **[!UICONTROL 今すぐファイルを書き出す]** コントロールを使用する場合は、次の点に注意してください。
 
 * **[!UICONTROL 今すぐファイルを書き出す]** は、バッチアクティベーションデータフローのスケジュールが現在の日付と重複するオーディエンスに対してのみ機能します。 これには、終了日（書き出し頻度 **[!UICONTROL 1 回]**）がない、または終了日がまだ過ぎていないスケジュールのオーディエンスが含まれます。
-* 既存のデータフローにオーディエンスを追加する場合は、「**[!UICONTROL ファイルを今すぐ書き出し]**」コントロールを使用するまで 15 分以上待ちます。
+* 既存のデータフローにオーディエンスを追加する場合は、少なくとも **1 時間** 待ってから、「今すぐファイルを書き出し **[!UICONTROL コントロールを使用し]** ください。
 * オーディエンスの結合ポリシーを変更した場合、または新しい結合ポリシーを使用するオーディエンスを作成した場合は、「**[!UICONTROL ファイルを今すぐ書き出し]**」コントロールを使用するまで 24 時間待ちます。
 
 ## UI エラーメッセージ {#ui-error-messages}
@@ -77,5 +77,5 @@ ht-degree: 16%
 
 ## 関連情報 {#related-information}
 
-* [Experience PlatformAPI を使用して、オンデマンドでバッチ宛先に対するオーディエンスをアクティブ化します](/help/destinations/api/ad-hoc-activation-api.md)
+* [Experience Platform API を使用して、オンデマンドでバッチ宛先に対してオーディエンスをアクティブ化します](/help/destinations/api/ad-hoc-activation-api.md)
 * [プロファイル書き出しのバッチ宛先に対するオーディエンスデータの有効化](/help/destinations/ui/activate-batch-profile-destinations.md)

@@ -5,7 +5,7 @@ title: アドホックアクティベーション API を介して、バッチ�
 description: この記事では、アドホックアクティベーション API を介してオーディエンスをアクティブ化するためのエンドツーエンドのワークフローを、アクティベーション前に行われるセグメント化ジョブも含めて説明します。
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 12%
@@ -16,7 +16,7 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->Beta フェーズを完了すると、すべてのExperience Platformのお客様が [!DNL ad-hoc activation API] を一般公開（GA）できるようになりました。 GA バージョンでは、API がバージョン 2 にアップグレードされました。 API が書き出し ID を必要としなくなったので、手順 4 （[ 最新のオーディエンスエクスポートジョブ ID の取得 ](#segment-export-id)）は不要になりました。
+>Beta フェーズが完了すると、すべてのExperience Platform ユーザーが [!DNL ad-hoc activation API] を一般公開（GA）できるようになりました。 GA バージョンでは、API がバージョン 2 にアップグレードされました。 API が書き出し ID を必要としなくなったので、手順 4 （[ 最新のオーディエンスエクスポートジョブ ID の取得 ](#segment-export-id)）は不要になりました。
 >
 >詳しくは、このチュートリアルの後述の [ アドホックアクティベーションジョブの実行 ](#activation-job) を参照してください。
 
@@ -30,21 +30,19 @@ ht-degree: 12%
 
 ![ アドホックアクティベーション ](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
 ## ユースケース {#use-cases}
 
-### Flashの販売またはプロモーション
+### Flash の販売またはプロモーション
 
-オンライン小売業者は、限定フラッシュセールを準備しており、顧客に短い通知で通知したいと考えています。 Experience Platformアドホックアクティベーション API を通じて、マーケティングチームはオーディエンスをオンデマンドで書き出し、プロモーションメールをすばやく顧客ベースに送信できます。
+あるオンラインretailerは、限定フラッシュセールを準備中で、お客様に短い通知をしたいと考えています。 Experience Platform アドホックアクティベーション API を通じて、マーケティングチームはオーディエンスをオンデマンドで書き出し、プロモーションメールをすばやく顧客ベースに送信できます。
 
 ### 現在のイベントまたは最新ニュース
 
-ホテルは次の日に悪天候を予想し、チームは到着したゲストに迅速に通知したいので、それに応じて計画することができます。 マーケティングチームは、Experience Platformアドホックアクティベーション API を使用して、オーディエンスをオンデマンドで書き出し、ゲストに通知できます。
+ホテルは次の日に悪天候を予想し、チームは到着したゲストに迅速に通知したいので、それに応じて計画することができます。 マーケティングチームは、Experience Platform アドホックアクティベーション API を使用して、オーディエンスをオンデマンドで書き出し、ゲストに通知できます。
 
 ### 統合テスト
 
-IT 管理者は、Experience Platformアドホックアクティベーション API を使用して、オーディエンスをオンデマンドで書き出すことができます。これにより、Adobe Experience Platformとのカスタム統合をテストし、すべてが正しく機能していることを確認できます。
+IT 管理者は、Experience Platform アドホックアクティベーション API を使用して、オーディエンスをオンデマンドで書き出すことができます。これにより、Adobe Experience Platformとのカスタム統合をテストし、すべてが正しく機能していることを確認できます。
 
 ## ガードレール {#guardrails}
 
@@ -63,7 +61,7 @@ Adobe Experience Platformは、スケジュールされたセグメント化ジ�
 Adobe Experience Platform API を呼び出す前に、次の前提条件を満たしていることを確認してください。
 
 * Adobe Experience Platformにアクセスできる組織アカウントがある。
-* Experience Platformアカウントでは、`developer` ロールと `user` ロールがAdobe Experience Platform API 製品プロファイルに対して有効になっています。 アカウントでこれらのロールを有効にするには、[Admin Console](../../access-control/home.md) 管理者にお問い合わせください。
+* Experience Platform アカウントでは、`developer` と `user` の役割がAdobe Experience Platform API 製品プロファイルに対して有効になっています。 アカウントでこれらの役割を有効にするには、[Admin Console](../../access-control/home.md) 管理者にお問い合わせください。
 * Adobe IDがある。 Adobe IDがない場合は、[Adobe Developer Consoleに移動して ](https://developer.adobe.com/console) 新しいアカウントを作成します。
 
 ## 手順 2：資格情報の収集 {#credentials}
@@ -126,7 +124,7 @@ Adobe Experience Platformは、スケジュールされたセグメント化ジ�
 
 >[!IMPORTANT]
 >
->次の 1 回限りの制約に注意します。アドホックアクティベーションジョブを実行する前に、[ 手順 3 - Platform UI でのアクティベーションフローの作成 ](#activation-flow) で設定したスケジュールに従って、オーディエンスが最初にアクティベートされた時点から少なくとも 20 分が経過していることを確認します。
+>次の 1 回限りの制約に注意します。アドホックアクティベーションジョブを実行する前に、[ 手順 3 - Platform UI でのアクティベーションフローの作成 ](#activation-flow) で設定したスケジュールに従って、オーディエンスが最初にアクティベートされた時点から少なくとも 1 時間が経過していることを確認します。
 
 アドホックアクティベーションジョブを実行する前に、オーディエンスのスケジュールされたオーディエンス書き出しジョブが完了していることを確認します。 アクティブ化フローのステータスを監視する方法については、[ 宛先データフローの監視 ](../../dataflows/ui/monitor-destinations.md) を参照してください。 例えば、アクティベーションデータフローに **[!UICONTROL 処理中]** ステータスが表示された場合は、完了するまで待ってから、アドホックアクティベーションジョブを実行して完全なファイルを書き出します。
 

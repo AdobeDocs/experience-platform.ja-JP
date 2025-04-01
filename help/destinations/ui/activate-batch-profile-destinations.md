@@ -3,9 +3,9 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
-source-wordcount: '4405'
+source-wordcount: '4452'
 ht-degree: 51%
 
 ---
@@ -145,6 +145,10 @@ Experience Platformでは、各ファイル書き出しのデフォルトのス�
 「**[!UICONTROL スケジュール済み]**」オプションを使用して、特定の時間にアクティベーションジョブを実行します。 このオプションを選択すると、Experience Platform プロファイルデータが毎日同じ時間に書き出されます。 ただし、アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新でない場合があります。
 
    ![バッチ宛先のアクティベーションフローの「スケジュール済み」オプションが強調表示され、時間セレクターが表示されている画像。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
+
+   >[!IMPORTANT]
+   >
+   >過去 24 時間以内に作成され、[ バッチセグメント化 ](../../segmentation/methods/batch-segmentation.md) によって評価されたオーディエンスをマッピングする場合、毎日の書き出しスケジュールを、できるだけ早く、次の日から開始するように設定します。 これにより、毎日のバッチ評価ジョブが最初に実行され、完全なオーディエンスデータを書き出します。
 
 3. 「**[!UICONTROL 日付]**」セレクターを使用して、書き出しを実行する日または間隔を選択します。日常の書き出しでのベストプラクティスは、開始日と終了日を、ダウンストリームプラットフォームのキャンペーンの期間に合わせて設定することです。
 
