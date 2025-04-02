@@ -4,10 +4,10 @@ title: HTTP API 接続
 description: Adobe Experience Platform で HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。これによって、Experience Platform から書き出されたプロファイルデータに対して必要な独自の分析を実行したり、他の操作を実行したりできます。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
+source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 72%
+source-wordcount: '2701'
+ht-degree: 71%
 
 ---
 
@@ -35,7 +35,7 @@ HTTP エンドポイントとして設定できるのは、顧客独自のシス
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -77,7 +77,7 @@ Experience Platform からデータを書き出す際に HTTP API 宛先を使�
 
 * [HTTP API mTLS 公開証明書](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
-また、MTLS エンドポイントにGETリクエストを行うことで、公開証明書を安全に取得できます。 詳しくは、[ 公開証明書エンドポイントのドキュメント ](../../../data-governance/mtls-api/public-certificate-endpoint.md) を参照してください。
+また、MTLS エンドポイントに対してGET リクエストを実行することで、公開証明書を安全に取得できます。 詳しくは、[ 公開証明書エンドポイントのドキュメント ](../../../data-governance/mtls-api/public-certificate-endpoint.md) を参照してください。
 
 ## IP アドレスの許可リスト {#ip-address-allowlist}
 
@@ -158,6 +158,10 @@ curl --location --request POST 'https://some-api.com/token' \
 **[!UICONTROL OAuth 2 クライアント資格情報]**&#x200B;認証タイプを選択して HTTP エンドポイントに接続する場合は、以下のフィールドを入力し、「**[!UICONTROL 宛先に接続]**」を選択します。 
 
 ![OAuth 2 とクライアント資格情報認証を使用して、HTTP API 宛先に接続できる UI 画面の画像 ](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+
+>[!WARNING]
+> 
+>[!UICONTROL OAuth 2 クライアント資格情報 ] 認証を使用する場合、[!UICONTROL  アクセストークン URL] には最大 1 つのクエリパラメーターを含めることができます。 クエリパラメーターを増やして [!UICONTROL  アクセストークン URL] を追加すると、エンドポイントに接続する際に問題が発生する可能性があります。
 
 * **[!UICONTROL アクセストークン URL]**：アクセストークンと必要に応じて更新トークンを発行する、ユーザー側の URL。
 * **[!UICONTROL クライアント ID]**：システムが Adobe Experience Platform に割り当てる [!DNL client ID]。
@@ -256,7 +260,7 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 ## 履歴データのバックフィル {#historical-data-backfill}
 
-既存の宛先に新しいオーディエンスを追加する場合、または新しい宛先を作成し、その宛先にオーディエンスをマッピングする場合、Experience Platformは、履歴オーディエンスの選定データを宛先に書き出します。 オーディエンス *以前* に適合し、オーディエンスが宛先に追加されたプロファイルは、約 1 時間以内に宛先に書き出されます。
+既存の宛先に新しいオーディエンスを追加する場合、または新しい宛先を作成し、それにオーディエンスをマッピングする場合、Experience Platformは、履歴オーディエンス選定データを宛先に書き出します。 オーディエンス *以前* に適合し、オーディエンスが宛先に追加されたプロファイルは、約 1 時間以内に宛先に書き出されます。
 
 ## 書き出したデータ {#exported-data}
 
