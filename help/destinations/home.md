@@ -2,10 +2,10 @@
 title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
+source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 63%
+source-wordcount: '1359'
+ht-degree: 57%
 
 ---
 
@@ -61,7 +61,7 @@ Platform の宛先機能は、Adobe Experience Platform のアクセス制御権
 
 | 権限レベル | 説明 |
 | ---- | ---- |
-| **[!UICONTROL 宛先の表示]** | Experience PlatformUI の「宛先」タブにアクセスするには、**[!UICONTROL 宛先の表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL 宛先の表示]** | Experience Platform UI の「宛先」タブにアクセスするには、**[!UICONTROL 宛先の表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
 | **[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
 | **[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの [ マッピングステップ ](ui/activate-batch-profile-destinations.md#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
 | **[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** | ワークフローの [ マッピングステップ ](ui/activate-batch-profile-destinations.md#mapping) へのアクセス権を持たない既存のデータフローにオーディエンスを追加または削除するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
@@ -83,6 +83,14 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 属性ベースのアクセス制御を使用すると、権限を持つフィールドにマッピング設定を適用できます。さらに、データセット内のすべてのフィールドにアクセスできない場合は、宛先にデータを書き出すことはできません。
 
 宛先が属性ベースのアクセス制御と連携する方法について詳しくは、[属性ベースのアクセス制御の概要](../access-control/abac/overview.md#destinations)を参照してください。
+
+## 宛先からのプロファイルの削除 {#profile-removal}
+
+宛先に対してアクティブ化されたオーディエンスからプロファイルを削除すると、そのプロファイルは宛先プラットフォームの対応するオーディエンスからも削除されます。 例えば、以前に LinkedIn に対してアクティブ化されたオーディエンスからプロファイルが削除された場合、そのプロファイルは関連する [!UICONTROL LinkedIn で一致したオーディエンス ] から削除されます。
+
+宛先からのプロファイルの削除（セグメント解除とも呼ばれます）は、セグメント化と同じケイデンスで行われます。 Experience Platformでプロファイルがオーディエンスから削除されるとすぐに、宛先への次のスケジュールされたデータフローはその変更を反映し、宛先オーディエンスからプロファイルを削除します。
+
+宛先プラットフォームでプロファイルの削除が有効になる実際の速度は、宛先の取り込みと処理動作によって異なる場合があります。
 
 ## 宛先の監視 {#destinations-monitoring}
 
