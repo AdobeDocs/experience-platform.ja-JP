@@ -4,10 +4,10 @@ title: ストリーミング宛先の IP アドレス許可リスト
 type: Documentation
 description: このページでは、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesis または Azure Event Hubs インスタンスにデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
+source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 9%
+source-wordcount: '307'
+ht-degree: 8%
 
 ---
 
@@ -57,12 +57,12 @@ Adobeでは、上記の宛先を使用する前に、次の IP 範囲を許可�
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
-<!-- 
-## VA6: US and Americas customers running on AWS {#aws}
 
-The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+## VA6:AWSで稼働する米国およびアメリカのお客様 {#aws}
 
-`66.117.18.0/24` -->
+以下の IP 範囲は、Amazon Web Services（AWS）で動作するExperience Platformのお客様に適用されます。 詳しくは、[Experience Platform Multi-Cloud の概要 ](../../../landing/multi-cloud.md) を参照してください。
+
+`66.117.18.0/24`
 
 ## NLD2: EMEA のお客様 {#emea}
 
