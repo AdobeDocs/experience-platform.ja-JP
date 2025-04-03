@@ -1,13 +1,13 @@
 ---
 title: オーディエンスタイプ
 description: Adobe Experience Platformで作成できる様々なタイプのオーディエンスについて説明します。
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '251'
 ht-degree: 2%
 
 ---
-
 
 # オーディエンスタイプ
 
@@ -39,4 +39,4 @@ Adobe Experience Platformには、プロファイルをセグメント化する�
 
 ## 次の手順
 
-この概要を読むことで、様々なタイプについて理解が深まりました of platform で使用可能なオーディエンス。 様々な評価方法について詳しくは、[ 評価方法の概要 ](../methods/overview.md) を参照してください。
+この概要を読むことで、様々なタイプについて理解が深まりました of Experience Platformで使用可能なオーディエンス。 様々な評価方法について詳しくは、[ 評価方法の概要 ](../methods/overview.md) を参照してください。

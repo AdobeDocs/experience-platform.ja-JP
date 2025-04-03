@@ -2,9 +2,9 @@
 title: オーディエンスの評価方法
 description: Adobe Experience Platformで使用できる様々なタイプの評価方法について説明します。
 exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platformは、プロファイルをオーディエンスにセ�
 
 ## ストリーミングセグメント化
 
-ストリーミングセグメント化は、データの豊富さを重視しながら、ほぼリアルタイムでオーディエンスを評価するために使用できるセグメント化評価方法です。 ストリーミングセグメント化を使用すると、ストリーミングデータが Platform に到着する際に、すばやくセグメント化できます。
+ストリーミングセグメント化は、データの豊富さを重視しながら、ほぼリアルタイムでオーディエンスを評価するために使用できるセグメント化評価方法です。 ストリーミングセグメント化を使用すると、Experience Platformに到着するストリーミングデータをすばやくセグメント化できます。
 
 ストリーミングセグメント化について詳しくは、[ ストリーミングセグメント化の概要 ](./streaming-segmentation.md) を参照してください。
 

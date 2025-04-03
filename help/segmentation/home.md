@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: セグメント化サービスの概要
-description: Adobe Experience Platform セグメント化サービスとそれが Platform エコシステムで果たす役割について説明します。
+description: Adobe Experience Platform セグメント化サービスと、それがExperience Platform エコシステムで果たす役割について説明します。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 93%
+source-wordcount: '1679'
+ht-degree: 84%
 
 ---
 
 # [!DNL Segmentation Service] の概要
 
-Adobe Experience Platform [!DNL Segmentation Service] は、[!DNL Real-Time Customer Profile] データからセグメント定義や他のソースを通じてオーディエンスを作成できるユーザーインターフェイスおよび RESTful API を提供します。これらのオーディエンスは、[!DNL Platform] 上で一元的に設定および管理され、アドビのどのソリューションからでも簡単にアクセスできます。
+Adobe Experience Platform [!DNL Segmentation Service] は、[!DNL Real-Time Customer Profile] データからセグメント定義や他のソースを通じてオーディエンスを作成できるユーザーインターフェイスおよび RESTful API を提供します。これらのオーディエンスは、[!DNL Experience Platform] 上で一元的に設定および管理され、アドビのどのソリューションからでも簡単にアクセスできます。
 
 このドキュメントでは、[!DNL Segmentation Service] の概要と Adobe Experience Platform での役割について説明します。
 
@@ -20,7 +20,7 @@ Adobe Experience Platform [!DNL Segmentation Service] は、[!DNL Real-Time Cust
 
 このドキュメント全体で使用される次の主な用語を理解する必要があります。
 
-- **オーディエンス**：類似した行動や特性を共有する人の集まりです。この人々の集団は、セグメント定義（プラットフォーム生成オーディエンス）を使用して Adobe Experience Platform で生成することも、外部ソース（外部生成オーディエンス）から生成することもできます。
+- **オーディエンス**：類似した行動や特性を共有する人の集まりです。このユーザーグループは、セグメント定義を使用したAdobe Experience Platform（Experience-Platform で生成されたオーディエンス）または外部ソース（外部で生成されたオーディエンス）から生成できます。
 - **セグメント定義**：Adobe Experience Platform によって使用されるルールセット。ターゲットオーディエンスの主要な特性や行動を説明します。
 - **セグメント**：プロファイルをオーディエンスに分割する行為です。
 
@@ -28,15 +28,15 @@ Adobe Experience Platform [!DNL Segmentation Service] は、[!DNL Real-Time Cust
 
 セグメント化は、プロファイルストアからのプロファイルのサブセットで共有される特定の属性や行動を定義して、マーケティング可能なユーザーグループを顧客ベースと区別するプロセスです。 例えば、「スニーカーを購入し忘れましたか？」というメールキャンペーンでは、過去 30 日間にランニングシューズを検索したが購入を完了しなかったすべてのユーザーのオーディエンスが必要な場合があります。
 
-オーディエンスを概念的に定義したら、[!DNL Experience Platform] で作成されます。オーディエンスは通常、マーケターまたはオーディエンススペシャリストによって作成されますが、データアナリストと協力してマーケティング部門が作成することを望む組織もあります。[!DNL Platform] に送信されるデータを確認する際、データアナリストは、2 つの方法（セグメント定義を作成する際にオーディエンスのルールや条件の作成に使用するフィールドや値を選択する、またはオーディエンス構成を使用してオーディエンスを構成する）でオーディエンスを作成できます。
+オーディエンスを概念的に定義したら、[!DNL Experience Platform] で作成されます。オーディエンスは通常、マーケターまたはオーディエンススペシャリストによって作成されますが、データアナリストと協力してマーケティング部門が作成することを望む組織もあります。[!DNL Experience Platform] に送信されるデータを確認する際、データアナリストは、2 つの方法（セグメント定義を作成する際にオーディエンスのルールや条件の作成に使用するフィールドや値を選択する、またはオーディエンス構成を使用してオーディエンスを構成する）でオーディエンスを作成できます。
 
 ## オーディエンスを作成
 
-オーディエンスは、Adobe Experience Platform で 2 つの異なる方法で作成できます。オーディエンスとして直接構成するか、Platform 派生のセグメント定義を通じて作成します。
+オーディエンスは、コンポジション、セグメント定義、Federated Data および Data Distillerなど、Adobe Experience Platform上で複数の方法で作成できます。
 
 ### オーディエンス構成
 
-Platform 上でオーディエンスを直接構成する場合、オーディエンス構成を使用できます。オーディエンス構成を使用してオーディエンスを作成する方法について詳しくは、[オーディエンス構成ガイド](./ui/audience-composition.md)を参照してください。
+Experience Platformでオーディエンスを直接構成する場合は、オーディエンス構成を使用できます。 オーディエンス構成を使用してオーディエンスを作成する方法について詳しくは、[オーディエンス構成ガイド](./ui/audience-composition.md)を参照してください。
 
 ### セグメント定義
 
@@ -61,7 +61,7 @@ API を使用したセグメント定義の作成について詳しくは、[API
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="評価方法"
->abstract="Platform では、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのオーディエンス評価方法をサポートしています。"
+>abstract="Experience Platformは、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのオーディエンス評価方法をサポートしています。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ API を使用したセグメント定義の作成について詳しくは、[API
 >abstract="ストリーミングセグメント化は、ユーザーアクティビティに応じてオーディエンスを更新する継続的なデータ選択プロセスです。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=ja" text="ストリーミングセグメント化を使用してほぼリアルタイムでイベントを評価する"
 
-Platform では、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのオーディエンス評価方法をサポートしています。
+Experience Platformは、現在、ストリーミングセグメント化、バッチセグメント化、エッジセグメント化の 3 つのオーディエンス評価方法をサポートしています。
 
 ### ストリーミングセグメント化 {#streaming}
 
@@ -93,12 +93,12 @@ Platform では、現在、ストリーミングセグメント化、バッチ�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="エッジ評価"
->abstract="エッジセグメント化は、 Platform のセグメントを Edge Network 上で瞬時に評価する機能で、同じページや次のページのパーソナライゼーションのユースケースを可能にします。"
+>abstract="Edgeのセグメント化は、Experience Platform内のセグメントをEdge Network上で瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=ja" text="エッジセグメント化ガイド"
 
-Edgeのセグメント化は、Platform 内のセグメントを [Edge Network上で ](../landing/edge-and-hub-comparison.md) 瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
+Edgeのセグメント化は、Experience Platform内のセグメントを [Edge Network上で ](../landing/edge-and-hub-comparison.md) 瞬時に評価する機能で、同じページでのパーソナライゼーションや次のページのパーソナライゼーションのユースケースを可能にします。
 
-エッジのセグメント化について詳しくは、[API ドキュメント](./methods/edge-segmentation.md)または [UI ドキュメント](./methods/edge-segmentation.md)を参照してください。
+エッジセグメント化について詳しくは、[ エッジセグメント化の概要 ](./methods/edge-segmentation.md) を参照してください。
 
 ## セグメント化の結果へのアクセス
 
@@ -122,7 +122,7 @@ Edgeのセグメント化は、Platform 内のセグメントを [Edge Network�
 
 結合ポリシーは、特定の条件下でデータを優先順位付けし統合ビューにまとめる方法を [!DNL Profile] が決定する場合に使用するルールです。
 
-結合ポリシーが定義されていない場合、デフォルトの [!DNL Platform] 結合ポリシーが使用されます。組織に特有の結合ポリシーを使用する場合は、独自の結合ポリシーを作成し、組織のデフォルトとすることができます。
+結合ポリシーが定義されていない場合、デフォルトの [!DNL Experience Platform] 結合ポリシーが使用されます。組織に特有の結合ポリシーを使用する場合は、独自の結合ポリシーを作成し、組織のデフォルトとすることができます。
 
 結合ポリシーについて詳しくは、[結合ポリシーガイド](../profile/api/merge-policies.md)を参照してください。
 
@@ -137,6 +137,7 @@ Edgeのセグメント化は、Platform 内のセグメントを [Edge Network�
 ## 高度なセグメント化機能
 
 セグメント定義は、[ストリーミングデータの取り込み](../ingestion/streaming-ingestion/overview.md)と以下の高度なセグメント化機能のいずれかを組み合わせることで、継続的にオーディエンスを生成するように設定できます。
+
 - [順次セグメント化](#sequential)
 - [動的セグメント化](#dynamic)
 - [マルチエンティティのセグメント化](#multi-entity)

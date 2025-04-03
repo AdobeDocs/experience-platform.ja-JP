@@ -3,9 +3,9 @@ title: Audiences API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用して、組織のオーディエンスをプログラムで作成、管理および更新します。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
+source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1592'
 ht-degree: 6%
 
 ---
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | オーディエンスの名前。 |
 | `namespace` | オーディエンスの名前空間。 |
 | `description` | オーディエンスの説明。 |
-| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Platform で生成されたオーディエンスを指し、`ExternalSegment` は、Platform で生成されなかったオーディエンスを指します。 |
+| `type` | オーディエンスが Platform で生成されたものか、外部で生成されたオーディエンスかを表示する、システムで生成されたフィールド。 使用可能な値は `SegmentDefinition` および `ExternalSegment` です。 `SegmentDefinition` は、Experience Platformで生成されたオーディエンスを指し、`ExternalSegment` は、Experience Platformで生成されなかったオーディエンスを指します。 |
 | `expression` | オーディエンスのPQL式を含むオブジェクト。 |
 | `lifecycleState` | オーディエンスのステータス。使用可能な値は、`draft`、`published`、`inactive` です。 `draft` は、オーディエンスが作成されたとき、オーディエンスが公開されたと `published`、オーディエンスがアクティブでなくなった `inactive` を表します。 |
 | `datasetId` | オーディエンスデータを検索できるデータセットの ID。 |
@@ -482,7 +482,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **応答**
 
-応答が成功すると、HTTP ステータス 200 が、新しく更新されたオーディエンスの詳細と共に返されます。 オーディエンスの詳細は、Platform で生成されたオーディエンスか、外部で生成されたオーディエンスかによって異なることに注意してください。
+応答が成功すると、HTTP ステータス 200 が、新しく更新されたオーディエンスの詳細と共に返されます。 オーディエンスの詳細は、Experience-Platform で生成されたオーディエンスか外部で生成されたオーディエンスかによって異なることに注意してください。
 
 +++オーディエンス全体を更新する際の応答のサンプル。
 
@@ -490,7 +490,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -565,7 +565,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

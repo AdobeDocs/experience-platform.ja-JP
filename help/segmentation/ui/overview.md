@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント化サービス UI ガイド
 description: Adobe Experience Platform UI でオーディエンスおよびセグメント定義を作成および管理する方法について説明します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 74%
+source-wordcount: '1046'
+ht-degree: 70%
 
 ---
 
@@ -20,12 +20,12 @@ ht-degree: 74%
 
 - [[!DNL Segmentation Service]](../home.md)：[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータを細かいグループに分類できます。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：[!DNL Platform] に取り込まれる様々なデータソースの ID を結合することで、顧客プロファイルの作成を有効にします。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：[!DNL Experience Platform] に取り込まれる様々なデータソースの ID を結合することで、顧客プロファイルの作成を有効にします。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
 また、このドキュメントで使用されている次の主な用語を理解し、それらの違いを理解する必要があります。
 
-- **オーディエンス**：類似した行動や特性を共有する人の集まりです。このユーザーグループは、セグメント定義（Platform で生成されたオーディエンス）、オーディエンス構成を使用したAdobe Experience Platformによって生成することも、カスタムアップロードなどの外部ソース（外部で生成されたオーディエンス）から生成することもできます。
+- **オーディエンス**：類似した行動や特性を共有する人の集まりです。このユーザーグループは、セグメント定義（Experience-Platform で生成されたオーディエンス）、オーディエンス構成を使用したAdobe Experience Platformによって生成することも、カスタムアップロードなどの外部ソース（外部で生成されたオーディエンス）から生成することもできます。
 - **セグメント定義**：Adobe Experience Platform が、ターゲットオーディエンスの重要な特徴や行動の説明に使用するルールです。
 - **セグメント**：プロファイルをオーディエンスに分割する行為です。
 
@@ -35,7 +35,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 >[!NOTE]
 >
->Platform を初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL オーディエンス]ダッシュボードは表示されません。代わりに、「[!UICONTROL 概要]」タブには、オーディエンスを開始する際に役立つリンクとドキュメントが表示されます。
+>Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL  オーディエンス ] ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、オーディエンスを開始する際に役立つリンクとドキュメントが表示されます。
 
 ### [!UICONTROL オーディエンス]ダッシュボード {#segments-dashboard}
 
@@ -49,7 +49,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 **[!UICONTROL 参照]** タブを選択して、オーディエンスポータルを表示します。 Audience Portal には、組織およびサンドボックスに属するすべてのオーディエンスのリストが表示され、プロファイル数、接触チャネル、作成日、最終変更日、タグ、分類などの詳細が含まれます。
 
-さらに、Audience Portal では、セグメントビルダーまたはオーディエンスコンポジションを使用して新しいオーディエンスを作成したり、外部で生成されたオーディエンスを Platform に読み込んだりできます。
+さらに、オーディエンスポータルを使用すると、セグメントビルダーまたはオーディエンスコンポジションを使用して新しいオーディエンスを作成したり、外部で生成されたオーディエンスをExperience Platformに読み込んだりできます。
 
 Audience Portal について詳しくは、[Audience Portal の概要 ](./audience-portal.md) を参照してください。
 
@@ -98,7 +98,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 ](./audien
 
 ## ストリーミングセグメント化 {#streaming-segmentation}
 
-ストリーミングセグメント化は、データの豊富さを重視しながら、ほぼリアルタイムで [!DNL Platform] でセグメント化を実行する機能です。ストリーミングセグメント化を使用すると、データが [!DNL Platform] に到達する際にセグメントの選定が行われるようになり、セグメント化ジョブをスケジュールして実行する必要性が軽減されます。
+ストリーミングセグメント化は、データの豊富さを重視しながら、ほぼリアルタイムで [!DNL Experience Platform] でセグメント化を実行する機能です。ストリーミングセグメント化を使用すると、データが [!DNL Experience Platform] に到達する際にセグメントの選定が行われるようになり、セグメント化ジョブをスケジュールして実行する必要性が軽減されます。
 
 ストリーミングセグメント化について詳しくは、[ストリーミングセグメント化ユーザーガイド](../methods/streaming-segmentation.md)を参照してください。
 
@@ -108,7 +108,7 @@ Audience Portal について詳しくは、[Audience Portal の概要 ](./audien
 
 ## エッジセグメント化 {#edge-segmentation}
 
-エッジセグメント化は、Platform 内のオーディエンスをエッジ上で即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
+Edgeのセグメント化は、Experience Platform内のオーディエンスをエッジ上で即座に評価する機能で、これにより、同じページや次のページのパーソナライゼーションのユースケースが可能になります。
 
 エッジセグメント化について詳しくは、[エッジセグメント化 UI ガイド](../methods/edge-segmentation.md)を参照してください。
 

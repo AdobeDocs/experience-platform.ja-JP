@@ -4,7 +4,7 @@ title: API を使用して、オーディエンスセグメントのデータ使
 type: Tutorial
 description: このチュートリアルでは、API を使用してデータ使用コンプライアンスセグメント定義を適用する手順を説明します。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 42%
@@ -19,16 +19,16 @@ ht-degree: 42%
 
 このチュートリアルでは、[!DNL Adobe Experience Platform] の次のコンポーネントに関する十分な知識が必要です。
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md):[!DNL Real-Time Customer Profile] は汎用のルックアップエンティティストアであり、[!DNL Platform] 内の [!DNL Experience Data Model (XDM)] データの管理に使用されます。 プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md):[!DNL Real-Time Customer Profile] は汎用のルックアップエンティティストアであり、[!DNL Experience Platform] 内の [!DNL Experience Data Model (XDM)] データの管理に使用されます。 プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
    - [ 結合ポリシー ](../../profile/api/merge-policies.md)：特定の条件下で統合ビューに結合できるデータを決定するために [!DNL Real-Time Customer Profile] ーザーが使用するルール。 結合ポリシーは、データガバナンスの目的で設定できます。
 - [[!DNL Segmentation]](../home.md):[!DNL Real-Time Customer Profile] がプロファイルストアに含まれる個人の大規模なグループを、類似の特性を共有し、マーケティング戦略と同様に応答する小さなグループに分割する方法。
 - [ データガバナンス ](../../data-governance/home.md)：データガバナンスは、次のコンポーネントを使用して、データ使用のラベル付けと実施のためのインフラストラクチャを提供します。
    - [データ使用ラベル](../../data-governance/labels/user-guide.md)：データセットとフィールドを、それぞれのデータを処理する際に適用する機密性のレベルの観点から説明する際に使用されるラベルです。
    - [データ使用ポリシー](../../data-governance/policies/overview.md)：特定のデータ使用ラベルで分類されたデータで、どのマーケティングアクションが許可されるかを示す設定です。
    - [ ポリシーの適用 ](../../data-governance/enforcement/overview.md): データ使用ポリシーを適用し、ポリシー違反を構成するデータ操作を防ぐことができます。
-- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
-次の節では、[!DNL Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。
+次の節では、[!DNL Experience Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -36,19 +36,19 @@ ht-degree: 42%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
@@ -124,7 +124,7 @@ curl -X GET \
 
 ## 結合ポリシーからソースデータセットを検索する {#datasets}
 
-結合ポリシーには、ソースデータセットに関する情報が含まれ、そのソースデータセットにはデータ使用ラベルが含まれます。 [!DNL Profile] API へのGETリクエストで結合ポリシー ID を指定することで、結合ポリシーの詳細を参照できます。 結合ポリシーについて詳しくは、[ 結合ポリシーエンドポイントガイド ](../../profile/api/merge-policies.md) を参照してください。
+結合ポリシーには、ソースデータセットに関する情報が含まれ、そのソースデータセットにはデータ使用ラベルが含まれます。 [!DNL Profile] API へのGET リクエストで結合ポリシー ID を指定することで、結合ポリシーの詳細を参照できます。 結合ポリシーについて詳しくは、[ 結合ポリシーエンドポイントガイド ](../../profile/api/merge-policies.md) を参照してください。
 
 **API 形式**
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 結合ポリシーのソースデータセットの ID を取得したら、[Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) を使用して、特定のマーケティングアクションに対してこれらのデータセットを評価し、データ使用ポリシーの違反をチェックできます。
 
-データセットを評価するには、次の例に示すように、POSTリクエストのパスにマーケティングアクションの名前を指定する必要があります。一方、リクエスト本文内ではデータセット ID を指定する必要があります。
+データセットを評価するには、以下の例に示すように、POST リクエストのパスにマーケティングアクションの名前を指定し、リクエスト本文内にデータセット ID を指定する必要があります。
 
 **API 形式**
 
@@ -198,7 +198,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | データセットの評価基準となるデータ使用ポリシーに関連付けられたマーケティングアクションの名前。 ポリシーがAdobeによって定義されたか組織によって異なりますが、それぞれ `/marketingActions/core` または `/marketingActions/custom` を使用する必要があります。 |
+| `{MARKETING_ACTION_NAME}` | データセットの評価基準となるデータ使用ポリシーに関連付けられたマーケティングアクションの名前。 ポリシーがAdobeで定義されたか、組織で定義されたかに応じて、それぞれ `/marketingActions/core` または `/marketingActions/custom` を使用する必要があります。 |
 
 **リクエスト**
 

@@ -3,10 +3,10 @@ title: 見込み客オーディエンス
 description: 見込み客オーディエンスを作成および使用して、サードパーティ情報を使用して未知の顧客をターゲティングする方法について説明します。
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 79%
+source-wordcount: '393'
+ht-degree: 72%
 
 ---
 
@@ -56,7 +56,7 @@ Adobe Experience Platform を使用すると、マーケターにとってわか
 
 ## 推奨されるユースケース {#use-cases}
 
-Experience Platform の見込み客オーディエンス機能を Experience Platform の他の機能と組み合わせて使用する方法については、次のユースケースのドキュメントを参照してください。
+Experience Platformの見込み客オーディエンス機能を他のExperience Platform機能と組み合わせて使用する方法については、次のユースケースドキュメントを参照してください。
 
 - [見込み客機能を使用した新規顧客のエンゲージメントと獲得](../../rtcdp/partner-data/prospecting.md)
 

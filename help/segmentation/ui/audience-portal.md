@@ -2,9 +2,9 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
 workflow-type: tm+mt
-source-wordcount: '4310'
+source-wordcount: '4356'
 ht-degree: 55%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 55%
    - [セグメントビルダーを使用したオーディエンスの作成](#segment-builder)
    - [オーディエンス構成を使用したオーディエンスの作成](#audience-composition)
    - [Federated Audience コンポジションを使用すると、既存のデータウェアハウスのデータを使用してオーディエンスを作成できます](#fac)
+   - [Data Distillerを使用したオーディエンスの作成](#data-distiller)
 - [外部で生成されたオーディエンスのインポート](#import-audience)
 
 Audience Portal を開くには、「セグメント化」セクション内の **[!UICONTROL 参照]** タブを選択します。
@@ -57,7 +58,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 | [!UICONTROL 編集] | セグメント化サービス | セグメントビルダーを開いてオーディエンスを編集します。 なお、API を使用してオーディエンスを作成した場合は、セグメントビルダーを使用して編集することは **できません**。 セグメントビルダーの使用について詳しくは、[セグメントビルダー UI ガイド](./segment-builder.md)を参照してください。 |
 | [!UICONTROL  コンポジションを開く ] | オーディエンス構成 | オーディエンス構成を開いてオーディエンスを表示します。 オーディエンス構成について詳しくは、[オーディエンス構成 UI ガイド](./audience-composition.md)を参照してください。 |
 | [!UICONTROL  宛先に対してアクティブ化 ] | セグメント化サービス | 宛先に対してオーディエンスをアクティブ化します。 オーディエンスを宛先に対してアクティブ化する方法について詳しくは、[アクティブ化の概要](../../destinations/ui/activation-overview.md)を参照してください。 |
-| [!UICONTROL  組合員の持分 ] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスを他の Platform ユーザーと共有します。 この機能について詳しくは、[Segment Match の概要](./segment-match/overview.md)を参照してください。 |
+| [!UICONTROL  組合員の持分 ] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスを他のExperience Platform ユーザーと共有します。 この機能について詳しくは、[Segment Match の概要](./segment-match/overview.md)を参照してください。 |
 | [!UICONTROL  タグの管理 ] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスに属する、ユーザー定義のタグを管理します。 この機能について詳しくは、[フィルタリングとタグ付け](#manage-audiences)に関する節を参照してください。 |
 | [!UICONTROL  フォルダーに移動 ] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスが属するフォルダーを管理します。 この機能について詳しくは、[フィルタリングとタグ付け](#manage-audiences)に関する節を参照してください。 |
 | [!UICONTROL  コピー ] | セグメント化サービス | 選択したオーディエンスを複製します。 この関数について詳しくは、[ セグメント化に関する FAQ](../faq.md#copy) を参照してください。 |
@@ -89,7 +90,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 
 ![ オーディエンス評価の円グラフがハイライト表示され、バッチセグメント化評価時間も表示される。](../images/ui/audience-portal/evaluation-summary.png)
 
-### Customize {#customize}
+### カスタマイズ {#customize}
 
 ![ フィルター属性アイコン ](/help/images/icons/column-settings.png) を選択することで、オーディエンスポータルにフィールドを追加できます。 追加のフィールドには、ライフサイクルステータス、更新頻度、最終更新者、説明、作成者、アクセスラベルなどがあります。
 
@@ -274,7 +275,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 
 ### オーディエンス合計 {#audience-total}
 
-Platform で生成されたオーディエンスおよびコンポジションの場合、「オーディエンスの合計 **[!UICONTROL セクションには、オーディエンスに該当するプロファイルの合計数が表示されます]**。
+Experience Platform で生成されたオーディエンスとコンポジションの場合、「オーディエンスの合計 **[!UICONTROL セクションには、オーディエンスに該当するプロファイルの合計数が表示されます]**。
 
 >[!NOTE]
 >
@@ -297,7 +298,7 @@ Platform で生成されたオーディエンスおよびコンポジション�
 | プロファイル数 | オーディエンスに適合するプロファイルの合計数。 |
 | データセット名 | オーディエンスが取り込まれたデータセットの名前。 データセット名を選択すると、データセットの詳細を確認できます。 データセットについて詳しくは、[ データセット UI ガイド ](../../catalog/datasets/user-guide.md) を参照してください。 |
 | データセットバッチ | オーディエンスが取り込まれたデータセットの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[ データ取り込みの監視ガイド ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
-| プロファイルバッチ | Platform でプロファイルを作成したバッチの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[ データ取り込みの監視ガイド ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
+| プロファイルバッチ | Experience Platformでプロファイルを作成したバッチの ID。 バッチの詳細を表示するには、バッチの ID を選択します。 バッチについて詳しくは、[ データ取り込みの監視ガイド ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches) を参照してください。 |
 | スキーマ | オーディエンスが属するスキーマの名前。 スキーマの名前を選択して、スキーマの構造に関する情報を表示し、データ使用ラベルを適用できます。 詳しくは、[ スキーマガイドのデータ使用ラベルの管理 ](../../xdm/tutorials/labels.md) を参照してください。 |
 | 取り込まれたレコード | データセットに取り込まれたレコードの数。 |
 | 失敗したレコード | データセットに取り込むことができなかったレコードの数。 |
@@ -385,9 +386,17 @@ Platform で生成されたオーディエンスおよびコンポジション�
 
 ### 連合オーディエンス構成 {#fac}
 
-オーディエンスの構成とセグメントの定義に加えて、Adobe Federated Audience Composition を使用すると、基になるデータをコピーせずにエンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience Portal に保存できます。 また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
+Adobe Federated Audience Composition を使用すると、基になるデータをコピーすることなく、エンタープライズデータセットから新しいオーディエンスを作成し、それらのオーディエンスをAdobe Experience Platform Audience ポータルに保存できます。
+
+また、Enterprise Data Warehouse からフェデレーションされた作成済みオーディエンスデータを利用して、Adobe Experience Platformの既存のオーディエンスを強化することもできます。 [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home)に関するガイドを参照してください。
 
 ![ 組織の Federated Audience Composition で作成されたオーディエンスのリスト。](../images/ui/overview/federated-audience-composition.png)
+
+### Data Distiller {#data-distiller}
+
+SQL 拡張機能を使用した Data Distillerを使用して、データレイクからオーディエンスを作成できます。 このデータには、顧客属性や製品情報などの既存のディメンションエンティティが含まれます。
+
+Data Distillerについて詳しくは、[SQL を使用したオーディエンスの構築ガイド ](../../query-service/data-distiller-audiences/overview.md) を参照してください。
 
 ## オーディエンスの読み込み {#import-audience}
 
@@ -446,7 +455,7 @@ Platform で生成されたオーディエンスおよびコンポジション�
 >
 >さらに、外部で生成されたオーディエンスに機密情報や医療関連の情報が含まれている場合は、任意の宛先に対してアクティブ化する前に、必要なデータ使用ラベルを適用する **必要があります**。 外部で生成されたオーディエンスの変数は、リアルタイム顧客プロファイル内ではなくデータレイクに保存されるので、CSV ファイル内に同意データを含める **しないでください**。
 >
->データ使用ラベルの適用について詳しくは、[ ラベルの管理 ](../../access-control/abac/ui/labels.md) に関するドキュメントを参照してください。 Platform のデータ使用ラベル全般について詳しくは、[ データ使用ラベルの概要 ](../../data-governance/labels/overview.md) を参照してください。 外部で生成されたオーディエンスでの同意の仕組みについては、[ オーディエンスに関する FAQ](../faq.md#consent) を参照してください。
+>データ使用ラベルの適用について詳しくは、[ ラベルの管理 ](../../access-control/abac/ui/labels.md) に関するドキュメントを参照してください。 Experience Platformのデータ使用ラベル全般について詳しくは、[ データ使用ラベルの概要 ](../../data-governance/labels/overview.md) を参照してください。 外部で生成されたオーディエンスでの同意の仕組みについては、[ オーディエンスに関する FAQ](../faq.md#consent) を参照してください。
 
 ## 次の手順
 

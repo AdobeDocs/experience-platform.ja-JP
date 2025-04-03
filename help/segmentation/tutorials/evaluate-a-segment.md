@@ -4,7 +4,7 @@ title: セグメント結果の評価とアクセス
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメント定義を評価し、セグメント化結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 47%
@@ -22,23 +22,23 @@ ht-degree: 47%
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Platform が顧客体験データを整理する際に使用する標準化されたフレームワーク。 セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
-- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
 ### 必須ヘッダー
 
-また、このチュートリアルでは、API を正しく呼び出すために、[ 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要 [!DNL Platform] あります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+また、このチュートリアルでは、API を正しく呼び出すために、[ 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要 [!DNL Experience Platform] あります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Experience Platform] API へのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 すべての POST、PUT、および PATCH リクエストには、次の追加ヘッダーが必要です。
 
@@ -86,7 +86,7 @@ ht-degree: 47%
 
 セグメントジョブは、オーディエンスセグメントをオンデマンドで作成する非同期プロセスです。 セグメント定義と、プロファイルフラグメント間で重複する属性の結合方法を制御する結合ポリシー [!DNL Real-Time Customer Profile] 参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメント定義に関する様々な情報を収集できます。 セグメントジョブは、そのセグメント定義が現在該当するオーディエンスを更新するたびに実行する必要があります。
 
-[!DNL Real-Time Customer Profile] API の `/segment/jobs` エンドポイントに対してセグメントリクエストを実行することで、新しいPOSTジョブを作成できます。
+[!DNL Real-Time Customer Profile] API の `/segment/jobs` エンドポイントに POST リクエストをおこなうことで、新しいセグメントジョブを作成できます。
 
 このエンドポイントの使用について詳しくは、[ セグメントジョブエンドポイントガイド ](../api/segment-jobs.md#create) を参照してください。
 
@@ -98,7 +98,7 @@ ht-degree: 47%
 
 ## セグメントジョブの結果の解釈
 
-セグメントジョブが正常に実行されると、セグメント定義内に含まれる各プロファイルの `segmentMembership` マップが更新されます。 `segmentMembership` には、[!DNL Platform] に取り込まれた事前評価済みオーディエンスも保存され、[!DNL Adobe Audience Manager] などの他のソリューションと統合できます。
+セグメントジョブが正常に実行されると、セグメント定義内に含まれる各プロファイルの `segmentMembership` マップが更新されます。 `segmentMembership` には、[!DNL Experience Platform] に取り込まれた事前評価済みオーディエンスも保存され、[!DNL Adobe Audience Manager] などの他のソリューションと統合できます。
 
 次の例は、個々のプロファイルレコードの `segmentMembership` 属性がどのように記述されるかを示しています。
 
@@ -212,7 +212,7 @@ curl -X POST \
 
 ### オーディエンスメンバーのプロファイルの生成 {#generate-profiles}
 
-和集合を保持するデータセットが用意できたら、[!DNL Real-Time Customer Profile] API の `/export/jobs` エンドポイントに対してPOSTリクエストを行い、書き出すセグメント定義のデータセット ID とセグメント定義情報を指定することで、オーディエンスメンバーをデータセットに保持する書き出しジョブを作成できます。
+和集合を保持するデータセットが用意できたら、[!DNL Real-Time Customer Profile] API の `/export/jobs` エンドポイントに POST リクエストを行い、書き出すセグメント定義のデータセット ID とセグメント定義情報を指定することで、データセットにオーディエンスメンバーを保持する書き出しジョブを作成できます。
 
 このエンドポイントの使用について詳しくは、[ 書き出しジョブエンドポイントガイド ](../api/export-jobs.md#create) を参照してください。
 

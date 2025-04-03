@@ -3,9 +3,9 @@ title: Segmentation Service API ガイド
 description: Segmentation Service API を使用すると、開発者はAdobe Experience Platformのセグメント化操作をプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 5%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform [!DNL Segmentation Service] を使用すると、Adobe
 
 ## オーディエンス
 
-オーディエンスは、類似の行動や特性を共有する人々の集まりです。 これらは、Platform を使用するか、外部ソースから生成できます。 `/audiences` エンドポイントを使用して、すべてのオーディエンスを取得したり、新しいオーディエンスを作成したり、特定のオーディエンスの詳細を取得したり、特定のオーディエンスを更新したり、特定のオーディエンスを削除したりできます。
+オーディエンスは、類似の行動や特性を共有する人々の集まりです。 これらは、Experience Platformを使用するか、外部ソースから生成できます。 `/audiences` エンドポイントを使用して、すべてのオーディエンスを取得したり、新しいオーディエンスを作成したり、特定のオーディエンスの詳細を取得したり、特定のオーディエンスを更新したり、特定のオーディエンスを削除したりできます。
 
 このエンドポイントの使用について詳しくは、[ オーディエンスエンドポイントガイド ](./audiences.md) を参照してください。
 
@@ -62,4 +62,4 @@ Adobe Experience Platform [!DNL Segmentation Service] を使用すると、Adobe
 
 ## 次の手順
 
-[!DNL Segmentation Service] API の使用を開始するには、様々なエンドポイントガイドを参照して、サービスの様々なエンドポイントを呼び出す手順を確認してください。 [!DNL Platform] UI を使用したセグメントの操作について詳しくは、[ セグメント化ユーザーガイド ](../ui/overview.md) を参照してください。
+[!DNL Segmentation Service] API の使用を開始するには、様々なエンドポイントガイドを参照して、サービスの様々なエンドポイントを呼び出す手順を確認してください。 [!DNL Experience Platform] UI を使用したセグメントの操作について詳しくは、[ セグメント化ユーザーガイド ](../ui/overview.md) を参照してください。

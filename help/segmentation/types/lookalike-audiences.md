@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 類似オーディエンス
 description: 類似オーディエンスを使用して、Adobe Experience Platformで新しい高価値オーディエンスをターゲットにする方法を説明します。
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 10%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platformでは、類似オーディエンスは、各オーデ�
 
 類似インサイトを使用するには、ベースオーディエンスが次の実施要件 **満たしている必要があります**。
 
-- ベースオーディエンス **必須** は、Platform 内で作成する必要があります。
+- ベースオーディエンス **必須** は、Experience Platform内で作成する必要があります。
    - 外部で生成されたオーディエンスは、類似インサイトの対象 **対象外** となります。
 - ベースオーディエンス **必須** はデフォルトの結合ポリシー上にあります。
 - ベースオーディエンス **必須** は、データガバナンスによって制限されたフィールドを使用しません。

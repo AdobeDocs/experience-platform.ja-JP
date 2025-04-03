@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメント定義での同意の遵守
 description: セグメント化操作で個人データの収集と共有に関する顧客の同意環境設定に従う方法を説明します。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 0%
+source-wordcount: '680'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 顧客の同意値を尊重するには、関連する様々な [!DNL Adobe Experience Platform] サービスを理解している必要があります。 このチュートリアルを開始する前に、次のサービスに精通していることを確認してください。
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Platform が顧客体験データを整理する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。
 
@@ -75,7 +75,7 @@ UI でセグメント定義を作成する場合、「**[!UICONTROL 属性]**」
 
 このチュートリアルに従うことで、Experience Platformでセグメント定義を作成する際に顧客の同意および環境設定を遵守する方法について、理解を深めることができました。
 
-Platform での同意の管理について詳しくは、次のドキュメントを参照してください。
+Experience Platformでの同意管理について詳しくは、次のドキュメントを参照してください。
 
 * [Adobe標準を使用した同意処理](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [IAB TCF 2.0 標準を使用した同意処理](../../landing/governance-privacy-security/consent/iab/overview.md)

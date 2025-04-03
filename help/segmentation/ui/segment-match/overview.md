@@ -2,18 +2,18 @@
 keywords: Experience Platform;ホーム;人気のトピック;セグメント化;Segment Match;segment match
 solution: Experience Platform
 title: Segment Match の概要
-description: Segment Match は、Adobe Experience Platform のセグメント共有サービスであり、安全で管理された、プライバシーに配慮した方法で 2 人以上の Platform ユーザーがセグメントデータを交換できるようにします。
+description: Segment Match は、Adobe Experience Platformのセグメント共有サービスであり、安全で管理された、プライバシーに配慮した方法で 2 人以上のExperience Platform ユーザーがセグメントデータを交換できるようにします。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 98%
+source-wordcount: '1978'
+ht-degree: 88%
 
 ---
 
 # [!DNL Segment Match] の概要
 
-Adobe Experience Platform Segment Match は、安全で管理された、プライバシーに配慮した方法で 2 人以上の Platform ユーザーがセグメントデータを交換できるようにするセグメント共有サービスです。[!DNL Segment Match] では、Platform のプライバシー基準と個人識別子（ハッシュ化されたメールアドレス、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など）を使用します。
+Adobe Experience Platform Segment Match は、安全で管理された、プライバシーに配慮した方法で 2 人以上のExperience Platform ユーザーがセグメントデータを交換できるようにするセグメント共有サービスです。 [!DNL Segment Match] では、Experience Platformのプライバシー基準と個人識別子（ハッシュ化されたメールアドレス、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など）を使用します。
 
 [!DNL Segment Match] を使用すると、次のことが可能です。
 
@@ -44,7 +44,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 | 名前空間 | 説明 |
 | --------- | ----------- |
-| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。Platform には、データ収集時のハッシュ化をサポートする方法として、[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) と[データ準備](../../../data-prep/functions.md#hashing)の 2 つが用意されています。 |
+| メール（SHA256、小文字） | 事前にハッシュされたメールアドレスの名前空間。この名前空間で指定された値は、小文字に変換されてから SHA256 でハッシュ化されます。メールアドレスを正規化する前に、先頭と末尾のスペースを削除する必要があります。 この設定を過去にさかのぼって変更することはできません。Experience Platformには、データ収集時のハッシュ化をサポートする方法として、[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) と [data prep](../../../data-prep/functions.md#hashing) の 2 つが用意されています。 |
 | 電話（SHA256_E.164） | SHA256 形式と E.164 形式の両方を使用してハッシュする必要がある生の電話番号を表す名前空間。 |
 | ECID | Experience Cloud ID（ECID）値を表す名前空間。この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID の概要](../../../identity-service/features/ecid.md)を参照してください。 |
 | Apple IDFA（広告主の ID） | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
@@ -64,7 +64,7 @@ ID 名前空間は、[Adobe Experience Platform ID サービス](../../../identi
 
 確立する必要がある最後の前提条件は、データの共有を防ぐための新しいデータ使用ラベルを設定することです。 データ使用ラベルを使用すると、どのようなデータを [!DNL Segment Match] を通じて共有できるかを管理できます。
 
-データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルはいつでも付けることができ、それによってデータの管理方法を柔軟に選択できます。ベストプラクティスとしては、データが Experience Platform に取り込まれたときや Experience Platform で使用可能になったときに、すぐにデータにラベルを付けることをお勧めします。
+データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスでは、データがExperience Platformに取得されるとすぐに、またはデータがExperience Platformで使用できるようになるとすぐに、データのラベル付けが推奨されます。
 
 [!DNL Segment Match] では C11 ラベル（[!DNL Segment Match] に固有の契約ラベルで、任意のデータセットや属性に手動で追加して、それらが [!DNL Segment Match] パートナー共有プロセスから確実に除外されるようにできるラベル）です。 C11 ラベルは、[!DNL Segment Match] プロセスで使用すべきでないデータを示します。[!DNL Segment Match] から除外するデータセットやフィールドを決定し、それに応じて C11 ラベルを追加したら、そのラベルが [!DNL Segment Match] ワークフローによって自動的に適用されます。[!DNL Segment Match] では、[!UICONTROL データ共有を制限]コアポリシーを自動的に有効にします。 データ使用ラベルをデータセットに適用する方法について詳しくは、[UI でのデータ使用ラベルの管理](../../../data-governance/labels/user-guide.md)に関するチュートリアルを参照してください。
 
@@ -87,7 +87,7 @@ ID データと名前空間、同意設定およびデータ使用ラベルを�
 
 ### パートナーの管理
 
-Platform UI で、左側のナビゲーションから「**[!UICONTROL セグメント]**」を選択したあと、上部のヘッダーから「**[!UICONTROL フィード]**」を選択します。
+Experience Platform UI で、左側のナビゲーションから **[!UICONTROL セグメント]** を選択したあと、上部のヘッダーから **[!UICONTROL フィード]** を選択します。
 
 ![segments-feed.png](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ Platform UI で、左側のナビゲーションから「**[!UICONTROL セグメ
 
 ![manage-partners.png](./images/manage-partners.png)
 
-2 つのパートナー間の接続は、ユーザーがサンドボックスレベルで Platform 組織を接続するためのセルフサービス手法として機能する「双方向ハンドシェイク」です。 この接続は、契約が成立したことと、Platform がユーザーとユーザーのパートナーとのサービス共有を促進できることを Platform に通知するために必要です。
+2 つのパートナー間の接続は、ユーザーがサンドボックスレベルでExperience Platform組織を接続するためのセルフサービス手法として機能する「双方向ハンドシェイク」です。 この連携は、契約が成立したことと、Experience Platformがユーザーとユーザーのパートナーとのサービス共有を促進できることをExperience Platformに通知するために必要です。
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Platform UI で、左側のナビゲーションから「**[!UICONTROL セグメ
 >abstract="制制限付きマーケティングユースケースは、データガバナンス制約に従って共有セグメントが適切に使用されるように、パートナーにガイダンスを提供するうえで役に立ちます。"
 >text="Learn more in documentation"
 
-**フィード**&#x200B;は、データ（セグメント）、そのデータの公開方法や使用方法についてのルール、およびユーザーのデータとパートナーのデータの照合方法を決定する設定をグループ化したものです。フィードは、個別に管理でき、[!DNL Segment Match] を通じて他の Platform ユーザーと交換できます。
+**フィード**&#x200B;は、データ（セグメント）、そのデータの公開方法や使用方法についてのルール、およびユーザーのデータとパートナーのデータの照合方法を決定する設定をグループ化したものです。フィードは、個別に管理でき、[!DNL Segment Match] を通じて他のExperience Platform ユーザーと交換できます。
 
 新しいフィードを作成するには、[!UICONTROL フィード]ダッシュボードから「**[!UICONTROL フィードを作成]**」を選択します。
 

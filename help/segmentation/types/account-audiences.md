@@ -4,9 +4,9 @@ description: アカウントオーディエンスを作成および使用して�
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 23%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 23%
 
 ![ アカウントオーディエンスの参照ページで「[!UICONTROL  オーディエンスを作成 ]」ボタンがハイライト表示されます。](../images/types/account/select-create-audience.png)
 
-セグメントビルダーが表示されます。アカウント属性とオーディエンスが左側のナビゲーションバーに表示されます。 「[!UICONTROL  属性 ]」タブでは、Platform で作成した属性とカスタム属性の両方を追加できます。
+セグメントビルダーが表示されます。アカウント属性とオーディエンスが左側のナビゲーションバーに表示されます。 「[!UICONTROL  属性 ]」タブでは、Experience Platform で作成された属性とカスタム属性の両方を追加できます。
 
 ![セグメントビルダーが表示されています。属性とオーディエンスのみが表示されます。](../images/types/account/segment-builder.png)
 
@@ -116,7 +116,7 @@ ht-degree: 23%
 
 ## 次の手順 {#next-steps}
 
-このガイドを読むことで、Adobe Experience Platformでアカウントオーディエンスを作成および使用する方法について、理解が深まりました。 Platform で他のタイプのオーディエンスを使用する方法については、[ オーディエンスタイプの概要 ](./overview.md) を参照してください。
+このガイドを読むことで、Adobe Experience Platformでアカウントオーディエンスを作成および使用する方法について、理解が深まりました。 Experience Platformで他のタイプのオーディエンスを使用する方法については、[ オーディエンスタイプの概要 ](./overview.md) を参照してください。
 
 ## 付録 {#appendix}
 

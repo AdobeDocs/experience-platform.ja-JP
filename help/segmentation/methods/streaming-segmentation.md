@@ -3,10 +3,10 @@ solution: Experience Platform
 title: ストリーミングセグメント化ガイド
 description: ストリーミングセグメント化の概要、ストリーミングセグメント化を使用して評価されたオーディエンスの作成方法、ストリーミングセグメント化を使用して作成されたオーディエンスの表示方法について説明します。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 3f0cfd6c36344f481751bf05236df4fb288eab60
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1253'
-ht-degree: 32%
+source-wordcount: '1256'
+ht-degree: 31%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 32%
 
 ストリーミングセグメント化は、データの豊富さを重視しながら、ほぼリアルタイムでAdobe Experience Platformのオーディエンスを評価する機能です。
 
-ストリーミングセグメント化を使用すると、ストリーミングデータが Platform に到着する際にオーディエンスの選定が行われるので、セグメント化ジョブをスケジュールして実行する必要がなくなります。 これにより、Platform に渡されるデータを評価し、オーディエンスメンバーシップを自動的に最新の状態に保つことができます。
+ストリーミングセグメント化を使用すると、ストリーミングデータがExperience Platformに到着する際にオーディエンスの選定が行われるので、セグメント化ジョブをスケジュールして実行する必要がなくなります。 これにより、データをExperience Platformに渡す際に評価し、オーディエンスメンバーシップを自動的に最新の状態に保つことができます。
 
 ## 適格なクエリタイプ {#query-types}
 
@@ -312,7 +312,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 ![ ストリーミングの更新頻度が選択され、ストリーミングセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/streaming/filter-streaming.png)
 
-Platform でのオーディエンスの表示について詳しくは、[ オーディエンスポータルガイド ](../ui/audience-portal.md) を参照してください。
+Experience Platformでのオーディエンスの表示について詳しくは、[ オーディエンスポータルガイド ](../ui/audience-portal.md) を参照してください。
 
 >[!ENDTABS]
 

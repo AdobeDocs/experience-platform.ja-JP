@@ -4,9 +4,9 @@ title: Segmentation Service API を使用したセグメント定義の作成
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service API を使用してセグメント定義を作成、テスト、プレビューおよび保存する方法について説明します。
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1067'
 ht-degree: 44%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 44%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): セグメント定義またはリアルタイム顧客プロファイルデータのその他の外部ソースを使用して、オーディエンスを作成できます。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。セグメント化を最大限に活用するには、[データモデリングのベストプラクティス](../../xdm/schema/best-practices.md)に従って、データがプロファイルとイベントとして取り込まれていることを確認してください。
 
-次の節では、[!DNL Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。
+次の節では、[!DNL Experience Platform] API を正しく呼び出すために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -33,19 +33,19 @@ ht-degree: 44%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
@@ -55,7 +55,7 @@ ht-degree: 44%
 
 セグメント化の最初の手順は、セグメント定義を定義することです。 セグメント定義は、[!DNL Profile Query Language] （PQL）で記述されたクエリをカプセル化するオブジェクトです。 このオブジェクトは、PQL述語とも呼ばれます。 PQLの述語は、[!DNL Real-Time Customer Profile] に提供するレコードまたは時系列データに関連する条件に基づいて、セグメント定義のルールを定義します。 PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
-[!DNL Segmentation] API の `/segment/definitions` エンドポイントに対してPOSTリクエストを実行することで、新しいセグメント定義を作成できます。 次の例では、セグメント定義を正常に定義するために必要な情報など、定義リクエストのフォーマット方法の概要を説明します。
+[!DNL Segmentation] API の `/segment/definitions` エンドポイントに POST リクエストをおこなうことで、新しいセグメント定義を作成できます。 次の例では、セグメント定義を正常に定義するために必要な情報など、定義リクエストのフォーマット方法の概要を説明します。
 
 セグメント定義の定義方法について詳しくは、『 [ セグメント定義開発者ガイド ](../api/segment-definitions.md#create) 』を参照してください。
 
@@ -72,7 +72,7 @@ ht-degree: 44%
 
 ### 推定の生成方法
 
-リアルタイム顧客プロファイルに対して有効にされたデータは Platform に取り込まれるので、プロファイルデータストア内に保存されます。 プロファイルストアへのレコードの取り込みが、合計プロファイル数を 5% 以上増加または減少させると、サンプリングジョブがトリガーされて数が更新されます。 プロファイル数が 5% を超えて変化しない場合、サンプリングジョブは毎週自動的に実行されます。
+リアルタイム顧客プロファイルに対して有効にされたデータはExperience Platformに取り込まれるので、プロファイルデータストア内に保存されます。 プロファイルストアへのレコードの取り込みが、合計プロファイル数を 5% 以上増加または減少させると、サンプリングジョブがトリガーされて数が更新されます。 プロファイル数が 5% を超えて変化しない場合、サンプリングジョブは毎週自動的に実行されます。
 
 サンプルをトリガーする方法は、使用する取り込みのタイプによって異なります。
 
