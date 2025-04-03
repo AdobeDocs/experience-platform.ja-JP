@@ -3,9 +3,9 @@ keywords: Experience Platform；プロファイル；リアルタイム顧客プ
 title: リアルタイム顧客プロファイル UI ガイド
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルを操作するためのガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2219'
 ht-degree: 9%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 9%
 この UI ガイドを使用するには、[!DNL Real-Time Customer Profiles] の管理に関連する様々な [!DNL Experience Platform] サービスについて理解している必要があります。 このガイドを読む前、または UI を使用する前に、次のサービスのドキュメントを確認してください。
 
 * [[!DNL Real-Time Customer Profile]  概要 ](../home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
-* [[!DNL Identity Service]](../../identity-service/home.md):[!DNL Real-Time Customer Profile] に取り込まれる際に、異なるデータソースの ID を結合することで、[!DNL Platform] を有効にします。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
+* [[!DNL Identity Service]](../../identity-service/home.md):[!DNL Real-Time Customer Profile] に取り込まれる際に、異なるデータソースの ID を結合することで、[!DNL Experience Platform] を有効にします。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 ## [!UICONTROL 概要]
 
@@ -28,7 +28,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 >[!NOTE]
 >
->Platform を初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL  プロファイル ] ダッシュボードは表示されません。 代わりに、「[!UICONTROL  概要 ]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
+>Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL  プロファイル ] ダッシュボードは表示されません。 代わりに、「[!UICONTROL  概要 ]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
 
 ### プロファイルダッシュボード {#profile-dashboard}
 
@@ -56,7 +56,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 プロファイル数には、組織のデフォルトの結合ポリシーでプロファイルフラグメントを結合して、個々の顧客ごとに 1 つのプロファイルを形成した後に、組織が Experience Platform 内に保持しているプロファイルの総数が表示されます。つまり、様々なチャネルでブランドとやり取りする 1 人の顧客に関連する複数のプロファイルフラグメントが組織に存在する場合でも、これらのフラグメントは、1 個人に関連しているため（デフォルトの結合ポリシーに従って）結合され、プロファイルの数が「1」として返されます。
 
-プロファイル数には、属性（レコードデータ）を持つプロファイルと、Adobe Analytics プロファイルなどの時系列（イベント）データのみを含むプロファイルの両方も含まれます。 プロファイル数は定期的に更新され、Platform 内のプロファイルの最新の合計数が提供されます。
+プロファイル数には、属性（レコードデータ）を持つプロファイルと、Adobe Analytics プロファイルなどの時系列（イベント）データのみを含むプロファイルの両方も含まれます。 プロファイル数は定期的に更新され、Experience Platform内のプロファイルの最新の合計数が提供されます。
 
 #### プロファイル数指標の更新
 
@@ -96,7 +96,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ![ 結合ポリシーに一致するサンプルプロファイルが表示されます。](../images/user-guide/sample-profiles.png)
 
-結合ポリシーとその Platform 内での役割について詳しくは、[ 結合ポリシーの概要 ](../merge-policies/overview.md) を参照してください。
+結合ポリシーとそのExperience Platform内での役割について詳しくは、[ 結合ポリシーの概要 ](../merge-policies/overview.md) を参照してください。
 
 ### [!UICONTROL ID] で参照 {#browse-identity}
 
@@ -131,7 +131,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="エンティティが見つかりません"
->abstract="つまり、Platform でリクエストされたエンティティを見つけることができませんでした。このエラーを解決するには、次のいずれかの解決策を試してください。<ul><li>アクセスしようとしているエンティティの URL に正しいプロファイル ID がリストされていることを確認する。</li><li>アクセスしようとしているエンティティの組織とサンドボックスの組み合わせが正しいことを確認する。</li></ul>"
+>abstract="これは、Experience Platformがリクエストされたエンティティを見つけることができなかったことを意味します。 このエラーを解決するには、次のいずれかの解決策を試してください。<ul><li>アクセスしようとしているエンティティの URL に正しいプロファイル ID がリストされていることを確認する。</li><li>アクセスしようとしているエンティティの組織とサンドボックスの組み合わせが正しいことを確認する。</li></ul>"
 
 **[!UICONTROL プロファイル ID]** を選択すると、「**[!UICONTROL 詳細]**」タブが開きます。 「**[!UICONTROL 詳細]**」タブに表示されるプロファイル情報は、複数のプロファイルフラグメントを結合し、個々の顧客の単一のビューを形成したものです。 これには、基本属性、リンクされた ID、チャネル環境設定などの顧客の詳細が含まれます。
 
@@ -149,7 +149,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 「**[!UICONTROL 属性]**」タブには、指定した結合ポリシーが適用された後に、単一のプロファイルに関連するすべての属性を要約したリストが表示されます。
 
-「**[!UICONTROL JSON を表示]**」を選択すると、これらの属性を JSON オブジェクトとして表示することもできます。 これは、プロファイル属性が Platform にどのように取り込まれるかを理解を深めたい場合に役立ちます。
+「**[!UICONTROL JSON を表示]**」を選択すると、これらの属性を JSON オブジェクトとして表示することもできます。 これは、プロファイル属性がExperience Platformにどのように取り込まれるかを理解を深めたい場合に役立ちます。
 
 ![ 「属性」タブがハイライト表示されています。 プロファイル属性が表示されます。](../images/user-guide/attributes.png)
 
@@ -163,7 +163,7 @@ Edgeで使用できる属性を表示するには、データロケーション�
 
 「**[!UICONTROL イベント]**」タブには、顧客に関連付けられた最新 100 件の ExperienceEvents のデータが含まれています。 このデータには、メールの開封数、買い物かごアクティビティおよびページ表示が含まれます。 個々のイベントで **[!UICONTROL すべて表示]** を選択すると、追加のフィールドと値がイベントの一部として取得されます。
 
-「**[!UICONTROL JSON を表示]**」を選択すると、イベントを JSON オブジェクトとして表示することもできます。 これは、Platform でのイベントの取得方法を理解するのに役立ちます。
+「**[!UICONTROL JSON を表示]**」を選択すると、イベントを JSON オブジェクトとして表示することもできます。 これは、Experience Platformでのイベントの取得方法を理解するのに役立ちます。
 
 ![ 「イベント」タブがハイライト表示されている様子 プロファイルイベントが表示されます。](../images/user-guide/events.png)
 
@@ -201,7 +201,7 @@ Edgeで使用可能なプロファイルのオーディエンスメンバーシ�
 
 ![ 「計算属性」タブがハイライト表示されている様子 ](../images/user-guide/computed-attributes.png)
 
-計算属性について詳しくは、[ 計算属性の概要 ](../computed-attributes/overview.md) を参照してください。 Platform UI 内で計算済み属性を使用する方法について詳しくは、[ 計算属性 UI ガイド ](../computed-attributes/ui.md) を参照してください。
+計算属性について詳しくは、[ 計算属性の概要 ](../computed-attributes/overview.md) を参照してください。 Experience Platform UI 内で計算済み属性を使用する方法について詳しくは、[ 計算属性 UI ガイド ](../computed-attributes/ui.md) を参照してください。
 
 ## 次の手順
 

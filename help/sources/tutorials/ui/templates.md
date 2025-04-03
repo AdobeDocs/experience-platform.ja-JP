@@ -1,12 +1,12 @@
 ---
 description: Adobe Experience Platform UI でテンプレートを使用して、B2B データのデータ取り込みプロセスを高速化する方法を説明します。
 title: UI のテンプレートを使用してソースのデータフローを作成する
-badge1: 「ベータ版」
+badge1: ベータ版
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2241'
-ht-degree: 44%
+source-wordcount: '2250'
+ht-degree: 39%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 44%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Platform UI のソース用テンプレート"
+>title="Experience Platform UI のソース用テンプレート"
 >abstract="テンプレートには、ソースから Experience Platform にデータを取り込む際に使用できる、スキーマ、データセット、ID、マッピングルール、ID 名前空間およびデータフローなどの自動生成されたアセットが含まれます。自動生成されたアセットを更新して、ユースケースに合わせてカスタマイズできます。"
 
 >[!IMPORTANT]
@@ -35,17 +35,17 @@ Adobe Experience Platform には、データ取り込みプロセスを高速化
 * 手動データ取り込みプロセス中に発生する可能性のあるエラーを最小限に抑えます。
 * ユースケースに合わせて、自動生成されたアセットを随時更新します。
 
-次のチュートリアルでは、Platform UI でテンプレートを使用する方法を説明します。
+次のチュートリアルでは、Experience Platform UI でテンプレートを使用する方法を説明します。
 
 ## はじめに
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [[!DNL Experience Data Model (XDM)] システム](../../../xdm/home.md)：Experience Platform が顧客体験データを整理する際に使用する標準化されたフレームワーク。
-* [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [[!DNL Experience Data Model (XDM)] システム](../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
+* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-## Platform UI でテンプレートを使用する {#use-templates-in-the-platform-ui}
+## Experience Platform UI でのテンプレートの使用 {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -53,11 +53,11 @@ Adobe Experience Platform には、データ取り込みプロセスを高速化
 >abstract="ユースケースに適したビジネスタイプを選択します。アクセス権は、Real-time Customer Data Platform サブスクリプションアカウントによって異なる場合があります。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja" text="Real-Time CDP の概要"
 
-Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ]」ワークスペースにアクセスし、Experience Platformで使用可能なソースのカタログを確認します。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスして、Experience Platformで使用可能なソースのカタログを表示します。
 
 *[!UICONTROL カテゴリ]* メニューを使用して、カテゴリ別にソースをフィルタリングします。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
-[!UICONTROL Adobe アプリケーション ] カテゴリに移動して [!DNL Marketo Engage] ソース カードを表示し、[[!UICONTROL  データの追加 ]] をクリックして開始します。
+[!UICONTROL Adobe アプリケーション ] カテゴリに移動して [!DNL Marketo Engage] ソースカードを表示し、「[!UICONTROL  データを追加 ]」を選択して開始します。
 
 ![ソースワークスペースのカタログで、Marketo Engage ソースがハイライト表示されています。](../../images/tutorials/templates/catalog.png)
 
@@ -198,7 +198,7 @@ Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**
 
 スケジュールインターフェイスを使用して、データフローの取り込みスケジュールを設定します。 取り込み頻度を **1 回** に設定して、1 回限りの取り込みを作成します。
 
-![Dynamics および Salesforce テンプレートのスケジュールインターフェイス ](../../images/tutorials/templates/schedule.png)
+![Dynamics およびSalesforce テンプレートのスケジュールインターフェイス ](../../images/tutorials/templates/schedule.png)
 
 または、取り込み頻度を **分**、**時間**、**日**、**週** に設定できます。 データフローを複数の取り込みに対してスケジュールする場合は、取り込みごとに時間枠を確立する間隔を設定する必要があります。 例えば、取り込み頻度を **時間** に設定し、間隔を **15** に設定すると、データフローは **15 時間** ごとにデータを取り込むようにスケジュールされます。
 
@@ -206,7 +206,7 @@ Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**
 
 取り込みスケジュールの設定が完了したら、「**[!UICONTROL 終了]**」を選択します。
 
-![ バックフィルが有効になっている Dynamics および Salesforce テンプレートのスケジュールインターフェイス ](../../images/tutorials/templates/backfill.png)
+![ バックフィルが有効になっている Dynamics およびSalesforce テンプレートのスケジュールインターフェイス ](../../images/tutorials/templates/backfill.png)
 
 ### アセットのレビュー {#review-assets}
 
@@ -237,7 +237,7 @@ Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**
 >
 >![ ソースワークスペースのデータフローカタログにある既存のデータフローのリスト。](../../images/tutorials/templates/dataflows.png)
 
-### データフローのPublish化
+### データフローの公開
 
 公開プロセスを開始するには、ソース ワークフローを使用します。 [!UICONTROL  データフローを更新 ] を選択すると、ワークフローの *[!UICONTROL データを追加]* 手順に進みます。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
@@ -267,8 +267,8 @@ Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**
 
 テンプレートはAdobe Experience Platform アラートに対応しており、通知パネルを使用して、アセットのステータスに関する更新を受け取ったり、レビューページに戻ったりできます。
 
-Platform UI の上部ヘッダーにある通知アイコンを選択し、ステータスアラートを選択して、確認するアセットを表示します。
+Experience Platform UI の上部ヘッダーにある通知アイコンを選択し、ステータスアラートを選択して、確認するアセットを表示します。
 
-![Platform UI の通知パネルには、失敗したデータフローを警告する通知がハイライト表示されます。](../../images/tutorials/templates/notifications.png)
+![Experience Platform UI の通知パネルには、失敗したデータフローを警告する通知がハイライト表示されます。](../../images/tutorials/templates/notifications.png)
 
-テンプレートのアラート設定を更新すると、データフローのステータスに関するメールと Platform 内通知の両方を受信できます。 アラートの設定について詳しくは、[ ソースデータフローのアラートを購読する方法 ](../ui/alerts.md) に関するガイドを参照してください。
+テンプレートのアラート設定を更新すると、データフローのステータスに関するメールとExperience Platform内の通知の両方を受け取ることができます。 アラートの設定について詳しくは、[ ソースデータフローのアラートを購読する方法 ](../ui/alerts.md) に関するガイドを参照してください。

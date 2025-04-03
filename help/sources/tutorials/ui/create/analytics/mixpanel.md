@@ -2,16 +2,16 @@
 title: UI での Mixpanel Sourceの作成
 description: Adobe Experience Platform UI を使用して Mixpanel ソース接続を作成する方法を説明します。
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 40%
+source-wordcount: '805'
+ht-degree: 33%
 
 ---
 
 # UI での [!DNL Mixpanel] ソース接続の作成
 
-このチュートリアルでは、Adobe Experience Platform Platform ユーザーインターフェイスを使用して [!DNL Mixpanel] ソース接続を作成する手順について説明します。
+このチュートリアルでは、Adobe Experience Platform Experience Platformのユーザーインターフェイスを使用して [!DNL Mixpanel] ソース接続を作成する手順について説明します。
 
 ## はじめに
 
@@ -24,7 +24,7 @@ ht-degree: 40%
 
 ### 必要な資格情報の収集
 
-[!DNL Mixpanel] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Mixpanel] をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
@@ -35,9 +35,9 @@ ht-degree: 40%
 
 [!DNL Mixpanel] ソースの認証について詳しくは、[[!DNL Mixpanel]  ソースの概要 ](../../../../connectors/analytics/mixpanel.md) を参照してください。
 
-## [!DNL Mixpanel] アカウントの接続
+## [!DNL Mixpanel] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -64,12 +64,12 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
 >title="Mixpanel 取り込みのタイムゾーンの設定"
->abstract="Platform は、指定されたプロジェクトのタイムゾーンを使用して Mixpanel から関連するデータを取り込むので、Platform のタイムゾーンは、Mixpanel プロファイルのタイムゾーン設定と同じである必要があります。Mixpanel は、Mixpanel データストアにイベントを記録する前に、プロジェクトのタイムゾーンに合わせて自身のタイムゾーンを調整します。"
+>abstract="Experience Platformは指定されたプロジェクトタイムゾーンを使用して Mixpanel から関連データを取り込むので、タイムゾーンは Mixpanel プロファイルのタイムゾーン設定と同じである必要があります。 Mixpanel は、Mixpanel データストアにイベントを記録する前に、プロジェクトのタイムゾーンに合わせて自身のタイムゾーンを調整します。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=ja#project-id-and-timezone" text="詳しくは、ドキュメントを参照してください"
 
 ソースが認証されたら、プロジェクト ID とタイムゾーンを指定し、「**[!UICONTROL 選択]**」を選択します。
 
-[!DNL Mixpanel] データを Platform に取り込む前に指定するタイムゾーンは、[!DNL Mixpanel] プロファイルタイムゾーン設定と同じである必要があります。 データのタイムゾーンの変更は新しいイベントにのみ適用され、古いイベントは以前に指定したタイムゾーンに残ります。 [!DNL Mixpanel] は夏時間を調整し、取り込みタイムスタンプを適切に調整します。 タイムゾーンがデータに与える影響について詳しくは、[ プロジェクトのタイムゾーンの管理 ](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel) に関する [!DNL Mixpanel] ガイドを参照してください。
+[!DNL Mixpanel] データをExperience Platformに取り込む前に指定するタイムゾーンは、[!DNL Mixpanel] プロファイルタイムゾーン設定と同じである必要があります。 データのタイムゾーンの変更は新しいイベントにのみ適用され、古いイベントは以前に指定したタイムゾーンに残ります。 [!DNL Mixpanel] は夏時間を調整し、取り込みタイムスタンプを適切に調整します。 タイムゾーンがデータに与える影響について詳しくは、[ プロジェクトのタイムゾーンの管理 ](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel) に関する [!DNL Mixpanel] ガイドを参照してください。
 
 しばらくすると、右側のインターフェイスがプレビューパネルに更新され、データフローを作成する前にスキーマを調べることができます。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -77,7 +77,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Mixpanel] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 分析データを Platform に取り込むためのデータフローの設定 ](../../dataflow/analytics.md) を行いましょう。
+このチュートリアルでは、[!DNL Mixpanel] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 分析データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/analytics.md) を行いましょう。
 
 ## その他のリソース {#additional-resources}
 
@@ -85,9 +85,9 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 検証 {#validation}
 
-次に、[!DNL Mixpanel] ソースに正常に接続したことと、[!DNL Mixpanel] イベントが Platform に取り込まれていることを検証する手順の概要を説明します。
+次に、[!DNL Mixpanel] ソースに正常に接続したことと、[!DNL Mixpanel] のイベントがExperience Platformに取り込まれていることを検証する手順の概要を説明します。
 
-Platform UI の左側のナビゲーションバーで **[!UICONTROL データセット]** を選択し、[!UICONTROL  データセット ] ワークスペースにアクセスします。 [!UICONTROL  データセットアクティビティ ] 画面には、実行の詳細が表示されます。
+Experience Platformの UI で、左側のナビゲーションバーから **[!UICONTROL データセット]** を選択して、[!UICONTROL  データセット ] ワークスペースにアクセスします。 [!UICONTROL  データセットアクティビティ ] 画面には、実行の詳細が表示されます。
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 

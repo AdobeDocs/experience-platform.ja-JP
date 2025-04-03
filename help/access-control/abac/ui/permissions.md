@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;アクセス制御
 title: 属性ベースのアクセス制御管理役割の権限
 description: このドキュメントでは、Adobe Experience Cloud の権限インターフェイスを使用して、役割の権限を設定する方法について説明します
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1699'
-ht-degree: 45%
+source-wordcount: '1703'
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="役割とは？"
->abstract="役割は、管理者、スペシャリストまたはエンドユーザーが組織内のリソースに対して持つアクセス権を定義します。これらは、Platform インスタンスとやり取りするユーザーを分類し、アクセス制御ポリシーの構成要素になります。役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。"
+>abstract="役割は、管理者、スペシャリストまたはエンドユーザーが組織内のリソースに対して持つアクセス権を定義します。Experience Platform インスタンスとやり取りするユーザーを分類し、アクセス制御ポリシーの構成要素にします。 役割には特定の権限セットがあり、必要な表示または書き込みアクセスの範囲に応じて、組織のメンバーを 1 つ以上の役割に割り当てることができます。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ja" text="役割の管理"
 
 >[!IMPORTANT]
@@ -123,8 +123,8 @@ ht-degree: 45%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="API 資格情報とは"
->abstract="API 資格情報は、ユーザーと開発者に Platform API へのアクセス権を付与する役割に割り当てられます。Platform API を使用すると、計算属性の設定、データ／エンティティへのアクセス、データの書き出し、不要なデータやバッチの削除など、データに対する基本的な CRUD（作成、読み取り、更新、削除）操作をプログラムで実行できます。"
->additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API ガイド"
+>abstract="API 資格情報は、ユーザーと開発者にExperience Platform API へのアクセスを許可するために役割に割り当てられます。 Experience Platform API を使用すると、計算済み属性の設定、データやエンティティへのアクセス、データのエクスポート、不要なデータやバッチの削除など、データに対する基本的な CRUD （作成、読み取り、更新、削除）操作をプログラムで実行できます。"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API ガイド"
 
 >[!IMPORTANT]
 >
@@ -202,7 +202,7 @@ API 資格情報を役割から削除するには、API 資格情報名の横に
 
 ![Adobe Experience Platformがハイライト表示された製品を選択ダイアログ ](../../images/flac-ui/product-profile-select-product.png)
 
-**[!UICONTROL 製品プロファイルを選択]** ダイアログが表示されます。 **[!UICONTROL AEP-Default-All-Users]** を選択してから、「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL 製品プロファイルを選択]** ダイアログが表示されます。 **[!UICONTROL AEP-Default-All-Users を選択してから]****[!UICONTROL 保存]** を選択します。
 
 ![AEP-Default-All-Users が選択され、「適用」がハイライト表示された製品プロファイルを選択ダイアログ ](../../images/flac-ui/product-profile-select-product-profiles.png)
 
