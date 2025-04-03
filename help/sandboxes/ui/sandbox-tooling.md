@@ -2,9 +2,9 @@
 title: サンドボックスツール
 description: サンドボックス間でサンドボックス設定をシームレスに書き出し、読み込みます。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
+source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2485'
 ht-degree: 8%
 
 ---
@@ -60,6 +60,7 @@ ht-degree: 8%
 | [!DNL Adobe Journey Optimizer] | ジャーニー | ジャーニー全体をパッケージに追加すると、オーディエンス、スキーマ、イベント、アクションなど、ジャーニーが依存するオブジェクトの大部分がコピーされます。 |
 | [!DNL Adobe Journey Optimizer] | コンテンツテンプレート | コンテンツテンプレートは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 スタンドアロンテンプレートを使用すると、Journey Optimizer キャンペーンおよびジャーニー全体でカスタムコンテンツを簡単に再利用できます。 |
 | [!DNL Adobe Journey Optimizer] | フラグメント | フラグメントは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 フラグメントは、Journey Optimizer キャンペーンおよびジャーニー全体で 1 つ以上のメールで参照できる再利用可能なコンポーネントです。 |
+| [!DNL Adobe Journey Optimizer] | キャンペーン | キャンペーンは、プロファイル、オーディエンス、スキーマ、インラインメッセージおよび依存オブジェクトに関連するすべての項目と共にコピーできます。 決定項目、データ使用ラベル、言語設定など、一部の項目はコピーされません。 コピーできないオブジェクトの完全なリストについては、[ 別のサンドボックスへのオブジェクトの書き出し ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) ガイドを参照してください。 |
 
 サーフェス（プリセットなど）はコピーされません。 メッセージタイプとサーフェス名に基づいて、最も近いものが宛先サンドボックスで自動的に選択されます。 ターゲットのサンドボックスでサーフェスが見つからない場合、サーフェスのコピーが失敗します。その結果、メッセージを設定するためにサーフェスを使用する必要があるので、メッセージのコピーが失敗します。 この場合、コピーを機能させるには、メッセージの適切なチャネル用に少なくとも 1 つのサーフェスを作成する必要があります。
 
@@ -114,13 +115,13 @@ ht-degree: 8%
 
 ![[!UICONTROL  パッケージに追加 ] ダイアログに、ドロップダウンから選択したパッケージが表示されます。](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-パッケージに追加されたオブジェクトのリストが表示されます。 パッケージを公開し、サンドボックスに読み込めるようにするには、「**[!UICONTROL Publish]**」を選択します。
+パッケージに追加されたオブジェクトのリストが表示されます。 パッケージを公開し、サンドボックスに読み込めるようにするには、「**[!UICONTROL 公開]**」を選択します。
 
-![ パッケージ内のオブジェクトのリスト。「[!UICONTROL Publish]」オプションがハイライト表示されています。](../images/ui/sandbox-tooling/publish-package.png)
+![ パッケージ内のオブジェクトのリスト。[!UICONTROL  公開 ] オプションがハイライト表示されます。](../images/ui/sandbox-tooling/publish-package.png)
 
-「**[!UICONTROL Publish]**」を選択して、パッケージの公開を確定します。
+**[!UICONTROL 公開]** を選択して、パッケージの公開を確定します。
 
-![Publish パッケージの確認ダイアログ、「[!UICONTROL Publish]」オプションがハイライト表示されます。](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![ パッケージを公開の確認ダイアログ、「[!UICONTROL  公開 ]」オプションがハイライト表示されます。](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
@@ -174,7 +175,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->現在、サンドボックス全体の書き出しまたは読み込みを行う場合は、Real-time Customer Data Platform オブジェクトのみがサポートされています。 ジャーニーなどのAdobe Journey Optimizer オブジェクトは現時点ではサポートされていません。
+>現在、サンドボックス全体を書き出しまたは読み込む場合、Real-time Customer Data Platform オブジェクトのみがサポートされています。 ジャーニーなどのAdobe Journey Optimizer オブジェクトは現時点ではサポートされていません。
 
 サポートされているすべてのオブジェクトタイプを完全なサンドボックスパッケージに書き出し、様々なサンドボックスからこのパッケージを読み込んでオブジェクト設定をレプリケートできます。 例えば、この機能を使用すると、次のことが可能です。
 
@@ -191,7 +192,7 @@ ht-degree: 8%
 
 ![ 完了したフィールドとハイライト表示された ] 作成 [!UICONTROL  を示す [!UICONTROL  パッケージを作成 ] ダイアログ ](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-パッケージが正常に作成されたら、「**[!UICONTROL Publish]**」を選択してパッケージを公開します。
+パッケージが正常に作成されたら、「**[!UICONTROL 公開]**」を選択してパッケージを公開します。
 
 ![ 新しく公開されたパッケージを強調表示したサンドボックスパッケージのリスト。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
@@ -261,6 +262,6 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ## 次の手順
 
-このドキュメントでは、Experience PlatformUI 内でサンドボックスツール機能を使用する方法について説明しました。 サンドボックスについて詳しくは、『 [ サンドボックスユーザーガイド ](../ui/user-guide.md) 』を参照してください。
+このドキュメントでは、Experience Platform UI 内でサンドボックスツール機能を使用する方法について説明しました。 サンドボックスについて詳しくは、『 [ サンドボックスユーザーガイド ](../ui/user-guide.md) 』を参照してください。
 
 サンドボックス API を使用して様々な操作を実行する手順については、[サンドボックス開発者ガイド](../api/getting-started.md)を参照してください。Experience Platformのサンドボックスの概要については、[ 概要ドキュメント ](../home.md) を参照してください。
