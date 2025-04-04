@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2025年3月）
 description: Adobe Experience Platform の 2025年3月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
 ht-degree: 21%
@@ -90,7 +90,7 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 | 機能 | 説明 |
 | --- | --- |
 | [!DNL Bombora Intent] | [!DNL Bombora Intent] ソースを、ソースカタログで使用できるようになりました。 このソースを使用して、次の操作を行います。 <ul><li>Bombora の Company Surge Intent データを統合して、製品やサービスを積極的に調査しているアカウントを特定します。</li><li>正確なセグメントを作成し、高度にターゲットを絞った ABM キャンペーンを実行するために市場内アカウントに優先順位を付け、マーケティング活動がコンバージョンする可能性が最も高いアカウントに集中できるようにします。</li><li>インテントドリブン戦略を活用して、広告費用を最適化し、エンゲージメントを強化し、ROI を最大化します。</li></ul> 詳しくは、[ アカウントのExperience Platformへの接続 ](../../sources/tutorials/ui/create/data-partners/bombora.md) に関するガイドを参照し  [!DNL Bombora]  ください。 |
-| [!DNL Demandbase Intent] | [!DNL Demandbase Intent] のデータソースを、ソースカタログから使用できるようになりました。 このソースを使用して、次の操作を行います。 <ul><li>Demandbase のアカウントインテントデータを統合し、リアルタイムエンゲージメントに基づいて高金利のアカウントを識別します。</li><li>最も強力なインテントシグナルに優先順位を付けることで、正確なセグメントを作成し、ターゲットを絞ったキャンペーンを配信して、マーケティング活動がコンバージョンする可能性が最も高いアカウントに集中できるようにします。</li><li>インテントドリブン戦略をアクティブ化して、広告費用の最適化、エンゲージメントの向上、ROI の向上を可能にします。</li></ul> 詳しくは、[ アカウントのExperience Platformへの接続 ](../../sources/tutorials/ui/create/data-partners/demandbase.md) に関するガイドを参照し  [!DNL Demandbase]  ください。 |
+| [!DNL Demandbase Intent] | [!DNL Demandbase Intent] のソースをソースカタログから使用できるようになりました。 このソースを使用して、次の操作を行います。 <ul><li>Demandbase のアカウントインテントデータを統合し、リアルタイムエンゲージメントに基づいて高金利のアカウントを識別します。</li><li>最も強力なインテントシグナルに優先順位を付けることで、正確なセグメントを作成し、ターゲットを絞ったキャンペーンを配信して、マーケティング活動がコンバージョンする可能性が最も高いアカウントに集中できるようにします。</li><li>インテントドリブン戦略をアクティブ化して、広告費用の最適化、エンゲージメントの向上、ROI の向上を可能にします。</li></ul> 詳しくは、[ アカウントのExperience Platformへの接続 ](../../sources/tutorials/ui/create/data-partners/demandbase.md) に関するガイドを参照し  [!DNL Demandbase]  ください。 |
 
 {style="table-layout:auto"}
 

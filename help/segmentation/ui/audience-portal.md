@@ -2,10 +2,10 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
+source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
 workflow-type: tm+mt
-source-wordcount: '4356'
-ht-degree: 55%
+source-wordcount: '4371'
+ht-degree: 54%
 
 ---
 
@@ -98,7 +98,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 | ----- | ----------- |
 | [!UICONTROL 名前] | オーディエンスの名前。 |
 | [!UICONTROL プロファイル数] | オーディエンスに適合するプロファイルの合計数。 |
-| [!UICONTROL 接触チャネル] | オーディエンスの接触チャネル。これは、オーディエンスがどこから来たかを示します。指定できる値には、セグメント化サービス、カスタムアップロード、オーディエンス構成、Audience Manager が含まれます。 |
+| [!UICONTROL 接触チャネル] | オーディエンスの接触チャネル。これは、オーディエンスがどこから来たかを示します。使用可能な値には、[ セグメント化サービス ](#segment-builder)、[ カスタムアップロード ](#import-audience)、[ オーディエンス構成 ](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[ 類似オーディエンス ](../types/lookalike-audiences.md)、[ フェデレーション オーディエンス構成 ](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) [、{ データDistiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview) などがあります。 |
 | [!UICONTROL ライフサイクルステータス] | オーディエンスのステータス。このフィールドの可能な値には、`Draft`、`Inactive`、`Published` などがあります。 様々な状態の意味や、オーディエンスを様々なライフサイクル状態に移動する方法など、ライフサイクルのステータスについて詳しくは、[ セグメント化に関する FAQ のライフサイクルステータスに関する節 ](../faq.md#lifecycle-status) を参照してください。 |
 | [!UICONTROL 更新頻度] | オーディエンスのデータが更新される頻度を示す値。このフィールドの可能な値には、[!UICONTROL  バッチ ]、[!UICONTROL  ストリーミング ]、[!UICONTROL Edge]、[!UICONTROL  スケジュールなし ] などがあります。 |
 | [!UICONTROL 最終更新者] | オーディエンスを最後に更新したユーザーの名前。 |
