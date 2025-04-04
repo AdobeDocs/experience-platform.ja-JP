@@ -1,8 +1,8 @@
 ---
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 67adfddf57d3b10bb80688cf0f0a109a704f4fa5
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 95%
+source-wordcount: '351'
+ht-degree: 98%
 
 ---
 # コンテンツの投稿
@@ -30,20 +30,6 @@ ht-degree: 95%
 ### コミュニティメンバーによる大きな変更または新規記事
 
 アドビのコミュニティメンバーが記事を作成したり、大きな変更を加える場合は、GitHub リポジトリの「**Issues**」タブをクリックして、イシューを提出します。イシューの提出によって、ドキュメントチームとのやり取りが始まります。新規コンテンツを公開するには、ライター（またはその他のアドビの従業員）との共同作業が必要になります。
-
-<!--
-If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
--->
-
-### アドビ社員による大きな変更または新規記事
-
-Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。詳しくは、『[社内コラボレーションガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html)』を参照してください。
-
-<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
-
-## Experience Platform ドキュメントチームへの問い合わせ
-
-上述の通り、アドビコミュニティのメンバーは問題を提出でき、提出された問題は適切な作者に割り当てられます。 アドビの従業員は、問題を送信するか、Experience Platform のドキュメントチームに直接問い合わせることができます。 特定のExperience Platform領域のリードライターを見つけるには、[Adobe Experience Platformのドキュメント wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation) を参照してください。
 
 ## ツールとセットアップ
 
