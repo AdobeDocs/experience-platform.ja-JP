@@ -1,10 +1,10 @@
 ---
 title: クエリサービスのあいまい一致
-description: 選択した文字列にほぼ一致することで、複数のデータセットからの結果を組み合わせる Platform データに対して一致を実行する方法を説明します。
+description: 選択した文字列にほぼ一致することで、複数のデータセットからの結果を組み合わせるExperience Platform データに対して一致を実行する方法を説明します。
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ cur = conn.cursor()
 
 これで、[!DNL Jupyter Notebook] インスタンスがクエリサービスに接続されました。 接続に成功した場合、メッセージは表示されません。 接続に失敗した場合は、エラーが表示されます。
 
-### Luma データセットからのDraw データ {#luma-dataset}
+### Luma データセットからのデータの描画 {#luma-dataset}
 
 次のコマンドを使用して、分析用のデータを最初のデータセットから取得します。 簡潔にするために、例は列の最初の 10 個の結果に制限されています。
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Acme データセットからのDraw データ {#acme-dataset}
+### Acme データセットからのデータの描画 {#acme-dataset}
 
 次のコマンドを使用して、分析用のデータを 2 番目のデータセットから取得できるようになりました。 ここでも、簡潔にするために、例は列の最初の 10 個の結果に制限されています。
 
@@ -350,7 +350,7 @@ WHERE
 
 +++
 
-### あいまい一致結果を Platform に保存 {#save-to-platform}
+### あいまい一致結果をExperience Platformに保存 {#save-to-platform}
 
 最後に、あいまい一致の結果をデータセットとして保存し、SQL を使用してAdobe Experience Platformで使用できます。
 

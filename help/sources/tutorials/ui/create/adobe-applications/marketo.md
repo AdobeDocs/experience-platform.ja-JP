@@ -1,11 +1,11 @@
 ---
 title: UI でのMarketo Engage Source接続とデータフローの作成
-description: このチュートリアルでは、B2B データをAdobe Experience Platformに取り込むために、UI でMarketo Engageソース接続とデータフローを作成する手順について説明します。
+description: このチュートリアルでは、UI でMarketo Engage ソース接続とデータフローを作成し、B2B データをAdobe Experience Platformに取り込む手順について説明します。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 46%
+source-wordcount: '1836'
+ht-degree: 43%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 46%
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [B2B 名前空間とスキーマ自動生成ユーティリティ ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): B2B 名前空間とスキーマ自動生成ユーティリティを使用すると、[!DNL Postman] を使用して B2B 名前空間とスキーマの値を自動生成できます。 [!DNL Marketo] ソース接続とデータフローを作成する前に、まず B2B 名前空間とスキーマを完了する必要があります。
-* [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [Experience Data Model（XDM）](../../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [UI でのスキーマの作成と編集](../../../../../xdm/ui/resources/schemas.md)：UI でスキーマを作成および編集する方法について説明します。
 * [ID 名前空間](../../../../../identity-service/features/namespaces.md)：ID 名前空間は [!DNL Identity Service] のコンポーネントで、ID の関連先コンテキストのインジケーターとして機能します。完全修飾 ID には、ID 値と名前空間が含まれます。
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 必要な資格情報の収集
 
@@ -45,15 +45,15 @@ Experience Platformで [!DNL Marketo] アカウントにアクセスするには
 
 ## [!DNL Marketo] アカウントの接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-*Adobeアプリケーション* カテゴリで、「**[!UICONTROL Marketo Engage]**」を選択し、「**[!UICONTROL データを追加]**」を選択します。
+*Adobe アプリケーション* カテゴリで、「**[!UICONTROL Marketo Engage]**」を選択したあと、「**[!UICONTROL データを追加]**」を選択します。
 
 >[!TIP]
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![ ソースカタログとMarketo Engageソースが選択されています。](../../../../images/tutorials/create/marketo/catalog.png)
+![ ソースカタログとMarketo Engage ソースが選択されています。](../../../../images/tutorials/create/marketo/catalog.png)
 
 **[!UICONTROL Marketo Engage アカウントの接続]**&#x200B;ページが表示されます。このページでは、新しいアカウントを使用するか、既存のアカウントにアクセスできます。
 
@@ -203,11 +203,11 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### UI のエラーメッセージ {#error-messages}
 
-Platform が設定の問題を検出すると、次のエラーメッセージが UI に表示されます。
+Experience Platformが設定の問題を検出すると、次のエラーメッセージが UI に表示されます。
 
 #### [!DNL Munchkin ID] は適切な組織にマッピングされていません
 
-[!DNL Munchkin ID] が使用している Platform 組織にマッピングされていない場合、認証は拒否されます。 [[!DNL Marketo]  インターフェイス ](https://app-sjint.marketo.com/#MM0A1) を使用して、[!DNL Munchkin ID] と組織の間のマッピングを設定します。
+使用しているExperience Platform組織に [!DNL Munchkin ID] がマッピングされていない場合、認証は拒否されます。 [[!DNL Marketo]  インターフェイス ](https://app-sjint.marketo.com/#MM0A1) を使用して、[!DNL Munchkin ID] と組織の間のマッピングを設定します。
 
 ![Marketo インスタンスがAdobe組織に正しくマッピングされていないことを示すエラーメッセージ。](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 

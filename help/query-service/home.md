@@ -4,16 +4,16 @@ solution: Experience Platform
 title: クエリサービスの概要
 description: Experience Platform内でのクエリサービスの役割について説明します。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 20%
 
 ---
 
 # クエリサービスの概要
 
-Adobe Experience Platform は様々なソースからデータを取得します。マーケターにとって主な課題は、このデータを理解して顧客に関するインサイトを得ることです。 Platform でデータに対してクエリを実行する場合は、標準の SQL およびAdobe Experience Platform クエリサービスを使用できます。 クエリサービスを使用すると、データレイク内のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりして、レポートやマシンラーニングで使用したり、[!DNL Real-Time Customer Profile] に取り込んだりできます。 このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
+Adobe Experience Platform は様々なソースからデータを取得します。マーケターにとって主な課題は、このデータを理解して顧客に関するインサイトを得ることです。 Experience Platformでデータに対してクエリを実行する場合は、標準の SQL およびAdobe Experience Platform クエリサービスを使用できます。 クエリサービスを使用すると、データレイク内のデータセットを結合したり、クエリ結果を新しいデータセットとして取得したりして、レポートやマシンラーニングで使用したり、[!DNL Real-Time Customer Profile] に取り込んだりできます。 このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 
 クエリサービスを使用してオンラインからオフラインへのカスタマージャーニーを接続し、ブランドのオムニチャネル属性を把握できます。 次のビデオでは、エクスペリエンスビジネスがクエリサービスを使用して主要なユースケースに対応する方法や、クエリサービスの仕組みについて説明します。
 
@@ -34,7 +34,7 @@ RESTful API も同様のエクスペリエンスを提供します。 Query Serv
 
 ## クエリサービスと Experience Platform サービス {#experience-platform-services}
 
-クエリサービスはやり取りし、複数のExperience Platformサービスで使用できます。 クエリサービスの機能を最大限に活用するには、これらのサービスと、クエリサービスとのやり取りについて理解する必要があります。 [Experience Platformドキュメントのランディングページ ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja) には、プラットフォームの機能の概要とリンクが記載されています。
+クエリサービスはやり取りし、複数のExperience Platform サービスで使用できます。 クエリサービスの機能を最大限に活用するには、これらのサービスと、クエリサービスとのやり取りについて理解する必要があります。 [Experience Platformのドキュメントランディングページ ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja) には、プラットフォームの機能の概要とリンクが記載されています。
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
@@ -54,7 +54,7 @@ Adobe Experience Platform Segmentation Service を使用して、顧客を類似
 
 ## カスタムダッシュボードを使用したインサイトの生成 {#custom-dashboards}
 
-Adobe Experience Platform では、行動データ、CRM データ、POS データなどのすべての保存済みデータセットの取得、保存、構造化および取り込みをおこなうことができます。[!DNL Experience Platform's Query Service] を使用すると、これらのデータセットに対してクエリを実行して、ビジネスに関する特定の質問に回答し、重要なインサイトの生成を開始できます。カスタムダッシュボードを作成および管理する方法を説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、[ ユーザー定義のダッシュボード ](../dashboards/standard-dashboards.md) で主要指標を視覚化できます。 Real-Time CDP インサイトデータモデルで SQL クエリを使用することで、マーケティングや KPI の使用例に合わせて [ 独自のReal-time Customer Data Platform レポートをカスタマイズ ](../dashboards/data-models/cdp-insights-data-model-b2c.md) することもできます。
+Adobe Experience Platform では、行動データ、CRM データ、POS データなどのすべての保存済みデータセットの取得、保存、構造化および取り込みをおこなうことができます。[!DNL Experience Platform's Query Service] を使用すると、これらのデータセットに対してクエリを実行して、ビジネスに関する特定の質問に回答し、重要なインサイトの生成を開始できます。カスタムダッシュボードを作成および管理する方法を説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して、[ ユーザー定義のダッシュボード ](../dashboards/standard-dashboards.md) で主要指標を視覚化できます。 Real-Time CDP インサイトデータモデルで SQL クエリを使用することで、マーケティングや KPI の使用例に合わせて [ 独自のReal-Time Customer Data Platform レポートをカスタマイズ ](../dashboards/data-models/cdp-insights-data-model-b2c.md) することもできます。
 
 ## 次の手順とその他のリソース
 

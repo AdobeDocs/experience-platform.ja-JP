@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データサイエンスワークスペーストラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform データサイエンスワークスペースに関するよくある質問に対する回答を示します。
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 98%
@@ -19,7 +19,7 @@ ht-degree: 98%
 >
 >このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
-このドキュメントでは、Adobe Experience Platform [!DNL Data Science Workspace] に関するよくある質問に対する回答を示します。[!DNL Platform] API 全般に関する質問とトラブルシューティングについては、[Adobe Experience Platform API トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、Adobe Experience Platform [!DNL Data Science Workspace] に関するよくある質問に対する回答を示します。[!DNL Experience Platform] API 全般に関する質問とトラブルシューティングについては、[Adobe Experience Platform API トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
 ## JupyterLab Notebook クエリステータスが実行状態でスタックする
 

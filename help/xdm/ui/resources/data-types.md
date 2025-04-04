@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；ui;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；スキーマ；スキーマ；作成；データタイプ；データタイプ；
+keywords: Experience Platform；ホーム；人気のトピック；ui;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマ；スキーマ；作成；データタイプ；データタイプ；
 solution: Experience Platform
 title: UI を使用したデータタイプの作成と編集
 type: Tutorial
-description: Experience Platformユーザーインターフェイスでデータタイプを作成および編集する方法について説明します。
+description: Experience Platform ユーザーインターフェイスでデータタイプを作成および編集する方法について説明します。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -27,17 +27,17 @@ Adobe Experience Platformには、一般的なエクスペリエンス管理の�
 >
 >フィールドが特定のデータタイプとして定義されている場合、同じフィールドを別のスキーマの異なるデータタイプで作成することはできません。 この制約は、組織のテナントに適用されます。
 
-このチュートリアルでは、Platform ユーザーインターフェイスでカスタムデータタイプを作成および編集する手順を説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスでカスタムデータタイプを作成および編集する手順を説明します。
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、XDM システムに関する十分な知識が必要です。 Experience Platformエコシステムにおける XDM の役割の概要については [XDM の概要 ](../../home.md) を、データタイプが XDM スキーマにどのように寄与するかについては [ スキーマ構成の基本 ](../../schema/composition.md) を参照してください。
+このガイドでは、XDM システムに関する十分な知識が必要です。 Experience Platform エコシステムでの XDM の役割の概要については [XDM の概要 ](../../home.md) を、データタイプが XDM スキーマにどのように寄与するかについては [ スキーマ構成の基本 ](../../schema/composition.md) を参照してください。
 
 このガイドには必要ありませんが、[UI でのスキーマの作成 ](../../tutorials/create-schema-ui.md) に関するチュートリアルに従って、[!DNL Schema Editor] の様々な機能を理解することをお勧めします。
 
 ## データタイプの [!DNL Schema Editor] を開く {#data-type}
 
-Platform UI で、左側のナビゲーションで **[!UICONTROL スキーマ]** を選択して [!UICONTROL  スキーマ ] ワークスペースを開き、「**[!UICONTROL データタイプ]**」タブを選択します。 使用可能なデータタイプのリストが表示されます。 データタイプのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定には、Adobeで定義されたデータタイプが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。
+Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して [!UICONTROL  スキーマ ] ワークスペースを開き、「**[!UICONTROL データタイプ]**」タブを選択します。 使用可能なデータタイプのリストが表示されます。 データタイプのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定には、Adobeで定義されたデータタイプが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。
 
 ![ 左側のナビゲーションで [!UICONTROL  スキーマ ] がハイライト表示され ][!UICONTROL  データタイプ ] を含む [!UICONTROL  スキーマ ワークスペース。](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -63,7 +63,7 @@ Platform UI で、左側のナビゲーションで **[!UICONTROL スキーマ]*
 
 ### データタイプのフィルタリング {#filter}
 
-使用可能なデータタイプのリストは、作成方法に基づいて事前にフィルタリングされています。ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeが作成したエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成したエンティティが表示されます。
+使用可能なデータタイプのリストは、作成方法に基づいて事前にフィルタリングされています。ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成されたエンティティが表示されます。
 
 ![[!UICONTROL  標準 ] と [!UICONTROL  カスタム ] がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  データタイプ ] タブ ](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
@@ -125,6 +125,6 @@ Platform UI で、左側のナビゲーションで **[!UICONTROL スキーマ]*
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Platform UI を使用してデータタイプを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
+このガイドでは、Experience Platform UI を使用してデータタイプを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
 
 [!DNL Schema Registry] API を使用してデータタイプを管理する方法については、[ データタイプエンドポイントガイド ](../../api/data-types.md) を参照してください。

@@ -1,11 +1,11 @@
 ---
 title: mbox3rdPartyId のリアルタイムプロファイル同期
-description: Adobe Experience Platform Web SDK で mbox3rdPartyId を使用する方法を説明します。
+description: Adobe Experience Platform web SDKで mbox3rdPartyId を使用する方法を説明します。
 keywords: パーソナライゼーション；Target;Adobe Target;renderDecisions;sendEvent;mbox3rdPartyId;
 exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '157'
 ht-degree: 1%
 
 ---
@@ -17,14 +17,14 @@ Adobe Targetの mbox3rdPartyId は、会社のロイヤルティプログラム�
 訪問者が会社のサイトにログインすると、会社は通常、訪問者のアカウント、ロイヤルティカード、メンバーシップ番号、またはその会社のその他の該当する識別子に関連付けられた ID を作成します。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
 
 
-## Web SDK での `mbox3rdPartyId` の使用方法
+## Web SDKでの `mbox3rdPartyId` の使用方法
 
 ### 手順 1:`Target Third Party ID Namespace` を設定する
 
 mbox サードパーティ ID として使用する ID 名前空間を使用して、[ データストリーム ](../../../datastreams/overview.md) の `Target Third Party ID Namespace` を設定します。
 [ID 名前空間の詳細情報 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja)
 
-![Target サードパーティ ID 名前空間フィールドを示す Platform UI。](assets/mbox3rdpartyid.png)
+![Target サードパーティ ID 名前空間フィールドを示すExperience Platform UI。](assets/mbox3rdpartyid.png)
 
 ### 手順 2:`mbox3rdpartyId` を Target に送信する
 

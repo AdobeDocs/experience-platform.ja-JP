@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；CJA；ジャーニー分析；Customer Journey Analytics；キャンペーンオーケストレーション；オーケストレーション；カスタマージャーニー；ジャーニー；ジャーニーオーケストレーション；機能；ワークフロー
+keywords: Experience Platform；ホーム；人気のトピック；CJA;journey analytics;customer journey analytics；キャンペーンオーケストレーション；オーケストレーション；カスタマージャーニー；ジャーニー；ジャーニーオーケストレーション；機能；ワークフロー
 solution: Experience Platform
-title: Experience Platformドキュメントの概要
-description: Adobe Experience Platformのドキュメントは、ユーザーインターフェイスと API の両方の概要、チュートリアル、ガイドなど、複数の形式で提供されています。Experience Platformサービスで利用可能な、最も一般的なドキュメントタイプを簡単に説明します。
+title: Experience Platform ドキュメントの概要
+description: Adobe Experience Platformのドキュメントは、ユーザーインターフェイスと API の両方の概要、チュートリアル、ガイドなど、複数の形式で提供されています。Experience Platform サービスで利用可能な、最も一般的なドキュメントのタイプを簡単に説明します。
 exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 49%
+source-wordcount: '482'
+ht-degree: 48%
 
 ---
 
-# Experience Platformドキュメントの概要
+# Experience Platform ドキュメントの概要
 
 >[!NOTE]
 >
 >Adobe Experience Platform のドキュメントは最近移動されました。新しいナビゲーションを確認し、既存のブックマークを更新してください。
 
-Adobe Experience Platformのドキュメントは、多くの Platform 機能およびサービスで利用できます。 Experience Platformドキュメントにアクセスするには、[ ドキュメントランディングページ ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja) に戻り、表示するガイドを選択します。
+Adobe Experience Platformのドキュメントは、Experience Platformの多くの機能およびサービスで利用できます。 Experience Platformのドキュメントにアクセスするには、[ ドキュメントのランディングページ ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja) に戻り、表示するガイドを選択します。
 
-## Experience Platformドキュメントの種類
+## Experience Platform ドキュメントのタイプ
 
-Experience Platformドキュメントは、ユーザーインターフェイス（UI）と API の両方の概要、チュートリアル、ガイドを含む、複数の形式で提供されます。 最も一般的なドキュメントタイプを次のリストにまとめます。
+Experience Platformのドキュメントは、ユーザーインターフェイス（UI）と API の両方の概要、チュートリアル、ガイドを含む、複数の形式で提供されます。 最も一般的なドキュメントタイプを次のリストにまとめます。
 
 * **API リファレンス：**&#x200B;使用可能なエンドポイント（ヘッダー、パラメーター、サンプルリクエスト、応答など）の詳細については、各サービスの API リファレンスドキュメントを参照してください。これらの参考資料は、ドキュメントと同程度の詳細を提供していません。API の使用例の詳細については、サービス固有の開発者ガイドを参照することをお勧めします。
 
-* **開発者ガイド：**&#x200B;各開発者ガイドは、特定のサービスで使用できるすべての API エンドポイントの使用状況に関する詳細な情報を提供します。このガイドには、使用可能なクエリパラメーター、サンプルリクエスト、サンプル応答に加えて、[!DNL Platform] API を呼び出す際に回避すべき「落とし穴」の概要が含まれています。
+* **開発者ガイド：**&#x200B;各開発者ガイドは、特定のサービスで使用できるすべての API エンドポイントの使用状況に関する詳細な情報を提供します。このガイドには、使用可能なクエリパラメーター、サンプルリクエスト、サンプル応答に加えて、[!DNL Experience Platform] API を呼び出す際に回避すべき「落とし穴」の概要が含まれています。
 
-* **概要：** 概要では、サービスまたは機能の概要と、その他の [!DNL Platform] サービスとのやり取りの方法が提供されます。 概要は、[!DNL Platform] 内の新機能について学習する際に開始するのに最適な場所です。
+* **概要：** 概要では、サービスまたは機能の概要と、その他の [!DNL Experience Platform] サービスとのやり取りの方法が提供されます。 概要は、[!DNL Experience Platform] 内の新機能について学習する際に開始するのに最適な場所です。
 
 * **トラブルシューティングガイド：**&#x200B;トラブルシューティングガイドを使用して、API を使用する際に遭遇する可能性が高い、よくある質問とエラーメッセージに関する情報を見つけます。[!DNL Experience Platform] トラブルシューティングガイドでは、一般的な質問やエラーに対するサポートを提供し、個々のサービスでは、その地域に固有のトラブルシューティングガイドを提供します。
 
 * **チュートリアル：**&#x200B;チュートリアルは、UI、API、またはその両方を順に示し、特定の結果へと導きます。開発者ガイドとは異なり、API チュートリアルは 1 つまたは 2 つのエンドポイントのみに焦点を当てている可能性があり、完全な API リソースではありません。同様に、UI チュートリアルでは、そのサービスで使用できる完全なユーザインターフェイスではなく、特定の手順にのみ焦点を当てる場合があります。チュートリアルは、多くの場合、より大規模なワークフローの一部であり、次に試すチュートリアルを説明する「次のステップ」を示しています。
 
-* **UI ガイド：** UI ガイドでは、特定のサービスの [!DNL Platform] ユーザーインターフェイスで使用できるアクションの概要を説明します。 これらのドキュメントには、UI を通じた Platform の操作に重点を置いたスクリーンショットと手順が含まれています。 開発者ガイドと同様に、UI ガイドでは、回避する「落とし穴」を含む、使用可能なすべてのアクションとオプションの概要を説明します。 これは、UI を操作する際の最も詳細なリソースです。
+* **UI ガイド：** UI ガイドでは、特定のサービスの [!DNL Experience Platform] ユーザーインターフェイスで使用できるアクションの概要を説明します。 これらのドキュメントには、UI を通じたExperience Platformの操作に重点を置いたスクリーンショットと手順が含まれています。 開発者ガイドと同様に、UI ガイドでは、回避する「落とし穴」を含む、使用可能なすべてのアクションとオプションの概要を説明します。 これは、UI を操作する際の最も詳細なリソースです。

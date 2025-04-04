@@ -2,7 +2,7 @@
 title: ドキュメントのセルフサービステンプレート/を宛先の名前に置き換えます
 description: このテンプレートを使用して、Adobe Experience Platform カタログに宛先に関する公開ドキュメントを作成します。//概要セクションの段落で置き換えます。
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 10521602a5871419c0c49d54c8ed250af39a78a4
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 33%
@@ -66,8 +66,8 @@ ht-degree: 33%
 | GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 | ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](/help/identity-service/features/ecid.md) に関する次のドキュメントを参照してください。 |
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
 {style="table-layout:auto"}
@@ -80,7 +80,7 @@ ht-degree: 33%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -111,7 +111,7 @@ ht-degree: 33%
 
 ### 宛先に対する認証 {#authenticate}
 
-*宛先への認証時に顧客が入力する必要があるフィールドを追加します。 これらのフィールドは宛先固有であり、Destination SDKの設定によって異なります。 宛先のフィールドは、以下に示すものと同じではない可能性があります。 以下に示すサンプルスクリーンショットに類似したスクリーンショットも含めてください。*
+*宛先への認証時に顧客が入力する必要があるフィールドを追加します。 これらのフィールドは宛先固有であり、Destination SDKでの設定によって異なります。 宛先のフィールドは、以下に示すものと同じではない可能性があります。 以下に示すサンプルスクリーンショットに類似したスクリーンショットも含めてください。*
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
@@ -121,7 +121,7 @@ ht-degree: 33%
 
 ### 宛先の詳細の入力 {#destination-details}
 
-*顧客が新しい宛先を設定する際に入力する必要があるフィールドを追加します。 これらのフィールドは宛先固有であり、Destination SDKの設定によって異なります。 宛先のフィールドは、以下に示すものと同じではない可能性があります。 以下に示すサンプルスクリーンショットに類似したスクリーンショットも含めてください。*
+*顧客が新しい宛先を設定する際に入力する必要があるフィールドを追加します。 これらのフィールドは宛先固有であり、Destination SDKでの設定によって異なります。 宛先のフィールドは、以下に示すものと同じではない可能性があります。 以下に示すサンプルスクリーンショットに類似したスクリーンショットも含めてください。*
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 

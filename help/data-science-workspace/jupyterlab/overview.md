@@ -4,10 +4,10 @@ solution: Experience Platform
 title: JupyterLab UI の概要
 description: JupyterLab は、プロジェクト Jupyter の web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データサイエンティストが Jupyter Notebook、コードおよびデータを扱うためのインタラクティブな開発環境を提供します。このドキュメントでは、JupyterLab とその機能の概要のほか、一般的なアクションを実行する手順を説明します。
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1835'
-ht-degree: 98%
+source-wordcount: '1838'
+ht-degree: 95%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->データサイエンスワークスペースは購入できなくなりました。
+>Data Science Workspaceは購入できなくなりました。
 >
->このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 [!DNL JupyterLab] は、[プロジェクト Jupyter](https://jupyter.org/) の web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データサイエンティストが Jupyter Notebook、コードおよびデータを扱うためのインタラクティブな開発環境を提供します。
 
@@ -27,24 +27,24 @@ ht-degree: 98%
 
 Experience Platform の JupyterLab 統合には、アーキテクチャの変更、デザイン上の考慮事項、カスタマイズされたノートブック拡張機能、プリインストールされたライブラリ、アドビをテーマにしたインターフェイスが付属しています。
 
-次のリストでは、Platform 上の JupyterLab に固有の機能の一部を説明します。
+次のリストは、Experience Platform上の JupyterLab に固有の機能の一部の概要を示しています。
 
 | 機能 | 説明 |
 | --- | --- |
 | **カーネル** | カーネルは、ノートブックや他の [!DNL JupyterLab] フロントエンドに、様々なプログラミング言語のコードの実行およびイントロスペクション機能を提供します。[!DNL Experience Platform] には、[!DNL Python]、R、PySpark および [!DNL Spark] での開発をサポートする追加のカーネルが用意されています。詳しくは「[カーネル](#kernels)」の節を参照してください。 |
 | **データアクセス** | 読み取り／書き込み機能を完全にサポートし、既存のデータセットに [!DNL JupyterLab] 内から直接アクセスできます。 |
-| **[!DNL Platform]サービスの統合** | 組み込み統合により、[!DNL JupyterLab] 内から他の [!DNL Platform] サービスを直接利用できます。サポートされる統合の完全なリストは、「[他の Platform サービスとの統合](#service-integration)」の節に記載されています。 |
-| **認証** | <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab の組み込みのセキュリティモデル</a>に加えて、Platform のサービス間通信を含む、アプリケーションと Experience Platform の間のすべてのやり取りは、<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System]（IMS）</a>を通じて暗号化され、認証されます。 |
+| **[!DNL Experience Platform]サービスの統合** | 組み込み統合により、[!DNL JupyterLab] 内から他の [!DNL Experience Platform] サービスを直接利用できます。サポートされているすべての統合のリストについては、[ 他のExperience Platform サービスとの統合 ](#service-integration) の節を参照してください。 |
+| **認証** | <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab の組み込みのセキュリティモデル </a> に加えて、Experience Platformのサービス間通信を含む、アプリケーションとExperience Platformの間のすべてのやり取りは、<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] （IMS） </a> を通じて暗号化され、認証されます。 |
 | **開発ライブラリ** |  [!DNL Experience Platform] では、[!DNL JupyterLab] は [!DNL Python]、R、および PySpark 用のプリインストールされたライブラリを提供します。サポートされているライブラリの完全なリストについては、[付録](#supported-libraries)を参照してください。 |
-| **ライブラリコントローラー** | プリインストールされたライブラリがニーズを満たさない場合は、Python と R 用に追加のライブラリをインストールできます。追加したライブラリは、[!DNL Platform] の整合性を維持しデータを安全に保つために、分離されたコンテナに一時的に保存されます。詳しくは、[カーネル](#kernels)の節を参照してください。 |
+| **ライブラリコントローラー** | プリインストールされたライブラリがニーズを満たさない場合は、Python と R 用に追加のライブラリをインストールできます。追加したライブラリは、[!DNL Experience Platform] の整合性を維持しデータを安全に保つために、分離されたコンテナに一時的に保存されます。詳しくは、[カーネル](#kernels)の節を参照してください。 |
 
 >[!NOTE]
 >
 > 追加のライブラリは、インストールされたセッションでのみ使用できます。新しいセッションを開始する際に、必要な追加のライブラリを再インストールする必要があります。
 
-## 他の [!DNL Platform] サービスとの統合 {#service-integration}
+## 他の [!DNL Experience Platform] サービスとの統合 {#service-integration}
 
-標準化と相互運用性は、[!DNL Experience Platform] を支える重要な概念です。[!DNL Platform] 上の [!DNL JupyterLab] を組み込み IDE として統合することで、他の [!DNL Platform] サービスとのやり取りが可能になり、[!DNL Platform] を最大限に活用できます。[!DNL JupyterLab] では、次の [!DNL Platform] サービスを使用できます。
+標準化と相互運用性は、[!DNL Experience Platform] を支える重要な概念です。[!DNL Experience Platform] 上の [!DNL JupyterLab] を組み込み IDE として統合することで、他の [!DNL Experience Platform] サービスとのやり取りが可能になり、[!DNL Experience Platform] を最大限に活用できます。[!DNL JupyterLab] では、次の [!DNL Experience Platform] サービスを使用できます。
 
 * **[!DNL Catalog Service]：**&#x200B;読み取りおよび書き込み機能でデータセットにアクセスし調査します。
 * **[!DNL Query Service]：** SQL を使用してデータセットにアクセスし調査します。大量のデータを処理する際に、データアクセスのオーバーヘッドが低くなります。
@@ -53,7 +53,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 >[!NOTE]
 >
-> [!DNL JupyterLab] での一部の [!DNL Platform] サービス統合は、特定のカーネルに限定されています。詳しくは「[カーネル](#kernels)」の節を参照してください。
+> [!DNL JupyterLab] での一部の [!DNL Experience Platform] サービス統合は、特定のカーネルに限定されています。詳しくは「[カーネル](#kernels)」の節を参照してください。
 
 ## 主な機能と一般的な操作
 
@@ -150,7 +150,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 特定の機能は、以下の表で説明するように、特定のカーネルに限定されています。
 
-| カーネル | ライブラリのインストールサポート | [!DNL Platform] 統合 |
+| カーネル | ライブラリのインストールサポート | [!DNL Experience Platform] 統合 |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | ○ | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | ○ | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
@@ -224,7 +224,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
         <td >いいえ</td>
     </tr>
       <tr>
-        <th  ><strong>PySpark 3 ([!DNL Spark] 2.4)</strong></th>
+        <th  ><strong>PySpark 3 （[!DNL Spark] 2.4）</strong></th>
         <td >いいえ</td>
         <td >○</td>
         <td >いいえ</td>

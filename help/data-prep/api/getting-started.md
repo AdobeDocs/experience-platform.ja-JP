@@ -3,10 +3,10 @@ keywords: Experience Platform;data prep;data prep api;トラブルシューテ�
 title: Data Prep API の概要
 description: Data Prep API エンドポイントを使用して、マッパーで使用する基本的な CRUD 操作を実行するために知っておく必要がある、主な概念と基本機能について説明します。
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 100%
+source-wordcount: '187'
+ht-degree: 82%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md)：[!DNL Experience Platform] にデータを送信するメソッド。
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
 
-[!DNL Data Prep] API エンドポイントへの呼び出しを正常におこなうには、[Platform API の概要](../../landing/api-guide.md)を読み、必要なヘッダーとサンプル API 呼び出しの読み込み方法を確認してください。
+[!DNL Data Prep] API エンドポイントへの呼び出しを正常におこなうには、[Experience Platform API の概要 ](../../landing/api-guide.md) を読み、必要なヘッダーとサンプル API 呼び出しの読み込み方法を確認してください。
 
 ## 次の手順
 

@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、オーディエンステンプレートを作成するために使用される API 呼び出しの例を示します。
 title: オーディエンステンプレートの作成
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '622'
-ht-degree: 91%
+source-wordcount: '623'
+ht-degree: 88%
 
 ---
 
@@ -256,7 +256,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | プロパティ | タイプ | 説明 |
 | -------- | ----------- | ----------- |
-| `name` | 文字列 | 宛先のオーディエンスメタデータテンプレートの名前。この名前は、Experience Platformユーザーインターフェイスのパートナー固有のエラーメッセージに表示されます。 |
+| `name` | 文字列 | 宛先のオーディエンスメタデータテンプレートの名前。この名前は、Experience Platform ユーザーインターフェイスのパートナー固有のエラーメッセージに表示されます。 |
 | `url` | 文字列 | API の URL とエンドポイント。プラットフォームでオーディエンスやデータフローを作成、更新、削除、検証するために使用します。 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` および `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` は 2 つの業界の例です。 |
 | `httpMethod` | 文字列 | 宛先のオーディエンスをプログラムで作成、更新、削除、検証するためにエンドポイントで使用されるメソッド。例：`POST`、`PUT`、`DELETE` |
 | `headers.header` | 文字列 | API への呼び出しに追加する HTTP ヘッダーを指定します。例：`"Content-Type"` |
@@ -281,7 +281,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 ## API エラー処理
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../../landing/troubleshooting.md#request-header-errors)を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順
 

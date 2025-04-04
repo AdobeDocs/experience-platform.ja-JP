@@ -3,10 +3,10 @@ title: セルフサービスソースの概要（ストリーミングSDK）
 description: このドキュメントでは、セルフサービスソース（ストリーミング SDK）を使用して新しいソースを作成する前に知っておく必要がある前提条件の概要を説明します。
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: ベータ版
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 34%
+source-wordcount: '549'
+ht-degree: 20%
 
 ---
 
@@ -45,14 +45,14 @@ Experience Platformでソースを設定する手順の概要を次に示しま�
 
 >[!IMPORTANT]
 >
->エンドポイントと統合するソースは、Experience Platformが購読できる Webhook をサポートして更新を送信できる必要があります。
+>Experience Platformと統合するソースは、エンドポイントが購読できる Webhook をサポートして更新を送信できる必要があります。
 
 セルフサービスソース（ストリーミング SDK）を使用するには、Adobe Experience Platform ソースでプロビジョニングされたサンドボックス組織にアクセスできる必要があります。
 
 このガイドには、Adobe Experience Platformの次のコンポーネントに関する十分な知識も必要です。
 
-* [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## API 呼び出し例の読み取り
 
@@ -60,19 +60,19 @@ Experience Platformでソースを設定する手順の概要を次に示しま�
 
 ## 必須ヘッダーの値の収集
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+Experience Platform API を呼び出すには、まず[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service] に属するリソースを含む、Platform のすべてのリソースは、特定の仮想サンドボックスに分離されます。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service] に属するリソースを含む、Experience Platformのすべてのリソースは、特定の仮想サンドボックスに分離されます。 Experience Platform API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform のサンドボックスについて詳しくは、[ サンドボックスのドキュメント ](../../../sandboxes/home.md) を参照してください。
+>Experience Platformのサンドボックスについて詳しくは、[ サンドボックスのドキュメント ](../../../sandboxes/home.md) を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 

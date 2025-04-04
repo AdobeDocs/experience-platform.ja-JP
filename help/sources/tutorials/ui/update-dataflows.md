@@ -1,11 +1,11 @@
 ---
-description: Experience PlatformUI で既存のソースデータフローを更新する方法を説明します。
+description: Experience Platform UI で既存のソースデータフローを更新する方法を説明します。
 title: UI でのSource接続データフローの更新
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 17%
+source-wordcount: '768'
+ht-degree: 10%
 
 ---
 
@@ -17,8 +17,8 @@ Adobe Experience Platform ユーザーインターフェイスのソースワー
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## データフローの更新 {#update-dataflows}
 
@@ -79,7 +79,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![ データフローを無効にすることを確認する必要があるポップアップウィンドウ。](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
-このデータフローを後で再度有効にした場合、Experience Platformは、データフローが無効であった期間をカバーするようにバックフィル実行を自動的にスケジュールします。 例えば、データフローが 1 時間ごとに実行されるように設定され、48 時間無効にされた場合、このデータフローを再度有効にすると、Experience Platformは、逃した間隔を処理するために 48 回のバックフィル実行を作成します。
+このデータフローを後で再度有効にした場合、Experience Platformは、データフローが無効であった期間をカバーするようにバックフィル実行を自動的にスケジュールします。 例えば、データフローが 1 時間ごとに実行されるように設定され、48 時間無効にされた場合、このデータフローを再度有効にすると、Experience Platformは 48 回のバックフィル実行を作成し、失敗した間隔を処理します。
 
 ## 次の手順
 

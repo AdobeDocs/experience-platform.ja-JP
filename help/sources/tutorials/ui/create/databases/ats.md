@@ -5,7 +5,7 @@ title: UI での Azure Table Storage Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Azure Table Storage ソース接続を作成する方法を説明します。
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 34%
@@ -14,7 +14,7 @@ ht-degree: 34%
 
 # UI での [!DNL Azure Table Storage] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Azure Table Storage] （以下「ATS」）ソースコネクタを作成する手順について説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Azure Table Storage] （以下「ATS」）ソースコネクタを作成する手順について説明します。
 
 ## はじめに
 
@@ -29,7 +29,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で ATS アカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Experience Platform] で ATS アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## [!DNL Azure Table Storage] アカウントを接続
 
-必要な資格情報を収集したら、次の手順に従って ATS アカウントを [!DNL Platform] にリンクできます。
+必要な資格情報を収集したら、次の手順に従って ATS アカウントを [!DNL Experience Platform] にリンクできます。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -65,4 +65,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、ATS アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、ATS アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

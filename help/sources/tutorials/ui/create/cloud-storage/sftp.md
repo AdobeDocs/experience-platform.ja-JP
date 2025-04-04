@@ -2,9 +2,9 @@
 title: UI での SFTP Source接続の作成
 description: Adobe Experience Platform UI を使用して SFTP ソース接続を作成する方法を説明します。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '665'
 ht-degree: 25%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 ## 基本を学ぶ
 
-このチュートリアルでは、Platform の次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
@@ -34,13 +34,13 @@ ht-degree: 25%
 
 ## [!DNL SFTP] サーバーへの接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 [!UICONTROL  クラウドストレージ ] カテゴリで、「**[!UICONTROL SFTP]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![SFTP ソースが選択されたExperience Platformソースカタログ ](../../../../images/tutorials/create/sftp/catalog.png)
+![Experience Platform ソースカタログと SFTP ソースが選択されています。](../../../../images/tutorials/create/sftp/catalog.png)
 
 **[!UICONTROL SFTP に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -48,7 +48,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 既存のアカウントに接続するには、接続する FTP アカウントまたは SFTP アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![Experience PlatformUI の既存の SFTP アカウントのリスト。](../../../../images/tutorials/create/sftp/existing.png)
+![Experience Platform UI の既存の SFTP アカウントのリスト。](../../../../images/tutorials/create/sftp/existing.png)
 
 ### 新規アカウント
 
@@ -101,4 +101,4 @@ SSH 公開鍵ベースの資格情報を使用するには、「**[!UICONTROL SS
 
 ## 次の手順
 
-このチュートリアルでは、SFTP アカウントへの接続を確立しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージから Platform にデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。
+このチュートリアルでは、SFTP アカウントへの接続を確立しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。

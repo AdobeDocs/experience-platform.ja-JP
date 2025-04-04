@@ -1,11 +1,11 @@
 ---
 title: 認証
-description: Adobe Experience Platform Edge Networkサーバー API の認証を設定する方法について説明します。
+description: Adobe Experience Platform Edge Network Server API の認証を設定する方法について説明します。
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 24%
+source-wordcount: '636'
+ht-degree: 21%
 
 ---
 
@@ -33,18 +33,18 @@ ht-degree: 24%
 [!DNL Server API] を呼び出す前に、次の前提条件を満たしていることを確認してください。
 
 * Adobe Experience Platformにアクセスできる組織アカウントがある。
-* Experience Platformアカウントでは、`developer` ロールと `user` ロールがAdobe Experience Platform API 製品プロファイルに対して有効になっています。 アカウントでこれらのロールを有効にするには、[Admin Console](../access-control/home.md) 管理者にお問い合わせください。
+* Experience Platform アカウントでは、`developer` と `user` の役割がAdobe Experience Platform API 製品プロファイルに対して有効になっています。 アカウントでこれらの役割を有効にするには、[Admin Console](../access-control/home.md) 管理者にお問い合わせください。
 * Adobe IDがある。 Adobe IDがない場合は、[Adobe Developer Consoleに移動して ](https://developer.adobe.com/console) 新しいアカウントを作成します。
 
 ## 資格情報の収集 {#credentials}
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](../landing/api-authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform API を呼び出すには、まず[認証に関するチュートリアル](../landing/api-authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Experience Platform のリソースは、特定の仮想サンドボックスに分離することができます。Platform API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。次に、オプションのパラメーターを示します。
+Experience Platform のリソースは、特定の仮想サンドボックスに分離することができます。Experience Platform API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。 次に、オプションのパラメーターを示します。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -71,6 +71,6 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 | `EXEG-0501-401` | 無効なユーザー認証トークン | このエラーメッセージは、次のいずれかの状況で表示されます。 <ul><li>API 呼び出しに必要な `x-user-token` ヘッダーがありません。</li><li>指定したユーザートークンの形式が無効です。</li></ul> |
 | `EXEG-0502-401` | 認証トークンが無効です | このエラーメッセージが表示されるのは、指定された認証トークンの形式（JWT）が有効であるが、その署名が無効な場合です。 有効な JWT トークンの取得方法については、[ 認証チュートリアル ](../landing/api-authentication.md) を参照してください。 |
 | `EXEG-0503-401` | 認証トークンが無効です | このエラーメッセージは、指定された認証トークンが期限切れの場合に表示されます。 [ 認証チュートリアル ](../landing/api-authentication.md) を実行して、新しいトークンを生成します。 |
-| `EXEG-0504-401` | 必須製品コンテキストがありません | このエラーメッセージは、次のいずれかの状況で表示されます。  <ul><li>開発者アカウントには、Adobe Experience Platform製品コンテキストへのアクセス権がありません。</li><li>会社アカウントには、まだAdobe Experience Platform を使用する権限がありません。</li></ul> |
+| `EXEG-0504-401` | 必須製品コンテキストがありません | このエラーメッセージは、次のいずれかの状況で表示されます。  <ul><li>開発者アカウントには、Adobe Experience Platform製品コンテキストへのアクセス権がありません。</li><li>会社アカウントには、まだAdobe Experience Experience Platformを利用する権限がありません。</li></ul> |
 | `EXEG-0505-401` | 必須認証トークンスコープがありません | このエラーは、サービス アカウント認証にのみ適用されます。 このエラーメッセージが表示されるのは、呼び出しに含まれているサービス認証トークンが、`acp.foundation` IMS スコープへのアクセス権を持たないサービスアカウントに属している場合です。 |
-| `EXEG-0506-401` | 書き込みのためにサンドボックスにアクセスできません | このエラーメッセージが表示されるのは、開発者アカウントが、データストリームが定義されたExperience Platformサンドボックス `WRITE` のアクセス権を持っていない場合です。 |
+| `EXEG-0506-401` | 書き込みのためにサンドボックスにアクセスできません | このエラーメッセージは、開発者アカウントが、データストリームが定義されたExperience Platform サンドボックスへの `WRITE` アクセス権を持っていない場合に表示されます。 |

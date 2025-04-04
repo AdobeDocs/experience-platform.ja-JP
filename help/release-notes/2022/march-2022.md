@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年3月
 description: Adobe Experience Platform の 2022年3月のリリースノート。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 98%
+source-wordcount: '1182'
+ht-degree: 84%
 
 ---
 
@@ -39,7 +39,7 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 {style="table-layout:auto"}
 
-Platform の監査ログについて詳しくは、[監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。
+Experience Platformの監査ログについて詳しくは、[ 監査ログの概要 ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
 
 ## Real-Time CDP B2B Edition の関連するアカウント {#related-accounts}
 
@@ -59,7 +59,7 @@ Real-Time CDP B2B エディションについて詳しくは、[概要](../../rt
 
 ## アラート {#alerts}
 
-Experience Platform では、様々な Platform アクティビティに関するイベントベースのアラートを登録できます。Platform ユーザーインターフェイスの「[!UICONTROL アラート]」タブを使用して、様々なアラートルールを購読し、UI 内または電子メール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **更新された機能**
 
@@ -69,7 +69,7 @@ Experience Platform では、様々な Platform アクティビティに関す�
 
 {style="table-layout:auto"}
 
-Platform のアラートについて詳しくは、[アラートの概要](../../observability/alerts/overview.md)を参照してください。
+Experience Platformのアラートについて詳しくは、[ アラートの概要 ](../../observability/alerts/overview.md) を参照してください。
 
 ## ダッシュボード {#dashboards}
 
@@ -104,11 +104,11 @@ Adobe Experience Platform は、毎日のスナップショットで取得した
 
 {style="table-layout:auto"}
 
-Platform の宛先ダッシュボードについて詳しくは[宛先ダッシュボードの概要](../../dashboards/guides/destinations.md)を参照してください。
+Experience Platformの宛先ダッシュボードについて詳しくは、[ 宛先ダッシュボードの概要 ](../../dashboards/guides/destinations.md) を参照してください。
 
 ## データ収集 {#data-collection}
 
-Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信します。そこでデータを強化、変換、アドビまたはアドビ以外の宛先への配信を可能にする一連のテクノロジーを提供します。
+Experience Platform は、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信して、強化したり、変換したり、アドビまたはアドビ以外の宛先に配信したりできるようにする一連のテクノロジーを提供します。
 
 **新機能**
 
@@ -117,7 +117,7 @@ Platform は、クライアントサイドのカスタマーエクスペリエ�
 | グローバルデータストリーム設定 | データストリームを設定する際に、新しいグローバル設定（ジオロケーション、ファーストパーティ ID cookie、サードパーティ ID 同期）を設定できるようになりました。詳しくは、データストリーム UI ガイドの[データストリームの設定](../../datastreams/overview.md#create)の節を参照してください。 |
 | [Edge Network Server API](../../server-api/overview.md) | この Server API を使用すると、お客様は、新しい認証済みエンドポイントを使用して Experience Platform Edge Network を操作し、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースを強化できます。 |
 
-Platform のデータ収集について詳しくは、[データ収集概要](../../collection/home.md)を参照してください。
+Experience Platformのデータ収集について詳しくは、[ データ収集の概要 ](../../collection/home.md) を参照してください。
 
 ## クエリサービス {#query-service}
 
@@ -135,7 +135,7 @@ Platform のデータ収集について詳しくは、[データ収集概要](..
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得の実行時間の設定、データ取得スループットの管理を行うことができます。
 
@@ -143,8 +143,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| B2B で使用できる新しいソースを提供開始 | B2B ユースケースで、Platform で使用できるすべてのソースを使用できるようになりました。使用できるソースの完全なリストについては、[ソースカタログ](../../sources/home.md)を参照してください。 |
-| 新しい [!DNL Oracle Eloqua] ソースの一般提供 | [!DNL Oracle Eloqua] ソースを使用して、[!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）から Platform にシームレスにデータを取り込むことができるようになりました。詳しくは、[ [!DNL Oracle Eloqua]  ソース接続の作成](../../sources/connectors/marketing-automation/oracle-eloqua.md)のドキュメントを参照してください。 |
+| B2B で使用できる新しいソースを提供開始 | B2B ユースケースで、Experience Platformで使用可能なすべてのソースを使用できるようになりました。 使用できるソースの完全なリストについては、[ソースカタログ](../../sources/home.md)を参照してください。 |
+| 新しい [!DNL Oracle Eloqua] ソースの一般提供 | [!DNL Oracle Eloqua] ソースを使用して、[!DNL Oracle Eloqua] インスタンス（アカウント、キャンペーン、連絡先）からExperience Platformにシームレスにデータを取り込むことができるようになりました。 詳しくは、[ [!DNL Oracle Eloqua]  ソース接続の作成](../../sources/connectors/marketing-automation/oracle-eloqua.md)のドキュメントを参照してください。 |
 | [!DNL Data Landing Zone] の API の強化 | [!DNL Data Landing Zone] ソースは、[!DNL Flow Service] API 使用時のファイルプロパティの自動検出をサポートするようになりました。詳しくは、[ [!DNL Data Landing Zone]  ソース接続の作成](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}

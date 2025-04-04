@@ -4,9 +4,9 @@ description: 監査クエリは、開発者がAdobe Experience Platformで誰が
 role: Developer
 feature: Audits, API
 exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '172'
 ht-degree: 9%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 9%
 
 ## イベント
 
-監査イベントは、アクションタイプ、日時、アクションを実行したユーザーの電子メール ID、Adobe Experience Platformの様々な機能のアクションタイプに関連する追加の属性など、Platform でのユーザーアクションに関するインサイトを提供します。 API を使用して指標を取得する方法については、[ イベントエンドポイントガイド ](./events.md) を参照してください。
+監査イベントは、アクションタイプ、日時、アクションを実行したユーザーの電子メール ID、Experience Platformの様々な機能のアクションタイプに関連する追加の属性など、Adobe Experience Platformでのユーザーのアクションに関するインサイトを提供します。 API を使用して指標を取得する方法については、[ イベントエンドポイントガイド ](./events.md) を参照してください。
 
 ## 書き出し
 

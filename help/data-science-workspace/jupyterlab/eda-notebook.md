@@ -5,10 +5,10 @@ title: 探索的データ分析（EDA）ノートブック
 type: Tutorial
 description: このガイドでは、探索的データ分析（EDA）ノートブックを使用して、web データのパターンを検出する方法や、予測目標を持ってイベントを集計する方法、集計データをクリーンアップする方法および予測者と目標の関係を把握する方法について重点的に説明しています。
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2789'
-ht-degree: 99%
+source-wordcount: '2790'
+ht-degree: 98%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->データサイエンスワークスペースは購入できなくなりました。
+>Data Science Workspaceは購入できなくなりました。
 >
->このドキュメントは、以前に データ Science ワークスペース の利用資格を持つ既存のお客様を対象としています。
+>このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
 この探索的データ分析（EDA）ノートブックは、データのパターンの検出、データのサニティチェックおよび予測モデルに適したデータの要約に役立つように設計されています。
 
@@ -70,7 +70,7 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Adobe Experience Platform [!DNL Query Service] への接続
 
-Platform 上の [!DNL JupyterLab] では、[!DNL Python] ノートブックで SQL を使用して、[クエリサービス](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja)を通じてデータにアクセスできます。[!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
+Experience Platformの [!DNL JupyterLab] を使用すると、[!DNL Python] ノートブックで SQL を使用して [ クエリサービス ](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=ja) を通じてデータにアクセスできます。 [!DNL Query Service] を通じたデータへのアクセスは実行時間が短いので、大規模なデータセットの処理に役立ちます。[!DNL Query Service] を使用したデータのクエリには 10 分間の処理時間制限があることに注意してください。
 
 [!DNL JupyterLab] で [!DNL Query Service] を使用する前に、[[!DNL Query Service] SQL 構文](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=ja)について実践的に理解していることを確認してください。
 

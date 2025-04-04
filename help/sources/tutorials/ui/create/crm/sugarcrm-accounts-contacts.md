@@ -2,10 +2,10 @@
 title: UI での SugarCRM アカウントおよび連絡先ソース接続の作成
 description: Adobe Experience Platform UI を使用して SugarCRM アカウントおよび連絡先ソース接続を作成する方法を説明します。
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 37%
+source-wordcount: '779'
+ht-degree: 30%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 37%
 
 ### 必要な資格情報の収集
 
-[!DNL SugarCRM Accounts & Contacts] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL SugarCRM Accounts & Contacts] をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
@@ -34,9 +34,9 @@ ht-degree: 37%
 | `Username` | SugarCRM 開発者アカウントのユーザー名。 | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | SugarCRM 開発者アカウントのパスワード。 | `123456789` |
 
-### Platform スキーマの作成
+### Experience Platform スキーマの作成
 
-また、[!DNL SugarCRM] ソース接続を作成する前に、まずソースに使用する Platform スキーマを作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+[!DNL SugarCRM] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
 [!DNL SugarCRM Accounts & Contacts] は複数の API をサポートしています。 つまり、活用しているオブジェクトタイプに応じて、個別のスキーマを作成する必要があります。 アカウントおよび連絡先スキーマの両方については、以下の例を参照してください。
 
@@ -44,23 +44,23 @@ ht-degree: 37%
 
 >[!TAB アカウント]
 
-![ アカウントのスキーマの例を示す Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
+![ アカウントのスキーマの例を示すExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
 
 >[!TAB  連絡先 ]
 
-![ 連絡先のスキーマの例を示す Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
+![ 連絡先のスキーマの例を示すExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
 
 >[!ENDTABS]
 
-## [!DNL SugarCRM Accounts & Contacts] アカウントの接続
+## [!DNL SugarCRM Accounts & Contacts] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *CRM* カテゴリ内で、「**[!UICONTROL SugarCRM アカウントと連絡先]**」、「**[!UICONTROL データを追加]**」の順に選択します。
 
-![SugarCRM アカウントと連絡先カードを含んだカタログの Platform UI スクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![SugarCRM アカウントおよび連絡先カードを含んだカタログのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 **[!UICONTROL SugarCRM アカウントと連絡先アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -68,17 +68,17 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL SugarCRM Accounts & Contacts] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![SugarCRM アカウントと連絡先アカウントを既存のアカウントに接続するの Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+![SugarCRM アカウントと連絡先アカウントを既存のアカウントに接続するのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### 新規アカウント
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![SugarCRM アカウントと連絡先アカウントを新しいアカウントに接続するための Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+![SugarCRM アカウントと連絡先アカウントを新しいアカウントに接続するためのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### データの選択
 
-最後に、Platform に取得するオブジェクトタイプを選択する必要があります。
+最後に、Experience Platformに取り込むオブジェクトタイプを選択する必要があります。
 
 | オブジェクトタイプ | 説明 |
 | --- | --- |
@@ -89,17 +89,17 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TAB アカウント]
 
-![ アカウントオプションが選択された設定を示す SugarCRM アカウントおよび連絡先の Platform UI スクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
+![ アカウントオプションが選択された設定を示す SugarCRM アカウントおよび連絡先のExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
 
 >[!TAB  連絡先 ]
 
-![ 「連絡先」オプションが選択された設定を示す、SugarCRM アカウントおよび連絡先の Platform UI スクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
+![ 連絡先オプションが選択された設定を示す SugarCRM アカウントおよび連絡先のExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL SugarCRM Accounts & Contacts] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](../../dataflow/crm.md)を行いましょう。
+このチュートリアルでは、[!DNL SugarCRM Accounts & Contacts] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。
 
 ## その他のリソース
 
@@ -113,7 +113,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ソースを正しく設定し、データが取り込まれてい [!DNL SugarCRM Accounts & Contacts] ことを検証するには、次の手順に従います。
 
-* Platform UI で、ソースカタログの [!DNL SugarCRM Accounts & Contacts] ーザーカードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 次に、「**[!UICONTROL データセットをプレビュー]**」をクリックして、取り込まれたデータを確認します。
+* Experience Platform UI で、ソースカタログの [!DNL SugarCRM Accounts & Contacts] ーザーカードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 次に、「**[!UICONTROL データセットをプレビュー]**」をクリックして、取り込まれたデータを確認します。
 
 * 使用しているオブジェクト・タイプに応じて、集計データを次の [!DNL SugarMarket] の「アカウント」ページまたは「連絡先」ページに表示されるカウントと照合して検証できます。
 

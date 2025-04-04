@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；スキーマ；スキーマ；作成
+keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマ；スキーマ；作成
 solution: Experience Platform
 title: スキーマレジストリ API を使用したスキーマの作成
 type: Tutorial
 description: このチュートリアルでは、Schema Registry API を使用して、標準クラスを使用してスキーマを作成する手順について説明します。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2583'
-ht-degree: 36%
+source-wordcount: '2584'
+ht-degree: 34%
 
 ---
 
 # [!DNL Schema Registry] API を使用したスキーマの作成
 
-[!DNL Schema Registry] は、Adobe Experience Platform内で [!DNL Schema Library] にアクセスするために使用されます。 [!DNL Schema Library] には、Adobe、[!DNL Experience Platform] ードパートナー、お客様が使用するアプリケーションのベンダーが提供するリソースが含まれています。 レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
+[!DNL Schema Registry] は、Adobe Experience Platform内で [!DNL Schema Library] にアクセスするために使用されます。 この [!DNL Schema Library] には、お客様が使用するアプリケーションを持つAdobe、[!DNL Experience Platform] パートナー、ベンダーが提供するリソースが含まれています。 レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
 
 このチュートリアルでは、[!DNL Schema Registry] API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。 [!DNL Experience Platform] でユーザーインターフェイスを使用する場合は、[ スキーマエディターのチュートリアル ](create-schema-ui.md) で、スキーマエディターで同様のアクションを実行する手順を確認してください。
 
 >[!NOTE]
 >
->CSV データを Platform に取り込む場合は、[そのデータを、AI 生成のレコメンデーションツール（現在はベータ版）で作成された XDM スキーマにマッピング](../../ingestion/tutorials/map-csv/recommendations.md)できます。その際、スキーマを手動で作成する必要はありません。
+>CSV データをExperience Platformに取り込む場合は、[ そのデータを、AI 生成のレコメンデーションで作成された XDM スキーマにマッピング ](../../ingestion/tutorials/map-csv/recommendations.md) （現在はベータ版）できます。その際、スキーマを手動で作成する必要はありません。
 
 ## はじめに
 
@@ -29,7 +29,7 @@ ht-degree: 36%
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 このチュートリアルを開始する前に、[ 開発者ガイド ](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正常に呼び出すために必要な重要な情報を確認してください。 そうした情報としては、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダーなどがあります（ `Accept` ヘッダーとその取り得る値には特に注意を払います）。
 
@@ -43,7 +43,7 @@ ht-degree: 36%
 
 スキーマ構成プロセスは、クラスの選択から始まります。このクラスは、データの主要な動作面（レコードと時系列）、および取得されるデータを説明するために必要な最小フィールドを定義します。
 
-このチュートリアルで作成するスキーマには、[!DNL XDM Individual Profile] クラスを使用します。 [!DNL XDM Individual Profile] は、レコードの動作を定義するためにAdobeが提供する標準クラスです。 動作に関する詳細については、「[スキーマ合成の基本](../schema/composition.md)」を参照してください。
+このチュートリアルで作成するスキーマには、[!DNL XDM Individual Profile] クラスを使用します。 [!DNL XDM Individual Profile] は、レコードの動作を定義するためにAdobeが提供する標準クラスです。 動作に関する詳細については、[スキーマ構成の基本](../schema/composition.md)を参照してください。
 
 クラスを割り当てるために、API 呼び出しが行われ、テナントコンテナ内に新しいスキーマが作成（POST）されます。この呼び出しには、スキーマが実装するクラスが含まれます。各スキーマは、1 つのクラスのみを実装できます。
 
@@ -304,7 +304,7 @@ curl -X PATCH \
 
 >[!TIP]
 >
->使用可能なすべてのフィールドグループを確認して、それぞれに含まれるフィールドについて理解しておくことをお勧めします。 「global」コンテナと「tenant」コンテナのそれぞれに対してリクエストを実行し、「meta:intendedToExtend」フィールドが使用しているクラスに一致するフィールドグループのみを返すことで、特定のクラスで使用できるすべてのフィールドグループを（GETで）リスト化できます。 この場合、これは [!DNL XDM Individual Profile] クラスなので、[!DNL XDM Individual Profile] の `$id` が使用されます。
+>使用可能なすべてのフィールドグループを確認して、それぞれに含まれるフィールドについて理解しておくことをお勧めします。 「global」コンテナと「tenant」コンテナのそれぞれに対してリクエストを実行し、「meta:intendedToExtend」フィールドが使用しているクラスに一致するフィールドグループのみを返すことで、（GET）特定のクラスで使用できるすべてのフィールドグループをリストできます。 この場合、これは [!DNL XDM Individual Profile] クラスなので、[!DNL XDM Individual Profile] の `$id` が使用されます。
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -424,7 +424,7 @@ curl -X PATCH \
 
 これらのフィールドを追加するには、`tenant` コンテナ内に独自のカスタムフィールドグループを定義します。 これらのフィールドグループは組織に固有で、組織外のユーザーには表示も編集もされません。
 
-新しいフィールドグループを作成（POST）するには、リクエストに、フィールドグループと互換性のある基本クラスの `$id` を含む `meta:intendedToExtend` フィールドと、フィールドグループに含まれるプロパティを含める必要があります。
+新しいフィールドグループを作成（POST）するには、フィールドグループが対応する基本クラスの `$id` を格納した `meta:intendedToExtend` フィールドと、フィールドグループに含まれるプロパティをリクエストに含める必要があります。
 
 他のフィールドグループやフィールドとの競合を避けるために、カスタムプロパティは `TENANT_ID` の下にネストする必要があります。
 
@@ -602,7 +602,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **リクエスト**
 
-このリクエストは、ロイヤルティメンバースキーマを更新（PATCH）して、新しい「ロイヤルティ層」フィールドグループ内にフィールドを含めます。
+PATCHこのリクエストは、ロイヤルティメンバースキーマを更新して、新しい「ロイヤルティ層」フィールドグループ内にフィールドを含めます。
 
 ```SHELL
 curl -X PATCH \
@@ -700,7 +700,7 @@ curl -X PATCH \
 
 ### 現在のスキーマの表示
 
-GETリクエストを実行して、現在のスキーマを表示し、追加されたフィールドグループがスキーマの全体的な構造にどのように貢献したかを確認できるようになりました。
+GET リクエストを実行して、現在のスキーマを表示し、追加されたフィールドグループがスキーマの全体的な構造にどのように貢献したかを確認できるようになりました。
 
 **API 形式**
 
@@ -959,7 +959,7 @@ URL エンコードされた `$id` URI を使用して参照（GET）リクエ�
 
 ### スキーマでのデータ型の使用
 
-ロイヤルティ層のデータタイプが作成されたので、作成したフィールドグループの `loyaltyTier` フィールドを更新（PATCH）して、以前あるフィールドの代わりにデータタイプを参照できます。
+ロイヤルティ層のデータタイプが作成されたので、作成したフィールドグループの `loyaltyTier` フィールドを更新（PATCH）して、以前のフィールドの代わりにデータタイプを参照できます。
 
 **API 形式**
 
@@ -1065,7 +1065,7 @@ curl -X PATCH \
 }
 ```
 
-GETリクエストを実行してスキーマを今すぐ参照する場合、`loyaltyTier` プロパティには、`meta:referencedFrom` の下のデータタイプへの参照が示されます。
+GET リクエストを実行してスキーマを今すぐ参照する場合、`loyaltyTier` プロパティには、`meta:referencedFrom` の下のデータタイプへの参照が示されます。
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1185,7 +1185,7 @@ curl -X POST \
 
 ### `union` タグを追加
 
-スキーマを結合された和集合表示に含めるには、`union` タグをスキーマの `meta:immutableTags` 属性に追加する必要があります。 これは、スキーマを更新し、値が `union` の `meta:immutableTags` 配列を追加するPATCHリクエストを通じて行われます。
+スキーマを結合された和集合表示に含めるには、`union` タグをスキーマの `meta:immutableTags` 属性に追加する必要があります。 これは、PATCH リクエストを通じて行われ、スキーマを更新し、値が `union` の `meta:immutableTags` 配列を追加します。
 
 **API 形式**
 

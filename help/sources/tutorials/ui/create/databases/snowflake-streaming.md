@@ -1,15 +1,15 @@
 ---
-title: UI を使用して、SnowflakeデータベースからExperience Platformにデータをストリーミングできます
+title: UI を使用した、Snowflake データベースからExperience Platformへのデータのストリーミング
 description: Snwoflake データベースからExperience Platformにデータをストリーミングする方法を説明します
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1647'
-ht-degree: 17%
+source-wordcount: '1648'
+ht-degree: 16%
 
 ---
 
-# UI を使用して、[!DNL Snowflake] データベースからExperience Platformにデータをストリーミングする
+# UI を使用した、[!DNL Snowflake] データベースからExperience Platformへのデータのストリーミング
 
 ユーザーインターフェイスを使用して [!DNL Snowflake] データベースからAdobe Experience Platformにデータをストリーミングする方法については、このガイドに従ってください。
 
@@ -24,11 +24,11 @@ ht-degree: 17%
 
 ### 認証
 
-[!DNL Snowflake] からExperience Platformにストリーミングデータを取り込む前に実行する必要がある手順については、[ ストリーミングデータの前提条件の設定 ](../../../../connectors/databases/snowflake-streaming.md) に関するガイドを参照してく  [!DNL Snowflake]  さい。
+[!DNL Snowflake] からExperience Platformにストリーミングデータを取り込む前に実行する必要がある手順については、[ ストリーミングデータの前提条件の設定 ](../../../../connectors/databases/snowflake-streaming.md) に関するガイドを参照して  [!DNL Snowflake]  ださい。
 
-## [!DNL Snowflake Streaming] ソースを使用したExperience Platformへのデータストリ [!DNL Snowflake] ミング
+## [!DNL Snowflake Streaming] ソースを使用したExperience Platformへ [!DNL Snowflake] データのストリーミング
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *Databases* カテゴリの下の [**[!DNL Snowflake Streaming]**] を選択し、[**[!UICONTROL Add data]**] を選択します。
 
@@ -36,9 +36,9 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >
 >ソースカタログ内に認証済みアカウントを持たないソースには、「**[!UICONTROL 設定]**」オプションが表示されます。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![Experience PlatformUI のソースカタログで、Snowflakeストリーミングソースカードが選択されています。](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![Experience Platform UI のソースカタログで、Snowflake ストリーミングソースカードが選択されています。](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
-**[!UICONTROL Snowflakeストリーミングアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Snowflake ストリーミングアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 >[!BEGINTABS]
 
@@ -76,7 +76,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!IMPORTANT]
 >
->* ストリーミングデータフローを作成するには、ソーステーブルにタイムスタンプ列が存在する必要があります。 タイムスタンプは、データが取り込まれるタイミングと増分データがストリーミングされるタイミングをExperience Platformが把握するために必要です。 既存の接続のタイムスタンプ列を遡及的に追加し、新しいデータフローを作成できます。
+>* ストリーミングデータフローを作成するには、ソーステーブルにタイムスタンプ列が存在する必要があります。 タイムスタンプは、Experience Platformがデータを取り込むタイミングと増分データをストリーミングするタイミングを把握するために必要です。 既存の接続のタイムスタンプ列を遡及的に追加し、新しいデータフローを作成できます。
 >
 >* サンプルソースデータファイルのデータフィールドの大文字と小文字が、識別子の場合の解決に関する [!DNL Snowflake] のガイダンスに従っていることを確認してください。 詳しくは、[[!DNL Snowflake]  識別子の大文字/小文字の区別に関するドキュメント ](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) を参照してください。
 
@@ -149,7 +149,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 | --- | --- |
 | データフロー名 | データフローの名前。  デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （任意）データフローの簡単な説明です。 |
-| アラート | Experience Platformは、ユーザーが購読できるイベントベースのアラートを作成できます。 これらのオプションをトリガーするには、実行中のデータフローが必要です。 詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformでは、ユーザーが登録できるイベントベースのアラートを作成できます。 これらのオプションをトリガーするには、実行中のデータフローが必要です。 詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 終了したら、「**[!UICONTROL 次へ]** を選択して続行します。
 

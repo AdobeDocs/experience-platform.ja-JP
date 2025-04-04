@@ -2,16 +2,16 @@
 title: SFTP ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して SFTP サーバーを Adobe Experience Platform に接続する方法について説明します。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 51%
+source-wordcount: '1226'
+ht-degree: 45%
 
 ---
 
 # SFTP コネクタ
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 [!DNL SFTP] アカウントをExperience Platformに正常に接続するために必要な前提条件の手順については、このドキュメントを参照してください。
 
@@ -40,7 +40,7 @@ Adobe Experience Platform を使用すると、外部ソースからデータを
 
 ### [!DNL SFTP] 用の Base64 にエンコードされた OpenSSH 秘密鍵の設定
 
-[!DNL SFTP] ソースは [!DNL Base64] にエンコードされた OpenSSH 秘密鍵を使用した認証をサポートしています。Base64 にエンコードされた OpenSSH 秘密鍵を生成し、[!DNL SFTP] を Platform に接続する方法については、以下の手順を参照してください。
+[!DNL SFTP] ソースは [!DNL Base64] にエンコードされた OpenSSH 秘密鍵を使用した認証をサポートしています。Base64 にエンコードされた OpenSSH 秘密鍵を生成し、Experience Platformに接続する方法については、以下の手順を参照し [!DNL SFTP] ください。
 
 >[!BEGINTABS]
 
@@ -96,7 +96,7 @@ The key's randomart image is:
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-上記のコマンドにより、[!DNL Base64] でエンコードされた秘密鍵が指定したファイルパスに保存されます。これで、その秘密鍵を使用して [!DNL SFTP] への認証を行い、Platform に接続できます。
+上記のコマンドにより、[!DNL Base64] でエンコードされた秘密鍵が指定したファイルパスに保存されます。これで、その秘密鍵を使用して [!DNL SFTP] への認証を行い、Experience Platformに接続できます。
 
 >[!TAB Mac]
 
@@ -168,7 +168,7 @@ more ~/.ssh/authorized_keys
 | `port` | 接続先の [!DNL SFTP] サーバーポート。 指定しない場合、値はデフォルトで `22` になります。 |
 | `username` | [!DNL SFTP] サーバーにアクセスできるユーザー名。 |
 | `password` | [!DNL SFTP] サーバーのパスワード。 |
-| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
+| `maxConcurrentConnections` | このパラメーターを使用すると、Experience Platformが SFTP サーバーへの接続時に作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
 | `folderPath` | アクセス権を付与するフォルダーへのパス。 ソース [!DNL SFTP]、フォルダーパスを指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
 | `disableChunking` | データ取り込み時に、[!DNL SFTP] ソースは最初にファイル長を取得し、ファイルを複数の部分に分割してから、並行して読み取ることができます。 この値を有効または無効にして、[!DNL SFTP] サーバーがファイル長を取得できるか、特定のオフセットからデータを読み取れるかを指定できます。 |
 | `connectionSpec.id` | （API のみ）接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |
@@ -185,7 +185,7 @@ SSH 公開鍵認証を使用して [!DNL SFTP] サーバーを認証するには
 | `password` | [!DNL SFTP] サーバーのパスワード。 |
 | `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
 | `passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターは、PrivateKeyContent のパスフレーズを値として使用する必要があります。 |
-| `maxConcurrentConnections` | このパラメーターを使用すると、SFTP サーバーへの接続時に Platform が作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
+| `maxConcurrentConnections` | このパラメーターを使用すると、Experience Platformが SFTP サーバーへの接続時に作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
 | `folderPath` | アクセス権を付与するフォルダーへのパス。 ソース [!DNL SFTP]、フォルダーパスを指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
 | `disableChunking` | データ取り込み時に、[!DNL SFTP] ソースは最初にファイル長を取得し、ファイルを複数の部分に分割してから、並行して読み取ることができます。 この値を有効または無効にして、[!DNL SFTP] サーバーがファイル長を取得できるか、特定のオフセットからデータを読み取れるかを指定できます。 |
 | `connectionSpec.id` | （API のみ）接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL SFTP] の接続仕様 ID は `b7bf2577-4520-42c9-bae9-cad01560f7bc` です。 |

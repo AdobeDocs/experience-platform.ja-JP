@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；プロトコル
+keywords: Experience Platform；ホーム；人気のトピック；protocol
 solution: Experience Platform
 title: Flow Service API を使用したプロトコルシステムの探索
 description: このチュートリアルでは、Flow Service API を使用して、プロトコルアプリケーションを調べます。
 exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '586'
 ht-degree: 39%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 39%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してプロトコルアプリケーションに正常に接続するために必要な追加情報を示しています。
 
 ### ベース接続の取得
 
-[!DNL Platform] API を使用してプロトコルシステムを探索するには、有効なベース接続 ID を持っている必要があります。 使用するプロトコルシステムのベース接続がまだない場合は、次のチュートリアルを通じて作成できます。
+[!DNL Experience Platform] API を使用してプロトコルシステムを探索するには、有効なベース接続 ID を持っている必要があります。 使用するプロトコルシステムのベース接続がまだない場合は、次のチュートリアルを通じて作成できます。
 
 * [汎用 OData](../create/protocols/odata.md)
 
@@ -38,13 +38,13 @@ ht-degree: 39%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name：`{SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ ht-degree: 39%
 
 ## データテーブルの探索
 
-プロトコルアプリケーションの接続 ID を使用すると、データリクエストを実行してGETテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Platform] に取り込むテーブルのパスを検索します。
+プロトコルアプリケーションの接続 ID を使用すると、GET リクエストを実行してデータテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Experience Platform] に取り込むテーブルのパスを検索します。
 
 **API 形式**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、プロトコルアプリケーションからテーブルの配列が返されます。 [!DNL Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
+応答が成功すると、プロトコルアプリケーションからテーブルの配列が返されます。 [!DNL Experience Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
 
 ```json
 [
@@ -114,9 +114,9 @@ curl -X GET \
 ]
 ```
 
-## テーブルの構造のInspect
+## テーブルの構造を検査する
 
-プロトコルアプリケーションからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定してGETリクエストを行います。
+プロトコルアプリケーションからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定してGET リクエストを実行します。
 
 **API 形式**
 
@@ -188,4 +188,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、プロトコルアプリケーションを調べ、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して [ プロトコルアプリケーションからデータを収集し、Platform に取り込む ](../collect/protocols.md) ことができます。
+このチュートリアルに従って、プロトコルアプリケーションを調べ、[!DNL Experience Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して [ プロトコルアプリケーションからデータを収集し、Experience Platformに取り込む ](../collect/protocols.md) ことができます。

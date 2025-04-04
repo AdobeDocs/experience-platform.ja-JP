@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UI でのデータフローの削除
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 18%
@@ -22,12 +22,12 @@ ht-degree: 18%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-- [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+- [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+- [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## データフローの削除
 
-[Experience PlatformUI](https://platform.adobe.com) で、左側のナビゲーションから **[!UICONTROL Sources]** を選択して [!UICONTROL Sources] ワークスペースにアクセスし、上部のヘッダーから **[!UICONTROL Dataflows]** を選択します。
+[Experience Platform UI](https://platform.adobe.com) で、左側のナビゲーションから **[!UICONTROL Sources]** を選択して [!UICONTROL Sources] ワークスペースにアクセスし、上部のヘッダーから **[!UICONTROL Dataflows]** を選択します。
 
 ![カタログ](../../images/tutorials/delete/catalog.png)
 

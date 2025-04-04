@@ -3,7 +3,7 @@ keywords: facebook 接続；facebook 接続；facebook 宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Facebook キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 27%
@@ -26,7 +26,7 @@ ht-degree: 27%
 
 ### のユースケース#1
 
-オンライン小売業者は、ソーシャルプラットフォームを通じて既存の顧客にリーチし、以前の注文に基づいてパーソナライズされたオファーを表示したいと考えています。 オンライン小売業者は、電子メールアドレスを独自の CRM からAdobe Experience Platformに取り込み、独自のオフラインデータからオーディエンスを作成し、これらのオーディエンスを [!DNL Facebook] ソーシャルプラットフォームに送信して、広告費用を最適化できます。
+オンラインretailerは、ソーシャルプラットフォームを通じて既存の顧客にリーチし、以前の注文に基づいてパーソナライズされたオファーを表示したいと考えています。 オンラインのretailerは、電子メールアドレスを独自の CRM からAdobe Experience Platformに取り込み、独自のオフラインデータからオーディエンスを作成し、これらのオーディエンスを [!DNL Facebook] ソーシャルプラットフォームに送信して、広告費用を最適化できます。
 
 ### のユースケース#2
 
@@ -44,8 +44,8 @@ ht-degree: 27%
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化された電話番号には適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化されたメールアドレスには適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化された電話番号には適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化されたメールアドレスには適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
 ## サポートされるオーディエンス {#supported-audiences}
@@ -98,8 +98,8 @@ Adobe Experience Platformに取り込む ID のタイプに応じて、対応す
 
 [!DNL Facebook] で電話番号をアクティブ化する方法は 2 つあります。
 
-* **生の電話番号の取り込み**:[!DNL E.164] 形式の生の電話番号を [!DNL Platform] に取り込むことができます。 それらはアクティベーション時に自動的にハッシュ化されます。 このオプションを選択する場合は、常に生の電話番号を `Phone_E.164` 名前空間に取り込んでください。
-* **ハッシュ化された電話番号の取り込み**:[!DNL Platform] に取り込む前に、電話番号を事前にハッシュ化できます。 このオプションを選択した場合は、ハッシュ化された電話番号を常に `Phone_SHA256` 名前空間に取り込んでください。
+* **生の電話番号の取り込み**:[!DNL E.164] 形式の生の電話番号を [!DNL Experience Platform] に取り込むことができます。 それらはアクティベーション時に自動的にハッシュ化されます。 このオプションを選択する場合は、常に生の電話番号を `Phone_E.164` 名前空間に取り込んでください。
+* **ハッシュ化された電話番号の取り込み**:[!DNL Experience Platform] に取り込む前に、電話番号を事前にハッシュ化できます。 このオプションを選択した場合は、ハッシュ化された電話番号を常に `Phone_SHA256` 名前空間に取り込んでください。
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Adobe Experience Platformに取り込む ID のタイプに応じて、対応す
 
 ## メールハッシュ要件 {#email-hashing-requirements}
 
-メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platformでメールアドレスを明確に使用して、アクティベーション時 [!DNL Platform] ハッシュ化したりできます。
+メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platformでメールアドレスを明確に使用して、アクティベーション時 [!DNL Experience Platform] ハッシュ化したりできます。
 
 Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) および [ ストリーミング取り込みの概要 ](/help/ingestion/streaming-ingestion/overview.md) を参照してください。
 
@@ -122,8 +122,8 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 >[!NOTE]
 >
->ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Platform] によって自動的にハッシュ化されます。
-> 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。
+>ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Experience Platform] によって自動的にハッシュ化されます。
+> 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。
 > 「**[!UICONTROL 変換を適用]**」オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
 
 ![ マッピングステップでハイライト表示されている「変換コントロールを適用」 ](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
@@ -230,9 +230,9 @@ Facebook トークンは 60 日ごとに期限切れになります。 トーク
 ソースフィールドを選択中：
 
 * 使用しているメールアドレスがハッシュ化されていない場合は、`Email` 名前空間をソース ID として選択します。
-* [!DNL Facebook] の [ メールハッシュ要件 ](#email-hashing-requirements) に従って、[!DNL Platform] へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、`Email_LC_SHA256` 名前空間をソース ID として選択します。
-* ハッシュ化されていない電話番号がデータに含まれている場合は、`PHONE_E.164` 名前空間をソース ID として選択します。 [!DNL Platform] は、[!DNL Facebook] の要件に準拠するために電話番号をハッシュ化します。
-* [!DNL Facebook][ 電話番号ハッシュ要件 ](#phone-number-hashing-requirements) に従って、[!DNL Platform] へのデータ取り込みで電話番号をハッシュ化した場合は、`Phone_SHA256` 名前空間をソース ID として選択します。
+* [!DNL Facebook] の [ メールハッシュ要件 ](#email-hashing-requirements) に従って、[!DNL Experience Platform] へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、`Email_LC_SHA256` 名前空間をソース ID として選択します。
+* ハッシュ化されていない電話番号がデータに含まれている場合は、`PHONE_E.164` 名前空間をソース ID として選択します。 [!DNL Experience Platform] は、[!DNL Facebook] の要件に準拠するために電話番号をハッシュ化します。
+* [!DNL Facebook][ 電話番号ハッシュ要件 ](#phone-number-hashing-requirements) に従って、[!DNL Experience Platform] へのデータ取り込みで電話番号をハッシュ化した場合は、`Phone_SHA256` 名前空間をソース ID として選択します。
 * データがデバイス ID で構成されている場合は、ソース ID として `IDFA` 名前空間 [!DNL Apple] 選択します。
 * データがデバイス ID で構成されている場合は、ソース ID として `GAID` 名前空間 [!DNL Android] 選択します。
 * データが他のタイプの識別子で構成されている場合は、ソース ID として `Custom` 名前空間を選択します。
@@ -246,9 +246,9 @@ Facebook トークンは 60 日ごとに期限切れになります。 トーク
 
 >[!IMPORTANT]
 >
->ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Platform] によって自動的にハッシュ化されます。
+>ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Experience Platform] によって自動的にハッシュ化されます。
 > 
->属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。
+>属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。
 
 ![ マッピングステップでハイライト表示されている「変換コントロールを適用」 ](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 

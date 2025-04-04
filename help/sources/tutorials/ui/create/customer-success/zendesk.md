@@ -2,10 +2,10 @@
 title: UI での Zendesk Source接続の作成
 description: Adobe Experience Platform UI を使用して Zendesk ソース接続を作成する方法を説明します。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 35%
+source-wordcount: '746'
+ht-degree: 30%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 35%
 
 ### 必要な資格情報の収集
 
-Platform で [!DNL Zendesk] アカウントにアクセスするには、次の資格情報の値を指定する必要があります。
+Experience Platformで [!DNL Zendesk] アカウントにアクセスするには、次の資格情報の値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
@@ -35,17 +35,17 @@ Platform で [!DNL Zendesk] アカウントにアクセスするには、次の�
 
 ![Zendesk API トークン ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### [!DNL Zendesk] 用の Platform スキーマの作成
+### [!DNL Zendesk] 用のExperience Platform スキーマの作成
 
-また、[!DNL Zendesk] ソース接続を作成する前に、まずソースに使用する Platform スキーマを作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+[!DNL Zendesk] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
 [!DNL Zendesk Search API] に必要な [!DNL Zendesk] スキーマに関する追加のガイダンスについては、以下の [limits](#limits) の節を参照してください。
 
 ![ スキーマを作成 ](../../../../images/tutorials/create/zendesk/schema.png)
 
-## [!DNL Zendesk] アカウントの接続
+## [!DNL Zendesk] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -75,7 +75,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、認証を行い、お使いの [!DNL Zendesk] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、[ カスタマーサクセスデータを Platform に取り込むためのデータフローの作成 ](../../dataflow/customer-success.md) を行いましょう。
+このチュートリアルでは、認証を行い、お使いの [!DNL Zendesk] アカウントとExperience Platformとのソース接続を作成しました。 次のチュートリアルに進み、[ カスタマーサクセスデータをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/customer-success.md) を行いましょう。
 
 ## その他のリソース
 
@@ -83,9 +83,9 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 検証 {#validation}
 
-次に、[!DNL Zendesk] ソースに正常に接続したことと、[!DNL Zendesk] のプロファイルが Platform に取り込まれていることを検証する手順の概要を説明します。
+次に、[!DNL Zendesk] ソースに正常に接続したことと、[!DNL Zendesk] のプロファイルがExperience Platformに取り込まれていることを検証する手順の概要を説明します。
 
-Platform の UI で、左側のナビゲーションから **[!UICONTROL データセット]** を選択し、[!UICONTROL  データセット ] ワークスペースにアクセスします。 [!UICONTROL  データセットアクティビティ ] 画面には、実行の詳細が表示されます。
+Experience Platform UI の左側のナビゲーションから **[!UICONTROL データセット]** を選択して、[!UICONTROL  データセット ] ワークスペースにアクセスします。 [!UICONTROL  データセットアクティビティ ] 画面には、実行の詳細が表示されます。
 
 ![ アクティビティページ ](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -97,7 +97,7 @@ Platform の UI で、左側のナビゲーションから **[!UICONTROL デー�
 
 ![Zendesk データセット ](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-また、[!DNL Zendesk] / [!DNL Customers] ページのデータに対して Platform データを検証することもできます。
+また、[!DNL Zendesk] / [!DNL Customers] ページのデータに対してExperience Platform データを検証することもできます。
 
 ![zendesk-customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 

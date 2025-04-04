@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ取り込みの監視
 description: このユーザーガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータを監視する方法の手順を説明します。このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 37%
@@ -13,7 +13,7 @@ ht-degree: 37%
 
 # データ取得の監視
 
-データ取得を使用すると、Adobe Experience Platform でデータを取得できます。バッチ取り込みを使用すると、様々なファイルタイプ（CSV など）でデータを挿入できます。または、ストリーミング取り込みを使用すると、ストリーミングエンドポイントを使用してリアルタイムにデータを [!DNL Platform] に取り込むことができます。
+データ取得を使用すると、Adobe Experience Platform でデータを取得できます。バッチ取り込みを使用すると、様々なファイルタイプ（CSV など）でデータを挿入できます。または、ストリーミング取り込みを使用すると、ストリーミングエンドポイントを使用してリアルタイムにデータを [!DNL Experience Platform] に取り込むことができます。
 
 このユーザガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータをモニタリングする手順を説明します。 このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 
@@ -30,9 +30,9 @@ ht-degree: 37%
 >
 >特定の日付の合計イベント数を計算するには、式 `total events / day = ingestion rate * 60 * 60 * 24` を使用します。
 
-[Experience PlatformUI](https://platform.adobe.com) で、左側のナビゲーションメニューの **[!UICONTROL モニタリング]** を選択し、続いて **[!UICONTROL エンドツーエンドのストリーミング]** を選択します。
+[Experience Platform UI](https://platform.adobe.com) で、左側のナビゲーションメニューの **[!UICONTROL モニタリング]** を選択し、続いて **[!UICONTROL エンドツーエンドのストリーミング]** を選択します。
 
-「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースには、[!DNL Platform] が受信したストリーミングイベントの割合を表示するグラフ、[[!DNL Real-Time Customer Profile]](../../profile/home.md) が正常に処理したストリーミングイベントの割合を表示するグラフおよび受信データの詳細なリストが表示されます。
+「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースには、[!DNL Experience Platform] が受信したストリーミングイベントの割合を表示するグラフ、[[!DNL Real-Time Customer Profile]](../../profile/home.md) が正常に処理したストリーミングイベントの割合を表示するグラフおよび受信データの詳細なリストが表示されます。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

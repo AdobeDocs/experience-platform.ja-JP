@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace の概要
 description: このガイドでは、Adobe Experience Platform の Data Science Workspaceに関連する主な概念の概要を説明します。
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2411'
 ht-degree: 99%
@@ -94,7 +94,7 @@ Adobe Experience Platform の [!DNL Data Science Workspace] を使用すると�
 
 Adobe Experience Platform では、XDM 標準スキーマでクロスチャネルデータが一元化されて保存されるため、データの検出、把握、クリーンアップがより簡単になります。共通のスキーマに基づいて、データを 1 つのストアに保存することでデータの調査と準備に必要な時間を大幅に短縮できます。
 
-ホストされた統合 [!DNL Jupyter Notebook] で R、[!DNL Python]、または Scala を使用して、[!DNL Platform] 上でデータのカタログを参照できます。これらの言語の 1 つを使用して、[!DNL Spark] ML および TensorFlow を利用することもできます。最初から始めるか、特定のビジネス上の問題に対して提供されているノートブックテンプレートの 1 つを使用します。
+ホストされた統合 [!DNL Jupyter Notebook] で R、[!DNL Python]、または Scala を使用して、[!DNL Experience Platform] 上でデータのカタログを参照できます。これらの言語の 1 つを使用して、[!DNL Spark] ML および TensorFlow を利用することもできます。最初から始めるか、特定のビジネス上の問題に対して提供されているノートブックテンプレートの 1 つを使用します。
 
 データ調査ワークフローの一部として、新しいデータを取り込んだり、既存の機能を使用したりしてデータを準備することもできます。
 

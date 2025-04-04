@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；必須；フィールド；
 title: UI での必須フィールドの定義
-description: Experience Platformユーザーインターフェイスで必須の XDM フィールドを定義する方法を説明します。
+description: Experience Platform ユーザーインターフェイスで必須の XDM フィールドを定義する方法を説明します。
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->スキーマフィールドが必須であるかどうかに関係なく、Platform は、取り込まれたフィールドの `null` 値または空の値を受け入れません。 レコードまたはイベント内の特定のフィールドに値がない場合、そのフィールドのキーは取り込みペイロードから除外する必要があります。
+>スキーマフィールドが必須であるかどうかに関係なく、Experience Platformは、取り込まれたフィールドの `null` 値または空の値を受け入れません。 レコードまたはイベント内の特定のフィールドに値がない場合、そのフィールドのキーは取り込みペイロードから除外する必要があります。
 
 Adobe Experience Platform ユーザーインターフェイスで [ 新しいフィールドを定義 ](./overview.md#define) する際に、右側のパネルの「**[!UICONTROL 必須]**」チェックボックスをオンにして、必須フィールドとして設定できます。 「**[!UICONTROL 適用]**」を選択して、スキーマに変更を適用します。
 

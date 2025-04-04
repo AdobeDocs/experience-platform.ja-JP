@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zoho CRM ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して Zoho CRM を Adobe Experience Platform に接続する方法を説明します。
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 97%
+source-wordcount: '509'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 97%
 >
 >[!DNL Zoho CRM] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
 
-Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、サードパーティの CRM システムからのデータ取り込みをサポートしています。CRM プロバイダーのサポートは [!DNL Zoho CRM] を含みます。
 
@@ -27,7 +27,7 @@ Experience Platform は、サードパーティの CRM システムからのデ�
 
 ## [!DNL Zoho CRM] の資格情報を取得します。
 
-データを [!DNL Zoho CRM] アカウントを Platform にを持ち込む前に、まず [!DNL Zoho CRM] ソースを認証するための資格情報を取得する必要があります。次の手順に従って、クライアント ID、クライアントの秘密鍵、アクセストークン、更新トークンを取得します。
+データを [!DNL Zoho CRM] アカウントをExperience Platformにを持ち込む前に、まず [!DNL Zoho CRM] ソースを認証するための認証情報を取得する必要があります。 次の手順に従って、クライアント ID、クライアントの秘密鍵、アクセストークン、更新トークンを取得します。
 
 ### アプリケーションを登録
 
@@ -49,15 +49,15 @@ Experience Platform は、サードパーティの CRM システムからのデ�
 
 資格情報の取得に関する詳細な手順については、[[!DNL Zoho CRM] 認証ガイド](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html)を参照してください。
 
-## API を使用して [!DNL Zoho CRM] と [!DNL Platform] を接続する
+## API を使用して [!DNL Zoho CRM] と [!DNL Experience Platform] を接続する
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Zoho CRM] と Platform を接続する方法について説明しています。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Zoho CRM] をExperience Platformに接続する方法について説明しています。
 
 - [Flow Service API を使用した [!DNL Zoho CRM] ベース接続の作成](../../tutorials/api/create/crm/zoho.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
-## UIを使用して [!DNL Zoho CRM] と [!DNL Platform] を接続する
+## UIを使用して [!DNL Zoho CRM] と [!DNL Experience Platform] を接続する
 
 - [UI での [!DNL Zoho CRM] ソースコネクタの作成](../../tutorials/ui/create/crm/zoho.md)
 - [UI での CRM ソース接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)

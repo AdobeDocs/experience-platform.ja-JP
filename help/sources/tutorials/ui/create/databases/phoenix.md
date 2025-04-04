@@ -1,15 +1,15 @@
 ---
-title: Experience Platformユーザーインターフェイスを使用して Phoenix アカウントを接続します
+title: Experience Platform ユーザーインターフェイスを使用して Phoenix アカウントを接続します
 description: ユーザーインターフェイスを使用して Phoenix アカウントを接続し、Phoenix データベースからExperience Platformにデータを取り込む方法を説明します。
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '614'
 ht-degree: 21%
 
 ---
 
-# UI を使用して [!DNL Phoenix] アカウントをExperience Platformに接続する
+# UI を使用した [!DNL Phoenix] アカウントのExperience Platformへの接続
 
 >[!WARNING]
 >
@@ -47,7 +47,7 @@ Experience Platformで [!DNL Phoenix] アカウントにアクセスするには
 
 ## [!DNL Phoenix] アカウントを接続
 
-Platform UI の左側のナビゲーションで「**[!UICONTROL ソース]**」を選択し、ソース ワークスペースにアクセスします。 *[!UICONTROL カタログ]* 画面には、Experience Platformソースカタログで使用可能な様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションで「**[!UICONTROL ソース]**」を選択し、ソース ワークスペースにアクセスします。 *[!UICONTROL カタログ]* 画面には、Experience Platform ソースカタログで使用可能な様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索オプションを使用して特定のソースを見つけることもできます。
 
@@ -61,7 +61,7 @@ Platform UI の左側のナビゲーションで「**[!UICONTROL ソース]**」
 >
 >* **[!UICONTROL 設定]** とは、選択したソースを使用するために、資格情報を提供し、新しいアカウントを認証する必要があることを意味します。
 
-![Phoenix ソースカードが選択されているExperience PlatformUI のソースカタログ ](../../../../images/tutorials/create/phoenix/catalog.png)
+![Experience Platform UI のソースカタログで、Phoenix ソースカードが選択されています。](../../../../images/tutorials/create/phoenix/catalog.png)
 
 **[!UICONTROL Phoenix に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 

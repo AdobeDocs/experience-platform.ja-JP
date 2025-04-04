@@ -2,10 +2,10 @@
 title: （ベータ版） [!DNL Google Ad Manager 360] 接続
 description: Google Ad Manager 360 は、媒体社がビデオやモバイルアプリを通じて web サイト上の広告の表示を管理できる、Google の広告配信プラットフォームです。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 60%
+source-wordcount: '1221'
+ht-degree: 56%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 60%
 >
 > Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA](https://digital-markets-act.ec.europa.eu/index_en)）（[EU ユーザー同意ポリシー ](https://www.google.com/about/company/user-consent-policy/)）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、[Google Ads API](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、[Customer Match および [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
 ><br/>
->EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーとして、Adobeは、欧州連合の DMA に基づくこれらの同意要件に準拠するために必要なツールを提供します。
+>EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーであるAdobeは、欧州連合の DMA に基づく同意要件に準拠するために必要なツールを提供します。
 ><br/>
->Adobeのプライバシーとセキュリティシールドを購入し、同意のないプロファイルを除外する [ 同意ポリシー ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定しているお客様は、何もする必要はありません。
+>Adobe Privacy &amp; Security Shield を購入し、同意のないプロファイルを除外する [ 同意ポリシー ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定している場合は、何もする必要はありません。
 ><br/>
->Adobeのプライバシーとセキュリティシールドを購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断なく使用するには、[ セグメントビルダー ](../../../segmentation/home.md#segment-definitions) 内の [ セグメント定義 ](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
+>Adobe Privacy &amp; Security Shield を購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断することなく使用するには、[ セグメントビルダー ](../../../segmentation/home.md#segment-definitions) 内の [ セグメント定義 ](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
 
 [!DNL Google Ad Manager 360] 接続では、[!DNL Google Cloud Storage] を介して、[!DNL Google Ad Manager 360] への [!DNL publisher provided identifiers]（PPID）のバッチアップロードが可能です。
 
@@ -54,7 +54,7 @@ ht-degree: 60%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -74,11 +74,11 @@ ht-degree: 60%
 
 ### 許可リストへの登録 {#allow-listing}
 
-Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前に、許可リストへの登録は必須です。宛先を作成する前に、必ず以下に説明する許可リストへの登録プロセスを完了してください。
+Experience Platformで最初の [!DNL Google Ad Manager 360] ール先を設定する前に、許可リストへの登録は必須です。 宛先を作成する前に、必ず以下に説明する許可リストへの登録プロセスを完了してください。
 
 >[!NOTE]
 >
->既存の [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) のお客様の場合は例外です。 この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
+>既存の [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ja) ユーザーの場合は例外です。 この Google の宛先への接続を Audience Manager で既に作成している場合は、許可リストへの登録プロセスを再度実行する必要はありません。次の手順に進んでください。
 
 1. Adobeをリンクされた Data Management Platform （DMP）として追加するには ](https://support.google.com/admanager/answer/3289669?hl=ja)[Google Ad Manager のドキュメント } に記載されている手順に従います。
 2. [!DNL Google Ad Manager] インターフェイスで、**[!UICONTROL 管理者]** / **[!UICONTROL グローバル設定]** / **[!UICONTROL ネットワーク設定]** に移動し、**[!UICONTROL API アクセス]** スライダーを有効にします。
@@ -94,10 +94,10 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先に対する認証を行うには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
+宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-* **[!UICONTROL アクセスキー ID]**：61 文字の英数字から成る文字列で、Platform に対する [!DNL Google Cloud Storage] アカウントの認証に使用します。
-* **[!UICONTROL 秘密アクセスキー]**：Base64 でエンコードされた40 文字の文字列で、Platform に対する [!DNL Google Cloud Storage] アカウントの認証に使用します。
+* **[!UICONTROL アクセスキー ID]**:61 文字の英数字から成る文字列で、Experience Platformに対する [!DNL Google Cloud Storage] アカウントの認証に使用します。
+* **[!UICONTROL 秘密アクセスキー]**:[!DNL Google Cloud Storage] アカウントをExperience Platformに認証するために使用される 40 文字の base64 エンコード文字列。
 
 これらの値について詳しくは、[Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage] ソースの概要](/help/sources/connectors/cloud-storage/google-cloud-storage.md)を参照してください。
 
@@ -118,7 +118,7 @@ Platform で最初の [!DNL Google Ad Manager 360] の宛先を設定する前�
 * **[!UICONTROL アカウントタイプ]**:[!DNL Google] アカウントに応じて、次のいずれかのオプションを選択します。
    * [!DNL Google AdX] に `AdX buyer` を使用する
    * [!DNL DoubleClick] for Publishers に `DFP by Google` を使用する
-* **[!UICONTROL オーディエンス ID をオーディエンス名に追加]**:Google Ad Manager 360 のオーディエンス名にExperience Platformのオーディエンス ID を含めるには、次のように、このオプションを選択します。`Audience Name (Audience ID)`。
+* **[!UICONTROL オーディエンス ID をオーディエンス名に追加]**:Google Ad Manager 360 のオーディエンス名にExperience Platformのオーディエンス ID を含めるには、次のように、このオプションを選択します。`Audience Name (Audience ID)`
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -139,8 +139,8 @@ ID マッピングステップでは、次の事前入力済みマッピング�
 
 | 事前入力済みマッピング | 説明 |
 |---------|----------|
-| `ECID` -> `ppid` | ユーザーによる編集が可能な事前入力済みのマッピングは、これだけです。Platform から任意の属性または ID 名前空間を選択し、それを `ppid` にマッピングすることができます。 |
-| `metadata.segment.alias` -> `list_id` | Experience Platformオーディエンス名をGoogle Platform のオーディエンス ID にマッピングします。 |
+| `ECID` -> `ppid` | ユーザーによる編集が可能な事前入力済みのマッピングは、これだけです。Experience Platformから任意の属性または ID 名前空間を選択し、それを `ppid` にマッピングすることができます。 |
+| `metadata.segment.alias` -> `list_id` | Experience Platform オーディエンス名をGoogle Platform のオーディエンス ID にマッピングします。 |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | 不適格なユーザーをセグメントから削除するタイミングを Google プラットフォームに指示します。 |
 
 これらのマッピングは [!DNL Google Ad Manager 360] で必要であり、すべての [!DNL Google Ad Manager 360] 接続に対してAdobe Experience Platform によって自動的に作成されます。
@@ -155,7 +155,7 @@ ID マッピングステップでは、次の事前入力済みマッピング�
 
 この宛先の使用中にエラーが発生し、AdobeまたはGoogleに連絡する必要がある場合は、次の ID を手元に用意しておいてください。
 
-AdobeのGoogle アカウント ID です。
+以下は、AdobeのGoogle アカウント ID です。
 
 * **[!UICONTROL アカウント ID]**: 87933855
 * **[!UICONTROL 顧客 ID]**: 89690775

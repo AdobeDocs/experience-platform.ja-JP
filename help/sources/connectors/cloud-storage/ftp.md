@@ -4,7 +4,7 @@ solution: Experience Platform
 title: FTP Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して FTP サーバーをAdobe Experience Platformに接続する方法について説明します。
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 73%
@@ -19,7 +19,7 @@ ht-degree: 73%
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Platform] では、FTP または SFTP サーバーからデータをバッチで取り込むことができます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Experience Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Experience Platform] では、FTP または SFTP サーバーからデータをバッチで取り込むことができます。
 
 >[!IMPORTANT]
 >
@@ -40,9 +40,9 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 - 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、一部の ASCII 文字や Unicode 文字、例えば制御文字（0x00 ～ 0x1F、\u0081 など）も使用できません。HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
 - 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
-## [!DNL Platform] への FTP の接続
+## [!DNL Experience Platform] への FTP の接続
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用して、FTP サーバーを [!DNL Platform] に接続する方法に関する情報を提供します。
+以下のドキュメントでは、API またはユーザーインターフェイスを使用して、FTP サーバーを [!DNL Experience Platform] に接続する方法に関する情報を提供します。
 
 ### API の使用
 

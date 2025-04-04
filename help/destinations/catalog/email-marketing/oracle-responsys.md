@@ -3,10 +3,10 @@ keywords: メール；メール；メール；メールの宛先；oracle respon
 title: Oracle Responsys 接続
 description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向けメールマーケティングツールで、電子メール、モバイル、ディスプレイおよびソーシャルでのインタラクションをパーソナライズします。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 46%
+source-wordcount: '709'
+ht-degree: 44%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 46%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -44,7 +44,7 @@ ht-degree: 46%
 
 Adobeでは、SFTP ストレージを使用してメールマーケティングの宛先を設定する場合、特定の IP 範囲を許可リストに追加することをお勧めします。
 
-許可リストにAdobeIP を許可リストする必要がある場合は ](../cloud-storage/ip-address-allow-list.md) [SFTP 宛先の IP アドレス追加」を参照してください。
+許可リストにAdobe IP を許可リストする必要がある場合は ](../cloud-storage/ip-address-allow-list.md)[SFTP 宛先の IP アドレス追加」を参照してください。
 
 ## 宛先への接続 {#connect}
 
@@ -76,14 +76,14 @@ Adobeでは、SFTP ストレージを使用してメールマーケティング�
 * 必要に応じて、RSA 形式の公開鍵を添付して、「**[!UICONTROL キー]**」セクションで書き出したファイルに PGP/GPG による暗号化を追加できます。 公開鍵は、[!DNL Base64] でエンコードされた文字列として記述する必要があります。
 * **[!UICONTROL 名前]**：宛先の名前を選択します。
 * **[!UICONTROL 説明]**：宛先の説明を入力します。
-* **[!UICONTROL フォルダーパス]**：書き出しデータを CSV ファイルとして保存するストレージの場所のパスを指定します。
+* **[!UICONTROL フォルダーパス]**:Experience Platformが書き出しデータを CSV ファイルとして保存するストレージの場所のパスを指定します。
 * **[!UICONTROL ファイル形式]**: **CSV** を選択して、CSV ファイルをストレージの場所に書き出します。
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -108,8 +108,8 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Oracle Responsys] 宛先の場合、Platform は `.csv` ファイルを指定したストレージの場所に保存します。 ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 ](../../ui/activate-batch-profile-destinations.md#verify) を参照してください。
+[!DNL Oracle Responsys] の宛先の場合、Experience Platformは、指定されたストレージの場所に `.csv` ファイルを保存します。 ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 ](../../ui/activate-batch-profile-destinations.md#verify) を参照してください。
 
 ## [!DNL Oracle Responsys] へのデータの読み込みの設定 {#import-data-into-responsys}
 
-[!DNL Platform] を [!DNL SFTP] ストレージに接続した後、ストレージの場所から [!DNL Oracle Responsys] へのデータの読み込みを設定する必要があります。 これを実行する方法については、[!DNL Oracle Responsys Help Center] の [ 連絡先またはアカウントの読み込み ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) を参照してください。
+[!DNL Experience Platform] を [!DNL SFTP] ストレージに接続した後、ストレージの場所から [!DNL Oracle Responsys] へのデータの読み込みを設定する必要があります。 これを実行する方法については、[!DNL Oracle Responsys Help Center] の [ 連絡先またはアカウントの読み込み ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) を参照してください。

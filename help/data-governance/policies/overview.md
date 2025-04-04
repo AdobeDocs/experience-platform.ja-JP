@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ使用ポリシーの概要
 description: データ使用ポリシーは、Adobe Experience Platform 内のデータに対する実行が許可される、または制限される、マーケティングアクションの種類を記述するルールです。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 100%
+source-wordcount: '1213'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->データ使用ポリシーを[アクセス制御ポリシー](../../access-control/abac/end-to-end-guide.md#policy)と混同しないでください。組織内の特定の Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、「[!UICONTROL 権限]」タブを使用して設定します。
+>データ使用ポリシーを [ アクセス制御ポリシー ](../../access-control/abac/end-to-end-guide.md#policy) と混同しないでください。組織内の特定のExperience Platform ユーザーが特定のデータフィールドにアクセスできるかどうかを決定し、「[!UICONTROL  権限 ]」タブを使用して設定します。
 
 このドキュメントでは、データ使用ポリシーの概要を説明し、UI または API でポリシーを操作するための詳細なドキュメントへのリンクを示します。
 
@@ -57,7 +57,7 @@ ht-degree: 100%
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## データ使用ポリシーの管理 {#manage}
@@ -70,7 +70,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 API でのマーケティングアクションとデータ使用ポリシーの操作に関する詳細の手順については、[データ使用ポリシーの作成と評価](create.md)に関するチュートリアルを参照してください。[!DNL Policy Service] API が提供する主要な操作の詳細については、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。
 
-[!DNL Platform] UI のマーケティングアクションとポリシーの使用方法を操作する方法については、[データ使用ポリシーのユーザガイド](./user-guide.md)を参照してください。
+[!DNL Experience Platform] UI のマーケティングアクションとポリシーの使用方法を操作する方法については、[データ使用ポリシーのユーザガイド](./user-guide.md)を参照してください。
 
 ## 次の手順
 
@@ -99,5 +99,5 @@ API でのマーケティングアクションとデータ使用ポリシーの�
 | サードパーティに書き出し | 顧客と直接関係のないプロセッサーおよびエンティティにデータを書き出すアクション。多くのデータプロバイダーは、契約の条件で、最初に収集された場所からのデータの書き出しを禁止しています。例えば、ソーシャルネットワークの契約では、多くの場合、ソーシャルネットワークから受け取ったデータの転送を制限しています。 |
 | オンサイト広告 | 組織の Web サイトまたはアプリでの広告の選択と配信を含む、オンサイト広告のデータを使用するアクション、またはそのような広告の配信と有効性を測定するアクション。 |
 | オンサイトのパーソナライズ機能 | オンサイトコンテンツのパーソナライゼーションにデータを使用するアクション。オンサイトパーソナライゼーションは、ユーザーの興味に関する推論をおこなうために使用されるデータであり、それらの推論に基づいて提供されるコンテンツまたは広告の選択に使用されます。 |
-| Segment Match | Adobe Experience Platform Segment Match（複数の Platform ユーザーがオーディエンスデータを交換できるサービス） のデータを使用するアクション。このアクションを参照するポリシーを有効にすると、Segment Match に使用するデータを制限できます。例えば、コアポリシー「データ共有を制限」が有効になっている場合、[C11 ラベル](../labels/reference.md#c11)を持つデータは Segment Match に使用できません。 |
+| Segment Match | Adobe Experience Platform Segment Match （複数のExperience Platform ユーザーがオーディエンスデータを交換できるサービス）のデータを使用するアクション。 このアクションを参照するポリシーを有効にすると、Segment Match に使用するデータを制限できます。例えば、コアポリシー「データ共有を制限」が有効になっている場合、[C11 ラベル](../labels/reference.md#c11)を持つデータは Segment Match に使用できません。 |
 | 単一 ID のパーソナライゼーション | 複数のソースから ID をステッチするのではなく、単一の ID をパーソナライズの目的で使用する必要があるアクション。 |

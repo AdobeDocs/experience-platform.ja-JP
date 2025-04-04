@@ -2,10 +2,10 @@
 title: Web 拡張機能のフロー
 description: Adobe Experience Platform で実行時に Web 拡張機能コンポーネントが相互にやり取りする方法を説明します。
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 100%
+source-wordcount: '272'
+ht-degree: 89%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 web 拡張機能のイベント、条件、アクション、およびデータ要素の各タイプには、ユーザーが設定を変更できるビューと、これらのユーザー定義の設定に基づいて動作するライブラリモジュールの両方が用意されています。
 
-次の概要図に示すように、拡張機能のイベントタイプビューは、Adobe Experience Platform と統合されたアプリケーションの iframe 内に表示されます。その後、ユーザーはこのビューを使用して設定を変更します。変更は、Platform 内に保存されます。タグランタイムライブラリを構築する場合、拡張機能のイベントタイプライブラリモジュールとユーザー定義の設定の両方がランタイムライブラリに含まれます。Platform は実行時に、ユーザー定義の設定をライブラリモジュールに挿入します。
+次の概要図に示すように、拡張機能のイベントタイプビューは、Adobe Experience Platform と統合されたアプリケーションの iframe 内に表示されます。次に、このビューを使用して設定を変更します。変更は、Experience Platform内に保存されます。 タグランタイムライブラリを構築する場合、拡張機能のイベントタイプライブラリモジュールとユーザー定義の設定の両方がランタイムライブラリに含まれます。Experience Platformは実行時に、ユーザー定義の設定をライブラリモジュールに挿入します。
 
 ![拡張機能のフロー図](../images/flow/web/extension-flow.png)
 

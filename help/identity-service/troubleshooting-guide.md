@@ -4,16 +4,16 @@ solution: Experience Platform
 title: ID サービストラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問への回答のほか、一般的なエラーのトラブルシューティングガイドを示します。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
-ht-degree: 99%
+source-wordcount: '2168'
+ht-degree: 96%
 
 ---
 
 # ID サービストラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platform [!DNL Identity Service] に関するよくある質問への回答のほか、一般的なエラーのトラブルシューティングガイドを示します。[!DNL Platform] API 全般に関する質問とトラブルシューティングについては、[Adobe Experience Platform API トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、Adobe Experience Platform [!DNL Identity Service] に関するよくある質問への回答のほか、一般的なエラーのトラブルシューティングガイドを示します。[!DNL Experience Platform] API 全般に関する質問とトラブルシューティングについては、[Adobe Experience Platform API トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
 単一の顧客を識別するデータは、多くの場合、その顧客がブランドに関与するために使用する様々なデバイスやシステムにわたって断片化されています。[!DNL Identity Service] では、断片化されたこれらの ID をひとまとめにして、顧客の行動の完全な把握を促進するので、インパクトの強いデジタルエクスペリエンスをリアルタイムで提供できるようになります。詳しくは、「[ID サービスの概要](./home.md)」を参照してください。
 
@@ -89,7 +89,7 @@ ID は、API 呼び出しで複合 ID または XID によって参照されま�
 
 ## ID サービスが個人を特定できる情報（PII）をどのように処理するのか教えてください。
 
-ID サービスには、電話番号とメールのハッシュ化された ID 値の取り込みをサポートする標準名前空間があります。ただし、値のハッシュ化はユーザーが行う必要があります。Platform に取り込まれるデータのハッシュ化について詳しくは、[[!DNL Data Prep] マッピング関数ガイド](../data-prep/functions.md#hashing)を参照してください。
+ID サービスには、電話番号とメールのハッシュ化された ID 値の取り込みをサポートする標準名前空間があります。ただし、値のハッシュ化はユーザーが行う必要があります。Experience Platformに取り込まれるデータのハッシュ化について詳しくは、[[!DNL Data Prep]  マッピング関数ガイド ](../data-prep/functions.md#hashing) を参照してください。
 
 ## PII ベースの ID をハッシュする際に考慮すべき点はありますか。
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## ID グラフページや API にアクセスできないのはなぜですか？
 
-ID グラフデータを表示するには、Platform 管理者から `view-identity-graph` 権限をプロビジョニングしてもらう必要があります。この権限がないと、ID グラフビューアページと、Platform API の呼び出し時に、権限が拒否されたというメッセージが表示されます。権限について詳しくは、[アクセス制御の概要](../access-control/home.md)を参照してください。
+ID グラフデータを表示するには、Experience Platform管理者から `view-identity-graph` 権限をプロビジョニングしてもらう必要があります。 この権限がないと、ID グラフビューアページと、Experience Platform API の呼び出し時に、権限が拒否されたというメッセージが表示されます。 権限について詳しくは、[アクセス制御の概要](../access-control/home.md)を参照してください。
 
 ## トラブルシューティング
 
@@ -216,7 +216,7 @@ ID グラフデータを表示するには、Platform 管理者から `view-iden
 }
 ```
 
-このエラーが発生した場合、アクセストークンは無効です。アクセストークンは 24 時間ごとに期限切れになるので、引き続き [!DNL Platform] API を使用するには再生成する必要があります。新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
+このエラーが発生した場合、アクセストークンは無効です。アクセストークンは 24 時間ごとに期限切れになるので、引き続き [!DNL Experience Platform] API を使用するには再生成する必要があります。新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
 
 ### 認証サービストークンが無効です
 
@@ -228,7 +228,7 @@ ID グラフデータを表示するには、Platform 管理者から `view-iden
 }
 ```
 
-このエラーが発生した場合、アクセストークンは無効です。アクセストークンは 24 時間ごとに期限切れになるので、引き続き [!DNL Platform] API を使用するには再生成する必要があります。新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
+このエラーが発生した場合、アクセストークンは無効です。アクセストークンは 24 時間ごとに期限切れになるので、引き続き [!DNL Experience Platform] API を使用するには再生成する必要があります。新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
 
 ### ユーザートークンに有効な製品コンテキストがありません
 
@@ -276,11 +276,11 @@ ID グラフデータを表示するには、Platform 管理者から `view-iden
 }
 ```
 
-このエラーが表示されるのは、[!DNL Platform] サービス呼び出しの実行で予期しない例外が発生した場合です。ベストプラクティスは、自動呼び出しをプログラムして、このエラーを受け取ったときに一定の時間間隔でリクエストを数回再試行することです。問題が解決しない場合は、システム管理者に問い合わせてください。
+このエラーが表示されるのは、[!DNL Experience Platform] サービス呼び出しの実行で予期しない例外が発生した場合です。 ベストプラクティスは、自動呼び出しをプログラムして、このエラーを受け取ったときに一定の時間間隔でリクエストを数回再試行することです。問題が解決しない場合は、システム管理者に問い合わせてください。
 
 ## バッチ取得エラーコード
 
-[!DNL Identity Service] では、バッチ取り込みを使用して [!DNL Platform] にアップロードされたレコードデータや時系列データから ID データを取り込みます。バッチ取得は非同期的なプロセスなので、エラーを表示するには、バッチの詳細を表示する必要があります。バッチが完了するまで、バッチの進行に合わせてエラーが蓄積されます。
+[!DNL Identity Service] では、バッチ取り込みを使用して [!DNL Experience Platform] にアップロードされたレコードデータや時系列データから ID データを取り込みます。バッチ取得は非同期的なプロセスなので、エラーを表示するには、バッチの詳細を表示する必要があります。バッチが完了するまで、バッチの進行に合わせてエラーが蓄積されます。
 
 以下は、[バッチ取り込み API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) の使用時に発生する可能性のある [!DNL Identity Service] 関連のエラーメッセージのリストです。
 

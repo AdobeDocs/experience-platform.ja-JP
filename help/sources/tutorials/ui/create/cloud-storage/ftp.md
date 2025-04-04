@@ -5,9 +5,9 @@ title: UI での FTP Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して FTP ソース接続を作成する方法を説明します。
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '464'
 ht-degree: 31%
 
 ---
@@ -43,7 +43,7 @@ FTP に接続するには、次の接続プロパティの値を指定する必�
 
 ## FTP サーバーへの接続
 
-必要な資格情報を収集したら、次の手順に従って Platform に接続する新しい FTP アカウントを作成できます。
+必要な資格情報を収集したら、次の手順に従って新しい FTP アカウントを作成し、Experience Platformに接続します。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して [!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、インバウンドアカウントを作成できる様々なソースが表示されます。
 
@@ -69,4 +69,4 @@ FTP に接続するには、次の接続プロパティの値を指定する必�
 
 ## 次の手順
 
-このチュートリアルでは、FTP アカウントへの接続を確立しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージから Platform にデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。
+このチュートリアルでは、FTP アカウントへの接続を確立しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 概要
 description: Adobe Experience Platform を使用すると、組織は、顧客データを一元化および標準化し、データサイエンスと機械学習を適用することにより、設計を劇的に改善し、パーソナライズされ充実したエクスペリエンスを配信することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 86%
+source-wordcount: '432'
+ht-degree: 82%
 
 ---
 
@@ -28,13 +28,13 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 
 ## [!DNL Experience Platform]ドキュメント
 
-ドキュメ [!DNL Experience Platform] トは、様々な機能やアプリケーションのために複数の形式で提供されています。 使用可能なドキュメントの種類について詳しくは、 [Platform ドキュメントの概要](documentation/overview.md) を参照してください。
+ドキュメ [!DNL Experience Platform] トは、様々な機能やアプリケーションのために複数の形式で提供されています。 使用可能なドキュメントの種類について詳しくは、[Experience Platform ドキュメントの概要 ](documentation/overview.md) を参照してください。
 
-特定の [!DNL Platform] サービスに関する詳細な情報については、[ドキュメントランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)に戻って目的のガイドを選択してください。
+特定の [!DNL Experience Platform] サービスに関する詳細な情報については、[ドキュメントランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)に戻って目的のガイドを選択してください。
 
 ### [!DNL Experience Platform] 上で構築されたアプリケーションのドキュメント
 
-Adobeは、Experience Platformを基盤として複数のアプリケーションを構築しています。 これらのアプリケーションのドキュメントは、以下にリンクされている独自のガイドで確認できます。
+Adobeは、Experience Platform上に複数のアプリケーションを構築しました。 これらのアプリケーションのドキュメントは、以下にリンクされている独自のガイドで確認できます。
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,20 +43,20 @@ Adobeは、Experience Platformを基盤として複数のアプリケーショ�
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-次のビデオでは、Experience Platform上に構築された各アプリケーションのユースケースについて説明します。
+次のビデオでは、Experience Platform上に作成された各アプリケーションのユースケースについて説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
 ## [!DNL Experience Platform] チュートリアル
 
-取得用のデータの準備から高度な機械学習アルゴリズムまで、すべてをカバーするステップバイステップのチュートリアルに従うことで、[!DNL Platform] をすばやく簡単に開始できます。これらのチュートリアルは、[!DNL Experience Platform] のドキュメントに記載されている情報を補完する目的でデザインされているので、最良の結果を得るためには、チュートリアルの利用中はドキュメントを手元に置いておくことをお勧めします。
+取得用のデータの準備から高度な機械学習アルゴリズムまで、すべてをカバーするステップバイステップのチュートリアルに従うことで、[!DNL Experience Platform] をすばやく簡単に開始できます。これらのチュートリアルは、[!DNL Experience Platform] のドキュメントに記載されている情報を補完する目的でデザインされているので、最良の結果を得るためには、チュートリアルの利用中はドキュメントを手元に置いておくことをお勧めします。
 
 使い始めるには、[Experience Platform のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)のランディングページにアクセスしてください。
 
 ## 参照ドキュメントとリソース
 
 * [**API の基本事項**](api-fundamentals.md)\
-  [!DNL Platform] API の操作の基本について説明します。
+  [!DNL Experience Platform] API の操作の基本について説明します。
 
 * [**API リファレンスドキュメント**](https://www.adobe.com/go/platform-api-reference-en)\
   ヘッダー、パラメーター、サンプルリクエスト、応答などの [!DNL Experience Platform] API について説明しています。<br/>*これらのドキュメントは Adobe I/O でホストされます。*

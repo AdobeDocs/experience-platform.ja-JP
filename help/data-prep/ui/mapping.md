@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;CSV のマッピ�
 title: データ準備 UI ガイド
 description: Experience Platform UI でデータ準備関数を使用して、CSV ファイルを XDM スキーマにマッピングする方法を説明します。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1471'
-ht-degree: 36%
+source-wordcount: '1474'
+ht-degree: 33%
 
 ---
 
@@ -16,14 +16,14 @@ ht-degree: 36%
 
 ## はじめに
 
-このチュートリアルでは、次の Platform コンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、次のExperience Platform コンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md)：Platform が顧客体験データを編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID を関連付けることで、個々の顧客とその行動への理解を深めることができます。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [ソース](../../sources/home.md)：Adobe Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ ソース ](../../sources/home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 
 ## UI でマッピングインターフェイスにアクセスする
 

@@ -1,25 +1,25 @@
 ---
-title: タグと Platform Web SDK 拡張機能を使用して、IAB TCF 2.0 のサポートを統合します
-description: タグとAdobe Experience Platform Web SDK 拡張機能を使用して IAB TCF 2.0 同意を設定する方法について説明します。
+title: タグとExperience Platform Web SDK拡張機能を使用して、IAB TCF 2.0 のサポートを統合します
+description: タグとAdobe Experience Platform Web SDK拡張機能を使用して IAB TCF 2.0 同意を設定する方法について説明します。
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
 
-# タグと Platform Web SDK 拡張機能を使用して、IAB TCF 2.0 のサポートを統合します
+# タグとExperience Platform Web SDK拡張機能を使用して、IAB TCF 2.0 のサポートを統合します
 
-Adobe Experience Platform Web SDK は、Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 （IAB TCF 2.0）をサポートしています。 このガイドでは、Adobe Experience Platform Web SDK タグ拡張機能を使用して IAB TCF 2.0 同意情報をAdobeに送信するためのタグプロパティを設定する方法について説明します。
+Adobe Experience Platform Web SDKは、Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 （IAB TCF 2.0）をサポートしています。 このガイドでは、Adobe Experience Platform Web SDK Tag Extension を使用して IAB TCF 2.0 同意情報をAdobeに送信するためのタグプロパティを設定する方法について説明します。
 
 タグを使用しない場合は、[ タグを使用しない IAB TCF 2.0 の使用 ](./without-tags.md) に関するガイドを参照してください。
 
 ## はじめに
 
-タグおよび Platform Web SDK 拡張機能で IAB TCF 2.0 を使用するには、XDM スキーマとデータセットが使用可能である必要があります。
+タグおよびExperience Platform Web SDK拡張機能で IAB TCF 2.0 を使用するには、XDM スキーマとデータセットを使用できる必要があります。
 
-また、このガイドでは、Adobe Experience Platform Web SDK に関する十分な知識が必要です。 簡単に復習するには、[Adobe Experience Platform Web SDK の概要 ](../../home.md) および [ よくある質問 ](../../faq.md) ドキュメントを参照してください。
+また、このガイドでは、Adobe Experience Platform web SDKについて実際に理解している必要があります。 簡単に復習するには、[Adobe Experience Platform Web SDKの概要 ](../../home.md) および [ よくある質問 ](../../faq.md) ドキュメントを参照してください。
 
 ## デフォルトの同意の設定
 
@@ -66,7 +66,7 @@ addEventListener();
 
 >[!IMPORTANT]
 >
->これらのデータ要素はカスタムコードを通じて作成されているので、データ要素セレクターを使用して選択することはできません。 データ要素名にはパーセント記号を付けて入力する必要があります。 このコードは、顧客が変更されるたびに、顧客の新しい同意環境設定を使用して顧客のプロファイルを更新します。 さらに、サーバーが cookie の値を返すことで、Adobe Experience Platform Web SDK がエクスペリエンスイベントを記録できない可能性があります。
+>これらのデータ要素はカスタムコードを通じて作成されているので、データ要素セレクターを使用して選択することはできません。 データ要素名にはパーセント記号を付けて入力する必要があります。 このコードは、顧客が変更されるたびに、顧客の新しい同意環境設定を使用して顧客のプロファイルを更新します。 さらに、サーバーが cookie の値を返すことで、Adobe Experience Platform Web SDKがエクスペリエンスイベントを記録できない可能性があります。
 
 ## エクスペリエンスイベント用の XDM データ要素の作成
 
@@ -113,7 +113,7 @@ addEventListener();
 
 このコードは、`useractioncomplete` イベントと `tcloaded` イベントの両方が処理される点を除いて、前のカスタムコードと同一です。 [ 以前のカスタムコード ](#consent-code-1) は、顧客が初めて環境設定を選択する場合にのみトリガーが表示されます。 このコードは、お客様が既に環境設定を選択している場合にもトリガーを表示します。 例えば、2 番目のページの読み込み時です。
 
-Platform Web SDK 拡張機能から「イベントの送信」アクションを追加します。 XDM フィールド内で、前の節で作成した XDM データ要素を選択します。
+Experience Platform Web SDK拡張機能から「イベントを送信」アクションを追加します。 XDM フィールド内で、前の節で作成した XDM データ要素を選択します。
 
 ## IAB TCF 2.0 同意情報を使用したその他のイベントの送信
 
@@ -121,4 +121,4 @@ Platform Web SDK 拡張機能から「イベントの送信」アクションを
 
 ## 次の手順
 
-これで、IAB TCF 2.0 を Platform Web SDK 拡張機能と共に使用する方法を説明したので、次は、Adobe AnalyticsやAdobe Real-time Customer Data Platformなど、他のAdobeソリューションと統合することもできます。 詳しくは、[IAB Transparency &amp; Consent Framework 2.0 の概要 ](./overview.md) を参照してください。
+これで、IAB TCF 2.0 をExperience Platform Web SDK拡張機能と共に使用する方法を説明したので、次は、Adobe AnalyticsやAdobe Real-Time Customer Data Platformなどの他のAdobe ソリューションと統合することもできます。 詳しくは、[IAB Transparency &amp; Consent Framework 2.0 の概要 ](./overview.md) を参照してください。

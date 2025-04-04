@@ -5,9 +5,9 @@ title: クエリサービスでのクエリ実行の一般的なガイダンス
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでクエリを記述する際に知っておくべき重要な詳細の概要を説明します。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1089'
 ht-degree: 40%
 
 ---
@@ -50,7 +50,7 @@ Adobe Experience Platform [!DNL Query Service] には、インタラクティブ
 
 >[!NOTE]
 >
->Experience CloudID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
+>Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -201,7 +201,7 @@ LIMIT 10
 
 ## テーブル情報の表示
 
-クエリサービスに接続すると、`\d` または `SHOW TABLES` コマンドを使用して、Platform 上で使用可能なすべてのテーブルを表示できます。
+クエリサービスに接続すると、`\d` または `SHOW TABLES` のいずれかのコマンドを使用して、Experience Platformで使用可能なすべてのテーブルを表示できます。
 
 ### 標準テーブル表示
 

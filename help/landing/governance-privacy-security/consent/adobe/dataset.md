@@ -6,9 +6,9 @@ description: エクスペリエンスデータモデル（XDM）スキーマと�
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1581'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Adobe Experience Platformで顧客の同意/環境設定データを処理するには、同意や他の権限に関連するフィールドがスキーマに含まれているデータセットに、そのデータを送信する必要があります。 特に、このデータセットは、[!DNL XDM Individual Profile] クラスに基づいており、[!DNL Real-Time Customer Profile] で使用できるようになっている必要があります。
 
-このドキュメントでは、Experience Platformで同意データを処理するようにデータセットを設定する手順を説明します。 Platform で同意/環境設定データを処理する完全なワークフローの概要については、[ 同意処理の概要 ](./overview.md) を参照してください。
+このドキュメントでは、Experience Platformで同意データを処理するようにデータセットを設定する手順を説明します。 Experience Platformで同意/環境設定データを処理する完全なワークフローの概要については、[ 同意処理の概要 ](./overview.md) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ Adobe Experience Platformで顧客の同意/環境設定データを処理する
 
 >[!IMPORTANT]
 >
->このチュートリアルでは、顧客属性情報の取り込みに使用する Platform の [!DNL Profile] スキーマを把握していることを前提としています。 同意データの収集に使用する方法に関係なく、このスキーマは [ リアルタイム顧客プロファイルに対して有効にする ](../../../../xdm/ui/resources/schemas.md#profile) 必要があります。 さらに、スキーマのプライマリ ID を、メールアドレスなどの興味/関心に基づく広告に使用することが禁止されている、直接識別可能なフィールドにすることはできません。 どのフィールドが制限されているかわからない場合は、法務担当者に問い合わせてください。
+>このチュートリアルでは、顧客属性情報の取り込みに使用するExperience Platformの [!DNL Profile] スキーマを理解していることを前提としています。 同意データの収集に使用する方法に関係なく、このスキーマは [ リアルタイム顧客プロファイルに対して有効にする ](../../../../xdm/ui/resources/schemas.md#profile) 必要があります。 さらに、スキーマのプライマリ ID を、メールアドレスなどの興味/関心に基づく広告に使用することが禁止されている、直接識別可能なフィールドにすることはできません。 どのフィールドが制限されているかわからない場合は、法務担当者に問い合わせてください。
 
 ## [!UICONTROL  同意と環境設定の詳細 ] フィールドグループの構造 {#structure}
 
@@ -96,12 +96,12 @@ Adobe Experience Platformで顧客の同意/環境設定データを処理する
 
 ## [!DNL Profile] スキーマへの必須フィールドグループの追加 {#add-field-group}
 
-スキーマ標準を使用して同意データを収集するには、次の 2 つのフィールドグループを含むプロファイル対応のAdobeが必要です。
+Adobe標準を使用して同意データを収集するには、次の 2 つのフィールドグループを含むプロファイル対応のスキーマが必要です。
 
 * [[!UICONTROL  同意と環境設定の詳細 ]](../../../../xdm/field-groups/profile/consents.md)
-* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) （Platform Web または Mobile SDK を使用して同意信号を送信する場合に必要）
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) （Experience Platform Web または Mobile SDKを使用して同意信号を送信する場合に必要）
 
-Platform UI で、左側のナビゲーションの「**[!UICONTROL スキーマ]**」を選択し、「**[!UICONTROL 参照]**」タブを選択して、既存のスキーマのリストを表示します。 ここから、同意フィールドを追加する [!DNL Profile] 対応スキーマの名前を選択します。 この節のスクリーンショットでは、[ スキーマ作成チュートリアル ](../../../../xdm/tutorials/create-schema-ui.md) で作成した「ロイヤルティメンバー」スキーマを例として使用します。
+Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択し、「**[!UICONTROL 参照]**」タブを選択して、既存のスキーマのリストを表示します。 ここから、同意フィールドを追加する [!DNL Profile] 対応スキーマの名前を選択します。 この節のスクリーンショットでは、[ スキーマ作成チュートリアル ](../../../../xdm/tutorials/create-schema-ui.md) で作成した「ロイヤルティメンバー」スキーマを例として使用します。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
@@ -129,7 +129,7 @@ Platform UI で、左側のナビゲーションの「**[!UICONTROL スキーマ
 >
 >新しいスキーマを作成する場合や、プロファイルで有効になっていない既存のスキーマを編集する場合は、保存する前に [ プロファイルでスキーマを有効にする ](../../../../xdm/ui/resources/schemas.md#profile) 必要があります。
 
-編集したスキーマが Platform Web SDK データストリームで指定された [!UICONTROL  プロファイルデータセット ] で使用されている場合、そのデータセットには新しい同意フィールドが含まれるようになりました。 [ 同意処理ガイド ](./overview.md#merge-policies) に戻って、同意データを処理するためのExperience Platformを設定するプロセスを続けることができます。 このスキーマのデータセットをまだ作成していない場合は、次の節の手順に従ってください。
+編集したスキーマがExperience Platform Web SDK データストリームで指定された [!UICONTROL  プロファイルデータセット ] で使用されている場合、そのデータセットには新しい同意フィールドが含まれるようになりました。 [ 同意処理ガイド ](./overview.md#merge-policies) に戻って、同意データを処理するようにExperience Platformを設定するプロセスを続けることができます。 このスキーマのデータセットをまだ作成していない場合は、次の節の手順に従ってください。
 
 ## 同意スキーマに基づくデータセットの作成 {#dataset}
 
@@ -161,11 +161,11 @@ Platform UI で、左側のナビゲーションの「**[!UICONTROL スキーマ
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-これで、データセットが保存され、[!DNL Profile] で使用できるようになります。 Platform Web SDK を使用して同意データをプロファイルに送信することを計画している場合は、[ データストリーム ](../../../../datastreams/overview.md) を設定する際に、このデータセットを [!UICONTROL  プロファイルデータセット ] として選択する必要があります。
+これで、データセットが保存され、[!DNL Profile] で使用できるようになります。 Experience Platform Web SDKを使用して同意データをプロファイルに送信することを計画している場合は、[ データストリーム ](../../../../datastreams/overview.md) を設定する際に、このデータセットを [!UICONTROL  プロファイルデータセット ] として選択する必要があります。
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Profile] 対応スキーマに同意フィールドを追加しました。このスキーマのデータセットは、Platform Web SDK または直接 XDM 取り込みを使用して同意データを取り込むために使用されます。
+このチュートリアルでは、[!DNL Profile] 対応スキーマに同意フィールドを追加しました。このスキーマのデータセットは、Experience Platform Web SDKまたはダイレクト XDM 取り込みを使用して同意データを取り込むために使用されます。
 
 これで、[ 同意処理の概要 ](./overview.md#merge-policies) に戻って、同意データを処理するためのExperience Platformの設定を続行できます。
 
@@ -179,7 +179,7 @@ Platform UI で、左側のナビゲーションの「**[!UICONTROL スキーマ
 
 >[!IMPORTANT]
 >
->Platform Web SDK および Mobile SDK は、同意変更コマンドのカスタムフィールドをサポートしていません。 現在、カスタム同意フィールドをプロファイルに取り込む唯一の方法は、[ バッチ取り込み ](../../../../ingestion/batch-ingestion/overview.md) または [ ソース接続 ](../../../../sources/home.md) を使用することです。
+>Experience Platform Web SDK および Mobile SDK は、consent-change コマンドのカスタムフィールドをサポートしていません。 現在、カスタム同意フィールドをプロファイルに取り込む唯一の方法は、[ バッチ取り込み ](../../../../ingestion/batch-ingestion/overview.md) または [ ソース接続 ](../../../../sources/home.md) を使用することです。
 
 [!UICONTROL  同意および環境設定の詳細 ] フィールドグループを、同意データの構造のベースラインとして使用し、必要に応じて追加する必要があります。構造全体を最初から作成する必要はありません。
 

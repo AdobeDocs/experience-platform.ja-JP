@@ -3,9 +3,9 @@ title: リアルタイムでのエッジプロファイル属性の検索
 description: カスタム Personalizationの宛先とEdge Network API を使用して、エッジプロファイル属性をリアルタイムで検索する方法を説明します
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1907'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platformは、すべてのプロファイルデータの唯一�
 
 ## 用語と前提条件 {#prerequisites}
 
-このページで説明するユースケースを設定する場合、次の Platform コンポーネントを使用します。
+このページで説明するユースケースを設定する場合、次のExperience Platform コンポーネントを使用します。
 
 * [ データストリーム ](../../datastreams/overview.md)：データストリームは、web SDKから受信したイベントデータを受け取り、エッジプロファイルデータで応答します。
 * [ 結合ポリシー ](../../segmentation/ui/segment-builder.md#merge-policies): [!UICONTROL Edgeでアクティブ ] 結合ポリシーを作成して、エッジプロファイルが正しいプロファイルデータを使用していることを確認します。
@@ -54,7 +54,7 @@ Edge プロファイルのルックアップのユースケースは、次の表
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![ データストリーム設定画面を示す Platform UI 画像。](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+  ![ データストリーム設定画面を示すExperience Platform UI 画像。](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## 手順 2:Edge 評価用のオーディエンスの設定 {#audience-edge-evaluation}
@@ -110,7 +110,7 @@ Edge でプロファイル属性を検索するには、オーディエンスを
    接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
    * **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md) を参照してください。
-   * **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/overview.md#import-audience) に関するドキュメントを参照してください。
+   * **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/overview.md#import-audience) に関するドキュメントを参照してください。
    * その他のタイプのオーディエンス。他のAdobe ソリューション（[!DNL Audience Manager] など）から派生します。
 
      ![ 複数のオーディエンスがハイライト表示されたアクティベーションワークフローのオーディエンス選択手順。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

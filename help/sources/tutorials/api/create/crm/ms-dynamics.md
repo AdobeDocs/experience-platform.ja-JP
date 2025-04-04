@@ -1,11 +1,11 @@
 ---
 title: Flow Service API を使用したMicrosoft Dynamics ベース接続の作成
-description: Flow Service API を使用して Platform をMicrosoft Dynamics アカウントに接続する方法を説明します。
+description: Flow Service API を使用してExperience PlatformをMicrosoft Dynamics アカウントに接続する方法について説明します。
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1330'
-ht-degree: 20%
+source-wordcount: '1338'
+ht-degree: 14%
 
 ---
 
@@ -15,16 +15,16 @@ ht-degree: 20%
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
+このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、様々なソースからデータを取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
-次の節では、[!DNL Flow Service] API を使用して Platform を Dynamics アカウントに正しく接続するために必要な追加情報を示します。
+次の節では、[!DNL Flow Service] API を使用してExperience Platformを Dynamics アカウントに正しく接続するために必要な追加情報を示します。
 
 ### 必要な資格情報の収集
 
@@ -693,4 +693,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Microsoft Dynamics] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、CRM データを Platform に取り込むデータフローの作成](../../collect/crm.md)
+* [ [!DNL Flow Service] API を使用した、CRM データをExperience Platformに取り込むデータフローの作成](../../collect/crm.md)

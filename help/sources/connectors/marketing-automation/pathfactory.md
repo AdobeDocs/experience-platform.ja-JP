@@ -4,10 +4,10 @@ description: API またはユーザーインターフェイスを使用して Pa
 last-substantial-update: 2024-04-30T00:00:00Z
 badge: ベータ版
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 16%
+source-wordcount: '467'
+ht-degree: 12%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 16%
 >
 >[!DNL PathFactory] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-[[!DNL PathFactory]](https://www.pathfactory.com/) は、企業がコンテンツジャーニーを管理し、インテリジェントなコンテンツインサイトを通じてエンゲージメントを促進するのに役立つ、クラウドベースのプラットフォームを提供します。 このガイドでは、PathFactory のコネクタを使用して、PathFactory からExperience Platformにデータを統合して最適なデータ取得を行う方法について詳しく説明します。
+[[!DNL PathFactory]](https://www.pathfactory.com/) は、企業がコンテンツジャーニーを管理し、インテリジェントなコンテンツインサイトを通じてエンゲージメントを促進するのに役立つ、クラウドベースのプラットフォームを提供します。 このガイドでは、最適なデータ取り込みのために PathFactory のコネクタを使用して、PathFactory からExperience Platformにデータを統合する方法について詳しく説明します。
 
 次の 3 つのプライマリソースを使用して、[[!DNL PathFactory]](https://www.pathfactory.com/) からデータを取り込むことができます。
 
@@ -59,14 +59,14 @@ ht-degree: 16%
 
 ユーザー名、パスワード、ドメインおよびアクセストークンの取得方法について詳しくは、[[!DNL PathFactory]  サポートセンター ](https://support.pathfactory.com/categories/adobe/) を参照してください。 このリソースでは、資格情報の取得と管理に関する包括的なガイドを提供します。
 
-### Experience Platformーに対する権限の設定
+### Experience Platformに対する権限の設定
 
 [!DNL PathFactory] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
 
-## [!DNL PathFactory] を Platform に接続 {#pathfactory-connect}
+## [!DNL PathFactory] をExperience Platformに接続 {#pathfactory-connect}
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL PathFactory] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL PathFactory] をExperience Platformに接続する方法について説明しています。
 
-* [API を使用して Platform にデータを取り込むためのソ  [!DNL PathFactory]  ス接続とデータフローを作成します ](../../tutorials/api/create/marketing-automation/pathfactory.md)。
+* [ ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL PathFactory]  ータを取り込みます ](../../tutorials/api/create/marketing-automation/pathfactory.md)。
 * [UI を使用してアカウ  [!DNL PathFactory]  トをExperience Platformに接続します ](../../tutorials/ui/create/marketing-automation/pathfactory.md)。
 * [UI を使用したソース接続のデータフローの作成 ](../../tutorials/ui/dataflow/marketing-automation.md)。

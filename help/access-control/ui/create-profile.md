@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Admin Console で新しい製品プロファイルを作成
 description: このドキュメントでは、Adobe Admin Console で新しい製品プロファイルを作成するための手順について説明します。新しいプロファイルの作成を開始するには、「製品プロファイル」タブに移動し、「新しいプロファイル」をクリックします。
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 100%
+source-wordcount: '314'
+ht-degree: 94%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 ![create-new-product-profile](../images/create-new-product-profile.png)
 
-次の画面では、プロファイルに含める Platform サービスを選択するように求められます。サービスの横にある切り替えボタンを選択すると、サービスを無効にできます。サービスが無効になっている場合、そのサービスに関連付けられているすべての機能は、この製品プロファイルに割り当てられたユーザーには使用できません。終了したら「**[!UICONTROL 保存]**」をクリックします。
+次の画面では、プロファイルに含めるExperience Platform サービスを選択するように求められます。 サービスの横にある切り替えボタンを選択すると、サービスを無効にできます。サービスが無効になっている場合、そのサービスに関連付けられているすべての機能は、この製品プロファイルに割り当てられたユーザーには使用できません。終了したら「**[!UICONTROL 保存]**」をクリックします。
 
 ![enable-services](../images/enable-services.png)
 

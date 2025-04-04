@@ -5,10 +5,10 @@ title: Flow Service API を使用した宛先アカウントの削除
 type: Tutorial
 description: Flow Service API を使用して宛先アカウントを削除する方法を説明します。
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 40%
+source-wordcount: '765'
+ht-degree: 38%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->宛先アカウントの削除は、現在、Flow Service API でのみサポートされています。 宛先アカウントは、Experience PlatformUI を使用して削除することはできません。
+>宛先アカウントの削除は、現在、Flow Service API でのみサポートされています。 宛先アカウントは、Experience Platform UI を使用して削除することはできません。
 
 ## はじめに {#get-started}
 
@@ -29,7 +29,7 @@ ht-degree: 40%
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
 * [ 宛先 ](../home.md):[!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
+* [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用して宛先アカウントを正常に削除するために必要な追加情報を示しています。
 
@@ -39,13 +39,13 @@ ht-degree: 40%
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -64,7 +64,7 @@ ht-degree: 40%
 
 宛先アカウントを削除する最初の手順は、削除する宛先アカウントに対応する接続 ID を見つけることです。
 
-Experience Platformの UI で、**[!UICONTROL Destinations]**/**[!UICONTROL Accounts]** を参照し、削除するアカウントを **[!UICONTROL Destinations]** 列の数値を選んで選択します。
+Experience Platform UI で、**[!UICONTROL 宛先]**/**[!UICONTROL アカウント]** を参照し、削除するアカウントを **[!UICONTROL 宛先]** 列の数値を選択して選択します。
 
 ![ 削除する宛先アカウントを選択 ](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
@@ -148,10 +148,10 @@ A successful response returns the current details of your connection including i
 >
 >宛先アカウントを削除する前に、宛先アカウントへの既存のデータフローを削除する必要があります。
 >既存のデータフローを削除するには、次のページを参照してください。
->* [Experience PlatformUI を使用 ](../ui/delete-destinations.md) して、既存のデータフローを削除します。
+>* [Experience Platform UI を使用 ](../ui/delete-destinations.md) して、既存のデータフローを削除します。
 >* [Flow Service API を使用 ](delete-destination-dataflow.md) して、既存のデータフローを削除します。
 
-DELETEID を取得し、宛先アカウントへのデータフローが存在しないことを確認したら、[!DNL Flow Service] API に対して接続リクエストを実行します。
+接続 ID を取得し、宛先アカウントへのデータフローが存在しないことを確認したら、[!DNL Flow Service] API に対してDELETE リクエストを実行します。
 
 **API 形式**
 
@@ -180,7 +180,7 @@ curl -X DELETE \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 Platform トラブルシューティングガイドの [API ステータスコード](../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../landing/troubleshooting.md#request-header-errors)を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順
 

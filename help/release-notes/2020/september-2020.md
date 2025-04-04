@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '866'
 ht-degree: 38%
 
 ---
@@ -40,7 +40,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 ## 宛先 {#destinations}
 
-[Real-time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前定義済みの統合であり、シームレスな方法でこれらのパートナーにデータをアクティブ化します。
+[Real-Time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前定義済みの統合であり、シームレスな方法でこれらのパートナーにデータをアクティブ化します。
 
 **新機能**
 
@@ -58,7 +58,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | --- | --- |
-| Adobe I/Oイベントの通知 | [!DNL Observability Insights] は、Adobe I/Oイベントを活用して、複数のExperience Platformサービスのイベント通知を作成します。 通知ペイロードは設定済みの Webhook に送信され、それを使用してさらにダウンストリームのプロセスを自動化できます。 |
+| Adobe I/O イベントの通知 | [!DNL Observability Insights] は、Adobe I/O Eventsを活用して、複数のExperience Platform サービス用のイベント通知を作成します。 通知ペイロードは設定済みの Webhook に送信され、それを使用してさらにダウンストリームのプロセスを自動化できます。 |
 
 サービスについて詳しくは、[[!DNL Observability Insights]  概要 ](../../observability/home.md) を参照してください。
 
@@ -72,7 +72,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 | ------- | ----------- |
 | LGPD のサポート（ブラジル） | ブラジルの [!DNL Lei Geral de Proteção de Dados]（LGPD）規制の下でプライバシー関連のジョブを作成できるようになりました。これらのジョブは、規制コード `lgpd_bra` の下で追跡されます。 |
 
-このサービスについて詳しくは ](../../privacy-service/home.md)[Privacy Serviceの概要 } を参照してください。
+このサービスについて詳しくは、[Privacy Serviceの概要 ](../../privacy-service/home.md) を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -80,13 +80,13 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プロファイルビューアー | Platform UI のプロファイルビューアが更新されて、完全にカスタマイズできるダッシュボードになりました。 ユーザーには、次のタスクを実行するオプションが追加されました。 <ul><li>基本情報ウィジェットで選択した標準属性とカスタマイズ属性を更新します。</li><li>カスタムウィジェットの作成、編集、削除</li><li>ウィジェットのサイズ変更と並べ替え</li></ul> |
+| プロファイルビューアー | Experience Platform UI のプロファイルビューアが更新されて、完全にカスタマイズできるダッシュボードになりました。 ユーザーには、次のタスクを実行するオプションが追加されました。 <ul><li>基本情報ウィジェットで選択した標準属性とカスタマイズ属性を更新します。</li><li>カスタムウィジェットの作成、編集、削除</li><li>ウィジェットのサイズ変更と並べ替え</li></ul> |
 
 [!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、[!DNL Real-Time Customer Profile] ークフローについて詳しくは、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
-Adobe Experience Platform セグメント化サービスは、セグメントを作成し、[!DNL Real-Time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
+Adobe Experience Platform セグメント化サービスは、セグメントを作成し、[!DNL Real-Time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Experience Platform] 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
 
 [!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 
@@ -101,7 +101,7 @@ Adobe Experience Platform セグメント化サービスは、セグメントを
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Experience Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を提供します。 これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
@@ -109,7 +109,7 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 自動マッピング | [!DNL Platform] は、ユーザーが選択したターゲットスキーマまたはデータセットに基づいて、データ取り込みワークフロー中に自動マッピングするためのインテリジェントなレコメンデーションを提供します。 ユースケースに合わせて、柔軟な自動マッピングルールを手動で調整できます。 |
+| 自動マッピング | [!DNL Experience Platform] は、ユーザーが選択したターゲットスキーマまたはデータセットに基づいて、データ取り込みワークフロー中に自動マッピングするためのインテリジェントなレコメンデーションを提供します。 ユースケースに合わせて、柔軟な自動マッピングルールを手動で調整できます。 |
 | UX の向上 | ユーザーは、インラインテーブルアクションにアクセスして、データの追加、スケジュールの編集、セグメントの追加などの主要なアクションにより簡単にアクセスできます。 詳しくは、[ データフローの監視 ](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

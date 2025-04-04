@@ -3,9 +3,9 @@ keywords: 飛行船属性；飛行船宛先
 title: Airship Attributes 接続
 description: Airship 内でターゲティングするためのオーディエンス属性として、Adobe オーディエンスデータを Airship にシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1153'
 ht-degree: 28%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 28%
 
 ## 概要 {#overview}
 
-[!DNL Airship] は、カスタマーエンゲージメントプラットフォームのリーダーであり、カスタマーライフサイクルのあらゆる段階で、ユーザーに対して有意義でパーソナライズされたオムニチャネルメッセージを提供するのを支援します。
+[!DNL Airship] は、主要なカスタマーエンゲージメント Experience Platformであり、カスタマーライフサイクルのあらゆる段階で、ユーザーに対して有意義でパーソナライズされたオムニチャネルメッセージを提供するのを支援します。
 
 この統合では、Adobe プロファイルデータをターゲティングまたはトリガー用の [ 属性 ](https://docs.airship.com/guides/audience/attributes/) として [!DNL Airship] に渡します。
 
@@ -67,7 +67,7 @@ ht-degree: 28%
 
 ## 属性を有効にする {#enable-attributes}
 
-Adobe Experience Platform プロファイル属性は [!DNL Airship] 属性に似ており、このページで後述するマッピングツールを使用すると、Platform で簡単に相互にマッピングできます。
+Adobe Experience Platform プロファイル属性は [!DNL Airship] 属性に似ており、このページで後述するマッピングツールを使用すると、Experience Platformで簡単に相互にマッピングできます。
 
 [!DNL Airship] プロジェクトには、複数の事前定義済みのデフォルト属性があります。 カスタム属性がある場合は、最初に定義する必要 [!DNL Airship] あります。 詳しくは、[ 属性の設定と管理 ](https://docs.airship.com/tutorials/audience/attributes/) を参照してください。
 
@@ -91,7 +91,7 @@ Adobe Experience Platform内で収集したプロファイルデータを活用�
 
 ### のユースケース#2
 
-Adobe Experience Platformの属性を活用してプロファイル [!DNL Airship] さらに強化し、SDKや [!DNL Airship] の予測データと組み合わせます。 例えば、小売業者は、ロイヤルティステータスおよび場所データ（Platform の属性）を持つオーディエンスを作成し、チャーンデータに予測さ [!DNL Airship] ることで、ネバダ州ラスベガスに住み、チャーンの可能性が高いゴールドロイヤルティステータスのユーザーにターゲットの絞ったメッセージを送信できます。
+Adobe Experience Platformの属性を活用してプロファイル [!DNL Airship] さらに強化し、SDKや [!DNL Airship] の予測データと組み合わせます。 例えば、retailerは、ロイヤルティステータスおよび場所データ（Experience Platformの属性）を持つオーディエンスを作成し、チャーンデータに [!DNL Airship] る見込みを持つネバダ州ラスベガスに住み、チャーンの可能性が高いゴールドのロイヤルティステータスを持つユーザーにターゲットを絞ったメッセージを送信します。
 
 ## 宛先への接続 {#connect}
 

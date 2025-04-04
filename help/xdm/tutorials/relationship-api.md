@@ -4,7 +4,7 @@ title: Schema Registry API を使用した 2 つのスキーマ間の関係の�
 description: このドキュメントでは、Schema Registry API を使用して組織で定義された 2 つのスキーマ間に 1 対 1 の関係を定義するためのチュートリアルを提供します。
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 27%
@@ -27,10 +27,10 @@ ht-degree: 27%
 
 このチュートリアルでは、[!DNL Experience Data Model] （XDM）および [!DNL XDM System] について実際に理解している必要があります。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-* [Experience Platformにおける XDM システム ](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
+* [Experience Platformの XDM システム ](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
    * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 このチュートリアルを開始する前に、[ 開発者ガイド ](../api/getting-started.md) を参照して、[!DNL Schema Registry] API を正常に呼び出すために必要な重要な情報を確認してください。 そうした情報としては、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダーなどがあります（ [!DNL Accept] ヘッダーとその取り得る値には特に注意を払います）。
 
@@ -44,7 +44,7 @@ ht-degree: 27%
 >
 >関係を確立するには、両方のスキーマにプライマリ ID が定義され、[!DNL Real-Time Customer Profile] が有効になっている必要があります。 スキーマを適切に設定する方法に関するガイダンスが必要な場合は、スキーマ作成チュートリアルの [ プロファイルで使用するスキーマの有効化 ](./create-schema-api.md#profile) に関する節を参照してください。
 
-2 つのスキーマ間の関係を定義するには、まず両方のスキーマの `$id` 値を取得する必要があります。スキーマの表示名（`title`）がわかっている場合は、[!DNL Schema Registry] API の `/tenant/schemas` エンドポイントにGETリクエストを実行することで、`$id` の値を見つけることができます。
+2 つのスキーマ間の関係を定義するには、まず両方のスキーマの `$id` 値を取得する必要があります。スキーマの表示名（`title`）がわかっている場合は、[!DNL Schema Registry] API の `/tenant/schemas` エンドポイントに対してGET リクエストを実行することで、`$id` の値を見つけることができます。
 
 **API 形式**
 
@@ -126,7 +126,7 @@ curl -X GET \
 
 ### 新しいフィールドグループの作成
 
-スキーマに新しいフィールドを追加するには、まずフィールドグループで定義する必要があります。 `/tenant/fieldgroups` エンドポイントにPOSTリクエストを行うことで、新しいフィールドグループを作成できます。
+スキーマに新しいフィールドを追加するには、まずフィールドグループで定義する必要があります。 `/tenant/fieldgroups` エンドポイントに POST リクエストを実行することで、新しいフィールドグループを作成できます。
 
 **API 形式**
 
@@ -238,7 +238,7 @@ curl -X POST\
 
 ### ソーススキーマへのフィールドグループの追加
 
-フィールドグループを作成したら、`/tenant/schemas/{SCHEMA_ID}` エンドポイントに対して追加リクエストを行うことで、ソーススキーマにPATCHできます。
+フィールドグループを作成したら、`/tenant/schemas/{SCHEMA_ID}` エンドポイントに対してPATCH リクエストを実行することで、ソーススキーマに追加できます。
 
 **API 形式**
 
@@ -348,7 +348,7 @@ curl -X PATCH \
 
 関係で別のスキーマへの参照として使用される場合、スキーマフィールドには参照 ID 記述子を適用する必要があります。 「[!DNL Loyalty Members]」の `favoriteHotel` フィールドは「[!DNL Hotels]」の `hotelId` フィールドを参照するので、参照 ID 記述子を指定 `favoriteHotel` る必要があります。
 
-`/tenant/descriptors` エンドポイントに対して参照リクエストを実行することで、ソーススキーマのPOST記述子を作成します。
+`/tenant/descriptors` エンドポイントに対して POST リクエストを実行することで、ソーススキーマの参照記述子を作成します。
 
 **API 形式**
 
@@ -405,7 +405,7 @@ curl -X POST \
 
 ## 関係記述子の作成 {#create-descriptor}
 
-関係記述子は、ソーススキーマと参照スキーマの間に 1 対 1 の関係を確立します。 ソーススキーマ内の適切なフィールドに対して参照 ID 記述子を定義したら、`/tenant/descriptors` エンドポイントに対して関係リクエストを行うことで、新しいPOST記述子を作成できます。
+関係記述子は、ソーススキーマと参照スキーマの間に 1 対 1 の関係を確立します。 ソーススキーマ内の適切なフィールドに対して参照 ID 記述子を定義したら、`/tenant/descriptors` エンドポイントに対して POST リクエストを実行することで、新しい関係記述子を作成できます。
 
 **API 形式**
 

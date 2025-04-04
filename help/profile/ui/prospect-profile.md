@@ -3,9 +3,9 @@ title: 見込み客プロファイル
 description: 見込み客プロファイルを作成および使用して、サードパーティの情報を使用して未知顧客に関する情報を収集する方法を説明します。
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '401'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ Adobe Experience Platformを使用すると、いつでもどこでもブラン�
 
 ## 推奨されるユースケース {#use-cases}
 
-Experience Platformの見込み客プロファイル機能を他の Platform 機能と組み合わせて使用する方法については、次のユースケースドキュメントを参照してください。
+Experience Platformの見込み客プロファイル機能を他のExperience Platform機能と組み合わせて使用する方法については、次のユースケースドキュメントを参照してください。
 
 - [見込み客機能を使用した新規顧客のエンゲージメントと獲得](../../rtcdp/partner-data/prospecting.md)
 

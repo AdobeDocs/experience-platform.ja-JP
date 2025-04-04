@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform；はじめに；アトリビューション ai；人気のトピック
 feature: Attribution AI
-title: Attribution AI使用の手引き
+title: アトリビューション AI の基本を学ぶ
 description: 以下のガイドでは、Attribution AI の使用に関連する様々な Adobe Experience Platform サービスについて理解している必要があります。チュートリアルを開始する前に、次のドキュメントを確認してください。
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 64%
+source-wordcount: '620'
+ht-degree: 57%
 
 ---
 
 # Attribution AI の概要
 
-次のガイドを参照するには、Attribution AIの使用に関連する様々な [!DNL Adobe Experience Platform] サービスについて理解している必要があります。 このチュートリアルを始める前に、次のドキュメントを確認してください。
+以下のガイドを参照するには、アトリビューション AI の使用に関連する様々な [!DNL Adobe Experience Platform] サービスについて理解している必要があります。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-- [ エクスペリエンスデータモデル（XDM）システムの概要 ](../../xdm/home.md):XDM は、Experience Platformを活用し、適切な [!DNL Adobe Experience Cloud] ーザーに、適切なチャネルで、適切なタイミングで適切なメッセージを配信できる基本的なフレームワークです。 Experience Platform を構築する方法論である XDM システムによって、Platform サービスでエクスペリエンスデータモデルスキーマを操作できるようになります。
+- [ エクスペリエンスデータモデル（XDM）システムの概要 ](../../xdm/home.md):XDM は、Experience Platformを活用し、適切なユーザーに、適切なチャネルで、適切なタイミングで適切なメッセージを配信で [!DNL Adobe Experience Cloud] る基本的なフレームワークです。 Experience Platformの基礎となる XDM システムは、Experience Data Model スキーマをExperience Platform サービスで操作できるようにします。
 - [ スキーマ構成の基本 ](../../xdm/schema/composition.md)：このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、[!DNL Adobe Experience Platform] で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 - [スキーマの構築](../../xdm/tutorials/create-schema-ui.md)：このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 
-Attribution AIを使用するには、消費者エクスペリエンスイベント（CEE）スキーマにデータセットを準拠させる必要があります。これは、[ エクスペリエンスデータモデル（XDM） ](../../xdm/home.md) スキーマフィールドグループです。 このデータを実装または変更するには、アドビサポート（attributionai-support@adobe.com）にお問い合わせください。メディア支出データが存在する場合は、売上高や ROI の増分など、さらに分析することができます。顧客プロファイルデータが使用可能な場合、クレジットを顧客プロファイルレベルに属性付けできます。
+アトリビューション AI では、データセットが消費者エクスペリエンスイベント（CEE）スキーマに準拠している必要があります。これは、[ エクスペリエンスデータモデル（XDM） ](../../xdm/home.md) スキーマフィールドグループです。 このデータを実装または変更するには、アドビサポート（attributionai-support@adobe.com）にお問い合わせください。メディア支出データが存在する場合は、売上高や ROI の増分など、さらに分析することができます。顧客プロファイルデータが使用可能な場合、クレジットを顧客プロファイルレベルに属性付けできます。
 
 ## 用語
 
@@ -27,25 +27,25 @@ Attribution AIを使用するには、消費者エクスペリエンスイベン
 
 - **タッチポイント：**&#x200B;目標に向けたパスにおいて顧客が実行するデジタルイベントまたはデジタルインタラクション。例としては、購入前のマーケティング活動、ディスプレイ広告インプレッションの表示、有料検索のクリックなどがあります。
 
-## Attribution AIスコアのダウンロード
+## アトリビューション AI スコアのダウンロード
 
 >[!NOTE]
 >
 >生のスコアをダウンロードする必要がない場合は、この手順をスキップして [ 次の手順 ](#next-steps) に進んでください。
 
-Attribution AIスコアのダウンロードは、API 呼び出しの組み合わせを使用して実行されます。 Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+アトリビューション AI スコアのダウンロードは、API 呼び出しを組み合わせて行われます。 Experience Platform API を呼び出すには、まず[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Experience Platform のすべてのリソースは、特定の仮想サンドボックスに分離されています。Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform のすべてのリソースは、特定の仮想サンドボックスに分離されています。Experience Platform API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
+>Experience Platform のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメ ント](../../sandboxes/home.md)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -53,7 +53,7 @@ Experience Platform のすべてのリソースは、特定の仮想サンドボ
 
 ## アクセス制御 {#access-control}
 
-ロールベースのアクセス制御を使用する場合、**Attribution AIの表示** および **Attribution AIの管理** 権限により、Attribution AIの様々な機能へのアクセス権が付与されます。 **Attribution AIを管理** では、インスタンスを **作成**、**クローン**、**編集**、**削除**、**有効**、**無効** できますが、**Attribution AIを表示** では、インスタンスを **読み取り** または **表示** できます。 **作成**、**編集** および **削除** アクションは監査ログで記録されます。
+役割ベースのアクセス制御を使用する場合、**アトリビューション AI を表示** および **アトリビューション AI を管理** 権限により、アトリビューション AI の様々な機能へのアクセス権が付与されます。 **アトリビューション AI を管理** を使用すると、インスタンスの **作成**、**クローン**、**編集**、**削除**、**有効化**、**無効化** を実行でき、**アトリビューション AI を表示** では、インスタンスの **読み取り** または **表示** を実行できます。 **作成**、**編集** および **削除** アクションは監査ログで記録されます。
 
 [アクセス制御の権限の割り当て](../../../help/access-control/home.md)または[監査ログを使用してアクセスとアクティビティを監視](../../../help/landing/governance-privacy-security/audit-logs/overview.md)する方法については、ドキュメントを参照してください。
 

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2024年1月）
 description: Adobe Experience Platform の 2024年1月のリリースノートです。
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1659'
-ht-degree: 40%
+source-wordcount: '1662'
+ht-degree: 37%
 
 ---
 
@@ -31,7 +31,7 @@ Experience Platformの既存の機能に対するアップデート：
 
 ## ユースケースプレイブック {#use-case-playbooks}
 
-[!UICONTROL  ユースケースプレイブック ] 機能が、すべてのReal-Time CDPおよびAdobe Journey Optimizerのお客様で一般公開されました。 [!UICONTROL  ユースケースプレイブック ] は、Real-time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題を克服するのを支援するように設計されています。 どこから始めればよいのか、目的のユースケースに合った適切なアセットの作成方法がわからない場合は、ユースケースプレイブックを使用すると、インスピレーションを得て様々なアセットを作成し、準備ができたときにテストして実稼動環境に読み込むことができます。
+[!UICONTROL  ユースケースプレイブック ] 機能が、すべてのReal-Time CDPおよびAdobe Journey Optimizerのお客様で一般公開されました。 [!UICONTROL  ユースケースプレイブック ] は、Real-Time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題を克服するのを支援するように設計されています。 どこから始めればよいのか、目的のユースケースに合った適切なアセットの作成方法がわからない場合は、ユースケースプレイブックを使用すると、インスピレーションを得て様々なアセットを作成し、準備ができたときにテストして実稼動環境に読み込むことができます。
 
 [!UICONTROL  ユースケースプレイブック ] を使い始めるには、次のドキュメントページを参照してください。
 
@@ -43,9 +43,9 @@ Experience Platformの既存の機能に対するアップデート：
 
 ## 属性ベースのアクセス制御 {#abac}
 
-属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platform の機能です。ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
+属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platform の機能です。ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定のExperience Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
 
-属性ベースのアクセス制御により、組織の管理者は、すべての Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、およびその他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+属性ベースのアクセス制御により、組織の管理者は、すべてのExperience Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、およびその他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
 
 **新規ドキュメントまたは更新されたドキュメント**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| SQL を表示 | 「SQL を表示」切替スイッチを使用して、プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを使用してオンデマンドでクエリを実行できるようになりました。 Real-time Customer Data Platformのインサイトを強化する SQL にアクセスすると、データモデルの分析の背後にあるロジックを理解するのに役立ちます。 この透明性により、Adobeの Real-time CDP データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。<br>40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから独自のインサイトを導き出す新しいクエリを作成します。 また、Experience Leagueドキュメントでは、[ プロファイル ](../../dashboards/insights/profiles.md)、[ オーディエンス ](../../dashboards/insights/audiences.md) および [ 宛先 ](../../dashboards/insights/destinations.md) インサイトに対して SQL を使用することもできます。 これらのドキュメントでは、標準のインサイトを使用して回答できるビジネスユースケースをハイライト表示しています。 詳しくは、[ インサイト SQL の表示 ](../../dashboards/view-sql.md) に関するガイドを参照してください。 |
+| SQL を表示 | 「SQL を表示」切替スイッチを使用して、プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを使用してオンデマンドでクエリを実行できるようになりました。 Real-time Customer Data Platform のインサイトを強化する SQL にアクセスすると、データモデルの分析の背後にあるロジックを理解するのに役立ちます。 この透明性により、Adobe Real-time CDP データがよりアクセスしやすく、理解しやすく、意思決定に影響を与えやすくなります。<br>40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成します。 SQL は、Experience League ドキュメントの [ プロファイル ](../../dashboards/insights/profiles.md)、[ オーディエンス ](../../dashboards/insights/audiences.md) および [ 宛先 ](../../dashboards/insights/destinations.md) インサイトでも使用できます。 これらのドキュメントでは、標準のインサイトを使用して回答できるビジネスユースケースをハイライト表示しています。 詳しくは、[insight SQL の表示 ](../../dashboards/view-sql.md) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | ----------- | ----------- |
-| Amazon S3 の宛先の新しい **想定される役割** 認証タイプ | アカウントキーと秘密鍵をExperience Platformと共有しない場合は、Amazon S3 バケットにExperience Platformを接続する際に、新しく想定されるロール認証タイプを使用します。 新しい認証方法について詳しくは、Amazon S3 ドキュメントの [ 認証の節 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) を参照してください。 |
+| Amazon S3 の宛先の新しい **想定される役割** 認証タイプ | Experience Platformでアカウントキーと秘密鍵を共有しない場合は、Experience PlatformをAmazon S3 バケットに接続する際に、新しく想定されるロール認証タイプを使用します。 新しい認証方法について詳しくは、Amazon S3 ドキュメントの [ 認証の節 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 | ドキュメントの更新 | 説明 |
 | --- | --- |
-| ドキュメントの再構築 | ID サービスに関するドキュメントが再構成され、ID サービス内の概念の表示方法と明確さが改善されました。<ul><li>一般的なカスタマージャーニーの詳細なユースケースの例、ID サービスが ID をリンクする方法の分類、Experience Platformエコシステム内で ID サービスが提供するロールの概要については、[ID サービスの概要ページ ](../../identity-service/home.md) を参照してください。</li><li>2 つのサービスの連携方法と目的、プロセス、入力、出力の違いについて詳しくは、[ID サービスとリアルタイム顧客プロファイルの関係について ](../../identity-service/identity-and-profile.md) に関するガイドを参照してください。</li><li>様々なシナリオやタイムスタンプでの ID グラフの動作を示す説明とビジュアライゼーションについては、[ID サービスリンクロジックガイド ](../../identity-service/features/identity-linking-logic.md) を参照してください。</li></ul> |
+| ドキュメントの再構築 | ID サービスに関するドキュメントが再構成され、ID サービス内の概念の表示方法と明確さが改善されました。<ul><li>一般的なカスタマージャーニーの詳細なユースケースの例、ID サービスが ID をどのようにリンクさせるかの分類、Experience Platform エコシステム内で ID サービスが果たす役割の概要については、[ID サービスの概要ページ ](../../identity-service/home.md) を参照してください。</li><li>2 つのサービスの連携方法と目的、プロセス、入力、出力の違いについて詳しくは、[ID サービスとリアルタイム顧客プロファイルの関係について ](../../identity-service/identity-and-profile.md) に関するガイドを参照してください。</li><li>様々なシナリオやタイムスタンプでの ID グラフの動作を示す説明とビジュアライゼーションについては、[ID サービスリンクロジックガイド ](../../identity-service/features/identity-linking-logic.md) を参照してください。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -181,7 +181,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] ソース | ソースカタログの [!DNL Oracle NetSuite] 統合を使用すると、[[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) および [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) アカウントからExperience Platformにデータを取り込むことができます。 |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] ソース | ソースカタログの [!DNL Oracle NetSuite] の統合機能を使用すると、[[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) および [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) アカウントからExperience Platformにデータを取り込むことができます。 |
 | [!BADGE Beta]{type=Informative} [!DNL Braze Currents] ソース | ソースカタログの [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 統合を使用して、[!DNL Braze] アカウントからExperience Platformにデータを取り込みます。 |
 | バッチソースのキーペア認証 [!DNL Snowflake] サポート | バッチデータ用の新しい [!DNL Snowflake] アカウントを作成する際に、キーペア認証を使用できるようになりました。 詳しくは、[API を使用したアカウントの作成  [!DNL Snowflake]  または [UI を使用したアカウントの作成 ](../../sources/tutorials/api/create/databases/snowflake.md) に関するガイドを参照し  [!DNL Snowflake]  ください ](../../sources/tutorials/ui/create/databases/snowflake.md)。 |
 

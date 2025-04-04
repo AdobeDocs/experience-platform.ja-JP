@@ -2,10 +2,10 @@
 title: AEM Asset Insights 拡張機能の概要
 description: Adobe Experience Platform の AEM Asset Insights タグ拡張機能について説明します。
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1062'
-ht-degree: 99%
+source-wordcount: '1063'
+ht-degree: 98%
 
 ---
 
@@ -53,7 +53,7 @@ Adobe Experience Platform 用の「*Adobe Analytics*」タグ拡張機能は、�
 
 ### AEM とタグの統合
 
-[Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja) を Adobe Experience Manager と統合する場合、Adobe I/O を使用して実行することをお勧めします。
+[Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja) をAdobe Experience Managerと統合する場合、Adobe I/Oを使用して実行することをお勧めします。
 
 1. [Adobe I/O を使用して AEM をタグに接続します](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=ja)。
 

@@ -2,18 +2,18 @@
 keywords: Experience Platform;ホーム;人気のトピック;データ取り込み;データの場所;データの場所;データ管理;データ管理;系列;系列;バッチ;バッチ;取り込んだデータ
 solution: Experience Platform
 title: データ取り込みの概要
-description: このドキュメントでは、データを Platform に取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
+description: このドキュメントでは、データをExperience Platformに取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 66%
+source-wordcount: '579'
+ht-degree: 61%
 
 ---
 
 # データ取り込みの概要
 
-Adobe Experience Platform では、複数のソースからのデータを統合し、マーケターが顧客の行動をより深く理解できるようにします。Adobe Experience Platformのデータ取得は、Experience Platformがこれらのソースからデータを取得する複数の方法と、そのデータが Data Lake 内でどのように保持され、ダウンストリームのExperience Platformサービスで使用されるかを表します。
+Adobe Experience Platform では、複数のソースからのデータを統合し、マーケターが顧客の行動をより深く理解できるようにします。Adobe Experience Platformのデータ取得は、Experience Platformがこれらのソースからデータを取得する複数の方法と、そのデータが Data Lake 内でどのように保持され、ダウンストリームのExperience Platform サービスで使用されるかを表します。
 
 このドキュメントでは、データをExperience Platformに取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 

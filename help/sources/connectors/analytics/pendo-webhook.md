@@ -3,10 +3,10 @@ title: Pendo Sourceの概要
 description: API や Webhook を使ったユーザーインターフェイスを使ってAdobe Experience Platformに Pendo を接続する方法を学ぶ
 badge: ベータ版
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 18%
+source-wordcount: '354'
+ht-degree: 7%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 18%
 >
 >[!DNL Pendo] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platformでは、サードパーティの analytics アプリケーションからデータを取り込むことができます。 Analytics プロバイダーのサポートには、[!DNL Pendo] が含まれます。
+Experience Platformでは、サードパーティの分析アプリケーションからデータを取り込むことができます。 Analytics プロバイダーのサポートには、[!DNL Pendo] が含まれます。
 
 [[!DNL Pendo]](https://pendo.io/) は、ソフトウェア企業が顧客の共感を得られる製品を開発するのに役立つように構築された製品分析アプリです。 このアプリを使用すると、ソフトウェアメーカーは、ユーザーの製品体験の向上と製品チームの新しいインサイトの両方につながる可能性のある幅広いツールを製品に埋め込むことができます。
 
@@ -38,16 +38,16 @@ Experience Platformでは、サードパーティの analytics アプリケー�
 
 ### Webhook[!DNL Pendo] 設定 {#set-up-webhook}
 
-データフローが正常に作成されたら、イベントについて Platform に通知する Webhook を設定する必要 [!DNL Pendo] あります。 [!DNL Pendo] Webhook は、特定のイベントが発生したときにリアルタイム通知を他のサービスにプッシュし、この情報を [!DNL Pendo] ソースに送信できます。 詳しくは、[ ストリーミングエンドポイント URL の取得 ](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) および [Webhook の設定 ](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook) に関するチュ  [!DNL Pendo]  トリアルを参照してください。
+データフローが正常に作成されたら、イベントについてExperience Platformに通知する Webhook を設定する必要 [!DNL Pendo] あります。 [!DNL Pendo] Webhook は、特定のイベントが発生したときにリアルタイム通知を他のサービスにプッシュし、この情報を [!DNL Pendo] ソースに送信できます。 詳しくは、[ ストリーミングエンドポイント URL の取得 ](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) および [Webhook の設定 ](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook) に関するチュ  [!DNL Pendo]  トリアルを参照してください。
 
-## Platform への [!DNL Pendo] の接続 {#connect-to-platform}
+## Experience Platformへの [!DNL Pendo] の接続 {#connect-to-platform}
 
-以下のドキュメントでは、API またはユーザーインターフェイスを使用してと接続する、[!DNL Pendo] ストリーミングコネクタを作成する方法に関する情報を提供し [!DNL Platform] す。
+以下のドキュメントでは、API またはユーザーインターフェイスを使用してと接続する、[!DNL Pendo] ストリーミングコネクタを作成する方法に関する情報を提供し [!DNL Experience Platform] す。
 
-### API を使用して [!DNL Pendo] と Platform を接続する {#connect-to-platform-using-api}
+### API を使用した [!DNL Pendo] のExperience Platformへの接続 {#connect-to-platform-using-api}
 
-* [API を使用してデータを Platform に取り込む  [!DNL Pendo]  めのソース接続を作成します。](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [ソース接続を作成し、API を使用してExperience Platformにデータを取り込みます  [!DNL Pendo] ](../../tutorials/api/create/analytics/pendo-webhook.md)
 
-### UI を使用した [!DNL Pendo] の Platform への接続 {#connect-to-platform-using-ui}
+### UI を使用した [!DNL Pendo] のExperience Platformへの接続 {#connect-to-platform-using-ui}
 
-* [ユーザーインターフェイスを使用した、Platform にデータを取り込むソ  [!DNL Pendo]  ス接続の作成](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [ユーザーインターフェイスを使用した  [!DNL Pendo]  ソース接続を作成し、データをExperience Platformに取り込みます](../../tutorials/ui/create/analytics/pendo-webhook.md)

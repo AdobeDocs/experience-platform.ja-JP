@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform Debugger を使用した埋め込みコードのテスト
-description: Platform Debugger を使用して、Web サイト上で Adobe Experience Platform の様々な埋め込みコードをローカルでテストする方法について説明します。
+description: Experience Platform Debugger を使用して、web サイト上でAdobe Experience Platformの様々な埋め込みコードをローカルでテストする方法について説明します。
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 92%
+source-wordcount: '500'
+ht-degree: 58%
 
 ---
 
@@ -21,23 +21,23 @@ Adobe Experience Platform のタグライブラリビルドに変更を加える
 
 このチュートリアルでは、タグの環境と埋め込みコードの使用に関する十分な知識が必要です。 「[環境の概要](./environments.md) 」で詳細情報を参照してください。
 
-また、このチュートリアルでは、Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Platform Debugger は、Chrome ブラウザーで使用できます。 チュートリアルを開始する前に、次のリンクを使用して拡張機能をインストールします。
+また、このチュートリアルでは、Experience Platform Debugger ブラウザー拡張機能がインストールされている必要があります。 Experience Platform Debugger は、Chrome ブラウザーで使用できます。 チュートリアルを開始する前に、次のリンクを使用して拡張機能をインストールします。
 
-* [クロム用 Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Chrome用Experience Platform デバッガー ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-## Web サイトで Platform Debugger を開きます
+## Web サイトでExperience Platform Debugger を開きます。
 
-選択したブラウザーを使用して、Web サイトに移動し、Platform Debugger 拡張機能を開きます。Platform Debugger が現在接続しているサイトが、ウィンドウの下部に表示されます。 タグが現在サイト上で実行中の場合は、「[!UICONTROL 概要]」タブに表示されます。
+任意のブラウザーを使用して web サイトに移動し、Experience Platform Debugger 拡張機能を開きます。 Experience Platform Debugger が現在接続しているサイトが、ウィンドウの下部に表示されます。 タグが現在サイト上で実行中の場合は、「[!UICONTROL 概要]」タブに表示されます。
 
 ![](./images/embed-code-testing/summary.png)
 
 >[!NOTE]
 >
->Platform Debugger が最初に接続しない場合は、Web サイトを表示しているブラウザータブをリロードしてから、再試行する必要がある場合があります。
+>Experience Platform Debugger が最初に接続しない場合は、再試行する前に、web サイトを表示しているブラウザータブを再読み込みする必要がある可能性があります。
 
 ## 埋め込みコードの置換
 
-Platform Debugger がサイトに接続したら、左側のナビゲーションで「 **[!UICONTROL Launch]** 」を選択します。ここには、環境や関連する拡張機能など、現在サイトで実行されているライブラリビルドに関する情報が表示されます。 ここから「**[!UICONTROL 設定]**」を選択すると、埋め込みコードを管理するコントロールが表示されます。
+Experience Platform Debugger がサイトに接続したら、左側のナビゲーションで「**[!UICONTROL Launch]**」を選択します。 ここには、環境や関連する拡張機能など、現在サイトで実行されているライブラリビルドに関する情報が表示されます。 ここから「**[!UICONTROL 設定]**」を選択すると、埋め込みコードを管理するコントロールが表示されます。
 
 ![](./images/embed-code-testing/launch-tab.png)
 
@@ -45,7 +45,7 @@ Platform Debugger がサイトに接続したら、左側のナビゲーショ�
 
 ![](./images/embed-code-testing/replace.png)
 
-現在の埋め込みコードを置き換える埋め込みコードを指定するよう求めるポップオーバーが表示されます。 Platform Debugger を使用して埋め込みコードを置き換えても、サイトに導入されている埋め込みコードは変更されません。 代わりに、ローカルで実行されている埋め込みコードのみが置き換えられるので、実装のテストとデバッグを実行できます。
+現在の埋め込みコードを置き換える埋め込みコードを指定するよう求めるポップオーバーが表示されます。 Experience Platform Debugger を使用して埋め込みコードを置き換えても、サイトにデプロイされた埋め込みコードは変更されません。 代わりに、ローカルで実行されている埋め込みコードのみが置き換えられるので、実装のテストとデバッグを実行できます。
 
 表示されたテキストボックスにテストする埋め込みコードをペーストし、「**[!UICONTROL 適用]**」を選択します。
 
@@ -57,4 +57,4 @@ Platform Debugger がサイトに接続したら、左側のナビゲーショ�
 
 ## 次の手順
 
-このチュートリアルでは、Platform Debugger を使用して、テスト用に埋め込みコードをローカルで切り替える方法を説明します。 各機能の詳細情報については、[Platform Debugger のドキュメント](../../../debugger/home.md) を参照してください。
+このチュートリアルでは、Experience Platform Debugger を使用してテスト目的で埋め込みコードをローカルに切り替える方法について説明しました。 様々な機能について詳しくは、[Experience Platform Debugger のドキュメント ](../../../debugger/home.md) を参照してください。

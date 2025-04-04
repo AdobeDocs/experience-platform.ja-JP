@@ -5,10 +5,10 @@ title: UI での顧客属性Source接続の作成
 type: Tutorial
 description: UI でソース接続を作成して、顧客属性プロファイルデータをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 36%
+source-wordcount: '620'
+ht-degree: 33%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 36%
 >
 >顧客属性プロファイルデータのソース接続が既に確立されている場合は、ソースに接続するオプションは無効になります。
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、接続を作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、接続を作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-[!UICONTROL Adobeアプリケーション ] カテゴリで、「**[!UICONTROL 顧客属性]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
+[!UICONTROL Adobe アプリケーション ] カテゴリで、「**[!UICONTROL 顧客属性]**」を選択し、「**[!UICONTROL データを追加]**」を選択します。
 
 ![カタログ](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
@@ -42,7 +42,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >
 >フィールドグループ、スキーマおよびデータセットは、フロープロビジョニングの一環として、すぐに使用できるように作成されています。 これらは現状のままなので、必要に応じて手動で削除する必要があります。
 
-顧客属性ソースでは、スキーマ進化はサポートされていません。 顧客属性データソースのスキーマ入力を変更すると、Platform と互換性がなくなります。 回避策として、既存の顧客属性データフローを、関連するデータセット、スキーマ、フィールドグループと共に削除した後、更新されたスキーマとデータソースを使用して新しい顧客属性データフローを作成できます。
+顧客属性ソースでは、スキーマ進化はサポートされていません。 顧客属性データソースのスキーマ入力を変更すると、Experience Platformと互換性がなくなります。 回避策として、既存の顧客属性データフローを、関連するデータセット、スキーマ、フィールドグループと共に削除した後、更新されたスキーマとデータソースを使用して新しい顧客属性データフローを作成できます。
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-接続を作成すると、受信データを格納するターゲットスキーマとデータセットが自動的に作成されます。 初回の取り込みが完了したら、[!DNL Real-Time Customer Profile] や [!DNL Segmentation Service] などのダウンストリームの Platform サービスで顧客属性プロファイルデータを使用できるようになります。 詳しくは、次のドキュメントを参照してください。
+接続を作成すると、受信データを格納するターゲットスキーマとデータセットが自動的に作成されます。 初回の取り込みが完了したら、[!DNL Real-Time Customer Profile] や [!DNL Segmentation Service] などのダウンストリームのExperience Platform サービスで顧客属性プロファイルデータを使用できるようになります。 詳しくは、次のドキュメントを参照してください。
 
 * [[!DNL Real-Time Customer Profile] 概要](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] 概要](../../../../../segmentation/home.md)

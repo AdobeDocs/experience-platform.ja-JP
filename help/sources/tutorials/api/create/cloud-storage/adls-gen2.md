@@ -5,10 +5,10 @@ title: Flow Service API を使用した Azure Data Lake Storage Gen2 ベース�
 type: Tutorial
 description: Flow Service API を使用してAdobe Experience Platformを Azure Data Lake Storage Gen2 に接続する方法を説明します。
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 41%
+source-wordcount: '507'
+ht-degree: 30%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 41%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md):[!DNL Experience Platform] には、単一のExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用して ADLS Gen2 ソース接続を正しく作成するために必要な追加情報を示します。
 
@@ -41,15 +41,15 @@ ht-degree: 41%
 
 これらの値の詳細については、[ この ADLS Gen2 ドキュメント ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage) を参照してください。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
-ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベースPOSTID を作成するには、`/connections` エンドポイントに接続リクエストを実行し、その際に ADLS Gen2 認証資格情報をリクエストパラメーターの一部として指定します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際に ADLS Gen2 認証資格情報をリクエストパラメーターの一部として指定します。
 
 **API 形式**
 

@@ -1,14 +1,14 @@
 ---
 title: UI での  [!DNL Oracle NetSuite Activities]  ソース接続の作成
-description: Adobe Experience Platform UI を使用して、Oracleの NetSuite アクティビティソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用してOracle NetSuite Activities ソース接続を作成する方法について説明します。
 hide: true
 hidefromtoc: true
 badge: ベータ版
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 46%
+source-wordcount: '624'
+ht-degree: 40%
 
 ---
 
@@ -37,33 +37,33 @@ UI で [!DNL Oracle NetSuite Activities] アカウントからAdobe Experience P
 
 ## [!DNL Oracle NetSuite] アカウントを接続 {#connect-account}
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *マーケティング自動化* カテゴリで、「**[!DNL Oracle NetSuite Activities]**」を選択し、次に **[!UICONTROL データを追加]** を選択します。
 
-![Oracleの NetSuite アクティビティカードを含んだカタログの Platform UI スクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
+![Oracle NetSuite アクティビティカードを含むカタログのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
 
-**[!UICONTROL OracleNetSuite アクティビティアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Oracle NetSuite アクティビティアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 >[!IMPORTANT]
 >
->更新トークンは 7 日後に有効期限が切れます。 トークンの有効期限が切れたら、更新したトークンを使用してExperience Platform時にアカウントを作成する必要があります。 更新したトークンで新しいアカウントを作成しない場合は、次のエラーメッセージが表示される場合があります。`The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
+>更新トークンは 7 日後に有効期限が切れます。 トークンの有効期限が切れたら、更新したトークンを使用してExperience Platformにアカウントを作成する必要があります。 更新したトークンで新しいアカウントを作成しない場合は、次のエラーメッセージが表示される場合があります。`The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### 既存のアカウント {#existing-account}
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL Oracle NetSuite Activities] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![Oracleの NetSuite アクティビティアカウントを既存のアカウントに接続するための Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
+![Experience Platform NetSuite アクティビティアカウントを既存のアカウントに接続するためのOracle UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
 ### 新規アカウント {#new-account}
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![Oracleの NetSuite アクティビティアカウントを新しいアカウントに接続するための Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
+![Experience Platform NetSuite アクティビティアカウントを新しいアカウントに接続するためのOracle UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Oracle NetSuite Activities] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](../../dataflow/marketing-automation.md)を行いましょう。
+このチュートリアルでは、[!DNL Oracle NetSuite Activities] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/marketing-automation.md) を行いましょう。
 
 ## その他のリソース {#additional-resources}
 
@@ -71,7 +71,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### マッピング {#mapping}
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 >[!NOTE]
 >

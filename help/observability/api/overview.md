@@ -2,12 +2,12 @@
 keywords: Experience Platform;ホーム;人気のトピック;日付範囲
 solution: Experience Platform
 title: Observability Insights API ガイド
-description: Observability Insights は、デベロッパーがAdobe Experience Platformで主要な観察性指標を公開できる RESTful API です。 これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
+description: Observability Insights は、デベロッパーがAdobe Experience Platformで主要な観察性指標を公開できる RESTful API です。 これらの指標は、Experience Platformの使用状況の統計、Experience Platform サービスのヘルスチェック、様々なExperience Platform機能の過去の傾向とパフォーマンス指標に関するインサイトを提供します。
 exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 29%
+source-wordcount: '154'
+ht-degree: 14%
 
 ---
 

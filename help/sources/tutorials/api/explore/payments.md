@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service API を使用した支払いシステムの調査
 description: このチュートリアルでは、Flow Service API を使用して支払いアプリケーションを調べます。
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '596'
 ht-degree: 39%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 39%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用して支払い申請に正常に接続するために必要な追加情報を示しています。
 
 ### 必要な資格情報の収集
 
-このチュートリアルでは、データの取り込み元となるサードパーティの支払い申請との有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様 ID と接続 ID が含まれます。 支払い接続の作成とこれらの値の取得について詳しくは、[ 支払いソースの Platform への接続 ](../../api/create/payments/paypal.md) チュートリアルを参照してください。
+このチュートリアルでは、データの取り込み元となるサードパーティの支払い申請との有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様 ID と接続 ID が含まれます。 支払い連携の作成とこれらの値の取得について詳しくは、[ 支払いソースのExperience Platformへの接続 ](../../api/create/payments/paypal.md) チュートリアルを参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -36,13 +36,13 @@ ht-degree: 39%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name：`{SANDBOX_NAME}`
 
@@ -52,7 +52,7 @@ ht-degree: 39%
 
 ## データテーブルの探索
 
-支払いシステムの接続 ID を使用すると、データリクエストを実行してGETテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Platform] に取り込むテーブルのパスを検索します。
+支払いシステムの接続 ID を使用すると、GET リクエストを実行してデータテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Experience Platform] に取り込むテーブルのパスを検索します。
 
 **API 形式**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、支払いシステムからテーブルの配列が返されます。 [!DNL Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
+応答が成功すると、支払いシステムからテーブルの配列が返されます。 [!DNL Experience Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
 
 ```json
 [
@@ -112,9 +112,9 @@ curl -X GET \
 ]
 ```
 
-## テーブルの構造のInspect
+## テーブルの構造を検査する
 
-支払いシステムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定してGETリクエストを実行します。
+支払いシステムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定したうえで、GET リクエストを実行します。
 
 **API 形式**
 
@@ -180,4 +180,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、支払いシステムを調べ、取り込むテーブルのパスを見つけ [!DNL Platform]、その構造に関する情報を取得しました。 次のチュートリアルではこの情報を使用して [ 支払いシステムからデータを収集し、Platform に取り込む ](../collect/payments.md) ことができます。
+このチュートリアルに従って、支払いシステムを調べ、取り込むテーブルのパスを見つけ [!DNL Experience Platform]、その構造に関する情報を取得しました。 次のチュートリアルではこの情報を使用して [ 支払いシステムからデータを収集し、Experience Platformに取り込む ](../collect/payments.md) ことができます。

@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads には、登録販売者、ベンダー、書籍ベンダー、Kindle ダイレクトパブリッシング（KDP）の著者、アプリ開発者、代理店への広告掲載の目標を達成するのに役立つ様々なオプションが用意されています。Amazon Ads と Adobe Experience Platform の統合により、Amazon DSP（ADSP）などの Amazon Ads 製品へのターンキー統合が可能になります。Adobe Experience Platform で Amazon Ads 宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスを Amazon DSP で定義できます。
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1819'
-ht-degree: 49%
+source-wordcount: '1820'
+ht-degree: 47%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platformとの [!DNL Amazon Ads] 統合により、Amazon DSP�
 
 Adobe Experience Platformで [!DNL Amazon Ads] の宛先を使用すると、ターゲティングとアクティブ化のための広告主オーディエンスをAmazon DSPで定義できます。  さらに、ユーザーは、オーディエンス、広告主が提供したディメンション、Amazon セグメントのメンバーシップ、または AMC で使用可能なその他のシグナルによるパフォーマンスを理解するために、データを [!DNL Amazon Marketing Cloud] にアップロードできます。 広告主オーディエンスを AMC にアップロードした後、[!DNL Amazon Marketing Cloud] を使用して、[!DNL Amazon Marketing Cloud] 内からAmazonのシグナルを使用して、オーディエンスメンバーに対して変更、強化または追加を行うことができます。
 
-AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーディオ、スポンサー付き広告など、Amazonが所有および運営する施設を横断する独自の信号を統合します。 ユーザーは、Adobe Experience Platformから AMC にキュレートされたセグメントを簡単に送信して、オーディエンスの市場内グループ、ライフスタイルコホート、ブランドエンゲージメントパターンなどのラーニングを強化できます。 拡張セグメントを使用すると、Amazon DSPでのメディアのアクティベーションを最適化できます。
+AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーディオ、スポンサー付き広告など、Amazonが所有および運営する施設を横断する独自の信号を統合します。 ユーザーは、Adobe Experience Platformから AMC にキュレートされたセグメントを簡単に送信して、オーディエンスの市場内グループ、ライフスタイルコホート、ブランドエンゲージメントパターンなどのラーニングを強化できます。 拡張セグメントを使用すると、Amazon DSPでメディアのアクティベーションを最適化できます。
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーデ�
 
 ### アクティブ化とターゲティング {#activation-and-targeting}
 
-このAmazon DSPとの統合により、[!DNL Amazon Ads] 広告主は広告主 CDP オーディエンスをAdobe Experience PlatformからAmazonDSPに渡し、広告ターゲティング用の広告主オーディエンスを作成できます。 オーディエンスは、Amazon DSP 内でポジティブターゲティングとネガティブターゲティング（抑制）のために選択できます。
+このAmazon DSPとの統合により、[!DNL Amazon Ads] 広告主は広告主 CDP オーディエンスをAdobe Experience PlatformからAmazonのDSPに渡して、広告ターゲティング用の広告主オーディエンスを作成できます。 オーディエンスは、Amazon DSP 内でポジティブターゲティングとネガティブターゲティング（抑制）のために選択できます。
 
 ### 分析と測定 {#analytics-and-measurement}
 
@@ -47,7 +47,7 @@ AMC は、ディスプレイ、ビデオ、ストリーミング TV、オーデ�
 Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、まずAmazon DSP広告主アカウントまたは [!DNL Amazon Marketing Cloud] インスタンスにアクセスできる必要があります。 これらのインスタンスをプロビジョニングするには、[!DNL Amazon Ads] web サイトの次のページにアクセスします。
 
 * [Amazon DSP - デマンドサイドプラットフォームで広告を始める](https://advertising.amazon.com/solutions/products/amazon-dsp)
-* [AmazonMarketing Cloudの概要 ](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
+* [Amazon Marketing Cloudの概要 ](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## サポートされている ID {#supported-identities}
 
@@ -55,8 +55,8 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 
 {style="table-layout:auto"}
 
@@ -126,7 +126,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 * ハッシュ化されたメールアドレスをマッピングするには、`Email_LC_SHA256` ID 名前空間をソースフィールドとして選択します。
 * ハッシュ化された電話番号をマッピングするには、`Phone_SHA256` ID 名前空間をソースフィールドとして選択します。
-* ハッシュ化されていないメールアドレスまたは電話番号をマッピングするには、対応する ID 名前空間をソースフィールドとして選択し、「`Apply Transformation`」オプションをオンにして、アクティブ化時に Platform で ID をハッシュ化するように設定します。
+* ハッシュ化されていないメールアドレスまたは電話番号をマッピングするには、対応する ID 名前空間をソースフィールドとして選択し、「`Apply Transformation`」オプションをオンにして、アクティブ化時にExperience Platformで ID をハッシュ化するように設定します。
 * *2024 年 9 月リリース以降の新機能*:Amazon Ads では、ID 解決プロセスを容易にするために、`countryCode` 値を含むフィールドを 2 文字の ISO 形式（例：US、GB、MX、CA など）でマッピングする必要があります。 `countryCode` マッピングを持たない接続は、ID 一致率に悪影響を与えます。
 
 [!DNL Amazon Ads] コネクタの宛先設定では、特定のターゲットフィールドを 1 回だけ選択します。  例えば、ビジネスメールを送信する場合、個人のメールを同じ宛先設定にマッピングすることはできません。
@@ -149,7 +149,7 @@ Adobe Experience Platformで [!DNL Amazon Ads] 接続を使用するには、ま
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Amazon Marketing Cloudオーディエンス作成の検証 ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![Amazon Marketing Cloud オーディエンス作成の検証 ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
 

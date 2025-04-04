@@ -2,10 +2,10 @@
 title: Reactor API の認証とアクセス
 description: Reactor API の使用を開始する方法（必要なアクセス資格情報を生成する手順など）について説明します。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 51%
+source-wordcount: '912'
+ht-degree: 54%
 
 ---
 
@@ -43,15 +43,15 @@ Adobe Developer Console を使用して、次の 3 つのアクセス資格情�
 
 ![](../images/api/getting-started/add-api-button.png)
 
-**API の追加**&#x200B;画面が表示されます。 「**次へ**」を選択する前に、使用可能な API のリストから **0}Experience Platform LaunchAPI} を選択します。**
+**API の追加**&#x200B;画面が表示されます。 使用可能な API のリストから「**Experience Platform Launch API**」を選択して、「**次へ**」を選択します。
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-次に、認証タイプを選択してアクセストークンを生成し、Experience PlatformAPI にアクセスします。
+次に、認証タイプを選択してアクセストークンを生成し、Experience Platform API にアクセスします。
 
 >[!IMPORTANT]
 >
->今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、「[!BADGE  非推奨 ]」の節を参照してください。{type=negative}Platform API 認証のチュートリアルの [JSON web トークン（JWT）を生成する ](/help/landing/api-authentication.md#jwt)。
+>今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、「[!BADGE  非推奨 ]」の節を参照してください。{type=negative}Experience Platform API 認証チュートリアルの [JSON web トークン（JWT）を生成する ](/help/landing/api-authentication.md#jwt)。
 
 「**次へ**」をクリックして続行します。
 
@@ -69,7 +69,7 @@ Adobe Developer Console を使用して、次の 3 つのアクセス資格情�
 
 ### 資格情報の収集 {#gather-credentials}
 
-API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Experience PlatformAPI]** ページに、Experience PlatformAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
+API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Experience Platform API]** ページに、Experience Platform API へのすべての呼び出しで必要な次の資格情報が表示されます。
 
 * `{API_KEY}` （[!UICONTROL  クライアント ID]）
 * `{ORG_ID}` （[!UICONTROL  組織 ID]）
@@ -78,7 +78,7 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 ### アクセストークンの生成 {#generate-access-token}
 
-次の手順では、Platform API 呼び出しで使用する `{ACCESS_TOKEN}` 資格情報を生成します。 `{API_KEY}` と `{ORG_ID}` の値とは異なり、Platform API を引き続き使用するには、新しいトークンを 24 時間ごとに生成する必要があります。
+次の手順では、Experience Platform API 呼び出しで使用する `{ACCESS_TOKEN}` 資格情報を生成します。 `{API_KEY}` と `{ORG_ID}` の値とは異なり、Experience Platform API を引き続き使用するには、新しいトークンを 24 時間ごとに生成する必要があります。
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 #### トークン生成の自動化 {#auto-token}
 
-また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、Experience PlatformAPI 認証ガイドの [Postmanを使用した API 呼び出しの認証およびテスト ](/help/landing/api-authentication.md#use-postman) に関する節を参照してください。
+また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、Experience Platform API 認証ガイドの [Postmanを使用した API 呼び出しの認証およびテスト ](/help/landing/api-authentication.md#use-postman) に関する節を参照してください。
 
 ## API 資格情報のテスト {#test-api-credentials}
 
@@ -115,7 +115,7 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 ## API 呼び出し例の読み取り {#read-sample-api-calls}
 
-各エンドポイントガイドには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、Platform API の開始ガイドの [ サンプル API 呼び出しの読み方 ](../../landing/api-guide.md#sample-api) に関する節を参照してください。
+各エンドポイントガイドには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、Experience Platform API の開始ガイドの[API 呼び出し例の読み方](../../landing/api-guide.md#sample-api)に関する節を参照してください。
 
 ## 次の手順 {#next-steps}
 

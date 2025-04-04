@@ -1,12 +1,12 @@
 ---
-keywords: Advertising Cloud;advertising cloud 拡張機能；advertising cloud の宛先
+keywords: Advertising Cloud;Advertising Cloud 拡張機能；Advertising Cloud の宛先
 title: Adobe Advertising Cloud 拡張機能
-description: Adobe Advertising Cloud拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Adobe Advertising Cloud 拡張機能は、Adobe Experience Platformの広告の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 44%
+source-wordcount: '441'
+ht-degree: 42%
 
 ---
 
@@ -16,23 +16,23 @@ ht-degree: 44%
 
 これは、DSPと検索の両方に [!DNL Advertising Cloud] コンバージョンタグとオーディエンスタグを実装するための [!DNL Advertising Cloud] しい拡張機能です（現在、DCO はサポートされていません）。
 
-Adobe Advertising Cloudは、Adobe Experience Platformの広告拡張機能です。
+Adobe Advertising Cloud は、Adobe Experience Platformの広告拡張機能です。
 
-この宛先はタグ拡張機能です。 Platform でのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
 
 ![Adobe Advertising Cloud 拡張機能](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-プラットフォームを購入したすべての顧客は、この拡張機能を宛先カタログから利用できます。
+Experience Platformを購入したすべての顧客は、この拡張機能を宛先カタログから使用できます。
 
-この拡張機能を使用するには、Platform のタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせて、UI のデータ収集機能へのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
+この拡張機能を使用するには、Experience Platformのタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせて、UI のデータ収集機能へのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
 Adobe Advertising Cloud 拡張機能をインストールするには、以下を実行します。
 
-[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

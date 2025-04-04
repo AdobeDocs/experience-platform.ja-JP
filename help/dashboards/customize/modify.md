@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;ユーザーインターフェイス;UI;ダッシュボード;ダッシュボード;プロファイル;セグメント;宛先;ライセンスの使用
-title: Platform のダッシュボードを UI で変更
+title: UI でのExperience Platform ダッシュボードの変更
 description: このガイドでは、組織の Adobe Experience Platform のデータをダッシュボードで表示する方法をカスタマイズする手順を説明します。
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 88%
+source-wordcount: '498'
+ht-degree: 82%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 >
 >ダッシュボードに加えられた更新は、組織ごとおよびサンドボックス別に行われます。
 
-このガイドでは、Platform UI の [!UICONTROL プロファイル]、 [!UICONTROL セグメント]、 [!UICONTROL 宛先] の各ダッシュボードでダッシュボードデータを表示する方法をカスタマイズする手順を説明します。
+このガイドでは、Experience Platform UI の [!UICONTROL  プロファイル ]、[!UICONTROL  セグメント ]、[!UICONTROL  宛先 ] の各ダッシュボードでダッシュボードデータを表示する方法をカスタマイズする手順を説明します。
 
 ## はじめに
 

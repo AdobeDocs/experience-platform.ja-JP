@@ -1,11 +1,11 @@
 ---
-title: AI で生成されたRecommendationsを使用して、CSV ファイルを XDM スキーマにマッピングする
+title: AI で生成されたレコメンデーションを使用して、CSV ファイルを XDM スキーマにマッピングする
 description: このチュートリアルでは、AI で生成されたレコメンデーションを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 77%
+source-wordcount: '1179'
+ht-degree: 64%
 
 ---
 
@@ -13,24 +13,24 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Platform で一般に利用可能な CSV マッピング機能について詳しくは、[既存のスキーマへの CSV ファイルのマッピング](./existing-schema.md)に関するドキュメントを参照してください。
+>Experience Platformで一般に利用可能な CSV マッピング機能について詳しくは、[ 既存のスキーマへの CSV ファイルのマッピング ](./existing-schema.md) に関するドキュメントを参照してください。
 
-CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。マッピング先を[既存のスキーマ](./existing-schema.md)に選択できます。ただし、使用するスキーマや構造が不明な場合は、代わりに、Platform UI 内の機械学習（ML）モデルに基づく動的なレコメンデーションを使用できます。
+CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。マッピング先を [ 既存のスキーマ ](./existing-schema.md) に選択できます。ただし、使用するスキーマや構造が不明な場合は、代わりに、Experience Platform UI 内の機械学習（ML）モデルに基づく動的なレコメンデーションを使用できます。
 
 ## はじめに
 
-このチュートリアルでは、[!DNL Platform] の次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、[!DNL Experience Platform] の次のコンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
    * 少なくとも、[XDM での動作](../../../xdm/home.md#data-behaviors)の概念を理解して、データを[!UICONTROL プロファイル]クラス（レコードの動作）または [!UICONTROL ExperienceEvent] クラス（時系列の動作）にマッピングするかどうかを決定できるようになる必要があります。
-* [バッチ取得](../../batch-ingestion/overview.md)： [!DNL Platform] がユーザー指定のデータファイルからデータを取り込む方法。
+* [バッチ取得](../../batch-ingestion/overview.md)： [!DNL Experience Platform] がユーザー指定のデータファイルからデータを取り込む方法。
 * [Adobe Experience Platform データ準備](../../batch-ingestion/overview.md)：取り込んだデータを XDM スキーマに準拠するようにマッピングおよび変換できる一連の機能。[データ準備機能](../../../data-prep/functions.md)に関するドキュメントは、スキーママッピングに特に関連します。
 
 ## データフローの詳細を入力
 
 Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL ソース]**」を選択します。**[!UICONTROL カタログ]**&#x200B;ビューで、**[!UICONTROL ローカルシステム]**&#x200B;カテゴリに移動します。**[!UICONTROL ローカルファイルをアップロード]**&#x200B;で、「**[!UICONTROL データを追加]**」を選択します。
 
-![Platform UI の [!UICONTROL  ソース ] カタログで、[!UICONTROL  ローカルファイルのアップロード ] の下にある [!UICONTROL  データを追加 ] が選択されています。](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![Experience Platform UI の [!UICONTROL  ソース ] カタログで、「ローカルファイルのアップロード [!UICONTROL  の下の [!UICONTROL  データを追加 ] が選択され ] います。](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 **[!UICONTROL XDM スキーマに CSV をマッピング]**&#x200B;のワークフローが表示されるので、**[!UICONTROL データフローの詳細]**&#x200B;手順を開始します。
 
@@ -47,7 +47,7 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 | [!UICONTROL 説明] | データフローに関する説明。 |
 | [!UICONTROL エラー診断] | 有効にすると、新しく取り込んだバッチに対してエラーメッセージが生成され、[API](../../batch-ingestion/api-overview.md) で対応するバッチを取得する際に表示できます。 |
 | [!UICONTROL 部分取り込み] | 有効にすると、新しいバッチデータの有効なレコードは、指定したエラーしきい値内で取り込まれます。このしきい値を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。 |
-| [!UICONTROL データフローの詳細] | CSV データを Platform に取り込むデータフローの名前と説明（オプション）を入力します。ワークフローを開始すると、データフローにデフォルト名が自動的に割り当てられます。名前の変更はオプションです。 |
+| [!UICONTROL データフローの詳細] | CSV データをExperience Platformに取り込むデータフローの名前と説明（オプション）を入力します。 ワークフローを開始すると、データフローにデフォルト名が自動的に割り当てられます。名前の変更はオプションです。 |
 | [!UICONTROL アラート] | データフローが開始された後に、データフローのステータスに関して受け取りを希望する[製品内アラート](../../../observability/alerts/overview.md)をリストから選択します。 |
 
 {style="table-layout:auto"}
@@ -76,7 +76,7 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 >
 >ソースからターゲットへのフィールドマッピングワークフローでは、様々な条件に基づいて、スキーマ内のすべてのフィールドをフィルタリングできます。 デフォルトの動作では、マッピングされたすべてのフィールドが表示されます。 表示されるフィールドを変更するには、検索入力フィールドの横にあるフィルターアイコンを選択し、ドロップダウンオプションから選択します。<br> ![ フィルターアイコンとドロップダウンメニューがハイライト表示された CSV から XDM スキーマ作成ワークフローへのマッピングステージ。](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png " フィルターアイコンとドロップダウンメニューがハイライト表示された CSV から XDM スキーマ作成ワークフローへのマッピングステージ。"){width="100" zoomable="yes"}
 
-ここから、必要に応じてオプションで「[フィールドマッピングを編集](#edit-mappings)」または「[関連付けられているフィールドグループを変更](#edit-schema)」を選択できます。十分な設定ができた時点で、「**[!UICONTROL 終了]**」を選択してマッピングを完了し、事前に設定したデータフローを開始します。CSV データはシステムに取り込まれ、生成されたスキーマ構造に基づいてデータセットが設定され、ダウンストリームの Platform サービスで利用できる状態になります。
+ここから、必要に応じてオプションで「[フィールドマッピングを編集](#edit-mappings)」または「[関連付けられているフィールドグループを変更](#edit-schema)」を選択できます。十分な設定ができた時点で、「**[!UICONTROL 終了]**」を選択してマッピングを完了し、事前に設定したデータフローを開始します。CSV データはシステムに取り込まれ、生成されたスキーマ構造に基づいてデータセットが設定され、ダウンストリームのExperience Platform サービスで利用できる状態になります。
 
 ![ 「[!UICONTROL  完了 ]」ボタンを選択している状態で、CSV マッピングプロセスを完了する。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
@@ -98,8 +98,8 @@ ML モデルを使用すると、CSV フィールドは既存の XDM フィー�
 
 ## 次の手順
 
-このガイドでは、AI によって生成されたレコメンデーションを使用して CSV ファイルを XDM スキーマにマッピングし、バッチ取得を使用してそのデータを Platform に取り込む方法について説明しました。
+このガイドでは、AI で生成されたレコメンデーションを使用して CSV ファイルを XDM スキーマにマッピングし、バッチ取得を使用してそのデータをExperience Platformに取り込む方法について説明しました。
 
-CSV ファイルを既存のスキーマにマッピングする手順については、[既存のスキーママッピングワークフロー](./existing-schema.md)を参照してください。事前に作成されたソース接続を使用した、リアルタイムでの Platform へのデータストリーミングについて詳しくは、[ソースの概要](../../../sources/home.md)を参照してください。
+CSV ファイルを既存のスキーマにマッピングする手順については、[既存のスキーママッピングワークフロー](./existing-schema.md)を参照してください。事前に作成されたソース接続を使用した、リアルタイムでのExperience Platformへのデータストリーミングについて詳しくは、[ ソースの概要 ](../../../sources/home.md) を参照してください。
 
 また、機械学習（ML）アルゴリズムを使用して **サンプル CSV データからスキーマを生成** することもできます。 このワークフローでは、CSV ファイルの構造とコンテンツに基づいて、新しいスキーマが自動的に作成されます。 この新しく作成されたスキーマがデータの形式に一致することで、大規模で複雑なデータセットの構造、フィールド、データタイプを定義する際に、時間を節約し、精度を高めることができます。 このワークフローについて詳しくは、[ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) を参照してください。

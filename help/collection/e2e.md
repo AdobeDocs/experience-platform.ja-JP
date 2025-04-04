@@ -2,24 +2,24 @@
 title: エンドツーエンドでのデータ収集の概要
 description: Adobe Experience Platformのデータ収集機能を使用して、Adobe Experience Cloud ソリューションにイベントデータを送信する方法の概要です。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2616'
-ht-degree: 93%
+source-wordcount: '2624'
+ht-degree: 87%
 
 ---
 
 # エンドツーエンドでのデータ収集の概要
 
-Adobe Experience Platformは、お客様のデータを収集し、他のAdobe製品やサードパーティの宛先に転送します。 アプリケーションからExperience PlatformEdge Networkにイベントデータを送信するには、これらのコアテクノロジーと、必要なときに必要な宛先へとデータを配信するように設定する方法を理解することが重要です。
+Adobe Experience Platformは、お客様のデータを収集し、他のAdobe製品やサードパーティの宛先に転送します。 アプリケーションからExperience Platform Edge Networkにイベントデータを送信するには、これらのコアテクノロジーと、必要なときに必要な宛先へとデータを配信するように設定する方法を理解することが重要です。
 
-このガイドでは、Platform のデータ収集機能を使用して、Edge Networkを通じてイベントを送信する方法に関する高度なチュートリアルを提供します。 具体的には、チュートリアルでは、データ収集 UI（旧 Adobe Experience Platform Launch）内で Adobe Experience Platform Web SDK タグ拡張機能をインストールおよび設定する手順について説明します。
+このガイドでは、Experience Platformのデータ収集機能を使用し、Edge Networkを通じてイベントを送信する方法に関する高度なチュートリアルを提供します。 具体的には、チュートリアルでは、データ収集 UI（旧 Adobe Experience Platform Launch）内で Adobe Experience Platform Web SDK タグ拡張機能をインストールおよび設定する手順について説明します。
 
 >[!NOTE]
 >
 >タグを使用しない場合は、SDK を手動でインストールして設定することもできますが、以下に示すように、その前後の手順は完了しておく必要があります。
 >
->データ収集 UI に関連するすべての手順は、Experience PlatformUI でも実行できます。
+>データ収集 UI に関連するすべての手順は、Experience Platform UI でも実行できます。
 
 ## 前提条件
 
@@ -30,14 +30,14 @@ Adobe Experience Platformは、お客様のデータを収集し、他のAdobe�
 
 プロパティおよびプロパティ権限に対してアクセス権を付与する方法については、[ データ収集の権限の管理 ](./permissions.md) に関するガイドを参照してください。
 
-このガイドに記載されている様々なデータ収集製品を使用するには、データストリームにアクセスし、スキーマを作成および管理する機能も必要です。 これらの機能のいずれかにアクセスする必要がある場合は、Adobeアカウントチームに問い合わせて、必要なアクセス権を取得してください。 Adobe Experience Platform を購入していない場合、アドビでは、SDK を使用するために必要なアクセス権を追加料金なしで提供します。
+このガイドに記載されている様々なデータ収集製品を使用するには、データストリームにアクセスし、スキーマを作成および管理する機能も必要です。 これらの機能のいずれかにアクセスする必要がある場合は、Adobe アカウントチームに問い合わせて、必要なアクセス権を取得してください。 Adobe Experience Platform を購入していない場合、アドビでは、SDK を使用するために必要なアクセス権を追加料金なしで提供します。
 
-既に Platform へのアクセス権を持っている場合は、次のカテゴリですべての[権限](../access-control/home.md#permissions)が有効になっていることを確認する必要があります。
+既にExperience Platformへのアクセス権を持っている場合は、次のカテゴリですべての [ 権限 ](../access-control/home.md#permissions) が有効になっていることを確認する必要があります。
 
 * データモデリング
 * ID
 
-ユーザーに Platform 機能の権限を付与する方法については、[アクセス制御 UI の概要](../access-control/ui/overview.md)を参照してください。
+ユーザーにExperience Platform機能の権限を付与する方法については、[ アクセス制御 UI の概要 ](../access-control/ui/overview.md) を参照してください。
 
 ## プロセスの概要
 
@@ -107,7 +107,7 @@ UI 内で、左側のナビゲーションの「**[!UICONTROL スキーマ]**」
 
 ## Web SDK のインストールと設定 {#install}
 
-スキーマとデータストリームを作成したら、次の手順として、Platform Web SDK をインストールして、Edge ネットワークへのデータ送信を開始するように設定します。
+スキーマとデータストリームを作成したら、次に、Experience Platform Web SDKをインストールして、Edge Networkへのデータ送信を開始するように設定します。
 
 >[!NOTE]
 >
@@ -135,7 +135,7 @@ UI 内で、左側のナビゲーションの「**[!UICONTROL スキーマ]**」
 
 ![プロパティの作成](./images/e2e/create-property.png)
 
-プロパティの概要ページが表示されます。ここから、左側のナビゲーションで「**[!UICONTROL 拡張機能]**」を選択し、「**[!UICONTROL カタログ]**」を選択します。Platform Web SDK のリストを見つけ（オプションとして検索バーを使用して結果を絞り込む）、「**[!UICONTROL インストール]**」を選択します。
+プロパティの概要ページが表示されます。ここから、左側のナビゲーションで「**[!UICONTROL 拡張機能]**」を選択し、「**[!UICONTROL カタログ]**」を選択します。Experience Platform Web SDKのリストを見つけ（オプションとして検索バーを使用して結果を絞り込む）、「**[!UICONTROL インストール]**」を選択します。
 
 ![Web SDK のインストール](./images/e2e/install-sdk.png)
 
@@ -159,7 +159,7 @@ UI で「**[!UICONTROL データ要素]**」を選択し、「**[!UICONTROL 新�
 
 ![XDM オブジェクトタイプ](./images/e2e/xdm-object.png)
 
-XDM オブジェクトタイプの設定ダイアログが表示されます。ダイアログは自動的に Platform サンドボックスを選択し、ここから、そのサンドボックスで作成されたすべてのスキーマを表示できます。前に作成した XDM スキーマをリストから選択します。
+XDM オブジェクトタイプの設定ダイアログが表示されます。ダイアログは自動的にExperience Platform サンドボックスを選択し、ここから、そのサンドボックスで作成されたすべてのスキーマを表示できます。 前に作成した XDM スキーマをリストから選択します。
 
 ![XDM オブジェクトタイプ](./images/e2e/select-schema.png)
 
@@ -246,7 +246,7 @@ Web サイト上で発生する可能性のあるほぼすべてのイベント�
 >
 >データ収集 UI の環境設定がまだの場合は、ビルドを作成する前に設定する必要があります。詳しくは、タグドキュメントの[web プロパティの環境の設定](../tags/ui/publishing/environments.md#web-configuration)に関する節を参照してください。
 
-ライブラリの作成、ライブラリへの拡張機能とルールの追加、環境へのライブラリのビルドの方法については、タグドキュメントの[ライブラリの管理](../tags/ui/publishing/libraries.md)に関するガイドを参照してください。ライブラリを作成する場合、Platform Web SDK 拡張機能と、以前に作成したデータ収集ルールが含まれていることを確認します。
+ライブラリの作成、ライブラリへの拡張機能とルールの追加、環境へのライブラリのビルドの方法については、タグドキュメントの[ライブラリの管理](../tags/ui/publishing/libraries.md)に関するガイドを参照してください。ライブラリを作成する場合、Experience Platform Web SDK拡張機能と、以前に作成したデータ収集ルールが含まれていることを確認します。
 
 ライブラリを作成し、そのビルドを環境に割り当てたら、その環境を web サイトのクライアント側にインストールできます。詳しくは、[環境の設定](../tags/ui/publishing/environments.md#installation)の節を参照してください。
 
@@ -274,4 +274,4 @@ Edge ネットワークにデータを送信するように SDK を設定した�
 
 ## 次の手順
 
-このガイドでは、Platform web SDK を使用して Edge ネットワークにデータを送信する方法について、エンドツーエンドの概要を説明しました。関連する様々なコンポーネントとサービスについて詳しくは、このガイド全体にリンクされているドキュメントを参照してください。
+このガイドでは、Experience Platform web SDKを使用してEdge Networkにデータを送信する方法について、エンドツーエンドの概要を説明しました。 関連する様々なコンポーネントとサービスについて詳しくは、このガイド全体にリンクされているドキュメントを参照してください。

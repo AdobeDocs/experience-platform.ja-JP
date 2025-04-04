@@ -2,10 +2,10 @@
 title: データストリームの作成と設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2817'
-ht-degree: 52%
+source-wordcount: '2822'
+ht-degree: 48%
 
 ---
 
@@ -103,7 +103,7 @@ Experience Platformで使用するデータストリームを設定し、さら�
 | [!UICONTROL アクセスタイプ] | Edge Network がデータストリームに受け入れる認証タイプを定義します。 <ul><li>**[!UICONTROL 混合認証]**：このオプションを選択すると、Edge Network は認証済みリクエストと未認証リクエストの両方を受け入れます。[Server API](../server-api/overview.md) と一緒に Web SDK または [Mobile SDK](https://developer.adobe.com/client-sdks/home/) を使用する場合は、このオプションを選択してください。 </li><li>**[!UICONTROL 認証済みのみ]**：このオプションを選択すると、Edge Network は認証済みのリクエストのみを受け入れます。Server API のみを使用する予定で、未認証のリクエストが Edge Network で処理されないようにする場合は、このオプションを選択します。</li></ul> |
 | [!UICONTROL Media Analytics] | Experience Platform SDK または [Media Edge API](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/) を使用して、Edge Network統合のストリーミングトラッキングデータの処理を有効にします。 [ ドキュメント ](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=ja) から Media Analytics について説明します。 |
 
-ここから、Experience Platform のデータストリームを設定している場合は、[データ収集のためのデータ準備](./data-prep.md)に関するチュートリアルに従って、Platform イベントスキーマにデータをマッピングしてから、このガイドに戻ってください。それ以外の場合は、「**[!UICONTROL 保存]**」を選択して、次の節を続行します。
+ここから、Experience Platformのデータストリームを設定している場合は、[ データ収集のためのデータ準備 ](./data-prep.md) に関するチュートリアルに従って、Experience Platform イベントスキーマにデータをマッピングしてから、このガイドに戻ってください。 それ以外の場合は、「**[!UICONTROL 保存]**」を選択して、次の節を続行します。
 
 ## データストリームの詳細の表示 {#view-details}
 
@@ -160,7 +160,7 @@ Experience Platformで使用するデータストリームを設定し、さら�
 
 >[!IMPORTANT]
 >
->Platform のデータストリームを有効にする場合、UI の上部リボンに表示されている、現在使用中の Platform サンドボックスに注意してください。
+>Experience Platformのデータストリームを有効にする場合、UI の上部リボンに表示されている、現在使用しているExperience Platform サンドボックスに注意してください。
 >
 >![選択されたサンドボックス](assets/configure/platform-sandbox.png)
 >
@@ -172,8 +172,8 @@ Experience Platformで使用するデータストリームを設定し、さら�
 
 | 設定 | 説明 |
 |---| --- |
-| [!UICONTROL イベントデータセット] | **（必須）**&#x200B;顧客イベントデータのストリーミング先となる Platform データセットを選択します。このスキーマは、[XDM ExperienceEvent クラス](../xdm/classes/experienceevent.md)を使用する必要があります。データセットを追加するには、**[!UICONTROL イベントデータセットを追加]**&#x200B;を選択します。 |
-| [!UICONTROL プロファイルデータセット] | 顧客属性データの送信先となる Platform データセットを選択します。このスキーマは、[XDM Individual Profile クラス](../xdm/classes/individual-profile.md)を使用する必要があります。 |
+| [!UICONTROL イベントデータセット] | **（必須）** 顧客イベントデータのストリーミング先となるExperience Platform データセットを選択します。 このスキーマは、[XDM ExperienceEvent クラス](../xdm/classes/experienceevent.md)を使用する必要があります。データセットを追加するには、**[!UICONTROL イベントデータセットを追加]**&#x200B;を選択します。 |
+| [!UICONTROL プロファイルデータセット] | 顧客属性データの送信先となるExperience Platform データセットを選択します。 このスキーマは、[XDM Individual Profile クラス](../xdm/classes/individual-profile.md)を使用する必要があります。 |
 | [!UICONTROL Offer Decisioning] | Web SDK実装用のOffer Decisioningを有効にします。 実装について詳しくは、[Web SDKでのOffer Decisioningの使用 ](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) に関するガイドを参照してください。<br><br>Offer Decisioning 機能について詳しくは、[Adobe Journey Optimizer のドキュメント](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=ja)を参照してください。 |
 | [!UICONTROL エッジのセグメント化] | このデータストリームに対して [ エッジのセグメント化 ](../segmentation/methods/edge-segmentation.md) を有効にします。 [Web SDK](../web-sdk/home.md) または [Edge Network Server API](../server-api/overview.md) が、エッジセグメント化を有効にしたデータストリームでデータを送信すると、該当するプロファイルの更新されたオーディエンスメンバーシップが応答で返されます。<br><br> このオプションを **[!UICONTROL Personalizationの宛先]** と組み合わせて使用すると、[ エッジ宛先 ](../destinations/ui/activate-edge-personalization-destinations.md) または [!DNL Offer Decisioning] を介した同じページおよび次のページのパーソナライゼーションのユースケースを実現できます。 |
 | [!UICONTROL パーソナライゼーションの宛先] | 「[!UICONTROL エッジセグメント化]」チェックボックスを有効にした後でこの項目を有効にすると、[カスタムパーソナライゼーション](../destinations/catalog/personalization/custom-personalization.md)などのパーソナライゼーションの宛先にデータストリームが接続できるようになります。<br><br>[パーソナライゼーションの宛先の設定](../destinations/ui/activate-edge-personalization-destinations.md)に関する特定の手順については、宛先のドキュメントを参照してください。 |

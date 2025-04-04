@@ -2,11 +2,11 @@
 keywords: Experience Platform;ホーム;人気のあるトピック;データ準備;api ガイド;スキーマ;
 solution: Experience Platform
 title: スキーマ API エンドポイント
-description: Adobe Experience Platform API で「/schemas」エンドポイントを使用し、Platform のマッパーで使用するスキーマをプログラムにより取得、作成および更新できます。
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: Adobe Experience Platform API で「/schemas」エンドポイントを使用し、Experience Platformのマッパーで使用するスキーマをプログラムにより取得、作成および更新できます。
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 94%
+source-wordcount: '619'
+ht-degree: 84%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 94%
 
 # スキーマエンドポイント
 
-マッパーでスキーマを使用すると、Adobe Experience Platform に取り込んだデータが、取り込みたいデータと一致していることを確認できます。`/schemas` エンドポイントを使用すると、Platform のマッパーで使用するカスタムスキーマをプログラムによって作成、リスト化、取得できます。
+マッパーでスキーマを使用すると、Adobe Experience Platform に取り込んだデータが、取り込みたいデータと一致していることを確認できます。`/schemas` エンドポイントを使用すると、Experience Platformのマッパーで使用するカスタムスキーマをプログラムによって作成、リスト化、取得できます。
 
 >[!NOTE]
 >
->このエンドポイントを使用して作成されたスキーマは、マッパーとマッピングセットでのみ使用されます。他の Platform サービスからアクセス可能なスキーマを作成するには、『[スキーマレジストリ開発者ガイド](../../xdm/api/schemas.md)』を参照してください。
+>このエンドポイントを使用して作成されたスキーマは、マッパーとマッピングセットでのみ使用されます。他のExperience Platform サービスからアクセス可能なスキーマを作成するには、『 [ スキーマレジストリ開発者ガイド ](../../xdm/api/schemas.md) を参照してください。
 
 ## すべてのスキーマを取得
 
-`/schemas` エンドポイントに対してGETリクエストを行うことで、組織で使用可能なすべてのマッパースキーマのリストを取得できます。
+`/schemas` エンドポイントに対してGET リクエストを実行すると、組織で使用可能なすべてのマッパースキーマのリストを取得できます。
 
 **API 形式**
 

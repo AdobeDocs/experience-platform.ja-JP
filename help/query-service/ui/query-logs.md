@@ -2,9 +2,9 @@
 title: クエリログ
 description: クエリログは、クエリが実行されるたびに自動的に生成され、UI から使用してトラブルシューティングに役立ちます。 このドキュメントでは、UI のクエリサービスログ セクションの使用方法と操作方法について説明します。
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '949'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platformは、API と UI の両方を通じて発生したす�
 >
 >システムクエリとダッシュボードクエリは、どちらもデフォルトで除外されます。 設定に基づいて表示されるログを絞り込む方法については、[ フィルター ](#filter-logs) の節を参照してください。
 
-![ クエリとログがハイライト表示された Platform UI。](../images/ui/query-log/logs.png)
+![ クエリとログがハイライト表示されたExperience Platform UI。](../images/ui/query-log/logs.png)
 
 ## カスタマイズと検索 {#customize-and-search}
 

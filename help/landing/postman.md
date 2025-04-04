@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Adobe Experience Platform;api ガイド；platform api ガイド；platform の概要；デベロッパーガイド
+keywords: Experience Platform；ホーム；人気のトピック；Adobe Experience Platform;api ガイド；platform api ガイド；platform の概要；開発者ガイド
 solution: Experience Platform
 title: Adobe Experience PlatformのPostman
-description: このドキュメントには、Platform 環境のセットアップ、Postman コレクションのインポート、および各Postman サービスで使用可能なコレクションのリストを示す手順が含まれています。
+description: このドキュメントには、Experience Platform環境のセットアップ、Postman コレクションのインポート、および各Postman サービスで使用可能なコレクションのリストを概要を示す手順が含まれています。
 role: Developer
 feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience PlatformのPostman
 
-Postmanは、API 開発のコラボレーションプラットフォームで、プリセット変数の設定、API コレクションの共有、CRUD リクエストの効率化などを行うことができます。 ほとんどの Platform API サービスには、API 呼び出しの実行を支援するために使用できるPostman コレクションがあります。
+Postmanは、API 開発のコラボレーションプラットフォームで、プリセット変数の設定、API コレクションの共有、CRUD リクエストの効率化などを行うことができます。 ほとんどのExperience Platform API サービスには、API 呼び出しの実行を支援するために使用できるPostman コレクションがあります。
 
 ## Experience Platform用のPostman環境の設定方法
 
@@ -25,7 +25,7 @@ Postmanは、API 開発のコラボレーションプラットフォームで、
 
 ## Postman コレクション {#collections}
 
-使用可能なすべてのPostman コレクションを含んだフォルダーは、[Postman サンプル GitHub リポジトリのExperience Platform](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform) にアクセスすることで見つけることができます。 または、Postman コレクションリンクは、Adobe I/Oの [API リファレンスドキュメント ](https://www.adobe.com/go/platform-api-reference-en) に記載されている個々の Swagger ファイルにあります。
+使用可能なすべてのPostman コレクションを含んだフォルダーは、[Experience Platform Postman サンプル GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform) にアクセスすることで見つけることができます。 または、Adobe I/Oの [API リファレンスドキュメント ](https://www.adobe.com/go/platform-api-reference-en) に、個々の Swagger ファイルにPostman コレクションリンクが記載されています。
 
 Postman コレクションをダウンロードするには、GitHub ページの **[!DNL Raw]** を選択して、生の JSON ファイルを新しいタブに読み込みます。 次に、右クリックして「**[!DNL Save as]**」を選択し、選択したローカルの保存先にファイルを保存します。
 
@@ -61,4 +61,4 @@ Postman UI と使用可能な機能について詳しくは、[Postman ドキュ
 
 ## 次の手順
 
-このドキュメントでは、Postman環境、コレクションおよびコレクションの読み込み方法を紹介しました。 Postmanの準備が整ったら、[Platform 入門ガイド ](api-guide.md) にアクセスして、必要なヘッダー、例、各 Platform サービスで使用できる [API ガイド ](api-guide.md#api-guides) のリストを確認します。
+このドキュメントでは、Postman環境、コレクションおよびコレクションの読み込み方法を紹介しました。 Postmanの準備が整ったら、[Experience Platform入門ガイドにアクセスして、必要なヘッダー、例 ](api-guide.md) および各Experience Platform サービスで使用可能な [API ガイド ](api-guide.md#api-guides) のリストを確認してください。

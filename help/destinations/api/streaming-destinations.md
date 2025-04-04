@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；API チュートリアル；ストリーミング宛先 API;Platform
+keywords: Experience Platform；ホーム；人気のトピック；API チュートリアル；ストリーミング宛先 API;Experience Platform
 solution: Experience Platform
 title: Adobe Experience Platformの Flow Service API を使用したストリーミング宛先への接続とデータのアクティブ化
 description: このドキュメントでは、Adobe Experience Platform API を使用したストリーミング宛先の作成について説明します
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2206'
-ht-degree: 43%
+source-wordcount: '2219'
+ht-degree: 41%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 43%
 >
 >[アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-このチュートリアルでは、API 呼び出しを使用してAdobe Experience Platform データに接続し、ストリーミングクラウドストレージの宛先（[Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) または [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)）への接続を作成し、新しく作成した宛先にデータフローを作成し、新しく作成した宛先に対してデータをアクティブ化する方法を実演します。
+このチュートリアルでは、API 呼び出しを使用してAdobe Experience Platform データに接続する方法、ストリーミングクラウドストレージの宛先（[Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) または [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)）への接続を作成する方法、新しく作成した宛先にデータフローを作成する方法、新しく作成した宛先にデータをアクティブ化する方法について説明します。
 
 このチュートリアルでは、すべての例で [!DNL Amazon Kinesis] の宛先を使用しますが、手順は [!DNL Azure Event Hubs] で同じです。
 
 ![ 概要 – ストリーミング宛先の作成およびオーディエンスのアクティブ化の手順 ](../assets/api/streaming-destination/overview.png)
 
-Platform のユーザーインターフェイスを使用して宛先に接続し、データを有効化する場合は、[ 宛先の接続 ](../ui/connect-destination.md) および [ ストリーミングオーディエンス書き出しの宛先に対するオーディエンスデータの有効化 ](../ui/activate-segment-streaming-destinations.md) に関するチュートリアルを参照してください。
+Experience Platformのユーザーインターフェイスを使用して宛先に接続し、データを有効化する場合は、[ 宛先の接続 ](../ui/connect-destination.md) および [ ストリーミングオーディエンス書き出しの宛先に対するオーディエンスデータの有効化 ](../ui/activate-segment-streaming-destinations.md) に関するチュートリアルを参照してください。
 
 ## はじめに
 
@@ -36,9 +36,9 @@ Platform のユーザーインターフェイスを使用して宛先に接続�
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準的なフレームワーク。
 * [[!DNL Catalog Service]](../../catalog/home.md):[!DNL Catalog] は、Experience Platform内のデータの場所と系列の記録システムです。
-* [サンドボックス](../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、Platform でストリーミング宛先に対してデータをアクティブ化するために必要な追加情報を示します。
+次の節では、Experience Platformでストリーミング宛先に対してデータをアクティブ化するために必要な追加情報を示します。
 
 ### 必要な資格情報の収集
 
@@ -53,13 +53,13 @@ Platform のユーザーインターフェイスを使用して宛先に接続�
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values}
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform API を呼び出すには、まず[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Experience Platform のリソースは、特定の仮想サンドボックスに分離することができます。Platform API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。次に、オプションのパラメーターを示します。
+Experience Platform のリソースは、特定の仮想サンドボックスに分離することができます。Experience Platform API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。 次に、オプションのパラメーターを示します。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -73,7 +73,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 ### Swagger のドキュメント {#swagger-docs}
 
-このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。詳しくは、Adobe I/Oに関する [ フローサービス API ドキュメント ](https://www.adobe.io/experience-platform-apis/references/flow-service/) を参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。詳しくは、Adobe I/Oにある [Flow Service API ドキュメント ](https://www.adobe.io/experience-platform-apis/references/flow-service/) を参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
 
 ## 使用可能なストリーミング宛先のリストの取得 {#get-the-list-of-available-streaming-destinations}
 
@@ -271,11 +271,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
 * `{AUTHENTICATION_CREDENTIALS}`：ストリーミング宛先の名前（`Aws Kinesis authentication credentials` または `Azure EventHub authentication credentials`）を入力します。
 * `{ACCESS_ID}`: *[!DNL Amazon Kinesis] 接続の場合。Amazon Kinesis ストレージの場所のアクセス ID を* します。
-* `{SECRET_KEY}`: *[!DNL Amazon Kinesis] 接続の場合。* Amazon Kinesisのストレージの場所の秘密鍵。
-* `{REGION}`: *[!DNL Amazon Kinesis] 接続の場合。* Platform がデータをストリーミングする、[!DNL Amazon Kinesis] アカウントの地域。
+* `{SECRET_KEY}`: *[!DNL Amazon Kinesis] 接続の場合。Amazon Kinesis ストレージの場所の秘密鍵を* します。
+* `{REGION}`: *[!DNL Amazon Kinesis] 接続の場合。* Experience Platformがデータをストリーミングする、[!DNL Amazon Kinesis] アカウントのリージョン。
 * `{SAS_KEY_NAME}`: *[!DNL Azure Event Hubs] 接続の場合。* SAS キー名を入力します。 SAS キーを使用した [!DNL Azure Event Hubs] への認証については、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
 * `{SAS_KEY}`: *[!DNL Azure Event Hubs] 接続の場合。* SAS キーを入力します。 SAS キーを使用した [!DNL Azure Event Hubs] への認証については、[Microsoft ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
-* `{EVENT_HUB_NAMESPACE}`: *[!DNL Azure Event Hubs] 接続の場合。* Platform がデータをストリーミングする [!DNL Azure Event Hubs] 名前空間を入力します。 詳しくは、[!DNL Microsoft] ドキュメントの [Event Hubs 名前空間の作成 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
+* `{EVENT_HUB_NAMESPACE}`: *[!DNL Azure Event Hubs] 接続の場合。* Experience Platformがデータをストリーミングする [!DNL Azure Event Hubs] 名前空間を入力します。 詳しくは、[!DNL Microsoft] ドキュメントの [Event Hubs 名前空間の作成 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
 
 **応答** 
 
@@ -330,9 +330,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`：前述の手順で取得したベース接続 ID を使用します。
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
-* `{NAME_OF_DATA_STREAM}`: *[!DNL Amazon Kinesis] 接続の場合。* [!DNL Amazon Kinesis] アカウントの既存のデータストリームの名前を指定します。 Platform はこのストリームにデータを書き出します。
-* `{REGION}`: *[!DNL Amazon Kinesis] 接続の場合。* Platform がデータをストリーミングする、Amazon Kinesis アカウントのリージョン。
-* `{EVENT_HUB_NAME}`: *[!DNL Azure Event Hubs] 接続の場合。* Platform がデータをストリーミングする [!DNL Azure Event Hub] 名を入力します。 詳しくは、[!DNL Microsoft] ドキュメントの [ イベントハブの作成 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。
+* `{NAME_OF_DATA_STREAM}`: *[!DNL Amazon Kinesis] 接続の場合。* [!DNL Amazon Kinesis] アカウントの既存のデータストリームの名前を指定します。 Experience Platformはこのストリームにデータを書き出します。
+* `{REGION}`: *[!DNL Amazon Kinesis] 接続の場合。* Experience Platformがデータをストリーミングする、Amazon Kinesis アカウントのリージョン。
+* `{EVENT_HUB_NAME}`: *[!DNL Azure Event Hubs] 接続の場合。* Experience Platformがデータをストリーミングする [!DNL Azure Event Hub] 名を入力します。 詳しくは、[!DNL Microsoft] ドキュメントの [ イベントハブの作成 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) を参照してください。
 
 **応答**
 
@@ -425,7 +425,7 @@ curl -X POST \
 
 これで、すべての接続とデータフローを作成したので、プロファイルデータをストリーミングプラットフォームに対してアクティブ化できます。 この手順では、宛先に送信するオーディエンスとプロファイル属性を選択し、スケジュールを設定して宛先にデータを送信できます。
 
-新しい宛先に対してオーディエンスをアクティブ化するには、次の例に示すような JSONPATCH操作を実行する必要があります。 1 回の呼び出しで、複数のオーディエンスとプロファイル属性をアクティブ化できます。 JSON パッチについて詳しくは、[RFC 仕様](https://tools.ietf.org/html/rfc6902)を参照してください。
+新しい宛先に対してオーディエンスをアクティブ化するには、以下の例に示すような JSON PATCH操作を実行する必要があります。 1 回の呼び出しで、複数のオーディエンスとプロファイル属性をアクティブ化できます。 JSON パッチについて詳しくは、[RFC 仕様](https://tools.ietf.org/html/rfc6902)を参照してください。
 
 **API 形式**
 
@@ -474,7 +474,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL 内で、前の手順で作成したデータフローの ID を使用します。 |
 | `{ETAG}` | 前の手順 [ データフローの作成 ](#create-dataflow) の応答から `{ETAG}` を取得します。 前の手順の応答形式には、引用符がエスケープされています。 リクエストのヘッダーには、エスケープされていない値を使用する必要があります。 以下の例を参照してください。<br> <ul><li>応答の例：`"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>リクエストで使用する値：`"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag 値は、データフローが正常に更新されるたびに更新されます。 |
-| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス ID を指定します。 アクティブ化するオーディエンスのオーディエンス ID を取得するには、Experience PlatformAPI リファレンスの [ オーディエンス定義の取得 ](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) を参照してください。 |
+| `{SEGMENT_ID}` | この宛先に書き出すオーディエンス ID を指定します。 アクティブ化するオーディエンスのオーディエンス ID を取得するには、Experience Platform API リファレンスの [ オーディエンス定義の取得 ](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) を参照してください。 |
 | `{PROFILE_ATTRIBUTE}` | 例：`"person.lastName"` |
 | `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローにオーディエンスを追加するには、`add` 操作を使用します。 |
 | `path` | 更新するフローの部分を定義します。オーディエンスをデータフローに追加するときは、例で指定したパスを使用します。 |
@@ -630,11 +630,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うと、Platform を優先ストリーミング宛先の 1 つに正常に接続し、それぞれの宛先へのデータフローを設定できます。 顧客の分析や必要に応じてその他のデータ操作のために、送信データを宛先で使用できるようになりました。 詳しくは、以下のページを参照してください。
+このチュートリアルでは、Experience Platformを優先ストリーミング宛先の 1 つに正常に接続し、それぞれの宛先へのデータフローを設定しました。 顧客の分析や必要に応じてその他のデータ操作のために、送信データを宛先で使用できるようになりました。 詳しくは、以下のページを参照してください。
 
 * [宛先の概要](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)

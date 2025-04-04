@@ -2,10 +2,10 @@
 title: 監視ダッシュボードの概要
 description: Adobe Experience Platform UI でのモニタリングダッシュボードの使用方法について説明します
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 7%
+source-wordcount: '1032'
+ht-degree: 4%
 
 ---
 
@@ -19,30 +19,30 @@ Adobe Experience Platform UI のモニタリングダッシュボードを使用
 
 監視ダッシュボードでは、次の複数の異なるデータタイプの表示をサポートしています。
 
-* **お客様とアカウント**：お客様のデータとは、[Real-time Customer Data Platform](../../rtcdp/home.md) で使用されるデータを指し、アカウントデータとは、[Real-Time CDPB2B Edition](../../rtcdp/accounts/account-profile-overview.md) に登録するとアクセスできる [ アカウントプロファイルデータ ](../../rtcdp/b2b-overview.md) を指します。 Real-Time CDP ライセンスにReal-Time CDP B2B Edition が含まれていない場合は、モニタリングダッシュボードのみを使用してカスタマーデータをモニタリングできます。
-* **見込み客**:[ 見込み客プロファイル ](../../profile/ui/prospect-profile.md) は、会社とまだ関わっていないが連絡を取りたい人物を表すために使用されます。 見込み客プロファイルを使用すると、信頼できるサードパーティパートナーの属性で顧客プロファイルを補完できます。 見込み客データタイプを表示するには、Real-Time CDP（アプリサービス）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate のライセンスが必要です。
-* **アカウントプロファイルのエンリッチメント**：アカウントプロファイルを使用すると、複数のソースのアカウント情報を統合できます。 アカウントプロファイルエンリッチメントデータを監視するには、Real-Time CDP B2B Edition のライセンスが必要です。
+* **顧客とアカウント**：顧客データは [Real-Time Customer Data Platform](../../rtcdp/home.md) で使用されるデータを参照するのに対して、アカウントデータは [ アカウントプロファイルデータ ](../../rtcdp/accounts/account-profile-overview.md) を参照し、[B2B editionのReal-Time CDP](../../rtcdp/b2b-overview.md) に登録するとアクセスできます。 Real-Time CDP ライセンスにReal-Time CDP、B2B editionが含まれていない場合は、モニタリングダッシュボードを使用してのみ顧客データをモニタリングできます。
+* **見込み客**:[ 見込み客プロファイル ](../../profile/ui/prospect-profile.md) は、会社とまだ関わっていないが連絡を取りたい人物を表すために使用されます。 見込み客プロファイルを使用すると、信頼できるサードパーティパートナーの属性で顧客プロファイルを補完できます。 見込み客データタイプを表示するには、Real-Time CDP（アプリサービス）、Adobe Experience Platform アクティベーション、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimateのライセンスが必要です。
+* **アカウントプロファイルのエンリッチメント**：アカウントプロファイルを使用すると、複数のソースのアカウント情報を統合できます。 アカウントプロファイルエンリッチメントデータを監視するには、Real-Time CDP（B2B edition）のライセンスが必要です。
 
-このドキュメントでは、モニタリングダッシュボードを使用して、様々なExperience Platformサービスをまたいでデータのジャーニーを監視する方法について説明します。
+このドキュメントでは、モニタリングダッシュボードを使用して、様々なExperience Platform サービスをまたいでデータのジャーニーを監視する方法について説明します。
 
 ## 基本を学ぶ
 
 このドキュメントでは、Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
 * [ データフロー ](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 ソースワークスペースを使用すると、特定のソースからExperience Platformにデータを取り込むデータフローを作成できます。
-* [ ソース ](../../sources/home.md):Experience Platformのソースを使用して、Adobeアプリケーションまたはサードパーティのデータソースからデータを取り込みます。
+* [ ソース ](../../sources/home.md):Experience Platformのソースを使用して、Adobe アプリケーションまたはサードパーティのデータソースからデータを取り込みます。
 * [ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID を橋渡しすることで、個々の顧客とその行動をより確実に把握することができます。
 * [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [ セグメント化 ](../../segmentation/home.md)：セグメント化サービスを使用すると、リアルタイム顧客プロファイルデータからセグメントやオーディエンスを作成できます。
-* [宛先](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合で、これを使用すると、Platform のデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告およびその他の多くのユースケースを実現できます。
+* [ 宛先 ](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合で、これを使用すると、Experience Platformのデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告およびその他の多くのユースケースを実現できます。
 
 ## 監視ダッシュボードガイド
 
-Experience Platformの UI で、左側のナビゲーションの **[!UICONTROL Data Management]** の下の [!UICONTROL Monitoring] を選択します。
+Experience Platform UI の「[!UICONTROL Data Management]」で、「**[!UICONTROL モニタリング]**」をクリックします。
 
-![Experience PlatformUI のモニタリングダッシュボード。](../assets/ui/monitor-overview/monitoring.png)
+![Experience Platform UI のモニタリングダッシュボード。](../assets/ui/monitor-overview/monitoring.png)
 
-**[!UICONTROL データタイプ]** を選択し、ドロップダウンメニューを使用して、表示するデータのタイプを選択します。 データタイプは、エクスペリエンスデータモデル（XDM）スキーマクラスによって定義され、Experience Platformに取り込む際にデータが標準フォーマットに従うようにします。 詳しくは、次のドキュメントを参照してください。
+**[!UICONTROL データタイプ]** を選択し、ドロップダウンメニューを使用して、表示するデータのタイプを選択します。 データタイプは、Experience Platformに取り込む際にデータが標準形式に従っていることを確認するために、エクスペリエンスデータモデル（XDM）スキーマクラスによって定義されます。 詳しくは、次のドキュメントを参照してください。
 
 * [B2B アカウントのデータタイプ](../../rtcdp/b2b-tutorial.md)
 * [見込み客データタイプ](../../rtcdp/partner-data/prospecting.md)
@@ -53,7 +53,7 @@ Experience Platformの UI で、左側のナビゲーションの **[!UICONTROL 
 
 >[!TAB  すべて ]
 
-「**[!UICONTROL すべて]**」を選択すると、ダッシュボードを更新し、特定の期間にExperience Platformに取り込まれたすべてのデータに関する指標を表示できます。
+**[!UICONTROL すべて]** を選択してダッシュボードを更新し、特定の期間にExperience Platformに取り込まれたすべてのデータに関する指標を表示します。
 
 ![ 監視データタイプが「すべて」に設定されている ](../assets/ui/monitor-overview/all.png)
 
@@ -65,7 +65,7 @@ Experience Platformの UI で、左側のナビゲーションの **[!UICONTROL 
 
 >[!TAB  見込み客 ]
 
-**[!UICONTROL 見込み客]** を選択して、ダッシュボードを更新し、特定の期間にわたってExperience Platformに取り込まれた見込み客データに関する指標を表示します。 **メモ**：見込み客データタイプのアクティビティを表示できるのは、[ 見込み客データの権利 ](../../rtcdp/partner-data/prospecting.md) がある場合のみです。
+**[!UICONTROL 見込み客]** を選択して、ダッシュボードを更新し、特定の期間にExperience Platformに取り込まれた見込み客データに関する指標を表示します。 **メモ**：見込み客データタイプのアクティビティを表示できるのは、[ 見込み客データの権利 ](../../rtcdp/partner-data/prospecting.md) がある場合のみです。
 
 ![ 監視データタイプが「見込み客」に設定されている ](../assets/ui/monitor-overview/prospect.png)
 
@@ -131,7 +131,7 @@ Experience Platformの UI で、左側のナビゲーションの **[!UICONTROL 
 
 ## 次の手順
 
-このドキュメントを読むことで、UI の監視ダッシュボードをナビゲートできるようになりました。 特定のExperience Platformサービスのデータを監視する方法について詳しくは、以下のドキュメントを参照してください。
+このドキュメントを読むことで、UI の監視ダッシュボードをナビゲートできるようになりました。 特定のExperience Platform サービスのデータを監視する方法について詳しくは、以下のドキュメントを参照してください。
 
 * [ ソースデータの監視 ](monitor-sources.md)。
 * [ID データの監視 ](monitor-identities.md)。

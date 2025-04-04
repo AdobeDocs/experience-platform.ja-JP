@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: リリースノート；
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 63%
+source-wordcount: '859'
+ht-degree: 61%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## データガバナンス {#governance}
 
-[!DNL Experience Platform] を使用すると、企業は複数の企業システムのデータを統合して、マーケターが顧客を識別かつ理解し、惹きつけられるようになります。 [!DNL Experience Platform] には、システム内およびシステム間で共有される際にデータが適切に使用されるように、エンドツーエンドのデータガバナンスインフラストラクチャが含まれて [!DNL Platform] ます。
+[!DNL Experience Platform] を使用すると、企業は複数の企業システムのデータを統合して、マーケターが顧客を識別かつ理解し、惹きつけられるようになります。 [!DNL Experience Platform] には、システム内およびシステム間で共有される際にデータが適切に使用されるように、エンドツーエンドのデータガバナンスインフラストラクチャが含まれて [!DNL Experience Platform] ます。
 
 Adobe Experience Platform データガバナンスは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。これは、[!DNL Experience Platform] において様々なレベルで重要な役割を果たします。例えば、カタログ作成、データ系列、データ使用のラベル付け、データアクセスポリシー、マーケティングアクションのデータに関するアクセス制御などです。
 
@@ -51,7 +51,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 ## データ取得 {#ingestion}
 
-Adobe Experience Platform には、あらゆる種類のデータやデータのレイテンシを取り込むための豊富な機能が用意されています。Adobe Experience Platform [!DNL Data Ingestion] では、データ取り込みに複数の代替手段を提供しています。これには、バッチ API、ストリーミング API、ネイティブAdobeコネクタ、データ統合パートナー、Adobe Experience Platform UI などがあります。
+Adobe Experience Platform には、あらゆる種類のデータやデータのレイテンシを取り込むための豊富な機能が用意されています。Adobe Experience Platform [!DNL Data Ingestion] は、データ取り込みに複数の代替手段を提供します。これには、バッチ API、ストリーミング API、ネイティブのAdobe コネクタ、データ統合パートナー、Adobe Experience Platform UI などがあります。
 
 **新機能**
 
@@ -63,12 +63,12 @@ Adobe Experience Platform には、あらゆる種類のデータやデータの
 
 * なし
 
-データを Platform に取り込む方法については、[データ取得に関するドキュメント](../../ingestion/home.md)を参照してください。
+データをExperience Platformに取り込む方法については、[ データ取得に関するドキュメント ](../../ingestion/home.md) を参照してください。
 
 
 ## 宛先 {#destinations}
 
-[Real-time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前定義済みの統合であり、シームレスな方法でこれらのパートナーにデータをアクティブ化します。
+[Real-Time Customer Data Platform](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前定義済みの統合であり、シームレスな方法でこれらのパートナーにデータをアクティブ化します。
 
 **新しい宛先**
 
@@ -101,7 +101,7 @@ Adobe Experience Platform [!DNL Identity Service]を使用すると、デバイ�
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Experience Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を提供します。 これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 

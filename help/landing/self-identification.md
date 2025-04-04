@@ -3,10 +3,10 @@ title: 自己識別サーベイを使用した Experience Platform 個人プロ�
 description: 自己識別サーベイ UI を使用して、職務および関連する目的に応じて関連性の高いコンテンツを受け取る方法を説明します。
 badge: ベータ版
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 96%
+source-wordcount: '569'
+ht-degree: 66%
 
 ---
 
@@ -18,17 +18,17 @@ ht-degree: 96%
 
 自己識別サーベイは、Adobe Experience Platform UI ホームページで提供されている短いアンケートです。サーベイに記入すると、職務および一般的な目的に関する情報を提供できます。その後、製品内ガイドへの準拠を強化し、最終的に目的により適したコンテンツを配信するために、この情報が使用されます。
 
-このドキュメントでは、Platform UI で自己識別サーベイを使用して、目標とタスクに応じて関連性の高いコンテンツを受け取る方法と、UI を使用して個人プロファイル属性を再設定する方法について説明します。
+このドキュメントでは、Experience Platform UI で自己識別サーベイを使用して、目標とタスクに応じて関連性の高いコンテンツを受け取る方法と、UI を使用して個人プロファイル属性を再設定する方法について説明します。
 
 Adobe Experience Platform について詳しくは、[Experience Platform の概要](home.md)を参照してください。
 
-## Platform UI での自己識別サーベイ
+## Experience Platform UI での自己識別サーベイ
 
-ログインすると、Platform UI ホームページの右下に、自己識別サーベイのプロンプトが表示されます。
+ログインすると、Experience Platform UI ホームページの右下に、自己識別サーベイプロンプトが表示されます。
 
 サーベイを開始するには、「**[!UICONTROL 開始]**」を選択します。
 
-![自己識別サーベイを開始するように促すトーストメッセージが表示された Platform UI ホームページ](./images/survey/survey-prompt.png)
+![ 自己識別サーベイを開始するように促すトーストメッセージが表示されたExperience Platform UI ホームページ ](./images/survey/survey-prompt.png)
 
 サーベイの最初の質問では、自分の業務内容を最もよく表す職種を選択します。
 
@@ -81,16 +81,16 @@ Adobe Experience Platform について詳しくは、[Experience Platform の概
 
 Experience Cloud の環境設定メニューを使用して、職種と目的を更新します。環境設定メニューにアクセスするには、上部のナビゲーションでプロファイルアイコンを選択したあと、「**[!UICONTROL 環境設定]**」を選択します。
 
-![プロファイルアイコンと環境設定ボタンが選択された Platform UI ホームページ](./images/survey/preferences.png)
+![ プロファイルアイコンと環境設定ボタンが選択されたExperience Platform UI ホームページ ](./images/survey/preferences.png)
 
 次に、プロファイル環境設定メニューの「[!UICONTROL 一般]」セクションで、「**[!UICONTROL 職種と目的を更新]**」を選択します。
 
-![Platform UI プロファイル環境設定ページの「一般」セクション](./images/survey/update.png)
+![Experience Platform UI プロファイル環境設定ページの「一般」セクション ](./images/survey/update.png)
 
 自己識別サーベイが表示され、回答の再設定とプロファイルの更新が可能です。
 
-![ユーザーが自分の個人プロファイルを更新できるようにするために自己識別サーベイが表示されている Platform UI プロファイル環境設定ページ](./images/survey/new-survey.png)
+![ ユーザーが自分の個人プロファイルを更新できるようにするために自己識別サーベイが表示されているExperience Platform UI プロファイル環境設定ページ ](./images/survey/new-survey.png)
 
 ## 次の手順
 
-このドキュメントを通じて、Platform UI の使用時により関連性の高いコンテンツを受け取ることができるように、職種と目的に関する情報を送信および更新することができました。Platform UI について詳しくは、[Experience Platform の概要](home.md)を参照してください。
+このドキュメントを通じて、Experience Platform UI の使用時により関連性の高いコンテンツを受け取ることができるように、職種と目的に関する情報を送信および更新することができました。 Experience Platform UI について詳しくは、[Experience Platformの概要 ](home.md) を参照してください。

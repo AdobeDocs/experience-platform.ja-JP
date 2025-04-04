@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；ID の監視；データフローの監視；データフロー；ID;
-description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある個人的なデジタル体験をリアルタイムで提供できます。 このチュートリアルでは、Experience Platformユーザーインターフェイスを使用して ID でデータフローを監視する方法について説明します。
+description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある個人的なデジタル体験をリアルタイムで提供できます。 このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して ID でデータフローを監視する方法について説明します。
 title: UI での ID のデータフローの監視
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 18%
+source-wordcount: '1155'
+ht-degree: 17%
 
 ---
 
@@ -15,14 +15,14 @@ ht-degree: 18%
 
 Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動を包括的に把握し、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 
-監視ダッシュボードを使用すると、データの ID のステータスなど、ID 内のデータのアクティビティを視覚的に表現できます。 このチュートリアルでは、モニタリングダッシュボードを使用してExperience Platformユーザーインターフェイスでデータの ID をモニタリングし、ID 処理のステータスをトラッキングできる方法について説明します。
+監視ダッシュボードを使用すると、データの ID のステータスなど、ID 内のデータのアクティビティを視覚的に表現できます。 このチュートリアルでは、モニタリングダッシュボードを使用してExperience Platform ユーザーインターフェイスでデータの ID を監視し、ID 処理のステータスをトラッキングできる方法について説明します。
 
 ## はじめに {#getting-started}
 
-- [データフロー](../home.md)：データフローは、Platform 間でデータを移動するデータジョブを表します。データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
+- [ データフロー ](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
    - [データフロー実行](../../sources/notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
 - [ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID を橋渡しすることで、個々の顧客とその行動をより確実に把握することができます。
-- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
 ## 監視 ID ダッシュボード {#identity-metrics}
 
@@ -54,7 +54,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | ID 指標 | 説明 |
 | ---------------- | ----------- |
 | **[!UICONTROL 受信レコード]** | データレイクから受信したレコードの数。 |
-| **[!UICONTROL 失敗したレコード]** | データのエラーが原因で Platform に取り込まれなかったレコードの数。 |
+| **[!UICONTROL 失敗したレコード]** | データのエラーが原因でExperience Platformに取り込まれなかったレコードの数。 |
 | **[!UICONTROL スキップされたレコード]** | 取り込まれたが、レコード行に識別子が 1 つしかなかったので [!DNL Identity Service] に取り込まれなかったレコードの数。 |
 | **[!UICONTROL 取り込まれたレコード]** | [!DNL Identity Service] に取得されたレコードの数。 |
 | **[!UICONTROL 追加された ID]** | [!DNL Identity Service] に追加された新しい ID の数です。 |
@@ -78,7 +78,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | **[!UICONTROL データセット]** | データフローを挿入するデータセットの名前。 |
 | **[!UICONTROL Source名]** | データフローが属するソースの名前。 |
 | **[!UICONTROL 受信レコード]** | データレイクから受信したレコードの数。 |
-| **[!UICONTROL 失敗したレコード]** | データのエラーが原因で Platform に取り込まれなかったレコードの数。 |
+| **[!UICONTROL 失敗したレコード]** | データのエラーが原因でExperience Platformに取り込まれなかったレコードの数。 |
 | **[!UICONTROL スキップされたレコード]** | 取り込まれたが、レコード行に識別子が 1 つしかなかったので [!DNL Identity Service] に取り込まれなかったレコードの数。 |
 | **[!UICONTROL 取り込まれたレコード]** | [!DNL Identity Service] に取得されたレコードの数。 |
 | **[!UICONTROL 合計レコード数]** | 失敗したレコード、スキップされたレコード、追加された ID および重複したレコードを含むすべてのレコードの合計数。 |
@@ -100,7 +100,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 | 指標 | 説明 |
 | -------| ----------- |
 | **[!UICONTROL 受信レコード]** | データレイクから受信したレコードの数。 |
-| **[!UICONTROL 失敗したレコード]** | データのエラーが原因で Platform に取り込まれなかったレコードの数。 |
+| **[!UICONTROL 失敗したレコード]** | データのエラーが原因でExperience Platformに取り込まれなかったレコードの数。 |
 | **[!UICONTROL スキップされたレコード]** | 取り込まれたが、レコード行に識別子が 1 つしかなかったので [!DNL Identity Service] に取り込まれなかったレコードの数。 |
 | **[!UICONTROL 取り込まれたレコード]** | [!DNL Identity Service] に取得されたレコードの数。 |
 | **[!UICONTROL 追加された ID]** | [!DNL Identity Service] に追加された新しい ID の数です。 |

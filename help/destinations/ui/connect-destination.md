@@ -3,10 +3,10 @@ title: 新しい宛先接続の作成
 type: Tutorial
 description: Adobe Experience Platform で宛先に接続する方法、アラートを有効にする方法、接続した宛先に対するマーケティングアクションを設定する方法について説明します。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 73%
+source-wordcount: '1145'
+ht-degree: 70%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 73%
 
    ![「設定」コントロールが強調表示された宛先カタログページを示す、Experience Platform UI のスクリーンショット。](../assets/ui/connect-destinations/set-up.png)
 
-   ![ 「オーディエンスをアクティブ化」コントロールが強調表示された宛先カタログページを示す、Experience PlatformUI のスクリーンショット。](../assets/ui/connect-destinations/activate-segments.png)
+   ![ 「オーディエンスをアクティブ化」コントロールが強調表示された宛先カタログページを示す、Experience Platform UI のスクリーンショット。](../assets/ui/connect-destinations/activate-segments.png)
 
 3. 「**[!UICONTROL 設定]**」を選択した場合、次の手順にスキップして、宛先に対して「[認証](#authenticate)」を行います。
 
@@ -53,7 +53,7 @@ ht-degree: 73%
 
 宛先に接続する最初の手順は、宛先プラットフォームへの認証です。
 
-接続先に応じて、認証する宛先パートナーのページに移動したり、Platform ワークフローで直接認証資格情報を入力するように求められたりする場合があります。 以下は、[!DNL Amazon S3] 宛先への認証に必要な入力の例です。 必要な入力に関する詳細な手順は、各宛先ドキュメントページに記載されています（例えば、[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) と [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate) の認証セクションを参照）。
+接続先に応じて、認証する宛先パートナーのページに移動したり、Experience Platform ワークフローで直接認証資格情報を入力するように求められたりする場合があります。 以下は、[!DNL Amazon S3] 宛先への認証に必要な入力の例です。 必要な入力に関する詳細な手順は、各宛先ドキュメントページに記載されています（例えば、[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) と [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate) の認証セクションを参照）。
 
 **[!DNL Amazon S3]の必須およびオプションの認証パラメーター**
 

@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform Web SDK 用のシングルページアプリケーションの実装
-description: Adobe Targetを使用して、Adobe Experience Platform Web SDK のシングルページアプリケーション（SPA）実装を作成する方法を説明します。
-keywords: target;adobe target;xdm ビュー；ビュー；シングルページアプリケーション；SPA;SPA ライフサイクル；クライアントサイド；AB テスト；AB；エクスペリエンスのターゲット設定；XT;VEC
+title: Adobe Experience Platform Web SDKのシングルページアプリケーションの実装
+description: Adobe Targetを使用して、Adobe Experience Platform Web SDKのシングルページアプリケーション（SPA）実装を作成する方法について説明します。
+keywords: target;adobe target;xdm ビュー；ビュー；単一ページアプリケーション；SPA;SPA ライフサイクル；クライアントサイド；AB テスト；AB；エクスペリエンスのターゲット設定；XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1818'
 ht-degree: 10%
 
 ---
@@ -19,19 +19,19 @@ Adobe Experience Platform Web SDK は、シングルページアプリケーシ�
 
 代わりに、単一ページアプリケーションなどの最新の web アプリケーションは、ブラウザー UI レンダリングの迅速な使用を推進するモデルを採用しています。これは、多くの場合、ページリロードに依存しません。 これらのエクスペリエンスは、スクロール、クリック、カーソル移動などの顧客のインタラクションによってトリガーされます。最新の web のパラダイムが進化するにつれ、パーソナライゼーションと実験をデプロイするための、ページの読み込みなどの従来の汎用イベントの関連性は機能しなくなりました。
 
-![ 従来のページライフサイクルと比較したSPAのライフサイクルを示す図。](assets/spa-vs-traditional-lifecycle.png)
+![ 従来のページライフサイクルに対する SPA のライフサイクルを示す図。](assets/spa-vs-traditional-lifecycle.png)
 
-## SPA用 Platform Web SDK の利点
+## Experience Platform Web SDK for SPA の利点
 
 シングルページアプリケーションで Adobe Experience Platform Web SDK を使用するメリットを次に紹介します。
 
 * ページ読み込み時にすべてのオファーをキャッシュし、複数のサーバー呼び出しを単一のサーバー呼び出しに減らす機能。
 * 従来のサーバー呼び出しで発生する遅延時間なしで、キャッシュ経由でオファーが即座に表示されるため、サイトでのユーザーエクスペリエンスが著しく向上します。
-* 1 行のコードと 1 回限りのデベロッパーセットアップにより、マーケターは、SPAの Visual Experience Composer （VEC）を介して A/B およびエクスペリエンスのターゲット設定（XT）アクティビティを作成および実行できます。
+* 1 行のコードと 1 回限りの開発者セットアップにより、マーケターは、SPA の Visual Experience Composer （VEC）を介して A/B およびエクスペリエンスのターゲット設定（XT）アクティビティを作成および実行できます。
 
 ## XDM ビューとシングルページアプリケーション
 
-SPA用のAdobe Target VEC は、ビューと呼ばれる概念を利用しています。ビューは、SPA エクスペリエンスを構成するビジュアル要素の論理的なグループです。 したがって、単一ページアプリケーションは、ユーザーインタラクションに基づいて、URL ではなくビューを通じた移行と見なすことができます。 通常、ビューはサイト全体またはサイト内のグループ化された視覚的要素を表すことができます。
+Adobe Target VEC for SPA では、ビューと呼ばれる概念を利用します。ビューは、SPA エクスペリエンスを構成するビジュアル要素の論理的なグループです。 したがって、単一ページアプリケーションは、ユーザーインタラクションに基づいて、URL ではなくビューを通じた移行と見なすことができます。 通常、ビューはサイト全体またはサイト内のグループ化された視覚的要素を表すことができます。
 
 ビューの概要をさらに説明するために、次の例では、React で実装された架空のオンライン e コマースサイトを使用して、ビューの例を調べます。
 
@@ -59,7 +59,7 @@ SPA用のAdobe Target VEC は、ビューと呼ばれる概念を利用してい
 
 ## XDM ビューの実装
 
-XDM ビューはAdobe Targetで利用すると、マーケターが Visual Experience Composer を使用してSPAで A/B テストおよび XT テストを実行できるようになります。 これには、1 回限りの開発者向けの設定を完了するために、次の手順を実行する必要があります。
+XDM ビューはAdobe Targetで活用し、マーケターが Visual Experience Composer を使用して SPA で A/B テストおよび XT テストを実行できるようにします。 これには、1 回限りの開発者向けの設定を完了するために、次の手順を実行する必要があります。
 
 1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) のインストール
 2. パーソナライズする単一ページアプリケーション内のすべての XDM ビューを決定します。
@@ -84,7 +84,7 @@ XDM ビューはAdobe Targetで利用すると、マーケターが Visual Exper
 
 ## `sendEvent()` 関数の例
 
-この節では、模擬 e コマース SPA用に React で `sendEvent()` 関数を呼び出す方法を示す 3 つの例について説明します。
+この節では、模擬 e コマース SPA 用に React で `sendEvent()` 関数を呼び出す方法を示す 3 つの例について説明します。
 
 ### 例 1：A/B テストのホームページ
 
@@ -215,13 +215,13 @@ class Checkout extends Component {
 } 
 ```
 
-## SPA用 Visual Experience Composer の使用
+## SPA 用 Visual Experience Composer の使用
 
 XDM ビューの定義が完了し、渡された XDM ビューで `sendEvent()` を実装すると、VEC はこれらのビューを検出でき、ユーザーは A/B または XT アクティビティのアクションと変更を作成できるようになります。
 
 >[!NOTE]
 >
->SPAで VEC を使用するには、{Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [2}Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 拡張機能をインストールして有効化する必要があります。[
+>SPA で VEC を使用するには、{Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [2}Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 拡張機能をインストールして有効化する必要があります。[
 
 ### 変更パネル
 
@@ -243,7 +243,7 @@ XDM ビューの定義が完了し、渡された XDM ビューで `sendEvent()`
 | 移動 | 変更パネルに既に存在するページの読み込みイベントまたはその他のビューにアクションを移動します。<br/><br/>**ページの読み込みイベント：** ページの読み込みイベントに対応するアクションが web アプリケーションの最初のページ読み込みに適用されます。 <br/><br/>**注意：** 移動操作を行ったら、参照を使用して VEC のビューに移動し、移動が有効な操作かどうかを確認します。 アクションをビューに適用できない場合は、エラーが表示されます。 |
 | 削除 | アクションを削除します。 |
 
-## SPA用の VEC の使用例
+## SPA への VEC の使用の例
 
 この節では、Visual Experience Composer を使用して A/B または XT アクティビティのアクションと変更を作成する 3 つの例について説明します。
 

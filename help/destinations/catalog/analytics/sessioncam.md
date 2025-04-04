@@ -3,10 +3,10 @@ keywords: SessionCam；セッションカム；sessioncam
 title: SessionCam 拡張機能
 description: SessionCam 拡張機能は、Adobe Experience Platformの Analytics の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 67d7b206-d6ed-47f5-9c04-67562ccd1644
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 92%
+source-wordcount: '447'
+ht-degree: 78%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 92%
 
 [!DNL SessionCam] は、Adobe Experience Platform の分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Platform でのタグ拡張の仕組みについて詳しくは、[タグ拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
 
 ![SessionCam 拡張機能](../../assets/catalog/analytics/sessioncam/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-プラットフォームを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
+Experience Platformを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
 
 この拡張機能を使用するには、Adobe Experience Platform でタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてタグへのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
@@ -32,7 +32,7 @@ ht-degree: 92%
 
 [!DNL SessionCam] 拡張機能をインストールします。
 
-[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
@@ -58,6 +58,6 @@ ht-degree: 92%
 
 >[!TIP]
 >
->拡張機能がいずれかのプロパティに既にインストールされている場合、Platform UI ではその拡張機能に引き続き「**[!UICONTROL インストール]**」が表示されます。[拡張機能のインストール](#install-extension)の説明に従ってインストールワークフローを開始し、拡張機能を設定または削除します。
+>拡張機能がいずれかのプロパティに既にインストールされている場合、Experience Platform UI ではその拡張機能に引き続き **[!UICONTROL インストール]** が表示されます。 [拡張機能のインストール](#install-extension)の説明に従ってインストールワークフローを開始し、拡張機能を設定または削除します。
 
 拡張機能をアップグレードするには、[拡張機能のアップグレードプロセス](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) （タグドキュメント）のガイドを参照してください。

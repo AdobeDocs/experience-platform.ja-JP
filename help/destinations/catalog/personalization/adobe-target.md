@@ -3,10 +3,10 @@ keywords: ターゲット拡張機能；ターゲット
 title: Adobe Target 拡張機能
 description: Adobe Target拡張機能は、Adobe Experience Platformのパーソナライズ機能の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 62f8c641-7942-41d5-bd86-681c2c5efa6c
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 62%
+source-wordcount: '472'
+ht-degree: 57%
 
 ---
 
@@ -18,13 +18,13 @@ Adobe Target は、顧客のエクスペリエンスのカスタマイズやパ�
 
 Adobe Targetは、Adobe Experience Platformのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Platform でのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
 
 ![Adobe Target 拡張機能](../../assets/catalog/personalization/adobe-target/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-プラットフォームを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
+Experience Platformを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
 
 この拡張機能を使用するには、Adobe Experience Platform でタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてタグへのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
@@ -32,7 +32,7 @@ Adobe Targetは、Adobe Experience Platformのパーソナライゼーション�
 
 Adobe Target 拡張機能をインストールするには：
 
-[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

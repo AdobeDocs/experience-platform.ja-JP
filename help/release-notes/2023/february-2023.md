@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2023年2月）
 description: Adobe Experience Platform の 2023年2月のリリースノートです。
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1255'
-ht-degree: 97%
+source-wordcount: '1259'
+ht-degree: 91%
 
 ---
 
@@ -92,7 +92,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+Experience Platformの XDM について詳しくは、[XDM システムの概要 ](../../xdm/home.md) を参照してください&#x200B;
 
 ## クエリサービス {#query-service}
 
@@ -128,7 +128,7 @@ Real-Time CDP B2B Edition について詳しくは、[Real-Time CDP B2B Edition 
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むことができ、Platform サービスを使用してそのデータの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むことができ、Experience Platform サービスを使用してそのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
@@ -136,8 +136,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Google PubSub] を使用したサブスクリプションレベルアクセスの指定  | 認証時にサブスクリプション ID を指定して、[!DNL Google PubSub] ソースを使用する際に特定のトピックサブスクリプションへのアクセスを定義できるようになりました。詳しくは、[フローサービス API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) または [Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md) を使用した [!DNL Google PubSub] 認証のチュートリアルを参照してください。 |
-| [!DNL Marketo] からのカスタムアクティビティデータの取り込み | カスタムアクティビティデータを [!DNL Marketo] インスタンスから Experience Platform に取り込めるようになりました。 カスタムアクティビティデータを取り込むには、B2B アクティビティスキーマにカスタムアクティビティフィールドグループを設定し、アクティビティデータセットを使用してデータフローを作成する必要があります。 データフローが完了すると、取り込まれたデータセットには [!DNL Marketo] インスタンスからの標準アクティビティとカスタムアクティビティの両方が含まれています。 その結果、[クエリサービス](../../query-service/home.md)を使用して、Platform のカスタムアクティビティレコードにアクセスできます。 詳しくは、[カスタムアクティビティデータのデータフローの作成](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)に関するガイドを参照してください。 |
+| [!DNL Google PubSub] を使用したサブスクリプションレベルアクセスの指定  | 認証時にサブスクリプション ID を指定して、[!DNL Google PubSub] ソースを使用する際に特定のトピックサブスクリプションへのアクセスを定義できるようになりました。詳しくは、[!DNL Google PubSub] 認証のチュートリアル [Flow Service API を使用 ](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) または [Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md) を参照してください。 |
+| [!DNL Marketo] からのカスタムアクティビティデータの取り込み | カスタムアクティビティデータを [!DNL Marketo] インスタンスから Experience Platform に取り込めるようになりました。 カスタムアクティビティデータを取り込むには、B2B アクティビティスキーマにカスタムアクティビティフィールドグループを設定し、アクティビティデータセットを使用してデータフローを作成する必要があります。 データフローが完了すると、取り込まれたデータセットには [!DNL Marketo] インスタンスからの標準アクティビティとカスタムアクティビティの両方が含まれています。 その結果、[ クエリサービス ](../../query-service/home.md) を使用して、Experience Platformのカスタムアクティビティレコードにアクセスできます。 詳しくは、[カスタムアクティビティデータのデータフローの作成](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)に関するガイドを参照してください。 |
 | [!DNL Marketo] からの未要求アカウントの除外  | 企業データのデータフローを作成する際に、未要求アカウントを取り込みから除外するか取り込みに含めるかを設定できるようになりました。詳しくは、[ソース接続とデータフローの作成： [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}

@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；汎用 REST 
 title: UI での汎用 REST API Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して、汎用の REST API ソース接続を作成する方法を説明します。
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 34%
+source-wordcount: '647'
+ht-degree: 23%
 
 ---
 
@@ -20,14 +20,14 @@ ht-degree: 34%
 
 ## はじめに
 
-このチュートリアルでは、Platform の次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### 必要な資格情報の収集
 
-Platform で [!DNL Generic REST API] アカウントにアクセスするには、選択した認証タイプの有効な資格情報を指定する必要があります。 汎用の REST API は、OAuth 2 更新コードと基本認証の両方をサポートしています。 次の表に、サポートされる 2 つの認証タイプの資格情報を示します。
+Experience Platformで [!DNL Generic REST API] アカウントにアクセスするには、選択した認証タイプの有効な資格情報を指定する必要があります。 汎用の REST API は、OAuth 2 更新コードと基本認証の両方をサポートしています。 次の表に、サポートされる 2 つの認証タイプの資格情報を示します。
 
 #### OAuth 2 更新コード
 
@@ -53,7 +53,7 @@ Platform で [!DNL Generic REST API] アカウントにアクセスするには�
 
 ## 汎用 REST API アカウントの接続
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
@@ -89,4 +89,4 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ## 次の手順
 
-このチュートリアルでは、汎用 REST API アカウントとの接続を確立しました。 次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](../../dataflow/protocols.md)を行いましょう。
+このチュートリアルでは、汎用 REST API アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/protocols.md) を行いましょう。

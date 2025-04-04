@@ -2,9 +2,9 @@
 title: Adobe Content Analytics拡張機能の概要
 description: Adobe Experience PlatformのAdobe Content Analytics タグ拡張機能について説明します。
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!DNL Adobe Content Analytics] タグ拡張機能を使用すると、web サイト上のコンテンツ関連のイベントをトラッキングできます。 拡張機能は、web プロパティからExperience Platform Edge Networkを通じて、コンテンツデータ（エクスペリエンスとアセット）をAdobe Experience Cloudのデータストリームに送信します。
 
-拡張機能を使用すると、特定のコンテンツに関連するイベントデータを Platform にストリーミングできるので、そのデータをCustomer Journey Analyticsのコンテンツ分析レポートで使用できます。
+拡張機能を使用すると、特定のコンテンツに関連するイベントデータをExperience Platformにストリーミングでき、そのデータをCustomer Journey Analyticsのコンテンツ分析レポートで使用できます。
 
 このドキュメントでは、タグ UI でタグ拡張機能を設定する方法について説明します。
 

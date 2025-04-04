@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ使用ラベルの概要
 description: Adobe Experience Platform でデータガバナンスのコンプライアンスを適用するために、データ使用ラベルを使用する方法について説明します。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 100%
+source-wordcount: '789'
+ht-degree: 94%
 
 ---
 
@@ -24,11 +24,11 @@ Adobe Experience Platform では、関連する[データガバナンスポリ�
 
 ## データ使用ラベルについて
 
-データ使用ラベルを使用すると、データに適用されるガバナンスポリシーに従って、データセットとフィールドを分類できます。ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスでは、データが [!DNL Experience Platform] に取得されるとすぐに、またはデータが [!DNL Platform] で使用できるようになるとすぐに、データのラベル付けが推奨されます。
+データ使用ラベルを使用すると、データに適用されるガバナンスポリシーに従って、データセットとフィールドを分類できます。ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスでは、データが [!DNL Experience Platform] に取得されるとすぐに、またはデータが [!DNL Experience Platform] で使用できるようになるとすぐに、データのラベル付けが推奨されます。
 
 データ使用ラベルがデータセットレベルで適用されると、そのデータセット内のすべてのフィールドにラベルが伝播されます。ラベルは、伝播ではなく、データセット内の個々のフィールド（列ヘッダー）に直接適用することもできます。
 
-[!DNL Platform] は、「コア」データ使用ラベルを標準搭載で提供しています。これは、データガバナンスに適用される様々な一般的な制限をカバーしています。これらのラベルとガバナンスポリシーについて詳しくは、[コアデータ使用ラベル](reference.md)のガイドを参照してください。
+[!DNL Experience Platform] は、「コア」データ使用ラベルを標準搭載で提供しています。これは、データガバナンスに適用される様々な一般的な制限をカバーしています。これらのラベルとガバナンスポリシーについて詳しくは、[コアデータ使用ラベル](reference.md)のガイドを参照してください。
 
 アドビが提供するラベルに加えて、組織に独自のカスタムラベルを定義することもできます。詳しくは、[ラベルの管理](#manage-labels)のセクションを参照してください。
 
@@ -38,13 +38,13 @@ Adobe Experience Platform では、関連する[データガバナンスポリ�
 
 データセットレベルのラベルを継承する以外に、デフォルトでは、セグメントは関連するデータセットからフィールドレベルのラベルをすべて継承します。したがって、セグメントから除外する属性をより容易に識別し、除外するフィールドのラベルを継承しないようにすることができます。
 
-Platform での自動適用の動作方法について詳しくは、[自動ポリシーの適用](../enforcement/auto-enforcement.md)の概要を参照してください。
+Experience Platformでの自動適用の動作方法について詳しくは、[ 自動ポリシーの適用 ](../enforcement/auto-enforcement.md) の概要を参照してください。
 
 ### Adobe Audience Manager データ書き出しのコントロールからの継承
 
 [!DNL Experience Platform] には、Adobe Audience Manager とセグメントを共有する機能があります。Audience Manager セグメントに適用されたデータエクスポートのコントロールは、[!DNL Experience Platform] データガバナンスが認識する同等のラベルおよびマーケティングアクションに変換されます。
 
-特定のデータエクスポートのコントロールが [!DNL Platform] のデータ使用ラベルにどのようにマッピングされるかについては、[Audience Manager ドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aam-data-export-control-in-aep)を参照してください。
+特定のデータエクスポートのコントロールが [!DNL Experience Platform] のデータ使用ラベルにどのようにマッピングされるかについては、[Audience Manager ドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#aam-data-export-control-in-aep)を参照してください。
 
 ## でのデータ使用ラベルの管理 [!DNL Experience Platform] {#manage-labels}
 
@@ -61,7 +61,7 @@ Platform での自動適用の動作方法について詳しくは、[自動ポ�
 
 >[!IMPORTANT]
 >
->データセットレベルでフィールドにラベルを適用できなくなりました。このワークフローは非推奨（廃止予定）になり、スキーマレベルでラベルを適用するようになりました。データセットオブジェクトレベルで以前に適用したラベルは、2024年5月31日（PT）まで Platform UI を通じて引き続きサポートされます。すべてのスキーマ間でラベルの一貫性を確保するには、データセットレベルで以前にフィールドに付けていたラベルを、今後 1 年間にスキーマレベルに移行する必要があります。これを行う方法の手順については、[以前に適用したラベルの移行](../e2e.md#migrate-labels)に関する節を参照してください。
+>データセットレベルでフィールドにラベルを適用できなくなりました。このワークフローは非推奨（廃止予定）になり、スキーマレベルでラベルを適用するようになりました。データセットオブジェクトレベルで以前に適用したラベルは、2024 年 5 月 31 日（PT）までExperience Platform UI を通じて引き続きサポートされます。 すべてのスキーマ間でラベルの一貫性を確保するには、データセットレベルで以前にフィールドに付けていたラベルを、今後 1 年間にスキーマレベルに移行する必要があります。これを行う方法の手順については、[以前に適用したラベルの移行](../e2e.md#migrate-labels)に関する節を参照してください。
 
 ### API の使用
 

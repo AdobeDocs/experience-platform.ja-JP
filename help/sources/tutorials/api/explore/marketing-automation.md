@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service API を使用したマーケティング自動化システムの調査
 description: このチュートリアルでは、Flow Service API を使用して、マーケティング自動化システムを調べます。
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '618'
 ht-degree: 37%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 37%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してマーケティング自動化システムに正常に接続するために必要な追加情報を示しています。
 
 ### 必要な資格情報の収集
 
-このチュートリアルでは、データの取り込み元となるサードパーティのマーケティング自動化アプリケーションに有効に接続できる必要があります。 有効な接続には、アプリケーションの接続仕様 ID と接続 ID が含まれます。 マーケティング自動化接続の作成とこれらの値の取得について詳しくは、[ マーケティング自動化ソースの Platform への接続 ](../../api/create/marketing-automation/hubspot.md) チュートリアルを参照してください。
+このチュートリアルでは、データの取り込み元となるサードパーティのマーケティング自動化アプリケーションに有効に接続できる必要があります。 有効な接続には、アプリケーションの接続仕様 ID と接続 ID が含まれます。 マーケティングオートメーション接続を作成してこれらの値を取得する方法について詳しくは、[ マーケティングオートメーションソースのExperience Platformへの接続 ](../../api/create/marketing-automation/hubspot.md) チュートリアルを参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -36,13 +36,13 @@ ht-degree: 37%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name：`{SANDBOX_NAME}`
 
@@ -52,7 +52,7 @@ ht-degree: 37%
 
 ## データテーブルの探索
 
-マーケティング自動化システムのベース接続を使用すると、データリクエストを実行してGETテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Platform] に取り込むテーブルのパスを検索します。
+マーケティング自動化システムのベース接続を使用すると、GET リクエストを実行してデータテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Experience Platform] に取り込むテーブルのパスを検索します。
 
 **API 形式**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、からマーケティング自動化システムへのテーブルの配列です。 [!DNL Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
+正常な応答は、からマーケティング自動化システムへのテーブルの配列です。 [!DNL Experience Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
 
 ```json
 [
@@ -112,9 +112,9 @@ curl -X GET \
 ]
 ```
 
-## テーブルの構造のInspect
+## テーブルの構造を検査する
 
-マーケティング自動化システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定したうえで、GETリクエストを実行します。
+マーケティング自動化システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定して、GET リクエストを実行します。
 
 **API 形式**
 
@@ -184,4 +184,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、マーケティング自動化システムを調べ、[!DNL Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルではこの情報を使用して [ マーケティング自動化システムからデータを収集し、Platform に取り込む ](../collect/marketing-automation.md) ことができます。
+このチュートリアルに従って、マーケティング自動化システムを調べ、[!DNL Experience Platform] に取り込むテーブルのパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [ マーケティング自動化システムからデータを収集し、Experience Platformに取り込む ](../collect/marketing-automation.md) ことができます。

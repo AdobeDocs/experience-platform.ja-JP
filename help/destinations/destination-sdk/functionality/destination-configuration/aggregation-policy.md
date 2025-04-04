@@ -2,10 +2,10 @@
 description: 集計ポリシーを設定して、宛先に対する HTTP リクエストがどのようにグループ化およびバッチ化されるかを説明します。
 title: 集計ポリシー
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 96%
+source-wordcount: '1007'
+ht-degree: 94%
 
 ---
 
@@ -60,7 +60,7 @@ Destination SDK を使用してリアルタイム（ストリーミング）宛�
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
 | `aggregationType` | 文字列 | 宛先が使用する必要がある、集計ポリシーのタイプを示します。サポートされる集計タイプ： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | 整数 | Adobe Experience Platform は、1 回の HTTP 呼び出しで書き出された複数のプロファイルを集計できます。<br><br>この値は、1 回の HTTP 呼び出しでエンドポイントが受け取るプロファイルの最大数を示します。これはベストエフォートの集計であることに注意してください。例えば、値 100 を指定した場合、Platform が 1 回の呼び出しで送信するプロファイルの数は、100 未満の任意の数になります。<br><br>サーバーが 1 回のリクエストで複数のユーザーを受け入れない場合、この値を `1` に設定します。 |
+| `bestEffortAggregation.maxUsersPerRequest` | 整数 | Adobe Experience Platform は、1 回の HTTP 呼び出しで書き出された複数のプロファイルを集計できます。<br><br>この値は、1 回の HTTP 呼び出しでエンドポイントが受け取るプロファイルの最大数を示します。これはベストエフォートの集計であることに注意してください。例えば、値 100 を指定した場合、Experience Platformが 1 回の呼び出しで送信するプロファイルの数は、100 未満の任意の数になります。 <br><br>サーバーが 1 回のリクエストで複数のユーザーを受け入れない場合、この値を `1` に設定します。 |
 | `bestEffortAggregation.splitUserById` | ブール値 | 宛先への呼び出しを ID で分割する必要がある場合は、このフラグを使用します。サーバーが 1 回の呼び出しで 1 つの ID しか受け入れない場合、特定の ID 名前空間に対して、このフラグを `true` に設定します。 |
 
 {style="table-layout:auto"}

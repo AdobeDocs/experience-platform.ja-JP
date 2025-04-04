@@ -1,10 +1,10 @@
 ---
-title: Real-time Customer Data Platform B2B Edition での 2 つのスキーマ間の関係の定義
-description: Adobe Real-time Customer Data Platform B2B Edition で 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
+title: Real-Time Customer Data Platform B2B editionでの 2 つのスキーマ間の関係の定義
+description: Adobe Real-Time Customer Data Platform B2B editionで 2 つのスキーマ間に多対 1 の関係を定義する方法を説明します。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1771'
 ht-degree: 14%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 14%
 >title="参照スキーマ"
 >abstract="関係を確立するスキーマを選択します。スキーマのクラスによっては、B2B コンテキストの他のエンティティとの既存の関係を持つこともあります。B2B スキーマクラスがお互いにどのように関連しているかについて詳しくは、ドキュメントを参照してください。"
 
-Adobe Real-time Customer Data Platform B2B Edition には、[ アカウント ](../classes/b2b/business-account.md)、[ 商談 ](../classes/b2b/business-opportunity.md)、[ キャンペーン ](../classes/b2b/business-campaign.md) など、基本的な B2B データエンティティをキャプチャするエクスペリエンスデータモデル （XDM） クラスがいくつか用意されています。 これらのクラスに基づいてスキーマを構築し、それらを [ リアルタイム顧客プロファイル ](../../profile/home.md) で使用できるようにすると、異なるソースのデータを結合スキーマと呼ばれる統合表現に統合できます。
+Adobe Real-Time Customer Data Platform B2B editionには、[ アカウント ](../classes/b2b/business-account.md)、[ 商談 ](../classes/b2b/business-opportunity.md)、[ キャンペーン ](../classes/b2b/business-campaign.md) など、基本的な B2B データエンティティをキャプチャするエクスペリエンスデータモデル（XDM）クラスがいくつか用意されています。 これらのクラスに基づいてスキーマを構築し、それらを [ リアルタイム顧客プロファイル ](../../profile/home.md) で使用できるようにすると、異なるソースのデータを結合スキーマと呼ばれる統合表現に統合できます。
 
 ただし、和集合スキーマには、同じクラスを共有するスキーマによってキャプチャされたフィールドのみを含めることができます。 スキーマの関係は、ここに格納されます。 B2B スキーマで関係を実装することで、これらのビジネスエンティティの相互関係を記述し、ダウンストリームセグメント化のユースケースに複数のクラスの属性を含めることができます。
 
@@ -24,19 +24,19 @@ Adobe Real-time Customer Data Platform B2B Edition には、[ アカウント ](
 
 ![B2B クラスの関係 ](../images/tutorials/relationship-b2b/classes.png)
 
-このチュートリアルでは、Real-Time CDP B2B Edition の 2 つのスキーマ間に多対 1 の関係を定義する手順を説明します。
+このチュートリアルでは、Real-Time CDP B2B editionで 2 つのスキーマ間に多対 1 の関係を定義する手順を説明します。
 
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B Edition を使用していない場合や、1 対 1 の関係を作成する場合は、代わりに [1 対 1 の関係の作成 ](./relationship-ui.md) に関するガイドを参照してください。
+>Real-Time Customer Data Platform B2B editionを使用していない場合や、1 対 1 の関係を作成する場合は、代わりに [1 対 1 の関係の作成 ](./relationship-ui.md) に関するガイドを参照してください。
 >
->このチュートリアルでは、Platform UI で B2B スキーマ間の関係を手動で確立する方法に重点を置いています。 B2B ソース接続からデータを取り込む場合は、自動生成ユーティリティを使用して、必要なスキーマ、ID および関係を作成します。 [ 自動生成ユーティリティの使用 ](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) について詳しくは、B2B 名前空間とスキーマに関するソースドキュメントを参照してください。
+>このチュートリアルでは、Experience Platform UI で B2B スキーマ間の関係を手動で確立する方法について重点的に説明します。 B2B ソース接続からデータを取り込む場合は、自動生成ユーティリティを使用して、必要なスキーマ、ID および関係を作成します。 [ 自動生成ユーティリティの使用 ](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) について詳しくは、B2B 名前空間とスキーマに関するソースドキュメントを参照してください。
 
 ## はじめに
 
 このチュートリアルでは、[!DNL Experience Platform] UI の [!DNL XDM System] とスキーマエディターに関する十分な知識が必要です。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-* [Experience Platformにおける XDM システム ](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
+* [Experience Platformの XDM システム ](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
 * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
 * [ 次を使用してスキーマを作成  [!DNL Schema Editor]](create-schema-ui.md):UI でスキーマを作成および編集する方法の基本を説明するチュートリアル。
 
@@ -53,7 +53,7 @@ Adobe Real-time Customer Data Platform B2B Edition には、[ アカウント ](
 >title="参照 ID 名前空間"
 >abstract="参照スキーマのプライマリ ID フィールドの名前空間 (タイプ)。参照スキーマは、関係に参加するために、確立されたプライマリ ID フィールドが必要です。B2B 関係の ID について詳しくは、ドキュメントを参照してください。"
 
-関係を確立するには、参照スキーマに定義済みのプライマリ ID が必要です。 B2B エンティティのプライマリ ID を設定する場合は、様々なシステムや場所にわたって文字列ベースのエンティティ ID を収集すると、重複する可能性があり、Platform でデータの競合が発生する可能性があることに注意してください。
+関係を確立するには、参照スキーマに定義済みのプライマリ ID が必要です。 B2B エンティティのプライマリ ID を設定する場合は、様々なシステムや場所にわたって文字列ベースのエンティティ ID を収集すると、重複する可能性があり、Experience Platformでデータの競合が発生する可能性があることに注意してください。
 
 これに対処するために、すべての標準 B2B クラスには、[[!UICONTROL B2B Source] データタイプ ](../data-types/b2b-source.md) に準拠する「キー」フィールドが含まれています。 このデータタイプは、B2B エンティティの文字列識別子のフィールドと、識別子のソースに関するその他のコンテキスト情報を提供します。 これらのフィールドの 1 つ（`sourceKey`）は、データタイプ内の他のフィールドの値を連結して、エンティティの完全に一意の ID を生成します。 このフィールドは、B2B エンティティスキーマのプライマリ ID として常に使用する必要があります。
 
@@ -61,7 +61,7 @@ Adobe Real-time Customer Data Platform B2B Edition には、[ アカウント ](
 
 >[!NOTE]
 >
->[XDM フィールドを ID として設定 ](../ui/fields/identity.md) する場合、の下で ID を定義する ID 名前空間を指定する必要があります。 これは、組織が提供する標準の名前空間、またはAdobeが定義するカスタム名前空間にできます。 実際には、名前空間は単なるコンテキスト文字列であり、ID タイプを分類する組織にとって意味がある場合は、任意の値に設定できます。 詳しくは、[ID 名前空間 ](../../identity-service/features/namespaces.md) の概要を参照してください。
+>[XDM フィールドを ID として設定 ](../ui/fields/identity.md) する場合、の下で ID を定義する ID 名前空間を指定する必要があります。 これは、Adobeが提供する標準の名前空間、または組織が定義するカスタム名前空間にできます。 実際には、名前空間は単なるコンテキスト文字列であり、ID タイプを分類する組織にとって意味がある場合は、任意の値に設定できます。 詳しくは、[ID 名前空間 ](../../identity-service/features/namespaces.md) の概要を参照してください。
 
 参照目的で、次の節では、関係が定義される前に、このチュートリアルで使用する各スキーマの構造について説明します。 プライマリ ID が定義されているスキーマ構造と、それらが使用するカスタム名前空間に注意してください。
 

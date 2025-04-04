@@ -4,10 +4,10 @@ title: Flow Service API を使用した宛先接続の編集
 type: Tutorial
 description: Flow Service API を使用して宛先接続の様々なコンポーネントを編集する方法について説明します。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1605'
-ht-degree: 29%
+source-wordcount: '1609'
+ht-degree: 26%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 29%
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
 * [ 宛先 ](../home.md):[!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [サンドボックス](../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してデータフローを正常に更新するために必要な追加情報を示しています。
 
@@ -40,13 +40,13 @@ ht-degree: 29%
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform API を呼び出すには、まず[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service] に属するリソースを含む、Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service] に属するリソースを含む、Experience Platformのすべてのリソースは、特定の仮想サンドボックスに分離されます。 Experience Platform API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -64,9 +64,9 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 >[!TIP]
 >
->Experience PlatformUI を使用して、宛先の目的のデータフロー ID を取得できます。 **[!UICONTROL 宛先]**/**[!UICONTROL 参照]** に移動し、目的の宛先データフローを選択して、右側のパネルで宛先 ID を見つけます。 宛先 ID は、次の手順でフロー ID として使用する値です。
+>Experience Platform UI を使用して、宛先の目的のデータフロー ID を取得できます。 **[!UICONTROL 宛先]**/**[!UICONTROL 参照]** に移動し、目的の宛先データフローを選択して、右側のパネルで宛先 ID を見つけます。 宛先 ID は、次の手順でフロー ID として使用する値です。
 >
-> ![ 宛先 ID の取得（Experience PlatformUI を使用 ](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![Experience Platform UI を使用した宛先 ID の取得 ](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
 >[!BEGINSHADEBOX]
 
@@ -183,7 +183,7 @@ curl -X GET \
 >
 >`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するターゲット接続の一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
-> etag 値の最新バージョンを取得するには、`/targetConnections/{TARGET_CONNECTION_ID}` エンドポイントに対してGETリクエストを実行します。`{TARGET_CONNECTION_ID}` は、更新するターゲット接続 ID です。
+> etag 値の最新バージョンを取得するには、`/targetConnections/{TARGET_CONNECTION_ID}` エンドポイントに対してGET リクエストを実行します。`{TARGET_CONNECTION_ID}` は、更新するターゲット接続 ID です。
 >
 > `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
 
@@ -235,7 +235,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答では、ターゲット接続 ID と更新された Etag が返されます。 更新を検証するには、ターゲット接続 ID を指定する際に [!DNL Flow Service] API へGETリクエストを行います。
+正常な応答では、ターゲット接続 ID と更新された Etag が返されます。 更新を検証するには、ターゲット接続 ID を指定する際に [!DNL Flow Service] API へGET リクエストを行います。
 
 ```json
 {
@@ -275,7 +275,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、ターゲット接続 ID と更新された etag を返します。 更新を検証するには、ターゲット接続 ID を指定する際に [!DNL Flow Service] API へGETリクエストを行います。
+正常な応答は、ターゲット接続 ID と更新された etag を返します。 更新を検証するには、ターゲット接続 ID を指定する際に [!DNL Flow Service] API へGET リクエストを行います。
 
 ```json
 {
@@ -317,7 +317,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、ターゲット接続 ID と更新された etag を返します。 更新を検証するには、ターゲット接続 ID を指定する際に [!DNL Flow Service] API へGETリクエストを行います。
+正常な応答は、ターゲット接続 ID と更新された etag を返します。 更新を検証するには、ターゲット接続 ID を指定する際に [!DNL Flow Service] API へGET リクエストを行います。
 
 ```json
 {
@@ -342,7 +342,7 @@ curl -X PATCH \
 >
 >`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するベース接続の一意のバージョンです。 etag の値は、データフロー、ベース接続など、フローエンティティが正常に更新されるたびに更新されます。
 >
-> Etag 値の最新バージョンを取得するには、`/connections/{BASE_CONNECTION_ID}` エンドポイントに対してGETリクエストを実行します。`{BASE_CONNECTION_ID}` は、更新するベース接続 ID です。
+> Etag 値の最新バージョンを取得するには、`/connections/{BASE_CONNECTION_ID}` エンドポイントに対してGET リクエストを実行します。`{BASE_CONNECTION_ID}` は、更新するベース接続 ID です。
 >
 > `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
 
@@ -394,7 +394,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答では、ベース接続 ID と更新された etag が返されます。ベース接続 ID を指定した状態で [!DNL Flow Service] API にGETリクエストを行うことで、更新を確認することができます。
+正常な応答では、ベース接続 ID と更新された etag が返されます。ベース接続 ID を指定した状態で [!DNL Flow Service] API に対してGET リクエストを実行すると、更新を確認することができます。
 
 ```json
 {
@@ -436,7 +436,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答では、ベース接続 ID と更新された etag が返されます。ベース接続 ID を指定した状態で [!DNL Flow Service] API にGETリクエストを行うことで、更新を確認することができます。
+正常な応答では、ベース接続 ID と更新された etag が返されます。ベース接続 ID を指定した状態で [!DNL Flow Service] API に対してGET リクエストを実行すると、更新を確認することができます。
 
 ```json
 {
@@ -451,7 +451,7 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

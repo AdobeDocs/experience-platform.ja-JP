@@ -1,13 +1,13 @@
 ---
 keywords: モバイル；モバイルエンゲージメントの宛先；LINE;LINE モバイルエンゲージメントの宛先
 title: 回線接続
-description: LINE 宛先を使用すると、Platform オーディエンスにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを提供できます。
+description: LINE の宛先を使用すると、Experience Platform オーディエンスにプロファイルを追加し、接続されたユーザーにパーソナライズされたエクスペリエンスを提供できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 42%
+source-wordcount: '1198'
+ht-degree: 37%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 42%
 
 [[!DNL LINE]](https://line.me/en/) は、人物、サービス、情報をつなぎ、チャットアプリからエンターテイメント、ソーシャル、日々のアクティビティのハブに成長した人気のコミュニケーションプラットフォームです。
 
-この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は、[[!DNL LINE] Messaging API](https://developers.line.biz/en/reference/messaging-api/) を活用します。 Experience Platformオーディエンスのプロファイルを、ビジネスニーズに合わせて、[!DNL LINE] 内のつながりとしてアクティブ化できます。
+この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は、[[!DNL LINE] Messaging API](https://developers.line.biz/en/reference/messaging-api/) を活用します。 ビジネスニーズに合わせて、Experience Platform オーディエンス内の接続としてプロファイル [!DNL LINE] アクティブ化できます。
 
 [!DNL LINE] は、[!DNL LINE] Messaging API と通信するための認証メカニズムとして Bearer トークンを使用します。 [!DNL LINE] インスタンスを認証する手順は、さらに下の [ 宛先に対する認証 ](#authenticate) の節にあります。
 
@@ -29,7 +29,7 @@ ht-degree: 42%
 
 ### [!DNL LINE] 前提条件 {#prerequisites-destination}
 
-Platform から [!DNL LINE] アカウントにデータを書き出すには、[!DNL LINE] で次の前提条件に注意してください。
+Experience Platformから [!DNL LINE] アカウントにデータを書き出すには、[!DNL LINE] で次の前提条件に注意してください。
 
 #### [!DNL LINE] アカウントが必要です {#prerequisites-account}
 
@@ -40,7 +40,7 @@ Platform から [!DNL LINE] アカウントにデータを書き出すには、[
 
 #### [!DNL LINE] Developer Console からの [!DNL LINE channel access token (long-lived)] の収集 {#gather-credentials}
 
-Platform が [!DNL LINE] リソースにアクセスできるようにするには、目的の [!DNL LINE] *Messaging API* チャネルからの *[!DNL Channel access token (long-lived)]* が必要です。
+Experience Platformが [!DNL LINE] リソースにアクセスできるようにするには、目的の [!DNL LINE] *Messaging API* チャネルからの *[!DNL Channel access token (long-lived)]* が必要です。
 
 1. [!DNL LINE] アカウントで [[!DNL LINE]  開発者コンソール ](https://developers.line.biz/console) にログインします。
 1. 次に、*[!DNL Providers]* リストにアクセスして、目的の *[!DNL Provider]* を選択し、最後に *Messaging API* チャネルを選択して、その設定にアクセスします。 初めて Developer Console にアクセスする場合は、[[!DNL LINE]  ドキュメント ](https://developers.line.biz/en/docs/messaging-api/getting-started/) に従って、プロバイダーの作成に必要な手順を完了してください。
@@ -85,7 +85,7 @@ Platform が [!DNL LINE] リソースにアクセスできるようにするに�
 ### 宛先に対する認証 {#authenticate}
 
 宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
-![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+![ 認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 以下の必須フィールドに入力します。
 * **[!UICONTROL ベアラートークン]**:[!DNL LINE] 開発者コンソールからの [!DNL LINE Channel access token (long-lived)]。 [ 資格情報の収集 ](#gather-credentials) の節を参照してください。
@@ -95,7 +95,7 @@ Platform が [!DNL LINE] リソースにアクセスできるようにするに�
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-![宛先の詳細を示す Platform UI のスクリーンショット。](../../assets/catalog/mobile-engagement/line/destination-details.png)
+![ 宛先の詳細を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -118,7 +118,7 @@ Platform が [!DNL LINE] リソースにアクセスできるようにするに�
 
 ### 属性と ID のマッピング {#map}
 
-Adobe Experience Platform から [!DNL LINE] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL LINE] 宛先フィールドに正しくマッピングするには、次の手順に従います。
+Adobe Experience Platform から [!DNL LINE] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Experience Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL LINE] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
 ソース ID に応じて、次のターゲット ID 名前空間をマッピングする必要があります。
 
@@ -128,14 +128,14 @@ Adobe Experience Platform から [!DNL LINE] 宛先にオーディエンスデ�
 | LINE ユーザー ID | `UserID` | `LineId` |
 
 ターゲット ID が *LINE ユーザー ID* の場合は、以下が必要です。
-![ ターゲット ID に LINE ユーザー ID を使用する際のターゲットマッピングを示す Platform UI のスクリーンショットの例。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![ ターゲット ID に LINE ユーザー ID を使用する際のターゲットマッピングを示すExperience Platform UI のスクリーンショットの例。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 ターゲット ID が *広告主（IFA）の ID）の場合は* 以下が必要になります。
-![ ターゲット ID に広告主（IFA）の ID を使用する際のターゲットマッピングを示す Platform UI のスクリーンショットの例。](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![ ターゲット ID に広告主（IFA）の ID を使用する場合のターゲットマッピングを示すExperience Platform UI のスクリーンショットの例。](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## データの書き出しを検証する {#exported-data}
 
-Experience Platform外のデータの書き出しに成功すると、[!DNL LINE] の宛先は、選択されたオーディエンス名を使用して [!DNL LINE] 内に新しいオーディエンスを作成します。
+Experience Platformからデータが正常に書き出されると、[!DNL LINE] の宛先は、選択されたオーディエンス名を使用して [!DNL LINE] 内に新しいオーディエンスを作成します。
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 

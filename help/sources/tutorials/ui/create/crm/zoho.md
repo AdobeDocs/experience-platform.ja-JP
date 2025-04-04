@@ -5,10 +5,10 @@ title: UI での Zoho CRM ソース接続の作成
 type: Tutorial
 description: Adobe Experience Platform の UI を使用して Zoho CRM ソース接続を作成する方法を説明します。
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 98%
+source-wordcount: '553'
+ht-degree: 88%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 98%
 >
 >[!DNL Zoho CRM] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
 
-Adobe Experience Platform のソースコネクタには、外部ソースの CRM データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] のユーザーインターフェイスを使用して [!DNL Zoho CRM] ソースコネクタを作成する手順を説明します。
+Adobe Experience Platform のソースコネクタには、外部ソースの CRM データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] のユーザーインターフェイスを使用して [!DNL Zoho CRM] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -33,7 +33,7 @@ Adobe Experience Platform のソースコネクタには、外部ソースの CR
 
 ### 必要な資格情報の収集
 
-[!DNL Zoho CRM] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Zoho CRM] をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -48,9 +48,9 @@ Adobe Experience Platform のソースコネクタには、外部ソースの CR
 
 ## [!DNL Zoho CRM] アカウントの接続
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL Zoho CRM] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL Zoho CRM] アカウントを [!DNL Experience Platform] にリンクします。
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -78,4 +78,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Zoho CRM] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](../../dataflow/crm.md)を行いましょう。
+このチュートリアルでは、[!DNL Zoho CRM] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。

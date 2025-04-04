@@ -2,9 +2,9 @@
 title: バッチクエリのライセンス使用状況の監視
 description: Adobe Experience Platform UI には、組織の Data Distiller ライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ライセンス使用状況ダッシュボードは、購入した各製品に対する組織のクエリサービスライセンスの使用状況と使用状況指標に関する詳細なレポートを提供します。 ダッシュボードに表示される利用可能な指標について詳しくは、[ ライセンス使用状況ダッシュボードガイド ](../../dashboards/guides/license-usage.md#available-metrics) を参照してください。
 
-ダッシュボードには、購入した各製品の使用状況指標、すべての実稼動サンドボックスまたは開発サンドボックスにおける指標の統合使用状況、および特定のサンドボックスの使用状況指標が表示されます。 ここに表示される情報は、Platform インスタンスの毎日のスナップショット中にキャプチャされます。
+ダッシュボードには、購入した各製品の使用状況指標、すべての実稼動サンドボックスまたは開発サンドボックスにおける指標の統合使用状況、および特定のサンドボックスの使用状況指標が表示されます。 ここに表示される情報は、Experience Platform インスタンスの毎日のスナップショット中にキャプチャされます。
 
 >[!NOTE]
 >

@@ -1,12 +1,12 @@
 ---
-title: ストリーミング SDK UI 用ドキュメント セルフサービステンプレート
+title: ストリーミング SDK UI 用のドキュメントセルフサービステンプレート
 description: UI を使用して、ソースからAdobe Experience Platformにストリーミングデータを取り込む方法を説明します。
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: ベータ版
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 19%
+source-wordcount: '1194'
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 19%
 
 *まず、ページ上部のメタデータ（タイトルと説明）を更新します。 このページの UICONTROL のインスタンスをすべて無視してください。 これは、機械翻訳プロセスが、サポートする複数の言語にページを正しく翻訳するのに役立つタグです。 ドキュメントを送信したら、タグをドキュメントに追加します。*
 
-このチュートリアルでは、Platform ユーザーインターフェイスを使用して *YOURSOURCE* ソースコネクタを作成する手順を説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して *YOURSOURCE* ソースコネクタを作成する手順について説明します。
 
 ## 概要
 
@@ -37,7 +37,7 @@ ht-degree: 19%
 
 ### 必要な資格情報の収集
 
-*YOURSOURCE* を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
+*YOURSOURCE* をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
@@ -49,11 +49,11 @@ ht-degree: 19%
 
 ### *YOURSOURCE* と Webhook の統合
 
-*ストリーミング SDK では、Experience Platformと通信するために Webhook をサポートできるソースが必要です。 この節では、YOURSOURCE を Webhook と統合するためにユーザーが従う必要がある手順を指定する必要があります。*
+*ストリーミング SDKがExperience Platformと通信するには、Webhook をサポートできるソースが必要です。 この節では、YOURSOURCE を Webhook と統合するためにユーザーが従う必要がある手順を指定する必要があります。*
 
 ## *YOURSOURCE* アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -61,13 +61,13 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TIP]
 >
->以下で使用するスクリーンショットは例です。 ドキュメントを作成する際は、画像を実際のソースのスクリーンショットに置き換えてください。 同じファイル名だけでなく、同じマークアップパターンと色を使用できます。 スクリーンショットが Platform UI 画面全体をキャプチャしていることを確認してください。 スクリーンショットのアップロード方法について詳しくは、[ レビュー用ドキュメントの送信 ](../documentation/github.md) に関するガイドを参照してください。
+>以下で使用するスクリーンショットは例です。 ドキュメントを作成する際は、画像を実際のソースのスクリーンショットに置き換えてください。 同じファイル名だけでなく、同じマークアップパターンと色を使用できます。 スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。 スクリーンショットのアップロード方法について詳しくは、[ レビュー用ドキュメントの送信 ](../documentation/github.md) に関するガイドを参照してください。
 
-![Experience Platformソースカタログ ](../assets/streaming/catalog.png)
+![Experience Platform ソースカタログ ](../assets/streaming/catalog.png)
 
 ## データの選択
 
-**[!UICONTROL データを選択]** 手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが表示されます。
+**[!UICONTROL データを選択]** 手順が表示され、Experience Platformに取り込むデータを選択するためのインターフェイスが表示されます。
 
 * インターフェイスの左側は、アカウント内で利用可能なデータストリームを表示できるブラウザーです。
 * インターフェイスの右側の部分では、JSON ファイルから最大 100 行のデータをプレビューできます。
@@ -94,7 +94,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html) を参照してください。
 
 ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -123,7 +123,7 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 *データフロー作成の残りの手順のワークフローはモジュール化されます。 ソースに関して特定のコールアウトを行う必要がある場合は、以下のその他のリソースの節を参照してください。*
 
-このチュートリアルに従うと、*YOURSOURCE* アカウントとの接続を確立できます。 次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)を行いましょう。
+このチュートリアルに従うと、*YOURSOURCE* アカウントとの接続を確立できます。 次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) を行いましょう。
 
 ## その他のリソース
 

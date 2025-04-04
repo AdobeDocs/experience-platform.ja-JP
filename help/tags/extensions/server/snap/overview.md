@@ -3,16 +3,16 @@ title: Snapchat Conversions API 拡張機能の概要
 description: Snapchat 変換を使用して、サーバーサイドのイベントデータを Snap に送信します。
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '966'
 ht-degree: 4%
 
 ---
 
 # [!DNL Snapchat] Conversions API 拡張機能の概要
 
-[!DNL Snap] Conversion API Extension は、安全な [Edge Networkサーバー API](/help/server-api/overview.md) インターフェイスで、Web サイト上のユーザーアクションに関する情報を直接 [!DNL Snapchat] と共有できます。 イベント転送ルールを活用し、**[!DNL Snap]** Conversion API 拡張機能を使用して、**[!DNL Adobe Experience Platform Edge Network]** から **[!DNL Snapchat]** にデータを送信できます。
+[!DNL Snap] Conversion API Extension は、安全な [Edge Network Server API](/help/server-api/overview.md) インターフェイスで、Web サイト上のユーザーアクションに関する情報を [!DNL Snapchat] と直接共有できます。 イベント転送ルールを活用し、**[!DNL Snap]** Conversion API 拡張機能を使用して、**[!DNL Adobe Experience Platform Edge Network]** から **[!DNL Snapchat]** にデータを送信できます。
 
 ## [!DNL Snapchat] 前提条件 {#prerequisites}
 
@@ -79,7 +79,7 @@ Snapchat Ads Manager で [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s
 
 ## 変換イベントを Snap に送信するルールを作成する {#create-snap-rules}
 
-[ ルール ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) は、Platform で拡張機能をトリガーするために使用されます。 この節では、イベント転送プロパティ内でルールを作成し、Conversions API 拡張機能を使用してコンバージョンイベントを Snap に送信する方法について概説します。
+[ ルール ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) は、Experience Platformで拡張機能をトリガーするために使用されます。 この節では、イベント転送プロパティ内でルールを作成し、Conversions API 拡張機能を使用してコンバージョンイベントを Snap に送信する方法について概説します。
 
 ### 新しいルールの作成
 
@@ -201,4 +201,4 @@ Snapchat Ads Manager で [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、**[!DNL Snap Conversions API]** 拡張機能を使用してサーバーサイドのイベントデータを **[!DNL Snap]** に送信する方法について説明しました。 Platform のイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。
+このガイドでは、**[!DNL Snap Conversions API]** 拡張機能を使用してサーバーサイドのイベントデータを **[!DNL Snap]** に送信する方法について説明しました。 Experience Platformのイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください。

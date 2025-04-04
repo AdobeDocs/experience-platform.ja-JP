@@ -2,10 +2,10 @@
 title: 非同期デプロイメント
 description: Web サイトで Adobe Experience Platform タブライブラリを非同期でデプロイする方法について説明します。
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 100%
+source-wordcount: '1046'
+ht-degree: 98%
 
 ---
 
@@ -106,4 +106,4 @@ ht-degree: 100%
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   このコードは、ブラウザーパーサーがページの最下部に到達したことを Platform に伝えます。この時間までにタグが読み込みおよび実行されていない可能性があるため、`_satellite.pageBottom()` を呼び出すとエラーが発生し、「Page Bottom」イベントタイプが期待どおりに動作しない可能性があります。
+   このコードは、ブラウザーパーサーがページの最下部に到達したことをExperience Platformに伝えます。 この時間までにタグが読み込みおよび実行されていない可能性があるため、`_satellite.pageBottom()` を呼び出すとエラーが発生し、「Page Bottom」イベントタイプが期待どおりに動作しない可能性があります。

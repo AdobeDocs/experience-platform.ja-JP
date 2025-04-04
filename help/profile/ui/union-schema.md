@@ -2,26 +2,26 @@
 keywords: Experience Platform；プロファイル；リアルタイム顧客プロファイル；統合プロファイル；統合プロファイル；統合；プロファイル；rtcp；プロファイルの有効化；プロファイルの有効化；結合スキーマ；結合プロファイル；結合プロファイル
 title: 結合スキーマ UI ガイド
 type: Documentation
-description: Adobe Experience Platformのユーザーインターフェイス（UI）では、組織内の任意の結合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係および要因となるスキーマをプレビューできます。 このガイドでは、Platform UI を使用して和集合スキーマを表示および調査する方法について詳しく説明します。
+description: Adobe Experience Platformのユーザーインターフェイス（UI）では、組織内の任意の結合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係および要因となるスキーマをプレビューできます。 このガイドでは、Experience Platform UI を使用して和集合スキーマを表示および調査する方法について詳しく説明します。
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1204'
 ht-degree: 2%
 
 ---
 
 # [!UICONTROL  結合スキーマ ] UI ガイド
 
-Adobe Experience Platformのユーザーインターフェイス（UI）では、組織内の任意の結合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係および要因となるスキーマをプレビューできます。 このガイドでは、Platform UI を使用して和集合スキーマを表示および調査する方法について詳しく説明します。
+Adobe Experience Platformのユーザーインターフェイス（UI）では、組織内の任意の結合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係および要因となるスキーマをプレビューできます。 このガイドでは、Experience Platform UI を使用して和集合スキーマを表示および調査する方法について詳しく説明します。
 
 ## はじめに
 
 この UI ガイドは、リアルタイム顧客プロファイルデータの管理に関連する様々な [!DNL Experience Platform] サービスを理解しているユーザーを対象としています。 このガイドを読む前、または UI を使用する前に、次のサービスのドキュメントを確認してください。
 
 * [[!DNL Real-Time Customer Profile]](../home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
-* [[!DNL Identity Service]](../../identity-service/home.md):[!DNL Real-Time Customer Profile] に取り込まれる際に、異なるデータソースの ID を結合することで、[!DNL Platform] を有効にします。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
+* [[!DNL Identity Service]](../../identity-service/home.md):[!DNL Real-Time Customer Profile] に取り込まれる際に、異なるデータソースの ID を結合することで、[!DNL Experience Platform] を有効にします。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
 ## 結合スキーマについて
 
@@ -33,7 +33,7 @@ Adobe Experience Platformのユーザーインターフェイス（UI）では�
 
 ## 和集合スキーマの表示
 
-Platform UI 内で結合スキーマに移動するには、左側のナビゲーションから **[!UICONTROL プロファイル]** を選択し、「**[!UICONTROL 結合スキーマ]**」タブを選択します。 [!UICONTROL  和集合スキーマ ] タブが開き、現在選択しているクラスの和集合スキーマが表示されます。
+Experience Platform UI 内で結合スキーマに移動するには、左側のナビゲーションから **[!UICONTROL プロファイル]** を選択し、「**[!UICONTROL 結合スキーマ]**」タブを選択します。 [!UICONTROL  和集合スキーマ ] タブが開き、現在選択しているクラスの和集合スキーマが表示されます。
 
 ![ 「プロファイルと和集合スキーマ」タブがハイライト表示された和集合スキーマページが表示されます。](../images/union-schema/landing.png)
 
@@ -63,7 +63,7 @@ Platform UI 内で結合スキーマに移動するには、左側のナビゲ�
 
 ## 貢献するスキーマの表示
 
-また、「貢献するすべてのスキーマ **[!UICONTROL を選択してスキーマのリストを展開すると、結合スキーマに貢献する特定のスキーマを表示するこ]** もできます。 選択したクラスと、組織が Platform 内に作成したスキーマの数に応じて、単一のスキーマを含む短いリストや、多数のスキーマを含む長いリストを指定できます。
+また、「貢献するすべてのスキーマ **[!UICONTROL を選択してスキーマのリストを展開すると、結合スキーマに貢献する特定のスキーマを表示するこ]** もできます。 選択したクラスと、Experience Platform内に作成したスキーマの数に応じて、1 つのスキーマを含む短いリストや、多くのスキーマを含む長いリストを作成できます。
 
 ![ 和集合スキーマに関与するスキーマのリストがハイライト表示されています。](../images/union-schema/contributing-schemas.png)
 
@@ -99,4 +99,4 @@ UI を使用したスキーマの定義方法など、スキーマの関係に�
 
 ## 次の手順
 
-このガイドを読むことで、[!DNL Experience Platform] UI を使用した結合スキーマの表示およびナビゲーション方法を理解しました。 Platform 全体での使用など、スキーマの詳細については、まず [XDM システムの概要 ](../../xdm/home.md) をお読みください。
+このガイドを読むことで、[!DNL Experience Platform] UI を使用した結合スキーマの表示およびナビゲーション方法を理解しました。 Experience Platform全体でのスキーマの使用方法など、スキーマの詳細については、まず [XDM システムの概要 ](../../xdm/home.md) をお読みください。

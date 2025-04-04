@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気の高いトピック;Oracle Servi
 title: UI での Oracle Service Cloud ソース接続の作成
 description: Adobe Experience Platform の UI を使用して Oracle サービスクラウドソース接続を作成する方法を説明します。
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 97%
+source-wordcount: '481'
+ht-degree: 90%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 97%
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で Oracle Service Cloud アカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Experience Platform] で Oracle Service Cloud アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -43,7 +43,7 @@ Oracle Service Cloud アカウントの認証について詳しくは、[[!DNL O
 
 ## Oracle Service Cloud アカウントへの接続
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントの作成に使用できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントの作成に使用できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
@@ -67,4 +67,4 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ## 次の手順
 
-このチュートリアルでは、Oracle Service Cloud アカウントとの接続を確立しました。次のチュートリアルに進み、[カスタマーサクセスデータを Platform に取り込むためのデータフローの設定](../../dataflow/crm.md)を行いましょう。
+このチュートリアルでは、Oracle Service Cloud アカウントとの接続を確立しました。次のチュートリアルに進み、[ カスタマーサクセスデータをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。

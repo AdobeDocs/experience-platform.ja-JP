@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;Flow Service;
 title: Flow Service API を使用したオンデマンド取り込み用のフロー実行の作成
 description: Flow Service API を使用して、オンデマンド取り込み用のフロー実行を作成する方法を説明します
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 13%
+source-wordcount: '801'
+ht-degree: 10%
 
 ---
 
@@ -26,16 +26,16 @@ ht-degree: 13%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
 
 ## テーブルベースのソースのフロー実行の作成
 
-テーブルベースのソースのフローを作成するには、[!DNL Flow Service] API に対してPOSTリクエストを行い、実行を作成するフローの ID と、開始時刻、終了時刻、差分列の値を指定します。
+テーブルベースのソースのフローを作成するには、実行を作成するフローの ID と、開始時刻、終了時刻、差分列の値を指定して、[!DNL Flow Service] API に対して POST リクエストを行います。
 
 >[!TIP]
 >
@@ -125,7 +125,7 @@ curl -X POST \
 
 ## ファイルベースのソースのフロー実行の作成
 
-ファイルベースのソースのフローを作成するには、[!DNL Flow Service] API にPOSTリクエストを行い、実行を作成するフローの ID と、開始時刻および終了時刻の値を指定します。
+ファイルベースのソースのフローを作成するには、[!DNL Flow Service] API に POST リクエストを実行し、実行を作成するフローの ID と、開始時刻および終了時刻の値を指定します。
 
 >[!TIP]
 >
@@ -189,4 +189,4 @@ curl -X POST \
 
 ## フロー実行の監視
 
-フロー実行が作成されると、それを通じて取り込まれるデータを監視し、フロー実行、完了ステータスおよびエラーに関する情報を確認できます。 API を使用してフローの実行を監視するには、[API でのデータフローの監視 ](./monitor.md) に関するチュートリアルを参照してください。 Platform UI を使用してフローの実行を監視するには、[ モニタリングダッシュボードを使用したソースデータフローのモニタリング ](../../../dataflows/ui/monitor-sources.md) に関するガイドを参照してください。
+フロー実行が作成されると、それを通じて取り込まれるデータを監視し、フロー実行、完了ステータスおよびエラーに関する情報を確認できます。 API を使用してフローの実行を監視するには、[API でのデータフローの監視 ](./monitor.md) に関するチュートリアルを参照してください。 Experience Platform UI を使用してフローの実行を監視するには、[ モニタリングダッシュボードを使用したソースデータフローのモニタリング ](../../../dataflows/ui/monitor-sources.md) に関するガイドを参照してください。

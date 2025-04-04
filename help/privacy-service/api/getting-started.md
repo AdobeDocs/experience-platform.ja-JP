@@ -1,12 +1,12 @@
 ---
 title: Privacy Service API の認証とアクセス
-description: Privacy ServiceAPI への認証方法とサンプル API 呼び出しの解釈方法については、ドキュメントを参照してください。
+description: Privacy Service API への認証方法とサンプル API 呼び出しの解釈方法については、ドキュメントを参照してください。
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 18%
+source-wordcount: '852'
+ht-degree: 21%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 18%
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、[Privacy Service](../home.md) およびAdobe Experience Cloud アプリケーション全体のデータ主体（顧客）からのアクセスリクエストと削除リクエストを管理する方法について実際に理解している必要があります。
+このガイドでは、[Privacy Service](../home.md) と、Adobe Experience Cloud アプリケーション全体のデータ主体（お客様）からのアクセスリクエストや削除リクエストを管理する方法に関する十分な知識が必要です。
 
-API のアクセス資格情報を作成するには、組織内の管理者がAdobe Admin Console内でPrivacy Serviceするための製品プロファイルを事前に設定している必要があります。 API 統合に割り当てる製品プロファイルによって、その統合がPrivacy Service機能にアクセスする際に持つ権限が決まります。 詳しくは、[Privacy Service権限の管理 ](../permissions.md) のガイドを参照してください。
+API のアクセス資格情報を作成するには、組織内の管理者がAdobe Admin Console内でPrivacy Serviceの製品プロファイルを事前に設定している必要があります。 API 統合に割り当てる製品プロファイルによって、Privacy Service機能にアクセスする際に統合に付与される権限が決まります。 詳しくは、[Privacy Service権限の管理 ](../permissions.md) に関するガイドを参照してください。
 
 ## 必須ヘッダーの値の収集 {#gather-values-required-headers}
 
-ヘッダー API を呼び出すには、まず必要なPrivacy Serviceで使用されるアクセス資格情報を収集する必要があります。
+Privacy Service API を呼び出すには、まず必要なヘッダーで使用されるアクセス資格情報を収集する必要があります。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,17 +40,17 @@ API のアクセス資格情報を作成するには、組織内の管理者がA
 
 ![Developer Consoleのプロジェクトの詳細ページの [!UICONTROL  プロジェクトに追加 ] ドロップダウンから選択されている「API」オプション ](../images/api/getting-started/add-api-button.png)
 
-#### Privacy ServiceAPI を選択します。 {#select-privacy-service-api}
+#### Privacy Service API を選択します。 {#select-privacy-service-api}
 
-**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 「**[!UICONTROL Experience Cloud]**」を選択して使用可能な API のリストを絞り込み、「**[!UICONTROL Privacy ServiceAPI]**」のカードを選択して **[!UICONTROL 「次へ]**」を選択します。
+**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 「**[!UICONTROL Experience Cloud]**」を選択して使用可能な API のリストを絞り込み、「**[!UICONTROL Privacy Service API]**」のカードを選択して **[!UICONTROL 「次へ]**」を選択します。
 
-![ 使用可能な API のリストから選択されているPrivacy ServiceAPI カード ](../images/api/getting-started/add-privacy-service-api.png)
+![ 使用可能な API のリストから選択されているPrivacy Service API カード ](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->**[!UICONTROL ドキュメントを表示]** オプションを選択して、別のブラウザーウィンドウに移動し、[Privacy ServiceAPI リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) を参照します。
+>**[!UICONTROL ドキュメントを表示]** オプションを選択して、別のブラウザーウィンドウに移動し、[Privacy Service API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) を参照します。
 
-次に、認証タイプを選択してアクセストークンを生成し、Privacy ServiceAPI にアクセスします。
+次に、認証タイプを選択してアクセストークンを生成し、Privacy Service API にアクセスします。
 
 >[!IMPORTANT]
 >
@@ -70,7 +70,7 @@ API のアクセス資格情報を作成するには、組織内の管理者がA
 
 ![ 設定を保存する前に、リストから 1 つの製品プロファイルが選択されている ](../images/api/getting-started/select-product-profiles.png)
 
-API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Privacy ServiceAPI]** ページに、Privacy ServiceAPI へのすべての呼び出しで必要な次の資格情報が表示されます。
+API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Privacy Service API]** ページに、Privacy Service API へのすべての呼び出しで必要な次の資格情報が表示されます。
 
 * `{API_KEY}` （[!UICONTROL  クライアント ID]）
 * `{ORG_ID}` （[!UICONTROL  組織 ID]）
@@ -96,11 +96,11 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 #### トークン生成の自動化 {#auto-token}
 
-また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、Experience PlatformAPI 認証ガイドの [Postmanを使用した API 呼び出しの認証およびテスト ](/help/landing/api-authentication.md#use-postman) に関する節を参照してください。
+また、Postman環境とコレクションを使用してアクセストークンを生成することもできます。 詳しくは、Experience Platform API 認証ガイドの [Postmanを使用した API 呼び出しの認証およびテスト ](/help/landing/api-authentication.md#use-postman) に関する節を参照してください。
 
 ## API 呼び出し例の読み取り {#read-sample-api-calls}
 
-各エンドポイントガイドには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、Platform API の開始ガイドの [ サンプル API 呼び出しの読み方 ](../../landing/api-guide.md#sample-api) に関する節を参照してください。
+各エンドポイントガイドには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。 これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、Experience Platform API の開始ガイドの[API 呼び出し例の読み方](../../landing/api-guide.md#sample-api)に関する節を参照してください。
 
 ## 次の手順 {#next-steps}
 

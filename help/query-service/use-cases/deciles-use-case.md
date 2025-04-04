@@ -2,16 +2,16 @@
 title: デシルベースの派生データセットのユースケース
 description: このガイドでは、クエリサービスを使用して、プロファイルデータで使用するデシルベースの派生データセットを作成するために必要な手順を示します。
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1512'
 ht-degree: 2%
 
 ---
 
 # デシルベースの派生データセットのユースケース
 
-派生データセットを使用すると、データレイクからデータを分析するための複雑なユースケースが容易になります。このユースケースは、他のダウンストリーム Platform サービスで使用したり、リアルタイム顧客プロファイルデータに公開したりできます。
+派生データセットを使用すると、データレイクからデータを分析するための複雑なユースケースが容易になります。これらのユースケースは、他のダウンストリーム Experience Platform サービスで使用したり、リアルタイム顧客プロファイルデータに公開したりできます。
 
 このユースケースは、リアルタイム顧客プロファイルデータで使用するデシルベースの派生データセットを作成する方法を示しています。 このガイドでは、航空会社のロイヤルティシナリオを例として使用し、カテゴリデシルを使用してランク付けされた属性に基づいてオーディエンスをセグメント化および作成するデータセットの作成方法について説明します。
 
@@ -64,10 +64,10 @@ ht-degree: 2%
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | 新規メンバー | 5,000 | チラシ |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | 新規メンバー | 5000 | チラシ |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | シルバー |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | シルバー |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5,000 | シルバー |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | シルバー |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | 新しいクレジットカード | 10000 | チラシ |
 
 {style="table-layout:auto"}

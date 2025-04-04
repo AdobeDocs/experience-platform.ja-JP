@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 製品プロファイルの詳細と追加サービスの管理
 description: このドキュメントでは、Adobe Admin Console の製品プロファイルの詳細および追加サービスを管理するために必要な手順を説明します。プロファイルの詳細を設定し、追加のサービスにアクセスするには、プロファイル設定メニューを使用します。
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 98%
@@ -23,7 +23,7 @@ ht-degree: 98%
 
 「**[!UICONTROL 次へ]**」を選択して、**[!UICONTROL サービスを有効にする]**&#x200B;ページにアクセスします。
 
-**[!UICONTROL サービスを有効にする]**&#x200B;メニューを使用すると、プロファイルの作成時に最初に設定した追加の [!DNL Platform] サービスに対するプロファイルのアクセスを変更できます。[!DNL Platform] サブスクリプションに応じて、これらのサービスには次のものが含まれます。
+**[!UICONTROL サービスを有効にする]**&#x200B;メニューを使用すると、プロファイルの作成時に最初に設定した追加の [!DNL Experience Platform] サービスに対するプロファイルのアクセスを変更できます。[!DNL Experience Platform] サブスクリプションに応じて、これらのサービスには次のものが含まれます。
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]

@@ -5,16 +5,16 @@ title: Flow Service API を使用した宛先データフローの更新
 type: Tutorial
 description: このチュートリアルでは、宛先データフローの更新手順を説明します。 Flow Service API を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法について説明します。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2404'
-ht-degree: 33%
+source-wordcount: '2410'
+ht-degree: 31%
 
 ---
 
 # Flow Service API を使用した宛先データフローの更新
 
-このチュートリアルでは、宛先データフローの更新手順を説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法について説明します。 Experience PlatformUI を使用した宛先データフローの編集について詳しくは、[ アクティベーションフローの編集 ](/help/destinations/ui/edit-activation.md) を参照してください。
+このチュートリアルでは、宛先データフローの更新手順を説明します。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して、データフローを有効または無効にする方法、基本情報を更新する方法、オーディエンスと属性を追加および削除する方法について説明します。 Experience Platform UI を使用した宛先データフローの編集について詳しくは、[ アクティベーションフローの編集 ](/help/destinations/ui/edit-activation.md) を参照してください。
 
 ## はじめに {#get-started}
 
@@ -27,7 +27,7 @@ ht-degree: 33%
 このチュートリアルでは、Adobe Experience Platform の次のコンポーネントについて十分に理解していることを前提にしています。
 
 * [ 宛先 ](../home.md):[!DNL Destinations] は、Adobe Experience Platformからのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-* [サンドボックス](../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してデータフローを正常に更新するために必要な追加情報を示しています。
 
@@ -37,13 +37,13 @@ ht-degree: 33%
 
 ### 必須ヘッダーの値の収集 {#gather-values-for-required-headers}
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Experience Platform API を呼び出すには、まず[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service] に属するリソースを含む、Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service] に属するリソースを含む、Experience Platformのすべてのリソースは、特定の仮想サンドボックスに分離されます。 Experience Platform API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -345,7 +345,7 @@ curl -X GET \
 
 ## データフロー名と説明の更新 {#update-dataflow}
 
-データフローの名前と説明を更新するには、フロー ID、バージョンおよび使用する新しい値を指定して、[!DNL Flow Service] API にPATCHリクエストを実行します。
+データフローの名前と説明を更新するには、フロー ID、バージョンおよび使用する新しい値を指定して、[!DNL Flow Service] API にPATCH リクエストを実行します。
 
 >[!IMPORTANT]
 >
@@ -404,7 +404,7 @@ curl -X PATCH \
 
 有効にすると、データフローはプロファイルを宛先に書き出します。 データフローはデフォルトで有効になっていますが、プロファイル書き出しを一時停止するには無効にします。
 
-[!DNL Flow Service] API に宛先リクエストを実行し、フローを更新するステートを指定することで、既存のPOSTデータフローを有効または無効にできます。
+[!DNL Flow Service] API に POST リクエストを実行し、フローを更新する状態を指定することで、既存の宛先データフローを有効または無効にできます。
 
 **API 形式**
 
@@ -449,7 +449,7 @@ curl -X POST \
 
 ## データフローへのオーディエンスの追加 {#add-segment}
 
-宛先データフローにオーディエンスを追加するには、[!DNL Flow Service] API にPATCHリクエストを実行し、その際にフロー ID、バージョンおよび追加するオーディエンスを指定します。
+宛先データフローにオーディエンスを追加するには、[!DNL Flow Service] API にPATCH リクエストを実行し、その際にフロー ID、バージョンおよび追加するオーディエンスを指定します。
 
 **API 形式**
 
@@ -503,7 +503,7 @@ curl -X PATCH \
 | `exportMode` | *バッチ宛先* の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> 必須。 `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの「[完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」および「[増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
 | `startDate` | オーディエンスが宛先へのプロファイルの書き出しを開始する日付を選択します。 |
 | `frequency` | *バッチ宛先* の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> 必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
-| `triggerType` | *バッチ宛先* の場合のみ。 このフィールドは、`frequency` セレクターで `"DAILY_FULL_EXPORT"` モードを選択する場合にのみ必要です。 <br> 必須。<br> <ul><li>毎日の Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行するには、「`"AFTER_SEGMENT_EVAL"`」を選択します。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>`"SCHEDULED"` を選択して、特定の時間にアクティベーションジョブを実行します。 これにより、Experience Platformプロファイルデータは毎日同じ時刻に書き出されます。アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、`startTime` を追加して、日次書き出しが発生する UTC の時間を示す必要もあります。</li></ul> |
+| `triggerType` | *バッチ宛先* の場合のみ。 このフィールドは、`frequency` セレクターで `"DAILY_FULL_EXPORT"` モードを選択する場合にのみ必要です。 <br> 必須。<br> <ul><li>毎日のExperience Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行するには、「`"AFTER_SEGMENT_EVAL"`」を選択します。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>`"SCHEDULED"` を選択して、特定の時間にアクティベーションジョブを実行します。 これにより、Experience Platform プロファイルデータは毎日同じ時刻に書き出されます。アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、`startTime` を追加して、日次書き出しが発生する UTC の時間を示す必要もあります。</li></ul> |
 | `endDate` | *バッチ宛先* の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> `"exportMode":"DAILY_FULL_EXPORT"` と `"frequency":"ONCE"` を選択している場合は適用されません。 <br> オーディエンスメンバーが宛先への書き出しを停止する日付を設定します。 |
 | `startTime` | *バッチ宛先* の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> 必須。 オーディエンスのメンバーを含んだファイルを生成し、宛先に書き出す時間を選択します。 |
 
@@ -520,7 +520,7 @@ curl -X PATCH \
 
 ## データフローからのオーディエンスの削除 {#remove-segment}
 
-既存の宛先データフローからオーディエンスを削除するには、[!DNL Flow Service] API に対してPATCHリクエストを行い、削除するオーディエンスのフロー ID、バージョンおよびインデックスセレクターを指定します。 インデックス作成は `0` から開始されます。 例えば、後述するリクエストのサンプルでは、データフローから 1 番目と 2 番目のオーディエンスを削除します。
+既存の宛先データフローからオーディエンスを削除するには、削除するオーディエンスのフロー ID、バージョンおよびインデックスセレクターを指定して、[!DNL Flow Service] API に対してPATCH リクエストを実行します。 インデックス作成は `0` から開始されます。 例えば、後述するリクエストのサンプルでは、データフローから 1 番目と 2 番目のオーディエンスを削除します。
 
 **API 形式**
 
@@ -565,7 +565,7 @@ curl -X PATCH \
 | プロパティ | 説明 |
 | --------- | ----------- |
 | `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローからオーディエンスを削除するには、`remove` 操作を使用します。 |
-| `path` | オーディエンスセレクターのインデックスに基づいて、宛先データフローから削除する既存のオーディエンスを指定します。 データフロー内のオーディエンスの順序を取得するには、`/flows` エンドポイントへのGET呼び出しを実行し、`transformations.segmentSelectors` プロパティを調べます。 データフローの最初のオーディエンスを削除するには、`"path":"/transformations/0/params/segmentSelectors/selectors/0"` を使用します。 |
+| `path` | オーディエンスセレクターのインデックスに基づいて、宛先データフローから削除する既存のオーディエンスを指定します。 データフロー内のオーディエンスの順序を取得するには、`/flows` エンドポイントに対してGET呼び出しを実行し、`transformations.segmentSelectors` プロパティを調べます。 データフローの最初のオーディエンスを削除するには、`"path":"/transformations/0/params/segmentSelectors/selectors/0"` を使用します。 |
 
 
 **応答**
@@ -581,7 +581,7 @@ curl -X PATCH \
 
 ## データフロー内のオーディエンスのコンポーネントを更新 {#update-segment}
 
-既存の宛先データフロー内のオーディエンスのコンポーネントを更新できます。 例えば、書き出し頻度を変更したり、ファイル名のテンプレートを編集したりできます。 これを行うには、更新するオーディエンスのフロー ID、バージョンおよびインデックスセレクターを指定したうえで、[!DNL Flow Service] API に対してPATCHリクエストを実行します。 インデックス作成は `0` から開始されます。 例えば、以下のリクエストは、データフローの 9 番目のオーディエンスを更新します。
+既存の宛先データフロー内のオーディエンスのコンポーネントを更新できます。 例えば、書き出し頻度を変更したり、ファイル名のテンプレートを編集したりできます。 これを行うには、[!DNL Flow Service] API にPATCH リクエストを実行し、その際にフロー ID、バージョン、更新するオーディエンスのインデックスセレクターを指定します。 インデックス作成は `0` から開始されます。 例えば、以下のリクエストは、データフローの 9 番目のオーディエンスを更新します。
 
 **API 形式**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **リクエスト**
 
-既存の宛先データフロー内のオーディエンスを更新する場合、最初にGET操作を実行して、更新するオーディエンスの詳細を取得する必要があります。 次に、更新するフィールドだけでなく、ペイロード内のすべてのオーディエンス情報を指定します。 次の例では、カスタムテキストがファイル名テンプレートの最後に追加され、書き出しスケジュール頻度が 6 時間から 12 時間に更新されます。
+既存の宛先データフロー内のオーディエンスを更新する場合は、まずGET操作を実行して、更新するオーディエンスの詳細を取得する必要があります。 次に、更新するフィールドだけでなく、ペイロード内のすべてのオーディエンス情報を指定します。 次の例では、カスタムテキストがファイル名テンプレートの最後に追加され、書き出しスケジュール頻度が 6 時間から 12 時間に更新されます。
 
 ```shell
 curl -X PATCH \
@@ -644,7 +644,7 @@ curl -X PATCH \
 
 ## オーディエンスの書き出しモードを、スケジュール済みからオーディエンスの評価後に更新します {#update-export-mode}
 
-+++ クリックすると、オーディエンスの書き出しが、毎日の指定された時間にアクティブ化されてから、Platform バッチセグメント化ジョブが完了した後に毎日のアクティブ化へと更新される例が表示されます。
++++ クリックすると、オーディエンスの書き出しが、指定した時間に毎日アクティブ化されてから、Experience Platformのバッチセグメント化ジョブが完了した後に毎日アクティブ化されるまでに更新される例が表示されます。
 
 オーディエンスは毎日 16:00 UTC に書き出されます。
 
@@ -697,7 +697,7 @@ curl -X PATCH \
 
 +++ クリックすると、ファイル名にフィールドを追加するようにファイル名テンプレートが更新される例が表示されます
 
-書き出されるファイルには、宛先名とExperience Platformオーディエンス ID が含まれます
+書き出されるファイルには、宛先名とExperience Platform オーディエンス ID が含まれます
 
 ```json
 {
@@ -720,7 +720,7 @@ curl -X PATCH \
 }
 ```
 
-書き出されるファイルには、宛先名、Experience Platformオーディエンス ID、Experience Platformがファイルを生成した日時、ファイルの末尾に追加されたカスタムテキストが含まれます。
+書き出されるファイルには、宛先名、Experience Platform オーディエンス ID、Experience Platformがファイルを生成した日時、ファイルの最後に追加されたカスタムテキストが含まれます。
 
 
 ```json
@@ -748,7 +748,7 @@ curl -X PATCH \
 
 ## データフローへのプロファイル属性の追加 {#add-profile-attribute}
 
-宛先データフローにプロファイル属性を追加するには、[!DNL Flow Service] API にPATCHリクエストを行い、追加するフロー ID、バージョンおよびプロファイル属性を指定します。
+宛先データフローにプロファイル属性を追加するには、[!DNL Flow Service] API にPATCH リクエストを行い、追加するフロー ID、バージョンおよびプロファイル属性を指定します。
 
 **API 形式**
 
@@ -801,7 +801,7 @@ curl -X PATCH \
 
 ## データフローからのプロファイル属性の削除 {#remove-profile-attribute}
 
-既存の宛先データフローからプロファイル属性を削除するには、[!DNL Flow Service] API にPATCHリクエストを行い、削除するプロファイル属性のフロー ID、バージョンおよびインデックスセレクターを指定します。 インデックス作成は `0` から開始されます。 例えば、後述のサンプルリクエストでは、データフローから 5 番目のプロファイル属性を削除します。
+既存の宛先データフローからプロファイル属性を削除するには、[!DNL Flow Service] API にPATCH リクエストを行い、削除するプロファイル属性のフロー ID、バージョンおよびインデックスセレクターを指定します。 インデックス作成は `0` から開始されます。 例えば、後述のサンプルリクエストでは、データフローから 5 番目のプロファイル属性を削除します。
 
 
 **API 形式**
@@ -839,7 +839,7 @@ curl -X PATCH \
 | プロパティ | 説明 |
 | --------- | ----------- |
 | `op` | データフローの更新に必要なアクションを定義するために使用される操作呼び出し。操作には、`add`、`replace`、`remove` があります。データフローからオーディエンスを削除するには、`remove` 操作を使用します。 |
-| `path` | オーディエンスセレクターのインデックスに基づいて、宛先データフローから削除する既存のプロファイル属性を指定します。 データフロー内のプロファイル属性の順序を取得するには、`/flows` エンドポイントへのGET呼び出しを実行し、`transformations.profileSelectors` プロパティを調べます。 データフローの最初のオーディエンスを削除するには、`"path":"transformations/0/params/segmentSelectors/selectors/0/"` を使用します。 |
+| `path` | オーディエンスセレクターのインデックスに基づいて、宛先データフローから削除する既存のプロファイル属性を指定します。 データフロー内のプロファイル属性の順序を取得するには、`/flows` エンドポイントに対してGET呼び出しを実行し、`transformations.profileSelectors` プロパティを調べます。 データフローの最初のオーディエンスを削除するには、`"path":"transformations/0/params/segmentSelectors/selectors/0/"` を使用します。 |
 
 
 **応答**
@@ -855,7 +855,7 @@ curl -X PATCH \
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 

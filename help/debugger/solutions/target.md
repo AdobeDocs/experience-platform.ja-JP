@@ -2,34 +2,34 @@
 title: Adobe Experience Platform Debugger を使用した Adobe Target 実装のテスト
 description: Adobe Experience Platform Debugger を使用して、Adobe Target が有効な web サイトのテストとデバッグを行う方法について説明します。
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 99%
+source-wordcount: '1047'
+ht-degree: 84%
 
 ---
 
 # Adobe Experience Platform Debugger を使用した Adobe Target 実装のテスト
 
-Adobe Experience Platform Debugger は、Adobe Target の実装で作成された web サイトのテストとデバッグに役立つツールのスイートを提供します。このガイドでは、Target が有効な web サイトで Platform Debugger を使用する際の一般的なワークフローとベストプラクティスをいくつか説明します。
+Adobe Experience Platform Debugger は、Adobe Target の実装で作成された web サイトのテストとデバッグに役立つツールのスイートを提供します。このガイドでは、Target が有効な web サイトでExperience Platform Debugger を使用する際の一般的なワークフローとベストプラクティスをいくつか説明します。
 
 ## 前提条件
 
-Platform Debugger を Target に使用するには、web サイトで [at.js ライブラリ](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/)バージョン 1.x 以降を使用している必要があります。それより前のバージョンはサポートされていません。
+Experience Platform Debugger を Target に使用するには、web サイトで [at.js ライブラリ ](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) バージョン 1.x 以降を使用している必要があります。 それより前のバージョンはサポートされていません。
 
-## Platform Debugger の初期化
+## Experience Platform Debugger の初期化
 
-テストする web サイトをブラウザーで開き、Platform Debugger 拡張機能を開きます。
+テストする web サイトをブラウザーで開き、Experience Platform Debugger 拡張機能を開きます。
 
-左側のナビゲーションの「**[!DNL Target]**」を選択します。 互換性のあるバージョンの at.js がサイトで実行されていることを Platform Debugger が検出した場合は、Adobe Target 実装の詳細が表示されます。
+左側のナビゲーションの「**[!DNL Target]**」を選択します。 互換性のあるバージョンの at.js がサイトで動作していることをExperience Platform Debugger が検出した場合は、Adobe Target実装の詳細が表示されます。
 
-![Platform Debugger で選択された Target ビュー（現在表示されているブラウザーページで Adobe Target がアクティブであることを示します）](../images/solutions/target/target-initialized.png)
+![Experience Platform Debugger で選択された Target ビュー（現在表示されているブラウザーページでAdobe Targetがアクティブであることを示します） ](../images/solutions/target/target-initialized.png)
 
 ## グローバル設定情報
 
-実装のグローバル設定に関する情報は、Platform Debugger の Target ビューの上部に表示されます。
+実装のグローバル設定に関する情報は、Experience Platform Debugger の Target ビューの上部に表示されます。
 
-![Platform Debugger 内で強調表示されている Target のグローバル設定情報](../images/solutions/target/global-config.png)
+![Experience Platform Debugger 内で強調表示されている Target のグローバル設定情報 ](../images/solutions/target/global-config.png)
 
 | 名前 | 説明 |
 | --- | --- |
@@ -44,11 +44,11 @@ Platform Debugger を Target に使用するには、web サイトで [at.js ラ
 
 「**[!DNL Network Requests]**」を選択すると、ページ上で行われた各ネットワークリクエストの概要情報が表示されます。
 
-![Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション](../images/solutions/target/network-requests.png)
+![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション ](../images/solutions/target/network-requests.png)
 
 ページ上でアクション（ページの再読み込みなど）を実行すると、新しい列がテーブルに自動的に追加されるので、アクションのシーケンスと、リクエスト間での値の変化を確認できます。
 
-![Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション](../images/solutions/target/new-request.png)
+![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション ](../images/solutions/target/new-request.png)
 
 次の値が取り込まれます。
 
@@ -98,13 +98,13 @@ Platform Debugger を Target に使用するには、web サイトで [at.js ラ
 
 特定のネットワークイベントのパラメーターの詳細を表示するには、該当するテーブルセルを選択します。 ポップオーバーが表示され、説明や値など、パラメーターの詳細情報が表示されます。 値が JSON オブジェクトの場合、ダイアログには、オブジェクト構造の完全にナビゲーション可能なビューが含まれます。
 
-![Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション](../images/solutions/target/request-param-details.png)
+![Experience Platform Debugger 内で選択された Target の「[!DNL Network Requests]」セクション ](../images/solutions/target/request-param-details.png)
 
 ## [!DNL Configuration]
 
 「**[!DNL Configuration]**」を選択すると、Target の追加のデバッグツールの選択を有効または無効にすることができます。
 
-![Platform Debugger 内で選択された Target の「[!DNL Configuration Requests]」セクション](../images/solutions/target/configuration.png)
+![Experience Platform Debugger 内で選択された Target の「[!DNL Configuration Requests]」セクション ](../images/solutions/target/configuration.png)
 
 | デバッグツール | 説明 |
 | --- | --- |

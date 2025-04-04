@@ -3,10 +3,10 @@ title: Flow Service API を使用した Azure Event Hubs Source接続の作成
 description: Flow Service API を使用してAdobe Experience Platformを Azure Event Hubs アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 33%
+source-wordcount: '1496'
+ht-degree: 30%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 33%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Azure Event Hubs] ソースを利用できます。
+>Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Event Hubs] ソースを利用できます。
 
 このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Azure Event Hubs] （以下「[!DNL Event Hubs]」）をExperience Platformに接続する方法について説明します。
 
@@ -22,10 +22,10 @@ ht-degree: 33%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-- [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-- [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+- [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+- [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、[!DNL Flow Service] API を使用して [!DNL Event Hubs] を Platform に正しく接続するために必要な追加情報を示します。
+次の節では、[!DNL Flow Service] API を使用してExperience Platformに正しく接続するために必要 [!DNL Event Hubs] 追加情報を示します。
 
 ### 必要な資格情報の収集
 
@@ -79,9 +79,9 @@ ht-degree: 33%
 
 これらの値について詳しくは、[ この Event Hubs ドキュメント ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature) を参照してください。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -103,7 +103,7 @@ POST /connections
 
 >[!TAB  標準認証 ]
 
-標準認証を使用してアカウントを作成するには、`/connections` エンドポイントに対してPOSTリクエストを行い、`sasKeyName`、`sasKey`、`namespace` の値を指定します。
+標準認証を使用してアカウントを作成するには、`/connections` エンドポイントに POST リクエストを実行し、その際、`sasKeyName`、`sasKey`、`namespace` の値を指定します。
 
 +++リクエスト
 
@@ -157,7 +157,7 @@ curl -X POST \
 
 >[!TAB SAS 認証 ]
 
-SAS 認証を使用してアカウントを作成するには、`/connections` エンドポイントに対してPOSTリクエストを行い、`sasKeyName`、`sasKey`、`namespace`、`eventHubName` の値を指定します。
+SAS 認証を使用してアカウントを作成するには、`sasKeyName`、`sasKey`、`namespace`、`eventHubName` の値を指定すると同時に、`/connections` エンドポイントに対して POST リクエストを行います。
 
 +++リクエスト
 
@@ -213,7 +213,7 @@ curl -X POST \
 
 >[!TAB Event Hub Azure Active Directory Auth]
 
-Azure Active Directory Auth を使用してアカウントを作成するには、`tenantId`、`clientId`、`clientSecretValue`、`namespace` の値を指定したうえで、`/connections` エンドポイントに対してPOSTリクエストを行います。
+Azure Active Directory Auth を使用してアカウントを作成するには、`tenantId`、`clientId`、`clientSecretValue`、`namespace` の値を指定したうえで、`/connections` エンドポイントに対して POST リクエストを行います。
 
 +++リクエスト
 
@@ -269,7 +269,7 @@ curl -X POST \
 
 >[!TAB Azure Active Directory 認証をスコープとするイベント ハブ ]
 
-Azure Active Directory Auth を使用してアカウントを作成するには、`tenantId`、`clientId`、`clientSecretValue`、`namespace`、`eventHubName` の値を指定したうえで、`/connections` エンドポイントに対してPOSTリクエストを行います。
+Azure Active Directory Auth を使用してアカウントを作成するには、`tenantId`、`clientId`、`clientSecretValue`、`namespace`、`eventHubName` の値を指定したうえで、`/connections` エンドポイントに対して POST リクエストを行います。
 
 +++リクエスト
 

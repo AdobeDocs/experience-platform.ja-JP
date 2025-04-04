@@ -1,12 +1,12 @@
 ---
 title: Amazon Kinesis Source コネクタの概要
-description: API またはユーザーインターフェイスを使用してAmazon KinesisをAdobe Experience Platformに接続する方法について説明します。
+description: API またはユーザーインターフェイスを使用してAmazon Kinesis をAdobe Experience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 13%
+source-wordcount: '532'
+ht-degree: 12%
 
 ---
 
@@ -16,16 +16,16 @@ ht-degree: 13%
 >
 >- Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Amazon Kinesis] ソースを利用できます。
 >
->- Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Amazon Kinesis] ソースを使用できるようになりました。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../landing/multi-cloud.md) を参照してください。
+>- Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Amazon Kinesis] ソースを使用できるようになりました。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
 
 
-Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続を提供します。 これらのシステムから [!DNL Platform] にデータを取り込むことができます。
+Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続を提供します。 これらのシステムから [!DNL Experience Platform] にデータを取り込むことができます。
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Platform] を使用すると、[!DNL Amazon Kinesis] からリアルタイムにデータを取り込むことができます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを [!DNL Experience Platform] に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。[!DNL Experience Platform] を使用すると、[!DNL Amazon Kinesis] からリアルタイムにデータを取り込むことができます。
 
 >[!NOTE]
 >
->大量のデータを取り込む必要がある場合は、[!DNL Kinesis] のスケールファクターを増やす必要があります。 現在、[!DNL Kinesis] アカウントから Platform に取り込めるデータの最大量は、1 秒あたり 4,000 レコードです。 大量のデータをスケールアップして取り込むには、Adobe担当者にお問い合わせください。
+>大量のデータを取り込む必要がある場合は、[!DNL Kinesis] のスケールファクターを増やす必要があります。 現在、[!DNL Kinesis] アカウントからExperience Platformに取り込めるデータの最大量は、1 秒あたり 4,000 レコードです。 大量のデータをスケールアップして取り込むには、Adobe担当者にお問い合わせください。
 
 ## 前提条件
 
@@ -40,7 +40,7 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 - `DescribeStream`
 - `ListStreams`
 
-これらの権限は [!DNL Kinesis] コンソールを通じて整理され、資格情報を入力してデータストリームを選択すると、Platform によって確認されます。
+これらの権限は [!DNL Kinesis] コンソールで整理され、資格情報を入力してデータストリームを選択すると、Experience Platformによって確認されます。
 
 次の例に、[!DNL Kinesis] ソース接続の作成に必要な最小アクセス権を示します。
 
@@ -85,13 +85,13 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 | `TRIM_HORIZON` | データは、最も古いデータレコードから読み取られます。 |
 | `LATEST` | データは、最新のデータレコードから読み取られます。 |
 
-[!DNL Kinesis] UI ソースは現在 `TRIM_HORIZON` のみをサポートしていますが、API は `TRIM_HORIZON` と `LATEST` の両方をデータを取得するモードとしてサポートしています。 Platform が [!DNL Kinesis] ソースに使用するデフォルトのイテレータ値は `TRIM_HORIZON` です。
+[!DNL Kinesis] UI ソースは現在 `TRIM_HORIZON` のみをサポートしていますが、API は `TRIM_HORIZON` と `LATEST` の両方をデータを取得するモードとしてサポートしています。 Experience Platformが [!DNL Kinesis] ソースに使用するデフォルトのイテレータ値は `TRIM_HORIZON` です。
 
 イテレータタイプについて詳しくは、次の [[!DNL Kinesis]  ドキュメント ](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax) を参照してください。
 
-## [!DNL Amazon Kinesis] の [!DNL Platform] への接続
+## [!DNL Amazon Kinesis] の [!DNL Experience Platform] への接続
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Amazon Kinesis] を [!DNL Platform] に接続する方法について説明しています。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Amazon Kinesis] を [!DNL Experience Platform] に接続する方法について説明しています。
 
 ### API の使用
 

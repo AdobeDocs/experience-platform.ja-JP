@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；クエリサ
 title: イベントのトレンドレポートの作成
 description: エクスペリエンスイベントを使用するクエリを記述して、指定した日付範囲のイベントのトレンドレポートを日付別にグループ化して作成する方法を説明します。
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '381'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 このドキュメントでは、特定の日付範囲での日別イベントのトレンドレポートを作成するために必要な SQL の例を示します。 Adobe Experience Platform クエリサービスを使用すると、[!DNL Experience Events] を使用してさまざまなユースケースをキャプチャするクエリを作成できます。 エクスペリエンスイベントは、エクスペリエンスデータモデル（XDM） ExperienceEvent クラスで表されます。このクラスは、ユーザーが web サイトまたはサービスとやり取りする際に、システムの不変スナップショットと非集計スナップショットをキャプチャします。 エクスペリエンスイベントは、タイムドメイン分析にも使用できます。 訪問者レポートの生成に関するユースケースについて [!DNL Experience Events]、[ 次の手順の節 ](#next-steps) を参照してください。
 
-レポートを使用すると、組織の戦略的なビジネスインサイトに役立つ Platform データにアクセスできます。 これらのレポートを使用すると、Platform データを様々な方法で調べ、主要な指標をわかりやすい形式で表示し、結果として得られるインサイトを共有できます。
+レポートを使用すると、Experience Platform データにアクセスして、組織の戦略的なビジネスインサイトに役立てることができます。 これらのレポートを使用すると、Experience Platform データを様々な方法で調べ、主要な指標をわかりやすい形式で表示し、結果として得られるインサイトを共有できます。
 
 XDM と [!DNL Experience Events] について詳しくは、[[!DNL XDM System]  概要 ](../../xdm/home.md) を参照してください。 クエリサービスと [!DNL Experience Events] を組み合わせることで、ユーザー間の行動のトレンドを効果的に追跡できます。 次のドキュメントでは、[!DNL Experience Events] を含むクエリの例を示します。
 

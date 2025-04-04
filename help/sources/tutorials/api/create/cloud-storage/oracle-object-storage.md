@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Oracleオブジェクトストレージ；oracleオブジェクトストレージ
+keywords: Experience Platform；ホーム；人気のトピック；Oracle オブジェクトストレージ；oracle オブジェクトストレージ
 solution: Experience Platform
-title: Flow Service API を使用したOracleオブジェクトストレージベース接続の作成
+title: Flow Service API を使用したOracle オブジェクトのストレージベース接続の作成
 type: Tutorial
-description: Flow Service API を使用してAdobe Experience PlatformをOracleオブジェクトストレージに接続する方法について説明します。
+description: Flow Service API を使用してAdobe Experience PlatformをOracle オブジェクトストレージに接続する方法について説明します。
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 50%
+source-wordcount: '549'
+ht-degree: 31%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 50%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、様々なソースからデータを取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Oracle Object Storage] ています。
 
@@ -40,15 +40,15 @@ ht-degree: 50%
 | `folderPath` | ユーザーがアクセスを制限している場合は、許可されたフォルダーパスが必要です。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Oracle Object Storage] の接続仕様 ID は `c85f9425-fb21-426c-ad0b-405e9bd8a46c` です。 |
 
-これらの値の取得方法の詳細については、[Oracleオブジェクト ストレージの認証ガイド ](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials) を参照してください。
+これらの値の取得方法について詳しくは、[Oracle オブジェクトストレージ認証ガイド ](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials) を参照してください。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
-ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
 ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL Oracle Object Storage] 認証資格情報をリクエストパラメーターの一部として使用します。
 

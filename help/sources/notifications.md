@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；通知
-description: Adobe I/Oイベントを登録すると、Webhook を使用して、ソース接続のフロー実行ステータスに関する通知を受け取ることができます。 これらの通知には、フロー実行の成功や、実行の失敗に貢献したエラーに関する情報が含まれています。
+description: Adobe I/O Eventsを登録すると、Webhook を使用して、ソース接続のフロー実行ステータスに関する通知を受け取ることができます。 これらの通知には、フロー実行の成功や、実行の失敗に貢献したエラーに関する情報が含まれています。
 solution: Experience Platform
 title: フロー実行通知
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 16%
@@ -13,11 +13,11 @@ ht-degree: 16%
 
 # フロー実行通知
 
-Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用すると、様々な異なるソースから顧客データを収集し、[!DNL Platform] で一元化できます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースを接続できます。
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用すると、様々な異なるソースから顧客データを収集し、[!DNL Experience Platform] で一元化できます。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースを接続できます。
 
-Adobe I/Oイベントを使用すると、イベントを登録し、Webhook を使用して、フロー実行のステータスに関する通知を受け取ることができます。 これらの通知には、フロー実行の成功や、実行の失敗に貢献したエラーに関する情報が含まれています。
+Adobe I/O Eventsを使用すると、イベントを登録し、Webhook を使用して、フロー実行のステータスに関する通知を受け取ることができます。 これらの通知には、フロー実行の成功や、実行の失敗に貢献したエラーに関する情報が含まれています。
 
 このドキュメントでは、イベントの購読、Webhook の登録、フロー実行のステータスに関する情報を含む通知の受信を行う手順を説明します。
 
@@ -37,8 +37,8 @@ Adobe I/Oイベントを使用すると、イベントを登録し、Webhook を
 >
 >購読プロセス中に、必ず **[!UICONTROL Platform 通知]** をイベントプロバイダーとして選択し、次のイベント購読を選択します。
 >
->* **[!UICONTROL Experience PlatformSourceのフロー実行に成功しました]**
->* **[!UICONTROL Experience PlatformSourceのフロー実行に失敗しました]**
+>* **[!UICONTROL Experience Platform Sourceのフロー実行に成功しました]**
+>* **[!UICONTROL Experience Platform Sourceのフロー実行に失敗しました]**
 
 ## フロー実行通知を受信
 
@@ -323,9 +323,9 @@ Webhook が接続され、イベント購読が完了したら、Webhook ダッ�
 
 ### エラーメッセージについて {#errors}
 
-取り込みエラーは、データがソースからコピーされているとき、またはコピーされたデータが [!DNL Platform] に処理されているときに発生する可能性があります。 特定のエラーについて詳しくは、次の表を参照してください。
+取り込みエラーは、データがソースからコピーされているとき、またはコピーされたデータが [!DNL Experience Platform] に処理されているときに発生する可能性があります。 特定のエラーについて詳しくは、次の表を参照してください。
 
 | エラー | 説明 |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | ソースからデータをコピー中にエラーが発生しました。 |
-| `CONNECTOR-2001-500` | コピーされたデータを [!DNL Platform] に処理しているときにエラーが発生しました。 このエラーは、解析、検証、変換に関するものかもしれません。 |
+| `CONNECTOR-2001-500` | コピーされたデータを [!DNL Experience Platform] に処理しているときにエラーが発生しました。 このエラーは、解析、検証、変換に関するものかもしれません。 |

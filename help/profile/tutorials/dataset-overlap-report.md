@@ -4,9 +4,9 @@ title: データセット重複レポートの生成
 type: Tutorial
 description: このチュートリアルでは、リアルタイム顧客プロファイル API を使用してデータセット重複レポートを生成するために必要な手順の概要を説明します。
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## はじめに
 
-Adobe Experience Platform API を使用するには、まず [ 認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了して、必要なヘッダーに必要な値を収集する必要があります。 Platform API について詳しくは、[Experience Platform API の概要ドキュメント ](../../landing/api-guide.md) を参照してください。
+Adobe Experience Platform API を使用するには、まず [ 認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了して、必要なヘッダーに必要な値を収集する必要があります。 Experience Platform API について詳しくは、[Experience Platform API の概要ドキュメント ](../../landing/api-guide.md) を参照してください。
 
 このチュートリアルのすべての API 呼び出しに必要なヘッダーは、次のとおりです。
 
@@ -33,7 +33,7 @@ Adobe Experience Platform API を使用するには、まず [ 認証チュー�
 
 ## コマンドラインを使用したデータセット重複レポートの生成
 
-コマンドラインの使用に精通している場合は、次の cURL リクエストを使用して、`/previewsamplestatus/report/dataset/overlap` にデータセットリクエストを実行することで、GETセット重複レポートを生成できます。
+コマンドラインの使用に精通している場合は、次の cURL リクエストを使用して、GET リクエストを `/previewsamplestatus/report/dataset/overlap` に実行することで、データセット重複レポートを生成できます。
 
 **リクエスト**
 
@@ -132,4 +132,4 @@ Postmanを使用してデータセット重複レポートをリクエストす�
 
 ## 次の手順
 
-このチュートリアルを完了すると、リアルタイム顧客プロファイル API を使用してデータセット重複レポートを生成できるようになります。 API とExperience PlatformUI の両方でのプロファイルデータの操作について詳しくは、まず [ プロファイルの概要に関するドキュメント ](../home.md) をお読みください。
+このチュートリアルを完了すると、リアルタイム顧客プロファイル API を使用してデータセット重複レポートを生成できるようになります。 API とExperience Platform UI の両方でのプロファイルデータの操作について詳しくは、まず [ プロファイルの概要に関するドキュメント ](../home.md) をお読みください。

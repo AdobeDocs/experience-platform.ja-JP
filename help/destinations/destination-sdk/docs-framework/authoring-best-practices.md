@@ -2,10 +2,10 @@
 title: オーサリングのベストプラクティス
 description: Adobe Experience Platform ドキュメント品質基準を確実に満たすために、宛先ドキュメントページをオーサリングする際に従うべきルールおよびヒントについて説明します。
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 98%
+source-wordcount: '502'
+ht-degree: 90%
 
 ---
 
@@ -37,14 +37,14 @@ ht-degree: 98%
 
 ## ブランディングガイドライン {#branding}
 
-* AEP は、承認された、一般向けの用語ではありません。最初の使用時には Adobe Experience Platform を使用し、次に Experience Platform、その次に Platform を使用してください。
+* AEP は、承認された、一般向けの用語ではありません。最初の使用時にはAdobe Experience Platformを使用し、次にExperience Platform、その次にExperience Platformを使用してください。
    * **使用不可**：AEP から宛先にデータを書き出す前に、以下の前提条件を参照し、必ず完了するようにしてください。
    * **使用可**：Adobe Experience Platform から宛先にデータを書き出す前に、以下の前提条件を参照し、必ず完了するようにしてください。
 
 ## 画像とスクリーンショット {#images-and-screenshots}
 
 * [画像へのリンク方法](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images)について詳しくは、コントリビューターガイドを参照してください。
-* スクリーンショットを使用する場合、スクリーンショットが Platform UI 画面全体をキャプチャしていることを確認してください。
+* スクリーンショットを使用する場合、スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。
 * ページ上の特定のコントロールやラベルをハイライト表示するために画像をマークアップする場合、Experience Platform ドキュメントチームによって使用されるマークアップスタイルに従ってください。[このスクリーンショット](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency)で「Profile-based」がどのようにハイライト表示されているかを確認してください。
 * `png` 形式の画像を使用してください。
 * 番号が付けられたスクリーンショットをファイル名として使用しないでください。画像ファイル名は、説明的である必要があります。
@@ -52,7 +52,7 @@ ht-degree: 98%
    * **使用可**：`yourdestination-authentication-details.png`、`yourdestination-destination-details.png`
 * ドキュメントに追加するすべての画像に alt テキストを使用し、alt テキストに適した文法を使用してください。
    * **使用不可**：宛先接続の詳細
-   * **使用可**：宛先接続の詳細が入力されていることを表す、Platform UI の画像。
+   * **使用可**：宛先接続の詳細が入力されていることを表す、Experience Platform UI の画像。
 
 ## プロセス {#process}
 

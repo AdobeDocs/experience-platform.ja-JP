@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;日付範囲
 title: Adobe I/O イベント通知の登録
-description: このドキュメントでは、Adobe Experience Platform サービスの Adobe I/O イベント通知を登録する手順を説明します。利用可能なイベントタイプに関する参照情報も、該当する各 [!DNL Platform] サービスに対して返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクとともに提供されます。
+description: このドキュメントでは、Adobe Experience Platform サービスの Adobe I/O イベント通知を登録する手順を説明します。利用可能なイベントタイプに関する参照情報も、該当する各 [!DNL Experience Platform] サービスに対して返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクとともに提供されます。
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 88%
@@ -15,7 +15,7 @@ ht-degree: 88%
 
 [!DNL Observability Insights] により、Adobe Experience Platform アクティビティに関する Adobe I/O イベント通知を登録できます。これらのイベントは、アクティビティ監視の効率的な自動化を促進するために、設定済みの Webhook に送信されます。
 
-このドキュメントでは、Adobe Experience Platform サービスのAdobe I/Oイベント通知を登録する手順について説明します。 利用可能なイベントタイプに関する参照情報も、該当する各 [!DNL Platform] サービスに対して返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクとともに提供されます。
+このドキュメントでは、Adobe Experience Platform サービスのAdobe I/O イベント通知を登録する手順について説明します。 利用可能なイベントタイプに関する参照情報も、該当する各 [!DNL Experience Platform] サービスに対して返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクとともに提供されます。
 
 ## はじめに
 
@@ -41,7 +41,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->データ取得通知イベントは、Adobe I/Oで非推奨（廃止予定）になりました。代わりに、**ソースフロー実行情報** I/O イベントを使用する必要があります。
+>データ取得通知イベントは、Adobe I/Oで非推奨（廃止予定）となりました。代わりに、**ソースフロー実行情報** I/O イベントを使用する必要があります。
 
 新しいプロジェクトを作成したら、そのプロジェクトの概要画面に移動します。 ここから、「**[!UICONTROL イベントの追加]**」を選択します。
 

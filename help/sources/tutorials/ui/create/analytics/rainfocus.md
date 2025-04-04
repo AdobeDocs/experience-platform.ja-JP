@@ -1,16 +1,16 @@
 ---
-title: UI を使用して RainFocus アカウントをExperience Platformに接続する
+title: UI を使用した RainFocus アカウントのExperience Platformへの接続
 description: UI を使用して RainFocus アカウントをExperience Platformに接続する方法を説明します。
 badge: ベータ版
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '989'
 ht-degree: 26%
 
 ---
 
-# UI を使用して [!DNL RainFocus] アカウントをExperience Platformに接続する
+# UI を使用した [!DNL RainFocus] アカウントのExperience Platformへの接続
 
 >[!NOTE]
 >
@@ -41,15 +41,15 @@ ht-degree: 26%
 
 前提条件の設定が完了したら、以下に示す手順に進むことができます。
 
-## RainFocus アカウントをExperience Platformに接続
+## RainFocus アカウントのExperience Platformへの接続
 
-Platform の UI で、左側のナビゲーションバーから **[!UICONTROL Sources]** を選択し、Sources のワークスペースにアクセスします。 *[!UICONTROL カタログ]*&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、ソース ワークスペースにアクセスします。 *[!UICONTROL カタログ]*&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *[!UICONTROL Analytics]* カテゴリ内で、「**[!UICONTROL RainFocus Experience]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![RainFocus ソースが選択されたExperience PlatformUI のソースカタログ ](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![RainFocus ソースが選択されているExperience Platform UI のソースカタログ ](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## データの選択
 
@@ -117,7 +117,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL RainFocus] ソースの接続を確立し、イベント管理と分析データをExperience Platformにストリーミングできるようにします。
+このチュートリアルでは、[!DNL RainFocus] ソースの接続を確立し、イベント管理および分析データをExperience Platformにストリーミングできるようにします。
 
 ## その他のリソース
 

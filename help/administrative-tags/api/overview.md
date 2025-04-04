@@ -3,16 +3,16 @@ title: 統合タグ API の概要
 description: Unified Tags API を使用して、Adobe Experience Platformで統合タグとフォルダーを管理する方法について説明します。
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 1%
 
 ---
 
 # 統合タグ API の概要
 
-Unified Tags API を使用すると、Adobe Experience Platform内のビジネスオブジェクトを分類および管理できます。 この API のエンドポイントを使用して、フォルダーとタグの両方を作成し、オーディエンスやデータセットなどの Platform オブジェクトをより適切に整理するために使用できます。
+Unified Tags API を使用すると、Adobe Experience Platform内のビジネスオブジェクトを分類および管理できます。 この API のエンドポイントを使用して、オーディエンスやデータセットなどのExperience Platform オブジェクトをより適切に整理するために使用できるフォルダーとタグの両方を作成できます。
 
 個々のエンドポイントガイドを読む前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報を確認してください。
 

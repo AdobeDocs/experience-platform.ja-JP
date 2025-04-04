@@ -5,7 +5,7 @@ solution: Experience Platform
 title: データフローの監視
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 34%
@@ -16,6 +16,6 @@ ht-degree: 34%
 
 [!UICONTROL  宛先 ] を使用すると、Adobe Experience Platformから無数の外部パートナーに対してデータをアクティブ化できます。
 
-データフローは、データを [!DNL Platform] 間で移動するデータジョブを表します。 これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、データは [!DNL Identity Service] および [!DNL Real-Time Customer Profile] 最終的に宛先に対してアクティブ化される前に利用されます。
+データフローは、データを [!DNL Experience Platform] 間で移動するデータジョブを表します。 これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、データは [!DNL Identity Service] および [!DNL Real-Time Customer Profile] 最終的に宛先に対してアクティブ化される前に利用されます。
 
 宛先のデータフローの監視について詳しくは、[UI での宛先のデータフローの監視 ](../../dataflows/ui/monitor-destinations.md) チュートリアルをお読みください。

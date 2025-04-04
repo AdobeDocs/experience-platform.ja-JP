@@ -1,11 +1,11 @@
 ---
 title: インテリジェントな再エンゲージメント
-description: 主要なコンバージョンの瞬間に魅力的でつながりのあるエクスペリエンスを提供し、頻度の少ない顧客をインテリジェントに再エンゲージします。
+description: 主要なコンバージョンの瞬間に魅力的でつながりのあるエクスペリエンスを提供し、利用頻度の少ない顧客にインテリジェントに再エンゲージします。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3894'
+source-wordcount: '3896'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 リアルタイムの考慮事項を採用し、すべての消費者の資質と行動を考慮に入れ、オンラインとオフラインの両方のイベントに基づいて迅速な再認定を提供します。
 
-以下は、Real-Time CDPとJourney Optimizerの様々なコンポーネントのアーキテクチャの概要です。 次の図は、このページで説明するユースケースを達成するために、データ収集からジャーニーやキャンペーンを通じて宛先に対してアクティブ化される時点までの、2 つのExperience Platformアプリを介したデータのフローを示しています。
+以下は、Real-Time CDPとJourney Optimizerの様々なコンポーネントのアーキテクチャの概要です。 次の図は、このページで説明するユースケースを達成するために、データ収集からジャーニーやキャンペーンを通じて宛先に対してアクティブ化される時点までの、2 つのExperience Platform アプリを介したデータのフローを示しています。
 
 ![ インテリジェントな再エンゲージメントの概要を視覚的に把握 ](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -60,7 +60,7 @@ ht-degree: 4%
 放棄された製品参照シナリオは、web サイトとモバイルアプリの両方での放棄された製品参照をターゲットにします。 このシナリオがトリガーされるのは、製品が表示されたが、購入や買い物かごへの追加は行われなかった場合です。 この例では、過去 24 時間以内にリストの追加がない場合、ブランドエンゲージメントは 3 日後にトリガーされます。<p>![ お客様のインテリジェントな放棄された製品の参照シナリオの全体的な視覚的概要。](../intelligent-re-engagement/images/re-engagement-journey.png " お客様のインテリジェントな放棄された製品の参照シナリオの全体的な視覚的な概要 "){width="1920" zoomable="yes"}</p>
 
 1. スキーマとデータセットを作成し、[!UICONTROL  プロファイル ] を有効にします。
-2. Web SDK、Mobile SDK または API を使用して、データをExperience Platformに取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
+2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。これは、ID グラフを使用して、認証済み web およびモバイルアプリの訪問者にリンクできます。
 4. プロファイルのリストから焦点を当てたオーディエンスを作成し、過去 3 日間に **顧客** がエンゲージメントを行ったかどうかを確認します。
 5. 放棄された製品参照ジャーニーを [!DNL Adobe Journey Optimizer] で作成します。
@@ -72,7 +72,7 @@ ht-degree: 4%
 放棄された買い物かごシナリオが適用されるのは、製品が買い物かごに入れられているが、web サイトとモバイルアプリの両方でまだ購入されていない場合です。 また、この方法を使用して、有料メディアキャンペーンを開始および停止します。<p>![ お客様が買い物かごを放棄したシナリオの概要レベルの視覚的な概要。](../intelligent-re-engagement/images/abandoned-cart-journey.png " 顧客が買い物かごを放棄したシナリオの概要レベルの視覚的な概要。"){width="1920" zoomable="yes"}</p>
 
 1. スキーマおよびデータセットを作成して、[!UICONTROL  プロファイル ] を有効にします。
-2. Web SDK、Mobile SDK または API を使用して、データをExperience Platformに取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
+2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。これは、ID グラフを使用して、認証済み web およびモバイルアプリの訪問者にリンクできます。
 4. プロファイルのリストから対象オーディエンスを作成し、**顧客** が買い物かごに商品を入れたが、購入を完了していないかどうかを確認します。 この **[!UICONTROL 買い物かごに追加]** イベントは、30 分待った後に購入を確認するタイマーを開始します。 購入が行われていない場合、**顧客** は **[!UICONTROL 買い物かごを放棄]** オーディエンスに追加されます。
 5. 放棄された買い物かごジャーニーを [!DNL Adobe Journey Optimizer] で作成します。
@@ -84,7 +84,7 @@ ht-degree: 4%
 注文確認シナリオは、web サイトとモバイルアプリを通じて行われた製品の購入に焦点を当てています。<p>![ 顧客注文確認シナリオの全体的な視覚的な概要。](../intelligent-re-engagement/images/order-confirmation-journey.png " 顧客注文確認シナリオの高レベルの視覚的な概要。"){width="1920" zoomable="yes"}</p>
 
 1. スキーマとデータセットを作成し、[!UICONTROL  プロファイル ] を有効にします。
-2. Web SDK、Mobile SDK または API を使用して、データをExperience Platformに取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
+2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。これは、ID グラフを使用して、認証済み web およびモバイルアプリの訪問者にリンクできます。
 4. 確認ジャーニーは [!DNL Adobe Journey Optimizer] で作成します。
 5. [!DNL Adobe Journey Optimizer] は、優先チャネルを使用して注文確認メッセージを送信します。
@@ -147,7 +147,7 @@ ht-degree: 4%
 
 #### 顧客デジタルトランザクションスキーマ
 
-このスキーマは、Web サイトまたは関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常 [Web SDK](/help/web-sdk/home.md) を介して [!DNL Adobe Experience Platform] に取り込まれ、ジャーニーのトリガーに使用される様々な参照およびコンバージョンイベント、詳細なオンライン顧客分析、強化されたオーディエンス機能およびパーソナライズされたメッセージを参照するために必要です。
+このスキーマは、Web サイトまたは関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常、[Web SDK](/help/web-sdk/home.md) を介して [!DNL Adobe Experience Platform] に取り込まれ、ジャーニーのトリガーに使用される様々な参照およびコンバージョンイベント、詳細なオンライン顧客分析、強化されたオーディエンス機能およびパーソナライズされたメッセージを参照するために必要です。
 
 顧客デジタルトランザクションスキーマは、[[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスで表されます。
 
@@ -165,16 +165,16 @@ ht-degree: 4%
 
 +++エンドユーザー ID 詳細（フィールドグループ）
 
-[ エンドユーザー ID 詳細 ](/help/xdm/field-groups/event/enduserids.md) フィールドグループは、複数のAdobeアプリケーションをまたいで個人の ID 情報を記述するために使用されます。
+[ エンドユーザー ID 詳細 ](/help/xdm/field-groups/event/enduserids.md) フィールドグループは、複数のAdobe アプリケーションをまたいで個人の ID 情報を記述するために使用されます。
 
 | フィールド | 説明 |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | エンドユーザーのメールアドレス ID が認証された状態。 |
 | `endUserIDs._experience.emailid.id` | エンドユーザーのメールアドレス ID。 |
 | `endUserIDs._experience.emailid.namespace.code` | エンドユーザーのメールアドレス ID 名前空間コード。 |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe]Marketing CloudID （MCID）認証状態。 MCID はExperience CloudID （ECID）になりました。 |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID （MCID）。 MCID はExperience CloudID （ECID）になりました。 |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe]Marketing CloudID （MCID）名前空間コード。 |
+| `endUserIDs._experience.mcid.authenticatedState` | Marketing Cloud ID （MCID） [!DNL Adobe] 認証状態です。 MCID は現在、Experience Cloud ID （ECID）と呼ばれています。 |
+| `endUserIDs._experience.mcid.id` | Marketing Cloud ID （MCID）を [!DNL Adobe] します。 MCID は現在、Experience Cloud ID （ECID）と呼ばれています。 |
+| `endUserIDs._experience.mcid.namespace.code` | Marketing Cloud ID （MCID）名前空間コードを [!DNL Adobe] します。 |
 
 +++
 
@@ -205,7 +205,7 @@ ht-degree: 4%
 
 #### 顧客のオフライントランザクションスキーマ
 
-このスキーマは、web サイト外のプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常、POS （または類似のシステム）から [!DNL Adobe Experience Platform] に取り込まれ、ほとんどの場合、API 接続を介して Platform にストリーミングされます。 その目的は、ジャーニーのトリガーに使用される様々なオフラインコンバージョンイベント、詳細なオンラインとオフラインの顧客分析、強化されたオーディエンス機能およびパーソナライズされたメッセージを参照することです。
+このスキーマは、web サイト外のプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常、POS （または同様のシステム）から [!DNL Adobe Experience Platform] に取り込まれ、ほとんどの場合、API 接続を介してExperience Platformにストリーミングされます。 その目的は、ジャーニーのトリガーに使用される様々なオフラインコンバージョンイベント、詳細なオンラインとオフラインの顧客分析、強化されたオーディエンス機能およびパーソナライズされたメッセージを参照することです。
 
 顧客オフライントランザクションスキーマは、[[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスで表されます。
 
@@ -263,7 +263,7 @@ ht-degree: 4%
 >
 >[[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md) を使用している場合、これはオプションの実装です。
 
-このスキーマは、Web サイトまたは関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このスキーマは、顧客デジタルトランザクションスキーマと似ていますが、[Web SDK](/help/web-sdk/home.md) がデータ収集用のオプションでない場合に使用することを意図しているという点が異なります。したがって、[!DNL Adobe Analytics Source Connector] を使用してオンラインデータを [!DNL Adobe Experience Platform] にプライマリデータストリームまたはセカンダリデータストリームとして送信する場合、このスキーマが必要になります。
+このスキーマは、Web サイトまたは関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このスキーマは、顧客デジタルトランザクションスキーマと似ていますが、[Web SDK](/help/web-sdk/home.md) をデータ収集に使用しない場合に使用することを意図している点が異なります。したがって、[!DNL Adobe Analytics Source Connector] を使用してオンラインデータを [!DNL Adobe Experience Platform] にプライマリデータストリームまたはセカンダリデータストリームとして送信する場合、このスキーマが必要になります。
 
 [!DNL Adobe] web コネクタスキーマは、[[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) クラスで表されます。
 
@@ -288,9 +288,9 @@ ht-degree: 4%
 | `endUserIDs._experience.emailid.authenticatedState` | エンドユーザーのメールアドレス ID が認証された状態。 |
 | `endUserIDs._experience.emailid.id` | エンドユーザーのメールアドレス ID。 |
 | `endUserIDs._experience.emailid.namespace.code` | エンドユーザーのメールアドレス ID 名前空間コード。 |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe]Marketing CloudID （MCID）認証状態。 MCID はExperience CloudID （ECID）になりました。 |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID （MCID）。 MCID はExperience CloudID （ECID）になりました。 |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe]Marketing CloudID （MCID）名前空間コード。 |
+| `endUserIDs._experience.mcid.authenticatedState` | Marketing Cloud ID （MCID） [!DNL Adobe] 認証状態です。 MCID は現在、Experience Cloud ID （ECID）と呼ばれています。 |
+| `endUserIDs._experience.mcid.id` | Marketing Cloud ID （MCID）を [!DNL Adobe] します。 MCID は現在、Experience Cloud ID （ECID）と呼ばれています。 |
+| `endUserIDs._experience.mcid.namespace.code` | Marketing Cloud ID （MCID）名前空間コードを [!DNL Adobe] します。 |
 
 +++
 
@@ -350,7 +350,7 @@ ht-degree: 4%
 
 [ オーディエンス ](/help/segmentation/home.md) を直接作成する方法について詳しくは、[ オーディエンス構成 UI ガイド ](/help/segmentation/ui/audience-composition.md) を参照してください。
 
-Platform から派生したオーディエンス定義を使用してオーディエンスを作成する方法について詳しくは、[Audience Builder UI ガイド ](/help/segmentation/ui/segment-builder.md) を参照してください。
+Experience Platformから派生したオーディエンス定義を使用してオーディエンスを作成する方法について詳しくは、[Audience Builder UI ガイド ](/help/segmentation/ui/segment-builder.md) を参照してください。
 
 >[!BEGINTABS]
 
@@ -763,7 +763,7 @@ Platform から派生したオーディエンス定義を使用してオーデ�
 
 #### 宛先に必要なデータ
 
-ストリーミングオーディエンス書き出し宛先（Facebook、Google カスタマーマッチ、Google DV360 など）は、顧客データからの様々な ID をサポートします。
+ストリーミングオーディエンス書き出し宛先（Facebook、Google カスタマーマッチ、Google DV360 など）では、顧客データからの様々な ID をサポートしています。
 
 * `personalEmail.address`
 * `ECID`
@@ -775,7 +775,7 @@ Platform から派生したオーディエンス定義を使用してオーデ�
    * [Advertising](/help/destinations/catalog/advertising/overview.md)/[ ペイドメディア&amp;ソーシャル ](/help/destinations/catalog/social/overview.md)
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [ストリーミングの宛先](/help/destinations/catalog/streaming/http-destination.md)
-   * [Destination SDKを使用して作成されたカスタムの宛先。](/help/destinations/destination-sdk/overview.md)。Real-Time CDP Ultimate をご利用のお客様は、Destination SDKを使用してプライベート [ カスタムの宛先を作成することもでき ](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations) す。
+   * [Destination SDKを使用して作成されたカスタムの宛先。](/help/destinations/destination-sdk/overview.md)。Real-Time CDP Ultimateのお客様は、Destination SDKを使用してプライベートな [ カスタムの宛先を作成することもでき ](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations) す。
 
 ## 次の手順 {#next-steps}
 

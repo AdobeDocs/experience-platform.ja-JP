@@ -5,9 +5,9 @@ user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、マーケティングイベントデータからのスコアの生成、インサイトの発見、セグメントの作成を行います。
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '137'
 ht-degree: 98%
 
 ---
@@ -55,4 +55,4 @@ ht-degree: 98%
       - [顧客管理キー](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [データガバナンス](customer-ai/cai-data-governance/data-governance.md)
       - [ガバナンスポリシー](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
+- [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

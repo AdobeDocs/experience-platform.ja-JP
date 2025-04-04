@@ -5,9 +5,9 @@ feature: Customer AI
 title: 顧客 AI でインサイトを見つける
 description: このドキュメントは、Intelligent Services 顧客 AI ユーザーインターフェイスのサービスインスタンスインサイトを操作するためのガイドとして機能します。
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2099'
 ht-degree: 27%
 
 ---
@@ -164,7 +164,7 @@ ht-degree: 27%
 
 ![セグメントの入力](../images/insights/segment-saving.png)
 
-Platform UI に新しいセグメントを表示するには、左側のナビゲーションで **[!UICONTROL セグメント]** を選択します。 **[!UICONTROL 参照]**&#x200B;ページが表示され、使用可能なセグメントがすべて表示されます。
+Experience Platform UI に新しいセグメントを表示するには、左側のナビゲーションで **[!UICONTROL セグメント]** を選択します。 **[!UICONTROL 参照]**&#x200B;ページが表示され、使用可能なセグメントがすべて表示されます。
 
 ![すべてのセグメント](../images/insights/Segments-dashboard.png)
 

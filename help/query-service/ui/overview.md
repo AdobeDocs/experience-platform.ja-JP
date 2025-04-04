@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service UI ガイド
 description: Adobe Experience Platform クエリサービスは、クエリの書き込みと実行、以前に実行したクエリの表示、組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 25%
 
 ---
@@ -36,8 +36,8 @@ Adobe Experience Platform クエリサービスは、クエリの書き込みと
 [!UICONTROL Data Distillerの機能 ] の節では、より高度な Data Distiller機能へのドキュメントリンクを提供しています。
 
 - **[[!UICONTROL データの調査]](../use-cases/data-exploration.md)**:SQL を使用して取り込んだバッチデータを調査、トラブルシューティングおよび検証する方法について説明します。
-- **[[!UICONTROL Experience Platformアプリケーション用の派生データセット]](../data-distiller/derived-datasets/overview.md)**：派生データセットを作成して、データユーティリティを最大化する複雑で多様なユースケースをサポートする方法について説明します。
-- **[[!UICONTROL AI/ML パイプライン]](../data-distiller/ml-feature-pipelines/overview.md)**：優先する機械学習ツールの背後にある重要な概念と、マーケティングのユースケースをサポートするカスタムモデルの構築方法について説明します。 この一連のガイドでは、Experience Platformからデータを準備し、機械学習の環境でカスタムモデルにフィードする機能パイプラインを構築するために必要な手順を説明します。
+- **[[!UICONTROL Experience Platform アプリケーション用の派生データセット]](../data-distiller/derived-datasets/overview.md)**：派生データセットを作成して、データユーティリティを最大化する複雑で多様なユースケースをサポートする方法について説明します。
+- **[[!UICONTROL AI/ML パイプライン]](../data-distiller/ml-feature-pipelines/overview.md)**：優先する機械学習ツールの背後にある重要な概念と、マーケティングのユースケースをサポートするカスタムモデルの構築方法について説明します。 このシリーズのガイドでは、機械学習環境でカスタムモデルにフィードするExperience Platformのデータを準備する機能パイプラインを構築するために必要な手順を説明します。
 - **[[!UICONTROL SQL インサイト]](../data-distiller/sql-insights/overview.md)**:Data Distillerを使用して SQL からインサイトダッシュボードを作成するために必要な、主な機能と手順について説明します。
 
 ![Data Distiller機能セクションがハイライト表示されたクエリサービスワークスペース。](../images/ui/overview/data-distiller-capabilities.png)
@@ -62,7 +62,7 @@ Adobe Experience Platform クエリサービスは、クエリの書き込みと
 - **[[!UICONTROL 顧客の生涯価値]](../use-cases/customer-lifetime-value.md)**:Real-Time CDPとカスタムダッシュボードを使用して、顧客の生涯価値を追跡および視覚化する方法について説明します。 これらのインサイトを使用して、新規顧客を獲得するための戦略を開発し、既存の顧客を保持し、利益率を最大化します。
 - **[[!UICONTROL 傾向スコア]](../use-cases/propensity-score.md)**：機械学習予測モデルを使用して傾向スコアを決定する方法を説明します。 このガイドでは、トレーニング用のデータ送信、SQL を使用したトレーニング済みモデルの適用、および顧客購入の可能性の予測について説明します。
 - **[[!UICONTROL 同意分析]](../../dashboards/insights-use-cases/consent-analysis.md)**:Real-Time CDP、クエリサービス、Data Distillerを使用して、顧客の同意を分析およびトラッキングする方法について説明します。 このガイドでは、同意ダッシュボードの構築、セグメント化の絞り込み、傾向の追跡およびコンプライアンスの確保について説明し、パーソナライズされたエクスペリエンスの構築と提供を支援します。
-- **[[!UICONTROL あいまい一致]](../use-cases/fuzzy-match.md)**:Experience Platformデータに対して「あいまい」一致を実行して、近似の一致を見つけ、データセット間の文字列の類似性を分析する方法を説明します。 このガイドに従うと、時間を節約し、データにアクセスしやすくなります。 この例では、2 つの旅行代理店データセット間でホテルの部屋の属性を照合する方法を示しており、大規模で複雑なデータセットについて、一貫性と精度を確保するための効率的な照合、比較および調整を行う方法を示しています。
+- **[[!UICONTROL あいまい一致]](../use-cases/fuzzy-match.md)**:Experience Platform データに対して「あいまい」一致を実行して、近似の一致を見つけ、データセット間の文字列の類似性を分析する方法を説明します。 このガイドに従うと、時間を節約し、データにアクセスしやすくなります。 この例では、2 つの旅行代理店データセット間でホテルの部屋の属性を照合する方法を示しており、大規模で複雑なデータセットについて、一貫性と精度を確保するための効率的な照合、比較および調整を行う方法を示しています。
 
 ![ データDistillerの例セクションがハイライト表示されたクエリサービスワークスペース。](../images/ui/overview/data-distiller-examples.png)
 
@@ -142,7 +142,7 @@ UI を使用してクエリをスケジュールする方法については、[ 
 | **[!UICONTROL 変更者]** | 最後にクエリを変更したユーザー。クエリサービスへのアクセス権を持つ、組織内のすべてのユーザーがクエリを変更できます。 |
 | **[!UICONTROL 最終変更日]** | ブラウザーのタイムゾーンでの、クエリが最後に編集された日付と時間。 |
 
-Platform UI のテンプレートについて詳しくは、[ クエリテンプレート ](./query-templates.md) のドキュメントを参照してください。
+Experience Platform UI のテンプレートについて詳しくは、[ クエリテンプレート ](./query-templates.md) のドキュメントを参照してください。
 
 ## ログ {#log}
 
@@ -174,4 +174,4 @@ Platform UI のテンプレートについて詳しくは、[ クエリテンプ
 
 ## 次の手順
 
-これで [!DNL Platform] のクエリサービスのユーザーインターフェイスをよく理解したので、次に、クエリエディターにアクセスして、独自のクエリプロジェクトの作成を開始し、組織内の他のユーザーと共有することができます。 クエリエディターでのクエリの作成と実行について詳しくは、[クエリエディターのユーザーガイド](./user-guide.md)を参照してください。
+これで [!DNL Experience Platform] のクエリサービスのユーザーインターフェイスをよく理解したので、次に、クエリエディターにアクセスして、独自のクエリプロジェクトの作成を開始し、組織内の他のユーザーと共有することができます。 クエリエディターでのクエリの作成と実行について詳しくは、[クエリエディターのユーザーガイド](./user-guide.md)を参照してください。

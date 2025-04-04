@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；フィールドグループ；フィールドグループ；
 solution: Experience Platform
 title: UI でのスキーマフィールドグループの作成と編集
-description: Experience Platformユーザーインターフェイスでスキーマフィールドグループを作成および編集する方法について説明します。
+description: Experience Platform ユーザーインターフェイスでスキーマフィールドグループを作成および編集する方法について説明します。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1001'
 ht-degree: 8%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 8%
 
 フィールドグループは、フィールドグループが表すデータ（レコードまたは時系列）の動作に基づいて、互換性のあるクラスを定義します。 つまり、すべてのフィールドグループをすべてのクラスで使用できるわけではありません。
 
-Adobe Experience Platformには、様々なマーケティングユースケースをカバーする多くの標準フィールドグループが用意されています。 ただし、独自のカスタムフィールドグループを作成および編集して、XDM スキーマ内のビジネスに関連する追加の概念を定義することもできます。 このガイドでは、Platform UI で組織のカスタムフィールドグループを作成、編集、管理する方法の概要を説明します。
+Adobe Experience Platformには、様々なマーケティングユースケースをカバーする多くの標準フィールドグループが用意されています。 ただし、独自のカスタムフィールドグループを作成および編集して、XDM スキーマ内のビジネスに関連する追加の概念を定義することもできます。 このガイドでは、Experience Platform UI で組織のカスタムフィールドグループを作成、編集、管理する方法の概要を説明します。
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、XDM システムに関する十分な知識が必要です。 Experience Platformエコシステムでの XDM の役割の概要については [XDM の概要 ](../../home.md) を、フィールドグループが XDM スキーマにどのように貢献するかについては [ スキーマ構成の基本 ](../../schema/composition.md) を参照してください。
+このガイドでは、XDM システムに関する十分な知識が必要です。 Experience Platform エコシステムでの XDM の役割の概要については [XDM の概要 ](../../home.md) を、フィールドグループが XDM スキーマにどのように寄与するかについては [ スキーマ構成の基本 ](../../schema/composition.md) を参照してください。
 
 このガイドには必要ありませんが、[UI でのスキーマの作成 ](../../tutorials/create-schema-ui.md) に関するチュートリアルに従って、[!DNL Schema Editor] の様々な機能を理解することをお勧めします。
 
@@ -48,7 +48,7 @@ Adobe Experience Platformには、様々なマーケティングユースケー�
 
 ## フィールドグループのフィルタリング {#filter}
 
-使用可能なフィールドグループのリストは、作成方法に基づいて事前にフィルタリングされています。デフォルト設定には、Adobeで定義されたフィールドグループが表示されます。 ただし、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeが作成したエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成したエンティティが表示されます。
+使用可能なフィールドグループのリストは、作成方法に基づいて事前にフィルタリングされています。デフォルト設定には、Adobeで定義されたフィールドグループが表示されます。 ただし、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成されたエンティティが表示されます。
 
 ![[!UICONTROL  標準 ] と [!UICONTROL  カスタム ] がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  フィールドグループ ] タブ ](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
@@ -92,6 +92,6 @@ Adobe Experience Platformには、様々なマーケティングユースケー�
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Platform UI を使用してフィールドグループを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
+このガイドでは、Experience Platform UI を使用してフィールドグループを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
 
 [!DNL Schema Registry] API を使用してフィールドグループを管理する方法については、[ フィールドグループエンドポイントガイド ](../../api/field-groups.md) を参照してください。

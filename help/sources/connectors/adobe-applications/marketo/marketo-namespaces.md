@@ -2,10 +2,10 @@
 title: B2B 名前空間とスキーマ
 description: このドキュメントでは、B2B ソースコネクタの作成時に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ebbed5c6ff7037b138588a79a05e6ef13d1856d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 18%
+source-wordcount: '1659'
+ht-degree: 16%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 18%
 
 >[!AVAILABILITY]
 >
->B2B スキーマが { リアルタイム顧客プロファイル ](../../../../rtcdp/b2b-overview.md) に適合するには、{0[Adobe Real-time Customer Data Platform B2B edition](../../../../profile/home.md) へのアクセス権が必要です。[
+>B2B スキーマが { リアルタイム顧客プロファイル ](../../../../rtcdp/b2b-overview.md) に適合するには、{0[Adobe Real-Time Customer Data Platform B2B edition](../../../../profile/home.md) へのアクセス権が必要です。[
 
 >[!NOTE]
 >
->Adobe Experience Platform UI でテンプレートを使用すると、B2B および B2C データのアセット作成を迅速化できます。 詳しくは、[Platform UI でのテンプレートの使用 ](../../../tutorials/ui/templates.md) に関するガイドを参照してください。
+>Adobe Experience Platform UI でテンプレートを使用すると、B2B および B2C データのアセット作成を迅速化できます。 詳しくは、[Experience Platform UI でのテンプレートの使用 ](../../../tutorials/ui/templates.md) に関するガイドを参照してください。
 
 B2B ソースで使用する名前空間とスキーマの設定について詳しくは、このドキュメントを参照してください。 このドキュメントでは、B2B 名前空間とスキーマを生成するために必要なPostman自動化ユーティリティの設定に関する詳細も説明します。
 
@@ -30,21 +30,21 @@ B2B ソースで使用する名前空間とスキーマの設定について詳�
 B2B 名前空間とスキーマ自動生成ユーティリティをサポートするための [!DNL Postman] 環境の設定方法に関する前提条件の情報については、次のドキュメントを参照してください。
 
 - この [GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) から、名前空間およびスキーマ自動生成ユーティリティのコレクションと環境をダウンロードできます。
-- 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Platform API の使用について詳しくは、[Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
-- Platform API の資格情報の生成方法について詳しくは、[Experience PlatformAPI の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
-- Platform API の [!DNL Postman] の設定方法について詳しくは、[ 開発者コンソールとの設定  [!DNL Postman]](../../../../landing/postman.md) のチュートリアルを参照してください。
+- 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Experience Platform API の使用について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
+- Experience Platform API の資格情報の生成方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
+- Experience Platform API の [!DNL Postman] の設定方法について詳しくは、[Developer Console との設定  [!DNL Postman]](../../../../landing/postman.md) に関するチュートリアルを参照してください。
 
-Platform 開発者コンソールをセットアップす [!DNL Postman] と、適切な環境値の [!DNL Postman] 環境への適用を開始できます。
+Experience Platform Developer Console と [!DNL Postman] の設定により、[!DNL Postman] 環境に適切な環境値を適用できるようになりました。
 
 次の表に、値の例と、[!DNL Postman] 環境へのデータ入力に関する追加情報を示します。
 
 | 変数 | 説明 | 例 |
 | --- | --- | --- |
 | `CLIENT_SECRET` | `{ACCESS_TOKEN}` ータの生成に使用される一意の ID。 サー `{CLIENT_SECRET}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `{CLIENT_SECRET}` |
-| `API_KEY` | Experience PlatformAPI への呼び出しの認証に使用される一意の ID。 サー `{API_KEY}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Experience PlatformAPI を呼び出すために必要な認証トークン。 サー `{ACCESS_TOKEN}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
+| `API_KEY` | Experience Platform API への呼び出しの認証に使用される一意の ID。 サー `{API_KEY}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Experience Platform API を呼び出すために必要な認証トークン。 サー `{ACCESS_TOKEN}` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | [!DNL Marketo] に関しては、この値は固定で、常に `ent_dataservices_sdk` に設定されます。 | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | `global` コンテナには、標準AdobeおよびExperience Platformパートナー提供のすべてのクラス、スキーマフィールドグループ、データタイプおよびスキーマが格納されます。 [!DNL Marketo] に関しては、この値は固定で、常に `global` に設定されます。 | `global` |
+| `CONTAINER_ID` | `global` コンテナには、標準のAdobeおよびExperience Platform パートナー提供のすべてのクラス、スキーマフィールドグループ、データタイプおよびスキーマが含まれます。 [!DNL Marketo] に関しては、この値は固定で、常に `global` に設定されます。 | `global` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/Oへの統合に使用する資格情報。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System （IMS）は、Adobe サービスに対して認証を行うためのフレームワークを提供します。 [!DNL Marketo] に関しては、この値は固定で、常に `ims-na1.adobelogin.com` に設定されます。 | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 製品およびサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる法人組織。 `{ORG_ID}` ーザー情報の取得方法については、[Developer Console の設定および  [!DNL Postman]](../../../../landing/postman.md) に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -98,7 +98,7 @@ B2B 名前空間の基盤となるセットアップに関する情報を次の�
 
 Experience Platform では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。システムをまたいで一貫したデータを定義することで、意味を保有しやすくなり、データから価値を得ることができます。
 
-データを Platform に取り込む前に、スキーマを構成して、データの構造を記述し、各フィールドに含めることができるデータの種類を制限する必要があります。スキーマは、基本クラスと 0 個以上のスキーマフィールドグループで構成されます。
+データをExperience Platformに取り込む前に、データの構造を記述し、各フィールドに含めることができるデータのタイプに制約を適用するためのスキーマを作成する必要があります。 スキーマは、基本クラスと 0 個以上のスキーマフィールドグループで構成されます。
 
 デザインの原則やベストプラクティスなど、スキーマ構成モデルについて詳しくは、[スキーマ構成の基本](../../../../xdm/schema/composition.md)を参照してください。
 
@@ -125,4 +125,4 @@ B2B スキーマの基盤となる設定に関する情報を次の表に示し�
 
 ## 次の手順
 
-[!DNL Marketo] データを Platform に接続する方法については、[UI でのMarketo ソースコネクタの作成 ](../../../tutorials/ui/create/adobe-applications/marketo.md) に関するチュートリアルを参照してください。
+[!DNL Marketo] データをExperience Platformに接続する方法については、[UI でのMarketo ソースコネクタの作成 ](../../../tutorials/ui/create/adobe-applications/marketo.md) のチュートリアルを参照してください。

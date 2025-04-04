@@ -4,9 +4,9 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3408'
+source-wordcount: '3413'
 ht-degree: 16%
 
 ---
@@ -132,13 +132,13 @@ ht-degree: 16%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=ja" text="エクスペリエンスイベントの有効期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=ja" text="偽名プロファイルデータの有効期限"
 
-Adobe Experience Platformの [!UICONTROL  ライセンスの使用状況 ] ダッシュボードを使用して、組織のライセンスの使用状況に関する重要な情報を表示できます。 ここに表示される情報は、Platform インスタンスの毎日のスナップショット中にキャプチャされます。
+Adobe Experience Platformの [!UICONTROL  ライセンスの使用状況 ] ダッシュボードを使用して、組織のライセンスの使用状況に関する重要な情報を表示できます。 ここに表示される情報は、Experience Platform インスタンスの毎日のスナップショット中にキャプチャされます。
 
 ライセンス使用状況レポートでは高い精度が提供されます。 ほとんどの指標は、複数の製品で共有され、製品ごとの合計ではなく、それらを使用するすべての製品の集計使用状況を反映します。 ダッシュボードでは、これらの指標をすべての実稼動サンドボックスまたは開発サンドボックスで使用する統合された使用状況と、特定のサンドボックスからの使用状況指標を提供します。 使用状況指標を使用して追跡できるExperience Platform アプリケーションは、Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsです。
 
 このガイドでは、UI でのライセンス使用状況ダッシュボードへのアクセス方法と操作方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションの詳細を説明します。
 
-Platform UI の一般的な概要については、[Experience Platform UI ガイド ](../../landing/ui-guide.md) を参照してください。
+Experience Platform UI の一般的な概要については、[Experience Platform UI ガイド ](../../landing/ui-guide.md) を参照してください。
 
 ## [!UICONTROL  ライセンス使用状況 ] ダッシュボードデータ
 
@@ -148,11 +148,11 @@ Platform UI の一般的な概要については、[Experience Platform UI ガ�
 
 >[!NOTE]
 >
->ダッシュボード内のほとんどの指標は、Platform インスタンスのスナップショットに基づいて毎日更新されます。 [!UICONTROL  使用可能なCJA行 ] は例外で、毎月更新されます。 [!UICONTROL  アドホッククエリサービスユーザーパック ]、[!UICONTROL  プロファイル充実度パック数 ]、[!UICONTROL  ストリーミングセグメント化パック数 ] など、「パック」でラベル付けされた指標は、アドオン製品のライセンス使用権限を反映し、継続的な使用を追跡しません。 スナップショット後に行われた変更は、次のスナップショットが作成されるまで表示されません。
+>ダッシュボード内のほとんどの指標は、Experience Platform インスタンスのスナップショットに基づいて毎日更新されます。 [!UICONTROL  使用可能なCJA行 ] は例外で、毎月更新されます。 [!UICONTROL  アドホッククエリサービスユーザーパック ]、[!UICONTROL  プロファイル充実度パック数 ]、[!UICONTROL  ストリーミングセグメント化パック数 ] など、「パック」でラベル付けされた指標は、アドオン製品のライセンス使用権限を反映し、継続的な使用を追跡しません。 スナップショット後に行われた変更は、次のスナップショットが作成されるまで表示されません。
 
 ## ライセンス使用状況ダッシュボードの確認 {#explore}
 
-Platform UI 内でライセンス使用状況ダッシュボードに移動するには、左パネルで **[!UICONTROL ライセンス使用状況]** を選択します。 ダッシュボードには、「**[!UICONTROL 指標]**」と「**[!UICONTROL 製品]** の 2 つのタブがあります。
+Experience Platform UI 内でライセンス使用状況ダッシュボードに移動するには、左パネルで **[!UICONTROL ライセンス使用状況]** を選択します。 ダッシュボードには、「**[!UICONTROL 指標]**」と「**[!UICONTROL 製品]** の 2 つのタブがあります。
 
 >[!NOTE]
 >
@@ -338,4 +338,4 @@ Platform UI 内でライセンス使用状況ダッシュボードに移動す�
 
 このドキュメントを読むと、ライセンス使用状況ダッシュボードを見つけ、購入した各製品、すべての実稼動または開発用サンドボックス、特定のサンドボックスの使用状況指標を表示できるようになります。 組織が購入したライセンスに基づいて、組織で使用可能な指標に関する詳細を確認できます。
 
-Platform UI で使用できるその他の機能について詳しくは、[Experience Platform UI ガイド ](../../landing/ui-guide.md) を参照してください。
+Experience Platform UI で使用できるその他の機能について詳しくは、[Experience Platform UI ガイド ](../../landing/ui-guide.md) を参照してください。

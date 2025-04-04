@@ -6,9 +6,9 @@ description: このドキュメントでは、IAB TCF 2.0 の同意データを�
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1680'
 ht-degree: 3%
 
 ---
@@ -24,9 +24,9 @@ Adobe Experience Platformが IAB [!DNL Transparency & Consent Framework] （TCF�
 
 >[!IMPORTANT]
 >
->Platform では、個々のプロファイルデータセットに収集された TCF 文字列のみを適用します。 データストリームをこのワークフローの一部として作成するには ExperienceEvent データセットが引き続き必要ですが、データをプロファイルデータセットに取り込むだけでかまいません。 同意変更イベントを経時的に追跡する場合は、ExperienceEvent データセットを引き続き使用できますが、これらの値は、セグメントのアクティベーション時に適用される場合には使用されません。
+>Experience Platformでは、個々のプロファイルデータセットで収集された TCF 文字列のみが適用されます。 データストリームをこのワークフローの一部として作成するには ExperienceEvent データセットが引き続き必要ですが、データをプロファイルデータセットに取り込むだけでかまいません。 同意変更イベントを経時的に追跡する場合は、ExperienceEvent データセットを引き続き使用できますが、これらの値は、セグメントのアクティベーション時に適用される場合には使用されません。
 
-このドキュメントでは、これら 2 つのデータセットを設定する手順を説明します。 TCF 2.0 用の Platform データ操作を設定する完全なワークフローの概要については、[IAB TCF 2.0 準拠の概要 ](./overview.md) を参照してください。
+このドキュメントでは、これら 2 つのデータセットを設定する手順を説明します。 TCF 2.0 用のExperience Platform データ操作を設定する完全なワークフローの概要については、[IAB TCF 2.0 コンプライアンスの概要 ](./overview.md) を参照してください。
 
 ## 前提条件
 
@@ -62,9 +62,9 @@ Adobe Experience Platformが IAB [!DNL Transparency & Consent Framework] （TCF�
 
 同意データを取り込んだデータセットを作成するには、まずデータセットのベースとなる XDM スキーマを作成する必要があります。
 
-前の節で説明したように、ダウンストリーム Platform ワークフローで同意を実施するには、[!UICONTROL XDM 個人プロファイル ] クラスを使用するスキーマが必要です。 また、同意の変化を経時的に追跡する場合は、[!UICONTROL XDM ExperienceEvent] に基づいて個別のスキーマをオプションで作成できます。 両方のスキーマに `identityMap` フィールドと適切な TCF 2.0 フィールドグループが含まれている必要があります。
+前の節で説明したように、ダウンストリーム Experience Platform ワークフローで同意を実施するには、[!UICONTROL XDM 個人プロファイル ] クラスを使用するスキーマが必要です。 また、同意の変化を経時的に追跡する場合は、[!UICONTROL XDM ExperienceEvent] に基づいて個別のスキーマをオプションで作成できます。 両方のスキーマに `identityMap` フィールドと適切な TCF 2.0 フィールドグループが含まれている必要があります。
 
-Platform UI で、左側のナビゲーションの **[!UICONTROL スキーマ]** を選択して、[!UICONTROL  スキーマ ] ワークスペースを開きます。 ここから、以下の節の手順に従って、必要な各スキーマを作成します。
+Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択し、「[!UICONTROL  スキーマ ] ワークスペースを開きます。 ここから、以下の節の手順に従って、必要な各スキーマを作成します。
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ Platform UI で、左側のナビゲーションの **[!UICONTROL スキーマ]*
 
 #### [!DNL Real-Time Customer Profile] で使用するためのスキーマの有効化 
 
-Platform が受け取った同意データを特定の顧客プロファイルに関連付けるには、[!DNL Real-Time Customer Profile] で使用できるように同意スキーマを有効にする必要があります。
+Experience Platformが受け取った同意データを特定の顧客プロファイルに関連付けるには、[!DNL Real-Time Customer Profile] で使用できるように同意スキーマを有効にする必要があります。
 
 >[!NOTE]
 >
@@ -192,4 +192,4 @@ Platform が受け取った同意データを特定の顧客プロファイル�
 * リアルタイム顧客プロファイルでの使用が有効になっている、レコードベースのデータセット。 **（必須）**
 * [!DNL Profile] に対して有効になっていない時系列ベースのデータセット。 （オプション）
 
-[IAB TCF 2.0 の概要 ](./overview.md#merge-policies) に戻って、TCF 2.0 準拠を Platform に設定するプロセスを続行できます。
+これで、[IAB TCF 2.0 の概要 ](./overview.md#merge-policies) に戻って、TCF 2.0 準拠のExperience Platformを設定するプロセスを続けることができます。

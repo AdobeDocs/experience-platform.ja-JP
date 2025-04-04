@@ -1,10 +1,11 @@
 ---
 title: 機械学習によるスキーマ作成
-description: Experience Platformユーザーインターフェイスでスキーマを作成する方法を説明します。
+description: Experience Platform ユーザーインターフェイスでスキーマを作成する方法を説明します。
 badgeBeta: label="ベータ版" type="Informative"
-source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
+exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '997'
 ht-degree: 2%
 
 ---
@@ -31,7 +32,7 @@ ML スキーマの生成を使用すると、新しいデータソースをす�
 
 ## スキーマ作成ワークフローに移動します。 {#navigate-to-schema-creation-workflow}
 
-Platform UI の左側のナビゲーションから、「**[!UICONTROL スキーマ]** ワークスペースを選択します。 **[!UICONTROL スキーマ]** ワークスペースが表示されます。 **[!UICONTROL スキーマを作成]** を選択して、新しいスキーマを追加し、スキーマ作成ワークフローを開始します。
+Experience Platform UI の左側のナビゲーションから、「**[!UICONTROL スキーマ]** ワークスペースを選択します。 **[!UICONTROL スキーマ]** ワークスペースが表示されます。 **[!UICONTROL スキーマを作成]** を選択して、新しいスキーマを追加し、スキーマ作成ワークフローを開始します。
 
 ![ 左側のナビゲーションでスキーマがハイライト表示され、スキーマを作成したスキーマワークスペース。](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 

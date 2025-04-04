@@ -2,16 +2,16 @@
 title: Data Distillerの概要
 description: ライセンスの使用権限に関連した、クエリサービスデータの Data Distillerでの使用制限の概要。
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
 # Data Distillerの概要
 
-Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージソリューションです。 Data Distillerを使用すると、クエリサービスでバッチクエリを実行することで、リアルタイム顧客プロファイルや分析的なユースケースに対して取得後のデータ準備（クリーニング、シェーピング、操作など）を実行できます。 Data Distillerの使用は、Platform ベースのアプリケーションの使用権限によって異なります。
+Data Distillerは、Adobe Experience Platformの機能のサブセットを含むパッケージソリューションです。 Data Distillerを使用すると、クエリサービスでバッチクエリを実行することで、リアルタイム顧客プロファイルや分析的なユースケースに対して取得後のデータ準備（クリーニング、シェーピング、操作など）を実行できます。 Data Distillerの使用は、Experience Platform ベースのアプリケーションの使用権限によって異なります。
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}

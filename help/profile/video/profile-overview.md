@@ -1,6 +1,6 @@
 ---
 title: リアルタイム顧客プロファイルビデオの概要
-description: このビデオでは、Platform のリアルタイム顧客プロファイルの基本的な理解と、Adobe Experience Platform UI 内でプロファイルを参照する方法の概要を説明します。
+description: このビデオでは、Adobe Experience Platform内のリアルタイム顧客プロファイルの基本的な理解と、Experience Platform UI 内でプロファイルを参照する方法の概要を説明します。
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,9 +9,9 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '118'
 ht-degree: 18%
 
 ---

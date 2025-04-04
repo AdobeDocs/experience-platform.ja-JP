@@ -4,16 +4,16 @@ description: Azure テナントで CMK アプリを設定し、暗号化キー I
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 47%
+source-wordcount: '1035'
+ht-degree: 44%
 
 ---
 
 # API を使用した Azure の顧客管理キーの設定と設定
 
-このドキュメントでは、API を使用してAdobe Experience Platformで顧客管理キー（CMK）を有効にする Azure 固有の手順について説明します。 Azure がホストする Platform インスタンスの UI を使用したこのプロセスを完了する手順については、[UI CMK 設定ドキュメント ](./ui-set-up.md) を参照してください。
+このドキュメントでは、API を使用してAdobe Experience Platformで顧客管理キー（CMK）を有効にする Azure 固有の手順について説明します。 Azure でホストされるExperience Platform インスタンスの UI を使用したこのプロセスを完了する手順については、[UI CMK 設定ドキュメント ](./ui-set-up.md) を参照してください。
 
 AWS固有の手順については、[AWS設定ガイド ](../aws/ui-set-up.md) を参照してください。
 
@@ -23,7 +23,7 @@ Adobe Experience Platformの「[!UICONTROL  暗号化 ]」セクションを表�
 
 Experience Platformでの役割と権限の割り当てについて詳しくは、[ 権限の設定に関するドキュメント ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja) を参照してください。
 
-Azure でホストされる Platform インスタンスに対して CMK を有効にするには、次の設定を使用して [[!DNL Azure] Key Vault](./azure-key-vault-config.md) を設定する必要があります。
+Azure でホストされるExperience Platform インスタンスに対して CMK を有効にするには、次の設定を使用して [[!DNL Azure] Key Vault](./azure-key-vault-config.md) を設定する必要があります。
 
 * [消去保護を有効にする](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [ ソフト削除を有効にする ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -36,7 +36,7 @@ Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリ
 
 ### はじめに
 
-CMK アプリを登録するには、Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Platform API 認証ガイド](../../../api-authentication.md)を参照してください。
+CMK アプリを登録するには、Experience Platform API を呼び出す必要があります。 これらの呼び出しを行うために必要な認証ヘッダーの収集方法について詳しくは、[Experience Platform API 認証ガイド ](../../../api-authentication.md) を参照してください。
 
 認証ガイドでは、必要である `x-api-key` リクエストヘッダーに独自の一意の値を生成する方法を説明していますが、このガイドのすべての API 操作では、代わりに、静的な値 `acp_provisioning` が使用されます。ただし、`{ACCESS_TOKEN}` と `{ORG_ID}` には独自の値を指定する必要があります。
 
@@ -221,13 +221,13 @@ curl -X GET \
 
 この `status` 属性には、次の意味を持つ 4 つの値のいずれかを指定できます。
 
-1. `RUNNING`: Platform がキーと Key Vault にアクセスできることを検証します。
+1. `RUNNING`: Experience Platformがキーと Key Vault にアクセスできることを検証します。
 1. `UPDATE_EXISTING_RESOURCES`：システムは、組織内のすべてのサンドボックスのデータストアに Key Vault とキー名を追加しています。
 1. `COMPLETED`: Key Vault とキー名が正常にデータストアに追加されました。
 1. `FAILED`：問題が発生しました。主にキー、Key Vault、またはマルチテナントのアプリ設定に関連しています。
 
 ## 次の手順
 
-上記の手順を完了すると、組織で CMK が正常に有効になります。 Azure でホストされる Platform インスタンスの場合、プライマリデータストアに取り込まれたデータは、[!DNL Azure] Key Vault のキーを使用して暗号化および復号化されるようになりました。
+上記の手順を完了すると、組織で CMK が正常に有効になります。 Azure でホストされるExperience Platform インスタンスの場合、プライマリデータストアに取り込まれたデータは、[!DNL Azure] Key Vault のキーを使用して暗号化および復号化されるようになりました。
 
 Adobe Experience Platformでのデータ暗号化について詳しくは、[ 暗号化ドキュメント ](../../encryption.md) を参照してください。

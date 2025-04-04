@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；データ品質；品質；品質；サポートされる検証；検証；サポートされる検証；
+keywords: Experience Platform；ホーム；人気のトピック；データ品質；品質；品質；サポートされている検証；検証；サポートされている検証；
 solution: Experience Platform
 title: データ品質
 description: 次のドキュメントでは、Adobe Experience Platformでのバッチおよびストリーミングの取り込みでサポートされるチェックと検証の動作の概要を説明します。
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 73%
@@ -54,7 +54,7 @@ Adobe Experience Platform では、バッチまたはストリーミングの取
 | データセット | データセットが指定され有効になっていること、さらに削除されていないことを確認します。 |
 | ヘッダー | ヘッダーが指定され、有効になっていることを確認します。 |
 
-データの監視および検証方法 [!DNL Platform] ついて詳しくは、[ データフローの監視に関するドキュメント ](./monitor-data-ingestion.md) を参照してください。
+データの監視および検証方法 [!DNL Experience Platform] ついて詳しくは、[ データフローの監視に関するドキュメント ](./monitor-data-ingestion.md) を参照してください。
 
 ## ID 値の検証
 

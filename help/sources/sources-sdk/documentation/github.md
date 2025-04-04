@@ -4,9 +4,9 @@ solution: Experience Platform
 title: GitHub Web インターフェイスを使用したソースドキュメントページの作成
 description: このドキュメントでは、GitHub web インターフェイスを使用して、ドキュメントを作成し、プルリクエスト（PR）を送信する手順を説明します。
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '565'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->ドキュメントプロセスをさらにサポートするには、Adobeコントリビューション ガイドの次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[ 大幅な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[ 大幅な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## GitHub 環境の設定
 
@@ -45,7 +45,7 @@ GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitH
 
 ![create-new-file](../assets/create-new-file.png)
 
-ソースファイルに `YOURSOURCE.md` という名前を付けます。YOURSOURCE は、Platform でのソースの名前です。 例えば、会社が ACME CRM の場合、ファイル名は `acme-crm.md` にします。
+ソースファイルに `YOURSOURCE.md` という名前を付けます。YOURSOURCE は、Experience Platformでのソースの名前です。 例えば、会社が ACME CRM の場合、ファイル名は `acme-crm.md` にします。
 
 ![git インターフェイス ](../assets/git-interface.png)
 
@@ -63,15 +63,15 @@ GitHub 環境を設定する最初の手順は、[Adobe Experience Platform GitH
 
 ## レビュー用にドキュメントを送信
 
-ファイルがコミットされたら、プルリクエスト（PR）を開いて、作業中のブランチをAdobeドキュメントリポジトリのマスターブランチに結合できます。 作業中のブランチが選択されていることを確認し、「**比較してプル要求**」を選択します。
+ファイルがコミットされたら、プルリクエスト（PR）を開いて、作業中のブランチをAdobe ドキュメントリポジトリのマスターブランチに結合できます。 作業中のブランチが選択されていることを確認し、「**比較してプル要求**」を選択します。
 
 ![compare-pr](../assets/compare-pr.png)
 
-ベースおよび比較ブランチが正しいことを確認します。 更新を説明するメモを PR に追加してから、「**プルリクエストを作成**」を選択します。 これにより、作業の作業ブランチをAdobeリポジトリのマスターブランチに結合する PR が開きます。
+ベースおよび比較ブランチが正しいことを確認します。 更新を説明するメモを PR に追加してから、「**プルリクエストを作成**」を選択します。 これにより、作業の作業ブランチをAdobe リポジトリのマスターブランチに結合する PR が開きます。
 
 >[!TIP]
 >
->**メンテナーによる編集を許可** チェックボックスを選択したままにして、Adobeドキュメントチームが PR を編集できるようにします。
+>「**メンテナーによる編集を許可**」チェックボックスを選択したままにして、Adobe ドキュメントチームが PR を編集できるようにします。
 
 ![create-pr](../assets/create-pr.png)
 

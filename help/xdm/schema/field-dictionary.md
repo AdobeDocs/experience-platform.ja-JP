@@ -2,11 +2,11 @@
 keywords: Experience Platform; ホーム; 人気のあるトピック; スキーマ; スキーマ; フィールド; フィールド; 標準フィールド; 標準フィールド; 辞書; ディクショナリ; マップ; マップ
 solution: Experience Platform
 title: Experience Data Model（XDM）フィールドディクショナリ
-description: Experience Data Model（XDM）は、Adobe Experience Platform のスキーマを構成する際に使用できる一連の標準フィールドを定義します。これらのフィールドを使用すると、XDM を使用するすべてのサービスが、これらのフィールドで提供される特定の定義を明示的に理解するので、Platform サービス全体で一貫した動作が行われます。
+description: Experience Data Model（XDM）は、Adobe Experience Platform のスキーマを構成する際に使用できる一連の標準フィールドを定義します。これらのフィールドを使用すると、XDM を使用するすべてのサービスが、これらのフィールドで提供される具体的な定義を明示的に理解するので、Experience Platform サービス全体で一貫した動作が行われます。
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '13972'
+source-wordcount: '13973'
 ht-degree: 96%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 96%
 # XDM フィールドディクショナリ
 
 
-[!DNL Experience Data Model]（XDM）は、Adobe Experience Platform のスキーマを構成する際に使用できる一連の標準フィールドを定義します。これらのフィールドを使用すると、XDM を使用するすべてのサービスが、これらのフィールドで提供される特定の定義を明示的に理解するので、[!DNL Platform] サービス全体で一貫した動作が行われます。
+[!DNL Experience Data Model]（XDM）は、Adobe Experience Platform のスキーマを構成する際に使用できる一連の標準フィールドを定義します。これらのフィールドを使用すると、XDM を使用するすべてのサービスが、これらのフィールドで提供される特定の定義を明示的に理解するので、[!DNL Experience Platform] サービス全体で一貫した動作が行われます。
 
 [!DNL Experience Platform] のスキーマを定義する際の原則やベストプラクティスなど、スキーマの構成要素について詳しくは、「[スキーマ構成の基本](composition.md)」を参照してください。
 

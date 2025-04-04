@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対するファイル書き出し設定の設定方法を説明します。
 title: バッチ設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 96%
+source-wordcount: '1058'
+ht-degree: 86%
 
 ---
 
@@ -13,12 +13,12 @@ ht-degree: 96%
 
 Destination SDK でバッチ設定オプションを使用して、ユーザーに、書き出されたファイル名のカスタマイズと、その環境設定に応じた書き出しスケジュールの設定を許可します。
 
-Destination SDK でファイルベースの宛先を作成する場合、デフォルトのファイル名および書き出しスケジュールを設定したり、Platform UI からこれらの設定を行うオプションをユーザーに与えたりできます。例えば、以下のような動作を設定できます。
+Destination SDKでファイルベースの宛先を作成する場合、デフォルトのファイル名および書き出しスケジュールを設定したり、Experience Platform UI からこれらの設定を行うオプションをユーザーに与えたりできます。 例えば、以下のような動作を設定できます。
 
 * ファイル名に特定の情報（オーディエンス ID、宛先 ID、カスタム情報など）を含める。
-* ユーザーに Platform UI からのファイル名のカスタマイズを許可する。
+* Experience Platform UI からファイル名をカスタマイズできるようにします。
 * 設定した間隔でファイル書き出しが発生するように設定する。
-* Platform UI でユーザーが表示できるファイル名および書き出しスケジュールのカスタマイズオプションを定義する。
+* Experience Platform UI でユーザーに表示されるファイル名および書き出しスケジュールのカスタマイズオプションを定義する。
 
 バッチ設定は、ファイルベースの宛先に対する宛先設定の一部です。
 
@@ -29,7 +29,7 @@ Destination SDK でファイルベースの宛先を作成する場合、デフ�
 * [宛先設定の作成](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [宛先設定の更新](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-この記事では、宛先に使用できる、サポートされるすべてのバッチ設定オプションを説明し、Platform UI で顧客に何が表示されるかを示します。
+この記事では、宛先に使用できる、サポートされるすべてのバッチ設定オプションを説明し、Experience Platform UI で顧客に何が表示されるかを示します。
 
 >[!IMPORTANT]
 >
@@ -113,9 +113,9 @@ Destination SDK でファイルベースの宛先を作成する場合、デフ�
 | マクロ | UI ラベル | 説明 | 例 |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL 宛先] | UI の宛先名。 | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL セグメント ID] | 一意の、Platform で生成されたオーディエンス ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_ID` | [!UICONTROL セグメント ID] | 一意の、Experience Platformで生成されたオーディエンス ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL セグメント名] | ユーザー定義のオーディエンス名 | VIP subscriber |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL 宛先 ID] | 一意の、宛先インスタンスの Platform で生成された ID | 77b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL 宛先 ID] | 一意の、宛先インスタンスのExperience Platformで生成された ID | 77b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL 宛先名] | 宛先インスタンスのユーザー定義の名前。 | My 2022 Advertising Destination |
 | `ORGANIZATION_NAME` | [!UICONTROL 組織名] | Adobe Experience Platform でのお客様の組織の名前。 | My Organization Name |
 | `SANDBOX_NAME` | [!UICONTROL サンドボックス名] | 顧客によって使用されるサンドボックスの名前。 | prod |

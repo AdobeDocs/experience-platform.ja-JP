@@ -2,9 +2,9 @@
 title: アカウントプロファイルダッシュボード
 description: Adobe Experience Platformには、組織の B2B アカウントプロファイルに関する重要な情報を表示できるダッシュボードが用意されています。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2401'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform ユーザーインターフェイス（UI）には、�
 
 ## はじめに
 
-B2B [!UICONTROL  アカウントプロファイル ](../../rtcdp/b2b-overview.md) ダッシュボードにアクセスするには、[Adobe Real-time Customer Data Platform B2B edition] の権利が必要です。
+B2B [!UICONTROL  アカウントプロファイル ](../../rtcdp/b2b-overview.md) ダッシュボードにアクセスするには、[Adobe Real-Time Customer Data Platform B2B edition] の権利が必要です。
 
 ## アカウントプロファイルデータ {#data}
 
@@ -31,9 +31,9 @@ B2B [!UICONTROL  アカウントプロファイル ](../../rtcdp/b2b-overview.md
 
 ## [!UICONTROL  アカウントプロファイル ] ダッシュボードを探索 {#explore}
 
-Platform UI 内で [!UICONTROL  アカウントプロファイル ] ダッシュボードに移動するには、左側のナビゲーションパネルで **[!UICONTROL アカウント [!UICONTROL  の下の ] プロファイル]** を選択します。
+Experience Platform UI 内で [!UICONTROL  アカウントプロファイル ] ダッシュボードに移動するには、左側のナビゲーションパネルで **[!UICONTROL アカウント [!UICONTROL  の下の ] プロファイル]** を選択します。
 
-![ 左側のナビゲーションでアカウントプロファイルがハイライト表示され、「概要」タブが表示された Platform UI。](../images/account-profiles/account-profiles-dashboard.png)
+![ 左側のナビゲーションでアカウントプロファイルがハイライト表示され、「概要」タブが表示されたExperience Platform UI。](../images/account-profiles/account-profiles-dashboard.png)
 
 [!UICONTROL  アカウントプロファイル ] ダッシュボードでは、[ 組織に取り込まれたアカウントプロファイルを参照 ](#browse-account-profiles) または [ ウィジェットを使用してアカウントプロファイルデータ全体を一目で表示 ](#standard-widgets) することができます。
 
@@ -61,7 +61,7 @@ Platform UI 内で [!UICONTROL  アカウントプロファイル ] ダッシュ
 
 ![ 結果が表示されプロファイル ID がハイライト表示された「アカウントプロファイル参照」タブ。](../images/account-profiles/account-profiles-browse-tab.png)
 
-「[!UICONTROL  詳細 ]」タブに表示されるアカウントプロファイル情報は、複数のプロファイルフラグメントを結合し、個々のアカウントの単一のビューを形成したものです。 Platform UI でのアカウントプロファイル表示機能について詳しくは、[Adobe Real-time Customer Data Platformでのアカウントプロファイルの参照 ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) に関するドキュメントを参照してください。
+「[!UICONTROL  詳細 ]」タブに表示されるアカウントプロファイル情報は、複数のプロファイルフラグメントを結合し、個々のアカウントの単一のビューを形成したものです。 Experience Platform UI でのアカウントプロファイル表示機能について詳しくは、[Adobe Real-Time Customer Data Platformでのアカウントプロファイルの参照 ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) に関するドキュメントを参照してください。
 
 ## 標準ウィジェット {#standard-widgets}
 
@@ -70,7 +70,7 @@ Platform UI 内で [!UICONTROL  アカウントプロファイル ] ダッシュ
 >title="アカウントあたりの顧客数の概要"
 >abstract="このドリルスルーウィジェットは、B2B データの構造に関するインサイトを提供します。これにより、顧客プロファイルがリンクされていない、または 1 つ以上の顧客プロファイルが関連付けられているアカウントプロファイルの数を特定できます。<ul><li>直接顧客：`personComponents` ルートを通じてアカウントに直接リンクされた顧客プロファイルです。</li><li>間接顧客：`Account-Person` ルートを介してアカウントにリンクされた顧客プロファイルです。</li></ul>"
 
-Adobeには、アカウントプロファイルに関連する様々な指標を視覚化するために使用できる標準ウィジェットが用意されています。
+Adobeには、アカウントプロファイルに関連する様々な指標を視覚化するために使用できる、標準ウィジェットが用意されています。
 
 >[!IMPORTANT]
 >
@@ -103,7 +103,7 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 
 >[!NOTE]
 >
->[!UICONTROL  アカウントごとの顧客概要 ] インサイトとそのドリルスルーグラフ（[!UICONTROL  アカウントごとの顧客詳細 ]、[!UICONTROL  アカウントごとの商談概要 ]、[!UICONTROL  アカウントごとの商談詳細 ]）は、設定したグローバル日付フィルターの影響を受けません。
+>[!UICONTROL  アカウント概要ごとの顧客 ]insightとそのドリルスルーグラフ（[!UICONTROL  アカウント詳細ごとの顧客 ]、[!UICONTROL  アカウント概要ごとの商談 ]、[!UICONTROL  アカウント詳細ごとの商談 ]）は、設定したグローバル日付フィルターの影響を受けません。
 
 [!UICONTROL  アカウントごとの顧客の概要 ] グラフは、顧客タイプに基づいてアカウントの概要を提供します。 アカウントに直接または間接の顧客があるか、またはなしの顧客があるかを分類する 4 行のテーブルが表示されます。 各カテゴリのアカウントの合計数が表示されます。 グラフは、直接顧客と間接顧客のアカウントの配分を識別するのに役立ちます。
 
@@ -129,7 +129,7 @@ Adobeには、アカウントプロファイルに関連する様々な指標を
 
 ![ ナビゲーションドロップダウンメニューがハイライト表示されたアカウントプロファイルダッシュボードのドリルスルー表示。](../images/account-profiles/navigation-dropdown.png)
 
-Platform UI のドリルスルーについて詳しくは、[ ドリルスルーガイド ](../sql-insights-query-pro-mode/drill-through.md) を参照してください。
+Experience Platform UI のドリルスルーについて詳しくは、[ ドリルスルーガイド ](../sql-insights-query-pro-mode/drill-through.md) を参照してください。
 
 #### [!UICONTROL  アカウントごとの顧客詳細 ] {#customers-per-account-detail}
 
@@ -167,7 +167,7 @@ Platform UI のドリルスルーについて詳しくは、[ ドリルスルー
 
 >[!NOTE]
 >
->[!UICONTROL  データが見つかりません ] または [!UICONTROL  読み込めません ] エラーは、「Opportunity-Person」ブリッジテーブルがスキーマで使用されていない場合に発生します。 インサイトでこれらのエラーのいずれかが表示された場合は、和集合スキーマを確認し、「Opportunity-Person」フィールドグループがデータを取り込んでいることを確認してください。
+>[!UICONTROL  データが見つかりません ] または [!UICONTROL  読み込めません ] エラーは、「Opportunity-Person」ブリッジテーブルがスキーマで使用されていない場合に発生します。 insightにこれらのエラーのいずれかが表示された場合は、和集合スキーマを確認し、「Opportunity-Person」フィールドグループがデータを取り込んでいることを確認してください。
 
 ![ 「人物の役割による新しい機会」ウィジェット ](../images/account-profiles/new-opportunities-by-person-role.png)
 
@@ -233,10 +233,10 @@ Platform UI のドリルスルーについて詳しくは、[ ドリルスルー
 
 ウィジェットに *[!UICONTROL 読み込めません」と表示される場合。 もう一回やってみて。]* れは、B2B エンティティに使用可能なデータがないためです。 例えば、以下に表示されるウィジェット [!UICONTROL  ユーザー役割別の新しい商談 ] には、「[!UICONTROL  読み込めません。 もう一回やってみて。このサンドボックスには使用可能な商談データがないので、]」です。
 
-![ 「インサイトを読み込めません」エラー ](../images/account-profiles/unable-to-load.png)
+![ 「insightを読み込めません」エラーが発生する。](../images/account-profiles/unable-to-load.png)
 
 この問題を解決するには、*オポチュニティ人物* データなどの B2B エンティティデータをサンドボックスに取り込む必要があります。 48 時間後、データはウィジェットに反映されます。
 
 ## 次の手順
 
-このドキュメントでは、[!UICONTROL  アカウントプロファイル ] ダッシュボードの見つけ方と、使用可能なウィジェットに表示される指標について説明しました。 Experience PlatformUI で B2B データの一部としてアカウントプロファイルを使用する方法について詳しくは、B2B editionのAdobe Real-Time CDPの [ アカウントプロファイルの概要 ](../../rtcdp/accounts/account-profile-overview.md) を参照してください。
+このドキュメントでは、[!UICONTROL  アカウントプロファイル ] ダッシュボードの見つけ方と、使用可能なウィジェットに表示される指標について説明しました。 Experience Platform UI で B2B データの一部としてアカウントプロファイルを使用する方法について詳しくは、B2B editionのAdobe Real-Time CDPの [ アカウントプロファイルの概要 ](../../rtcdp/accounts/account-profile-overview.md) を参照してください。

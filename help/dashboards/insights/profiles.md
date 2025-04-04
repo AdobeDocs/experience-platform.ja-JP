@@ -2,9 +2,9 @@
 title: プロファイルインサイト
 description: プロファイルインサイトを強化する SQL を確認し、これらのクエリを使用して、顧客とその消費者エクスペリエンスをさらに詳しく調べるカスタムインサイトを生成します。
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1660'
 ht-degree: 3%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 3%
 
 プロファイルを強化する SQL にアクセスしてプロファイルインサイトを理解し、独自のインサイトを生成して、プロファイルを構成する顧客とその消費者エクスペリエンスをさらに詳しく調べます。 既存のReal-Time CDP データモデル SQL をインスピレーションとして使用し、独自のビジネスニーズに合ったクエリを作成することで、生データを新しい実用的なインサイトに変換します。
 
-Platform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL のドキュメントを表示 ](../view-sql.md) を参照してください。
+Experience Platform UI を使用してインサイトの SQL を直接調整する方法について詳しくは、[SQL のドキュメントを表示 ](../view-sql.md) を参照してください。
 
 次のインサイトはすべて、[ プロファイルダッシュボード ](../guides/profiles.md) またはカスタム [ ユーザー定義ダッシュボード ](../standard-dashboards.md) の一部として使用できます。 ダッシュボードをカスタマイズする方法、またはウィジェットライブラリおよび [ ユーザー定義ダッシュボード ](../customize/custom-widgets.md) で [ 新しいウィジェットの作成と編集 ](../customize/overview.md) を使用する方法については、[ カスタマイズの概要 ](../standard-dashboards.md#create-widget) を参照してください。
 
 ## オーディエンスの重複 (結合ポリシー別) {#audience-overlap-by-merge-policy}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 両方のオーディエンスに共通のプロファイルはどれですか？
 - 重複は、エンゲージメントやコンバージョン率にどのような影響を与えますか？
 - 重複するセグメントに合わせてマーケティング戦略を調整するにはどうすればよいですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -64,17 +64,17 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-このインサイトの外観と機能については、[ 結合ポリシーウィジェットによるオーディエンスの重複 ](../guides/profiles.md#audience-overlap-by-merge-policy) のドキュメントを参照してください。
+このinsightの外観と機能について詳しくは、[ 結合ポリシーウィジェットによるオーディエンスの重複 ](../guides/profiles.md#audience-overlap-by-merge-policy) ドキュメント）を参照してください。
 
 ## オーディエンス重複レポート {#audience-overlap-report}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 最も重複している 50 人のオーディエンスは何ですか？
 - 重複が最も少ない 50 個のオーディエンスはどれですか？
 - 結合ポリシーによって重複するパターンはどのように変化しますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT source_segment_name,
@@ -131,17 +131,17 @@ SELECT source_segment_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ オーディエンスの重複レポートウィジェットのドキュメント ](../guides/profiles.md#audience-overlap-report) を参照してください。
+このinsightの外観と機能について詳しくは、[ オーディエンスの重複レポートウィジェットのドキュメント ](../guides/profiles.md#audience-overlap-report) を参照してください。
 
 ## オーディエンス （数） {#audiences}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - セグメント化に主に使用される結合ポリシーはどれですか？
 - 結合ポリシー間でのオーディエンスの配分はどうなっていますか。
 - 特定の結合ポリシーのオーディエンス数に経時的に大きな変化はありますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT count(DISTINCT a.segment_id) count_of_segments
@@ -159,18 +159,18 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ オーディエンスウィジェットのドキュメント ](../guides/profiles.md#audiences) を参照してください。
+このinsightの外観と機能については、[Audiences ウィジェットのドキュメント ](../guides/profiles.md#audiences) を参照してください。
 
 ## 宛先ステータスにマッピングされたオーディエンス {#audiences-mapped-to-destination-status}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - マッピングされた宛先とマッピングされていない宛先の間のオーディエンスの全体的な分布
 - マッピングされたオーディエンスの数が最も多い特定の宛先はどれですか？
 - マッピングされていないオーディエンスが合計に占める割合はどれくらいですか？
 - マッピングされていないオーディエンスのうち、パターンや関連するトレンドはありますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
@@ -191,17 +191,17 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ 宛先ステータスにマッピングされたオーディエンスウィジェットのドキュメント ](../guides/profiles.md#audiences-mapped-to-destination-status) を参照してください。
+このinsightの外観と機能について詳しくは、[ 宛先ステータスウィジェットにマッピングされたオーディエンス ](../guides/profiles.md#audiences-mapped-to-destination-status) ドキュメントを参照してください。
 
 ## オーディエンスサイズ {#audiences-size}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 最大サイズを持つのは、どのオーディエンスセグメントですか？
 - 最大 5 人のオーディエンスはどれですか？
 - 上位オーディエンスのオーディエンスサイズ分布は時間の経過と共にどのように変化しますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
@@ -224,17 +224,17 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ オーディエンスサイズウィジェットのドキュメント ](../guides/profiles.md#audiences-size) を参照してください。
+このinsightの外観と機能について詳しくは、[ オーディエンスサイズウィジェットのドキュメント ](../guides/profiles.md#audiences-size) を参照してください。
 
 ## スコアの顧客 AI 分布 {#customer-ai-distribution-of-scores}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 顧客 AI モデルごとに、バケット間でのスコアの分布はどれくらいですか？
 - 高スコア、中スコア、低スコアごとのスコアの分布は何ですか？
 - 結合ポリシーによるスコアリング分布の分類は何ですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT b.model_name,
@@ -361,17 +361,17 @@ SELECT b.model_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ スコアの顧客 AI 分布ウィジェットのドキュメント ](../guides/profiles.md#customer-ai-distribution-of-scores) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ スコアの顧客 AI 分布ウィジェットのドキュメント ](../guides/profiles.md#customer-ai-distribution-of-scores) を参照してください。
 
 ## 顧客 AI スコアリングの概要 {#customer-ai-scoring-summary}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 顧客 AI モデルごとのスコアリングの概要は何ですか？
 - 様々なオーディエンスに対して顧客 AI の傾向スコアはどのように変化しますか？
 - プロファイルの概要で、スコアリング概要が他の KPI と比較してどのように変化するか。
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT model_name,
@@ -402,18 +402,18 @@ SELECT model_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ 顧客 AI スコアの概要ウィジェットのドキュメント ](../guides/profiles.md#customer-ai-scoring-summary) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ 顧客 AI スコア概要ウィジェットのドキュメント ](../guides/profiles.md#customer-ai-scoring-summary) を参照してください。
 
 ## ID の重複 {#identity-overlap}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - [!UICONTROL ID タイプ A] と [!UICONTROL ID タイプ B] の一般的な積集合は何ですか。
 - 特定の ID タイプの重複に基づいて顧客オーディエンスを絞り込み、ターゲットマーケティング戦略を強化するにはどうすればよいですか？
 - 交差領域内のキャンペーンのパフォーマンスを評価することで、どのようなインサイトを得ることができますか？
-- このキャンペーンパフォーマンスインサイトを使用して、今後のマーケティング活動をどのように最適化できますか。
+- このキャンペーンパフォーマンス insightを使用して、今後のマーケティング活動をどのように最適化できますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -459,13 +459,13 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ID の重複ウィジェットのドキュメント ](../guides/profiles.md#identity-overlap) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ID の重複ウィジェットのドキュメント ](../guides/profiles.md#identity-overlap) を参照してください。
 
 ## プロファイル数 {#profile-count}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
-- Adobe Real-time Customer Data Platformの全体的なプロファイル数
+- Adobe Real-Time Customer Data Platformの全体的なプロファイル数
 - 結合ポリシーに基づいたプロファイルの分散方法
 - プロファイル数が最も多い結合ポリシーはどれですか？
 
@@ -481,19 +481,19 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-このインサイトの外観と機能について詳しくは、[ プロファイル数ウィジェットガイド ](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count) を参照してください。
+このinsightの外観と機能について詳しくは、[ プロファイル数ウィジェットガイド ](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count) を参照してください。
 
-このインサイトの外観と機能について詳しくは、[ プロファイル数ウィジェットのドキュメント ](../guides/profiles.md#profile-count) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ プロファイル数ウィジェットのドキュメント ](../guides/profiles.md#profile-count) を参照してください。
 
 ## プロファイル数の変更 {#profile-count-change}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - プロファイル数の全体的な変化のトレンドは何ですか？
 - プロファイル数の大幅なスパイクや低下の原因は何ですか？
 - プロファイル数の変更を促進している特定の結合ポリシーはありますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
@@ -528,17 +528,17 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ プロファイル数の変更ウィジェットのドキュメント ](../guides/profiles.md#profile-count-change) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ プロファイル数の変更ウィジェットのドキュメント ](../guides/profiles.md#profile-count-change) を参照してください。
 
 ## プロファイル数の変化のトレンド {#profile-count-change-trend}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 結合ポリシーに基づいた、過去 12 か月間のプロファイル数の変化の全体的なトレンドは何ですか。
 - 過去 30 日以内にプロファイル数の変化に特定のパターンや変動があり、注意が必要なものはありますか？
 - 過去 90 日間のプロファイル数の変化を、全体的なトレンドと比較してどうですか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT date_key,
@@ -562,18 +562,18 @@ SELECT date_key,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ プロファイル数の変化のトレンドウィジェットのドキュメント ](../guides/profiles.md#profile-count-change-trend) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ プロファイル数の変化のトレンドウィジェットのドキュメント ](../guides/profiles.md#profile-count-change-trend) を参照してください。
 
 ## プロファイル数のトレンド {#profile-count-trend}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 過去 30 日間の結合ポリシーに基づくプロファイル数の全体的なトレンドは何ですか？
 - このトレンドに基づいて、長期的なトレンド（90 日と 12 か月など）と比較するとどうですか？
 - 指定した期間（30 日、90 日および 12 か月）のプロファイル数の増減に最も貢献している結合ポリシーはどれですか？
 - プロファイル数に、30 日間の期間内の特定のイベントや期間と関連する特定のスパイクや急減はありますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT date_key,
@@ -593,18 +593,18 @@ SELECT date_key,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ プロファイル数のトレンドウィジェットのドキュメント ](../guides/profiles.md#profile-count-trend) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ プロファイル数のトレンドウィジェットのドキュメント ](../guides/profiles.md#profile-count-trend) を参照してください。
 
 ## ID 別プロファイル {#profiles-by-identity}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - プロファイルの合計数のうち、割合が高い ID タイプはどれですか？
 - ID タイプ間に大きな違いはありますか？
 - ID タイプの全体的な分布はどれくらいですか？
 - ID カウントに大きな相違や異常はありますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -622,17 +622,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ID 別プロファイル ウィジェットのドキュメント ](../guides/profiles.md#profiles-by-identity) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ID 別プロファイル ウィジェットのドキュメント ](../guides/profiles.md#profiles-by-identity) を参照してください。
 
 ## プロファイル数の変化のトレンド {#profiles-count-change-trend}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 結合ポリシーに基づいて、過去 12 か月間のプロファイル数の変化の全体的なトレンドは何ですか。
 - 注意が必要な特定のパターンや、過去 30 日間のプロファイル数の変化の変動はありますか？
 - 過去 90 日間のプロファイルの変化は、全体的なトレンドと比較してどのようにカウントされますか。
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT date_key,
@@ -656,17 +656,17 @@ SELECT date_key,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ プロファイル数の変化のトレンドウィジェットのドキュメント ](../guides/profiles.md#profiles-count-change-trend) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ プロファイル数の変化のトレンドウィジェットのドキュメント ](../guides/profiles.md#profiles-count-change-trend) を参照してください。
 
 ## プロファイル数の変化のトレンド (ID 別) {#profiles-count-change-trend-by-identity}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 過去 12 か月間の、様々な ID でのプロファイル数の変化の全体的なトレンドは何ですか。
 - 過去 30 日以内に大きな変化を示す特定の ID のトレンドはありますか？
 - 特定の ID の 30 日、90 日および 12 か月のトレンドを比較する場合、プロファイル数の変化はどのように異なりますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT date_key,
@@ -697,18 +697,18 @@ SELECT date_key,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ID ウィジェット別プロファイル数の変化のトレンド ](../guides/profiles.md#profiles-count-change-trend-by-identity) のドキュメントを参照してください。
+このinsightのアピアランスと機能について詳しくは、[ID ウィジェット別プロファイル数の変化のトレンド ](../guides/profiles.md#profiles-count-change-trend-by-identity) のドキュメントを参照してください。
 
 ## 単一の ID プロファイル {#single-identity-profiles}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 顧客 ID データは、単一の ID で一貫して表されますか？
 - 単一のタイプの ID のみを持つプロファイルで構成される、ユーザーベースの割合
 - 単一のタイプの ID のみを持つプロファイルの場合、これはプロファイルの完全性にどのように影響しますか？
 - 最も一般的な ID タイプと単一 ID プロファイル数には相関関係がありますか。
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -722,17 +722,17 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ 単一の ID プロファイルウィジェットのドキュメント ](../guides/profiles.md#single-identity-profiles) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ 単一の ID プロファイルウィジェットのドキュメント ](../guides/profiles.md#single-identity-profiles) を参照してください。
 
 ## 単一の ID プロファイル (ID 別) {#single-identity-profiles-by-identity}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - 単一の ID （メール、電話番号など）で登録した一意の顧客は何人ですか？
 - 電子メールや電話番号など、様々な ID タイプ間での単一の ID プロファイルの分布は何ですか？
 - 単一の ID プロファイル内に新たな ID パターンやシフトはありますか？
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -749,17 +749,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-このインサイトの外観と機能については、[ID ウィジェット別の単一の ID プロファイル ](../guides/profiles.md#single-identity-profiles-by-identity) のドキュメントを参照してください。
+このinsightのアピアランスと機能について詳しくは、[ID ウィジェット別の単一の ID プロファイル ](../guides/profiles.md#single-identity-profiles-by-identity) のドキュメントを参照してください。
 
 ## セグメント化されていないプロファイル {#unsegmented-profiles}
 
-このインサイトによって回答された質問：
+このinsightが回答した質問：
 
 - オーディエンスに含まれていないプロファイルの数
 - セグメント化されていないプロファイルで表される合計オーディエンスの割合
 - セグメント化されていない多数のプロファイルに何らかの結合ポリシーが影響していますか。
 
-+++選択すると、このインサイトを生成する SQL が表示されます
++++選択して、このinsightを生成する SQL を表示します
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -773,7 +773,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-このインサイトの外観と機能について詳しくは、[ セグメント化されていないプロファイルウィジェットのドキュメント ](../guides/profiles.md#unsegmented-profiles) を参照してください。
+このinsightのアピアランスと機能について詳しくは、[ セグメント化されていないプロファイルウィジェットのドキュメント ](../guides/profiles.md#unsegmented-profiles) を参照してください。
 
 ## 次の手順
 

@@ -5,7 +5,7 @@ title: UI で Azure HDInsights 上の Apache Hive Source接続を作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して、Azure HDInsights 上の Apache Hive ソース接続を作成する方法を説明します。
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 39%
@@ -18,7 +18,7 @@ ht-degree: 39%
 >
 > [!DNL Azure HDInsights] コネクタの [!DNL Apache Hive] はベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイス [!DNL Azure HDInsights] 使用してソースコネクタ上に [!DNL Apache Hive] を作成する手順を説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイス [!DNL Azure HDInsights] 使用してソースコネクタ上に [!DNL Apache Hive] を作成する手順を説明します。
 
 ## はじめに
 
@@ -33,7 +33,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で [!DNL Hive] アカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Experience Platform] で [!DNL Hive] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## [!DNL Hive] アカウントの接続
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL Hive] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL Hive] アカウントを [!DNL Experience Platform] にリンクします。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -71,4 +71,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Hive] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL Hive] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

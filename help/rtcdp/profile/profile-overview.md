@@ -4,10 +4,10 @@ title: Real-Time CDP のリアルタイム顧客プロファイルについて
 description: Adobe Real-time Customer Data Platform により、リアルタイム顧客プロファイルを使用して、調整された一貫性のある関連性の高いエクスペリエンスを顧客に提供する方法について説明します。
 feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 100%
+source-wordcount: '457'
+ht-degree: 85%
 
 ---
 
@@ -31,11 +31,11 @@ Real-Time CDP でサポートされるプロファイル機能に加えて、Rea
 
 ## 結合ポリシー
 
-顧客データを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するために Platform で使用されるルールです。結合ポリシーについて詳しくは、「[結合ポリシーの概要](merge-policies.md)」を参照してください。
+顧客データを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するためにExperience Platformで使用されるルールです。 結合ポリシーについて詳しくは、「[結合ポリシーの概要](merge-policies.md)」を参照してください。
 
 ## プロファイルビューアー
 
-Platform を使用すると、顧客プロファイルを簡単に表示し、様々な属性を使用して特定のプロファイルを検索できます。Platform 内でのプロファイルの表示方法について詳しくは、[プロファイル参照の概要](profile-browse.md)を参照してください。
+Experience Platformでは、顧客プロファイルを簡単に表示し、様々な属性を使用して特定のプロファイルを検索できます。 Experience Platform内でのプロファイルの表示方法について詳しくは、[ プロファイル参照の概要 ](profile-browse.md) を参照してください。
 
 ## 次の手順
 

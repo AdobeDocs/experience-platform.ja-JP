@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；取り込み；バッチデータの取り込み；チュートリアル；バッチ取り込み；チュートリアル；ui ガイド；
 solution: Experience Platform
-title: データのExperience Platformへの取り込み
+title: Experience Platformへのデータの取り込み
 type: Tutorial
 description: Adobe Experience Platformでは、データを Parquet ファイルまたは既知の Experience Data Model （XDM）スキーマに準拠するデータの形式で、バッチファイルとして簡単にインポートできます。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 51%
 
 ---
 
 # Adobe Experience Platform へのデータの取得
 
-Adobe Experience Platformでは、データをバッチファイルとして [!DNL Platform] に簡単にインポートできます。 取り込まれるデータの例としては、CRM システム内のフラットファイル（Parquet ファイルなど）のプロファイルデータや、スキーマレジストリ内の既知の [!DNL Experience Data Model] （XDM）スキーマに準拠するデータなどがあります。
+Adobe Experience Platformでは、データをバッチファイルとして [!DNL Experience Platform] に簡単にインポートできます。 取り込まれるデータの例としては、CRM システム内のフラットファイル（Parquet ファイルなど）のプロファイルデータや、スキーマレジストリ内の既知の [!DNL Experience Data Model] （XDM）スキーマに準拠するデータなどがあります。
 
 ## はじめに
 
@@ -80,7 +80,7 @@ Adobe Experience Platformでは、データをバッチファイルとして [!D
 
 ## [!DNL Real-Time Customer Profile] のデータセットを有効にする
 
-データセットは、データを [!DNL Experience Platform] に取り込むために使用され、そのデータは、最終的に個人を識別し、複数のソースからの情報を結び付けるために使用されます。 結び付けられた情報は [!DNL Real-Time Customer Profile] と呼ばれます。 [!DNL Real-Time Profile] ージに含める必要がある情報を [!DNL Platform] ーザーが把握できるように、**[!UICONTROL プロファイル]** 切り替えスイッチを使用して、データセットを含めるようにマークできます。
+データセットは、データを [!DNL Experience Platform] に取り込むために使用され、そのデータは、最終的に個人を識別し、複数のソースからの情報を結び付けるために使用されます。 結び付けられた情報は [!DNL Real-Time Customer Profile] と呼ばれます。 [!DNL Real-Time Profile] ージに含める必要がある情報を [!DNL Experience Platform] ーザーが把握できるように、**[!UICONTROL プロファイル]** 切り替えスイッチを使用して、データセットを含めるようにマークできます。
 
 デフォルトでは、この切り替えはオフになっています。[!DNL Profile] をオンに切り替えた場合、データセットに取り込まれたすべてのデータは、個人を識別して [!DNL Real-Time Profile] ータを結び付けるのに役立つように使用されます。
 
@@ -106,13 +106,13 @@ ID の [!DNL Real-Time Customer Profile] 用と操作について詳しくは、
 
 >[!NOTE]
 >
->Platform では、データ取り込み用に Parquet と JSON の 2 つのファイルタイプをサポートしています。 一度に 5 個までのファイルを追加でき、各ファイルの最大ファイルサイズは 1 GB です。
+>Experience Platformでは、データ取得用に Parquet と JSON の 2 種類のファイルをサポートしています。 一度に 5 個までのファイルを追加でき、各ファイルの最大ファイルサイズは 1 GB です。
 
 ![「データを追加」タブ](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## ファイルのアップロード {#upload-file}
 
-アップロードする Parquet または JSON ファイルをドラッグ&amp;ドロップ（または参照して選択）す [!DNL Platform] と、ファイルの処理がすぐに開始され、ファイルのアップロードの進行状況を示す **[!UICONTROL データを追加]** タブに **[!UICONTROL アップロード]** ダイアログが表示されます。
+アップロードする Parquet または JSON ファイルをドラッグ&amp;ドロップ（または参照して選択）す [!DNL Experience Platform] と、ファイルの処理がすぐに開始され、ファイルのアップロードの進行状況を示す **[!UICONTROL データを追加]** タブに **[!UICONTROL アップロード]** ダイアログが表示されます。
 
 ![アップロードダイアログ](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -150,6 +150,6 @@ ID の [!DNL Real-Time Customer Profile] 用と操作について詳しくは、
 
 >[!WARNING]
 >
->次のビデオに示す [!DNL Platform] UI は旧式のものです。最新の UI のスクリーンショットと機能については、上記のドキュメントを参照してください。
+>次のビデオに示す [!DNL Experience Platform] UI は旧式のものです。最新の UI のスクリーンショットと機能については、上記のドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1889'
 ht-degree: 61%
@@ -29,7 +29,7 @@ Adobe Experience Platform の新機能：
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Adobe Experience Platform上に構築されたReal-time Customer Data Platform（Real-Time CDP）は、企業が既知および未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな意思決定によりカスタマープロファイルをアクティブ化するのに役立ちます。 Real-Time CDPでは、複数のエンタープライズデータソースを組み合わせて、統合されたプロファイルをリアルタイムで作成します。このプロファイルを使用して、すべてのチャネルとデバイスにわたって 1 対 1 のパーソナライズされたカスタマーエクスペリエンスを提供できます。
+Adobe Experience Platform上に構築されたReal-Time Customer Data Platform（Real-Time CDP）は、企業が既知および未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな意思決定によりカスタマープロファイルをアクティブ化するのに役立ちます。 Real-Time CDPでは、複数のエンタープライズデータソースを組み合わせて、統合されたプロファイルをリアルタイムで作成します。このプロファイルを使用して、すべてのチャネルとデバイスにわたって 1 対 1 のパーソナライズされたカスタマーエクスペリエンスを提供できます。
 
 [!DNL Real-Time Customer Data Platform] には、データガバナンス、ID 管理、高度なセグメント化、データサイエンスのためのツールが含まれています。これらのツールを使用することで、プロファイルを作成してオーディエンスを定義し、豊富なインサイトを導き出しつつ、厳密なデータガバナンスポリシーを実施できます。
 
@@ -42,33 +42,33 @@ Real-Time CDPを使用すると、次のことができます。
 * Adobe Sensei による AI や機械学習を活用して、マーケター向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
 
-詳しくは、[Real-time Customer Data Platform ドキュメント ](../../rtcdp/overview.md) を参照してください。
+詳しくは、[Real-Time Customer Data Platform ドキュメント ](../../rtcdp/overview.md) を参照してください。
 
 **主な特長**
 
 | 機能 | 説明 |
 |---|---|
-| 宛先 | Adobeの [!DNL Real-Time Customer Data Platform] ールでサポートされている出力先プラットフォームとの事前定義済みの統合により、シームレスにパートナーにデータをアクティブ化できます。 詳しくは、以下の「[宛先](#destinations)」を参照してください。 |
-| ホームページの指標ダッシュボード | Real-time Customer Data Platform（Real-Time CDP）ホームページには、プロファイルとセグメントに関する情報を表示する指標ダッシュボードが含まれています。 このホームページには、学習教材へのリンクも含まれています。以下の [Real-time Customer Data Platform指標に関する節を参照し ](#real-time-customer-data-platform-metrics) ください。 |
+| 宛先 | Adobe [!DNL Real-Time Customer Data Platform] でサポートされている出力先プラットフォームとの事前定義済みの統合により、シームレスにパートナーに対してデータをアクティブ化できます。 詳しくは、以下の「[宛先](#destinations)」を参照してください。 |
+| ホームページの指標ダッシュボード | Real-Time Customer Data Platform（Real-Time CDP）ホームページには、プロファイルとセグメントに関する情報を表示する指標ダッシュボードが含まれています。 このホームページには、学習教材へのリンクも含まれています。以下の [Real-Time Customer Data Platform指標に関する節を参照し ](#real-time-customer-data-platform-metrics) ください。 |
 | ソース | アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取り込むことができます。詳しくは、以下の「[ソース](#sources)」の節を参照してください。 |
 
 **[!DNL Real-Time Customer Data Platform]指標**
 
-Real-Time CDPにログインすると、指標ダッシュボードを含むReal-time Customer Data Platform（Real-Time CDP）のホームページが表示されます。
+Real-Time CDPにログインすると、指標ダッシュボードを含むReal-Time Customer Data Platform（Real-Time CDP）のホームページが表示されます。
 
 ホームページは、指標カードが表示される場所の 1 つに過ぎません。Real-Time CDPは、エクスペリエンス全体を通して指標カードを提供します。 これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
 Real-Time CDPにログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。 この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると、ダッシュボードが自動的に更新され、そのデータに関する情報が表示されます。
 
-詳しくは、[Real-time Customer Data Platform指標の概要を参照してください ](../../rtcdp/home-page-dashboards.md)
+詳しくは、[Real-Time Customer Data Platform指標の概要を参照してください ](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
-AdobeのReal-time Customer Data Platform[!DNL Destinations] サポートする出力先プラットフォームとの事前定義済みの統合で、これらのパートナーにシームレスにデータをアクティブ化します。 詳しくは、「[宛先の概要](../../destinations/home.md)」の記事を参照してください。
+Adobe Real-Time Customer Data Platformでサポートされている出力先プラットフォームとの事前定義済みの統合が [!DNL Destinations] り、シームレスにパートナーに対してデータをアクティブ化します。 詳しくは、「[宛先の概要](../../destinations/home.md)」の記事を参照してください。
 
 **使用可能な宛先**
 
-11 月のリリースでは、AdobeのReal-time Customer Data Platformは次の宛先をサポートします。
+11 月のリリースでは、AdobeのReal-Time Customer Data Platformは次の宛先をサポートしています。
 
 * Advertising: [!DNL Google]
 * メールマーケティング：Adobe Campaign、[!DNL Salesforce Marketing Cloud]、[!DNL Responsys]、[!DNL Oracle Eloqua]
@@ -84,7 +84,7 @@ AdobeのReal-time Customer Data Platform[!DNL Destinations] サポートする�
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Experience Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を提供します。 これらのソース接続を使用すると、ストレージシステムと CRM サービスに対する認証、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
@@ -104,13 +104,13 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] を使用すると、データサイエンティストは、機械学習モデルを構築して運用することで、Adobeアプリケーションやサードパーティシステムをまたいでデータとコンテンツからシームレスにインサイトを生み出すことができます。 [!DNL Data Science Workspace] は [!DNL Platform] と緊密に統合されており、XDM データの調査と準備、その後、機械学習のインサイトを使用してデータを自動的に強化するモデルの開発と運用など、エンドツーエンドの [!DNL Real-Time Customer Profile] ータサイエンスライフサイクルを強化します。
+Adobe Experience Platform [!DNL Data Science Workspace] を使用すると、データサイエンティストは、機械学習モデルを構築して運用することで、Adobe アプリケーションやサードパーティシステムをまたいだデータやコンテンツからインサイトをシームレスに生成できます。 [!DNL Data Science Workspace] は [!DNL Experience Platform] と緊密に統合されており、XDM データの調査と準備、その後、機械学習のインサイトを使用してデータを自動的に強化するモデルの開発と運用など、エンドツーエンドの [!DNL Real-Time Customer Profile] ータサイエンスライフサイクルを強化します。
 
 **新機能**
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| [!DNL Platform] SDK を使用したデータアクセス | [!DNL Python] の事前定義済みレシピとランチャーノートブックでは、データへのアクセスに [!DNL Platform] SDK を使用するようになりました。 |
+| [!DNL Experience Platform] SDKを使用したデータアクセス | [!DNL Python] の事前定義済みレシピとランチャーノートブックで、SDKを使用してデータ [!DNL Experience Platform] アクセスできるようになりました。 |
 | サンドボックスのサポート | ノートブックやレシピを開発用サンドボックスや実稼働用サンドボックスに分離する機能など、今後のサンドボックス機能（現在はベータ版）のサポート。詳しくは、「[サンドボックスの概要](../../sandboxes/home.md)」を参照してください。 |
 
 詳しくは、「[Data Science Workspace　の概要](../../data-science-workspace/home.md)」を参照してください。
@@ -162,18 +162,18 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを作成し、[!DNL Real-Time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Platform] 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
+Adobe Experience Platform [!DNL Segmentation Service] は、セグメントを作成し、[!DNL Real-Time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、[!DNL Experience Platform] 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
 
 [!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 
 | 機能 | 説明 |
 | -----------| ---------- |
 | スケジュールされたセグメント化 | ユーザーは、UI と API を使用して、すべてのセグメントに対して、スケジュールされたセグメント評価を有効にできるようになりました。有効にすると、すべてのセグメントが 1 日に 1 回評価されます。この機能は、オンデマンドのセグメント化機能には影響しません。オンデマンドのセグメント化機能は以前と同じように引き続き機能します。<br/><br/> メモ：スケジュールされたセグメント化機能は、[!DNL XDM Individual Profile] の結合ポリシーが 5 つを超えるサンドボックスでは使用できません。 |
-| ストリーミングセグメント化 | セグメントの連続評価（ストリーミングセグメント化）のサポートにより、データが [!DNL Platform] に渡される際に、ほとんどのセグメントルールを評価できます。 この機能を使用すると、セグメントメンバーシップは、スケジュールされたセグメント化ジョブを実行しなくても最新の状態になります。複数エンティティの関係を使用するセグメントや強化ペイロードを含むセグメントなど、一部の例外が存在します。 |
+| ストリーミングセグメント化 | セグメントの連続評価（ストリーミングセグメント化）のサポートにより、データが [!DNL Experience Platform] に渡される際に、ほとんどのセグメントルールを評価できます。 この機能を使用すると、セグメントメンバーシップは、スケジュールされたセグメント化ジョブを実行しなくても最新の状態になります。複数エンティティの関係を使用するセグメントや強化ペイロードを含むセグメントなど、一部の例外が存在します。 |
 | 構成ブロックとしてのセグメント | セグメントビルダー UI を使用してセグメントを作成する場合、以前に定義したセグメントを、追加セグメントの構成ブロックとして使用できるようになりました。 <ul><li>現在のオーディエンスメンバーシップの参照：ユーザーがオーディエンスになったり、オーディエンスでなくなったりしたときに更新されます。</li><li>ロジックのコピー：選択したセグメント定義を新しいセグメントにコピーします。</li></ul> |
 | ID 名前空間ごとにセグメントメンバーシップを表示 | セグメントメンバーシップを ID 名前空間（電子メール、ECID、合計数）ごとに表示できるようになりました。 |
 | RBAC のサポート | セグメントビルダーでは、基本的なロールベースのアクセス制御と権限がサポートされるようになりました。 |
-| [!DNL Platform] とAdobeソリューション間での外部オーディエンス共有のサポートを強化 | オーディエンスの数が多い場合や、事前に把握されていない場合に、外部（[!DNL Experience Platform] 以外）のオーディエンスメタデータを取り込めるようになりました。 このリリースでは、ソリューションコネクタ [!DNL Audience Manager] プロビジョニング済みのお客様向けのメタデータへのアクセスが含まれています。 このオーディエンスメタデータは、セグメントビルダー内で新しいオーディエンスセグメント [!DNL Experience Platform] 作成するために使用できます。 <br/><br/> さらに、[!DNL Experience Platform] で作成したセグメントは、[!DNL Audience Manager]、[!DNL Target]、[!DNL Ad Cloud] などの統合Adobeソリューションでも使用できるようになりました。 |
+| [!DNL Experience Platform] とAdobe ソリューション間での外部オーディエンス共有のサポートを強化 | オーディエンスの数が多い場合や、事前に把握されていない場合に、外部（[!DNL Experience Platform] 以外）のオーディエンスメタデータを取り込めるようになりました。 このリリースでは、ソリューションコネクタ [!DNL Audience Manager] プロビジョニング済みのお客様向けのメタデータへのアクセスが含まれています。 このオーディエンスメタデータは、セグメントビルダー内で新しいオーディエンスセグメント [!DNL Experience Platform] 作成するために使用できます。 <br/><br/> さらに、[!DNL Experience Platform] で作成したセグメントは、[!DNL Audience Manager]、[!DNL Target]、[!DNL Ad Cloud] などの統合Adobe ソリューションでも使用できるようになりました。 |
 
 **バグの修正**
 

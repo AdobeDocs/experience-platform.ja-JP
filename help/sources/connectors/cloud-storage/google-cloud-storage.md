@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Google Cloud Storage Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してGoogle クラウドストレージをAdobe Experience Platformに接続する方法について説明します。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 72%
+source-wordcount: '616'
+ht-degree: 62%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 72%
 
 >[!IMPORTANT]
 >
->Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Google Cloud Storage] ソースを使用できるようになりました。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../landing/multi-cloud.md) を参照してください。
+>Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Google Cloud Storage] ソースを使用できるようになりました。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
 
 Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータを取り込むことができます。
 
-クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、Experience Data Model （XDM）に準拠した JSON や Parquet として書式設定することも、区切り形式として書式設定することもできます。 プロセスのすべての手順がソースワークフローに統合されます。 Platform では、[!DNL Google Cloud Storage] からバッチでデータを取り込むことができます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータをExperience Platformに取り込むことができます。 取り込んだデータは、Experience Data Model （XDM）に準拠した JSON や Parquet として書式設定することも、区切り形式として書式設定することもできます。 プロセスのすべての手順がソースワークフローに統合されます。 Experience Platformでは、[!DNL Google Cloud Storage] からバッチでデータを取り込むことができます。
 
 ## IP アドレス許可リスト
 
@@ -27,7 +27,7 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 
 ## [!DNL Google Cloud Storage] アカウントを接続するための前提条件の設定
 
-を Platform に接続するには、まず [!DNL Google Cloud Storage] アカウントの相互運用性を有効にする必要があります。 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL クラウドストレージ]**」オプションから「**[!UICONTROL 設定]**」を選択します。
+Experience Platformに接続するには、まず [!DNL Google Cloud Storage] アカウントの相互運用性を有効にする必要があります。 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL クラウドストレージ]**」オプションから「**[!UICONTROL 設定]**」を選択します。
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
@@ -39,7 +39,7 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
-新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、[!DNL Google Cloud Storage] アカウントを Platform に接続できます。
+新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、[!DNL Google Cloud Storage] アカウントをExperience Platformに接続できます。
 
 詳しくは、[!DNL Google Cloud] ドキュメントの [ サービスアカウントキーの作成と管理 ](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) に関するガイドを参照してください。
 
@@ -54,9 +54,9 @@ Adobe Experience Platform には、AWS、[!DNL Google Cloud Platform]、[!DNL Az
 - 無効な URL パス文字は使用できません。`\uE000` のようなコードポイントは、NTFS ファイル名では有効ですが、有効な Unicode 文字ではありません。また、一部の ASCII 文字や Unicode 文字、例えば制御文字（0x00 ～ 0x1F、\u0081 など）も使用できません。HTTP/1.1 で Unicode 文字列を規定するルールについては、[RFC 2616、セクション 2.2：基本ルール](https://www.ietf.org/rfc/rfc2616.txt)および [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) を参照してください。
 - 次のファイル名は使用できません：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、ドット文字（.）、2 つのドット文字（..）。
 
-## [!DNL Google Cloud Storage] を Platform に接続
+## [!DNL Google Cloud Storage] をExperience Platformに接続
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Google Cloud Storage] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Google Cloud Storage] をExperience Platformに接続する方法について説明しています。
 
 ### API の使用
 

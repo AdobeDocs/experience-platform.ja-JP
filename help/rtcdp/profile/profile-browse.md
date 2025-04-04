@@ -1,30 +1,30 @@
 ---
 keywords: プロファイルの表示 rtcdp;rtcdp プロファイルビュー；rtcdp プロファイル
-title: Real-time Customer Data Platformでのプロファイルの参照
-description: Adobe Real-time Customer Data Platformでは、Adobe Experience Platform ユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータを参照できます。
+title: Real-Time Customer Data Platformでのプロファイルの参照
+description: Adobe Real-Time Customer Data Platformでは、Adobe Experience Platform ユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータを参照できます。
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '551'
 ht-degree: 11%
 
 ---
 
 
-# Real-time Customer Data Platformでのプロファイルの参照
+# Real-Time Customer Data Platformでのプロファイルの参照
 
 リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 個々のプロファイルは様々なソースからシステムに取り込まれるデータに基づいて集計されるので、各プロファイルでは、顧客のブランドとのやり取りがすべて、タイムスタンプ付きで実用的に記述されます。
 
 Adobe Experience Platformのユーザーインターフェイス内では、これらの読み取り専用プロファイルを表示し、環境設定、過去のイベント、インタラクション、個人が属するオーディエンスなど、個々の顧客に関する重要な情報を確認できます。
 
-Adobe Real-time Customer Data PlatformはAdobe Experience Platformをベースに構築されているので、Experience PlatformUI のプロファイル表示機能を利用できます。 Platform ユーザーインターフェイス内で顧客プロファイルを表示する詳細なガイドについては、[ リアルタイム顧客プロファイルユーザーガイド ](../../profile/ui/user-guide.md) を参照してください。
+Adobe Real-Time Customer Data PlatformはAdobe Experience Platformをベースに構築されているので、Experience Platform UI のプロファイル表示機能を利用できます。 Experience Platform ユーザーインターフェイス内で顧客プロファイルを表示する詳細なガイドについては、[ リアルタイム顧客プロファイルユーザーガイド ](../../profile/ui/user-guide.md) を参照してください。
 
 ## Real-Time CDP B2B Edition のプロファイルの機能強化
 
-Adobe Experience Platformでサポートされているプロファイル参照機能に加えて、Real-Time CDP、B2B Edition のユーザーは、それぞれ「属性」タブと [!UICONTROL  イベント ] タブの顧客プロファイル内の B2B 属性と [!UICONTROL  ベント ] にアクセスできます。 B2B データを使用してセグメント化を実行することもできます。これらのオーディエンスは、B2B 以外のオーディエンスと共に顧客の [!UICONTROL  オーディエンスメンバーシップ ] タブの下に表示されます。
+Adobe Experience Platform、Real-Time CDPでサポートされているプロファイル参照機能に加えて、B2B edition ユーザーは、それぞれ「属性」タブと [!UICONTROL  イベント ] タブで、顧客プロファイル内の B2B 属性と [!UICONTROL  イベント ] にアクセスできます。 B2B データを使用してセグメント化を実行することもできます。これらのオーディエンスは、B2B 以外のオーディエンスと共に顧客の [!UICONTROL  オーディエンスメンバーシップ ] タブの下に表示されます。
 
-また、Real-Time CDP B2B Edition では、個々の顧客に関連付けられた、大規模法人のソース全体から [!UICONTROL Accounts]、[!UICONTROL Opportunity]、[!UICONTROL Source レコード ] を参照することもできます。
+Real-Time CDP、B2B editionを使用すると、個々の顧客に関連付けられた、全社のソースから [!UICONTROL Accounts]、[!UICONTROL Opportunity]、[!UICONTROL Source レコード ] を参照することもできます。
 
 これらの機能強化を確認するには、まず [ リアルタイム顧客プロファイルユーザーガイド ](../../profile/ui/user-guide.md) で説明されている手順に従って、結合ポリシーまたは ID 名前空間でプロファイルを参照します。
 
@@ -34,7 +34,7 @@ Adobe Experience Platformでサポートされているプロファイル参照�
 
 ![](images/b2b-profile-detail.png)
 
-Platform UI に表示されるプロファイルの詳細について詳しくは、[ プロファイルダッシュボードのドキュメントの詳細 ](../../dashboards/guides/profiles.md#browse-profiles) を参照してください。
+Experience Platform UI に表示されるプロファイルの詳細について詳しくは、[ プロファイルダッシュボードのドキュメントの詳細 ](../../dashboards/guides/profiles.md#browse-profiles) を参照してください。
 
 ### 「アカウント」タブ
 
@@ -46,7 +46,7 @@ Platform UI に表示されるプロファイルの詳細について詳しく�
 
 ### 「機会」タブ
 
-「**[!UICONTROL 機会]**」タブには、アカウントに関連するオープンな機会およびクローズされた機会に関する詳細が表示されます。 これらのオポチュニティは複数のソースからExperience Platformに取り込むことができますが、Real-Time CDP B2B Edition を使用すると、マーケターは、これらのオポチュニティをすべて 1 か所で簡単に確認できます。
+「**[!UICONTROL 機会]**」タブには、アカウントに関連するオープンな機会およびクローズされた機会に関する詳細が表示されます。 これらのオポチュニティは複数のソースからExperience Platformに取り込むことができますが、Real-Time CDPのB2B editionを使用すると、マーケターは、これらのオポチュニティをすべて 1 か所で簡単に確認できます。
 
 各機会には、機会の名前、その金額、ステージ、機会がオープン、クローズ、成立、不成立のどれであるかなどの情報が含まれます。
 

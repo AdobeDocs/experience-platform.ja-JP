@@ -2,10 +2,10 @@
 title: Adobe Experience Cloud ID サービス拡張機能の概要
 description: Adobe Experience Platform の Adobe Experience Cloud ID サービスタグ拡張機能について説明します。
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 100%
+source-wordcount: '793'
+ht-degree: 95%
 
 ---
 
@@ -49,7 +49,7 @@ URL が指定されたパスと一致する場合、Experience Cloud ID は読�
 
 「Opt In」オプションを使用して、訪問者がサイトでアドビのサービスをオプトインする必要があるかどうか（訪問者のアクティビティを追跡する cookie を作成するかどうかなど）を決定します。
 
-オプトインは、すべての Platform ソリューションのクライアント側ライブラリで一元的に参照され、サイトの訪問時にユーザーのデバイスまたはブラウザーで cookie を作成できるかどうかを判断します。オプトインでは、ユーザーの同意の環境設定を収集または保存することはできません。
+オプトインは、すべてのExperience Platform ソリューションのクライアントサイドライブラリで一元的に参照され、サイトの訪問時にユーザーのデバイスまたはブラウザーで cookie を作成できるかどうかを判断します。 オプトインでは、ユーザーの同意の環境設定を収集または保存することはできません。
 
 **オプトインを有効にしますか？**
 

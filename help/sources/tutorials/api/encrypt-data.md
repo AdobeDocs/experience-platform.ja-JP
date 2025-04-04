@@ -2,10 +2,10 @@
 title: 暗号化されたデータの取り込み
 description: API を使用して、クラウドストレージバッチソースを通じて暗号化されたファイルを取り込む方法を説明します。
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1806'
-ht-degree: 72%
+source-wordcount: '1816'
+ht-degree: 63%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 72%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
    * [クラウドストレージソース](../api/collect/cloud-storage.md)：クラウドストレージソースから Experience Platform にバッチデータを取り込むためのデータフローを作成します。
-* [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
 
 ### 暗号化されたファイルでサポートされるファイル拡張子 {#supported-file-extensions-for-encrypted-files}
 
@@ -131,7 +131,7 @@ curl -X POST \
 
 ### 暗号化キーの取得 {#retrieve-encryption-keys}
 
-組織内のすべての暗号化キーを取得するには、`/encryption/keys` endpoint=nt にGETリクエストを行います。
+組織内のすべての暗号化キーを取得するには、`/encryption/keys` endpoit=nt に対してGET リクエストを実行します。
 
 **API 形式**
 
@@ -176,7 +176,7 @@ curl -X GET \
 
 ### ID による暗号化キーの取得 {#retrieve-encryption-keys-by-id}
 
-特定の暗号化キーセットを取得するには、`/encryption/keys` エンドポイントに対してGETリクエストを実行し、公開鍵 ID をヘッダーパラメーターとして指定します。
+特定の暗号化キーセットを取得するには、エンドポイントに対してGET リク `/encryption/keys` ストを実行し、公開鍵 ID をヘッダーパラメーターとして指定します。
 
 **API 形式**
 
@@ -221,7 +221,7 @@ curl -X GET \
 
 オプションで、署名検証キーペアを作成して、暗号化されたデータに署名し、取り込むことができます。
 
-この段階では、独自の秘密鍵および公開鍵の組み合わせを生成し、秘密鍵を使用して暗号化されたデータに署名する必要があります。次に、Platform で署名を検証するために、Base64 で公開鍵をエンコードして、Experience Platform で共有する必要があります。
+この段階では、独自の秘密鍵および公開鍵の組み合わせを生成し、秘密鍵を使用して暗号化されたデータに署名する必要があります。次に、Experience Platformが署名を検証するために、Base64 で公開鍵をエンコードし、それをExperience Platformに共有する必要があります。
 
 ### 公開鍵を Experience Platform に共有
 
@@ -280,7 +280,7 @@ curl -X POST \
 
 ### 顧客管理キーペアの取得
 
-顧客管理キーを取得するには、`/customer-keys` エンドポイントに対してGETリクエストを行います。
+顧客管理キーを取得するには、`/customer-keys` エンドポイントに対してGET リクエストを実行します。
 
 **API 形式**
 
@@ -322,9 +322,9 @@ curl -X GET \
 
 ## [!DNL Flow Service] API を使用した Experience Platform へのクラウドストレージソースの接続 
 
-暗号化キーペアを取得したら、手順を進めて、クラウドストレージソースのソース接続を作成し、暗号化されたデータを Platform に取り込むことができます。
+暗号化キーペアを取得したら、手順を進めて、クラウドストレージソースのソース接続を作成し、暗号化されたデータをExperience Platformに取り込むことができます。
 
-まず、Platform に対してソースを認証するためのベース接続を作成する必要があります。 ベース接続を作成しソースを認証するには、使用するソースを以下のリストから選択します。
+まず、Experience Platformに対してソースを認証するためのベース接続を作成する必要があります。 ベース接続を作成しソースを認証するには、使用するソースを以下のリストから選択します。
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -413,8 +413,8 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `flowSpec.id` | クラウドストレージソースに対応するフロー固有の ID。 |
-| `sourceConnectionIds` | ソース接続 ID。 この ID は、ソースから Platform へのデータ転送を表します。 |
-| `targetConnectionIds` | ターゲット接続 ID。 この ID は、Platform に取り込まれたデータが格納される場所を表します。 |
+| `sourceConnectionIds` | ソース接続 ID。 この ID は、ソースからExperience Platformへのデータ転送を表します。 |
+| `targetConnectionIds` | ターゲット接続 ID。 この ID は、Experience Platformに取り込まれたデータが格納される場所を表します。 |
 | `transformations[x].params.mappingId` | マッピング ID。 |
 | `transformations.name` | 暗号化されたファイルを取り込む場合、データフローの追加の変換パラメーターとして `Encryption` を指定する必要があります。 |
 | `transformations[x].params.publicKeyId` | 作成した公開鍵 ID。 この ID は、クラウドストレージデータの暗号化に使用される暗号化キーペアの一方です。 |
@@ -513,7 +513,7 @@ curl -X POST \
 
 ### 暗号化キーの削除 {#delete-encryption-keys}
 
-暗号化キーを削除するには、`/encryption/keys` エンドポイントに対してDELETEリクエストを実行し、公開鍵 ID をヘッダーパラメーターとして指定します。
+暗号化キーを削除するには、`/encryption/keys` エンドポイントに対してDELETE リクエストを実行し、公開鍵 ID をヘッダーパラメーターとして指定します。
 
 **API 形式**
 
@@ -541,7 +541,7 @@ curl -X DELETE \
 
 ### 暗号化キーを検証 {#validate-encryption-keys}
 
-暗号化キーを検証するには、`/encryption/keys/validate/` エンドポイントに対してGETリクエストを実行し、検証する公開鍵 ID をヘッダーパラメーターとして指定します。
+暗号化キーを検証するには、`/encryption/keys/validate/` エンドポイントに対してGET リクエストを実行し、検証する公開鍵 ID をヘッダーパラメーターとして指定します。
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}

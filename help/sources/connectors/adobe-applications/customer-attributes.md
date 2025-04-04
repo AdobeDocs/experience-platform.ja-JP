@@ -4,20 +4,20 @@ solution: Experience Platform
 title: 顧客属性Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して顧客属性をAdobe Experience Platformに接続する方法について説明します
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 19%
+source-wordcount: '381'
+ht-degree: 12%
 
 ---
 
 # 顧客属性コネクタ
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Cloud内の [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) を使用すると、顧客関係管理（CRM）データベースから取り込んだ大規模法人データをアップロードできます。 データを Experience Cloud の顧客属性データソースにアップロードすると、そのデータを Adobe Analytics および Adobe Target で使用できます。
+Experience Cloudの [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) を使用すると、顧客関係管理（CRM）データベースから取り込んだ大規模法人データをアップロードできます。 データを Experience Cloud の顧客属性データソースにアップロードすると、そのデータを Adobe Analytics および Adobe Target で使用できます。
 
-Experience Platformは、プロファイルデータをAdobe Experience Platformに取り込む [!DNL Customer Attributes] めのサポートを提供しています。
+Experience Platformは、プロファイルデータをAdobe Experience Platformに取り込む [!DNL Customer Attributes] めのサポートを提供します。
 
 ## データセットとスキーマ
 
@@ -31,7 +31,7 @@ Experience Platformは、プロファイルデータをAdobe Experience Platform
 
 [!DNL Customer Attributes] データを他の [!DNL Profile] データセットに結び付けるには、そのデータと ID をExperience Cloud ID と一致させる必要があります。
 
-[Web SDK](/help/web-sdk/identity/overview.md)、{Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) または [5}Experience CloudID サービス API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja) を使用して、訪問者のExperience CloudID を設定することで、`CORE` 名前空間を設定できます。[
+`CORE` 名前空間を設定するには、[Web Experience Cloud](/help/web-sdk/identity/overview.md)、[ モバイル SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)、[Experience Cloud ID サービス API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja) のいずれかを使用して、訪問者のSDK ID を設定します。
 
 [!DNL Customer Attributes] ファイルは、他の ID 関係をこれ以上入力しません。 例えば、[!DNL Customer Attributes] ソースデータセットに **メール** と **ロイヤルティ ID** フィールドが含まれる場合、[!DNL Identity Service] で処理するには、これらのフィールドにスキーマの ID フィールドというラベルを付ける必要があります。
 

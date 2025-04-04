@@ -4,9 +4,9 @@ title: UI での XDM スキーマの書き出し
 description: Adobe Experience Platform ユーザーインターフェイスで既存のスキーマを別のサンドボックスまたは組織に書き出す方法について説明します。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 11%
 
 ---
@@ -28,11 +28,11 @@ ht-degree: 11%
 
 ## 前提条件
 
-Platform UI では XDM リソースを書き出すことができますが、ワークフローを完了するには、スキーマレジストリ API を使用して、これらのリソースを他のサンドボックスまたは組織に読み込む必要があります。 このガイドに従う前に、[ スキーマレジストリ API の基本を学ぶ ](../api/getting-started.md) に関するガイドを参照して、必要な認証ヘッダーに関する重要な情報を確認してください。
+Experience Platform UI では XDM リソースを書き出すことができますが、ワークフローを完了するには、Schema Registry API を使用して、これらのリソースを他のサンドボックスまたは組織に読み込む必要があります。 このガイドに従う前に、[ スキーマレジストリ API の基本を学ぶ ](../api/getting-started.md) に関するガイドを参照して、必要な認証ヘッダーに関する重要な情報を確認してください。
 
 ## エクスポートペイロードを生成 {#generate-export-payload}
 
-書き出しペイロードは、Platform UI の「[!UICONTROL  参照 ]」タブの詳細パネルから、またはスキーマエディターのスキーマのキャンバスから直接生成できます。
+書き出しペイロードは、Experience Platform UI の「[!UICONTROL  参照 ]」タブの詳細パネルから、またはスキーマエディターのスキーマのキャンバスから直接生成できます。
 
 書き出しペイロードを生成するには、左側のナビゲーションで **[!UICONTROL スキーマ]** を選択します。 [!UICONTROL  スキーマ ] ワークスペース内で、書き出すスキーマの行を選択して、右側のサイドバーにスキーマの詳細を表示します。
 
@@ -226,7 +226,7 @@ Platform UI では XDM リソースを書き出すことができますが、ワ
 
 ## API を使用したリソースの読み込み {#import-resource-with-api}
 
-スキーマの書き出し JSON をコピーしたら、Schema Registry API の `/rpc/import` エンドポイントに対するPOSTリクエストのペイロードとして使用できます。 スキーマを目的の組織およびサンドボックスに送信するための呼び出しを設定する方法について詳しくは、[ インポートエンドポイントガイド ](../api/import.md) を参照してください。
+スキーマの書き出し JSON をコピーしたら、Schema Registry API の `/rpc/import` エンドポイントに対する POST リクエストのペイロードとして使用できます。 スキーマを目的の組織およびサンドボックスに送信するための呼び出しを設定する方法について詳しくは、[ インポートエンドポイントガイド ](../api/import.md) を参照してください。
 
 ## 次の手順
 

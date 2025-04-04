@@ -3,9 +3,9 @@ title: Real-Time CDPからの配列、マップ、オブジェクトの書き出
 type: Tutorial
 description: Real-Time CDPからクラウドストレージの宛先に配列、マップ、オブジェクトを書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 13%
 
 ---
@@ -42,7 +42,7 @@ Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/
 * 配列、マップ、オブジェクトを、`JSON` および `Parquet` ファイルのクラウドストレージの宛先に書き出すことができます。 エンタープライズ宛先とエッジパーソナライゼーション宛先の場合、書き出されるデータタイプは `JSON` です。 人物および見込み客オーディエンスはサポートされますが、アカウントオーディエンスはサポートされません。
 * ファイルベースのクラウドストレージの宛先の場合は、配列、マップ、オブジェクトを CSV ファイルに書き出す *ことができます* ただし、計算フィールド機能を使用し、`array_to_string` 関数を使用してそれらを文字列に連結する必要があります。
 
-## Platform の配列およびその他のオブジェクトタイプ {#arrays-strings-other-objects}
+## Experience Platformの配列およびその他のオブジェクトタイプ {#arrays-strings-other-objects}
 
 Experience Platformでは、[XDM スキーマ ](/help/xdm/home.md) を使用して、様々なフィールドタイプを管理できます。 配列の書き出しのサポートを追加する前は、文字列などの単純なキーと値のペアのフィールドをExperience Platformから目的の宛先に書き出すことができました。 以前に書き出し用にサポートされていたフィールドの例は、`personalEmail.address`:`johndoe@acme.org` です。
 

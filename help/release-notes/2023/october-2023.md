@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2023年10月
 description: Adobe Experience Platform の 2023年10月のリリースノート。
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 38%
+source-wordcount: '1057'
+ht-degree: 37%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| 宛先の使用状況指標 | ライセンス使用状況ダッシュボードに新しい計測指標が追加されました。 **[!UICONTROL Audience Activationのサイズ]** と **[!UICONTROL データ書き出しのサイズ]** の指標は、ライセンス使用権限に関して、Platform から書き出したデータの量を追跡する便利な方法を提供します。 これらを始めとするライセンス使用状況指標の説明については、[ 利用可能な指標 ](../../dashboards/guides/license-usage.md#available-metrics) のドキュメントを参照してください。 |
+| 宛先の使用状況指標 | ライセンス使用状況ダッシュボードに新しい計測指標が追加されました。 **[!UICONTROL Audience Activationのサイズ]** と **[!UICONTROL データ書き出しのサイズ]** の指標は、ライセンス使用権限に関して、Experience Platformから書き出したデータの量を追跡する便利な方法を提供します。 これらを始めとするライセンス使用状況指標の説明については、[ 利用可能な指標 ](../../dashboards/guides/license-usage.md#available-metrics) のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -47,7 +47,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 | 拡張機能 | [!DNL Meta] Conversions API の機能強化 | [Meta Conversions API](/help/tags/extensions/server/meta/overview.md) 拡張機能は 3 つ強化されました。 <ul><li>[[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe) との統合：Conversions API とAdobeの統合の pixelID およびアクセストークンを共有できるようにすることで、シームレスなログインエクスペリエンスを作成します。</li><li>[[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq) との統合：目的のアクションを完了する可能性が高い人物に広告を配信し、アクションを配信された広告にリンクすることができます。</li><li>[[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha) との統合：LiveRamp の RampID を CIP フィールドに渡すことができるため、パートナーや Meta と直接 PII を共有する必要がなくなります。 </li></ul> |
 | 拡張機能 | [!DNL LinkedIn] Conversions API | [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md) 拡張機能を使用すると、Experience Platform イベントデータを LinkedIn に転送することで、LinkedIn マーケティングキャンペーンの有効性を評価できます。 |
 | 秘密鍵 | [!DNL LinkedIn] OAuth2 シークレット | [[!DNL LinkedIn] OAuth 2 シークレット ](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) を使用すると、イベント転送で、サーバー間インタラクションを [!DNL LinkedIn] に送信できます。 |
-| イベント転送 | タグとイベント転送の更新 | Platform の [ タグ ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) および [ イベント転送 ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) のパフォーマンスを保持するために、成功および失敗の両方の最新の開発ビルドとステージビルドのみが保持されます。 使用されなくなったビルドはすべて削除されます。 さらに、スロットルとレート制限が実装され、少数の大量の API 使用によって他のユーザーの API パフォーマンスが低下することがなくなりました。 |
+| イベント転送 | タグとイベント転送の更新 | Experience Platformの [ タグ ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja) と [ イベント転送 ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) のパフォーマンスを保持するために、成功と失敗の両方の最新の Development ビルドと Stage ビルドのみが保持されます。 使用されなくなったビルドはすべて削除されます。 さらに、スロットルとレート制限が実装され、少数の大量の API 使用によって他のユーザーの API パフォーマンスが低下することがなくなりました。 |
 | 拡張機能 | 要素、ルールおよび拡張機能 | [ 要素、ルール、拡張機能 ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) がライブラリ出力で並べ替えられ、複数のビルドと同じライブラリのデプロイメント間の一貫性が確保されるようになりました。 |
 
 データ収集について詳しくは、[データ収集の概要](../../tags/home.md)を参照してください。
@@ -80,7 +80,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つの Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
 
 **新機能**
 
@@ -92,7 +92,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 ## セグメント化サービス {#segmentation}
 
-[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
+[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Experience Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
 
 **新機能**
 

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；開発者ガイド；SDK；モデルオーサリング；Data Science Workspace；人気のトピック；テスト
+keywords: Experience Platform；開発者ガイド；SDK；モデルオーサリング；データサイエンスWorkspace；人気のトピック；テスト
 solution: Experience Platform
 title: モデルオーサリング SDK
-description: モデルオーサリング SDK を使用すると、Adobe Experience Platform Data Science Workspaceで使用できるカスタム機械学習レシピと機能パイプラインを開発し、PySpark と Spark （Scala）に実装可能なテンプレートを提供できます。
+description: モデルオーサリング SDKを使用すると、Adobe Experience Platform Data Science Workspaceで使用できるカスタム機械学習レシピや機能パイプラインを開発し、PySpark と Spark （Scala）に実装可能なテンプレートを提供できます。
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 67%
+source-wordcount: '1004'
+ht-degree: 62%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 67%
 >
 >このドキュメントは、Data Science Workspaceの以前の使用権限を持つ既存のお客様を対象としています。
 
-モデルオーサリング SDK を使用すると、[!DNL Adobe Experience Platform] Data Science Workspaceで使用できるカスタム機械学習レシピおよび機能パイプラインを開発して、[!DNL PySpark] および [!DNL Spark (Scala)] に実装可能なテンプレートを提供できます。
+モデルオーサリング SDKを使用すると、カスタム機械学習レシピや機能パイプラインを開発して、[!DNL Adobe Experience Platform] Data Science Workspaceで使用し、[!DNL PySpark] および [!DNL Spark (Scala)] に実装可能なテンプレートを提供できます。
 
-このドキュメントでは、モデルオーサリング SDK 内で見つかる様々なクラスに関する情報を提供します。
+このドキュメントでは、モデルオーサリング SDK内にある様々なクラスについて説明します。
 
 ## DataLoader {#dataloader}
 
@@ -42,7 +42,7 @@ DataLoader クラスは、生の入力データを取得、フィルタリング
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>Pandas DataFrame として Platform データを読み込み、返します。</p>
+                <p>Experience Platform データを Pandas DataFrame として読み込んで返す</p>
             </td>
             <td>
                 <ul>
@@ -70,7 +70,7 @@ DataLoader クラスは、生の入力データを取得、フィルタリング
         <tr>
             <td>
                 <p><code>load(configProperties, sparkSession)</code></p>
-                <p>Platform データを DataFrame として読み込み、返します。</p>
+                <p>Experience Platform データを DataFrame として読み込んで返す</p>
             </td>
             <td>
                 <ul>
@@ -82,9 +82,9 @@ DataLoader クラスは、生の入力データを取得、フィルタリング
     </tbody>
 </table>
 
-### [!DNL Platform] データセットからのデータの読み込み {#load-data-from-a-platform-dataset}
+### [!DNL Experience Platform] データセットからのデータの読み込み {#load-data-from-a-platform-dataset}
 
-次の例では、データ [!DNL Platform]ID で取得し、DataFrame を返します。この場合、データセット ID （`datasetId`）は、設定ファイル内の定義済みプロパティです。
+次の例では、データ [!DNL Experience Platform]ID で取得し、DataFrame を返します。この場合、データセット ID （`datasetId`）は、設定ファイル内の定義済みプロパティです。
 
 **PySpark**
 
@@ -216,7 +216,7 @@ DataSaver クラスは、スコアリングや特徴エンジニアリングの�
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>出力データを DataFrame として受け取り、Platform データセットに保存します。</p>
+                <p>出力データを DataFrame として受け取り、Experience Platform データセットに保存する</p>
             </td>
             <td>
                 <ul>
@@ -244,7 +244,7 @@ DataSaver クラスは、スコアリングや特徴エンジニアリングの�
         <tr>
             <td>
                 <p><code>save(configProperties, dataFrame)</code></p>
-                <p>出力データを DataFrame として受け取り、Platform データセットに保存します。</p>
+                <p>出力データを DataFrame として受け取り、Experience Platform データセットに保存する</p>
             </td>
             <td>
                 <ul>
@@ -256,14 +256,14 @@ DataSaver クラスは、スコアリングや特徴エンジニアリングの�
     </tbody>
 </table>
 
-### [!DNL Platform] しいデータセットへのデータの保存 {#save-data-to-a-platform-dataset}
+### [!DNL Experience Platform] データセットへのデータの保存 {#save-data-to-a-platform-dataset}
 
-データを [!DNL Platform] データセットに保存するには、設定ファイルでプロパティを指定または定義する必要があります。
+データを [!DNL Experience Platform] データセットに保存するには、設定ファイルでプロパティを指定または定義する必要があります。
 
-- データの保存先となる有効な [!DNL Platform] データセット ID
+- データの保存先となる有効な [!DNL Experience Platform] データセット ID
 - 組織に属するテナント ID
 
-次の例では、データ（`prediction`）を [!DNL Platform] データセットに保存します。データセット ID （`datasetId`）とテナント ID （`tenantId`）は、設定ファイル内のプロパティで定義されています。
+次の例では、データ（`prediction`）を [!DNL Experience Platform] データセットに保存します。データセット ID （`datasetId`）とテナント ID （`tenantId`）は、設定ファイル内のプロパティで定義されています。
 
 
 **PySpark**
@@ -279,7 +279,7 @@ from .helper import *
 
 class MyDataSaver(DataSaver):
     """
-    Implementation of DataSaver which stores a DataFrame to a Platform dataset
+    Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
     """
 
     def save(self, config_properties, prediction):
@@ -347,7 +347,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.TimestampType
 
 /**
- * Implementation of DataSaver which stores a DataFrame to a Platform dataset
+ * Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
  */
 
 class ScoringDataSaver extends DataSaver {

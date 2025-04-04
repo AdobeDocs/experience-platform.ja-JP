@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；ストリー
 title: Flow Service API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、Flow Service API を使用して、生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 35%
+source-wordcount: '1656'
+ht-degree: 30%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 35%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):[!DNL Platform] がエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):[!DNL Experience Platform] がエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
 さらに、ストリーミング接続を作成するには、ターゲット XDM スキーマとデータセットが必要です。 これらを作成する方法については、[ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) または [ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) に関するチュートリアルを参照してください。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -36,9 +36,9 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 
 ### 認証されていない接続
 
-非認証接続は、データを Platform にストリーミングする際に作成できる標準のストリーミング接続です。
+非認証接続は、データをExperience Platformにストリーミングする際に作成できる標準のストリーミング接続です。
 
-認証されていないベースPOSTを作成するには、`/connections` エンドポイントに接続リクエストを行い、接続名、データタイプ、HTTP API 接続仕様 ID を指定します。 この ID は `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb` です。
+認証されていないベース接続を作成するには、`/connections` エンドポイントに POST リクエストを実行し、その際に接続名、データタイプ、HTTP API 接続仕様 ID を指定します。 この ID は `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb` です。
 
 **API 形式**
 
@@ -130,7 +130,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ### 認証済みの接続
 
-信頼できるソースと信頼できないソースのレコードを区別する必要がある場合は、認証済み接続を使用する必要があります。 個人情報（PII）を使用して情報を送信するユーザーは、情報を Platform にストリーミングする際に、認証済みの接続を作成する必要があります。
+信頼できるソースと信頼できないソースのレコードを区別する必要がある場合は、認証済み接続を使用する必要があります。 個人情報（PII）を使用して情報を送信する場合は、情報をExperience Platformにストリーミングする際に、認証済みの接続を作成する必要があります。
 
 認証済みベース接続を作成するには、リクエストに `authenticationRequired` パラメーターを含め、その値を `true` として指定する必要があります。 この手順では、認証済みベース接続用のソース ID を指定することもできます。 このパラメーターはオプションで、指定されていない場合、`name` 属性と同じ値を使用します。
 
@@ -290,7 +290,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
 
 ## ソース接続の作成 {#source}
 
-ソース接続を作成するには、ベースPOSTID を指定したうえで、`/sourceConnections` エンドポイントに接続リクエストを行います。
+ソース接続を作成するには、ベース接続 ID を指定したうえで、`/sourceConnections` エンドポイントに対して POST リクエストを行います。
 
 **API 形式**
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。
 
 [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
@@ -346,7 +346,7 @@ curl -X POST \
 
 ## ターゲット接続の作成 {#target}
 
-ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、`/targetConnections` に対してPOSTリクエストを行い、ターゲットデータセットおよびターゲット XDM スキーマの ID を指定します。 この手順では、データレイク接続仕様 ID も指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、`/targetConnections` に POST リクエストを実行し、その際にターゲットデータセットおよびターゲット XDM スキーマの ID を指定します。 この手順では、データレイク接続仕様 ID も指定する必要があります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
 **API 形式**
 
@@ -458,7 +458,7 @@ curl -X POST \
 
 ## データフローの作成
 
-ソース接続とターゲット接続を作成したら、データフローを作成できます。 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 `/flows` エンドポイントにデータフロー要求を実行することで、POSTを作成できます。
+ソース接続とターゲット接続を作成したら、データフローを作成できます。 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 `/flows` エンドポイントに POST リクエストを実行することで、データフローを作成できます。
 
 **API 形式**
 
@@ -559,7 +559,7 @@ curl -X POST \
 }
 ```
 
-## Platform に取り込むデータを投稿する {#ingest-data}
+## Experience Platformに取り込むデータを投稿 {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,7 +575,7 @@ POST /collection/{INLET_URL}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{INLET_URL}` | ストリーミングエンドポイント URL。 この URL を取得するには、ベース接続 ID を指定する際に、`/connections` エンドポイントに対してGETリクエストを行います。 |
+| `{INLET_URL}` | ストリーミングエンドポイント URL。 この URL を取得するには、ベース接続 ID を指定する際に、`/connections` エンドポイントに対してGET リクエストを行います。 |
 | `{FLOW_ID}` | HTTP API ストリーミングデータフローの ID。 この ID は、XDM と RAW の両方のデータに必要です。 |
 
 **リクエスト**
@@ -692,9 +692,9 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 
 ## 次の手順
 
-このチュートリアルでは、ストリーミング HTTP 接続を作成し、ストリーミングエンドポイントを使用してデータを Platform に取り込めるようにしました。 UI でストリーミング接続を作成する手順については、[ ストリーミング接続の作成チュートリアル ](../../../ui/create/streaming/http.md) を参照してください。
+このチュートリアルでは、ストリーミング HTTP 接続を作成し、ストリーミングエンドポイントを使用してデータをExperience Platformに取り込めるようにしました。 UI でストリーミング接続を作成する手順については、[ ストリーミング接続の作成チュートリアル ](../../../ui/create/streaming/http.md) を参照してください。
 
-データを Platform にストリーミングする方法については、[ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) または [ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) に関するチュートリアルを参照してください。
+データをExperience Platformにストリーミングする方法については、[ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) または [ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) に関するチュートリアルを参照してください。
 
 ## 付録
 

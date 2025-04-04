@@ -2,9 +2,9 @@
 title: パラメーター化クエリ
 description: Adobe Experience Platform UI でパラメーター化クエリを使用する方法を説明します。
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '691'
 ht-degree: 13%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 13%
 
 ## 前提条件
 
-このガイドを進める前に、[ クエリエディター UI ガイド ](./user-guide.md) を参照してください。 クエリエディターガイドでは、Experience Platformユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行する方法について詳しく説明しています。
+このガイドを進める前に、[ クエリエディター UI ガイド ](./user-guide.md) を参照してください。 クエリエディターガイドでは、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行する方法について詳しく説明しています。
 
 >[!NOTE]
 >
@@ -79,4 +79,4 @@ UI でパラメーター化されたクエリを作成するには、クエリ�
 
 このドキュメントでは、Adobe Experience Platform UI でクエリをパラメーター化し、スケジュールされたクエリの実行で使用する方法について説明しました。 また、このドキュメントでは、クエリの実行で使用されるパラメーター値のログを確認する方法についても重点的に説明しました。
 
-次に、[ スケジュール済みクエリの監視 ](./monitor-queries.md) に関するガイドを読み、Platform UI を使用してすべてのクエリジョブのステータスをより深く理解することをお勧めします。
+次に、[ スケジュール済みクエリの監視 ](./monitor-queries.md) に関するガイドを読み、Experience Platform UI を使用してすべてのクエリジョブのステータスをより深く理解することをお勧めします。

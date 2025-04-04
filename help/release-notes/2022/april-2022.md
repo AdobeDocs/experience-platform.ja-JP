@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年4月
 description: Adobe Experience Platform の 2022年4月のリリースノート。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2670'
-ht-degree: 98%
+source-wordcount: '2679'
+ht-degree: 92%
 
 ---
 
@@ -26,9 +26,9 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform には、毎日のスナップショットで取り込まれる組織のデータに関する重要な情報を確認できる複数のダッシュボードが用意されています。
+Experience Platformでは、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数のダッシュボードを提供しています。
 
-ダッシュボードでは、組織のデータのレポートオプションが事前に設定されており、Platform 内のマーケターワークフローにダッシュボードが直接組み込まれます。これらのダッシュボードを利用するのに、追加の IT サポートや、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力は、必要ありません。
+ダッシュボードは、組織のデータ用に事前設定されたレポートオプションを提供し、Experience Platform内のマーケターワークフローに直接組み込まれます。 これらのダッシュボードを利用するのに、追加の IT サポートや、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力は、必要ありません。
 
 次のウィジェットは、各ダッシュボードのウィジェットライブラリで使用できます。[ウィジェットライブラリを使用したウィジェットの追加方法](../../dashboards/customize/widget-library.md)について詳しくは、ドキュメントを参照してください。
 
@@ -61,9 +61,9 @@ Platform には、毎日のスナップショットで取り込まれる組織�
 
 ## データフロー {#dataflows}
 
-Platformでは、データは様々なソースから取り込まれ、システム内で分析され、様々な宛先に対してアクティブ化されます。 Platform では、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
+Experience Platformでは、データは様々なソースから取り込まれ、システム内で分析され、様々な宛先に対してアクティブ化されます。 Experience Platformでは、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
 
-データフローは、Platform 間でデータを移動するジョブを表します。これらのデータフローは様々なサービスを対象に設定され、ソースコネクタからターゲットデータセットにデータを移動できます。こうしたデータは、ID サービスとリアルタイム顧客プロファイルで利用されてから、最終的に宛先に対してアクティブ化されます。
+データフローは、Experience Platform間でデータを移動するジョブを表します。 これらのデータフローは様々なサービスを対象に設定され、ソースコネクタからターゲットデータセットにデータを移動できます。こうしたデータは、ID サービスとリアルタイム顧客プロファイルで利用されてから、最終的に宛先に対してアクティブ化されます。
 
 **新機能**
 
@@ -169,7 +169,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
@@ -214,7 +214,7 @@ Real-Time Customer Data Platform B2B エディションについて詳しくは�
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
@@ -222,8 +222,8 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL OneTrust Integration] のサポート | [!DNL OneTrust Integration] ソースを使用して、同意および環境設定データを [!DNL OneTrust] アカウントから Platform に取り込むことができるようになりました。詳しくは、[ [!DNL OneTrust Integration]  ソース接続の作成](../../sources/connectors/consent-and-preferences/onetrust.md)のドキュメントを参照してください。 |
-| [!DNL Square] のサポート | [!DNL Square] ソースを使用して、支払いデータを [!DNL Square] アカウントから Platform に取り込むことができるようになりました。 |
+| [!DNL OneTrust Integration] のサポート | [!DNL OneTrust Integration] ソースを使用して、同意および環境設定データを [!DNL OneTrust] アカウントからExperience Platformに取り込むことができるようになりました。 詳しくは、[ [!DNL OneTrust Integration]  ソース接続の作成](../../sources/connectors/consent-and-preferences/onetrust.md)のドキュメントを参照してください。 |
+| [!DNL Square] のサポート | [!DNL Square] ソースを使用して、支払いデータを [!DNL Square] アカウントからExperience Platformに取り込むことができるようになりました。 |
 | 顧客属性データフローの削除のサポート | 顧客属性ソースコネクタを使用して作成したデータフローを削除できるようになりました。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

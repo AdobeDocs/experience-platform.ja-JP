@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 機能を最適に使用するための、プロファイルデータおよびセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2611'
-ht-degree: 55%
+source-wordcount: '2617'
+ht-degree: 52%
 
 ---
 
@@ -30,10 +30,10 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 次のExperience Platform サービスは、リアルタイム顧客プロファイルデータのモデリングに関係しています。
 
-* [[!DNL Real-Time Customer Profile]](home.md)：複数のソースからのデータを使用して、統合された消費者プロファイルを作成します。
-* [ID](../identity-service/home.md)：Platform に取り込まれる際に、異なるデータソースからの ID を結び付けます。
-* [スキーマ](../xdm/home.md)：Experience Data Model（XDM）スキーマは、Platform が顧客体験データを整理するための標準化されたフレームワークです。
-* [ オーディエンス ](../segmentation/home.md):Platform 内のセグメント化エンジンは、顧客の行動と属性に基づいて顧客プロファイルからオーディエンスを作成するために使用されます。
+* [[!DNL Real-Time Customer Profile]](home.md)：複数のソースのデータを使用して、統合された消費者プロファイルを作成します。
+* [ID](../identity-service/home.md):Bridgeに取り込まれる際の、異なるデータソースからのExperience Platform ID。
+* [ スキーマ ](../xdm/home.md):Experience Data Model （XDM）スキーマは、Experience Platformがカスタマーエクスペリエンスデータを整理するための標準化されたフレームワークです。
+* [ オーディエンス ](../segmentation/home.md):Experience Platform内のセグメントエンジンは、顧客の行動と属性に基づいて顧客プロファイルからオーディエンスを作成するために使用されます。
 
 ## 上限のタイプ
 
@@ -177,9 +177,9 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 
 ### 結合ポリシー {#merge-policies}
 
-複数のソースからデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するために Platform で使用されるルールです。例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1 人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。これらのフラグメントが Platform に取り込まれると、それらのフラグメントが結合され、その顧客用に単一のプロファイルが作成されます。複数のソースのデータが競合する場合、結合ポリシーによって、個人のプロファイルに含める情報が決定されます。 1 つのサンドボックスにつき、`_xdm.context.profile` スキーマを使用する結合ポリシーを最大 5 つ使用できます。 結合ポリシーについて詳しくは、[結合ポリシーの概要](merge-policies/overview.md)を参照してください。
+複数のソースからデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するためにExperience Platformで使用されるルールです。 例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1 人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。これらのフラグメントがExperience Platformに取り込まれると、それらのフラグメントが結合され、その顧客用に単一のプロファイルが作成されます。 複数のソースのデータが競合する場合、結合ポリシーによって、個人のプロファイルに含める情報が決定されます。 1 つのサンドボックスにつき、`_xdm.context.profile` スキーマを使用する結合ポリシーを最大 5 つ使用できます。 結合ポリシーについて詳しくは、[結合ポリシーの概要](merge-policies/overview.md)を参照してください。
 
-### Platform の Adobe Analytics レポートスイートデータセット {#aa-datasets}
+### Experience PlatformのAdobe Analytics レポートスイートデータセット {#aa-datasets}
 
 すべてのデータの競合が解決されている限り、プロファイルに対して複数のレポートスイートを有効にできます。 データ準備機能を使用して、eVar、リストおよび Prop 間でのデータの競合を解決できます。 データ準備機能の使用方法について詳しくは、[Adobe Analytics コネクタ UI ガイド](../sources/tutorials/ui/create/adobe-applications/analytics.md)を参照してください。
 

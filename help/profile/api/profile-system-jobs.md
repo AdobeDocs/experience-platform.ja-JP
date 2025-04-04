@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platformを使用すると、プロファイルストアからデータセットやバッチを削除して、不要になった、または誤って追加されたリアルタイム顧客プロファイルデータを削除できます。 これには、プロファイル API を使用して、プロファイルシステムジョブまたは削除リクエストを作成する必要があります。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2022'
 ht-degree: 35%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->次のエンドポイントは、Microsoft Azure で実行されているAdobe Experience Platformの実装とAmazon Web Services（AWS）で異なる場合があります。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
+>次のエンドポイントは、Microsoft Azure で実行されているAdobe Experience Platformの実装とAmazon Web Services（AWS）で異なる場合があります。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
 
-Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。[!DNL Platform] に取り込まれたデータは [!DNL Data Lake] に格納されます。データセットがプロファイルに対して有効になっている場合、そのデータは [!DNL Real-Time Customer Profile] データストアにも格納されます。 不要になったデータやエラーで追加されたデータを削除するには、プロファイルストアからデータセットに関連付けられたプロファイルデータを削除する必要が生じる場合があります。 これには、[!DNL Real-Time Customer Profile] API を使用して [!DNL Profile] システムジョブ、または「削除リクエスト」を作成する必要があります。
+Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。[!DNL Experience Platform] に取り込まれたデータは [!DNL Data Lake] に格納されます。データセットがプロファイルに対して有効になっている場合、そのデータは [!DNL Real-Time Customer Profile] データストアにも格納されます。 不要になったデータやエラーで追加されたデータを削除するには、プロファイルストアからデータセットに関連付けられたプロファイルデータを削除する必要が生じる場合があります。 これには、[!DNL Real-Time Customer Profile] API を使用して [!DNL Profile] システムジョブ、または「削除リクエスト」を作成する必要があります。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Adobe Experience Platform を使用すると、複数のソースからデータ
 
 >[!AVAILABILITY]
 >
->Microsoft Azure で Platform を使用する場合は、次のクエリパラメーター **のみ** を使用できます。
+>Microsoft Azure でExperience Platformを使用する場合は、次のクエリパラメーター **のみ** を使用できます。
 >
 >AWSでこのエンドポイントを使用すると、最初の 100 個のシステムジョブが作成日に基づいて降順で返されます。
 
@@ -212,7 +212,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 ### データセットおよび関連するプロファイルデータの削除
 
-データセットとそれに関連付けられたすべてのプロファイルデータをプロファイルストアから削除するには、データセット ID をPOSTリクエストの本文に含める必要があります。 この操作により、特定のデータセットのすべてのデータが削除されます。レコ [!DNL Experience Platform] ドと時系列の両方のスキーマに基づいてデータセットを削除できます。
+データセットとそれに関連付けられたすべてのプロファイルデータをプロファイルストアから削除するには、データセット ID を POST リクエストの本文に含める必要があります。 この操作により、特定のデータセットのすべてのデータが削除されます。レコ [!DNL Experience Platform] ドと時系列の両方のスキーマに基づいてデータセットを削除できます。
 
 **API 形式**
 
@@ -502,7 +502,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->Microsoft Azure で Platform を使用している場合、次の機能は **のみ** 使用できます。
+>Microsoft Azure でExperience Platformを使用する場合、次の機能は **のみ** 使用できます。
 
 レコードデータセットバッチの削除リクエストを開始しようとすると、次のような 400 レベルのエラーが発生します。
 

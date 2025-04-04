@@ -6,9 +6,9 @@ description: このドキュメントでは、Experience Platform API を呼び�
 role: Developer
 feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 850a4ae82fda22a761a28ac9059d7dea57c9662a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2508'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 # Experience Platform API の認証とアクセス
 
-このドキュメントでは、Experience PlatformAPI を呼び出すためにAdobe Experience Platform開発者アカウントにアクセスする、順を追ったチュートリアルを提供します。 このチュートリアルの最後では、すべての Platform API 呼び出しのヘッダーとして必要な、次の資格情報を生成または収集します。
+このドキュメントでは、Experience Platform API を呼び出すためにAdobe Experience Platform開発者アカウントにアクセスする、順を追ったチュートリアルを提供します。 このチュートリアルの最後では、すべてのExperience Platform API 呼び出しでヘッダーとして必要な次の資格情報を生成または収集します。
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -24,21 +24,21 @@ ht-degree: 5%
 
 >[!TIP]
 >
->上記の 3 つの資格情報に加えて、多くの Platform API では、有効な `{SANDBOX_NAME}` をヘッダーとして指定する必要もあります。 サンドボックスについて詳しくは、[ サンドボックスの概要 ](../sandboxes/home.md) を参照してください。また、組織で使用可能なサンドボックスの一覧表示について詳しくは、[ サンドボックス管理エンドポイント ](/help/sandboxes/api/sandboxes.md#list) のドキュメントを参照してください。
+>上記の 3 つの資格情報に加えて、多くのExperience Platform API では、有効な `{SANDBOX_NAME}` をヘッダーとして指定する必要もあります。 サンドボックスについて詳しくは、[ サンドボックスの概要 ](../sandboxes/home.md) を参照してください。また、組織で使用可能なサンドボックスの一覧表示について詳しくは、[ サンドボックス管理エンドポイント ](/help/sandboxes/api/sandboxes.md#list) のドキュメントを参照してください。
 
-アプリケーションとユーザーのセキュリティを維持するには、Experience PlatformAPI へのすべてのリクエストが、OAuth などの標準を使用して認証および承認される必要があります。
+アプリケーションとユーザーのセキュリティを維持するには、Experience Platform API へのすべてのリクエストが、OAuth などの標準を使用して認証および承認される必要があります。
 
-このチュートリアルでは、以下のフローチャートに示すように、Platform API 呼び出しの認証に必要な資格情報の収集方法を説明します。 必要な資格情報のほとんどは、1 回限りの初期設定で収集できます。 ただし、アクセストークンは 24 時間ごとに更新する必要があります。
+このチュートリアルでは、以下のフローチャートに示すように、Experience Platform API 呼び出しの認証に必要な資格情報の収集方法を説明します。 必要な資格情報のほとんどは、1 回限りの初期設定で収集できます。 ただし、アクセストークンは 24 時間ごとに更新する必要があります。
 
 ![1 回限りの初期設定と後続の各セッションの認証フローの要件 ](./images/api-authentication/authentication-flowchart.png)
 
 ## 前提条件 {#prerequisites}
 
-Experience PlatformAPI を正常に呼び出すには、次の条件を満たす必要があります。
+Experience Platform API を正常に呼び出すには、次の条件を満たす必要があります。
 
 * Adobe Experience Platformへのアクセス権を持つ組織。
-* Admin Consoleおよび製品プロファイルのユーザーとして追加できる開発管理者。
-* Experience Platformシステム管理者。API を使用してExperience Platformの様々な部分で読み取りまたは書き込み操作を実行するために必要な、属性ベースのアクセス制御をユーザーに付与できます。
+* Admin Console管理者（製品プロファイルの開発者およびユーザーとして追加できます）。
+* Experience Platform システム管理者。API を使用してExperience Platformの様々な部分で読み取りまたは書き込み操作を実行するために必要な、属性ベースのアクセス制御をユーザーに付与できます。
 
 このチュートリアルを完了するには、Adobe IDも必要です。 Adobe ID をお持ちでない場合は、次の手順で作成できます。
 
@@ -46,19 +46,19 @@ Experience PlatformAPI を正常に呼び出すには、次の条件を満たす
 2. **[!UICONTROL 新しいアカウントを作成]** を選択します。
 3. 新規登録プロセスを完了します。
 
-## Experience Platformのための開発者およびユーザーのアクセス権の取得 {#gain-developer-user-access}
+## Experience Platformの開発者およびユーザーアクセスの取得 {#gain-developer-user-access}
 
-Adobe Developer Consoleで統合を作成する前に、アカウントがAdobe Admin ConsoleのExperience Platform製品プロファイルの開発者権限とユーザー権限を持っている必要があります。
+Adobe Developer Consoleで統合を作成する前に、アカウントにAdobe Admin ConsoleのExperience Platform製品プロファイルの開発者権限とユーザー権限が必要です。
 
 ### 開発者アクセス権の取得 {#gain-developer-access}
 
-Admin ConsoleとしてExperience Platform製品プロファイルに追加する場合は、組織内の開発管理者に問い合わせてください。 [ 製品プロファイルの開発者アクセスの管理 ](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) を行う方法について詳しくは、Admin Consoleドキュメントを参照してください。
+開発者としてAdmin Console製品プロファイルに追加する場合は、組織のExperience Platform管理者にお問い合わせください。 [ 製品プロファイルの開発者アクセスの管理 ](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) の方法について詳しくは、Admin Consoleのドキュメントを参照してください。
 
-開発者として割り当てられたら、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) で統合の作成を開始できます。 これらの統合は、外部のアプリやサービスからAdobeAPI へのパイプラインです。
+開発者として割り当てられたら、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) で統合の作成を開始できます。 これらの統合は、外部のアプリやサービスからAdobe API へのパイプラインです。
 
 ### ユーザーアクセスの取得 {#gain-user-access}
 
-また、Admin Console管理者も、同じ製品プロファイルにユーザーとして追加する必要があります。 ユーザーアクセスを使用すると、実行する API 操作の結果を UI で確認できます。
+また、Admin Console管理者が、あなたを同じ製品プロファイルのユーザーとして追加する必要もあります。 ユーザーアクセスを使用すると、実行する API 操作の結果を UI で確認できます。
 
 詳しくは、[Admin Consoleでのユーザーグループの管理 ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) のガイドを参照してください。
 
@@ -66,15 +66,15 @@ Admin ConsoleとしてExperience Platform製品プロファイルに追加する
 
 >[!NOTE]
 >
->[Privacy ServiceAPI ガイド ](../privacy-service/api/getting-started.md) のこのドキュメントを読む場合は、ガイドに戻って、[!DNL Privacy Service] に固有のアクセス認証情報を生成することができます。
+>[Privacy Service API ガイド ](../privacy-service/api/getting-started.md) のこのドキュメントを参照する場合は、ガイドに戻って、[!DNL Privacy Service] に固有のアクセス認証情報を生成することができます。
 
-Admin Consoleを通じて開発者およびユーザーに Platform へのアクセス権を付与したら、次の手順として、Adobe Developer Consoleで `{ORG_ID}` と `{API_KEY}` の資格情報を生成します。 これらの資格情報は 1 回だけ生成する必要があり、今後の Platform API 呼び出しで再利用できます。
+Admin Consoleを通じて開発者およびユーザーにExperience Platformへのアクセス権を付与したら、次の手順は、Adobe Developer Consoleで `{ORG_ID}` と `{API_KEY}` の資格情報を生成することです。 これらの資格情報は 1 回だけ生成する必要があり、今後のExperience Platform API 呼び出しで再利用できます。
 
 >[!TIP]
 >
->Platform API を操作するために必要なすべての認証資格情報は、Developer Consoleに移動する代わりに、API リファレンスドキュメントページから直接取得できます。 機能について ](#get-credentials-functionality) 詳細を参照 [。
+>Developer Consoleに移動する代わりに、Experience Platform API を使用するために必要なすべての認証資格情報を、API リファレンスドキュメントページから直接取得できます。 機能について ](#get-credentials-functionality) 詳細を参照 [。
 
-### プロジェクトにExperience Platformを追加する {#add-platform-to-project}
+### プロジェクトへのExperience Platformの追加 {#add-platform-to-project}
 
 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) に移動し 、Adobe ID を使用してログインします。次に、Adobe Developer Console のドキュメントの[空のプロジェクトの作成](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)チュートリアルで概説されている手順に従います。
 
@@ -86,37 +86,37 @@ Admin Consoleを通じて開発者およびユーザーに Platform へのアク
 
 ![ 「API を追加」オプションがハイライト表示されたDeveloper Console画面 ](./images/api-authentication/add-api.png)
 
-**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 **[!UICONTROL Adobe Experience Platform]** の商品アイコンを選択し、「**[!UICONTROL Experience PlatformAPI]**」を選択してから **[!UICONTROL 次へ]** を選択します。
+**[!UICONTROL API の追加]**&#x200B;画面が表示されます。 **[!UICONTROL Adobe Experience Platform]** の商品アイコンを選択し、「**[!UICONTROL Experience Platform API]**」を選択してから **[!UICONTROL 次へ]** を選択します。
 
-![API を追加画面で「Experience PlatformAPI」を選択します。](./images/api-authentication/platform-api.png)
+![API を追加画面でExperience Platform API を選択します。](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
->**[!UICONTROL ドキュメントを表示]** オプションを選択して、別のブラウザーウィンドウに移動し、[Experience PlatformAPI リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/) を参照します。
+>**[!UICONTROL ドキュメントを表示]** オプションを選択して、別のブラウザーウィンドウに移動し、[Experience Platform API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/) を参照します。
 
 ### [!UICONTROL OAuth サーバー間 ] 認証タイプを選択します {#select-oauth-server-to-server}
 
-次に、「**[!UICONTROL OAuth サーバー間]** 認証タイプ」を選択してアクセストークンを生成し、Experience PlatformAPI にアクセスします。 「**[!UICONTROL 次へ]**」を選択する前に、「**[!UICONTROL 資格情報名]**」テキストフィールドに資格情報に意味のある名前を付けます。
+次に、「**[!UICONTROL OAuth サーバー間]**」認証タイプを選択してアクセストークンを生成し、Experience Platform API にアクセスします。 「**[!UICONTROL 次へ]**」を選択する前に、「**[!UICONTROL 資格情報名]**」テキストフィールドに資格情報に意味のある名前を付けます。
 
 >[!IMPORTANT]
 >
 >今後サポートされるトークン生成方法は、**[!UICONTROL OAuth サーバー間]** メソッドのみです。 以前サポートされていた **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨となり、新しい統合用に選択することはできません。 JWT 認証方法を使用した既存の統合は 2025 年 6 月 30 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい [!UICONTROL OAuth サーバー間認証方法 ] に移行することを強くお勧めします。 詳しくは、「[!BADGE  非推奨 ]」の節を参照してください。{type=negative}[JSON web トークン（JWT）を生成 ](#jwt) ます。
 
-![ 認証 API の OAuth サーバー間Experience Platform方式を選択します。](./images/api-authentication/oauth-authentication-method.png)
+![Experience Platform API の OAuth サーバー間認証方法を選択します。](./images/api-authentication/oauth-authentication-method.png)
 
 ### 統合用の製品プロファイルの選択 {#select-product-profiles}
 
-**[!UICONTROL API の設定]** 画面で、「**[!UICONTROL AEP-Default-All-Users]**」を選択し、アクセス権を取得する追加の製品プロファイルも選択します。
+**[!UICONTROL API を設定]** 画面で、「**[!UICONTROL AEP-Default-All-Users]**」を選択し、アクセス権を取得するその他の製品プロファイルも選択します。
 
 >[!IMPORTANT]
 >
-Platform の特定の機能にアクセスするには、必要な属性ベースのアクセス制御権限を付与するシステム管理者も必要です。 詳しくは、[ 必要な属性ベースのアクセス制御権限の取得 ](#get-abac-permissions) の節を参照してください。
+Experience Platformの特定の機能にアクセスするには、必要な属性ベースのアクセス制御権限を付与するシステム管理者も必要です。 詳しくは、[ 必要な属性ベースのアクセス制御権限の取得 ](#get-abac-permissions) の節を参照してください。
 
 ![ 統合用の製品プロファイルを選択します ](./images/api-authentication/select-product-profiles.png)。
 
 準備ができたら、「**[!UICONTROL 設定済み API を保存]**」を選択します。
 
-Experience PlatformAPI との統合を設定するための上記の手順は、次のビデオチュートリアルでも参照できます。
+Experience Platform API との統合を設定するための上記の手順は、次のビデオチュートリアルでも参照できます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
@@ -143,7 +143,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## アクセストークンの生成 {#generate-access-token}
 
-次の手順では、Platform API 呼び出しで使用する `{ACCESS_TOKEN}` 資格情報を生成します。 `{API_KEY}` と `{ORG_ID}` の値とは異なり、Platform API を引き続き使用するには、新しいトークンを 24 時間ごとに生成する必要があります。 「**[!UICONTROL アクセストークンを生成]**」を選択します（下図を参照）。
+次の手順では、Experience Platform API 呼び出しで使用する `{ACCESS_TOKEN}` 資格情報を生成します。 `{API_KEY}` と `{ORG_ID}` の値とは異なり、Experience Platform API を引き続き使用するには、新しいトークンを 24 時間ごとに生成する必要があります。 「**[!UICONTROL アクセストークンを生成]**」を選択します（下図を参照）。
 
 ![ アクセストークンの生成方法を表示 ](././images/api-authentication/generate-access-token.png)
 
@@ -153,29 +153,29 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## 認証資格情報の作成と取得については、API リファレンスドキュメントを参照してください。 {#get-credentials-functionality}
 
-Experience Platformの 2024 年 11 月リリース以降、[!UICONTROL Developer Console] にアクセスしなくても、API リファレンスページからExperience PlatformAPI を直接使用するための資格情報を取得できます。 [ フローサービス API – 宛先ページ ](https://developer.adobe.com/experience-platform-apis/references/destinations/) から、以下の例を表示します。
+2024 年 11 月リリースのExperience Platform以降、[!UICONTROL Developer Console] にアクセスしなくても、API リファレンスページからExperience Platform API を直接使用するための資格情報を取得できます。 [ フローサービス API – 宛先ページ ](https://developer.adobe.com/experience-platform-apis/references/destinations/) から、以下の例を表示します。
 
 ![API リファレンスページの上部でハイライト表示された資格情報の取得機能。](././images/api-authentication/get-credentials-highlighted.png)
 
-Platform API を呼び出すための資格情報を取得するには、任意のExperience PlatformAPI リファレンスページに移動し、ページ上部の「**[!UICONTROL ログイン]**」を選択します。 **[!UICONTROL 個人用アカウント]** または **[!UICONTROL 会社または学校アカウント]** を使用してサインインします。
+Experience Platform API を呼び出すための資格情報を取得するには、Experience Platform API リファレンスページに移動し、ページ上部の「**[!UICONTROL ログイン]**」を選択します。 **[!UICONTROL 個人用アカウント]** または **[!UICONTROL 会社または学校アカウント]** を使用してサインインします。
 
-ログイン後、「**[!UICONTROL 新しい認証情報を作成]**」を選択して、Platform API にアクセスするための新しい認証情報のセットを作成します。
+ログイン後、「**[!UICONTROL 新しい認証情報を作成]**」を選択して、Experience Platform API にアクセスするための新しい認証情報のセットを作成します。
 
-![Platform API にアクセスするための新しい資格情報の作成 ](././images/api-authentication/create-credentials.gif)
+![Experience Platform API にアクセスするための新しい資格情報を作成します ](././images/api-authentication/create-credentials.gif)。
 
-次に、ドロップダウンセレクターを使用して、資格情報ウィンドウを開き、アクセストークンを生成して、API キーと組織 ID を取得します。 Platform API の使用を開始するには、API リファレンスページの [**[!UICONTROL  試す ]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) ブロックに資格情報をコピーします。
+次に、ドロップダウンセレクターを使用して、資格情報ウィンドウを開き、アクセストークンを生成して、API キーと組織 ID を取得します。 Experience Platform API の使用を開始するには、API リファレンスページの [**[!UICONTROL  試す ]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) ブロックに資格情報をコピーします。
 
 ![ ドロップダウンセレクターを使用して資格情報を表示し、アクセストークンを生成します。](././images/api-authentication/view-copy-credentials.gif)
 
 >[!TIP]
 >
-Experience PlatformAPI リファレンスドキュメントの様々なエンドポイントページ間を移動しても、ページ上部の資格情報ブロックは表示されたままになります。
+Experience Platform API リファレンスドキュメントの様々なエンドポイントページ間を移動しても、ページ上部の資格情報ブロックは表示されたままになります。
 
 ## [!BADGE  非推奨 ]{type=negative} JSON web トークン（JWT）を生成 {#jwt}
 
 >[!WARNING]
 >
-アクセストークンを生成する JWT メソッドは非推奨（廃止予定）になりました。 すべての新しい統合は、[OAuth サーバー間認証方法 ](#select-oauth-server-to-server) を使用して作成する必要があります。 また、Adobeを引き続き機能させるには、2025 年 6 月 30 日（PT）までに既存の統合環境を OAuth 方式に移行する必要があります。 以下の重要なドキュメントをお読みください。
+アクセストークンを生成する JWT メソッドは非推奨（廃止予定）になりました。 すべての新しい統合は、[OAuth サーバー間認証方法 ](#select-oauth-server-to-server) を使用して作成する必要があります。 また、Adobeでは、統合を引き続き機能させるには、2025 年 6 月 30 日（PT）までに既存の統合を OAuth 方式に移行する必要があります。 以下の重要なドキュメントをお読みください。
 > 
 * [JWT から OAuth へのアプリケーションの移行ガイド ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [OAuth を使用した新旧のアプリケーションの実装ガイド ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -183,7 +183,7 @@ Experience PlatformAPI リファレンスドキュメントの様々なエンド
 
 +++ 非推奨（廃止予定）の情報の表示
 
-次の手順では、アカウントの資格情報に基づいて JSON web トークン（JWT）を生成します。 この値は、Platform API 呼び出しで使用する `{ACCESS_TOKEN}` 認証情報を生成するために使用され、24 時間ごとに再生成する必要があります。
+次の手順では、アカウントの資格情報に基づいて JSON web トークン（JWT）を生成します。 この値は、Experience Platform API 呼び出しで使用する `{ACCESS_TOKEN}` 資格情報を生成するために使用されます。この資格情報は、24 時間ごとに再生成する必要があります。
 
 >[!IMPORTANT]
 >
@@ -195,7 +195,7 @@ Experience PlatformAPI リファレンスドキュメントの様々なエンド
 
 ![](././images/api-authentication/generate-jwt.png)
 
-「**[!UICONTROL カスタム JWT を生成]**」の下にあるテキストボックスに、Platform API をサービスアカウントに追加する際に以前に生成した秘密鍵の内容を貼り付けます。 次に、「**[!UICONTROL トークンを生成]**」を選択します。
+「**[!UICONTROL カスタム JWT を生成]**」の下にあるテキストボックスに、Experience Platform API をサービスアカウントに追加する際に以前に生成した秘密鍵の内容を貼り付けます。 次に、「**[!UICONTROL トークンを生成]**」を選択します。
 
 ![](././images/api-authentication/paste-key.png)
 
@@ -205,7 +205,7 @@ Experience PlatformAPI リファレンスドキュメントの様々なエンド
 
 **アクセストークンの生成**
 
-JWT を生成したら、API 呼び出しで JWT を使用して `{ACCESS_TOKEN}` を生成できます。 `{API_KEY}` と `{ORG_ID}` の値とは異なり、Platform API を引き続き使用するには、新しいトークンを 24 時間ごとに生成する必要があります。
+JWT を生成したら、API 呼び出しで JWT を使用して `{ACCESS_TOKEN}` を生成できます。 `{API_KEY}` と `{ORG_ID}` の値とは異なり、Experience Platform API を引き続き使用するには、新しいトークンを 24 時間ごとに生成する必要があります。
 
 **リクエスト**
 
@@ -242,8 +242,8 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 | プロパティ | 説明 |
 | --- | --- |
 | `token_type` | タイプ of 返されるトークン。 アクセストークンの場合、この値は常に `bearer` です。 |
-| `access_token` | 生成された `{ACCESS_TOKEN}`。 この値（先頭に `Bearer` という単語が付く）は、すべての Platform API 呼び出しの `Authentication` ヘッダーとして必要です。 |
-| `expires_in` | アクセストークンの有効期限が切れるまでの残り時間（ミリ秒）。 この値が 0 に達したら、Platform API の使用を続行するために、新しいアクセストークンを生成する必要があります。 |
+| `access_token` | 生成された `{ACCESS_TOKEN}`。 単語 `Bearer` のプレフィックスが付いたこの値は、すべてのExperience Platform API 呼び出しの `Authentication` ヘッダーとして必要です。 |
+| `expires_in` | アクセストークンの有効期限が切れるまでの残り時間（ミリ秒）。 この値が 0 に達した場合、Experience Platform API の使用を継続するには、新しいアクセストークンを生成する必要があります。 |
 
 +++
 
@@ -296,17 +296,17 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 Experience Platform内の複数のリソースにアクセスしたり、変更したりするには、適切なアクセス制御権限が必要です。 システム管理者から [ 必要な権限 ](/help/access-control/ui/permissions.md) を付与できます。 詳しくは、「役割の API 資格情報の管理 [ に関する節を参照し ](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role) ください。
 
-システム管理者が API を使用して Platform リソースへのアクセスに必要な権限を付与する方法について詳しくは、以下のビデオチュートリアルも参照してください。
+システム管理者が API を使用してExperience Platform リソースへのアクセスに必要な権限を付与する方法について詳しくは、以下のビデオチュートリアルも参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
 
 ## Postmanを使用した API 呼び出しの認証とテスト {#use-postman}
 
-[Postman](https://www.postman.com/) は、開発者が RESTful API を参照およびテストできる一般的なツールです。 Experience PlatformのPostman コレクションおよび環境を使用して、Experience PlatformAPI の作業を高速化できます。 詳しくは、[ 環境でのPostmanの使用 ](/help/landing/postman.md) およびコレクションとExperience Platformの基本を学ぶを参照してください。
+[Postman](https://www.postman.com/) は、開発者が RESTful API を参照およびテストできる一般的なツールです。 Experience Platform Postmanのコレクションと環境を使用すると、Experience Platform API の操作を高速化できます。 詳しくは、[Experience PlatformでのPostmanの使用 ](/help/landing/postman.md) およびコレクションと環境の基本を学ぶを参照してください。
 
-Experience Platformコレクションおよび環境でのPostmanの使用について詳しくは、以下のビデオチュートリアルも参照してください。
+Experience Platform コレクションおよび環境でのPostmanの使用に関する詳細については、以下のビデオチュートリアルも参照してください。
 
-**Experience PlatformAPI で使用するPostman環境のダウンロードと読み込み**
+**Experience Platform API で使用するPostman環境のダウンロードと読み込み**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
 
@@ -316,17 +316,17 @@ Experience Platformコレクションおよび環境でのPostmanの使用につ
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
-**Experience PlatformAPI Postman コレクションをダウンロードして API とやり取りする**
+**Experience Platform API Postman コレクションをダウンロードし、API とやり取りする**
 
 >[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
 <!--
-This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
+This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Experience Platform APIs.
 -->
 
-## システム管理者：Experience Platform権限を使用して開発者と API のアクセス制御を付与します {#grant-developer-and-api-access-control}
+## システム管理者：Experience Platform権限を使用して開発者および API アクセス制御を付与します {#grant-developer-and-api-access-control}
 
-Adobe Developer ConsoleでExperience Platformを作成する前に、お使いのアカウントに、統合製品プロファイルの開発者権限とユーザー権限が必要です。
+Adobe Developer Consoleで統合を作成する前に、アカウントにExperience Platform製品プロファイルの開発者権限とユーザー権限が必要です。
 
 >[!NOTE]
 >
@@ -340,9 +340,9 @@ Adobe Developer ConsoleでExperience Platformを作成する前に、お使い�
 
 ![Adobe Experience Platform製品がハイライト表示されたAdobe Admin Consoleの製品ページ。](././images/api-authentication/products.png)
 
-「**[!UICONTROL 製品プロファイル]**」タブで、「**[!UICONTROL AEP-Default-All-Users]**」を選択します。 または、検索バーを使用して名前を入力して製品プロファイルを検索します。
+「**[!UICONTROL 製品プロファイル]**」タブから、「**[!UICONTROL AEP-Default-All-Users]**」を選択します。 または、検索バーを使用して名前を入力して製品プロファイルを検索します。
 
-![ 検索バーと AEP-Default-All-Users 製品がハイライト表示された製品プロファイルページ。](././images/api-authentication/select-product-profile.png)
+![ 検索バーとAEP-Default-All-Users 製品がハイライト表示された製品プロファイルページ。](././images/api-authentication/select-product-profile.png)
 
 「**[!UICONTROL 開発者]**」タブを選択し、「**[!UICONTROL 開発者を追加]**」を選択します。
 
@@ -360,9 +360,9 @@ Adobe Developer ConsoleでExperience Platformを作成する前に、お使い�
 
 >[!NOTE]
 >
-システム管理者のみが、Experience PlatformUI で API をロールに割り当てることができます。
+Experience Platform UI で API をロールに割り当てることができるのは、システム管理者のみです。
 
-Experience PlatformAPI を使用して操作を実行するには、システム管理者は、役割の特定の権限セットに加えて API 資格情報を追加する必要があります。 詳しくは、「役割の API 資格情報の管理 [ に関する節を参照し ](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role) ください。
+Experience Platform API を使用して操作を実行するには、システム管理者は、役割の特定の権限セットに加えて、API 資格情報を追加する必要があります。 詳しくは、「役割の API 資格情報の管理 [ に関する節を参照し ](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role) ください。
 
 製品プロファイルに開発者を追加し、API を役割に割り当てるための、上記の手順のチュートリアルを、次のビデオチュートリアルでも利用できます。
 
@@ -370,14 +370,14 @@ Experience PlatformAPI を使用して操作を実行するには、システム
 
 ## その他のリソース {#additional-resources}
 
-Experience PlatformAPI の概要の詳細については、以下にリンクされているその他のリソースを参照してください
+Experience Platform API の概要の詳細については、以下にリンクされている追加のリソースを参照してください
 
-* [Experience PlatformAPI の認証とアクセス ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=ja) ビデオチュートリアルページ
+* [Experience Platform API の認証とアクセス ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=ja) ビデオチュートリアルページ
 * アクセストークンを生成するための [Identity Management サービス Postman コレクション ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)
-* [Experience PlatformAPI Postman コレクション ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
+* [Experience Platform API Postman コレクション ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、Platform API のアクセス資格情報を収集し、正常にテストしました。 [ ドキュメント ](../landing/documentation/overview.md) 全体を通して提供される API 呼び出しの例に従うことができるようになりました。
+このドキュメントでは、Experience Platform API のアクセス資格情報を収集し、正常にテストしました。 [ ドキュメント ](../landing/documentation/overview.md) 全体を通して提供される API 呼び出しの例に従うことができるようになりました。
 
-このチュートリアルで収集した認証値に加えて、多くの Platform API では、有効な `{SANDBOX_NAME}` をヘッダーとして指定する必要もあります。 詳しくは、[サンドボックスの概要](../sandboxes/home.md)を参照してください。
+このチュートリアルで収集した認証値に加えて、多くのExperience Platform API では、有効な `{SANDBOX_NAME}` をヘッダーとして指定する必要もあります。 詳しくは、[サンドボックスの概要](../sandboxes/home.md)を参照してください。

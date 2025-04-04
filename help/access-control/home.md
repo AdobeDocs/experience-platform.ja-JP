@@ -4,9 +4,9 @@ solution: Experience Platform
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 50d768eeb0dc8fa85af113db7790ad3e3258ea64
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3818'
 ht-degree: 33%
 
 ---
@@ -202,7 +202,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Data Governance] | [!UICONTROL  使用状況ラベルの管理 ] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの表示] | 組織に属するデータ使用ポリシーに対する読み取り専用アクセス。 |
-| [!DNL Data Governance] | [!UICONTROL ユーザーアクティビティログを表示] | Platform のアクティビティを記録した [監査ログ](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
+| [!DNL Data Governance] | [!UICONTROL ユーザーアクティビティログを表示] | Experience Platform アクティビティを記録した [ 監査ログ ](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
 | [!DNL Data Governance] | [!UICONTROL  プライバシーコンソールを表示 ] | プライバシーコンソールへの読み取り専用アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
@@ -281,7 +281,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Profile Management] | [!UICONTROL  プロファイル設定の管理 ] | すべてのプロファイル設定の読み取りおよび編集へのアクセス。 |
 | [!DNL Prospects] | [!UICONTROL  見込み客の表示 ] | 見込み客スキーマ、プロファイル、オーディエンス、見込み客アコーディオンへの読み取り専用アクセス。 |
 | [!DNL Prospects] | [!UICONTROL  見込み客の管理 ] | 見込み客スキーマ、プロファイル、オーディエンスを作成および管理する機能。 見込顧客アコーディオンへの読み取り専用アクセス。 |
-| [!DNL Query Service] | [!UICONTROL クエリの管理] | Platform データの構造化 SQL クエリの読み取り、作成、編集、および削除へのアクセス。 |
+| [!DNL Query Service] | [!UICONTROL クエリの管理] | Experience Platform データの構造化 SQL クエリへの読み取り、作成、編集、および削除アクセス。 |
 | [!DNL Query Service] | [!UICONTROL クエリサービス統合の管理] | クエリサービスアクセスの有効期限が切れていない資格情報を作成、更新、削除するためのアクセス。 |
 | [!DNL Query Service] | [!UICONTROL  クエリセッションの管理 ] | 既存のセッションを削除できます。 |
 | [!DNL Query Service] | [!UICONTROL 許可リストの管理 ] | 組織の IP 制限を管理する機能。 |

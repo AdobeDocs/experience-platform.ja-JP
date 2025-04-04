@@ -4,7 +4,7 @@ title: リアルタイム顧客プロファイルへのデータの追加
 type: Tutorial
 description: このチュートリアルでは、リアルタイム顧客プロファイルにデータを追加するために必要な手順の概要を説明します。
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 59%
@@ -24,7 +24,7 @@ ht-degree: 59%
 
 ## バッチインジェストを使用してデータを追加する
 
-バッチ取り込みを使用して [!DNL Platform] にアップロードされたデータはすべて、個々のデータセットにアップロードされます。 [!DNL Real-Time Customer Profile] でこのデータを使用する前に、問題のデータセットを明確に設定する必要があります。 手順について詳しくは、[プロファイルと ID サービスのデータセットの設定](dataset-configuration.md)に関するチュートリアルを参照してください。
+バッチ取り込みを使用して [!DNL Experience Platform] にアップロードされたデータはすべて、個々のデータセットにアップロードされます。 [!DNL Real-Time Customer Profile] でこのデータを使用する前に、問題のデータセットを明確に設定する必要があります。 手順について詳しくは、[プロファイルと ID サービスのデータセットの設定](dataset-configuration.md)に関するチュートリアルを参照してください。
 
 データセットを設定したら、データの取り込みを開始できます。様々な形式のファイルをアップロードする方法について詳しくは、「[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)」を参照してください。
 

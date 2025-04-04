@@ -1,24 +1,25 @@
 ---
-title: Platform UI を使用したAWSでの顧客管理キーの設定と設定
+title: Experience Platform UI を使用したAWSでの顧客管理キーの設定と設定
 description: Amazon リソース名（ARN）を使用して CMK アプリを設定し、暗号化キー ID をAdobe Experience Platformに送信する方法について説明します。
-source-git-commit: e67aed9e8072bcd531d5aa6ce5b631c910a1812a
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
 
-# Platform UI を使用したAWSでの顧客管理キーの設定と設定
+# Experience Platform UI を使用したAWSでの顧客管理キーの設定と設定
 
-このガイドを使用すると、Platform UI を介してAWSでホストされる Platform インスタンスの顧客管理キー（CMK）を有効にすることができます。
+このガイドを使用すると、Experience Platform UI を介してAWSでホストされるExperience Platform インスタンスの顧客管理キー（CMK）を有効にすることができます。
 
 >[!IMPORTANT]
 >
 >このガイドを進める前に、[ の CMK 用AWS KMS の設定」のドキュメントで詳しく説明されている設定が完了しているこ ](./configure-kms.md) を確認してください。
 
-## AWS キーポリシーを更新して、キーをExperience Platformに統合します
+## AWS キーポリシーを更新して、キーをExperience Platformと統合します
 
-AWS キーをExperience Platformと統合するには、KMS ワークスペースの **[!DNL Key Policy]** セクションで JSON を編集する必要があります。 デフォルトのキーポリシーは、以下の JSON のようになります。
+AWS キーをExperience Platformと統合するには、KMS Workspace の **[!DNL Key Policy]** セクションで JSON を編集する必要があります。 デフォルトのキーポリシーは、以下の JSON のようになります。
 
 <!-- The AWS ID below is fake. Q) Can I refer to it simply as AWS_ACCOUNT_ID ? Is that suitable? -->
 
@@ -40,11 +41,11 @@ AWS キーをExperience Platformと統合するには、KMS ワークスペー�
 }
 ```
 
-上記の例では、同じアカウント（`Principal.AWS`）内のすべてのリソース（`"Resource": "*"`）がキーにアクセスできます。 このポリシーを使用すると、アカウント内のサービスは、指定されたアカウントに制限された暗号化および暗号化解除の操作を実行できます。 このキーに対するアクセス権を Platform シングルテナントアカウントに付与するには、デフォルトのAWS ポリシーに新しいステートメントを追加します。 Adobe Experience Platformとの安全な接続を確立するために、Platform UI から必要な JSON ポリシーを取得してAWS KMS キーに適用できます。
+上記の例では、同じアカウント（`Principal.AWS`）内のすべてのリソース（`"Resource": "*"`）がキーにアクセスできます。 このポリシーを使用すると、アカウント内のサービスは、指定されたアカウントに制限された暗号化および暗号化解除の操作を実行できます。 このキーに対するExperience Platform シングルテナントアカウントのアクセス権を付与するには、デフォルトのAWS ポリシーに新しいステートメントを追加します。 Experience Platform UI から必要な JSON ポリシーを取得してAWS KMS キーに適用することにより、Adobe Experience Platformとの安全な接続を確立できます。
 
-Platform UI で、左側のナビゲーションレールの **[!UICONTROL 管理]** セクションに移動し、「**[!UICONTROL 暗号化]** を選択します。 [!UICONTROL  暗号化設定 ] ワークスペースで、**[!UICONTROL 顧客管理キー]** カードの [!UICONTROL  設定 ] を選択します。
+Experience Platform UI で、左側のナビゲーションレールの「**[!UICONTROL 管理]**」セクションに移動し、「**[!UICONTROL 暗号化]**」を選択します。 [!UICONTROL  暗号化設定 ] ワークスペースで、**[!UICONTROL 顧客管理キー]** カードの [!UICONTROL  設定 ] を選択します。
 
-![ 顧客管理キーカードで「設定」がハイライト表示された Platform 暗号化設定ワークスペース。](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![ 顧客管理キーカードで「設定」がハイライト表示されたExperience Platform暗号化設定ワークスペース。](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 [!UICONTROL  顧客管理キー設定 ] が表示されます。 [!UICONTROL  顧客管理キー ][!UICONTROL  暗号化設定 ] に表示される CMK KMS ポリシーから `statement` オブジェクトをコピーします。
 
@@ -159,9 +160,9 @@ Platform UI で、左側のナビゲーションレールの **[!UICONTROL 管�
 
 AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys] ワークスペースが表示されます。
 
-### Platform へのAWS暗号化キーの詳細の追加
+### AWS暗号化キーの詳細をExperience Platformに追加
 
-次に、暗号化を有効にするには、キーのAmazon リソース名（ARN）を Platform[!UICONTROL  顧客管理キー設定 ] に追加します。 AWSの「[!DNL Customer Managed Keys]」セクションで、[!DNL Key Management Service] のリストから新しいキーのエイリアスを選択します。
+次に、暗号化を有効にするには、キーのAmazon リソース名（ARN）をExperience Platform[!UICONTROL  顧客管理キー設定 ] に追加します。 AWSの「[!DNL Customer Managed Keys]」セクションで、[!DNL Key Management Service] のリストから新しいキーのエイリアスを選択します。
 
 ![ 新しいキーエイリアスが強調表示されたAWS KMS 顧客管理キーワークスペース ](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -172,17 +173,17 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 ![ARN がハイライト表示されたAWS KMS 顧客管理キーの主な詳細。](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-次に、Platform [!UICONTROL  顧客管理キー設定 ] UI に戻ります。 「**[!UICONTROL AWS暗号化キーの詳細を追加]**」セクションで、AWS UI からコピーした **[!UICONTROL 設定名]** と **[!UICONTROL KMS キー ARN]** を追加します。
+次に、Experience Platform [!UICONTROL  顧客管理キー設定 ] UI に戻ります。 「**[!UICONTROL AWS暗号化キーの詳細を追加]**」セクションで、AWS UI からコピーした **[!UICONTROL 設定名]** と **[!UICONTROL KMS キー ARN]** を追加します。
 
-![ 「Platform 暗号化キーの詳細を追加」セクションでハイライト表示された設定名と KMS キー ARN を含むAWS暗号化設定ワークスペース ](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![ 「Experience Platform暗号化キーの詳細を追加」セクションでハイライト表示された設定名と KMS キー ARN を含むAWS暗号化設定ワークスペース ](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 次に、「**[!UICONTROL 保存]**」を選択して設定名と KMS キー ARN を送信し、キーの検証を開始します。
 
-![ 「保存」がハイライト表示された Platform 暗号化設定ワークスペース ](../../../images/governance-privacy-security/key-management-service/save.png)
+![ 「保存」がハイライト表示されたExperience Platform暗号化設定ワークスペース ](../../../images/governance-privacy-security/key-management-service/save.png)
 
 「[!UICONTROL  暗号化設定 ] ワークスペースに戻ります。 暗号化設定のステータスが **[!UICONTROL 顧客管理キー]** カードの下部に表示されます。
 
-![Platform UI の暗号化設定ワークスペースには、顧客管理キーカードで処理がハイライト表示されています。](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![Experience Platform UI の暗号化設定ワークスペースには、顧客管理キーカードで「処理」がハイライト表示されています。](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 キーが検証されると、Key Vault 識別子が、すべてのサンドボックスのデータレイクおよびプロファイルデータストアに追加されます。
 
@@ -198,7 +199,7 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 鍵の失効に関する主な考慮事項を次に示します。
 
-- キーを取り消したり無効にしたりすると、Platform データにアクセスできなくなります。 このアクションは元に戻せないので、注意して実行する必要があります。
+- キーを取り消したり無効にしたりすると、Experience Platform データにアクセスできなくなります。 このアクションは元に戻せないので、注意して実行する必要があります。
 - 暗号化キーへのアクセスが取り消された場合の伝播タイムラインを考慮します。 プライマリのデータストアは、数分から 24 時間以内にアクセスできなくなります。 キャッシュされたデータストアまたは一時的なデータストアは、7 日以内にアクセスできなくなります。
 
 キーを失効させるには、AWS KMS Workspace に移動します。 「**[!DNL Customer managed keys]**」セクションには、AWS アカウントで使用可能なすべてのキーが表示されます。 リストからキーのエイリアスを選択します。
@@ -209,7 +210,7 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 ![AWS KMS UI で、キーアクションと「無効化」がハイライト表示されたAWS キーの詳細。](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-確認ダイアログが表示されます。 「**[!DNL Disable key]**」を選択して、選択内容を確定します。 キーの無効化の影響は、約 5 分以内に Platform アプリケーションと UI に反映される必要があります。
+確認ダイアログが表示されます。 「**[!DNL Disable key]**」を選択して、選択内容を確定します。 キーの無効化の影響は、約 5 分以内にExperience Platform アプリケーションおよび UI に反映される必要があります。
 
 >[!NOTE]
 >
@@ -217,11 +218,11 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 ![ 「キーを無効にする」がハイライト表示された「キーを無効にする」ダイアログ ](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
 
-または、キーが他のサービス全体で使用されている場合は、キーポリシーから直接Experience Platformのアクセス権を削除できます。 **[!DNL Key Policy]** のセクションで「**[!UICONTROL 編集]**」を選択します。
+または、キーが他のサービスで使用されている場合は、キーポリシーから直接Experience Platformへのアクセスを削除できます。 **[!DNL Key Policy]** のセクションで「**[!UICONTROL 編集]**」を選択します。
 
 ![ キーポリシーセクションで「編集」がハイライト表示されたAWS キーの詳細セクション。](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-**[!DNL Edit key policy]** ページが表示されます。 Platform UI からコピーされたポリシーステートメントをハイライト表示して削除し、顧客管理キーアプリの権限を削除します。 次に、「**[!DNL Save changes]**」を選択してプロセスを完了します。
+**[!DNL Edit key policy]** ページが表示されます。 Experience Platform UI からコピーされたポリシーステートメントをハイライト表示して削除し、顧客管理キーアプリの権限を削除します。 次に、「**[!DNL Save changes]**」を選択してプロセスを完了します。
 
 ![ ステートメント JSON オブジェクトと「変更を保存」がハイライト表示されたAWSのキーポリシーを編集ワークスペース。](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 

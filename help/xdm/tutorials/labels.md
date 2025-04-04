@@ -2,16 +2,16 @@
 title: スキーマのデータ使用ラベルの管理
 description: Adobe Experience Platform UI でエクスペリエンスデータモデル（XDM）スキーマフィールドにデータ使用ラベルを追加する方法を説明します。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '770'
 ht-degree: 10%
 
 ---
 
 # スキーマのデータ使用ラベルの管理
 
-Adobe Experience Platformに取り込まれるすべてのデータは、エクスペリエンスデータモデル（XDM）スキーマによって制約されます。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。これに対処するために、Platform では、[ データ使用ラベル ](../../data-governance/labels/overview.md) を使用して、特定のデータセットとフィールドの使用を制限できます。
+Adobe Experience Platformに取り込まれるすべてのデータは、エクスペリエンスデータモデル（XDM）スキーマによって制約されます。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。これに対処するために、Experience Platformでは、[ データ使用ラベル ](../../data-governance/labels/overview.md) を使用して、特定のデータセットやフィールドの使用を制限できます。
 
 スキーマフィールドに適用されるラベルは、その特定のフィールドに含まれるデータに適用される使用ポリシーを示します。
 
@@ -19,15 +19,15 @@ Adobe Experience Platformに取り込まれるすべてのデータは、エク�
 
 さらに、1 つのスキーマに追加したフィールドラベルは、共有クラスまたはフィールドグループから同じフィールドを使用する他のすべてのスキーマに伝播されます。 これにより、類似したフィールドの使用ルールがデータモデル全体で一貫していることを確認できます。
 
-このチュートリアルでは、Platform UI のスキーマエディターを使用して、スキーマにラベルを追加する手順を説明します。
+このチュートリアルでは、Experience Platform UI のスキーマエディターを使用して、スキーマにラベルを追加する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
-   * [ スキーマエディター ](../ui/overview.md):Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：ラベル付きデータに対して実行できる（または実行できない）マーケティングアクションを定義するポリシーを使用して、Platform 操作にデータ使用制限を適用するためのインフラストラクチャを提供します。
+   * [ スキーマエディター ](../ui/overview.md):Experience Platform UI でスキーマやその他のリソースを作成および管理する方法について説明します。
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):Experience Platformの操作にデータ使用に関する制限を適用するためのインフラストラクチャを提供します。ラベル付きのデータに対して実行できる（または実行できない）マーケティングアクションを定義するポリシーを使用します。
 
 ## ラベルの追加先となるスキーマまたはフィールドを選択 {#select-schema-field}
 

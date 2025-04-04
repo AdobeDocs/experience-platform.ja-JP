@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Power BI をクエリサービスに接続します。
 description: このドキュメントでは、Power BI と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 96%
+source-wordcount: '1014'
+ht-degree: 89%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 96%
 >
 > [!DNL Power BI] Desktop アプリケーションは、Windows デバイスで&#x200B;**のみ**&#x200B;使用できます。
 
-[!DNL Power BI] を Experience Platform に接続するために必要な資格情報を取得するには、Platform UI のクエリワークスペースにアクセスできる必要があります。現在、クエリワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
+[!DNL Power BI] をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UI のクエリワークスペースにアクセスできる必要があります。 現在、クエリワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ## クエリサービスへの [!DNL Power BI] の接続 {#connect-power-bi}
 
@@ -31,11 +31,11 @@ ht-degree: 96%
 
 [!DNL PostgreSQL] データベースダイアログが表示され、サーバーとデータベースの値の入力が求められます。[Power Query Desktop から PostgreSQL データベースに接続](https://learn.microsoft.com/ja-jp/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop)する方法の追加手順については、[!DNL PowerBI] の公式ドキュメントを参照してください。
 
-これらの必須値は、Adobe Experience Platform 資格情報から取得されます。資格情報を見つけるには、Platform UI にログインし、左側のナビゲーションから「**[!UICONTROL クエリ]**」を選択し、続いて「**[!UICONTROL 資格情報]**」を選択します。データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[資格情報ガイド](../ui/credentials.md)を参照してください。
+これらの必須値は、Adobe Experience Platform 資格情報から取得されます。資格情報を見つけるには、Experience Platform UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 データベース名、ホスト、ポートおよびログイン資格情報の検索について詳しくは、[資格情報ガイド](../ui/credentials.md)を参照してください。
 
 >[!IMPORTANT]
 >
->Power BIユーザーまたは Tableau ユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 ](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。
+>Power BIまたは Tableau のユーザーは、「クエリサービスの資格情報」タブからCustomer Journey Analyticsを BI ツールに接続できます。 [BI ツールをCustomer Journey Analyticsに接続 ](../ui/credentials.md#connect-to-customer-journey-analytics) する手順については、資格情報ドキュメントを参照してください。
 
 ![「資格情報」タブと期限切れになる資格情報がハイライト表示されている Experience Platform クエリワークスペース](../images/clients/power-bi/query-service-credentials-page.png)
 
@@ -75,7 +75,7 @@ ht-degree: 96%
 
 ### カスタム SQL を使用したテーブルの読み込み
 
-[!DNL Power BI] のほか、 [!DNL Tableau] などのサードパーティツールでは、現在、Platform の XDM オブジェクトなどのネストしたオブジェクトを読み込めません。 これに対処するために、 [!DNL Power BI] では、カスタム SQL を使用してこれらのネストされたフィールドにアクセスし、フラット化されたデータビューを作成できます。 [!DNL Power BI] では、次に、以前にネストされたデータのこうしたフラット化されたビューを通常のテーブルとして読み込みます。
+[!DNL Power BI] のほか、[!DNL Tableau] などのサードパーティツールでは、現在、Experience Platformの XDM オブジェクトなどのネストしたオブジェクトを読み込めません。 これに対処するために、 [!DNL Power BI] では、カスタム SQL を使用してこれらのネストされたフィールドにアクセスし、フラット化されたデータビューを作成できます。 [!DNL Power BI] では、次に、以前にネストされたデータのこうしたフラット化されたビューを通常のテーブルとして読み込みます。
 
 [!DNL PostgreSQL database] ダイアログで「**[!DNL Advanced options]**」を選択して、「**[!DNL SQL statement]**」セクションにカスタム SQL クエリを入力します。 このカスタムクエリは、JSON の名前と値のペアをテーブル形式にフラット化するために使用します。 [詳細オプションの SQL 文を使用して Power BI に接続する](https://learn.microsoft.com/ja-jp/power-query/connectors/postgresql#connect-using-advanced-options)方法についても、公式ドキュメントを参照してください。
 

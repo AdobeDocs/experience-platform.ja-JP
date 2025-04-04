@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 業界のデータモデルの概要
 description: 標準のエクスペリエンスデータモデル（XDM）コンポーネントを使用して構築できる、様々な業界の標準化されたデータモデルについて説明します。
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 0%
 
 ## 前提条件
 
-このガイドで参照している ERD を読むには、XDM コンポーネントがフォームスキーマにどのように作用し、XDM スキーマがExperience Platform全体でどのように動作するかを実践的に理解している必要があります。 続行する前に、次の概要ドキュメントを必ずお読みください。
+このガイドで参照している ERD を読むには、XDM コンポーネントがフォームスキーマとどのように相互作用し、XDM スキーマがExperience Platform全体でどのように機能するかを実践的に理解している必要があります。 続行する前に、次の概要ドキュメントを必ずお読みください。
 
-* [XDM システムの概要 ](../../home.md):XDM が Platform エコシステムでどのように動作するかを説明します。
+* [XDM システムの概要 ](../../home.md):XDM がExperience Platform エコシステムでどのように動作するかを説明します。
 * [ スキーマ構成の基本 ](../../schema/composition.md):XDM コンポーネント（スキーマフィールドグループ、クラス、データタイプなど）が、スキーマの構造および ID フィールドの役割にどのように貢献するかを説明します。
 
 また、データを XDM にマッピングする方法の一般的なガイドラインについては、[ データモデリングのベストプラクティスガイド ](../../schema/best-practices.md) を参照することをお勧めします。

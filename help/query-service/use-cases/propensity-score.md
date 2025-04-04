@@ -1,17 +1,17 @@
 ---
 title: 機械学習で生成された予測モデルを使用して傾向スコアを決定する
-description: クエリサービスを使用して予測モデルを Platform データに適用する方法を説明します。 このドキュメントでは、Platform データを使用して、各訪問で購入する顧客の傾向を予測する方法を説明します。
+description: クエリサービスを使用して予測モデルをExperience Platform データに適用する方法を説明します。 このドキュメントでは、Experience Platform データを使用して、各訪問で購入する顧客の傾向を予測する方法について説明します。
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
 # 機械学習で生成された予測モデルを使用して傾向スコアを決定する
 
-クエリサービスを使用すると、機械学習プラットフォーム上に構築された傾向スコアなどの予測モデルを活用して、Experience Platformデータを分析できます。
+クエリサービスを使用すると、機械学習プラットフォーム上に構築された傾向スコアなどの予測モデルを活用して、Experience Platform データを分析できます。
 
 このガイドでは、クエリサービスを使用して、計算ノートブックでモデルをトレーニングするために機械学習プラットフォームにデータを送信する方法について説明します。 トレーニング済みモデルを SQL を使用してデータに適用し、各訪問で顧客が購入する傾向を予測できます。
 
@@ -35,9 +35,9 @@ numpy
 tqdm
 ```
 
-## Platform から [!DNL Jupyter Notebook] への分析テーブルの読み込み {#import-analytics-tables}
+## Experience Platformから [!DNL Jupyter Notebook] への分析テーブルの読み込み {#import-analytics-tables}
 
-傾向スコアモデルを生成するには、Platform に保存された分析データの投影を [!DNL Jupyter Notebook] に読み込む必要があります。 クエリサービスに接続された [!DNL Python] 3 [!DNL Jupyter Notebook] から、次のコマンドは架空の衣料品ストアである Luma から顧客行動データセットを読み込みます。 Platform データは Experience Data Model （XDM）形式を使用して保存されるので、スキーマの構造に準拠するサンプル JSON オブジェクトを生成する必要があります。 [ サンプル JSON オブジェクトの生成 ](../../xdm/ui/sample.md) 方法については、ドキュメントを参照してください。
+傾向スコアモデルを生成するには、Experience Platformに保存された Analytics データのプロジェクションを [!DNL Jupyter Notebook] に読み込む必要があります。 クエリサービスに接続された [!DNL Python] 3 [!DNL Jupyter Notebook] から、次のコマンドは架空の衣料品ストアである Luma から顧客行動データセットを読み込みます。 Experience Platform データはエクスペリエンスデータモデル（XDM）形式を使用して保存されるので、スキーマの構造に準拠するサンプル JSON オブジェクトを生成する必要があります。 [ サンプル JSON オブジェクトの生成 ](../../xdm/ui/sample.md) 方法については、ドキュメントを参照してください。
 
 ![ 複数のコマンドがハイライト表示された [!DNL Jupyter Notebook] ダッシュボード ](../images/use-cases/jupyter-commands.png)
 

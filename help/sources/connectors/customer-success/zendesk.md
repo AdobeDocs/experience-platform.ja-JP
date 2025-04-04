@@ -3,20 +3,20 @@ title: Zendesk Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して Zendesk をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 43%
+source-wordcount: '344'
+ht-degree: 27%
 
 ---
 
 # [!DNL Zendesk]
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。カスタマーサクセスプロバイダーのサポートには、[!DNL Zendesk] が含まれます。
 
-このAdobe Experience Platform[ ソース ](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=ja) は、[Zendesk Search API/検索結果を書き出し ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) を活用して、ユーザー情報を Zendesk のExperience Platformに返し、さらに処理できるようにします。
+このAdobe Experience Platform[ ソース ](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=ja) は、[Zendesk Search API/検索結果を書き出し ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) を利用して、ユーザー情報を Zendesk からExperience Platformに返し、さらに処理できるようにします。
 
 ## IP アドレス許可リスト
 
@@ -37,13 +37,13 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 サブドメインの取得方法については、[[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) を参照してください。 API トークンの生成について詳しくは、[[!DNL Zendesk]  新しい API トークンの生成に関するガイド ](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>) を参照してください。
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Zendesk] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Zendesk] をExperience Platformに接続する方法について説明しています。
 
-## API を使用して [!DNL Zendesk] と Platform を接続する
+## API を使用した [!DNL Zendesk] のExperience Platformへの接続
 
 * [Flow Service API を使用したソース接続とデータフロ  [!DNL Zendesk]  の作成](../../tutorials/api/create/customer-success/zendesk.md)
 
-## UI を使用した [!DNL Zendesk] の Platform への接続
+## UI を使用した [!DNL Zendesk] のExperience Platformへの接続
 
 * [UI での  [!DNL Zendesk ] ソース接続の作成](../../tutorials/ui/create/customer-success/zendesk.md)
 * [UI でのカスタマーサクセスソース接続のデータフローの作成](../../tutorials/ui/dataflow/customer-success.md)

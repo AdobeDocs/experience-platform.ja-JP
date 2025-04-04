@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 45%
@@ -24,7 +24,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platform には、あらゆる種類のデータやデータのレイテンシを取り込むための豊富な機能が用意されています。Adobe Experience Platform [!DNL Data Ingestion] では、データ取り込みに複数の代替手段を提供しています。これには、バッチ API、ストリーミング API、ネイティブAdobeコネクタ、データ統合パートナー、Adobe Experience Platform UI などがあります。
+Adobe Experience Platform には、あらゆる種類のデータやデータのレイテンシを取り込むための豊富な機能が用意されています。Adobe Experience Platform [!DNL Data Ingestion] は、データ取り込みに複数の代替手段を提供します。これには、バッチ API、ストリーミング API、ネイティブのAdobe コネクタ、データ統合パートナー、Adobe Experience Platform UI などがあります。
 
 **新機能**
 
@@ -36,13 +36,13 @@ Adobe Experience Platform には、あらゆる種類のデータやデータの
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデルを構築して運用することで、データサイエンティストがAdobeソリューションやサードパーティシステムをまたいでデータやコンテンツから洞察をシームレスに生み出せるようにする、[!DNL Experience Platform] 内の完全に管理されたサービスです。 [!DNL Data Science Workspace] は [!DNL Platform] と緊密に統合されており、XDM データの調査と準備、その後、機械学習のインサイトを使用してデータを自動的に強化するモデルの開発と運用など、エンドツーエンドの [!DNL Real-Time Customer Profile] ータサイエンスライフサイクルを強化します。
+Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習モデルを構築して運用することで、データサイエンティストは、Adobe ソリューションおよびサードパーティシステムをまたいでデータやコンテンツから洞察をシームレスに生み出すことができる、[!DNL Experience Platform] 内の完全に管理されたサービスです。 [!DNL Data Science Workspace] は [!DNL Experience Platform] と緊密に統合されており、XDM データの調査と準備、その後、機械学習のインサイトを使用してデータを自動的に強化するモデルの開発と運用など、エンドツーエンドの [!DNL Real-Time Customer Profile] ータサイエンスライフサイクルを強化します。
 
 **新機能**
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| UI を介したサービスのスケジュール | [!DNL Platform] Orchestration サービスと統合して、UI を使用するユーザー定義のスケジュールでモデルのトレーニングとスコアリングを自動化します。 |
+| UI を介したサービスのスケジュール | [!DNL Experience Platform] Orchestration サービスと統合して、UI を使用するユーザー定義のスケジュールでモデルのトレーニングとスコアリングを自動化します。 |
 | [!DNL Service Gallery] | 再設計された [!DNL Service Gallery] ークフロー内で、自動トレーニングおよびスコアリングジョブをスケジュール設定でき、機械学習サービスの参照、監視、アクセスができます。 |
 | [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] UI の改善。 |
 

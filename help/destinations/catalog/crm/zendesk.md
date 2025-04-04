@@ -3,10 +3,10 @@ title: Zendesk 接続
 description: Zendesk 宛先を使用すると、アカウントデータを書き出し、Zendesk 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1469'
-ht-degree: 43%
+source-wordcount: '1479'
+ht-degree: 40%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 43%
 
 ## ユースケース {#use-cases}
 
-マルチチャネル B2C プラットフォームのカスタマーサービス部門は、顧客にシームレスでパーソナライズされたエクスペリエンスを提供したいと考えています。 部門は、独自のオフラインデータからオーディエンスを作成して、新しいユーザープロファイルを作成したり、様々なインタラクション（購入、返品など）から既存のプロファイル情報を更新したりできます。 これらのオーディエンスをAdobe Experience Platformから [!DNL Zendesk] に送信します。 最新情報を [!DNL Zendesk] に入手することで、カスタマー・サービス・エージェントが顧客の最新情報をすぐに入手できるようになり、迅速な対応と解決が可能になります。
+マルチチャネル B2C プラットフォームのカスタマーサービス部門は、顧客にシームレスでパーソナライズされたエクスペリエンスを提供したいと考えています。 部門は、独自のオフラインデータからオーディエンスを作成して、新しいユーザープロファイルを作成したり、様々なインタラクション（購入、返品など）から既存のプロファイル情報を更新したり、これらのオーディエンスをAdobe Experience Platformから [!DNL Zendesk] に送信したりできます。 最新情報を [!DNL Zendesk] に入手することで、カスタマー・サービス・エージェントが顧客の最新情報をすぐに入手できるようになり、迅速な対応と解決が可能になります。
 
 ## 前提条件 {#prerequisites}
 
@@ -28,11 +28,11 @@ ht-degree: 43%
 
 [!DNL Zendesk] 宛先へのデータをアクティブ化する前に、[スキーマ](/help/xdm/schema/composition.md)、[データセット](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)および[セグメント](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)を [!DNL Experience Platform] で作成する必要があります。
 
-オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md) に関するExperience Platformドキュメントを参照してください。
+オーディエンスのステータスに関するガイダンスが必要な場合は、[ オーディエンスメンバーシップの詳細スキーマフィールドグループ ](/help/xdm/field-groups/profile/segmentation.md) に関するExperience Platform ドキュメントを参照してください。
 
 ### [!DNL Zendesk] 前提条件 {#prerequisites-destination}
 
-Platform から [!DNL Zendesk] アカウントにデータを書き出すには、[!DNL Zendesk] アカウントが必要です。
+Experience Platformから [!DNL Zendesk] アカウントにデータをエクスポートするには、[!DNL Zendesk] アカウントが必要です。
 
 #### [!DNL Zendesk] 資格情報の収集 {#gather-credentials}
 
@@ -60,7 +60,7 @@ Platform から [!DNL Zendesk] アカウントにデータを書き出すには�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Zendesk] の各セグメントのステータスは、[ オーディエンススケジュール ](#schedule-segment-export-example) 手順で提供された **[!UICONTROL マッピング ID]** 値に基づいて、Platform の対応するオーディエンスステータスとともに更新されます。</li></ul> |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Zendesk] の各セグメントのステータスは、[ オーディエンススケジュール ](#schedule-segment-export-example) 手順で提供された **[!UICONTROL マッピング ID]** 値に基づいて、Experience Platformの対応するオーディエンスステータスとともに更新されます。</li></ul> |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li>ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。</li></ul> |
 
 {style="table-layout:auto"}
@@ -81,14 +81,14 @@ Platform から [!DNL Zendesk] アカウントにデータを書き出すには�
 * **[!UICONTROL ベアラートークン]**:[!DNL Zendesk] アカウントに生成したアクセストークンです。
 
 宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
-![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/zendesk/authenticate-destination.png)
+![ 認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 指定した詳細が有効な場合、UI で&#x200B;**[!UICONTROL 接続済み]**&#x200B;ステータスに緑色のチェックマークが付きます。その後、次の手順に進むことができます。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-![宛先の詳細を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/zendesk/destination-details.png)
+![ 宛先の詳細を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/zendesk/destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -110,7 +110,7 @@ Platform から [!DNL Zendesk] アカウントにデータを書き出すには�
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platform から [!DNL Zendesk] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
+Adobe Experience Platform から [!DNL Zendesk] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Experience Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
 
 **[!UICONTROL ターゲットフィールド]** で指定する属性には、属性マッピングテーブルで説明されているとおりに正確に名前を付ける必要があります。これらの属性はリクエスト本文を形成するからです。
 
@@ -131,7 +131,7 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
      | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * これらのマッピングの使用例を次に示します。
-     ![ 属性マッピングを含む Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/mappings.png)
+     ![ 属性マッピングを含むExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -141,12 +141,12 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-segment-export-example}
 
-アクティベーションワークフローの [[!UICONTROL  オーディエンスの書き出しをスケジュール ]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順では、Platform オーディエンスを [!DNL Zendesk] のカスタムフィールド属性に手動でマッピングする必要があります。
+アクティベーションワークフローの [[!UICONTROL  オーディエンスの書き出しをスケジュール ]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順では、Experience Platform オーディエンスを [!DNL Zendesk] のカスタムフィールド属性に手動でマッピングする必要があります。
 
 これを行うには、各セグメントを選択し、対応するカスタムフィールド属性を [!DNL Zendesk] の「**[!UICONTROL マッピング ID]**」フィールドから入力します。
 
 次に例を示します。
-![ オーディエンスの書き出しのスケジュールを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![ オーディエンスの書き出しのスケジュールを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## データの書き出しを検証する {#exported-data}
 
@@ -154,10 +154,10 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 
 1. **[!UICONTROL 宛先]**/**[!UICONTROL 参照]** を選択し、宛先のリストに移動します。
 1. 次に、宛先を選択し、**[!UICONTROL アクティベーションデータ]** タブに切り替えて、オーディエンス名を選択します。
-   ![宛先のアクティベーションデータを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
+   ![ 宛先のアクティベーションデータを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. オーディエンスの概要を監視し、プロファイルの数がセグメント内の数と一致していることを確認します。
-   ![セグメントを示す Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/segment.png)
+   ![ セグメントを示すExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/segment.png)
 
 1. [!DNL Zendesk] web サイトにログインし、**[!UICONTROL 連絡先]** ページに移動して、オーディエンスのプロファイルが追加されたかどうかを確認します。 このリストは、オーディエンス**[!UICONTROL  マッピング ID]**およびオーディエンスステータスで作成された追加フィールドの列を表示するように設定できます。
    ![ オーディエンス名で作成された追加フィールドを含む連絡先ページを示す Zendesk UI のスクリーンショット。](../../assets/catalog/crm/zendesk/contacts.png)

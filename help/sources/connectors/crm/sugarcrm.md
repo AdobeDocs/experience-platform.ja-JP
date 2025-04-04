@@ -3,16 +3,16 @@ title: SugarCRM Sourceの概要
 description: API またはユーザーインターフェイスを使用して SugarCRM をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 44%
+source-wordcount: '363'
+ht-degree: 28%
 
 ---
 
 # [!DNL SugarCRM]
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platformは、サードパーティの CRM アプリケーションからデータを取り込む機能を備えています。 CRM プロバイダーのサポートは [!DNL SugarCRM] を含みます。
 
@@ -38,15 +38,15 @@ Experience Platformは、サードパーティの CRM アプリケーション�
 
 * マーケティングまたは販売プロセスに関連付けられた任意のユーザーアカウントとは別の一意の API ユーザー名およびアカウント。 この一意のユーザー名とアカウントの組み合わせには、API アクセス権限が必要です。 アカウント設定プロセスについて詳しくは、[[!DNL SugarMarket RESTFUL API]](https://market.apidocs.sugarcrm.com/#intro) ドキュメントを参照してください。
 
-## [!DNL SugarCRM Accounts & Contacts] を Platform に接続する
+## [!DNL SugarCRM Accounts & Contacts] をExperience Platformに接続
 
-* [ソース接続を作成し [!DNL SugarCRM Accounts & Contacts] 、API を使用して Platform にデータを取得します](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md)。
-* [ ユーザーインターフェイスを使用してデータを Platform に取り込む  [!DNL SugarCRM Accounts & Contacts]  めのソース接続を作成します ](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)。
+* [API を使用してデータをExperience Platformに取り込む  [!DNL SugarCRM Accounts & Contacts]  めのソース接続を作成します ](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md)。
+* [ ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL SugarCRM Accounts & Contacts]  ス接続を作成します ](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)。
 * [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
 
-## [!DNL SugarCRM Events] を Platform に接続する
+## [!DNL SugarCRM Events] をExperience Platformに接続
 
-* [ソース接続を作成し [!DNL SugarCRM Events] 、API を使用して Platform にデータを取得します](../../tutorials/ui/create/crm/sugarcrm-events.md)。
-* [ ユーザーインターフェイスを使用してデータを Platform に取り込む  [!DNL SugarCRM Events]  めのソース接続を作成します ](../../tutorials/ui/create/crm/sugarcrm-events.md)。
+* [API を使用してデータをExperience Platformに取り込む  [!DNL SugarCRM Events]  めのソース接続を作成します ](../../tutorials/ui/create/crm/sugarcrm-events.md)。
+* [ ユーザーインターフェイスを使用してデータをExperience Platformに取り込むためのソ  [!DNL SugarCRM Events]  ス接続を作成します ](../../tutorials/ui/create/crm/sugarcrm-events.md)。
 * [UI での CRM ソース接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)

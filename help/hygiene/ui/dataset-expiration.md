@@ -2,9 +2,9 @@
 title: 自動データセット有効期限
 description: Adobe Experience Platform UI でデータセットの有効期限をスケジュールする方法を説明します。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '873'
 ht-degree: 49%
 
 ---
@@ -22,13 +22,13 @@ Adobe Experience Platform UI の [[!UICONTROL  データライフサイクル ] 
 >
 >データセットの有効期限が切れるように設定されている場合、ダウンストリームワークフローに悪影響が及ばないよう、データをそのデータセットに取り込む可能性があるデータフローを手動で変更する必要があります。
 
-このドキュメントでは、Platform UI でデータセットの有効期限をスケジュール設定および自動化する方法を説明します。
+このドキュメントでは、Experience Platform UI でデータセットの有効期限をスケジュール設定および自動化する方法を説明します。
 
 >[!NOTE]
 >
 >データセットの有効期限は、現在、Adobe Experience Platform Edge Networkからデータを削除しません。 ただし、データセットの有効期限が切れた後も、データがEdge Network内に残る可能性はありません。 これは、データセットの有効期限に関する 15 日間のサービス使用許諾契約が、破棄される前にEdge Network内にデータが存在する 14 日間の期間と重なるためです。
 
-Advanced Data Lifecycle Management では、[ データセット有効期限エンドポイント ](../api/dataset-expiration.md) を介したデータセット削除、および [workorder エンドポイント ](../api/workorder.md) を介したプライマリ ID を使用した ID 削除（行レベルデータ）をサポートしています。 また、Platform UI を使用して、データセットの有効期限や [ レコードの削除 ](./record-delete.md) を管理することもできます。 詳しくは、リンクされたドキュメントを参照してください。
+Advanced Data Lifecycle Management では、[ データセット有効期限エンドポイント ](../api/dataset-expiration.md) を介したデータセット削除、および [workorder エンドポイント ](../api/workorder.md) を介したプライマリ ID を使用した ID 削除（行レベルデータ）をサポートしています。 また、Experience Platform UI を使用して、データセットの有効期限や [ レコードの削除 ](./record-delete.md) を管理することもできます。 詳しくは、リンクされたドキュメントを参照してください。
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Advanced Data Lifecycle Management では、[ データセット有効期限エ�
 
 >[!IMPORTANT]
 >
->Real-Time CDP、Adobe Journey OptimizerおよびCustomer Journey Analyticsの各ユーザーには、20 件の保留中スケジュール済みデータセット有効期限作業指示があります。 Healthcare Shield およびプライバシーとセキュリティシールドのユーザーには、保留中のスケジュールされたデータセット有効期限作業指示が 50 件あります。 つまり、一度に 20 個または 50 個のデータセットを削除するようにスケジュールできます。<br> 例えば、スケジュールされたデータセット有効期限が 20 あり、1 つのデータセットが明日削除される予定の場合、そのデータセットが削除されるまで、それ以上の有効期限を設定することはできません。
+>Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analyticsの各ユーザーには、20 件の保留中スケジュール済みデータセット有効期限作業指示があります。 Healthcare Shield およびプライバシーとセキュリティシールドのユーザーには、保留中のスケジュールされたデータセット有効期限作業指示が 50 件あります。 つまり、一度に 20 個または 50 個のデータセットを削除するようにスケジュールできます。<br> 例えば、スケジュールされたデータセット有効期限が 20 あり、1 つのデータセットが明日削除される予定の場合、そのデータセットが削除されるまで、それ以上の有効期限を設定することはできません。
 
 ![ リクエストを作成  がハイライト表示された [!UICONTROL  データライフサイクル ] ワークスペース ](../images/ui/ttl/create-request-button.png)
 

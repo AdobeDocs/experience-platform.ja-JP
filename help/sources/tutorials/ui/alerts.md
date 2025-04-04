@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；アラート
 description: データフローを作成する際にアラートの配信を登録して、フロー実行のステータス、成功または失敗に関するアラートメッセージを受信できます。
 title: UI でのコンテキスト内アラートの購読
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '825'
 ht-degree: 18%
 
 ---
@@ -22,9 +22,9 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 このドキュメントでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ 可観測性 ](../../../observability/home.md)：統計的 [!DNL Observability Insights] 指標とイベント通知を使用して、Platform アクティビティを監視できます。
-   * [ アラート ](../../../observability/alerts/overview.md):Platform 操作の特定の条件（システムがしきい値に達した場合に問題が発生する可能性があるなど）に達すると、Platform はその条件を登録している組織内のユーザーにアラートメッセージを配信できます。
+* [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ 可観測性 ](../../../observability/home.md):[!DNL Observability Insights] を使用すると、統計指標とイベント通知を使用して、Experience Platform アクティビティを監視できます。
+   * [ アラート ](../../../observability/alerts/overview.md):Experience Platform操作の特定の条件（システムがしきい値に達した場合に問題が発生する可能性があるなど）に達すると、Experience Platformはその条件を登録している組織内のユーザーにアラートメッセージを配信できます。
 
 ## UI でのアラートの登録 {#subscribe-sources-alerts}
 
@@ -36,7 +36,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 >[!IMPORTANT]
 >
->データフローのメールベースのアラート通知を受信するには、Platform アカウントのメールの即時通知を有効にする必要があります。
+>データフローでメールベースのアラート通知を受け取るには、Experience Platform アカウントでメールの即時通知を有効にする必要があります。
 
 ソースワークスペースのソースワークフローの [!UICONTROL  データフローの詳細 ] 手順で、データフローのアラートを有効にできます。
 
@@ -51,7 +51,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 | アラート | 説明 |
 | --- | --- |
 | ソースフロー実行開始 | このアラートは、ソースデータフローが開始されたときにメッセージを送信します。 |
-| ソースフロー実行の成功 | このアラートは、ソースからのデータが Platform に正常に取り込まれたときにメッセージを送信します。 |
+| ソースフロー実行の成功 | このアラートでは、ソースからのデータがExperience Platformに正常に取り込まれるとメッセージが表示されます。 |
 | ソースフロー実行の失敗 | このアラートは、データフローでエラーが発生した場合にメッセージを送信します。 |
 
 購読するアラートを選択し、「**[!UICONTROL 次へ]**」を選択してデータフローを確認して完了します。
@@ -76,7 +76,7 @@ UI でのソースデータフローの作成に関する詳細な手順につ�
 
 ### UI 内
 
-アラートは、Platform UI の上部ヘッダーにある通知アイコンによって UI に表示されます。 通知アイコンを選択して、データフローに関する特定のアラートメッセージを表示します。
+アラートは、Experience Platform UI の上部ヘッダーにある通知アイコンによって UI に表示されます。 通知アイコンを選択して、データフローに関する特定のアラートメッセージを表示します。
 
 ![ 通知 ](../../images/tutorials/alerts/notification.png)
 

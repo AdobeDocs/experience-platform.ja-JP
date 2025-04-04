@@ -4,18 +4,18 @@ solution: Experience Platform
 title: XDM システムトラブルシューティングガイド
 description: 一般的な API エラーを解決する手順など、エクスペリエンスデータモデル（XDM）に関するよくある質問への回答を示します。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2348'
 ht-degree: 82%
 
 ---
 
 # XDM システムトラブルシューティングガイド
 
-このドキュメントでは、一般的なエラーのトラブルシューティングガイドを含め、Adobe Experience Platform の [!DNL Experience Data Model]（XDM）および XDM システムに関するよくある質問への回答を示します。他の Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、一般的なエラーのトラブルシューティングガイドを含め、Adobe Experience Platform の [!DNL Experience Data Model]（XDM）および XDM システムに関するよくある質問への回答を示します。他のExperience Platform サービスに関する質問やトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
 
-**[!DNL Experience Data Model]（XDM）**&#x200B;は、カスタマーエクスペリエンス（顧客体験）管理のための標準化されたスキーマを定義するオープンソース仕様です。**XDM システム**&#x200B;は [!DNL Experience Platform] の基礎となる方法論で、[!DNL Experience Data Model] スキーマを [!DNL Platform] サービスで操作できるようにするものです。**[!DNL Schema Registry]** は、[!DNL Experience Platform] 内の **[!DNL Schema Library]** にアクセスするためのユーザーインターフェイスと RESTful API を提供します。詳しくは、[XDM のドキュメント](home.md)を参照してください。
+**[!DNL Experience Data Model]（XDM）**&#x200B;は、カスタマーエクスペリエンス（顧客体験）管理のための標準化されたスキーマを定義するオープンソース仕様です。**XDM システム**&#x200B;は [!DNL Experience Platform] の基礎となる方法論で、[!DNL Experience Data Model] スキーマを [!DNL Experience Platform] サービスで操作できるようにするものです。**[!DNL Schema Registry]** は、[!DNL Experience Platform] 内の **[!DNL Schema Library]** にアクセスするためのユーザーインターフェイスと RESTful API を提供します。詳しくは、[XDM のドキュメント](home.md)を参照してください。
 
 ## FAQ
 

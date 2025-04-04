@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；クラス；クラス；
 solution: Experience Platform
 title: UI でのクラスの作成と編集
-description: Experience Platformユーザーインターフェイスでクラスを作成および編集する方法を説明します。
+description: Experience Platform ユーザーインターフェイスでクラスを作成および編集する方法について説明します。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1692'
 ht-degree: 7%
 
 ---
@@ -22,23 +22,23 @@ Adobe Experience Platformでは、スキーマのクラスは、スキーマに�
 
 Adobeは、（XDM 個人プロファイル）や [XDM エクスペリエンスイベント ](../../classes/experienceevent.md) など、いくつかの標準（「コア」）エクスペリエンスデータモデル（XDM](../../classes/individual-profile.md) クラス [ 提供しています。 これらのコアクラスに加えて、独自のカスタムクラスを作成して、組織のより具体的な使用例を記述することもできます。
 
-このドキュメントでは、Experience PlatformUI でカスタムクラスを作成、編集、管理する方法の概要を説明します。
+このドキュメントでは、Experience Platform UI でカスタムクラスを作成、編集、管理する方法の概要を説明します。
 
 ## 前提条件 {#prerequisites}
 
-このガイドでは、XDM システムに関する十分な知識が必要です。 クラスが XDM スキーマにどのように寄与するかについては、Experience Platformエコシステム内での XDM の役割の概要および [ スキーマ構成の基本 ](../../schema/composition.md) を参照 [XDM の概要 ](../../home.md)。
+このガイドでは、XDM システムに関する十分な知識が必要です。 クラスが XDM スキーマにどのように寄与するかを学ぶには、Experience Platform エコシステムにおける XDM の役割の概要および [ スキーマ構成の基本 ](../../schema/composition.md) について [XDM の概要 ](../../home.md) を参照してください。
 
 このガイドには必須ではありませんが、[UI でのスキーマの作成 ](../../tutorials/create-schema-ui.md) に関するチュートリアルに従って、スキーマエディターの様々な機能を理解することをお勧めします。
 
 ## はじめに {#getting-started}
 
-Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して [!UICONTROL  スキーマ ] ワークスペースを開き、「**[!UICONTROL クラス]**」タブを選択します。 使用可能なクラスのリストが表示されます。
+Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して [!UICONTROL  スキーマ ] ワークスペースを開き、「**[!UICONTROL クラス]**」タブを選択します。 使用可能なクラスのリストが表示されます。
 
 ![[!UICONTROL  スキーマ ] ワークスペース [!UICONTROL  クラス ] および [!UICONTROL  スキーマ ] の「[!UICONTROL  クラス ]」タブ内のクラスのハイライト表示 ](../../images/ui/resources/classes/available-classes.png)
 
 ## クラスをフィルター {#filter}
 
-クラスのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定では、Adobeで定義されたクラスが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeが作成したエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成したエンティティが表示されます。
+クラスのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定には、Adobeで定義されたクラスが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成されたエンティティが表示されます。
 
 ![[!UICONTROL  標準 ] と [!UICONTROL  カスタム ] がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  クラス ] タブ ](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
@@ -48,7 +48,7 @@ Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ
 
 ## 新しいクラスの作成 {#create}
 
-Platform UI でクラスを作成するには、**[!UICONTROL クラスを作成]** または **[!UICONTROL スキーマを作成]** の 2 つの方法があります。
+Experience Platform UI でクラスを作成するには、**[!UICONTROL クラスを作成]** または **[!UICONTROL スキーマを作成]** の 2 つの方法があります。
 
 ### クラスを作成
 
@@ -124,7 +124,7 @@ Platform UI でクラスを作成するには、**[!UICONTROL クラスを作成
 
 >[!NOTE]
 >
->完全に編集およびカスタマイズできるのは、組織で定義されたカスタムクラスのみです。 Adobeで定義されたコアクラスの場合、個々のスキーマのコンテキスト内で編集できるのは、そのフィールドの表示名のみです。 詳しくは、[ スキーマフィールドの表示名の編集 ](./schemas.md#display-names) の節を参照してください。
+>完全に編集およびカスタマイズできるのは、組織で定義されたカスタムクラスのみです。 Adobeで定義されたコアクラスの場合、フィールドの表示名のみを個々のスキーマのコンテキスト内で編集できます。 詳しくは、[ スキーマフィールドの表示名の編集 ](./schemas.md#display-names) の節を参照してください。
 >
 >カスタムクラスが保存され、データ取り込みで使用されると、それ以降は追加の変更のみを行うことができます。 詳しくは、[ スキーマ進化のルール ](../../schema/composition.md#evolution) を参照してください。
 
@@ -156,6 +156,6 @@ Platform UI でクラスを作成するには、**[!UICONTROL クラスを作成
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、Platform UI を使用してクラスを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
+このドキュメントでは、Experience Platform UI を使用してクラスを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
 
 スキーマレジストリ API を使用してクラスを管理する方法については、[ クラスエンドポイントガイド ](../../api/classes.md) を参照してください。

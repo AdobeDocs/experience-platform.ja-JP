@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
-title: セルフサービスソース（Batch SDK） API ガイド
+title: セルフサービスソース（バッチ SDK） API ガイド
 description: このドキュメントでは、Flow Service API を使用して新しい接続仕様を取得、書き込み、送信する手順など、新しいソースを作成するプロセスの概要を説明します。
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 10%
+source-wordcount: '484'
+ht-degree: 8%
 
 ---
 
-# セルフサービスソース（Batch SDK） API ガイド
+# セルフサービスソース（バッチ SDK） API ガイド
 
 このドキュメントでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して新しい接続仕様を書き込み、送信する手順など、新しいソースを作成するプロセスの概要を説明します。
 
-[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Platform で一元化できます。このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。 これらのソース接続を使用すると、サードパーティ製システムの認証、データ取り込み時間の設定、データ取り込みスループットの管理を行うことができます。
+[!DNL Flow Service] を使用すると、様々な異なるソースから顧客データを収集し、Experience Platformで一元化できます。 このサービスにはユーザーインターフェイスおよび RESTful API が用意されており、様々なデータプロバイダーへのソース接続を簡単に設定できます。 これらのソース接続を使用すると、サードパーティ製システムの認証、データ取り込み時間の設定、データ取り込みスループットの管理を行うことができます。
 
-[!DNL Flow Service] API は複数のエンドポイントを提供し、セルフサービスソース（Batch SDK）を通じて統合する新しいソースの接続とフローの仕様をプログラムで管理できるようにします。
+[!DNL Flow Service] API は複数のエンドポイントを提供し、セルフサービスソース（バッチ SDK）を通じて統合する新しいソースの接続とフローの仕様をプログラムで管理できるようにします。
 
 ## 新しい接続仕様を作成
 
@@ -36,12 +36,12 @@ ht-degree: 10%
 
 ## 接続仕様を更新
 
-[!DNL Flow Service] API に対してPUTリクエストを実行することで、接続仕様を更新できます。 詳しくは、[ 接続仕様の更新 ](./update-connection-specs.md) に関するガイドを参照してください。
+[!DNL Flow Service] API に対してPUT リクエストを実行することで、接続仕様を更新できます。 詳しくは、[ 接続仕様の更新 ](./update-connection-specs.md) に関するガイドを参照してください。
 
 ## ソースの送信
 
-統合用のソースをExperience Platformに送信するには、まずソースの [!DNL Flow Service] API ワークフロー全体を完了して、ソースが正常に動作することを確認する必要があります。 ソースが正常に実行された場合は、続行して、Adobe担当者に確認とプロモーションを依頼してください。 詳しくは、[ ソースのテストと送信 ](./submit.md) に関するガイドを参照してください
+Experience Platformへの統合用にソースを送信するには、まずソースの [!DNL Flow Service] API ワークフロー全体を完了して、ソースが正常に動作することを確認する必要があります。 ソースが正常に実行された場合は、続行して、Adobe担当者に確認とプロモーションを依頼してください。 詳しくは、[ ソースのテストと送信 ](./submit.md) に関するガイドを参照してください
 
 ## 次の手順
 
-[!DNL Flow Service] API の使用を開始し、セルフサービスソース（Batch SDK）から新しいソースを作成するには、[ はじめる前に ](./getting-started.md) ガイドを読み、エンドポイントガイドの 1 つを選択して、特定のエンドポイントの使用方法を学習します。
+[!DNL Flow Service] API の使用を開始し、セルフサービスソース（バッチ SDK）から新しいソースを作成するには、[ はじめる前に ](./getting-started.md) ガイドを読み、エンドポイントガイドの 1 つを選択して、特定のエンドポイントの使用方法を学習します。

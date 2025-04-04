@@ -2,20 +2,20 @@
 description: 「/authoring/destination-servers」エンドポイントを介して Adobe Experience Platform Destination SDK の宛先サーバー仕様を設定する方法を説明します。
 title: Destination SDK で作成される宛先のサーバー仕様
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2739'
-ht-degree: 100%
+source-wordcount: '2753'
+ht-degree: 89%
 
 ---
 
 # Destination SDK で作成される宛先のサーバー仕様
 
-宛先サーバー仕様は、Adobe Experience Platform からデータを受信する宛先プラットフォームのタイプと、Platform と宛先の間の通信パラメーターを定義します。以下に例を示します。
+宛先サーバー仕様は、Experience Platformからデータを受信する宛先プラットフォームのタイプと、Adobe Experience Platformと宛先の間の通信パラメーターを定義します。 以下に例を示します。
 
-* [ストリーミング](#streaming-example)宛先サーバー仕様は、Platform から HTTP メッセージを受信する HTTP サーバーエンドポイントを定義します。エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
-* [Amazon S3](#s3-example) 宛先サーバー仕様は、Platform がファイルを書き出す [!DNL S3] バケット名およびパスを定義します。
-* [SFTP](#sftp-example) 宛先サーバー仕様は、Platform がファイルを書き出す SFTP サーバーのホスト名、ルートディレクトリ、通信ポートおよび暗号化タイプを定義します。
+* [ ストリーミング ](#streaming-example) 宛先サーバー仕様は、Experience Platformから HTTP メッセージを受信する HTTP サーバーエンドポイントを定義します。 エンドポイントに対する HTTP 呼び出しの書式設定方法については、[テンプレート仕様](templating-specs.md)ページを参照してください。
+* [Amazon S3](#s3-example) 宛先サーバー仕様は、Experience Platformがファイルを書き出す [!DNL S3] バケット名およびパスを定義します。
+* [SFTP](#sftp-example) 宛先サーバー仕様は、Experience Platformがファイルを書き出す SFTP サーバーのホスト名、ルートディレクトリ、通信ポートおよび暗号化タイプを定義します。
 
 このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、以下の宛先設定の概要ページを参照してください。
 
@@ -46,7 +46,7 @@ ht-degree: 100%
 
 ## ハードコーディングされたフィールドとテンプレート化されたフィールドの比較 {#templatized-fields}
 
-Destination SDK を通じて宛先サーバーを作成する場合、それらを設定にハードコーディングするか、またはテンプレート化されたフィールドを使用することで、設定パラメーター値を定義できます。テンプレート化されたフィールドを使用すると、Platform UI からユーザー指定の値を読み取ることができます。
+Destination SDK を通じて宛先サーバーを作成する場合、それらを設定にハードコーディングするか、またはテンプレート化されたフィールドを使用することで、設定パラメーター値を定義できます。テンプレート化されたフィールドを使用すると、Experience Platform UI からユーザー指定の値を読み取ることができます。
 
 宛先サーバーパラメーターには、2 つの設定可能なフィールドがあります。これらのオプションは、ハードコーディングされた値とテンプレート化された値のどちらを使用しているかを示します。
 
@@ -63,7 +63,7 @@ Destination SDK を通じて宛先サーバーを作成する場合、それら�
 
 **ユーザー入力を伴わない宛先への接続**
 
-ユーザーが Platform UI で[宛先に接続する](../../../ui/connect-destination.md)場合、ユーザー入力なしで宛先接続プロセスを処理してください。
+ユーザーがExperience Platform UI で [ 宛先に接続する ](../../../ui/connect-destination.md) 場合、ユーザー入力なしで宛先接続プロセスを処理してください。
 
 これを行うには、宛先プラットフォーム接続パラメーターをサーバー仕様にハードコーディングします。宛先サーバー設定にハードコーディングされたパラメーター値を使用する場合、Adobe Experience Platform と宛先プラットフォームの間の接続は、ユーザーからの入力なしで処理されます。
 
@@ -83,13 +83,13 @@ Destination SDK を通じて宛先サーバーを作成する場合、それら�
 }
 ```
 
-その結果、ユーザーが[宛先接続チュートリアル](../../../ui/connect-destination.md)を実行しても、[認証手順](../../../ui/connect-destination.md#authenticate)が表示されません。代わりに、以下の画像に示すように、認証が Platform によって処理されます。
+その結果、ユーザーが[宛先接続チュートリアル](../../../ui/connect-destination.md)を実行しても、[認証手順](../../../ui/connect-destination.md#authenticate)が表示されません。代わりに、以下の画像に示すように、認証がExperience Platformによって処理されます。
 
-![Platform と DLZ 宛先の間での認証画面を示す UI 画像。](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![Experience Platformと DLZ 宛先の間での認証画面を示す UI 画像。](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
 **ユーザー入力を伴った宛先への接続**
 
-Platform と宛先の間の接続が、Platform UI での特定のユーザー入力（API エンドポイントの選択やフィールド値の指定など）に従って確立される必要がある場合、サーバー仕様でテンプレート化されたフィールドを使用して、ユーザー入力を読み取り、宛先プラットフォームに接続できます。
+Experience Platformと宛先の間の接続が、Experience Platform UI での特定のユーザー入力（API エンドポイントの選択やフィールド値の指定など）に従って確立される必要がある場合、サーバー仕様でテンプレート化されたフィールドを使用して、ユーザー入力を読み取り、宛先プラットフォームに接続できます。
 
 以下の例では、パートナーは、[リアルタイム（ストリーミング）](#streaming-example)統合を作成し、`url.value` フィールドがテンプレート化されたパラメーター `{{customerData.region}}` を使用して、ユーザー入力に基づいて API エンドポイントの一部をパーソナライズします。
 
@@ -106,7 +106,7 @@ Platform と宛先の間の接続が、Platform UI での特定のユーザー�
 }
 ```
 
-ユーザーに Platform UI から値を選択するオプションを与えるには、以下に示すように、`region` パラメーターも、[宛先設定](../../authoring-api/destination-configuration/create-destination-configuration.md)で顧客データフィールドとして定義される必要があります。
+ユーザーにExperience Platform UI から値を選択するオプションを与えるには、以下に示すように、`region` パラメーターも、[destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md) で顧客データフィールドとして定義される必要があります。
 
 ```json
 "customerDataFields":[
@@ -153,7 +153,7 @@ Platform と宛先の間の接続が、Platform UI での特定のユーザー�
 |---|---|---|
 | `name` | 文字列 | *必須。* サーバーのわかりやすい名前を表し、アドビにのみ表示されます。この名前は、パートナーや顧客には表示されません。例：`Moviestar destination server`。 |
 | `destinationServerType` | 文字列 | *必須。* ストリーミング宛先の場合は、これを `URL_BASED` に設定します。 |
-| `templatingStrategy` | 文字列 | *必須。* <ul><li>`value` フィールドに、ハードコーディングされた値ではなく、テンプレート化されたフィールドを使用している場合は、`PEBBLE_V1` を使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` のようなエンドポイントがある場合は、このオプションを使用します（ユーザーは、Platform UI からエンドポイント地域を選択する必要があります）。 </li><li> アドビ側でのテンプレート化された変換が不要な場合（例えば、`NONE` のようなエンドポイントがある場合）は、`https://api.moviestar.com/data/items` を使用します。 </li></ul> |
+| `templatingStrategy` | 文字列 | *必須。* <ul><li>`value` フィールドに、ハードコーディングされた値ではなく、テンプレート化されたフィールドを使用している場合は、`PEBBLE_V1` を使用します。`https://api.moviestar.com/data/{{customerData.region}}/items` のようなエンドポイントがある場合は、このオプションを使用します（ユーザーは、Experience Platform UI からエンドポイント地域を選択する必要があります）。 </li><li> アドビ側でのテンプレート化された変換が不要な場合（例えば、`NONE` のようなエンドポイントがある場合）は、`https://api.moviestar.com/data/items` を使用します。 </li></ul> |
 | `value` | 文字列 | *必須。* Experience Platform が接続する API エンドポイントのアドレスを入力します。 |
 
 {style="table-layout:auto"}
@@ -294,7 +294,7 @@ Platform と宛先の間の接続が、Platform UI での特定のユーザー�
 
 ## [!DNL Data Landing Zone]（[!DNL DLZ]）宛先サーバー {#dlz-example}
 
-この宛先サーバーを使用すると、Platform データを含むファイルを [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) ストレージに書き出すことができます。
+この出力先サーバーを使用すると、Experience Platform データを含むファイルを [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) ストレージに書き出すことができます。
 
 以下のサンプルに、[!DNL Data Landing Zone]（[!DNL DLZ]）宛先用の宛先サーバー設定の例を示します。
 
@@ -323,7 +323,7 @@ Platform と宛先の間の接続が、Platform UI での特定のユーザー�
 
 ## [!DNL Google Cloud Storage] 宛先サーバー {#gcs-example}
 
-この宛先サーバーを使用すると、Platform データを含むファイルを [!DNL Google Cloud Storage] アカウントに書き出すことができます。
+この宛先サーバーを使用すると、Experience Platform データを含むファイルを [!DNL Google Cloud Storage] アカウントに書き出すことができます。
 
 以下のサンプルに、[!DNL Google Cloud Storage] 宛先用の宛先サーバー設定の例を示します。
 

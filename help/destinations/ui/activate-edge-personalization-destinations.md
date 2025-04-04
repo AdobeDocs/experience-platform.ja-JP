@@ -3,10 +3,10 @@ title: エッジパーソナライゼーションの宛先に対してオーデ�
 description: 同じページと次のページのパーソナライゼーションのユースケースに対して、Adobe Experience Platformからエッジパーソナライゼーションの宛先へのオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1957'
-ht-degree: 15%
+source-wordcount: '1961'
+ht-degree: 14%
 
 ---
 
@@ -85,7 +85,7 @@ Adobe TargetなどのAdobe パーソナライゼーションソリューショ�
 
 ![Edgeのセグメント化とPersonalizationの宛先がハイライト表示されたデータストリーム設定 ](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-データストリームの設定方法の詳細については、[Platform Web SDK ドキュメント](../../datastreams/configure.md#aep)に記載されている手順に従ってください。
+データストリームの設定方法の詳細については、[Experience Platform Web SDK ドキュメント ](../../datastreams/configure.md#aep) に記載されている手順に従ってください。
 
 ### [!DNL Active-On-Edge] 結合ポリシーの作成 {#create-merge-policy}
 
@@ -97,9 +97,9 @@ Adobe TargetなどのAdobe パーソナライゼーションソリューショ�
 
 [結合ポリシーの作成](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)の手順に従い、「**[!UICONTROL エッジでアクティブ化結合ポリシー]**」切り替えスイッチを必ず有効にします。
 
-### Platform での新しいオーディエンスの作成 {#create-audience}
+### Experience Platformでの新しいオーディエンスの作成 {#create-audience}
 
-[!DNL Active-On-Edge] 結合ポリシーを作成したら、Platform で新しいオーディエンスを作成する必要があります。
+[!DNL Active-On-Edge] 結合ポリシーを作成したら、Experience Platformで新しいオーディエンスを作成する必要があります。
 
 [ オーディエンスビルダー ](../../segmentation/ui/segment-builder.md) ガイドに従って新しいオーディエンスを作成し、前の手順で作成した [!DNL Active-On-Edge] 結合ポリシーを必ず [ 割り当て ](../../segmentation/ui/segment-builder.md#merge-policies) します。
 
@@ -141,7 +141,7 @@ Adobe TargetなどのAdobe パーソナライゼーションソリューショ�
 接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
 * **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/audience-portal.md#import-audience) に関するドキュメントを参照してください。
+* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/audience-portal.md#import-audience) に関するドキュメントを参照してください。
 * その他のタイプのオーディエンス。他のAdobe ソリューション（[!DNL Audience Manager] など）から派生します。
 
 ![ 複数のオーディエンスがハイライト表示されたアクティベーションワークフローのオーディエンス選択手順。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

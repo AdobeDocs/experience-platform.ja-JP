@@ -5,7 +5,7 @@ title: Sensei Machine Learning API を使用したパッケージ化されたレ
 type: Tutorial
 description: このチュートリアルでは、Sensei機械学習 API を使用して、エンジン（ユーザーインターフェイスのレシピとも呼ばれます）を作成します。
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 50%
@@ -41,7 +41,7 @@ ht-degree: 50%
 
 - `{DOCKER_URL}`：インテリジェントサービスの Docker イメージへの URL アドレス。
 
-このチュートリアルでは、[!DNL Platform] API を正しく呼び出すために、[Adobe Experience Platformへの認証 ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+このチュートリアルでは、[!DNL Experience Platform] API を正しく呼び出すために、[Adobe Experience Platformへの認証 ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
 - `{ORG_ID}`：組織の資格情報が、一意のAdobe Experience Platform統合で見つかりました。
@@ -49,7 +49,7 @@ ht-degree: 50%
 
 ## エンジンの作成
 
-エンジンは、/engines エンドポイントにPOSTリクエストを行うことで作成できます。 作成されたエンジンは、API リクエストの一部として含める必要がある、パッケージ化されたレシピファイルの形式に基づいて設定されます。
+エンジンは、/engines エンドポイントに POST リクエストを実行することで作成できます。 作成されたエンジンは、API リクエストの一部として含める必要がある、パッケージ化されたレシピファイルの形式に基づいて設定されます。
 
 ### Docker URL を使用したエンジンの作成 {#create-an-engine-with-a-docker-url}
 
@@ -176,7 +176,7 @@ curl -X POST \
 
 **応答**
 
-リクエストが成功した場合は、一意の ID （`id`）を含む、新しく作成されたエンジンの詳細を含むペイロードが返されます。 次の応答の例は、[!DNL Python] Engine 用です。 `executionType` キーと `type` キーは、指定されたPOSTに応じて変わります。
+リクエストが成功した場合は、一意の ID （`id`）を含む、新しく作成されたエンジンの詳細を含むペイロードが返されます。 次の応答の例は、[!DNL Python] Engine 用です。 `executionType` キーと `type` キーは、指定した POST に応じて変わります。
 
 ```json
 {

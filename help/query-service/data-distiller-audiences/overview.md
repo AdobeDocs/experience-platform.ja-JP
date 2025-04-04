@@ -2,9 +2,9 @@
 title: SQL を使用したオーディエンスの構築
 description: Adobe Experience Platformの Data Distillerで SQL オーディエンス拡張機能を使用して、SQL コマンドを使用してオーディエンスを作成、管理および公開する方法を説明します。 このガイドでは、プロファイルの作成、更新、削除、ファイルベースの宛先をターゲットにするためのデータ駆動型オーディエンス定義の使用など、オーディエンスのライフサイクルのすべての側面について説明します。
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ SQL オーディエンス拡張機能を使用して、既存のディメンシ�
 
 この SQL 拡張機能を使用すると、オーディエンスセグメントを定義する際にプロファイルに生のデータを必要としないので、オーディエンスを作成する機能が向上します。 この方法を使用して作成されたオーディエンスは、オーディエンスワークスペースに自動的に登録され、ファイルベースの宛先をさらにターゲット設定できます。
 
-![SQL オーディエンス拡張機能のワークフローを示すインフォグラフィック。 段階としては、SQL コマンドを使用してクエリサービスでオーディエンスを作成し、Platform UI で管理して、ファイルベースの宛先でアクティブ化する ](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png) が含まれます。
+![SQL オーディエンス拡張機能のワークフローを示すインフォグラフィック。 ステージには、SQL コマンドを使用してクエリサービスでオーディエンスを作成し、Experience Platform UI で管理し、ファイルベースの宛先でアクティブ化するなどが含まれます。](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 このドキュメントでは、Adobe Experience Platformの Data Distillerの SQL オーディエンス拡張機能を使用して、SQL コマンドを使用してオーディエンスを作成、管理および公開する方法について説明します。
 
@@ -203,7 +203,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### 自動オーディエンス登録と可用性 {#registration-and-availability}
 
-SQL 拡張機能を使用して作成されたオーディエンスは、オーディエンスワークスペースの Data Distiller[!UICONTROL  オリジン ] に自動的に登録されます。 登録すると、これらのオーディエンスをファイルベースの宛先でのターゲティングに使用できるようになり、セグメント化とターゲティング戦略が強化されます。 このプロセスには追加の設定は必要なく、オーディエンス管理を合理化します。 Platform UI 内でのオーディエンスの表示、管理、作成方法について詳しくは、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md) を参照してください。
+SQL 拡張機能を使用して作成されたオーディエンスは、オーディエンスワークスペースの Data Distiller[!UICONTROL  オリジン ] に自動的に登録されます。 登録すると、これらのオーディエンスをファイルベースの宛先でのターゲティングに使用できるようになり、セグメント化とターゲティング戦略が強化されます。 このプロセスには追加の設定は必要なく、オーディエンス管理を合理化します。 Experience Platform UI 内でのオーディエンスの表示、管理、作成の方法について詳しくは、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md) を参照してください。
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -289,9 +289,9 @@ Data Distiller オーディエンスは、Adobe Journey Optimizerでも使用で
 
 このドキュメントでは、データDistillerの SQL オーディエンス拡張機能を使用して、SQL コマンドを使用してオーディエンスを効果的に作成、管理および公開する方法について説明しました。 独自のビジネス要件に基づいてオーディエンス定義をカスタマイズし、様々な宛先でオーディエンスをアクティブ化して、マーケティング戦略とデータ駆動型の決定を最適化できるようになりました。
 
-次に、以下のドキュメントを参照して、Platform オーディエンス管理戦略をさらに開発および最適化してください。
+次に、Experience Platform Audience Management 戦略をさらに開発し最適化するために、次のドキュメントを参照してください。
 
 - **オーディエンスの評価を調べる**:[Adobe Experience Platformのオーディエンス評価方法 ](../../segmentation/home.md#evaluate-segments)：リアルタイム更新のためのストリーミングセグメント化、スケジュールに沿った処理またはオンデマンド処理のためのバッチセグメント化、Edge Networkでの即時評価のためのエッジセグメント化）について説明します。
-- **宛先との統合**:Platform の宛先 UI を使用して、[ オンデマンドでファイルをバッチ宛先に書き出す ](../../destinations/ui/export-file-now.md) 方法に関するガイドを参照してください。
+- **宛先との統合**:Experience Platform宛先 UI を使用して、[ オンデマンドでファイルをバッチ宛先に書き出す ](../../destinations/ui/export-file-now.md) 方法に関するガイドを参照してください。
 - **オーディエンスパフォーマンスの確認**：様々なチャネルにおける SQL 定義オーディエンスのパフォーマンスを分析します。 データインサイトを使用すると、オーディエンスの定義とターゲティング戦略を調整および改善できます。 Adobe Real-Time CDPで SQL クエリにアクセスしてオーディエンスインサイトに適応させる方法については、[ オーディエンスインサイト ](../../dashboards/insights/audiences.md) に関するドキュメントを参照してください。 その後、オーディエンスダッシュボードをカスタマイズして独自のインサイトを作成し、生のデータを実用的な情報に変換することで、これらのインサイトを効果的に視覚化し、より良い意思決定に使用できます。
 

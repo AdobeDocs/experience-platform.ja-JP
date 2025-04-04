@@ -2,9 +2,9 @@
 description: UI を使用してAdobe Analytics ソースコネクタを作成し、分類データをAdobe Experience Platformに取り込む方法を説明します。
 title: UI で、分類データのAdobe Analytics Source接続を作成します
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 02b5c5f963c21247adbb1d13114f92b22f8758de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 15%
 
 ---
@@ -23,21 +23,21 @@ ht-degree: 15%
 
 * [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platformには、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-Analytics Classifications ソースコネクタでは、使用前にデータをAdobe Analyticsの新しい分類インフラストラクチャに移行しておく必要があります。 データの移行状況を確認するには、Adobeアカウントチームにお問い合わせください。
+Analytics Classifications ソースコネクタでは、使用前にデータをAdobe Analyticsの新しい分類インフラストラクチャに移行しておく必要があります。 データの移行ステータスを確認するには、Adobe アカウントチームにお問い合わせください。
 
 ## 分類を選択
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-*Adobeアプリケーション* カテゴリで、**[!UICONTROL Adobe Analytics]** を選択してから、「**[!UICONTROL 設定]** を選択します。
+*Adobe アプリケーション* カテゴリで、「**[!UICONTROL Adobe Analytics]**」を選択し、次に「**[!UICONTROL 設定]**」を選択します。
 
 >[!TIP]
 >
 >ソースカタログ内のソースには、認証済みアカウントがない場合、「**[!UICONTROL 設定]**」オプションが表示されます。 アカウントが認証されると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![Experience PlatformUI のソースカタログで、Adobe Analytics ソースが選択された状態。](../../../../images/tutorials/create/classifications/catalog.png)
+![Experience Platform UI のソースカタログで、Adobe Analytics ソースが選択された状態。](../../../../images/tutorials/create/classifications/catalog.png)
 
 次に [!UICONTROL  分類 ] を選択し、Experience Platformに取り込む分類データセットを選択します。
 
@@ -59,7 +59,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## 次の手順
 
-このチュートリアルでは、分類データをExperience Platformに入れる Analytics classifications sata コネクタを作成しました。 [!DNL Analytics] と分類データについて詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、分類データをExperience Platformに取り込む Analytics classifications sata コネクタを作成しました。 [!DNL Analytics] と分類データについて詳しくは、次のドキュメントを参照してください。
 
 * [Adobe Analytics ソースコネクタの概要](../../../../connectors/adobe-applications/analytics.md)
 * [UI でのレポートスイートデータの Analytics ソース接続の作成](./analytics.md)

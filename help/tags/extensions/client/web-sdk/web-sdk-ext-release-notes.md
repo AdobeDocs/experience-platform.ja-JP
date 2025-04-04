@@ -2,16 +2,16 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2580'
-ht-degree: 74%
+source-wordcount: '2583'
+ht-degree: 72%
 
 ---
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
-このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK 自体の最新のリリースノートについては、[Platform Web SDK リリースノート](/help/web-sdk/release-notes.md)を参照してください。
+このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK自体の最新のリリースノートについては、[Experience Platform Web SDK リリースノート ](/help/web-sdk/release-notes.md) を参照してください。
 
 ## バージョン 2.29.0 - 2025年3月5日（PT）
 
@@ -337,7 +337,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 
 ## バージョン 2.2.0 - 2020年10月1日（PT）
 
-- お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Platform を呼び出す API が環境を認識するようになったので、編集にアクセスできるスキーマのみが表示されます。
+- お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Experience Platformを呼び出す API が環境を認識するようになったので、編集にアクセスできるスキーマのみが表示されます。
 - `identityMap` データ要素を使用する場合、名前空間はドロップダウンで事前設定されるので、手動で入力する必要がありません。
 - `xdmObject` データ要素の UI が改良されました。新しい UI では、オブジェクトに各項目を入力しなくても、入力されたフィールドを確認できます。
 
@@ -353,7 +353,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 - `sendEvent` アクションでのデータセット ID の上書きをサポートします。
 - タイプ `IdentityMap` の新しいデータ要素を追加します。これは、現在有効になっている XDM オブジェクトデータ要素と `setConsent` アクションに `identityMap` エントリを入力するために使用できます。
 - `setConsent` アクションで ID マップを渡す機能をサポートします。
-- XDM オブジェクトデータ要素での Platform サンドボックスの選択をサポートします。
+- XDM オブジェクトデータ要素でのExperience Platform サンドボックスの選択をサポートします。
 
 ## バージョン 1.0.0 - 2020年5月26日（PT）
 

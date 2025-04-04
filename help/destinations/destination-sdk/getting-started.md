@@ -2,9 +2,9 @@
 description: このページでは、Adobe Experience Platform Destination SDK を認証および使用開始する方法について説明します。 これには、Adobe I/O 認証資格情報、サンドボックス名および宛先オーサリングのアクセス制御権限を取得する方法についての説明も含まれています。
 title: Destination SDK の概要
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '594'
 ht-degree: 82%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 82%
 
 ## 用語 {#terminology}
 
-このガイドでは、組織やサンドボックスなど、Platform 固有の概念を使用します。 これらの用語の定義については ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)[Experience Platform用語集 } を参照してください。 この機能に直接関連する用語については ](/help/destinations/destination-sdk/glossary.md)[Destination SDK用語集 } を参照してください。
+このガイドでは、組織やサンドボックスなど、Experience Platform固有の概念を使用します。 これらの用語の定義については ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)Experience Platform用語集 } を参照してください。 [この機能に直接関連する用語については ](/help/destinations/destination-sdk/glossary.md)[Destination SDK用語集 } を参照してください。
 
 ## 必要な認証資格情報の取得 {#obtain-authentication-credentials}
 

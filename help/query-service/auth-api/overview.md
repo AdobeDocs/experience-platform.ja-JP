@@ -3,9 +3,9 @@ title: Data Distiller認証 API ガイド
 description: Data Distiller Authorization API を使用して、SQL を介した安全な接続のためにネットワークベースの IP 制限を適用する方法を説明します。 この API を使用して、Adobe Experience Platform データのデータアクセス制御を強化します。
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '425'
 ht-degree: 2%
 
 ---
@@ -24,13 +24,13 @@ Data Distiller Authorization API を使用して、IP ベースの制限を適�
 
 次の機能を使用すると、IP ベースのアクセス制限を定義し、アクセス試行を監視し、クエリサービスのネットワークセキュリティ設定をカスタマイズできます。
 
-- **ネットワークベースのデータアクセス制御を定義**：クエリサービスアクセスの許可される IP 範囲を指定します。 この制限事項は、特に SQL データベース接続に当てはまります。たとえば、Business Intelligence （BI） ツール、データベース クライアント、または JDBC などのプログラミング インターフェイスを使用して確立された接続などです。
+- **ネットワークベースのデータアクセス制御を定義**：クエリサービスアクセスの許可される IP 範囲を指定します。 この制限は、SQL データベース接続（Business Intelligence（BI）ツール、データベースクライアント、JDBC などのプログラミングインターフェイスを使用して確立された接続など）に特に当てはまります。
 - **包括的な監視とアラートの有効化**：拒否された接続を含むすべてのアクセス試行は、ログに記録され、[Adobe Experience Platform監査ログ ](../../landing/governance-privacy-security/audit-logs/overview.md) に送信されて、リアルタイムトラッキングが行われます。 この機能を使用して、アクセスパターンを監視し、潜在的なセキュリティ侵害を検出します。
 - **柔軟な IP 制限を設定**：許可する IP を、個々の IP ブロック形式と CIDR ブロック形式の両方で指定します。 これらの設定はサンドボックスごとに適用され、特定のセキュリティニーズに合わせてネットワーク制限を調整できます。
 
 ## 監査と監視の機能
 
-安全なデータアクセス手法をサポートするために、クエリサービスは、Experience Platformにアクセスまたはアクセスを試みるすべてのクライアント IP をログに記録します。 拒否された接続を含む監査イベントは、Platform 監査ログに送信されます。 これにより、次のことが可能になります。
+安全なデータアクセス手法をサポートするために、クエリサービスは、Experience Platformにアクセスまたはアクセスを試みるすべてのクライアント IP をログに記録します。 拒否された接続を含む監査イベントは、Experience Platform監査ログに送信されます。 これにより、次のことが可能になります。
 
 - **リアルタイム監視**: IP ベースのアクセスパターンを追跡して、コンプライアンスを確保します。
 - **権限のないアクセスに関するアラート**：権限のない IP からのアクセス試行を識別して応答します。

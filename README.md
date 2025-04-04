@@ -1,8 +1,8 @@
 ---
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 98%
+source-wordcount: '470'
+ht-degree: 95%
 
 ---
 # コンテンツの投稿
@@ -43,7 +43,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 ## Experience Platform ドキュメントチームへの問い合わせ
 
-上述の通り、アドビコミュニティのメンバーは問題を提出でき、提出された問題は適切な作者に割り当てられます。 アドビの従業員は、問題を送信するか、Experience Platform のドキュメントチームに直接問い合わせることができます。 特定の Platform 領域のリードライターを見つけるには、[Adobe Experience Platform のドキュメント wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation) を参照してください。
+上述の通り、アドビコミュニティのメンバーは問題を提出でき、提出された問題は適切な作者に割り当てられます。 アドビの従業員は、問題を送信するか、Experience Platform のドキュメントチームに直接問い合わせることができます。 特定のExperience Platform領域のリードライターを見つけるには、[Adobe Experience Platformのドキュメント wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation) を参照してください。
 
 ## ツールとセットアップ
 

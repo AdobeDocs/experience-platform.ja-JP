@@ -2,10 +2,10 @@
 title: UI でのMicrosoft SQL Server Source接続の作成
 description: Adobe Experience Platform UI を使用してMicrosoft SQL Server ソース接続を作成する方法を説明します。
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 45%
+source-wordcount: '466'
+ht-degree: 42%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 45%
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で [!DNL SQL Server] に接続するには、次の接続プロパティを指定する必要があります。
+[!DNL Experience Platform] で [!DNL SQL Server] に接続するには、次の接続プロパティを指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -36,7 +36,7 @@ ht-degree: 45%
 
 ## [!DNL SQL Server] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *Databases* カテゴリの下の [**[!DNL Microsoft SQL Server]**] を選択し、[**[!UICONTROL 設定]**] を選択します。
 
@@ -70,4 +70,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL SQL Server] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL SQL Server] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

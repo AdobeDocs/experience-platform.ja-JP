@@ -2,9 +2,9 @@
 title: ID グラフビューア
 description: ID グラフは、特定の顧客の異なる ID 間の関係のマップで、顧客が様々なチャネルでブランドとどのようにやり取りするかを視覚的に表現します。
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 6%
 
 ID グラフは、特定の顧客の異なる ID 間の関係のマップで、顧客が様々なチャネルでブランドとどのようにやり取りするかを視覚的に表現します。 すべての顧客 ID グラフは、顧客のアクティビティに応じて、Adobe Experience Platform ID サービスによってほぼリアルタイムで一括管理および更新されます。
 
-Platform ユーザーインターフェイスの ID グラフビューアを使用すると、スティッチされる顧客 ID とその方法を視覚化し、より深く理解できます。 このビューアを使用すると、グラフの様々な部分をドラッグおよび操作でき、ID 間の複雑な関係を調べたり、デバッグをより効率的に実行したり、情報の利用方法に関する透明性を高めたりできます。
+Experience Platform ユーザーインターフェイスの ID グラフビューアを使用すると、スティッチされる顧客 ID とその方法を視覚化し、より深く理解できます。 このビューアを使用すると、グラフの様々な部分をドラッグおよび操作でき、ID 間の複雑な関係を調べたり、デバッグをより効率的に実行したり、情報の利用方法に関する透明性を高めたりできます。
 
-次のドキュメントでは、Platform UI の ID グラフビューアにアクセスして使用する手順を説明します。
+次のドキュメントでは、Experience Platform UI の ID グラフビューアにアクセスして使用する手順を説明します。
 
 ## チュートリアルビデオ
 
@@ -38,9 +38,9 @@ ID グラフビューアを使用するには、関連する様々なAdobe Exper
 
 ## ID グラフビューアへのアクセス {#access-identity-graph-viewer}
 
-Platform UI で、左側のナビゲーションの **[!UICONTROL ID]** を選択したあと、ヘッダーのタブのリストから **[!UICONTROL ID グラフ]** を選択します。
+Experience Platform UI で、左側のナビゲーションの **[!UICONTROL ID]** を選択したあと、ヘッダーのタブのリストから **[!UICONTROL ID グラフ]** を選択します。
 
-![Experience PlatformUI の ID ワークスペース（ID グラフタブが選択されています） ](../images/graph-viewer/identity-graph.png)
+![Experience Platform UI の ID ワークスペース（ID グラフタブが選択されています） ](../images/graph-viewer/identity-graph.png)
 
 ID グラフを表示するには、ID 名前空間とそれに対応する値を指定して **[!UICONTROL 表示]** を選択します。
 
@@ -135,7 +135,7 @@ ID グラフビューアにアクセスすると、エラーが発生する場�
 
 ## 次の手順
 
-このドキュメントを読むことで、Platform UI で顧客の ID グラフを調べる方法を学びました。 Platform の ID について詳しくは、[ID サービスの概要 ](../home.md) を参照してください
+このドキュメントを読むことで、Experience Platform UI で顧客の ID グラフを調べる方法を学びました。 Experience Platformの ID について詳しくは、[ID サービスの概要 ](../home.md) を参照してください
 
 ## 変更ログ
 

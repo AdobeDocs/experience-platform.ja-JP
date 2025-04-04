@@ -3,9 +3,9 @@ keywords: Experience Platform；プロファイル；リアルタイム顧客プ
 title: 同意および環境設定データタイプ
 description: プライバシー、Personalization、マーケティング環境設定に対する同意データタイプは、Consent Management Platform （CMP）やその他のソースによってデータ操作から生成された顧客の権限と環境設定の収集をサポートするためのものです。
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 7a2b6c1033ad9e78b049857b9b4e6fc3708ed36c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2332'
+source-wordcount: '2334'
 ht-degree: 1%
 
 ---
@@ -38,13 +38,13 @@ ht-degree: 1%
 * **Personalizationの環境設定**：お客様に提供するエクスペリエンスをブランドによってどのようにパーソナライズすべきかに関する環境設定。
 * **マーケティング環境設定**：ブランドが様々なチャネルを通じて顧客に連絡できるようにするかどうかに関する環境設定。
 
-次のスクリーンショットは、データタイプの構造が Platform UI でどのように表現されるかを示しています。
+次のスクリーンショットは、Experience Platform UI でデータタイプの構造がどのように表現されるかを示しています。
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->XDM リソースを検索し、Platform UI でその構造を検査する手順については、への [XDM リソースの調査 ](../ui/explore.md) に関するガイドを参照してください。
+>XDM リソースを検索し、Experience Platform UI でその構造を調べる手順については、[XDM リソースの調査 ](../ui/explore.md) に関するガイドを参照してください。
 
 次の JSON は、[!UICONTROL  同意および環境設定 ] データタイプが処理できるデータのタイプの例を示しています。 これらの各フィールドの具体的な使用方法については、以降の節で説明します。
 
@@ -86,7 +86,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->顧客の同意データと環境設定データのマッピング方法を視覚化するために、Experience Platformで定義した XDM スキーマのサンプル JSON データを生成できます。 詳しくは、次のドキュメントを参照してください。
+>顧客の同意データと環境設定データのマッピング方法を視覚化するために、Experience Platformで定義する XDM スキーマのサンプル JSON データを生成できます。 詳しくは、次のドキュメントを参照してください。
 >
 >* [UI でのサンプルデータの生成 ](../ui/sample.md)
 >* [API でのサンプルデータの生成 ](../api/sample-data.md)
@@ -267,7 +267,7 @@ ht-degree: 1%
 
 ## 同意および環境設定の変更の処理
 
-お客様が web サイトに対する同意や環境設定を変更した場合は、変更内容を収集し、[Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md) を使用して直ちに適用する必要があります。 お客様がデータ収集をオプトアウトした場合、すべてのデータ収集は直ちに停止する必要があります。 顧客がパーソナライゼーションをオプトアウトする場合、訪問する次のページにはパーソナライゼーションが存在しないはずです。
+お客様が web サイトに対する同意や環境設定を変更した場合は、変更内容を収集し、[Adobe Experience Platform web SDK](../../web-sdk/commands/setconsent.md) を使用して直ちに適用する必要があります。 お客様がデータ収集をオプトアウトした場合、すべてのデータ収集は直ちに停止する必要があります。 顧客がパーソナライゼーションをオプトアウトする場合、訪問する次のページにはパーソナライゼーションが存在しないはずです。
 
 ## 付録 {#appendix}
 

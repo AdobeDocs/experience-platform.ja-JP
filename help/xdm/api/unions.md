@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 結合 API エンドポイント
 description: スキーマレジストリ API の/unions エンドポイントを使用すると、エクスペリエンスアプリケーションの XDM 結合スキーマをプログラムで管理できます。
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 39%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 39%
 
 和集合（または和集合ビュー）は、同じクラス（[!DNL XDM ExperienceEvent] または [!DNL XDM Individual Profile]）を共有し、ス [[!DNL Real-Time Customer Profile]](../../profile/home.md) ーマが有効になっているすべてのスキーマのフィールドを集計する、システム生成の読み取り専用スキーマです。
 
-このドキュメントでは、Schema Registry API で和集合を操作するための基本的な概念と、様々な操作のサンプル呼び出しを示しています。XDM の和集合に関する一般的な情報については、「[Basics of schema composition](../schema/composition.md#union)」の和集合に関する節を参照してください。
+このドキュメントでは、Schema Registry API で和集合を操作するための基本的な概念と、様々な操作のサンプル呼び出しを示しています。XDM の和集合に関する一般的な情報については、[スキーマ構成の基本](../schema/composition.md#union)の和集合に関する節を参照してください。
 
 ## 結合スキーマフィールド
 
@@ -31,13 +31,13 @@ ht-degree: 39%
 
 ### セグメントメンバーシップマップ
 
-`segmentMembership` マップには、セグメント定義の評価結果が格納されます。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。また、Platform に取 `segmentMembership` 込まれた事前評価済みオーディエンスを格納して、Adobe Audience Managerなどの他のソリューションと統合できます。 詳しくは、[API を使用したオーディエンスの作成 ](../../segmentation/tutorials/create-a-segment.md) に関するチュートリアルを参照してください。
+`segmentMembership` マップには、セグメント定義の評価結果が格納されます。 [Segmentation API](https://www.adobe.io/experience-platform-apis/references/segmentation/) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。`segmentMembership` た、Experience Platformに取り込まれた事前評価済みオーディエンスを格納して、Adobe Audience Managerなどの他のソリューションと統合できます。 詳しくは、[API を使用したオーディエンスの作成 ](../../segmentation/tutorials/create-a-segment.md) に関するチュートリアルを参照してください。
 
 ## 和集合のリストの取得 {#list}
 
 スキーマに `union` タグを設定すると、スキーマの基 [!DNL Schema Registry] となっているクラスの和集合に、スキーマが自動的に追加されます。 該当するクラスに和集合が存在しない場合は、新しい和集合が自動的に作成されます。 和集合の `$id` は、他の [!DNL Schema Registry] リソースの標準 `$id` と似ていますが、唯一の違いは、2 つのアンダースコアと「union」（`__union`）という単語が付加されていることです。
 
-`/tenant/unions` エンドポイントに対してGETリクエストをおこなうと、使用可能な結合のリストを表示できます。
+`/tenant/unions` エンドポイントに対してGET リクエストをおこなうと、使用可能な結合のリストを表示できます。
 
 **API 形式**
 
@@ -180,11 +180,11 @@ curl -X GET \
 
 ## 和集合メンバーシップのスキーマを有効にする {#enable}
 
-スキーマをそのクラスの和集合に含めるには、`union` タグをスキーマの `meta:immutableTags` 属性に追加する必要があります。 これを実現するには、`union` という単一の文字列値を持つ `meta:immutableTags` 配列を、当該のスキーマに追加するPATCHリクエストを行います。 詳しい例については、[ スキーマエンドポイントガイド ](./schemas.md#union) を参照してください。
+スキーマをそのクラスの和集合に含めるには、`union` タグをスキーマの `meta:immutableTags` 属性に追加する必要があります。 これを実現するには、`union` という単一の文字列値を持つ `meta:immutableTags` 配列を、当該のスキーマに追加するPATCH リクエストを行います。 詳しい例については、[ スキーマエンドポイントガイド ](./schemas.md#union) を参照してください。
 
 ## 和集合でのスキーマのリスト {#list-schemas}
 
-特定の結合の一部であるスキーマを確認するには、`/tenant/schemas` エンドポイントに対してGETリクエストを実行します。 `property` クエリパラメーターを使用すると、アクセス先の和集合があるクラスと同等の `meta:immutableTags` フィールドおよび `meta:class` を含むスキーマのみを返すようにレスポンスを設定できます。
+特定の結合の一部であるスキーマを確認するには、`/tenant/schemas` エンドポイントに対してGET リクエストを実行します。 `property` クエリパラメーターを使用すると、アクセス先の和集合があるクラスと同等の `meta:immutableTags` フィールドおよび `meta:class` を含むスキーマのみを返すようにレスポンスを設定できます。
 
 **API 形式**
 

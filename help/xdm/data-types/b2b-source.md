@@ -2,9 +2,9 @@
 title: B2B Source データタイプ
 description: B2B Source Experience Data Model （XDM）データタイプについて説明します。
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '237'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 文字列ベースの識別子のみに依存する場合、複数のシステム間で ID 間が重複する可能性があります。例えば、あるオポチュニティで 1 つの CRM システムに文字列 ID を指定しても、その ID が、まったく別のオポチュニティを参照する場合があります。 これにより、[ リアルタイム顧客プロファイル ](../../profile/home.md) でデータを結合する際に、データの競合が発生する可能性があります。
 
-[!UICONTROL B2B Source] データタイプを使用すると、エンティティの元の文字列 ID を使用し、それをソース固有のコンテキスト情報と組み合わせて、元のソースに関係なく、Platform システム内で完全に一意なままにすることができます。
+[!UICONTROL B2B Source] データタイプを使用すると、エンティティの元の文字列 ID を使用し、それをソース固有のコンテキスト情報と組み合わせて、元のソースに関係なく、Experience Platform システム内で完全に一意なままにすることができます。
 
 ![B2B Sourceの構造 ](../images/data-types/b2b-source.png)
 

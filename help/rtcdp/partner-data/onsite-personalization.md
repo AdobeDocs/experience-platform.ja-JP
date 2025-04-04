@@ -3,10 +3,10 @@ title: パートナー支援の訪問者認識を使用して、不明な訪問�
 description: パートナー支援による訪問者認識を使用して、パーソナライズされたオンサイトエクスペリエンスを訪問者に提供する方法を説明します。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 89%
+source-wordcount: '2676'
+ht-degree: 88%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 89%
 * 確率的に導出されたデータセットと確定的に確認された属性のどちらに基づいて、様々なチャネルやユースケースでパーソナライゼーションを快適に配信できるか。
 * 認証前の認識済み訪問者に対するエクスペリエンスは、認証後にどのように変更されるべきか。
 
-### 使用する UI 機能、プラットフォームコンポーネントおよび Experience Cloud 製品 {#ui-functionality-and-elements}
+### 使用する UI 機能、Experience Platform コンポーネントおよびExperience Cloud製品 {#ui-functionality-and-elements}
 
 このユースケースをうまく実装するには、Real-time Customer Data Platform や他の Experience Cloud ソリューションの複数の領域を使用する必要があります。これらすべての領域に必要な[属性ベースのアクセス制御権限](/help/access-control/abac/overview.md)があることを確認するか、必要な権限の付与をシステム管理者に依頼してください。
 
@@ -131,7 +131,7 @@ ht-degree: 89%
 
 UI の&#x200B;**[!UICONTROL データ収集]**&#x200B;セクションは、以下の画像のようになります。
 
-![Platform UI のデータ収集セクション。](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Experience Platform UI のデータ収集セクション。](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### データストリームを作成
 
@@ -259,7 +259,7 @@ XDM データの横にあるデータベースアイコンを選択し、`pageVi
 
 #### オーディエンスの作成とエッジセグメント化の設定
 
-Platform UI で、**[!UICONTROL 顧客]**/**[!UICONTROL オーディエンス]** に移動し、web サイトの訪問者をキャプチャするオーディエンスを作成します。
+Experience Platform UI で、**[!UICONTROL 顧客]**/**[!UICONTROL オーディエンス]** に移動し、web サイトの訪問者をキャプチャするオーディエンスを作成します。
 
 ![ オーディエンスに移動する方法の表示 ](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

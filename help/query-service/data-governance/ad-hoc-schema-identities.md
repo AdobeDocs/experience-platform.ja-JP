@@ -2,9 +2,9 @@
 title: アドホックデータセットでのプライマリ Id の設定
 description: Adobe Experience Platform クエリサービスでは、SQL ALTER TABLE コマンドを使用して、アドホックスキーマデータセットフィールドの ID またはプライマリ ID を直接設定できます。 この文書では、ALTER TABLE コマンドを使用してプライマリ ID またはセカンダリ ID を設定する方法について説明します。
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform クエリサービスでは、SQL `ALTER TABLE` コマ
 
 ## 制約を追加 {#add-constraints}
 
-`ALTER TABLE` コマンドを使用すると、データセット列にユーザーの ID としてラベルを付け、SQL を使用して関連メタデータを更新することで、そのラベルをプライマリ ID として使用できます。 これは、Platform UI を使用してスキーマから直接作成するのではなく、SQL を使用してデータセットを作成する場合に特に便利です。 コマンドを使用すると、Platform 内のデータ操作がデータ使用ポリシーに準拠していることを確認できます。
+`ALTER TABLE` コマンドを使用すると、データセット列にユーザーの ID としてラベルを付け、SQL を使用して関連メタデータを更新することで、そのラベルをプライマリ ID として使用できます。 これは、Experience Platform UI を使用してスキーマから直接作成するのではなく、SQL を使用してデータセットを作成する場合に特に便利です。 コマンドを使用すると、Experience Platform内のデータ操作がデータ使用ポリシーに準拠していることを確認できます。
 
 **例**
 

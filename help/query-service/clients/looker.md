@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；クエリサービス；Looker;looker;query service への接続；
+keywords: Experience Platform；ホーム；人気のトピック；Query Service;Query Service;Looker;Looker;Query Service への接続；
 solution: Experience Platform
 title: Looker をクエリサービスに接続
 description: このドキュメントでは、Looker とAdobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 7%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 7%
 - **[!DNL Username and Password]:** 使用するログイン資格情報。 ユーザー名は、`ORG_ID@AdobeOrg` の形式で入力します。
 - **SSL**: SSL を有効にして、ネットワーク全体で安全な接続を確保します。
 
-Looker をクエリサービスに接続するために必要な資格情報を見つけるには、Platform UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 **host**、**port**、**database**、**username** および **password** 資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。
+Looker をクエリサービスと連携させるために必要な資格情報を見つけるには、Experience Platform UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 **host**、**port**、**database**、**username** および **password** 資格情報の検索について詳しくは、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。
 
-![ 資格情報と期限切れになる資格情報がハイライト表示されているExperience Platformクエリワークスペースの「資格情報」ページ ](../images/clients/looker/query-service-credentials-page.png)
+![ 資格情報と期限切れになる資格情報がハイライト表示されているExperience Platform クエリワークスペースの「資格情報」ページ ](../images/clients/looker/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >

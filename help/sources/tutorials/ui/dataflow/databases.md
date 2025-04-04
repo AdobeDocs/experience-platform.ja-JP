@@ -3,18 +3,18 @@ keywords: Experience Platform；ホーム；人気のトピック；データベ
 solution: Experience Platform
 title: UI でデータベースのSourceを使用してデータフローを作成する
 type: Tutorial
-description: データフローは、ソースから Platform データセットにデータを取得して取り込む、スケジュールされたタスクです。 このチュートリアルでは、Platform UI を使用してデータベースソースのデータフローを作成する手順を説明します。
+description: データフローは、ソースからExperience Platform データセットにデータを取得して取り込む、スケジュールされたタスクです。 このチュートリアルでは、Experience Platform UI を使用してデータベースソースのデータフローを作成する手順を説明します。
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1569'
-ht-degree: 41%
+source-wordcount: '1576'
+ht-degree: 40%
 
 ---
 
 # UI のデータベースソースを使用したデータフローの作成
 
-データフローは、ソースからAdobe Experience Platformのデータセットにデータを取得して取り込む、スケジュールされたタスクです。 このチュートリアルでは、Platform UI を使用してデータベースソースのデータフローを作成する手順を説明します。
+データフローは、ソースからAdobe Experience Platformのデータセットにデータを取得して取り込む、スケジュールされたタスクです。 このチュートリアルでは、Experience Platform UI を使用してデータベースソースのデータフローを作成する手順を説明します。
 
 >[!NOTE]
 >
@@ -24,9 +24,9 @@ ht-degree: 41%
 
 ## はじめに
 
-このチュートリアルでは、Platform の次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../home.md)：Platform を使用すると、様々なソースからデータを取り込みながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ ソース ](../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [[!DNL Experience Data Model (XDM)] システム](../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
@@ -86,7 +86,7 @@ ht-degree: 41%
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../data-prep/ui/mapping.md) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../data-prep/ui/mapping.md) を参照してください。
 
 ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 
@@ -140,7 +140,7 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 ## 次の手順
 
-このチュートリアルでは、データベースソースから Platform にデータを取り込むためのデータフローを正常に作成しました。 [!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Platform] サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、データベースソースからExperience Platformにデータを取り込むためのデータフローを正常に作成しました。 [!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Experience Platform] サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [[!DNL Real-Time Customer Profile] 概要](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 概要](../../../../data-science-workspace/home.md)

@@ -2,10 +2,10 @@
 description: このページでは、/testing/destinationInstance API エンドポイントを使用して、テスト結果の完全な詳細を表示する方法について説明します。この API エンドポイントは、データフローを監視するためのフローサービス API を使用する際に取得するのと同じ結果を返します。
 title: 詳細なアクティベーション結果の表示
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 100%
+source-wordcount: '547'
+ht-degree: 92%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 100%
 
 * Destination SDK で作成した既存のファイルベースの宛先があり、[宛先カタログ](../../../ui/destinations-workspace.md)で確認できる。
 * Experience Platform UI で、宛先に対して少なくとも 1 つのアクティベーションフローを作成している。
-* API リクエストを成功させるには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。Platform UI で宛先との接続を参照する際に、URL から、API 呼び出しで使用する必要がある宛先インスタンス ID を取得します。
+* API リクエストを成功させるには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。Experience Platform UI で宛先との接続を参照する際に、URL から、API 呼び出しで使用する必要がある宛先インスタンス ID を取得します。
 
   ![URL から宛先インスタンス ID を取得する方法を示す UI 画像。](../../assets/testing-api/get-destination-instance-id.png)
 * 以前に[宛先設定をテスト済み](file-based-destination-testing-api.md)で、`results` プロパティを含む、有効な API 応答を受信している。この `results` 値を使用して、より詳細に宛先をテストします。
@@ -213,7 +213,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順
 

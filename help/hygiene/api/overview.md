@@ -3,9 +3,9 @@ title: データハイジーン API ガイド
 description: Adobe Experience Platform で顧客の保存した個人データをプログラムで修正または削除する方法を説明します。
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '446'
 ht-degree: 69%
 
 ---
@@ -44,7 +44,7 @@ Data Hygiene API を呼び出すには、まず認証資格情報を収集する
 
 >[!IMPORTANT]
 >
->レコードの削除リクエストは、**Adobeヘルスケアシールド** を購入した組織でのみ利用できます。
+>レコードの削除リクエストは、**Adobe Healthcare Shield** を購入した組織でのみ利用できます。
 >
 >
 >レコードの削除は、データクレンジング、匿名データの削除、またはデータの最小化のために使用されます。これらは、EU 一般データ保護規則（GDPR）などのプライバシー規制に関するデータサブジェクト権利リクエスト（コンプライアンス）に対して使用するためのものでは&#x200B;**ありません**。コンプライアンスに関するユースケースについて詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) を参照してください。
@@ -57,4 +57,4 @@ Data Hygiene API を使用すると、1 つまたはすべてのデータセッ�
 
 ## 次の手順
 
-このガイドでは、API 呼び出しを使用したデータライフサイクルリクエストの管理方法について説明しました。 Platform UI でこれらのアクションを実行する方法について詳しくは、[ データライフサイクル UI ガイド ](../ui/overview.md) を参照してください。
+このガイドでは、API 呼び出しを使用したデータライフサイクルリクエストの管理方法について説明しました。 Experience Platform UI でこれらのアクションを実行する方法について詳しくは、[ データライフサイクル UI ガイド ](../ui/overview.md) を参照してください。

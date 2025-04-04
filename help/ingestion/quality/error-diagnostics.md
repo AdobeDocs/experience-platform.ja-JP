@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ取得エラー診断
 description: このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理に関する情報と、部分的なバッチ取り込みタイプのリファレンスを提供します。
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 36%
@@ -13,7 +13,7 @@ ht-degree: 36%
 
 # データ取得エラー診断
 
-Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチ取り込みを使用すると、様々なファイルタイプ（CSV など）でデータを挿入できます。または、ストリーミング取り込みを使用すると、ストリーミングエンドポイントを使用してリアルタイムにデータを [!DNL Platform] に挿入できます。
+Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチ取り込みを使用すると、様々なファイルタイプ（CSV など）でデータを挿入できます。または、ストリーミング取り込みを使用すると、ストリーミングエンドポイントを使用してリアルタイムにデータを [!DNL Experience Platform] に挿入できます。
 
 このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理に関する情報と、部分的なバッチ取り込みタイプのリファレンスを提供します。
 
@@ -30,23 +30,23 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Schema Registry] に属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Schema Registry] に属するリソースを含む [!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 ## エラー診断のダウンロード {#download-diagnostics}
 
-Adobe Experience Platformを使用すると、入力ファイルのエラー診断をダウンロードできます。 Diagnostics は、[!DNL Platform] 以内に最大 30 日間保持されます。
+Adobe Experience Platformを使用すると、入力ファイルのエラー診断をダウンロードできます。 Diagnostics は、[!DNL Experience Platform] 以内に最大 30 日間保持されます。
 
 ### 入力ファイルのリスト {#list-files}
 
@@ -145,7 +145,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 ### ステータスの確認 {#check-status}
 
-取り込まれたバッチのステータスを確認するには、GETリクエストのパスにバッチの ID を指定する必要があります。 この API 呼び出しの使用について詳しくは、[ カタログエンドポイントガイド ](../../catalog/api/list-objects.md) を参照してください。
+取り込まれたバッチのステータスを確認するには、GET リクエストのパスにバッチの ID を指定する必要があります。 この API 呼び出しの使用について詳しくは、[ カタログエンドポイントガイド ](../../catalog/api/list-objects.md) を参照してください。
 
 **API 形式**
 

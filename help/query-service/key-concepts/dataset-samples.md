@@ -2,10 +2,10 @@
 title: データセットのサンプル
 description: クエリサービスのサンプルデータセットを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。このガイドでは、近似クエリ処理のサンプルを管理する方法について説明します
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 96%
+source-wordcount: '633'
+ht-degree: 94%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform クエリサービスは、近似クエリ処理機能
 
 >[!NOTE]
 >
->Platform にログインするたびにセッションフラグを有効にする必要があります。
+>Experience Platformにログインするたびにセッションフラグを有効にする必要があります。
 
 ![「SET aqp=true;」コマンドがハイライト表示されたクエリエディター。](../images/key-concepts/set-session-flag.png)
 

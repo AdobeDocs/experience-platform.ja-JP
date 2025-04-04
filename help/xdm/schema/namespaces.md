@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；スキーマ；xdm;experience data model；名前空間；名前空間；互換モード；xed;
+keywords: Experience Platform；ホーム；人気のトピック；スキーマ；スキーマ；xdm;experience data model；名前空間；名前空間；互換モード；xed;
 solution: Experience Platform
 title: エクスペリエンスデータモデル（XDM）の名前空間
 description: エクスペリエンスデータモデル（XDM）の名前空間を使用して、スキーマを拡張し、様々なスキーマコンポーネントが統合されたときにフィールドの競合を防ぐ方法について説明します。
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 ### 標準 XDM {#standard}
 
-標準 XDM 構文を使用すると、スキーマでの名前空間の表現方法（[Adobe Experience Platformでの名前空間の翻訳方法 ](#compatibility) など）に関するインサイトを得ることができます。
+標準 XDM 構文は、スキーマでの名前空間の表現方法（[Adobe Experience Platformでの名前空間の翻訳方法 ](#compatibility) など）を示すinsightを提供します。
 
 標準 XDM では、[JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) 構文を使用して名前空間をフィールドに割り当てます。 この名前空間は、URI の形式（`xdm` 名前空間の `https://ns.adobe.com/xdm` など）、またはスキーマの `@context` 属性に設定される短縮形のプレフィックスとして提供されます。
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 ### 互換性モード {#compatibility}
 
-Adobe Experience Platformでは、XDM スキーマは、JSON-LD 構文を使用して名前空間を表さない [ 互換モード ](../api/appendix.md#compatibility) 構文で表されます。 代わりに、Platform は名前空間を親フィールド（アンダースコアで始まる）に変換し、その下にフィールドをネストします。
+Adobe Experience Platformでは、XDM スキーマは、JSON-LD 構文を使用して名前空間を表さない [ 互換モード ](../api/appendix.md#compatibility) 構文で表されます。 代わりに、Experience Platformは（アンダースコアで始まる）名前空間を親フィールドに変換し、その下にフィールドをネストします。
 
 例えば、標準 XDM `repo:createdDate` は `_repo.createdDate` に変換され、互換性モードでは次の構造で表示されます。
 

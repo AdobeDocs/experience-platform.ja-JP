@@ -2,10 +2,10 @@
 title: 設定済みのダッシュボードを表示
 description: 組織の設定済みダッシュボードを Experience Platform UI に一覧表示します。
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 100%
+source-wordcount: '204'
+ht-degree: 77%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 組織で設定したダッシュボードを表示するには、左側のナビゲーションで&#x200B;**[!UICONTROL ダッシュボード]**&#x200B;を選択し、「**[!UICONTROL 参照]**」タブを選択します。
 
-Platform インスタンスで使用可能なすべてのダッシュボードの一覧が、「[!UICONTROL 参照]」タブの下に表示されます。 これには、組織が作成し、サードパーティのアプリケーションを通じて設定された統合ダッシュボードが含まれます。
+Experience Platform インスタンスで使用可能なすべてのダッシュボードの一覧が、「[!UICONTROL  参照 ] タブの下に表示されます。 これには、組織が作成し、サードパーティのアプリケーションを通じて設定された統合ダッシュボードが含まれます。
 
 ![UI のダッシュボードセクション内の「参照」タブ。](./images/inventory/browse-tab.png)
 
@@ -23,7 +23,7 @@ Platform インスタンスで使用可能なすべてのダッシュボード�
 
 ![ダッシュボード名がハイライト表示された「参照」タブ。](./images/inventory/dashboard-name.png)
 
-選択すると、Platform UI または完全に統合されたアプリケーションワークスペースでダッシュボードが開きます。ユーザーは必要な資格情報を使用してログインする必要があります。
+選択すると、Experience Platform UI または完全統合されたアプリケーションワークスペースでダッシュボードが開きます。ユーザーは必要な資格情報を使用してログインする必要があります。
 
 ## カスタムダッシュボードの作成
 

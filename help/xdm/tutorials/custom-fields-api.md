@@ -2,10 +2,10 @@
 title: Schema Registry API での XDM フィールドの定義
 description: Schema Registry API でカスタム Experience Data Model （XDM）リソースを作成する際に様々なフィールドを定義する方法を説明します。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 1%
+source-wordcount: '1189'
+ht-degree: 2%
 
 ---
 
@@ -368,7 +368,7 @@ XDM は、このストレージヒントの使用に次の制限を設けます�
 * [Adobe Experience Platform クエリサービスからの応答時間が ](../../query-service/home.md)1 億件のレコードに対して 3 秒から 10 秒に短縮されます。
 * マップのキー数は 16 未満にする必要があります。そうしないと、さらに低下する可能性があります。
 
-Platform ユーザーインターフェイスには、マップタイプのフィールドのキーを抽出する方法に制限もあります。 オブジェクトタイプのフィールドは展開できますが、マップは代わりに単一のフィールドとして表示されます。
+Experience Platform ユーザーインターフェイスには、マップタイプのフィールドのキーを抽出する方法に制限もあります。 オブジェクトタイプのフィールドは展開できますが、マップは代わりに単一のフィールドとして表示されます。
 
 ## 次の手順
 

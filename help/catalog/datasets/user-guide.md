@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データセット UI ガイド
 description: Adobe Experience Platform ユーザーインターフェイスでデータセットを操作する際に一般的なアクションを実行する方法について説明します。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4108'
 ht-degree: 12%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 12%
 * [ データセット ](overview.md):[!DNL Experience Platform] でのデータ永続性を確保するためのストレージと管理の構成体。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
-   * [ スキーマエディター ](../../xdm/tutorials/create-schema-ui.md):[!DNL Platform] ユーザーインターフェイス内の [!DNL Schema Editor] を使用して独自のカスタム XDM スキーマを作成する方法を説明します。
+   * [ スキーマエディター ](../../xdm/tutorials/create-schema-ui.md):[!DNL Experience Platform] ユーザーインターフェイス内の [!DNL Schema Editor] を使用して独自のカスタム XDM スキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイム顧客プロファイルを提供します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：顧客データの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
@@ -57,7 +57,7 @@ ht-degree: 12%
 
 [!DNL Experience Platform] UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択して、**[!UICONTROL データセット]** ダッシュボードを開きます。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが準拠するスキーマ、最新の取得実行のステータスなど）が表示されます。
 
-![ 左側のナビゲーションバーでデータセット項目がハイライト表示された Platform UI。](../images/datasets/user-guide/browse-datasets.png)
+![ 左側のナビゲーションバーでデータセット項目がハイライト表示されたExperience Platform UI。](../images/datasets/user-guide/browse-datasets.png)
 
 [!UICONTROL  参照 ] タブからデータセットの名前を選択して、その **[!UICONTROL データセットアクティビティ]** 画面にアクセスし、選択したデータセットの詳細を確認します。 「アクティビティ」タブには、消費されるメッセージの割合を視覚化したグラフと、成功および失敗したバッチのリストが含まれます。
 
@@ -168,7 +168,7 @@ ht-degree: 12%
 
 タグをデータセットに追加したら、対応するタグに基づいてデータセットをフィルタリングできます。 詳しくは、[ タグでデータセットをフィルターする ](#enable-profile) 方法に関する節を参照してください。
 
-検出と分類を容易にするためにビジネスオブジェクトを分類する方法について詳しくは、[ メタデータ分類の管理 ](../../administrative-tags/ui/managing-tags.md) に関するガイドを参照してください。 このガイドでは、適切な権限を持つユーザーが、事前定義済みのタグを作成し、カテゴリに割り当て、Platform UI で関連するすべての CRUD 操作を管理する方法について説明します。
+検出と分類を容易にするためにビジネスオブジェクトを分類する方法について詳しくは、[ メタデータ分類の管理 ](../../administrative-tags/ui/managing-tags.md) に関するガイドを参照してください。 このガイドでは、適切な権限を持つユーザーがExperience Platform UI で事前定義済みタグを作成し、カテゴリに割り当て、関連するすべての CRUD 操作を管理する方法について説明します。
 
 ### （Beta） Set data retention policy {#data-retention-policy}
 
@@ -176,7 +176,7 @@ ht-degree: 12%
 > 
 >データ保持設定は現在ベータ版で、一部の組織のみが **限定リリース** で利用できます。 お使いの UI が、以下に説明する機能を反映していない場合があります。
 
-[!UICONTROL  データセット ] ワークスペースの [!UICONTROL  参照 ] タブのインラインアクションメニューを使用して、データセットの有効期限と保持設定を管理します。 この機能を使用して、データをデータレイクおよびプロファイルストアに保持する期間を設定できます。 有効期限は、データが Platform に取り込まれた日時と、設定した保持期間に基づきます。
+[!UICONTROL  データセット ] ワークスペースの [!UICONTROL  参照 ] タブのインラインアクションメニューを使用して、データセットの有効期限と保持設定を管理します。 この機能を使用して、データをデータレイクおよびプロファイルストアに保持する期間を設定できます。 有効期限は、データがExperience Platformに取り込まれた日時と、設定された保持期間に基づきます。
 
 >[!TIP]
 >
@@ -419,7 +419,7 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 ## 次の手順
 
-このユーザーガイドでは、[!DNL Experience Platform] ユーザーインターフェイスでデータセットを操作する際に一般的なアクションを実行する手順を説明しました。 データセットに関する一般的な [!DNL Platform] ワークフローの実行手順については、次のチュートリアルを参照してください。
+このユーザーガイドでは、[!DNL Experience Platform] ユーザーインターフェイスでデータセットを操作する際に一般的なアクションを実行する手順を説明しました。 データセットに関する一般的な [!DNL Experience Platform] ワークフローの実行手順については、次のチュートリアルを参照してください。
 
 * [API を使用したデータセットの作成](create.md)
 * [Data Access API を使用したデータセットデータのクエリ](../../data-access/home.md)

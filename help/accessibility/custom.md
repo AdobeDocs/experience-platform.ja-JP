@@ -4,10 +4,10 @@ title: Experience Platform のカスタムアクセシビリティソリュー�
 type: Documentation
 description: Adobe Experience Platform ユーザーインターフェイス内のカスタムアクセシビリティソリューションについて詳しく説明します。
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 92%
+source-wordcount: '1664'
+ht-degree: 89%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform は、あらゆるタイプのユーザーのニーズ
 
 Experience Platform ユーザーインターフェイスは、通常のテキスト、グラフィックおよび UI コンポーネントに必要なコントラスト比を満たしています。ユーザーインターフェイスの色も、視覚障害を持つユーザーを含むすべてのユーザーのアクセシビリティをサポートするように選択されています。
 
-Platform では、ポインターでクリックやアクション起動が可能な UI 要素を、キーボードを使用して操作することもできます。これには、左側のナビゲーション、ビデオプレーヤー、テーブルなどが含まれます。
+では、ポインターでクリックや操作が可能な UI 要素を、キーボードを使用して操作することもできます。 これには、左側のナビゲーション、ビデオプレーヤー、テーブルなどが含まれます。
 
 Experience Platform は、Web Content Accessibility Guidelines 2.1 Level A および Level AA と Web Accessibility Initiative - Accessible Rich Internet Applications（WAI-ARIA）Web 標準を含む、国際的なアクセシビリティ標準に適合するよう努めています。
 
@@ -41,13 +41,13 @@ Experience Platform UI の左側のナビゲーションはキーボードで操
 
 ![Experience Platform の左側のナビゲーションで「ソース」を選択した状態。](images/left-navigation-sources.png)
 
-Platform 内の一部の機能は、すべてのユーザーに対して有効になっているわけではありません。これらの項目はナビゲーションに表示されますが、選択できません。 キーボードを使用してナビゲーションを行う場合、これらの項目は矢印によるナビゲーション中にスキップされ、 **Enter（Return）** キーを使用して選択することはできません。
+Experience Platform内の一部の機能は、すべてのユーザーに対して有効になっているわけではありません。 これらの項目はナビゲーションに表示されますが、選択できません。 キーボードを使用してナビゲーションを行う場合、これらの項目は矢印によるナビゲーション中にスキップされ、 **Enter（Return）** キーを使用して選択することはできません。
 
 ![Experience Platform の左側のナビゲーションのうち、ユーザーに対して有効になっていないセクションは選択できません。](images/left-navigation-sections-disabled.png)
 
 ## 埋め込みビデオダイアログ
 
-使用可能なビデオリンクをキーボードナビゲーションでハイライト表示して選択することにより、Experience Platform 内でビデオを視聴できます。この場合、Platform UI 内で埋め込みビデオダイアログが開きます。
+使用可能なビデオリンクをキーボードナビゲーションでハイライト表示して選択することにより、Experience Platform 内でビデオを視聴できます。Experience Platform UI 内で埋め込みビデオダイアログが開きます。
 
 ![選択した要素の周囲に青い境界線を表示してフォーカスの適用を明示。](images/profile-overview-tab.png)
 

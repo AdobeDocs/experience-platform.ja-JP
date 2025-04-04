@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年9月
 description: Adobe Experience Platform の 2022年9月のリリースノート。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2762'
-ht-degree: 99%
+source-wordcount: '2774'
+ht-degree: 89%
 
 ---
 
@@ -35,14 +35,14 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 >
 >属性ベースのアクセス制御は、2022年10月から有効になります。 早期導入をご希望の場合は、アドビ担当者にお問い合わせください。
 
-属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platform の機能です。ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定の Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
+属性ベースのアクセス制御は、プライバシーを重視するブランドが、ユーザーアクセスをより柔軟に管理できるようにする、Adobe Experience Platform の機能です。ユーザーの役割に、スキーマフィールドやセグメントなどの個々のオブジェクトを割り当てることができます。 この機能を使用すると、組織内の特定のExperience Platform ユーザーに対する個々のオブジェクトへのアクセスを許可または取り消すことができます。
 
-属性ベースのアクセス制御により、組織の管理者は、すべての Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、およびその他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
+属性ベースのアクセス制御により、組織の管理者は、すべてのExperience Platform ワークフローとリソースにわたって、機密性の高い個人データ（SPD）、個人を特定できる情報（PII）、およびその他のカスタマイズされた種類のデータへのユーザーのアクセスを制御できます。 管理者は、特定のフィールドと、それらのフィールドに対応するデータにのみアクセスできるユーザーの役割を定義できます。
 
 | 機能 | 説明 |
 | --- | --- |
 | 属性ベースのアクセス制御 | 属性ベースのアクセス制御を使用すると、エクスペリエンスデータモデル（XDM）スキーマフィールドやセグメントに、組織またはデータの使用範囲を定義するラベルを付けることができます。同時に、管理者は、ユーザーと役割の管理インターフェイスを使用して、XDM スキーマフィールドやセグメントをカバーするアクセスポリシーを定義し、ユーザーまたはユーザーのグループ（内部、外部、またはサードパーティのユーザー）に与えるアクセスをうまく管理できます。詳しくは、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。 |
-| 権限 | 権限は、管理者がユーザーの役割およびアクセスポリシーを定義し、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できる、Experience Cloud の領域です。権限を使用すると、役割の作成と管理、これらの役割に必要なリソース権限の割り当て、ポリシーを作成してラベルを活用し、特定の Platform リソースにアクセスできるユーザーの役割を定義できます。 また、権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。詳しくは、[権限 UI ガイド](../../access-control/abac/ui/browse.md)を参照してください。 |
+| 権限 | 権限は、管理者がユーザーの役割およびアクセスポリシーを定義し、製品アプリケーション内の機能およびオブジェクトのアクセス権限を管理できる、Experience Cloud の領域です。権限を通じて、役割の作成と管理、これらの役割に必要なリソース権限の割り当て、ポリシーを作成してラベルを活用し、特定のExperience Platform リソースにアクセスできるユーザーの役割を定義できます。 また、権限では、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。詳しくは、[権限 UI ガイド](../../access-control/abac/ui/browse.md)を参照してください。 |
 
 属性ベースのアクセス制御の詳細については、[属性ベースのアクセス制御の概要](../../access-control/abac/overview.md)を参照してください。属性ベースのアクセス制御ワークフローの包括的なガイドについては、[属性ベースのアクセス制御エンドツーエンドガイド](../../access-control/abac/end-to-end-guide.md)を参照してください。
 
@@ -84,7 +84,7 @@ Experience Platform を使用すると、様々なサービスおよび機能に
 
 {style="table-layout:auto"}
 
-Platform の監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、[監査ログの概要](../../landing/governance-privacy-security/audit-logs/overview.md)を参照してください。
+Experience Platformの監査ログで追跡される様々なリソース固有のイベントタイプについて詳しくは、[ 監査ログの概要 ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -107,16 +107,16 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| Platform UI での左ナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）は、カテゴリ&#x200B;**[!UICONTROL データ収集]**&#x200B;下の Experience Platform の左ナビゲーションからも利用できるようになりました。これにより、Platform でデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
+| Experience Platform UI での左側のナビゲーション統合 | 以前はデータ収集 UI 専用であったすべての機能（タグ、イベント転送、データストリームなど）は、カテゴリ&#x200B;**[!UICONTROL データ収集]**&#x200B;下の Experience Platform の左ナビゲーションからも利用できるようになりました。これにより、Experience Platformでデータ収集機能を使用する際に、UI を切り替える必要がなくなります。 |
 | タグとイベント転送におけるユーザー属性 | タグとイベント転送で使用可能な[!UICONTROL プロパティ]を一覧表示すると、一覧表示された各プロパティが最終更新日時と、更新を行ったユーザーが表示されるようになりました。 |
 | イベント転送用 [[!DNL Snap Conversions API] 拡張機能](https://exchange.adobe.com/apps/ec/108550) | [イベント転送](../../tags/ui/event-forwarding/overview.md)拡張機能を使用して、[!DNL Snapchat Conversions API] にデータを送信できるようになりました。認証方法と API の使用方法について詳しくは、[[!DNL Snapchat Marketing API] ドキュメント](https://marketingapi.snapchat.com/docs/conversion.html)を参照してください。 |
-| [Web SDK の User-Agent Client Hints](/help/web-sdk/use-cases/client-hints.md) | Web SDK で [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) がサポートされるようになりました。 Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
+| [Web SDKの User-Agent Client Hints](/help/web-sdk/use-cases/client-hints.md) | Web SDKで [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) がサポートされるようになりました。 Client Hints は、web サイト所有者に、[!DNL User-Agent] 文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。 |
 | [Web SDK のページごとの移行](../../web-sdk/home.md#migrating-to-web-sdk) | 既存の web プロパティを、[!DNL at.js] などの他の Experience Cloud ライブラリから Web SDK に一度に 1 ページずつ移行できるようになりました。これにより、すべてのページを一度に移行する必要なく、Web SDK の移行に対する段階的なアプローチを可能にします。 |
 | [[!DNL Adobe Journey Optimizer] によるデータストリームのサポート](../../datastreams/overview.md#aep) | Adobe Experience Platform のデータストリーム用サービスでは、[!DNL Adobe Journey Optimizer] がサポートされるようになりました。このオプションでは、[!DNL Adobe Journey Optimizer] で web およびアプリベースのインバウンドチャネルを使用できます。 |
 
 {style="table-layout:auto"}
 
-Platform のデータ収集について詳しくは、[データ収集の概要](../../collection/home.md)を参照してください。
+Experience Platformのデータ収集について詳しくは、[ データ収集の概要 ](../../collection/home.md) を参照してください。
 
 ## [!DNL Destinations] {#destinations}
 
@@ -155,7 +155,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 列挙と推奨値の UI のサポート | Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるよう、データの検証を有効にする列挙に加えて、標準またはカスタム文字列フィールドに[推奨値を追加または削除](../../xdm/ui/fields/enum.md)ができるようになりました。 |
+| 列挙と推奨値の UI のサポート | Experience Platform ユーザーがセグメントの作成時に、わかりやすい値のリストから選択できるよう、データの検証を有効にする列挙に加えて、標準またはカスタム文字列フィールドに対して [ 推奨値を追加または削除 ](../../xdm/ui/fields/enum.md) ができるようになりました。 |
 
 **新しい XDM コンポーネント**
 
@@ -190,7 +190,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
 
 ## ID サービス {#identity-service}
 
@@ -214,7 +214,7 @@ ID サービスの詳細については、[ID サービスの概要](../../ident
 
 | 機能 | 説明 |
 | --- | --- |
-| アラートサブスクリプション API | Adobe Experience Platform クエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを受け取ることができます。アラートは、メール、Platform UI 内またはその両方で受け取ることができます。現在、クエリアラートは、[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) を使用してのみ受け取ることができます。 |
+| アラートサブスクリプション API | Adobe Experience Platform クエリサービスを使用すると、アドホッククエリとスケジュールされたクエリの両方でアラートを受け取ることができます。アラートは、メール、Experience Platform UI 内またはその両方で受信できます。 現在、クエリアラートは、[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) を使用してのみ受け取ることができます。 |
 | データセットのサンプル | クエリサービスのデータセットサンプルを使用すると、クエリの精度を犠牲にする代わりに、処理時間を大幅に短縮し、ビッグデータに関する探索的なクエリを実行できます。詳しくは、[データセットサンプルに関するガイド](../../query-service/key-concepts/dataset-samples.md)を参照してください。 |
 
 [!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
@@ -223,7 +223,7 @@ ID サービスの詳細については、[ID サービスの概要](../../ident
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
@@ -231,7 +231,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| Audience Manager セグメント母集団がリアルタイム顧客プロファイルに与える影響 | サイズの大きい Audience Manager セグメント母集団の取り込みは、Audience Manager ソースを使用して初めて Platform に Audience Manager セグメントを送信する際に、合計プロファイル数に直接影響します。つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えるプロファイル数が発生する可能性があります。詳しくは、[Audience Manager ソースの概要](../../sources/connectors/adobe-applications/audience-manager.md)を参照してください。ライセンスの使用方法については、[ライセンス使用状況ダッシュボードの使用](../../dashboards/guides/license-usage.md)に関するドキュメントを参照してください。 |
+| Audience Manager セグメント母集団がリアルタイム顧客プロファイルに与える影響 | サイズの大きいAudience Manager セグメント母集団の取り込みは、Audience Manager ソースを使用して初めてAudience Manager セグメントをExperience Platformに送信する際に、合計プロファイル数に直接影響します。 つまり、すべてのセグメントを選択すると、ライセンス使用権限を超えるプロファイル数が発生する可能性があります。詳しくは、[Audience Manager ソースの概要](../../sources/connectors/adobe-applications/audience-manager.md)を参照してください。ライセンスの使用方法については、[ライセンス使用状況ダッシュボードの使用](../../dashboards/guides/license-usage.md)に関するドキュメントを参照してください。 |
 | Adobe Campaign Managed Cloud Service のサポート | Adobe Campaign Managed Cloud Service ソースを使用して、Adobe Campaign v8.4 の配信およびトラッキングログのデータを Experience Platform に取り込みます。詳しくは、[UI での Adobe Campaign Managed Cloud Service ソース接続の作成](../../sources/tutorials/ui/create/adobe-applications/campaign.md)に関するガイドを参照してください。 |
 | バッチソースのオンデマンド取り込みの API サポート | オンデマンド取り込みを使用して、[!DNL Flow Service] API で指定されたデータフローに対してアドホックなフローの実行を作成します。作成されたフロー実行は、1 回のみの取り込みに設定する必要があります。詳しくは、[API を使用したオンデマンド取り込み用のフロー実行の作成](../../sources/tutorials/api/on-demand-ingestion.md)に関するガイドを参照してください。 |
 | バッチソースで失敗したデータフロー実行の再試行に対する API のサポート | `re-trigger` 操作を使用して、API を介して失敗したデータフローを再試行します。[API を使用して失敗したデータフロー実行の再試行](../../sources/tutorials/api/retry-flows.md)に関するガイドを参照してください。 |

@@ -1,11 +1,11 @@
 ---
-title: at.js とExperience Platform Web SDK の比較
-description: at.js 機能とExperience Platform Web SDK の比較を説明します
+title: at.js とExperience Platform web SDKの比較
+description: at.js 機能とExperience Platform web SDKの比較
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；範囲；スキーマ；システム図；図
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2183'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概要
 
-この記事では、`at.js` ライブラリと Experience Platform Web SDK の違いの概要を説明します。
+この記事では、`at.js` ライブラリと Experience Platform Web SDKの違いの概要を説明します。
 
 ## ライブラリのインストール
 
@@ -22,11 +22,11 @@ ht-degree: 4%
 
 お客様は、Adobe Experience Cloudの「実装」タブから直接ライブラリをダウンロードできます。 at.js ライブラリは、顧客が持つ設定（clientCode、imsOrgId など）によってカスタマイズされます。
 
-### Web SDK のインストール
+### Web SDKのインストール
 
 事前ビルドバージョンは CDN で使用できます。 CDN のライブラリをページで直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小形式と非縮小形式で利用できます。 デバッグの目的では、非縮小バージョンが役立ちます。
 
-詳しくは [JavaScript ライブラリを使用した Web SDK のインストール ](/help/web-sdk/install/library.md) を参照してください。
+詳しくは [JavaScript ライブラリを使用した web SDKのインストール ](/help/web-sdk/install/library.md) を参照してください。
 
 ## ライブラリの設定
 
@@ -71,9 +71,9 @@ window.adobe.target.init(window, document, {
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
-### Web SDK の設定
+### Web SDKの設定
 
-SDK の設定は、[`configure`](/help/web-sdk/commands/configure/overview.md) コマンドで行います。 `configure` コマンドは *常に* 最初に呼び出されます。
+SDKの設定は、[`configure`](/help/web-sdk/commands/configure/overview.md) コマンドで行います。 `configure` コマンドは *常に* 最初に呼び出されます。
 
 ## ページ読み込み Target オファーをリクエストし自動的にレンダリングする方法
 
@@ -81,11 +81,11 @@ SDK の設定は、[`configure`](/help/web-sdk/commands/configure/overview.md) �
 
 at.js 2.x を使用している場合は、`pageLoadEnabled` 設定を有効にすると、ライブラリは `execute -> pageLoad` を使用して Target Edgeへの呼び出しをトリガーします。 すべての設定がデフォルト値に設定されている場合、カスタムコーディングは必要ありません。at.js がページに追加され、ブラウザーによって読み込まれると、Target Edge呼び出しが実行されます。
 
-### Web SDK の使用
+### Web SDKの使用
 
-Adobe Target[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 内で作成されたコンテンツは、SDK によって自動的に取得およびレンダリングできます。
+Adobe Target[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 内で作成されたコンテンツは、SDKによって自動的に取得およびレンダリングできます。
 
-Target オファーをリクエストして自動的にレンダリングするには、`sendEvent` コマンドを使用し、`renderDecisions` オプションを `true` に設定します。 これにより、自動レンダリングの対象となる、パーソナライズされたコンテンツが SDK によって自動的にレンダリングされます。
+Target オファーをリクエストして自動的にレンダリングするには、`sendEvent` コマンドを使用し、`renderDecisions` オプションを `true` に設定します。 これにより、自動レンダリングの対象となる、パーソナライズされたコンテンツがSDKで自動的にレンダリングされます。
 
 例：
 
@@ -105,7 +105,7 @@ alloy("sendEvent", {
 });
 ```
 
-Experience PlatformWeb SDK は、WEB SDK が実行したオファーを含む通知を自動的に送信します。通知リクエストペイロードの例を次に示します。
+Experience Platform Web SDKは、WEB SDKが実行したオファーを含む通知を自動的に送信します。通知リクエストペイロードの例を次に示します。
 
 ```json
 {
@@ -217,11 +217,11 @@ adobe.target.getOffers({
 
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
-### Web SDK の使用
+### Web SDKの使用
 
-`decisionScopes`: `__view__` の下で、特別なスコープを持つ `sendEvent` コマンドを実行します。 このスコープをシグナルとして使用し、Target からすべてのページ読み込みアクティビティを取得し、すべてのビューをプリフェッチします。 また、Web SDK は、すべての VEC 表示ベースのアクティビティの評価も試みます。 ビューのプリフェッチの無効化は、現在 Web SDK ではサポートされていません。
+`decisionScopes`: `__view__` の下で、特別なスコープを持つ `sendEvent` コマンドを実行します。 このスコープをシグナルとして使用し、Target からすべてのページ読み込みアクティビティを取得し、すべてのビューをプリフェッチします。 また、Web SDKは、すべての VEC ビューベースのアクティビティの評価も試みます。 ビューのプリフェッチの無効化は、現在 Web SDKではサポートされていません。
 
-パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定します。この関数は、SDK がサーバーから正常に応答を受信した後に呼び出されます。 コールバックには、返されたパーソナライゼーションコンテンツを含む propositions プロパティを含めることができる結果オブジェクトが提供されます。
+パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定します。この関数は、SDKがサーバーから正常に応答を受け取った後に呼び出されます。 コールバックには、返されたパーソナライゼーションコンテンツを含む propositions プロパティを含めることができる結果オブジェクトが提供されます。
 
 例：
 
@@ -303,7 +303,7 @@ adobe.target.getOffers({
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
-### Web SDK の使用
+### Web SDKの使用
 
 Form Based Composer ベースのアクティビティを取得するには、`sendEvent` コマンドを使用して、`decisionScopes` オプションで mbox 名を渡します。 `sendEvent` コマンドは、リクエストされたアクティビティ/提案を含むオブジェクトで解決される promise を返します。
 `propositions` 配列は次のようになります。
@@ -441,7 +441,7 @@ adobe.target.getOffers({...})
 `applyOffers` コマンドについて詳しくは、[ 専用ドキュメント ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html) を参照してください。
 
 
-### Web SDK の使用
+### Web SDKの使用
 
 `applyPropositions` コマンドを使用して、Target アクティビティを適用できます。
 
@@ -492,7 +492,7 @@ adobe.target.sendNotifications({
 
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
-### Web SDK の使用
+### Web SDKの使用
 
 `sendEvent` コマンドを呼び出し、`_experience.decisioning.propositions` XDM フィールドグループに入力し、`eventType` を 2 つの値のいずれかに設定することで、イベントおよびユーザーアクションを追跡できます。
 
@@ -657,7 +657,7 @@ alloy("sendEvent", {
 
 ### at.js の使用
 
-`adobe.target.triggerView` 関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 adobe.target.triggerView （）は、Visual Experience Composer （VEC）を使用して A/B テストとエクスペリエンスのターゲット設定（XT）アクティビティを作成するために、シングルページアプリケーション（SPA）用に実装する必要があります。 adobe.target.triggerView （）がサイトに実装されていない場合、VEC はSPAに使用できません。
+`adobe.target.triggerView` 関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 adobe.target.triggerView （）は、Visual Experience Composer （VEC）を使用して A/B テストおよびエクスペリエンスのターゲット設定（XT）アクティビティを作成するために、単一ページアプリケーション（SPA）に実装する必要があります。 adobe.target.triggerView （）がサイトに実装されていない場合、VEC を SPA に利用することはできません。
 
 **例**
 
@@ -668,9 +668,9 @@ adobe.target.triggerView("homeView")
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
-### Web SDK の使用
+### Web SDKの使用
 
-シングルページアプリケーションのビューの変更をトリガーまたは通知するには、`sendEvent` コマンドの `xdm` オプションの下で `web.webPageDetails.viewName` プロパティを設定します。 指定した `viewName` ージに対するオファーがある場合、Web SDK はビューのキャッシュをチェック `sendEvent`、それらを実行して表示通知イベントを送信します。
+シングルページアプリケーションのビューの変更をトリガーまたは通知するには、`sendEvent` コマンドの `xdm` オプションの下で `web.webPageDetails.viewName` プロパティを設定します。 Web SDKは、で指定された `viewName` のオファーがある場合、ビューのキャッシュをチェック `sendEvent`、そのオファーを実行してディスプレイ通知イベントを送信します。
 
 **例**
 
@@ -708,11 +708,11 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
-### Web SDK の使用
+### Web SDKの使用
 
 >[!IMPORTANT]
 >
->Platform Web SDK バージョン 2.6.0 以降を使用していることを確認します。
+>Experience Platform Web SDK バージョン 2.6.0 以降を使用していることを確認します。
 
 応答トークンは、`sendEvent` コマンドの結果で公開される `propositions` の一部として返されます。 各提案には `items` の配列が含まれ、Target 管理 UI で有効になっている場合、各項目には応答トークンが入力された `meta` オブジェクトがあります。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
@@ -760,12 +760,12 @@ alloy("sendEvent", {
 at.js を使用すると、at.js が処理するように `bodyHidingEnabled: true` を設定することで、ちらつきを管理できます
 dom の変更を取得して適用する前に、パーソナライズされたコンテナを事前に非表示にします。
 パーソナライズされたコンテンツを含むページセクションは、at.js `bodyHiddenStyle` を上書きすることで、事前に非表示にすることができます。
-デフォルトでは、`bodyHiddenStyle` はHTML`body` ード全体を非表示にします。
+デフォルトでは、`bodyHiddenStyle` はHTML `body` ージ全体を非表示にします。
 どちらの設定も、`window.targetGlobalSettings` を使用して上書きできます。 at.js を読み込む前に `window.targetGlobalSettings` を配置してください。
 
-### Web SDK の使用
+### Web SDKの使用
 
-顧客は、Web SDK を使用して、次の例に示すように、configure コマンドで事前非表示スタイルを設定できます。
+顧客は、Web SDKを使用して、次の例に示すように、configure コマンドで事前非表示スタイルを設定できます。
 
 ```javascript
 alloy("configure", {
@@ -776,7 +776,7 @@ alloy("configure", {
 });
 ```
 
-Web SDK の非同期を読み込む場合、Web SDK が挿入される前に、次のスニペットをページに挿入することをお勧めします。
+Web SDK非同期を読み込む場合、次のスニペットは、web SDKが挿入される前にページに挿入することをお勧めします。
 
 ```html
 <script>
@@ -882,9 +882,9 @@ Analytics サーバーサイドログは、at.js 設定で `analyticsLogging: se
 
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
-### Web SDK の使用
+### Web SDKの使用
 
-Web SDK は、次の項目もサポートしています。
+Web SDKは、次の項目もサポートしています。
 
 * Analytics クライアントサイドログ
 * Analytics サーバーサイドログ
@@ -940,7 +940,7 @@ alloy("sendEvent", {
 ![Analytics 設定を示すデータストリーム UI。](assets/analytics-enabled-datastream-config.png)
 
 サーバーサイド分析ログが有効になっている場合、Analytics レポートが表示されるように、Analytics と共有する必要がある A4T ペイロード
-正しいインプレッション数とコンバージョン数はEdge Networkレベルで共有されるので、お客様は追加の処理を行う必要はありません。
+正しいインプレッション数とコンバージョン数はEdge Network レベルで共有されるので、お客様は追加の処理を行う必要はありません。
 
 サーバーサイド分析ログが有効な場合のシステムへのデータのフローは次のとおりです。
 
@@ -966,9 +966,9 @@ window.targetGlobalSettings = {
 
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
-### Web SDK の使用
+### Web SDKの使用
 
-この機能は Web SDK ではサポートされていません。
+この機能は Web SDKではサポートされていません。
 
 ## Target プロファイル属性の更新方法
 
@@ -1007,7 +1007,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-### Web SDK の使用
+### Web SDKの使用
 
 Target プロファイルを更新するには、`sendEvent` コマンドを使用して、`profile` を使用してキー名のプレフィックスとして `data.__adobe.target` プロパティを設定します。
 
@@ -1027,7 +1027,7 @@ alloy("sendEvent", {
 });
 ```
 
-## Target Recommendationsの使用方法
+## Target Recommendations の使用方法
 
 ### at.js の使用
 
@@ -1067,7 +1067,7 @@ adobe.target.getOffers({
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
-### Web SDK の使用
+### Web SDKの使用
 
 推奨データを送信するには、`sendEvent` コマンドを使用して、`entity` を使用してキー名のプレフィックスとして `data.__adobe.target` プロパティを設定します。
 
@@ -1146,9 +1146,9 @@ window.targetPageParams = function() {
 
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
-### Web SDK の使用
+### Web SDKの使用
 
-Web SDK は、Target サードパーティ ID をサポートしています。 ただし、もう 2、3 の手順が必要です。 ソリューションの詳細に入る前に、`identityMap` について少し説明します。
+Web SDKは、Target サードパーティ ID をサポートしています。 ただし、もう 2、3 の手順が必要です。 ソリューションの詳細に入る前に、`identityMap` について少し説明します。
 顧客は ID マップを使用して複数の ID を送信できます。 すべての ID に名前空間が設定されています。 各名前空間には、1 つ以上の ID を設定できます。 特定の ID をプライマリとしてマークできます。
 この知識を念頭に置くと、Target サードパーティ ID を使用するために web sdk をセットアップする際に必要な手順を確認できます。
 
@@ -1200,9 +1200,9 @@ window.targetPageParams = function() {
     };
 ```
 
-### Web SDK の使用
+### Web SDKの使用
 
-Web SDK を使用すると、お客様は、Adobe Target名前空間の下でデータストリーム設定を設定する際に、より高いレベルでプロパティを設定できます。
+お客様は、Web SDKを使用して、Adobe Target namespace でデータストリーム設定を指定する際に、より高いレベルでプロパティを設定できます。
 ![Adobe Target設定を示すデータストリーム UI。](assets/at-property-setup.png)
 つまり、その特定のデータストリーム設定に対するすべての Target 呼び出しに、そのプロパティトークンが含まれます。
 
@@ -1235,9 +1235,9 @@ adobe.target.getOffers({
 
 メモ：`mboxes` 配列のすべての `mbox` に独自のインデックスを設定することを強くお勧めします。 通常、最初の mbox には `index=0` があり、次の mbox には `index=1` があります。
 
-### Web SDK の使用
+### Web SDKの使用
 
-この機能は、現在 Web SDK ではサポートされていません。
+この機能は、現在 Web SDKではサポートされていません。
 
 ## Target 実装のデバッグ方法
 
@@ -1249,14 +1249,14 @@ At.js は、次のデバッグ機能を公開します。
 * mbox のデバッグ - at.js はすべてのアクションをログに記録します
 * Target Trace - Bullseye で生成された mbox トレーストークンを使用すると、決定プロセスに関与した詳細を含むトレースオブジェクトをオブジェクトの下で使用でき `window.___target_trace` す。
 
-注意：これらのデバッグ機能はすべて、[ Adobe Experience Platform Debuggerの拡張機能で利用でき ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) す。
+注意：これらのデバッグ機能はすべて、[Adobe Experience Platform Debuggerの機能強化で利用でき ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) す。
 
-### Web SDK の使用
+### Web SDKの使用
 
-Web SDK を使用する場合、複数のデバッグ機能があります。
+Web SDKを使用する場合、複数のデバッグ機能があります。
 
 * [Assurance](/help/assurance/home.md) の使用
-* [Web SDK デバッグ有効](/help/web-sdk/use-cases/debugging.md)
+* [Web SDKのデバッグが有効](/help/web-sdk/use-cases/debugging.md)
 * [Web SDK モニタリングフック ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) の使用
-* [Adobe Experience Platform Debuggerを使用 ](/help/debugger/home.md)
+* [Adobe Experience Platform Debugger](/help/debugger/home.md) の使用
 * ターゲット トレース

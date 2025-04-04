@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 93%
+source-wordcount: '720'
+ht-degree: 86%
 
 ---
 
@@ -68,7 +68,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
@@ -76,7 +76,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| Adobe Audience Manager ソースコネクタの機能強化 | Audience Manager から個々のファーストパーティセグメントをフィルタリングして選択し、Platform に取り込んだり、ファーストパーティの特性を除外したりできるようになりました。詳細については、 [Audience Manager ソースコネクタの作成](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) に関するチュートリアルを参照してください。 |
+| Adobe Audience Manager ソースコネクタの機能強化 | Audience Managerから個々のファーストパーティセグメントをフィルタリングして選択し、Experience Platformに取り込んだり、ファーストパーティの特性を除外したりできるようになりました。 詳細については、 [Audience Manager ソースコネクタの作成](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) に関するチュートリアルを参照してください。 |
 | [!DNL Google BigQuery] ソースコネクタの機能強化 | [!DNL BigQuery] ソースコネクタを使用して、1 回のフロー実行で 10 GB を超えるファイルを取り込めるようになりました。詳しくは、 [[!DNL BigQuery] ソースコネクタの概要](../../sources/connectors/databases/bigquery.md) を参照してください。 |
 | クラウドストレージ用の複雑なデータ型のサポート | クラウドストレージソースコネクタを使用する場合、JSON ファイル内の配列などの複雑なデータ型を取り込めるようになりました。詳しくは、 [UI での](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)、または[  [!DNL Flow Service] API を使用した](../../sources/tutorials/api/collect/cloud-storage.md)クラウドストレージのデータフロー の作成に関するチュートリアルを参照してください。 |
 | [!DNL Microsoft Dynamics] ソースのサービスプリンシパルキーベースの認証のサポート | パスワードベースの認証の代わりに、サービスプリンシパルキーを使用して [!DNL Dynamics] アカウントを認証できるようになりました。詳しくは、 [[!DNL Dynamics] ソースコネクタの概要](../../sources/connectors/crm/ms-dynamics.md) を参照してください。 |

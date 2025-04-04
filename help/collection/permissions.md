@@ -2,9 +2,9 @@
 title: Experience Platform でのデータ収集の権限管理
 description: Adobe Experience Platformの権限を管理し、データ収集機能へのアクセスを制御する方法の概要です。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1358'
 ht-degree: 30%
 
 ---
@@ -55,7 +55,7 @@ Adobe Experience Platform Data Collection の下にある権限は、プロパ�
 | Platform | Web | 他のプロパティ権限と組み合わせると [web プロパティ ](../tags/ui/administration/companies-and-properties.md) へのアクセス権を付与します。 |
 | Platform | Mobile | 他のプロパティ権限と組み合わせると、[ モバイルプロパティ ](../tags/ui/administration/companies-and-properties.md) へのアクセス権を付与します。 |
 | Platform | Edge | 他のプロパティ権限と組み合わせると、[ イベント転送Edge プロパティ ](../tags/ui/event-forwarding/getting-started.md) へのアクセス権を付与します。 |
-| プロパティ | （N/A） | 組織内で作成したプロパティに応じて、Admin Consoleのこの権限カテゴリを使用して各プロパティへのアクセスを制御できます。<br><br> ユーザーに割り当てられたプロパティ権限は、この権限カテゴリを通じてアクセス権を付与されたプロパティにのみ適用されます。 |
+| プロパティ | （N/A） | 組織の下に作成されたプロパティに応じて、Admin Consoleのこの権限カテゴリを使用して各プロパティへのアクセスを制御できます。<br><br> ユーザーに割り当てられたプロパティ権限は、この権限カテゴリを通じてアクセス権を付与されたプロパティにのみ適用されます。 |
 | プロパティ権限 | 承認 | [ 公開フロー ](../tags/ui/publishing/publishing-flow.md) の一部としてライブラリビルドを承認する機能を付与します。 |
 | プロパティ権限 | 開発 | [ 公開フロー ](../tags/ui/publishing/publishing-flow.md) の一部としてライブラリビルドを開発する機能を付与します。 |
 | プロパティ権限 | プロパティを編集 | ユーザーがアクセスできるプロパティの基本設定を編集する機能を付与します。 |
@@ -76,7 +76,7 @@ Adobe Experience Platform Data Collection の下にある権限は、プロパ�
 
 データ収集のアクセス許可は、次の 2 つの製品指定を通じて管理されます。**Adobe Experience Platform** および **Adobe Experience Platform データ収集**。
 
-Admin Consoleの各製品で関連する権限を管理する手順については、次のサブセクションを参照してください。
+Admin Consoleの各製品で関連する権限を管理する手順については、以下のサブセクションを参照してください。
 
 * [Adobe Experience Platformの権限](#manage-platform)
 * [Adobe Experience Platform Data Collection の権限](#manage-collection)
@@ -87,7 +87,7 @@ Admin Consoleの各製品で関連する権限を管理する手順について�
 >
 >役割の権限を管理するには、管理者権限が必要です。 管理者権限がない場合は、システム管理者にお問い合わせください。
 
-Experience Cloudの **[!UICONTROL 権限]** セクションでは、製品アプリケーション内の機能とオブジェクトへのアクセスを管理するユーザーの役割とポリシーを定義できます。
+Experience Cloudの **[!UICONTROL 権限]** セクションでは、製品アプリケーション内の機能とオブジェクトのアクセスを管理するユーザーの役割とポリシーを定義できます。
 
 [!UICONTROL  権限 ] を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。
 
@@ -95,19 +95,19 @@ Experience Cloudの **[!UICONTROL 権限]** セクションでは、製品アプ
 
 データ収集機能にアクセスするには、**[!UICONTROL サンドボックス]**、**[!UICONTROL データモデリング]**、**[!UICONTROL Identity Management]**、{ データ収集 **[!UICONTROL の各カテゴリですべての権限を有効にする必要が]** ります。
 
-![Admin Console内のデータ収集プロダクトカードを示す画像 ](./images/permissions/platform-permission-card.png)
+![Admin Consoleのデータ収集プロダクトカードを示す画像 ](./images/permissions/platform-permission-card.png)
 
-Platform 権限の管理手順について詳しくは、[ アクセス制御 UI ガイド ](../access-control/ui/overview.md) を参照してください。
+Experience Platform権限の管理手順について詳しくは、[ アクセス制御 UI ガイド ](../access-control/ui/overview.md) を参照してください。
 
 >[!NOTE]
 >
->組織がアクセスできる製品 SKU によっては、使用できるすべての Platform 権限がない場合があります。
+>組織がアクセスできる商品 SKU によっては、使用できるExperience Platform権限がない場合があります。
 
 ### Adobe Experience Platform Data Collection での権限の管理 {#manage-collection}
 
 これらの権限を管理するには、Admin Consoleにログインし、上部ナビゲーションから **[!UICONTROL 製品]** を選択してから、「**[!UICONTROL Adobe Experience Platform Data Collection]**」を選択します。
 
-![Admin Console内のデータ収集プロダクトカードを示す画像 ](./images/permissions/data-collection-card.png)
+![Admin Consoleのデータ収集プロダクトカードを示す画像 ](./images/permissions/data-collection-card.png)
 
 #### 製品プロファイルの選択または作成
 

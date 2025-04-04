@@ -5,7 +5,7 @@ title: UI での HubSpot Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して HubSpot ソース接続を作成する方法を説明します。
 exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 45%
@@ -14,7 +14,7 @@ ht-degree: 45%
 
 # UI での [!DNL HubSpot] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] のユーザーインターフェイスを使用して [!DNL HubSpot] ソースコネクタを作成する手順を説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] のユーザーインターフェイスを使用して [!DNL HubSpot] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -29,7 +29,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で [!DNL HubSpot] アカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Experience Platform] で [!DNL HubSpot] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -42,7 +42,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## [!DNL HubSpot] アカウントの接続
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL HubSpot] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL HubSpot] アカウントを [!DNL Experience Platform] にリンクします。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -68,4 +68,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL HubSpot] アカウントとの接続を確立しました。次のチュートリアルに進み、[ マーケティング自動化システムデータをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/marketing-automation.md) を行いましょう。
+このチュートリアルでは、[!DNL HubSpot] アカウントとの接続を確立しました。次のチュートリアルに進み、[ マーケティング自動化システムデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/marketing-automation.md) を行いましょう。

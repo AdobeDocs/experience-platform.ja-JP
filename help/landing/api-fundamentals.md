@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: Experience PlatformAPI の基本事項
-description: このドキュメントでは、Experience PlatformAPI に関連する基盤となるテクノロジーと構文のいくつかについて簡単に説明します。
+title: Experience Platform API の基本事項
+description: このドキュメントでは、Experience Platform API に関連する基盤となるテクノロジーと構文のいくつかについて簡単に説明します。
 role: Developer
 feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 50%
 
 ---
 
-# Experience PlatformAPI の基本事項
+# Experience Platform API の基本事項
 
-Adobe Experience Platform API では、JSON ベースの [!DNL Platform] リソースを効果的に管理するために理解することが重要な、いくつかの基本となるテクノロジーと構文を使用します。 このドキュメントでは、これらのテクノロジーの概要のほか、詳細が記載されている外部ドキュメントへのリンクを提供します。
+Adobe Experience Platform API では、JSON ベースの [!DNL Experience Platform] リソースを効果的に管理するために理解することが重要な、いくつかの基本となるテクノロジーと構文を使用します。 このドキュメントでは、これらのテクノロジーの概要のほか、詳細が記載されている外部ドキュメントへのリンクを提供します。
 
 ## JSON ポインター {#json-pointer}
 
-JSON ポインターは、JSON ドキュメント内の特定の値を識別するための標準化された文字列構文（[RFC 6901](https://tools.ietf.org/html/rfc6901)）です。JSON ポインターは、`/` 文字で区切られたトークンの文字列であり、オブジェクトのキーまたは配列のインデックスを指定します。トークンは文字列または数値です。JSON ポインター文字列は、このドキュメントで後述するように、[!DNL Platform] API の多くのPATCH操作で使用されます。 JSON ポインターの詳細については、[JSON ポインターの概要ドキュメント](https://rapidjson.org/md_doc_pointer.html)を参照してください。
+JSON ポインターは、JSON ドキュメント内の特定の値を識別するための標準化された文字列構文（[RFC 6901](https://tools.ietf.org/html/rfc6901)）です。JSON ポインターは、`/` 文字で区切られたトークンの文字列であり、オブジェクトのキーまたは配列のインデックスを指定します。トークンは文字列または数値です。JSON ポインター文字列は、このドキュメントで後述するように、[!DNL Experience Platform] API の多くのPATCH操作で使用されます。 JSON ポインターの詳細については、[JSON ポインターの概要ドキュメント](https://rapidjson.org/md_doc_pointer.html)を参照してください。
 
 ### JSON スキーマオブジェクトの例
 
@@ -98,7 +98,7 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 
 ## JSON パッチ {#json-patch}
 
-リクエストペイロードに対して JSON Patch オブジェクトを受け入れる [!DNL Platform] API には、多くのPATCH操作があります。 JSON パッチは、JSON ドキュメントの変更を記述するための標準形式（[RFC 6902](https://tools.ietf.org/html/rfc6902)）です。この標準形式では、リクエスト本文でドキュメント全体を送信する必要なく、JSON の部分的なアップデートを定義できます。
+リクエストペイロードに対して JSON Patch オブジェクトを受け入れる [!DNL Experience Platform] API には、多くのPATCH操作があります。 JSON パッチは、JSON ドキュメントの変更を記述するための標準形式（[RFC 6902](https://tools.ietf.org/html/rfc6902)）です。この標準形式では、リクエスト本文でドキュメント全体を送信する必要なく、JSON の部分的なアップデートを定義できます。
 
 ### JSON パッチオブジェクトの例
 
@@ -109,7 +109,7 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 }
 ```
 
-* `op`：パッチ操作のタイプ。JSON パッチでは複数の異なる種類の操作がサポートされますが、[!DNL Platform] API のすべてのPATCH操作がすべての種類の操作と互換性があるわけではありません。 使用可能な操作のタイプは次のとおりです。
+* `op`：パッチ操作のタイプ。JSON パッチでは複数の異なる操作タイプがサポートされますが、[!DNL Experience Platform] API のすべてのPATCH操作がすべての操作タイプと互換性があるわけではありません。 使用可能な操作のタイプは次のとおりです。
    * `add`
    * `remove`
    * `replace`
@@ -126,4 +126,4 @@ JSON スキーマは、JSON データの構造を記述して検証するため�
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Experience Platform] 用の JSON ベースのリソースの管理に関連するテクノロジーと構文の一部を紹介しました。 ベストプラクティスなど、Platform API の操作について詳しくは、[ はじめる前に ](api-guide.md) を参照してください。 よくある質問への回答については、[Platform トラブルシューティングガイド ](troubleshooting.md) を参照してください。
+このドキュメントでは、[!DNL Experience Platform] 用の JSON ベースのリソースの管理に関連するテクノロジーと構文の一部を紹介しました。 ベストプラクティスなど、Experience Platform API の操作について詳しくは、[ はじめる前に ](api-guide.md) を参照してください。 よくある質問への回答については、[Experience Platform トラブルシューティングガイド ](troubleshooting.md) を参照してください。

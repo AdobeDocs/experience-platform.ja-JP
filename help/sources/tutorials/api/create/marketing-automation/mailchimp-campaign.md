@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Flow Service API を使用して、Mailchimp キャンペーンのデータフローを作成します
 description: Flow Service API を使用して Adobe Experience Platform を MailChimp Campaign に接続する方法を説明します。
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1925'
-ht-degree: 84%
+source-wordcount: '1934'
+ht-degree: 75%
 
 ---
 
 # Flow Service API を使用して [!DNL Mailchimp Campaign] のデータフローを作成する
 
-以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL Flow Service]  API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Mailchimp Campaign] のデータを Platform に取り込む手順を詳しく説明します。
+以下のチュートリアルでは、ソース接続とデータフローを作成し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してExperience Platformにデータを取り [!DNL Mailchimp Campaign] む手順を詳しく説明します。
 
 ## 前提条件
 
@@ -21,15 +21,15 @@ OAuth 2 のリフレッシュコードを使用して Adobe Experience Platform 
 
 ## ベース接続の作成 {#base-connection}
 
-[!DNL Mailchimp] 認証資格情報を取得したら、[!DNL Mailchimp Campaign] データを Platform に取り込むためにデータフローを作成するプロセスを開始できます。データフローを作成する最初の手順は、ベース接続を作成することです。
+[!DNL Mailchimp] 認証資格情報を取得したら、データをExperience Platformに取り込むためにデータフローを作成するプロセス [!DNL Mailchimp Campaign] 開始できます。 データフローを作成する最初の手順は、ベース接続を作成することです。
 
-ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
 [!DNL Mailchimp] は、基本認証と OAuth 2 更新コードの両方をサポートしています。いずれかの認証タイプで認証する方法については、次の例を参照してください。
 
 ### 基本認証を使用した [!DNL Mailchimp] ベース接続の作成
 
-基本認証を使用した [!DNL Mailchimp] ベース接続を作成するには、API の `/connections` エンドポイントにPOSTリクエスト [!DNL Flow Service] 行います。その際、`authorizationTestUrl`、`username`、`password` の資格情報を提供を提供を提供します。
+基本認証を使用した [!DNL Mailchimp] ベース接続を作成するには、API の `/connections` エンドポイントに POST リクエスト [!DNL Flow Service] 行います。その際、`authorizationTestUrl`、`username`、`password` の資格情報を提供を提供します。
 
 **API 形式**
 
@@ -72,7 +72,7 @@ curl -X POST \
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
-| `auth.specName` | ソースを Platform に接続するために使用する認証タイプ。 |
+| `auth.specName` | ソースをExperience Platformに接続するために使用する認証タイプ。 |
 | `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
 | `auth.params.username` | [!DNL Mailchimp] アカウントに対応するユーザー名。これは、基本認証に必要です。 |
 | `auth.params.password` | [!DNL Mailchimp] アカウントに対応するパスワード。これは、基本認証に必要です。 |
@@ -90,7 +90,7 @@ curl -X POST \
 
 ### OAuth 2 更新コードコードを使って [!DNL Mailchimp] ベース接続を作成します
 
-OAuth 2 更新コードを使用して [!DNL Mailchimp] ベース接続を作成するには、`/connections` エンドポイントにPOSTリクエストを送信し、その際、`authorizationTestUrl` ーザーの資格情報を提供し、`accessToken` 信します。
+OAuth 2 更新コードを使用して [!DNL Mailchimp] ベース接続を作成するには、`/connections` エンドポイントに POST リクエストを送信し、その際、`authorizationTestUrl` ーザーの資格情報を提供し、`accessToken` 信します。
 
 **API 形式**
 
@@ -132,7 +132,7 @@ curl -X POST \
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、[!DNL Flow Service] API を使用してソースを登録した後に取得することができます。 |
-| `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
+| `auth.specName` | Experience Platformに対するソースの認証に使用する認証タイプ。 |
 | `auth.params.authorizationTestUrl` | （オプション）認証テスト URL は、ベース接続の作成時に資格情報を検証するために使用されます。指定しない場合、代わりにソース接続の作成時に資格情報が自動的にチェックされます。 |
 | `auth.params.accessToken` | ソースの認証に使用された、対応するアクセストークン。これは、OAuth ベースの認証に必要です。 |
 
@@ -323,7 +323,7 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。
 
 [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
@@ -384,7 +384,7 @@ curl -X POST \
 | `name` | ターゲット接続の名前。ターゲット接続の情報を検索に使用できるように、ターゲット接続はわかりやすい名前にしてください。 |
 | `description` | ターゲット接続に関する詳細を提供するために含めることができるオプションの値です。 |
 | `connectionSpec.id` | [!DNL Data Lake]に対応する接続仕様 ID。この修正済み ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。 |
-| `data.format` | Platform に取り込む [!DNL Mailchimp] データの形式。 |
+| `data.format` | Experience Platformに取り込む [!DNL Mailchimp] データの形式。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセット ID。 |
 
 
@@ -471,7 +471,7 @@ A successful response returns details of the newly created mapping including its
 
 ## フローの作成 {#flow}
 
-[!DNL Mailchimp] データを Platform に取り込むための最後の手順は、データフローを作成することです。現時点で、次の必要な値の準備ができています。
+データをExperience Platformに取り込む最後 [!DNL Mailchimp] 手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -551,16 +551,16 @@ curl -X POST \
 
 ### データフローの更新
 
-データフローの ID を指定しながら API の `/flows` エンドポイントにPATCHリクエストを実行することで、名前や説明、実行スケジュールや関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新できます。 データフローをリクエストする場合は、PATCHの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
+データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを更新
 
-ベースPATCHID をクエリパラメーターとして指定して [!DNL Flow Service] API に接続リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCHリクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
+ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETEリクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-削除するアカウントのベースDELETEID を指定したうえで、[!DNL Flow Service] API に接続リクエストを実行してアカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。
+[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。

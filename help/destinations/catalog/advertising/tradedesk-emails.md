@@ -3,9 +3,9 @@ title: The Trade Desk - CRM 接続
 description: CRM データに基づくオーディエンスのターゲティングおよび抑制のために、プロファイルを Trade Desk アカウントに対してアクティブ化します。
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1122'
 ht-degree: 17%
 
 ---
@@ -59,7 +59,7 @@ Adobe Experience Platform では、プレーンテキストと SHA256 でハッ�
 
 メールアドレスは、Adobe Experience Platformに取り込む前にハッシュ化したり、生のメールアドレスを使用したりできます。
 
-Experience Platformでのメールアドレスの取り込みについて詳しくは、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) を参照してください。
+Experience Platformでのメールアドレスの取り込みについては、[ バッチ取り込みの概要 ](/help/ingestion/batch-ingestion/overview.md) を参照してください。
 
 メールアドレスを自分でハッシュ化することを選択する場合は、次の要件に必ず従ってください。
 
@@ -95,7 +95,7 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL 広告主 ID]**：お使いの [!DNL Trade Desk Advertiser ID]。[!DNL Trade Desk] アカウントマネージャーで共有するか、[!DNL Trade Desk] UI の [!DNL Advertiser Preferences] にあります。
 
-![ 宛先の詳細を入力する方法を示す Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![ 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
 宛先に接続する場合、データガバナンスポリシーの設定は完全にオプションです。 詳しくは、Experience Platform[ データガバナンスの概要 ](/help/data-governance/policies/overview.md) を参照してください。
 
@@ -110,17 +110,17 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 
 **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。 スケジュールの設定は必須ですが、ファイル名の設定はオプションです。
 
-![ オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![ オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >CRM 宛先に対してアクティブ化 [!DNL The Trade Desk] れたすべてのオーディエンスは、毎日の頻度と完全なファイル書き出しに自動的に設定されます。
 
-![ オーディエンスのアクティベーションをスケジュールするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![ オーディエンスのアクティベーションをスケジュールするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 **[!UICONTROL マッピング]** ページでは、ソース列から属性または ID 名前空間を選択し、ターゲット列にマッピングする必要があります。
 
-![Audience Activation をマッピングするための Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![ オーディエンスのアクティベーションをマッピングするためのExperience Platform UI のスクリーンショット。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 以下に、オーディエンスを CRM 宛先に対してアクティブ化する際の、正しい ID マッピング [!DNL The Trade Desk] 例を示します。
 
@@ -131,7 +131,7 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 ソースフィールドを選択中：
 
 * データ取り込み時に生のメールアドレスを使用する場合は、ソース ID として `Email` 名前空間または属性を選択します。
-* Platform へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、`Email_LC_SHA256` 名前空間または属性をソース ID として選択します。
+* Experience Platformへのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、`Email_LC_SHA256` 名前空間または属性をソース ID として選択します。
 
 ターゲットフィールドを選択：
 
@@ -140,11 +140,11 @@ CRM 宛先 [!DNL The Trade Desk]、毎日のバッチファイルアップロー
 
 ## データの書き出しを検証 {#validate}
 
-データがExperience Platformから [!DNL The Trade Desk] に正しく書き出されていることを検証するには、[!DNL The Trade Desk] Data Management Platform （DMP）内のAdobe 1PD データタイルの下にあるオーディエンスを見つけてください。 [!DNL Trade Desk] UI 内で対応する ID を見つける手順は次のとおりです。
+データがExperience Platformから [!DNL The Trade Desk] に正しく書き出されていることを検証するには、[!DNL The Trade Desk] Data Management Platform （DMP）内のAdobe 1PD データタイルでオーディエンスを見つけてください。 [!DNL Trade Desk] UI 内で対応する ID を見つける手順は次のとおりです。
 
 1. まず、「**[!UICONTROL データ]**」タブを選択し、「**[!UICONTROL ファーストパーティ]**」セクションを確認します。
-2. ページを下にスクロールして、**[!UICONTROL Imported Data]** の下に **[!UICONTROL Adobe 1PD タイル]** があります。
-3. **[!UICONTROL  広告 1PD]** タイルをクリックすると、Adobe主の [!DNL Trade Desk] の宛先に対してアクティブ化されたすべてのオーディエンスが一覧表示されます。 検索機能を使用することもできます。
+2. ページを下にスクロールして、「**[!UICONTROL 読み込まれたデータ]**」の下に **[!UICONTROL Adobe 1PD タイル]** があります。
+3. **[!UICONTROL Adobe 1PD]**タイルをクリックすると、広告主の [!DNL Trade Desk] の宛先に対してアクティブ化されたすべてのオーディエンスが一覧表示されます。 検索機能を使用することもできます。
 4. Experience Platformのセグメント ID #が、[!DNL Trade Desk] UI でセグメント名として表示されます。
 
 ## データの使用とガバナンス {#data-usage-governance}

@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;リリースノート;
+keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2285'
-ht-degree: 66%
+source-wordcount: '2288'
+ht-degree: 64%
 
 ---
 
@@ -294,7 +294,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 - [`getIdentity`](/help/web-sdk/commands/getidentity.md) コマンドは、ID と共にエッジ地域 ID を返すようになりました。
 - サーバーから受信した警告とエラーが改善され、より適切な方法で処理されます。
 - [`setConsent`](/help/web-sdk/commands/setconsent.md) コマンドにAdobeの同意 2.0 標準をサポートするようになりました。
-- 同意環境設定を受信すると、CMP、Platform Web SDK および Platform Edge Network 間の統合を最適化するために、ハッシュされてローカルストレージに保存されます。同意環境設定を収集している場合は、ページが読み込まれるたびに `setConsent` を呼び出すことをお勧めします。
+- 同意環境設定を受信すると、CMP、Experience Platform Web SDKおよびExperience Platform Edge Network間の統合を最適化するために、ハッシュされてローカルストレージに保存されます。 同意環境設定を収集している場合は、ページが読み込まれるたびに `setConsent` を呼び出すことをお勧めします。
 - `onCommandResolved` と `onCommandRejected` の 2 つの[モニタリングフック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)を追加しました。
 - バグ修正：パーソナライゼーションインタラクション通知イベントには、ユーザーが新しいシングルページアプリビューに移動し、元のビューに戻り、コンバージョンの対象となる要素をクリックした際に、同じアクティビティに関する重複した情報が含まれていました。
 - バグ修正：SDK によって送信された最初のイベントで `documentUnloading` が `true` に設定されていた場合、[`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon) を使用してイベントが送信され、ID が確立されていないというエラーが発生していました。

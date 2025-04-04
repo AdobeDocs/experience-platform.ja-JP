@@ -2,10 +2,10 @@
 title: 拡張機能のエンドツーエンドテストのアップロードと実装
 description: Adobe Experience Platform で拡張機能を検証、アップロード、テストする方法について説明します。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 86%
+source-wordcount: '2347'
+ht-degree: 85%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 86%
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-Adobe Experience Platform でタグ拡張機能をテストするには、タグ API やコマンドラインツールを使用して拡張機能パッケージをアップロードします。次に、Platform UI またはデータ収集 UI を使用して、拡張機能パッケージをプロパティにインストールし、タグライブラリ内でその機能を実行してビルドします。
+Adobe Experience Platform でタグ拡張機能をテストするには、タグ API やコマンドラインツールを使用して拡張機能パッケージをアップロードします。次に、Experience Platform UI またはデータ収集 UI を使用して、拡張機能パッケージをプロパティにインストールし、タグライブラリ内でその機能を実行してビルドします。
 
 このドキュメントでは、拡張機能のエンドツーエンドテストの実装方法について説明します。
 
@@ -43,7 +43,7 @@ Adobe Experience Platformでタグに使用するテクニカルアカウント�
 
 >[!IMPORTANT]
 >
->Adobe I/OでExperience Cloudを作成するには、統合組織管理者またはExperience Cloud組織開発者である必要があります。
+>Adobe I/Oで統合を作成するには、Experience Cloud組織管理者またはExperience Cloud組織開発者である必要があります。
 
 統合を作成できない場合は、適切な権限がない可能性があります。 この場合は、組織管理者が手順を完了するか、開発者として割り当てる必要があります。
 
@@ -62,11 +62,11 @@ npx @adobe/reactor-uploader
 `npx`：npm パッケージをダウンロードして実行できます。実際にはこのパッケージをコンピューターにインストールする必要はありません。これは、アップローダを実行する最も簡単な方法です。
 
 >[!NOTE]
-> デフォルトでは、アップローダは、サーバー間 OAuth フローのAdobe I/O資格情報を想定します。 従来の `jwt-auth` 資格情報
+> デフォルトでは、アップローダは、サーバー間 Oauth フローについてAdobe I/Oの資格情報を必要とします。 従来の `jwt-auth` 資格情報
 > 2025 年 1 月 1 日（PT）に廃止されるまで `npx @adobe/reactor-uploader@v5.2.0` を実行して使用できます。 必要なパラメーター
 > `jwt-auth` のバージョンを実行するには、[ こちら ](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) を参照してください。
 
-アップローダでは、いくつかの情報のみを入力するように求められます。 `clientId` と `clientSecret` は、Adobe I/Oコンソールから取得できます。 I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL 表示]**」を選択します。
+アップローダでは、いくつかの情報のみを入力するように求められます。 `clientId` と `clientSecret` は、Adobe I/O コンソールから取得できます。 I/O コンソールの[統合ページ](https://console.adobe.io/integrations)に移動します。ドロップダウンから正しい組織を選択し、適切な統合を見つけて「**[!UICONTROL 表示]**」を選択します。
 
 - あなたの `clientId` は何ですか。 これを I/O コンソールからコピーして貼り付けます。
 - あなたの `clientSecret` は何ですか。 これを I/O コンソールからコピーして貼り付けます。
@@ -114,7 +114,7 @@ UI にログインして「**[!UICONTROL タグ]**」を選択すると、左側
 
 ![](../images/getting-started/catalog.png)
 
-カタログには、使用可能な各拡張機能に対応するカードアイコンが表示されます。拡張機能がカタログに表示されない場合は、前述の Adobe 管理コンソールの設定の節と、拡張機能パッケージの作成の節の手順を完了していることを確認してください。また、Platform が初期処理を完了していない場合は、拡張機能パッケージが「保留」と表示される場合があります。
+カタログには、使用可能な各拡張機能に対応するカードアイコンが表示されます。拡張機能がカタログに表示されない場合は、前述の Adobe 管理コンソールの設定の節と、拡張機能パッケージの作成の節の手順を完了していることを確認してください。また、Experience Platformの初期処理を完了していない場合、拡張機能パッケージが「保留」と表示される場合があります。
 
 前の手順に従っていて、カタログに保留中または失敗した拡張機能パッケージが表示されない場合は、API を使用して直接拡張機能パッケージのステータスを確認する必要があります。 適切な API 呼び出しの実行方法について詳しくは、API ドキュメントの[ExtensionPackage の取得](../../api/endpoints/extension-packages.md#lookup)を参照してください。
 

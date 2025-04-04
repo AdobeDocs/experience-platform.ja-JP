@@ -3,10 +3,10 @@ keywords: ターゲットのパーソナライゼーション;宛先;Experience 
 title: Adobe Target 接続
 description: Adobe Target は、web サイトやモバイルアプリなど、すべてのインバウンド顧客とのインタラクションで、AI を利用したリアルタイムのパーソナライズと実験の機能を提供するアプリケーションです。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 32%
+source-wordcount: '1769'
+ht-degree: 31%
 
 ---
 
@@ -161,7 +161,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 オーディエンスが既にAdobe Target [ アクティビティ ](https://experienceleague.adobe.com/en/docs/target/using/activities/activities) で使用されている場合は、そのオーディエンスを既存のAdobe Target接続から削除するために必要な追加の手順があります。 オーディエンスがAdobe Target アクティビティで使用されている場合、Adobe Target接続からオーディエンスを削除しようとすると、エラーが発生します。
 
-![Target アクティビティで使用されるオーディエンスを削除しようとしたときに発生したエラーを示す Platform UI 画像。](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+![Target アクティビティで使用されるオーディエンスを削除しようとするとエラーが発生するExperience Platform UI 画像 ](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
 オーディエンスがアクティビティで使用されているときに Target の宛先からオーディエンスを削除するには、最初に、オーディエンスを使用している Target アクティビティからオーディエンスを削除するか、アクティビティを完全に削除する必要があります。 次に、Target 接続からオーディエンスを削除できます。
 

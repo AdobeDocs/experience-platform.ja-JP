@@ -1,20 +1,20 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Real-time Customer Data Platform B2B Edition の使用例
+keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
+title: Real-Time Customer Data Platform B2B editionの使用例
 description: このサンプルシナリオは、Real-time Customer Data Platform B2B エディションの実装の設定例を示しています。
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 76%
+source-wordcount: '1152'
+ht-degree: 73%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition の使用例
+# Real-Time Customer Data Platform B2B editionの使用例
 
-Real-time Customer Data Platform B2B Edition は、既存のReal-Time CDPおよびAdobe Experience Platform製品を拡張して、B2B のデータとワークフローをサポートします。 このドキュメントでは、B2B Edition が提供するさらなるメリットを示すユースケースの例について説明します。次のようなものがあります。
+Real-Time Customer Data Platform B2B editionでは、既存のReal-Time CDPおよびAdobe Experience Platform製品を拡張して、B2B のデータとワークフローをサポートしています。 このドキュメントでは、B2B Edition が提供するさらなるメリットを示すユースケースの例について説明します。次のようなものがあります。
 
 - 様々なサイロ化されたデータソースからの個人データとアカウントデータを組み合わせて、顧客の理解を深め、より正確なセグメント化を可能にする包括的なビューを作成します。詳しくは、様々な B2Bソースで使用するための [XDM スキーマ関係の作成](./schemas/b2b.md)に関するドキュメントを参照してください。
 - 関連するエンティティの属性に基づいてオーディエンスをセグメント化します。これには、アカウント、オポチュニティ、キャンペーンおよびマーケティングリストが含まれます。オーディエンスは、ユーザー属性とエクスペリエンスイベントだけに制限されなくなりました。 B2B 固有のオーディエンスを作成するその他の例については、[B2B セグメント化のドキュメント](./segmentation/b2b.md)を参照してください。
@@ -54,13 +54,13 @@ Line 1 は新しいソフトウェア製品をリリースしたばかりで、B
 
 Townsend の支出は様々な販売システムに分割されており、個別に合計で 100 万ドルを超えることはないため、このセグメント定義では、Marketo 1 またはMarketo 2 のいずれかに該当する人物は見つかりません。
 
-### Real-Time CDP B2B Edition で問題を解決する方法
+### Real-Time CDP B2B editionが問題を解決する方法
 
-Real-Time CDP B2B Edition を使用すると、Bodea のマーケティングチームは次のことができるようになります。
+Real-Time CDP B2B editionを使用することで、Bodea のマーケティングチームは次のことが可能になります。
 
-- すべての異なるソース（複数のMarketoと CRM インスタンス、マスターデータ管理）からのデータをReal-Time CDP B2B Edition に結合します。
+- すべての異なるソース（複数のMarketoと CRM インスタンス、マスターデータ管理）からのデータをReal-Time CDP B2B editionに結合します。
 
-RT-CDP B2B Edition を使用すると、Bodea は Marketo Engage Source Connector を使用して、Marketo 1 および Marketo 2 からの B2B データを Experience Platform に取り込み、プラットフォームに接続されたアプリケーションを使用してこのデータを最新の状態に保つことができます。詳しくは、[Marketo ソースコネクタ](../sources/connectors/adobe-applications/marketo/marketo.md)ドキュメントを参照してください。
+RT-CDP B2B editionを使用すると、Bodea はMarketo Engage Source コネクタを使用して、Marketo 1 およびMarketo 2 からの B2B データをExperience Platformに取り込み、Experience Platformに接続されたアプリケーションを使用してこのデータを最新の状態に保つことができます。 詳しくは、[Marketo ソースコネクタ](../sources/connectors/adobe-applications/marketo/marketo.md)ドキュメントを参照してください。
 
 CRM1 からの B2B データ（人物、アカウント、機会およびアクティビティ）が Marketo 1 に同期されます。同様に、CRM2 からのすべての B2B データは Marketo 2 に同期されます。それらのデータは、Marketo ソースコネクタを介して Adobe Experience Platform に同期されます。ただし、Bodea が CRM から Experience Platform に追加のデータを取り込む場合は、既存の CRM コネクタを使用できます。
 
@@ -89,14 +89,14 @@ Marketo Engage と LinkedIn の宛先を使用することにより、Bodea は�
 
 ## 次の手順
 
-このドキュメントを読むことで、Real-Time CDP B2B Edition で解決できる目的と問題の種類が紹介されました。
+このドキュメントでは、Real-Time CDP B2B editionを使用して解決できる目的と問題の種類を紹介しました。
 
 B2B 固有の機能の理解を深めるために、次のドキュメントをお勧めします。
 
-- [Real-time Customer Data Platform B2B Edition のエンドツーエンドのチュートリアル](./b2b-tutorial.md)
-- [Real-time Customer Data Platform B2B Edition のソース](./sources/b2b.md)
+- [Real-Time Customer Data Platform B2B editionのエンドツーエンドチュートリアル](./b2b-tutorial.md)
+- [Real-Time Customer Data Platform B2B editionのソース](./sources/b2b.md)
 - [Real-time Customer Data Platform B2B Edition のスキーマ](./schemas/b2b.md)
 - [B2B セグメント化の例](./segmentation/b2b.md)
 - [アカウントプロファイルの概要](./accounts/account-profile-overview.md)
-- [Real-time Customer Data Platform B2B Edition の宛先](./destinations/b2b.md)
+- [Real-Time Customer Data PlatformB2B editionの宛先](./destinations/b2b.md)
 - [LinkedIn でマッチしたオーディエンスの宛先を設定](../destinations/catalog/social/linkedin.md)

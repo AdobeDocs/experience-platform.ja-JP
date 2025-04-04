@@ -1,9 +1,10 @@
 ---
 title: GitHub コパイロットと Visual Studio Code をクエリサービスに接続する
 description: GitHub コパイロットと Visual Studio Code をAdobe Experience Platform Query Service に接続する方法を説明します。
-source-git-commit: f0c5b311721497bf2a14ca49dc5f1c9653e85efc
+exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1378'
 ht-degree: 2%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->この統合ツールを使用する前に、GitHub と共有されるデータを理解する必要があります。 共有データには、編集中のコードとファイルに関するコンテキスト情報（「プロンプト」）と、ユーザーアクションに関する詳細（「ユーザーエンゲージメントデータ」）が含まれます。  収集したデータについて詳しくは ](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement)[[!DNL GitHub Copilot] のプライバシーに関する声明を参照してください。 また、組織のデータガバナンスポリシーへの準拠を確保する責任を負うので、サードパーティのサービスを含める場合のセキュリティへの影響を考慮する必要があります。 Adobeは、このツールの使用から生じる可能性のあるデータ関連の問題や問題に対して責任を負いません。 詳しくは、GitHub のドキュメントを参照してください。
+>この統合ツールを使用する前に、GitHub と共有されるデータを理解する必要があります。 共有データには、編集中のコードとファイルに関するコンテキスト情報（「プロンプト」）と、ユーザーアクションに関する詳細（「ユーザーエンゲージメントデータ」）が含まれます。  収集したデータについて詳しくは ](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement)[[!DNL GitHub Copilot] のプライバシーに関する声明を参照してください。 また、組織のデータガバナンスポリシーへの準拠を確保する責任を負うので、サードパーティのサービスを含める場合のセキュリティへの影響を考慮する必要があります。 Adobeは、このツールの使用から生じる可能性のあるデータ関連の問題に対して責任を負いません。 詳しくは、GitHub のドキュメントを参照してください。
 
 OpenAI Codex を活用した [!DNL GitHub Copilot] は、コードスニペットや機能全体をエディター内で直接提案することで、コーディングエクスペリエンスを強化する AI 駆動のツールです。 [!DNL Visual Studio Code] （[!DNL VS Code]）と統合す [!DNL Copilot] と、特に複雑なクエリを扱う場合に、ワークフローを大幅に高速化できます。 このガイドに従って、[!DNL GitHub Copilot] と [!DNL VS Code] をクエリサービスに接続し、クエリを記述して管理をより効率的に行う方法を学習します。 [!DNL Copilot] について詳しくは、[GitHub のコパイロット製品ページ ](https://github.com/pricing) および [ 公式  [!DNL Copilot]  ドキュメント ](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot) を参照してください。
 
@@ -22,11 +23,11 @@ OpenAI Codex を活用した [!DNL GitHub Copilot] は、コードスニペッ�
 
 このガイドでは、GitHub アカウントに既にアクセスし、[!DNL GitHub Copilot] に新規登録している必要があります。 [GitHub web サイトから新規登録 ](https://github.com/github-copilot/signup) できます。 また、[!DNL VS Code] も必要です。 [ 公式サイトからダウンロード  [!DNL VS Code]  できます ](https://code.visualstudio.com/download)。
 
-[!DNL VS Code] をインストールして [!DNL Copilot] サブスクリプションをアクティブ化したら、Experience Platform用に接続の資格情報を取得します。 これらの資格情報は、Platform UI の [!UICONTROL  クエリ ] ワークスペースの [!UICONTROL  資格情報 ] タブにあります。 詳しくは、資格情報ガイド [Platform UI でこれらの値を見つける方法を参照 ](../ui/credentials.md) を参照してください。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
+[!DNL VS Code] をインストールして [!DNL Copilot] サブスクリプションをアクティベートしたら、Experience Platformの接続資格情報を取得します。 これらの資格情報は、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースの [!UICONTROL  資格情報 ] タブにあります。 詳しくは、資格情報ガイド [Experience Platform UI でこれらの値を見つける方法を参照 ](../ui/credentials.md) を参照してください。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ### 必要な [!DNL Visual Studio Code] 拡張機能 {#required-extensions}
 
-コードエディター内で Platform SQL データベースを直接効果的に管理およびクエリするには、次の [!DNL Visual Studio Code] 拡張機能が必要です。 これらの拡張機能をダウンロードしてインストールします。
+コードエディター内でExperience Platform SQL データベースを効果的に管理およびクエリするには、次の [!DNL Visual Studio Code] 拡張機能が必要です。 これらの拡張機能をダウンロードしてインストールします。
 
 - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)：複数の SQL データベースを管理およびクエリするには、SQLTools 拡張機能を使用します。 クエリランナー、SQL フォーマッター、接続エクスプローラーなどの機能が含まれ、追加のドライバーをサポートして開発者の生産性を高めます。 詳しくは、Visual Studio Marketplace の概要を参照してください。
 - [SQLTools PostgreSQL/Cockroach Driver](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg)：この拡張機能を使用すると、コードエディター内で PostgreSQL データベースと CockroachDB データベースを直接接続、クエリ、管理できます。
@@ -48,17 +49,17 @@ OpenAI Codex を活用した [!DNL GitHub Copilot] は、コードスニペッ�
 
 ### 入力接続設定 {#input-connection-settings}
 
-[!DNL Connection Settings] ビューが表示されます。 Platform 接続資格情報を SQLTools [!DNL Connection Assistant] の適切なフィールドに入力します。 必要な値について、次の表で説明します。
+[!DNL Connection Settings] ビューが表示されます。 Experience Platform接続の資格情報を SQLTools フ [!DNL Connection Assistant] ールドの適切なフィールドに入力します。 必要な値について、次の表で説明します。
 
 | プロパティ | 説明 |
 | --- |--- |
 | [!DNL Connection name] | `Prod_MySQL_Server` のような説明的で、目的を明確に示す「[!DNL Connection name]」を指定します（例えば、MySQL サーバーの実稼動環境）。 ベストプラクティスは次のとおりです。<br><ul><li>組織の命名規則に従って、システム内で一意になるようにします。</li><li>明確さを維持し、他の接続との混乱を避けるために、簡潔に保ちます。</li><li>接続の機能や環境に関する関連する詳細を、名前に含めます。</li></ul> |
-| [!DNL Connect using] | **[!DNL Server and Port]** オプションを使用して、サーバーのアドレス（ホスト名）とポート番号を指定し、Platform への直接接続を確立します |
-| [!DNL Server address] | Platform Postgres 資格情報で指定された **[!UICONTROL ホスト]** 値（`acmeprod.platform-query.adobe.io` など）を入力します。 |
-| [!DNL Port] | この値は、通常、Platform サービスの場合は `80` です。 |
-| [!DNL Database] | Platform Postgres 資格情報で指定された **[!UICONTROL データベース]** 値（`prod:all` など）を入力します。 |
-| [!DNL Username] | このプロパティは組織 ID を参照します。 Platform Postgres の資格情報に指定された **[!UICONTROL ユーザー名]** 値を入力します。 |
-| [!DNL Password] | このプロパティはアクセス トークンです。 Platform Postgres 資格情報に指定された **[!UICONTROL パスワード]** 値を入力します。 |
+| [!DNL Connect using] | **[!DNL Server and Port]** オプションを使用して、サーバーのアドレス（ホスト名）とポート番号を指定し、Experience Platformへの直接接続を確立します |
+| [!DNL Server address] | Experience Platform Postgres 資格情報で指定された **[!UICONTROL ホスト]** 値（`acmeprod.platform-query.adobe.io` など）を入力します。 |
+| [!DNL Port] | この値は、通常、Experience Platform サービスの場合は `80` です。 |
+| [!DNL Database] | Experience Platform Postgres 資格情報で指定された **[!UICONTROL Database]** 値（`prod:all` など）を入力します。 |
+| [!DNL Username] | このプロパティは組織 ID を参照します。 Experience Platform Postgres の資格情報に指定した **[!UICONTROL ユーザー名]** の値を入力します。 |
+| [!DNL Password] | このプロパティはアクセス トークンです。 Experience Platform Postgres の資格情報に指定された **[!UICONTROL パスワード]** 値を入力します。 |
 
 ![ 複数の設定がハイライト表示された接続アシスタントワークスペース ](../images/clients/github-copilot/connection-settings.png)
 
@@ -90,7 +91,7 @@ OpenAI Codex を活用した [!DNL GitHub Copilot] は、コードスニペッ�
 
 ## [!DNL GitHub Copilot] クイックガイド
 
-Platform インスタンスに接続すると、[!DNL Copilot] を AI コーディングアシスタントとして使用して、より速く、より自信を持ってコードを記述できます。 この節では、主な機能とその使用方法について説明します。
+Experience Platform インスタンスに接続すると、[!DNL Copilot] を AI コーディングアシスタントとして使用して、より速く、より自信を持ってコードを記述できます。 この節では、主な機能とその使用方法について説明します。
 
 ## [!DNL GitHub Copilot] 入門 {#get-started-with-copilot}
 
@@ -150,4 +151,4 @@ There are inline features for chat including doc, expalin, fix and test
 
 ## 次の手順
 
-これで、コードエディターから直接 Platform データベースに対して効率的にクエリを実行し、[!DNL GitHub Copilot] の AI を利用したコード提案を使用して、SQL クエリの記述と最適化を効率化する準備が整いました。 クエリの作成および実行方法について詳しくは、 [クエリ実行のガイダンス](../best-practices/writing-queries.md)を参照してください。
+これで、コードエディターから直接Experience Platform データベースに対して効率的にクエリを実行し、[!DNL GitHub Copilot] の AI を利用したコード提案を使用して、SQL クエリの記述と最適化を効率化できます。 クエリの作成および実行方法について詳しくは、 [クエリ実行のガイダンス](../best-practices/writing-queries.md)を参照してください。

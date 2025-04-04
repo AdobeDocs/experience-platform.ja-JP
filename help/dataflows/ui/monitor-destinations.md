@@ -4,16 +4,16 @@ solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3620'
-ht-degree: 61%
+source-wordcount: '3626'
+ht-degree: 58%
 
 ---
 
 # UI での宛先のデータフローの監視
 
-Experience Platform カタログの様々な宛先を使用して、Platform から無数の外部パートナーに対してデータをアクティブ化します。 Platform では、データフローの透明性を提供することで、宛先へのデータフローの追跡プロセスを容易にします。
+Experience Platform カタログの様々な宛先を使用して、Experience Platformから無数の外部パートナーに対してデータをアクティブ化します。 Experience Platformでは、データフローの透明性を提供することで、宛先へのデータフローのトラッキングプロセスを容易にします。
 
 監視ダッシュボードは、データフローのジャーニーを視覚的に表します。これには、データがアクティブ化されている宛先、表示しているデータのタイプ、データフロー実行ごとに書き出されたデータなどが含まれます。
 
@@ -23,14 +23,14 @@ Experience Platform カタログの様々な宛先を使用して、Platform か
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-- [データフロー](../home.md)：データフローは、Platform 間でデータを移動するデータジョブを表します。データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
+- [ データフロー ](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
    - [データフロー実行](../../sources/notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
-- [宛先](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合で、これを使用すると、Platform のデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告およびその他の多くのユースケースを実現できます。
-- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
+- [ 宛先 ](../../destinations/home.md)：宛先は、一般に使用されるアプリケーションとの事前定義済みの統合で、これを使用すると、Experience Platformのデータをシームレスにアクティブ化してクロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告およびその他の多くのユースケースを実現できます。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
 ## 宛先ワークスペースでのデータフローの監視 {#monitor-dataflows-in-the-destinations-workspace}
 
-Platform UI 内の&#x200B;**[!UICONTROL 宛先]**&#x200B;ワークスペースで、「**[!UICONTROL 参照]**」タブに移動し、表示する宛先の名前を選択します。
+Experience Platform UI 内の **[!UICONTROL 宛先]** ワークスペースで、「**[!UICONTROL 参照]** タブに移動し、表示する宛先の名前を選択します。
 
 ![ 宛先接続がハイライト表示された宛先表示を選択 ](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -349,4 +349,4 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 ## 次の手順 {#next-steps}
 
-このガイドを通じて、処理時間、アクティブ化率、ステータスなどのすべての関連情報を含め、バッチ宛先とストリーミング宛先の両方のデータフローを監視する方法を理解できました。Platform でのデータフローについて詳しくは、[ データフローの概要 ](../home.md) を参照してください。 宛先について詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。
+このガイドを通じて、処理時間、アクティブ化率、ステータスなどのすべての関連情報を含め、バッチ宛先とストリーミング宛先の両方のデータフローを監視する方法を理解できました。Experience Platformでのデータフローについて詳しくは、[ データフローの概要 ](../home.md) を参照してください。 宛先について詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。

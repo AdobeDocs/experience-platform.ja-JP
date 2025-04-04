@@ -4,10 +4,10 @@ description: Adobe Experience Platform UI を使用して Braze アカウント�
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: ベータ版
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 17%
+source-wordcount: '1003'
+ht-degree: 16%
 
 ---
 
@@ -45,9 +45,9 @@ UI で [!DNL Braze] アカウントからAdobe Experience Platformにエンゲ�
 
 >[!TIP]
 >
->[!DNL Braze Currents] 接続を初めて作成する場合は、エクスペリエンスデータモデル（XDM）スキーマを作成する必要があります。 [!DNL Braze Currents] 用のスキーマを既に作成している場合は、この手順をスキップして、[ アカウントをExperience Platformに接続 ](#connect) に進むことができます。
+>[!DNL Braze Currents] 接続を初めて作成する場合は、エクスペリエンスデータモデル（XDM）スキーマを作成する必要があります。 [!DNL Braze Currents] のスキーマを既に作成している場合は、この手順をスキップして、[ アカウントのExperience Platformへの接続 ](#connect) に進むことができます。
 
-Platform UI で、左側のナビゲーションを使用し、「**[!UICONTROL スキーマ]**」を選択して、「[!UICONTROL  スキーマ ] ワークスペースにアクセスします。 次に、「**[!UICONTROL スキーマを作成]**」を選択し、「**[!UICONTROL エクスペリエンスイベント]**」を選択します。 続行するには、「**[!UICONTROL 次へ]**」を選択します。
+Experience Platform UI で、左側のナビゲーションを使用し、「**[!UICONTROL スキーマ]**」を選択して、「[!UICONTROL  スキーマ ] ワークスペースにアクセスします。 次に、「**[!UICONTROL スキーマを作成]**」を選択し、「**[!UICONTROL エクスペリエンスイベント]**」を選択します。 続行するには、「**[!UICONTROL 次へ]**」を選択します。
 
 ![ 完了したスキーマ。](../../../../images/tutorials/create/braze/schema.png)
 
@@ -55,13 +55,13 @@ Platform UI で、左側のナビゲーションを使用し、「**[!UICONTROL 
 
 スキーマについて詳しくは、[UI でのスキーマの作成 ](../../../../../xdm/tutorials/create-schema-ui.md) ガイドを参照してください。
 
-## [!DNL Braze] アカウントをExperience Platformに接続する {#connect}
+## [!DNL Braze] アカウントのExperience Platformへの接続 {#connect}
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *マーケティングオートメーション* カテゴリで、**[!UICONTROL Braze Currents]** を選択し、次に **[!UICONTROL データを追加]** を選択します。
 
-![Experience PlatformUI のソースカタログで、「Braze Current」ソースが選択されています。](../../../../images/tutorials/create/braze/catalog.png)
+![Experience Platform UI のソースカタログで、「Braze Current」ソースが選択されています。](../../../../images/tutorials/create/braze/catalog.png)
 
 次に、提供された [Braze Currents サンプルファイル ](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json) をアップロードします。 このファイルには、Braze がイベントの一部として送信する可能性のあるすべてのフィールドが含まれています。
 
@@ -94,16 +94,16 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### 必要な資格情報の収集
 
-接続が作成されたら、次の資格情報の値を収集する必要があります。これらは、Braze ダッシュボードで指定して、データをExperience Platformに送信します。 詳しくは、[!DNL Braze][ 電流への移動に関するガイド ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents) を参照してください。
+接続が作成されたら、次の資格情報の値を収集する必要があります。この値は、Braze Dashboard でExperience Platformにデータを送信するために提供されます。 詳しくは、[!DNL Braze][ 電流への移動に関するガイド ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents) を参照してください。
 
 | フィールド | 説明 |
 | --- | --- |
-| クライアント ID | Experience Platformソースに関連付けられたクライアント ID。 |
-| クライアント秘密鍵 | Experience Platformソースに関連付けられたクライアント秘密鍵。 |
-| テナント ID | Experience Platformソースに関連付けられたテナント ID。 |
-| サンドボックス名 | Experience Platformソースに関連付けられたサンドボックス。 |
-| データフロー ID | Experience Platformソースに関連付けられたデータフロー ID。 |
-| ストリーミングエンドポイント | Experience Platformソースに関連付けられたストリーミングエンドポイント。 **メモ**:[!DNL Braze] はこれをバッチストリーミングエンドポイントに自動的に変換します。 |
+| クライアント ID | Experience Platform ソースに関連付けられたクライアント ID。 |
+| クライアント秘密鍵 | Experience Platform ソースに関連付けられたクライアントシークレット。 |
+| テナント ID | Experience Platform ソースに関連付けられたテナント ID。 |
+| サンドボックス名 | Experience Platform ソースに関連付けられたサンドボックス。 |
+| データフロー ID | Experience Platform ソースに関連付けられたデータフロー ID。 |
+| ストリーミングエンドポイント | Experience Platform ソースに関連付けられたストリーミングエンドポイント。 **メモ**:[!DNL Braze] はこれをバッチストリーミングエンドポイントに自動的に変換します。 |
 
 ### データソースにデータをストリーミングするための [!DNL Braze Currents] の設定
 
@@ -111,4 +111,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Braze] アカウントとの接続を確立しました。次のチュートリアルに進み、[ マーケティング自動化システムデータをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/marketing-automation.md) を行いましょう。
+このチュートリアルでは、[!DNL Braze] アカウントとの接続を確立しました。次のチュートリアルに進み、[ マーケティング自動化システムデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/marketing-automation.md) を行いましょう。

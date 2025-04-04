@@ -3,9 +3,9 @@ title: TikTok 接続
 description: 広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 TikTok Ads Manager とAdobeのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1079'
 ht-degree: 39%
 
 ---
@@ -42,8 +42,8 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
-| 電話番号 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 でハッシュ化された電話番号の両方がAdobe Experience Platformでサポートされており、E.164 形式である必要があります。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
-| メール | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| 電話番号 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 でハッシュ化された電話番号の両方がAdobe Experience Platformでサポートされており、E.164 形式である必要があります。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| メール | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先接続の詳細 ](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png " 入力する宛先接続の詳細を示す、Platform UI の画像 ")
+![ 宛先接続の詳細 ](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png " 入力する宛先接続の詳細を示す、Experience Platform UI の画像 ")
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -123,7 +123,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 * メール名前空間をターゲット ID として選択します。
 
-![ID マッピング ](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Platform UI の画像、ID のマッピング ")
+![ID マッピング ](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Experience Platform UI の画像、ID のマッピング ")
 
 ## 書き出したデータ {#exported-data}
 

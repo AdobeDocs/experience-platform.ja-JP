@@ -9,16 +9,16 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1812'
-ht-degree: 97%
+source-wordcount: '1817'
+ht-degree: 93%
 
 ---
 
-# [!DNL Platform] に関する FAQ とトラブルシューティングガイド
+# [!DNL Experience Platform] に関する FAQ とトラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platform に関するよくある質問への回答と、[!DNL Experience Platform] API で発生する可能性がある一般的なエラーの高度なトラブルシューティングガイドを提供します。個々の [!DNL Platform] サービスのトラブルシューティングガイドについては、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
+このドキュメントでは、Adobe Experience Platform に関するよくある質問への回答と、[!DNL Experience Platform] API で発生する可能性がある一般的なエラーの高度なトラブルシューティングガイドを提供します。個々の [!DNL Experience Platform] サービスのトラブルシューティングガイドについては、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
 
 ## FAQ {#faq}
 
@@ -26,21 +26,21 @@ ht-degree: 97%
 
 ## [!DNL Experience Platform] API とは何ですか？ {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] では、HTTP リクエストを使用して [!DNL Platform] リソースにアクセスするために複数の RESTful API が使用されます。これらのサービス API は、それぞれ複数のエンドポイントを公開し、リスト（GET）、ルックアップ（GET）、編集（PUT または PATCH）および削除（DELETE）リソースに対する操作を実行できます。各サービスで使用できる特定のエンドポイントと操作について詳しくは、Adobe I/O の [API リファレンスドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。
+[!DNL Experience Platform] では、HTTP リクエストを使用して [!DNL Experience Platform] リソースにアクセスするために複数の RESTful API が使用されます。これらのサービス API は、それぞれ複数のエンドポイントを公開し、リスト（GET）、ルックアップ（GET）、編集（PUT または PATCH）および削除（DELETE）リソースに対する操作を実行できます。各サービスで使用できる特定のエンドポイントと操作について詳しくは、Adobe I/O の [API リファレンスドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。
 
 ## API リクエストの形式を設定する方法を教えてください。  {#how-do-i-format-an-api-request}
 
-リクエストの形式は、使用する [!DNL Platform] API によって異なります。API 呼び出しの構造を学ぶ最善の方法は、使用している特定の [!DNL Platform] サービスのドキュメントに記載されている例に従うことです。
+リクエストの形式は、使用する [!DNL Experience Platform] API によって異なります。API 呼び出しの構造を学ぶ最善の方法は、使用している特定の [!DNL Experience Platform] サービスのドキュメントに記載されている例に従うことです。
 
-API リクエストの形式について詳しくは、『Platform API 入門ガイド』の [API 呼び出しのサンプルを参照する](./api-guide.md#sample-api)の節を参照してください。
+API リクエストの形式について詳しくは、『Experience Platform API 入門ガイド』の API 呼び出しのサンプルの読み取り [ の節を参照し ](./api-guide.md#sample-api) ください。
 
 ## 組織とは何ですか？ {#what-is-my-ims-organization}
 
-組織は、アドビにおいて顧客を表現したものです。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。組織が [!DNL Experience Platform] の権利を付与されると、開発者にアクセス権を割り当てることができます。組織 ID（`x-gw-ims-org-id`）は、API 呼び出しの実行対象となる組織を表しているので、すべての API リクエストのヘッダーとして必要です。この ID は、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると「**クライアント資格情報**」の下に ID が表示されます。[!DNL Platform] への認証方法の詳しい手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
+組織は、アドビにおいて顧客を表現したものです。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。組織が [!DNL Experience Platform] の権利を付与されると、開発者にアクセス権を割り当てることができます。組織 ID（`x-gw-ims-org-id`）は、API 呼び出しの実行対象となる組織を表しているので、すべての API リクエストのヘッダーとして必要です。この ID は、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) で確認できます。「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると「**クライアント資格情報**」の下に ID が表示されます。[!DNL Experience Platform] への認証方法の詳しい手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
 
 ## API キーはどこで入手できますか？  {#where-can-i-find-my-api-key}
 
-API キーは、すべての API リクエストのヘッダーとして必要です。これは、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) から入手できます。コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。[!DNL Platform] への認証方法の詳しい手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
+API キーは、すべての API リクエストのヘッダーとして必要です。これは、[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) から入手できます。コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。[!DNL Experience Platform] への認証方法の詳しい手順については、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。
 
 ## アクセストークンはどのように入手できますか？  {#how-do-i-get-an-access-token}
 
@@ -48,7 +48,7 @@ API キーは、すべての API リクエストのヘッダーとして必要�
 
 ## クエリーパラメーターの使用方法  {#how-do-i-user-query-parameters}
 
-一部の [!DNL Platform] API エンドポイントは、クエリパラメーターを受け取って特定の情報を検索し、応答で返される結果をフィルタリングします。リクエストパスに疑問符（`?`）記号が付加され、その後に 1 つ以上のクエリーパラメーターが `paramName=paramValue` 形式で追加されます。1 回の呼び出しで複数のパラメーターを組み合わせる場合、アンパサンド（`&`）を使用して個々のパラメーターを区切る必要があります。次の例は、複数のクエリーパラメーターを使用するリクエストがドキュメントでどのように表現されているかを示しています。
+一部の [!DNL Experience Platform] API エンドポイントは、クエリパラメーターを受け取って特定の情報を検索し、応答で返される結果をフィルタリングします。リクエストパスに疑問符（`?`）記号が付加され、その後に 1 つ以上のクエリーパラメーターが `paramName=paramValue` 形式で追加されます。1 回の呼び出しで複数のパラメーターを組み合わせる場合、アンパサンド（`&`）を使用して個々のパラメーターを区切る必要があります。次の例は、複数のクエリーパラメーターを使用するリクエストがドキュメントでどのように表現されているかを示しています。
 
 以下は、一般的に使用されるクエリーパラメーターの例です。
 
@@ -62,19 +62,19 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## PATCH リクエストで更新する JSON フィールドを指定する方法を教えてください。  {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-[!DNL Platform] API の多くの PATCH 操作では、[JSON Pointer](https://tools.ietf.org/html/rfc6901) 文字列を使用して、更新する JSON プロパティを示します。これらは通常、[JSON パッチ](https://tools.ietf.org/html/rfc6902) 形式を使用してリクエストペイロードに含まれます。これらのテクノロジーに必要な構文について詳しくは、[API の基本原則ガイド](api-fundamentals.md)を参照してください。
+[!DNL Experience Platform] API の多くの PATCH 操作では、[JSON Pointer](https://tools.ietf.org/html/rfc6901) 文字列を使用して、更新する JSON プロパティを示します。これらは通常、[JSON パッチ](https://tools.ietf.org/html/rfc6902) 形式を使用してリクエストペイロードに含まれます。これらのテクノロジーに必要な構文について詳しくは、[API の基本原則ガイド](api-fundamentals.md)を参照してください。
 
-## Postman を使用して [!DNL Platform] API を呼び出すことはできますか？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Postman を使用して [!DNL Experience Platform] API を呼び出すことはできますか？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) は、RESTful API への呼び出しを視覚化する便利なツールです。『[Platform API 入門ガイド](api-guide.md)』には、Postman コレクションを読み込むためのビデオと手順が含まれています。さらに、各サービスについて Postman コレクションのリストが提供されます。
+[Postman](https://www.postman.com/) は、RESTful API への呼び出しを視覚化する便利なツールです。[Experience Platform API 入門ガイド ](api-guide.md) には、Postman コレクションを読み込むためのビデオと手順が含まれています。 さらに、各サービスについて Postman コレクションのリストが提供されます。
 
-## [!DNL Platform] の必要システム構成は何ですか？ {#what-are-the-system-requirements-for-platform}
+## [!DNL Experience Platform] の必要システム構成は何ですか？ {#what-are-the-system-requirements-for-platform}
 
 UI と API のどちらを使用しているかによって、次のシステム要件が適用されます。
 
 **UI ベースの操作の場合：**
 - 最新の標準的な Web ブラウザー。最新バージョンの [!DNL Chrome] をお勧めしますが、[!DNL Firefox] の最新および以前のメジャーリリース、[!DNL Internet Explorer]、Safari もサポートされています。
-   - 新しいメジャーバージョンがリリースされるたびに、[!DNL Platform] は最新バージョンのサポートを開始しますが、3 番目に新しいバージョンのサポートは終了します。
+   - 新しいメジャーバージョンがリリースされるたびに、[!DNL Experience Platform] は最新バージョンのサポートを開始しますが、3 番目に新しいバージョンのサポートは終了します。
 - すべてのブラウザーで、Cookie と JavaScript が有効になっている必要があります。
 
 **API および開発者のインタラクションの場合：**
@@ -82,23 +82,23 @@ UI と API のどちらを使用しているかによって、次のシステム
 
 ## エラーとトラブルシューティング {#errors-and-troubleshooting}
 
-以下は、[!DNL Experience Platform] サービスの使用時に発生する可能性のあるエラーのリストです。個々の [!DNL Platform] サービスのトラブルシューティングガイドについては、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
+以下は、[!DNL Experience Platform] サービスの使用時に発生する可能性のあるエラーのリストです。個々の [!DNL Experience Platform] サービスのトラブルシューティングガイドについては、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
 
 ## API ステータスコード {#api-status-codes}
 
-以下のステータスコードは、どの [!DNL Experience Platform] API でも発生する場合があります。それぞれに様々な原因があり、本項で述べる説明は概して一般的なものです。個々の [!DNL Platform] サービスで発生する特定のエラーについて詳しくは、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
+以下のステータスコードは、どの [!DNL Experience Platform] API でも発生する場合があります。それぞれに様々な原因があり、本項で述べる説明は概して一般的なものです。個々の [!DNL Experience Platform] サービスで発生する特定のエラーについて詳しくは、以下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
 
 | ステータスコード | 説明 | 考えられる原因 |
 |--- | --- | ---|
 | 400 | Bad request | リクエストが不適切に構築され、キー情報が欠落している、または正しくない構文が含まれていました。 |
 | 401 | Authentication failed | リクエストが認証チェックに合格しませんでした。アクセストークンが見つからないか、無効です。詳しくは、以下の「[OAuth トークンエラー](#oauth-token-is-missing)」の節を参照してください。 |
-| 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。<br>このエラーの原因として考えられるのは、リソースへのアクセスまたは編集に必要な[アクセス制御権限](/help/access-control/home.md)がない可能性があることです。プラットフォーム API を使用するために[必要な属性ベースのアクセス制御権限を取得する](/help/landing/api-authentication.md#get-abac-permissions)方法をお読みください。 </p> |
+| 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。<br>このエラーの原因として考えられるのは、リソースへのアクセスまたは編集に必要な[アクセス制御権限](/help/access-control/home.md)がない可能性があることです。Experience Platform API を使用する方法 [ 必要な属性ベースのアクセス制御権限を取得する ](/help/landing/api-authentication.md#get-abac-permissions) をお読みください。 </p> |
 | 404 | Not found | リクエストされたリソースがサーバーで見つかりませんでした。リソースが削除されたか、リクエストされたパスが正しく入力されていない可能性があります。 |
 | 500 | Internal server error | これはサーバーサイドのエラーです。同時に多数の呼び出しをおこなう場合、API の制限に達し、結果をフィルターする必要がある可能性があります。（詳しくは、[!DNL Catalog Service] API 開発者ガイドの [ データのフィルタリング ](../catalog/api/filter-data.md) に関するサブガイドを参照してください。） リクエストを再試行する前にしばらく待ち、問題が解決しない場合は管理者に問い合わせてください。 |
 
 ## リクエストヘッダーエラー {#request-header-errors}
 
-[!DNL Platform] 内のすべての API 呼び出しには、特定のリクエストヘッダーが必要です。個々のサービスに必要なヘッダーを確認するには、 [API リファレンスのドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。必要な認証ヘッダーの値を確認するには、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。API 呼び出しをおこなう際に、これらのヘッダーのいずれかが見つからないか無効な場合は、次のエラーが発生する可能性があります。
+[!DNL Experience Platform] 内のすべての API 呼び出しには、特定のリクエストヘッダーが必要です。個々のサービスに必要なヘッダーを確認するには、 [API リファレンスのドキュメント](https://www.adobe.com/go/platform-api-reference-en)を参照してください。必要な認証ヘッダーの値を確認するには、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を参照してください。API 呼び出しをおこなう際に、これらのヘッダーのいずれかが見つからないか無効な場合は、次のエラーが発生する可能性があります。
 
 ### OAuth トークンがありません {#oauth-token-is-missing}
 
@@ -202,11 +202,11 @@ UI と API のどちらを使用しているかによって、次のシステム
 
 このエラーメッセージは、次の 2 つの場合のいずれかで表示されます。
 - 間違ったまたは形式が正しくない組織 ID ヘッダー（`x-gw-ims-org-id`）が API リクエストで渡された場合。再試行する前に、組織の正しい ID が含まれていることを確認してください。
-- アカウント（指定された認証資格情報で表される）が Experience Platform の製品プロファイルに関連付けられていない場合。Platform API 認証チュートリアルの[アクセス資格情報の生成](./api-authentication.md#authentication-for-each-session)の手順に従って、Platform をアカウントに追加し、それに応じて認証資格情報を更新します。
+- アカウント（指定された認証資格情報で表される）が Experience Platform の製品プロファイルに関連付けられていない場合。Experience Platform API 認証チュートリアルの [ アクセス資格情報の生成 ](./api-authentication.md#authentication-for-each-session) の手順に従って、Experience Platformをアカウントに追加し、それに応じて認証資格情報を更新します。
 
 ## サービストラブルシューティングディレクトリ {#service-troubleshooting-directory}
 
-以下は、[!DNL Experience Platform] API のトラブルシューティングガイドと API リファレンスドキュメントのリストです。各トラブルシューティングガイドでは、よくある質問への回答と、個々の [!DNL Platform] サービスに固有の問題に対する解決方法を提供します。API リファレンスドキュメントは、各サービスで使用可能なすべてのエンドポイントの包括的なガイドを提供し、受け取る可能性のあるリクエストの本文、応答、エラーコードのサンプルを示します。
+以下は、[!DNL Experience Platform] API のトラブルシューティングガイドと API リファレンスドキュメントのリストです。各トラブルシューティングガイドでは、よくある質問への回答と、個々の [!DNL Experience Platform] サービスに固有の問題に対する解決方法を提供します。API リファレンスドキュメントは、各サービスで使用可能なすべてのエンドポイントの包括的なガイドを提供し、受け取る可能性のあるリクエストの本文、応答、エラーコードのサンプルを示します。
 
 | サービス | API リファレンス | トラブルシューティング |
 | --- | --- | --- |

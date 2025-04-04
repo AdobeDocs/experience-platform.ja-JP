@@ -1,9 +1,9 @@
 ---
-title: UI での Analytics SourceAzure synapseの作成
-description: Adobe Experience Platform UI を使用してAzure synapse分析（以下「Synapse」）ソース接続を作成する方法について説明します。
+title: UI でのAzure Synapse Analytics Source接続の作成
+description: Adobe Experience Platform UI を使用してAzure Synapse Analytics （以下「Synapse」）ソース接続を作成する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 48%
@@ -14,9 +14,9 @@ ht-degree: 48%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Azure Synapse Analytics] ソースを利用できます。
+>Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Synapse Analytics] ソースを利用できます。
 
-このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Azure Synapse Analytics] （以下「[!DNL Synapse]」）ソースコネクタを作成する手順について説明します。
+このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Azure Synapse Analytics] （以下「[!DNL Synapse]」）ソースコネクタを作成する手順について説明します。
 
 ## はじめに
 
@@ -31,7 +31,7 @@ ht-degree: 48%
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で [!DNL Synapse] アカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Experience Platform] で [!DNL Synapse] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -41,17 +41,17 @@ ht-degree: 48%
 
 ## [!DNL Synapse] アカウントの接続
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL Synapse] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL Synapse] アカウントを [!DNL Experience Platform] にリンクします。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-**[!UICONTROL Databases]** カテゴリで、**[!UICONTROL Azure synapse分析]** を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい [!DNL Synapse] コネクタを作成します。
+「**[!UICONTROL データベース]**」カテゴリで、「**[!UICONTROL Azure Synapse Analytics]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい [!DNL Synapse] コネクタを作成します。
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-**[!UICONTROL Azure synapse分析に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Azure Synapse Analytics への接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新しいアカウント
 
@@ -67,4 +67,4 @@ ht-degree: 48%
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Synapse] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL Synapse] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

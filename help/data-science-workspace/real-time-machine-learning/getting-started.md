@@ -4,10 +4,10 @@ solution: Experience Platform
 title: リアルタイム機械学習の基本を学ぶ
 description: 次のドキュメントでは、Adobe Experience Platform でリアルタイム機械学習モデルを作成するために必要な手順の概要について説明します。
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 89%
+source-wordcount: '462'
+ht-degree: 83%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 89%
 
 ## Adobe Experience Platform のデータセット
 
-リアルタイム機械学習の使用を開始するには、データセットへのアクセス権が必要です。 まだ行っていない場合は、外部データセットを使用して [!DNL JupyterLab] 環境にアップロードするか、Platform 内に新しいデータセットを作成するオプションがあります。
+リアルタイム機械学習の使用を開始するには、データセットへのアクセス権が必要です。 まだ行っていない場合は、外部データセットを使用して [!DNL JupyterLab] 環境にアップロードするか、Experience Platform内に新しいデータセットを作成するオプションがあります。
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ ht-degree: 89%
 
 ### 新しいデータセットの作成
 
-リアルタイム機械学習で使用する新しいデータセットを作成するには、データセットのデータスキーマが必要です。次に、作成したスキーマを使用してデータを取り込む必要があります。次のチュートリアルを使用して、[!DNL Platform] のデータセットを作成して入力します。
+リアルタイム機械学習で使用する新しいデータセットを作成するには、データセットのデータスキーマが必要です。次に、作成したスキーマを使用してデータを取り込む必要があります。次のチュートリアルを使用して、[!DNL Experience Platform] のデータセットを作成して入力します。
 
 - [API でのデータセットの作成と入力](../../catalog/datasets/create.md)
 - [UI でのデータセットの作成と入力](../../ingestion/tutorials/ingest-batch-data.md)

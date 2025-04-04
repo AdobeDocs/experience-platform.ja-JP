@@ -2,21 +2,21 @@
 solution: Experience Platform
 title: Edge Networkとハブの比較
 description: Adobe Experience Platformで使用できる様々な処理パスについて説明します。
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '713'
 ht-degree: 6%
 
 ---
 
-
 # Edge Networkとハブの比較
 
-Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。Experience Platformを使用すると、あらゆるシステムから顧客データおよびコンテンツを一元化および標準化して、データサイエンスと機械学習を適用し、パーソナライズされた豊富なエクスペリエンスのデザインおよび配信を大幅に強化できます。 その結果、Platform にはデータを処理する方法が複数あるので、可能な限り最適な方法でデータを評価できます。
+Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。Experience Platformを使用すると、あらゆるシステムから顧客データおよびコンテンツを一元化および標準化して、データサイエンスと機械学習を適用し、パーソナライズされた豊富なエクスペリエンスのデザインおよび配信を大幅に強化できます。 その結果、Experience Platformではデータを処理する方法が複数用意されているので、可能な限り最適な方法でデータを評価できます。
 
 ## サーバータイプ
 
-Platform では、データは 2 つの異なるパスで処理できます。バッチおよびストリーミングワークフロー用のAdobe Experience Platform ハブと、リアルタイムエクスペリエンス用のEdge Networkです。
+Experience Platformでは、データは、バッチワークフローとストリーミングワークフロー用のAdobe Experience Platform hub とリアルタイムエクスペリエンス用のEdge Networkの 2 つの異なるパスで処理できます。
 
 ### Adobe Experience Platform ハブ
 

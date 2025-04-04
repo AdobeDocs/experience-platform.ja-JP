@@ -1,11 +1,11 @@
 ---
 title: CSP の設定
 seo-title: Configuring a CSP for Adobe Experience Platform Web SDK
-description: Experience PlatformWeb SDK 用に CSP を設定する方法について説明します
+description: Experience Platform Web SDKの CSP を設定する方法について説明します
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
-keywords: 設定；設定；SDK；エッジ；Web SDK；設定；コンテキスト；Web；デバイス；環境；Web SDK 設定；コンテンツセキュリティポリシー；
+keywords: 設定；設定；SDK；エッジ；Web SDK；設定；コンテキスト；web；デバイス；環境；web sdk 設定；コンテンツセキュリティポリシー；
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # CSP の設定
 
-[ コンテンツセキュリティポリシー ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) （CSP）は、ブラウザーが使用できるリソースを制限するために使用されます。 また、CSP はスクリプトリソースとスタイルリソースの機能を制限することもできます。 Adobe Experience Platform Web SDK には CSP は必要ありませんが、CSP を追加すると攻撃サーフェスが減少して、悪意のある攻撃に対する防御が強化されます。
+[ コンテンツセキュリティポリシー ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) （CSP）は、ブラウザーが使用できるリソースを制限するために使用されます。 また、CSP はスクリプトリソースとスタイルリソースの機能を制限することもできます。 Adobe Experience Platform Web SDKには CSP は必要ありませんが、CSP を追加すると攻撃サーフェスが減少して、悪意のある攻撃に対する防御が強化されます。
 
-CSP は、[!DNL Platform Web SDK] のデプロイ方法と設定方法を反映する必要があります。 次の CSP は、SDK が正しく機能するために必要な可能性のある変更を示しています。 具体的な環境によっては、追加の CSP 設定が必要になる場合があります。
+CSP は、[!DNL Experience Platform Web SDK] のデプロイ方法と設定方法を反映する必要があります。 次の CSP は、SDKが正しく機能するために必要な可能性のある変更を示しています。 具体的な環境によっては、追加の CSP 設定が必要になる場合があります。
 
 ## コンテンツセキュリティポリシーの例
 
@@ -33,13 +33,13 @@ connect-src 'self' EDGE-DOMAIN
 
 ### NONCE を使用してインラインのスクリプト要素とスタイル要素を許可する
 
-ページのコンテンツを変更で [!DNL Platform Web SDK] ます。インラインスクリプトおよびスタイルタグの作成を承認する必要があります。 これを実現するために、Adobeでは CSP ディレクティブ [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) に nonce を使用することをお勧めします。 nonce は、一意のページビューごとに 1 回生成される、サーバー生成の暗号的に強力なランダムトークンです。
+ページのコンテンツを変更で [!DNL Experience Platform Web SDK] ます。インラインスクリプトおよびスタイルタグの作成を承認する必要があります。 これを実現するために、Adobeでは、CSP ディレクティブ [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) に nonce を使用することをお勧めします。 nonce は、一意のページビューごとに 1 回生成される、サーバー生成の暗号的に強力なランダムトークンです。
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-さらに、CSP nonce を、[!DNL Platform Web SDK] [ ベースコード ](../install/library.md) スクリプトタグの属性として追加する必要があります。 [!DNL Platform Web SDK] の後、ページにインラインスクリプトタグまたはスタイルタグを追加する際に、nonce が使用されます。
+さらに、CSP nonce を、[!DNL Experience Platform Web SDK] [ ベースコード ](../install/library.md) スクリプトタグの属性として追加する必要があります。 [!DNL Experience Platform Web SDK] の後、ページにインラインスクリプトタグまたはスタイルタグを追加する際に、nonce が使用されます。
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -59,7 +59,7 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobeでは、ページ上で任意のスクリプトを実行でき **CSP のメリットが制限されるので、`unsafe-inline` を指定する** お勧めしません。
+>Adobeでは、ページ上で任意のスクリプトを実行でき **CSP のメリットが制限されるので、`unsafe-inline` を指定することは** お勧めしません。
 
 ## アプリ内メッセージ用の CSP の設定 {#in-app-messaging}
 

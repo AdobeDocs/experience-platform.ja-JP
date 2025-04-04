@@ -5,9 +5,9 @@ title: UI での OneTrust Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して OneTrust ソース接続を作成する方法を説明します。
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: 35095ec8c22106ba0a8f11e0a970ed7989a7f06c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 23%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 23%
 >
 >[!DNL OneTrust Integration] ソースは、同意および環境設定データの取り込みのみをサポートし、cookie はサポートしていません。
 
-このチュートリアルでは、Platform ユーザーインターフェイスを使用して [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) ソース接続を作成し、履歴およびスケジュールされた同意データの両方をAdobe Experience Platformに取り込む手順について説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) ソース接続を作成し、履歴およびスケジュールされた同意データの両方をAdobe Experience Platformに取り込む手順について説明します。
 
 ## 前提条件
 
@@ -26,13 +26,13 @@ ht-degree: 23%
 >
 >[!DNL OneTrust Integration] ソースコネクタとドキュメントは、[!DNL OneTrust Integration] チームによって作成されました。 お問い合わせや更新のリクエストについては、[[!DNL OneTrust]  チーム ](https://my.onetrust.com/s/contactsupport?language=en_US) に直接お問い合わせください。
 
-[!DNL OneTrust Integration] を Platform に接続する前に、まずアクセストークンを取得する必要があります。 アクセストークンを見つける手順について詳しくは、[[!DNL OneTrust Integration] OAuth 2 ガイド ](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token) を参照してください。
+[!DNL OneTrust Integration] をExperience Platformに接続する前に、まずアクセストークンを取得する必要があります。 アクセストークンを見つける手順について詳しくは、[[!DNL OneTrust Integration] OAuth 2 ガイド ](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token) を参照してください。
 
 システム間の更新トークンは [!DNL OneTrust] でサポートされていないため、有効期限が切れた後は、アクセストークンは自動的に更新されません。 そのため、有効期限が切れる前に、接続でアクセストークンが更新されていることを確認する必要があります。 アクセストークンの設定可能な最長有効期間は 1 年です。 アクセストークンの更新について詳しくは、[[!DNL OneTrust] OAuth 2.0 クライアント資格情報の管理のドキュメント ](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials) を参照してください。
 
 ### 必要な資格情報の収集
 
-[!DNL OneTrust Integration] を Platform に接続するには、次の認証資格情報の値を指定する必要があります。
+[!DNL OneTrust Integration] をExperience Platformに接続するには、次の認証資格情報の値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
@@ -46,15 +46,15 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->[!DNL OneTrust Integration] API の仕様は、データ取得に関してAdobeと共有されています。
+>[!DNL OneTrust Integration] API の仕様は、データ取得用にAdobeと共有されています。
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、Experience Platformで使用可能なソースのカタログの「[!UICONTROL  ソース ]」ワークスペースにアクセスします。
+Experience Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、Experience Platformで使用可能なソースのカタログの [!UICONTROL  ソース ] ワークスペースにアクセスします。
 
 *[!UICONTROL カテゴリ]* メニューを使用して、カテゴリ別にソースをフィルタリングします。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
 [!DNL OneTrust Integration] ソースカードの [!UICONTROL  同意および環境設定 ] カテゴリに移動します。 開始するには、「**[!UICONTROL データを追加]**」を選択します。
 
-![Experience PlatformUI ソースカタログ ](../../../../images/tutorials/create/onetrust/catalog.png)
+![Experience Platform UI ソースカタログ ](../../../../images/tutorials/create/onetrust/catalog.png)
 
 **[!UICONTROL OneTrust 統合アカウントの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -72,4 +72,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL OneTrust Integration] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 同意データを Platform に取り込むためのデータフローの設定 ](../../dataflow/consent-and-preferences.md) を行いましょう。
+このチュートリアルでは、[!DNL OneTrust Integration] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 同意データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/consent-and-preferences.md) を行いましょう。

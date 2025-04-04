@@ -2,10 +2,10 @@
 title: Flow Service API を使用した SFTP ベース接続の作成
 description: Flow Service API を使用してAdobe Experience Platformを SFTP （Secure File Transfer Protocol）サーバーに接続する方法について説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 919e2c34bf8b9b4646936fe8bfbd4ee33d44407a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 27%
+source-wordcount: '761'
+ht-degree: 14%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 27%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、様々なソースからデータを取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ ht-degree: 27%
 
 認証資格情報の取得方法の手順について詳しくは、[[!DNL SFTP]  認証ガイド ](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) を参照してください。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -42,7 +42,7 @@ Platform API への呼び出しを正常に実行する方法について詳し�
 >
 >作成した後は、[!DNL SFTP] ベース接続の認証タイプを変更できません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 
-ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
 [!DNL SFTP] ソースは、基本認証と SSH 公開鍵を使用した認証の両方をサポートしています。 この手順では、アクセス権を付与するサブフォルダーへのパスを指定することもできます。
 
@@ -100,7 +100,7 @@ curl -X POST \
 | `auth.params.port` | SFTP サーバーのポート。 この整数値のデフォルトは 22 です。 |
 | `auth.params.username` | SFTP サーバーに関連付けられたユーザー名。 |
 | `auth.params.password` | SFTP サーバーに関連付けられたパスワード。 |
-| `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
+| `auth.params.maxConcurrentConnections` | Experience Platformを SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
 | `auth.params.folderPath` | アクセス権を付与するフォルダーへのパス。 |
 | `auth.params.disableChunking` | SFTP サーバーがチャンクをサポートするかどうかを決定するために使用されるブール値です。 |
 | `connectionSpec.id` | SFTP サーバー接続仕様 ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
@@ -162,7 +162,7 @@ curl -X POST \
 | `auth.params.username` | [!DNL SFTP] サーバーに関連付けられたユーザー名。 |
 | `auth.params.privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
 | `auth.params.passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターは、PrivateKeyContent のパスフレーズを値として使用する必要があります。 |
-| `auth.params.maxConcurrentConnections` | Platform を SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
+| `auth.params.maxConcurrentConnections` | Experience Platformを SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
 | `auth.params.folderPath` | アクセス権を付与するフォルダーへのパス。 |
 | `auth.params.disableChunking` | SFTP サーバーがチャンクをサポートするかどうかを決定するために使用されるブール値です。 |
 | `connectionSpec.id` | [!DNL SFTP] サーバー接続仕様 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |

@@ -2,9 +2,9 @@
 title: MediaAnalytics インタラクションの詳細スキーマフィールドグループ
 description: MediaAnalytics インタラクションの詳細スキーマフィールドグループについて説明します。
 exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
-source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Media Edge API で使用されないフィールドを非表示にできます。 これらのフィールドを非表示にすると、スキーマが読みやすく理解しやすくなりますが、必須ではありません。 これらのフィールドは、[!UICONTROL MediaAnalytics インタラクションの詳細 ] フィールドグループのフィールドのみを参照します。 Platform UI での読みやすくするには、[Media Analytics ドキュメントで未使用フィールドを非表示にする方法 ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) の手順に従います。
+>Media Edge API で使用されないフィールドを非表示にできます。 これらのフィールドを非表示にすると、スキーマが読みやすく理解しやすくなりますが、必須ではありません。 これらのフィールドは、[!UICONTROL MediaAnalytics インタラクションの詳細 ] フィールドグループのフィールドのみを参照します。 Experience Platform UI での読みやすくするには、[Media Analytics ドキュメントで未使用フィールドを非表示にする方法 ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) の手順に従います。
 
 <!-- 
 >[!NOTE]

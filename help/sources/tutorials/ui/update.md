@@ -5,10 +5,10 @@ solution: Experience Platform
 title: UI でのSource接続アカウントの詳細の更新
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 16%
+source-wordcount: '454'
+ht-degree: 5%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 16%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-- [サンドボックス](../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+- [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+- [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## アカウントの更新
 
-[Experience PlatformUI にログインし ](https://platform.adobe.com) 左側のナビゲーションから「**[!UICONTROL ソース]**」を選択して、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 上部のヘッダーから **[!UICONTROL アカウント]** を選択して、既存のアカウントを表示します。
+[Experience Platform UI にログインし ](https://platform.adobe.com) 左側のナビゲーションから「**[!UICONTROL ソース]**」を選択して、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 上部のヘッダーから **[!UICONTROL アカウント]** を選択して、既存のアカウントを表示します。
 
 ![カタログ](../../images/tutorials/update/catalog.png)
 

@@ -5,16 +5,16 @@ title: UI での Veeva CRM Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Veeva CRM ソース接続を作成する方法を説明します。
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 79%
+source-wordcount: '427'
+ht-degree: 71%
 
 ---
 
 # UI での [!DNL Veeva CRM] ソース接続の作成
 
-Adobe Experience Platform のソースコネクタには、外部ソースの CRM データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] のユーザーインターフェイスを使用して [!DNL Veeva CRM] ソースコネクタを作成する手順を説明します。
+Adobe Experience Platform のソースコネクタには、外部ソースの CRM データを設定したスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] のユーザーインターフェイスを使用して [!DNL Veeva CRM] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -40,9 +40,9 @@ Adobe Experience Platform のソースコネクタには、外部ソースの CR
 
 ## [!DNL Veeva CRM] アカウントの接続
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL Veeva CRM] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL Veeva CRM] アカウントを [!DNL Experience Platform] にリンクします。
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -66,4 +66,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Veeva CRM] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](../../dataflow/crm.md)を行いましょう。
+このチュートリアルでは、[!DNL Veeva CRM] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。

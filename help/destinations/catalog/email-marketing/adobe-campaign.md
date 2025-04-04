@@ -3,7 +3,7 @@ keywords: メール；メール；メール；メールの宛先；adobe campaig
 title: Adobe Campaign 接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 38%
@@ -14,7 +14,7 @@ ht-degree: 38%
 
 ## 概要 {#overview}
 
-Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。詳しくは [Campaign Classicの基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) を参照してください。
+Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。詳しくは、[Campaign Classicの基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) を参照してください。
 
 オーディエンスデータをAdobe Campaignに送信するには、まずAdobe Experience Platformで [ 宛先に接続 ](#connect-destination) してから、ストレージの場所からAdobe Campaignに [ データの読み込みを設定 ](#import-data-into-campaign) する必要があります。
 
@@ -24,7 +24,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -42,9 +42,9 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 ## IP アドレスの許可リスト {#allow-list}
 
-SFTP ストレージを使用してメールマーケティングの宛先を設定する場合は、特定の IP 範囲をAdobe許可リストに加えるに追加することをお勧めします。
+SFTP ストレージを使用してメールマーケティングの宛先を設定する場合、Adobeでは、特定の IP 範囲を許可リストに追加することをお勧めします。
 
-AdobeIP を許可リストに追加する必要がある場合は ](../cloud-storage/ip-address-allow-list.md)[IP アドレスの SFTP 宛先の許可リスト」を参照してください。
+許可リストにAdobe IP を追加する必要がある場合は ](../cloud-storage/ip-address-allow-list.md)[IP アドレス^SFTP 宛先の許可リスト^を参照してください。
 
 ## 宛先への接続 {#connect}
 
@@ -74,8 +74,8 @@ Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または 
 * 必要に応じて、RSA 形式の公開鍵を添付して、「**[!UICONTROL キー]**」セクションで書き出したファイルに PGP/GPG による暗号化を追加できます。 公開鍵は、[!DNL Base64] でエンコードされた文字列として記述する必要があります。
 * **[!UICONTROL 名前]**：宛先の名前を選択します。
 * **[!UICONTROL 説明]**：宛先の説明を入力します。
-* **[!UICONTROL バケット名]**：*S3 接続用*。書き出しデータを CSV ファイルとして保存 [!DNL Platform] る S3 バケットの場所を入力します。
-* **[!UICONTROL フォルダーパス]**：書き出しデータを CSV ファイルとして保存 [!DNL Platform] るストレージの場所のパスを指定します。
+* **[!UICONTROL バケット名]**：*S3 接続用*。書き出しデータを CSV ファイルとして保存 [!DNL Experience Platform] る S3 バケットの場所を入力します。
+* **[!UICONTROL フォルダーパス]**：書き出しデータを CSV ファイルとして保存 [!DNL Experience Platform] るストレージの場所のパスを指定します。
 * **[!UICONTROL コンテナ]**: *Blob 接続用*。 フォルダーパスが存在する Blob を保持するコンテナ。
 * **[!UICONTROL ファイル形式]**: **CSV** を選択して、CSV ファイルをストレージの場所に書き出します。
 
@@ -101,7 +101,7 @@ Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または 
 
 ## 書き出したデータ {#exported-data}
 
-[!DNL Adobe Campaign] 宛先の場合、[!DNL Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 ](../../ui/activate-batch-profile-destinations.md#verify) の節を参照してください。
+[!DNL Adobe Campaign] 宛先の場合、[!DNL Experience Platform] は、指定されたストレージの場所に `.csv` ファイルを作成します。ファイルについて詳しくは、Audience Activation チュートリアルの [Audience Activation の検証 ](../../ui/activate-batch-profile-destinations.md#verify) の節を参照してください。
 
 ## Adobe Campaignへのデータの読み込みの設定 {#import-data-into-campaign}
 
@@ -111,6 +111,6 @@ Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または 
 >* [!DNL Campaign] ワークフローを使用して、書き出されたセグメントをAdobe Campaignでスケジュール、読み込み、マッピングする必要があります。 Adobe Campaign Classic ドキュメントの [ 繰り返し読み込みの設定 ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja) およびAdobe Campaign Standard ドキュメントの [ データ管理アクティビティについて ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) を参照してください。
 >* Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または [!DNL Azure Blob] を使用することをお勧めします。
 
-[!DNL Platform] を [!DNL Amazon S3] または [!DNL Azure Blob] ストレージに接続した後、ストレージの場所からAdobe Campaignへのデータの読み込みを設定する必要があります。 これを実現する方法については、次のAdobe Campaign ドキュメントページを参照してください。
+[!DNL Experience Platform] を [!DNL Amazon S3] または [!DNL Azure Blob] ストレージに接続した後、ストレージの場所からAdobe Campaignへのデータの読み込みを設定する必要があります。 これを実現する方法については、次のAdobe Campaign ドキュメントページを参照してください。
 * [ データのインポートとエクスポートの概要 ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=ja) および [ データの読み込み（ファイル） ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=ja) （Adobe Campaign Classic ドキュメント）。
 * [ プロセスとデータ管理の基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) および [ ファイルを読み込む ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html)Adobe Campaign Standard ドキュメント。

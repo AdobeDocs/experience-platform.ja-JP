@@ -2,10 +2,10 @@
 description: サポートされる ID および属性マッピング設定に関する宛先の設定方法を説明します。
 title: サポートされるマッピング設定
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 99%
+source-wordcount: '670'
+ht-degree: 77%
 
 ---
 
@@ -64,19 +64,19 @@ Destination SDK で作成されたリアルタイム（ストリーミング）�
 
 ユーザーは、ターゲットフィールドマッピングを選択する際に、ターゲットのカスタム属性の名前を手動で入力する必要があります。
 
-![カスタム属性の選択を示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![ カスタム属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ストリーミング宛先のカスタム属性への XDM 属性マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![ ストリーミング宛先のカスタム属性への XDM 属性マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### ID 名前空間のパートナー ID 名前空間へのマッピング {#streaming-identity-to-identity}
 
-ユーザーは、Platform からユーザーが定義した ID 名前空間に、カスタムまたはグローバル ID 名前空間をマッピングできます。
+ユーザーは、Experience Platformからユーザーが定義した ID 名前空間に、カスタムまたはグローバル ID 名前空間をマッピングできます。
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ストリーミング宛先の ID への ID マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![ ストリーミング宛先の ID への ID マッピングを示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## ファイルベースの宛先でサポートされるマッピング {#batch-mappings}
 
@@ -118,33 +118,33 @@ Destination SDK で作成されたファイルベースの宛先は、以下の�
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ファイルベースの宛先のカスタム属性への XDM マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![ ファイルベースの宛先のカスタム属性への XDM マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 ユーザーは、デフォルトの名前のままでも、ターゲットフィールドの選択画面でカスタム属性名を入力することもできます。
 
-![ファイルベースの宛先のカスタムターゲット属性の選択を示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![ ファイルベースの宛先のカスタムターゲット属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### ID 名前空間のカスタム属性へのマッピング {#batch-identity-to-custom}
 
-ユーザーは、Platform から宛先側のカスタム属性にカスタムまたはグローバル ID 名前空間をマッピングできます。
+ユーザーは、Experience Platformから宛先側のカスタム属性にカスタムまたはグローバル ID 名前空間をマッピングできます。
 
 ID 名前空間をソースフィールドとして選択する場合、ターゲットフィールドは、同等の ID 名前空間に自動的に設定されます。ターゲットフィールドをカスタム属性に置き換えるには、ユーザーは、ターゲットフィールドの選択画面でカスタム属性名を入力する必要があります。
 
-![ファイルベースの宛先のカスタムターゲット属性の選択を示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![ ファイルベースの宛先のカスタムターゲット属性の選択を示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ファイルベースの宛先のカスタム属性への ID マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![ ファイルベースの宛先のカスタム属性への ID マッピングを示すExperience Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### ID 名前空間のパートナー ID 名前空間へのマッピング {#batch-identity-to-identity}
 
-ユーザーは、Platform から同等の ID 名前空間に、カスタムまたはグローバル ID 名前空間をマッピングできます。
+ユーザーは、Experience Platformから同等の ID 名前空間に、カスタムまたはグローバル ID 名前空間をマッピングできます。
 
 ID 名前空間をソースフィールドとして選択する場合、ターゲットフィールドは、同等の ID 名前空間に自動的に設定されます。
 
 以下の画像に、結果の UI エクスペリエンスを示します。
 
-![ファイルベースの宛先の ID への ID マッピングを示す Platform UI スクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![ ファイルベースの宛先の ID への ID マッピングを示すExperience Platform UI のスクリーンショット。](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## 次の手順 {#next-steps}

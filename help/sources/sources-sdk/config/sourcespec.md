@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: セルフサービスソースのソース仕様の設定（Batch SDK）
 description: このドキュメントでは、セルフサービスソース（Batch SDK）を使用するために準備が必要な設定の概要を説明します。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2084'
-ht-degree: 43%
+source-wordcount: '2090'
+ht-degree: 38%
 
 ---
 
@@ -233,21 +233,21 @@ ht-degree: 43%
 | `sourceSpec.attributes.uiAttributes` | UI に固有のソースに関する情報を表示します。 |
 | `sourceSpec.attributes.uiAttributes.isBeta` | 機能に追加するために、顧客からのより多くのフィードバックがソースで必要かどうかを示すブール値の属性です。 | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | ソースのカテゴリを定義します。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Platform の UI でソースのレンダリングに使用するアイコンを定義します。 | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Experience Platform UI でソースのレンダリングに使用するアイコンを定義します。 | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | ソースの簡単な説明を表示します。 |
-| `sourceSpec.attributes.uiAttributes.label` | Platform の UI でソースのレンダリングに使用するラベルを表示します。 |
+| `sourceSpec.attributes.uiAttributes.label` | Experience Platform UI でのソースのレンダリングに使用するラベルを表示します。 |
 | `sourceSpec.attributes.spec.properties.urlParams` | URL リソースのパス、メソッド、およびサポートされているクエリパラメーターに関する情報が含まれます。 |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | データの取得元となるリソースパスを定義します。 | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | データを取得するリクエストをリソースに送信する際に使用する HTTP メソッドを定義します。 | `GET`、`POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | データの取得をリクエストする際にソース URL に追加できる、サポートされているクエリパラメーターを定義します。**メモ**：ユーザーが指定するパラメーター値は、プレースホルダーの形式にする必要があります。例：`${USER_PARAMETER}`。 | `"queryParams" : {"key" : "value", "key1" : "value1"}` はソース URL に `/?key=value&key1=value1` として追加されます。 |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | データの取得中にソース URL に対する HTTP リクエストで指定する必要があるヘッダーを定義します。 | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | この属性は、POSTリクエストを通じて HTTP 本文を送信するように設定できます。 |
-| `sourceSpec.attributes.spec.properties.contentPath` | Platform に取り込む必要がある項目のリストを含むノードを定義します。 この属性は、有効な JSON パス構文に従い、特定の配列を指す必要があります。 | コンテンツパス内に含まれるリソースの例については、[ 追加のリソース ](#content-path) の節を参照してください。 |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | Platform に取り込まれるコレクションレコードを指すパス。 | `$.emails` |
+| `sourceSpec.attributes.spec.properties.bodyParams` | この属性は、POST リクエストを通じて HTTP 本文を送信するように設定できます。 |
+| `sourceSpec.attributes.spec.properties.contentPath` | Experience Platformに取り込む必要がある項目のリストを含むノードを定義します。 この属性は、有効な JSON パス構文に従い、特定の配列を指す必要があります。 | コンテンツパス内に含まれるリソースの例については、[ 追加のリソース ](#content-path) の節を参照してください。 |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Experience Platformに取り込まれるコレクションレコードを指すパス。 | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | このプロパティを使用すると、コンテンツパスで識別されるリソースから、取り込みから除外する特定の項目を特定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | このプロパティを使用すると、保持する個々の属性を明示的に指定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | このプロパティを使用すると、`contentPath` で指定した属性名の値を上書きできます。 | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | このプロパティを使用すると、2 つの配列を統合し、リソースデータを Platform リソースに変換できます。 |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | このプロパティを使用すると、2 つの配列を統合し、リソースデータをExperience Platform リソースに変換できます。 |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | 統合するコレクションレコードを指すパス。 | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | このプロパティを使用すると、エンティティパスで識別されるリソースから、取り込みから除外する特定の項目を特定できます。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | このプロパティを使用すると、保持する個々の属性を明示的に指定できます。 | `[total_items]` |
@@ -379,7 +379,7 @@ ht-degree: 43%
 
 ### ソースに対して様々なページネーションタイプを設定 {#pagination}
 
-セルフサービスソース（Batch SDK）でサポートされる他のページネーションタイプの例を以下に示します。
+セルフサービスソース（バッチ SDK）でサポートされる他のページネーションタイプの例を以下に示します。
 
 >[!BEGINTABS]
 
@@ -507,9 +507,9 @@ ht-degree: 43%
 {style="table-layout:auto"}
 
 
->[!TAB  なし ]
+>[!TAB なし]
 
-使用可能なページネーションタイプのいずれもサポートしていないソースには、`NONE` のページネーションタイプを使用できます。 `NONE` のページネーションタイプを使用するソースは、GETリクエストが行われた場合、取得可能なすべてのレコードを返します。
+使用可能なページネーションタイプのいずれもサポートしていないソースには、`NONE` のページネーションタイプを使用できます。 `NONE` のページネーションタイプを使用するソースは、GET リクエストが行われた場合、取得可能なすべてのレコードを返します。
 
 ```json
 "paginationParams": {
@@ -519,7 +519,7 @@ ht-degree: 43%
 
 >[!ENDTABS]
 
-### セルフサービスソースの高度なスケジュール設定（Batch SDK）
+### セルフサービスソースの高度なスケジュール（バッチ SDK）
 
 詳細スケジュールを使用して、ソースの増分スケジュールとバックフィルスケジュールを設定します。 `incremental` プロパティを使用すると、ソースが新規または変更済みのレコードのみを取り込むスケジュールを構成でき、`backfill` プロパティを使用すると、履歴データを取り込むスケジュールを作成できます。
 
@@ -556,7 +556,7 @@ ht-degree: 43%
 
 ### カスタムスキーマを追加してソースの動的属性を定義する
 
-ソースにカスタムスキーマを含めて、`sourceSpec` ースに必要なすべての属性（必要になる可能性のある動的属性を含む）を定義できます。 接続仕様の `sourceSpec` セクションでカスタムスキーマを指定すると同時に、[!DNL Flow Service] API の `/connectionSpecs` エンドポイントに対してPUTリクエストを行うことで、ソースの対応する接続仕様を更新できます。
+ソースにカスタムスキーマを含めて、`sourceSpec` ースに必要なすべての属性（必要になる可能性のある動的属性を含む）を定義できます。 接続仕様の `sourceSpec` セクションでカスタムスキーマを指定すると同時に、[!DNL Flow Service] API の `/connectionSpecs` エンドポイントに対してPUT リクエストを行うことで、ソースの対応する接続仕様を更新できます。
 
 ソースの接続仕様に追加できるカスタムスキーマの例を次に示します。
 
@@ -659,4 +659,4 @@ ht-degree: 43%
 
 ## 次の手順
 
-ソースの仕様を入力したので、次は Platform に統合するソースの探索仕様を設定できます。詳しくは、[ 探索仕様の設定 ](./explorespec.md) に関するドキュメントを参照してください。
+ソースの仕様を入力したので、次はExperience Platformに統合するソースの探索仕様を設定できます。 詳しくは、[ 探索仕様の設定 ](./explorespec.md) に関するドキュメントを参照してください。

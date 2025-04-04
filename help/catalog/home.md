@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Catalog Service の概要
 description: カタログサービスは、Adobe Experience Platform 内のデータの場所と系列のレコードのシステムです。Experience Platform に取得されるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 100%
@@ -23,7 +23,7 @@ ht-degree: 100%
 * 正常に処理されたデータの量
 * 処理中に発生したエラー
 
-[!DNL Catalog] には、基本的な CRUD 操作を使用して [!DNL Platform] メタデータをプログラムで管理できる RESTful API が用意されています。詳しくは、『[カタログ開発者ガイド](api/getting-started.md)』を参照してください。
+[!DNL Catalog] には、基本的な CRUD 操作を使用して [!DNL Experience Platform] メタデータをプログラムで管理できる RESTful API が用意されています。詳しくは、『[カタログ開発者ガイド](api/getting-started.md)』を参照してください。
 
 ## [!DNL Catalog] および [!DNL Experience Platform] サービス
 
@@ -31,9 +31,9 @@ ht-degree: 100%
 
 ### [!DNL Experience Data Model]（XDM）システム
 
-[!DNL Experience Data Model]（XDM）システムは、[!DNL Platform] が顧客体験データを整理する際に使用する標準化されたフレームワークです。[!DNL Experience Platform] は、XDM スキーマを活用して、一貫した再利用可能な方法でデータの構造を記述します。
+[!DNL Experience Data Model]（XDM）システムは、[!DNL Experience Platform] が顧客体験データを整理する際に使用する標準化されたフレームワークです。[!DNL Experience Platform] は、XDM スキーマを活用して、一貫した再利用可能な方法でデータの構造を記述します。
 
-データが [!DNL Platform] に取り込まれると、そのデータの構造が XDM スキーマにマッピングされ、データセットの一部として [!DNL Data Lake] 内に保存されます。各データセットのメタデータは、データセットが準拠する XDM スキーマへの参照を含む [!DNL Catalog Service] によって追跡されます。
+データが [!DNL Experience Platform] に取り込まれると、そのデータの構造が XDM スキーマにマッピングされ、データセットの一部として [!DNL Data Lake] 内に保存されます。各データセットのメタデータは、データセットが準拠する XDM スキーマへの参照を含む [!DNL Catalog Service] によって追跡されます。
 
 XDM システムの一般的な情報については、「[XDM システムの概要](../xdm/home.md)」を参照してください。
 
@@ -47,7 +47,7 @@ XDM システムの一般的な情報については、「[XDM システムの�
 
 ## [!DNL Catalog] オブジェクト
 
-前の節で説明したように、[!DNL Catalog] は、他の [!DNL Platform] サービスで使用される複数の種類のリソースおよび操作のメタデータを追跡します。[!DNL Catalog] は、このメタデータをカプセル化する「オブジェクト」の独自のストアを維持します。[!DNL Catalog]オブジェクトは、データ自体にアクセスする必要なく、データの検索、監視、ラベル付けをおこなえる、[!DNL Platform] データのクエリ可能な表現です。
+前の節で説明したように、[!DNL Catalog] は、他の [!DNL Experience Platform] サービスで使用される複数の種類のリソースおよび操作のメタデータを追跡します。[!DNL Catalog] は、このメタデータをカプセル化する「オブジェクト」の独自のストアを維持します。[!DNL Catalog]オブジェクトは、データ自体にアクセスする必要なく、データの検索、監視、ラベル付けをおこなえる、[!DNL Experience Platform] データのクエリ可能な表現です。
 
 次の表に、[!DNL Catalog] でサポートされる各種オブジェクトの概要を示します。
 
@@ -55,7 +55,7 @@ XDM システムの一般的な情報については、「[XDM システムの�
 |---|---|---|
 | バッチ | `/batches` | バッチとは、単一の単位として取得される 1 つ以上のファイルで構成されるデータの単位です。[!DNL Catalog] 内のバッチオブジェクトは、バッチの取得指標（処理されたレコード数やディスク上のサイズなど）の概要を示し、バッチ操作の影響を受けたデータセット、ビュー、その他のリソースへのリンクも含みます。 |
 | データセット | `/dataSets` | データセットは、スキーマ（列）とフィールド（行）を含むデータ（通常はテーブル）の収集に使用されるストレージと管理の構成体です。詳しくは、[データセットの概要](./datasets/overview.md)を参照してください。 |
-| データセットファイル | `/datasetFiles` | データセットファイルは、[!DNL Platform] に保存されたデータのブロックを表します。リテラルファイルのレコードについては、ファイルのサイズ、ファイルに含まれるレコードの数、およびファイルを取得したバッチへの参照を見つけることができます。 |
+| データセットファイル | `/datasetFiles` | データセットファイルは、[!DNL Experience Platform] に保存されたデータのブロックを表します。リテラルファイルのレコードについては、ファイルのサイズ、ファイルに含まれるレコードの数、およびファイルを取得したバッチへの参照を見つけることができます。 |
 
 ## 次の手順
 

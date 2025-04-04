@@ -3,10 +3,10 @@ keywords: パーソナライゼーション;パーソナライゼーション
 title: パーソナライゼーションの宛先の概要
 description: パーソナライズ機能プラットフォームは、個々の行動からデータとインサイトを収集します。これらのプラットフォームは、マーケターが匿名データをナビゲートし、以前のアクティビティに基づいて、または類似の習慣を持つオーディエンスの一部として、オファーや広告を見込み客に提供するのに役立ちます。
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 62%
+source-wordcount: '151'
+ht-degree: 56%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 62%
 
 ## サポートされるパーソナライゼーションの宛先 {#supported-destinations}
 
-現在、Platform は、以下に示すパーソナライゼーションの宛先をサポートしています。これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、Experience Platformでは、以下に示すパーソナライゼーションの宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 **接続**
 

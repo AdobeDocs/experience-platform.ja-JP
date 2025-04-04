@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 exl-id: 89d631f1-1b11-4a18-98e1-08e1d5bd8b0d
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 31%
+source-wordcount: '433'
+ht-degree: 28%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## [!DNL Dataflows] {#dataflows}
 
-データフローは、Platform 間でデータを移動するデータジョブを表します。これらのデータフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、ID およびプロファイルサービス、宛先へとデータを移動できます。
+データフローは、Experience Platform間でデータを移動するデータジョブを表します。 これらのデータフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、ID およびプロファイルサービス、宛先へとデータを移動できます。
 
 **主な機能**
 
@@ -51,7 +51,7 @@ Adobe Experience Platform Intelligence パッケージアドオンについて�
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、[!DNL Experience Platform] サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を提供します。 これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 

@@ -1,21 +1,21 @@
 ---
-title: Platform UI を使用した Azure の顧客管理キーの設定と設定
+title: Experience Platform UI を使用した Azure の顧客管理キーの設定と設定
 description: Azure テナントで CMK アプリを設定し、暗号化キー ID をAdobe Experience Platformに送信する方法を説明します。
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 58bc7a650ff58f877550fa8838c6f8e2908f0090
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1146'
 ht-degree: 18%
 
 ---
 
-# Platform UI を使用した Azure の顧客管理キーの設定と設定
+# Experience Platform UI を使用した Azure の顧客管理キーの設定と設定
 
-このドキュメントでは、UI を使用して Platform で顧客管理キー（CMK）機能を有効にする Azure 固有の手順について説明します。 AWS固有の手順については、[AWS設定ガイド ](../aws/ui-set-up.md) を参照してください。
+このドキュメントでは、UI を使用してExperience Platformで顧客管理キー（CMK）機能を有効にする Azure 固有の手順について説明します。 AWS固有の手順については、[AWS設定ガイド ](../aws/ui-set-up.md) を参照してください。
 
-API を使用して Azure でホストされる Platform インスタンスのこのプロセスを完了する手順については、[API CMK 設定ドキュメント ](./api-set-up.md) を参照してください。
+API を使用して Azure でホストされるExperience Platform インスタンスのこのプロセスを完了する手順については、[API CMK 設定ドキュメント ](./api-set-up.md) を参照してください。
 
 ## 前提条件
 
@@ -50,13 +50,13 @@ Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリ
 
 ![ アプリケーション認証 URL セクションがハイライト表示された [!UICONTROL  顧客管理キー設定 ] ビュー。](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-[!UICONTROL  アプリケーション認証 URL] をコピーしてブラウザーに貼り付け、認証ダイアログを開きます。 「**[!DNL Accept]**」を選択して、CMK アプリサービスプリンシパルを [!DNL Azure] テナントに追加します。 認証を確定すると、Experience Cloudランディングページにリダイレクトされます。
+[!UICONTROL  アプリケーション認証 URL] をコピーしてブラウザーに貼り付け、認証ダイアログを開きます。 「**[!DNL Accept]**」を選択して、CMK アプリサービスプリンシパルを [!DNL Azure] テナントに追加します。 認証を確定すると、Experience Cloud ランディングページにリダイレクトされます。
 
 ![ 「同意する [!UICONTROL  がハイライト表示されたMicrosoft権限リクエストダイアログ ]](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->複数の [!DNL Microsoft Azure] 購読がある場合、Platform インスタンスを間違った Key Vault に接続できる可能性があります。 この場合、CMK ディレクトリ ID のアプリケーション認証 URL 名の `common` セクションを入れ替える必要があります。<br>[!DNL Microsoft Azure] アプリケーションのポータル設定、ディレクトリ、購読ページから CMK ディレクトリ ID をコピーします <br>![ ディレクトリ ID が強調表示された [!DNL Microsoft Azure] アプリケーションのポータル設定、ディレクトリ、購読ページ。](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br> 次に、ブラウザーのアドレスバーにペーストします。<br>![ アプリケーション認証 URL の「共通」セクションがハイライト表示されたGoogle ブラウザーページ。](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>複数の [!DNL Microsoft Azure] 購読がある場合、Experience Platform インスタンスを間違った Key Vault に接続できる可能性があります。 この場合、CMK ディレクトリ ID のアプリケーション認証 URL 名の `common` セクションを入れ替える必要があります。<br>[!DNL Microsoft Azure] アプリケーションのポータル設定、ディレクトリ、購読ページから CMK ディレクトリ ID をコピーします <br>![ ディレクトリ ID が強調表示された [!DNL Microsoft Azure] アプリケーションのポータル設定、ディレクトリ、購読ページ。](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br> 次に、ブラウザーのアドレスバーにペーストします。<br>![ アプリケーション認証 URL の「共通」セクションがハイライト表示されたGoogle ブラウザーページ。](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### CMK アプリを役割に割り当てます。 {#assign-to-role}
 
@@ -82,7 +82,7 @@ Key Vault を設定したら、次の手順は、[!DNL Azure] テナントにリ
 
 ![ アプリケーション ID がハイライト表示された [!UICONTROL  顧客管理キー設定 ] ビュー ](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
-Azure ツールの検証に必要な詳細がすべて Platform UI に含まれています。 このレベルの精度は、他の Azure ツールを使用して、これらのアプリケーションの監視と Key Vault へのアクセスをログに記録する機能を強化したい多くのユーザーに提供されます。 これらの識別子を理解することは、その目的のために、またAdobe サービスが鍵にアクセスするのを助けるために重要です。
+Azure ツールの検証に必要な詳細がすべてExperience Platform UI に含まれています。 このレベルの精度は、他の Azure ツールを使用して、これらのアプリケーションの監視と Key Vault へのアクセスをログに記録する機能を強化したい多くのユーザーに提供されます。 これらの識別子を理解することは、その目的のために、またAdobe サービスが鍵にアクセスするのを助けるために重要です。
 
 ## Experience Platform の暗号化キー設定を有効にする {#send-to-adobe}
 
@@ -110,11 +110,11 @@ CMK アプリを [!DNL Azure] にインストールすると、暗号化キー�
 
 ## 設定のステータスの確認 {#check-status}
 
-処理にかなりの時間を割くことができます。 設定のステータスを確認するには、[!UICONTROL  顧客管理キー設定 ] ビューに戻り、下にスクロールして [!UICONTROL  設定ステータス ] を表示します。 進行状況バーが手順 3 の 1 つに進み、Platform がキーと Key Vault にアクセスできることをシステムが検証していることを説明します。
+処理にかなりの時間を割くことができます。 設定のステータスを確認するには、[!UICONTROL  顧客管理キー設定 ] ビューに戻り、下にスクロールして [!UICONTROL  設定ステータス ] を表示します。 プログレスバーがステップ 3 まで進み、Experience Platformがキーと Key Vault にアクセスできることをシステムが検証していることを示します。
 
 CMK 設定には、次の 4 つのステータスがあります。 次の 3 つがあります。
 
-* 手順 1:Platform がキーと Key Vault にアクセスできることを検証します。
+* 手順 1:Experience Platformがキーと Key Vault にアクセスできることを検証します。
 * 手順 2: Key Vault とキー名は、組織全体のすべてのデータストアに追加する処理中です。
 * 手順 3: Key Vault とキー名がデータストアに正常に追加された。
 * `FAILED`：問題が発生しました。主にキー、Key Vault、またはマルチテナントのアプリ設定に関連しています。

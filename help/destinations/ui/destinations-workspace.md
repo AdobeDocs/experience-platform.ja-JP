@@ -3,7 +3,7 @@ keywords: Platform;宛先;宛先ワークスペース;ワークスペース;UI;�
 title: 宛先ワークスペース
 description: 宛先ワークスペースは、「概要」、「カタログ」、「参照」、「アカウント」、「システム表示」の 5 つのセクションで構成されます。 以下の節で説明します。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 79%
@@ -30,13 +30,13 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 ## [!UICONTROL カタログ] {#catalog}
 
-「**[!UICONTROL カタログ]**」タブには、データを送信できる [!DNL Platform] で使用可能なすべての宛先のリストが表示されます。
+「**[!UICONTROL カタログ]**」タブには、データを送信できる [!DNL Experience Platform] で使用可能なすべての宛先のリストが表示されます。
 
-[!DNL Platform] ユーザーインターフェイスには、宛先カタログページに対して複数の検索およびフィルターオプションが用意されています。
+[!DNL Experience Platform] ユーザーインターフェイスには、宛先カタログページに対して複数の検索およびフィルターオプションが用意されています。
 
 * ページの検索機能を使用して、特定の宛先を見つけます。
 * [!UICONTROL カテゴリ]コントロールを使用した宛先のフィルタリング。
-* [!UICONTROL すべての宛先]と[!UICONTROL 宛先]を切り替えます。**[!UICONTROL すべての宛先]**&#x200B;を選択すると、使用可能なすべての [!DNL Platform] の宛先が表示されます。 **[!UICONTROL 宛先]**&#x200B;を選択すると、接続を確立した宛先のみを表示できます。
+* [!UICONTROL すべての宛先]と[!UICONTROL 宛先]を切り替えます。**[!UICONTROL すべての宛先]**&#x200B;を選択すると、使用可能なすべての [!DNL Experience Platform] の宛先が表示されます。 **[!UICONTROL 宛先]**&#x200B;を選択すると、接続を確立した宛先のみを表示できます。
 * 選択して、**[!UICONTROL 接続]**&#x200B;および／または&#x200B;**[!UICONTROL 拡張機能]**&#x200B;のタイプを表示します。 2 つのカテゴリの違いを理解するには、[宛先のタイプとカテゴリ](../destination-types.md)を参照してください。
 
 ![広告およびクラウドストレージの宛先をいくつか表示している宛先カタログ。](../assets/ui/workspace/catalog.png)

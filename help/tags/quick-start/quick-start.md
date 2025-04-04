@@ -2,10 +2,10 @@
 title: クイックスタートガイド
 description: Adobe Experience Platform でタグをすぐに稼動させる方法について説明します。
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 90%
+source-wordcount: '1522'
+ht-degree: 89%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 90%
 
 ## 2. にログインする
 
-タグ権限がAdobe IDに追加されたら、Experience PlatformUI またはデータ収集 UI にログインする必要があります。 これを行うには、[Experience Cloudログイン画面 ](https://experience.adobe.com/) に直接移動し、「**[!UICONTROL データ収集]**」または「]**4}Experience Platform」を選択します。**[!UICONTROL 
+タグ権限がAdobe IDに追加されたら、Experience Platform UI またはデータ収集 UI にログインする必要があります。 これを行うには、[Experience Cloud ログイン画面 ](https://experience.adobe.com/) に直接移動し、「データ収集 **[!UICONTROL または]** 4}Experience Platform ]**を選択します。**[!UICONTROL 
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ UI にログインしたら、まずプロパティを作成します。 プロ�
 
 すべての新しいプロパティには、[Core 拡張機能](../extensions/client/core/overview.md)がインストールされています。モバイルプロパティには、追加の拡張機能が付属しています。コア拡張機能は、ルールのデータレイヤーとイベントタイプに対して堅牢なデフォルトのデータ要素タイプを提供するために、アドビによって構築されています。実行するアクション（ECID の取得、[!DNL Adobe Analytics] ビーコンの送信、[!DNL Target] グローバル mbo x など）のほとんどは、カタログからインストールする拡張機能のものです。
 
-Platform のタグを真一意にするのは、誰でもこれらの拡張機能を構築できるためです。サイトに Facebook リマーケティングピクセルをドロップする必要がある場合は、Facebook が構築した拡張機能をご確認ください。Twitter や Linked In でも同じ機能が必要な場合は、これらの拡張を機能を使用してください。サーベイを実施する必要がある場合は、Question Pro または Foresee をご覧ください。[!DNL GDPR] に対処するために、エンドユーザーのプライバシーと同意を管理する必要があるか。Evidon および Trust Arc をご確認ください。サイト上の個々のユーザーの行動に関する詳細なインサイトを確認したい場合は、Clicktale をご覧ください。詳しくは、 [新しい拡張機能の追加](../ui/managing-resources/extensions/overview.md#add-a-new-extension) の節を参照してください。
+Experience Platformのタグが他と異なるのは、誰でもこれらの拡張機能を構築できるためです。 サイトに Facebook リマーケティングピクセルをドロップする必要がある場合は、Facebook が構築した拡張機能をご確認ください。Twitter や Linked In でも同じ機能が必要な場合は、これらの拡張を機能を使用してください。サーベイを実施する必要がある場合は、Question Pro または Foresee をご覧ください。[!DNL GDPR] に対処するために、エンドユーザーのプライバシーと同意を管理する必要があるか。Evidon および Trust Arc をご確認ください。サイト上の個々のユーザーの行動に関する詳細なインサイトを確認したい場合は、Clicktale をご覧ください。詳しくは、 [新しい拡張機能の追加](../ui/managing-resources/extensions/overview.md#add-a-new-extension) の節を参照してください。
 
 ## 5. データ要素とルールを作成する
 

@@ -4,13 +4,13 @@ description: 非公開リストを使用して、Snowflake アカウントにデ
 hide: true
 hidefromtoc: true
 badgeBeta: label="ベータ版" type="Informative"
-source-git-commit: 2893356e36fde4759ffe76e01296fcb8811ab8e7
+exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '676'
 ht-degree: 51%
 
 ---
-
 
 # Snowflake接続 {#snowflake-destination}
 
@@ -99,7 +99,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 Snowflakeの宛先では、プロファイル属性とカスタム属性とのマッピングをサポートしています。
 
-![Snowflakeの宛先のマッピング画面を示す Platform ユーザーインターフェイス画像。](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Experience Platformの宛先のマッピング画面を示すSnowflake ユーザーインターフェイス画像。](../../assets/catalog/cloud-storage/snowflake/mapping.png)
 
 ターゲット属性は、「**[!UICONTROL 属性名]** フィールドに指定した属性名を使用して、Snowflakeで自動的に作成されます。
 

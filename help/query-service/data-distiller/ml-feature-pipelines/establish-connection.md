@@ -2,9 +2,9 @@
 title: Jupyter Notebook からの Data Distillerへの接続
 description: Jupyter Notebook から Data Distillerに接続する方法を説明します。
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 ### 接続資格情報の取得 {#obtain-credentials}
 
-Data Distillerおよびその他のAdobe Experience Platform サービスに接続するには、Experience PlatformAPI 資格情報が必要です。 API 資格情報は、Experience Platformに対する開発者アクセス権を持つユーザーが ](https://developer.adobe.com/console/home)0}Adobe Developer Console} で作成できます。 [データサイエンスワークフロー専用の Oauth2 API 認証情報を作成し、組織のAdobeシステム管理者に、適切な権限を持つロールに認証情報を割り当てることをお勧めします。
+Data Distillerおよびその他のAdobe Experience Platform サービスに接続するには、Experience Platform API 資格情報が必要です。 API 資格情報は、Experience Platformへの開発者アクセス権を持つユーザーが ](https://developer.adobe.com/console/home)0}Adobe Developer Console} で作成できます。 [データサイエンスワークフロー専用の Oauth2 API 認証情報を作成し、組織のAdobe システム管理者に、適切な権限を持つロールに認証情報を割り当てることをお勧めします。
 
-API 認証情報の作成および必要な権限の取得に関する詳細な手順については、[ 認証およびアクセスExperience PlatformAPI](../../../landing/api-authentication.md) を参照してください。
+API 認証情報の作成および必要な権限の取得に関する詳細な手順については、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) を参照してください。
 
 データサイエンスに推奨される権限は次のとおりです。
 
@@ -32,11 +32,11 @@ API 認証情報の作成および必要な権限の取得に関する詳細な�
 - 宛先：[!UICONTROL  データセット宛先の管理とアクティブ化 ]
 - クエリサービス：[!UICONTROL  クエリの管理 ]
 
-デフォルトでは、役割（およびその役割に割り当てられた API 資格情報）は、ラベル付きデータへのアクセスからブロックされます。 組織のデータガバナンスポリシーに従って、システム管理者は、データサイエンスの使用に適していると思われる特定のラベル付きデータへのアクセス権を役割に付与できる場合があります。 Platform のお客様は、関連する規制や組織のポリシーに準拠するために、ラベルアクセスとポリシーを適切に管理する責任を負います。
+デフォルトでは、役割（およびその役割に割り当てられた API 資格情報）は、ラベル付きデータへのアクセスからブロックされます。 組織のデータガバナンスポリシーに従って、システム管理者は、データサイエンスの使用に適していると思われる特定のラベル付きデータへのアクセス権を役割に付与できる場合があります。 Experience Platformのお客様は、関連する規制や組織のポリシーに準拠するために、ラベルアクセスとポリシーを適切に管理する責任を負います。
 
 ### 資格情報を別の設定ファイルに保存 {#store-credentials}
 
-認証情報の安全性を維持するために、コードに認証情報を直接書き込まないことをお勧めします。 代わりに、秘密鍵証明書に関する情報を別の設定ファイルに保存し、Experience Platformと Data Distillerに接続するために必要な値を読み取ります。
+認証情報の安全性を維持するために、コードに認証情報を直接書き込まないことをお勧めします。 代わりに、秘密鍵証明書に関する情報を別の設定ファイルに保存し、Experience Platformと Data Distillerへの接続に必要な値を読み取ります。
 
 例えば、`config.ini` というファイルを作成して、次の情報を（セッション間で保存するのに役立つデータセット ID などのその他の情報と共に）含めることができます。
 
@@ -69,7 +69,7 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## aepp Python ライブラリのインストール {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main) は、Adobeが管理するオープンソース [!DNL Python] ライブラリで、他のExperience Platformサービスにリクエストを行う場合と同様に、データDistillerに接続しクエリを送信する機能を提供します。 `aepp` ライブラリは、インタラクティブな Data Distiller クエリ用に PostgreSQL データベースアダプターパッケージの `psycopg2` を利用します。 単独で Data Distillerに接続し、Experience Platformデータセットをクエリすることもできますが、`psycopg2` の方が、より高い利便性と、すべてのExperience PlatformAPI サービスに対するリクエストを行う `aepp` めの追加機能を提供します。
+[aepp](https://github.com/adobe/aepp/tree/main) は、Adobeが管理するオープンソース [!DNL Python] ライブラリで、他のExperience Platform サービスにリクエストを行う場合と同様に、データDistillerに接続しクエリを送信する機能を提供します。 `aepp` ライブラリは、インタラクティブな Data Distiller クエリ用に PostgreSQL データベースアダプターパッケージの `psycopg2` を利用します。 データDistillerに接続し、`psycopg2` だけでExperience Platform データセットをクエリすることもできますが、`aepp` の方が、より大きな利便性と、すべてのExperience Platform API サービスに対するリクエストを行うための追加機能を提供します。
 
 お使いの環境で `aepp` と `psycopg2` をインストールまたはアップグレードするには、ノートブックで `%pip` magic コマンドを使用します。
 
@@ -112,7 +112,7 @@ dd_conn = queryservice.QueryService().connection()
 dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 ```
 
-その後、Experience Platformサンドボックスでデータセットに対してクエリを実行できます。 クエリ対象のデータセットの ID を指定すると、カタログサービスから対応するテーブル名を取得し、そのテーブルに対してクエリを実行できます。
+その後、Experience Platform サンドボックスでデータセットに対してクエリを実行できます。 クエリ対象のデータセットの ID を指定すると、カタログサービスから対応するテーブル名を取得し、そのテーブルに対してクエリを実行できます。
 
 ```python
 table_name = 'ecommerce_events'
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## 次の手順
 
-このドキュメントでは、機械学習の [!DNL Python] ノートブックから Data Distillerに接続する方法について説明しました。 Experience Platformから機能パイプラインを作成して、機械学習環境でカスタムモデルにフィードする次の手順は、[ データセットを調査および分析 ](./exploratory-analysis.md) することです。
+このドキュメントでは、機械学習の [!DNL Python] ノートブックから Data Distillerに接続する方法について説明しました。 Experience Platformから機能パイプラインを作成して機械学習環境でカスタムモデルにフィードする次の手順は、[ データセットを調査および分析 ](./exploratory-analysis.md) することです。

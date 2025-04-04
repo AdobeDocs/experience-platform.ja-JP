@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDKに関する FAQ
 description: Adobe Experience Platform web SDKに関するよくある質問への回答を示します。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2082'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Web SDKについて詳しくは、次のビデオを参照してください。[
 * これらのライブラリは、互いに動作するように構築されたものではありません。
 * クロスソリューションとAdobe Experience Platformのユースケースでは、これらの異なるライブラリが相互に依存する必要があるので、デプロイメントに問題が生じます。
 
-Platform のタグを使用すると、これらのライブラリをできるだけ簡単にデプロイおよび管理できますが、次の点に問題があります。
+Experience Platformのタグを使用すると、これらのライブラリをできる限り簡単にデプロイおよび管理できますが、次の点に問題があります。
 
 * ライブラリサイズ （ページ上のAdobe コードが多すぎる）
 * パフォーマンス（サイトの読み込みに時間がかかる）
@@ -124,7 +124,7 @@ Web SDKは急速に進化しています。 現在取り組んでいるユース
 
 ## Web SDKを使い始める際に ECID を移行して、web サイトの訪問者が新しい訪問者として表示されないようにできますか？
 
-はい。Adobe Experience Platform Web SDKには、ID 移行機能が用意されています。 詳しくは、[Platform Web SDK ID ドキュメント ](/help/web-sdk/identity/overview.md#id-migration) の ID 移行の手順に従います。
+はい。Adobe Experience Platform Web SDKには、ID 移行機能が用意されています。 詳しくは、[Experience Platform Web SDK ID ドキュメント ](/help/web-sdk/identity/overview.md#id-migration) の ID 移行の手順に従います。
 
 ## Web SDKとタグの違いは何ですか？
 

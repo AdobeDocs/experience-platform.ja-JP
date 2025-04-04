@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プロファイルスキーマの IAB TCF 2.0 同意フィールドグループ
 description: XDM Individual Profile クラスの IAB TCF 2.0 同意スキーマフィールドグループについて説明します。
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 1%
 }
 ```
 
-この例が示すように、`xdm:identityPrivacyInfo` の各ルートレベルキーは、ID サービスによって認識される ID 名前空間に対応します。 次に、各名前空間プロパティには、その名前空間に対応する顧客の ID 値に一致するキーを持つサブプロパティが少なくとも 1 つ必要です。 この例では、Experience CloudID （`ECID`）の値が `13782522493631189` である顧客が識別されます。
+この例が示すように、`xdm:identityPrivacyInfo` の各ルートレベルキーは、ID サービスによって認識される ID 名前空間に対応します。 次に、各名前空間プロパティには、その名前空間に対応する顧客の ID 値に一致するキーを持つサブプロパティが少なくとも 1 つ必要です。 この例では、Experience Cloud ID （`ECID`）の値が `13782522493631189` である顧客が識別されます。
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 各 ID 値に対して、ID の TCF 同意値を提供する `identityIABConsent` プロパティを指定する必要があります。 このプロパティの値は、[[!UICONTROL  同意文字列 ] データタイプ ](../../data-types/consent-string.md) に準拠している必要があります。
 
-このフィールドグループのユースケースについては、[Platform での IAB TCF 2.0 のサポート ](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。 フィールドグループ自体の詳細については、公開 XDM リポジトリを参照してください。
+このフィールドグループのユースケースについては、[Experience Platformでの IAB TCF 2.0 のサポート ](../../../landing/governance-privacy-security/consent/iab/overview.md) に関するガイドを参照してください。 フィールドグループ自体の詳細については、公開 XDM リポジトリを参照してください。
 
 * [ 入力された例 ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [ 完全なスキーマ ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

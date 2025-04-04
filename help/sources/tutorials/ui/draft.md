@@ -2,10 +2,10 @@
 title: UI のドラフトデータフロー
 description: データフローをドラフトとして保存し、後でソースワークスペースを使用して公開する方法を説明します。
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 7%
+source-wordcount: '593'
+ht-degree: 3%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 7%
 
 このドキュメントでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 
 ## データフローをドラフトとして保存
 
-Platform に取り込むデータを選択した後は、いつでもデータフロー作成の進行状況を一時停止できます。
+Experience Platformに取り込むデータを選択した後は、いつでもデータフロー作成の進行状況を一時停止できます。
 
 例えば、データフローの詳細ステップ中に進行状況を保存する場合は、「**[!UICONTROL ドラフトとして保存]**」を選択します。
 

@@ -1,15 +1,15 @@
 ---
-title: UI を使用したデータランディングゾーンの Platform への接続
-description: Platform ユーザーインターフェイスを使用して、データランディングゾーンソースコネクタを作成する方法を説明します。
+title: UI を使用したExperience Platformへのデータランディングゾーンの接続
+description: Experience Platform ユーザーインターフェイスを使用して、データランディングゾーンソースコネクタを作成する方法を説明します。
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: cdcce07a5adf08bf9d5e6a08d6bc965d37458a5d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 20%
+source-wordcount: '780'
+ht-degree: 10%
 
 ---
 
-# UI を使用した [!DNL Data Landing Zone] の Platform への接続
+# UI を使用した [!DNL Data Landing Zone] のExperience Platformへの接続
 
 >[!IMPORTANT]
 >
@@ -17,22 +17,22 @@ ht-degree: 20%
 
 [!DNL Data Landing Zone] は、ファイルをAdobe Experience Platformに取り込むための、セキュリティで保護されたクラウドベースのファイルストレージ機能です。 データは、7 日後に [!DNL Data Landing Zone] から自動的に削除されます。
 
-このチュートリアルでは、Platform ユーザーインターフェイスを使用して [!DNL Data Landing Zone] ソース接続を作成する手順について説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して [!DNL Data Landing Zone] ソース接続を作成する手順について説明します。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-## [!DNL Data Landing Zone] から Platform にファイルを取り込む
+## [!DNL Data Landing Zone] からExperience Platformへのファイルの取り込み
 
 >[!IMPORTANT]
 >
 > ソースに接続するには、**[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** アクセス制御権限が必要です。 [アクセス制御の概要](../../../../../access-control/home.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
@@ -40,18 +40,18 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 
 ![ データランディングゾーンが選択されたソースカタログ ](../../../../images/tutorials/create/dlz/catalog.png)
 
-[!UICONTROL  データの追加 ] 手順が表示され、Platform に取り込むデータを選択およびプレビューするためのインターフェイスが表示されます。
+[!UICONTROL  データを追加 ] 手順が表示され、Experience Platformに取り込むデータを選択およびプレビューするためのインターフェイスが利用できます。
 
-* インターフェイスの左側はフォルダーブラウザーで、コンテナにあるファイルのリストが表示されます。このファイルは Platform に取り込むことができます。
+* インターフェイスの左側はフォルダーブラウザーで、コンテナにあるファイルのリストが表示されます。このファイルはExperience Platformに取り込むことができます。
 * インターフェイスの右側の部分では、互換性のあるファイルから最大 100 行のデータをプレビューできます。
 
-Experience Platformにするファイルを選択し、適切なインターフェイスがプレビュー画面に更新されるまでしばらく待ちます。
+Experience Platformに取り込むファイルを選択し、適切なインターフェイスでプレビュー画面が更新されるまでしばらく待ちます。
 
 ![ ソースワークスペースのデータインターフェイスの追加。](../../../../images/tutorials/create/dlz/add-data.png)
 
 >[!TIP]
 >
->Platform は、ファイルのデータ形式、指定された列区切り文字、圧縮タイプなど、選択したファイルのプロパティ情報を自動検出します。
+>Experience Platformは、ファイルのデータフォーマット、指定された列区切り文字、圧縮タイプなど、選択したファイルのプロパティ情報を自動検出します。
 
 プレビューインターフェイスを使用すると、ファイルの内容と構造を検査できます。 デフォルトでは、プレビューインターフェイスには、選択したフォルダー内の最初のファイルが表示されます。
 
@@ -61,7 +61,7 @@ Experience Platformにするファイルを選択し、適切なインターフ�
 
 ![ ソースワークスペースのデータプレビューページ。](../../../../images/tutorials/create/dlz/file-detection.png)
 
-クラウドストレージソースのデータフローを作成する方法に関する詳細な手順のガイドについては、[Platform にデータを取り込むためのクラウドストレージデータフローの作成 ](../../dataflow/batch/cloud-storage.md) のチュートリアルを参照してください。
+クラウドストレージソースのデータフローを作成する方法に関する詳細な手順のガイドについては、[Experience Platformにデータを取り込むためのクラウドストレージデータフローの作成 ](../../dataflow/batch/cloud-storage.md) のチュートリアルを参照してください。
 
 ## [!DNL Data Landing Zone] 資格情報の取得
 
@@ -101,4 +101,4 @@ Experience Platformにするファイルを選択し、適切なインターフ�
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Data Landing Zone] コンテナにアクセスし、資格情報を取得して更新する方法を学びました。 次は、[ クラウドストレージから Platform にデータを取り込むためのデータフローの作成 ](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。
+このチュートリアルでは、[!DNL Data Landing Zone] コンテナにアクセスし、資格情報を取得して更新する方法を学びました。 次は、[ クラウドストレージからExperience Platformにデータを取り込むためのデータフローの作成 ](../../dataflow/batch/cloud-storage.md) に関するチュートリアルに進むことができます。

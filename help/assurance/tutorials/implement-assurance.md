@@ -1,24 +1,24 @@
 ---
-title: Adobe Experience Platform Assurance 拡張機能の実装
-description: このガイドでは、Adobe Experience Platform Assurance 拡張機能の実装およびインストール方法を説明します。
+title: Adobe Experience Platform Assurance拡張機能の実装
+description: このガイドでは、Adobe Experience Platform Assurance拡張機能の実装およびインストール方法を説明します。
 exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '387'
 ht-degree: 1%
 
 ---
 
-# Adobe Experience Platform Assurance 拡張機能の実装
+# Adobe Experience Platform Assurance拡張機能の実装
 
-このチュートリアルでは、Mobile SDK で Platform Assurance 拡張機能をインストールおよび実装する方法について説明します。 Assurance 拡張機能をアプリケーションに追加する方法については、[Adobe Experience Platform Assurance 拡張機能の概要 ](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app) を参照してください。
+このチュートリアルでは、モバイル SDKにExperience Platform Assurance拡張機能をインストールして実装する方法について説明します。 Assurance拡張機能をアプリケーションに追加する方法については、[Adobe Experience Platform Assurance拡張機能の概要 ](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app) を参照してください。
 
 ## はじめに
 
-Assurance 拡張機能をインストールおよび実装するには、次のサービスにアクセスする必要があります。
+Assurance拡張機能をインストールして実装するには、次のサービスにアクセスする必要があります。
 
 - [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/)
-- [Adobe Experience Platform アシュランス ](https://experience.adobe.com/assurance)
+- [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
 ## モバイルプロパティの作成
 
@@ -34,13 +34,13 @@ Assurance 拡張機能をインストールおよび実装するには、次の�
 
 >[!NOTE]
 >
->モバイルプロパティの **[!UICONTROL プライバシー]** 設定は、Assurance のデータ収集に **影響しません**。
+>モバイルプロパティの **[!UICONTROL プライバシー]** 設定は、Assuranceのデータ収集に影響 **与えません**。
 
 ![ プロパティを作成ページが表示されます。 ここにモバイルプロパティに関する情報を挿入できます。](./images/implement-assurance/create-property.png)
 
-## Assurance 拡張機能のインストール
+## Assurance拡張機能のインストール
 
-Assurance 拡張機能をインストールするモバイルプロパティを選択します。
+Assurance拡張機能をインストールするモバイルプロパティを選択します。
 
 ![ 選択したモバイルプロパティがハイライト表示されたタグプロパティページが表示されます。](./images/implement-assurance/select-mobile-property.png)
 
@@ -48,10 +48,10 @@ Assurance 拡張機能をインストールするモバイルプロパティを�
 
 ![ モバイルプロパティの詳細ページが表示されます。 最近のアクティビティに関する情報が表示されます。 「拡張機能」タブがハイライト表示されている様子 ](./images/implement-assurance/tag-properties.png)
 
-「**[!UICONTROL カタログ]**」を選択して、モバイルプロパティに追加できる拡張機能のリストを表示します。 フィルターを使用して、**[!UICONTROL AEP Assurance]** 拡張機能を探し、「**[!UICONTROL インストール]**」を選択します。
+「**[!UICONTROL カタログ]**」を選択して、モバイルプロパティに追加できる拡張機能のリストを表示します。 フィルターを使用して、**[!UICONTROL AEP Assurance]** 拡張機能を見つけて、「**[!UICONTROL インストール]**」を選択します。
 
-![ 拡張機能カタログが表示されます。 Assurance 拡張機能がフィルタリングされ、「インストール」ボタンがハイライト表示されます。](./images/implement-assurance/assurance-extension.png)
+![ 拡張機能カタログが表示されます。 Assurance拡張機能がにフィルタリングされ、表示されます。「インストール」ボタンがハイライト表示されます。](./images/implement-assurance/assurance-extension.png)
 
 ## 次の手順
 
-これで、モバイルプロパティに Assurance 拡張機能をインストールしたので、アプリケーション内で Assurance の使用を開始できます。 Assurance 拡張機能をアプリケーションに追加する方法については、[Adobe Experience Platform Assurance 拡張機能の概要 ](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app) を参照してください。 Assurance の使用方法については、[Assurance ガイドの使用 ](./using-assurance.md) を参照してください。
+これで、モバイルプロパティにAssurance拡張機能をインストールしたので、アプリケーション内でAssuranceの使用を開始できます。 Assurance拡張機能をアプリケーションに追加する方法については、[Adobe Experience Platform Assurance拡張機能の概要 ](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app) を参照してください。 Assuranceの使用方法については、[Assuranceの使用ガイド ](./using-assurance.md) を参照してください。

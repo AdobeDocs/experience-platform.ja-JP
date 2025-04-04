@@ -2,10 +2,10 @@
 title: SQL インサイト
 description: Data Distillerを使用して SQL インサイトダッシュボードを作成するためのユースケース、基本的な機能、必要な手順について説明します。 Data Distillerの SQL Insights 機能により、プロファイル、オーディエンス、キャンペーン、ジャーニー、使用権限、同意など、様々なディメンションにわたって、透明性を高め、運用に関するインサイトを得る方法を説明します。
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 5%
+source-wordcount: '943'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +19,11 @@ SQL Insights を [ 視覚化 ](../../../dashboards/sql-insights-query-pro-mode/o
 
 ## 前提条件
 
-このチュートリアルでは、ユーザー定義のダッシュボードを使用して、Platform UI 内のカスタムデータモデルからのデータを視覚化します。この機能について詳しくは、[ ユーザー定義ダッシュボードのドキュメント ](../../../dashboards/standard-dashboards.md) を参照してください。
+このチュートリアルでは、ユーザー定義のダッシュボードを使用して、Experience Platform UI 内のカスタムデータモデルからのデータを視覚化します。 この機能について詳しくは、[ ユーザー定義ダッシュボードのドキュメント ](../../../dashboards/standard-dashboards.md) を参照してください。
 
 ## はじめに
 
-レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされた Platform データを保持する Real-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。Data Distiller SKU に関連する [ パッケージ ](../../packaging.md)、[ ガードレール ](../../guardrails.md#query-accelerated-store) および [ ライセンス ](../../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、Adobeのカスタマーサービス担当者に詳細をお問い合わせください。
+レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされたExperience Platform データを保持するReal-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。 Data Distiller SKU に関連する [ パッケージ ](../../packaging.md)、[ ガードレール ](../../guardrails.md#query-accelerated-store) および [ ライセンス ](../../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、Adobe カスタマーサービス担当者に詳細をお問い合わせください。
 
 ## SQL Insights の使用例 {#use-cases}
 

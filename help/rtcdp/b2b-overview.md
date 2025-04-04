@@ -3,12 +3,12 @@ keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;リアルタイ
 title: Real-Time CDP B2B Edition の概要
 description: Real-time Customer Data Platform B2B Edition アカウントの概要
 feature: Get Started, B2B
-badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 98%
+source-wordcount: '1058'
+ht-degree: 85%
 
 ---
 
@@ -30,7 +30,7 @@ Real-Time CDP B2B Edition の改善に関するより包括的な詳細を、以
 
 Real-Time CDP B2B Edition には、B2B 専用にデータをキャプチャし構造化するための新しい XDM スキーマクラス、フィールドグループおよび関係タイプがいくつか用意されています。これらの各機能強化の分類については、[Real-Time CDP B2B Edition の XDM](./schemas/b2b.md) の概要を参照してください。
 
-事前構成された B2B スキーマを使用することにより、標準化された実用的な構造でデータを取り込むことができます。新しいスキーマクラスの多くは、[!DNL Salesforce]、[!DNL Microsoft Dynamics]、[!DNL Marketo]、その他の B2B データソースなど、主流の CRM で発生するものにほぼ直接マップされます。Real-Time CDP B2B Edition を使用すると、B2B ソースから得られるデータをわかりやすい方法で Platform に取り込むことができ、その結果を容易に監査できます。
+事前構成された B2B スキーマを使用することにより、標準化された実用的な構造でデータを取り込むことができます。新しいスキーマクラスの多くは、[!DNL Salesforce]、[!DNL Microsoft Dynamics]、[!DNL Marketo]、その他の B2B データソースなど、主流の CRM で発生するものにほぼ直接マップされます。Real-Time CDP B2B editionを使用すると、B2B ソースからのデータをわかりやすい方法でExperience Platformに取り込むことができ、その結果を簡単に監査できます。
 
 これらの XDM の機能強化により、B2B 中心のソースと宛先を介してデータをより適切に取り込み、アクティベートできるため、データの統合と表示が改善され、より多様で柔軟なユースケースに対応できます。
 
@@ -47,7 +47,7 @@ ID 解決システムは、次の機能を提供します。
 
 ID 解決システムは、より多面的な人物の分類をサポートするように拡張されました。このシステムにより、顧客だけでなくビジネスチャンスのリードとして人物を特定することができます。
 
-ソース CRM によって同期され、システム内の複数のパスを介して接続されたアカウントレコードは、プラットフォームによって結合されます。このシステムは、ビジネスチャンスに関連する人物と顧客として記録された人物を結び付けますが、識別可能な場合は、それらの区別を属性として保持することもできます。
+ソース CRM によって同期され、システム内の複数のパスを介して接続されたアカウントレコードは、Experience Platformによって結合されます。 このシステムは、ビジネスチャンスに関連する人物と顧客として記録された人物を結び付けますが、識別可能な場合は、それらの区別を属性として保持することもできます。
 
 一致する識別子は、複数のシステム間からのアカウントレコードをリンクして結合するために使用されます。アカウント階層は、このプロセス全体を通じて保持されます。差別化要因は、ユーザーがアカウントに関連付けられているかどうかを精査し、必要に応じてアカウントからそれらを分離する機能を提供するために使用されます。
 
@@ -59,17 +59,17 @@ Real-Time CDP B2B Edition がデータを取り込んで、人物、会社、属
 
 ## B2B ソース
 
-Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。[!DNL Marketo] ソースを使用すると、B2B データを Platform にストリーミングし、Platform に接続されたアプリケーションを使用してこのデータを最新の状態に保つことができます。 [!DNL Marketo] のインスタンスをいくつでもサポートしており（これは、複数のインスタンスを持つ大企業にとって有益です）、データが結合される単一の組織に取り込みます。
+Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 [!DNL Marketo] ソースを使用すると、B2B データをExperience Platformにストリーミングし、Experience Platformに接続されたアプリケーションを使用してこのデータを最新の状態に保つことができます。 [!DNL Marketo] のインスタンスをいくつでもサポートしており（これは、複数のインスタンスを持つ大企業にとって有益です）、データが結合される単一の組織に取り込みます。
 
 >[!NOTE]
 >
 >[!DNL Marketo] ソースは Real-Time CDP B2B Edition を使用するために必要&#x200B;**ではありません**。
 
-Marketo および B2B データを Platform に取り込む方法について詳しくは、[Real-Time CDP B2B Edition のソース](./sources/b2b.md)のドキュメントを参照してください。
+Real-Time CDPと B2B データをB2B editionに取り込む方法について詳しくは、[Marketo Experience Platformのソース ](./sources/b2b.md) のドキュメントを参照してください。
 
 ## B2B 宛先
 
-Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ad Manager などの Experience Platform 宛先は、Real-Time CDP B2B Edition で使用でき、完全にサポートされています。また、Platform からセグメントメンバーシップデータをストリーミングし、Marketo でリストとして利用できるようにする Marketo Engage の宛先もあります。
+Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads、Google Ad Manager などの Experience Platform 宛先は、Real-Time CDP B2B Edition で使用でき、完全にサポートされています。また、Marketo Engageの宛先は、Experience Platformからセグメントメンバーシップデータをストリーミングし、Marketoでリストとして使用できるようにします。
 
 詳しくは、[Marketo Engageの宛先](../destinations/catalog/adobe/marketo-engage.md)の概要を参照してください。
 

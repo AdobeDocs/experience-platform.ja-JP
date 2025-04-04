@@ -2,10 +2,10 @@
 title: Adobe Media Analytics for Audio and Video 拡張機能の概要
 description: Adobe Experience Platform の Adobe Media Analytics for Audio and Video タグ拡張機能について説明します。
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 98%
+source-wordcount: '950'
+ht-degree: 96%
 
 ---
 
@@ -178,7 +178,7 @@ MA 拡張機能は、`get-instance` および `media-heartbeat` 共有モジュ�
 
 >[!NOTE]
 >
->**テスト：**&#x200B;このリリースでは、拡張機能をテストするには、すべての独立した拡張機能にアクセスできる [Platform](../../../extension-dev/submit/upload-and-test.md) に拡張機能をアップロードする必要があります。
+>**テスト：** このリリースでは、拡張機能をテストするには、すべての独立した拡張機能にアクセスできる [Experience Platform](../../../extension-dev/submit/upload-and-test.md) に拡張機能をアップロードする必要があります。
 
 
 <!--

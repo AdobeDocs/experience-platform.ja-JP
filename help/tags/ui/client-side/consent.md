@@ -2,10 +2,10 @@
 title: 顧客の同意を管理する JavaScript タグのデプロイ
 description: Adobe Experience Platform の様々なアドビソリューション用に顧客のオプトインおよびオプトアウトのシグナルを管理する方法について説明します。
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 96%
+source-wordcount: '610'
+ht-degree: 94%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform は、[!DNL Advertising Cloud] を自動的に実行�
 * ダウンロードリンクを追跡
 * 離脱リンクを追跡
 
-これらの設定が選択されていない場合、Platform は自動的には [!DNL Adobe Analytics] を実行しません。[!DNL Analytics] ルールは、ルールアクションで具体的に指定された場合にのみ実行します。いつ実行するかを決定するには、ルール条件を使用します。例えば、cookie を使用してオプトインステータスを決定するには、データ要素を設定してそ のcookie を読み取り、ルールの条件として使用して、「Send Beacon」アクションを実行するタイミングを決定します。
+これらの設定が選択されていない場合、Experience Platformは自動的には [!DNL Adobe Analytics] を起動しません。 [!DNL Analytics] ルールは、ルールアクションで具体的に指定された場合にのみ実行します。いつ実行するかを決定するには、ルール条件を使用します。例えば、cookie を使用してオプトインステータスを決定するには、データ要素を設定してそ のcookie を読み取り、ルールの条件として使用して、「Send Beacon」アクションを実行するタイミングを決定します。
 
 これとは別に、[アドビのオプトインオブジェクト](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ja)を使用して、同意管理プラットフォームと連携させてこのタグの実行を制御することを検討できます。
 

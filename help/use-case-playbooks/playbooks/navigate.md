@@ -4,16 +4,16 @@ title: ユースケースプレイブックに移動
 description: プレイブックのギャラリーをナビゲートし、感動的なサンドボックスの使用を開始する方法を説明します。
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
 
 # ユースケースプレイブックに移動
 
-ユースケースプレイブックは、すべてのAdobe Experience Platformのお客様が追加費用なしで利用できます。 Experience PlatformUI で豊富なユースケースプレイブックのギャラリーにアクセスするには、左側のナビゲーションから **[!UICONTROL プレイブック]** を選択します。
+ユースケースプレイブックは、すべてのAdobe Experience Platformのお客様が追加費用なしで利用できます。 Experience Platform UI で豊富なユースケースプレイブックのギャラリーにアクセスするには、左側のナビゲーションから **[!UICONTROL プレイブック]** を選択します。
 
 ![ ユースケースプレイブックギャラリー ](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
@@ -67,8 +67,8 @@ SMS チャネルサーフェスを作成するには、まず SMS API 認証情�
 
 ### チャネルサーフェスをプッシュ
 
-チャネル設定がExperience Platformまたはデータコレクションインターフェイスのいずれかから設定されていることを確認します。 データ収集環境では、チャネル設定は次のようになります。
+チャネル設定がExperience Platform インターフェイスまたはデータコレクションインターフェイスのいずれかから設定されていることを確認します。 データ収集環境では、チャネル設定は次のようになります。
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読み、感動的なサンドボックスの設定方法を理解し、Platform 内のユースケースプレイブックにアクセスする様々な方法に精通する必要があります。 次のステップとして、適切なプレイブックを [ 選択 ](/help/use-case-playbooks/playbooks/choose.md) する方法を確認してください。
+このドキュメントを読み、感動的なサンドボックスの設定方法を理解し、Experience Platform内のユースケースプレイブックにアクセスする様々な方法を理解することができました。 次のステップとして、適切なプレイブックを [ 選択 ](/help/use-case-playbooks/playbooks/choose.md) する方法を確認してください。

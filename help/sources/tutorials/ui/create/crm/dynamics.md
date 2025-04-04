@@ -5,10 +5,10 @@ title: UI でのMicrosoft Dynamics Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用してMicrosoft Dynamics ソース接続を作成する方法を説明します。
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 31%
+source-wordcount: '617'
+ht-degree: 25%
 
 ---
 
@@ -54,15 +54,15 @@ ht-degree: 31%
 
 ## [!DNL Dynamics] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-[!UICONTROL CRM] カテゴリで、「**[!UICONTROL Microsoft Dynamics]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
+[!UICONTROL CRM] カテゴリ内で、「**[!UICONTROL Microsoft Dynamics]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![Microsoft Dynamics が選択されているソースカタログ ](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![Microsoft Dynamicsが選択されているソースカタログ ](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-**[!UICONTROL Microsoft Dynamics アカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Microsoft Dynamics アカウントの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 既存のアカウント
 
@@ -86,7 +86,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TAB  基本認証 ]
 
-基本認証を持つ [!DNL Dynamics] アカウントを作成するには、「[!UICONTROL  基本認証 ]」を選択し、「[!UICONTROL  サービス URI]」、「[!UICONTROL  ユーザー名 ]」、「[!UICONTROL  パスワード ] の値を指定します。 **注意**:[!DNL Dynamics] での基本認証は、現在 Platform でサポートされていない 2 要素認証によってブロックされる可能性があります。 この場合、[!DNL Dynamics] を使用してソースコネクタを作成するには、キーベースの認証を使用することをお勧めします。
+基本認証を持つ [!DNL Dynamics] アカウントを作成するには、「[!UICONTROL  基本認証 ]」を選択し、「[!UICONTROL  サービス URI]」、「[!UICONTROL  ユーザー名 ]」、「[!UICONTROL  パスワード ] の値を指定します。 **注意**:[!DNL Dynamics] での基本認証は、現在Experience Platformでサポートされていない二要素認証でブロックされる場合があります。 この場合、[!DNL Dynamics] を使用してソースコネクタを作成するには、キーベースの認証を使用することをお勧めします。
 
 完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しいアカウントが確立されるまでしばらく待ちます。
 
@@ -104,4 +104,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Dynamics] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](../../dataflow/crm.md)を行いましょう。
+このチュートリアルでは、[!DNL Dynamics] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/crm.md) を行いましょう。

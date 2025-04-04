@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリエディター UI ガイド
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2683'
 ht-degree: 25%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 クエリエディターは、Adobe Experience Platform クエリサービスから提供されるインタラクティブなツールで、これを使用すれば、[!DNL Experience Platform] ユーザーインターフェイス内でカスタマーエクスペリエンス（顧客体験）データのクエリを記述、検証および実行できます。 クエリエディターでは、分析およびデータ調査のためのクエリを作成できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して [!DNL Experience Platform] のデータセットに入力することもできます。
 
-クエリサービスの概念と機能について詳しくは、「[Query Service overview](../home.md)」を参照してください。[!DNL Platform] 上でクエリサービスのユーザーインターフェイスを操作する方法について詳しくは、[クエリサービス UI の概要](./overview.md)を参照してください。
+クエリサービスの概念と機能について詳しくは、「[Query Service overview](../home.md)」を参照してください。[!DNL Experience Platform] 上でクエリサービスのユーザーインターフェイスを操作する方法について詳しくは、[クエリサービス UI の概要](./overview.md)を参照してください。
 
 ## はじめに {#getting-started}
 
@@ -97,7 +97,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->Platform UI は最大 1000 行をサポートできるので、1000 を超える LIMIT 値の渡しは無視されます。
+>Experience Platform UI は最大 1000 行をサポートできるので、1000 を超える LIMIT 値の渡しは無視されます。
 
 ![ 結果数のドロップダウンがハイライト表示されたクエリエディター。](../images/ui/query-editor/result-count.png)
 
@@ -258,4 +258,4 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 ## 次の手順
 
-クエリエディターで使用できる機能とアプリケーションの操作方法について説明しました。これで、独自のクエリを [!DNL Platform] で直接記述できます。 [!DNL Data Lake] のデータセットに対して SQL クエリを実行する方法については、[クエリの実行](../best-practices/writing-queries.md)に関するガイドを参照してください。
+クエリエディターで使用できる機能とアプリケーションの操作方法について説明しました。これで、独自のクエリを [!DNL Experience Platform] で直接記述できます。 [!DNL Data Lake] のデータセットに対して SQL クエリを実行する方法については、[クエリの実行](../best-practices/writing-queries.md)に関するガイドを参照してください。

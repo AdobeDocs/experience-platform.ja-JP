@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM フィールドタイプ制約
 description: マッピング可能なその他のシリアル化形式や、API で独自のフィールドタイプを定義する方法など、エクスペリエンスデータモデル（XDM）のフィールドタイプ制約のリファレンスです。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '684'
 ht-degree: 7%
 
 ---
@@ -27,7 +27,7 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
 
 >[!NOTE]
 >
->JSON スキーマおよび Platform API のその他の基盤テクノロジーについて詳しくは、[API の基本ガイド ](../../landing/api-fundamentals.md#json-schema) を参照してください。
+>JSON スキーマおよびExperience Platform API のその他の基盤となるテクノロジーについて詳しくは、[API の基本ガイド ](../../landing/api-fundamentals.md#json-schema) を参照してください。
 
 次の表に、各 XDM タイプが JSON スキーマでどのように表現されるかを、タイプに準拠する値の例とともに示します。
 

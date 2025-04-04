@@ -2,9 +2,9 @@
 title: 標準ダッシュボード
 description: カスタムダッシュボードを作成および管理する方法を説明します。カスタムダッシュボードでは、カスタムウィジェットを作成、追加および編集して主要指標を視覚化できます。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## カスタムダッシュボードの作成
 
-カスタムダッシュボードを作成するには、まずダッシュボードインベントリに移動します。 Platform UI の左側のナビゲーションから **[!UICONTROL ダッシュボード]** を選択し、続いて **[!UICONTROL ダッシュボードを作成]** を選択します。
+カスタムダッシュボードを作成するには、まずダッシュボードインベントリに移動します。 Experience Platform UI の左側のナビゲーションから **[!UICONTROL ダッシュボード]** を選択し、続いて **[!UICONTROL ダッシュボードを作成]** を選択します。
 
 ![ 左側のナビゲーションのダッシュボードと「ダッシュボードを作成」がハイライト表示されたダッシュボードインベントリ。](./images/standard-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ Data Distiller SKU を購入したユーザーは、カスタム SQL クエリ�
 
 #### データモデルを選択 {#select-data-model}
 
-[!UICONTROL  データモデルを選択 ] ダイアログが表示されます。 左側の列からデータモデルを選択し、使用可能なすべてのテーブルのプレビューリストを表示します。 Real-time Customer Data Platform用の事前設定済みデータモデルの名前は [!UICONTROL CDPInsights] です。
+[!UICONTROL  データモデルを選択 ] ダイアログが表示されます。 左側の列からデータモデルを選択し、使用可能なすべてのテーブルのプレビューリストを表示します。 Real-Time Customer Data Platform用の事前設定済みデータモデルの名前は [!UICONTROL CDPInsights] です。
 
 >[!TIP]
 >
@@ -152,7 +152,7 @@ Data Distiller SKU を購入したユーザーは、カスタム SQL クエリ�
 
 ![ カスタムウィジェットと「保存」ボタンがハイライト表示されたユーザー定義のダッシュボード。](./images/standard-dashboards/user-defined-dashboard.png)
 
-Adobe Real-time Customer Data Platform インサイトダッシュボードの各クエリに効率的に実行するのに十分なリソースがあることを確認するために、API は、各クエリに同時実行スロットを割り当てることで、リソースの使用状況を追跡します。 システムでは最大 4 つの同時クエリを処理できるので、同時に 4 つのクエリスロットをいつでも使用できます。 クエリは同時実行スロットに基づいてキューに入れられ、同時実行スロットが十分に使用可能になるまでキュー内で待機されます。
+Adobe Real-Time Customer Data Platform インサイトダッシュボードの各クエリに効率的に実行するのに十分なリソースがあることを確認するために、API は、各クエリに同時実行スロットを割り当てることで、リソースの使用状況を追跡します。 システムでは最大 4 つの同時クエリを処理できるので、同時に 4 つのクエリスロットをいつでも使用できます。 クエリは同時実行スロットに基づいてキューに入れられ、同時実行スロットが十分に使用可能になるまでキュー内で待機されます。
 
 ### ウィジェットの編集、複製、削除 {#duplicate}
 
@@ -172,7 +172,7 @@ Adobe Real-time Customer Data Platform インサイトダッシュボードの�
 
 >[!NOTE]
 >
->複製を使用すると、インサイトの属性をカスタマイズして、ゼロから始めなくても一意のウィジェットを作成できます。 ウィジェットを複製すると、カスタムダッシュボードに表示されます。 その後、新しいウィジェットの省略記号を選択し、続けて **[!UICONTROL 編集]** をクリックして、インサイトをカスタマイズできます。
+>複製を使用すると、insightの属性をカスタマイズして、最初から始めなくても一意のウィジェットを作成できます。 ウィジェットを複製すると、カスタムダッシュボードに表示されます。 その後、新しいウィジェットの省略記号を選択し、続けて **[!UICONTROL 編集]** をクリックして、insightをカスタマイズできます。
 
 ## 次の手順とその他のリソース
 

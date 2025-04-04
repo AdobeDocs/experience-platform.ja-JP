@@ -4,10 +4,10 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformには、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4997'
-ht-degree: 45%
+source-wordcount: '5005'
+ht-degree: 43%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 
 Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、[!DNL Real-Time Customer Profile] データに関する重要な情報を表示できるダッシュボードが用意されています。このガイドでは、UI でプロファイルダッシュボードにアクセスし操作する方法の概要と、ダッシュボードに表示される指標に関する情報を説明します。
 
-Experience Platformユーザーインターフェイス内のプロファイル機能の概要については、[ リアルタイム顧客プロファイル UI ガイド ](../../profile/ui/user-guide.md) を参照してください。
+Experience Platform ユーザーインターフェイス内のプロファイル機能の概要については、[ リアルタイム顧客プロファイル UI ガイド ](../../profile/ui/user-guide.md) を参照してください。
 
 ## プロファイルダッシュボードのデータ
 
@@ -29,13 +29,13 @@ Experience Platformユーザーインターフェイス内のプロファイル�
 
 ## プロファイルダッシュボードを探索 {#explore-dashboard}
 
-Platform UI 内でプロファイルダッシュボードに移動するには、左側のレールで「**[!UICONTROL プロファイル]**」を選択してから「**[!UICONTROL 概要]**」タブを選択して、ダッシュボードを表示します。
+Experience Platform UI 内でプロファイルダッシュボードに移動するには、左側のレールで **[!UICONTROL プロファイル]** を選択してから「**[!UICONTROL 概要]** タブを選択して、ダッシュボードを表示します。
 
 >[!NOTE]
 >
->Platform を初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、プロファイルダッシュボードは表示されません。代わりに、「[!UICONTROL  概要 ]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
+>Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、プロファイルダッシュボードは表示されません。 代わりに、「[!UICONTROL  概要 ]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
 
-![ 「プロファイル」と「概要」がハイライト表示されたExperience Platformプロファイルダッシュボード。](../images/profiles/dashboard-overview.png)
+![ 「プロファイル」と「概要」がハイライト表示されたExperience Platform プロファイルダッシュボード。](../images/profiles/dashboard-overview.png)
 
 ### プロファイルダッシュボードの変更 {#modify-dashboard}
 
@@ -53,7 +53,7 @@ Platform UI 内でプロファイルダッシュボードに移動するには�
 
 ### SQL を表示 {#view-sql}
 
-[!UICONTROL  概要 ] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド ](../view-sql.md) を参照してください。
+[!UICONTROL  概要 ] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド ](../view-sql.md) を参照してください。
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -115,12 +115,12 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ![ チャネル環境設定ウィジェット ](../images/profiles/channel-preferences.png)
 
-顧客の同意および連絡先の環境設定は複雑なトピックです。 同意およびコンテキスト環境設定をExperience Platformで収集、処理、フィルタリングする方法については、次のドキュメントを参照することをお勧めします。
+顧客の同意および連絡先の環境設定は複雑なトピックです。 Experience Platformで同意およびコンテキスト環境設定を収集、処理、フィルタリングする方法については、次のドキュメントを参照することをお勧めします。
 
-* [ スキーマ標準に従って同意データを収集 ](../../landing/governance-privacy-security/consent/adobe/overview.md) するために必要なスキーマフィールドグループについては、これらのプロファイル対応のAdobeフィールドグループに関するドキュメントを参照してください。
+* [Adobe標準に従って同意データを収集 ](../../landing/governance-privacy-security/consent/adobe/overview.md) するために必要なスキーマフィールドグループについては、これらのプロファイル対応スキーマフィールドグループに関するドキュメントを参照してください。
    * [[!UICONTROL  同意と環境設定の詳細 ]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) （Platform Web または Mobile SDK を使用して同意信号を送信する場合に必要）
-* Adobe標準を使用して顧客の同意データと環境設定データを処理する方法については、[Experience Platformでの同意処理 ](../../landing/governance-privacy-security/consent/adobe/overview.md) の概要を参照してください。
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) （Experience Platform Web または Mobile SDKを使用して同意信号を送信する場合に必要）
+* Adobe標準を使用して顧客の同意データと環境設定データを処理する方法については、[Experience Platformでの同意処理 ](../../landing/governance-privacy-security/consent/adobe/overview.md) に関する概要を参照してください。
 * データガバナンスと同意ポリシーを組み合わせて、プロファイルの同意環境設定と確立された組織ルールに基づいて、プロファイルをフィルタリングしてセグメント化できます。 これらの結合ポリシーを作成して使用する方法については、[ データ使用ポリシーの管理 ](../../data-governance/policies/user-guide.md#combine-policies) に関するユーザーガイドを参照してください。
 
 ### ウィジェットを追加 {#add-widgets}
@@ -169,7 +169,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 結合スキーマは、同じクラスを共有し、プロファイルが有効になっている複数のスキーマで構成されています。これにより、同じクラスを共有する各スキーマ内に含まれているすべてのフィールドを 1 つのビューに統合して表示できます。
 
-[Platform UI 内で結合スキーマを表示する ](../../profile/ui/union-schema.md#view-union-schemas) について詳しくは、結合スキーマ UI ガイドを参照してください。
+[Experience Platform UI 内で結合スキーマを表示する ](../../profile/ui/union-schema.md#view-union-schemas) について詳しくは、結合スキーマ UI ガイドを参照してください。
 
 ## ウィジェットと指標
 
@@ -221,7 +221,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 
 選択した顧客 AI モデルの詳細なインサイトページに移動するには、「**[!UICONTROL モデルの詳細を表示]**」を選択します。
 
-![ 「スコアのExperience PlatformAI 配分 [!UICONTROL  ウィジェットと [!UICONTROL  モデルの詳細を表示 ] がハイライト表示された顧客オーディエンス ] ダッシュボード ](../images/segments/customer-ai-distribution-of-scores.png)
+![ 「[!UICONTROL  スコアの顧客 AI 分布 ] ウィジェットと [!UICONTROL  モデルの詳細を表示 ] がハイライト表示されたExperience Platform オーディエンスダッシュボード ](../images/segments/customer-ai-distribution-of-scores.png)
 
 詳細なモデルインサイト ページが表示されます。
 
@@ -248,7 +248,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >
 >計算されるプロファイルの合計数は、選択した結合ポリシーによって異なります。 使用する結合ポリシーを変更するには、「概要」タブのすぐ下のドロップダウンを選択します。 簡単な説明については [ 結合ポリシー ](#merge-policies) の節、詳細については [ 結合ポリシーの概要 ](../../profile/merge-policies/overview.md) を参照してください。
 
-![Experience PlatformAI スコアリングの概要ウィジェットがハイライト表示された顧客オーディエンスダッシュボード。](../images/segments/customer-ai-scoring-summary.png)
+![ 顧客 AI スコアリングの概要ウィジェットがハイライト表示されたExperience Platform オーディエンスダッシュボード。](../images/segments/customer-ai-scoring-summary.png)
 
 選択した顧客 AI モデルの詳細なインサイトページに移動するには、「**[!UICONTROL モデルの詳細を表示]**」を選択します。 顧客 AI について詳しくは、[ インサイトの獲得 UI ガイド ](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
 
@@ -293,7 +293,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >
 >もう 1 つの一般的な原因は、ダッシュボードのスナップショットが作成される時間と、「[!UICONTROL 参照]」タブでサンプルジョブを実行する時間の違いによるものです。[!UICONTROL プロファイル数]ウィジェットが最後に更新された時間は、ウィジェットのタイムスタンプで確認できます。「[!UICONTROL  参照 ]」タブでサンプルジョブがトリガーされる方法について詳しくは、『リアルタイム顧客プロファイル UI ガイド』の [ プロファイル数に関する節 ](../../profile/ui/user-guide.md#profile-count) を参照してください。
 
-![ プロファイル数ウィジェットがハイライト表示されたExperience Platformプロファイルダッシュボード。](../images/profiles/profile-count.png)
+![ プロファイル数ウィジェットがハイライト表示されたExperience Platform プロファイルダッシュボード。](../images/profiles/profile-count.png)
 
 ### [!UICONTROL プロファイル数のトレンド] {#profile-count-trend}
 
@@ -314,7 +314,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >
 >[!UICONTROL  プロファイル数の変更 ] ウィジェットは、最初のプロファイルの取り込みとプロファイルストア設定の **後** に追加されたプロファイル数を反映します。 つまり、組織がプロファイルストアを設定し、1 日目に 4,000,000 個を取り込んだ場合、24 時間以内にダッシュボードは使用可能になりますが、[!UICONTROL  プロファイル数の変更 ] ウィジェットは 0 に設定されます。 このカウント方法は、プロファイルのシステムへの最初の取り込みに関連するスパイクを回避するために行われます。 次の 30 日間で、組織はさらに 1,000,000 個のプロファイルをプロファイルストアに取り込みます。 次のスナップショットが作成されると、[!UICONTROL プロファイル数の変更]ウィジェットには合計 1,000,000 個のプロファイルが追加表示され、[!UICONTROL プロファイル数]ウィジェットには合計 5,000,000 個のプロファイルが表示されます。
 
-![プロファイル数の変更ウィジェットが強調表示された Platform UI プロファイルダッシュボード。](../images/profiles/profile-count-change.png)
+![ プロファイル数の変化ウィジェットがハイライト表示されたExperience Platform UI プロファイルダッシュボード。](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL プロファイル数の変化のトレンド] {#profiles-count-change-trend}
 
@@ -323,7 +323,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >title="プロファイル数の変化のトレンド"
 >abstract="このウィジェットは、過去 30 日、90 日、12 か月にわたって毎日プロファイルストアに追加された結合プロファイルの数を表示します。また、この数は、選択した結合ポリシーがプロファイルデータに適用されるかどうかによって異なります。"
 
-**[!UICONTROL プロファイル数の変化のトレンド]** ウィジェットには、過去 30 日、90 日、12 か月間にわたって毎日プロファイルストアに追加された、結合プロファイルの合計数が表示されます。 この数はスナップショットが作成されるたびに更新されるため、プロファイルを Platform に取り込む場合、次のスナップショットが作成されるまでプロファイルの数は反映されません。 追加されたプロファイルの数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。
+**[!UICONTROL プロファイル数の変化のトレンド]** ウィジェットには、過去 30 日、90 日、12 か月間にわたって毎日プロファイルストアに追加された、結合プロファイルの合計数が表示されます。 この数はスナップショットが作成されるたびに更新されるので、プロファイルをExperience Platformに取り込む場合、次のスナップショットが作成されるまでプロファイルの数は反映されません。 追加されたプロファイルの数は、プロファイルフラグメントを結合して個々のプロファイルを 1 つ形成するために、選択した結合ポリシーをプロファイルデータに適用した結果です。
 
 詳しくは、[ このドキュメントの前の結合ポリシーに関する節 ](#merge-policies) を参照してください。
 
@@ -514,7 +514,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 このウィジェットはセグメント定義のクロスオーバーを視覚的に表示するため、セグメント定義間の類似性を調査することで、セグメント化戦略を最適化できます。
 
-![ 結合ポリシードロップダウンとウィジェットオーディエンスドロップダウンがハイライト表示された Platform UI プロファイルダッシュボード。](../images/profiles/audience-overlap-by-merge-policy.png)
+![ 結合ポリシードロップダウンとウィジェットオーディエンスドロップダウンがハイライト表示されたExperience Platform UI プロファイルダッシュボード。](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
@@ -587,4 +587,4 @@ The three levels of completeness are:
 
 ## 次の手順
 
-このドキュメントを通して、プロファイルダッシュボードを見つけ、使用可能なウィジェットに表示される指標を理解できるようになりました。 Experience PlatformUI で [!DNL Profile] データの使用に関する詳細を学ぶには、[ リアルタイム顧客プロファイル UI ガイド ](../../profile/ui/user-guide.md) を参照してください。
+このドキュメントを通して、プロファイルダッシュボードを見つけ、使用可能なウィジェットに表示される指標を理解できるようになりました。 Experience Platform UI で [!DNL Profile] データの使用に関する詳細を学ぶには、[ リアルタイム顧客プロファイル UI ガイド ](../../profile/ui/user-guide.md) を参照してください。

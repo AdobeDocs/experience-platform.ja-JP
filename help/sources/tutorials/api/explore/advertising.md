@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；広告システム；Advertising system
+keywords: Experience Platform；ホーム；人気のトピック；advertising system;Advertising system
 solution: Experience Platform
 title: Flow Service API を使用したAdvertising システムの探索
 description: フローサービスは、様々な異なるソースから顧客データを収集し、Adobe Experience Platformで一元化するために使用します。 このサービスは、ユーザーインターフェイスと RESTful API を提供し、サポートされているすべてのソースを接続できます。 このチュートリアルでは、Flow Service API を使用して、広告システムを調べます。
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 19%
+source-wordcount: '503'
+ht-degree: 15%
 
 ---
 
@@ -21,22 +21,22 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->このチュートリアルでは、広告ソースの一意のベース接続 ID が必要です。 この ID を持っていない場合は、[ 広告ソースの Platform への接続 ](../../api/create/advertising/ads.md) チュートリアルを参照してください。
+>このチュートリアルでは、広告ソースの一意のベース接続 ID が必要です。 この ID を持っていない場合は、[ 広告ソースのExperience Platformへの接続 ](../../api/create/advertising/ads.md) チュートリアルを参照してください。
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用して広告システムに正常に接続するために必要な追加情報を示しています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ## データテーブルの探索
 
-広告システムのベース接続を使用すると、データリクエストを実行してGETテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Platform] に取り込むテーブルのパスを検索します。
+広告システムのベース接続を使用すると、GET リクエストを実行してデータテーブルを調べることができます。 次の呼び出しを使用して、検査または [!DNL Experience Platform] に取り込むテーブルのパスを検索します。
 
 **API 形式**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、から広告システムへのテーブルの配列です。 [!DNL Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
+正常な応答は、から広告システムへのテーブルの配列です。 [!DNL Experience Platform] に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順でその構造を検査するためにテーブルを指定する必要があるからです。
 
 ```json
 [
@@ -96,9 +96,9 @@ curl -X GET \
 ]
 ```
 
-## テーブルの構造のInspect
+## テーブルの構造を検査する
 
-広告システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定してGETリクエストを実行します。
+広告システムからテーブルの構造を調べるには、テーブルのパスをクエリパラメーターとして指定して、GET リクエストを実行します。
 
 **API 形式**
 
@@ -170,4 +170,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、広告システムを探索し、取り込むテーブルのパスを見つけ [!DNL Platform]、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [ 広告システムからデータを収集し、Platform に取り込む ](../collect/advertising.md) ことができます。
+このチュートリアルに従って、広告システムを探索し、取り込むテーブルのパスを見つけ [!DNL Experience Platform]、その構造に関する情報を取得しました。 次のチュートリアルでは、この情報を使用して [ 広告システムからデータを収集し、Experience Platformに取り込む ](../collect/advertising.md) ことができます。

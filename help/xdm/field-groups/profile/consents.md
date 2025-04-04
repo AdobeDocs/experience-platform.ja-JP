@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 同意および環境設定スキーマフィールドグループ
 description: 同意および環境設定スキーマフィールドグループについて説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->XDM リソースを検索し、Platform UI でその構造を検査する手順については、への [XDM リソースの調査 ](../../ui/explore.md) に関するガイドを参照してください。
+>XDM リソースを検索し、Experience Platform UI でその構造を調べる手順については、[XDM リソースの調査 ](../../ui/explore.md) に関するガイドを参照してください。
 
 次の JSON は、[!UICONTROL  同意と環境設定 ] フィールドグループが処理できるデータのタイプの例を示しています。 フィールドグループが提供するほとんどのフィールドの使用方法について詳しくは、[ 同意および環境設定データタイプ ](../../data-types/consents.md) に関するガイドを参照してください。 以下のサブセクションでは、フィールドグループがデータタイプに追加する一意の属性に焦点を当てています。
 

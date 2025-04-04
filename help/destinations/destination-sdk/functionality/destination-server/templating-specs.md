@@ -2,10 +2,10 @@
 description: エンドポイントに送信される HTTP リクエストの書式設定方法を説明します。/authoring/destination-servers エンドポイントを使用して、Adobe Experience Platform Destination SDK の宛先サーバーテンプレート仕様を設定します。
 title: Destination SDK で作成される宛先のテンプレート仕様
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 92%
+source-wordcount: '512'
+ht-degree: 88%
 
 ---
 
@@ -71,7 +71,7 @@ ht-degree: 92%
 |---|---|---|
 | `httpMethod` | 文字列 | *必須。* サーバーへの呼び出しでアドビが使用するメソッド。サポートされるメソッド：`GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
 | `templatingStrategy` | 文字列 | *必須。* `PEBBLE_V1` を使用します。 |
-| `value` | 文字列 | *必須。* この文字列は、Platform によって送信される HTTP リクエストを宛先で想定される形式に書式設定するテンプレートの文字がエスケープされたバージョンです。<br>テンプレートの記述方法について詳しくは、[テンプレートの使用](message-format.md#using-templating)に関する節を参照してください。<br> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br>単純な変換の例については、[プロファイル属性](message-format.md#attributes)変換を参照してください。 |
+| `value` | 文字列 | *必須。* この文字列は、Experience Platformから送信される HTTP リクエストを宛先で想定される形式に書式設定するテンプレートの文字がエスケープされたバージョンです。 <br>テンプレートの記述方法について詳しくは、[テンプレートの使用](message-format.md#using-templating)に関する節を参照してください。<br> 文字のエスケープについて詳しくは、[RFC JSON 規格の第 7 節](https://tools.ietf.org/html/rfc8259#section-7)を参照してください。<br>単純な変換の例については、[プロファイル属性](message-format.md#attributes)変換を参照してください。 |
 | `contentType` | 文字列 | *必須。* サーバーが受け入れるコンテンツタイプ。変換テンプレートが生成する出力のタイプに応じて、これは、サポートされる任意の [HTTP アプリケーションコンテンツタイプ](https://www.iana.org/assignments/media-types/media-types.xhtml#application)になります。ほとんどの場合、この値は、`application/json` に設定する必要があります。 |
 
 {style="table-layout:auto"}

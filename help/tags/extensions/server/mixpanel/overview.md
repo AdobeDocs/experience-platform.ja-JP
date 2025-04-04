@@ -1,12 +1,12 @@
 ---
 keywords: イベント転送拡張機能；mixpanel;mixpanel イベント転送拡張機能
 title: Mixpanel Track Events API イベント転送拡張機能
-description: このAdobe Experience Platform イベント転送拡張機能は、Edge Networkイベントを Mixpanel に送信します。
+description: このAdobe Experience Platform イベント転送拡張機能は、Edge Network イベントを Mixpanel に送信します。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '893'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 [!DNL Mixpanel] は、次の 2 つの方法で id クラスターを解決します。
 
-* **ID**：選択した ID[!DNL Mixpanel] 匿名 `distinct_id` に接続します。 Web サイトで [!DNL Mixpanel] SDK が有効になっている場合、Platform は、現在ログインしているユーザーに割り当てられた `distinct_id` を使用します。
+* **ID**：選択した ID[!DNL Mixpanel] 匿名 `distinct_id` に接続します。 Web サイトで [!DNL Mixpanel] SDKが有効になっている場合、Experience Platformは、現在ログインしているユーザーに割り当てられている `distinct_id` を使用します。
 * **エイリアス**：追加の結合条件 [!DNL Mixpanel] 満たされた場合に、2 つの非匿名 `distinct id` を組み合わせます。
 
 >[!NOTE]
@@ -74,7 +74,7 @@ Experience Platformを [!DNL Mixpanel] に接続するには、次の入力が�
 
 ## [!DNL Send Event] ルールの作成
 
-イベント転送プロパティで新しいルールの作成を開始します。 **[!UICONTROL アクション]** の下に新しいアクションを追加し、拡張機能を **[!UICONTROL Mixpanel]** に設定します。 次に、アクションタイプを **[!UICONTROL トラックイベント]** に設定して、Edge Networkイベントを [!DNL Mixpanel] に送信します。
+イベント転送プロパティで新しいルールの作成を開始します。 **[!UICONTROL アクション]** の下に新しいアクションを追加し、拡張機能を **[!UICONTROL Mixpanel]** に設定します。 次に、アクションタイプを **[!UICONTROL トラックイベント]** に設定して、Edge Network イベントを [!DNL Mixpanel] に送信します。
 
 | 入力 | 説明 | 必須 |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ Experience Platformを [!DNL Mixpanel] に接続するには、次の入力が�
 
 >[!IMPORTANT]
 >
->Web サイトで [!DNL Mixpanel] SDK を使用している場合は、次の手順 [ 内でのデータの検証  [!DNL Mixpanel]](#validate) に進むことができます。 [!DNL Mixpanel] SDK を使用していない場合は、[ 個別の ID トラッキングルールを作成 ](#create-an-identity-tracking-rule) して、ユーザー ID イベントが発生したときに適切なイベントと `distinct_id` 値が [!DNL Mixpanel] に送信されるようにする必要があります。
+>Web サイトで [!DNL Mixpanel] SDKを使用している場合は、次の手順 [ 内でのデータの検証  [!DNL Mixpanel]](#validate) に進むことができます。 [!DNL Mixpanel] SDKを使用していない場合は、[ 個別の ID トラッキングルールを作成 ](#create-an-identity-tracking-rule) して、ユーザー ID イベントが発生したときに適切なイベントと `distinct_id` 値が [!DNL Mixpanel] に送信されるようにする必要があります。
 
 ## [!DNL Mixpanel] 内のデータの検証 {#validate}
 
@@ -105,7 +105,7 @@ Experience Platformを [!DNL Mixpanel] に接続するには、次の入力が�
 
 ## 次の手順
 
-このガイドでは、イベント転送を使用してコンバージョンイベントを [!DNL Mixpanel] に送信する方法について説明しました。 このイベント転送拡張機能は、[!DNL Mixpanel] SDK とJavaScript API を活用します。 これらの基盤となるテクノロジーについて詳しくは、次の公式ドキュメントを参照してください。
+このガイドでは、イベント転送を使用してコンバージョンイベントを [!DNL Mixpanel] に送信する方法について説明しました。 このイベント転送拡張機能は、[!DNL Mixpanel] SDK API とJavaScript API を活用します。 これらの基盤となるテクノロジーについて詳しくは、次の公式ドキュメントを参照してください。
 
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] JavaScript API](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)

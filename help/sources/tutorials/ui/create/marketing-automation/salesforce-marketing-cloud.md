@@ -1,15 +1,15 @@
 ---
-title: SalesforceMarketing Cloudアカウントを UI を使用してExperience Platformに接続する
-description: UI を通じてSalesforceMarketing CloudアカウントをExperience Platformに接続する方法を説明します。
+title: UI を使用したSalesforce Marketing Cloud アカウントのExperience Platformへの接続
+description: UI を通じてSalesforce Marketing Cloud アカウントをExperience Platformに接続する方法について説明します。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 27%
+source-wordcount: '511'
+ht-degree: 21%
 
 ---
 
-# UI を使用して [!DNL Salesforce Marketing Cloud] アカウントをExperience Platformに接続する
+# UI を使用した [!DNL Salesforce Marketing Cloud] アカウントのExperience Platformへの接続
 
 >[!WARNING]
 >
@@ -26,11 +26,11 @@ ht-degree: 27%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に [!DNL Salesforce Marketing Cloud] アカウントを持っている場合は、このドキュメントの残りの部分をスキップし、[UI を使用したマーケティング自動化データのExperience Platformへの取り込み ](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
+既に [!DNL Salesforce Marketing Cloud] アカウントを持っている場合は、このドキュメントの残りの部分をスキップし、[UI を使用したExperience Platformへのマーケティング自動化データの取り込み ](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-Platform で [!DNL Salesforce Marketing Cloud] アカウントにアクセスするには、次の値を指定する必要があります。
+Experience Platformで [!DNL Salesforce Marketing Cloud] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -46,15 +46,15 @@ Platform で [!DNL Salesforce Marketing Cloud] アカウントにアクセスす
 >
 >カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] には、Experience Platformでサポートされている様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] には、Experience Platformでサポートされている様々なソースが表示されます。
 
 カテゴリのリストから適切なカテゴリを選択できます。 検索バーを使用して、特定のソースをフィルタリングすることもできます。
 
-[!UICONTROL  マーケティング自動化 ] カテゴリで、「**[!UICONTROL SalesforceMarketing Cloud]**」を選択し、**[!UICONTROL 設定]** を選択します。
+[!UICONTROL  マーケティング自動化 ] カテゴリで、「**[!UICONTROL Salesforce Marketing Cloud]**」を選択し、**[!UICONTROL 設定]** を選択します。
 
-![ ソースカタログとSalesforceMarketing Cloudソースが選択されています。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+![ ソースカタログとSalesforce Marketing Cloud ソースが選択されています。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-**[!UICONTROL SalesforceMarketing Cloudに接続]** ページが表示されます。 このページでは、新しいアカウントを作成するか、既存のアカウントを使用できます。
+**[!UICONTROL Salesforce Marketing Cloudへの接続]** ページが表示されます。 このページでは、新しいアカウントを作成するか、既存のアカウントを使用できます。
 
 ### 新規アカウント
 
@@ -68,8 +68,8 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 既存のアカウントがある場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、表示されるリストから使用するアカウントを選択します。
 
-![ 既存のSalesforce Marketing Cloudアカウントのリストから選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![ 既存のSalesforce Marketing Cloud アカウントのリストから選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Salesforce Marketing Cloud] アカウントとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローを作成 ](../../dataflow/marketing-automation.md) できるようになりました。
+このチュートリアルでは、[!DNL Salesforce Marketing Cloud] アカウントとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/marketing-automation.md) を行いましょう。

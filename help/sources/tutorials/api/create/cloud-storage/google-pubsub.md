@@ -3,10 +3,10 @@ title: Flow Service API を使用した Google PubSub ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 54%
+source-wordcount: '1153'
+ht-degree: 46%
 
 ---
 
@@ -14,18 +14,18 @@ ht-degree: 54%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
+>Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
 
 このチュートリアルでは、 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して [!DNL Google PubSub]（以下「[!DNL PubSub]」）を Experience Platform に接続する手順を詳しく説明します。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
+このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、様々なソースからデータを取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、[!DNL Flow Service] API を使用して [!DNL PubSub] を Platform に正しく接続するために必要な追加情報を示します。
+次の節では、[!DNL Flow Service] API を使用してExperience Platformに正しく接続するために必要 [!DNL PubSub] 追加情報を示します。
 
 ### 必要な資格情報の収集
 
@@ -58,9 +58,9 @@ ht-degree: 54%
 >
 >サービスアカウントベースの認証を使用している場合は、サービスアカウントに十分なユーザーアクセス権が付与され、資格情報をコピー＆ペーストする際に、JSON 内に余分な空白がないことを確認してください。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
@@ -88,7 +88,7 @@ POST /connections
 
 >[!TAB  プロジェクトベースの認証 ]
 
-プロジェクトベースの認証によるベース接続を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、リクエスト本文で `projectId` と `credentials` を指定します。
+プロジェクトベースの認証を使用したベース接続を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、リクエスト本文で `projectId` と `credentials` を指定します。
 
 +++リクエスト
 
@@ -140,7 +140,7 @@ curl -X POST \
 
 >[!TAB  トピックおよび購読ベースの認証 ]
 
-トピックおよび購読ベースの認証を使用してベース接続を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、リクエスト本文で `credentials`、`topicName`、`subscriptionName` を指定します。
+トピックおよび購読ベースの認証を使用したベース接続を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、リクエスト本文で `credentials`、`topicName`、`subscriptionName` を指定します。
 
 +++リクエスト
 

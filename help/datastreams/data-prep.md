@@ -2,16 +2,16 @@
 title: データ収集のためのデータ準備
 description: Adobe Experience Platform Web および Mobile SDK のデータストリームを設定する際に、エクスペリエンスデータモデル（XDM）イベントスキーマにデータをマッピングする方法について説明します。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 59%
+source-wordcount: '1203'
+ht-degree: 53%
 
 ---
 
 # データ収集のためのデータ準備
 
-データ準備は、[エクスペリエンスデータモデル（XDM）](../xdm/home.md)との間でデータのマッピング、変換、検証を可能にする、Adobe Experience Platform サービスです。Platform 対応の[データストリーム](./overview.md)を設定する場合、データ準備機能を使用して、Platform Edge Network に送信する際にソースデータを XDM にマッピングできます。
+データ準備は、[エクスペリエンスデータモデル（XDM）](../xdm/home.md)との間でデータのマッピング、変換、検証を可能にする、Adobe Experience Platform サービスです。Experience Platform対応の [ データストリーム ](./overview.md) を設定する場合、データ準備機能を使用して、Experience Platform Edge Networkに送信する際にソースデータを XDM にマッピングできます。
 
 Web ページから送信されるすべてのデータは、XDM としてExperience Platformに届く必要があります。 ページ上のデータレイヤーからExperience Platformが受け入れる XDM にデータを変換する方法は 3 つあります。
 
@@ -52,7 +52,7 @@ Web ページから送信されるすべてのデータは、XDM としてExperi
 
 ## [!UICONTROL データの選択] {#select-data}
 
-データストリームの基本設定が完了してから「**[!UICONTROL 保存してマッピングを追加]**」を選択すると、**[!UICONTROL データを選択]**&#x200B;手順が表示されます。ここから、Platform に送信する予定のデータの構造を表す、サンプル JSON オブジェクトを指定する必要があります。
+データストリームの基本設定が完了してから「**[!UICONTROL 保存してマッピングを追加]**」を選択すると、**[!UICONTROL データを選択]**&#x200B;手順が表示されます。ここから、Experience Platformに送信する予定のデータの構造を表す、サンプル JSON オブジェクトを指定する必要があります。
 
 データレイヤーから直接プロパティを取得するには、JSON オブジェクが単一のルートプロパティ `data` を持つ必要があります。`data` オブジェクトのサブプロパティは、取得したいデータレイヤープロパティにマッピングするように構築する必要があります。 次のセクションを選択すると、`data` ルートを持つ適切にフォーマットされた JSON オブジェクトの例が表示されます。
 
@@ -162,7 +162,7 @@ XDM オブジェクトデータ要素からプロパティを取得するには�
 
 ## [!UICONTROL マッピング]
 
-**[!UICONTROL マッピング]**&#x200B;手順が表示され、ソースデータフィールドを Platform のターゲットイベントスキーマのフィールドにマッピングできます。ここから、2 つの方法でマッピングを設定できます。
+**[!UICONTROL マッピング]** 手順が表示され、ソースデータフィールドをExperience Platformのターゲットイベントスキーマのフィールドにマッピングできます。 ここから、2 つの方法でマッピングを設定できます。
 
 * 手動のプロセスでこのデータストリームに対して [ マッピングルールを作成 ](#create-mapping) します。
 * 既存のデータストリームから[マッピングルールを読み込みます](#import-mapping)。

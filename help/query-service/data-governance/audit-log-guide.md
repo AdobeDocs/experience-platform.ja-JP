@@ -2,22 +2,22 @@
 title: クエリサービス監査ログの統合
 description: クエリサービス監査ログは、問題のトラブルシューティングや企業のデータ管理ポリシーおよび規制要件への準拠のための監査証跡を形成するために、様々なユーザーアクションの記録を保持します。 このチュートリアルでは、クエリサービスに固有の監査ログ機能の概要を説明します。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '935'
 ht-degree: 8%
 
 ---
 
 # [!DNL Query Service] 監査ログの統合
 
-Adobe Experience Platform [!DNL Query Service] 監査ログ統合は、クエリ関連のユーザーアクションのレコードを提供します。 監査ログは、企業のデータ管理ポリシーや規制要件のトラブルシューティングと順守に不可欠なツールです。 この機能を使用すると、様々なイベントタイプのアクションログを返し、レコードをフィルタリングして書き出すことができます。 ログには Platform UI または [ 監査クエリ API](https://www.adobe.io/experience-platform-apis/references/audit-query/) 経由でアクセスでき、CSV または JSON ファイル形式でダウンロードできます。
+Adobe Experience Platform [!DNL Query Service] 監査ログ統合は、クエリ関連のユーザーアクションのレコードを提供します。 監査ログは、企業のデータ管理ポリシーや規制要件のトラブルシューティングと順守に不可欠なツールです。 この機能を使用すると、様々なイベントタイプのアクションログを返し、レコードをフィルタリングして書き出すことができます。 ログにはExperience Platform UI または [Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/) 経由でアクセスでき、CSV または JSON ファイル形式でダウンロードできます。
 
-監査ログのユーザーインターフェイスについて詳しくは、[ 監査ログの概要ドキュメント ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。 Platform API を呼び出す方法について詳しくは、[ 監査ログ API ガイド ](../../landing/api-guide.md) を参照してください。
+監査ログのユーザーインターフェイスについて詳しくは、[ 監査ログの概要ドキュメント ](../../landing/governance-privacy-security/audit-logs/overview.md) を参照してください。 Experience Platform API を呼び出す方法について詳しくは、[ 監査ログ API ガイド ](../../landing/api-guide.md) を参照してください。
 
 ## 前提条件
 
-Platform UI 内で監査ログダッシュボードを表示するには、[!DNL Data Governance][!UICONTROL  ユーザーアクティビティログを表示 ] 権限が有効になっている必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
+Experience Platform UI 内で監査ログダッシュボードを表示するには、[!DNL Data Governance][!UICONTROL  ユーザーアクティビティログを表示 ] 権限が有効になっている必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
 
 ## [!DNL Query Service] 監査ログのカテゴリ {#audit-log-categories}
 
@@ -33,9 +33,9 @@ Platform UI 内で監査ログダッシュボードを表示するには、[!DNL
 
 [!DNL Query Service] のアクティビティの監査を実行するには、左側のナビゲーションから **[!UICONTROL 監査]** を選択し、次にファネルアイコン（![A フィルターアイコンを選択します。](/help/images/icons/filter.png)）を選択して、結果を絞り込むのに役立つフィルターコントロールのリストを表示します。
 
-![ 左側のナビゲーションに「監査」が表示され、フィルターコントロールがハイライト表示された Platform UI 監査ログダッシュボード。](../images/audit-log/filter-controls.png)
+![ 左側のナビゲーションに「監査」が表示され、フィルターコントロールがハイライト表示されたExperience Platform UI 監査ログダッシュボード。](../images/audit-log/filter-controls.png)
 
-[!UICONTROL  監査 ] ダッシュボード [!UICONTROL  アクティビティログ ] タブでは、記録されたすべての Platform アクションを [!DNL Query Service] のいずれかのカテゴリでフィルタリングできます。 ログ結果は、実行期間、実行されたアクションや機能、クエリを実行したユーザーに基づいて、さらにフィルタリングできます。 詳しくは、監査ログのドキュメント [ カテゴリ、アクション、ユーザー、ステータスに基づいてログをフィルタリングする方法の完全な手順 ](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui) を参照してください。
+[!UICONTROL  監査 ] ダッシュボード [!UICONTROL  アクティビティログ ] タブでは、記録されたすべてのExperience Platform アクションを [!DNL Query Service] のいずれかのカテゴリでフィルタリングできます。 ログ結果は、実行期間、実行されたアクションや機能、クエリを実行したユーザーに基づいて、さらにフィルタリングできます。 詳しくは、監査ログのドキュメント [ カテゴリ、アクション、ユーザー、ステータスに基づいてログをフィルタリングする方法の完全な手順 ](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui) を参照してください。
 
 返される監査ログデータには、選択したフィルター条件を満たすすべてのクエリに関する次の情報が含まれます。
 

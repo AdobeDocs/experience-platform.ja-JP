@@ -2,10 +2,10 @@
 title: Flow Service API を使用したAdobe Experience Platformへのデータランディングゾーンの接続
 description: Flow Service API を使用してAdobe Experience Platformを Data Landing Zone に接続する方法を説明します。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1410'
-ht-degree: 16%
+source-wordcount: '1419'
+ht-degree: 13%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 16%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-また、このチュートリアルでは [Platform API の基本を学ぶ ](../../../../../landing/api-guide.md) に関するガイドを読んで、Platform API への認証方法と、ドキュメントに記載されている呼び出し例を解釈する方法も確認する必要があります。
+また、このチュートリアルでは [Experience Platform API の概要 ](../../../../../landing/api-guide.md) を読んで、Experience Platform API への認証方法と、ドキュメントに記載されている呼び出し例を解釈する方法についても確認する必要があります。
 
 次の節では、[!DNL Flow Service] API を使用して [!DNL Data Landing Zone] ソース接続を正常に作成するために必要な追加情報を示しています。
 
@@ -36,7 +36,7 @@ ht-degree: 16%
 >
 >[!DNL Data Landing Zone] API を使用して `type=user_drop_zone` ータを取得するには、**[!UICONTROL ソースの管理]** アクセス制御権限が必要です。 詳しくは、[ アクセス制御の概要 ](../../../../../access-control/home.md) を参照するか、製品管理者に問い合わせて、必要な権限を取得してください。
 
-API を使用して [!DNL Data Landing Zone] にアクセスする最初の手順は、[!DNL Connectors] API の `/landingzone` エンドポイントに対してGETリクエストを行い、その際にリクエストヘッダーの一部として `type=user_drop_zone` を指定することです。
+API を使用して [!DNL Data Landing Zone] にアクセスする最初の手順は、[!DNL Connectors] API の `/landingzone` エンドポイントに対してGET リクエストを実行し、その際にリクエストヘッダーの一部として `type=user_drop_zone` を指定することです。
 
 **API 形式**
 
@@ -104,7 +104,7 @@ curl -X GET \
 
 ## 資格情報 [!DNL Data Landing Zone] 取得
 
-[!DNL Data Landing Zone] の資格情報を取得するには、[!DNL Connectors] API の `/credentials` エンドポイントにGETリクエストを実行します。
+[!DNL Data Landing Zone] の資格情報を取得するには、[!DNL Connectors] API の `/credentials` エンドポイントに対してGET リクエストを実行します。
 
 **API 形式**
 
@@ -287,7 +287,7 @@ public class Main {
 
 ## 資格情報 [!DNL Data Landing Zone] 更新
 
-[!DNL Connectors] API の `/credentials` エンドポイントにPOSTリクエストを行うことで、`SASToken` を更新できます。
+[!DNL Connectors] API の `/credentials` エンドポイントに対して POST リクエストを実行することで、`SASToken` を更新できます。
 
 **API 形式**
 
@@ -330,7 +330,7 @@ curl -X POST \
 
 ## ランディングゾーンのファイル構造と内容の探索
 
-[!DNL Flow Service] API の `connectionSpecs` エンドポイントに対してGETリクエストを実行することで、ランディングゾーンのファイル構造と内容を調べることができます。
+[!DNL Flow Service] API の `connectionSpecs` エンドポイントに対してGET リクエストを実行することで、ランディングゾーンのファイル構造と内容を調べることができます。
 
 **API 形式**
 
@@ -385,7 +385,7 @@ curl -X GET \
 
 ## ランディングゾーンファイルの構造と内容をプレビュー
 
-ランディングゾーン内のファイルの構造を調べるには、GETリクエストを実行し、その際にファイルのパスとタイプをクエリパラメーターとして指定します。
+ランディングゾーン内のファイルの構造を調べるには、GET リクエストを実行し、その際にファイルのパスとタイプをクエリパラメーターとして指定します。
 
 **API 形式**
 
@@ -479,7 +479,7 @@ curl -X GET \
 
 ### `determineProperties` を使用して、[!DNL Data Landing Zone] のファイルプロパティ情報を自動検出します
 
-`determineProperties` パラメーターを使用すると、ソースの内容と構造を調べるためにGET呼び出しを行う際に、[!DNL Data Landing Zone] ータのファイル内容のプロパティ情報を自動検出できます。
+`determineProperties` パラメーターを使用すると、ソースの内容と構造を調べるためにGETを呼び出す際に、[!DNL Data Landing Zone] ージのファイルコンテンツのプロパティ情報を自動検出できます。
 
 #### `determineProperties` の使用例
 
@@ -656,8 +656,8 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | [!DNL Data Landing Zone] ソース接続の名前。 |
-| `data.format` | Platform に取り込むデータの形式。 |
-| `params.path` | Platform に取り込むファイルへのパス。 |
+| `data.format` | Experience Platformに取り込むデータの形式。 |
+| `params.path` | Experience Platformに取り込むファイルへのパス。 |
 | `connectionSpec.id` | [!DNL Data Landing Zone] に対応する接続仕様 ID。 この修正済み ID は `26f526f2-58f4-4712-961d-e41bf1ccc0e8` です。 |
 
 **応答**
@@ -673,4 +673,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Data Landing Zone] 資格情報を取得し、そのファイル構造を調べて、Platform に取り込むファイルを見つけ、Platform へのデータの取り込みを開始するためのソース接続を作成しました。 次のチュートリアルに進むことができます。ここでは、[API を使用してクラウドストレージデータを Platform に取り込むためのデータフローを作成 ](../../collect/cloud-storage.md) する方法を説明し  [!DNL Flow Service]  す。
+このチュートリアルでは、[!DNL Data Landing Zone] 資格情報を取得し、そのファイル構造を調べて、Experience Platformに取り込むファイルを見つけ、Experience Platformへのデータの取り込みを開始するソース接続を作成しました。 次のチュートリアルに進むことができます。ここでは、[API を使用してクラウドストレージデータをExperience Platformに取り込むためのデータフローを作成 ](../../collect/cloud-storage.md) する方法を説明し  [!DNL Flow Service]  す。

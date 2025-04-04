@@ -5,7 +5,7 @@ title: UI での Azure Data Lake Storage Gen2 Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Azure Data Lake Storage Gen2 ソース接続を作成する方法を説明します。
 exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 33%
@@ -14,7 +14,7 @@ ht-degree: 33%
 
 # UI での [!DNL Azure Data Lake Storage Gen2] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Azure Data Lake Storage Gen2] （以下「[!DNL ADLS Gen2]」）ソースコネクタを認証する手順について説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Azure Data Lake Storage Gen2] （以下「[!DNL ADLS Gen2]」）ソースコネクタを認証する手順について説明します。
 
 ## はじめに
 
@@ -42,7 +42,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## [!DNL ADLS Gen2] アカウントを接続
 
-必要な資格情報を収集したら、次の手順に従って [!DNL ADLS Gen2] アカウントを [!DNL Platform] に接続するようにリンクできます。
+必要な資格情報を収集したら、次の手順に従って [!DNL ADLS Gen2] アカウントを [!DNL Experience Platform] に接続するようにリンクできます。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -68,4 +68,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL ADLS Gen2] アカウントとの接続を確立しました。次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/batch/cloud-storage.md) を行いましょう。
+このチュートリアルでは、[!DNL ADLS Gen2] アカウントとの接続を確立しました。次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md) を行いましょう。

@@ -1,19 +1,19 @@
 ---
 title: 監査イベント API エンドポイント
-description: Audit Query API を使用してExperience Platform内の監査イベントを取得する方法について説明します。
+description: Audit Query API を使用してExperience Platformの監査イベントを取得する方法について説明します。
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 20%
 
 ---
 
 # 監査イベントエンドポイント
 
-監査ログは、様々なサービスや機能に関するユーザーアクティビティの詳細を提供するために使用されます。 ログに記録される各アクションには、アクションのタイプ、日時、アクションを実行したユーザーの電子メール ID、アクションのタイプに関連する追加の属性を示すメタデータが含まれます。[!DNL Audit Query] API の `/audit/events` エンドポイントを使用すると、組織のアクティビティのイベントデータを [!DNL Platform] でプログラムによって取得できます。
+監査ログは、様々なサービスや機能に関するユーザーアクティビティの詳細を提供するために使用されます。 ログに記録される各アクションには、アクションのタイプ、日時、アクションを実行したユーザーの電子メール ID、アクションのタイプに関連する追加の属性を示すメタデータが含まれます。[!DNL Audit Query] API の `/audit/events` エンドポイントを使用すると、組織のアクティビティのイベントデータを [!DNL Experience Platform] でプログラムによって取得できます。
 
 ## はじめに
 
@@ -21,7 +21,7 @@ ht-degree: 20%
 
 ## 監査イベントのリスト
 
-イベントデータを取得するには、`/audit/events` エンドポイントに対してGETリクエストを実行し、取得するイベントをペイロードで指定します。
+イベントデータを取得するには、`/audit/events` エンドポイントに対してGET リクエストを実行し、取得するイベントをペイロードで指定します。
 
 **API 形式**
 
@@ -152,9 +152,9 @@ curl -X POST \
 | `imsOrgId` | イベントが発生した組織の ID。 |
 | `permissionResource` | 権限を付与した製品または機能がアクションを実行します。 リソースは次のいずれかになります。 <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | アクションに関係する権限タイプ。 |
-| `assetType` | アクションが実行された Platform リソースのタイプ。 |
-| `assetId` | アクションが実行された Platform リソースの一意の ID。 |
-| `assetName` | アクションが実行された Platform リソースの名前。 |
+| `assetType` | アクションが実行されたExperience Platform リソースのタイプ。 |
+| `assetId` | アクションが実行されたExperience Platform リソースの一意の ID。 |
+| `assetName` | アクションが実行されたExperience Platform リソースの名前。 |
 | `action` | イベントに対して記録されたアクションのタイプ。 アクションは、次のいずれかになります。 <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | アクションのステータス。 ステータスは次のいずれかになります。 </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 

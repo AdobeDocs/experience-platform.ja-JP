@@ -5,7 +5,7 @@ title: UI での ServiceNow Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して ServiceNow ソース接続を作成する方法を説明します。
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 52%
@@ -14,7 +14,7 @@ ht-degree: 52%
 
 # UI での [!DNL ServiceNow] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] のユーザーインターフェイスを使用して [!DNL ServiceNow] ソースコネクタを作成する手順を説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] のユーザーインターフェイスを使用して [!DNL ServiceNow] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -29,7 +29,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で [!DNL ServiceNow] アカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Experience Platform] で [!DNL ServiceNow] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -41,7 +41,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## [!DNL ServiceNow] アカウントの接続
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL ServiceNow] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL ServiceNow] アカウントを [!DNL Experience Platform] にリンクします。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -67,4 +67,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL ServiceNow] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/customer-success.md) を行いましょう。
+このチュートリアルでは、[!DNL ServiceNow] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/customer-success.md) を行いましょう。

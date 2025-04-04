@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ストリーミング取り込みトラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 100%
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # ストリーミング取り込みトラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。すべての [!DNL Platform] API で発生する問題を含め、他の [!DNL Platform] サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド](../../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。すべての [!DNL Experience Platform] API で発生する問題を含め、他の [!DNL Experience Platform] サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド](../../landing/troubleshooting.md)を参照してください。
 
 Adobe Experience Platform [!DNL Data Ingestion] は、データを [!DNL Experience Platform] に取り込むために使用できる RESTful API を提供します。取り込んだデータは、個々の顧客プロファイルをほぼリアルタイムで更新するために使用され、パーソナライズされた関連性の高いエクスペリエンスを複数のチャネルで配信できます。サービスと様々な 取り込み方法の詳細については、[データ取り込みの概要](../home.md)を参照してください。ストリーミング取り込み APIの使用方法に関する手順については、[ストリーミング取り込みの概要](../streaming-ingestion/overview.md)を参照してください。
 
@@ -33,9 +33,9 @@ Adobe Experience Platform [!DNL Data Ingestion] は、データを [!DNL Experie
 
 同期検証と非同期検証について詳しくは、[ストリーミング検証の概要](../quality/streaming-validation.md)を参照してください。検証に失敗したバッチを表示する手順については、[失敗したバッチの取得](../quality/retrieve-failed-batches.md)に関するガイドを参照してください。
 
-### リクエストペイロードを [!DNL Platform] に送信する前に検証することはできますか？
+### リクエストペイロードを [!DNL Experience Platform] に送信する前に検証することはできますか？
 
-リクエストペイロードは、[!DNL Platform] に送信された後にのみ評価できます。同期検証を実行すると、有効なペイロードは生成された JSON オブジェクト、無効なペイロードはエラーメッセージを返します。非同期検証中に、サービスは不正なデータを検出して [!DNL Data Lake] に送信し、後からそのデータを取得して分析できます。詳しくは、[ストリーミング検証の概要](../quality/streaming-validation.md)を参照してください。
+リクエストペイロードは、[!DNL Experience Platform] に送信された後にのみ評価できます。同期検証を実行すると、有効なペイロードは生成された JSON オブジェクト、無効なペイロードはエラーメッセージを返します。非同期検証中に、サービスは不正なデータを検出して [!DNL Data Lake] に送信し、後からそのデータを取得して分析できます。詳しくは、[ストリーミング検証の概要](../quality/streaming-validation.md)を参照してください。
 
 ### サポートされていないエッジで同期検証がリクエストされた場合はどうなりますか？
 
@@ -43,7 +43,7 @@ Adobe Experience Platform [!DNL Data Ingestion] は、データを [!DNL Experie
 
 ### 信頼できるソースからのみデータが収集されるようにするにはどうすればよいですか？
 
-[!DNL Experience Platform] は、セキュリティで保護されたデータ収集をサポートします。認証済みデータ収集が有効な場合、クライアントは JSON Web トークン（JWT）と組織 ID をリクエストヘッダーとして送信する必要があります。認証済みデータを [!DNL Platform] に送信する方法について詳しくは、[認証済みデータ収集](../tutorials/create-authenticated-streaming-connection.md)に関するガイドを参照してください。
+[!DNL Experience Platform] は、セキュリティで保護されたデータ収集をサポートします。認証済みデータ収集が有効な場合、クライアントは JSON Web トークン（JWT）と組織 ID をリクエストヘッダーとして送信する必要があります。認証済みデータを [!DNL Experience Platform] に送信する方法について詳しくは、[認証済みデータ収集](../tutorials/create-authenticated-streaming-connection.md)に関するガイドを参照してください。
 
 ### [!DNL Real-Time Customer Profile] にデータをストリーミングするための待ち時間はどれくらいですか？
 
@@ -51,15 +51,15 @@ Adobe Experience Platform [!DNL Data Ingestion] は、データを [!DNL Experie
 
 ### 同じ API リクエストに複数のメッセージを含めることはできますか？
 
-複数のメッセージを 1 件のリクエストペイロード内でグループ化し、[!DNL Platform] にストリーミング配信できます。正しく使用した場合、1 つのリクエスト内で複数のメッセージをグループ化すると、データ操作をうまく最適化できます。詳細については、[複数のメッセージを 1 件のリクエストで送信する方法](../tutorials/streaming-multiple-messages.md)のチュートリアルを参照してください。
+複数のメッセージを 1 件のリクエストペイロード内でグループ化し、[!DNL Experience Platform] にストリーミング配信できます。正しく使用した場合、1 つのリクエスト内で複数のメッセージをグループ化すると、データ操作をうまく最適化できます。詳細については、[複数のメッセージを 1 件のリクエストで送信する方法](../tutorials/streaming-multiple-messages.md)のチュートリアルを参照してください。
 
 ### 自分が送信するデータが受信されたかどうかを確認する方法を教えてください。
 
-[!DNL Platform] に送信されるすべてのデータ（正常に、またはそれ以外）は、データセットに保持される前にバッチファイルとして保存されます。バッチの処理ステータスは、送信先のデータセット内に表示されます。
+[!DNL Experience Platform] に送信されるすべてのデータ（正常に、またはそれ以外）は、データセットに保持される前にバッチファイルとして保存されます。バッチの処理ステータスは、送信先のデータセット内に表示されます。
 
 [Experience Platform ユーザーインターフェイス](https://platform.adobe.com)でデータセットのアクティビティを確認することで、データが正常に取り込まれたかどうかを確認できます。左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックし、データセットのリストを表示します。表示されたリストからストリーミング先のアクティビティセットを選択すると、その&#x200B;**[!UICONTROL データセットアクティビティ]**&#x200B;ページを開き、選択した期間に送信されたすべてのバッチが表示されます。[!DNL Experience Platform] を使用したデータストリームの監視方法について詳しくは、[ストリーミングデータフローの監視](../quality/monitor-data-ingestion.md)に関するガイドを参照してください。
 
-データの取得に失敗し、[!DNL Platform] から復元したい場合は、失敗したバッチの ID を [!DNL Data Access API] に送信して、そのバッチを取得できます。詳しくは、[失敗したバッチの取得](../quality/retrieve-failed-batches.md)に関するガイドを参照してください。
+データの取得に失敗し、[!DNL Experience Platform] から復元したい場合は、失敗したバッチの ID を [!DNL Data Access API] に送信して、そのバッチを取得できます。詳しくは、[失敗したバッチの取得](../quality/retrieve-failed-batches.md)に関するガイドを参照してください。
 
 ### ストリーミングデータがデータレイクで使用できないのはなぜですか。
 

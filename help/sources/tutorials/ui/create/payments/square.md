@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気のトピック；正方形；
 title: UI での Square Source接続の作成
 description: Adobe Experience Platform UI を使用して Square ソースコネクタを作成する方法を説明します。
 exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 56%
+source-wordcount: '458'
+ht-degree: 44%
 
 ---
 
 # UI での [!DNL Square] ソース接続の作成
 
-このチュートリアルでは、Platform ユーザーインターフェイスを使用して [!DNL Square] ソースコネクタを作成する手順を説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して [!DNL Square] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -25,7 +25,7 @@ ht-degree: 56%
 
 ### 必要な資格情報の収集
 
-[!DNL Square] アカウントプラットフォームにアクセスするには、次の値を指定する必要があります。
+[!DNL Square] アカウントのExperience Platformにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -37,11 +37,11 @@ ht-degree: 56%
 
 これらの資格情報とその取得方法について詳しくは、[[!DNL Square] OAuth に関するドキュメント ](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens) を参照してください。
 
-必要な資格情報を収集したら、以下の手順に従って [!DNL Square] アカウントを Platform にリンクできます。
+必要な資格情報を収集したら、次の手順に従って [!DNL Square] アカウントをExperience Platformにリンクできます。
 
 ## [!DNL Square] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -65,4 +65,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、認証を行い、お使いの [!DNL Square] アカウントと Platform とのソース接続を作成しました。次のチュートリアルに進み、[ 支払いデータを Platform に取り込むためのデータフローの作成 ](../../dataflow/payments.md) を行いましょう。
+このチュートリアルでは、認証を行い、お使いの [!DNL Square] アカウントとExperience Platformとのソース接続を作成しました。 次のチュートリアルに進み、[ 支払いデータをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/payments.md) を行いましょう。

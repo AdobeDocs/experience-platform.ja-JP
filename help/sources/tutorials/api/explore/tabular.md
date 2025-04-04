@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；ソース；
 title: Flow Service API を使用した表形式のSourceの調査
 description: このチュートリアルでは、Flow Service API を使用して、テーブルベースのソースの内容と構造を調べます。
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
-source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 21%
+source-wordcount: '471'
+ht-degree: 16%
 
 ---
 
@@ -22,16 +22,16 @@ ht-degree: 21%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ## データテーブルの探索
 
-ソースのベース接続 ID を指定したうえで [!DNL Flow Service] API に対してデータリクエストを行うことで、GETテーブルの構造に関する情報を取得できます。
+ソースのベース接続 ID を指定したうえで [!DNL Flow Service] API に対してGET リクエストを実行すると、データテーブルの構造に関する情報を取得できます。
 
 **API 形式**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、ソースからテーブルの配列が返されます。 Platform に取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、その構造を検査するために次の手順で指定する必要があるからです。
+応答が成功すると、ソースからテーブルの配列が返されます。 Experience Platformに取り込むテーブルを見つけ、その `path` プロパティをメモします。これは、次の手順で構造を調べるときに指定する必要があるからです。
 
 ```json
 [
@@ -77,9 +77,9 @@ curl -X GET \
 ]
 ```
 
-## テーブルの構造のInspect
+## テーブルの構造を検査する
 
-データテーブルの内容を調べるには、テーブルのパスをクエリパラメーターとして指定して、[!DNL Flow Service] API にGETリクエストを実行します。
+データテーブルの内容を調べるには、[!DNL Flow Service] API に対してGET リクエストを実行し、その際にテーブルのパスをクエリパラメーターとして指定します。
 
 **API 形式**
 
@@ -188,7 +188,7 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルでは、データテーブルの構造と内容に関する情報を収集しました。 さらに、Platform に取り込むテーブルへのパスを取得しました。 この情報を使用して、ソース接続とデータフローを作成し、データを Platform に取り込むことができます。 [!DNL Flow Service] API を使用してソース接続とデータフローを作成する方法に関する具体的な手順については、次のチュートリアルを参照してください。
+このチュートリアルでは、データテーブルの構造と内容に関する情報を収集しました。 さらに、Experience Platformに取り込むテーブルへのパスを取得しました。 この情報を使用して、ソース接続とデータフローを作成し、データをExperience Platformに取り込むことができます。 [!DNL Flow Service] API を使用してソース接続とデータフローを作成する方法に関する具体的な手順については、次のチュートリアルを参照してください。
 
 * [Advertising ソース](../collect/advertising.md)
 * [CRM ソース](../collect/crm.md)

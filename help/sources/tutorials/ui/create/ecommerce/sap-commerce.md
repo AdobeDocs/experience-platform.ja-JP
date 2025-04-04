@@ -3,10 +3,10 @@ title: UI での SAP Commerce ソース接続の作成
 description: Adobe Experience Platform UI を使用して SAP Commerce ソース接続を作成する方法について説明します。
 badge: ベータ版
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 32%
+source-wordcount: '976'
+ht-degree: 28%
 
 ---
 
@@ -42,9 +42,9 @@ ht-degree: 32%
 
 詳しくは、[[!DNL SAP Commerce]  ドキュメント ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html) を参照してください。
 
-### Platform スキーマの作成 {#create-platform-schema}
+### Experience Platform スキーマの作成 {#create-platform-schema}
 
-[!DNL SAP Commerce] ソース接続を作成する前に、まずソースに使用するExperience Platformスキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+[!DNL SAP Commerce] ソース接続を作成する前に、まずソースに使用するExperience Platform スキーマを作成する必要もあります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
 次のセクションを展開すると、スキーマの例が表示されます。
 
@@ -141,15 +141,15 @@ ht-degree: 32%
 
 +++
 
-## [!DNL SAP Commerce] アカウントの接続 {#connect-account}
+## [!DNL SAP Commerce] アカウントを接続 {#connect-account}
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *e コマース* カテゴリで、「**[!UICONTROL SAP Commerce]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![SAP Commerce カードを含むカタログの Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+![SAP Commerce カードを含むカタログのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
 **[!UICONTROL Connect SAP Commerce アカウント]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -157,17 +157,17 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL SAP Commerce] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![SAP Commerce アカウントを既存のアカウントに接続するための Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+![SAP Commerce アカウントを既存のアカウントと接続するためのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### 新規アカウント {#new-account}
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![SAP Commerce アカウントを新しいアカウントに接続するための Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+![SAP Commerce アカウントを新しいアカウントに接続するためのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### データの選択 {#select-data}
 
-最後に、Platform に取得するオブジェクトタイプを選択する必要があります。
+最後に、Experience Platformに取り込むオブジェクトタイプを選択する必要があります。
 
 | オブジェクトタイプ | 説明 |
 | --- | --- |
@@ -180,19 +180,19 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 顧客データを取り込むには、オブジェクトタイプとして **[!UICONTROL 顧客]** を選択してから、**[!UICONTROL 次へ]** を選択します。
 
-![ 「Customers」オプションが選択された設定を示す、SAP Commerceの Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+![ お客様のオプションが選択された設定を示す、SAP CommerceのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB  連絡先 ]
 
 連絡先データを取り込むには、オブジェクトタイプとして **[!UICONTROL 連絡先]** を選択してから、**[!UICONTROL 次へ]** を選択します。
 
-![ 「連絡先」オプションが選択された設定を示す、SAP Commerceの Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+![ 連絡先オプションが選択された設定を示す、SAP CommerceのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL SAP Commerce] アカウントとの接続を確立しました。次のチュートリアルに進み、[データを Platform に取り込むためのデータフローの設定](../../dataflow/ecommerce.md)を行いましょう。
+このチュートリアルでは、[!DNL SAP Commerce] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/ecommerce.md) を行いましょう。
 
 ## その他のリソース {#additional-resources}
 
@@ -200,7 +200,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### マッピング {#mapping}
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 データフローのマッピング設定は、スキーマと、取り込むように選択したオブジェクトタイプによって異なります。
 

@@ -2,10 +2,10 @@
 title: サンドボックスツールを使用したオブジェクト設定のバックアップ
 description: サンドボックスを安全にリセットし、バージョン管理のサポートを追加するには、サンドボックスツールパッケージを使用してオブジェクト設定（またはメタデータ）をバックアップします。 バックアップパッケージを使用すると、特に開発を反復する際に、スキーマ、データセット、オーディエンスなどの重要な設定の損失を防ぐことができます。
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 3%
+source-wordcount: '1167'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 - バックアップする範囲メタデータに応じて、手動で [ パッケージにオブジェクトを追加する ](../ui/sandbox-tooling.md#add-object-to-a-new-package) または [ サンドボックス全体を書き出す ](../ui/sandbox-tooling.md#export-an-entire-sandbox) 方法を理解していることを確認します。
 - 正しい権限を持つ組織内のサンドボックスツールにアクセスできることを確認します。
 
-### 使用する UI 機能、プラットフォームコンポーネントおよび Experience Cloud 製品 {#ui-functionality-and-elements}
+### 使用する UI 機能、Experience Platform コンポーネントおよびExperience Cloud製品 {#ui-functionality-and-elements}
 
 このユースケースを正常に実装するには、Adobe Experience Platformの複数の領域を使用する必要があります。 これらすべての領域に必要な [ 属性ベースのアクセス制御権限 ](../../access-control/abac/overview.md) があることを確認するか、システム管理者に必要な権限の付与を依頼してください。
 
@@ -85,7 +85,7 @@ ht-degree: 3%
 
 ##### 複数オブジェクトパッケージの作成
 
-Experience Platformで、左側のナビゲーションで **[!UICONTROL サンドボックス]** を選択してから、「**[!UICONTROL パッケージ]**」を選択します。 新しいパッケージの作成を開始するには、右上隅にある **[!UICONTROL パッケージを作成]** を選択します。
+Experience Platformで、左側のナビゲーションの「**[!UICONTROL サンドボックス]**」を選択してから、「**[!UICONTROL パッケージ]**」を選択します。 新しいパッケージの作成を開始するには、右上隅にある **[!UICONTROL パッケージを作成]** を選択します。
 
 ![ サンドボックスダッシュボードの「パッケージ」タブでは、「パッケージを作成」がハイライト表示されます。](../images/use-cases/create-package.png)
 

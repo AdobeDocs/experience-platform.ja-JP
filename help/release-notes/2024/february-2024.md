@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2024年2月）
 description: Adobe Experience Platform の 2024年2月のリリースノートです。
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1244'
-ht-degree: 29%
+source-wordcount: '1248'
+ht-degree: 25%
 
 ---
 
@@ -24,7 +24,7 @@ Experience Platformの既存の機能に対するアップデート：
 
 ## アラート {#alerts}
 
-Experience Platform では、様々な Platform アクティビティに関するイベントベースのアラートを登録できます。Platform ユーザーインターフェイスの「[!UICONTROL アラート]」タブを使用して、様々なアラートルールを購読し、UI 内または電子メール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能または更新された機能**
 
@@ -95,7 +95,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つの Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
 
 **新機能または更新された機能**
 
@@ -109,13 +109,13 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 ## セグメント化サービス {#segmentation}
 
-[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
+[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Experience Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| アカウントオーディエンス | アカウントオーディエンスの一般公開 Real-Time Customer Platform の B2B エディションと B2P エディションの両方で、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングセグメント化エクスペリエンスの完全な使いやすさと洗練を実現するために、アカウントのセグメント化を使用できるようになりました。 このリリースでは、ユーザーベースのオーディエンスをアカウントベースのオーディエンスに対する述語として使用でき、検索機能を追加し、カスタムエンティティの使用をサポートするほか、データガバナンスに準拠しています。 この機能について詳しくは、[ アカウントオーディエンスの概要 ](../../segmentation/types/account-audiences.md) を参照してください。 |
+| アカウントオーディエンス | アカウントオーディエンスの一般公開 Real-time Customer Experience Platformの B2B エディションと B2P エディションの両方で、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングセグメント化エクスペリエンスの完全な使いやすさと洗練を実現するために、アカウントのセグメント化を使用できるようになりました。 このリリースでは、ユーザーベースのオーディエンスをアカウントベースのオーディエンスに対する述語として使用でき、検索機能を追加し、カスタムエンティティの使用をサポートするほか、データガバナンスに準拠しています。 この機能について詳しくは、[ アカウントオーディエンスの概要 ](../../segmentation/types/account-audiences.md) を参照してください。 |
 
 {style="table-layout:auto"}
 

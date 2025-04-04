@@ -2,10 +2,10 @@
 title: UI でのソースデータフローのオンデマンド取り込み
 description: Experience Platform ユーザーインターフェイスを使用して、ソース接続のデータフローをオンデマンドで作成する方法を説明します。
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 10%
+source-wordcount: '552'
+ht-degree: 0%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 10%
 
 このドキュメントでは、Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ データフロー ](../../../dataflows/home.md)：データフローは、Platform 間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、ID サービスおよびリアルタイム顧客プロファイル、宛先へとデータを移動できます。
-* [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ データフロー ](../../../dataflows/home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、ID サービスおよびリアルタイム顧客プロファイル、宛先へとデータを移動できます。
+* [ サンドボックス ](../../../sandboxes/home.md):Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## オンデマンドでのデータフローの作成 {#create-a-dataflow-on-demand}
 

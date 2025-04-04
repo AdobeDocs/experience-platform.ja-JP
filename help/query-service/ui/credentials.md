@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービス資格情報ガイド
 description: Adobe Experience Platform クエリサービスは、クエリの書き込みと実行、以前に実行したクエリの表示、組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1830'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform クエリサービスを使用すると、外部クラ
 
 >[!NOTE]
 >
->すべてのユーザーに対して、資格情報パネルは、自動的には使用できません。必要に応じて、Adobeアカウントチームに連絡して、「[!UICONTROL  資格情報 ]」タブをクエリサービス ワークスペースに含めてください。 リクエストされた場合、この変更は組織全体にわたり、Adobeのエンジニアリングチームが実施します。 ユーザーが制御する設定ではありません。
+>すべてのユーザーに対して、資格情報パネルは、自動的には使用できません。必要に応じて、Adobe アカウントチームに連絡して、「[!UICONTROL  資格情報 ]」タブをクエリサービス ワークスペースに含めてください。 ご要望があれば、この変更は組織全体にわたり、Adobeのエンジニアリングチームが実施します。 ユーザーが制御する設定ではありません。
 
 ## 資格情報の期限切れ {#expiring-credentials}
 
@@ -32,7 +32,7 @@ Adobe Experience Platform クエリサービスを使用すると、外部クラ
 
 「**[!UICONTROL 資格情報の有効期限]** セクションには、次の情報が表示されます。
 
-- **[!UICONTROL ホスト]**: クライアントの接続先ホストの名前。 これには、Platform UI の上部リボンに表示される組織の名前が含まれています。
+- **[!UICONTROL ホスト]**: クライアントの接続先ホストの名前。 これには、Experience Platform UI の上部リボンに表示される組織の名前が含まれています。
 - **[!UICONTROL ポート]**：接続先のホストのポート番号。
 - **[!UICONTROL Database]**: クライアントの接続先のデータベースの名前。
 - **[!UICONTROL ユーザー名]**：クエリサービスへの接続に使用するユーザー名。
@@ -42,33 +42,33 @@ Adobe Experience Platform クエリサービスを使用すると、外部クラ
 
 >[!TIP]
 >
->期限が切れる資格情報をクエリサービスに接続するためのセッションの有効期間を変更するには、[Admin Consoleに移動し ](https://adminconsole.adobe.com/) 画面で **設定**/**プライバシーとセキュリティ**/**認証設定**/**詳細設定**/**最大セッションの有効期間** を選択します。
+>期限が切れる資格情報をクエリサービスに接続するためのセッションの有効期間を変更するには、[Admin Console](https://adminconsole.adobe.com/) に移動し、画面で **設定**/**プライバシーとセキュリティ**/**認証設定**/**詳細設定**/**最大セッションの有効期間** を選択します。
 >
->![ プライバシーとセキュリティ、Admin Console設定、最大セッション時間がハイライト表示された「認証の設定」タブ ](../images/ui/credentials/max-session-life.png)
+>![ 「プライバシーとセキュリティ」、「認証設定」、「最大セッション時間」がハイライト表示された「Admin Console設定」タブ ](../images/ui/credentials/max-session-life.png)
 >
->Admin Console が提供する [ 詳細設定 ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) について詳しくは、Adobeヘルプドキュメントを参照してください。
+>Admin Console が提供する [ 詳細設定 ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) について詳しくは、Adobe ヘルプドキュメントを参照してください。
 
-### クエリセッション内のCustomer Journey Analyticsデータへの接続 {#connect-to-customer-journey-analytics}
+### クエリセッション内でCustomer Journey Analytics データに接続する {#connect-to-customer-journey-analytics}
 
-Customer Journey Analytics BI 拡張機能とPower BIまたは Tableau を使用して、SQL でCustomer Journey Analytics[ データビュー ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) にアクセスします。 クエリサービスを BI 拡張機能と統合すると、クエリサービスのセッション内でデータビューに直接アクセスできます。 この統合により、クエリサービスを PostgreSQL インターフェイスとして使用する BI ツールの機能が合理化されます。 この機能により、BI ツールでデータ・ビューを複製する必要がなくなり、プラットフォーム間で一貫性のあるレポートが保証され、BI プラットフォームでのCustomer Journey Analytics・データと他のソースとの統合が簡略化されます。
+Power BIまたは Tableau でCustomer Journey Analytics BI 拡張機能を使用して、SQL でCustomer Journey Analytics[ データビュー ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-dataviews/data-views) にアクセスします。 クエリサービスを BI 拡張機能と統合すると、クエリサービスのセッション内でデータビューに直接アクセスできます。 この統合により、クエリサービスを PostgreSQL インターフェイスとして使用する BI ツールの機能が合理化されます。 この機能により、BI ツールでデータビューを複製する必要がなくなり、プラットフォーム間で一貫したレポートが確保され、BI プラットフォームでのCustomer Journey Analytics データと他のソースとの統合が簡素化されます。
 
-[ クエリサービスを [Power BI、{Tableau](../clients/power-bi.md) などの様々なデスクトップクライアントアプリケーションに接続する ](../clients/overview.md) 方法については、ドキュメントを参照してください [](../clients/tableau.md)
+[ クエリサービスを [Power BI](../clients/power-bi.md) や [Tableau などの様々なデスクトップクライアントアプリケーションに接続する ](../clients/overview.md) 方法については、ドキュメントを参照してください ](../clients/tableau.md)
 
 >[!IMPORTANT]
 >
->この機能を使用するには、Customer Journey Analyticsワークスペースプロジェクトとデータビューが必要です。
+>この機能を使用するには、Customer Journey Analytics Workspace プロジェクトとデータビューが必要です。
 
-Power BIまたは Tableau でCustomer Journey Analyticsデータにアクセスするには、[!UICONTROL  データベース ] ドロップダウンメニューを選択し、使用可能なオプションから `prod:cja` を選択します。 次に、Power BIまたは Tableau の構成で使用するために、[!DNL Postgres] 資格情報パラメーター（Host、Port、Database、Username など）をコピーします。
+Power BIまたは Tableau でCustomer Journey Analytics データにアクセスするには、「[!UICONTROL  データベース ]」ドロップダウンメニューを選択し、使用可能なオプションから「`prod:cja`」を選択します。 次に、Power BIまたは Tableau 設定で使用するために、[!DNL Postgres] 資格情報パラメーター（ホスト、ポート、データベース、ユーザー名など）をコピーします。
 
 ![ データベースのドロップダウンがハイライト表示された「クエリサービスの資格情報」タブ ](../images/ui/credentials/database-dropdown.png)
 
 >[!NOTE]
 >
->Power BIまたは Tableau をCustomer Journey Analyticsに接続すると、クエリサービスの「同時セッション」使用権限が消費されます。 追加のセッションとクエリが必要な場合は、追加のアドホッククエリユーザーパック アドオンを購入して、5 つの追加の同時セッションと 1 つの追加の同時クエリを取得できます。
+>Power BIまたは Tableau をCustomer Journey Analyticsに接続すると、クエリサービスの「同時セッション」使用権が消費されます。 追加のセッションとクエリが必要な場合は、追加のアドホッククエリユーザーパック アドオンを購入して、5 つの追加の同時セッションと 1 つの追加の同時クエリを取得できます。
 
-また、クエリエディターまたは Postgres CLI から直接Customer Journey Analyticsデータにアクセスすることもできます。 これを行うには、クエリを記述する際に `cja` データベースを参照します。 クエリの記述、実行、保存の方法について詳しくは、クエリエディター [ クエリオーサリングガイド ](./user-guide.md#query-authoring) を参照してください。
+また、クエリエディターまたは Postgres CLI からCustomer Journey Analytics データに直接アクセスすることもできます。 これを行うには、クエリを記述する際に `cja` データベースを参照します。 クエリの記述、実行、保存の方法について詳しくは、クエリエディター [ クエリオーサリングガイド ](./user-guide.md#query-authoring) を参照してください。
 
-SQL を使用してCustomer Journey Analyticsデータビューにアクセスする手順について詳しくは、[BI 拡張機能ガイド ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) を参照してください。
+SQL を使用してCustomer Journey Analyticsのデータビューにアクセスする手順について詳しくは、[BI 拡張機能ガイド ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) を参照してください。
 
 ## 有効期限のない資格情報 {#non-expiring-credentials}
 
@@ -99,7 +99,7 @@ SQL を使用してCustomer Journey Analyticsデータビューにアクセス�
 
 ### 資格情報を生成 {#generate-credentials}
 
-有効期限のない一連の資格情報を作成するには、Platform UI に戻り、左側のナビゲーションから **[!UICONTROL クエリ]** を選択して、[!UICONTROL  クエリ ] ワークスペースにアクセスします。 次に、「**[!UICONTROL 資格情報]** タブを選択し、続いて **[!UICONTROL 資格情報の生成]** を選択します。
+有効期限のない一連の資格情報を作成するには、Experience Platform UI に戻り、左側のナビゲーションから **[!UICONTROL クエリ]** を選択して [!UICONTROL  クエリ ] ワークスペースにアクセスします。 次に、「**[!UICONTROL 資格情報]** タブを選択し、続いて **[!UICONTROL 資格情報の生成]** を選択します。
 
 ![ 「資格情報」タブと「資格情報を生成」がハイライト表示されたクエリダッシュボード ](../images/ui/credentials/generate-credentials.png)
 
@@ -108,7 +108,7 @@ SQL を使用してCustomer Journey Analyticsデータビューにアクセス�
 - **[!UICONTROL 名前]**：生成する資格情報の名前。
 - **[!UICONTROL 説明]**:（オプション）生成する資格情報の説明。
 - **[!UICONTROL 割り当て先]**：資格情報を割り当てるユーザーです。 この値は、資格情報を作成するユーザーのメールアドレスである必要があります。
-- **[!UICONTROL パスワード]** （オプション）資格情報のオプションのパスワード。 パスワードが設定されていない場合、Adobeにより自動的にパスワードが生成されます。
+- **[!UICONTROL パスワード]** （オプション）資格情報のオプションのパスワード。 パスワードが設定されていない場合、Adobeによってパスワードが自動生成されます。
 
 必要な詳細をすべて入力したら、「**[!UICONTROL 認証情報を生成]**」を選択して認証情報を生成します。
 
@@ -144,7 +144,7 @@ SQL を使用してCustomer Journey Analyticsデータビューにアクセス�
 
 ## 資格情報を使用して外部クライアントに接続 {#use-credential-to-connect}
 
-有効期限のある資格情報または有効期限のない資格情報を使用して、Aqua Data Studio、Looker、Power BIなどの外部クライアントと接続できます。 これらの資格情報の入力方法は、外部クライアントによって異なります。 これらの資格情報の使用手順については、外部クライアントのドキュメントを参照してください。
+有効期限のある資格情報または有効期限のない資格情報のいずれかを使用して、Aqua Data Studio、Looker、Power BIなどの外部クライアントと接続できます。 これらの資格情報の入力方法は、外部クライアントによって異なります。 これらの資格情報の使用手順については、外部クライアントのドキュメントを参照してください。
 
 この画像は、有効期限のない資格情報のパスワードを除く、UI で見つかった各パラメーターの場所を示しています。 有効期限のない資格情報は JSON 設定ファイルによって提供されますが、有効期限のある資格情報は UI の「**資格情報**」タブで表示できます。
 

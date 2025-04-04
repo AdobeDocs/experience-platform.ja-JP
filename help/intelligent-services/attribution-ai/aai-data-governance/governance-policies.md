@@ -4,16 +4,16 @@ feature: Attribution AI
 title: アトリビューション AI のガバナンスポリシー
 description: Adobe Experience Platform には、収集したエクスペリエンスデータを確信を持って制御できるいくつかのサービスおよびツールが用意されています。
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 97%
+source-wordcount: '194'
+ht-degree: 87%
 
 ---
 
-# Attribution AIにおけるガバナンスポリシー
+# アトリビューション AI のガバナンスポリシー
 
-ワークフローを実行してモデルを作成しモデルの設定を送信したら、違反がないかどうかを[ポリシー適用](../../../data-governance/enforcement/auto-enforcement.md)が確認します。 ポリシー違反が発生した場合は、1 つ以上のポリシーに違反したことを示すポップオーバーが表示されます。 これは、Platform 内のデータ操作とマーケティングアクションがデータ使用ポリシーに準拠していることを確認するためです。
+ワークフローを実行してモデルを作成しモデルの設定を送信したら、違反がないかどうかを[ポリシー適用](../../../data-governance/enforcement/auto-enforcement.md)が確認します。 ポリシー違反が発生した場合は、1 つ以上のポリシーに違反したことを示すポップオーバーが表示されます。 これは、Experience Platform内のデータ操作とマーケティングアクションがデータ使用ポリシーに準拠していることを確認するためです。
 
 ## ポリシー違反ポップオーバー
 

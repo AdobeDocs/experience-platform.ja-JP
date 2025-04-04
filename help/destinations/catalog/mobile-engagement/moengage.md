@@ -3,7 +3,7 @@ title: Moengage 接続
 description: Moengage は、消費者とブランドの間の顧客中心インタラクションをリアルタイムで強化する顧客エンゲージメントプラットフォームです。
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 35%
@@ -100,7 +100,7 @@ Adobe Experience Platform データを [!DNL Moengage] に送信する前に、�
 
 オーディエンスデータを [!DNL Adobe Experience Platform] から [!DNL Moengage] の宛先に正しく送信するには、フィールドマッピングの手順を実行する必要があります。
 
-マッピングは、[!DNL Platform] アカウントの [!DNL Experience Data Model] （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
+マッピングは、[!DNL Experience Platform] アカウントの [!DNL Experience Data Model] （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
 
 XDM フィールドを [!DNL Moengage] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
@@ -128,7 +128,7 @@ XDM フィールドを [!DNL Moengage] 宛先フィールドに正しくマッ�
 ![Moengage 宛先ターゲットマッピング ](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 [!UICONTROL  ターゲットフィールドを選択 ] ウィンドウでは、次の 2 つのカテゴリのターゲットフィールドから選択できます。
-* [!UICONTROL ID 名前空間を選択 ]：このオプションを使用して、ID 名前空間 [!DNL Platform]ID 名前空間にマッピン [!DNL Moengage] します。
+* [!UICONTROL ID 名前空間を選択 ]：このオプションを使用して、ID 名前空間 [!DNL Experience Platform]ID 名前空間にマッピン [!DNL Moengage] します。
 * [!UICONTROL  カスタム属性を選択 ]：このオプションを使用して、XDM 属性を [!DNL Moengage] アカウントで定義したカスタム [!DNL Moengage] 属性にマッピングします。 <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Moengage] に変更することもできます。 例えば、`lastName` XDM 属性を [!DNL Moengage] のカスタム `Last_Name` 属性にマッピングすると、`Last_Name` 属性が存在しない場合は [!DNL Moengage] に作成し、`lastName` XDM 属性をマッピングします。
 
 ![Moengage 宛先ターゲットマッピングフィールド ](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)

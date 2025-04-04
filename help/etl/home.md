@@ -2,18 +2,18 @@
 keywords: Experience Platform;ホーム;人気のトピック;ETL;etl;etl 統合;ETL 統合
 solution: Experience Platform
 title: Adobe Experience Platform 用 ETL 統合の開発
-description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
+description: ETL 統合ガイドでは、Experience Platform用の高パフォーマンスで安全なコネクタを作成し、データをExperience Platformに取り込むための一般的な手順について説明しています。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3977'
-ht-degree: 99%
+source-wordcount: '3978'
+ht-degree: 98%
 
 ---
 
 # Adobe Experience Platform 用 ETL 統合の開発
 
-ETL 統合ガイドでは、[!DNL Experience Platform] 用の高パフォーマンスで安全なコネクタを作成し、データを [!DNL Platform] に取り込むための一般的な手順について説明しています。
+ETL 統合ガイドでは、[!DNL Experience Platform] 用の高パフォーマンスで安全なコネクタを作成し、データを [!DNL Experience Platform] に取り込むための一般的な手順について説明しています。
 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
@@ -40,7 +40,7 @@ ETL コネクタ統合には、複数の Experience Platform コンポーネン�
 - **Adobe Identity Management System（IMS）** — アドビのサービスに対する認証のフレームワークを提供します。
 - **IMS 組織** — 製品やサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる企業エンティティ。
 - **IMS ユーザー** - IMS 組織のメンバー。組織とユーザーの関係は多対多です。
-- **[!DNL Sandbox]** - デジタルエクスペリエンスアプリケーションの開発と発展を支援する、単一の [!DNL Platform] インスタンスの仮想パーティション。
+- **[!DNL Sandbox]** - デジタルエクスペリエンスアプリケーションの開発と発展を支援する、単一の [!DNL Experience Platform] インスタンスの仮想パーティション。
 - **データ検出** - 取得されたデータおよび変換されたデータのメタデータを [!DNL Experience Platform] で記録します。
 - **[!DNL Data Access]** - [!DNL Experience Platform] でデータにアクセスするためのインターフェイスをユーザーに提供します。
 - **[!DNL Data Ingestion]** - [!DNL Data Ingestion] API を使用してデータを [!DNL Experience Platform] にプッシュします。
@@ -56,19 +56,19 @@ ETL コネクタ統合には、複数の Experience Platform コンポーネン�
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name：`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../sandboxes/home.md)を参照してください。
+>[!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次のような追加ヘッダーが必要です。
 
@@ -78,7 +78,7 @@ ETL コネクタ統合には、複数の Experience Platform コンポーネン�
 
 まず、ETL ユーザーが [!DNL Experience Platform] ユーザーインターフェイス（UI）にログインし、標準のコネクタまたはプッシュサービスコネクタを使用して取得用のデータセットを作成します。
 
-UI で、ユーザーはデータセットスキーマを選択して出力データセットを作成します。どのスキーマを選択するかは、[!DNL Platform] に取り込むデータ（レコードまたは時系列）のタイプによって異なります。UI 内の「スキーマ」タブをクリックすると、スキーマがサポートする動作タイプを含む、使用可能なすべてのスキーマを表示できます。
+UI で、ユーザーはデータセットスキーマを選択して出力データセットを作成します。どのスキーマを選択するかは、[!DNL Experience Platform] に取り込むデータ（レコードまたは時系列）のタイプによって異なります。UI 内の「スキーマ」タブをクリックすると、スキーマがサポートする動作タイプを含む、使用可能なすべてのスキーマを表示できます。
 
 ETL ツールで適切な接続を設定した後（ユーザーの資格情報を使用して）、マッピング変換のデザインを開始します。ETL ツールには、既に [!DNL Experience Platform] コネクタがインストールされていると想定しています（この統合ガイドでは、プロセスが定義されていません）。
 
@@ -211,7 +211,7 @@ curl -X GET \
 
 **応答** 
 
-返される JSON スキーマは、JSON としてシリアル化されたデータの構造とフィールドレベルの情報（「type」、「format」、「minimum」、「maximum」など）を示します。取得に JSON 以外のシリアル化形式（Parquet や Scala など）を使用する場合、『[スキーマレジストリガイド](../xdm/tutorials/create-schema-api.md)』には、必要な JSON タイプ（「meta:xdmType」）と、その対応する他の形式での表現を示す表が含まれます。
+返される JSON スキーマは、JSON としてシリアル化されたデータの構造とフィールドレベルの情報（「type」、「format」、「minimum」、「maximum」など）を記述します。 取得に JSON 以外のシリアル化形式（Parquet や Scala など）を使用する場合、『[スキーマレジストリガイド](../xdm/tutorials/create-schema-api.md)』には、必要な JSON タイプ（「meta:xdmType」）と、その対応する他の形式での表現を示す表が含まれます。
 
 [!DNL Schema Registry] デベロッパーガイドには、この表以外にも、[!DNL Schema Registry] API を使用して実行できるすべての呼び出しの詳細な例が記載されています。
 
@@ -759,7 +759,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 過去「n」日間、ETL 処理されたデータが予期したとおりに発生しなかった場合や、ソースデータ自体が正しくなかった場合は、バッチ再生とデータ再処理が必要になる場合があります。
 
-これをおこなうには、クライアントのデータ管理者が [!DNL Platform] UI を使用して、破損したデータを含むバッチを削除します。その後、ETL を再実行するのに、正しいデータを再入力する必要が生じます。ソース自体に破損したデータがあった場合、データエンジニアまたは管理者は、ソースバッチを修正し、データを（Adobe Experience Platform または ETL コネクタを介して）再度取得する必要があります。
+これをおこなうには、クライアントのデータ管理者が [!DNL Experience Platform] UI を使用して、破損したデータを含むバッチを削除します。その後、ETL を再実行するのに、正しいデータを再入力する必要が生じます。ソース自体に破損したデータがあった場合、データエンジニアまたは管理者は、ソースバッチを修正し、データを（Adobe Experience Platform または ETL コネクタを介して）再度取得する必要があります。
 
 生成されるデータのタイプに基づいて、特定のデータセットから 1 つのバッチを削除するかすべてのバッチを削除するかは、データエンジニアの選択です。データは、[!DNL Experience Platform] のガイドラインに従って削除またはアーカイブされます。
 
@@ -781,7 +781,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 遅延とは、入力データがまだ完了しておらず、下流プロセスに送信できないが、将来使用できる可能性があるプロセスです。クライアントは、将来の照合のためのデータウィンドウ処理に対する個々の許容値と処理コストを決定し、データを脇に置いて次の変換実行で再処理する決定を通知し、保持期間内の将来のある時点でデータを強化および紐付け／ステッチできることを期待します。このサイクルは、行が十分に処理されるか、投資を続行するには古すぎると見なされるまで継続されます。すべての反復は、前の反復でのすべての遅延データのスーパーセットである遅延データを生成します。
 
-Adobe Experience Platform は、現在、遅延データを識別していません。そのため、クライアント実装では、ETL およびデータセットの手動構成により、[!DNL Platform] で、遅延データの保持に使用できるソースデータセットをミラーリングする、別のデータセットを作成する必要があります。この場合、遅延データはスナップショットデータに似ています。ETL 変換が実行されるたびに、ソースデータは遅延データと統合され、処理用に送信されます。
+Adobe Experience Platform は、現在、遅延データを識別していません。そのため、クライアント実装では、ETL およびデータセットの手動構成により、[!DNL Experience Platform] で、遅延データの保持に使用できるソースデータセットをミラーリングする、別のデータセットを作成する必要があります。この場合、遅延データはスナップショットデータに似ています。ETL 変換が実行されるたびに、ソースデータは遅延データと統合され、処理用に送信されます。
 
 ## 変更ログ
 

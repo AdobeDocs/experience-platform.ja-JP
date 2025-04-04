@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Real-time Customer Data Platformの概要
+keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
+title: Real-Time Customer Data Platformの概要
 description: Adobe Real-time Customer Data Platform の実装を設定する際の例として、次のシナリオをサンプルとして使用します。
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2326'
 ht-degree: 62%
 
 ---
 
-# Real-time Customer Data Platformの概要
+# Real-Time Customer Data Platformの概要
 
-この入門ガイドでは、Real-time Customer Data Platform（Real-Time CDP）のサンプル実装に関する手順を説明します。 独自の実装を設定する場合に例としてご使用ください。このガイドでは具体的な例を示していますが、設定の作成時に使用できる追加情報へのリンクを示しています。
+この入門ガイドでは、Real-Time Customer Data Platform（Real-Time CDP）のサンプル実装に関する手順を説明します。 独自の実装を設定する場合に例としてご使用ください。このガイドでは具体的な例を示していますが、設定の作成時に使用できる追加情報へのリンクを示しています。
 
-この例は、Adobe Experience Platformを活用した、次を行うためのReal-time Customer Data Platformの機能を示しています。
+この例は、Adobe Experience Platformを活用した、次を行うためのReal-Time Customer Data Platformの機能を示しています。
 
 * 複数のソースからデータを取り込む
 * それらを 1 つの [!DNL real-time customer profile] に結合する
@@ -119,7 +119,7 @@ Adobe Target の Adobe Sensei によるパーソナライズ機能により、�
 
 Sarah は気が散ってサイトを離れ、セッションを終了します。Adobe Experience Platform のデータは、Sarah を Luma サイトに戻すのに役立ちます。
 
-Adobe Experience Platformを活用したReal-time Customer Data Platformは、カスタマーエクスペリエンス（顧客体験）管理のために構築されています。 これにより、組織では次のことが可能になります。
+Adobe Experience Platformを活用したReal-Time Customer Data Platformは、カスタマーエクスペリエンス（顧客体験）管理のために構築されています。 これにより、組織では次のことが可能になります。
 
 * データの統合とアクティベーションのシンプル化
 * 既知のデータと不明なデータの使用の管理
@@ -142,7 +142,7 @@ Luma のチームは、顧客の行動とデータをすべて 1 か所にまと
 
 ## データソースの設定
 
-[!DNL Real-Time Customer Data Platform] を使用して、新しいデータソースを Platform に取り込みます。 Real-Time CDPには、プロファイルにすばやく簡単に追加できるデータソースのカタログが含まれています。
+[!DNL Real-Time Customer Data Platform] を使用して、新しいデータソースをExperience Platformに取り込みます。 Real-Time CDPには、プロファイルにすばやく簡単に追加できるデータソースのカタログが含まれています。
 
 ![画像](assets/luma-source-cat.png)
 
@@ -193,7 +193,7 @@ Luma が所有する Sarah に関するプロファイル情報がすべて表�
 
 | カテゴリ | 説明 |
 |---|---|
-| ID | Sarah がさまざまなチャネルやデバイスで Luma とインタラクションを行った [!DNL Platform] でリンクされた ID を表示します。 Web サイトから Sarah の ECID が表示されます。ID には、モバイルアプリからの ECID、メール ID、最近追加された [!DNL Microsoft Dynamics] データセットからの CRM ID、Luma ロイヤルティシステムからAdobe Experience Platformに渡されたロイヤルティ ID も含まれます。 |
+| ID | Sarah がさまざまなチャネルやデバイスで Luma とインタラクションを行った [!DNL Experience Platform] でリンクされた ID を表示します。 Web サイトから Sarah の ECID が表示されます。ID には、モバイルアプリからの ECID、メール ID、最近追加された [!DNL Microsoft Dynamics] データセットからの CRM ID、Luma ロイヤルティシステムからAdobe Experience Platformに渡されたロイヤルティ ID も含まれます。 |
 | イベント | Sarah の Luma ブランドとのインタラクションデータをすべて表示します。これには、Sarah が先ほど閲覧した品目、過去に閲覧したもの、受信した電子メール、コールセンターとのやりとり、またそれぞれのインタラクションが発生したチャネルとデバイスが含まれます。 |
 
 Real-Time CDP プロファイルにより、Luma マーケティングチームのワークフローが数週間から数分に短縮され、この 360 度のカスタマービューに基づくパーソナライゼーションの可能性が解き放たれます。 このプロファイルは、サインイン前にサイトを閲覧した際の行動データと、既存の顧客プロファイルを結合し、Sarah の包括的なビューを作成します。

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: インテリジェントサービスで使用するデータの準備
 description: インテリジェントサービスでマーケティングイベントデータからインサイトを発見するには、データを意味的にエンリッチメントし、標準構造で維持する必要があります。 インテリジェントサービスでは、これを実現するためにエクスペリエンスデータモデル（XDM）スキーマを使用します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '2827'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 マーケティングイベントデータからインサイトを発見する [!DNL Intelligent Services] めには、データを意味的にエンリッチメントし、標準構造に維持する必要があります。 これを実現 [!DNL Intelligent Services] るには、[!DNL Experience Data Model] （XDM）スキーマを活用します。 特に、[!DNL Intelligent Services] で使用するすべてのデータセットは、コンシューマーエクスペリエンスイベント（CEE） XDM スキーマに準拠するか、Adobe Analytics コネクタを使用する必要があります。 さらに、顧客 AI はAdobe Audience Manager コネクタをサポートします。
 
-このドキュメントでは、複数のチャネルから CEE スキーマにマーケティングイベントデータをマッピングする際の一般的なガイダンスを提供し、スキーマ内の重要なフィールドに関する情報を概説し、データをその構造に効果的にマッピングする方法を決定するのに役立ちます。 Adobe Analyticsのデータを使用する予定がある場合は、[Adobe Analyticsのデータ準備 ](#analytics-data) の節を参照してください。 Adobe Audience Manager データ（顧客 AI のみ）を使用する予定がある場合は、[Customer Audience Manger のデータ準備 ](#AAM-data) の節をAdobeしてください。
+このドキュメントでは、複数のチャネルから CEE スキーマにマーケティングイベントデータをマッピングする際の一般的なガイダンスを提供し、スキーマ内の重要なフィールドに関する情報を概説し、データをその構造に効果的にマッピングする方法を決定するのに役立ちます。 Adobe Analyticsのデータを使用する予定がある場合は、[Adobe Analyticsのデータ準備 ](#analytics-data) の節を参照してください。 Adobe Audience Manager データ（顧客 AI のみ）を使用する予定がある場合は、[Adobe Audience Manger のデータ準備 ](#AAM-data) の節を参照してください。
 
 ## データ要件
 
 作成 [!DNL Intelligent Services] る目標に応じて、異なる量の履歴データが必要になります。 いずれにせよ、準備する **すべて** データには [!DNL Intelligent Services] ポジティブとネガティブの両方のカスタマージャーニー/イベントを含める必要があります。 負のイベントと正のイベントの両方を持つことで、モデルの精度と精度が向上します。
 
-例えば、顧客 AI を使用して製品の購入傾向を予測する場合、顧客 AI のモデルには、購入が成功したパスの例と失敗したパスの例の両方が必要です。 これは、モデルのトレーニング中、顧客 AI がイベントやジャーニーが購入につながるかを理解しようとするためです。 これには、買い物かごへの商品の追加でジャーニーを停止した個人など、購入しなかった顧客が実行したアクションも含まれます。 これらの顧客は同様の行動を示す場合がありますが、顧客 AI はインサイトを提供し、傾向スコアの上昇につながる主な違いや要因を掘り下げることができます。 同様に、Attribution AIには、タッチポイントの有効性、トップコンバージョンパス、タッチポイントポジション別の分類などの指標を表示するために、両方のタイプのイベントとジャーニーが必要です。
+例えば、顧客 AI を使用して製品の購入傾向を予測する場合、顧客 AI のモデルには、購入が成功したパスの例と失敗したパスの例の両方が必要です。 これは、モデルのトレーニング中、顧客 AI がイベントやジャーニーが購入につながるかを理解しようとするためです。 これには、買い物かごへの商品の追加でジャーニーを停止した個人など、購入しなかった顧客が実行したアクションも含まれます。 これらの顧客は同様の行動を示す場合がありますが、顧客 AI はインサイトを提供し、傾向スコアの上昇につながる主な違いや要因を掘り下げることができます。 同様に、アトリビューション AI では、タッチポイントの有効性、トップコンバージョンパス、タッチポイントポジション別の分類などの指標を表示するために、両方のタイプのイベントとジャーニーが必要です。
 
-履歴データ要件に関するその他の例と情報については、入力/出力ドキュメントの [ 顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [Attribution AI](./attribution-ai/input-output.md#data-requirements) 履歴データ要件の節を参照してください。
+履歴データ要件に関するその他の例と情報については、入力/出力ドキュメントの [ 顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [ アトリビューション AI](./attribution-ai/input-output.md#data-requirements) 履歴データ要件の節を参照してください。
 
 ### データのステッチのガイドライン
 
@@ -37,19 +37,19 @@ ht-degree: 2%
 
 ### 外部データの準備
 
-データがExperience Platform外に保存されている場合は、データを [Consumer ExperienceEvent スキーマ ](#cee-schema) の必須の関連フィールドにマッピングする必要があります。 このスキーマをカスタムフィールドグループで拡張して、顧客データをより適切に取り込むことができます。 マッピングが完了したら、Consumer ExperienceEvent スキーマを使用してデータセットを作成し、[ データを Platform に取り込む ](../ingestion/home.md) ことができます。 [!DNL Intelligent Service] の設定時に、CEE データセットを選択できます。
+データがExperience Platform外に保存されている場合は、データを [Consumer ExperienceEvent スキーマ ](#cee-schema) の必須フィールドと関連フィールドにマッピングする必要があります。 このスキーマをカスタムフィールドグループで拡張して、顧客データをより適切に取り込むことができます。 マッピングが完了したら、Consumer ExperienceEvent スキーマを使用してデータセットを作成し、[ データをExperience Platformに取り込む ](../ingestion/home.md) ことができます。 [!DNL Intelligent Service] の設定時に、CEE データセットを選択できます。
 
-使用する [!DNL Intelligent Service] に応じて、異なるフィールドが必要になる場合があります。 利用可能なデータがある場合は、フィールドにデータを追加することがベストプラクティスです。 必須フィールドについて詳しくは、[Attribution AI](./attribution-ai/input-output.md) または [ 顧客 AI](./customer-ai/data-requirements.md) データ要件ガイドを参照してください。
+使用する [!DNL Intelligent Service] に応じて、異なるフィールドが必要になる場合があります。 利用可能なデータがある場合は、フィールドにデータを追加することがベストプラクティスです。 必須フィールドについて詳しくは、[ アトリビューション AI](./attribution-ai/input-output.md) または [ 顧客 AI](./customer-ai/data-requirements.md) データ要件ガイドを参照してください。
 
 ### Adobe Analytics データの準備 {#analytics-data}
 
-顧客 AI とデータは、Adobe Analytics Attribution AIをネイティブにサポートします。 Adobe Analytics データを使用するには、[Analytics ソースコネクタ ](../sources/tutorials/ui/create/adobe-applications/analytics.md) を設定するためのドキュメントで説明されている手順に従ってください。
+顧客 AI とアトリビューション AI は、Adobe Analytics データをネイティブにサポートします。 Adobe Analytics データを使用するには、[Analytics ソースコネクタ ](../sources/tutorials/ui/create/adobe-applications/analytics.md) を設定するためのドキュメントで説明されている手順に従ってください。
 
-ソースコネクタでデータがExperience Platformにストリーミングされると、インスタンス設定時にAdobe Analyticsをデータソースとして選択し、続いてデータセットを選択できます。 すべての必須スキーマフィールドグループと個々のフィールドは、接続の設定時に自動的に作成されます。 データセットを CEE 形式に ETL （抽出、変換、読み込み）する必要はありません。
+ソースコネクタでデータがExperience Platformにストリーミングされると、インスタンス設定の際に、Adobe Analyticsをデータソースとして選択し、続いてデータセットを選択できるようになります。 すべての必須スキーマフィールドグループと個々のフィールドは、接続の設定時に自動的に作成されます。 データセットを CEE 形式に ETL （抽出、変換、読み込み）する必要はありません。
 
 Adobe Analytics ソースコネクタを通じてAdobe Experience Platformに送信されたデータをAdobe Analytics データと比較すると、いくつかの不一致に気付く場合があります。 Analytics Source コネクタでは、エクスペリエンスデータモデル（XDM）スキーマへの変換中に行が削除される可能性があります。 行全体が変換に適さない理由としては、タイムスタンプの欠落、ユーザー ID の欠落、無効または大きなユーザー ID、無効な分析値など、複数の理由が考えられます。
 
-詳細と例については、[Adobe AnalyticsとCustomer Journey Analyticsデータの比較 ](https://www.adobe.com/go/compare-aa-data-to-cja-data) のドキュメントを参照してください。 この記事は、データの整合性に関する懸念に妨げられることなく、お客様とチームがAdobe Experience Platform データをインテリジェントサービスに使用できるように、これらの違いを診断し、解決することを目的としています。
+詳細と例については、[Adobe AnalyticsとCustomer Journey Analytics データの比較 ](https://www.adobe.com/go/compare-aa-data-to-cja-data) のドキュメントを参照してください。 この記事は、データの整合性に関する懸念に妨げられることなく、お客様とチームがAdobe Experience Platform データをインテリジェントサービスに使用できるように、これらの違いを診断し、解決することを目的としています。
 
 Adobe Experience Platform Query Services で、channel.typeAtSource クエリを使用して開始と終了のタイムスタンプの間の合計レコード数を次のように実行し、マーケティングチャネル別にカウントを見つけます。
 
@@ -65,13 +65,13 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Adobe Analytics コネクタによるデータのバックフィルには最大 4 週間かかります。 最近Attribution AIを設定した場合は、データセットに、顧客またはデータに必要な最小限のデータ長があることを確認する必要があります。 [ 顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [ データ ](./attribution-ai/input-output.md#data-requirements) の履歴Attribution AIの節を確認し、予測目標を達成するために十分なデータがあることを確認してください。
+>Adobe Analytics コネクタによるデータのバックフィルには最大 4 週間かかります。 最近接続を設定した場合は、データセットに、顧客 AI またはアトリビューション AI に必要な最小データ長があることを確認する必要があります。 [ 顧客 AI](./customer-ai/data-requirements.md#data-requirements) または [ アトリビューション AI](./attribution-ai/input-output.md#data-requirements) の履歴データの節を確認し、予測目標を達成するために十分なデータがあることを確認してください。
 
 ### Adobe Audience Manager データ準備（顧客 AI のみ） {#AAM-data}
 
-顧客 AI は、Adobe Audience Manager データをネイティブにサポートします。 Audience Managerデータを使用するには、[Audience Managerソースコネクタ ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) を設定するためのドキュメントで概説されている手順に従ってください。
+顧客 AI は、Adobe Audience Manager データをネイティブにサポートします。 Audience Manager データを使用するには、[Audience Manager ソースコネクタ ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) を設定するためのドキュメントで概説されている手順に従ってください。
 
-ソースコネクタでデータがExperience Platformにストリーミングされると、顧客 AI 設定で、Adobe Audience Managerをデータソースとして選択し、続いてデータセットを選択できるようになります。 接続の設定時に、すべてのスキーマフィールドグループと個々のフィールドが自動的に作成されます。 データセットを CEE 形式に ETL （抽出、変換、読み込み）する必要はありません。
+ソースコネクタでデータがExperience Platformにストリーミングされると、顧客 AI 設定の際に、Adobe Audience Managerをデータソースとして選択し、続いてデータセットを選択できるようになります。 接続の設定時に、すべてのスキーマフィールドグループと個々のフィールドが自動的に作成されます。 データセットを CEE 形式に ETL （抽出、変換、読み込み）する必要はありません。
 
 >[!IMPORTANT]
 >
@@ -79,7 +79,7 @@ GROUP BY channel.typeAtSource
 
 ### [!DNL Experience Platform] データの準備
 
-データが既に [!DNL Platform] に保存されていて、Adobe AnalyticsまたはAdobe Audience Manager（顧客 AI のみ）ソースコネクタを介してストリーミングされていない場合は、次の手順に従います。 CEE スキーマを理解することをお勧めします。
+データが既に [!DNL Experience Platform] に保存されていて、Adobe AnalyticsまたはAdobe Audience Manager（顧客 AI のみ）ソースコネクタを介してストリーミングされていない場合は、次の手順に従います。 CEE スキーマを理解することをお勧めします。
 
 1. [Consumer ExperienceEvent スキーマ ](#cee-schema) の構造を確認し、データをフィールドにマッピングできるかどうかを判断します。
 2. Adobe Consulting サービスに連絡して、データをスキーマにマッピングして [!DNL Intelligent Services] に取り込むか、データを自分でマッピングする場合は [ このガイドの手順に従ってください ](#mapping)。
@@ -108,7 +108,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 * [プライマリ ID フィールド](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:channel](#channel) （Attribution AIの場合のみ必須）
+* [xdm:channel](#channel) （アトリビューション AI の場合のみ必須）
 
 #### プライマリ ID {#identity}
 
@@ -118,7 +118,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 >[!NOTE]
 >
->Experience CloudID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
+>Experience Cloud ID （ECID）は、MCID とも呼ばれ、名前空間で引き続き使用されます。
 
 * &quot;電子メール&quot;
 * &quot;電話&quot;
@@ -156,7 +156,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 >[!NOTE]
 >
->このフィールドは、Attribution AIを使用する場合にのみ必須です。
+>このフィールドは、アトリビューション AI を使用する場合にのみ必須です。
 
 このフィールドは、ExperienceEvent に関連するマーケティングチャネルを表します。 フィールドには、チャネルタイプ、メディアタイプ、場所タイプに関する情報が含まれます。
 
@@ -321,9 +321,9 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 >[!NOTE]
 >
->以下の手順では、Experience Platformを購読する必要があります。 Platform へのアクセス権がない場合は、[ 次の手順 ](#next-steps) の節に進みます。
+>以下の手順では、Experience Platformを購読する必要があります。 Experience Platformへのアクセス権がない場合は、[ 次の手順 ](#next-steps) の節に進みます。
 
-この節では、[!DNL Intelligent Services] で使用するためにデータをExperience Platformにマッピングおよび取り込むワークフローの概要を説明し、詳細な手順については、チュートリアルへのリンクを示します。
+この節では、[!DNL Intelligent Services] で使用するデータをExperience Platformにマッピングおよび取り込むためのワークフローの概要を説明し、詳細な手順を示すチュートリアルへのリンクを示します。
 
 #### CEE スキーマとデータセットの作成
 
@@ -343,7 +343,7 @@ CEE フィールドグループをスキーマに追加した後、データ内�
 * [UI でのデータセットの作成 ](../catalog/datasets/user-guide.md#create) （既存のスキーマを使用する場合のワークフローに従う）
 * [API でのデータセットの作成](../catalog/datasets/create.md)
 
-データセットが作成されたら、Platform UI の **[!UICONTROL データセット]** ワークスペース内で見つけることができます。
+データセットを作成したら、Experience Platform UI の **[!UICONTROL データセット]** ワークスペース内で見つけることができます。
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -355,11 +355,11 @@ CEE フィールドグループをスキーマに追加した後、データ内�
 
 #### データのマッピングと取り込み {#ingest}
 
-CEE スキーマとデータセットを作成したら、データテーブルからスキーマへのマッピングを開始し、そのデータを Platform に取り込むことができます。 UI でこれをおこなう手順については、[CSV ファイルを XDM スキーマにマッピングする ](../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照してください。 独自のデータを使用する前に、次の [ サンプル JSON ファイル ](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を使用して、取り込みプロセスをテストできます。
+CEE スキーマとデータセットを作成したら、データテーブルからスキーマへのマッピングを開始し、そのデータをExperience Platformに取り込むことができます。 UI でこれをおこなう手順については、[CSV ファイルを XDM スキーマにマッピングする ](../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照してください。 独自のデータを使用する前に、次の [ サンプル JSON ファイル ](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) を使用して、取り込みプロセスをテストできます。
 
 データセットにデータを入力したら、同じデータセットを使用して追加のデータファイルを取り込むことができます。
 
-サポートされているサードパーティアプリケーションにデータが保存されている場合は、[ ソースコネクタ ](../sources/home.md) を作成して、マーケティングイベントデータをリアルタイムで [!DNL Platform] に取り込むこともできます。
+サポートされているサードパーティアプリケーションにデータが保存されている場合は、[ ソースコネクタ ](../sources/home.md) を作成して、マーケティングイベントデータをリアルタイムで [!DNL Experience Platform] に取り込むこともできます。
 
 ## 次の手順 {#next-steps}
 

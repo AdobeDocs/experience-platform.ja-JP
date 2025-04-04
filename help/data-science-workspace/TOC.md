@@ -6,10 +6,10 @@ user-guide-description: 機械学習を利用して、Adobe Sensei と JupyterLa
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 99%
+source-wordcount: '227'
+ht-degree: 96%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 99%
 * モデルオーサリング {#authoring}
    * [モデルオーサリング SDK](authoring/sdk.md)
    * [機能パイプラインの作成](authoring/feature-pipeline.md)
-   * [Platform SDK（Python）を使用したモデルオーサリング](authoring/platform-sdk.md)
+   * [Experience Platform SDK（Python）を使用したモデルオーサリング](authoring/platform-sdk.md)
    * [Python データアクセス](authoring/python.md)
    * [Spark データアクセス](authoring/spark.md)
 * モデルとレシピのチュートリアル {#models-recipes}
@@ -65,4 +65,4 @@ ht-degree: 99%
    * [サービス（UI）の自動トレーニングとスコアリングのスケジュール設定](models-recipes/schedule-models-ui.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
+* [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

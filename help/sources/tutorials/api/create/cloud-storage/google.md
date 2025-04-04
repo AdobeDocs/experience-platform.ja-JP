@@ -2,10 +2,10 @@
 title: Flow Service API を使用したGoogle Cloud Storage ベース接続の作成
 description: Flow Service API を使用してAdobe Experience PlatformをGoogle クラウドストレージアカウントに接続する方法について説明します。
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: 3636b785d82fa2e49f76825650e6159be119f8b4
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 48%
+source-wordcount: '556'
+ht-degree: 38%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 48%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してGoogle Cloud Storage アカウントに正常に接続するために必要な追加情報を示します。
 
@@ -30,20 +30,20 @@ ht-degree: 48%
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | [!DNL Google Cloud Storage] アカウントを Platform に認証するために使用される 61 文字の英数字の文字列。 |
-| `secretAccessKey` | [!DNL Google Cloud Storage] アカウントを Platform に認証するために使用される 40 文字の base-64 エンコード文字列。 |
+| `accessKeyId` | [!DNL Google Cloud Storage] アカウントをExperience Platformに認証するために使用される 61 文字の英数字の文字列。 |
+| `secretAccessKey` | [!DNL Google Cloud Storage] アカウントをExperience Platformに認証するために使用される 40 文字の base-64 エンコード文字列。 |
 | `bucketName` | [!DNL Google Cloud Storage] バケットの名前。 クラウドストレージ内の特定のサブフォルダーへのアクセスを提供する場合は、バケット名を指定する必要があります。 |
 | `folderPath` | アクセス権を付与するフォルダーへのパス。 |
 
 これらの値について詳しくは、[Google Cloud Storage の HMAC キー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。独自のアクセスキー ID と秘密アクセスキーを生成する手順については、[[!DNL Google Cloud Storage]  概要 ](../../../../connectors/cloud-storage/google-cloud-storage.md) を参照してください。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API への呼び出しを正常に実行する方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ## ベース接続の作成
 
-ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
 ベース接続 ID を作成するには、`/connections` エンドポイントに POST リクエストを実行し、[!DNL Google Cloud Storage] 認証資格情報をリクエストパラメーターの一部として使用します。
 

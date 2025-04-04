@@ -1,42 +1,42 @@
 ---
-title: Platform Web SDK での A4T データのクライアントサイドログ
-description: Experience Platform Web SDK を使用してAdobe Analytics for Target （A4T）のクライアントサイドログを有効にする方法を説明します。
-seo-title: Client-side logging for A4T data in the Platform Web SDK
+title: Experience Platform Web SDKでの A4T データのクライアントサイドログ
+description: Experience Platform web SDKを使用して、Adobe Analytics for Target （A4T）のクライアントサイドログを有効にする方法を説明します。
+seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t；ログ；web sdk；エクスペリエンス；platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
 
-# Platform Web SDK での A4T データのクライアントサイドログ
+# Experience Platform Web SDKでの A4T データのクライアントサイドログ
 
 ## 概要 {#overview}
 
-Adobe Experience Platform Web SDK を使用すると、web アプリケーションのクライアント側で [Adobe Analytics for Target （A4T） ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) データを収集できます。
+Adobe Experience Platform web SDKを使用すると、web アプリケーションのクライアント側で [Adobe Analytics for Target （A4T） ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) データを収集できます。
 
 クライアントサイドログとは、関連する [!DNL Target] データがクライアントサイドで返され、ユーザーがデータを収集して Analytics と共有できることを意味します。 [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) を使用して手動で Analytics にデータを送信する場合は、このオプションを有効にしてください。
 
 >[!NOTE]
 >
->[method.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) を使用してこれを実行するAppMeasurementは、現在開発中で、近い将来に利用可能になる予定です。
+>[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) を使用してこれを実行する方法は、現在開発中で、近い将来に利用可能になる予定です。
 
-このドキュメントでは、Web SDK のクライアントサイド A4T ログの設定手順を説明し、一般的なユースケースの実装例を示します。
+このドキュメントでは、web SDKのクライアントサイド A4T ログの設定手順と、一般的なユースケースの実装例を説明します。
 
 ## 前提条件 {#prerequisites}
 
-このチュートリアルは、パーソナライゼーションのために Web SDK を使用することに関連する基本的な概念とプロセスについて、十分に理解していることを前提としています。 概要については、次のドキュメントを参照してください。
+このチュートリアルは、パーソナライゼーションのために Web SDKを使用することに関連する基本的な概念とプロセスについて理解していることを前提としています。 概要については、次のドキュメントを参照してください。
 
-* [Web SDK の設定](/help/web-sdk/commands/configure/overview.md)
+* [Web SDKの設定](/help/web-sdk/commands/configure/overview.md)
 * [イベントの送信](/help/web-sdk/commands/sendevent/overview.md)
 * [パーソナライゼーションコンテンツのレンダリング](../../rendering-personalization-content.md)
 
 ## Analytics クライアントサイドログの設定 {#set-up-client-side-logging}
 
-次のサブセクションでは、Web SDK 実装に対して Analytics のクライアントサイドログを有効にする方法の概要を説明します。
+次のサブセクションでは、Web SDK実装に対して Analytics のクライアントサイドログを有効にする方法の概要を説明します。
 
 ### Analytics クライアントサイドログを有効にする {#enable-analytics-client-side-logging}
 
@@ -44,7 +44,7 @@ Adobe Experience Platform Web SDK を使用すると、web アプリケーショ
 
 ![Analytics データストリーム設定が無効 ](../assets/disable-analytics-datastream.png)
 
-### SDK[!DNL A4T] データを取得して、Analytics に送信します {#a4t-to-analytics}
+### SDKから [!DNL A4T] データを取得して、Analytics に送信します {#a4t-to-analytics}
 
 このレポート方法が正しく機能するには、Analytics ヒットの [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) コマンドから取得した [!DNL A4T] 関連データを送信する必要があります。
 
@@ -227,9 +227,9 @@ Target Edgeは、提案レスポンスを計算する際、Analytics のクラ�
 
 ### フォームベースの Experience Composer アクティビティ {#form-based-composer}
 
-Web SDK を使用して、[Adobe Target フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) アクティビティからの提案の実行を制御できます。
+Web SDKを使用して、[Adobe Target フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) アクティビティからの提案の実行を制御できます。
 
-特定の決定範囲の提案をリクエストすると、返される提案には、適切な Analytics トークンが含まれます。 ベストプラクティスは、Platform Web SDK `sendEvent` コマンドを連結し、返された提案を繰り返し処理して、Analytics トークンを同時に収集しながら実行することです。
+特定の決定範囲の提案をリクエストすると、返される提案には、適切な Analytics トークンが含まれます。 ベストプラクティスは、Experience Platform web SDK `sendEvent` コマンドを連結し、返された提案を繰り返し処理して、Analytics トークンを同時に収集しながら提案を実行することです。
 
 次のように、フォームベースの Experience Composer アクティビティ範囲に対して `sendEvent` コマンドをトリガーできます。
 
@@ -421,12 +421,12 @@ function getClickAnalyticsPayload(proposition) {
 
 #### 実装の概要 {#implementation-summary}
 
-要約すると、Platform Web SDK でフォームベースの Experience Composer アクティビティを適用する場合は、次の手順を実行する必要があります。
+要約すると、フォームベースの Experience Composer アクティビティをExperience Platform Web SDKで適用する場合は、次の手順を実行する必要があります。
 
 1. フォームベースの Experience Composer アクティビティオファーを取得するイベントを送信する。
 1. ページにコンテンツの変更を適用する。
 1. `decisioning.propositionDisplay` 通知イベントの送信
-1. SDK 応答から Analytics 表示トークンを収集し、Analytics ヒットのペイロードを作成します。
+1. SDK応答から Analytics 表示トークンを収集し、Analytics ヒットのペイロードを作成します。
 1. [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を使用してペイロードを Analytics に送信する
 1. 配信された提案にクリック指標がある場合は、クリックが実行されたときに `decisioning.propositionInteract` の通知イベントが送信されるようにクリックリスナーを設定する必要があります。 `onBeforeEventSend` ハンドラーは、イベントをインターセプトすると次のアクションが発生するように設定 `decisioning.propositionInteract` る必要があります。
    1. `xdm._experience.decisioning.propositions` からのクリック分析トークンの収集
@@ -467,13 +467,13 @@ alloy("sendEvent", {
 
 ### Visual Experience Composer アクティビティ {#visual-experience-composer-acitivties}
 
-Web SDK を使用すると、[Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) を使用して作成されたオファーを処理できます。
+Web SDKを使用すると、[Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) を使用して作成されたオファーを処理できます。
 
 >[!NOTE]
 >
 >このユースケースの実装手順は、[ フォームベースの Experience Composer アクティビティ ](#form-based-composer) の手順と非常によく似ています。 詳しくは、前の節を参照してください。
 
-自動レンダリングが有効になっている場合は、ページで実行された提案から Analytics トークンを収集できます。 ベストプラクティスは、Platform Web SDK `sendEvent` コマンドを連結し、返された提案を繰り返し処理して、Web SDK がレンダリングしようとしたものをフィルタリングすることです。
+自動レンダリングが有効になっている場合は、ページで実行された提案から Analytics トークンを収集できます。 ベストプラクティスは、Experience Platform Web SDK `sendEvent` コマンドを連結し、返された提案を繰り返し処理して、Web SDKがレンダリングしようとしたものをフィルタリングすることです。
 
 **例**
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Web SDK の A4T データのクライアントサイドログについて説明しました。 サーバー上の A4T データの処理方法について詳しくは、[Edge Networkサイドログ ](server-side.md) に関するガイドを参照してください。
+このガイドでは、Web SDKでの A4T データのクライアントサイドログについて説明しました。 Edge Networkで A4T データを処理する方法について詳しくは、[ サーバーサイドログ ](server-side.md) に関するガイドを参照してください。

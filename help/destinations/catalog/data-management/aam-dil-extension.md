@@ -1,12 +1,12 @@
 ---
-keywords: Audience ManagerDIL拡張機能；destination audience manager;dil 拡張機能
+keywords: Audience Manager DIL拡張機能；destination audience manager;dil 拡張機能
 title: Audience Manager DIL 拡張機能
-description: Audience ManagerDIL拡張機能は、Adobe Experience Platformの Data Management Platform （DMP）の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Audience Manager DIL拡張機能は、Adobe Experience Platformの Data Management Platform （DMP）の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 58%
+source-wordcount: '514'
+ht-degree: 53%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 58%
 
 ## 概要 {#overview}
 
-これは、Adobe Audience Manager データ統合ライブラリ拡張機能（クライアントサイド実装）です。メモ：この拡張機能は、Adobe Analytics データのサーバーサイド転送（SSF）で使用するためのものではありません。SSF の場合は、Adobe Analytics 拡張機能を使用します。重要：バージョン 8.0 以降、DILは [!DNL Experience Cloud] ID サービス バージョン 3.3 以降に強く依存します。 [!DNL Audience Manager] のデータ統合機能を完全に使用するには、[!DNL Experience Cloud] ID サービスとDILの両方を実装してください。
+これは、Adobe Audience Manager データ統合ライブラリ拡張機能（クライアントサイド実装）です。メモ：この拡張機能は、Adobe Analytics データのサーバーサイド転送（SSF）で使用するためのものではありません。SSF の場合は、Adobe Analytics 拡張機能を使用します。重要：バージョン 8.0 以降、DILは [!DNL Experience Cloud] ID サービス バージョン 3.3 以降に強く依存します。 すべての [!DNL Audience Manager] データ統合機能を使用するには、[!DNL Experience Cloud] ID サービスとDILの両方を実装してください。
 
-DIL[!DNL Audience Manager]、Adobe Experience Platformの Data Management Platform （DMP）拡張機能です。 拡張機能について詳しくは、タグドキュメントの [Audience Manager拡張機能ページ ](../../../tags/extensions/client/audience-manager/overview.md) を参照してください。
+DIL[!DNL Audience Manager]、Adobe Experience Platformの Data Management Platform （DMP）拡張機能です。 拡張機能について詳しくは、タグドキュメントの [Audience Manager拡張機能のページ ](../../../tags/extensions/client/audience-manager/overview.md) を参照してください。
 
-この宛先はタグ拡張機能です。 Platform での拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでの拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
 
 ![Audience Manager DIL 拡張機能](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 
 ## 前提条件 {#prerequisites}
 
-プラットフォームを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
+Experience Platformを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
 
 この拡張機能を使用するには、Adobe Experience Platform でタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてタグへのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
@@ -32,7 +32,7 @@ DIL[!DNL Audience Manager]、Adobe Experience Platformの Data Management Platfo
 
 [!DNL Audience Manager] DIL拡張機能をインストールするには：
 
-[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

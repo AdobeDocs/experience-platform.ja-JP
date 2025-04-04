@@ -4,7 +4,7 @@ title: 宛先の削除
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UI で既存の宛先を削除する手順を示します
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 32%
@@ -19,7 +19,7 @@ Adobe Experience Platform ユーザーインターフェイスでは、宛先へ
 
 宛先を削除すると、その宛先に対する既存のデータフローがすべて削除されます。 削除した宛先に対してアクティブ化されたすべてのオーディエンスは、データフローが削除される前にマッピング解除されます。
 
-[!DNL Platform] [!DNL UI] から宛先を削除する方法は 2 つあります。 以下が可能です。
+[!DNL Experience Platform] [!DNL UI] から宛先を削除する方法は 2 つあります。 実行できる操作は、次のとおりです。
 
 * [「[!UICONTROL  参照 ] タブからの宛先の削除](#delete-browse-tab)
 * [宛先の詳細ページからの宛先の削除](#delete-destination-details-page)
@@ -77,4 +77,4 @@ Adobe Experience Platform ユーザーインターフェイスでは、宛先へ
 
    >[!NOTE]
    >
-   >サーバーの負荷によっては、[!DNL Platform] が宛先を削除するまでに数分かかる場合があります。
+   >サーバーの負荷によっては、[!DNL Experience Platform] が宛先を削除するまでに数分かかる場合があります。

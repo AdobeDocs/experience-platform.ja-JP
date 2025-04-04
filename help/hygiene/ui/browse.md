@@ -2,10 +2,10 @@
 title: データ ライフサイクル作業指示の参照
 description: Adobe Experience Platform ユーザーインターフェイスで既存のデータライフサイクル作業指示を表示および管理する方法について説明します。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 80%
+source-wordcount: '843'
+ht-degree: 79%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 80%
 
 UI で最初に **[!UICONTROL データライフサイクル]** ワークスペースにアクセスすると、既存の作業指示のリストが、基本的な情報と共に表示されます。
 
-![Platform UI の [!UICONTROL  データライフサイクル ] ワークスペースを示す画像 ](../images/ui/browse/work-order-list.png)
+![Experience Platform UI の [!UICONTROL  データライフサイクル ] ワークスペースを示す画像 ](../images/ui/browse/work-order-list.png)
 
 リストには、一度に 1 つのカテゴリの作業指示のみが表示されます。**[!UICONTROL 消費者]** を選択してレコード削除タスクのリストを表示し、**[!UICONTROL データセット]** を選択して、スケジュールされたデータセット有効期限のリストを表示します。
 
@@ -97,7 +97,7 @@ UI で最初に **[!UICONTROL データライフサイクル]** ワークスペ�
 
 ## 次の手順
 
-このガイドでは、Platform UI での既存のデータライフサイクル作業指示の表示および管理方法について説明しました。 独自の作業指示の作成について詳しくは、次のドキュメントを参照してください。
+このガイドでは、Experience Platform UI での既存のデータライフサイクル作業指示の表示および管理方法について説明しました。 独自の作業指示の作成について詳しくは、次のドキュメントを参照してください。
 
 * [データセット有効期限の管理](./dataset-expiration.md)
 * [レコード削除の管理](./record-delete.md)

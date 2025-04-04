@@ -2,9 +2,9 @@
 title: SQL を使用したバッチ取り込みの調査、トラブルシューティング、検証
 description: Adobe Experience Platformのデータ取得プロセスを理解し、管理する方法を説明します。 このドキュメントには、バッチを検証し、取り込んだデータをクエリする方法が含まれています。
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ ht-degree: 0%
 
 このドキュメントで説明する概念を理解しやすくするために、次のトピックに関する知識が必要です。
 
-- **データ取り込み**：様々な方法やプロセスなど、データを Platform に取り込む方法の基本については、[ データ取り込みの概要 ](../../ingestion/home.md) を参照してください。
-- **バッチ取り込み**：バッチ取り込みの基本概念については、[ バッチ取り込み API の概要 ](../../ingestion/batch-ingestion/overview.md) を参照してください。 特に、「バッチ」とは何か、および Platform のデータ取り込みプロセス内でどのように機能するかについて説明します。
+- **データ取り込み**：様々な方法やプロセスなど、データをExperience Platformに取り込む方法の基本については、[ データ取り込みの概要 ](../../ingestion/home.md) を参照してください。
+- **バッチ取り込み**：バッチ取り込みの基本概念については、[ バッチ取り込み API の概要 ](../../ingestion/batch-ingestion/overview.md) を参照してください。 特に、「バッチ」とは何か、およびExperience Platformのデータ取得プロセス内でどのように機能するかについて説明します。
 - **データセット内のシステムメタデータ**：取り込んだデータを追跡およびクエリするためにシステムメタデータフィールドを使用する方法については、[ カタログサービスの概要 ](../../catalog/home.md) を参照してください。
-- **エクスペリエンスデータモデル（XDM）**:XDM スキーマと、それらが Platform に取り込まれたデータの構造と形式を表し検証する方法について詳しくは、[ スキーマ UI の概要 ](../../xdm/ui/overview.md) および [ のスキーマ構成の基本」 ](../../xdm/schema/composition.md) を参照してください。
+- **エクスペリエンスデータモデル（XDM）**:XDM スキーマと、それらがExperience Platformに取り込まれたデータの構造と形式を表し検証する方法について詳しくは ](../../xdm/ui/overview.md) スキーマ UI の概要 [ および [ のスキーマ構成の基本」 ](../../xdm/schema/composition.md) を参照してください。
 
 ## データセットバッチメタデータへのアクセス {#access-dataset-batch-metadata}
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ![movie_data テーブルとそのメタデータ列が表示され、ハイライト表示された DBVisualizer UI。](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-データが Platform に取り込まれると、受信データに基づいて論理パーティションが割り当てられます。 この論理パーティションは `_acp_system_metadata.sourceBatchId` で表されます。 この ID は、データバッチを処理および保存する前に、データバッチを論理的にグループ化して識別するのに役立ちます。
+データがExperience Platformに取り込まれると、受信データに基づいて論理パーティションが割り当てられます。 この論理パーティションは `_acp_system_metadata.sourceBatchId` で表されます。 この ID は、データバッチを処理および保存する前に、データバッチを論理的にグループ化して識別するのに役立ちます。
 
 データが処理され、データレイクに取り込まれると、`_ACP_BATCHID` で表される物理パーティションが割り当てられます。 この ID は、取り込まれたデータが存在するデータレイク内の実際のストレージパーティションを反映します。
 
@@ -56,7 +56,7 @@ GROUP BY _acp_system_metadata
 
 これらの結果は、システムがデータをバッチ化してデータレイクに保存する最も効率的な方法を決定するので、入力バッチの数が出力バッチの数と必ずしも一致しないことを示しています。
 
-この例では、CSV ファイルを Platform に取り込み、`drug_checkout_data` というデータセットを作成したと想定しています。
+この例では、CSV ファイルをExperience Platformに取り込み、`drug_checkout_data` というデータセットを作成したと想定しています。
 
 この `drug_checkout_data` ファイルは、35,000 件のレコードで構成される、深くネストされたセットです。 SQL 文 `SELECT * FROM drug_orders;` を使用して、JSON ベースの `drug_orders` データセット内のレコードの最初のセットをプレビューします。
 
@@ -92,19 +92,19 @@ GROUP  BY _acp_system_metadata
 
 >[!TIP]
 >
->バッチ ID を取得し、そのバッチ ID に関連付けられているクエリレコードを取得するには、まず Platform 内でバッチを作成する必要があります。 プロセスを自分でテストする場合は、CSV データを Platform に取り込むことができます。 [AI で生成されたレコメンデーションを使用して、既存の XDM スキーマに CSV ファイルをマッピングする ](../../ingestion/tutorials/map-csv/recommendations.md) 方法に関するガイドを参照してください。
+>バッチ ID を取得し、そのバッチ ID に関連付けられているクエリレコードを取得するには、まずExperience Platform内でバッチを作成する必要があります。 プロセスを自分でテストする場合は、CSV データをExperience Platformに取り込むことができます。 [AI で生成されたレコメンデーションを使用して、既存の XDM スキーマに CSV ファイルをマッピングする ](../../ingestion/tutorials/map-csv/recommendations.md) 方法に関するガイドを参照してください。
 
 バッチを取り込んだら、データを取り込んだデータセットの [!UICONTROL  データセットアクティビティ ] タブ）に移動する必要があります。
 
-Experience PlatformUI で、左側のナビゲーションで **[!UICONTROL データセット]** を選択して、[!UICONTROL  データセット ] ダッシュボードを開きます。 次に、「参照 [!UICONTROL  タブからデータセットの名前を選択して ] データセットアクティビティ [!UICONTROL  画面にアクセス ] ます。
+Experience Platform UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択して、[!UICONTROL  データセット ] ダッシュボードを開きます。 次に、「参照 [!UICONTROL  タブからデータセットの名前を選択して ] データセットアクティビティ [!UICONTROL  画面にアクセス ] ます。
 
-![ 左側のナビゲーションでデータセットがハイライト表示された Platform UI データセットのダッシュボード。](../images/use-cases/datasets-workspace.png)
+![ 左側のナビゲーションでデータセットがハイライト表示されたExperience Platform UI データセット ](../images/use-cases/datasets-workspace.png)
 
 [!UICONTROL  データセットアクティビティ ] ビューが表示されます。 このビューには、選択したデータセットの詳細が表示されます。 表形式で表示される、取り込まれたバッチが含まれます。
 
 使用可能なバッチのリストからバッチを選択し、右側の詳細パネルから [!UICONTROL  バッチ ID] をコピーします。
 
-![ 取り込んだレコードがバッチ ID でハイライト表示されているExperience Platformデータセット UI。](../images/use-cases/batch-id.png)
+![ 取り込んだレコードがバッチ ID でハイライト表示されているExperience Platform データセット UI。](../images/use-cases/batch-id.png)
 
 次に、次のクエリを使用して、そのバッチの一部としてデータセットに含まれているすべてのレコードを取得します。
 
@@ -124,8 +124,8 @@ LIMIT 1;
 
 ## 次の手順 {#next-steps}
 
-このドキュメントを読むことで、データ取り込みプロセスの一環として、取り込んだバッチでレコードを検証および検証するための基本事項を学びました。 また、データセットのバッチメタデータへのアクセス、論理パーティションと物理パーティションの理解、SQL コマンドを使用した特定のバッチのクエリに関するインサイトも得ました。 この知識は、データの整合性を確保し、Platform 上のデータストレージを最適化するのに役立ちます。
+このドキュメントを読むことで、データ取り込みプロセスの一環として、取り込んだバッチでレコードを検証および検証するための基本事項を学びました。 また、データセットのバッチメタデータへのアクセス、論理パーティションと物理パーティションの理解、SQL コマンドを使用した特定のバッチのクエリに関するインサイトも得ました。 この知識は、Experience Platformでのデータの整合性を確保し、データストレージを最適化するのに役立ちます。
 
-次に、学習した概念を適用するためにデータ取り込みを練習する必要があります。 提供されたサンプルファイルまたは独自のデータを使用して、サンプルデータセットを Platform に取り込みます。 まだ行っていない場合は、[ データをAdobe Experience Platformに取り込む ](../../ingestion/tutorials/ingest-batch-data.md) 方法に関するチュートリアルをお読みください。
+次に、学習した概念を適用するためにデータ取り込みを練習する必要があります。 提供されたサンプルファイルまたは独自のデータを使用して、サンプルデータセットをExperience Platformに取り込みます。 まだ行っていない場合は、[ データをAdobe Experience Platformに取り込む ](../../ingestion/tutorials/ingest-batch-data.md) 方法に関するチュートリアルをお読みください。
 
 または、様々なデスクトップクライアントアプリケーションを使用してクエリサービスに接続し検証する [ 方法を学習して ](../clients/overview.md) データ分析機能を強化することもできます。

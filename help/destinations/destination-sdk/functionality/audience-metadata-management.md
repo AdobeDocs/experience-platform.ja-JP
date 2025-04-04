@@ -2,10 +2,10 @@
 description: オーディエンスメタデータテンプレートを使用して、宛先のオーディエンスをプログラムで作成、更新または削除します。アドビは、マーケティング API の仕様に基づいて設定できる、拡張可能なオーディエンスメタデータテンプレートを提供します。テンプレートを定義、テスト、送信すると、アドビはこのテンプレートを使用して、宛先への API 呼び出しを構造化します。
 title: オーディエンスメタデータの管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 75%
+source-wordcount: '1309'
+ht-degree: 73%
 
 ---
 
@@ -23,7 +23,7 @@ API の設定に応じて、Experience Platform で宛先を設定する際に�
 
 ## オーディエンスメタデータ管理でサポートされるユースケース {#use-cases}
 
-Destination SDK でオーディエンスメタデータがサポートされているので、Platform ユーザーがオーディエンスをマッピングし宛先に対してアクティブ化する際に、複数あるオプションのうちの 1 つをユーザーが使用できるように Experience Platform の宛先を設定できます。宛先設定の[オーディエンスメタデータ設定](../functionality/destination-configuration/audience-metadata-configuration.md)セクションのパラメーターで、ユーザーが利用できるオプションを制御できます。
+Destination SDKでのオーディエンスメタデータのサポートを使用すると、Experience Platformの宛先を設定する際に、Experience Platform ユーザーがオーディエンスをマッピングして宛先に対してアクティブ化する際に、複数あるオプションの 1 つを指定できます。 宛先設定の[オーディエンスメタデータ設定](../functionality/destination-configuration/audience-metadata-configuration.md)セクションのパラメーターで、ユーザーが利用できるオプションを制御できます。
 
 ### ユースケース 1 - サードパーティの API を使用しており、ユーザーはマッピング ID を入力する必要がない場合
 
@@ -556,7 +556,7 @@ Experience Platform と API の間でオーディエンス ID、アクセスト�
 | `{{error.message}}` | Experience Platform UI でユーザーに表示されるエラーメッセージを返します。 |
 | `{{{segmentEnrichmentAttributes}}}` | 特定のオーディエンスのすべてのエンリッチメント属性にアクセスできます。  このマクロは、`create`、`update`、および `delete` イベントでサポートされています。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](destination-configuration/schema-configuration.md#external-audiences) に対してのみ使用できます。 エンリッチメント属性の選択の仕組みについては、[ バッチオーディエンスアクティベーションガイド ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) を参照してください。 |
 | `{{destination.name}}` | 宛先の名前を返します。 |
-| `{{destination.sandboxName}}` | 宛先が設定されているExperience Platformサンドボックスの名前を返します。 |
+| `{{destination.sandboxName}}` | 宛先が設定されているExperience Platform サンドボックスの名前を返します。 |
 | `{{destination.id}}` | 宛先設定の ID を返します。 |
 | `{{destination.imsOrgId}}` | 宛先が設定されている IMS 組織 ID を返します。 |
 | `{{destination.enrichmentAttributes}}` | 宛先にマッピングされたすべてのオーディエンスのすべてのエンリッチメント属性にアクセスできるようにします。 このマクロは、`createDestination`、`updateDestination`、および `deleteDestination` イベントでサポートされています。 エンリッチメント属性は、[ カスタムアップロードオーディエンス ](destination-configuration/schema-configuration.md#external-audiences) に対してのみ使用できます。 エンリッチメント属性の選択の仕組みについては、[ バッチオーディエンスアクティベーションガイド ](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) を参照してください。 |

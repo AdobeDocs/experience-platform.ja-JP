@@ -3,10 +3,10 @@ keywords: Awin Advertiser Conversion Tag 拡張機能；コンバージョンタ
 title: Awin Advertiser Conversion Tag 拡張機能
 description: Awin Advertiser Conversion Tag 拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 54%
+source-wordcount: '499'
+ht-degree: 52%
 
 ---
 
@@ -18,21 +18,21 @@ ht-degree: 54%
 
 Awin Advertiser Conversion Tag は、Adobe Experience Platformの広告拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html) の拡張機能のページを参照してください。
 
-この宛先はタグ拡張機能です。 Platform でのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
 
 ![UI の Awin Advertiser コンバージョン拡張](../../assets/catalog/advertising/awin-conversion-tag/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-プラットフォームを購入したすべての顧客は、この拡張機能を宛先カタログから利用できます。
+Experience Platformを購入したすべての顧客は、この拡張機能を宛先カタログから使用できます。
 
-この拡張機能を使用するには、Platform のタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせて、UI のデータ収集機能へのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
+この拡張機能を使用するには、Experience Platformのタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせて、UI のデータ収集機能へのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
 [!DNL Awin Advertiser Conversion Tag] 拡張機能をインストールします。
 
-[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

@@ -4,18 +4,18 @@ solution: Experience Platform
 title: データ取得通知
 description: 取り込みプロセスの監視を支援するために、Adobe Experience Platformでは、プロセスの各ステップで公開される一連のイベントを登録し、取り込んだデータのステータスと発生する可能性のあるエラーを通知できるようにしています。
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '651'
 ht-degree: 20%
 
 ---
 
 # データ取得通知
 
-Adobe Experience Platform でデータを取得するプロセスは、複数の手順で構成されます。[!DNL Platform] に取り込む必要があるデータファイルを特定すると、取り込みプロセスが開始され、データが正常に取り込まれるか失敗するまで、各手順が連続して実行されます。 取り込みプロセスは、[Adobe Experience Platform バッチ取り込み API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) または [!DNL Experience Platform] ユーザーインターフェイスを使用して開始できます。
+Adobe Experience Platform でデータを取得するプロセスは、複数の手順で構成されます。[!DNL Experience Platform] に取り込む必要があるデータファイルを特定すると、取り込みプロセスが開始され、データが正常に取り込まれるか失敗するまで、各手順が連続して実行されます。 取り込みプロセスは、[Adobe Experience Platform バッチ取り込み API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) または [!DNL Experience Platform] ユーザーインターフェイスを使用して開始できます。
 
-[!DNL Platform] に読み込むデータが宛先、[!DNL Data Lake] または [!DNL Real-Time Customer Profile] データストアに到達するには、複数の手順を経る必要があります。 各手順では、データの処理やデータの検証が行われ、データが次の手順に渡される前にデータが保存されます。取得されるデータの量によっては、この処理に時間がかかる場合があり、検証、セマンティクスまたは処理エラーが原因でプロセスが失敗する可能性が常にあります。失敗した場合は、データの問題を修正し、修正したデータファイルを使用して取得プロセス全体を再開する必要があります。
+[!DNL Experience Platform] に読み込むデータが宛先、[!DNL Data Lake] または [!DNL Real-Time Customer Profile] データストアに到達するには、複数の手順を経る必要があります。 各手順では、データの処理やデータの検証が行われ、データが次の手順に渡される前にデータが保存されます。取得されるデータの量によっては、この処理に時間がかかる場合があり、検証、セマンティクスまたは処理エラーが原因でプロセスが失敗する可能性が常にあります。失敗した場合は、データの問題を修正し、修正したデータファイルを使用して取得プロセス全体を再開する必要があります。
 
 取り込みプロセスの監視を支援するために、[!DNL Experience Platform] では、プロセスの各ステップで公開される一連のイベントを登録し、取り込んだデータのステータスと発生する可能性のあるエラーを通知できるようにしています。
 
@@ -71,7 +71,7 @@ Webhook を正常に登録し、新しいデータが取り込まれたら、イ
 
 ## 次の手順
 
-プロジェクトに [!DNL Platform] 通知を登録すると、[!UICONTROL  プロジェクトの概要 ] から受信したイベントを表示できます。 イベントをトレースする方法について詳しくは、[Adobe I/Oイベントのトレース ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) に関するガイドを参照してください。
+プロジェクトに [!DNL Experience Platform] 通知を登録すると、[!UICONTROL  プロジェクトの概要 ] から受信したイベントを表示できます。 イベントのトレース方法について詳しくは、[Adobe I/O Eventsのトレース ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) に関するガイドを参照してください。
 
 ## 付録
 
@@ -81,7 +81,7 @@ Webhook を正常に登録し、新しいデータが取り込まれたら、イ
 
 次の表に、購読できる使用可能なデータ取り込みステータス通知を示します。
 
-| イベントコード | プラットフォームサービス | ステータス | イベントの説明 |
+| イベントコード | Experience Platform サービス | ステータス | イベントの説明 |
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | 成功 | バッチが [!DNL Data Lake] 内のデータセットに正常に取り込まれました。 |
 | `ing_load_failure` | [!DNL Data Ingestion] | 失敗 | バッチを [!DNL Data Lake] 内のデータセットに取り込めませんでした。 |

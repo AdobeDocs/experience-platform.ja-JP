@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プロファイルエンリッチメントジョブの監視
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 4%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 4%
 
 [!UICONTROL  プロファイルエンリッチメント ] ダッシュボードを使用すると、プロファイルエンリッチメントジョブが正常に実行および完了したかどうかを把握し、エンリッチメントの有効性を測定するための基本指標を表示できます。
 
-[Platform UI](https://platform.adobe.com) で、左側のナビゲーションから **[!UICONTROL モニタリング]** を選択して、[!UICONTROL  モニタリング ] ダッシュボードにアクセスします。 表示セレクターで「**B2B フロー**」を選択して、[Real-Time CDP B2B](/help/rtcdp/b2b-overview.md) に固有のダッシュボード要素を表示します。  [!UICONTROL  モニタリング ] ダッシュボードには、最新の成功実行からの基本指標と、最大 90 日前の毎日のジョブステータスが含まれます。
+[Experience Platform UI](https://platform.adobe.com) で、左側のナビゲーションから **[!UICONTROL モニタリング]** を選択して、[!UICONTROL  モニタリング ] ダッシュボードにアクセスします。 表示セレクターで「**B2B フロー**」を選択して、[Real-Time CDP B2B](/help/rtcdp/b2b-overview.md) に固有のダッシュボード要素を表示します。  [!UICONTROL  モニタリング ] ダッシュボードには、最新の成功実行からの基本指標と、最大 90 日前の毎日のジョブステータスが含まれます。
 
 ## 関連するアカウントのプロファイルエンリッチメント {#related-accounts}
 
 [!UICONTROL  関連するアカウント ] ダッシュボードには、基本的な指標と、[ 関連するアカウント ](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) プロファイルエンリッチメントに固有の毎日のジョブのステータスが表示されます。
 
-![Experience PlatformUI のプロファイルエンリッチメントジョブのモニタリング画面に移動する方法を示す視覚的な指標。](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![Experience Platform UI のプロファイルエンリッチメントジョブ監視画面に移動する方法を示す視覚的な指標。](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
 **[!UICONTROL 指標]** カードのデータには、関連アカウントジョブが最後に正常に実行されたときの基本的な指標が含まれます。
 

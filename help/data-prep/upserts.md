@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のトピック；data prep;Da
 title: データ準備を使用した、リアルタイム顧客プロファイルへの部分行の更新の送信
 description: データ準備を使用して、リアルタイム顧客プロファイルに部分行の更新を送信する方法を説明します。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 5%
+source-wordcount: '1361'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->* DCS インレットを介したプロファイル更新のエクスペリエンスデータモデル（XDM）エンティティ更新メッセージ（JSON PATCH操作を含む）の取り込みは非推奨（廃止予定）になりました。 このガイドで説明されている手順に従ってください。
+>* DCS インレットを介したプロファイル更新のための、エクスペリエンスデータモデル（XDM）エンティティ更新メッセージ（JSON PATCH操作を含む）の取り込みは非推奨（廃止予定）になりました。 このガイドで説明されている手順に従ってください。
 >
 >* また、HTTP API ソースを使用して [ 生データを DCS インレットに取り込む ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) したり、プロファイルの更新のためにデータを XDM 準拠のメッセージに変換するために必要なデータマッピングを指定したりすることもできます。
 >
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 [!DNL Data Prep] でストリーミングアップサートを使用して、[!DNL Real-Time Customer Profile] データに部分行の更新を送信すると同時に、単一の API リクエストで新しい ID リンクを作成および確立します。
 
-アップサートをストリーミングすると、データの形式を保持しながら、取り込み時にデータを [!DNL Real-Time Customer Profile] のPATCHリクエストに変換できます。 指定した入力に基づいて、1 つの API ペイロード [!DNL Data Prep] 送信し、そのデータをPATCHと [!DNL Identity Service] の両方の CREATE リクエスト [!DNL Real-Time Customer Profile] 変換できます。
+アップサートをストリーミングすると、データの形式を維持しながら、取り込み時にデータを [!DNL Real-Time Customer Profile] のPATCH リクエストに変換できます。 指定した入力に基づいて、1 つの API ペイロード [!DNL Data Prep] 送信し、そのデータをPATCHと [!DNL Identity Service] CREATE リクエストの両方 [!DNL Real-Time Customer Profile] 変換できます。
 
 [!DNL Data Prep] は、ヘッダーパラメーターを使用して、挿入とアップサートを区別します。 アップサートを使用する行には、すべてヘッダーが必要です。 ID 記述子を使用したアップサートも、使用しないアップサートも可能です。 ID でアップサートを使用している場合は、[ID データセットの設定 ](#configure-the-identity-dataset) の節で説明されている設定手順に従う必要があります。 ID を指定せずにアップサートを使用している場合は、リクエストで ID 設定を指定する必要はありません。 詳しくは、[ID を使用しないアップサートのストリーミング ](#payload-without-identity-configuration) の節を参照してください。
 
@@ -39,7 +39,7 @@ ht-degree: 5%
 * [[!DNL Data Prep]](./home.md):[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model （XDM）との間でデータのマッピング、変換、検証をおこなうことができます。
 * [[!DNL Identity Service]](../identity-service/home.md)：デバイスやシステム間で ID を橋渡しすることで、個々の顧客とその行動をより確実に把握することができます。
 * [リアルタイム顧客プロファイル](../profile/home.md)：複数のソースから集約されたデータに基づいて、統合された顧客プロファイルをリアルタイムに提供します。
-* [ソース](../sources/home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ ソース ](../sources/home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 
 ## [!DNL Data Prep] でのストリーミングアップサートの使用 {#streaming-upserts-in-data-prep}
 

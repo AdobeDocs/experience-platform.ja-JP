@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Oracle DB;oracle DB
+keywords: Experience Platform；ホーム；人気のトピック；Oracle DB;oracle db
 solution: Experience Platform
 title: UI でのOracle DB Source接続の作成
 type: Tutorial
-description: Adobe Experience Platform UI を使用して、Oracle DB ソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用してOracle DB ソース接続を作成する方法を説明します。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 42%
@@ -14,7 +14,7 @@ ht-degree: 42%
 
 # UI での [!DNL Oracle DB] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Oracle DB] ソースコネクタを作成する手順を説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Oracle DB] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -29,18 +29,18 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で [!DNL Oracle DB] アカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Experience Platform] で [!DNL Oracle DB] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | [!DNL Oracle DB] への接続に使用する接続文字列。 [!DNL Oracle DB] の接続文字列パターンは `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}` です。 |
 | `connectionSpec.id` | 接続の作成に必要な一意の ID。 [!DNL Oracle DB] の接続仕様 ID は `d6b52d86-f0f8-475f-89d4-ce54c8527328` です。 |
 
-基本について詳しくは、[ このOracleドキュメント ](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) を参照してください。
+基本について詳しくは、[ このOracle ドキュメント ](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) を参照してください。
 
 ## [!DNL Oracle DB] アカウントを接続
 
-必要な資格情報を収集したら、次の手順に従って [!DNL Oracle DB] アカウントを [!DNL Platform] に接続するようにリンクできます。
+必要な資格情報を収集したら、次の手順に従って [!DNL Oracle DB] アカウントを [!DNL Experience Platform] に接続するようにリンクできます。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -50,7 +50,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ![カタログ](../../../../images/tutorials/create/oracle/catalog.png)
 
-**[!UICONTROL OracleDB に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Oracle DB に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 ### 新しいアカウント
 
@@ -66,4 +66,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Oracle DB] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL Oracle DB] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。

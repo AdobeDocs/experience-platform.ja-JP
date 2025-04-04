@@ -4,9 +4,9 @@ title: リアルタイム顧客プロファイル API ガイド
 description: リアルタイム顧客プロファイル API を使用すると、開発者は、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータのエクスポートまたはサンプル、不要になったプロファイルデータまたはエラーで追加されたプロファイルデータの削除など、プロファイルデータを調査および操作できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 19%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 19%
 
 ## エンティティ（[!DNL Profile] アクセス） {#entities}
 
-Adobe Experience Platformを通じて、RESTful API またはユーザーインターフェイスを使用し [!DNL Real-Time Customer Profile] データにアクセスできます。 API を使用してエンティティ（より一般的には「プロファイル」と呼ばれる）にアクセスする方法については、[ エンティティエンドポイントガイド ](entities.md) に記載されている手順に従ってください。 [!DNL Platform] UI を使用してプロファイルにアクセスするには、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
+Adobe Experience Platformを通じて、RESTful API またはユーザーインターフェイスを使用し [!DNL Real-Time Customer Profile] データにアクセスできます。 API を使用してエンティティ（より一般的には「プロファイル」と呼ばれる）にアクセスする方法については、[ エンティティエンドポイントガイド ](entities.md) に記載されている手順に従ってください。 [!DNL Experience Platform] UI を使用してプロファイルにアクセスするには、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
 
 ## 書き出しジョブ（[!DNL Profile] 書き出し） {#profile-export}
 
@@ -39,17 +39,17 @@ Adobe Experience Platformを通じて、RESTful API またはユーザーイン�
 
 ## 結合ポリシー {#merge-policies}
 
-複数のソースから得られたデータを [!DNL Experience Platform] で統合する場合、結合ポリシーは、データの優先順位付け方法と、[!DNL Platform] れらのデータを組み合わせて個々の顧客プロファイルを作成するかを決定するために使用されるルールです。 [!DNL Real-Time Customer Profile] API を使用すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。 API を使用して結合ポリシーを使用するには、[ 結合ポリシーエンドポイントガイド ](merge-policies.md) を参照してください。
+複数のソースから得られたデータを [!DNL Experience Platform] で統合する場合、結合ポリシーは、データの優先順位付け方法と、[!DNL Experience Platform] れらのデータを組み合わせて個々の顧客プロファイルを作成するかを決定するために使用されるルールです。 [!DNL Real-Time Customer Profile] API を使用すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。 API を使用して結合ポリシーを使用するには、[ 結合ポリシーエンドポイントガイド ](merge-policies.md) を参照してください。
 
-結合ポリシーとその Platform 内での役割について詳しくは、まず [ 結合ポリシーの概要 ](../merge-policies/overview.md) をお読みください。
+結合ポリシーとそのExperience Platform内での役割について詳しくは、まず [ 結合ポリシーの概要 ](../merge-policies/overview.md) をお読みください。
 
 ## プレビューサンプルのステータス（[!DNL Profile] プレビュー） {#profile-preview}
 
-データが Platform に取り込まれると、サンプルジョブが実行されて、プロファイル数やその他のリアルタイム顧客プロファイルデータ関連指標が更新されます。 このサンプルジョブの結果は、リアルタイム顧客プロファイル API の一部である `/previewsamplestatus` エンドポイントを使用して確認できます。 また、このエンドポイントを使用して、データセットと ID 名前空間の両方でプロファイル配布をリスト表示したり、複数のレポートを生成して組織のプロファイルストアの構成を可視化したりできます。  `/profilepreviewstatus` エンドポイントの使用を開始するには、[ サンプルステータスプレビューエンドポイントガイド ](preview-sample-status.md) を参照してください。
+データがExperience Platformに取り込まれると、サンプルジョブが実行されて、プロファイル数やその他のリアルタイム顧客プロファイルデータ関連指標が更新されます。 このサンプルジョブの結果は、リアルタイム顧客プロファイル API の一部である `/previewsamplestatus` エンドポイントを使用して確認できます。 また、このエンドポイントを使用して、データセットと ID 名前空間の両方でプロファイル配布をリスト表示したり、複数のレポートを生成して組織のプロファイルストアの構成を可視化したりできます。  `/profilepreviewstatus` エンドポイントの使用を開始するには、[ サンプルステータスプレビューエンドポイントガイド ](preview-sample-status.md) を参照してください。
 
 ## プロファイルシステムジョブ {#profile-system-jobs}
 
-[!DNL Platform] に取り込まれたプロファイル対応データは、[!DNL Real-Time Customer Profile] データストアだけでなく [!DNL Data Lake] にも保存されます。 不要になったデータやエラーで追加されたデータを削除するには、プロファイルストアからデータセットに関連付けられたプロファイルデータを削除する必要が生じる場合があります。 それには、API を使用して、「[!DNL delete request]」とも呼ばれる [!DNL Profile System Job] ールを作成する必要があります。このコンポーネントは、必要に応じて変更、監視または削除できます。 [!DNL Real-Time Customer Profile] API の `/system/jobs` エンドポイントを使用して削除リクエストを操作する方法については、[ プロファイルシステムジョブエンドポイントガイド ](profile-system-jobs.md) に記載されている手順に従ってください。
+[!DNL Experience Platform] に取り込まれたプロファイル対応データは、[!DNL Real-Time Customer Profile] データストアだけでなく [!DNL Data Lake] にも保存されます。 不要になったデータやエラーで追加されたデータを削除するには、プロファイルストアからデータセットに関連付けられたプロファイルデータを削除する必要が生じる場合があります。 それには、API を使用して、「[!DNL delete request]」とも呼ばれる [!DNL Profile System Job] ールを作成する必要があります。このコンポーネントは、必要に応じて変更、監視または削除できます。 [!DNL Real-Time Customer Profile] API の `/system/jobs` エンドポイントを使用して削除リクエストを操作する方法については、[ プロファイルシステムジョブエンドポイントガイド ](profile-system-jobs.md) に記載されている手順に従ってください。
 
 ## プロファイル属性の更新 {#update-profile}
 

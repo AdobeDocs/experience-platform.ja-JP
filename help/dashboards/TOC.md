@@ -5,10 +5,10 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
 role: Developer,User
-source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 64%
+source-wordcount: '143'
+ht-degree: 65%
 
 ---
 
@@ -57,10 +57,10 @@ ht-degree: 64%
 * のインサイトのユースケー {#insights-use-cases}
    * [同意分析](insights-use-cases/consent-analysis.md)
 * で使用可能なデータモデ {#data-models}
-   * [Real-time Customer Data Platform Insights データモデル B2B edition](data-models/cdp-insights-data-model-b2b.md)
-   * [Real-time Customer Data Platform Insights データモデル B2C エディション](data-models/cdp-insights-data-model-b2c.md)
+   * [Real-Time Customer Data Platform Insights データモデル B2B edition](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-Time Customer Data Platform Insights データモデル B2C エディション](data-models/cdp-insights-data-model-b2c.md)
 * アプリケーションの統合 {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [ダッシュボードデータセットのクエリ](query.md)
-* [インサイト SQL を表示](view-sql.md)
-* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
+* [insight SQL を表示](view-sql.md)
+* [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

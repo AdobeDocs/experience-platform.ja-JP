@@ -2,9 +2,9 @@
 title: Web SDK タグ拡張機能の設定
 description: タグ UI でExperience Platform Web SDK タグ拡張機能を設定する方法について説明します。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2875'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 [!DNL Web SDK] タグ拡張機能は、web プロパティからAdobe Experience Cloud Edge Networkを介してExperience Platformにデータを送信します。
 
-拡張機能を使用すると、データを Platform にストリーミングし、ID を同期し、顧客同意シグナルを処理して、コンテキストデータを自動的に収集できます。
+拡張機能を使用すると、データをExperience Platformにストリーミングし、ID を同期し、顧客の同意シグナルを処理して、コンテキストデータを自動的に収集できます。
 
 このドキュメントでは、タグ UI でタグ拡張機能を設定する方法について説明します。
 

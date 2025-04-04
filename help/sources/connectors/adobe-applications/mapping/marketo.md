@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage ソースのマッピングフィールド
 description: Marketo データセットのフィールドとそれに対応する XDM フィールドとのマッピングを次の表に示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 94%
+source-wordcount: '891'
+ht-degree: 92%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 94%
 
 ## アクティビティ {#activities}
 
-[!DNL Marketo] ソースでは、追加の標準アクティビティをサポートするようになりました。 標準のアクティビティを使用するには、[スキーマ自動生成ユーティリティ](../marketo/marketo-namespaces.md)を使用してスキーマを更新する必要があります。スキーマを更新せずに新しい `activities` データフローを作成すると、新しいターゲットフィールドがスキーマに存在しないので、マッピングテンプレートが機能しなくなるからです。スキーマの更新を選択しない場合でも、新しいデータフローを作成しエラーを解除できます。 ただし、新しいフィールドや更新されたフィールドは、Platform には取り込まれません。
+[!DNL Marketo] ソースでは、追加の標準アクティビティをサポートするようになりました。 標準のアクティビティを使用するには、[スキーマ自動生成ユーティリティ](../marketo/marketo-namespaces.md)を使用してスキーマを更新する必要があります。スキーマを更新せずに新しい `activities` データフローを作成すると、新しいターゲットフィールドがスキーマに存在しないので、マッピングテンプレートが機能しなくなるからです。スキーマの更新を選択しない場合でも、新しいデータフローを作成しエラーを解除できます。 ただし、新規フィールドや更新されたフィールドは、Experience Platformには取り込まれません。
 
 XDM クラスと XDM フィールドについて詳しくは ](../../../../xdm/classes/experienceevent.md)XDM エクスペリエンスイベントクラス [ に関するドキュメントを参照してください。
 
 >[!NOTE]
 >
->`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` ソースフィールドは、Experience PlatformUI の「**[!UICONTROL 計算フィールドを追加]** オプションを使用して追加する必要がある計算フィールドです。 詳しくは、[ 計算フィールドの追加 ](../../../../data-prep/ui/mapping.md#calculated-fields) に関するチュートリアルを参照してください。
+>`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` ソースフィールドは、Experience Platform UI の「**[!UICONTROL 計算フィールドを追加]** オプションを使用して追加する必要がある計算フィールドです。 詳しくは、[ 計算フィールドの追加 ](../../../../data-prep/ui/mapping.md#calculated-fields) に関するチュートリアルを参照してください。
 
 | ソースデータセット | XDM ターゲットフィールド | メモ |
 | -------------- | ---------------- | ----- |

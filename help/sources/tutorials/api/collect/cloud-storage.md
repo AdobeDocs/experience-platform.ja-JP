@@ -3,18 +3,18 @@ keywords: Experience Platform;ホーム;人気のトピック;クラウドスト
 solution: Experience Platform
 title: Flow Service API を使用したクラウドストレージソースのデータフローの作成
 type: Tutorial
-description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
+description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1742'
-ht-degree: 69%
+source-wordcount: '1756'
+ht-degree: 59%
 
 ---
 
 # [!DNL Flow Service] API を使用したクラウドストレージソースのデータフローの作成
 
-このチュートリアルでは、クラウドストレージソースからデータを取得し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して Platform に取り込む手順について説明します。
+このチュートリアルでは、クラウドストレージソースからデータを取得し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してExperience Platformに取り込む手順を説明します。
 
 >[!NOTE]
 >
@@ -29,15 +29,15 @@ ht-degree: 69%
    - [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 - [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして Experience Platform に取り込むことができます。
-- [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
+- [ サンドボックス ](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ## ソース接続の作成 {#source}
 
-ベースPOSTID、取り込むソースファイルのパス、ソースの対応する接続仕様 ID を指定して、[!DNL Flow Service] API の `sourceConnections` エンドポイントに接続リクエストを行うことで、ソース接続を作成できます。
+ベース接続 ID、取り込むソースファイルのパス、ソースの対応する接続仕様 ID を指定しながら [!DNL Flow Service] API の `sourceConnections` エンドポイントに対して POST リクエストを行うことで、ソース接続を作成できます。
 
 ソース接続を作成する場合は、データ形式属性の列挙値も定義する必要があります。
 
@@ -93,10 +93,10 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `baseConnectionId` | クラウドストレージソースのベース接続 ID。 |
-| `data.format` | Platform に取り込むデータの形式。 サポートされる値は、`delimited`、`JSON`、`parquet` です。 |
+| `data.format` | Experience Platformに取り込むデータの形式。 サポートされる値は、`delimited`、`JSON`、`parquet` です。 |
 | `data.properties` | （オプション）ソース接続の作成時にデータに適用できる一連のプロパティ。 |
 | `data.properties.columnDelimiter` | （オプション）フラットファイルを収集する際に指定できる単一文字の列の区切り文字。 あらゆる単一の文字の値を、列の区切り文字として使用できます。指定しない場合は、デフォルト値としてコンマ（`,`）が使用されます。 **注意**:`columnDelimiter` プロパティは、区切り文字付きファイルを取り込む場合にのみ使用できます。 |
-| `data.properties.encoding` | （オプション）データを Platform に取り込む際に使用するエンコーディングタイプを定義するプロパティ。 サポートされているエンコーディングタイプは `UTF-8` と `ISO-8859-1` です。 **メモ**:`encoding` パラメーターは、区切り形式の CSV ファイルを取り込む場合にのみ使用できます。 他のファイルタイプは、デフォルトのエンコーディング `UTF-8` で取り込まれます。 |
+| `data.properties.encoding` | （オプション）データをExperience Platformに取り込む際に使用するエンコーディングタイプを定義するプロパティ。 サポートされているエンコーディングタイプは `UTF-8` と `ISO-8859-1` です。 **メモ**:`encoding` パラメーターは、区切り形式の CSV ファイルを取り込む場合にのみ使用できます。 他のファイルタイプは、デフォルトのエンコーディング `UTF-8` で取り込まれます。 |
 | `data.properties.compressionType` | （オプション）取り込む圧縮ファイルのタイプを定義するプロパティ。 サポートされている圧縮ファイルのタイプは、`bzip2`、`gzip`、`deflate`、`zipDeflate`、`tarGzip`、`tar` です。 **メモ**:`compressionType` プロパティは、区切り文字付きまたは JSON ファイルを取り込む場合にのみ使用できます。 |
 | `params.path` | アクセスするソースファイルのパス。 このパラメーターは、個々のファイルまたはフォルダー全体を指します。  **注意**：ファイル名の代わりにアスタリスクを使用して、フォルダー全体の取り込みを指定できます。 例：`/acme/summerCampaign/*.csv` は `/acme/summerCampaign/` フォルダー全体を取り込みます。 |
 | `params.type` | 取り込むソースデータファイルのファイルタイプ。 タイプ `file` を使用して個々のファイルを取り込み、タイプ `folder` を使用してフォルダー全体を取り込みます。 |
@@ -115,7 +115,7 @@ curl -X POST \
 
 ### 正規表現を使用して、取り込む特定のファイルセットを選択します {#regex}
 
-正規表現を使用して、ソース接続の作成時にソースから Platform に特定のファイルセットを取り込むことができます。
+ソース接続を作成する際に、正規表現を使用して、ソースからExperience Platformに特定のファイルセットを取り込むことができます。
 
 **API 形式**
 
@@ -196,7 +196,7 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。
 
 [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
@@ -348,7 +348,7 @@ curl -X POST \
 
 ## データフロー仕様の取得 {#specs}
 
-データフローは、ソースからデータを収集し、それらを Platform に取り込む役割を果たします。 データフローを作成するには、まず、クラウドストレージデータの収集を実行するデータフロー仕様を取得する必要があります。
+データフローは、ソースからデータを収集し、それらをExperience Platformに取り込む役割を果たします。 データフローを作成するには、まず、クラウドストレージデータの収集を実行するデータフロー仕様を取得する必要があります。
 
 **API 形式**
 
@@ -374,7 +374,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、ソースから Platform にデータを取り込む必要があるデータフローの仕様の詳細が返されます。応答には、新しいデータフローを作成するために必要な、一意のフロー仕様 `id` が含まれます。
+リクエストが成功した場合は、ソースからExperience Platformにデータを取り込む必要があるデータフローの仕様の詳細が返されます。 応答には、新しいデータフローを作成するために必要な、一意のフロー仕様 `id` が含まれます。
 
 ```json
 {
@@ -624,8 +624,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to Platform",
-        "description": "Cloud Storage flow to Platform",
+        "name": "Cloud Storage flow to Experience Platform",
+        "description": "Cloud Storage flow to Experience Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
@@ -680,7 +680,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、ソースコネクタを作成し、スケジュールに従ってクラウドストレージからデータを収集しました。受信データは、[!DNL Real-Time Customer Profile] および [!DNL Data Science Workspace] のようなダウンストリームの Platform サービスで使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、ソースコネクタを作成し、スケジュールに従ってクラウドストレージからデータを収集しました。これで、[!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] などのダウンストリームのExperience Platform サービスで受信データを使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 - [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

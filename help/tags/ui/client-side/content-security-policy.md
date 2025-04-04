@@ -2,10 +2,10 @@
 title: コンテンツセキュリティポリシー（CSP）のサポート
 description: Web サイトを Adobe Experience Platform のタグと統合する際の、コンテンツセキュリティポリシー（CSP）制限の取り扱いについて説明します。
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 100%
+source-wordcount: '1076'
+ht-degree: 97%
 
 ---
 
@@ -82,7 +82,7 @@ CSP はデフフォルトでインラインスクリプトを許可しないた�
 
 >[!NOTE]
 >
->CSP の仕様には、ハッシュを使用する 3 つ目のオプションの詳細が含まれていますが、このアプローチは、タグなどのタグ管理システムでは使用できません。Platform のタグでのハッシュの使用制限について詳しくは、 [Subresource Integrity（SRI）ガイド](./sri.md) を参照してください。
+>CSP の仕様には、ハッシュを使用する 3 つ目のオプションの詳細が含まれていますが、このアプローチは、タグなどのタグ管理システムでは使用できません。Experience Platformでのハッシュの使用制限について詳しくは、[Subresource Integrity （SRI）ガイド ](./sri.md) を参照してください。
 
 ### nonce で許可 {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 このドキュメントを読むと、タグライブラリファイルとインラインスクリプトを受け入れるように CSP ヘッダーを設定する方法を理解できます。
 
-追加のセキュリティ対策として、Subresource Integrity（SRI）を使用して、取得したライブラリビルドを検証することもできます。ただし、この機能をタグ管理システム（タグなど）で使用する場合、大きな制限がいくつかあります。詳しくは、 [Platform における SRI の互換性](./sri.md) に関するガイドを参照してください。
+追加のセキュリティ対策として、Subresource Integrity（SRI）を使用して、取得したライブラリビルドを検証することもできます。ただし、この機能をタグ管理システム（タグなど）で使用する場合、大きな制限がいくつかあります。詳しくは、[Experience Platformにおける SRI の互換性 ](./sri.md) に関するガイドを参照してください。

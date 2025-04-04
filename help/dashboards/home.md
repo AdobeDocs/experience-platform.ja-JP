@@ -4,10 +4,10 @@ title: ダッシュボードの概要
 type: Documentation
 description: Adobe Experience Platform の複数のダッシュボードを調べ、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示します。
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 99%
+source-wordcount: '307'
+ht-degree: 93%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform は複数のダッシュボードを提供しており
 
 ## ダッシュボードの概要
 
-ダッシュボードは、組織のデータに関する既製のレポートを提供し、Platform 内のマーケターワークフローに直接組み込まれています。これらのダッシュボードは、IT サポートの追加や、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力の必要なしに利用できます。
+ダッシュボードは、組織のデータに対してすぐに使用できるレポートを提供し、Experience Platform内のマーケターワークフローに直接組み込まれます。 これらのダッシュボードは、IT サポートの追加や、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力の必要なしに利用できます。
 
 ## ダッシュボードの使い方
 

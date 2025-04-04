@@ -4,9 +4,9 @@ title: メールマーケティングの宛先の概要
 type: Tutorial
 description: メールサービスプロバイダー（ESP）を使用すると、プロモーションメールキャンペーンの送信など、メールマーケティング活動を管理できます。 Experience Platformの宛先としてサポートされている ESP について説明します。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 60%
 
 ---
@@ -25,9 +25,9 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Mailchimp の興味カテゴリ](mailchimp-interest-categories.md)
 * [Mailchimp タグ](mailchimp-tags.md)
-* [（API）OracleEloqua](oracle-eloqua-api.md)
+* [（API）Oracle Eloqua](oracle-eloqua-api.md)
 * [ （API）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
-* [（ファイル）OracleEloqua](oracle-eloqua.md)
+* [（ファイル）Oracle Eloqua](oracle-eloqua.md)
 * [（ファイル）  [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
 * [Oracle Responsys](oracle-responsys.md)
@@ -35,7 +35,7 @@ Adobe Experience Platform は、次のメールマーケティングの宛先を
 
 ## 新しいメールマーケティングの宛先への接続 {#connect-destination}
 
-キャンペーン用のメールマーケティングの宛先に対するオーディエンスを送信するには、まず Platform が宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
+キャンペーン用のメールマーケティングの宛先にオーディエンスを送信するには、まずExperience Platformが宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
 
 ## メールマーケティングの宛先に対してオーディエンスをアクティブ化する際のベストプラクティス {#best-practices}
 

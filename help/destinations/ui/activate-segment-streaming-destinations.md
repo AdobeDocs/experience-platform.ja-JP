@@ -3,9 +3,9 @@ title: ストリーミング宛先に対するオーディエンスデータの�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをストリーミングの宛先にマッピングしてアクティブ化する方法について説明します。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 19%
 
 ---
@@ -52,8 +52,8 @@ ht-degree: 19%
 接触チャネルに応じて、複数のタイプのオーディエンスから選択できます。
 
 * **[!UICONTROL セグメント化サービス]**：セグメント化サービスによってExperience Platform内で生成されたオーディエンス。 詳しくは、[ セグメント化ドキュメント ](../../segmentation/ui/overview.md) を参照してください。
-* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとして Platform にアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/audience-portal.md#import-audience) に関するドキュメントを参照してください。
-* [!DNL Audience Manager] などの他のAdobeソリューションから発生する、その他のタイプのオーディエンス。
+* **[!UICONTROL カスタムアップロード]**:Experience Platform以外で生成され、CSV ファイルとしてExperience Platformにアップロードされたオーディエンス。 外部オーディエンスについて詳しくは、[ オーディエンスの読み込み ](../../segmentation/ui/audience-portal.md#import-audience) に関するドキュメントを参照してください。
+* その他のタイプのオーディエンス。他のAdobe ソリューション（[!DNL Audience Manager] など）から派生します。
 
 ![ オーディエンスを選択ステップでハイライト表示された複数のオーディエンス。](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
@@ -125,7 +125,7 @@ ht-degree: 19%
 
      ![ マッピング ID ドロップダウンがハイライト表示されています。](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * 一部の宛先では、[!DNL Platform] のオーディエンスをターゲット宛先の対応するオーディエンスに手動でマッピングする必要があります。 これを行うには、各オーディエンスを選択し、宛先プラットフォームの対応するオーディエンス ID を **[!UICONTROL マッピング ID]** フィールドに入力します。 宛先にこのフィールドが含まれていない場合、この手順はスキップします。
+   * 一部の宛先では、[!DNL Experience Platform] のオーディエンスをターゲット宛先の対応するオーディエンスに手動でマッピングする必要があります。 これを行うには、各オーディエンスを選択し、宛先プラットフォームの対応するオーディエンス ID を **[!UICONTROL マッピング ID]** フィールドに入力します。 宛先にこのフィールドが含まれていない場合、この手順はスキップします。
 
      ![ オーディエンスの接触チャネルのドロップダウンがハイライト表示されました。](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
@@ -147,7 +147,7 @@ ht-degree: 19%
 
 ### データ使用ポリシーのチェック {#data-usage-policy-checks}
 
-**[!UICONTROL レビュー]** 手順では、Experience Platformはデータ使用ポリシーの違反がないことも確認します。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、データガバナンスに関するドキュメントの [ データ使用ポリシー違反 ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
+**[!UICONTROL レビュー]** 手順では、Experience Platformはデータ使用ポリシーの違反もチェックします。 ポリシーに違反した場合の例を次に示します。違反を解決するまで、Audience Activation ワークフローを完了することはできません。 ポリシー違反の解決方法については、データガバナンスに関するドキュメントの [ データ使用ポリシー違反 ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) を参照してください。
 
 ![ アクティベーションワークフローで示したデータポリシー違反の例 ](../assets/common/data-policy-violation.png)
 

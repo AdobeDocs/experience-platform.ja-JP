@@ -4,10 +4,10 @@ title: API を使用したデータセットのプロファイル更新の有効
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform API を使用して、リアルタイム顧客プロファイルデータを更新するための「アップサート」機能によってデータセットを有効にする方法について説明します。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 90%
+source-wordcount: '1069'
+ht-degree: 86%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 90%
 
 ## はじめに
 
-このチュートリアルでは、プロファイル対応データセットに関連する様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、これらの関連 [!DNL Platform] サービスに関するドキュメントを確認してください。
+このチュートリアルでは、プロファイル対応データセットに関連する様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、これらの関連 [!DNL Experience Platform] サービスに関するドキュメントを確認してください。
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 - [[!DNL Catalog Service]](../../catalog/home.md)：データセットを [!DNL Real-Time Customer Profile] および [!DNL Identity Service] 用に作成し、設定できる RESTful API。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 - [バッチ取り込み](../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用して、データをバッチファイルとして Experience Platform に取り込むことができます。
 
-以下の節では、Platform API を正しく呼び出すために知っておく必要がある追加情報を示します。
+次の節では、Experience Platform API を正しく呼び出すために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -36,7 +36,7 @@ ht-degree: 90%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ ht-degree: 90%
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、追加の `Content-Type` ヘッダーが必要です。必要に応じて、このヘッダーの正しい値がサンプルリクエストに表示されます。
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定する `x-sandbox-name` ヘッダーが必要です。[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Experience Platform] API へのすべてのリクエストには、操作が行われるサンドボックスの名前を指定する `x-sandbox-name` ヘッダーが必要です。[!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 ## プロファイル更新が有効なデータセットの作成
 
@@ -236,7 +236,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 >[!IMPORTANT]
 >
->プロファイルに対してデータセットを有効にする場合は、データセットが関連付けられているスキーマ&#x200B;**も**&#x200B;プロファイルに対して有効になっている必要があります。スキーマがプロファイル対応でない場合、データセットは Platform UI 内でプロファイル対応として表示され&#x200B;**ません**。
+>プロファイルに対してデータセットを有効にする場合は、データセットが関連付けられているスキーマ&#x200B;**も**&#x200B;プロファイルに対して有効になっている必要があります。スキーマがプロファイル対応でない場合、データセットはExperience Platform UI 内でプロファイル対応として表示 **されません**。
 
 **API 形式**
 

@@ -3,7 +3,7 @@ keywords: メール；メール；メール；メールの宛先；sendgrid;send
 title: SendGrid 接続
 description: SendGrid 宛先を使用すると、ファーストパーティデータを書き出し、SendGrid 内でビジネスニーズに合わせてアクティブ化できます。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 24%
@@ -40,7 +40,7 @@ SendGrid 宛先へのデータをアクティブ化する前に、[schema](https
 >
 >* メールプロファイルからメーリングリストを作成するために使用する SendGrid API では、プロファイルごとに一意のメールアドレスを指定する必要があります。 これは、*電子メール* または *代替電子メール* の値として使用されるかどうかに関係しません。 SendGrid 接続では、電子メールと代替電子メールの両方の値のマッピングをサポートしているので、使用するすべての電子メールアドレスが *データセット* の各プロファイル内で一意であることを確認してください。 そうしないと、メールプロファイルが SendGrid に送信される際にエラーが発生し、そのメールプロファイルはデータの書き出しには表示されません。
 >
->* 現在、Experience Platformでプロファイルがオーディエンスから削除された場合、SendGrid からプロファイルを削除する機能はありません。
+>* 現在、プロファイルがExperience Platformでオーディエンスから削除された場合、SendGrid から削除する機能はありません。
 
 ## サポートされている ID {#supported-identities}
 
@@ -48,7 +48,7 @@ SendGrid では、以下の表に示す ID のアクティブ化をサポート�
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| メール | メールアドレス | メモ [!DNL Adobe Experience Platform] では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。 ハッシュ化されていない属性が Experience Platform ソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時にがデータ [!DNL Platform] 自動的にハッシュ化するように設定します。<br/><br/> **SendGrid** は、ハッシュ化されたメールアドレスをサポートしていないので、変換のないプレーンテキストデータのみが宛先に送信されます。 |
+| メール | メールアドレス | メモ [!DNL Adobe Experience Platform] では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。 ハッシュ化されていない属性が Experience Platform ソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時にがデータ [!DNL Experience Platform] 自動的にハッシュ化するように設定します。<br/><br/> **SendGrid** は、ハッシュ化されたメールアドレスをサポートしていないので、変換のないプレーンテキストデータのみが宛先に送信されます。 |
 
 {style="table-layout:auto"}
 

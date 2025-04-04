@@ -1,14 +1,14 @@
 ---
-title: Flow Service API を使用して、OracleNetSuite アクティビティのソース接続とデータフローを作成する
-description: Flow Service API を使用してソース接続とデータフローを作成し、Oracle NetSuite イベントデータをExperience Platformに取り込む方法について説明します。
+title: Flow Service API を使用した、Oracle NetSuite アクティビティのソース接続とデータフローの作成
+description: ソース接続とデータフローを作成し、Flow Service API を使用してOracle NetSuite イベントデータをExperience Platformに取り込む方法について説明します。
 hide: true
 hidefromtoc: true
 badge: ベータ版
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 54%
+source-wordcount: '1974'
+ht-degree: 46%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 54%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Oracle NetSuite Activities] ています。
 
@@ -33,11 +33,11 @@ ht-degree: 54%
 
 認証資格情報の取得方法について詳しくは、[[!DNL Oracle NetSuite]  概要 ](../../../../connectors/marketing-automation/oracle-netsuite.md) を参照してください。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
-## [!DNL Flow Service] API を使用した [!DNL Oracle NetSuite Activities] の Platform への接続
+## [!DNL Flow Service] API を使用した [!DNL Oracle NetSuite Activities] のExperience Platformへの接続
 
 以下のガイドに従って、[!DNL Oracle NetSuite Activities] ソースの認証、ソース接続の作成、データフローの作成を行い、イベントデータをExperience Platformに取り込む方法を説明します。
 
@@ -45,7 +45,7 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続 ID を作成するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、その際にリクエスト本文の一部として [!DNL Oracle NetSuite Activities] 認証資格情報を指定します。
+ベース接続 ID を作成するには、`/connections` エンドポイントに対して POST リクエストを実行し、その際に [!DNL Oracle NetSuite Activities] 認証資格情報をリクエスト本文の一部として指定します。
 
 **API 形式**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
 | `description` | 含めることでベース接続に関する詳細情報を提供できるオプションの値です。 |
 | `connectionSpec.id` | ソースの接続仕様 ID。この ID は、ソースが登録および承認された後に、[!DNL Flow Service] API から取得することができます。 |
-| `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
+| `auth.specName` | Experience Platformに対するソースの認証に使用する認証タイプ。 |
 | `auth.params.clientId` | 統合レコード作成時のクライアント ID 値。 統合レコードを作成するプロセスについては、[ こちら ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) を参照してください。 値は `7fce.....b42f` に似た 64 文字の文字列です。 |
 | `auth.params.clientSecret` | 統合レコード作成時のクライアント ID 値。 統合レコードを作成するプロセスについては、[ こちら ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) を参照してください。 値は `5c98.....1b46` に似た 64 文字の文字列です。 |
 | `auth.params.accessTokenUrl` | [!DNL NetSuite] アクセストークン URL。`https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` と同様に、ACCOUNT_ID を [!DNL NetSuite] アカウント ID に置き換えます。 |
@@ -108,7 +108,7 @@ curl -X POST \
 
 ### ソースを参照 {#explore}
 
-ベース接続 ID を取得したら、ベース接続 ID をクエリパラメーターとして指定しながら `/connections` エンドポイントに対してデータリクエストを実行することで、ソースGETの内容と構造を調べることができます。
+ベース接続 ID を取得したら、ベース接続 ID をクエリパラメーターとして指定しながら `/connections` エンドポイントに対してGET リクエストを実行することで、ソースデータの内容と構造を調べることができます。
 
 **API 形式**
 
@@ -125,9 +125,9 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | `{BASE_CONNECTION_ID}` | 前の手順で生成したベース接続 ID。 |
 | `objectType=rest` | 参照するオブジェクトのタイプ。 現在、この値は常に `rest` に設定されています。 |
 | `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 このソースの場合、値は `json` になります。 |
-| `fileType=json` | Platform に取り込むファイルのファイルタイプ。 現在、サポートされているファイルタイプは `json` のみです。 |
+| `fileType=json` | Experience Platformに取り込むファイルのファイルタイプ。 現在、サポートされているファイルタイプは `json` のみです。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
-| `{SOURCE_PARAMS}` | Platform に取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、文字列全体を base64 にエンコードする必要があります。 <br>[!DNL Oracle NetSuite Activities] の値が空です。</li></ul> |
+| `{SOURCE_PARAMS}` | Experience Platformに取り込むソースファイルのパラメーターを定義します。 `{SOURCE_PARAMS}` で受け入れ可能な形式タイプを取得するには、文字列全体を base64 にエンコードする必要があります。 <br>[!DNL Oracle NetSuite Activities] の値が空です。</li></ul> |
 
 ```shell
 curl -X GET \
@@ -331,7 +331,7 @@ curl -X GET \
 
 ### ソース接続の作成 {#source-connection}
 
-[!DNL Flow Service] API の `/sourceConnections` エンドポイントに対して接続リクエストを実行することで、ソースPOSTを作成できます。 ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
+[!DNL Flow Service] API の `/sourceConnections` エンドポイントに対して POST リクエストを実行することで、ソース接続を作成できます。 ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
 **API 形式**
 
@@ -386,7 +386,7 @@ curl -X POST \
 
 ### ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。
 
 [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
@@ -463,7 +463,7 @@ curl -X POST \
 
 ### マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これを実現するには、リクエストペイロード内で定義されたデータマッピングを使用して、[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) に対してPOSTリクエストを実行します。
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。これを実現するには、リクエストペイロード内で定義されたデータマッピングを使用して、[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) に対して POST リクエストを実行します。
 
 **API 形式**
 
@@ -550,7 +550,7 @@ curl -X POST \
 
 ### フローの作成 {#flow}
 
-[!DNL Oracle NetSuite Activities] から Platform にデータを取り込むための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
+[!DNL Oracle NetSuite Activities] からExperience Platformにデータを取り込むための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 
 * [ソース接続 ID](#source-connection)
 * [ターゲット接続 ID](#target-connection)
@@ -610,7 +610,7 @@ curl -X POST \
 | `flowSpec.version` | フロー仕様 ID の対応するバージョン。この値のデフォルトは `1.0` です。 |
 | `sourceConnectionIds` | 以前の手順で生成された[ソース接続 ID](#source-connection)。 |
 | `targetConnectionIds` | 以前の手順で生成された[ターゲット接続 ID](#target-connection)。 |
-| `transformations` | このプロパティには、データに適用する必要がある様々な変換が含まれています。このプロパティは、XDM に準拠していないデータを Platform に取り込む場合に必要です。 |
+| `transformations` | このプロパティには、データに適用する必要がある様々な変換が含まれています。このプロパティは、XDM に準拠していないデータをExperience Platformに取り込む場合に必要です。 |
 | `transformations.name` | 変換に割り当てられた名前。 |
 | `transformations.params.mappingId` | 以前の手順で生成された[マッピング ID](#mapping)。 |
 | `transformations.params.mappingVersion` | マッピング ID の対応するバージョン。この値のデフォルトは `0` です。 |
@@ -639,16 +639,16 @@ curl -X POST \
 
 ### データフローの更新
 
-データフローの ID を指定しながら API の `/flows` エンドポイントにPATCHリクエストを実行することで、名前や説明、実行スケジュールや関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新できます。 データフローをリクエストする場合は、PATCHの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
+データフローの ID を指定しながら、API の `/flows` エンドポイントに対してPATCH リクエストを実行することで、名前や説明、実行スケジュールおよび関連するマッピングセットなど、データフローの詳細 [!DNL Flow Service] 更新します。 PATCH リクエストを行う場合は、データフローの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースデータフローの更新 ](../../update-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを更新
 
-ベースPATCHID をクエリパラメーターとして指定して [!DNL Flow Service] API に接続リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCHリクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
+ベース接続 ID をクエリパラメーターとして指定して [!DNL Flow Service] API に対してPATCH リクエストを実行することで、ソースアカウントの名前、説明、資格情報を更新します。 PATCH リクエストを行う場合は、ソースアカウントの一意の `etag` を `If-Match` ヘッダーで指定する必要があります。 完全な API の例については、[API を使用したソースアカウントの更新 ](../../update.md) に関するガイドを参照してください。
 
 ### データフローの削除
 
-クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETEリクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
+クエリパラメーターの一部として削除するデータフローの ID を指定したうえで [!DNL Flow Service] API に対してDELETE リクエストを実行することで、データフローを削除します。 完全な API の例については、[API を使用したデータフローの削除 ](../../delete-dataflows.md) に関するガイドを参照してください。
 
 ### アカウントを削除
 
-削除するアカウントのベースDELETEID を指定したうえで、[!DNL Flow Service] API に接続リクエストを実行してアカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。
+[!DNL Flow Service] API にDELETE リクエストを実行し、その際に削除するアカウントのベース接続 ID を指定することで、アカウントを削除します。 完全な API の例については、[API を使用したソースアカウントの削除 ](../../delete.md) に関するガイドを参照してください。

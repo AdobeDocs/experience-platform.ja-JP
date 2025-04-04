@@ -2,10 +2,10 @@
 description: Adobe Experience Platform の宛先サービスは、宛先機能を構築するいくつかのコンポーネント用に設定エンドポイントを使用します。これらのコンポーネントをどのように組み合わせれば、Experience Platform が、宛先パートナーに接続したり、カスタムメッセージを送信したり、デジタルエコシステム全体にわたってプロファイルデータをアクティブ化したりできるかを説明します。
 title: Destination SDK の設定オプション
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 97%
+source-wordcount: '829'
+ht-degree: 92%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform の宛先サービスは、宛先機能を構築する
 
 宛先サーバー設定は、サーバー仕様に関する情報と宛先にペイロードを配信するためにアドビが使用するテンプレートを結びつけます。
 
-例えば、ここでは、Experience Platform が接続する必要のあるお客様側の API エンドポイントや、Platform が行う API 呼び出しのヘッダーおよび形式を指定します。
+例えば、ここでは、Experience Platformが接続する必要のあるお客様側の API エンドポイントや、Experience Platformが行う API 呼び出しのヘッダーおよびフォーマットを指定します。
 
 ファイルベースの宛先の場合、この設定には、宛先でサポートされるファイル形式および圧縮形式も含まれます。[宛先サーバーエンドポイント](../authoring-api/destination-server/create-destination-server.md)を介して、以下に記載されている機能を設定できます。
 
@@ -43,7 +43,7 @@ Adobe Experience Platform の宛先サービスは、宛先機能を構築する
 各宛先設定コンポーネントについて詳しくは、以下のドキュメントを参照してください。[宛先エンドポイント](../authoring-api/destination-configuration/create-destination-configuration.md)を介して、以下に記載されている機能を設定できます。
 
 * [顧客認証設定](destination-configuration/customer-authentication.md)：宛先に接続するために Experience Platform が使用する必要がある認証メカニズムを選択します。この設定は、Experience Platform ユーザーインターフェイスの[新しい宛先を設定](../../ui/connect-destination.md)ページを生成します。このページでは、ユーザーが持っている宛先のアカウントに Experience Platform を接続します。
-* [OAuth2 認証 ](destination-configuration/oauth2-authorization.md)：宛先でサポートされているすべての [!DNL OAuth2] 認証フローについて説明し、Destination SDK用に認証を設定する手順 [!DNL OAuth2] 示します。
+* [OAuth2 認証 ](destination-configuration/oauth2-authorization.md):Destination SDKでサポートされているすべての [!DNL OAuth2] 認証フローについて説明し、宛先用に認証を設定する手順 [!DNL OAuth2] 示します。
 * [顧客データフィールド](destination-configuration/customer-data-fields.md)：Experience Platform UI で入力フィールドを作成する方法を説明します。これにより、ユーザーは、宛先への接続およびデータの書き出し方法に関連する様々な情報を指定できます。
 * [UI 属性](destination-configuration/ui-attributes.md)：Destination SDK で作成された宛先に対する UI 属性（ドキュメントリンク、宛先カードカテゴリ、宛先接続タイプおよび頻度など）の設定方法を説明します。
 * [スキーマ設定](destination-configuration/schema-configuration.md)：ユーザーがプロファイル属性と ID をマッピングする、宛先のターゲットスキーマの定義方法を説明します。

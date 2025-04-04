@@ -1,17 +1,17 @@
 ---
-title: Experience Platformユーザーインターフェイスを使用したSalesforce アカウントの接続
+title: Salesforce ユーザーインターフェイスを使用したExperience Platform アカウントの接続
 description: ユーザーインターフェイスを使用してSalesforce アカウントを接続し、CRM データをExperience Platformに取り込む方法について説明します。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 19%
+source-wordcount: '936'
+ht-degree: 17%
 
 ---
 
-# UI を使用して [!DNL Salesforce] アカウントをExperience Platformに接続する
+# UI を使用した [!DNL Salesforce] アカウントのExperience Platformへの接続
 
-このチュートリアルでは、Experience Platformユーザーインターフェイスを使用して [!DNL Salesforce] アカウントを接続し、CRM データをAdobe Experience Platformに取り込む手順について説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して [!DNL Salesforce] アカウントを連携し、CRM データをAdobe Experience Platformに取り込む手順について説明します。
 
 ## はじめに
 
@@ -40,7 +40,7 @@ ht-degree: 19%
 | ユーザー名 | [!DNL Salesforce] ユーザーアカウントのユーザー名。 |
 | パスワード | [!DNL Salesforce] ユーザーアカウントのパスワード。 |
 | セキュリティトークン | [!DNL Salesforce] ユーザーアカウントのセキュリティ トークン。 |
-| API バージョン | （オプション）使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
+| API バージョン | （オプション）使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
 
 認証について詳しくは、[ この  [!DNL Salesforce]  認証ガイド ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm) を参照してください。
 
@@ -53,7 +53,7 @@ OAuth2 クライアント資格情報を使用して [!DNL Salesforce] アカウ
 | 環境 URL | [!DNL Salesforce] ソースインスタンスの URL。 環境 URL の形式は `https://[domain].my.salesforce.com` です。 |
 | クライアント ID | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
-| API バージョン | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
+| API バージョン | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
 
 [!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5) を参照してください。
 
@@ -63,7 +63,7 @@ OAuth2 クライアント資格情報を使用して [!DNL Salesforce] アカウ
 
 ## [!DNL Salesforce] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *[!UICONTROL CRM]* カテゴリの下の「**[!DNL Salesforce]**」を選択し、「**[!UICONTROL データを追加]**」を選択します。
 
@@ -71,7 +71,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-![Experience PlatformUI のソースカタログで、Salesforce ソースカードが選択されています。](../../../../images/tutorials/create/salesforce/catalog.png)
+![Experience Platform UI のソースカタログで、Salesforce ソースカードが選択されています。](../../../../images/tutorials/create/salesforce/catalog.png)
 
 **[!UICONTROL Salesforceへの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -127,4 +127,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Salesforce] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/crm.md) を行いましょう。
+このチュートリアルでは、[!DNL Salesforce] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/crm.md) を行いましょう。

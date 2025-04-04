@@ -5,7 +5,7 @@ title: Data Science Workspace UI へのパッケージ化されたレシピの�
 type: Tutorial
 description: このチュートリアルでは、提供された「小売売上」の例を使用してパッケージ化されたレシピを設定およびインポートする方法に関するインサイトを提供します。このチュートリアルの最後までに、Adobe Experience Platform Data Science Workspace　でモデルの作成、トレーニング、評価をおこなう準備が整います。
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 32%
@@ -128,7 +128,7 @@ ht-degree: 32%
 
 ### Docker ベースのレシピの読み込み – [!DNL Python] {#python}
 
-まず、[!DNL Platform] UI の左上にある **[!UICONTROL ワークフロー]** に移動して選択します。 次に、「**レシピを読み込み**」を選択し、「**[!UICONTROL ローンチ]**」を選択します。
+まず、[!DNL Experience Platform] UI の左上にある **[!UICONTROL ワークフロー]** に移動して選択します。 次に、「**レシピを読み込み**」を選択し、「**[!UICONTROL ローンチ]**」を選択します。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -162,7 +162,7 @@ ht-degree: 32%
 
 ### Docker ベースのレシピを読み込み – R {#r}
 
-まず、[!DNL Platform] UI の左上にある **[!UICONTROL ワークフロー]** に移動して選択します。 次に、「**レシピを読み込み**」を選択し、「**[!UICONTROL ローンチ]**」を選択します。
+まず、[!DNL Experience Platform] UI の左上にある **[!UICONTROL ワークフロー]** に移動して選択します。 次に、「**レシピを読み込み**」を選択し、「**[!UICONTROL ローンチ]**」を選択します。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -196,7 +196,7 @@ ht-degree: 32%
 
 ### Docker ベースのレシピを読み込む – PySpark {#pyspark}
 
-まず、[!DNL Platform] UI の左上にある **[!UICONTROL ワークフロー]** に移動して選択します。 次に、「**レシピを読み込み**」を選択し、「**[!UICONTROL ローンチ]**」を選択します。
+まず、[!DNL Experience Platform] UI の左上にある **[!UICONTROL ワークフロー]** に移動して選択します。 次に、「**レシピを読み込み**」を選択し、「**[!UICONTROL ローンチ]**」を選択します。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -232,7 +232,7 @@ ht-degree: 32%
 
 ### Docker ベースのレシピの読み込み – Scala {#scala}
 
-まず、[!DNL Platform] UI の左上にある **[!UICONTROL ワークフロー]** に移動して選択します。 次に、「**レシピを読み込み**」を選択し、「**[!UICONTROL ローンチ]**」を選択します。
+まず、[!DNL Experience Platform] UI の左上にある **[!UICONTROL ワークフロー]** に移動して選択します。 次に、「**レシピを読み込み**」を選択し、「**[!UICONTROL ローンチ]**」を選択します。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -268,7 +268,7 @@ ht-degree: 32%
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、レシピの設定と [!DNL Data Science Workspace] への読み込みに関するインサイトを提供しました。 新しく作成したレシピを使用して、モデルの作成、トレーニング、評価をおこなうことができるようになりました。
+このチュートリアルでは、レシピの [!DNL Data Science Workspace] への設定と読み込みに関するinsightを説明しました。 新しく作成したレシピを使用して、モデルの作成、トレーニング、評価をおこなうことができるようになりました。
 
 - [UI でのモデルのトレーニングと評価](./train-evaluate-model-ui.md)
 - [API を使用したモデルのトレーニングと評価](./train-evaluate-model-api.md)

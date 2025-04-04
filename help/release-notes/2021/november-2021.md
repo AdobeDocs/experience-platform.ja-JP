@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2021年11月
 description: Adobe Experience Platform の 2021年11月 のリリースノート。
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 86%
+source-wordcount: '781'
+ht-degree: 81%
 
 ---
 
@@ -41,13 +41,13 @@ Real-Time CDP B2B Edition とそれに対応する B2C Edition を区別する�
 
 ### B2B と B2P の新しいエディション {#editions}
 
-B2B のデータと機能をReal-Time CDPと Platform アクティベーションの両製品に提供する B2B と B2P の新しいエディションを購入できます。
+B2B のデータと機能をReal-Time CDPとExperience Platform アクティベーションの両製品に提供する B2B と B2P の新しいエディションを購入できます。
 
-Real-Time CDP B2B エディションについて詳しくは、[ 概要 ](../../rtcdp/overview.md) を参照してください。
+Real-Time CDP B2B editionについて詳しくは、[ 概要 ](../../rtcdp/overview.md) を参照してください。
 
 ### 新しい Marketo データソースおよび宛先コネクタ {#marketo}
 
-新しい Marketo データソースおよび宛先コネクタは、Marketo データを Platform にストリーミングし、Platform オーディエンスを Marketo に戻します。すべての Platform ユーザーが利用できます。
+新しいMarketo データソースおよび宛先コネクタは、Marketo データをExperience Platformにストリーミングし、Experience Platform オーディエンスをMarketoに戻します。 すべてのExperience Platform ユーザーが利用できます。
 
 | 機能 | 説明 |
 |----------|-------------|
@@ -56,13 +56,13 @@ Real-Time CDP B2B エディションについて詳しくは、[ 概要 ](../../
 
 ### 標準 B2B XDM {#XDM}
 
-標準 B2B XDM のクラス、フィールドグループおよびデータタイプは、すべての Platform ユーザーが使用できます。
+標準 B2B XDM のクラス、フィールドグループおよびデータタイプは、すべてのExperience Platform ユーザーが使用できます。
 
 | 機能 | 説明 |
 |-----------|--------------|
-| 標準 B2B XDM クラス | Real-time Customer Data Platform B2B Edition には、アカウント、オポチュニティ、キャンペーンなどといった、基本的な B2B データエンティティに関する詳細をキャプチャする複数の標準 XDM が用意されています。 |
+| 標準 B2B XDM クラス | Real-Time Customer Data Platform B2B editionには、アカウント、オポチュニティ、キャンペーンなどといった、B2B の基本的なデータエンティティに関する詳細をキャプチャする複数の標準 XDM が用意されています。 |
 
-B2B データエンティティのキャプチャについて詳しくは、[Real-time Customer Data Platform B2B Edition のスキーマ ](../../rtcdp/schemas/b2b.md) ドキュメントを参照してください。
+B2B データエンティティのキャプチャについて詳しくは、[Real-Time Customer Data Platform B2B editionのスキーマ ](../../rtcdp/schemas/b2b.md) ドキュメントを参照してください。
 
 ### （ベータ版）アドホックアクティベーション API を介して、バッチ配信先に対するオーディエンスセグメントをアクティブ化します {#ad-hoc-activation}
 

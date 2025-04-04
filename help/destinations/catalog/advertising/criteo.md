@@ -3,9 +3,9 @@ keywords: 広告；criteo;
 title: Criteo 接続
 description: Criteo は、信頼性の高い効果的な広告を強化し、オープンインターネットを通じてすべての消費者により豊かなエクスペリエンスを提供します。 世界最大のコマースデータセットとクラス最高の AI により、Criteo はショッピングジャーニー全体の各タッチポイントが適切な広告で適切なタイミングで顧客に届くようにパーソナライズされるようにします。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1017'
 ht-degree: 24%
 
 ---
@@ -39,7 +39,7 @@ Criteo では、以下の表に示す ID のアクティブ化をサポートし
 
 | ターゲット ID | 説明 | 注意点 |
 | --- | --- | --- |
-| `email_sha256` | SHA-256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platformでは、プレーンテキストと SHA-256 でハッシュ化されたメールアドレスの両方がサポートされています。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「[!UICONTROL  変換を適用 ]」オプションをオンにして、アクティブ化時に Platform がデータを自動的にハッシュ化するように設定します。 |
+| `email_sha256` | SHA-256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platformでは、プレーンテキストと SHA-256 でハッシュ化されたメールアドレスの両方がサポートされています。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「[!UICONTROL  変換を適用 ]」オプションをオンにして、アクティブ化時にExperience Platformがデータを自動的にハッシュ化するように設定します。 |
 | `gum_id` | Criteo [!DNL GUM] cookie 識別子 | クライアント [!DNL GUM IDs] ユーザー識別システムと Criteo のユーザー識別（[!DNL UID]）の間の通信を維持することを可能にします。 識別子タイプが `gum_id` の場合、追加のパラメーター [!DNL GUM Caller ID] も含める必要があります。 適切な [!DNL GUM Caller ID] については、Criteo アカウントチームにお問い合わせいただくか、必要に応じてこの [!DNL GUM ID] 同期に関する詳細情報をご確認ください。 |
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}

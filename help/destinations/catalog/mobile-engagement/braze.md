@@ -4,7 +4,7 @@ title: Braze 接続
 description: Braze は、顧客と好きなブランドの間で関連性の高い思い出に残るエクスペリエンスを強化する包括的なカスタマーエンゲージメントプラットフォームです。
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 31%
@@ -51,7 +51,7 @@ ht-degree: 31%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -108,7 +108,7 @@ ht-degree: 31%
 
 オーディエンスデータを [!DNL Adobe Experience Platform] から [!DNL Braze] の宛先に正しく送信するには、フィールドマッピングの手順を実行する必要があります。
 
-マッピングは、[!DNL Platform] アカウントの [!DNL Experience Data Model] （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
+マッピングは、[!DNL Experience Platform] アカウントの [!DNL Experience Data Model] （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
 
 XDM フィールドを [!DNL Braze] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
@@ -125,7 +125,7 @@ XDM フィールドを [!DNL Braze] 宛先フィールドに正しくマッピ�
 
 ![Braze 宛先マッピングSource属性 ](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL ID 名前空間を選択 ]：このオプションを使用して、[!DNL Platform] ID 名前空間を [!DNL Braze] 名前空間にマッピングします。
+* [!UICONTROL ID 名前空間を選択 ]：このオプションを使用して、[!DNL Experience Platform] ID 名前空間を [!DNL Braze] 名前空間にマッピングします。
 
 ![Braze 宛先マッピング Source名前空間 ](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -136,7 +136,7 @@ XDM フィールドを [!DNL Braze] 宛先フィールドに正しくマッピ�
 ![Braze 宛先ターゲットマッピング ](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 [!UICONTROL  ターゲットフィールドを選択 ] ウィンドウでは、次の 2 つのカテゴリのターゲットフィールドから選択できます。
-* [!UICONTROL ID 名前空間を選択 ]：このオプションを使用して、ID 名前空間 [!DNL Platform]ID 名前空間にマッピン [!DNL Braze] します。
+* [!UICONTROL ID 名前空間を選択 ]：このオプションを使用して、ID 名前空間 [!DNL Experience Platform]ID 名前空間にマッピン [!DNL Braze] します。
 * [!UICONTROL  カスタム属性を選択 ]：このオプションを使用して、XDM 属性を [!DNL Braze] アカウントで定義したカスタム [!DNL Braze] 属性にマッピングします。 <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Braze] に変更することもできます。 例えば、`lastName` XDM 属性を [!DNL Braze] のカスタム `Last_Name` 属性にマッピングすると、`Last_Name` 属性が存在しない場合は [!DNL Braze] に作成し、`lastName` XDM 属性をマッピングします。
 
 ![ 宛先ターゲットマッピングフィールドのブレーズ化 ](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)

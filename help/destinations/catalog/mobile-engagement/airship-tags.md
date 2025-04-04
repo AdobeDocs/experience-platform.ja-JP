@@ -3,9 +3,9 @@ keywords: 飛行船タグ；飛行船の宛先
 title: Airship Tags 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンスタグとして Airship にシームレスに渡します。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '972'
 ht-degree: 32%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform オーディエンスを [!DNL Airship] に送信す�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -60,13 +60,13 @@ Adobe Experience Platform オーディエンスを [!DNL Airship] に送信す�
 
 ## タググループ
 
-AdobeExperience Platform のオーディエンスの概念は、Airship の [Tags](https://docs.airship.com/guides/audience/tags/) に似ていますが、実装にわずかな違いがあります。 このExperience Platformは、ユーザーの [ 統合セグメントのメンバーシップ ](../../../xdm/field-groups/profile/segmentation.md) のステータスを、[!DNL Airship] タグの有無にマップします。 例えば、`xdm:status` が `realized` に変更される Platform オーディエンスの場合、タグは、このプロファイルのマッピング先の [!DNL Airship] チャネルまたは名前付きユーザーに追加されます。 `xdm:status` が `exited` に変わると、タグは削除されます。
+Adobe Experience Platform のオーディエンスの概念は、Airship の [Tags](https://docs.airship.com/guides/audience/tags/) に似ていますが、実装にわずかな違いがあります。 この統合は、ユーザーの [Experience Platform セグメントのメンバーシップ ](../../../xdm/field-groups/profile/segmentation.md) のステータスを、[!DNL Airship] タグの有無にマップします。 例えば、`xdm:status` が `realized` に変わるExperience Platform オーディエンスの場合、タグは [!DNL Airship] チャネルまたはこのプロファイルのマッピング先である名前付きユーザーに追加されます。 `xdm:status` が `exited` に変わると、タグは削除されます。
 
 この統合を有効にするには、という名前の `adobe-segments` に *タググループ*[!DNL Airship] 作成します。
 
 >[!IMPORTANT]
 >
->新しいタググループを作成する場合 **オンにしない**、「[!DNL Allow these tags to be set only from your server]」というラジオボタンを使用します。 この操作を行うと、Adobeタグの統合が失敗します。
+>新しいタググループを作成する場合 **オンにしない**、「[!DNL Allow these tags to be set only from your server]」というラジオボタンを使用します。 この操作を行うと、Adobe タグの統合が失敗します。
 
 タググループの作成手順については、[ タググループの管理 ](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) を参照してください。
 
@@ -76,7 +76,7 @@ AdobeExperience Platform のオーディエンスの概念は、Airship の [Tag
 
 **[!UICONTROL トークンを作成]** をクリックします。
 
-トークンのわかりやすい名前（例：「Adobeタグの宛先」）を指定し、ロールで「すべてのアクセス」を選択します。
+トークンのわかりやすい名前（例：「Adobe Tags Destination」）を指定し、ロールに「All Access」を選択します。
 
 **[!UICONTROL トークンを作成]** をクリックし、詳細を機密として保存します。
 
@@ -92,7 +92,7 @@ AdobeExperience Platform のオーディエンスの概念は、Airship の [Tag
 
 ユーザーがAdobe Experience Platform内の特定のオーディエンスに含まれる、または特定のオーディエンスから除外される場合に、1 対 1 のメッセージをリアルタイムでトリガーにします。
 
-例えば、小売業者が、Platform でジーンズのブランド固有のオーディエンスを設定するとします。 この小売業者は、ユーザーが特定のブランドをジーンズに好むように設定するとすぐに、モバイルメッセージをトリガーに設定できるようになりました。
+例えば、retailerがExperience Platformでジーンズのブランド固有のオーディエンスを設定したとします。 このretailerでは、特定のブランドをジーンズが好むように設定するとすぐに、モバイルメッセージをトリガーできるようになりました。
 
 ## 宛先への接続 {#connect}
 

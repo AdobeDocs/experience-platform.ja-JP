@@ -2,10 +2,10 @@
 title: データ要素
 description: データ要素は、データディクショナリ（またはデータマップ）の構築ブロックです。データ要素を使用して、マーケティングおよび広告テクノロジー全体でデータを収集、整理、配信します。
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 91%
+source-wordcount: '1615'
+ht-degree: 90%
 
 ---
 
@@ -238,7 +238,7 @@ CSS セレクターチェーン：
 
 ### 訪問者行動
 
-ページ情報と同様に、このデータ要素は共通の動作タイプを使用して、ルールや他の Platform ソリューション内のロジックを強化します。
+ページ情報と同様に、このデータ要素は、ルールまたはその他のExperience Platform ソリューションにおいて、共通の動作タイプを使用してロジックを強化します。
 
 次のいずれかの訪問者行動属性を選択します。
 

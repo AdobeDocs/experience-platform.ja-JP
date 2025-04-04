@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；ストリーミング取得；取得；複数のメッセージのストリーミング；複数のメッセージ；
+keywords: Experience Platform；ホーム；人気のトピック；ストリーミング取得；取得；複数メッセージのストリーミング；複数メッセージ；
 solution: Experience Platform
 title: 1 回の HTTP リクエストでの複数メッセージの送信
 type: Tutorial
 description: このドキュメントでは、ストリーミング取得を使用して、1 回の HTTP リクエスト内で複数のメッセージをAdobe Experience Platformに送信する方法について説明します。
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 3ad5c06db07b360df255d3afb1c177cc5de613bb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1487'
-ht-degree: 61%
+source-wordcount: '1489'
+ht-degree: 58%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 61%
 - [ データ取り込みの概要 ](../home.md)：取り込み方法や Data Connectors など、[!DNL Experience Platform Data Ingestion] の中心概念について説明します。
 - [ ストリーミング取得の概要 ](../streaming-ingestion/overview.md)：ストリーミング取得のワークフローと構成要素（ストリーミング接続、データセット、[!DNL XDM Individual Profile]、[!DNL XDM ExperienceEvent] など）。
 
-また、このチュートリアルでは、API を正しく呼び出すために、[Adobe Experience Platformへの認証 ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要 [!DNL Platform] あります。 認証に関するチュートリアルを完了すると、このチュートリアルで必要な認証ヘッダーの値が提供されます。このヘッダーは、サンプル呼び出しで次のように示されます。
+また、このチュートリアルでは、API を正しく呼び出すために、[Adobe Experience Platformへの認証 ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) チュートリアルを完了している必要 [!DNL Experience Platform] あります。 認証に関するチュートリアルを完了すると、このチュートリアルで必要な認証ヘッダーの値が提供されます。このヘッダーは、サンプル呼び出しで次のように示されます。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -37,13 +37,13 @@ ht-degree: 61%
 
 [!DNL Experience Platform] へのデータのストリーミングを開始するには、まずストリーミング接続を作成する必要があります。 ストリーミング接続の作成方法については、[ストリーミング接続の作成](./create-streaming-connection.md)に関するガイドを参照してください。
 
-ストリーミング接続を登録すると、ユーザーにはデータプロデューサーとして、データを Platform にストリーミングするために使用できる一意の URL が付与されます。
+ストリーミング接続を登録すると、データプロデューサーは一意の URL を使用してExperience Platformにデータをストリーミングできます。
 
 ## データセットへのストリーミング
 
 次の例は、単一の HTTP リクエスト内で複数のメッセージを特定のデータセットに送信する方法を示しています。メッセージヘッダーにデータセット ID を挿入して、そのメッセージが直接取得されるようにします。
 
-[!DNL Platform] UI または API のリスト操作を使用して、既存のデータセットの ID を取得できます。 データセット ID は [Experience Platformで見つかります ](https://platform.adobe.com) 「**[!UICONTROL データセット]**」タブに移動して、ID を取得するデータセットをクリックし、「**[!UICONTROL 情報]**」タブのデータセット ID フィールドから文字列をコピーします。 API を使用してデータセットを取得する方法については、「[カタログサービスの概要](../../catalog/home.md)」を参照してください。
+[!DNL Experience Platform] UI または API のリスト操作を使用して、既存のデータセットの ID を取得できます。 データセット ID は [Experience Platform](https://platform.adobe.com) で確認できます。**[!UICONTROL データセット]** タブに移動して、ID を取得するデータセットをクリックし、「**[!UICONTROL 情報]**」タブのデータセット ID フィールドから文字列をコピーします。 API を使用してデータセットを取得する方法については、「[カタログサービスの概要](../../catalog/home.md)」を参照してください。
 
 既存のデータセットを使用する代わりに、新しいデータセットを作成できます。API を使用してデータセットを作成する方法の詳細については、[API を使用したデータセットの作成](../../catalog/api/create-dataset.md)のチュートリアルを参照してください。
 
@@ -220,8 +220,8 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 リクエストペイロードは、XDM スキーマのイベントを表す JSON オブジェクトの配列です。メッセージの検証を正しくおこなうには、次の条件が満たされている必要があります。
 - メッセージヘッダーの `imsOrgId` フィールドは、インレット定義と一致する必要があります。リクエストペイロードに `imsOrgId` フィールドが含まれていない場合、[!DNL Data Collection Core Service] （DCCS）はフィールドを自動的に追加します。
-- メッセージのヘッダーは、[!DNL Platform] UI で作成された既存の XDM スキーマを参照する必要があります。
-- `datasetId` フィールドは、[!DNL Platform] 内の既存のデータセットを参照する必要があり、そのスキーマは、リクエスト本文に含まれる各メッセージ内の `header` オブジェクトで提供されるスキーマと一致する必要があります。
+- メッセージのヘッダーは、[!DNL Experience Platform] UI で作成された既存の XDM スキーマを参照する必要があります。
+- `datasetId` フィールドは、[!DNL Experience Platform] 内の既存のデータセットを参照する必要があり、そのスキーマは、リクエスト本文に含まれる各メッセージ内の `header` オブジェクトで提供されるスキーマと一致する必要があります。
 
 **API 形式**
 
@@ -489,7 +489,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 上記の応答例は、前のリクエストのエラーメッセージを示しています。この応答を以前の有効な応答と比較すると、リクエストが部分的に成功し、1 つのメッセージが正常に取得され、3 つのメッセージが失敗したことがわかります。どちらの応答も「207」ステータスコードを返していることに注意してください。ステータスコードの詳細については、このチュートリアルの付録にある「[応答コード](#response-codes)」の表を参照してください。
 
-最初のメッセージは [!DNL Platform] に正常に送信されました。他のメッセージの結果による影響はありません。 そのため、失敗したメッセージを再送信する場合は、このメッセージを再度含める必要はありません。
+最初のメッセージは [!DNL Experience Platform] に正常に送信されました。他のメッセージの結果による影響はありません。 そのため、失敗したメッセージを再送信する場合は、このメッセージを再度含める必要はありません。
 
 2 番目のメッセージは、メッセージの本文がないため失敗しました。コレクションリクエストでは、メッセージ要素に有効なヘッダーセクションと本文セクションが含まれている必要があります。2 番目のメッセージのヘッダーの後に次のコードを追加すると、リクエストが修正され、2 番目のメッセージが検証に合格するようになります。
 
@@ -510,9 +510,9 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 ヘッダーで無効な組織 ID が使用されているので、3 番目のメッセージは失敗しました。 組織は、投稿先の {CONNECTION_ID} と一致する必要があります。 使用しているストリーミング接続に一致する組織 ID を判断するには、[[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) を使用して `GET inlet` リクエストを実行します。 以前に作成したストリーミング接続の取得方法の例については、[ストリーミング接続の取得](./create-streaming-connection.md#get-data-collection-url)に関する節を参照してください。
 
-4 番目のメッセージは、予期された XDM スキーマに従わなかったため失敗しました。リクエストのヘッダーと本文に含まれる `xdmSchema` が、`{DATASET_ID}` の XDM スキーマと一致していません。メッセージのヘッダーと本文でスキーマを修正すると、DCCS 検証に合格し、[!DNL Platform] に正常に送信できます。 また、メッセージ本文は、[!DNL Platform] でストリーミング検証に合格するために、`{DATASET_ID}` の XDM スキーマに一致するように更新する必要があります。 Platform に正常にストリーミングされるメッセージに対する影響の詳細については、このチュートリアルの「[取得したメッセージの確認](#confirm-messages-ingested)」の節を参照してください。
+4 番目のメッセージは、予期された XDM スキーマに従わなかったため失敗しました。リクエストのヘッダーと本文に含まれる `xdmSchema` が、`{DATASET_ID}` の XDM スキーマと一致していません。メッセージのヘッダーと本文でスキーマを修正すると、DCCS 検証に合格し、[!DNL Experience Platform] に正常に送信できます。 また、メッセージ本文は、[!DNL Experience Platform] でストリーミング検証に合格するために、`{DATASET_ID}` の XDM スキーマに一致するように更新する必要があります。 Experience Platformに正常にストリーミングされたメッセージはどうなるかについて詳しくは、このチュートリアルの [ 取り込まれたメッセージを確認 ](#confirm-messages-ingested) の節を参照してください。
 
-### [!DNL Platform] から失敗したメッセージを取得
+### [!DNL Experience Platform] から失敗したメッセージを取得
 
 失敗したメッセージは、応答配列のエラーステータスコードで識別されます。無効なメッセージは、`{DATASET_ID}` で指定されたデータセット内の「エラー」バッチに収集および格納されます。
 
@@ -520,15 +520,15 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 ## 取得したメッセージの確認
 
-DCCS 検証に合格したメッセージは、[!DNL Platform] にストリーミングされます。 [!DNL Platform] では、バッチメッセージは、[!DNL Data Lake] に取り込まれる前にストリーミング検証によってテストされます。 バッチのステータスは、成功したかどうかに関わらず、`{DATASET_ID}` で指定されたデータセット内に表示されます。
+DCCS 検証に合格したメッセージは、[!DNL Experience Platform] にストリーミングされます。 [!DNL Experience Platform] では、バッチメッセージは、[!DNL Data Lake] に取り込まれる前にストリーミング検証によってテストされます。 バッチのステータスは、成功したかどうかに関わらず、`{DATASET_ID}` で指定されたデータセット内に表示されます。
 
-[Experience PlatformUI](https://platform.adobe.com) を使用して [!DNL Platform] に正常にストリーミングされたバッチメッセージのステータスを確認するには、「**[!UICONTROL データセット]**」タブに移動して、ストリーミング先のデータセットをクリックし、「**[!UICONTROL データセットアクティビティ]**」タブをクリックします。
+[Experience Platform UI](https://platform.adobe.com) を使用して [!DNL Experience Platform] に正常にストリーミングされたバッチメッセージのステータスを確認するには、「**[!UICONTROL データセット]**」タブに移動して、ストリーミング先のデータセットをクリックし、「**[!UICONTROL データセットアクティビティ]**」タブをクリックします。
 
-[!DNL Platform] でストリーミング検証に合格したバッチメッセージは、[!DNL Data Lake] に取り込まれます。 その後、メッセージを分析または書き出しすることができます。
+[!DNL Experience Platform] でストリーミング検証に合格したバッチメッセージは、[!DNL Data Lake] に取り込まれます。 その後、メッセージを分析または書き出しすることができます。
 
 ## 次の手順
 
-1 回のリクエストで複数のメッセージを送信する方法と、メッセージがターゲットデータセットに正常に取り込まれたタイミングを確認する方法がわかったので、独自のデータの [!DNL Platform] へのストリーミングを開始できます。 取り込んだデータをクエリして [!DNL Platform] から取得する方法の概要については、[[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) ガイドを参照してください。
+1 回のリクエストで複数のメッセージを送信する方法と、メッセージがターゲットデータセットに正常に取り込まれたタイミングを確認する方法がわかったので、独自のデータの [!DNL Experience Platform] へのストリーミングを開始できます。 取り込んだデータをクエリして [!DNL Experience Platform] から取得する方法の概要については、[[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) ガイドを参照してください。
 
 ## 付録
 
@@ -546,5 +546,5 @@ DCCS 検証に合格したメッセージは、[!DNL Platform] にストリー�
 | 403 | 未認証：指定された認証トークンが無効か期限切れです。このコードは、認証が有効になっているインレットのみに対して返されます。 |
 | 413 | ペイロードが大きすぎる：ペイロードリクエストの合計が 1 MB を超えた場合に返されます。 |
 | 429 | 指定された期間内のリクエストが多すぎます。 |
-| 500 | ペイロードの処理中にエラーが発生しました。より具体的なエラーメッセージについては、応答本文を参照してください（例：メッセージペイロードスキーマが指定されていない、[!DNL Platform] の XDM 定義と一致しない）。 |
+| 500 | ペイロードの処理中にエラーが発生しました。より具体的なエラーメッセージについては、応答本文を参照してください（例：メッセージペイロードスキーマが指定されていない、[!DNL Experience Platform] の XDM 定義と一致しない）。 |
 | 503 | サービスは現在利用できません。クライアントは、指数バックオフ戦略を使用して、少なくとも 3 回再試行する必要があります。 |

@@ -2,10 +2,10 @@
 title: クエリテンプレート
 description: クエリテンプレートは再利用可能な保存済みの SQL クエリで、他のユーザーが再利用して時間と労力を節約できます。 クエリエディターまたはクエリサービス API を使用して作成でき、すべての Experience Platform データセットで使用できます。
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 73%
+source-wordcount: '593'
+ht-degree: 63%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform クエリサービスを使用すると、SQL コー�
 
 ## 前提条件
 
-クエリエディターにアクセスし、Platform UI 内のクエリダッシュボードを表示するには、[!UICONTROL クエリの管理]権限が有効になっている必要があります。この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
+クエリエディターにアクセスし、Experience Platform UI 内のクエリダッシュボードを表示するには、[!UICONTROL  クエリの管理 ] 権限が有効になっている必要があります。 この権限は、Adobe [Admin Console](https://adminconsole.adobe.com/) を使用して有効にできます。この権限を有効にするための管理者権限がない場合は、組織の管理者に問い合わせてください。 [Admin Console を使用した権限の追加に関する完全な手順](../../access-control/home.md)については、アクセス制御に関するドキュメントを参照してください。
 
 ## クエリテンプレートの作成
 
@@ -33,7 +33,7 @@ Adobe Experience Platform クエリサービスを使用すると、SQL コー�
 
 ## クエリテンプレートの参照 {#browse}
 
-Platform UI のクエリワークスペースから、「**[!UICONTROL テンプレート]**」を選択して、使用可能な保存済みクエリのリストを表示します。
+Experience Platform UI のクエリワークスペースから、「**[!UICONTROL テンプレート]**」を選択して、使用可能な保存済みクエリのリストを表示します。
 
 ![「テンプレート」タブが強調表示されたクエリワークスペース。](../images/ui/query-templates/query-templates.png)
 
@@ -55,7 +55,7 @@ Query Service API を使用した[クエリテンプレートの作成方法](..
 
 >[!NOTE]
 >
->API を使用して作成したテンプレートは、「Platform UI クエリサービステンプレート」タブにも表示されます。
+>API を使用して作成したテンプレートは、「Experience Platform UI クエリサービステンプレート」タブにも表示されます。
 
 ## 次の手順
 

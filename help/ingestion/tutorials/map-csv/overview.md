@@ -2,7 +2,7 @@
 title: CSV ファイルを XDM スキーマにマッピングする
 description: このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 exl-id: b80ab18f-9f4d-4044-b11d-238e9a45710f
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 47%
@@ -11,7 +11,7 @@ ht-degree: 47%
 
 # CSV ファイルを XDM スキーマにマッピングする
 
-CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。次のチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して CSV ファイルを XDM スキーマにマッピングする方法について説明します。
+CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。次のチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 
 * [既存の XDM スキーマへの CSV ファイルのマッピング](./existing-schema.md)
 * [AI で生成されたレコメンデーションを使用して、CSV ファイルを新しい XDM スキーマにマッピングする](./recommendations.md)

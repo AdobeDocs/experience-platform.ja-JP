@@ -1,6 +1,6 @@
 ---
 title: 結合スキーマの概要
-description: このビデオでは、Platform の結合スキーマの基本的な理解と、Adobe Experience Platform UI を使用して結合スキーマを参照する方法の概要を説明します。
+description: このビデオでは、Experience Platform内の結合スキーマの基本的な理解と、Adobe Experience Platform UI を使用して結合スキーマを参照する方法の概要を説明します。
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -10,16 +10,16 @@ doc-type: video
 activity: understand
 thumbnail: null
 exl-id: b3f84ed8-09e8-470e-b5e2-944a4eaf147b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '103'
 ht-degree: 17%
 
 ---
 
 # 結合スキーマの概要
 
-このビデオでは、Platform の結合スキーマの基本的な理解を提供し、Adobe Experience Platform ユーザーインターフェイスを使用して結合スキーマを参照する方法の概要を説明します。 結合スキーマについて詳しくは、[ 結合スキーマ UI ガイド ](../ui/union-schema.md) を参照してください。
+このビデオでは、Experience Platform内の結合スキーマの基本的な理解を提供し、Adobe Experience Platform ユーザーインターフェイスを使用して結合スキーマを参照する方法の概要を説明します。 結合スキーマについて詳しくは、[ 結合スキーマ UI ガイド ](../ui/union-schema.md) を参照してください。
 
 >[!NOTE]
 >

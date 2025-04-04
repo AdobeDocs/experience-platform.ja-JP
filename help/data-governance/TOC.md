@@ -5,10 +5,10 @@ breadcrumb-title: データガバナンスガイド
 user-guide-description: ラベル、マーケティングアクション、ガバナンスポリシーを使用して、データ使用制限を適用します。
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 93%
+source-wordcount: '100'
+ht-degree: 94%
 
 ---
 
@@ -42,4 +42,4 @@ ht-degree: 93%
    * [マーケティングアクション](api/marketing-actions.md)
    * [評価](api/evaluation.md)
 * [API リファレンス](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)
+* [Experience Platform リリースノート](https://experienceleague.adobe.com/ja/docs/experience-platform/release-notes/latest)

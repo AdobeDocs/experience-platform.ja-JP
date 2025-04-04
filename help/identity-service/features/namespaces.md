@@ -2,9 +2,9 @@
 title: ID名前空間の概要
 description: ID サービスの ID 名前空間について説明します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1860'
 ht-degree: 26%
 
 ---
@@ -37,7 +37,7 @@ ID 名前空間を使用するには、様々なAdobe Experience Platform サー
 
 完全修飾 ID には、**ID 値** と **ID 名前空間** の 2 つのコンポーネントが含まれています。 例えば、ID の値が `scott@acme.com` の場合、名前空間はメールアドレスとして識別することで、この値にコンテキストを提供します。 同様に、名前空間では `555-123-456` を電話番号、`3126ABC` を CRMID として区別できます。 基本的に、**名前空間は特定の ID にコンテキストを提供します**。 プロファイルフラグメント間でレコードデータを照合する場合、[!DNL Real-Time Customer Profile] がプロファイルデータを結合する場合と同様に、ID 値と名前空間の両方が一致する必要があります。
 
-例えば、2 つのプロファイルフラグメントには、異なるプライマリ ID が含まれていても、「メール」名前空間の値が同じなので、Experience Platformは、これらのフラグメントが実際には同じ人物であることを確認し、そのデータを人物の ID グラフにまとめることができます。
+例えば、2 つのプロファイルフラグメントには、異なるプライマリ ID が含まれていても、「電子メール」名前空間の値が同じなので、Experience Platformは、これらのフラグメントが実際には同じ人物であることを確認し、そのデータを個人の ID グラフにまとめることができます。
 
 >[!BEGINSHADEBOX]
 
@@ -76,7 +76,7 @@ ID 名前空間の 1 つの要素は **ID タイプ** です。 ID タイプは�
    * ID グラフは、その他のすべての ID タイプ用に生成されます。
 * システムの制限に達したときに ID グラフから削除される ID。 詳しくは、[ID データのガードレール ](../guardrails.md) を参照してください。
 
-Experience Platform内では、次の ID タイプを使用できます。
+次の ID タイプをExperience Platform内で使用できます。
 
 | ID タイプ | 説明 |
 | --- | --- |
@@ -85,20 +85,20 @@ Experience Platform内では、次の ID タイプを使用できます。
 | デバイス ID | デバイス ID は、ハードウェアデバイス (IDFA (iPhone および iPad)、GAID (Android)、RIDA (Roku) など) を識別し、家庭内の複数のユーザーによって共有される可能性があります。 |
 | メールアドレス | 多くの場合、メールアドレスは 1 人の人物に関連付けられているので、様々なチャネルでその人物を識別するために使用できます。 このタイプの ID には、個人を特定できる情報（PII）が含まれています。これは、値を慎重に処理する [!DNL Identity Service] とを示しています。 |
 | 人物以外の識別子 | 人物以外の ID は、名前空間を必要とする識別子の保存に使用されますが、人物クラスターには接続されません。例えば、製品 SKU や、製品、組織またはストアに関連するデータがあります。 |
-| パートナー ID | <ul><li>パートナー ID は、人物を表すためにデータパートナーが使用する識別子です。パートナー ID は、多くの場合、人物の真の身元を明らかにしないように偽名であり、確率的なものである可能性があります。 Real-time Customer Data Platformでは、パートナー ID は、主にオーディエンスのアクティベーションとデータのエンリッチメントの強化に使用され、ID グラフリンクの構築には使用されません。</li><li>パートナー ID タイプとして指定された ID 名前空間を含む ID の取り込み時に、ID グラフが生成されない。</li><li>パートナー ID の ID タイプを使用してパートナーデータを取り込めないと、ID サービスのシステムグラフ制限に到達したり、プロファイルの不要な結合が発生する可能性があります。</li><ul> |
+| パートナー ID | <ul><li>パートナー ID は、人物を表すためにデータパートナーが使用する識別子です。パートナー ID は、多くの場合、人物の真の身元を明らかにしないように偽名であり、確率的なものである可能性があります。 Real-Time Customer Data Platformでは、パートナー ID は、主にオーディエンスのアクティベーションとデータのエンリッチメントの強化に使用され、ID グラフリンクの構築には使用されません。</li><li>パートナー ID タイプとして指定された ID 名前空間を含む ID の取り込み時に、ID グラフが生成されない。</li><li>パートナー ID の ID タイプを使用してパートナーデータを取り込めないと、ID サービスのシステムグラフ制限に到達したり、プロファイルの不要な結合が発生する可能性があります。</li><ul> |
 | 電話番号 | 電話番号は多くの場合、1 人の人物に関連付けられているので、様々なチャネルでその人物を識別するために使用できます。 このタイプの ID には PII が含まれます。これは、値を慎重に処理する [!DNL Identity Service] とを示しています。 |
 
 {style="table-layout:auto"}
 
 ### 標準名前空間 {#standard}
 
-Experience Platformでは、すべての組織で使用できる複数の ID 名前空間を提供しています。 これらは標準名前空間と呼ばれ、[!DNL Identity Service] API を使用するか Platform UI を通じて表示されます。
+Experience Platformには、すべての組織で使用できる複数の ID 名前空間が用意されています。 これらは標準の名前空間と呼ばれ、[!DNL Identity Service] API を使用するか、Experience Platform UI を通じて表示されます。
 
-次の標準名前空間は、Platform 内のすべての組織で使用するために提供されています。
+次の標準の名前空間は、Experience Platform内のすべての組織で使用するために提供されています。
 
 | 表示名 | 説明 |
 | ------------ | ----------- |
-| AdCloud | AdobeAdCloud を表す名前空間。 |
+| AdCloud | Adobe AdCloud を表す名前空間。 |
 | Adobe Analytics (従来の ID) | Adobe Analyticsを表す名前空間。 詳しくは、[Adobe Analytics名前空間に関する次のドキュメントを参照し ](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) ください。 |
 | Apple IDFA（広告主の ID） | 広告主の Apple ID を表す名前空間。詳しくは、[興味／関心に基づく広告](https://support.apple.com/ja-jp/HT202074)に関するドキュメントを参照してください。 |
 | Apple プッシュ通知サービス | Apple プッシュ通知サービスを使用して収集された ID を表す名前空間。 詳しくは、[Apple プッシュ通知サービス ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) に関するドキュメントを参照してください。 |

@@ -1,12 +1,12 @@
 ---
 keywords: livefyre;livefyre 拡張機能
 title: Adobe Livefyre 拡張機能
-description: Adobe Livefyre 拡張機能は、Adobe Experience Platformのソーシャルの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Adobe Livefyre 拡張機能は、Adobe Experience Platformのソーシャル宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 60%
+source-wordcount: '443'
+ht-degree: 55%
 
 ---
 
@@ -16,15 +16,15 @@ ht-degree: 60%
 
 Adobe Livefyre を使用すれば、一定量のユーザー作成コンテンツを発見、整理し、Webサイトに公開して、高度にパーソナライズされた本物のエクスペリエンスを作成することができます。
 
-AdobeLivefyre はAdobe Experience Platformのソーシャル拡張機能です。 Livefyre 実装について詳しくは、[LivefyreAdobeガイド ](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html) を参照してください。
+Adobe Livefyre は、Adobe Experience Platformのソーシャル拡張機能です。 Adobe Livefyre について詳しくは、[Livefyre 実装ガイド ](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html) を参照してください。
 
-この宛先はタグ拡張機能です。 Platform でのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
 
 ![Adobe Livefyre 拡張機能](../../assets/catalog/social/adobe-livefyre/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-プラットフォームを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
+Experience Platformを購入したすべての顧客は、この拡張機能を [!DNL Destinations] カタログから利用できます。
 
 この拡張機能を使用するには、Adobe Experience Platform でタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてタグへのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
@@ -32,7 +32,7 @@ AdobeLivefyre はAdobe Experience Platformのソーシャル拡張機能です�
 
 Adobe Livefyre 拡張機能をインストールするには：
 
-[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

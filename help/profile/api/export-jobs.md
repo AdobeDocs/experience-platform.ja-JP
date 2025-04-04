@@ -5,7 +5,7 @@ type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースからデータを統合することで、Adobe Experience Platform内で個々の顧客の単一のビューを作成できます。 その後、さらに処理するために、プロファイルデータをデータセットに書き出すことができます。
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 53%
@@ -30,7 +30,7 @@ ht-degree: 53%
 
 ## エクスポートジョブの作成
 
-データ [!DNL Profile] 書き出すには、まずデータの書き出し先となるデータセットを作成してから、新しい書き出しジョブを開始する必要があります。 これらの手順は両方とも、Experience PlatformAPI を使用して実行できます。前者は Catalog Service API を使用し、後者はリアルタイム顧客プロファイル API を使用します。 各手順を完了するための詳細な手順については、以下の節で説明しています。
+データ [!DNL Profile] 書き出すには、まずデータの書き出し先となるデータセットを作成してから、新しい書き出しジョブを開始する必要があります。 これらの手順は両方とも、Experience Platform API を使用して実行できます。前者は Catalog Service API を使用し、後者はリアルタイム顧客プロファイル API を使用します。 各手順を完了するための詳細な手順については、以下の節で説明しています。
 
 ### ターゲットデータセットの作成
 
@@ -38,7 +38,7 @@ ht-degree: 53%
 
 重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。プロファイルデータを書き出すには、データセットが [!DNL XDM Individual Profile] 結合スキーマ（`https://ns.adobe.com/xdm/context/profile__union`）に基づいている必要があります。 結合スキーマは、同じクラスを共有するスキーマのフィールドを集約する、システム生成の読み取り専用スキーマです。 この場合、これは [!DNL XDM Individual Profile] クラスです。 和集合表示スキーマについて詳しくは、『スキーマ構成の基本ガイド』の [ 和集合の節 ](../../xdm/schema/composition.md#union) を参照してください。
 
-このチュートリアルの手順では、[!DNL Catalog] API を使用して [!DNL XDM Individual Profile] 和集合スキーマを参照するデータセットを作成する方法の概要を説明します。 [!DNL Platform] ユーザーインターフェイスを使用して、結合スキーマを参照するデータセットを作成することもできます。 UI の使用手順については、[ オーディエンスの書き出しについてのこの UI チュートリアル ](../../segmentation/tutorials/create-dataset-export-segment.md) で概要を説明していますが、こちらも適用できます。 完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
+このチュートリアルの手順では、[!DNL Catalog] API を使用して [!DNL XDM Individual Profile] 和集合スキーマを参照するデータセットを作成する方法の概要を説明します。 [!DNL Experience Platform] ユーザーインターフェイスを使用して、結合スキーマを参照するデータセットを作成することもできます。 UI の使用手順については、[ オーディエンスの書き出しについてのこの UI チュートリアル ](../../segmentation/tutorials/create-dataset-export-segment.md) で概要を説明していますが、こちらも適用できます。 完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
 
 互換性のあるデータセットが既に存在し、その ID がわかっている場合は、[新しいエクスポートジョブを開始する](#initiate)手順に直接進むことができます。
 
@@ -85,7 +85,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ### エクスポートジョブの開始 {#initiate}
 
-和集合を保持するデータセットが完成したら、リアルタイム顧客プロファイル API の `/export/jobs` エンドポイントに対してPOSTリクエストを行い、リクエストの本文に書き出すデータの詳細を指定することで、プロファイルデータをデータセットに保持する書き出しジョブを作成できます。
+和集合を保持するデータセットが用意できたら、リアルタイム顧客プロファイル API の `/export/jobs` エンドポイントに対して POST リクエストを実行し、リクエストの本文に書き出すデータの詳細を指定することで、プロファイルデータをデータセットに保持する書き出しジョブを作成できます。
 
 **API 形式**
 
@@ -179,7 +179,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 ## すべてのエクスポートジョブのリスト
 
-`export/jobs` エンドポイントに対してGETリクエストを実行することで、特定の組織のすべての書き出しジョブのリストを返すことができます。 リクエストは、以下に示すように、クエリパラメーター `limit` および `offset` もサポートします。
+`export/jobs` エンドポイントにGET リクエストを実行することで、特定の組織のすべての書き出しジョブのリストを返すことができます。 リクエストは、以下に示すように、クエリパラメーター `limit` および `offset` もサポートします。
 
 **API 形式**
 

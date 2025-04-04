@@ -2,9 +2,9 @@
 title: 拡張機能の Exchange リストの作成
 description: Adobe Experience Platform の公開カタログに拡張機能を追加する方法を説明します。
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 71%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform には、インストールに使用できるタグ拡
 
 商品カタログの拡張機能とは別に、公開拡張機能には、[Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec) の一覧もあります。
 
-これらのリストを使用すると、拡張機能の開発者は、機能の説明を投稿したり、追加のサポートやドキュメントへのリンクを投稿したり、会社や拡張機能を知らない見込みユーザーに拡張機能を宣伝したりできます。この Marketplace では、拡張機能に、ユーザーが Platform で認証されていなくても表示できる公開リストがあります。 パブリック拡張機能の場合、この Exchange リストの作成は必須の手順です。
+これらのリストを使用すると、拡張機能の開発者は、機能の説明を投稿したり、追加のサポートやドキュメントへのリンクを投稿したり、会社や拡張機能を知らない見込みユーザーに拡張機能を宣伝したりできます。この Marketplace では、Experience Platformで認証されていないユーザーにも、表示可能な公開リストに拡張機能が表示されます。 パブリック拡張機能の場合、この Exchange リストの作成は必須の手順です。
 
 >[!TIP]
 >

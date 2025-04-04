@@ -3,10 +3,10 @@ keywords: サーベイの宛先；サーベイ；予測；inmoment;web インタ
 title: サーベイの宛先の概要
 description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてお客様のフィードバックをリアルタイムに取得し、Adobe Experience Platformとデータを共有します。
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
-source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 29%
+source-wordcount: '101'
+ht-degree: 28%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 29%
 
 ## サポートされる調査宛先 {#supported-destinations}
 
-現在、Platform は、以下に示す調査の宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、Experience Platformは、以下に示すサーベイの宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 **宛先コネクタ**
 

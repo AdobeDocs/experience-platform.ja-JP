@@ -2,10 +2,10 @@
 title: Adobe Experience Platform デモ拡張機能の概要
 description: Adobe Experience Platform の Adobe Experience Platform デモ拡張機能について説明します。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 100%
+source-wordcount: '1071'
+ht-degree: 99%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 この拡張機能の内容は、新しい拡張機能に移植されています。現在の機能の簡単な比較を示します。
 
-| Platform デモ拡張機能 | Platform Web SDK |
+| Experience Platform デモ拡張機能 | Experience Platform Web SDK |
 | ------------------ | ----------- |
 | カスタム顧客 ID のサポート | カスタム顧客 ID のサポート |
 | XDM 用のクライアント側マッピング UI | ECID で構築（visitor.js は不要） |

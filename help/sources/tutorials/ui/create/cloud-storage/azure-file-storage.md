@@ -5,7 +5,7 @@ title: UI での Azure File Storage Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して Azure ファイルストレージソース接続を作成する方法を説明します。
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 46%
@@ -14,7 +14,7 @@ ht-degree: 46%
 
 # UI での [!DNL Azure File Storage] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Azure File Storage] ソースコネクタを認証する手順を説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Azure File Storage] ソースコネクタを認証する手順を説明します。
 
 ## はじめに
 
@@ -41,7 +41,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## [!DNL Azure File Storage] アカウントの接続
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL Azure File Storage] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL Azure File Storage] アカウントを [!DNL Experience Platform] にリンクします。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -67,4 +67,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Azure File Storage] アカウントとの接続を確立しました。次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/batch/cloud-storage.md) を行いましょう。
+このチュートリアルでは、[!DNL Azure File Storage] アカウントとの接続を確立しました。次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md) を行いましょう。

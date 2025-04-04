@@ -3,12 +3,12 @@ keywords: Experience Platform；ホーム；人気のトピック；クラウド
 solution: Experience Platform
 title: Flow Service API を使用した、生データのストリーミングデータフローの作成
 type: Tutorial
-description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
+description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 44%
+source-wordcount: '1180'
+ht-degree: 36%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 44%
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について説明します。
    - [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md)には、Schema Registry API の呼び出しを正常に実行するために知っておくべき重要な情報が含まれています。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 - [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは、 Experience Platform 内のデータの位置と系統を記録するシステムです。
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):Platform のストリーミング取得は、クライアントおよびサーバーサイドデバイスからExperience Platformにリアルタイムでデータを送信する手段をユーザーに提供します。
-- [サンドボックス](../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスから、リアルタイムでExperience Platformにデータを送信する手段をユーザーに提供します。
+- [ サンドボックス ](../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ### ソース接続の作成 {#source}
 
@@ -41,9 +41,9 @@ Platform API を正常に呼び出す方法については詳しくは、[Platfo
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。 このターゲット XDM スキーマは、XDM [!DNL Individual Profile] クラスも拡張します。
+ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。 このターゲット XDM スキーマは、XDM [!DNL Individual Profile] クラスも拡張します。
 
-ターゲット XDM スキーマを作成するには、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の `/schemas` エンドポイントにPOSTリクエストを行います。
+ターゲット XDM スキーマを作成するには、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の `/schemas` エンドポイントに POST リクエストを実行します。
 
 **API 形式**
 
@@ -151,7 +151,7 @@ curl -X POST \
 
 ## ターゲットデータセットの作成
 
-ターゲット XDM スキーマを作成し、その一意のス `$id` ーマを使用して、ソースデータを含むターゲットデータセットを作成できるようになりました。 ターゲットデータセットを作成するには、[Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/) の `dataSets` エンドポイントにPOSTリクエストを実行し、その際、ペイロード内でターゲットスキーマの ID を指定します。
+ターゲット XDM スキーマを作成し、その一意のス `$id` ーマを使用して、ソースデータを含むターゲットデータセットを作成できるようになりました。 ターゲットデータセットを作成するには、[Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/) の `dataSets` エンドポイントに POST リクエストを実行し、その際、ペイロード内でターゲットスキーマの ID を指定します。
 
 **API 形式**
 
@@ -204,9 +204,9 @@ curl -X POST \
 
 ## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、Platform への宛先接続または転送されたデータが到達する場所を作成および管理します。 ターゲット接続には、データ宛先、データ形式、データフローの作成に必要なターゲット接続 ID に関する情報が含まれています。 ターゲット接続インスタンスは、テナントと組織に固有です。
+Target 接続は、Experience Platformへの宛先接続または転送されたデータが到達する場所を作成および管理します。 ターゲット接続には、データ宛先、データ形式、データフローの作成に必要なターゲット接続 ID に関する情報が含まれています。 ターゲット接続インスタンスは、テナントと組織に固有です。
 
-ターゲットPOSTを作成するには、[!DNL Flow Service] API の `/targetConnections` エンドポイントに接続リクエストを実行します。 リクエストの一環として、データ形式、前の手順で取得した `dataSetId`、に関連付けられた固定接続仕様 ID を指定する必要 [!DNL Data Lake] あります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続を作成するには、[!DNL Flow Service] API の `/targetConnections` エンドポイントに POST リクエストを実行します。 リクエストの一環として、データ形式、前の手順で取得した `dataSetId`、に関連付けられた固定接続仕様 ID を指定する必要 [!DNL Data Lake] あります。 この ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
 **API 形式**
 
@@ -325,7 +325,7 @@ curl -X POST \
 
 ## データフロー仕様のリストの取得 {#specs}
 
-データフローは、ソースからデータを収集し、Platform に取り込む役割を担っています。データフローを作成するにはまず、[!DNL Flow Service] API に対してデータリクエストを実行し、GETフローの仕様を取得する必要があります。
+データフローは、ソースからデータを収集し、それらをExperience Platformに取り込む役割を果たします。 データフローを作成するにはまず、[!DNL Flow Service] API に対してGET リクエストを実行し、データフローの仕様を取得する必要があります。
 
 **API 形式**
 
@@ -566,7 +566,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、ストリーミングコネクタからストリーミングデータを収集するデータフローを作成しました。 受信データは、[!DNL Real-Time Customer Profile] および [!DNL Data Science Workspace] のようなダウンストリームの Platform サービスで使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、ストリーミングコネクタからストリーミングデータを収集するデータフローを作成しました。 これで、[!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] などのダウンストリームのExperience Platform サービスで受信データを使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 - [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

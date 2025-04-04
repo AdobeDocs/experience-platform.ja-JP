@@ -3,10 +3,10 @@ title: Google Cloud Storage 接続
 description: Google クラウドストレージに接続し、オーディエンスをアクティブ化する方法、またはデータセットを書き出す方法について説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1228'
-ht-degree: 62%
+source-wordcount: '1236'
+ht-degree: 56%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 62%
 
 ## API または UI を使用した [!DNL Google Cloud Storage] ストレージへの接続 {#connect-api-or-ui}
 
-* Platform ユーザーインターフェイスを使用して [!DNL Google Cloud Storage] ストレージの場所に接続するには、以下の [ 宛先への接続 ](#connect) および [ この宛先に対するオーディエンスのアクティブ化 ](#activate) の節を参照してください。
+* Experience Platform ユーザーインターフェイスを使用して [!DNL Google Cloud Storage] ストレージの場所に接続するには、以下の [ 宛先への接続 ](#connect) および [ この宛先に対するオーディエンスのアクティブ化 ](#activate) の節を参照してください。
 * [!DNL Google Cloud Storage] ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用した、ファイルベースの宛先に対するオーディエンスのアクティブ化 ](../../api/activate-segments-file-based-destinations.md) を参照してください。
 
 ## サポートされるオーディエンス {#supported-audiences}
@@ -27,7 +27,7 @@ ht-degree: 62%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -47,18 +47,18 @@ ht-degree: 62%
 
 この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、次のチュートリアルを参照してください。
 
-* [Platform ユーザーインターフェイスを使用したデータセットの書き出し ](/help/destinations/ui/export-datasets.md) 方法。
+* [Experience Platform ユーザーインターフェイスを使用したデータセットの書き出し ](/help/destinations/ui/export-datasets.md) 方法。
 * [Flow Service API を使用してプログラムでデータセットを書き出す ](/help/destinations/api/export-datasets.md) 方法。
 
 ## 書き出されたデータのファイル形式 {#file-format}
 
-*オーディエンスデータ* を書き出す際、Platform は、指定されたストレージの場所に `.csv`、`parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、Audience Activation チュートリアルの [ 書き出しでサポートされるファイル形式 ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
+*オーディエンスデータ* を書き出すと、Experience Platformは、指定されたストレージの場所に `.csv`、`parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、Audience Activation チュートリアルの [ 書き出しでサポートされるファイル形式 ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) の節を参照してください。
 
-*データセット* を書き出す際、Platform は、指定されたストレージの場所に `.parquet` または `.json` ファイルを作成します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [ データセットの書き出しが成功したことを確認する ](../../ui/export-datasets.md#verify) の節を参照してください。
+*データセット* を書き出すと、Experience Platformは、指定されたストレージの場所に `.parquet` または `.json` ファイルを保存します。 ファイルについて詳しくは、データセットの書き出しチュートリアルの [ データセットの書き出しが成功したことを確認する ](../../ui/export-datasets.md#verify) の節を参照してください。
 
 ## [!DNL Google Cloud Storage] アカウントを接続するための前提条件の設定 {#prerequisites}
 
-Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL Google Cloud Storage] アカウントの相互運用性を有効にする必要があります。相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL クラウドストレージ]**」オプションから「**[!UICONTROL 設定]**」を選択します。
+Experience Platformを [!DNL Google Cloud Storage] に接続するには、まず [!DNL Google Cloud Storage] アカウントの相互運用性を有効にする必要があります。 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform] を開き、ナビゲーションパネルの「**[!UICONTROL クラウドストレージ]**」オプションから「**[!UICONTROL 設定]**」を選択します。
 
 ![「クラウドストレージ」と「設定」がハイライト表示された Google Cloud Platform ダッシュボード。](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -70,7 +70,7 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 ![Google Cloud Platform ダッシュボードでハイライト表示された「サービスアカウントのキーを作成」コントロール。](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
-新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、[!DNL Google Cloud Storage] アカウントを Platform に接続できます。
+新しく生成されたアクセスキー ID と秘密アクセスキーを使用して、[!DNL Google Cloud Storage] アカウントをExperience Platformに接続できます。
 
 ## 宛先への接続 {#connect}
 
@@ -84,8 +84,8 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 宛先に対して認証するには、必須フィールドに入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-* **[!UICONTROL アクセスキー ID]**：[!DNL Google Cloud Storage] アカウントを Platform に認証するために使用される 61 文字の英数字の文字列。この値の取得方法について詳しくは、上記の[前提条件](#prerequisites)の節を参照してください。
-* **[!UICONTROL 秘密アクセスキー]**：[!DNL Google Cloud Storage] アカウントを Platform に認証するために使用される 40 文字の base64 エンコード文字列。この値の取得方法について詳しくは、上記の[前提条件](#prerequisites)の節を参照してください。
+* **[!UICONTROL アクセスキー ID]**:61 文字の英数字から成る文字列で、Experience Platformに対する [!DNL Google Cloud Storage] アカウントの認証に使用します。 この値の取得方法について詳しくは、上記の[前提条件](#prerequisites)の節を参照してください。
+* **[!UICONTROL 秘密アクセスキー]**:[!DNL Google Cloud Storage] アカウントをExperience Platformに認証するために使用される 40 文字の base64 エンコード文字列。 この値の取得方法について詳しくは、上記の[前提条件](#prerequisites)の節を参照してください。
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
   ![UI での正しい形式の PGP キーの例を示す画像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -100,7 +100,7 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL バケット名]**：この宛先が使用する [!DNL Google Cloud Storage] バケット名を入力します。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする保存先フォルダーのパス。
-* **[!UICONTROL ファイルの種類]**：書き出したファイルに使用するExperience Platformの形式を選択します。 [!UICONTROL CSV] オプションを選択する場合、[ ファイル形式オプションを設定 ](../../ui/batch-destinations-file-formatting-options.md) することもできます。
+* **[!UICONTROL ファイルの種類]**：書き出したファイルにExperience Platformで使用する形式を選択します。 [!UICONTROL CSV] オプションを選択する場合、[ ファイル形式オプションを設定 ](../../ui/batch-destinations-file-formatting-options.md) することもできます。
 * **[!UICONTROL 圧縮形式]**：書き出したファイルにExperience Platformで使用する圧縮タイプを選択します。
 * **[!UICONTROL マニフェストファイルを含める]**：書き出しに、書き出しの場所や書き出しのサイズなどに関する情報を含んだマニフェスト JSON ファイルを含めたい場合は、このオプションをオンに切り替えます。 マニフェストには、形式 `manifest-<<destinationId>>-<<dataflowRunId>>.json` を使用して名前を付けます。 [ サンプル マニフェスト ファイル ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json) を表示します。 マニフェストファイルには、次のフィールドが含まれています。
    * `flowRunId`：書き出されたファイルを生成した [ データフロー実行 ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
@@ -154,4 +154,4 @@ Platform を [!DNL Google Cloud Storage] に接続するには、最初に [!DNL
 
 ## IP アドレスの許可リスト {#ip-address-allow-list}
 
-許可リストにAdobe許可リストに加える IP を登録する必要がある場合は、[IP アドレス ](ip-address-allow-list.md) を参照してください。
+許可リストにAdobe許可リストに加えるの IP を登録する必要がある場合は、[IP アドレス ](ip-address-allow-list.md) の記事を参照してください。

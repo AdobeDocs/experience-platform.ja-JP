@@ -1,12 +1,12 @@
 ---
 title: UI でのGoogle PubSub Source接続の作成
-description: Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
+description: Experience Platform ユーザーインターフェイスを使用して、Google PubSub ソースコネクタを作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 36%
+source-wordcount: '1106'
+ht-degree: 24%
 
 ---
 
@@ -14,16 +14,16 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
+>Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
 
-このチュートリアルでは、Platform ユーザーインターフェイスを使用して、[!DNL Google PubSub]（以下「[!DNL PubSub]」と呼びます）を作成する手順について説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して、[!DNL Google PubSub] （以下「[!DNL PubSub]」と呼びます）を作成する手順について説明します。
 
 ## 基本を学ぶ
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 既に有効な [!DNL PubSub] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/batch/cloud-storage.md)に関するチュートリアルに進むことができます。
 
@@ -57,17 +57,17 @@ ht-degree: 36%
 >
 >サービスアカウントベースの認証を使用している場合は、サービスアカウントに十分なユーザーアクセス権が付与され、資格情報をコピー＆ペーストする際に、JSON 内に余分な空白がないことを確認してください。
 
-必要な資格情報を収集したら、以下の手順に従って [!DNL PubSub] アカウントを Platform にリンクできます。
+必要な資格情報を収集したら、次の手順に従って [!DNL PubSub] アカウントをExperience Platformにリンクできます。
 
 ## [!DNL PubSub] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 [!UICONTROL クラウドストレージ]カテゴリで、**[!UICONTROL Google PubSub]** を選択し、次に&#x200B;**[!UICONTROL データを追加]**&#x200B;を選択します。
 
-![Experience PlatformUI のソースカタログ ](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Experience Platform UI のソースカタログ ](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 **[!UICONTROL Google PubSub に接続]**&#x200B;ページが表示されます。このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -112,7 +112,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## データの選択
 
-正常に認証されると、[!UICONTROL  データを選択 ] ステップに移動します。このステップでは、[!DNL PubSub] データ階層内を移動し、Experience Platformにするデータを選択できます。
+認証が成功すると、[!UICONTROL  データを選択 ] ステップに移動します。このステップでは、[!DNL PubSub] データ階層内を移動し、Experience Platformに取り込むデータを選択できます。
 
 >[!BEGINTABS]
 
@@ -136,4 +136,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL PubSub] アカウントと Platform の間に接続を作成しました。 次のチュートリアルに進み、[データフローを設定して、クラウドストレージから Platform にストリーミングデータを取り込みます](../../dataflow/streaming/cloud-storage-streaming.md)。
+このチュートリアルでは、[!DNL PubSub] アカウントとExperience Platformの間に接続を作成しました。 次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにストリーミングデータを取り込む ](../../dataflow/streaming/cloud-storage-streaming.md) ことができます。

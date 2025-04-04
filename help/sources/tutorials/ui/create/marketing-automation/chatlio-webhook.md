@@ -3,9 +3,9 @@ title: UI での Chatlio Source接続の作成
 description: Adobe Experience Platform UI を使用して Chatlio ソース接続を作成する方法を説明します。
 badge: ベータ版
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1167'
 ht-degree: 21%
 
 ---
@@ -48,25 +48,25 @@ ht-degree: 21%
 }
 ```
 
-### [!DNL Chatlio] 用の Platform スキーマの作成 {#create-platform-schema}
+### [!DNL Chatlio] 用のExperience Platform スキーマの作成 {#create-platform-schema}
 
-また、ソースに使用する Platform スキーマを作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+また、ソースに使用するExperience Platform スキーマを必ず作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-![Chatlio のスキーマの例を示す Platform UI](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
+![Chatlio のスキーマの例を示すExperience Platform UI](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## [!DNL Chatlio] アカウントを接続 {#connect-account}
 
-Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ]」ワークスペースにアクセスし、Experience Platformで使用可能なソースのカタログを確認します。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスして、Experience Platformで使用可能なソースのカタログを表示します。
 
 *[!UICONTROL カテゴリ]* メニューを使用して、カテゴリ別にソースをフィルタリングします。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
 [!UICONTROL  マーケティング自動化 ] カテゴリに移動して、[!DNL Chatlio] ソースカードを表示します。 開始するには、「**[!UICONTROL データを追加]**」を選択します。
 
-![Chatlio カードを使用した Platform UI カタログ ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
+![Chatlio カード付きExperience Platform UI カタログ ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## データの選択 {#select-data}
 
-**[!UICONTROL データを選択]** 手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが表示されます。
+**[!UICONTROL データを選択]** 手順が表示され、Experience Platformに取り込むデータを選択するためのインターフェイスが表示されます。
 
 * インターフェイスの左側は、アカウント内で利用可能なデータストリームを表示できるブラウザーです。
 * インターフェイスの右側の部分では、JSON ファイルから最大 100 行のデータをプレビューできます。
@@ -93,7 +93,7 @@ Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 以下にリストされているマッピングは必須であり、[!UICONTROL  レビュー ] 段階に進む前に設定する必要があります。
 
@@ -151,7 +151,7 @@ Webhook URL を作成したら、[!DNL Chatlio] ユーザーインターフェ�
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Chatlio] データをExperience Platformに取り込むためのストリーミングデータフローを正常に設定しました。 取り込まれるデータを監視するには、[Platform UI を使用したストリーミングデータフローの監視 ](../../monitor-streaming.md) のガイドを参照してください。
+このチュートリアルでは、[!DNL Chatlio] データをExperience Platformに取り込むためのストリーミングデータフローを正常に設定しました。 取り込まれるデータを監視するには、[Experience Platform UI を使用したストリーミングデータフローのモニタリング ](../../monitor-streaming.md) のガイドを参照してください。
 
 ## その他のリソース {#additional-resources}
 
@@ -165,8 +165,8 @@ Webhook URL を作成したら、[!DNL Chatlio] ユーザーインターフェ�
 
 ![ チャット履歴を示す Chatlio UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Platform UI で、ソースカタログの [!DNL Chatlio] ーザーカードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 次に、「**[!UICONTROL データセットをプレビュー]**」をクリックして、[!DNL Chatlio] 内で設定した Webhook 用に取り込まれたデータを検証します。
+* Experience Platform UI で、ソースカタログの [!DNL Chatlio] ーザーカードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 次に、「**[!UICONTROL データセットをプレビュー]**」をクリックして、[!DNL Chatlio] 内で設定した Webhook 用に取り込まれたデータを検証します。
 
-![ 取り込んだイベントを示す Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
+![ 取り込んだイベントを示すExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
 [!DNL Chatlio] について詳しくは、[[!DNL Chatlio]  ドキュメント ](https://chatlio.com/docs/) and [FAQ](https://chatlio.com/pricing/#FAQ) を参照してください。

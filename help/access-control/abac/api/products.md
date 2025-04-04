@@ -5,9 +5,9 @@ title: 製品 API エンドポイント
 description: 属性ベースのアクセス制御 API の/products エンドポイントを使用すると、Adobe Experience Platformでプロダクトをプログラムで管理できます。
 role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 25%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 25%
 
 ## 資格のある製品のリストの取得 {#list}
 
-`/products` エンドポイントにGETリクエストを行うことで、資格のある製品のリストを取得できます。
+`/products` エンドポイントにGET リクエストを送信すると、資格のある製品のリストを取得できます。
 
 **API 形式**
 
@@ -70,7 +70,7 @@ curl -X GET \
 
 ## 製品 ID 別に権限カテゴリを検索
 
-商品 ID を指定しながら `/products/{PRODUCT_ID}/categories` エンドポイントに対してGETリクエストを実行することで、特定の商品の権限カテゴリを検索できます。
+商品 ID を指定しながら `/products/{PRODUCT_ID}/categories` エンドポイントに対してGET リクエストを実行することで、特定の商品に対する権限カテゴリを検索できます。
 
 **API 形式**
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 ## 製品 ID 別の権限セットの検索
 
-商品 ID を指定しながら `/products/{PRODUCT_ID}/permission-sets` エンドポイントに対してGETリクエストを実行することで、特定の商品の権限セットを検索できます。
+商品 ID を指定しながら `/products/{PRODUCT_ID}/permission-sets` エンドポイントに対してGET リクエストを実行することで、特定の商品の権限セットを検索できます。
 
 **API 形式**
 
@@ -240,6 +240,6 @@ curl -X GET \
 | `id` | クエリされた権限セットの対応する ID。 |
 | `name` | クエリされたアクセス権セットの対応する名前。 |
 | `category` | 使用可能な権限カテゴリ。 |
-| `permissions` | 権限には、サンドボックスの作成、スキーマの定義、データセットの管理など、 Platform の機能の表示や使用の機能が含まれます。 |
+| `permissions` | 権限には、サンドボックスの作成、スキーマの定義、データセットの管理など、Experience Platform の機能の表示や使用の機能が含まれます。 |
 | `permissions.resource` | サブジェクトがアクセスできるまたはアクセスできないアセットまたはオブジェクト。 リソースには、ファイル、アプリケーション、サーバー、API があります。 |
 | `permissions.actions` | クエリされたリソースに対してサブジェクトが実行できるアクション。 使用可能な値：`view`、`read`、`create`、`edit`、`delete` |

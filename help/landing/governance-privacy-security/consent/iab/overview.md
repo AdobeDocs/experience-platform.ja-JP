@@ -6,9 +6,9 @@ description: Adobe Experience Platformで宛先に対してセグメントをア
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2524'
 ht-degree: 1%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 1%
 >
 >TCF 2.0 の詳細については、サポート資料や技術仕様など、[IAB Europe web サイト ](https://iabeurope.eu/) をご覧ください。
 
-Adobe Experience Platformは、ID **565** の登録済み [IAB TCF 2.0 ベンダーリスト ](https://iabeurope.eu/vendor-list-tcf/) の一部です。 TCF 2.0 要件に準拠して、Platform を使用すると、顧客同意データを収集し、保存されている顧客プロファイルに統合できます。 この同意データは、ユースケースに応じて、書き出されたオーディエンスセグメントにプロファイルが含まれているかどうかの要因となります。
+Adobe Experience Platformは、ID **565** の登録済み [IAB TCF 2.0 ベンダーリスト ](https://iabeurope.eu/vendor-list-tcf/) の一部です。 TCF 2.0 要件に準拠して、Experience Platformを使用すると、顧客同意データを収集し、保存されている顧客プロファイルに統合できます。 この同意データは、ユースケースに応じて、書き出されたオーディエンスセグメントにプロファイルが含まれているかどうかの要因となります。
 
 >[!IMPORTANT]
 >
->Platform は、TCF バージョン 2.0 （以降）にのみ準拠できます。 以前のバージョンの TCF はサポートされていません。
+>Experience Platformは、TCF バージョン 2.0 （以降）にのみ準拠できます。 以前のバージョンの TCF はサポートされていません。
 
-このドキュメントでは、お客様の同意管理プラットフォーム（CMP）によって生成された顧客同意データを受け入れるようにデータ操作とプロファイルスキーマを設定する方法の概要について説明します。 また、セグメントを書き出す際のユーザーの同意の選択肢を Platform がどのように伝えるかについても説明します。
+このドキュメントでは、お客様の同意管理プラットフォーム（CMP）によって生成された顧客同意データを受け入れるようにデータ操作とプロファイルスキーマを設定する方法の概要について説明します。 また、セグメントを書き出す際のユーザーの同意の選択肢をExperience Platformがどのように伝えるかについても説明します。
 
 ## 前提条件
 
@@ -35,18 +35,18 @@ Adobe Experience Platformは、ID **565** の登録済み [IAB TCF 2.0 ベンダ
 
 >[!IMPORTANT]
 >
->CMP の ID が無効な場合、Platform はデータを現状のまま処理し続けます。 TCF 2.0 を強制するには、データを Platform に送信する前に、CMP に有効な ID が IAB TCF 2.0 に登録されていることを確認する必要があります。
+>CMP の ID が無効な場合、Experience Platformはデータをそのままに処理し続けます。 TCF 2.0 を強制するには、データをExperience Platformに送信する前に、CMP に有効な ID が IAB TCF 2.0 に登録されていることを確認する必要があります。
 
-このガイドでは、次の Platform サービスに関する十分な知識も必要です。
+このガイドでは、次のExperience Platform サービスに関する十分な知識も必要です。
 
 * [Experience Data Model（XDM）](/help/xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
 * [Adobe Experience Platform ID サービス ](/help/identity-service/home.md): デバイスやシステムをまたいで ID を結び付けることで、カスタマーエクスペリエンスのフラグメント化によって発生する基本的な課題を解決します。
 * [ リアルタイム顧客プロファイル ](/help/profile/home.md):[!DNL Identity Service] を使用して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 [!DNL Real-Time Customer Profile] はデータレイクからデータを取り込み、顧客プロファイルを独立したデータストアに保持します。
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)：様々な Platform サービスを顧客向けの web サイトに統合できるクライアントサイド JavaScript ライブラリです。
-   * [SDK 同意コマンド ](../../../../web-sdk/commands/setconsent.md)：このガイドに示されている同意関連 SDK コマンドのユースケース概要です。
+* [Adobe Experience Platform web SDK](/help/web-sdk/home.md)：様々なExperience Platform サービスをお客様に向けた web サイトに統合できるクライアントサイド JavaScript ライブラリです。
+   * [SDK同意コマンド ](../../../../web-sdk/commands/setconsent.md)：このガイドに記載されている同意関連のSDK コマンドのユースケースの概要です。
 * [Adobe Experience Platform セグメント化サービス ](/help/segmentation/home.md):[!DNL Real-Time Customer Profile] データを、類似の特性を共有し、マーケティング戦略に同様に応答する個人のグループに分割できます。
 
-上記の Platform サービスに加えて、[ 宛先 ](/help/data-governance/home.md) と Platform エコシステムでの役割にも精通している必要があります。
+上記のExperience Platform サービスに加えて、[ 宛先 ](/help/data-governance/home.md) とExperience Platform エコシステムでの役割にも精通している必要があります。
 
 ## 顧客同意フローの概要 {#summary}
 
@@ -54,26 +54,26 @@ Adobe Experience Platformは、ID **565** の登録済み [IAB TCF 2.0 ベンダ
 
 ### 同意データの収集
 
-Platform では、次のプロセスを通じて顧客同意データを収集できます。
+Experience Platformでは、次のプロセスを通じて顧客同意データを収集できます。
 
 1. 顧客は、web サイト上のダイアログを通じて、データ収集に対する同意環境設定を指定します。
 1. CMP が同意設定の変更を検出し、それに応じて TCF 同意データを生成します。
-1. Platform Web SDK を使用して、生成された同意データ（CMP によって返される）がAdobe Experience Platformに送信されます。
+1. Experience Platform Web SDKを使用して、生成された同意データ（CMP によって返された）がAdobe Experience Platformに送信されます。
 1. 収集された同意データは、スキーマに TCF 同意フィールドが含まれている [!DNL Profile] 対応データセットに取り込まれます。
 
-CMP 同意変更フックによってトリガーされる SDK コマンドに加えて、同意データは、[!DNL Profile] 対応データセットに直接アップロードされる、お客様が生成した XDM データを介してExperience Platformへと送ることもできます。
+CMP の同意変更フックによってトリガーされるSDK コマンドに加えて、同意データは、[!DNL Profile] 対応データセットに直接アップロードされる顧客生成の XDM データを介してExperience Platformにも送ることができます。
 
-（[!DNL Audience Manager] ソースコネクタなどを通じて）Adobe Audience Managerによって Platform と共有されるセグメントにも、[!DNL Experience Cloud Identity Service] を通じて適切なフィールドが適用されている場合、同意データが含まれている可能性があります。 [!DNL Audience Manager] での同意データの収集について詳しくは、[IAB TCF 用Adobe Audience Manager プラグイン ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja) のドキュメントを参照してください。
+[!DNL Experience Cloud Identity Service] を通じて適切なフィールドがExperience Platformに適用されている場合、Adobe Audience Managerによって（[!DNL Audience Manager] ソースコネクタなどを通じて）共有された任意のセグメントにも同意データが含まれている可能性があります。 [!DNL Audience Manager] での同意データの収集について詳しくは、[IAB TCF 用Adobe Audience Manager プラグイン ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja) のドキュメントを参照してください。
 
 ### ダウンストリームの同意の適用
 
-TCF 同意データが正常に取り込まれると、ダウンストリーム Platform サービスで次のプロセスが実行されます。
+TCF 同意データが正常に取り込まれると、ダウンストリーム Experience Platform サービスで次のプロセスが実行されます。
 
 1. [!DNL Real-Time Customer Profile] は、その顧客プロファイルに対して保存された同意データを更新します。
-1. Platform は、クラスター内のすべての ID に対して Platform （565）のベンダー権限が提供されている場合にのみ、顧客 ID を処理します。
-1. TCF 2.0 ベンダーリストのメンバーに属する宛先にセグメントを書き出す場合、Platform （565） *および* の両方のベンダー権限がクラスター内のすべての ID に対して提供されている場合にのみ、Platform にプロファイルが含まれます。
+1. Experience Platformは、クラスター内のすべての ID に対してExperience Platform（565）のベンダー権限が提供されている場合にのみ、顧客 ID を処理します。
+1. TCF 2.0 ベンダーリストのメンバーに属する宛先にセグメントを書き出す場合、Experience Platformには、Experience Platform（565） *および* の両方に対するベンダー権限がクラスター内のすべての ID に対して提供されている場合にのみ、プロファイルが含まれます。
 
-このドキュメントの残りの節では、前述の収集および実施要件を満たすために Platform とデータ操作を設定する方法について説明します。
+このドキュメントの残りの節では、前述の収集および実施要件を満たすためにExperience Platformとデータ操作を設定する方法について説明します。
 
 ## CMP 内で顧客同意データを生成する方法の決定 {#consent-data}
 
@@ -85,14 +85,14 @@ TCF 同意データが正常に取り込まれると、ダウンストリーム 
 
 | 同意オプション | 説明 |
 | --- | --- |
-| **目的** | 目的ブランドが顧客のデータを使用できる広告技術目的を定義します。 Platform で顧客 ID を処理する際には、次の目的を選択する必要があります。 <ul><li>**目的 1**：デバイスに関する情報の保存やアクセス</li><li>**目的 10**：製品の開発と改善</li></ul> |
+| **目的** | 目的ブランドが顧客のデータを使用できる広告技術目的を定義します。 Experience Platformで顧客 ID を処理する場合は、次の目的をにオプトインする必要があります。 <ul><li>**目的 1**：デバイスに関する情報の保存やアクセス</li><li>**目的 10**：製品の開発と改善</li></ul> |
 | **ベンダー権限** | このダイアログでは、広告技術の目的に加えて、お客様がAdobe Experience Platform（565）などの特定のベンダーでデータを使用することをオプトインまたはオプトアウトできるようにする必要があります。 |
 
 ### 同意文字列 {#consent-strings}
 
 データの収集に使用する方法に関係なく、顧客が選択した同意オプションに基づいて文字列値を生成することが目標になります。これは、同意文字列と呼ばれます。
 
-TCF の仕様では、ポリシーやベンダーで定義されている特定のマーケティング目的に照らして、顧客の同意設定に関する関連する詳細をエンコードするために同意文字列が使用されます。 Platform では、これらの文字列を使用して各顧客の同意設定を保存するので、設定が変更されるたびに新しい同意文字列を生成する必要があります。
+TCF の仕様では、ポリシーやベンダーで定義されている特定のマーケティング目的に照らして、顧客の同意設定に関する関連する詳細をエンコードするために同意文字列が使用されます。 Experience Platformでは、これらの文字列を使用して各顧客の同意設定を保存するので、設定が変更されるたびに新しい同意文字列を生成する必要があります。
 
 同意文字列は、IAB TCF に登録されている CMP によってのみ作成できます。 特定の CMP を使用して同意文字列を生成する方法について詳しくは、IAB TCF GitHub リポジトリの [ 同意文字列形式ガイド ](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) を参照してください。
 
@@ -106,27 +106,27 @@ TCF の仕様では、ポリシーやベンダーで定義されている特定�
 
 結合ポリシーの操作方法について詳しくは、[ 結合ポリシーの概要 ](/help/profile/merge-policies/overview.md) を参照してください。 結合ポリシーを設定する場合は、データセットの準備に関するガイドに記載されているように、セグメントに [XDM プライバシースキーマフィールドグループ ](./dataset.md#privacy-field-group) で提供される必要なすべての同意属性が含まれていることを確認する必要があります。
 
-## Experience PlatformWeb SDK を統合して、顧客同意データを収集します {#sdk}
+## Experience Platform Web SDKを統合して、顧客の同意データを収集します {#sdk}
 
 >[!NOTE]
 >
->Adobe Experience Platformで同意データを直接処理するには、Experience Platform Web SDK の使用が必要です。 [!DNL Experience Cloud Identity Service] はサポートされていません。
+>Adobe Experience Platformで同意データを直接処理するには、Experience Platform Web SDKを使用する必要があります。 [!DNL Experience Cloud Identity Service] はサポートされていません。
 >
 >ただし、Adobe Audience Managerでの同意処理では引き続き [!DNL Experience Cloud Identity Service] がサポートされ、TCF 2.0 に準拠するには、ライブラリを [ バージョン 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases) に更新する必要があります。
 
-同意文字列を生成するように CMP を設定したら、Experience Platform Web SDK を統合してこれらの文字列を収集し、Platform に送信する必要があります。 Platform SDK には、TCF 同意データを Platform に送信するために使用できる 2 つのコマンドが用意されています（以下のサブセクションで説明します）。 これらのコマンドは、顧客が同意情報を初めて提供する際と、それ以降その同意が変更される場合に使用する必要があります。
+同意文字列を生成するように CMP を設定したら、Experience Platform Web SDKを統合して、これらの文字列を収集し、Experience Platformに送信する必要があります。 Experience Platform SDKには、TCF 同意データをExperience Platformに送信するために使用できる 2 つのコマンドが用意されています（以下のサブセクションで説明します）。 これらのコマンドは、顧客が同意情報を初めて提供する際と、それ以降その同意が変更される場合に使用する必要があります。
 
-**SDK は、初期設定では、どの CMP ともインターフェイスを行いません**。 SDK を web サイトに統合する方法を決定し、CMP で同意の変更をリッスンして適切なコマンドを呼び出すかどうかは、ユーザー次第です。
+**SDKは、初期設定では、どの CMP ともインターフェイスを行いません**。 SDKを web サイトに統合する方法を決め、CMP で同意の変更をリッスンして、適切なコマンドを呼び出すかどうかは、ユーザー次第です。
 
 ### データストリームの作成
 
-SDK がExperience Platformにデータを送信するには、まず Platform のデータストリームを作成する必要があります。 データストリームの作成方法に関する具体的な手順については、[SDK ドキュメント ](/help/datastreams/overview.md) を参照してください。
+SDKがExperience Platformにデータを送信するには、まずExperience Platformのデータストリームを作成する必要があります。 データストリームの作成方法に関する具体的な手順については、[SDKのドキュメント ](/help/datastreams/overview.md) を参照してください。
 
 データストリームの一意の名前を指定したら、**[!UICONTROL Adobe Experience Platform]** の横にある切り替えボタンを選択します。 次に、以下の値を使用してフォームの残りの部分を完了します。
 
 | データストリームフィールド | 値 |
 | --- | --- |
-| [!UICONTROL  サンドボックス ] | データストリームを設定するために必要なストリーミング接続とデータセットを含む、Platform[ サンドボックス ](/help/sandboxes/home.md) の名前。 |
+| [!UICONTROL  サンドボックス ] | データストリームを設定するために必要なストリーミング接続とデータセットを含む、Experience Platform[ サンドボックス ](/help/sandboxes/home.md) の名前。 |
 | [!UICONTROL  流入口 ] | Experience Platformの有効なストリーミング接続。 既存のストリーミングインレットがない場合は、[ ストリーミング接続の作成 ](/help/ingestion/tutorials/create-streaming-connection-ui.md) に関するチュートリアルを参照してください。 |
 | [!UICONTROL イベントデータセット] | [ 前の手順 ](#datasets) で作成した [!DNL XDM ExperienceEvent] データセットを選択します。 [[!UICONTROL IAB TCF 2.0 同意 ] フィールドグループ ](/help/xdm/field-groups/event/iab.md) をこのデータセットのスキーマに含めた場合、[`sendEvent`](#sendEvent) コマンドを使用して、同意変更イベントを経時的に追跡し、そのデータをこのデータセットに保存できます。 このデータセットに保存される同意値は、自動適用ワークフローでは使用 **されません**。 |
 | [!UICONTROL プロファイルデータセット] | [ 前の手順 ](#datasets) で作成した [!DNL XDM Individual Profile] データセットを選択します。 [`setConsent`](#setConsent) コマンドを使用して CMP 同意変更フックに応答する場合、収集されたデータはこのデータセットに保存されます。 このデータセットはプロファイル対応なので、このデータセットに保存された同意値は、自動適用ワークフロー中に適用されます。 |
@@ -137,7 +137,7 @@ SDK がExperience Platformにデータを送信するには、まず Platform �
 
 ### 同意変更コマンドの実行
 
-前の節で説明したデータストリームを作成したら、SDK コマンドを使用して、同意データを Platform に送信できます。 以下の節では、様々なシナリオで各 SDK コマンドを使用する方法の例を示します。
+前の節で説明したデータストリームを作成したら、SDK コマンドを使用して、同意データをExperience Platformに送信することができます。 以下の節では、各SDK コマンドを様々なシナリオでどのように使用できるかについて例を示します。
 
 #### CMP 同意変更フックの使用 {#setConsent}
 
@@ -193,7 +193,7 @@ OneTrust.OnConsentChanged(function () {
 
 #### イベントの使用 {#sendEvent}
 
-また、`sendEvent` コマンドを使用して、Platform でトリガーされるすべてのイベントで TCF 2.0 同意データを収集することもできます。
+また、`sendEvent` コマンドを使用して、Experience Platformでトリガーされるすべてのイベントに関する TCF 2.0 同意データを収集することもできます。
 
 >[!NOTE]
 >
@@ -222,7 +222,7 @@ alloy("sendEvent", {
 | `consentStringValue` | CMP によって生成された base-64 でエンコードされた同意文字列。 |
 | `gdprApplies` | 現在ログインしている顧客に GDPR を適用するかどうかを示すブール値。 この顧客に TCF 2.0 を適用するには、値を `true` に設定する必要があります。 定義されていない場合、デフォルトは `true` です。 |
 
-### SDK 応答の処理
+### SDKの応答の処理
 
 多くの Web SDK コマンドは、呼び出しが成功したか失敗したかを示すプロミスを返します。 その後、これらの応答を使用して、顧客に確認メッセージを表示するなどの追加のロジックを実行できます。 詳細については、「[ コマンドの応答 ](/help/web-sdk/commands/command-responses.md)」を参照してください。
 
@@ -241,11 +241,11 @@ alloy("sendEvent", {
 * **目的 1**：デバイスに関する情報の保存やアクセス
 * **目的 10**：製品の開発と改善
 
-また、TCF 2.0 では、データを宛先に送信する前に、データのソースが宛先のベンダー権限を確認する必要があります。 そのため、Platform は、その宛先にバインドされているデータを含める前に、クラスター内のすべての ID に対する宛先のベンダー権限がにオプトインされているかどうかを確認します。
+また、TCF 2.0 では、データを宛先に送信する前に、データのソースが宛先のベンダー権限を確認する必要があります。 そのため、Experience Platformは、その宛先にバインドされているデータを含める前に、クラスター内のすべての ID に対して宛先のベンダー権限がにオプトインされているかどうかを確認します。
 
 >[!NOTE]
 >
->Platform と共有されるセグメントには、Adobe Audience Managerの対応するセグメントと同じ TCF 2.0 同意値が含まれます。 [!DNL Audience Manager] は Platform （565）と同じベンダー ID を共有するので、同じ目的とベンダーの許可が必要です。 詳しくは、[IAB TCF 用Adobe Audience Manager プラグイン ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja) のドキュメントを参照してください。
+>Experience Platformと共有されるセグメントには、Adobe Audience Managerの対応するセグメントと同じ TCF 2.0 同意値が含まれます。 [!DNL Audience Manager] はExperience Platform（565）と同じベンダー ID を共有するので、同じ目的とベンダーの許可が必要です。 詳しくは、[IAB TCF 用Adobe Audience Manager プラグイン ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja) のドキュメントを参照してください。
 
 ## 実装のテスト {#test-implementation}
 
@@ -257,4 +257,4 @@ TCF 2.0 の実装を設定し、宛先にセグメントを書き出した後は
 
 ## 次の手順
 
-このドキュメントでは、TCF 2.0 で説明されているビジネス義務を満たすように Platform データ操作を設定するプロセスについて説明しました。Platform のプライバシー関連機能について詳しくは、[ ガバナンス、プライバシー、セキュリティ ](../../overview.md) の概要を参照してください。
+このドキュメントでは、TCF 2.0 で説明されているように、ビジネス義務を満たすようにExperience Platform データの運用を設定するプロセスについて説明しました。Experience Platformのプライバシー関連機能について詳しくは、[ ガバナンス、プライバシー、セキュリティ ](../../overview.md) に関する概要を参照してください。

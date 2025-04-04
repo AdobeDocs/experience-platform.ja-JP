@@ -3,10 +3,10 @@ title: Google PubSub Sourceの概要
 description: API またはユーザーインターフェイスを使用して、Google PubSub と Adobe Experience Platform を接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 19%
+source-wordcount: '829'
+ht-degree: 10%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 19%
 >
 >Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Google PubSub] ソースを利用できます。
 
-Adobe Experience Platform は、[!DNL AWS]、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続を提供し、これらのシステムからデータを Platform に取り込み、下流のサービスや配信先で使用できるようにします。
+Adobe Experience Platformには、[!DNL AWS]、[!DNL Google Cloud Platform]、[!DNL Azure] などのクラウドプロバイダーとのネイティブ接続が用意されており、これらのシステムからデータをExperience Platformに取り込み、下流のサービスや配信先で使用できます。
 
-クラウドストレージのソースは、ダウンロード、フォーマット、アップロードの必要なく、データを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。 Platform では、[!DNL Google PubSub] からリアルタイムにデータを取り込むことができます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、データをExperience Platformに取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。 Experience Platformでは、[!DNL Google PubSub] からリアルタイムにデータを取り込むことができます。
 
 ## 前提条件 {#prerequisites}
 
@@ -83,7 +83,7 @@ Adobe Experience Platform は、[!DNL AWS]、[!DNL Google Cloud Platform]、[!DN
 
 ## [!DNL Google PubSub] をExperience Platformに接続
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Google PubSub] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Google PubSub] をExperience Platformに接続する方法について説明しています。
 
 ### API の使用
 

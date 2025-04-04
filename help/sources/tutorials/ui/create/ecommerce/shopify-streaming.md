@@ -1,18 +1,18 @@
 ---
 title: Ui での Shopify ストリーミング接続とデータフローの作成
-description: Platform ユーザーインターフェイスを使用して Shopify ストリーミングソース接続とデータフローを作成する方法を説明します
+description: Experience Platform ユーザーインターフェイスを使用して Shopify ストリーミングソース接続とデータフローを作成する方法について説明します
 badge: ベータ版
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 34%
+source-wordcount: '790'
+ht-degree: 32%
 
 ---
 
 # UI を使用した [!DNL Shopify Streaming] データのソース接続とデータフローの作成
 
-このチュートリアルでは、Platform ユーザーインターフェイスを使用して [!DNL Shopify Streaming] ソース接続とデータフローを作成する手順について説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して [!DNL Shopify Streaming] ソース接続とデータフローを作成する手順について説明します。
 
 ## はじめに {#getting-started}
 
@@ -27,19 +27,19 @@ ht-degree: 34%
 >
 >このチュートリアルでは、[!DNL Shopify Streaming] アカウントの前提条件の設定を完了している必要があります。 アカウントの設定手順については、[[!DNL Shopify Streaming]  概要 ](../../../../connectors/ecommerce/shopify-streaming.md) を参照してください。
 
-## [!DNL Shopify Streaming] アカウントの接続
+## [!DNL Shopify Streaming] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 **e コマース** カテゴリで、「[!DNL Shopify Streaming]」を選択し、次に **[!UICONTROL データを追加]** を選択します。
 
-![Experience Platformソースカタログ ](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![Experience Platform ソースカタログ ](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## データの選択
 
-**[!UICONTROL データを選択]** 手順が表示され、Platform に取り込むデータを選択するためのインターフェイスが表示されます。
+**[!UICONTROL データを選択]** 手順が表示され、Experience Platformに取り込むデータを選択するためのインターフェイスが表示されます。
 
 * インターフェイスの左側は、アカウント内で利用可能なデータストリームを表示できるブラウザーです。
 * インターフェイスの右側の部分では、JSON ファイルから最大 100 行のデータをプレビューできます。
@@ -66,7 +66,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html) を参照してください。
 
 ソースデータが正常にマッピングされたら、「**[!UICONTROL 次へ]**」を選択します。
 

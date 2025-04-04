@@ -2,10 +2,10 @@
 title: 宛先の概要
 description: 宛先は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。Adobe Experience Platform の宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くのユースケースに関する既知および未知のデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 57%
+source-wordcount: '1368'
+ht-degree: 48%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 57%
 
 ## 宛先とソース {#destinations-and-sources}
 
-Platform の主な機能の 1 つは、ファーストパーティデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。[ソース](../sources/home.md)を使用してデータを Platform に取り込み、宛先を使用して Platform からデータを書き出します。
+Experience Platformの主な機能の 1 つは、ファーストパーティデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。 [ ソース ](../sources/home.md) を使用してデータをExperience Platformに取り込み、宛先を使用してExperience Platformからデータを書き出します。
 
 ## 宛先の手順 {#steps}
 
-* Platform で使用可能なすべての宛先の[セルフサービスカタログ](./catalog/overview.md)から選択します。
+* Experience Platformで使用可能なすべての宛先の [ セルフサービスカタログ ](./catalog/overview.md) から選択します。
 * 宛先を使用すると、オーディエンスやデータセットをマーケティング自動化プラットフォームやデジタル広告プラットフォームなどに送信できます。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
@@ -38,7 +38,7 @@ Platform の主な機能の 1 つは、ファーストパーティデータを�
 
 * データをアクティブ化できる宛先プラットフォームのカタログを参照する。
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
-* ストレージの場所にアカウントを作成するか、Platform を宛先プラットフォームのアカウントにリンクする。
+* ストレージの場所にアカウントを作成するか、Experience Platformを宛先プラットフォームのアカウントにリンクする。
 * 宛先に対してアクティブ化するオーディエンスまたはデータセットを選択します。
 * メールマーケティングの宛先、CRM プラットフォーム、クラウドストレージの場所などの特定の宛先に対してオーディエンスをアクティブ化する際に ](../xdm/home.md) 書き出す [ エクスペリエンスデータモデル（XDM）フィールド）を選択します。
 * 宛先（人物、アカウント、見込み客）に対して、様々なタイプのプロファイルとオーディエンスをアクティブ化します。
@@ -55,7 +55,7 @@ Experience Platform 宛先カタログのコネクタには、アドビによっ
 
 ## 宛先とアクセス制御 {#access-controls}
 
-Platform の宛先機能は、Adobe Experience Platform のアクセス制御権限と連携します。ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、[Adobe Experience Platformのアクセス制御 ](../access-control/home.md) を参照し、ページ下部のテーブルまで下にスクロールします。
+Experience Platformの宛先機能は、Adobe Experience Platformのアクセス制御権限と連携します。 ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、[Adobe Experience Platformのアクセス制御 ](../access-control/home.md) を参照し、ページ下部のテーブルまで下にスクロールします。
 
 次の表に、宛先に対して特定のアクションを実行するために必要な権限と、権限の組み合わせをまとめます。
 
@@ -102,14 +102,14 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 ## 宛先へのデータのアクティブ化に関するデータガバナンス制限 {#data-governance}
 
-データガバナンスは、次を通じて Platform の宛先に適用されます。
+データガバナンスは、次を通じてExperience Platformの宛先に適用されます。
 
 * 宛先の作成ワークフローで選択できる&#x200B;*マーケティングアクション*。
 * 特定の使用ラベルを含むデータが、特定のマーケティングアクションを持つ宛先に対してアクティブ化されることを制限する&#x200B;*データ使用ポリシー*。
 
-[マーケティングアクション](../data-governance/policies/overview.md)と[データポリシー違反の解決](../data-governance/enforcement/auto-enforcement.md)について詳しくは、Platform のドキュメントのデータガバナンスを参照してください。
+[ マーケティングアクション ](../data-governance/policies/overview.md) および [ データポリシー違反の解決 ](../data-governance/enforcement/auto-enforcement.md) について詳しくは、Experience Platform ドキュメントのデータガバナンスを参照してください。
 
-宛先の作成ワークフローでマーケティングアクションを選択する方法について詳しくは、Platform の様々な宛先タイプに関する次のページを参照してください。
+「宛先を作成」ワークフローでマーケティングアクションを選択する方法について詳しくは、Experience Platformの様々な宛先タイプに関する次のページを参照してください。
 
 * [広告の宛先 - Google アド マネージャー](./catalog/advertising/google-ad-manager.md)
 * [広告の宛先 - Google 広告](./catalog/advertising/google-ads-destination.md)

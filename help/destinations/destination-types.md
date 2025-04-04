@@ -3,10 +3,10 @@ keywords: 宛先;宛先タイプ
 title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platform の宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 54%
+source-wordcount: '806'
+ht-degree: 52%
 
 ---
 
@@ -96,7 +96,7 @@ Experience Platformから様々な宛先に、次の 3 種類のオーディエ�
 
 ## 拡張機能 {#extensions}
 
-Platform では、タグ管理の機能と柔軟性を活用しているので、UI でタグ拡張機能を設定できるようになっています。
+Experience Platformでは、タグ管理の機能と柔軟性を活用しており、UI でタグ拡張機能を設定できるようになっています。
 
 >[!TIP]
 >

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aqua Data Studio のクエリサービスへの接続
 description: このドキュメントでは、Aqua Data Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '502'
 ht-degree: 8%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 8%
 >
 >[!DNL Aqua Data Studio] には [!DNL Windows] バージョンと [!DNL macOS] バージョンがあります。 このガイドのスクリーンショットは、[!DNL macOS] デスクトップアプリを使用して撮影したものです。 UI とバージョンの間に小さな不一致が生じる場合があります。
 
-[!DNL Aqua Data Studio] を Platform に接続するために必要な資格情報を取得するには、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースにアクセスできる必要があります。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
+[!DNL Aqua Data Studio] をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースにアクセスできる必要があります。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ## サーバーを登録 {#register-server}
 
@@ -32,14 +32,14 @@ ht-degree: 8%
 PostgresSQL サーバの **[!DNL Register Server]** ダイアログが表示されたら、サーバ設定の次の詳細を入力します。
 
 - **[!DNL Name]**：接続名。 接続を認識するために、わかりやすい名前を付けることをお勧めします。
-- **[!DNL Login Name]**: ログイン名は Platform 組織 ID です。 `ORG_ID@AdobeOrg` の形式です。
+- **[!DNL Login Name]**: ログイン名はExperience Platformの組織 ID です。 `ORG_ID@AdobeOrg` の形式です。
 - **[!DNL Password]**：これは、[!DNL Query Service] 資格情報ダッシュボードで見つかった英数字の文字列です。
 - **[!DNL Host and Port]**:[!DNL Query Service] のホストエンドポイントとそのポート。 [!DNL Query Service] に接続するには、ポート 80 を使用する必要があります。
-- **[!DNL Database]:** 使用するデータベース。 Platform UI 資格情報 `dbname` の値を使用します：`prod:all`。
+- **[!DNL Database]:** 使用するデータベース。 Experience Platform UI 資格情報の `dbname` には `prod:all` の値を使用します。
 
 ### [!DNL Query Service] 資格情報
 
-資格情報を見つけるには、[!DNL Platform] UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 ログイン資格情報、ホスト、ポートおよびデータベース名の検索に関する詳細な手順については、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。
+資格情報を見つけるには、[!DNL Experience Platform] UI にログインし、左側のナビゲーションから **[!UICONTROL クエリ]** を選択し、続いて **[!UICONTROL 資格情報]** を選択します。 ログイン資格情報、ホスト、ポートおよびデータベース名の検索に関する詳細な手順については、[ 資格情報ガイド ](../ui/credentials.md) を参照してください。
 
 [!DNL Query Service] では、有効期限のない資格情報も提供され、サードパーティのクライアントとの 1 回限りのセットアップが可能になります。 詳しくは、ドキュメント [ 有効期限のない資格情報の生成と使用の方法に関する完全な手順 ](../ui/credentials.md#non-expiring-credentials) を参照してください。
 

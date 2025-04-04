@@ -2,10 +2,11 @@
 title: MTLS サービス API の概要
 description: このドキュメントでは、MTLS API を正常に使用するために知っておく必要がある追加情報を提供します。
 role: Developer
-source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
+exl-id: db5978cf-fe47-4b76-86ba-c8ea1ee6b12f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 42%
+source-wordcount: '215'
+ht-degree: 32%
 
 ---
 
@@ -21,7 +22,7 @@ MTLS サービス API ドキュメントには、API 呼び出しの例とリク
 
 ## 必須ヘッダー
 
-また、API ドキュメントでは、Platform エンドポイントを正しく呼び出すために、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了している必要があります。次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
+また、API ドキュメントでは、Experience Platform エンドポイントを正しく呼び出すために、[ 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 次に示すように、Experience Platform API 呼び出しの必要な各ヘッダーの値は、認証に関するチュートリアルで説明されています。
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

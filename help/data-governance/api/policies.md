@@ -5,10 +5,10 @@ title: データガバナンスポリシー API エンドポイント
 description: データガバナンスポリシーは組織が導入するルールで、Experience Platform 内のデータに対して実行を許可（または制限）するマーケティングアクションの種類を記述するものです。データガバナンスポリシーの表示、作成、更新、削除に関する API 呼び出しには、すべて /policies エンドポイントを使用します。
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
-ht-degree: 100%
+source-wordcount: '1864'
+ht-degree: 98%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->ガバナンスポリシーを、組織内の特定の Platform ユーザーがアクセスできる特定のデータ属性を決定するアクセス制御ポリシーと混同しないでください。アクセス制御ポリシーをプログラムで管理する方法について詳しくは、[Access Control API](../../access-control/abac/api/policies.md) の `/policies` エンドポイントガイドを参照してください。
+>ガバナンスポリシーを、組織内の特定のExperience Platform ユーザーがアクセスできる特定のデータ属性を決定するアクセス制御ポリシーと混同しないでください。 アクセス制御ポリシーをプログラムで管理する方法について詳しくは、[Access Control API](../../access-control/abac/api/policies.md) の `/policies` エンドポイントガイドを参照してください。
 
 ## はじめに
 

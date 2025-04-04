@@ -2,10 +2,10 @@
 title: Reactor API ガイド
 description: Reactor API を使用すると、開発者は Adobe Experience Platform のタグのすべてのリソースをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 99%
+source-wordcount: '1080'
+ht-degree: 97%
 
 ---
 
@@ -99,7 +99,7 @@ API で監査イベントを管理する方法については、[監査イベン
 
 ## コールバック
 
-コールバックは、新しい監査イベントが生成されるたびに Platform が URL ホストに送信するメッセージです。 API でコールバックを管理する方法については、[コールバックエンドポイントのガイド](./endpoints/callbacks.md)を参照してください。
+コールバックは、新しい監査イベントが生成されるたびにExperience Platformが URL ホストに送信するメッセージです。 API でコールバックを管理する方法については、[コールバックエンドポイントのガイド](./endpoints/callbacks.md)を参照してください。
 
 ## 備考
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2024年11月
 description: Adobe Experience Platform の 2024年11月 のリリースノート。
 exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
-source-git-commit: f71fc1d4ad51af52046caeee289546e05967d5bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '853'
 ht-degree: 19%
 
 ---
@@ -24,19 +24,19 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [クエリサービス](#query-service)
 - [サンドボックス](#sandboxes)
 - [ドキュメントの更新](#documentation-updates)
-   - [インタラクティブExperience PlatformAPI ドキュメント](#interactive-experience-platform-api-documentation)
+   - [Interactive Experience Platform API ドキュメント](#interactive-experience-platform-api-documentation)
    - [Experience Leagueの新しい目次](#new-table-of-contents-on-experience-league)
    - [新しい AI アシスタントのランディングページ](#new-ai-assistant-landing-page)
 
 ## AI アシスタント {#ai-assistant}
 
-Adobe Experience Platformの AI アシスタントは、Adobeアプリケーションのワークフローを高速化するために使用できる対話型エクスペリエンスです。 AI アシスタントを使用すると、製品の知識をより深く理解したり、問題をトラブルシューティングしたり、情報を検索して運用インサイトを見つけたりできます。 AI アシスタントは、Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizer、およびCustomer Journey Analyticsをサポートします。
+Adobe Experience Platformの AI アシスタントは、Adobe アプリケーションでのワークフローの高速化に使用できる対話型エクスペリエンスです。 AI アシスタントを使用すると、製品の知識をより深く理解したり、問題をトラブルシューティングしたり、情報を検索して運用インサイトを見つけたりできます。 AI アシスタントは、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsをサポートします。
 
 **新機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE Alpha]{type=Informative} 大幅な変化を監視し、オーディエンスの増加を予測します | AI アシスタントを使用して、有意な変化を監視し、オーディエンスとデータセットのサイズの成長予測を提供します。 その後、この情報を使用して、オーディエンスデータの整合性を確保し、データに基づいた意思決定をサポートするための将来的な予測を提供できます。 詳しくは、[ 重要な変更の監視およびオーディエンスの増加の予測 ](../../ai-assistant/new-features/audience-forecasting.md) に関するガイドを参照してください。 |
+| [!BADGE Alpha]{type=Informative} モニタリングの大幅な変化と、オーディエンスの増加を予測 | AI アシスタントを使用して、有意な変化を監視し、オーディエンスとデータセットのサイズの成長予測を提供します。 その後、この情報を使用して、オーディエンスデータの整合性を確保し、データに基づいた意思決定をサポートするための将来的な予測を提供できます。 詳しくは、[ 重要な変更の監視およびオーディエンスの増加の予測 ](../../ai-assistant/new-features/audience-forecasting.md) に関するガイドを参照してください。 |
 | [!BADGE Alpha]{type=Informative} 自然言語の推定 | AI アシスタントの自然言語推定機能を使用して、簡単で会話的な質問に基づいてオーディエンスのサイズを推定し、オーディエンスの傾向を予測します。 詳しくは、[AI アシスタントでの自然言語推定の使用 ](../../ai-assistant/new-features/natural-language.md) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
@@ -58,7 +58,7 @@ Adobe Experience Platformの AI アシスタントは、Adobeアプリケーシ�
 
 | 機能 | 説明 |
 | --- | --- |
-| [ エッジでのプロファイル属性のリアルタイム検索 ](/help/destinations/ui/activate-edge-profile-lookup.md) | カスタム Personalizationの宛先とEdge NetworkAPI を使用して、リアルタイムでエッジプロファイル属性を検索し、ダウンストリームアプリケーションを通じてパーソナライゼーションエクスペリエンスを提供したり、意思決定ルールを通知したりする方法を説明します。 |
+| [ エッジでのプロファイル属性のリアルタイム検索 ](/help/destinations/ui/activate-edge-profile-lookup.md) | カスタム Personalizationの宛先とEdge Network API を使用して、エッジプロファイル属性をリアルタイムで検索し、パーソナライゼーションエクスペリエンスを提供する方法、またはダウンストリームアプリケーションを通じて意思決定ルールを通知する方法について説明します。 |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Adobe Experience Platformの AI アシスタントは、Adobeアプリケーシ�
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformでは、1 つの Platform インスタンスを別々の仮想環境に分割するサンドボックスを提供し、デジタルエクスペリエンスアプリケーションの開発と発展を支援しています。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
 
 **新機能または更新された機能**
 
@@ -90,13 +90,13 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 ## ドキュメントの更新 {#documentation-updates}
 
-### インタラクティブExperience PlatformAPI ドキュメント {#interactive-api-documentation}
+### Interactive Experience Platform API ドキュメント {#interactive-api-documentation}
 
-[Experience PlatformAPI ドキュメント ](https://developer.adobe.com/experience-platform-apis/) が完全にインタラクティブになり、API リファレンスドキュメントページで直接認証と API の探索ができるようになりました。 これで、目的の API リファレンスドキュメントページに移動し、API 認証資格情報を作成または取得して、**[!UICONTROL 試す]** ブロックに貼り付け、呼び出しを実行できます。 1 つのページ上のすべて。 機能について ](/help/landing/api-authentication.md#get-credentials-functionality) 詳細を参照 [。
+[Experience Platform API ドキュメント ](https://developer.adobe.com/experience-platform-apis/) が完全にインタラクティブになり、API リファレンスドキュメントページで直接認証して API を調べることができるようになりました。 これで、目的の API リファレンスドキュメントページに移動し、API 認証資格情報を作成または取得して、**[!UICONTROL 試す]** ブロックに貼り付け、呼び出しを実行できます。 1 つのページ上のすべて。 機能について ](/help/landing/api-authentication.md#get-credentials-functionality) 詳細を参照 [。
 
 ### Experience Leagueの新しい目次 {#new-table-of-contents-on-experience-league}
 
-Experience Leagueドキュメントページの目次が改善され、読者のエクスペリエンスが向上しました。必要な正確なページを検出するためのキーワードフィルター、すべてのページを展開する機能などが追加されました。<br> ![ キーワードフィルターや、すべてのページを展開する機能など、新しい目次エクスペリエンスが追加されました。](../2024/assets/november/new-toc-experience.gif " キーワードフィルターや、すべてのページを展開する機能を含む新しい目次エクスペリエンス "){width="250" align="center" zoomable="yes"}。
+Experience League ドキュメントページの目次が改善され、読者のエクスペリエンスが向上しました。必要な正確なページを検出するためのキーワードフィルター、すべてのページを展開する機能などが追加されました。<br> ![ キーワードフィルターや、すべてのページを展開する機能など、新しい目次エクスペリエンスが追加されました。](../2024/assets/november/new-toc-experience.gif " キーワードフィルターや、すべてのページを展開する機能を含む新しい目次エクスペリエンス "){width="250" align="center" zoomable="yes"}。
 
 ### 新しい AI アシスタントのランディングページ {#new-ai-assistant-landing-page}
 

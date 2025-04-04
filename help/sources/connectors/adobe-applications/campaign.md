@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；Adobe Campaign Managed Cloud Services;campaign;campaign managed services
 title: Adobe Campaign Managed Cloud Services
-description: ユーザーインターフェイスを使用して Campaign Managed Cloud Serviceを Platform に接続する方法について説明します
+description: ユーザーインターフェイスを使用して Campaign Managed Cloud Services をExperience Platformに接続する方法について説明します
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 9%
+source-wordcount: '747'
+ht-degree: 5%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Adobe Campaign Managed Cloud Servicesは、クロスチャネルのカスタマーエクスペリエンスを設計するためのManaged Services プラットフォームであり、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理およびクロスチャネル実行のための環境となります。 詳しくは、[Adobe Campaign v8 ドキュメント ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=ja) を参照してください。
 
@@ -20,7 +20,7 @@ Adobe Campaign Managed Cloud Services ソースを使用すると、Adobe Campai
 
 ## 前提条件
 
-ソース接続を作成して Campaign v8 をExperience Platformにするには、まず次の前提条件を満たす必要があります。
+ソース接続を作成して Campaign v8 をExperience Platformに取り込む前に、まず次の前提条件を満たす必要があります。
 
 * [Adobe Campaign クライアントコンソールを使用してイベントログの読み込みを設定します](#view-delivery-and-tracking-log-data)
 * [XDM ExperienceEvent スキーマの作成](#create-a-schema)
@@ -70,9 +70,9 @@ Adobe Campaign Managed Cloud Services ソースを使用すると、Adobe Campai
 
 最後に、スキーマのデータセットを作成する必要があります。 データセットの作成方法に関する詳細な手順については、[UI でのデータセットの作成 ](../../../catalog/datasets/user-guide.md) に関するガイドを参照してください。
 
-## Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
+## Experience Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
 
-Campaign クライアントコンソールでデータログにアクセスし、スキーマとデータセットを作成したら、ソース接続を作成して、Campaign Managed Services データを Platform に取り込みます。
+Campaign クライアントコンソールでデータログにアクセスし、スキーマとデータセットを作成したら、ソース接続を作成して、Campaign Managed Services データをExperience Platformに取り込みます。
 
 Campaign v8 の配信ログおよびトラッキングログデータを Experience Platfrom に取り込む方法について詳しくは、[UI での Campaigned Managed Services ソース接続の作成 ](../../tutorials/ui/create/adobe-applications/campaign.md) に関するガイドを参照してください。
 
@@ -80,4 +80,4 @@ Campaign v8 の配信ログおよびトラッキングログデータを Experie
 >
 >最近削除されたメール受信者とメールのやり取りが、個人情報をExperience Platformに再度取り込む可能性があるエッジケースがあります。 場合によっては、これにより、そのユーザーに対するマーケティングが再び有効になることがあります。
 >
->* このシナリオは、Experience Platformーでプライバシーリクエストが実行されてからAdobe Campaign Classicで実行されるまでの間にのみアクティブになります。 Campaign でリクエストが実行された後、レコードが Campaign に書き出されていないことを確認するチェックがあります。 これを解決するには、実行 72 時間後に GDPR リクエストを再発行してください。
+>* このシナリオは、Experience Platformでプライバシーリクエストが実行されてからAdobe Campaign Classicで実行されるまでの間にのみアクティブになります。 Campaign でリクエストが実行された後、レコードが Campaign に書き出されていないことを確認するチェックがあります。 これを解決するには、実行 72 時間後に GDPR リクエストを再発行してください。

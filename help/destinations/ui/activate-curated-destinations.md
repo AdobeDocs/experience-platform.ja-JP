@@ -3,9 +3,9 @@ title: LiveRamp 識別子に基づいてキュレーションされた宛先に�
 type: Tutorial
 description: LiveRamp RampID を使用して、Adobe Experience Platformからコネクテッドな TV やオーディオの宛先へのオーディエンスやその他の統合機能をアクティブ化する方法について説明します。
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '662'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Adobe Real-Time CDPと [!DNL LiveRamp] の統合を使用すると、以下に�
 
 >[!IMPORTANT]
 >
->を取り込む必要はありません。また、Experience Platformインターフェイスで LiveRamp Ramp RampID を使用して作業する必要もありません。
+>Experience Platform インターフェイスで LiveRamp Ramp RampID を使用する際に、を取り込む必要はありません。
 >
 > 公式の [LiveRamp ドキュメント ](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) に記載されているように、PII ベースの識別子、既知の識別子、カスタム ID など、Real-Time CDPから ID を書き出すことができます。 その後、これらの ID は、アクティブ化プロセス [!DNL LiveRamp RampIDs] さらにダウンストリームで照合されます。
 
@@ -70,13 +70,13 @@ LiveRamp RampID に基づいてキュレーションされた宛先に対して�
 
 これを行うには、**[!DNL LiveRamp - Onboarding]** の宛先を使用します。
 
-![LiveRamp - オンボーディングの宛先カードを示すExperience PlatformUI 画像 ](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
+![LiveRamp - オンボーディングの宛先カードを示すExperience Platform UI 画像 ](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
-[!DNL LiveRamp - Onboarding] の宛先を設定し、宛先からオーディエンスを書き出す方法については、[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) のExperience Platformドキュメントを参照してください。
+[!DNL LiveRamp - Onboarding] の宛先を設定し、Experience Platformからオーディエンスを書き出す方法については、[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) の宛先のドキュメントを参照してください。
 
 >[!IMPORTANT]
 >
->ファイルを [!DNL LiveRamp - Onboarding] の宛先に書き出す場合、Platform では各 [ 結合ポリシー ID](../../profile/merge-policies/overview.md) に対して 1 つの CSV ファイルを生成します。 LiveRamp へのデータ書き出しを検証する方法について詳しくは、[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) 宛先ドキュメントを参照してください。
+>ファイルを [!DNL LiveRamp - Onboarding] の宛先に書き出す場合、Experience Platformでは各 [ 結合ポリシー ID](../../profile/merge-policies/overview.md) に対して 1 つの CSV ファイルを生成します。 LiveRamp へのデータ書き出しを検証する方法について詳しくは、[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) 宛先ドキュメントを参照してください。
 
 
 オーディエンスを LiveRamp に正常に書き出したら、[ 手順 2](#distribution) に進みます。
@@ -91,7 +91,7 @@ LiveRamp RampID に基づいてキュレーションされた宛先に対して�
 
 **[!DNL LiveRamp - Distribution]** の宛先を使用して、（手順 1](#onboarding) で書き出した [ オーディエンスをアクティブ化します。
 
-![LiveRamp – 配布先カードを示すExperience PlatformUI 画像 ](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
+![LiveRamp – 配布先カードを示すExperience Platform UI 画像 ](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
 **[!DNL LiveRamp - Distribution]** の宛先を設定し、[ 手順 1](#onboarding) で書き出したオーディエンスをアクティブ化する方法については、[[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) の宛先のドキュメントを参照してください。
 
@@ -103,11 +103,11 @@ LiveRamp RampID に基づいてキュレーションされた宛先に対して�
 
 >[!TIP]
 >
->宛先に名前を付ける場合、Adobeでは次の形式をお勧めします。`LiveRamp - Downstream Destination Name` この命名パターンにより、宛先ワークスペースの [ 参照 ](../ui/destinations-workspace.md#browse) タブで宛先をすばやく識別することができます。
+>宛先に名前を付ける場合、Adobeでは `LiveRamp - Downstream Destination Name` の形式を使用することをお勧めします。 この命名パターンにより、宛先ワークスペースの [ 参照 ](../ui/destinations-workspace.md#browse) タブで宛先をすばやく識別することができます。
 ><br>
 >例：`LiveRamp - Roku`。
 
-![ 複数の LiveRamp 宛先を示す Platform UI のスクリーンショット。](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+![ 複数の LiveRamp の宛先を示すExperience Platform UI のスクリーンショット。](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 

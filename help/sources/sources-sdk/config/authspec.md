@@ -3,9 +3,9 @@ keywords: Experience Platform;ホーム;人気の高いトピック;ソース;�
 title: セルフサービスソースの認証仕様の設定（Batch SDK）
 description: このドキュメントでは、セルフサービスソース（Batch SDK）を使用するために準備が必要な設定の概要を説明します。
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '772'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 認証仕様は、Adobe Experience Platform ユーザーがソースに接続する方法を定義します。
 
-`authSpec` 配列には、ソースを Platform に接続するために必要な認証パラメーターに関する情報が含まれています。 任意の特定のソースは、複数の異なるタイプの認証をサポートできます。
+`authSpec` 配列には、ソースをExperience Platformに接続するために必要な認証パラメーターに関する情報が含まれています。 任意の特定のソースは、複数の異なるタイプの認証をサポートできます。
 
 ## 認証仕様
 
@@ -340,4 +340,4 @@ GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
 
 ## 次の手順
 
-認証仕様を入力したので、次は Platform に統合するソースのソース仕様を設定することができます。 詳しくは、[ ソース仕様の設定 ](./sourcespec.md) に関するドキュメントを参照してください。
+認証仕様を入力したので、次はExperience Platformに統合するソースのソース仕様を設定することができます。 詳しくは、[ ソース仕様の設定 ](./sourcespec.md) に関するドキュメントを参照してください。

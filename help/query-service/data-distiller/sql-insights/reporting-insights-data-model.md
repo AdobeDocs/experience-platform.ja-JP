@@ -2,10 +2,10 @@
 title: クエリ高速化ストアレポートインサイトガイド
 description: クエリサービスを通じてレポートインサイトデータモデルを作成し、高速化ストアデータとユーザー定義ダッシュボードで使用する方法について説明します。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 82%
+source-wordcount: '1037'
+ht-degree: 77%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 82%
 
 クエリ高速化ストアにより、データから重要なインサイトを得るために必要な時間と処理能力を削減できます。通常、データは標準の間隔（時間単位、日単位など）で処理され、集計ビューが作成、レポートされます。集計データから生成されたこれらのレポートの分析により、ビジネスパフォーマンスの向上を目的としたインサイトが得られます。クエリ高速化ストアには、キャッシュサービス、同時実行、インタラクティブなエクスペリエンス、ステートレス API が含まれています。ただし、生データのクエリではなく、集計クエリ用にデータが事前処理および最適化されていることを前提としています。
 
-クエリ高速化ストアにより、カスタムデータモデルを作成したり、既存のAdobe Real-time Customer Data Platform データモデルを拡張したりできます。 その後、任意のレポート／ビジュアライゼーションフレームワークにレポートインサイトを組み込むことができます。[SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標（KPI）のユースケースに関する Real-Time CDP レポートを作成する](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)方法については、 Real-time Customer Data Platform インサイトデータモデルのドキュメントを参照してください。
+クエリ高速化ストアにより、カスタムデータモデルを作成したり、既存のAdobe Real-Time Customer Data Platform データモデルを拡張したりできます。 その後、任意のレポート／ビジュアライゼーションフレームワークにレポートインサイトを組み込むことができます。[SQL クエリテンプレートをカスタマイズして、マーケティングおよび主要業績評価指標（KPI）のユースケースに関する Real-Time CDP レポートを作成する](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)方法については、 Real-time Customer Data Platform インサイトデータモデルのドキュメントを参照してください。
 
-Adobe Experience PlatformのReal-Time CDP データモデルは、プロファイル、オーディエンスおよび宛先に関するインサイトを提供し、Real-Time CDP インサイトダッシュボードを有効にします。 このドキュメントでは、レポートインサイトデータモデルの作成プロセスと、Real-Time CDP データモデルを必要に応じて拡張する方法について説明します。
+Adobe Experience PlatformのReal-Time CDP データモデルは、プロファイル、オーディエンスおよび宛先に関するインサイトを提供し、Real-Time CDP insight ダッシュボードを有効にします。 このドキュメントでは、レポートインサイトデータモデルの作成プロセスと、Real-Time CDP データモデルを必要に応じて拡張する方法について説明します。
 
 ## 前提条件
 
-このチュートリアルでは、ユーザー定義のダッシュボードを使用して、Platform UI 内のカスタムデータモデルからのデータを視覚化します。この機能について詳しくは、[ユーザー定義ダッシュボードのドキュメント](../../../dashboards/standard-dashboards.md)を参照してください。
+このチュートリアルでは、ユーザー定義のダッシュボードを使用して、Experience Platform UI 内のカスタムデータモデルからのデータを視覚化します。 この機能について詳しくは、[ユーザー定義ダッシュボードのドキュメント](../../../dashboards/standard-dashboards.md)を参照してください。
 
 ## はじめに
 
-レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされた Platform データを保持する Real-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。Data Distiller SKU に関連する [ パッケージ ](../../packaging.md)、[ ガードレール ](../../guardrails.md#query-accelerated-store) および [ ライセンス ](../../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
+レポートインサイト用のカスタムデータモデルを作成したり、エンリッチメントされたExperience Platform データを保持するReal-Time CDP データモデルを拡張したりするには、Data Distiller SKU が必要です。 Data Distiller SKU に関連する [ パッケージ ](../../packaging.md)、[ ガードレール ](../../guardrails.md#query-accelerated-store) および [ ライセンス ](../../data-distiller/license-usage.md) ドキュメントを参照してください。 Data Distiller SKU をお持ちでない場合は、アドビのカスタマーサービス担当者に詳細をお問い合わせください。
 
 ## レポートインサイトデータモデルの作成
 
@@ -33,7 +33,7 @@ Adobe Experience PlatformのReal-Time CDP データモデルは、プロファ�
 
 ![オーディエンスインサイトユーザーモデルのエンティティ関係図（ERD）。](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-この例では、`externalaudiencereach` テーブル／データセットは ID に基づいており、一致数の下限と上限をトラックします。`externalaudiencemapping` ディメンションテーブル/データセットは、外部 ID を Platform の宛先とオーディエンスにマップします。
+この例では、`externalaudiencereach` テーブル／データセットは ID に基づいており、一致数の下限と上限をトラックします。`externalaudiencemapping` ディメンションテーブル/データセットは、外部 ID をExperience Platformの宛先とオーディエンスにマップします。
 
 ## Data Distiller を使用したレポートインサイト用のモデルの作成
 

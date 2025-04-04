@@ -2,9 +2,9 @@
 title: サンドボックスツール
 description: サンドボックス間でサンドボックス設定をシームレスに書き出し、読み込みます。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
+source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2486'
 ht-degree: 8%
 
 ---
@@ -252,7 +252,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![ インポートの詳細な分類を表示する [!UICONTROL  インポートの詳細 ] ダイアログ ](../images/ui/sandbox-tooling/import-details.png)
 
-読み込みが完了すると、Platform UI に通知が届きます。 これらの通知には、アラート アイコンからアクセスできます。 ジョブが失敗した場合は、ここからトラブルシューティングに移動できます。
+読み込みが完了すると、Experience Platform UI に通知が届きます。 これらの通知には、アラート アイコンからアクセスできます。 ジョブが失敗した場合は、ここからトラブルシューティングに移動できます。
 
 ## ビデオチュートリアル
 

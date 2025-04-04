@@ -4,10 +4,10 @@ title: オーディエンスダッシュボード
 description: Adobe Experience Platformには、組織が作成したオーディエンスに関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3132'
-ht-degree: 40%
+source-wordcount: '3136'
+ht-degree: 38%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 40%
 
 Adobe Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、オーディエンスに関する重要な情報を表示できるダッシュボードが用意されています。 このガイドでは、UI での [!UICONTROL  オーディエンス ] ダッシュボードへのアクセスおよび操作方法の概要を説明し、ダッシュボードに表示されるビジュアライゼーションの詳細を説明します。
 
-Platform ユーザーインターフェイス内の Adobe Experience Platform セグメント化サービスのすべての機能の概要については、 [セグメント化サービス UI ガイド](../../segmentation/ui/overview.md)を参照してください。
+Experience Platform ユーザーインターフェイス内のAdobe Experience Platform セグメント化サービスのすべての機能の概要については、[ セグメント化サービス UI ガイド ](../../segmentation/ui/overview.md) を参照してください。
 
 ## [!UICONTROL  オーディエンス ] ダッシュボードデータ
 
@@ -29,11 +29,11 @@ Platform ユーザーインターフェイス内の Adobe Experience Platform �
 
 ## [!UICONTROL  オーディエンス ] ダッシュボードを探索 {#explore}
 
-Platform UI 内で [!UICONTROL  オーディエンス ] ダッシュボードに移動するには、左側のパネルで **[!UICONTROL オーディエンス]** を選択し、「**[!UICONTROL 概要]**」タブを選択してダッシュボードを表示します。
+Experience Platform UI 内の [!UICONTROL  オーディエンス ] ダッシュボードに移動するには、左側のパネルで **[!UICONTROL オーディエンス]** を選択し、「**[!UICONTROL 概要]**」タブを選択してダッシュボードを表示します。
 
 >[!NOTE]
 >
->Platform を初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL オーディエンス]ダッシュボードは表示されません。代わりに、「[!UICONTROL 概要]」タブには、セグメント化を開始する際に役立つリンクとドキュメントが表示されます。
+>Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL  オーディエンス ] ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、セグメント化を開始する際に役立つリンクとドキュメントが表示されます。
 
 ![[!UICONTROL  オーディエンス ] ダッシュボード [!UICONTROL  概要 ] タブ（[!UICONTROL  オーディエンス ] および [!UICONTROL  概要 ] がハイライト表示されています ](../images/audiences/dashboard-overview.png)。
 
@@ -53,7 +53,7 @@ Platform UI 内で [!UICONTROL  オーディエンス ] ダッシュボードに
 
 ### SQL を表示 {#view-sql}
 
-[!UICONTROL  概要 ] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいて Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド ](../view-sql.md) を参照してください。
+[!UICONTROL  概要 ] ワークスペースを切り替えることで、ダッシュボードで視覚化されたインサイトを生成する SQL を表示できます。 既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成できます。 この機能について詳しくは、[SQL UI を表示ガイド ](../view-sql.md) を参照してください。
 
 ## オーディエンスを選択 {#select-audience}
 
@@ -119,7 +119,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 
 選択した顧客 AI モデルの詳細なインサイトページに移動するには、「**[!UICONTROL モデルの詳細を表示]**」を選択します。
 
-![ 「スコアのExperience PlatformAI 配分 [!UICONTROL  ウィジェットと [!UICONTROL  モデルの詳細を表示 ] がハイライト表示された顧客オーディエンス ] ダッシュボード ](../images/segments/customer-ai-distribution-of-scores.png)
+![ 「[!UICONTROL  スコアの顧客 AI 分布 ] ウィジェットと [!UICONTROL  モデルの詳細を表示 ] がハイライト表示されたExperience Platform オーディエンスダッシュボード ](../images/segments/customer-ai-distribution-of-scores.png)
 
 詳細なモデルインサイト ページが表示されます。
 
@@ -146,7 +146,7 @@ Adobe Experience Platformのすべての新しいインスタンスに対して�
 >
 >計算されるプロファイルの合計数は、選択した結合ポリシーによって異なります。 使用する結合ポリシーを変更するには、「概要」タブのすぐ下のドロップダウンを選択します。 簡単な説明については [ 結合ポリシー ](#merge-policies) の節、詳細については [ 結合ポリシーの概要 ](../../profile/merge-policies/overview.md) を参照してください。
 
-![Experience PlatformAI スコアリングの概要ウィジェットがハイライト表示された顧客オーディエンスダッシュボード。](../images/segments/customer-ai-scoring-summary.png)
+![ 顧客 AI スコアリングの概要ウィジェットがハイライト表示されたExperience Platform オーディエンスダッシュボード。](../images/segments/customer-ai-scoring-summary.png)
 
 「**[!UICONTROL モデルの詳細を表示]**」を選択して、選択した顧客 AI モデルの詳細なインサイトページに移動します。 顧客 AI について詳しくは、[ インサイトの獲得 UI ガイド ](../../intelligent-services/customer-ai/user-guide/discover-insights.md) を参照してください。
 
@@ -297,4 +297,4 @@ ID について詳しくは、[ID サービスのドキュメント ](../../iden
 
 ## 次の手順
 
-このドキュメントを通して、[!UICONTROL  オーディエンス ] ダッシュボードを見つけ、表示するオーディエンスを選択できるようになりました。 また、使用可能なウィジェットに表示される指標についても理解できました。 Experience PlatformUI でのオーディエンスの操作について詳しくは、[ セグメント化サービス UI ガイド ](../../segmentation/ui/overview.md) を参照してください。
+このドキュメントを通して、[!UICONTROL  オーディエンス ] ダッシュボードを見つけ、表示するオーディエンスを選択できるようになりました。 また、使用可能なウィジェットに表示される指標についても理解できました。 Experience Platform UI でのオーディエンスの操作について詳しくは、[ セグメント化サービス UI ガイド ](../../segmentation/ui/overview.md) を参照してください。

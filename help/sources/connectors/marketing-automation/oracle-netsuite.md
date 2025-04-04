@@ -1,13 +1,13 @@
 ---
 title: Oracle NetSuite Sourceの概要
-description: API またはユーザーインターフェイスを使用してOracle NetSuite をAdobe Experience Platformに接続する方法について説明します。
+description: API またはユーザーインターフェイスを使用して、Oracle NetSuite をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: ベータ版
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 22%
+source-wordcount: '756'
+ht-degree: 11%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 22%
 >
 >[!DNL Oracle NetSuite] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platformでは、データのサードパーティのマーケティング自動化システムの取り込みがサポートされています。 マーケティング自動化プロバイダーのサポートには、[!DNL Oracle NetSuite] が含まれます。
+Experience Platformでは、データのサードパーティのマーケティング自動処理システムの取り込みがサポートされています。 マーケティング自動化プロバイダーのサポートには、[!DNL Oracle NetSuite] が含まれます。
 
 [[!DNL Oracle NetSuite]](https://www.netsuite.com/) は、ERP/金融、CRM、e コマースソリューションを含むクラウドベースのビジネス管理スイートです。
 
@@ -42,7 +42,7 @@ Experience Platformでは、データのサードパーティのマーケティ�
 
 ## 前提条件 {#prerequisites}
 
-[!DNL Oracle NetSuite] データをExperience Platformに取り込む前に、まず次の点を確認する必要があります。
+[!DNL Oracle NetSuite] データをExperience Platformに取り込むには、まず、次の点を確認する必要があります。
 
 * **[!DNL Oracle NetSuite] アカウント**。
    * 有効なアカウントをお持ちでない場合は、[[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml) にお問い合わせください。
@@ -58,7 +58,7 @@ Experience Platformでは、データのサードパーティのマーケティ�
 
 ### 必要な資格情報の収集 {#gather-credentials}
 
-[!DNL Oracle NetSuite] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Oracle NetSuite] をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
@@ -67,24 +67,24 @@ Experience Platformでは、データのサードパーティのマーケティ�
 | 認証テスト URL | （任意） [!DNL NetSuite] 認証テスト URL。 | `https://{ACCOUNT_ID}.app.netsuite.com<br>/app/login/oauth2/authorize.nl?response_type=code<br>&redirect_uri=https%3A%2F%2Fapi.github.com<br>&scope=rest_webservices<br>&state=ykv2XLx1BpT5Q0F3MRPHb94j<br>&client_id={CLIENT_ID}` |
 | アクセストークン | アクセストークンは JSON web トークン（JWT）形式で、60 分間のみ有効です。 アクセストークンの取得方法について詳しくは、[NetSuite の OAuth 2.0 認証 ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) に関する [!DNL Oracle] ガイドを参照してください。 | `eyJr......f4V0`<br> 値は、JSON web トークン（JWT）形式の 1024 文字の文字列です。 |
 | 更新トークン | アクセストークンの有効期限が切れた後は、更新を使用して新しいアクセストークンを生成します。 更新トークンは 7 日間有効です。 アクセストークンの取得方法について詳しくは、[NetSuite の OAuth 2.0 認証 ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) に関する [!DNL Oracle] ガイドを参照してください。 | `eyJr......dmxM`<br> 値は、JSON web トークン（JWT）形式の 1024 文字の文字列です。 |
-| アクセストークン URL | アプリケーションがPOSTリクエストを送信するトークンエンドポイント。 | `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token` |
+| アクセストークン URL | アプリケーションが POST リクエストを送信するトークンエンドポイント。 | `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token` |
 
 >[!IMPORTANT]
 >
->更新トークンの有効期限が切れた後、更新されたトークンとExperience Platformして新しいアカウントを作成する必要があります。
+>更新トークンの有効期限が切れた後、更新されたトークンを使用して、Experience Platformで新しいアカウントを作成する必要があります。
 
-## [!DNL Oracle NetSuite Activities] を Platform に接続 {#oracle-netsuite-activities}
+## [!DNL Oracle NetSuite Activities] をExperience Platformに接続 {#oracle-netsuite-activities}
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Oracle NetSuite Activities] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Oracle NetSuite Activities] をExperience Platformに接続する方法について説明しています。
 
-* [API を使用して Platform にデータを取り込むためのソ  [!DNL Oracle NetSuite Activities]  ス接続とデータフローを作成します ](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)。
+* [ ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL Oracle NetSuite Activities]  ータを取り込みます ](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)。
 * [UI を使用してアカウ  [!DNL Oracle NetSuite Activities]  トをExperience Platformに接続します ](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)。
 * [UI を使用したソース接続のデータフローの作成 ](../../tutorials/ui/dataflow/marketing-automation.md)。
 
-## [!DNL Oracle NetSuite Entities] を Platform に接続 {#oracle-netsuite-entities}
+## [!DNL Oracle NetSuite Entities] をExperience Platformに接続 {#oracle-netsuite-entities}
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Oracle NetSuite Entities] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Oracle NetSuite Entities] をExperience Platformに接続する方法について説明しています。
 
-* [API を使用して Platform にデータを取り込むためのソ  [!DNL Oracle NetSuite Entities]  ス接続とデータフローを作成します ](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)。
+* [ ソース接続とデータフローを作成し、API を使用してExperience Platformに  [!DNL Oracle NetSuite Entities]  ータを取り込みます ](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)。
 * [UI を使用してアカウ  [!DNL Oracle NetSuite Entities]  トをExperience Platformに接続します ](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)。
 * [UI を使用したソース接続のデータフローの作成 ](../../tutorials/ui/dataflow/marketing-automation.md)。

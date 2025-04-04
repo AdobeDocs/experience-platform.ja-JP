@@ -3,16 +3,16 @@ keywords: Experience Platform；プロファイル；リアルタイム顧客プ
 title: UI でのプロファイルの詳細のカスタマイズ
 description: このガイドでは、Adobe Experience Platform UI 内でリアルタイム顧客プロファイルデータを表示する方法をカスタマイズする手順を説明します。
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
 
 # [!DNL Real-Time Customer Profile] 詳細なカスタマイズ {#profile-detail-customization}
 
-Adobe Experience Platformのユーザーインターフェイスでは、顧客プロファイルの形式でデータ [!DNL Real-Time Customer Profile] 表示し、操作できます。 UI に表示されるプロファイル情報は、複数のプロファイルフラグメントを結合し、個々の顧客の単一のビューを形成したものです。 これには、基本属性、リンクされた ID、チャネル環境設定などの詳細が含まれます。 プロファイルに表示されるデフォルトのフィールドは、組織レベルで変更して、優先する [!DNL Profile] 属性を表示することもできます。 このガイドでは、Platform UI 内での [!DNL Profile] データの表示方法をカスタマイズする手順を説明します。
+Adobe Experience Platformのユーザーインターフェイスでは、顧客プロファイルの形式でデータ [!DNL Real-Time Customer Profile] 表示し、操作できます。 UI に表示されるプロファイル情報は、複数のプロファイルフラグメントを結合し、個々の顧客の単一のビューを形成したものです。 これには、基本属性、リンクされた ID、チャネル環境設定などの詳細が含まれます。 プロファイルに表示されるデフォルトのフィールドは、組織レベルで変更して、優先する [!DNL Profile] 属性を表示することもできます。 このガイドでは、Experience Platform UI 内での [!DNL Profile] データの表示方法をカスタマイズする手順を説明します。
 
 プロファイル UI の完全なガイドについては、[ プロファイル UI ガイド ](user-guide.md) を参照してください。
 
@@ -74,7 +74,7 @@ Adobe Experience Platformのユーザーインターフェイスでは、顧客�
 
 ## 新しいカードを追加 {#add-a-new-card}
 
-ダッシュボード内のプロファイルの外観をさらにカスタマイズするには、Experience Platformに新しいカードを追加し、それらのカードに表示する属性を選択します。 開始するには、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL ダッシュボードを変更]**」を選択します。
+Experience Platform内のプロファイルの外観をさらにカスタマイズするには、ダッシュボードに新しいカードを追加し、それらのカードに表示する属性を選択します。 開始するには、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL ダッシュボードを変更]**」を選択します。
 
 ![ 「プロファイルの詳細をカスタマイズ」ボタンがハイライト表示されます。](../images/profile-customization/customize-profile-details.png)
 
@@ -110,4 +110,4 @@ Adobe Experience Platformのユーザーインターフェイスでは、顧客�
 
 ## 次の手順
 
-このドキュメントを通して、カードの追加と削除、カードの詳細と属性の編集、カードの並べ替えとサイズ変更など、組織のプロファイルビューを更新できるようになりました。 Experience PlatformUI でデータの操作について詳 [!DNL Profile] くは、[[!DNL Profile]  ユーザーガイド ](user-guide.md) を参照してください。
+このドキュメントを通して、カードの追加と削除、カードの詳細と属性の編集、カードの並べ替えとサイズ変更など、組織のプロファイルビューを更新できるようになりました。 Experience Platform UI でデータの操作について詳 [!DNL Profile] くは、[[!DNL Profile]  ユーザーガイド ](user-guide.md) を参照してください。

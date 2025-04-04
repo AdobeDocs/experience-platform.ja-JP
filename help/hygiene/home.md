@@ -2,9 +2,9 @@
 title: 高度なデータ・ライフサイクル管理の概要
 description: 高度なデータライフサイクル管理を使用すると、古くなったレコードや不正確なレコードを更新またはパージして、データのライフサイクルを管理できます。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '832'
 ht-degree: 34%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 34%
 
 Adobe Experience Platform では、カスタマーエクスペリエンスを調整するために、大規模で複雑なデータ操作を管理するための堅牢なツールのセットを提供しています。長い期間をかけてデータがシステムに取り込まれるにつれて、データが期待通りに使用され、間違ったデータを修正する必要がある場合は更新され、組織のポリシーで必要と判断された場合は削除されるように、データストアを管理することがますます重要になります。
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -26,11 +26,11 @@ Adobe Experience Platform では、カスタマーエクスペリエンスを調
 
 >[!NOTE]
 >
->Advanced Data Lifecycle Management では、[ データセット有効期限エンドポイント ](./api/dataset-expiration.md) を介したデータセット削除、および [workorder エンドポイント ](./api/workorder.md) を介したプライマリ ID を使用した ID 削除（行レベルデータ）をサポートしています。 また、Platform UI を使用して [ データセットの有効期限 ](./ui/dataset-expiration.md) および [ レコードの削除 ](./ui/record-delete.md) を管理することもできます。 詳しくは、リンクされたドキュメントを参照してください。 なお、データライフサイクルはバッチ削除をサポートしていません。
+>Advanced Data Lifecycle Management では、[ データセット有効期限エンドポイント ](./api/dataset-expiration.md) を介したデータセット削除、および [workorder エンドポイント ](./api/workorder.md) を介したプライマリ ID を使用した ID 削除（行レベルデータ）をサポートしています。 また、Experience Platform UI を使用して [ データセットの有効期限 ](./ui/dataset-expiration.md) および [ レコードの削除 ](./ui/record-delete.md) を管理することもできます。 詳しくは、リンクされたドキュメントを参照してください。 なお、データライフサイクルはバッチ削除をサポートしていません。
 
 ## [!UICONTROL  データライフサイクル ] UI ワークスペース {#ui}
 
-Platform UI の [!UICONTROL  データライフサイクル ] ワークスペースを使用すると、データライフサイクル操作の設定とスケジュール設定ができ、レコードが期待どおりに維持されていることを確認するのに役立ちます。
+Experience Platform UI の [!UICONTROL  データライフサイクル ] ワークスペースを使用すると、データライフサイクルの設定とスケジュール設定ができ、レコードが期待どおりにメンテナンスされていることを確認するのに役立ちます。
 
 UI でデータライフサイクルタスクを管理する手順について詳しくは、[ データライフサイクル UI ガイド ](./ui/overview.md) を参照してください。
 
@@ -58,7 +58,7 @@ UI でデータライフサイクルタスクを管理する手順について�
 
 >[!IMPORTANT]
 >
->Amazon Web Services（AWS）のデータセット削除は、変更が完全に適用されるまで、約 3 時間の遅延の影響を受けます。 これには、データセットに削除のフラグが立てられるまでの最大 2 時間と、その後システムから完全に削除されるまでの追加の 1 時間が含まれます。 これに対し、Azure Data Lake を使用する Platform インスタンスの削除リクエストでは、ビジネス機能全体に即時の変更が生じます。
+>Amazon Web Services（AWS）のデータセット削除は、変更が完全に適用されるまで、約 3 時間の遅延の影響を受けます。 これには、データセットに削除のフラグが立てられるまでの最大 2 時間と、その後システムから完全に削除されるまでの追加の 1 時間が含まれます。 これに対し、Azure Data Lake を使用するExperience Platform インスタンスの削除リクエストでは、ビジネス機能全体に即時の変化が生じます。
 >
 >AWS ユーザーの場合、この遅延は、バッチセグメント化、ストリーミングセグメント化、プレビュー、予測、書き出し、データアクセスに影響を与える可能性があります。 Azure Data Lake ユーザーは即時に更新を行うので、この待ち時間はAWSを使用しているお客様にのみ影響します。 AWS ユーザーの場合、影響を受けたすべてのシステムに削除リクエストが完全に反映されるまで、最大 3 時間かかる場合があります。 それに応じて期待値を調整します。
 
@@ -80,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## 次の手順
 
-このドキュメントでは、Platform のデータライフサイクル機能の概要を説明しました。 UI でのデータハイジーンリクエストの実行を開始するには、[UI ガイド](./ui/overview.md)を参照してください。データライフサイクルジョブをプログラムで作成する方法については、[Data Hygiene API ガイド ](./api/overview.md) を参照してください。
+このドキュメントでは、Experience Platformのデータライフサイクル機能の概要を説明しました。 UI でのデータハイジーンリクエストの実行を開始するには、[UI ガイド](./ui/overview.md)を参照してください。データライフサイクルジョブをプログラムで作成する方法については、[Data Hygiene API ガイド ](./api/overview.md) を参照してください。

@@ -4,10 +4,10 @@ title: 標準アラートルール
 description: このドキュメントでは、Experience Platform が提供する事前定義済みのアラートルールについて説明します。
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
-ht-degree: 16%
+source-wordcount: '4279'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 Adobe Experience Platform には、組織に対して有効にできる定義済みのアラートルールがいくつか用意されています。 このドキュメントでは、これらのアドビが提供するアラートルールの詳細を説明します。Experience Platform のアラートに関する一般的な情報については、[アラートの概要](./overview.md)を参照してください。
 
-[Platform UI でアラートルールを表示](./ui.md)すると、各ルールを個別に登録できます。ただし、[I/O イベント通知](./subscribe.md)を通じてアラートを登録する場合、アラートルールは異なる登録パッケージに整理されます。以下の表は、各ルールと、対応する I/O イベント購読名を示しています。
+[Experience Platform UI でアラートルールを表示 ](./ui.md) すると、各ルールを個別に登録できます。 ただし、[I/O イベント通知](./subscribe.md)を通じてアラートを登録する場合、アラートルールは異なる登録パッケージに整理されます。以下の表は、各ルールと、対応する I/O イベント購読名を示しています。
 
 ## ソース {#sources}
 
@@ -36,7 +36,7 @@ Adobe Experience Platform には、組織に対して有効にできる定義済
 
 | I/O イベントの登録 | アラートルール | 説明 |
 | --- | --- | --- |
-| ソースフロー実行の遅延、失敗、エラー | 摂取不足 | このアラートでは、取り込みが 7 時間以上遅延し、Platform にデータが取り込まれない場合にメッセージが送信されます。 |
+| ソースフロー実行の遅延、失敗、エラー | 摂取不足 | 取り込みが 7 時間以上遅延し、Experience Platformにデータが取り込まれない場合は、このアラートからメッセージが送信されます。 |
 
 {style="table-layout:auto"}
 

@@ -5,7 +5,7 @@ title: API でのデータガバナンスポリシーの作成
 type: Tutorial
 description: Policy Service API を使用してデータガバナンスポリシーを作成する方法について説明します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 100%
@@ -26,10 +26,10 @@ ht-degree: 100%
 
 このチュートリアルでは、ポリシーの作成と評価に関わる、次の主要な概念の実用的な知識が必要です。
 
-* [Adobe Experience Platform データガバナンス](../home.md)：データ使用のコンプライアンスを [!DNL Platform] が適用するフレームワーク。
+* [Adobe Experience Platform データガバナンス](../home.md)：データ使用のコンプライアンスを [!DNL Experience Platform] が適用するフレームワーク。
    * [データ使用ラベル](../labels/overview.md)：データ使用ラベルは、XDM データフィールドに適用され、そのデータのアクセス方法に関する制限を指定します。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
-* [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
+* [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 このチュートリアルを開始する前に、[開発者ガイド](../api/getting-started.md)を参照して、必要なヘッダーやサンプル API 呼び出しを含む、[!DNL Policy Service] API の呼び出しを正しく実行するため、必要な重要な情報を確認してください。
 

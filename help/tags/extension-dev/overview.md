@@ -2,10 +2,10 @@
 title: 拡張機能の開発の概要
 description: 様々なタグ拡張タイプの主要コンポーネントと、Adobe Experience Platform での拡張開発プロセスについて説明します。
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 95%
+source-wordcount: '938'
+ht-degree: 91%
 
 ---
 
@@ -37,13 +37,13 @@ Adobe Experience Platform のタグが持つ 1 つの目的は、Adobe 外のエ
 
 ### 件数
 
-ビューは、Platform UI や Data Collection UI を通じて ](https://developer.mozilla.org/ja-JP/docs/Web/HTML/Element/iframe) タグアプリケーション内の [`iframe`HTMLに読み込むことができる要素ファイルです。 ビューには、拡張機能が提供するスクリプトが含まれ、アプリケーションと通信するために小さな API に対応している必要があります。
+ビューは、HTML UI や Data Collection UI を通じて ](https://developer.mozilla.org/ja-JP/docs/Web/HTML/Element/iframe) タグアプリケーションの [`iframe` 要素に読み込むことができるExperience Platform ファイルです。 ビューには、拡張機能が提供するスクリプトが含まれ、アプリケーションと通信するために小さな API に対応している必要があります。
 
 拡張機能で最も重要なビューファイルは、設定です。 詳しくは、 [拡張機能の設定](#configuration) の節を参照してください。
 
 ビュー内で使用するライブラリに関して制限はありません。 つまり、jQuery、Underscore、React、Angular、Bootstrap などを使用できます。ただし、拡張機能のルックアンドフィールを UI と似たものにすることをお勧めします。
 
-すべての表示関連ファイル（HTML、CSS、JavaScript）は、ライブラリモジュールファイルから分離された 1 つのサブディレクトリ内に配置することをお勧めします。 `extension.json` に、このビューのサブディレクトリの場所を記述します。その後、Platform は、web サーバーからこのサブディレクトリ（このサブディレクトリのみ）を提供します。
+すべての表示関連ファイル（HTML、CSS、JavaScript）は、ライブラリモジュールファイルから分離された 1 つのサブディレクトリ内に配置することをお勧めします。 `extension.json` に、このビューのサブディレクトリの場所を記述します。その後、Experience Platformは、web サーバーからこのサブディレクトリ（このサブディレクトリのみ）を提供します。
 
 ## ライブラリコンポーネント {#components}
 
@@ -93,4 +93,4 @@ UI のプロパティに拡張機能をインストールすると、拡張機�
 
 ## 拡張機能の送信
 
-拡張機能のビルドが完了したら、その拡張機能を送信して、Platform の拡張機能カタログに表示できます。 詳しくは、 [拡張機能送信プロセスの概要](./submit/overview.md) を参照してください。
+拡張機能の作成が完了したら、その拡張機能を送信して、Experience Platformの拡張機能カタログに表示できます。 詳しくは、 [拡張機能送信プロセスの概要](./submit/overview.md) を参照してください。

@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Experience PlatformUI のブラウザーと言語のサポート
+title: Experience Platform UI のブラウザーと言語のサポート
 description: Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。Experience Platform を使用すると、顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスのデザインと配信を大幅に改善できます。
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '253'
 ht-degree: 33%
 
 ---
 
-# Experience PlatformUI のブラウザーと言語のサポート
+# Experience Platform UI のブラウザーと言語のサポート
 
 Adobe Experience Platform ユーザーインターフェイス（UI）は、複数のブラウザーと言語をサポートするように設計されています。
 
 ## ブラウザーのサポート
 
-Platform UI は、Google Chrome、Safari、Firefox およびMicrosoft Edgeの **最新バージョン** で最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能を使用すると問題が発生する場合があります。
+Experience Platform UI は、Google Chrome、Safari、Firefox およびMicrosoft Edgeの **最新バージョン** で最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能を使用すると問題が発生する場合があります。
 
 | オペレーティングシステム | サポートされているブラウザー |
 |---|---|
@@ -32,7 +32,7 @@ Platform UI は、Google Chrome、Safari、Firefox およびMicrosoft Edgeの **
 
 ## 言語サポート
 
-Platform UI は現在、次の言語で使用できます。
+Experience Platform UI は現在、次の言語で利用できます。
 
 * 英語
 * フランス語
@@ -51,7 +51,7 @@ Platform UI は現在、次の言語で使用できます。
 
 言語を変更するには：
 
-1. Experience Platformアカウントにログインします。
+1. Experience Platform アカウントにログインします。
 1. `Ctrl + i` を押して、アカウント情報メニューを表示します。
 1. **[!UICONTROL 優先言語]** に移動します。
 1. 第 1 言語と第 2 言語の環境設定を選択します。

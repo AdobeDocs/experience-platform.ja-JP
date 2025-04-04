@@ -5,7 +5,7 @@ title: 既存の XDM スキーマへの CSV ファイルのマッピング
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して、既存の XDM スキーマに CSV ファイルをマッピングする方法について説明します。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 92%
@@ -18,14 +18,14 @@ ht-degree: 92%
 >
 >このドキュメントでは、既存の XDM スキーマに CSV ファイルをマッピングする方法について説明します。AI 生成のスキーマレコメンデーションツール（現在はベータ版）の使用方法について詳しくは、[機械学習のレコメンデーションを使用した CSV ファイルのマッピング](./recommendations.md)を参照してください。
 
-CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
+CSV データを [!DNL Adobe Experience Platform] に取り込むには、データを [!DNL Experience Data Model]（XDM）スキーマにマッピングする必要があります。このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して、CSV ファイルを XDM スキーマにマッピングする方法について説明します。
 
 ## はじめに
 
-このチュートリアルでは、[!DNL Platform] の次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、[!DNL Experience Platform] の次のコンポーネントに関する十分な知識が必要です。
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)：[!DNL Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
-- [バッチ取得](../../batch-ingestion/overview.md)：[!DNL Platform] がユーザー指定のデータファイルからデータを取り込む方法。
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
+- [バッチ取得](../../batch-ingestion/overview.md)：[!DNL Experience Platform] がユーザー指定のデータファイルからデータを取り込む方法。
 - [Adobe Experience Platform データ準備](../../batch-ingestion/overview.md)：取り込んだデータを XDM スキーマに準拠するようにマッピングおよび変換できる一連の機能。[データ準備関数](../../../data-prep/functions.md)に関するドキュメントは、特にスキーママッピングに関連しています。
 
 また、このチュートリアルでは、CSV データの取り込み先のデータセットを既に作成している必要があります。UI でデータセットを作成する手順については、[データ取得のチュートリアル](../ingest-batch-data.md)を参照してください。
@@ -64,7 +64,7 @@ CSV データを新しいデータセットに取り込むには、「**[!UICONT
 
 「**[!UICONTROL マッピング]**」手順が表示されます。CSV ファイルの列は「**[!UICONTROL ソースフィールド]**」の下にリストされ、対応する XDM スキーマフィールドが「**[!UICONTROL ターゲットフィールド]**」の下にリストされます。
 
-[!DNL Platform] は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを自動的に提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。
+[!DNL Experience Platform] は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを自動的に提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -120,7 +120,7 @@ CSV ファイルがマッピングされ、作成されたら、CSV ファイル
 
 ## 次の手順
 
-このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、[!DNL Platform] に取り込むことができます。[!DNL Real-Time Customer Profile] などのダウンストリームの [!DNL Platform] サービスで、このデータを使用できるようになりました。詳しくは、[[!DNL Real-Time Customer Profile]](../../../profile/home.md) の概要を参照してください。
+このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、[!DNL Experience Platform] に取り込むことができます。[!DNL Real-Time Customer Profile] などのダウンストリームの [!DNL Experience Platform] サービスで、このデータを使用できるようになりました。詳しくは、[[!DNL Real-Time Customer Profile]](../../../profile/home.md) の概要を参照してください。
 
 >[!TIP]
 >

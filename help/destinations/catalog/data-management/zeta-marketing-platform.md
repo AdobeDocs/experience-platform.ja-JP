@@ -4,9 +4,9 @@ description: Zeta Marketing Platform （ZMP）は、インテリジェンス（�
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1356'
 ht-degree: 28%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 28%
 
 Zeta Marketing Platform （ZMP）は、インテリジェンス（独自のデータと AI）を活用して、より効率的に顧客を獲得、成長、保持するのに役立つクラウドベースのシステムです。 詳しくは、[Zeta Global](https://zetaglobal.com/) を参照してください。
 
-Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタを使用すると、オーディエンスをExperience Platformから ZMP にシームレスに同期できます。
+Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタを使用すると、Experience Platformから ZMP にオーディエンスをシームレスに同期できます。
 
 >[!IMPORTANT]
 >
@@ -31,14 +31,14 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 
 ### 広告によるユーザーのターゲティング {#use-case-target-users}
 
-広告主は、ゼータDemand Side Platform（DSP）を通じて、特定のオーディエンス内のユーザーをターゲットにすることを目的としています。 ゼータDSPの詳細については、[ ここ ](https://knowledgebase.zetaglobal.com/pug/) をクリックしてください。
+広告主は、ゼータDemand Side Platform（DSP）を通じて、特定のオーディエンス内のユーザーをターゲットに設定することを目的としています。 ゼータ・DSPに関する詳細は、[ こちら ](https://knowledgebase.zetaglobal.com/pug/) をクリックしてください。
 
 ## 前提条件 {#prerequisites}
 
 ### Zeta Marketing Platform 前提条件
 
 * Zeta Marketing Platform の宛先への新しい接続を設定する前に、Zeta Marketing Platform アカウントに空の顧客リストを作成する必要があります。 送信するAdobe Experience Platform オーディエンスを受け取るターゲットとして、これらのカスタマーリストのいずれかを指定する必要があります。 [ こちら ](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) の手順に従って、ZMP に空の顧客リストを作成できます。
-* Adobe Experience Platformでは、特定の ZMP 宛先インスタンスに対して複数のオーディエンスをアクティブ化できますが、各 ZMP 宛先インスタンスが受け取るExperience Platformオーディエンスは 1 つのみである必要があります。 Experience Platformから複数のオーディエンスを処理するには、各オーディエンスに対して追加の ZMP 宛先インスタンスを作成し、ドロップダウンから別の顧客リストを選択します。 このアプローチにより、ターゲットの ZMP オーディエンスが上書きされなくなります。 詳しくは、[ 宛先の詳細の入力 ](#destination-details) を参照してください。
+* Adobe Experience Platformでは、特定の ZMP 宛先インスタンスに対して複数のオーディエンスをアクティブ化できますが、各 ZMP 宛先インスタンスが受け取るExperience Platform オーディエンスは 1 つのみである必要があります。 Experience Platformから複数のオーディエンスを処理するには、各オーディエンスに対して追加の ZMP 宛先インスタンスを作成し、ドロップダウンから別の顧客リストを選択します。 このアプローチにより、ターゲットの ZMP オーディエンスが上書きされなくなります。 詳しくは、[ 宛先の詳細の入力 ](#destination-details) を参照してください。
 * 次の資格情報を使用して宛先を設定します。
    * ユーザー名：**api**
    * パスワード：ZMP REST API キー。 REST API キーを見つけるには、ZMP アカウントにログインし、**設定**/**統合**/**キーとアプリ** セクションに移動します。 詳しくは、[ZMP のドキュメント ](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
@@ -53,7 +53,7 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 | ターゲット ID | 説明 | 注意点 | メモ |
 ---------|----------|----------|----------|
 | uid | 顧客プロファイルを区別するために ZMP が使用する一意の ID | 必須 | メールアドレスを使用して一意のプロファイルを識別する場合は、`Email` の標準 ID 名前空間を選択します。 または、顧客プロファイルにメールがない場合は、カスタム名前空間を `uid` にマッピングすることもできます。 |
-| email_md5_id | 各顧客プロファイルを表す E メール MD5 | オプション | メール MD5 値を使用して顧客プロファイルを一意に識別することを目的とする場合は、このターゲット ID を選択します。 Platform はプレーンテキストを MD5 に変換しないので、メールアドレスがExperience Platform内で既に MD5 形式になっている必要があります。 このシナリオでは、`uid` （必須）を同じメール MD5 値または別の適切な ID 名前空間に設定します。 |
+| email_md5_id | 各顧客プロファイルを表す E メール MD5 | オプション | メール MD5 値を使用して顧客プロファイルを一意に識別することを目的とする場合は、このターゲット ID を選択します。 Experience Platformはプレーンテキストを MD5 に変換しないので、メールアドレスがExperience Platform内で既に MD5 フォーマットになっている必要があります。 このシナリオでは、`uid` （必須）を同じメール MD5 値または別の適切な ID 名前空間に設定します。 |
 
 {style="table-layout:auto"}
 
@@ -63,13 +63,13 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | X | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
-> 個々のメンバーが Platform オーディエンスに追加または削除されると、それに応じて宛先の顧客リストが確実に同期されるように、更新が ZMP に送信されます。
+> 個々のメンバーがExperience Platform オーディエンスに追加または削除されると、宛先カスタマーリストが適切に同期されるように、更新が ZMP に送信されます。
 
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
@@ -104,7 +104,7 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL ZMP アカウントサイト ID]**：オーディエンスの送信先となる ZMP **サイト ID**。 サイト ID を表示するには、**設定** / **統合** / **キーとアプリ** セクションに移動します。 詳しくは、[ こちら ](https://knowledgebase.zetaglobal.com/kb/integrations) を参照してください。
-* **[!UICONTROL ZMP セグメント]**:Platform オーディエンスで更新する ZMP サイト ID アカウントの顧客リストセグメント。
+* **[!UICONTROL ZMP セグメント]**:Experience Platform オーディエンスで更新する ZMP サイト ID アカウントの顧客リストセグメント。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -131,7 +131,7 @@ Adobe Experience Platformで利用可能な Zeta Marketing Platform コネクタ
 
 ターゲットフィールドを選択：
 * （必須）ソース ID 名前空間をマッピングするターゲット ID として `uid` を選択します。
-* （オプション）メール md5 値を表すソース ID 名前空間をマッピングしたターゲット ID として `email_md5_id` を選択します。 Platform はプレーンテキストを MD5 に変換しないので、メールアドレスがExperience Platform内で既に MD5 形式になっている必要があります
+* （オプション）メール md5 値を表すソース ID 名前空間をマッピングしたターゲット ID として `email_md5_id` を選択します。 Experience Platformはプレーンテキストを MD5 に変換しないので、メールアドレスがExperience Platform内で既に MD5 フォーマットになっている必要があります
 * 必要に応じて、追加のターゲットマッピングを選択します。
 
 ![ID マッピング ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)

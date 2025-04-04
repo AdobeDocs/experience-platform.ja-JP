@@ -2,9 +2,9 @@
 title: Edge Network Server API のパフォーマンスガードレール
 description: 最適なパフォーマンスガードレール内で Server API を使用する方法を説明します。
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '573'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 パフォーマンスガードレールは、Server API のユースケースに関連する使用制限を定義します。 この記事で説明しているパフォーマンスガードレールを超えると、パフォーマンスが低下する可能性があります。
 
-Adobeは、使用量の制限を超えたことによるパフォーマンスの低下については責任を負いません。 パフォーマンスのガードレールを常に超えるお客様は、パフォーマンスの低下を避けるために追加の処理能力をリクエストできます。
+Adobeは、使用量の制限を超えたことによって発生したパフォーマンスの低下については責任を負いません。 パフォーマンスのガードレールを常に超えるお客様は、パフォーマンスの低下を避けるために追加の処理能力をリクエストできます。
 
 >[!IMPORTANT]
 >
@@ -26,12 +26,12 @@ Adobeは、使用量の制限を超えたことによるパフォーマンスの
 
 ## 定義
 
-* **可用性** は、5 分間隔ごとに、エラーで失敗せず、プロビジョニングされたEdge NetworkAPI にのみ関連するExperience PlatformEdge Networkによって処理されたリクエストの割合として計算されます。 指定された 5 分間隔でテナントがリクエストを行わなかった場合、その間隔は 100% 使用可能と見なされます。
+* **可用性** は、5 分間隔ごとに、エラーで失敗せず、プロビジョニングされたEdge Network API にのみ関連するExperience Platform Edge Networkによって処理されたリクエストの割合として計算されます。 指定された 5 分間隔でテナントがリクエストを行わなかった場合、その間隔は 100% 使用可能と見なされます。
 * **月間稼動率** は、特定の地域について、1 か月におけるすべての 5 分間の可用性の平均として計算されます。
-* **アップストリーム** は、Edge Networkの背後にあるサービスで、Adobeサーバーサイド転送、Adobe Edge セグメント化、Adobe Targetなどの特定のデータストリームに対して有効になります。
+* **アップストリーム** とは、Edge Networkの背後にあるサービスで、Adobe サーバーサイド転送、Adobe Edge セグメント化、Adobe Targetなどの特定のデータストリームに対して有効になります。
 * **リクエスト単位** は、リクエストの 8 KB フラグメントと、データストリーム用に設定された 1 つのアップストリームに対応します。
 * **リクエスト** は、顧客が所有するアプリケーションから [!DNL Server API] に送信される単一のメッセージです。 リクエストには、1 つ以上のリクエストユニットを含めることができます。
-* **error** は、Edge Network[ 内部サービスエラー ](error-handling.md) が原因で失敗したリクエストです。
+* **エラー** は、Edge Network [ 内部サービスエラー ](error-handling.md) が原因で失敗したリクエストです。
 
 ## サービス制限
 
@@ -45,10 +45,10 @@ Adobeは、使用量の制限を超えたことによるパフォーマンスの
 
 | データストリームごとに設定されたアップストリーム | 平均リクエストサイズ | リクエスト単位 |
 | --- | --- | --- |
-| 1 （Adobe基盤） | 8 KB （1 個のフラグメント） | 1 |
-| 2 （Adobeプラットフォーム、Adobe Target） | 8 KB （1 個のフラグメント） | 2 |
-| 2 （Adobeプラットフォーム、Adobe Target） | 16 KB （2 個のフラグメント） | 4 |
-| 2 （Adobeプラットフォーム、Adobe Target） | 64 KB （8 個のフラグメント） | 16 |
+| 1 （Adobe Experience Platform） | 8 KB （1 個のフラグメント） | 1 |
+| 2 （Adobe Target・Adobe Experience Platform） | 8 KB （1 個のフラグメント） | 2 |
+| 2 （Adobe Target・Adobe Experience Platform） | 16 KB （2 個のフラグメント） | 4 |
+| 2 （Adobe Target・Adobe Experience Platform） | 64 KB （8 個のフラグメント） | 16 |
 
 ### リクエスト単位の制限
 
@@ -72,10 +72,10 @@ Adobeは、使用量の制限を超えたことによるパフォーマンスの
 
 ## 次の手順
 
-他のExperience Platformサービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
+他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platformサービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

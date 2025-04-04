@@ -1,11 +1,11 @@
 ---
-title: Flow Service API を使用したSalesforceのExperience Platformへの接続
+title: Flow Service API を使用したSalesforceとExperience Platformの接続
 description: Flow Service API を使用してAdobe Experience PlatformをSalesforce アカウントに接続する方法について説明します。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 01f655df8679383f57d60796be5274acd9b5df68
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1077'
-ht-degree: 24%
+source-wordcount: '1082'
+ht-degree: 19%
 
 ---
 
@@ -17,16 +17,16 @@ ht-degree: 24%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
-## [!DNL Salesforce] を [!DNL Azure] のExperience Platformに接続する {#azure}
+## [!DNL Salesforce] を [!DNL Azure] のExperience Platformに接続 {#azure}
 
-[!DNL Azure] で [!DNL Salesforce] ソースをExperience Platformに接続する方法については、以下の手順を参照してください。
+[!DNL Salesforce] ソースを [!DNL Azure] 上のExperience Platformに接続する方法については、以下の手順を参照してください。
 
 ### 必要な資格情報の収集
 
@@ -44,7 +44,7 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 | `username` | [!DNL Salesforce] ユーザーアカウントのユーザー名。 |
 | `password` | [!DNL Salesforce] ユーザーアカウントのパスワード。 |
 | `securityToken` | [!DNL Salesforce] ユーザーアカウントのセキュリティ トークン。 |
-| `apiVersion` | （オプション）使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 |
+| `apiVersion` | （オプション）使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
 基本について詳しくは、[ このSalesforceのドキュメント ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm) を参照してください。
@@ -58,18 +58,18 @@ OAuth 2 クライアント資格情報を使用して [!DNL Salesforce] アカ�
 | `environmentUrl` | [!DNL Salesforce] ソースインスタンスの URL。 `environmentUrl` の形式は `https://[domain].my.salesforce.com` です |
 | `clientId` | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | `clientSecret` | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
-| `apiVersion` | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新のバージョンが自動的に使用されます。 この値は、OAuth2 クライアント資格情報認証に必須です。 |
+| `apiVersion` | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 この値は、OAuth2 クライアント資格情報認証に必須です。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
 [!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5) を参照してください。
 
 >[!ENDTABS]
 
-### [!DNL Azure] のExperience Platformに [!DNL Salesforce] のベース接続を作成する
+### [!DNL Azure] のExperience Platformで [!DNL Salesforce] のベース接続を作成します。
 
-ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
-ベース接続を作成し、[!DNL Salesforce] アカウントを [!DNL Azure] のExperience Platformに接続するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、リクエスト本文に [!DNL Salesforce] 認証資格情報を指定します。
+ベース接続を作成し、[!DNL Salesforce] アカウントを [!DNL Azure] 上のExperience Platformに接続するには、`/connections` エンドポイントに対して POST リクエストを実行し、リクエスト本文に [!DNL Salesforce] 認証資格情報を指定します。
 
 **API 形式**
 
@@ -194,21 +194,21 @@ curl -X POST \
 
 >[!ENDTABS]
 
-## [!DNL Salesforce] をAmazon Web ServicesのExperience Platform（AWS）に接続する {#aws}
+## Experience Platform on Amazon Web Services（AWS）への [!DNL Salesforce] の接続 {#aws}
 
 >[!AVAILABILITY]
 >
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../../../landing/multi-cloud.md) を参照してください。
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
 
 [!DNL Salesforce] ソースをAWS上のExperience Platformに接続する方法については、以下の手順を参照してください。
 
 ### 前提条件
 
-AWSでExperience Platformに接続できるように [!DNL Salesforce] アカウントを設定する方法については、[[!DNL Salesforce]  概要 ](../../../../connectors/crm/salesforce.md#aws) を参照してください。
+AWS上のExperience Platformに接続できるように [!DNL Salesforce] アカウントを設定する方法については、[[!DNL Salesforce]  概要 ](../../../../connectors/crm/salesforce.md#aws) を参照してください。
 
-### AWSで [!DNL Salesforce] on Experience Platformのベース接続を作成する
+### AWS上のExperience Platformに [!DNL Salesforce] のベース接続を作成する
 
-ベース接続を作成し、[!DNL Salesforce] アカウントをAWS上のExperience Platformに接続するには、`/connections` エンドポイントに対してPOSTリクエストを実行し、資格情報の適切な値を指定します。
+ベース接続を作成し、[!DNL Salesforce] アカウントをAWS上のExperience Platformに接続するには、`/connections` エンドポイントに対して POST リクエストを実行し、資格情報の適切な値を指定します。
 
 **API 形式**
 
@@ -220,7 +220,7 @@ POST /connections
 
 +++選択してリクエストを表示
 
-次のリクエストは、AWSのExperience Platformに [!DNL Salesforce] ソースのベース接続を作成します。
+次のリクエストは、AWS上のExperience Platformに [!DNL Salesforce] ソースのベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -248,7 +248,7 @@ curl -X POST \
   }'
 ```
 
-[!DNL Salesforce] `jwtToken` の取得方法について詳しくは、[AWSでExperience Platformに接続するソースの設定方法 ](../../../../connectors/crm/salesforce.md#aws) に関するガイドを参  [!DNL Salesforce]  してください。
+[!DNL Salesforce] `jwtToken` の取得方法について詳しくは、[AWS上のExperience Platformに接続するソースの設定方法 ](../../../../connectors/crm/salesforce.md#aws) に関するガイドを参  [!DNL Salesforce]  してください。
 
 +++
 
@@ -269,7 +269,7 @@ curl -X POST \
 
 ### 接続ステータスの確認
 
-接続ステータスを確認するには、`/connections` エンドポイントに対してGETリクエストを行い、作成手順で生成されたベース接続 ID を指定します。
+接続ステータスを確認するには、`/connections` エンドポイントに対してGET リクエストを行い、作成手順で生成されたベース接続 ID を指定します。
 
 **API 形式**
 
@@ -394,4 +394,4 @@ curl -X GET \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Salesforce] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、CRM データを Platform に取り込むデータフローの作成](../../collect/crm.md)
+* [ [!DNL Flow Service] API を使用した、CRM データをExperience Platformに取り込むデータフローの作成](../../collect/crm.md)

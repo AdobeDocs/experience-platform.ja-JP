@@ -3,10 +3,10 @@ keywords: Experience Platform;ID;ID サービス；トラブルシューティ�
 title: ID サービスのガードレール
 description: このドキュメントでは、ID グラフの使用を最適化するのに役立つ、ID サービスデータの使用とレート制限に関する情報を提供します。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1585'
-ht-degree: 40%
+source-wordcount: '1586'
+ht-degree: 39%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 40%
 
 ID データのモデリングには、次の Experience Platform サービスが関係しています。
 
-* [ID](home.md)：様々なデータソースの ID が Platform に取り込まれる際に、それらの ID を結び付けます。
+* [ID](home.md):Bridgeに取り込まれる際の、異なるデータソースからのExperience Platform ID。
 * [[!DNL Real-Time Customer Profile]](../profile/home.md)：複数のソースのデータを使用して、統合された消費者プロファイルを作成します。
 
 ## データモデルの上限
@@ -90,12 +90,12 @@ ID サービスは、受信データを継続的に監視して、大規模で�
 
 #### ID サービス：カスタム名前空間 ID タイプの変更
 
-実稼動サンドボックスに次の ID が含まれている場合は、Adobeアカウントチームに連絡して、ID タイプの変更をリクエストしてください。
+実稼動サンドボックスに次の ID が含まれている場合は、Adobe アカウントチームに連絡して、ID タイプの変更をリクエストしてください。
 
 * ユーザー識別子（CRMID など）が cookie/デバイス ID タイプとして設定されるカスタム名前空間。
 * Cookie とデバイスの識別子がクロスデバイス ID タイプとして設定されるカスタム名前空間。
 
-この機能が使用可能になると、50 個の ID の制限を超えているグラフが最大 50 個の ID に縮小されます。 Real-Time CDP B2C Edition の場合、以前はセグメント化とアクティベーションでこれらのプロファイルが無視されていたので、これにより、オーディエンスに適合するプロファイルの数が最小限に増える可能性があります。
+この機能が使用可能になると、50 個の ID の制限を超えているグラフが最大 50 個の ID に縮小されます。 Real-Time CDP B2C Editionの場合、以前はプロファイルがセグメント化とアクティベーションで無視されていたので、これにより、オーディエンスに適格なプロファイルの数が最小限に増加する可能性があります。
 
 #### リアルタイム顧客プロファイル：アドレス可能なオーディエンスへの影響
 
@@ -108,8 +108,8 @@ ID サービスは、受信データを継続的に監視して、大規模で�
 
 CRMID に対して認証済みイベントを保持する場合は、プライマリ ID を ECID から CRMID に変更することをお勧めします。 この変更を実装する手順については、次のドキュメントを参照してください。
 
-* [Experience Platformタグ用に ID マップを設定します ](../tags/extensions/client/web-sdk/data-element-types.md#identity-map)。
-* [Experience PlatformWeb SDK の ID データ](../web-sdk/identity/overview.md#using-identitymap)
+* [Experience Platform タグ用に ID マップを設定します ](../tags/extensions/client/web-sdk/data-element-types.md#identity-map)。
+* [Experience Platform Web SDKの ID データ](../web-sdk/identity/overview.md#using-identitymap)
 
 ### サンプルシナリオ
 
@@ -196,10 +196,10 @@ ECID:35577 を削除した結果、削除された ECID:35577 で CRMID:60013 �
 * [[!DNL Identity Service] の概要](home.md)
 * [ID グラフビューア](features/identity-graph-viewer.md)
 
-他のExperience Platformサービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
+他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platformサービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -5,7 +5,7 @@ title: UI での汎用 OData Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して、汎用のオープンデータプロトコルソース接続を作成する方法を説明します。
 exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 44%
@@ -14,7 +14,7 @@ ht-degree: 44%
 
 # UI での [!DNL Generic OData] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Generic Open Data Protocol] （以下「[!DNL OData]」）ソースコネクタを作成する手順について説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Generic Open Data Protocol] （以下「[!DNL OData]」）ソースコネクタを作成する手順について説明します。
 
 ## はじめに
 
@@ -29,7 +29,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL Platform] で [!DNL OData] アカウントにアクセスするには、次の値を指定する必要があります。
+[!DNL Experience Platform] で [!DNL OData] アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## [!DNL OData] アカウントの接続
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL OData] アカウントを [!DNL Platform] にリンクします。
+必要な資格情報が揃ったら、次の手順に従って、[!DNL OData] アカウントを [!DNL Experience Platform] にリンクします。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -65,4 +65,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL OData] アカウントとの接続を確立しました。次のチュートリアルに進み、[ プロトコルデータをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/protocols.md) を行いましょう。
+このチュートリアルでは、[!DNL OData] アカウントとの接続を確立しました。次のチュートリアルに進み、[ プロトコルデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/protocols.md) を行いましょう。

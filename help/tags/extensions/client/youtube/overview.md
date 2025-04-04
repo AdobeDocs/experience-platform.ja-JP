@@ -2,10 +2,10 @@
 title: YouTube ビデオトラッキング拡張機能の概要
 description: Adobe Experience Platform の YouTube ビデオトラッキングタグ拡張機能について説明します。
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 83%
+source-wordcount: '897'
+ht-degree: 78%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 83%
 * Experience Cloud 訪問者 ID サービス
 * Core 拡張機能
 
-ビデオプレーヤーがレンダリングされる各 web ページのHTMLーで、Google開発者ドキュメントの [ 「\&lt;iframe\> タグを使用してプレーヤーを埋め込む」 ](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) コードスニペットを使用します。
+ビデオプレーヤーがレンダリングされる各 web ページのHTMLにあるGoogle開発者ドキュメントから [ 「\&lt;iframe\> タグを使用してプレーヤーを埋め込む」 ](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) コードスニペットを使用します。
 
 この拡張機能バージョン 2.0.1 は、iframe script タグに一意の値を持つ `id` 属性を挿入し、`src` 属性値の末尾にまだ含まれていない場合は `enablejsapi=1` と `rel=0` を付加することで、単一の Web ページに 1 つ以上の YouTube 動画を埋め込むことができます。次に例を示します。
 
@@ -98,7 +98,7 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->各ビデオの要素に対して複数の eVar または prop を使用できない実装では、Platform 内でデータ要素の値を連結します。[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) で説明されているように、分類ルールビルダーツールを使用して解析した後、Analysis Workspace でセグメントとして適用できます。
+>ビデオ要素ごとに複数の eVar または prop を使用できない実装の場合は、Experience Platform内でデータ要素の値を連結し、[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) で説明されているように、分類ルールビルダーツールを使用して分類レポートに解析したあと、Analysis Workspaceでセグメントとして適用することができます。
 
 ビデオ情報の値を連結するには、「ビデオメタデータ」という新しいデータ要素を作成し、（上記の）すべてのビデオデータ要素を取り込み、組み立てるようにプログラミングします。 例：
 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Platform 内でデータ要素を効果的に作成および活用する方法について詳しくは、[ データ要素 ](../../../ui/managing-resources/data-elements.md) ドキュメントを参照してください。
+Experience Platform内でデータ要素を効果的に作成および活用する方法について詳しくは、[ データ要素 ](../../../ui/managing-resources/data-elements.md) ドキュメントを参照してください。

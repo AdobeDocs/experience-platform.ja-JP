@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Data Prep の概要
 description: このドキュメントでは、Adobe Experience Platform 内でのData Prep について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
-ht-degree: 100%
+source-wordcount: '790'
+ht-degree: 98%
 
 ---
 
@@ -52,7 +52,7 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 
 ## データ形式の取り扱い
 
-Data Prep は、Platform に取り込まれる様々な形式のデータを確実に処理できます。Data Prep で様々なデータタイプがどのように処理されるかについて詳しくは、[データ形式の取り扱いの概要](./data-handling.md)を参照してください。
+Data Prep では、Experience Platformに取り込まれる様々な形式のデータを確実に処理できます。 Data Prep で様々なデータタイプがどのように処理されるかについて詳しくは、[データ形式の取り扱いの概要](./data-handling.md)を参照してください。
 
 ## [!DNL Data Prep] を使用した部分行の更新の送信
 

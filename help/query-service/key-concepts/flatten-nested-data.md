@@ -3,10 +3,10 @@ keywords: Experience Platform;クエリサービス;クエリサービス;ネス
 title: BI ツールで使用するネストされたデータ構造の統合
 description: このドキュメントでは、サードパーティの BI ツールをクエリサービスで使用する際に、セッション中にすべてのテーブルとビューの XDM スキーマを統合する方法について説明します。
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 100%
+source-wordcount: '858'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform クエリサービスは、サードパーティの BI
 
    * [アドホックスキーマの作成](../../xdm/tutorials/ad-hoc.md)：単一のデータセットでのみ使用するために名前空間が設定されているフィールドを持つ XDM スキーマは、アドホックスキーマと呼ばれます。アドホックスキーマは、Experience Platform の様々なデータ取り込みワークフローで使用され、特定の種類のソース接続を作成します。
 
-* [サンドボックス](../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
+* [ サンドボックス ](../../sandboxes/home.md):Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 * [ネストされたデータ構造](./nested-data-structures.md)：このドキュメントでは、ネストされたデータ構造を含む複雑なデータタイプを含むデータセットを作成、処理または変換する方法の例について説明します。
 

@@ -2,16 +2,17 @@
 keywords: カタログサービス；質問；よくある質問；faq；データセット faq
 title: よくある質問
 description: Adobe Experience Platform カタログサービスとデータセットに関するよくある質問への回答
-source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
+exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
 # よくある質問 {#faq}
 
-このドキュメントでは、Adobe Experience Platform カタログサービスとデータセットに関するよくある質問に対する回答を示します。 すべての Platform API で発生する問題を含め、他の Platform サービスに関する質問とトラブルシューティングについては、[Experience Platformトラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
+このドキュメントでは、Adobe Experience Platform カタログサービスとデータセットに関するよくある質問に対する回答を示します。 すべてのExperience Platform API で発生する問題を含め、他のExperience Platform サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
 
 ## 保存ポリシーとルール {#retention-policies-and-rules}
 
@@ -37,7 +38,7 @@ ExperienceEvent XDM クラスを使用して作成されたデータセットに
 
 +++回答
 
-データセットの有効期限は毎週評価および処理され、有効期限が切れたすべてのレコードが削除されます。 イベントが 30 日（取り込み日 > 30 日）以上 Platform に取り込まれ、そのイベントの日付が定義された保持期間を超えている場合、期限切れと見なされます。
+データセットの有効期限は毎週評価および処理され、有効期限が切れたすべてのレコードが削除されます。 イベントが 30 日（取り込み日 > 30 日）以上Experience Platformに取り込まれ、そのイベントの日付が定義された保持期間を超えている場合、イベントは期限切れと見なされます。
 
 +++
 
@@ -45,7 +46,7 @@ ExperienceEvent XDM クラスを使用して作成されたデータセットに
 
 +++回答
 
-保持ポリシーを設定すると、イベントのタイムスタンプが保持期間を超えた場合、既存のイベントは直ちに Platform から削除されます。 新しいイベントは、そのタイムスタンプが保持期間を超えると削除されます。
+リテンション・ポリシーを設定すると、イベント・タイムスタンプがリテンション期間を超えた場合、既存のイベントは直ちにExperience Platformから削除されます。 新しいイベントは、そのタイムスタンプが保持期間を超えると削除されます。
 
 例えば、5 月 15 日に 30 日間の有効期限ポリシーを適用すると、次のようになります。
 
@@ -82,4 +83,3 @@ ExperienceEvent XDM クラスを使用して作成されたデータセットに
 いいえ。保存ポリシーが適用されると、保存期間より古いデータは完全に削除され、リカバリできなくなります。
 
 +++
-

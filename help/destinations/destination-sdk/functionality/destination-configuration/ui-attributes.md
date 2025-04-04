@@ -2,16 +2,16 @@
 description: Destination SDK で作成された宛先に対する UI 属性（ドキュメントリンク、宛先カードカテゴリ、宛先接続タイプおよび頻度など）の設定方法を説明します。
 title: UI 属性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 85%
+source-wordcount: '802'
+ht-degree: 83%
 
 ---
 
 # UI 属性
 
-UI 属性は、Adobe Experience Platform ユーザーインターフェイスでAdobeが宛先カードに表示する必要がある視覚的な要素（ロゴ、ドキュメントページへのリンク、宛先の説明とそのカテゴリおよびタイプなど）を定義します。
+UI 属性は、Adobe ユーザーインターフェイスでAdobe Experience Platformが宛先カードに表示する必要がある視覚要素（ロゴ、ドキュメントページへのリンク、宛先の説明とそのカテゴリおよびタイプなど）を定義します。
 
 このコンポーネントが Destination SDK で作成される統合のどこに適合するかを把握するには、[設定オプション](../configuration-options.md)ドキュメントの図を参照するか、以下の宛先設定の概要ページを参照してください。
 
@@ -21,7 +21,7 @@ UI 属性は、Adobe Experience Platform ユーザーインターフェイスで
 Destination SDK を使用して[宛先を作成](../../authoring-api/destination-configuration/create-destination-configuration.md)する場合、`uiAttributes` セクションで宛先カードの以下のビジュアルプロパティを定義します。
 
 * [宛先カタログ](../../../catalog/overview.md)の宛先ドキュメントページの URL。
-* Platform UI で宛先が表示されるカテゴリ。
+* Experience Platform UI で宛先が表示されるカテゴリ。
 * 宛先のデータ書き出し頻度。
 * 宛先接続タイプ（Amazon S3、Azure Blob など）。
 * 宛先カタログのカードに表示するアイコンをホストした URL。
@@ -112,11 +112,11 @@ Destination SDK で作成中の宛先が限られた数の顧客に対して使�
 
 ![ アイコンの場所を示す UI 画像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-宛先カードにロゴを追加するには、[ レビュー用に宛先を送信 ](../../guides/submit-destination.md#logo) する際に、Adobeチームと目的の画像を共有する必要があります。
+宛先カードにロゴを追加するには、[ レビュー用に宛先を送信 ](../../guides/submit-destination.md#logo) する際に、Adobe チームと目的の画像を共有する必要があります。
 
 ## 次の手順 {#next-steps}
 
-この記事を読むことで、宛先に設定できる UI 属性と、それが Platform UI で表示される場所について、理解を深めることができました。
+この記事を読むことで、宛先に設定できる UI 属性と、それがExperience Platform UI で表示される場所について、理解を深めることができました。
 
 その他の宛先コンポーネントについて詳しくは、以下の記事を参照してください。
 

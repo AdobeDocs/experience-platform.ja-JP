@@ -3,10 +3,10 @@ title: Mailchimp タグ
 description: Mailchimp タグの宛先を使用すると、アカウントデータを書き出し、Mailchimp 内でアクティブ化して、連絡先と関わり合うことができます。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 28%
+source-wordcount: '1657'
+ht-degree: 26%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 28%
 
 [!DNL Mailchimp Tags] では [audiences](https://mailchimp.com/help/getting-started-audience/) および [tags](https://mailchimp.com/help/getting-started-tags/) を使用して連絡先情報を管理します。 タグは、連絡先を整理し、[!DNL Mailchimp] 内の内部分類に合わせてラベルを付けることができるラベルです。
 
-興味や好みに基づいて連絡先を並べ替えるために使用する [!DNL Mailchimp Interest Categories] と比較して、[!DNL Mailchimp Tags] は、連絡先が興味を持つ可能性のある興味のあるトピックの購読を管理することを目的としています。 *Experience Platformにも [!DNL Mailchimp Interest Categories] への接続があるので、[[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) のページで確認できます。*
+興味や好みに基づいて連絡先を並べ替えるために使用する [!DNL Mailchimp Interest Categories] と比較して、[!DNL Mailchimp Tags] は、連絡先が興味を持つ可能性のある興味のあるトピックの購読を管理することを目的としています。 *Experience Platformには [!DNL Mailchimp Interest Categories] 用の接続もあります。[[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) のページで確認できます*。
 
-この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) エンドポイントを活用します。 新しいオーディエンス内でアクティブ化した後に **既存のオーディエンス内で** 新しい連絡先を追加 **または** 既存の [!DNL Mailchimp] しい連絡先のタグを更新 [!DNL Mailchimp] できます。 [!DNL Mailchimp Tags] は、Platform から選択したオーディエンス名を [!DNL Mailchimp] 内のタグ名として使用します。
+この [!DNL Adobe Experience Platform][ 宛先 ](/help/destinations/home.md) は [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) エンドポイントを活用します。 新しいオーディエンス内でアクティブ化した後に **既存のオーディエンス内で** 新しい連絡先を追加 **または** 既存の [!DNL Mailchimp] しい連絡先のタグを更新 [!DNL Mailchimp] できます。 [!DNL Mailchimp Tags] は、Experience Platformから選択したオーディエンス名を [!DNL Mailchimp] 内のタグ名として使用します。
 
 ## ユースケース {#use-cases}
 
@@ -26,11 +26,11 @@ ht-degree: 28%
 
 ### マーケティングキャンペーンの連絡先へのメールの送信 {#use-case-send-emails}
 
-組織の販売部門が、キュレーションされた連絡先リストにメールベースのマーケティングキャンペーンをブロードキャストしたいと考えています。 連絡先リストは、様々なオフラインソースからバッチで受信されるので、追跡する必要があります。 チームは、既存の [!DNL Mailchimp] オーディエンスを特定し、各リストの連絡先が追加されるExperience Platformオーディエンスの構築を開始します。 これらのオーディエンスを [!DNL Mailchimp Tags] に送信した後、選択した [!DNL Mailchimp] オーディエンスに連絡先が存在しない場合、連絡先が属するオーディエンス名を含む関連付けられたタグが追加されます。 [!DNL Mailchimp] オーディエンスに既に連絡先が存在する場合は、オーディエンスと同じ名前の新しいタグが追加されます。 でラベルが表示されるので、オフラインソース [!DNL Mailchimp] 簡単に識別できます。 データがに送信された後、オーディエンス [!DNL Mailchimp] マーケティングキャンペーンメールを送信します。
+組織の販売部門が、キュレーションされた連絡先リストにメールベースのマーケティングキャンペーンをブロードキャストしたいと考えています。 連絡先リストは、様々なオフラインソースからバッチで受信されるので、追跡する必要があります。 チームは既存の [!DNL Mailchimp] オーディエンスを特定し、各リストの連絡先が追加されるExperience Platform オーディエンスの構築を開始します。 これらのオーディエンスを [!DNL Mailchimp Tags] に送信した後、選択した [!DNL Mailchimp] オーディエンスに連絡先が存在しない場合、連絡先が属するオーディエンス名を含む関連付けられたタグが追加されます。 [!DNL Mailchimp] オーディエンスに既に連絡先が存在する場合は、オーディエンスと同じ名前の新しいタグが追加されます。 でラベルが表示されるので、オフラインソース [!DNL Mailchimp] 簡単に識別できます。 データがに送信された後、オーディエンス [!DNL Mailchimp] マーケティングキャンペーンメールを送信します。
 
 ## 前提条件 {#prerequisites}
 
-Experience Platformと [!DNL Mailchimp] で設定する必要がある前提条件と、[!DNL Mailchimp Tags] ースの宛先を使用する前に収集する必要がある情報については、以下の節を参照してください。
+Experience Platformと [!DNL Mailchimp] で設定する必要がある前提条件と、[!DNL Mailchimp Tags] の宛先を使用する前に収集する必要がある情報については、以下の節を参照してください。
 
 ### Experience Platformの前提条件 {#prerequisites-in-experience-platform}
 
@@ -38,7 +38,7 @@ Experience Platformと [!DNL Mailchimp] で設定する必要がある前提条�
 
 ### [!DNL Mailchimp Tags] の宛先の前提条件 {#prerequisites-destination}
 
-Platform から [!DNL Mailchimp Tags] アカウントにデータを書き出すには、次の前提条件に注意してください。
+Experience Platformから [!DNL Mailchimp Tags] アカウントにデータを書き出すには、次の前提条件に注意してください。
 
 #### [!DNL Mailchimp] アカウントが必要です {#prerequisites-account}
 
@@ -88,7 +88,7 @@ API キーの例は `0123456789abcdef0123456789abcde-us14` です。
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -99,7 +99,7 @@ API キーの例は `0123456789abcdef0123456789abcde-us14` です。
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>フィールドマッピングに従って、目的のスキーマフィールド *（例：メールアドレス、電話番号、姓）* と共に、オーディエンスのすべてのメンバーを書き出します。</li><li> Platform で選択した各オーディエンスについて、対応する [!DNL Mailchimp Tags] セグメントのステータスが Platform のオーディエンスのステータスで更新されます。</li></ul> |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>フィールドマッピングに従って、目的のスキーマフィールド *（例：メールアドレス、電話番号、姓）* と共に、オーディエンスのすべてのメンバーを書き出します。</li><li> Experience Platformで選択した各オーディエンスについて、対応する [!DNL Mailchimp Tags] セグメントのステータスがExperience Platformのオーディエンスステータスで更新されます。</li></ul> |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
 
 {style="table-layout:auto"}
@@ -125,7 +125,7 @@ API キーの例は `0123456789abcdef0123456789abcde-us14` です。
 
 {style="table-layout:auto"}
 
-![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+![ 認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
 指定した詳細が有効な場合、UI で&#x200B;**[!UICONTROL 接続済み]**&#x200B;ステータスに緑色のチェックマークが付きます。その後、次の手順に進むことができます。
 
@@ -133,14 +133,14 @@ API キーの例は `0123456789abcdef0123456789abcde-us14` です。
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![宛先の詳細を示す Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+![ 宛先の詳細を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
 
 | フィールド | 説明 |
 | --- | --- |
 | **[!UICONTROL 名前]** | 今後この宛先を認識するための名前。 |
 | **[!UICONTROL 説明]** | 今後この宛先を識別するのに役立つ説明。 |
 | **[!UICONTROL データセンター]** | [!DNL Mailchimp] アカウント `data center`。 詳しくは、[ データセンターの特定  [!DNL Mailchimp]  に関する節 ](#identify-data-center) 参照してください。 |
-| **[!UICONTROL オーディエンス名（最初にデータセンターを入力してください）]** | **[!UICONTROL データセンター]** を入力すると、このドロップダウンに [!DNL Mailchimp] アカウントのオーディエンス名が自動的に入力されます。 Platform のデータで更新するオーディエンスを選択します。 |
+| **[!UICONTROL オーディエンス名（最初にデータセンターを入力してください）]** | **[!UICONTROL データセンター]** を入力すると、このドロップダウンに [!DNL Mailchimp] アカウントのオーディエンス名が自動的に入力されます。 Experience Platformのデータで更新するオーディエンスを選択します。 |
 
 {style="table-layout:auto"}
 
@@ -161,18 +161,18 @@ API キーの例は `0123456789abcdef0123456789abcde-us14` です。
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platform から [!DNL Mailchimp Tags] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
+Adobe Experience Platform から [!DNL Mailchimp Tags] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Experience Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。
 
 XDM フィールドを [!DNL Mailchimp Tags] の宛先フィールドに正しくマッピングするには、次の手順に従います。
 
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
 1. **[!UICONTROL ソースフィールドを選択]** ウィンドウで、「**[!UICONTROL ID 名前空間を選択]** を選択して、`Email` ID 名前空間を選択します。
 
-   ![Source フィールドを ID 名前空間のメールとして使用した Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Source フィールドを ID 名前空間のメールとして使用したExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. **[!UICONTROL ターゲットフィールドを選択]** ウィンドウで、「**[!UICONTROL ID 名前空間を選択]** を選択して、`Email` ID 名前空間を選択します。
 
-   ![ ターゲットフィールドを ID 名前空間のメールとして使用した Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+   ![Target フィールドを ID 名前空間のメールとして使用したExperience Platform UI のスクリーンショット。](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    XDM プロファイルスキーマと [!DNL Mailchimp Tags] の間のマッピングは、次のようになります。
 
@@ -181,7 +181,7 @@ XDM フィールドを [!DNL Mailchimp Tags] の宛先フィールドに正し�
    | `IdentityMap: Email` | `Identity: Email` | ○ |
 
    完了したマッピングの例を次に示します。
-   ![ フィールドマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+   ![ フィールドのマッピングを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
 宛先接続のマッピングの指定が完了したら、「**[!UICONTROL 次へ]**」を選択します。
 

@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対して、書き出されたデータの移動先や、データが到達する場所で使用される認証ルールを示す、宛先配信設定の設定方法を説明します。
 title: 宛先配信
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 99%
+source-wordcount: '564'
+ht-degree: 96%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 99%
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authenticationRule` | 文字列 | [!DNL Platform] が宛先に接続する方法を示します。サポートされている値：<ul><li>`CUSTOMER_AUTHENTICATION`：Platform の顧客が[こちら](customer-authentication.md)で説明しているいずれかの認証方法でお使いのシステムにログインする場合は、このオプションを使用します。</li><li>`PLATFORM_AUTHENTICATION`：アドビと宛先との間にグローバル認証システムがあり、[!DNL Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、このオプションを使用します。この場合、[資格情報 API 設定](../../credentials-api/create-credential-configuration.md)を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>`NONE`：宛先プラットフォームにデータを送信するために認証が必要ない場合は、このオプションを使用します。 </li></ul> |
+| `authenticationRule` | 文字列 | [!DNL Experience Platform] が宛先に接続する方法を示します。サポートされている値：<ul><li>`CUSTOMER_AUTHENTICATION`:Experience Platformのお客様が（こちら [ に記載されているいずれかの認証方法でお使いのシステムにログインされる場合は、このオプションを使用 ](customer-authentication.md) ます。</li><li>`PLATFORM_AUTHENTICATION`：アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、このオプションを使用します。この場合、[資格情報 API 設定](../../credentials-api/create-credential-configuration.md)を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>`NONE`：宛先プラットフォームにデータを送信するために認証が必要ない場合は、このオプションを使用します。 </li></ul> |
 | `destinationServerId` | 文字列 | データの書き出し先にする[宛先サーバー](../../authoring-api/destination-server/create-destination-server.md)の `instanceId`。 |
 | `deliveryMatchers.type` | 文字列 | <ul><li>ファイルベースの宛先用に宛先配信を設定する場合は、常に、これを `SOURCE` に設定します。</li><li>ストリーミング宛先用に宛先配信を設定する場合は、`deliveryMatchers` セクションは必須ではありません。</li></ul> |
 | `deliveryMatchers.value` | 文字列 | <ul><li>ファイルベースの宛先用に宛先配信を設定する場合は、常に、これを `batch` に設定します。</li><li>ストリーミング宛先用に宛先配信を設定する場合は、`deliveryMatchers` セクションは必須ではありません。</li></ul> |

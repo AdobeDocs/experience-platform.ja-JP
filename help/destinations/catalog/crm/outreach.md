@@ -3,10 +3,10 @@ keywords: crm;CRM;CRM 宛先；アウトリーチ；アウトリーチ CRM 宛�
 title: アウトリーチ接続
 description: アウトリーチの宛先を使用すると、アカウントデータを書き出し、ビジネスニーズに合わせてアウトリーチ内でアクティブ化できます。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 42%
+source-wordcount: '1698'
+ht-degree: 38%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 42%
 
 ### アウトリーチの前提条件 {#prerequisites-destination}
 
-Platform から [!DNL Outreach] アカウントにデータを書き出すには、[!DNL Outreach] で次の前提条件に注意してください。
+Experience Platformから [!DNL Outreach] アカウントにデータを書き出すには、[!DNL Outreach] で次の前提条件に注意してください。
 
 #### アウトリーチアカウントが必要です {#prerequisites-account}
 
@@ -83,7 +83,7 @@ Platform から [!DNL Outreach] アカウントにデータを書き出すには
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li> セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Outreach] の各セグメントのステータスは、[ オーディエンススケジュール ](#schedule-segment-export-example) 手順で提供された [!UICONTROL  マッピング ID] 値に基づいて、Platform の対応するオーディエンスステータスとともに更新されます。</li></ul> |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li> セグメントのすべてのメンバーを、フィールドマッピングに従って、必要なスキーマフィールドと共に書き出します&#x200B;*（例：メールアドレス、電話番号、姓）*。</li><li> [!DNL Outreach] の各セグメントのステータスは、[ オーディエンススケジュール ](#schedule-segment-export-example) 手順で提供された [!UICONTROL  マッピング ID] 値に基づいて、Experience Platformの対応するオーディエンスステータスとともに更新されます。</li></ul> |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li> ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。</li></ul> |
 
 {style="table-layout:auto"}
@@ -102,7 +102,7 @@ Platform から [!DNL Outreach] アカウントにデータを書き出すには
 
 宛先を認証するには、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![ アウトリーチへの認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/authenticate-destination.png)
+![ アウトリーチへの認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/authenticate-destination.png)
 
 [!DNL Outreach] ログインページが表示されます。 メールを入力します。
 
@@ -120,7 +120,7 @@ Platform から [!DNL Outreach] アカウントにデータを書き出すには
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-![ アウトリーチ宛先の詳細を入力する方法を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-details.png)
+![ アウトリーチ先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -142,17 +142,17 @@ Platform から [!DNL Outreach] アカウントにデータを書き出すには
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL Outreach] 宛先フィールドに正しくマッピングするには、次の手順に従います。
+Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Experience Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL Outreach] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
 1. [!UICONTROL  マッピング ] 手順で、「**[!UICONTROL 新しいマッピングを追加]**」をクリックします。 画面に新しいマッピング行が表示されます。
-   ![ 新しいマッピングの追加方法を示す Platform UI のスクリーンショット ](../../assets/catalog/crm/outreach/add-new-mapping.png)
+   ![ 新しいマッピングの追加方法を示すExperience Platform UI のスクリーンショット ](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. [!UICONTROL  ソースフィールドを選択 ] ウィンドウで、**[!UICONTROL ID 名前空間を選択]** カテゴリを選択して、目的のマッピングを追加します。
-   ![Sourceのマッピングを示す Platform UI のスクリーンショット ](../../assets/catalog/crm/outreach/source-mapping.png)
+   ![Sourceのマッピングを示すExperience Platform UI のスクリーンショット ](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. [!UICONTROL ターゲットフィールドを選択]ウィンドウで、ソースフィールドにマッピングするターゲットフィールドのタイプを選択します。
    * **[!UICONTROL ID 名前空間を選択]**：このオプションを選択して、ソースフィールドをリストから ID 名前空間にマッピングします。
-     ![OutreachId を使用したターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/target-mapping.png)
+     ![OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png) を使用したターゲットマッピングを示すExperience Platform UI のスクリーンショット
 
    * XDM プロファイルスキーマと [!DNL Outreach] インスタンスの間に次のマッピングを追加します。
 
@@ -161,7 +161,7 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
      | `Oid` | `OutreachId` | ○ |
 
    * **[!UICONTROL カスタム属性を選択]**：このオプションを選択して、「[!UICONTROL 属性名]」フィールドに定義するカスタム属性にマッピングするソースフィールドを選択します。サポートされる属性の包括的なリストについては、[[!DNL Outreach]  見込み客ドキュメント ](https://api.outreach.io/api/v2/docs#prospect) を参照してください。
-     ![LastName を使用したターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+     ![LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png) を使用したターゲットマッピングを示すExperience Platform UI のスクリーンショット
 
    * 例えば、更新する値に応じて、XDM プロファイルスキーマと [!DNL Outreach] インスタンスの間に次のようなマッピングを追加します。
 
@@ -171,11 +171,11 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
      | `person.name.lastName` | `lastName` |
 
    * これらのマッピングの使用例を次に示します。
-     ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/outreach/mappings.png)
+     ![ ターゲットマッピングを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/outreach/mappings.png)
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-segment-export-example}
 
-* [ オーディエンスの書き出しをスケジュール ](../../ui/activate-segment-streaming-destinations.md) 手順を実行する場合は、Platform オーディエンスを [!DNL Outreach] のカスタムフィールド属性に手動でマッピングする必要があります。
+* [ オーディエンスの書き出しをスケジュール ](../../ui/activate-segment-streaming-destinations.md) 手順を実行する場合は、Experience Platform オーディエンスを [!DNL Outreach] のカスタムフィールド属性に手動でマッピングする必要があります。
 
 * これを行うには、各セグメントを選択し、「**[!UICONTROL マッピング ID]**」フィールドの [!DNL Outreach] にある *カスタムフィールド `N` ラベル* フィールドに対応する数値を入力します。
 
@@ -188,29 +188,29 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
 
    * 例：
 
-     | [!DNL Outreach] フィールド | プラットフォームマッピング ID |
+     | [!DNL Outreach] フィールド | Experience Platform マッピング ID |
      |---|---|
      | ラベル `4` カスタムフィールド | `4` |
 
-     ![ スケジュールオーディエンスの書き出し中にマッピング ID の例を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![ スケジュールのオーディエンス書き出し時のマッピング ID の例を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## データの書き出しを検証する {#exported-data}
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
 1. **[!UICONTROL 宛先]**／**[!UICONTROL 参照]** を選択して、宛先のリストに移動します。
-   ![宛先の参照を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/browse-destinations.png)
+   ![ 宛先の参照を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/browse-destinations.png)
 
 1. 宛先を選択し、ステータスが「 **[!UICONTROL 有効]**」であることを確認します。
-   ![ 選択した宛先の宛先データフロー実行を示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
+   ![ 選択した宛先の宛先データフロー実行を示したExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
 1. 「**[!DNL Activation data]**」タブに切り替えて、オーディエンス名を選択します。
-   ![ 宛先のアクティベーションデータを示した Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
+   ![ 宛先のアクティベーションデータを示したExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
 1. オーディエンスの概要を監視し、プロファイルの数がセグメント内で作成された数と一致していることを確認します。
-   ![ セグメントの概要を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/segment.png)
+   ![ セグメントの概要を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/segment.png)
 
-1. [!DNL Outreach] web サイトににログインして、[!DNL Apps] / [!DNL Contacts] ページに移動し、オーディエンスのプロファイルが追加されたかどうかを確認します。 [!DNL Outreach] の各オーディエンスステータスが、[ オーディエンススケジュール ](#schedule-segment-export-example) 手順で提供された [!UICONTROL  マッピング ID] 値に基づいて、Platform から対応するオーディエンスステータスに更新されたことがわかります。
+1. [!DNL Outreach] web サイトににログインして、[!DNL Apps] / [!DNL Contacts] ページに移動し、オーディエンスのプロファイルが追加されたかどうかを確認します。 [!DNL Outreach] の各オーディエンスステータスが、[ オーディエンスのスケジュール設定 ](#schedule-segment-export-example) 手順で提供された [!UICONTROL  マッピング ID] 値に基づいて、Experience Platformの対応するオーディエンスステータスで更新されたことがわかります。
 
 ![ 更新されたオーディエンスステータスを含むアウトリーチ見込み客ページを示すアウトリーチ UI のスクリーンショット。](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
@@ -222,9 +222,9 @@ Adobe Experience Platform から [!DNL Outreach] 宛先にオーディエンス�
 
 データフローの実行を確認すると、次のエラーメッセージが表示される場合があります。`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![ 無効なリクエストエラーを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/error.png)
+![ 無効なリクエストエラーを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/outreach/error.png)
 
-このエラーを修正するには、Platform で [!DNL Outreach] オーディエンスに指定した [!UICONTROL  マッピング ID] が有効であり、[!DNL Outreach] に存在することを確認します。
+このエラーを修正するには、Experience Platformで指定した [!DNL Outreach] オーディエンスの [!UICONTROL  マッピング ID] が有効であり、[!DNL Outreach] に存在することを確認します。
 
 ## その他のリソース {#additional-resources}
 

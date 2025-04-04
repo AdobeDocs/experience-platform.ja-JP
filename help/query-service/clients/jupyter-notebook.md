@@ -2,9 +2,9 @@
 title: Jupyter Notebook のクエリサービスへの接続
 description: Jupyter Notebook をAdobe Experience Platform クエリサービスに接続する方法を説明します。
 exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '566'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 このガイドでは、[!DNL Jupyter Notebook] へのアクセス権を既に持ち、そのインターフェイスについて理解している必要があります。 [!DNL Jupyter Notebook] をダウンロードするには、または詳細情報については、[official [!DNL Jupyter Notebook] documentation](https://jupyter.org/) を参照してください。
 
-[!DNL Jupyter Notebook] を Platform に接続するために必要な資格情報を取得するには、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースにアクセスできる必要があります。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
+[!DNL Jupyter Notebook] をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースにアクセスできる必要があります。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 >[!TIP]
 >
@@ -40,13 +40,13 @@ Jupyter の公式ドキュメントには、[ コマンドラインインター�
 
 次に、[!DNL Python] 用の [!DNL PostgreSQL] データベース アダプタをインポートします。 値を `import psycopg2` と入力し、「**[!DNL Run]**」を選択します。 このプロセスの成功メッセージはありません。 エラーメッセージが表示されない場合は、次の手順に進みます。
 
-ここで、値 `conn = psycopg2.connect("{YOUR_CREDENTIALS}")` を入力してAdobe Experience Platform資格情報を指定する必要があります。 接続資格情報は、Platform UI の「[!UICONTROL  資格情報 ]」タブの下の「[!UICONTROL  クエリ ]」セクションにあります。 手順について詳しくは、[ 組織の資格情報の検索 ](../ui/credentials.md) 方法に関するドキュメントを参照してください。
+ここで、値 `conn = psycopg2.connect("{YOUR_CREDENTIALS}")` を入力してAdobe Experience Platform資格情報を指定する必要があります。 接続資格情報は、Experience Platform UI の「[!UICONTROL  資格情報 ]」タブの下の「[!UICONTROL  クエリ ]」セクションにあります。 手順について詳しくは、[ 組織の資格情報の検索 ](../ui/credentials.md) 方法に関するドキュメントを参照してください。
 
 サードパーティクライアントを使用して詳細を繰り返し入力する手間を省く場合は、有効期限のない資格情報を使用することをお勧めします。 [ 有効期限のない資格情報の生成方法と使用方法 ](../ui/credentials.md#non-expiring-credentials) の手順については、ドキュメントを参照してください。
 
 >[!IMPORTANT]
 >
->Platform UI から資格情報をコピーする場合、資格情報の追加の書式設定は必要ありません。 プロパティと値の間に 1 つのスペースを空けて、1 行で指定できます。 資格情報は引用符で囲み、コンマで **区切り** はありません。
+>Experience Platform UI から資格情報をコピーする場合、資格情報をさらに書式設定する必要はありません。 プロパティと値の間に 1 つのスペースを空けて、1 行で指定できます。 資格情報は引用符で囲み、コンマで **区切り** はありません。
 
 ```python
 conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"

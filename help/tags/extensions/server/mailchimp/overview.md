@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 6%
@@ -103,17 +103,17 @@ Mailchimp のプランや、トランザクションメール、カスタマー�
 
 ## データ収集
 
-この拡張機能を [rule](../../../ui/managing-resources/rules.md) で使用する場合、イベントごとに拡張機能から Mailchimp に送信されるデータ値はいくつかあります。 一般的な実装の場合、[Adobe Experience Platform Web SDK 拡張機能 ](../../client/web-sdk/overview.md) を設定して、そのデータを [!DNL Platform Edge Network] に送信し、イベント転送プロパティの拡張機能で使用できます。
+この拡張機能を [rule](../../../ui/managing-resources/rules.md) で使用する場合、イベントごとに拡張機能から Mailchimp に送信されるデータ値はいくつかあります。 一般的な実装の場合、[Adobe Experience Platform Web SDK拡張機能 ](../../client/web-sdk/overview.md) を設定して、イベント転送プロパティの拡張機能で使用できるようにデータを [!DNL Experience Platform Edge Network] に送信できます。
 
-この拡張機能で必要なデータは、Web SDK から XDM データ（[`xdm`](/help/web-sdk/commands/sendevent/xdm.md) オブジェクトを使用）または非 XDM データ（[`data`](/help/web-sdk/commands/sendevent/data.md) オブジェクトを使用）として送信できます。
+この拡張機能で必要なデータは、Web SDKから XDM データ（[`xdm`](/help/web-sdk/commands/sendevent/xdm.md) オブジェクトを使用）または非 XDM データ（[`data`](/help/web-sdk/commands/sendevent/data.md) オブジェクトを使用）として送信できます。
 
-例えば、顧客がサイトで購入やイベントへの登録を行った場合、この拡張機能を使用して Mailchimp から確認メールを送信できます。 Web SDK から拡張機能に必要な情報を送信すると、Edge Networkは Mailchimp でメールをトリガーします。
+例えば、顧客がサイトで購入やイベントへの登録を行った場合、この拡張機能を使用して Mailchimp から確認メールを送信できます。 Web SDKからEdge Networkに必要な情報を送信すると、拡張機能によってメールが Mailchimp にトリガーされます。
 
 ![ イベントアクション設定を追加 ](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### データ要素
 
-前のセクションのスクリーンショットは、この拡張機能から Mailchimp に各イベントで送信できるデータを示しています。 このデータを拡張機能に送信するように Web SDK を設定したら、Edge Networkがそれらの値にアクセスできるように、イベント転送プロパティにデータ要素を作成できます。
+前のセクションのスクリーンショットは、この拡張機能から Mailchimp に各イベントで送信できるデータを示しています。 このデータをEdge Networkに送信するように Web SDKを設定したら、イベント転送プロパティにデータ要素を作成して、拡張機能がこれらの値にアクセスできるようにします。
 
 次の表に、指定可能な各値の詳細を示します。
 
@@ -130,7 +130,7 @@ Mailchimp のプランや、トランザクションメール、カスタマー�
 
 >[!IMPORTANT]
 >  
->上記の **パスの例** 値は一例です。 これらのデータ要素で参照されるフィールド名と [ パス ](../../../ui/event-forwarding/overview.md#data-element-path) は、上記の手順で Web SDK に名前を付けて設定した方法に応じて、プロパティで異なる場合があります。
+>上記の **パスの例** 値は一例です。 これらのデータ要素で参照されるフィールド名と [ パス ](../../../ui/event-forwarding/overview.md#data-element-path) は、上記の手順で Web SDKに名前を付けて設定した方法に応じて、プロパティで異なる場合があります。
 
 イベント転送プロパティで、上記の各フィールドに対してデータ要素を作成できます。 作成したら、この拡張機能の [!UICONTROL  イベントを追加 ] アクションでデータ要素を参照できます。
 

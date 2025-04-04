@@ -3,10 +3,10 @@ title: UI での Azure Event Hubs Source接続の作成
 description: Adobe Experience Platform UI を使用して Azure Event Hubs ソース接続を作成する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 17%
+source-wordcount: '1098'
+ht-degree: 16%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 17%
 
 >[!IMPORTANT]
 >
->Real-time Customer Data Platform Ultimate を購入したユーザーは、ソースカタログで [!DNL Azure Event Hubs] ソースを利用できます。
+>Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Event Hubs] ソースを利用できます。
 
 Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Azure Event Hubs] アカウントを作成する方法については、このチュートリアルをお読みください。
 
@@ -81,7 +81,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用して [!
 
 ## [!DNL Event Hubs] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 

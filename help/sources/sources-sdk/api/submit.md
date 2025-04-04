@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;ホーム;人気の高いトピック;ソース;コネクタ;ソースコネクタ;ソース sdk;SDK;SDK
 title: Sourceの送信
-description: 次のドキュメントでは、Flow Service API を使用して新しいソースをテストおよび検証し、セルフサービスソース（Batch SDK）を通じて新しいソースを統合する手順を説明します。
+description: 次のドキュメントでは、Flow Service API を使用して新しいソースをテストおよび検証し、セルフサービスソース（バッチ SDK）を通じて新しいソースを統合する手順を説明します。
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 16%
+source-wordcount: '829'
+ht-degree: 10%
 
 ---
 
 # ソースの送信
 
-セルフサービスソース（Batch SDK）を使用して新しいソースをAdobe Experience Platformに統合する最後の手順は、検証のためにソースをテストすることです。 成功したら、Adobe担当者に連絡して、新しいソースを送信できます。
+セルフサービスソース（バッチ SDK）を使用して新しいソースをAdobe Experience Platformに統合する最後の手順は、検証のためにソースをテストすることです。 成功したら、Adobe担当者に連絡して、新しいソースを送信できます。
 
 次のドキュメントでは、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してソースをテストおよびデバッグする手順を説明します。
 
 ## はじめに
 
-* Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)のガイドを参照してください。
-* Platform API の資格情報の生成方法について詳しくは、[Experience PlatformAPI の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
-* Platform API の [!DNL Postman] の設定方法について詳しくは、[ 開発者コンソールとの設定  [!DNL Postman]](../../../landing/postman.md) のチュートリアルを参照してください。
+* Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
+* Experience Platform API の資格情報の生成方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
+* Experience Platform API の [!DNL Postman] の設定方法について詳しくは、[Developer Console との設定  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。
 * テストとデバッグプロセスに役立つように、[ セルフサービスソースの検証コレクションと環境をこちらからダウンロードし ](../assets/sdk-verification.zip) 以下の手順に従ってください。
 
 ## ソースのテスト
@@ -59,10 +59,10 @@ ht-degree: 16%
 
 | パラメーター | 説明 | 例 |
 | --- | --- | --- |
-| `x-api-key` | Experience PlatformAPI への呼び出しの認証に使用される一意の ID。 サー `x-api-key` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | Experience Platform API への呼び出しの認証に使用される一意の ID。 サー `x-api-key` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | 製品およびサービスを所有またはライセンスし、そのメンバーへのアクセスを許可できる法人組織。 `x-gw-ims-org-id` ーザー情報の取得方法については、[Developer Console の設定および  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Experience PlatformAPI を呼び出すために必要な認証トークン。 サー `authorizationToken` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer authorizationToken` |
-| `schemaId` | ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。 | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `authorizationToken` | Experience Platform API を呼び出すために必要な認証トークン。 サー `authorizationToken` スの取得方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。 | `Bearer authorizationToken` |
+| `schemaId` | ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 ターゲット XDM スキーマの作成手順について詳しくは、 [API を使用したスキーマの作成](../../../xdm/api/schemas.md)に関するチュートリアルを参照してください。 | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | スキーマに対応する一意のバージョン。 | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | 新しいスキーマを作成する際に `schemaId` と共に返される `meta:altId`。 | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | ターゲットデータセットの作成手順について詳しくは、 [API を使用したデータセットの作成](../../../catalog/api/create-dataset.md)に関するチュートリアルを参照してください。 | `5f3c3cedb2805c194ff0b69a` |
@@ -82,7 +82,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->Platform UI でソース監視ダッシュボードを使用する場合は、実行順序チェックリストから **フローを削除** を無効にできます。 ただし、テストが完了したら、テストフローが削除されていることを確認する必要があります。
+>Experience Platform UI でソースモニタリングダッシュボードを使用する場合は、実行オーダーチェックリストから **フローを削除** を無効にできます。 ただし、テストが完了したら、テストフローが削除されていることを確認する必要があります。
 
 ![run-collection](../assets/run-collection.png)
 

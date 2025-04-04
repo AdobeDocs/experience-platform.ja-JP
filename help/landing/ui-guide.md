@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；Adobe Experience Platform；ユーザーガイド；ui ガイド；platform ui ガイド；platform の概要；ダッシュボード；
 solution: Experience Platform
-title: Experience PlatformUI の概要
+title: Experience Platform UI の概要
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1938'
 ht-degree: 2%
 
 ---
@@ -59,9 +59,9 @@ Adobe Experience Platformにログインしたら、[!UICONTROL  指標ダッシ
 
 ## 上部ナビゲーションバー
 
-Platform UI の上部のナビゲーションバーには、現在ログインしている組織が表示され、いくつかの重要なコントロールが用意されています。
+Experience Platform UI の上部のナビゲーションバーには、現在ログインしている組織が表示され、いくつかの重要なコントロールが用意されています。
 
-ナビゲーションバーの左側には、Adobe Experience Platformのロゴがあります。 このロゴをいつでも選択すると、Platform UI のホーム画面に戻ります。
+ナビゲーションバーの左側には、Adobe Experience Platformのロゴがあります。 このロゴをいつでも選択すると、Experience Platform UI のホーム画面に戻ります。
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
@@ -75,11 +75,11 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 ### アプリケーションの切り替え
 
-上部ナビゲーションの右側の次の項目は **アプリケーションスイッチャー** で、![ アプリケーションスイッチャー ](/help/images/icons/apps.png) アイコンで表されます。 このアイコンを選択すると、Experience Platform、Analytics、Assetsなど、組織がアクセスできるAdobeアプリケーションを切り替えることができます。
+上部ナビゲーションの右側の次の項目は **アプリケーションスイッチャー** で、![ アプリケーションスイッチャー ](/help/images/icons/apps.png) アイコンで表されます。 このアイコンを選択すると、Experience Platform、Analytics、Assetsなどの、組織がアクセスできるAdobe アプリケーションを切り替えることができます。
 
 ### ヘルプ
 
-アプリケーション切り替えボタンの右側には、「**ヘルプとサポート** メニューが表示されます。このメニューは、「![ 疑問符/ヘルプ ](/help/images/icons/help.png)」アイコンで表されます。 このアイコンを選択すると、ポップオーバーメニューが表示され、いくつかのヘルプとサポートリソースが含まれます。 「**[!UICONTROL ヘルプ]**」タブには、現在アクセスしているページに関連するドキュメントのリストが表示されます。 「**[!UICONTROL サポート]**」タブを使用すると、Adobeサポートチームとのサポートチケットを作成できます。 「**[!UICONTROL フィードバック]**」タブを使用すると、Platform に関するフィードバックをAdobeに送信できます。
+アプリケーション切り替えボタンの右側には、「**ヘルプとサポート** メニューが表示されます。このメニューは、「![ 疑問符/ヘルプ ](/help/images/icons/help.png)」アイコンで表されます。 このアイコンを選択すると、ポップオーバーメニューが表示され、いくつかのヘルプとサポートリソースが含まれます。 「**[!UICONTROL ヘルプ]**」タブには、現在アクセスしているページに関連するドキュメントのリストが表示されます。 「**[!UICONTROL サポート]**」タブでは、Adobe サポートチームとのサポートチケットを作成できます。 「**[!UICONTROL フィードバック]**」タブを使用すると、Experience Platformに関するフィードバックをAdobeに送信できます。
 
 ![](images/user-guide/homepage-help-clicked.png)
 
@@ -91,17 +91,17 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 上部のナビゲーションバーの最後の項目は **ユーザー設定** で、![ ユーザー設定/ユーザープロファイル ](images/user-guide/profile-icon.png) アイコンで表されます。 このアイコンを選択して、環境設定を編集したり、ログアウトしたりします。
 
-名前とメールのすぐ下にあるスイッチを使用して、Platform インターフェイスのテーマをライトとダークに切り替えることができます。 好きなテーマを選択します。
+名前とメールのすぐ下にあるスイッチを使用して、Experience Platform インターフェイスのテーマをライトとダークに切り替えることができます。 好きなテーマを選択します。
 
 ![](images/theme.png)
 
 ### サンドボックス
 
-上部のナビゲーションバーのすぐ下にサンドボックスバーがあります。 このバーには、Platform に現在使用しているサンドボックスが表示されます。 サンドボックスについて詳しくは、[ サンドボックスの概要 ](../sandboxes/home.md) を参照してください。
+上部のナビゲーションバーのすぐ下にサンドボックスバーがあります。 このバーには、Experience Platformで現在使用しているサンドボックスが表示されます。 サンドボックスについて詳しくは、[ サンドボックスの概要 ](../sandboxes/home.md) を参照してください。
 
 ## 左側のナビゲーション {#left-nav}
 
-画面左側のナビゲーションには、Platform UI でサポートされる様々なサービスがすべて表示されます。
+画面左側のナビゲーションには、Experience Platform UI でサポートされる各種サービスがすべて表示されます。
 
 メニューアイコンをクリックして、左側のナビゲーションパネルの表示/非表示を切り替えます。
 
@@ -115,15 +115,15 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 ![](images/user-guide/homepage-left.png)
 
-「**[!UICONTROL ホーム]**」セクションでは、Platform UI ホームページに戻ることができます。
+「**[!UICONTROL ホーム]**」セクションでは、Experience Platform UI ホームページに戻ることができます。
 
-「**[!UICONTROL ワークフロー]**」セクションには、Platform 内で操作を実行するための複数の手順のワークフローのリストが表示されます。 ワークフローについて詳しくは、[ ワークフローの概要 ](./workflows.md) を参照してください。
+「**[!UICONTROL ワークフロー]**」セクションには、Experience Platform内で操作を実行するための複数の手順のワークフローのリストが表示されます。 ワークフローについて詳しくは、[ ワークフローの概要 ](./workflows.md) を参照してください。
 
 ### [!UICONTROL 接続]
 
-「**[!UICONTROL ソース]**」セクションでは、ソース接続を作成、更新、削除し、外部ソースから Platform にデータを取り込むことができます。 ソースについて詳しくは、[ ソースの概要 ](../sources/home.md) を参照してください。
+「**[!UICONTROL ソース]**」セクションでは、ソース接続を作成、更新、削除し、外部ソースからExperience Platformにデータを取り込むことができます。 ソースについて詳しくは、[ ソースの概要 ](../sources/home.md) を参照してください。
 
-「**[!UICONTROL 宛先]**」セクションでは、宛先を作成、更新および削除して、Platform から多くの外部宛先にデータを書き出すことができます。 宛先について詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
+「**[!UICONTROL 宛先]**」セクションでは、宛先を作成、更新および削除して、Experience Platformから多くの外部宛先にデータを書き出すことができます。 宛先について詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
 
 ### [!UICONTROL  顧客 ]
 
@@ -131,13 +131,13 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 「**[!UICONTROL オーディエンス]**」セクションでは、セグメント定義を作成および管理できます。 [!UICONTROL  オーディエンス ] の使用について詳しくは、[ セグメント化ユーザーガイド ](../segmentation/ui/overview.md) を参照してください。 セグメント化サービスについて詳しくは、[ セグメント化サービスの概要 ](../segmentation/home.md) を参照してください。
 
-「**[!UICONTROL ID]**」セクションでは、ID 名前空間を作成および管理できます。 ID 名前空間や Platform UI での ID の使用方法に関する情報など、[!UICONTROL ID] の節について詳しくは、[ID 名前空間の概要 ](../identity-service/features/namespaces.md) を参照してください。
+「**[!UICONTROL ID]**」セクションでは、ID 名前空間を作成および管理できます。 ID 名前空間とExperience Platform UI での ID の使用方法に関する情報など、[!UICONTROL ID] の節について詳しくは、[ID 名前空間の概要 ](../identity-service/features/namespaces.md) を参照してください。
 
 ### [!UICONTROL プライバシー]
 
 「**[!UICONTROL ポリシー]**」セクションでは、データ使用ポリシーを作成および管理できます。 ポリシーの節の使用について詳しくは、[ データ使用ポリシーユーザーガイド ](../data-governance/policies/user-guide.md) を参照してください。 データ使用ポリシーについて詳しくは、[ データ使用ポリシーの概要 ](../data-governance/policies/overview.md) を参照してください。
 
-「**[!UICONTROL リクエスト]**」セクションでは、プライバシーリクエストを作成および管理できます。 Privacy ServiceUI にアクセスするには、許可リストに加えるする必要があることに注意してください。 リクエストのセクションの使用方法について詳しくは、[Privacy Serviceユーザーガイド ](../privacy-service/ui/user-guide.md) を参照してください。 Privacy Serviceについて詳しくは、[Privacy Serviceの概要 ](../privacy-service/home.md) を参照してください。
+「**[!UICONTROL リクエスト]**」セクションでは、プライバシーリクエストを作成および管理できます。 Privacy Service UI にアクセスするには、許可リストに加えるする必要があることに注意してください。 リクエストの節の使用方法について詳しくは、[Privacy Service ユーザーガイド ](../privacy-service/ui/user-guide.md) を参照してください。 Privacy Serviceについて詳しくは、[Privacy Serviceの概要 ](../privacy-service/home.md) を参照してください。
 
 ### [!UICONTROL データサイエンス]
 
@@ -145,7 +145,7 @@ Platform UI の上部のナビゲーションバーには、現在ログイン�
 
 **[!UICONTROL モデル]** セクションでは、機械学習と人工知能を使用して、モデルを作成、開発、トレーニング、調整し、予測を行うことができます。 モデルの節について詳しくは、[ モデルのトレーニングと評価 ](../data-science-workspace/models-recipes/train-evaluate-model-ui.md) に関するチュートリアルを参照してください。
 
-**[!UICONTROL サービス]** セクションでは、スケジュールに沿ったトレーニングやスコアリング用に公開済みモデルを管理したり、Adobeのインテリジェントサービスを使用したりできます。インテリジェントサービスは、パーソナライズされたカスタマーエクスペリエンスをリアルタイムで提供する一連の AI サービスです。 サービスの節について詳しくは、[ サービスとしてのモデルの公開 ](../data-science-workspace/models-recipes/publish-model-service-ui.md) チュートリアルを参照してください。
+**[!UICONTROL サービス]** セクションでは、スケジュールに沿ったトレーニングやスコアリングを目的とした公開済みモデルを管理したり、パーソナライズされたカスタマーエクスペリエンスをリアルタイムで提供する一連の AI サービスであるAdobe インテリジェントサービスを使用したりできます。 サービスの節について詳しくは、[ サービスとしてのモデルの公開 ](../data-science-workspace/models-recipes/publish-model-service-ui.md) チュートリアルを参照してください。
 
 ### [!UICONTROL  データ管理 ]
 
@@ -172,7 +172,7 @@ Adobe Journey Optimizerは、Experience Platformを基に構築されたアプ�
 
 ### [!UICONTROL 管理]
 
-Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。 このダッシュボードにアクセスするには、ナビゲーションで **[!UICONTROL ライセンスの使用状況]** を選択します。 ライセンス使用状況ダッシュボードについて詳しくは、[ ライセンス使用状況ダッシュボードガイド ](./license-usage-and-guardrails/license-usage-dashboard.md) を参照してください。
+Experience Platform ユーザーインターフェイス（UI）には、毎日のスナップショットで取得した、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。 このダッシュボードにアクセスするには、ナビゲーションで **[!UICONTROL ライセンスの使用状況]** を選択します。 ライセンス使用状況ダッシュボードについて詳しくは、[ ライセンス使用状況ダッシュボードガイド ](./license-usage-and-guardrails/license-usage-dashboard.md) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -180,4 +180,4 @@ Platform ユーザーインターフェイス（UI）には、毎日のスナッ
 
 ## 次の手順
 
-このガイドを読むことで、Platform UI のホームページと主なナビゲーション要素について説明しました。 ユーザーインターフェイスでの作業について詳しくは、個々の Platform サービスのドキュメントを参照してください。 このドキュメントへのリンクは、このドキュメントの前の方にある [ 左側のナビゲーション ](#left-nav) の節に記載されています。
+このガイドを読むことで、Experience Platform UI のホームページと主なナビゲーション要素について説明しました。 ユーザーインターフェイスでの操作について詳しくは、個々のExperience Platform サービスのドキュメントを参照してください。 このドキュメントへのリンクは、このドキュメントの前の方にある [ 左側のナビゲーション ](#left-nav) の節に記載されています。

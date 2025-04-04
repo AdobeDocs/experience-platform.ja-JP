@@ -3,18 +3,18 @@ keywords: Experience Platform;ホーム;人気のトピック;e コマースデ�
 solution: Experience Platform
 title: Flow Service API を使用した eコマースソースのデータフローの作成
 type: Tutorial
-description: このチュートリアルでは、サードパーティの e コマースシステムからデータを取得し、ソースコネクタと API を使用して Platform に取り込む手順について説明します。
+description: このチュートリアルでは、サードパーティの e コマースシステムからデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 88%
+source-wordcount: '1314'
+ht-degree: 78%
 
 ---
 
 # [!DNL Flow Service] API を使用した eコマースソースのデータフローの作成
 
-このチュートリアルでは、eコマースソースからデータを取得し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して Platform に取り込む手順について説明します。
+このチュートリアルでは、e コマースソースからデータを取得し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してExperience Platformに取り込む手順を説明します。
 
 >[!NOTE]
 >
@@ -30,11 +30,11 @@ ht-degree: 88%
    * [Schema Registry API](../../../../xdm/api/getting-started.md)：Schema Registry API への呼び出しを正常に実行する方法について説明します。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストを行うのに必要なヘッダー（Accept ヘッダーと使用可能な値には特に注意を払う）が含まれます。
 * [[!DNL Catalog Service]](../../../../catalog/home.md)：カタログは [!DNL Experience Platform] 内のデータの場所と系列の記録システムです。
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：Batch Ingestion API を使用すると、データをバッチファイルとして [!DNL Experience Platform] に取り込むことができます。
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法については詳しくは、[Platform API の概要](../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
 ## ソース接続の作成 {#source}
 
@@ -114,7 +114,7 @@ curl -X POST \
 
 ## ターゲット XDM スキーマの作成 {#target-schema}
 
-ソースデータを Platform で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる Platform データセットを作成します。
+ソースデータをExperience Platformで使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるExperience Platform データセットが作成されます。
 
 [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) に POST リクエストを実行することで、ターゲット XDM スキーマを作成できます。
 
@@ -251,7 +251,7 @@ curl -X POST \
 
 ## データフロー仕様の検索 {#specs}
 
-データフローは、ソースからデータを収集し、それらを [!DNL Platform] に取り込みます。データフローを作成するには、まずは [!DNL Flow Service] API に GET リクエストを実行することで、データフローの仕様を取得する必要があります。データフロー仕様は、eコマースソースからのデータ収集を行います。
+データフローは、ソースからデータを収集し、それらを [!DNL Experience Platform] に取り込みます。データフローを作成するには、まずは [!DNL Flow Service] API に GET リクエストを実行することで、データフローの仕様を取得する必要があります。データフロー仕様は、eコマースソースからのデータ収集を行います。
 
 **API 形式**
 
@@ -271,7 +271,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、ソースから Platform にデータを取り込む必要があるデータフローの仕様の詳細が返されます。応答には、新しいデータフローを作成するために必要な、一意のフロー仕様 `id` が含まれます。
+リクエストが成功した場合は、ソースからExperience Platformにデータを取り込む必要があるデータフローの仕様の詳細が返されます。 応答には、新しいデータフローを作成するために必要な、一意のフロー仕様 `id` が含まれます。
 
 >[!NOTE]
 >
@@ -647,7 +647,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、設定したスケジュールに従ってデータ eコマースを収集するソースコネクタを作成しました。 [!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Platform] サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、設定したスケジュールに従ってデータ eコマースを収集するソースコネクタを作成しました。 [!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Experience Platform] サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

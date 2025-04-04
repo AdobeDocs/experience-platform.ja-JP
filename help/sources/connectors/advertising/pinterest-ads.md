@@ -6,10 +6,10 @@ badge: ベータ版
 hide: true
 hidefromtoc: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 14%
+source-wordcount: '946'
+ht-degree: 6%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 14%
 >
 >[!DNL Pinterest Ads] ソースはベータ版です。ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Adobe Experience Platform には、サードパーティの広告システムからデータを取り込む機能が用意されています。広告プロバイダーのサポートには、[!DNL Pinterest Ads] が含まれます。
 
-[[!DNL Pinterest]](https://www.pinterest.com) は、レシピ、家庭装飾、スタイルのインスピレーション、その他のアイデアを web 全体で見つけるための視覚的な発見エンジンです。 これらは、画像、アニメーションGIF、ビデオをピンボード形式で使用して、小規模で提示されます。 [[!DNL Pinterest Ads]](https://ads.pinterest.com/) を使用すると、ビジネスを成長させ、[!DNL Pinterest] を使用して 4 億人に到達できます。
+[[!DNL Pinterest]](https://www.pinterest.com) は、レシピ、家庭装飾、スタイルのインスピレーション、その他のアイデアを web 全体で見つけるための視覚的な発見エンジンです。 これらは、画像、アニメーション GIF、ビデオをピンボード形式で使用して、小規模で提示されます。 [[!DNL Pinterest Ads]](https://ads.pinterest.com/) を使用すると、ビジネスを成長させ、[!DNL Pinterest] を使用して 4 億人に到達できます。
 
 [!DNL Pinterest Ads] を使用すると、ターゲットを絞った広告を通じてユーザーにリーチし、製品を検出して購入できます。 [!DNL Pinterest Ads] からのピンは、関連する検索結果で追加の露出を受け取るためにスポンサーされています。 [!DNL Pinterest Business] を購読しているユーザーは、既存の最もパフォーマンスの高いピンの昇格、新しい画像やビデオの作成、web サイトにピン留めされた画像の昇格を選択できます。 [!DNL Pinterest Ads] では、特定のキャンペーンの目標を達成するのに役立つ複数の広告形式を提供しています。
 
@@ -51,7 +51,7 @@ Adobe Experience Platform には、サードパーティの広告システムか
 
 ### 必要な資格情報の収集 {#gather-required-credentials}
 
-[!DNL Pinterest Ads] を Platform に接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Pinterest Ads] をExperience Platformに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -95,23 +95,23 @@ Adobe Experience Platform には、サードパーティの広告システムか
 | **毎週** | データ指標は毎週分類されます。 |
 | **毎月** | データ指標は月単位で分類されます。 |
 
-Platform の場合、[!DNL Pinterest Ads] ソースは内部で `Day` に設定されています。つまり、データは毎日集計されます。 例えば、`impressions recorded` を指標として使用すると、精度は `DAY` として設定されるので、`day 1` に対するインプレッション数は `xx`、`day 2` に対するインプレッション数 `yy` どが得られます。
+Experience Platformの場合、[!DNL Pinterest Ads] ソースは内部で `Day` に設定されています。つまり、データは毎日集計されます。 例えば、`impressions recorded` を指標として使用すると、精度は `DAY` として設定されるので、`day 1` に対するインプレッション数は `xx`、`day 2` に対するインプレッション数 `yy` どが得られます。
 
 >[!IMPORTANT]
 >
 >Pinterestでは、広告、広告グループまたは広告キャンペーンから情報を読み取るために、API に対して毎日 1,000 回の API 呼び出しのレート制限が課されています。 基になる API 呼び出しに適用されるレート制限について詳しくは、[[!DNL Pinterest]  レート制限に関するドキュメント ](https://developers.pinterest.com/docs/reference/ratelimits/) を参照してください。
 
-## [!DNL Pinterest Ads] を Platform に接続 {#connect-to-platform}
+## [!DNL Pinterest Ads] をExperience Platformに接続 {#connect-to-platform}
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Pinterest Ads] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Pinterest Ads] をExperience Platformに接続する方法について説明しています。
 
-### API を使用して [!DNL Pinterest Ads] と Platform を接続する {#connect-to-platform-using-api}
+### API を使用した [!DNL Pinterest Ads] のExperience Platformへの接続 {#connect-to-platform-using-api}
 
 * [Flow Service API を使用したPinterest ベース接続の作成](../../tutorials/api/create/advertising/pinterest-ads.md)
 * [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 * [Flow Service API を使用した広告ソースのデータフローの作成](../../tutorials/api/collect/advertising.md)
 
-### UI を使用した [!DNL Pinterest Ads] の Platform への接続 {#connect-to-platform-using-ui}
+### UI を使用した [!DNL Pinterest Ads] のExperience Platformへの接続 {#connect-to-platform-using-ui}
 
 * [UI でのPinterest ソースコネクタの作成](../../tutorials/ui/create/advertising/pinterest-ads.md)
 * [UI での広告ソース接続のデータフローの作成](../../tutorials/ui/dataflow/advertising.md)

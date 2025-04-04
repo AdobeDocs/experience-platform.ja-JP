@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2023年3月）
 description: Adobe Experience Platform の 2023年3月のリリースノート。
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 83%
+source-wordcount: '2081'
+ht-degree: 81%
 
 ---
 
@@ -47,10 +47,10 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| Meta Conversions API（ベータ版）の新しいクイックスタートワークフロー | データ収集のホーム画面から「はじめに」の下にある新しいクイックスタートワークフローにアクセスします。[Meta Conversions API のクイックスタートワークフロー](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)により、お客様はイベントデータを迅速に収集し、広告コンバージョンのためにわずか数回の簡単な手順で Meta にサーバーサイド転送できます。 |
+| Meta Conversions API（ベータ版）の新しいクイックスタートワークフロー | データ収集のホーム画面から「はじめに」の下にある新しいクイックスタートワークフローにアクセスします。[Meta Conversions API のクイックスタートワークフロー](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start?lang=ja)により、お客様はイベントデータを迅速に収集し、広告コンバージョンのためにわずか数回の簡単な手順で Meta にサーバーサイド転送できます。 |
 | Mobile SDK（ベータ版）用の新しいクイックスタートワークフロー | データ収集のホーム画面から「はじめに」の下にある新しいクイックスタートワークフローにアクセスします。[Mobile SDK 用のクイックスタートワークフロー](https://developer.adobe.com/client-sdks/documentation/)を使用すると、Mobile SDK を迅速に実装し、基本的なモバイルイベントをわずか数回の簡単な手順で検証できます。 |
 | [!DNL Braze] イベント転送拡張機能 | [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) イベント転送拡張機能を使用すると、Adobe Experience Platform Edge Network で取得したデータを活用したり、[!DNL Braze] User Track API を使用してサーバーサイドイベントの形式で [!DNL Braze] に送信したりできます。 |
-| [!DNL Epsilon] イベント転送拡張機能 | [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Networkでイベント情報を取得し、[!DNL Epsilon] Event API を使用して [!DNL Epsilon] に送信できます。 |
+| [!DNL Epsilon] イベント転送拡張機能 | [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 拡張機能を使用すると、イベント転送を活用してAdobe Experience Platform Edge Networkで取得したイベント情報を、[!DNL Epsilon] Event API を使用して [!DNL Epsilon] に送信できます。 |
 | [!DNL Mixpanel] イベント転送拡張機能 | [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ja) 拡張機能を使用すると、お客様は、イベント転送を活用して、Adobe Experience Platform Edge Network で取得したイベント情報を、Track Events API を使用して Mixpanel に送信できます。 |
 
 {style="table-layout:auto"}
@@ -135,7 +135,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | --- | --- | --- |
 | フィールドグループ | [[!UICONTROL  コンテンツコンポーネント詳細 ]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` が [!UICONTROL  コンテンツコンポーネントの詳細 ] から削除されました |
 | フィールドグループ | [[!UICONTROL AJO エンティティタグ ]](https://github.com/adobe/xdm/pull/1672/files) | ジャーニーまたはキャンペーンに対応する [!UICONTROL AJO エンティティフィールド ] にAJO エンティティタグを追加しました |
-| フィールドグループ | （複数） | [[!UICONTROL Journey Orchestrationステップイベントの共通フィールドに複数のフィールドを追加しました ]](https://github.com/adobe/xdm/pull/1671/files) |
+| フィールドグループ | （複数） | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールドをいくつか追加しました ]](https://github.com/adobe/xdm/pull/1671/files) |
 | フィールドグループ | （複数） | [ メディアレポート [!UICONTROL  用に複数の XDM イベントタイプを追加 ]](https://github.com/adobe/xdm/pull/1670/files) ました。 |
 | フィールドグループ | [!UICONTROL Workfront変更イベント ] | `Full Record` フィールドグループと `Accessor Employee Ids` フィールドグループが追加されました。 |
 | データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL  払い戻し金額 ] が追加され、項目の払い戻し金額が表示されました。 |
@@ -147,7 +147,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+Experience Platformの XDM について詳しくは、[XDM システムの概要 ](../../xdm/home.md) を参照してください。
 
 ## クエリサービス {#query-service}
 
@@ -193,7 +193,7 @@ Real-Time CDP B2B Edition について詳しくは、[Real-Time CDP B2B Edition 
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むことができ、Platform サービスを使用してそのデータの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むことができ、Experience Platform サービスを使用してそのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 

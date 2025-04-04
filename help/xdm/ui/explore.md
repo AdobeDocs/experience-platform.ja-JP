@@ -2,25 +2,25 @@
 keywords: Experience Platform；ホーム；人気のトピック；ui;UI;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；探索；クラス；フィールドグループ；データタイプ；スキーマ；
 solution: Experience Platform
 title: UI でのスキーマリソースの調査
-description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、スキーマフィールドグループおよびデータタイプを調べる方法について説明します。
+description: Experience Platform ユーザーインターフェイスで既存のスキーマ、クラス、スキーマフィールドグループおよびデータタイプを調べる方法について説明します。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 # UI でのスキーマリソースの調査
 
-Adobe Experience Platformでは、Adobeが提供する標準リソースや組織で定義されるカスタムリソースなど、すべてのエクスペリエンスデータモデル（XDM）スキーマリソースが [!DNL Schema Library] に保存されます。 Experience PlatformUI では、[!DNL Schema Library] ージ内の既存のスキーマ、クラス、フィールドグループ、データタイプの構造とフィールドを確認できます。 UI は、これらの XDM リソースで提供される各フィールドの想定されるデータタイプとユースケースに関する情報を提供するので、データ取り込みを計画および準備する際に特に役立ちます。
+Adobe Experience Platformでは、Adobeが提供する標準リソースや組織で定義されるカスタムリソースなど、すべてのエクスペリエンスデータモデル（XDM）スキーマリソースが [!DNL Schema Library] に保存されます。 Experience Platformの UI では、[!DNL Schema Library] 内の既存のスキーマ、クラス、フィールドグループ、データタイプの構造とフィールドを確認できます。 UI は、これらの XDM リソースで提供される各フィールドの想定されるデータタイプとユースケースに関する情報を提供するので、データ取り込みを計画および準備する際に特に役立ちます。
 
-このチュートリアルでは、Experience PlatformUI で既存のスキーマ、クラス、フィールドグループおよびデータタイプを調べる手順を説明します。
+このチュートリアルでは、Experience Platform UI で既存のスキーマ、クラス、フィールドグループおよびデータタイプを調べる手順を説明します。
 
 ## スキーマリソースの検索 {#lookup}
 
-Platform UI の左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択します。 [!UICONTROL  スキーマ ] ワークスペースには、組織内のすべてのスキーマを調べる **[!UICONTROL 参照]** タブと、それぞれ **[!UICONTROL クラス]**、**[!UICONTROL フィールドグループ]**、**[!UICONTROL データタイプ]**、**[!UICONTROL 関係]** を調べる専用のタブが用意されています。
+Experience Platform UI で、左側のナビゲーションから **[!UICONTROL スキーマ]** を選択します。 [!UICONTROL  スキーマ ] ワークスペースには、組織内のすべてのスキーマを調べる **[!UICONTROL 参照]** タブと、それぞれ **[!UICONTROL クラス]**、**[!UICONTROL フィールドグループ]**、**[!UICONTROL データタイプ]**、**[!UICONTROL 関係]** を調べる専用のタブが用意されています。
 
 ![ 複数のタブがハイライト表示されたスキーマワークスペース。](../images/ui/explore/tabs.png)
 
@@ -63,7 +63,7 @@ Platform UI の左側のナビゲーションで「**[!UICONTROL スキーマ]**
 
 ### 標準クラスおよびフィールドグループインジケーター {#standard-class-and-field-group-indicator}
 
-スキーマエディター内では、標準（Adobe生成）のクラスおよびフィールドグループは、南京錠アイコン（![A 南京錠アイコン）で示されます。](/help/images/icons/lock-closed.png)。南京錠は、クラスまたはフィールドグループ名の横の左側のパネルに表示されるほか、システム生成リソースの一部であるスキーマ図のフィールドの横にも表示されます。
+スキーマエディター内では、標準（Adobeが生成した）クラスおよびフィールドグループは、南京錠アイコン（![A 南京錠アイコン）で示されます。](/help/images/icons/lock-closed.png)。南京錠は、クラスまたはフィールドグループ名の横の左側のパネルに表示されるほか、システム生成リソースの一部であるスキーマ図のフィールドの横にも表示されます。
 
 ![ 南京錠アイコンがハイライトされたスキーマエディター ](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -73,7 +73,7 @@ Platform UI の左側のナビゲーションで「**[!UICONTROL スキーマ]**
 
 フィールド名の前には、`_repo` や `_id` のようにアンダースコアが付いているものもあります。 これらは、データの取り込み時にシステムが自動的に生成して割り当てるフィールドのプレースホルダーを表します。
 
-したがって、これらのフィールドのほとんどは、Platform に取り込む際にデータの構造から除外する必要があります。 このルールの主な例外は、組織の下で作成されたすべての XDM フィールドの下に名前空間を設定する必要がある [`_{TENANT_ID}` フィールド ](../api/getting-started.md#know-your-tenant_id) です。
+そのため、これらのフィールドのほとんどは、Experience Platformに取り込む際にデータの構造から除外する必要があります。 このルールの主な例外は、組織の下で作成されたすべての XDM フィールドの下に名前空間を設定する必要がある [`_{TENANT_ID}` フィールド ](../api/getting-started.md#know-your-tenant_id) です。
 
 ### データタイプ {#data-types}
 
@@ -107,7 +107,7 @@ ID フィールドを含むスキーマを検査すると、これらのフィ�
 
 >[!NOTE]
 >
->ID フィールドとそのダウンストリーム Platform サービスとの関係について詳しくは、[ID フィールドの定義 ](./fields/identity.md) に関するガイドを参照してください。
+>ID フィールドとそのダウンストリーム Experience Platform サービスとの関係について詳しくは、[ID フィールドの定義 ](./fields/identity.md) に関するガイドを参照してください。
 
 ### 関係フィールド {#relationship}
 
@@ -123,4 +123,4 @@ XDM スキーマでの関係の使用について詳しくは、[UI での関係
 
 ## 次の手順
 
-このドキュメントでは、Experience PlatformUI で既存の XDM リソースを調べる方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースおよび [!DNL Schema Editor] の様々な機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](./overview.md) を参照してください。
+このドキュメントでは、Experience Platform UI で既存の XDM リソースを参照する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースおよび [!DNL Schema Editor] の様々な機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](./overview.md) を参照してください。

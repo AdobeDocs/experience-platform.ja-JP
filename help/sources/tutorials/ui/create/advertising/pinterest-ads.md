@@ -6,10 +6,10 @@ badge: ベータ版
 hide: true
 hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 27%
+source-wordcount: '825'
+ht-degree: 25%
 
 ---
 
@@ -40,17 +40,17 @@ ht-degree: 27%
 
 これらの接続プロパティについて詳しくは、[[!DNL Pinterest Ads]  概要 ](../../../../connectors/advertising/pinterest-ads.md#prerequisites) を参照してください。
 
-### Platform スキーマの作成 {#create-platform-schema}
+### Experience Platform スキーマの作成 {#create-platform-schema}
 
-また、[!DNL Pinterst Ads] ソースに使用する Platform スキーマを最初に作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
+また、[!DNL Pinterst Ads] ソースに使用するExperience Platform スキーマを最初に作成する必要があります。 スキーマの作成方法に関する包括的な手順については、[Experience Platform スキーマの作成 ](../../../../../xdm/schema/composition.md) に関するチュートリアルを参照してください。
 
-![Pinterest広告の Platform スキーマの例 ](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![Pinterest広告用のExperience Platform スキーマの例 ](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
 [!DNL Pinterest] キャンペーン、広告グループおよび広告 API でサポートされるフィールドのリストについては、[[!DNL Pinterest]  フィールド ](#pinterest-fields) の節を参照してください。
 
-## [!DNL Pinterest Ads] アカウントの接続 {#connect-account}
+## [!DNL Pinterest Ads] アカウントを接続 {#connect-account}
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL Sources]**」を選択し、[!UICONTROL Sources ]のワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -76,7 +76,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 ## データの選択 {#select-data}
 
-**[!UICONTROL データを選択]** 手順が表示され、Platform に取り込むデータを API に渡す情報を入力するためのインターフェイスが表示されます。
+**[!UICONTROL データを選択]** 手順が表示され、Experience Platformに取り込むデータを API に渡すための情報を入力するためのインターフェイスが表示されます。
 
 | フィールド | 説明 |
 | --- | --- |
@@ -86,7 +86,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 >[!TIP]
 >
->コンマ区切りの値を渡すことで、複数の `object_ids` を指定できます。 1 回のリクエストで渡せる ID の最大数は 100 です。 間違った値が渡された場合、Platform は次のメッセージを表示します。`The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>コンマ区切りの値を渡すことで、複数の `object_ids` を指定できます。 1 回のリクエストで渡せる ID の最大数は 100 です。 間違った値が渡されると、Experience Platformに次のメッセージが表示されます。`The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
 値を指定したら、「**[!UICONTROL 選択]**」を選択します。 指定した値が有効な場合、インターフェイスの右側の部分（プレビューデータ）が入力されます。
 
@@ -94,7 +94,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Pinterest Ads] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 広告データを Platform に取り込むためのデータフローの設定 ](../../dataflow/advertising.md) を行いましょう。
+このチュートリアルでは、[!DNL Pinterest Ads] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 広告データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/advertising.md) を行いましょう。
 
 ## その他のリソース {#additional-resources}
 
@@ -119,9 +119,9 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL So
 
 ソースを正しく設定し、データが取り込まれてい [!DNL Pinterest Ads] ことを検証するには、次の手順に従います。
 
-Platform UI で、カタログページの [!DNL Pinterest Ads] カードメニューの横にある **[!UICONTROL データフローを表示]** を選択します。 その後、「[!UICONTROL  データセットをプレビュー ]」を選択して、取り込まれたデータを確認できます。
+Experience Platform UI で、カタログページのデータカードメニューの横にある **[!UICONTROL データフローを表示]** を選 [!DNL Pinterest Ads] します。 その後、「[!UICONTROL  データセットをプレビュー ]」を選択して、取り込まれたデータを確認できます。
 
-![Pinterest Ads プレビューデータセットの Platform UI のスクリーンショット。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![Pinterest広告プレビューデータセットのExperience Platform UI のスクリーンショット。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 [!DNL Pinterest] UI に表示されるカウントに対してデータを検証できます
 

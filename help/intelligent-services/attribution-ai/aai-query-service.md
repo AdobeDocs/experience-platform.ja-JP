@@ -2,11 +2,11 @@
 keywords: インサイト;Attribution AI;アトリビューション AI インサイト;AAI クエリサービス;アトリビューションクエリ;アトリビューションスコア
 feature: Attribution AI
 title: クエリサービスを使用したアトリビューションスコアの分析
-description: Adobe Experience Platform クエリサービスを使用してAttribution AIスコアを分析する方法について説明します。
+description: Adobe Experience Platform クエリサービスを使用してアトリビューション AI スコアを分析する方法について説明します。
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 2%
 | ---------------------- | ------ |
 | タッチポイント名 | `touchpointsDetail. touchpointName` |
 | タッチポイントチャネル | `touchpointsDetail.touchPoint.mediaChannel` |
-| タッチポイントAttribution AIアルゴリズムスコア | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| タッチポイントアトリビューション AI アルゴリズムスコア | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## データパスの検索
 
-Adobe Experience Platform UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択します。 **[!UICONTROL データセット]** ページが表示されます。 次に、「**[!UICONTROL 参照]**」タブを選択し、データスコアの出力Attribution AIセットを見つけます。
+Adobe Experience Platform UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択します。 **[!UICONTROL データセット]** ページが表示されます。 次に、「**[!UICONTROL 参照]**」タブを選択し、アトリビューション AI スコアの出力データセットを見つけます。
 
 ![ モデルへのアクセス ](./images/aai-query/datasets_browse.png)
 
@@ -45,7 +45,7 @@ Adobe Experience Platform UI の左側のナビゲーションで **[!UICONTROL 
 
 ## クエリサービスにアクセス
 
-Platform UI 内からクエリサービスにアクセスするには、左側のナビゲーションで **[!UICONTROL クエリ]** を選択してから、「**[!UICONTROL 参照]** タブを選択します。 以前に保存したクエリのリストが読み込まれます。
+Experience Platform UI 内からクエリサービスにアクセスするには、左側のナビゲーションで **[!UICONTROL クエリ]** を選択してから、「**[!UICONTROL 参照]** タブを選択します。 以前に保存したクエリのリストが読み込まれます。
 
 ![ クエリサービスの参照 ](./images/aai-query/query_tab.png)
 
@@ -153,7 +153,7 @@ Platform UI 内からクエリサービスにアクセスするには、左側�
         conversionName, tp_count DESC
 ```
 
-### インサイト生成の例
+### Insightの生成例
 
 **タッチポイントおよびコンバージョン日（コンバージョンウィンドウ内）による増分単位の分類**
 
@@ -305,7 +305,7 @@ Platform UI 内からクエリサービスにアクセスするには、左側�
 
 >[!TIP]
 >
-> この例では、`_tenantId` と `your_score_output_dataset` に加えて `{COLUMN_NAME}` も置き換える必要があります。 `COLUMN_NAME` 変数は、Attribution AIモデルの設定時に追加されたオプションのパススルー列名（レポート列）の値を取ることができます。 スコアリング出力スキーマを確認して、このクエリを完了するために必要な `{COLUMN_NAME}` の値を見つけてください。
+> この例では、`_tenantId` と `your_score_output_dataset` に加えて `{COLUMN_NAME}` も置き換える必要があります。 `COLUMN_NAME` 変数は、アトリビューション AI モデルの設定時に追加されたオプションのパススルー列名（レポート列）の値を取ることができます。 スコアリング出力スキーマを確認して、このクエリを完了するために必要な `{COLUMN_NAME}` の値を見つけてください。
 
 ```sql
 SELECT 

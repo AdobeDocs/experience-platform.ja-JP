@@ -2,9 +2,9 @@
 title: 同意分析とトラッキング
 description: 同意分析ダッシュボードを作成して、ユーザーの同意の経時的なトレンドを追跡する方法を説明します。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 同意したオーディエンスの作成 {#create-consent-audiences}
 
-同意ダッシュボードを作成するには、まず、連絡に同意したすべてのプロファイルのオーディエンスを作成する必要があります。 Real-Time Customer Data Platform セグメントビルダーに移動するには、Platform UI の左側のナビゲーションで「**[!UICONTROL オーディエンス]**」を選択します。 [!UICONTROL  オーディエンス ] ダッシュボードの「[!UICONTROL  顧客 ]」タブで、表示の右上にある **[!UICONTROL オーディエンスを作成]** を選択したあと、**[!UICONTROL ルールを作成]** を選択します。
+同意ダッシュボードを作成するには、まず、連絡に同意したすべてのプロファイルのオーディエンスを作成する必要があります。 Real-Time Customer Data Platform セグメントビルダーに移動するには、Experience Platform UI の左側のナビゲーションで「**[!UICONTROL オーディエンス]**」を選択します。 [!UICONTROL  オーディエンス ] ダッシュボードの「[!UICONTROL  顧客 ]」タブで、表示の右上にある **[!UICONTROL オーディエンスを作成]** を選択したあと、**[!UICONTROL ルールを作成]** を選択します。
 
 ![[!UICONTROL  顧客 ]、[!UICONTROL  オーディエンス ]、および [!UICONTROL  セグメントを作成 ] がハイライト表示された [!UICONTROL  オーディエンス ] ダッシュボード ](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -72,7 +72,7 @@ Adobeは、プロファイル、オーディエンス、宛先の各ダッシュ
 
 ## オーディエンスの重複 {#audience-overlap}
 
-2 つの同意オーディエンス間の重複を確認するには、[!UICONTROL  結合ポリシーによるオーディエンスの重複 ] をプロファイルダッシュボードに追加し、ドロップダウンメニューで目的のオーディエンスを選択します。 インサイトについて詳しくは、ダッシュボードにウィジェットを追加する手順に関するドキュメント [*結合ポリシーによるオーディエンスの重複*](../guides/profiles.md#audience-overlap-by-merge-policy) を参照してください。
+2 つの同意オーディエンス間の重複を確認するには、[!UICONTROL  結合ポリシーによるオーディエンスの重複 ] をプロファイルダッシュボードに追加し、ドロップダウンメニューで目的のオーディエンスを選択します。 insightについて詳しくは、ダッシュボードにウィジェットを追加する手順に関するドキュメント [*結合ポリシーによるオーディエンスの重複*](../guides/profiles.md#audience-overlap-by-merge-policy) を参照してください。
 
 <!-- Image needs updating to night mode -->
 

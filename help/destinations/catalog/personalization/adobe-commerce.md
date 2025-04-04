@@ -2,10 +2,10 @@
 title: Adobe Commerce宛先コネクタ
 description: Adobe CommerceとReal-Time CDPのマーチャントが、Real-Time CDPで作成および管理される顧客オーディエンスに合わせてカスタマイズされた、関連性の高いサイトのコンテンツとプロモーションを提供することで、ショッピングエクスペリエンスをパーソナライズする方法を説明します。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 51%
+source-wordcount: '697'
+ht-degree: 50%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 51%
 
 ## 前提条件 {#prerequisites}
 
-Real-Time CDP Prime または Ultimate とAdobe Commerceを購入したお客様の宛先カタログで、このコネクタをご利用いただけます。
+Real-Time CDP PrimeまたはUltimateとAdobe Commerceを購入したお客様の宛先カタログで、このコネクタをご利用いただけます。
 
 この宛先接続を使用するには、次へのアクセス権があることを確認します。
 
@@ -41,7 +41,7 @@ Experience Platform で、以下を作成します。
 
 [!DNL Adobe Commerce] 宛先へ接続する手順は次のとおりです。
 
-1. [Platform インターフェイス](https://experience.adobe.com/platform/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
+1. [Experience Platform インターフェイス ](https://experience.adobe.com/platform/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 1. **[!UICONTROL Personalization]** を選択します。
 1. ハイライトする Adobe Commerce の宛先を選択し、「**[!UICONTROL 設定]**」を選択します。
 1. [宛先設定のチュートリアル](../../ui/connect-destination.md)に示されている手順に従います。

@@ -2,10 +2,10 @@
 title: UI を使用した HTTP API ストリーミング接続の作成
 description: この UI ガイドは、Adobe Experience Platform を使用してストリーミング接続を作成する際に役立ちます。
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 28%
+source-wordcount: '1003'
+ht-degree: 27%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 28%
 
 ## ストリーミング接続の作成
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -66,7 +66,7 @@ HTTP API 接続を作成すると、**[!UICONTROL データを選択]** 手順�
 
 ## XDM スキーマへのデータフィールドのマッピング
 
-[!UICONTROL  マッピング ] 手順が表示され、ソースデータを Platform データセットにマッピングするためのインターフェイスが表示されます。
+[!UICONTROL  マッピング ] 手順が表示され、ソースデータをExperience Platform データセットにマッピングするためのインターフェイスが表示されます。
 
 [!DNL HTTP API] ソースは JSON ファイルの取り込みをサポートしています。 JSON ファイルが XDM 準拠としてマークされている場合、手動設定は必要ありません。 そうでない場合、マッピングを明示的に設定する必要があります。
 
@@ -141,4 +141,4 @@ HTTP API 接続を作成すると、**[!UICONTROL データを選択]** 手順�
 
 このチュートリアルでは、ストリーミング HTTP 接続を作成し、ストリーミングエンドポイントを使用して様々な [!DNL Data Ingestion] API にアクセスできるようになりました。 API でストリーミング接続を作成する手順については、[ストリーミング接続の作成に関するチュートリアル](../../../api/create/streaming/http.md)を参照してください。
 
-データを Platform にストリーミングする方法については、[ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) または [ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) に関するチュートリアルを参照してください。
+データをExperience Platformにストリーミングする方法については、[ 時系列データのストリーミング ](../../../../../ingestion/tutorials/streaming-time-series-data.md) または [ レコードデータのストリーミング ](../../../../../ingestion/tutorials/streaming-record-data.md) に関するチュートリアルを参照してください。

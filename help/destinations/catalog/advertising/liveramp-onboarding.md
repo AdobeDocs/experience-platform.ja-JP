@@ -3,10 +3,10 @@ title: LiveRamp - オンボーディング接続
 description: LiveRamp コネクタを使用して、Adobe Real-time Customer Data Platform から LiveRamp Connect にオーディエンスをオンボーディングする方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 89%
+source-wordcount: '1948'
+ht-degree: 84%
 
 ---
 
@@ -38,7 +38,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![宛先の詳細を入力する方法を示す Platform UI のスクリーンショット](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![ 宛先の詳細を入力する方法を示すExperience Platform UI のスクリーンショット ](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -135,13 +135,13 @@ Experience Platform から [!DNL LiveRamp - Onboarding] にデータを送信す
 * **[!UICONTROL 頻度]**：[!UICONTROL 毎日]
 * **[!UICONTROL 日付]**：希望する書き出し開始時刻および終了時刻を選択します。
 
-![オーディエンスのスケジュール設定ステップを示す Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![ オーディエンスのスケジュール設定ステップを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 書き出すファイルの名前は現在、ユーザーが設定することはできません。[!DNL LiveRamp - Onboarding] 宛先に書き出すすべてのファイルは、次のテンプレートに基づいて自動的に名前が付けられます。
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![書き出すファイルの名前テンプレートを示す Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![ 書き出すファイルの名前テンプレートを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 例えば、[!DNL Luma] という名前の組織の場合、書き出すファイルの名前は次のようになります。
 
@@ -187,7 +187,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 書き出されるファイルの最大サイズは 1,000 万行です。 選択したオーディエンスが 1,000 万行を超える場合、Experience Platformでは配信ごとに複数のファイルが生成されます。 単一ファイルの上限を超える可能性がある場合は、[!DNL LiveRamp] 担当者に連絡して、バッチ取り込みを設定するように依頼してください。
 
-ファイルを [!DNL LiveRamp - Onboarding] 宛先に書き出す場合、Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成します。
+ファイルを [!DNL LiveRamp - Onboarding] の宛先に書き出す場合、Experience Platformでは各 [ 結合ポリシー ID](../../../profile/merge-policies/overview.md) に対して 1 つの CSV ファイルを生成します。
 
 例えば、次のオーディエンスについて考えてみます。
 
@@ -196,7 +196,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 * オーディエンス C（結合ポリシー 1）
 * オーディエンス D（結合ポリシー 1）
 
-Platform では、次の 2 つの CSV ファイルを [!DNL LiveRamp - Onboarding] に書き出します。
+Experience Platformでは、次の 2 つの CSV ファイルを [!DNL LiveRamp - Onboarding] に書き出します。
 
 * オーディエンス A、C および D を含んだ 1 つの CSV ファイル。
 * オーディエンス B を含んだ 1 つの CSV ファイル。
@@ -223,9 +223,9 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` セクションと `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` セクションはセグメント化サービスから生成されたオーディエンスを記述しているのに対して、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` は[カスタムアップロード](../../../segmentation/ui/audience-portal.md#import-audience)として Platform に読み込まれたオーディエンスを記述しています。
+上記の例では、`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` と `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` の節でセグメント化サービスから生じるオーディエンスを表し、`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` に [ カスタムアップロード ](../../../segmentation/ui/audience-portal.md#import-audience) としてExperience Platformに読み込まれたオーディエンスを表しています。
 
-Platform では[結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
+Experience Platformでは [ 結合ポリシー ID](../../../profile/merge-policies/overview.md) ごとに 1 つの CSV ファイルを生成するので、結合ポリシー ID ごとに個別のデータフロー実行も生成します。
 
 つまり、[データフロー実行](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)ページの&#x200B;**[!UICONTROL アクティブ化された ID]** 指標と&#x200B;**[!UICONTROL 受信したプロファイル]**&#x200B;指標が、オーディエンスごとに表示されるのではなく、同じ結合ポリシーを使用するオーディエンスのグループごとに集計されます。
 

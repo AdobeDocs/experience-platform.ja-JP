@@ -2,10 +2,10 @@
 title: UI を使用したGoogle Ads のExperience Platformへの接続
 description: UI でGoogle Ads アカウントをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 11%
+source-wordcount: '855'
+ht-degree: 10%
 
 ---
 
@@ -94,4 +94,4 @@ Experience Platform UI でソースワークフローのデータ選択フェー
 
 ## 広告データを取り込むデータフローの作成
 
-このチュートリアルでは、Google Ads アカウントとの接続を確立しました。 次のチュートリアルに進み、[ 広告データを Platform に取り込むためのデータフローの設定 ](../../dataflow/advertising.md) を行いましょう。
+このチュートリアルでは、Google Ads アカウントとの接続を確立しました。 次のチュートリアルに進み、[ 広告データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/advertising.md) を行いましょう。

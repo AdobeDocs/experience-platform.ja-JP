@@ -1,32 +1,32 @@
 ---
-description: Experience Platformユーザーインターフェイスを使用して、セグメント化中にデータフローをモニターする方法を説明します。
+description: Experience Platform ユーザーインターフェイスを使用して、セグメント化中にデータフローを監視する方法を説明します。
 title: UI でのオーディエンスのデータフローの監視
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 9%
+source-wordcount: '1864'
+ht-degree: 8%
 
 ---
 
 # UI でのオーディエンスのデータフローの監視
 
-セグメント化サービスを使用すると、セグメント定義またはその他のソースを使用して、[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。 Platform は、ソースから宛先へのデータフローを透過的に追跡するデータフローを提供します。
+セグメント化サービスを使用すると、セグメント定義またはその他のソースを使用して、[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。 Experience Platformは、ソースから宛先へのデータフローを透過的に追跡するデータフローを提供します。
 
-監視ダッシュボードを使用して、データのセグメント化のステータスなど、オーディエンス内のデータのアクティビティを視覚的に表示します。 Experience Platformユーザーインターフェイスを使用してデータのセグメント化をモニタリングするモニタリング ダッシュボードを使用し、オーディエンスのアクティベーション、評価、書き出しのジョブのステータスを追跡する方法について詳しくは、チュートリアルをお読みください。
+監視ダッシュボードを使用して、データのセグメント化のステータスなど、オーディエンス内のデータのアクティビティを視覚的に表示します。 Experience Platform ユーザーインターフェイスを使用してデータのセグメント化を監視し、オーディエンスのアクティベーション、評価および書き出しジョブのステータスを追跡できる、監視ダッシュボードを使用する方法について詳しくは、チュートリアルをお読みください。
 
 ## はじめに {#getting-started}
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-- [データフロー](../home.md)：データフローは、Platform 間でデータを移動するデータジョブを表します。データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
+- [ データフロー ](../home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
    - [データフロー実行](../../sources/notifications.md)：データフロー実行は、選択したデータフローの頻度設定に基づいて繰り返しスケジュールされたジョブです。
 - [ セグメント化 ](../../segmentation/home.md)：セグメント化によって、リアルタイム顧客プロファイルデータからオーディエンスを作成できます。
    - [ アクティベーションジョブ ](../../destinations/ui/activation-overview.md)：アクティベーションジョブを使用して、指定した宛先に対してオーディエンスをアクティベートします。
    - [ 評価ジョブ ](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment)：評価ジョブは、オーディエンスを評価する非同期プロセスです。
    - [ 書き出しジョブ ](../../segmentation/api/export-jobs.md)：書き出しジョブは、オーディエンスメンバーをデータセットに保持するために使用される非同期プロセスです。
-- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別個の仮想環境に分割してデジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスが用意されています。
 
 ## オーディエンス監視ダッシュボード {#monitoring-audiences-dashboard}
 

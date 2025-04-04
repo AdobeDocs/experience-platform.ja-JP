@@ -3,10 +3,10 @@ keywords: Analytics 拡張機能；Analytics 拡張機能；宛先分析
 title: Adobe Analytics 拡張機能
 description: Adobe Analytics拡張機能は、Adobe Experience Platformの Analytics の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 46%
+source-wordcount: '466'
+ht-degree: 44%
 
 ---
 
@@ -18,21 +18,21 @@ Adobe Analytics は、顧客像を把握し、顧客インテリジェンスを�
 
 Adobe Analyticsは、Adobe Experience Platformの analytics 拡張機能です。 拡張機能について詳しくは、タグドキュメントの [Adobe Analytics拡張機能の概要 ](/help/tags/extensions/client/analytics/overview.md) を参照してください。
 
-この宛先はタグ拡張機能です。 Platform でのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
+この宛先はタグ拡張機能です。 Experience Platformでのタグ拡張機能の仕組みについて詳しくは、[ タグ拡張機能の概要 ](../launch-extensions/overview.md) を参照してください。
 
 ![Adobe Analytics 拡張機能](../../assets/catalog/analytics/adobe-analytics/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-プラットフォームを購入したすべての顧客は、この拡張機能を宛先カタログから利用できます。
+Experience Platformを購入したすべての顧客は、この拡張機能を宛先カタログから使用できます。
 
-この拡張機能を使用するには、Platform のタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてデータ収集 UI へのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
+この拡張機能を使用するには、Experience Platformのタグにアクセスする必要があります。 タグは、標準装備の付加価値機能として Adobe Experience Cloud の顧客に提供されます。組織の管理者に問い合わせてデータ収集 UI へのアクセス権を取得し、拡張機能をインストールできるよう **[!UICONTROL manage_properties]** 権限の付与を依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
 Adobe Analytics 拡張機能をインストールするには、以下をおこないます。
 
-[Platform インターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**／**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Experience Platform インターフェイス ](https://platform.adobe.com/) で、**[!UICONTROL Destinations]**/**[!UICONTROL Catalog]** に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 

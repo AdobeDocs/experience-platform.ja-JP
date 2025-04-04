@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データレイクでのプライバシーリクエストの処理
 description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1429'
-ht-degree: 73%
+source-wordcount: '1430'
+ht-degree: 72%
 
 ---
 
@@ -147,7 +147,7 @@ curl -X POST \
 
 ### UI の使用
 
-UI でジョブリクエストを作成する場合は、データレイクに保存されたデータのジョブを処理するために、必ず **[!UICONTROL 製品]** の下にある **[!UICONTROL AEP データレイク]** を選択します。
+UI でジョブリクエストを作成する場合は、必ず **[!UICONTROL Products]** の下の **[!UICONTROL AEP Data Lake]** を選択し、Data Lake に保存されたデータのジョブを処理します。
 
 ![ プライバシーリクエスト作成ダイアログで選択された Data Lake 製品を示す画像 ](./images/privacy/product-value.png)
 
@@ -200,11 +200,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform は、組織に属するすべての[サンドボックス](../sandboxes/home.md)でプライバシーリクエストを処理します。その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
+>Experience Platformは、組織に属するすべての [ サンドボックス ](../sandboxes/home.md) でプライバシーリクエストを処理します。 その結果、リクエストに含まれる `x-sandbox-name` ヘッダーはシステムによって無視されます。
 
 ## リクエスト処理の削除
 
-[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。その後、7 日以内にレコードがデータレイクから削除されます。 この 7 日間の期間中、データはソフト削除されるので、どの [!DNL Platform] サービスからもアクセスできません。
+[!DNL Experience Platform] が [!DNL Privacy Service] から削除リクエストを受信すると、[!DNL Experience Platform] は、[!DNL Privacy Service] に対し、リクエストを受信し、影響を受けるデータが削除用にマークされている旨の確認を送信します。その後、7 日以内にレコードがデータレイクから削除されます。 この 7 日間の期間中、データはソフト削除されるので、どの [!DNL Experience Platform] サービスからもアクセスできません。
 
 プライバシーリクエストに `ProfileService` または `identity` も含めた場合、関連するデータは個別に処理されます。 詳しくは、[ プロファイルのリクエスト処理の削除 ](../profile/privacy.md#delete) の節を参照してください。
 

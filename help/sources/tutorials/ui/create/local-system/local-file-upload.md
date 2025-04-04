@@ -3,31 +3,31 @@ keywords: Experience Platform；ホーム；人気のトピック；ローカル
 solution: Experience Platform
 title: UI でのローカルファイルの作成アップロード Source コネクタ
 type: Tutorial
-description: ローカルシステムのソース接続を作成して、ローカルファイルを Platform に取り込む方法を説明します
+description: ローカルシステムのソース接続を作成して、ローカルファイルをExperience Platformに取り込む方法を説明します
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 72%
+source-wordcount: '777'
+ht-degree: 68%
 
 ---
 
 # UI でのローカルファイルアップロードソースコネクタの作成
 
-このチュートリアルでは、ユーザーインターフェイスを使用してローカルファイルを Platform に取り込むためのローカルファイルアップロードソースコネクタを作成する手順について説明します。
+このチュートリアルでは、ユーザーインターフェイスを使用してローカルファイルをExperience Platformに取り込むためのローカルファイルアップロードソースコネクタを作成する手順について説明します。
 
 ## はじめに
 
-このチュートリアルでは、Platform の次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Platform が顧客体験データを編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-## Platform へのローカルファイルのアップロード
+## Experience Platformへのローカルファイルのアップロード
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -91,4 +91,4 @@ CSV ファイルがマッピングされ、作成されたら、監視ダッシ�
 
 ## 次の手順
 
-このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、Platform に取り込むことができます。[!DNL Real-Time Customer Profile] などのダウンストリームの [!DNL Platform] サービスで、このデータを使用できるようになりました。詳しくは、[[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) の概要を参照してください。
+このチュートリアルに従うと、フラットな CSV ファイルを XDM スキーマにマッピングし、Experience Platformに取り込むことができます。 [!DNL Real-Time Customer Profile] などのダウンストリームの [!DNL Experience Platform] サービスで、このデータを使用できるようになりました。詳しくは、[[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) の概要を参照してください。

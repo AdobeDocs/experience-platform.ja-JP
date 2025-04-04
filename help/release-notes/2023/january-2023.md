@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2023年1月）
 description: Adobe Experience Platform の 2023年1月のリリースノートです。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 99%
+source-wordcount: '2227'
+ht-degree: 97%
 
 ---
 
@@ -163,7 +163,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -189,7 +189,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 | ------- | ----------- |
 | セグメントビルダーでの値の一括読み込み | セグメントビルダーで、CSV または TSV ファイルをアップロードするか、コンマ区切りの値を手動で挿入することにより、複数の値の読み込みをサポートするようになりました。詳しくは、[セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#rule-builder-canvas)を参照してください。 |
 | 外部オーディエンスのメンバーシップの有効期限 | デフォルトでは、外部オーディエンスのメンバーシップは 30 日間保持されます。これよりも長期間保持するには、オーディエンスデータの取り込み中に `validUntil` フィールドを使用します。 |
-| Platform が生成したセグメントメンバーシップの有効期限 | `lastQualificationTime` フィールドに基づき、30 日を超えて `Exited` 状態にあるセグメントメンバーシップは、削除の対象となります。 |
+| Experience Platformが生成したセグメントメンバーシップの有効期限 | `lastQualificationTime` フィールドに基づき、30 日を超えて `Exited` 状態にあるセグメントメンバーシップは、削除の対象となります。 |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むことができ、Platform サービスを使用してそのデータの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むことができ、Experience Platform サービスを使用してそのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 

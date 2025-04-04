@@ -3,7 +3,7 @@ keywords: 宛先；宛先；宛先の詳細ページ；宛先の詳細ページ
 title: 宛先の詳細を表示
 description: 個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたオーディエンス、アクティブ化を編集したり、データフローを有効または無効にしたりするためのコントロールが含まれます。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 8%
@@ -18,7 +18,7 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
 >[!NOTE]
 >
->宛先の詳細ページは、[!DNL Platform] [!DNL UI] の [!UICONTROL  宛先 ] ワークスペースの一部です。 詳しくは、[[!UICONTROL  宛先 ]Workspace の概要 ](./destinations-workspace.md) を参照してください。
+>宛先の詳細ページは、[!DNL Experience Platform] [!DNL UI] の [!UICONTROL  宛先 ] ワークスペースの一部です。 詳しくは、[[!UICONTROL  宛先 ]Workspace の概要 ](./destinations-workspace.md) を参照してください。
 
 ## 宛先の詳細を表示 {#view-details}
 
@@ -82,7 +82,7 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
 >[!NOTE]
 >
->* 宛先モニタリング機能は、現在、[Adobe Target *、{ カスタムパーソナライゼーション* および ](/help/destinations/catalog/personalization/adobe-target-connection.md)6}Experience Cloudオーディエンス [ を除く、Experience Platform内のすべての宛先でサポートされて ](/help/destinations/catalog/personalization/custom-personalization.md) ます ](/help/destinations/catalog/adobe/experience-cloud-audiences.md)[
+>* 宛先モニタリング機能は、現在、Experience Platformのすべての宛先 *[Adobe Targetを除く*、[ カスタムパーソナライゼーション ](/help/destinations/catalog/personalization/adobe-target-connection.md) および ](/help/destinations/catalog/personalization/custom-personalization.md)6}Experience Cloud オーディエンス ](/help/destinations/catalog/adobe/experience-cloud-audiences.md) の宛先でサポートされています。[
 >* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) および [HTTP API](/help/destinations/catalog/streaming/http-destination.md) の宛先については、除外された ID、失敗した ID およびアクティブ化された ID に関連する指標が予測されます。 アクティベーションデータの量が多いほど、指標の精度が高くなります。
 
 ![ データフロー実行ビュー ](../assets/ui/details-page/dataflow-runs.png)
@@ -93,7 +93,7 @@ Adobe Experience Platformのユーザーインターフェイスでは、宛先�
 
 ### ストリーミングの宛先 {#streaming}
 
-以下の画像に示すように、ほとんどのストリーミングデータフロー実行で示される **[!UICONTROL 処理時間]** は約 4 時間ですが、データフロー実行の実際の処理時間ははるかに短くなります。 データフロー実行ウィンドウは、Experience Platformが宛先への呼び出しを再試行する必要がある場合に長い間開いたままになり、同じ期間に到着する遅延データを見逃さないようにします。
+以下の画像に示すように、ほとんどのストリーミングデータフロー実行で示される **[!UICONTROL 処理時間]** は約 4 時間ですが、データフロー実行の実際の処理時間ははるかに短くなります。 データフロー実行ウィンドウは、Experience Platformが宛先への呼び出しを再試行する必要がある場合に長い間開いたままになり、同じ時間枠で到着する遅延データを見逃さないようにします。
 
 ![ ストリーミング宛先の「処理時間」列がハイライト表示されたデータフロー実行ページの画像 ](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 

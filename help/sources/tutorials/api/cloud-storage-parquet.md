@@ -5,7 +5,7 @@ title: Flow Service API を使用したサードパーティのクラウドス�
 type: Tutorial
 description: このチュートリアルでは、Flow Service API を使用して、サードパーティのクラウドストレージシステムから Apache Parquet データを取り込む手順を説明します。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 44%
@@ -22,8 +22,8 @@ ht-degree: 44%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-- [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-- [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+- [ソース](../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+- [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、[!DNL Flow Service] API を使用してサードパーティのクラウドストレージから Parquet データを正常に取り込むために必要な追加情報を示します。
 
@@ -33,13 +33,13 @@ ht-degree: 44%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -49,7 +49,7 @@ ht-degree: 44%
 
 ## 接続の作成
 
-[!DNL Platform] API を使用して Parquet データを取り込むには、アクセスするサードパーティのクラウドストレージソースへの有効な接続が必要です。 使用するストレージの接続がまだない場合は、次のチュートリアルを通じて作成できます。
+[!DNL Experience Platform] API を使用して Parquet データを取り込むには、アクセスするサードパーティのクラウドストレージソースへの有効な接続が必要です。 使用するストレージの接続がまだない場合は、次のチュートリアルを通じて作成できます。
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -61,7 +61,7 @@ ht-degree: 44%
 
 ## ターゲットスキーマの作成
 
-ソースデータを [!DNL Platform] で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要もあります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるター [!DNL Platform] ットデータセットを作成します。
+ソースデータを [!DNL Experience Platform] で使用するには、必要に応じてターゲットスキーマを作成してソースデータを構造化する必要もあります。 次に、ターゲットスキーマを使用して、ソースデータが含まれる [!DNL Experience Platform] データセットを作成します。
 
 [!DNL Experience Platform] でユーザーインターフェイスを使用する場合は、[ スキーマエディターのチュートリアル ](../../../xdm/tutorials/create-schema-ui.md) で、スキーマエディターで同様のアクションを実行する手順を確認してください。
 
@@ -198,7 +198,7 @@ curl -X POST \
 
 ## ソース接続の作成 {#source}
 
-ターゲット XDM スキーマを作成した状態で、[!DNL Flow Service] API への接続リクエストを使用してソースPOSTを作成できるようになりました。 ソース接続は、API の接続、ソースデータ形式、前の手順で取得したターゲット XDM スキーマへの参照で構成されます。
+ターゲット XDM スキーマを作成した状態で、[!DNL Flow Service] API への POST リクエストを使用してソース接続を作成できるようになりました。 ソース接続は、API の接続、ソースデータ形式、前の手順で取得したターゲット XDM スキーマへの参照で構成されます。
 
 **API 形式**
 
@@ -257,7 +257,7 @@ curl -X POST \
 
 ## データセットベース接続の作成
 
-外部データを [!DNL Platform] に取り込むには、まず [!DNL Experience Platform] のデータセットベース接続を取得する必要があります。
+外部データを [!DNL Experience Platform] に取り込むには、まず [!DNL Experience Platform] のデータセットベース接続を取得する必要があります。
 
 データセットベース接続を作成するには、[ データセットベース接続のチュートリアル ](./create-dataset-base-connection.md) で説明されている手順に従ってください。
 
@@ -427,7 +427,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、サードパーティのクラウドストレージシステムからスケジュールに従って Parquet データを収集するソースコネクタを作成しました。 [!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Platform] サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、サードパーティのクラウドストレージシステムからスケジュールに従って Parquet データを収集するソースコネクタを作成しました。 [!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] など、ダウンストリームの [!DNL Experience Platform] サービスで受信データを使用できるようになりました。詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../profile/home.md)
 - [Data Science Workspace の概要](../../../data-science-workspace/home.md)

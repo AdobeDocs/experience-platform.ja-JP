@@ -1,12 +1,12 @@
 ---
 title: イベント転送の概要
-description: Platform Edge ネットワークを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
+description: Experience Platform Edge Networkを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platformのイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 75%
+source-wordcount: '1190'
+ht-degree: 51%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 75%
 
 Adobe Experience Platform のイベント転送を使用すると、収集したイベントデータをサーバーサイドで処理するために宛先に送信できます。イベント転送は、通常クライアントで行なわれるタスクを、Adobe Experience Platform Edge ネットワークを使用して実行することにより、web ページやアプリの負担を軽減します。タグと同様の方法で実装されたイベント転送ルールは、データを変換して新しい宛先に送信できますが、このデータを web ブラウザーなどのクライアントアプリケーションから送信する代わりに、アドビのサーバーから送信します。
 
-このドキュメントでは、 Platform のイベント転送の概要を説明します。
+このドキュメントでは、Experience Platformのイベント転送の概要を説明します。
 
 ![ データ収集エコシステムでのイベント転送 ](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->イベント転送が Platform のデータ収集エコシステム内でどのように適合するかについての情報は、[データ収集の概要](../../../collection/home.md)を参照してください。
+>イベント転送がExperience Platformのデータ収集エコシステム内でどのように適合するかについての詳細は、[ データ収集の概要 ](../../../collection/home.md) を参照してください。
 
 イベント転送を Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) および [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=ja) と組み合わせると、次のような利点があります。
 
@@ -46,14 +46,14 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 設定に関しては、イベント転送は[ルール](../managing-resources/rules.md)、[データ要素](../managing-resources/data-elements.md)、[拡張](../managing-resources/extensions/overview.md)など、タグと同じ概念の多くを使用します。この 2 つの主な違いを要約すると、次のようになります。
 
-* タグは、イベントデータを web サイトまたはネイティブモバイルアプリケーションから&#x200B;**収集**&#x200B;し、Platform Edge Network に送信します。
-* イベント転送は、Platform Edge Network から受信したイベントデータを、最終的な宛先を表すエンドポイントまたは元のペイロードを強化するデータを提供するエンドポイントに&#x200B;**送信**&#x200B;します。
+* タグは、イベントデータを web サイトまたはネイティブモバイルアプリケーションから **収集** し、Experience Platform Edge Networkに送信します。
+* イベント転送 **Experience Platform Edge Networkから受信したイベントデータを** 最終的な宛先を表すエンドポイントまたは元のペイロードを強化するデータを提供するエンドポイントに送信）します。
 
-タグは、Platform Web および Mobile SDK を使用して、サイトまたはネイティブモバイルアプリケーションから直接イベントデータを収集しますが、イベント転送でイベントデータを宛先に転送するには、Platform Edge Network 経由でイベントデータが既に送信されている必要があります。つまり、イベント転送を使用するには、デジタルプロパティに Platform Web または Mobile SDK を（タグを通じてまたは生のコードを使用して）実装する必要があります。
+タグは、Experience Platform Web および Mobile SDK を使用して、サイトまたはネイティブモバイルアプリケーションから直接イベントデータを収集しますが、イベント転送でイベントデータを宛先に転送するには、Experience Platform Edge Network経由でイベントデータが既に送信されている必要があります。 つまり、イベント転送を使用するには、デジタルプロパティにExperience Platform web またはモバイル SDKを（タグを通じてまたは生のコードを使用して）実装する必要があります。
 
 ### プロパティ {#properties}
 
-イベント転送は、タグとは別に独自のプロパティのストアを保持し、左側のナビゲーションで **[!UICONTROL イベント転送]** を選択して、Experience PlatformUI またはデータ収集 UI で表示できます。
+イベント転送は、タグとは別に独自のプロパティのストアを保持しており、左側のナビゲーションから **[!UICONTROL イベント転送]** を選択して、Experience Platform UI またはデータ収集 UI で表示できます。
 
 >[!TIP]
 >
@@ -61,7 +61,7 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 ![ データ収集 UI のイベント転送プロパティ。](../../images/ui/event-forwarding/overview/properties.png)
 
-すべてのイベント転送プロパティには、プラットフォームとして **[!UICONTROL Edge]** がリストされています。Web とモバイルは、Platform Edge Network から受信したデータのみを処理するため区別されません。Platform Edge Network 自体は、web プラットフォームとモバイルプラットフォームの両方からイベントデータを受信できます。
+すべてのイベント転送プロパティには、プラットフォームとして **[!UICONTROL Edge]** がリストされています。Web とモバイルは区別されません。Experience Platform Edge Networkから受信したデータのみを処理し、それ自体が web とモバイルの両方のプラットフォームからイベントデータを受信できるからです。
 
 ### 拡張機能 {#extensions}
 
@@ -75,11 +75,11 @@ Adobe Experience Platform のイベント転送を使用すると、収集した
 
 イベント転送で利用できるデータ要素のタイプは、それらを提供する互換性のある[拡張機能](#extensions)のカタログに限定されます。
 
-イベント転送では、データ要素自体はタグと同じように作成および設定されますが、Platform Edge Network からのデータを参照する方法については、いくつかの重要な構文上の違いがあります。
+イベント転送では、データ要素自体はタグと同じように作成および設定されますが、Experience Platform Edge Networkのデータを参照する方法については、いくつかの重要な構文上の違いがあります。
 
-#### Platform Edge Network からのデータの参照 {#data-element-path}
+#### Experience Platform Edge Networkからのデータの参照 {#data-element-path}
 
-Platform Edge Network からデータを参照するには、そのデータへの有効なパスを提供するデータ要素を作成する必要があります。UI でデータ要素を作成するときは、拡張機能として&#x200B;**[!UICONTROL コア]**&#x200B;を選択し、タイプとして&#x200B;**[!UICONTROL パス]**&#x200B;を選択します。
+Experience Platform Edge Networkからデータを参照するには、そのデータへの有効なパスを提供するデータ要素を作成する必要があります。 UI でデータ要素を作成するときは、拡張機能として&#x200B;**[!UICONTROL コア]**&#x200B;を選択し、タイプとして&#x200B;**[!UICONTROL パス]**&#x200B;を選択します。
 
 データ要素の&#x200B;**[!UICONTROL パス]**&#x200B;値は、パターン `arc.event.{ELEMENT}` に従う必要があります（例：`arc.event.xdm.web.webPageDetails.URL`）。データを送信するには、このパスを正しく指定する必要があります。
 

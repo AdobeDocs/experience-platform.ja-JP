@@ -4,9 +4,9 @@ title: Flow Service API を使用したデータセットの書き出し
 description: Flow Service API を使用して、データセットを書き出し、宛先を選択する方法を説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5146'
+source-wordcount: '5149'
 ht-degree: 11%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローを書き出す `endTime` 定日を設定するオプションが導入されました。 また、Adobeでは、（9 月のリリースより前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日として、2025 年 5 月 1 日（PT* が導入されます。 これらのデータフローのいずれについても、終了日より前にデータフローの終了日を手動で更新する必要があります。そうしないと、書き出しがその日に停止します。 Experience PlatformUI を使用して、5 月 1 日に停止に設定されるデータフローを確認します。
+>**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 また、Adobeでは、（9 月のリリース以前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日として、2025 年 5 月 1 日（PT* が導入されます。 これらのデータフローのいずれについても、終了日より前にデータフローの終了日を手動で更新する必要があります。そうしないと、書き出しがその日に停止します。 Experience Platform UI を使用して、5 月 1 日に停止に設定されるデータフローを確認します。
 >
 >同様に、`endTime` 定日を指定せずに作成したデータフローの場合、デフォルトでは作成時点から 6 か月後の終了時刻になります。
 
@@ -34,11 +34,11 @@ ht-degree: 11%
 
 >[!TIP]
 >
->Experience Platformユーザーインターフェイスを使用して、データセットを書き出すこともできます。 詳しくは、[ データセット UI の書き出しチュートリアル ](/help/destinations/ui/export-datasets.md) を参照してください。
+>Experience Platform ユーザーインターフェイスを使用して、データセットを書き出すこともできます。 詳しくは、[ データセット UI の書き出しチュートリアル ](/help/destinations/ui/export-datasets.md) を参照してください。
 
 ## 書き出すことができるデータセット {#datasets-to-export}
 
-書き出し可能なデータセットは、Experience Platformアプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（PrimeまたはUltimate）、購入したアドオン（例：Data Distiller）によって異なります。
+書き出し可能なデータセットは、Experience Platform アプリケーション（Real-Time CDP、Adobe Journey Optimizer）、層（PrimeまたはUltimate）、購入したアドオン（例：Data Distiller）によって異なります。
 
 書き出し可能なデータセットについては、[UI チュートリアルページの表 ](/help/destinations/ui/export-datasets.md#datasets-to-export) を参照してください。
 
@@ -62,9 +62,9 @@ ht-degree: 11%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md):Adobe Experience Platformに正常に取り込まれたすべてのデータは、[!DNL Data Lake] 内にデータセットとして保持されます。 データセットは、通常、スキーマ（列）とフィールド（行）を含むテーブルであるデータコレクションのストレージと管理をおこなう構成体です。データセットには、保存するデータの様々な側面を記述したメタデータも含まれます。
-   * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+   * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-以下の節では、Platform のクラウドストレージ宛先にデータセットを書き出すために知っておく必要がある追加情報を示します。
+以下の節では、Experience Platformのクラウドストレージの宛先にデータセットを書き出すために知っておく必要がある追加情報を示します。
 
 ### 必要な権限 {#permissions}
 
@@ -78,13 +78,13 @@ ht-degree: 11%
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values-headers}
 
-[!DNL Platform] API を呼び出すには、まず [Experience Platform認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず [Experience Platform認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のリソースは、特定の仮想サンドボックスに分離できます。[!DNL Platform] API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。次に、オプションのパラメーターを示します。
+[!DNL Experience Platform] のリソースは、特定の仮想サンドボックスに分離できます。[!DNL Experience Platform] API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。次に、オプションのパラメーターを示します。
 
 * x-sandbox-name：`{SANDBOX_NAME}`
 
@@ -2468,7 +2468,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 既知の制限事項 {#known-limitations}
 
@@ -2480,7 +2480,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、目的のクラウドストレージのバッチ宛先の 1 つに Platform を正常に接続し、データセットを書き出す各宛先へのデータフローを設定しました。 次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
+このチュートリアルでは、Experience Platformを目的のクラウドストレージのバッチ宛先の 1 つに正常に接続し、データセットを書き出す各宛先へのデータフローを設定しました。 次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
 
 * [宛先の概要](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)

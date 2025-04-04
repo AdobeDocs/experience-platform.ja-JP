@@ -2,7 +2,7 @@
 title: Adobe Campaign Managed Cloud Services 接続
 description: Adobe Campaign Managed Cloud Servicesは、クロスチャネルのカスタマーエクスペリエンスを設計するためのプラットフォームと、視覚的なキャンペーンオーケストレーション、リアルタイムインタラクション管理およびクロスチャネル実行のための環境を提供します。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 299868e5ca1b8fde667c4c0ec9a7435634a1717d
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1633'
 ht-degree: 31%
@@ -47,9 +47,9 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 * Adobe Experience Platformは、ID グラフや analytics の行動データなどの情報を組み込み、オフラインのデータとオンラインのデータを結合する顧客プロファイルを作成します。 この統合により、Adobe Experience Platformを利用したオーディエンスでAdobe Campaign内に既に存在するセグメント化機能を強化し、Campaign でそのデータをアクティブ化できます。
 
-  例えば、スポーツ衣料品の会社は、Adobe Experience Platformを活用したオーディエンスを活用し、Adobe Campaignを使用してアクティブ化して、Adobe Campaignがサポートする様々なチャネルをまたいで顧客ベースに連絡したいと考えています。 メッセージが送信されると、送信数、開封数、クリック数など、Adobe Campaignのエクスペリエンスデータを使用して、Adobe Experience Platform の顧客プロファイルを強化したいと考えます。
+  例えば、スポーツ衣料品の会社は、Adobe Experience Platformを活用したオーディエンスを活用し、Adobe Campaignを使用してアクティブ化して、Adobe Campaignがサポートする様々なチャネルをまたいで顧客ベースに連絡したいと考えています。 メッセージが送信されると、送信数、開封数、クリック数など、Adobe Campaignのエクスペリエンスデータを使用して、Adobe Experience Platform の顧客プロファイルを強化する必要があります。
 
-  その結果、AdobeExperience Cloud エコシステム全体でより一貫性のあるクロスチャネルキャンペーンと、迅速に適応し学習する豊富な顧客プロファイルが実現します。
+  その結果、Adobe Experience Cloud エコシステム全体でより一貫性のあるクロスチャネルキャンペーンと、迅速に適応し学習する豊富な顧客プロファイルが実現します。
 
 
 * Campaign の Audience Activation に加えて、Adobe Campaign Managed Servicesの宛先を利用して、Adobe Experience Platform上のプロファイルに関連付けられている追加のプロファイル属性を取り込み、Adobe Campaign データベースで更新されるように同期プロセスを導入することもできます。
@@ -70,8 +70,8 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 |---|---|---|
 | external_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 この ID を使用し、顧客を表す Campaign インスタンスの ID （loyalty_ID、account_ID、customer_ID など）にマッピングすることをお勧めします |
 | ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](/help/identity-service/features/ecid.md) に関する次のドキュメントを参照してください。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 | GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 
@@ -174,7 +174,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 
 ### 書き出したデータへのアクセス {#data}
 
-**[!UICONTROL オーディエンス同期]** の場合は、**[!UICONTROL プロファイルとターゲット]**/**[!UICONTROL リスト]**/**[!UICONTROL AEP オーディエンス]** メニューに移動して、書き出されたオーディエンスを確認できます。
+**[!UICONTROL オーディエンス同期]** の場合は、**[!UICONTROL プロファイルとターゲット]**/**[!UICONTROL リスト]**/6}AEP オーディエンス ]**メニューに移動して、書き出されたオーディエンスを確認できます。**[!UICONTROL 
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 

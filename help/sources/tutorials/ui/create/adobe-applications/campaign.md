@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;ソース;コネクタ;ソースコネクタ;Campaign;Campaign Managed Services
-title: Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
-description: Platform UI を使用してAdobe Experience PlatformをAdobe Campaign Managed Cloud Servicesに接続する方法について説明します。
+title: Experience Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
+description: Experience Platform UI を使用してAdobe Experience PlatformをAdobe Campaign Managed Cloud Servicesに接続する方法について説明します。
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 43%
+source-wordcount: '1246'
+ht-degree: 37%
 
 ---
 
-# Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
+# Experience Platform UI を使用したAdobe Campaign Managed Cloud Services ソース接続の作成
 
 このチュートリアルでは、ソース接続を作成してAdobe Campaign Managed Cloud Services データをAdobe Experience Platformに取り込む手順について説明します。
 
@@ -18,15 +18,15 @@ ht-degree: 43%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ソース](../../../../home.md)：Platform を使用すると、様々なソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび強化を行うことができます。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [サンドボックス](../../../../../sandboxes/home.md)：Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-## Adobe Campaign Managed Cloud Servicesを Platform に接続する
+## Adobe Campaign Managed Cloud ServicesのExperience Platformへの接続
 
-Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。また、検索バーを使用して、表示されるソースを絞り込むこともできます。
 
@@ -60,7 +60,7 @@ Platform の UI で、左側のナビゲーションバーで「**[!UICONTROL �
 | --- | --- |
 | Adobe Campaign インスタンス | 使用しているAdobe Campaign環境インスタンスの名前。 |
 | ターゲットマッピング | メッセージの配信に使用される技術的なオブジェクトで、配信の送信に必要なすべての技術的な設定が含まれます。 |
-| スキーマ名 | Platform に取り込むスキーマエンティティの名前。 オプションには、「配信ログ」と「トラッキングログ」があります。 |
+| スキーマ名 | Experience Platformに取り込むスキーマエンティティの名前。 オプションには、「配信ログ」と「トラッキングログ」があります。 |
 
 ![Adobe Campaign インスタンス、ターゲットマッピング、およびスキーマ名を設定できるインターフェイス ](../../../../images/tutorials/create/campaign/select-data.png)。
 
@@ -96,7 +96,7 @@ Campaign インスタンス、ターゲットマッピング、スキーマ名�
 
 [!UICONTROL マッピング]手順が表示され、ソーススキーマのソースフィールドを、ターゲットスキーマの適切なターゲット XDM フィールドにマッピングするためのインターフェイスが提供されます。
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 >[!IMPORTANT]
 >
@@ -145,7 +145,7 @@ Platform は、選択したターゲットスキーマまたはデータセッ�
 
 ## 次の手順
 
-このチュートリアルでは、Campaign v8 の配信ログとトラッキングログのデータを Platform に取り込むデータフローを正常に作成しました。 受信データは、[!DNL Real-Time Customer Profile] および [!DNL Data Science Workspace] のようなダウンストリームの Platform サービスで使用できるようになりました。詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、Campaign v8 の配信ログとトラッキングログのデータをExperience Platformに取り込むデータフローを正常に作成しました。 これで、[!DNL Real-Time Customer Profile] や [!DNL Data Science Workspace] などのダウンストリームのExperience Platform サービスで受信データを使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 * [[!DNL Real-Time Customer Profile] 概要](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 概要](../../../../../data-science-workspace/home.md)

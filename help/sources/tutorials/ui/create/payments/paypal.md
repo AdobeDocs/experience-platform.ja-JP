@@ -5,10 +5,10 @@ title: UI での PayPal Source接続の作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して PayPal ソース接続を作成する方法を説明します。
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 43%
+source-wordcount: '462'
+ht-degree: 38%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 43%
 >
 >[!DNL PayPal] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、Platform ユーザーインターフェイスを使用して [!DNL PayPal] ソースコネクタを作成する手順を説明します。
+Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して [!DNL PayPal] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -33,7 +33,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL PayPal] アカウントプラットフォームにアクセスするには、次の値を指定する必要があります。
+[!DNL PayPal] アカウントのExperience Platformにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## [!DNL PayPal] アカウントを接続
 
-必要な資格情報を収集したら、以下の手順に従って [!DNL PayPal] アカウントを Platform にリンクできます。
+必要な資格情報を収集したら、次の手順に従って [!DNL PayPal] アカウントをExperience Platformにリンクできます。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -71,4 +71,4 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL PayPal] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 支払いデータを Platform に取り込むためのデータフローの設定 ](../../dataflow/payments.md) を行いましょう。
+このチュートリアルでは、[!DNL PayPal] アカウントとの接続を確立しました。次のチュートリアルに進み、[ 支払いデータをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/payments.md) を行いましょう。

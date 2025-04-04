@@ -2,10 +2,10 @@
 title: サンドボックスツールを使用した中核的な拠点の実現
 description: 複数のサンドボックスでベストプラクティスを標準化する「ゴールデンサンドボックス」パッケージを作成して、サンドボックスツールを使用した中核的な拠点（COE）を有効にします。
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '882'
+ht-degree: 6%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 7%
 - ゴールデンサンドボックスとして設定する、関連する検証済みの設定をすべて含むサンドボックスを作成します。
 - 必要に応じて、ベースライン標準に関する関係者のインプットを得て、同意を得ます。
 
-### 使用する UI 機能、プラットフォームコンポーネントおよび Experience Cloud 製品 {#ui-functionality-and-elements}
+### 使用する UI 機能、Experience Platform コンポーネントおよびExperience Cloud製品 {#ui-functionality-and-elements}
 
 このユースケースを正常に実装するには、Adobe Experience Platformの複数の領域を使用する必要があります。 これらすべての領域に必要な [ 属性ベースのアクセス制御権限 ](../../access-control/abac/overview.md) があることを確認するか、システム管理者に必要な権限の付与を依頼してください。
 
@@ -73,7 +73,7 @@ ht-degree: 7%
 
 ### 関連するサンドボックスへのパッケージの読み込み
 
-パッケージが作成されたので、このパッケージを関連するサンドボックスに読み込むことができます。 ベストプラクティスは、サンドボックス全体を含むパッケージを空のサンドボックスに読み込むことです。 サンドボックスツールを使用すると、Experience Platform内で直接サンドボックスに簡単に [ サンドボックスパッケージ全体を読み込む ](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) ことができます。
+パッケージが作成されたので、このパッケージを関連するサンドボックスに読み込むことができます。 ベストプラクティスは、サンドボックス全体を含むパッケージを空のサンドボックスに読み込むことです。 サンドボックスツールを使用すると、Experience Platform内のサンドボックスに簡単に [ サンドボックスパッケージ全体を読み込む ](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) ことができます。
 
 ### 複数の組織をまたいだパッケージの共有
 

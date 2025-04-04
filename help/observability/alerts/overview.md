@@ -4,10 +4,10 @@ title: アラートの概要
 description: アラートルールの定義方法など、Adobe Experience Platformでのアラートの概要を説明します。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 89%
+source-wordcount: '804'
+ht-degree: 69%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 89%
 
 Adobe Experience Platform では、Adobe Experience Platform アクティビティに関するイベントベースのアラートを登録できます。 アラートにより、ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したか、何らかのエラーが発生したかを確認するために、[[!DNL Observability Insights] API](../api/overview.md) をポーリングする必要が低減される、またはなくなります。
 
-Platform 操作の特定の条件（システムがしきい値に達した場合に問題が発生する可能性があるなど）に達すると、Platform はその条件を登録している組織内のユーザーにアラートメッセージを配信できます。 これらのメッセージは、アラートが解決されるまで、事前に定義された時間間隔で繰り返すことができます。
+Experience Platform操作の特定の条件（システムがしきい値に達した場合に問題が発生する可能性があるなど）に達すると、Experience Platformはその条件を登録している組織内のユーザーにアラートメッセージを配信できます。 これらのメッセージは、アラートが解決されるまで、事前に定義された時間間隔で繰り返すことができます。
 
 このドキュメントでは、アラートルールの定義方法など、Adobe Experience Platform のアラートの概要を説明します。
 
 ## 1 回限りのアラートと繰り返しアラートの比較
 
-Platform アラートは、1 回だけ送信することも、解決されるまで事前に定義された時間間隔で繰り返すこともできます。 これらの各オプションのユースケースは、次の点が異なります。
+Experience Platformのアラートは、1 回だけ送信することも、解決されるまで事前に定義された時間間隔で繰り返すこともできます。 これらの各オプションのユースケースは、次の点が異なります。
 
 | 1 回限りのアラート | 繰り返しアラート |
 | --- | --- |
@@ -54,19 +54,19 @@ Platform アラートは、1 回だけ送信することも、解決されるま
 アラートは、次の 2 つのチャネルを通じて受信および管理できます。
 
 * [Adobe I/O イベント](#events)
-* [Platform UI](#ui)
+* [EXPERIENCE PLATFORM UI](#ui)
 
 ### I/O イベント {#events}
 
-設定された Webhook にアラートを送信して、アクティビティ監視の効率的な自動化を促進できます。Webhook を介してアラートを受信するには、Adobe Developer Console で Platform アラートの Webhook を登録する必要があります。具体的な手順については、[Adobe I/O イベント通知の購読](./subscribe.md)に関するガイドを参照してください。
+設定された Webhook にアラートを送信して、アクティビティ監視の効率的な自動化を促進できます。Webhook を介してアラートを受信するには、Adobe Developer ConsoleでExperience Platform アラートの Webhook を登録する必要があります。 具体的な手順については、[Adobe I/O イベント通知の購読](./subscribe.md)に関するガイドを参照してください。
 
-### Platform UI {#ui}
+### EXPERIENCE PLATFORM UI {#ui}
 
-Platform UI を使用すると、受信したアラートを表示し、アラートルールを管理できます。次のビデオでは、これらの機能の概要を説明しています。
+Experience Platform UI を使用すると、受信したアラートを表示し、アラートルールを管理できます。 次のビデオでは、これらの機能の概要を説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-Platform UI でアラートを操作するには、Adobe Admin Console を通じて次のアクセス制御権限を有効にする必要があります。
+Experience Platform UI でアラートを操作するには、Adobe Admin Consoleを通じて次のアクセス制御権限を有効にする必要があります。
 
 | 権限 | 説明 |
 | --- | --- |
@@ -81,7 +81,7 @@ Platform UI でアラートを操作するには、Adobe Admin Console を通じ
 
 >[!NOTE]
 >
->Platform で権限を管理する方法について詳しくは、[アクセス制御に関するドキュメント](../../access-control/ui/overview.md)を参照してください。
+>Experience Platformで権限を管理する方法について詳しくは、[ アクセス制御に関するドキュメント ](../../access-control/ui/overview.md) を参照してください。
 
 「アラートの表示」権限を使用すると、右上隅のベルアイコン（![ ベルアイコン ](/help/images/icons/bell.png)）を選択して、受信したアラートを表示できます。
 
@@ -95,4 +95,4 @@ Platform UI でアラートを操作するには、Adobe Admin Console を通じ
 
 ## 次の手順
 
-このドキュメントでは、Platform アラートと、Platform エコシステムでのアラートの役割について説明しました。アラートを受信および管理する方法については、この概要を通じてリンクされているプロセスドキュメントを参照してください。
+このドキュメントでは、Experience Platform アラートと、Experience Platform エコシステムでのアラートの役割について説明しました。 アラートを受信および管理する方法については、この概要を通じてリンクされているプロセスドキュメントを参照してください。

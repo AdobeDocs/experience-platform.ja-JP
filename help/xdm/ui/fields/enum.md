@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；列挙；フィールド；
 solution: Experience Platform
 title: UI での列挙フィールドと推奨値の定義
-description: Experience Platformユーザーインターフェイスで文字列フィールドの列挙と推奨値を定義する方法について説明します。
+description: Experience Platform ユーザーインターフェイスで文字列フィールドの列挙と推奨値を定義する方法について説明します。
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 8%
 
 ---
@@ -86,7 +86,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## 列挙と推奨値の進化ルール {#evolution}
 
-列挙フィールドを含むスキーマを使用して Platform にデータを取り込んだ後、スキーマ定義に加えたさらなる変更は、システム内に既に存在するデータに従う必要があります。 通常、既存のフィールドに加えた変更は、そのフィールドのみを制限 **軽減** できます。 フィールドには、既に設定されている制限よりも厳しい制限を適用することはできません。
+列挙フィールドを含むスキーマを使用してデータをExperience Platformに取り込んだ後、スキーマ定義に加えたさらなる変更は、システム内に既にあるデータに従う必要があります。 通常、既存のフィールドに加えた変更は、そのフィールドのみを制限 **軽減** できます。 フィールドには、既に設定されている制限よりも厳しい制限を適用することはできません。
 
 列挙と推奨値に関しては、次のルールが取り込み後に適用されます。
 

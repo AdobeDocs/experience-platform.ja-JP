@@ -1,14 +1,14 @@
 ---
 title: UI での  [!DNL Oracle NetSuite Entities]  ソース接続の作成
-description: Adobe Experience Platform UI を使用して、Oracleの NetSuite エンティティソース接続を作成する方法を説明します。
+description: Adobe Experience Platform UI を使用してOracle NetSuite エンティティソース接続を作成する方法を説明します。
 hide: true
 hidefromtoc: true
 badge: ベータ版
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 39%
+source-wordcount: '706'
+ht-degree: 36%
 
 ---
 
@@ -37,29 +37,29 @@ UI で [!DNL Oracle NetSuite Entities] アカウントからAdobe Experience Pla
 
 ## [!DNL Oracle NetSuite Activities] アカウントを接続 {#connect-account}
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *マーケティング自動化* カテゴリで、「**[!DNL Oracle NetSuite Entities]**」を選択し、次に **[!UICONTROL データを追加]** を選択します。
 
-![Oracleの NetSuite エンティティカードを含むカタログの Platform UI スクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
+![Oracle NetSuite エンティティカードを含むカタログのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
 
-**[!UICONTROL OracleNetSuite エンティティアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+**[!UICONTROL Oracle NetSuite エンティティアカウントの接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
 >[!IMPORTANT]
 >
->更新トークンは 7 日後に有効期限が切れます。 トークンの有効期限が切れたら、更新したトークンを使用してExperience Platform時にアカウントを作成する必要があります。 更新したトークンで新しいアカウントを作成しない場合は、次のエラーメッセージが表示される場合があります。`The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
+>更新トークンは 7 日後に有効期限が切れます。 トークンの有効期限が切れたら、更新したトークンを使用してExperience Platformにアカウントを作成する必要があります。 更新したトークンで新しいアカウントを作成しない場合は、次のエラーメッセージが表示される場合があります。`The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### 既存のアカウント {#existing-account}
 
 既存のアカウントを使用するには、新しいデータフローを作成する [!DNL Oracle NetSuite Entities] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-![Oracleの NetSuite エンティティアカウントを既存のアカウントに接続するための Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
+![Experience Platform NetSuite エンティティアカウントを既存のアカウントに接続するためのOracle UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
 
 ### 新規アカウント {#new-account}
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、の認証情報を指定します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
-![Oracleの NetSuite エンティティアカウントを新しいアカウントに接続するための Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
+![Oracle NetSuite エンティティアカウントを新しいアカウントに接続するためのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
 
 ### データの選択
 
@@ -74,17 +74,17 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 >[!TAB  連絡先 ]
 
-![ 「連絡先」オプションが選択された設定を示すOracle Netsuite エンティティの Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
+![ 連絡先オプションが選択された設定を示すOracle Netsuite エンティティのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
 
 >[!TAB  顧客 ]
 
-![ 「顧客」オプションが選択された状態で設定を示す、OracleNetsuite エンティティの Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
+![ 顧客オプションが選択された設定を示すOracle Netsuite エンティティのExperience Platform UI のスクリーンショット ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
 
 >[!ENDTABS]
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、[!DNL Oracle NetSuite Entities] アカウントとの接続を確立しました。次のチュートリアルに進み、[ マーケティング自動化データを Platform に取り込むためのデータフローの設定 ](../../dataflow/marketing-automation.md) を行いましょう。
+このチュートリアルでは、[!DNL Oracle NetSuite Entities] アカウントとの接続を確立しました。次のチュートリアルに進み、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/marketing-automation.md) を行いましょう。
 
 ## その他のリソース {#additional-resources}
 
@@ -92,7 +92,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ### マッピング {#mapping}
 
-Platform は、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+Experience Platformは、選択したターゲットスキーマまたはデータセットに基づいて、自動マッピングされたフィールドに対してインテリジェントなレコメンデーションを提供します。 マッピングルールは、ユースケースに合わせて手動で調整できます。 必要に応じて、フィールドを直接マッピングするか、データ準備機能を使用してソースデータを変換して計算値を導き出すかを選択できます。マッパーインターフェイスと計算フィールドの使用に関する包括的な手順については、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 >[!NOTE]
 >

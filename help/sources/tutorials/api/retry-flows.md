@@ -2,10 +2,10 @@
 title: 失敗したデータフロー実行の再試行
 description: Flow Service API を使用して、失敗したデータフロー実行を再試行する方法を説明します。
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 19%
+source-wordcount: '272'
+ht-degree: 11%
 
 ---
 
@@ -21,16 +21,16 @@ ht-degree: 19%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../sandboxes/home.md):Experience Platformには、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../sandboxes/home.md):Experience Platformには、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-### Platform API の使用
+### Experience Platform API の使用
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
 
 ## 失敗したデータフロー実行の再試行
 
-失敗したデータフロー実行を再試行するには、`/runs` エンドポイントに対してPOSTリクエストを行い、データフローの実行 ID と `re-trigger` 処理をクエリパラメーターの一部として指定します。
+失敗したデータフロー実行を再試行するには、`/runs` エンドポイントに POST リクエストを実行し、データフローの実行 ID と `re-trigger` 操作をクエリパラメーターの一部として指定します。
 
 **API 形式**
 

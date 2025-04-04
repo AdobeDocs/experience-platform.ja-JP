@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ収集の概要
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 100%
+source-wordcount: '479'
+ht-degree: 70%
 
 ---
 
@@ -34,21 +34,21 @@ Adobe Experience Platform は、クライアントサイドのソースから顧
 * [Experience Platform Assurance](../assurance/home.md)
 
 
-このガイドでは、データ収集の概要と、このフレームワークが Platform Edge Network を介して Adobe Experience Cloud 製品やアドビ以外のアプリケーションにデータを送信する仕組みについて説明します。
+このガイドでは、データ収集の概要と、この機能がExperience Platform Edge Networkを通じてAdobe Experience Cloud製品やAdobe以外のアプリケーションにデータを送信する仕組みについて説明します。
 
 ## タグ、Web SDK および Mobile SDK
 
-Platform Web SDK と Platform Mobile SDK には、すべてのアドビ製品ライブラリが、それぞれ web とモバイルのプラットフォーム用開発キットとして 1 つにまとめられています。これらは、ローコードを使用するか、データ収集 UI または Adobe Experience Platform UI から[タグ](../tags/home.md)を使用して実装できます。
+Experience Platform Web SDKおよびExperience Platform モバイル SDKは、すべてのAdobe製品ライブラリを、それぞれ web およびモバイルプラットフォーム向けの 1 つの開発キットに折りたたんで圧縮します。 これらは、ローコードを使用するか、データ収集 UI または Adobe Experience Platform UI から[タグ](../tags/home.md)を使用して実装できます。
 
-これらのライブラリを圧縮すると、データ収集が高速化され、クライアントサイドデバイスから Platform Edge Network へという単一のストリームに複数の処理が統合されます。
+これらのライブラリを圧縮すると、データ収集が高速化され、クライアントサイドデバイスからExperience Platform Edge Networkに至るまで、処理が単一のストリームに統合されます。
 
 ![タグ、Web SDK、Mobile SDK](./images/home/tags-sdks.png)
 
-## Platform Edge Network とデータストリーム {#edge}
+## Experience Platform Edge Networkとデータストリーム {#edge}
 
-Platform Edge Network とは、世界中に分散された信頼性の高い高速サーバーネットワークであり、データを極めて大規模に受信および処理できます。タグを使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[データストリーム](../datastreams/overview.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
+Experience Platform Edge Networkは、データを大規模に受信および処理できる、世界中に分散した高速で信頼性の高いサーバーネットワークです。 タグを使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[データストリーム](../datastreams/overview.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
 
-また、データストリームは、組織のポリシーや法規制を考慮して、送信する機密データが適切に処理されるようにするのに役立つ、複数の Platform 機能と統合されています。 詳しくは、データストリームに関するドキュメントの[機密データの処理](../datastreams/overview.md#sensitive)に関するセクションを参照してください。
+また、データストリームは、組織のポリシーや法規制を考慮して、送信する機密データが適切に処理されるようにするのに役立つ、複数のExperience Platform機能と統合されています。 詳しくは、データストリームに関するドキュメントの[機密データの処理](../datastreams/overview.md#sensitive)に関するセクションを参照してください。
 
 ![データストリームおよびアドビのソリューション](./images/home/adobe-solutions.png)
 

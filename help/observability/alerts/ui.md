@@ -4,10 +4,10 @@ title: アラート UI ガイド
 description: Experience Platform のユーザーインターフェイスでアラートを管理する方法を説明します。
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 36%
+source-wordcount: '798'
+ht-degree: 34%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 >[!NOTE]
 >
-> アラートをAdobeユーザー ID、外部メールアドレス、メールグループリストのいずれかに割り当てるには、管理者である必要があります。
+> アラートをAdobe ユーザー ID、外部メールアドレス、メールグループリストのいずれかに割り当てるには、管理者である必要があります。
 
 「**[!UICONTROL 参照]**」タブには、アラートをトリガーする可能性のある使用可能なルールが一覧表示されます。
 
@@ -51,7 +51,7 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 ![ 省略記号を選択してドロップダウンメニューを表示します。 「[!UICONTROL  アラート購読者を管理 ]」オプションがハイライト表示されている様子 ](../images/alerts/ui/manage-alert-subscribers.png)
 
-[!UICONTROL  アラート購読者の管理 ] ページが表示されます。 特定のユーザーに通知を割り当てるには、Adobeのユーザー ID、外部のメールアドレス、またはメールグループリストを入力し、Enter キーを押します。
+[!UICONTROL  アラート購読者の管理 ] ページが表示されます。 特定のユーザーに通知を割り当てるには、ユーザーのAdobe ユーザー ID、外部メールアドレス、メールグループリストのいずれかを入力し、Enter キーを押します。
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ Adobe Experience Platform ユーザーインターフェイスを使用すると
 
 ## 次の手順
 
-このドキュメントでは、Platform UI でアラートを表示および管理する方法の概要を示しました。 サービスの機能について詳しくは、[Observability Insights](../home.md) の概要を参照してください。
+このドキュメントでは、Experience Platform UI でアラートを表示および管理する方法の概要を説明しました。 サービスの機能について詳しくは、[Observability Insights](../home.md) の概要を参照してください。

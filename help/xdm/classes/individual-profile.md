@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM Individual Profile クラス
 description: XDM Individual Profile クラスについて説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 32%
+source-wordcount: '553'
+ht-degree: 29%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 32%
 
 [!DNL XDM Individual Profile] は、個人の単一の表現（または「プロファイル」）を形成する標準のエクスペリエンスデータモデル（XDM）クラスです。 特に、クラス（およびその互換性のあるフィールドグループ）は、ブランドとやり取りする、識別された個人と部分的に識別された個人の両方の属性と興味を取得します。
 
-プロファイルは、匿名の行動信号（ブラウザー cookie など）から、名前、生年月日、場所、メールアドレスなどの詳細情報を含む識別されたプロファイルまで様々です。 プロファイルが大きくなると、個々の個人情報、ID、連絡先の詳細、コミュニケーション環境設定の堅牢なリポジトリになります。 Platform エコシステムでのこのクラスの使用に関するハイレベルな情報については、[XDM の概要](../home.md#data-behaviors)を参照してください。
+プロファイルは、匿名の行動信号（ブラウザー cookie など）から、名前、生年月日、場所、メールアドレスなどの詳細情報を含む識別されたプロファイルまで様々です。 プロファイルが大きくなると、個々の個人情報、ID、連絡先の詳細、コミュニケーション環境設定の堅牢なリポジトリになります。 Experience Platform エコシステムでのこのクラスの使用に関するハイレベルな情報については、[XDM の概要 ](../home.md#data-behaviors) を参照してください。
 
 ![XDM 個人プロファイルクラスのスキーマ図。](../images/classes/individual-profile.png)
 
@@ -50,6 +50,6 @@ ht-degree: 32%
 * [[!UICONTROL XDM ビジネスユーザーコンポーネント ]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM ビジネス人物の詳細 ]](../field-groups/profile/business-person-details.md)\*
 
-*\*このフィールドグループは、Adobe Real-time Customer Data Platformの B2B エディションにアクセスできる組織のみが使用できます。*
+*\*このフィールドグループは、Adobe Real-Time Customer Data PlatformのB2B editionにアクセスできる組織のみが使用できます。*
 
 [!DNL XDM Individual Profile] と互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHub リポジトリ ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile) を参照してください。

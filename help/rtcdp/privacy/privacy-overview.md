@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform のプライバシー
 description: Adobe Real-time Customer Data Platform を使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 86%
+source-wordcount: '387'
+ht-degree: 80%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 86%
 
 ## 顧客のアクセスリクエストおよび削除リクエストの遵守
 
-[!DNL General Data Protection Regulation]（GDPR）や [!DNL California Consumer Privacy Act]（CCPA）などの法的なプライバシー規制では、顧客から収集した個人データへのアクセスまたは削除をリクエストする権利が顧客に与えられています。[!DNL Real-Time CDP] はデータの収集と保存に [!DNL Experience Platform] の機能を活用しているので、顧客の個人データへのアクセスと削除のリクエストは [!DNL Platform] 内で管理する必要があります。詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) に関する概要を参照してください。
+[!DNL General Data Protection Regulation]（GDPR）や [!DNL California Consumer Privacy Act]（CCPA）などの法的なプライバシー規制では、顧客から収集した個人データへのアクセスまたは削除をリクエストする権利が顧客に与えられています。[!DNL Real-Time CDP] はデータの収集と保存に [!DNL Experience Platform] の機能を活用しているので、顧客の個人データへのアクセスと削除のリクエストは [!DNL Experience Platform] 内で管理する必要があります。詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) に関する概要を参照してください。
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ ht-degree: 86%
 
 ## IAB TCF 2.0 のサポート
 
-[!DNL Real-Time CDP] は、[!DNL Interactive Advertising Bureau (IAB)] で説明しているように、[!DNL Transparency & Consent Framework (TCF)] の登録済み[ベンダーリスト](https://iabeurope.eu/vendor-list-tcf/)の一部である Adobe Experience Platform に基づいて作成されています。TCF 2.0 要件に準拠して、Platform を使用すると、詳細な顧客同意データを収集し、保存されている顧客プロファイルに統合できます。この同意データは、ユースケースに応じて、特定のプロファイルが書き出されたオーディエンスに含まれているかどうかの要因となります。
+[!DNL Real-Time CDP] は、[!DNL Interactive Advertising Bureau (IAB)] で説明しているように、[!DNL Transparency & Consent Framework (TCF)] の登録済み[ベンダーリスト](https://iabeurope.eu/vendor-list-tcf/)の一部である Adobe Experience Platform に基づいて作成されています。TCF 2.0 要件に準拠して、Experience Platformを使用すると、詳細な顧客同意データを収集し、保存されている顧客プロファイルに統合できます。 この同意データは、ユースケースに応じて、特定のプロファイルが書き出されたオーディエンスに含まれているかどうかの要因となります。
 
 詳しくは、[Experience Platform での IAB TCF 2.0 のサポート](../../landing/governance-privacy-security/consent/iab/overview.md)に関する概要を参照してください。
 

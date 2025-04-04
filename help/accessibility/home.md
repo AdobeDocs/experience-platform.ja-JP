@@ -4,10 +4,10 @@ title: Experience Platform のアクセシビリティ機能の概要
 type: Documentation
 description: Adobe Experience Platform は、すべての個人に対して、アクセシブルで利用制限のない機能を提供することに全力を注いでいます。
 exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 96%
+source-wordcount: '310'
+ht-degree: 73%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 96%
 
 Adobe Experience Platform は、音声認識ソフトウェアやスクリーンリーダーなどの支援デバイスを使用するユーザーを含め、すべての個人に、アクセシブルで利用制限のない機能を提供することに全力を注いでいます。Experience Platform は、あらゆるタイプのユーザーのニーズに応えるように継続的に強化されており、視覚障害、聴覚障害、運動障害またはその他の障害を持つ個人も対象とした世界標準に準拠しています。
 
-Platform でサポートされているその他のアクセシビリティ機能には、キーボードナビゲーション、セマンティック構造、前景要素と背景要素の間の十分なコントラスト、支援テクノロジーのサポート、明確な要素ラベルなどがあります。
+Experience Platformでサポートされているその他のアクセシビリティ機能には、キーボードナビゲーション、セマンティック構造、前景要素と背景要素の十分なコントラスト、支援テクノロジーのサポート、明確な要素ラベルなどがあります。
 
 Experience Platform でサポートされている一般的なアクセシビリティ機能について詳しくは、 [アクセシビリティ機能ガイド](features.md)を参照してください。
 
-Platform ユーザーインターフェイスの特定のセクションにおけるカスタムアクセシビリティ機能については、 [Experience Platform ガイドのカスタムアクセシビリティソリューション](custom.md)を参照してください。
+Experience Platform ユーザーインターフェイスの特定のセクションにおけるカスタムアクセシビリティ機能については、[Experience Platform ガイドのカスタムアクセシビリティソリューション ](custom.md) を参照してください。
 
-アクセシビリティ準拠の目標を達成するために、Experience Platform では、Web Content Accessibility Guidelines（WCAG）2.1 Level A および Level AA で国際的に認められたベストプラクティスに従っています。Experience Platform のアクセシビリティに関する最近の改善について詳しくは、最新の [Platform リリースノート](../release-notes/latest/latest.md)を参照してください。
+アクセシビリティ準拠の目標を達成するために、Experience Platform では、Web Content Accessibility Guidelines（WCAG）2.1 Level A および Level AA で国際的に認められたベストプラクティスに従っています。Experience Platformのアクセシビリティに関する最近の改善について詳しくは、最新の [Experience Platform リリースノート ](../release-notes/latest/latest.md) を参照してください。
 
 アドビのアプリケーションが各コンプライアンスレベルをどのように満たしているかについて詳しくは、 [アクセシビリティ適合性レポート](https://www.adobe.com/accessibility/compliance.html)（ACR）のドキュメントを参照してください。

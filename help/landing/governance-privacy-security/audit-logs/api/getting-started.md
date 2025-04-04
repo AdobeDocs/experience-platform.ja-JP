@@ -4,10 +4,10 @@ description: Audit Query API を使用すると、様々なAdobe Experience Plat
 role: Developer
 feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 40%
+source-wordcount: '391'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ Audit Query API を使用すると、様々なサービスおよび機能に関�
 
 ## 前提条件
 
-監査イベントを管理するには、**[!UICONTROL ユーザーアクティビティログを表示]** アクセス制御権限を付与する必要があります（[!UICONTROL  データガバナンス ] カテゴリの下にあります）。 Platform 機能の個々の権限を管理する方法については、[ アクセス制御ドキュメント ](../../../../access-control/home.md) を参照してください。
+監査イベントを管理するには、**[!UICONTROL ユーザーアクティビティログを表示]** アクセス制御権限を付与する必要があります（[!UICONTROL  データガバナンス ] カテゴリの下にあります）。 Experience Platform機能の個々の権限を管理する方法については、[ アクセス制御ドキュメント ](../../../../access-control/home.md) を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -27,13 +27,13 @@ Audit Query API を使用すると、様々なサービスおよび機能に関�
 
 ### 必要なヘッダーの値の収集
 
-このガイドでは、Platform API を正しく呼び出すために[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)を完了している必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+このガイドでは、Experience Platform API を正しく呼び出すために、[ 認証に関するチュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了している必要があります。 認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。 [!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../../../sandboxes/home.md)を参照してください。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Experience Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。 [!DNL Experience Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../../../sandboxes/home.md)を参照してください。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

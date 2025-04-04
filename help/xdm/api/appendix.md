@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマレジストリ API ガイドの付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 28%
@@ -57,9 +57,9 @@ ht-degree: 28%
 
 ## 互換性モード {#compatibility}
 
-[!DNL Experience Data Model] （XDM）はパブリックに文書化された仕様であり、デジタルエクスペリエンスの相互運用性、表現力、パワーを向上させるためのAdobeによって推進されています。 アドビは、[GitHub のオープンソースプロジェクト](https://github.com/adobe/xdm/)でソースコードと公式の XDM 定義を公開しています。これらの定義は XDM 標準表記で記述され、JSON-LD （JavaScript Object Notation for Linked Data）および JSON スキーマを XDM スキーマを定義する文法として使用しています。
+[!DNL Experience Data Model] （XDM）はパブリックに文書化された仕様で、Adobeによって推進され、デジタルエクスペリエンスの相互運用性、表現力、パワーを向上させます。 アドビは、[GitHub のオープンソースプロジェクト](https://github.com/adobe/xdm/)でソースコードと公式の XDM 定義を公開しています。これらの定義は XDM 標準表記で記述され、JSON-LD （JavaScript Object Notation for Linked Data）および JSON スキーマを XDM スキーマを定義する文法として使用しています。
 
-パブリックリポジトリーで公式の XDM 定義を見ると、標準 XDM は Adobe Experience Platform での表示とは異なることがわかります。[!DNL Experience Platform] に表示されるものは互換性モードと呼ばれ、標準 XDM と [!DNL Platform] 内での使用方法との間の簡単なマッピングを提供します。
+パブリックリポジトリーで公式の XDM 定義を見ると、標準 XDM は Adobe Experience Platform での表示とは異なることがわかります。[!DNL Experience Platform] に表示されるものは互換性モードと呼ばれ、標準 XDM と [!DNL Experience Platform] 内での使用方法との間の簡単なマッピングを提供します。
 
 ### 互換性モードの仕組み
 
@@ -132,6 +132,6 @@ Adobe Experience Platform は、複数のソリューションやサービスと
 
 [!DNL Catalog]、[!DNL Data Lake]、[!DNL Real-Time Customer Profile] など、ほとんどの [!DNL Experience Platform] サービスは、標準の XDM の代わりに [!DNL Compatibility Mode] を使用します。 [!DNL Schema Registry] API でも [!DNL Compatibility Mode] を使用しています。このドキュメントの例はすべて、[!DNL Compatibility Mode] を使用して示しています。
 
-標準 XDM と [!DNL Experience Platform] での運用化の方法の間でマッピングが行われることを知っておくことは価値がありますが、[!DNL Platform] サービスの使用には影響しません。
+標準 XDM と [!DNL Experience Platform] での運用化の方法の間でマッピングが行われることを知っておくことは価値がありますが、[!DNL Experience Platform] サービスの使用には影響しません。
 
 オープンソースプロジェクトは利用可能ですが、[!DNL Schema Registry] を通じてリソースを操作する場合、このドキュメントの API の例では、知っていて従う必要があるベストプラクティスを提供しています。

@@ -2,10 +2,10 @@
 title: ID サービスでの削除
 description: このドキュメントでは、Experience Platform での ID データの削除や、ID グラフがどのような影響を受ける可能性があるかを明確にするために使用できる様々なメカニズムの概要を説明します。
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 95%
+source-wordcount: '1201'
+ht-degree: 91%
 
 ---
 
@@ -31,13 +31,13 @@ Adobe Experience Platform ID サービスでは、個々のユーザーのすべ
 
 ## 単一 ID の削除
 
-単一 ID の削除リクエストでは、グラフ内の ID を削除できるので、ID 名前空間に関連付けられている単一のユーザー ID に結びついているリンクが削除されます。[Privacy Serviceが提供するメカニズムは ](../../privacy-service/home.md) お客様からのデータ削除リクエストや、EU 一般データ保護規則（GDPR）などのプライバシー規制への準拠といったユースケースに使用することができます。
+単一 ID の削除リクエストでは、グラフ内の ID を削除できるので、ID 名前空間に関連付けられている単一のユーザー ID に結びついているリンクが削除されます。[Privacy Service](../../privacy-service/home.md) から提供されるメカニズムは、お客様からのデータ削除リクエストや、EU 一般データ保護規則（GDPR）などのプライバシー規制への準拠といったユースケースに使用することができます。
 
 以下の節では、Experience Platform で単一の ID 削除リクエストに使用できるメカニズムの概要を説明します。
 
 ### Privacy Service での単一 ID 削除
 
- Privacy Service では、EU 一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）などのプライバシー規制で規定されている個人データのアクセス、販売のオプトアウトまたは削除を求める顧客のリクエストを処理します。Privacy Service を使用すると、API または UI を使用してジョブリクエストを送信できます。Experience Platform が Privacy Service から削除リクエストを受信すると、リクエストが受信され、影響を受けるデータに削除マークが付けられた旨の確認を Platform が Privacy Service に送信します。個々 ID の削除は、指定した名前空間や ID 値に基づいて行われます。 さらに、指定した組織に関連付けられているすべてのサンドボックスに対して削除が行われます。詳しくは、[ID サービスでのプライバシーリクエストの処理](../privacy.md)に関するガイドを参照してください。
+ Privacy Service では、EU 一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）などのプライバシー規制で規定されている個人データのアクセス、販売のオプトアウトまたは削除を求める顧客のリクエストを処理します。Privacy Service を使用すると、API または UI を使用してジョブリクエストを送信できます。Experience PlatformがPrivacy Serviceから削除リクエストを受信すると、Experience PlatformからPrivacy Serviceに、リクエストが受信され、影響を受けるデータに削除用のマークが付けられた旨の確認が送信されます。 個々 ID の削除は、指定した名前空間や ID 値に基づいて行われます。 さらに、指定した組織に関連付けられているすべてのサンドボックスに対して削除が行われます。詳しくは、[ID サービスでのプライバシーリクエストの処理](../privacy.md)に関するガイドを参照してください。
 
 Privacy Service での単一 ID 削除の分類を次の表に示します。
 
@@ -56,7 +56,7 @@ Privacy Service での単一 ID 削除の分類を次の表に示します。
 
 ### カタログサービスでのデータセットの削除
 
-カタログサービスを使用すると、データセット削除のリクエストを送信できます。カタログサービスを使用してデータセットを削除する方法について詳しくは、[カタログサービス API を使用したオブジェクトの削除](../../catalog/api/delete-object.md)に関するガイドを参照してください。また、Platform UI を使用して、データセット削除のリクエストを送信することもできます。 詳しくは、[データセットユーザーガイド](../../catalog/datasets/user-guide.md#delete-a-dataset)を参照してください。
+カタログサービスを使用すると、データセット削除のリクエストを送信できます。カタログサービスを使用してデータセットを削除する方法について詳しくは、[カタログサービス API を使用したオブジェクトの削除](../../catalog/api/delete-object.md)に関するガイドを参照してください。または、Experience Platform UI を使用して、データセット削除のリクエストを送信することもできます。 詳しくは、[データセットユーザーガイド](../../catalog/datasets/user-guide.md#delete-a-dataset)を参照してください。
 
 ### データハイジーンにおけるデータセットの有効期限
 
@@ -66,7 +66,7 @@ Adobe Experience Platform UI の[[!UICONTROL データハイジーン]ワーク�
 
 | データセットの削除 | カタログサービス | データハイジーン |
 | --- | --- | --- |
-| 許可されているユースケース | Platform における完全なデータセットとそれらに関連する ID 情報を削除します。 | Experience Platform に保存されているデータの管理。 |
+| 許可されているユースケース | Experience Platform内の完全なデータセットとそれらに関連する ID 情報を削除します。 | Experience Platform に保存されているデータの管理。 |
 | 推定待ち時間 | 数日 | 数日 |
 | 影響を受けるサービス | カタログサービスによるデータセット削除では、ID サービス、リアルタイム顧客プロファイルおよびデータレイクからデータが削除されます。 | データハイジーンによるデータセット削除では、ID サービス、リアルタイム顧客プロファイルおよびデータ レイクからデータが削除されます。 |
 | 削除パターン | 特定のデータセットによって確立されたリンク済み ID を ID サービスから削除します。 | 有効期限スケジュールに基づいて、特定のデータセットによって確立されたリンク済み ID を ID サービスから削除します。 |
@@ -97,7 +97,7 @@ You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anon
 
 ### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
 
 The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 

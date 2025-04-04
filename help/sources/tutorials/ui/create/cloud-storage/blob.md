@@ -1,23 +1,23 @@
 ---
 title: UI での Azure Blob Source接続の作成
-description: Platform ユーザーインターフェイスを使用して Azure Blob ソースコネクタを作成する方法を説明します。
+description: Experience Platform ユーザーインターフェイスを使用して、Azure Blob ソースコネクタを作成する方法を説明します。
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 27%
+source-wordcount: '819'
+ht-degree: 25%
 
 ---
 
 # UI での [!DNL Azure Blob] ソース接続の作成
 
-このチュートリアルでは、Platform ユーザーインターフェイスを使用して、[!DNL Azure Blob] （以下「[!DNL Blob]」）ソース接続を作成する手順について説明します。
+このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して、[!DNL Azure Blob] （以下「[!DNL Blob]」と呼びます）のソース接続を作成する手順について説明します。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)]  システム ](../../../../../xdm/home.md)：カスタマーエクスペリエンスデータをExperience Platformで整理するための標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]  システム ](../../../../../xdm/home.md):Experience Platformでカスタマーエクスペリエンスデータを整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
@@ -42,7 +42,7 @@ Experience Platformの [!DNL Blob] ストレージにアクセスするには、
 
 | 資格情報 | 説明 |
 | --- | --- |
-| 接続文字列 | Experience Platformへの認証に必要な認証情報を含む文字列 [!DNL Blob] す。 [!DNL Blob] の接続文字列パターンは `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` です。 接続文字列について詳しくは、この [!DNL Blob] ドキュメント [ 接続文字列の設定 ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string) を参照してください。 |
+| 接続文字列 | Experience Platformに対する [!DNL Blob] の認証に必要な認証情報を含む文字列。 [!DNL Blob] の接続文字列パターンは `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` です。 接続文字列について詳しくは、この [!DNL Blob] ドキュメント [ 接続文字列の設定 ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string) を参照してください。 |
 
 >[!TAB SAS URI 認証 ]
 
@@ -56,15 +56,15 @@ Experience Platformの [!DNL Blob] ストレージにアクセスするには、
 
 必要な資格情報を収集したら、次の手順に従って [!DNL Blob] ストレージをExperience Platformに接続できます
 
-## [!DNL Blob] アカウントの接続
+## [!DNL Blob] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
 [!UICONTROL  クラウドストレージ ] カテゴリで、「**[!UICONTROL Azure Blob ストレージ]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
-![Azure Blob ストレージソースが選択されているExperience Platformソースカタログ ](../../../../images/tutorials/create/blob/catalog.png)
+![Experience Platform ソースカタログと Azure Blob ストレージソースが選択されています。](../../../../images/tutorials/create/blob/catalog.png)
 
 **[!UICONTROL Azure Blob Storage に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
@@ -108,4 +108,4 @@ SAS ベースの認証では、権限、開始日、有効期限および特定�
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Blob] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データフローを設定して、クラウドストレージから Platform にデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。
+このチュートリアルでは、[!DNL Blob] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。

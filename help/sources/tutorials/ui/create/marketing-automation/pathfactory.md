@@ -1,16 +1,16 @@
 ---
-title: Ui を使用して PathFactory アカウントをExperience Platformに接続する
-description: UI を使用して PathFactory アカウントをExperience Platformに接続する方法を説明します。
+title: Ui を使用した PathFactory アカウントのExperience Platformへの接続
+description: UI を通じて PathFactory アカウントをExperience Platformに接続する方法を説明します。
 badge: ベータ版
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 21%
+source-wordcount: '572'
+ht-degree: 18%
 
 ---
 
-# UI を使用して [!DNL PathFactory] アカウントをExperience Platformに接続する
+# UI を使用した [!DNL PathFactory] アカウントのExperience Platformへの接続
 
 このチュートリアルでは、[!DNL PathFactory] 訪問者、セッションおよびページビューのデータを UI を通じてAdobe Experience Platformに接続する方法の手順を説明します。
 
@@ -23,11 +23,11 @@ ht-degree: 21%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に [!DNL PathFactory] アカウントを持っている場合は、このドキュメントの残りの部分をスキップし、[UI を使用したマーケティング自動化データのExperience Platformへの取り込み ](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
+既に [!DNL PathFactory] アカウントを持っている場合は、このドキュメントの残りの部分をスキップし、[UI を使用したExperience Platformへのマーケティング自動化データの取り込み ](../../dataflow/marketing-automation.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集 {#gather-credentials}
 
-Platform で PathFactory アカウントにアクセスするには、次の値を指定する必要があります。
+Experience Platformで PathFactory アカウントにアクセスするには、次の値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | ---------- | ----------- |
@@ -42,7 +42,7 @@ Platform で PathFactory アカウントにアクセスするには、次の値�
 
 ## [!DNL PathFactory] アカウントを接続
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL  カタログ ] には、Experience Platformでサポートされている様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] には、Experience Platformでサポートされている様々なソースが表示されます。
 
 カテゴリのリストから適切なカテゴリを選択できます。 検索バーを使用して、特定のソースをフィルタリングすることもできます。
 
@@ -68,4 +68,4 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL PathFactory] アカウントとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローを作成 ](../../dataflow/marketing-automation.md) できるようになりました。
+このチュートリアルでは、[!DNL PathFactory] アカウントとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/marketing-automation.md) を行いましょう。

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのスキーマの作成と編集
 description: Experience Platform ユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4075'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->この節では、UI で新しいスキーマを手動で作成する方法について説明します。 CSV データを Platform に取り込む場合は、機械学習（ML）アルゴリズムを使用して **サンプル CSV データからスキーマを生成** できます。 このワークフローはデータ形式に一致し、CSV ファイルの構造と内容に基づいて新しいスキーマを自動的に作成します。 このワークフローについて詳しくは、[ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) を参照してください。
+>この節では、UI で新しいスキーマを手動で作成する方法について説明します。 CSV データをExperience Platformに取り込む場合は、機械学習（ML）アルゴリズムを使用して **サンプル CSV データからスキーマを生成** できます。 このワークフローはデータ形式に一致し、CSV ファイルの構造と内容に基づいて新しいスキーマを自動的に作成します。 このワークフローについて詳しくは、[ML-Assisted schema creation guide](../ml-assisted-schema-creation.md) を参照してください。
 
 [!UICONTROL  スキーマ ] ワークスペースで、右上隅の **[!UICONTROL スキーマを作成]** を選択します。
 
@@ -342,7 +342,7 @@ abstract="スキーマがプロファイルで有効になっている場合、�
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-これで、スキーマをリアルタイム顧客プロファイルで使用できるようになります。 Platform がこのスキーマに基づいてデータセットにデータを取り込むと、そのデータは統合されたプロファイルデータに組み込まれます。
+これで、スキーマをリアルタイム顧客プロファイルで使用できるようになります。 Experience Platformが、このスキーマに基づくデータセットにデータを取り込むと、そのデータは、統合されたプロファイルデータに組み込まれます。
 
 ## スキーマフィールドの表示名の編集 {#display-names}
 
@@ -388,7 +388,7 @@ abstract="スキーマがプロファイルで有効になっている場合、�
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、Platform UI でのスキーマの作成と編集の基本について説明しました。 カスタムフィールドグループやデータタイプの作成など、UI で完全なスキーマを作成するための包括的なワークフローについては、[ スキーマ作成チュートリアル ](../../tutorials/create-schema-ui.md) を確認することを強くお勧めします for 一意のユースケース。
+このドキュメントでは、Experience Platform UI でスキーマを作成および編集する際の基本について説明しました。 カスタムフィールドグループやデータタイプの作成など、UI で完全なスキーマを作成するための包括的なワークフローについては、[ スキーマ作成チュートリアル ](../../tutorials/create-schema-ui.md) を確認することを強くお勧めします for 一意のユースケース。
 
 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
 

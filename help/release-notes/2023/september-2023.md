@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2023年9月
 description: Adobe Experience Platform の 2023年9月のリリースノート。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2265'
-ht-degree: 31%
+source-wordcount: '2269'
+ht-degree: 28%
 
 ---
 
@@ -37,7 +37,7 @@ Experience Platformの既存の機能に対するアップデート：
 
 ## アラート {#alerts}
 
-Experience Platform では、様々な Platform アクティビティに関するイベントベースのアラートを登録できます。Platform ユーザーインターフェイスの「[!UICONTROL アラート]」タブを使用して、様々なアラートルールを購読し、UI 内または電子メール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能または更新された機能**
 
@@ -103,7 +103,7 @@ Experience Platform は、消費者レコードとデータセットをプログ
 
 {style="table-layout:auto"}
 
-Platform のデータハイジーン機能について詳しくは、[データハイジーンの概要](../../hygiene/home.md)を参照してください。
+Experience Platformのデータハイジーン機能について詳しくは、[ データハイジーンの概要 ](../../hygiene/home.md) を参照してください。
 
 ## 宛先 {#destinations}
 
@@ -180,7 +180,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 {style="table-layout:auto"}
 
-Platform の XDM について詳しくは、[XDM システムの概要](../../xdm/home.md)を参照してください。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要」を参照してください ](../../xdm/home.md)
 
 ## ID サービス {#identity-service}
 
@@ -214,7 +214,7 @@ ID サービスについて詳しくは、[ID サービスの概要 ](../../iden
 
 ## セグメント化サービス {#segmentation}
 
-[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
+[!DNL Segmentation Service] を使用すると、[!DNL Experience Platform] に保存されている、個人（顧客、見込み客、ユーザー、組織など）に関連するデータをオーディエンスにセグメント化できます。オーディエンスは、セグメント定義または [!DNL Real-Time Customer Profile] データの他のソースを通じて作成できます。これらのオーディエンスは [!DNL Experience Platform] で一元的に設定および管理されており、Adobe ソリューションから簡単にアクセスできます。
 
 **新機能または更新された機能**
 

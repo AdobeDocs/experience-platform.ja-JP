@@ -3,10 +3,10 @@ title: UI を使用したAWS Redshift のExperience Platformへの接続
 description: ソース UI を使用してAWS Redshift アカウントをExperience Platformに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 22%
+source-wordcount: '719'
+ht-degree: 20%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 22%
 
 ## ソースカタログのナビゲート
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して、[!UICONTROL ソース]ワークスペースにアクセスします。画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
 *[!UICONTROL データベース]* カテゴリの下の「**[!DNL AWS Redshift]**」を選択し、「**[!UICONTROL 設定]**」を選択します。
 

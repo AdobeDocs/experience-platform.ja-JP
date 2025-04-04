@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート（2022年1月）
 description: Adobe Experience Platform の 2022年1月のリリースノートです。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 97%
+source-wordcount: '1344'
+ht-degree: 81%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform の既存の機能に対するアップデート：
 
 ## アラート {#alerts}
 
-Experience Platform では、様々な Platform アクティビティに関するイベントベースのアラートを登録できます。Platform ユーザーインターフェイスの「[!UICONTROL アラート]」タブを使用して、様々なアラートルールを購読し、UI 内または電子メール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **更新された機能**
 
@@ -35,7 +35,7 @@ Experience Platform では、様々な Platform アクティビティに関す�
 | 新しいアラートルール | データの取り込み、ID、プロファイル、セグメント化、アクティブ化に関連するワークフローで、いくつかの新しいアラートルールが使用できるようになりました。更新されたアラートタイプのリストの概要については、[アラートルール](../../observability/alerts/rules.md)を参照してください。 |
 | ソースデータフローのコンテキスト内アラート | 登録して、取り込みワークフロー中のデータフローのステータスに関するアラートメッセージを受け取れるようになりました。詳しくは、[UI でのソースアラートの購読](../../sources/tutorials/ui/alerts.md)でのガイドを参照してください。 |
 
-Platform のアラートについて詳しくは、[アラートの概要](../../observability/alerts/overview.md)を参照してください。
+Experience Platformのアラートについて詳しくは、[ アラートの概要 ](../../observability/alerts/overview.md) を参照してください。
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -57,7 +57,7 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 | 機能 | 説明 |
 | --- | --- |
-| 統合マッピングエクスペリエンス | Platform UI の新しいマッピングインターフェイスでは、一貫したマッピングエクスペリエンスを利用して、インテリジェントマッピングレコメンデーションの活用、マッピングルールの手動設定、マッピングセットに発生したエラーのデバッグができます。詳しくは、[[!DNL Data Prep]  UI ガイド](../../data-prep/ui/mapping.md) を参照してください。 |
+| 統合マッピングエクスペリエンス | Experience Platform UI の新しいマッピングインターフェイスでは、一貫したマッピングエクスペリエンスを利用して、インテリジェントマッピングレコメンデーションの活用、マッピングルールの手動設定、マッピングセットに発生したエラーのデバッグができます。 詳しくは、[[!DNL Data Prep]  UI ガイド](../../data-prep/ui/mapping.md) を参照してください。 |
 
 [!DNL Data Prep] について詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
@@ -98,13 +98,13 @@ Adobe Experience Platform では、毎日のスナップショットで得られ
 
 ## サンドボックス {#sandboxes}
 
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに応えるために、Experience Platform にはサンドボックスが用意されています。サンドボックスでは、単一の Platform インスタンスを別々の仮想環境に分割するので、デジタルエクスペリエンスアプリケーションの開発と発展に役立ちます。
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
 
 **更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| サンドボックス UI の強化 | サンドボックスインジケーターが、すべての Platform UI アプリケーションのヘッダー内に統合されるようになりました。サンドボックスインジケーターは、サンドボックスの名前、地域、タイプを表示し、ドロップダウンメニューにアクセスしてサンドボックス間を切り替えることもできます。詳しくは、 [サンドボックス UI ガイド](../../sandboxes/ui/user-guide.md) を参照してください。 |
+| サンドボックス UI の強化 | サンドボックスインジケーターが、すべてのExperience Platform UI アプリケーションのヘッダー内に統合されるようになりました。 サンドボックスインジケーターは、サンドボックスの名前、地域、タイプを表示し、ドロップダウンメニューにアクセスしてサンドボックス間を切り替えることもできます。詳しくは、 [サンドボックス UI ガイド](../../sandboxes/ui/user-guide.md) を参照してください。 |
 
 サンドボックスについて詳しくは、 [サンドボックスの概要](../../sandboxes/home.md) を参照してください。
 
@@ -116,13 +116,13 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | --- | --- |
-| Segment Match | Segment Match は、2 人以上の Platform ユーザーが、共通の識別子に基づいて、安全で管理され、プライバシーに優しい方法でデータを交換できるデータコラボレーションサービスです。Segment Match は、Platform のプライバシー基準と個人識別子（ハッシュ化された電子メール、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別子など）を使用します。詳しくは、 [Segment Match の概要](../../segmentation/ui/segment-match/overview.md) を参照してください。 |
+| Segment Match | Segment Match は、2 人以上のExperience Platform ユーザーが、共通の識別子に基づいて、安全で管理され、プライバシーに配慮した方法でデータを交換できるデータコラボレーションサービスです。 Segment Match は、Experience Platformのプライバシー基準と個人識別情報（ハッシュ化されたメールアドレス、ハッシュ化された電話番号、IDFA や GAID などのデバイス識別情報など）を使用します。 詳しくは、 [Segment Match の概要](../../segmentation/ui/segment-match/overview.md) を参照してください。 |
 
 [!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 

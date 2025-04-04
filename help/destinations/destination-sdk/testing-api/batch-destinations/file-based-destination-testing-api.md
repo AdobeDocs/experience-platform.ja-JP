@@ -2,10 +2,10 @@
 description: このページでは、/testing/destinationInstance API エンドポイントを使用して、ファイルベースの宛先が正しく設定されているかどうかをテストしたり、設定された宛先に対するデータフローの整合性を検証したりする方法を説明します。
 title: サンプルプロファイルを使用したファイルベースの宛先のテスト
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 100%
+source-wordcount: '831'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 100%
 
 * Destination SDK で作成した既存のファイルベースの宛先があり、[宛先カタログ](../../../ui/destinations-workspace.md)で確認できる。
 * Experience Platform UI で、宛先に対して少なくとも 1 つのアクティベーションフローを作成している。
-* API リクエストを成功させるには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。Platform UI で宛先との接続を参照する際に、URL から、API 呼び出しで使用する必要がある宛先インスタンス ID を取得します。
+* API リクエストを成功させるには、テストする宛先インスタンスに対応する宛先インスタンス ID が必要です。Experience Platform UI で宛先との接続を参照する際に、URL から、API 呼び出しで使用する必要がある宛先インスタンス ID を取得します。
 
   ![URL から宛先インスタンス ID を取得する方法を示す UI 画像。](../../assets/testing-api/get-destination-instance-id.png)
 * *オプション*：API 呼び出しに追加したサンプルプロファイルで宛先設定をテストしたい場合は、[/sample-profiles](file-based-sample-profile-generation-api.md) エンドポイントを使用して、既存のソーススキーマに基づいてサンプルプロファイルを生成します。サンプルプロファイルを提供しない場合、API がサンプルプロファイルを生成して、応答で返します。
@@ -238,7 +238,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 ## API エラー処理 {#api-error-handling}
 
-Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Platform トラブルシューティングガイドの [API ステータスコード](../../../../landing/troubleshooting.md#api-status-codes)および[リクエストヘッダーエラー](../../../../landing/troubleshooting.md#request-header-errors)を参照してください。
+Destination SDK API エンドポイントは、一般的な Experience Platform API エラーメッセージの原則に従います。Experience Platform トラブルシューティングガイドの [API ステータスコード ](../../../../landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](../../../../landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順
 

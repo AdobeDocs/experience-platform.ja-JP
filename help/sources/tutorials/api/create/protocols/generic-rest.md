@@ -5,10 +5,10 @@ title: Flow Service API を使用した汎用 REST API ベース接続の作成
 type: Tutorial
 description: Flow Service API を使用して汎用の REST API をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 58%
+source-wordcount: '955'
+ht-degree: 45%
 
 ---
 
@@ -26,10 +26,10 @@ ht-degree: 58%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-* [ソース](../../../../home.md)：Experience Platform を使用すると、様々なソースからデータを取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform には、単一の Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-Platform API を正常に呼び出す方法について詳しくは、[Platform API の概要](../../../../../landing/api-guide.md)のガイドを参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
 ### 必要な資格情報の収集
 
@@ -61,13 +61,13 @@ Platform API を正常に呼び出す方法について詳しくは、[Platform 
 
 ## ベース接続の作成
 
-ベース接続は、ソースと Platform 間の情報（ソースの認証資格情報、現在の接続状態、固有のベース接続 ID など）を保持します。ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
+ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
 [!DNL Generic REST API] は、基本認証と OAuth 2 更新コードの両方をサポートしています。いずれかの認証タイプで認証する方法については、次の例を参照してください。
 
 ### OAuth 2 更新コードコードを使って [!DNL Generic REST API] ベース接続を作成します
 
-OAuth 2 更新コードを使用してベース接続 ID を作成するには、OAuth 2 資格情報を提供しながら、`/connections` エンドポイントにPOSTリクエストを行います。
+OAuth 2 更新コードを使用してベース接続 ID を作成するには、OAuth 2 資格情報を提供したうえで、`/connections` エンドポイントに対して POST リクエストを行います。
 
 **API 形式**
 
@@ -109,7 +109,7 @@ curl -X POST \
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | 関連付けられた接続仕様 ID[!DNL Generic REST API] この修正済み ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
-| `auth.specName` | Platform へのソースの認証に使用する認証タイプ。 |
+| `auth.specName` | Experience Platformに対するソースの認証に使用する認証タイプ。 |
 | `auth.params.host` | [!DNL Generic REST API] ソースへの接続に使用するルート URL。 |
 | `auth.params.accessToken` | ソースの認証に使用された、対応するアクセストークン。これは、OAuth ベースの認証に必要です。 |
 
@@ -126,7 +126,7 @@ curl -X POST \
 
 ### 基本認証を使用した [!DNL Generic REST API] ベース接続の作成
 
-基本認証を使用した [!DNL Generic REST API] ベースPOSTを作成するには、基本認証資格情報を提供 [!DNL Flow Service] ながら、API の `/connections` エンドポイントに接続リクエストを行います。
+基本認証を使用した [!DNL Generic REST API] ベース接続を作成するには、基本認証資格情報を提供 [!DNL Flow Service] ながら、API の `/connections` エンドポイントに POST リクエストを行います。
 
 **API 形式**
 
@@ -169,7 +169,7 @@ curl -X POST \
 | `name` | ベース接続の名前。ベース接続の情報を検索する際に使用できるので、ベース接続の名前はわかりやすいものにしてください。 |
 | `description` | （オプション）ベース接続に関する詳細情報を提供するために含めることができるプロパティ。 |
 | `connectionSpec.id` | 関連付けられた接続仕様 ID[!DNL Generic REST API] この修正済み ID は `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62` です。 |
-| `auth.specName` | ソースを Platform に接続するために使用する認証タイプ。 |
+| `auth.specName` | ソースをExperience Platformに接続するために使用する認証タイプ。 |
 | `auth.params.host` | [!DNL Generic REST API] ソースへの接続に使用するルート URL。 |
 | `auth.params.username` | [!DNL Generic REST API] ソースに対応するユーザー名。 これは、基本認証に必要です。 |
 | `auth.params.password` | [!DNL Generic REST API] ソースに対応するパスワード。 これは、基本認証に必要です。 |
@@ -190,4 +190,4 @@ curl -X POST \
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Generic REST API] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
 * [ [!DNL Flow Service]  API を使用したデータテーブルの構造と内容の探索](../../explore/tabular.md)
-* [ [!DNL Flow Service] API を使用した、プロトコルデータを Platform に取り込むデータフローの作成](../../collect/protocols.md)
+* [ [!DNL Flow Service] API を使用した、プロトコルデータをExperience Platformに取り込むデータフローの作成](../../collect/protocols.md)

@@ -5,7 +5,7 @@ title: UI で Apache HDFS Source接続を作成
 type: Tutorial
 description: Adobe Experience Platform UI を使用して、Apache Hadoop分散ファイルシステムのソース接続を作成する方法を説明します。
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 35%
@@ -18,11 +18,11 @@ ht-degree: 35%
 >
 >[!DNL Apache] HDFS コネクタはベータ版です。 ベータ版のコネクタの使用に関して詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-[!DNL Adobe Experience Platform] のSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Platform] ユーザーインターフェイスを使用して [!DNL Apache Hadoop Distributed File System] （以下「HDFS」と呼びます）ソースコネクタを認証する手順について説明します。
+[!DNL Adobe Experience Platform] のSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Apache Hadoop Distributed File System] （以下「HDFS」と呼びます）ソースコネクタを認証する手順について説明します。
 
 ## はじめに
 
-このチュートリアルでは、[!DNL Platform] の次のコンポーネントに関する十分な知識が必要です。
+このチュートリアルでは、[!DNL Experience Platform] の次のコンポーネントに関する十分な知識が必要です。
 
 - [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
@@ -41,7 +41,7 @@ HDFS ソースコネクタを認証するには、次の接続プロパティの
 
 ## HDFS アカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って HDFS アカウントを [!DNL Platform] にリンクできます。
+必要な資格情報を収集したら、次の手順に従って HDFS アカウントを [!DNL Experience Platform] にリンクできます。
 
 [Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
 
@@ -67,4 +67,4 @@ HDFS ソースコネクタを認証するには、次の接続プロパティの
 
 ## 次の手順
 
-このチュートリアルでは、HDFS アカウントへの接続を確立しました。 次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Platform]](../../dataflow/batch/cloud-storage.md) を行いましょう。
+このチュートリアルでは、HDFS アカウントへの接続を確立しました。 次のチュートリアルに進み、[ クラウドストレージからデータをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md) を行いましょう。

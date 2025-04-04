@@ -4,16 +4,16 @@ solution: Experience Platform
 title: ソースのトラブルシューティング
 description: このドキュメントでは、Adobe Experience Platform でのソースに関するよくある質問に対する回答を示します。
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 100%
+source-wordcount: '749'
+ht-degree: 97%
 
 ---
 
 # ソースのトラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platform でのソースに関するよくある質問に対する回答を示します。すべての [!DNL Platform] API で発生する問題を含め、他の [!DNL Platform] サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、Adobe Experience Platform でのソースに関するよくある質問に対する回答を示します。すべての [!DNL Experience Platform] API で発生する問題を含め、他の [!DNL Experience Platform] サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
 ## よくある質問
 
@@ -67,7 +67,7 @@ JSON ファイルと Parquet ファイルでは、配列をネイティブにサ
 
 ### 部分取り込みを使用するのは、どのような場合ですか？
 
-部分取り込みを使用するのは、ファイル全体を Platform に取り込むなどの制約が&#x200B;**ない**&#x200B;場合です。または、エラーが含まれている可能性のあるデータを取り込んでも構わない場合は、部分取り込みを使用してください。
+部分取り込みを使用するのは、ファイル全体をExperience Platformに取り込むなどの制約がある **ない** 場合です。 または、エラーが含まれている可能性のあるデータを取り込んでも構わない場合は、部分取り込みを使用してください。
 
 ### 部分取り込みエラーの一般的なしきい値は何ですか？
 

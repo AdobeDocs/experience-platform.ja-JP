@@ -3,16 +3,16 @@ keywords: Experience Platform;ホーム;人気のトピック;
 title: データ準備トラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience Platform データ準備に関するよくある質問に対する回答を示します。
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: ff8f660c2b3a04d8b4b9d4f19891816a44069088
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 29%
+source-wordcount: '1257'
+ht-degree: 28%
 
 ---
 
 # [!DNL Data Prep] トラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platform [!DNL Data Prep] に関するよくある質問に対する回答と、一般的なエラーのトラブルシューティングガイドを示します。Platform API 全般に関する質問とトラブルシューティング情報については、[Adobe Experience Platform API トラブルシューティング ガイド](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、Adobe Experience Platform [!DNL Data Prep] に関するよくある質問に対する回答と、一般的なエラーのトラブルシューティングガイドを示します。Experience Platform API 全般に関する質問とトラブルシューティングについては、[Adobe Experience Platform API トラブルシューティングガイド ](../landing/troubleshooting.md) を参照してください。
 
 ## FAQ
 
@@ -58,7 +58,7 @@ ht-degree: 29%
 >
 >* ID サービス：ID サービスでレコードを完全に削除することはできません。 プロファイル全体を削除し、プロファイル削除 API を使用して、正しいレコードでプロファイルを再度アップロードする必要があります。
 
-### GIFデータで計算フィールドを使用するためのベストプラクティスは何ですか？
+### GIF データで計算フィールドを使用するためのベストプラクティスは何ですか？
 
 ソースデータの XDM スキーマへのマッピング手順でデータ準備のマッピング関数を使用して、新しい計算フィールドを作成できます。
 
@@ -98,7 +98,7 @@ iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | --- | --- | --- | --- | --- | --- |
 | iif | 指定されたブール式を評価し、結果に基づいて指定された値を返します。 | <ul><li>EXPRESSION: **必須** 評価されるブール式。</li><li>TRUE_VALUE: **必須** 式が true と評価された場合に返される値。</li><li>FALSE_VALUE: **必須** 式が false と評価された場合に返される値。</li></ul> | iif （EXPRESSION, TRUE_VALUE, FALSE_VALUE） | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| 次と等しい | 2 つの文字列を比較して、等しいかどうかを確認します。 この関数では大文字と小文字が区別されます。 | <ul><li>STRING1: **必須** 比較する最初の文字列。</li><li>STRING2: **必須** 比較する 2 番目の文字列。 | STRING1.&#x200B;equals （&#x200B;STRING2） | &quot;string1&quot;..&#x200B;equals&#x200B;（&quot;STRING1&quot;） | 偽 |
+| 次と等しい | 2 つの文字列を比較して、等しいかどうかを確認します。 この関数では大文字と小文字が区別されます。 | <ul><li>STRING1: **必須** 比較する最初の文字列。</li><li>STRING2: **必須** 比較する 2 番目の文字列。 | STRING1.&#x200B;equals （&#x200B;STRING2） | &quot;string1&quot;..&#x200B;equals&#x200B;（&quot;STRING1&quot;） | false |
 | 無効にする | 属性の値を null に設定します。 これは、フィールドをターゲットスキーマにコピーしない場合に使用する必要があります。 | | nullify （） | nullify （） | null |
 
 {style="table-layout:auto"}

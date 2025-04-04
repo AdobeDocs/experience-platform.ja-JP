@@ -3,9 +3,9 @@ title: 1 回限りの顧客価値をライフタイム価値に進化
 description: 特定の顧客の属性、行動、過去の購入に基づいて、最適な補完的な製品やサービスを提供するパーソナライズされたキャンペーンを作成する方法を説明します。
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3179'
+source-wordcount: '3181'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 社内で、ブランドロイヤルティを高めるビジネス目標と目標を定義していることを考慮します。 これは、顧客エンゲージメントとロイヤルティを高めるためにユースケースを実行することを意味します。
 
-これを実現するために必要なテクノロジは、2 つのExperience Platformアプリ [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja) と [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja) で構成されています。 以下に、ユースケースの実装時に使用する 2 つのアプリの様々な機能と UI 要素を示します。
+これを実現するために必要なテクノロジは、2 つのExperience Platform アプリ [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ja) と [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja) で構成されています。 以下に、ユースケースの実装時に使用する 2 つのアプリの様々な機能と UI 要素を示します。
 
 >[!TIP]
 >
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 ## Real-Time CDPとJourney Optimizerのアーキテクチャ
 
-以下は、Real-Time CDPとJourney Optimizerの様々なコンポーネントのアーキテクチャの概要です。 次の図は、このページで説明するユースケースを達成するために、データ収集からジャーニーやキャンペーンを通じてアクティブ化された宛先に至るまでの、2 つのExperience Platformアプリを介したデータのフローを示しています。
+以下は、Real-Time CDPとJourney Optimizerの様々なコンポーネントのアーキテクチャの概要です。 次の図は、このページで説明するユースケースを達成するために、データ収集からジャーニーやキャンペーンを通じて宛先に対してアクティブ化される時点までの、2 つのExperience Platform アプリを介したデータのフローを示しています。
 
 ![ アーキテクチャの全体的なビジュアルの概要。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
@@ -73,7 +73,7 @@ ht-degree: 2%
 ![ ステップバイステップの 1 回限りの値をライフタイム値に進化させる高レベルの視覚的な概要 ](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. スキーマとデータセットを作成し、これらを [!UICONTROL  プロファイル ] 用にマークします。
-2. データは、Web SDK、Mobile Edge SDK または API を介して収集され、Experience Platformに統合されます。 Analytics Data Connector も利用できますが、ジャーニー遅延が発生する可能性があります。
+2. データは、Web SDK、Mobile Edge SDK、API を使用して収集され、Experience Platformに統合されます。 Analytics Data Connector も利用できますが、ジャーニー遅延が発生する可能性があります。
 3. プロファイルをReal-Time CDPに読み込み、責任ある使用を確保するためにガバナンスポリシーを構築します。
 4. プロファイルのリストから焦点を当てたオーディエンスを作成し、価値の高い顧客と頻度の低い顧客を確認します。
 5. [!DNL Adobe Journey Optimizer] で 2 つのジャーニーを作成します。1 つは新しい購読プログラムについてユーザーにメッセージを送信するため、もう 1 つは後で購入を確認するようメッセージを送信するためです。
@@ -137,7 +137,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 #### 顧客デジタルトランザクションスキーマ {#customer-digital-transactions-schema}
 
-このスキーマは、Web サイトまたは他の関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常 [Web SDK](/help/web-sdk/home.md) を介して [!DNL Adobe Experience Platform] に取り込まれ、ジャーニーのトリガーに使用される様々な参照およびコンバージョンイベント、詳細なオンライン顧客分析、強化されたセグメント化機能を参照するために必要です。
+このスキーマは、Web サイトまたは他の関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは通常、[Web SDK](/help/web-sdk/home.md) を介して [!DNL Adobe Experience Platform] に取り込まれ、ジャーニーのトリガーに使用される様々な参照およびコンバージョンイベント、オンライン顧客分析の詳細、セグメント化機能の強化を参照するために必要です。
 
 ![ フィールドグループがハイライト表示された顧客デジタルトランザクションスキーマ ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
@@ -210,7 +210,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 #### 顧客のオフライントランザクションスキーマ {#customer-offline-transactions-schema}
 
-このスキーマは、web サイト外のプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常、POS （または類似のシステム）から [!DNL Adobe Experience Platform] に取り込まれ、ほとんどの場合、API 接続を介して Platform にストリーミングされます。 [ バッチ取り込み ](/help/ingestion/batch-ingestion/getting-started.md) を参照してください。 その目的は、ジャーニーのトリガー、オンラインとオフラインの詳細な顧客分析、強化されたセグメント化機能に使用される様々なオフラインコンバージョンイベントを参照することです。
+このスキーマは、web サイト外のプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このデータは、通常、POS （または同様のシステム）から [!DNL Adobe Experience Platform] に取り込まれ、ほとんどの場合、API 接続を介してExperience Platformにストリーミングされます。 [ バッチ取り込み ](/help/ingestion/batch-ingestion/getting-started.md) を参照してください。 その目的は、ジャーニーのトリガー、オンラインとオフラインの詳細な顧客分析、強化されたセグメント化機能に使用される様々なオフラインコンバージョンイベントを参照することです。
 
 ![ フィールドグループがハイライト表示された顧客のオフライントランザクションスキーマ ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -240,7 +240,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 >
 >[!DNL Adobe Analytics Data Connector] を使用している場合、これはオプションの実装です。
 
-このスキーマは、Web サイトまたは他の関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このスキーマは、顧客デジタルトランザクションスキーマに似ていますが、Web SDK がデータ収集用のオプションでない場合に、このスキーマが可能であるという点が異なります。 そのため、[!DNL Adobe Analytics Data Connector] を利用してオンラインデータを [!DNL Adobe Experience Platform] にプライマリまたはセカンダリデータストリームとして送信する場合に、このスキーマを使用できます。
+このスキーマは、Web サイトまたは他の関連するデジタルプラットフォームで発生する顧客アクティビティを構成するイベントデータを構造化し、参照するために使用されます。 このスキーマは、Customer Digital Transactions スキーマと似ていますが、Web SDKがデータ収集のオプションでない場合に使用できる点が異なります。 そのため、[!DNL Adobe Analytics Data Connector] を利用してオンラインデータを [!DNL Adobe Experience Platform] にプライマリまたはセカンダリデータストリームとして送信する場合に、このスキーマを使用できます。
 
 ![ フィールドグループがハイライト表示されたAdobe web コネクタスキーマ ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
@@ -300,7 +300,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 * オーディエンスの作成方法について詳しくは、[ オーディエンスサービス UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience) を参照してください。
 * [ オーディエンス ](/help/segmentation/home.md) の作成方法について詳しくは、[ オーディエンス構成 UI ガイド ](/help/segmentation/ui/audience-composition.md) を参照してください。
-* Platform 派生セグメント定義を使用してオーディエンスを作成する方法について詳しくは、[Audience Builder UI ガイド ](/help/segmentation/ui/segment-builder.md) を参照してください。
+* Experience Platformから派生したセグメント定義を使用してオーディエンスを作成する方法について詳しくは、[Audience Builder UI ガイド ](/help/segmentation/ui/segment-builder.md) を参照してください。
 
 特に、次の画像に示すように、ユースケースの異なる手順で 2 つのオーディエンスを作成し使用する必要があります。
 

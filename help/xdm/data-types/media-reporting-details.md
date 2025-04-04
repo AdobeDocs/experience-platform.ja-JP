@@ -2,9 +2,9 @@
 title: メディアレポートの詳細データタイプ
 description: メディアレポートの詳細 Experience Data Model （XDM）データタイプについて説明します。
 exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->以下に説明するフィールドは、リクエストの作成に直接使用されません。 代わりに、Adobe Experience PlatformまたはAdobe Analyticsに送信されるフィールドのコレクションがリクエストデータから組み立てられ、指標がサーバーインフラストラクチャによって組み込まれるか処理されます。 Platform は様々なタイプのユーザーイベントを収集しますが、ユーザーに返されるレポートは、`media.sessionStart`、`media.adStart`、`media.sessionComplete` などの特定のイベントに焦点を当てています。 つまり、収集時に 12 種類のイベントを送信しても、レポートには、以下に示す 5 つのイベントに基づく分類のみが表示されます。
+>以下に説明するフィールドは、リクエストの作成に直接使用されません。 代わりに、Adobe Experience PlatformまたはAdobe Analyticsに送信されるフィールドのコレクションがリクエストデータから組み立てられ、指標がサーバーインフラストラクチャによって組み込まれるか処理されます。 Experience Platformは様々なタイプのユーザーイベントを収集しますが、ユーザーに返されるレポートは、`media.sessionStart`、`media.adStart`、`media.sessionComplete` などの特定のイベントに焦点を当てています。 つまり、収集時に 12 種類のイベントを送信しても、レポートには、以下に示す 5 つのイベントに基づく分類のみが表示されます。
 
 +++選択すると、[!UICONTROL  メディアレポートの詳細 ] データタイプの図が表示されます。
 ![ メディアレポートの詳細 [!UICONTROL  データタイプ ] 図 ](../images/data-types/media-reporting-details.png)

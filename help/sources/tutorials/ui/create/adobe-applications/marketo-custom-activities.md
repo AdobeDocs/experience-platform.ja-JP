@@ -1,11 +1,11 @@
 ---
-title: UI でカスタムアクティビティデータのMarketo Engage Source接続とデータフローを作成する
-description: このチュートリアルでは、UI でMarketo Engageソース接続とデータフローを作成し、カスタムアクティビティデータをAdobe Experience Platformに取り込む手順について説明します。
+title: UI でのカスタムアクティビティデータのMarketo Engage Source接続とデータフローの作成
+description: このチュートリアルでは、UI でMarketo Engage ソース接続とデータフローを作成し、カスタムアクティビティデータをAdobe Experience Platformに取り込む手順について説明します。
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 22%
+source-wordcount: '1477'
+ht-degree: 17%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->このチュートリアルでは、**カスタムアクティビティ** データを設定し、[!DNL Marketo] からExperience Platformに取り込む方法に関する具体的な手順を説明します。 **標準アクティビティ** データを取り込む手順については、[[!DNL Marketo] UI ガイド ](./marketo.md) を参照してください。
+>このチュートリアルでは、**カスタムアクティビティ** データを [!DNL Marketo] からExperience Platformにを設定および取り込む方法に関する具体的な手順を説明します。 **標準アクティビティ** データを取り込む手順については、[[!DNL Marketo] UI ガイド ](./marketo.md) を参照してください。
 
 [ 標準のアクティビティ ](../../../../connectors/adobe-applications/mapping/marketo.md#activities) に加えて、[!DNL Marketo] ソースを使用して、カスタムアクティビティデータをAdobe Experience Platformに取り込むこともできます。 このドキュメントでは、UI の [!DNL Marketo] ソースを使用して、カスタムアクティビティデータのソース接続とデータフローを作成する手順を説明します。
 
@@ -22,16 +22,16 @@ ht-degree: 22%
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [B2B 名前空間とスキーマ自動生成ユーティリティ ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): B2B 名前空間とスキーマ自動生成ユーティリティを使用すると、[!DNL Postman] を使用して B2B 名前空間とスキーマの値を自動生成できます。 [!DNL Marketo] ソース接続とデータフローを作成する前に、まず B2B 名前空間とスキーマを完了する必要があります。
-* [ソース](../../../../home.md)：Experience Platform を使用すると、データを様々なソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [Experience Data Model（XDM）](../../../../../xdm/home.md)：Adobe Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [UI でのスキーマの作成と編集](../../../../../xdm/ui/resources/schemas.md)：UI でスキーマを作成および編集する方法について説明します。
 * [ID 名前空間](../../../../../identity-service/features/namespaces.md)：ID 名前空間は [!DNL Identity Service] のコンポーネントで、ID の関連先コンテキストのインジケーターとして機能します。完全修飾 ID には、ID 値と名前空間が含まれます。
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを個別の仮想環境に分割する仮想サンドボックスを提供し、デジタル体験アプリケーションの開発および進化を支援します。
+* [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ## カスタムアクティビティの詳細の取得
 
-カスタムアクティビティデータを [!DNL Marketo] からExperience Platformに取り込むための最初の手順は、カスタムアクティビティの API 名と表示名を取得することです。
+カスタムアクティビティデータを [!DNL Marketo] からExperience Platformに取り込む最初の手順は、カスタムアクティビティの API 名と表示名を取得することです。
 
 [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) インターフェイスを使用してアカウントにログインします。 左側のナビゲーションの [!DNL Database Management] の下の「**Marketoカスタムアクティビティ**」を選択します。
 
@@ -41,17 +41,17 @@ ht-degree: 22%
 
 上部ヘッダーから **フィールド** を選択して、カスタムアクティビティに関連付けられているフィールドを表示します。 このページでは、カスタムアクティビティのフィールドの名前、API 名、説明およびデータタイプを確認できます。 個々のフィールドに関する詳細は、後の手順でスキーマを作成する際に使用します。
 
-![Marketo EngageUI のMarketo カスタムアクティビティフィールドの詳細ページ。](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
+![Marketo Engage UI のMarketo カスタムアクティビティフィールドの詳細ページ。](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
 
 ## B2B アクティビティスキーマのカスタムアクティビティ用のフィールドグループを設定します
 
-Experience PlatformUI の *[!UICONTROL スキーマ]* ダッシュボードで、「**[!UICONTROL 参照]** を選択したあと、スキーマのリストから「**[!UICONTROL B2B アクティビティ]**」を選択します。
+Experience Platform UI の *[!UICONTROL スキーマ]* ダッシュボードで、「**[!UICONTROL 参照]** を選択したあと、スキーマのリストから「**[!UICONTROL B2B アクティビティ]**」を選択します。
 
 >[!TIP]
 >
 >検索バーを使用して、スキーマのリストを素早く移動できます。
 
-![B2B アクティビティスキーマが選択されたExperience PlatformUI のスキーマワークスペース。](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
+![B2B アクティビティスキーマが選択されたExperience Platform UI のスキーマワークスペース。](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
 
 ### カスタムアクティビティ用の新しいフィールドグループの作成
 
@@ -91,13 +91,13 @@ Experience PlatformUI の *[!UICONTROL スキーマ]* ダッシュボードで�
 
 スキーマの設定が完了したので、カスタムアクティビティデータのデータフローの作成に進むことができます。
 
-Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。[!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
 [!UICONTROL アドビアプリケーション]カテゴリ内で「**[!UICONTROL Marketo Engage]**」を選択します。次に「**[!UICONTROL データの追加]**」を選択して、新しい [!DNL Marketo] データフローを作成します。
 
-![Experience PlatformUI のソースカタログで、Marketo Engageソースが選択されています。](../../../../images/tutorials/create/marketo/catalog.png)
+![Experience Platform UI のソースカタログで、Marketo Engage ソースが選択された状態。](../../../../images/tutorials/create/marketo/catalog.png)
 
 ### データの選択
 
@@ -154,7 +154,7 @@ Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース
 
 データフローが完了したら、[ クエリサービス ](../../../../../query-service/home.md) を使用して、カスタムアクティビティデータのアクティビティをフィルタリングできます。
 
-カスタムアクティビティが Platform に取り込まれると、カスタムアクティビティの API 名が自動的に `eventType` になります。 `eventType={API_NAME}` を使用して、カスタムアクティビティデータをフィルタリングします。
+カスタムアクティビティがExperience Platformに取り込まれると、そのカスタムアクティビティの API 名が自動的に `eventType` になります。 `eventType={API_NAME}` を使用して、カスタムアクティビティデータをフィルタリングします。
 
 ```sql
 SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
@@ -169,8 +169,8 @@ SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCus
 
 次の画像は、カスタムアクティビティデータをフィルタリングする [ クエリエディター ](../../../../../query-service/ui/user-guide.md) の SQL 文の例を示しています。
 
-![ カスタムアクティビティのクエリの例を表示する Platform UI。](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
+![ カスタムアクティビティのクエリの例を表示するExperience Platform UI。](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## 次の手順
 
-このチュートリアルでは、カスタムアクティビティデータの Platform スキーマ [!DNL Marketo] 設定し、そのデータを Platform に取り込むためのデータフローを作成しました。 [!DNL Marketo] ソースの一般的な情報については、[[!DNL Marketo]  ソースの概要 ](../../../../connectors/adobe-applications/marketo/marketo.md) を参照してください。
+このチュートリアルでは、カスタムアクティビティデータのExperience Platform スキーマ [!DNL Marketo] 設定し、そのデータをExperience Platformに取り込むためのデータフローを作成しました。 [!DNL Marketo] ソースの一般的な情報については、[[!DNL Marketo]  ソースの概要 ](../../../../connectors/adobe-applications/marketo/marketo.md) を参照してください。

@@ -3,7 +3,7 @@ title: Merkury エンタープライズ Id の宛先
 description: Adobe Experience Platform UI を使用して Merkury エンタープライズ ID 宛先接続を作成する方法を説明します。
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: a5452183-289c-49c3-9574-e09b0153dc00
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 18%
@@ -20,7 +20,7 @@ ht-degree: 18%
 
 [!DNL Merkury Enterprise Identity] の宛先を使用して、より正確で包括的なインサイトに満ちた消費者プロファイルを作成します。 プロファイルデータが改善されたことで、マーケターはより優れたインサイト、セグメントおよびモデルを強化し、より正確なターゲティングと予測モデリングを実現できます。
 
-![ 取り込みや有効化を含む、メルクリーとExperience Platformの相互接続を示す図 ](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
+![ 取り込みとアクティベーションを含む、Merkury とExperience Platformの間の相互接続を示す図 ](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
 このドキュメントページの手順に従って、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Merkury Identity] しい宛先接続を作成し、識別およびエンリッチメントのためにオーディエンスをアクティブ化します。
 
@@ -28,7 +28,7 @@ ht-degree: 18%
 >
 >[!DNL Merkury Connect] アカウントを使用して、メディアの宛先に対するオーディエンスのアクティブ化を行う場合は、代わりに [!DNL Merkury Connections] の宛先を使用します。
 
-![ 宛先カタログでハイライト表示された Merkury Enterprise IdExperience Platformカード。](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
+![Experience Platformの宛先カタログでハイライト表示された Merkury エンタープライズ ID 宛先カード。](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
 ## ユースケース
 
@@ -56,8 +56,8 @@ ht-degree: 18%
 | GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 | ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](/help/identity-service/features/ecid.md) に関する次のドキュメントを参照してください。 |
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
 {style="table-layout:auto"}
@@ -68,8 +68,8 @@ ht-degree: 18%
 
 | **オーディエンス** | **サポート対象** | **説明** | **接触チャネル** |
 |---|---|---|---|
-| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
-| カスタムアップロード | x | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポートします。 |
+| セグメント化サービス | ✓ | Experience Platform [[ セグメント化サービス ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
+| カスタムアップロード | x | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポート |
 
 {style="table-layout:auto"}
 
@@ -79,8 +79,8 @@ ht-degree: 18%
 
 | **オーディエンス** | **サポート対象** | **説明の起源** |
 |---|---|---|      
-| セグメント化サービス | ✓ | Experience Platform[[ セグメント化サービス ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
-| カスタムアップロード | X | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポートします。 |
+| セグメント化サービス | ✓ | Experience Platform [[ セグメント化サービス ]](https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/home) を通じて生成されたオーディエンス。 |
+| カスタムアップロード | X | オーディエンス [[ インポート済み ]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) を CSV ファイルからExperience Platformにインポート |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ ht-degree: 18%
 
 宛先に対して認証するには、必須フィールドに入力し、「**宛先に接続**」を選択します。
 
-Experience Platformのバケットにアクセスするには、次の資格情報に有効な値を指定する必要があります。
+Experience Platformでバケットにアクセスするには、次の資格情報に有効な値を指定する必要があります。
 
 | **認証情報** | **説明** |
 |---|---|
@@ -119,7 +119,7 @@ Experience Platformのバケットにアクセスするには、次の資格情�
 * **説明** – 宛先の目的の短い説明
 * **バケット名（必須）** - S3 に設定されたAmazon S3 バケットの名前
 * **フォルダーパス （必須）** - バケット内のサブディレクトリを使用する場合は、パスを定義するか、「/」を使用してルートパスを参照する必要があります。
-* **ファイルの種類** – 書き出したファイルに使用するExperience Platformの形式を選択します。 お使いのアカウントで想定されるファイルタイプについては、Merkury チームにお問い合わせください。
+* **ファイルタイプ** – 書き出したファイルにExperience Platformで使用する形式を選択します。 お使いのアカウントで想定されるファイルタイプについては、Merkury チームにお問い合わせください。
 
 >[!NOTE]
 >
@@ -158,13 +158,13 @@ Merkury エンタープライズ ID 宛先を使用して既に定義されて�
 | ターゲットフィールド | Sourceの説明 |
 |---|---|
 | ID | [!DNL Merkury Enterprise Identity] Source コネクタを介して [!DNL Merkury] データをExperience Platformにマッピングするために使用する ID フィールド |
-| Input_First_Name | Experience Platform内の `person.name.firstName` 値。 |
-| Input_Last_Name | Experience Platform内の `person.name.lastName` 値。 |
-| Input_Address_Line_1 | Experience Platform内の `mailingAddress.street` 値。 |
-| Input_City | Experience Platform内の `mailingAddress.city` 値。 |
-| Input_State_Province_Code | Experience Platform内の `mailingAddress.state` 値。 状態が 2 文字コード形式の場合は、を使用します。 |
-| Input_State_Province_Name | Experience Platform内の `mailingAddress.state` 値。 状態が完全な状態名の場合は、を使用します |
-| Input_Postal_Code | Experience Platform内の `mailingAddress.postalCode` 値。 |
+| Input_First_Name | Experience Platformの `person.name.firstName` 値。 |
+| Input_Last_Name | Experience Platformの `person.name.lastName` 値。 |
+| Input_Address_Line_1 | Experience Platformの `mailingAddress.street` 値。 |
+| Input_City | Experience Platformの `mailingAddress.city` 値。 |
+| Input_State_Province_Code | Experience Platformの `mailingAddress.state` 値。 状態が 2 文字コード形式の場合は、を使用します。 |
+| Input_State_Province_Name | Experience Platformの `mailingAddress.state` 値。 状態が完全な状態名の場合は、を使用します |
+| Input_Postal_Code | Experience Platformの `mailingAddress.postalCode` 値。 |
 | Input_Email_Address | プロファイルのメールアドレスとしてマッピングする値。 |
 | Input_Phone | プロファイルの電話番号としてマッピングする値。 |
 

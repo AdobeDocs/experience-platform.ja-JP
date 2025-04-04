@@ -4,10 +4,10 @@ title: Microsoft Dynamics 365 接続
 description: Microsoft Dynamics 365 の宛先を使用すると、アカウントデータを書き出し、Microsoft Dynamics 365 内でビジネスニーズに合わせてアクティブ化できます。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2019'
-ht-degree: 60%
+source-wordcount: '2038'
+ht-degree: 54%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 60%
 
 ### [!DNL Microsoft Dynamics 365] 前提条件 {#prerequisites-destination}
 
-Platform から [!DNL Dynamics 365] アカウントにデータを書き出すには、[!DNL Dynamics 365] で次の前提条件に注意してください。
+Experience Platformから [!DNL Dynamics 365] アカウントにデータを書き出すには、[!DNL Dynamics 365] で次の前提条件に注意してください。
 
 #### [!DNL Microsoft Dynamics 365] アカウントが必要です {#prerequisites-account}
 
@@ -43,7 +43,7 @@ Platform から [!DNL Dynamics 365] アカウントにデータを書き出す�
 
 #### [!DNL Dynamics 365] 内にフィールドを作成 {#prerequisites-custom-field}
 
-Experience Platformが [!DNL Dynamics 365] 内でオーディエンスステータスの更新に使用するフィールドデータタイプ `Single Line of Text` 使用して、タイプ `Simple` のカスタムフィールドを作成します。
+Experience Platformが [!DNL Dynamics 365] 内のオーディエンスステータスの更新に使用する `Single Line of Text` のフィールドデータタイプを使用して、タイプ `Simple` のカスタムフィールドを作成します。
 
 追加のガイダンスが必要な場合は、[!DNL Dynamics 365][ フィールド（属性）の作成または編集） ](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) ドキュメントを参照してください。
 
@@ -102,7 +102,7 @@ Experience Platformが [!DNL Dynamics 365] 内でオーディエンスステー�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>フィールドマッピングに従って、目的のスキーマフィールド *（例：メールアドレス、電話番号、姓）* と共に、オーディエンスのすべてのメンバーを書き出します。</li><li> [!DNL Dynamics 365] の各オーディエンスステータスは、[ オーディエンススケジュール ](#schedule-audience-export-example) 手順で提供された **[!UICONTROL マッピング ID]** 値に基づいて、Platform の対応するオーディエンスステータスとともに更新されます。</li></ul> |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | <ul><li>フィールドマッピングに従って、目的のスキーマフィールド *（例：メールアドレス、電話番号、姓）* と共に、オーディエンスのすべてのメンバーを書き出します。</li><li> [!DNL Dynamics 365] の各オーディエンスステータスは、[ オーディエンススケジュール ](#schedule-audience-export-example) 手順で提供された **[!UICONTROL マッピング ID]** 値に基づいて、Experience Platformの対応するオーディエンスステータスとともに更新されます。</li></ul> |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | <ul><li>ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。</li></ul> |
 
 {style="table-layout:auto"}
@@ -120,7 +120,7 @@ Experience Platformが [!DNL Dynamics 365] 内でオーディエンスステー�
 ### 宛先に対する認証 {#authenticate}
 
 宛先を認証するには、「 **[!UICONTROL 宛先に接続]**」を選択します。
-![認証方法を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
+![ 認証方法を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 以下の必須のフィールドに入力します。詳しくは、[Dynamics 365 資格情報の収集](#gather-credentials)の節を参照してください。
 * **[!UICONTROL クライアント ID]**：お使いの [!DNL Azure Active Directory] アプリケーションの [!DNL Dynamics 365] クライアント ID 。
@@ -134,7 +134,7 @@ Experience Platformが [!DNL Dynamics 365] 内でオーディエンスステー�
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横にアスタリスクが表示される場合は、そのフィールドが必須であることを示します。
-![宛先の詳細を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
+![ 宛先の詳細を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -157,17 +157,17 @@ Experience Platformが [!DNL Dynamics 365] 内でオーディエンスステー�
 
 ### マッピングの考慮事項と例 {#mapping-considerations-example}
 
-Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Platform アカウント内の Experience Data Model（XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL Dynamics 365] 宛先フィールドに正しくマッピングするには、次の手順に従います。
+Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエンスデータを正しく送信するには、フィールドマッピングの手順を実行する必要があります。マッピングは、Experience Platform アカウント内の Experience Data Model （XDM）スキーマフィールドと、ターゲット宛先から対応する同等のスキーマフィールドとの間にリンクを作成して構成されます。 XDM フィールドを [!DNL Dynamics 365] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
 1. **[!UICONTROL マッピング]**&#x200B;手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。画面に新しいマッピング行が表示されます。
-   ![「新しいマッピングを追加」の Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
+   ![ 「新しいマッピングを追加」のExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
 1. **[!UICONTROL ソースフィールドを選択]**&#x200B;ウィンドウで、「**[!UICONTROL ID 名前空間カテゴリを選択]**」を選択します。`contactid`
-   ![ソースマッピング用の Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
+   ![Source マッピング用のExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. **[!UICONTROL ターゲットフィールドを選択]**&#x200B;ウィンドウで、ソースフィールドにマッピングするターゲットフィールドのタイプを選択します。
    * **[!UICONTROL ID 名前空間を選択]**：このオプションを選択して、ソースフィールドをリストから ID 名前空間にマッピングします。
-     ![contactid のターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png) のターゲットマッピングを示すExperience Platform UI のスクリーンショット
 
    * XDM プロファイルスキーマと [!DNL Dynamics 365] インスタンスの間に次のマッピングを追加します。
 
@@ -176,7 +176,7 @@ Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエン
      | `contactid` | `contactid` | ○ |
 
    * **[!UICONTROL カスタム属性を選択]**：このオプションを選択して、「**[!UICONTROL 属性名]**」フィールドに定義するカスタム属性にマッピングするソースフィールドを選択します。サポートされる属性の包括的なリストについては、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties)を参照してください。
-     ![ メールのターゲットマッピングを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
+     ![ メールのターゲットマッピングを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
@@ -193,11 +193,11 @@ Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエン
 
    * これらのマッピングの使用例を次に示します。
 
-   ![ターゲットマッピングを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+   ![ ターゲットマッピングを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-audience-export-example}
 
-アクティベーションワークフローの [[!UICONTROL  オーディエンスの書き出しをスケジュール ]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順では、Platform オーディエンスを [!DNL Dynamics 365] のカスタムフィールド属性に手動でマッピングする必要があります。
+アクティベーションワークフローの [[!UICONTROL  オーディエンスの書き出しをスケジュール ]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順では、Experience Platform オーディエンスを [!DNL Dynamics 365] のカスタムフィールド属性に手動でマッピングする必要があります。
 
 これを行うには、各オーディエンスを選択し、対応するカスタムフィールド属性を [!DNL Dynamics 365] から **[!UICONTROL マッピング ID]** フィールドに入力します。
 
@@ -206,25 +206,25 @@ Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエン
 >**[!UICONTROL マッピング ID]** に使用する値は、[!DNL Dynamics 365] 内で作成されたカスタムフィールド属性の名前と正確に一致している必要があります。カスタムフィールド属性を見つけるガイダンスが必要な場合は、[[!DNL Dynamics 365] ドキュメント](https://docs.microsoft.com/ja-jp/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) を参照してください。
 
 次に例を示します。
-![ オーディエンスの書き出しのスケジュールを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
+![ オーディエンスの書き出しのスケジュールを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
 
 ## データの書き出しを検証する {#exported-data}
 
 宛先が正しく設定されていることを検証するには、次の手順に従います。
 
 1. **[!UICONTROL 宛先]**／**[!UICONTROL 参照]** を選択して、宛先のリストに移動します。
-   ![宛先の参照を示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
+   ![ 宛先の参照を示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
 
 1. 宛先を選択し、ステータスが「 **[!UICONTROL 有効]**」であることを確認します。
-   ![宛先のデータフロー実行を示した Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
+   ![ 宛先のデータフロー実行を示したExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
 1. 「**[!DNL Activation data]**」タブに切り替えて、オーディエンス名を選択します。
-   ![宛先のアクティベーションデータを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
+   ![ 宛先のアクティベーションデータを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. オーディエンスの概要を監視し、プロファイルの数がオーディエンス内で作成された数と一致していることを確認します。
-   ![ オーディエンスを示した Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
+   ![ オーディエンスを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. [!DNL Dynamics 365] web サイトににログインして、[!DNL Customers] / [!DNL Contacts] ページに移動し、オーディエンスのプロファイルが追加されたかどうかを確認します。 [!DNL Dynamics 365] の各オーディエンスステータスが、[ オーディエンススケジュール ](#schedule-audience-export-example) 手順で提供された **[!UICONTROL マッピング ID]** 値に基づいて、Platform から対応するオーディエンスステータスに更新されたことがわかります。
+1. [!DNL Dynamics 365] web サイトににログインして、[!DNL Customers] / [!DNL Contacts] ページに移動し、オーディエンスのプロファイルが追加されたかどうかを確認します。 [!DNL Dynamics 365] の各オーディエンスステータスが、[ オーディエンスのスケジュール設定 ](#schedule-audience-export-example) 手順で提供された **[!UICONTROL マッピング ID]** 値に基づいて、Experience Platformの対応するオーディエンスステータスで更新されたことがわかります。
    ![ 更新されたオーディエンスのステータスを含む連絡先ページを示す Dynamics 365 UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## データの使用とガバナンス {#data-usage-governance}
@@ -237,9 +237,9 @@ Adobe Experience Platform から [!DNL Dynamics 365] 宛先にオーディエン
 
 データフローの実行を確認する際に、次のエラーメッセージが表示される場合。`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![無効なリクエストエラーを示す Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
+![ 無効なリクエストエラーを示すExperience Platform UI のスクリーンショット。](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-このエラーを修正するには、[!DNL Dynamics 365] で指定した Platform オーディエンスの **[!UICONTROL マッピング ID]** が有効であり、[!DNL Dynamics 365] 内に存在することを確認します。
+このエラーを修正するには、[!DNL Dynamics 365] で指定したExperience Platform オーディエンスの **[!UICONTROL マッピング ID]** が有効であり、[!DNL Dynamics 365] 内に存在することを確認します。
 
 ## その他のリソース {#additional-resources}
 

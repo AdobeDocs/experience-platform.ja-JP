@@ -1,33 +1,33 @@
 ---
-title: Web SDK のファーストパーティデバイス ID
-description: Adobe Experience Platform Web SDK でファーストパーティデバイス ID （FPID）を設定する方法について説明します。
+title: Web SDKのファーストパーティデバイス ID
+description: Adobe Experience Platform Web SDKでファーストパーティデバイス ID （FPID）を設定する方法について説明します。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2058'
 ht-degree: 0%
 
 ---
 
 
-# Web SDK のファーストパーティデバイス ID
+# Web SDKのファーストパーティデバイス ID
 
-Adobe Experience Platform Web SDK は、ユーザーの行動を追跡するために、cookie を使用して web サイトの訪問者に [Adobe Experience Cloud ID （ECID） ](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=ja) を割り当てます。 cookie の有効期間に関するブラウザーの制限を考慮するには、代わりに、独自のデバイス識別子を設定および管理することを選択できます。 これらは、ファーストパーティデバイス ID （`FPIDs`）と呼ばれます。
+Adobe Experience Platform Web SDKは、ユーザーの行動を追跡するために、cookie を使用して web サイトの訪問者に [Adobe Experience Cloud ID （ECID） ](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=ja) を割り当てます。 cookie の有効期間に関するブラウザーの制限を考慮するには、代わりに、独自のデバイス識別子を設定および管理することを選択できます。 これらは、ファーストパーティデバイス ID （`FPIDs`）と呼ばれます。
 
 >[!NOTE]
 >
->ファーストパーティデバイス ID のサポートは、Web SDK を使用してExperience PlatformEdge Networkにデータを送信する場合にのみ使用できます。
+>ファーストパーティデバイス ID のサポートは、Web SDKからExperience Platform Edge Networkにデータを送信する場合にのみ使用できます。
 
 >[!IMPORTANT]
 >
->ファーストパーティデバイス ID は Web SDK の [ サードパーティ cookie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) 機能と互換性がありません。
+>ファーストパーティデバイス ID は Web SDKの [ サードパーティ cookie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) 機能と互換性がありません。
 >ファーストパーティデバイス ID またはサードパーティ Cookie のいずれかを使用できますが、両方の機能を同時に使用することはできません。
 
-このドキュメントでは、Web SDK 実装用にファーストパーティデバイス ID を設定する方法について説明します。
+このドキュメントでは、web SDK実装用にファーストパーティデバイス ID を設定する方法について説明します。
 
 ## 前提条件
 
-このガイドは、ECID や `identityMap` の役割など、Platform Web SDK の ID データの仕組みに精通していることを前提としています。 詳しくは、[Web SDK の ID データ ](./overview.md) に関する概要を参照してください。
+このガイドは、ECID や `identityMap` の役割など、Experience Platform web SDKの ID データの仕組みに精通していることを前提としています。 詳しくは、[Web SDKの ID データ ](./overview.md) に関する概要を参照してください。
 
 ## ファーストパーティデバイス ID （FPID）の使用 {#using-fpid}
 
@@ -37,15 +37,15 @@ Adobe Experience Platform Web SDK は、ユーザーの行動を追跡するた�
 >
 >[!DNL A] または [!DNL AAAA] レコードは、cookie の設定とトラッキングでのみサポートされています。 データ収集の主な方法は、[!DNL DNS] [!DNL CNAME] を使用することです。 つまり、[!DNL A] レコード [!DNL FPIDs] たは [!DNL AAAA] レコードを使用して設定され、[!DNL CNAME] を使用してAdobeに送信されます。
 >
->[Adobe管理証明書プログラム ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) も、ファーストパーティのデータ収集で引き続きサポートされています。
+>[Adobe管理証明書プログラム ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) は、引き続きファーストパーティのデータ収集でもサポートされます。
 
 [!DNL FPID] cookie が設定されると、その値を取得し、イベントデータが収集されたときにAdobeに送信できます。 収集された [!DNL FPIDs] は、[!DNL ECIDs] を生成するためのシードとして使用され、Adobe Experience Cloud アプリケーションでは引き続き主要な識別情報となります。
 
-ある web サイトの訪問者の [!DNL FPID] をEdge Networkに送信するには、その訪問者の `identityMap` に [!DNL FPID] を含める必要があります。 詳しくは、このドキュメントの下部にある [`identityMap`](#identityMap) での FPID の使用」の節を参照してください。
+Web サイトの訪問者の [!DNL FPID] をEdge Networkに送信するには、その訪問者の `identityMap` に [!DNL FPID] を含める必要があります。 詳しくは、このドキュメントの下部にある [`identityMap`](#identityMap) での FPID の使用」の節を参照してください。
 
 ### ファーストパーティデバイス ID のフォーマット要件 {#formatting-requirements}
 
-Edge Networkは、[UUIDv4 形式 ](https://datatracker.ietf.org/doc/html/rfc4122) に準拠する [!DNL IDs] ールのみを受け付けます。 [!DNL UUIDv4] 形式でないデバイス ID は拒否されます。
+Edge Networkは、[UUIDv4 形式 ](https://datatracker.ietf.org/doc/html/rfc4122) に準拠する [!DNL IDs] ールのみを受け入れます。 [!DNL UUIDv4] 形式でないデバイス ID は拒否されます。
 
 [!DNL UUID] の生成は、ほとんどの場合、一意のランダム ID となり、衝突が発生する確率はごくわずかです。 IP アドレスやその他の個人を特定できる情報（[!DNL PII]）を使用して [!DNL UUIDv4] ーザーをシードすることはできません。 ライブラリ [!DNL UUIDs] どこにでも存在し、事実上すべてのプログラミング言語に対応したライブラリが用意されています。
 
@@ -63,13 +63,13 @@ Cookie の値を読み取って ID マップに含めるのではなく、デー
 
 Adobe Experience Cloudとの連携方法について詳しくは、[ ファーストパーティ cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) に関するドキュメントを参照してください。
 
-![ ファーストパーティ ID の Cookie 設定を強調表示したデータストリーム設定を示す Platform UI 画像 ](../assets/first-party-id-datastreams.png)
+![ ファーストパーティ ID の Cookie 設定をハイライト表示したデータストリーム設定を示すExperience Platform UI 画像 ](../assets/first-party-id-datastreams.png)
 
 この設定を有効にする場合、ID が保存されていると期待される Cookie の名前を指定する必要があります。
 
 ファーストパーティ ID を使用する場合、サードパーティ ID の同期を実行することはできません。 サードパーティの ID 同期は、[!DNL Visitor ID] サービスと、そのサービスによって生成される `UUID` に依存します。 ファーストパーティ ID 機能を使用する場合、[!DNL Visitor ID] サービスを使用せずに [!DNL ECID] が生成されるので、サードパーティ ID の同期が不可能になります。
 
-ファーストパーティ ID を使用する場合、Audience Managerパートナー ID の同期が主に `UUIDs` または `DIDs` に基づいていることを考慮すると ](https://experienceleague.adobe.com/en/docs/audience-manager)[ Audience Manager} パートナープラットフォームでのアクティベーションをターゲットにした機能はサポートされません。 ファーストパーティ ID から派生する [!DNL ECID] は、`UUID` にリンクされていないので、アドレス指定できません。
+ファーストパーティ ID を使用する場合、Audience Managerのパートナー ID 同期が主に `UUIDs` または `DIDs` に基づいていることを考慮すると、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) の、パートナープラットフォームでのアクティベーション向けの機能はサポートされません。 ファーストパーティ ID から派生する [!DNL ECID] は、`UUID` にリンクされていないので、アドレス指定できません。
 
 ## 独自のサーバーを使用した cookie の設定 {#set-cookie-server}
 
@@ -86,7 +86,7 @@ Adobe Experience Cloudとの連携方法について詳しくは、[ ファー�
 
 ### cookie を設定するタイミング {#when-to-set-cookie}
 
-Edge Networkにリクエストを送信する前に、[!DNL FPID] Cookie を設定するのが理想的です。 ただし、それが不可能なシナリオでは、引き続き既存のメソッドを使用して [!DNL ECID] が生成され、cookie が存在する限り、プライマリ識別子として機能します。
+Edge Networkにリクエストを送信する前に、[!DNL FPID] Cookie を設定することをお勧めします。 ただし、それが不可能なシナリオでは、引き続き既存のメソッドを使用して [!DNL ECID] が生成され、cookie が存在する限り、プライマリ識別子として機能します。
 
 最終的に [!DNL ECID] がブラウザー削除ポリシーの影響を受けたが、[!DNL FPID] がそうでない場合、[!DNL FPID] は次の訪問でプライマリ識別子となり、以降の各訪問で [!DNL ECID] をシードするために使用されます。
 
@@ -110,7 +110,7 @@ Cookie の初回有効期限に選択した設定に関係なく、サイトへ�
 
 `HTTPOnly` フラグを使用して設定された Cookie には、クライアントサイドスクリプトを使用してアクセスできません。 つまり、[!DNL FPID] を設定する際に `HTTPOnly` フラグを設定する場合、`identityMap` に含める cookie の値を読み取るために、サーバーサイドのスクリプト言語を使用する必要があります。
 
-Edge Networkに [!DNL FPID] cookie の値を読み取らせることを選択した場合、`HTTPOnly` フラグを設定することで、クライアントサイドスクリプトから値にアクセスできなくなりますが、Edge Networkの cookie 読み取り機能には悪影響を与えません。
+Edge Networkに [!DNL FPID] cookie の値を読み取らせることを選択した場合、`HTTPOnly` フラグを設定することで、クライアントサイドスクリプトから値にアクセスできなくなりますが、Edge Networkの cookie 読み取り機能に悪影響を与えることはありません。
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Edge Networkに [!DNL FPID] cookie の値を読み取らせることを選択し
 }
 ```
 
-[!DNL FPID] の `primary` インジケーターがないため、次の `identityMap` では、Edge Networkからのエラー応答が返されます。 最後に、`identityMap` に存在する ID のうち 1 つを `primary` としてマークする必要があります。
+[!DNL FPID] の `primary` インジケーターがないため、次の `identityMap` ではEdge Networkからエラー応答が返されます。 最後に、`identityMap` に存在する ID のうち 1 つを `primary` としてマークする必要があります。
 
 ```json
 {
@@ -226,7 +226,7 @@ Edge Networkに [!DNL FPID] cookie の値を読み取らせることを選択し
 
 [!DNL CNAME] を使用してファーストパーティデータ収集が有効になっている場合、データ収集エンドポイントに対するリクエストにより、ドメインのすべての cookie が送信されます。
 
-Adobeのデータ収集目的に関係のない cookie はすべて削除されます。 [!DNL FPID]：データストリーム設定で [!DNL FPID] cookie の名前を指定できます。 これを行うと、Edge Networkは ID マップで [!DNL FPID] を探す代わりに、[!DNL FPID] Cookie の内容を読み取ります。
+Adobeのデータ収集目的に関係のない cookie はすべて削除されます。 [!DNL FPID]：データストリーム設定で [!DNL FPID] cookie の名前を指定できます。 これを行うと、Edge Networkは、ID マップで [!DNL FPID] を探す代わりに、[!DNL FPID] Cookie のコンテンツを読み取ります。
 
 この機能を使用するには、特定のサブドメインではなく、ドメインの最上位レベルに [!DNL FPID] を設定する必要があります。 サブドメインで設定すると、cookie の値はEdge Networkに送信されず、[!DNL FPID] のソリューションは意図したとおりに動作しません。
 
@@ -245,7 +245,7 @@ ID の優先順位は次の順序で設定されます。
 
 以前の実装からファーストパーティデバイス ID に移行している場合は、移行がどのように見えるかを低レベルで視覚化するのが難しい可能性があります。
 
-このプロセスを説明するために、以前にサイトを訪問した顧客が関与するシナリオや、[!DNL FPID] 移行がAdobeソリューションでその顧客を特定する方法にどのような影響を与えるかを考えてみましょう。
+このプロセスを説明するために、以前にサイトを訪問した顧客が関与するシナリオや、[!DNL FPID] 移行がAdobe ソリューションでその顧客を特定する方法にどのような影響を与えるかを考えてみましょう。
 
 ![FPID への移行後、訪問間に顧客の ID 値が更新される方法を示す図 ](../assets/identity/tracking/visits.png)
 
@@ -257,9 +257,9 @@ ID の優先順位は次の順序で設定されます。
 | --- | --- |
 | 初回訪問 | [!DNL FPID] cookie の設定をまだ開始していないとします。 [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) に含まれる [!DNL ECID] は、訪問者の識別に使用される識別子になります。 |
 | 2 回目の訪問 | [!DNL FPID] ソリューションのロールアウトが開始されました。 既存の [!DNL ECID] は引き続き存在し、訪問者を識別するためのプライマリ識別子として残ります。 |
-| 3 回目の訪問 | 2 回目と 3 回目の訪問の間に、ブラウザーポリシーが原因で [!DNL ECID] が削除されるまでに十分な時間が経過しました。 ただし、[!DNL FPID] は [!DNL DNS] [!DNL A] レコードを使用して設定されているので、[!DNL FPID] は保持されます。 [!DNL FPID] はプライマリ ID と見なされ、エンドユーザーデバイスに書き込まれる [!DNL ECID] のシード処理に使用されるようになりました。 これで、このユーザーは、Adobe Experience PlatformおよびExperience Cloudソリューションの新規訪問者と見なされます。 |
-| 4 回目の訪問 | 3 回目と 4 回目の訪問の間に、ブラウザーポリシーが原因で [!DNL ECID] が削除されるまでに十分な時間が経過しました。 前回の訪問同様、[!DNL FPID] の設定の仕方が原因で残っています。 今回は、前回の訪問と同じ [!DNL ECID] が生成されます。 ユーザーは、Experience PlatformおよびExperience Cloudのソリューション全体で、前回の訪問と同じユーザーとして表示されます。 |
-| 5 回目の訪問 | 4 回目と 5 回目の訪問の間に、エンドユーザーはブラウザー内のすべての Cookie をクリアしました。 新しい [!DNL FPID] が生成され、新しい [!DNL ECID] の作成をシードするために使用されます。 これで、このユーザーは、Adobe Experience PlatformおよびExperience Cloudソリューションの新規訪問者と見なされます。 |
+| 3 回目の訪問 | 2 回目と 3 回目の訪問の間に、ブラウザーポリシーが原因で [!DNL ECID] が削除されるまでに十分な時間が経過しました。 ただし、[!DNL FPID] は [!DNL DNS] [!DNL A] レコードを使用して設定されているので、[!DNL FPID] は保持されます。 [!DNL FPID] はプライマリ ID と見なされ、エンドユーザーデバイスに書き込まれる [!DNL ECID] のシード処理に使用されるようになりました。 これで、このユーザーはAdobe Experience PlatformおよびExperience Cloud ソリューションの新規訪問者と見なされます。 |
+| 4 回目の訪問 | 3 回目と 4 回目の訪問の間に、ブラウザーポリシーが原因で [!DNL ECID] が削除されるまでに十分な時間が経過しました。 前回の訪問同様、[!DNL FPID] の設定の仕方が原因で残っています。 今回は、前回の訪問と同じ [!DNL ECID] が生成されます。 Experience PlatformおよびExperience Cloud ソリューション全体で、前回の訪問と同じユーザーとして表示されます。 |
+| 5 回目の訪問 | 4 回目と 5 回目の訪問の間に、エンドユーザーはブラウザー内のすべての Cookie をクリアしました。 新しい [!DNL FPID] が生成され、新しい [!DNL ECID] の作成をシードするために使用されます。 これで、このユーザーはAdobe Experience PlatformおよびExperience Cloud ソリューションの新規訪問者と見なされます。 |
 
 {style="table-layout:auto"}
 
@@ -273,12 +273,12 @@ ID の優先順位は次の順序で設定されます。
 
 ### ファーストパーティデバイス ID はいつ生成されますか？
 
-潜在的な訪問者の水増しを減らすには、Web SDK を使用して最初のリクエストを行う前に [!DNL FPID] を生成する必要があります。 ただし、これを行えない場合は、そのユーザーの [!DNL ECID] が引き続き生成され、プライマリ識別子として使用されます。 生成された [!DNL FPID] は、[!DNL ECID] が存在しなくなるまで、プライマリ識別子になりません。
+潜在的な訪問者の水増しを減らすには、web SDKを使用して最初のリクエストを行う前に [!DNL FPID] を生成する必要があります。 ただし、これを行えない場合は、そのユーザーの [!DNL ECID] が引き続き生成され、プライマリ識別子として使用されます。 生成された [!DNL FPID] は、[!DNL ECID] が存在しなくなるまで、プライマリ識別子になりません。
 
 ### ファーストパーティデバイス ID をサポートしているデータ収集方法はどれですか？
 
-現在、Web SDK のみがファーストパーティデバイス ID をサポートしています。
+現在、Web SDKのみがファーストパーティデバイス ID をサポートしています。
 
-### ファーストパーティデバイス ID は Platform またはExperience Cloudソリューションに保存されていますか？
+### ファーストパーティデバイス ID はExperience PlatformまたはExperience Cloud ソリューションに保存されますか？
 
-[!DNL FPID] を使用して [!DNL ECID] をシードすると、`identityMap` からドロップされて、生成された [!DNL ECID] に置き換えられます。 [!DNL FPID] は、Adobe Experience PlatformまたはExperience Cloudのソリューションには保存されません。
+[!DNL FPID] を使用して [!DNL ECID] をシードすると、`identityMap` からドロップされて、生成された [!DNL ECID] に置き換えられます。 [!DNL FPID] は、Adobe Experience PlatformまたはExperience Cloud ソリューションには保存されません。

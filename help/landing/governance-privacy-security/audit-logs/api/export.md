@@ -1,19 +1,19 @@
 ---
 title: 監査イベント書き出し API エンドポイント
-description: Audit Query API を使用してExperience Platformに監査イベントを書き出す方法について説明します。
+description: Audit Query API を使用してExperience Platformの監査イベントをエクスポートする方法について説明します。
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '159'
 ht-degree: 4%
 
 ---
 
 # 監査イベントのリストのエクスポート
 
-イベントデータを取得するには、`/audit/export` エンドポイントに対してGETリクエストを実行し、取得するイベントをペイロードで指定します。
+イベントデータを取得するには、`/audit/export` エンドポイントに対してGET リクエストを実行し、取得するイベントをペイロードで指定します。
 
 **API 形式**
 
@@ -27,7 +27,7 @@ GET /audit/export
 | `status` | アクションのステータス。 ステータスは次のいずれかになります。 </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul><br/> 例：`?property=status==Deny`。 |
 | `action` | イベントに対して記録されたアクションのタイプ。 アクションは、次のいずれかになります。 <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`Remove` </li><li>`Reset` </li><li>`Segment Activate` </li><li>`Segment remove` </li><li>`Update` </li></ul> 例：`?property=action==Create`。 |
 | `user` | イベントを実行したユーザー。 |
-| `assetType` | アクションが実行された Platform リソースのタイプ。 <br/> 例：`?property=assetType==<an asset type>`。 |
+| `assetType` | アクションが実行されたExperience Platform リソースのタイプ。 <br/> 例：`?property=assetType==<an asset type>`。 |
 
 **リクエスト**
 

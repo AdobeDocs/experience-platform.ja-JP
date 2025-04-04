@@ -4,9 +4,9 @@ title: Experience Platform ダッシュボードのアクセス権限の取得�
 type: Documentation
 description: Adobe Admin Console を使用して Experience Platform ダッシュボードの表示、編集、更新の機能をユーザーに付与します。
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '640'
 ht-degree: 28%
 
 ---
@@ -28,16 +28,16 @@ ht-degree: 28%
 | 権限 | 説明 |
 |---|---|
 | **標準ダッシュボードの管理** | この権限は **グローバル読み取りおよび書き込み権限** です。 [ ウィジェットライブラリ ](./customize/custom-widgets.md) を介して [ カスタムウィジェットの作成 ](./customize/edit-schema.md) および [!UICONTROL  ウィジェットスキーマの編集 ] を行うことができます。 |
-| **標準ダッシュボードの表示** | これにより、[!UICONTROL  プロファイル **、[!UICONTROL  宛先 ] および [!UICONTROL  セグメント ] ダッシュボードに** 読み取り専用 ] 機能が提供され、Platform の左側のナビゲーションからアクセスできるようになります。 また、左側のナビゲーションに [!UICONTROL  ダッシュボード ] が追加され、[!UICONTROL  ダッシュボード ] インベントリと統合」タブにアクセスできます。 |
-| **ライセンス使用状況ダッシュボードの表示** | この権限を持つユーザーはExperience PlatformUI 内の **** ライセンス使用状況ダッシュボード [ 読み取り専用 ](./guides/license-usage.md) アクセスできます。 |
+| **標準ダッシュボードの表示** | これにより、[!UICONTROL  プロファイル **、[!UICONTROL  宛先 ] および [!UICONTROL  セグメント ] ダッシュボードに** 読み取り専用 ] 機能が提供され、Experience Platformの左側のナビゲーションからアクセスできるようになります。 また、左側のナビゲーションに [!UICONTROL  ダッシュボード ] が追加され、[!UICONTROL  ダッシュボード ] インベントリと統合」タブにアクセスできます。 |
+| **ライセンス使用状況ダッシュボードの表示** | この権限を持つユーザーはExperience Platform UI 内の [ ライセンス使用状況ダッシュボード ](./guides/license-usage.md) に **読み取り専用** アクセスできます。 |
 
 [!DNL Dashboard] カテゴリには含まれていない 5 つの権限があり、必要に応じて必要になる可能性があります。 次の表に、Admin Consoleでのカテゴリの場所の概要を示します。
 
 >[!IMPORTANT]
 >
->**[!DNL Manage Standard Dashboards]** 権限と **[!DNL View Standard Dashboards]** 権限の両方 **必要**、Platform UI 内の関連セクションをアクティブ化するための、Admin Consoleの [!DNL Profile Management] または [!DNL Destinations] カテゴリからの「表示」または「管理」権限。
+>**[!DNL Manage Standard Dashboards]** 権限と **[!DNL View Standard Dashboards]** 権限の両方 **必要** Admin Consoleの [!DNL Profile Management] カテゴリまたは [!DNL Destinations] カテゴリからの「表示」または「管理」権限を使用して、Experience Platform UI 内の関連セクションをアクティブ化します。
 
-| 権限 | Admin Consoleカテゴリの場所 |
+| 権限 | Admin Console カテゴリの場所 |
 |---|---|
 | [!DNL View Profiles] | [!DNL Profile Management] |
 | [!DNL View Segments] | [!DNL Profile Management] |
@@ -47,7 +47,7 @@ ht-degree: 28%
 
 ## アクセス制御マトリックス
 
-次のアクセス制御マトリックスは、必要な権限の分類と、様々なダッシュボード機能へのアクセスに関して権限が提供する機能を示しています。 権限は上部の水平行にリストされ、Platform UI ワークスペースは左側の列にリストされます。
+次のアクセス制御マトリックスは、必要な権限の分類と、様々なダッシュボード機能へのアクセスに関して権限が提供する機能を示しています。 権限は上部の水平行にリストされ、Experience Platform UI ワークスペースは左側の列にリストされます。
 
 |   | [!UICONTROL  標準ダッシュボードの表示 ] または [!UICONTROL  標準ダッシュボードの管理 ] | [!UICONTROL  プロファイルの表示 ],<br/>[!UICONTROL  セグメントの表示 ],<br/> [!UICONTROL 宛先の表示] | [!UICONTROL  クエリの管理 ] および [!UICONTROL  サンドボックスの管理 ] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] |
 |---|---|---|---|---|
@@ -55,7 +55,7 @@ ht-degree: 28%
 | 左側のナビゲーショ [!DNL Dashboards] の「」をクリックします。 | ENABLED | **1 つ以上が必要**。 | なし | なし |
 | [!DNL Dashboards] [!DNL Inventory] <br/> （「参照」タブ） | ENABLED | なし | なし | なし |
 | [!DNL Dashboards] [!DNL Integrations] tab <br/> （Power BIのインストールに使用） | ENABLED | **1 つ以上が必要** | なし | なし |
-| Power BIインストールボタンとワークフロー | ENABLED | なし | **必須** | なし |
+| Power BIのインストールボタンとワークフロー | ENABLED | なし | **必須** | なし |
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] ダッシュボード。<br/> ウィジェットスキーマを編集し、ウィジェットをカスタマイズするための新しい属性を追加する機能 | **Manage-standard-dashboard REQUIRED** | **必須（各ダッシュボードに対して）** | なし | なし |
 | [!DNL License Usage Dashboard] | なし | なし | なし | ENABLED |
 
@@ -71,4 +71,4 @@ ht-degree: 28%
 >
 >すべてのユーザーに対してすべての権限を有効にする必要はありません。組織の構造に応じて、特定のユーザーに対して個別の製品プロファイルを作成し、制限付きアクセス（読み取り専用など）を許可することができます。 [ 特定のユーザーに権限を割り当てる方法 ](../access-control/ui/users.md) については、製品プロファイルのユーザー管理のドキュメントを参照してください。
 
-必要なアクセス権限を追加すると、組織内のユーザーはExperience PlatformUI 内でダッシュボードの表示を開始し、割り当てた権限に基づいて他の操作を実行できます。
+必要なアクセス権限を追加すると、組織内のユーザーはExperience Platform UI 内でダッシュボードの表示を開始し、割り当てた権限に基づいて他の操作を実行できます。

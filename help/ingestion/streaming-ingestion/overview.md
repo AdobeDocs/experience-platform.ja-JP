@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ストリーミング取り込みの概要
 description: Adobe Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスからリアルタイムでExperience Platformにデータを送信する手段を提供します。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 14%
@@ -25,7 +25,7 @@ Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL 
 
 ### プロファイルレコードと [!DNL ExperienceEvents] のストリーミング
 
-ストリーミング取り込みを使用すると、ユーザーはプロファイルレコードをストリーミングし、数秒で [!DNL ExperienceEvents] ータを [!DNL Platform] き出して、リアルタイムのパーソナライゼーションを促進できます。 ストリーミング取得 API に送信されるすべてのデータは、[!DNL Data Lake] に自動的に保持されます。
+ストリーミング取り込みを使用すると、ユーザーはプロファイルレコードをストリーミングし、数秒で [!DNL ExperienceEvents] ータを [!DNL Experience Platform] き出して、リアルタイムのパーソナライゼーションを促進できます。 ストリーミング取得 API に送信されるすべてのデータは、[!DNL Data Lake] に自動的に保持されます。
 
 詳しくは、[ストリーミング接続の作成に関するガイド](../tutorials/create-streaming-connection.md)を参照してください。
 

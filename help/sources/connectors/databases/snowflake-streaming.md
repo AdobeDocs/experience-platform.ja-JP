@@ -1,13 +1,13 @@
 ---
-title: SnowflakeストリーミングSourceコネクタの概要
-description: ソース接続とデータフローを作成して、SnowflakeインスタンスからAdobe Experience Platformにストリーミングデータを取り込む方法を説明します
+title: Snowflake Streaming Source コネクタの概要
+description: ソース接続とデータフローを作成して、Snowflake インスタンスからAdobe Experience Platformにストリーミングデータを取り込む方法を説明します
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 17%
+source-wordcount: '820'
+ht-degree: 12%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 17%
 >
 >* Real-Time CDP Ultimateを購入したユーザーは、API で [!DNL Snowflake] ストリーミングソースを利用できます。
 >
->* Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Snowflake] ストリーミングソースを使用できるようになりました。 AWSで実行されるExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platformインフラストラクチャについて詳しくは、[Experience Platformマルチクラウドの概要 ](../../../landing/multi-cloud.md) を参照してください。
+>* Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Snowflake] ストリーミングソースを使用できるようになりました。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
 
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platformは、[!DNL Snowflake] データベースからのストリーミングデータのサポートを提供します。
+Experience Platformは、[!DNL Snowflake] データベースからのストリーミングデータをサポートしています。
 
 ## [!DNL Snowflake] ストリーミングソースについて
 
@@ -38,7 +38,7 @@ Experience Platformは、[!DNL Snowflake] データベースからのストリ�
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources)ページを参照してください。
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Amazon Redshift] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Amazon Redshift] をExperience Platformに接続する方法について説明しています。
 
 ### 必要な資格情報の収集
 
@@ -47,8 +47,8 @@ Experience Platformは、[!DNL Snowflake] データベースからのストリ�
 | 資格情報 | 説明 |
 | --- | --- |
 | `account` | サフィックス `snowflakecomputing.com` が付いた [!DNL Snowflake] アカウントの完全なアカウント識別子（アカウント名またはアカウントロケーター）。 アカウント識別子は、次のように異なる形式にすることができます。 <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com （例：`acme-abc12345.snowflakecomputing.com`）</li><li>{ACCOUNT_LOCATOR}。{CLOUD_REGION_ID}.snowflakecomputing.com （例：`acme12345.ap-southeast-1.snowflakecomputing.com`）</li><li>{ACCOUNT_LOCATOR}。{CLOUD_REGION_ID}。{CLOUD}.snowflakecomputing.com （例：`acme12345.east-us-2.azure.snowflakecomputing.com`）</li></ul> 詳しくは、[[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>) を参照してください。 |
-| `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データを Platform に取り込む際は個別にアクセスする必要があります。 |
-| `database` | [!DNL Snowflake] データベースには、Platform に取り込むデータが含まれています。 |
+| `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
+| `database` | [!DNL Snowflake] データベースには、Experience Platformに取り込むデータが含まれています。 |
 | `username` | [!DNL Snowflake] アカウントのユーザー名。 |
 | `password` | [!DNL Snowflake] ユーザーアカウントのパスワード。 |
 | `role` | （オプション）特定の接続に対してユーザーに提供できる、カスタム定義の役割。 指定しない場合、この値はデフォルトで `public` になります。 |
@@ -90,4 +90,4 @@ Experience Platformは、[!DNL Snowflake] データベースからのストリ�
 次のチュートリアルでは、API を使用して [!DNL Snowflake] ストリーミングソースをExperience Platformに接続する方法の手順を説明します。
 
 * [Flow Service API を使用した  [!DNL Snowflake]  データベースからExperience Platformへのデータのストリーミング](../../tutorials/api/create/databases/snowflake-streaming.md)
-* [Experience Platformユーザーインターフェイス  [!DNL Snowflake]  ソースワークスペースを使用して、データベースからExperience Platformにデータをストリーミングします](../../tutorials/ui/create/databases/snowflake-streaming.md)
+* [Experience Platform ユーザーインターフェイスのソ  [!DNL Snowflake]  スワークスペースを使用して、データベースからExperience Platformにデータをストリーミングします](../../tutorials/ui/create/databases/snowflake-streaming.md)

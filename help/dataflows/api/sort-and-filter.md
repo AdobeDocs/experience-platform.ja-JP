@@ -2,9 +2,9 @@
 title: Flow Service API での応答の並べ替えとフィルタリング
 description: このチュートリアルでは、Flow Service API のクエリパラメーターを使用した並べ替えとフィルタリングの構文について、いくつかの高度なユースケースを含めて説明します。
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 2%
 
 ---
@@ -197,7 +197,7 @@ GET /flows?property=state==enabled&count=true
 
 ## ユースケース {#use-cases}
 
-フィルタリングと並べ替えを使用して、特定のコネクタに関する情報を返したり、問題のデバッグを支援したりする方法について、具体的な例については、この節を参照してください。 Adobeに加えたいユースケースがある場合は、ページの **[!UICONTROL 詳細なフィードバックオプション]** を使用してリクエストを送信してください。
+フィルタリングと並べ替えを使用して、特定のコネクタに関する情報を返したり、問題のデバッグを支援したりする方法について、具体的な例については、この節を参照してください。 Adobeで追加したい他のユースケースがある場合は、ページの **[!UICONTROL 詳細なフィードバックオプション]** を使用してリクエストを送信してください。
 
 **特定の宛先への接続のみを返すフィルター**
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## 次の手順
 
-このガイドでは、`orderby` および `property` クエリパラメーターを使用して、Flow Service API で応答を並べ替えたりフィルタリングしたりする方法について説明しました。 Platform の一般的なワークフローで API を使用する手順のガイドについては、[sources](../../sources/home.md) および [destinations](../../destinations/home.md) ドキュメントに含まれている API チュートリアルを参照してください。
+このガイドでは、`orderby` および `property` クエリパラメーターを使用して、Flow Service API で応答を並べ替えたりフィルタリングしたりする方法について説明しました。 Experience Platformの一般的なワークフローで API を使用する手順のガイドについては、[sources](../../sources/home.md) および [destinations](../../destinations/home.md) ドキュメントに含まれている API チュートリアルを参照してください。

@@ -2,10 +2,10 @@
 title: Salesforce Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してSalesforceをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 11%
+source-wordcount: '1593'
+ht-degree: 8%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 11%
 >
 >Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Salesforce] ソースを使用できるようになりました。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
 
-Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、サードパーティの CRM システムからのデータ取り込みをサポートしています。CRM プロバイダーのサポートは [!DNL Salesforce] を含みます。
 
@@ -29,9 +29,9 @@ Azure でExperience Platform用に [!DNL Salesforce] アカウントを設定す
 
 ### [!DNL Salesforce] から XDM へのフィールドマッピング
 
-[!DNL Salesforce] と Platform の間にソース接続を確立するには、[!DNL Salesforce] のソースデータフィールドを、Platform に取り込む前に、適切なターゲット XDM フィールドにマッピングする必要があります。
+[!DNL Salesforce] とExperience Platformの間にソース接続を確立するには、Experience Platformに取り込まれる前に、[!DNL Salesforce] ソースデータフィールドを適切なターゲット XDM フィールドにマッピングする必要があります。
 
-[!DNL Salesforce] データセットと Platform 間のフィールドマッピングルールについて詳しくは、次を参照してください。
+データセットとExperience Platform間のフィールドマッピングルールについて詳 [!DNL Salesforce] くは、次を参照してください。
 
 - [連絡先](../adobe-applications/mapping/salesforce.md#contact)
 - [リード数](../adobe-applications/mapping/salesforce.md#lead)
@@ -47,11 +47,11 @@ Azure でExperience Platform用に [!DNL Salesforce] アカウントを設定す
 [!DNL Salesforce] ソースを [!DNL B2B-CDP] の一部として使用するには、まず [!DNL Postman] ユーティリティを設定して、[!DNL Salesforce] 名前空間とスキーマを自動生成する必要があります。 次のドキュメントでは、[!DNL Postman] ユーティリティの設定に関する追加情報を示します。
 
 - この [GitHub リポジトリ ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) から、名前空間およびスキーマ自動生成ユーティリティのコレクションと環境をダウンロードできます。
-- 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Platform API の使用について詳しくは、[Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
-- Experience Platform API の資格情報の生成方法について詳しくは、[Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
-- Platform API の [!DNL Postman] の設定方法について詳しくは、[ 開発者コンソールとの設定  [!DNL Postman]](../../../landing/postman.md) のチュートリアルを参照してください。
+- 必要なヘッダーの値を収集する方法やサンプル API 呼び出しを読み取る方法など、Experience Platform API の使用について詳しくは、[Experience Platform API の概要 ](../../../landing/api-guide.md) を参照してください。
+- Experience Platform API の資格情報の生成方法について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) に関するチュートリアルを参照してください。
+- Experience Platform API の [!DNL Postman] の設定方法について詳しくは、[Developer Console との設定  [!DNL Postman]](../../../landing/postman.md) に関するチュートリアルを参照してください。
 
-Platform 開発者コンソールをセットアップす [!DNL Postman] と、適切な環境値の [!DNL Postman] 環境への適用を開始できます。
+Experience Platform Developer Console と [!DNL Postman] の設定により、[!DNL Postman] 環境に適切な環境値を適用できるようになりました。
 
 +++変数テーブルガイドの表示
 
@@ -269,15 +269,15 @@ public class Main {
 
 [!DNL Salesforce] アカウントの前提条件の設定が完了したら、[!DNL Salesforce] アカウントをExperience Platformに接続して CRM データを取り込む手順に進むことができます。 詳しくは、以下のドキュメントを参照してください。
 
-### API を使用して [!DNL Salesforce] と Platform を接続する
+### API を使用した [!DNL Salesforce] のExperience Platformへの接続
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Salesforce] と Platform を接続する方法について説明します。
+以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Salesforce] をExperience Platformに接続する方法について説明しています。
 
 - [Flow Service API を使用したSalesforceとExperience Platformの接続](../../tutorials/api/create/crm/salesforce.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用して、CRM ソースのデータフローを作成する](../../tutorials/api/collect/crm.md)
 
-### UI を使用した [!DNL Salesforce] の Platform への接続
+### UI を使用した [!DNL Salesforce] のExperience Platformへの接続
 
 - [UI でのSalesforce ソースコネクタの作成](../../tutorials/ui/create/crm/salesforce.md)
 - [UI での CRM 接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)

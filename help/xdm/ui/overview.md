@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；
 solution: Experience Platform
 title: スキーマ UI の概要
-description: この概要では、Experience Platformのスキーマ ワークスペースの主な機能を説明します。
+description: この概要では、Experience Platformのスキーマワークスペースの主な機能を説明します。
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '310'
 ht-degree: 9%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 9%
 
 Adobe Experience Platform ユーザーインターフェイスの [!UICONTROL  スキーマ ] ワークスペースを使用すると、スキーマ、クラス、スキーマフィールドグループ、データタイプなどの Experience Data Model （XDM）リソースを管理できます。 アドビから提供されるコアリソースを表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
 
-Platform UI でワークスペースにアクセスするには、左パネルで **[!UICONTROL スキーマ]** を選択します。
+Experience Platform UI のワークスペースにアクセスするには、左パネルで **[!UICONTROL スキーマ]** を選択します。
 
-![Platform UI の左側のナビゲーションでスキーマがハイライト表示されたスキーマワークスペース。](../images/ui/overview/schemas-tab.png)
+![Experience Platform UI の左側のナビゲーションでスキーマがハイライト表示されたスキーマワークスペース。](../images/ui/overview/schemas-tab.png)
 
 ## はじめに
 
@@ -40,4 +40,4 @@ Platform UI でワークスペースにアクセスするには、左パネル�
 
 ## 次の手順
 
-このドキュメントでは、Platform UI の [!UICONTROL  スキーマ ] ワークスペースの概要を説明しました。 スキーマやその他の XDM リソースの管理方法について詳しくは、この概要を通じてリンクされているドキュメントを参照してください。
+このドキュメントでは、Experience Platform UI の [!UICONTROL  スキーマ ] ワークスペースの概要を説明しました。 スキーマやその他の XDM リソースの管理方法について詳しくは、この概要を通じてリンクされているドキュメントを参照してください。

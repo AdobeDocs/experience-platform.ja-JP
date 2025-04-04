@@ -1,12 +1,12 @@
 ---
 title: オーディエンス分析の宛先
-description: 顧客がCustomer Journey Analyticsで選定するオーディエンスを表示します。
+description: お客様がCustomer Journey Analyticsで認定されるオーディエンスを表示します。
 badgeLimitedAvailability: label="限定提供" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '801'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
@@ -16,27 +16,27 @@ ht-degree: 38%
 
 >[!AVAILABILITY]
 >
->この宛先は、限定的なテストフェーズにあります。 この宛先の使用に興味がある場合は、Adobeアカウントチームにお問い合わせください。
+>この宛先は、限定的なテストフェーズにあります。 この宛先の使用に興味がある場合は、Adobe アカウントチームにお問い合わせください。
 
 ## 前提条件
 
 この宛先を使用するには、次が必要です。
 
-* Audience Analysis の宛先を使用するようにプロビジョニングする必要があります。 この宛先を使用するためのプロビジョニングが行われていない場合は、Adobeアカウントチームにお問い合わせください。
+* Audience Analysis の宛先を使用するようにプロビジョニングする必要があります。 この宛先を使用するためのプロビジョニングが未完了の場合は、Adobe アカウントチームにお問い合わせください。
 * Customer Journey Analyticsを使用するようにプロビジョニングする必要があります。
 * Adobe Experience Platformで 1 つ以上のオーディエンスを作成する必要があります。
 
 ## サポートされている ID
 
-Audience Analysis では、以下の表に示す ID のアクティベーションをサポートしています。 ID の詳細は[こちら](/help/identity-service/features/namespaces.md)から。通常、Experience CloudID （ECID）が使用されます。
+Audience Analysis では、以下の表に示す ID のアクティベーションをサポートしています。 ID の詳細は[こちら](/help/identity-service/features/namespaces.md)から。通常、Experience Cloud ID （ECID）が使用されます。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
 | IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
 | ECID | Experience Cloud ID | ECID を表す名前空間。 この名前空間は、「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」という別名で呼ばれることもあります。詳しくは、[ECID](/help/identity-service/features/ecid.md) に関する次のドキュメントを参照してください。 |
-| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Platform] がデータを自動的にハッシュ化するように設定します。 |
+| phone_sha256 | SHA256 アルゴリズムでハッシュ化された電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 | extern_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
 
 {style="table-layout:auto"}
@@ -47,7 +47,7 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -107,4 +107,4 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 1. 選定を分析する対象オーディエンスを選択します。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
 1. 宛先設定とオーディエンス設定を確認し、「**[!UICONTROL 完了]**」を選択します。
 
-**[!UICONTROL オーディエンスのアクティブ化]** ページに戻ると、今後の分析の対象となるオーディエンスを追加できます。 オーディエンスは、一度アクティブ化すると削除できません。
+**[!UICONTROL オーディエンスのアクティブ化]** ページに戻ると、今後の分析の対象となるオーディエンスを追加できます。 アクティベートしたオーディエンスを削除することはできません。

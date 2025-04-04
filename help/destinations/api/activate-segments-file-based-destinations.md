@@ -4,16 +4,16 @@ title: Flow Service API を使用して、ファイルベースの宛先に対�
 description: Flow Service API を使用して、認定プロファイルを含むファイルをクラウドストレージ宛先に書き出す方法を説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4760'
+source-wordcount: '4763'
 ht-degree: 9%
 
 ---
 
 # Flow Service API を使用して、ファイルベースの宛先に対するオーディエンスをアクティブ化します
 
-拡張されたファイル書き出し機能を使用すると、Experience Platformからファイルを書き出す際に拡張カスタマイズ機能にアクセスできます。
+拡張されたファイル書き出し機能を使用すると、Experience Platformからファイルを書き出す際に拡張されたカスタマイズ機能にアクセスできます。
 
 * 追加の[ファイル命名オプション](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
 * 書き出されたファイルにカスタムファイルヘッダーを設定する機能（[マッピングステップの改善](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)による）
@@ -33,7 +33,7 @@ ht-degree: 9%
 
 >[!TIP]
 >
->また、Experience Platformユーザーインターフェイスを使用して、プロファイルをクラウドストレージの宛先に書き出すこともできます。 詳しくは、[ ファイルベース宛先のアクティブ化のチュートリアル ](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
+>また、Experience Platform ユーザーインターフェイスを使用して、プロファイルをクラウドストレージの宛先に書き出すこともできます。 詳しくは、[ ファイルベース宛先のアクティブ化のチュートリアル ](/help/destinations/ui/activate-batch-profile-destinations.md) を参照してください。
 
 <!--
 
@@ -51,9 +51,9 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] を使用すると、オーディエンスを作成し、[!DNL Real-Time Customer Profile] データから [!DNL Adobe Experience Platform] でオーディエンスを生成できます。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、Platform でファイルベースの宛先に対してデータをアクティブ化するために必要な追加情報を示します。
+次の節では、Experience Platformでファイルベースの宛先に対してデータをアクティブ化するために必要な追加情報を示します。
 
 ### 必要な権限 {#permissions}
 
@@ -67,13 +67,13 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values-headers}
 
-[!DNL Platform] API を呼び出すには、まず [Experience Platform認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Experience Platform] API を呼び出すには、まず [Experience Platform認証チュートリアル ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja) を完了する必要があります。 次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization： Bearer `{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform] のリソースは、特定の仮想サンドボックスに分離できます。[!DNL Platform] API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。次に、オプションのパラメーターを示します。
+[!DNL Experience Platform] のリソースは、特定の仮想サンドボックスに分離できます。[!DNL Experience Platform] API へのリクエストでは、操作を実行するサンドボックスの名前と ID を指定できます。次に、オプションのパラメーターを示します。
 
 * x-sandbox-name：`{SANDBOX_NAME}`
 
@@ -326,7 +326,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ![ ユーザーがオンになっている現在の手順をハイライト表示するオーディエンスをアクティブ化する手順 ](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-オーディエンスを書き出す宛先を決定したら、ソース接続を作成する必要があります。 [ ソース接続 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、内部 [Experience Platformプロファイルストア ](/help/profile/home.md#profile-data-store) への接続を表します。
+オーディエンスを書き出す宛先を決定したら、ソース接続を作成する必要があります。 [ ソース接続 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、内部 [Experience Platform プロファイルストア ](/help/profile/home.md#profile-data-store) への接続を表します。
 
 >[!BEGINSHADEBOX]
 
@@ -3477,7 +3477,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ 入力スキーマで使用する使用可能な ID の表示
 
-応答は、入力スキーマを作成する際に使用できる ID を返します。 この応答は、Experience Platformで設定した [ 標準 ](/help/identity-service/features/namespaces.md#standard)ID 名前空間と [ カスタム ](/help/identity-service/features/namespaces.md#manage-namespaces) ID 名前空間の両方を返します。
+応答は、入力スキーマを作成する際に使用できる ID を返します。 この応答は、Experience Platformで設定した [ 標準 ](/help/identity-service/features/namespaces.md#standard)ID 名前空間と [ カスタム ](/help/identity-service/features/namespaces.md#manage-namespaces) ID 名前空間の両方を返すことに注意してください。
 
 ```json
 [
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **スキーマの例を使用した応答**
 
-上記の呼び出しを実行する際に取得した応答をInspectします。 応答を詳しく調べて、オブジェクト `targetSpec.attributes.partnerSchema.jsonSchema` を見つける必要があります
+上記の呼び出しを実行する際に取得した応答を調べます。 応答を詳しく調べて、オブジェクト `targetSpec.attributes.partnerSchema.jsonSchema` を見つける必要があります
 
 +++ 出力スキーマのパートナースキーマを取得するための応答
 
@@ -4514,7 +4514,7 @@ Flow Service API からの応答は、更新されたデータフローの ID �
 >
 >`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
-> etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGETリクエストを実行します。`{ID}` は、更新するデータフロー ID です。
+> etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGET リクエストを実行します。`{ID}` は、更新するデータフロー ID です。
 >
 > `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
 
@@ -4583,7 +4583,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >
 >`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
-> etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGETリクエストを実行します。`{ID}` は、更新するデータフロー ID です。
+> etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGET リクエストを実行します。`{ID}` は、更新するデータフロー ID です。
 >
 > `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
 
@@ -4662,7 +4662,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >
 >`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
-> etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGETリクエストを実行します。`{ID}` は、更新するデータフロー ID です。
+> etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGET リクエストを実行します。`{ID}` は、更新するデータフロー ID です。
 >
 > `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
 
@@ -4817,11 +4817,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ## API エラー処理 {#api-error-handling}
 
-このチュートリアルの API エンドポイントは、一般的なExperience PlatformAPI エラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
+このチュートリアルの API エンドポイントは、Experience Platform API の一般的なエラーメッセージの原則に従っています。 エラー応答の解釈について詳しくは、Experience Platform トラブルシューティングガイドの [API ステータスコード ](/help/landing/troubleshooting.md#api-status-codes) および [ リクエストヘッダーエラー ](/help/landing/troubleshooting.md#request-header-errors) を参照してください。
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、目的のクラウドストレージ宛先の 1 つに Platform を正常に接続し、オーディエンスを書き出すためのそれぞれの宛先へのデータフローを設定しました。 次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
+このチュートリアルでは、Experience Platformを目的のクラウドストレージ宛先の 1 つに正常に接続し、オーディエンスを書き出すための各宛先へのデータフローを設定しました。 次のページでは、Flow Service API を使用した既存のデータフローの編集方法などの詳細を確認します。
 
 * [宛先の概要](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)

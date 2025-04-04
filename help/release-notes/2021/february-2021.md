@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1137'
-ht-degree: 95%
+source-wordcount: '1141'
+ht-degree: 90%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Platform は複数のダッシュボードを提供しており
 
 | 機能 | 説明 |
 | --- | --- |
-| プロファイル、セグメント、宛先、およびライセンス使用状況ダッシュボード（ベータ版） | **注意：ダッシュボードの機能は現在ベータ版のため、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。**<br/><br/> ダッシュボードは、組織のデータに対してすぐに使用できるレポートを提供し、Platform 内のマーケターワークフローに直接組み込まれます。 これらのダッシュボードは、IT サポートの追加や、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力の必要なしに利用できます。 |
+| プロファイル、セグメント、宛先、およびライセンス使用状況ダッシュボード（ベータ版） | **注意：ダッシュボードの機能は現在ベータ版のため、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。**<br/><br/> ダッシュボードは、組織のデータに対してすぐに使用できるレポートを提供し、Experience Platform内のマーケターワークフローに直接組み込まれます。 これらのダッシュボードは、IT サポートの追加や、データウェアハウスの設計と実装を追加してデータをエクスポートおよび処理する時間と労力の必要なしに利用できます。 |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -54,9 +54,9 @@ Data Science Workspace の一般的な情報については、[Data Science Work
 
 ## [!DNL Dataflows] {#dataflows}
 
-Adobe Experience Platform では、様々なソースからデータを取り込み、Experience Platform 内で分析し、様々な目的でアクティブ化します。Platform では、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
+Adobe Experience Platform では、様々なソースからデータを取り込み、Experience Platform 内で分析し、様々な目的でアクティブ化します。Experience Platformでは、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
 
-データフローは、Platform 間でデータを移動するデータジョブを表します。これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、[!DNL Identity Service] と [!DNL Real-Time Customer Profile] がデータを利用してから、最終的に [!DNL Destinations] に対してアクティブ化します。
+データフローは、Experience Platform間でデータを移動するデータジョブを表します。 これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、[!DNL Identity Service] と [!DNL Real-Time Customer Profile] がデータを利用してから、最終的に [!DNL Destinations] に対してアクティブ化します。
 
 **新機能**
 
@@ -120,7 +120,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: サンドボックス UI ガイド
 description: このドキュメントでは、Adobe Experience Platform ユーザーインターフェイスのサンドボックスに関連する様々な操作を実行する手順について説明します。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1115'
-ht-degree: 49%
+source-wordcount: '1116'
+ht-degree: 46%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 49%
 
 ## サンドボックスの表示
 
-Experience PlatformUI で、左側のナビゲーションの **[!UICONTROL サンドボックス]** を選択し、「**[!UICONTROL 参照]** タブを選択して [!UICONTROL  サンドボックス ] ダッシュボードを開きます。 ダッシュボードには、組織で使用可能なすべてのサンドボックスが一覧表示されます。それぞれのタイプ（実稼動または開発）も含まれます。
+Experience Platform UI で、左側のナビゲーションの **[!UICONTROL サンドボックス]** を選択し、「**[!UICONTROL 参照]** タブを選択して [!UICONTROL  サンドボックス ] ダッシュボードを開きます。 ダッシュボードには、組織で使用可能なすべてのサンドボックスが一覧表示されます。それぞれのタイプ（実稼動または開発）も含まれます。
 
 ![ 「参照」タブが選択され、使用可能なサンドボックスのリストが表示されたサンドボックスダッシュボード。](../images/ui/view-sandboxes.png)
 
 ## サンドボックス間の切り替え
 
-サンドボックスインジケーターは、Platform UI の上部ヘッダーにあり、現在使用しているサンドボックスのタイトル、その地域およびそのタイプを表示します。
+サンドボックスインジケーターは、Experience Platform UI の上部ヘッダーにあり、現在使用しているサンドボックスのタイトル、その地域およびそのタイプを表示します。
 
 ![ サンドボックスインジケーターがハイライト表示されたサンドボックスダッシュボード。](../images/ui/sandbox-indicator.png)
 

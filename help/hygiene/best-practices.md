@@ -2,9 +2,9 @@
 title: 高度なデータ・ライフサイクル管理のベスト・プラクティス
 description: 高度なデータライフサイクル管理 UI と Data Hygiene API を使用して、Adobe Experience Platformのデータハイジーンリクエストを効率的に管理する方法について説明します。 このガイドでは、リクエストごとの ID の最大化、個々のデータセットの指定、速度低下を防ぐための API スロットルへの配慮などのベストプラクティスを説明します。 このドキュメントには、データセットの自動クリーンアップの設定に関するガイドライン、作業指示のステータスを監視する方法、詳細な応答取得方法が含まれています。 これらのプラクティスに従って、リクエスト処理を効率化し、応答時間を最適化します。
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ Data Hygiene API の `/workorder` エンドポイントを使用して、Experie
 
 ## 作業指示およびデータセットの有効期限ステータスの監視 {#monitor}
 
-**I/O イベント** を使用すると、データライフサイクル管理の進行状況を効率的に監視できます。 I/O イベントは、Platform 内の様々なサービスの変更や更新に関するリアルタイム通知を受信するメカニズムです。
+**I/O イベント** を使用すると、データライフサイクル管理の進行状況を効率的に監視できます。 I/O イベントは、Experience Platform内の様々なサービスの変更や更新に関する通知をリアルタイムで受け取るためのメカニズムです。
 
-I/O イベントアラートを設定済みの Webhook に送信して、アクティビティ監視を自動化できます。 Webhook を介してアラートを受け取るには、Adobe Developer Consoleで Platform アラートの Webhook を登録する必要があります。 詳しくは、[Adobe I/Oイベント通知の購読 ](../observability/alerts/subscribe.md) に関するガイドを参照してください。
+I/O イベントアラートを設定済みの Webhook に送信して、アクティビティ監視を自動化できます。 Webhook を介してアラートを受信するには、Adobe Developer ConsoleでExperience Platform アラートの Webhook を登録する必要があります。 詳しくは、[Adobe I/O イベント通知の登録 ](../observability/alerts/subscribe.md) のガイドを参照してください。
 
 次のデータ・ライフサイクル・メソッドおよびガイドラインを使用して、ジョブ・ステータスを効果的に取得および監視します。
 
@@ -63,7 +63,7 @@ I/O イベントアラートを設定済みの Webhook に送信して、アク�
 
 個々の作業指示について詳しくは、次の方法を使用します。
 
-- `/workorder/{work_order_id}` エンドポイントに対してGETリクエストを実行し、応答データの詳細を確認します。
+- `/workorder/{work_order_id}` エンドポイントに対してGET リクエストを実行し、詳細な応答データを取得します。
 - 製品固有の応答と成功メッセージを取得します。
 - 通常のポーリングアクティビティには、この方法を使用しないでください。
 
