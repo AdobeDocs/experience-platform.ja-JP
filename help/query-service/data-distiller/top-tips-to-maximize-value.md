@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Data Distillerで価値を最大化するためのヒント - OS656
 description: リアルタイム顧客プロファイルデータを強化し、行動インサイトを使用してターゲットオーディエンスを構築することで、Adobe Experience Platform Data Distillerの価値を最大限に高める方法を説明します。 このリソースには、顧客のセグメント化に最新性、頻度、通貨（RFM）モデルを適用する方法を示すサンプルデータセットとケーススタディが含まれています。
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
+source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3743'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ RFM モデルでは、3 つの主要なパラメータを使用して、トラ�
 ただし、RFM モデリングには制限があります。 最新性、頻度、金銭的価値に基づいてセグメント内の均一性を前提としているので、顧客行動が単純化されすぎる可能性があります。 また、モデルはこれらの要因に同じ重みを割り当てるため、顧客の価値を誤解する可能性があります。 さらに、製品固有の特性や顧客の好みなどのコンテキストは考慮されておらず、購買行動の誤解を招く可能性があります。
 
 ## 動的 RFM スコアベースの SQL オーディエンスの作成 {#build-a-dynamic-rfm-audience}
+
+次のインフォグラフィックは、このチュートリアルで説明する RFM SQL オーディエンス作成ワークフローの概要を示しています。
+
+![CSV のアップロード、データの調査、RFM スコアのエンリッチメント、オーディエンスのアクティベートの 4 つの手順を示した、「RFM スコアベースの SQL オーディエンス」というタイトルのインフォグラフィック ](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
 Luma のケーススタディを開始する前に、サンプルデータセットを取り込む必要があります。 まず、[ リンクを選択して、`luma_web_data.zip` のデータセットをローカルにダウンロードします ](../resources/luma_web_data.zip)。 サンプルデータセットは、ユースケースに合わせるために、圧縮.zip 形式の CSV ファイルです。 Adobe Acrobatまたはオペレーティング システムに組み込まれているユーティリティなどの信頼できるファイル解凍ツールを使用して、この ZIP ファイルを解凍します。 実際には、通常、Adobe Analytics、Adobe CommerceまたはAdobe web/モバイル SDKからデータを取得します。
 
