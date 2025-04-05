@@ -2,10 +2,10 @@
 title: ID 設定 UI
 description: ID 設定ユーザーインターフェイスの使用方法を説明します。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
+source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 3%
+source-wordcount: '644'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +23,7 @@ UI で ID 設定を指定する方法については、このガイドを参照�
 
 ID 設定の使用を開始する前に、次のドキュメントをお読みください。
 
-* [ID グラフリンクルール](./overview.md)
+* [ID グラフのリンクルール](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [グラフ設定の例](./example-configurations.md)
@@ -71,7 +71,13 @@ ID 設定ページは、[!UICONTROL  ユーザー名前空間 ] および [!UICO
 
 ![ 「確認」ボタンが選択された確認ウィンドウ ](../images/rules/confirmation.png)
 
-最後の手順は、既存のグラフがグラフアルゴリズム **設定を保存した後にグラフが更新された場合のみ** の影響を受けること、および名前空間の優先度が変更された後もリアルタイム顧客プロファイル上のイベントフラグメントのプライマリ ID が更新されないことを示す別の確認メッセージです。 さらに、新しい設定または更新された設定が有効になるまで、最大 **6 時間** かかることが通知されます。 確認するには、サンドボックス名を入力し、「**[!UICONTROL 確認]**」を選択します。
+### 設定を確認 {#confirm-your-settings}
+
+>[!IMPORTANT]
+>
+>* 最後の手順は、既存のグラフがグラフアルゴリズム **設定を保存した後にグラフが更新された場合のみ** の影響を受けること、および名前空間の優先度が変更された後もリアルタイム顧客プロファイル上のイベントフラグメントのプライマリ ID が更新されないことを示す別の確認メッセージです。
+>
+>* さらに、新しい設定または更新された設定が有効になるまで、最大 **6 時間** かかることが通知されます。 確認するには、サンドボックス名を入力し、「**[!UICONTROL 確認]**」を選択します。
 
 ![ 設定が処理されるまで 6 時間の遅延に関する警告を表示する確認ウィンドウ。](../images/rules/complete.png)
 
@@ -79,7 +85,7 @@ ID 設定ページは、[!UICONTROL  ユーザー名前空間 ] および [!UICO
 
 ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフリンクルールの概要](./overview.md)
+* [ID グラフのリンクルールの概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [グラフ設定の例](./example-configurations.md)

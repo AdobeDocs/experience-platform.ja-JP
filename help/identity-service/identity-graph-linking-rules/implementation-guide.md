@@ -2,9 +2,9 @@
 title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
+source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1835'
 ht-degree: 6%
 
 ---
@@ -15,10 +15,13 @@ ht-degree: 6%
 >
 >ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
 
+>[!IMPORTANT]
+>
+>このドキュメントでは、データのない新しいサンドボックスで実装を開始することを前提としています。
+
 Adobe Experience Platform ID サービスを使用してデータを実装する際に従うことができる、ステップバイステップのガイドについては、このドキュメントを参照してください。
 
 操作手順の概要：
-
 
 1. [実装の前提条件を満たす](#prerequisites-for-implementation)
 2. [必要な ID 名前空間の作成](#namespace)
