@@ -2,9 +2,9 @@
 title: ID グラフリンクルールのトラブルシューティングガイド
 description: ID グラフリンクルールに関するよくある問題のトラブルシューティング方法を説明します。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,10 @@ AAID はデフォルトでブロックされます。 したがって、[Adobe A
 
 * ある ID は identityMap から送信され、別の ID は ID 記述子から送信されます。 **メモ**：エクスペリエンスデータモデル（XDM）スキーマでは、ID 記述子は、ID としてマークされたフィールドです。
 * CRMID は identityMap を介して送信されます。 CRMID がフィールドとして送信された場合は、WHERE 句から `key='Email'` を削除します。
+
+>[!NOTE]
+>
+>**WebSDK 実装および ECID 複製について**:ECID フィールドが identityMap ではなく ID （ID 記述子）としてマークされている場合、identityMap で 2 つ目の ECID が生成されます。 この重複により、1 つのイベントに 2 つの ECID が存在することが原因で、リアルタイム顧客プロファイルが匿名イベントを保存できなくなる可能性があります。
 
 ## グラフの動作に関連する問題 {#graph-behavior-related-issues}
 
