@@ -2,9 +2,9 @@
 title: オーディエンスポータルの概要
 description: オーディエンスポータルを使用して、Adobe Experience Platform内でオーディエンスを表示、管理および作成する方法について説明します。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
+source-git-commit: d80378d6ffc9598c21bc217c0577f611fe8671cc
 workflow-type: tm+mt
-source-wordcount: '4371'
+source-wordcount: '4413'
 ht-degree: 54%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 54%
 
 オーディエンスポータル内では、次のタスクを実行できます。
 
-- [オーディエンスのリストの表示](#audience-list)
+>[!BEGINSHADEBOX]
+
+- [オーディエンスのリストの表示](#list)
    - [オーディエンスに対するクイックアクションの使用](#quick-actions)
    - [オーディエンスのリストに表示されるプロパティをカスタマイズします](#customize)
    - [フィルター、フォルダー、タグを使用したオーディエンスの整理](#manage-audiences)
@@ -28,6 +30,8 @@ ht-degree: 54%
    - [Federated Audience コンポジションを使用すると、既存のデータウェアハウスのデータを使用してオーディエンスを作成できます](#fac)
    - [Data Distillerを使用したオーディエンスの作成](#data-distiller)
 - [外部で生成されたオーディエンスのインポート](#import-audience)
+
+>[!ENDSHADEBOX]
 
 Audience Portal を開くには、「セグメント化」セクション内の **[!UICONTROL 参照]** タブを選択します。
 
@@ -64,7 +68,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 | [!UICONTROL  コピー ] | セグメント化サービス | 選択したオーディエンスを複製します。 この関数について詳しくは、[ セグメント化に関する FAQ](../faq.md#copy) を参照してください。 |
 | [!UICONTROL  アクセスラベルを適用 ] | オーディエンス構成、カスタムアップロード、セグメント化サービス | オーディエンスに属するアクセスラベルを管理します。 アクセスラベルについて詳しくは、[ラベルの管理](../../access-control/abac/ui/labels.md)に関するドキュメントを参照してください。 |
 | [!UICONTROL 公開] | カスタムアップロード、セグメント化サービス | 選択したオーディエンスを公開します。 ライフサイクルステータス管理について詳しくは、[ セグメント化に関する FAQ のライフサイクルステータスの節 ](../faq.md#lifecycle-states) を参照してください。 |
-| [!UICONTROL 非アクティブ化] | カスタムアップロード、セグメント化サービス | 選択したオーディエンスをアクティベート解除します。 ライフサイクルステータス管理について詳しくは、[ セグメント化に関する FAQ のライフサイクルステータスの節 ](../faq.md#lifecycle-states) を参照してください。 |
+| [!UICONTROL 非アクティブ化] | カスタムアップロード、セグメント化サービス | 選択したオーディエンスをアクティベート解除します。 オーディエンスをディアクティベートするには、**任意** の宛先（Experience Platform以外の宛先を含む **でアクティブ化することも** 任意の **他のオーディエンスの一部とすることも** できません。 ライフサイクルステータス管理について詳しくは、[ セグメント化に関する FAQ のライフサイクルステータスの節 ](../faq.md#lifecycle-states) を参照してください。 |
 | [!UICONTROL 削除] | オーディエンス構成、カスタムアップロード、セグメント化サービス | 選択したオーディエンスを削除します。 ダウンストリームの宛先で使用されているオーディエンス、または他のオーディエンスに依存しているオーディエンス **削除できません**。 オーディエンスの削除について詳しくは、[ セグメント化に関する FAQ](../faq.md#lifecycle-states) を参照してください。 |
 | [!UICONTROL  パッケージに追加 ] | オーディエンス構成、カスタムアップロード、セグメント化サービス | サンドボックス間でオーディエンスを移動します。 この機能について詳しくは、[ サンドボックスツールガイド ](../../sandboxes/ui/sandbox-tooling.md) を参照してください。 |
 
@@ -199,7 +203,7 @@ Audience Portal を開くには、「セグメント化」セクション内の 
 
 | フィルター | 説明 |
 | ------ | ----------- |
-| [!UICONTROL 接触チャネル] | オーディエンスの接触チャネルに基づいてフィルタリングできます。使用できるオプションには、セグメント化サービス、カスタムアップロード、オーディエンス構成、Audience Manager などがあります。 |
+| [!UICONTROL 接触チャネル] | オーディエンスの接触チャネルに基づいてフィルタリングできます。使用可能な値には、[ セグメント化サービス ](#segment-builder)、[ カスタムアップロード ](#import-audience)、[ オーディエンス構成 ](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[ 類似オーディエンス ](../types/lookalike-audiences.md)、[ フェデレーション オーディエンス構成 ](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) [、{ データDistiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/guide-overview) などがあります。 |
 | [!UICONTROL 任意のタグがある] | タグでフィルタリングできます。「**[!UICONTROL 任意のタグがある]**」と「**[!UICONTROL すべてのタグがある]**」から選択できます。「**[!UICONTROL 任意のタグがある]**」が選択されている場合、フィルタリングされたオーディエンスには、追加したタグの&#x200B;**いずれか**&#x200B;が含まれます。「**[!UICONTROL すべてのタグがある]**」が選択されている場合、フィルタリングされたオーディエンスには、追加したタグの&#x200B;**すべて**&#x200B;が含まれている必要があります。 |
 | [!UICONTROL ライフサイクルステータス] | オーディエンスのライフサイクルステータスに基づいてフィルタリングできます。使用可能なオプションには、[!UICONTROL  削除済み ]、[!UICONTROL  ドラフト ]、[!UICONTROL  非アクティブ ]、[!UICONTROL  公開済み ] などがあります。 |
 | [!UICONTROL 更新頻度] | オーディエンスの更新頻度（評価方法）に基づいてフィルタリングできます。 使用可能なオプションには、[!UICONTROL  バッチ ]、[!UICONTROL  ストリーミング ]、[!UICONTROL Edge] などがあります |
