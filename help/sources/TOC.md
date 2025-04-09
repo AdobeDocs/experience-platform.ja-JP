@@ -5,10 +5,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 95%
+source-wordcount: '1070'
+ht-degree: 92%
 
 ---
 
@@ -95,6 +95,7 @@ ht-degree: 95%
    - データおよび ID パートナー {#data-partner}
       - [Acxiom データ取り込み](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom プロスペクティングデータの読み込み](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Algolia ユーザープロファイル](connectors/data-partners/algolia-user-profiles.md)
       - [ボンボラの意図](connectors/data-partners/bombora.md)
       - [Demandbase の目的](connectors/data-partners/demandbase.md)
       - [Merkury エンタープライズ ID 解決](connectors/data-partners/merkury.md)
@@ -104,7 +105,7 @@ ht-degree: 95%
       - [Shopify ストリーミング](connectors/ecommerce/shopify-streaming.md)
    - ローカルシステム {#local-system}
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
-   - マーケティングの自動処理 {#marketing-automation}
+   - マーケティングの自動化 {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
@@ -125,7 +126,7 @@ ht-degree: 95%
    - ストリーミング {#streaming}
       - [HTTP API コネクタ](connectors/streaming/http.md)
 - API チュートリアル {#api-tutorials}
-   - ベース接続を作成する {#create}
+   - ベース接続の作成 {#create}
       - 広告 {#advertising}
          - [Google 広告](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
@@ -185,7 +186,7 @@ ht-degree: 95%
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify ストリーミング](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - マーケティングの自動処理 {#marketing-automation}
+      - マーケティングの自動化 {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -309,6 +310,7 @@ ht-degree: 95%
       - データおよび ID パートナー {#data-partner}
          - [Acxiom データ取り込み](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom プロスペクティングデータの読み込み](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Algolia ユーザープロファイル](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [ボンボラの意図](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase の目的](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury エンタープライズ ID 解決](tutorials/ui/create/data-partners/merkury.md)
@@ -318,7 +320,7 @@ ht-degree: 95%
          - [Shopify ストリーミング](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - ローカルシステム {#local-system}
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
-      - マーケティングの自動処理 {#marketing-automation}
+      - マーケティングの自動化 {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
@@ -365,14 +367,14 @@ ht-degree: 95%
    - [ソースアラートの購読](tutorials/ui/alerts.md)
    - [データフローをドラフトとして保存](tutorials/ui/draft.md)
    - [データフローへのアクセスラベルの適用](tutorials/ui/labels.md)
-- セルフサービスソース（Batch SDK） {#sdk}
+- セルフサービスソース（バッチ SDK） {#sdk}
    - [概要](sources-sdk/overview.md)
-   - 接続仕様の設定 {#config}
+   - 接続仕様を設定 {#config}
       - [設定オプション](sources-sdk/config/config.md)
       - [認証仕様の設定](sources-sdk/config/authspec.md)
       - [ソース仕様の設定](sources-sdk/config/sourcespec.md)
       - [探索仕様の設定](sources-sdk/config/explorespec.md)
-   - セルフサービスソース（Batch SDK）API ガイド {#self-serve-api}
+   - セルフサービスソース（バッチ SDK） API ガイド {#self-serve-api}
       - [Self-Serve Sources（バッチ SDK）API の概要](sources-sdk/api/api-overview.md)
       - [はじめに](sources-sdk/api/getting-started.md)
       - [接続仕様を作成](sources-sdk/api/create.md)
@@ -385,7 +387,7 @@ ht-degree: 95%
       - [ローカル環境でのテキストエディターを使用したソースドキュメントページの作成](sources-sdk/documentation/text-editor.md)
       - [ドキュメントのセルフサービス API テンプレート](sources-sdk/documentation/template.md)
       - [ドキュメントのセルフサービス UI テンプレート](sources-sdk/documentation/ui-template.md)
-   - ストリーミング SDK {#streaming-sdk}
+   - ストリーミングSDK {#streaming-sdk}
       - [セルフサービスソース（ストリーミング SDK）の基本を学ぶ](sources-sdk/streaming/getting-started.md)
       - [ストリーミングソースの接続仕様の作成](sources-sdk/streaming/create.md)
       - [ストリーミングソースの接続仕様の更新](sources-sdk/streaming/update-connection-specs.md)
