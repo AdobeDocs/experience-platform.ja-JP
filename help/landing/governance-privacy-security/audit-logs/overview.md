@@ -7,7 +7,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 30%
+ht-degree: 36%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 30%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="上位のアクション"
->abstract="このウィジェットには、選択した期間内に Experience Platform で実行されたアクションの上位のタイプが表示されます。Experience Platformで記録されたアクションの完全なリストを表示するには、左側のナビゲーションで「**監査**」を選択します。"
+>abstract="このウィジェットには、選択した期間内に Experience Platform で実行されたアクションの上位のタイプが表示されます。Experience Platform で記録されたアクションの完全なリストを表示するには、左側のナビゲーションの「**監査**」を選択します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="上位のユーザー"
->abstract="このウィジェットには、選択した期間内に Experience Platform で最も多くアクションを実行したユーザーが表示されます。Experience Platformで記録されたアクションの完全なリストを表示するには、左側のナビゲーションで「**監査**」を選択します。"
+>abstract="このウィジェットには、選択した期間内に Experience Platform で最も多くアクションを実行したユーザーが表示されます。Experience Platform で記録されたアクションの完全なリストを表示するには、左側のナビゲーションの「**監査**」を選択します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Experience Platformでのユーザーアクティビティの監視"
->abstract="<h2>説明</h2><p>監査ログの形式で、様々なExperience Platform サービスおよび機能のユーザーアクティビティを監視できます。 これらのログは、<b>誰</b>が<b>いつ</b>、<b>どの</b>アクションを実行したかを記録する監査記録を形成します。監査ログは、Experience Platformに関する問題のトラブルシューティングに役立ち、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。</p>"
+>title="Experience Platform でのユーザーアクティビティの監視"
+>abstract="<h2>説明</h2><p>監査ログの形式で、様々な Experience Platform サービスと機能のユーザーアクティビティを監視できます。これらのログは、<b>誰</b>が<b>いつ</b>、<b>どの</b>アクションを実行したかを記録する監査記録を形成します。監査ログは、Experience Platform に関する問題のトラブルシューティングに役立ち、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。</p>"
 
 システムで実行されるアクティビティの透明性と可視性を高めるために、Adobe Experience Platformでは、様々なサービスや機能に関するユーザーアクティビティを「監査ログ」の形式で監査できます。 これらのログは、Experience Platformに関する問題のトラブルシューティングに役立つ監査証跡を形成し、企業のデータ管理ポリシーおよび規制要件に効果的に準拠するのに役立ちます。
 

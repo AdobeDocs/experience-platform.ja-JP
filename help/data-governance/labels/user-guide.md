@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1552'
-ht-degree: 87%
+ht-degree: 90%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 87%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Experience Platformでのデータ使用の管理"
+>title="Experience Platform でのデータ使用の管理"
 >abstract="<h2>説明</h2><p>Experience Platform のデータガバナンスフレームワークを使用すると、データ使用制限に従って属性やスキーマにラベルを付け、これらの制限を識別し遵守するポリシーを特定のマーケティングアクションに設定できます。</p>"
 
 このユーザーガイドでは、[!DNL Experience Platform] ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。
@@ -61,7 +61,7 @@ ht-degree: 87%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="手順"
->abstract="<ol><li>左側のナビゲーションで「<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=ja">データセット</a>」を選択してから、データを制限するデータセットを選択します。</li><li>データセットの詳細ビューで、「<b>データガバナンス</b>」タブを選択します。</li><li>制限するデータセットフィールドを選択し、「<b>ガバナンスラベルを編集</b>」を選択して、使用制限に基づいてデータにラベルを付けます。</li><li>データにラベルを付けた後、左側のナビゲーションで「<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ja">ポリシー</a>」を選択してから、「<b>ポリシーを作成</b>」を選択します。</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ja#create-governance-policy">データガバナンスポリシー</a>の作成を選択したあと、ポリシーに適用されるデータ使用ラベルを選択します。</li><li>これらのラベルを含んだデータに対してポリシーによって拒否するマーケティングアクションを選択します。ポリシーを作成したら、リストから選択し、右側のパネルの切替スイッチを使用して有効にします。</li><li>Experience Platformでは、有効になっているポリシーごとに、指定のラベルを含んだデータが、定義されたマーケティングアクションに使用されないようにします。 この適用は、関連付けられたマーケティングアクション（ユースケース）でラベル付きデータを宛先に対してアクティブ化しようとすると、自動的に行われます。</li></ol>"
+>abstract="<ol><li>左側のナビゲーションで「<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=ja">データセット</a>」を選択してから、データを制限するデータセットを選択します。</li><li>データセットの詳細ビューで、「<b>データガバナンス</b>」タブを選択します。</li><li>制限するデータセットフィールドを選択し、「<b>ガバナンスラベルを編集</b>」を選択して、使用制限に基づいてデータにラベルを付けます。</li><li>データにラベルを付けた後、左側のナビゲーションで「<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ja">ポリシー</a>」を選択してから、「<b>ポリシーを作成</b>」を選択します。</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ja#create-governance-policy">データガバナンスポリシー</a>の作成を選択したあと、ポリシーに適用されるデータ使用ラベルを選択します。</li><li>これらのラベルを含んだデータに対してポリシーによって拒否するマーケティングアクションを選択します。ポリシーを作成したら、リストから選択し、右側のパネルの切替スイッチを使用して有効にします。</li><li>Experience Platform では、有効になっているポリシーごとに、指定のラベルを含んだデータが、定義されたマーケティングアクションに使用されないようにします。この適用は、関連付けられたマーケティングアクション（ユースケース）でラベル付きデータを宛先に対してアクティブ化しようとすると、自動的に行われます。</li></ol>"
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="ラベルの作成"
->abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Experience Platformには、ラベルの標準セットが用意されていますが、組織に固有のカスタムラベルを作成することもできます。"
+>abstract="ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。Experience Platform には、使用するラベルの標準セットが用意されていますが、組織に固有のカスタムラベルを作成することもできます。"
 
 [!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペース内に、独自のカスタム使用ラベルを作成できます。左側のナビゲーションで&#x200B;**[!UICONTROL ポリシー]**&#x200B;を選択し、**[!UICONTROL ラベル]**&#x200B;を選択して、既存のラベルのリストを表示します。ここから、**[!UICONTROL ラベルを作成]**&#x200B;を選択します。
 

@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1769'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 96%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="プロファイルデータへの顧客同意の統合と適用"
->abstract="<h2>説明</h2><p>Experience Platformを使用すると、顧客から収集した同意データを各顧客のプロファイルに統合できます。 その後、同意ポリシーを設定して、特定の宛先に対してアクティブ化されるセグメントにこのデータを含めることができるかどうかを決定できます。</p>"
+>abstract="<h2>説明</h2><p>Experience Platform を使用すると、顧客から収集した同意データを各顧客のプロファイルに統合できます。その後、同意ポリシーを設定して、特定の宛先に対してアクティブ化されるセグメントにこのデータを含めることができるかどうかを決定できます。</p>"
 
 このドキュメントでは、Adobe Experience Platform UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースを使用して、データ使用ポリシーを作成および管理する方法について説明します。
 

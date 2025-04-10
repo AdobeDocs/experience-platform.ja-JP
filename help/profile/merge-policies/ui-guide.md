@@ -6,7 +6,7 @@ exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2458'
-ht-degree: 76%
+ht-degree: 77%
 
 ---
 
@@ -32,7 +32,7 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="結合ポリシーが見つかりません"
->abstract="これは、Experience Platformが、リクエストされた結合ポリシーを見つけることができなかったことを意味します。 このエラーを解決するには、次のいずれかの解決策を試してください。<ul><li>URL に正しい結合ポリシー ID がリストされていることを確認する。</li><li>アクセスしようとしている結合ポリシーの組織とサンドボックスの組み合わせが正しいことを確認する。</li></ul>"
+>abstract="つまり、Experience Platform でリクエストされた結合ポリシーを見つけることができませんでした。このエラーを解決するには、次のいずれかの解決策を試してください。<ul><li>URL に正しい結合ポリシー ID がリストされていることを確認する。</li><li>アクセスしようとしている結合ポリシーの組織とサンドボックスの組み合わせが正しいことを確認する。</li></ul>"
 
 [!DNL Experience Platform] UI 内で結合ポリシーの操作を開始するには、左側のナビゲーションで **[!UICONTROL プロファイル]** を選択し、「**[!UICONTROL 結合ポリシー]**」タブを選択します。
 

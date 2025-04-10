@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '4980'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -349,7 +349,7 @@ ht-degree: 64%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="結合ポリシー"
->abstract="結合ポリシーを使用すると、様々なデータセットを結合してプロファイルを形成できます。Experience Platformにはデフォルトの結合ポリシーが用意されています。または、プロファイルに新しいデフォルトの結合ポリシーを作成できます。 このオーディエンスに対するマーケティング目的に合った結合ポリシーを選択します。"
+>abstract="結合ポリシーを使用すると、様々なデータセットを結合してプロファイルを形成できます。Experience Platform にはデフォルトの結合ポリシーが用意されていますが、プロファイルで新しいデフォルトの結合ポリシーを作成することもできます。このオーディエンスに対するマーケティング目的に合った結合ポリシーを選択します。"
 
 [!DNL Experience Platform] では、個々の顧客の全体像を把握するために、複数のソースからのデータを統合することができます。このようなデータを統合する場合、データをどのように優先順位付けするかや、どのようなデータを組み合わせてプロファイルを作成するかを決定するために [!DNL Experience Platform] で使用されるルールが結合ポリシーです。
 

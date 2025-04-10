@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2135'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
@@ -53,7 +53,7 @@ Experience Platformのスキーマの管理方法と操作方法について詳�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="データの動作"
->abstract="Experience Platform での使用を意図したデータは、レコード、時系列およびアドホックの 3 つの動作タイプに分けられます。レコードスキーマは、サブジェクトの属性に関する情報を提供し、時系列スキーマは、アクションが実行された時点でのシステムのスナップショットをキャプチャします。アドホックスキーマは、単一のデータセットでのみ使用するための名前空間であるフィールドをキャプチャします。Experience Platformでのデータの動作について詳しくは、ドキュメントを参照してください。"
+>abstract="Experience Platform での使用を意図したデータは、レコード、時系列およびアドホックの 3 つの動作タイプに分けられます。レコードスキーマは、サブジェクトの属性に関する情報を提供し、時系列スキーマは、アクションが実行された時点でのシステムのスナップショットをキャプチャします。アドホックスキーマは、単一のデータセットでのみ使用するための名前空間であるフィールドをキャプチャします。Experience Platform でのデータの動作について詳しくは、ドキュメントを参照してください。"
 
 Experience Platform 用のデータは、次の 3 つの動作タイプに分類されます。
 
