@@ -1,35 +1,86 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；PostgreSQL;postgresql
-solution: Experience Platform
 title: PostgreSQL Source コネクタの概要
-description: API またはユーザーインターフェイスを使用して PostgreSQL をAdobe Experience Platformに接続する方法について説明します。
+description: Adobe Experience Platformの PostgreSQL ソースについて説明します。
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 98d1bec3cd453f3a20b8871b891b5464ddd44a09
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 46%
+source-wordcount: '694'
+ht-degree: 7%
 
 ---
 
-# [!DNL PostgreSQL] コネクタ
+# [!DNL PostgreSQL]
 
-Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+このドキュメントでは、[!DNL PostgreSQL] データベースをAdobe Experience Platformに接続する前に実行する必要がある前提条件の手順について説明します。
 
-[!DNL Experience Platform] では、サードパーティのデータベースからデータを取り込むことができます。 リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続で [!DNL Experience Platform] ます。 データベースプロバイダーのサポートには、[!DNL PostgreSQL] が含まれます。
+## 前提条件 {#prerequisites}
 
-## IP アドレス許可リスト
+[!DNL PostgreSQL] データベースをExperience Platformに接続する前に、以下の節を参照して前提条件の設定を完了してください。
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+### IP アドレスの許可リスト
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL PostgreSQL] を [!DNL Experience Platform] に接続する方法について説明しています。
+ソースを Azure またはAmazon Web Services（AWS）上のExperience Platformに接続する前に、許可リストに地域固有の IP アドレスを追加する必要があります。 詳しくは、[Azure およびAWS上のExperience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
-## API を使用して [!DNL PostgreSQL] と [!DNL Experience Platform] を接続する
+### Azure 上のExperience Platformに対する認証 {#azure}
 
-- [Flow Service API を使用した [!DNL PostgreSQL] ベース接続の作成](../../tutorials/api/create/databases/postgres.md)
-- [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
-- [Flow Service API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
+Azure 上のExperience Platformに接続するには、次の認証資格情報の値を指定 [!DNL PostgreSQL] る必要があります。
 
-## UIを使用して [!DNL PostgreSQL] と [!DNL Experience Platform] を接続する
+>[!BEGINTABS]
 
-- [UI での [!DNL PostgreSQL] ソースコネクタの作成](../../tutorials/ui/create/databases/postgres.md)
-- [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
+>[!TAB  アカウントキー認証 ]
+
+アカウントキー認証を使用して [!DNL PostgreSQL] データベースを Azure 上のExperience Platformに接続するには、次の資格情報の値を指定します。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `connectionString` | [!DNL PostgreSQL] アカウントに関連付けられた接続文字列。 [!DNL PostgreSQL] の接続文字列パターンは `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL PostgreSQL] の接続仕様 ID は `74a1c565-4e59-48d7-9d67-7c03b8a13137` です。 |
+
+詳しくは、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/) を参照してください。
+
+>[!TAB  基本認証 ]
+
+基本認証を使用して [!DNL PostgreSQL] データベースを Azure 上のExperience Platformに接続するには、次の資格情報の値を指定します。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `server` | [!DNL PostgreSQL] データベースの名前または IP アドレス。 |
+| `port` | [!DNL PostgreSQL] サーバーの TCP ポート。 |
+| `username` | [!DNL PostgreSQL] データベース認証に関連付けられたユーザー名。 |
+| `password` | [!DNL PostgreSQL] データベース認証に関連付けられたパスワード。 |
+| `database` | 接続先の [!DNL PostgreSQL] データベースの名前。 |
+| `sslMode` | 接続に適用する [!DNL Secure Sockets Layer] （SSL）方式。 使用可能な値は次のとおりです。 <ul><li>`Disable`:SSL を無効にするには、このオプションを使用します。 サーバーに SSL 設定が必要な場合、接続は失敗します。</li><li>`Allow`：このオプションを使用して、SSL 接続を許可します。 非 SSL 接続は、サーバーがサポートしている場合でも使用できます。</li><li>`Prefer`：サーバーが SSL 接続をサポートしている場合に、SSL 接続を優先させるには、このオプションを使用します。 このオプションでは、非 SSL 接続も可能です。</li><li>`Require`：このオプションを使用して、SSL 接続を必須にします。 サーバーが SSL をサポートしていない場合、接続は失敗します。</li><li>`Verify-Ca`: サーバーが SSL をサポートしていない場合に、接続の失敗時にサーバー証明書を検証するには、このオプションを使用します。</li><li>`Verify-Full`: サーバーが SSL をサポートしていない場合に、接続の失敗時にホストの名前を使用してサーバー証明書を検証するには、このオプションを使用します。</li></ul> |
+
+詳しくは、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/) を参照してください。
+
+>[!ENDTABS]
+
+### Amazon Web Services上のExperience Platformに対する認証（AWS） {#aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
+
+基本認証を使用して [!DNL PostgreSQL] データベースをAWS上のExperience Platformに接続するには、次の資格情報の値を指定します。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `server` | [!DNL PostgreSQL] データベースの名前または IP アドレス。 |
+| `port` | [!DNL PostgreSQL] サーバーの TCP ポート。 |
+| `username` | [!DNL PostgreSQL] データベース認証に関連付けられたユーザー名。 |
+| `password` | [!DNL PostgreSQL] データベース認証に関連付けられたパスワード。 |
+| `database` | 接続先の [!DNL PostgreSQL] データベースの名前。 |
+| `sslMode` | 接続に適用する [!DNL Secure Sockets Layer] （SSL）方式。 使用可能な値は次のとおりです。 <ul><li>`Disable`:SSL を無効にするには、このオプションを使用します。 サーバーに SSL 設定が必要な場合、接続は失敗します。</li><li>`Allow`：このオプションを使用して、SSL 接続を許可します。 非 SSL 接続は、サーバーがサポートしている場合でも使用できます。</li><li>`Prefer`：サーバーが SSL 接続をサポートしている場合に、SSL 接続を優先させるには、このオプションを使用します。 このオプションでは、非 SSL 接続も可能です。</li><li>`Require`：このオプションを使用して、SSL 接続を必須にします。 サーバーが SSL をサポートしていない場合、接続は失敗します。</li><li>`Verify-Ca`: サーバーが SSL をサポートしていない場合に、接続の失敗時にサーバー証明書を検証するには、このオプションを使用します。</li><li>`Verify-Full`: サーバーが SSL をサポートしていない場合に、接続の失敗時にホストの名前を使用してサーバー証明書を検証するには、このオプションを使用します。</li></ul> |
+
+詳しくは、[[!DNL PostgreSQL]  ドキュメント ](https://www.postgresql.org/docs/current/) を参照してください。
+
+## API を使用した [!DNL PostgreSQL] のExperience Platformへの接続
+
+* [Flow Service API を使用した [!DNL PostgreSQL] ベース接続の作成](../../tutorials/api/create/databases/postgres.md)
+* [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
+* [Flow Service API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
+
+## UI を使用した [!DNL PostgreSQL] のExperience Platformへの接続
+
+* [UI での  [!DNL PostgreSQL]  ソース接続の作成](../../tutorials/ui/create/databases/postgres.md)
+* [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
