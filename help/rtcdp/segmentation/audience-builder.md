@@ -3,13 +3,13 @@ title: Real-Time Customer Data Platformの Audience Builder
 description: Real-Time Customer Data Platformの Audience Builder を使用してオーディエンスを作成する方法を説明します。
 feature: Get Started, Audiences
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b9099b123ae83eef6d470076dc2f8d143170a846
+exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '983'
 ht-degree: 3%
 
 ---
-
 
 # Real-Time Customer Data Platformの Audience Builder
 
@@ -18,6 +18,21 @@ Adobe Experience Platform上に構築され [!DNL Adobe Real-Time Customer Data 
 ![ アカウントセクション内の Audience Builder。](../assets/segmentation/audience-builder/audience-builder.png){zoomable="yes"}
 
 ## フィールド {#fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showfullxdmschema"
+>title="完全な XDM スキーマを表示"
+>abstract="デフォルトでは、データを含むフィールドのみが表示されます。 このオプションを有効にすると、XDM スキーマ内のすべてのフィールドが表示されます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showrelationselectors"
+>title="関係セレクターを表示"
+>abstract="デフォルトでは、組織の標準の関係が使用されます。 このオプションを有効にすると、使用される関係セレクターが表示されます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showconstrainedfields"
+>title="制約されたフィールドを表示"
+>abstract="デフォルトでは、制約を持たないフィールドのみが表示されます。 制約が設定されているフィールドを表示するには、このオプションを有効にします。"
 
 アカウントに Audience Builder を使用する場合、オーディエンスのフィールドとしてアカウント属性または既存のオーディエンスを使用できます。
 

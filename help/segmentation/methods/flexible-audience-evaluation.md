@@ -3,9 +3,9 @@ title: 柔軟なオーディエンス評価ガイド
 description: 柔軟なオーディエンス評価を使用して、バッチセグメント化ジョブをオンデマンドで実行する方法を説明します。
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1063'
 ht-degree: 6%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 6%
 >[!AVAILABILITY]
 >
 >柔軟なオーディエンス評価は、[!DNL Microsoft Azure] で実行されているExperience Platformのインスタンスで **のみ** 利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../landing/multi-cloud.md) を参照してください。
+>
+>さらに、柔軟なオーディエンス評価は、Real-Time CDP B2C Editionで使用できる **のみ** です。
 
 柔軟なオーディエンス評価を使用すると、バッチセグメント化ジョブをオンデマンドで実行できます。 柔軟なオーディエンス評価を使用すると、アドホックなキャンペーンの開始、ジャストインタイムの通信または時間に依存するその他のアクティビティを実行できます。
 

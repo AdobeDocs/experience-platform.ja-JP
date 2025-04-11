@@ -3,10 +3,10 @@ solution: Experience Platform
 title: セグメントビルダー UI ガイド
 description: Adobe Experience Platform UI のセグメントビルダーは、プロファイルデータ要素を操作できる機能豊富なワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロール（例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなど）があります。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '4980'
-ht-degree: 65%
+source-wordcount: '5024'
+ht-degree: 64%
 
 ---
 
@@ -26,6 +26,16 @@ ht-degree: 65%
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="フィールド"
 >abstract="セグメント定義を構成する 3 つのフィールドタイプは、属性、イベントおよびオーディエンスです。属性では、XDM 個人プロファイルクラスに属するプロファイル属性を使用できます。イベントでは、XDM ExperienceEvent データ要素を使用して実行されるアクションやイベントに基づいてオーディエンスを作成できます。また、オーディエンスでは、外部ソースから読み込まれたオーディエンスを使用できます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="完全な XDM スキーマを表示"
+>abstract="デフォルトでは、データを含むフィールドのみが表示されます。 このオプションを有効にすると、XDM スキーマ内のすべてのフィールドが表示されます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="非推奨フィールドの表示"
+>abstract="デフォルトでは、非推奨の XDM フィールドは表示されません。 非推奨の XDM フィールドを表示するには、このオプションを有効にします。"
 
 セグメント定義の基本的な構成要素は属性とイベントです。また、既存のオーディエンスに含まれている属性とイベントを、新しい定義の構成要素として使用することもできます。
 
