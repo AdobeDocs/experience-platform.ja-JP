@@ -1,35 +1,90 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；MariaDB;mariadb;Maria DB;maria db
-solution: Experience Platform
 title: MariaDB Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して MariaDB をAdobe Experience Platformに接続する方法について説明します。
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 54%
+source-wordcount: '601'
+ht-degree: 21%
 
 ---
 
-# [!DNL MariaDB] コネクタ
+# [!DNL MariaDB]
 
-Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、[!DNL Experience Platform] サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続で [!DNL Experience Platform] ます。 データベースプロバイダーのサポートには、[!DNL MariaDB] が含まれます。
 
-## IP アドレス許可リスト
+## 前提条件 {#prerequisites}
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+[!DNL MariaDB] アカウントをExperience Platformに接続する前に、以下の節を参照して前提条件の設定を完了してください。
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL MariaDB] を [!DNL Experience Platform] に接続する方法について説明しています。
+### IP アドレスの許可リスト
 
-## API を使用して [!DNL MariaDB] と [!DNL Experience Platform] を接続する
+ソースを Azure またはAmazon Web Services（AWS）上のExperience Platformに接続する前に、許可リストに地域固有の IP アドレスを追加する必要があります。 詳しくは、[Azure およびAWS上のExperience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
+
+### Azure 上のExperience Platformに対する認証 {#azure}
+
+Azure 上のExperience Platformに接続するには、次の資格情報の値を指定 [!DNL MariaDB] る必要があります。
+
+>[!BEGINTABS]
+
+>[!TAB  アカウントキー認証 ]
+
+アカウントキー認証を使用するには、次の資格情報に適切な値を指定します。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `connectionString` | [!DNL MariaDB] 認証に関連付けられた接続文字列。 [!DNL MariaDB] の接続文字列パターンは `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL MariaDB] の接続仕様 ID は `3000eb99-cd47-43f3-827c-43caf170f015` です。 **注意**：この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
+
+接続文字列の取得について詳しくは、この [[!DNL MariaDB]  ドキュメント ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) を参照してください。
+
+>[!TAB  基本認証 ]
+
+基本認証を使用するには、次の資格情報に適切な値を指定します。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `server` | [!DNL MariaDB] データベースの名前または IP。 |
+| `username` | データベースの名前。 |
+| `port` | 接続先の通信エンドポイントのポート番号。 |
+| `password` | データベースに対応するユーザー名。 |
+| `database` | データベースに対応するパスワード。 |
+| `sslMode` | データ転送中にデータを暗号化する方法。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL MariaDB] の接続仕様 ID は `3000eb99-cd47-43f3-827c-43caf170f015` です。 **注意**：この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
+
+接続文字列の取得について詳しくは、この [[!DNL MariaDB]  ドキュメント ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) を参照してください。
+
+>[!ENDTABS]
+
+### Amazon Web Services上のExperience Platformに対する認証（AWS） {#aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
+
+AWS上のExperience Platformに接続するには、次の資格情報の値 [!DNL MariaDB] 指定する必要があります。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `server` | [!DNL MariaDB] データベースの名前または IP。 |
+| `username` | データベースの名前。 |
+| `port` | 接続先の通信エンドポイントのポート番号。 |
+| `password` | データベースに対応するユーザー名。 |
+| `database` | データベースに対応するパスワード。 |
+| `sslMode` | データ転送中にデータを暗号化する方法。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL MariaDB] の接続仕様 ID は `3000eb99-cd47-43f3-827c-43caf170f015` です。 **注意**：この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
+
+接続文字列の取得について詳しくは、この [[!DNL MariaDB]  ドキュメント ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) を参照してください。
+
+## API を使用した [!DNL MariaDB] のExperience Platformへの接続
 
 - [Flow Service API を使用した MariaDB ベース接続の作成](../../tutorials/api/create/databases/mariadb.md)
 - [Flow Service API を使用したデータテーブルの探索](../../tutorials/api/explore/tabular.md)
 - [Flow Service API を使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用して [!DNL MariaDB] と [!DNL Experience Platform] を接続する
+## UI を使用した [!DNL MariaDB] のExperience Platformへの接続
 
 - [UI での MariaDB ソース接続の作成](../../tutorials/ui/create/databases/mariadb.md)
 - [UI でのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)

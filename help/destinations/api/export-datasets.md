@@ -4,9 +4,9 @@ title: Flow Service API を使用したデータセットの書き出し
 description: Flow Service API を使用して、データセットを書き出し、宛先を選択する方法を説明します。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '5149'
+source-wordcount: '5151'
 ht-degree: 11%
 
 ---
@@ -19,7 +19,9 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 また、Adobeでは、（9 月のリリース以前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日として、2025 年 5 月 1 日（PT* が導入されます。 これらのデータフローのいずれについても、終了日より前にデータフローの終了日を手動で更新する必要があります。そうしないと、書き出しがその日に停止します。 Experience Platform UI を使用して、5 月 1 日に停止に設定されるデータフローを確認します。
+>**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 また、Adobeでは、（2024 年 9 月リリースより前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日が 2025 年 5 月 1 日（PT* に導入されました。
+>
+>これらのデータフローのいずれについても、終了日より前に、データフローの終了日を手動で更新する必要があります。さもないと、書き出しはその日に停止します。 Experience Platform UI を使用して、2025 年 5 月 1 日（PT）に停止に設定されるデータフローを確認します。
 >
 >同様に、`endTime` 定日を指定せずに作成したデータフローの場合、デフォルトでは作成時点から 6 か月後の終了時刻になります。
 
@@ -1171,7 +1173,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >JSON ファイルへの書き出しは、圧縮モードでのみサポートされます。 [!DNL Parquet] ファイルへの書き出しは、圧縮モードと非圧縮モードの両方でサポートされています。
 >
->書き出される JSON ファイルの形式は NDJSON であり、ビッグデータエコシステムの標準の交換形式です。 Adobeでは、書き出されたファイルを読み取るために NDJSON 互換のクライアントを使用することをお勧めします。
+>エクスポートされたJSONファイルの形式は、ビッグデータエコシステムの標準的な交換形式であるNDJSONです。 Adobe Systems では、NDJSON 互換クライアントを使用してエクスポートされたファイルを読み取ることをお勧めします。
 
 >[!BEGINTABS]
 
@@ -1336,7 +1338,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++
 
 
->[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
+>[!TAB Azure データ Lake Gen 2(ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - ターゲット接続パラメーターを示す [!DNL Connection spec]
 
@@ -1784,7 +1786,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Data Landing Zone] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) の節を参照してください。
 >`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
-リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 インラインコメントを選択した端末にコピー&amp;ペーストするときにリクエストリクエストに削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1829,15 +1831,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **リクエスト**
 
-+++[!DNL Google Cloud Storage] - ターゲット接続リクエスト
++++[!DNL Google Cloud Storage] - Target接続リクエスト
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Google Cloud Storage] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
->`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
+>必要なターゲットパラメーターを取得する方法については、[!DNL Google Cloud Storage]宛先ドキュメントページの[宛先の詳細の入力](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)セクションを参照してください。
+>サポートされている `datasetFileType` のその他の値については、API リファレンスドキュメントを参照してください。
 
 
-リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエスト例でインラインコメントで強調表示されている行は、追加情報を示しています。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1887,7 +1889,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、SFTP 宛先ドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
+>必要なターゲットパラメーターを取得する方法については、SFTP 宛先ドキュメントページの [宛先の詳細の入力](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) セクションを参照してください。
 >`datasetFileType` のその他のサポートされている値については、API リファレンスドキュメントを参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
@@ -1994,14 +1996,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
-| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code>行き先</code> = <span>宛先の名前。</span></li><li><code>日時</code> = <span>yyyyMMdd_HHmmssとして書式設定された日付と時刻。</span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
 
 **応答**
 
-+++データフローの作成 – 応答
++++作成 データフロー - 応答
 
 ```json
 {
@@ -2018,7 +2020,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++宛先へのデータセットデータフロー [!DNL Azure Blob Storage] 作成 – リクエスト
 
-リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
+リクエスト例でインラインコメントで強調表示されている行は、追加情報を示しています。 インラインコメントを選択した端末にコピー&amp;ペーストするときにリクエストリクエストに削除します。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2054,11 +2056,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-次の表では、`scheduleParams` の節のすべてのパラメーターについて説明します。これにより、データセットの書き出しに関する書き出し時間、頻度、場所などをカスタマイズできます。
+以下の表は、 `scheduleParams` セクションのすべてのパラメーターの説明であり、データセットエクスポートのエクスポート時間、頻度、場所などをカスタマイズできます。
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **増分の毎日のエクスポート**: 毎日の増分エクスポートには、 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`:`day`、および `interval` :`1` を選択します。 <br> **時間単位の増分エクスポート**: 時間単位の増分エクスポートの場合は、 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`:`hour`、および `interval` :`3`、`6`、`9`、または `12` を選択します。 |
 | `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
 | `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
@@ -2128,12 +2130,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。2 つのオプションの詳細については、チュートリアルアクティベーションバッチ保存先の [完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) と [増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **フル ファイル - Once**: `"DAILY_FULL_EXPORT"` は、データセット の 1 回限りの完全エクスポートの場合、 `timeUnit`:`day` および `interval`:`0` と組み合わせてのみ使用できます。 データセットの毎日の完全エクスポートはサポートされていません。 毎日のエクスポートが必要な場合は、増分エクスポートオプションを使用します。 <br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
 | `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
 | `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
-| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span>宛先の名前。</span></li><li><code>日時</code> = <span>yyyyMMdd_HHmmssとして書式設定された日付と時刻。</span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span>宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>宛先インスタンスの一意の識別子。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2141,7 +2143,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++データフローの作成 – 応答
++++作成 データフロー - 応答
 
 ```json
 {
@@ -2152,7 +2154,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB  データランディングゾーン（DLZ） ]
+>[!TAB データランディングゾーン(DLZ)]
 
 **リクエスト**
 
@@ -2203,7 +2205,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
-| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span>組織の名前。</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
@@ -2267,12 +2269,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | パラメーター | 説明 |
 |---------|----------|
-| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 使用可能な書き出しオプションは次の 3 つです。<br> **完全ファイル - 1 回**:`"DAILY_FULL_EXPORT"` は、データセットの完全な書き出しを 1 回限りで行う場合に、`timeUnit`:`day` および `interval`:`0` と組み合わせて使用する必要があります。 データセットの 1 日あたりの完全書き出しはサポートされていません。 毎日の書き出しが必要な場合は、増分書き出しオプションを使用します。<br> **毎日の増分書き出し**：毎日の増分書き出しでは、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`day` および `interval`:`1` を選択します。<br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
-| `timeUnit` | データセットファイルを書き出す頻度に応じて、`day` または `hour` を選択します。 |
-| `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
-| `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
-| `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
-| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+| `exportMode` | `"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの [ 完全なファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) および [ 増分ファイルのエクスポート ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) を参照してください。 次の 3 つの書き出しオプションを使用できます。 <br> **フル ファイル - Once**: `"DAILY_FULL_EXPORT"` は、データセット の 1 回限りの完全エクスポートの場合、 `timeUnit`:`day` および `interval`:`0` と組み合わせてのみ使用できます。 データセットの毎日の完全エクスポートはサポートされていません。 毎日のエクスポートが必要な場合は、増分エクスポートオプションを使用します。 <br> **増分の毎日のエクスポート**: 毎日の増分エクスポートには、 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`:`day`、および `interval` :`1` を選択します。 <br> **増分時間別エクスポート**：時間別増分エクスポートの場合は、`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`:`hour` および `interval`:`3`、`6`、`9` または `12` を選択します。 |
+| `timeUnit` | データセットファイルをエクスポートする頻度に応じて、 `day` または `hour` を選択します。 |
+| `interval` | `timeUnit`が日の場合は「`1`」を、時間単位が`hour`の場合は「`3`、`6`、`9`,`12`」を選択します。 |
+| `startTime` | データセットエクスポートを行う必要がある日付と時刻(UNIX 秒単位開始。 |
+| `endTime` | データセットエクスポートが終了する日付と時刻(UNIX 秒)。 |
+| `foldernameTemplate` | エクスポートされたファイルを保存するストレージの場所に、必要なフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2342,7 +2344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `interval` | `timeUnit` が日の場合は `1` を選択し、時間単位が `hour` の場合は `3`,`6`,`9`,`12` を選択します。 |
 | `startTime` | データセットの書き出しを開始する日時（UNIX 秒単位）。 |
 | `endTime` | データセットの書き出しが終了する日時（UNIX 秒単位）。 |
-| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span> データセットの一意の ID。</span></li><li><code> 宛先</code> = <span> 宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span> 組織の名前。</span></li></ul> |
+| `foldernameTemplate` | 書き出されたファイルが格納されるストレージの場所で、想定されるフォルダー名構造を指定します。 <ul><li><code> データセット_ID</code> = <span>データセットに固有の識別子。</span></li><li><code>行き先</code> = <span>宛先の名前。</span></li><li><code> 日時</code> = <span>yyyyMMdd_HHmmss の形式の日時 </span></li><li><code>EXPORT_TIME</code> = <span> データの書き出しのスケジュール時間（`exportTime=YYYYMMDDHHMM` 形式）。</span></li><li><code>DESTINATION_インスタンス名</code> = <span> 宛先の特定のインスタンスの名前。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span> 宛先インスタンスの一意の ID。</span></li><li><code>SANDBOX_NAME</code> = <span> サンドボックス環境の名前。</span></li><li><code>ORGANIZATION_Name</code> = <span>組織の名前。</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2350,7 +2352,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++データフローの作成 – 応答
++++作成 データフロー - 応答
 
 ```json
 {

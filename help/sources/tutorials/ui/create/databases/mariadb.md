@@ -1,26 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Maria DB;maria db
-solution: Experience Platform
-title: UI での MariaDB Source接続の作成
-type: Tutorial
-description: Adobe Experience Platform UI を使用して Maria DB ソース接続を作成する方法を説明します。
+title: UI を使用した MariaDB のExperience Platformへの接続
+description: Experience Platform ユーザーインターフェイスのソースワークスペースを使用して、MariaDB アカウントをExperience Platformに接続する方法を説明します。
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 40%
+source-wordcount: '590'
+ht-degree: 16%
 
 ---
 
-# UI での [!DNL MariaDB] ソース接続の作成
+# UI を使用した [!DNL MariaDB] のExperience Platformへの接続
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して Maria DB ソースコネクタを作成する手順を説明します。
+このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL MariaDB] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
 ## はじめに
 
-このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
@@ -29,38 +26,64 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL Experience Platform] で [!DNL MariaDB] アカウントにアクセスするには、次の値を指定する必要があります。
+認証について詳しくは、[[!DNL MariaDB]  概要 ](../../../../connectors/databases/mariadb.md#prerequisites) を参照してください。
 
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `connectionString` | MariaDB 認証に関連付けられた接続文字列。 [!DNL MariaDB] の接続文字列パターンは `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 |
+## ソースカタログのナビゲート
 
-基本について詳しくは、この [[!DNL MariaDB]  ドキュメント ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) を参照してください。
+Experience Platform UIで、左側のナビゲーションから「 **[!UICONTROL ソース]** を選択して *[!UICONTROL ソース]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]*&#x200B;パネルで適切なカテゴリを選択します。 または、検索バーを使用して、使用する特定のソースに移動します。
 
-## [!DNL Maria DB] アカウントの接続
+[!DNL MariaDB] を使用するには、「*[!UICONTROL データベース&#x200B;**[!UICONTROL 」の下の「]**MariaDB]*」ソースカードを選択し、「**[!UICONTROL 設定]**」を選択します。
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL Maria DB] アカウントを [!DNL Experience Platform] にリンクします。
+>[!TIP]
+>
+>ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+![MariaDB カードが選択された UI のソースカタログ ](../../../../images/tutorials/create/maria-db/catalog.png)
 
-**[!UICONTROL Databases]** カテゴリの下で **[!UICONTROL Maria DB]** を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい [!DNL Maria DB] コネクタを作成します。
+## 既存のアカウントを使用 {#existing}
 
-![](../../../../images/tutorials/create/maria-db/catalog.png)
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL MariaDB] アカウントを選択します。
 
-**[!UICONTROL Maria DB に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+![ ソースワークフローの既存のアカウントインターフェイスで「既存のアカウント」が選択されている様子。](../../../../images/tutorials/create/maria-db/existing.png)
 
-### 新しいアカウント
+## 新しいアカウントを作成 {#create}
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL MariaDB] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+既存のアカウントがない場合は、ソースに対応する必要な認証資格情報を指定して、新しいアカウントを作成する必要があります。
 
-![](../../../../images/tutorials/create/maria-db/new.png)
+新しいアカウントを作成するには、[ **[!UICONTROL 新規アカウント]** を選択し、名前を指定し、必要に応じてアカウントの説明を追加します。
 
-### 既存のアカウント
+![ソースの新しいアカウントインターフェイスワークフロー、アカウント名とオプションの説明が提供されます。](../../../../images/tutorials/create/maria-db/new.png)
 
-既存のアカウントに接続するには、接続する [!DNL MariaDB] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
+### Azure 上の Experience Platform に接続する {#azure}
 
-![](../../../../images/tutorials/create/maria-db/existing.png)
+アカウントキーまたは基本認証を使用して、[!DNL MariaDB] アカウントを Azure 上のExperience Platformに接続できます。
+
+>[!BEGINTABS]
+
+>[!TAB  アカウントキー認証 ]
+
+アカウントキー認証を使用するには、「**[!UICONTROL アカウントキー認証]**」を選択し、「[ 接続文字列 ](../../../../connectors/databases/mariadb.md#azure)」を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
+
+![ 「アカウントキー認証」が選択されたソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/maria-db/account-key.png)
+
+>[!TAB  基本認証 ]
+
+基本認証を使用する場合は、「**[!UICONTROL 基本認証]**」を選択し、[ 認証資格情報 ](../../../../connectors/databases/mariadb.md#azure) の値を入力して「**[!UICONTROL ソースに接続]**」を選択します。
+
+![ ソースワークフローで「基本認証」が選択された新しいアカウントインターフェイス ](../../../../images/tutorials/create/maria-db/basic-auth.png)
+
+>[!ENDTABS]
+
+### Amazon Web サービス (AWS) で Experience Platform に接続する {#aws}
+
+>[!AVAILABILITY]
+>
+>この節は、Amazon Web サービス(AWS)で実行される Experience Platform の実装に適用されます。 AWS で実行されている Experience Platform は現在、限られた数のお客様にご利用いただけます。 サポートされている Experience Platform インフラストラクチャの詳細については、「 [Experience Platform複数クラウドの概要」を参照してください](../../../../../landing/multi-cloud.md)。
+
+新しい [!DNL MariaDB] アカウントを作成して AWS の Experience Platform に接続するには、VA6 サンドボックスにいることを確認し、認証に必要な [認証情報](../../../../connectors/databases/mariadb.md#aws)を指定します。
+
+![AWSに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL MariaDB] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+このチュートリアルでは、[!DNL MariaDB] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/databases.md) を行いましょう。
