@@ -30,7 +30,7 @@ ht-degree: 16%
 
 ## ソースカタログのナビゲート
 
-Experience Platform UIで、左側のナビゲーションから「 **[!UICONTROL ソース]** を選択して *[!UICONTROL ソース]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]*&#x200B;パネルで適切なカテゴリを選択します。 または、検索バーを使用して、使用する特定のソースに移動します。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]* パネルで適切なカテゴリを選択するか、検索バーを使用して、使用する特定のソースに移動します。
 
 [!DNL MariaDB] を使用するには、「*[!UICONTROL データベース&#x200B;**[!UICONTROL 」の下の「]**MariaDB]*」ソースカードを選択し、「**[!UICONTROL 設定]**」を選択します。
 
@@ -50,11 +50,11 @@ Experience Platform UIで、左側のナビゲーションから「 **[!UICONTRO
 
 既存のアカウントがない場合は、ソースに対応する必要な認証資格情報を指定して、新しいアカウントを作成する必要があります。
 
-新しいアカウントを作成するには、[ **[!UICONTROL 新規アカウント]** を選択し、名前を指定し、必要に応じてアカウントの説明を追加します。
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-![ソースの新しいアカウントインターフェイスワークフロー、アカウント名とオプションの説明が提供されます。](../../../../images/tutorials/create/maria-db/new.png)
+![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/maria-db/new.png)
 
-### Azure 上の Experience Platform に接続する {#azure}
+### Azure 上のExperience Platformへの接続 {#azure}
 
 アカウントキーまたは基本認証を使用して、[!DNL MariaDB] アカウントを Azure 上のExperience Platformに接続できます。
 
@@ -74,13 +74,13 @@ Experience Platform UIで、左側のナビゲーションから「 **[!UICONTRO
 
 >[!ENDTABS]
 
-### Amazon Web サービス (AWS) で Experience Platform に接続する {#aws}
+### Amazon Web ServicesのExperience Platform（AWS）への接続 {#aws}
 
 >[!AVAILABILITY]
 >
->この節は、Amazon Web サービス(AWS)で実行される Experience Platform の実装に適用されます。 AWS で実行されている Experience Platform は現在、限られた数のお客様にご利用いただけます。 サポートされている Experience Platform インフラストラクチャの詳細については、「 [Experience Platform複数クラウドの概要」を参照してください](../../../../../landing/multi-cloud.md)。
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
 
-新しい [!DNL MariaDB] アカウントを作成して AWS の Experience Platform に接続するには、VA6 サンドボックスにいることを確認し、認証に必要な [認証情報](../../../../connectors/databases/mariadb.md#aws)を指定します。
+新しい [!DNL MariaDB] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、必要な [ 認証用の資格情報 ](../../../../connectors/databases/mariadb.md#aws) を指定します。
 
 ![AWSに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
