@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 82%
+source-wordcount: '1290'
+ht-degree: 76%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 82%
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
-   * 宛先へのデータのアクティブ化 {#activate}
+   * 宛先へのデータのアクティブ化{#activate}
       * [有効化の概要](./ui/activation-overview.md)
       * [ストリーミングオーディエンスの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-segment-streaming-destinations.md)
       * [ストリーミングプロファイルの書き出し宛先に対してオーディエンスをアクティブ化する](./ui/activate-streaming-profile-destinations.md)
@@ -51,6 +51,7 @@ ht-degree: 82%
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
       * [配列、マップ、オブジェクトの書き出し](/help/destinations/ui/export-arrays-maps-objects.md)
       * [クラウドストレージの宛先に書き出されたデータに対する変換の実行](/help/destinations/ui/data-transformations-calculated-fields.md)
+      * [データセットデータフローの書き出しの終了日の更新](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [宛先の詳細を表示](./ui/destination-details-page.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [宛先アカウントの削除](./ui/delete-destination-account.md)
@@ -61,7 +62,7 @@ ht-degree: 82%
    * [コンテキスト内宛先アラートを購読](ui/alerts.md)
 * 宛先カタログ {#catalog}
    * [宛先カタログの概要](./catalog/overview.md)
-   * アドビの宛先{#adobe}
+   * Adobeの宛先{#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
       * [Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 接続](./catalog/adobe/marketo-engage.md)
@@ -153,7 +154,7 @@ ht-degree: 82%
       * [データ管理プラットフォーム（DMP）の宛先の概要](./catalog/data-management/overview.md)
       * [Audience Manager DIL 拡張機能](./catalog/data-management/aam-dil-extension.md)
       * [Zeta マーケティングプラットフォーム](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
-   * Data &amp; Identity Partner {#data-partner}
+   * データおよび ID パートナー {#data-partner}
       * [Acxiom 見込み客の抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom データの機能強化](./catalog/data-partner/acxiom-data-enhancement.md)
       * [Merkury エンタープライズ接続](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
@@ -180,7 +181,7 @@ ht-degree: 82%
       * [SendGrid 接続](./catalog/email-marketing/sendgrid.md)
    * タグ拡張機能 {#launch-extensions}
       * [タグ拡張機能の概要](./catalog/launch-extensions/overview.md)
-   * マーケティングの自動処理 {#marketing-automation}
+   * マーケティングの自動化 {#marketing-automation}
       * [RainFocus 参加者プロファイル ](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * モバイルエンゲージメントの宛先 {#mobile-engagement}
       * [モバイルエンゲージメントの宛先の概要](./catalog/mobile-engagement/overview.md)
@@ -212,7 +213,7 @@ ht-degree: 82%
       * [LinkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
       * [TikTok 接続](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
-   * ストリーミング宛先 {#streaming}
+   * ストリーミングの宛先 {#streaming}
       * [HTTP API 接続](./catalog/streaming/http-destination.md)
       * [ストリーミング宛先の IP アドレス許可リスト](./catalog/streaming/ip-address-allow-list.md)
    * サーベイの宛先 {#survey}
@@ -222,7 +223,7 @@ ht-degree: 82%
       * [InMoment 拡張機能](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback 拡張機能](./catalog/survey/qualtrics.md)
       * [QuestionPro Intercept Surveys 拡張機能](./catalog/survey/web-intercept-surveys.md)
-   * お客様の声の宛先 {#voice}
+   * 顧客の声の宛先 {#voice}
       * [お客様の声の宛先の概要](./catalog/voice/overview.md)
       * [Confirmit Digital Feedback 拡張機能](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca Tags 拡張機能](./catalog/voice/invoca.md)
