@@ -2,7 +2,7 @@
 title: UI を使用した、Snowflake データベースからExperience Platformへのデータのストリーミング
 description: Snwoflake データベースからExperience Platformにデータをストリーミングする方法を説明します
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 16%
@@ -86,7 +86,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![ データベーステーブルが選択された状態の選択データインターフェイス ](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-次に、テーブルのタイムスタンプ列タイプを選択します。 `TIMESTAMP_NTZ` または `TIMESTAMP_LTZ` の 2 種類のタイムスタンプ列を選択できます。 列タイプ `TIMESTAMP_NTZ` を選択する場合は、タイムゾーンも指定する必要があります。 列には null 以外の制約を指定する必要があります。 詳しくは、[ 制限事項とよくある質問 ] の節を参照してください。
+次に、テーブルのタイムスタンプ列タイプを選択します。 `TIMESTAMP_NTZ` または `TIMESTAMP_LTZ` の 2 種類のタイムスタンプ列を選択できます。 列タイプ `TIMESTAMP_NTZ` を選択する場合は、タイムゾーンも指定する必要があります。 列には null 以外の制約を指定する必要があります。 詳しくは、[ 制限事項とよくある質問 ](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions) の節を参照してください。
 
 この手順でバックフィル設定を指定することもできます。 バックフィルは、最初に取り込むデータを決定します。 バックフィルが有効になっている場合、指定されたパス内の現在のすべてのファイルが、最初にスケジュールされた取り込み時に取り込まれます。 そうでない場合は、最初の取り込みの実行から開始時刻の間に読み込まれたファイルのみが取り込まれます。 開始時間より前に読み込まれたファイルは取り込まれません。
 
