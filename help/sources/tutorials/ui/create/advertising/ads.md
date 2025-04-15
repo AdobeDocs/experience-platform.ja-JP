@@ -2,14 +2,18 @@
 title: UI を使用したGoogle Ads のExperience Platformへの接続
 description: UI でGoogle Ads アカウントをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '877'
 ht-degree: 10%
 
 ---
 
 # UI を使用した [!DNL Google Ads] のExperience Platformへの接続
+
+>[!WARNING]
+>
+>[!DNL Google Ads] ソースは現在、UI では使用できません。 [!DNL Google Ads] データをExperience Platformに引き続き取り込むことができます [API を使用 ](../../../api/create/advertising/ads.md)。
 
 >[!NOTE]
 >

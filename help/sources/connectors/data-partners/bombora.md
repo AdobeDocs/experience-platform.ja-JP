@@ -2,10 +2,12 @@
 title: ボンボラの意図
 description: Experience Platformの Bombora Intent ソースについて説明します。
 last-substantial-update: 2025-03-26T00:00:00Z
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 39bbd9505b931b82aa925cba0bf8675f25dbf498
+source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1615'
 ht-degree: 10%
 
 ---
@@ -14,13 +16,13 @@ ht-degree: 10%
 
 [!DNL Bombora] は、B2B インテントデータを専門とする包括的なオーディエンスソリューションです。 [!DNL Bombora Intent] は、[!DNL Bombora] アカウントをExperience Platformに接続し、アカウントインテントデータを統合するために使用できるAdobe Experience Platform ソースです。
 
-[!DNL Bombora Intent] ソースを使用すると、会社のサージインテント データ [!DNL Bombora's] 統合して、製品やサービスを積極的に調査しているアカウントを特定できます。 [!DNL Bombora] を使用して市場内アカウントに優先順位を付け、正確なセグメントを作成し、ターゲットを絞った ABM キャンペーンを実行し、マーケティング活動がコンバージョンする可能性が最も高いアカウントに集中できるようにします。 さらに、インテント主導の戦略を活用して、広告費用を最適化し、エンゲージメントを強化し、ROI を最大化できます。
+[!DNL Bombora Intent] ソースを使用すると、会社のサージインテント データ [!DNL Bombora's] 統合して、製品やサービスを積極的に調査しているアカウントを特定できます。 [!DNL Bombora]を使用してマーケット内のアカウントに優先順位を付け、正確なセグメントを作成し、ハイパーターゲットを絞ったABMキャンペーンを実行して、変換するする可能性が最も高いアカウントマーケティング取り組みフォーカスするようにします。さらに、インテント主導の戦略を活用して、広告費用を最適化し、エンゲージメントを強化し、ROI を最大化できます。
 
-[!DNL Bombora] ソースに関する前提条件については、このドキュメントを参照してください。
+[!DNL Bombora]ソースの前提条件情報については、このドキュメントをお読みください。
 
 ## ユースケース {#use-cases}
 
-[!DNL Bombora] ソースに適用できるユースケースの例については、次をお読みください。
+[!DNL Bombora]ソースに適用できる使用例については、以下をお読みください。
 
 ### Demand-Side Platform（DSP）の統合
 
@@ -80,8 +82,8 @@ Experience Platform上の [!DNL Bombora] は [!DNL Google Cloud Storage] によ�
 | フィールド名 | データタイプ | 必須 | ビジネスキー | メモ |
 | --- | --- | --- | --- | --- |
 | `Account_Name` | STRING | TRUE | はい | 会社の正規名。 |
-| `Domain` | STRING | TRUE | はい | インテントを表示している、識別されたアカウントのドメイン。 |
-| `Topic_Id` | STRING | TRUE | はい | [!DNL Bombora] トピック ID。 |
+| `Domain` | STRING | TRUE | はい | 識別された、意図を示しているアカウントドメイン。 |
+| `Topic_Id` | 糸 | 真 | はい | [!DNL Bombora] トピック ID。 |
 | `Topic_Name` | STRING | TRUE | | [!DNL Bombora] のトピック名。 |
 | `Cluster_Name` | STRING | TRUE | | 特定のトピックの [!DNL Bombora] 上のクラスター名。 |
 | `Cluster_Id` | STRING | TRUE | | 特定のトピックに関連付けられたクラスター ID。 |
@@ -174,11 +176,11 @@ Experience Platformでインテントデータを削除するには、データ�
 
 +++回答
 
-会社ドメインが更新されると、新しいドメイン値は次回のデータフロー実行で適用されます。 これにより、次のことが保証されます。
+会社ドメインが更新されると、新しいドメイン値が次のデータフローの実行に適用されます。 これにより、次のことが保証されます。
 
-* 今後のインテントのデータ取り込みでは、アカウントのマッチングに更新されたドメインを使用します。
-* 以前に一致しなかったインテント信号は、意図したアカウントに正しく揃うようになりました。
-* 過去に取り込んだデータに対して遡及的な変更は行われず、新しいデータのみが取り込まれ、取り込まれたデータが更新を反映します。
+* 今後のインテントデータでは取得アカウントマッチングに更新されたドメインが使用されます。
+* 以前は不一致だったインテントシグナルが、意図したアカウントと正しく一致する場合があります。
+* 過去に取り込まれたデータにさかのぼって変更は加えられず、新しいデータのみが表示され、受信データには更新が反映されます。
 
 +++
 

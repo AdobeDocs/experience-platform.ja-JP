@@ -3,9 +3,10 @@ title: UI を使用した Algolia ユーザープロファイルのExperience Pl
 description: アルゴリアのユーザーをExperience Platformに誘導する方法を学ぶ
 hide: true
 hidefromtoc: true
-source-git-commit: a55f0b37614bb43a66d7d2e9cf106484b4d6e8dc
+exl-id: d4c936a7-4983-4a12-a813-03b672116e44
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1137'
 ht-degree: 15%
 
 ---
@@ -53,13 +54,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ## 認証
 
-### 既存のアカウント
+### 既存のアカウントを使用
 
 既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Algolia User Profiles] アカウントを選択します。 続行するには、「**[!UICONTROL 次へ]**」を選択します。
 
 ![既存のアカウントインターフェイス。](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
-### 新しいアカウント
+### 新しいアカウントを作成
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、資格情報 [!DNL Algolia] 入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
 
@@ -76,7 +77,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![ ワークフローのデータ選択ステップ ](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
-### データフローの詳細を入力
+## データフローの詳細を入力
 
 既存のデータセットを使用している場合は、[!DNL Algolia Profile] フィールドグループを使用しているスキーマに関連付けられているデータセットを選択します。
 
@@ -86,13 +87,13 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![ ソースワークフローの新しいデータセット手順 ](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### XDM スキーマへのデータフィールドのマッピング
+## XDM スキーマへのデータフィールドのマッピング
 
 マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。  詳しくは、UI の [ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
 ![ ソースワークフローのマッピングステップ ](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
-### 取り込み実行のスケジュール
+## 取り込み実行のスケジュール
 
 次に、スケジュールインターフェイスを使用して、データフローの取り込みスケジュールを定義します。
 
@@ -107,7 +108,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 | 開始時間 | 見込み実行のタイムスタンプ（UTC タイムゾーンで表示）。 |
 | バックフィル | バックフィルは、最初に取り込むデータを決定します。 バックフィルが有効になっている場合、指定されたパス内の現在のすべてのファイルが、最初にスケジュールされた取り込み時に取り込まれます。 バックフィルが無効になっている場合は、最初の取り込みの実行から開始時刻の間に読み込まれたファイルのみが取り込まれます。 開始時間より前に読み込まれたファイルは取り込まれません。 |
 
-### データフローのレビュー
+## データフローのレビュー
 
 取り込み前のデータフローの概要を確認するページを使用します。 詳細は、次のカテゴリにグループ化されます。
 
