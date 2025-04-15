@@ -14,7 +14,7 @@ ht-degree: 96%
 # Adobe Experience Platform リリースノート {#release-notes}
 
 * [最新のExperience Platform リリースノート](latest/latest.md)
-* 2025年 {#2025}
+* 2025 {#2025}
    * [2025年3月](2025/march-2025.md)
    * [2025年2月](2025/february-2025.md)
 * 2024年 {#2024}
@@ -64,7 +64,7 @@ ht-degree: 96%
    * [2021年3月](2021/march-2021.md)
    * [2021年2月](2021/february-2021.md)
    * [2021年1月](2021/january-2021.md)
-* 2020年 {#2020}
+* 2020 年 {#2020}
    * [2020年12月](2020/december-2020.md)
    * [2020年11月](2020/november-2020.md)
    * [2020年10月](2020/october-2020.md)

@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '84'
-ht-degree: 53%
+ht-degree: 51%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 53%
    * [サンドボックス管理](api/sandboxes.md)
    * [サンドボックスタイプ](api/types.md)
    * [付録](api/appendix.md)
-* Sandbox Tooling API {#sandbox-tooling-api}
+* サンドボックスツール API {#sandbox-tooling-api}
    * [概要](sandbox-tooling-api/overview.md)
    * [はじめに](sandbox-tooling-api/getting-started.md)
    * [パッケージ](sandbox-tooling-api/packages.md)
