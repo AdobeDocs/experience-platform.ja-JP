@@ -3,9 +3,9 @@ title: Adobe Experience Platformの AI アシスタント製品ドキュメン�
 description: Adobe Experience Platformの AI アシスタントの基本を学びます。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
+source-git-commit: 40c5162801b95d73ce70587f3abd87ad44fa0f01
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,17 @@ AI アシスタントは、Experience Platform、Real-Time CDP、Adobe Journey O
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
+### AI アシスタントで生産性を高める実践ガイド
+
+>[!NOTE]
+>
+>このワークブックの最終更新日は、2025 年 3 月 31 日（PT）です。 それ以降、一部の機能は進化または拡張した可能性があります。 さらに、このガイドで参照されるいくつかの機能が引き続き早期アクセスできる場合があります。 お使いの環境でまだ利用できない問題が発生し、その調査に興味がある場合は、Adobe アカウントチームに連絡して早期アクセスをリクエストしてください。
+
+AI アシスタントを使用して生産性を高める方法の実践ガイドについては、以下をお読みください。
+
+* [AI アシスタントで生産性を強化](./assets/landing/ai-assistant-lab-workbook.pdf)
+
 
 ## 新機能
 
@@ -439,16 +450,6 @@ AI アシスタントのユースケースの例については、以下を参�
 * [AI アシスタントで運用に関するインサイトを活用 ](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### AI アシスタントで生産性を向上
-
->[!NOTE]
->
->このワークブックの最終更新日は、2025 年 3 月 31 日（PT）です。 それ以降、一部の機能は進化または拡張した可能性があります。 さらに、このガイドで参照されるいくつかの機能が引き続き早期アクセスできる場合があります。 お使いの環境でまだ利用できない問題が発生し、その調査に興味がある場合は、Adobe アカウントチームに連絡して早期アクセスをリクエストしてください。
-
-AI アシスタントを使用して生産性を高める方法の実践ガイドについては、以下をお読みください。
-
-* [AI アシスタントで生産性を強化](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## 次の手順
 
