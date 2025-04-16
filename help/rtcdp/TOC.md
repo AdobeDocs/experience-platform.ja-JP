@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスを作成し、それらのオーディエンスをサードパーティの宛先に活用します。
 role: Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 64%
+source-wordcount: '307'
+ht-degree: 60%
 
 ---
 
@@ -16,12 +16,12 @@ ht-degree: 64%
 # Real-time Customer Data Platform のヘルプ {#rtcdp}
 
 * [Real-Time CDP ドキュメント](home.md)
-* はじめに {#intro}
+* 基本を学ぶ {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Real-Time CDP の概要](overview.md)
       * [Real-Time CDP の基本を学ぶ](get-started.md)
       * [ホームページ](home-page-dashboards.md)
-   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
+   * Real-Time CDP B2B エディション {#rtcdpb2b-intro}
       * [Real-Time CDP B2B Edition の概要](b2b-overview.md)
       * [使用例](./b2b-use-case.md)
       * [エンドツーエンドのチュートリアル](./b2b-tutorial.md)
@@ -62,7 +62,7 @@ ht-degree: 64%
 * プロファイル {#profile}
    * [プロファイルの概要](profile/profile-overview.md)
    * [プロファイルの参照](profile/profile-browse.md)
-* Real-Time CDP B2B Edition の AI／ML サービス {#b2b-cdp-ai-ml}
+* Real-Time CDP B2B editionの AI/ML サービス {#b2b-cdp-ai-ml}
    * [関連するアカウント](b2b-ai-ml-services/related-accounts.md)
    * [リードとアカウントのマッチング](b2b-ai-ml-services/lead-to-account-matching.md)
    * リードおよびアカウントの予測スコアリング {#predictive-lead-and-account-scoring-intro}
@@ -80,6 +80,7 @@ ht-degree: 64%
       * [ サードパーティ cookie に依存せずに新規顧客を獲得および獲得 ](/help/rtcdp/partner-data/prospecting.md)
       * [パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md)
       * [認証されていないユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
+      * [認証されていないユーザーのオフサイトリターゲティング](./partner-data/unauthenticated-retargeting.md)
    * プロファイルエンリッチメント {#profile-enrichment}
       * [パートナー提供の属性を使用してファーストパーティプロファイルを補完](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * パーソナライズされたインサイトとエンゲージメント {#personalization-insights-engagement}
