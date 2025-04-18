@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 71%
+source-wordcount: '404'
+ht-degree: 70%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 71%
 - [クエリサービスの概要](home.md)
 - [クエリサービスのパッケージング](packaging.md)
 - [クエリサービスガードレール](guardrails.md)
-- はじめに {#get-started}
+- 基本を学ぶ {#get-started}
    - [前提条件](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
    - [概要](data-distiller/overview.md)
@@ -27,12 +27,13 @@ ht-degree: 71%
       - [概要](data-distiller/derived-datasets/overview.md)
       - [SQL を使用した派生データセットの作成](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [デシルベースの派生データセットの作成](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 拡張アプリケーション レポート用 SQL インサイト {#sql-insights}
+   - 拡張アプリケーション レポート用の SQL インサイト {#sql-insights}
       - [概要](data-distiller/sql-insights/overview.md)
       - [クエリプロモード](data-distiller/sql-insights/query-pro-mode.md)
+      - [高速化ストアの概要](data-distiller/sql-insights/accelerated-store-overview.md)
       - [高速クエリの送信](data-distiller/sql-insights/send-accelerated-queries.md)
       - [レポートインサイトデータモデルガイド](data-distiller/sql-insights/reporting-insights-data-model.md)
-   - の AI/ML 機能パイプライン {#ml-feature-pipelines}
+   - AI/ML 機⁠能パ⁠イ⁠プ⁠ラ⁠イ⁠ン {#ml-feature-pipelines}
       - [概要](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks への接続](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [探索的データ分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -53,7 +54,7 @@ ht-degree: 71%
    - 例 {#examples}
       - [統計と機械学習を使用したボットフィルタリング](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [SQL ベースのロジスティックリグレッションを使用して顧客のチャーンを予測](advanced-statistics/examples/predict-customer-churn.md)
-- Data Distillerのオーディエンス {#data-distiller-audiences}
+- Data Distiller オーディエンス {#data-distiller-audiences}
    - [SQL を使用した外部オーディエンスの構築](data-distiller-audiences/overview.md)
 - 例 {#use-cases}
    - [概要](use-cases/overview.md)
@@ -76,7 +77,7 @@ ht-degree: 71%
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [訪問者のロールアップレポートの表示](use-cases/roll-up-report-of-a-visitor.md)
    - [Web およびモバイル分析のインサイト](use-cases/analytics-insights.md)
-- 重要な概念 {#key-concepts}
+- 主要概念 {#key-concepts}
    - [ネストされたデータ構造の使用](key-concepts/nested-data-structures.md)
    - [ネストされたデータ構造の統合](key-concepts/flatten-nested-data.md)
    - [匿名ブロック](key-concepts/anonymous-block.md)
@@ -85,9 +86,9 @@ ht-degree: 71%
    - [データ重複排除](key-concepts/deduplication.md)
    - [データセットのサンプル](key-concepts/dataset-samples.md)
    - [データセット統計の計算](key-concepts/dataset-statistics.md)
-- Data Distiller Hypercubes {#hypercubes}
+- Data Distillerのハイパーキューブ {#hypercubes}
    - [ハイパーキューブによる効率的なビッグデータ分析](hypercubes/overview.md)
-- クエリサービスへのクライアントの接続 {#clients}
+- クライアントのクエリサービスへの接続 {#clients}
    - [クライアント接続の概要](clients/overview.md)
    - [SSL モード](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
