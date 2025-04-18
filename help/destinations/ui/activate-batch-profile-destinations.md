@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
 workflow-type: tm+mt
-source-wordcount: '4454'
-ht-degree: 50%
+source-wordcount: '4517'
+ht-degree: 49%
 
 ---
 
@@ -83,6 +83,16 @@ CSV ファイルの書き出しでは、書き出したファイルの構造を�
 >id="platform_destinations_activate_schedule"
 >title="スケジュール"
 >abstract="鉛筆アイコンを使用して、ファイルの書き出しタイプ（完全なファイルまたは増分ファイル）と書き出し頻度を設定します。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_weekly_messaging"
+>title="週次書き出し"
+>abstract="開始日を選択すると、選択した終了日まで、以降のエクスポートはその曜日に行われます。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_monthly_messaging"
+>title="月次エクスポート"
+>abstract="開始日を選択すると、選択した終了日まで、その月の日付に後続のエクスポートが実行されます。 月の日数が 30 日または 31 日に満たない場合、月の最終日にエクスポートが行われます。"
 
 [!DNL Adobe Experience Platform] は、メールマーケティングおよびクラウドストレージの宛先のデータを [ 様々なファイルタイプ ](#supported-file-formats-export) として書き出します。 **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。
 
