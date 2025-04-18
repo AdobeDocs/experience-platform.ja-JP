@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のトピック；ui;UI;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマエディター；スキーマエディター；スキーマ；作成；関係；参照；
 solution: Experience Platform
 title: スキーマエディターを使用した 2 つのスキーマ間の関係の定義
-description: このドキュメントでは、Experience Platformユーザーインターフェイスのスキーマエディターを使用して、2 つのスキーマ間の関係を定義するチュートリアルを提供します。
+description: このドキュメントでは、Experience Platform ユーザーインターフェイスのスキーマエディターを使用して、2 つのスキーマ間の関係を定義するチュートリアルを提供します。
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
@@ -41,13 +41,13 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Adobe Real-time Customer Data Platform B2B Edition で多対 1 の関係を作成する手順については、[B2B の関係の作成 ](./relationship-b2b.md) に関するガイドを参照してください。
+>Adobe Real-Time Customer Data Platform B2B editionで多対 1 の関係を作成する手順については、[B2B の関係の作成 ](./relationship-b2b.md) に関するガイドを参照してください。
 
 ## はじめに
 
 このチュートリアルでは、[!DNL Experience Platform] UI の [!DNL XDM System] とスキーマエディターに関する十分な知識が必要です。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-* [Experience Platformにおける XDM システム ](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
+* [Experience Platformの XDM システム ](../home.md):XDM と [!DNL Experience Platform] での実装の概要です。
 * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
 * [ を使用したスキーマの作成  [!DNL Schema Editor]](create-schema-ui.md)：ス [!DNL Schema Editor] ーマの操作の基本を説明するチュートリアル。
 
@@ -119,7 +119,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Real-Time CDP B2B Edition にアクセスできる場合は、キャンバスの右パネルのコントロールを使用して関係フィールドを定義したり、[ 同じダイアログ ](./relationship-b2b.md#relationship-field) を使用して多対 1 の関係を構築したりできます。
+>Real-Time CDP B2B editionにアクセスできる場合は、キャンバスの右側のパネルのコントロールを使用して関係フィールドを定義したり、[ 同じダイアログ ](./relationship-b2b.md#relationship-field) を使用して多対 1 の関係を構築したりできます。
 
 ![ 関係を追加ダイアログ ](../images/tutorials/relationship/add-relationship-dialog.png)
 

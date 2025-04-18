@@ -23,9 +23,9 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に ](/help/server-api/overview.md) カスタム Personalization **[!UICONTROL をEdge Networkする際に]** 0}Configuration Server API} を使用する必要があります。 [すべての Server API 呼び出しは、[ 認証済みコンテキスト ](../../../server-api/authentication.md) で行う必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に ](/help/server-api/overview.md) カスタム Personalization **[!UICONTROL を設定する際に]** 0}Edge Network Server API} を使用する必要があります。 [すべての Server API 呼び出しは、[ 認証済みコンテキスト ](../../../server-api/authentication.md) で行う必要があります。
 >
->Web または Mobile SDK の実装に既に使用しているのと同じデータストリームを使用するサーバーサイドEdge Networkを追加することで ](/help/server-api/overview.md)<br>1}Integration Server API を介してプロファイル属性を取得できます。[
+>Web または Mobile SDKの実装に既に使用しているのと同じデータストリームを使用するサーバーサイド統合を追加することで、<br>1}Edge Network Server API を介してプロファイル属性を取得できます ](/help/server-api/overview.md)。[
 >
 ><br> 上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
 
@@ -37,9 +37,9 @@ ht-degree: 51%
 
 この宛先では、実装に応じて、次のいずれかのデータ収集方法を使用する必要があります。
 
-* Web サイトからデータを収集する場合は ](/help/web-sdk/home.md)[Adobe Experience Platform Web SDK を使用します。
-* モバイルアプリケーションからデータを収集する場合は ](https://developer.adobe.com/client-sdks/documentation/)[Adobe Experience Platform Mobile SDK を使用します。
-* [Web SDK](/help/web-sdk/home.md) または [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) を使用していない場合や ](../../../server-api/overview.md) プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は、[Edge Networkサーバー API を使用します。
+* Web サイトからデータを収集する場合は ](/help/web-sdk/home.md)[Adobe Experience Platform Web SDK} を使用します。
+* モバイルアプリケーションからデータを収集する場合は ](https://developer.adobe.com/client-sdks/documentation/)[Adobe Experience Platform Mobile SDK} を使用します。
+* [Web SDK](https://developer.adobe.com/client-sdks/documentation/) または [Mobile SDK](/help/web-sdk/home.md) を使用していない場合や ](../../../server-api/overview.md) プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は、[Edge Network Server API を使用します。
 
 >[!IMPORTANT]
 >
@@ -51,7 +51,7 @@ ht-degree: 51%
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform[ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
 
 {style="table-layout:auto"}
@@ -124,7 +124,7 @@ ht-degree: 51%
 ]
 ```
 
-[Tags](/help/tags/home.md) を使用せずにExperience PlatformWeb SDK をデプロイする場合、[ コマンド応答 ](/help/web-sdk/commands/command-responses.md) を使用して、書き出したデータを確認します。
+[Tags](/help/tags/home.md) を使用せずにExperience Platform web SDKをデプロイする場合は、[ コマンド応答 ](/help/web-sdk/commands/command-responses.md) を使用して、書き出したデータを確認します。
 
 Adobe Experience Platform からの JSON 応答は、Adobe Experience Platform と統合しているアプリケーションの対応する統合エイリアスを見つけるために解析できます。オーディエンス ID は、ターゲティングパラメーターとしてアプリケーションのコードに渡すことができます。 次に、これが宛先の応答に特有なサンプルを示します。
 

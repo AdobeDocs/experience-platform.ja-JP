@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: Privacy ServiceUI の概要
-description: Privacy Serviceユーザーインターフェイスの使用を開始して、様々なExperience Cloudアプリケーションをまたいでプライバシーリクエストを調整および監視します。
+title: Privacy Service UI の概要
+description: Privacy Service ユーザーインターフェイスの使用を開始して、様々なExperience Cloud アプリケーションをまたいでプライバシーリクエストを調整および監視します。
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
@@ -18,11 +18,11 @@ ht-degree: 20%
 >title="データ主体のリクエスト"
 >abstract="このウィジェットには、特定の日に Privacy Service によって処理された、送信され完了したデータ主体のリクエストの数が表示されます。Privacy Service の処理について詳しくは、左側のナビゲーションの&#x200B;**リクエスト**&#x200B;を選択してください。"
 
-Privacy ServiceUI を使用すると、様々なAdobe Experience Cloud アプリケーション間でプライバシーリクエストとコンプライアンスリクエストを調整できます。
+Privacy Service UI を使用すると、様々なAdobe Experience Cloud アプリケーション間でプライバシーリクエストとコンプライアンスリクエストを調整できます。
 
 >[!NOTE]
 >
->Privacy ServiceAPI を使用してプログラムでコンプライアンスリクエストを管理する方法については、[Privacy ServiceAPI ガイド ](../api/overview.md) を参照してください。 詳しくは、「Privacy Service権限の管理 [ のドキュメントを参照し ](../permissions.md) ください。
+>Privacy Service API を使用してプログラムでコンプライアンスリクエストを管理する方法については、[Privacy Service API ガイド ](../api/overview.md) を参照してください。 詳しくは、Privacy Service権限の管理 [ のドキュメントを参照し ](../permissions.md) ください。
 
 ## [!DNL Privacy Service] UI にログインします
 
@@ -32,7 +32,7 @@ Privacy ServiceUI を使用すると、様々なAdobe Experience Cloud アプリ
 
 UI にアクセスするには、[Adobe Experience Cloudにログインし ](https://experience.adobe.com/) クイックアクセスメニューで **[!UICONTROL プライバシー UI]** を選択します。
 
-![ プライバシー UI がハイライト表示されたExperience Cloudダッシュボード。](../images/ui-overview/quick-access.png)
+![ プライバシー UI がハイライト表示されたExperience Cloud ダッシュボード。](../images/ui-overview/quick-access.png)
 
 
 ### [!DNL Experience Platform] からのログイン

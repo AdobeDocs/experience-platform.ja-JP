@@ -28,7 +28,7 @@ Adobe Experience Platformでは、計算済み属性は、イベントレベル�
 
 ## 計算属性の表示 {#view}
 
-Experience PlatformUI で、左側のナビゲーションにある **[!UICONTROL プロファイル]** を選択し、続いて **[!UICONTROL 計算済み属性]** を選択して、組織で使用可能な計算済み属性のリストを表示します。 これには、計算属性の名前、説明、前回の評価日および前回の評価ステータスに関する情報が含まれます。
+Experience Platform UI で、左側のナビゲーションにある **[!UICONTROL プロファイル]** を選択し、続いて **[!UICONTROL 計算済み属性]** を選択して、組織で使用可能な計算済み属性のリストを表示します。 これには、計算属性の名前、説明、前回の評価日および前回の評価ステータスに関する情報が含まれます。
 
 ![ 「[!UICONTROL  プロファイル ]」セクションと [!UICONTROL  計算済み属性 ] タブがハイライト表示され、ユーザーが計算済み属性の参照ページにアクセスする方法が示されます。](./images/ui/browse.png)
 
@@ -118,7 +118,7 @@ Experience PlatformUI で、左側のナビゲーションにある **[!UICONTRO
 
 これらの手順が完了したので、この計算属性をドラフトとして保存するか、すぐに公開するかを選択できるようになりました。
 
-![ 「[!UICONTROL  ドラフトとして保存 ] および [!UICONTROL Publish] ボタンがハイライト表示されます。](./images/ui/draft-or-publish.png)
+![ 「[!UICONTROL  ドラフトとして保存 ] および [!UICONTROL  公開 ] ボタンがハイライト表示されている様子 ](./images/ui/draft-or-publish.png)
 
 ## 計算属性の詳細の表示 {#view-details}
 

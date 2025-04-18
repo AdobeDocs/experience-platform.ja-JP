@@ -766,7 +766,7 @@ CRMID: Tom, ECID: 111
 
 ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフリンクルールの概要](./overview.md)
+* [ID グラフのリンクルールの概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [トラブルシューティングと FAQ](./troubleshooting.md)

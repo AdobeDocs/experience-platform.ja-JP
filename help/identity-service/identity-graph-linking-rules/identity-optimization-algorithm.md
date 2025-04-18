@@ -165,7 +165,7 @@ ECID には未認証（匿名）イベントが格納されるのに対して、
 
 ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフリンクルールの概要](./overview.md)
+* [ID グラフのリンクルールの概要](./overview.md)
 * [実装ガイド](./implementation-guide.md)
 * [グラフ設定の例](./example-configurations.md)
 * [トラブルシューティングと FAQ](./troubleshooting.md)

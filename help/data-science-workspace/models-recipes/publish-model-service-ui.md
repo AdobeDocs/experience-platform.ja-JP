@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；モデルの公開；Data Science Workspace；人気のトピック；サービスのスコアリング
 solution: Experience Platform
-title: Data Science Workspace UI でのサービスとしてのモデルのPublish
+title: Data Science Workspace UI でのサービスとしてのモデルの公開
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspaceを使用すると、トレーニング済みおよび評価済みのモデルをサービスとして公開でき、組織内のユーザーが独自のモデルを作成しなくてもデータのスコアを取得できます。
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
@@ -41,7 +41,7 @@ Adobe Experience Platformで、左側のナビゲーション列にある **[!UI
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-モデルの概要ページの右上付近にある ]**0}Publish} を選択して、サービス作成プロセスを開始します。**[!UICONTROL 
+モデルの概要ページの右上付近にある「**[!UICONTROL 公開]**」を選択して、サービス作成プロセスを開始します。
 
 ![](../images/models-recipes/publish-model/view_training.png)
 

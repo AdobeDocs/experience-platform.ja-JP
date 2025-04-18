@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のトピック；エクスポート；エクスポート
 solution: Experience Platform
-title: Privacy ServiceUI でのプライバシージョブの管理
-description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーションをまたいでプライバシーリクエストを調整および監視する方法について説明します。
+title: Privacy Service UI でのプライバシージョブの管理
+description: Privacy Service ユーザーインターフェイスを使用して、様々なExperience Cloud アプリケーションをまたいでプライバシーリクエストを調整および監視する方法について説明します。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1786'
-ht-degree: 44%
+source-wordcount: '1770'
+ht-degree: 45%
 
 ---
 
@@ -75,7 +75,7 @@ Waiting:
 
 それぞれの規制タイプのジョブは、別々に追跡されます。規制タイプを切り替えるには、「**[!UICONTROL 規制タイプ]**」ドロップダウンメニューを選択し、リストから目的の規制を選択します。
 
-![ 規制タイプのドロップダウンを含むPrivacy Serviceコンソール。](../images/user-guide/regulation.png)
+![ 規制タイプのドロップダウンを含むPrivacy Service コンソール。](../images/user-guide/regulation.png)
 
 規制の種類を変更すると、ダッシュボードが更新され、選択した規制に適用されるすべての操作、フィルター、ウィジェット、ジョブ作成のダイアログが表示されます。
 
@@ -109,7 +109,7 @@ Waiting:
 >
 >以前作成したジョブのデータには、完了日から 30 日間のみアクセスできます。
 
-[!UICONTROL  ジョブリクエスト ] タイトルの下の検索バーにキーワードを入力して、リストをフィルタリングできます。 リストは、入力に応じて自動的にフィルタリングをおこない、検索用語に一致する値を含んだリクエストを表示します。検索フィールドは、プライバシージョブ ID を、UI で現在レンダリングされている/読み込まれているジョブに一致させる「クイック」検索を実行します。 送信されたすべてのジョブを包括的に検索するわけではありません。 代わりに、読み込まれた結果に適用されるフィルターになります。 Privacy ServiceAPI を使用して [ 特定の規制、日付範囲または単一のジョブに基づいてジョブを返す ](../api/privacy-jobs.md#list) ことができます。
+[!UICONTROL  ジョブリクエスト ] タイトルの下の検索バーにキーワードを入力して、リストをフィルタリングできます。 リストは、入力に応じて自動的にフィルタリングをおこない、検索用語に一致する値を含んだリクエストを表示します。検索フィールドは、プライバシージョブ ID を、UI で現在レンダリングされている/読み込まれているジョブに一致させる「クイック」検索を実行します。 送信されたすべてのジョブを包括的に検索するわけではありません。 代わりに、読み込まれた結果に適用されるフィルターになります。 Privacy Service API を使用して [ 特定の規制、日付範囲または単一のジョブに基づいてジョブを返す ](../api/privacy-jobs.md#list) ことができます。
 
 >[!TIP]
 >
@@ -163,7 +163,7 @@ Waiting:
 
 リクエストの **[!UICONTROL ジョブタイプ]** （「削除」または「アクセス」）と 1 つ以上の使用可能な製品をリストから選択します。
 
-Privacy Serviceは、個人データに対して、[!UICONTROL  アクセス ] （読み取り）、[!UICONTROL  削除 ] の 2 種類のジョブリクエストをサポートしています。 お問い合わせの対象に関連する製品に保持されているすべての情報を受け取るリクエストを送信するか、お問い合わせの対象に関連するすべての情報を削除するリクエストを送信できます。
+Privacy Serviceでは、個人データに対して、[!UICONTROL  アクセス ] （読み取り）、[!UICONTROL  削除 ] の 2 種類のジョブリクエストをサポートしています。 お問い合わせの対象に関連する製品に保持されているすべての情報を受け取るリクエストを送信するか、お問い合わせの対象に関連するすべての情報を削除するリクエストを送信できます。
 
 ![](../images/user-guide/type-and-products.png){width=500}
 
@@ -197,7 +197,7 @@ Privacy Serviceは、個人データに対して、[!UICONTROL  アクセス ] �
 
 ![](../images/user-guide/upload-json.png){width=500}
 
-アップロードする JSON ファイルがない場合は、「**[!UICONTROL ダウンロードAdobe-GDPR-Request.json]**」を選択して、データ主体から収集した値に従って入力できるテンプレートをダウンロードします。
+アップロードする JSON ファイルがない場合は、「**[!UICONTROL Adobe-GDPR-Request.json をダウンロード]**」を選択して、データ主体から収集した値に従って入力できるテンプレートをダウンロードします。
 
 
 ![](../images/user-guide/privacy-template.png){width=500}

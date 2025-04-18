@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Real-time Customer Data PlatformとAdobe Journey Optimizerで使用可能なユースケースプレイブック。
-description: Real-time Customer Data PlatformとAdobe Journey Optimizerのすべてのプレイブックのリスト。
+title: Real-Time Customer Data PlatformとAdobe Journey Optimizerで使用可能なユースケースプレイブック。
+description: Real-Time Customer Data PlatformとAdobe Journey Optimizerのすべてのプレイブックのリスト。
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 使用可能なユースケースプレイブック
 
-Real-time Customer Data PlatformとAdobe Journey Optimizerで見つけて使用できる、使用可能なすべてのプレイブックの概要については、このページを参照してください。
+Real-time Customer Data Platform とAdobe Journey Optimizerで見つけて使用できる、使用可能なすべてのプレイブックの概要については、このページを参照してください。
 
 ## Journey Optimizer のユースケースプレイブック {#optimizer-playbooks}
 
@@ -61,7 +61,7 @@ Real-time Customer Data PlatformとAdobe Journey Optimizerで見つけて使用�
 
 {style="table-layout:auto"}
 
-## Real-time Customer Data Platformのユースケースプレイブック {#rtcdp-playbooks}
+## Real-Time Customer Data Platformのユースケースプレイブック {#rtcdp-playbooks}
 
 | プレイブック名 | 説明 |
 | ------------- | ----------- |
