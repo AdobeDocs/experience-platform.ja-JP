@@ -3,22 +3,14 @@ keywords: 飛行船属性；飛行船宛先
 title: Airship Attributes 接続
 description: Airship 内でターゲティングするためのオーディエンス属性として、Adobe オーディエンスデータを Airship にシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 28%
+source-wordcount: '1042'
+ht-degree: 31%
 
 ---
 
 # [!DNL Airship Attributes] 接続 {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->* 2025 年 3 月 25 日（PT）以降、宛先カタログに 2 つの [!DNL Airship Attributes] カードが並んで表示されるようになります。 これは、宛先サービスの内部アップグレードが原因です。 既存の [!DNL Airship Attributes] 宛先コネクタの名前は、**[!UICONTROL （非推奨） Airship Attributes]** に変更され、**[!UICONTROL Airship Attributes]** という名前の新しいカードが使用できるようになりました。
->* 新しいアクティベーションデータフローについては、カタログ内の **[!UICONTROL Airship Attributes]** 接続を使用します。 **[!UICONTROL （非推奨） Airship Attributes]** 宛先へのアクティブなデータフローがある場合、それらは自動的に更新されるので、ユーザーからのアクションは必要ありません。
->* [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。
->   * フロー仕様 ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * 接続仕様 ID: `594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## 概要 {#overview}
 
