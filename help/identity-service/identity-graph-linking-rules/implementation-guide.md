@@ -2,9 +2,9 @@
 title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1888'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
+>
+>* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
+>* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
+>* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
 
 >[!IMPORTANT]
 >
@@ -33,7 +37,7 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 ## 実装の前提条件 {#prerequisites-for-implementation}
 
-この節では、データにルールをリンクする ID グラフを実装する前に完了する必要がある前提条件の手順の概要を説明します。
+この節では、データに [!DNL Identity Graph Linking Rules] を実装する前に完了する必要がある前提条件の手順の概要を説明します。
 
 ### 一意の名前空間
 
@@ -291,9 +295,9 @@ ID 設定と一意の名前空間を実装する際に参照できる追加情�
 
 ## 次の手順
 
-ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
+[!DNL Identity Graph Linking Rules] について詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフのリンクルールの概要](./overview.md)
+* [[!DNL Identity Graph Linking Rules] の概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [グラフ設定の例](./example-configurations.md)
 * [トラブルシューティングと FAQ](./troubleshooting.md)

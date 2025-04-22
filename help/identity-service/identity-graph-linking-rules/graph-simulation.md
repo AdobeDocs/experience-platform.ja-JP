@@ -2,9 +2,9 @@
 title: グラフシミュレーション UI ガイド
 description: ID サービス UI でグラフシミュレーションを使用する方法を説明します。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1563'
 ht-degree: 3%
 
 ---
@@ -18,8 +18,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
 >
+>* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
+>* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
+>* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
 >* [!DNL Graph Simulation] ツールにアクセスするには、アカウントに **ID グラフの表示** 権限が必要です。 詳しくは、[ 属性ベースのアクセス制御における権限に関するガイド ](../../access-control/abac/ui/permissions.md) を参照してください。
 
 [!DNL Graph Simulation] は、ID サービス UI のツールで、特定の ID の組み合わせでの ID グラフの動作と、[ID 最適化アルゴリズム ](./identity-optimization-algorithm.md) の設定方法をシミュレートするために使用できます。
@@ -182,7 +185,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 このドキュメントでは、[!DNL Graph Simulation] ツールを使用して、特定のルールセットと設定に基づいて ID データがどのように扱われるかを理解する方法を確認しました。 詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフのリンクルールの概要](./overview.md)
+* [[!DNL Identity Graph Linking Rules] の概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [トラブルシューティングと FAQ](./troubleshooting.md)

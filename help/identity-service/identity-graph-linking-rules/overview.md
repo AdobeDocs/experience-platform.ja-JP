@@ -2,14 +2,14 @@
 title: Id グラフリンクルール
 description: ID サービスでの ID グラフリンクルールについて説明します。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 8%
+source-wordcount: '1497'
+ht-degree: 7%
 
 ---
 
-# ID グラフのリンクルールの概要 {#identity-graph-linking-rules-overview}
+# [!DNL Identity Graph Linking Rules] の概要 {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
@@ -18,17 +18,21 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
+>
+>* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
+>* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
+>* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
 
-Adobe Experience Platform ID サービスとリアルタイム顧客プロファイルを使用すると、データが完全に取り込まれ、すべての結合プロファイルが CRMID などの人物識別子を使用して 1 人の個人を表すと簡単に想定できます。 ただし、特定のデータが複数の異なるプロファイルを 1 つのプロファイルに結合しようとする可能性があるシナリオがあります（「グラフ折りたたみ」）。 これらの不要な結合を防ぐには、ID グラフのリンクルールを通じて提供される設定を使用して、ユーザーに対して正確なパーソナライゼーションを許可します。
+Adobe Experience Platform ID サービスとリアルタイム顧客プロファイルを使用すると、データが完全に取り込まれ、すべての結合プロファイルが CRMID などの人物識別子を使用して 1 人の個人を表すと簡単に想定できます。 ただし、特定のデータが複数の異なるプロファイルを 1 つのプロファイルに結合しようとする可能性があるシナリオがあります（「グラフ折りたたみ」）。 これらの不要な結合を防ぐために、[!DNL Identity Graph Linking Rules] を通じて提供される設定を使用して、ユーザーに対して正確なパーソナライゼーションを可能にできます。
 
-ID グラフリンクルールの使用について詳しくは、次のビデオをご覧ください。
+[!DNL Identity Graph Linking Rules] の使用について詳しくは、次のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## 基本を学ぶ
 
-ID グラフリンクルールを理解するには、次のドキュメントが不可欠です。
+[!DNL Identity Graph Linking Rules] の理解には、次のドキュメントが不可欠です。
 
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
@@ -45,7 +49,7 @@ ID グラフリンクルールを理解するには、次のドキュメント�
 >title="グラフ折りたたみシナリオ"
 >abstract="グラフが「折りたたむ」ことや、複数のユーザーエンティティを表すことがある理由は複数あります。"
 
-この節では、ID グラフリンクルールを設定する際に検討する可能性のあるシナリオ例の概要を説明します。
+この節では、[!DNL Identity Graph Linking Rules] を設定する際に検討する可能性のあるシナリオの例について概説します。
 
 ### 共有デバイス
 
@@ -61,7 +65,7 @@ ID グラフリンクルールを理解するには、次のドキュメント�
 
 このような場合、グラフの観点から見ると、制限なしが有効になっている状態で、1 つの ECID が複数の CRMID にリンクされます。
 
-ID グラフリンクルールを使用すると、次のことができます。
+[!DNL Identity Graph Linking Rules] では、以下のことが可能です。
 
 * ログインに使用する ID を一意の ID として設定します。 例えば、CRMID 名前空間を使用して ID を 1 つだけ格納するようにグラフを制限し、その CRMID を共有デバイスの一意の識別子として定義できます。
    * これにより、CRMID が ECID によって結合されないようにすることができます。
@@ -72,7 +76,7 @@ ID グラフリンクルールを使用すると、次のことができます�
 
 ![ 無効なメールまたは電話のシナリオを表す図。](../images/identity-settings/invalid-email-phone.png)
 
-ID グラフリンクルールを使用すると、次のことができます。
+[!DNL Identity Graph Linking Rules] では、以下のことが可能です。
 
 * CRMID、電話番号、またはメールアドレスを一意の識別子として設定し、1 人のユーザーを、自分のアカウントに関連付けられた 1 つの CRMID、電話番号、またはメールアドレスに制限します。
 
@@ -89,11 +93,11 @@ ID グラフリンクルールを使用すると、次のことができます�
 
 ![ID 値が間違っている、または正しくない ID データのグラフ例。](../images/identity-settings/bad-data.png)
 
-ID グラフリンクルールを使用すると、CRMID を一意の識別子として設定して、このタイプのデータに起因する不要なプロファイル折りたたみを防ぐことができます。
+[!DNL Identity Graph Linking Rules] を使用すると、CRMID を一意の識別子として設定して、このタイプのデータに起因する不要なプロファイルの折りたたみを防ぐことができます。
 
-## ID グラフのリンクルール {#identity-graph-linking-rules}
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
-ID グラフリンクルールを使用すると、次のことができます。
+[!DNL Identity Graph Linking Rules] を使用すると、次のことが可能です。
 
 * 一意の名前空間を設定することで、各ユーザーに対して単一の ID グラフ/結合プロファイルを作成します。これにより、2 つの異なる人物 ID が 1 つの ID グラフに結合するのを防ぎます。
 * 優先度を設定して、オンラインの認証済みイベントをその人物に関連付けます
@@ -151,7 +155,7 @@ ID 最適化アルゴリズムに通知する一意の名前空間を設定し�
 
 ## 次の手順
 
-ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
+[!DNL Identity Graph Linking Rules] について詳しくは、次のドキュメントを参照してください。
 
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)

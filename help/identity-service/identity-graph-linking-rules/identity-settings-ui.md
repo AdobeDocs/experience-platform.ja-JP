@@ -2,10 +2,10 @@
 title: ID 設定 UI
 description: ID 設定ユーザーインターフェイスの使用方法を説明します。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 4%
+source-wordcount: '697'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
+>
+>* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
+>* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
+>* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
 
 ID 設定は、Adobe Experience Platform ID サービス UI の機能で、一意の名前空間を指定し、名前空間の優先度を設定するために使用できます。
 
@@ -23,7 +27,7 @@ UI で ID 設定を指定する方法については、このガイドを参照�
 
 ID 設定の使用を開始する前に、次のドキュメントをお読みください。
 
-* [ID グラフのリンクルール](./overview.md)
+* [[!DNL Identity Graph Linking Rules]](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [グラフ設定の例](./example-configurations.md)
@@ -83,9 +87,9 @@ ID 設定ページは、[!UICONTROL  ユーザー名前空間 ] および [!UICO
 
 ## 次の手順
 
-ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
+[!DNL Identity Graph Linking Rules] について詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフのリンクルールの概要](./overview.md)
+* [[!DNL Identity Graph Linking Rules] の概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [グラフ設定の例](./example-configurations.md)

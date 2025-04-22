@@ -2,9 +2,9 @@
 title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1617'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
+>
+>* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
+>* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
+>* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
 
 ID 最適化アルゴリズムは、ID グラフが個人を表すようにし、リアルタイム顧客プロファイルでの不要な ID の結合を防ぐ、ID サービス上のグラフアルゴリズムです。
 
@@ -163,9 +167,9 @@ ECID には未認証（匿名）イベントが格納されるのに対して、
 
 ## 次の手順
 
-ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
+[!DNL Identity Graph Linking Rules] について詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフのリンクルールの概要](./overview.md)
+* [[!DNL Identity Graph Linking Rules] の概要](./overview.md)
 * [実装ガイド](./implementation-guide.md)
 * [グラフ設定の例](./example-configurations.md)
 * [トラブルシューティングと FAQ](./troubleshooting.md)

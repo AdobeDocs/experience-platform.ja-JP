@@ -2,9 +2,9 @@
 title: グラフ設定の例
 description: ID グラフリンクルールと ID データを使用する際に発生する可能性のある一般的なグラフシナリオについて説明します。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2849'
 ht-degree: 7%
 
 ---
@@ -18,14 +18,18 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->ID グラフリンクルールは現在、限定提供（LA）です。 開発用サンドボックスでこの機能にアクセスする方法については、Adobe アカウントチームにお問い合わせください。
+>ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
+>
+>* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
+>* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
+>* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
 
 >[!NOTE]
 >
 >* 「CRMID」と「loginID」は、カスタム名前空間です。 このドキュメントでは、「CRMID」はユーザー識別子で、「loginID」は特定のユーザーに関連付けられたログイン識別子です。
 >* このドキュメントで概要を説明するグラフシナリオの例をシミュレートするには、まず 2 つのカスタム名前空間を作成する必要があります。1 つは ID シンボル「CRMID」、もう 1 つは ID シンボル「loginID」です。 ID 記号では大文字と小文字が区別されます。
 
-このドキュメントでは、ID グラフリンクルールと ID データを使用する際に発生する可能性のある、一般的なシナリオのグラフ設定例について説明します。
+このドキュメントでは、[!DNL Identity Graph Linking Rules] および ID データを使用する際に発生する可能性のある、一般的なシナリオのグラフ設定例について説明します。
 
 ## CRMID のみ
 
@@ -764,9 +768,9 @@ CRMID: Tom, ECID: 111
 
 ## 次の手順
 
-ID グラフリンクルールについて詳しくは、次のドキュメントを参照してください。
+[!DNL Identity Graph Linking Rules] について詳しくは、次のドキュメントを参照してください。
 
-* [ID グラフのリンクルールの概要](./overview.md)
+* [[!DNL Identity Graph Linking Rules] の概要](./overview.md)
 * [ID 最適化アルゴリズム](./identity-optimization-algorithm.md)
 * [実装ガイド](./implementation-guide.md)
 * [トラブルシューティングと FAQ](./troubleshooting.md)
