@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
+source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1286'
 ht-degree: 76%
 
 ---
@@ -243,6 +243,7 @@ ht-degree: 76%
          * [サポートされる変換関数](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [ファイル形式設定](./destination-sdk/functionality/destination-server/file-formatting.md)
       * 宛先設定コンポーネント {#destination-configuration}
+         * [オーディエンスデータタイプの設定](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
          * [顧客認証設定](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [OAuth2 認証](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [顧客データフィールド](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
