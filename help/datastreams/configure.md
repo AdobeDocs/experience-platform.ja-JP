@@ -2,7 +2,7 @@
 title: データストリームの作成と設定
 description: クライアントサイドの Web SDK 統合を他のアドビ製品やサードパーティの宛先と接続する方法について説明します。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 48%
@@ -81,7 +81,7 @@ Experience Platformで使用するデータストリームを設定し、さら�
 
 また、目的の各 XDM フィールドがスキーマに存在することを確認します。 そうでない場合は、Adobeが提供する `Environment Details` フィールドグループをスキーマに追加できます。
 
-### の詳細オプション {#@advanced-options} 設定
+### 詳細オプションの設定 {#advanced-options}
 
 詳細設定オプションを表示するには、「**[!UICONTROL 詳細設定オプション]**」を選択します。 ここでは、IP の不明化、ファーストパーティ ID Cookie など、追加のデータストリーム設定を設定できます。
 
