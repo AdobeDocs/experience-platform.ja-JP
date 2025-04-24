@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；バッチ取得；バッチ取得；取得；developer guide;api guide；アップロード；Parquet の取り込み；json の取り込み；
+keywords: Experience Platform；ホーム；人気のトピック；バッチ取り込み；バッチ取り込み；バッチ取り込み；取得；developer guide;api guide；アップロード；Parquet の取り込み；json の取り込み；
 solution: Experience Platform
 title: バッチ取り込み API ガイド
 description: このドキュメントでは、Adobe Experience Platformのバッチ取得 API を使用する開発者向けの包括的なガイドを提供します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
-ht-degree: 65%
+source-wordcount: '2435'
+ht-degree: 64%
 
 ---
 
@@ -27,7 +27,9 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->次の手順は、小さいファイル（256 MB 以下）に適用されます。 ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+>- 次の手順は、小さいファイル（256 MB 以下）に適用されます。 ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+>
+>- バッチ取り込みの入力として、複数行 JSON ではなく 1 行の JSON を使用します。 1 行の JSON を使用すると、システムが 1 つの入力ファイルを複数のチャンクに分割して並行して処理できますが、複数行の JSON は分割できないので、パフォーマンスが向上します。 これにより、データ処理コストを大幅に削減し、バッチ処理の待ち時間を改善できます。
 
 ### バッチの作成
 
