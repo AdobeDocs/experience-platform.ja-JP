@@ -3,9 +3,9 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからオーディエンス情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルオーディエンスメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '964'
 ht-degree: 51%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に ](/help/server-api/overview.md) カスタム Personalization **[!UICONTROL を設定する際に]** 0}Edge Network Server API} を使用する必要があります。 [すべての Server API 呼び出しは、[ 認証済みコンテキスト ](../../../server-api/authentication.md) で行う必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に ](https://developer.adobe.com/data-collection-apis/docs/) カスタム Personalization **[!UICONTROL を設定する際に]** 0}Edge Network API} を使用する必要があります。 [すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。
 >
->Web または Mobile SDKの実装に既に使用しているのと同じデータストリームを使用するサーバーサイド統合を追加することで、<br>1}Edge Network Server API を介してプロファイル属性を取得できます ](/help/server-api/overview.md)。[
+><br>1}Edge Network API を使用してプロファイル属性を取得できます ](https://developer.adobe.com/data-collection-apis/docs/) サーバーサイド統合を追加して、web またはモバイル SDKの実装に既に使用しているものと同じデータストリームを使用します。[
 >
 ><br> 上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
 
@@ -39,7 +39,7 @@ ht-degree: 51%
 
 * Web サイトからデータを収集する場合は ](/help/web-sdk/home.md)[Adobe Experience Platform Web SDK} を使用します。
 * モバイルアプリケーションからデータを収集する場合は ](https://developer.adobe.com/client-sdks/documentation/)[Adobe Experience Platform Mobile SDK} を使用します。
-* [Web SDK](https://developer.adobe.com/client-sdks/documentation/) または [Mobile SDK](/help/web-sdk/home.md) を使用していない場合や ](../../../server-api/overview.md) プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は、[Edge Network Server API を使用します。
+* [Web SDK](https://developer.adobe.com/data-collection-apis/docs/) または [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) を使用していない場合や、プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は ](/help/web-sdk/home.md)0}Edge Network API} を使用します。[
 
 >[!IMPORTANT]
 >

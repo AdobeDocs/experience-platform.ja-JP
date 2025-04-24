@@ -3,9 +3,9 @@ keywords: 宛先；質問；よくある質問；faq；宛先 faq
 title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1673'
 ht-degree: 1%
 
 ---
@@ -201,7 +201,7 @@ ID 一致要件について詳しくは、[ID 一致要件 ](catalog/social/link
 
 ただし、Web SDKの代わりに [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) を使用する場合は、次のセッションのパーソナライゼーションのみがサポートされます。
 
-[ 同じページと次のページのパーソナライゼーション ](ui/activate-edge-personalization-destinations.md) のユースケースについては、[Web SDK](../web-sdk/home.md) または [Edge Network Server API](../server-api/overview.md) を使用する必要があります。 実装について詳しくは、[edge 宛先へのオーディエンスのアクティブ化 ](ui/activate-edge-personalization-destinations.md) に関するドキュメントを参照してください。
+[ 同じページと次のページのパーソナライゼーション ](ui/activate-edge-personalization-destinations.md) のユースケースについては、[Web SDK](../web-sdk/home.md) または [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) を使用する必要があります。 実装について詳しくは、[edge 宛先へのオーディエンスのアクティブ化 ](ui/activate-edge-personalization-destinations.md) に関するドキュメントを参照してください。
 +++
 
 ### Real-time Customer Data Platform からAdobe Targetまたはカスタム Personalizationの宛先に送信できる属性の数に制限はありますか。
@@ -244,10 +244,10 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 宛先を削除すると、その宛先でマッピングされているすべてのオーディエンスおよび属性がAdobe Targetから削除され、Edge Networkからも削除されます。
 +++
 
-### Edge Network Server API を使用して統合は機能しますか？
+### 統合はEdge Network API を使用して機能しますか？
 
 +++回答
-はい、Edge Network Server API は、カスタム Personalizationの宛先と連携します。 プロファイル属性には機密データが含まれている可能性があるので、このデータを保護するために、カスタム Personalizationの宛先では、データ収集にEdge Network Server API を使用する必要があります。 さらに、すべての API 呼び出しは、[ 認証済みコンテキスト ](../server-api/authentication.md) で行う必要があります。
+はい、Edge Network API はカスタム Personalizationの宛先と連携します。 プロファイル属性には機密データが含まれている可能性があるので、このデータを保護するために、カスタム Personalizationの宛先では、データ収集にEdge Network API を使用する必要があります。 さらに、すべての API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) で行う必要があります。
 +++
 
 ### エッジでアクティブになっている結合ポリシーは 1 つだけです。 別の結合ポリシーを使用するオーディエンスを作成し、それをストリーミングオーディエンスとしてAdobe Targetに送信できますか。

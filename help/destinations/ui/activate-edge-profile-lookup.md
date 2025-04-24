@@ -3,9 +3,9 @@ title: リアルタイムでのエッジプロファイル属性の検索
 description: カスタム Personalizationの宛先とEdge Network API を使用して、エッジプロファイル属性をリアルタイムで検索する方法を説明します
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1911'
 ht-degree: 7%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platformは、すべてのプロファイルデータの唯一�
 * [ データストリーム ](../../datastreams/overview.md)：データストリームは、web SDKから受信したイベントデータを受け取り、エッジプロファイルデータで応答します。
 * [ 結合ポリシー ](../../segmentation/ui/segment-builder.md#merge-policies): [!UICONTROL Edgeでアクティブ ] 結合ポリシーを作成して、エッジプロファイルが正しいプロファイルデータを使用していることを確認します。
 * [ カスタム Personalization接続 ](../catalog/personalization/custom-personalization.md)：プロファイル属性をEdge Networkに送信する新しいカスタムパーソナライゼーション接続を設定します。
-* [Edge Network API](../../server-api/overview.md): Edge Network API [ インタラクティブデータ収集 ](../../server-api/interactive-data-collection.md) 機能を使用して、エッジプロファイルからプロファイル属性をすばやく取得します。
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/): Edge Network API [ インタラクティブデータ収集 ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) 機能を使用して、エッジプロファイルからプロファイル属性をすばやく取得します。
 
 ## パフォーマンスガードレール {#guardrails}
 
@@ -166,7 +166,7 @@ Edge でプロファイル属性を検索するには、オーディエンスを
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、[Edge Network API](../../server-api/overview.md) を介してプロファイル属性を取得する必要があります。 さらに、API 呼び出しを認証するには、Edge Network API[ インタラクティブデータ収集エンドポイント ](../../server-api/interactive-data-collection.md) を介してプロファイル属性を取得する必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) を介してプロファイル属性を取得する必要があります。 さらに、API 呼び出しを認証するには、Edge Network API[ インタラクティブデータ収集エンドポイント ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) を介してプロファイル属性を取得する必要があります。
 ><br>上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づき、プロファイル属性は使用できません。
 
 [ 手順 1](#create-datastream) で設定したデータストリームは、受信イベントデータを受け入れ、エッジプロファイル情報で応答する準備が整いました。

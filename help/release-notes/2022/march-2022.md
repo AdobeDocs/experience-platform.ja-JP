@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年3月
 description: Adobe Experience Platform の 2022年3月のリリースノート。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 84%
+source-wordcount: '1183'
+ht-degree: 81%
 
 ---
 
@@ -73,7 +73,7 @@ Experience Platformのアラートについて詳しくは、[ アラートの�
 
 ## ダッシュボード {#dashboards}
 
-Adobe Experience Platform は、毎日のスナップショットで取得した、組織のデータに関する重要な情報を表示できる複数の [!DNL dashboards] を提供しています。
+Adobe Experience Platform では、複数の [!DNL dashboards] を提供しており、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示できます。
 
 ### プロファイルダッシュボード
 
@@ -115,7 +115,7 @@ Experience Platform は、クライアントサイドのカスタマーエクス
 | 機能 | 説明 |
 | --- | --- |
 | グローバルデータストリーム設定 | データストリームを設定する際に、新しいグローバル設定（ジオロケーション、ファーストパーティ ID cookie、サードパーティ ID 同期）を設定できるようになりました。詳しくは、データストリーム UI ガイドの[データストリームの設定](../../datastreams/overview.md#create)の節を参照してください。 |
-| [Edge Network Server API](../../server-api/overview.md) | この Server API を使用すると、お客様は、新しい認証済みエンドポイントを使用して Experience Platform Edge Network を操作し、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースを強化できます。 |
+| [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Edge Network API を使用すると、お客様は、新しい認証済みエンドポイントを使用してExperience Platform Edge Networkを操作し、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースを強化できます。 |
 
 Experience Platformのデータ収集について詳しくは、[ データ収集の概要 ](../../collection/home.md) を参照してください。
 

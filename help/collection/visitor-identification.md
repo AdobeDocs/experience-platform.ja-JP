@@ -1,19 +1,19 @@
 ---
 title: 訪問者の識別
-description: Adobe Experience Platform Edge Network Server API で訪問者を識別する方法について説明します
-seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
+description: Adobe Experience Platform Edge Network API で訪問者を識別する方法を説明します
+seo-description: Learn how Adobe Experience Platform Edge Network API identifies visitors
 keywords: エッジネットワーク;ゲートウェイ;API;訪問者;識別
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 100%
+source-wordcount: '149'
+ht-degree: 86%
 
 ---
 
 # 訪問者の識別
 
-Edge Network Server API は、[ファーストパーティ ID ([!DNL FPID]) を使用した訪問者の識別](visitor-identification-fpid.md)をサポートしています。
+Edge Network API は、[ ファーストパーティ ID を使用した訪問者の識別（[!DNL FPID]） ](visitor-identification-fpid.md) をサポートしています。
 
 すべてのユーザーの ID を、`identityMap` フィールドグループで提供する必要があります。このフィールドグループは AEP Web SDK `ExperienceEvent` mixin に含まれています。
 

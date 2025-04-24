@@ -2,9 +2,9 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1865'
 ht-degree: 3%
 
 ---
@@ -86,7 +86,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 * 特定のサンドボックスの ID 設定を指定したら、エクスペリエンスイベントのプライマリ ID は、設定で最も高い名前空間の優先度によって決定されます。
    * これは、エクスペリエンスイベントが本質的に動的であるためです。 ID マップには 3 つ以上の ID を含めることができ、名前空間の優先度により、最も重要な名前空間がエクスペリエンスイベントに関連付けられます。
 * その結果、次の設定 **リアルタイム顧客プロファイルでは使用されなくなります**。
-   * Web SDK、Mobile SDK、Edge Network Server API を使用して identityMap で ID を送信する場合のプライマリ ID 設定（`primary=true`）（ID 名前空間と ID 値は、引き続きプロファイルで使用されます）。 **メモ**：データレイクストレージやAdobe Targetなど、リアルタイム顧客プロファイル以外のサービスでは、引き続きプライマリ ID 設定（`primary=true`）を使用します。
+   * Web SDK、モバイル SDK、Edge Network API を使用して identityMap で ID を送信する場合のプライマリ ID 設定（`primary=true`）（ID 名前空間と ID 値は、引き続きプロファイルで使用されます）。 **メモ**：データレイクストレージやAdobe Targetなど、リアルタイム顧客プロファイル以外のサービスでは、引き続きプライマリ ID 設定（`primary=true`）を使用します。
    * XDM エクスペリエンスイベントクラススキーマでプライマリ ID としてマークされたすべてのフィールド。
    * Adobe Analytics ソースコネクタのデフォルトのプライマリ ID 設定（ECID または AAID）。
 * 一方、**名前空間の優先度は、プロファイルレコードのプライマリ ID を決定しません**。

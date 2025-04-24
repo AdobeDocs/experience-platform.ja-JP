@@ -3,9 +3,9 @@ title: エッジパーソナライゼーションの宛先に対してオーデ�
 description: 同じページと次のページのパーソナライゼーションのユースケースに対して、Adobe Experience Platformからエッジパーソナライゼーションの宛先へのオーディエンスをアクティブ化する方法を説明します。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1964'
 ht-degree: 14%
 
 ---
@@ -150,9 +150,9 @@ Adobe TargetなどのAdobe パーソナライゼーションソリューショ�
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL カスタム Personalization]** の宛先では、属性ベースのパーソナライゼーション用に宛先を設定する際に ](../../server-api/overview.md)2}Edge Network Server API} を使用する必要があります。 [すべての Server API 呼び出しは、[ 認証済みコンテキスト ](../../server-api/authentication.md) で行う必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL カスタム Personalization]** 宛先では、属性ベースのパーソナライゼーション用に宛先を設定する際に ](https://developer.adobe.com/data-collection-apis/docs/)2}Edge Network API} を使用する必要があります。 [すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) で行う必要があります。
 >
-><br> 既に Web SDKまたは Mobile SDKを使用している場合は、サーバーサイド統合を追加することで、Server API を介して属性を取得できます。
+><br> 既に Web SDKまたはモバイル SDKを使用している場合は、サーバーサイド統合を追加することで、Edge Network API を介して属性を取得できます。
 >
 ><br> 上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
 

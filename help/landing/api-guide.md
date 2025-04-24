@@ -6,9 +6,9 @@ description: Adobe Experience Platformは、相互に密接にリンクした AP
 role: Developer
 feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1472'
 ht-degree: 21%
 
 ---
@@ -127,7 +127,7 @@ curl -X GET \
 | [[!DNL Data Access] API ガイド ](.././data-access/api.md) | [!DNL Data Access] API を使用すると、開発者はExperience Platformで取り込んだデータセットに関する情報を取得できます。 これには、データセットファイルへのアクセスとダウンロード、ヘッダー情報の取得、失敗したバッチと成功したバッチのリスト、プレビュー CSV/Parquet ファイルのダウンロードが含まれます。 |
 | [[!DNL Dataset Service] API ガイド ](.././data-governance/labels/dataset-api.md) | Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。 |
 | [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | [!DNL Data Hygiene] API を使用すると、Adobe Experience Platformに保存された顧客の個人データをプログラムで修正または削除したり、データセットの有効期限をスケジュール設定したりできます。 |
-| [[!DNL Edge Network Server] API ガイド ](../server-api/overview.md) | [!DNL Edge Network Server API] は、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースに使用できます。 [!DNL Server API] は、サーバー、[!DNL IoT] デバイス、セットトップボックス、その他の様々なデバイスで使用できます。 |
+| [[!DNL Edge Network] API ガイド ](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | [!DNL Edge Network API] は、様々なデータ収集、パーソナライゼーション、広告、マーケティングのユースケースに使用できます。 [!DNL Edge Network API] は、サーバー、[!DNL IoT] デバイス、セットトップボックス、その他の様々なデバイスで使用できます。 |
 | [[!DNL Identity Service] API ガイド ](.././identity-service/api/getting-started.md) | [!DNL Identity Service] API を使用すると、デベロッパーは、Adobe Experience Platformの ID グラフを使用して、クロスデバイス、クロスチャネル、ほぼリアルタイムでの顧客の ID を管理できます。 |
 | [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | [!DNL MTLS Service] API を使用すると、Adobeが発行した組織の公開証明書を安全に取得できます。 |
 | [[!DNL Observability Insights] API ガイド ](.././observability/api/overview.md) | [!DNL Observability Insights] は、デベロッパーがAdobe Experience Platformで主要な観察性指標を公開できるようにする RESTful API です。 これらの指標は、Experience Platformの使用状況の統計、Experience Platform サービスのヘルスチェック、様々なExperience Platform機能の過去の傾向とパフォーマンス指標に関するインサイトを提供します。 |

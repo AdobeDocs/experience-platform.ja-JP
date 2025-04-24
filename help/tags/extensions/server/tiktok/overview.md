@@ -1,9 +1,9 @@
 ---
-title: AdobeTikTok Web Events API 拡張機能の統合
+title: Adobe TikTok Web Events API 拡張機能の統合
 description: このAdobe Experience Platform Web Events API を使用すると、web サイトとのインタラクションをTikTokと直接共有できます。
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 4%
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # [!DNL TikTok] web イベント API 拡張機能の概要
 
-[!DNL TikTok] events API は、Web サイト上のユーザーアクションに関する情報を [!DNL TikTok] と直接共有できる、セキュアな [Edge Networkサーバー API](/help/server-api/overview.md) インターフェイスです。 イベント転送ルールを活用し、[!DNL TikTok] Web イベント API 拡張機能を使用して、[!DNL Adobe Experience Platform Edge Network] から [!DNL TikTok] にデータを送信できます。
+[!DNL TikTok] events API は、Web サイト上のユーザーアクションに関する情報を [!DNL TikTok] と直接共有できる、セキュアな [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) インターフェイスです。 イベント転送ルールを活用し、[!DNL TikTok] Web イベント API 拡張機能を使用して、[!DNL Adobe Experience Platform Edge Network] から [!DNL TikTok] にデータを送信できます。
 
 ## [!DNL TikTok] 前提条件 {#prerequisites}
 
@@ -52,7 +52,7 @@ ht-degree: 4%
 
 すべてのデータ要素を設定したら、イベントを [!DNL TikTok] に送信するタイミングと方法を決定するイベント転送ルールの作成を開始できます。
 
-イベント転送プロパティに新しい [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下に新しいアクションを追加し、拡張機能を **[!UICONTROL TikTok Web Events API 拡張機能]** に設定します。 Edge Networkイベントを [!DNL TikTok] に送信するには、**[!UICONTROL アクションタイプ]** を **[!UICONTROL Send TikTok Web Events API Event] に設定します。**
+イベント転送プロパティに新しい [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下に新しいアクションを追加し、拡張機能を **[!UICONTROL TikTok Web Events API 拡張機能]** に設定します。 Edge Network イベントを [!DNL TikTok] に送信するには、**[!UICONTROL アクションタイプ]** を **[!UICONTROL TikTok Web Events API イベントを送信 ] に設定します。**
 
 ![Send TikTok Web Events API Event[!UICONTROL  アクションタイプが ]Data Collection UI の [!DNL TikTok] ルール用に選択されている。](../../../images/extensions/server/tiktok/select-action.png)
 
@@ -82,7 +82,7 @@ Web イベントおよびパラメーターには、イベントに関する一�
 | ユーザーエージェント | ユーザーのデバイスからのハッシュ化されていないユーザーエージェント。 |
 | メール | コンバージョンイベントに関連付けられた連絡先のメールアドレス。 |
 | Phone | 電話番号は、ハッシュする前に E164 形式 [+][ 国コード ][ 市外局番 ][local phone number] である必要があります。 |
-| Cookie ID | Pixel SDK を使用している場合、Cookie が有効であれば、自動的に `_ttp` Cookie に一意の ID が保存されます。 `_ttp` の値を抽出して、このフィールドに使用できます。 |
+| Cookie ID | Pixel SDKを使用している場合、Cookie が有効であれば、`_ttp` Cookie に一意の ID が自動保存されます。 `_ttp` の値を抽出して、このフィールドに使用できます。 |
 | 外部 ID | ユーザー ID、外部 Cookie ID などの一意の ID は、SHA256 でハッシュ化する必要があります。 |
 | TikTok クリック ID | [!DNL TikTok] で広告が選択されるたびにランディングページの URL に追加される `ttclid`。 |
 | ページ URL | イベント発生時のページ URL。 |
@@ -116,9 +116,9 @@ Web イベントおよびパラメーターには、イベントに関する一�
 
 ## イベントの重複排除 {#deduplication}
 
-[!DNL TikTok] pixel SDK[!DNL TikTok] よび [!DNL TikTok] web イベント API 拡張機能の両方を使用して同じイベントを [!DNL TikTok] に送信する場合、ピクセルは重複排除用に設定する必要があります。
+[!DNL TikTok] pixel SDKと [!DNL TikTok] web events API 拡張機能の両方を使用して同じイベントを [!DNL TikTok] に送信する場合、[!DNL TikTok] ピクセルを重複排除用に設定する必要があります。
 
-重複せずにクライアントとサーバーから個別のイベントタイプが送信される場合は、重複排除は必要ありません。 レポートに悪影響が及ばないようにするには、[!DNL TikTok] pixel SDK と [!DNL TikTok] web イベント API 拡張機能で共有される単一のイベントについて、重複排除が行われるようにしてください。
+重複せずにクライアントとサーバーから個別のイベントタイプが送信される場合は、重複排除は必要ありません。 レポートに悪影響が及ばないようにするには、[!DNL TikTok] pixel SDKと [!DNL TikTok] web events API 拡張機能で共有される単一のイベントについて、重複排除が行われるようにしてください。
 
 共有イベントを送信する場合は、すべてのイベントにピクセル ID、イベント ID および名前が含まれていることを確認してください。 重複したイベントが 5 分以内に到着した場合は、結合されます。 データフィールドが最初のイベントにない場合は、後続のイベントと組み合わされます。 48 時間以内に受信した重複イベントは削除されます。
 

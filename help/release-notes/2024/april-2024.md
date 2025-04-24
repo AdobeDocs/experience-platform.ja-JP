@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2024年4月
 description: Adobe Experience Platform の 2024年4月のリリースノート。
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '1896'
 ht-degree: 25%
 
 ---
@@ -52,7 +52,7 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 | タイプ | 機能 | 説明 |
 | --- | --- | --- |
 | 拡張機能 | [!DNL Acxiom Anonymous Visitor Insights] Tags 拡張機能 | [!DNL Acxiom's Visitor Insights] を使用して、web サイトの訪問者の元の場所を特定します。 Acxiom では、地域 IP 検索テクノロジーを利用して、匿名ブラウザの場所を特定できます。 識別されると、組織データベース内の検索によって追加のインサイトが得られ、ブラウザーに送り返されます。 これにより、コンテンツ作成者は、これらのデータポイントに合わせてコンテンツを調整でき、見知らぬ人として出発した訪問者でも、よりパーソナライズされた魅力的なエクスペリエンスを訪問者に提供できます。 |
-| データストリーム | [Edge Network ボットの検出 ](../../datastreams/bot-detection.md) | 自動プログラム、Web スクレーパー、スパイダー、スクリプト化されたスキャナーなど、人間以外のエンティティから発生するトラフィックによって、人間の訪問者から発生するイベントの特定がより困難になる場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。 <br> ボット検出を使用すると、[Web SDK](../../web-sdk/home.md)、[ モバイルSDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Server API]](../../server-api/overview.md) で生成されたイベントを、既知のスパイダーやボットによって生成されたものとして識別できます。 データストリームのボット検出を設定することで、ボットイベントとして分類したい特定の IP アドレス、IP 範囲およびリクエストヘッダーを識別できます。 <br> ボットトラフィックの識別によって、サイトまたはモバイルアプリケーション上のユーザーアクティビティをより正確に測定できます。 |
+| データストリーム | [Edge Network ボットの検出 ](../../datastreams/bot-detection.md) | 自動プログラム、Web スクレーパー、スパイダー、スクリプト化されたスキャナーなど、人間以外のエンティティから発生するトラフィックによって、人間の訪問者から発生するイベントの特定がより困難になる場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。 <br> ボット検出を使用すると、[Web SDK](../../web-sdk/home.md)、[ モバイルSDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/) で生成されたイベントを、既知のスパイダーやボットによって生成されたものとして識別できます。 データストリームのボット検出を設定することで、ボットイベントとして分類したい特定の IP アドレス、IP 範囲およびリクエストヘッダーを識別できます。 <br> ボットトラフィックの識別によって、サイトまたはモバイルアプリケーション上のユーザーアクティビティをより正確に測定できます。 |
 | Mobile SDK | メジャーバージョンリリース | Mobile SDKの新しいメジャーバージョンがリリースされました。対象のプラットフォームは、iOS Mobile Core 5.x と互換性のあるiOS拡張機能、Android Mobile Core 3.x と互換性のあるAndroid拡張機能、React Native Core 6.x と互換性のあるReact Native拡張機能、Flutter Core 4.x と互換性のある Flutter 拡張機能です。 これらのリリースでは、Android SDK for Jetpack Compose のサポート、Adobe Journey Optimizer コードベースのエクスペリエンスのサポート、Flutter 向けAdobe Journey Optimizer Messaging 拡張機能の一般提供など、いくつかの新機能と機能強化が提供されています。 リリースノートについて詳しくは、[Mobile SDK リリースノート ](https://developer.adobe.com/client-sdks/home/release-notes/) を参照してください。 |
 | Mobile SDK | プライバシー | Appleのポリシーが更新されたので、2024 年 5 月 1 日（PT）以降、開発者はApp Storeに送信するために新しいプライバシー機能を実装する必要があります。 Mobile SDKを使用するすべてのAdobe ユーザーは、5 月 1 日以降にApp Storeの承認を受けることを希望する場合は、SDKのバージョン 5.x にアップグレードする必要があります。 |
 | Roku SDK | Roku SDK | Roku SDKの最初のメジャーバージョンがリリースされ、Experience Platform Edge Networkのストリーミングメディアがサポートされるようになりました。 |
@@ -75,7 +75,7 @@ Adobe Experience Platformは、クライアントサイドのカスタマーエ�
 | ----------- | ----------- |
 | Destination SDK`isRequired` ネストされた顧客データフィールドでパラメーターを使用できるようになりました | Destination SDKで宛先を設定する際に、[ ネストされた顧客データフィールドを必要に応じて設定 ](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields) できるようになりました。 これにより、宛先を設定するユーザーは、そのフィールドの値を選択するまでアクティベーションフローを続行できません。 |
 | Edgeのセグメント化は、web SDKでAdobe Targetの宛先を設定する場合に必須の要件ではなくなりました | 以前は、Web SDKを使用して [Adobe Targetの宛先を設定する場合 ](/help/destinations/catalog/personalization/adobe-target-connection.md) パーソナライゼーションとエッジのセグメント化のためにデータストリームを有効にする必要がありました。 データストリームでエッジのセグメント化を有効にする必要がありました [ 現在は削除されました ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)。 この統合パターンを使用すると、Real-Time CDPでAdobe Targetを使用する際に、パーソナライゼーションのユースケースのサブセットのメリットを得ることができます。 詳しくは、[ 統合タイプで有効になるユースケース ](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases) を参照してください。 |
-| [!BADGE Beta]{type=Informative} アクティブ化フローから複数のオーディエンスとデータセットを削除 | 宛先アクティブ化フローから複数のオーディエンスとデータセットを選択して削除できるようになりました。 詳しくは、[ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-remove) および [ データセットの書き出し ](../../destinations/ui/export-datasets.md) ドキュメントを参照してください。 |
+| [!BADGE Beta]{type=Informative} アクティブ化フローから複数のオーディエンスとデータセットを削除します | 宛先アクティブ化フローから複数のオーディエンスとデータセットを選択して削除できるようになりました。 詳しくは、[ 宛先の詳細 ](../../destinations/ui/destination-details-page.md#bulk-remove) および [ データセットの書き出し ](../../destinations/ui/export-datasets.md) ドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 

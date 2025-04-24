@@ -3,9 +3,9 @@ title: Real-Time CDP ガードレール
 description: Real-Time CDPの様々なサービスおよび領域にまたがるデータガードレールについて説明します。
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 7%
 ここから始めて、以下のリンクに従って、Real-Time CDPの様々なサービスやエリアにわたるすべてのガードレールを理解します。
 
 * [データ取り込みのガードレール](/help/ingestion/guardrails.md)
-* [ [!DNL Edge Network Server API] のガードレール](/help/server-api/guardrails.md)
+* [ のガードレール  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)
 * [データおよびセグメ  [!DNL Real-Time Customer Profile]  ト化のガードレール](/help/profile/guardrails.md)
 * [データ用のガ  [!DNL Identity Service]  ドレール](/help/identity-service/guardrails.md)
 * [ [!DNL Query Service] のガードレール](/help/query-service/guardrails.md)
@@ -30,7 +30,7 @@ ht-degree: 7%
 
 >[!TIP]
 >
->さらに、様々なExperience Platformサービスの [ エンドツーエンドの待ち時間図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) など [ 詳細については、](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) デジタルエクスペリエンスブループリント」を参照してください。
+>さらに、様々なExperience Platform サービスの [ エンドツーエンドの待ち時間図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) など [ 詳細については、](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) デジタルエクスペリエンスブループリント」を参照してください。
 
 ## ガードレール タイプ {#guardrail-types}
 
@@ -47,14 +47,14 @@ ht-degree: 7%
 
 さらに、購入したReal-Time CDPのエディションと階層に応じたライセンスと使用権限については、以下の製品説明のリンクを参照してください。
 
-* [ すべてのAdobe製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html)
-* [Real-time Customer Data Platform（B2C Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2P Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform（B2B Edition - Prime および Ultimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ すべてのAdobe製品の説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html)
+* [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
-## その他のExperience Platformアプリケーション用のガードレール  {#guardrails-other-aep-apps}
+## その他のExperience Platform アプリケーション用のガードレール  {#guardrails-other-aep-apps}
 
-他のExperience Platformアプリケーションにも同様のガードレールがあります。 詳しくは、以下のリンクを参照してください。
+他のExperience Platform アプリケーションにも同様のガードレールがあります。 詳しくは、以下のリンクを参照してください。
 
 * [Adobe Journey Optimizerガードレール ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
 * [Customer Journey Analyticsガードレール ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)

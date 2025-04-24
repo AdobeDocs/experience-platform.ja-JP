@@ -1,13 +1,13 @@
 ---
 title: FPID による訪問者の識別
-description: FPID を使用することにより、サーバー API を通じて一貫性を持って訪問者を識別する方法を説明します
-seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
+description: FPID を使用することにより、Edge Network API を通じて一貫性を持って訪問者を識別する方法を説明します
+seo-description: Learn how to consistently identify visitors via the Edge Network API, by using the FPID
 keywords: エッジネットワーク;ゲートウェイ;API;訪問者;識別;FPID
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '348'
-ht-degree: 100%
+source-wordcount: '349'
+ht-degree: 95%
 
 ---
 

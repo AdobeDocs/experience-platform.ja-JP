@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web Software Development Kit （SDK）の概要
 description: Adobe Experience Platform Web SDKを使用して、Experience Platform機能を web サイトに統合する方法を説明します。
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '602'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ Experience Platform Web SDKは、Adobe Experience Platform Edge Networkの一部
 
 * **[Experience Platform Web SDK](#overview)**: Adobe テクノロジーのデプロイメントをシンプル化するためのJavaScript ライブラリおよびタグ拡張機能です。
 * **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)**：新しいデプロイメント手法のための v5 モバイルSDKの拡張機能。
-* **[Edge Network API](../server-api/overview.md)**: データ収集、パーソナライゼーション、広告およびマーケティングのユースケース用のサーバーサイド API。 サーバー、IoT デバイス、セットトップボックス、その他のデバイスで使用できます。
+* **[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)**: データ収集、パーソナライゼーション、広告およびマーケティングのユースケース用のサーバーサイド API。 サーバー、IoT デバイス、セットトップボックス、その他のデバイスで使用できます。
 
 Edge Networkは、すべてのアドレス可能なチャネルにわたって、低遅延のデータ収集、プラグ可能なコンピューティング、迅速なデータアクティブ化を提供します。 Web、モバイルおよびサーバーサイドチャネル用の統合SDKを 1 つ提供し、データを共通のAdobe ドメイン（`adobedc.net`）に送信して、データとエクスペリエンスの配信に使用する 1 つのペイロードを受け取ります。
 

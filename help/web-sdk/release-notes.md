@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '2288'
 ht-degree: 64%
@@ -199,7 +199,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 - [ページごとの完全移行](home.md#migrating-to-web-sdk)のサポートを追加しました。訪問者が at.js ページと Web SDK ページの間を移動しても、Adobe Target プロファイルが保持されるようになりました。
 - [高エントロピーの User-Agent クライアントヒント](/help/web-sdk/use-cases/client-hints.md)の設定可能なサポートを追加しました。
-- [`applyResponse`](/help/web-sdk/commands/applyresponse.md) コマンドのサポートを追加。 これにより、[Edge Network Server API](../server-api/overview.md) を使用してハイブリッドパーソナライゼーションが可能になります。
+- [`applyResponse`](/help/web-sdk/commands/applyresponse.md) コマンドのサポートを追加。 これにより、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) を介してハイブリッドパーソナライゼーションが可能になります。
 - QA モードのリンクが複数のページで機能するようになりました。
 
 **修正点および改善点**

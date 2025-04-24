@@ -3,7 +3,7 @@ title: Snapchat Conversions API 拡張機能の概要
 description: Snapchat 変換を使用して、サーバーサイドのイベントデータを Snap に送信します。
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 4%
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # [!DNL Snapchat] Conversions API 拡張機能の概要
 
-[!DNL Snap] Conversion API Extension は、安全な [Edge Network Server API](/help/server-api/overview.md) インターフェイスで、Web サイト上のユーザーアクションに関する情報を [!DNL Snapchat] と直接共有できます。 イベント転送ルールを活用し、**[!DNL Snap]** Conversion API 拡張機能を使用して、**[!DNL Adobe Experience Platform Edge Network]** から **[!DNL Snapchat]** にデータを送信できます。
+[!DNL Snap] Conversion API Extension は、安全な [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) インターフェイスで、Web サイト上のユーザーアクションに関する情報を [!DNL Snapchat] と直接共有できます。 イベント転送ルールを活用し、**[!DNL Snap]** Conversion API 拡張機能を使用して、**[!DNL Adobe Experience Platform Edge Network]** から **[!DNL Snapchat]** にデータを送信できます。
 
 ## [!DNL Snapchat] 前提条件 {#prerequisites}
 

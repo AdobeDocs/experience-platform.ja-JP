@@ -1,22 +1,22 @@
 ---
-title: Edge Network Server API を使用したサーバーサイドパーソナライゼーション
-description: この記事では、Edge Network Server API を使用して、web プロパティにサーバーサイドパーソナライゼーションをデプロイする方法について説明します。
+title: Edge Network API を使用したサーバーサイドパーソナライゼーション
+description: この記事では、Edge Network API を使用して、web プロパティにサーバーサイドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション; server api; edge network; サーバーサイド;
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 100%
+source-wordcount: '559'
+ht-degree: 82%
 
 ---
 
 
-# Edge Network Server API を使用したサーバーサイドパーソナライゼーション
+# Edge Network API を使用したサーバーサイドパーソナライゼーション
 
 ## 概要 {#overview}
 
-サーバーサイドパーソナライゼーションでは、[Edge Network Server API](../../server-api/overview.md) を使用して、web プロパティでの顧客体験をパーソナライズします。
+サーバーサイドパーソナライゼーションでは、[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) を使用して、web プロパティでのカスタマーエクスペリエンスをパーソナライズします。
 
-この記事で説明する例では、Server API を使用して、サーバーサイドでパーソナライゼーションコンテンツを取得します。次に、取得したパーソナライゼーションコンテンツに基づいて、HTML がサーバーサイドでレンダリングされます。
+この記事で説明する例では、Edge Network API を使用して、サーバーサイドでパーソナライゼーションコンテンツを取得します。 次に、取得したパーソナライゼーションコンテンツに基づいて、HTML がサーバーサイドでレンダリングされます。
 
 次の表に、パーソナライズされたコンテンツと、パーソナライズされていないコンテンツの例を示します。
 
@@ -37,12 +37,12 @@ Cookie は、ユーザー ID とクラスター情報を保持するために使
 
 ### リクエストの配置 {#request-placement}
 
-提案を取得し、表示通知を送信するには、パーソナライゼーションリクエストが必要です。サーバーサイド実装を使用する場合、アプリケーションサーバーは、Edge Network Server API に対してこれらのリクエストを行います。
+提案を取得し、表示通知を送信するには、パーソナライゼーションリクエストが必要です。サーバーサイド実装を使用する場合、アプリケーションサーバーはこれらのリクエストをEdge Network API に対して行います。
 
 | リクエスト | 作成者 |
 |---|---|
-| 提案を取得するためのインタラクションリクエスト | Edge Network Server API を呼び出すアプリケーションサーバー。 |
-| 表示通知を送信するためのインタラクションリクエスト | Edge Network Server API を呼び出すアプリケーションサーバー。 |
+| 提案を取得するためのインタラクションリクエスト | Edge Network API を呼び出すアプリケーションサーバー。 |
+| 表示通知を送信するためのインタラクションリクエスト | Edge Network API を呼び出すアプリケーションサーバー。 |
 
 ## サンプルアプリケーション {#sample-app}
 
@@ -68,7 +68,7 @@ Cookie は、ユーザー ID とクラスター情報を保持するために使
 
 1. [Express](https://expressjs.com/) は、リーン方式のサーバーサイド実装に使用されます。これは、基本的なサーバーリクエストとルーティングを処理します。
 2. ブラウザーは web ページをリクエストします。ブラウザーによって以前に保存された、先頭に `kndctr_` が付いているすべての Cookie が含まれます。
-3. アプリサーバーからページがリクエストされると、[インタラクティブデータ収集エンドポイント](../../../server-api/interactive-data-collection.md)にイベントが送信され、パーソナライゼーションコンテンツが取得されます。サンプルアプリでは、ヘルパーメソッドを使用して、API へのリクエストの作成と送信を簡素化します（[aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js) を参照）。この `POST` リクエストには `event` と `query` が含まれています。前のステップで作成した Cookie がある場合は、`meta>state>entries` 配列に含まれています。
+3. アプリサーバーからページがリクエストされると、[インタラクティブデータ収集エンドポイント](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)にイベントが送信され、パーソナライゼーションコンテンツが取得されます。サンプルアプリでは、ヘルパーメソッドを使用して、API へのリクエストの作成と送信を簡素化します（[aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js) を参照）。この `POST` リクエストには `event` と `query` が含まれています。前のステップで作成した Cookie がある場合は、`meta>state>entries` 配列に含まれています。
 
    ```js
    fetch(

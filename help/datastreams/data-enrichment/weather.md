@@ -2,9 +2,9 @@
 title: DNL The Weather Channel からの気象データによるデータ収集の強化
 description: DNL The Weather Channel の天気データを使用して、データストリームで収集したデータを強化します。
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 68%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 68%
 気象データを使用する前に、次の前提条件を満たしていることを確認してください。
 
 * [!DNL The Weather Channel] から使用する気象データのライセンスを取得する必要があります。 その後、アカウントで有効にします。
-* 気象データは、データストリームを通じてのみ使用できます。気象データを使用するには、[!DNL Web SDK]、[!DNL Mobile Edge Extension] または [Server API](../../server-api/overview.md) を使用してこのデータを含める必要があります。
+* 気象データは、データストリームを通じてのみ使用できます。天気データを使用するには、[!DNL Web SDK]、[!DNL Mobile Edge Extension] または [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) を使用してこのデータを含める必要があります。
 * データストリームは、[[!UICONTROL 位置情報]](../configure.md#advanced-options)を有効にしておく必要があります。
 * 使用しているスキーマに [ 天気フィールドグループ ](#schema-configuration) を追加します。
 
@@ -66,7 +66,7 @@ ht-degree: 68%
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-天気データは、[Real-time Customer Data Platform](../../rtcdp/overview.md) でオーディエンス用に使用できます。 気象データはイベントに関連付けられます。
+天気データは、[Real-Time Customer Data Platform](../../rtcdp/overview.md) でオーディエンス用に使用できます。 気象データはイベントに関連付けられます。
 
 ![気象イベントを表示するセグメントビルダー](../assets/data-enrichment/weather/schema-builder.png)
 

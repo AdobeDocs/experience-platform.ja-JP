@@ -2,9 +2,9 @@
 title: データストリームのボット検出の設定
 description: 人間トラフィックと非人間トラフィックを区別するために、データストリームのボット検出を設定する方法を説明します。
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 自動プログラム、Web スクレーパー、スパイダー、スクリプト化されたスキャナーからの人間以外のトラフィックによって、訪問者からイベントを特定するのが難しくなる場合があります。 このタイプのトラフィックは、重要なビジネス指標に悪影響を与え、誤ったトラフィックレポートにつながる可能性があります。
 
-ボット検出を使用すると、[Web SDK](../web-sdk/home.md)、[Mobile SDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Server API]](../server-api/overview.md) で生成されたイベントを、既知のスパイダーやボットによって生成されたものとして識別できます。
+ボット検出を使用すると、[Web SDK](../web-sdk/home.md)、[ モバイルSDK](https://developer.adobe.com/client-sdks/home/) および [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) で生成されたイベントを、既知のスパイダーやボットによって生成されたものとして識別できます。
 
 データストリームのボット検出を設定することで、特定の IP アドレス、IP 範囲およびリクエストヘッダーを識別して、ボットイベントとして分類できます。 これにより、サイトまたはモバイルアプリケーションでのユーザーアクティビティをより正確に測定できます。
 
-Edge Networkへのリクエストが任意のボット検出ルールに一致すると、以下に示すように、XDM スキーマがボットスコアで更新されます（常に 1 に設定されます）。
+Edge Networkへのリクエストが任意のボット検出ルールに一致すると、次に示すように、XDM スキーマがボットスコアで更新されます（常に 1 に設定されます）。
 
 ```json
 {
@@ -33,7 +33,7 @@ Edge Networkへのリクエストが任意のボット検出ルールに一致�
 >
 >ボット検出は、ボットリクエストをドロップしません。 ボットスコアリングを使用した XDM スキーマのみを更新し、設定した [datastream サービス ](configure.md) イベントを転送します。
 >
->Adobeソリューションは、様々な方法でボットスコアリングを処理できます。 例えば、Adobe Analyticsは、独自の [ ボットフィルタリングサービス ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) を使用し、Edge Networkによって設定されたスコアを使用しません。 2 つのサービスは同じ [IAB ボットリスト ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) を使用しているので、ボットスコアリングは同じです。
+>Adobe ソリューションは、様々な方法でボットスコアリングを処理できます。 例えば、Adobe Analyticsは独自の [ ボットフィルタリングサービス ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) を使用し、Edge Networkによって設定されたスコアを使用しません。 2 つのサービスは同じ [IAB ボットリスト ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) を使用しているので、ボットスコアリングは同じです。
 
 ボット検出ルールは、作成後、Edge Network全体に反映されるまでに最大 15 分かかる場合があります。
 
@@ -90,9 +90,9 @@ IAB/ABC International Spiders and Bot List を使用するようにデータス�
 | `sec-ch-ua-mobile` | ブラウザーがモバイルデバイス上にあるかどうかを示します。 また、デスクトップブラウザーでモバイルユーザーエクスペリエンスの環境設定を示すためにも使用できます。 |
 | `sec-ch-ua-platform` | ユーザーエージェントが実行されているプラットフォームまたはオペレーティングシステムを提供します。 例：「Windows」または「Android」。 |
 | `sec-ch-ua-platform-version` | ユーザーエージェントが実行されているオペレーティングシステムのバージョンを提供します。 |
-| `sec-ch-ua-arch` | ユーザーエージェントの基盤となる CPU アーキテクチャ （ARM、x86 など）を提供します。 |
+| `sec-ch-ua-arch` | ARM や x86 など、user-agent の基盤となるCPU アーキテクチャを提供します。 |
 | `sec-ch-ua-model` | ブラウザーが実行されているデバイスモデルを示します。 |
-| `sec-ch-ua-bitness` | user-agent の基盤となる CPU アーキテクチャの「ビット数」を提供します。 これは、整数またはメモリアドレスのビット単位のサイズで、通常は 64 ビットまたは 32 ビットです。 |
+| `sec-ch-ua-bitness` | user-agent の基盤となるCPU アーキテクチャの「ビット数」を提供します。 これは、整数またはメモリアドレスのビット単位のサイズで、通常は 64 ビットまたは 32 ビットです。 |
 | `sec-ch-ua-wow64` | ユーザーエージェント バイナリが 64 ビット Windows 上の 32 ビット モードで実行されているかどうかを示します。 |
 
 ボット検出ルールを作成するには、次の手順に従います。

@@ -3,9 +3,9 @@ title: イベント転送の概要
 description: Adobe Experience Platform でのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '892'
 ht-degree: 78%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform でイベント転送を使用するには、次の 3 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform モバイル SDK](https://sdkdocs.com)
-* [Edge Network Server API](/help/server-api/overview.md)
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDKおよびExperience Platform Mobile SDKは、Adobe Experience Platformのタグを使用したデプロイメントは必要ありません。 ただし、タグを使用してこれらの SDK をデプロイする方法は、推奨されるアプローチです。
@@ -35,7 +35,7 @@ Edge ネットワークにデータを送信した後、Adobeソリューショ�
 
 * Adobe Real-Time CDP Connections、Prime、Ultimateのいずれか（価格については、Adobe アカウントチームにお問い合わせください）
 * Adobe Experience Platform でのイベント転送
-* Edge Networkにデータを送信するように設定されたAdobe Experience Platform Web SDK、Mobile SDKまたはEdge Network Server API
+* Edge Networkにデータを送信するように設定されたAdobe Experience Platform Web SDK、Mobile SDKまたはEdge Network API
 * エクスペリエンスデータモデル（XDM）へのデータのマッピング（このマッピングはタグを使用しておこなうことができます）
 
 ## XDM スキーマの作成
