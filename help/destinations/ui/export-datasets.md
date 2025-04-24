@@ -3,10 +3,10 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '2703'
-ht-degree: 35%
+source-wordcount: '2732'
+ht-degree: 34%
 
 ---
 
@@ -104,7 +104,10 @@ Experience Platform カタログ内の一部のファイルベース宛先では
 
 ## 前提条件 {#prerequisites}
 
-データセットをクラウドストレージ宛先に書き出すには、正常に[宛先に接続されている](./connect-destination.md)必要があります。まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
+データセットを書き出すには、次の前提条件に注意してください。
+
+* データセットをクラウドストレージ宛先に書き出すには、正常に[宛先に接続されている](./connect-destination.md)必要があります。まだ接続していない場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照し、使用する宛先を設定します。
+* リアルタイム顧客プロファイルで使用するには、プロファイルデータセットを有効にする必要があります。 このオプションを有効にする方法については、[ 詳細情報 ](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) を参照してください。
 
 ### 必要な権限 {#permissions}
 

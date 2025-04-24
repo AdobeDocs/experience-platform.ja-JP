@@ -5,7 +5,7 @@ title: Experience Platformへのデータの取り込み
 type: Tutorial
 description: Adobe Experience Platformでは、データを Parquet ファイルまたは既知の Experience Data Model （XDM）スキーマに準拠するデータの形式で、バッチファイルとして簡単にインポートできます。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 51%
@@ -78,7 +78,7 @@ Adobe Experience Platformでは、データをバッチファイルとして [!D
 
 ![データセットアクティビティ](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## [!DNL Real-Time Customer Profile] のデータセットを有効にする
+## [!DNL Real-Time Customer Profile] のデータセットを有効にする {#enable-for-profile}
 
 データセットは、データを [!DNL Experience Platform] に取り込むために使用され、そのデータは、最終的に個人を識別し、複数のソースからの情報を結び付けるために使用されます。 結び付けられた情報は [!DNL Real-Time Customer Profile] と呼ばれます。 [!DNL Real-Time Profile] ージに含める必要がある情報を [!DNL Experience Platform] ーザーが把握できるように、**[!UICONTROL プロファイル]** 切り替えスイッチを使用して、データセットを含めるようにマークできます。
 
