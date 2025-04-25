@@ -1,15 +1,16 @@
 ---
-title: 未認証の訪問者のオフサイトリターゲティング
+title: 認証されていないサーバーサイドリターゲティング
 description: ECID を使用して、認証されていないユーザーをリターゲットする方法を説明します
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# 未認証のリターゲティング {#unauthenticated-retargeting}
+# 認証されていないサーバーサイドリターゲティング {#unauthenticated-retargeting}
 
 サードパーティ cookie の有効性が低下するにつれて、企業はパーソナライズされたエンゲージメントとリターゲティングのために、cookie のないソリューションに移行しつつあります。 オフサイトリターゲティングを使用すると、クライアントサイドのJavaScriptに依存することなく、以前のインタラクションに基づいて高インテントのユーザーにリーチできます。
 

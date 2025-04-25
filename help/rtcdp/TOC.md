@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスを作成し、それらのオーディエンスをサードパーティの宛先に活用します。
 role: Admin
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 60%
+source-wordcount: '305'
+ht-degree: 61%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 60%
       * [ サードパーティ cookie に依存せずに新規顧客を獲得および獲得 ](/help/rtcdp/partner-data/prospecting.md)
       * [パートナー支援の訪問者認識を使用して、不明な訪問者に対するオンサイトエクスペリエンスをパーソナライズする](/help/rtcdp/partner-data/onsite-personalization.md)
       * [認証されていないユーザーのオフサイトリターゲティング](./partner-data/offsite-retargeting.md)
-      * [認証されていないユーザーのオフサイトリターゲティング](./partner-data/unauthenticated-retargeting.md)
+      * [認証されていないサーバーサイドリターゲティング](./partner-data/unauthenticated-retargeting.md)
    * プロファイルエンリッチメント {#profile-enrichment}
       * [パートナー提供の属性を使用してファーストパーティプロファイルを補完](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * パーソナライズされたインサイトとエンゲージメント {#personalization-insights-engagement}
