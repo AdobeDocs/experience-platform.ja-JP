@@ -2,9 +2,9 @@
 title: Flow Service API を使用したSourceの行レベルのデータのフィルタリング
 description: このチュートリアルでは、Flow Service API を使用してソースレベルでデータをフィルタリングする手順を説明します
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
+source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1823'
 ht-degree: 15%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 15%
 >
 >行レベルのデータのフィルタリングのサポートは、現在、次のソースでのみ使用できます。
 >
->* [[Amazon Redshift]](../../connectors/databases/redshift.md)
+>* [[!DNL Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
 >* [[!DNL Marketo Engage]  標準アクティビティ ](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
