@@ -3,10 +3,10 @@ title: バッチプロファイルの書き出し宛先に対してオーディ�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをバッチプロファイルベースの宛先に送信してアクティブ化する方法を説明します。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4517'
-ht-degree: 49%
+source-wordcount: '4596'
+ht-degree: 48%
 
 ---
 
@@ -125,7 +125,7 @@ Experience Platformでは、各ファイル書き出しのデフォルトのス�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="オーディエンス評価後にアクティベート"
->abstract="アクティベーションは、毎日のセグメント化ジョブが完了した直後に実行されます。 これにより、最新のプロファイルが確実に書き出されます。"
+>abstract="<p>アクティベーションは、毎日のセグメント化ジョブが完了した直後に実行されます。 これにより、最新のプロファイルが確実に書き出されます。</p><p>オーディエンスの評価後にプロファイルを書き出すオプションは、毎週および毎月の書き出し頻度では <i> 使用できません </i>。</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Experience Platformでは、各ファイル書き出しのデフォルトのス�
 
    * **[!UICONTROL 1 回]**：オンデマンドによる 1 回限りの完全ファイルの書き出しをスケジュールします。
    * **[!UICONTROL 毎日]**：指定した時刻に、毎日 1 回、完全ファイルの書き出しをスケジュールします。
+   * **[!UICONTROL 毎週]**：開始日を選択すると、選択した終了日まで、その週の当日に後続のエクスポートが実行されます。
+   * **[!UICONTROL 毎月]**：開始日を選択すると、その月の開始日から選択した終了日まで、以降のエクスポートが発生します。 月の日数が 30 日または 31 日に満たない場合、月の最終日にエクスポートが行われます。
 
 2. **[!UICONTROL 時間]** 切り替えスイッチを使用して、書き出しをオーディエンス評価直後に実行するか、指定した時間にスケジュールに沿って実行するかを選択します。 「**[!UICONTROL スケジュール済み]**」オプションを選択すると、セレクターを使用して書き出しを実行する時刻を [!DNL UTC] 形式で選択できます。
 
@@ -187,6 +189,7 @@ Experience Platformでは、各ファイル書き出しのデフォルトのス�
 
    * **[!UICONTROL 毎日]**：増分ファイルのエクスポートを、毎日 1 回指定した時刻にスケジュールします。
    * **[!UICONTROL 毎時]**：増分ファイルのエクスポートを、3 時間、6 時間、8 時間、または 12 時間ごとにスケジュールします。
+
 
 2. **[!UICONTROL 時間]**&#x200B;セレクターを使用して、ファイルが書き出される時刻を [!DNL UTC] 形式で指定します。
 
