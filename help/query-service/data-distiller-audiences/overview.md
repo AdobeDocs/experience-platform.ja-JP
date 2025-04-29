@@ -2,10 +2,10 @@
 title: SQL を使用したオーディエンスの構築
 description: Adobe Experience Platformの Data Distillerで SQL オーディエンス拡張機能を使用して、SQL コマンドを使用してオーディエンスを作成、管理および公開する方法を説明します。 このガイドでは、プロファイルの作成、更新、削除、ファイルベースの宛先をターゲットにするためのデータ駆動型オーディエンス定義の使用など、オーディエンスのライフサイクルのすべての側面について説明します。
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 1%
+source-wordcount: '1833'
+ht-degree: 3%
 
 ---
 
@@ -100,6 +100,97 @@ SELECT select_query
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### オーディエンスデータを置換（上書きを挿入） {#replace-audience}
+
+`INSERT OVERWRITE INTO` コマンドを使用して、オーディエンス内の既存のプロファイルをすべて新しい SQL クエリの結果に置き換えます。 このコマンドは、オーディエンスのコンテンツを 1 つの手順で完全に更新できるので、動的オーディエンスセグメントを管理するのに役立ちます。
+
+>[!AVAILABILITY]
+>
+>`INSERT OVERWRITE INTO` コマンドは、Data Distillerのお客様のみが使用できます。 Data Distiller アドオンについて詳しくは、Adobe担当者にお問い合わせください。
+
+現在のオーディエンスに追加される [`INSERT INTO`](#add-profiles-to-audience) とは異なり、`INSERT OVERWRITE INTO` は既存のオーディエンスメンバーをすべて削除し、クエリから返されたメンバーのみを挿入します。 これにより、頻繁な更新や完全な更新が必要なオーディエンスを管理する際の、制御と柔軟性が向上します。
+
+次の構文テンプレートを使用して、新しいプロファイルセットでオーディエンスを上書きします。
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**パラメーター**
+
+次の表に、`INSERT OVERWRITE INTO` のコマンドに必要なパラメーターを示します。
+
+| パラメーター | 説明 |
+|-----------|-------------|
+| `audience_name` | `CREATE AUDIENCE` コマンドを使用して作成されたオーディエンスの名前。 |
+| `select_query` | オーディエンスに含めるプロファイルを定義する `SELECT` ステートメント。 |
+
+**例：**
+
+この例では、`audience_monthly_refresh` オーディエンスがクエリの結果で完全に上書きされます。 クエリによって返されないプロファイルは、オーディエンスから削除されます。
+
+>[!NOTE]
+>
+>上書き操作が正しく機能するには、オーディエンスに関連付けられたバッチアップロードが 1 つだけ必要です。
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### リアルタイム顧客プロファイルでのオーディエンス上書き動作
+
+オーディエンスを上書きすると、リアルタイム顧客プロファイルは次のロジックを適用してプロファイルメンバーシップを更新します。
+
+- 新しいバッチにのみ表示されるプロファイルは、入力済みとしてマークされます。
+- 以前のバッチにのみ存在していたプロファイルは、離脱済みとしてマークされます。
+- 両方のバッチに存在するプロファイルは変更されません（操作は実行されません）。
+
+これにより、オーディエンスの更新がダウンストリームのシステムやワークフローに正確に反映されます。
+
+**サンプルシナリオ**
+
+オーディエンス `A1` に最初に含まれる内容が次の場合：
+
+| ID | 名前 |
+|----|------|
+| A | ジャック |
+| B | John |
+| C | マーサ |
+
+上書きクエリで次の値が返されます。
+
+| ID | 名前 |
+|----|------|
+| A | スチュワート |
+| C | マーサ |
+
+更新されたオーディエンスには、次のものが含まれます。
+
+| ID | 名前 |
+|----|------|
+| A | スチュワート |
+| C | マーサ |
+
+プロファイル B は削除され、プロファイル A は更新され、プロファイル C は変更されません。
+
+上書きクエリに新しいプロファイルが含まれる場合：
+
+| ID | 名前 |
+|----|------|
+| A | スチュワート |
+| C | マーサ |
+| D | クリス |
+
+その後、最終的なオーディエンスは次のようになります。
+
+| ID | 名前 |
+|----|------|
+| A | スチュワート |
+| C | マーサ |
+| D | クリス |
 
 ### RFM モデルオーディエンスの例 {#rfm-model-audience-example}
 
