@@ -2,9 +2,9 @@
 title: Schema Registry API での XDM フィールドの定義
 description: Schema Registry API でカスタム Experience Data Model （XDM）リソースを作成する際に様々なフィールドを定義する方法を説明します。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1197'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 2%
 オプションで、次の追加のプロパティを使用して、文字列に入力できる値の種類を制限できます。
 
 * `pattern`：制約の基準となる正規表現パターン。
-* `minLength`：文字列の最小の長さ。
+* `minLength`：文字列の最小の長さ。 文字列は、デフォルトで最小値 `1` を受け取ります。
 * `maxLength`：文字列の最大長。
 
 ```json
