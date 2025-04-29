@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文の詳細と説明を説明します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
+source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
 workflow-type: tm+mt
-source-wordcount: '4265'
-ht-degree: 5%
+source-wordcount: '4623'
+ht-degree: 4%
 
 ---
 
@@ -192,32 +192,141 @@ SELECT statement 2
 
 ### CREATE TABLE AS SELECT {#create-table-as-select}
 
-次の構文は、`CREATE TABLE AS SELECT` （CTAS）クエリを定義します。
+`CREATE TABLE AS SELECT` （CTAS）コマンドを使用して、`SELECT` クエリの結果を新しいテーブルに生成します。 これは、変換後のデータセットを作成したり、集計を実行したり、機能がエンジニアリングされたデータをモデルで使用する前にプレビューしたりする場合に便利です。
+
+変換後の機能を使用してモデルのトレーニングを行う準備が整ったら、[Models のドキュメント ](../advanced-statistics/models.md) を参照して、`TRANSFORM` 句で `CREATE MODEL` を使用する方法を確認してください。
+
+オプションで、`TRANSFORM` 句を含めて、CTAS 文内に 1 つ以上の機能エンジニアリング関数を直接適用することもできます。 `TRANSFORM` を使用して、モデルのトレーニング前に変換ロジックの結果を調べます。
+
+この構文は、永続テーブルと一時テーブルの両方に適用されます。
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
+CREATE TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
+```
+
+```sql
+CREATE TEMP TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
 ```
 
 | パラメーター | 説明 |
 | ----- | ----- |
-| `schema` | XDM スキーマのタイトル。 この句は、CTAS クエリで作成された新しいデータセットに既存の XDM スキーマを使用する場合にのみ使用します。 |
-| `rowvalidation` | （オプション）新しく作成されたデータセットに取り込まれるすべての新しいバッチの行レベル検証が必要かどうかを指定します。 デフォルト値は `true` です。 |
-| `label` | CTAS クエリを使用してデータセットを作成する場合、このラベルを値 `profile` と共に使用して、プロファイルに対して有効であるとしてデータセットにラベルを付けます。 つまり、データセットは、作成時に自動的にプロファイル用にマークされます。 `label` の使用について詳しくは、派生属性拡張ドキュメントを参照してください。 |
-| `select_query` | `SELECT` 文。 `SELECT` クエリの構文は、[SELECT クエリ セクション ](#select-queries) にあります。 |
-
-**例**
-
-```sql
-CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
-```
+| `schema` | XDM スキーマのタイトル。 この句は、新しいテーブルを既存の XDM スキーマに関連付ける場合にのみ使用します。 |
+| `rowvalidation` | （任意）データセットに取り込まれた各バッチに対して、行レベルの検証を有効にします。 デフォルトは true です。 |
+| `label` | （オプション）値 `PROFILE` を使用して、プロファイル取り込みが有効としてデータセットにラベルを付けます。 |
+| `transform` | （任意）データセットを実現する前に、機能エンジニアリング変換（文字列インデックス、ワンホットエンコーディング、TF-IDF など）を適用します。 この句は、変換されたフィーチャのプレビューに使用されます。 詳しくは ](#transform)[`TRANSFORM` 句のドキュメントを参照してください。 |
+| `select_query` | データセットを定義する標準の `SELECT` ステートメント。 詳しくは、[`SELECT` クエリの節 ](#select-queries) 参照してください。 |
 
 >[!NOTE]
 >
->`SELECT` ステートメントには、`COUNT`、`SUM`、`MIN` などの集計関数のエイリアスが必要です。 また、`SELECT` ステートメントに括弧（）を付ける場合と付けない場合があります。 `SNAPSHOT` 句を指定すると、増分差分をターゲットテーブルに読み込むことができます。
+>`SELECT` ステートメントには、`COUNT`、`SUM`、`MIN` などの集計関数のエイリアスを含める必要があります。 `SELECT` クエリには括弧を使用しても使用しなくても指定できます。 `TRANSFORM` 句を使用するかどうかに関係なく、この設定が適用されます。
+
+**例**
+
+`TRANSFORM` 句を使用してエンジニアリングされた機能をいくつかプレビューする基本的な例を次に示します。
+
+```sql
+CREATE TABLE ctas_transform_table_vp14 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+複数の変換手順を持つ、より高度な例です。
+
+```sql
+CREATE TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+一時テーブルの例を次に示します。
+
+```sql
+CREATE TEMP TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+#### 制限事項と動作 {#limitations-and-behavior}
+
+`TRANSFORM` 句を `CREATE TABLE` または `CREATE TEMP TABLE` と共に使用する場合は、次の制限に注意してください。
+
+- 変換関数がベクトル出力を生成する場合は、自動的に配列に変換されます。
+- その結果、`TRANSFORM` を使用して作成されたテーブルは、`CREATE MODEL` ステートメントで直接使用できません。 適切なフィーチャーベクトルを生成するには、モデル作成時に変換ロジックを再定義する必要があります。
+- 変換は、テーブルの作成時にのみ適用されます。 `INSERT INTO` を使用してテーブルに挿入された新しいデータは、**自動的には変換されません**。 新しいデータに変換を適用するには、`TRANSFORM` 句を使用してテーブルを再作成 `CREATE TABLE AS SELECT` る必要があります。
+- この方法は、再利用可能な変換パイプラインを構築するためではなく、ある時点での変換のプレビューと検証を目的としています。
+
+>[!NOTE]
+>
+>使用可能な変換関数とその出力タイプについて詳しくは、[ フィーチャー変換出力データタイプ ](../advanced-statistics/feature-transformation.md#available-transformations) を参照してください。
+
+
+### TRANSFORM 句 {#transform}
+
+モデルのトレーニングまたはテーブルの作成前に、`TRANSFORM` 句を使用して 1 つ以上のフィーチャーエンジニアリング関数をデータセットに適用します。 この句を使用すると、入力フィーチャの正確な形状をプレビュー、検証、または定義できます。
+
+`TRANSFORM` 句は、次の文で使用できます。
+
+- `CREATE MODEL`
+- `CREATE TABLE`
+- `CREATE TEMP TABLE`
+
+変換の定義、モデルオプションの設定、トレーニングデータの設定の方法など、CREATE MODEL の使用方法について詳しくは、[ モデルのドキュメント ](../advanced-statistics/models.md) を参照してください。
+
+`CREATE TABLE` の使用方法については、[CREATE TABLE AS SELECT セクション ](#create-table-as-select) を参照してください。
+
+#### モデルを作成の例
+
+```sql
+CREATE MODEL review_model
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) AS ohe_add_comments,
+  tokenizer(comments) AS token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) AS stp_token,
+  ngram(stp_token, 3) AS ngram_token,
+  tf_idf(ngram_token, 20) AS ngram_idf,
+  count_vectorizer(stp_token, 13) AS cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) AS cmts_idf,
+  vector_assembler(array(cmts_idf, viewsgot, ohe_add_comments, ngram_idf, cnt_vec_comments)) AS features
+)
+OPTIONS(MODEL_TYPE='logistic_reg', LABEL='reviews')
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+#### 制限事項 {#limitations}
+
+`CREATE TABLE` で `TRANSFORM` を使用する場合は、次の制限が適用されます。 変換され `CREATE TABLE AS SELECT` データの保存方法、ベクトル出力の処理方法、結果をモデルトレーニングワークフローで直接再利用できない理由について詳しくは、制限事項と動作の節を参照してください。
+
+- ベクトル出力は自動的に配列に変換されますが、`CREATE MODEL` で直接使用することはできません。
+- 変換ロジックは、メタデータとして保持されず、バッチ間で再利用できません。
 
 ## INSERT INTO
 
