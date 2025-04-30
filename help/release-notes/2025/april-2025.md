@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 24%
+source-wordcount: '2040'
+ht-degree: 23%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 24%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-時間 CDP コラボレーション](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年4月29日**
 
-Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
+Adobe Experience Platform の既存の機能とドキュメントアップデート:
 
 - [Experience League](#experience-league)
 - [宛先](#destinations)
@@ -30,7 +30,9 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [ID サービス](#identity)
 - [クエリサービス](#query-service)
 - [リアルタイム顧客プロファイル](#profile)
+- [サンドボックス](#sandboxes)
 - [ソース](#sources)
+- [ユースケースプレイブック](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -78,11 +80,11 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 文字列フィールドの値が 1 以上になる | 新しい文字列フィールドの長さは、デフォルトで最小 1 になります。 必須以外のフィールドには、引き続き null 値を使用できます。 ベストプラクティスについて詳しくは、[ データモデリングのベストプラクティス ](../../xdm/schema/best-practices.md#data-integrity-tips) に関するガイドを参照してください |
+| 文字列フィールドの値が 1 以上になる | 新しい文字列フィールドの長さは、デフォルトで最小 1 になります。 非必須フィールドの null 値は引き続き許容されます。 ベストプラクティスについて詳しくは、[ データモデリングのベストプラクティス ](../../xdm/schema/best-practices.md#data-integrity-tips) に関するガイドを参照してください |
 
 {style="table-layout:auto"}
 
-Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
+Experience Platform でのXDMの詳細については、「 [XDM システムの概要」を参照してください](../../xdm/home.md)。
 
 ## ID サービス {#identity}
 
@@ -126,6 +128,20 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 リアルタイム顧客プロファイルについて詳しくは、[ プロファイルの概要 ](../../profile/home.md) を参照してください。
 
+## サンドボックス {#sandboxes}
+
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| サンドボックスツールプラグインサポートの拡張 | サンドボックスツールでジャーニーオブジェクトを複製する際、カスタムアクションを依存オブジェクトとしてコピーできるようになりました。 さらに、既存のアクションを選択して、ターゲットサンドボックスで再利用できます。 また、個別にパッケージに追加することもできます。 サポートされるAdobe Journey Optimizer オブジェクトについて詳しくは、[ サンドボックスツール ](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) ガイドを参照してください。 |
+
+{style="table-layout:auto"}
+
+サンドボックスについて詳しくは、[ サンドボックスの概要 ](../../sandboxes/home.md) を参照してください。
+
 ## ソース {#sources}
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
@@ -136,8 +152,8 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ソースを使用できるようになりました。 このソースを使用して、[!DNL Algolia] ユーザープロファイルのアフィニティ データをExperience Platformに取り込みます。 その後、このデータを使用して、web サイト、e コマースプラットフォーム、アプリケーションに高性能の検索ソリューションを提供することで、ユーザーエンゲージメント、コンバージョン率および全体的な顧客体験を向上させることができます。 詳しくは、Experience Platformへのデータの取り込み [ 方法に関するガイドを参照し  [!DNL Algolia User Profiles]  ください ](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md)。 |
-| [!DNL Azure Databricks] の [!BADGE Beta]{type=Informative} API サポート | [!DNL Azure Databricks] ソースを API で使用できるようになりました。 [!DNL Flow Service] API を使用して [!DNL Databricks] アカウントを接続し、[!DNL Databricks] データをExperience Platformに取り込みます。 詳しくは、[[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) のドキュメントを参照してください。 |
+| [!BADGE ベータ版]{type=Informative} [!DNL Algolia User Profiles] | これで、 [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ソースが使用可能になりました。 このソースを使用して、 [!DNL Algolia] ユーザー プロファイル・アフィニティー・データをExperience Platformに取り込みます。 その後、このデータを使用して、Webサイト、eコマースプラットフォーム、およびアプリケーションに高性能の検索ソリューションを提供することにより、ユーザーエンゲージメント、コンバージョン率、および全体的なエクスペリエンスを向上させることができます。 詳しくは、データを Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md) に[インジェスト [!DNL Algolia User Profiles] する方法に関するガイドを参照してください。 |
+| [!BADGE ベータ版]{type=Informative} の API サポート [!DNL Azure Databricks] | [!DNL Azure Databricks] ソースを API で使用できるようになりました。 [!DNL Flow Service] API を使用して [!DNL Databricks] アカウントを接続し、[!DNL Databricks] データをExperience Platformに取り込みます。 詳しくは、[[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -147,8 +163,26 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 | --- | --- |
 | ストリーミングメディアデータをExperience Platformに取り込むための XDM フィールドを更新しました。 | 新しい XDM フィールドグループ `mediaReporting` を使用して、Adobe Analytics ソースを介してストリーミングメディアデータをExperience Platformに取り込めるようになりました。 このフィールドは、`media.mediaTimed` フィールドを置き換えます。</br> <br>3 か月の移行期間中、`media.mediaTimed` フィールドへのデータ取り込みは続行されます。 ただし、2025 年 7 月末で、`media.mediaTimed` フィールドは完全に非推奨となり、Experience Platform スキーマ UI に表示されなくなります。また、データは `mediaReporting` フィールドを使用してのみ送信されます。</br><br>2025 年 4 月 22 日（PT）より前にストリーミングメディアデータを Platform に収集する Analytics ソースを実装している場合は、新しいフィールドグループを使用してデータを送信するように既存の設定を移行する必要があります。 この移行は、2025 年 7 月末までに完了する必要があります。 移行サポートについては、Adobe アカウントチームにお問い合わせください。 |
 | [!DNL MariaDB] および [!DNL PostgreSQL] の新しい認証タイプ | 基本認証を使用して、Experience Platformで [!DNL MariaDB] および [!DNL PostgreSQL] ソースを認証できるようになりました。 詳しくは、次のドキュメントを参照してください。 <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
-| [!DNL Amazon Redshift] の行レベルのフィルタリングのサポート | Experience Platform上の [!DNL Amazon Redshift] データに対して、行レベルのフィルタリング機能を使用できます。 詳しくは、[API でのソースの行レベルデータのフィルタリング ](../../sources/tutorials/api/filter.md) に関するガイドを参照してください。 |
+| レコードレベルのフィルタリングのサポート [!DNL Amazon Redshift] | Experience Platform上の [!DNL Amazon Redshift] データに対して行レベルのフィルタリング機能を使用できます。 詳細については、API でのソースの行レベル データのフィルター処理 [に関するガイド](../../sources/tutorials/api/filter.md)を参照してください。 |
 
 {style="table-layout:auto"}
 
 詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
+
+## ユースケースプレイブック {#use-case-playbooks}
+
+ユースケースプレイブックは、もともと、Real-Time Customer Data PlatformまたはAdobe Journey Optimizerを使い始める際の課題を克服するように設計されていました。 これらは継続的に進化し、現在では、主要なマーケティングのユースケースを素早く開始し、テストして実稼動環境に移行するためのインスピレーションと事前定義済みのアセットを提供できます。
+
+ユースケースプレイブックは、検出ツールから共同作業フレームワークに移行しました。 様々な組織で独自のプレイブックを作成、管理、共有するのに役立ちます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} 独自のプレイブックを作成して共有する | 新しいプレイブックオーサリングフレームワークを使用すると、独自のユースケースプレイブックを作成、管理、共有できます。 これには、主要なメタデータのキャプチャ、ジャーニーマップの編集、関連する技術アセットの関連付けのサポートが含まれます。 組織全体でプレイブックを共有して、マーケティングアプローチを標準化し、一貫性を維持できます。 |
+
+{style="table-layout:auto"}
+
+独自のプレイブックを作成して共有する方法については、[ 独自のプレイブックの作成と共有 ](/help/use-case-playbooks/playbooks/author.md) ドキュメントを参照してください。
+
+詳しくは、[ ユースケースプレイブックの概要 ](/help/use-case-playbooks/playbooks/overview.md) を参照してください。プレイブックの機能の概要、目的、エンドツーエンドのデモ（インスタンスを作成する方法や、生成されたアセットを他のサンドボックス環境に読み込む方法など）が示されています。

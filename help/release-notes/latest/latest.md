@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b7904761e4120170664b1b21482d3077ff5df57b
+source-git-commit: 3836b369d609448146a273fc6cf29061fd1ea422
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 22%
+source-wordcount: '2040'
+ht-degree: 23%
 
 ---
 
@@ -30,6 +30,7 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [ID サービス](#identity)
 - [クエリサービス](#query-service)
 - [リアルタイム顧客プロファイル](#profile)
+- [サンドボックス](#sandboxes)
 - [ソース](#sources)
 - [ユースケースプレイブック](#use-case-playbooks)
 
@@ -126,6 +127,20 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 {style="table-layout:auto"}
 
 リアルタイム顧客プロファイルについて詳しくは、[ プロファイルの概要 ](../../profile/home.md) を参照してください。
+
+## サンドボックス {#sandboxes}
+
+Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つサンドボックスが用意されています。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| サンドボックスツールプラグインサポートの拡張 | サンドボックスツールでジャーニーオブジェクトを複製する際、カスタムアクションを依存オブジェクトとしてコピーできるようになりました。 さらに、既存のアクションを選択して、ターゲットサンドボックスで再利用できます。 また、個別にパッケージに追加することもできます。 サポートされるAdobe Journey Optimizer オブジェクトについて詳しくは、[ サンドボックスツール ](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) ガイドを参照してください。 |
+
+{style="table-layout:auto"}
+
+サンドボックスについて詳しくは、[ サンドボックスの概要 ](../../sandboxes/home.md) を参照してください。
 
 ## ソース {#sources}
 
