@@ -2,9 +2,9 @@
 title: サンドボックスツール
 description: サンドボックス間でサンドボックス設定をシームレスに書き出し、読み込みます。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
+source-git-commit: 654a1c696d88d9e1748787402a1a50c8e232df57
 workflow-type: tm+mt
-source-wordcount: '2486'
+source-wordcount: '2513'
 ht-degree: 8%
 
 ---
@@ -49,18 +49,18 @@ ht-degree: 8%
 
 サンドボックスツール [!DNL Adobe Journey Optimizer] 制限で現在サポートされているオブジェクトを次の表に示します。
 
-| Platform | オブジェクト | 詳細 |
-| --- | --- | --- |
-| [!DNL Adobe Journey Optimizer] | オーディエンス | オーディエンスは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 ターゲットサンドボックスで、「新しいオーディエンスを作成」を選択するか、既存のオーディエンスを再利用できます。 |
-| [!DNL Adobe Journey Optimizer] | スキーマ | ジャーニーで使用されるスキーマは、依存オブジェクトとしてコピーできます。 ターゲットサンドボックスで「新しいスキーマを作成」を選択するか、既存のスキーマを再利用できます。 |
-| [!DNL Adobe Journey Optimizer] | 結合ポリシー | ジャーニーで使用される結合ポリシーは、依存オブジェクトとしてコピーできます。 ターゲットサンドボックスでは、新しい結合ポリシーを作成 **できません** 既存の結合ポリシーのみを利用できます。 |
-| [!DNL Adobe Journey Optimizer] | ジャーニー - キャンバスの詳細 | キャンバス上のジャーニーの表示域には、条件、アクション、イベント、オーディエンスを読み取りなど、コピーされたジャーニー内のオブジェクトが含まれます。 ジャンプアクティビティは、コピーから除外されます。 |
-| [!DNL Adobe Journey Optimizer] | イベント | ジャーニーで使用されるイベントとイベントの詳細がコピーされます。 ターゲットサンドボックスに新しいバージョンが常に作成されます。 |
-| [!DNL Adobe Journey Optimizer] | アクション | ジャーニーで使用されるメールおよびプッシュメッセージは、依存オブジェクトとしてコピーできます。 ジャーニーフィールドで使用されるチャネルアクションアクティビティ（メッセージ内のパーソナライゼーションに使用される）が完全かどうかはチェックされません。 コンテンツブロックはコピーされません。<br><br> ジャーニーで使用される「プロファイルを更新」アクションをコピーできます。 ジャーニーで使用されるカスタムアクションとアクションの詳細もコピーされます。 ターゲットサンドボックスに新しいバージョンが常に作成されます。 |
-| [!DNL Adobe Journey Optimizer] | ジャーニー | ジャーニー全体をパッケージに追加すると、オーディエンス、スキーマ、イベント、アクションなど、ジャーニーが依存するオブジェクトの大部分がコピーされます。 |
-| [!DNL Adobe Journey Optimizer] | コンテンツテンプレート | コンテンツテンプレートは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 スタンドアロンテンプレートを使用すると、Journey Optimizer キャンペーンおよびジャーニー全体でカスタムコンテンツを簡単に再利用できます。 |
-| [!DNL Adobe Journey Optimizer] | フラグメント | フラグメントは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 フラグメントは、Journey Optimizer キャンペーンおよびジャーニー全体で 1 つ以上のメールで参照できる再利用可能なコンポーネントです。 |
-| [!DNL Adobe Journey Optimizer] | キャンペーン | キャンペーンは、プロファイル、オーディエンス、スキーマ、インラインメッセージおよび依存オブジェクトに関連するすべての項目と共にコピーできます。 決定項目、データ使用ラベル、言語設定など、一部の項目はコピーされません。 コピーできないオブジェクトの完全なリストについては、[ 別のサンドボックスへのオブジェクトの書き出し ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) ガイドを参照してください。 |
+| Platform | オブジェクト | サポートされる依存オブジェクト | 詳細 |
+| --- | --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | オーディエンス | | オーディエンスは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 ターゲットサンドボックスで、「新しいオーディエンスを作成」を選択するか、既存のオーディエンスを再利用できます。 |
+| [!DNL Adobe Journey Optimizer] | スキーマ | | ジャーニーで使用されるスキーマは、依存オブジェクトとしてコピーできます。 ターゲットサンドボックスで「新しいスキーマを作成」を選択するか、既存のスキーマを再利用できます。 |
+| [!DNL Adobe Journey Optimizer] | 結合ポリシー | | ジャーニーで使用される結合ポリシーは、依存オブジェクトとしてコピーできます。 ターゲットサンドボックスでは、新しい結合ポリシーを作成 **できません**。既存の結合ポリシーのみを使用できます。 |
+| [!DNL Adobe Journey Optimizer] | ジャーニー | ジャーニーで使用される以下のオブジェクトは、依存オブジェクトとしてコピーされます。 読み込みワークフロー中に、次の各項目に対して **[!UICONTROL 新規作成]** または **[!UICONTROL 既存を使用]** を選択できます。 <ul><li>オーディエンス</li><li>スキーマ</li><li>カスタムアクション</li><li>イベント</li><li>フラグメント</li><li>コンテンツテンプレート</li><li>キャンバスの詳細</li></ul> | <ul><li>**[!UICONTROL カスタムアクション]**：ジャーニーを別のサンドボックスにコピーする際の読み込みプロセス中に **[!UICONTROL 既存を使用]** を選択すると、選択した既存のカスタムアクション **必須** はソースカスタムアクションと同じになります。 同じでない場合、新しいジャーニーには解決不可能なエラーが発生します。</li><li>ジャーニーで使用されるイベントとイベントの詳細がコピーされます。 ターゲットサンドボックスに新しいバージョンが常に作成されます。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | アクション | | ジャーニーで使用されるメールおよびプッシュメッセージは、依存オブジェクトとしてコピーできます。 ジャーニーフィールドで使用されるチャネルアクションアクティビティ（メッセージ内のパーソナライゼーションに使用される）が完全かどうかはチェックされません。 コンテンツブロックはコピーされません。<br><br> ジャーニーで使用される「プロファイルを更新」アクションをコピーできます。 カスタムアクションは、パッケージに個別に追加できます。 ジャーニーで使用されるアクションの詳細もコピーされます。 ターゲットサンドボックスに新しいバージョンが常に作成されます。 |
+| [!DNL Adobe Journey Optimizer] | コンテンツテンプレート | | コンテンツテンプレートは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 スタンドアロンテンプレートを使用すると、Journey Optimizer キャンペーンおよびジャーニー全体でカスタムコンテンツを簡単に再利用できます。 |
+| [!DNL Adobe Journey Optimizer] | フラグメント | ネストされたすべてのフラグメント。 | フラグメントは、ジャーニーオブジェクトの依存オブジェクトとしてコピーできます。 フラグメントは、Journey Optimizer キャンペーンおよびジャーニー全体で 1 つ以上のメールで参照できる再利用可能なコンポーネントです。 |
+| [!DNL Adobe Journey Optimizer] | キャンペーン | | キャンペーンは、プロファイル、オーディエンス、スキーマ、インラインメッセージおよび依存オブジェクトに関連するすべての項目と共にコピーできます。 決定項目、データ使用ラベル、言語設定など、一部の項目はコピーされません。コピーできないオブジェクトの完全なリストについては、[ 別のサンドボックスへのオブジェクトの書き出し ] を参照してください。 |
+
+<!-- | [!DNL Adobe Journey Optimizer] | Campaigns | The following objects used in the campaign are copied as dependent objects: <ul><li>Campaigns</li><li>Audiences</li><li>Schemas</li><li>Content templates</li><li>Fragments</li><li>Message/Content</li><li>Channel configuration</li><li>Unified decision objects</li><li>Experiment settings/variants</li></ul>| Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as decision items, data usage labels, and language settings. For a complete list of objects that cannot be copied, refer the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide. | -->
 
 サーフェス（プリセットなど）はコピーされません。 メッセージタイプとサーフェス名に基づいて、最も近いものが宛先サンドボックスで自動的に選択されます。 ターゲットのサンドボックスでサーフェスが見つからない場合、サーフェスのコピーが失敗します。その結果、メッセージを設定するためにサーフェスを使用する必要があるので、メッセージのコピーが失敗します。 この場合、コピーを機能させるには、メッセージの適切なチャネル用に少なくとも 1 つのサーフェスを作成する必要があります。
 
