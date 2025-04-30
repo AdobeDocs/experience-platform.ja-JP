@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: d2ee1adb031af83569f7b226a8881297423fc257
 workflow-type: tm+mt
 source-wordcount: '1663'
@@ -38,7 +37,7 @@ Experience Leagueは、Adobe製品のスキルアップに役立つ包括的な�
 
 | 機能 | 説明 |
 | --- | --- |
-| パーソナライズされたホームページ | [Experience League](https://experienceleague.adobe.com/en/home#) のパーソナライズされたホームページにアクセスしてカスタマイズします。 Adobeの資格情報を使用してログインし、上部のメニューで「**[!UICONTROL Experience League]**」を選択して、学習体験の最適化を開始します。 <ul><li>**ブックマーク**:[!UICONTROL  ブックマーク ] 機能を使用して、お気に入りのリソースを 1 か所に保存および収集します。 プレイリスト、記事、チュートリアルなど、様々なコンテンツを保存できます。</li><li>**ラーニングのカスタマイズ**：お客様のニーズに最適な役割、業界、商品、エクスペリエンスレベルでExperience League プロファイルを更新することで、ラーニングエクスペリエンスを強化できます。</li><li>**Recommendations**：最近のアクティビティに基づいて推奨された学習コンテンツを表示します。</li><li>**最近表示された項目**:「[!UICONTROL  最近表示された項目 ] セクションを使用すると、ドキュメントやビデオなど、最近表示されたコンテンツにすばやく戻ることができます。</li><li>**学習リソース**:[!UICONTROL  すべての学習リソース ] パネルを使用して、チュートリアル、ドキュメント、コミュニティ、イベント、認定制度に移動します。</li><li>**新機能**:Experience Leagueの最新コンテンツのストリームについては、[!UICONTROL  新機能 ] の節をご覧ください。</li><li>**オンデマンドで過去のイベントを視聴**:[!UICONTROL  オンデマンドで過去のイベントを視聴 ] セクションで、製品スポットライト、ユースケースおよびチュートリアルに関する過去のライブストリームを視聴します。</li></ul><br> ![Experience Leagueのパーソナライズされたホームページ。](../2025/assets/april/personalized-home-page.png "Experience Leagueのパーソナライズされたホームページ。"){width="250" align="center" zoomable="yes"} |
+| パーソナライズされたホームページ | パーソナライズされたホームページに [Experience League](https://experienceleague.adobe.com/en/home#) でアクセスしてカスタマイズします。 Adobeの資格情報を使用してログインし、上部のメニューで「**[!UICONTROL Experience League]**」を選択して、学習体験の最適化を開始します。 <ul><li>**ブックマーク**:[!UICONTROL  ブックマーク ] 機能を使用して、お気に入りのリソースを 1 か所に保存および収集します。 プレイリスト、記事、チュートリアルなど、様々なコンテンツを保存できます。</li><li>**ラーニングのカスタマイズ**：お客様のニーズに最適な役割、業界、商品、エクスペリエンスレベルでExperience League プロファイルを更新することで、ラーニングエクスペリエンスを強化できます。</li><li>**Recommendations**：最近のアクティビティに基づいて推奨された学習コンテンツを表示します。</li><li>**最近表示された項目**:「[!UICONTROL  最近表示された項目 ] セクションを使用すると、ドキュメントやビデオなど、最近表示されたコンテンツにすばやく戻ることができます。</li><li>**学習リソース**:[!UICONTROL  すべての学習リソース ] パネルを使用して、チュートリアル、ドキュメント、コミュニティ、イベント、認定制度に移動します。</li><li>**新機能**:Experience Leagueの最新コンテンツのストリームについては、[!UICONTROL  新機能 ] の節をご覧ください。</li><li>**オンデマンドで過去のイベントを視聴**:[!UICONTROL  オンデマンドで過去のイベントを視聴 ] セクションで、製品スポットライト、ユースケースおよびチュートリアルに関する過去のライブストリームを視聴します。</li></ul><br> ![Experience Leagueのパーソナライズされたホームページ。](../2025/assets/april/personalized-home-page.png "Experience Leagueのパーソナライズされたホームページ。"){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

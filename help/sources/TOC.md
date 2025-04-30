@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
+source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1075'
 ht-degree: 92%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 92%
       - [Amazon Redshift コネクタ](connectors/databases/redshift.md)
       - [Azure HDInsights 上の Apache Hive コネクタ](connectors/databases/hive.md)
       - [Azure HDInsights 上の Apache Spark コネクタ](connectors/databases/spark.md)
+      - [Azure Databricks コネクタ](connectors/databases/databricks.md)
       - [Azure Data Explorer コネクタ](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics コネクタ](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage コネクタ](connectors/databases/ats.md)
@@ -165,6 +166,7 @@ ht-degree: 92%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights 上の Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights 上の Apache Spark](tutorials/api/create/databases/spark.md)
+         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
