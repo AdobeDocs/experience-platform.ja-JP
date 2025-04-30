@@ -5,7 +5,7 @@ title: Flow Service API を使用したバッチ宛先への接続とデータ�
 description: Flow Service API を使用して、Experience Platform でクラウドストレージまたはメールマーケティングのバッチ宛先を作成し、データを有効化する手順を説明します
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 81641f707dbd9fb2952589506bc42c3dd6cd83b3
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 72%
@@ -1039,7 +1039,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `filenameTemplate` | このフィールドは、宛先に書き出すファイルのファイル名の形式を決定します。<br> 以下のオプションを利用できます。<br> <ul><li>`%DESTINATION_NAME%`：必須。書き出されるファイルには、宛先名が含まれます。</li><li>`%SEGMENT_ID%`：必須。書き出されるファイルには、書き出されたオーディエンスの ID が含まれます。</li><li>`%SEGMENT_NAME%`：オプション。書き出されるファイルには、書き出されたオーディエンスの名前が含まれます。</li><li>`DATETIME(YYYYMMdd_HHmmss)` または `%TIMESTAMP%`：オプション。ファイルが Experience Platform で生成された時刻を含めるには、これら 2 つのオプションのいずれかを選択します。</li><li>`custom-text`：オプション。ファイル名の末尾に追加したいカスタムテキストでこのプレースホルダーを置き換えます。</li></ul> <br> ファイル名の設定について詳しくは、バッチ宛先の有効化に関するチュートリアルの「[ファイル名の設定](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)」の節を参照してください。 |
 | `exportMode` | 必須。`"DAILY_FULL_EXPORT"` または `"FIRST_FULL_THEN_INCREMENTAL"` を選択します。この 2 つのオプションについて詳しくは、バッチ宛先の有効化に関するチュートリアルの「[完全なファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)」および「[増分ファイルのエクスポート](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)」を参照してください。 |
 | `startDate` | オーディエンスが宛先へのプロファイルの書き出しを開始する日付を選択します。 |
-| `frequency` | 必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE` または `DAILY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
+| `frequency` | 必須。<br> <ul><li>`"DAILY_FULL_EXPORT"` エクスポートモードの場合は、`ONCE`、`DAILY`、`WEEKLY` または `MONTHLY` を選択できます。</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` エクスポートモードの場合は、`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"` を選択できます。</li></ul> |
 | `triggerType` | *バッチ宛先* の場合のみ。 このフィールドは、`frequency` セレクターで `"DAILY_FULL_EXPORT"` モードを選択する場合にのみ必要です。 <br> 必須。<br> <ul><li>毎日のExperience Platform バッチセグメント化ジョブが完了した直後にアクティベーションジョブを実行するには、「`"AFTER_SEGMENT_EVAL"`」を選択します。 これにより、アクティベーションジョブが実行されると、最新のプロファイルが確実に宛先に書き出されます。</li><li>`"SCHEDULED"` を選択して、特定の時間にアクティベーションジョブを実行します。 これにより、Experience Platform プロファイルデータは毎日同じ時刻に書き出されます。アクティベーションジョブが開始される前にバッチセグメント化ジョブが完了しているかどうかに応じて、書き出すプロファイルが最新ではない場合があります。 このオプションを選択する場合は、`startTime` を追加して、日次書き出しが発生する UTC の時間を示す必要もあります。</li></ul> |
 | `endDate` | *バッチ宛先* の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> `"exportMode":"DAILY_FULL_EXPORT"` と `"frequency":"ONCE"` を選択している場合は適用されません。 <br> オーディエンスメンバーが宛先への書き出しを停止する日付を設定します。 |
 | `startTime` | *バッチ宛先* の場合のみ。 このフィールドは、Amazon S3、SFTP、Azure Blob などのバッチファイル書き出し宛先のデータフローにオーディエンスを追加する場合にのみ必要です。 <br> 必須。 オーディエンスのメンバーを含んだファイルを生成し、宛先に書き出す時間を選択します。 |
