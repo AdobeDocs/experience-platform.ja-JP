@@ -1,19 +1,23 @@
 ---
-title: Pega Customer Decision Hub 接続
-description: Adobe Experience Platformの Pega Customer Decision Hub 宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次善のアクションの意思決定を行います。
+title: （V1） Pega CDH リアルタイムオーディエンス接続
+description: Adobe Experience Platformの Pega Customer Decision Hub リアルタイムオーディエンス宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次善のアクションの意思決定を行います。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 71de5b0d3e9c4413caa911fbe174e74c0e409d89
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 20%
+source-wordcount: '1075'
+ht-degree: 18%
 
 ---
 
-# Pega Customer Decision Hub 接続
+# Pega CDH リアルタイムオーディエンス接続
+
+>[!IMPORTANT]
+>
+>このバージョンの Pega Customer Decision Hub リアルタイムオーディエンス宛先は、1 つの Pega Customer Decision アプリケーションのみをサポートします。 複数の Pega Customer Decision Hub アプリケーションが設定されている場合は、[ （V2） Pega CDH Realtime Audience 宛先コネクタ ](./pega-v2.md) を使用する必要があります。
 
 ## 概要 {#overview}
 
-Adobe Experience Platformの [!DNL Pega Customer Decision Hub] の宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを [!DNL Pega Customer Decision Hub] に送信し、次善のアクションの意思決定を行います。
+Adobe Experience Platformの [!DNL Pega Customer Decision Hub] リアルタイムオーディエンスの宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを [!DNL Pega Customer Decision Hub] に送信し、次善のアクションの意思決定を行います。
 
 Adobe Experience Platformのプロファイルオーディエンスメンバーシップは、[!DNL Pega Customer Decision Hub] に読み込まれると、アダプティブモデルの予測因子として使用でき、次善のアクションの意思決定を目的とした適切なコンテキストデータや行動データを提供するのに役立ちます。
 
@@ -27,19 +31,19 @@ Adobe Experience Platformのプロファイルオーディエンスメンバー�
 
 ### 通信業
 
-マーケターは、[!DNL Pega Customer Decision Hub] が顧客エンゲージメントのために提供する、データサイエンスモデルベースの次善のアクションからのインサイトを活用したいと考えています。 [!DNL Pega Customer Decision Hub] れは、お客様の意図に大きく依存しています。例えば、「Interested_In_5G」、「Interested_in_Unlimited_Dataplan」、「Interest_in_iPhone_accessories」などです。
+マーケターは、[!DNL Pega Customer Decision Hub] が顧客エンゲージメントのために提供する、データサイエンスモデルベースの次に最適なアクションのインサイトを活用したいと考えています。 [!DNL Pega Customer Decision Hub] れは、お客様の意図に大きく依存しています。例えば、「Interested_In_5G」、「Interested_in_Unlimited_Dataplan」、「Interest_in_iPhone_accessories」などです。
 
 ### 金融機関
 
-マーケターは、年金プランや退職金プランのニュースレターを購読または購読解除した顧客に対するオファーを最適化したいと考えています。 金融サービス企業は、自社の CRM からAdobe Experience Platformに複数の顧客 ID を取り込み、自社のオフラインデータからオーディエンスを作成し、オーディエンスをエントリおよび離脱するプロファイルを送信して、アウトバウンドチャネルでの次善の策 [!DNL Pega Customer Decision Hub] （NBA）を決定できます。
+マーケターは、年金プランや退職金プランのニュースレターを購読または購読解除した顧客に対するオファーを最適化したいと考えています。 金融サービス企業は、独自の CRM からAdobe Experience Platformに複数の顧客 ID を取り込み、独自のオフラインデータからオーディエンスを作成し、オーディエンスをエントリおよび離脱するプロファイルを送信して、アウトバウンドチャネルでの次善 [!DNL Pega Customer Decision Hub] 策（NBA）の意思決定に使用できます。
 
 ## 前提条件 {#prerequisites}
 
 この宛先を使用してAdobe Experience Platformからデータを書き出す前に、[!DNL Pega Customer Decision Hub] で次の前提条件を満たしていることを確認してください。
 
-* [Adobe Experience Platform プロファイルとオーディエンスメンバーシップの統合コンポーネント ](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) を [!DNL Pega Customer Decision Hub] インスタンスに設定します。
-* [!DNL Pega Customer Decision Hub] インスタンスで、OAuth 2.0[ クライアント資格情報を使用したクライアント登録 ](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 付与タイプを設定します。
-* [!DNL Pega Customer Decision Hub] インスタンスでAdobeのオーディエンスメンバーシップデータフローを使用するには、[ リアルタイム実行データフロー ](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) を設定します。
+* [Adobe Experience Platform プロファイルとオーディエンスメンバーシップの統合コンポーネント ](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) を [!DNL Pega Customer Decision Hub] インスタンスに設定します。
+* [!DNL Pega Customer Decision Hub] インスタンスで、OAuth 2.0[ クライアント資格情報を使用したクライアント登録 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) 付与タイプを設定します。
+* [!DNL Pega Customer Decision Hub] インスタンスでAdobe オーディエンスメンバーシップデータフローを設定するには、[ リアルタイム実行データフロー ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) を使用します。
 
 ## サポートされている ID {#supported-identities}
 
@@ -57,8 +61,8 @@ Adobe Experience Platformのプロファイルオーディエンスメンバー�
 
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
-| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | 識別子（*顧客 ID*）、属性（姓、名、場所など）を持つオーディエンスのすべてのメンバーを書き出します。 およびオーディエンスメンバーシップデータ。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常にオンの API ベースの接続です。 オーディエンスの評価に基づいて、Experience Platform内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、[ ストリーミングの宛先 ](/help/destinations/destination-types.md#streaming-destinations) を参照してください。 |
+| 書き出しタイプ | **[!UICONTROL プロファイルベース]** | 識別子（*顧客 ID*）、属性（姓、名、場所など）およびオーディエンスメンバーシップデータを含む、オーディエンスのすべてのメンバーを書き出します。 |
+| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常にオンの API ベースの接続です。 Experience Platformでプロファイルが更新されるとすぐに、オーディエンスの評価に基づいて、コネクタは更新を宛先プラットフォームに送信します。 詳しくは、[ ストリーミングの宛先 ](/help/destinations/destination-types.md#streaming-destinations) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -88,7 +92,7 @@ Adobe Experience Platformのプロファイルオーディエンスメンバー�
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL ホスト名]**：プロファイルが JSON データとして書き出される Pega Customer Decision Hub ホスト名。
+* **[!UICONTROL Pega CDH ホスト名]**：プロファイルが JSON データとして書き出される Pega Customer Decision Hub ホスト名。
 
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
@@ -121,22 +125,22 @@ Adobe Experience Platformのプロファイルオーディエンスメンバー�
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-プロファイルのオーディエンスメンバーシップが正常に更新されると、オーディエンスの識別子、名前およびステータスが Pega マーケティングオーディエンスメンバーシップデータストアに挿入されます。 以下に示すように、[!DNL Pega Customer Decision Hub] の顧客プロファイル Designerを使用して、メンバーシップデータがお客様に関連付けられます。
-![ カスタマープロファイル Designerを使用して、Adobeオーディエンスメンバーシップデータを顧客に関連付けることができる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+プロファイルのオーディエンスメンバーシップが正常に更新されると、オーディエンスの識別子、名前およびステータスが Pega マーケティングオーディエンスメンバーシップデータストアに挿入されます。 以下に示すように、メンバーシップデータは、[!DNL Pega Customer Decision Hub] の顧客プロファイルDesignerを使用して顧客と関連付けられます。
+![ 顧客プロファイル Designerを使用して、Adobe オーディエンスメンバーシップデータを顧客に関連付けることができる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-次に示すように、オーディエンスメンバーシップデータは、次善のアクションの意思決定のために、Pega の次善のアクションのDesigner エンゲージメントポリシーで使用されます。
-![Pega の次善アクションDesignerのエンゲージメントポリシーの条件としてオーディエンスメンバーシップフィールドを追加できる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+次に示すように、オーディエンスメンバーシップデータは、次善のアクションの意思決定のために Pega の次善のアクションのDesignerエンゲージメントポリシーで使用されます。
+![Pega の次善アクションDesignerのエンゲージメントポリシーの条件としてオーディエンスメンバーシップフィールドを追加できる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 以下に示すように、顧客オーディエンスメンバーシップデータフィールドがアダプティブモデルの予測因子として追加されます。
-![ 予測スタジオを使用して、オーディエンスメンバーシップフィールドをアダプティブモデルの述語として追加できる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+![ 予測スタジオを使用して、オーディエンスメンバーシップフィールドをアダプティブモデルの予測因子として追加できる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、[OAuth 2.0 クライアント登録の設定 ](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) を参 [!DNL Pega Customer Decision Hub] してください。
+詳しくは、次の [!DNL Pega] ドキュメントリソースを参照してください。
 
-詳しくは、[!DNL Pega Customer Decision Hub] の [ データフローのリアルタイム実行の作成 ](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) を参照してください。
-
-詳しくは、[ 顧客プロファイルDesignerでの顧客レコードの管理 ](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86) を参照してください。
+* [OAuth 2.0 クライアント登録の設定 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
+* [ データフローのリアルタイム実行の作成 ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
+* [ 顧客プロファイルDesignerでの顧客レコードの管理 ](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
 
 ## データの使用とガバナンス {#data-usage-governance}
 

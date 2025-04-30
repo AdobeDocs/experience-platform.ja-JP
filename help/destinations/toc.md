@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 76%
+source-wordcount: '1292'
+ht-degree: 75%
 
 ---
 
@@ -203,7 +203,8 @@ ht-degree: 76%
       * [Gainsight 拡張機能](./catalog/personalization/gainsight.md)
       * [KickFire 拡張機能](./catalog/personalization/kickfire.md)
       * [Marketo web パーソナライゼーション拡張機能](./catalog/personalization/marketo-web-personalization.md)
-      * [Pega Customer Decision Hub 接続](./catalog/personalization/pega.md)
+      * [Pega CDH リアルタイムオーディエンス接続](./catalog/personalization/pega.md)
+      * [（V2） Pega CDH リアルタイムオーディエンス接続](./catalog/personalization/pega-v2.md)
       * [Pega プロファイル接続](./catalog/personalization/pega-profile.md)
    * ソーシャルの宛先{#social}
       * [ソーシャルの宛先の概要](./catalog/social/overview.md)

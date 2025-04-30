@@ -1,7 +1,7 @@
 ---
 title: （V2） Pega CDH リアルタイムオーディエンス接続
 description: Adobe Experience Platformの Pega Customer Decision Hub リアルタイムオーディエンス宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次善のアクションの意思決定を行います。
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 16%
@@ -115,17 +115,21 @@ Adobe Experience Platformのプロファイルオーディエンスメンバー�
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
 プロファイルのオーディエンスメンバーシップが正常に更新されると、オーディエンスの識別子、名前およびステータスが Pega マーケティングオーディエンスメンバーシップデータストアに挿入されます。 以下に示すように、[!DNL Pega Customer Decision Hub] の顧客プロファイル Designerを使用して、メンバーシップデータがお客様に関連付けられます。
+
 ![ 顧客プロファイル Designerを使用して、Adobe オーディエンスメンバーシップデータを顧客に関連付けることができる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 次に示すように、オーディエンスメンバーシップデータは、次善のアクションの意思決定のために、Pega の次善のアクションのDesigner エンゲージメントポリシーで使用されます。
-![Pega の次善アクションDesignerのエンゲージメントポリシーの条件としてオーディエンスメンバーシップフィールドを追加できる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![Pega の次善アクションDesignerのエンゲージメントポリシーの条件としてオーディエンスメンバーシップフィールドを追加できる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 以下に示すように、顧客オーディエンスメンバーシップデータフィールドがアダプティブモデルの予測因子として追加されます。
+
 ![ 予測スタジオを使用して、オーディエンスメンバーシップフィールドをアダプティブモデルの述語として追加できる UI 画面の画像 ](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## その他のリソース {#additional-resources}
 
 詳しくは、次の [!DNL Pega] ドキュメントを参照してください。
+
 * [OAuth 2.0 クライアント登録の設定 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [ データフローのリアルタイム実行の作成 ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [ 顧客プロファイルDesignerでの顧客レコードの管理 ](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
