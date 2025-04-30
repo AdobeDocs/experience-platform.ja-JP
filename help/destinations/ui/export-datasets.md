@@ -3,10 +3,10 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
+source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '2732'
-ht-degree: 34%
+ht-degree: 33%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 34%
 
 >[!IMPORTANT]
 >
->**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 また、Adobeでは、（2024 年 9 月リリースより前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日が 2025 年 5 月 1 日（PT* に導入されました。
+>**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 また、Adobeでは、（2024 年 9 月リリースより前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日が 2025 年 9 月 1 日と導入されました*。
 >
->これらのデータフローのいずれについても、終了日より前に、データフローの終了日を手動で更新する必要があります。さもないと、書き出しはその日に停止します。 Experience Platform UI を使用して、2025 年 5 月 1 日（PT）に停止に設定されるデータフローを確認します。
+>これらのデータフローのいずれについても、終了日より前に、データフローの終了日を手動で更新する必要があります。さもないと、書き出しはその日に停止します。 Experience Platform UI を使用して、2025 年 9 月 1 日（PT）に停止に設定されるデータフローを確認します。
 >
 >データセット書き出しデータフローの終了日の編集方法については、[ スケジュールの節 ](#scheduling) を参照してください。
 
@@ -158,7 +158,7 @@ Experience Platform カタログ内の一部のファイルベース宛先では
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="このデータフロー本文の終了日を更新"
->abstract="この宛先が最近更新されたので、データフローには終了日が必要になりました。アドビでは、デフォルトの終了日を 2025年5月1日（PT）に設定しています。目的の終了日に更新してください。更新しない場合、データの書き出しがデフォルトの日付で停止します。"
+>abstract="この宛先が最近更新されたので、データフローには終了日が必要になりました。Adobeでは、デフォルトの終了日を 2025 年 9 月 1 日（PT）に設定しています。 目的の終了日に更新してください。更新しない場合、データの書き出しはデフォルトの日付で停止します。"
 
 **[!UICONTROL スケジュール設定]** ステップを使用して、次の操作を行います。
 
