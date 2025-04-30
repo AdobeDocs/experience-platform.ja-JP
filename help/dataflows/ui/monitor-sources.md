@@ -1,21 +1,21 @@
 ---
-description: 監視ダッシュボードを使用して、ソースから取り込まれたデータを監視する方法について説明します。
-title: UI でのソースのデータフローの監視
+description: 監視ダッシュボードを使用して、データレイクに取り込まれたデータを監視する方法について説明します。
+title: データレイクの取り込みの監視
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 18%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# UI でソースのデータフローを監視
+# データレイクの取り込みの監視
 
 >[!IMPORTANT]
 >
 >[HTTP API ソース ](../../sources/connectors/streaming/http.md) などのストリーミングソースは、現在、監視ダッシュボードではサポートされていません。 現時点では、バッチソースの監視にのみダッシュボードを使用できます。
 
-このドキュメントでは、モニタリングダッシュボードを使用してExperience Platform UI でソースデータフローをモニタリングする方法について説明します。
+このドキュメントでは、モニタリングダッシュボードを使用してExperience Platform UI でデータレイクの取り込みを監視する方法について説明します。
 
 ## 基本を学ぶ {#get-started}
 
@@ -28,7 +28,7 @@ ht-degree: 18%
 * [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集計したデータに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 * [ サンドボックス ](../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-## 監視ダッシュボードを使用したソースデータの監視
+## データレイクの取り込みに監視ダッシュボードを使用
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -42,15 +42,11 @@ ht-degree: 18%
 >abstract="ソース処理ビューには、データレイクサービスのデータアクティビティステータスや指標に関する情報 (取り込まれたレコードや失敗したレコードなど) が表示されます。指標およびグラフについて詳しくは、指標定義ガイドを参照してください。"
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+監視ダッシュボードのメインヘッダーから **[!UICONTROL データレイク]** を選択して、データレイクの取り込み率を表示します。
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
+![ ソースカードが選択された監視ダッシュボード。](../assets/ui/monitor-sources/data-lake.png)
 
-監視ダッシュボードで、メインヘッダーから [!UICONTROL  ソース ] を選択し、ソースデータフロー取り込み率の表示でダッシュボードを更新します。
-
-![ ソースカードが選択された監視ダッシュボード。](../assets/ui/monitor-sources/sources.png)
-
-[!UICONTROL  取り込み率 ] グラフには、設定した時間枠に基づいてデータ取り込み率が表示されます。 デフォルトでは、監視ダッシュボードには、過去 24 時間の取り込み率が表示されます。 時間枠の設定手順については、[ 時間枠の監視の設定 ](monitor.md#configure-monitoring-time-frame) に関するガイドを参照してください。
+[!UICONTROL  取り込み率 ] グラフには、設定した時間枠に基づいてデータ取り込み率が表示されます。 デフォルトでは、監視ダッシュボードには、過去 24 時間の取り込みレートが表示されます。 時間枠の設定手順については、[ 時間枠の監視の設定 ](monitor.md#configure-monitoring-time-frame) に関するガイドを参照してください。
 
 このグラフは、デフォルトで表示できるようになっています。 グラフを非表示にするには、「**[!UICONTROL 指標とグラフ]**」を選択して、切り替えを無効にし、グラフを非表示にします。
 
@@ -132,11 +128,9 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 >
 >エラー診断を使用できるのは、ソース接続の作成プロセス中にこの機能が有効になった場合のみです。
 
-![ データフロー実行エラーパネル ](../assets/ui/monitor-sources/errors.png)
-
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、**[!UICONTROL モニタリング]** ダッシュボードを使用して、ソースレベルから取り込みデータフローを正常に監視しました。 また、取り込みプロセス中のデータフローの失敗に貢献したエラーを正常に特定しました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、**[!UICONTROL 監視]** ダッシュボードを使用してデータレイクの取り込み率を監視する方法を学びました。 また、取り込み中にデータフローエラーを引き起こすエラーを特定する方法についても説明しました。 詳しくは、次のドキュメントを参照してください。
 
 * [ID データの監視 ](./monitor-identities.md)。
 * [ プロファイルデータの監視 ](./monitor-profiles.md)。

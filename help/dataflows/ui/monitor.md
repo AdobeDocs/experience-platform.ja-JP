@@ -2,9 +2,9 @@
 title: 監視ダッシュボードの概要
 description: Adobe Experience Platform UI でのモニタリングダッシュボードの使用方法について説明します
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '988'
 ht-degree: 4%
 
 ---
@@ -63,12 +63,6 @@ Experience Platform UI の「[!UICONTROL Data Management]」で、「**[!UICONTR
 
 ![ 監視データタイプが「顧客およびアカウント」に設定されています。](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB  見込み客 ]
-
-**[!UICONTROL 見込み客]** を選択して、ダッシュボードを更新し、特定の期間にExperience Platformに取り込まれた見込み客データに関する指標を表示します。 **メモ**：見込み客データタイプのアクティビティを表示できるのは、[ 見込み客データの権利 ](../../rtcdp/partner-data/prospecting.md) がある場合のみです。
-
-![ 監視データタイプが「見込み客」に設定されている ](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB  アカウントプロファイルのエンリッチメント ]
 
 「**[!UICONTROL アカウントプロファイルエンリッチメント]**」を選択して、ダッシュボードを更新し、プロファイルエンリッチメントデータに指標を表示します。 **メモ**:[B2B データ ](../../rtcdp/b2b-tutorial.md) を参照する権限がある場合にのみ、アカウントプロファイルエンリッチメント指標を表示できます。
@@ -81,11 +75,11 @@ Experience Platform UI の「[!UICONTROL Data Management]」で、「**[!UICONTR
 
 >[!BEGINTABS]
 
->[!TAB ソース]
+>[!TAB  データレイク ]
 
-**[!UICONTROL ソース]** を選択して、ソース取り込みレートの指標を表示します。 詳しくは、[ ソースデータの監視 ](monitor-sources.md) に関するガイドを参照してください。
+**[!UICONTROL データレイク]** を選択すると、データレイクの取り込み率に関する指標が表示されます。 詳しくは、[ データレイクの取り込みの監視 ](monitor-sources.md) に関するガイドを参照してください。
 
-![ ソースカードが選択された UI の監視ダッシュボード。](../assets/ui/monitor-overview/sources.png)
+![Data Lake カードが選択された UI の監視ダッシュボード。](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB ID]
 
@@ -133,8 +127,12 @@ Experience Platform UI の「[!UICONTROL Data Management]」で、「**[!UICONTR
 
 このドキュメントを読むことで、UI の監視ダッシュボードをナビゲートできるようになりました。 特定のExperience Platform サービスのデータを監視する方法について詳しくは、以下のドキュメントを参照してください。
 
-* [ ソースデータの監視 ](monitor-sources.md)。
+* [ データレイクの取り込みを監視 ](monitor-sources.md).
 * [ID データの監視 ](monitor-identities.md)。
 * [ プロファイルデータの監視 ](monitor-profiles.md)。
 * [ オーディエンスデータの監視 ](monitor-audiences.md).
 * [ 宛先データの監視 ](monitor-destinations.md)。
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
