@@ -2,10 +2,10 @@
 title: Experience Platform UI を使用したOracle Eloqua ソース接続の作成
 description: Experience Platform UI を使用してAdobe Experience PlatformをOracle Eloqua に接続する方法を説明します。
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 26%
+source-wordcount: '575'
+ht-degree: 25%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 26%
 
 >[!WARNING]
 >
->[!DNL Oracle Eloqua] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
+>[!DNL Oracle Eloqua] ソースは 2026 年 1 月に非推奨（廃止予定）になります。 新しいソースは、代替手段として今年後半にリリースされる予定です。 新しいソースがリリースされたら、2026 年 1 月末までに、新しいアカウント接続とデータフローを作成して、新しいソースに移行する計画を立てる必要があります。
 
 このチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL Oracle Eloqua] ソース接続を作成する手順について説明します。
 

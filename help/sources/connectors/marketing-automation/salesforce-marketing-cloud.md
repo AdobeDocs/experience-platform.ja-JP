@@ -3,11 +3,11 @@ solution: Experience Platform
 title: Salesforce Marketing Cloud Sourceの概要
 description: API またはユーザーインターフェイスを使用してSalesforce Marketing CloudをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+last-substantial-update: 2025-04-29T00:00:00Z
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 30%
+source-wordcount: '376'
+ht-degree: 27%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 30%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
+>[!DNL Salesforce Marketing Cloud] ソースは 2026 年 1 月に非推奨（廃止予定）になります。 新しいソースは、代替手段として今年後半にリリースされる予定です。 新しいソースがリリースされたら、2026 年 1 月末までに、新しいアカウント接続とデータフローを作成して、新しいソースに移行する計画を立てる必要があります。
 
 Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 

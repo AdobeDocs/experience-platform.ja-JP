@@ -2,10 +2,10 @@
 title: UI を使用したSalesforce Marketing Cloud アカウントのExperience Platformへの接続
 description: UI を通じてSalesforce Marketing Cloud アカウントをExperience Platformに接続する方法について説明します。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 21%
+source-wordcount: '548'
+ht-degree: 20%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 21%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud] ソースは 2025 年 6 月末に非推奨（廃止予定）になります。
+>[!DNL Salesforce Marketing Cloud] ソースは 2026 年 1 月に非推奨（廃止予定）になります。 新しいソースは、代替手段として今年後半にリリースされる予定です。 新しいソースがリリースされたら、2026 年 1 月末までに、新しいアカウント接続とデータフローを作成して、新しいソースに移行する計画を立てる必要があります。
 
 このチュートリアルでは、UI を通じて [!DNL Salesforce Marketing Cloud] アカウントをAdobe Experience Platformに接続する方法の手順を説明します。
 

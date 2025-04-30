@@ -1,19 +1,17 @@
 ---
 title: UI を使用した Algolia ユーザープロファイルのExperience Platformへの接続
 description: アルゴリアのユーザーをExperience Platformに誘導する方法を学ぶ
-hide: true
-hidefromtoc: true
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1136'
 ht-degree: 15%
 
 ---
 
 # UI[!DNL Algolia User Profiles] 使用したExperience Platformへのデータの取り込み
 
-ユーザーインターフェイスを使用して [!DNL Algolia User Profiles] アカウントからAdobe Experience Platformに支払いデータを取り込む方法については、このチュートリアルを参照してください。
+ユーザーインターフェイスを使用して [!DNL Algolia User Profiles] アカウントからAdobe Experience Platformにデータを取り込む方法については、このチュートリアルを参照してください。
 
 ## 基本を学ぶ
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1558'
 ht-degree: 67%
 
 ---
@@ -128,6 +128,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE  バッチ ]{type=Informative}
+- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE  バッチ ]{type=Informative}
@@ -148,6 +149,7 @@ Experience Platformは、データおよび ID パートナーからのデータ
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE  バッチ ]{type=Informative}
+- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md)
 - [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE  バッチ ]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE  バッチ ]{type=Informative}

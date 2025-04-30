@@ -1,8 +1,9 @@
 ---
 title: PostgreSQL Source コネクタの概要
 description: Adobe Experience Platformの PostgreSQL ソースについて説明します。
+last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: 98d1bec3cd453f3a20b8871b891b5464ddd44a09
+source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 7%
