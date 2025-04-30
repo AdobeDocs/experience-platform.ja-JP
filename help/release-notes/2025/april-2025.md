@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
-source-git-commit: d2ee1adb031af83569f7b226a8881297423fc257
+exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
+source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1706'
 ht-degree: 24%
 
 ---
@@ -50,6 +51,7 @@ Experience Leagueは、Adobe製品のスキルアップに役立つ包括的な�
 | 宛先 | 説明 |
 | --- | --- |
 | [Marketo Engage人物同期 ](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobeは、id マップに複数のメールが存在する場合にお客様に影響を与える問題を修正するために、[!DNL Marketo Engage Person Sync] の宛先を更新しました。 |
+| [ （V2） Pega CDH リアルタイムオーディエンス接続 ](/help/destinations/catalog/personalization/pega-v2.md) | Pega アカウントに複数の Pega Customer Decision Hub アプリケーションが設定されている場合は、Adobe Experience Platformの [!DNL (V2) Pega Customer Decision Hub Realtime Audience] 宛先を使用して、プロファイル属性とオーディエンスメンバーシップデータを Pega Customer Decision Hub に送信し、次善のアクションの意思決定を行います。 |
 
 **新機能または更新された機能** {#destinations-new-updated-functionality}
 
