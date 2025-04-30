@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: b7904761e4120170664b1b21482d3077ff5df57b
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 24%
+source-wordcount: '1899'
+ht-degree: 22%
 
 ---
 
@@ -31,6 +31,7 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [クエリサービス](#query-service)
 - [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
+- [ユースケースプレイブック](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -152,3 +153,21 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 {style="table-layout:auto"}
 
 詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
+
+## ユースケースプレイブック {#use-case-playbooks}
+
+ユースケースプレイブックは、もともと、Real-Time Customer Data PlatformまたはAdobe Journey Optimizerを使い始める際の課題を克服するように設計されていました。 これらは継続的に進化し、現在では、主要なマーケティングのユースケースを素早く開始し、テストして実稼動環境に移行するためのインスピレーションと事前定義済みのアセットを提供できます。
+
+ユースケースプレイブックは、検出ツールから共同作業フレームワークに移行しました。 様々な組織で独自のプレイブックを作成、管理、共有するのに役立ちます。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} 独自のプレイブックを作成して共有する | 新しいプレイブックオーサリングフレームワークを使用すると、独自のユースケースプレイブックを作成、管理、共有できます。 これには、主要なメタデータのキャプチャ、ジャーニーマップの編集、関連する技術アセットの関連付けのサポートが含まれます。 組織全体でプレイブックを共有して、マーケティングアプローチを標準化し、一貫性を維持できます。 |
+
+{style="table-layout:auto"}
+
+独自のプレイブックを作成して共有する方法については、[ 独自のプレイブックの作成と共有 ](/help/use-case-playbooks/playbooks/author.md) ドキュメントを参照してください。
+
+詳しくは、[ ユースケースプレイブックの概要 ](/help/use-case-playbooks/playbooks/overview.md) を参照してください。プレイブックの機能の概要、目的、エンドツーエンドのデモ（インスタンスを作成する方法や、生成されたアセットを他のサンドボックス環境に読み込む方法など）が示されています。
