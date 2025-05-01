@@ -2,7 +2,7 @@
 title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
 workflow-type: tm+mt
 source-wordcount: '1617'
 ht-degree: 5%
@@ -147,7 +147,7 @@ ID 最適化アルゴリズムを使用すると、偽の電子メールや電�
 
 ![ 悪い電子メール ](../images/identity-settings/bad-email.png)
 
-### 匿名イベントの関連付け
+## 匿名イベントの関連付け
 
 ECID には未認証（匿名）イベントが格納されるのに対して、CRMID には認証済みイベントが格納されます。 共有デバイスの場合、ECID （未認証イベントのベアラー）が **最後に認証されたユーザー** に関連付けられます。
 
