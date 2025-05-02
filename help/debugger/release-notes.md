@@ -4,7 +4,7 @@ description: Adobe Experience Platform Debugger の最新のリリースノー�
 keywords: デバッガー;Experience Platform Debugger 拡張機能;Chrome;拡張機能;リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
+source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 93%
@@ -17,7 +17,7 @@ ht-degree: 93%
 
 ### 修正点および改善点
 
-* デバッガーによって DTM 関数と Launch 関数が機能しない問題を修正しました。
+* デバッガーで DTM 関数とタグ関数が機能しない問題を修正しました。
 * Analytics の後処理ヒットがログに表示されない問題を修正しました。
 * 日本語などの非 ASCII 言語のデータがログに正しく表示されない問題を修正しました。
 
