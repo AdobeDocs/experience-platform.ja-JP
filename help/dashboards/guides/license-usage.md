@@ -4,9 +4,9 @@ title: ライセンス使用状況ダッシュボード
 description: Adobe Experience Platformには、組織のライセンス使用状況に関する重要な情報を表示できるダッシュボードが用意されています。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3398'
+source-wordcount: '3442'
 ht-degree: 39%
 
 ---
@@ -307,7 +307,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/prof
 | [!UICONTROL  プロファイル充実度パック数 ] | 追加のプロファイルリッチネスパックごとに、許可される合計データ量がプロファイルあたり 25 KB 増加します。 |
 | [!UICONTROL  クエリサービス計算時間 ] | バッチクエリの実行時に、クエリサービスエンジンがデータレイクに対してデータの読み取り、処理、書き戻しを行うために必要な時間の測定値。 |
 | [!UICONTROL  ストリーミングセグメント化パック数 ] | パックでは、ストリーミングフローを通じて新しいデータをセグメント化サービスに入力すると、ユーザープロファイルのセグメントメンバーシップが更新されます。セグメントメンバーシップは、過去の行動を考慮せずに、現在のユーザープロファイル属性と現在のイベントの値に基づいて評価されます。ストリーミングセグメント化は共有機能です。 |
-| [!UICONTROL  合計データ量 ] | リアルタイム顧客プロファイルがエンゲージメントワークフローで使用できるデータの総量。 詳しくは、[ 合計データ量に関するよくある質問 ](../../landing/license-usage-and-guardrails/total-data-volume.md) を参照してください。 |
+| [!UICONTROL  合計データ量 ] | リアルタイム顧客プロファイルがエンゲージメントワークフローで使用できるデータの総量。 合計データ量は、**合計データ量= アドレス可能なオーディエンス ×平均プロファイル充実度** の式を使用して計算されます。 この指標は、プロファイルストアにのみ保存されたデータを反映し、データレイクのストレージを除外します。 プロファイルベースのエンゲージメントに関連するデータについて、より焦点を絞ったビューを提供します。 詳しくは、[ 合計データ量に関するよくある質問 ](../../landing/license-usage-and-guardrails/total-data-volume.md) を参照してください。 |
 | [!UICONTROL  データエグレスの合計量 ] | Adobe Experience Platformからサードパーティのデータウェアハウスに書き出されたデータの年間累積量です。 |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->

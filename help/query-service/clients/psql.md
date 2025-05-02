@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQL のクエリサービスへの接続
 description: サポートされている PostgreSQL のバージョンや設定手順など、PSQL クライアントをAdobe Experience Platform クエリサービスに接続する方法について説明します。
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 74f4ac5a3ca4c06e81111ef453ae0effd21b3f16
+source-git-commit: f75ea97e8631984dcd1d4a7f8aff3c10cba7b11f
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 2%
@@ -29,7 +29,7 @@ PSQL がインストールされたら、クエリサービスに接続できま
 
 「**[!UICONTROL PSQL コマンド]**」セクションで、**[!UICONTROL クリップボードにコピー]** アイコン（![ コピーアイコン ](/help/images/icons/copy.png)）を選択して、コマンド文字列をコピーします。
 
-![ 「コピー」アイコンがハイライト表示されたクエリダッシュボードの「資格情報」タブ ](../images/clients/psql/connect-bi.png)
+![ 「コピー」アイコンがハイライト表示されたクエリダッシュボードの「資格情報」タブ ](../images/clients/psql/copy-credentials.png)
 
 ターミナルにコマンド文字列を貼り付け、キーボードの **Enter** を押します。
 

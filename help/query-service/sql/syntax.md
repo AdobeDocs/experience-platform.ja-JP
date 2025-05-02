@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文の詳細と説明を説明します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 4%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>`SNAPSHOT` 句で `HEAD` または `TAIL` を使用する場合は、それらを一重引用符で囲む必要があります（「HEAD」、「TAIL」など）。 引用符なしで使用すると、構文エラーが発生します。
 
 次の表に、SNAPSHOT 句内の各構文オプションの意味を示します。
 
@@ -130,7 +134,7 @@ SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND 
 | `AS OF end_snapshot_id` | 指定されたスナップショット ID （両端を含む）のデータをそのまま読み取ります。 |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | 指定された開始 ID と終了 ID の間でデータを読み取ります。 `start_snapshot_id` を除き、`end_snapshot_id` を含みます。 |
 | `BETWEEN HEAD AND start_snapshot_id` | 最初（最初のスナップショットの前）から、指定された開始スナップショット ID （この値を含む）までデータを読み取ります。 これは、`start_snapshot_id` の行のみを返すことに注意してください。 |
-| `BETWEEN end_snapshot_id AND TAIL` | 指定された `end-snapshot_id` の直後からデータセットの最後（スナップショット ID を除く）までデータを読み取ります。 つまり、データセット内の最後のスナップショットが `end_snapshot_id` の場合、その最後のスナップショットを超えるスナップショットはないので、クエリはゼロ行を返します。 |
+| `BETWEEN end_snapshot_id AND TAIL` | 指定された `end_snapshot_id` の直後からデータセットの最後（スナップショット ID を除く）までデータを読み取ります。 つまり、データセット内の最後のスナップショットが `end_snapshot_id` の場合、その最後のスナップショットを超えるスナップショットはないので、クエリはゼロ行を返します。 |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | 指定されたスナップショット ID から始まるデータを `table_to_be_queried` から読み取り、`your_chosen_snapshot_id` の時点の `table_to_be_joined` からのデータと結合します。 結合は、結合する 2 つのテーブルの ID 列の一致する ID に基づきます。 |
 
 `SNAPSHOT` 句は、テーブルまたはテーブルの別名と一緒に使用できますが、サブクエリまたはビューの上には使用できません。 `SNAPSHOT` 句は、テーブルの `SELECT` クエリを適用できる場所で機能します。
@@ -141,7 +145,7 @@ SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND 
 >
 >2 つのスナップショット ID 間でクエリを実行する場合、「開始スナップショット」の有効期限が切れ、オプションのフォールバック動作フラグ （`resolve_fallback_snapshot_on_failure`）が設定されていると、次の 2 つのシナリオが発生する可能性があります。
 >
->- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは使用可能な最も古いスナップショットを選択し、それを開始スナップショットとして設定し、使用可能な最も古いスナップショットと指定された終了スナップショットの間のデータを返します。 このデータには、使用可能な最も古いスナップショットの **含む** が含まれます。
+>- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは使用可能な最も古いスナップショットを選択して、それを開始スナップショットとして設定し、使用可能な最も古いスナップショットと指定された終了スナップショットの間のデータを返します。 このデータには、使用可能な最も古いスナップショットの **含む** が含まれます。
 
 ### WHERE 句
 
