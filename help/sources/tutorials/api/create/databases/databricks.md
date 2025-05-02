@@ -4,7 +4,7 @@ description: API を使用して Azure Databricks をExperience Platformに接�
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 15%
@@ -32,7 +32,7 @@ Experience Platform API の呼び出しを正常に実行する方法につい�
 
 ### 前提条件の設定
 
-アカウントをExperience Platformに接続する前に、最初に完了する必要がある前提条件の設定については、[[!DNL Databricks]  概要 ](../../../../connectors/databases/databricks.md) を参照してください。
+アカウントをExperience Platformに接続する前に完了する必要がある前提条件の設定については、[[!DNL Databricks]  概要 ](../../../../connectors/databases/databricks.md) を参照してください。
 
 ### 必要な資格情報の収集
 
