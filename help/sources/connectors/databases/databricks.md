@@ -1,16 +1,22 @@
 ---
 title: Azure Databricks
 description: Azure Databricks をExperience Platformに接続するために必要な前提条件の手順について説明します。
+badgeUltimate: label="Ultimate" type="Positive"
+badgeBeta: label="ベータ版" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 16de2879f5f5da533ce640d93871571f03aa74c2
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 2%
+source-wordcount: '593'
+ht-degree: 3%
 
 ---
 
 # [!DNL Azure Databricks]
+
+>[!IMPORTANT]
+>
+>Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Databricks] ソースを利用できます。
 
 [!DNL Azure Databricks] は、データ分析、機械学習、AI 用に設計されたクラウドベースのプラットフォームです。 [!DNL Databricks] を使用して [!DNL Azure] と統合し、データソリューションを大規模に構築、デプロイ、管理するための総合的な環境を提供できます。
 
