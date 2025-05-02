@@ -4,18 +4,20 @@ description: API を使用して Azure Databricks をExperience Platformに接�
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
+source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 15%
+source-wordcount: '528'
+ht-degree: 16%
 
 ---
 
 # [!DNL Flow Service] API を使用した [!DNL Azure Databricks] のExperience Platformへの接続
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Databricks] ソースを利用できます。
+>* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Databricks] ソースを利用できます。
+>
+>* [!DNL Azure Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 このガイドでは、[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Azure Databricks] アカウントをAdobe Experience Platformに接続する方法について説明します。
 

@@ -5,18 +5,20 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="ベータ版" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
+source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '612'
 ht-degree: 3%
 
 ---
 
 # [!DNL Azure Databricks]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Databricks] ソースを利用できます。
+>* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Databricks] ソースを利用できます。
+>
+>* [!DNL Azure Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../home.md#terms-and-conditions) を参照してください。
 
 [!DNL Azure Databricks] は、データ分析、機械学習、AI 用に設計されたクラウドベースのプラットフォームです。 [!DNL Databricks] を使用して [!DNL Azure] と統合し、データソリューションを大規模に構築、デプロイ、管理するための総合的な環境を提供できます。
 
