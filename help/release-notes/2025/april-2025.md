@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
+source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 23%
+source-wordcount: '2147'
+ht-degree: 24%
 
 ---
 
@@ -18,13 +18,14 @@ ht-degree: 23%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [Real-時間 CDP コラボレーション](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年4月29日**
 
-Adobe Experience Platform の既存の機能とドキュメントアップデート:
+Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
 - [Experience League](#experience-league)
+- [データ収集](#data-collection)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル](#xdm)
 - [ID サービス](#identity)
@@ -41,6 +42,18 @@ Experience Leagueは、Adobe製品のスキルアップに役立つ包括的な�
 | 機能 | 説明 |
 | --- | --- |
 | パーソナライズされたホームページ | パーソナライズされたホームページに [Experience League](https://experienceleague.adobe.com/en/home#) でアクセスしてカスタマイズします。 Adobeの資格情報を使用してログインし、上部のメニューで「**[!UICONTROL Experience League]**」を選択して、学習体験の最適化を開始します。 <ul><li>**ブックマーク**:[!UICONTROL  ブックマーク ] 機能を使用して、お気に入りのリソースを 1 か所に保存および収集します。 プレイリスト、記事、チュートリアルなど、様々なコンテンツを保存できます。</li><li>**ラーニングのカスタマイズ**：お客様のニーズに最適な役割、業界、商品、エクスペリエンスレベルでExperience League プロファイルを更新することで、ラーニングエクスペリエンスを強化できます。</li><li>**Recommendations**：最近のアクティビティに基づいて推奨された学習コンテンツを表示します。</li><li>**最近表示された項目**:「[!UICONTROL  最近表示された項目 ] セクションを使用すると、ドキュメントやビデオなど、最近表示されたコンテンツにすばやく戻ることができます。</li><li>**学習リソース**:[!UICONTROL  すべての学習リソース ] パネルを使用して、チュートリアル、ドキュメント、コミュニティ、イベント、認定制度に移動します。</li><li>**新機能**:Experience Leagueの最新コンテンツのストリームについては、[!UICONTROL  新機能 ] の節をご覧ください。</li><li>**オンデマンドで過去のイベントを視聴**:[!UICONTROL  オンデマンドで過去のイベントを視聴 ] セクションで、製品スポットライト、ユースケースおよびチュートリアルに関する過去のライブストリームを視聴します。</li></ul><br> ![Experience Leagueのパーソナライズされたホームページ。](../2025/assets/april/personalized-home-page.png "Experience Leagueのパーソナライズされたホームページ。"){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+## データ収集 {#data-collection}
+
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [!DNL Amazon] Web イベント API 拡張機能 | [!DNL Amazon] Conversions API 拡張機能を使用すると、広告主は web サイトとのやり取りを [!DNL Amazon] と直接共有でき、アトリビューション、データ信頼性およびキャンペーンの最適化が向上します。 この拡張機能はイベント転送をサポートしており、正確なレポートを実現する適切な重複排除を確保しながら、購入、買い物かごへの追加など、コンバージョンイベントを送信できます。 詳しくは、[Amazon拡張機能の概要 ](/help/tags/extensions/server/amazon/overview.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -80,11 +93,11 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | 機能 | 説明 |
 | --- | --- |
-| 文字列フィールドの値が 1 以上になる | 新しい文字列フィールドの長さは、デフォルトで最小 1 になります。 非必須フィールドの null 値は引き続き許容されます。 ベストプラクティスについて詳しくは、[ データモデリングのベストプラクティス ](../../xdm/schema/best-practices.md#data-integrity-tips) に関するガイドを参照してください |
+| 文字列フィールドの値が 1 以上になる | 新しい文字列フィールドの長さは、デフォルトで最小 1 になります。 必須以外のフィールドには、引き続き null 値を使用できます。 ベストプラクティスについて詳しくは、[ データモデリングのベストプラクティス ](../../xdm/schema/best-practices.md#data-integrity-tips) に関するガイドを参照してください |
 
 {style="table-layout:auto"}
 
-Experience Platform でのXDMの詳細については、「 [XDM システムの概要」を参照してください](../../xdm/home.md)。
+Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
 
 ## ID サービス {#identity}
 
@@ -152,8 +165,8 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE ベータ版]{type=Informative} [!DNL Algolia User Profiles] | これで、 [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ソースが使用可能になりました。 このソースを使用して、 [!DNL Algolia] ユーザー プロファイル・アフィニティー・データをExperience Platformに取り込みます。 その後、このデータを使用して、Webサイト、eコマースプラットフォーム、およびアプリケーションに高性能の検索ソリューションを提供することにより、ユーザーエンゲージメント、コンバージョン率、および全体的なエクスペリエンスを向上させることができます。 詳しくは、データを Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md) に[インジェスト [!DNL Algolia User Profiles] する方法に関するガイドを参照してください。 |
-| [!BADGE ベータ版]{type=Informative} の API サポート [!DNL Azure Databricks] | [!DNL Azure Databricks] ソースを API で使用できるようになりました。 [!DNL Flow Service] API を使用して [!DNL Databricks] アカウントを接続し、[!DNL Databricks] データをExperience Platformに取り込みます。 詳しくは、[[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) のドキュメントを参照してください。 |
+| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ソースを使用できるようになりました。 このソースを使用して、[!DNL Algolia] ユーザープロファイルのアフィニティ データをExperience Platformに取り込みます。 その後、このデータを使用して、web サイト、e コマースプラットフォーム、アプリケーションに高性能の検索ソリューションを提供することで、ユーザーエンゲージメント、コンバージョン率および全体的な顧客体験を向上させることができます。 詳しくは、Experience Platformへのデータの取り込み [ 方法に関するガイドを参照し  [!DNL Algolia User Profiles]  ください ](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md)。 |
+| [!DNL Azure Databricks] の [!BADGE Beta]{type=Informative} API サポート | [!DNL Azure Databricks] ソースを API で使用できるようになりました。 [!DNL Flow Service] API を使用して [!DNL Databricks] アカウントを接続し、[!DNL Databricks] データをExperience Platformに取り込みます。 詳しくは、[[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -163,7 +176,7 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 | --- | --- |
 | ストリーミングメディアデータをExperience Platformに取り込むための XDM フィールドを更新しました。 | 新しい XDM フィールドグループ `mediaReporting` を使用して、Adobe Analytics ソースを介してストリーミングメディアデータをExperience Platformに取り込めるようになりました。 このフィールドは、`media.mediaTimed` フィールドを置き換えます。</br> <br>3 か月の移行期間中、`media.mediaTimed` フィールドへのデータ取り込みは続行されます。 ただし、2025 年 7 月末で、`media.mediaTimed` フィールドは完全に非推奨となり、Experience Platform スキーマ UI に表示されなくなります。また、データは `mediaReporting` フィールドを使用してのみ送信されます。</br><br>2025 年 4 月 22 日（PT）より前にストリーミングメディアデータを Platform に収集する Analytics ソースを実装している場合は、新しいフィールドグループを使用してデータを送信するように既存の設定を移行する必要があります。 この移行は、2025 年 7 月末までに完了する必要があります。 移行サポートについては、Adobe アカウントチームにお問い合わせください。 |
 | [!DNL MariaDB] および [!DNL PostgreSQL] の新しい認証タイプ | 基本認証を使用して、Experience Platformで [!DNL MariaDB] および [!DNL PostgreSQL] ソースを認証できるようになりました。 詳しくは、次のドキュメントを参照してください。 <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
-| レコードレベルのフィルタリングのサポート [!DNL Amazon Redshift] | Experience Platform上の [!DNL Amazon Redshift] データに対して行レベルのフィルタリング機能を使用できます。 詳細については、API でのソースの行レベル データのフィルター処理 [に関するガイド](../../sources/tutorials/api/filter.md)を参照してください。 |
+| [!DNL Amazon Redshift] の行レベルのフィルタリングのサポート | Experience Platform上の [!DNL Amazon Redshift] データに対して、行レベルのフィルタリング機能を使用できます。 詳しくは、[API でのソースの行レベルデータのフィルタリング ](../../sources/tutorials/api/filter.md) に関するガイドを参照してください。 |
 
 {style="table-layout:auto"}
 

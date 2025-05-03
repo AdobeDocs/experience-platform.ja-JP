@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3836b369d609448146a273fc6cf29061fd1ea422
+source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 23%
+source-wordcount: '2147'
+ht-degree: 24%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 23%
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
 - [Experience League](#experience-league)
+- [データ収集](#data-collection)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル](#xdm)
 - [ID サービス](#identity)
@@ -41,6 +42,18 @@ Experience Leagueは、Adobe製品のスキルアップに役立つ包括的な�
 | 機能 | 説明 |
 | --- | --- |
 | パーソナライズされたホームページ | [Experience League](https://experienceleague.adobe.com/en/home#) のパーソナライズされたホームページにアクセスしてカスタマイズします。 Adobeの資格情報を使用してログインし、上部のメニューで「**[!UICONTROL Experience League]**」を選択して、学習体験の最適化を開始します。 <ul><li>**ブックマーク**:[!UICONTROL  ブックマーク ] 機能を使用して、お気に入りのリソースを 1 か所に保存および収集します。 プレイリスト、記事、チュートリアルなど、様々なコンテンツを保存できます。</li><li>**ラーニングのカスタマイズ**：お客様のニーズに最適な役割、業界、商品、エクスペリエンスレベルでExperience League プロファイルを更新することで、ラーニングエクスペリエンスを強化できます。</li><li>**Recommendations**：最近のアクティビティに基づいて推奨された学習コンテンツを表示します。</li><li>**最近表示された項目**:「[!UICONTROL  最近表示された項目 ] セクションを使用すると、ドキュメントやビデオなど、最近表示されたコンテンツにすばやく戻ることができます。</li><li>**学習リソース**:[!UICONTROL  すべての学習リソース ] パネルを使用して、チュートリアル、ドキュメント、コミュニティ、イベント、認定制度に移動します。</li><li>**新機能**:Experience Leagueの最新コンテンツのストリームについては、[!UICONTROL  新機能 ] の節をご覧ください。</li><li>**オンデマンドで過去のイベントを視聴**:[!UICONTROL  オンデマンドで過去のイベントを視聴 ] セクションで、製品スポットライト、ユースケースおよびチュートリアルに関する過去のライブストリームを視聴します。</li></ul><br> ![Experience Leagueのパーソナライズされたホームページ。](../2025/assets/april/personalized-home-page.png "Experience Leagueのパーソナライズされたホームページ。"){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+## データ収集 {#data-collection}
+
+Adobe Experience Platform では、クライアントサイドのカスタマーエクスペリエンスデータを収集し、Adobe Experience Platform Edge Network に送信できます。そこでデータを補強して変換し、アドビまたはアドビ以外の宛先に配信できます。
+
+**新機能または更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [!DNL Amazon] Web イベント API 拡張機能 | [!DNL Amazon] Conversions API 拡張機能を使用すると、広告主は web サイトとのやり取りを [!DNL Amazon] と直接共有でき、アトリビューション、データ信頼性およびキャンペーンの最適化が向上します。 この拡張機能はイベント転送をサポートしており、正確なレポートを実現する適切な重複排除を確保しながら、購入、買い物かごへの追加など、コンバージョンイベントを送信できます。 詳しくは、[Amazon拡張機能の概要 ](/help/tags/extensions/server/amazon/overview.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
