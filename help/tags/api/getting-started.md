@@ -53,7 +53,7 @@ Adobe Developer Console を使用して、次の 3 つのアクセス資格情�
 
 >[!IMPORTANT]
 >
->今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、Experience Platform API 認証チュートリアルの [!BADGE  非推奨 ]{type=negative}[JSON web トークン（JWT）を生成 ](/help/landing/api-authentication.md#jwt) の節を参照してください。
+>今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、Experience Platform API 認証チュートリアルの [!BADGE &#x200B; 非推奨 &#x200B;]{type=negative}[JSON web トークン（JWT）を生成 ](/help/landing/api-authentication.md#jwt) の節を参照してください。
 
 「**次へ**」をクリックして続行します。
 
@@ -73,8 +73,8 @@ Adobe Developer Console を使用して、次の 3 つのアクセス資格情�
 
 API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Experience Platform API]** ページに、Experience Platform API へのすべての呼び出しで必要な次の資格情報が表示されます。
 
-* `{API_KEY}` （[!UICONTROL  クライアント ID]）
-* `{ORG_ID}` （[!UICONTROL  組織 ID]）
+* `{API_KEY}` （[!UICONTROL &#x200B; クライアント ID]）
+* `{ORG_ID}` （[!UICONTROL &#x200B; 組織 ID]）
 
 ![Developer Consoleに API を追加した後の統合情報 ](/help/tags/images/api/getting-started/api-integration-information.png)
 
