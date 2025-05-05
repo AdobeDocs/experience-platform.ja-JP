@@ -2,7 +2,7 @@
 title: Reactor API の認証とアクセス
 description: Reactor API の使用を開始する方法（必要なアクセス資格情報を生成する手順など）について説明します。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 31e52dce23c558aaba822fe27d2e58ed6a7ce18d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 54%
@@ -16,6 +16,8 @@ ht-degree: 54%
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
+* `Accept: application/vnd.api+json;revision=1`
+* `Content-Type: application/vnd.api+json`
 
 このガイドでは、Adobe Developer Console を使用してこれらの各ヘッダーの値を収集し、Reactor API の呼び出しを開始する方法について説明します。
 
@@ -51,7 +53,7 @@ Adobe Developer Console を使用して、次の 3 つのアクセス資格情�
 
 >[!IMPORTANT]
 >
->今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、「[!BADGE &#x200B; 非推奨 &#x200B;]」の節を参照してください。{type=negative}Experience Platform API 認証チュートリアルの [JSON web トークン（JWT）を生成する ](/help/landing/api-authentication.md#jwt)。
+>今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、Experience Platform API 認証チュートリアルの [!BADGE  非推奨 ]{type=negative}[JSON web トークン（JWT）を生成 ](/help/landing/api-authentication.md#jwt) の節を参照してください。
 
 「**次へ**」をクリックして続行します。
 
@@ -71,8 +73,8 @@ Adobe Developer Console を使用して、次の 3 つのアクセス資格情�
 
 API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Experience Platform API]** ページに、Experience Platform API へのすべての呼び出しで必要な次の資格情報が表示されます。
 
-* `{API_KEY}` （[!UICONTROL &#x200B; クライアント ID]）
-* `{ORG_ID}` （[!UICONTROL &#x200B; 組織 ID]）
+* `{API_KEY}` （[!UICONTROL  クライアント ID]）
+* `{ORG_ID}` （[!UICONTROL  組織 ID]）
 
 ![Developer Consoleに API を追加した後の統合情報 ](/help/tags/images/api/getting-started/api-integration-information.png)
 
