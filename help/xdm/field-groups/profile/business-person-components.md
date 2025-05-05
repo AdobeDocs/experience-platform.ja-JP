@@ -9,9 +9,9 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL XDM ビジネスユーザーコンポーネント ] スキーマフィールドグループ
+# [!UICONTROL XDM ビジネスユーザーコンポーネント &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL XDM ビジネスユーザーコンポーネント ] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループで、1 人の人物の複数のソースレコードや、人物のセグメント化に必要なその他の属性をキャプチャするものです。
+[!UICONTROL XDM ビジネスユーザーコンポーネント &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループで、1 人の人物の複数のソースレコードや、人物のセグメント化に必要なその他の属性をキャプチャするものです。
 
 Real-Time CDPのB2B editionで [ リアルタイム顧客プロファイル ](../../../profile/home.md) を使用して個人のプロファイルを作成すると、そのプロファイルの作成に使用される情報が多数のソースレコードから取得される可能性があります。 例えば、ある人物が 2 つの異なる会社で働いている場合、多くの CRM システムでは、その人物のコピーが意図的に複製されるので、1 つのコピーは会社 A にリンクされ、もう 1 つは会社 B にリンクされます。そのデータをAdobe Experience Platformに取り込む場合、このフィールドグループを使用して、これらの異なるソースレコードを 1 つの表現に結合します。
 
@@ -34,7 +34,7 @@ Real-Time CDPのB2B editionで [ リアルタイム顧客プロファイル ](..
 | `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | このリードがコンバージョンされた場合の関連連絡先の複合識別子。 |
 | `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | ユーザーのデータの元となるソースシステムの複合識別子。 |
 | `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | ユーザーの複合識別子。 |
-| `workEmail` | [[!UICONTROL  メールアドレス ]](../../data-types/b2b-source.md) | 人物の仕事用電子メール ID。 |
+| `workEmail` | [[!UICONTROL &#x200B; メールアドレス &#x200B;]](../../data-types/b2b-source.md) | 人物の仕事用電子メール ID。 |
 | `personGroupID` | 文字列 | 人物のグループ識別子。 |
 | `personScore` | 文字列 | CRM システムによって人物に対して生成されたスコア。 |
 | `personSource` | 文字列 | ユーザーのデータの元となるソースシステムの一意の文字列ベースの識別子。 |

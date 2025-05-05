@@ -69,7 +69,7 @@ Experience Platformから [!DNL Zendesk] アカウントにデータをエクス
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -103,8 +103,8 @@ Experience Platformから [!DNL Zendesk] アカウントにデータをエクス
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -131,6 +131,7 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
      | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * これらのマッピングの使用例を次に示します。
+
      ![ 属性マッピングを含むExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
@@ -141,7 +142,7 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 
 ### オーディエンスの書き出しのスケジュールと例 {#schedule-segment-export-example}
 
-アクティベーションワークフローの [[!UICONTROL  オーディエンスの書き出しをスケジュール ]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順では、Experience Platform オーディエンスを [!DNL Zendesk] のカスタムフィールド属性に手動でマッピングする必要があります。
+アクティベーションワークフローの [[!UICONTROL &#x200B; オーディエンスの書き出しをスケジュール &#x200B;]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 手順では、Experience Platform オーディエンスを [!DNL Zendesk] のカスタムフィールド属性に手動でマッピングする必要があります。
 
 これを行うには、各セグメントを選択し、対応するカスタムフィールド属性を [!DNL Zendesk] の「**[!UICONTROL マッピング ID]**」フィールドから入力します。
 
@@ -159,7 +160,7 @@ XDM フィールドを [!DNL Zendesk] 宛先フィールドに正しくマッピ
 1. オーディエンスの概要を監視し、プロファイルの数がセグメント内の数と一致していることを確認します。
    ![ セグメントを示すExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/zendesk/segment.png)
 
-1. [!DNL Zendesk] web サイトにログインし、**[!UICONTROL 連絡先]** ページに移動して、オーディエンスのプロファイルが追加されたかどうかを確認します。 このリストは、オーディエンス**[!UICONTROL  マッピング ID]**およびオーディエンスステータスで作成された追加フィールドの列を表示するように設定できます。
+1. [!DNL Zendesk] web サイトにログインし、**[!UICONTROL 連絡先]** ページに移動して、オーディエンスのプロファイルが追加されたかどうかを確認します。 このリストは、オーディエンス&#x200B;**[!UICONTROL &#x200B; マッピング ID]**&#x200B;およびオーディエンスステータスで作成された追加フィールドの列を表示するように設定できます。
    ![ オーディエンス名で作成された追加フィールドを含む連絡先ページを示す Zendesk UI のスクリーンショット。](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. または、個々の **[!UICONTROL ユーザー]** ページにドリルダウンして、オーディエンス名とオーディエンスのステータスを表示する **[!UICONTROL 追加フィールド]** セクションを確認することもできます。

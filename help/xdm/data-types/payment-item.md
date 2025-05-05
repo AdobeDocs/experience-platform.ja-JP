@@ -11,9 +11,9 @@ ht-degree: 19%
 
 ---
 
-# [!UICONTROL  支払い項目 ] データタイプ
+# [!UICONTROL &#x200B; 支払い項目 &#x200B;] データタイプ
 
-[!UICONTROL  支払い項目 ] は、注文に関連付けられた支払いを記述する標準の Experience Data Model （XDM）データタイプで、支払いのタイプ、金額、関連する通貨を定義します。
+[!UICONTROL &#x200B; 支払い項目 &#x200B;] は、注文に関連付けられた支払いを記述する標準の Experience Data Model （XDM）データタイプで、支払いのタイプ、金額、関連する通貨を定義します。
 
 ![ 支払い項目の画像 ](../images/data-types/payment-item.PNG){width=400}
 

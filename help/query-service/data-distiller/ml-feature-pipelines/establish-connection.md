@@ -19,18 +19,18 @@ ht-degree: 0%
 
 ### 接続資格情報の取得 {#obtain-credentials}
 
-Data Distillerおよびその他のAdobe Experience Platform サービスに接続するには、Experience Platform API 資格情報が必要です。 API 資格情報は、Experience Platformへの開発者アクセス権を持つユーザーが ](https://developer.adobe.com/console/home)0}Adobe Developer Console} で作成できます。 [データサイエンスワークフロー専用の Oauth2 API 認証情報を作成し、組織のAdobe システム管理者に、適切な権限を持つロールに認証情報を割り当てることをお勧めします。
+Data Distillerおよびその他のAdobe Experience Platform サービスに接続するには、Experience Platform API 資格情報が必要です。 API 資格情報は、Experience Platformへの開発者アクセス権を持つユーザーが [&#128279;](https://developer.adobe.com/console/home)0&rbrace;Adobe Developer Console&rbrace; で作成できます。 データサイエンスワークフロー専用の Oauth2 API 認証情報を作成し、組織のAdobe システム管理者に、適切な権限を持つロールに認証情報を割り当てることをお勧めします。
 
 API 認証情報の作成および必要な権限の取得に関する詳細な手順については、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md) を参照してください。
 
 データサイエンスに推奨される権限は次のとおりです。
 
 - データサイエンスに使用されるサンドボックス （通常は `prod`）
-- データモデリング：[!UICONTROL  スキーマの管理 ]
-- データ管理：[!UICONTROL  データセットの管理 ]
-- データ取り込み：[!UICONTROL  ソースの表示 ]
-- 宛先：[!UICONTROL  データセット宛先の管理とアクティブ化 ]
-- クエリサービス：[!UICONTROL  クエリの管理 ]
+- データモデリング：[!UICONTROL &#x200B; スキーマの管理 &#x200B;]
+- データ管理：[!UICONTROL &#x200B; データセットの管理 &#x200B;]
+- データ取り込み：[!UICONTROL &#x200B; ソースの表示 &#x200B;]
+- 宛先：[!UICONTROL &#x200B; データセット宛先の管理とアクティブ化 &#x200B;]
+- クエリサービス：[!UICONTROL &#x200B; クエリの管理 &#x200B;]
 
 デフォルトでは、役割（およびその役割に割り当てられた API 資格情報）は、ラベル付きデータへのアクセスからブロックされます。 組織のデータガバナンスポリシーに従って、システム管理者は、データサイエンスの使用に適していると思われる特定のラベル付きデータへのアクセス権を役割に付与できる場合があります。 Experience Platformのお客様は、関連する規制や組織のポリシーに準拠するために、ラベルアクセスとポリシーを適切に管理する責任を負います。
 

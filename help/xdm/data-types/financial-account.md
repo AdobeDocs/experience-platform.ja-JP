@@ -9,9 +9,9 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL  金融口座 ] データタイプ
+# [!UICONTROL &#x200B; 金融口座 &#x200B;] データタイプ
 
-[!UICONTROL  金融口座 ] は、金融口座のタイプ、所有者、現在の残高など、金融口座の詳細を記述する標準 XDM データタイプです。
+[!UICONTROL &#x200B; 金融口座 &#x200B;] は、金融口座のタイプ、所有者、現在の残高など、金融口座の詳細を記述する標準 XDM データタイプです。
 
 ![](../images/data-types/financial-account.png)
 

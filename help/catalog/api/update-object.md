@@ -220,7 +220,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3
 
 +++
 
-次の JSON は、PATCH リクエストの後のデータセット構造を示しています **** この更新により、以前の手動作成手順を実行しなくても、見つからない `extensions.adobe_lakeHouse.rowExpiration` オブジェクトが自動的に作成されます。 この例では、`/v2/` PATCH リクエストによって複数の操作が不要になり、更新がより簡単かつ効率的になる仕組みを示しています。
+次の JSON は、PATCH リクエストの後のデータセット構造を示しています **&#x200B;**&#x200B;この更新により、以前の手動作成手順を実行しなくても、見つからない `extensions.adobe_lakeHouse.rowExpiration` オブジェクトが自動的に作成されます。 この例では、`/v2/` PATCH リクエストによって複数の操作が不要になり、更新がより簡単かつ効率的になる仕組みを示しています。
 
 
 +++選択すると例が表示されます

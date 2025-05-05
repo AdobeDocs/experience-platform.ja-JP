@@ -20,7 +20,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-[!UICONTROL Adobe アプリケーション ] で、「**[!UICONTROL Adobe Audience Manager]**」を選択し、次に「**[!UICONTROL 設定]**」を選択します。
+[!UICONTROL Adobe アプリケーション &#x200B;] で、「**[!UICONTROL Adobe Audience Manager]**」を選択し、次に「**[!UICONTROL 設定]**」を選択します。
 
 ![カタログ](../../../../images/tutorials/create/aam/catalog.png)
 
@@ -30,14 +30,14 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >Audience Manager ソースからExperience Platformに地域データを取り込むことはできません。 地域データを必要とする Analytics のユースケースがある場合は、[Analytics ソースコネクタ ](../adobe-applications/analytics.md) を使用してください。
 
-[!UICONTROL  特性とセグメントを選択 ] 手順が表示され、特性、セグメントおよびデータを調査して選択するためのインタラクティブインターフェイスが利用できます。
+[!UICONTROL &#x200B; 特性とセグメントを選択 &#x200B;] 手順が表示され、特性、セグメントおよびデータを調査して選択するためのインタラクティブインターフェイスが利用できます。
 
-* インターフェイスの左側のパネルには、[!UICONTROL  特性とセグメントを選択 ] オプションと、使用可能なすべてのセグメントの階層ディレクトリが含まれています。
+* インターフェイスの左側のパネルには、[!UICONTROL &#x200B; 特性とセグメントを選択 &#x200B;] オプションと、使用可能なすべてのセグメントの階層ディレクトリが含まれています。
 * インターフェイスの右半分を使用すると、選択したセグメントを操作し、使用する特定のデータを選択できます。
 
 ![add-data](../../../../images/tutorials/create/aam/add-data.png)
 
-使用可能なセグメント間を移動するには、アクセスするフォルダーを [!UICONTROL  すべてのセグメント ] パネルから選択します。 フォルダーを選択すると、フォルダーの階層をトラバースでき、フィルタリングするセグメントのリストが表示されます。
+使用可能なセグメント間を移動するには、アクセスするフォルダーを [!UICONTROL &#x200B; すべてのセグメント &#x200B;] パネルから選択します。 フォルダーを選択すると、フォルダーの階層をトラバースでき、フィルタリングするセグメントのリストが表示されます。
 
 ![segment-folder](../../../../images/tutorials/create/aam/segment-folder.png)
 
@@ -55,7 +55,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![all-segments](../../../../images/tutorials/create/aam/all-segments.png)
 
-[!UICONTROL  レビュー ] 手順が表示され、Experience Platformに接続する前に、選択した特性とセグメントをレビューすることができます。 詳細は、次のカテゴリに分類されます。
+[!UICONTROL &#x200B; レビュー &#x200B;] 手順が表示され、Experience Platformに接続する前に、選択した特性とセグメントをレビューすることができます。 詳細は、次のカテゴリに分類されます。
 
 * **[!UICONTROL 接続]**：ソースプラットフォームと接続のステータスを表示します。
 * **[!UICONTROL 選択したデータ]**：選択したセグメントと有効な特性の数が表示されます。

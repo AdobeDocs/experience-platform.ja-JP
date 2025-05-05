@@ -97,11 +97,11 @@ Adobe Real-Time Customer Data Platform B2B editionには、[ アカウント ](.
 >
 >現在、ソーススキーマから参照スキーマに定義できるのは、多対 1 および 1 対 1 の関係のみです。 1 対多の関係の場合、「多」を表すスキーマで関係フィールドを定義する必要があります。
 
-関係フィールドを設定するには、キャンバス内で該当するフィールドを選択し、**[!UICONTROL スキーマプロパティ]** サイドバーで [!UICONTROL  関係を追加 ] を選択します。 [!DNL Opportunities] スキーマの場合、目標はアカウントとの多対 1 の関係を確立することなので、これは `accountKey.sourceKey` のフィールドになります。
+関係フィールドを設定するには、キャンバス内で該当するフィールドを選択し、**[!UICONTROL スキーマプロパティ]** サイドバーで [!UICONTROL &#x200B; 関係を追加 &#x200B;] を選択します。 [!DNL Opportunities] スキーマの場合、目標はアカウントとの多対 1 の関係を確立することなので、これは `accountKey.sourceKey` のフィールドになります。
 
 ![sourceKey フィールドと「関係を追加」がハイライト表示されたスキーマエディター ](../images/tutorials/relationship-b2b/add-relationship.png)
 
-[!UICONTROL  関係を追加 ] ダイアログが表示されます。 このダイアログを使用して、関係の詳細を指定します。 関係タイプは、デフォルトで **[!UICONTROL 多対 1]** に設定されます。
+[!UICONTROL &#x200B; 関係を追加 &#x200B;] ダイアログが表示されます。 このダイアログを使用して、関係の詳細を指定します。 関係タイプは、デフォルトで **[!UICONTROL 多対 1]** に設定されます。
 
 ![ 多対 1 のスキーマ関係がハイライト表示された関係を追加ダイアログ。](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
@@ -135,12 +135,12 @@ Adobe Real-Time Customer Data Platform B2B editionには、[ アカウント ](.
 
 >[!NOTE]
 >
->関連するすべての関係を表示するには、参照スキーマのプライマリ ID フィールドに続いて [!UICONTROL  関係の表示 ] を選択します。
+>関連するすべての関係を表示するには、参照スキーマのプライマリ ID フィールドに続いて [!UICONTROL &#x200B; 関係の表示 &#x200B;] を選択します。
 >![関係フィールドが選択され、関係を表示がハイライト表示されたスキーマエディター。](../images/tutorials/relationship-b2b/view-relationships.png " 関係フィールドが選択され、関係を表示がハイライト表示されたスキーマエディター。"){width="100" zoomable="yes"}
 
 ![ 関係フィールドと「関係を編集」がハイライト表示されたスキーマエディター ](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
 
-[!UICONTROL  関係を編集 ] ダイアログが表示されます。 このダイアログから、参照スキーマと関係名を変更したり、関係を削除したりできます。 多対 1 関係タイプは変更できません。
+[!UICONTROL &#x200B; 関係を編集 &#x200B;] ダイアログが表示されます。 このダイアログから、参照スキーマと関係名を変更したり、関係を削除したりできます。 多対 1 関係タイプは変更できません。
 
 ![ 関係を編集ダイアログ ](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
 
@@ -152,7 +152,7 @@ Adobe Real-Time Customer Data Platform B2B editionには、[ アカウント ](.
 
 ## 関係のフィルタリングと検索 {#filter-and-search}
 
-[!UICONTROL  スキーマ ] ワークスペースの「[!UICONTROL  関係 ]」タブから、スキーマ内の特定の関係をフィルタリングして検索できます。 このビューを使用すると、関係をすばやく見つけて管理できます。 フィルタリングオプションの手順について詳しくは、[ スキーマリソースの調査 ](../ui/explore.md#lookup) に関するドキュメントを参照してください。
+[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの「[!UICONTROL &#x200B; 関係 &#x200B;]」タブから、スキーマ内の特定の関係をフィルタリングして検索できます。 このビューを使用すると、関係をすばやく見つけて管理できます。 フィルタリングオプションの手順について詳しくは、[ スキーマリソースの調査 ](../ui/explore.md#lookup) に関するドキュメントを参照してください。
 
 ![ スキーマ ワークスペースの「関係」タブ ](../images/tutorials/relationship-b2b/relationship-tab.png)
 

@@ -29,7 +29,7 @@ ht-degree: 30%
 
 ## 概要 {#overview}
 
-[!UICONTROL  ユースケースプレイブック ] は、Real-Time CDPまたはAdobe Journey Optimizerを使い始めた際に、何から始めればよいかわからない場合や、目的のユースケースを達成するために適切なアセットを作成する方法がわからない場合に、問題を解決するのに役立ちます。
+[!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] は、Real-Time CDPまたはAdobe Journey Optimizerを使い始めた際に、何から始めればよいかわからない場合や、目的のユースケースを達成するために適切なアセットを作成する方法がわからない場合に、問題を解決するのに役立ちます。
 
 ユースケースプレイブックは、次の方法で役に立ちます。
 
@@ -52,7 +52,7 @@ ht-degree: 30%
 
 ## 対象 {#availability}
 
-一部の [!UICONTROL  ユースケースプレイブック ] はReal-Time CDPのユースケースに合わせて調整されていますが、その他はJourney Optimizerを使用するお客様に最適です。 カタログを参照して、製品とユースケースに最適なプレイブックを見つけます。 Real-Time CDPとJourney Optimizerについて詳しくは、[Adobeの製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html) を参照してください。
+一部の [!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] はReal-Time CDPのユースケースに合わせて調整されていますが、その他はJourney Optimizerを使用するお客様に最適です。 カタログを参照して、製品とユースケースに最適なプレイブックを見つけます。 Real-Time CDPとJourney Optimizerについて詳しくは、[Adobeの製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html) を参照してください。
 
 ## UI ガイド {#ui-guides}
 

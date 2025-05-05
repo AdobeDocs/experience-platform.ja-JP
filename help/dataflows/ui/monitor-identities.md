@@ -47,7 +47,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 ![Id ダッシュボード。 ソースごとに受信したレコード数に関する情報が表示されます。](../assets/ui/monitor-identities/sources.png)
 
-[!UICONTROL ID 処理 ] ページには、[!DNL Identity Service] に取り込まれたレコードに関する情報（追加された ID、作成されたグラフや更新されたグラフの数など）が含まれています。
+[!UICONTROL ID 処理 &#x200B;] ページには、[!DNL Identity Service] に取り込まれたレコードに関する情報（追加された ID、作成されたグラフや更新されたグラフの数など）が含まれています。
 
 このダッシュボードビューでは、次の指標を使用できます。
 
@@ -91,7 +91,7 @@ Adobe Experience Platform ID サービスを利用すると、デバイスやシ
 
 ![ フィルターアイコンがハイライト表示されています。 このアイコンを選択すると、選択したデータフローの詳細を表示できます。](../assets/ui/monitor-identities/dataflows-filter.png)
 
-[!UICONTROL  データフロー実行の詳細 ] ページには、[!DNL Identity] データフロー実行に関する詳細（組織 ID やデータフロー実行 ID など）が表示されます。 また、このページには、取り込みプロセスでエラーが発生した場合に、[!DNL Identity Service] から提供される対応するエラーコードとエラーメッセージも表示されます。
+[!UICONTROL &#x200B; データフロー実行の詳細 &#x200B;] ページには、[!DNL Identity] データフロー実行に関する詳細（組織 ID やデータフロー実行 ID など）が表示されます。 また、このページには、取り込みプロセスでエラーが発生した場合に、[!DNL Identity Service] から提供される対応するエラーコードとエラーメッセージも表示されます。
 
 ![ 選択したデータフローに関する詳細情報を示すダッシュボードが表示されます。](../assets/ui/monitor-identities/dataflow-run-details.png)
 

@@ -10,9 +10,9 @@ ht-degree: 13%
 
 ---
 
-# [!UICONTROL  同意文字列 ] データタイプ
+# [!UICONTROL &#x200B; 同意文字列 &#x200B;] データタイプ
 
-[!UICONTROL  同意文字列 ] は、顧客の同意を表す文字列値を記述する標準 XDM データタイプです。 同意文字列の標準（[IAB Transparency and Consent Framework （TCF） 2.0](../field-groups/profile/iab.md) など）などのコンテキスト情報が含まれます。
+[!UICONTROL &#x200B; 同意文字列 &#x200B;] は、顧客の同意を表す文字列値を記述する標準 XDM データタイプです。 同意文字列の標準（[IAB Transparency and Consent Framework （TCF） 2.0](../field-groups/profile/iab.md) など）などのコンテキスト情報が含まれます。
 
 ![](../images/data-types/consent-string.png)
 

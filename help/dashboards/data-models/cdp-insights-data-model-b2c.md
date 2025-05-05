@@ -45,9 +45,9 @@ Real-Time CDP レポートは、プロファイルデータと、そのオーデ
 
 #### プロファイル数のユースケース {#profile-count}
 
-[!UICONTROL  プロファイル数 ] ウィジェットで使用されるロジックは、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL  プロファイル数 ] ウィジェットのドキュメント ](../guides/profiles.md#profile-count) を参照してください。
+[!UICONTROL &#x200B; プロファイル数 &#x200B;] ウィジェットで使用されるロジックは、スナップショットが作成された時点でのプロファイルストア内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL &#x200B; プロファイル数 &#x200B;] ウィジェットのドキュメント ](../guides/profiles.md#profile-count) を参照してください。
 
-[!UICONTROL  プロファイル数 ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL &#x200B; プロファイル数 &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -65,9 +65,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### 単一の ID プロファイルのユースケース {#single-identity-profiles}
 
-[!UICONTROL  単一の ID プロファイル ] ウィジェットに使用されるロジックは、ID を作成する 1 つのタイプの ID タイプのみを持つ組織のプロファイルの数を提供します。 詳しくは、[[!UICONTROL  単一の ID プロファイル ] ウィジェットのドキュメント ](../guides/profiles.md#single-identity-profiles) を参照してください。
+[!UICONTROL &#x200B; 単一の ID プロファイル &#x200B;] ウィジェットに使用されるロジックは、ID を作成する 1 つのタイプの ID タイプのみを持つ組織のプロファイルの数を提供します。 詳しくは、[[!UICONTROL &#x200B; 単一の ID プロファイル &#x200B;] ウィジェットのドキュメント ](../guides/profiles.md#single-identity-profiles) を参照してください。
 
-[!UICONTROL  単一の ID プロファイル ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL &#x200B; 単一の ID プロファイル &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -98,9 +98,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### ID 別プロファイルのユースケース {#profiles-by-identity}
 
-[!UICONTROL ID 別プロファイル ] ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 詳しくは、[[!UICONTROL ID 別プロファイル ] ウィジェットのドキュメント ](../guides/profiles.md#profiles-by-identity) を参照してください。
+[!UICONTROL ID 別プロファイル &#x200B;] ウィジェットは、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を表示します。 詳しくは、[[!UICONTROL ID 別プロファイル &#x200B;] ウィジェットのドキュメント ](../guides/profiles.md#profiles-by-identity) を参照してください。
 
-[!UICONTROL ID 別プロファイル ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL ID 別プロファイル &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -122,9 +122,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### ID ユースケース別の単一の ID プロファイル {#single-identity-profiles-by-identity}
 
-[!UICONTROL ID 別の単一の ID プロファイル ] ウィジェットで使用されるロジックは、単一の一意の ID のみで識別されるプロファイルの合計数を示しています。 詳しくは、[ID ウィジェット別の単一の ID プロファイル ](../guides/profiles.md#single-identity-profiles-by-identity) ドキュメントを参照してください。
+[!UICONTROL ID 別の単一の ID プロファイル &#x200B;] ウィジェットで使用されるロジックは、単一の一意の ID のみで識別されるプロファイルの合計数を示しています。 詳しくは、[ID ウィジェット別の単一の ID プロファイル ](../guides/profiles.md#single-identity-profiles-by-identity) ドキュメントを参照してください。
 
-[!UICONTROL ID 別に単一の ID プロファイル ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL ID 別に単一の ID プロファイル &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -161,9 +161,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### オーディエンスサイズのユースケース {#audience-size}
 
-[!UICONTROL  オーディエンスサイズ ] ウィジェットで使用されるロジックは、最新のスナップショットの時点での、選択したオーディエンス内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL  オーディエンスサイズ ] ウィジェットのドキュメント ](../guides/audiences.md#audience-size) を参照してください。
+[!UICONTROL &#x200B; オーディエンスサイズ &#x200B;] ウィジェットで使用されるロジックは、最新のスナップショットの時点での、選択したオーディエンス内の結合プロファイルの合計数を返します。 詳しくは、[[!UICONTROL &#x200B; オーディエンスサイズ &#x200B;] ウィジェットのドキュメント ](../guides/audiences.md#audience-size) を参照してください。
 
-[!UICONTROL  オーディエンスサイズ ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL &#x200B; オーディエンスサイズ &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -185,9 +185,9 @@ WHERE
 
 #### オーディエンスサイズ変更トレンドのユースケース {#audience-size-change-trend}
 
-[!UICONTROL  オーディエンスサイズの変化のトレンド ] ウィジェットに使用されるロジックは、最新の日別スナップショット間の特定のオーディエンスに選定されたプロファイルの合計数の違いを示す折れ線グラフを提供します。 詳しくは、[[!UICONTROL  オーディエンスサイズの変化のトレンド ] ウィジェットのドキュメント ](../guides/audiences.md#audience-size-change-trend) を参照してください。
+[!UICONTROL &#x200B; オーディエンスサイズの変化のトレンド &#x200B;] ウィジェットに使用されるロジックは、最新の日別スナップショット間の特定のオーディエンスに選定されたプロファイルの合計数の違いを示す折れ線グラフを提供します。 詳しくは、[[!UICONTROL &#x200B; オーディエンスサイズの変化のトレンド &#x200B;] ウィジェットのドキュメント ](../guides/audiences.md#audience-size-change-trend) を参照してください。
 
-[!UICONTROL  オーディエンスサイズ変更トレンド ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL &#x200B; オーディエンスサイズ変更トレンド &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -222,9 +222,9 @@ SELECT date_key,
 
 #### 最も使用されている宛先のユースケース {#most-used-destinations}
 
-[!UICONTROL  最も使用されている宛先 ] ウィジェットで使用されるロジックには、組織で最も使用されている宛先が、マッピングされたオーディエンスの数に応じてリストされます。 このランキングは、使用率が低い可能性のある宛先を表示しながら、使用されている宛先に関するインサイトも提供します。 詳しくは、[[!UICONTROL  最も使用されている宛先 ] ウィジェット ](../guides/destinations.md#most-used-destinations) に関するドキュメントを参照してください。
+[!UICONTROL &#x200B; 最も使用されている宛先 &#x200B;] ウィジェットで使用されるロジックには、組織で最も使用されている宛先が、マッピングされたオーディエンスの数に応じてリストされます。 このランキングは、使用率が低い可能性のある宛先を表示しながら、使用されている宛先に関するインサイトも提供します。 詳しくは、[[!UICONTROL &#x200B; 最も使用されている宛先 &#x200B;] ウィジェット ](../guides/destinations.md#most-used-destinations) に関するドキュメントを参照してください。
 
-[!UICONTROL  最も使用されている宛先 ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL &#x200B; 最も使用されている宛先 &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -247,9 +247,9 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### 最近アクティブ化されたオーディエンスのユースケース {#recently-activated-audiences}
 
-[!UICONTROL  最近アクティブ化されたオーディエンス ] ウィジェットのロジックは、宛先に最近マッピングされたオーディエンスのリストを提供します。 このリストには、システムでアクティブに使用されているオーディエンスと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、[[!UICONTROL  最近アクティブ化されたオーディエンス ] ウィジェットのドキュメント ](../guides/destinations.md#recently-activated-audiences) を参照してください。
+[!UICONTROL &#x200B; 最近アクティブ化されたオーディエンス &#x200B;] ウィジェットのロジックは、宛先に最近マッピングされたオーディエンスのリストを提供します。 このリストには、システムでアクティブに使用されているオーディエンスと宛先のスナップショットが表示され、誤ったマッピングのトラブルシューティングに役立ちます。 詳しくは、[[!UICONTROL &#x200B; 最近アクティブ化されたオーディエンス &#x200B;] ウィジェットのドキュメント ](../guides/destinations.md#recently-activated-audiences) を参照してください。
 
-[!UICONTROL  最近アクティブ化されたオーディエンス ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL &#x200B; 最近アクティブ化されたオーディエンス &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -291,9 +291,9 @@ LIMIT
 
 #### オーディエンスのユースケースの ID 別プロファイル {#audience-profiles-by-identity}
 
-[!UICONTROL ID 別プロファイル ] ウィジェットで使用されるロジックは、特定のオーディエンスに対して、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を提供します。 詳しくは、[[!UICONTROL ID 別プロファイル ] ウィジェットのドキュメント ](../guides/audiences.md#profiles-by-identity) を参照してください。
+[!UICONTROL ID 別プロファイル &#x200B;] ウィジェットで使用されるロジックは、特定のオーディエンスに対して、プロファイルストアにあるすべての結合済みプロファイルで ID の分類を提供します。 詳しくは、[[!UICONTROL ID 別プロファイル &#x200B;] ウィジェットのドキュメント ](../guides/audiences.md#profiles-by-identity) を参照してください。
 
-[!UICONTROL ID 別プロファイル ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL ID 別プロファイル &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -327,9 +327,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### ID 重複（プロファイル）のユースケース {#profiles-identity-overlap}
 
-[!UICONTROL ID の重複 ] ウィジェットで使用されているロジックは、選択した 2 つの ID を含む **プロファイルストア** 内のプロファイルの重複を表示します。 詳しくは、[[!UICONTROL  プロファイル ] ダッシュボードドキュメント [!UICONTROL  の ](../guides/profiles.md#identity-overlap)ID の重複 ] ウィジェットの節を参照してください。
+[!UICONTROL ID の重複 &#x200B;] ウィジェットで使用されているロジックは、選択した 2 つの ID を含む **プロファイルストア** 内のプロファイルの重複を表示します。 詳しくは、[[!UICONTROL &#x200B; プロファイル &#x200B;] ダッシュボードドキュメント [[!UICONTROL &#x200B; の &#x200B;]](../guides/profiles.md#identity-overlap)ID の重複 ] ウィジェットの節を参照してください。
 
-[!UICONTROL ID の重複 ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL ID の重複 &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 
@@ -396,9 +396,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 #### ID 重複（オーディエンス）のユースケース {#audiences-identity-overlap}
 
-[!UICONTROL  オーディエンス ] ダッシュボード [!UICONTROL ID の重複 ] ウィジェットで使用されているロジックは、特定のオーディエンス用に選択された 2 つの ID を含んだプロファイルの重複を示しています。 詳しくは、[[!UICONTROL  オーディエンス ] ダッシュボードドキュメントの [!UICONTROL ID の重複 ] ウィジェットの節を参照してください ](../guides/audiences.md#identity-overlap)。
+[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボード [!UICONTROL ID の重複 &#x200B;] ウィジェットで使用されているロジックは、特定のオーディエンス用に選択された 2 つの ID を含んだプロファイルの重複を示しています。 詳しくは、[[!UICONTROL &#x200B; オーディエンス &#x200B;] ダッシュボードドキュメントの [!UICONTROL ID の重複 &#x200B;] ウィジェットの節を参照してください ](../guides/audiences.md#identity-overlap)。
 
-[!UICONTROL ID の重複 ] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
+[!UICONTROL ID の重複 &#x200B;] ウィジェットを生成する SQL は、以下の折りたたみ可能なセクションに表示されます。
 
 +++SQL クエリ
 

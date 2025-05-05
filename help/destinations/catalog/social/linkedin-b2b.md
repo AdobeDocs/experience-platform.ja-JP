@@ -15,7 +15,7 @@ ht-degree: 25%
 
 >[!AVAILABILITY]
 >
->Real-Time Customer Data Platformの [Business-to-Business）エディションと [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) エディションを購入する企業は、アカウントオーディエンスを（会社） LinkedIn 宛先に対してアクティブ化する機能を利用 ](/help/rtcdp/overview.md#rtcdp-b2p) きます。
+>Real-Time Customer Data Platformの [&#128279;](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Business）エディションと [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) エディションを購入する企業は、アカウントオーディエンスを（会社） LinkedIn 宛先に対してアクティブ化する機能を利用  きます。
 
 この宛先を使用して、Account-Based Marketing（ABM）のユースケースの [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) をアクティベートします。 **[!UICONTROL （企業） LinkedIn （B2B）の宛先を介して、ターゲットアカウントの関連するペルソナ]** 役割に広告を行います。 LinkedIn プラットフォームの [ アカウントターゲティングの詳細については ](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting)、LinkedIn のドキュメントを参照してください。
 
@@ -53,7 +53,7 @@ ht-degree: 25%
 
 ### LinkedIn アカウントの前提条件 {#LinkedIn-account-prerequisites}
 
-[!UICONTROL  （会社） LinkedIn でマッチしたオーディエンス ] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 以上の権限レベルがあることを確認してください。
+[!UICONTROL &#x200B; （会社） LinkedIn でマッチしたオーディエンス &#x200B;] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントに [!DNL Creative Manager] 以上の権限レベルがあることを確認してください。
 
 [!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、LinkedIn ドキュメントの [Advertising アカウントのユーザー権限の追加、編集、削除 ](https://www.linkedin.com/help/lms/answer/5753) を参照してください。
 
@@ -61,7 +61,7 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -88,8 +88,8 @@ LinkedIn によるログインプロセスが完了したら、次の手順に�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " 宛先に対してアカウントオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にアカウントオーディエンスをアクティブ化する手順については、[ アカウントオーディエンスのアクティブ化 ](/help/destinations/ui/activate-account-audiences.md) をお読みください。
 

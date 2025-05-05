@@ -14,7 +14,7 @@ ht-degree: 81%
 
 Adobe Experience Platform では、複数のダッシュボードを使用して、組織のデータを表示し、操作できます。また、ダッシュボードビューに新しいウィジェットを追加することで、特定のダッシュボードを更新することもできます。アドビでは、選択してダッシュボードに追加できる標準ウィジェットを用意しています。
 
-[[!UICONTROL  プロファイル ]](../guides/profiles.md#default-widgets)、[[!UICONTROL  オーディエンス ]](../guides/audiences.md#default-widgets) および [[!UICONTROL  宛先 ]](../guides/destinations.md#default-widgets) ダッシュボードには、それぞれ、新しいExperience Platform インスタンスの作成時にデフォルトのウィジェットが読み込まれます。 このガイドでは、標準ウィジェットを追加して、Experience Platform UI の [!UICONTROL  プロファイル ]、[!UICONTROL  オーディエンス ]、[!UICONTROL  宛先 ] ダッシュボードをカスタマイズするためのステップバイステップの手順を説明します。
+[[!UICONTROL &#x200B; プロファイル &#x200B;]](../guides/profiles.md#default-widgets)、[[!UICONTROL &#x200B; オーディエンス &#x200B;]](../guides/audiences.md#default-widgets) および [[!UICONTROL &#x200B; 宛先 &#x200B;]](../guides/destinations.md#default-widgets) ダッシュボードには、それぞれ、新しいExperience Platform インスタンスの作成時にデフォルトのウィジェットが読み込まれます。 このガイドでは、標準ウィジェットを追加して、Experience Platform UI の [!UICONTROL &#x200B; プロファイル &#x200B;]、[!UICONTROL &#x200B; オーディエンス &#x200B;]、[!UICONTROL &#x200B; 宛先 &#x200B;] ダッシュボードをカスタマイズするためのステップバイステップの手順を説明します。
 
 >[!NOTE]
 >

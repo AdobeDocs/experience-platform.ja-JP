@@ -9,9 +9,9 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL  プラン ] クラス
+# [!UICONTROL &#x200B; プラン &#x200B;] クラス
 
-エクスペリエンスデータモデル（XDM）の [!UICONTROL  プラン ] クラスは、医療プランや保険プランなど、プランを定義するプロパティの最小セットを取得します。
+エクスペリエンスデータモデル（XDM）の [!UICONTROL &#x200B; プラン &#x200B;] クラスは、医療プランや保険プランなど、プランを定義するプロパティの最小セットを取得します。
 
 ![ クラス構造 ](../images/classes/plan.png)
 
@@ -23,4 +23,4 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-クラスを [[!UICONTROL  ヘルスケアプランの詳細 ] フィールドグループ ](../field-groups/plan/healthcare-plan-details.md) で拡張して、医療保険プランの詳細を説明できます。
+クラスを [[!UICONTROL &#x200B; ヘルスケアプランの詳細 &#x200B;] フィールドグループ ](../field-groups/plan/healthcare-plan-details.md) で拡張して、医療保険プランの詳細を説明できます。

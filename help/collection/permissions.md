@@ -28,7 +28,7 @@ ht-degree: 30%
 
 ## 使用可能な権限
 
-データ収集に関連する権限は、Admin Consoleで **Adobe Experience Platformと** 2}Adobe Experience Platform Data Collection} の 2 つの製品指定を通じて提供され **す。**&#x200B;以下の節では、各製品で提供される権限の概要と、権限によってアクセス権が付与される特定の機能の説明を説明します。
+データ収集に関連する権限は、Admin Consoleで **Adobe Experience Platformと** 2&rbrace;Adobe Experience Platform Data Collection&rbrace; の 2 つの製品指定を通じて提供され **す。**&#x200B;以下の節では、各製品で提供される権限の概要と、権限によってアクセス権が付与される特定の機能の説明を説明します。
 
 ### Adobe Experience Platformの権限
 
@@ -89,11 +89,11 @@ Admin Consoleの各製品で関連する権限を管理する手順について�
 
 Experience Cloudの **[!UICONTROL 権限]** セクションでは、製品アプリケーション内の機能とオブジェクトのアクセスを管理するユーザーの役割とポリシーを定義できます。
 
-[!UICONTROL  権限 ] を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。
+[!UICONTROL &#x200B; 権限 &#x200B;] を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。
 
 ![ 権限製品をハイライト表示したAdobe Experience Cloud。](./images/permissions/permissions-product.png)
 
-データ収集機能にアクセスするには、**[!UICONTROL サンドボックス]**、**[!UICONTROL データモデリング]**、**[!UICONTROL Identity Management]**、{ データ収集 **[!UICONTROL の各カテゴリですべての権限を有効にする必要が]** ります。
+データ収集機能にアクセスするには、**[!UICONTROL サンドボックス]**、**[!UICONTROL データモデリング]**、**[!UICONTROL Identity Management]**、&lbrace; データ収集 **[!UICONTROL の各カテゴリですべての権限を有効にする必要が]** ります。
 
 ![Admin Consoleのデータ収集プロダクトカードを示す画像 ](./images/permissions/platform-permission-card.png)
 

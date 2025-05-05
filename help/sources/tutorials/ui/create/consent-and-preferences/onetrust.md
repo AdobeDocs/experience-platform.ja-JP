@@ -48,11 +48,11 @@ ht-degree: 23%
 >
 >[!DNL OneTrust Integration] API の仕様は、データ取得用にAdobeと共有されています。
 
-Experience Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、Experience Platformで使用可能なソースのカタログの [!UICONTROL  ソース ] ワークスペースにアクセスします。
+Experience Platform UI の左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、Experience Platformで使用可能なソースのカタログの [!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。
 
 *[!UICONTROL カテゴリ]* メニューを使用して、カテゴリ別にソースをフィルタリングします。 または、検索バーにソース名を入力して、カタログから特定のソースを検索します。
 
-[!DNL OneTrust Integration] ソースカードの [!UICONTROL  同意および環境設定 ] カテゴリに移動します。 開始するには、「**[!UICONTROL データを追加]**」を選択します。
+[!DNL OneTrust Integration] ソースカードの [!UICONTROL &#x200B; 同意および環境設定 &#x200B;] カテゴリに移動します。 開始するには、「**[!UICONTROL データを追加]**」を選択します。
 
 ![Experience Platform UI ソースカタログ ](../../../../images/tutorials/create/onetrust/catalog.png)
 

@@ -22,7 +22,7 @@ ht-degree: 3%
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | この機会が関連付けられているアカウントの複合識別子。 |
-| `extSourceSystemAudit` | [[!UICONTROL  外部Source システム監査属性 ]](../../data-types/external-source-system-audit-attributes.md) | オポチュニティが外部ソースシステムから提供される場合、このオブジェクトはそのシステムの監査属性をキャプチャします。 |
+| `extSourceSystemAudit` | [[!UICONTROL &#x200B; 外部Source システム監査属性 &#x200B;]](../../data-types/external-source-system-audit-attributes.md) | オポチュニティが外部ソースシステムから提供される場合、このオブジェクトはそのシステムの監査属性をキャプチャします。 |
 | `opportunityKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 機会エンティティの複合識別子。 |
 | `_id` | 文字列 | レコードの一意の識別子。 これは、`opportunityID` とは別の、システムで生成された値です。 |
 | `accountID` | 文字列 | このオポチュニティが関連付けられているアカウントの一意の ID。 |

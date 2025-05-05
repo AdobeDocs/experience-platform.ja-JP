@@ -15,7 +15,7 @@ ht-degree: 25%
 
 >[!TIP]
 >
->Real-Time Customer Data PlatformおよびAdobe Experience Platformで使用される用語については ](/help/landing/glossary.md)[Adobe Experience Platform用語集 } を参照してください。 探している用語が見つからない場合は、ページのフィードバックオプションを使用して、用語集に新しい用語を追加するようにリクエストします。
+>Real-Time Customer Data PlatformおよびAdobe Experience Platformで使用される用語については [&#128279;](/help/landing/glossary.md)Adobe Experience Platform用語集 &rbrace; を参照してください。 探している用語が見つからない場合は、ページのフィードバックオプションを使用して、用語集に新しい用語を追加するようにリクエストします。
 
 Experience Platformの既存の機能に対するアップデート：
 

@@ -11,13 +11,13 @@ ht-degree: 20%
 
 ---
 
-# [!UICONTROL Web 詳細 ] スキーマフィールドグループ
+# [!UICONTROL Web 詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL Web の詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、インタラクション、ページの詳細、リファラーなどの web の詳細イベントに関する情報を記述するために使用されます。
+[!UICONTROL Web の詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、インタラクション、ページの詳細、リファラーなどの web の詳細イベントに関する情報を記述するために使用されます。
 
 ![](../../images/field-groups/web-details.png)
 

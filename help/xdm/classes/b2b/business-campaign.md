@@ -15,14 +15,14 @@ ht-degree: 3%
 >
 >このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [ リアルタイム顧客プロファイル ](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
 
-[!UICONTROL XDM ビジネスキャンペーン ] は、ビジネスキャンペーンに必要な最小限のプロパティをキャプチャする、標準のエクスペリエンスデータモデル（XDM）クラスです。
+[!UICONTROL XDM ビジネスキャンペーン &#x200B;] は、ビジネスキャンペーンに必要な最小限のプロパティをキャプチャする、標準のエクスペリエンスデータモデル（XDM）クラスです。
 
 ![UI に表示される XDM ビジネスキャンペーンクラスの構造 ](../../images/classes/b2b/business-campaign.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `campaignKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | キャンペーンエンティティの複合識別子。 |
-| `extSourceSystemAudit` | [[!UICONTROL  外部Source システム監査属性 ]](../../data-types/external-source-system-audit-attributes.md) | キャンペーンが外部ソースシステムから作成される場合、このオブジェクトはそのシステムの監査属性を取得します。 |
+| `extSourceSystemAudit` | [[!UICONTROL &#x200B; 外部Source システム監査属性 &#x200B;]](../../data-types/external-source-system-audit-attributes.md) | キャンペーンが外部ソースシステムから作成される場合、このオブジェクトはそのシステムの監査属性を取得します。 |
 | `_id` | 文字列 | レコードの一意の識別子。 これは、`campaignID` とは別の、システムで生成された値です。 |
 | `campaignDescription` | 文字列 | キャンペーンの説明。 |
 | `campaignID` | 文字列 | キャンペーンエンティティの一意の ID。 |
@@ -33,4 +33,4 @@ ht-degree: 3%
 
 このクラスが他の B2B クラスとどのように概念的に関係し、Real-Time CDP UI でこれらの関係を確立する方法については、Adobe Experience Platform B2B Edition の [ スキーマの関係に関するガイドを参照してください ](../../tutorials/relationship-b2b.md)
 
-このクラスと互換性のあるその他のフィールドについては、[[!UICONTROL XDM ビジネスキャンペーンの詳細 ]](../../field-groups/b2b-campaign/details.md) のフィールドグループ参照を参照してください。
+このクラスと互換性のあるその他のフィールドについては、[[!UICONTROL XDM ビジネスキャンペーンの詳細 &#x200B;]](../../field-groups/b2b-campaign/details.md) のフィールドグループ参照を参照してください。

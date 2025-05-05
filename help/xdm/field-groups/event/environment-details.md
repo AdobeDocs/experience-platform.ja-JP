@@ -12,13 +12,13 @@ ht-degree: 13%
 ---
 
 
-# [!UICONTROL  環境の詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; 環境の詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL  環境の詳細 ] は、[[!DNL XDM ExperienceEvent]  クラスの標準スキーマフィールドグループで ](../../classes/experienceevent.md) デバイスの詳細、ブラウザー情報、ローカル時間、その他の地理的情報など、エクスペリエンスイベントに関連する環境の詳細に関する情報をキャプチャするために使用されます。
+[!UICONTROL &#x200B; 環境の詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラスの標準スキーマフィールドグループで ](../../classes/experienceevent.md) デバイスの詳細、ブラウザー情報、ローカル時間、その他の地理的情報など、エクスペリエンスイベントに関連する環境の詳細に関する情報をキャプチャするために使用されます。
 
 ![](../../images/field-groups/environment-details.png){width=500}
 

@@ -22,7 +22,7 @@ ht-degree: 3%
 
 新しい [!DNL LinkedIn][ イベント転送の秘密鍵 ](../../../ui/event-forwarding/secrets.md) を作成し、認証メンバーを示す一意の名前を指定します。 これは、値を保護しながら、アカウントへの接続を認証するために使用されます。
 
-次に、[Core] 拡張機能と [!UICONTROL Secret] データ要素タイプを使用して ](../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成 [!UICONTROL  し、作成した `LinkedIn` シークレットを参照します。
+次に、[Core] 拡張機能と [!UICONTROL Secret] データ要素タイプを使用して (../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成  し、作成した `LinkedIn` シークレットを参照します。
 
 ## [!DNL LinkedIn] 拡張機能のインストールと設定 {#install}
 
@@ -34,13 +34,13 @@ ht-degree: 3%
 
 次の画面で、前に作成したデータ要素の秘密鍵を「`Access Token`」フィールドに入力します。 データ要素の秘密鍵には、[!DNL LinkedIn] の OAuth 2 トークンが含まれます。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
-![ 「[!UICONTROL  アクセストークン ] フィールドと「[!UICONTROL  保存 ] がハイライト表示された [!DNL LinkedIn] 拡張機能の設定ページ ](../../../images/extensions/server/linkedin/configure-extension.png)
+![ 「[!UICONTROL &#x200B; アクセストークン &#x200B;] フィールドと「[!UICONTROL &#x200B; 保存 &#x200B;] がハイライト表示された [!DNL LinkedIn] 拡張機能の設定ページ ](../../../images/extensions/server/linkedin/configure-extension.png)
 
 ## [!DNL Send Conversion] ルールの作成 {#tracking-rule}
 
 すべてのデータ要素を設定したら、イベントを [!DNL LinkedIn] に送信するタイミングと方法を決定するイベント転送ルールの作成を開始できます。
 
-イベント転送プロパティに新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 「**[!UICONTROL アクション]**」で、新しいアクションを追加し、拡張機能を「**[!UICONTROL LinkedIn]**」に設定します。 次に、「アクションタイプ **[!UICONTROL で「**[!UICONTROL  コンバージョンを送信 ]**」を選択]** ます。
+イベント転送プロパティに新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 「**[!UICONTROL アクション]**」で、新しいアクションを追加し、拡張機能を「**[!UICONTROL LinkedIn]**」に設定します。 次に、「アクションタイプ **[!UICONTROL で「**&#x200B;[!UICONTROL &#x200B; コンバージョンを送信 &#x200B;]&#x200B;**」を選択]** ます。
 
 ![ イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されたイベント転送プロパティルール ビュー。](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -52,7 +52,7 @@ ht-degree: 3%
 | --- | --- |
 | [!UICONTROL メール] | コンバージョンイベントに関連付けられた連絡先のメールアドレス。 指定した値が既に SHA256 文字列でない限り、メール値は SHA256 の拡張機能コードでエンコードされます。 |
 | [!UICONTROL LinkedInのファーストパーティ広告トラッキング UUID] | これはファーストパーティ cookie ID です。 クリック URL にクリック ID パラメーター `li_fat_id` を付加したファーストパーティ Cookie を有効化するには、広告主は [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) からの拡張コンバージョントラッキングを有効にする必要があります。 |
-| [!UICONTROL  顧客情報データ ] | このフィールドには、メッセージと共に送信される追加の属性を含む JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 使用できるキー値は、`firstName`、`lastName`、`companyName`、`title`、`country` です。 |
+| [!UICONTROL &#x200B; 顧客情報データ &#x200B;] | このフィールドには、メッセージと共に送信される追加の属性を含む JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 使用できるキー値は、`firstName`、`lastName`、`companyName`、`title`、`country` です。 |
 
 {style="table-layout:auto"}
 
@@ -62,11 +62,11 @@ ht-degree: 3%
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  コンバージョン ] | [LinkedIn Campaign Manager} で作成されたコンバージョンルール ](https://www.linkedin.com/help/lms/answer/a1657171)ID。 コンバージョンルールを選択して ID を取得し、ブラウザーの URL から ID をコピーします（例：`/campaignmanager/accounts/508111232/conversions/15588877`）。`/conversions/<id>` |
-| [!UICONTROL  コンバージョン時間 ] | コンバージョンイベントが発生した各タイムスタンプ（ミリ秒単位）。 <br><br> メモ：ソースがコンバージョンタイムスタンプを秒単位で記録する場合は、末尾に 000 を挿入してミリ秒に変換してください。 |
+| [!UICONTROL &#x200B; コンバージョン &#x200B;] | [LinkedIn Campaign Manager&rbrace; で作成されたコンバージョンルール ](https://www.linkedin.com/help/lms/answer/a1657171)ID。 コンバージョンルールを選択して ID を取得し、ブラウザーの URL から ID をコピーします（例：`/campaignmanager/accounts/508111232/conversions/15588877`）。`/conversions/<id>` |
+| [!UICONTROL &#x200B; コンバージョン時間 &#x200B;] | コンバージョンイベントが発生した各タイムスタンプ（ミリ秒単位）。 <br><br> メモ：ソースがコンバージョンタイムスタンプを秒単位で記録する場合は、末尾に 000 を挿入してミリ秒に変換してください。 |
 | [!UICONTROL 通貨] | ISO 形式の通貨コード。 |
-| [!UICONTROL  量 ] | 10 進文字列でのコンバージョンの値（例：「100.05」）。 |
-| [!UICONTROL  イベント ID] | 各イベントを示すために広告主によって生成される一意の ID。 これはオプションのフィールドで、[ 重複排除 ](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02) に使用されます。 |
+| [!UICONTROL &#x200B; 量 &#x200B;] | 10 進文字列でのコンバージョンの値（例：「100.05」）。 |
+| [!UICONTROL &#x200B; イベント ID] | 各イベントを示すために広告主によって生成される一意の ID。 これはオプションのフィールドで、[ 重複排除 ](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02) に使用されます。 |
 
 {style="table-layout:auto"}
 
@@ -76,11 +76,11 @@ ht-degree: 3%
 
 >メモ
 >
->[!UICONTROL  設定の上書き ] フィールドを使用すると、ユーザーはルールごとに異なる [!DNL LinkedIn] アクセストークンを設定でき、各ルールで、異なる [!DNL LinkedIn] ad アカウントへのアクセス権を持つアクセストークンを使用できます。
+>[!UICONTROL &#x200B; 設定の上書き &#x200B;] フィールドを使用すると、ユーザーはルールごとに異なる [!DNL LinkedIn] アクセストークンを設定でき、各ルールで、異なる [!DNL LinkedIn] ad アカウントへのアクセス権を持つアクセストークンを使用できます。
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  アクセストークン ] | [!DNL LinkedIn] アクセストークン。 |
+| [!UICONTROL &#x200B; アクセストークン &#x200B;] | [!DNL LinkedIn] アクセストークン。 |
 
 ![ フィールドへのデータ入力の例を示す [!DNL Configuration Overrides] の節。](../../../images/extensions/server/linkedin/configure-extension-configuration-override.png)
 

@@ -56,7 +56,7 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 
 ### Adobe Experience Cloud アプリケーションへの cookie の有効期間の影響 {#lifespans}
 
-ファーストパーティとサードパーティのどちらのデータ収集を選択したかに関係なく、cookie が保持できる期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/en/docs/target) または [Offer decisioning} を使用すると、エンドユーザーのパーソナライゼーションエクスペリエンスに一貫性がなくな ](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) 場合があります。
+ファーストパーティとサードパーティのどちらのデータ収集を選択したかに関係なく、cookie が保持できる期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/en/docs/target) または [Offer decisioning&rbrace; を使用すると、エンドユーザーのパーソナライゼーションエクスペリエンスに一貫性がなくな ](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) 場合があります。
 
 例えば、過去 7 日間にユーザーが 3 回表示した項目を、ホームページに昇格させるパーソナライゼーションエクスペリエンスを作成した場合を考えてみましょう。
 

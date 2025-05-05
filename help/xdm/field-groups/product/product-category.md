@@ -9,9 +9,9 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL  製品カテゴリ ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; 製品カテゴリ &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  製品カテゴリ ] は、[[!UICONTROL  製品 ] クラスの標準スキーマフィールドグループで ](../../classes/product.md) 製品のカテゴリに関連するプロパティをキャプチャします。
+[!UICONTROL &#x200B; 製品カテゴリ &#x200B;] は、[[!UICONTROL &#x200B; 製品 &#x200B;] クラスの標準スキーマフィールドグループで ](../../classes/product.md) 製品のカテゴリに関連するプロパティをキャプチャします。
 
 ![](../../images/field-groups/product/product-category.png)
 

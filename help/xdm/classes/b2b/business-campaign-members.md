@@ -15,7 +15,7 @@ ht-degree: 2%
 >
 >このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [ リアルタイム顧客プロファイル ](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
 
-[!UICONTROL XDM ビジネスキャンペーンメンバー ] は、ビジネスキャンペーンに関連する連絡先またはリードを記述する標準のエクスペリエンスデータモデル（XDM）クラスです。
+[!UICONTROL XDM ビジネスキャンペーンメンバー &#x200B;] は、ビジネスキャンペーンに関連する連絡先またはリードを記述する標準のエクスペリエンスデータモデル（XDM）クラスです。
 
 ![UI に表示される XDM ビジネスキャンペーンメンバークラスの構造 ](../../images/classes/b2b/business-campaign-members.png)
 
@@ -23,7 +23,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `campaignKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 関連付けられたキャンペーンの複合識別子。 |
 | `campaignMemberKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | キャンペーンメンバーシップエンティティの複合識別子。 |
-| `extSourceSystemAudit` | [[!UICONTROL  外部Source システム監査属性 ]](../../data-types/external-source-system-audit-attributes.md) | キャンペーンメンバーシップが外部ソースシステムから取得される場合、このオブジェクトはそのシステムの監査属性を取得します。 |
+| `extSourceSystemAudit` | [[!UICONTROL &#x200B; 外部Source システム監査属性 &#x200B;]](../../data-types/external-source-system-audit-attributes.md) | キャンペーンメンバーシップが外部ソースシステムから取得される場合、このオブジェクトはそのシステムの監査属性を取得します。 |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 関連するキャンペーンのメンバーであるユーザーの複合識別子。 |
 | `_id` | 文字列 | レコードの一意の識別子。 これは、`campaignMemberID` とは別の、システムで生成された値です。 |
 
@@ -31,4 +31,4 @@ ht-degree: 2%
 
 このクラスが他の B2B クラスとどのように概念的に関係し、Real-Time CDP UI でこれらの関係を確立する方法については、Adobe Experience Platform B2B Edition の [ スキーマの関係に関するガイドを参照してください ](../../tutorials/relationship-b2b.md)
 
-このクラスと互換性のあるその他のフィールドについては、[[!UICONTROL XDM ビジネスキャンペーンメンバーの詳細 ]](../../field-groups/b2b-campaign-members/details.md) のフィールドグループ参照を参照してください。
+このクラスと互換性のあるその他のフィールドについては、[[!UICONTROL XDM ビジネスキャンペーンメンバーの詳細 &#x200B;]](../../field-groups/b2b-campaign-members/details.md) のフィールドグループ参照を参照してください。

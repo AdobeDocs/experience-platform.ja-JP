@@ -11,7 +11,7 @@ ht-degree: 12%
 
 # ユーザーアクセス
 
-[Assurance] で次の手順を実行して、Adobe Experience Platformの任意の製品プロファイルに追加することで、[!UICONTROL Adobe Admin Console](https://adminconsole.adobe.com/) へのアクセス権をユーザーに付与します。
+[Assurance] で次の手順を実行して、Adobe Experience Platformの任意の製品プロファイルに追加することで、[[!UICONTROL Adobe Admin Console]](https://adminconsole.adobe.com/) へのアクセス権をユーザーに付与します。
 
 ## 製品プロファイルを使用したAdobe Experience Platformへのユーザーの追加 {#adding-product-profile}
 

@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # LiveRamp 識別子に基づいてキュレーションされた宛先に対するオーディエンスのアクティブ化
 
-Adobe Real-Time CDPと [!DNL LiveRamp] の統合を使用すると、以下に示すような接続された TV やオーディオの宛先など、アクティベーションに [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) を使用する、キュレートされた宛先リストに対してオーディエンスをアクティブ化できます。
+Adobe Real-Time CDPと [!DNL LiveRamp] の統合を使用すると、以下に示すような接続された TV やオーディオの宛先など、アクティベーションに [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) を使用する、キュレートされた宛先リストに対してオーディエンスをアクティブ化できます。
 
 >[!IMPORTANT]
 >
@@ -66,7 +66,7 @@ Adobe Real-Time CDPと [!DNL LiveRamp] の統合を使用すると、以下に�
 
 ### 手順 1:[!DNL LiveRamp - Onboarding] の宛先を介して、Experience Platformから LiveRamp にオーディエンスを送信する {#onboarding}
 
-LiveRamp RampID に基づいてキュレーションされた宛先に対してオーディエンスをアクティブ化するには、まず、オーディエンスをExperience Platformから [!DNL LiveRamp]**に** 書き出す」必要があります。
+LiveRamp RampID に基づいてキュレーションされた宛先に対してオーディエンスをアクティブ化するには、まず、オーディエンスをExperience Platformから [!DNL LiveRamp]&#x200B;**に** 書き出す」必要があります。
 
 これを行うには、**[!DNL LiveRamp - Onboarding]** の宛先を使用します。
 
@@ -89,7 +89,7 @@ LiveRamp RampID に基づいてキュレーションされた宛先に対して�
 
 オーディエンスが LiveRamp に正常に書き出されたことを [ 検証 ](../catalog/advertising/liveramp-onboarding.md#exported-data) したら、[[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku)、[[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) などの目的の宛先に対してオーディエンスをアクティブ化します。
 
-**[!DNL LiveRamp - Distribution]** の宛先を使用して、（手順 1](#onboarding) で書き出した [ オーディエンスをアクティブ化します。
+**[!DNL LiveRamp - Distribution]** の宛先を使用して、（手順 1[&#128279;](#onboarding) で書き出した  オーディエンスをアクティブ化します。
 
 ![LiveRamp – 配布先カードを示すExperience Platform UI 画像 ](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
@@ -97,7 +97,7 @@ LiveRamp RampID に基づいてキュレーションされた宛先に対して�
 
 >[!IMPORTANT]
 >
->**[!DNL LiveRamp - Distribution]** 宛先の **オーディエンス選択** 手順では、*手順 1](#onboarding) で [LiveRamp - オンボーディング ](../catalog/advertising/liveramp-onboarding.md) 宛先に書き出した* まったく同じオーディエンス [ を選択する必要があります。
+>**[!DNL LiveRamp - Distribution]** 宛先の **オーディエンス選択** 手順では、*手順 1[&#128279;](#onboarding) で [LiveRamp - オンボーディング ](../catalog/advertising/liveramp-onboarding.md) 宛先に書き出した* まったく同じオーディエンス  を選択する必要があります。
 
 **[!DNL LiveRamp - Distribution]** の宛先を設定する場合、使用するダウンストリーム宛先（Roku、Disney など）ごとに専用の接続を作成する必要があります。
 

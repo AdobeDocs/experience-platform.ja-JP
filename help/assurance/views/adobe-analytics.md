@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Assurance のAdobe Analytics イベントビュー
 
-Analytics イベントを使用すると、SDK イベントをより詳細に把握し、Adobe Analytics実装のデバッグと検証を行うことができます。 ビューには、[Adobe Experience Platform Event SDK と [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) からAdobe Analyticsに送信されたEdge Networkが表示され ](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) す。 また、この表示には詳細パネルも用意されており、イベントがデバイスを離れた後にクライアント SDK とアップストリームサービスによってどのように処理されたかに関するコンテキストを提供します。
+Analytics イベントを使用すると、SDK イベントをより詳細に把握し、Adobe Analytics実装のデバッグと検証を行うことができます。 ビューには、[&#128279;](https://developer.adobe.com/client-sdks/solution/adobe-analytics/)Adobe Experience Platform Event SDK と [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) からAdobe Analyticsに送信されたEdge Networkが表示され  す。 また、この表示には詳細パネルも用意されており、イベントがデバイスを離れた後にクライアント SDK とアップストリームサービスによってどのように処理されたかに関するコンテキストを提供します。
 
 ## はじめに
 

@@ -140,7 +140,7 @@ ht-degree: 32%
 >
 > 『[ソースファイルをレシピにパッケージ化](./package-source-files-recipe.md)』チュートリアルでは、Python ソースファイルを使用して Retail Sales レシピを作成する最後に Docker URL が提供されていました。
 
-**ソースを選択** ページが表示されたら、「**[!UICONTROL Source URL]**」フィールドに、[!DNL Python] ソースファイルを使用して作成されたパッケージ化されたレシピに対応する Docker URL を貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/python/retail/retail.config.json` にあります。「**Runtime]**」ドロップダウンで **[!UICONTROL Python** を選択し、「**[!UICONTROL タイプ]**」ドロップダウンで **分類** を選択します。 すべてが入力されたら、右上隅にある **[!UICONTROL 次へ]** を選択して、**スキーマの管理** に進みます。
+**ソースを選択** ページが表示されたら、「**[!UICONTROL Source URL]**」フィールドに、[!DNL Python] ソースファイルを使用して作成されたパッケージ化されたレシピに対応する Docker URL を貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/python/retail/retail.config.json` にあります。「**Runtime**」ドロップダウンで **Python** を選択し、「**[!UICONTROL タイプ]**」ドロップダウンで **分類** を選択します。 すべてが入力されたら、右上隅にある **[!UICONTROL 次へ]** を選択して、**スキーマの管理** に進みます。
 
 >[!NOTE]
 >
@@ -174,7 +174,7 @@ ht-degree: 32%
 >
 > 「[ソースファイルをレシピにパッケージ化](./package-source-files-recipe.md)」チュートリアルでは、R ソースファイルを使用して Retail Sales レシピを作成する最後に Docker URL が提供されていました。
 
-**ソースを選択** ページが表示されたら、「**[!UICONTROL Source URL]**」フィールドに、R ソースファイルを使用して作成されたパッケージ化されたレシピに対応する Docker URL を貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json` にあります。「**ランタイム]**」ドロップダウンで「**[!UICONTROL R**」を選択し、「**[!UICONTROL タイプ]**」ドロップダウンで「**分類**」を選択します。 すべてが入力されたら、右上隅にある **[!UICONTROL 次へ]** を選択して、**スキーマの管理** に進みます。
+**ソースを選択** ページが表示されたら、「**[!UICONTROL Source URL]**」フィールドに、R ソースファイルを使用して作成されたパッケージ化されたレシピに対応する Docker URL を貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json` にあります。「**ランタイム**」ドロップダウンで「**R**」を選択し、「**[!UICONTROL タイプ]**」ドロップダウンで「**分類**」を選択します。 すべてが入力されたら、右上隅にある **[!UICONTROL 次へ]** を選択して、**スキーマの管理** に進みます。
 
 >[!NOTE]
 >

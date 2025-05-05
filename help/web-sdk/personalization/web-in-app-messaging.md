@@ -63,7 +63,7 @@ Web アプリ内メッセージは、次の 2 種類のトリガーをサポー�
 Web SDK拡張機能を含むタグプロパティを選択し、次の設定を使用して [ 新しいルールを作成 ](../../tags/ui/managing-resources/rules.md##create-a-rule) します。
 
 1. **[!UICONTROL 拡張機能]**: [!UICONTROL Core]
-2. **[!UICONTROL イベントタイプ]**:[!UICONTROL  ライブラリが読み込まれました（ページのトップ） ]
+2. **[!UICONTROL イベントタイプ]**:[!UICONTROL &#x200B; ライブラリが読み込まれました（ページのトップ） &#x200B;]
 
    ![ イベント設定画面を示す画像 ](assets/web-in-app-messaging/rule-configuration.png)
 
@@ -76,7 +76,7 @@ Web SDK拡張機能を含むタグプロパティを選択し、次の設定を�
 
 2. 次の **[!UICONTROL アクション]** 設定を使用します。
    * **[!UICONTROL 拡張機能]**: [!UICONTROL Adobe Experience Platform Web SDK]
-   * **[!UICONTROL アクションタイプ]**:[!UICONTROL  イベントを送信 ]
+   * **[!UICONTROL アクションタイプ]**:[!UICONTROL &#x200B; イベントを送信 &#x200B;]
 
      ![ アクション設定画面を示す画像 ](assets/web-in-app-messaging/action-configuration.png)
 
@@ -104,7 +104,7 @@ Web SDK拡張機能を含むタグプロパティを選択し、次の設定を�
 Web SDK拡張機能を含むタグプロパティを選択し、次の設定を使用して [ 新しいルールを作成 ](../../tags/ui/managing-resources/rules.md##create-a-rule) します。
 
 1. **[!UICONTROL 拡張機能]**: [!UICONTROL Core]
-2. **[!UICONTROL イベントタイプ]**:[!UICONTROL  クリック ]
+2. **[!UICONTROL イベントタイプ]**:[!UICONTROL &#x200B; クリック &#x200B;]
 3. ページ上の特定の要素に対してトリガーを設定し、CSS セレクターを使用して識別情報を選択します。
 
    ![ イベント設定画面を示す画像 ](assets/web-in-app-messaging/event-configuration-manual.png)
@@ -117,7 +117,7 @@ Web SDK拡張機能を含むタグプロパティを選択し、次の設定を�
 
 2. 次の **[!UICONTROL アクション]** 設定を使用します。
    * **[!UICONTROL 拡張機能]**: [!UICONTROL Adobe Experience Platform Web SDK]
-   * **[!UICONTROL アクションタイプ]**:[!UICONTROL  ルールセットを評価 ]
+   * **[!UICONTROL アクションタイプ]**:[!UICONTROL &#x200B; ルールセットを評価 &#x200B;]
 
      ![ アクション設定画面を示す画像 ](assets/web-in-app-messaging/manual-trigger-action.png)
 

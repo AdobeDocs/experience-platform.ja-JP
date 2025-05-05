@@ -35,7 +35,7 @@ ht-degree: 1%
 >
 >イベント転送から送信されたファーストパーティデータにクライアントサイドのコンバージョンイベントを関連付けるには、両方の呼び出しで `transaction_ID` が同じである必要があります。 この値を各サービスに対して指定する必要がある場所について詳しくは、[ タグ ](#conversion-action-tags) と [ イベント転送 ](#conversion-action-event-forwarding) のコンバージョンアクションの設定の節を参照してください。
 
-コンバージョンイベントの送信にはクライアントサイドとサーバーサイドの両方の実装が必要なので、このドキュメントでは、イベント転送用の [!DNL Enhanced Conversions] 拡張機能に加えて ](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) クライアントサイドの [[!DNL Google Global Site Tag]  （gtag）拡張機能を設定するための前提条件の手順について説明します。
+コンバージョンイベントの送信にはクライアントサイドとサーバーサイドの両方の実装が必要なので、このドキュメントでは、イベント転送用の [!DNL Enhanced Conversions] 拡張機能に加えて [&#128279;](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) クライアントサイドの [!DNL Google Global Site Tag]  （gtag）拡張機能を設定するための前提条件の手順について説明します。
 
 次のビデオでは、[!DNL Enhanced Conversions] 拡張機能の概要と、実装手順の概要を説明します。
 
@@ -47,9 +47,9 @@ ht-degree: 1%
 
 ### [!DNL Google Global Site Tag] 拡張機能の設定とインストール
 
-[!UICONTROL  データ収集 ] UI またはExperience Platform UI に移動し、左側のナビゲーションで **[!UICONTROL タグ]** を選択します。 拡張機能をインストールするタグプロパティを選択し、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択します。 「**[!UICONTROL カタログ]**」タブで、[!UICONTROL Google グローバルサイトタグ（gtag） ] 拡張機能を探し、「**[!UICONTROL インストール]**」を選択します。
+[!UICONTROL &#x200B; データ収集 &#x200B;] UI またはExperience Platform UI に移動し、左側のナビゲーションで **[!UICONTROL タグ]** を選択します。 拡張機能をインストールするタグプロパティを選択し、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択します。 「**[!UICONTROL カタログ]**」タブで、[!UICONTROL Google グローバルサイトタグ（gtag） &#x200B;] 拡張機能を探し、「**[!UICONTROL インストール]**」を選択します。
 
-![[!UICONTROL Google グローバルサイトタグ（gtag） ] 拡張機能は、[!UICONTROL  データ収集 ] UI の [!UICONTROL  拡張機能 ] ビューで選択されています。](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
+![[!UICONTROL Google グローバルサイトタグ（gtag） &#x200B;] 拡張機能は、[!UICONTROL &#x200B; データ収集 &#x200B;] UI の [!UICONTROL &#x200B; 拡張機能 &#x200B;] ビューで選択されています。](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
 インストールダイアログが表示されます。 ここから **[!UICONTROL アカウントを追加]** を選択し、プロンプトが表示されたら次の値を指定します。
 
@@ -65,14 +65,14 @@ ht-degree: 1%
 
 ### コンバージョンを送信アクションを追加 {#conversion-action-tags}
 
-拡張機能をインストールしたら、コンバージョンアクションをタグルールに含めることができます。 機能強化するコンバージョンをリッスンするルールを作成または編集する際に、「[!UICONTROL  アクション ] の下の **[!UICONTROL 追加]** を選択します。 次のダイアログで、「[!UICONTROL  拡張機能 ]」ドロップダウンから「**[!UICONTROL Google グローバルサイトタグ （gtag）]**」を選択し、「**[!UICONTROL アクションタイプ ]」の下の「[!UICONTROL  イベントを送信]**」を選択します。
+拡張機能をインストールしたら、コンバージョンアクションをタグルールに含めることができます。 機能強化するコンバージョンをリッスンするルールを作成または編集する際に、「[!UICONTROL &#x200B; アクション &#x200B;] の下の **[!UICONTROL 追加]** を選択します。 次のダイアログで、「[!UICONTROL &#x200B; 拡張機能 &#x200B;]」ドロップダウンから「**[!UICONTROL Google グローバルサイトタグ （gtag）]**」を選択し、「**[!UICONTROL アクションタイプ &#x200B;]」の下の「[!UICONTROL &#x200B; イベントを送信]**」を選択します。
 
-![ ルール編集ワークフローのアクション設定ビュー内で選択されている [!UICONTROL  イベントを送信 ] アクションタイプ ](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
+![ ルール編集ワークフローのアクション設定ビュー内で選択されている [!UICONTROL &#x200B; イベントを送信 &#x200B;] アクションタイプ ](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
 
 [!DNL gtag] イベントを設定できる追加のコントロールが表示されます。 少なくとも、次のフィールドに入力する必要があります。
 
 1. **[!UICONTROL イベント名（アクション）]**：値として `conversion` を入力します。
-1. キーが `transaction_id` で、値が [ トランザクション ID[ 値を含む ](../../../ui/managing-resources/data-elements.md) データ要素 ](https://support.google.com/google-ads/answer/6386790) である新しいフィールドを追加します。
+1. キーが `transaction_id` で、値が [&#128279;](https://support.google.com/google-ads/answer/6386790) トランザクション ID[ 値を含む ](../../../ui/managing-resources/data-elements.md) データ要素  である新しいフィールドを追加します。
 1. **[!UICONTROL コンバージョンラベル]**:[!DNL Google Ads] アカウントから適切なコンバージョンラベルを入力します。 この値を見つけるには、Google Ads にログインし、**[!DNL Tools and Settings]**/**[!DNL Conversions]**/**[!DNL Select a conversion action]**/**[!DNL Tag Setup]**/**[!DNL Use Google Tag Manager]** に移動します。 コンバージョンラベルは [!DNL Instructions] の下にあります。
 
    >[!IMPORTANT]
@@ -99,7 +99,7 @@ ht-degree: 1%
 
 イベント転送カタログで [!UICONTROL Google Ads Enhanced Conversions] 拡張機能を探し、「**[!UICONTROL インストール]**」を選択します。
 
-![Data Collection] UI の {Extensions] ビューで選択されている [!UICONTROL 1}Google Ads Enhanced Conversions[!UICONTROL  拡張機能 ]](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)[!UICONTROL 
+[Data Collection] UI の {Extensions ビューで選択されている ![[!UICONTROL 1}Google Ads Enhanced Conversions[!UICONTROL &#x200B; 拡張機能 &#x200B;]]](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
 
 拡張機能を設定するには、次の 2 つの必須フィールドに入力する必要があります。
 
@@ -108,11 +108,11 @@ ht-degree: 1%
 
 終了したら、「**[!UICONTROL 保存]**」を選択して拡張機能をインストールします。
 
-### ルールに [!UICONTROL  コンバージョンを送信 ] アクションを追加する {#conversion-action-event-forwarding}
+### ルールに [!UICONTROL &#x200B; コンバージョンを送信 &#x200B;] アクションを追加する {#conversion-action-event-forwarding}
 
-拡張機能がインストールされたら、イベント転送ルールに [!UICONTROL  コンバージョンを送信 ] アクションを含めることができます。 機能強化するコンバージョンをリッスンするルールを作成または編集する際に、「[!UICONTROL  アクション ] の下の **[!UICONTROL 追加]** を選択します。 次のダイアログで、「[!UICONTROL  拡張機能 ]」ドロップダウンから「**[!UICONTROL Google Ads Enhanced Conversions]**」を選択し、「[!UICONTROL  アクションタイプ ]」の「**[!UICONTROL コンバージョンを送信]**」を選択します。
+拡張機能がインストールされたら、イベント転送ルールに [!UICONTROL &#x200B; コンバージョンを送信 &#x200B;] アクションを含めることができます。 機能強化するコンバージョンをリッスンするルールを作成または編集する際に、「[!UICONTROL &#x200B; アクション &#x200B;] の下の **[!UICONTROL 追加]** を選択します。 次のダイアログで、「[!UICONTROL &#x200B; 拡張機能 &#x200B;]」ドロップダウンから「**[!UICONTROL Google Ads Enhanced Conversions]**」を選択し、「[!UICONTROL &#x200B; アクションタイプ &#x200B;]」の「**[!UICONTROL コンバージョンを送信]**」を選択します。
 
-![ ルール編集ワークフローのアクション設定ビュー内で選択されている [!UICONTROL  コンバージョンを送信 ] アクションタイプ ](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
+![ ルール編集ワークフローのアクション設定ビュー内で選択されている [!UICONTROL &#x200B; コンバージョンを送信 &#x200B;] アクションタイプ ](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
 
 新しいコントロールが右側のパネルに表示され、コンバージョンを設定できます。 少なくとも、次のフィールドに入力する必要があります。
 
@@ -135,7 +135,7 @@ ht-degree: 1%
 >
 >ユーザー ID データは、Googleに送信する前にハッシュ化する必要があります。 イベント転送でデータを受け取ってもハッシュ化されていない場合は、特定のフィールドの **[!UICONTROL 正規化とハッシュ]** トグルを選択して、拡張機能に値をハッシュ化するように指示します。
 >
->![[!UICONTROL  コンバージョンを送信 ] アクション設定フォーム内の [!UICONTROL  メール ] 入力に対して有効な [!UICONTROL  正規化とハッシュ ] トグル ](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
+>![[!UICONTROL &#x200B; コンバージョンを送信 &#x200B;] アクション設定フォーム内の [!UICONTROL &#x200B; メール &#x200B;] 入力に対して有効な [!UICONTROL &#x200B; 正規化とハッシュ &#x200B;] トグル ](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
 
 完了したら、「**[!UICONTROL 変更を保持]**」を選択して、アクションをルール設定に追加します。 ルールの設定が完了したら、「**[!UICONTROL ライブラリに保存]**」を選択します。
 

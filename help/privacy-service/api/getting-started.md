@@ -38,7 +38,7 @@ Privacy Service API を呼び出すには、まず必要なヘッダーで使用
 
 新しいプロジェクトを作成したら、「**[!UICONTROL プロジェクトに追加]**」を選択し、ドロップダウンメニューから「**[!UICONTROL API]**」を選択します。
 
-![Developer Consoleのプロジェクトの詳細ページの [!UICONTROL  プロジェクトに追加 ] ドロップダウンから選択されている「API」オプション ](../images/api/getting-started/add-api-button.png)
+![Developer Consoleのプロジェクトの詳細ページの [!UICONTROL &#x200B; プロジェクトに追加 &#x200B;] ドロップダウンから選択されている「API」オプション ](../images/api/getting-started/add-api-button.png)
 
 #### Privacy Service API を選択します。 {#select-privacy-service-api}
 
@@ -54,7 +54,7 @@ Privacy Service API を呼び出すには、まず必要なヘッダーで使用
 
 >[!IMPORTANT]
 >
->今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、「[!BADGE  非推奨 ]」の節を参照してください。{type=negative}[JSON web トークン（JWT）を生成 ](/help/landing/api-authentication.md#jwt) ます。
+>今後は **[!UICONTROL OAuth サーバー間]** の方法のみがサポートされるので、この方法を選択します。 **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨（廃止予定）となりました。 JWT 認証方法を使用した統合は 2025 年 1 月 1 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい OAuth サーバー間認証方法に移行することを強くお勧めします。 詳しくは、「[!BADGE &#x200B; 非推奨 &#x200B;]」の節を参照してください。{type=negative}[JSON web トークン（JWT）を生成 ](/help/landing/api-authentication.md#jwt) ます。
 
 ![Oauth サーバー間認証方法を選択します。](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
@@ -64,7 +64,7 @@ Privacy Service API を呼び出すには、まず必要なヘッダーで使用
 
 >[!NOTE]
 >
-製品プロファイルとそれらが提供する詳細な権限は、Adobe Admin Consoleを通じて管理者が作成および管理します。 詳しくは、[Privacy Serviceの権限 ](../permissions.md) に関するガイドを参照してください。
+>製品プロファイルとそれらが提供する詳細な権限は、Adobe Admin Consoleを通じて管理者が作成および管理します。 詳しくは、[Privacy Serviceの権限 ](../permissions.md) に関するガイドを参照してください。
 
 終了したら、「**[!UICONTROL 設定済み API を保存]**」を選択します。
 
@@ -72,8 +72,8 @@ Privacy Service API を呼び出すには、まず必要なヘッダーで使用
 
 API がプロジェクトに追加されると、プロジェクトの **[!UICONTROL Privacy Service API]** ページに、Privacy Service API へのすべての呼び出しで必要な次の資格情報が表示されます。
 
-* `{API_KEY}` （[!UICONTROL  クライアント ID]）
-* `{ORG_ID}` （[!UICONTROL  組織 ID]）
+* `{API_KEY}` （[!UICONTROL &#x200B; クライアント ID]）
+* `{ORG_ID}` （[!UICONTROL &#x200B; 組織 ID]）
 
 ![Developer Consoleに API を追加した後の統合情報 ](/help/privacy-service/images/api/getting-started/api-integration-information.png)
 

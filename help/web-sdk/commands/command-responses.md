@@ -23,14 +23,14 @@ ht-degree: 0%
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
 1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
-1. [!UICONTROL  イベント ] で、既存のイベントを選択するか、イベントを作成します。
-1. [!UICONTROL  拡張機能 ] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、[!UICONTROL  イベントタイプ ] を **[!UICONTROL イベント完了を送信]** に設定します。
+1. [!UICONTROL &#x200B; イベント &#x200B;] で、既存のイベントを選択するか、イベントを作成します。
+1. [!UICONTROL &#x200B; 拡張機能 &#x200B;] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、[!UICONTROL &#x200B; イベントタイプ &#x200B;] を **[!UICONTROL イベント完了を送信]** に設定します。
 1. 「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 
 その後、アクション **[!UICONTROL 提案を適用]** または **[!UICONTROL 応答を適用]** をこのルールに含めることができます。
 
 1. 上記で作成または編集したルールを表示する際に、既存のアクションを選択するか、アクションを作成します。
-1. [!UICONTROL  拡張機能 ] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、目的の動作に応じて [!UICONTROL  アクションタイプ ] を **[!UICONTROL 提案を適用]** または **[!UICONTROL 応答を適用]** に設定します。
+1. [!UICONTROL &#x200B; 拡張機能 &#x200B;] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、目的の動作に応じて [!UICONTROL &#x200B; アクションタイプ &#x200B;] を **[!UICONTROL 提案を適用]** または **[!UICONTROL 応答を適用]** に設定します。
 1. アクションの目的のフィールドを設定し、「**[!UICONTROL 変更を保持]**」をクリックします。
 
 ## Web SDK JavaScript ライブラリを使用してコマンド応答を処理します

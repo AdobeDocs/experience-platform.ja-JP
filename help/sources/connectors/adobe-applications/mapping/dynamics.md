@@ -265,4 +265,4 @@ ht-degree: 40%
 >
 >上記の操作のネストされたイテレーションは、次のようになります。`iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`
 
-詳しくは、 [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators) の論理演算子に関するドキュメント [ を参照してください。
+詳しくは、 [!DNL Data Prep][&#128279;](../../../../data-prep/functions.md##logical-operators) の論理演算子に関するドキュメント  を参照してください。

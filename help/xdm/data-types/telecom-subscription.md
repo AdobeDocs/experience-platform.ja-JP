@@ -11,22 +11,22 @@ ht-degree: 20%
 
 ---
 
-# [!UICONTROL  通信購読 ] データタイプ
+# [!UICONTROL &#x200B; 通信購読 &#x200B;] データタイプ
 
-[!UICONTROL  通信購読 ] は、特定の通信購読タイプ（インターネット、モバイル、メディア、固定電話など）の詳細を記述する標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; 通信購読 &#x200B;] は、特定の通信購読タイプ（インターネット、モバイル、メディア、固定電話など）の詳細を記述する標準の Experience Data Model （XDM）データタイプです。
 
 >[!NOTE]
 >
 >このドキュメントでは、データタイプについて説明します。 同じ名前のフィールドグループについては、[[!UICONTROL Telecom Subscription] フィールドグループリファレンスガイド ](../field-groups/profile/telecom-subscription.md) を参照してください。
 >
->通信業界に関係のないサブスクリプションタイプを説明している場合は、代わりに汎用 [[!UICONTROL  サブスクリプション ] データタイプ ](./subscription.md) を使用してください。
+>通信業界に関係のないサブスクリプションタイプを説明している場合は、代わりに汎用 [[!UICONTROL &#x200B; サブスクリプション &#x200B;] データタイプ ](./subscription.md) を使用してください。
 
 ![Telecom Subscription structure](../images/data-types/telecom-subscription/structure.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `devices` | オブジェクトの配列 | プランに関連付けられたデバイスやアクセサリのリストを表します。 各配列項目の想定される構造について詳しくは、以下の [ 節 ](#devices) を参照してください。 |
-| `subscriber` | [[!UICONTROL  人物 ]](./person.md) | サブスクリプションの所有者を表します。 |
+| `subscriber` | [[!UICONTROL &#x200B; 人物 &#x200B;]](./person.md) | サブスクリプションの所有者を表します。 |
 | `ID` | 文字列 | 購読インスタンスの一意の ID。 |
 | `billingPeriod` | 文字列 | 請求の間隔。 |
 | `billingStartDate` | 日付 | 請求期間が開始される日付。 日付形式（時間なし）は、[RFC 3339、セクション 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 標準に従う必要があります。 |

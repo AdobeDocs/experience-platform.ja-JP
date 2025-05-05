@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL  サイトツールの詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; サイトツールの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  サイトツールの詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `sitetool` オブジェクトを提供し、スキーマは、サイトツールによって収集された情報を取得します。
+[!UICONTROL &#x200B; サイトツールの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `sitetool` オブジェクトを提供し、スキーマは、サイトツールによって収集された情報を取得します。
 
 ![ フィールドグループ構造 ](../../images/field-groups/sitetool-details.png)
 

@@ -12,16 +12,16 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL  コード化可能な参照 ] データタイプ
+# [!UICONTROL &#x200B; コード化可能な参照 &#x200B;] データタイプ
 
-[!UICONTROL  コード化可能な参照 ] は、リソースまたは概念への参照を記述する標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
+[!UICONTROL &#x200B; コード化可能な参照 &#x200B;] は、リソースまたは概念への参照を記述する標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
 ![ コード化可能な参照データタイプ構造 ](../../../images/healthcare/data-types/codeable-reference.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| [!UICONTROL  概念 ] | `concept` | [[!UICONTROL  コード化可能な概念 ]](../data-types/codeable-concept.md) | 概念への参照（クラス）。 |
-| [!UICONTROL  参考 ] | `reference` | [[!UICONTROL  参考 ]](../data-types/reference.md) | リソースへの参照。 |
+| [!UICONTROL &#x200B; 概念 &#x200B;] | `concept` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | 概念への参照（クラス）。 |
+| [!UICONTROL &#x200B; 参考 &#x200B;] | `reference` | [[!UICONTROL &#x200B; 参考 &#x200B;]](../data-types/reference.md) | リソースへの参照。 |
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 

@@ -12,7 +12,7 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL  ヘルスケア ] データモデル V2
+# [!UICONTROL &#x200B; ヘルスケア &#x200B;] データモデル V2
 
 ## フィールドグループとクラス {#field-groups}
 
@@ -35,26 +35,26 @@ ht-degree: 4%
 | 名前 | 説明 |
 | --- | --- |
 | [[!UICONTROL アドレス]](./data-types/address.md) | （GPS やその他の場所定義形式とは異なり）郵便規則を使用して表されたアドレスを表します。 |
-| [[!UICONTROL  注釈 ]](./data-types/annotation.md) | オーサーに対するアトリビューションを持つテキストノード。 |
+| [[!UICONTROL &#x200B; 注釈 &#x200B;]](./data-types/annotation.md) | オーサーに対するアトリビューションを持つテキストノード。 |
 | [[!UICONTROL 対象]](./data-types/availability.md) | アイテムの空き時間データ。 |
-| [[!UICONTROL  コード化可能な概念 ]](./data-types/codeable-concept.md) | あるリソースから別のリソースへの参照。 |
-| [[!UICONTROL  コード化可能な参照 ]](./data-types/codeable-reference.md) | リソースまたは概念への参照。 |
-| [[!UICONTROL  コーディング ]](./data-types/coding.md) | 用語システムで定義されているコードへの参照。 |
-| [[!UICONTROL  連絡窓口 ]](./data-types/contact-point.md) | 個人の連絡先詳細。 |
-| [[!UICONTROL  用量 ]](./data-types/dosage.md) | 薬の服用方法または服用方法。 |
+| [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](./data-types/codeable-concept.md) | あるリソースから別のリソースへの参照。 |
+| [[!UICONTROL &#x200B; コード化可能な参照 &#x200B;]](./data-types/codeable-reference.md) | リソースまたは概念への参照。 |
+| [[!UICONTROL &#x200B; コーディング &#x200B;]](./data-types/coding.md) | 用語システムで定義されているコードへの参照。 |
+| [[!UICONTROL &#x200B; 連絡窓口 &#x200B;]](./data-types/contact-point.md) | 個人の連絡先詳細。 |
+| [[!UICONTROL &#x200B; 用量 &#x200B;]](./data-types/dosage.md) | 薬の服用方法または服用方法。 |
 | [[!UICONTROL 期間]](./data-types/duration.md) | 時間の長さ。 |
-| [[!UICONTROL  詳細な連絡先 ]](./data-types/extended-contact-detail.md) | 拡張連絡先の情報。 |
-| [[!UICONTROL  人間の名前 ]](./data-types/human-name.md) | 人間またはその他の生命体の名前に関する情報。 |
+| [[!UICONTROL &#x200B; 詳細な連絡先 &#x200B;]](./data-types/extended-contact-detail.md) | 拡張連絡先の情報。 |
+| [[!UICONTROL &#x200B; 人間の名前 &#x200B;]](./data-types/human-name.md) | 人間またはその他の生命体の名前に関する情報。 |
 | [[!UICONTROL 識別子]](./data-types/identifier.md) | 計算を目的とした識別子。 |
-| [[!UICONTROL  金額 ]](./data-types/money.md) | ある認識された通貨での経済的有用性の量。 |
-| [[!UICONTROL  期間 ]](./data-types/period.md) | 開始日時と終了日時で定義される期間。 |
-| [[!UICONTROL  人物 ]](./data-types/person.md) | 汎用人物レコードに関する情報。 |
-| [[!UICONTROL  数量 ]](./data-types/quantity.md) | 測定または測定可能な量。 |
+| [[!UICONTROL &#x200B; 金額 &#x200B;]](./data-types/money.md) | ある認識された通貨での経済的有用性の量。 |
+| [[!UICONTROL &#x200B; 期間 &#x200B;]](./data-types/period.md) | 開始日時と終了日時で定義される期間。 |
+| [[!UICONTROL &#x200B; 人物 &#x200B;]](./data-types/person.md) | 汎用人物レコードに関する情報。 |
+| [[!UICONTROL &#x200B; 数量 &#x200B;]](./data-types/quantity.md) | 測定または測定可能な量。 |
 | [[!UICONTROL 範囲]](./data-types/range.md) | 下限と上限の値によってバインドされた値のセット。 |
-| [[!UICONTROL  比率 ]](./data-types/ratio.md) | 分子と分母を介した 2 つの [[!UICONTROL  数量 ]](./data-types/quantity.md) 値の比率。 |
-| [[!UICONTROL  参考 ]](./data-types/reference.md) | あるリソースから別のリソースへの参照。 |
-| [[!UICONTROL  繰り返し ]](./data-types/repeat.md) | イベントがスケジュールされるタイミングを記述する一連のルール。 |
-| [[!UICONTROL  単純量 ]](./data-types/simple-quantity.md) | 測定または測定可能な量。 |
-| [[!UICONTROL  タイミング ]](./data-types/timing.md) | 複数回発生する可能性のあるイベントに関する情報。 |
-| [[!UICONTROL  仮想サービスの詳細 ]](./data-types/virtual-service-detail.md) | 仮想サービスの連絡先の詳細。 |
+| [[!UICONTROL &#x200B; 比率 &#x200B;]](./data-types/ratio.md) | 分子と分母を介した 2 つの [[!UICONTROL &#x200B; 数量 &#x200B;]](./data-types/quantity.md) 値の比率。 |
+| [[!UICONTROL &#x200B; 参考 &#x200B;]](./data-types/reference.md) | あるリソースから別のリソースへの参照。 |
+| [[!UICONTROL &#x200B; 繰り返し &#x200B;]](./data-types/repeat.md) | イベントがスケジュールされるタイミングを記述する一連のルール。 |
+| [[!UICONTROL &#x200B; 単純量 &#x200B;]](./data-types/simple-quantity.md) | 測定または測定可能な量。 |
+| [[!UICONTROL &#x200B; タイミング &#x200B;]](./data-types/timing.md) | 複数回発生する可能性のあるイベントに関する情報。 |
+| [[!UICONTROL &#x200B; 仮想サービスの詳細 &#x200B;]](./data-types/virtual-service-detail.md) | 仮想サービスの連絡先の詳細。 |
 

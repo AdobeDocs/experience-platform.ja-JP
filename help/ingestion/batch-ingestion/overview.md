@@ -146,7 +146,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!NOTE]
 >
->バッチ取り込みを使用すると、プロファイルストアのデータを増分的に更新できます。 詳しくは、『 [ バッチ取得開発者ガイド [ の ](#patch-a-batch) バッチの更新 ](api-overview.md) の節を参照してください。
+>バッチ取り込みを使用すると、プロファイルストアのデータを増分的に更新できます。 詳しくは、『 [&#128279;](api-overview.md) バッチ取得開発者ガイド [ の ](#patch-a-batch) バッチの更新  の節を参照してください。
 
 >[!INFO]
 >

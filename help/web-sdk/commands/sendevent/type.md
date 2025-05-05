@@ -25,8 +25,8 @@ Adobeには、使用可能な事前定義済みのイベントタイプがいく
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
 1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
-1. [!UICONTROL  アクション ] で、既存のアクションを選択するか、アクションを作成します。
-1. 「[!UICONTROL  拡張機能 ]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL  アクションタイプ ] を **[!UICONTROL イベントを送信]** に設定します。
+1. [!UICONTROL &#x200B; アクション &#x200B;] で、既存のアクションを選択するか、アクションを作成します。
+1. 「[!UICONTROL &#x200B; 拡張機能 &#x200B;]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL &#x200B; アクションタイプ &#x200B;] を **[!UICONTROL イベントを送信]** に設定します。
 1. 「**[!UICONTROL タイプ]**」フィールドのドロップダウンを使用するか、独自の値を入力します。
 1. 「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 

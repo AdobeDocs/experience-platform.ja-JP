@@ -37,7 +37,7 @@ ht-degree: 36%
 
 ## [!DNL Mixpanel] アカウントを接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -87,7 +87,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 次に、[!DNL Mixpanel] ソースに正常に接続したことと、[!DNL Mixpanel] のイベントがExperience Platformに取り込まれていることを検証する手順の概要を説明します。
 
-Experience Platformの UI で、左側のナビゲーションバーから **[!UICONTROL データセット]** を選択して、[!UICONTROL  データセット ] ワークスペースにアクセスします。 [!UICONTROL  データセットアクティビティ ] 画面には、実行の詳細が表示されます。
+Experience Platformの UI で、左側のナビゲーションバーから **[!UICONTROL データセット]** を選択して、[!UICONTROL &#x200B; データセット &#x200B;] ワークスペースにアクセスします。 [!UICONTROL &#x200B; データセットアクティビティ &#x200B;] 画面には、実行の詳細が表示されます。
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 

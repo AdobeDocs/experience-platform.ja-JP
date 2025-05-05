@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # パーソナライズされたコンテンツのレンダリング
 
-Adobe Experience Platform Web SDK では、[Adobe Target、[Offer decisioning、[Adobe Journey Optimizer](https://business.adobe.com/jp/products/target/adobe-target.html) など、Adobeのパーソナライゼーションソリューションからパーソナライズされたコンテンツを取得 ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja) るこ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja) がサポートされています。
+Adobe Experience Platform Web SDK では、[&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja)Adobe Target、[&#128279;](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja)Offer decisioning、[Adobe Journey Optimizer](https://business.adobe.com/jp/products/target/adobe-target.html) など、Adobeのパーソナライゼーションソリューションからパーソナライズされたコンテンツを取得  るこ  がサポートされています。
 
 さらに、Web SDK は、[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) や [ カスタムパーソナライゼーション接続 ](../../destinations/catalog/personalization/custom-personalization.md) などのAdobe Experience Platform パーソナライゼーションの宛先を通じて、同じページおよび次のページのパーソナライゼーション機能を強化します。 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、[ 専用ガイド ](../../destinations/ui/activate-edge-personalization-destinations.md) を参照してください。
 

@@ -59,7 +59,7 @@ ht-degree: 4%
 
 放棄された製品参照シナリオは、web サイトとモバイルアプリの両方での放棄された製品参照をターゲットにします。 このシナリオがトリガーされるのは、製品が表示されたが、購入や買い物かごへの追加は行われなかった場合です。 この例では、過去 24 時間以内にリストの追加がない場合、ブランドエンゲージメントは 3 日後にトリガーされます。<p>![ お客様のインテリジェントな放棄された製品の参照シナリオの全体的な視覚的概要。](../intelligent-re-engagement/images/re-engagement-journey.png " お客様のインテリジェントな放棄された製品の参照シナリオの全体的な視覚的な概要 "){width="1920" zoomable="yes"}</p>
 
-1. スキーマとデータセットを作成し、[!UICONTROL  プロファイル ] を有効にします。
+1. スキーマとデータセットを作成し、[!UICONTROL &#x200B; プロファイル &#x200B;] を有効にします。
 2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。これは、ID グラフを使用して、認証済み web およびモバイルアプリの訪問者にリンクできます。
 4. プロファイルのリストから焦点を当てたオーディエンスを作成し、過去 3 日間に **顧客** がエンゲージメントを行ったかどうかを確認します。
@@ -71,7 +71,7 @@ ht-degree: 4%
 
 放棄された買い物かごシナリオが適用されるのは、製品が買い物かごに入れられているが、web サイトとモバイルアプリの両方でまだ購入されていない場合です。 また、この方法を使用して、有料メディアキャンペーンを開始および停止します。<p>![ お客様が買い物かごを放棄したシナリオの概要レベルの視覚的な概要。](../intelligent-re-engagement/images/abandoned-cart-journey.png " 顧客が買い物かごを放棄したシナリオの概要レベルの視覚的な概要。"){width="1920" zoomable="yes"}</p>
 
-1. スキーマおよびデータセットを作成して、[!UICONTROL  プロファイル ] を有効にします。
+1. スキーマおよびデータセットを作成して、[!UICONTROL &#x200B; プロファイル &#x200B;] を有効にします。
 2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。これは、ID グラフを使用して、認証済み web およびモバイルアプリの訪問者にリンクできます。
 4. プロファイルのリストから対象オーディエンスを作成し、**顧客** が買い物かごに商品を入れたが、購入を完了していないかどうかを確認します。 この **[!UICONTROL 買い物かごに追加]** イベントは、30 分待った後に購入を確認するタイマーを開始します。 購入が行われていない場合、**顧客** は **[!UICONTROL 買い物かごを放棄]** オーディエンスに追加されます。
@@ -83,7 +83,7 @@ ht-degree: 4%
 
 注文確認シナリオは、web サイトとモバイルアプリを通じて行われた製品の購入に焦点を当てています。<p>![ 顧客注文確認シナリオの全体的な視覚的な概要。](../intelligent-re-engagement/images/order-confirmation-journey.png " 顧客注文確認シナリオの高レベルの視覚的な概要。"){width="1920" zoomable="yes"}</p>
 
-1. スキーマとデータセットを作成し、[!UICONTROL  プロファイル ] を有効にします。
+1. スキーマとデータセットを作成し、[!UICONTROL &#x200B; プロファイル &#x200B;] を有効にします。
 2. Web SDK、Mobile SDK、または API を使用して、Experience Platformにデータを取り込みます。 Analytics Source コネクタも利用できますが、ジャーニー遅延が発生する可能性があります。
 3. 追加のプロファイル対応データを取り込みます。これは、ID グラフを使用して、認証済み web およびモバイルアプリの訪問者にリンクできます。
 4. 確認ジャーニーは [!DNL Adobe Journey Optimizer] で作成します。
@@ -95,7 +95,7 @@ ht-degree: 4%
 
 ### スキーマの作成とフィールドグループの指定 {#schema-design}
 
-エクスペリエンスデータモデル（XDM）リソースは、[!DNL Adobe Experience Platform] の [!UICONTROL  スキーマ ] ワークスペースで管理されます。 [!DNL Adobe] が提供するコアリソース（フィールドグループなど）を表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
+エクスペリエンスデータモデル（XDM）リソースは、[!DNL Adobe Experience Platform] の [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースで管理されます。 [!DNL Adobe] が提供するコアリソース（フィールドグループなど）を表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
 
 [ スキーマ ](/help/xdm/home.md) の作成について詳しくは、[ スキーマの作成」チュートリアルを参照してください。](/help/xdm/tutorials/create-schema-ui.md) および [XDM を使用したカスタマーエクスペリエンスデータのモデル化 ](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html)。
 
@@ -105,7 +105,7 @@ ht-degree: 4%
 
 このスキーマは、顧客情報を構成するプロファイルデータを構造化して参照するために使用されます。 このデータは、通常、CRM または同様のシステムを介して [!DNL Adobe Experience Platform] に取り込まれ、パーソナライゼーション、マーケティングの同意、オーディエンスの強化機能に使用される顧客の詳細を参照するために必要です。
 
-顧客属性スキーマは、次のフィールドグループを含む [[!UICONTROL XDM 個人プロファイル ]](/help/xdm/classes/individual-profile.md) クラスで表されます。
+顧客属性スキーマは、次のフィールドグループを含む [[!UICONTROL XDM 個人プロファイル &#x200B;]](/help/xdm/classes/individual-profile.md) クラスで表されます。
 
 +++個人の連絡先の詳細（フィールドグループ）
 
@@ -434,7 +434,7 @@ Experience Platformから派生したオーディエンス定義を使用して�
 
 >[!NOTE]
 >
->図に示されているすべてが [!DNL Adobe Journey Optimizer] に含まれるわけではありません。 すべての [ 有料メディア広告 ](/help/destinations/catalog/social/overview.md) は、[!UICONTROL  宛先 ] に作成されます。
+>図に示されているすべてが [!DNL Adobe Journey Optimizer] に含まれるわけではありません。 すべての [ 有料メディア広告 ](/help/destinations/catalog/social/overview.md) は、[!UICONTROL &#x200B; 宛先 &#x200B;] に作成されます。
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) は、顧客とのつながり、コンテキスト、パーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーは、顧客がブランドとやり取りするプロセス全体です。 各ユースケースのジャーニーには、特定の情報が必要です。 以下に、各ジャーニーで必要な正確なデータを示します。
 

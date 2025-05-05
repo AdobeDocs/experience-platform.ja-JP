@@ -126,9 +126,9 @@ SDKがExperience Platformにデータを送信するには、まずExperience Pl
 
 | データストリームフィールド | 値 |
 | --- | --- |
-| [!UICONTROL  サンドボックス ] | データストリームを設定するために必要なストリーミング接続とデータセットを含む、Experience Platform[ サンドボックス ](/help/sandboxes/home.md) の名前。 |
-| [!UICONTROL  流入口 ] | Experience Platformの有効なストリーミング接続。 既存のストリーミングインレットがない場合は、[ ストリーミング接続の作成 ](/help/ingestion/tutorials/create-streaming-connection-ui.md) に関するチュートリアルを参照してください。 |
-| [!UICONTROL イベントデータセット] | [ 前の手順 ](#datasets) で作成した [!DNL XDM ExperienceEvent] データセットを選択します。 [[!UICONTROL IAB TCF 2.0 同意 ] フィールドグループ ](/help/xdm/field-groups/event/iab.md) をこのデータセットのスキーマに含めた場合、[`sendEvent`](#sendEvent) コマンドを使用して、同意変更イベントを経時的に追跡し、そのデータをこのデータセットに保存できます。 このデータセットに保存される同意値は、自動適用ワークフローでは使用 **されません**。 |
+| [!UICONTROL &#x200B; サンドボックス &#x200B;] | データストリームを設定するために必要なストリーミング接続とデータセットを含む、Experience Platform[ サンドボックス ](/help/sandboxes/home.md) の名前。 |
+| [!UICONTROL &#x200B; 流入口 &#x200B;] | Experience Platformの有効なストリーミング接続。 既存のストリーミングインレットがない場合は、[ ストリーミング接続の作成 ](/help/ingestion/tutorials/create-streaming-connection-ui.md) に関するチュートリアルを参照してください。 |
+| [!UICONTROL イベントデータセット] | [ 前の手順 ](#datasets) で作成した [!DNL XDM ExperienceEvent] データセットを選択します。 [[!UICONTROL IAB TCF 2.0 同意 &#x200B;] フィールドグループ ](/help/xdm/field-groups/event/iab.md) をこのデータセットのスキーマに含めた場合、[`sendEvent`](#sendEvent) コマンドを使用して、同意変更イベントを経時的に追跡し、そのデータをこのデータセットに保存できます。 このデータセットに保存される同意値は、自動適用ワークフローでは使用 **されません**。 |
 | [!UICONTROL プロファイルデータセット] | [ 前の手順 ](#datasets) で作成した [!DNL XDM Individual Profile] データセットを選択します。 [`setConsent`](#setConsent) コマンドを使用して CMP 同意変更フックに応答する場合、収集されたデータはこのデータセットに保存されます。 このデータセットはプロファイル対応なので、このデータセットに保存された同意値は、自動適用ワークフロー中に適用されます。 |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)

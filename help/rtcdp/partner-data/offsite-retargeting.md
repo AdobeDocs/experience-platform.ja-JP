@@ -55,7 +55,7 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 
 計算属性にアクセスするには、「**[!UICONTROL プロファイル]**」、「**[!UICONTROL 計算属性]**」および「**[!UICONTROL 計算属性の作成]** の順に選択します。
 
-![ 「[!UICONTROL  プロファイル ] ワークスペース内の「[!UICONTROL  計算済み属性 ] タブに加えて、「[!UICONTROL  計算済み属性を作成 ]」ボタンがハイライト表示されます。](../assets/offsite-retargeting/create-ca.png)
+![ 「[!UICONTROL &#x200B; プロファイル &#x200B;] ワークスペース内の「[!UICONTROL &#x200B; 計算済み属性 &#x200B;] タブに加えて、「[!UICONTROL &#x200B; 計算済み属性を作成 &#x200B;]」ボタンがハイライト表示されます。](../assets/offsite-retargeting/create-ca.png)
 
 **[!UICONTROL 計算属性を作成]** ページが表示されます。 このページでは、コンポーネントを使用して計算属性を作成できます。
 
@@ -69,7 +69,7 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 
 検索バーを使用して、（オンサイトのパーソナライゼーションのユースケースで作成した [ 「パートナー ID」イベントを見つけて ](#get-data-in) 計算属性キャンバスに追加できます。
 
-![ 「[!UICONTROL  イベント ] タブと検索バーがハイライト表示されています。](../assets/offsite-retargeting/ca-add-partner-id.png)
+![ 「[!UICONTROL &#x200B; イベント &#x200B;] タブと検索バーがハイライト表示されています。](../assets/offsite-retargeting/ca-add-partner-id.png)
 
 「パートナー ID」イベントを定義に追加した後、イベントフィルタリング条件を **[!UICONTROL 存在]** に設定し、追加したパートナー ID の **[!UICONTROL 最新]** 値に設定し、ルックバック期間を 24 時間にします。
 
@@ -85,11 +85,11 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 
 オーディエンスを作成するには、**[!UICONTROL オーディエンス]**、**[!UICONTROL オーディエンスを作成]** の順に選択します。
 
-![ 「[!UICONTROL  オーディエンスを作成 ] ボタンがハイライト表示されます。](../assets/offsite-retargeting/create-audience.png)
+![ 「[!UICONTROL &#x200B; オーディエンスを作成 &#x200B;] ボタンがハイライト表示されます。](../assets/offsite-retargeting/create-audience.png)
 
-[!UICONTROL  オーディエンスを作成 ] と [!UICONTROL  ルールを作成 ] のどちらかを選択するように求めるダイアログが表示されます。 **[!UICONTROL ルールを作成]**/**[!UICONTROL 作成]** を選択します。
+[!UICONTROL &#x200B; オーディエンスを作成 &#x200B;] と [!UICONTROL &#x200B; ルールを作成 &#x200B;] のどちらかを選択するように求めるダイアログが表示されます。 **[!UICONTROL ルールを作成]**/**[!UICONTROL 作成]** を選択します。
 
-![ 「[!UICONTROL  ルールを作成 ]」ボタンがハイライト表示されます。](../assets/offsite-retargeting/select-build-rule.png)
+![ 「[!UICONTROL &#x200B; ルールを作成 &#x200B;]」ボタンがハイライト表示されます。](../assets/offsite-retargeting/select-build-rule.png)
 
 セグメントビルダーページが表示されます。 このページでは、コンポーネントを使用してオーディエンスを作成できます。
 
@@ -101,11 +101,11 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 
 これらの訪問者を見つけるには、まずオーディエンスに **[!UICONTROL ページビュー]** イベントを追加する必要があります。 **[!UICONTROL フィールド]** の下の「**[!UICONTROL イベント]**」タブを選択し、**[!UICONTROL ページビュー]** イベントをドラッグ&amp;ドロップして、「イベント」セクションキャンバスに追加します。
 
-![ 「[!UICONTROL  フィールド ]」セクションの「[!UICONTROL  イベント ]」タブがハイライト表示され、[!UICONTROL  ページビュー ] イベント ](../assets/offsite-retargeting/add-page-view.png) が表示されます。
+![ 「[!UICONTROL &#x200B; フィールド &#x200B;]」セクションの「[!UICONTROL &#x200B; イベント &#x200B;]」タブがハイライト表示され、[!UICONTROL &#x200B; ページビュー &#x200B;] イベント ](../assets/offsite-retargeting/add-page-view.png) が表示されます。
 
 新しく追加された **[!UICONTROL ページビュー]** イベントを選択します。 ルックバック期間を **[!UICONTROL いつでも]** から **[!UICONTROL 今月]** に変更し、イベントルールを **5 以上** を含むように変更します。
 
-![ 追加された [!UICONTROL  ページビュー ] イベントの詳細が表示されます。](../assets/offsite-retargeting/edit-event.png)
+![ 追加された [!UICONTROL &#x200B; ページビュー &#x200B;] イベントの詳細が表示されます。](../assets/offsite-retargeting/edit-event.png)
 
 イベントを追加したら、属性を追加する必要があります。 認証されていない訪問者を扱っているので、作成した計算属性を追加できます。 この新しく作成された計算属性を使用すると、パートナー ID をオーディエンスにリンクできます。
 
@@ -121,7 +121,7 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 
 ![ 属性の適切な値がハイライト表示されます。](../assets/offsite-retargeting/set-attribute-values.png)
 
-これで、パートナーが提供した ID を持っているが、まだサイトにサインアップしていない高密度訪問者を検索するオーディエンスを正常に作成しました。 オーディエンスに「未認証ユーザーのリターゲティング」という名前を付け、「保存 ]**を選択して**[!UICONTROL  オーディエンスの作成を完了します。
+これで、パートナーが提供した ID を持っているが、まだサイトにサインアップしていない高密度訪問者を検索するオーディエンスを正常に作成しました。 オーディエンスに「未認証ユーザーのリターゲティング」という名前を付け、「保存 **を選択して** オーディエンスの作成を完了します。
 
 ![ オーディエンスプロパティがハイライト表示されている様子 ](../assets/offsite-retargeting/save-audience-properties.png)
 
@@ -129,7 +129,7 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 
 オーディエンスを正常に作成したら、このオーディエンスをダウンストリームの宛先に対してアクティブ化できます。 左側のナビゲーションパネルで **[!UICONTROL オーディエンス]** を選択し、新しく作成したオーディエンスを探して、省略記号アイコンを選択して **[!UICONTROL 宛先に対してアクティブ化]** を選択します。
 
-![ 「[!UICONTROL  宛先に対してアクティブ化 ] ボタンがハイライト表示されます。](../assets/offsite-retargeting/activate-to-destination.png)
+![ 「[!UICONTROL &#x200B; 宛先に対してアクティブ化 &#x200B;] ボタンがハイライト表示されます。](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
 >
@@ -143,9 +143,9 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 
 **[!UICONTROL スケジュール設定]** ページが表示されます。 このページでは、オーディエンスをアクティブ化する頻度を決定するスケジュールを作成できます。 「**[!UICONTROL スケジュールを作成]**」を選択して、オーディエンスアクティベーションのスケジュールを作成します。
 
-![ 「[!UICONTROL  スケジュールを作成 ] ボタンがハイライト表示されます。](../assets/offsite-retargeting/select-create-schedule.png)
+![ 「[!UICONTROL &#x200B; スケジュールを作成 &#x200B;] ボタンがハイライト表示されます。](../assets/offsite-retargeting/select-create-schedule.png)
 
-[!UICONTROL  スケジュール設定 ] ポップオーバーが表示されます。 このページでは、オーディエンスのアクティベーションのスケジュールを作成できます。 スケジュールを設定したら、「**[!UICONTROL 作成]**」を選択して続行します。
+[!UICONTROL &#x200B; スケジュール設定 &#x200B;] ポップオーバーが表示されます。 このページでは、オーディエンスのアクティベーションのスケジュールを作成できます。 スケジュールを設定したら、「**[!UICONTROL 作成]**」を選択して続行します。
 
 ![ スケジュールを設定ポップオーバーが表示されます。](../assets/offsite-retargeting/configure-schedule.png)
 
@@ -155,11 +155,11 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 
 **[!UICONTROL 属性を選択]** ページが表示されます。 このページでは、アクティブ化されたオーディエンスと共に書き出す属性を選択できます。 少なくとも、パートナー ID を含める必要があります。これにより、再ターゲットを計画している訪問者を識別できるからです。 **[!UICONTROL 新しいマッピングを追加]** を選択して、計算属性を検索します。 必要な属性を追加したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![ 「[!UICONTROL  新しいマッピングを追加 ]」ボタンと計算属性の両方がハイライト表示されます。](../assets/offsite-retargeting/add-new-mapping.png)
+![ 「[!UICONTROL &#x200B; 新しいマッピングを追加 &#x200B;]」ボタンと計算属性の両方がハイライト表示されます。](../assets/offsite-retargeting/add-new-mapping.png)
 
 **[!UICONTROL レビュー]** ページが表示されます。 このページでは、Audience Activation の詳細を確認できます。 指定した詳細が正しければ、「**[!UICONTROL 終了]**」を選択します。
 
-![ オーディエンスアクティベーションの詳細を示す [!UICONTROL  レビュー ] ページが表示されます。](../assets/offsite-retargeting/review-destination-activation.png)
+![ オーディエンスアクティベーションの詳細を示す [!UICONTROL &#x200B; レビュー &#x200B;] ページが表示されます。](../assets/offsite-retargeting/review-destination-activation.png)
 
 これで、さらなるリターゲティングのために、認証されていないユーザーのオーディエンスをダウンストリーム宛先に対してアクティブ化しました。
 
@@ -168,5 +168,5 @@ Web SDK を使用してReal-Time CDPにデータを最適に読み込む方法�
 Real-Time CDPのパートナーデータサポートを通じて有効になるユースケースについて確認できます。
 
 - パートナーデータを使用して [ 新規顧客を獲得および獲得 ](./prospecting.md) します。
-- パートナー支援による訪問者認識を使用して ](./offsite-retargeting.md) オンサイトエクスペリエンスをパーソナライズ [ します。
-- パートナー提供の属性を使用して ](./supplement-first-party-profiles.md) ファーストパーティプロファイルを補完 [ ます。
+- パートナー支援による訪問者認識を使用して [&#128279;](./offsite-retargeting.md) オンサイトエクスペリエンスをパーソナライズ  します。
+- パートナー提供の属性を使用して [&#128279;](./supplement-first-party-profiles.md) ファーストパーティプロファイルを補完  ます。

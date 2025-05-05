@@ -42,7 +42,7 @@ Web SDK タグ拡張機能からデータストリームの上書きを設定す
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 &#x200B;] をクリックします。
 1. **[!UICONTROL データストリーム設定の上書き]** セクションまでスクロールします。 必要な各上書き値を設定します。
 1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 
@@ -52,13 +52,13 @@ Web SDK タグ拡張機能からデータストリームの上書きを設定す
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
 1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
-1. [!UICONTROL  アクション ] で、既存のアクションを選択するか、アクションを作成します。
-1. 「[!UICONTROL  拡張機能 ]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL  アクションタイプ ] を **[!UICONTROL イベントを送信]** に設定します。
+1. [!UICONTROL &#x200B; アクション &#x200B;] で、既存のアクションを選択するか、アクションを作成します。
+1. 「[!UICONTROL &#x200B; 拡張機能 &#x200B;]」ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、「[!UICONTROL &#x200B; アクションタイプ &#x200B;] を **[!UICONTROL イベントを送信]** に設定します。
 1. **[!UICONTROL データストリーム設定の上書き]** というラベルの付いたセクションまでスクロールします。
 1. このセクションの各フィールドを目的のオーバーライド値に設定します。
 1. 「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 
-[!UICONTROL  開発 ] 環境、[!UICONTROL  ステージング ] 環境および [!UICONTROL  実稼動 ] 環境には、別々のフィールドが用意されています。 各環境で必要な各フィールドに、必ず入力してください。
+[!UICONTROL &#x200B; 開発 &#x200B;] 環境、[!UICONTROL &#x200B; ステージング &#x200B;] 環境および [!UICONTROL &#x200B; 実稼動 &#x200B;] 環境には、別々のフィールドが用意されています。 各環境で必要な各フィールドに、必ず入力してください。
 
 ## Web SDK JavaScript ライブラリを介して上書きをEdge Networkに送信します {#library}
 

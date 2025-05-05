@@ -71,7 +71,7 @@ Webhook を正常に登録し、新しいデータが取り込まれたら、イ
 
 ## 次の手順
 
-プロジェクトに [!DNL Experience Platform] 通知を登録すると、[!UICONTROL  プロジェクトの概要 ] から受信したイベントを表示できます。 イベントのトレース方法について詳しくは、[Adobe I/O Eventsのトレース ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) に関するガイドを参照してください。
+プロジェクトに [!DNL Experience Platform] 通知を登録すると、[!UICONTROL &#x200B; プロジェクトの概要 &#x200B;] から受信したイベントを表示できます。 イベントのトレース方法について詳しくは、[Adobe I/O Eventsのトレース ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) に関するガイドを参照してください。
 
 ## 付録
 

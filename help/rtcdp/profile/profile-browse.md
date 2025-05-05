@@ -22,15 +22,15 @@ Adobe Real-Time Customer Data PlatformはAdobe Experience Platformをベース�
 
 ## Real-Time CDP B2B Edition のプロファイルの機能強化
 
-Adobe Experience Platform、Real-Time CDPでサポートされているプロファイル参照機能に加えて、B2B edition ユーザーは、それぞれ「属性」タブと [!UICONTROL  イベント ] タブで、顧客プロファイル内の B2B 属性と [!UICONTROL  イベント ] にアクセスできます。 B2B データを使用してセグメント化を実行することもできます。これらのオーディエンスは、B2B 以外のオーディエンスと共に顧客の [!UICONTROL  オーディエンスメンバーシップ ] タブの下に表示されます。
+Adobe Experience Platform、Real-Time CDPでサポートされているプロファイル参照機能に加えて、B2B edition ユーザーは、それぞれ「属性」タブと [!UICONTROL &#x200B; イベント &#x200B;] タブで、顧客プロファイル内の B2B 属性と [!UICONTROL &#x200B; イベント &#x200B;] にアクセスできます。 B2B データを使用してセグメント化を実行することもできます。これらのオーディエンスは、B2B 以外のオーディエンスと共に顧客の [!UICONTROL &#x200B; オーディエンスメンバーシップ &#x200B;] タブの下に表示されます。
 
-Real-Time CDP、B2B editionを使用すると、個々の顧客に関連付けられた、全社のソースから [!UICONTROL Accounts]、[!UICONTROL Opportunity]、[!UICONTROL Source レコード ] を参照することもできます。
+Real-Time CDP、B2B editionを使用すると、個々の顧客に関連付けられた、全社のソースから [!UICONTROL Accounts]、[!UICONTROL Opportunity]、[!UICONTROL Source レコード &#x200B;] を参照することもできます。
 
 これらの機能強化を確認するには、まず [ リアルタイム顧客プロファイルユーザーガイド ](../../profile/ui/user-guide.md) で説明されている手順に従って、結合ポリシーまたは ID 名前空間でプロファイルを参照します。
 
 ![](images/b2b-browse-profile.png)
 
-プロファイルの詳細には、顧客プロファイルに用意されている標準情報に加えて、[!UICONTROL  アカウント ]、[!UICONTROL  商談 ]、[!UICONTROL Source レコード ] の各タブへのアクセスが含まれています。これらの情報は、B2B のイベントと属性にも拡張されています。
+プロファイルの詳細には、顧客プロファイルに用意されている標準情報に加えて、[!UICONTROL &#x200B; アカウント &#x200B;]、[!UICONTROL &#x200B; 商談 &#x200B;]、[!UICONTROL Source レコード &#x200B;] の各タブへのアクセスが含まれています。これらの情報は、B2B のイベントと属性にも拡張されています。
 
 ![](images/b2b-profile-detail.png)
 
@@ -54,6 +54,6 @@ Experience Platform UI に表示されるプロファイルの詳細について
 
 ### 「Source レコード」タブ
 
-「**[!UICONTROL Source レコード]**」タブを使用すると、1 つの顧客プロファイルに関与している複数のソースレコードを、エンタープライズソースから簡単に確認できます。 [!UICONTROL  人物ソースキー ] とメールアドレスに加えて、各ソースレコードは、レコードのタイプ（「連絡先」や「リード」レコードなど）とソースも提供します。
+「**[!UICONTROL Source レコード]**」タブを使用すると、1 つの顧客プロファイルに関与している複数のソースレコードを、エンタープライズソースから簡単に確認できます。 [!UICONTROL &#x200B; 人物ソースキー &#x200B;] とメールアドレスに加えて、各ソースレコードは、レコードのタイプ（「連絡先」や「リード」レコードなど）とソースも提供します。
 
 ![](images/b2b-profile-source-records.png)

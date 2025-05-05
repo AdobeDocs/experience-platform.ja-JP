@@ -20,8 +20,8 @@ Adobe サービスを操作する際、`edgeBasePath` プロパティは対象�
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
-1. 「[!UICONTROL  詳細設定 ]」セクションまでスクロールし、「**[!UICONTROL Edgeのベースパス]**」テキストフィールドに目的の値を入力します。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 &#x200B;] をクリックします。
+1. 「[!UICONTROL &#x200B; 詳細設定 &#x200B;]」セクションまでスクロールし、「**[!UICONTROL Edgeのベースパス]**」テキストフィールドに目的の値を入力します。
 1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 
 ## Web SDK JavaScript ライブラリを使用したEdgeのベースパス

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [query pro mode](./overview.md#query-pro-mode) で [ カスタムインサイト ](./overview.md) を作成したら、グラフデータをPDF形式で書き出すことができます。 このアクションは、カスタムダッシュボードの概要から取得されます。
 
-ダッシュボードワークスペースで、「[!UICONTROL  参照 ] タブにリストされているインベントリからカスタムダッシュボードを選択します。
+ダッシュボードワークスペースで、「[!UICONTROL &#x200B; 参照 &#x200B;] タブにリストされているインベントリからカスタムダッシュボードを選択します。
 
 ![ カスタムダッシュボードエントリがハイライト表示されたダッシュボードインベントリ。](../images/sql-insights-query-pro-mode/dashboard-inventory-audience.png)
 

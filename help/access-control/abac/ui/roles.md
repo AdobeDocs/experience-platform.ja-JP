@@ -37,7 +37,7 @@ ht-degree: 30%
 
 ![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
 
-さらにリソースを追加するには、左側のナビゲーションパネルから ]**0}Adobe Experience Platform} を選択して、リソースのリストを表示します。**[!UICONTROL &#x200B;または、左側のナビゲーションパネルの検索バーにリソース名を入力します。
+さらにリソースを追加するには、左側のナビゲーションパネルから **0&rbrace;Adobe Experience Platform&rbrace; を選択して、リソースのリストを表示します。**&#x200B;または、左側のナビゲーションパネルの検索バーにリソース名を入力します。
 
 ![flac-add-additional-resources](../../images/flac-ui/flac-add-additional-resources.png)
 

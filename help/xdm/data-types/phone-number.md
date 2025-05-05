@@ -11,9 +11,9 @@ ht-degree: 17%
 
 ---
 
-# [!UICONTROL  電話番号 ] データタイプ
+# [!UICONTROL &#x200B; 電話番号 &#x200B;] データタイプ
 
-[!UICONTROL  電話番号 ] は、電話番号の詳細を説明する標準の XDM データタイプです。
+[!UICONTROL &#x200B; 電話番号 &#x200B;] は、電話番号の詳細を説明する標準の XDM データタイプです。
 
 ![](../images/data-types/phone-number.png){width=600}
 

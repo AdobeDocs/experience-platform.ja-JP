@@ -221,14 +221,14 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 設定可能な条件のリストを以下に示します。
 
 * [!UICONTROL equals]
-* [!UICONTROL  次と等しくない ]
-* [!UICONTROL  次で始まる ]
-* [!UICONTROL  次で終わる ]
-* [!UICONTROL  次で終わらない ]
+* [!UICONTROL &#x200B; 次と等しくない &#x200B;]
+* [!UICONTROL &#x200B; 次で始まる &#x200B;]
+* [!UICONTROL &#x200B; 次で終わる &#x200B;]
+* [!UICONTROL &#x200B; 次で終わらない &#x200B;]
 * [!UICONTROL contains]
-* [!UICONTROL  次を含まない ]
+* [!UICONTROL &#x200B; 次を含まない &#x200B;]
 * [!UICONTROL exists]
-* [!UICONTROL  存在しません ]
+* [!UICONTROL &#x200B; 存在しません &#x200B;]
 
 ![ 条件 ](../../../../images/tutorials/create/analytics/conditions.png)
 
@@ -301,7 +301,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![ 組織内の既存のAdobe Analytics データフローのリスト。](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-[!UICONTROL  データセットアクティビティ ] ページには、Analytics からExperience Platformに送信されるデータの進行状況に関する情報が表示されます。 インターフェイスには、先月のレコードの合計、過去 7 日間に取り込んだレコードの合計、先月のデータのサイズなどの指標が表示されます。
+[!UICONTROL &#x200B; データセットアクティビティ &#x200B;] ページには、Analytics からExperience Platformに送信されるデータの進行状況に関する情報が表示されます。 インターフェイスには、先月のレコードの合計、過去 7 日間に取り込んだレコードの合計、先月のデータのサイズなどの指標が表示されます。
 
 ソースは、2 つのデータセットフローをインスタンス化します。 1 つのフローはバックフィルデータ、もう 1 つはライブデータのフローを表します。 バックフィルデータは、リアルタイム顧客プロファイルへの取り込み用に設定されていませんが、分析およびデータサイエンスのユースケース用にデータレイクへと送信されます。
 

@@ -13,7 +13,7 @@ ht-degree: 52%
 
 # Real-time Customer Data Platform B2B Edition のスキーマ
 
-Adobe Real-time Customer Data Platform B2B Edition には、アカウント、オポチュニティ、キャンペーンなどといった ](../../xdm/schema/composition.md#class) 基本的な B2B データエンティティに関する詳細をキャプチャする [ エクスペリエンスデータモデル （XDM） クラスが標準で複数用意されています。 さらに、Real-Time CDP B2B Edition を使用すると、これらのスキーマ間で多対 1 の関係を定義できるので、高度なセグメント化のユースケースに加えることができます。
+Adobe Real-time Customer Data Platform B2B Edition には、アカウント、オポチュニティ、キャンペーンなどといった [&#128279;](../../xdm/schema/composition.md#class) 基本的な B2B データエンティティに関する詳細をキャプチャする  エクスペリエンスデータモデル （XDM） クラスが標準で複数用意されています。 さらに、Real-Time CDP B2B Edition を使用すると、これらのスキーマ間で多対 1 の関係を定義できるので、高度なセグメント化のユースケースに加えることができます。
 
 >[!IMPORTANT]
 >

@@ -19,7 +19,7 @@ ht-degree: 52%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL  地理座標 ]](./geo-coordinates.md) | 場所の地理的座標を表します。 |
+| `_schema` | [[!UICONTROL &#x200B; 地理座標 &#x200B;]](./geo-coordinates.md) | 場所の地理的座標を表します。 |
 | `_id` | 文字列 | 座標の一意のシステム生成 ID。 |
 | `city` | 文字列 | 市区町村の名前。 |
 | `countryCode` | 文字列 | 国の 2 文字の <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> コード。 |

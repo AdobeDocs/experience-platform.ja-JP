@@ -86,7 +86,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 | --- | --- | --- |
 | フィールドグループ | [!UICONTROL フリークエンシーキャップの制約] | [!UICONTROL フリークエンシーキャップの制約]フィールドグループが [繰り返しイベントとカスタムイベントをサポートするように更新](https://github.com/adobe/xdm/pull/1641/files)されました。 |
 | データタイプ | [!UICONTROL Web リファラー] | Web リファラープロパティが [`xdm:linkName` と `xdm:linkRegion` を含むように更新されました](https://github.com/adobe/xdm/pull/1666/files)。これらはそれぞれ、前のページで選択した HTML 要素の名前と領域です。 |
-| フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [[!UICONTROL トラッカー URL] フィールドが ](https://github.com/adobe/xdm/pull/1665/files)[!UICONTROL Adobe CJM ExperienceEvent] に追加されました。このトラッカーは、ユーザーが選択した URL を提供します。 |
+| フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [[!UICONTROL トラッカー URL] フィールドが ](https://github.com/adobe/xdm/pull/1665/files) [!UICONTROL Adobe CJM ExperienceEvent] に追加されました。このトラッカーは、ユーザーが選択した URL を提供します。 |
 | フィールドグループ | [!UICONTROL Adobe CJM ExperienceEvent - メッセージインタラクションの詳細] | [空の `meta:enum` プロパティが](https://github.com/adobe/xdm/pull/1668/files) URL [!UICONTROL トラッキングタイプ]フィールドから削除されました。 |
 | データタイプ | [!UICONTROL メディア情報] | [[!UICONTROL メディア情報]データタイプの `videoSegment` プロパティの正規表現パターンが削除されました](https://github.com/adobe/xdm/pull/1667/files)。 |
 

@@ -65,13 +65,13 @@ ht-degree: 21%
 
 ### [!DNL Loyalty Members] スキーマ
 
-ソーススキーマ「[!DNL Loyalty Members]」は、[!DNL XDM Individual Profile] クラスに基づいており、これには、ロイヤルティプログラムのメンバーを記述するフィールドが含まれています。 これらのフィールドの 1 つである `personalEmail.addess` は、[!UICONTROL  メール ] 名前空間の下でスキーマのプライマリ ID として機能します。 **[!UICONTROL スキーマプロパティ]** に示すように、このスキーマは [!DNL Real-Time Customer Profile] での使用が有効になっています。
+ソーススキーマ「[!DNL Loyalty Members]」は、[!DNL XDM Individual Profile] クラスに基づいており、これには、ロイヤルティプログラムのメンバーを記述するフィールドが含まれています。 これらのフィールドの 1 つである `personalEmail.addess` は、[!UICONTROL &#x200B; メール &#x200B;] 名前空間の下でスキーマのプライマリ ID として機能します。 **[!UICONTROL スキーマプロパティ]** に示すように、このスキーマは [!DNL Real-Time Customer Profile] での使用が有効になっています。
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### [!DNL Hotels] スキーマ
 
-参照スキーマ「[!DNL Hotels]」は、カスタム「[!DNL Hotels]」クラスに基づいており、ホテルを説明するフィールドを含んでいます。 関係に参加するには、参照スキーマにプライマリ ID も定義され、[!UICONTROL  プロファイル ] に対して有効になっている必要があります。 この場合、は `_tenantId.hotelId` カスタムの「[!DNL Hotel ID]」 ID 名前空間を使用して、スキーマのプライマリ ID として機能します。
+参照スキーマ「[!DNL Hotels]」は、カスタム「[!DNL Hotels]」クラスに基づいており、ホテルを説明するフィールドを含んでいます。 関係に参加するには、参照スキーマにプライマリ ID も定義され、[!UICONTROL &#x200B; プロファイル &#x200B;] に対して有効になっている必要があります。 この場合、は `_tenantId.hotelId` カスタムの「[!DNL Hotel ID]」 ID 名前空間を使用して、スキーマのプライマリ ID として機能します。
 
 ![ プロファイルに対して有効にする ](../images/tutorials/relationship/hotels.png)
 
@@ -91,7 +91,7 @@ ht-degree: 21%
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-新規フィールドプレースホルダーがキャンバスに表示されます。 「**[!UICONTROL フィールドプロパティ]**」で、フィールド名とフィールドの表示名を指定し、タイプを「[!UICONTROL  文字列 ]」に設定します。 「**[!UICONTROL 割り当て先]**」で、拡張する既存のフィールドグループを選択するか、一意の名前を入力して新しいフィールドグループを作成します。 この場合、新しい「[!DNL Preferred Hotel]」フィールドグループが作成されます。
+新規フィールドプレースホルダーがキャンバスに表示されます。 「**[!UICONTROL フィールドプロパティ]**」で、フィールド名とフィールドの表示名を指定し、タイプを「[!UICONTROL &#x200B; 文字列 &#x200B;]」に設定します。 「**[!UICONTROL 割り当て先]**」で、拡張する既存のフィールドグループを選択するか、一意の名前を入力して新しいフィールドグループを作成します。 この場合、新しい「[!DNL Preferred Hotel]」フィールドグループが作成されます。
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -115,7 +115,7 @@ ht-degree: 21%
 
 ![ フィールドプロパティのサイドバーで「関係を追加」がハイライト表示されたスキーマエディター。](../images/tutorials/relationship/add-relationship.png)
 
-[!UICONTROL  関係を追加 ] ダイアログが表示されます。 このダイアログから、関係フィールドを設定するために必要なパラメーターを設定できます。 Real-Time CDP B2C ユーザーの場合は、ソーススキーマと参照スキーマの間に 1 対 1 の関係を **のみ** 設定できます。
+[!UICONTROL &#x200B; 関係を追加 &#x200B;] ダイアログが表示されます。 このダイアログから、関係フィールドを設定するために必要なパラメーターを設定できます。 Real-Time CDP B2C ユーザーの場合は、ソーススキーマと参照スキーマの間に 1 対 1 の関係を **のみ** 設定できます。
 
 >[!NOTE]
 >
@@ -143,13 +143,13 @@ ht-degree: 21%
 
 ![ 「関係を編集」がハイライト表示されたスキーマエディター。](../images/tutorials/relationship/edit-relationship.png)
 
-[!UICONTROL  関係を編集 ] ダイアログが表示されます。 ここから、[ 関係フィールドの定義 ](#relationship-field) で説明されているプロセスに従うか、関係を削除できます。 「**[!UICONTROL 関係を削除]**」を選択して、参照スキーマへの関係を削除します。
+[!UICONTROL &#x200B; 関係を編集 &#x200B;] ダイアログが表示されます。 ここから、[ 関係フィールドの定義 ](#relationship-field) で説明されているプロセスに従うか、関係を削除できます。 「**[!UICONTROL 関係を削除]**」を選択して、参照スキーマへの関係を削除します。
 
 ![ 関係を編集ダイアログ ](../images/tutorials/relationship/edit-relationship-dialog.png)
 
 ## 関係のフィルタリングと検索 {#filter-and-search}
 
-[!UICONTROL  スキーマ ] ワークスペースの「[!UICONTROL  関係 ]」タブから、スキーマ内の特定の関係をフィルタリングして検索できます。 このビューを使用すると、関係をすばやく見つけて管理できます。 フィルタリングオプションの手順について詳しくは、[ スキーマリソースの調査 ](../ui/explore.md#lookup) に関するドキュメントを参照してください。
+[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの「[!UICONTROL &#x200B; 関係 &#x200B;]」タブから、スキーマ内の特定の関係をフィルタリングして検索できます。 このビューを使用すると、関係をすばやく見つけて管理できます。 フィルタリングオプションの手順について詳しくは、[ スキーマリソースの調査 ](../ui/explore.md#lookup) に関するドキュメントを参照してください。
 
 ![ スキーマ ワークスペースの「関係」タブ ](../images/tutorials/relationship-b2b/relationship-tab.png)
 

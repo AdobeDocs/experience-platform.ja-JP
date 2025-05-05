@@ -45,7 +45,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-[!UICONTROL  クラウドストレージ ] カテゴリで、「**[!UICONTROL Oracle オブジェクトストレージ]**」を選択し、**[!UICONTROL データを追加]** を選択します。
+[!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「**[!UICONTROL Oracle オブジェクトストレージ]**」を選択し、**[!UICONTROL データを追加]** を選択します。
 
 ![カタログ](../../../../images/tutorials/create/oracle-object-storage/catalog.png)
 

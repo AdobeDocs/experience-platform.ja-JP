@@ -41,7 +41,7 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
   </thead>
   <tbody>
     <tr>
-      <td>[!UICONTROL 文字列 ]</td>
+      <td>[!UICONTROL 文字列 &#x200B;]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "string"}</pre>
@@ -49,7 +49,7 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL 番号 ]</td>
+      <td>[!UICONTROL 番号 &#x200B;]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -60,74 +60,74 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   「maximum」:9007199254740991、
   "minimum": -9007199254740991
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL 整数 ]</td>
+      <td>[!UICONTROL 整数 &#x200B;]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   「maximum」:2147483648、
   "minimum": -2147483648
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL 短 ]</td>
+      <td>[!UICONTROL 短 &#x200B;]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   「maximum」:32768、
   "minimum": -32768
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL バイト ]</td>
+      <td>[!UICONTROL バイト &#x200B;]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   「maximum」:128,
   "minimum":-128
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>90</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL 日付 ]*</td>
+      <td>[!UICONTROL 日付 &#x200B;]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "string",
   "format": "date"
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL 日時 ]*</td>
+      <td>[!UICONTROL 日時 &#x200B;]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "string",
   "format": "date-time"
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL ブール値 ]</td>
+      <td>[!UICONTROL ブール値 &#x200B;]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "boolean"}</pre>
@@ -158,14 +158,14 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
 | XDM タイプ | PARQUET | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | 型：`BYTE_ARRAY`<br> 注釈：`UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL  数値 ] | 型：`DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL &#x200B; 数値 &#x200B;] | 型：`DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | 型：`INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL  整数 ] | 型：`INT32`<br> 注釈：`INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL  短い ] | 型：`INT32`<br> 注釈：`INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL  バイト ] | 型：`INT32`<br> 注釈：`INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL &#x200B; 整数 &#x200B;] | 型：`INT32`<br> 注釈：`INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL &#x200B; 短い &#x200B;] | 型：`INT32`<br> 注釈：`INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL &#x200B; バイト &#x200B;] | 型：`INT32`<br> 注釈：`INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL 日付] | 型：`INT32`<br> 注釈：`DATE` | `DateType` | `java.util.Date` |
-| [!UICONTROL  日時 ] | 型：`INT64`<br> 注釈：`TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL  ブール値 ] | 型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL &#x200B; 日時 &#x200B;] | 型：`INT64`<br> 注釈：`TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL &#x200B; ブール値 &#x200B;] | 型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL マップ] | `MAP` 注釈グループ <br><br> （`<key-type>` は `STRING` にする必要があります） | `MapType`<br><br> （`keyType` は `StringType` でなければなりません） | `java.util.Map` |
 
 {style="table-layout:auto"}
@@ -175,14 +175,14 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
 | XDM タイプ | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | `String` | `System.String` | `String` |
-| [!UICONTROL  数値 ] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL &#x200B; 数値 &#x200B;] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL  整数 ] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL  短い ] | `Short` | `System.Int16` | `Number` |
-| [!UICONTROL  バイト ] | `Byte` | `System.SByte` | `Number` |
+| [!UICONTROL &#x200B; 整数 &#x200B;] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL &#x200B; 短い &#x200B;] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL &#x200B; バイト &#x200B;] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL 日付] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL  日時 ] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL  ブール値 ] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL &#x200B; 日時 &#x200B;] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL &#x200B; ブール値 &#x200B;] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL マップ] | `Map` | （N/A） | `object` |
 
 {style="table-layout:auto"}
@@ -192,14 +192,14 @@ XDM は JSON スキーマを基に構築されているので、XDM フィール
 | XDM タイプ | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL 文字列] | `string` | `String` | `string` |
-| [!UICONTROL  数値 ] | `double` | `Double` | `double` |
+| [!UICONTROL &#x200B; 数値 &#x200B;] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
-| [!UICONTROL  整数 ] | `int` | `Integer` | `int32` |
-| [!UICONTROL  短い ] | `int` | `Integer` | `int32` |
-| [!UICONTROL  バイト ] | `int` | `Integer` | `int32` |
+| [!UICONTROL &#x200B; 整数 &#x200B;] | `int` | `Integer` | `int32` |
+| [!UICONTROL &#x200B; 短い &#x200B;] | `int` | `Integer` | `int32` |
+| [!UICONTROL &#x200B; バイト &#x200B;] | `int` | `Integer` | `int32` |
 | [!UICONTROL 日付] | `date` | `Integer`<br> （Unix ミリ秒） | `int64`<br> （Unix ミリ秒） |
-| [!UICONTROL  日時 ] | `timestamp` | `Integer`<br> （Unix ミリ秒） | `int64`<br> （Unix ミリ秒） |
-| [!UICONTROL  ブール値 ] | `bool` | `Integer`<br> （0/1 バイナリ） | `bool` |
+| [!UICONTROL &#x200B; 日時 &#x200B;] | `timestamp` | `Integer`<br> （Unix ミリ秒） | `int64`<br> （Unix ミリ秒） |
+| [!UICONTROL &#x200B; ブール値 &#x200B;] | `bool` | `Integer`<br> （0/1 バイナリ） | `bool` |
 | [!UICONTROL マップ] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}

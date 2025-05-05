@@ -17,7 +17,7 @@ Adobe Admin Consoleを使用して [!DNL Experience Platform] のアクセス制
 
 管理者権限がない場合は、システム管理者に問い合わせてアクセス権を取得してください。
 
-管理者権限を取得したら、[Adobe Admin Console](https://adminconsole.adobe.com) に移動し、アドビの資格情報を使用してログインします。ログインすると、管理者権限を持つ組織の **[!UICONTROL 概要]** ページが表示されます。 このページには、組織が購読している製品と、組織全体にユーザーと管理者を追加するその他のコントロールが表示されます。 ]**0}Adobe Experience Platform} を選択して、Experience Platform統合用のアクセス制御ワークスペースを開きます。**[!UICONTROL 
+管理者権限を取得したら、[Adobe Admin Console](https://adminconsole.adobe.com) に移動し、アドビの資格情報を使用してログインします。ログインすると、管理者権限を持つ組織の **[!UICONTROL 概要]** ページが表示されます。 このページには、組織が購読している製品と、組織全体にユーザーと管理者を追加するその他のコントロールが表示されます。 **0&rbrace;Adobe Experience Platform&rbrace; を選択して、Experience Platform統合用のアクセス制御ワークスペースを開きます。**
 
 ![select-product](../images/select-product.png)
 

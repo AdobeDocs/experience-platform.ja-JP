@@ -45,5 +45,5 @@ Experience Platform は、サードパーティの顧客成功アプリケーシ
 
 ## UI を使用した [!DNL Zendesk] のExperience Platformへの接続
 
-* [UI での  [!DNL Zendesk ] ソース接続の作成](../../tutorials/ui/create/customer-success/zendesk.md)
+* [UI での  [!DNL Zendesk &#x200B;] ソース接続の作成](../../tutorials/ui/create/customer-success/zendesk.md)
 * [UI でのカスタマーサクセスソース接続のデータフローの作成](../../tutorials/ui/dataflow/customer-success.md)

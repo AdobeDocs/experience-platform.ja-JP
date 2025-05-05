@@ -11,7 +11,7 @@ ht-degree: 6%
 
 # Audience Manager の拡張アクティベーション
 
-Adobe Experience Platform上に構築されたAudience Manager Expanded Activation は、既存の [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) ユーザーが [Facebook](../destinations/catalog/social/overview.md)、[Google Ads[ などのReal-Time CDPから ](../destinations/catalog/advertising/overview.md) ソーシャル ](../destinations/catalog/social/facebook.md) および [ 広告 ](../destinations/catalog/advertising/google-ads-destination.md) 宛先プラットフォームにオーディエンスをアクティブ化するのに役立ちます。
+Adobe Experience Platform上に構築されたAudience Manager Expanded Activation は、既存の [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) ユーザーが [Facebook](../destinations/catalog/social/overview.md)、[&#128279;](../destinations/catalog/social/facebook.md)Google Ads[ などのReal-Time CDPから ](../destinations/catalog/advertising/overview.md) ソーシャル  および [ 広告 ](../destinations/catalog/advertising/google-ads-destination.md) 宛先プラットフォームにオーディエンスをアクティブ化するのに役立ちます。
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Audience Manager Expanded Activation は、Adobe Experience Platformの概念と
 [!DNL Expanded Activation] を通じてオーディエンスをアクティブ化するには、Audience Manager オーディエンスが **ハッシュ化されたメールアドレス** に基づいていることを確認します。 これを確認するには、Audience Managerの使用状況に応じて、次の 2 つの方法があります。
 
 * [Audience Manager People-based Destinations](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 機能を使用している場合は、既にAudience Managerでハッシュ化されたメールアドレスを取り込んでいます。 この場合、追加の手順は必要ありません。 [ 拡張されたアクティベーションによるオーディエンスのアクティブ化 ](activate-audiences.md) にスキップできます。
-* _2}Audience Manager People-based Destinations_ 機能を使用していない ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 場合は、Audience Managerで新しいデータソースを作成し、それを使用してハッシュ化されたメールアドレスを保存する必要があります。 [これを行う方法については、[ ハッシュ化されたメールワークフローのデータソースの設定 ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails) に関するドキュメントを参照してください。 ハッシュ化されたメールアドレスをAudience Manager データソースに取り込んだら、[ 拡張されたアクティベーションを通じたオーディエンスのアクティブ化 ](activate-audiences.md) に関するドキュメントを参照してください。
+* _2&rbrace;Audience Manager People-based Destinations_ 機能を使用していない [&#128279;](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 場合は、Audience Managerで新しいデータソースを作成し、それを使用してハッシュ化されたメールアドレスを保存する必要があります。 これを行う方法については、[ ハッシュ化されたメールワークフローのデータソースの設定 ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails) に関するドキュメントを参照してください。 ハッシュ化されたメールアドレスをAudience Manager データソースに取り込んだら、[ 拡張されたアクティベーションを通じたオーディエンスのアクティブ化 ](activate-audiences.md) に関するドキュメントを参照してください。
 
 ## 次の手順 {#next-steps}
 

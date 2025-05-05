@@ -27,7 +27,7 @@ Adobe Experience Platform UI の **[!UICONTROL データライフサイクル]**
 
 ワークスペースにアクセスするには、左側のナビゲーションで **データライフサイクル** を選択します。
 
-![Experience Platform UI の [!UICONTROL  データライフサイクル ] ワークスペース。左側のナビゲーションで [!UICONTROL  データライフサイクル ] がハイライト表示されています。](../images/ui/overview/home.png)
+![Experience Platform UI の [!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペース。左側のナビゲーションで [!UICONTROL &#x200B; データライフサイクル &#x200B;] がハイライト表示されています。](../images/ui/overview/home.png)
 
 ここから、既存の作業指示を参照したり、新しいデータライフサイクル操作を設定したりできます。 詳しくは、このガイドの次の節を参照してください。
 

@@ -58,11 +58,11 @@ Experience Platformの [!DNL Blob] ストレージにアクセスするには、
 
 ## [!DNL Blob] アカウントを接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-[!UICONTROL  クラウドストレージ ] カテゴリで、「**[!UICONTROL Azure Blob ストレージ]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
+[!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「**[!UICONTROL Azure Blob ストレージ]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
 ![Experience Platform ソースカタログと Azure Blob ストレージソースが選択されています。](../../../../images/tutorials/create/blob/catalog.png)
 

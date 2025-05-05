@@ -37,7 +37,7 @@ Experience PlatformでAdobe Target接続を設定する方法の概要につい�
 
 ## 実装タイプに基づいてサポートされるユースケース {#supported-use-cases}
 
-次の表に、「Web SDK」を有効にした場合としなかった場合、および [ エッジセグメント化 [ を有効にした場合としなかった場合の、実装タイプに基づいて ](/help/web-sdk/home.md)Adobe Target宛先でサポートされるユースケースを示 ](/help/segmentation/home.md#edge) ます。
+次の表に、「Web SDK」を有効にした場合としなかった場合、および [&#128279;](/help/segmentation/home.md#edge) エッジセグメント化 [ を有効にした場合としなかった場合の、実装タイプに基づいて ](/help/web-sdk/home.md)Adobe Target宛先でサポートされるユースケースを示  ます。
 
 | Adobe Targetの実装 *Web SDKを使用しない* | Adobe Target実装 *Web SDK* 使用 | Adobe Target実装 *Web SDK* および *エッジセグメンテーション* オフ |
 |---|---|---|
@@ -63,7 +63,7 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 * [ デフォルトワークスペース ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace) へのアクセス
 * **承認者** [ 役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions)。
 
-詳しくは、[Target Premiumおよび ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80)2}Target Standard} の権限の付与を参照してくだ ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions) い。[
+詳しくは、[Target Premiumおよび ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80)2&rbrace;Target Standard&rbrace; の権限の付与を参照してくだ [&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions) い。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -104,7 +104,7 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -153,7 +153,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ エッジパーソナライゼーションの宛先に対するオーディエンスのアクティブ化 ](../../ui/activate-edge-personalization-destinations.md) を参照してください。
 

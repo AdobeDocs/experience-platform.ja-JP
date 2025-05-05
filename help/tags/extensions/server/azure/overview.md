@@ -30,7 +30,7 @@ Microsoft [!DNL Azure] 拡張機能をインストールするには、データ
 
 目的のプロパティを選択または作成したら、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 [!UICONTROL Microsoft Azure] カードを検索し、「**[!UICONTROL インストール]**」を選択します。
 
-![ データ収集 UI で [!UICONTROL Microsoft Azure] 拡張機能に対して選択されている「[!UICONTROL  インストール ]」ボタン。](../../../images/extensions/server/azure/install.png)
+![ データ収集 UI で [!UICONTROL Microsoft Azure] 拡張機能に対して選択されている「[!UICONTROL &#x200B; インストール &#x200B;]」ボタン。](../../../images/extensions/server/azure/install.png)
 
 拡張機能には設定プロパティがないので、インストールされた拡張機能のリストにすぐに追加されます。 イベント転送ルールを設定する際に、[!DNL Event Hub] アクションタイプの使用を開始できるようになりました。
 
@@ -38,11 +38,11 @@ Microsoft [!DNL Azure] 拡張機能をインストールするには、データ
 
 新しいイベント転送ルールの作成を開始し、必要に応じてその条件を設定します。 ルールのアクションを選択する場合、拡張機能で「**[!UICONTROL Microsoft Azure]**」を選択し、アクションタイプで「**[!UICONTROL Event Hubs にデータを送信]**」を選択します。
 
-![ データ収集 UI のルールに対して選択されている [!UICONTROL Event Hubs にデータを送信 ] アクションタイプ ](../../../images/extensions/server/azure/select-action-type.png)
+![ データ収集 UI のルールに対して選択されている [!UICONTROL Event Hubs にデータを送信 &#x200B;] アクションタイプ ](../../../images/extensions/server/azure/select-action-type.png)
 
 右側のパネルが更新され、データの送信方法に関する設定オプションが表示されます。 特に、[!DNL Event Hub] 設定を表す様々なプロパティに [ データ要素 ](../../../ui/managing-resources/data-elements.md) を割り当てる必要があります。
 
-![UI に表示される [!UICONTROL Event Hubs にデータを送信 ] アクションタイプの設定オプション ](../../../images/extensions/server/azure/event-hub-details.png)
+![UI に表示される [!UICONTROL Event Hubs にデータを送信 &#x200B;] アクションタイプの設定オプション ](../../../images/extensions/server/azure/event-hub-details.png)
 
 **[!UICONTROL イベントハブの詳細]**
 
@@ -50,9 +50,9 @@ Microsoft [!DNL Azure] 拡張機能をインストールするには、データ
 | --- | --- |
 | [!UICONTROL 名前空間] | [ イベントハブの設定 ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 時に作成した [!DNL Event Hubs] 名前空間の名前。 |
 | [!UICONTROL 名前] | イベントハブの名前。 |
-| [!UICONTROL SAS 承認規則名 ] | [!DNL Event Hubs] 名前空間全体、またはデータの送信先の特定のイベントハブインスタンスの共有アクセス認証ルールの名前。 詳しくは、「[SAS 認証値の取得 ](#sas)」に関する付録の節を参照してください。 |
-| [!UICONTROL SAS アクセスキー ] | [!DNL Event Hubs] 名前空間全体、またはデータの送信先の特定のイベントハブインスタンスの共有アクセス許可ルールのプライマリキー。 詳しくは、「[SAS 認証値の取得 ](#sas)」に関する付録の節を参照してください。 |
-| [!UICONTROL  パーティション ID] | [!DNL Event Hubs] を使用すると、[ イベントを特定のパーティションに直接送信 ](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka) できます。 この機能を利用するには、イベントを受け取るパーティションの ID を指定します。 |
+| [!UICONTROL SAS 承認規則名 &#x200B;] | [!DNL Event Hubs] 名前空間全体、またはデータの送信先の特定のイベントハブインスタンスの共有アクセス認証ルールの名前。 詳しくは、「[SAS 認証値の取得 ](#sas)」に関する付録の節を参照してください。 |
+| [!UICONTROL SAS アクセスキー &#x200B;] | [!DNL Event Hubs] 名前空間全体、またはデータの送信先の特定のイベントハブインスタンスの共有アクセス許可ルールのプライマリキー。 詳しくは、「[SAS 認証値の取得 ](#sas)」に関する付録の節を参照してください。 |
+| [!UICONTROL &#x200B; パーティション ID] | [!DNL Event Hubs] を使用すると、[ イベントを特定のパーティションに直接送信 ](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka) できます。 この機能を利用するには、イベントを受け取るパーティションの ID を指定します。 |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ Microsoft [!DNL Azure] 拡張機能をインストールするには、データ
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  ペイロード ] | このフィールドには、[!DNL Event Hubs] に転送されるデータが含まれています。 データは、JSON オブジェクト、文字列、またはデータ要素です。 |
+| [!UICONTROL &#x200B; ペイロード &#x200B;] | このフィールドには、[!DNL Event Hubs] に転送されるデータが含まれています。 データは、JSON オブジェクト、文字列、またはデータ要素です。 |
 
 {style="table-layout:auto"}
 

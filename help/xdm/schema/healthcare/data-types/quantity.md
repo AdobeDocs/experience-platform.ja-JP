@@ -12,18 +12,18 @@ ht-degree: 11%
 
 ---
 
-# [!UICONTROL  数量 ] データタイプ
+# [!UICONTROL &#x200B; 数量 &#x200B;] データタイプ
 
-[!UICONTROL  数量 ] は、測定された量または測定可能な量を提供する標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
+[!UICONTROL &#x200B; 数量 &#x200B;] は、測定された量または測定可能な量を提供する標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
 ![ 数量データタイプの構造 ](../../../images/healthcare/data-types/quantity.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | [!UICONTROL コード] | `code` | 文字列 | 単位のコード化された形式。 |
-| [!UICONTROL  コンパレータ ] | `comparator` | 文字列 | 比較演算子。 このプロパティの値は、次の既知の列挙値のいずれかに等しい必要があります。 <li> `<` </li> <li> `<=` </li> <li> `>=` </li> <li> `>`</li> <li> `ad`</li> |
-| [!UICONTROL  システム ] | `system` | 文字列 | コード化された単位形式を定義するシステム。URI で表されます。 |
-| [!UICONTROL  単位 ] | `unit` | 文字列 | 単位表現。 |
+| [!UICONTROL &#x200B; コンパレータ &#x200B;] | `comparator` | 文字列 | 比較演算子。 このプロパティの値は、次の既知の列挙値のいずれかに等しい必要があります。 <li> `<` </li> <li> `<=` </li> <li> `>=` </li> <li> `>`</li> <li> `ad`</li> |
+| [!UICONTROL &#x200B; システム &#x200B;] | `system` | 文字列 | コード化された単位形式を定義するシステム。URI で表されます。 |
+| [!UICONTROL &#x200B; 単位 &#x200B;] | `unit` | 文字列 | 単位表現。 |
 | [!UICONTROL 値] | `value` | Double | 数値。 |
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。

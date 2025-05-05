@@ -101,7 +101,7 @@ Experience Platform UI の「[!UICONTROL Data Management]」で、「**[!UICONTR
 
 >[!TAB 宛先]
 
-**[!UICONTROL 宛先]** を選択して、[!UICONTROL  ストリーミングのアクティブ化率 ] および [!UICONTROL  失敗したデータフロー実行のバッチ ] に関する指標を表示します。 詳しくは、[ 宛先データの監視 ](monitor-destinations.md) に関するガイドを参照してください。
+**[!UICONTROL 宛先]** を選択して、[!UICONTROL &#x200B; ストリーミングのアクティブ化率 &#x200B;] および [!UICONTROL &#x200B; 失敗したデータフロー実行のバッチ &#x200B;] に関する指標を表示します。 詳しくは、[ 宛先データの監視 ](monitor-destinations.md) に関するガイドを参照してください。
 
 ![ 宛先カードが選択された UI のモニタリングダッシュボード。](../assets/ui/monitor-overview/destinations.png)
 
@@ -115,9 +115,9 @@ Experience Platform UI の「[!UICONTROL Data Management]」で、「**[!UICONTR
 
 表示されるダイアログで、データ監視ビューの新しい時間枠を設定できます。 カスタムの時間枠を作成するか、事前設定済みのオプションのリストから選択するかを選択できます。
 
-* [!UICONTROL  過去 24 時間 ]
-* [!UICONTROL  過去 7 日間 ]
-* [!UICONTROL  過去 30 日間 ]
+* [!UICONTROL &#x200B; 過去 24 時間 &#x200B;]
+* [!UICONTROL &#x200B; 過去 7 日間 &#x200B;]
+* [!UICONTROL &#x200B; 過去 30 日間 &#x200B;]
 
 完了したら、「**[!UICONTROL 適用]**」を選択します。
 

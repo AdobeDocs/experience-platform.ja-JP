@@ -46,7 +46,7 @@ SDKがExperience Platformにデータを送信するには、まずデータス�
 
 | データストリームフィールド | 値 |
 | --- | --- |
-| [!UICONTROL  サンドボックス ] | データストリームを設定するために必要なストリーミング接続とデータセットを含む、Experience Platform[ サンドボックス ](../../../sandboxes/home.md) の名前。 |
+| [!UICONTROL &#x200B; サンドボックス &#x200B;] | データストリームを設定するために必要なストリーミング接続とデータセットを含む、Experience Platform[ サンドボックス ](../../../sandboxes/home.md) の名前。 |
 | [!UICONTROL イベントデータセット] | SDKを使用してにイベントデータを送信する予定の [!DNL XDM ExperienceEvent] データセット。 Experience Platform データストリームを作成するにはイベントデータセットを指定する必要がありますが、イベントを介して送信された同意データは、ダウンストリーム実施ワークフローでは順守されないことに注意してください。 |
 | [!UICONTROL プロファイルデータセット] | 作成した顧客同意フィールドを持つ [!DNL Profile] 対応データセット [ 以前 ](#prerequisites)。 |
 
@@ -82,11 +82,11 @@ SDK拡張機能がインストールされている状態で、デフォルト�
 
 UI でデータ要素を作成するには、左側のナビゲーションで **[!UICONTROL データ要素]** を選択してから、「**[!UICONTROL データ要素の追加]** を選択して、データ要素作成ダイアログに移動します。
 
-ここから、`adobeDefaultConsent` に基づいて [!UICONTROL JavaScript変数 ] データ要素を作成する必要があります。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
+ここから、`adobeDefaultConsent` に基づいて [!UICONTROL JavaScript変数 &#x200B;] データ要素を作成する必要があります。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-データ要素が作成されたら、Web SDK拡張機能の設定ページに戻ります。 「[!UICONTROL  プライバシー ]」セクションで **[!UICONTROL データ要素によって提供]** を選択し、提供されたダイアログを使用して、前に作成したデフォルトの同意データ要素を選択します。
+データ要素が作成されたら、Web SDK拡張機能の設定ページに戻ります。 「[!UICONTROL &#x200B; プライバシー &#x200B;]」セクションで **[!UICONTROL データ要素によって提供]** を選択し、提供されたダイアログを使用して、前に作成したデフォルトの同意データ要素を選択します。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 

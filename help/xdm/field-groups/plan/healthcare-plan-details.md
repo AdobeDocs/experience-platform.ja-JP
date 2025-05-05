@@ -9,9 +9,9 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL  ヘルスケアプランの詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; ヘルスケアプランの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  ヘルスケアプランの詳細 ] は、[[!UICONTROL  プラン ] クラス ](../../classes/plan.md) の標準スキーマフィールドグループです。 医療プランに関連するプロパティをキャプチャする単一のオブジェクトタイプのフィールド `healthcarePlanDetails` を提供します。
+[!UICONTROL &#x200B; ヘルスケアプランの詳細 &#x200B;] は、[[!UICONTROL &#x200B; プラン &#x200B;] クラス ](../../classes/plan.md) の標準スキーマフィールドグループです。 医療プランに関連するプロパティをキャプチャする単一のオブジェクトタイプのフィールド `healthcarePlanDetails` を提供します。
 
 ![](../../images/field-groups/plan/healthcare-plan-details.png)
 

@@ -32,5 +32,5 @@ ht-degree: 15%
 
 Adobeでは、[!UICONTROL Product] クラスで使用するためのいくつかの標準フィールドグループを提供しています。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
-* [[!UICONTROL  製品カタログ ]](../field-groups/product/product-catalog.md)
-* [[!UICONTROL  製品カテゴリ ]](../field-groups/product/product-category.md)
+* [[!UICONTROL &#x200B; 製品カタログ &#x200B;]](../field-groups/product/product-catalog.md)
+* [[!UICONTROL &#x200B; 製品カテゴリ &#x200B;]](../field-groups/product/product-category.md)

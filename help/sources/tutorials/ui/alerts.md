@@ -38,7 +38,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 >
 >データフローでメールベースのアラート通知を受け取るには、Experience Platform アカウントでメールの即時通知を有効にする必要があります。
 
-ソースワークスペースのソースワークフローの [!UICONTROL  データフローの詳細 ] 手順で、データフローのアラートを有効にできます。
+ソースワークスペースのソースワークフローの [!UICONTROL &#x200B; データフローの詳細 &#x200B;] 手順で、データフローのアラートを有効にできます。
 
 ![dataflow-detail](../../images/tutorials/alerts/dataflow-detail.png)
 
@@ -92,11 +92,11 @@ UI でのソースデータフローの作成に関する詳細な手順につ�
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-[!UICONTROL  データフロー実行の概要 ] ページが表示されます。 画面の上半分には、属性に関する情報、対応するデータフロー実行 ID、高レベルのエラー概要など、データフローの概要が表示されます。
+[!UICONTROL &#x200B; データフロー実行の概要 &#x200B;] ページが表示されます。 画面の上半分には、属性に関する情報、対応するデータフロー実行 ID、高レベルのエラー概要など、データフローの概要が表示されます。
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
-ページの下半分には、データフロー実行ステージで発生した [!UICONTROL  データフロー実行エラー ] が表示されます。 ここから、エラー診断をプレビューしたり、[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) を使用して、データフローに対応するエラー診断またはファイルマニフェストをダウンロードしたりできます。
+ページの下半分には、データフロー実行ステージで発生した [!UICONTROL &#x200B; データフロー実行エラー &#x200B;] が表示されます。 ここから、エラー診断をプレビューしたり、[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) を使用して、データフローに対応するエラー診断またはファイルマニフェストをダウンロードしたりできます。
 
 ![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
 
@@ -108,13 +108,13 @@ UI でのソースデータフローの作成に関する詳細な手順につ�
 
 ![ 電子メール ](../../images/tutorials/alerts/email.png)
 
-UI アラートと同様に、[!UICONTROL  データフロー実行の概要 ] ページが表示され、データフローに関連付けられたエラーを調査するためのインターフェイスが提供されます。
+UI アラートと同様に、[!UICONTROL &#x200B; データフロー実行の概要 &#x200B;] ページが表示され、データフローに関連付けられたエラーを調査するためのインターフェイスが提供されます。
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## アラートを購読および購読解除
 
-[!UICONTROL  データフロー ] ページでは、追加のアラートを購読したり、既存のデータフローに対して設定されたアラートを登録解除したりできます。 リストから作成したデータフローを見つけ、省略記号（`...`）を選択して、オプションのドロップダウンメニューを表示します。 次に、「**[!UICONTROL アラートを購読]**」を選択して、データフローのアラート設定を変更します。
+[!UICONTROL &#x200B; データフロー &#x200B;] ページでは、追加のアラートを購読したり、既存のデータフローに対して設定されたアラートを登録解除したりできます。 リストから作成したデータフローを見つけ、省略記号（`...`）を選択して、オプションのドロップダウンメニューを表示します。 次に、「**[!UICONTROL アラートを購読]**」を選択して、データフローのアラート設定を変更します。
 
 ![options](../../images/tutorials/alerts/options.png)
 

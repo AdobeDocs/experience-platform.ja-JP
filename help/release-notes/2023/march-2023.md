@@ -119,12 +119,12 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL  オファー項目 ]](https://github.com/adobe/xdm/pull/1678/files) | オファーを表すクラス。 |
-| クラス | [[!UICONTROL  決定項目 ]](https://github.com/adobe/xdm/pull/1678/files) | 決定の対象となり得る項目。 決定プロセスの出力は、1 つ以上の決定項目です。 |
-| クラス | [[!UICONTROL  メディアセッションサーバータイムアウト ]](https://github.com/adobe/xdm/pull/1676/files) | ユーザーが最後に既知のインタラクションを行ってからセッションが終了するまでに経過した時間（秒）を示します。 |
-| フィールドグループ | [[!UICONTROL XDM プロファイル計算属性 ]](https://github.com/adobe/xdm/pull/1686/files) | これにより、内部Adobe サービスから受信した顧客データに計算済みの属性が追加されます。 顧客がデータを取り込むためにこの方法を使用しないでください。 |
-| データタイプ | [[!UICONTROL  払戻品目 ]](https://github.com/adobe/xdm/pull/1685/files) | 返金が注文に関連付けられているかどうかを示し、返金のタイプ、金額、関連付けられている通貨を定義します。 |
-| データタイプ | [[!UICONTROL  カテゴリデータ ]](https://github.com/adobe/xdm/pull/1677/files) | この新しいデータタイプは、製品のカテゴリを表します。 |
+| クラス | [[!UICONTROL &#x200B; オファー項目 &#x200B;]](https://github.com/adobe/xdm/pull/1678/files) | オファーを表すクラス。 |
+| クラス | [[!UICONTROL &#x200B; 決定項目 &#x200B;]](https://github.com/adobe/xdm/pull/1678/files) | 決定の対象となり得る項目。 決定プロセスの出力は、1 つ以上の決定項目です。 |
+| クラス | [[!UICONTROL &#x200B; メディアセッションサーバータイムアウト &#x200B;]](https://github.com/adobe/xdm/pull/1676/files) | ユーザーが最後に既知のインタラクションを行ってからセッションが終了するまでに経過した時間（秒）を示します。 |
+| フィールドグループ | [[!UICONTROL XDM プロファイル計算属性 &#x200B;]](https://github.com/adobe/xdm/pull/1686/files) | これにより、内部Adobe サービスから受信した顧客データに計算済みの属性が追加されます。 顧客がデータを取り込むためにこの方法を使用しないでください。 |
+| データタイプ | [[!UICONTROL &#x200B; 払戻品目 &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | 返金が注文に関連付けられているかどうかを示し、返金のタイプ、金額、関連付けられている通貨を定義します。 |
+| データタイプ | [[!UICONTROL &#x200B; カテゴリデータ &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | この新しいデータタイプは、製品のカテゴリを表します。 |
 | スキーマ | [[!UICONTROL Adobe Target 分類フィールド]](https://github.com/adobe/xdm/pull/1682/files) | ターゲット分類データセット用に新しい XDM スキーマが作成されました。 Target のアクティビティとエクスペリエンスを分類する一連のメタデータフィールドが含まれています。 |
 
 {style="table-layout:auto"}
@@ -133,16 +133,16 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| フィールドグループ | [[!UICONTROL  コンテンツコンポーネント詳細 ]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` が [!UICONTROL  コンテンツコンポーネントの詳細 ] から削除されました |
-| フィールドグループ | [[!UICONTROL AJO エンティティタグ ]](https://github.com/adobe/xdm/pull/1672/files) | ジャーニーまたはキャンペーンに対応する [!UICONTROL AJO エンティティフィールド ] にAJO エンティティタグを追加しました |
-| フィールドグループ | （複数） | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールドをいくつか追加しました ]](https://github.com/adobe/xdm/pull/1671/files) |
-| フィールドグループ | （複数） | [ メディアレポート [!UICONTROL  用に複数の XDM イベントタイプを追加 ]](https://github.com/adobe/xdm/pull/1670/files) ました。 |
-| フィールドグループ | [!UICONTROL Workfront変更イベント ] | `Full Record` フィールドグループと `Accessor Employee Ids` フィールドグループが追加されました。 |
-| データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL  払い戻し金額 ] が追加され、項目の払い戻し金額が表示されました。 |
-| データタイプ | [[!UICONTROL  受注 ]](https://github.com/adobe/xdm/pull/1685/files) | この注文の払い戻しのリストに [!UICONTROL  払い戻しリスト ] が追加されました。 |
-| データタイプ | [[!UICONTROL  商品リスト項目 ]](https://github.com/adobe/xdm/pull/1677/files) | この商品のカテゴリデータのリストに商品カテゴリを追加しました。 |
-| データタイプ | [!UICONTROL  セッションの詳細情報 ] | [ レポートに使用されるメディアストリームのタイプを示す ](https://github.com/adobe/xdm/pull/1676/files)`pev3` 文字列フィールドを追加しました。 また、リダイレクトが発生したかどうかを示す `pccr` プロパティも追加しました。 |
-| データタイプ | [!UICONTROL  購買依頼表 ] | [ 要求リスト プロパティ ](https://github.com/adobe/xdm/pull/1675/files) を提供します。 名前、ID、説明が含まれます。 |
+| フィールドグループ | [[!UICONTROL &#x200B; コンテンツコンポーネント詳細 &#x200B;]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` が [!UICONTROL &#x200B; コンテンツコンポーネントの詳細 &#x200B;] から削除されました |
+| フィールドグループ | [[!UICONTROL AJO エンティティタグ &#x200B;]](https://github.com/adobe/xdm/pull/1672/files) | ジャーニーまたはキャンペーンに対応する [!UICONTROL AJO エンティティフィールド &#x200B;] にAJO エンティティタグを追加しました |
+| フィールドグループ | （複数） | [[!UICONTROL Journey Orchestration ステップイベントの共通フィールドをいくつか追加しました &#x200B;]](https://github.com/adobe/xdm/pull/1671/files) |
+| フィールドグループ | （複数） | [ メディアレポート [!UICONTROL &#x200B; 用に複数の XDM イベントタイプを追加 &#x200B;]](https://github.com/adobe/xdm/pull/1670/files) ました。 |
+| フィールドグループ | [!UICONTROL Workfront変更イベント &#x200B;] | `Full Record` フィールドグループと `Accessor Employee Ids` フィールドグループが追加されました。 |
+| データタイプ | [[!UICONTROL 製品リスト項目]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL &#x200B; 払い戻し金額 &#x200B;] が追加され、項目の払い戻し金額が表示されました。 |
+| データタイプ | [[!UICONTROL &#x200B; 受注 &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | この注文の払い戻しのリストに [!UICONTROL &#x200B; 払い戻しリスト &#x200B;] が追加されました。 |
+| データタイプ | [[!UICONTROL &#x200B; 商品リスト項目 &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | この商品のカテゴリデータのリストに商品カテゴリを追加しました。 |
+| データタイプ | [!UICONTROL &#x200B; セッションの詳細情報 &#x200B;] | [ レポートに使用されるメディアストリームのタイプを示す ](https://github.com/adobe/xdm/pull/1676/files)`pev3` 文字列フィールドを追加しました。 また、リダイレクトが発生したかどうかを示す `pccr` プロパティも追加しました。 |
+| データタイプ | [!UICONTROL &#x200B; 購買依頼表 &#x200B;] | [ 要求リスト プロパティ ](https://github.com/adobe/xdm/pull/1675/files) を提供します。 名前、ID、説明が含まれます。 |
 | データタイプ | [!UICONTROL Commerce] | [Commerce データ型が更新され ](https://github.com/adobe/xdm/pull/1675/files)`requisitionListOpens`、`requisitionListAdds`、`requisitionListRemovals`、および `requisitionList` が含まれるようになりました。 |
 
 {style="table-layout:auto"}

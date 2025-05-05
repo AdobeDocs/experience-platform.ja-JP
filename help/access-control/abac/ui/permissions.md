@@ -56,11 +56,11 @@ ht-degree: 45%
 >additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="役割のラベルの管理"
 >additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="役割のユーザーの管理"
 
-「**[!UICONTROL 役割]**」タブから役割を選択すると、役割の [!UICONTROL  詳細 ] ダッシュボードが開きます。
+「**[!UICONTROL 役割]**」タブから役割を選択すると、役割の [!UICONTROL &#x200B; 詳細 &#x200B;] ダッシュボードが開きます。
 
 ![ 選択した役割の詳細ワークスペースが表示され、概要情報がハイライト表示されます。](../../images/flac-ui/flac-details.png)
 
-[!UICONTROL  詳細 ] ダッシュボードには、役割の概要が表示されます。 概要には、役割名、説明、作成者、最終変更者が、作成日と変更日と共に表示されます。 また、役割に関連付けられた権限と、割り当てられたサンドボックスのリストも表示されます。 必要に応じて、役割の名前と説明を変更できます。
+[!UICONTROL &#x200B; 詳細 &#x200B;] ダッシュボードには、役割の概要が表示されます。 概要には、役割名、説明、作成者、最終変更者が、作成日と変更日と共に表示されます。 また、役割に関連付けられた権限と、割り当てられたサンドボックスのリストも表示されます。 必要に応じて、役割の名前と説明を変更できます。
 
 ## 役割のラベルの管理
 
@@ -98,7 +98,7 @@ ht-degree: 45%
 
 ## 役割のユーザーの管理
 
-「**[!UICONTROL ユーザー]**」タブを選択して役割 [!UICONTROL  ユーザー ] ワークスペースを開きます。次に、「**[!UICONTROL ユーザーを追加]**」を選択して、ユーザーを役割に割り当てます。
+「**[!UICONTROL ユーザー]**」タブを選択して役割 [!UICONTROL &#x200B; ユーザー &#x200B;] ワークスペースを開きます。次に、「**[!UICONTROL ユーザーを追加]**」を選択して、ユーザーを役割に割り当てます。
 
 ![ 役割のユーザーワークスペースは、「ユーザー」タブと「ユーザーを追加」オプションがハイライト表示された状態で表示されます。](../../images/flac-ui/flac-users.png)
 
@@ -128,7 +128,7 @@ ht-degree: 45%
 
 >[!IMPORTANT]
 >
-> [!UICONTROL  権限 ] で API 資格情報を使用および管理するには、ユーザーにシステム管理者権限が必要です。
+> [!UICONTROL &#x200B; 権限 &#x200B;] で API 資格情報を使用および管理するには、ユーザーにシステム管理者権限が必要です。
 
 Experience Platform API をユーザーまたは開発者として使用するには、役割の特定の権限セットに加えて API 資格情報を追加する必要があります。 API 資格情報の作成と割り当て、および必要な権限について詳しくは、[Experience Platform API の認証とアクセス ](../../../landing/api-authentication.md#generate-credentials) のステップバイステップのチュートリアルを参照してください。
 
@@ -202,7 +202,7 @@ API 資格情報を役割から削除するには、API 資格情報名の横に
 
 ![Adobe Experience Platformがハイライト表示された製品を選択ダイアログ ](../../images/flac-ui/product-profile-select-product.png)
 
-**[!UICONTROL 製品プロファイルを選択]** ダイアログが表示されます。 **[!UICONTROL AEP-Default-All-Users を選択してから]****[!UICONTROL 保存]** を選択します。
+**[!UICONTROL 製品プロファイルを選択]** ダイアログが表示されます。 **[!UICONTROL AEP-Default-All-Users を選択してから]**&#x200B;**[!UICONTROL 保存]** を選択します。
 
 ![AEP-Default-All-Users が選択され、「適用」がハイライト表示された製品プロファイルを選択ダイアログ ](../../images/flac-ui/product-profile-select-product-profiles.png)
 

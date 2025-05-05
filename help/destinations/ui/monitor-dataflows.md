@@ -14,7 +14,7 @@ ht-degree: 34%
 
 # データフローのモニタリング
 
-[!UICONTROL  宛先 ] を使用すると、Adobe Experience Platformから無数の外部パートナーに対してデータをアクティブ化できます。
+[!UICONTROL &#x200B; 宛先 &#x200B;] を使用すると、Adobe Experience Platformから無数の外部パートナーに対してデータをアクティブ化できます。
 
 データフローは、データを [!DNL Experience Platform] 間で移動するデータジョブを表します。 これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、データは [!DNL Identity Service] および [!DNL Real-Time Customer Profile] 最終的に宛先に対してアクティブ化される前に利用されます。
 

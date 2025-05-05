@@ -22,7 +22,7 @@ Adobe Experience Platformを使用すると、いつでもどこでもブラン�
 
 **[!UICONTROL 参照]** ページが表示されます。 組織のすべての見込み客プロファイルのリストが表示されます。
 
-![ 「[!UICONTROL  プロファイル ]」ボタンがハイライト表示され、見込み客プロファイルの [!UICONTROL  参照 ] ページが表示されます。](../images/prospect-profile/browse-profiles.png)
+![ 「[!UICONTROL &#x200B; プロファイル &#x200B;]」ボタンがハイライト表示され、見込み客プロファイルの [!UICONTROL &#x200B; 参照 &#x200B;] ページが表示されます。](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
@@ -36,7 +36,7 @@ Adobe Experience Platformを使用すると、いつでもどこでもブラン�
 >
 >見込み客プロファイルは、Adobe Experience Platformへの登録から 25 日後に自動的に期限切れになります。
 
-特定の見込み客プロファイルに関する詳細を表示するには、[!UICONTROL  参照 ] ページでプロファイルを選択します。
+特定の見込み客プロファイルに関する詳細を表示するには、[!UICONTROL &#x200B; 参照 &#x200B;] ページでプロファイルを選択します。
 
 ![ 参照ページで見込み客プロファイルがハイライト表示されている様子 ](../images/prospect-profile/select-specific-profile.png)
 
@@ -48,9 +48,9 @@ Adobe Experience Platformを使用すると、いつでもどこでもブラン�
 
 また、「**[!UICONTROL JSON を表示]**」を選択して、すべての属性を JSON 形式で表示することもできます。
 
-![ 見込み客プロファイルの詳細ページで「[!UICONTROL JSON を表示 ]」ボタンがハイライト表示されます。](../images/prospect-profile/profile-select-view-json.png)
+![ 見込み客プロファイルの詳細ページで「[!UICONTROL JSON を表示 &#x200B;]」ボタンがハイライト表示されます。](../images/prospect-profile/profile-select-view-json.png)
 
-[!UICONTROL JSON を表示 ] ダイアログが表示されます。 見込み客プロファイルの属性が JSON 形式で表示されるようになりました。
+[!UICONTROL JSON を表示 &#x200B;] ダイアログが表示されます。 見込み客プロファイルの属性が JSON 形式で表示されるようになりました。
 
 ![ 見込み客プロファイルの属性は JSON 形式で表示されます。](../images/prospect-profile/profile-view-json.png)
 

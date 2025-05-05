@@ -37,11 +37,11 @@ ht-degree: 3%
 
 ![ インストールを強調表示した [!DNL The Trade Desk] 拡張機能カードを示す拡張機能カタログ ](../../../images/extensions/server/tradedesk/install-extension.png)
 
-次の画面で、[!UICONTROL  広告主 ID] と、オプションで [!UICONTROL  マーチャント ID] を入力します。 ID をこれらの入力に直接貼り付けることも、代わりにデータ要素を使用することもできます。 これらは、Real-Time Conversions API に対してイベント呼び出しを行う際に使用されるデフォルト値 [!DNL The Trade Desk] して機能します。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
+次の画面で、[!UICONTROL &#x200B; 広告主 ID] と、オプションで [!UICONTROL &#x200B; マーチャント ID] を入力します。 ID をこれらの入力に直接貼り付けることも、代わりにデータ要素を使用することもできます。 これらは、Real-Time Conversions API に対してイベント呼び出しを行う際に使用されるデフォルト値 [!DNL The Trade Desk] して機能します。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
 データ要素を作成し、タグプロパティの拡張機能で使用できるようにする方法については、[ データ要素の作成 ](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) チュートリアルに従ってください。
 
-![ 「[!DNL The Trade Desk] 広告主 ID フィールドと「マーチャント ID] フィールドがハイライト表示された [!UICONTROL  広告拡張機能設定ページ ](../../../images/extensions/server/tradedesk/configure-extension.png)
+![ 「[!DNL The Trade Desk] 広告主 ID フィールドと「マーチャント ID] フィールドがハイライト表示された [[!UICONTROL &#x200B; 広告拡張機能設定ページ &#x200B;]](../../../images/extensions/server/tradedesk/configure-extension.png)
 
 拡張機能がインストールされ、イベント転送ルールでその機能を使用できるようになりました。
 
@@ -93,13 +93,13 @@ Real-Time Conversions API によって受け入れられる [ リクエストプ
 
 ![ 使用可能なフィールドを示す [!DNL Object Request Parameters] のセクション。](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-[ オブジェクトリクエストパラメーター ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) とそのプロパティについて詳しくは、[!UICONTROL  リアルタイムコンバージョンイベント ] ドキュメントを参照してください。
+[ オブジェクトリクエストパラメーター ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) とそのプロパティについて詳しくは、[!UICONTROL &#x200B; リアルタイムコンバージョンイベント &#x200B;] ドキュメントを参照してください。
 
 **[!UICONTROL 設定の上書き]**
 
 >[!NOTE]
 >
->[!UICONTROL  設定の上書き ] フィールドを使用すると、ルールごとに異なる [!DNL Advertiser ID] や [!DNL Merchant ID] を設定できます。
+>[!UICONTROL &#x200B; 設定の上書き &#x200B;] フィールドを使用すると、ルールごとに異なる [!DNL Advertiser ID] や [!DNL Merchant ID] を設定できます。
 
 | 入力 | 説明 |
 | --- | --- |

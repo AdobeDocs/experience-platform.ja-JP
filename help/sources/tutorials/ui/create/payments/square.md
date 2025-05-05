@@ -45,7 +45,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-[!UICONTROL  支払い ] カテゴリで、「**[!UICONTROL Square]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
+[!UICONTROL &#x200B; 支払い &#x200B;] カテゴリで、「**[!UICONTROL Square]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
 ![カタログ](../../../../images/tutorials/create/square/catalog.png)
 

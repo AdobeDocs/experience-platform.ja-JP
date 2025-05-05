@@ -114,7 +114,7 @@ LIMIT  0;
 >
 >query pro モードで文を作成する場合、SQL 文を実行してグラフを作成するには、各パラメータにサンプル値を指定する必要があります。 ステートメントを作成するときに指定するサンプル値は、実行時に日付（またはグローバル） フィルターに選択する実際の値に置き換えられます。
 
-![SQL で日付パラメーターがハイライト表示された [!UICONTROL SQL を入力 ] ダイアログ ](../../images/sql-insights-query-pro-mode/sql-date-parameters.png)
+![SQL で日付パラメーターがハイライト表示された [!UICONTROL SQL を入力 &#x200B;] ダイアログ ](../../images/sql-insights-query-pro-mode/sql-date-parameters.png)
 
 ## 各インサイトでの日付パラメーターの有効化 {#enable-date-parameters}
 

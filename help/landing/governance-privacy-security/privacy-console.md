@@ -11,19 +11,19 @@ ht-degree: 4%
 
 # プライバシーコンソールの概要
 
-「[!UICONTROL  プライバシーコンソール ]」タブでは、Adobe Experience Platform UI で、データハイジーン作業指示、Experience Platformからのデータ主体のリクエスト、Experience Platform ユーザーアクティビティの監査ログなど、Privacy Serviceのプライバシー関連操作を示すダッシュボードビューが提供されます。
+「[!UICONTROL &#x200B; プライバシーコンソール &#x200B;]」タブでは、Adobe Experience Platform UI で、データハイジーン作業指示、Experience Platformからのデータ主体のリクエスト、Experience Platform ユーザーアクティビティの監査ログなど、Privacy Serviceのプライバシー関連操作を示すダッシュボードビューが提供されます。
 
 ダッシュボードにアクセスするには、左側のナビゲーションで **[!UICONTROL プライバシーコンソール]** を選択します。
 
-![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL  プライバシーコンソール ] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/left-nav.png)
+![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/left-nav.png)
 
 ここから、コンソールに用意されている [ モニタリングウィジェット ](#widgets) を確認したり、Experience Platformのプライバシー機能に関する [ ユースケースガイド ](#use-case-guides) の 1 つを参照したりできます。
 
 ## ウィジェット
 
-[!UICONTROL  プライバシーコンソール ] には、プライバシー操作の監視に役立つ複数のウィジェットが用意されています。
+[!UICONTROL &#x200B; プライバシーコンソール &#x200B;] には、プライバシー操作の監視に役立つ複数のウィジェットが用意されています。
 
-![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL  プライバシーコンソール ] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/widgets.png)
+![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/widgets.png)
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ ht-degree: 4%
 
 コンソールには、Experience Platformの一般的なプライバシーワークフローを紹介する複数の製品内ガイドが用意されています。これには、基本的な実装のセットアップ方法に関する簡潔な手順も含まれます。
 
-![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL  プライバシーコンソール ] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/use-case-guide.png)
+![Experience Platform UI 内の左側のナビゲーションで [!UICONTROL &#x200B; プライバシーコンソール &#x200B;] が選択されていることを示す画像 ](../images/governance-privacy-security/privacy-console/use-case-guide.png)
 
 ## 次の手順
 

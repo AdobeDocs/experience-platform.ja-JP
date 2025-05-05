@@ -67,9 +67,9 @@ Luma のケーススタディを開始する前に、サンプルデータセッ
 
 Experience Platform UI の左側のナビゲーションパネルで **[!UICONTROL データセット]**」を選択し、次に **[!UICONTROL データセットを作成]** を選択します。 次に、使用可能なオプションから **[!UICONTROL CSV ファイルからデータセットを作成]** を選択します。
 
-[!UICONTROL  データセットを設定 ] パネルが表示されます。 「**[!UICONTROL 名前]**」フィールドにデータセット名「luma_web_data」と入力し、「**[!UICONTROL 次へ]**」を選択します。
+[!UICONTROL &#x200B; データセットを設定 &#x200B;] パネルが表示されます。 「**[!UICONTROL 名前]**」フィールドにデータセット名「luma_web_data」と入力し、「**[!UICONTROL 次へ]**」を選択します。
 
-[!UICONTROL  データを追加 ] パネルが表示されます。 CSV ファイルを **[!UICONTROL データを追加]** ボックスにドラッグ&amp;ドロップするか、「**[!UICONTROL ファイルを選択]** を選択して、ファイルを参照してアップロードします。
+[!UICONTROL &#x200B; データを追加 &#x200B;] パネルが表示されます。 CSV ファイルを **[!UICONTROL データを追加]** ボックスにドラッグ&amp;ドロップするか、「**[!UICONTROL ファイルを選択]** を選択して、ファイルを参照してアップロードします。
 
 このプロセスについて詳しくは、データセット UI ガイドの [ バッチ取り込みのチュートリアル ](../../ingestion/tutorials/ingest-batch-data.md) および [ データセット作成ワークフロー ](../../catalog/datasets/user-guide.md#create) を参照してください。
 
@@ -80,7 +80,7 @@ Experience Platform UI の左側のナビゲーションパネルで **[!UICONTR
 ![ データのプレビューと「完了」がハイライト表示された「CSV ファイルからデータセットを作成」ワークフローの「データを追加」セクション ](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 「luma_web_data」データセットのデータセットアクティビティビューが表示されます。 CSV ファイルの手動アップロード
-はバッチとして取り込まれ、[!UICONTROL  バッチ ID] で識別されます。 右側のパネルには、テーブル名が `luma_web_data` のように表示されます。
+はバッチとして取り込まれ、[!UICONTROL &#x200B; バッチ ID] で識別されます。 右側のパネルには、テーブル名が `luma_web_data` のように表示されます。
 
 >[!TIP]
 >
@@ -92,7 +92,7 @@ Experience Platform UI の左側のナビゲーションパネルで **[!UICONTR
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
-データの処理が完了したら、右上隅の [!UICONTROL  データセットをプレビュー ] を選択して、データセットをプレビューします。 データセットプレビューは次のように表示されます。
+データの処理が完了したら、右上隅の [!UICONTROL &#x200B; データセットをプレビュー &#x200B;] を選択して、データセットをプレビューします。 データセットプレビューは次のように表示されます。
 
 ![ 「luma_web_data」データセットのデータセットプレビュー ](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
@@ -515,7 +515,7 @@ SQL を保存した後、「**[!UICONTROL テンプレート]**」タブに移�
 
 クエリのスケジュール設定について詳しくは、[ クエリスケジュールのドキュメント ](../ui/query-schedules.md) を参照してください。
 
-[!UICONTROL  スケジュールの詳細 ] ビューが表示されます。 ここから、次の詳細を入力してスケジュールを設定します。
+[!UICONTROL &#x200B; スケジュールの詳細 &#x200B;] ビューが表示されます。 ここから、次の詳細を入力してスケジュールを設定します。
 
 - **[!UICONTROL 実行頻度]**: **毎週**
 - **[!UICONTROL 実行の日]**:**月曜日と火曜日**
@@ -545,7 +545,7 @@ SQL を保存した後、「**[!UICONTROL テンプレート]**」タブに移�
 
 `CREATE AUDIENCE AS SELECT` コマンドを使用して、新しいオーディエンスを定義します。 作成したオーディエンスはデータセットに保存され、**[!UICONTROL Data Distiller]** の下の **[!UICONTROL オーディエンス]** ワークスペースに登録されます。
 
-SQL 拡張機能を使用して作成されたオーディエンスは、[!UICONTROL  オーディエンス ] ワークスペースの [!UICONTROL Data Distiller] オリジンに自動的に登録されます。 [ オーディエンスポータル ](../../segmentation/ui/audience-portal.md) から、必要に応じてオーディエンスを表示、管理およびアクティブ化できます。
+SQL 拡張機能を使用して作成されたオーディエンスは、[!UICONTROL &#x200B; オーディエンス &#x200B;] ワークスペースの [!UICONTROL Data Distiller] オリジンに自動的に登録されます。 [ オーディエンスポータル ](../../segmentation/ui/audience-portal.md) から、必要に応じてオーディエンスを表示、管理およびアクティブ化できます。
 
 ![ 使用可能なオーディエンスを表示するオーディエンスポータル ](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
@@ -646,7 +646,7 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 RFM 属性を使用して、ユーザの動作と特性に基づいてユーザをセグメント化します。 この節では、Adobe Experience Platform UI を使用して、RFM スコアを使用したオーディエンスを定義する方法について説明します。
 
-データがリアルタイム顧客プロファイルに読み込まれていることを確認するには、**[!UICONTROL 顧客 ]/[!UICONTROL  プロファイル ]/[!UICONTROL  参照]** に移動します。 **[!UICONTROL ID 名前空間]** を `Email` として選択し、`user0076@example.com` と入力します。 プロファイルの詳細をチェックして、期待される RFM 属性が含まれていることを確認します。
+データがリアルタイム顧客プロファイルに読み込まれていることを確認するには、**[!UICONTROL 顧客 &#x200B;]/[!UICONTROL &#x200B; プロファイル &#x200B;]/[!UICONTROL &#x200B; 参照]** に移動します。 **[!UICONTROL ID 名前空間]** を `Email` として選択し、`user0076@example.com` と入力します。 プロファイルの詳細をチェックして、期待される RFM 属性が含まれていることを確認します。
 
 ![ メールのプライマリ ID とメール値のフィルターが適用された、使用可能なプロファイルを示すプロファイルワークスペース。](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
 
@@ -658,7 +658,7 @@ RFM 属性を使用して、ユーザの動作と特性に基づいてユーザ�
 
 ![ 作成ルールが選択され、「作成」がハイライト表示されたオーディエンスを作成ダイアログ ](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
-オーディエンス構成 UI から、プロファイル属性にアクセスできます。 **[!UICONTROL 属性 ] / [!UICONTROL XDM 個人プロファイル]** に移動して、使用可能な属性を表示します。
+オーディエンス構成 UI から、プロファイル属性にアクセスできます。 **[!UICONTROL 属性 &#x200B;] / [!UICONTROL XDM 個人プロファイル]** に移動して、使用可能な属性を表示します。
 
 オーディエンス構成の使用について詳しくは、[ オーディエンス構成 UI ガイド ](../../segmentation/ui/audience-composition.md) を参照してください。 セグメントビルダーの使用について詳しくは、『 [ セグメントビルダー UI ガイド ](../../segmentation/ui/segment-builder.md) 』を参照してください。
 
@@ -672,6 +672,6 @@ RFM 属性を使用してオーディエンスを作成するには、`Rfm_Model
 
 ![ オーディエンス構成 UI でのオーディエンスの作成 ](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
-オーディエンスを最終決定するには、右上隅の **[!UICONTROL 保存して公開]** を選択します。 保存後、新しく作成したオーディエンスが [!UICONTROL  オーディエンス ] ワークスペースに表示され、その概要と選定条件を確認できます。
+オーディエンスを最終決定するには、右上隅の **[!UICONTROL 保存して公開]** を選択します。 保存後、新しく作成したオーディエンスが [!UICONTROL &#x200B; オーディエンス &#x200B;] ワークスペースに表示され、その概要と選定条件を確認できます。
 
 セグメントビルダーを使用して、派生 RFM 属性にアクセスし、追加のオーディエンスを設計します。 RFM スコアに基づいて新しく作成した SQL オーディエンスをアクティブ化し、Adobe Journey Optimizerを含む任意の宛先に送信します。

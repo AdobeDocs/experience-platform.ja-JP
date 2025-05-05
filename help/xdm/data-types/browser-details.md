@@ -11,9 +11,9 @@ ht-degree: 27%
 
 ---
 
-# [!UICONTROL  ブラウザーの詳細 ] データタイプ
+# [!UICONTROL &#x200B; ブラウザーの詳細 &#x200B;] データタイプ
 
-[!UICONTROL  ブラウザーの詳細 ] は、ブラウザーまたはアプリケーションに関する詳細を記述する標準の XDM データタイプです。
+[!UICONTROL &#x200B; ブラウザーの詳細 &#x200B;] は、ブラウザーまたはアプリケーションに関する詳細を記述する標準の XDM データタイプです。
 
 ![](../images/data-types/browser-details.png){width=450}
 

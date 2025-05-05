@@ -23,12 +23,12 @@ ht-degree: 28%
 
 ## 使用可能なダッシュボード権限 {#available-permissions}
 
-[!DNL Dashboards] サービスには 3 つの権限が用意されており、これらの権限を組み合わせることで、Adobe Experience Platform内の [!UICONTROL  プロファイル ]、[!UICONTROL  セグメント ]、[!UICONTROL  宛先 ]、[!UICONTROL  ライセンスの使用状況 ] の各ダッシュボードへのフルアクセスが可能になります。 その権限は次の通りです。
+[!DNL Dashboards] サービスには 3 つの権限が用意されており、これらの権限を組み合わせることで、Adobe Experience Platform内の [!UICONTROL &#x200B; プロファイル &#x200B;]、[!UICONTROL &#x200B; セグメント &#x200B;]、[!UICONTROL &#x200B; 宛先 &#x200B;]、[!UICONTROL &#x200B; ライセンスの使用状況 &#x200B;] の各ダッシュボードへのフルアクセスが可能になります。 その権限は次の通りです。
 
 | 権限 | 説明 |
 |---|---|
-| **標準ダッシュボードの管理** | この権限は **グローバル読み取りおよび書き込み権限** です。 [ ウィジェットライブラリ ](./customize/custom-widgets.md) を介して [ カスタムウィジェットの作成 ](./customize/edit-schema.md) および [!UICONTROL  ウィジェットスキーマの編集 ] を行うことができます。 |
-| **標準ダッシュボードの表示** | これにより、[!UICONTROL  プロファイル **、[!UICONTROL  宛先 ] および [!UICONTROL  セグメント ] ダッシュボードに** 読み取り専用 ] 機能が提供され、Experience Platformの左側のナビゲーションからアクセスできるようになります。 また、左側のナビゲーションに [!UICONTROL  ダッシュボード ] が追加され、[!UICONTROL  ダッシュボード ] インベントリと統合」タブにアクセスできます。 |
+| **標準ダッシュボードの管理** | この権限は **グローバル読み取りおよび書き込み権限** です。 [ ウィジェットライブラリ ](./customize/custom-widgets.md) を介して [ カスタムウィジェットの作成 ](./customize/edit-schema.md) および [!UICONTROL &#x200B; ウィジェットスキーマの編集 &#x200B;] を行うことができます。 |
+| **標準ダッシュボードの表示** | これにより、[!UICONTROL &#x200B; プロファイル **、[!UICONTROL &#x200B; 宛先 &#x200B;] および [!UICONTROL &#x200B; セグメント &#x200B;] ダッシュボードに** 読み取り専用 &#x200B;] 機能が提供され、Experience Platformの左側のナビゲーションからアクセスできるようになります。 また、左側のナビゲーションに [!UICONTROL &#x200B; ダッシュボード &#x200B;] が追加され、[!UICONTROL &#x200B; ダッシュボード &#x200B;] インベントリと統合」タブにアクセスできます。 |
 | **ライセンス使用状況ダッシュボードの表示** | この権限を持つユーザーはExperience Platform UI 内の [ ライセンス使用状況ダッシュボード ](./guides/license-usage.md) に **読み取り専用** アクセスできます。 |
 
 [!DNL Dashboard] カテゴリには含まれていない 5 つの権限があり、必要に応じて必要になる可能性があります。 次の表に、Admin Consoleでのカテゴリの場所の概要を示します。
@@ -49,7 +49,7 @@ ht-degree: 28%
 
 次のアクセス制御マトリックスは、必要な権限の分類と、様々なダッシュボード機能へのアクセスに関して権限が提供する機能を示しています。 権限は上部の水平行にリストされ、Experience Platform UI ワークスペースは左側の列にリストされます。
 
-|   | [!UICONTROL  標準ダッシュボードの表示 ] または [!UICONTROL  標準ダッシュボードの管理 ] | [!UICONTROL  プロファイルの表示 ],<br/>[!UICONTROL  セグメントの表示 ],<br/> [!UICONTROL 宛先の表示] | [!UICONTROL  クエリの管理 ] および [!UICONTROL  サンドボックスの管理 ] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] |
+|   | [!UICONTROL &#x200B; 標準ダッシュボードの表示 &#x200B;] または [!UICONTROL &#x200B; 標準ダッシュボードの管理 &#x200B;] | [!UICONTROL &#x200B; プロファイルの表示 &#x200B;],<br/>[!UICONTROL &#x200B; セグメントの表示 &#x200B;],<br/> [!UICONTROL 宛先の表示] | [!UICONTROL &#x200B; クエリの管理 &#x200B;] および [!UICONTROL &#x200B; サンドボックスの管理 &#x200B;] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] |
 |---|---|---|---|---|
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] が左側のナビゲーションに表示されます。 | なし | **各ダッシュボードに「表示」または「管理」権限が必要です**。 | なし | なし |
 | 左側のナビゲーショ [!DNL Dashboards] の「」をクリックします。 | ENABLED | **1 つ以上が必要**。 | なし | なし |

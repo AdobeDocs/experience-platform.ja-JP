@@ -1,5 +1,5 @@
 ---
-description: '[!UICONTROL  プロファイルエンリッチメント ] ダッシュボードを使用すると、プロファイルエンリッチメントジョブが正常に実行および完了したかどうかを把握し、エンリッチメントの有効性を測定するための基本指標を表示できます。'
+description: '[!UICONTROL &#x200B; プロファイルエンリッチメント &#x200B;] ダッシュボードを使用すると、プロファイルエンリッチメントジョブが正常に実行および完了したかどうかを把握し、エンリッチメントの有効性を測定するための基本指標を表示できます。'
 solution: Experience Platform
 title: プロファイルエンリッチメントジョブの監視
 type: Tutorial
@@ -13,13 +13,13 @@ ht-degree: 4%
 
 # UI でのプロファイルエンリッチメントジョブの監視 {#monitor-profile-enrichment}
 
-[!UICONTROL  プロファイルエンリッチメント ] ダッシュボードを使用すると、プロファイルエンリッチメントジョブが正常に実行および完了したかどうかを把握し、エンリッチメントの有効性を測定するための基本指標を表示できます。
+[!UICONTROL &#x200B; プロファイルエンリッチメント &#x200B;] ダッシュボードを使用すると、プロファイルエンリッチメントジョブが正常に実行および完了したかどうかを把握し、エンリッチメントの有効性を測定するための基本指標を表示できます。
 
-[Experience Platform UI](https://platform.adobe.com) で、左側のナビゲーションから **[!UICONTROL モニタリング]** を選択して、[!UICONTROL  モニタリング ] ダッシュボードにアクセスします。 表示セレクターで「**B2B フロー**」を選択して、[Real-Time CDP B2B](/help/rtcdp/b2b-overview.md) に固有のダッシュボード要素を表示します。  [!UICONTROL  モニタリング ] ダッシュボードには、最新の成功実行からの基本指標と、最大 90 日前の毎日のジョブステータスが含まれます。
+[Experience Platform UI](https://platform.adobe.com) で、左側のナビゲーションから **[!UICONTROL モニタリング]** を選択して、[!UICONTROL &#x200B; モニタリング &#x200B;] ダッシュボードにアクセスします。 表示セレクターで「**B2B フロー**」を選択して、[Real-Time CDP B2B](/help/rtcdp/b2b-overview.md) に固有のダッシュボード要素を表示します。  [!UICONTROL &#x200B; モニタリング &#x200B;] ダッシュボードには、最新の成功実行からの基本指標と、最大 90 日前の毎日のジョブステータスが含まれます。
 
 ## 関連するアカウントのプロファイルエンリッチメント {#related-accounts}
 
-[!UICONTROL  関連するアカウント ] ダッシュボードには、基本的な指標と、[ 関連するアカウント ](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) プロファイルエンリッチメントに固有の毎日のジョブのステータスが表示されます。
+[!UICONTROL &#x200B; 関連するアカウント &#x200B;] ダッシュボードには、基本的な指標と、[ 関連するアカウント ](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) プロファイルエンリッチメントに固有の毎日のジョブのステータスが表示されます。
 
 ![Experience Platform UI のプロファイルエンリッチメントジョブ監視画面に移動する方法を示す視覚的な指標。](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
@@ -40,7 +40,7 @@ ht-degree: 4%
 
 ## リードとアカウントのマッチングプロファイルのエンリッチメント {#lead-to-account-matching}
 
-[!UICONTROL  リードからアカウントへのマッチング ] ダッシュボードには、「リードからアカウントへのマッチング [ プロファイルエンリッチメントに固有の基本指標と毎日のジョブ実行ステータスが表示さ ](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) ます。
+[!UICONTROL &#x200B; リードからアカウントへのマッチング &#x200B;] ダッシュボードには、「リードからアカウントへのマッチング [ プロファイルエンリッチメントに固有の基本指標と毎日のジョブ実行ステータスが表示さ ](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) ます。
 
 ![ リードとアカウントのマッチングプロファイルのエンリッチメント ](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
 
@@ -58,7 +58,7 @@ ht-degree: 4%
 
 ## リードおよびアカウントの予測スコアリングプロファイルのエンリッチメント {#predictive-lead-to-account-scoring}
 
-[!UICONTROL  リードおよびアカウントの予測スコアリング ] ダッシュボードには、[ リードおよびアカウントの予測スコアリング ](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) プロファイルエンリッチメントに固有の基本指標と毎日のジョブ実行ステータスが表示されます。
+[!UICONTROL &#x200B; リードおよびアカウントの予測スコアリング &#x200B;] ダッシュボードには、[ リードおよびアカウントの予測スコアリング ](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) プロファイルエンリッチメントに固有の基本指標と毎日のジョブ実行ステータスが表示されます。
 
 ![ リードおよびアカウントの予測スコアリングプロファイルエンリッチメント ](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 

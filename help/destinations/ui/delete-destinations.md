@@ -21,12 +21,12 @@ Adobe Experience Platform ユーザーインターフェイスでは、宛先へ
 
 [!DNL Experience Platform] [!DNL UI] から宛先を削除する方法は 2 つあります。 実行できる操作は、次のとおりです。
 
-* [「[!UICONTROL  参照 ] タブからの宛先の削除](#delete-browse-tab)
+* [「[!UICONTROL &#x200B; 参照 &#x200B;] タブからの宛先の削除](#delete-browse-tab)
 * [宛先の詳細ページからの宛先の削除](#delete-destination-details-page)
 
 ## 「参照」タブからの宛先の削除{#delete-browse-tab}
 
-「[!UICONTROL  参照 ] タブから宛先を削除するには、次の手順に従います。
+「[!UICONTROL &#x200B; 参照 &#x200B;] タブから宛先を削除するには、次の手順に従います。
 
 1. [Experience Platform UI](https://platform.adobe.com/) にログインし、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択します。既存の宛先を表示するには、上部のヘッダーから **[!UICONTROL 参照]** を選択します。
 
@@ -59,7 +59,7 @@ Adobe Experience Platform ユーザーインターフェイスでは、宛先へ
 
    ![宛先を選択](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * 宛先に既存のデータフローがある場合は、「[!UICONTROL  データフロー実行 ] タブに移動します。
+   * 宛先に既存のデータフローがある場合は、「[!UICONTROL &#x200B; データフロー実行 &#x200B;] タブに移動します。
 
      ![ 「データフロー実行」タブ ](../assets/ui/delete-destinations/destination-details-dataflows.png)
 

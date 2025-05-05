@@ -156,7 +156,7 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-つまり、22 店舗が `storeType` `A`、17 店舗が `storeType` `B`、6 店舗が `storeType``C` です。
+つまり、22 店舗が `storeType` `A`、17 店舗が `storeType` `B`、6 店舗が `storeType` `C` です。
 
 #### データの視覚化
 

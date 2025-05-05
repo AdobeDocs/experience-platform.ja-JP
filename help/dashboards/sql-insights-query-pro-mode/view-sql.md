@@ -13,7 +13,7 @@ ht-degree: 2%
 
 [query pro モード ](./overview.md#query-pro-mode) で [ カスタムインサイト ](./overview.md) を作成したら、「SQL を表示」機能を使用してグラフに入力する SQL を表示できます。
 
-カスタムダッシュボードから、任意のウィジェットの省略記号（`...`）を選択して、「[!UICONTROL  さらに表示 ]」および「[!UICONTROL SQL を表示 ]」オプションにアクセスします。
+カスタムダッシュボードから、任意のウィジェットの省略記号（`...`）を選択して、「[!UICONTROL &#x200B; さらに表示 &#x200B;]」および「[!UICONTROL SQL を表示 &#x200B;]」オプションにアクセスします。
 
 ![ インサイトの省略記号ドロップダウンメニューと、「さらに表示」オプションおよび「SQL を表示」オプションがハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
 

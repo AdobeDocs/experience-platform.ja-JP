@@ -11,9 +11,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL  通貨 ] データタイプ
+# [!UICONTROL &#x200B; 通貨 &#x200B;] データタイプ
 
-[!UICONTROL  通貨 ] は、通貨タイプや変換日を含む通貨量を記述する標準の XDM データタイプです。
+[!UICONTROL &#x200B; 通貨 &#x200B;] は、通貨タイプや変換日を含む通貨量を記述する標準の XDM データタイプです。
 
 ![](../images/data-types/currency.png)
 

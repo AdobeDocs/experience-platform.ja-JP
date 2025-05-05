@@ -11,7 +11,7 @@ ht-degree: 16%
 ---
 
 
-# [!UICONTROL Experience Cloudオーディエンス ] 接続
+# [!UICONTROL Experience Cloudオーディエンス &#x200B;] 接続
 
 >[!AVAILABILITY]
 >
@@ -33,7 +33,7 @@ ht-degree: 16%
 
 ## 使用例とメリット {#use-cases}
 
-[!UICONTROL Experience Cloudオーディエンス ] の宛先を使用する方法とタイミングをより深く理解するために、Real-Time CDPのお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
+[!UICONTROL Experience Cloudオーディエンス &#x200B;] の宛先を使用する方法とタイミングをより深く理解するために、Real-Time CDPのお客様がこの宛先を使用して解決できるサンプルユースケースを以下に示します。
 
 ### データ管理プラットフォームのユースケースの有効化 {#dmp-use-cases}
 
@@ -107,7 +107,7 @@ Experience Cloudオーディエンスカードを使用する際には、次の�
 
 ## サポートされている ID {#supported-identities}
 
-[!UICONTROL Experience Cloudオーディエンス ] の宛先に書き出されたプロファイルは、以下の表で説明されている ID にマッピングされます。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
+[!UICONTROL Experience Cloudオーディエンス &#x200B;] の宛先に書き出されたプロファイルは、以下の表で説明されている ID にマッピングされます。 [ID](/help/identity-service/features/namespaces.md) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -144,7 +144,7 @@ Experience Cloudオーディエンスカードを使用する際には、次の�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -167,7 +167,7 @@ Experience Cloudオーディエンスカードを使用する際には、次の�
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順は、[ ストリーミングオーディエンス書き出し宛先へのプロファイルとオーディエンスのアクティブ化 ](/help/destinations/ui/activate-segment-streaming-destinations.md) を参照してください。 [ マッピングステップ ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) は不要で、この宛先で [ スケジュールステップ ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) を使用することはできません。
 

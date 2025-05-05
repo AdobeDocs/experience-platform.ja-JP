@@ -18,11 +18,11 @@ Adobe Experience Platform Data Collection のソース統合により、ソー�
 
 ## ソースワークスペースを使用したデータ収集へのアクセス
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-[!UICONTROL Adobe アプリケーション ] カテゴリで、「**[!UICONTROL Adobe Data Collection]**」を選択し、次に「**[!UICONTROL 設定]**」を選択します。
+[!UICONTROL Adobe アプリケーション &#x200B;] カテゴリで、「**[!UICONTROL Adobe Data Collection]**」を選択し、次に「**[!UICONTROL 設定]**」を選択します。
 
 ![data-collection](./images/data-collection/catalog.png)
 

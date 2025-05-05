@@ -12,22 +12,22 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL  スケジュール ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; スケジュール &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  スケジュール ] は、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 これは、予定を予約するのに利用できる時間枠のコンテナである、単一のオブジェクトタイプのフィールド `healthcareSchedule` を提供します。
+[!UICONTROL &#x200B; スケジュール &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../../classes/individual-profile.md) および [[!DNL Provider class]](../../../classes/provider.md) の標準スキーマフィールドグループです。 これは、予定を予約するのに利用できる時間枠のコンテナである、単一のオブジェクトタイプのフィールド `healthcareSchedule` を提供します。
 
 ![ フィールドグループ構造 ](../../../images/healthcare/field-groups/schedule.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| [!UICONTROL  アクター ] | `actor` | [[!UICONTROL  参照 ]](../data-types/reference.md) の配列 | このスケジュールを参照するスロットで、参照先のリソースの可用性の詳細が提供されます。 |
-| [!UICONTROL 識別子] | `identifier` | [[!UICONTROL  識別子 ]](../data-types/identifier.md) の配列 | スケジュールの外部識別子。 |
-| [!UICONTROL  計画期間 ] | `planningHorizon` | [[!UICONTROL  期間 ]](../data-types/period.md) | このスケジュールを参照するスロットが存在しない場合でも、カバーする期間。 |
-| [!UICONTROL  サービス区分 ] | `serviceCategory` | [[!UICONTROL  コード化可能な概念 ]](../data-types/codeable-concept.md) の配列 | 任用中に実行されるサービスの幅広いカテゴリ。 |
-| [!UICONTROL  サービスタイプ ] | `serviceType` | [[!UICONTROL  コード化可能な参照 ]](../data-types/codeable-reference.md) の配列 | 予定中に実行される特定のサービス。 |
-| [!UICONTROL  専門分野 ] | `specialty` | [[!UICONTROL  コード化可能な概念 ]](../data-types/codeable-concept.md) の配列 | 予約で要求されたサービスを実行するために必要とされる実務担当者の専門分野。 |
-| [!UICONTROL  アクティブ ] | `active` | ブール値 | スケジュール レコードが有効に使用されているかどうかを示します。 |
-| [!UICONTROL  コメント ] | `comment` | 文字列 | スロットのカスタム制約など、拡張情報を記述する目的での可用性に関するコメント。 |
+| [!UICONTROL &#x200B; アクター &#x200B;] | `actor` | [[!UICONTROL &#x200B; 参照 &#x200B;]](../data-types/reference.md) の配列 | このスケジュールを参照するスロットで、参照先のリソースの可用性の詳細が提供されます。 |
+| [!UICONTROL 識別子] | `identifier` | [[!UICONTROL &#x200B; 識別子 &#x200B;]](../data-types/identifier.md) の配列 | スケジュールの外部識別子。 |
+| [!UICONTROL &#x200B; 計画期間 &#x200B;] | `planningHorizon` | [[!UICONTROL &#x200B; 期間 &#x200B;]](../data-types/period.md) | このスケジュールを参照するスロットが存在しない場合でも、カバーする期間。 |
+| [!UICONTROL &#x200B; サービス区分 &#x200B;] | `serviceCategory` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) の配列 | 任用中に実行されるサービスの幅広いカテゴリ。 |
+| [!UICONTROL &#x200B; サービスタイプ &#x200B;] | `serviceType` | [[!UICONTROL &#x200B; コード化可能な参照 &#x200B;]](../data-types/codeable-reference.md) の配列 | 予定中に実行される特定のサービス。 |
+| [!UICONTROL &#x200B; 専門分野 &#x200B;] | `specialty` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) の配列 | 予約で要求されたサービスを実行するために必要とされる実務担当者の専門分野。 |
+| [!UICONTROL &#x200B; アクティブ &#x200B;] | `active` | ブール値 | スケジュール レコードが有効に使用されているかどうかを示します。 |
+| [!UICONTROL &#x200B; コメント &#x200B;] | `comment` | 文字列 | スロットのカスタム制約など、拡張情報を記述する目的での可用性に関するコメント。 |
 | [!UICONTROL 名前] | `name` | 文字列 | 検索中に消費者に表示されるスケジュールの説明。 |
 
 フィールドグループについて詳しくは、公開 XDM リポジトリを参照してください。

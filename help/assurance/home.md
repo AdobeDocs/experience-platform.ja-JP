@@ -33,7 +33,7 @@ Adobe Experience Platform Assuranceは、[Adobe Experience Cloud](https://www.ad
 
 10 月 15 日（PT） - Assuranceへのアクセスは、Admin Consoleを通じて管理されます。 引き続きアクセスが中断されないようにするには、[ ユーザーアクセスガイド ](./user-access.md) を参照してください。
 
-既存のAssuranceの統合、セッションおよびイベントでは、それ以外の変更や中断は行われません。 Assuranceには、[https://griffon.adobe.com](https://griffon.adobe.com) から引き続きアクセスできます **または**[https://experience.adobe.com/assurance](https://experience.adobe.com/assurance) を使用する（およびブックマークする）ことができます。
+既存のAssuranceの統合、セッションおよびイベントでは、それ以外の変更や中断は行われません。 Assuranceには、[https://griffon.adobe.com](https://griffon.adobe.com) から引き続きアクセスできます **または**&#x200B;[https://experience.adobe.com/assurance](https://experience.adobe.com/assurance) を使用する（およびブックマークする）ことができます。
 
 ## Assuranceは何に役立つか
 

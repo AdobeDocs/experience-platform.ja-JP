@@ -9,9 +9,9 @@ ht-degree: 29%
 
 ---
 
-# [!UICONTROL Advertisingの詳細 ] スキーマフィールドグループ
+# [!UICONTROL Advertisingの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL Advertisingの詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `advertising` オブジェクトを提供します。これは、広告インプレッション数、クリックスルー数およびアトリビューションに関連する情報をキャプチャします。
+[!UICONTROL Advertisingの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `advertising` オブジェクトを提供します。これは、広告インプレッション数、クリックスルー数およびアトリビューションに関連する情報をキャプチャします。
 
 ![ フィールドグループ構造 ](../../images/field-groups/advertising-details/structure.png)
 
@@ -62,7 +62,7 @@ ht-degree: 29%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `adBreak` | [[!UICONTROL  広告ブレーク ]](../../data-types/ad-break.md) | タイムド広告がタイムドメディアにどのように挿入されるかを表します。 |
+| `adBreak` | [[!UICONTROL &#x200B; 広告ブレーク &#x200B;]](../../data-types/ad-break.md) | タイムド広告がタイムドメディアにどのように挿入されるかを表します。 |
 | `index` | 整数 | 親広告ブレーク内の広告のインデックス。 例えば、最初の広告にはインデックス `0` があり、2 番目の広告にはインデックス `1` があります。 |
 | `playerName` | 文字列 | 広告のレンダリングを担当するプレイヤーの名前。 |
 
@@ -76,7 +76,7 @@ ht-degree: 29%
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `implementationDetails` | [[!UICONTROL  実装の詳細 ]](../../data-types/implementation-details.md) | 視認性指標を測定するために実装されたライブラリの名前とバージョン。 |
+| `implementationDetails` | [[!UICONTROL &#x200B; 実装の詳細 &#x200B;]](../../data-types/implementation-details.md) | 視認性指標を測定するために実装されたライブラリの名前とバージョン。 |
 | `measuredAdNotVisible` | [[!UICONTROL 測定]](../../data-types/measure.md) | インプレッション時にビューアビリティライブラリで測定されたとおりに、広告が表示されないことを示します。 |
 | `measuredMuted` | [[!UICONTROL 測定]](../../data-types/measure.md) | インプレッション時にビューアビリティライブラリで測定されたとおりに、広告がミュートされていることを示します。 |
 | `unmeasurableIframe` | [[!UICONTROL 測定]](../../data-types/measure.md) | インプレッション時にビューアビリティライブラリで測定されたとおりに、広告が非アクティブウィンドウに表示されることを示します。 |

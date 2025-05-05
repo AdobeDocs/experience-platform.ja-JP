@@ -12,17 +12,17 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL  タイミング ] データタイプ
+# [!UICONTROL &#x200B; タイミング &#x200B;] データタイプ
 
-[!UICONTROL  タイミング ] は、定期的に発生する可能性のあるイベントに関する情報を提供するタイミングスケジュールを記述する、標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
+[!UICONTROL &#x200B; タイミング &#x200B;] は、定期的に発生する可能性のあるイベントに関する情報を提供するタイミングスケジュールを記述する、標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
 ![ タイミングデータタイプの構造 ](../../../images/healthcare/data-types/timing.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| [!UICONTROL  イベント ] | `event` | DateTime の配列 | イベントが発生するタイミング。 |
-| [!UICONTROL  繰り返し ] | `repeat` | [[!UICONTROL  繰り返し ]](../data-types/repeat.md) | イベントが発生するタイミングに関する情報。 |
-| [!UICONTROL コード] | `code` | [[!UICONTROL  コード化可能な概念 ]](../data-types/codeable-concept.md) | イベントに関連するコード。 |
+| [!UICONTROL &#x200B; イベント &#x200B;] | `event` | DateTime の配列 | イベントが発生するタイミング。 |
+| [!UICONTROL &#x200B; 繰り返し &#x200B;] | `repeat` | [[!UICONTROL &#x200B; 繰り返し &#x200B;]](../data-types/repeat.md) | イベントが発生するタイミングに関する情報。 |
+| [!UICONTROL コード] | `code` | [[!UICONTROL &#x200B; コード化可能な概念 &#x200B;]](../data-types/codeable-concept.md) | イベントに関連するコード。 |
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 

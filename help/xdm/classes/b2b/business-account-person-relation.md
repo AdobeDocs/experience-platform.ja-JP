@@ -15,7 +15,7 @@ ht-degree: 12%
 >
 >このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [ リアルタイム顧客プロファイル ](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
 
-[!UICONTROL XDM ビジネスアカウントユーザー関係 ] は、ビジネスアカウントに関連付けられたユーザーの必要最小限のプロパティをキャプチャする、標準のエクスペリエンスデータモデル（XDM）クラスです。
+[!UICONTROL XDM ビジネスアカウントユーザー関係 &#x200B;] は、ビジネスアカウントに関連付けられたユーザーの必要最小限のプロパティをキャプチャする、標準のエクスペリエンスデータモデル（XDM）クラスです。
 
 ![UI に表示される XDM ビジネスアカウントユーザー関係クラスの構造 ](../../images/classes/b2b/business-account-person-relation.png)
 
@@ -23,7 +23,7 @@ ht-degree: 12%
 | --- | --- | --- |
 | `accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | アカウントとユーザーの関係におけるアカウントの複合識別子。 |
 | `accountPersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | アカウントと人物の関係エンティティの複合識別子。 |
-| `extSourceSystemAudit` | [[!UICONTROL  外部Source システム監査属性 ]](../../data-types/external-source-system-audit-attributes.md) | アカウントと人物の関係が外部ソースシステムからのものである場合、このオブジェクトはそのシステムの監査属性を取得します。 |
+| `extSourceSystemAudit` | [[!UICONTROL &#x200B; 外部Source システム監査属性 &#x200B;]](../../data-types/external-source-system-audit-attributes.md) | アカウントと人物の関係が外部ソースシステムからのものである場合、このオブジェクトはそのシステムの監査属性を取得します。 |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | アカウントとユーザーの関係におけるユーザーの複合識別子。 |
 | `_id` | 文字列 | レコードの一意の識別子。 これは、クラスによって取り込まれる他の ID フィールドとは別のシステム生成の値です。 |
 | `accountID` | 文字列 | アカウントと人物の関係におけるアカウントの一意の ID。 |

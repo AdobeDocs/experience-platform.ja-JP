@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!AVAILABILITY]
 >
->B2B スキーマが { リアルタイム顧客プロファイル ](../../../../rtcdp/b2b-overview.md) に適合するには、{0[Adobe Real-Time Customer Data Platform B2B edition](../../../../profile/home.md) へのアクセス権が必要です。[
+>B2B スキーマが &lbrace; リアルタイム顧客プロファイル [&#128279;](../../../../rtcdp/b2b-overview.md) に適合するには、&lbrace;0[Adobe Real-Time Customer Data Platform B2B edition](../../../../profile/home.md) へのアクセス権が必要です。
 
 >[!NOTE]
 >

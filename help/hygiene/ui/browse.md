@@ -25,7 +25,7 @@ ht-degree: 79%
 
 UI で最初に **[!UICONTROL データライフサイクル]** ワークスペースにアクセスすると、既存の作業指示のリストが、基本的な情報と共に表示されます。
 
-![Experience Platform UI の [!UICONTROL  データライフサイクル ] ワークスペースを示す画像 ](../images/ui/browse/work-order-list.png)
+![Experience Platform UI の [!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペースを示す画像 ](../images/ui/browse/work-order-list.png)
 
 リストには、一度に 1 つのカテゴリの作業指示のみが表示されます。**[!UICONTROL 消費者]** を選択してレコード削除タスクのリストを表示し、**[!UICONTROL データセット]** を選択して、スケジュールされたデータセット有効期限のリストを表示します。
 

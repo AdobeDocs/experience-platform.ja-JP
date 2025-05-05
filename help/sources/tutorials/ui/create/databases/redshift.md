@@ -57,7 +57,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ### Azure 上のExperience Platformへの接続 {#azure}
 
-[!DNL AWS Redshift] アカウントを Azure 上のExperience Platformに接続するには、入力フォームに認証資格情報を入力し、「**（[!UICONTROL  ソースに接続 ]）**」を選択します。
+[!DNL AWS Redshift] アカウントを Azure 上のExperience Platformに接続するには、入力フォームに認証資格情報を入力し、「**（[!UICONTROL &#x200B; ソースに接続 &#x200B;]）**」を選択します。
 
 ![AWS Redshift を Azure 上のExperience Platformに接続するための新しいアカウントインターフェイス ](../../../../images/tutorials/create/redshift/new.png)
 

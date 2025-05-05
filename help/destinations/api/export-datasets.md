@@ -32,7 +32,7 @@ ht-degree: 12%
 
 -->
 
-この記事では、[!DNL Flow Service API] を使用して、Adobe Experience Platformから目的のクラウドストレージの場所（[!DNL Amazon S3]、SFTP の場所または [!DNL Google Cloud Storage] など ](/help/catalog/datasets/overview.md) データセット [ を書き出すために必要なワークフローについて説明します。
+この記事では、[!DNL Flow Service API] を使用して、Adobe Experience Platformから目的のクラウドストレージの場所（[!DNL Amazon S3]、SFTP の場所または [!DNL Google Cloud Storage] など [&#128279;](/help/catalog/datasets/overview.md) データセット  を書き出すために必要なワークフローについて説明します。
 
 >[!TIP]
 >
@@ -107,7 +107,7 @@ ht-degree: 12%
 
 ### API リファレンスドキュメント {#api-reference-documentation}
 
-このチュートリアルに含まれるすべての API 操作について、付属リファレンスドキュメントが用意されています。Adobe Developer web サイト ](https://developer.adobe.com/experience-platform-apis/references/destinations/) で [[!DNL Flow Service] - Destinations API ドキュメントを参照してください。 このチュートリアルと API リファレンスのドキュメントを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 操作について、付属リファレンスドキュメントが用意されています。Adobe Developer web サイト [&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/) で [!DNL Flow Service] - Destinations API ドキュメントを参照してください。 このチュートリアルと API リファレンスのドキュメントを並行して使用することをお勧めします。
 
 ### 用語集 {#glossary}
 

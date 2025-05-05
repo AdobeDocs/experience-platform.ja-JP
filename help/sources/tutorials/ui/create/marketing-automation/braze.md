@@ -47,11 +47,11 @@ UI で [!DNL Braze] アカウントからAdobe Experience Platformにエンゲ�
 >
 >[!DNL Braze Currents] 接続を初めて作成する場合は、エクスペリエンスデータモデル（XDM）スキーマを作成する必要があります。 [!DNL Braze Currents] のスキーマを既に作成している場合は、この手順をスキップして、[ アカウントのExperience Platformへの接続 ](#connect) に進むことができます。
 
-Experience Platform UI で、左側のナビゲーションを使用し、「**[!UICONTROL スキーマ]**」を選択して、「[!UICONTROL  スキーマ ] ワークスペースにアクセスします。 次に、「**[!UICONTROL スキーマを作成]**」を選択し、「**[!UICONTROL エクスペリエンスイベント]**」を選択します。 続行するには、「**[!UICONTROL 次へ]**」を選択します。
+Experience Platform UI で、左側のナビゲーションを使用し、「**[!UICONTROL スキーマ]**」を選択して、「[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースにアクセスします。 次に、「**[!UICONTROL スキーマを作成]**」を選択し、「**[!UICONTROL エクスペリエンスイベント]**」を選択します。 続行するには、「**[!UICONTROL 次へ]**」を選択します。
 
 ![ 完了したスキーマ。](../../../../images/tutorials/create/braze/schema.png)
 
-スキーマの名前と説明を指定します。 次に、[!UICONTROL  構成 ] パネルを使用して、スキーマ属性を設定します。 [!UICONTROL  フィールドグループ ] の下で「**[!UICONTROL 追加]**」を選択し、「[!UICONTROL Braze Currents User Event]」フィールドグループを追加します。 完了したら「**[!UICONTROL 保存]**」を選択します。
+スキーマの名前と説明を指定します。 次に、[!UICONTROL &#x200B; 構成 &#x200B;] パネルを使用して、スキーマ属性を設定します。 [!UICONTROL &#x200B; フィールドグループ &#x200B;] の下で「**[!UICONTROL 追加]**」を選択し、「[!UICONTROL Braze Currents User Event]」フィールドグループを追加します。 完了したら「**[!UICONTROL 保存]**」を選択します。
 
 スキーマについて詳しくは、[UI でのスキーマの作成 ](../../../../../xdm/tutorials/create-schema-ui.md) ガイドを参照してください。
 

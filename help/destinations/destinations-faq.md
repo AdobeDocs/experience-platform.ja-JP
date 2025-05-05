@@ -172,7 +172,7 @@ Googleでは、オーディエンス名が一意である必要があります�
 ### [!DNL LinkedIn Matched Audiences] でオーディエンスをアクティブ化するには、どうすればよいですか？
 
 +++回答
-[!UICONTROL LinkedIn でマッチしたオーディエンス ] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントの権限レベルが [!DNL Creative Manager] 以上であることを確認してください。
+[!UICONTROL LinkedIn でマッチしたオーディエンス &#x200B;] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントの権限レベルが [!DNL Creative Manager] 以上であることを確認してください。
 
 [!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、LinkedIn ドキュメントの [Advertising アカウントのユーザー権限の追加、編集、削除 ](https://www.linkedin.com/help/lms/answer/5753) を参照してください。
 +++
@@ -223,13 +223,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Experience Platformでオーディエンスを作成した後、そのオーディエンスがエッジセグメント化のユースケースで使用できるようになるまでに、どのくらい時間がかかりますか？
 
 +++回答
-オーディエンス定義は、最大 1 時間で ](../web-sdk/home.md)0}Edge Network} に生成されます。 [ただし、この最初の 1 時間以内にオーディエンスがアクティブ化されると、オーディエンスに適合した一部の訪問者を見逃す可能性があります。
+オーディエンス定義は、最大 1 時間で [&#128279;](../web-sdk/home.md)0&rbrace;Edge Network&rbrace; に生成されます。 ただし、この最初の 1 時間以内にオーディエンスがアクティブ化されると、オーディエンスに適合した一部の訪問者を見逃す可能性があります。
 +++
 
 ### Adobe Targetでアクティブ化された属性はどこで確認できますか？
 
 +++回答
-属性は、{JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) および [2}HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) オファーの Target で使用できるようになります。[
+属性は、{JSON[&#128279;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) および [2}HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) オファーの Target で使用できるようになります。
 +++
 
 ### データストリームのない宛先を作成し、後で同じ宛先にデータストリームを追加できますか？

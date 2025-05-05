@@ -12,16 +12,16 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL  範囲 ] データタイプ
+# [!UICONTROL &#x200B; 範囲 &#x200B;] データタイプ
 
-[!UICONTROL  範囲 ] は、下限および上限の値によって連結された一連の値を提供する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
+[!UICONTROL &#x200B; 範囲 &#x200B;] は、下限および上限の値によって連結された一連の値を提供する、標準のエクスペリエンスデータモデル（XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
 ![ 範囲データタイプ構造 ](../../../images/healthcare/data-types/range.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| [!UICONTROL  高 ] | `high` | [[!UICONTROL  単純量 ]](../data-types/simple-quantity.md) | 上限。 |
-| [!UICONTROL  低 ] | `low` | [[!UICONTROL  単純量 ]](../data-types/simple-quantity.md) | 下限。 |
+| [!UICONTROL &#x200B; 高 &#x200B;] | `high` | [[!UICONTROL &#x200B; 単純量 &#x200B;]](../data-types/simple-quantity.md) | 上限。 |
+| [!UICONTROL &#x200B; 低 &#x200B;] | `low` | [[!UICONTROL &#x200B; 単純量 &#x200B;]](../data-types/simple-quantity.md) | 下限。 |
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。
 

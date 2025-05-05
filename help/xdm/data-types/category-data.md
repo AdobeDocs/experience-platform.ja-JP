@@ -9,17 +9,17 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL  カテゴリデータ ] データタイプ
+# [!UICONTROL &#x200B; カテゴリデータ &#x200B;] データタイプ
 
-[!UICONTROL  カテゴリデータ ] は、製品のカテゴリに関連する情報を記述する標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; カテゴリデータ &#x200B;] は、製品のカテゴリに関連する情報を記述する標準の Experience Data Model （XDM）データタイプです。
 
 ![ カテゴリデータタイプの図。](../images/data-types/category-data.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |-----------------|--------------------|-----------|------------------------------------------|
-| [!UICONTROL  カテゴリ識別子 ] | `categoryID` | 文字列 | 商品のカテゴリの識別子。 |
-| [!UICONTROL  カテゴリ名 ] | `categoryName` | 文字列 | 商品のカテゴリの名前。 |
-| [!UICONTROL  カテゴリパス ] | `categoryPath` | 文字列 | 商品のカテゴリのパス。 |
+| [!UICONTROL &#x200B; カテゴリ識別子 &#x200B;] | `categoryID` | 文字列 | 商品のカテゴリの識別子。 |
+| [!UICONTROL &#x200B; カテゴリ名 &#x200B;] | `categoryName` | 文字列 | 商品のカテゴリの名前。 |
+| [!UICONTROL &#x200B; カテゴリパス &#x200B;] | `categoryPath` | 文字列 | 商品のカテゴリのパス。 |
 
 {style="table-layout:auto"}
 

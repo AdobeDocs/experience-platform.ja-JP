@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Experience PlatformWeb SDK は、Experience PlatformEdge Networkを介してAdobe Analyticsにデータを送信できます。 Adobeでは、Web SDK を使用してAdobe Analyticsにデータを送信するためのいくつかのオプションを提供しています。
 
-* [**[!UICONTROL Adobe Analytics ExperienceEvent フィールドグループ ]**](../../xdm/field-groups/event/analytics-full-extension.md) をスキーマに追加してから、[`XDM` オブジェクト ](../commands/sendevent/xdm.md) を使用します。
+* [**[!UICONTROL Adobe Analytics ExperienceEvent フィールドグループ &#x200B;]**](../../xdm/field-groups/event/analytics-full-extension.md) をスキーマに追加してから、[`XDM` オブジェクト ](../commands/sendevent/xdm.md) を使用します。
 * [`data` オブジェクトを使用して ](../commands/sendevent/data.md)XDM スキーマを使用せずにAdobe Analyticsにデータを送信します。
 * 自動生成された [ コンテキストデータ変数 ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) および [ 処理ルール ](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) を使用します。
 
@@ -92,7 +92,7 @@ Adobe AnalyticsのAppMeasurementでは、ページビューの呼び出し（[`t
 * **データオブジェクト**:`data.__adobe.analytics.linkName`、`data.__adobe.analytics.linkType` および `data.__adobe.analytics.linkURL`
 * **コンテキストデータ**：サポートされていません
 
-詳しくは ](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)Adobe Analytics導入ガイドの [`tl()` メソッドを参照してください。
+詳しくは [&#128279;](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)Adobe Analytics導入ガイドの `tl()` メソッドを参照してください。
 
 `configure` コマンドで [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) を有効にすると、これらのフィールドに値が設定されます。
 

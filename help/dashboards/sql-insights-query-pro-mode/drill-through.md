@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ![ 「編集」がハイライト表示された省略記号メニューを示すグラフ。](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
-[!UICONTROL  プロパティ ] パネルで、切替スイッチを使用して **[!UICONTROL ドリルスルーを有効にする]** を有効にし、ドロップダウンを使用して **[!UICONTROL ターゲット・ダッシュボード]** を選択します。 「**[!UICONTROL フィルターのパススルー]**」の切替スイッチが有効になっていることを確認してから、「**[!UICONTROL 保存して閉じる]**」を選択します。
+[!UICONTROL &#x200B; プロパティ &#x200B;] パネルで、切替スイッチを使用して **[!UICONTROL ドリルスルーを有効にする]** を有効にし、ドロップダウンを使用して **[!UICONTROL ターゲット・ダッシュボード]** を選択します。 「**[!UICONTROL フィルターのパススルー]**」の切替スイッチが有効になっていることを確認してから、「**[!UICONTROL 保存して閉じる]**」を選択します。
 
 ![ 「ドリルスルーの使用可能」、「ターゲット・ダッシュボード」および「フィルタ・パススルー」がハイライト表示されたチャートのプロパティ・パネル。](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
 
@@ -56,9 +56,9 @@ ht-degree: 0%
 
 ![ 「編集」がハイライト表示された省略記号メニューを示すグラフ。](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
-[!UICONTROL  プロパティ ] パネルで、無効にする切替スイッチ **[!UICONTROL ドリルスルーを有効にする]** を選択してから、「**[!UICONTROL 保存して閉じる]** を選択します。
+[!UICONTROL &#x200B; プロパティ &#x200B;] パネルで、無効にする切替スイッチ **[!UICONTROL ドリルスルーを有効にする]** を選択してから、「**[!UICONTROL 保存して閉じる]** を選択します。
 
-![ 「ドリルスルーの有効化 [!UICONTROL  が強調表示された切替スイッチが使用不可になっているグラフのプロパティ ] パネル ](../images/sql-insights-query-pro-mode/drill-through-disable.png)
+![ 「ドリルスルーの有効化 [!UICONTROL &#x200B; が強調表示された切替スイッチが使用不可になっているグラフのプロパティ &#x200B;] パネル ](../images/sql-insights-query-pro-mode/drill-through-disable.png)
 
 ## 次の手順
 

@@ -12,15 +12,15 @@ ht-degree: 5%
 
 # データ要素タイプ
 
-[2}Adobe Experience Platform Web SDK タグ拡張機能 ](action-types.md) で {action types](web-sdk-extension-configuration.md) を設定した後、データ要素タイプを設定する必要があります。 [このページでは、使用可能なデータ要素タイプについて説明します。
+[2&rbrace;Adobe Experience Platform Web SDK タグ拡張機能 ](action-types.md) で &lbrace;action types[&#128279;](web-sdk-extension-configuration.md) を設定した後、データ要素タイプを設定する必要があります。 このページでは、使用可能なデータ要素タイプについて説明します。
 
 ## ID マップ {#identity-map}
 
 ID マップを使用すると、web ページの訪問者の ID を確立できます。 ID マップは、`CRMID`、`Phone`、`Email` などの名前空間で構成され、各名前空間には 1 つ以上の識別子が含まれています。 例えば、web サイトの個人が 2 つの電話番号を提供している場合、電話の名前空間には 2 つの識別子を含める必要があります。
 
-[!UICONTROL ID マップ ] データ要素では、各識別子に対して次の情報を提供します。
+[!UICONTROL ID マップ &#x200B;] データ要素では、各識別子に対して次の情報を提供します。
 
-* **[!UICONTROL ID]**：訪問者を識別する値。 例えば、識別子が _phone_ 名前空間に属する場合、[!UICONTROL ID] は _555-555-5555_ になります。 通常、この値はページ上のJavaScript変数や他のデータから派生するので、ページデータを参照するデータ要素を作成し、[!UICONTROL ID マップ ] データ要素内の [!UICONTROL ID] フィールドでデータ要素を参照することをお勧めします。 ページ上で実行しているとき、ID 値が入力された文字列以外の場合、識別子は ID マップから自動的に削除されます。
+* **[!UICONTROL ID]**：訪問者を識別する値。 例えば、識別子が _phone_ 名前空間に属する場合、[!UICONTROL ID] は _555-555-5555_ になります。 通常、この値はページ上のJavaScript変数や他のデータから派生するので、ページデータを参照するデータ要素を作成し、[!UICONTROL ID マップ &#x200B;] データ要素内の [!UICONTROL ID] フィールドでデータ要素を参照することをお勧めします。 ページ上で実行しているとき、ID 値が入力された文字列以外の場合、識別子は ID マップから自動的に削除されます。
 * **[!UICONTROL 認証状態]**：訪問者が認証されているかどうかを示す選択。
 * **[!UICONTROL プライマリ]**：識別情報を個人のプライマリ識別情報として使用するかどうかを示す選択項目。 プライマリとしてマークされている識別子がない場合、ECID がプライマリ識別子として使用されます。
 
@@ -34,7 +34,7 @@ ID マップを使用すると、web ページの訪問者の ID を確立でき
 
 ID マップを作成する際は、[!DNL ECID] を指定しないでください。 SDK を使用する場合、[!DNL ECID] がサーバー上で自動的に生成され、ID マップに含まれます。
 
-ID マップデータ要素は、多くの場合、[[!UICONTROL XDM オブジェクト ] データ要素タイプ ](#xdm-object) および [[!UICONTROL  同意を設定 ] アクションタイプ ](action-types.md#set-consent) と並行して使用されます。
+ID マップデータ要素は、多くの場合、[[!UICONTROL XDM オブジェクト &#x200B;] データ要素タイプ ](#xdm-object) および [[!UICONTROL &#x200B; 同意を設定 &#x200B;] アクションタイプ ](action-types.md#set-consent) と並行して使用されます。
 
 詳しくは、[Adobe Experience Platform ID サービス ](../../../../identity-service/home.md) を参照してください。
 
@@ -54,8 +54,8 @@ XDM オブジェクトデータ要素を使用すると、データを XDM に�
 
 **[!UICONTROL 変数]** データ要素を使用して、ペイロードオブジェクトを作成できます。 [!UICONTROL XDM] オブジェクトと [!UICONTROL Data] オブジェクトの両方がサポートされています。
 
-* [!UICONTROL XDM] を選択した場合は、目的の [!UICONTROL  サンドボックス ] と [!UICONTROL  スキーマ ] を選択します。
-* [!UICONTROL  データ ] を選択したら、目的のソリューションを選択します。 使用可能なソリューションには、[!UICONTROL Adobe Analytics] および [!UICONTROL Adobe Target] が含まれます。
+* [!UICONTROL XDM] を選択した場合は、目的の [!UICONTROL &#x200B; サンドボックス &#x200B;] と [!UICONTROL &#x200B; スキーマ &#x200B;] を選択します。
+* [!UICONTROL &#x200B; データ &#x200B;] を選択したら、目的のソリューションを選択します。 使用可能なソリューションには、[!UICONTROL Adobe Analytics] および [!UICONTROL Adobe Target] が含まれます。
 
 ![ データ要素オプションを示すタグ UI の画像。](assets/variable-data-element.png)
 

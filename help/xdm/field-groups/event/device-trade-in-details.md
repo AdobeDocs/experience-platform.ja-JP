@@ -11,13 +11,13 @@ ht-degree: 18%
 
 ---
 
-# [!UICONTROL  デバイス下取り詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; デバイス下取り詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL  デバイス下取り詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 下取り価格、元のデバイス ID、新しいデバイス ID など、デバイスの下取りトランザクションを記述する単一フィールド（`deviceTradeInDetails`）が提供されます。
+[!UICONTROL &#x200B; デバイス下取り詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 下取り価格、元のデバイス ID、新しいデバイス ID など、デバイスの下取りトランザクションを記述する単一フィールド（`deviceTradeInDetails`）が提供されます。
 
 ![ デバイス下取り詳細構造 ](../../images/field-groups/device-trade-in-details.png)
 

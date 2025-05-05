@@ -291,9 +291,9 @@ ADC からの Select フィールドは変換する必要があり、XDM で生�
 
 「Select」フィールド（「post values」と呼ばれる）には、Adobeが処理ルール、VISTA ルール、ルックアップテーブルを使用して値を調整した後のデータが含まれます。 ほとんどの post 値には、事前に処理された対応策があります。
 
-Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の ](/help/query-service/sql/adobe-defined-functions.md)0}Adobe定義関数 } を参照してください。[
+Analytics ソースコネクタは、前処理されたデータをExperience Platformのデータセットに送信します。 変換を使用して、このデータを後処理済みの対応するデータに変換できます。 クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [&#128279;](/help/query-service/sql/adobe-defined-functions.md)0&rbrace;Adobe定義関数 &rbrace; を参照してください。
 
-クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の ](/help/query-service/sql/adobe-defined-functions.md)0}Adobe定義関数 } を参照してください。[
+クエリサービスを使用したこれらの変換の実行について詳しくは、『クエリサービスユーザーガイド』の [&#128279;](/help/query-service/sql/adobe-defined-functions.md)0&rbrace;Adobe定義関数 &rbrace; を参照してください。
 
 +++選択すると、非推奨の高度なマッピングフィールドのテーブルを表示します
 

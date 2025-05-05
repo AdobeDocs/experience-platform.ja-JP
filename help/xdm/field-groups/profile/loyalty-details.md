@@ -11,13 +11,13 @@ ht-degree: 11%
 
 ---
 
-# [!UICONTROL  ロイヤルティの詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; ロイヤルティの詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL  ロイヤルティの詳細 ] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、単一のオブジェクトタイプのフィールド `loyalty` を提供し、顧客ロイヤルティプログラムにおける個人のメンバーシップに関連する情報を取得します。
+[!UICONTROL &#x200B; ロイヤルティの詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、単一のオブジェクトタイプのフィールド `loyalty` を提供し、顧客ロイヤルティプログラムにおける個人のメンバーシップに関連する情報を取得します。
 
 ![](../../images/field-groups/loyalty-details.png)
 

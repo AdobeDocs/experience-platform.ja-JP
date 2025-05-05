@@ -39,7 +39,7 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**宛先の表示** と **宛先の管理**、**宛先のアクティブ化**、**プロファイルの表示**、**セグメントの表示**[[ アクセス制御権限 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) が必要です。 [[ アクセス制御の概要 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
+>* 宛先に接続するには、**宛先の表示** と **宛先の管理**、**宛先のアクティブ化**、**プロファイルの表示**、**セグメントの表示**&#x200B;[[ アクセス制御権限 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) が必要です。 [[ アクセス制御の概要 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) を読むか、製品管理者に問い合わせて、必要な権限を取得してください。
 >* *ID* を書き出すには、**ID グラフを表示** [[ アクセス制御権限 ]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) が必要です。\![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 ](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## サポートされている ID {#supported-identities}

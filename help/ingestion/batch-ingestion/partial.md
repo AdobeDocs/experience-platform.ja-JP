@@ -75,7 +75,7 @@ ht-degree: 45%
 >
 >この節では、UI を使用してバッチを有効にして部分バッチ取り込みを行う方法について説明します。 API を使用してバッチ取り込みのバッチを既に有効にしている場合は、次の節に進みます。
 
-[!DNL Experience Platform] UI を使用してバッチで部分取り込みを有効にするには、ソース接続を使用して新しいバッチを作成、既存のデータセットで新しいバッチを作成または「[!UICONTROL CSV を XDM フローにマッピング ]」を使用して新しいバッチを作成します。
+[!DNL Experience Platform] UI を使用してバッチで部分取り込みを有効にするには、ソース接続を使用して新しいバッチを作成、既存のデータセットで新しいバッチを作成または「[!UICONTROL CSV を XDM フローにマッピング &#x200B;]」を使用して新しいバッチを作成します。
 
 ### 新しいソース接続の作成 {#new-source}
 
@@ -107,9 +107,9 @@ ht-degree: 45%
 
 **データを追加** ボタンを使用してデータをアップロードでき、部分取り込みを使用して取り込めるようになりました。
 
-### 「[!UICONTROL CSV を XDM スキーマにマッピング ]」フローを使用します {#map-flow}
+### 「[!UICONTROL CSV を XDM スキーマにマッピング &#x200B;]」フローを使用します {#map-flow}
 
-「[!UICONTROL CSV を XDM スキーマにマッピング ]」フローを使用するには、[CSV ファイルのマッピング ](../tutorials/map-csv/overview.md) チュートリアルに記載されている手順に従います。 **[!UICONTROL データを追加]** 手順に到達したら、**[!UICONTROL 部分取り込み]** および **[!UICONTROL エラー診断]** フィールドに注意します。
+「[!UICONTROL CSV を XDM スキーマにマッピング &#x200B;]」フローを使用するには、[CSV ファイルのマッピング ](../tutorials/map-csv/overview.md) チュートリアルに記載されている手順に従います。 **[!UICONTROL データを追加]** 手順に到達したら、**[!UICONTROL 部分取り込み]** および **[!UICONTROL エラー診断]** フィールドに注意します。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

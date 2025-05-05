@@ -31,14 +31,14 @@ Experience Platformの既存の機能に対するアップデート：
 
 ## ユースケースプレイブック {#use-case-playbooks}
 
-[!UICONTROL  ユースケースプレイブック ] 機能が、すべてのReal-Time CDPおよびAdobe Journey Optimizerのお客様で一般公開されました。 [!UICONTROL  ユースケースプレイブック ] は、Real-Time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題を克服するのを支援するように設計されています。 どこから始めればよいのか、目的のユースケースに合った適切なアセットの作成方法がわからない場合は、ユースケースプレイブックを使用すると、インスピレーションを得て様々なアセットを作成し、準備ができたときにテストして実稼動環境に読み込むことができます。
+[!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] 機能が、すべてのReal-Time CDPおよびAdobe Journey Optimizerのお客様で一般公開されました。 [!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] は、Real-Time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題を克服するのを支援するように設計されています。 どこから始めればよいのか、目的のユースケースに合った適切なアセットの作成方法がわからない場合は、ユースケースプレイブックを使用すると、インスピレーションを得て様々なアセットを作成し、準備ができたときにテストして実稼動環境に読み込むことができます。
 
-[!UICONTROL  ユースケースプレイブック ] を使い始めるには、次のドキュメントページを参照してください。
+[!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] を使い始めるには、次のドキュメントページを参照してください。
 
 - [ 概要ページ ](/help/use-case-playbooks/playbooks/overview.md) を読んで、目的や可用性に関する情報を理解し、プレイブックが検出からインスタンスの作成、生成されたアセットの他のサンドボックス環境への読み込みにどのように機能するかを示すエンドツーエンドのデモを取得します。
 - 製品別にグループ化されたすべての [ 使用可能なプレイブック ](/help/use-case-playbooks/playbooks/playbooks-list.md) のリストを取得します（Real-Time CDPまたはJourney Optimizer）
 - プレイブックとプレイブックで生成されたアセットを使用するためのすべての [ 必要な権限 ](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) に関する情報を取得します。
-- 生成されたアセットを他のサンドボックス環境にコピーできる ](/help/use-case-playbooks/playbooks/data-awareness.md) データ認識機能 [ について説明します
+- 生成されたアセットを他のサンドボックス環境にコピーできる [&#128279;](/help/use-case-playbooks/playbooks/data-awareness.md) データ認識機能  について説明します
 - ユースケースプレイブックの使用でエラーや問題が発生した場合は、[ トラブルシューティングのヒント ](/help/use-case-playbooks/playbooks/troubleshooting.md) を入手します。
 
 ## 属性ベースのアクセス制御 {#abac}
@@ -183,7 +183,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] ソース | ソースカタログの [!DNL Oracle NetSuite] の統合機能を使用すると、[[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) および [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) アカウントからExperience Platformにデータを取り込むことができます。 |
 | [!BADGE Beta]{type=Informative} [!DNL Braze Currents] ソース | ソースカタログの [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 統合を使用して、[!DNL Braze] アカウントからExperience Platformにデータを取り込みます。 |
-| バッチソースのキーペア認証 [!DNL Snowflake] サポート | バッチデータ用の新しい [!DNL Snowflake] アカウントを作成する際に、キーペア認証を使用できるようになりました。 詳しくは、[API を使用したアカウントの作成  [!DNL Snowflake]  または [UI を使用したアカウントの作成 ](../../sources/tutorials/api/create/databases/snowflake.md) に関するガイドを参照し  [!DNL Snowflake]  ください ](../../sources/tutorials/ui/create/databases/snowflake.md)。 |
+| バッチソースのキーペア認証 [!DNL Snowflake] サポート | バッチデータ用の新しい [!DNL Snowflake] アカウントを作成する際に、キーペア認証を使用できるようになりました。 詳しくは、[&#128279;](../../sources/tutorials/ui/create/databases/snowflake.md)API を使用したアカウントの作成  [!DNL Snowflake]  または [UI を使用したアカウントの作成 ](../../sources/tutorials/api/create/databases/snowflake.md) に関するガイドを参照し  [!DNL Snowflake]  ください 。 |
 
 {style="table-layout:auto"}
 

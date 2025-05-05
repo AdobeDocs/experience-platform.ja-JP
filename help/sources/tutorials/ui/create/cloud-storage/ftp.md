@@ -45,11 +45,11 @@ FTP に接続するには、次の接続プロパティの値を指定する必�
 
 必要な資格情報を収集したら、次の手順に従って新しい FTP アカウントを作成し、Experience Platformに接続します。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して [!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、インバウンドアカウントを作成できる様々なソースが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して [!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] 画面には、インバウンドアカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-[!UICONTROL  クラウドストレージ ] カテゴリで、「**[!UICONTROL FTP]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい FTP 接続を作成します。
+[!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「**[!UICONTROL FTP]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい FTP 接続を作成します。
 
 ![カタログ](../../../../images/tutorials/create/ftp/catalog.png)
 

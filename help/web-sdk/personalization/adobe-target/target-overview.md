@@ -42,7 +42,7 @@ ht-degree: 3%
 | 1 | デバイスが [!DNL Web SDK] を読み込みます。 [!DNL Web SDK] は、XDM データ、データストリーム環境 ID、渡し込みパラメーター、顧客 ID （オプション）を含むリクエストをEdge Networkに送信します。 ページ（またはコンテナ）は事前非表示になっています。 |
 | 2 | Edge Networkは、訪問者 ID、同意、その他の訪問者コンテキスト情報（位置情報やデバイスにわかりやすい名前など）を使用してリクエストを強化するため、エッジサービスにリクエストを送信します。 |
 | 3 | Edge Networkは、訪問者 ID と渡されたパラメーターを使用して、エンリッチメントされたパーソナライゼーションリクエストを [!DNL Target] エッジに送信します。 |
-| 4 | プロファイルスクリプトは、を実行してから、プロファイルストレージ [!DNL Target] フィードします。 プロファイルストレージは、[!UICONTROL  オーディエンスライブラリ ] からセグメントを取得します（例えば、[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform] から共有されたセグメント）。 |
+| 4 | プロファイルスクリプトは、を実行してから、プロファイルストレージ [!DNL Target] フィードします。 プロファイルストレージは、[!UICONTROL &#x200B; オーディエンスライブラリ &#x200B;] からセグメントを取得します（例えば、[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform] から共有されたセグメント）。 |
 | 5 | URL リクエストパラメーターとプロファイルデータに基づいて、[!DNL Target] は、現在のページビューと将来の事前読み込みビューで訪問者に表示するアクティビティとエクスペリエンスを決定します。 その後、[!DNL Target] はこれをEdge Networkに送り返します。 |
 | 6 | 回答：Edge Networkは、パーソナライゼーションの応答をページに送り返します（オプションで、パーソナライゼーションを追加するためのプロファイル値も含みます）。 現在のページ上のパーソナライズされたコンテンツは、デフォルトコンテンツのちらつきなしでできるだけ早く表示されます。<br>b.単一ページアプリケーション（SPA）でのユーザーアクションの結果として表示されるビューのパーソナライズされたコンテンツはキャッシュされるので、ビューがトリガーされたときに追加のサーバー呼び出しをおこなわずに即座にコンテンツを適用できます。 <br>c.Edge Networkは、訪問者 ID と Cookie のその他の値（同意、セッション ID、ID、Cookie チェック、パーソナライゼーションなど）を送信します。 |
 | 7 | Web SDKが、デバイスからEdge Networkに通知を送信します。 |
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 ## Adobe Target VEC の使用
 
-[!DNL Web SDK] 実装で VEC を使用するには、{Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [3}Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 拡張機能をインストールして有効化します。[
+[!DNL Web SDK] 実装で VEC を使用するには、{Firefox[&#128279;](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [3}Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 拡張機能をインストールして有効化します。
 
 詳しくは、*Adobe Targetガイドの [Visual Experience Composer ヘルパー拡張機能 ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) を参照してください*。
 

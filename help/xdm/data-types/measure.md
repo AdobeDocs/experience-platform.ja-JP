@@ -11,9 +11,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL  測定 ] データタイプ
+# [!UICONTROL &#x200B; 測定 &#x200B;] データタイプ
 
-[!UICONTROL  測定 ] は、特定の指標の具体的な定量化可能なデータポイントを含んだ、標準の Experience Data Model （XDM）データタイプです。 測定は、一意の ID と値で構成されます。
+[!UICONTROL &#x200B; 測定 &#x200B;] は、特定の指標の具体的な定量化可能なデータポイントを含んだ、標準の Experience Data Model （XDM）データタイプです。 測定は、一意の ID と値で構成されます。
 
 ![ 画像を測定 ](../images/data-types/measure.PNG){ 幅=500}
 

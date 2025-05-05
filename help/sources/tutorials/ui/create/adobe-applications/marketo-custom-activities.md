@@ -65,7 +65,7 @@ Experience Platform UI の *[!UICONTROL スキーマ]* ダッシュボードで�
 
 ![ 新しいフィールドグループのラベル付けと作成を行うためのウィンドウです。](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 
-作成すると、カスタムアクティビティの新しいフィールドグループが [!UICONTROL  フィールドグループ ] カタログに表示されます。
+作成すると、カスタムアクティビティの新しいフィールドグループが [!UICONTROL &#x200B; フィールドグループ &#x200B;] カタログに表示されます。
 
 ![ フィールドグループパネルの下に追加された、新しいフィールドグループを含むスキーマ構造。](../../../../images/tutorials/create/marketo-custom-activities/new-field-group-created.png)
 
@@ -91,7 +91,7 @@ Experience Platform UI の *[!UICONTROL スキーマ]* ダッシュボードで�
 
 スキーマの設定が完了したので、カスタムアクティビティデータのデータフローの作成に進むことができます。
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 

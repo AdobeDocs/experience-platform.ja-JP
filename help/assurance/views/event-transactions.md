@@ -17,7 +17,7 @@ Adobe Experience Platform Assurance のイベントトランザクションビ�
 
 [Assurance の設定 ](../tutorials/implement-assurance.md) 後に、Assurance とEdge Networkの拡張機能の最新バージョンをアプリに実装していることを確認します。
 
-イベントを表示するには、左側のメニューから、「**[!UICONTROL Adobe Experience Platform Edge**[!UICONTROL 」セクションの下の ]**イベントトランザクション]** を選択します。
+イベントを表示するには、左側のメニューから、「**[!UICONTROL Adobe Experience Platform Edge**&#x200B;[!UICONTROL 」セクションの下の &#x200B;]&#x200B;**イベントトランザクション]** を選択します。
 
 このオプションが表示されない場合は、ウィンドウの左下にある「**[!UICONTROL 構成]**」を選択し、「**[!UICONTROL イベント・トランザクション]**」ビューを追加して、「**[!UICONTROL 保存]**」を選択します。
 

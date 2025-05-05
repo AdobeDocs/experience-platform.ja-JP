@@ -118,8 +118,8 @@ ht-degree: 13%
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
-1. [!UICONTROL  データ収集 ] セクションまでスクロールし、**[!UICONTROL すべてのデフォルトのコンテキスト情報]** または **[!UICONTROL 特定のコンテキスト情報]** を選択します。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 &#x200B;] をクリックします。
+1. [!UICONTROL &#x200B; データ収集 &#x200B;] セクションまでスクロールし、**[!UICONTROL すべてのデフォルトのコンテキスト情報]** または **[!UICONTROL 特定のコンテキスト情報]** を選択します。
 1. **[!UICONTROL 特定のコンテキスト情報]** を選択した場合は、目的の各コンテキスト情報要素の横にあるチェックボックスを有効にします。
 1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 

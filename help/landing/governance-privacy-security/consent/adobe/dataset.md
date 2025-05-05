@@ -21,7 +21,7 @@ Adobe Experience Platformで顧客の同意/環境設定データを処理する
 
 >[!IMPORTANT]
 >
->このガイドの例では、標準化されたフィールドセットを使用して、[[!UICONTROL  同意および環境設定の詳細 ] スキーマフィールドグループ ](../../../../xdm/field-groups/profile/consents.md) で定義されている顧客の同意値を表します。 これらのフィールドの構造は、多くの一般的な同意収集のユースケースに対応する効率的なデータモデルを提供することを目的としています。
+>このガイドの例では、標準化されたフィールドセットを使用して、[[!UICONTROL &#x200B; 同意および環境設定の詳細 &#x200B;] スキーマフィールドグループ ](../../../../xdm/field-groups/profile/consents.md) で定義されている顧客の同意値を表します。 これらのフィールドの構造は、多くの一般的な同意収集のユースケースに対応する効率的なデータモデルを提供することを目的としています。
 >
 >ただし、独自のフィールドグループを定義して、独自のデータモデルに従って同意を表すこともできます。 次のオプションに基づいて、ビジネスニーズに適合する同意データモデルの承認を得るには、法務チームにお問い合わせください。
 >
@@ -41,9 +41,9 @@ Adobe Experience Platformで顧客の同意/環境設定データを処理する
 >
 >このチュートリアルでは、顧客属性情報の取り込みに使用するExperience Platformの [!DNL Profile] スキーマを理解していることを前提としています。 同意データの収集に使用する方法に関係なく、このスキーマは [ リアルタイム顧客プロファイルに対して有効にする ](../../../../xdm/ui/resources/schemas.md#profile) 必要があります。 さらに、スキーマのプライマリ ID を、メールアドレスなどの興味/関心に基づく広告に使用することが禁止されている、直接識別可能なフィールドにすることはできません。 どのフィールドが制限されているかわからない場合は、法務担当者に問い合わせてください。
 
-## [!UICONTROL  同意と環境設定の詳細 ] フィールドグループの構造 {#structure}
+## [!UICONTROL &#x200B; 同意と環境設定の詳細 &#x200B;] フィールドグループの構造 {#structure}
 
-[!UICONTROL  同意および環境設定の詳細 ] フィールドグループは、標準化された同意フィールドをスキーマに提供します。 現在、このフィールドグループは、[!DNL XDM Individual Profile] クラスに基づくスキーマにのみ適合します。
+[!UICONTROL &#x200B; 同意および環境設定の詳細 &#x200B;] フィールドグループは、標準化された同意フィールドをスキーマに提供します。 現在、このフィールドグループは、[!DNL XDM Individual Profile] クラスに基づくスキーマにのみ適合します。
 
 フィールドグループは、単一のオブジェクトタイプフィールド `consents` を提供し、そのサブプロパティは、標準化された一連の同意フィールドをキャプチャします。 次の JSON は、データ取り込み時に期待され `consents` データの種類の例です。
 
@@ -92,13 +92,13 @@ Adobe Experience Platformで顧客の同意/環境設定データを処理する
 
 >[!NOTE]
 >
->`consents` のサブプロパティの構造と意味について詳しくは、[[!UICONTROL  同意および環境設定の詳細 ] フィールドグループ ](../../../../xdm/field-groups/profile/consents.md) の概要を参照してください。
+>`consents` のサブプロパティの構造と意味について詳しくは、[[!UICONTROL &#x200B; 同意および環境設定の詳細 &#x200B;] フィールドグループ ](../../../../xdm/field-groups/profile/consents.md) の概要を参照してください。
 
 ## [!DNL Profile] スキーマへの必須フィールドグループの追加 {#add-field-group}
 
 Adobe標準を使用して同意データを収集するには、次の 2 つのフィールドグループを含むプロファイル対応のスキーマが必要です。
 
-* [[!UICONTROL  同意と環境設定の詳細 ]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL &#x200B; 同意と環境設定の詳細 &#x200B;]](../../../../xdm/field-groups/profile/consents.md)
 * [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) （Experience Platform Web または Mobile SDKを使用して同意信号を送信する場合に必要）
 
 Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択し、「**[!UICONTROL 参照]**」タブを選択して、既存のスキーマのリストを表示します。 ここから、同意フィールドを追加する [!DNL Profile] 対応スキーマの名前を選択します。 この節のスクリーンショットでは、[ スキーマ作成チュートリアル ](../../../../xdm/tutorials/create-schema-ui.md) で作成した「ロイヤルティメンバー」スキーマを例として使用します。
@@ -129,7 +129,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 >
 >新しいスキーマを作成する場合や、プロファイルで有効になっていない既存のスキーマを編集する場合は、保存する前に [ プロファイルでスキーマを有効にする ](../../../../xdm/ui/resources/schemas.md#profile) 必要があります。
 
-編集したスキーマがExperience Platform Web SDK データストリームで指定された [!UICONTROL  プロファイルデータセット ] で使用されている場合、そのデータセットには新しい同意フィールドが含まれるようになりました。 [ 同意処理ガイド ](./overview.md#merge-policies) に戻って、同意データを処理するようにExperience Platformを設定するプロセスを続けることができます。 このスキーマのデータセットをまだ作成していない場合は、次の節の手順に従ってください。
+編集したスキーマがExperience Platform Web SDK データストリームで指定された [!UICONTROL &#x200B; プロファイルデータセット &#x200B;] で使用されている場合、そのデータセットには新しい同意フィールドが含まれるようになりました。 [ 同意処理ガイド ](./overview.md#merge-policies) に戻って、同意データを処理するようにExperience Platformを設定するプロセスを続けることができます。 このスキーマのデータセットをまだ作成していない場合は、次の節の手順に従ってください。
 
 ## 同意スキーマに基づくデータセットの作成 {#dataset}
 
@@ -161,7 +161,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-これで、データセットが保存され、[!DNL Profile] で使用できるようになります。 Experience Platform Web SDKを使用して同意データをプロファイルに送信することを計画している場合は、[ データストリーム ](../../../../datastreams/overview.md) を設定する際に、このデータセットを [!UICONTROL  プロファイルデータセット ] として選択する必要があります。
+これで、データセットが保存され、[!DNL Profile] で使用できるようになります。 Experience Platform Web SDKを使用して同意データをプロファイルに送信することを計画している場合は、[ データストリーム ](../../../../datastreams/overview.md) を設定する際に、このデータセットを [!UICONTROL &#x200B; プロファイルデータセット &#x200B;] として選択する必要があります。
 
 ## 次の手順
 
@@ -175,15 +175,15 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ### スキーマへのカスタム同意フィールドと環境設定フィールドの追加 {#custom-consent}
 
-標準の [!UICONTROL  同意および環境設定の詳細 ] フィールドグループで表される同意以外で追加の同意シグナルを取得する必要がある場合は、カスタム XDM コンポーネントを使用して、特定のビジネスニーズに合わせて同意スキーマを強化できます。 この節では、これらのシグナルをプロファイルに取り込むために同意スキーマをカスタマイズする方法の基本原則の概要を説明します。
+標準の [!UICONTROL &#x200B; 同意および環境設定の詳細 &#x200B;] フィールドグループで表される同意以外で追加の同意シグナルを取得する必要がある場合は、カスタム XDM コンポーネントを使用して、特定のビジネスニーズに合わせて同意スキーマを強化できます。 この節では、これらのシグナルをプロファイルに取り込むために同意スキーマをカスタマイズする方法の基本原則の概要を説明します。
 
 >[!IMPORTANT]
 >
 >Experience Platform Web SDK および Mobile SDK は、consent-change コマンドのカスタムフィールドをサポートしていません。 現在、カスタム同意フィールドをプロファイルに取り込む唯一の方法は、[ バッチ取り込み ](../../../../ingestion/batch-ingestion/overview.md) または [ ソース接続 ](../../../../sources/home.md) を使用することです。
 
-[!UICONTROL  同意および環境設定の詳細 ] フィールドグループを、同意データの構造のベースラインとして使用し、必要に応じて追加する必要があります。構造全体を最初から作成する必要はありません。
+[!UICONTROL &#x200B; 同意および環境設定の詳細 &#x200B;] フィールドグループを、同意データの構造のベースラインとして使用し、必要に応じて追加する必要があります。構造全体を最初から作成する必要はありません。
 
-標準フィールドグループの構造にカスタムフィールドを追加するには、まずカスタムフィールドグループを作成する必要があります。 [!UICONTROL  同意と環境設定の詳細 ] フィールドグループをスキーマに追加した後、「**フィールドグループ]**」セクションで **[!UICONTROL プラス（+）** アイコンを選択し、「**[!UICONTROL 新しいフィールドグループを作成]**」を選択します。 フィールドグループの名前と説明（オプション）を入力し、「**[!UICONTROL フィールドグループを追加]**」を選択します。
+標準フィールドグループの構造にカスタムフィールドを追加するには、まずカスタムフィールドグループを作成する必要があります。 [!UICONTROL &#x200B; 同意と環境設定の詳細 &#x200B;] フィールドグループをスキーマに追加した後、「**フィールドグループ**」セクションで **プラス（+）** アイコンを選択し、「**[!UICONTROL 新しいフィールドグループを作成]**」を選択します。 フィールドグループの名前と説明（オプション）を入力し、「**[!UICONTROL フィールドグループを追加]**」を選択します。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
@@ -197,16 +197,16 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 **[!UICONTROL フィールドプロパティ]** の下の右パネルで、フィールドの名前と説明を入力します。 フィールドの **[!UICONTROL タイプ]** を選択する場合は、カスタムの同意または環境設定フィールドに適した標準データタイプを使用する必要があります。
 
-* [[!UICONTROL  汎用同意フィールド ]](../../../../xdm/data-types/consent-field.md)
-* [[!UICONTROL  汎用マーケティング環境設定フィールド ]](../../../../xdm/data-types/marketing-field.md)
-* [[!UICONTROL  サブスクリプションを含む汎用マーケティング環境設定フィールド ]](../../../../xdm/data-types/marketing-field-subscriptions.md)
-* [[!UICONTROL  汎用Personalization環境設定フィールド ]](../../../../xdm/data-types/personalization-field.md)
+* [[!UICONTROL &#x200B; 汎用同意フィールド &#x200B;]](../../../../xdm/data-types/consent-field.md)
+* [[!UICONTROL &#x200B; 汎用マーケティング環境設定フィールド &#x200B;]](../../../../xdm/data-types/marketing-field.md)
+* [[!UICONTROL &#x200B; サブスクリプションを含む汎用マーケティング環境設定フィールド &#x200B;]](../../../../xdm/data-types/marketing-field-subscriptions.md)
+* [[!UICONTROL &#x200B; 汎用Personalization環境設定フィールド &#x200B;]](../../../../xdm/data-types/personalization-field.md)
 
 完了したら、「**[!UICONTROL 適用]**」を選択します。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-properties.png)
 
-同意フィールドまたは環境設定フィールドがスキーマ構造に追加されます。 右側のパネルに表示される [!UICONTROL  パス ] には、`_tenantId` の名前空間が含まれています。 データ操作でこのフィールドへのパスを参照する場合は、常にこの名前空間を含める必要があります。
+同意フィールドまたは環境設定フィールドがスキーマ構造に追加されます。 右側のパネルに表示される [!UICONTROL &#x200B; パス &#x200B;] には、`_tenantId` の名前空間が含まれています。 データ操作でこのフィールドへのパスを参照する場合は、常にこの名前空間を含める必要があります。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-added.png)
 

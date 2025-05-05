@@ -55,7 +55,7 @@ ht-degree: 22%
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
-スキーマが [!DNL Profile] に対して有効になったので、**[!UICONTROL データセットアクティビティ]** 画面に戻り、**[!UICONTROL プロパティ]** 列内の ]**プロファイル**[!UICONTROL  トグルをクリックして、データセットを [!DNL Profile] に対して有効にします。
+スキーマが [!DNL Profile] に対して有効になったので、**[!UICONTROL データセットアクティビティ]** 画面に戻り、**[!UICONTROL プロパティ]** 列内の **プロファイル** トグルをクリックして、データセットを [!DNL Profile] に対して有効にします。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 

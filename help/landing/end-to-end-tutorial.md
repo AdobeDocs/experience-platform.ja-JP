@@ -94,8 +94,8 @@ Amazon S3 をソースコネクタとして使用している場合は、[Amazon
 
 Experience Platformでは、データフロー（Experience Platformの様々なコンポーネント間でデータを移動するジョブを表します）を使用して、データがどのように処理されているかを追跡できます。 これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、[!DNL Identity Service] と [!DNL Real-Time Customer Profile] がデータを利用してから、最終的に宛先に対してアクティブ化します。 監視ダッシュボードは、データフローのジャーニーを視覚的に表現します。 Experience Platform UI 内のデータフローを監視する方法について詳しくは、[ ソースのデータフロー監視 ](../dataflows/ui/monitor-sources.md) および [ 宛先のデータフロー監視 ](../dataflows/ui/monitor-destinations.md) のチュートリアルを参照してください。
 
-また、統計指標とイベント通知を使用して、[!DNL Observability Insights] を使用して、Experience Platform アクティビティを監視することもできます。 アラート通知は、Experience Platform UI を通じて登録したり、設定済みの Webhook に送信したりできます。 Experience Platform UI からの使用可能なアラートを表示、有効化、無効化および登録する方法について詳しくは、『 [[!UICONTROL  アラート ] UI ガイド ](../observability/alerts/ui.md) 』を参照してください。 Webhook を通じてアラートを受け取る方法について詳しくは、[Adobe I/O イベント通知の登録 ](../observability/alerts/subscribe.md) に関するガイドを参照してください。
+また、統計指標とイベント通知を使用して、[!DNL Observability Insights] を使用して、Experience Platform アクティビティを監視することもできます。 アラート通知は、Experience Platform UI を通じて登録したり、設定済みの Webhook に送信したりできます。 Experience Platform UI からの使用可能なアラートを表示、有効化、無効化および登録する方法について詳しくは、『 [[!UICONTROL &#x200B; アラート &#x200B;] UI ガイド ](../observability/alerts/ui.md) 』を参照してください。 Webhook を通じてアラートを受け取る方法について詳しくは、[Adobe I/O イベント通知の登録 ](../observability/alerts/subscribe.md) に関するガイドを参照してください。
 
 ## 次の手順
 
-このチュートリアルを読むことで、Experience Platformのシンプルなエンドツーエンドフローの基本的な概要を学びました。 Experience Platformについて詳しくは、[Adobe Experience Platformの概要 ](./home.md) を参照してください。 Experience Platform UI とExperience Platform API の使用について詳しくは、[Experience Platform UI ガイドと ](./ui-guide.md)2}Experience Platform API ガイドをお読みください ](./api-guide.md)[
+このチュートリアルを読むことで、Experience Platformのシンプルなエンドツーエンドフローの基本的な概要を学びました。 Experience Platformについて詳しくは、[Adobe Experience Platformの概要 ](./home.md) を参照してください。 Experience Platform UI とExperience Platform API の使用について詳しくは、[Experience Platform UI ガイドと ](./ui-guide.md)2&rbrace;Experience Platform API ガイドをお読みください [&#128279;](./api-guide.md)

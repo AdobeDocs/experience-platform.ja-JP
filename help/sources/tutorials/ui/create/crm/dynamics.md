@@ -54,7 +54,7 @@ ht-degree: 25%
 
 ## [!DNL Dynamics] アカウントを接続
 
-Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -86,7 +86,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!TAB  基本認証 ]
 
-基本認証を持つ [!DNL Dynamics] アカウントを作成するには、「[!UICONTROL  基本認証 ]」を選択し、「[!UICONTROL  サービス URI]」、「[!UICONTROL  ユーザー名 ]」、「[!UICONTROL  パスワード ] の値を指定します。 **注意**:[!DNL Dynamics] での基本認証は、現在Experience Platformでサポートされていない二要素認証でブロックされる場合があります。 この場合、[!DNL Dynamics] を使用してソースコネクタを作成するには、キーベースの認証を使用することをお勧めします。
+基本認証を持つ [!DNL Dynamics] アカウントを作成するには、「[!UICONTROL &#x200B; 基本認証 &#x200B;]」を選択し、「[!UICONTROL &#x200B; サービス URI]」、「[!UICONTROL &#x200B; ユーザー名 &#x200B;]」、「[!UICONTROL &#x200B; パスワード &#x200B;] の値を指定します。 **注意**:[!DNL Dynamics] での基本認証は、現在Experience Platformでサポートされていない二要素認証でブロックされる場合があります。 この場合、[!DNL Dynamics] を使用してソースコネクタを作成するには、キーベースの認証を使用することをお勧めします。
 
 完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しいアカウントが確立されるまでしばらく待ちます。
 
@@ -94,7 +94,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!TAB  サービスプリンシパルとキーの認証 ]
 
-サービスプリンシパルとキーの認証を持つ [!DNL Dynamics] アカウントを作成するには、「**[!UICONTROL サービスプリンシパルとキーの認証]** を選択してから、「[!UICONTROL  サービスプリンシパル ID] と [!UICONTROL  サービスプリンシパルキー ] の値を指定します。
+サービスプリンシパルとキーの認証を持つ [!DNL Dynamics] アカウントを作成するには、「**[!UICONTROL サービスプリンシパルとキーの認証]** を選択してから、「[!UICONTROL &#x200B; サービスプリンシパル ID] と [!UICONTROL &#x200B; サービスプリンシパルキー &#x200B;] の値を指定します。
 
 完了したら、「**[!UICONTROL ソースに接続]**」を選択し、新しいアカウントが確立されるまでしばらく待ちます。
 

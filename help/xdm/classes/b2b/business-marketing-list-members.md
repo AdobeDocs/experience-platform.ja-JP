@@ -15,13 +15,13 @@ ht-degree: 2%
 >
 >このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [ リアルタイム顧客プロファイル ](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
 
-[!UICONTROL XDM ビジネスマーケティングリストメンバー ] は、マーケティングリストに関連付けられたメンバー、人物または連絡先を記述する、標準のエクスペリエンスデータモデル（XDM）クラスです。
+[!UICONTROL XDM ビジネスマーケティングリストメンバー &#x200B;] は、マーケティングリストに関連付けられたメンバー、人物または連絡先を記述する、標準のエクスペリエンスデータモデル（XDM）クラスです。
 
 ![UI に表示される XDM ビジネスマーケティングリストメンバークラスの構造 ](../../images/classes/b2b/business-marketing-list-members.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `extSourceSystemAudit` | [[!UICONTROL  外部Source システム監査属性 ]](../../data-types/external-source-system-audit-attributes.md) | マーケティングリストメンバーシップが外部ソースシステムから取得される場合、このオブジェクトはそのシステムの監査属性を取得します。 |
+| `extSourceSystemAudit` | [[!UICONTROL &#x200B; 外部Source システム監査属性 &#x200B;]](../../data-types/external-source-system-audit-attributes.md) | マーケティングリストメンバーシップが外部ソースシステムから取得される場合、このオブジェクトはそのシステムの監査属性を取得します。 |
 | `marketingListKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | ユーザーがメンバーになっているマーケティングリストの複合識別子。 |
 | `marketingListMemberKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | マーケティングリストメンバーシップエンティティの複合識別子。 |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | マーケティングリストのメンバーであるユーザーのための複合識別子。 |

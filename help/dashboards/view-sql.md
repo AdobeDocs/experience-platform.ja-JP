@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # insight SQL を表示
 
-[!UICONTROL SQL を表示 ] 機能を使用して、プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを通じてオンデマンドでクエリを実行します。 40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成します。
+[!UICONTROL SQL を表示 &#x200B;] 機能を使用して、プロファイル、オーディエンス、宛先およびカスタマイズされたインサイトの背後にある SQL を表示し、クエリエディターを通じてオンデマンドでクエリを実行します。 40 を超える既存のインサイトの SQL からインスピレーションを得て、ビジネスニーズに基づいてExperience Platform データから独自のインサイトを導き出す新しいクエリを作成します。
 
 ## ダッシュボードの「概要」に移動します。 {#navigate-to-overview}
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 または、左側のナビゲーションから **[!UICONTROL ダッシュボード]** を選択し、続いてカスタムダッシュボードの名前を選択します。 ユーザー定義ダッシュボードの概要が表示されます。
 
-![[!UICONTROL  プロファイル ]、[!UICONTROL  オーディエンス ]、[!UICONTROL  宛先 ]、および [!UICONTROL  ダッシュボード ] がハイライト表示されたExperience Platform UI](./images/view-sql/dashboard-navigation.png)
+![[!UICONTROL &#x200B; プロファイル &#x200B;]、[!UICONTROL &#x200B; オーディエンス &#x200B;]、[!UICONTROL &#x200B; 宛先 &#x200B;]、および [!UICONTROL &#x200B; ダッシュボード &#x200B;] がハイライト表示されたExperience Platform UI](./images/view-sql/dashboard-navigation.png)
 
 ## SQL を表示切替スイッチ {#toggle}
 
@@ -27,13 +27,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[!UICONTROL SQL を表示 ] 切替スイッチを有効にした場合、この機能を無効にするまでは、グローバルフィルターおよびウィジェットレベルのフィルターを変更できません。
+>[!UICONTROL SQL を表示 &#x200B;] 切替スイッチを有効にした場合、この機能を無効にするまでは、グローバルフィルターおよびウィジェットレベルのフィルターを変更できません。
 
-![ 「[!UICONTROL SQL を表示 ]」切替スイッチがハイライト表示されています。](./images/view-sql/view-sql-toggle.png)
+![ 「[!UICONTROL SQL を表示 &#x200B;]」切替スイッチがハイライト表示されています。](./images/view-sql/view-sql-toggle.png)
 
-個々のinsightに [!UICONTROL SQL を表示 ] テキストを表示する切替スイッチを有効にします。
+個々のinsightに [!UICONTROL SQL を表示 &#x200B;] テキストを表示する切替スイッチを有効にします。
 
-![ 「SQL を表示 [!UICONTROL  がハイライト表示されたinsight]](./images/view-sql/insight-view-sql.png)
+![ 「SQL を表示 [!UICONTROL &#x200B; がハイライト表示されたinsight]](./images/view-sql/insight-view-sql.png)
 
 **[!UICONTROL SQL を表示]** を選択して、ウィジェットの SQL を含むダイアログを開きます。
 
@@ -49,7 +49,7 @@ insightのタイトルと、それを生成する SQL を含むダイアログ�
 
 「**[!UICONTROL SQL を実行]**」を選択して、クエリが事前入力されたクエリエディターを開きます。
 
-![ 「[!UICONTROL SQL を実行 ] がハイライト表示されたinsight ダイアログ ](./images/view-sql/run-sql.png)
+![ 「[!UICONTROL SQL を実行 &#x200B;] がハイライト表示されたinsight ダイアログ ](./images/view-sql/run-sql.png)
 
 ## 既存の SQL を編集 {#edit-sql}
 

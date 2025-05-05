@@ -40,7 +40,7 @@ Experience Platformの主な機能の 1 つは、ファーストパーティデ�
 * カタログ内の宛先へのデータフローを作成、編集、アクティブ化、無効化する。
 * ストレージの場所にアカウントを作成するか、Experience Platformを宛先プラットフォームのアカウントにリンクする。
 * 宛先に対してアクティブ化するオーディエンスまたはデータセットを選択します。
-* メールマーケティングの宛先、CRM プラットフォーム、クラウドストレージの場所などの特定の宛先に対してオーディエンスをアクティブ化する際に ](../xdm/home.md) 書き出す [ エクスペリエンスデータモデル（XDM）フィールド）を選択します。
+* メールマーケティングの宛先、CRM プラットフォーム、クラウドストレージの場所などの特定の宛先に対してオーディエンスをアクティブ化する際に [&#128279;](../xdm/home.md) 書き出す  エクスペリエンスデータモデル（XDM）フィールド）を選択します。
 * 宛先（人物、アカウント、見込み客）に対して、様々なタイプのプロファイルとオーディエンスをアクティブ化します。
 
 ## 宛先のタイプとカテゴリ {#types-and-categories}
@@ -61,12 +61,12 @@ Experience Platformの宛先機能は、Adobe Experience Platformのアクセス
 
 | 権限レベル | 説明 |
 | ---- | ---- |
-| **[!UICONTROL 宛先の表示]** | Experience Platform UI の「宛先」タブにアクセスするには、**[!UICONTROL 宛先の表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
-| **[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
-| **[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの [ マッピングステップ ](ui/activate-batch-profile-destinations.md#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL 宛先の表示]** | Experience Platform UI の「宛先」タブにアクセスするには、**[!UICONTROL 宛先の表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先の管理]** | 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** | 宛先に対してオーディエンスをアクティブ化し、ワークフローの [ マッピングステップ ](ui/activate-batch-profile-destinations.md#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
 | **[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** | ワークフローの [ マッピングステップ ](ui/activate-batch-profile-destinations.md#mapping) へのアクセス権を持たない既存のデータフローにオーディエンスを追加または削除するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]** [ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
-| **[!UICONTROL 宛先の表示]**、**[!UICONTROL データセット宛先の管理とアクティブ化]** | データセットを宛先に書き出すには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
-| **[!UICONTROL ID グラフの表示]** | *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"} |
+| **[!UICONTROL 宛先の表示]**、**[!UICONTROL データセット宛先の管理とアクティブ化]** | データセットを宛先に書き出すには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 |
+| **[!UICONTROL ID グラフの表示]** | *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Adobe Experience Platform での属性ベースのアクセス制御では、管
 
 ## 宛先からのプロファイルの削除 {#profile-removal}
 
-宛先に対してアクティブ化されたオーディエンスからプロファイルを削除すると、そのプロファイルは宛先プラットフォームの対応するオーディエンスからも削除されます。 例えば、以前に LinkedIn に対してアクティブ化されたオーディエンスからプロファイルが削除された場合、そのプロファイルは関連する [!UICONTROL LinkedIn で一致したオーディエンス ] から削除されます。
+宛先に対してアクティブ化されたオーディエンスからプロファイルを削除すると、そのプロファイルは宛先プラットフォームの対応するオーディエンスからも削除されます。 例えば、以前に LinkedIn に対してアクティブ化されたオーディエンスからプロファイルが削除された場合、そのプロファイルは関連する [!UICONTROL LinkedIn で一致したオーディエンス &#x200B;] から削除されます。
 
 宛先からのプロファイルの削除（セグメント解除とも呼ばれます）は、セグメント化と同じケイデンスで行われます。 Experience Platformでプロファイルがオーディエンスから削除されるとすぐに、宛先への次のスケジュールされたデータフローはその変更を反映し、宛先オーディエンスからプロファイルを削除します。
 

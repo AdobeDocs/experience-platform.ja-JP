@@ -764,4 +764,4 @@ curl -X DELETE \
 
 これで、組織の結合ポリシーを作成および設定する方法がわかったので、それらを使用して、Experience Platform内の顧客プロファイルのビューを調整し、[!DNL Real-Time Customer Profile] データからオーディエンスを作成できます。
 
-オーディエンスの定義と操作を開始するには ](../../segmentation/home.md)[Adobe Experience Platform セグメント化サービスのドキュメントを参照してください。
+オーディエンスの定義と操作を開始するには [&#128279;](../../segmentation/home.md)Adobe Experience Platform セグメント化サービスのドキュメントを参照してください。

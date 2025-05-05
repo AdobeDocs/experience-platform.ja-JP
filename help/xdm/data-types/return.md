@@ -9,7 +9,7 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL  戻り値 ] データタイプ
+# [!UICONTROL &#x200B; 戻り値 &#x200B;] データタイプ
 
 [!UICONTROL Return] は、Return Merchandise Authorization （RMA）に関連する重要な情報をキャプチャする標準の Experience Data Model （XDM）データタイプです。
 
@@ -17,9 +17,9 @@ ht-degree: 8%
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |----------------------------------|----------------------|-----------|--------------------------------------------------|
-| [!UICONTROL  リターン ID] | `returnID` | 文字列 | この RMA の一意の ID。 |
-| [!UICONTROL  復帰ステータス ] | `returnStatus` | 文字列 | RMA の現在のステータス （保留中またはクローズ済みなど）。 |
-| [!UICONTROL  注文購入 ID] | `purchaseID` | 文字列 | RMA に関連する注文/購入の一意の ID。 |
+| [!UICONTROL &#x200B; リターン ID] | `returnID` | 文字列 | この RMA の一意の ID。 |
+| [!UICONTROL &#x200B; 復帰ステータス &#x200B;] | `returnStatus` | 文字列 | RMA の現在のステータス （保留中またはクローズ済みなど）。 |
+| [!UICONTROL &#x200B; 注文購入 ID] | `purchaseID` | 文字列 | RMA に関連する注文/購入の一意の ID。 |
 
 {style="table-layout:auto"}
 

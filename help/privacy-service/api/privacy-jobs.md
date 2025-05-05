@@ -84,7 +84,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->互換性のあるAdobe Experience Cloud アプリケーションは、データ主体の識別に異なる値を使用します。 お使いのアプリケーションで必要な ID の詳細については ](../experience-cloud-apps.md)[Privacy ServiceおよびExperience Cloudアプリケーションに関するガイドを参照してください。 [!DNL Privacy Service] に送信する ID を決定する際の一般的なガイダンスについて詳しくは、[ プライバシーリクエストの ID データ ](../identity-data.md) のドキュメントを参照してください。
+>互換性のあるAdobe Experience Cloud アプリケーションは、データ主体の識別に異なる値を使用します。 お使いのアプリケーションで必要な ID の詳細については [&#128279;](../experience-cloud-apps.md)Privacy ServiceおよびExperience Cloudアプリケーションに関するガイドを参照してください。 [!DNL Privacy Service] に送信する ID を決定する際の一般的なガイダンスについて詳しくは、[ プライバシーリクエストの ID データ ](../identity-data.md) のドキュメントを参照してください。
 
 [!DNL Privacy Service] API は、個人データに対して、次の 2 種類のジョブリクエストをサポートしています。
 

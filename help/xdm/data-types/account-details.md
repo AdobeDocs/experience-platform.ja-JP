@@ -9,9 +9,9 @@ ht-degree: 22%
 
 ---
 
-# [!UICONTROL  アカウントの詳細 ] データタイプ
+# [!UICONTROL &#x200B; アカウントの詳細 &#x200B;] データタイプ
 
-[!UICONTROL  アカウントの詳細 ] は、ビジネス組織に関連する詳細を記述する標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; アカウントの詳細 &#x200B;] は、ビジネス組織に関連する詳細を記述する標準の Experience Data Model （XDM）データタイプです。
 
 ![ データタイプ構造 ](../images/data-types/account-details.png)
 

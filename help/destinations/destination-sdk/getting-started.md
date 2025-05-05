@@ -17,7 +17,7 @@ ht-degree: 82%
 
 ## 用語 {#terminology}
 
-このガイドでは、組織やサンドボックスなど、Experience Platform固有の概念を使用します。 これらの用語の定義については ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)Experience Platform用語集 } を参照してください。 [この機能に直接関連する用語については ](/help/destinations/destination-sdk/glossary.md)[Destination SDK用語集 } を参照してください。
+このガイドでは、組織やサンドボックスなど、Experience Platform固有の概念を使用します。 これらの用語の定義については [&#128279;](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja)Experience Platform用語集 &rbrace; を参照してください。 [この機能に直接関連する用語については ](/help/destinations/destination-sdk/glossary.md)Destination SDK用語集 &rbrace; を参照してください。
 
 ## 必要な認証資格情報の取得 {#obtain-authentication-credentials}
 

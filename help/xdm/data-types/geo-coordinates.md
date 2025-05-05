@@ -11,9 +11,9 @@ ht-degree: 12%
 
 ---
 
-# [!UICONTROL  地理座標 ] データタイプ
+# [!UICONTROL &#x200B; 地理座標 &#x200B;] データタイプ
 
-[!UICONTROL  ジオコーディネート ] は、場所の地理的座標を表す標準 XDM データタイプです。 このデータタイプは、[schema.org](https://schema.org/GeoCoordinates) に記載されている公開仕様に基づいています。
+[!UICONTROL &#x200B; ジオコーディネート &#x200B;] は、場所の地理的座標を表す標準 XDM データタイプです。 このデータタイプは、[schema.org](https://schema.org/GeoCoordinates) に記載されている公開仕様に基づいています。
 
 ![](../images/data-types/geo-coordinates.png){width=400}
 

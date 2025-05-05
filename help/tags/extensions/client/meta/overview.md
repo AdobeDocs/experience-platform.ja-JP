@@ -27,7 +27,7 @@ ht-degree: 0%
 
 目的のプロパティを選択または作成したら、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 [!UICONTROL Meta Pixel] カードを検索し、「**[!UICONTROL インストール]**」を選択します。
 
-![ データ収集 UI の [!UICONTROL  メタピクセル ] 拡張機能に対して選択されている「[!UICONTROL  インストール ]」ボタン。](../../../images/extensions/client/meta/install.png)
+![ データ収集 UI の [!UICONTROL &#x200B; メタピクセル &#x200B;] 拡張機能に対して選択されている「[!UICONTROL &#x200B; インストール &#x200B;]」ボタン。](../../../images/extensions/client/meta/install.png)
 
 表示される設定ビューで、拡張機能をアカウントにリンクするには、以前にコピーした [!DNL Pixel] ID を指定する必要があります。 ID を入力に直接貼り付けることも、代わりに既存のデータ要素を選択することもできます。
 
@@ -51,9 +51,9 @@ ht-degree: 0%
 
 新しいタグルールの作成を開始し、必要に応じてその条件を設定します。 ルールのアクションを選択する場合、拡張機能で **[!UICONTROL メタピクセル]** を選択してから、アクションタイプで **[!UICONTROL ページビューを送信]** を選択します。
 
-![ データ収集 UI でルールに対して選択されている [!UICONTROL  ページビューを送信 ] アクションタイプ ](../../../images/extensions/client/meta/select-action.png)
+![ データ収集 UI でルールに対して選択されている [!UICONTROL &#x200B; ページビューを送信 &#x200B;] アクションタイプ ](../../../images/extensions/client/meta/select-action.png)
 
-[!UICONTROL  ページビューを送信 ] アクションを実行するために必要な追加の設定はありません。 「**[!UICONTROL 変更を保持]**」を選択して、ルール設定にアクションを追加します。 ルールの設定が完了したら、「**[!UICONTROL ライブラリに保存]**」を選択します。
+[!UICONTROL &#x200B; ページビューを送信 &#x200B;] アクションを実行するために必要な追加の設定はありません。 「**[!UICONTROL 変更を保持]**」を選択して、ルール設定にアクションを追加します。 ルールの設定が完了したら、「**[!UICONTROL ライブラリに保存]**」を選択します。
 
 最後に、新しいタグ [build](../../../ui/publishing/builds.md) を公開して、ライブラリに対する変更を有効にします。
 
@@ -71,7 +71,7 @@ Experience Platformのタグについて詳しくは、[ タグの概要 ](../..
 
 実稼動環境と分析を変えないまま、開発環境またはステージング環境で実装をテストす [!DNL Meta Pixel] 場合は、データ要素を使用すると、使用する環境に応じて適切な [!DNL Pixel] ID を動的に選択できます。
 
-これを実現するには、[!UICONTROL  カスタムコード ] データ要素（[[!UICONTROL  コア ] 拡張機能 ](../core/overview.md) が提供）を [`turbine` の自由変数 ](../../../extension-dev/turbine.md) と組み合わせて使用します。 データ要素のJavaScript コードで、`turbine` オブジェクトを使用して現在の環境ステージを見つけ、結果に基づいて適切な [!DNL Pixel] ID を返します。
+これを実現するには、[!UICONTROL &#x200B; カスタムコード &#x200B;] データ要素（[[!UICONTROL &#x200B; コア &#x200B;] 拡張機能 ](../core/overview.md) が提供）を [`turbine` の自由変数 ](../../../extension-dev/turbine.md) と組み合わせて使用します。 データ要素のJavaScript コードで、`turbine` オブジェクトを使用して現在の環境ステージを見つけ、結果に基づいて適切な [!DNL Pixel] ID を返します。
 
 次の例では、実稼動環境で使用された場合は偽の実稼動 ID `exampleProductionKey` を返し、他の環境が使用された場合は別の ID `exampleTestKey` を返します。 このコードを実装する際には、それぞれの値を実際の実稼動環境の値に置き換えて、[!DNL Pixel] ID をテストします。
 

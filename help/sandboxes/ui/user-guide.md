@@ -17,7 +17,7 @@ ht-degree: 46%
 
 ## サンドボックスの表示
 
-Experience Platform UI で、左側のナビゲーションの **[!UICONTROL サンドボックス]** を選択し、「**[!UICONTROL 参照]** タブを選択して [!UICONTROL  サンドボックス ] ダッシュボードを開きます。 ダッシュボードには、組織で使用可能なすべてのサンドボックスが一覧表示されます。それぞれのタイプ（実稼動または開発）も含まれます。
+Experience Platform UI で、左側のナビゲーションの **[!UICONTROL サンドボックス]** を選択し、「**[!UICONTROL 参照]** タブを選択して [!UICONTROL &#x200B; サンドボックス &#x200B;] ダッシュボードを開きます。 ダッシュボードには、組織で使用可能なすべてのサンドボックスが一覧表示されます。それぞれのタイプ（実稼動または開発）も含まれます。
 
 ![ 「参照」タブが選択され、使用可能なサンドボックスのリストが表示されたサンドボックスダッシュボード。](../images/ui/view-sandboxes.png)
 
@@ -49,7 +49,7 @@ Experience Platform UI で、左側のナビゲーションの **[!UICONTROL サ
 
 >[!WARNING]
 >
->新しいサンドボックスを作成するには、そのサンドボックスを使用する前に、[[!UICONTROL  権限 ]](../../access-control/abac/ui/permissions.md) の役割に追加する必要があります。 サンドボックスを役割にプロビジョニングする方法については、[ 役割のサンドボックスの管理 ](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) ドキュメントを参照してください。
+>新しいサンドボックスを作成するには、そのサンドボックスを使用する前に、[[!UICONTROL &#x200B; 権限 &#x200B;]](../../access-control/abac/ui/permissions.md) の役割に追加する必要があります。 サンドボックスを役割にプロビジョニングする方法については、[ 役割のサンドボックスの管理 ](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) ドキュメントを参照してください。
 
 次のビデオでは、Experience Platform でのサンドボックスの使用方法の概要を簡単に説明しています。
 
@@ -59,7 +59,7 @@ Experience Platform UI で、左側のナビゲーションの **[!UICONTROL サ
 
 ![create-sandbox](../images/ui/create-sandbox.png)
 
-**[!UICONTROL サンドボックスを作成]**&#x200B;ダイアログボックスが表示されます。 **[!UICONTROL タイプ]** ドロップダウンを選択し、[!UICONTROL  開発 ] または [!UICONTROL  実稼動 ] サンドボックスタイプのいずれかを選択します。
+**[!UICONTROL サンドボックスを作成]**&#x200B;ダイアログボックスが表示されます。 **[!UICONTROL タイプ]** ドロップダウンを選択し、[!UICONTROL &#x200B; 開発 &#x200B;] または [!UICONTROL &#x200B; 実稼動 &#x200B;] サンドボックスタイプのいずれかを選択します。
 
 ![ サンドボックスタイプセレクターがハイライト表示されたサンドボックスを作成ダイアログボックス。](../images/ui/sandbox-type.png)
 
@@ -88,13 +88,13 @@ Experience Platform UI で、左側のナビゲーションの **[!UICONTROL サ
 
 オーディエンス構成は、現在、サンドボックスリセット機能と統合されていないので、サンドボックスリセットを実行する前に、オーディエンスを手動で削除する必要があります。
 
-左側のナビゲーションの **[!UICONTROL 顧客**[!UICONTROL  セクションから ]**オーディエンス]** を選択し、「**[!UICONTROL コンポジション]**」タブを選択します。
+左側のナビゲーションの **[!UICONTROL 顧客**&#x200B;[!UICONTROL &#x200B; セクションから &#x200B;]&#x200B;**オーディエンス]** を選択し、「**[!UICONTROL コンポジション]**」タブを選択します。
 
 ![ 「コンポジション」タブが選択されハイライト表示されたオーディエンスダッシュボード ](../images/ui/audiences.png)
 
 次に、最初のオーディエンスの横にある省略記号（`...`）を選択し、「**[!UICONTROL 削除]**」を選択します。
 
-![ 「[!UICONTROL  削除 ] オプションがハイライト表示されたオーディエンスメニュー ](../images/ui/delete-composition.png)
+![ 「[!UICONTROL &#x200B; 削除 &#x200B;] オプションがハイライト表示されたオーディエンスメニュー ](../images/ui/delete-composition.png)
 
 削除が成功したことを示す確認メッセージが表示され、「**[!UICONTROL コンポジション]**」タブに戻ります。
 

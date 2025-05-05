@@ -300,7 +300,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 >[!NOTE]
 >
->次の API 呼び出しには、認証ヘッダーは必要ありません ****。
+>次の API 呼び出しには、認証ヘッダーは必要ありません **&#x200B;**。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \

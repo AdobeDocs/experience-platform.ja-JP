@@ -49,9 +49,9 @@ Adobe Experience Platformの属性ベースのアクセス制御を使用する�
 
 ## 権限
 
-[!UICONTROL  権限 ] は、管理者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる、Experience Cloudの領域です。
+[!UICONTROL &#x200B; 権限 &#x200B;] は、管理者がユーザーロールとポリシーを定義して、製品アプリケーション内の機能とオブジェクトの権限を管理できる、Experience Cloudの領域です。
 
-[!UICONTROL  権限 ] を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。 [!UICONTROL  権限 ] を使用すると、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。
+[!UICONTROL &#x200B; 権限 &#x200B;] を通じて、役割を作成および管理し、それらの役割に対して必要なリソース権限を割り当てることができます。 [!UICONTROL &#x200B; 権限 &#x200B;] を使用すると、特定の役割に関連付けられたラベル、サンドボックス、ユーザーを管理することもできます。
 
 管理者権限がない場合は、システム管理者に連絡してアクセス権を取得してください。
 
@@ -140,13 +140,13 @@ Experience Platform UI の権限ワークスペースが表示され、**[!UICON
 
 >[!NOTE]
 >
-> [!UICONTROL  オブジェクトレベルのアクセス制御 ]」を使用して、[ 権限 ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) ワークスペースで作成したラベル（上記のセグメントラベルなど）をAdobe Journey Optimizerの様々なオブジェクトに割り当てます。
+> [!UICONTROL &#x200B; オブジェクトレベルのアクセス制御 &#x200B;]」を使用して、[ 権限 ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) ワークスペースで作成したラベル（上記のセグメントラベルなど）をAdobe Journey Optimizerの様々なオブジェクトに割り当てます。
 
 ## アクセス制御ポリシーのアクティブ化 {#policy}
 
 デフォルトのアクセス制御ポリシーでは、ラベルを活用して、特定のExperience Platform リソースにアクセスできるユーザーの役割を定義します。 この例では、スキーマフィールドに対応するラベルを持つ役割に属していないユーザーに対しては、すべてのサンドボックスでスキーマフィールドおよびオーディエンスへのアクセスが拒否されます。
 
-アクセス制御ポリシーをアクティブにするには、左側のナビゲーションから [!UICONTROL  権限 ] を選択し、次に **[!UICONTROL ポリシー]** を選択します。
+アクセス制御ポリシーをアクティブにするには、左側のナビゲーションから [!UICONTROL &#x200B; 権限 &#x200B;] を選択し、次に **[!UICONTROL ポリシー]** を選択します。
 
 ![ 表示されたポリシーのリスト ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
@@ -158,7 +158,7 @@ Experience Platform UI の権限ワークスペースが表示され、**[!UICON
 
 ![ ポリシーをアクティベートダイアログ ](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-ポリシーのアクティベーションの確認を受け取り、「[!UICONTROL  ポリシー ] ページに戻ります。
+ポリシーのアクティベーションの確認を受け取り、「[!UICONTROL &#x200B; ポリシー &#x200B;] ページに戻ります。
 
 ![ ポリシーのアクティブ化の確認 ](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 

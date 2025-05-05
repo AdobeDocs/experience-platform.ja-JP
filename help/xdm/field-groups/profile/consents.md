@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL  同意および環境設定 ] フィールドグループ
+# [!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループ
 
-[!UICONTROL  同意および環境設定 ] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準フィールドグループで、個々の顧客の同意および環境設定に関する情報を収集します。
+[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準フィールドグループで、個々の顧客の同意および環境設定に関する情報を収集します。
 
 >[!NOTE]
 >
->このフィールドグループは [!DNL XDM Individual Profile] とのみ互換性があるので、[!DNL XDM ExperienceEvent] スキーマには使用できません。 エクスペリエンスイベントスキーマに同意データと環境設定データを含める場合は、代わりに [[!UICONTROL  カスタムフィールドグループ ] を使用して、](../../data-types/consents.md) プライバシー、Personalization、マーケティングの環境設定に対する同意 [ データタイプ ](../../ui/resources/field-groups.md#create) をスキーマに追加します。
+>このフィールドグループは [!DNL XDM Individual Profile] とのみ互換性があるので、[!DNL XDM ExperienceEvent] スキーマには使用できません。 エクスペリエンスイベントスキーマに同意データと環境設定データを含める場合は、代わりに [[!UICONTROL &#x200B; カスタムフィールドグループ &#x200B;] を使用して、](../../data-types/consents.md) プライバシー、Personalization、マーケティングの環境設定に対する同意 [ データタイプ ](../../ui/resources/field-groups.md#create) をスキーマに追加します。
 
 ## フィールドグループ構造 {#structure}
 
-[!UICONTROL  同意および環境設定 ] フィールドグループには、同意と環境設定の情報を取り込むために、単一のオブジェクトタイプのフィールド `consents` が用意されています。 このフィールドは、[[!UICONTROL  プライバシー、Personalizationおよびマーケティング環境設定に対する同意 ] データタイプ ](../../data-types/consents.md) を拡張し、`adID` フィールドを削除して、`idSpecific` マップフィールドを追加します。
+[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループには、同意と環境設定の情報を取り込むために、単一のオブジェクトタイプのフィールド `consents` が用意されています。 このフィールドは、[[!UICONTROL &#x200B; プライバシー、Personalizationおよびマーケティング環境設定に対する同意 &#x200B;] データタイプ ](../../data-types/consents.md) を拡張し、`adID` フィールドを削除して、`idSpecific` マップフィールドを追加します。
 
 ![](../../images/field-groups/consent.png)
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 >
 >XDM リソースを検索し、Experience Platform UI でその構造を調べる手順については、[XDM リソースの調査 ](../../ui/explore.md) に関するガイドを参照してください。
 
-次の JSON は、[!UICONTROL  同意と環境設定 ] フィールドグループが処理できるデータのタイプの例を示しています。 フィールドグループが提供するほとんどのフィールドの使用方法について詳しくは、[ 同意および環境設定データタイプ ](../../data-types/consents.md) に関するガイドを参照してください。 以下のサブセクションでは、フィールドグループがデータタイプに追加する一意の属性に焦点を当てています。
+次の JSON は、[!UICONTROL &#x200B; 同意と環境設定 &#x200B;] フィールドグループが処理できるデータのタイプの例を示しています。 フィールドグループが提供するほとんどのフィールドの使用方法について詳しくは、[ 同意および環境設定データタイプ ](../../data-types/consents.md) に関するガイドを参照してください。 以下のサブセクションでは、フィールドグループがデータタイプに追加する一意の属性に焦点を当てています。
 
 ```json
 {
@@ -173,13 +173,13 @@ ht-degree: 0%
 
 ## フィールドグループを使用したデータの取り込み {#ingest}
 
-[!UICONTROL  同意および環境設定 ] フィールドグループを使用して顧客から同意データを取り込むには、そのフィールドグループを含むスキーマに基づいてデータセットを作成する必要があります。
+[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループを使用して顧客から同意データを取り込むには、そのフィールドグループを含むスキーマに基づいてデータセットを作成する必要があります。
 
-フィールドにフィールドグループを割り当てる手順については、[UI でのスキーマの作成 ](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) に関するチュートリアルを参照してください。 [!UICONTROL  同意および環境設定 ] フィールドグループを含むフィールドを含むスキーマを作成したら、既存のスキーマを使用してデータセットを作成する手順に従って、データセットユーザーガイドの [ データセットの作成 ](../../../catalog/datasets/user-guide.md#create) の節を参照してください。
+フィールドにフィールドグループを割り当てる手順については、[UI でのスキーマの作成 ](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) に関するチュートリアルを参照してください。 [!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループを含むフィールドを含むスキーマを作成したら、既存のスキーマを使用してデータセットを作成する手順に従って、データセットユーザーガイドの [ データセットの作成 ](../../../catalog/datasets/user-guide.md#create) の節を参照してください。
 
 >[!IMPORTANT]
 >
->同意データを [!DNL Real-Time Customer Profile] に送信する場合は、[!UICONTROL  同意および環境設定 ] フィールドグループを含む [!DNL XDM Individual Profile] クラスに基づいて [!DNL Profile] 対応スキーマを作成する必要があります。 そのスキーマに基づいて作成したデータセットも、[!DNL Profile] 用に有効にする必要があります。 スキーマとデータセットの要件に関連する特定の手順については [!DNL Real-Time Customer Profile] 上記にリンクされたチュートリアルを参照してください。
+>同意データを [!DNL Real-Time Customer Profile] に送信する場合は、[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループを含む [!DNL XDM Individual Profile] クラスに基づいて [!DNL Profile] 対応スキーマを作成する必要があります。 そのスキーマに基づいて作成したデータセットも、[!DNL Profile] 用に有効にする必要があります。 スキーマとデータセットの要件に関連する特定の手順については [!DNL Real-Time Customer Profile] 上記にリンクされたチュートリアルを参照してください。
 >
 >また、顧客プロファイルを正しく更新するには、最新の同意データと環境設定データを含むデータセットに優先順位を付けるように結合ポリシーが設定されていることを確認する必要があります。 詳しくは、[ 結合ポリシー ](../../../rtcdp/profile/merge-policies.md) の概要を参照してください。
 
@@ -189,4 +189,4 @@ ht-degree: 0%
 
 ## 次の手順
 
-このドキュメントでは、[!UICONTROL  同意および環境設定 ] フィールドグループの構造と使用について説明しました。 フィールドグループが提供するその他のフィールドについて詳しくは、[[!UICONTROL  プライバシー、Personalizationおよびマーケティング環境設定に関する同意 ] データタイプ ](../../data-types/consents.md) に関するドキュメントを参照してください。
+このドキュメントでは、[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループの構造と使用について説明しました。 フィールドグループが提供するその他のフィールドについて詳しくは、[[!UICONTROL &#x200B; プライバシー、Personalizationおよびマーケティング環境設定に関する同意 &#x200B;] データタイプ ](../../data-types/consents.md) に関するドキュメントを参照してください。

@@ -12,17 +12,17 @@ ht-degree: 12%
 
 ---
 
-# [!UICONTROL  単純量 ] データタイプ
+# [!UICONTROL &#x200B; 単純量 &#x200B;] データタイプ
 
-[!UICONTROL  単純数量 ] は、測定または測定可能な量を提供する標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
+[!UICONTROL &#x200B; 単純数量 &#x200B;] は、測定または測定可能な量を提供する標準の Experience Data Model （XDM）データタイプです。 このデータタイプは、HL7 FHIR リリース 5 の仕様に従って作成されます。
 
 ![ 単純量データ型の構造 ](../../../images/healthcare/data-types/simple-quantity.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | [!UICONTROL コード] | `code` | 文字列 | 単位のコード化された形式。 |
-| [!UICONTROL  システム ] | `system` | 文字列 | コード化された単位形式を定義するシステム。URI で表されます。 |
-| [!UICONTROL  単位 ] | `unit` | 文字列 | 単位の表現。 |
+| [!UICONTROL &#x200B; システム &#x200B;] | `system` | 文字列 | コード化された単位形式を定義するシステム。URI で表されます。 |
+| [!UICONTROL &#x200B; 単位 &#x200B;] | `unit` | 文字列 | 単位の表現。 |
 | [!UICONTROL 値] | `value` | Double | 数値。 |
 
 データタイプについて詳しくは、公開 XDM リポジトリを参照してください。

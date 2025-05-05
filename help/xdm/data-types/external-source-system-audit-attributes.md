@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL  外部Source システム監査属性 ] データタイプ
+# [!UICONTROL &#x200B; 外部Source システム監査属性 &#x200B;] データタイプ
 
-[!UICONTROL  外部Source システム監査属性 ] は、外部ソースシステムに関する監査詳細を取得する標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; 外部Source システム監査属性 &#x200B;] は、外部ソースシステムに関する監査詳細を取得する標準の Experience Data Model （XDM）データタイプです。
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 

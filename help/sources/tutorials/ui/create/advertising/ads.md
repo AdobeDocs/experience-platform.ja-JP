@@ -40,7 +40,7 @@ ht-degree: 10%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]* パネルで適切なカテゴリを選択できます。 または、検索バーを使用して、使用する特定のソースに移動できます。
 
-[!DNL Google Ads] を使用するには、*[!UICONTROL Advertisingの下にある&#x200B;**[!UICONTROL Google Ads]**ソースカードを選択してから]***[!UICONTROL データを追加]** を選択します。
+[!DNL Google Ads] を使用するには、*[!UICONTROL Advertisingの下にある&#x200B;**[!UICONTROL Google Ads]**&#x200B;ソースカードを選択してから]&#x200B;***[!UICONTROL データを追加]** を選択します。
 
 ![Experience Platform UI のソースカタログ ](../../../../images/tutorials/create/ads/catalog.png)
 

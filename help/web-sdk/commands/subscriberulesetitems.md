@@ -55,8 +55,8 @@ ht-degree: 3%
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
 1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
-1. [!UICONTROL  イベント ] の下で、既存のイベントを選択するか、新しいイベントを作成します。
-1. [!UICONTROL  拡張機能 ] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、**[!UICONTROL イベントタイプ]** を **[!UICONTROL 購読ルールセット項目]** に設定します。
+1. [!UICONTROL &#x200B; イベント &#x200B;] の下で、既存のイベントを選択するか、新しいイベントを作成します。
+1. [!UICONTROL &#x200B; 拡張機能 &#x200B;] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、**[!UICONTROL イベントタイプ]** を **[!UICONTROL 購読ルールセット項目]** に設定します。
 1. 画面の右側で、コンテンツカードを購読するスキーマとサーフェスを選択します。
 1. 「**[!UICONTROL 変更を保持]**」を選択して、公開ワークフローを実行します。
 

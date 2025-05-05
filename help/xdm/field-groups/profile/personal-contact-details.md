@@ -12,13 +12,13 @@ ht-degree: 16%
 ---
 
 
-# [!UICONTROL  個人の連絡先の詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL  個人の連絡先の詳細 ] は、[[!DNL XDM Individual Profile]  クラスの標準スキーマフィールドグループで ](../../classes/individual-profile.md) 個人の連絡先情報を記述します。
+[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラスの標準スキーマフィールドグループで ](../../classes/individual-profile.md) 個人の連絡先情報を記述します。
 
 ![](../../images/field-groups/personal-contact-details.png)
 

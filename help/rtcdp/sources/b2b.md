@@ -25,7 +25,7 @@ Adobe Experience Platformで使用できるソースのタイプについて詳�
 
 >[!IMPORTANT]
 >
->B2B スキーマを { リアルタイム顧客プロファイル ](../../rctcdp/../rtcdp/b2b-overview.md) に加えるには、{0[Real-Time Customer Data Platform B2B edition](../proile/../../profile/home.md) へのアクセス権が必要です。[
+>B2B スキーマを &lbrace; リアルタイム顧客プロファイル [&#128279;](../../rctcdp/../rtcdp/b2b-overview.md) に加えるには、&lbrace;0[Real-Time Customer Data Platform B2B edition](../proile/../../profile/home.md) へのアクセス権が必要です。
 
 [!DNL Marketo] を使用して B2B データをExperience Platformに取り込む方法の詳細については、次のドキュメントを参照してください。
 

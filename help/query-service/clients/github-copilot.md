@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->この統合ツールを使用する前に、GitHub と共有されるデータを理解する必要があります。 共有データには、編集中のコードとファイルに関するコンテキスト情報（「プロンプト」）と、ユーザーアクションに関する詳細（「ユーザーエンゲージメントデータ」）が含まれます。  収集したデータについて詳しくは ](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement)[[!DNL GitHub Copilot] のプライバシーに関する声明を参照してください。 また、組織のデータガバナンスポリシーへの準拠を確保する責任を負うので、サードパーティのサービスを含める場合のセキュリティへの影響を考慮する必要があります。 Adobeは、このツールの使用から生じる可能性のあるデータ関連の問題に対して責任を負いません。 詳しくは、GitHub のドキュメントを参照してください。
+>この統合ツールを使用する前に、GitHub と共有されるデータを理解する必要があります。 共有データには、編集中のコードとファイルに関するコンテキスト情報（「プロンプト」）と、ユーザーアクションに関する詳細（「ユーザーエンゲージメントデータ」）が含まれます。  収集したデータについて詳しくは [&#128279;](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) [!DNL GitHub Copilot] のプライバシーに関する声明を参照してください。 また、組織のデータガバナンスポリシーへの準拠を確保する責任を負うので、サードパーティのサービスを含める場合のセキュリティへの影響を考慮する必要があります。 Adobeは、このツールの使用から生じる可能性のあるデータ関連の問題に対して責任を負いません。 詳しくは、GitHub のドキュメントを参照してください。
 
 OpenAI Codex を活用した [!DNL GitHub Copilot] は、コードスニペットや機能全体をエディター内で直接提案することで、コーディングエクスペリエンスを強化する AI 駆動のツールです。 [!DNL Visual Studio Code] （[!DNL VS Code]）と統合す [!DNL Copilot] と、特に複雑なクエリを扱う場合に、ワークフローを大幅に高速化できます。 このガイドに従って、[!DNL GitHub Copilot] と [!DNL VS Code] をクエリサービスに接続し、クエリを記述して管理をより効率的に行う方法を学習します。 [!DNL Copilot] について詳しくは、[GitHub のコパイロット製品ページ ](https://github.com/pricing) および [ 公式  [!DNL Copilot]  ドキュメント ](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot) を参照してください。
 
@@ -23,7 +23,7 @@ OpenAI Codex を活用した [!DNL GitHub Copilot] は、コードスニペッ�
 
 このガイドでは、GitHub アカウントに既にアクセスし、[!DNL GitHub Copilot] に新規登録している必要があります。 [GitHub web サイトから新規登録 ](https://github.com/github-copilot/signup) できます。 また、[!DNL VS Code] も必要です。 [ 公式サイトからダウンロード  [!DNL VS Code]  できます ](https://code.visualstudio.com/download)。
 
-[!DNL VS Code] をインストールして [!DNL Copilot] サブスクリプションをアクティベートしたら、Experience Platformの接続資格情報を取得します。 これらの資格情報は、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースの [!UICONTROL  資格情報 ] タブにあります。 詳しくは、資格情報ガイド [Experience Platform UI でこれらの値を見つける方法を参照 ](../ui/credentials.md) を参照してください。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
+[!DNL VS Code] をインストールして [!DNL Copilot] サブスクリプションをアクティベートしたら、Experience Platformの接続資格情報を取得します。 これらの資格情報は、Experience Platform UI の [!UICONTROL &#x200B; クエリ &#x200B;] ワークスペースの [!UICONTROL &#x200B; 資格情報 &#x200B;] タブにあります。 詳しくは、資格情報ガイド [Experience Platform UI でこれらの値を見つける方法を参照 ](../ui/credentials.md) を参照してください。 現在、[!UICONTROL &#x200B; クエリ &#x200B;] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ### 必要な [!DNL Visual Studio Code] 拡張機能 {#required-extensions}
 
@@ -95,7 +95,7 @@ Experience Platform インスタンスに接続すると、[!DNL Copilot] を AI
 
 ## [!DNL GitHub Copilot] 入門 {#get-started-with-copilot}
 
-まず、最新バージョンの [!DNL VS Code] がインストールされていることを確認します。 古い [!DNL VS Code] バージョンを使用すると、主要な [!DNL Copilot] 機能が意図したとおりに動作しなくなる可能性があります。 次に、[!DNL Enable Auto Completions] 設定が有効になっていることを確認します。 [!DNL Copilot] が正常に動作している場合、ステータス バーに **[!DNL Copilot]アイコン** （![ コパイロット アイコン ](../images/clients/github-copilot/copilot-icon.png)）が表示されます（問題がある場合は、代わりに [!DNL Copilot] エラーアイコンが表示されます）。 **[!DNL Copilot]アイコンを選択して**[!DNL [!DNL GitHub Copilot] Menu] を開きます。 [**[!DNL [!DNL GitHub Copilot] Menu]** から [**[!DNL Edit Settings]**] を選択します。
+まず、最新バージョンの [!DNL VS Code] がインストールされていることを確認します。 古い [!DNL VS Code] バージョンを使用すると、主要な [!DNL Copilot] 機能が意図したとおりに動作しなくなる可能性があります。 次に、[!DNL Enable Auto Completions] 設定が有効になっていることを確認します。 [!DNL Copilot] が正常に動作している場合、ステータス バーに **[!DNL Copilot]アイコン** （![ コパイロット アイコン ](../images/clients/github-copilot/copilot-icon.png)）が表示されます（問題がある場合は、代わりに [!DNL Copilot] エラーアイコンが表示されます）。 **[!DNL Copilot]アイコンを選択して**&#x200B;[!DNL [!DNL GitHub Copilot] Menu] を開きます。 &lbrack;**[!DNL [!DNL GitHub Copilot] Menu]** から [**[!DNL Edit Settings]**] を選択します。
 
 ![[!DNL GitHub Copilot Menu] が表示され、「[!DNL Copilot]」アイコンと「設定を編集」がハイライト表示された [!DNL VS Code] エディター ](../images/clients/github-copilot/github-copilot-menu.png)
 

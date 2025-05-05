@@ -36,11 +36,11 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
 
-[!UICONTROL  クラウドストレージ ] カテゴリで、「[!DNL Data Landing Zone]」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
+[!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「[!DNL Data Landing Zone]」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
 ![ データランディングゾーンが選択されたソースカタログ ](../../../../images/tutorials/create/dlz/catalog.png)
 
-[!UICONTROL  データを追加 ] 手順が表示され、Experience Platformに取り込むデータを選択およびプレビューするためのインターフェイスが利用できます。
+[!UICONTROL &#x200B; データを追加 &#x200B;] 手順が表示され、Experience Platformに取り込むデータを選択およびプレビューするためのインターフェイスが利用できます。
 
 * インターフェイスの左側はフォルダーブラウザーで、コンテナにあるファイルのリストが表示されます。このファイルはExperience Platformに取り込むことができます。
 * インターフェイスの右側の部分では、互換性のあるファイルから最大 100 行のデータをプレビューできます。
@@ -65,7 +65,7 @@ Experience Platformに取り込むファイルを選択し、適切なインタ�
 
 ## [!DNL Data Landing Zone] 資格情報の取得
 
-[!DNL Data Landing Zone] は、Adobe Experience Platform ソースライセンスに付属するソースです。 [!DNL Data Landing Zone] では、SAS URI および SAS トークンベースの認証を使用します。 認証資格情報は [!UICONTROL  ソースカタログ ] ページから取得できます。
+[!DNL Data Landing Zone] は、Adobe Experience Platform ソースライセンスに付属するソースです。 [!DNL Data Landing Zone] では、SAS URI および SAS トークンベースの認証を使用します。 認証資格情報は [!UICONTROL &#x200B; ソースカタログ &#x200B;] ページから取得できます。
 
 資格情報を取得するには、**[!UICONTROL データランディングゾーン]** カードを選択し、表示される右側のパネルから資格情報をコピーします。
 

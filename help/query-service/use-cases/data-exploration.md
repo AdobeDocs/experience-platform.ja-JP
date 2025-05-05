@@ -27,7 +27,7 @@ ht-degree: 0%
 - **データ取り込み**：様々な方法やプロセスなど、データをExperience Platformに取り込む方法の基本については、[ データ取り込みの概要 ](../../ingestion/home.md) を参照してください。
 - **バッチ取り込み**：バッチ取り込みの基本概念については、[ バッチ取り込み API の概要 ](../../ingestion/batch-ingestion/overview.md) を参照してください。 特に、「バッチ」とは何か、およびExperience Platformのデータ取得プロセス内でどのように機能するかについて説明します。
 - **データセット内のシステムメタデータ**：取り込んだデータを追跡およびクエリするためにシステムメタデータフィールドを使用する方法については、[ カタログサービスの概要 ](../../catalog/home.md) を参照してください。
-- **エクスペリエンスデータモデル（XDM）**:XDM スキーマと、それらがExperience Platformに取り込まれたデータの構造と形式を表し検証する方法について詳しくは ](../../xdm/ui/overview.md) スキーマ UI の概要 [ および [ のスキーマ構成の基本」 ](../../xdm/schema/composition.md) を参照してください。
+- **エクスペリエンスデータモデル（XDM）**:XDM スキーマと、それらがExperience Platformに取り込まれたデータの構造と形式を表し検証する方法について詳しくは [&#128279;](../../xdm/ui/overview.md) スキーマ UI の概要  および [ のスキーマ構成の基本」 ](../../xdm/schema/composition.md) を参照してください。
 
 ## データセットバッチメタデータへのアクセス {#access-dataset-batch-metadata}
 
@@ -94,15 +94,15 @@ GROUP  BY _acp_system_metadata
 >
 >バッチ ID を取得し、そのバッチ ID に関連付けられているクエリレコードを取得するには、まずExperience Platform内でバッチを作成する必要があります。 プロセスを自分でテストする場合は、CSV データをExperience Platformに取り込むことができます。 [AI で生成されたレコメンデーションを使用して、既存の XDM スキーマに CSV ファイルをマッピングする ](../../ingestion/tutorials/map-csv/recommendations.md) 方法に関するガイドを参照してください。
 
-バッチを取り込んだら、データを取り込んだデータセットの [!UICONTROL  データセットアクティビティ ] タブ）に移動する必要があります。
+バッチを取り込んだら、データを取り込んだデータセットの [!UICONTROL &#x200B; データセットアクティビティ &#x200B;] タブ）に移動する必要があります。
 
-Experience Platform UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択して、[!UICONTROL  データセット ] ダッシュボードを開きます。 次に、「参照 [!UICONTROL  タブからデータセットの名前を選択して ] データセットアクティビティ [!UICONTROL  画面にアクセス ] ます。
+Experience Platform UI の左側のナビゲーションで **[!UICONTROL データセット]** を選択して、[!UICONTROL &#x200B; データセット &#x200B;] ダッシュボードを開きます。 次に、「参照 [!UICONTROL &#x200B; タブからデータセットの名前を選択して &#x200B;] データセットアクティビティ [!UICONTROL &#x200B; 画面にアクセス &#x200B;] ます。
 
 ![ 左側のナビゲーションでデータセットがハイライト表示されたExperience Platform UI データセット ](../images/use-cases/datasets-workspace.png)
 
-[!UICONTROL  データセットアクティビティ ] ビューが表示されます。 このビューには、選択したデータセットの詳細が表示されます。 表形式で表示される、取り込まれたバッチが含まれます。
+[!UICONTROL &#x200B; データセットアクティビティ &#x200B;] ビューが表示されます。 このビューには、選択したデータセットの詳細が表示されます。 表形式で表示される、取り込まれたバッチが含まれます。
 
-使用可能なバッチのリストからバッチを選択し、右側の詳細パネルから [!UICONTROL  バッチ ID] をコピーします。
+使用可能なバッチのリストからバッチを選択し、右側の詳細パネルから [!UICONTROL &#x200B; バッチ ID] をコピーします。
 
 ![ 取り込んだレコードがバッチ ID でハイライト表示されているExperience Platform データセット UI。](../images/use-cases/batch-id.png)
 
@@ -114,7 +114,7 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-`_ACP_BATCHID` キーワードは、[!UICONTROL  バッチ ID] のフィルタリングに使用されます。
+`_ACP_BATCHID` キーワードは、[!UICONTROL &#x200B; バッチ ID] のフィルタリングに使用されます。
 
 >[!TIP]
 >

@@ -12,13 +12,13 @@ ht-degree: 40%
 ---
 
 
-# [!UICONTROL  人口統計の詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; 人口統計の詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL  デモグラフィックの詳細 ] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、ルートレベルの `person` オブジェクトを提供し、そのサブフィールドは個人に関する情報を記述します。
+[!UICONTROL &#x200B; デモグラフィックの詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループは、ルートレベルの `person` オブジェクトを提供し、そのサブフィールドは個人に関する情報を記述します。
 
 ![](../../images/field-groups/demographic-details.png)
 

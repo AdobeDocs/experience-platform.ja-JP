@@ -31,7 +31,7 @@ ht-degree: 9%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]* パネルで適切なカテゴリを選択できます。 または、検索バーを使用して、使用する特定のソースに移動できます。
 
-[!DNL Demandbase] を使用するには、「[!UICONTROL  データおよび ID パートナー ]」の下の「**[!UICONTROL Demandbase インテント]**」ソースカードを選択し、「**[!UICONTROL データを追加]**」を選択します。
+[!DNL Demandbase] を使用するには、「[!UICONTROL &#x200B; データおよび ID パートナー &#x200B;]」の下の「**[!UICONTROL Demandbase インテント]**」ソースカードを選択し、「**[!UICONTROL データを追加]**」を選択します。
 
 >[!TIP]
 >

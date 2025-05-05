@@ -30,7 +30,7 @@ CSV データを [!DNL Adobe Experience Platform] に取り込むには、デー
 
 Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL ソース]**」を選択します。**[!UICONTROL カタログ]**&#x200B;ビューで、**[!UICONTROL ローカルシステム]**&#x200B;カテゴリに移動します。**[!UICONTROL ローカルファイルをアップロード]**&#x200B;で、「**[!UICONTROL データを追加]**」を選択します。
 
-![Experience Platform UI の [!UICONTROL  ソース ] カタログで、「ローカルファイルのアップロード [!UICONTROL  の下の [!UICONTROL  データを追加 ] が選択され ] います。](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![Experience Platform UI の [!UICONTROL &#x200B; ソース &#x200B;] カタログで、「ローカルファイルのアップロード [!UICONTROL &#x200B; の下の [!UICONTROL &#x200B; データを追加 &#x200B;] が選択され &#x200B;] います。](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 **[!UICONTROL XDM スキーマに CSV をマッピング]**&#x200B;のワークフローが表示されるので、**[!UICONTROL データフローの詳細]**&#x200B;手順を開始します。
 
@@ -54,13 +54,13 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 データフローの設定が終了したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![[!UICONTROL  データフローの詳細 ] セクションが完了しました。](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
+![[!UICONTROL &#x200B; データフローの詳細 &#x200B;] セクションが完了しました。](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## データの選択
 
 **[!UICONTROL データを選択]**&#x200B;の手順で、左の列を使用して CSV ファイルをアップロードします。**[!UICONTROL ファイルを選択]**&#x200B;を選択して、ファイルを開くエクスプローラーダイアログを開いてファイルを選択するか、直接ファイルを列にドラッグ＆ドロップします。
 
-![[!UICONTROL  データを選択 ] 手順でハイライト表示された「[!UICONTROL  ファイルを選択 ]」ボタンおよびドラッグ&amp;ドロップ ](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![[!UICONTROL &#x200B; データを選択 &#x200B;] 手順でハイライト表示された「[!UICONTROL &#x200B; ファイルを選択 &#x200B;]」ボタンおよびドラッグ&amp;ドロップ ](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
 ファイルをアップロードすると、サンプルデータセクションが表示され、受信したデータの最初の 10 行が表示され、正しくアップロードされたことを確認できます。「**[!UICONTROL 次へ]**」をクリックして続行します。
 
@@ -70,7 +70,7 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 データフロー設定とアップロードした CSV ファイルに基づいて、ML モデルが実行され、新しいスキーマを生成します。処理が完了すると、[!UICONTROL マッピング]手順が表示され、生成されたスキーマ構造の完全にナビゲーション可能なビューと共に、個々のフィールドのマッピングが表示されます。
 
-![UI の [!UICONTROL  マッピング ] 手順で、マッピングされたすべての CSV フィールドと結果のスキーマ構造を表示します。](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+![UI の [!UICONTROL &#x200B; マッピング &#x200B;] 手順で、マッピングされたすべての CSV フィールドと結果のスキーマ構造を表示します。](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
 >[!NOTE]
 >
@@ -78,7 +78,7 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 ここから、必要に応じてオプションで「[フィールドマッピングを編集](#edit-mappings)」または「[関連付けられているフィールドグループを変更](#edit-schema)」を選択できます。十分な設定ができた時点で、「**[!UICONTROL 終了]**」を選択してマッピングを完了し、事前に設定したデータフローを開始します。CSV データはシステムに取り込まれ、生成されたスキーマ構造に基づいてデータセットが設定され、ダウンストリームのExperience Platform サービスで利用できる状態になります。
 
-![ 「[!UICONTROL  完了 ]」ボタンを選択している状態で、CSV マッピングプロセスを完了する。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![ 「[!UICONTROL &#x200B; 完了 &#x200B;]」ボタンを選択している状態で、CSV マッピングプロセスを完了する。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### フィールドマッピングの編集 {#edit-mappings}
 
@@ -88,7 +88,7 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 ML モデルを使用すると、CSV フィールドは既存の XDM フィールドグループに自動的にマッピングされます。特定の CSV フィールドのフィールドグループを変更する場合は、スキーマツリーの横にある「**[!UICONTROL 編集]**」を選択します。
 
-![ スキーマツリーの横で選択されている「[!UICONTROL  編集 ]」ボタン ](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![ スキーマツリーの横で選択されている「[!UICONTROL &#x200B; 編集 &#x200B;]」ボタン ](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
 ダイアログが表示され、マッピング内の任意のフィールドの表示名、データタイプ、フィールドグループを編集できます。ソースフィールドの横にある「編集」アイコン（![編集アイコン](/help/images/icons/edit.png)）を選択して、右側の列の詳細を編集してから、「**[!UICONTROL 適用]**」を選択します。
 

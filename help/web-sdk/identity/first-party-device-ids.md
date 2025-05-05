@@ -166,7 +166,7 @@ Web SDKを Web サイト `mywebsite.com` ージに実装する場合を考えて
 >
 >この機能を使用するには、[ ファーストパーティデータ収集 ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) を有効にしておく必要があります。
 
-**手順 2. データストリームの**[!UICONTROL  ファーストパーティ ID Cookie ]**機能を有効にする**
+**手順 2. データストリームの**&#x200B;[!UICONTROL &#x200B; ファーストパーティ ID Cookie &#x200B;]&#x200B;**機能を有効にする**
 
 CNAME を設定したら、データストリームで「**[!UICONTROL ファーストパーティ ID Cookie]**」オプションを有効にする必要があります。 この設定は、ファーストパーティデバイス ID を参照する際に、この値を [ID マップ ](#identityMap) で参照するのではなく、指定された Cookie を参照するようにEdge Networkに指示します。
 

@@ -50,7 +50,7 @@ ht-degree: 25%
 
 ## [!DNL Pinterest Ads] アカウントを接続 {#connect-account}
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -119,7 +119,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ソースを正しく設定し、データが取り込まれてい [!DNL Pinterest Ads] ことを検証するには、次の手順に従います。
 
-Experience Platform UI で、カタログページのデータカードメニューの横にある **[!UICONTROL データフローを表示]** を選 [!DNL Pinterest Ads] します。 その後、「[!UICONTROL  データセットをプレビュー ]」を選択して、取り込まれたデータを確認できます。
+Experience Platform UI で、カタログページのデータカードメニューの横にある **[!UICONTROL データフローを表示]** を選 [!DNL Pinterest Ads] します。 その後、「[!UICONTROL &#x200B; データセットをプレビュー &#x200B;]」を選択して、取り込まれたデータを確認できます。
 
 ![Pinterest広告プレビューデータセットのExperience Platform UI のスクリーンショット。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 

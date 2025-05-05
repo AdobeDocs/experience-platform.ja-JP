@@ -28,8 +28,8 @@ ht-degree: 0%
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
-1. [!UICONTROL  データストリーム ] セクションを見つけ、データストリームを決定する目的の方法を選択します。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 &#x200B;] をクリックします。
+1. [!UICONTROL &#x200B; データストリーム &#x200B;] セクションを見つけ、データストリームを決定する目的の方法を選択します。
    * リストから選択する場合は、サンドボックスとデータストリームをそれぞれのドロップダウンリストから選択します。
    * 値を入力する場合は、目的のデータストリーム ID を入力します。
 1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。

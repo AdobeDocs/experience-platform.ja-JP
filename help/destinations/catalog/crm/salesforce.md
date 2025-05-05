@@ -115,7 +115,7 @@ Experience Platformから [!DNL Salesforce CRM] に対してアクティブ化�
 
 [!DNL Salesforce] は、リクエスト、レート、タイムアウトの制限を課すことにより、トランザクションの負荷を分散させます。 詳しくは、[API リクエストの制限と割り当て ](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm) を参照してください。
 
-[!DNL Salesforce] アカウント管理者が IP 制限を適用している場合は、[!DNL Salesforce] アカウントの信頼済み IP 範囲に ](/help/destinations/catalog/streaming/ip-address-allow-list.md)1}Experience Platform IP アドレス } を追加する必要があります。 [追加のガイダンスが必要な場合は、[!DNL Salesforce] [ 接続されたアプリの信頼できる IP 範囲へのアクセスの制限 ](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) ドキュメントを参照してください。
+[!DNL Salesforce] アカウント管理者が IP 制限を適用している場合は、[!DNL Salesforce] アカウントの信頼済み IP 範囲に [&#128279;](/help/destinations/catalog/streaming/ip-address-allow-list.md)1&rbrace;Experience Platform IP アドレス &rbrace; を追加する必要があります。 追加のガイダンスが必要な場合は、[!DNL Salesforce] [ 接続されたアプリの信頼できる IP 範囲へのアクセスの制限 ](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) ドキュメントを参照してください。
 
 >[!IMPORTANT]
 >
@@ -144,7 +144,7 @@ Experience Platformから [!DNL Salesforce CRM] に対してアクティブ化�
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -187,8 +187,8 @@ Experience Platformから [!DNL Salesforce CRM] に対してアクティブ化�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -222,6 +222,7 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
      | `xdm: personalEmail.address` | `Attribute: Email` | 連絡先のメールアドレス。 |
 
    * これらのマッピングの使用例を次に示します。
+
      ![ ターゲットマッピングを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **リードの使用**
@@ -238,6 +239,7 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
      | `xdm: personalEmail.address` | `Attribute: Email` | リードのメールアドレス。 |
 
    * これらのマッピングの使用例を次に示します。
+
      ![ ターゲットマッピングを示したExperience Platform UI のスクリーンショットの例。](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 宛先接続のマッピングの指定が完了したら、「**[!UICONTROL 次へ]**」を選択します。
@@ -288,17 +290,21 @@ XDM フィールドを [!DNL (API) Salesforce CRM] 宛先フィールドに正�
    **連絡先の操作**
 
    * Experience Platform セグメント内で *連絡先* を選択した場合は、**[!DNL Apps]**/**[!DNL Contacts]** ページに移動します。
+
      ![ セグメントのプロファイルを含む連絡先ページを示すSalesforce CRM のスクリーンショット。](../../assets/catalog/crm/salesforce/contacts.png)
 
    * *連絡先* を選択し、フィールドが更新されているかどうかを確認します。 [!DNL Salesforce CRM] の各オーディエンスステータスが、[ オーディエンスのスケジュール設定 ](#schedule-segment-export-example) の際に指定された **[!UICONTROL マッピング ID]** 値に基づいて、Experience Platformの対応するオーディエンスステータスで更新されたことがわかります。
+
      ![ 更新されたオーディエンスのステータスを含む連絡先の詳細ページを示すSalesforce CRM のスクリーンショット。](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **リードの使用**
 
    * Experience Platform セグメント内で *リード* を選択した場合は、**[!DNL Apps]**/リー **[!DNL Leads]** ページに移動します。
+
      ![ セグメントのプロファイルを含むリードページを示すSalesforce CRM のスクリーンショット。](../../assets/catalog/crm/salesforce/leads.png)
 
    * *リード* を選択し、フィールドが更新されたかどうかを確認します。 [!DNL Salesforce CRM] の各オーディエンスステータスが、[ オーディエンスのスケジュール設定 ](#schedule-segment-export-example) の際に指定された **[!UICONTROL マッピング ID]** 値に基づいて、Experience Platformの対応するオーディエンスステータスで更新されたことがわかります。
+
      ![ 更新されたオーディエンスステータスを含むリードの詳細ページを示すSalesforce CRM のスクリーンショット。](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## データの使用とガバナンス {#data-usage-governance}

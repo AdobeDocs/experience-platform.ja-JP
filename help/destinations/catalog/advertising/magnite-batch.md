@@ -142,8 +142,8 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
@@ -154,7 +154,7 @@ AdobeExperience カタログで、Magnite: バッチ宛先を見つけます。 
 
 **[!UICONTROL ターゲットフィールド]** で以下を実行します。
 ![ 適切なデバイスタイプのターゲット ID を選択し ](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) す。詳しくは、[ サポートされる ID](#supported-identities) を参照してください。
-この例では、{2**[!UICONTROL Target フィールド]** がカスタム IdentityMap:DeviceID として定義されているので、{Source フィールド ]**:magnite_deviceId_CUSTOM を選択しています。**[!UICONTROL 
+この例では、&lbrace;2&#x200B;**[!UICONTROL Target フィールド]** がカスタム IdentityMap:DeviceID として定義されているので、&lbrace;Source フィールド **:magnite_deviceId_CUSTOM を選択しています。**
 
 >[!NOTE]
 >

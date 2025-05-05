@@ -16,7 +16,7 @@ ht-degree: 63%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL IdentityMap] は、[[!UICONTROL XDM ExperienceEvent] クラスの標準スキーマフィールドグループで ](../../classes/experienceevent.md)[[!UICONTROL XDM Individual Profile] クラス ](../../classes/individual-profile.md) の互換性のあるフィールドグループです。 フィールドグループは単一のマップフィールドを提供します。これには、名前空間でキー設定された一連のユーザー ID が含まれます。
+[!UICONTROL IdentityMap] は、[[!UICONTROL XDM ExperienceEvent] クラスの標準スキーマフィールドグループで ](../../classes/experienceevent.md) [[!UICONTROL XDM Individual Profile] クラス ](../../classes/individual-profile.md) の互換性のあるフィールドグループです。 フィールドグループは単一のマップフィールドを提供します。これには、名前空間でキー設定された一連のユーザー ID が含まれます。
 
 ![[!UICONTROL IdentityMap] スキーマフィールドグループの図 ](../../images/field-groups/identitymap.png)
 

@@ -221,7 +221,7 @@ XDM ビューの定義が完了し、渡された XDM ビューで `sendEvent()`
 
 >[!NOTE]
 >
->SPA で VEC を使用するには、{Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [2}Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 拡張機能をインストールして有効化する必要があります。[
+>SPA で VEC を使用するには、{Firefox[&#128279;](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [2}Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 拡張機能をインストールして有効化する必要があります。
 
 ### 変更パネル
 
@@ -288,6 +288,6 @@ VEC でこれらの更新を行うには、次の手順が必要です。
 
 >[!NOTE]
 >
->「チェックアウト – エクスプレス」ビューは、「エクスプレス配信 **ラジオボタンが選択されるまで、変更パネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **** ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」表示を認識しません。
+>「チェックアウト – エクスプレス」ビューは、「エクスプレス配信 **ラジオボタンが選択されるまで、変更パネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **&#x200B;**&#x200B;ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」表示を認識しません。
 
 ![ 配信環境設定セレクターを表示する Visual Experience Composer。](assets/vec-delivery-preference.png)

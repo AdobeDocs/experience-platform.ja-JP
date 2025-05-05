@@ -46,7 +46,7 @@ Adobeによって Data Lake が Gen1 から Gen2 に移行される間、ユー�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 権限 | [!DNL Admin Console] では、[!DNL Experience Platform] 製品プロファイル内の「」タブを使用すると、そのプロファイルに添付されたユーザーが使用できる [!DNL Experience Platform] 機能をカスタマイズできます。 使用可能な権限カテゴリには、**[!UICONTROL データモデリング]**、**[!UICONTROL データ管理]**、**[!UICONTROL プロファイル管理]**、**[!UICONTROL Identity Management]**、**[!UICONTROL データ監視]**、**[!UICONTROL サンドボックス管理]**、**[!UICONTROL 宛先]**、**[!UICONTROL データ取り込み]**、**[!UICONTROL データサイエンスWorkspace]**、**[!UICONTROL クエリサービス]**、**** データガバナンスなどがあります。 |
+| 権限 | [!DNL Admin Console] では、[!DNL Experience Platform] 製品プロファイル内の「」タブを使用すると、そのプロファイルに添付されたユーザーが使用できる [!DNL Experience Platform] 機能をカスタマイズできます。 使用可能な権限カテゴリには、**[!UICONTROL データモデリング]**、**[!UICONTROL データ管理]**、**[!UICONTROL プロファイル管理]**、**[!UICONTROL Identity Management]**、**[!UICONTROL データ監視]**、**[!UICONTROL サンドボックス管理]**、**[!UICONTROL 宛先]**、**[!UICONTROL データ取り込み]**、**[!UICONTROL データサイエンスWorkspace]**、**[!UICONTROL クエリサービス]**、**&#x200B;** データガバナンスなどがあります。 |
 | サンドボックスへのアクセス | [!DNL Experience Platform] 製品プロファイル内の **[!UICONTROL 権限]** タブでは、特定のサンドボックスへのアクセス権をユーザーに付与できます。 詳しくは、以下の「[サンドボックス](#sandboxes)」の節を参照してください。 |
 
 詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。

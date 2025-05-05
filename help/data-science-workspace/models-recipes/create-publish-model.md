@@ -37,7 +37,7 @@ ht-degree: 8%
 
 ![「Luma Web データセット」を選択します。](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
-データセット アクティビティ ページが開き、データセットに関する情報が表示されます。 右上にある [データセット **[!UICONTROL プレビュー]** を選択して、サンプル レコードを確認できます。 選択したデータセットのスキーマ表示こともできます。
+データセット アクティビティ ページが開き、データセットに関する情報が表示されます。 右上にある &lbrack;データセット **[!UICONTROL プレビュー]** を選択して、サンプル レコードを確認できます。 選択したデータセットのスキーマ表示こともできます。
 
 ![perview Luma Web データ](../images/models-recipes/model-walkthrough/preview-dataset.png)
 

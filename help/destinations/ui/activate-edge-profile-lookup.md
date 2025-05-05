@@ -28,7 +28,7 @@ Adobe Experience Platformは、すべてのプロファイルデータの唯一�
 このページで説明するユースケースを設定する場合、次のExperience Platform コンポーネントを使用します。
 
 * [ データストリーム ](../../datastreams/overview.md)：データストリームは、web SDKから受信したイベントデータを受け取り、エッジプロファイルデータで応答します。
-* [ 結合ポリシー ](../../segmentation/ui/segment-builder.md#merge-policies): [!UICONTROL Edgeでアクティブ ] 結合ポリシーを作成して、エッジプロファイルが正しいプロファイルデータを使用していることを確認します。
+* [ 結合ポリシー ](../../segmentation/ui/segment-builder.md#merge-policies): [!UICONTROL Edgeでアクティブ &#x200B;] 結合ポリシーを作成して、エッジプロファイルが正しいプロファイルデータを使用していることを確認します。
 * [ カスタム Personalization接続 ](../catalog/personalization/custom-personalization.md)：プロファイル属性をEdge Networkに送信する新しいカスタムパーソナライゼーション接続を設定します。
 * [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/): Edge Network API [ インタラクティブデータ収集 ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) 機能を使用して、エッジプロファイルからプロファイル属性をすばやく取得します。
 
@@ -38,8 +38,8 @@ Edge プロファイルのルックアップのユースケースは、次の表
 
 | Edge Network サービス | Edgeセグメント化 | 1 秒あたりの要求数 |
 |---------|----------|---------|
-| [2}Edge Network API を介した ](../catalog/personalization/custom-personalization.md) カスタムパーソナライゼーションの宛先 ](https://developer.adobe.com/data-collection-apis/docs/api/)[ | ○ | 1500 |
-| [2}Edge Network API を介した ](../catalog/personalization/custom-personalization.md) カスタムパーソナライゼーションの宛先 ](https://developer.adobe.com/data-collection-apis/docs/api/)[ | × | 1500 |
+| [2&rbrace;Edge Network API を介した ](../catalog/personalization/custom-personalization.md) カスタムパーソナライゼーションの宛先 [&#128279;](https://developer.adobe.com/data-collection-apis/docs/api/) | ○ | 1500 |
+| [2&rbrace;Edge Network API を介した ](../catalog/personalization/custom-personalization.md) カスタムパーソナライゼーションの宛先 [&#128279;](https://developer.adobe.com/data-collection-apis/docs/api/) | × | 1500 |
 
 ## 手順 1：データストリームの作成と設定 {#create-datastream}
 
@@ -89,7 +89,7 @@ Edge でプロファイル属性を検索するには、オーディエンスを
 
 >[!IMPORTANT]
 > 
-> * データをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+> * データをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
 > 
 > [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 

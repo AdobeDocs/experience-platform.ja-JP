@@ -43,11 +43,11 @@ AWS キーをExperience Platformと統合するには、KMS Workspace の **[!DN
 
 上記の例では、同じアカウント（`Principal.AWS`）内のすべてのリソース（`"Resource": "*"`）がキーにアクセスできます。 このポリシーを使用すると、アカウント内のサービスは、指定されたアカウントに制限された暗号化および暗号化解除の操作を実行できます。 このキーに対するExperience Platform シングルテナントアカウントのアクセス権を付与するには、デフォルトのAWS ポリシーに新しいステートメントを追加します。 Experience Platform UI から必要な JSON ポリシーを取得してAWS KMS キーに適用することにより、Adobe Experience Platformとの安全な接続を確立できます。
 
-Experience Platform UI で、左側のナビゲーションレールの「**[!UICONTROL 管理]**」セクションに移動し、「**[!UICONTROL 暗号化]**」を選択します。 [!UICONTROL  暗号化設定 ] ワークスペースで、**[!UICONTROL 顧客管理キー]** カードの [!UICONTROL  設定 ] を選択します。
+Experience Platform UI で、左側のナビゲーションレールの「**[!UICONTROL 管理]**」セクションに移動し、「**[!UICONTROL 暗号化]**」を選択します。 [!UICONTROL &#x200B; 暗号化設定 &#x200B;] ワークスペースで、**[!UICONTROL 顧客管理キー]** カードの [!UICONTROL &#x200B; 設定 &#x200B;] を選択します。
 
 ![ 顧客管理キーカードで「設定」がハイライト表示されたExperience Platform暗号化設定ワークスペース。](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-[!UICONTROL  顧客管理キー設定 ] が表示されます。 [!UICONTROL  顧客管理キー ][!UICONTROL  暗号化設定 ] に表示される CMK KMS ポリシーから `statement` オブジェクトをコピーします。
+[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] が表示されます。 [!UICONTROL &#x200B; 顧客管理キー &#x200B;][!UICONTROL &#x200B; 暗号化設定 &#x200B;] に表示される CMK KMS ポリシーから `statement` オブジェクトをコピーします。
 
 <!-- Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied.  -->
 
@@ -61,7 +61,7 @@ Experience Platform UI で、左側のナビゲーションレールの「**[!UI
 
 ![ 更新されたポリシーと「完了」がハイライト表示されたワークフローのレビューステージ。](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
-[!UICONTROL Platform 暗号化設定 ] ワークスペースから 4 つのステートメント（`Enable IAM User Permissions`、`CJA Flow IAM User Permissions`、`CJA Integrity IAM User Permissions`、`CJA Oberon IAM User Permissions`）をデフォルトポリシーに追加します。
+[!UICONTROL Platform 暗号化設定 &#x200B;] ワークスペースから 4 つのステートメント（`Enable IAM User Permissions`、`CJA Flow IAM User Permissions`、`CJA Integrity IAM User Permissions`、`CJA Oberon IAM User Permissions`）をデフォルトポリシーに追加します。
 
 ```json
 {
@@ -162,7 +162,7 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 ### AWS暗号化キーの詳細をExperience Platformに追加
 
-次に、暗号化を有効にするには、キーのAmazon リソース名（ARN）をExperience Platform[!UICONTROL  顧客管理キー設定 ] に追加します。 AWSの「[!DNL Customer Managed Keys]」セクションで、[!DNL Key Management Service] のリストから新しいキーのエイリアスを選択します。
+次に、暗号化を有効にするには、キーのAmazon リソース名（ARN）をExperience Platform[!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] に追加します。 AWSの「[!DNL Customer Managed Keys]」セクションで、[!DNL Key Management Service] のリストから新しいキーのエイリアスを選択します。
 
 ![ 新しいキーエイリアスが強調表示されたAWS KMS 顧客管理キーワークスペース ](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -173,7 +173,7 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 ![ARN がハイライト表示されたAWS KMS 顧客管理キーの主な詳細。](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-次に、Experience Platform [!UICONTROL  顧客管理キー設定 ] UI に戻ります。 「**[!UICONTROL AWS暗号化キーの詳細を追加]**」セクションで、AWS UI からコピーした **[!UICONTROL 設定名]** と **[!UICONTROL KMS キー ARN]** を追加します。
+次に、Experience Platform [!UICONTROL &#x200B; 顧客管理キー設定 &#x200B;] UI に戻ります。 「**[!UICONTROL AWS暗号化キーの詳細を追加]**」セクションで、AWS UI からコピーした **[!UICONTROL 設定名]** と **[!UICONTROL KMS キー ARN]** を追加します。
 
 ![ 「Experience Platform暗号化キーの詳細を追加」セクションでハイライト表示された設定名と KMS キー ARN を含むAWS暗号化設定ワークスペース ](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
@@ -181,7 +181,7 @@ AWS [!DNL Key Management Service] の更新された [!DNL Customer Managed Keys
 
 ![ 「保存」がハイライト表示されたExperience Platform暗号化設定ワークスペース ](../../../images/governance-privacy-security/key-management-service/save.png)
 
-「[!UICONTROL  暗号化設定 ] ワークスペースに戻ります。 暗号化設定のステータスが **[!UICONTROL 顧客管理キー]** カードの下部に表示されます。
+「[!UICONTROL &#x200B; 暗号化設定 &#x200B;] ワークスペースに戻ります。 暗号化設定のステータスが **[!UICONTROL 顧客管理キー]** カードの下部に表示されます。
 
 ![Experience Platform UI の暗号化設定ワークスペースには、顧客管理キーカードで「処理」がハイライト表示されています。](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 

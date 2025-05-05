@@ -44,7 +44,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 SFTP ストレージを使用してメールマーケティングの宛先を設定する場合、Adobeでは、特定の IP 範囲を許可リストに追加することをお勧めします。
 
-許可リストにAdobe IP を追加する必要がある場合は ](../cloud-storage/ip-address-allow-list.md)[IP アドレス^SFTP 宛先の許可リスト^を参照してください。
+許可リストにAdobe IP を追加する必要がある場合は [&#128279;](../cloud-storage/ip-address-allow-list.md)IP アドレス^SFTP 宛先の許可リスト^を参照してください。
 
 ## 宛先への接続 {#connect}
 
@@ -67,9 +67,9 @@ Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または 
 
 この宛先を[設定](../../ui/connect-destination.md)するとき、次の情報を指定する必要があります。
 
-* **[!UICONTROL Amazon S3]** 接続の場合は、[!UICONTROL  アクセスキー ID] および [!UICONTROL  シークレットアクセスキー ] を指定する必要があります。
-* **[!UICONTROL パスワード付き SFTP]** 接続の場合、[!UICONTROL  ドメイン ]、[!UICONTROL  ポート ]、[!UICONTROL  ユーザー名 ]、[!UICONTROL  パスワード ] を指定する必要があります。
-* SSH キーを使用した **[!UICONTROL SFTP]** 接続の場合は、[!UICONTROL  ドメイン ]、[!UICONTROL  ポート ]、[!UICONTROL  ユーザー名 ]、[!UICONTROL SSH キー ] を指定する必要があります。
+* **[!UICONTROL Amazon S3]** 接続の場合は、[!UICONTROL &#x200B; アクセスキー ID] および [!UICONTROL &#x200B; シークレットアクセスキー &#x200B;] を指定する必要があります。
+* **[!UICONTROL パスワード付き SFTP]** 接続の場合、[!UICONTROL &#x200B; ドメイン &#x200B;]、[!UICONTROL &#x200B; ポート &#x200B;]、[!UICONTROL &#x200B; ユーザー名 &#x200B;]、[!UICONTROL &#x200B; パスワード &#x200B;] を指定する必要があります。
+* SSH キーを使用した **[!UICONTROL SFTP]** 接続の場合は、[!UICONTROL &#x200B; ドメイン &#x200B;]、[!UICONTROL &#x200B; ポート &#x200B;]、[!UICONTROL &#x200B; ユーザー名 &#x200B;]、[!UICONTROL SSH キー &#x200B;] を指定する必要があります。
 * **[!UICONTROL Azure Blob]** 接続の場合は、接続文字列を指定する必要があります。
 * 必要に応じて、RSA 形式の公開鍵を添付して、「**[!UICONTROL キー]**」セクションで書き出したファイルに PGP/GPG による暗号化を追加できます。 公開鍵は、[!DNL Base64] でエンコードされた文字列として記述する必要があります。
 * **[!UICONTROL 名前]**：宛先の名前を選択します。
@@ -89,8 +89,8 @@ Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または 
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。

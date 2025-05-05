@@ -185,7 +185,9 @@ SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```sql
 SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 THEN 1 ELSE 0 END AS Prediction;
 ```
+
  
+
 ### エンドツーエンドの例
 
 2 つの列（`c1` と `c2`）がある状況で、2 つのカテゴリが `c1` る場合、[!DNL Logistic Regression] のアルゴリズムは次の関数でトレーニングされます。
@@ -194,6 +196,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
 ```
+
  
 SQL での同等の関数は次のとおりです。
 
@@ -209,6 +212,7 @@ FROM
     FROM TABLE
   )
 ```
+
  
 翻訳プロセスを自動化するための [!DNL Python] のコードを以下に示します。
 

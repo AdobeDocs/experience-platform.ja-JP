@@ -62,7 +62,7 @@ Experience Platform の ID 名前空間について詳しくは、[ID 名前空�
 | `acceptsAttributes` | ブール値 | オプション | 顧客が標準的なプロファイル属性を設定中の ID にマッピングできるかどうかを示します。 |
 | `acceptsCustomNamespaces` | ブール値 | オプション | 顧客がカスタム ID 名前空間を設定中の ID 名前空間にマッピングできるかどうかを示します。 |
 | `acceptedGlobalNamespaces` | - | オプション | 設定中の ID に顧客がマッピングできる[標準的な ID 名前空間](../../../../identity-service/features/namespaces.md#standard)（例えば、[!UICONTROL IDFA]）を示します。 |
-| `transformation` | 文字列 | オプション | ソースフィールドが XDM 属性かカスタム ID 名前空間のどちらかの場合に、Experience Platform UI に「[[!UICONTROL  変換を適用 ]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスを表示します。 このオプションを使用して、書き出し時にソース属性をハッシュ化する機能をユーザーに提供します。このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
+| `transformation` | 文字列 | オプション | ソースフィールドが XDM 属性かカスタム ID 名前空間のどちらかの場合に、Experience Platform UI に「[[!UICONTROL &#x200B; 変換を適用 &#x200B;]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスを表示します。 このオプションを使用して、書き出し時にソース属性をハッシュ化する機能をユーザーに提供します。このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
 | `requiredTransformation` | 文字列 | オプション | 顧客がこのソース ID 名前空間を選択すると、「[[!UICONTROL 変換を適用]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)」チェックボックスが自動的にマッピングに適用され、顧客は無効にすることができなくなります。このオプションを有効にするには、値を `sha256(lower($))` に設定します。 |
 
 {style="table-layout:auto"}

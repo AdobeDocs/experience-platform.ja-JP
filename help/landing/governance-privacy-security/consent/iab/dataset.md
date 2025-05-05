@@ -40,19 +40,19 @@ Adobe Experience Platformが IAB [!DNL Transparency & Consent Framework] （TCF�
 
 ## TCF 2.0 フィールドグループ {#field-groups}
 
-[!UICONTROL IAB TCF 2.0 同意詳細 ] スキーマフィールドグループは、TCF 2.0 のサポートに必要な顧客同意フィールドを提供します。 このフィールドグループには 2 つのバージョンがあります。1 つは [!DNL XDM Individual Profile] クラスと互換性があり、もう 1 つは [!DNL XDM ExperienceEvent] クラスと互換性があります。
+[!UICONTROL IAB TCF 2.0 同意詳細 &#x200B;] スキーマフィールドグループは、TCF 2.0 のサポートに必要な顧客同意フィールドを提供します。 このフィールドグループには 2 つのバージョンがあります。1 つは [!DNL XDM Individual Profile] クラスと互換性があり、もう 1 つは [!DNL XDM ExperienceEvent] クラスと互換性があります。
 
 以下の節では、取り込み時に期待されるデータを含め、これらの各フィールドグループの構造について説明します。
 
 ### プロファイルフィールドグループ {#profile-field-group}
 
-[!DNL XDM Individual Profile] に基づくスキーマの場合、[!UICONTROL IAB TCF 2.0 同意詳細 ] フィールドグループは、顧客 ID を TCF 同意環境設定にマッピングする、単一のマップタイプフィールド `identityPrivacyInfo` を提供します。 自動適用を実行するには、このフィールドグループをリアルタイム顧客プロファイルに対して有効なレコードベースのスキーマに含める必要があります。
+[!DNL XDM Individual Profile] に基づくスキーマの場合、[!UICONTROL IAB TCF 2.0 同意詳細 &#x200B;] フィールドグループは、顧客 ID を TCF 同意環境設定にマッピングする、単一のマップタイプフィールド `identityPrivacyInfo` を提供します。 自動適用を実行するには、このフィールドグループをリアルタイム顧客プロファイルに対して有効なレコードベースのスキーマに含める必要があります。
 
 構造とユースケースについて詳しくは、このフィールドグループの [ リファレンスガイド ](../../../../xdm/field-groups/profile/iab.md) を参照してください。
 
 ### イベントフィールドグループ {#event-field-group}
 
-同意変更イベントを経時的に追跡する場合は、[!UICONTROL IAB TCF 2.0 同意の詳細 ] フィールドグループを [!UICONTROL XDM ExperienceEvent] スキーマに追加できます。
+同意変更イベントを経時的に追跡する場合は、[!UICONTROL IAB TCF 2.0 同意の詳細 &#x200B;] フィールドグループを [!UICONTROL XDM ExperienceEvent] スキーマに追加できます。
 
 同意変更イベントを経時的に追跡する計画がない場合は、このフィールドグループをイベントスキーマに含める必要はありません。 TCF 同意値を自動的に適用する場合、Experience Platformでは、[ プロファイルフィールドグループ ](#profile-field-group) に取り込まれた最新の同意情報のみを使用します。 イベントによって取り込まれた同意値は、自動適用ワークフローには関係しません。
 
@@ -62,9 +62,9 @@ Adobe Experience Platformが IAB [!DNL Transparency & Consent Framework] （TCF�
 
 同意データを取り込んだデータセットを作成するには、まずデータセットのベースとなる XDM スキーマを作成する必要があります。
 
-前の節で説明したように、ダウンストリーム Experience Platform ワークフローで同意を実施するには、[!UICONTROL XDM 個人プロファイル ] クラスを使用するスキーマが必要です。 また、同意の変化を経時的に追跡する場合は、[!UICONTROL XDM ExperienceEvent] に基づいて個別のスキーマをオプションで作成できます。 両方のスキーマに `identityMap` フィールドと適切な TCF 2.0 フィールドグループが含まれている必要があります。
+前の節で説明したように、ダウンストリーム Experience Platform ワークフローで同意を実施するには、[!UICONTROL XDM 個人プロファイル &#x200B;] クラスを使用するスキーマが必要です。 また、同意の変化を経時的に追跡する場合は、[!UICONTROL XDM ExperienceEvent] に基づいて個別のスキーマをオプションで作成できます。 両方のスキーマに `identityMap` フィールドと適切な TCF 2.0 フィールドグループが含まれている必要があります。
 
-Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択し、「[!UICONTROL  スキーマ ] ワークスペースを開きます。 ここから、以下の節の手順に従って、必要な各スキーマを作成します。
+Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択し、「[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースを開きます。 ここから、以下の節の手順に従って、必要な各スキーマを作成します。
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ Experience Platformが受け取った同意データを特定の顧客プロフ�
 >
 >この節で示すスキーマの例では、`identityMap` フィールドをプライマリ ID として使用しています。 別のフィールドをプライマリ ID として設定する場合は、メールアドレスなどの興味/関心に基づく広告で使用が禁止されている直接識別可能なフィールドではなく、Cookie ID などの間接識別子を使用していることを確認します。 どのフィールドが制限されているかわからない場合は、法務担当者に問い合わせてください。
 >
->スキーマのプライマリ ID フィールドを設定する手順については、[[!UICONTROL  スキーマ ] UI ガイド ](../../../../xdm/ui/fields/identity.md) を参照してください。
+>スキーマのプライマリ ID フィールドを設定する手順については、[[!UICONTROL &#x200B; スキーマ &#x200B;] UI ガイド ](../../../../xdm/ui/fields/identity.md) を参照してください。
 
 このスキーマを [!DNL Profile] 用に有効にするには、左側のパネルでスキーマの名前を選択して、「**[!UICONTROL スキーマのプロパティ]** セクションを開きます。 ここから、「**[!UICONTROL プロファイル]** 切り替えボタンを選択します。
 

@@ -52,9 +52,9 @@ ht-degree: 4%
 
 すべてのデータ要素を設定したら、イベントを [!DNL TikTok] に送信するタイミングと方法を決定するイベント転送ルールの作成を開始できます。
 
-イベント転送プロパティに新しい [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下に新しいアクションを追加し、拡張機能を **[!UICONTROL TikTok Web Events API 拡張機能]** に設定します。 Edge Network イベントを [!DNL TikTok] に送信するには、**[!UICONTROL アクションタイプ]** を **[!UICONTROL TikTok Web Events API イベントを送信 ] に設定します。**
+イベント転送プロパティに新しい [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 **[!UICONTROL Actions]** の下に新しいアクションを追加し、拡張機能を **[!UICONTROL TikTok Web Events API 拡張機能]** に設定します。 Edge Network イベントを [!DNL TikTok] に送信するには、**[!UICONTROL アクションタイプ]** を **[!UICONTROL TikTok Web Events API イベントを送信 &#x200B;] に設定します。**
 
-![Send TikTok Web Events API Event[!UICONTROL  アクションタイプが ]Data Collection UI の [!DNL TikTok] ルール用に選択されている。](../../../images/extensions/server/tiktok/select-action.png)
+![Send TikTok Web Events API Event[!UICONTROL &#x200B; アクションタイプが &#x200B;]Data Collection UI の [!DNL TikTok] ルール用に選択されている。](../../../images/extensions/server/tiktok/select-action.png)
 
 選択後、以下に示すように、追加のコントロールでイベントをさらに設定できます。 完了したら、「**[!UICONTROL 変更を保持]**」を選択してルールを保存します。
 

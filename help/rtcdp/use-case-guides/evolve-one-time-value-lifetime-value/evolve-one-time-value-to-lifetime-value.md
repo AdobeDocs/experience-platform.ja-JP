@@ -17,7 +17,7 @@ ht-degree: 2%
 >* このページでは、記載されているユースケースを実現するための、Real-Time CDPおよびAdobe Journey Optimizerの実装例を示します。 ページに記載されている数値、認定条件、その他のフィールドは、規範的な数値としてではなく、ガイドとして使用してください。
 >* このユースケースを完了するには、Real-Time CDPおよびAdobe Journey Optimizerのライセンスを取得している必要があります。 詳しくは、以下の [ 前提条件と計画の節 ](#prerequisites-and-planning) を参照してください。
 
-生涯価値のユースケースに 1 回限りの顧客価値を実装して、ブランドエンゲージメントとブランドロイヤルティを推進します。 [Real-Time CDP](/help/rtcdp/home.md) および [Journey Optimizer} で拡張されたExperience Platformの機能を使用して、複数のチャネルまたはジャーニーで接続されたカスタマーエクスペリエンスを構築し ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home) す。
+生涯価値のユースケースに 1 回限りの顧客価値を実装して、ブランドエンゲージメントとブランドロイヤルティを推進します。 [Real-Time CDP](/help/rtcdp/home.md) および [Journey Optimizer&rbrace; で拡張されたExperience Platformの機能を使用して、複数のチャネルまたはジャーニーで接続されたカスタマーエクスペリエンスを構築し ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home) す。
 
 ターゲットとしているペルソナは、過去 3 か月以内に購入を行った、プロパティへのまれな訪問者です。
 
@@ -72,7 +72,7 @@ ht-degree: 2%
 
 ![ ステップバイステップの 1 回限りの値をライフタイム値に進化させる高レベルの視覚的な概要 ](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
-1. スキーマとデータセットを作成し、これらを [!UICONTROL  プロファイル ] 用にマークします。
+1. スキーマとデータセットを作成し、これらを [!UICONTROL &#x200B; プロファイル &#x200B;] 用にマークします。
 2. データは、Web SDK、Mobile Edge SDK、API を使用して収集され、Experience Platformに統合されます。 Analytics Data Connector も利用できますが、ジャーニー遅延が発生する可能性があります。
 3. プロファイルをReal-Time CDPに読み込み、責任ある使用を確保するためにガバナンスポリシーを構築します。
 4. プロファイルのリストから焦点を当てたオーディエンスを作成し、価値の高い顧客と頻度の低い顧客を確認します。
@@ -91,7 +91,7 @@ ht-degree: 2%
 
 ### スキーマデザインの作成とフィールドグループの指定 {#schema-design}
 
-エクスペリエンスデータモデル（XDM）リソースは、[!DNL Adobe Experience Platform] の [!UICONTROL  スキーマ ] ワークスペースで管理されます。 [!DNL Adobe] が提供するコアリソース（例：[!UICONTROL  フィールドグループ ]）を表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
+エクスペリエンスデータモデル（XDM）リソースは、[!DNL Adobe Experience Platform] の [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースで管理されます。 [!DNL Adobe] が提供するコアリソース（例：[!UICONTROL &#x200B; フィールドグループ &#x200B;]）を表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
 
 [ スキーマ ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja) の作成について詳しくは、[ スキーマの作成チュートリアル ](/help/xdm/tutorials/create-schema-ui.md) を参照してください。
 
@@ -109,7 +109,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 ![ フィールドグループがハイライト表示された顧客属性スキーマ ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
 
-顧客属性スキーマは、次のフィールドグループを含む [!UICONTROL XDM 個人プロファイル ] クラスで表されます。
+顧客属性スキーマは、次のフィールドグループを含む [!UICONTROL XDM 個人プロファイル &#x200B;] クラスで表されます。
 
 +++人口統計の詳細（フィールドグループ）
 
@@ -224,7 +224,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 +++個人の連絡先の詳細（フィールドグループ）
 
-[[!UICONTROL  個人の連絡先の詳細 ]](/help/xdm/field-groups/profile/personal-contact-details.md) は、[!DNL XDM Individual Profile] クラスの標準スキーマフィールドグループで、個人の連絡先情報を説明します。
+[[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;]](/help/xdm/field-groups/profile/personal-contact-details.md) は、[!DNL XDM Individual Profile] クラスの標準スキーマフィールドグループで、個人の連絡先情報を説明します。
 
 +++
 
@@ -248,7 +248,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 +++Adobe Analytics ExperienceEvent テンプレート（フィールドグループ）
 
-[[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張 ]](/help/xdm/field-groups/event/analytics-full-extension.md) は、Adobe Analyticsが収集する共通のメトリクスをキャプチャする標準スキーマフィールドグループです。
+[[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張 &#x200B;]](/help/xdm/field-groups/event/analytics-full-extension.md) は、Adobe Analyticsが収集する共通のメトリクスをキャプチャする標準スキーマフィールドグループです。
 
 +++
 
@@ -342,7 +342,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 >[!NOTE]
 >
->図に示されているすべてが [!DNL Adobe Journey Optimizer] に含まれるわけではありません。 すべての [ 有料メディア広告 ](/help/destinations/catalog/social/overview.md) は、[!UICONTROL  宛先 ] [ ワークスペース ](/help/destinations/ui/destinations-workspace.md) に作成されます。
+>図に示されているすべてが [!DNL Adobe Journey Optimizer] に含まれるわけではありません。 すべての [ 有料メディア広告 ](/help/destinations/catalog/social/overview.md) は、[!UICONTROL &#x200B; 宛先 &#x200B;] [ ワークスペース ](/help/destinations/ui/destinations-workspace.md) に作成されます。
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) は、顧客とのつながり、コンテキスト、パーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーは、顧客がブランドとやり取りするプロセス全体です。 各ユースケースのジャーニーには、特定の情報が必要です。
 
@@ -375,7 +375,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 4. 条件 – 過去 7 日間に購入したサブスクリプション :「条件」アクティビティを使用して、過去 7 日間に製品が購入されたかどうかをリッスンします。
 
-5. JourneyStepEventTracker - サブスクリプションが購入されていません：メッセージを受信したにもかかわらずサブスクリプションをまだ購入していない訪問者には [ カスタムアクション ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) を使用します。 ジャーニーの最後のカスタム条件の一部として、`journey.feedback` イベントを作成し、[!UICONTROL ジャーニーステップイベント ] スキーマに基づいてデータセットに追加します。 このイベントを使用して、サブスクリプションを購入していないオーディエンスをセグメント化し、有料メディア広告を介してターゲットにすることができます。
+5. JourneyStepEventTracker - サブスクリプションが購入されていません：メッセージを受信したにもかかわらずサブスクリプションをまだ購入していない訪問者には [ カスタムアクション ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) を使用します。 ジャーニーの最後のカスタム条件の一部として、`journey.feedback` イベントを作成し、[!UICONTROL ジャーニーステップイベント &#x200B;] スキーマに基づいてデータセットに追加します。 このイベントを使用して、サブスクリプションを購入していないオーディエンスをセグメント化し、有料メディア広告を介してターゲットにすることができます。
 
 +++
 

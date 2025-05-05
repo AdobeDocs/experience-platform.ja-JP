@@ -27,7 +27,7 @@ SQL オーディエンス拡張機能を使用して、既存のディメンシ�
 
 ### オーディエンスの作成 {#create-audience}
 
-`CREATE AUDIENCE AS SELECT` コマンドを使用して、新しいオーディエンスを定義します。 作成したオーディエンスはデータセットに保存され、データDistillerの下の [!UICONTROL  オーディエンス ] ワークスペースに登録されます。
+`CREATE AUDIENCE AS SELECT` コマンドを使用して、新しいオーディエンスを定義します。 作成したオーディエンスはデータセットに保存され、データDistillerの下の [!UICONTROL &#x200B; オーディエンス &#x200B;] ワークスペースに登録されます。
 
 ```sql
 CREATE AUDIENCE table_name  
@@ -294,7 +294,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### 自動オーディエンス登録と可用性 {#registration-and-availability}
 
-SQL 拡張機能を使用して作成されたオーディエンスは、オーディエンスワークスペースの Data Distiller[!UICONTROL  オリジン ] に自動的に登録されます。 登録すると、これらのオーディエンスをファイルベースの宛先でのターゲティングに使用できるようになり、セグメント化とターゲティング戦略が強化されます。 このプロセスには追加の設定は必要なく、オーディエンス管理を合理化します。 Experience Platform UI 内でのオーディエンスの表示、管理、作成の方法について詳しくは、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md) を参照してください。
+SQL 拡張機能を使用して作成されたオーディエンスは、オーディエンスワークスペースの Data Distiller[!UICONTROL &#x200B; オリジン &#x200B;] に自動的に登録されます。 登録すると、これらのオーディエンスをファイルベースの宛先でのターゲティングに使用できるようになり、セグメント化とターゲティング戦略が強化されます。 このプロセスには追加の設定は必要なく、オーディエンス管理を合理化します。 Experience Platform UI 内でのオーディエンスの表示、管理、作成の方法について詳しくは、[ オーディエンスポータルの概要 ](../../segmentation/ui/audience-portal.md) を参照してください。
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 

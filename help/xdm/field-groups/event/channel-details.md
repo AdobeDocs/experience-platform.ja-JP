@@ -11,13 +11,13 @@ ht-degree: 20%
 
 ---
 
-# [!UICONTROL  チャネルの詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; チャネルの詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL  チャネルの詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、ID、チャネルタイプ、メディアタイプ、場所タイプなどのチャネル情報を記述するために使用されます。
+[!UICONTROL &#x200B; チャネルの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、ID、チャネルタイプ、メディアタイプ、場所タイプなどのチャネル情報を記述するために使用されます。
 
 ![](../../images/field-groups/channel-details.png)
 

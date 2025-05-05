@@ -10,13 +10,13 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL  汎用同意フィールド ] データタイプ
+# [!UICONTROL &#x200B; 汎用同意フィールド &#x200B;] データタイプ
 
-[!UICONTROL  汎用同意フィールド ] は、特定の同意環境設定に対する顧客の選択を記述する標準の XDM データタイプです。
+[!UICONTROL &#x200B; 汎用同意フィールド &#x200B;] は、特定の同意環境設定に対する顧客の選択を記述する標準の XDM データタイプです。
 
 >[!NOTE]
 >
->このデータタイプは、[[!UICONTROL  同意および環境設定 ] フィールドグループをベースラインとして使用して、組織の同意スキーマの構造をカスタマイズする ](../field-groups/profile/consents.md) めに使用されます。
+>このデータタイプは、[[!UICONTROL &#x200B; 同意および環境設定 &#x200B;] フィールドグループをベースラインとして使用して、組織の同意スキーマの構造をカスタマイズする ](../field-groups/profile/consents.md) めに使用されます。
 
 ![](../images/data-types/consent-field.png)
 

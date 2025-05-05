@@ -11,15 +11,15 @@ ht-degree: 17%
 
 ---
 
-# [!UICONTROL  ジオサークル ] データタイプ
+# [!UICONTROL &#x200B; ジオサークル &#x200B;] データタイプ
 
-[!UICONTROL  ジオサークル ] は、特定の座標セットを中心とした特定の半径を指定して、円形の地理的領域を表す標準 XDM データタイプです。 このデータタイプは、[schema.org](https://schema.org/GeoCircle) に記載されている公開仕様に基づいています。
+[!UICONTROL &#x200B; ジオサークル &#x200B;] は、特定の座標セットを中心とした特定の半径を指定して、円形の地理的領域を表す標準 XDM データタイプです。 このデータタイプは、[schema.org](https://schema.org/GeoCircle) に記載されている公開仕様に基づいています。
 
 ![](../images/data-types/geo-circle.png){width=400}
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `_schema.coordinates` | [[!UICONTROL  地理座標 ]](./geo-coordinates.md) | 円の中心の地理的座標を表します。 |
+| `_schema.coordinates` | [[!UICONTROL &#x200B; 地理座標 &#x200B;]](./geo-coordinates.md) | 円の中心の地理的座標を表します。 |
 | `_schema.description` | 文字列 | サークルに何が含まれているかの説明。 |
 | `_schema.radius` | Double | 円の半径の長さ。この値は、[WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) データムに準拠し、メートル単位で測定されます。 |
 | `_id` | 文字列 | サークルの一意のシステム生成 ID。 |

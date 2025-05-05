@@ -9,17 +9,17 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL  入金詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; 入金詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  入金詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、財務預金に関する詳細を取得するスキーマに単一の `personalFinances.deposits` フィールドを提供します。
+[!UICONTROL &#x200B; 入金詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、財務預金に関する詳細を取得するスキーマに単一の `personalFinances.deposits` フィールドを提供します。
 
 ![](../../images/field-groups/deposit-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `account` | [[!UICONTROL  金融口座 ]](../../data-types/financial-account.md) | 預金に関連付けられている金融口座を表します。 |
-| `transaction` | [[!UICONTROL  トランザクション ]](../../data-types/transaction.md) | 預金に関連付けられている財務トランザクションを表します。 |
-| `mobileDeposit` | [!UICONTROL  ブール値 ] | 預金がモバイルプラットフォームを通じて行われたかどうかを示します。 |
+| `account` | [[!UICONTROL &#x200B; 金融口座 &#x200B;]](../../data-types/financial-account.md) | 預金に関連付けられている金融口座を表します。 |
+| `transaction` | [[!UICONTROL &#x200B; トランザクション &#x200B;]](../../data-types/transaction.md) | 預金に関連付けられている財務トランザクションを表します。 |
+| `mobileDeposit` | [!UICONTROL &#x200B; ブール値 &#x200B;] | 預金がモバイルプラットフォームを通じて行われたかどうかを示します。 |
 
 {style="table-layout:auto"}
 

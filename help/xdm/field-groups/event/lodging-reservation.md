@@ -10,15 +10,15 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL  宿泊予約 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; 宿泊予約 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  宿泊予約 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、宿泊予約に関する情報を取得するために使用されます。
+[!UICONTROL &#x200B; 宿泊予約 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、宿泊予約に関する情報を取得するために使用されます。
 
-フィールドグループは、[!UICONTROL  予約詳細 ] フィールドグループの拡張機能で、単一のオブジェクトタイプのフィールド `reservations` の下に同じフィールドをすべて含んでいます。 これらの一般的なフィールドに加えて、[!UICONTROL  宿泊予約 ] には配列も含まれ `lodgingReservations` います。 このオブジェクトの配列は、宿泊施設に固有のプロパティを持つ 1 つ以上の予約を記述するために使用されます。
+フィールドグループは、[!UICONTROL &#x200B; 予約詳細 &#x200B;] フィールドグループの拡張機能で、単一のオブジェクトタイプのフィールド `reservations` の下に同じフィールドをすべて含んでいます。 これらの一般的なフィールドに加えて、[!UICONTROL &#x200B; 宿泊予約 &#x200B;] には配列も含まれ `lodgingReservations` います。 このオブジェクトの配列は、宿泊施設に固有のプロパティを持つ 1 つ以上の予約を記述するために使用されます。
 
 >[!NOTE]
 >
->このドキュメントでは、`lodgingReservations` 配列の詳細を説明します。 `reservations` オブジェクトの下に提供されるその他のフィールドについて詳しくは、[[!UICONTROL  予約詳細 ] フィールドグループのリファレンス ](./reservation-details.md) を参照してください。
+>このドキュメントでは、`lodgingReservations` 配列の詳細を説明します。 `reservations` オブジェクトの下に提供されるその他のフィールドについて詳しくは、[[!UICONTROL &#x200B; 予約詳細 &#x200B;] フィールドグループのリファレンス ](./reservation-details.md) を参照してください。
 
 ![ 宿泊予約構造 ](../../images/field-groups/lodging-reservation/structure.png)
 

@@ -15,7 +15,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->[AppMeasurementのJavaScript ライブラリ ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) の更新に対応して Analytics タグ拡張機能が頻繁に更新される場合。 以下に説明する具体的なバージョンについて詳しくは ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)[AppMeasurementのリリースノート } を参照してください。
+>[AppMeasurementのJavaScript ライブラリ ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja) の更新に対応して Analytics タグ拡張機能が頻繁に更新される場合。 以下に説明する具体的なバージョンについて詳しくは [&#128279;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja)AppMeasurementのリリースノート &rbrace; を参照してください。
 
 ## 2024 年 10 月 28 日（Pt）
 

@@ -59,7 +59,7 @@ Adobe Experience Platform データを [!DNL Moengage] に送信する前に、�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -92,7 +92,7 @@ Adobe Experience Platform データを [!DNL Moengage] に送信する前に、�
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントをアクティブ化する手順は、[ストリーミングセグメント書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -104,32 +104,32 @@ Adobe Experience Platform データを [!DNL Moengage] に送信する前に、�
 
 XDM フィールドを [!DNL Moengage] 宛先フィールドに正しくマッピングするには、次の手順に従います。
 
-[!UICONTROL  マッピング ] ステップで、「**[!UICONTROL チェックボックス]**」を選択します。
+[!UICONTROL &#x200B; マッピング &#x200B;] ステップで、「**[!UICONTROL チェックボックス]**」を選択します。
 
 ![Moengage 宛先追加マッピング ](../../assets/catalog/mobile-engagement/moengage/segments.png)
 
-[!UICONTROL  マッピング ] 手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。
+[!UICONTROL &#x200B; マッピング &#x200B;] 手順で、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。
 
 ![Moengage 宛先追加マッピング ](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 
-「[!UICONTROL Source フィールド ]」セクションで、空のフィールドの横にある矢印ボタンを選択します。
+「[!UICONTROL Source フィールド &#x200B;]」セクションで、空のフィールドの横にある矢印ボタンを選択します。
 
 ![Moengage 宛先Sourceのマッピング ](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
-[!UICONTROL  ソースフィールドを選択 ] ウィンドウでは、XDM フィールドの次の 2 つのカテゴリから選択できます。
-* [!UICONTROL  属性を選択 ]：このオプションを使用して、XDM スキーマから特定のフィールドを属性にマッピン [!DNL Moengage] します。
+[!UICONTROL &#x200B; ソースフィールドを選択 &#x200B;] ウィンドウでは、XDM フィールドの次の 2 つのカテゴリから選択できます。
+* [!UICONTROL &#x200B; 属性を選択 &#x200B;]：このオプションを使用して、XDM スキーマから特定のフィールドを属性にマッピン [!DNL Moengage] します。
 
 ![Moengage 宛先マッピングSource属性 ](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
 
 ソースフィールドを選択してから、「**[!UICONTROL 選択]** を選択します。
 
-「[!UICONTROL  ターゲットフィールド ]」セクションで、フィールドの右側にあるマッピングアイコンを選択します。
+「[!UICONTROL &#x200B; ターゲットフィールド &#x200B;]」セクションで、フィールドの右側にあるマッピングアイコンを選択します。
 
 ![Moengage 宛先ターゲットマッピング ](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
-[!UICONTROL  ターゲットフィールドを選択 ] ウィンドウでは、次の 2 つのカテゴリのターゲットフィールドから選択できます。
-* [!UICONTROL ID 名前空間を選択 ]：このオプションを使用して、ID 名前空間 [!DNL Experience Platform]ID 名前空間にマッピン [!DNL Moengage] します。
-* [!UICONTROL  カスタム属性を選択 ]：このオプションを使用して、XDM 属性を [!DNL Moengage] アカウントで定義したカスタム [!DNL Moengage] 属性にマッピングします。 <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Moengage] に変更することもできます。 例えば、`lastName` XDM 属性を [!DNL Moengage] のカスタム `Last_Name` 属性にマッピングすると、`Last_Name` 属性が存在しない場合は [!DNL Moengage] に作成し、`lastName` XDM 属性をマッピングします。
+[!UICONTROL &#x200B; ターゲットフィールドを選択 &#x200B;] ウィンドウでは、次の 2 つのカテゴリのターゲットフィールドから選択できます。
+* [!UICONTROL ID 名前空間を選択 &#x200B;]：このオプションを使用して、ID 名前空間 [!DNL Experience Platform]ID 名前空間にマッピン [!DNL Moengage] します。
+* [!UICONTROL &#x200B; カスタム属性を選択 &#x200B;]：このオプションを使用して、XDM 属性を [!DNL Moengage] アカウントで定義したカスタム [!DNL Moengage] 属性にマッピングします。 <br> また、このオプションを使用して、既存の XDM 属性の名前を [!DNL Moengage] に変更することもできます。 例えば、`lastName` XDM 属性を [!DNL Moengage] のカスタム `Last_Name` 属性にマッピングすると、`Last_Name` 属性が存在しない場合は [!DNL Moengage] に作成し、`lastName` XDM 属性をマッピングします。
 
 ![Moengage 宛先ターゲットマッピングフィールド ](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 

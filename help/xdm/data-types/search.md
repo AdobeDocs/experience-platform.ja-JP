@@ -11,9 +11,9 @@ ht-degree: 18%
 
 ---
 
-# [!UICONTROL  検索 ] データタイプ
+# [!UICONTROL &#x200B; 検索 &#x200B;] データタイプ
 
-[!UICONTROL  検索 ] は、web 検索アクティビティに関する情報を含んだ標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; 検索 &#x200B;] は、web 検索アクティビティに関する情報を含んだ標準の Experience Data Model （XDM）データタイプです。
 
 ![ 検索画像 ](../images/data-types/search.PNG){width=500}
 

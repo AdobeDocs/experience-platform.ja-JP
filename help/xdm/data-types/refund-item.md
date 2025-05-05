@@ -9,19 +9,19 @@ ht-degree: 13%
 
 ---
 
-# [!UICONTROL  払戻品目 ] データタイプ
+# [!UICONTROL &#x200B; 払戻品目 &#x200B;] データタイプ
 
-[!UICONTROL  払戻項目 ] は、注文に関連付けられた払い戻しに関連する取得情報を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。
+[!UICONTROL &#x200B; 払戻項目 &#x200B;] は、注文に関連付けられた払い戻しに関連する取得情報を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。
 
 ![ 払戻品目データタイプの図。](../images/data-types/refund-item.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |--------------------|-----------------------|-----------|---------------------------------------------------------------------------------------------------|
-| [!UICONTROL  トランザクション ID] | `transactionID` | 文字列 | この払戻品目の一意のトランザクション ID。 |
-| [!UICONTROL  払戻金額 ] | `refundAmount` | 数値 | 払い戻しの金額。 |
-| [!UICONTROL  還付事由 ] | `refundReason` | 文字列 | 払い戻しが発行された理由。 |
-| [!UICONTROL  払戻金納付の種類 ] | `refundPaymentType` | 文字列 | この注文の支払方法。カスタム値を使用できます。 |
-| [!UICONTROL  通貨コード ] | `currencyCode` | 文字列 | この払い戻し項目に使用される ISO 4217 通貨コード。 例：「USD」、「EUR」。 |
+| [!UICONTROL &#x200B; トランザクション ID] | `transactionID` | 文字列 | この払戻品目の一意のトランザクション ID。 |
+| [!UICONTROL &#x200B; 払戻金額 &#x200B;] | `refundAmount` | 数値 | 払い戻しの金額。 |
+| [!UICONTROL &#x200B; 還付事由 &#x200B;] | `refundReason` | 文字列 | 払い戻しが発行された理由。 |
+| [!UICONTROL &#x200B; 払戻金納付の種類 &#x200B;] | `refundPaymentType` | 文字列 | この注文の支払方法。カスタム値を使用できます。 |
+| [!UICONTROL &#x200B; 通貨コード &#x200B;] | `currencyCode` | 文字列 | この払い戻し項目に使用される ISO 4217 通貨コード。 例：「USD」、「EUR」。 |
 
 {style="table-layout:auto"}
 

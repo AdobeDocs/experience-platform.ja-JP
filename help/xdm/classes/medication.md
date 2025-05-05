@@ -9,9 +9,9 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL  医薬品 ] クラス
+# [!UICONTROL &#x200B; 医薬品 &#x200B;] クラス
 
-エクスペリエンスデータモデル（XDM）の [!UICONTROL  投薬 ] クラスは、医療（特に薬や薬）に使用される物質を定義するプロパティの最小セットをキャプチャします。
+エクスペリエンスデータモデル（XDM）の [!UICONTROL &#x200B; 投薬 &#x200B;] クラスは、医療（特に薬や薬）に使用される物質を定義するプロパティの最小セットをキャプチャします。
 
 ![ クラス構造 ](../images/classes/medication.png)
 
@@ -23,4 +23,4 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-クラスは、[[!UICONTROL  ヘルスケア医薬品 ] フィールドグループ ](../field-groups/medication/healthcare-medication.md) で拡張して、薬や薬に関する詳細を説明することができます。
+クラスは、[[!UICONTROL &#x200B; ヘルスケア医薬品 &#x200B;] フィールドグループ ](../field-groups/medication/healthcare-medication.md) で拡張して、薬や薬に関する詳細を説明することができます。

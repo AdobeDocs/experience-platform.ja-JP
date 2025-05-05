@@ -46,11 +46,11 @@ Experience Platformで [!DNL Salesforce Marketing Cloud] アカウントにア�
 >
 >カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
 
-Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] には、Experience Platformでサポートされている様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] には、Experience Platformでサポートされている様々なソースが表示されます。
 
 カテゴリのリストから適切なカテゴリを選択できます。 検索バーを使用して、特定のソースをフィルタリングすることもできます。
 
-[!UICONTROL  マーケティング自動化 ] カテゴリで、「**[!UICONTROL Salesforce Marketing Cloud]**」を選択し、**[!UICONTROL 設定]** を選択します。
+[!UICONTROL &#x200B; マーケティング自動化 &#x200B;] カテゴリで、「**[!UICONTROL Salesforce Marketing Cloud]**」を選択し、**[!UICONTROL 設定]** を選択します。
 
 ![ ソースカタログとSalesforce Marketing Cloud ソースが選択されています。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 

@@ -25,7 +25,7 @@ ht-degree: 50%
    * [NPM パッケージを使用して web SDKをインストールします](install/npm.md)
    * [NPM パッケージを使用したカスタム web SDK ビルドの作成](install/create-custom-build.md)
 * コマンド {#commands}
-   * {#configure} の設定
+   * の設定{#configure}
       * [概要](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)

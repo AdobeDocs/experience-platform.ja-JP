@@ -544,7 +544,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->1 つの `property` パラメーターを使用して複数のフィールドを一度にフィルタリングすることはできま **ん**。 各フィールドには、独自の `property` パラメーターが必要です。 次の例（`property=id>abc,name==myDataset`）は、**単一の `property` パラメーター** 内の `id` および `name` に条件を適用しようとするので、許可されていません ****。
+>1 つの `property` パラメーターを使用して複数のフィールドを一度にフィルタリングすることはできま **ん**。 各フィールドには、独自の `property` パラメーターが必要です。 次の例（`property=id>abc,name==myDataset`）は、**単一の `property` パラメーター** 内の `id` および `name` に条件を適用しようとするので、許可されていません **&#x200B;**。
 
 `property` パラメータは、任意のレベル オブジェクト プロパティを受け付けることができます。 `sampleKey` は、`?properties=subItem.sampleKey` を使用したフィルタリングに使用できます。
 

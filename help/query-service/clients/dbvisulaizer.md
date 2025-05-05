@@ -19,7 +19,7 @@ ht-degree: 3%
 
 このガイドでは、[!DNL DbVisualizer] Desktop アプリに既にアクセスしており、そのインターフェイスの操作方法に精通している必要があります。[!DNL DbVisualizer] デスクトップアプリケーションをダウンロードするには、または詳細情報については、[official [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/) を参照してください。
 
-[!DNL  DbVisualizer] をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UI のクエリワークスペースにアクセスできる必要があります。 現在、クエリワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
+[!DNL &#x200B; DbVisualizer] をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UI のクエリワークスペースにアクセスできる必要があります。 現在、クエリワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ## データベース接続の作成 {#connect-database}
 
@@ -39,10 +39,10 @@ ht-degree: 3%
 
 | プロパティ | 説明 |
 | ------ | ------ |
-| `PGHOST` | [!DNL PostgreSQL] サーバーのホスト名。 この値はExperience Platform **[!UICONTROL ホスト ] 資格情報** です。 |
+| `PGHOST` | [!DNL PostgreSQL] サーバーのホスト名。 この値はExperience Platform **[!UICONTROL ホスト &#x200B;] 資格情報** です。 |
 | `ssl` | SSL 値 `1` を定義して、SSL の使用を有効にします。 |
 | `sslmode` | SSL 保護のレベルを制御します。 サードパーティクライアントをAdobe Experience Platformに接続する場合は、`require` SSL モードを使用することをお勧めします。 `require` モードを使用すると、すべての通信で暗号化が必要になり、ネットワークが正しいサーバーに接続するために信頼されます。 サーバー SSL 証明書の検証は不要です。 |
-| `user` | データベースに接続するユーザー名は組織 ID です。 `@Adobe.Org` で終わる英数字の文字列です。 この値はExperience Platformの **[!UICONTROL ユーザー名 ] 資格情報** です。 |
+| `user` | データベースに接続するユーザー名は組織 ID です。 `@Adobe.Org` で終わる英数字の文字列です。 この値はExperience Platformの **[!UICONTROL ユーザー名 &#x200B;] 資格情報** です。 |
 
 検索バーを使用して各プロパティを検索し、パラメーター値に対応するセルを選択します。 セルが青でハイライト表示されます。 Experience Platformの資格情報を「値」フィールドに入力し、「**[!DNL Apply]**」を選択してドライバープロパティを追加します。
 

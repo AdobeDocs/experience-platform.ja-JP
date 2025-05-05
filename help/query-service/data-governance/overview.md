@@ -95,9 +95,9 @@ Adobe Experience Platformのアクセス制御では、[Adobe Admin Console](htt
 
 [ 属性ベースのアクセス制御機能を使用すると ](../../access-control/abac/overview.md) [ 高速化ストア ](../data-distiller/sql-insights/send-accelerated-queries.md) のファクトおよびディメンションデータセットに対して、組織またはデータの使用範囲を定義できます。 これにより、管理者は特定のセグメントへのアクセスを管理し、ユーザーまたはユーザーグループに付与するアクセスをより適切に管理できます。
 
-高速データセットにフィールドベースのアクセス制限を作成するには、クエリサービス CTAS クエリを使用して、高速データセットを作成し、既存の XDM スキーマまたはアドホックスキーマに基づいてこれらのデータセットを構造化します。 管理者はその後 [ スキーマまたは [ アドホックスキーマのデータ使用ラベルを追加 ](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) 編集 ](./ad-hoc-schema-labels.md#edit-governance-labels) できます。 [!UICONTROL  スキーマ ] UI の [!UICONTROL  ラベル ] ワークスペースからスキーマへのラベルの適用、作成および編集を行えます。
+高速データセットにフィールドベースのアクセス制限を作成するには、クエリサービス CTAS クエリを使用して、高速データセットを作成し、既存の XDM スキーマまたはアドホックスキーマに基づいてこれらのデータセットを構造化します。 管理者はその後 [&#128279;](./ad-hoc-schema-labels.md#edit-governance-labels) スキーマまたは [ アドホックスキーマのデータ使用ラベルを追加 ](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) 編集  できます。 [!UICONTROL &#x200B; スキーマ &#x200B;] UI の [!UICONTROL &#x200B; ラベル &#x200B;] ワークスペースからスキーマへのラベルの適用、作成および編集を行えます。
 
-データ使用ラベルは、データセット UI を通じて [ データセットに直接適用または編集 ](../../data-governance/labels/user-guide.md#add-labels) したり、アクセス制御 [!UICONTROL  ラベル ] ワークスペースから作成したりすることもできます。 詳しくは、[ 新しいラベルの作成 ](../../access-control/abac/ui/labels.md) 方法に関するガイドを参照してください。
+データ使用ラベルは、データセット UI を通じて [ データセットに直接適用または編集 ](../../data-governance/labels/user-guide.md#add-labels) したり、アクセス制御 [!UICONTROL &#x200B; ラベル &#x200B;] ワークスペースから作成したりすることもできます。 詳しくは、[ 新しいラベルの作成 ](../../access-control/abac/ui/labels.md) 方法に関するガイドを参照してください。
 
 個々の列へのユーザーアクセスは、添付されたデータ使用ラベルおよびユーザーに割り当てられた役割に適用される権限セットによって制御できます。
 
@@ -137,7 +137,7 @@ Adobe Experience Platformのアクセス制御では、[Adobe Admin Console](htt
 
 クエリサービスのデータコンプライアンスにより、データが常に暗号化されるようにします。 転送中のデータは常に HTTPS に準拠しており、保存中のデータはシステムレベルのキーを使用して Azure Data Lake ストアで暗号化されます。 詳しくは、[Adobe Experience Platformでのデータの暗号化 ](../../landing/governance-privacy-security/encryption.md) に関するドキュメントを参照してください。 保存データの Azure Data Lake Storage での暗号化の仕組みについて詳しくは、[Azure の公式ドキュメント ](https://docs.microsoft.com/ja-jp/azure/data-lake-store/data-lake-store-encryption) を参照してください。
 
-転送中のデータは常に HTTPS に準拠しており、同様に、データがデータレイクに保存されている場合、暗号化は顧客管理キー（CMK）で行われます。CMK は、データレイク管理で既にサポートされています。 現在サポートされているバージョンは TLS1.2 です。Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法については ](../../landing/governance-privacy-security/customer-managed-keys/overview.md)[CMK （顧客管理キー）ドキュメント）を参照してください。
+転送中のデータは常に HTTPS に準拠しており、同様に、データがデータレイクに保存されている場合、暗号化は顧客管理キー（CMK）で行われます。CMK は、データレイク管理で既にサポートされています。 現在サポートされているバージョンは TLS1.2 です。Adobe Experience Platformに保存されたデータ用に独自の暗号化キーを設定する方法については [&#128279;](../../landing/governance-privacy-security/customer-managed-keys/overview.md)CMK （顧客管理キー）ドキュメント）を参照してください。
 
 
 ## 監査 {#audit}
@@ -150,7 +150,7 @@ Adobe Experience Platformのアクセス制御では、[Adobe Admin Console](htt
 
 クエリログ UI を使用すると、クエリエディターまたはクエリサービス API を介して実行されたすべてのクエリの実行の詳細を監視および確認できます。 これにより、クエリサービスアクティビティが透過的になり、クエリサービスをまたいで実行されたクエリの **すべて** メタデータを確認できます。 探索的クエリ、バッチクエリ、スケジュール済みクエリのいずれであっても、すべてのタイプのクエリが含まれます。
 
-クエリログには、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースの「[!UICONTROL  ログ ]」タブからアクセスできます。
+クエリログには、Experience Platform UI の [!UICONTROL &#x200B; クエリ &#x200B;] ワークスペースの「[!UICONTROL &#x200B; ログ &#x200B;]」タブからアクセスできます。
 
 ![ 詳細パネルがハイライト表示された「クエリログ」タブ ](../images/data-governance/overview/queries-log.png)
 

@@ -27,7 +27,7 @@ ht-degree: 95%
    - [部分バッチ取得](batch-ingestion/partial.md)
    - [トラブルシューティング](batch-ingestion/troubleshooting.md)
 - チュートリアル {#tutorials}
-   - CSV ファイルの XDM {#map-csv} へのマッピング
+   - CSV ファイルの XDM へのマッピング {#map-csv}
       - [概要](./tutorials/map-csv/overview.md)
       - [既存のスキーマへの CSV ファイルのマッピング](./tutorials/map-csv/existing-schema.md)
       - [AI で生成されたレコメンデーションを使用した CSV ファイルのマッピング](./tutorials/map-csv/recommendations.md)

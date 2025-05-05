@@ -30,7 +30,7 @@ ht-degree: 7%
 
 目的のプロパティを選択または作成したら、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 [!UICONTROL AWS] カードを検索し、「**[!UICONTROL インストール]**」を選択します。
 
-![ データ収集 UI の [!UICONTROL AWS] 拡張機能に対して選択されている「[!UICONTROL  インストール ]」ボタン。](../../../images/extensions/server/aws/install.png)
+![ データ収集 UI の [!UICONTROL AWS] 拡張機能に対して選択されている「[!UICONTROL &#x200B; インストール &#x200B;]」ボタン。](../../../images/extensions/server/aws/install.png)
 
 次の画面で、[!DNL AWS] アカウントの接続資格情報を指定する必要があります。 特に、[!DNL AWS] アクセスキー ID と秘密アクセスキーを指定する必要があります。 これらの値がわからない場合は、[!DNL AWS] のドキュメント [ アクセスキー ID と秘密アクセスキーを取得する方法 ](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html) を参照してください。
 
@@ -46,19 +46,19 @@ ht-degree: 7%
 
 拡張機能をインストールした後、新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成し、必要に応じてその条件を設定します。 ルールのアクションを設定する際に、**[!UICONTROL AWS]** 拡張機能を選択してから、アクションタイプとして **[!UICONTROL Kinesis データストリームにデータを送信]** を選択します。
 
-![ データ収集 UI でルールに対して選択されている「[!UICONTROL Kinesis データストリームにデータを送信 ]」アクションタイプ ](../../../images/extensions/server/aws/select-action-type.png)
+![ データ収集 UI でルールに対して選択されている「[!UICONTROL Kinesis データストリームにデータを送信 &#x200B;]」アクションタイプ ](../../../images/extensions/server/aws/select-action-type.png)
 
 右側のパネルが更新され、データの送信方法に関する設定オプションが表示されます。 特に、[!DNL Event Hub] 設定を表す様々なプロパティに [ データ要素 ](../../../ui/managing-resources/data-elements.md) を割り当てる必要があります。
 
-![UI に表示される [!UICONTROL Kinesis データストリームにデータを送信 ] アクションタイプの設定オプション ](../../../images/extensions/server/aws/data-stream-details.png)
+![UI に表示される [!UICONTROL Kinesis データストリームにデータを送信 &#x200B;] アクションタイプの設定オプション ](../../../images/extensions/server/aws/data-stream-details.png)
 
 **[!UICONTROL Kinesis データストリームの詳細]**
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  ストリーム名 ] | このイベント転送ルールがデータレコードを送信するストリームの名前。 |
+| [!UICONTROL &#x200B; ストリーム名 &#x200B;] | このイベント転送ルールがデータレコードを送信するストリームの名前。 |
 | [!UICONTROL AWS リージョン] | [!DNL Kinesis] データストリームが作成される [!DNL AWS] 領域。 |
-| [!UICONTROL  パーティションキー ] | データ ストリームにデータを送信するときに拡張機能が使用する [ パーティション キー ](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key)。<br><br>[!DNL Kinesis Data Streams] は、ストリームに属するデータレコードを複数のシャードに分離します。 各データレコードと共に送信されるパーティションキーを使用して、特定のデータレコードが属するシャードを判断します。<br><br> 顧客ごとに異なるので、顧客を配布するための良いパーティションキーは、顧客番号かもしれません。 パーティション キーが不適切な場合、近くの同じエリアに住んでいる可能性があるため、郵便番号が異なる可能性があります。 一般に、パーティションキーは異なる可能性のある値の範囲が最も大きいものを選択します。 パーティションキーの管理のベストプラクティスについては、[ データストリームのスケーリング ](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) に関する [!DNL AWS] の記事を参照してください  [!DNL Kinesis]  |
+| [!UICONTROL &#x200B; パーティションキー &#x200B;] | データ ストリームにデータを送信するときに拡張機能が使用する [ パーティション キー ](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key)。<br><br>[!DNL Kinesis Data Streams] は、ストリームに属するデータレコードを複数のシャードに分離します。 各データレコードと共に送信されるパーティションキーを使用して、特定のデータレコードが属するシャードを判断します。<br><br> 顧客ごとに異なるので、顧客を配布するための良いパーティションキーは、顧客番号かもしれません。 パーティション キーが不適切な場合、近くの同じエリアに住んでいる可能性があるため、郵便番号が異なる可能性があります。 一般に、パーティションキーは異なる可能性のある値の範囲が最も大きいものを選択します。 パーティションキーの管理のベストプラクティスについては、[ データストリームのスケーリング ](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) に関する [!DNL AWS] の記事を参照してください  [!DNL Kinesis]  |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ ht-degree: 7%
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  ペイロード ] | このフィールドには、[!DNL Kinesis] データストリームに転送されるデータが JSON 形式で格納されます。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、ペイロードを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
+| [!UICONTROL &#x200B; ペイロード &#x200B;] | このフィールドには、[!DNL Kinesis] データストリームに転送されるデータが JSON 形式で格納されます。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、ペイロードを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
 
 {style="table-layout:auto"}
 

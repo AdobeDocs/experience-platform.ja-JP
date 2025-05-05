@@ -24,7 +24,7 @@ ht-degree: 3%
 
 まず、新しい `Google OAuth 2`[ イベント転送の秘密鍵 ](../../../ui/event-forwarding/secrets.md) を作成します。これは、値を安全に保ちながら、アカウントへの接続を認証するために使用されます。
 
-次に、[Core ]**拡張機能と**[!UICONTROL  Secret ]**データ要素タイプを使用して ](../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成**[!UICONTROL  し、作成した `Google OAuth 2` シークレットを参照します。
+次に、[Core ]&#x200B;**拡張機能と**&#x200B;[!UICONTROL &#x200B; Secret &#x200B;]&#x200B;**データ要素タイプを使用して (../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成** し、作成した `Google OAuth 2` シークレットを参照します。
 
 ## [!DNL Google Cloud Platform] 拡張機能のインストールと設定 {#install}
 
@@ -42,13 +42,13 @@ ht-degree: 3%
 
 拡張機能がインストールされたら、新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成し、必要に応じてその条件を設定します。 ルールのアクションを設定する際に、**[!UICONTROL Google Cloud Platform]** 拡張機能を選択してから、アクションタイプとして「**[!UICONTROL Send Data to Cloud Pub/Sub]**」を選択します。
 
-![Cloud Pub/Sub にデータを送信 ] アクションがハイライト表示された [!UICONTROL 1}Google Cloud Platform] のアクション設定ビュー ](../../../images/extensions/server/google-cloud-platform/event-action.png)[!UICONTROL 
+![Cloud Pub/Sub にデータを送信 ] アクションがハイライト表示された [!UICONTROL 1&rbrace;Google Cloud Platform] のアクション設定ビュー (../../../images/extensions/server/google-cloud-platform/event-action.png)
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  トピック ] | イベント転送からイベントを受信するトピック。 値の形式は `projects/{projectName}/topics/{topicName}` である必要があります。 |
+| [!UICONTROL &#x200B; トピック &#x200B;] | イベント転送からイベントを受信するトピック。 値の形式は `projects/{projectName}/topics/{topicName}` である必要があります。 |
 | [!UICONTROL データ] | このフィールドには、[!DNL Cloud Pub/Sub] トピックに JSON 形式で転送されるデータが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
-| [!UICONTROL  属性 ] | このフィールドには、メッセージと共に送信される追加の属性を持つ JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
+| [!UICONTROL &#x200B; 属性 &#x200B;] | このフィールドには、メッセージと共に送信される追加の属性を持つ JSON オブジェクトが含まれています。<br><br> 「**[!UICONTROL Raw]**」オプションで、JSON オブジェクトを指定されたテキストフィールドに直接貼り付けるか、データ要素アイコン（![ データセットアイコン ](/help/images/icons/database.png)）を選択して、データを表す既存のデータ要素のリストから選択できます。<br><br> また、「**[!UICONTROL JSON キーと値のペア エディター]**」オプションを使用し、UI エディターを使用して各キーと値のペアを手動で追加することもできます。 各値は、生の入力で表すことも、代わりにデータ要素を選択することもできます。 |
 
 {style="table-layout:auto"}
 

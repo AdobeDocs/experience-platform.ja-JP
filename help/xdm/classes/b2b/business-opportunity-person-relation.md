@@ -9,19 +9,19 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL XDM Business Opportunity ユーザー関係 ] クラス
+# [!UICONTROL XDM Business Opportunity ユーザー関係 &#x200B;] クラス
 
 >[!IMPORTANT]
 >
 >このクラスは、[Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md) にアクセスできる組織で使用することを目的としています。 このクラスを [ リアルタイム顧客プロファイル ](../../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
 
-[!UICONTROL XDM Business Opportunity ユーザー関係 ] は、ビジネスオポチュニティに関連付けられたユーザーの必要最小限のプロパティをキャプチャする、標準のエクスペリエンスデータモデル（XDM）クラスです。
+[!UICONTROL XDM Business Opportunity ユーザー関係 &#x200B;] は、ビジネスオポチュニティに関連付けられたユーザーの必要最小限のプロパティをキャプチャする、標準のエクスペリエンスデータモデル（XDM）クラスです。
 
 ![UI に表示される XDM Business Opportunity ユーザークラスの構造 ](../../images/classes/b2b/business-opportunity-person-relation.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `extSourceSystemAudit` | [[!UICONTROL  外部Source システム監査属性 ]](../../data-types/external-source-system-audit-attributes.md) | ビジネスパーソンの関係が外部ソースシステムから取得されたものである場合、このオブジェクトはそのシステムの監査属性を取得します。 |
+| `extSourceSystemAudit` | [[!UICONTROL &#x200B; 外部Source システム監査属性 &#x200B;]](../../data-types/external-source-system-audit-attributes.md) | ビジネスパーソンの関係が外部ソースシステムから取得されたものである場合、このオブジェクトはそのシステムの監査属性を取得します。 |
 | `opportunityKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 機会とユーザーの関係における機会の複合識別子。 |
 | `opportunityPersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 機会 – 人物関係エンティティの複合識別子。 |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 機会とユーザーの関係におけるユーザーの複合識別子。 |

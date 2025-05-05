@@ -19,7 +19,7 @@ Adobe Experience Platform について詳しくは、[Experience Platform の概
 
 ## ホーム画面
 
-Adobe Experience Platformにログインしたら、[!UICONTROL  指標ダッシュボード ]、[ 最近のデータ ](#metrics)、および [ 推奨されるラーニング ](#recent-data) の各セクションで構成される [ ホーム ](#recommended-learning) ページに移動します。
+Adobe Experience Platformにログインしたら、[!UICONTROL &#x200B; 指標ダッシュボード &#x200B;]、[ 最近のデータ ](#metrics)、および [ 推奨されるラーニング ](#recent-data) の各セクションで構成される [ ホーム ](#recommended-learning) ページに移動します。
 
 ![](images/user-guide/homepage.png)
 
@@ -125,11 +125,11 @@ Experience Platform UI の上部のナビゲーションバーには、現在ロ
 
 「**[!UICONTROL 宛先]**」セクションでは、宛先を作成、更新および削除して、Experience Platformから多くの外部宛先にデータを書き出すことができます。 宛先について詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
 
-### [!UICONTROL  顧客 ]
+### [!UICONTROL &#x200B; 顧客 &#x200B;]
 
-「**[!UICONTROL プロファイル]**」セクションでは、顧客プロファイルの参照、プロファイル指標の表示、結合ポリシーの作成と管理、和集合スキーマの表示を行うことができます。 [!UICONTROL  プロファイル ] の使用について詳しくは、[[!DNL Profile]  ユーザーガイド ](../profile/ui/user-guide.md) を参照してください。 リアルタイム顧客プロファイルについて詳しくは、[ リアルタイム顧客プロファイルの概要 ](../profile/home.md) を参照してください。
+「**[!UICONTROL プロファイル]**」セクションでは、顧客プロファイルの参照、プロファイル指標の表示、結合ポリシーの作成と管理、和集合スキーマの表示を行うことができます。 [!UICONTROL &#x200B; プロファイル &#x200B;] の使用について詳しくは、[[!DNL Profile]  ユーザーガイド ](../profile/ui/user-guide.md) を参照してください。 リアルタイム顧客プロファイルについて詳しくは、[ リアルタイム顧客プロファイルの概要 ](../profile/home.md) を参照してください。
 
-「**[!UICONTROL オーディエンス]**」セクションでは、セグメント定義を作成および管理できます。 [!UICONTROL  オーディエンス ] の使用について詳しくは、[ セグメント化ユーザーガイド ](../segmentation/ui/overview.md) を参照してください。 セグメント化サービスについて詳しくは、[ セグメント化サービスの概要 ](../segmentation/home.md) を参照してください。
+「**[!UICONTROL オーディエンス]**」セクションでは、セグメント定義を作成および管理できます。 [!UICONTROL &#x200B; オーディエンス &#x200B;] の使用について詳しくは、[ セグメント化ユーザーガイド ](../segmentation/ui/overview.md) を参照してください。 セグメント化サービスについて詳しくは、[ セグメント化サービスの概要 ](../segmentation/home.md) を参照してください。
 
 「**[!UICONTROL ID]**」セクションでは、ID 名前空間を作成および管理できます。 ID 名前空間とExperience Platform UI での ID の使用方法に関する情報など、[!UICONTROL ID] の節について詳しくは、[ID 名前空間の概要 ](../identity-service/features/namespaces.md) を参照してください。
 
@@ -147,7 +147,7 @@ Experience Platform UI の上部のナビゲーションバーには、現在ロ
 
 **[!UICONTROL サービス]** セクションでは、スケジュールに沿ったトレーニングやスコアリングを目的とした公開済みモデルを管理したり、パーソナライズされたカスタマーエクスペリエンスをリアルタイムで提供する一連の AI サービスであるAdobe インテリジェントサービスを使用したりできます。 サービスの節について詳しくは、[ サービスとしてのモデルの公開 ](../data-science-workspace/models-recipes/publish-model-service-ui.md) チュートリアルを参照してください。
 
-### [!UICONTROL  データ管理 ]
+### [!UICONTROL &#x200B; データ管理 &#x200B;]
 
 **[!UICONTROL スキーマ]** セクションでは、Experience Data Model （XDM）スキーマを作成および管理できます。 スキーマについて詳しくは、[ スキーマの作成 ](../xdm/tutorials/create-schema-ui.md) のチュートリアルを参照してください。 XDM について詳しくは、[XDM システムの概要 ](../xdm/home.md) を参照してください。
 
@@ -157,7 +157,7 @@ Experience Platform UI の上部のナビゲーションバーには、現在ロ
 
 「**[!UICONTROL 監視]**」セクションでは、バッチ取得とストリーミング取得を監視できます。 監視について詳しくは、[ データ取得ユーザーガイドの監視 ](../ingestion/quality/monitor-data-ingestion.md) を参照してください。
 
-### [!UICONTROL  連合データ ]
+### [!UICONTROL &#x200B; 連合データ &#x200B;]
 
 **[!UICONTROL モデル]** セクションでは、データの構造、関係、制約を定義するデータモデルとスキーマを設計および作成できます。 データモデルとスキーマについて詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas) を参照してください。
 
@@ -168,7 +168,7 @@ Experience Platform UI の上部のナビゲーションバーには、現在ロ
 
 ### [!UICONTROL 決定]
 
-Adobe Journey Optimizerは、Experience Platformを基に構築されたアプリケーションサービスです。 強力な意思決定テクノロジーを使用して、すべてのタッチポイントにわたって適切なタイミングで最高のオファーとエクスペリエンスを顧客に提供できます。 [!UICONTROL  オファー ] および [!UICONTROL  アクティビティの操作など、Journey Optimizerについて詳しくは ]4}Journey Optimizerのドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja) を参照してください。[
+Adobe Journey Optimizerは、Experience Platformを基に構築されたアプリケーションサービスです。 強力な意思決定テクノロジーを使用して、すべてのタッチポイントにわたって適切なタイミングで最高のオファーとエクスペリエンスを顧客に提供できます。 [!UICONTROL &#x200B; オファー &#x200B;] および [!UICONTROL &#x200B; アクティビティの操作など、Journey Optimizerについて詳しくは &#x200B;]4&rbrace;Journey Optimizerのドキュメント [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja) を参照してください。
 
 ### [!UICONTROL 管理]
 

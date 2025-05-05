@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **リクエスト**
 
-このリクエストは、（人口統計の詳細 [[!UICONTROL  フィールドグループ内のフィールドを含むように ] ロイヤルティメンバーのスキーマ ](../field-groups/profile/demographic-details.md) 更新します（`profile-person-details`）。
+このリクエストは、（人口統計の詳細 [[!UICONTROL &#x200B; フィールドグループ内のフィールドを含むように &#x200B;] ロイヤルティメンバーのスキーマ ](../field-groups/profile/demographic-details.md) 更新します（`profile-person-details`）。
 
 `profile-person-details` フィールドグループを追加することで、ロイヤルティメンバースキーマは、名前（名）、名前（姓）、誕生日など、ロイヤルティプログラムメンバーの人口統計情報をキャプチャするようになりました。
 
@@ -325,8 +325,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 このリクエストは、ロイヤルティメンバーのスキーマを更新して、次の標準フィールドグループ内のフィールドを含めます。
 
-* [[!UICONTROL  個人の連絡先の詳細 ]](../field-groups/profile/personal-contact-details.md) （`profile-personal-details`）：住所、メールアドレス、自宅電話などの連絡先情報を追加します。
-* [[!UICONTROL  ロイヤルティの詳細 ]](../field-groups/profile/loyalty-details.md) （`profile-loyalty-details`）：住所、メールアドレス、自宅電話などの連絡先情報を追加します。
+* [[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;]](../field-groups/profile/personal-contact-details.md) （`profile-personal-details`）：住所、メールアドレス、自宅電話などの連絡先情報を追加します。
+* [[!UICONTROL &#x200B; ロイヤルティの詳細 &#x200B;]](../field-groups/profile/loyalty-details.md) （`profile-loyalty-details`）：住所、メールアドレス、自宅電話などの連絡先情報を追加します。
 
 ```SHELL
 curl -X PATCH \
@@ -420,7 +420,7 @@ curl -X PATCH \
 
 ### 新しいフィールドグループを定義
 
-標準の [!UICONTROL  ロイヤルティの詳細 ] フィールドグループには、スキーマに役立つロイヤルティ関連フィールドが用意されていますが、標準のフィールドグループには含まれていない追加のロイヤルティフィールドがあります。
+標準の [!UICONTROL &#x200B; ロイヤルティの詳細 &#x200B;] フィールドグループには、スキーマに役立つロイヤルティ関連フィールドが用意されていますが、標準のフィールドグループには含まれていない追加のロイヤルティフィールドがあります。
 
 これらのフィールドを追加するには、`tenant` コンテナ内に独自のカスタムフィールドグループを定義します。 これらのフィールドグループは組織に固有で、組織外のユーザーには表示も編集もされません。
 
@@ -1384,7 +1384,7 @@ curl -X GET \
 
 このチュートリアル全体で、スキーマは小売ロイヤルティメンバープログラムを説明するために構成されています。
 
-スキーマは、[!DNL XDM Individual Profile] クラスを実装し、複数のフィールドグループを組み合わせます。 標準の [!DNL Demographic Details]、[!UICONTROL  個人の連絡先の詳細 ]、[!UICONTROL  ロイヤルティの詳細 ] フィールドグループを使用したロイヤルティメンバーに関する情報と、チュートリアル中に定義されたカスタムのロイヤルティ層フィールドグループを通じて情報を取得します。
+スキーマは、[!DNL XDM Individual Profile] クラスを実装し、複数のフィールドグループを組み合わせます。 標準の [!DNL Demographic Details]、[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;]、[!UICONTROL &#x200B; ロイヤルティの詳細 &#x200B;] フィールドグループを使用したロイヤルティメンバーに関する情報と、チュートリアル中に定義されたカスタムのロイヤルティ層フィールドグループを通じて情報を取得します。
 
 以下に、完全な「ロイヤルティメンバー」スキーマを JSON 形式で示します。
 

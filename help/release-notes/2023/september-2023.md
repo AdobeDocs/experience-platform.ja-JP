@@ -37,13 +37,13 @@ Experience Platformの既存の機能に対するアップデート：
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 「アラートの履歴」タブ | 「アラート [!UICONTROL  履歴 ]」タブに、遅延、開始、成功、失敗を含むすべてのイベントが含まれるようになりました。 「履歴」タブについて詳しくは、[ アラート UI ドキュメント ](../../observability/alerts/ui.md) を参照してください。 |
+| 「アラートの履歴」タブ | 「アラート [!UICONTROL &#x200B; 履歴 &#x200B;]」タブに、遅延、開始、成功、失敗を含むすべてのイベントが含まれるようになりました。 「履歴」タブについて詳しくは、[ アラート UI ドキュメント ](../../observability/alerts/ui.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 ## データハイジーン {#hygiene}
 
-Experience Platform は、消費者レコードとデータセットをプログラムで削除することで、保存されたデータを管理できる、一連のデータ衛生機能を提供します。UI の [!UICONTROL  データライフサイクル ] ワークスペース、または Data Hygiene API への呼び出しを使用して、データストアを効果的に管理できます。 これらの機能を使用して、情報が期待どおりに使用され、必要な場合は不適切なデータの修正が更新され、組織のポリシーで必要と判断された場合は削除されるようにします。
+Experience Platform は、消費者レコードとデータセットをプログラムで削除することで、保存されたデータを管理できる、一連のデータ衛生機能を提供します。UI の [!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペース、または Data Hygiene API への呼び出しを使用して、データストアを効果的に管理できます。 これらの機能を使用して、情報が期待どおりに使用され、必要な場合は不適切なデータの修正が更新され、組織のポリシーで必要と判断された場合は削除されるようにします。
 
 **新機能**
 
@@ -165,8 +165,8 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| データタイプ | [[!UICONTROL  戻る ]](https://github.com/adobe/xdm/pull/1773/files) | 発行された RMA （返品承認）。 |
-| データタイプ | [[!UICONTROL  返品品目 ]](https://github.com/adobe/xdm/pull/1773/files) | 返品品目の RMA 内の情報（返品承認）。 |
+| データタイプ | [[!UICONTROL &#x200B; 戻る &#x200B;]](https://github.com/adobe/xdm/pull/1773/files) | 発行された RMA （返品承認）。 |
+| データタイプ | [[!UICONTROL &#x200B; 返品品目 &#x200B;]](https://github.com/adobe/xdm/pull/1773/files) | 返品品目の RMA 内の情報（返品承認）。 |
 
 {style="table-layout:auto"}
 
@@ -174,9 +174,9 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明のアップデート |
 | --- | --- | --- |
-| 拡張機能 | [!UICONTROL AJO エンティティフィールド ] | [[!UICONTROL  マルチバリアントのフラグ ]](https://github.com/adobe/xdm/pull/1774/files) が [!UICONTROL AJO エンティティフィールド ] に追加され、バリアントがマルチバリアントかどうかを識別できるようになりました。 |
-| データタイプ | [!UICONTROL  商品リスト項目 ] | 返品承認情報を含むように [[!UICONTROL  返品品目 ]](https://github.com/adobe/xdm/pull/1773/files) が追加されました。 |
-| データタイプ | 注文 | [[!UICONTROL  返品情報 ]](https://github.com/adobe/xdm/pull/1773/files) は、発行された RMA （返品商品承認）を含むように追加されました。 |
+| 拡張機能 | [!UICONTROL AJO エンティティフィールド &#x200B;] | [[!UICONTROL &#x200B; マルチバリアントのフラグ &#x200B;]](https://github.com/adobe/xdm/pull/1774/files) が [!UICONTROL AJO エンティティフィールド &#x200B;] に追加され、バリアントがマルチバリアントかどうかを識別できるようになりました。 |
+| データタイプ | [!UICONTROL &#x200B; 商品リスト項目 &#x200B;] | 返品承認情報を含むように [[!UICONTROL &#x200B; 返品品目 &#x200B;]](https://github.com/adobe/xdm/pull/1773/files) が追加されました。 |
+| データタイプ | 注文 | [[!UICONTROL &#x200B; 返品情報 &#x200B;]](https://github.com/adobe/xdm/pull/1773/files) は、発行された RMA （返品商品承認）を含むように追加されました。 |
 
 {style="table-layout:auto"}
 

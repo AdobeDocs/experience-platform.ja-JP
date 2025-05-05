@@ -25,7 +25,7 @@ ht-degree: 4%
 
 Conversions API を使用するには、**[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) アカウントが必要です。 Business Manager は、広告主が **[!DNL Snapchat]** のマーケティング活動をビジネス全体および外部パートナーと統合するのに役立ちます。 Business Manager アカウントがない場合は、作成に関する **[!DNL Snapchat]** [ ヘルプセンターの記事 ](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) を参照してください。
 
-Snapchat Ads Manager で [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) を設定し、`Pixel ID` を表示するためのアクセス権を持っている必要があります。 `Pixel ID` の詳細については、[!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) の節を参照してください。
+Snapchat Ads Manager で [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) を設定し、`Pixel ID` を表示するためのアクセス権を持っている必要があります。 `Pixel ID` の詳細については、[[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) の節を参照してください。
 
 静的で長期間有効な API トークンが必要です。 このトークンを取得するには、[[!DNL Snapchat] Conversions API ドキュメント ](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) を参照してください。
 
@@ -63,7 +63,7 @@ Snapchat Ads Manager で [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s
 
 3. 拡張機能として **[!UICONTROL Core]** を選択し、データ要素タイプとして **[!UICONTROL Path]** を選択します。
 
-4. ドロップダウンメニューから適切な項目を選択し、右側のパネルの [!UICONTROL  パス ] フィールドに入力して、スキーマ内の目的のデータを参照します。
+4. ドロップダウンメニューから適切な項目を選択し、右側のパネルの [!UICONTROL &#x200B; パス &#x200B;] フィールドに入力して、スキーマ内の目的のデータを参照します。
 
    ![ データ要素の作成画面を示す画像 ](../../../images/extensions/server/snap/create_data_element.png)
 
@@ -93,9 +93,9 @@ Snapchat Ads Manager で [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s
 
 3. 条件を保存した後、Snap Conversion API をトリガーするアクションを追加します。 左側のパネルで以下を行います。
 
-   * [!UICONTROL  拡張機能 ] ドロップダウンメニューを [!UICONTROL Snap Conversions API 拡張機能 ] に設定します。
+   * [!UICONTROL &#x200B; 拡張機能 &#x200B;] ドロップダウンメニューを [!UICONTROL Snap Conversions API 拡張機能 &#x200B;] に設定します。
 
-   * [!UICONTROL  アクションタイプ ] ドロップダウンメニューを [!UICONTROL Web コンバージョンをレポート ] に設定します。
+   * [!UICONTROL &#x200B; アクションタイプ &#x200B;] ドロップダウンメニューを [!UICONTROL Web コンバージョンをレポート &#x200B;] に設定します。
 
    * ルールに適切な名前を付けます。
 

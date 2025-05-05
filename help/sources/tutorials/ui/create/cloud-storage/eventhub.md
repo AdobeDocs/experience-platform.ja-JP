@@ -81,11 +81,11 @@ Adobe Experience Platform ユーザーインターフェイスを使用して [!
 
 ## [!DNL Event Hubs] アカウントを接続
 
-Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] 画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-[!UICONTROL  クラウドストレージ ] カテゴリで、「**[!UICONTROL Azure Event Hubs]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
+[!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「**[!UICONTROL Azure Event Hubs]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
 ![Azure Event Hubs が選択されているソースカタログ ](../../../../images/tutorials/create/eventhub/catalog.png)
 
@@ -111,7 +111,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!TAB  標準認証 ]
 
-標準認証で [!DNL Event Hubs] アカウントを作成するには、[!UICONTROL  アカウント認証 ] ドロップダウンメニューを使用して、**[!UICONTROL 標準認証]** を選択します。 次に、[!UICONTROL SAS キー名 ]、[!UICONTROL SAS キー ]、[!UICONTROL  名前空間 ] の値を指定します。
+標準認証で [!DNL Event Hubs] アカウントを作成するには、[!UICONTROL &#x200B; アカウント認証 &#x200B;] ドロップダウンメニューを使用して、**[!UICONTROL 標準認証]** を選択します。 次に、[!UICONTROL SAS キー名 &#x200B;]、[!UICONTROL SAS キー &#x200B;]、[!UICONTROL &#x200B; 名前空間 &#x200B;] の値を指定します。
 
 認証資格情報を入力したら、「**[!UICONTROL ソースに接続]**」を選択します。
 
@@ -119,7 +119,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 >[!TAB SAS 認証 ]
 
-SAS 認証を使用して [!DNL Event Hubs] アカウントを作成するには、「[!UICONTROL  アカウント認証 ]」ドロップダウンメニューを使用し、「**[!UICONTROL SAS 認証]**」を選択します。 次に、[!UICONTROL SAS キー名 ]、[!UICONTROL SAS キー ]、[!UICONTROL  名前空間 ]、および [!UICONTROL Event Hubs 名 ] の値を指定します。
+SAS 認証を使用して [!DNL Event Hubs] アカウントを作成するには、「[!UICONTROL &#x200B; アカウント認証 &#x200B;]」ドロップダウンメニューを使用し、「**[!UICONTROL SAS 認証]**」を選択します。 次に、[!UICONTROL SAS キー名 &#x200B;]、[!UICONTROL SAS キー &#x200B;]、[!UICONTROL &#x200B; 名前空間 &#x200B;]、および [!UICONTROL Event Hubs 名 &#x200B;] の値を指定します。
 
 認証資格情報を入力したら、「**[!UICONTROL ソースに接続]**」を選択します。
 
@@ -127,13 +127,13 @@ SAS 認証を使用して [!DNL Event Hubs] アカウントを作成するには
 
 >[!TAB Event Hub Azure Active Directory Auth]
 
-Event Hub Azure Active Directory 認証で [!DNL Event Hubs] アカウントを作成するには、「[!UICONTROL  アカウント認証 ]」ドロップダウンメニューを使用して、「**[!UICONTROL Event Hub Azure Active Directory]**」を選択します。 次に、[!UICONTROL  テナント ID]、[!UICONTROL  クライアント ID]、[!UICONTROL  クライアントシークレット値 ]、および [!UICONTROL  名前空間 ] の値を指定します。
+Event Hub Azure Active Directory 認証で [!DNL Event Hubs] アカウントを作成するには、「[!UICONTROL &#x200B; アカウント認証 &#x200B;]」ドロップダウンメニューを使用して、「**[!UICONTROL Event Hub Azure Active Directory]**」を選択します。 次に、[!UICONTROL &#x200B; テナント ID]、[!UICONTROL &#x200B; クライアント ID]、[!UICONTROL &#x200B; クライアントシークレット値 &#x200B;]、および [!UICONTROL &#x200B; 名前空間 &#x200B;] の値を指定します。
 
 ![Azure Event Hub Azure Active Directory 認証 ](../../../../images/tutorials/create/eventhub/active-directory.png)
 
 >[!TAB Azure Active Directory 認証をスコープとするイベント ハブ ]
 
-Event Hub スコープ Azure Active Directory 認証の [!DNL Event Hubs] アカウントを作成するには、[[!UICONTROL  アカウント認証 ]] ドロップダウン メニューを使用し、[**[!UICONTROL Event Hub スコープ Azure Active Directory]**] を選択します。 次に、[!UICONTROL  テナント ID]、[!UICONTROL  クライアント ID]、[!UICONTROL  クライアントシークレット値 ]、[!UICONTROL  名前空間 ]、[!UICONTROL  イベントハブ名 ] の値を指定します。
+Event Hub スコープ Azure Active Directory 認証の [!DNL Event Hubs] アカウントを作成するには、[[!UICONTROL &#x200B; アカウント認証 &#x200B;]] ドロップダウン メニューを使用し、[**[!UICONTROL Event Hub スコープ Azure Active Directory]**] を選択します。 次に、[!UICONTROL &#x200B; テナント ID]、[!UICONTROL &#x200B; クライアント ID]、[!UICONTROL &#x200B; クライアントシークレット値 &#x200B;]、[!UICONTROL &#x200B; 名前空間 &#x200B;]、[!UICONTROL &#x200B; イベントハブ名 &#x200B;] の値を指定します。
 
 ![Azure Activity Directory 認証を範囲とする Azure イベントハブ ](../../../../images/tutorials/create/eventhub/scoped.png)
 

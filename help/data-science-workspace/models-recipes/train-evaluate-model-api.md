@@ -26,7 +26,7 @@ ht-degree: 79%
 
 API を使用したモデルのトレーニングと評価に必要なエンジンを作成するには、[API を使用してパッケージ化されたレシピをインポート](./import-packaged-recipe-api.md)します。
 
-API 呼び出しの作成を開始するには ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)[Experience PlatformAPI 認証のチュートリアルに従います。
+API 呼び出しの作成を開始するには [&#128279;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja)Experience PlatformAPI 認証のチュートリアルに従います。
 
 このチュートリアルから、次の値を入手できます。
 

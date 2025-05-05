@@ -11,9 +11,9 @@ ht-degree: 35%
 
 ---
 
-# [!UICONTROL  住所 ] データタイプ
+# [!UICONTROL &#x200B; 住所 &#x200B;] データタイプ
 
-[!UICONTROL  郵送先住所 ] は、郵送先住所の詳細を記述する標準の XDM データタイプです。
+[!UICONTROL &#x200B; 郵送先住所 &#x200B;] は、郵送先住所の詳細を記述する標準の XDM データタイプです。
 
 ![](../images/data-types/postal-address.png){width=450}
 

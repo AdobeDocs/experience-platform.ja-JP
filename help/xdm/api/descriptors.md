@@ -301,7 +301,7 @@ curl -X DELETE \
 
 #### ID 記述子
 
-ID 記述子は、[Adobe Experience Platform ID サービス ] で説明されているように、「[!UICONTROL sourceSchema]」の「[!UICONTROL sourceProperty](../../identity-service/home.md)」が [!DNL Identity] フィールドであることを示します。
+ID 記述子は、[Adobe Experience Platform ID サービス ] で説明されているように、「[!UICONTROL sourceSchema]」の「[[!UICONTROL sourceProperty]](../../identity-service/home.md)」が [!DNL Identity] フィールドであることを示します。
 
 ```json
 {
@@ -461,7 +461,7 @@ Real-Time CDP B2B editionでは、スキーマ間の関係を定義する別の�
 
 #### 非推奨のフィールド記述子
 
-該当するフィールドに `deprecated` に設定された `meta:status` 属性を追加することで ](../tutorials/field-deprecation-api.md#custom) カスタム XDM リソース内のフィールドを非推奨（廃止予定 [ にすることができます。 ただし、スキーマ内の標準 XDM リソースで提供されるフィールドを非推奨（廃止予定）にする場合は、当該のスキーマに非推奨（廃止予定）のフィールド記述子を割り当てて、同じ効果を得ることができます。 [correct `Accept` ヘッダー ](../tutorials/field-deprecation-api.md#verify-deprecation) を使用すると、API で検索する際に、スキーマで非推奨になっている標準フィールドを表示できます。
+該当するフィールドに `deprecated` に設定された `meta:status` 属性を追加することで [&#128279;](../tutorials/field-deprecation-api.md#custom) カスタム XDM リソース内のフィールドを非推奨（廃止予定  にすることができます。 ただし、スキーマ内の標準 XDM リソースで提供されるフィールドを非推奨（廃止予定）にする場合は、当該のスキーマに非推奨（廃止予定）のフィールド記述子を割り当てて、同じ効果を得ることができます。 [correct `Accept` ヘッダー ](../tutorials/field-deprecation-api.md#verify-deprecation) を使用すると、API で検索する際に、スキーマで非推奨になっている標準フィールドを表示できます。
 
 ```json
 {

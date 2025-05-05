@@ -11,13 +11,13 @@ ht-degree: 19%
 
 ---
 
-# [!UICONTROL  キャンペーンマーケティング詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; キャンペーンマーケティング詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL  キャンペーンマーケティング詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、キャンペーングループ、名前、トラッキングコードなどのマーケティングキャンペーン情報を記述するために使用されます。
+[!UICONTROL &#x200B; キャンペーンマーケティング詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、キャンペーングループ、名前、トラッキングコードなどのマーケティングキャンペーン情報を記述するために使用されます。
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 

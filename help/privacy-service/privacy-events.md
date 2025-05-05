@@ -37,7 +37,7 @@ Adobe Experience Platform [!DNL Privacy Service] が提供するメッセージ�
 
 [!DNL Privacy Service Events] を受け取るには、Adobe Developer Consoleを使用して、[!DNL Privacy Service] 統合に Webhook を登録する必要があります。
 
-これを実現する方法の手順について詳しくは、[[!DNL I/O イベント ] 通知のサブスクライブ ](../observability/alerts/subscribe.md) に関するチュートリアルに従ってください。 上記のイベントにアクセスするには、イベントプロバイダーとして ]**0}Privacy Serviceイベント } を選択してください。**[!UICONTROL 
+これを実現する方法の手順について詳しくは、[[!DNL I/O イベント &#x200B;] 通知のサブスクライブ ](../observability/alerts/subscribe.md) に関するチュートリアルに従ってください。 上記のイベントにアクセスするには、イベントプロバイダーとして **0&rbrace;Privacy Serviceイベント &rbrace; を選択してください。**
 
 ## [!DNL Privacy Service Event] 通知を受信
 

@@ -33,4 +33,4 @@ Experience Platform UI で、左側のナビゲーションから **[!UICONTROL 
 
 データの取り込みを開始する準備が整ったら、[CSV ファイルの XDM へのマッピング ](../../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照して、フラットデータファイル（CSV など）を XDM スキーマにマッピングし、Experience Platformに取り込む方法を確認してください。 または、[ ソース接続 ](../../sources/home.md) を確立して、外部ソースからデータを取り込み、XDM にマッピングすることもできます。
 
-UI の [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](./overview.md) を参照してください。
+UI の [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの機能について詳しくは、[[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの概要 ](./overview.md) を参照してください。

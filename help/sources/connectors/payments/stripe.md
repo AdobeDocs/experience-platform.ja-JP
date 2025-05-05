@@ -42,7 +42,7 @@ Experience Platformの [!DNL Stripe] ソースを使用して、顧客の購入�
 
 ### アクセストークンの取得
 
-* [!DNL Stripe] メールアドレスとパスワードを使用して ](https://dashboard.stripe.com/login) ダッシュボード [[!DNL Stripe]  にログインします。
+* [!DNL Stripe] メールアドレスとパスワードを使用して [&#128279;](https://dashboard.stripe.com/login) ダッシュボード [!DNL Stripe]  にログインします。
 * [!DNL Developers] ダッシュボードで、「**[!DNL API keys for developers]**」を選択します。
 * 「**API キー**」タブで、「**[!DNL Reveal test key]**」を選択してアクセストークンを表示します。
 * [!DNL Flow Service] API またはExperience PlatformUI を使用して [!DNL Stripe] アカウントをExperience Platformに接続する際に、このトークンをアクセストークンとして使用できるようになりました。
@@ -364,7 +364,7 @@ Experience Platformユーザーインターフェイスを使用して [!DNL Str
 
 >[!TAB  残高取引 ]
 
-[!DNL Stripe] えば、**残高取引** は、[!DNL Stripe] 勘定間の資金の移動を表します。 特定の残高取引属性について詳しくは ](https://docs.stripe.com/api/balance_transactions) 残高取引に関する [[!DNL Stripe] API ガイド」を参照してください。
+[!DNL Stripe] えば、**残高取引** は、[!DNL Stripe] 勘定間の資金の移動を表します。 特定の残高取引属性について詳しくは [&#128279;](https://docs.stripe.com/api/balance_transactions) 残高取引に関する [!DNL Stripe] API ガイド」を参照してください。
 
 +++オンにすると、Stripe残高取引オブジェクトが表示されます
 

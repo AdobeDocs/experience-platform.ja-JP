@@ -125,23 +125,23 @@ OAuth2 シークレットを作成するには、「**[!UICONTROL タイプ]**�
 
 OAuth 2 JWT 秘密鍵を作成するには、「**[!UICONTROL タイプ]**」ドロップダウンから **[!UICONTROL OAuth 2 JWT]** を選択します。
 
-![[!UICONTROL  タイプ ] ドロップダウンでハイライト表示された OAuth 2 JWT 秘密鍵を含む [!UICONTROL  秘密鍵を作成 ] タブ ](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![[!UICONTROL &#x200B; タイプ &#x200B;] ドロップダウンでハイライト表示された OAuth 2 JWT 秘密鍵を含む [!UICONTROL &#x200B; 秘密鍵を作成 &#x200B;] タブ ](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
->現在 JWT への署名でサポートされている [!UICONTROL  アルゴリズム ] は RS256 のみです。
+>現在 JWT への署名でサポートされている [!UICONTROL &#x200B; アルゴリズム &#x200B;] は RS256 のみです。
 
-以下に表示されるフィールドに、[!UICONTROL  発行者 ]、[!UICONTROL  件名 ]、[!UICONTROL  オーディエンス ]、[!UICONTROL  カスタム要求 ]、[!UICONTROL TTL] を入力し、ドロップダウンから [!UICONTROL  アルゴリズム ] を選択します。 次に、OAuth 統合の [!UICONTROL  秘密鍵 ID] と [[!UICONTROL  トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) を入力します。 [!UICONTROL  トークン URL] フィールドは必須フィールドではありません。 値を指定すると、JWT がアクセストークンと交換されます。 秘密鍵は、応答の `expires_in` 属性と [!UICONTROL  更新オフセット ] 値に従って更新されます。 値を指定しない場合、エッジにプッシュされる秘密鍵は JWT です。 [!UICONTROL TTL] および [!UICONTROL  更新オフセット ] 値に従って JWT が更新されます。
+以下に表示されるフィールドに、[!UICONTROL &#x200B; 発行者 &#x200B;]、[!UICONTROL &#x200B; 件名 &#x200B;]、[!UICONTROL &#x200B; オーディエンス &#x200B;]、[!UICONTROL &#x200B; カスタム要求 &#x200B;]、[!UICONTROL TTL] を入力し、ドロップダウンから [!UICONTROL &#x200B; アルゴリズム &#x200B;] を選択します。 次に、OAuth 統合の [!UICONTROL &#x200B; 秘密鍵 ID] と [[!UICONTROL &#x200B; トークン URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) を入力します。 [!UICONTROL &#x200B; トークン URL] フィールドは必須フィールドではありません。 値を指定すると、JWT がアクセストークンと交換されます。 秘密鍵は、応答の `expires_in` 属性と [!UICONTROL &#x200B; 更新オフセット &#x200B;] 値に従って更新されます。 値を指定しない場合、エッジにプッシュされる秘密鍵は JWT です。 [!UICONTROL TTL] および [!UICONTROL &#x200B; 更新オフセット &#x200B;] 値に従って JWT が更新されます。
 
-![ 入力フィールドの選択がハイライト表示された [!UICONTROL  秘密鍵を作成 ] タブ。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![ 入力フィールドの選択がハイライト表示された [!UICONTROL &#x200B; 秘密鍵を作成 &#x200B;] タブ。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
 **[!UICONTROL 認証情報オプション]** の下で、キーと値のペアの形式で `jwt_param` すなど、他の認証情報オプションを提供できます。 キーと値のペアを追加するには、「**[!UICONTROL さらに追加]**」を選択します。
 
-![ 資格情報オプション  フィールドがハイライト表示された [!UICONTROL  秘密鍵を作成 ] タブ。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![ 資格情報オプション  フィールドがハイライト表示された [!UICONTROL &#x200B; 秘密鍵を作成 &#x200B;] タブ。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
 最後に、シークレットの&#x200B;**[!UICONTROL 更新オフセット]**&#x200B;値を設定できます。これは、トークンの有効期限が切れる前に、システムが自動更新を実行する秒数を表します。同等の時間（時間と分）がフィールドの右側に表示され、入力中に自動で更新されます。
 
-![ 「[!UICONTROL  オフセットを更新 ] フィールドをハイライト表示した [!UICONTROL  秘密鍵を作成 ] タブ ](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![ 「[!UICONTROL &#x200B; オフセットを更新 &#x200B;] フィールドをハイライト表示した [!UICONTROL &#x200B; 秘密鍵を作成 &#x200B;] タブ ](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
 例えば、更新オフセットがデフォルト値の `1800` （30 分）に設定されていて、アクセストークンの `expires_in` 値が `3600` （1 時間）の場合、システムは 1 時間で自動的に秘密鍵を更新します。
 
@@ -153,7 +153,7 @@ OAuth 2 JWT 秘密鍵を作成するには、「**[!UICONTROL タイプ]**」ド
 
 終了したら、「**[!UICONTROL 秘密鍵の作秘]**」を選択し、秘密鍵を保存します。
 
-![ シークレットの作成 [!UICONTROL  がハイライト表示された ] シークレットの作成 [!UICONTROL  タブ ]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![ シークレットの作成 [!UICONTROL &#x200B; がハイライト表示された &#x200B;] シークレットの作成 [!UICONTROL &#x200B; タブ &#x200B;]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth2] {#google-oauth2}
 
@@ -180,9 +180,9 @@ Google アカウントの資格情報を入力するためのダイアログが�
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
-[!DNL LinkedIn] しい OAuth2 シークレットを作成す **[!UICONTROL [!DNL LinkedIn]には、「**[!UICONTROL  タイプ ]**」ドロップダウンから「OAuth2]**」を選択します。 次に、「秘密鍵を作成 **[!UICONTROL を選択し]** す。
+[!DNL LinkedIn] しい OAuth2 シークレットを作成す **[!UICONTROL [!DNL LinkedIn]には、「**&#x200B;[!UICONTROL &#x200B; タイプ &#x200B;]&#x200B;**」ドロップダウンから「OAuth2]**」を選択します。 次に、「秘密鍵を作成 **[!UICONTROL を選択し]** す。
 
-![[!UICONTROL  タイプ ] フィールドがハイライト表示された [!UICONTROL  秘密鍵を作成 ] タブ。](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+![[!UICONTROL &#x200B; タイプ &#x200B;] フィールドがハイライト表示された [!UICONTROL &#x200B; 秘密鍵を作成 &#x200B;] タブ。](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
 秘密鍵を [!DNL LinkedIn] で手動で認証する必要があることを示すポップオーバーが表示されます。 **[!UICONTROL [!DNL LinkedIn]]** で秘密鍵を作成して認証」を選択して続行します。
 
@@ -192,7 +192,7 @@ Google アカウントの資格情報を入力するためのダイアログが�
 
 認証プロセスが完了すると、「**[!UICONTROL 秘密鍵]**」タブに戻り、新しく作成した秘密鍵を確認できます。 ここでは、秘密鍵のステータスと有効期限の日付を確認できます。
 
-![ 新しく作成した秘密鍵がハイライト表示された [!UICONTROL  秘密鍵 ] タブ。](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+![ 新しく作成した秘密鍵がハイライト表示された [!UICONTROL &#x200B; 秘密鍵 &#x200B;] タブ。](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
 #### [!UICONTROL [!DNL LinkedIn] OAuth 2] 秘密鍵の再認証
 
@@ -202,11 +202,11 @@ Google アカウントの資格情報を入力するためのダイアログが�
 
 再認証が必要な秘密鍵の 3 か月前に、プロパティの任意のページを移動すると、ポップアップが表示され始めます。 **[!UICONTROL ここをクリックしてシークレットに移動]** を選択します。
 
-![ 秘密鍵の再認証ポップアップをハイライト表示した [!UICONTROL  プロパティの概要 ] タブ。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+![ 秘密鍵の再認証ポップアップをハイライト表示した [!UICONTROL &#x200B; プロパティの概要 &#x200B;] タブ。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
 
-「[!UICONTROL  秘密鍵 ] タブにリダイレクトされます。 このページにリストされている秘密鍵は、再認証する必要がある秘密鍵のみを表示するようにフィルタリングされます。 再認証する必要がある秘密鍵の **[!UICONTROL 認証必要]** を選択します。
+「[!UICONTROL &#x200B; 秘密鍵 &#x200B;] タブにリダイレクトされます。 このページにリストされている秘密鍵は、再認証する必要がある秘密鍵のみを表示するようにフィルタリングされます。 再認証する必要がある秘密鍵の **[!UICONTROL 認証必要]** を選択します。
 
-![[!UICONTROL  [!DNL LinkedIn] ーザーシークレットの [!UICONTROL  認証が必要 ] を強調表示した ] シークレット ](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png) タブ
+![[!UICONTROL &#x200B; [!DNL LinkedIn] ーザーシークレットの [!UICONTROL &#x200B; 認証が必要 &#x200B;] を強調表示した &#x200B;] シークレット ](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png) タブ
 
 [!DNL LinkedIn] 資格情報を入力するよう求めるダイアログが表示されます。 画面の指示に従って、秘密鍵を再認証します。
 

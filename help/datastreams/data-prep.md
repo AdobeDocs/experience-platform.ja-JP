@@ -32,7 +32,7 @@ Web ページから送信されるすべてのデータは、XDM としてExperi
 
 既存のデータレイヤーは、`sendEvent` コマンド内の [`data`](/help/web-sdk/commands/sendevent/data.md) オブジェクトを使用して送信する必要があります。
 
-タグを使用する場合は、**[!UICONTROL Web SDK タグ拡張機能のドキュメント ](/help/tags/extensions/client/web-sdk/action-types.md) に記載されているように、**[!UICONTROL  イベントを送信 ]**アクションタイプの [ データ]** フィールドを使用する必要があります。
+タグを使用する場合は、**[[!UICONTROL Web SDK タグ拡張機能のドキュメント &#x200B;]](/help/tags/extensions/client/web-sdk/action-types.md) に記載されているように、**&#x200B;[!UICONTROL &#x200B; イベントを送信 &#x200B;]&#x200B;**アクションタイプの [ データ]** フィールドを使用する必要があります。
 
 このガイドの残りの部分では、WebSDK によって送信されたデータレイヤーを XDM 標準にマッピングする方法について重点的に説明します。
 

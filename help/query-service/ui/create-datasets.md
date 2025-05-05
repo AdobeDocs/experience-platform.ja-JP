@@ -26,13 +26,13 @@ Adobe Experience Platform ユーザーインターフェイス（UI）からデ�
 
 3. クエリの詳細パネルで、「**[!UICONTROL CTAS として実行]**」を選択します。
 
-   ![ 「選択 [!UICONTROL CTAS として実行 ]」がハイライト表示されたクエリワークスペース [!UICONTROL  「テンプレート ]」タブ ](../images/ui/create-datasets/run-as-ctas.png)
+   ![ 「選択 [!UICONTROL CTAS として実行 &#x200B;]」がハイライト表示されたクエリワークスペース [!UICONTROL &#x200B; 「テンプレート &#x200B;]」タブ ](../images/ui/create-datasets/run-as-ctas.png)
 
 4. 表示されるダイアログで、先頭に LDAP ID が追加されたデータセット名を入力します。 データセット名は、一意である必要も、SQL セーフである必要もありません。 なお、データセットのテーブル名は、ここで作成したデータセット名に基づいて生成されます。
 
-5. 次に、データセットの説明を「[!UICONTROL  説明 ]」フィールドに入力し、「**[!UICONTROL CTAS として実行]**」を選択します。
+5. 次に、データセットの説明を「[!UICONTROL &#x200B; 説明 &#x200B;]」フィールドに入力し、「**[!UICONTROL CTAS として実行]**」を選択します。
 
-   ![ データセットの詳細と [!UICONTROL CTAS として実行 ] がハイライト表示されたデータセットを出力ダイアログ ](../images/ui/create-datasets/run-query.png)
+   ![ データセットの詳細と [!UICONTROL CTAS として実行 &#x200B;] がハイライト表示されたデータセットを出力ダイアログ ](../images/ui/create-datasets/run-query.png)
 
 6. クエリの実行が完了したら、**[!UICONTROL データセット]**&#x200B;に移動して、作成したデータセットを表示します。 Experience Platform UI 内でデータセットを操作する際に一般的なアクションを実行する方法について詳しくは、[ データセット UI ガイド ](../../catalog/datasets/user-guide.md) を参照してください。
 

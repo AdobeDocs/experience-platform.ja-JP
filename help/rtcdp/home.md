@@ -29,7 +29,7 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 >[!TAB ユースケースのプレイブック]
 
-[!UICONTROL  ユースケースプレイブック ] 機能が、すべてのReal-Time CDPおよびAdobe Journey Optimizerのお客様で一般公開されました。 [!UICONTROL  ユースケースプレイブック ] は、Real-Time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題を克服するのを支援するように設計されています。 どこから始めればよいのか、目的のユースケースに合った適切なアセットの作成方法がわからない場合は、ユースケースプレイブックを使用すると、インスピレーションを得て様々なアセットを作成し、準備ができたときにテストして実稼動環境に読み込むことができます。
+[!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] 機能が、すべてのReal-Time CDPおよびAdobe Journey Optimizerのお客様で一般公開されました。 [!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] は、Real-Time Customer Data PlatformまたはAdobe Journey Optimizerの使用を開始する際の課題を克服するのを支援するように設計されています。 どこから始めればよいのか、目的のユースケースに合った適切なアセットの作成方法がわからない場合は、ユースケースプレイブックを使用すると、インスピレーションを得て様々なアセットを作成し、準備ができたときにテストして実稼動環境に読み込むことができます。
 
 [![画像](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
 

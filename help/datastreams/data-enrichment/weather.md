@@ -11,7 +11,7 @@ ht-degree: 68%
 
 # [!DNL The Weather Channel] からの気象データによるデータ収集の強化
 
-アドビは [!DNL [The Weather Company]](https://www.ibm.com/weather) と提携し、データストリームを通じて収集されたデータに、米国の気象に関するコンテキストを追加しました。このデータは、Experience Platformでの分析、ターゲティングおよびオーディエンスの作成に使用できます。
+アドビは [[!DNL [The Weather Company]]](https://www.ibm.com/weather) と提携し、データストリームを通じて収集されたデータに、米国の気象に関するコンテキストを追加しました。このデータは、Experience Platformでの分析、ターゲティングおよびオーディエンスの作成に使用できます。
 
 [!DNL The Weather Channel] から使用できるデータには、次の 3 つのタイプがあります。
 

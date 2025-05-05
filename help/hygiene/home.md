@@ -22,21 +22,21 @@ Adobe Experience Platform では、カスタマーエクスペリエンスを調
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
-これらのアクティビティは、[[!UICONTROL  データライフサイクル ] UI ワークスペース ](#ui) または [Data Hygiene API](#api) を使用して実行できます。 データ・ライフサイクル・ジョブが実行されると、システムはプロセスの各ステップで透明性を更新します。 各ジョブタイプがシステム上でどのように表現されるかについて詳しくは、[タイムラインと透明性](#timelines-and-transparency)の節を参照してください。
+これらのアクティビティは、[[!UICONTROL &#x200B; データライフサイクル &#x200B;] UI ワークスペース ](#ui) または [Data Hygiene API](#api) を使用して実行できます。 データ・ライフサイクル・ジョブが実行されると、システムはプロセスの各ステップで透明性を更新します。 各ジョブタイプがシステム上でどのように表現されるかについて詳しくは、[タイムラインと透明性](#timelines-and-transparency)の節を参照してください。
 
 >[!NOTE]
 >
 >Advanced Data Lifecycle Management では、[ データセット有効期限エンドポイント ](./api/dataset-expiration.md) を介したデータセット削除、および [workorder エンドポイント ](./api/workorder.md) を介したプライマリ ID を使用した ID 削除（行レベルデータ）をサポートしています。 また、Experience Platform UI を使用して [ データセットの有効期限 ](./ui/dataset-expiration.md) および [ レコードの削除 ](./ui/record-delete.md) を管理することもできます。 詳しくは、リンクされたドキュメントを参照してください。 なお、データライフサイクルはバッチ削除をサポートしていません。
 
-## [!UICONTROL  データライフサイクル ] UI ワークスペース {#ui}
+## [!UICONTROL &#x200B; データライフサイクル &#x200B;] UI ワークスペース {#ui}
 
-Experience Platform UI の [!UICONTROL  データライフサイクル ] ワークスペースを使用すると、データライフサイクルの設定とスケジュール設定ができ、レコードが期待どおりにメンテナンスされていることを確認するのに役立ちます。
+Experience Platform UI の [!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペースを使用すると、データライフサイクルの設定とスケジュール設定ができ、レコードが期待どおりにメンテナンスされていることを確認するのに役立ちます。
 
 UI でデータライフサイクルタスクを管理する手順について詳しくは、[ データライフサイクル UI ガイド ](./ui/overview.md) を参照してください。
 
 ## Data Hygiene API {#api}
 
-[!UICONTROL  データライフサイクル ] UI は、Data Hygiene API をベースに構築されており、そのエンドポイントは、データライフサイクルアクティビティを自動化したい場合に、直接使用できます。 詳しくは、[Data Hygiene API ガイド](./api/overview.md)を参照してください。
+[!UICONTROL &#x200B; データライフサイクル &#x200B;] UI は、Data Hygiene API をベースに構築されており、そのエンドポイントは、データライフサイクルアクティビティを自動化したい場合に、直接使用できます。 詳しくは、[Data Hygiene API ガイド](./api/overview.md)を参照してください。
 
 ## タイムラインと透明性 {#timelines-and-transparency}
 
@@ -46,7 +46,7 @@ UI でデータライフサイクルタスクを管理する手順について�
 
 | 段階 | スケジュールされた有効期限後の経過時間 | 説明 |
 | --- | --- | --- |
-| リクエストが送信される | 0 時間 | データセットが指定の時間に有効期限切れになるように求めるリクエストをデータスチュワードまたはプライバシーアナリストが送信します。 リクエストは送信後、[!UICONTROL  データライフサイクル UI] に表示され、スケジュールされた有効期限まで保留状態のままになり、期限後にリクエストが実行されます。 |
+| リクエストが送信される | 0 時間 | データセットが指定の時間に有効期限切れになるように求めるリクエストをデータスチュワードまたはプライバシーアナリストが送信します。 リクエストは送信後、[!UICONTROL &#x200B; データライフサイクル UI] に表示され、スケジュールされた有効期限まで保留状態のままになり、期限後にリクエストが実行されます。 |
 | データセットに削除フラグが設定されています | 0 ～ 2 時間 | リクエストが実行されると、データセットに削除のフラグが付けられます。 Amazon Web Services（AWS）のデータストレージを使用する場合、このプロセスには最大 2 時間かかります。 この間、バッチやストリーミングのセグメント化、プレビューや見積もり、書き出し、アクセスなどの操作では、このデータセットが無視されます。 |
 | データセットがドロップされる | 3 時間 | **データセットに削除のフラグが付けられてから 1 時間後**、データセットはシステムから完全に削除されます。 この時点で、UI の [ データセットインベントリページ ](../catalog/datasets/user-guide.md) からデータセットがドロップされます。 ただし、データレイク内のデータは、この段階でソフト削除されるだけで、ハード削除プロセスが完了するまで残ります。 |
 | プロファイル数が更新される | 30 時間 | 削除するデータセットの内容に応じて、すべてのコンポーネント属性がそのデータセットに関連付けられている場合、一部のプロファイルがシステムから削除されることがあります。 データセットが削除されてから 30 時間が経過すると、結果として生じるプロファイル数全体の変更が、 [ダッシュボードウィジェット](../dashboards/guides/profiles.md#profile-count-trend)やその他のレポートに反映されます。 |

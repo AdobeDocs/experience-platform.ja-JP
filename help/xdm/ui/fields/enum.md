@@ -24,11 +24,11 @@ ht-degree: 8%
 
 列挙とは異なり、「**[!UICONTROL 推奨値]**」オプションを使用すると、取り込む値を制限しない文字列フィールドの推奨値セットを示すことができます。 代わりに、文字列フィールドを属性として含める場合、推奨値は、[ セグメント化 UI](../../../segmentation/ui/overview.md) で使用できる事前定義済みの値に影響を与えます。
 
-Adobe Experience Platform ユーザーインターフェイスで [ 新しいフィールドを定義 ](./overview.md#define) し、タイプを [!UICONTROL  文字列 ] に設定すると、そのフィールドの [enum](#enum) または [ 推奨値 ](#suggested-values) を定義するオプションが提供されます。
+Adobe Experience Platform ユーザーインターフェイスで [ 新しいフィールドを定義 ](./overview.md#define) し、タイプを [!UICONTROL &#x200B; 文字列 &#x200B;] に設定すると、そのフィールドの [enum](#enum) または [ 推奨値 ](#suggested-values) を定義するオプションが提供されます。
 
 ![UI の文字列フィールドに対して「列挙と推奨値」オプションが有効になっている様子を示す画像 ](../../images/ui/fields/enum/enum-options-selected.png)
 
-このドキュメントでは、[!UICONTROL  スキーマ ] UI ワークスペースで列挙と推奨値を定義する方法を説明します。 UI での設定方法やダウンストリーム効果など、列挙と推奨値の概要については、次のビデオをご覧ください。
+このドキュメントでは、[!UICONTROL &#x200B; スキーマ &#x200B;] UI ワークスペースで列挙と推奨値を定義する方法を説明します。 UI での設定方法やダウンストリーム効果など、列挙と推奨値の概要については、次のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 

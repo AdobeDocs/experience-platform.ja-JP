@@ -18,7 +18,7 @@ Adobe Experience Platform のユーザーインターフェイス（UI）では�
 >
 >ダッシュボードに加えられた更新は、組織ごとおよびサンドボックス別に行われます。
 
-このガイドでは、Experience Platform UI の [!UICONTROL  プロファイル ]、[!UICONTROL  セグメント ]、[!UICONTROL  宛先 ] の各ダッシュボードでダッシュボードデータを表示する方法をカスタマイズする手順を説明します。
+このガイドでは、Experience Platform UI の [!UICONTROL &#x200B; プロファイル &#x200B;]、[!UICONTROL &#x200B; セグメント &#x200B;]、[!UICONTROL &#x200B; 宛先 &#x200B;] の各ダッシュボードでダッシュボードデータを表示する方法をカスタマイズする手順を説明します。
 
 ## はじめに
 

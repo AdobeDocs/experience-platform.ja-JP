@@ -92,7 +92,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 ### Interactive Experience Platform API ドキュメント {#interactive-api-documentation}
 
-[Experience Platform API ドキュメント ](https://developer.adobe.com/experience-platform-apis/) が完全にインタラクティブになり、API リファレンスドキュメントページで直接認証して API を調べることができるようになりました。 これで、目的の API リファレンスドキュメントページに移動し、API 認証資格情報を作成または取得して、**[!UICONTROL 試す]** ブロックに貼り付け、呼び出しを実行できます。 1 つのページ上のすべて。 機能について ](/help/landing/api-authentication.md#get-credentials-functionality) 詳細を参照 [。
+[Experience Platform API ドキュメント ](https://developer.adobe.com/experience-platform-apis/) が完全にインタラクティブになり、API リファレンスドキュメントページで直接認証して API を調べることができるようになりました。 これで、目的の API リファレンスドキュメントページに移動し、API 認証資格情報を作成または取得して、**[!UICONTROL 試す]** ブロックに貼り付け、呼び出しを実行できます。 1 つのページ上のすべて。 機能について [&#128279;](/help/landing/api-authentication.md#get-credentials-functionality) 詳細を参照 。
 
 ### Experience Leagueの新しい目次 {#new-table-of-contents-on-experience-league}
 

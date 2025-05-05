@@ -16,8 +16,8 @@ ht-degree: 0%
 `orgID` を見つけるには：
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
-1. Adobe Experience Cloud内の任意の場所で、**`[Ctrl]`** + **`[I]`** キーを押します。 [!UICONTROL  ユーザーデータデバッガー ] ウィンドウが開きます。
-1. [!UICONTROL  現在の組織 ID](../../assets/copy.png) の横にある「**[!UICONTROL コピー]**![ コピー ] をクリックするか、「**[!UICONTROL 割り当てられた組織]**」タブをクリックして、アクセスできる他の組織 ID を表示します。
+1. Adobe Experience Cloud内の任意の場所で、**`[Ctrl]`** + **`[I]`** キーを押します。 [!UICONTROL &#x200B; ユーザーデータデバッガー &#x200B;] ウィンドウが開きます。
+1. ![[!UICONTROL &#x200B; 現在の組織 ID]](../../assets/copy.png) の横にある「**[!UICONTROL コピー]**&#x200B;[ コピー ] をクリックするか、「**[!UICONTROL 割り当てられた組織]**」タブをクリックして、アクセスできる他の組織 ID を表示します。
 1. 目的の情報の検索が終了したら、「閉じる **[!UICONTROL をクリックし]** す。
 
 組織 ID は常に 24 文字の英数字から成る文字列で、末尾は常に `@AdobeOrg` になります。
@@ -29,7 +29,7 @@ ht-degree: 0%
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 &#x200B;] をクリックします。
 1. 上部の「[!UICONTROL IMS 組織 ID]」テキストフィールドに目的の組織 ID を入力します。
 1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 

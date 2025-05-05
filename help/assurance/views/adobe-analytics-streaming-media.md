@@ -36,7 +36,7 @@ Analytics でデータが処理されると、処理後のステータスとデ�
 
 ![設定](./images/adobe-analytics-streaming-media/configure.png)
 
-追加したら、「**[!UICONTROL Adobe Analytics**[!UICONTROL 」セクションの ]**Media Analytics イベント]** ビューを選択して、セッショントラッキングを検証します。
+追加したら、「**[!UICONTROL Adobe Analytics**&#x200B;[!UICONTROL 」セクションの &#x200B;]&#x200B;**Media Analytics イベント]** ビューを選択して、セッショントラッキングを検証します。
 
 ![ 選択 ](./images/adobe-analytics-streaming-media/select.png)
 

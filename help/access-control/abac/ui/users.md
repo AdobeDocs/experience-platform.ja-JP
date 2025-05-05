@@ -20,17 +20,17 @@ ht-degree: 15%
 
 ユーザーの詳細と割り当てられた役割を表示する場合は、「**[!UICONTROL ユーザー]**」タブを選択します。
 
-![ 「ユーザー [!UICONTROL  タブがハイライト表示されたユーザーペ ] ジ ](../../images/flac-ui/flac-users-tab.png)
+![ 「ユーザー [!UICONTROL &#x200B; タブがハイライト表示されたユーザーペ &#x200B;] ジ ](../../images/flac-ui/flac-users-tab.png)
 
 ユーザーのリストが表示されます。 表示するユーザーをリストから選択します。 または、検索バーを使用して、名前またはメールアドレスを入力してユーザーを検索します。
 
 「詳細」タブには、ユーザーの概要が表示されます。 概要には、ユーザー名、アカウントタイプ、電子メール、認証 ID、連絡先情報および場所の詳細が表示されます。
 
-![ 「詳細 [!UICONTROL  タブとユーザープロファイルがハイライト表示され ] ユーザーの詳細ページ ](../../images/flac-ui/flac-users-details.png)
+![ 「詳細 [!UICONTROL &#x200B; タブとユーザープロファイルがハイライト表示され &#x200B;] ユーザーの詳細ページ ](../../images/flac-ui/flac-users-details.png)
 
 「**[!UICONTROL 役割]**」タブを選択して、ユーザーが割り当てられている役割を表示します。
 
-![ 「役割 [!UICONTROL  タブと役割がハイライト表示された ] 役割ページ ](../../images/flac-ui/flac-users-roles.png)
+![ 「役割 [!UICONTROL &#x200B; タブと役割がハイライト表示された &#x200B;] 役割ページ ](../../images/flac-ui/flac-users-roles.png)
 
 ## Experience Platform権限による開発者および API アクセス制御
 

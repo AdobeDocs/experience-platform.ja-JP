@@ -54,7 +54,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 | 新しい API エンドポイント | [!DNL Privacy Service] API のベースパスが `/data/privacy/gdpr` から `/data/core/privacy/jobs` に更新されました。 |
 | 新しい必須の `regulation` プロパティ | [!DNL Privacy Service] API で新しいジョブを作成する場合は、リクエストペイロードで `regulation` プロパティを指定し、ジョブを追跡する規制を示す必要があります。指定できる値は、`gdpr` と `ccpa` です。 |
 | [!DNL Adobe Primetime Authentication] のサポート | [!DNL Privacy Service] では、製品の値として `primetimeAuthentication` を使用して、Adobe [!DNL Primetime Authentication] からのアクセス /削除リクエストを受け入れるようになりました。 |
-| Privacy Service UI の強化 | GDPR および CCPA 規制に関する個別のジョブトラッキングページ。GDPR と CCPA のトラッキングデータを切り替える新しい**規制タイプ **ドロップダウン。 |
+| Privacy Service UI の強化 | GDPR および CCPA 規制に関する個別のジョブトラッキングページ。GDPR と CCPA のトラッキングデータを切り替える新しい&#x200B;**規制タイプ &#x200B;** ドロップダウン。 |
 
 **既知の問題**
 

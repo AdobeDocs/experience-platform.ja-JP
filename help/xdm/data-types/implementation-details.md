@@ -9,9 +9,9 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL  実装の詳細 ] データタイプ
+# [!UICONTROL &#x200B; 実装の詳細 &#x200B;] データタイプ
 
-[!UICONTROL  実装の詳細 ] は、API や SDK などのテクノロジー実装を記述する標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; 実装の詳細 &#x200B;] は、API や SDK などのテクノロジー実装を記述する標準の Experience Data Model （XDM）データタイプです。
 
 ![ データタイプ構造 ](../images/data-types/implementation-details.png)
 

@@ -10,7 +10,7 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL  小売 ] 業界のデータモデル
+# [!UICONTROL &#x200B; 小売 &#x200B;] 業界のデータモデル
 
 次の ERD （Entity Relationship Diagram）は、小売業界向けの標準化されたデータモデルを表しています。 ERD は、Adobe Experience Platformでのデータの保存方法を考慮して、正規化されていない方法で意図的に表示されます。
 
@@ -32,7 +32,7 @@ ht-degree: 8%
 >
 >エクスペリエンスイベントエンティティには、「_ID」フィールドが含まれます。このフィールドは、XDM ExperienceEvent クラスが提供する一意の識別子（`_id`）属性を表します。 この値に期待される値について詳しくは、[XDM ExperienceEvent](../../classes/experienceevent.md) に関する参照ドキュメントを参照してください。
 
-## [!UICONTROL  小売 ] ユースケース
+## [!UICONTROL &#x200B; 小売 &#x200B;] ユースケース
 
 次の表に、小売の一般的なユースケースで推奨されるクラスとスキーマフィールドグループの概要を示します。
 

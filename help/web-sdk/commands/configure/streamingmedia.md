@@ -32,7 +32,7 @@ Web SDK タグ拡張機能でストリーミングメディアを設定するに
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 &#x200B;] をクリックします。
 1. **[!UICONTROL Web SDK タグ拡張機能設定ページ]** の説明に従って、[ ストリーミングメディア ](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection) 設定を行います。
 
 ## Web SDK JavaScript ライブラリを使用したストリーミングメディアの設定 {#library}

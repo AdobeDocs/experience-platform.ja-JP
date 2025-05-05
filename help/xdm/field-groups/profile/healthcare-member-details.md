@@ -9,24 +9,24 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL  ヘルスケアメンバーの詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; ヘルスケアメンバーの詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  ヘルスケア会員詳細 ] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループで、連絡先情報、主治医、医療保険情報など、医療サービスまたはケアを受ける人の詳細を収集します。
+[!UICONTROL &#x200B; ヘルスケア会員詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループで、連絡先情報、主治医、医療保険情報など、医療サービスまたはケアを受ける人の詳細を収集します。
 
 ![ フィールドグループ構造 ](../../images/field-groups/healthcare-member-details/structure.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `billingAddress` | [[!UICONTROL  郵送先住所 ]](../../data-types/postal-address.md) | 人物の請求先住所。 |
-| `faxPhone` | [[!UICONTROL  電話番号 ]](../../data-types/phone-number.md) | 人物の FAX 電話番号。 |
-| `homeAddress` | [[!UICONTROL  郵送先住所 ]](../../data-types/postal-address.md) | 人物の自宅の住所。 |
-| `homePhone` | [[!UICONTROL  電話番号 ]](../../data-types/phone-number.md) | 人物の自宅電話番号。 |
-| `mailingAddress` | [[!UICONTROL  郵送先住所 ]](../../data-types/postal-address.md) | 人物の住所。 |
+| `billingAddress` | [[!UICONTROL &#x200B; 郵送先住所 &#x200B;]](../../data-types/postal-address.md) | 人物の請求先住所。 |
+| `faxPhone` | [[!UICONTROL &#x200B; 電話番号 &#x200B;]](../../data-types/phone-number.md) | 人物の FAX 電話番号。 |
+| `homeAddress` | [[!UICONTROL &#x200B; 郵送先住所 &#x200B;]](../../data-types/postal-address.md) | 人物の自宅の住所。 |
+| `homePhone` | [[!UICONTROL &#x200B; 電話番号 &#x200B;]](../../data-types/phone-number.md) | 人物の自宅電話番号。 |
+| `mailingAddress` | [[!UICONTROL &#x200B; 郵送先住所 &#x200B;]](../../data-types/postal-address.md) | 人物の住所。 |
 | `memberDetails` | オブジェクト | その人物のヘルスケア関連の属性および関係に関する詳細な情報を含むオブジェクト。 オブジェクトの構造について詳しくは、次の [ サブセクション ](#memberDetails) を参照してください。 |
-| `mobilePhone` | [[!UICONTROL  電話番号 ]](../../data-types/phone-number.md) | 人物の携帯電話番号。 |
-| `person` | [[!UICONTROL  人物 ]](../../data-types/person.md) | 個人のヘルスケアメンバーシップに関連する個々のアクター、連絡先または所有者。 |
-| `personalEmail` | [[!UICONTROL  メールアドレス ]](../../data-types/email-address.md) | 人物の個人メールアドレス。 |
-| `shippingAddress` | [[!UICONTROL  郵送先住所 ]](../../data-types/postal-address.md) | 人物の配送先住所。 |
+| `mobilePhone` | [[!UICONTROL &#x200B; 電話番号 &#x200B;]](../../data-types/phone-number.md) | 人物の携帯電話番号。 |
+| `person` | [[!UICONTROL &#x200B; 人物 &#x200B;]](../../data-types/person.md) | 個人のヘルスケアメンバーシップに関連する個々のアクター、連絡先または所有者。 |
+| `personalEmail` | [[!UICONTROL &#x200B; メールアドレス &#x200B;]](../../data-types/email-address.md) | 人物の個人メールアドレス。 |
+| `shippingAddress` | [[!UICONTROL &#x200B; 郵送先住所 &#x200B;]](../../data-types/postal-address.md) | 人物の配送先住所。 |
 
 {style="table-layout:auto"}
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `emergencyContact` | オブジェクト | 人物の次の緊急連絡先の詳細をキャプチャします。 <ul><li>`fullName`: （String）緊急連絡先のフルネーム。</li><li>`phone`: （文字列）緊急連絡先の電話番号。</li><li>`relationshipToMember`: （文字列）緊急連絡先と人物の関係。</li></ul> |
-| `medications` | オブジェクトの配列 | その人物に関連する現在および過去の薬の詳細をリストします。 各配列項目は、次の詳細を取得するオブジェクトです。 <ul><li>`refillLocation`: （[[!UICONTROL  郵送先住所 ]](../../data-types/postal-address.md)）薬の詰め替え場所。</li><li>`ID`: （文字列）薬 ID。</li><li>`isCurrent`: （ブール値）薬が現在のものか過去のものかを示します。</li><li>`numberOfRefills`: （整数）この薬のプロバイダーによって規定されたリフィルの数。</li><li>`startDate`: （日時）薬を服用し始めた日付。</li></ul> |
+| `medications` | オブジェクトの配列 | その人物に関連する現在および過去の薬の詳細をリストします。 各配列項目は、次の詳細を取得するオブジェクトです。 <ul><li>`refillLocation`: （[[!UICONTROL &#x200B; 郵送先住所 &#x200B;]](../../data-types/postal-address.md)）薬の詰め替え場所。</li><li>`ID`: （文字列）薬 ID。</li><li>`isCurrent`: （ブール値）薬が現在のものか過去のものかを示します。</li><li>`numberOfRefills`: （整数）この薬のプロバイダーによって規定されたリフィルの数。</li><li>`startDate`: （日時）薬を服用し始めた日付。</li></ul> |
 | `multipleBirth` | オブジェクト | 複数出産に関する詳細をキャプチャします。 <ul><li>`isMultipleBirth`: （ブール値）人物が複数回の出産を行ったかどうかを示します。</li><li>`multipleBirthNumber`: （整数） `isMultipleBirth` が true の場合に生まれた子の数。</li></ul> |
 | `plans` | オブジェクトの配列 | 人物に関連付けられている現在および過去の医療プランの詳細をリストします。 各配列項目は、次の詳細を取得するオブジェクトです。 <ul><li>`coverageEndDate`: （日時）計画補償範囲が終了する日付。</li><li>`coverageStartDate`: （日時）プランの補償範囲が開始する日付。</li><li>`isActive`: （ブール値）プランがアクティブかどうかを示します。</li><li>`planId`: （文字列）計画 ID。</li></ul> |
 | `primaryCarePhysicians` | オブジェクトの配列 | その人物に関連するかかりつけ医の詳細をリストする。 各配列項目は、次の詳細を取得するオブジェクトです。 <ul><li>`endDate`: （日時）かかりつけ医が患者のケアを終了した日付。</li><li>`fullname`: （String）医師の氏名。</li><li>`providerId`: （String）医師の一意の ID。</li><li>`startDate`: （日時）かかりつけ医が患者のケアを開始した日付。</li></ul> |

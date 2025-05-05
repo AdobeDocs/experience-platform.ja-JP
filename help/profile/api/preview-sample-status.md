@@ -42,7 +42,7 @@ Adobe Experience Platformでは、複数のソースから顧客データを取�
 * **ストリーミングデータワークフロー** の場合は、5% の増加または減少しきい値に達したかどうかを判断するために、1 時間ごとにチェックが行われます。 サンプルジョブが自動的にトリガーされ、カウントが更新されます。
 * **バッチ取り込み** の場合、プロファイルストアにバッチを正常に取り込んでから 15 分以内に、5% の増減しきい値に達した場合は、ジョブを実行してカウントを更新します。 プロファイル API を使用すると、最新の成功したサンプルジョブをプレビューできるほか、データセット別および ID 名前空間別のプロファイル配布をリストできます。
 
-プロファイル数および名前空間別プロファイル指標は、Experience Platform UI の [!UICONTROL  プロファイル ] セクション内でも使用できます。 UI を使用してプロファイルデータにアクセスする方法について詳しくは、[[!DNL Profile] UI ガイド ](../ui/user-guide.md) を参照してください。
+プロファイル数および名前空間別プロファイル指標は、Experience Platform UI の [!UICONTROL &#x200B; プロファイル &#x200B;] セクション内でも使用できます。 UI を使用してプロファイルデータにアクセスする方法について詳しくは、[[!DNL Profile] UI ガイド ](../ui/user-guide.md) を参照してください。
 
 ## 最後のサンプルステータスを表示 {#view-last-sample-status}
 
@@ -299,7 +299,7 @@ curl -X GET \
 | `fullIDsFragmentCount` | 名前空間内のプロファイルフラグメントの合計数です。 |
 | `fullIDsCount` | 名前空間での結合プロファイルの合計数。 |
 | `fullIDsPercentage` | 10 進数形式で表された、結合プロファイルの合計に対する割合としての `fullIDsCount` ータ [ 最後のサンプルステータス ](#view-last-sample-status) で返された `totalRows` 値）。 |
-| `code` | 名前空間の `code`。 これは、[Adobe Experience Platform ID サービス API を使用して名前空間を操作する際に見つかり ](../../identity-service/api/list-namespaces.md)Experience Platform UI では [!UICONTROL ID シンボル ] とも呼ばれます。 詳しくは、「[ID 名前空間の概要 ](../../identity-service/features/namespaces.md)」を参照してください。 |
+| `code` | 名前空間の `code`。 これは、[Adobe Experience Platform ID サービス API を使用して名前空間を操作する際に見つかり ](../../identity-service/api/list-namespaces.md)Experience Platform UI では [!UICONTROL ID シンボル &#x200B;] とも呼ばれます。 詳しくは、「[ID 名前空間の概要 ](../../identity-service/features/namespaces.md)」を参照してください。 |
 | `value` | 名前空間の `id` 値。 これは、[ID サービス API](../../identity-service/api/list-namespaces.md) を使用して名前空間を操作する際に見つかります。 |
 
 ## データセットの重複レポートの生成
@@ -445,7 +445,7 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `data` | `data` オブジェクトには、ID 名前空間コードとそれぞれのプロファイル数の一意の組み合わせを持つ、コンマ区切りのリストが含まれています。 |
-| 名前空間コード | `code` は、ID 名前空間名ごとの短い形式です。 各 `code` の `name` へのマッピングは、[Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md) を使用して見つけることができます。 この `code` は、Experience Platform UI では [!UICONTROL ID シンボル ] とも呼ばれます。 詳しくは、「[ID 名前空間の概要 ](../../identity-service/features/namespaces.md)」を参照してください。 |
+| 名前空間コード | `code` は、ID 名前空間名ごとの短い形式です。 各 `code` の `name` へのマッピングは、[Adobe Experience Platform ID サービス API](../../identity-service/api/list-namespaces.md) を使用して見つけることができます。 この `code` は、Experience Platform UI では [!UICONTROL ID シンボル &#x200B;] とも呼ばれます。 詳しくは、「[ID 名前空間の概要 ](../../identity-service/features/namespaces.md)」を参照してください。 |
 | `reportTimestamp` | レポートのタイムスタンプ。 リクエスト中に `date` パラメーターが指定された場合、返されるレポートは指定された日付のです。 `date` パラメーターを指定しない場合は、最新のレポートが返されます。 |
 
 ### ID 名前空間の重複レポートの解釈

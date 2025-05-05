@@ -12,13 +12,13 @@ ht-degree: 14%
 ---
 
 
-# [!UICONTROL  仕事用連絡先の詳細 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; 仕事用連絡先の詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL  仕事用連絡先の詳細 ] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループには、勤務先住所、勤務先メールアドレス、勤務先電話番号、人物が所属する組織など、個人に関する職業情報を取得する複数のフィールドが用意されています。
+[!UICONTROL &#x200B; 仕事用連絡先の詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループです。 フィールドグループには、勤務先住所、勤務先メールアドレス、勤務先電話番号、人物が所属する組織など、個人に関する職業情報を取得する複数のフィールドが用意されています。
 
 ![](../../images/field-groups/work-contact-details.png)
 

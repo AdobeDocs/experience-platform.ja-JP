@@ -93,24 +93,24 @@ Edge Networkを [!DNL Braze] に接続するには、次の入力が必要です
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  外部ユーザー ID] | 長く、ランダムで、分散した UUID または GUID です。 ユーザー ID に名前を付ける別の方法を選択する場合は、長く、ランダムで、分散している必要があります。 詳しくは、[ 推奨されるユーザー ID 命名規則 ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention) を参照してください。 |
+| [!UICONTROL &#x200B; 外部ユーザー ID] | 長く、ランダムで、分散した UUID または GUID です。 ユーザー ID に名前を付ける別の方法を選択する場合は、長く、ランダムで、分散している必要があります。 詳しくは、[ 推奨されるユーザー ID 命名規則 ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention) を参照してください。 |
 | [!UICONTROL Braze ユーザー ID] | Braze ユーザー識別子。 |
-| [!UICONTROL  ユーザーエイリアス ] | エイリアスは、一意のユーザー ID の代替として機能します。 エイリアスを使用して、コアユーザー ID とは異なるディメンションに沿ってユーザーを識別します。 <br><br> ユーザーの alias オブジェクトは、識別子自体の alias_name と、エイリアスのタイプを示す alias_label の 2 つの部分で構成されています。 ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、alias_label ごとに 1 つの alias_name のみです。 |
+| [!UICONTROL &#x200B; ユーザーエイリアス &#x200B;] | エイリアスは、一意のユーザー ID の代替として機能します。 エイリアスを使用して、コアユーザー ID とは異なるディメンションに沿ってユーザーを識別します。 <br><br> ユーザーの alias オブジェクトは、識別子自体の alias_name と、エイリアスのタイプを示す alias_label の 2 つの部分で構成されています。 ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、alias_label ごとに 1 つの alias_name のみです。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> ユーザーにイベントを結び付けるには、「[!UICONTROL  外部ユーザー ID]」フィールド、「[!UICONTROL Braze ユーザー識別子 ]」フィールドまたは「[!UICONTROL  ユーザーエイリアス ]」セクションのいずれかを入力する必要があります。
+> ユーザーにイベントを結び付けるには、「[!UICONTROL &#x200B; 外部ユーザー ID]」フィールド、「[!UICONTROL Braze ユーザー識別子 &#x200B;]」フィールドまたは「[!UICONTROL &#x200B; ユーザーエイリアス &#x200B;]」セクションのいずれかを入力する必要があります。
 
 **[!UICONTROL イベントデータ]**
 
 | 入力 | 説明 | 必須 |
 | --- | --- | --- |
-| [!UICONTROL  イベント名&#x200B;] | イベントの名前。 | ○ |
-| [!UICONTROL  イベント時間 ] | ISO 8601 形式または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としての日時。 | ○ |
-| [!UICONTROL  アプリ識別子 ] | アプリ識別子（<strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作するアプリグループ内のアプリを指定します。 [API 識別子のタイプ ](https://www.braze.com/docs/api/identifier_types/) について詳しく説明します。 | |
-| [!UICONTROL  イベントのプロパティ &#x200B;] | イベントのカスタムプロパティを含む JSON オブジェクト。 |  |
+| [!UICONTROL &#x200B; イベント名&#x200B;] | イベントの名前。 | ○ |
+| [!UICONTROL &#x200B; イベント時間 &#x200B;] | ISO 8601 形式または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としての日時。 | ○ |
+| [!UICONTROL &#x200B; アプリ識別子 &#x200B;] | アプリ識別子（<strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作するアプリグループ内のアプリを指定します。 [API 識別子のタイプ ](https://www.braze.com/docs/api/identifier_types/) について詳しく説明します。 | |
+| [!UICONTROL &#x200B; イベントのプロパティ &#x200B;] | イベントのカスタムプロパティを含む JSON オブジェクト。 |  |
 
 {style="table-layout:auto"}
 
@@ -124,15 +124,15 @@ Edge Networkを [!DNL Braze] に接続するには、次の入力が必要です
 
 | ユーザー属性 | 説明 |
 | --- | --- |
-| [!UICONTROL  名 ] | |
-| [!UICONTROL  姓 ] | |
+| [!UICONTROL &#x200B; 名 &#x200B;] | |
+| [!UICONTROL &#x200B; 姓 &#x200B;] | |
 | [!UICONTROL 電話] | |
 | [!UICONTROL メール] | |
-| [!UICONTROL  性別 ] | 次の文字列の 1 つ：「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（言いたくない）。 |
-| [!UICONTROL  市区町村 ] | |
+| [!UICONTROL &#x200B; 性別 &#x200B;] | 次の文字列の 1 つ：「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（言いたくない）。 |
+| [!UICONTROL &#x200B; 市区町村 &#x200B;] | |
 | [!UICONTROL 国] | [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式の文字列としての国。 |
 | [!UICONTROL 言語] | [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 形式の文字列としての言語。 |
-| [!UICONTROL  生年月日 ] | 「YYYY-MM-DD」形式の文字列（例：1980-12-21）。 |
+| [!UICONTROL &#x200B; 生年月日 &#x200B;] | 「YYYY-MM-DD」形式の文字列（例：1980-12-21）。 |
 | [!UICONTROL タイムゾーン] | [IANA タイムゾーンデータベース ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) からのタイムゾーン名（「アメリカ/ニューヨーク」や「東部時間（米国およびカナダ）」など）。 |
 | [!UICONTROL Facebook] | ID （文字列）、likes （文字列の配列）、num_friends （整数）のいずれかを含むハッシュ。 |
 | [!UICONTROL Twitter] | ID （整数）、screen_name （文字列、Twitterハンドル）、followers_count （整数）、friends_count （整数）、states_count （整数）のいずれかを含むハッシュ。 |
@@ -149,27 +149,27 @@ Edge Networkを [!DNL Braze] に接続するには、次の入力が必要です
 
 | 入力 | 説明 |
 | --- | --- |
-| [!UICONTROL  外部ユーザー ID] | 長く、ランダムで、分散した UUID または GUID です。 ユーザー ID に名前を付ける別の方法を選択する場合は、長く、ランダムで、分散している必要があります。 詳しくは、[ 推奨されるユーザー ID 命名規則 ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention) を参照してください。 |
+| [!UICONTROL &#x200B; 外部ユーザー ID] | 長く、ランダムで、分散した UUID または GUID です。 ユーザー ID に名前を付ける別の方法を選択する場合は、長く、ランダムで、分散している必要があります。 詳しくは、[ 推奨されるユーザー ID 命名規則 ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention) を参照してください。 |
 | [!UICONTROL Braze ユーザー ID] | Braze ユーザー識別子。 |
-| [!UICONTROL  ユーザーエイリアス ] | エイリアスは、一意のユーザー ID の代替として機能します。 エイリアスを使用して、コアユーザー ID とは異なるディメンションに沿ってユーザーを識別します。 <br><br> ユーザーの alias オブジェクトは、識別子自体の alias_name と、エイリアスのタイプを示す alias_label の 2 つの部分で構成されています。 ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、alias_label ごとに 1 つの alias_name のみです。 |
+| [!UICONTROL &#x200B; ユーザーエイリアス &#x200B;] | エイリアスは、一意のユーザー ID の代替として機能します。 エイリアスを使用して、コアユーザー ID とは異なるディメンションに沿ってユーザーを識別します。 <br><br> ユーザーの alias オブジェクトは、識別子自体の alias_name と、エイリアスのタイプを示す alias_label の 2 つの部分で構成されています。 ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、alias_label ごとに 1 つの alias_name のみです。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> イベントをユーザーにリンクするには、「[!UICONTROL  外部ユーザー ID]」フィールド、「[!UICONTROL Braze ユーザー識別子 ]」フィールド、「[!UICONTROL  ユーザーエイリアス ]」セクションのいずれかを入力する必要があります。
+> イベントをユーザーにリンクするには、「[!UICONTROL &#x200B; 外部ユーザー ID]」フィールド、「[!UICONTROL Braze ユーザー識別子 &#x200B;]」フィールド、「[!UICONTROL &#x200B; ユーザーエイリアス &#x200B;]」セクションのいずれかを入力する必要があります。
 
 **[!UICONTROL 購入データ]**
 
 | 入力 | 説明 | 必須 |
 | --- | --- | --- |
-| [!UICONTROL  製品 ID &#x200B;] | 購入の識別子。 （例：製品名または製品カテゴリ） | ○ |
-| [!UICONTROL  購入時間 ] | ISO 8601 形式または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としての日時。 | ○ |
-| [!UICONTROL  通貨&#x200B;] | [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) アルファベット通貨コード形式の文字列としての通貨。 | ○ |
-| [!UICONTROL  価&#x200B;] | 価格： | ○ |
-| [!UICONTROL  数量&#x200B;] | 指定しない場合、デフォルト値は 1 になります。 最大値は 100 未満である必要があります。 | |
-| [!UICONTROL  アプリ識別子 ] | アプリ識別子（<strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作するアプリグループ内のアプリを指定します。 [API 識別子のタイプ ](https://www.braze.com/docs/api/identifier_types/) について詳しく説明します。 | |
-| [!UICONTROL  購入プロパティ &#x200B;] | 購入のカスタムプロパティを含む JSON オブジェクト。 |  |
+| [!UICONTROL &#x200B; 製品 ID &#x200B;] | 購入の識別子。 （例：製品名または製品カテゴリ） | ○ |
+| [!UICONTROL &#x200B; 購入時間 &#x200B;] | ISO 8601 形式または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としての日時。 | ○ |
+| [!UICONTROL &#x200B; 通貨&#x200B;] | [ISO 4217](https://ja.wikipedia.org/wiki/ISO_4217) アルファベット通貨コード形式の文字列としての通貨。 | ○ |
+| [!UICONTROL &#x200B; 価&#x200B;] | 価格： | ○ |
+| [!UICONTROL &#x200B; 数量&#x200B;] | 指定しない場合、デフォルト値は 1 になります。 最大値は 100 未満である必要があります。 | |
+| [!UICONTROL &#x200B; アプリ識別子 &#x200B;] | アプリ識別子（<strong>app_id</strong> は、アクティビティをアプリグループ内の特定のアプリに関連付けるパラメーターです。 操作するアプリグループ内のアプリを指定します。 [API 識別子のタイプ ](https://www.braze.com/docs/api/identifier_types/) について詳しく説明します。 | |
+| [!UICONTROL &#x200B; 購入プロパティ &#x200B;] | 購入のカスタムプロパティを含む JSON オブジェクト。 |  |
 
 {style="table-layout:auto"}
 
@@ -183,15 +183,15 @@ Edge Networkを [!DNL Braze] に接続するには、次の入力が必要です
 
 | ユーザー属性 | 説明 |
 | --- | --- |
-| [!UICONTROL  名 ] | |
-| [!UICONTROL  姓 ] | |
+| [!UICONTROL &#x200B; 名 &#x200B;] | |
+| [!UICONTROL &#x200B; 姓 &#x200B;] | |
 | [!UICONTROL 電話] | |
 | [!UICONTROL メール] | |
-| [!UICONTROL  性別 ] | 次の文字列の 1 つ：「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（言いたくない）。 |
-| [!UICONTROL  市区町村 ] | |
+| [!UICONTROL &#x200B; 性別 &#x200B;] | 次の文字列の 1 つ：「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（言いたくない）。 |
+| [!UICONTROL &#x200B; 市区町村 &#x200B;] | |
 | [!UICONTROL 国] | [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式の文字列としての国。 |
 | [!UICONTROL 言語] | [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 形式の文字列としての言語。 |
-| [!UICONTROL  生年月日 ] | 「YYYY-MM-DD」形式の文字列（例：1980-12-21）。 |
+| [!UICONTROL &#x200B; 生年月日 &#x200B;] | 「YYYY-MM-DD」形式の文字列（例：1980-12-21）。 |
 | [!UICONTROL タイムゾーン] | [IANA タイムゾーンデータベース ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) からのタイムゾーン名（「アメリカ/ニューヨーク」や「東部時間（米国およびカナダ）」など）。 |
 | [!UICONTROL Facebook] | ID （文字列）、likes （文字列の配列）、num_friends （整数）のいずれかを含むハッシュ。 |
 | [!UICONTROL Twitter] | ID （整数）、screen_name （文字列、Twitterハンドル）、followers_count （整数）、friends_count （整数）、states_count （整数）のいずれかを含むハッシュ。 |

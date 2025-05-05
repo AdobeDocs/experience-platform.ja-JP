@@ -86,7 +86,7 @@ Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエ
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -134,8 +134,8 @@ Experience Platformから [!DNL Oracle Eloqua] アカウントにデータをエ
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -165,6 +165,7 @@ XDM フィールドを [!DNL Oracle Eloqua] の宛先フィールドにマッピ
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * 上記のマッピングの例を以下に示します。
+
      ![ 属性マッピングを含むExperience Platform UI のスクリーンショットの例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
@@ -236,7 +237,7 @@ XDM フィールドを [!DNL Oracle Eloqua] の宛先フィールドにマッピ
 
 | リリース月 | 更新タイプ | 説明 |
 |---|---|---|
-| 2023年4月 | ドキュメントの更新 | <ul><li>[ ユースケース ](#use-cases) の節を更新し、この宛先を使用することで、お客様にメリットが得られるタイミングをより明確に例を示しました。</li> <li>[ マッピング ](#mapping-considerations-example) の節を更新し、必須マッピングとオプションマッピングの両方の明確な例を追加しました。</li> <li>「[ 宛先への接続 ](#connect)」の節を更新し、[!DNL Oracle Eloqua] ーザーの会社名と [!DNL Oracle Eloqua] ユーザー名を使用して **[!UICONTROL ユーザー名]** フィールドの連結された値を作成する方法の例を追加しました。 （PLATIR-28343）</li><li>「**[!UICONTROL ポッド ](#gather-credentials) の選択に関するガイダンスを使用して、「[ 収集  [!DNL Oracle Eloqua]  資格情報 ](#destination-details) と [ 宛先の詳細の入力]** の節 [!DNL Oracle Eloqua] 更新しました。 *「Pod」* 値は、API 呼び出しのベース URL を作成するために宛先で使用されます。 また、[[!DNL Oracle Eloqua]  前提条件 ](#prerequisites-destination) の節が更新され、[!DNL Oracle Eloqua] インスタンスの必須の *「セキュリティグループ」として* 「詳細設定ユーザー – マーケティング権限」 *を割り当てる際のガイダンスが追加されました*</li></ul> |
+| 2023年4月 | ドキュメントの更新 | <ul><li>[ ユースケース ](#use-cases) の節を更新し、この宛先を使用することで、お客様にメリットが得られるタイミングをより明確に例を示しました。</li> <li>[ マッピング ](#mapping-considerations-example) の節を更新し、必須マッピングとオプションマッピングの両方の明確な例を追加しました。</li> <li>「[ 宛先への接続 ](#connect)」の節を更新し、[!DNL Oracle Eloqua] ーザーの会社名と [!DNL Oracle Eloqua] ユーザー名を使用して **[!UICONTROL ユーザー名]** フィールドの連結された値を作成する方法の例を追加しました。 （PLATIR-28343）</li><li>「**[[!UICONTROL ポッド &#x200B;]](#gather-credentials) の選択に関するガイダンスを使用して、「[ 収集  [!DNL Oracle Eloqua]  資格情報 ](#destination-details) と [ 宛先の詳細の入力]** の節 [!DNL Oracle Eloqua] 更新しました。 *「Pod」* 値は、API 呼び出しのベース URL を作成するために宛先で使用されます。 また、[[!DNL Oracle Eloqua]  前提条件 ](#prerequisites-destination) の節が更新され、[!DNL Oracle Eloqua] インスタンスの必須の *「セキュリティグループ」として* 「詳細設定ユーザー – マーケティング権限」 *を割り当てる際のガイダンスが追加されました*</li></ul> |
 | 2023年3月 | 初回リリース | 宛先の初回リリースとドキュメントの公開。 |
 
 {style="table-layout:auto"}

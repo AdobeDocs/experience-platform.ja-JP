@@ -60,7 +60,7 @@ ht-degree: 48%
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 一覧を探索する [!DNL Adobe Analytics] データセット検索文字列右クリックし、[ **[!UICONTROL ノートブックのクエリデータ]** をクリックして、空のノートブックに SQL クエリを生成します。
+4. 一覧を探索する [!DNL Adobe Analytics] データセット検索文字列右クリックし、&lbrack; **[!UICONTROL ノートブックのクエリデータ]** をクリックして、空のノートブックに SQL クエリを生成します。
 
 5. `qs_connect()` 関数が含まれる最初の生成済みセルをクリックし、再生ボタンをクリックして実行します。この関数は、ノートブックインスタンスと [!DNL Query Service] の間に接続を作成します。
 

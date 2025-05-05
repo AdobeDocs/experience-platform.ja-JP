@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL  ワークフロー ] UI ガイド
+# [!UICONTROL &#x200B; ワークフロー &#x200B;] UI ガイド
 
 Adobe Experience Platform ユーザーインターフェイスの **[!UICONTROL ワークフロー]** セクションには、Experience Platform内で操作を実行するための複数の手順のワークフローのリストが表示されます。 これらのワークフローは、データ取り込みやデータサイエンスなどの領域をカバーしています。
 
 ![ ワークフロー ](./images/workflows/workflows.png)
 
-## [!UICONTROL  データ取得 ]
+## [!UICONTROL &#x200B; データ取得 &#x200B;]
 
 **[!UICONTROL CSV を XDM スキーマにマッピング]** ワークフローを使用すると、CSV ファイルをアップロードして、エクスペリエンスデータモデル（XDM）スキーマに変換できます。 このワークフローについて詳しくは、[CSV ファイルの XDM スキーマへのマッピング ](../ingestion/tutorials/map-csv/overview.md) に関するチュートリアルを参照してください。
 
@@ -35,4 +35,4 @@ Adobe Experience Platform ユーザーインターフェイスの **[!UICONTROL 
 
 ## 次の手順
 
-このガイドでは、Experience Platform ユーザーインターフェイス内で使用できる [!UICONTROL  ワークフロー ] について説明しました。 Experience Platform UI の機能について詳しくは、[Adobe Experience Platform UI ガイド ](ui-guide.md) を参照してください。
+このガイドでは、Experience Platform ユーザーインターフェイス内で使用できる [!UICONTROL &#x200B; ワークフロー &#x200B;] について説明しました。 Experience Platform UI の機能について詳しくは、[Adobe Experience Platform UI ガイド ](ui-guide.md) を参照してください。

@@ -9,9 +9,9 @@ ht-degree: 21%
 
 ---
 
-# [!UICONTROL  広告ブレーク ] データタイプ
+# [!UICONTROL &#x200B; 広告ブレーク &#x200B;] データタイプ
 
-[!UICONTROL  広告ブレーク ] は、タイムド広告がタイムドメディアにどのように挿入されるかを説明する、標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; 広告ブレーク &#x200B;] は、タイムド広告がタイムドメディアにどのように挿入されるかを説明する、標準の Experience Data Model （XDM）データタイプです。
 
 ![ データタイプ構造 ](../images/data-types/ad-break.png)
 

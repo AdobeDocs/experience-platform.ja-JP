@@ -46,7 +46,7 @@ Adobe Experience Platformは、外部オーディエンスを読み込む機能�
 
 外部オーディエンスを使用する最初の手順は、ID 名前空間を作成することです。 ID 名前空間を使用すると、Experience Platformはオーディエンスの発信元を関連付けることができます。
 
-ID 名前空間を作成するには、[ID 名前空間ガイド ](../../identity-service/features/namespaces.md#manage-namespaces) の手順に従います。 ID 名前空間を作成する際に、ソースの詳細を ID 名前空間に追加し、その [!UICONTROL  タイプ ] を **[!UICONTROL 人物以外の識別子]** としてマークします。
+ID 名前空間を作成するには、[ID 名前空間ガイド ](../../identity-service/features/namespaces.md#manage-namespaces) の手順に従います。 ID 名前空間を作成する際に、ソースの詳細を ID 名前空間に追加し、その [!UICONTROL &#x200B; タイプ &#x200B;] を **[!UICONTROL 人物以外の識別子]** としてマークします。
 
 ![ 人物以外の識別子は、ID 名前空間を作成モーダルでハイライト表示されます ](../images/tutorials/external-audiences/identity-namespace-info.png)。
 
@@ -171,7 +171,7 @@ ID 名前空間を作成したら、作成するセグメントの新しいス�
 
 ![XDM 個人プロファイル領域がハイライト表示されています。](../images/tutorials/external-audiences/create-schema-profile.png)
 
-スキーマを作成したら、セグメントメンバーシップフィールドグループをスキーマの一部として追加する必要があります。 これを行うには、「[!UICONTROL  セグメントメンバーシップの詳細 ]」を選択し、続いて「[!UICONTROL  フィールドグループの追加 ] を選択します。
+スキーマを作成したら、セグメントメンバーシップフィールドグループをスキーマの一部として追加する必要があります。 これを行うには、「[!UICONTROL &#x200B; セグメントメンバーシップの詳細 &#x200B;]」を選択し、続いて「[!UICONTROL &#x200B; フィールドグループの追加 &#x200B;] を選択します。
 
 ![ セグメントメンバーシップの詳細フィールドグループがハイライト表示されています。](../images/tutorials/external-audiences/segment-membership-details.png)
 

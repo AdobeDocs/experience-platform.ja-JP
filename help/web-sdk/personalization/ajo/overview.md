@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->エクスペリエンスのオーサリングとレポートの概要については ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=ja)[Adobe Journey Optimizer web チャネルのドキュメ [!DNL Journey Optimizer Web] トをお読みください。
+>エクスペリエンスのオーサリングとレポートの概要については [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=ja)Adobe Journey Optimizer web チャネルのドキュメ [!DNL Journey Optimizer Web] トをお読みください。
 
 ## 用語 {#terminology}
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 1. [!DNL Adobe Journey Optimizer] の [web エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) から [ 前提条件 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) を確認します。具体的には次のとおりです。
    * [!DNL Adobe Experience Cloud Visual Editing Helper] を設定します。
    * [ データストリーム ](../../../datastreams/overview.md) で [!DNL Adobe Journey Optimizer] を有効にします。
-   * 「[!UICONTROL Edge上でアクティブ化結合ポリシー ]」オプションを有効にします。
+   * 「[!UICONTROL Edge上でアクティブ化結合ポリシー &#x200B;]」オプションを有効にします。
 
 2. イベントに「`renderDecisions`」オプションを追加します。 Web ページサーフェス上に配信されたJourney Optimizer コンテンツの提案を自動レンダリングするには、`renderDecisions` を `true` に設定します。
 
@@ -42,7 +42,7 @@ ht-degree: 2%
    })
    ```
 
-3. オプションで、イベントに追加のサーフェスを指定します。 デフォルトでは、Web SDKは現在の web ページの web サーフェスを自動的に生成し、Edge Networkに対するリクエストに含めます。 必要に応じて、`sendEvent` コマンドの `personalization.surfaces` オプション、または Web SDK拡張機能の対応する **[!UICONTROL サーフェス]** [[!UICONTROL  イベントを送信 ] アクション ](../../../tags/extensions/client/web-sdk/action-types.md#send-event) 設定で追加のサーフェスを指定することで、リクエストに追加のサーフェスを含めることができます。
+3. オプションで、イベントに追加のサーフェスを指定します。 デフォルトでは、Web SDKは現在の web ページの web サーフェスを自動的に生成し、Edge Networkに対するリクエストに含めます。 必要に応じて、`sendEvent` コマンドの `personalization.surfaces` オプション、または Web SDK拡張機能の対応する **[!UICONTROL サーフェス]** [[!UICONTROL &#x200B; イベントを送信 &#x200B;] アクション ](../../../tags/extensions/client/web-sdk/action-types.md#send-event) 設定で追加のサーフェスを指定することで、リクエストに追加のサーフェスを含めることができます。
 
    ```javascript
    alloy("sendEvent", {

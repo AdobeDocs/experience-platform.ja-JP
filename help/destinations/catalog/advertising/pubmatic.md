@@ -107,9 +107,9 @@ ht-degree: 37%
 - **[!UICONTROL デフォルトの国コード]**：プロファイルで指定がない場合にすべての ID に適用されるデフォルトの国コードです。
 - **[!UICONTROL アカウント ID]**：お使いの [!DNL PubMatic Connect] アカウント ID。
 - **[!UICONTROL アカウントタイプ]**:[!DNL PubMatic] Platform アカウントのアカウントタイプ。 ご質問がある場合は、[!DNL PubMatic] のアカウントマネージャーにお問い合わせください。 使用できる選択肢は次のとおりです。
-   - [!UICONTROL  発行者 ]
+   - [!UICONTROL &#x200B; 発行者 &#x200B;]
    - [!UICONTROL DEMAND_PARTNER]
-   - [!UICONTROL  買主 ]
+   - [!UICONTROL &#x200B; 買主 &#x200B;]
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -121,9 +121,9 @@ ht-degree: 37%
 
 >[!IMPORTANT]
 >
-> - データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+> - データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >
-> - _ID_ を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](../../assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+> - _ID_ を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](../../assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 

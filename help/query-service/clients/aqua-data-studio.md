@@ -23,7 +23,7 @@ ht-degree: 8%
 >
 >[!DNL Aqua Data Studio] には [!DNL Windows] バージョンと [!DNL macOS] バージョンがあります。 このガイドのスクリーンショットは、[!DNL macOS] デスクトップアプリを使用して撮影したものです。 UI とバージョンの間に小さな不一致が生じる場合があります。
 
-[!DNL Aqua Data Studio] をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UI の [!UICONTROL  クエリ ] ワークスペースにアクセスできる必要があります。 現在、[!UICONTROL  クエリ ] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
+[!DNL Aqua Data Studio] をExperience Platformに接続するために必要な資格情報を取得するには、Experience Platform UI の [!UICONTROL &#x200B; クエリ &#x200B;] ワークスペースにアクセスできる必要があります。 現在、[!UICONTROL &#x200B; クエリ &#x200B;] ワークスペースにアクセスできない場合は、組織の管理者にお問い合わせください。
 
 ## サーバーを登録 {#register-server}
 

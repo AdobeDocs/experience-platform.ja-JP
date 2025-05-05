@@ -35,11 +35,11 @@ ht-degree: 0%
 
 ERD は、次の業界向けに提供されています。
 
-* [[!UICONTROL  小売 ]](./retail.md)
-* [[!UICONTROL  金融サービス ]](./financial.md)
-* [[!UICONTROL  ヘルスケア ]](./healthcare.md)
-* [[!UICONTROL  電気通信 ]](./telecom.md)
-* [[!UICONTROL  旅行およびホスピタリティ ]](./travel-hospitality.md)
+* [[!UICONTROL &#x200B; 小売 &#x200B;]](./retail.md)
+* [[!UICONTROL &#x200B; 金融サービス &#x200B;]](./financial.md)
+* [[!UICONTROL &#x200B; ヘルスケア &#x200B;]](./healthcare.md)
+* [[!UICONTROL &#x200B; 電気通信 &#x200B;]](./telecom.md)
+* [[!UICONTROL &#x200B; 旅行およびホスピタリティ &#x200B;]](./travel-hospitality.md)
 
 ## 次の手順
 

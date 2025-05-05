@@ -81,7 +81,7 @@ Edge Networkからの応答に基づいて様々なアクションを実行す�
 
 ## イベントを送信 {#send-event}
 
-Experience Platformにイベントを送信し、Experience Platformが送信したデータを収集して、その情報に基づいて行動できるようにします。 送信したいデータは、「**[!UICONTROL XDM データ]**」フィールドで送信できます。 [!DNL XDM] スキーマの構造に準拠する [!DNL JSON] オブジェクトを使用します。 このオブジェクトは、ページまたは **[!UICONTROL カスタムコード]****[!UICONTROL データ要素]** を使用して作成できます。
+Experience Platformにイベントを送信し、Experience Platformが送信したデータを収集して、その情報に基づいて行動できるようにします。 送信したいデータは、「**[!UICONTROL XDM データ]**」フィールドで送信できます。 [!DNL XDM] スキーマの構造に準拠する [!DNL JSON] オブジェクトを使用します。 このオブジェクトは、ページまたは **[!UICONTROL カスタムコード]**&#x200B;**[!UICONTROL データ要素]** を使用して作成できます。
 
 **[!UICONTROL イベントを送信]** アクションタイプは、以下に説明するフィールドと設定をサポートしています。 これらのフィールドはすべてオプションです。
 
@@ -126,8 +126,8 @@ Experience Platformにイベントを送信し、Experience Platformが送信し
 * **ビジュアルパーソナライゼーション決定のレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、「**[!UICONTROL ビジュアルパーソナライゼーション決定のレンダリング]** チェックボックスをオンにします。 必要に応じて、決定範囲やサーフェスを指定することもできます。 パーソナライズされたコンテンツのレンダリングについて詳しくは、[ パーソナライゼーションドキュメント ](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) を参照してください。
 * **[!UICONTROL デフォルトのパーソナライゼーションをリクエスト]**：このセクションを使用して、ページ全体の範囲（グローバル mbox）とデフォルトのサーフェス（現在の URL に基づく web サーフェス）がリクエストされるかどうかを制御します。 デフォルトでは、これはページ読み込みの最初の `sendEvent` 呼び出し時に自動的に要求されます。 次のオプションから選択できます。
    * **[!UICONTROL 自動]**：これはデフォルトの動作です。 まだリクエストされていない場合にのみ、デフォルトのパーソナライゼーションをリクエストします。 これは、Web SDK コマンドで設定され `requestDefaultPersonalization` いない場合に該当します。
-   * **[!UICONTROL 有効]**：ページ範囲とデフォルトサーフェスを明示的にリクエストします。 これにより、SPA ビューのキャッシュが更新されます。 これは、`true``requestDefaultPersonalization` 設定に対応します。
-   * **[!UICONTROL 無効]**：ページ範囲とデフォルトサーフェスのリクエストを明示的に抑制します。 これは、`false``requestDefaultPersonalization` 設定に対応します。
+   * **[!UICONTROL 有効]**：ページ範囲とデフォルトサーフェスを明示的にリクエストします。 これにより、SPA ビューのキャッシュが更新されます。 これは、`true` `requestDefaultPersonalization` 設定に対応します。
+   * **[!UICONTROL 無効]**：ページ範囲とデフォルトサーフェスのリクエストを明示的に抑制します。 これは、`false` `requestDefaultPersonalization` 設定に対応します。
 * **[!UICONTROL Decision context]**：これは、オンデバイス判定のAdobe Journey Optimizer ルールセットを評価する際に使用されるキー値マップです。 決定コンテキストは手動で、またはデータ要素を通じて提供できます。
 
 ### データストリーム設定の上書き {#datastream-overrides}
@@ -171,7 +171,7 @@ Experience Platformにイベントを送信し、Experience Platformが送信し
 
 ![](assets/update-variable.png)
 
-エディターに使用される XDM スキーマは、[!UICONTROL  変数 ] データ要素で選択されたスキーマです。 左側のツリーでプロパティの 1 つをクリックし、右側の値を変更することで、オブジェクトの 1 つ以上のプロパティを設定できます。例えば、次のスクリーンショットでは、producedBy プロパティを、「Produced by data element」というデータ要素に設定しています。
+エディターに使用される XDM スキーマは、[!UICONTROL &#x200B; 変数 &#x200B;] データ要素で選択されたスキーマです。 左側のツリーでプロパティの 1 つをクリックし、右側の値を変更することで、オブジェクトの 1 つ以上のプロパティを設定できます。例えば、次のスクリーンショットでは、producedBy プロパティを、「Produced by data element」というデータ要素に設定しています。
 
 ![](assets/update-variable-set-property.png)
 

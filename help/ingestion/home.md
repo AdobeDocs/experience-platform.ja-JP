@@ -47,7 +47,7 @@ Experience Platform Sources に接続してデータを取り込むこともで�
 
 新しいデータソースをすばやく統合するために、機械学習アルゴリズムを使用して、サンプルデータからスキーマを生成できるようになりました。 この自動化により、正確なスキーマの作成が簡素化され、エラーが減り、データ収集から分析およびインサイトに至るプロセスが迅速化されます。
 
-このワークフローについて詳しくは ](../xdm/ui/ml-assisted-schema-creation.md) [ML-ASSISTED schema creation guide」を参照してください。
+このワークフローについて詳しくは [&#128279;](../xdm/ui/ml-assisted-schema-creation.md) ML-ASSISTED schema creation guide」を参照してください。
 
 ## データ準備 {#data-prep}
 

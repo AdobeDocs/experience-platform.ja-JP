@@ -34,7 +34,7 @@ Adobe Experience Platformには、様々なマーケティングユースケー�
 
 新しいフィールドグループを作成するには、まずフィールドグループの追加先となるスキーマを選択する必要があります。 [ 新しいスキーマを作成する ](./schemas.md#create) または [ 編集する既存のスキーマを選択する ](./schemas.md#edit) を選択できます。
 
-[!DNL Schema Editor] でスキーマを開いたら、左パネルの **[!UICONTROL フィールドグループ]** セクションの横にある [!UICONTROL  追加 ] を選択します。
+[!DNL Schema Editor] でスキーマを開いたら、左パネルの **[!UICONTROL フィールドグループ]** セクションの横にある [!UICONTROL &#x200B; 追加 &#x200B;] を選択します。
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
@@ -48,9 +48,9 @@ Adobe Experience Platformには、様々なマーケティングユースケー�
 
 ## フィールドグループのフィルタリング {#filter}
 
-使用可能なフィールドグループのリストは、作成方法に基づいて事前にフィルタリングされています。デフォルト設定には、Adobeで定義されたフィールドグループが表示されます。 ただし、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成されたエンティティが表示されます。
+使用可能なフィールドグループのリストは、作成方法に基づいて事前にフィルタリングされています。デフォルト設定には、Adobeで定義されたフィールドグループが表示されます。 ただし、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL &#x200B; 標準 &#x200B;]」オプションと「[!UICONTROL &#x200B; カスタム &#x200B;] オプションの中から選択します。 「[!UICONTROL &#x200B; 標準 &#x200B;]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL &#x200B; カスタム &#x200B;]」オプションには組織内で作成されたエンティティが表示されます。
 
-![[!UICONTROL  標準 ] と [!UICONTROL  カスタム ] がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  フィールドグループ ] タブ ](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![[!UICONTROL &#x200B; 標準 &#x200B;] と [!UICONTROL &#x200B; カスタム &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの [!UICONTROL &#x200B; フィールドグループ &#x200B;] タブ ](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 既存のフィールドグループの編集 {#edit}
 
@@ -92,6 +92,6 @@ Adobe Experience Platformには、様々なマーケティングユースケー�
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Experience Platform UI を使用してフィールドグループを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
+このガイドでは、Experience Platform UI を使用してフィールドグループを作成および編集する方法について説明しました。 [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの機能について詳しくは、[[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの概要 ](../overview.md) を参照してください。
 
 [!DNL Schema Registry] API を使用してフィールドグループを管理する方法については、[ フィールドグループエンドポイントガイド ](../../api/field-groups.md) を参照してください。

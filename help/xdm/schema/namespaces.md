@@ -21,7 +21,7 @@ ht-degree: 1%
 
 名前空間を使用すると、ある名前空間のフィールドを、別の名前空間の同じフィールドとは異なるものを意味するように定義できます。 実際には、フィールドの名前空間は、フィールドを作成したユーザー（標準 XDM （Adobe）、ベンダー、組織など）を示します。
 
-例えば、[[!UICONTROL  個人の連絡先の詳細 ] フィールドグループ ](../field-groups/profile/demographic-details.md) を使用する XDM スキーマについて考えてみます。このフィールドグループには、`xdm` 名前空間に存在する標準の `mobilePhone` フィールドがあります。 同じスキーマ内で、別の名前空間（[ テナント ID](../api/getting-started.md#know-your-tenant_id)）の下に別の `mobilePhone` フィールドを自由に作成することもできます。 これらのフィールドは両方とも混在でき、基盤となる様々な意味や制約を持つことができます。
+例えば、[[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;] フィールドグループ ](../field-groups/profile/demographic-details.md) を使用する XDM スキーマについて考えてみます。このフィールドグループには、`xdm` 名前空間に存在する標準の `mobilePhone` フィールドがあります。 同じスキーマ内で、別の名前空間（[ テナント ID](../api/getting-started.md#know-your-tenant_id)）の下に別の `mobilePhone` フィールドを自由に作成することもできます。 これらのフィールドは両方とも混在でき、基盤となる様々な意味や制約を持つことができます。
 
 ## 名前空間の構文
 

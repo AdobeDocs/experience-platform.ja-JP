@@ -37,7 +37,7 @@ ht-degree: 89%
 
 ## 2. にログインする
 
-タグ権限がAdobe IDに追加されたら、Experience Platform UI またはデータ収集 UI にログインする必要があります。 これを行うには、[Experience Cloud ログイン画面 ](https://experience.adobe.com/) に直接移動し、「データ収集 **[!UICONTROL または]** 4}Experience Platform ]**を選択します。**[!UICONTROL 
+タグ権限がAdobe IDに追加されたら、Experience Platform UI またはデータ収集 UI にログインする必要があります。 これを行うには、[Experience Cloud ログイン画面 ](https://experience.adobe.com/) に直接移動し、「データ収集 **[!UICONTROL または]** 4&rbrace;Experience Platform **を選択します。**
 
 >[!NOTE]
 >

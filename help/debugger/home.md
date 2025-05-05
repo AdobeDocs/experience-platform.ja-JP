@@ -20,7 +20,7 @@ ht-degree: 5%
 Experience Platform Debugger を他のAdobe アクティベーションソリューションと共に使用して、次の操作を実行できます。
 
 1. [tags](../tags/home.md) を使用して、ページ上で [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ja) 製品をアクティベートするコードを挿入します。
-1. Experience Platform Debugger の [**[!UICONTROL Auditor ]**タブ ](./auditor/overview.md) を使用して、実装をテストします。
+1. Experience Platform Debugger の [**[!UICONTROL Auditor &#x200B;]**&#x200B;タブ ](./auditor/overview.md) を使用して、実装をテストします。
 1. Experience Platform Debugger のイベントベースおよびソリューション固有のツールを使用して、Auditor で見つかった問題をデバッグしたり、実装に関するその他の情報を調べたりします。
 
 >[!NOTE]

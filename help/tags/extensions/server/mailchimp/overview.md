@@ -79,13 +79,13 @@ Mailchimp のプランや、トランザクションメール、カスタマー�
 
 ### 秘密鍵およびデータ要素の作成
 
-イベント転送プロパティで、`Mailchimp API Key` と呼ばれる [ トークン [!UICONTROL  秘密鍵 ] を作成 ](../../../ui/event-forwarding/secrets.md#token) します。
+イベント転送プロパティで、`Mailchimp API Key` と呼ばれる [ トークン [!UICONTROL &#x200B; 秘密鍵 &#x200B;] を作成 ](../../../ui/event-forwarding/secrets.md#token) します。
 
-次に、[Core] 拡張機能と [!UICONTROL Secret] データ要素タイプを使用して ](../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成 [!UICONTROL  し、作成した `Mailchimp API Key` シークレットを参照します。 データ要素名として `Mailchimp Token` を入力します。
+次に、[Core] 拡張機能と [!UICONTROL Secret] データ要素タイプを使用して (../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成  し、作成した `Mailchimp API Key` シークレットを参照します。 データ要素名として `Mailchimp Token` を入力します。
 
 ### 拡張機能のインストールと設定
 
-同じイベント転送プロパティで、「**[!UICONTROL 拡張機能 ]」を選択してから****[!UICONTROL カタログ]** を選択して、インストールできる拡張機能を表示します。 ここから、Mailchimp 拡張機能を検索し、「**[!UICONTROL インストール]**」を選択します。
+同じイベント転送プロパティで、「**[!UICONTROL 拡張機能 &#x200B;]」を選択してから**&#x200B;**[!UICONTROL カタログ]** を選択して、インストールできる拡張機能を表示します。 ここから、Mailchimp 拡張機能を検索し、「**[!UICONTROL インストール]**」を選択します。
 
 ![Mailchimp 拡張機能のインストール ](../../../images/extensions/server/mailchimp/install.png)
 
@@ -132,7 +132,7 @@ Mailchimp のプランや、トランザクションメール、カスタマー�
 >  
 >上記の **パスの例** 値は一例です。 これらのデータ要素で参照されるフィールド名と [ パス ](../../../ui/event-forwarding/overview.md#data-element-path) は、上記の手順で Web SDKに名前を付けて設定した方法に応じて、プロパティで異なる場合があります。
 
-イベント転送プロパティで、上記の各フィールドに対してデータ要素を作成できます。 作成したら、この拡張機能の [!UICONTROL  イベントを追加 ] アクションでデータ要素を参照できます。
+イベント転送プロパティで、上記の各フィールドに対してデータ要素を作成できます。 作成したら、この拡張機能の [!UICONTROL &#x200B; イベントを追加 &#x200B;] アクションでデータ要素を参照できます。
 
 ![ イベントアクション設定を追加 ](../../../images/extensions/server/mailchimp/action-configurations.png)
 

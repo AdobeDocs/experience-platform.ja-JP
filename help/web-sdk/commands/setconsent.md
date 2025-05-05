@@ -72,8 +72,8 @@ Web SDKには、2 つの補完的な同意設定コマンドがあります。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
 1. **[!UICONTROL ルール]** に移動し、目的のルールを選択します。
-1. [!UICONTROL  アクション ] で、既存のアクションを選択するか、アクションを作成します。
-1. [!UICONTROL  拡張機能 ] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、[!UICONTROL  アクションタイプ ] を **[!UICONTROL 同意を設定]** に設定します。
+1. [!UICONTROL &#x200B; アクション &#x200B;] で、既存のアクションを選択するか、アクションを作成します。
+1. [!UICONTROL &#x200B; 拡張機能 &#x200B;] ドロップダウンフィールドを **[!UICONTROL Adobe Experience Platform Web SDK]** に設定し、[!UICONTROL &#x200B; アクションタイプ &#x200B;] を **[!UICONTROL 同意を設定]** に設定します。
 1. **[!UICONTROL 標準]** および **[!UICONTROL 一般同意]** を含む、右側の目的のフィールドを設定します。
 1. 「**[!UICONTROL 変更を保持]**」をクリックして、公開ワークフローを実行します。
 
@@ -93,7 +93,7 @@ Web SDKには、2 つの補完的な同意設定コマンドがあります。
 
 ### Adobe 2.0 標準 `consent` オブジェクト
 
-Adobe Experience Platformを使用している場合は、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe 2.0 標準について詳しくは、[Adobe Experience Platformにおけるガバナンス、プライバシー、セキュリティ ](../../landing/governance-privacy-security/overview.md) を参照してください。 [!UICONTROL  同意および環境設定 ] プロファイルフィールドグループの `consents` フィールドのスキーマに対応する、以下の値オブジェクト内にデータを追加できます。
+Adobe Experience Platformを使用している場合は、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe 2.0 標準について詳しくは、[Adobe Experience Platformにおけるガバナンス、プライバシー、セキュリティ ](../../landing/governance-privacy-security/overview.md) を参照してください。 [!UICONTROL &#x200B; 同意および環境設定 &#x200B;] プロファイルフィールドグループの `consents` フィールドのスキーマに対応する、以下の値オブジェクト内にデータを追加できます。
 
 * **`standard`**：選択する同意標準。 このプロパティをAdobe 2.0 標準の `"Adobe"` に設定します。
 * **`version`**：同意標準のバージョンを表す文字列。 このプロパティをAdobe 2.0 標準の `"2.0"` に設定します。

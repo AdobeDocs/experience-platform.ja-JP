@@ -13,11 +13,11 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->[!UICONTROL  権限管理者 ] にアクセスするには、製品管理者である必要があります。 管理者権限がない場合は、システム管理者に問い合わせてアクセス権を取得してください。
+>[!UICONTROL &#x200B; 権限管理者 &#x200B;] にアクセスするには、製品管理者である必要があります。 管理者権限がない場合は、システム管理者に問い合わせてアクセス権を取得してください。
 
-[!UICONTROL  権限マネージャー ] 機能は、レポートを提供し、完全なアクセス制御環境を表示できるようにします。 簡単なクエリを使用して明確なレポートを生成できます。これにより、アクセス管理を理解し、多数のワークフローや精度レベルでアクセス権限を確認する時間を短縮することができます。
+[!UICONTROL &#x200B; 権限マネージャー &#x200B;] 機能は、レポートを提供し、完全なアクセス制御環境を表示できるようにします。 簡単なクエリを使用して明確なレポートを生成できます。これにより、アクセス管理を理解し、多数のワークフローや精度レベルでアクセス権限を確認する時間を短縮することができます。
 
-[!UICONTROL  権限マネージャー ] を使用すると、次の項目に基づいて検索できます。
+[!UICONTROL &#x200B; 権限マネージャー &#x200B;] を使用すると、次の項目に基づいて検索できます。
 
 * [ユーザーとユーザーグループ](./permissions.md)
 * [役割とラベル](./permissions.md)
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 [!UICONTROL Permission Manager] にアクセスするには、[!DNL Experience Platform] のExperience Platformへのアクセス権を持つ組織の管理者である必要があります。 Adobeでは組織内のカスタマイズ可能な管理者階層を使用できますが、[!DNL Adobe Experience Platform] の製品管理者である必要があります。 詳しくは、Adobe Help Center の [ 管理の役割 ](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html) に関する記事を参照してください。
 
-[!DNL Adobe] の資格情報を使用して ](https://experience.adobe.com/)0}Adobe Experience Platform} にログインします。  [ログインすると、組織の **[!UICONTROL 概要]** ページが表示されます。 このページには、組織が購読している製品が表示されます。 Platform 統合の属性ベースのアクセス制御ワークスペースを起動するには、「**[!UICONTROL 権限]**」を選択します。
+[!DNL Adobe] の資格情報を使用して [&#128279;](https://experience.adobe.com/)0&rbrace;Adobe Experience Platform&rbrace; にログインします。  ログインすると、組織の **[!UICONTROL 概要]** ページが表示されます。 このページには、組織が購読している製品が表示されます。 Platform 統合の属性ベースのアクセス制御ワークスペースを起動するには、「**[!UICONTROL 権限]**」を選択します。
 
 ![ 権限をハイライト表示したAdobe Experience Platformの概要。](../../images/flac-ui/flac-select-product.png)
 
@@ -38,4 +38,4 @@ Experience Platformの属性ベースのアクセス制御ワークスペース�
 
 ## 次の手順
 
-[!UICONTROL  権限マネージャー ] ワークスペースに移動したら、次の手順に進んで、「ユーザーと役割を検索 [ する方法の詳細を確認し ](./permissions.md) す。
+[!UICONTROL &#x200B; 権限マネージャー &#x200B;] ワークスペースに移動したら、次の手順に進んで、「ユーザーと役割を検索 [ する方法の詳細を確認し ](./permissions.md) す。

@@ -32,23 +32,23 @@ Web SDK 2.25.0 以降でサポートされています。
 
 [ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) の際には、次のいずれかのオプションを選択します。
 
-* [!UICONTROL  内部リンクの収集 ]
-   * [!UICONTROL  イベントのグループ化オプション ]:
-      * [!UICONTROL  イベントのグループ化なし ]
-      * [!UICONTROL  セッションストレージを使用したイベントのグループ化 ]
-      * [!UICONTROL  ローカルオブジェクトを使用したイベントのグループ化 ]
-* [!UICONTROL  外部リンクの収集 ]
-* [!UICONTROL  ダウンロードリンクの収集 ]
-* [!UICONTROL  フィルタークリックのプロパティ ]
+* [!UICONTROL &#x200B; 内部リンクの収集 &#x200B;]
+   * [!UICONTROL &#x200B; イベントのグループ化オプション &#x200B;]:
+      * [!UICONTROL &#x200B; イベントのグループ化なし &#x200B;]
+      * [!UICONTROL &#x200B; セッションストレージを使用したイベントのグループ化 &#x200B;]
+      * [!UICONTROL &#x200B; ローカルオブジェクトを使用したイベントのグループ化 &#x200B;]
+* [!UICONTROL &#x200B; 外部リンクの収集 &#x200B;]
+* [!UICONTROL &#x200B; ダウンロードリンクの収集 &#x200B;]
+* [!UICONTROL &#x200B; フィルタークリックのプロパティ &#x200B;]
 
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 ] をクリックします。
-1. 「[!UICONTROL  データ収集 ]」セクションまでスクロールし、目的のクリックコレクション設定を選択します。
+1. **[!UICONTROL 拡張機能]** に移動し、[!UICONTROL Adobe Experience Platform Web SDK **[!UICONTROL カードの]** 設定 &#x200B;] をクリックします。
+1. 「[!UICONTROL &#x200B; データ収集 &#x200B;]」セクションまでスクロールし、目的のクリックコレクション設定を選択します。
 1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 
-[!UICONTROL  フィルタークリックのプロパティ ] コールバックにより、目的のコードを挿入できるカスタムコードエディターが開きます。 コードエディター内で、次の変数にアクセスできます。
+[!UICONTROL &#x200B; フィルタークリックのプロパティ &#x200B;] コールバックにより、目的のコードを挿入できるカスタムコードエディターが開きます。 コードエディター内で、次の変数にアクセスできます。
 
 * **`content.clickedElement`**：クリックされた DOM 要素。
 * **`content.pageName`**：クリックが発生した際のページ名。

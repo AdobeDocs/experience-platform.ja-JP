@@ -56,7 +56,7 @@ ht-degree: 4%
 
    ![ ローカルにコミット ](../assets/docs-framework/commit-local.png)
 
-1. GitHub デスクトップで、以下に示すように ](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#push) 作業を [ リモート [ ブランチに ](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#remote) プッシュ」します。
+1. GitHub デスクトップで、以下に示すように [&#128279;](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#push) 作業を  リモート [ ブランチに ](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#remote) プッシュ」します。
 
    ![ コミットのプッシュ ](../assets/docs-framework/push-local-to-remote.png)
 

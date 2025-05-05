@@ -20,31 +20,31 @@ ht-degree: 7%
 
 | 前の名前 | 更新された名前 |
 | --- | --- |
-| [!UICONTROL  エクスペリエンスイベントプライバシー mixin] | [!UICONTROL  プライバシーの詳細 ] |
-| [!UICONTROL ExperienceEvent アプリケーションの詳細 ] | [!UICONTROL アプリケーションの詳細] |
-| [!UICONTROL ExperienceEvent チャネルの詳細 ] | [!UICONTROL チャンネル詳細] |
-| [!UICONTROL ExperienceEvent コマースの詳細 ] | [!UICONTROL コマース詳細] |
-| [!UICONTROL  広告の ExperienceEvent の詳細 ] | [!UICONTROL Advertisingの詳細 ] |
-| [!UICONTROL  マーケティングの ExperienceEvent 詳細 ] | [!UICONTROL キャンペーンマーケティング詳細] |
-| [!UICONTROL  メディアの ExperienceEvent の詳細 ] | [!UICONTROL  メディアインタラクションの詳細 ] |
-| [!UICONTROL  検索の ExperienceEvent の詳細 ] | [!UICONTROL 検索の詳細] |
-| [!UICONTROL ExperienceEvent ダイレクトマーケティングの詳細 ] | [!UICONTROL  ダイレクトマーケティングの詳細 ] |
+| [!UICONTROL &#x200B; エクスペリエンスイベントプライバシー mixin] | [!UICONTROL &#x200B; プライバシーの詳細 &#x200B;] |
+| [!UICONTROL ExperienceEvent アプリケーションの詳細 &#x200B;] | [!UICONTROL アプリケーションの詳細] |
+| [!UICONTROL ExperienceEvent チャネルの詳細 &#x200B;] | [!UICONTROL チャンネル詳細] |
+| [!UICONTROL ExperienceEvent コマースの詳細 &#x200B;] | [!UICONTROL コマース詳細] |
+| [!UICONTROL &#x200B; 広告の ExperienceEvent の詳細 &#x200B;] | [!UICONTROL Advertisingの詳細 &#x200B;] |
+| [!UICONTROL &#x200B; マーケティングの ExperienceEvent 詳細 &#x200B;] | [!UICONTROL キャンペーンマーケティング詳細] |
+| [!UICONTROL &#x200B; メディアの ExperienceEvent の詳細 &#x200B;] | [!UICONTROL &#x200B; メディアインタラクションの詳細 &#x200B;] |
+| [!UICONTROL &#x200B; 検索の ExperienceEvent の詳細 &#x200B;] | [!UICONTROL 検索の詳細] |
+| [!UICONTROL ExperienceEvent ダイレクトマーケティングの詳細 &#x200B;] | [!UICONTROL &#x200B; ダイレクトマーケティングの詳細 &#x200B;] |
 | [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL エンドユーザー ID 詳細] |
-| [!UICONTROL ExperienceEvent 環境の詳細 ] | [!UICONTROL 環境詳細] |
-| [!UICONTROL ExperienceEvent 実装の詳細 ] | [!UICONTROL  実施細目 ] |
-| [!UICONTROL ExperienceEvent プロファイルステッチの詳細 ] | [!UICONTROL  プロファイルステッチ ] |
-| [!UICONTROL ExperienceEvent セグメントメンバーシップの詳細 ] | [!UICONTROL  セグメントメンバーシップの詳細 ] |
-| [!UICONTROL ExperienceEvent の技術的詳細 ] | [!UICONTROL 技術的詳細] |
+| [!UICONTROL ExperienceEvent 環境の詳細 &#x200B;] | [!UICONTROL 環境詳細] |
+| [!UICONTROL ExperienceEvent 実装の詳細 &#x200B;] | [!UICONTROL &#x200B; 実施細目 &#x200B;] |
+| [!UICONTROL ExperienceEvent プロファイルステッチの詳細 &#x200B;] | [!UICONTROL &#x200B; プロファイルステッチ &#x200B;] |
+| [!UICONTROL ExperienceEvent セグメントメンバーシップの詳細 &#x200B;] | [!UICONTROL &#x200B; セグメントメンバーシップの詳細 &#x200B;] |
+| [!UICONTROL ExperienceEvent の技術的詳細 &#x200B;] | [!UICONTROL 技術的詳細] |
 | [!UICONTROL ExperienceEvent web details] | [!UICONTROL Web 詳細] |
-| [!UICONTROL  プロファイルのダイレクトマーケティング ] | [!UICONTROL  ダイレクトマーケティング連絡先の詳細 ] |
-| [!UICONTROL  プロファイル人物の詳細 ] | [!UICONTROL  人口統計の詳細 ] |
-| [!UICONTROL  プロファイルの個人の詳細 ] | [!UICONTROL  個人の連絡先の詳細 ] |
-| [!UICONTROL  プロファイル電話 ] | [!UICONTROL  電話番号の詳細 ] |
-| [!UICONTROL  プロファイル環境設定の詳細 ] | [!UICONTROL  環境設定の詳細 ] |
-| [!UICONTROL  プロファイルプライバシー ] | [!UICONTROL  プライバシーの詳細 ] |
-| [!UICONTROL  プロファイルプッシュの詳細 ] | [!UICONTROL  プッシュ通知トークンの詳細 ] |
-| [!UICONTROL  プロファイルセグメント化 ] | [!UICONTROL  セグメントメンバーシップの詳細 ] |
-| [!UICONTROL  プロファイルの購読 ] | [!UICONTROL  購読の詳細 ] |
-| [!UICONTROL  プロファイルの作業の詳細 ] | [!UICONTROL  仕事用連絡先の詳細 ] |
-| [!UICONTROL  プッシュ通知の詳細 ] | [!UICONTROL  プッシュ通知の詳細 ] |
-| [!UICONTROL  セグメント式 ] | [!UICONTROL  セグメント式の詳細 ] |
+| [!UICONTROL &#x200B; プロファイルのダイレクトマーケティング &#x200B;] | [!UICONTROL &#x200B; ダイレクトマーケティング連絡先の詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイル人物の詳細 &#x200B;] | [!UICONTROL &#x200B; 人口統計の詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイルの個人の詳細 &#x200B;] | [!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイル電話 &#x200B;] | [!UICONTROL &#x200B; 電話番号の詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイル環境設定の詳細 &#x200B;] | [!UICONTROL &#x200B; 環境設定の詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイルプライバシー &#x200B;] | [!UICONTROL &#x200B; プライバシーの詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイルプッシュの詳細 &#x200B;] | [!UICONTROL &#x200B; プッシュ通知トークンの詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイルセグメント化 &#x200B;] | [!UICONTROL &#x200B; セグメントメンバーシップの詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイルの購読 &#x200B;] | [!UICONTROL &#x200B; 購読の詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プロファイルの作業の詳細 &#x200B;] | [!UICONTROL &#x200B; 仕事用連絡先の詳細 &#x200B;] |
+| [!UICONTROL &#x200B; プッシュ通知の詳細 &#x200B;] | [!UICONTROL &#x200B; プッシュ通知の詳細 &#x200B;] |
+| [!UICONTROL &#x200B; セグメント式 &#x200B;] | [!UICONTROL &#x200B; セグメント式の詳細 &#x200B;] |

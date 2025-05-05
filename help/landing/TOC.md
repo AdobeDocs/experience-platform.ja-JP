@@ -41,7 +41,7 @@ ht-degree: 60%
 * Experience Platform ドキュメント {#documentation}
    * [概要](documentation/overview.md)
    * [言語サポート](documentation/language-support.md)
-* Experience Platform {#ecosystem} に基づいて構築されたアプリケーション
+* Experience Platform に基づいて構築されたアプリケーション {#ecosystem}
    * [概要](application-services.md)
    * [Adobe Real-time Customer Data Platform（すべてのエディション）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=ja)
    * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)

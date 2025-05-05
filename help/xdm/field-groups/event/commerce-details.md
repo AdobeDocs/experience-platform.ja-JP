@@ -11,13 +11,13 @@ ht-degree: 15%
 
 ---
 
-# [!UICONTROL Commerceの詳細 ] スキーマフィールドグループ
+# [!UICONTROL Commerceの詳細 &#x200B;] スキーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL Commerceの詳細 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、商品情報（SKU、名前、数量）や標準の買い物かご操作（注文、チェックアウト、放棄）などのコマースデータを表すために使用されます。
+[!UICONTROL Commerceの詳細 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、商品情報（SKU、名前、数量）や標準の買い物かご操作（注文、チェックアウト、放棄）などのコマースデータを表すために使用されます。
 
 ![](../../images/field-groups/commerce-details.png)
 

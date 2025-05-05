@@ -17,7 +17,7 @@ ht-degree: 13%
 >
 >初期設定時に、特定の `namespaceCode={VALUE}` を持つ ID 名前空間が存在しないことを示すエラーメッセージがAdobe Audience Manager ソースから返されます。 **メモ**：バックエンドでは、ID シンボルを参照するために `namespaceCode` が使用されます。 統合を完了するには、次の操作を行う必要があります。
 >
->- 指定した ID シンボル（`VALUE`）を使用して ](../../../identity-service/features/namespaces.md#create-custom-namespaces)ID サービスにカスタム名前空間を作成 [ します。
+>- 指定した ID シンボル（`VALUE`）を使用して [&#128279;](../../../identity-service/features/namespaces.md#create-custom-namespaces)ID サービスにカスタム名前空間を作成  します。
 >- データを再度取り込みます。
 
 Adobe Audience Manager ソースは、Adobe Experience Platformでのアクティベーション用に、Adobe Audience Managerで収集されたファーストパーティデータをストリーミングします。 Audience Manager ソースは、次の 2 種類のデータをExperience Platformに取り込みます。

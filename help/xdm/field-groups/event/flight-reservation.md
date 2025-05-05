@@ -10,15 +10,15 @@ ht-degree: 10%
 
 ---
 
-# [!UICONTROL  フライト予約 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; フライト予約 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  フライト予約 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、フライト予約に関する情報を取得するために使用されます。
+[!UICONTROL &#x200B; フライト予約 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、フライト予約に関する情報を取得するために使用されます。
 
-フィールドグループは、[!UICONTROL  予約詳細 ] フィールドグループの拡張機能で、単一のオブジェクトタイプのフィールド `reservations` の下に同じフィールドをすべて含んでいます。 これらの汎用フィールドに加えて、[!UICONTROL  フライト予約 ] には配列も含まれ `flightReservations` います。 このオブジェクトの配列は、航空便に固有のプロパティを持つ 1 つ以上の予約を記述するために使用されます。
+フィールドグループは、[!UICONTROL &#x200B; 予約詳細 &#x200B;] フィールドグループの拡張機能で、単一のオブジェクトタイプのフィールド `reservations` の下に同じフィールドをすべて含んでいます。 これらの汎用フィールドに加えて、[!UICONTROL &#x200B; フライト予約 &#x200B;] には配列も含まれ `flightReservations` います。 このオブジェクトの配列は、航空便に固有のプロパティを持つ 1 つ以上の予約を記述するために使用されます。
 
 >[!NOTE]
 >
->このドキュメントでは、`flightReservations` 配列の詳細を説明します。 `reservations` オブジェクトの下に提供されるその他のフィールドについて詳しくは、[[!UICONTROL  予約詳細 ] フィールドグループのリファレンス ](./reservation-details.md) を参照してください。
+>このドキュメントでは、`flightReservations` 配列の詳細を説明します。 `reservations` オブジェクトの下に提供されるその他のフィールドについて詳しくは、[[!UICONTROL &#x200B; 予約詳細 &#x200B;] フィールドグループのリファレンス ](./reservation-details.md) を参照してください。
 
 ![ フライトの予約構造 ](../../images/field-groups/flight-reservation/structure.png)
 

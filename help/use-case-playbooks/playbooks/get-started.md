@@ -39,7 +39,7 @@ Experience PlatformUI で豊富なユースケースプレイブックのギャ�
 
 ![ユースケースプレイブック用の開発サンドボックスの作成](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-[!UICONTROL  ユースケースプレイブック ] の下の左側のレールに [!UICONTROL  プレイブック ] が表示されます。
+[!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] の下の左側のレールに [!UICONTROL &#x200B; プレイブック &#x200B;] が表示されます。
 
 ![サンドボックス作成後の UI でのユースケースプレイブック。](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
@@ -47,7 +47,7 @@ Experience PlatformUI で豊富なユースケースプレイブックのギャ�
 
 ## 必要なアクセス権限をチームに付与 {#grant-access-permissions}
 
-[!UICONTROL  ユースケースプレイブック ] の使用を開始するには、マーケティングチームのメンバーが作成したプレイブックのリストを表示したり、自分でプレイブックを作成したりできるように、適切な権限が必要です。
+[!UICONTROL &#x200B; ユースケースプレイブック &#x200B;] の使用を開始するには、マーケティングチームのメンバーが作成したプレイブックのリストを表示したり、自分でプレイブックを作成したりできるように、適切な権限が必要です。
 
 **必要な権限**
 

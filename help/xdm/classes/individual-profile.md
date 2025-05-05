@@ -39,16 +39,16 @@ ht-degree: 29%
 
 アドビでは、 [!DNL XDM Individual Profile] クラスで使用するためのいくつかの標準フィールドグループを提供しています。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
-* [[!UICONTROL  同意および環境設定 ]](../field-groups/profile/consents.md)
-* [[!UICONTROL  人口統計の詳細 ]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL &#x200B; 同意および環境設定 &#x200B;]](../field-groups/profile/consents.md)
+* [[!UICONTROL &#x200B; 人口統計の詳細 &#x200B;]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
-* [[!UICONTROL  ロイヤルティの詳細 ]](../field-groups/profile/loyalty-details.md)
-* [[!UICONTROL  個人の連絡先の詳細 ]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL  セグメントメンバーシップの詳細 ]](../field-groups/profile/segmentation.md)
-* [[!UICONTROL  電気通信の登録 ]](../field-groups/profile/telecom-subscription.md)
-* [[!UICONTROL  仕事用連絡先の詳細 ]](../field-groups/profile/work-contact-details.md)
-* [[!UICONTROL XDM ビジネスユーザーコンポーネント ]](../field-groups/profile/business-person-components.md)\*
-* [[!UICONTROL XDM ビジネス人物の詳細 ]](../field-groups/profile/business-person-details.md)\*
+* [[!UICONTROL &#x200B; ロイヤルティの詳細 &#x200B;]](../field-groups/profile/loyalty-details.md)
+* [[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL &#x200B; セグメントメンバーシップの詳細 &#x200B;]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL &#x200B; 電気通信の登録 &#x200B;]](../field-groups/profile/telecom-subscription.md)
+* [[!UICONTROL &#x200B; 仕事用連絡先の詳細 &#x200B;]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL XDM ビジネスユーザーコンポーネント &#x200B;]](../field-groups/profile/business-person-components.md)\*
+* [[!UICONTROL XDM ビジネス人物の詳細 &#x200B;]](../field-groups/profile/business-person-details.md)\*
 
 *\*このフィールドグループは、Adobe Real-Time Customer Data PlatformのB2B editionにアクセスできる組織のみが使用できます。*
 

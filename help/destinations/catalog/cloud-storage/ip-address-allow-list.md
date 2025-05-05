@@ -27,7 +27,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->このページで説明している IP 範囲は、ファイルベースのクラウドストレージ宛先 [!UICONTROL Azure Blob]、[!UICONTROL Azure Data Lake Storage Gen2] および [!UICONTROL  データランディングゾーン ] では *サポートされていません*。
+>このページで説明している IP 範囲は、ファイルベースのクラウドストレージ宛先 [!UICONTROL Azure Blob]、[!UICONTROL Azure Data Lake Storage Gen2] および [!UICONTROL &#x200B; データランディングゾーン &#x200B;] では *サポートされていません*。
 
 ## 概要 {#overview}
 

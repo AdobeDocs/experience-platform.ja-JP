@@ -133,7 +133,7 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明 |
 | --- | --- | --- |
-| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用すると、データベンダーの最上位層の顧客獲得ユースケースをソースとする見込み客プロファイルを取り込むことができます。 例と詳細については、[[!UICONTROL XDM 個人見込み客プロファイル ]](../../xdm/classes/prospect.md) のドキュメントを参照してください。 |
+| クラス | [[!UICONTROL XDM 個人見込み客プロファイル]](https://github.com/adobe/xdm/pull/1758/files) | このクラスを使用すると、データベンダーの最上位層の顧客獲得ユースケースをソースとする見込み客プロファイルを取り込むことができます。 例と詳細については、[[!UICONTROL XDM 個人見込み客プロファイル &#x200B;]](../../xdm/classes/prospect.md) のドキュメントを参照してください。 |
 
 {style="table-layout:auto"}
 
@@ -141,8 +141,8 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 
 | コンポーネントのタイプ | 名前 | 説明のアップデート |
 | --- | --- | --- |
-| 拡張機能（[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 ]） | [[!UICONTROL  コンテキストデータ ]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL  コンテキストデータ ]Adobe Analyticsのコンテキストデータを提供するために、[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 ] に追加されたマップオブジェクト。 |
-| フィールドグループ | 複数 | いくつかのフィールドが [[!UICONTROL  エンリッチメントされたイベントセグメントの詳細 ]](https://github.com/adobe/xdm/pull/1760/files) に追加されました。 |
+| 拡張機能（[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 &#x200B;]） | [[!UICONTROL &#x200B; コンテキストデータ &#x200B;]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL &#x200B; コンテキストデータ &#x200B;]Adobe Analyticsのコンテキストデータを提供するために、[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 &#x200B;] に追加されたマップオブジェクト。 |
+| フィールドグループ | 複数 | いくつかのフィールドが [[!UICONTROL &#x200B; エンリッチメントされたイベントセグメントの詳細 &#x200B;]](https://github.com/adobe/xdm/pull/1760/files) に追加されました。 |
 
 {style="table-layout:auto"}
 

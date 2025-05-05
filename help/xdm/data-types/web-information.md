@@ -11,17 +11,17 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL Web 情報 ] データタイプ
+# [!UICONTROL Web 情報 &#x200B;] データタイプ
 
-[!UICONTROL Web 情報 ] は、Web ページ、リファラー、オンページインタラクションに関連するリンクなど、World Wide Web チャネル固有のエクスペリエンスイベントを介して記録された情報を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。
+[!UICONTROL Web 情報 &#x200B;] は、Web ページ、リファラー、オンページインタラクションに関連するリンクなど、World Wide Web チャネル固有のエクスペリエンスイベントを介して記録された情報を記述する、標準のエクスペリエンスデータモデル（XDM）データタイプです。
 
 ![](../images/data-types/web-information.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `webInteraction` | [[!UICONTROL Web インタラクション ]](./web-interaction.md) | インタラクションに対応する web リンクまたは URL に関する詳細を説明します。 |
-| `webPageDetails` | [[!UICONTROL Web ページの詳細 ]](./webpage-details.md) | Web インタラクションが発生した Web ページに関する詳細を説明します。 |
-| `webReferrer` | [!UICONTROL  オブジェクト ] | Web インタラクションのリファラーを表します。これは、現在の Web インタラクションが記録される直前に訪問者が訪問した URL です。 次のサブプロパティが含まれます。 <ul><li>`URL`: リファラー URL。</li><li>`type`: リファラータイプ。</li></ul> |
+| `webInteraction` | [[!UICONTROL Web インタラクション &#x200B;]](./web-interaction.md) | インタラクションに対応する web リンクまたは URL に関する詳細を説明します。 |
+| `webPageDetails` | [[!UICONTROL Web ページの詳細 &#x200B;]](./webpage-details.md) | Web インタラクションが発生した Web ページに関する詳細を説明します。 |
+| `webReferrer` | [!UICONTROL &#x200B; オブジェクト &#x200B;] | Web インタラクションのリファラーを表します。これは、現在の Web インタラクションが記録される直前に訪問者が訪問した URL です。 次のサブプロパティが含まれます。 <ul><li>`URL`: リファラー URL。</li><li>`type`: リファラータイプ。</li></ul> |
 
 {style="table-layout:auto"}
 

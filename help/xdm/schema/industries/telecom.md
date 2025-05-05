@@ -10,7 +10,7 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL  通信業 ] 業界データモデル ERD
+# [!UICONTROL &#x200B; 通信業 &#x200B;] 業界データモデル ERD
 
 次の ERD （Entity Relationship Diagram）は、通信業界向けの標準化されたデータモデルを表しています。 ERD は、Adobe Experience Platformでのデータの保存方法を考慮して、正規化されていない方法で意図的に表示されます。
 
@@ -33,14 +33,14 @@ ht-degree: 1%
 >
 >エクスペリエンスイベントエンティティには、「_ID」フィールドが含まれます。このフィールドは、XDM ExperienceEvent クラスが提供する一意の識別子（`_id`）属性を表します。 この値に期待される値について詳しくは、[XDM ExperienceEvent](../../classes/experienceevent.md) に関する参照ドキュメントを参照してください。
 
-## [!UICONTROL  電気通信 ] 使用例
+## [!UICONTROL &#x200B; 電気通信 &#x200B;] 使用例
 
 次の表に、通信業界の一般的なユースケースで推奨されるクラスとスキーマフィールドグループの概要を示します。
 
 | ユースケース | 推奨されるクラスおよびフィールドグループ |
 | --- | --- |
-| 現在の保有量とブラウジング行動に基づいて、アップセルまたはクロスセルの機会に適した候補である顧客を理解します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL  アップセルの詳細 ]](../../field-groups/event/upsell-details.md)</li><li>[[!UICONTROL  アップグレードの詳細 ]](../../field-groups/event/upgrade-details.md)</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL  電気通信の登録 ]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL  人口統計の詳細 ]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL  個人の連絡先の詳細 ]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
-| 関連する広告とパーソナライズされた自動メールを使用して、買い物かごの放棄を再ターゲット化します。 変換時に広告を抑制 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Commerceの詳細 ]](../../field-groups/event/upsell-details.md) （買い物かごの放棄をキャプチャするため）</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL  電気通信の登録 ]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL  人口統計の詳細 ]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL  個人の連絡先の詳細 ]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
-| 従業員のインタラクションや自動機械学習アルゴリズムに基づいて、チャーンを起こす可能性があると顧客がマークされた場合、顧客の詳細をデジタルチャネルと非デジタルチャネルに送信します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL キャンペーンマーケティング詳細]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL チャンネル詳細]](../../field-groups/event/channel-details.md)</li><li>パーソナライズされたコンテンツを含むカスタムフィールドグループ</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL  人口統計の詳細 ]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL  個人の連絡先の詳細 ]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| 現在の保有量とブラウジング行動に基づいて、アップセルまたはクロスセルの機会に適した候補である顧客を理解します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL &#x200B; アップセルの詳細 &#x200B;]](../../field-groups/event/upsell-details.md)</li><li>[[!UICONTROL &#x200B; アップグレードの詳細 &#x200B;]](../../field-groups/event/upgrade-details.md)</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL &#x200B; 電気通信の登録 &#x200B;]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL &#x200B; 人口統計の詳細 &#x200B;]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| 関連する広告とパーソナライズされた自動メールを使用して、買い物かごの放棄を再ターゲット化します。 変換時に広告を抑制 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Commerceの詳細 &#x200B;]](../../field-groups/event/upsell-details.md) （買い物かごの放棄をキャプチャするため）</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL &#x200B; 電気通信の登録 &#x200B;]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL &#x200B; 人口統計の詳細 &#x200B;]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| 従業員のインタラクションや自動機械学習アルゴリズムに基づいて、チャーンを起こす可能性があると顧客がマークされた場合、顧客の詳細をデジタルチャネルと非デジタルチャネルに送信します。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL キャンペーンマーケティング詳細]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL チャンネル詳細]](../../field-groups/event/channel-details.md)</li><li>パーソナライズされたコンテンツを含むカスタムフィールドグループ</li></ul></li><li>**[[!UICONTROL XDM 個人プロファイル]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL &#x200B; 人口統計の詳細 &#x200B;]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL &#x200B; 個人の連絡先の詳細 &#x200B;]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}

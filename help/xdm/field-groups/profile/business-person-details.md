@@ -9,9 +9,9 @@ ht-degree: 11%
 
 ---
 
-# [!UICONTROL XDM ビジネスユーザー詳細 ] スキーマフィールドグループ
+# [!UICONTROL XDM ビジネスユーザー詳細 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL XDM ビジネスユーザー詳細 ] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループで、B2B （Business to Business）エンタープライズのコンテキストでの個人に関する情報をキャプチャします。
+[!UICONTROL XDM ビジネスユーザー詳細 &#x200B;] は、[[!DNL XDM Individual Profile]  クラス ](../../classes/individual-profile.md) の標準スキーマフィールドグループで、B2B （Business to Business）エンタープライズのコンテキストでの個人に関する情報をキャプチャします。
 
 ![](../../images/field-groups/business-person-details.png)
 

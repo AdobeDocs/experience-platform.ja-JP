@@ -75,52 +75,52 @@ ht-degree: 28%
   <tr>
   <td>
   <pre class=" language-json">
-{
-  "xdm:birthDate": {
+&lbrace;
+  "xdm:birthDate": &lbrace;
     "title": "生年月日",
     "type": "string",
     "format": "date"
-  }、
-  "xdm:birthDayAndMonth": {
+  &rbrace;、
+  "xdm:birthDayAndMonth": &lbrace;
     "title": "生年月日",
     "type": "string",
     "pattern": "[0-1][0-9]-[0-9][0-9]"
-  }、
-  "xdm:birthYear": {
+  &rbrace;、
+  "xdm:birthYear": &lbrace;
     "title": "Birth year",
     "type": "integer",
     "minimum":1,
     "maximum": 32767
-  }
-}
+  &rbrace;
+&rbrace;
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-{
-  "birthDate": {
+&lbrace;
+  "birthDate": &lbrace;
     "title": "生年月日",
     "type": "string",
     "format": "date",
     "meta:xdmField": "xdm:birthDate",
     "meta:xdmType": "date"
-  }、
-  "birthDayAndMonth": {
+  &rbrace;、
+  "birthDayAndMonth": &lbrace;
     "title": "生年月日",
     "type": "string",
     "pattern": "[0-1][0-9]-[0-9][0-9]",
     "meta:xdmField": "xdm:birthDayAndMonth",
     "meta:xdmType": "string"
-  }、
-  "birthYear": {
+  &rbrace;、
+  "birthYear": &lbrace;
     "title": "Birth year",
     "type": "integer",
     "minimum":1,
     「maximum」:32767、
     "meta:xdmField": "xdm:birthYear",
     "meta:xdmType": "short"
-  }
-}
+  &rbrace;
+&rbrace;
       </pre>
   </td>
   </tr>

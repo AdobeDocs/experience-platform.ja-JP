@@ -9,15 +9,15 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL  ボット検出 ] フィールドグループ
+# [!UICONTROL &#x200B; ボット検出 &#x200B;] フィールドグループ
 
-[!UICONTROL  ボット検出 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、ボット生成トラフィックに関する情報を提供します。
+[!UICONTROL &#x200B; ボット検出 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、ボット生成トラフィックに関する情報を提供します。
 
-![ 「ボット検出 [!UICONTROL  フィールドグループ ] 図 ](../../images/field-groups/bot-detection-information.png)
+![ 「ボット検出 [!UICONTROL &#x200B; フィールドグループ &#x200B;] 図 ](../../images/field-groups/bot-detection-information.png)
 
 | 表示名 | プロパティ | データタイプ | 説明 |
 |----------------------------|-----------------|-----------|---------------------------------------------------------|
-| [!UICONTROL  ボットの検出 ] | `botDetection` | オブジェクト | ボット生成トラフィックに関する情報を提供します。 |
+| [!UICONTROL &#x200B; ボットの検出 &#x200B;] | `botDetection` | オブジェクト | ボット生成トラフィックに関する情報を提供します。 |
 | [!UICONTROL スコア] | `score` | 数値 | ゼロから 1 までのボット確率スコア。 スコアが 0 の場合は、トラフィックがボットではないことを意味します。 |
 
 {style="table-layout:auto"}

@@ -28,7 +28,7 @@ ht-degree: 45%
 
 ## [!DNL Privacy Service] UI ダッシュボードの参照
 
-[!DNL Privacy Service] UI 用のダッシュボードには、プライバシージョブのステータスを表示できる「[!UICONTROL  ステータスレポート ]」および「[!UICONTROL  ジョブリクエスト ]」の 2 つのウィジェットが用意されています。 また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
+[!DNL Privacy Service] UI 用のダッシュボードには、プライバシージョブのステータスを表示できる「[!UICONTROL &#x200B; ステータスレポート &#x200B;]」および「[!UICONTROL &#x200B; ジョブリクエスト &#x200B;]」の 2 つのウィジェットが用意されています。 また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
 
 ![UI ダッシュボード](../images/user-guide/dashboard.png)
 
@@ -38,29 +38,29 @@ ht-degree: 45%
 
 | UI ラベル | 規則 |
 |-------------------------------------|------------------------|
-| [!UICONTROL APA_AUS （オーストラリア） ] | [!DNL Australia Privacy Act] |
-| [!UICONTROL CCPA （カリフォルニア州） ] | [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPA_USA （コロラド州） ] | [!DNL Colorado Privacy Act] |
-| [!UICONTROL CPRA_USA （カリフォルニア州） ] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA_USA （コネチカット州） ] | [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DPDPA_USA （デラウェア州） ] | [!DNL Delaware Personal Data Privacy Act] |
-| [!UICONTROL FDBR_USA （フロリダ州） ] | [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR （欧州連合） ] | 欧州連合 [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPPA_USA （米国） ] | [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL APA_AUS （オーストラリア） &#x200B;] | [!DNL Australia Privacy Act] |
+| [!UICONTROL CCPA （カリフォルニア州） &#x200B;] | [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPA_USA （コロラド州） &#x200B;] | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_USA （カリフォルニア州） &#x200B;] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA_USA （コネチカット州） &#x200B;] | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_USA （デラウェア州） &#x200B;] | [!DNL Delaware Personal Data Privacy Act] |
+| [!UICONTROL FDBR_USA （フロリダ州） &#x200B;] | [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR （欧州連合） &#x200B;] | 欧州連合 [!DNL General Data Protection Regulation] |
+| [!UICONTROL HIPPA_USA （米国） &#x200B;] | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL ICDPA_USA] （アイオワ州） | [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA （ブラジル） ] | ブラジルの「[!DNL General Data Protection Law]」 [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA_USA （ワシントン） ] | [!DNL Washington My Health My Data Act] |
-| [!UICONTROL MCDPA_USA （モンタナ） ] | [!DNL Montana Consumer Data Privacy Act] |
-| [!UICONTROL NDPA_USA （ネブラスカ州） ] | [!DNL Nebraska Data Protection Act] |
-| [!UICONTROL NZPA_NZL （ニュージーランド） ] | ニュージーランド [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA （ニューハンプシャー州） ] | [!DNL New Hampshire Privacy Act] |
-| [!UICONTROL NJDPA_USA （ニュージャージー州） ] | [!DNL New Jersey Data Protection Act] |
-| [!UICONTROL OCPA USA （オレゴン） ] | [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA （タイ） ] | タイの [!DNL Personal Data Protection Act] |
-| [!UICONTROL QL25_CAN （Quebec） ] | [!DNL Quebec Law 25] |
-| [!UICONTROL TDPSA USA （テキサス州） ] | [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA_USA （ユタ州） ] | [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA （バージニア） ] | [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA （ブラジル） &#x200B;] | ブラジルの「[!DNL General Data Protection Law]」 [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA_USA （ワシントン） &#x200B;] | [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MCDPA_USA （モンタナ） &#x200B;] | [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL NDPA_USA （ネブラスカ州） &#x200B;] | [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NZPA_NZL （ニュージーランド） &#x200B;] | ニュージーランド [!DNL Privacy Act] |
+| [!UICONTROL NHPA_USA （ニューハンプシャー州） &#x200B;] | [!DNL New Hampshire Privacy Act] |
+| [!UICONTROL NJDPA_USA （ニュージャージー州） &#x200B;] | [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL OCPA USA （オレゴン） &#x200B;] | [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA （タイ） &#x200B;] | タイの [!DNL Personal Data Protection Act] |
+| [!UICONTROL QL25_CAN （Quebec） &#x200B;] | [!DNL Quebec Law 25] |
+| [!UICONTROL TDPSA USA （テキサス州） &#x200B;] | [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL UCPA_USA （ユタ州） &#x200B;] | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA （バージニア） &#x200B;] | [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
 
@@ -103,13 +103,13 @@ Waiting:
 
 ### ジョブリクエスト {#job-requests}
 
-[!UICONTROL  ジョブリクエスト ] ワークスペースには、組織の最近のジョブリクエストに関する詳細がリストされます。 詳細には、リクエストタイプ、現在のステータス、期限、リクエスト者のメールなどが含まれます。 一度に 100 件のレコードのセットが読み込まれます。 デフォルトでは、最近作成されたジョブが上部に表示され、下にスクロールして参照すると、より多くのレコードセットが読み込まれます。
+[!UICONTROL &#x200B; ジョブリクエスト &#x200B;] ワークスペースには、組織の最近のジョブリクエストに関する詳細がリストされます。 詳細には、リクエストタイプ、現在のステータス、期限、リクエスト者のメールなどが含まれます。 一度に 100 件のレコードのセットが読み込まれます。 デフォルトでは、最近作成されたジョブが上部に表示され、下にスクロールして参照すると、より多くのレコードセットが読み込まれます。
 
 >[!NOTE]
 >
 >以前作成したジョブのデータには、完了日から 30 日間のみアクセスできます。
 
-[!UICONTROL  ジョブリクエスト ] タイトルの下の検索バーにキーワードを入力して、リストをフィルタリングできます。 リストは、入力に応じて自動的にフィルタリングをおこない、検索用語に一致する値を含んだリクエストを表示します。検索フィールドは、プライバシージョブ ID を、UI で現在レンダリングされている/読み込まれているジョブに一致させる「クイック」検索を実行します。 送信されたすべてのジョブを包括的に検索するわけではありません。 代わりに、読み込まれた結果に適用されるフィルターになります。 Privacy Service API を使用して [ 特定の規制、日付範囲または単一のジョブに基づいてジョブを返す ](../api/privacy-jobs.md#list) ことができます。
+[!UICONTROL &#x200B; ジョブリクエスト &#x200B;] タイトルの下の検索バーにキーワードを入力して、リストをフィルタリングできます。 リストは、入力に応じて自動的にフィルタリングをおこない、検索用語に一致する値を含んだリクエストを表示します。検索フィールドは、プライバシージョブ ID を、UI で現在レンダリングされている/読み込まれているジョブに一致させる「クイック」検索を実行します。 送信されたすべてのジョブを包括的に検索するわけではありません。 代わりに、読み込まれた結果に適用されるフィルターになります。 Privacy Service API を使用して [ 特定の規制、日付範囲または単一のジョブに基づいてジョブを返す ](../api/privacy-jobs.md#list) ことができます。
 
 >[!TIP]
 >
@@ -117,7 +117,7 @@ Waiting:
 
 ![ 検索フィールドがハイライト表示されたプライバシーコンソールジョブリクエストセクション ](../images/user-guide/job-search.png)
 
-または、検索ボタンを使用して、特定の日付範囲にまたがるプライバシージョブクエリを実行します。 このアクションは、指定された期間内に組織によって送信されたすべてのプライバシージョブを返します。 **[!UICONTROL リクエスト日]** ドロップダウンメニューを選択して、クエリの開始日と終了日を選択します。 使用できるオプションには、「[!UICONTROL  今日 ]」、「[!UICONTROL  過去 7 日間 ]」、「[!UICONTROL  過去 2 週間 ]」、「[!UICONTROL  過去 30 日間 ]」または「[!UICONTROL  カスタム ] があります。 「[!UICONTROL  リクエスト日 ]」オプションと共に使用すると、検索機能には、選択した日付範囲の間に送信されたジョブリクエストのみが表示されます。
+または、検索ボタンを使用して、特定の日付範囲にまたがるプライバシージョブクエリを実行します。 このアクションは、指定された期間内に組織によって送信されたすべてのプライバシージョブを返します。 **[!UICONTROL リクエスト日]** ドロップダウンメニューを選択して、クエリの開始日と終了日を選択します。 使用できるオプションには、「[!UICONTROL &#x200B; 今日 &#x200B;]」、「[!UICONTROL &#x200B; 過去 7 日間 &#x200B;]」、「[!UICONTROL &#x200B; 過去 2 週間 &#x200B;]」、「[!UICONTROL &#x200B; 過去 30 日間 &#x200B;]」または「[!UICONTROL &#x200B; カスタム &#x200B;] があります。 「[!UICONTROL &#x200B; リクエスト日 &#x200B;]」オプションと共に使用すると、検索機能には、選択した日付範囲の間に送信されたジョブリクエストのみが表示されます。
 
 ![ 検索フィールド、「リクエスト対象」ドロップダウンメニュー、「検索」ボタンがハイライト表示された「ジョブリクエスト」セクション ](../images/user-guide/requested-on-dropdown-menu.png)
 
@@ -163,7 +163,7 @@ Waiting:
 
 リクエストの **[!UICONTROL ジョブタイプ]** （「削除」または「アクセス」）と 1 つ以上の使用可能な製品をリストから選択します。
 
-Privacy Serviceでは、個人データに対して、[!UICONTROL  アクセス ] （読み取り）、[!UICONTROL  削除 ] の 2 種類のジョブリクエストをサポートしています。 お問い合わせの対象に関連する製品に保持されているすべての情報を受け取るリクエストを送信するか、お問い合わせの対象に関連するすべての情報を削除するリクエストを送信できます。
+Privacy Serviceでは、個人データに対して、[!UICONTROL &#x200B; アクセス &#x200B;] （読み取り）、[!UICONTROL &#x200B; 削除 &#x200B;] の 2 種類のジョブリクエストをサポートしています。 お問い合わせの対象に関連する製品に保持されているすべての情報を受け取るリクエストを送信するか、お問い合わせの対象に関連するすべての情報を削除するリクエストを送信できます。
 
 ![](../images/user-guide/type-and-products.png){width=500}
 

@@ -25,9 +25,9 @@ Adobe Experience Platformでは、[ エッジのセグメント化 ](../../segme
 
 >[!IMPORTANT]
 > 
-> * データをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
-> * ワークフローの [ マッピングステップ ](#mapping) を実行せずにデータをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+> * データをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+> * ワークフローの [ マッピングステップ ](#mapping) を実行せずにデータをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 > 
 > [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
@@ -150,7 +150,7 @@ Adobe TargetなどのAdobe パーソナライゼーションソリューショ�
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL カスタム Personalization]** 宛先では、属性ベースのパーソナライゼーション用に宛先を設定する際に ](https://developer.adobe.com/data-collection-apis/docs/)2}Edge Network API} を使用する必要があります。 [すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) で行う必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するために、**[!UICONTROL カスタム Personalization]** 宛先では、属性ベースのパーソナライゼーション用に宛先を設定する際に [&#128279;](https://developer.adobe.com/data-collection-apis/docs/)2&rbrace;Edge Network API&rbrace; を使用する必要があります。 すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) で行う必要があります。
 >
 ><br> 既に Web SDKまたはモバイル SDKを使用している場合は、サーバーサイド統合を追加することで、Edge Network API を介して属性を取得できます。
 >
@@ -180,7 +180,7 @@ Adobe TargetなどのAdobe パーソナライゼーションソリューショ�
 
 ## オーディエンスの書き出しのスケジュール {#scheduling}
 
-デフォルトでは、[!UICONTROL  オーディエンススケジュール ] ページには、現在のアクティベーションフローで選択した新しく選択されたオーディエンスのみが表示されます。
+デフォルトでは、[!UICONTROL &#x200B; オーディエンススケジュール &#x200B;] ページには、現在のアクティベーションフローで選択した新しく選択されたオーディエンスのみが表示されます。
 
 宛先に対してアクティブ化されているすべてのオーディエンスを表示するには、フィルタリングオプションを使用して **[!UICONTROL 新しいオーディエンスのみを表示]** フィルターを無効にします。
 
@@ -190,7 +190,7 @@ Adobe TargetなどのAdobe パーソナライゼーションソリューショ�
 
 ![ 開始日と終了日がハイライト表示された、アクティベーションワークフローのオーディエンススケジュールステップ。](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
-「**[!UICONTROL 次へ]**」を選択して、[!UICONTROL  レビュー ] ページに移動します。
+「**[!UICONTROL 次へ]**」を選択して、[!UICONTROL &#x200B; レビュー &#x200B;] ページに移動します。
 
 ## レビュー {#review}
 

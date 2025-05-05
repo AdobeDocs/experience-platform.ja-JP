@@ -52,7 +52,7 @@ Azure Container Registry の資格情報を取得するには、[Adobe Experienc
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-適切な *Runtime* を選択してから、「タイプ *に&#x200B;**[!UICONTROL 分類]**を選択し* す。 Azure コンテナレジストリ資格情報は、完了すると生成されます。
+適切な *Runtime* を選択してから、「タイプ *に&#x200B;**[!UICONTROL 分類]**&#x200B;を選択し* す。 Azure コンテナレジストリ資格情報は、完了すると生成されます。
 
 >[!NOTE]
 >

@@ -37,9 +37,9 @@ Adobe Experience Platformには、一般的なエクスペリエンス管理の�
 
 ## データタイプの [!DNL Schema Editor] を開く {#data-type}
 
-Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して [!UICONTROL  スキーマ ] ワークスペースを開き、「**[!UICONTROL データタイプ]**」タブを選択します。 使用可能なデータタイプのリストが表示されます。 データタイプのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定には、Adobeで定義されたデータタイプが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。
+Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースを開き、「**[!UICONTROL データタイプ]**」タブを選択します。 使用可能なデータタイプのリストが表示されます。 データタイプのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定には、Adobeで定義されたデータタイプが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。
 
-![ 左側のナビゲーションで [!UICONTROL  スキーマ ] がハイライト表示され ][!UICONTROL  データタイプ ] を含む [!UICONTROL  スキーマ ワークスペース。](../../images/ui/resources/data-types/data-types-tab.png)
+![ 左側のナビゲーションで [!UICONTROL &#x200B; スキーマ &#x200B;] がハイライト表示され ][!UICONTROL &#x200B; データタイプ &#x200B;] を含む [[!UICONTROL &#x200B; スキーマ ワークスペース。]](../../images/ui/resources/data-types/data-types-tab.png)
 
 ここから、次のオプションを使用できます。
 
@@ -51,7 +51,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 **[!UICONTROL データタイプ]** タブから、「**[!UICONTROL データタイプを作成]**」を選択します。
 
-![[!UICONTROL  データタイプを作成 ] がハイライト表示された [!UICONTROL  スキーマ ] ワークスペース [!UICONTROL  データタイプ ] タブ ](../../images/ui/resources/data-types/create.png)
+![[!UICONTROL &#x200B; データタイプを作成 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペース [!UICONTROL &#x200B; データタイプ &#x200B;] タブ ](../../images/ui/resources/data-types/create.png)
 
 [!DNL Schema Editor] が表示され、キャンバスに新しいデータタイプの現在の構造が表示されます。 エディターの右側で、データタイプの表示名と説明（オプション）を入力できます。 スキーマに追加する際にデータタイプを識別する方法と同様に、データタイプに一意で簡潔な名前を指定します。
 
@@ -63,9 +63,9 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ### データタイプのフィルタリング {#filter}
 
-使用可能なデータタイプのリストは、作成方法に基づいて事前にフィルタリングされています。ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成されたエンティティが表示されます。
+使用可能なデータタイプのリストは、作成方法に基づいて事前にフィルタリングされています。ラジオボタンを選択して、「[!UICONTROL &#x200B; 標準 &#x200B;]」オプションと「[!UICONTROL &#x200B; カスタム &#x200B;] オプションの中から選択します。 「[!UICONTROL &#x200B; 標準 &#x200B;]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL &#x200B; カスタム &#x200B;]」オプションには組織内で作成されたエンティティが表示されます。
 
-![[!UICONTROL  標準 ] と [!UICONTROL  カスタム ] がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  データタイプ ] タブ ](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+![[!UICONTROL &#x200B; 標準 &#x200B;] と [!UICONTROL &#x200B; カスタム &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの [!UICONTROL &#x200B; データタイプ &#x200B;] タブ ](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
 ### 既存のデータタイプの編集 {#edit}
 
@@ -79,7 +79,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 右側のパネルでデータタイプの名前を選択して、[!DNL Schema Editor] で構造を開きます。
 
-![ データタイプ [!UICONTROL  カスタム ] とデータタイプ ] 名前 [!UICONTROL  がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  データタイプ ] タブ ](../../images/ui/resources/data-types/edit.png)
+![ データタイプ [!UICONTROL &#x200B; カスタム &#x200B;] とデータタイプ ] 名前 [[!UICONTROL &#x200B; がハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの [!UICONTROL &#x200B; データタイプ &#x200B;] タブ &#x200B;]](../../images/ui/resources/data-types/edit.png)
 
 ## データタイプへのフィールドの追加 {#add-fields}
 
@@ -89,7 +89,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 右側のパネルのコントロールを使用して、新しいフィールドの詳細を設定します。 フィールドを設定してデータタイプに追加する方法に関する具体的な手順については、[UI でのフィールドの定義 ](../fields/overview.md#define) に関するガイドを参照してください。
 
-レストラン データタイプには、レストランの名前を表す文字列フィールドが必要です。 そのため、[!UICONTROL  フィールド名 ] は「名前」に設定され、[!UICONTROL  タイプ ] は「[!UICONTROL  文字列 ]」に設定されます。 「**[!UICONTROL 適用]**」を選択して、フィールドに変更を適用します。
+レストラン データタイプには、レストランの名前を表す文字列フィールドが必要です。 そのため、[!UICONTROL &#x200B; フィールド名 &#x200B;] は「名前」に設定され、[!UICONTROL &#x200B; タイプ &#x200B;] は「[!UICONTROL &#x200B; 文字列 &#x200B;]」に設定されます。 「**[!UICONTROL 適用]**」を選択して、フィールドに変更を適用します。
 
 ![](../../images/ui/resources/data-types/name-field.png)
 
@@ -97,7 +97,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ![](../../images/ui/resources/data-types/more-fields.png)
 
-基本フィールドに加えて、カスタムデータタイプ内に追加のデータタイプをネストすることもできます。 例えば、Restaurant データタイプには、プロパティの物理アドレスを表すフィールドが必要です。 このシナリオでは、標準のデータタイプ「[!UICONTROL  郵送先住所 ]」が割り当てられた新しい「住所」フィールドを追加できます。
+基本フィールドに加えて、カスタムデータタイプ内に追加のデータタイプをネストすることもできます。 例えば、Restaurant データタイプには、プロパティの物理アドレスを表すフィールドが必要です。 このシナリオでは、標準のデータタイプ「[!UICONTROL &#x200B; 郵送先住所 &#x200B;]」が割り当てられた新しい「住所」フィールドを追加できます。
 
 ![](../../images/ui/resources/data-types/address-field.png)
 
@@ -125,6 +125,6 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、Experience Platform UI を使用してデータタイプを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
+このガイドでは、Experience Platform UI を使用してデータタイプを作成および編集する方法について説明しました。 [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの機能について詳しくは、[[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの概要 ](../overview.md) を参照してください。
 
 [!DNL Schema Registry] API を使用してデータタイプを管理する方法については、[ データタイプエンドポイントガイド ](../../api/data-types.md) を参照してください。

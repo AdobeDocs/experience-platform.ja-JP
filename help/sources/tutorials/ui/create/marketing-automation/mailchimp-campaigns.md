@@ -48,7 +48,7 @@ Oauth 2 を使用したExperience Platformへの [!DNL Mailchimp] アカウン�
 
 ## [!DNL Mailchimp Campaigns] アカウントのExperience Platformへの接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -72,13 +72,13 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 #### OAuth 2 を使用した認証
 
-OAuth 2 を使用するには、「[!UICONTROL OAuth 2 更新コード ]」を選択し、ドメイン、認証テスト URL、アクセストークンの値を入力して「**[!UICONTROL ソースに接続]**」を選択します。 資格情報が検証されるまでしばらく待ってから、「**[!UICONTROL 次へ]**」を選択して続行します。
+OAuth 2 を使用するには、「[!UICONTROL OAuth 2 更新コード &#x200B;]」を選択し、ドメイン、認証テスト URL、アクセストークンの値を入力して「**[!UICONTROL ソースに接続]**」を選択します。 資格情報が検証されるまでしばらく待ってから、「**[!UICONTROL 次へ]**」を選択して続行します。
 
 ![oauth](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### 基本認証を使用した認証
 
-基本認証を使用する場合は、「[!UICONTROL  基本認証 ]」を選択し、ドメイン、ユーザー名、パスワードに値を入力して「**[!UICONTROL ソースに接続]**」を選択します。 資格情報が検証されるまでしばらく待ってから、「**[!UICONTROL 次へ]**」をクリックして続行します。
+基本認証を使用する場合は、「[!UICONTROL &#x200B; 基本認証 &#x200B;]」を選択し、ドメイン、ユーザー名、パスワードに値を入力して「**[!UICONTROL ソースに接続]**」を選択します。 資格情報が検証されるまでしばらく待ってから、「**[!UICONTROL 次へ]**」をクリックして続行します。
 
 ![基本](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 

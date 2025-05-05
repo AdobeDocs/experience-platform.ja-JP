@@ -39,7 +39,7 @@ ht-degree: 7%
 
 ### 必要な権限 {#permissions}
 
-アカウントオーディエンスをアクティブ化するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先のアクティブ化]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+アカウントオーディエンスをアクティブ化するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先のアクティブ化]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 アカウントオーディエンスをアクティブ化するために必要な権限があることを確認するには、宛先カタログを参照します。 宛先に **[!UICONTROL アクティブ化]** コントロールがある場合、適切な権限を持っています。
 

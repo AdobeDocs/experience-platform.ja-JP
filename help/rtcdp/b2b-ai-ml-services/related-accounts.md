@@ -40,7 +40,7 @@ B2B 企業では、多くの場合、顧客情報が複数のシステムに保�
 
 ![ プロファイルと設定を強調表示したExperience Platform UI。](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-[!UICONTROL  関連アカウントを有効にする ] の横にある切り替えを選択してサービスを有効にし、「**[!UICONTROL 保存]**」を選択します。
+[!UICONTROL &#x200B; 関連アカウントを有効にする &#x200B;] の横にある切り替えを選択してサービスを有効にし、「**[!UICONTROL 保存]**」を選択します。
 
 ![ 切り替えと保存を強調表示したアカウント設定画面 ](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 

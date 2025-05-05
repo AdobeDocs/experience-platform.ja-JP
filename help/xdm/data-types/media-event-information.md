@@ -9,9 +9,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL  メディアイベント情報 ] データタイプ
+# [!UICONTROL &#x200B; メディアイベント情報 &#x200B;] データタイプ
 
-[!UICONTROL  メディアイベント情報 ] は、エクスペリエンスイベントに関連するメディアの詳細情報を記述する、標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; メディアイベント情報 &#x200B;] は、エクスペリエンスイベントに関連するメディアの詳細情報を記述する、標準の Experience Data Model （XDM）データタイプです。
 
 ![ メディアイベント情報データタイプの図。](../images/data-types/media-event-information.png)
 

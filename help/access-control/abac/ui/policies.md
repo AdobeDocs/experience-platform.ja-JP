@@ -120,7 +120,7 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->デフォルトでは、すべての顧客に対して [!UICONTROL  自動インクルード ] 機能がオンになっています。つまり、すべてのサンドボックスがポリシーに追加されます。
+>デフォルトでは、すべての顧客に対して [!UICONTROL &#x200B; 自動インクルード &#x200B;] 機能がオンになっています。つまり、すべてのサンドボックスがポリシーに追加されます。
 
 >[!NOTE]
 >
@@ -138,11 +138,11 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 「**[!UICONTROL サンドボックス]**」タブの「自動インクルード **[!UICONTROL 切り替えを使用して、すべてのサンドボックスのポリシーをアクティベート]** ます。
 
-![ 「[!UICONTROL  自動インクルード ] 切り替えを表示する [!UICONTROL  サンドボックス ] タブ ](../../images/flac-ui/abac-policies-auto-include.png)
+![ 「[!UICONTROL &#x200B; 自動インクルード &#x200B;] 切り替えを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ ](../../images/flac-ui/abac-policies-auto-include.png)
 
 **[!UICONTROL 自動インクルードを有効にする]** ダイアログが表示され、選択を確認するように求められます。 「**[!UICONTROL 有効]**」を選択して、設定を完了します。
 
-![[!UICONTROL  自動インクルードを有効にする ] ダイアログハイライト [!UICONTROL  有効にする ]](../../images/flac-ui/abac-policies-auto-include-enable.png)
+![[!UICONTROL &#x200B; 自動インクルードを有効にする &#x200B;] ダイアログハイライト [!UICONTROL &#x200B; 有効にする &#x200B;]](../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >
@@ -152,19 +152,19 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->[!UICONTROL  自動インクルード ] 切り替えがオフになっている場合、今後のサンドボックスはデフォルトではポリシーに含まれません。 サンドボックスを管理し、ポリシーに手動で追加する必要があります。
+>[!UICONTROL &#x200B; 自動インクルード &#x200B;] 切り替えがオフになっている場合、今後のサンドボックスはデフォルトではポリシーに含まれません。 サンドボックスを管理し、ポリシーに手動で追加する必要があります。
 
 「**[!UICONTROL サンドボックス]**」タブの **[!UICONTROL 自動インクルード]** 切り替えを使用して、すべてのサンドボックスのポリシーを無効にします。
 
-![ 「[!UICONTROL  自動インクルード ] 切り替えを表示する [!UICONTROL  サンドボックス ] タブ ](../../images/flac-ui/abac-policies-auto-include.png)
+![ 「[!UICONTROL &#x200B; 自動インクルード &#x200B;] 切り替えを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ ](../../images/flac-ui/abac-policies-auto-include.png)
 
 「**[!UICONTROL サンドボックス]**」タブで「**[!UICONTROL サンドボックスを追加]**」を選択し、このポリシーを適用するサンドボックスを選択します。
 
-![ ポリシーに追加されたサンドボックスのリストを表示する [!UICONTROL  サンドボックス ] タブ。](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![ ポリシーに追加されたサンドボックスのリストを表示する [!UICONTROL &#x200B; サンドボックス &#x200B;] タブ。](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
 サンドボックスのリストが表示されます。 追加するサンドボックスをリストから選択します。 または、検索バーを使用してサンドボックスを検索します。 「**[!UICONTROL 保存]**」を選択します。
 
-![ ポリシーに追加できる既存のサンドボックスのリストを表示する [!UICONTROL  サンドボックスを追加 ] ページ ](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![ ポリシーに追加できる既存のサンドボックスのリストを表示する [!UICONTROL &#x200B; サンドボックスを追加 &#x200B;] ページ ](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -174,11 +174,11 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 サンドボックスを削除するには、サンドボックス名の横にある **X** アイコンを選択します。
 
-![ サンドボックスのリストを表示する「[!UICONTROL  サンドボックス ]」タブ。削除する [!UICONTROL X] がハイライト表示されます。](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![ サンドボックスのリストを表示する「[!UICONTROL &#x200B; サンドボックス &#x200B;]」タブ。削除する [!UICONTROL X] がハイライト表示されます。](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
 **[!UICONTROL 削除]** ダイアログが表示され、選択を確認するように求められます。 「**[!UICONTROL 確認]**」を選択して削除を完了します。
 
-![[!UICONTROL  確認 ] をハイライト表示した [!UICONTROL  削除 ] ダイアログ ](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![[!UICONTROL &#x200B; 確認 &#x200B;] をハイライト表示した [!UICONTROL &#x200B; 削除 &#x200B;] ダイアログ ](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >

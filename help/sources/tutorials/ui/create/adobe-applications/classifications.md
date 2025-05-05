@@ -39,9 +39,9 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![Experience Platform UI のソースカタログで、Adobe Analytics ソースが選択された状態。](../../../../images/tutorials/create/classifications/catalog.png)
 
-次に [!UICONTROL  分類 ] を選択し、Experience Platformに取り込む分類データセットを選択します。
+次に [!UICONTROL &#x200B; 分類 &#x200B;] を選択し、Experience Platformに取り込む分類データセットを選択します。
 
-最大 30 個の異なる分類データセットを選択して、Experience Platformに取り込むことができます。 選択したデータセットは、右側のパネルに表示されます。 完了したら、「[!UICONTROL  次へ ] を選択して続行します。
+最大 30 個の異なる分類データセットを選択して、Experience Platformに取り込むことができます。 選択したデータセットは、右側のパネルに表示されます。 完了したら、「[!UICONTROL &#x200B; 次へ &#x200B;] を選択して続行します。
 
 ![ 複数の分類データセットが選択された分類ページ ](../../../../images/tutorials/create/classifications/select.png)
 

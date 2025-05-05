@@ -25,7 +25,7 @@ Experience Platformは、プロファイルデータをAdobe Experience Platform
 
 ## ID
 
-データセットのプライマリ ID は、ソースデータの CSV ファイルの最初の列に含まれています。 [!DNL Customer Attributes] ソースは、ID が常に [`CORE` 名前空間（[[!DNL Identity Service]](../../../identity-service/home.md) でサポートされるシステム生成の名前空間 ](../../../identity-service/features/namespaces.md) にマッピングされていることを前提としています。
+データセットのプライマリ ID は、ソースデータの CSV ファイルの最初の列に含まれています。 [!DNL Customer Attributes] ソースは、ID が常に [&#128279;](../../../identity-service/features/namespaces.md)`CORE` 名前空間（[[!DNL Identity Service]](../../../identity-service/home.md) でサポートされるシステム生成の名前空間  にマッピングされていることを前提としています。
 
 ソースを使用する場合、ID の既存の名前空間を選択 [!DNL Customer Attributes] ることはできません。[!DNL Customer Attributes] れは、スキーマのプライマリ ID が常に ID マップにあることを前提としているからです。 次に [!DNL Customer Attributes] ソース ID と ID マップ UUID のマッピングを自動的に作成します。
 

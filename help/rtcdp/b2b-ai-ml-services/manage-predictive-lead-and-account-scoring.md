@@ -42,7 +42,7 @@ ht-degree: 4%
 
 ![plas-goal-specifics-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-**[!UICONTROL 目標値]** フィールドが表示されます。 次に、「目標の詳細 [!UICONTROL  を設定し ] す。 [!UICONTROL  フィールド値を入力 ] パネルを選択し、目標値を入力します。
+**[!UICONTROL 目標値]** フィールドが表示されます。 次に、「目標の詳細 [!UICONTROL &#x200B; を設定し &#x200B;] す。 [!UICONTROL &#x200B; フィールド値を入力 &#x200B;] パネルを選択し、目標値を入力します。
 
 >[!NOTE]
 >

@@ -11,9 +11,9 @@ ht-degree: 13%
 
 ---
 
-# [!UICONTROL  順序 ] データタイプ
+# [!UICONTROL &#x200B; 順序 &#x200B;] データタイプ
 
-[!UICONTROL  注文 ] は、製品リストに対する注文を記述する標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; 注文 &#x200B;] は、製品リストに対する注文を記述する標準の Experience Data Model （XDM）データタイプです。
 
 ![[!UICONTROL Order] データタイプの図。](../images/data-types/order.png)
 
@@ -21,9 +21,9 @@ ht-degree: 13%
 |-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
 | 購入 ID | `purchaseID` | 文字列 | この購入または契約の販売者によって割り当てられた一意の ID。 ID は販売者によって定義されるので、ID が一意であるという保証はありません。 |
 | 発注番号 | `purchaseOrderNumber` | 文字列 | この購入または契約の購入者によって割り当てられた一意の ID。 |
-| 支払リスト | `payments` | [[!UICONTROL  支払項目 ]](./payment-item.md) の配列 | この注文の支払いのリスト。 支払いの詳細は、[!UICONTROL  支払項目 ] の仕様に記載されています。 |
-| 払い戻しリスト | `refunds` | 配列 [[!UICONTROL  払戻品目 ]](./refund-item.md) | この注文の払い戻しのリスト。 払い戻しは、[!UICONTROL  払い戻し項目 ] 仕様に詳しく記載されています。 |
-| 情報を返す | `returns` | [[!UICONTROL  情報を返す ]](./return.md) | 発行された RMA （返品承認）。 戻り値の詳細は、[!UICONTROL Return Info] 仕様に記載されています。 |
+| 支払リスト | `payments` | [[!UICONTROL &#x200B; 支払項目 &#x200B;]](./payment-item.md) の配列 | この注文の支払いのリスト。 支払いの詳細は、[!UICONTROL &#x200B; 支払項目 &#x200B;] の仕様に記載されています。 |
+| 払い戻しリスト | `refunds` | 配列 [[!UICONTROL &#x200B; 払戻品目 &#x200B;]](./refund-item.md) | この注文の払い戻しのリスト。 払い戻しは、[!UICONTROL &#x200B; 払い戻し項目 &#x200B;] 仕様に詳しく記載されています。 |
+| 情報を返す | `returns` | [[!UICONTROL &#x200B; 情報を返す &#x200B;]](./return.md) | 発行された RMA （返品承認）。 戻り値の詳細は、[!UICONTROL Return Info] 仕様に記載されています。 |
 | 通貨 | `currencyCode` | 文字列 | 注文合計に使用される ISO 4217 通貨コード。 例としては、`USD` や `EUR` があります。 すべてのインスタンスは、パターン `^[A-Z]{3}$` と一致する必要があります。 |
 | 税額 | `taxAmount` | 数値 | 最終支払の一部として購入者が支払った税額。 |
 | 割引額 | `discountAmount` | 数値 | 個々の製品ではなく、注文全体に適用される通常価格と特別価格の差。 |

@@ -37,7 +37,7 @@ CMK を有効にするには、お使いのプラットフォームのホステ�
 
 ### 一般的な前提条件
 
-Adobe Experience Platformの「[!UICONTROL  暗号化 ]」セクションを表示してアクセスするには、役割を作成し、その役割に [!UICONTROL  顧客管理キーの管理 ] 権限を割り当てる必要があります。  [!UICONTROL  顧客管理キーの管理 ] 権限を持つユーザーは組織で CMK を有効にできます。
+Adobe Experience Platformの「[!UICONTROL &#x200B; 暗号化 &#x200B;]」セクションを表示してアクセスするには、役割を作成し、その役割に [!UICONTROL &#x200B; 顧客管理キーの管理 &#x200B;] 権限を割り当てる必要があります。  [!UICONTROL &#x200B; 顧客管理キーの管理 &#x200B;] 権限を持つユーザーは組織で CMK を有効にできます。
 
 Experience Platformでの役割と権限の割り当てについて詳しくは、[ 権限の設定に関するドキュメント ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ja) を参照してください。
 

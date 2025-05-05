@@ -20,7 +20,7 @@ Adobe Experience Platform Debuggerの外観や動作に関する特定の要素�
 
 ## ライトモードとダークモード
 
-Experience Platform Debugger が開いたら、「設定 **[!UICONTROL に移動して、「****ダークモード]**」（デフォルト）または「**ライトモード** を選択することで、好みの外観を選択できます。
+Experience Platform Debugger が開いたら、「設定 **[!UICONTROL に移動して、「**&#x200B;**ダークモード]**」（デフォルト）または「**ライトモード** を選択することで、好みの外観を選択できます。
 
 ## リセット
 

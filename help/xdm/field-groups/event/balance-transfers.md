@@ -9,17 +9,17 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL  残高移動 ] スキーマフィールドグループ
+# [!UICONTROL &#x200B; 残高移動 &#x200B;] スキーマフィールドグループ
 
-[!UICONTROL  残高移動 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `personalFinances.balanceTransfers` オブジェクトを提供します。このスキーマは、口座間の金融残高移動に関する詳細をキャプチャします。
+[!UICONTROL &#x200B; 残高移動 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 フィールドグループは、スキーマに単一の `personalFinances.balanceTransfers` オブジェクトを提供します。このスキーマは、口座間の金融残高移動に関する詳細をキャプチャします。
 
 ![](../../images/field-groups/balance-transfers.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `accountFrom` | [[!UICONTROL  金融口座 ]](../../data-types/financial-account.md) | 残高の振替元となる金融口座を表します。 |
-| `accountTo` | [[!UICONTROL  金融口座 ]](../../data-types/financial-account.md) | 残高の移動先の金融口座を表します。 |
-| `transaction` | [[!UICONTROL  トランザクション ]](../../data-types/transaction.md) | 残高移動に関連する財務トランザクションを表します。 |
+| `accountFrom` | [[!UICONTROL &#x200B; 金融口座 &#x200B;]](../../data-types/financial-account.md) | 残高の振替元となる金融口座を表します。 |
+| `accountTo` | [[!UICONTROL &#x200B; 金融口座 &#x200B;]](../../data-types/financial-account.md) | 残高の移動先の金融口座を表します。 |
+| `transaction` | [[!UICONTROL &#x200B; トランザクション &#x200B;]](../../data-types/transaction.md) | 残高移動に関連する財務トランザクションを表します。 |
 
 {style="table-layout:auto"}
 

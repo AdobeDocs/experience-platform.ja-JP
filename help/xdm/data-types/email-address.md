@@ -11,9 +11,9 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL  メールアドレス ] データタイプ
+# [!UICONTROL &#x200B; メールアドレス &#x200B;] データタイプ
 
-[!UICONTROL  メールアドレス ] は、メールアドレスの詳細を記述する標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; メールアドレス &#x200B;] は、メールアドレスの詳細を記述する標準の Experience Data Model （XDM）データタイプです。
 
 ![](../images/data-types/email-address.png){width=450}
 

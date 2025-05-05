@@ -40,7 +40,7 @@ Adobe Experience Platformでは、データをバッチファイルとして [!D
 
 ![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
 
-**[!UICONTROL データセットを作成]** 画面で、「[!UICONTROL  スキーマからデータセットを作成 ]」または「[!UICONTROL CSV ファイルからデータセットを作成 ]」のどちらを実行するかを選択します。
+**[!UICONTROL データセットを作成]** 画面で、「[!UICONTROL &#x200B; スキーマからデータセットを作成 &#x200B;]」または「[!UICONTROL CSV ファイルからデータセットを作成 &#x200B;]」のどちらを実行するかを選択します。
 
 このチュートリアルでは、スキーマを使用してデータセットを作成します。続行するには、「**[!UICONTROL スキーマからデータセットを作成]**」をクリックします。
 

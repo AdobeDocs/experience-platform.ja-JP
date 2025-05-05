@@ -10,16 +10,16 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL  トランザクション ] データタイプ
+# [!UICONTROL &#x200B; トランザクション &#x200B;] データタイプ
 
-[!UICONTROL  トランザクション ] は、金融取引の詳細を記述する標準の Experience Data Model （XDM）データタイプです。
+[!UICONTROL &#x200B; トランザクション &#x200B;] は、金融取引の詳細を記述する標準の Experience Data Model （XDM）データタイプです。
 
 ![ トランザクションの構造 ](../images/data-types/transaction.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `transactionAmount` | [[!UICONTROL 通貨]](./currency.md) | トランザクションの一部として交換される通貨の金額を表します。 |
-| `transactionDate` | [!UICONTROL  日時 ] | トランザクションが発生したときのタイムスタンプ。 |
+| `transactionDate` | [!UICONTROL &#x200B; 日時 &#x200B;] | トランザクションが発生したときのタイムスタンプ。 |
 | `transactionId` | [!UICONTROL 文字列] | トランザクションの一意の ID。 |
 | `transactionType` | [!UICONTROL 文字列] | 訪問者が使用するトランザクションのタイプ。 |
 

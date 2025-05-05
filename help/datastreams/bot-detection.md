@@ -59,7 +59,7 @@ Edge Networkへのリクエストが任意のボット検出ルールに一致�
 
 ボット検出ルール ページで、次の機能を使用してボット検出を設定できます。
 
-* [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) を使用します。
+* [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) を使用します。
 * 独自のボット検出ルールの作成。
 
 ### IAB/ABC International Spiders and Bot List の使用 {#iab-list}
