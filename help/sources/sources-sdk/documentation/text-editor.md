@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!TIP]
 >
->ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[ 大幅な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>ドキュメントプロセスをさらにサポートするには、Adobeのコントリビューション ガイドに記載されている次のドキュメントを使用できます。 <ul><li>[Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja)</li><li>[ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja)</li><li>[ 大幅な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ja)</li></ul>
 
 ## 前提条件
 
@@ -37,7 +37,7 @@ Experience Platform GitHub リポジトリのメインページで、「**分岐
 
 >[!TIP]
 >
->詳しくは、[ ドキュメント用の Git リポジトリのローカルでのセットアップ ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) に関するチュートリアルを参照してください。
+>詳しくは、[ ドキュメント用の Git リポジトリのローカルでのセットアップ ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#create-a-local-clone-of-the-repository) に関するチュートリアルを参照してください。
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ Experience Platform GitHub リポジトリのメインページで、「**分岐
 
 ## ソースのドキュメントページを作成する
 
-ローカルマシンにリポジトリのクローンを作成し、新しいブランチを作成したら、選択した [ テキストエディター ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors) を使用して、新しいソースのドキュメントページのオーサリングを開始できます。
+ローカルマシンにリポジトリのクローンを作成し、新しいブランチを作成したら、選択した [ テキストエディター ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja#understand-markdown-editors) を使用して、新しいソースのドキュメントページのオーサリングを開始できます。
 
 Adobeでは、[Visual Studio Code](https://code.visualstudio.com/) を使用し、Adobe Markdown オーサリング拡張機能をインストールすることをお勧めします。 拡張機能をインストールするには、Visual Studio Code を起動し、左側のナビゲーションから「**拡張機能**」タブを選択します。
 

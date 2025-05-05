@@ -82,6 +82,6 @@ Adobeは、合理化されたアップグレードパスを提供し、任意の
 >次の Target 機能は、`at.js` から Web SDKに移行する際にはサポートされません。
 >
 >* [リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=ja)
->* [CNAME とクロスドメインサポート](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html)
+>* [CNAME とクロスドメインサポート](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html?lang=ja)
 
 `AT.js` から Web SDKに移行した後、設定から「`targetMigrationEnabled`」オプションを削除します。

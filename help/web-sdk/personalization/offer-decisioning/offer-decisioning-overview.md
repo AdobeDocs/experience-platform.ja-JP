@@ -22,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK] は、Offer Decisioningで管理され�
 
 ## 用語
 
-Offer Decisioningを使用する際は、以下の用語を理解することが重要です。 詳細および追加の用語については、[Offer Decisioning用語集 ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html) を参照してください。
+Offer Decisioningを使用する際は、以下の用語を理解することが重要です。 詳細および追加の用語については、[Offer Decisioning用語集 ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=ja) を参照してください。
 
 * **決定範囲：** Offer Decisioningの場合、決定範囲は、Offer Decisioning サービスでオファーを提案するために使用するアクティビティ ID とプレースメント ID を含む、Base64 でエンコードされた JSON の文字列です。
 
@@ -328,4 +328,4 @@ Offer Decisioningを有効にするには、次の手順を実行します。
 
 ## 制限事項
 
-キャッピングなど、一部のオファー制約は現在、モバイル Edge Network ワークフローではサポートされていません。 キャッピングフィールド値は、1 つのオファーをすべてのユーザーに対して提示できる回数を指定します。詳しくは、[オファーの実施要件ルールと制約に関するドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)を参照してください。
+キャッピングなど、一部のオファー制約は現在、モバイル Edge Network ワークフローではサポートされていません。 キャッピングフィールド値は、1 つのオファーをすべてのユーザーに対して提示できる回数を指定します。詳しくは、[オファーの実施要件ルールと制約に関するドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html?lang=ja#eligibility)を参照してください。

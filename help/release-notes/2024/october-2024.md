@@ -93,7 +93,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 | 機能 | 説明 |
 | --- | --- |
 | サンドボックスツールパッケージの共有 | サンドボックスツールを使用して、様々な組織のサンドボックス間でサンドボックス設定を簡単に書き出しと読み込みできるようになりました。 これで、2 つのカテゴリの共有パッケージが使用可能になりました。<br><ul><li>**[プライベートパッケージ ](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** ソース組織からの共有リクエストを承認した組織で、プライベートパッケージの共有を使用します。</li><li>**[公開パッケージ ](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** 公開パッケージは、追加の承認を必要とせずに共有でき、パッケージのペイロードを使用して簡単に読み込まれます。</li></ul><br> これらの機能について詳しくは、[ 組織間でのパッケージの共有 ](../../sandboxes/ui/sharing-packages-across-orgs.md) に関するガイドを参照してください。 |
-| サンドボックスツール API での [ パッケージ共有 ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) | サンドボックスツール API を使用して、`/handshake` と `/transfer` の 2 つの新しいエンドポイントにリクエストを送信し、組織間での共有、パッケージ共有リクエストの取得と作成を行います。 パッケージのペイロードを取得するための追加リクエストが `/packages` エンドポイントに追加されました。 |
+| サンドボックスツール API での [ パッケージ共有 ](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) | サンドボックスツール API を使用して、`/handshake` と `/transfer` の 2 つの新しいエンドポイントにリクエストを送信し、組織間での共有、パッケージ共有リクエストの取得と作成を行います。 パッケージのペイロードを取得するための追加リクエストが `/packages` エンドポイントに追加されました。 |
 
 {style="table-layout:auto"}
 

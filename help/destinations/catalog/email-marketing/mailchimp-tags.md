@@ -34,7 +34,7 @@ Experience Platformと [!DNL Mailchimp] で設定する必要がある前提条�
 
 ### Experience Platformの前提条件 {#prerequisites-in-experience-platform}
 
-[!DNL Mailchimp Tags] の宛先へのデータをアクティブ化する前に、[ スキーマ ](/help/xdm/schema/composition.md)、[ データセット ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) および [ オーディエンス ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) を [!DNL Experience Platform] で作成する必要があります。
+[!DNL Mailchimp Tags] の宛先へのデータをアクティブ化する前に、[ スキーマ ](/help/xdm/schema/composition.md)、[ データセット ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) および [ オーディエンス ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=ja) を [!DNL Experience Platform] で作成する必要があります。
 
 ### [!DNL Mailchimp Tags] の宛先の前提条件 {#prerequisites-destination}
 

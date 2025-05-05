@@ -39,16 +39,16 @@ ht-degree: 2%
 >
 >これらすべての領域に必要な[属性ベースのアクセス制御権限](/help/access-control/abac/end-to-end-guide.md)があることを確認するか、必要な権限の付与をシステム管理者に依頼してください。
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)：複数のデータソースのデータを統合して、キャンペーンに燃料を供給します。 その後、このデータを使用して、キャンペーンオーディエンスを作成し、メールおよび web プロモタイルで使用されるパーソナライズされたデータ要素（名前やアカウントに関連する情報など）を表示します。 最後に、Real-Time CDPを使用して、有料メディアの宛先に対してオーディエンスをアクティブ化することもできます。
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=ja)：複数のデータソースのデータを統合して、キャンペーンに燃料を供給します。 その後、このデータを使用して、キャンペーンオーディエンスを作成し、メールおよび web プロモタイルで使用されるパーソナライズされたデータ要素（名前やアカウントに関連する情報など）を表示します。 最後に、Real-Time CDPを使用して、有料メディアの宛先に対してオーディエンスをアクティブ化することもできます。
    * [スキーマ](/help/xdm/home.md)
    * [プロファイル](/help/profile/home.md)
    * [データセット](/help/catalog/datasets/overview.md)
    * [オーディエンス](/help/segmentation/home.md)
    * [宛先](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)：ジャーニーを設計し、トリガーを設定して、訪問者に対処する適切なメッセージを作成します。
-   * [ イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja)：ジャーニーを設計し、トリガーを設定して、訪問者に対処する適切なメッセージを作成します。
+   * [ イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=ja)
    * [ オーディエンスとイベント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=ja)
-   * [ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [ジャーニー](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja)
 
 ## Real-Time CDPとJourney Optimizerのアーキテクチャ
 
@@ -268,9 +268,9 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 >[!IMPORTANT]
 >
->ブランドからの連絡を登録解除する機能を顧客に提供し、この選択を確実に行うことは、法的要件です。 適用される法律について詳しくは、[ プライバシー規制の概要 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html) を参照してください。
+>ブランドからの連絡を登録解除する機能を顧客に提供し、この選択を確実に行うことは、法的要件です。 適用される法律について詳しくは、[ プライバシー規制の概要 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=ja) を参照してください。
 
-次の [ 同意ポリシー ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) を実装し、訪問者に連絡する前に同意を求めることを検討してください。
+次の [ 同意ポリシー ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=ja) を実装し、訪問者に連絡する前に同意を求めることを検討してください。
 
 * 電子メール `consents.marketing.email.val = "Y"` 送信できる場合
 * その `consents.marketing.sms.val = "Y"`、SMS は可能です
@@ -298,7 +298,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 このユースケースでは、2 つのオーディエンスを作成して、プロファイルストアのプロファイルのサブセットで共有される特定の属性や行動を定義し、マーケティング可能なユーザーグループを区別する必要があります。 オーディエンスは、Adobe Experience Platformで複数の方法で作成できます。
 
-* オーディエンスの作成方法について詳しくは、[ オーディエンスサービス UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience) を参照してください。
+* オーディエンスの作成方法について詳しくは、[ オーディエンスサービス UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=ja#create-audience) を参照してください。
 * [ オーディエンス ](/help/segmentation/home.md) の作成方法について詳しくは、[ オーディエンス構成 UI ガイド ](/help/segmentation/ui/audience-composition.md) を参照してください。
 * Experience Platformから派生したセグメント定義を使用してオーディエンスを作成する方法について詳しくは、[Audience Builder UI ガイド ](/help/segmentation/ui/segment-builder.md) を参照してください。
 
@@ -344,7 +344,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 >
 >図に示されているすべてが [!DNL Adobe Journey Optimizer] に含まれるわけではありません。 すべての [ 有料メディア広告 ](/help/destinations/catalog/social/overview.md) は、[!UICONTROL &#x200B; 宛先 &#x200B;] [ ワークスペース ](/help/destinations/ui/destinations-workspace.md) に作成されます。
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) は、顧客とのつながり、コンテキスト、パーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーは、顧客がブランドとやり取りするプロセス全体です。 各ユースケースのジャーニーには、特定の情報が必要です。
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja) は、顧客とのつながり、コンテキスト、パーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーは、顧客がブランドとやり取りするプロセス全体です。 各ユースケースのジャーニーには、特定の情報が必要です。
 
 このユースケースを実現するには、次の 2 つの異なるジャーニーを作成する必要があります。
 
@@ -367,15 +367,15 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 上記のジャーニーは、次のロジックに従います。
 
-1. オーディエンスを読み取り：上記のオーディエンスの節で作成した最初のオーディエンスに対して、[ オーディエンスを読み取りアクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) を使用します。
+1. オーディエンスを読み取り：上記のオーディエンスの節で作成した最初のオーディエンスに対して、[ オーディエンスを読み取りアクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=ja) を使用します。
 
-2. 条件 – 優先チャネル：[ 条件アクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) を使用して、メール、SMS、プッシュ通知のどれを介して顧客に連絡するかを決定します。 3 つのアクションアクティビティを使用して、3 つのブランチを作成します。
+2. 条件 – 優先チャネル：[ 条件アクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=ja) を使用して、メール、SMS、プッシュ通知のどれを介して顧客に連絡するかを決定します。 3 つのアクションアクティビティを使用して、3 つのブランチを作成します。
 
-3. 待機：購入をリッスンするまで待機するには、[ 待機アクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) を使用します。
+3. 待機：購入をリッスンするまで待機するには、[ 待機アクティビティ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=ja) を使用します。
 
 4. 条件 – 過去 7 日間に購入したサブスクリプション :「条件」アクティビティを使用して、過去 7 日間に製品が購入されたかどうかをリッスンします。
 
-5. JourneyStepEventTracker - サブスクリプションが購入されていません：メッセージを受信したにもかかわらずサブスクリプションをまだ購入していない訪問者には [ カスタムアクション ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) を使用します。 ジャーニーの最後のカスタム条件の一部として、`journey.feedback` イベントを作成し、[!UICONTROL ジャーニーステップイベント &#x200B;] スキーマに基づいてデータセットに追加します。 このイベントを使用して、サブスクリプションを購入していないオーディエンスをセグメント化し、有料メディア広告を介してターゲットにすることができます。
+5. JourneyStepEventTracker - サブスクリプションが購入されていません：メッセージを受信したにもかかわらずサブスクリプションをまだ購入していない訪問者には [ カスタムアクション ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=ja) を使用します。 ジャーニーの最後のカスタム条件の一部として、`journey.feedback` イベントを作成し、[!UICONTROL ジャーニーステップイベント &#x200B;] スキーマに基づいてデータセットに追加します。 このイベントを使用して、サブスクリプションを購入していないオーディエンスをセグメント化し、有料メディア広告を介してターゲットにすることができます。
 
 +++
 
@@ -436,7 +436,7 @@ Adobeでは、サンプル実装に基づいて、このユースケースを達
 
 >[!ENDTABS]
 
-[!DNL Adobe Journey Optimizer] でジャーニーを作成する方法について詳しくは、[ ジャーニーの概要 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ガイドを参照してください。
+[!DNL Adobe Journey Optimizer] でジャーニーを作成する方法について詳しくは、[ ジャーニーの概要 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja) ガイドを参照してください。
 
 ### 有料メディア広告を表示する宛先の設定 {#paid-media-ads}
 

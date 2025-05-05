@@ -23,9 +23,9 @@ ht-degree: 6%
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL &#x200B; ビットレート &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | 整数 | × | ビットレート値（kbps）。 |
-| [[!UICONTROL &#x200B; ドロップフレーム &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | 整数 | × | 再生中にドロップしたフレームの合計数。 |
-| [[!UICONTROL &#x200B; フレーム/秒 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | 整数 | × | 現在のストリームフレームレート（1 秒あたりのフレーム数）。 |
-| [[!UICONTROL &#x200B; 開始時間 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | 整数 | × | ビデオの読み込みから開始までの時間（秒単位）。 |
+| [[!UICONTROL &#x200B; ビットレート &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=ja#average-bitrate) | `bitrate` | 整数 | × | ビットレート値（kbps）。 |
+| [[!UICONTROL &#x200B; ドロップフレーム &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=ja#dropped-frames) | `droppedFrames` | 整数 | × | 再生中にドロップしたフレームの合計数。 |
+| [[!UICONTROL &#x200B; フレーム/秒 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=ja#frames-per-second) | `framesPerSecond` | 整数 | × | 現在のストリームフレームレート（1 秒あたりのフレーム数）。 |
+| [[!UICONTROL &#x200B; 開始時間 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=ja#time-to-start-1) | `timeToStart` | 整数 | × | ビデオの読み込みから開始までの時間（秒単位）。 |
 
 {style="table-layout:auto"}

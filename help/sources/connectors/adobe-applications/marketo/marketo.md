@@ -31,7 +31,7 @@ Adobe Experience Platformを使用すると、データを外部ソースから�
 
 ## Adobe組織マッピングの設定
 
-[!DNL Marketo Engage] のマッピングセットを設定する前に、まずAdobe組織マッピングを設定する必要があります。 この完了方法の手順について詳しくは、[Adobe組織マッピングの設定  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) を参照してください。
+[!DNL Marketo Engage] のマッピングセットを設定する前に、まずAdobe組織マッピングを設定する必要があります。 この完了方法の手順について詳しくは、[Adobe組織マッピングの設定  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=ja) を参照してください。
 
 ## [!DNL Marketo Engage] コネクタの認証
 

@@ -42,7 +42,7 @@ Adobe Analytics 拡張機能をインストールするには、以下をおこ�
 
 ワークフローにより、データ収集 UI に移動してインストールを完了します。
 
-拡張機能の設定オプションについて詳しくは、[Adobe Analytics拡張機能ページ ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) タグドキュメントを参照してください。
+拡張機能の設定オプションについて詳しくは、[Adobe Analytics拡張機能ページ ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=ja) タグドキュメントを参照してください。
 
 拡張機能は、[データ収集 UI](https://experience.adobe.com/#/data-collection/) で直接インストールできます。詳しくは、[ 新しい拡張機能の追加 ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) のガイドを参照してください。
 

@@ -25,7 +25,7 @@ ht-degree: 0%
 このワークフローデモは、いくつかのAdobe Experience Platform サービスに依存しています。 次の機能やサービスについて理解を深めることをお勧めします。
 
 * [Experience Data Model （XDM）スキーマ構成の基本 ](../../xdm/schema/composition.md)
-* [ データセットの作成とデータの取り込み ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) 方法
+* [ データセットの作成とデータの取り込み ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ja) 方法
 * [Adobe Analytics ソースコネクタを使用してデータを取り込む ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=ja) 法
 * [セグメント化](../../segmentation/home.md)
 * [宛先](../../destinations/home.md)

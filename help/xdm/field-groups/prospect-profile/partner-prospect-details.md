@@ -13,7 +13,7 @@ ht-degree: 11%
 
 [!UICONTROL &#x200B; パートナー見込み客詳細（サンプル） &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループです。 [!UICONTROL &#x200B; パートナー見込み客詳細（サンプル） &#x200B;] は、見込み客のプロファイルに関連する様々な詳細のサンプルフレームワークを提供します。 このフレームワークにより、多様な見込み客関連の情報を整理および管理するプロセスが合理化されます。
 
-このフィールドグループは、パートナーのコンテキスト内で [ 個人見込み客プロファイルクラス ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) を拡張します。
+このフィールドグループは、パートナーのコンテキスト内で [ 個人見込み客プロファイルクラス ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=ja) を拡張します。
 
 ![[!UICONTROL &#x200B; パートナー見込み客の詳細（サンプル） &#x200B;] フィールドグループの図。](../../images/field-groups/partner/partner-prospect-details-sample.png)
 

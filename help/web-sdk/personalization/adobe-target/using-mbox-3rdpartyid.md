@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Adobe Targetの mbox3rdPartyId は、会社のロイヤルティプログラムのメンバーシップ ID などの、会社の訪問者 ID です。
 
-訪問者が会社のサイトにログインすると、会社は通常、訪問者のアカウント、ロイヤルティカード、メンバーシップ番号、またはその会社のその他の該当する識別子に関連付けられた ID を作成します。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
+訪問者が会社のサイトにログインすると、会社は通常、訪問者のアカウント、ロイヤルティカード、メンバーシップ番号、またはその会社のその他の該当する識別子に関連付けられた ID を作成します。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=ja#)
 
 
 ## Web SDKでの `mbox3rdPartyId` の使用方法

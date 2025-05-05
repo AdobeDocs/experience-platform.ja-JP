@@ -26,7 +26,7 @@ Adobe Analyticsでは、マーチャンダイジング変数と呼ばれる特�
 
 これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、顧客の検索結果で、製品ごとの「割引額」や製品の「ページ上の場所」に関する情報などの情報を収集できます。
 
-製品構文の使用について詳しくは、Adobe Analyticsのドキュメント [ 製品構文を使用した eVar の実装 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax) を参照してください。
+製品構文の使用について詳しくは、Adobe Analyticsのドキュメント [ 製品構文を使用した eVar の実装 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=ja#implement-using-product-syntax) を参照してください。
 
 以下の節では、[!DNL Analytics] データセットのマーチャンダイジング変数にアクセスするために必要な XDM フィールドの概要を説明します。
 
@@ -127,7 +127,7 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 | 内部検索：夏のシャツ | 19.99 | 1 | 1 | 1 |
 | 内部検索：冬帽子 | 12.99 | 1 | 1 | 1 |
 
-コンバージョン変数構文の使用について詳しくは、Adobe Analyticsのドキュメント [ コンバージョン変数構文を使用した eVar の実装 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax) を参照してください。
+コンバージョン変数構文の使用について詳しくは、Adobe Analyticsのドキュメント [ コンバージョン変数構文を使用した eVar の実装 ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=ja#implement-using-conversion-variable-syntax) を参照してください。
 
 [!DNL Analytics] データセットでコンバージョン変数構文を生成するための XDM フィールドを以下に示します。
 

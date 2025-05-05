@@ -69,7 +69,7 @@ Experience Platform Debugger を Target に使用するには、web サイトで
 | [!DNL clientCode] | Target で認識される、組織のアカウントの識別子。 |
 | [!DNL requestType] | リクエストに使用された API。 at.js 1.x を使用している場合、値は `/json` です。at.js 2.x を使用している場合、値は `delivery` です。 |
 | [!DNL Audience Manager Blob] | 「blob」と呼ばれる暗号化された Audience Manager メタデータに関する情報を提供します。 |
-| [!DNL Audience Location Hint] | データ収集地域 ID。これは、特定の ID サービスデータセンターの地理的場所を示す数値識別子です。詳しくは、[DCS の地域 ID、場所、ホスト名](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=ja)に関する Audience Manager のドキュメントと、[`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c) に関する Experience Cloud ID サービスガイドを参照してください。 |
+| [!DNL Audience Location Hint] | データ収集地域 ID。これは、特定の ID サービスデータセンターの地理的場所を示す数値識別子です。詳しくは、[DCS の地域 ID、場所、ホスト名](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=ja)に関する Audience Manager のドキュメントと、[`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=ja#reference-a761030ff06c4439946bb56febf42d4c) に関する Experience Cloud ID サービスガイドを参照してください。 |
 | [!DNL Browser Height] | ブラウザーの高さ（ピクセル単位）。 |
 | [!DNL Browser Time Offset] | ブラウザーのタイムゾーンに関連付けられている、ブラウザーの時間オフセット。 |
 | [!DNL Browser Width] | ブラウザーの幅（ピクセル単位）。 |
@@ -90,7 +90,7 @@ Experience Platform Debugger を Target に使用するには、web サイトで
 | [!DNL requestId] | リクエストの一意の ID。 |
 | [!DNL Screen Height] | 画面の高さ（ピクセル単位）。 |
 | [!DNL Screen Width] | 画面の幅（ピクセル単位）。 |
-| [!DNL Supplemental Data ID] | 訪問者を対応する Adobe Target および Adobe Analytics 呼び出しと照合するために使用されるシステム生成 ID。 詳しくは、[A4T トラブルシューティングガイド](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?#section_75002584FA63456D8D9086172925DD8D)を参照してください。 |
+| [!DNL Supplemental Data ID] | 訪問者を対応する Adobe Target および Adobe Analytics 呼び出しと照合するために使用されるシステム生成 ID。 詳しくは、[A4T トラブルシューティングガイド](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?lang=ja&#section_75002584FA63456D8D9086172925DD8D)を参照してください。 |
 | [!DNL vst] | [Experience Cloud ID サービス API の設定](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html?lang=ja)。 |
 | [!DNL webGLRenderer] | ページで使用される WebGL レンダラーに関する情報を提供します（該当する場合）。 |
 

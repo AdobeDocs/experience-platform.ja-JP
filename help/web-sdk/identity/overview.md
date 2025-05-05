@@ -56,7 +56,7 @@ Web サイトに新しいユーザーが到達すると、[Adobe Experience Clou
 
 ### Adobe Experience Cloud アプリケーションへの cookie の有効期間の影響 {#lifespans}
 
-ファーストパーティとサードパーティのどちらのデータ収集を選択したかに関係なく、cookie が保持できる期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/en/docs/target) または [Offer decisioning&rbrace; を使用すると、エンドユーザーのパーソナライゼーションエクスペリエンスに一貫性がなくな ](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) 場合があります。
+ファーストパーティとサードパーティのどちらのデータ収集を選択したかに関係なく、cookie が保持できる期間は、[Adobe Analytics](https://experienceleague.adobe.com/ja/docs/analytics) および [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/customer-journey-analytics) の訪問者数に直接影響します。 また、サイトで [Adobe Target](https://experienceleague.adobe.com/ja/docs/target) または [Offer decisioning&rbrace; を使用すると、エンドユーザーのパーソナライゼーションエクスペリエンスに一貫性がなくな ](https://experienceleague.adobe.com/ja/docs/target/using/integrate/ajo/offer-decision) 場合があります。
 
 例えば、過去 7 日間にユーザーが 3 回表示した項目を、ホームページに昇格させるパーソナライゼーションエクスペリエンスを作成した場合を考えてみましょう。
 
@@ -165,7 +165,7 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 | `authenticatedState` | 文字列 | **（必須）** ID の認証状態。 有効な値は `ambiguous`、`authenticated`、および `loggedOut` です。 |
 | `primary` | ブール値 | この ID をプロファイル内のプライマリフラグメントとして使用する必要があるかどうかを決定します。 デフォルトでは、ECID がユーザーのプライマリ ID として設定されます。 省略した場合、この値はデフォルトで `false` になります。 |
 
-`identityMap` フィールドを使用してデバイスまたはユーザーを識別すると、[!DNL ID Service API] から [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) メソッドを使用した場合と同じ結果が得られます。 詳しくは、[ID サービス API ドキュメント ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) を参照してください。
+`identityMap` フィールドを使用してデバイスまたはユーザーを識別すると、[!DNL ID Service API] から [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=ja) メソッドを使用した場合と同じ結果が得られます。 詳しくは、[ID サービス API ドキュメント ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=ja) を参照してください。
 
 ## 訪問者 API から ECID への移行 {#migrating-visitor-api-ecid}
 
@@ -177,7 +177,7 @@ ID 配列内の各 ID オブジェクトには、次のプロパティが含ま�
 
 ### 移行する特性の更新
 
-XDM 形式のデータをAudience Managerに送信する場合、このデータはマイグレーション時にシグナルに変換される必要があります。 XDM が提供する新しいキーを反映するように特性を更新する必要があります。 このプロセスは、Audience Managerが作成した [BAAAM ツール ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) を使用すると容易になります。
+XDM 形式のデータをAudience Managerに送信する場合、このデータはマイグレーション時にシグナルに変換される必要があります。 XDM が提供する新しいキーを反映するように特性を更新する必要があります。 このプロセスは、Audience Managerが作成した [BAAAM ツール ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=ja#getting-started-with-bulk-management) を使用すると容易になります。
 
 ## イベント転送での使用
 

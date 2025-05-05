@@ -55,7 +55,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
-| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
+| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
 
 {style="table-layout:auto"}
 

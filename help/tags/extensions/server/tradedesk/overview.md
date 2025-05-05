@@ -39,7 +39,7 @@ ht-degree: 3%
 
 次の画面で、[!UICONTROL &#x200B; 広告主 ID] と、オプションで [!UICONTROL &#x200B; マーチャント ID] を入力します。 ID をこれらの入力に直接貼り付けることも、代わりにデータ要素を使用することもできます。 これらは、Real-Time Conversions API に対してイベント呼び出しを行う際に使用されるデフォルト値 [!DNL The Trade Desk] して機能します。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
-データ要素を作成し、タグプロパティの拡張機能で使用できるようにする方法については、[ データ要素の作成 ](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) チュートリアルに従ってください。
+データ要素を作成し、タグプロパティの拡張機能で使用できるようにする方法については、[ データ要素の作成 ](https://experienceleague.adobe.com/ja/docs/platform-learn/data-collection/tags/create-data-elements) チュートリアルに従ってください。
 
 ![ 「[!DNL The Trade Desk] 広告主 ID フィールドと「マーチャント ID] フィールドがハイライト表示された [[!UICONTROL &#x200B; 広告拡張機能設定ページ &#x200B;]](../../../images/extensions/server/tradedesk/configure-extension.png)
 

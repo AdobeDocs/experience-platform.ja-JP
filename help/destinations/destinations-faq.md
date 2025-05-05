@@ -199,7 +199,7 @@ ID 一致要件について詳しくは、[ID 一致要件 ](catalog/social/link
 +++回答
 いいえ。[Adobe Target](../web-sdk/home.md) に対してオーディエンスをアクティブ化するために、[Web SDK](catalog/personalization/adobe-target-connection.md) は必要ありません。
 
-ただし、Web SDKの代わりに [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) を使用する場合は、次のセッションのパーソナライゼーションのみがサポートされます。
+ただし、Web SDKの代わりに [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ja) を使用する場合は、次のセッションのパーソナライゼーションのみがサポートされます。
 
 [ 同じページと次のページのパーソナライゼーション ](ui/activate-edge-personalization-destinations.md) のユースケースについては、[Web SDK](../web-sdk/home.md) または [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) を使用する必要があります。 実装について詳しくは、[edge 宛先へのオーディエンスのアクティブ化 ](ui/activate-edge-personalization-destinations.md) に関するドキュメントを参照してください。
 +++
@@ -229,7 +229,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Adobe Targetでアクティブ化された属性はどこで確認できますか？
 
 +++回答
-属性は、{JSON[&#128279;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) および [2}HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) オファーの Target で使用できるようになります。
+属性は、{JSON[&#128279;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=ja) および [2}HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ja) オファーの Target で使用できるようになります。
 +++
 
 ### データストリームのない宛先を作成し、後で同じ宛先にデータストリームを追加できますか？

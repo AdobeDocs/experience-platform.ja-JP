@@ -24,8 +24,8 @@ Adobe Experience Platformへようこそ、ここにあなたがいることを�
 
 * 新しい宛先のドキュメントページを作成するためのステップバイステップの手順。
 * 宛先に入力するためのテンプレート。
-* [Markdown の使用に関する一般的な説明 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)
-* [Adobeマークダウンフレーバーの具体的な手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) （Adobeマークダウンフレーバーは、通常のマークダウンと非常によく似ています）。
+* [Markdown の使用に関する一般的な説明 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)
+* [Adobeマークダウンフレーバーの具体的な手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#custom-markdown-extensions) （Adobeマークダウンフレーバーは、通常のマークダウンと非常によく似ています）。
 * Experience Platformドキュメント品質基準を満たす宛先ページのドキュメントページを作成するのに役立つ [ ベストプラクティスページ ](./authoring-best-practices.md)。
 
 ## 前提条件 {#prerequisites}
@@ -38,12 +38,12 @@ Adobe Experience Platformへようこそ、ここにあなたがいることを�
 
 ## Adobe Experience Platformで宛先に関するドキュメントを作成するための高度な手順 {#high-level-instructions}
 
-大まかに言えば、宛先用にドキュメントを作成するには、Adobe Experience Platform ドキュメントリポジトリの [ 分岐を作成 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) し、新しいブランチで [ 提供されたドキュメントテンプレート ](./self-service-template.md) を編集する必要があります。 Adobeが提供するテンプレートを使用して、新しい出力先ページを作成します。 準備ができたら、プルリクエスト（PR）を開きます。 これを行う手順は、さらに下の [ 新しい宛先ページを作成する手順 ](./documentation-instructions.md#steps-to-create-docs-page) にあります。
+大まかに言えば、宛先用にドキュメントを作成するには、Adobe Experience Platform ドキュメントリポジトリの [ 分岐を作成 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#fork-the-repository) し、新しいブランチで [ 提供されたドキュメントテンプレート ](./self-service-template.md) を編集する必要があります。 Adobeが提供するテンプレートを使用して、新しい出力先ページを作成します。 準備ができたら、プルリクエスト（PR）を開きます。 これを行う手順は、さらに下の [ 新しい宛先ページを作成する手順 ](./documentation-instructions.md#steps-to-create-docs-page) にあります。
 
 <!--
 
 * In the table of contents (TOC.md) `/help/rtcdp/TOC.md`, add a link to your new destination page. Place it within the category where your destination resides in the Adobe Experience Platform user interface (for example: mobile, social, advertising). 
-* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
+* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
 
 -->
 
@@ -64,4 +64,4 @@ GitHub web インターフェイスまたはローカル環境を使用して、
 
 ## ベストプラクティス {#best-practices}
 
-宛先ドキュメントページを作成する前と作成中に、[ オーサリングのベストプラクティス ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) を確認してください。 Adobeドキュメントチームがドキュメントのオーサリング時に使用するその他の記述のヒントについては、[Adobeドキュメントのライティングガイダンス ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) も必ずお読みください。
+宛先ドキュメントページを作成する前と作成中に、[ オーサリングのベストプラクティス ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) を確認してください。 Adobeドキュメントチームがドキュメントのオーサリング時に使用するその他の記述のヒントについては、[Adobeドキュメントのライティングガイダンス ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=ja) も必ずお読みください。

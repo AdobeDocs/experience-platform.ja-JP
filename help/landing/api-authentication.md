@@ -60,7 +60,7 @@ Adobe Developer Consoleで統合を作成する前に、アカウントにAdobe 
 
 また、Admin Console管理者が、あなたを同じ製品プロファイルのユーザーとして追加する必要もあります。 ユーザーアクセスを使用すると、実行する API 操作の結果を UI で確認できます。
 
-詳しくは、[Admin Consoleでのユーザーグループの管理 ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) のガイドを参照してください。
+詳しくは、[Admin Consoleでのユーザーグループの管理 ](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) のガイドを参照してください。
 
 ## API キー（クライアント ID）と組織 ID の生成 {#generate-credentials}
 

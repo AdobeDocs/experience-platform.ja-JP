@@ -122,7 +122,7 @@ Experience Platformにイベントを送信し、Experience Platformが送信し
 ![ 「イベントを送信」アクションタイプのPersonalization設定を示すExperience Platform タグ UI 画像。](assets/personalization-settings.png)
 
 * **[!UICONTROL 範囲]**：パーソナライズ機能から明示的にリクエストする範囲（Adobe Target [!DNL mboxes]）を選択します。 範囲は、手動で入力することも、データ要素を指定して入力することもできます。
-* **[!UICONTROL サーフェス]**：ページ上でパーソナライゼーションに使用できる web サーフェスを設定します。 詳しくは、[Adobe Journey Optimizer ドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) を参照してください。
+* **[!UICONTROL サーフェス]**：ページ上でパーソナライゼーションに使用できる web サーフェスを設定します。 詳しくは、[Adobe Journey Optimizer ドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) を参照してください。
 * **ビジュアルパーソナライゼーション決定のレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、「**[!UICONTROL ビジュアルパーソナライゼーション決定のレンダリング]** チェックボックスをオンにします。 必要に応じて、決定範囲やサーフェスを指定することもできます。 パーソナライズされたコンテンツのレンダリングについて詳しくは、[ パーソナライゼーションドキュメント ](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) を参照してください。
 * **[!UICONTROL デフォルトのパーソナライゼーションをリクエスト]**：このセクションを使用して、ページ全体の範囲（グローバル mbox）とデフォルトのサーフェス（現在の URL に基づく web サーフェス）がリクエストされるかどうかを制御します。 デフォルトでは、これはページ読み込みの最初の `sendEvent` 呼び出し時に自動的に要求されます。 次のオプションから選択できます。
    * **[!UICONTROL 自動]**：これはデフォルトの動作です。 まだリクエストされていない場合にのみ、デフォルトのパーソナライゼーションをリクエストします。 これは、Web SDK コマンドで設定され `requestDefaultPersonalization` いない場合に該当します。

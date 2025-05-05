@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### Luma web データスキーマの作成とデータの取り込み
 
-モデルを作成するには、モデルのトレーニングとスコアリングに使用するデータセットをExperience Platformに用意する必要があります。 [Data Science Workspace コース ](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=ja) の次のビデオチュートリアルでは、Luma スキーマを作成し、購入の傾向モデルで使用されるデータを取り込む方法を説明します。
+モデルを作成するには、モデルのトレーニングとスコアリングに使用するデータセットをExperience Platformに用意する必要があります。 [Data Science Workspace コース ](https://experienceleague.adobe.com/?lang=ja&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=ja) の次のビデオチュートリアルでは、Luma スキーマを作成し、購入の傾向モデルで使用されるデータを取り込む方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

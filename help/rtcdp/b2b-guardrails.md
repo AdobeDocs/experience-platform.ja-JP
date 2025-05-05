@@ -3,7 +3,7 @@ keywords: プロファイル；リアルタイム顧客プロファイル；ト�
 title: Real-Time Customer Data Platform B2B editionのデフォルトガードレール
 type: Documentation
 description: Adobe Experience Platform は、従来のリレーショナルデータモデルとは異なる、高度に非正規化されたハイブリッドデータモデルを使用します。 このドキュメントでは、Adobe Real-Time Customer Data Platform B2B editionを使用して最適なシステムパフォーマンスを得るためにデータをモデル化する際に役立つ、デフォルトの使用方法とレートの上限について説明します。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
 source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e

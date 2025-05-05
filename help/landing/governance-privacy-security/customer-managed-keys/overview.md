@@ -17,7 +17,7 @@ Adobe Experience Platform に保存されたデータは、システムレベル
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platformは、Microsoft Azure とAmazon Web Services（AWS）の両方で顧客管理キー（CMK）をサポートします。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 実装がAWSで実行されている場合は、Experience Platform データ暗号化に Key Management Service （KMS）を使用することができます。 サポートされるインフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
+>Adobe Experience Platformは、Microsoft Azure とAmazon Web Services（AWS）の両方で顧客管理キー（CMK）をサポートします。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 実装がAWSで実行されている場合は、Experience Platform データ暗号化に Key Management Service （KMS）を使用することができます。 サポートされるインフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud) を参照してください。
 >
 >AWS KMS での暗号化キーの作成と管理については、[AWS KMS データ暗号化ガイド ](./aws/configure-kms.md) を参照してください。 Azure の実装については、[Azure Key Vault 設定ガイド ](./azure/azure-key-vault-config.md) を参照してください。
 
@@ -109,7 +109,7 @@ Azure の Key Vault、キー、CMK アプリまたはAWSの暗号化キーへの
 
 >[!TIP]
 >
->非プライマリ（キャッシュ/一時的）データの 7 日間のデータセット有効期限には、ユースケース固有の例外が 2 つあります。 これらの機能について詳しくは、それぞれのドキュメントを参照してください。<ul><li>[Adobe Journey Optimizerの URL 短縮機能 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ja#message-preset-sms)</li><li>[Edge見込み ](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>非プライマリ（キャッシュ/一時的）データの 7 日間のデータセット有効期限には、ユースケース固有の例外が 2 つあります。 これらの機能について詳しくは、それぞれのドキュメントを参照してください。<ul><li>[Adobe Journey Optimizerの URL 短縮機能 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ja#message-preset-sms)</li><li>[Edge見込み ](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=ja#edge-projections)</li></ul>
 
 ## 次の手順
 

@@ -14,7 +14,7 @@ ht-degree: 38%
 
 ## 概要 {#overview}
 
-Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。詳しくは、[Campaign Classicの基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) を参照してください。
+Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。詳しくは、[Campaign Classicの基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html?lang=ja) を参照してください。
 
 オーディエンスデータをAdobe Campaignに送信するには、まずAdobe Experience Platformで [ 宛先に接続 ](#connect-destination) してから、ストレージの場所からAdobe Campaignに [ データの読み込みを設定 ](#import-data-into-campaign) する必要があります。
 
@@ -108,9 +108,9 @@ Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または 
 >[!IMPORTANT]
 >
 >* この統合を実行する際は、Adobe Campaignの契約に従って、[!DNL SFTP] のストレージ制限、データベースストレージ制限、アクティブなプロファイル制限に注意してください。
->* [!DNL Campaign] ワークフローを使用して、書き出されたセグメントをAdobe Campaignでスケジュール、読み込み、マッピングする必要があります。 Adobe Campaign Classic ドキュメントの [ 繰り返し読み込みの設定 ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja) およびAdobe Campaign Standard ドキュメントの [ データ管理アクティビティについて ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) を参照してください。
+>* [!DNL Campaign] ワークフローを使用して、書き出されたセグメントをAdobe Campaignでスケジュール、読み込み、マッピングする必要があります。 Adobe Campaign Classic ドキュメントの [ 繰り返し読み込みの設定 ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=ja) およびAdobe Campaign Standard ドキュメントの [ データ管理アクティビティについて ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=ja) を参照してください。
 >* Adobe Campaignにデータを送信する場合は、[!DNL Amazon S3] または [!DNL Azure Blob] を使用することをお勧めします。
 
 [!DNL Experience Platform] を [!DNL Amazon S3] または [!DNL Azure Blob] ストレージに接続した後、ストレージの場所からAdobe Campaignへのデータの読み込みを設定する必要があります。 これを実現する方法については、次のAdobe Campaign ドキュメントページを参照してください。
 * [ データのインポートとエクスポートの概要 ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=ja) および [ データの読み込み（ファイル） ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=ja) （Adobe Campaign Classic ドキュメント）。
-* [ プロセスとデータ管理の基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) および [ ファイルを読み込む ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html)Adobe Campaign Standard ドキュメント。
+* [ プロセスとデータ管理の基本を学ぶ ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=ja) および [ ファイルを読み込む ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=ja)Adobe Campaign Standard ドキュメント。

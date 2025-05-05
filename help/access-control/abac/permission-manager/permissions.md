@@ -23,7 +23,7 @@ ht-degree: 9%
 >id="platform_permission_manager"
 >title="権限マネージャー"
 >abstract="ページのドロップダウンセレクターを使用して、ユーザーと役割に対する様々な精度レベルのアクセスレベルレポートを取得します。"
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=ja" text="Permission manager" -->
 
 ドロップダウンを使用して、属性 **[!UICONTROL ユーザー]** を選択します。
 

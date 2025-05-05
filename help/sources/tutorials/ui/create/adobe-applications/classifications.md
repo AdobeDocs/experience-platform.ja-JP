@@ -63,4 +63,4 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 * [Adobe Analytics ソースコネクタの概要](../../../../connectors/adobe-applications/analytics.md)
 * [UI でのレポートスイートデータの Analytics ソース接続の作成](./analytics.md)
-* [ 分類について ](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [ 分類について ](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=ja)

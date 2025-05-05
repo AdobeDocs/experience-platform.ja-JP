@@ -88,7 +88,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->これらの広告宛先のほとんどは、Audience Manager でサポートされています（これらの宛先タイプは、Audience Manager ではデバイスベースの宛先と呼ばれます）。 [Audience Manager でサポートされているデバイスベースの宛先の全リスト](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)を参照してください。Experience Platform には、ほんの一部のみリストされています。Experience Platform と Audience Manager とのデータの共有について詳しくは、[Experience Platform から Audience Manager へのデータ共有の有効化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data)に関する節を参照してください。現在、サポートしているサードパーティ Cookie の宛先を増やす予定はありません。
+>これらの広告宛先のほとんどは、Audience Manager でサポートされています（これらの宛先タイプは、Audience Manager ではデバイスベースの宛先と呼ばれます）。 [Audience Manager でサポートされているデバイスベースの宛先の全リスト](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=ja)を参照してください。Experience Platform には、ほんの一部のみリストされています。Experience Platform と Audience Manager とのデータの共有について詳しくは、[Experience Platform から Audience Manager へのデータ共有の有効化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja#enable-aep-to-aam-data)に関する節を参照してください。現在、サポートしているサードパーティ Cookie の宛先を増やす予定はありません。
 
 ## エンタープライズの宛先 {#enterprise-destinations}
 

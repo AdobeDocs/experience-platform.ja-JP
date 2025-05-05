@@ -24,7 +24,7 @@ ML スキーマの生成を使用すると、新しいデータソースをす�
 
 このチュートリアルでは、スキーマ作成の要件について十分に理解している必要があります。 このガイドを進める前に、[ スキーマの作成および編集の UI ガイド ](./resources/schemas.md) を参照する必要があります。
 
-このガイドでは、機械学習（ML）アルゴリズムを使用してスキーマを作成し、サンプルデータからスキーマを生成する方法について説明します。 スキーマの作成について詳しくは、[ 手動スキーマ作成ワークフローガイド ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) を参照してください。また、スキーマ作成プロセスを理解しやすくするために、スキーマエディターの [ フィールドベースのワークフロー ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) に関するドキュメントを参照してください。
+このガイドでは、機械学習（ML）アルゴリズムを使用してスキーマを作成し、サンプルデータからスキーマを生成する方法について説明します。 スキーマの作成について詳しくは、[ 手動スキーマ作成ワークフローガイド ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) を参照してください。また、スキーマ作成プロセスを理解しやすくするために、スキーマエディターの [ フィールドベースのワークフロー ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/field-based-workflows) に関するドキュメントを参照してください。
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ Experience Platform UI の左側のナビゲーションから、「**[!UICONTRO
 
 スキーマを作成したら、スキーマエディターを使用して、必要に応じてさらに変更を加えることができます。 これで、新しいスキーマをデータソースと統合し、データ分析に使用する準備が整いました。
 
-スキーマエディターの使用について詳しくは、[ 既存のスキーマの編集 ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) ガイドを参照してください。
+スキーマエディターの使用について詳しくは、[ 既存のスキーマの編集 ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/ui/resources/schemas#edit) ガイドを参照してください。

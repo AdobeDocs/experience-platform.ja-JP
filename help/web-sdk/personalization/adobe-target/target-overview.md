@@ -11,25 +11,25 @@ ht-degree: 3%
 
 # パーソナライゼーションへの [!DNL Adobe Target] と [!DNL Web SDK] の使用
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] は、web チャネルに [!DNL Adobe Target] して管理され、パーソナライズされたエクスペリエンスを配信およびレンダリングできます。 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）、非ビジュアルベースのインターフェイス [ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) と呼ばれるWYSIWYG エディターを使用して、アクティビティとパーソナライゼーションエクスペリエンスを作成、アクティベートおよび配信できます。
+[!DNL Adobe Experience Platform] [!DNL Web SDK] は、web チャネルに [!DNL Adobe Target] して管理され、パーソナライズされたエクスペリエンスを配信およびレンダリングできます。 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) （VEC）、非ビジュアルベースのインターフェイス [ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja) と呼ばれるWYSIWYG エディターを使用して、アクティビティとパーソナライゼーションエクスペリエンスを作成、アクティベートおよび配信できます。
 
 >[!IMPORTANT]
 >
->[at.js 2.x からExperience Platform web SDKへの Target の移行 ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) チュートリアルで、Target 実装をExperience Platform web SDKに移行する方法を説明します。
+>[at.js 2.x からExperience Platform web SDKへの Target の移行 ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=ja) チュートリアルで、Target 実装をExperience Platform web SDKに移行する方法を説明します。
 >
->[Web SDKを使用してAdobe Experience Cloudを実装する ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja) チュートリアルで、Target を初めて実装する方法を説明します。 Target について詳しくは、チュートリアルの「[Experience Platform Web SDKを使用した Target の設定 ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html) の節を参照してください。
+>[Web SDKを使用してAdobe Experience Cloudを実装する ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja) チュートリアルで、Target を初めて実装する方法を説明します。 Target について詳しくは、チュートリアルの「[Experience Platform Web SDKを使用した Target の設定 ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=ja) の節を参照してください。
 
 
 次の機能はテスト済みで、現在 [!DNL Target] でサポートされています。
 
-* [A/B テスト ](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [A4T インプレッションおよびコンバージョンレポート ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
-* [Automated Personalization アクティビティ ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [ エクスペリエンスのターゲット設定アクティビティ ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [ 多変量分析テスト（MVT） ](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Recommendations アクティビティ ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
-* [Target のネイティブインプレッションとコンバージョンレポート ](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
-* [VEC サポート ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+* [A/B テスト ](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja)
+* [A4T インプレッションおよびコンバージョンレポート ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja)
+* [Automated Personalization アクティビティ ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja)
+* [ エクスペリエンスのターゲット設定アクティビティ ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja)
+* [ 多変量分析テスト（MVT） ](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ja)
+* [Recommendations アクティビティ ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ja)
+* [Target のネイティブインプレッションとコンバージョンレポート ](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=ja)
+* [VEC サポート ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja)
 
 ## [!DNL Web SDK] システム図
 
@@ -64,7 +64,7 @@ ht-degree: 3%
 
 [!DNL Web SDK] 実装で VEC を使用するには、{Firefox[&#128279;](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [3}Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 拡張機能をインストールして有効化します。
 
-詳しくは、*Adobe Targetガイドの [Visual Experience Composer ヘルパー拡張機能 ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) を参照してください*。
+詳しくは、*Adobe Targetガイドの [Visual Experience Composer ヘルパー拡張機能 ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=ja) を参照してください*。
 
 ## パーソナライズされたコンテンツのレンダリング
 
@@ -85,7 +85,7 @@ ht-degree: 3%
 * トラフィックソース
 * 時間枠
 
-詳しくは、*Adobe Target ガイド [ オーディエンスのカテゴリ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) を参照してください*。
+詳しくは、*Adobe Target ガイド [ オーディエンスのカテゴリ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=ja) を参照してください*。
 
 ### レスポンストークン
 

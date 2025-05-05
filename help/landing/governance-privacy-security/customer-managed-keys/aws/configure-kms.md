@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->このドキュメントは、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
+>このドキュメントは、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud) を参照してください。
 >
 >AWSの [ 顧客管理キー ](../overview.md) （CMK）は、Privacy and Security Shield でサポートされていますが、Healthcare Shield では使用できません。 Azure 上の CMK は、Privacy and Security Shield および Healthcare Shield の両方でサポートされています。
 
 このガイドを使用すると、Adobe Experience Platformの暗号化キーを作成、管理、および制御して、Amazon Web Services（AWS） Key Management Service （KMS）でデータを保護できます。 この統合により、コンプライアンスの合理化、自動化によるオペレーションの合理化が実現し、独自の主要管理インフラストラクチャを維持する必要がなくなります。
 
-Customer Journey Analytics固有の手順については、[Customer Journey Analytics CMK ドキュメントを参照してください ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Customer Journey Analytics固有の手順については、[Customer Journey Analytics CMK ドキュメントを参照してください ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >

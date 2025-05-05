@@ -481,7 +481,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-このinsightの外観と機能について詳しくは、[ プロファイル数ウィジェットガイド ](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count) を参照してください。
+このinsightの外観と機能について詳しくは、[ プロファイル数ウィジェットガイド ](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=ja#profile-count) を参照してください。
 
 このinsightのアピアランスと機能について詳しくは、[ プロファイル数ウィジェットのドキュメント ](../guides/profiles.md#profile-count) を参照してください。
 

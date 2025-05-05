@@ -46,7 +46,7 @@ ht-degree: 6%
 - [データセット](../../catalog/datasets/overview.md)
 - [スキーマ](../../xdm//home.md)
 - [オーディエンス](../../segmentation/home.md)
-- [Adobe Journey Optimizerのジャーニー](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Adobe Journey Optimizerのジャーニー](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
-> 上記の手順は、Experience Platformのユーザーインターフェイスのプロセスに従います。 様々なエンドポイントを介して API を使用して、同じ手順に従うことができます。 API を使用して各リクエストを実行する方法については、`sandboxes` [ エンドポイントガイド ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) および `packages` [ エンドポイントガイド ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages) を参照してください。
+> 上記の手順は、Experience Platformのユーザーインターフェイスのプロセスに従います。 様々なエンドポイントを介して API を使用して、同じ手順に従うことができます。 API を使用して各リクエストを実行する方法については、`sandboxes` [ エンドポイントガイド ](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/api/sandboxes#create) および `packages` [ エンドポイントガイド ](https://experienceleague.adobe.com/ja/docs/experience-platform/sandbox/sandbox-tooling-api/packages) を参照してください。
 
 ## パートナーデータサポートを通じて達成されるその他のユースケース {#other-use-cases}
 

@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Web アプリ内メッセージは、[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) 機能であり、Web SDKを使用してパーソナライズされたコンテンツを配信します。
 >
->Web アプリ内メッセージキャンペーンの設定方法について詳しくは、[Adobe Journey Optimizer ドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html) を参照してください。
+>Web アプリ内メッセージキャンペーンの設定方法について詳しくは、[Adobe Journey Optimizer ドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=ja) を参照してください。
 
 
 ## 前提条件 {#prerequisites}
@@ -184,5 +184,5 @@ Adobe Journey Optimizerからの web アプリ内メッセージは、2 とお�
 
 [Web SDK設定 ](../commands/configure/overview.md) で、必要に応じて `personalizationStorageEnabled` オプションを設定します。
 
-* `personalizationStorageEnabled: true` は、アプリ内メッセージを [Adobe Journey Optimizer キャンペーン ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp) で定義した頻度でトリガー付けします。
+* `personalizationStorageEnabled: true` は、アプリ内メッセージを [Adobe Journey Optimizer キャンペーン ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=ja#configure-inapp) で定義した頻度でトリガー付けします。
 * ページが読み込まれるたびにアプリ内メッセージを `personalizationStorageEnabled: false`トリガーします。

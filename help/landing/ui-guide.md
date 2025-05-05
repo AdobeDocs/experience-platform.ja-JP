@@ -159,12 +159,12 @@ Experience Platform UI の上部のナビゲーションバーには、現在ロ
 
 ### [!UICONTROL &#x200B; 連合データ &#x200B;]
 
-**[!UICONTROL モデル]** セクションでは、データの構造、関係、制約を定義するデータモデルとスキーマを設計および作成できます。 データモデルとスキーマについて詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas) を参照してください。
+**[!UICONTROL モデル]** セクションでは、データの構造、関係、制約を定義するデータモデルとスキーマを設計および作成できます。 データモデルとスキーマについて詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/config/datamodel/schemas) を参照してください。
 
 **[!UICONTROL 監査記録]** セクションでは、環境に対してリアルタイムに実行されたすべてのアクションとイベントの詳細な時系列の記録が提供されます。 監査証跡について詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail) を参照してください。
 
 
-「**[!UICONTROL 連合データベース]**」セクションでは、Adobe Experience Platformを Enterprise Data Warehouse に接続できます。 連合データベースへの接続について詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db) を参照してください。
+「**[!UICONTROL 連合データベース]**」セクションでは、Adobe Experience Platformを Enterprise Data Warehouse に接続できます。 連合データベースへの接続について詳しくは、[Federated Audience Composition ユーザーガイド ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/config/federated-db) を参照してください。
 
 ### [!UICONTROL 決定]
 

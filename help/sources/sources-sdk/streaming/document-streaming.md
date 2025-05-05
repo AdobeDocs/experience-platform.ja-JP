@@ -22,8 +22,8 @@ ht-degree: 2%
 
 * 新しいソースのドキュメントページを作成する際に従うことができるチュートリアル。
 * 新しいソースに入力するためのドキュメントテンプレート。
-* [ 技術ドキュメントの執筆に Markdown を使用する方法に関する手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)
-* [Adobe Markdown フレーバーを理解するための手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions)。
+* [ 技術ドキュメントの執筆に Markdown を使用する方法に関する手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)
+* [Adobe Markdown フレーバーを理解するための手順 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#custom-markdown-extensions)。
 
 ## 前提条件
 

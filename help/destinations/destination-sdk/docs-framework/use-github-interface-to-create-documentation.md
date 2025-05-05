@@ -16,14 +16,14 @@ ht-degree: 3%
 >[!TIP]
 >
 >Adobeのコントリビューターガイドのサポートドキュメントも参照してください。
->* [Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [ 大規模な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)。
+>* [Git および Markdown オーサリングツールのインストール ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ja)
+>* [ ドキュメントを参照するために Git リポジトリをローカルに設定する ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja)
+>* [ 大規模な変更点に対する GitHub 投稿ワークフロー ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ja)。
 
 ## GitHub オーサリング環境の設定 {#set-up-environment}
 
 1. ブラウザーで `https://github.com/AdobeDocs/experience-platform.en` に移動します。
-2. リポジトリを [ 分岐 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) するには、次に示すように、「**分岐**」をクリックします。 これにより、Experience Platformリポジトリのコピーが独自の GitHub アカウントに作成されます。
+2. リポジトリを [ 分岐 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ja#fork-the-repository) するには、次に示すように、「**分岐**」をクリックします。 これにより、Experience Platformリポジトリのコピーが独自の GitHub アカウントに作成されます。
 
    ![ 分岐Adobeのドキュメントリポジトリ ](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -46,7 +46,7 @@ ht-degree: 3%
    >
    >ブラウザーウィンドウはいつでも閉じ、後で再度開くことができます。 作業内容は自動的に保存され、ブラウザーを再び開くと待機されます。
 3. マークダウンエディターから GitHub の新しいファイルにコンテンツをコピーします。
-4. 使用する予定のスクリーンショットや画像について、GitHub インターフェイスを使用してファイルを `experience-platform.en/help/destinations/assets/catalog/[...]` にアップロードします。ここで、`[...]` は宛先に必要なカテゴリです。 例えば、パーソナライゼーションの宛先をExperience Platformに追加する場合は、`personalization` カテゴリを選択します。 オーサリングしているページから画像にリンクする必要があります。 [ 画像へのリンク方法 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images) を参照してください。
+4. 使用する予定のスクリーンショットや画像について、GitHub インターフェイスを使用してファイルを `experience-platform.en/help/destinations/assets/catalog/[...]` にアップロードします。ここで、`[...]` は宛先に必要なカテゴリです。 例えば、パーソナライゼーションの宛先をExperience Platformに追加する場合は、`personalization` カテゴリを選択します。 オーサリングしているページから画像にリンクする必要があります。 [ 画像へのリンク方法 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=ja#link-to-images) を参照してください。
 
    ![GitHub への画像のアップロード ](../assets/docs-framework/upload-image.gif)
 
@@ -82,4 +82,4 @@ ht-degree: 3%
 
 >[!TIP]
 >
->画像やドキュメントへのリンクを追加する方法、および Markdown に関するその他の質問については、Adobeの共同作業ライティングガイドの [Markdown の使用 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) を参照してください。
+>画像やドキュメントへのリンクを追加する方法、および Markdown に関するその他の質問については、Adobeの共同作業ライティングガイドの [Markdown の使用 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja) を参照してください。

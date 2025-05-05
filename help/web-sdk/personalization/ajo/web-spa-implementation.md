@@ -61,7 +61,7 @@ XDM ビューはAdobe Journey Optimizerで活用すると、マーケターがJo
 
 これには、1 回限りの開発者向けの設定を完了するために、次の手順を実行する必要があります。
 
-1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) をインストールし、[web チャネルの前提条件 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) ページを確認します。
+1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) をインストールし、[web チャネルの前提条件 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=ja) ページを確認します。
 
 2. パーソナライズするシングルページアプリケーション内のすべての XDM ビューを決定します。
 

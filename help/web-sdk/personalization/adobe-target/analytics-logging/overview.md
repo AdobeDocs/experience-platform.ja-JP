@@ -27,7 +27,7 @@ Adobe Experience Platform Web SDKでは、Analytics for Target （A4T）のユ�
 | ログメソッド | 説明 |
 | --- | --- |
 | サーバーサイド分析ログ | Edge Networkを介して送信されるすべての Analytics ヒットは、ヒットのステッチプロセスを経ることなく、サーバーサイドで Target の詳細で拡張されます。 |
-| クライアントサイド分析ログ | Target データがクライアントサイドで返されるので、[Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) を使用して手動でデータを補強し、Analytics に送信できます。 |
+| クライアントサイド分析ログ | Target データがクライアントサイドで返されるので、[Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=ja) を使用して手動でデータを補強し、Analytics に送信できます。 |
 
 ログの方式は、設定済みの [datastream](../../../../datastreams/overview.md) でAdobe Analyticsが有効になっているかどうかによって決まります。
 

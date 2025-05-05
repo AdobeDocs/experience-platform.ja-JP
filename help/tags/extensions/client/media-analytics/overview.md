@@ -174,7 +174,7 @@ MA 拡張機能は、`get-instance` および `media-heartbeat` 共有モジュ�
    ...
    ```
 
-1. Media Heartbeatインスタンスを使用し、[Media SDK JS のドキュメント](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html)および[JS API のドキュメント](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html)に従ってメディアトラッキングを実装します。
+1. Media Heartbeatインスタンスを使用し、[Media SDK JS のドキュメント](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=ja)および[JS API のドキュメント](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html)に従ってメディアトラッキングを実装します。
 
 >[!NOTE]
 >

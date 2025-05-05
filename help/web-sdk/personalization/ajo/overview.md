@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL Experience Platform Web SDK] での [!DNL Adobe Journey Optimizer] の使用
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] は、web チャネルに [!DNL Adobe Journey Optimizer] して管理され、パーソナライズされたエクスペリエンスを配信およびレンダリングできます。 WYSIWYG エディター（[!DNL Adobe Journey Optimizer]Web チャネル [、非ビジュアルインターフェイス ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) コードベースのエクスペリエンスチャネル [ を使用して、[!DNL Journey Optimizer Web] しいキャンペーンとパーソナライゼーションエクスペリエンスを作成、アクティベートおよび配信で ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) ます。
+[!DNL Adobe Experience Platform] [!DNL Web SDK] は、web チャネルに [!DNL Adobe Journey Optimizer] して管理され、パーソナライズされたエクスペリエンスを配信およびレンダリングできます。 WYSIWYG エディター（[!DNL Adobe Journey Optimizer]Web チャネル [、非ビジュアルインターフェイス ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) コードベースのエクスペリエンスチャネル [ を使用して、[!DNL Journey Optimizer Web] しいキャンペーンとパーソナライゼーションエクスペリエンスを作成、アクティベートおよび配信で ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) ます。
 
 >[!IMPORTANT]
 >
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 [!DNL Adobe Journey Optimizer] の使用を開始するには、次の手順に従います。
 
-1. [!DNL Adobe Journey Optimizer] の [web エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) から [ 前提条件 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) を確認します。具体的には次のとおりです。
+1. [!DNL Adobe Journey Optimizer] の [web エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja#prerequesites) から [ 前提条件 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) を確認します。具体的には次のとおりです。
    * [!DNL Adobe Experience Cloud Visual Editing Helper] を設定します。
    * [ データストリーム ](../../../datastreams/overview.md) で [!DNL Adobe Journey Optimizer] を有効にします。
    * 「[!UICONTROL Edge上でアクティブ化結合ポリシー &#x200B;]」オプションを有効にします。
@@ -84,7 +84,7 @@ ht-degree: 2%
 
 ## Adobe Journey Optimizer Web エクスペリエンスの作成 {#create-ajo-web-experiences}
 
-[!DNL Adobe Journey Optimizer] の [Web エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) の [Web キャンペーンオーサリング ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 手順に従って、キャンペーンとエクスペリエンス [!DNL Journey Optimizer Web] 作成します。
+[!DNL Adobe Journey Optimizer] の [Web エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja#create-web-campaign) の [Web キャンペーンオーサリング ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) 手順に従って、キャンペーンとエクスペリエンス [!DNL Journey Optimizer Web] 作成します。
 
 ## パーソナライズされたコンテンツのレンダリング {#rendering-personalized-content}
 

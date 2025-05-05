@@ -77,7 +77,7 @@ Webhook を使用すると、システムはレコードを自動的に更新し
 
 ## リクエストデータへのアクセス {#access-request-data}
 
-データ主体の情報が要求されると、各サービスは、データの保存方法や使用方法に合った形式でデータを返します。 すべてのサービスがリクエストを完了すると、このデータをダウンロードできるように、ジョブの詳細に.ZIP アーカイブファイルの URL が指定されます。 [ プライバシージョブの結果をダウンロードする方法 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F) について詳しくは、トラブルシューティングガイドを参照してください。
+データ主体の情報が要求されると、各サービスは、データの保存方法や使用方法に合った形式でデータを返します。 すべてのサービスがリクエストを完了すると、このデータをダウンロードできるように、ジョブの詳細に.ZIP アーカイブファイルの URL が指定されます。 [ プライバシージョブの結果をダウンロードする方法 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=ja#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F) について詳しくは、トラブルシューティングガイドを参照してください。
 
 データ・アーカイブの管理に関する重要事項を次に示します。
 

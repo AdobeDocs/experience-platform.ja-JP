@@ -98,7 +98,7 @@ Experience Platformで [!DNL RainFocus] 統合をアクティベートするに�
 >[!IMPORTANT]
 >
 >* スキーマは、**XDM ExperienceEvent クラス** を拡張する必要があります。
->* スキーマに **プライマリ ID** が含まれ、**プロファイルに対して有効** になっていることを確認する必要があります。 詳しくは、[UI での ID フィールドの定義 ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html) に関するガイドを参照してください
+>* スキーマに **プライマリ ID** が含まれ、**プロファイルに対して有効** になっていることを確認する必要があります。 詳しくは、[UI での ID フィールドの定義 ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=ja) に関するガイドを参照してください
 >* ID （メール）の例は、SHA256 メールや ECID など、別の適切な識別子に置き換えることができます。
 
 ### RainFocus での統合プロファイルの作成 {#create-an-integration-profile-in-rainfocus}

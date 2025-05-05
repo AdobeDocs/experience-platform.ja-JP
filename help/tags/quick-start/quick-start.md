@@ -134,6 +134,6 @@ Web ページ、ホスティング場所、タグの間の関係を理解する�
 
 タグについて詳しくは、次のリソースを参照してください。
 
-* **[データ収集コミュニティ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**：質問に回答、アイデアを送信、他のユーザーのアイデアに投票します。Adobe ID でログインします。
+* **[データ収集コミュニティ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=ja)**：質問に回答、アイデアを送信、他のユーザーのアイデアに投票します。Adobe ID でログインします。
 * **[開発者ドキュメント](../api/overview.md)**: タグ開発者コミュニティに参加して、拡張機能を構築したり、タグ API を使用したりします
 * **[Tutorials の概要](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=ja)**：これらのドキュメントでは、Android アプリのイベント転送や Mobile SDK など、タグの概念について説明します。

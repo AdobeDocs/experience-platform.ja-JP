@@ -76,7 +76,7 @@ Platform 内でイベント転送を設定して、収集したユーザー行�
 
 オフサイトのリターゲティング拡張機能が、Adobe Experience Platform Data Collection の有効なイベントルールにアタッチされていることを確認します。 通常、`page load` ーザーや特定のユーザーのインタラクションなど、主要なアクションを実行するグローバルルールを作成する必要があります。
 
-拡張機能の設定について詳しくは、[ イベント転送 ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) ドキュメントを参照してください。
+拡張機能の設定について詳しくは、[ イベント転送 ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/getting-started) ドキュメントを参照してください。
 
 ## その他のユースケース {#other-use-cases}
 

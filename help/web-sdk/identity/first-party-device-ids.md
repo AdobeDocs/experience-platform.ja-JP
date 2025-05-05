@@ -117,7 +117,7 @@ ID の優先順位は次の順序で設定されます。
 
 | 訪問 | 説明 |
 | --- | --- |
-| 初回訪問 | [!DNL FPID] cookie の設定をまだ開始していないとします。 [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) に含まれる [!DNL ECID] は、訪問者の識別に使用される識別子になります。 |
+| 初回訪問 | [!DNL FPID] cookie の設定をまだ開始していないとします。 [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=ja#section-c55af54828dc4cce89f6118655d694c8) に含まれる [!DNL ECID] は、訪問者の識別に使用される識別子になります。 |
 | 2 回目の訪問 | [!DNL FPID] ソリューションのロールアウトが開始されました。 既存の [!DNL ECID] は引き続き存在し、訪問者を識別するためのプライマリ識別子として残ります。 |
 | 3 回目の訪問 | 2 回目と 3 回目の訪問の間に、ブラウザーポリシーが原因で [!DNL ECID] が削除されるまでに十分な時間が経過しました。 ただし、[!DNL FPID] は [!DNL DNS] [!DNL A] レコードを使用して設定されているので、[!DNL FPID] は保持されます。 [!DNL FPID] はプライマリ ID と見なされ、エンドユーザーデバイスに書き込まれる [!DNL ECID] のシード処理に使用されるようになりました。 これで、このユーザーはAdobe Experience PlatformおよびExperience Cloud ソリューションの新規訪問者と見なされます。 |
 | 4 回目の訪問 | 3 回目と 4 回目の訪問の間に、ブラウザーポリシーが原因で [!DNL ECID] が削除されるまでに十分な時間が経過しました。 前回の訪問同様、[!DNL FPID] の設定の仕方が原因で残っています。 今回は、前回の訪問と同じ [!DNL ECID] が生成されます。 Experience PlatformおよびExperience Cloud ソリューション全体で、前回の訪問と同じユーザーとして表示されます。 |
@@ -133,7 +133,7 @@ ID の優先順位は次の順序で設定されます。
 >
 >[!DNL A] または [!DNL AAAA] レコードは、cookie の設定とトラッキングでのみサポートされています。 データ収集の主な方法は、[!DNL DNS CNAME] を使用することです。 [!DNL FPIDs] は、[!DNL A] または [!DNL AAAA] レコードを使用して設定され、[!DNL CNAME] を使用してAdobeに送信されます。
 >
->[Adobe管理証明書プログラム ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) は、ファーストパーティのデータ収集でもサポートされています。
+>[Adobe管理証明書プログラム ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja#adobe-managed-certificate-program) は、ファーストパーティのデータ収集でもサポートされています。
 
 [!DNL FPID] cookie が設定されると、その値を取得し、イベントデータが収集されたときにAdobeに送信できます。 収集された [!DNL FPIDs] は、Adobe Experience Cloud アプリケーションの主要識別子である [!DNL ECIDs] を生成するために使用されます。
 
@@ -164,7 +164,7 @@ Web SDKを Web サイト `mywebsite.com` ージに実装する場合を考えて
 
 >[!IMPORTANT]
 >
->この機能を使用するには、[ ファーストパーティデータ収集 ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) を有効にしておく必要があります。
+>この機能を使用するには、[ ファーストパーティデータ収集 ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ja) を有効にしておく必要があります。
 
 **手順 2. データストリームの**&#x200B;[!UICONTROL &#x200B; ファーストパーティ ID Cookie &#x200B;]&#x200B;**機能を有効にする**
 
@@ -181,7 +181,7 @@ Adobe Experience Cloudとの連携方法について詳しくは、[ ファー�
 >[!NOTE]
 >
 >ファーストパーティ ID を使用する場合、サードパーティ ID の同期を実行することはできません。 サードパーティの ID 同期は、[!DNL Visitor ID] サービスと、そのサービスによって生成される `UUID` に依存します。 ファーストパーティ ID 機能を使用する場合、[!DNL Visitor ID] サービスを使用せずに [!DNL ECID] が生成されるので、サードパーティ ID の同期が不可能になります。
-><br> ファーストパーティ ID を使用する場合、Audience Managerのパートナー ID 同期が主に `UUIDs` または `DIDs` に基づいていることを考慮すると、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) の、パートナープラットフォームでのアクティベーション向けの機能はサポートされません。 ファーストパーティ ID から派生する [!DNL ECID] は、`UUID` にリンクされていないので、アドレス指定できません。
+><br> ファーストパーティ ID を使用する場合、Audience Managerのパートナー ID 同期が主に `UUIDs` または `DIDs` に基づいていることを考慮すると、[Audience Manager](https://experienceleague.adobe.com/ja/docs/audience-manager) の、パートナープラットフォームでのアクティベーション向けの機能はサポートされません。 ファーストパーティ ID から派生する [!DNL ECID] は、`UUID` にリンクされていないので、アドレス指定できません。
 
 ## 方法 2:`identityMap` での FPID の使用 {#identityMap}
 

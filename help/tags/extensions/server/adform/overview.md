@@ -47,7 +47,7 @@ Adform をAdobeと統合する前に、次の前提条件が満たされてい�
 2. **CDP または Connection SKU**：クライアントサイドとサーバーサイドのシームレスな通信を可能にするには、Adobe Customer Data Platform （CDP）PrimeまたはUltimate SKU、または Connection SKU が必要です。
 
 3. **Adobe Experience Platform Edge Networkの設定**:
-   * オフサイトリターゲティング用のリアルタイムイベント転送をサポートするようにEdge Networkが設定されていることを確認します。 詳しくは、Adobe[ イベント転送の概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) を参照してください。
+   * オフサイトリターゲティング用のリアルタイムイベント転送をサポートするようにEdge Networkが設定されていることを確認します。 詳しくは、Adobe[ イベント転送の概要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/getting-started) を参照してください。
    * この手順は、Adform のサーバーサイドエンドポイントにデータを効率的に送信するために重要です。
 
 これらの前提条件が満たされたら、引き続き [!DNL Adform] 拡張機能の設定とデプロイを行うことができます。

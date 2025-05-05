@@ -30,7 +30,7 @@ Adobe Campaign Managed Cloud Services ソースを使用すると、Adobe Campai
 
 >[!IMPORTANT]
 >
->Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスできる必要があります。 クライアントコンソールのダウンロードおよびインストール方法については、[Campaign v8 ドキュメント ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) を参照してください。
+>Campaign でログデータを表示するには、Adobe Campaign v8 クライアントコンソールにアクセスできる必要があります。 クライアントコンソールのダウンロードおよびインストール方法については、[Campaign v8 ドキュメント ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=ja) を参照してください。
 
 クライアントコンソールから Campaign v8 インスタンスにログインします。 「[!DNL Explorer]」タブで、「[!DNL Administration]」を選択し、「[!DNL Configuration]」を選択します。 次に、「[!DNL Data schemas]」を選択して、名前またはラベルの `broadLog` フィルターを適用します。 表示されるリストで、`broadLogRcp` という名前の受信者配信ログソーススキーマを選択します。
 

@@ -119,11 +119,11 @@ Web SDK では、高エントロピーのクライアントヒントは、デフ
 
 ### 高エントロピーのクライアントヒントに基づくAdobe Analytics レポート {#analytics}
 
-[ オペレーティングシステム ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) ディメンションには、高エントロピーのクライアントヒントとして保存されるオペレーティングシステムバージョンが含まれます。 高エントロピーのクライアントヒントが有効になっていない場合、Chromium ブラウザーから収集されたヒットのオペレーティングシステムバージョンが不正確になる場合があります。
+[ オペレーティングシステム ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=ja) ディメンションには、高エントロピーのクライアントヒントとして保存されるオペレーティングシステムバージョンが含まれます。 高エントロピーのクライアントヒントが有効になっていない場合、Chromium ブラウザーから収集されたヒットのオペレーティングシステムバージョンが不正確になる場合があります。
 
 ### 高エントロピーのクライアントヒントに基づくAudience Manager特性 {#aam}
 
-[!DNL Google] は、`User-Agent` ヘッダーを介して収集される情報を最小限に抑えるために、[!DNL Chrome] ブラウザー機能を更新しました。 その結果、[ プラットフォーム ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ja) を使用しているAudience Managerのお客様は、[DILレベルのキー ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html) に基づく特性に関する信頼性の高い情報を受け取れなくなります。
+[!DNL Google] は、`User-Agent` ヘッダーを介して収集される情報を最小限に抑えるために、[!DNL Chrome] ブラウザー機能を更新しました。 その結果、[ プラットフォーム ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ja) を使用しているAudience Managerのお客様は、[DILレベルのキー ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=ja) に基づく特性に関する信頼性の高い情報を受け取れなくなります。
 
 ターゲティングにプラットフォームレベルのキーを使用するAudience Managerのお客様は、[ 特性ではなく ](/help/web-sdk/home.md) [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ja) に切り替え、信頼性の高いDILデータを引き続き受け取るには [ 高エントロピーのクライアントヒント ](#enabling-high-entropy-client-hints) を有効にする必要があります。
 

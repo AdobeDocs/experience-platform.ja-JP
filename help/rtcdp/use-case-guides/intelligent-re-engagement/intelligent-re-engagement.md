@@ -36,18 +36,18 @@ ht-degree: 4%
 
 このユースケースを実装する手順を完了すると、次のReal-Time CDPおよびAdobe Journey Optimizer機能（使用順序にリストされている）を利用できるようになります。 これらすべての領域に必要な[属性ベースのアクセス制御権限](/help/access-control/home.md)があることを確認するか、必要な権限の付与をシステム管理者に依頼してください。
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - データソース間でデータを統合して、キャンペーンに燃料を供給します。 その後、このデータを使用して、キャンペーンオーディエンスを作成し、メールおよび web プロモタイルで使用されるパーソナライズされたデータ要素（名前やアカウントに関連する情報など）を表示します。 CDP は、（[!DNL Adobe Target] 経由で）メールと web をまたいでオーディエンスをアクティブ化するためにも使用されます。
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=ja) - データソース間でデータを統合して、キャンペーンに燃料を供給します。 その後、このデータを使用して、キャンペーンオーディエンスを作成し、メールおよび web プロモタイルで使用されるパーソナライズされたデータ要素（名前やアカウントに関連する情報など）を表示します。 CDP は、（[!DNL Adobe Target] 経由で）メールと web をまたいでオーディエンスをアクティブ化するためにも使用されます。
    * [スキーマ](/help/xdm/home.md)
    * [プロファイル](/help/profile/home.md)
    * [データセット](/help/catalog/datasets/overview.md)
    * [オーディエンス](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja)
    * [宛先](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=ja) – 顧客とのつながり、コンテキスト、パーソナライズされたエクスペリエンスを提供するのに役立ちます。
-   * [ イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [ イベントまたはオーディエンスのトリガー](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=ja)
    * [ オーディエンス/イベント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=ja)
-   * [ジャーニー操作 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [ジャーニー操作 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja)
 
 ## ユースケースの達成方法 {#achieve-use-case-instruction}
 
@@ -97,7 +97,7 @@ ht-degree: 4%
 
 エクスペリエンスデータモデル（XDM）リソースは、[!DNL Adobe Experience Platform] の [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースで管理されます。 [!DNL Adobe] が提供するコアリソース（フィールドグループなど）を表示および調査し、組織のカスタムリソースおよびスキーマを作成できます。
 
-[ スキーマ ](/help/xdm/home.md) の作成について詳しくは、[ スキーマの作成」チュートリアルを参照してください。](/help/xdm/tutorials/create-schema-ui.md) および [XDM を使用したカスタマーエクスペリエンスデータのモデル化 ](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html)。
+[ スキーマ ](/help/xdm/home.md) の作成について詳しくは、[ スキーマの作成」チュートリアルを参照してください。](/help/xdm/tutorials/create-schema-ui.md) および [XDM を使用したカスタマーエクスペリエンスデータのモデル化 ](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=ja)。
 
 再エンゲージメントのユースケースには、4 つのスキーマデザインが使用されます。 各スキーマには、設定する特定のフィールドが必要です。 リアルタイム顧客プロファイルにスキーマを含めることができるようにする必要があります。 スキーマをリアルタイム顧客プロファイルで使用できるようにする方法について詳しくは、[ リアルタイム顧客プロファイルのスキーマを有効にする ](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile) を参照してください。
 
@@ -141,7 +141,7 @@ ht-degree: 4%
 
 +++プロファイルテストの詳細（フィールドグループ）
 
-このフィールドグループを使用すると、テストプロファイルを使用して、公開前にジャーニーをテストできます。 テストプロファイルの作成について詳しくは、[ テストプロファイルの作成チュートリアル ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) および [ ジャーニーのテストチュートリアル ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html) を参照してください。
+このフィールドグループを使用すると、テストプロファイルを使用して、公開前にジャーニーをテストできます。 テストプロファイルの作成について詳しくは、[ テストプロファイルの作成チュートリアル ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=ja) および [ ジャーニーのテストチュートリアル ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=ja) を参照してください。
 
 +++
 
@@ -314,11 +314,11 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->ブランドからの連絡を登録解除する機能を顧客に提供し、この選択を確実に行うことは、法的要件です。 適用される法律について詳しくは、[ プライバシー規制の概要 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html) を参照してください。
+>ブランドからの連絡を登録解除する機能を顧客に提供し、この選択を確実に行うことは、法的要件です。 適用される法律について詳しくは、[ プライバシー規制の概要 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=ja) を参照してください。
 
 #### 同意ポリシー
 
-再エンゲージメントパスを作成する場合は、次の [ 同意ポリシー ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) を追加することを検討します。
+再エンゲージメントパスを作成する場合は、次の [ 同意ポリシー ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=ja) を追加することを検討します。
 
 * 電子メール `consents.marketing.email.val = "Y"` 送信できる場合
 * その `consents.marketing.sms.val = "Y"`、SMS は可能です
@@ -346,7 +346,7 @@ ht-degree: 4%
 
 再エンゲージメントシナリオでは、オーディエンスを使用して、プロファイルストアのプロファイルのサブセットで共有される特定の属性や行動を定義し、マーケティング可能なユーザーグループを顧客ベースと区別します。 オーディエンスは、[!DNL Adobe Experience Platform] で複数の方法で作成できます。
 
-オーディエンスの作成方法について詳しくは、[ オーディエンスサービス UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience) を参照してください。
+オーディエンスの作成方法について詳しくは、[ オーディエンスサービス UI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=ja#create-audience) を参照してください。
 
 [ オーディエンス ](/help/segmentation/home.md) を直接作成する方法について詳しくは、[ オーディエンス構成 UI ガイド ](/help/segmentation/ui/audience-composition.md) を参照してください。
 
@@ -436,7 +436,7 @@ Experience Platformから派生したオーディエンス定義を使用して�
 >
 >図に示されているすべてが [!DNL Adobe Journey Optimizer] に含まれるわけではありません。 すべての [ 有料メディア広告 ](/help/destinations/catalog/social/overview.md) は、[!UICONTROL &#x200B; 宛先 &#x200B;] に作成されます。
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) は、顧客とのつながり、コンテキスト、パーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーは、顧客がブランドとやり取りするプロセス全体です。 各ユースケースのジャーニーには、特定の情報が必要です。 以下に、各ジャーニーで必要な正確なデータを示します。
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja) は、顧客とのつながり、コンテキスト、パーソナライズされたエクスペリエンスを提供するのに役立ちます。 カスタマージャーニーは、顧客がブランドとやり取りするプロセス全体です。 各ユースケースのジャーニーには、特定の情報が必要です。 以下に、各ジャーニーで必要な正確なデータを示します。
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ Experience Platformから派生したオーディエンス定義を使用して�
 
 +++イベント
 
-イベントを使用すると、ジャーニーをまとめてトリガーし、ジャーニーの過程にある個人にリアルタイムでメッセージを送信できます。イベントについて詳しくは、[ 一般イベントガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html) を参照してください。
+イベントを使用すると、ジャーニーをまとめてトリガーし、ジャーニーの過程にある個人にリアルタイムでメッセージを送信できます。イベントについて詳しくは、[ 一般イベントガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=ja) を参照してください。
 
 * イベント 1：製品表示回数
    * スキーマ：顧客デジタルトランザクション
@@ -571,7 +571,7 @@ Experience Platformから派生したオーディエンス定義を使用して�
 
 +++イベント
 
-イベントを使用すると、ジャーニーをまとめてトリガーし、ジャーニーの過程にある個人にリアルタイムでメッセージを送信できます。イベントについて詳しくは、[ 一般イベントガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html) を参照してください。
+イベントを使用すると、ジャーニーをまとめてトリガーし、ジャーニーの過程にある個人にリアルタイムでメッセージを送信できます。イベントについて詳しくは、[ 一般イベントガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=ja) を参照してください。
 
 * イベント 2：買い物かごに追加
    * スキーマ：顧客デジタルトランザクション
@@ -704,7 +704,7 @@ Experience Platformから派生したオーディエンス定義を使用して�
 
 +++イベント
 
-イベントを使用すると、ジャーニーをまとめてトリガーし、ジャーニーの過程にある個人にリアルタイムでメッセージを送信できます。イベントについて詳しくは、[ 一般イベントガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html) を参照してください。
+イベントを使用すると、ジャーニーをまとめてトリガーし、ジャーニーの過程にある個人にリアルタイムでメッセージを送信できます。イベントについて詳しくは、[ 一般イベントガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=ja) を参照してください。
 
 * イベント 4：オンライン購入
    * スキーマ：顧客デジタルトランザクション
@@ -755,7 +755,7 @@ Experience Platformから派生したオーディエンス定義を使用して�
 
 >[!ENDTABS]
 
-[!DNL Adobe Journey Optimizer] でのジャーニーの作成について詳しくは、[ ジャーニーガイドの概要 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) を参照してください。
+[!DNL Adobe Journey Optimizer] でのジャーニーの作成について詳しくは、[ ジャーニーガイドの概要 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ja) を参照してください。
 
 ### 宛先での有料メディア広告の設定 {#paid-media-ads}
 

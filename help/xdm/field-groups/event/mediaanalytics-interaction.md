@@ -25,10 +25,10 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Media Edge API で使用されないフィールドを非表示にできます。 これらのフィールドを非表示にすると、スキーマが読みやすく理解しやすくなりますが、必須ではありません。 これらのフィールドは、[!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;] フィールドグループのフィールドのみを参照します。 Experience Platform UI での読みやすくするには、[Media Analytics ドキュメントで未使用フィールドを非表示にする方法 ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) の手順に従います。
+>Media Edge API で使用されないフィールドを非表示にできます。 これらのフィールドを非表示にすると、スキーマが読みやすく理解しやすくなりますが、必須ではありません。 これらのフィールドは、[!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;] フィールドグループのフィールドのみを参照します。 Experience Platform UI での読みやすくするには、[Media Analytics ドキュメントで未使用フィールドを非表示にする方法 ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html?lang=ja#set-up-the-schema-in-adobe-experience-platform) の手順に従います。
 
 <!-- 
 >[!NOTE]
 >
->Schemas contain fields that are not used in every context or situation. They provide a potential blueprint to map an object. Schemas displayed for the Media Edge API Collection or Reporting data types only portray the relevant fields. You can manually select and deselect the fields that you want to use if you intend to use a schema for the Media Edge API interaction. You can find instructions on [hiding unnecessary fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) in the guide to install Media Analytics with Experience Platform Edge.
+>Schemas contain fields that are not used in every context or situation. They provide a potential blueprint to map an object. Schemas displayed for the Media Edge API Collection or Reporting data types only portray the relevant fields. You can manually select and deselect the fields that you want to use if you intend to use a schema for the Media Edge API interaction. You can find instructions on [hiding unnecessary fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html?lang=ja#set-up-the-schema-in-adobe-experience-platform) in the guide to install Media Analytics with Experience Platform Edge.
  -->

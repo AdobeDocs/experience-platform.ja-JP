@@ -13,7 +13,7 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 >
->[!DNL Marketo Engage] ソース接続とデータフローを作成する前に、まず [!DNL Marketo] で [Adobe組織 ID をマッピング ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) したことを確認する必要があります。 さらに、ソース接続とデータフローを作成する前に、[B [!DNL Marketo] B2B 名前空間とスキーマの自動入力 ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) が完了していることも確認する必要があります。
+>[!DNL Marketo Engage] ソース接続とデータフローを作成する前に、まず [!DNL Marketo] で [Adobe組織 ID をマッピング ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=ja) したことを確認する必要があります。 さらに、ソース接続とデータフローを作成する前に、[B [!DNL Marketo] B2B 名前空間とスキーマの自動入力 ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) が完了していることも確認する必要があります。
 
 このチュートリアルでは、UI で [!DNL Marketo Engage]（以下「[!DNL Marketo]」）ソースコネクタを作成し、B2B データを Adobe Experience Platform に取り込む手順について説明します。
 

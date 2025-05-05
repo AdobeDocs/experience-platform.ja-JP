@@ -1,8 +1,8 @@
 ---
 title: UI を使用した Demandbase Intent のExperience Platformへの接続
 description: Demandbase Intent をExperience Platformに接続する方法を学ぶ
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
 source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
 workflow-type: tm+mt

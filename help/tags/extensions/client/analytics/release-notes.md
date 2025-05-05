@@ -23,7 +23,7 @@ ht-degree: 70%
 
 **機能**:
 
-* ユーザーが [ 変数を設定アクション ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) の JSON バージョンを表示および編集できる新機能を追加しました。 Adobe Web SDK拡張機能には、JSON を提供することで [Analytics 変数への入力 ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) を行うアクションも含まれています。 JSON データを AA 拡張機能から Web SDK拡張機能にコピーすると、移行するお客様は各変数を手動で追加する代わりに、一度に複数の設定を簡単に転送できます。
+* ユーザーが [ 変数を設定アクション ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) の JSON バージョンを表示および編集できる新機能を追加しました。 Adobe Web SDK拡張機能には、JSON を提供することで [Analytics 変数への入力 ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) を行うアクションも含まれています。 JSON データを AA 拡張機能から Web SDK拡張機能にコピーすると、移行するお客様は各変数を手動で追加する代わりに、一度に複数の設定を簡単に転送できます。
 
 ## 2024 年 8 月 12 日（Pt）
 
@@ -61,7 +61,7 @@ ht-degree: 70%
 
 **バグ修正**:
 
-* 高エントロピー [User-Agent クライアントヒント ](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API の不具合があるブラウザー向けに、エラー処理を追加しました。
+* 高エントロピー [User-Agent クライアントヒント ](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=ja) API の不具合があるブラウザー向けに、エラー処理を追加しました。
 * [Header](https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Methods/POST) Content-Type POSTが `x-www-form-urlencoded` を既定で使用するように変更されました。
 
 ## 2022 年 9 月 23 日（Pt）
@@ -218,7 +218,7 @@ ht-degree: 70%
 
 * DIL 9.2 for Audience Manager をサポートするように Adobe Analytics 拡張機能を更新しました
 
-* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0) をサポートするように拡張機能を更新しました
+* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja#version-2.15.0) をサポートするように拡張機能を更新しました
 * サポートされなくなったので、次のチェックボックスを削除しました：「宛先を公開する IFRAME を DOM または Fire の宛先に添付しない」
 
 ## 2019 年 6 月 4 日（PT）
@@ -227,7 +227,7 @@ ht-degree: 70%
 
 **機能**:
 
-* Adobe Analytics 拡張機能を、既知の clearVars の問題を修正する [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0)に更新しました
+* Adobe Analytics 拡張機能を、既知の clearVars の問題を修正する [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ja#version-2.14.0)に更新しました
 * 拡張機能への Exchange リンクを追加しました。ドロップダウンリストを選択して「拡張機能情報」を選択すると、Exchange リストにアクセスできます。
 
 **バグ修正**:

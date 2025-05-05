@@ -99,4 +99,4 @@ Adobe Experience Platformでは、計算済み属性は、イベントレベル�
 
 ## Adobe Journey Optimizerで計算済み属性を使用するにはどうすればよいですか？
 
-ジャーニーで計算済み属性を使用するには、`SystemComputedAttributes` フィールドグループをExperience Platformデータソースに追加する必要があります。 Experience Platformデータソースの設定について詳しくは、[Adobe Experience Platform データソースガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html) を参照してください。
+ジャーニーで計算済み属性を使用するには、`SystemComputedAttributes` フィールドグループをExperience Platformデータソースに追加する必要があります。 Experience Platformデータソースの設定について詳しくは、[Adobe Experience Platform データソースガイド ](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=ja) を参照してください。

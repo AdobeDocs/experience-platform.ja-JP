@@ -13,7 +13,7 @@ ht-degree: 31%
 
 >[!IMPORTANT]
 >
->この統合は、[Adobe Campaign バージョン 8.4 以降 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1) で機能します。
+>この統合は、[Adobe Campaign バージョン 8.4 以降 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ja#release-8-4-1) で機能します。
 
 ## 概要 {#overview}
 
@@ -105,7 +105,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
 * **[!UICONTROL インスタンスを選択]**:**[!DNL Campaign]** マーケティングインスタンス。
-* **[!UICONTROL ターゲットマッピング]**：配信の送信に使用するターゲットマッピング **[!DNL Adobe Campaign]** 選択します。 [詳細情報](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)
+* **[!UICONTROL ターゲットマッピング]**：配信の送信に使用するターゲットマッピング **[!DNL Adobe Campaign]** 選択します。 [詳細情報](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=ja)
 * **[!UICONTROL 同期タイプを選択]**:
 
    * **[!UICONTROL オーディエンス同期]**:Adobe Experience Platform オーディエンスをAdobe Campaignに送信する場合は、このオプションを使用します。
@@ -130,7 +130,7 @@ Adobe Campaign Manage Service 宛先を使用する方法とタイミングを�
 >* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先にオーディエンスデータを有効化する手順については、[ バッチプロファイル書き出し宛先に対するオーディエンスデータの有効化 ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) を参照してください。
+この宛先にオーディエンスデータを有効化する手順については、[ バッチプロファイル書き出し宛先に対するオーディエンスデータの有効化 ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja) を参照してください。
 
 ### 属性と ID のマッピング {#map}
 

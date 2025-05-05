@@ -156,11 +156,11 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=ja">
       <img alt="Adobe Experience Cloud ビデオの一部としてのReal-Time CDP" src="/help/rtcdp/assets/platform-apps-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=ja">
     <strong>Adobe Experience Cloudの一部としてのReal-Time CDP</strong>
     </a>
     </div>
@@ -169,11 +169,11 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=ja">
       <img alt="「Adobe Experience Platformの基本アーキテクチャ」ビデオのサムネール画像" src="/help/rtcdp/assets/platform-architecture-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=ja">
     <strong>Adobe Experience Platformの基本的なアーキテクチャ </strong>
     </a>
     </div>
@@ -182,11 +182,11 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=ja">
       <img alt="「Adobe Experience Platformのインターフェイスツアー」ビデオのサムネール画像" src="/help/rtcdp/assets/rtcdp-ui-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=ja">
     <strong>Adobe Experience Platformのインターフェイスツアー </strong>
     </a>
     </div>
@@ -206,9 +206,9 @@ Adobe Real-Time CDPの 4 つの主要な柱を理解する：
 <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja" target="_blank"> チュートリアル </a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> 製品説明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank"> セキュリティの概要（PDF） </a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ja" target="_blank"> 実装ブループリント </a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ja" target="_blank"> 用語集 </a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja" target="_blank"> ドキュメント </a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API リファレンス - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank"> コース：Experience Platformの概要 </a></a>
+<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja" target="_blank"> ドキュメント </a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API リファレンス - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html?lang=ja" target="_blank"> コース：Experience Platformの概要 </a></a>
 </td>
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b> 常に情報を提供してコミュニティに貢献し、Adobe Real-Time CDPのエクスペリエンスを向上</b><br/>Real-Time Customer Data Platform コミュニティにアクセスして、他の実務担当者と機能について話し合います。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP"> 今すぐコミュニティに参加してください！</a></td></tr></table>
+<b> 常に情報を提供してコミュニティに貢献し、Adobe Real-Time CDPのエクスペリエンスを向上</b><br/>Real-Time Customer Data Platform コミュニティにアクセスして、他の実務担当者と機能について話し合います。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP?profile.language=ja"> 今すぐコミュニティに参加してください！</a></td></tr></table>

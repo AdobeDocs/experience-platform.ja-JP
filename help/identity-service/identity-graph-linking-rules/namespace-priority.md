@@ -73,7 +73,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 ## 名前空間の優先度の使用
 
-現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
+現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
 
 ![ 名前空間優先度アプリケーション範囲の図 ](../images/namespace-priority/application-scope.png)
 

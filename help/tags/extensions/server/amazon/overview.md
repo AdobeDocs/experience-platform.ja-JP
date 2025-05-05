@@ -113,4 +113,4 @@ ht-degree: 2%
 
 このガイドでは、[!DNL Amazon] Conversions API 拡張機能を使用してコンバージョンイベントを設定および [!DNL Amazon] に送信する方法について説明しました。 [!DNL Adobe Experience Platform] のイベント転送機能について詳しくは、[ イベント転送の概要 ](../../../ui/event-forwarding/overview.md) を参照してください
 
-Experience Platform Debugger とイベント転送の監視ツールを使用して実装をデバッグする方法について詳しくは、イベント転送の [Adobe Experience Platform Debuggerの概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home) および [ アクティビティの監視 ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/monitoring) を参照してください。
+Experience Platform Debugger とイベント転送の監視ツールを使用して実装をデバッグする方法について詳しくは、イベント転送の [Adobe Experience Platform Debuggerの概要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/debugger/home) および [ アクティビティの監視 ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/monitoring) を参照してください。

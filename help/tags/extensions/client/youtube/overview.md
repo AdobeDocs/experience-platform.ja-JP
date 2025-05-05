@@ -98,7 +98,7 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->ビデオ要素ごとに複数の eVar または prop を使用できない実装の場合は、Experience Platform内でデータ要素の値を連結し、[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) で説明されているように、分類ルールビルダーツールを使用して分類レポートに解析したあと、Analysis Workspaceでセグメントとして適用することができます。
+>ビデオ要素ごとに複数の eVar または prop を使用できない実装の場合は、Experience Platform内でデータ要素の値を連結し、[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ja) で説明されているように、分類ルールビルダーツールを使用して分類レポートに解析したあと、Analysis Workspaceでセグメントとして適用することができます。
 
 ビデオ情報の値を連結するには、「ビデオメタデータ」という新しいデータ要素を作成し、（上記の）すべてのビデオデータ要素を取り込み、組み立てるようにプログラミングします。 例：
 

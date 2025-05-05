@@ -19,8 +19,8 @@ ht-degree: 10%
 
 * [ レポートスイートデータ概要用のAdobe Analytics ソースコネクタ ](../../sources/connectors/adobe-applications/mapping/analytics.md)。
 * [Analytics フィールドマッピングのドキュメント ](../../sources/connectors/adobe-applications/mapping/analytics.md) では、クエリサービスで使用する分析データの取り込みとマッピングについて詳しく説明しています。
-* [Attribution IQの概要 ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [Adobe Analytics アトリビューションパネルガイド ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
+* [Attribution IQの概要 ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ja)
+* [Adobe Analytics アトリビューションパネルガイド ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ja)。
 
 `OVER()` 関数内のパラメーターについて詳しくは、[window 関数 ](../sql/adobe-defined-functions.md#window-functions) を参照してください。 [AdobeマーケティングおよびCommerce用語用語集 ](https://business.adobe.com/glossary/index.html) も使用される場合があります。
 

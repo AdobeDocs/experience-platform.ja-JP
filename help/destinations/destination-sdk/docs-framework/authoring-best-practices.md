@@ -17,23 +17,23 @@ ht-degree: 90%
 
 ## 一般的なガイダンス {#general-guidance}
 
-* 宛先ドキュメント用に[テンプレート](./self-service-template.md)に入力する場合、[リンク](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html)、[テーブル](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#tables)、[サポートされるマークダウン構文](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)、[ライティングガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html)などについて詳しくは、アドビコントリビューターガイドを参照してください。
+* 宛先ドキュメント用に[テンプレート](./self-service-template.md)に入力する場合、[リンク](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=ja)、[テーブル](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#tables)、[サポートされるマークダウン構文](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja)、[ライティングガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=ja)などについて詳しくは、アドビコントリビューターガイドを参照してください。
 * 製品ドキュメントに所見や推定を含めないでください。
 * Experience Platform ドキュメントでは、アドビのライターは、ユーザーインターフェイスコントロールを参照するために、以下のように、**太字書式**&#x200B;を使用しています。
-   * **[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。ユーザーインターフェイスコントロールの表記方法の例を表示するには、[宛先チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination)を参照してください。
+   * **[!UICONTROL 接続]**／**[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。ユーザーインターフェイスコントロールの表記方法の例を表示するには、[宛先チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ja#select-destination)を参照してください。
 
 ## ライティングスタイル
 
 >[!IMPORTANT]
 >
->宛先ドキュメントページのオーサリングを開始する前に、[アドビドキュメントのライティングガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html)を参照してください。
+>宛先ドキュメントページのオーサリングを開始する前に、[アドビドキュメントのライティングガイダンス](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=ja)を参照してください。
 
 * 文を短くして、要点を早く伝えます。文が 20 単語を超える長さだったり、複数のコンマを使用している場合は、別の文に分割することを検討してください。20 単語を超える長さの文は、読者にとって特に読みにくい可能性があります。
 * 過剰に丁寧な表現をしないようにします。テクニカルドキュメントでは、「お願いいたします」や「...していただく」などの使用は避けます。
 
 ## リンク {#linking}
 
-提供されるドキュメントテンプレートに従い、テンプレート内の既存のリンクを編集しないようにします。新しいリンクを含める場合は、コントリビューターガイドの[ドキュメントでのリンクの使用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html)を参照してください。
+提供されるドキュメントテンプレートに従い、テンプレート内の既存のリンクを編集しないようにします。新しいリンクを含める場合は、コントリビューターガイドの[ドキュメントでのリンクの使用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=ja)を参照してください。
 
 ## ブランディングガイドライン {#branding}
 
@@ -43,7 +43,7 @@ ht-degree: 90%
 
 ## 画像とスクリーンショット {#images-and-screenshots}
 
-* [画像へのリンク方法](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images)について詳しくは、コントリビューターガイドを参照してください。
+* [画像へのリンク方法](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ja#images)について詳しくは、コントリビューターガイドを参照してください。
 * スクリーンショットを使用する場合、スクリーンショットがExperience Platform UI 画面全体をキャプチャしていることを確認してください。
 * ページ上の特定のコントロールやラベルをハイライト表示するために画像をマークアップする場合、Experience Platform ドキュメントチームによって使用されるマークアップスタイルに従ってください。[このスクリーンショット](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency)で「Profile-based」がどのようにハイライト表示されているかを確認してください。
 * `png` 形式の画像を使用してください。

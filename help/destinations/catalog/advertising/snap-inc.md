@@ -67,7 +67,7 @@ ht-degree: 26%
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
-| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
+| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -140,7 +140,7 @@ ht-degree: 26%
 
 ![オーディエンス](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe オーディエンスが最初に Snap Inc.に対してアクティブ化されると、最初は空のオーディエンスとして表示されることに注意してください。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[ セグメント化サービスの概要 ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments) を参照してください。
+Adobe オーディエンスが最初に Snap Inc.に対してアクティブ化されると、最初は空のオーディエンスとして表示されることに注意してください。 これは、Adobe Experience Platformがオーディエンスを評価するまで、メンバーデータを Snap Inc に書き出さないためです。 Experience Platformでのオーディエンスの評価方法について詳しくは、[ セグメント化サービスの概要 ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ja#evaluate-segments) を参照してください。
 
 ## データの使用とガバナンス {#data-usage-governance}
 

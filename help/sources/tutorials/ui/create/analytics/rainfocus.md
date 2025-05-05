@@ -127,4 +127,4 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 * [Adobe Developer ポータルでのAdobe サービスアカウント（JWT）の作成 ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [API でのスキーマの作成](../../../../../xdm/tutorials/create-schema-api.md)
 * [UI でのスキーマの作成](../../../../../xdm/tutorials/create-schema-ui.md)
-* [UI での ID フィールドの定義 ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+* [UI での ID フィールドの定義 ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=ja)

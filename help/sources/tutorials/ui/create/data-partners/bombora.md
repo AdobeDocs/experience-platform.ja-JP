@@ -1,8 +1,8 @@
 ---
 title: UI を使用して Bombora の目的をExperience Platformに接続する
 description: Bombora Intent をExperience Platformに結び付ける方法を学ぶ
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
 source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
 workflow-type: tm+mt

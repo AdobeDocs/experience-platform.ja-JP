@@ -81,7 +81,7 @@ CLV を確立する最初の手順は、ユーザーの操作から取得した�
 * スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
 * ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-または、詳細については、[ セグメントビルダービデオチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) も参照できます。
+または、詳細については、[ セグメントビルダービデオチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=ja) も参照できます。
 
 ## メールキャンペーンのオーディエンスのアクティブ化 {#activate-audience-for-campaign}
 

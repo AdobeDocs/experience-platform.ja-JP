@@ -21,9 +21,9 @@ ht-degree: 11%
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL &#x200B; 章の長さ又は存続期間 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | 整数 | ○ | チャプターの長さ（秒）。 |
-| [[!UICONTROL &#x200B; チャプター名 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | 文字列 | × | チャプターまたはセグメント（あるいはその両方）の名前。 |
-| [[!UICONTROL &#x200B; チャプターオフセット &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | 整数 | ○ | 開始時からのコンテンツ内のチャプターのオフセット （秒）。 |
-| [[!UICONTROL &#x200B; 章の位置 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | 整数 | ○ | コンテンツ内のチャプターの位置（インデックス、整数）。 |
+| [[!UICONTROL &#x200B; 章の長さ又は存続期間 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-length) | `length` | 整数 | ○ | チャプターの長さ（秒）。 |
+| [[!UICONTROL &#x200B; チャプター名 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-name) | `friendlyName` | 文字列 | × | チャプターまたはセグメント（あるいはその両方）の名前。 |
+| [[!UICONTROL &#x200B; チャプターオフセット &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-offset) | `offset` | 整数 | ○ | 開始時からのコンテンツ内のチャプターのオフセット （秒）。 |
+| [[!UICONTROL &#x200B; 章の位置 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ja#chapter-position) | `index` | 整数 | ○ | コンテンツ内のチャプターの位置（インデックス、整数）。 |
 
 {style="table-layout:auto"}

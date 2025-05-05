@@ -23,15 +23,15 @@ ht-degree: 14%
 
 | 表示名 | プロパティ | データタイプ | 必須 | 説明 |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
-| [[!UICONTROL &#x200B; 広告主 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | 文字列 | × | 広告で商品が取り上げられる会社またはブランド。 |
-| [[!UICONTROL &#x200B; 広告キャンペーン &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | 文字列 | × | 広告キャンペーンの ID。 |
-| [[!UICONTROL &#x200B; 広告クリエイティブ ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | 文字列 | × | 広告クリエイティブの ID。 |
-| [[!UICONTROL &#x200B; 広告クリエイティブ URL]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-url) | `creativeURL` | 文字列 | × | 広告クリエイティブの URL。 |
-| [[!UICONTROL &#x200B; ポッド位置の広告（広告開始） &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-start) | `podPosition` | 整数 | ○ | 親広告の開始内の広告のインデックス （例：最初の広告はインデックス 0、2 番目の広告はインデックス 1）。 |
-| [[!UICONTROL &#x200B; 広告の長さまたはデュレーション &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-length) | `length` | 整数 | ○ | ビデオ広告の長さ（秒）。 |
-| [[!UICONTROL &#x200B; 広告名 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-name) | `friendlyName` | 文字列 | ○ | 人間が判読できる広告の名前。 レポートでは、「Ad Name」は分類、「Ad Name （variable）」はeVarです。 |
-| [[!UICONTROL &#x200B; 広告プレースメント ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | 文字列 | × | 広告のプレースメント ID。 |
-| [[!UICONTROL &#x200B; 広告プレーヤー名 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | 文字列 | ○ | 広告のレンダリングを担当するプレイヤーの名前。 |
-| [[!UICONTROL &#x200B; 広告サイト ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | 文字列 | × | 広告サイトの ID。 |
+| [[!UICONTROL &#x200B; 広告主 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#advertiser) | `advertiser` | 文字列 | × | 広告で商品が取り上げられる会社またはブランド。 |
+| [[!UICONTROL &#x200B; 広告キャンペーン &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#campaign-id) | `campaignID` | 文字列 | × | 広告キャンペーンの ID。 |
+| [[!UICONTROL &#x200B; 広告クリエイティブ ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#creative-id) | `creativeID` | 文字列 | × | 広告クリエイティブの ID。 |
+| [[!UICONTROL &#x200B; 広告クリエイティブ URL]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#creative-url) | `creativeURL` | 文字列 | × | 広告クリエイティブの URL。 |
+| [[!UICONTROL &#x200B; ポッド位置の広告（広告開始） &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#ad-start) | `podPosition` | 整数 | ○ | 親広告の開始内の広告のインデックス （例：最初の広告はインデックス 0、2 番目の広告はインデックス 1）。 |
+| [[!UICONTROL &#x200B; 広告の長さまたはデュレーション &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#ad-length) | `length` | 整数 | ○ | ビデオ広告の長さ（秒）。 |
+| [[!UICONTROL &#x200B; 広告名 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#ad-name) | `friendlyName` | 文字列 | ○ | 人間が判読できる広告の名前。 レポートでは、「Ad Name」は分類、「Ad Name （variable）」はeVarです。 |
+| [[!UICONTROL &#x200B; 広告プレースメント ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#placement-id) | `placementID` | 文字列 | × | 広告のプレースメント ID。 |
+| [[!UICONTROL &#x200B; 広告プレーヤー名 &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#ad-player-name) | `playerName` | 文字列 | ○ | 広告のレンダリングを担当するプレイヤーの名前。 |
+| [[!UICONTROL &#x200B; 広告サイト ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ja#site-id) | `siteID` | 文字列 | × | 広告サイトの ID。 |
 
 {style="table-layout:auto"}

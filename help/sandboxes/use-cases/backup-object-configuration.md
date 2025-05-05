@@ -40,7 +40,7 @@ ht-degree: 2%
 - [データセット](../../catalog/datasets/overview.md)
 - [スキーマ](../../xdm//home.md)
 - [オーディエンス](../../segmentation/home.md)
-- [Adobe Journey Optimizerのジャーニー](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Adobe Journey Optimizerのジャーニー](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 

@@ -67,6 +67,6 @@ Postmanを使用したAdobe I/OAPI の操作について詳しくは、Mediumの
 
 すべての資格情報を取得したら、[!DNL Content tagging] 用のカスタムワーカーを設定する準備が整います。 拡張フレームワークと環境のセットアップについては、次のドキュメントを参照してください。
 
-拡張フレームワークの詳細については、まず [ 拡張機能の概要 ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) を参照してください。 このドキュメントでは、前提条件とプロビジョニング要件の概要を説明します。
+拡張フレームワークの詳細については、まず [ 拡張機能の概要 ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=ja) を参照してください。 このドキュメントでは、前提条件とプロビジョニング要件の概要を説明します。
 
-デベロッパー環境のセットアップについて詳しくは、[!DNL Content tagging] ベロッパー環境のセットアップ [ に関するガイドを参照して開始し ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html) ください。 このドキュメントでは、Asset computeサービス向けの開発を可能にする設定手順を示します。
+デベロッパー環境のセットアップについて詳しくは、[!DNL Content tagging] ベロッパー環境のセットアップ [ に関するガイドを参照して開始し ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=ja) ください。 このドキュメントでは、Asset computeサービス向けの開発を可能にする設定手順を示します。

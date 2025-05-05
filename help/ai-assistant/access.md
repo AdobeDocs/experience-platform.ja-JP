@@ -46,13 +46,13 @@ AI アシスタントを使用する法的資格を持つ組織で、引き続�
 
 AI アシスタントへのアクセスは、次のパラメータで制御されます。
 
-* **アプリケーションへのアクセス：** AI アシスタントには、Adobe Experience Platform、Adobe Real-Time CDP、Adobe Journey Optimizer、[Customer Journey Analyticsでアクセスできます ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant)。
+* **アプリケーションへのアクセス：** AI アシスタントには、Adobe Experience Platform、Adobe Real-Time CDP、Adobe Journey Optimizer、[Customer Journey Analyticsでアクセスできます ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/ai-assistant)。
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
 * **権限：** [ 権限 UI](../access-control/abac/ui/permissions.md) を使用して、組織の AI アシスタントへのアクセスを許可または取り消します。 AI アシスタントを使用するには、特定のユーザーが **AI アシスタントを有効にする** および **運用上のインサイトを表示** 権限でプロビジョニングされた役割に属している必要があります。
    * 管理者は、特定の役割に **AI アシスタントを有効にする** を追加し、その役割にユーザーを追加して、組織の AI アシスタントにアクセスできるようにすることができます。 **注意**：この権限は、当該ユーザーが AI アシスタントにアクセスできるようにするもので、他のユーザーに AI アシスタントへのアクセスを許可するための管理権限を付与するものではありません。
    * 管理者は、特定の役割に **View Operational Insights** を追加し、その役割にユーザーを追加して、AI Assistant の Operational Insights 機能を使用できるようにします。 運用インサイトは現在ベータ版です。
 
-[ 権限 UI](../access-control/abac/ui/roles.md) を使用して、Experience PlatformおよびJourney Optimizerで AI アシスタントを使用するための権限を付与します。 Customer Journey Analyticsで AI アシスタントにアクセスする方法について説明します。 [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant) のドキュメントを参照してください。
+[ 権限 UI](../access-control/abac/ui/roles.md) を使用して、Experience PlatformおよびJourney Optimizerで AI アシスタントを使用するための権限を付与します。 Customer Journey Analyticsで AI アシスタントにアクセスする方法について説明します。 [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/ai-assistant) のドキュメントを参照してください。
 
 ![AI アシスタントを有効にする権限とオペレーショナルインサイトを表示権限が特定の役割に含まれている権限 UI ページ。](./images/access/access-permissions.png)
 

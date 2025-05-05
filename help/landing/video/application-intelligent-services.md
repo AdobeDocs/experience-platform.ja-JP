@@ -21,7 +21,7 @@ ht-degree: 5%
 詳しくは、リンクを使用して、個々のアプリケーションのドキュメントにアクセスしてください。
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=ja)
-* [インテリジェントサービス](https://experienceleague.adobe.com/docs/intelligent-services.html)
+* [インテリジェントサービス](https://experienceleague.adobe.com/docs/intelligent-services.html?lang=ja)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=ja)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=ja)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](../../rtcdp/overview.md)

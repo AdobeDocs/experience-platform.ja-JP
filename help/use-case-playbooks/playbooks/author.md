@@ -236,7 +236,7 @@ AI アシスタントは、「プロジェクト名」や「背景」などの�
 * **プロファイル読み取り**
 * **データセット読み取り**
 
-ジャーニーは非常に柔軟性が高く、多数の相互に接続されたオブジェクトを伴う可能性があるので、その [ 完全な権限 ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) は個別にドキュメント化され、特定のユースケースに応じて異なる場合があります。
+ジャーニーは非常に柔軟性が高く、多数の相互に接続されたオブジェクトを伴う可能性があるので、その [ 完全な権限 ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) は個別にドキュメント化され、特定のユースケースに応じて異なる場合があります。
 
 ## 次の手順
 

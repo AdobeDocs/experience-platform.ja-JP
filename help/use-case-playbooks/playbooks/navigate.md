@@ -57,7 +57,7 @@ Journey Optimizerでプレイブックのインスタンスを作成するには
 
 ### メールチャネルサーフェス
 
-Journey Optimizer インターフェイスの `Channels` に移動します。 まだ設定されていない場合は、マーケティングメールとトランザクションメッセージ用に個別のサブドメインと IP プールを設定します。 これらは、注文確認メールなどのトランザクションメッセージを顧客に確実に送信するためのベストプラクティスです。 名前、メールアドレスおよび追加設定を入力します。 ページの右上にある「**送信**」を選択して、マーケティングチャネルサーフェスを作成します。 詳しくは、[ メールチャネルサーフェスの設定方法 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html) のドキュメントを参照してください。
+Journey Optimizer インターフェイスの `Channels` に移動します。 まだ設定されていない場合は、マーケティングメールとトランザクションメッセージ用に個別のサブドメインと IP プールを設定します。 これらは、注文確認メールなどのトランザクションメッセージを顧客に確実に送信するためのベストプラクティスです。 名前、メールアドレスおよび追加設定を入力します。 ページの右上にある「**送信**」を選択して、マーケティングチャネルサーフェスを作成します。 詳しくは、[ メールチャネルサーフェスの設定方法 ](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=ja) のドキュメントを参照してください。
 
 ### SMS チャネルサーフェス
 

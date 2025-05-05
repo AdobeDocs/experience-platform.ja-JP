@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-Adobe Experience Platform web SDKを使用すると、web アプリケーションのクライアント側で [Adobe Analytics for Target （A4T） ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) データを収集できます。
+Adobe Experience Platform web SDKを使用すると、web アプリケーションのクライアント側で [Adobe Analytics for Target （A4T） ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) データを収集できます。
 
-クライアントサイドログとは、関連する [!DNL Target] データがクライアントサイドで返され、ユーザーがデータを収集して Analytics と共有できることを意味します。 [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) を使用して手動で Analytics にデータを送信する場合は、このオプションを有効にしてください。
+クライアントサイドログとは、関連する [!DNL Target] データがクライアントサイドで返され、ユーザーがデータを収集して Analytics と共有できることを意味します。 [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=ja) を使用して手動で Analytics にデータを送信する場合は、このオプションを有効にしてください。
 
 >[!NOTE]
 >
@@ -227,7 +227,7 @@ Target Edgeは、提案レスポンスを計算する際、Analytics のクラ�
 
 ### フォームベースの Experience Composer アクティビティ {#form-based-composer}
 
-Web SDKを使用して、[Adobe Target フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) アクティビティからの提案の実行を制御できます。
+Web SDKを使用して、[Adobe Target フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja) アクティビティからの提案の実行を制御できます。
 
 特定の決定範囲の提案をリクエストすると、返される提案には、適切な Analytics トークンが含まれます。 ベストプラクティスは、Experience Platform web SDK `sendEvent` コマンドを連結し、返された提案を繰り返し処理して、Analytics トークンを同時に収集しながら提案を実行することです。
 
@@ -467,7 +467,7 @@ alloy("sendEvent", {
 
 ### Visual Experience Composer アクティビティ {#visual-experience-composer-acitivties}
 
-Web SDKを使用すると、[Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) を使用して作成されたオファーを処理できます。
+Web SDKを使用すると、[Visual Experience Composer （VEC） ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) を使用して作成されたオファーを処理できます。
 
 >[!NOTE]
 >
