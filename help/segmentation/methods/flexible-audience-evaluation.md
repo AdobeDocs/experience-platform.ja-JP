@@ -3,9 +3,9 @@ title: 柔軟なオーディエンス評価ガイド
 description: 柔軟なオーディエンス評価を使用して、バッチセグメント化ジョブをオンデマンドで実行する方法を説明します。
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
+source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1084'
 ht-degree: 6%
 
 ---
@@ -326,7 +326,7 @@ Experience Platform UI 内で柔軟なオーディエンス評価を実行する
 
 次のビデオでは、Experience Platformで柔軟なオーディエンス評価にアクセスして使用する方法を示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453641?&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## よくある質問 {#faq}
 
@@ -337,6 +337,14 @@ Experience Platform UI 内で柔軟なオーディエンス評価を実行する
 +++ 回答
 
 作成直後に柔軟なオーディエンス評価を使用して、オーディエンスをアクティベートできます。
+
++++
+
+### 柔軟なオーディエンス評価にはどのくらいの時間がかかりますか？
+
++++ 回答
+
+柔軟なオーディエンス評価ジョブの完了には最大 4 時間かかる場合があります。
 
 +++
 
