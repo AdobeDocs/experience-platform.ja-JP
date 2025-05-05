@@ -21,7 +21,7 @@ Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL 
 
 次のビデオは、ストリーミング取得に関する理解を深めるために用意されており、上記の概念の概要を説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31657?quality=12&learn=on&captions=jpn)
 
 ### プロファイルレコードと [!DNL ExperienceEvents] のストリーミング
 

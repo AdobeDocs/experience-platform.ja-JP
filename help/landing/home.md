@@ -45,7 +45,7 @@ Adobeは、Experience Platform上に複数のアプリケーションを構築�
 
 次のビデオでは、Experience Platform上に作成された各アプリケーションのユースケースについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428519/?learn=on&captions=jpn)
 
 ## [!DNL Experience Platform] チュートリアル
 

@@ -25,4 +25,4 @@ ht-degree: 15%
 >
 >Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[ 結合ポリシー UI ガイド ](../merge-policies/ui-guide.md) を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/345078?quality=12&learn=on&captions=jpn)

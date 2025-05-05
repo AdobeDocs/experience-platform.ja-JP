@@ -51,13 +51,13 @@ ht-degree: 0%
 
 モデルを作成するには、モデルのトレーニングとスコアリングに使用するデータセットをExperience Platformに用意する必要があります。 [Data Science Workspace コース ](https://experienceleague.adobe.com/?lang=ja&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=ja) の次のビデオチュートリアルでは、Luma スキーマを作成し、購入の傾向モデルで使用されるデータを取り込む方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/333312)
+>[!VIDEO](https://video.tv.adobe.com/v/3447155?captions=jpn)
 
 ### トレーニング、スコアリングおよびスコアリング結果のデータセットを作成
 
 レシピビルダーノートブックを実行したり、API を使用してモデルのトレーニングとスコアリングを行ったりするには、トレーニング/スコアリングに使用するデータセットとスキーマを指定する必要があります。 次のビデオチュートリアルでは、トレーニング、スコアリング、スコアリング結果の各データセットのほか、Luma の購入傾向モデルで使用されるスコアリング結果スキーマの設定について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/333426)
+>[!VIDEO](https://video.tv.adobe.com/v/3447422?captions=jpn)
 
 ## 次の手順
 

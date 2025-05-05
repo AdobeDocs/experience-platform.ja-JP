@@ -64,4 +64,4 @@ ID サービスは、[ バッチ取得 ](../ingestion/batch-ingestion/overview.m
 >
 >次のビデオに示すExperience PlatformUI は旧式のものです。 最新の UI のスクリーンショットと機能については、ドキュメントを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31658?quality=12&learn=on&captions=jpn)

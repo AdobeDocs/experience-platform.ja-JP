@@ -42,7 +42,7 @@ Adobe Experience Platform権限への移行には、以前はロールに依存�
 
 次のビデオは、開発者と API 資格情報について理解を深めるためのものです。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446399/?learn=on&captions=jpn)
 
 ## 次の手順
 

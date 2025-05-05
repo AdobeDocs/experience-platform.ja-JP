@@ -152,4 +152,4 @@ ID の [!DNL Real-Time Customer Profile] 用と操作について詳しくは、
 >
 >次のビデオに示す [!DNL Experience Platform] UI は旧式のものです。最新の UI のスクリーンショットと機能については、上記のドキュメントを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34394?quality=12&learn=on&captions=jpn)

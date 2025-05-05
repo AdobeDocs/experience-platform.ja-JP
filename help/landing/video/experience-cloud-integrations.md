@@ -18,4 +18,4 @@ ht-degree: 0%
 
 このビデオでは、Adobe Analytics、Adobe Target、Adobe Campaign、Adobe Experience Manager、顧客属性、オーディエンスライブラリ、タグなど、Adobe Experience PlatformとAdobe Experience Cloud アプリケーションおよび機能との統合方法の概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430392?quality=12&learn=on&captions=jpn)

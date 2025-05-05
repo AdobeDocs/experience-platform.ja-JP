@@ -21,7 +21,7 @@ Experience Platform ユーザーインターフェイスの ID グラフビュ�
 
 次のビデオは、ID グラフビューアについて理解を深めるためのものです。
 
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345656/?quality=12&learn=on&captions=jpn)
 
 ## はじめに
 

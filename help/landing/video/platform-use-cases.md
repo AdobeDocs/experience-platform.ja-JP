@@ -23,4 +23,4 @@ ht-degree: 8%
 * 配信とクロスチャネルエクスペリエンス
 * 顧客体験アプリケーションの開発
 
->[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430459?quality=12&learn=on&captions=jpn)

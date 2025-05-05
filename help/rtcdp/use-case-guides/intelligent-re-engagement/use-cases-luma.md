@@ -16,12 +16,12 @@ Adobeが Luma デモサイトを操作するためにインテリジェントな
 
 ## 実装
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454263/?quality=12&learn=on&captions=jpn)
 
 ## ジャーニー設定
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453962/?quality=12&learn=on&captions=jpn)
 
 ## オーディエンスと宛先の設定
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452904/?quality=12&learn=on&captions=jpn)

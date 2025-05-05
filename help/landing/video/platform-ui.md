@@ -23,4 +23,4 @@ ht-degree: 15%
 >Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、[Adobe Experience Platform UI ガイド ](../ui-guide.md) を参照してください。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430443?quality=12&learn=on&captions=jpn)

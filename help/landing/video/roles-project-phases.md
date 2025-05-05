@@ -18,4 +18,4 @@ ht-degree: 0%
 
 このビデオでは、Adobe Experience Platform プロジェクトの成功に関わる役割、フェーズ、主な成果の概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32807?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430455?quality=12&learn=on&captions=jpn)

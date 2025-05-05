@@ -44,7 +44,7 @@ ht-degree: 66%
 
 次のビデオを視聴すると、顧客 AI に関する理解を深めることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36509?learn=on&quality=12&captions=jpn)
 
 ## 仕組み
 

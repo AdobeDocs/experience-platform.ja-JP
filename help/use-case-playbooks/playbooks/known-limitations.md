@@ -35,4 +35,4 @@ ht-degree: 1%
 
 詳しくは、以下のビデオを視聴して、スキーマフィールドグループを作成してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413603/?learn=on&captions=jpn)

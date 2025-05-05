@@ -18,4 +18,4 @@ ht-degree: 0%
 
 [Experience Platformを活用したカスタマーエクスペリエンス ](customer-experience.md) を示すビデオを見た後、背景を見て、Adobe Experience Platformがこのエクスペリエンスをどのように強化したかを確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36312?quality=12&learn=on&captions=jpn)

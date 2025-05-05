@@ -59,5 +59,5 @@ ht-degree: 0%
 
 詳しくは、次のビデオをご覧ください。カスタマーサポート用 AI アシスタントを使用して、ワークフローを離れることなくシームレスにトラブルシューティングを行う方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443184?learn=on&captions=jpn)
 

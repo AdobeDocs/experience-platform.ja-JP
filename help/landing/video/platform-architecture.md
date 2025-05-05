@@ -18,4 +18,4 @@ ht-degree: 0%
 
 このビデオでは、Experience Platformの主要コンポーネントを説明する、アーキテクチャの概要図について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422783?quality=12&learn=on&captions=jpn)

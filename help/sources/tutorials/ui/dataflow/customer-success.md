@@ -149,4 +149,4 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 >
 > 次のビデオに示すExperience Platform UI は旧式のものです。 最新の UI のスクリーンショットと機能については、上記のドキュメントを参照してください。
 >
->[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34110?quality=12&learn=on&captions=jpn)

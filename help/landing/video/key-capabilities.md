@@ -24,4 +24,4 @@ ht-degree: 0%
 1. リアルタイムエクスペリエンスの配信とパーソナライゼーションを強化
 1. ガバナンス、セキュリティ、プライバシーの管理により信頼を得る
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428508?quality=12&learn=on&captions=jpn)

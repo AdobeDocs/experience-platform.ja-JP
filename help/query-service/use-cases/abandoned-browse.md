@@ -59,7 +59,7 @@ order by price desc)D;
 
 以下に示すビデオプレゼンテーションでは、[!DNL Query Service] とAdobe Analytics の統合に焦点を当てたExperience Platform データの全体的で実際のユースケースを示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454936?quality=12&learn=on&captions=jpn)
 
 ## [!DNL Query Service] の利点 {#benefits}
 

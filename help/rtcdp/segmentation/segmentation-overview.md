@@ -48,7 +48,7 @@ Real-Time Customer Data Platform に含まれる顧客 AI は、説明を使用�
 
 顧客 AI について詳しくは、[顧客 AI の概要](../../intelligent-services/customer-ai/overview.md)を参照してください。さらに、次のビデオでは、顧客 AI が AI ベースの傾向で顧客プロファイルを充実させ、顧客のセグメント化とターゲティングの取り組みを強化する方法を示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328478/?quality=12&learn=on&captions=jpn)
 
 
 ## 次の手順

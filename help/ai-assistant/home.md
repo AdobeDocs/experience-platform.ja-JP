@@ -90,7 +90,7 @@ AI アシスタントの製品に関する知識について詳しくは、次�
 
 AI アシスタントの操作インサイトについて詳しくは、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444033?learn=on&enablevpops&captions=jpn)
 
 ### 機能の範囲 {#feature-scope}
 

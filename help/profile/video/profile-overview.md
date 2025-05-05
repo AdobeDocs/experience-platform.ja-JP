@@ -24,4 +24,4 @@ ht-degree: 18%
 >
 >Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[ プロファイル UI ガイド ](../ui/user-guide.md) を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/31660?quality=12&learn=on&captions=jpn)

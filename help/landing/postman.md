@@ -21,7 +21,7 @@ Postmanは、API 開発のコラボレーションプラットフォームで、
 
 次のビデオガイドでは、Postman環境の作成とセットアップの概要を説明します。 Postman環境には、以下に提供される様々なコレクションに対する API 呼び出しを行うために必要なすべての必須ヘッダーが含まれています。 設定すると、値の有効期限（`ACCESS_TOKEN` など）が切れるたびに、環境の現在の値を更新でき、この新しい値がすべてのコレクションで使用されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/28832)
+>[!VIDEO](https://video.tv.adobe.com/v/31656?captions=jpn)
 
 ## Postman コレクション {#collections}
 
@@ -57,7 +57,7 @@ Postman UI と使用可能な機能について詳しくは、[Postman ドキュ
 
 以下のビデオでは、[Identity Management サービス（IMS）のPostman コレクションを使用しています。このコレクションは ](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) 公開されている GitHub リポジトリからダウンロードできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34080/?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

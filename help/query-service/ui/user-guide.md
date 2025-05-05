@@ -254,7 +254,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >ビデオに表示されている UI は古くなっていますが、ワークフローで使用されるロジックは変わりません。
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34782?quality=12&learn=on&captions=jpn)
 
 ## 次の手順
 

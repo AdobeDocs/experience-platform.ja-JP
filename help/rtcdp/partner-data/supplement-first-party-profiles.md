@@ -47,7 +47,7 @@ Adobeでは、万能のアプローチはないことを理解し、データお
 
 パートナー提供の属性を使用してファーストパーティオーディエンスを補完する方法について詳しくは、以下のビデオチュートリアルを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452449/?learn=on&captions=jpn)
 
 ## ユースケースの達成方法：概要 {#achieve-the-use-case-high-level}
 

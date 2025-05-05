@@ -18,4 +18,4 @@ ht-degree: 17%
 
 Experience Platformが、お客様の観点から見た、Experience Platformで構築された架空のエクスペリエンスに従ったこのビデオを視聴することで、豊富で関連性の高いリアルタイムのエクスペリエンスを作成する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35344?quality=12&learn=on&captions=jpn)

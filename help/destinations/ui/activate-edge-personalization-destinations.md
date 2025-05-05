@@ -39,11 +39,11 @@ Adobe Experience Platformでは、[ エッジのセグメント化 ](../../segme
 >
 >Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新の情報については、以下の節で説明する設定手順を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449794/?quality=12&learn=on&captions=jpn)
 
 Adobe Targetとカスタムパーソナライゼーションの宛先に対してオーディエンスとプロファイル属性を共有する方法の概要については、以下のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447356/?quality=12&learn=on&captions=jpn)
 
 ## ユースケース {#use-cases}
 

@@ -47,7 +47,7 @@ Edge Networkは、すべてのアドレス可能なチャネルにわたって�
 
 Adobe Experience Platform [!DNL Web SDK] と [!DNL Edge Network] の概要については、以下のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37263?quality=12&learn=on&captions=jpn)
 
 ## Web SDK に置き換わるライブラリ {#sdks}
 
@@ -64,7 +64,7 @@ Web SDKは、次のものに代わるものです。
 
 以下のビデオを視聴すると、1 回の呼び出しで [!DNL Experience Platform]、[!DNL Analytics]、[!DNL Audience Manager] および [!DNL Target] にデータを送信する、Adobe Experience Platform [!DNL Web SDK] および [!DNL Edge Network] の動作を確認できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/34148)
+>[!VIDEO](https://video.tv.adobe.com/v/3413667?captions=jpn)
 
 ## 既存のライブラリから Web SDK への移行 {#migrating-to-web-sdk}
 

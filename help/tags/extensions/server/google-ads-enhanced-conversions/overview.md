@@ -39,7 +39,7 @@ ht-degree: 1%
 
 次のビデオでは、[!DNL Enhanced Conversions] 拡張機能の概要と、実装手順の概要を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416064?quality=12&learn=on&captions=jpn)
 
 ## タグを使用してコンバージョンを送信
 

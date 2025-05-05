@@ -409,11 +409,11 @@ ML アルゴリズムを使用して、アップロードされたファイル�
 
 次のビデオでは、[!DNL Experience Platform] UI で単純なスキーマを作成する方法を示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430225?quality=12&learn=on&captions=jpn)
 
 次のビデオは、フィールドグループとクラスの操作に関する理解を深めることを目的としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413603?quality=12&learn=on&captions=jpn)
 
 ## 付録
 

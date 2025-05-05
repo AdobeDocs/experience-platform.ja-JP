@@ -29,7 +29,7 @@ Attribution AI では、スコアの 2 つのカテゴリ（アルゴリズム�
 
 次のビデオを視聴すると、Attribution AIに関する理解を深めることができます。
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36573?learn=on&quality=12&captions=jpn)
 
 ## ビジネスユースケースの例
 

@@ -28,7 +28,7 @@ ht-degree: 4%
 
 監視機能の概要については、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411269?quality=12&learn=on&captions=jpn)
 
 ## プロパティと環境の選択
 

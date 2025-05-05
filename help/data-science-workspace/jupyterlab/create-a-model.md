@@ -69,7 +69,7 @@ ht-degree: 28%
 
 次のビデオチュートリアルでは、Luma 傾向モデル ノートブックについて説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452493?captions=jpn)
 
 ### 要件ファイル {#requirements-file}
 

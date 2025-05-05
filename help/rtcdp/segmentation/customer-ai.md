@@ -33,4 +33,4 @@ Adobe Real-time Customer Data Platformの埋め込み AI 機能である顧客 A
 
 顧客 AI について詳しくは、[顧客 AI の概要](../../intelligent-services/customer-ai/overview.md)を参照してください。さらに、次のビデオでは、顧客 AI が AI ベースの傾向で顧客プロファイルを充実させ、顧客のセグメント化とターゲティングの取り組みを強化する方法を示しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328478/?quality=12&learn=on&captions=jpn)

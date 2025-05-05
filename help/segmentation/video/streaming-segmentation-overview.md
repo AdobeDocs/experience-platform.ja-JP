@@ -27,4 +27,4 @@ Segmentation API を使用したストリーミングセグメント化に関心
 >
 >Adobe Experience Platform のユーザーインターフェイスは頻繁に更新され、このビデオが録画された後に変更されている可能性があります。 最新情報については、[ ストリーミングセグメント化 UI ガイド ](../methods/streaming-segmentation.md) を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40064?quality=12&learn=on&captions=jpn)
