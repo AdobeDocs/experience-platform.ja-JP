@@ -3,17 +3,17 @@ title: セグメント化実施要件条件の更新
 description: ストリーミングおよびエッジセグメント化を使用して評価できるオーディエンスのタイプに影響する、セグメント化実施要件の更新について説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
+source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # セグメント化の実施要件条件の更新
 
-2024 年 9 月 24 日（PT）以降、セグメント化の実施要件に影響する 2 つの更新が行われます。
+2025 年 5 月 23 日（PT）以降、セグメント化の実施要件に影響する 2 つの更新が行われます。
 
 1. ストリーミングセグメント化とエッジセグメント化のクエリタイプ
 2. ストリーミングセグメント化とエッジセグメント化の結合ポリシー
