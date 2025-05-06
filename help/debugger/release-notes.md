@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger の最新のリリースノー�
 keywords: デバッガー;Experience Platform Debugger 拡張機能;Chrome;拡張機能;リリースノート
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
+source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 93%
+source-wordcount: '864'
+ht-degree: 92%
 
 ---
 
 # Adobe Experience Platform Debugger リリースノート
+
+## バージョン 1.6.4 - 2025年5月6日（PT）
+
+### 修正点および改善点
+
+* ログインできない問題を修正しました。
 
 ## バージョン 1.6.3 - 2025年4月30日（PT）
 
