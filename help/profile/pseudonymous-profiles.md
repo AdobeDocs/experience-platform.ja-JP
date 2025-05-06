@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 偽名プロファイルデータの有効期限
 description: このドキュメントでは、Adobe Experience Platform 内で偽名プロファイルデータの有効期限を設定する際の一般的なガイダンスを提供します。
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
+source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1245'
-ht-degree: 51%
+source-wordcount: '1264'
+ht-degree: 50%
 
 ---
 
@@ -43,8 +43,9 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 >
 >- プロファイル設定の管理
 >- プロファイルの表示
+>- ID 名前空間の表示
 >
->**プロファイル設定の管理** 権限ではデータの有効期限を設定でき、**プロファイルの表示** 権限ではデータの有効期限を表示できます。
+>**プロファイル設定の管理** 権限ではデータの有効期限を設定でき、**プロファイルの表示** 権限ではデータの有効期限を表示できます。**ID 名前空間の表示** 権限では、使用可能な ID 名前空間を表示できます。
 >
 >Experience Platform内の権限について詳しくは、[ アクセス制御の概要 ](../access-control/home.md#permissions) を参照してください。
 
@@ -52,7 +53,7 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 
 ![ プロファイルダッシュボードの「設定」ボタンがハイライト表示されます。](./images/pseudonymous-profiles/profile-settings.png)
 
-[!UICONTROL &#x200B; プロファイル設定 &#x200B;] ポップオーバーが表示されます。 このポップオーバーでは、偽名プロファイルデータの有効期限の日数と、データの有効期限に使用する ID 名前空間を設定できます。
+[!UICONTROL  プロファイル設定 ] ポップオーバーが表示されます。 このポップオーバーでは、偽名プロファイルデータの有効期限の日数と、データの有効期限に使用する ID 名前空間を設定できます。
 
 実稼動用サンドボックスの場合、デフォルトの偽名プロファイルデータの有効期限は 14 日です（最小は 1 日、最大は 365 日）。 開発用サンドボックスの場合、デフォルトの偽名プロファイルデータの有効期限は 3 日です（最小は 1 日、最大は 365 日）。
 
