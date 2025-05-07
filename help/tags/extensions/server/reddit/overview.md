@@ -48,6 +48,7 @@ Experience Platformを [!DNL Reddit] に接続するには、次の入力が必�
 3. 次の設定の詳細を入力します。
    - **ピクセル ID**:[!DNL Reddit Ads] ピクセル ID を入力します。
    - **コンバージョンアクセストークン**:[!DNL Reddit Ads] アカウントで生成されたトークンを入力し、完了したら **[!UICONTROL 保存]** を選択します。
+
      ![ ピクセル ID とコンバージョンアクセストークンのフィールドを含む、Reddit Conversions API 拡張機能の設定の詳細。](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## イベント転送ルールの設定 {#config-rule}
