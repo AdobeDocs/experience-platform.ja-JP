@@ -15,7 +15,7 @@ Reddit は、多様なユーザーベースを持つソーシャルメディア�
 
 [[!DNL Reddit] Conversions API 拡張機能 ](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API) を使用して、Adobe Experience Platform Edge Networkでキャプチャされたユーザーインタラクションイベントを [!DNL Reddit Ads] に送信します。 この拡張機能を使用すると、ブランドが毎週 3 億 7900 万人以上のアクティブユーザーのオーディエンスにリーチし、ユーザーの行動をより深く理解し、ターゲット広告を実行できるようになります。
 
-イベント転送 [ ルール ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) で [!DNL Reddit] Conversions API 拡張機能をインストール、設定、使用する方法については、このガイドを参照してください。
+イベント転送 [ ルール ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/ui/rules) で [!DNL Reddit] Conversions API 拡張機能をインストール、設定、使用する方法については、このガイドを参照してください。
 
 ## 主なメリット {#benefits}
 
@@ -42,7 +42,7 @@ Experience Platformを [!DNL Reddit] に接続するには、次の入力が必�
 
 次の手順に従って、[!DNL Reddit] Conversions API 拡張機能をインストールして設定します。
 
-1. Experience Platform Data Collection UI で、左側のナビゲーションから [!UICONTROL Extensions] を選択し、[!UICONTROL Extensions] カタログにアクセスします。 次に [ 新しいイベント転送プロパティを作成 ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) するか、既存のプロパティを選択します。
+1. Experience Platform Data Collection UI で、左側のナビゲーションから [!UICONTROL Extensions] を選択し、[!UICONTROL Extensions] カタログにアクセスします。 次に [ 新しいイベント転送プロパティを作成 ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/event-forwarding/overview#properties) するか、既存のプロパティを選択します。
 2. 左側のナビゲーションパネルで **[!UICONTROL 拡張機能]** に移動します。 **[!UICONTROL カタログ]** を選択してから、**[!DNL Reddit]** 拡張機能を選択します。
    ![Reddit 拡張機能がハイライト表示されたAdobe Experience Platform Extensions カタログ ](../../../images/extensions/server/reddit/reddit-extension.png)
 3. 次の設定の詳細を入力します。
@@ -55,7 +55,7 @@ Experience Platformを [!DNL Reddit] に接続するには、次の入力が必�
 
 データ要素を設定したら、イベント転送ルールを作成して、イベントを [!DNL Reddit Ads] に送信するタイミングと方法を決定します。
 
-1. イベント転送プロパティの **ルール** に移動し、新しい [ ルール ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) を作成します。
+1. イベント転送プロパティの **ルール** に移動し、新しい [ ルール ](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/ui/rules) を作成します。
 2. **アクション** の下に新しいアクションを追加し、拡張機能を **[!DNL Reddit CAPI]** に設定します。
 3. **アクションタイプ** を **イベントを送信** に設定します。
    ![Reddit Conversions API 拡張機能のイベント転送ルール設定インターフェイス。拡張機能フィールドとアクションタイプフィールドがハイライト表示されています。](../../../images/extensions/server/reddit/reddit-rule.png)
