@@ -2,9 +2,9 @@
 title: ID グラフリンクルールの実装ガイド
 description: ID グラフリンクルール設定を使用してデータを実装する際に従うべき推奨手順を説明します。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
+source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1958'
 ht-degree: 6%
 
 ---
@@ -161,6 +161,8 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 >[!TAB  ユーザー識別子のない認証済みイベント ]
 
+この例では、エンドユーザーの John が認証中に web サイトを閲覧していた際に、次のイベントがExperience Platformに送信されたとします。 ただし、認証済みであるにもかかわらず、イベントでユーザーが識別できないため、Experience Platformは John を識別できません。 そのため、このイベントは、John に特別に関連付けられたオンラインアクティビティとして認識されるのではなく、Adobe Business の web サイトを閲覧する匿名ユーザーとして解釈されます。
+
 ```json
 {
     "_id": "test_id",
@@ -188,8 +190,8 @@ Adobe Experience Platform ID サービスを使用してデータを実装する
 
 ID サービスの実装プロセスの最初の手順は、必要な権限がプロビジョニングされたロールにExperience Platform アカウントが確実に追加されるようにすることです。 管理者は、Adobe Experience Cloudの権限 UI に移動して、アカウントの権限を設定できます。 ここから、アカウントを次の権限を持つ役割に追加する必要があります。
 
-* [!UICONTROL ID 設定の表示 &#x200B;]：この権限を適用して、ID 名前空間の参照ページで一意の名前空間と名前空間の優先度を表示できるようにします。
-* [!UICONTROL ID 設定の編集 &#x200B;]:ID 設定を編集および保存できるようにするために、この権限を適用します。
+* [!UICONTROL ID 設定の表示 ]：この権限を適用して、ID 名前空間の参照ページで一意の名前空間と名前空間の優先度を表示できるようにします。
+* [!UICONTROL ID 設定の編集 ]:ID 設定を編集および保存できるようにするために、この権限を適用します。
 
 権限について詳しくは、[ 権限ガイド ](../../access-control/abac/ui/permissions.md) を参照してください。
 
