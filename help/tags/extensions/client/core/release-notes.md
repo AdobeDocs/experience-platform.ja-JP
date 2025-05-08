@@ -131,7 +131,7 @@ v2.0.4
 
 * さまざまなフィールドにデータ要素のサポートを追加しました - 次のイベントにデータ要素のサポートが追加されました：「ページ滞在時間」、「ビューポートに入る」、「ホバー」、「メディアの再生時間」。次の条件もあります：「サイト滞在時間」と「値の比較」
 * リンクディレイの使用時の Ctrl／Command キーを押しながらクリック、およびマウスの中ボタンのクリックに対するデフォルト動作のサポートを追加します。
-* **クリックイベントのリンク遅延を「サポートされなくなりました」とマークしました。** - 詳しくは、Adobe Experience Platform の [データ収集ブログ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) を参照してください
+* **クリックイベントのリンク遅延を「サポートされなくなりました」とマークしました。** - 詳しくは、Adobe Experience Platform の [データ収集ブログ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=ja) を参照してください
 
 ## 2021 年 1 月 6 日（PT）
 
