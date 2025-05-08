@@ -4,10 +4,10 @@ title: Salesforce Marketing Cloud Sourceの概要
 description: API またはユーザーインターフェイスを使用してSalesforce Marketing CloudをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-04-29T00:00:00Z
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: ce96dbc64845fddb40ebee709828c56d51a6c6ba
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 27%
+source-wordcount: '382'
+ht-degree: 14%
 
 ---
 
@@ -36,9 +36,13 @@ Experience Platformでは、サードパーティのマーケティング自動�
 >
 >カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
+
+>[!WARNING]
+>
+>必要な IP アドレスを許可リストに追加しない場合、[!DNL Salesforce Marketing Cloud] アカウントはExperience Platformに接続されません。
 
 ## API を使用した [!DNL Salesforce Marketing Cloud] のExperience Platformへの接続
 
