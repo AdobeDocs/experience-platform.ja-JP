@@ -2,10 +2,10 @@
 title: コア拡張機能のリリースノート
 description: Adobe Experience Platform のコア拡張機能に関する最新のリリースノートです。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
+source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 88%
+source-wordcount: '1693'
+ht-degree: 86%
 
 ---
 
@@ -14,6 +14,14 @@ ht-degree: 88%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Adobe Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語が変更されました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2025 年 5 月 8 日（Pt）
+
+v3.4.3
+
+* **データ要素**/**JavaScript ツール**/**簡単な置換** に「すべてを置換 **のチェックボックスが表示されるが、チェックボックスを有効にしてルールを保存しようとするとエラーが発生する問題を修正しました**
+* @adobe/react-spectrum を v3.41.0 にアップグレードします。
+* @adobe/reactor-sandbox を v13.2.1 にアップグレード。
 
 ## 2024 年 10 月 23 日（Pt）
 
@@ -123,7 +131,7 @@ v2.0.4
 
 * さまざまなフィールドにデータ要素のサポートを追加しました - 次のイベントにデータ要素のサポートが追加されました：「ページ滞在時間」、「ビューポートに入る」、「ホバー」、「メディアの再生時間」。次の条件もあります：「サイト滞在時間」と「値の比較」
 * リンクディレイの使用時の Ctrl／Command キーを押しながらクリック、およびマウスの中ボタンのクリックに対するデフォルト動作のサポートを追加します。
-* **クリックイベントのリンク遅延を「サポートされなくなりました」とマークしました。** - 詳しくは、Adobe Experience Platform の [データ収集ブログ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=ja) を参照してください
+* **クリックイベントのリンク遅延を「サポートされなくなりました」とマークしました。** - 詳しくは、Adobe Experience Platform の [データ収集ブログ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) を参照してください
 
 ## 2021 年 1 月 6 日（PT）
 
