@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ使用ラベルの概要
 description: Adobe Experience Platform でデータガバナンスのコンプライアンスを適用するために、データ使用ラベルを使用する方法について説明します。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
 source-wordcount: '789'
-ht-degree: 94%
+ht-degree: 90%
 
 ---
 
@@ -57,7 +57,7 @@ Experience Platformでの自動適用の動作方法について詳しくは、[
 
 ### UI の使用
 
-[!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースでは、組織のコアとカスタムラベルの表示と管理が可能です。**[!UICONTROL スキーマ]**&#x200B;ワークスペースを使用して[エクスペリエンスデータモデル（XDM）スキーマにラベルを適用](../../xdm/tutorials/labels.md)したり、代わりにデータ使用ラベルユーザーガイドを参照して、[**[!UICONTROL ポリシー] UI でカスタムラベルを作成および管理](./user-guide.md)する方法を学んだりできます。
+[!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースでは、組織のコアとカスタムラベルの表示と管理が可能です。**[!UICONTROL スキーマ]** ワークスペースを使用して [ エクスペリエンスデータモデル（XDM）スキーマにラベルを適用 ](../../xdm/tutorials/labels.md) したり、代わりにデータ使用ラベルユーザーガイドを参照して、**[!UICONTROL ポリシー]** UI で [ カスタムラベルを作成および管理 ](./user-guide.md) する方法を学んだりできます。
 
 >[!IMPORTANT]
 >
