@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a79efc5d64862850d17cff0fd0633c73fd08207d
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2192'
 ht-degree: 23%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 23%
 >その他のAdobe Experience Platform アプリケーションのリリースノートについては、次のドキュメントを参照してください。
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年4月29日**
 
@@ -41,7 +41,7 @@ Experience Leagueは、Adobe製品のスキルアップに役立つ包括的な�
 
 | 機能 | 説明 |
 | --- | --- |
-| パーソナライズされたホームページ | パーソナライズされたホームページに [Experience League](https://experienceleague.adobe.com/ja/home#) でアクセスしてカスタマイズします。 Adobeの資格情報を使用してログインし、上部のメニューで「**[!UICONTROL Experience League]**」を選択して、学習体験の最適化を開始します。 <ul><li>**ブックマーク**:[!UICONTROL &#x200B; ブックマーク &#x200B;] 機能を使用して、お気に入りのリソースを 1 か所に保存および収集します。 プレイリスト、記事、チュートリアルなど、様々なコンテンツを保存できます。</li><li>**ラーニングのカスタマイズ**：お客様のニーズに最適な役割、業界、商品、エクスペリエンスレベルでExperience League プロファイルを更新することで、ラーニングエクスペリエンスを強化できます。</li><li>**Recommendations**：最近のアクティビティに基づいて推奨された学習コンテンツを表示します。</li><li>**最近表示された項目**:「[!UICONTROL &#x200B; 最近表示された項目 &#x200B;] セクションを使用すると、ドキュメントやビデオなど、最近表示されたコンテンツにすばやく戻ることができます。</li><li>**学習リソース**:[!UICONTROL &#x200B; すべての学習リソース &#x200B;] パネルを使用して、チュートリアル、ドキュメント、コミュニティ、イベント、認定制度に移動します。</li><li>**新機能**:Experience Leagueの最新コンテンツのストリームについては、[!UICONTROL &#x200B; 新機能 &#x200B;] の節をご覧ください。</li><li>**オンデマンドで過去のイベントを視聴**:[!UICONTROL &#x200B; オンデマンドで過去のイベントを視聴 &#x200B;] セクションで、製品スポットライト、ユースケースおよびチュートリアルに関する過去のライブストリームを視聴します。</li></ul><br> ![Experience Leagueのパーソナライズされたホームページ。](../2025/assets/april/personalized-home-page.png "Experience Leagueのパーソナライズされたホームページ。"){width="250" align="center" zoomable="yes"} |
+| パーソナライズされたホームページ | パーソナライズされたホームページに [Experience League](https://experienceleague.adobe.com/en/home#) でアクセスしてカスタマイズします。 Adobeの資格情報を使用してログインし、上部のメニューで「**[!UICONTROL Experience League]**」を選択して、学習体験の最適化を開始します。 <ul><li>**ブックマーク**:[!UICONTROL  ブックマーク ] 機能を使用して、お気に入りのリソースを 1 か所に保存および収集します。 プレイリスト、記事、チュートリアルなど、様々なコンテンツを保存できます。</li><li>**ラーニングのカスタマイズ**：お客様のニーズに最適な役割、業界、商品、エクスペリエンスレベルでExperience League プロファイルを更新することで、ラーニングエクスペリエンスを強化できます。</li><li>**Recommendations**：最近のアクティビティに基づいて推奨された学習コンテンツを表示します。</li><li>**最近表示された項目**:「[!UICONTROL  最近表示された項目 ] セクションを使用すると、ドキュメントやビデオなど、最近表示されたコンテンツにすばやく戻ることができます。</li><li>**学習リソース**:[!UICONTROL  すべての学習リソース ] パネルを使用して、チュートリアル、ドキュメント、コミュニティ、イベント、認定制度に移動します。</li><li>**新機能**:Experience Leagueの最新コンテンツのストリームについては、[!UICONTROL  新機能 ] の節をご覧ください。</li><li>**オンデマンドで過去のイベントを視聴**:[!UICONTROL  オンデマンドで過去のイベントを視聴 ] セクションで、製品スポットライト、ユースケースおよびチュートリアルに関する過去のライブストリームを視聴します。</li></ul><br> ![Experience Leagueのパーソナライズされたホームページ。](../2025/assets/april/personalized-home-page.png "Experience Leagueのパーソナライズされたホームページ。"){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| 完全ファイル書き出しの **毎週** および **毎月** スケジュールオプション | クラウドストレージファイルベースの宛先に対してアクティブ化する際に、人物および見込み客オーディエンスの完全なファイル書き出しを毎週または毎月スケジュールできるようになりました。 スケジュールオプションについて [&#128279;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 詳細情報 。 |
+| 完全ファイル書き出しの **毎週** および **毎月** スケジュールオプション | クラウドストレージファイルベースの宛先に対してアクティブ化する際に、人物および見込み客オーディエンスの完全なファイル書き出しを毎週または毎月スケジュールできるようになりました。 スケジュールオプションについて ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 詳細情報 [。 |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE &#x200B; 限定提供 &#x200B;]{type=Informative} [!DNL Identity Graph Linking Rules] | ID グラフリンクルールは限定提供になり、開発用サンドボックスのすべてのお客様がアクセスできます。 <ul><li>**アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。</li><li>**重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。</li><li>**次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。</li></ul> |
+| [!BADGE  限定提供 ]{type=Informative} 開発用サンドボックスのすべて [!DNL Identity Graph Linking Rules] お客様が ID グラフリンクルールにアクセスできるようになりました。 <ul><li>**アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。</li><li>**重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。</li><li>**次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。</li></ul> |
 
 {style="table-layout:auto"}
 
