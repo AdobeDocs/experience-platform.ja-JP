@@ -3,10 +3,10 @@ keywords: google カスタマーマッチ；Google カスタマーマッチ；Go
 title: Google Customer Match 接続
 description: Google カスタマーマッチを使用すると、オンラインおよびオフラインのデータを使用して、検索、ショッピング、Gmail など、Googleが所有および運営するプロパティをまたいで顧客にリーチし、再びエンゲージできます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
 workflow-type: tm+mt
-source-wordcount: '2046'
-ht-degree: 19%
+source-wordcount: '2360'
+ht-degree: 16%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
-> Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA[&#128279;](https://digital-markets-act.ec.europa.eu/index_en)）（[EU ユーザー同意ポリシー ](https://www.google.com/about/company/user-consent-policy/)）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、[Google Ads API](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、Customer Match および [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
+> Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA](https://digital-markets-act.ec.europa.eu/index_en)）（[EU ユーザー同意ポリシー ](https://www.google.com/about/company/user-consent-policy/)）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、[Google Ads API](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、[Customer Match および [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
 ><br/>
 >EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーであるAdobeは、欧州連合の DMA に基づく同意要件に準拠するために必要なツールを提供します。
 ><br/>
@@ -58,11 +58,15 @@ Experience Platformの一部の宛先には、宛先プラットフォームに�
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
-| IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
-| phone_sha256_e.164 | SHA256 アルゴリズムでハッシュ化された E164 形式の電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化された電話番号には適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
-| email_lc_sha256 | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化されたメールアドレスには適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
-| user_id | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
+| `GAID` | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、このターゲット ID を選択します。 |
+| `IDFA` | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、このターゲット ID を選択します。 |
+| `phone_sha256_e.164` | SHA256 アルゴリズムでハッシュ化された E164 形式の電話番号 | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化された電話番号の両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化された電話番号には適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| `email_lc_sha256` | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。[ID の一致要件 ](#id-matching-requirements-id-matching-requirements) の節の手順に従って、プレーンテキストには適切な名前空間を、ハッシュ化されたメールアドレスには適切な名前空間をそれぞれ使用します。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| `user_id` | カスタムユーザー ID | ソース ID がカスタム名前空間の場合は、このターゲット ID を選択します。 |
+| `address_info_first_name` | ユーザーの名 | このターゲット ID は、宛先に郵送先住所のデータを送信する際に、`address_info_last_name`、`address_info_country_code`、`address_info_postal_code` と共に使用することを目的としています。 <br><br>Googleがアドレスと一致するようにするには、4 つのアドレスフィールド（`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をすべてマッピングし、書き出されたプロファイルでこれらのフィールドに欠けているデータがないことを確認する必要があります。 <br> いずれかのフィールドがマッピングされていないか、データが欠落している場合、Googleはアドレスと一致しません。 |
+| `address_info_last_name` | ユーザーの姓 | このターゲット ID は、宛先に郵送先住所のデータを送信する際に、`address_info_first_name`、`address_info_country_code`、`address_info_postal_code` と共に使用することを目的としています。 <br><br>Googleがアドレスと一致するようにするには、4 つのアドレスフィールド（`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をすべてマッピングし、書き出されたプロファイルでこれらのフィールドに欠けているデータがないことを確認する必要があります。 <br> いずれかのフィールドがマッピングされていないか、データが欠落している場合、Googleはアドレスと一致しません。 |
+| `address_info_country_code` | ユーザーの住所の国コード | このターゲット ID は、宛先に郵送先住所のデータを送信する際に、`address_info_first_name`、`address_info_last_name`、`address_info_postal_code` と共に使用することを目的としています。 <br><br>Googleがアドレスと一致するようにするには、4 つのアドレスフィールド（`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をすべてマッピングし、書き出されたプロファイルでこれらのフィールドに欠けているデータがないことを確認する必要があります。 <br> いずれかのフィールドがマッピングされていないか、データが欠落している場合、Googleはアドレスと一致しません。 <br><br> 使用可能な形式：小文字、[ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 形式の 2 文字の国コード。 |
+| `address_info_postal_code` | ユーザーの住所の郵便番号 | このターゲット ID は、宛先に郵送先住所のデータを送信する際に、`address_info_first_name`、`address_info_last_name`、`address_info_country_code` と共に使用することを目的としています。 <br><br>Googleがアドレスと一致するようにするには、4 つのアドレスフィールド（`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をすべてマッピングし、書き出されたプロファイルでこれらのフィールドに欠けているデータがないことを確認する必要があります。 <br> いずれかのフィールドがマッピングされていないか、データが欠落している場合、Googleはアドレスと一致しません。 |
 
 {style="table-layout:auto"}
 
@@ -146,19 +150,19 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## ビデオの概要 {#video-overview}
 
 メリットとGoogle カスタマーマッチへのデータのアクティベート方法について詳しくは、以下のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/326487?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -184,12 +188,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-**[!UICONTROL セグメントスケジュール]** 手順では、[!DNL IDFA] または [!DNL GAID] のオーディエンスを [!DNL Google Customer Match] に送信する際に [!UICONTROL &#x200B; アプリ ID] を指定する必要があります。
+**[!UICONTROL セグメントスケジュール]** 手順では、[!DNL IDFA] または [!DNL GAID] のオーディエンスを [!DNL Google Customer Match] に送信する際に [!UICONTROL  アプリ ID] を指定する必要があります。
 
 ![ アクティベーションワークフローのセグメントスケジュール手順でハイライト表示された「Google顧客一致アプリ ID」フィールド ](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -227,6 +231,10 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ## 宛先の監視 {#monitor-destination}
 
 宛先に接続し、宛先データフローを確立したら、Real-Time CDPの [ モニタリング機能 ](/help/dataflows/ui/monitor-destinations.md) を使用して、各データフロー実行で宛先に対してアクティブ化されたプロファイルレコードに関する詳細な情報を取得できます。
+
+>[!IMPORTANT]
+>
+>4 つのアドレス関連のターゲット ID （`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をマッピングすると、それらは、データフロー監視ページのプロファイルごとに別々の個別の ID としてカウントされます。
 
 ## Audience Activation が成功したことの確認 {#verify-activation}
 
