@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービス資格情報ガイド
 description: Adobe Experience Platform クエリサービスは、クエリの書き込みと実行、以前に実行したクエリの表示、組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: c8c04d79584093c8d13ffa205849e78ab04c0fc1
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1885'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform クエリサービスを使用すると、外部クラ
 
 >[!NOTE]
 >
->すべてのユーザーに対して、資格情報パネルは、自動的には使用できません。必要に応じて、Adobe アカウントチームに連絡して、「[!UICONTROL &#x200B; 資格情報 &#x200B;]」タブをクエリサービス ワークスペースに含めてください。 ご要望があれば、この変更は組織全体にわたり、Adobeのエンジニアリングチームが実施します。 ユーザーが制御する設定ではありません。
+>すべてのユーザーに対して、資格情報パネルは、自動的には使用できません。必要に応じて、Adobe アカウントチームに連絡して、「[!UICONTROL  資格情報 ]」タブをクエリサービス ワークスペースに含めてください。 ご要望があれば、この変更は組織全体にわたり、Adobeのエンジニアリングチームが実施します。 ユーザーが制御する設定ではありません。
 
 ## 資格情報の期限切れ {#expiring-credentials}
 
@@ -46,19 +46,19 @@ Adobe Experience Platform クエリサービスを使用すると、外部クラ
 >
 >![ 「プライバシーとセキュリティ」、「認証設定」、「最大セッション時間」がハイライト表示された「Admin Console設定」タブ ](../images/ui/credentials/max-session-life.png)
 >
->Admin Console が提供する [ 詳細設定 ](https://helpx.adobe.com/jp/enterprise/using/authentication-settings.html#advanced-settings) について詳しくは、Adobe ヘルプドキュメントを参照してください。
+>Admin Console が提供する [ 詳細設定 ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) について詳しくは、Adobe ヘルプドキュメントを参照してください。
 
 ### クエリセッション内でCustomer Journey Analytics データに接続する {#connect-to-customer-journey-analytics}
 
 Power BIまたは Tableau でCustomer Journey Analytics BI 拡張機能を使用して、SQL でCustomer Journey Analytics[ データビュー ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-dataviews/data-views) にアクセスします。 クエリサービスを BI 拡張機能と統合すると、クエリサービスのセッション内でデータビューに直接アクセスできます。 この統合により、クエリサービスを PostgreSQL インターフェイスとして使用する BI ツールの機能が合理化されます。 この機能により、BI ツールでデータビューを複製する必要がなくなり、プラットフォーム間で一貫したレポートが確保され、BI プラットフォームでのCustomer Journey Analytics データと他のソースとの統合が簡素化されます。
 
-[&#128279;](../clients/tableau.md) クエリサービスを [Power BI](../clients/power-bi.md) や [Tableau などの様々なデスクトップクライアントアプリケーションに接続する ](../clients/overview.md) 方法については、ドキュメントを参照してください 
+[ クエリサービスを [Power BI](../clients/power-bi.md) や [Tableau などの様々なデスクトップクライアントアプリケーションに接続する ](../clients/overview.md) 方法については、ドキュメントを参照してください ](../clients/tableau.md)
 
 >[!IMPORTANT]
 >
 >この機能を使用するには、Customer Journey Analytics Workspace プロジェクトとデータビューが必要です。
 
-Power BIまたは Tableau でCustomer Journey Analytics データにアクセスするには、「[!UICONTROL &#x200B; データベース &#x200B;]」ドロップダウンメニューを選択し、使用可能なオプションから「`prod:cja`」を選択します。 次に、Power BIまたは Tableau 設定で使用するために、[!DNL Postgres] 資格情報パラメーター（ホスト、ポート、データベース、ユーザー名など）をコピーします。
+Power BIまたは Tableau でCustomer Journey Analytics データにアクセスするには、「[!UICONTROL  データベース ]」ドロップダウンメニューを選択し、使用可能なオプションから「`prod:cja`」を選択します。 次に、Power BIまたは Tableau 設定で使用するために、[!DNL Postgres] 資格情報パラメーター（ホスト、ポート、データベース、ユーザー名など）をコピーします。
 
 ![ データベースのドロップダウンがハイライト表示された「クエリサービスの資格情報」タブ ](../images/ui/credentials/database-dropdown.png)
 
@@ -68,9 +68,14 @@ Power BIまたは Tableau でCustomer Journey Analytics データにアクセス
 
 また、クエリエディターまたは Postgres CLI からCustomer Journey Analytics データに直接アクセスすることもできます。 これを行うには、クエリを記述する際に `cja` データベースを参照します。 クエリの記述、実行、保存の方法について詳しくは、クエリエディター [ クエリオーサリングガイド ](./user-guide.md#query-authoring) を参照してください。
 
-SQL を使用してCustomer Journey Analyticsのデータビューにアクセスする手順について詳しくは、[BI 拡張機能ガイド ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/cja-dataviews/bi-extension) を参照してください。
+SQL を使用してCustomer Journey Analyticsのデータビューにアクセスする手順について詳しくは、[BI 拡張機能ガイド ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) を参照してください。
 
 ## 有効期限のない資格情報 {#non-expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_migratenonexpiringcredentials"
+>title="OAuth サーバー間資格情報への移行"
+>abstract="JWT 資格情報は 2025 年 6 月 30 日（PT）以降に機能しなくなるので、この移行は必須です。 約 30～40 秒かかり、一度開始するとキャンセルすることはできません。 すべての既存のジョブと統合は、移行後も引き続き OAuth で機能します。 この画面を離れて、いつでも戻ってステータスを確認できます。"
 
 有効期限のない資格情報を使用して、外部クライアントへのより永続的な接続を設定できます。
 
@@ -99,7 +104,7 @@ SQL を使用してCustomer Journey Analyticsのデータビューにアクセ�
 
 ### 資格情報を生成 {#generate-credentials}
 
-有効期限のない一連の資格情報を作成するには、Experience Platform UI に戻り、左側のナビゲーションから **[!UICONTROL クエリ]** を選択して [!UICONTROL &#x200B; クエリ &#x200B;] ワークスペースにアクセスします。 次に、「**[!UICONTROL 資格情報]** タブを選択し、続いて **[!UICONTROL 資格情報の生成]** を選択します。
+有効期限のない一連の資格情報を作成するには、Experience Platform UI に戻り、左側のナビゲーションから **[!UICONTROL クエリ]** を選択して [!UICONTROL  クエリ ] ワークスペースにアクセスします。 次に、「**[!UICONTROL 資格情報]** タブを選択し、続いて **[!UICONTROL 資格情報の生成]** を選択します。
 
 ![ 「資格情報」タブと「資格情報を生成」がハイライト表示されたクエリダッシュボード ](../images/ui/credentials/generate-credentials.png)
 
@@ -159,11 +164,11 @@ SQL を使用してCustomer Journey Analyticsのデータビューにアクセ�
 
 | パラメーター | 説明 | 例 |
 |---|---|---|
-| **サーバー/ホスト** | 接続先のサーバー/ホストの名前。 <ul><li>この値は、有効期限のある資格情報と有効期限のない資格情報の両方に使用され、`server.adobe.io` の形式を取ります。 値は、「[!UICONTROL &#x200B; 有効期限が切れる資格情報 &#x200B;]&#x200B;**セクションの**&#x200B;[!UICONTROL &#x200B; ホスト &#x200B;] にあります。</ul></li> | `acme.platform.adobe.io` |
-| **ポート** | 接続先のサーバー/ホストのポート。 <ul><li>この値は、有効期限のある資格情報と有効期限のない資格情報の両方に使用され、「有効期限のある資格情報 **[!UICONTROL セクションの [!UICONTROL &#x200B; ポート]** に &#x200B;] ります。</ul></li> | `80` |
-| **データベース** | 接続先のデータベース。 <ul><li>この値は、有効期限のある資格情報と有効期限のない資格情報の両方に使用され、「有効期限のある資格情報 **[!UICONTROL セクションの [!UICONTROL &#x200B; データベース]** に &#x200B;] ります。 </ul></li> | `prod:all` |
+| **サーバー/ホスト** | 接続先のサーバー/ホストの名前。 <ul><li>この値は、有効期限のある資格情報と有効期限のない資格情報の両方に使用され、`server.adobe.io` の形式を取ります。 値は、「[!UICONTROL  有効期限が切れる資格情報 ]**セクションの**[!UICONTROL  ホスト ] にあります。</ul></li> | `acme.platform.adobe.io` |
+| **ポート** | 接続先のサーバー/ホストのポート。 <ul><li>この値は、有効期限のある資格情報と有効期限のない資格情報の両方に使用され、「有効期限のある資格情報 **[!UICONTROL セクションの [!UICONTROL  ポート]** に ] ります。</ul></li> | `80` |
+| **データベース** | 接続先のデータベース。 <ul><li>この値は、有効期限のある資格情報と有効期限のない資格情報の両方に使用され、「有効期限のある資格情報 **[!UICONTROL セクションの [!UICONTROL  データベース]** に ] ります。 </ul></li> | `prod:all` |
 | **ユーザー名** | 外部クライアントに接続するユーザーのユーザー名。 <ul><li>この値は、有効期限のある資格情報と有効期限のない資格情報の両方に使用されます。 `@AdobeOrg` 前は英数字の形式です。 この値は **[!UICONTROL Username]** の下にあります。</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **パスワード** | 外部クライアントに接続するユーザーのパスワード。 <ul><li>有効期限が切れる認証情報を使用している場合は、「有効期限が切れる認証情報 **[!UICONTROL セクションの]** パスワード [!UICONTROL &#x200B; で確認でき &#x200B;] す。</li><li>有効期限のない資格情報を使用している場合、この値は、technicalAccountID からの連結引数と、設定 JSON ファイルから取得された資格情報です。 パスワードの値は `{technicalAccountId}:{credential}` 形式で指定します。</li></ul> | <ul><li>有効期限が切れる資格情報のパスワードは、1,000 文字を超える英数字の文字列です。 例は示されません。</li><li>有効期限のない資格情報のパスワードは次のとおりです。<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **パスワード** | 外部クライアントに接続するユーザーのパスワード。 <ul><li>有効期限が切れる認証情報を使用している場合は、「有効期限が切れる認証情報 **[!UICONTROL セクションの]** パスワード [!UICONTROL  で確認でき ] す。</li><li>有効期限のない資格情報を使用している場合、この値は、technicalAccountID からの連結引数と、設定 JSON ファイルから取得された資格情報です。 パスワードの値は `{technicalAccountId}:{credential}` 形式で指定します。</li></ul> | <ul><li>有効期限が切れる資格情報のパスワードは、1,000 文字を超える英数字の文字列です。 例は示されません。</li><li>有効期限のない資格情報のパスワードは次のとおりです。<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 
