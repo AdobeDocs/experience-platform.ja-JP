@@ -34,7 +34,7 @@ Experience Platformと外部コンポーネント間のすべてのデータは�
 
 ### mTLS プロトコルのサポート {#mtls-protocol-support}
 
-相互トランスポート層セキュリティ（mTLS）を使用して、[HTTP API 宛先 ](../../destinations/catalog/streaming/http-destination.md) およびAdobe Journey Optimizer[ カスタムアクション ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) への送信接続のセキュリティを強化できるようになりました。 mTLS は、データが共有される前に情報を共有する両者が本人であることを確認する、相互認証のためのエンドツーエンドのセキュリティ方式です。mTLS には TLS と比較して追加の手順が含まれており、サーバーはクライアントの証明書を要求し、クライアント側でそれを検証します。
+相互トランスポート層セキュリティ（mTLS）を使用して、[HTTP API 宛先 ](../../destinations/catalog/streaming/http-destination.md) およびAdobe Journey Optimizer[ カスタムアクション ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) への送信接続のセキュリティを強化できるようになりました。 mTLS は、データが共有される前に情報を共有する両者が本人であることを確認する、相互認証のためのエンドツーエンドのセキュリティ方式です。mTLS には TLS と比較して追加の手順が含まれており、サーバーはクライアントの証明書を要求し、クライアント側でそれを検証します。
 
 [Adobe Journey Optimizer カスタムアクションとExperience Platform HTTP API 宛先ワークフローで mTLS を使用する ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) 場合、Adobe Journey Optimizer カスタマーアクション UI または宛先 UI に入力するサーバーアドレスでは、TLS プロトコルが無効になっており、mTLS のみが有効になっている必要があります。 そのエンドポイントで TLS 1.2 プロトコルがまだ有効になっている場合、クライアント認証に対して証明書は送信されません。 つまり、これらのワークフローで mTLS を使用するには、「受信」サーバーエンドポイントが mTLS **のみ** 有効な接続エンドポイントである必要があります。
 
