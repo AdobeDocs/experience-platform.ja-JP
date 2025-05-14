@@ -2,10 +2,10 @@
 title: Adobe Experience Platformでのデータ暗号化
 description: Adobe Experience Platformでの転送時および保存時のデータの暗号化の仕組みを説明します。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f6eaba4c0622318ba713c562ba0a4c20bba02338
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 7%
+source-wordcount: '849'
+ht-degree: 6%
 
 ---
 
@@ -30,11 +30,11 @@ Experience Platformと外部コンポーネント間のすべてのデータは�
 データがシステムに取り込まれ、[ 保存時に暗号化 ](#at-rest) た後、Experience Platform サービスは以下の方法でデータを強化および書き出します。
 
 - [ 宛先 ](../../destinations/home.md) を使用すると、Adobe アプリケーションおよびパートナーアプリケーションに対してデータをアクティブ化できます。
-- [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja) や [Adobe Journey Optimizer&rbrace; などのネイティブなExperience Platform アプリケ ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home) ションも、データを利用できます。
+- [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja) や [Adobe Journey Optimizer} などのネイティブなExperience Platform アプリケ ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home) ションも、データを利用できます。
 
 ### mTLS プロトコルのサポート {#mtls-protocol-support}
 
-相互トランスポート層セキュリティ（mTLS）を使用して、[HTTP API 宛先 ](../../destinations/catalog/streaming/http-destination.md) およびAdobe Journey Optimizer[ カスタムアクション ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) への送信接続のセキュリティを強化できるようになりました。 mTLS は、データが共有される前に情報を共有する両者が本人であることを確認する、相互認証のためのエンドツーエンドのセキュリティ方式です。mTLS には TLS と比較して追加の手順が含まれており、サーバーはクライアントの証明書を要求し、クライアント側でそれを検証します。
+相互トランスポート層セキュリティ（mTLS）を使用して、[HTTP API 宛先 ](../../destinations/catalog/streaming/http-destination.md) およびAdobe Journey Optimizer[ カスタムアクション ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) への送信接続のセキュリティを強化できるようになりました。 mTLS は、データが共有される前に情報を共有する両者が本人であることを確認する、相互認証のためのエンドツーエンドのセキュリティ方式です。mTLS には TLS と比較して追加の手順が含まれており、サーバーはクライアントの証明書を要求し、クライアント側でそれを検証します。
 
 [Adobe Journey Optimizer カスタムアクションとExperience Platform HTTP API 宛先ワークフローで mTLS を使用する ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) 場合、Adobe Journey Optimizer カスタマーアクション UI または宛先 UI に入力するサーバーアドレスでは、TLS プロトコルが無効になっており、mTLS のみが有効になっている必要があります。 そのエンドポイントで TLS 1.2 プロトコルがまだ有効になっている場合、クライアント認証に対して証明書は送信されません。 つまり、これらのワークフローで mTLS を使用するには、「受信」サーバーエンドポイントが mTLS **のみ** 有効な接続エンドポイントである必要があります。
 
@@ -48,14 +48,22 @@ Experience Platformと外部コンポーネント間のすべてのデータは�
 
 >[!NOTE]
 >
->公開証明書を最新の状態に保つのは、お客様の責任です。 特に有効期限が近づいたら、証明書を定期的に確認してください。 環境の最新のコピーを保持するために、このページをブックマークに追加する必要があります。
+>システムが有効な公開証明書を使用していることを確認する責任があります。 特に有効期限が近づいたら、証明書を定期的に確認してください。 API を使用して、有効期限が切れる前に証明書を取得および更新します。
 
-CN または SAN をチェックしてサードパーティの検証を追加する場合は、関連する証明書をこちらからダウンロードできます。
+公開 mTLS 証明書の直接ダウンロードリンクが提供されなくなりました。 代わりに、[ 公開証明書エンドポイント ](../../data-governance/mtls-api/public-certificate-endpoint.md) を使用して証明書を取得します。 これは、現在の公開証明書にアクセスするためにサポートされている唯一の方法です。 これにより、統合に対して常に有効な最新の証明書を受け取ることができます。
 
-- [Adobe Journey Optimizer公開証明書 ](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
-- [ 宛先サービスの公開証明書 ](../images/governance-privacy-security/encryption/destinations-public-cert.pem)。
+証明書ベースの暗号化に依存する統合では、API を使用した自動証明書取得をサポートするために、ワークフローを更新する必要があります。 静的リンクや手動の更新に依存すると、期限切れの証明書や失効した証明書が使用され、統合に失敗する場合があります。
 
-また、MTLS エンドポイントに対してGET リクエストを実行することで、公開証明書を安全に取得できます。 詳しくは、[ 公開証明書エンドポイントのドキュメント ](../../data-governance/mtls-api/public-certificate-endpoint.md) を参照してください。
+#### 証明書のライフサイクルの自動化 {#certificate-lifecycle-automation}
+
+Adobeは、mTLS 統合の証明書のライフサイクルを自動化して、信頼性を向上し、サービスの中断を防ぐようになりました。 公開証明書は次のとおりです。
+
+- 有効期限の 60 日前に再発行しました。
+- 有効期限の 30 日前に失効しました。
+
+これらの間隔は、証明書の有効期間を最大 47 日に短縮することを目的とした [ 進化する CA/B フォーラムのガイドライン ](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) に従って、引き続き短くなります。
+
+このページのリンクを以前に使用して証明書をダウンロードした場合は、API を通じて排他的に取得するようにプロセスを更新します。
 
 ## 保存中のデータ {#at-rest}
 
