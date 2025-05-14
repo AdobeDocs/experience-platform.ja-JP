@@ -30,7 +30,7 @@ Experience Platformと外部コンポーネント間のすべてのデータは�
 データがシステムに取り込まれ、[ 保存時に暗号化 ](#at-rest) た後、Experience Platform サービスは以下の方法でデータを強化および書き出します。
 
 - [ 宛先 ](../../destinations/home.md) を使用すると、Adobe アプリケーションおよびパートナーアプリケーションに対してデータをアクティブ化できます。
-- [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja) や [Adobe Journey Optimizer} などのネイティブなExperience Platform アプリケ ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home) ションも、データを利用できます。
+- [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja) や [Adobe Journey Optimizer&rbrace; などのネイティブなExperience Platform アプリケ ](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/ajo-home) ションも、データを利用できます。
 
 ### mTLS プロトコルのサポート {#mtls-protocol-support}
 
