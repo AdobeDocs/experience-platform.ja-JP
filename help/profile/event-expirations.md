@@ -4,10 +4,10 @@ solution: Experience Platform
 title: エクスペリエンスイベントの有効期限
 description: このドキュメントでは、Adobe Experience Platform データセット内の個々のエクスペリエンスイベントの有効期限を設定する際の一般的なガイダンスを示します。
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 68%
+source-wordcount: '884'
+ht-degree: 66%
 
 ---
 
@@ -47,6 +47,10 @@ Adobe Experience Platformでは、[ リアルタイム顧客プロファイル ]
 ## よくある質問 {#faq}
 
 次の節では、エクスペリエンスイベントデータの有効期限に関するよくある質問を一覧表示します。
+
+### エクスペリエンスイベントデータの有効期限を設定できる最小期間はどれくらいですか？
+
+エクスペリエンスイベントデータの有効期限の最小期間は **1 日** です。
 
 ### エクスペリエンスイベントデータの有効期限と、偽名プロファイルデータの有効期限の違い
 
