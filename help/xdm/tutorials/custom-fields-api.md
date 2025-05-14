@@ -2,7 +2,7 @@
 title: Schema Registry API での XDM フィールドの定義
 description: Schema Registry API でカスタム Experience Data Model （XDM）リソースを作成する際に様々なフィールドを定義する方法を説明します。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## [!UICONTROL 文字列] {#string}
 
-[!UICONTROL &#x200B; 文字列 &#x200B;] フィールドは `type: string` で示されます。
+[!UICONTROL  文字列 ] フィールドは `type: string` で示されます。
 
 ```json
 "sampleField": {
@@ -62,9 +62,9 @@ ht-degree: 2%
 }
 ```
 
-## [!UICONTROL &#x200B; 列挙 &#x200B;] {#enum}
+## [!UICONTROL  列挙 ] {#enum}
 
-[!UICONTROL &#x200B; 列挙 &#x200B;] フィールドでは、`type: string` を使用し、列挙値自体を `enum` 配列の下に指定する必要があります。
+[!UICONTROL  列挙 ] フィールドでは、`type: string` を使用し、列挙値自体を `enum` 配列の下に指定する必要があります。
 
 ```json
 "sampleField": {
@@ -128,7 +128,7 @@ ht-degree: 2%
 >
 >`default` 値が指定されておらず、列挙フィールドが `required` に設定されている場合、このフィールドの許容値がないレコードは、取り込み時に検証に失敗します。
 
-## [!UICONTROL &#x200B; 数値 &#x200B;] {#number}
+## [!UICONTROL  数値 ] {#number}
 
 数値フィールドは `type: number` で示され、その他の必須プロパティはありません。
 
@@ -144,9 +144,9 @@ ht-degree: 2%
 >
 >`number` 型は整数または浮動小数点数のいずれかの数値型に使用され、[`integer` 型は特に ](#integer) 整数に使用されます。 各タイプのユースケースについて詳しくは、[ 数値タイプに関する JSON スキーマのドキュメント ](https://json-schema.org/understanding-json-schema/reference/numeric.html) を参照してください。
 
-## [!UICONTROL &#x200B; 整数 &#x200B;] {#integer}
+## [!UICONTROL  整数 ] {#integer}
 
-[!UICONTROL &#x200B; 整数 &#x200B;] フィールドは `type: integer` で示され、その他の必須フィールドはありません。
+[!UICONTROL  整数 ] フィールドは `type: integer` で示され、その他の必須フィールドはありません。
 
 ```json
 "sampleField": {
@@ -174,7 +174,7 @@ ht-degree: 2%
 
 ## [!UICONTROL Long] {#long}
 
-スキーマビルダー UI を使用して作成した [!UICONTROL Long] フィールドに相当するのは [&#128279;](#integer) 特定の `minimum` 値および `maximum` 値（それぞれ `-9007199254740992` および `9007199254740992`）を持つ `integer` タイプのフィールドです。
+スキーマビルダー UI を使用して作成した [!UICONTROL Long] フィールドに相当するのは ](#integer) 特定の `minimum` 値および `maximum` 値（それぞれ `-9007199254740992` および `9007199254740992`）を持つ [`integer` タイプのフィールドです。
 
 ```json
 "sampleField": {
@@ -186,9 +186,9 @@ ht-degree: 2%
 }
 ```
 
-## [!UICONTROL &#x200B; 短い &#x200B;] {#short}
+## [!UICONTROL  短い ] {#short}
 
-スキーマビルダー UI を使用して作成した [!UICONTROL &#x200B; 短 &#x200B;] フィールドに相当するのは [&#128279;](#integer) 特定の `minimum` 値および `maximum` 値（それぞれ `-32768` および `32768`）を持つ `integer` タイプのフィールドです。
+スキーマビルダー UI を使用して作成した [!UICONTROL  短 ] フィールドに相当するのは ](#integer) 特定の `minimum` 値および `maximum` 値（それぞれ `-32768` および `32767`）を持つ [`integer` タイプのフィールドです。
 
 ```json
 "sampleField": {
@@ -196,13 +196,13 @@ ht-degree: 2%
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
-## [!UICONTROL &#x200B; バイト &#x200B;] {#byte}
+## [!UICONTROL  バイト ] {#byte}
 
-スキーマビルダー UI を使用して作成した [!UICONTROL &#x200B; バイト &#x200B;] フィールドに相当するのは [&#128279;](#integer) 特定の `minimum` 値および `maximum` 値（それぞれ `-128` および `128`）を持つ `integer` タイプのフィールドです。
+スキーマビルダー UI を使用して作成した [!UICONTROL  バイト ] フィールドに相当するのは ](#integer) 特定の `minimum` 値および `maximum` 値（それぞれ `-128` および `127`）を持つ [`integer` タイプのフィールドです。
 
 ```json
 "sampleField": {
@@ -210,13 +210,13 @@ ht-degree: 2%
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 
-## [!UICONTROL &#x200B; ブール値 &#x200B;] {#boolean}
+## [!UICONTROL  ブール値 ] {#boolean}
 
-[!UICONTROL &#x200B; ブール値 &#x200B;] フィールドは `type: boolean` で示されます。
+[!UICONTROL  ブール値 ] フィールドは `type: boolean` で示されます。
 
 ```json
 "sampleField": {
@@ -243,7 +243,7 @@ ht-degree: 2%
 
 ## [!UICONTROL 日付] {#date}
 
-[!UICONTROL &#x200B; 日付 &#x200B;] フィールドは `type: string` と `format: date` で示されます。 また、ユーザーが手動でデータを入力する際に、サンプルの日付文字列を表示する場合に活用する `examples` ータの配列を、オプションで指定することもできます。
+[!UICONTROL  日付 ] フィールドは `type: string` と `format: date` で示されます。 また、ユーザーが手動でデータを入力する際に、サンプルの日付文字列を表示する場合に活用する `examples` ータの配列を、オプションで指定することもできます。
 
 ```json
 "sampleField": {
@@ -255,9 +255,9 @@ ht-degree: 2%
 }
 ```
 
-## [!UICONTROL &#x200B; 日時 &#x200B;] {#date-time}
+## [!UICONTROL  日時 ] {#date-time}
 
-[!UICONTROL &#x200B; 日時 &#x200B;] フィールドは、`type: string` と `format: date-time` で示されます。 また、ユーザーが手動でデータを入力する際に、サンプルの日時文字列を表示する場合に利用する `examples` ータの配列を、オプションで指定することもできます。
+[!UICONTROL  日時 ] フィールドは、`type: string` と `format: date-time` で示されます。 また、ユーザーが手動でデータを入力する際に、サンプルの日時文字列を表示する場合に利用する `examples` ータの配列を、オプションで指定することもできます。
 
 ```json
 "sampleField": {
@@ -271,7 +271,7 @@ ht-degree: 2%
 
 ## [!UICONTROL 配列] {#array}
 
-[!UICONTROL &#x200B; 配列 &#x200B;] フィールドは、`type: array` と、配列が受け入れる項目のスキーマを定義する `items` オブジェクトで示されます。
+[!UICONTROL  配列 ] フィールドは、`type: array` と、配列が受け入れる項目のスキーマを定義する `items` オブジェクトで示されます。
 
 文字列の配列など、プリミティブ型を使用して配列項目を定義できます。
 
@@ -286,7 +286,7 @@ ht-degree: 2%
 }
 ```
 
-`$ref` プロパティを使用してデータタイプの `$id` を参照することで、既存のデータタイプに基づいて配列項目を定義することもできます。 次に、[!UICONTROL &#x200B; 支払い項目 &#x200B;] オブジェクトの配列を示します。
+`$ref` プロパティを使用してデータタイプの `$id` を参照することで、既存のデータタイプに基づいて配列項目を定義することもできます。 次に、[!UICONTROL  支払い項目 ] オブジェクトの配列を示します。
 
 ```json
 "sampleField": {
@@ -299,9 +299,9 @@ ht-degree: 2%
 }
 ```
 
-## [!UICONTROL &#x200B; オブジェクト &#x200B;] {#object}
+## [!UICONTROL  オブジェクト ] {#object}
 
-[!UICONTROL &#x200B; オブジェクト &#x200B;] フィールドは、`type: object` と、スキーマフィールドのサブプロパティを定義する `properties` オブジェクトで示されます。
+[!UICONTROL  オブジェクト ] フィールドは、`type: object` と、スキーマフィールドのサブプロパティを定義する `properties` オブジェクトで示されます。
 
 `properties` の下で定義される各サブフィールドは、任意のプリミティブ `type` を使用するか、該当するデータタイプの `$id` を指す `$ref` プロパティを使用して既存のデータタイプを参照することで定義できます。
 
