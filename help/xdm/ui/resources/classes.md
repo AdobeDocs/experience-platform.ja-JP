@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI でのクラスの作成と編集
 description: Experience Platform ユーザーインターフェイスでクラスを作成および編集する方法について説明します。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1691'
 ht-degree: 7%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 7%
 
 Adobe Experience Platformでは、スキーマのクラスは、スキーマに含まれるデータ（レコードまたは時系列）の行動の側面を定義します。 これに加えて、クラスは、そのクラスに基づくすべてのスキーマに含める必要のある共通のプロパティの最小数を記述し、複数の互換性のあるデータセットを結合する方法を提供します。
 
-Adobeは、（XDM 個人プロファイル）や [XDM エクスペリエンスイベント ](../../classes/experienceevent.md) など、いくつかの標準（「コア」）エクスペリエンスデータモデル（XDM[&#128279;](../../classes/individual-profile.md) クラス  提供しています。 これらのコアクラスに加えて、独自のカスタムクラスを作成して、組織のより具体的な使用例を記述することもできます。
+Adobeは、（XDM 個人プロファイル）や [XDM エクスペリエンスイベント ](../../classes/experienceevent.md) など、いくつかの標準（「コア」）エクスペリエンスデータモデル（XDM](../../classes/individual-profile.md) クラス [ 提供しています。 これらのコアクラスに加えて、独自のカスタムクラスを作成して、組織のより具体的な使用例を記述することもできます。
 
 このドキュメントでは、Experience Platform UI でカスタムクラスを作成、編集、管理する方法の概要を説明します。
 
@@ -32,15 +32,15 @@ Adobeは、（XDM 個人プロファイル）や [XDM エクスペリエンス�
 
 ## はじめに {#getting-started}
 
-Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースを開き、「**[!UICONTROL クラス]**」タブを選択します。 使用可能なクラスのリストが表示されます。
+Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択して [!UICONTROL  スキーマ ] ワークスペースを開き、「**[!UICONTROL クラス]**」タブを選択します。 使用可能なクラスのリストが表示されます。
 
-![[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペース [!UICONTROL &#x200B; クラス &#x200B;] および [!UICONTROL &#x200B; スキーマ &#x200B;] の「[!UICONTROL &#x200B; クラス &#x200B;]」タブ内のクラスのハイライト表示 ](../../images/ui/resources/classes/available-classes.png)
+![[!UICONTROL  スキーマ ] ワークスペース [!UICONTROL  クラス ] および [!UICONTROL  スキーマ ] の「[!UICONTROL  クラス ]」タブ内のクラスのハイライト表示 ](../../images/ui/resources/classes/available-classes.png)
 
 ## クラスをフィルター {#filter}
 
-クラスのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定には、Adobeで定義されたクラスが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL &#x200B; 標準 &#x200B;]」オプションと「[!UICONTROL &#x200B; カスタム &#x200B;] オプションの中から選択します。 「[!UICONTROL &#x200B; 標準 &#x200B;]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL &#x200B; カスタム &#x200B;]」オプションには組織内で作成されたエンティティが表示されます。
+クラスのリストは、作成方法に基づいて自動的にフィルタリングされます。 デフォルト設定には、Adobeで定義されたクラスが表示されます。 また、リストをフィルタリングして、組織で作成したリストを表示することもできます。 ラジオボタンを選択して、「[!UICONTROL  標準 ]」オプションと「[!UICONTROL  カスタム ] オプションの中から選択します。 「[!UICONTROL  標準 ]」オプションにはAdobeで作成されたエンティティが表示され、「[!UICONTROL  カスタム ]」オプションには組織内で作成されたエンティティが表示されます。
 
-![[!UICONTROL &#x200B; 標準 &#x200B;] と [!UICONTROL &#x200B; カスタム &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの [!UICONTROL &#x200B; クラス &#x200B;] タブ ](../../images/ui/resources/classes/standard-and-custom-classes.png)
+![[!UICONTROL  標準 ] と [!UICONTROL  カスタム ] がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  クラス ] タブ ](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
 >[!TIP]
 >
@@ -52,25 +52,25 @@ Experience Platform UI でクラスを作成するには、**[!UICONTROL クラ�
 
 ### クラスを作成
 
-**[!UICONTROL スキーマ]** ワークスペースの [!UICONTROL &#x200B; クラス &#x200B;] タブから [!UICONTROL &#x200B; クラスを作成 &#x200B;] を選択します。
+**[!UICONTROL スキーマ]** ワークスペースの [!UICONTROL  クラス ] タブから [!UICONTROL  クラスを作成 ] を選択します。
 
-![ クラスを作成  がハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの [!UICONTROL &#x200B; クラス &#x200B;] タブ ](../../images/ui/resources/classes/create-class.png)
+![ クラスを作成  がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  クラス ] タブ ](../../images/ui/resources/classes/create-class.png)
 
-[!UICONTROL &#x200B; クラスを作成 &#x200B;] ダイアログが表示されます。 クラスの [!UICONTROL &#x200B; 表示名 &#x200B;] と [!UICONTROL &#x200B; 説明 &#x200B;] を入力し、ラジオボタンでクラスの意図した動作を選択します。 クラスのタイプは、[!UICONTROL &#x200B; レコード &#x200B;] または [!UICONTROL &#x200B; 時系列 &#x200B;] です。 「**[!UICONTROL 作成]**」を選択して選択を確定し、「[!UICONTROL &#x200B; クラス &#x200B;]」タブに戻ります。
+[!UICONTROL  クラスを作成 ] ダイアログが表示されます。 クラスの [!UICONTROL  表示名 ] と [!UICONTROL  説明 ] を入力し、ラジオボタンでクラスの意図した動作を選択します。 クラスのタイプは、[!UICONTROL  レコード ] または [!UICONTROL  時系列 ] です。 「**[!UICONTROL 作成]**」を選択して選択を確定し、「[!UICONTROL  クラス ]」タブに戻ります。
 
-![ 「作成  がハイライト表示された [!UICONTROL &#x200B; クラスを作成 &#x200B;] ダイアログ ](../../images/ui/resources/classes/create-class-dialog.png)
+![ 「作成  がハイライト表示された [!UICONTROL  クラスを作成 ] ダイアログ ](../../images/ui/resources/classes/create-class-dialog.png)
 
-作成したクラスが使用可能になり、[!UICONTROL &#x200B; クラス &#x200B;] ビューに表示されます。
+作成したクラスが使用可能になり、[!UICONTROL  クラス ] ビューに表示されます。
 
-![ 最近作成したクラスがハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの「[!UICONTROL &#x200B; クラス &#x200B;]」タブ。](../../images/ui/resources/classes/new-class-listing.png)
+![ 最近作成したクラスがハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの「[!UICONTROL  クラス ]」タブ。](../../images/ui/resources/classes/new-class-listing.png)
 
 ### スキーマを作成
 
-または、スキーマを手動で作成してクラスを作成することもできます。 **[!UICONTROL スキーマ]** ワークスペースの [!UICONTROL &#x200B; クラス &#x200B;] タブから [!UICONTROL &#x200B; スキーマを作成 &#x200B;] を選択します。
+または、スキーマを手動で作成してクラスを作成することもできます。 **[!UICONTROL スキーマ]** ワークスペースの [!UICONTROL  クラス ] タブから [!UICONTROL  スキーマを作成 ] を選択します。
 
-![[!UICONTROL &#x200B; スキーマを作成 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの [!UICONTROL &#x200B; クラス &#x200B;] タブ ](../../images/ui/resources/classes/create-schema.png)
+![[!UICONTROL  スキーマを作成 ] がハイライト表示された [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  クラス ] タブ ](../../images/ui/resources/classes/create-schema.png)
 
-表示される **[!UICONTROL スキーマを作成]** ダイアログで [!UICONTROL &#x200B; 手動 &#x200B;] を選択します。
+表示される **[!UICONTROL スキーマを作成]** ダイアログで [!UICONTROL  手動 ] を選択します。
 
 >[!NOTE]
 >
@@ -78,23 +78,23 @@ Experience Platform UI でクラスを作成するには、**[!UICONTROL クラ�
 
 ![ ワークフローオプションと「選択」がハイライト表示されたスキーマを作成ダイアログ ](../../images/ui/resources/classes/manually-create-a-schema.png)
 
-スキーマ作成ワークフローが表示されます。 「[!UICONTROL &#x200B; スキーマの詳細 &#x200B;]」セクションで、「**[!UICONTROL その他]**」を選択します。 使用可能なクラスのリストが表示されます。 **[!UICONTROL クラスを作成]** を選択します。
+スキーマ作成ワークフローが表示されます。 「[!UICONTROL  スキーマの詳細 ]」セクションで、「**[!UICONTROL その他]**」を選択します。 使用可能なクラスのリストが表示されます。 **[!UICONTROL クラスを作成]** を選択します。
 
-![[!UICONTROL &#x200B; スキーマの詳細 &#x200B;] セクションでハイライト表示された [!UICONTROL &#x200B; その他 &#x200B;] を含む [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフロー ](../../images/ui/resources/classes/other-schema-details.png)
+![[!UICONTROL  スキーマの詳細 ] セクションでハイライト表示された [!UICONTROL  その他 ] を含む [!UICONTROL  スキーマを作成 ] ワークフロー ](../../images/ui/resources/classes/other-schema-details.png)
 
-[!UICONTROL &#x200B; クラスを作成 &#x200B;] ダイアログが表示されます。 クラスの [!UICONTROL &#x200B; 表示名 &#x200B;] と [!UICONTROL &#x200B; 説明 &#x200B;] を入力し、ラジオボタンでクラスの意図した動作を選択します。 クラスのタイプは、[!UICONTROL &#x200B; レコード &#x200B;] または [!UICONTROL &#x200B; 時系列 &#x200B;] です。 「**[!UICONTROL 作成]**」を選択して選択を確定し、「[!UICONTROL &#x200B; クラス &#x200B;]」タブに戻ります。
+[!UICONTROL  クラスを作成 ] ダイアログが表示されます。 クラスの [!UICONTROL  表示名 ] と [!UICONTROL  説明 ] を入力し、ラジオボタンでクラスの意図した動作を選択します。 クラスのタイプは、[!UICONTROL  レコード ] または [!UICONTROL  時系列 ] です。 「**[!UICONTROL 作成]**」を選択して選択を確定し、「[!UICONTROL  クラス ]」タブに戻ります。
 
-![ 「作成  がハイライト表示された [!UICONTROL &#x200B; クラスを作成 &#x200B;] ダイアログ ](../../images/ui/resources/classes/create-class-from-schema.png)
+![ 「作成  がハイライト表示された [!UICONTROL  クラスを作成 ] ダイアログ ](../../images/ui/resources/classes/create-class-from-schema.png)
 
-「[!UICONTROL &#x200B; スキーマの詳細 &#x200B;]」セクションでクラスリストが更新され、新しく作成したクラスが自動的に選択されます。 「**[!UICONTROL 次へ]**」を選択して、スキーマの作成を続行します。
+「[!UICONTROL  スキーマの詳細 ]」セクションでクラスリストが更新され、新しく作成したクラスが自動的に選択されます。 「**[!UICONTROL 次へ]**」を選択して、スキーマの作成を続行します。
 
-![ 新しいクラスが選択され、「次へ [!UICONTROL &#x200B; がハイライト表示された  スキーマの詳細 &#x200B;] セクション。](../../images/ui/resources/classes/select-new-class.png)
+![ 新しいクラスが選択され、「次へ [!UICONTROL  がハイライト表示された  スキーマの詳細 ] セクション。](../../images/ui/resources/classes/select-new-class.png)
 
-クラスを選択すると、「名前とレビュー [!UICONTROL &#x200B; セクションが表示され &#x200B;] す。 このセクションでは、スキーマを識別するための名前と説明を指定します。&#x200B;キャンバスにスキーマの基本構造（クラスによって提供される）が表示され、選択したクラスとスキーマ構造を確認できます。
+クラスを選択すると、「名前とレビュー [!UICONTROL  セクションが表示され ] す。 このセクションでは、スキーマを識別するための名前と説明を指定します。&#x200B;キャンバスにスキーマの基本構造（クラスによって提供される）が表示され、選択したクラスとスキーマ構造を確認できます。
 
-テキストフィールドに、人間にとってわかりやすい [!UICONTROL &#x200B; スキーマ表示名 &#x200B;] を入力します。 次に、スキーマの識別に役立つ適切な説明を入力します。 スキーマ構造をレビューし、設定に満足したら、「**[!UICONTROL 完了]**」を選択してスキーマを作成します。
+テキストフィールドに、人間にとってわかりやすい [!UICONTROL  スキーマ表示名 ] を入力します。 次に、スキーマの識別に役立つ適切な説明を入力します。 スキーマ構造をレビューし、設定に満足したら、「**[!UICONTROL 完了]**」を選択してスキーマを作成します。
 
-![[!UICONTROL &#x200B; スキーマ表示名 &#x200B;]、[!UICONTROL &#x200B; 説明 &#x200B;]、および [!UICONTROL &#x200B; 完了 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; スキーマを作成 &#x200B;] ワークフローの [!UICONTROL &#x200B; 名前とレビュー &#x200B;] セクション ](../../images/ui/resources/classes/schema-details.png)
+![[!UICONTROL  スキーマ表示名 ]、[!UICONTROL  説明 ]、および [!UICONTROL  完了 ] がハイライト表示された [!UICONTROL  スキーマを作成 ] ワークフローの [!UICONTROL  名前とレビュー ] セクション ](../../images/ui/resources/classes/schema-details.png)
 
 ## クラスへのフィールドの追加 {#add-fields}
 
@@ -112,15 +112,15 @@ Experience Platform UI でクラスを作成するには、**[!UICONTROL クラ�
 
 **[!UICONTROL 名称未設定フィールド]** プレースホルダーがキャンバスに表示されます。また、右側のパネルが更新されて、フィールドのプロパティを設定するためのコントロールが表示されます。 **[!UICONTROL 割り当て先]** で、「**[!UICONTROL クラス]**」を選択します。
 
-![ スキーマエディターのキャンバスにある名称未設定フィールド。「[!UICONTROL &#x200B; クラス &#x200B;] フィールドの割り当てプロパティが選択され、ハイライト表示されています。](../../images/ui/resources/classes/assign-to-class.png)
+![ スキーマエディターのキャンバスにある名称未設定フィールド。「[!UICONTROL  クラス ] フィールドの割り当てプロパティが選択され、ハイライト表示されています。](../../images/ui/resources/classes/assign-to-class.png)
 
 フィールドを設定してクラスに追加する方法に関する具体的な手順については、[UI でのフィールドの定義 ](../fields/overview.md#define) に関するガイドを参照してください。 クラスに必要な数のフィールドを追加し続けます。 終了したら、「**[!UICONTROL 保存]** を選択して、スキーマとクラスの両方を保存します。
 
-![ スキーマエディターのキャンバス上に新しく作成されたスキーマ。[!UICONTROL &#x200B; 保存 &#x200B;] がハイライト表示されています。](../../images/ui/resources/classes/save.png)
+![ スキーマエディターのキャンバス上に新しく作成されたスキーマ。[!UICONTROL  保存 ] がハイライト表示されています。](../../images/ui/resources/classes/save.png)
 
 このクラスを採用するスキーマを以前に作成した場合、新しく追加されたフィールドはこれらのスキーマに自動的に表示されます。
 
-## クラスの編集（#edit-a-class）
+## クラスの編集 {#edit-a-class}
 
 >[!NOTE]
 >
@@ -128,14 +128,14 @@ Experience Platform UI でクラスを作成するには、**[!UICONTROL クラ�
 >
 >カスタムクラスが保存され、データ取り込みで使用されると、それ以降は追加の変更のみを行うことができます。 詳しくは、[ スキーマ進化のルール ](../../schema/composition.md#evolution) を参照してください。
 
-クラスを編集するには、スキーマワークフローを使用して、クラスを拡張する既存のスキーマを編集するか、スキーマを手動で作成します。 クラスを直接編集することはできません。 [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの [!UICONTROL &#x200B; 参照 &#x200B;] タブ内から、既存のクラスまたは **[!UICONTROL スキーマを作成]** を選択します。
+クラスを編集するには、スキーマワークフローを使用して、クラスを拡張する既存のスキーマを編集するか、スキーマを手動で作成します。 クラスを直接編集することはできません。 [!UICONTROL  スキーマ ] ワークスペースの [!UICONTROL  参照 ] タブ内から、既存のクラスまたは **[!UICONTROL スキーマを作成]** を選択します。
 
-![ 既存のクラスと「スキーマを作成 [!UICONTROL &#x200B; がハイライト表示されたスキーマエディター &#x200B;]](../../images/ui/resources/classes/edit-class-options.png)
+![ 既存のクラスと「スキーマを作成 [!UICONTROL  がハイライト表示されたスキーマエディター ]](../../images/ui/resources/classes/edit-class-options.png)
 
-新しいスキーマを作成する場合は、[ スキーマの作成 ](#create-schema) の節を参照してください。 スキーマの作成が完了したら（または既存のスキーマを選択した後）、スキーマエディターが表示されます。 既存のクラスフィールドを更新するには、スキーマ構造からフィールドを選択します。 フィールドの情報が右側のパネルに表示されます。 [!UICONTROL &#x200B; 割り当て先 &#x200B;] を確認します。
+新しいスキーマを作成する場合は、[ スキーマの作成 ](#create-schema) の節を参照してください。 スキーマの作成が完了したら（または既存のスキーマを選択した後）、スキーマエディターが表示されます。 既存のクラスフィールドを更新するには、スキーマ構造からフィールドを選択します。 フィールドの情報が右側のパネルに表示されます。 [!UICONTROL  割り当て先 ] を確認します。
 オプション **[!UICONTROL クラス]** が選択されています。選択されていない場合、更新してもクラスに影響はありません。
 
-![ 選択されたフィールドとハイライトされたフィールド、右側のパネルが表示されたスキーマエディター。ハイライト表示は [!UICONTROL &#x200B; 割り当て先 &#x200B;] です。](../../images/ui/resources/classes/edit-existing-field.png)
+![ 選択されたフィールドとハイライトされたフィールド、右側のパネルが表示されたスキーマエディター。ハイライト表示は [!UICONTROL  割り当て先 ] です。](../../images/ui/resources/classes/edit-existing-field.png)
 
 フィールドに必要な変更を加え、右側のレールを下にスクロールして「**[!UICONTROL 適用]**」を選択し、変更を保存します。
 
@@ -143,11 +143,11 @@ Experience Platform UI でクラスを作成するには、**[!UICONTROL クラ�
 >
 > フィールドに加える更新は、[ スキーマ進化のルール ](../../schema/composition.md#evolution) に従って、そのクラスを使用するすべてのスキーマに適用されます。
 
-![ 選択したフィールドと右側のパネルが表示されたスキーマエディター、「適用 [!UICONTROL &#x200B; をハイライト表示 &#x200B;]](../../images/ui/resources/classes/save-changes.png)
+![ 選択したフィールドと右側のパネルが表示されたスキーマエディター、「適用 [!UICONTROL  をハイライト表示 ]](../../images/ui/resources/classes/save-changes.png)
 
 新しいフィールドを追加するには、「[ クラスへのフィールドの追加 ](#add-fields-to-a-class) ガイドに従ってください。 終了したら、「**[!UICONTROL 保存]** を選択して、スキーマとクラスの両方を保存します。
 
-![ 「保存 [!UICONTROL &#x200B; がハイライト表示されたスキーマエディタ &#x200B;]。](../../images/ui/resources/classes/save-schema.png)
+![ 「保存 [!UICONTROL  がハイライト表示されたスキーマエディタ ]。](../../images/ui/resources/classes/save-schema.png)
 
 ## スキーマクラスの変更 {#schema}
 
@@ -156,6 +156,6 @@ Experience Platform UI でクラスを作成するには、**[!UICONTROL クラ�
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、Experience Platform UI を使用してクラスを作成および編集する方法について説明しました。 [!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの機能について詳しくは、[[!UICONTROL &#x200B; スキーマ &#x200B;] ワークスペースの概要 ](../overview.md) を参照してください。
+このドキュメントでは、Experience Platform UI を使用してクラスを作成および編集する方法について説明しました。 [!UICONTROL  スキーマ ] ワークスペースの機能について詳しくは、[[!UICONTROL  スキーマ ] ワークスペースの概要 ](../overview.md) を参照してください。
 
 スキーマレジストリ API を使用してクラスを管理する方法については、[ クラスエンドポイントガイド ](../../api/classes.md) を参照してください。
