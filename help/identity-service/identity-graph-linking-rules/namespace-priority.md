@@ -2,10 +2,10 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
 workflow-type: tm+mt
-source-wordcount: '1865'
-ht-degree: 3%
+source-wordcount: '2162'
+ht-degree: 2%
 
 ---
 
@@ -73,7 +73,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 ## 名前空間の優先度の使用
 
-現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
+現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
 
 ![ 名前空間優先度アプリケーション範囲の図 ](../images/namespace-priority/application-scope.png)
 
@@ -86,7 +86,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 * 特定のサンドボックスの ID 設定を指定したら、エクスペリエンスイベントのプライマリ ID は、設定で最も高い名前空間の優先度によって決定されます。
    * これは、エクスペリエンスイベントが本質的に動的であるためです。 ID マップには 3 つ以上の ID を含めることができ、名前空間の優先度により、最も重要な名前空間がエクスペリエンスイベントに関連付けられます。
 * その結果、次の設定 **リアルタイム顧客プロファイルでは使用されなくなります**。
-   * Web SDK、モバイル SDK、Edge Network API を使用して identityMap で ID を送信する場合のプライマリ ID 設定（`primary=true`）（ID 名前空間と ID 値は、引き続きプロファイルで使用されます）。 **メモ**：データレイクストレージやAdobe Targetなど、リアルタイム顧客プロファイル以外のサービスでは、引き続きプライマリ ID 設定（`primary=true`）を使用します。
+   * Web SDK、Mobile SDK、Edge Network API を使用して `identityMap` で ID を送信する場合のプライマリ ID 設定（`primary=true`）（ID 名前空間と ID 値は、引き続きプロファイルで使用されます）。 **メモ**：データレイクストレージやAdobe Targetなど、リアルタイム顧客プロファイル以外のサービスでは、引き続きプライマリ ID 設定（`primary=true`）を使用します。
    * XDM エクスペリエンスイベントクラススキーマでプライマリ ID としてマークされたすべてのフィールド。
    * Adobe Analytics ソースコネクタのデフォルトのプライマリ ID 設定（ECID または AAID）。
 * 一方、**名前空間の優先度は、プロファイルレコードのプライマリ ID を決定しません**。
@@ -203,6 +203,25 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 
 詳しくは、[Privacy Service の概要 ](../../privacy-service/home.md) を参照してください。
 
-### Adobe Target
+### Edgeのセグメント化とEdge Network アプリケーション
 
-Adobe Targetでは、エッジのセグメント化を使用する場合、共有デバイスのシナリオで予期しないユーザーターゲティングが発生する可能性があります。
+[!DNL Identity Graph Linking Rules] のコンテキストでは、Edgeのセグメント化とEdge Network アプリケーションに関する 2 つの主な行動変化に注意する必要があります。
+
+1. `identityMap` には、一意としてマークされた人物名前空間が含まれている必要があります。 ID としてマークされたフィールド（ID 記述子）はサポートされていません。
+2. 認証中にエンドユーザーが閲覧する場合、ユーザー名前空間には `primary = true` の設定が必要です。
+
+#### エッジセグメント化
+
+特定のイベントで、人物エンティティを表すすべての名前空間が `identityMap` に含まれていることを確認してください。これは、[XDM フィールドとして送信された ID](../../xdm/ui/fields/identity.md) は無視され、セグメントメンバーシップのメタデータストレージには使用されないからです。
+
+* **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど ](../../landing/edge-and-hub-comparison.md)0}Experience Platform ハブ } から取り込まれたイベントは、この制限の対象になりません。[
+* **Edgeのセグメント化特異性**：この動作は、エッジセグメント化に固有です。 バッチとストリーミングのセグメント化は、ハブ上で評価される個別のサービスで、同じプロセスには従いません。 詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
+* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 ](../../landing/edge-and-hub-comparison.md) のページを参照してください。
+
+#### Edge Network アプリケーション
+
+Edge Network上のアプリケーションが遅滞なくEdge プロファイルにアクセスできるようにするには、イベントに CRMID 上の `primary=true` が含まれていることを確認してください。 これにより、hub からの ID グラフの更新を待たずに、即座に可用性を確保できます。
+
+* Edge Network上のアプリケーション（Adobe Target、Offer Decisioning、カスタム Personalization宛先など）は、Edge プロファイルからプロファイルにアクセスする際に、イベント内のプライマリ ID に引き続き依存します。
+* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Networkのアーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) を参照してください。
+* Web SDKでプライマリ ID を設定する方法について詳しくは、[Data element types](../../tags/extensions/client/web-sdk/data-element-types.md) および [Web SDKの ID データ ](../../web-sdk/identity/overview.md) に関するドキュメントを参照してください。
