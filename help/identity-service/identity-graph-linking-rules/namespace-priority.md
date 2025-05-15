@@ -73,7 +73,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 ## 名前空間の優先度の使用
 
-現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
+現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
 
 ![ 名前空間優先度アプリケーション範囲の図 ](../images/namespace-priority/application-scope.png)
 
@@ -216,12 +216,12 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 
 * **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど [&#128279;](../../landing/edge-and-hub-comparison.md)0&rbrace;Experience Platform ハブ &rbrace; から取り込まれたイベントは、この制限の対象になりません。
 * **Edgeのセグメント化特異性**：この動作は、エッジセグメント化に固有です。 バッチとストリーミングのセグメント化は、ハブ上で評価される個別のサービスで、同じプロセスには従いません。 詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
-* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 ](../../landing/edge-and-hub-comparison.md) のページを参照してください。
+* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 ](../../landing/edge-and-hub-comparison.md) のページを参照してください。
 
 #### Edge Network アプリケーション
 
 Edge Network上のアプリケーションが遅滞なくEdge プロファイルにアクセスできるようにするには、イベントに CRMID 上の `primary=true` が含まれていることを確認してください。 これにより、hub からの ID グラフの更新を待たずに、即座に可用性を確保できます。
 
 * Edge Network上のアプリケーション（Adobe Target、Offer Decisioning、カスタム Personalization宛先など）は、Edge プロファイルからプロファイルにアクセスする際に、イベント内のプライマリ ID に引き続き依存します。
-* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Networkのアーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) を参照してください。
+* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Networkのアーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) を参照してください。
 * Web SDKでプライマリ ID を設定する方法について詳しくは、[Data element types](../../tags/extensions/client/web-sdk/data-element-types.md) および [Web SDKの ID データ ](../../web-sdk/identity/overview.md) に関するドキュメントを参照してください。
