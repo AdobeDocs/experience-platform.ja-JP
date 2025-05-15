@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -29,13 +29,13 @@ ht-degree: 64%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showfullxdmschema"
->title="完全な XDM スキーマを表示"
->abstract="デフォルトでは、データを含むフィールドのみが表示されます。 このオプションを有効にすると、XDM スキーマ内のすべてのフィールドが表示されます。"
+>title="完全な XDM スキーマの表示"
+>abstract="デフォルトでは、データを含むフィールドのみが表示されます。このオプションを有効にして、XDM スキーマ内のすべてのフィールドを表示します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showdeprecatedfields"
 >title="非推奨フィールドの表示"
->abstract="デフォルトでは、非推奨の XDM フィールドは表示されません。 非推奨の XDM フィールドを表示するには、このオプションを有効にします。"
+>abstract="デフォルトでは、非推奨の XDM フィールドは表示されません。このオプションを有効にして、非推奨の XDM フィールドを表示します。"
 
 セグメント定義の基本的な構成要素は属性とイベントです。また、既存のオーディエンスに含まれている属性とイベントを、新しい定義の構成要素として使用することもできます。
 
@@ -264,7 +264,7 @@ ht-degree: 64%
 >
 >すべての時間制約は UTC に基づいています。
 >
->さらに、「[!UICONTROL &#x200B; 年を無視 &#x200B;]」チェックボックスが有効になっている場合、その年はセグメント定義評価の一部として **比較されません**。
+>さらに、「[!UICONTROL  年を無視 ]」チェックボックスが有効になっている場合、その年はセグメント定義評価の一部として **比較されません**。
 
 | 時間制限 | 説明 | 「年を無視」を有効にできる | 例 |
 | --------------- | ----------- | ------------------- | ------- |
@@ -275,7 +275,7 @@ ht-degree: 64%
 | カスタム日付 | 比較する属性またはイベント **必須** は、指定された日付になります。 | ○ | ![ 「カスタムの日付」時間制約を使用した例。](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
 | 過去 | 比較する属性またはイベント **必須** は、選択した最後の期間内に発生します。 この期間は、評価時間まで **含む** です。 | × | ![ 「最後に」の時間制約が使用されている例 ](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
 | から | 比較する属性またはイベントは **必ず**、選択した 2 つのカレンダー日付内に存在します。 この期間には、両方の日付の **両方を含む** が指定されます。 | はい（カスタム日付の場合） | ![ 使用されている「からへ」の例。](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| 次の期間 | 比較する属性またはイベント **必須** は、選択した月または年の範囲内で発生します。 月を選択した場合、属性またはイベントが発生した月と年の両方を選択する必要があります。  年を選択した場合は、属性またはイベントが発生した年を選択するだけです。 月を選択した場合は、「[!UICONTROL &#x200B; 年を無視 &#x200B;]」チェックボックスを有効にすることもできます。 | ○ | ![ 使用されている「During」時間制約の例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| 次の期間 | 比較する属性またはイベント **必須** は、選択した月または年の範囲内で発生します。 月を選択した場合、属性またはイベントが発生した月と年の両方を選択する必要があります。  年を選択した場合は、属性またはイベントが発生した年を選択するだけです。 月を選択した場合は、「[!UICONTROL  年を無視 ]」チェックボックスを有効にすることもできます。 | ○ | ![ 使用されている「During」時間制約の例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
 | （+/ –）内 | 比較される属性またはイベント **必須** は、選択した日付から数日、数週間、数か月、または数年以内に発生します。 この期間には、両方の日付の **両方を含む** が指定されます。 選択した日付は、今日、昨日または別のカスタム日付にすることができます。 | ○ | ![ 使用されている「Within」時間制約の例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
 | 次の前 | 比較する属性またはイベント **必須** は、選択した日付より前です。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![ 使用されている「前」時間制約の例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
 | 後 | 比較する属性またはイベント **選択した日付の後** ある必要があります）。 選択した日付は、カスタムの指定日でも、日、週、月、または年前の範囲で選択した日付でもかまいません。 | ○ | ![ 使用されている「After」時間制約の例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |

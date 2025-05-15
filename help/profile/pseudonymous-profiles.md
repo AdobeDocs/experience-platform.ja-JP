@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
 source-wordcount: '1264'
-ht-degree: 50%
+ht-degree: 54%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="偽名プロファイルデータの有効期限"
->abstract="偽名プロファイルデータの有効期限は、偽名プロファイルがAdobe Experience Platformに残ってから削除されるまでの日数を表します。 この値は 1 以上に設定する必要があります。 偽名プロファイルが削除されるまで、最大 3 日かかる場合があることに注意してください。"
+>abstract="偽名プロファイルデータの有効期限は、偽名プロファイルが削除されるまで Adobe Experience Platform に保持される日数を表します。この値は 1 以上に設定する必要があります。偽名プロファイルが削除されるまで、最長で 3 日かかる場合があることに注意してください。"
 
 次の条件を満たす場合、偽名データの有効期限についてプロファイルが考慮されます。
 
@@ -53,7 +53,7 @@ Adobe Experience Platformでは、偽名プロファイルのデータの有効�
 
 ![ プロファイルダッシュボードの「設定」ボタンがハイライト表示されます。](./images/pseudonymous-profiles/profile-settings.png)
 
-[!UICONTROL &#x200B; プロファイル設定 &#x200B;] ポップオーバーが表示されます。 このポップオーバーでは、偽名プロファイルデータの有効期限の日数と、データの有効期限に使用する ID 名前空間を設定できます。
+[!UICONTROL  プロファイル設定 ] ポップオーバーが表示されます。 このポップオーバーでは、偽名プロファイルデータの有効期限の日数と、データの有効期限に使用する ID 名前空間を設定できます。
 
 実稼動用サンドボックスの場合、デフォルトの偽名プロファイルデータの有効期限は 14 日です（最小は 1 日、最大は 365 日）。 開発用サンドボックスの場合、デフォルトの偽名プロファイルデータの有効期限は 3 日です（最小は 1 日、最大は 365 日）。
 

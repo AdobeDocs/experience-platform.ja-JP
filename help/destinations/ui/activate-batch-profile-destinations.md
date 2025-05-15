@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
 source-wordcount: '4596'
-ht-degree: 48%
+ht-degree: 51%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 48%
 
 >[!IMPORTANT]
 > 
-> * オーディエンスをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
-> * ワークフローの [ マッピングステップ ](#mapping) を実行せずにオーディエンスをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+> * オーディエンスをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+> * ワークフローの [ マッピングステップ ](#mapping) を実行せずにオーディエンスをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 > 
 > 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
@@ -87,12 +87,12 @@ CSV ファイルの書き出しでは、書き出したファイルの構造を�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_weekly_messaging"
 >title="週次書き出し"
->abstract="<sup>*</sup> 開始日を選択すると、選択した終了日まで、その週の当日に後続のエクスポートが実行されます。"
+>abstract="<sup>*</sup> 開始日を選択すると、選択した終了日まで、その週のその日にその後の書き出しが実行されます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
->title="月次エクスポート"
->abstract="<sup>*</sup> 開始日を選択すると、選択した終了日まで、その月の日付に後続のエクスポートが実行されます。 月の日数が 30 日または 31 日に満たない場合、月の最終日にエクスポートが行われます。"
+>title="月次書き出し"
+>abstract="<sup>*</sup> 開始日を選択すると、選択した終了日まで、その月のその日にその後の書き出しが実行されます。月の日数が 30 日または 31 日に満たない場合、月の最終日に書き出しが行われます。"
 
 [!DNL Adobe Experience Platform] は、メールマーケティングおよびクラウドストレージの宛先のデータを [ 様々なファイルタイプ ](#supported-file-formats-export) として書き出します。 **[!UICONTROL スケジュール]** ページでは、書き出す各オーディエンスのスケジュールとファイル名を設定できます。
 
@@ -125,7 +125,7 @@ Experience Platformでは、各ファイル書き出しのデフォルトのス�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="オーディエンス評価後にアクティベート"
->abstract="<p>アクティベーションは、毎日のセグメント化ジョブが完了した直後に実行されます。 これにより、最新のプロファイルが確実に書き出されます。</p><p>オーディエンスの評価後にプロファイルを書き出すオプションは、毎週および毎月の書き出し頻度では <i> 使用できません </i>。</p>"
+>abstract="<p>アクティベーションは、毎日のセグメント化ジョブが完了した直後に実行されます。 これにより、最新のプロファイルが確実に書き出されます。</p><p>オーディエンスの評価後にプロファイルを書き出すオプションは、週次および月次の書き出し頻度では使用<i>できません</i>。</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -141,7 +141,7 @@ Experience Platformでは、各ファイル書き出しのデフォルトのス�
    * **[!UICONTROL 1 回]**：オンデマンドによる 1 回限りの完全ファイルの書き出しをスケジュールします。
    * **[!UICONTROL 毎日]**：指定した時刻に、毎日 1 回、完全ファイルの書き出しをスケジュールします。
    * **[!UICONTROL 毎週]**：開始日を選択すると、選択した終了日まで、その週の当日に後続のエクスポートが実行されます。
-   * **[!UICONTROL 毎月]**：開始日を選択すると、その月の開始日から選択した終了日まで、以降のエクスポートが発生します。 月の日数が 30 日または 31 日に満たない場合、月の最終日にエクスポートが行われます。
+   * **[!UICONTROL 毎月]**：開始日を選択すると、その月の開始日から選択した終了日まで、以降のエクスポートが発生します。 月の日数が 30 日または 31 日に満たない場合、月の最終日に書き出しが行われます。
 
 2. **[!UICONTROL 時間]** 切り替えスイッチを使用して、書き出しをオーディエンス評価直後に実行するか、指定した時間にスケジュールに沿って実行するかを選択します。 「**[!UICONTROL スケジュール済み]**」オプションを選択すると、セレクターを使用して書き出しを実行する時刻を [!DNL UTC] 形式で選択できます。
 
@@ -450,7 +450,7 @@ Experience Platformでは、各ファイル書き出しのデフォルトのス�
 
 ### 同じタイムスタンプを持つプロファイルの重複排除動作 {#deduplication-same-timestamp}
 
-ファイルベースの宛先にプロファイルを書き出す場合、重複排除では、複数のプロファイルが同じ重複排除キーと同じ参照タイムスタンプを共有している場合に、1 つのプロファイルのみが書き出されるようにします。 このタイムスタンプは、プロファイルのオーディエンスメンバーシップまたは ID グラフが最後に更新された瞬間を表します。 プロファイルの更新および書き出し方法について詳しくは、[ プロファイルの書き出し動作 ](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) ドキュメントを参照してください。
+ファイルベースの宛先にプロファイルを書き出す場合、重複排除では、複数のプロファイルが同じ重複排除キーと同じ参照タイムスタンプを共有している場合に、1 つのプロファイルのみが書き出されるようにします。 このタイムスタンプは、プロファイルのオーディエンスメンバーシップまたは ID グラフが最後に更新された瞬間を表します。 プロファイルの更新および書き出し方法について詳しくは、[ プロファイルの書き出し動作 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) ドキュメントを参照してください。
 
 #### 主な考慮事項
 
@@ -524,7 +524,7 @@ Experience Platformでは、各ファイル書き出しのデフォルトのス�
 
 >[!IMPORTANT]
 > 
->カタログ内のすべてのクラウドストレージの宛先では、改善された [[!UICONTROL &#x200B; マッピング &#x200B;] 手順を表示できます。この手順は ](#mapping) この節で説明している **[!UICONTROL 属性を選択]** 手順に代わるものです。
+>カタログ内のすべてのクラウドストレージの宛先では、改善された [[!UICONTROL  マッピング ] 手順を表示できます。この手順は ](#mapping) この節で説明している **[!UICONTROL 属性を選択]** 手順に代わるものです。
 >
 >この **[!UICONTROL 属性を選択]** 手順は、Adobe Campaign、Oracle Responsys、Oracle Eloqua およびSalesforce Marketing Cloudのメールマーケティング宛先に対しても引き続き表示されます。
 

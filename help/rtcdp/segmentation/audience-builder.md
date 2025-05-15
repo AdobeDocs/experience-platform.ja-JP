@@ -2,12 +2,12 @@
 title: Real-Time Customer Data Platformの Audience Builder
 description: Real-Time Customer Data Platformの Audience Builder を使用してオーディエンスを作成する方法を説明します。
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 3%
+ht-degree: 10%
 
 ---
 
@@ -21,18 +21,18 @@ Adobe Experience Platform上に構築され [!DNL Adobe Real-Time Customer Data 
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showfullxdmschema"
->title="完全な XDM スキーマを表示"
->abstract="デフォルトでは、データを含むフィールドのみが表示されます。 このオプションを有効にすると、XDM スキーマ内のすべてのフィールドが表示されます。"
+>title="完全な XDM スキーマの表示"
+>abstract="デフォルトでは、データを含むフィールドのみが表示されます。このオプションを有効にして、XDM スキーマ内のすべてのフィールドを表示します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showrelationselectors"
->title="関係セレクターを表示"
->abstract="デフォルトでは、組織の標準の関係が使用されます。 このオプションを有効にすると、使用される関係セレクターが表示されます。"
+>title="関係セレクターの表示"
+>abstract="デフォルトでは、組織の標準の関係が使用されます。このオプションを有効にして、使用される関係セレクターを表示します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showconstrainedfields"
->title="制約されたフィールドを表示"
->abstract="デフォルトでは、制約を持たないフィールドのみが表示されます。 制約が設定されているフィールドを表示するには、このオプションを有効にします。"
+>title="制限されたフィールドの表示"
+>abstract="デフォルトでは、何の制限もないフィールドのみが表示されます。このオプションを有効にして、制限が設定されているフィールドを表示します。"
 
 アカウントに Audience Builder を使用する場合、オーディエンスのフィールドとしてアカウント属性または既存のオーディエンスを使用できます。
 
@@ -44,7 +44,7 @@ Adobe Experience Platform上に構築され [!DNL Adobe Real-Time Customer Data 
 >
 >「**[!UICONTROL フィールドオプション]**」セクションは現在ベータ版で、一部のお客様のみご利用いただけます。 詳しくは、Adobe カスタマーケアにお問い合わせください。
 
-[!UICONTROL &#x200B; 設定 &#x200B;] セクションが表示されます。 このセクションでは、表示するフィールドとフィールドの関係を更新できます。
+[!UICONTROL  設定 ] セクションが表示されます。 このセクションでは、表示するフィールドとフィールドの関係を更新できます。
 
 **[!UICONTROL フィールドオプション]** の場合は、データを含むフィールドのみ、または完全な XDM スキーマを表示できます。
 
@@ -54,7 +54,7 @@ Adobe Experience Platform上に構築され [!DNL Adobe Real-Time Customer Data 
 
 ### 属性 {#attributes}
 
-「[!UICONTROL &#x200B; 属性 &#x200B;]」タブでは、XDM ビジネスアカウントクラスに属するアカウント属性と、機会および人物ベースの属性を参照できます。 各フォルダーを展開すると、追加の属性を表示できます。各属性は、ワークスペースの中央にある [ ルールビルダーキャンバス ](#rule-builder-canvas) にドラッグできるタイルです。
+「[!UICONTROL  属性 ]」タブでは、XDM ビジネスアカウントクラスに属するアカウント属性と、機会および人物ベースの属性を参照できます。 各フォルダーを展開すると、追加の属性を表示できます。各属性は、ワークスペースの中央にある [ ルールビルダーキャンバス ](#rule-builder-canvas) にドラッグできるタイルです。
 
 ![ 「属性」タブは、オーディエンスビルダーに表示されます ](../assets/segmentation/audience-builder/attributes.png)
 

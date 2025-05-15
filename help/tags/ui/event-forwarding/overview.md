@@ -1,12 +1,12 @@
 ---
 title: イベント転送の概要
-description: Experience Platform Edge Networkを使用して、タグの実装を変更せずにタスクを実行できる、Adobe Experience Platformのイベント転送について説明します。
+description: タグの実装を変更せずに Experience Platform Edge Network を使用してタスクを実行できる、Adobe Experience Platform のイベント転送について説明します。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 51%
+ht-degree: 54%
 
 ---
 
