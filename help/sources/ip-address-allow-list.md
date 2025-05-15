@@ -2,9 +2,9 @@
 description: Adobe Experience Platform ソースを正常に使用するために許可リストに追加する必要がある IP アドレスについて説明します。
 title: ソースの IP アドレス許可リスト
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 11%
 
 ---
@@ -292,4 +292,8 @@ ht-degree: 11%
 
 ソースをAWSのエクスペリエンスに接続するには、許可リストに次の IP アドレスを追加する必要があります。
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
