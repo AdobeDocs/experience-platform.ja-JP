@@ -2,9 +2,9 @@
 title: 拡張機能の開発
 description: このドキュメントでは、タグ拡張機能開発プロセスの一般的な概要と、詳細なプロセスに関するその他のドキュメントへのリンクを示します。
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '462'
 ht-degree: 97%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 97%
 計画を立てることで、以下のガイドが拡張機能の開発プロセスを理解するのに役立ちます。
 
 * 左側のナビゲーションの [はじめる前に](../getting-started.md) と **拡張機能の開発** の下にあるその他のドキュメントは、拡張機能を理解するための参考資料です。 これには、拡張機能ができること、拡張機能と Adobe Experience Platform 間でのユーザー情報の保存および受け渡し方法、コードのライブラリへのバンドル方法、拡張機能コードが実行時にブラウザーで解釈および使用される方法に関する詳細が含まれます。
-* [拡張機能チュートリアルビデオ](https://youtu.be/rxjtC9o4rl0) は、仕様を開始する際に非常に役立ちます。
+<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
 * YouTube プレイリストの「[拡張機能の概要](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m)」では、拡張機能パッケージの作成プロセスを順を追って説明しています。
 * 記事「[JSON スキーマの理解](https://spacetelescope.github.io/understanding-json-schema/index.html#)」を参照してください。
 * [JSON リント/バリデーター ](https://jsonlint.com/)。
