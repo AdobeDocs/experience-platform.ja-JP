@@ -231,7 +231,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 >[!TIP]
 > 
->このフォルダー構造の最初のレベル（`folder-name-you-provided`）は、データセットを書き出すために ]**宛先に接続 [ したときに指定した**[!UICONTROL  フォルダーパス ](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) を表します。
+>このフォルダー構造の最初のレベル（`folder-name-you-provided`）は、データセットを書き出すために &rbrack;**宛先に接続 &lbrack; したときに指定した**&#x200B;[[!UICONTROL &#x200B; フォルダーパス &#x200B;]](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) を表します。
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
