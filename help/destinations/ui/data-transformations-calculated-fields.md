@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="計算フィールドを追加"
 >abstract="<p>**計算フィールドを追加**&#x200B;コントロールを使用して、クラウドストレージの宛先に書き出されたデータに対して様々なデータ変換を実行します。 例えば、データにハッシュを適用したり、配列を文字列に連結したりできます。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=ja#examples" text="例"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="例"
 
 >[!AVAILABILITY]
 >
@@ -31,7 +31,7 @@ ht-degree: 8%
 
 データ変換に計算フィールドを使用するには：
 
-1. 目的のクラウドストレージの宛先に [ 接続 ](/help/destinations/ui/connect-destination.md) します。 目的のクラウドの宛先に接続する場合は、**[!UICONTROL 配列、マップ、オブジェクトを書き出し]**&#x200B;[ オプションをオフ ](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle) に切り替えます。
+1. 目的のクラウドストレージの宛先に [ 接続 ](/help/destinations/ui/connect-destination.md) します。 目的のクラウドの宛先に接続する場合は、**[!UICONTROL 配列、マップ、オブジェクトを書き出し]**[ オプションをオフ ](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle) に切り替えます。
 2. クラウドストレージ宛先の [ アクティベーション手順 ](/help/destinations/ui/activate-batch-profile-destinations.md) を実行し、[ マッピング ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 手順に進みます。
 
 ## 計算フィールドの操作方法 {#how-to-export-calculated-fields}
