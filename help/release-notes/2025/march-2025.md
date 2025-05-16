@@ -65,7 +65,7 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 
 ## 連合オーディエンス構成 {#federated-audience-composition}
 
-Federated Audience Composition の最新の更新について詳しくは、こちら [ 専用リリースノート ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) を参照してください。
+Federated Audience Composition の最新の更新について詳しくは、こちら [ 専用リリースノート ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes) を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
