@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート（2025年3月）
 description: Adobe Experience Platform の 2025年3月のリリースノート。
 exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: ca2793f6e498f63bffb0f30ebc9797ea5ed52a70
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1248'
 ht-degree: 21%
 
 ---
@@ -57,7 +57,7 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 | 機能 | 説明 |
 | --- | --- |
 | [ ストリーミング宛先のレポート精度の強化 ](../../dataflows/ui/monitor-destinations.md) | 2025 年 3 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートを展開しています。 この機能強化により、Experience Platformのレポートと出力先プラットフォームの間の整合性が向上します。 <br> この更新の前は、すべてのアクティベーションの再試行が **[!UICONTROL ID 失敗]** に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。 <br> この機能強化は、すべてのストリーミング宛先に適用されます。 この機能強化に <br> り、ストリーミング宛先のユーザーでは、**[!UICONTROL 失敗した ID]** 数が予期された低下する場合があります。 |
-| [ エンタープライズ宛先とエッジ宛先でのマップタイプのフィールド書き出しのサポート ](/help/destinations/ui/export-arrays-maps-objects.md) | [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、{Azure Event Hubs[&#128279;](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) および [6}Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) の宛先にデータを書き出す際に、アクティベーションワークフローのマッピング手順で、書き出し用のマップタイプフィールドを選択できるようになりました。<br> ![ マップタイプ フィールドをエンタープライズ宛先に書き出します。](../2025/assets/march/export-map.png " マップタイプフィールドをエンタープライズ宛先に書き出します。"){width="250" align="center" zoomable="yes"} |
+| [ エンタープライズ宛先とエッジ宛先でのマップタイプのフィールド書き出しのサポート ](/help/destinations/ui/export-arrays-maps-objects.md) | [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md) および [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) の宛先にデータを書き出す際に、アクティベーションワークフローのマッピング手順で書き出し用のマップタイプフィールドを選択できるようになりました。<br> ![ マップタイプ フィールドをエンタープライズ宛先に書き出します。](../2025/assets/march/export-map.png " マップタイプフィールドをエンタープライズ宛先に書き出します。"){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Experience Platformでは、毎日のスナップショットで得られた、�
 
 ## 連合オーディエンス構成 {#federated-audience-composition}
 
-Federated Audience Composition の最新の更新について詳しくは、こちら [ 専用リリースノート ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes) を参照してください。
+Federated Audience Composition の最新の更新について詳しくは、こちら [ 専用リリースノート ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 

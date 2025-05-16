@@ -3,9 +3,9 @@ title: Real-Time CDPからの配列、マップ、オブジェクトの書き出
 type: Tutorial
 description: Real-Time CDPからクラウドストレージの宛先に配列、マップ、オブジェクトを書き出す方法を説明します。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1077'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >配列やその他の複雑なオブジェクトをクラウドストレージの宛先に書き出す機能は、[[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) の宛先で一般的に使用できます。
 >
->さらに、マップタイプフィールドを次の宛先に書き出すことができます：[Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、[Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)。
+>さらに、マップタイプのフィールドを次の宛先に書き出すことができます：[Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、[Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)。
 
 
 Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/catalog/cloud-storage/overview.md) に配列、マップ、オブジェクトを書き出す方法を説明します。 さらに、マップタイプのフィールドを [ エンタープライズ宛先 ](/help/destinations/destination-types.md#advanced-enterprise-destinations) および制限された [ エッジパーソナライゼーション宛先 ](/help/destinations/destination-types.md#edge-personalization-destinations) に書き出すことができます。 このドキュメントでは、書き出しワークフロー、この機能で有効になるユースケース、既知の制限事項について説明します。 宛先タイプごとに使用できる機能を理解するには、以下の表を参照してください。
@@ -28,7 +28,7 @@ Real-Time CDPから [ クラウドストレージの宛先 ](/help/destinations/
 | 既存のカスタムパートナー構築クラウドストレージの宛先（Destination SDKを介して構築されたカスタムファイルベースの宛先） | × |
 | エンタープライズ宛先（Amazon Kinesis、Azure Event Hubs、HTTP API） | 一部。 アクティベーションワークフローのマッピング手順で、マップタイプオブジェクトの選択および書き出しを行うことができます。 |
 | ストリーミングの宛先（例：Facebook、Braze、Google Customer Match など） | × |
-| Edge パーソナライゼーションの宛先（Adobe Target） | 一部。 アクティベーションワークフローのマッピング手順で、マップタイプオブジェクトの選択および書き出しを行うことができます。 |
+| エッジパーソナライゼーション宛先 | × |
 
 {style="table-layout:auto"}
 
@@ -106,7 +106,7 @@ organizations = [{
 
 このオプションを *off* に設定すると、オーディエンスをアクティブ化する際に、「計算フィールド」オプションを使用して、様々なデータ変換関数を適用できます。 ただし、配列、マップ、オブジェクトを JSON ファイルまたは Parquet ファイルに書き出すことはできません。その場合は、別の宛先を設定する必要があります。
 
-計算フィールド機能を使用して配列 *マップおよびオブジェクトを CSV ファイルに書き出し、`array_to_string` 関数を使用してそれらを文字列に連結すること* できます。 その関数の使用について [&#128279;](#array-to-string-function-export-arrays) 詳細は、 こちら。
+計算フィールド機能を使用して配列 *マップおよびオブジェクトを CSV ファイルに書き出し、`array_to_string` 関数を使用してそれらを文字列に連結すること* できます。 その関数の使用について ](#array-to-string-function-export-arrays) 詳細は、[ こちら。
 
 詳しくは、計算フィールドを使用した [ クラウドストレージの宛先に書き出されたデータに対する変換の実行 ](/help/destinations/ui/data-transformations-calculated-fields.md) の操作を参照してください。
 
