@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年4月
 description: Adobe Experience Platform の 2025年4月のリリースノート。
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: tm+mt
-source-wordcount: '2192'
-ht-degree: 23%
+source-wordcount: '2069'
+ht-degree: 20%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 23%
 >その他のAdobe Experience Platform アプリケーションのリリースノートについては、次のドキュメントを参照してください。
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年4月29日**
 
@@ -30,7 +30,6 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [エクスペリエンスデータモデル](#xdm)
 - [ID サービス](#identity)
 - [クエリサービス](#query-service)
-- [リアルタイム顧客プロファイル](#profile)
 - [サンドボックス](#sandboxes)
 - [ソース](#sources)
 - [ユースケースプレイブック](#use-case-playbooks)
@@ -41,7 +40,7 @@ Experience Leagueは、Adobe製品のスキルアップに役立つ包括的な�
 
 | 機能 | 説明 |
 | --- | --- |
-| パーソナライズされたホームページ | パーソナライズされたホームページに [Experience League](https://experienceleague.adobe.com/ja/home#) でアクセスしてカスタマイズします。 Adobeの資格情報を使用してログインし、上部のメニューで「**[!UICONTROL Experience League]**」を選択して、学習体験の最適化を開始します。 <ul><li>**ブックマーク**:[!UICONTROL &#x200B; ブックマーク &#x200B;] 機能を使用して、お気に入りのリソースを 1 か所に保存および収集します。 プレイリスト、記事、チュートリアルなど、様々なコンテンツを保存できます。</li><li>**ラーニングのカスタマイズ**：お客様のニーズに最適な役割、業界、商品、エクスペリエンスレベルでExperience League プロファイルを更新することで、ラーニングエクスペリエンスを強化できます。</li><li>**Recommendations**：最近のアクティビティに基づいて推奨された学習コンテンツを表示します。</li><li>**最近表示された項目**:「[!UICONTROL &#x200B; 最近表示された項目 &#x200B;] セクションを使用すると、ドキュメントやビデオなど、最近表示されたコンテンツにすばやく戻ることができます。</li><li>**学習リソース**:[!UICONTROL &#x200B; すべての学習リソース &#x200B;] パネルを使用して、チュートリアル、ドキュメント、コミュニティ、イベント、認定制度に移動します。</li><li>**新機能**:Experience Leagueの最新コンテンツのストリームについては、[!UICONTROL &#x200B; 新機能 &#x200B;] の節をご覧ください。</li><li>**オンデマンドで過去のイベントを視聴**:[!UICONTROL &#x200B; オンデマンドで過去のイベントを視聴 &#x200B;] セクションで、製品スポットライト、ユースケースおよびチュートリアルに関する過去のライブストリームを視聴します。</li></ul><br> ![Experience Leagueのパーソナライズされたホームページ。](../2025/assets/april/personalized-home-page.png "Experience Leagueのパーソナライズされたホームページ。"){width="250" align="center" zoomable="yes"} |
+| パーソナライズされたホームページ | パーソナライズされたホームページに [Experience League](https://experienceleague.adobe.com/en/home#) でアクセスしてカスタマイズします。 Adobeの資格情報を使用してログインし、上部のメニューで「**[!UICONTROL Experience League]**」を選択して、学習体験の最適化を開始します。 <ul><li>**ブックマーク**:[!UICONTROL  ブックマーク ] 機能を使用して、お気に入りのリソースを 1 か所に保存および収集します。 プレイリスト、記事、チュートリアルなど、様々なコンテンツを保存できます。</li><li>**ラーニングのカスタマイズ**：お客様のニーズに最適な役割、業界、商品、エクスペリエンスレベルでExperience League プロファイルを更新することで、ラーニングエクスペリエンスを強化できます。</li><li>**Recommendations**：最近のアクティビティに基づいて推奨された学習コンテンツを表示します。</li><li>**最近表示された項目**:「[!UICONTROL  最近表示された項目 ] セクションを使用すると、ドキュメントやビデオなど、最近表示されたコンテンツにすばやく戻ることができます。</li><li>**学習リソース**:[!UICONTROL  すべての学習リソース ] パネルを使用して、チュートリアル、ドキュメント、コミュニティ、イベント、認定制度に移動します。</li><li>**新機能**:Experience Leagueの最新コンテンツのストリームについては、[!UICONTROL  新機能 ] の節をご覧ください。</li><li>**オンデマンドで過去のイベントを視聴**:[!UICONTROL  オンデマンドで過去のイベントを視聴 ] セクションで、製品スポットライト、ユースケースおよびチュートリアルに関する過去のライブストリームを視聴します。</li></ul><br> ![Experience Leagueのパーソナライズされたホームページ。](../2025/assets/april/personalized-home-page.png "Experience Leagueのパーソナライズされたホームページ。"){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -73,7 +72,7 @@ Adobe Experience Platform では、クライアントサイドのカスタマー
 
 | 機能 | 説明 |
 | --- | --- |
-| 完全ファイル書き出しの **毎週** および **毎月** スケジュールオプション | クラウドストレージファイルベースの宛先に対してアクティブ化する際に、人物および見込み客オーディエンスの完全なファイル書き出しを毎週または毎月スケジュールできるようになりました。 スケジュールオプションについて [&#128279;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 詳細情報 。 |
+| 完全ファイル書き出しの **毎週** および **毎月** スケジュールオプション | クラウドストレージファイルベースの宛先に対してアクティブ化する際に、人物および見込み客オーディエンスの完全なファイル書き出しを毎週または毎月スケジュールできるようになりました。 スケジュールオプションについて ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 詳細情報 [。 |
 
 {style="table-layout:auto"}
 
@@ -108,7 +107,7 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE &#x200B; 限定提供 &#x200B;]{type=Informative} [!DNL Identity Graph Linking Rules] | 開発用サンドボックスのすべての顧客が、ID グラフリンクルールにアクセスできるようになりました。 <ul><li>**アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。</li><li>**重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。</li><li>**次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。</li></ul> |
+| [!BADGE  限定提供 ]{type=Informative} [!DNL Identity Graph Linking Rules] | 開発用サンドボックスのすべての顧客が、ID グラフリンクルールにアクセスできるようになりました。 <ul><li>**アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。</li><li>**重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。</li><li>**次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -128,19 +127,7 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 | モデル予測での列選択の強化 | 特定の列を選択し、拡張 `model_predict` 構文を使用してエイリアスを適用します。 特性ベクトルや確率スコアなどの中間予測結果を取得します。 拡張選択には、機能フラグのアクティブ化が必要です。 構文例および機能フラグの詳細については、[ モデルライフサイクルドキュメント ](../../query-service/advanced-statistics/models.md#select-specific-output-fields) を参照してください。 |
 | CREATE TABLE と INSERT INTO を使用したモデル予測出力の保存 | [CREATE TABLE AS SELECT を使用して、選択した予測出力を新しいテーブルに保存するか、または INSERT INTO SELECT を使用して、既存のテーブルに挿入 ](../../query-service/advanced-statistics/models.md#predict)。 拡張列選択を有効にすると、特性ベクトルや確率などの中間結果も最終的な予測と共に保持できます。 使用例については、[SQL 構文ドキュメント ](../../query-service/sql/syntax.md#create-table-as-select) を参照してください。 |
 
-[!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
-
-## リアルタイム顧客プロファイル {#profile}
-
-Adobe Experience Platform を使用すると、顧客がいつどこからブランドとやり取りしても、顧客に合わせて調整された、一貫性と関連性のある体験を提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせて、各顧客の全体像を確認できます。プロファイルを使用すると、顧客データを統合ビューに統合して、すべての顧客インタラクションの実用的なタイムスタンプ付きのアカウントを提供できます。
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| 偽名プロファイルデータの有効期限 | プロファイルダッシュボードで偽名プロファイルデータの有効期限を管理します。 この機能と偽名プロファイルについて詳しくは、[偽名プロファイルデータの有効期限ガイド](../../profile/pseudonymous-profiles.md)を参照してください。 |
-
-{style="table-layout:auto"}
-
-リアルタイム顧客プロファイルについて詳しくは、[ プロファイルの概要 ](../../profile/home.md) を参照してください。
+[!DNL Query Service] について詳しくは、[[!DNL Query Service]  の概要](../../query-service/home.md)を参照してください。
 
 ## サンドボックス {#sandboxes}
 
