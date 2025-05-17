@@ -1,20 +1,17 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；mysql;MySQL
-solution: Experience Platform
-title: UI での MySQL Source接続の作成
-type: Tutorial
-description: Adobe Experience Platform UI を使用して MySQL ソース接続を作成する方法を説明します。
+title: Ui を使用した MySQL のExperience Platformへの接続
+description: UI を使用して MySQL データベースをExperience Platformに接続する方法を説明します。
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 37%
+source-wordcount: '540'
+ht-degree: 16%
 
 ---
 
 # UI での [!DNL MySQL] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、Adobe Experience Platform UI を使用して [!DNL MySQL] ソース接続を作成する手順について説明します。
+このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL MySQL] データベースをAdobe Experience Platformに接続する方法について説明します。
 
 ## はじめに
 
@@ -29,36 +26,62 @@ Adobe Experience PlatformのSource コネクタには、外部ソースのデー
 
 ### 必要な資格情報の収集
 
-[!DNL Experience Platform] で [!DNL MySQL] アカウントにアクセスするには、次の値を指定する必要があります。
+認証について詳しくは、[[!DNL MySQL]  概要 ](../../../../connectors/databases/mysql.md#prerequisites) を参照してください。
 
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `connectionString` | アカウントに関連付けられた [!DNL MySQL] の接続文字列。 [!DNL MySQL] の接続文字列パターンは `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` です。 接続文字列とその取得方法について詳しくは、[[!DNL MySQL]  ドキュメント ](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html) を参照してください。 |
+## ソースカタログのナビゲート
 
-## [!DNL MySQL] アカウントの接続
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL MySQL] アカウントを [!DNL Experience Platform] にリンクします。
+[!DNL MySQL] に接続するには、*[!UICONTROL データベース]* カテゴリに移動し、**[!UICONTROL MySQL]** ソースカードを選択してから **[!UICONTROL 設定]** を選択します。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+>[!TIP]
+>
+>ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-**[!UICONTROL Databases]** カテゴリで、「**[!UICONTROL MySQL]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい [!DNL MySQL] コネクタを作成します。
+![MySQL ソースカードが選択されているソースカタログ ](../../../../images/tutorials/create/my-sql/catalog.png)
 
-![](../../../../images/tutorials/create/my-sql/catalog.png)
+## 既存のアカウントを使用 {#existing}
 
-**[!UICONTROL MySQL に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL MySQL] アカウントを選択します。
 
-### 新しいアカウント
+![ ソースワークフローの既存のアカウントインターフェイスで「既存のアカウント」が選択されている様子。](../../../../images/tutorials/create/my-sql/existing.png)
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL MySQL] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+## 新しいアカウントを作成 {#new}
 
-![](../../../../images/tutorials/create/my-sql/new.png)
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-### 既存のアカウント
+![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/my-sql/new.png)
 
-既存のアカウントに接続するには、接続する [!DNL MySQL] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
+### Azure 上のExperience Platformへの接続 {#azure}
 
-![](../../../../images/tutorials/create/my-sql/existing.png)
+アカウントキーまたは基本認証を使用して、[!DNL MySQL] データベースを Azure 上のExperience Platformに接続できます。
 
-## 次の手順
+>[!BEGINTABS]
 
-このチュートリアルでは、MySQL アカウントとの接続を確立しました。 次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+>[!TAB  アカウントキー認証 ]
+
+アカウントキー認証を使用するには、「**[!UICONTROL アカウントキー認証]**」を選択し、「[ 接続文字列 ](../../../../connectors/databases/mysql.md#azure)」を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
+
+![ 「アカウントキー認証」が選択されたソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/my-sql/account-key.png)
+
+>[!TAB  基本認証 ]
+
+基本認証を使用する場合は、「**[!UICONTROL 基本認証]**」を選択し、[ 認証資格情報 ](../../../../connectors/databases/mysql.md#azure) の値を入力して「**[!UICONTROL ソースに接続]**」を選択します。
+
+![ ソースワークフローで「基本認証」が選択された新しいアカウントインターフェイス ](../../../../images/tutorials/create/my-sql/basic-auth.png)
+
+>[!ENDTABS]
+
+### Amazon Web ServicesのExperience Platform（AWS）への接続 {#aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
+
+新しい [!DNL MySQL] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、必要な [ 認証用の資格情報 ](../../../../connectors/databases/mysql.md#aws) を指定します。
+
+![AWSに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/my-sql/aws.png)
+
+## データのデータフロー [!DNL MySQL] 作成
+
+[!DNL MySQL] データベースに正常に接続できたので、[ データフローを作成し、データベースからExperience Platformにデータを取り込む ](../../dataflow/databases.md) ことができます。
