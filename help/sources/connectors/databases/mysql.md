@@ -3,16 +3,16 @@ title: MySQL Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して MySQL をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2025-05-17T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: 7a5dae76c5b58b302b4f3295efc17f40dbb9b18b
+source-git-commit: f758479c37b72752bbb8a371de88bf653b2e6030
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 3%
+source-wordcount: '714'
+ht-degree: 5%
 
 ---
 
 # [!DNL MySQL]
 
-[!DNL MySQL] は、構造化データの保存と管理に使用されるオープンソースのリレーショナルデータベース管理システムです。 データをテーブルに整理し、SQL （Structured Query Language）を使用して情報のクエリと更新を行います。 [!DNL MySQL] は、web アプリケーションで広く使用され、複数のプラットフォームをサポートし、速度、信頼性、使いやすさで知られています。 小規模な Web サイトから大規模な企業システムまで、あらゆる環境に最適です。
+[!DNL MySQL] は、構造化データの保存と管理に使用されるオープンソースのリレーショナルデータベース管理システムです。 データをテーブルに整理し、SQL （Structured Query Language）を使用して情報のクエリと更新を行います。 [!DNL MySQL] は、web アプリケーションで広く使用され、複数のプラットフォームをサポートし、速度、信頼性、使いやすさで知られています。
 
 [!DNL MySQL] ソースを使用すると、アカウントを接続して [!DNL MySQL] データベースからAdobe Experience Platformにデータを取り込むことができます。
 
@@ -48,12 +48,29 @@ ht-degree: 3%
 | 資格情報 | 説明 |
 | --- | --- |
 | `server` | [!DNL MySQL] データベースの名前または IP アドレス。 |
-| `database` | 接続先の [!DNL MySQL] データベースの名前。 |
 | `username` | [!DNL MySQL] データベース認証に関連付けられたユーザー名。 |
 | `password` | [!DNL MySQL] データベース認証に関連付けられたパスワード。 |
+| `database` | 接続先の [!DNL MySQL] データベースの名前。 |
 | `sslMode` | 接続に適用する [!DNL Secure Sockets Layer] （SSL）方式。 使用可能な値は次のとおりです。 <ul><li>`DISABLED`:SSL を無効にするには、このオプションを使用します。 サーバーに SSL 設定が必要な場合、接続は失敗します</li><li>`PREFERRED`：サーバーが SSL 接続をサポートしている場合に、SSL 接続を優先させるには、このオプションを使用します。 このオプションでは、非 SSL 接続も可能です。</li><li>`REQUIRED`：このオプションを使用して、SSL 接続を必須にします。 サーバーが SSL をサポートしていない場合、接続は失敗します。</li><li>`Verify-Ca`: サーバーが SSL をサポートしていない場合に、接続の失敗時にサーバー証明書を検証するには、このオプションを使用します。</li><li>`Verify Identity`: サーバーが SSL をサポートしていない場合に、接続の失敗時にホストの名前を使用してサーバー証明書を検証するには、このオプションを使用します。</li></ul> |
 
 >[!ENDTABS]
+
+### Amazon Web Services上のExperience Platformに対する認証（AWS） {#aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
+
+AWS上のExperience Platformに接続するには、次の資格情報の値 [!DNL MySQL] 指定する必要があります。
+
+| 資格情報 | 説明 |
+| --- | --- |
+| `server` | [!DNL MySQL] データベースの名前または IP。 |
+| `username` | データベースの名前。 |
+| `password` | データベースに対応するユーザー名。 |
+| `database` | データベースに対応するパスワード。 |
+| `sslMode` | 接続に適用する [!DNL Secure Sockets Layer] （SSL）方式。 使用可能な値は次のとおりです。 <ul><li>`DISABLED`:SSL を無効にするには、このオプションを使用します。 サーバーに SSL 設定が必要な場合、接続は失敗します</li><li>`PREFERRED`：サーバーが SSL 接続をサポートしている場合に、SSL 接続を優先させるには、このオプションを使用します。 このオプションでは、非 SSL 接続も可能です。</li><li>`REQUIRED`：このオプションを使用して、SSL 接続を必須にします。 サーバーが SSL をサポートしていない場合、接続は失敗します。</li><li>`Verify-Ca`: サーバーが SSL をサポートしていない場合に、接続の失敗時にサーバー証明書を検証するには、このオプションを使用します。</li><li>`Verify Identity`: サーバーが SSL をサポートしていない場合に、接続の失敗時にホストの名前を使用してサーバー証明書を検証するには、このオプションを使用します。</li></ul> |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL MySQL] の接続仕様 ID は `26d738e0-8963-47ea-aadf-c60de735468a` です。 **注意**：この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
 
 ## API を使用した [!DNL MySQL] のExperience Platformへの接続
 
