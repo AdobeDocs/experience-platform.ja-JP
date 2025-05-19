@@ -2,10 +2,10 @@
 title: データ管理ライセンス使用権限のベストプラクティス
 description: Adobe Experience Platform でライセンス使用権限をより適切に管理するために使用できるベストプラクティスとツールについて説明します。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 65%
+source-wordcount: '2338'
+ht-degree: 54%
 
 ---
 
@@ -15,13 +15,34 @@ Adobe Experience Platform は、お客様のデータをリアルタイムに更
 
 Experience Platformは、作成できるプロファイルの数や取り込めるデータの量を設定したライセンスを提供します。 任意のデータのソース、量または履歴を取り込めるので、データ量が増加するに従って、ライセンス使用権限を超過する可能性があります。
 
-このドキュメントでは、Adobe Experience Platform でのライセンス使用権限をより適切に管理するために、従うべきベストプラクティスと使用できるツールの概要を説明します。
+このガイドを参照して、Experience Platformでライセンス使用権限をより適切に管理するためのベストプラクティスや使用できるツールを確認してください。
 
-## Adobe Experience Platform データストレージについて
+## 機能の概要 {#summary-of-features}
 
-Experience Platformは、主に [!DNL data lake] とプロファイルストアの 2 つのデータリポジトリで構成されています。
+このドキュメントで概要を説明するベストプラクティスとツールを使用して、Experience Platform内でのライセンス使用権限をより適切に管理します。 このドキュメントは、すべてのExperience Platformのお客様に可視性と制御を提供するための追加機能がリリースされるたびに更新されます。
 
-**[!DNL data lake]** は、主に次のような目的で使用されます。
+次の表に、ライセンス使用権限をより適切に管理するために、現在、自由に使用できる機能のリストを示します。
+
+| 機能 | 説明 |
+| --- | --- |
+| [ データセット UI - エクスペリエンスイベントデータ保持 ](../../catalog/datasets/user-guide.md#data-retention-policy) | データレイクおよびプロファイルストアのデータに対して、固定保持期間を設定します。 設定された保持期間が終了すると、レコードが削除されます。 |
+| [ リアルタイム顧客プロファイル用のデータセットを有効/無効にする ](../../catalog/datasets/user-guide.md) | リアルタイム顧客プロファイルへのデータセット取り込みを有効または無効にします。 |
+| [ プロファイルストアのエクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) | プロファイル対応データセットに取り込まれるすべてのイベントに有効期限を適用できます。 この機能を有効にするには、Adobe アカウントチームまたはカスタマーケアにお問い合わせください。 |
+| [Adobe Analytics データ準備フィルター](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します |
+| [Adobe Audience Manager ソースコネクタフィルター](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager ソース接続フィルターを適用して、不要なデータを取得から除外します |
+| [イベント転送データフィルター](../../tags/ui/event-forwarding/overview.md) | サーバーサイド [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します詳しくは、[タグルール](../../tags/ui/managing-resources/rules.md)に関するドキュメントを参照してください。 |
+| [ライセンス使用状況ダッシュボード UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | ライセンスされた使用権限に対するExperience Platform製品の組織での使用状況を監視します。 毎日の使用状況スナップショット、予測トレンド、詳細なサンドボックスレベルのデータにアクセスして、プロアクティブなライセンス管理をサポートします。 |
+| [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | アドレス可能なオーディエンスに最も貢献するデータセットを出力します。 |
+| [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | アドレス可能なオーディエンスに最も貢献する ID 名前空間を出力します。 |
+| [ 偽名プロファイルデータの有効期限 ](../../profile/pseudonymous-profiles.md) | 偽名プロファイルのデータの有効期限を設定し、プロファイルストアからデータを自動的に削除します。 |
+
+{style="table-layout:auto"}
+
+## Experience Platformのデータストレージについて
+
+Experience Platformは、主にデータレイクとプロファイルストアの 2 つのデータリポジトリで構成されています。
+
+データレイクは、主に次のような目的で使用されます。
 
 * Experience Platform へのデータのオンボーディングのためのステージング領域として機能させる。
 * すべての Experience Platform データのための長期間のデータストレージとして機能させる。
@@ -40,9 +61,9 @@ Experience Platformは、主に [!DNL data lake] とプロファイルストア�
 
 Experience Platform のライセンスを取得すると、SKU によって異なるライセンス使用権限が提供されます。
 
-**[!DNL Addressable Audience]** - Experience Platform で契約により許可される顧客プロファイルの合計数（既知のプロファイルと匿名プロファイルの両方を含む）。
+**[!DNL Addressable Audience]**:Experience Platformで契約により許可される顧客プロファイルの合計数（既知のプロファイルと匿名プロファイルの両方を含む）。
 
-**[!DNL Total Data Volume]** - Adobe Experience Platform プロファイルサービスがエンゲージメントワークフローで使用できるデータの総量。
+**[!DNL Total Data Volume]**：リアルタイム顧客プロファイルがエンゲージメントワークフローで使用できるデータの総量です。
 
 これらの指標の可用性と各指標の具体的な定義は、お客様の組織が購入したライセンスによって異なります。
 
@@ -123,7 +144,7 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 
 {style="table-layout:auto"}
 
-#### プロファイルストア構成レポート
+### プロファイルストア構成レポート
 
 プロファイルストアの構成を理解するのに役立つ、様々なレポートが用意されています。 これらのレポートは、ライセンス使用状況をより最適化するために、エクスペリエンスイベントの有効期限を設定する方法と場所について、情報に基づいた決定を支援します。
 
@@ -132,13 +153,17 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### 偽名プロファイルデータの有効期限 {#pseudonymous-profile-expirations}
+### 偽名プロファイルデータの有効期限 {#pseudonymous-profile-expirations}
 
-この機能を使用すると、古くなった偽名プロファイルをプロファイルストアから自動的に削除できます。 この機能について詳しくは、[ 偽名プロファイルデータの有効期限の概要 ](../../profile/pseudonymous-profiles.md) を参照してください。
+偽名プロファイルデータの有効期限機能を使用して、有効でなくなったデータや、ユースケースで役に立たなくなったデータをプロファイルストアから自動的に削除します。 偽名プロファイルデータの有効期限は、イベントとプロファイルレコードの両方を削除します。 その結果、この設定はアドレス可能なオーディエンス量を減らします。 この機能について詳しくは、[ 偽名プロファイルデータの有効期限の概要 ](../../profile/pseudonymous-profiles.md) を参照してください。
 
-#### エクスペリエンスイベントの有効期限 {#event-expirations}
+### データセット UI - エクスペリエンスイベントデータセットの保持 {#data-retention}
 
-この機能を使用すると、ユースケースにとって価値のなくなったプロファイル対応データセットから行動データを自動的に削除できます。 このプロセスをデータセットに対して有効にすると機能する方法について詳しくは、[ エクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) に関する概要を参照してください。
+データセットの有効期限と保持設定を設定して、データレイクおよびプロファイルストアのデータに固定保持期間を適用します。 保存期間が終了すると、データは削除されます。 エクスペリエンスイベントデータの有効期限は、イベントのみを削除し、プロファイルクラスデータは削除しないので、ライセンス使用指標の [ 合計データ量 ](total-data-volume.md) が減少します。 詳しくは、[ データ保持ポリシーの設定 ](../../catalog/datasets/user-guide.md#data-retention-policy) に関するガイドを参照してください。
+
+### プロファイルエクスペリエンスイベントの有効期限 {#event-expirations}
+
+使用期限を設定して、ユースケースにとって価値がなくなった行動データをプロファイル対応データセットから自動的に削除します。 詳しくは、[ エクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) の概要を参照してください。
 
 ## ライセンス使用状況のコンプライアンスに関するベストプラクティスのまとめ {#best-practices}
 
@@ -147,24 +172,6 @@ Adobe Experience Platform では、すべてのデータが同じわけではあ
 * [ライセンス使用状況ダッシュボード](../../dashboards/guides/license-usage.md)を使用して、顧客の使用状況のトレンドを追跡および監視する。これにより、発生する可能性のある超過分に事前に対処できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要なイベントを特定して、[取り込みフィルター](#ingestion-filters)を設定する。これにより、ユースケースに必要な重要なイベントのみを送信できます。
 * セグメント化およびパーソナライゼーションのユースケースに必要な[プロファイルのデータセットのみを有効](#ingestion-filters)にしていることを確認する。
-* Web データのような高頻度のデータには、[ エクスペリエンスイベントの有効期限 ](#event-expirations) および [ 偽名プロファイルデータの有効期限 ](#pseudonymous-profile-expirations) を設定します。
+* Web データのような高頻度のデータには、[ エクスペリエンスイベントの有効期限 ](../../catalog/datasets/user-guide.md#data-retention-policy) および [ 偽名プロファイルデータの有効期限 ](../../profile/pseudonymous-profiles.md) を設定します。
+* データレイクでエクスペリエンスイベントデータセットの [Time-to-Live （TTL）保持ポリシー ](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) を設定し、古いレコードを自動的に削除し、ライセンス使用権限に従ってストレージ使用を最適化します。
 * [ プロファイル構成レポート ](#profile-store-composition-reports) を定期的に確認し、プロファイルストアの構成を把握する。 これにより、ライセンス使用量に最も貢献しているデータソースを把握できます。
-
-## 機能の概要と可用性 {#feature-summary}
-
-このドキュメントで概要を説明するベストプラクティスとツールは、Adobe Experience Platformでのライセンス使用権限をより適切に管理するのに役立ちます。 このドキュメントは、すべての Experience Platform のお客様に可視性と制御を提供するための追加機能がリリースされるたびに更新されます。
-
-次の表に、ライセンス使用権限をより適切に管理するために、現在、自由に使用できる機能のリストを示します。
-
-| 機能 | 説明 |
-| --- | --- |
-| [プロファイル用のデータセットを有効／無効にする](../../catalog/datasets/user-guide.md) | リアルタイム顧客プロファイルへのデータセット取り込みを有効または無効にします。 |
-| [ エクスペリエンスイベントの有効期限 ](../../profile/event-expirations.md) | プロファイル対応データセットに取り込まれるすべてのイベントに有効期限を適用できます。 この機能を有効にするには、Adobe アカウントチームまたはカスタマーケアにお問い合わせください。 |
-| [Adobe Analytics データ準備フィルター](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します |
-| [Adobe Audience Manager ソースコネクタフィルター](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager ソース接続フィルターを適用して、不要なデータを取り込みから除外します |
-| [イベント転送データフィルター](../../tags/ui/event-forwarding/overview.md) | サーバーサイド [!DNL Kafka] フィルターを適用して、不要なデータを取り込みから除外します詳しくは、[タグルール](../../tags/ui/managing-resources/rules.md)に関するドキュメントを参照してください。 |
-| [ライセンス使用状況ダッシュボード UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Experience Platform に関する組織のライセンス関連データのスナップショットを表示します |
-| [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | アドレス可能なオーディエンスに最も貢献するデータセットを出力します |
-| [Identity Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | アドレス可能なオーディエンスに最も貢献する ID 名前空間を出力します |
-
-{style="table-layout:auto"}
