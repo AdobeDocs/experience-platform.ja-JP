@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 機能を最適に使用するための、プロファイルデータおよびセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cfc221250a9c8f91b16aa1d4572263ecaf4eeccc
 workflow-type: tm+mt
-source-wordcount: '2617'
+source-wordcount: '2622'
 ht-degree: 52%
 
 ---
@@ -98,7 +98,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 | 最大プロファイルフラグメントサイズ | 50 MB | システムに適用されたガードレール | **単一のプロファイルフラグメントの最大サイズは 50 MB です。** セグメント化、書き出しおよびルックアップは、[プロファイルフラグメント](#profile-fragments)が 50 MB を超える場合、失敗することがあります。 |
 | 最大プロファイルストレージサイズ | 50 MB | パフォーマンスガードレール | **保存されたプロファイルの最大サイズは 50 MB です。** 50 MB を超えるプロファイルに新しい[プロファイルフラグメント](#profile-fragments)を追加すると、システムのパフォーマンスに影響を与えます。例えば、プロファイルには 50 MB の単一のフラグメントを含めることも、複数のデータセットにわたる、合計サイズが 50 MB の複数のフラグメントを含めることもできます。 50 MB を超える単一のフラグメントを持つプロファイル、または合計サイズが 50 MB を超える複数のフラグメントを保存しようとすると、システムのパフォーマンスに影響を与えます。 |
 | 1 日に取り込まれるプロファイルバッチまたは ExperienceEvent バッチの数 | 90 | パフォーマンスガードレール | **1 日に取り込まれるプロファイルバッチまたは ExperienceEvent バッチの最大数は 90 です。** つまり、1 日に取り込まれるプロファイルバッチと ExperienceEvent バッチを合わせた合計数は 90 を超えることはできないということです。追加のバッチを取り込むと、システムのパフォーマンスに影響します。 |
-| プロファイルレコードあたりの ExperienceEvents の数 | 5000 | パフォーマンスガードレール | **プロファイルレコードあたりの ExperienceEvents の最大数は 5000 です。5,000 件を超える ExperienceEvents を持つ** プロファイルは、セグメント化の対象と **されません**。 |
+| プロファイルレコードあたりの ExperienceEvents の数 | 5000 | パフォーマンスガードレール | **プロファイルレコードあたりの ExperienceEvents の最大数は 5000 です。5,000 件を超える ExperienceEvents を持つ** プロファイルは、セグメント化で使用する場合にのみ **最新** 5,000 件の ExperienceEvents を使用します。 |
 
 {style="table-layout:auto"}
 
@@ -188,7 +188,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ja#end-to-end-latency-diagrams)。
+* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
 * [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
