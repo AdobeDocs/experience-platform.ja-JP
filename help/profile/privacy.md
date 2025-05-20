@@ -217,7 +217,7 @@ UI でジョブリクエストを作成する場合は、「**[!UICONTROL Produc
 
 ### 結合ポリシーの制限 {#merge-policy-limitations}
 
-Privacy Serviceは、ID ステッチを実行しない結合ポリシーを使用してのみ [!DNL Profile] データを処理できます。 UI を使用してプライバシーリクエストが処理されているかどうかを確認する場合は、[!UICONTROL ID ステッチ ] タイプとして **[!DNL None]** を持つポリシーを使用していることを確認してください。 つまり、[!UICONTROL ID ステッチ ] が [!UICONTROL  プライベートグラフ ] に設定されている結合ポリシーは使用できません。
+Privacy Serviceは、ID ステッチを実行しない結合ポリシーを使用してのみ [!DNL Profile] データを処理できます。 UI を使用してプライバシーリクエストが処理されているかどうかを確認する場合は、[!UICONTROL ID ステッチ &#x200B;] タイプとして **[!DNL None]** を持つポリシーを使用していることを確認してください。 つまり、[!UICONTROL ID ステッチ &#x200B;] が [!UICONTROL &#x200B; プライベートグラフ &#x200B;] に設定されている結合ポリシーは使用できません。
 
 >![ 結合ポリシーの ID のステッチが「なし」に設定されている ](./images/privacy/no-id-stitch.png)
 
