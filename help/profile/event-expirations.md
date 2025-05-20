@@ -4,10 +4,10 @@ solution: Experience Platform
 title: エクスペリエンスイベントの有効期限
 description: このドキュメントでは、Adobe Experience Platform データセット内の個々のエクスペリエンスイベントの有効期限を設定する際の一般的なガイダンスを示します。
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
+source-git-commit: 05479dcfd1a375b3589ce212168f324aa72af4ba
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 66%
+source-wordcount: '872'
+ht-degree: 65%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 66%
 
 Adobe Experience Platformでは、[ リアルタイム顧客プロファイル ](./home.md) に対して有効にされるデータセットに取り込まれるすべてのエクスペリエンスイベントに有効期限を設定できます。 これにより、有効でなくなったデータやユースケースで役に立たなくなったデータをプロファイルストアから自動的に削除できます。
 
-エクスペリエンスイベントの有効期限は、Experience Platformの UI または API を使用して設定することはできません。 代わりに、必要なデータセットに対してエクスペリエンスイベントの有効期限を有効にするには、サポートに問い合わせる必要があります。
+データセットでエクスペリエンスイベントの有効期限を管理する方法については、[ データセット UI ガイド ](../catalog/datasets/user-guide.md#data-retention-policy) を参照してください。
 
 >[!IMPORTANT]
 >
