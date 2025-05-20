@@ -257,7 +257,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 次のビデオは、サンドボックスツールに関する理解を深めるために、新しいパッケージの作成、パッケージの公開、パッケージの読み込み方法の概要を説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446084/?learn=on&captions=jpn)
 
 ## 次の手順
 
