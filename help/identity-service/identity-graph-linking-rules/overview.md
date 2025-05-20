@@ -44,7 +44,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="Id グラフリンクルール：概要" target="_blank" rel="referrer">
+                    <a href="https://video.tv.adobe.com/v/3448273/?learn=on&enablevpops&captions=jpn" title="Id グラフリンクルール：概要" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Id グラフリンクルール：概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -53,12 +53,12 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="Id グラフリンクルール：概要">Id グラフリンクルール：概要 </a>
+                        <a href="https://video.tv.adobe.com/v/3448273/?learn=on&enablevpops&captions=jpn" target="_blank" rel="referrer" title="Id グラフリンクルール：概要">Id グラフリンクルール：概要 </a>
                     </p>
                     <p class="is-size-6">このビデオでは、ID グラフリンクルールの概要を説明し、この機能を使用してグラフの折りたたみを防ぐ方法を説明します。</p>
                 </div>
                 <div style="display: flex; flex-direction; row;">
-                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3448273/?learn=on&enablevpops&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>
                   <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -73,7 +73,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Id グラフリンクルール：Id 設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Id グラフリンクルール：Id 設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441081/?format=jpeg&nocache=1732633205785&captions=jpn" alt="Id グラフリンクルール：Id 設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
