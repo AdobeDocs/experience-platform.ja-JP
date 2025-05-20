@@ -5,10 +5,10 @@ breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Experience Platform でデータレイク内のデータをクエリします。
 feature: Queries
 role: User,Developer
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 70%
+source-wordcount: '409'
+ht-degree: 69%
 
 ---
 
@@ -110,6 +110,7 @@ ht-degree: 70%
    - [クエリログ](ui/query-logs.md)
    - [スケジュール済みクエリの監視](ui/monitor-queries.md)
    - [資格情報ガイド](ui/credentials.md)
+   - [JWT の OAuth 資格情報への移行](ui/migrate-jwt-to-oauth.md)
    - [クエリ結果からの出力データセットの生成](ui/create-datasets.md)
 - クエリサービス API {#api}
    - [はじめに](api/getting-started.md)
