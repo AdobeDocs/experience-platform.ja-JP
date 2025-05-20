@@ -206,7 +206,7 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 
 特定のイベントで、人物エンティティを表すすべての名前空間が `identityMap` に含まれていることを確認してください。これは、[XDM フィールドとして送信された ID](../../xdm/ui/fields/identity.md) は無視され、セグメントメンバーシップのメタデータストレージには使用されないからです。
 
-* **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど ](../../landing/edge-and-hub-comparison.md)0}Experience Platform ハブ } から取り込まれたイベントは、この制限の対象になりません。[
+* **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど [&#128279;](../../landing/edge-and-hub-comparison.md)0&rbrace;Experience Platform ハブ &rbrace; から取り込まれたイベントは、この制限の対象になりません。
 * **Edgeのセグメント化特異性**：この動作は、エッジセグメント化に固有です。 バッチとストリーミングのセグメント化は、ハブ上で評価される個別のサービスで、同じプロセスには従いません。 詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
 * 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 ](../../landing/edge-and-hub-comparison.md) のページを参照してください。
 

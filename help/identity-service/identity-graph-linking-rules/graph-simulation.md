@@ -60,7 +60,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 ![ 「イベントを追加」ボタンが選択されています。](../images/graph-simulation/add-events.png)
 
-ポップアップウィンドウが [!UICONTROL  イベント #1] に表示されます。 ここから、ID 名前空間と ID 値の組み合わせを入力します。 ドロップダウンメニューを使用して、ID 名前空間を選択できます。 または、名前空間の最初の数文字を入力したあと、ドロップダウンメニューに表示されるオプションを選択することもできます。 名前空間を選択したら、名前空間に対応する ID 値を指定します。
+ポップアップウィンドウが [!UICONTROL &#x200B; イベント #1] に表示されます。 ここから、ID 名前空間と ID 値の組み合わせを入力します。 ドロップダウンメニューを使用して、ID 名前空間を選択できます。 または、名前空間の最初の数文字を入力したあと、ドロップダウンメニューに表示されるオプションを選択することもできます。 名前空間を選択したら、名前空間に対応する ID 値を指定します。
 
 ![ 空のインターフェイスを持つイベント #1 ウィンドウ。](../images/graph-simulation/event-one.png)
 
@@ -76,7 +76,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 ![{ECID:111} の 2 つ目の ID がイベント #1 に追加されました。](../images/graph-simulation/first-event.png)
 
-[!UICONTROL  イベント ] インターフェイスが更新され、最初のイベントが表示されます。この場合のインターフェイスは `{Email: tom@acme.com, ECID: 111}` です。
+[!UICONTROL &#x200B; イベント &#x200B;] インターフェイスが更新され、最初のイベントが表示されます。この場合のインターフェイスは `{Email: tom@acme.com, ECID: 111}` です。
 
 ![{Email:tom@acme.com、ECID:111} を使用した更新されたイベントインターフェイス ](../images/graph-simulation/add-second-event.png)
 
@@ -140,7 +140,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 ![ アルゴリズム設定パネル ](../images/graph-simulation/add-config.png)
 
-空の設定行が表示されます。 まず、イベントに使用したのと同じ名前空間を入力します。 この場合は、電子メールを入力して開始します。 名前空間を入力すると、[!UICONTROL ID シンボル ] および [!UICONTROL ID タイプ ] の列が自動入力されます。
+空の設定行が表示されます。 まず、イベントに使用したのと同じ名前空間を入力します。 この場合は、電子メールを入力して開始します。 名前空間を入力すると、[!UICONTROL ID シンボル &#x200B;] および [!UICONTROL ID タイプ &#x200B;] の列が自動入力されます。
 
 ![ 最初の設定エントリ。](../images/graph-simulation/add-namespace.png)
 
@@ -157,7 +157,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 ## シミュレーショングラフを表示
 
-「[!UICONTROL  シミュレーショングラフ ]」セクションには、追加したイベントと設定したアルゴリズムに基づいて生成された ID グラフが表示されます。
+「[!UICONTROL &#x200B; シミュレーショングラフ &#x200B;]」セクションには、追加したイベントと設定したアルゴリズムに基づいて生成された ID グラフが表示されます。
 
 | グラフアイコン | 説明 |
 | --- | --- |
