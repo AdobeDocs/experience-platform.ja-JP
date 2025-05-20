@@ -2,9 +2,9 @@
 title: 名前空間の優先度
 description: ID サービスでの名前空間の優先度について説明します。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 0bf62f5f527d50b59ed84cc0ad98200cf25b4c8e
+source-git-commit: 579489e711858c3e80ca5d14eb4ad9187ecf80f8
 workflow-type: tm+mt
-source-wordcount: '2162'
+source-wordcount: '2102'
 ht-degree: 2%
 
 ---
@@ -15,14 +15,6 @@ ht-degree: 2%
 >id="platform_identities_namespacepriority"
 >title="名前空間の優先度"
 >abstract="名前空間の優先度によって、ID グラフからリンクを削除する方法が決定します。"
-
->[!AVAILABILITY]
->
->ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
->
->* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
->* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
->* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
 
 顧客の実装はすべて、特定の組織の目標を満たすようにカスタマイズされて一意です。そのため、特定の名前空間の重要性は、顧客によって異なります。 実際の例を次に示します。
 
@@ -73,7 +65,7 @@ ID は、実際のオブジェクトを表します。 ID グラフには 3 つ�
 
 ## 名前空間の優先度の使用
 
-現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
+現在、名前空間の優先度は、リアルタイム顧客プロファイルのシステム動作に影響を与えています。 次の図は、この概念を示しています。 詳細については、[Adobe Experience Platformおよびアプリケーション アーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications) に関するガイドを参照してください。
 
 ![ 名前空間優先度アプリケーション範囲の図 ](../images/namespace-priority/application-scope.png)
 
@@ -214,14 +206,15 @@ XDM スキーマについて詳しくは、[ スキーマの概要 ](../../xdm/h
 
 特定のイベントで、人物エンティティを表すすべての名前空間が `identityMap` に含まれていることを確認してください。これは、[XDM フィールドとして送信された ID](../../xdm/ui/fields/identity.md) は無視され、セグメントメンバーシップのメタデータストレージには使用されないからです。
 
-* **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど [&#128279;](../../landing/edge-and-hub-comparison.md)0&rbrace;Experience Platform ハブ &rbrace; から取り込まれたイベントは、この制限の対象になりません。
+* **イベントの適用性**：この動作は、Edge Networkに直接送信されるイベント（WebSDK や Mobile SDKなど）にのみ適用されます。 HTTP API ソース、その他のストリーミングソース、バッチソースで取り込まれたイベントなど ](../../landing/edge-and-hub-comparison.md)0}Experience Platform ハブ } から取り込まれたイベントは、この制限の対象になりません。[
 * **Edgeのセグメント化特異性**：この動作は、エッジセグメント化に固有です。 バッチとストリーミングのセグメント化は、ハブ上で評価される個別のサービスで、同じプロセスには従いません。 詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
-* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 ](../../landing/edge-and-hub-comparison.md) のページを参照してください。
+* 詳しくは、[Adobe Experience Platformとアプリケーションのアーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)、[Edge Networkとハブの比較 ](../../landing/edge-and-hub-comparison.md) のページを参照してください。
 
 #### Edge Network アプリケーション
 
 Edge Network上のアプリケーションが遅滞なくEdge プロファイルにアクセスできるようにするには、イベントに CRMID 上の `primary=true` が含まれていることを確認してください。 これにより、hub からの ID グラフの更新を待たずに、即座に可用性を確保できます。
 
 * Edge Network上のアプリケーション（Adobe Target、Offer Decisioning、カスタム Personalization宛先など）は、Edge プロファイルからプロファイルにアクセスする際に、イベント内のプライマリ ID に引き続き依存します。
-* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Networkのアーキテクチャ図 ](https://experienceleague.adobe.com/ja/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) を参照してください。
+* Edge Networkの動作について詳しくは、[Experience Platform Web SDKとEdge Networkのアーキテクチャ図 ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) を参照してください。
 * Web SDKでプライマリ ID を設定する方法について詳しくは、[Data element types](../../tags/extensions/client/web-sdk/data-element-types.md) および [Web SDKの ID データ ](../../web-sdk/identity/overview.md) に関するドキュメントを参照してください。
+* ECID がエクスペリエンスイベントに含まれていることを確認します。 ECID がない場合は、`primary=true` でイベントペイロードに追加されるので、予期しない結果が生じる可能性があります。

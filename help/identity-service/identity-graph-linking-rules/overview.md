@@ -1,11 +1,11 @@
 ---
 title: Id グラフリンクルール
-description: ID サービスでの ID グラフリンクルールについて説明します。
+description: Id サービスでの ID グラフリンクルールについて説明します。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1547'
+ht-degree: 5%
 
 ---
 
@@ -14,21 +14,13 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="ID グラフのリンクルール"
->abstract="これらの不要な結合を防ぐには、ID グラフのリンクルールを通じて提供される設定を使用して、ユーザーに対して正確なパーソナライゼーションを許可します。"
+>abstract="このような不要な結合を防ぐために、ID グラフリンクルールで提供されている設定を使用して、ユーザーに対して正確なパーソナライゼーションを可能にします。"
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
->
->* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
->* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
->* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
+>ID 設定を有効にした後、折りたたまれたグラフを折りたたみ解除（「固定」）する必要がある既存のサンドボックスがある場合は、Adobe アカウントチームにお問い合わせください。
 
 Adobe Experience Platform ID サービスとリアルタイム顧客プロファイルを使用すると、データが完全に取り込まれ、すべての結合プロファイルが CRMID などの人物識別子を使用して 1 人の個人を表すと簡単に想定できます。 ただし、特定のデータが複数の異なるプロファイルを 1 つのプロファイルに結合しようとする可能性があるシナリオがあります（「グラフ折りたたみ」）。 これらの不要な結合を防ぐために、[!DNL Identity Graph Linking Rules] を通じて提供される設定を使用して、ユーザーに対して正確なパーソナライゼーションを可能にできます。
-
-[!DNL Identity Graph Linking Rules] の使用について詳しくは、次のビデオをご覧ください。
-
->[!VIDEO](https://video.tv.adobe.com/v/3448273/?learn=on&enablevpops&captions=jpn)
 
 ## 基本を学ぶ
 
@@ -41,6 +33,70 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
 * [名前空間の優先度](./namespace-priority.md)
 * [グラフシミュレーション UI](./graph-simulation.md)
 * [ID 設定 UI](./identity-settings-ui.md)
+
+## ビデオライブラリ
+
+次のビデオでは、ID グラフリンクルールの基本的な側面の一部について説明しています。
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="Id グラフリンクルール：概要" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Id グラフリンクルール：概要"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="Id グラフリンクルール：概要">Id グラフリンクルール：概要 </a>
+                    </p>
+                    <p class="is-size-6">このビデオでは、ID グラフリンクルールの概要を説明し、この機能を使用してグラフの折りたたみを防ぐ方法を説明します。</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
+                  </a>
+                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> 読取り </span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Id グラフリンクルール：Id 設定" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Id グラフリンクルール：Id 設定"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="Id グラフリンクルール：Id 設定">Id グラフリンクルール：Id 設定 </a>
+                    </p>
+                    <p class="is-size-6">このビデオでは、ID 設定を指定し、Real-Time CDP、Adobe Journey Optimizer、Customer Journey AnalyticsなどのAdobe Experience Platform アプリケーション用に高品質の ID グラフと顧客プロファイルを作成する方法を説明します。</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
+                  </a>
+                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> 読取り </span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
 
 ## グラフ折りたたみシナリオ {#graph-collapse-scenarios}
 
@@ -107,7 +163,7 @@ Adobe Experience Platform ID サービスとリアルタイム顧客プロファ
 | 用語 | 説明 |
 | --- | --- |
 | 一意の名前空間 | 一意の名前空間は、ID グラフのコンテキスト内で異なるように設定された ID 名前空間です。 UI を使用して、一意の名前空間を設定できます。 名前空間が一意と定義されると、グラフには、その名前空間を含む ID を 1 つだけ割り当てることができます。 |
-| 名前空間の優先度 | 名前空間の優先度とは、名前空間の相対的な重要度を指します。 名前空間の優先度は、UI を通じて設定できます。 特定の ID グラフ内の名前空間をランク付けできます。 有効にすると、ID 最適化アルゴリズムの入力やエクスペリエンスイベントフラグメントのプライマリ ID の決定など、様々なシナリオで名前の優先度が使用されます。 |
+| 名前空間の優先度 | 名前空間の優先度とは、名前空間の相対的な重要度を指します。 名前空間の優先度は、UI を通じて設定できます。 特定の ID グラフ内の名前空間をランク付けできます。 有効にすると、ID 最適化アルゴリズムの入力や、エクスペリエンスイベントフラグメントのプライマリ ID の決定など、様々なシナリオで名前の優先度が使用されます。 |
 | ID 最適化アルゴリズム | ID 最適化アルゴリズムは、一意の名前空間と名前空間の優先順位を設定することで作成されたガイドラインが、特定の ID グラフで適用されるようにします。 |
 
 ### 一意の名前空間 {#unique-namespace}
@@ -129,7 +185,7 @@ CRMID が一意の名前空間として設定された場合、ID 最適化ア�
 
 一意の名前空間を設定しないと、同じ CRMID 名前空間を持つ 2 つの ID が異なる ID 値を持つなど、グラフの不要な結合が発生する場合があります（このようなシナリオは、多くの場合、同じグラフ内の 2 つの異なる人物エンティティを表します）。
 
-ID 最適化アルゴリズムに通知する一意の名前空間を設定して、特定の ID グラフに取り込まれる ID データに制限を適用する必要があります。
+ID 最適化アルゴリズムに通知する一意の名前空間を設定して、特定の ID グラフに取り込まれる ID データに対して制限を適用する必要があります。
 
 ### 名前空間の優先度 {#namespace-priority}
 

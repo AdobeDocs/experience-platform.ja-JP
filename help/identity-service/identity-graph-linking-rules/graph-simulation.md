@@ -2,10 +2,10 @@
 title: グラフシミュレーション UI ガイド
 description: ID サービス UI でグラフシミュレーションを使用する方法を説明します。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 3%
+source-wordcount: '1446'
+ht-degree: 2%
 
 ---
 
@@ -16,20 +16,11 @@ ht-degree: 3%
 >title="グラフシミュレーション"
 >abstract="グラフをシミュレートして、ID サービスが ID をリンクする方法や ID 最適化アルゴリズムの仕組みを理解します。"
 
->[!AVAILABILITY]
->
->ID グラフリンクルールは現在限定提供になっており、開発用サンドボックスのすべての顧客がアクセスできます。
->
->* **アクティベーション要件**：この機能は、[!DNL Identity Settings] ールを設定して保存するまで、非アクティブのままになります。 この設定がない場合、システムは引き続き正常に動作し、動作は変更されません。
->* **重要なメモ**：この限定提供フェーズでは、Edgeのセグメント化によって、予期しないセグメントメンバーシップの結果が生じる可能性があります。 ただし、ストリーミングおよびバッチセグメント化は期待どおりに機能します。
->* **次の手順**：実稼動サンドボックスでこの機能を有効にする方法については、Adobe アカウントチームにお問い合わせください。
->* [!DNL Graph Simulation] ツールにアクセスするには、アカウントに **ID グラフの表示** 権限が必要です。 詳しくは、[ 属性ベースのアクセス制御における権限に関するガイド ](../../access-control/abac/ui/permissions.md) を参照してください。
-
 [!DNL Graph Simulation] は、ID サービス UI のツールで、特定の ID の組み合わせでの ID グラフの動作と、[ID 最適化アルゴリズム ](./identity-optimization-algorithm.md) の設定方法をシミュレートするために使用できます。
 
 ID サービス UI ワークスペースでの [!DNL Graph Simulation] インターフェイスの使用について詳しくは、次のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3444044/?learn=on&enablevpops&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 ID グラフの動作をより深く理解するために [!DNL Graph Simulation] を使用する方法、およびグラフアルゴリズムがどのように機能するかについて詳しくは、このドキュメントを参照してください。
 
@@ -69,7 +60,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 ![ 「イベントを追加」ボタンが選択されています。](../images/graph-simulation/add-events.png)
 
-ポップアップウィンドウが [!UICONTROL &#x200B; イベント #1] に表示されます。 ここから、ID 名前空間と ID 値の組み合わせを入力します。 ドロップダウンメニューを使用して、ID 名前空間を選択できます。 または、名前空間の最初の数文字を入力したあと、ドロップダウンメニューに表示されるオプションを選択することもできます。 名前空間を選択したら、名前空間に対応する ID 値を指定します。
+ポップアップウィンドウが [!UICONTROL  イベント #1] に表示されます。 ここから、ID 名前空間と ID 値の組み合わせを入力します。 ドロップダウンメニューを使用して、ID 名前空間を選択できます。 または、名前空間の最初の数文字を入力したあと、ドロップダウンメニューに表示されるオプションを選択することもできます。 名前空間を選択したら、名前空間に対応する ID 値を指定します。
 
 ![ 空のインターフェイスを持つイベント #1 ウィンドウ。](../images/graph-simulation/event-one.png)
 
@@ -85,7 +76,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 ![{ECID:111} の 2 つ目の ID がイベント #1 に追加されました。](../images/graph-simulation/first-event.png)
 
-[!UICONTROL &#x200B; イベント &#x200B;] インターフェイスが更新され、最初のイベントが表示されます。この場合のインターフェイスは `{Email: tom@acme.com, ECID: 111}` です。
+[!UICONTROL  イベント ] インターフェイスが更新され、最初のイベントが表示されます。この場合のインターフェイスは `{Email: tom@acme.com, ECID: 111}` です。
 
 ![{Email:tom@acme.com、ECID:111} を使用した更新されたイベントインターフェイス ](../images/graph-simulation/add-second-event.png)
 
@@ -149,7 +140,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 ![ アルゴリズム設定パネル ](../images/graph-simulation/add-config.png)
 
-空の設定行が表示されます。 まず、イベントに使用したのと同じ名前空間を入力します。 この場合は、電子メールを入力して開始します。 名前空間を入力すると、[!UICONTROL ID シンボル &#x200B;] および [!UICONTROL ID タイプ &#x200B;] の列が自動入力されます。
+空の設定行が表示されます。 まず、イベントに使用したのと同じ名前空間を入力します。 この場合は、電子メールを入力して開始します。 名前空間を入力すると、[!UICONTROL ID シンボル ] および [!UICONTROL ID タイプ ] の列が自動入力されます。
 
 ![ 最初の設定エントリ。](../images/graph-simulation/add-namespace.png)
 
@@ -166,7 +157,7 @@ Adobe Experience Platform UI で [!DNL Graph Simulation] にアクセスでき�
 
 ## シミュレーショングラフを表示
 
-「[!UICONTROL &#x200B; シミュレーショングラフ &#x200B;]」セクションには、追加したイベントと設定したアルゴリズムに基づいて生成された ID グラフが表示されます。
+「[!UICONTROL  シミュレーショングラフ ]」セクションには、追加したイベントと設定したアルゴリズムに基づいて生成された ID グラフが表示されます。
 
 | グラフアイコン | 説明 |
 | --- | --- |
