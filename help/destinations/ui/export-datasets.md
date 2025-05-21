@@ -3,10 +3,10 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
+source-git-commit: b423e51e3e048a5dd7c2c15f80c8c1fcf5c2657b
 workflow-type: tm+mt
-source-wordcount: '2732'
-ht-degree: 34%
+source-wordcount: '2722'
+ht-degree: 35%
 
 ---
 
@@ -50,16 +50,16 @@ Experience Platform API を使用してデータセットを書き出すこと�
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取り込みまたは収集した後、Experience Platform UI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=ja#profile-attribute-datasets"> システム生成プロファイルスナップショットデータセット </a>。</li></td>
+    <td><ul><li>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取り込みまたは収集した後、Experience Platform UI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> システム生成プロファイルスナップショットデータセット </a>。</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Experience Platform API を使用してデータセットを書き出すこと�
 
 このページで説明されているワークフローのエンドツーエンドの説明、データセットの書き出し機能を使用するメリット、推奨されるユースケースについては、以下のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3448819?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## サポートされる宛先 {#supported-destinations}
 
@@ -231,7 +231,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 >[!TIP]
 > 
->このフォルダー構造の最初のレベル（`folder-name-you-provided`）は、データセットを書き出すために &rbrack;**宛先に接続 &lbrack; したときに指定した**&#x200B;[[!UICONTROL &#x200B; フォルダーパス &#x200B;]](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) を表します。
+>このフォルダー構造の最初のレベル（`folder-name-you-provided`）は、データセットを書き出すために ]**宛先に接続 [ したときに指定した**[!UICONTROL  フォルダーパス ](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) を表します。
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -294,7 +294,6 @@ JSON ファイルへの書き出しはサポートされています *圧縮モ�
 
 * Experience Platformでは、小さなデータセットでも、複数のファイルを書き出す場合があります。 データセットの書き出しは、システム間の統合を目的として設計され、パフォーマンスに最適化されているため、書き出されるファイルの数をカスタマイズすることはできません。
 * 書き出すファイルの名前は現在、カスタマイズできません。
-* API を使用して作成したデータセットは、現在、書き出しには使用できません。
 * 宛先に書き出されるデータセットの削除は、現在、UI で禁止されていません。 宛先に書き出されるデータセットは削除しないでください。 データセットを削除する場合は、まず、宛先データフローから[データセットを削除](#remove-dataset)します。
 * データセット書き出しの監視指標は、現在、プロファイル書き出しの数値と混在しているので、実際の書き出し数値を反映していません。
 * タイムスタンプが 365 日より古いデータは、データセットの書き出しから除外されます。 詳しくは、[ スケジュールされたデータセット書き出しのガードレール ](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports) を参照してください
