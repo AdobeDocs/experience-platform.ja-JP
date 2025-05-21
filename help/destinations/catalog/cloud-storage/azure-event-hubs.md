@@ -4,10 +4,10 @@ title: Azure Event Hubs 接続
 description: Experience Platformからデータをストリーミングするために、ストレージへ  [!DNL Azure Event Hubs]  リアルタイムのアウトバウンド接続を作成します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
 workflow-type: tm+mt
-source-wordcount: '2088'
-ht-degree: 51%
+source-wordcount: '2084'
+ht-degree: 49%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に接続する際は、次の情報を指定する必要があります。
 
@@ -124,7 +124,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* [ 同意ポリシーの評価 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は現在、Azure Event Hubs 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-streaming-profile-destinations.md) を参照してください。
@@ -147,7 +147,7 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 
 | 宛先の書き出しを決定する要素 | 宛先の書き出しに含まれる内容 |
 |---------|----------|
-| <ul><li>マッピングされた属性とオーディエンスは、宛先の書き出しのキューとして機能します。つまり、マッピングされたオーディエンスのステータスが（`null` から `realized` に、または `realized` から `exiting` に）変更されたり、マッピングされた属性が更新されたりすると、宛先の書き出しが開始されます。</li><li>現在 ID は [!DNL Azure Event Hubs] の宛先にマッピングできないので、特定のプロファイルの ID が変わると、宛先の書き出しも決まります。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたオーディエンスが含まれます。このオーディエンスについて、プロファイルのステータスが選定またはオーディエンス離脱イベントの後に変更されました。なお、これらのオーディエンスが、アクティブ化データフローでマッピングされたオーディエンスと同じ[結合ポリシー](/help/profile/merge-policies/overview.md)に属する場合、プロファイルが対象となっていた、他のマッピングされていないオーディエンスを宛先の書き出しに含めることができます。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platformでは現在、[!DNL Azure Event Hubs] の宛先での ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
+| <ul><li>マッピングされた属性とセグメントは、宛先の書き出しのキューとして機能します。つまり、プロファイルの `segmentMembership` ステータスが `realized` または `exiting` に変更されたり、マッピングされた属性が更新されたりすると、宛先の書き出しが開始されます。</li><li>現在 ID は [!DNL Azure Event Hubs] の宛先にマッピングできないので、特定のプロファイルの ID が変わると、宛先の書き出しも決まります。</li><li>属性の変更は、同じ値であるかどうかに関わらず、属性に対する更新として定義されます。つまり、値自体が変更されていない場合でも、属性の上書きは変更と見なされます。</li></ul> | <ul><li>`segmentMembership` オブジェクトには、アクティブ化データフローでマッピングされたセグメントが含まれます。このセグメントについて、プロファイルのステータスが選定またはセグメント出口イベントの後に変更されました。なお、これらのセグメントが、アクティブ化データフローでマッピングされたセグメントと同じ[結合ポリシー](/help/profile/merge-policies/overview.md)に属する場合、プロファイルが適していた他のマッピングされていないセグメントを宛先の書き出しに含めることができます。 </li><li>`identityMap` オブジェクト内のすべての ID も含まれます（Experience Platformでは現在、[!DNL Azure Event Hubs] の宛先での ID マッピングをサポートしていません）。</li><li>マッピングされた属性のみが宛先の書き出しに含まれます。</li></ul> |
 
 {style="table-layout:fixed"}
 
