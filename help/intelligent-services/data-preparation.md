@@ -4,9 +4,9 @@ solution: Experience Platform
 title: インテリジェントサービスで使用するデータの準備
 description: インテリジェントサービスでマーケティングイベントデータからインサイトを発見するには、データを意味的にエンリッチメントし、標準構造で維持する必要があります。 インテリジェントサービスでは、これを実現するためにエクスペリエンスデータモデル（XDM）スキーマを使用します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2951'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ CEE スキーマは、すべての XDM ExperienceEvent スキーマと同様に�
 
 [!DNL Intelligent Services] のスキーマ内のいくつかの主要なフィールドを利用して、マーケティングイベントデータからインサイトを生成します。これらはすべてルートレベルで見つかり、必要なサブフィールドを表示するように展開できます。
 
-![](./images/data-preparation/schema-expansion.gif)
+![ ナビゲーションとサブフィールドの詳細を示す、Adobe Experience Platform UI でのスキーマ拡張のデモ ](./images/data-preparation/schema-expansion.gif)
 
 すべての XDM スキーマと同様に、CEE スキーマフィールドグループは拡張可能です。 つまり、CEE フィールドグループにフィールドを追加したり、必要に応じて様々なバリエーションを複数のスキーマに含めたりできます。
 
@@ -134,19 +134,19 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 プライマリ ID を設定するには、「**[!UICONTROL スキーマ]**」タブからスキーマに移動し、スキーマ名のハイパーリンクを選択して **[!DNL Schema Editor]** を開きます。
 
-![ スキーマに移動 ](./images/data-preparation/navigate_schema.png)
+![Adobe Experience Platform UI でのスキーマへの移動。](./images/data-preparation/navigate_schema.png)
 
 次に、プライマリ ID として使用するフィールドに移動し、そのフィールドを選択します。 そのフィールドの **[!UICONTROL フィールドプロパティ]** メニューが開きます。
 
-![ フィールドを選択 ](./images/data-preparation/find_field.png)
+![Adobe Experience Platform UI で目的のフィールドを選択するプロセス。](./images/data-preparation/find_field.png)
 
 **[!UICONTROL フィールドプロパティ]** メニューで、「**[!UICONTROL ID]**」チェックボックスが見つかるまで下にスクロールします。 チェックボックスをオンにすると、選択した ID を **[!UICONTROL プライマリ ID]** として設定するオプションが表示されます。 このボックスも選択します。
 
-![ チェックボックスを選択 ](./images/data-preparation/set_primary_identity.png)
+![Adobe Experience Platform UI でプライマリ ID を設定するチェックボックス。](./images/data-preparation/set_primary_identity.png)
 
 次に、ドロップダウンの定義済み名前空間のリストから **[!UICONTROL ID 名前空間]** を指定する必要があります。この例では、Adobe Audience Manager ID `mcid.id` が使用されているので、ECID 名前空間が選択されています。 **[!UICONTROL 適用]** を選択して更新を確認し、右上隅の **[!UICONTROL 保存]** を選択して、スキーマに対する変更を保存します。
 
-![ 変更を保存 ](./images/data-preparation/select_namespace.png)
+![Adobe Experience Platform UI で ECID 名前空間の選択を示すドロップダウンメニュー。](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -160,7 +160,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 このフィールドは、ExperienceEvent に関連するマーケティングチャネルを表します。 フィールドには、チャネルタイプ、メディアタイプ、場所タイプに関する情報が含まれます。
 
-![](./images/data-preparation/channel.png)
+![type、mediaType、mediaAction などのサブフィールドを含む、xdm:channel フィールドの構造を示す図。](./images/data-preparation/channel.png)
 
 **スキーマの例**
 
@@ -198,7 +198,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 このフィールドは、顧客が選択した製品を表す項目の配列で、製品 SKU、名前、価格、数量が含まれます。
 
-![](./images/data-preparation/productListItems.png)
+![xdm:productListItems フィールド（SKU、名前、currencyCode、数量、priceTotal などのサブフィールドを含む） ](./images/data-preparation/productListItems.png)
 
 **スキーマの例**
 
@@ -227,7 +227,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 このフィールドには、発注番号や支払い情報など、ExperienceEvent に関するコマース固有の情報が含まれています。
 
-![](./images/data-preparation/commerce.png)
+![ 注文、購入、支払いなどのサブフィールドを含む、xdm:commerce フィールドの構造。](./images/data-preparation/commerce.png)
 
 **スキーマの例**
 
@@ -265,7 +265,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 このフィールドは、インタラクション、ページの詳細、リファラーなど、ExperienceEvent に関する web の詳細を表します。
 
-![](./images/data-preparation/web.png)
+![xdm:web フィールド（webPageDetails や webReferrer などのサブフィールドを含む ](./images/data-preparation/web.png)
 
 **スキーマの例**
 
@@ -295,7 +295,7 @@ CEE フィールドグループには、[!DNL Intelligent Services] が有用な
 
 このフィールドには、タッチポイントでアクティブなマーケティングアクティビティに関連する情報が含まれています。
 
-![](./images/data-preparation/marketing.png)
+![trackingCode、campaignGroup、campaignName などのサブフィールドを含む、xdm:marketing フィールドの構造。](./images/data-preparation/marketing.png)
 
 **スキーマの例**
 

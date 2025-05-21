@@ -5,9 +5,9 @@ feature: Customer AI
 title: 顧客 AI インスタンスの設定
 description: AI/ML サービスは、様々なユースケースに合わせて設定できる、使いやすいAdobe Sensei サービスとして顧客 AI を提供します。 次の節では、顧客 AI のインスタンスを設定する手順を説明します。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '3092'
 ht-degree: 7%
 
 ---
@@ -23,13 +23,13 @@ AI/ML サービスは、様々なユースケースに合わせて設定でき�
 
 Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL サービス]**」を選択します。 「**[!UICONTROL サービス]**」ブラウザーが表示され、使用可能なすべてのサービスが表示されます。顧客 AI のコンテナで、「**[!UICONTROL 開く]**」を選択します。
 
-![](../images/user-guide/navigate-to-service.png)
+![Experience Platform UI で Customer AI サービスに移動します。](../images/user-guide/navigate-to-service.png)
 
 **顧客 AI** UI が表示され、すべてのサービスインスタンスが表示されます。
 
 - **[!UICONTROL インスタンスを作成]** コンテナの右下にある「**[!UICONTROL スコアリングされたプロファイルの合計]** 指標を見つけることができます。 この指標は、すべてのサンドボックス環境と削除されたサービスインスタンスを含む、現在の暦年に顧客 AI によってスコアリングされたプロファイルの合計数を追跡します。
 
-![](../images/user-guide/total-profiles.png)
+![ 顧客 AI でのスコアリングされたプロファイルの合計指標。](../images/user-guide/total-profiles.png)
 
 サービスインスタンスは、UI の右側にあるコントロールを使用して、編集、複製、削除できます。 これらのコントロールを表示するには、既存の **[!UICONTROL サービスインスタンス]** からインスタンスを選択します。 コントロールには、次の項目が含まれます。
 
@@ -40,11 +40,11 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 - **[!UICONTROL 前回の実行詳細]**：実行が失敗した場合にのみ表示されます。 実行が失敗した理由に関する情報（エラーコードなど）が表示されます。
 - **[!UICONTROL スコア定義]**：このインスタンスに設定した目標の概要。
 
-![](../images/user-guide/service-instance-panel.png)
+![ 顧客 AI のサービスインスタンスパネル。](../images/user-guide/service-instance-panel.png)
 
 新しいインスタンスを作成するには、「**[!UICONTROL インスタンスを作成]**」を選択します。
 
-![](../images/user-guide/dashboard.png)
+![ サービスインスタンスの概要とそのステータスを示す顧客 AI ダッシュボード。](../images/user-guide/dashboard.png)
 
 ## 設定
 
@@ -52,13 +52,13 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 インスタンスに指定する必要がある値に関する重要な情報を次に示します。
 
-- **[!UICONTROL 名前 &#x200B;]:** インスタンスの名前は、顧客 AI スコアが表示されるすべての場所で使用されます。 したがって、名前には、予測スコアが表す内容を記述する必要があります。 例えば、「マガジンのサブスクリプションをキャンセルする可能性」などです。
+-**[!UICONTROL 名前 ]:** インスタンスの名前は、顧客 AI スコアが表示されるすべての場所で使用されます。 したがって、名前には、予測スコアが表す内容を記述する必要があります。 例えば、「マガジンのサブスクリプションをキャンセルする可能性」などです。
 
-- **[!UICONTROL 説明 &#x200B;]:** 予測しようとしている内容を示す説明。
+-**[!UICONTROL 説明 ]:** 予測しようとしている内容を示す説明。
 
-- **[!UICONTROL 傾向タイプ &#x200B;]:** 傾向タイプによって、スコアの意図と指標の極性が決まります。 「**[!UICONTROL チャーン]**」または「**[!UICONTROL コンバージョン]**」を選択できます。傾向タイプがインスタンスに与える影響の詳細については、「インサイトの検出」ドキュメントの[スコアリングの概要](./discover-insights.md#scoring-summary)のを参照してください。
+-**[!UICONTROL 傾向タイプ ]:** 傾向タイプによって、スコアの意図と指標の極性が決まります。 「**[!UICONTROL チャーン]**」または「**[!UICONTROL コンバージョン]**」を選択できます。傾向タイプがインスタンスに与える影響の詳細については、「インサイトの検出」ドキュメントの[スコアリングの概要](./discover-insights.md#scoring-summary)のを参照してください。
 
-![ セットアップ画面 ](../images/user-guide/create-instance.png)
+![ 顧客 AI でのインスタンス作成ワークフローを示す設定画面 ](../images/user-guide/create-instance.png)
 
 必要な値を入力し、「**[!UICONTROL 次へ]**」を選択して続行します。
 
@@ -66,15 +66,15 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 
 顧客 AI は、Adobe Analytics、Adobe Audience Manager、エクスペリエンスイベント全般およびコンシューマーエクスペリエンスイベントデータを設計上、使用して傾向スコアを計算します。 データセットを選択すると、顧客 AI と互換性のあるデータセットのみが表示されます。 データセットを選択するには、データセット名の横にある（**+**）記号を選択するか、チェックボックスを選択して複数のデータセットを一度に追加します。 検索オプションを使用して、目的のデータセットをすばやく見つけます。
 
-![ データセットの選択と検索 ](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
+![ 検索バーと保存オプションがハイライト表示されたデータセット選択画面 ](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 使用するデータセットを選択したら、「**[!UICONTROL 追加]**」ボタンを選択して、データセットをデータセットプレビューペインに追加します。
 
-![ データセットを選択 ](../images/user-guide/select-datasets.png)
+![ プレビューペインに選択したデータセットを表示するデータセット選択画面 ](../images/user-guide/select-datasets.png)
 
 データセットの横にある情報アイコン ![ 情報アイコン ](/help/images/icons/info.png) を選択すると、データセットのプレビューポップオーバーが開きます。
 
-![ データセットの選択と検索 ](../images/user-guide/dataset-info.png)
+![ 検索バーとデータセット情報を表示するデータセット選択画面 ](../images/user-guide/dataset-info.png)
 
 データセットプレビューには、最終更新時間、ソーススキーマ、最初の 10 列のプレビューなどのデータが含まれています。
 
@@ -90,13 +90,13 @@ Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL �
 >
 >データセットの完全性は、顧客 AI の最大トレーニングウィンドウ（1 年）を使用して計算されます。 つまり、データセット完了度の値を表示する際に、1 年以上前のデータは考慮されません。
 
-![ データセットの完全性 ](../images/user-guide/dataset-info-2.png)
+![ 完了率がハイライト表示されたデータセットプレビューを示すデータセットの完了度。](../images/user-guide/dataset-info-2.png)
 
 ### ID を選択 {#identity}
 
 ID マップ（フィールド）に基づいて複数のデータセットを相互に結合できるようになりました。 ID タイプ （「ID 名前空間」とも呼ばれます）とその名前空間内の ID 値を選択する必要があります。 同じ名前空間のスキーマ内で ID として複数のフィールドを割り当てた場合、割り当てられたすべての ID 値が ID ドロップダウンに表示され、名前空間の先頭に `EMAIL (personalEmail.address)` や `EMAIL (workEmail.address)` など表示されます。
 
-[同じ名前空間を選択](../images/user-guide/cai-identity-map.png)
+![ 複数のデータセットに対して同じ名前空間が選択されていることを示す ID マップ選択画面 ](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -104,12 +104,11 @@ ID マップ（フィールド）に基づいて複数のデータセットを�
 
 ID を選択するには、ID 列にある下線付きの値を選択します。 「ID を選択」ポップオーバーが表示されます。
 
-<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
-[同じ名前空間を選択](../images/user-guide/cai-identity-namespace.png)
+![ 複数のデータセットに対して同じ名前空間が選択されていることを示す ID マップ選択画面 ](../images/user-guide/cai-identity-namespace.png)
 
 名前空間内で複数の ID を使用できる場合は、ユースケースに合った正しい ID フィールドを選択するようにしてください。 例えば、メール名前空間内では、仕事用メールと個人用メールの 2 つのメール ID を使用できます。 ユースケースによっては、個人のメールが入力され、個々の予測により役立つ可能性が高くなります。 つまり、`EMAIL (personalEmail.address)` が ID として選択されます。
 
-![ データセットキーが選択されていません ](../images/user-guide/select-identity.png)
+![ID マップ選択画面でデータセットキーが選択されていない様子を示す例 ](../images/user-guide/select-identity.png)
 
 >[!NOTE]
 >
@@ -117,14 +116,11 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 ## 目標を定義 {#define-a-goal}
 
-<!-- https://www.adobe.com/go/cai-define-a-goal -->
-
 **[!UICONTROL 目標を定義]** 手順が表示され、予測目標を視覚的に定義できるインタラクティブな環境が提供されます。 目標は 1 つ以上のイベントで構成され、各イベントの発生は保持する条件に基づきます。顧客 AI インスタンスの目的は、特定の期間内に目標を達成する可能性を判断することです。
 
 目標を作成するには、「**[!UICONTROL フィールド名を入力]**」を選択し、続いてドロップダウンリストからフィールドを選択します。 2 番目の入力を選択し、イベントの条件の句を指定します。必要に応じて、イベントを完了するためのターゲット値を指定します。 追加のイベントは、「**[!UICONTROL イベントを追加]**」を選択して設定できます。 最後に、予測時間枠を日数で適用して目標を完了し、「**[!UICONTROL 次へ]**」を選択します。
 
-<!-- ![](../images/user-guide/define-a-goal.png) -->
-![](../images/user-guide/cai-define-a-goal.png)
+![ 予測目標を定義するためのインタラクティブ環境を示す、顧客 AI の目標ステップを定義します。](../images/user-guide/cai-define-a-goal.png)
 
 ### 発生し、発生しない
 
@@ -133,13 +129,13 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 例えば、顧客が購入するかどうかを予測するアプリを設定する場合は、「**[!UICONTROL 発生する]**」を選択し、続けて **[!UICONTROL すべて]** を選択し、「**commerce.purchases.id**」（または同様のフィールド）と「**[!UICONTROL exists]**」をオペレーターとして入力します。
 
 <!-- ![will occur](../images/user-guide/occur.png) -->
-![ 発生する ](../images/user-guide/cai-will-occur.png)
+![ イベントが発生する目標の設定を示す例 ](../images/user-guide/cai-will-occur.png)
 
 ただし、特定の期間内に一部のイベントが発生しないかどうかを予測したい場合があります。 このオプションを使用して目標を設定するには、最上位レベルのドロップダウンから **[!UICONTROL 発生しない]** を選択します。
 
 例えば、どの顧客のエンゲージメントが低下するかを予測することに関心があり、翌月にアカウントログインページにアクセスしない場合などです。 「**[!UICONTROL 発生しない]**」を選択し、続いて **[!UICONTROL すべて]** を選択して、**web.webInteraction.URL** （または同様のフィールド）を入力し、**[!UICONTROL account-login]** を値として使用して **equals** を演算子として入力します。
 
-![ 発生しません ](../images/user-guide/not-occur.png)
+![ イベントが発生しない目標の設定を示す例 ](../images/user-guide/not-occur.png)
 
 ### 次のすべて
 
@@ -147,19 +143,19 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 例えば、顧客が特定の製品を購入するかどうかを予測したい場合があります。 この予測目標は、`commerce.order.purchaseID` **存在する** と `productListItems.SKU` **等しい** という 2 つの条件で定義されます。
 
-![All of example](../images/user-guide/all-of.png)
+![ すべての条件を満たす必要がある目標の設定を示す例 ](../images/user-guide/all-of.png)
 
 特定のセットから顧客にイベントが発生するかどうかを予測するには、**[!UICONTROL いずれか]** オプションを使用します。
 
 例えば、顧客が特定の URL を訪問するか、特定の名前の web ページを訪問するかを予測したい場合があります。 この予測目標は、特定の値の `web.webPageDetails.URL` **次で始まる** と特定の値の `web.webPageDetails.name` **次で始まる** の 2 つの条件で定義されます。
 
-![ いずれかの例 ](../images/user-guide/any-of.png)
+![ 任意の条件を満たすことができる目標の設定を示す例 ](../images/user-guide/any-of.png)
 
 ### 対象の母集団 *（オプション）*
 
 デフォルトでは、適格な母集団が指定されていない限り、すべてのプロファイルに対して傾向スコアが生成されます。イベントに基づいてプロファイルを含めたり除外したりする条件を定義することで、適格な母集団を指定できます。
 
-![ 対象の母集団 ](../images/user-guide/eligible-population.png)
+![ 顧客 AI での適格な母集団の設定を示す例 ](../images/user-guide/eligible-population.png)
 
 ### カスタムイベント （*オプション*） {#custom-events}
 
@@ -169,19 +165,19 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 >
 > カスタムイベントが顧客 AI スコアリング結果にどのように影響するかについて詳しくは、[ カスタムイベントの例 ](#custom-event) の節を参照してください。
 
-![ イベント機能 ](../images/user-guide/event-feature.png)
+![ 顧客 AI でのイベント機能の設定を示す例 ](../images/user-guide/event-feature.png)
 
 カスタムイベントを追加するには、「**[!UICONTROL カスタムイベントを追加]**」を選択します。 次に、カスタムイベント名を入力し、スキーマのイベントフィールドにマッピングします。 カスタムイベント名は、影響を及ぼす要因やその他のインサイトを調べると、フィールド値の代わりに表示されます。 つまり、イベントの ID や値の代わりにカスタムイベント名が使用されます。 カスタムイベントの表示方法について詳しくは、[ カスタムイベントの例 ](#custom-event) の節を参照してください。 これらの追加のカスタムイベントは、モデルの品質を向上させ、より正確な結果を提供するために、顧客 AI で使用されます。
 
-![ カスタムイベントフィールド ](../images/user-guide/custom-event.png)
+![ 顧客 AI でのカスタムイベントフィールドの設定を示す例 ](../images/user-guide/custom-event.png)
 
 次に、使用可能な演算子ドロップダウンから、使用する演算子を選択します。 イベントと互換性のあるオペレーターのみが表示されます。
 
-![ カスタムイベントオペレーター ](../images/user-guide/custom-operator.png)
+![ 顧客 AI でカスタムイベントを設定するために使用できるオペレーターを示す例 ](../images/user-guide/custom-operator.png)
 
 最後に、選択した演算子に値が必要な場合は、フィールド値を入力します。 この例では、ホテルまたはレストランの予約が存在するかどうかを確認するだけで済みます。 ただし、より正確な値を指定する場合は、「次に等しい」演算子を使用し、値のプロンプトに正確な値を入力できます。
 
-![ カスタムイベントフィールドの値 ](../images/user-guide/custom-value.png)
+![ 顧客 AI でのカスタムイベントフィールド値の設定を示す例 ](../images/user-guide/custom-value.png)
 
 完了したら、右上の **[!UICONTROL 次へ]** を選択して続行します。
 
@@ -193,7 +189,7 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 >
 >カスタムプロファイル属性の追加は、カスタムイベントの追加と同じワークフローに従います。 カスタムイベントと同様に、カスタムプロファイル属性は、モデルのスコアリングに同じ方法で影響を与えます。 詳しい説明については、「カスタムイベントの例 [ の節を参照し ](#custom-event) ください。
 
-![ カスタムプロファイル属性の追加 ](../images/user-guide/profile-attributes.png)
+![ 顧客 AI でのカスタムプロファイル属性の設定を示す例 ](../images/user-guide/profile-attributes.png)
 
 #### プロファイルスナップショットの書き出しからプロファイル属性を選択
 
@@ -209,7 +205,7 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 顧客 AI は、「購入日数」や「カウント数」などの機能の生成を、「ウォッチの購入 **などのカスタムイベントに自動的に適用** ます。 このイベントが顧客の傾向が高い、中である、低い理由に影響を与える要因と見なされた場合、顧客 AI は `Days since prd1013 purchase` または `Count of prd1013 purchase` として表示します。 これをカスタムイベントとして作成すると、イベントに新しい名前を付けて、結果をはるかに読みやすくできます。 たとえば、`Days since Watch purchase` のように設定します。さらに、顧客 AI は、イベントが標準イベントでない場合でも、このイベントをトレーニングおよびスコアリングに使用します。 つまり、影響を与えると思われる複数のイベントを追加し、予約、訪問者ログ、その他のイベントなどのデータを含めることで、モデルをさらにカスタマイズできます。 これらのデータポイントを追加することで、顧客 AI モデルの精度と精度がさらに向上します。
 
-![ カスタムイベントの例 ](../images/user-guide/custom-event-name.png)
+![ 顧客 AI でユーザー定義の名前を持つカスタムイベントの設定を示す例 ](../images/user-guide/custom-event-name.png)
 
 ## オプションを設定
 
@@ -219,7 +215,7 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 スコアリングスケジュールを設定するには、最初に **[!UICONTROL スコアリング頻度]** を設定します。 予測の自動実行は、週単位または月単位でスケジュールできます。
 
-![](../images/user-guide/schedule.png)
+![ 顧客 AI でのスコアリングスケジュール設定オプションの表示例 ](../images/user-guide/schedule.png)
 
 ### 予測の除外 *（任意）*
 
@@ -227,7 +223,7 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 イベントを除外するには、「**[!UICONTROL 除外を追加]** を選択し、イベントを定義します。 除外を削除するには、イベントコンテナの右上にある省略記号（**[!UICONTROL ...]**）を選択し、「**[!UICONTROL コンテナを削除]**」を選択します。
 
-![](../images/user-guide/exclusion.png)
+![ 顧客 AI における予測除外の設定を示す例 ](../images/user-guide/exclusion.png)
 
 ### プロファイルの切り替え
 
@@ -235,7 +231,7 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 
 顧客 AI を初めて使用する場合は、モデル出力の結果に満足するまで、この機能をオフに切り替えることができます。 これにより、モデルを微調整しながら、複数のスコアリングデータセットを顧客プロファイルにアップロードするのを防ぎます。 モデルの調整が完了したら、「サービスインスタンス **」ページの [ 複製オプション ](#set-up-your-instance) を使用してモデルの複製を** 成できます。 これにより、モデルのコピーを作成し、プロファイルをオンに切り替えることができます。
 
-![プロファイル切り替え](../images/user-guide/advanced-workflow-save.png)
+![ 顧客 AI の詳細ワークフローの「プロファイル」切り替えオプションを示す例。](../images/user-guide/advanced-workflow-save.png)
 
 スコアリングスケジュールを設定し、予測の除外を含め、プロファイルの切り替えをしたい場所に置いたら、右上の **[!UICONTROL 完了]** を選択して、顧客 AI インスタンスを作成します。
 
@@ -259,6 +255,4 @@ ID を選択するには、ID 列にある下線付きの値を選択します�
 >
 > 次のビデオは古くなっています。 最新情報については、ドキュメントを参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/36581?learn=on&quality=12&captions=jpn)
-
-<!-- comment -->
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)

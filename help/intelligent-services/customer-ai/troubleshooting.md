@@ -6,9 +6,9 @@ title: 顧客 AI エラーのトラブルシューティング
 description: 顧客 AI の一般的なエラーに対する回答を示します。
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1780'
 ht-degree: 31%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 31%
 
 モデルのトレーニング、スコアリングおよび設定が失敗すると、顧客 AI はエラーを表示します。「**[!UICONTROL サービスインスタンス]**」セクションの&#x200B;**[!UICONTROL 前回の実行ステータス]**&#x200B;の列には、**[!UICONTROL 成功]**、**[!UICONTROL トレーニングの問題]**、**[!UICONTROL 失敗]**&#x200B;のいずれかのメッセージが表示されます。
 
-![前回の実行ステータス](./images/errors/last-run-status.png)
+![ 成功、トレーニングの問題または失敗を示す最終実行ステータス ](./images/errors/last-run-status.png)
 
 **[!UICONTROL 失敗]**&#x200B;または **[!UICONTROL トレーニングの問題]**&#x200B;が表示された場合は、実行ステータスを選択してサイドパネルを開くことができます。サイドパネルには、**[!UICONTROL 前回の実行ステータス]**&#x200B;と&#x200B;**[!UICONTROL 前回の実行詳細]**&#x200B;が含まれています。**[!UICONTROL 前回の実行詳細]**&#x200B;には、実行が失敗した理由に関する情報が含まれています。 エラーの詳細情報が顧客 AI から提供されない場合は、提供されたエラーコードをサポートに連絡してください。
 
@@ -27,13 +27,13 @@ ht-degree: 31%
 
 Google Chrome の匿名モードセキュリティ設定が更新されたので、Google Chrome の匿名モードでの読み込みエラーが発生します。アドビでは、experience.adobe.com を信頼できるドメインにするために、Chrome でこの問題に鋭意取り組んでいるところです。
 
-![ エラー画像 ](./images/errors/error.PNG){width=500}
+![ 顧客 AI エラーメッセージの例を示すエラー画像。](./images/errors/error.PNG){width=500}
 
 ### 推奨される修正
 
 この問題を回避するには、experience.adobe.com を、常に Cookie を使用できるサイトとして追加する必要があります。まず、**chrome://settings/cookies** に移動します。次に、「**カスタマイズされた動作**」セクションまでスクロールしたあと、「常に Cookie を使用できるサイト」の隣にある「**追加**」ボタンを選択します。表示されたポップオーバーで `[*.]experience.adobe.com` をコピー＆ペーストし、「**このサイトでサードパーティの Cookie を許可する**」のチェックボックスをオンにします。完了したら、「**追加**」を選択し、顧客 AI を匿名モードでリロードします。
 
-![推奨される修正](./images/errors/cookies2.gif)
+![Chrome設定で常に cookie を使用できるサイトとしてexperience.adobe.comを追加する手順を示すアニメーション。](./images/errors/cookies2.gif)
 
 ## モデルの品質が低い
 

@@ -6,10 +6,10 @@ title: 顧客 AI におけるデータ要件
 topic-legacy: Getting started
 description: 顧客 AI が使用する必須のイベント、入力、出力について説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2551'
-ht-degree: 92%
+source-wordcount: '2552'
+ht-degree: 91%
 
 ---
 
@@ -213,7 +213,7 @@ Experience Platform UI にフィールドグループを表示するには、左
 
 出力データセットは、Experience Platform **データセット** ワークスペースで確認できます。 すべての顧客 AI 出力データセットは、「**顧客 AI スコア - NAME_OF_APP（アプリ名）**」という名前で始まります。同様に、すべての顧客 AI 出力スキーマは、「**顧客 AI スキーマ - Name_of_app（アプリ名）**」という名前で始まります。
 
-![顧客 AI の出力データセットの名前](./images/user-guide/cai-schema-name-of-app.png)
+![ 顧客 AI の出力データセットの命名規則。](./images/user-guide/cai-schema-name-of-app.png)
 
 次の表に、顧客 AI の出力に含まれる様々な属性を示します。
 

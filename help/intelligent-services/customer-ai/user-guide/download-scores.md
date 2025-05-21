@@ -5,10 +5,10 @@ feature: Customer AI
 title: 顧客 AI でのスコアのダウンロード
 description: 顧客 AI では、スコアを Parquet ファイル形式でダウンロードできます。
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 72%
+source-wordcount: '987'
+ht-degree: 70%
 
 ---
 
@@ -31,11 +31,11 @@ ht-degree: 72%
 
 顧客 AI インサイトのサービスインスタンス内で、右上のナビゲーションの「*その他のアクション*」ドロップダウンをクリックし、「**[!UICONTROL アクセススコア]**」を選択します。
 
-![その他のアクション](../images/insights/more-actions.png)
+![ 「スコアにアクセス」オプションを表示するその他のアクションのドロップダウンメニュー。](../images/insights/more-actions.png)
 
 新しいダイアログが表示され、スコアのダウンロードに関するドキュメントへのリンクと、現在のインスタンスのデータセット ID が示されます。データセット ID をクリップボードにコピーして、次の手順に進みます。
 
-![データセット ID](../images/download-scores/access-scores.png)
+![ 現在のインスタンスのデータセット ID を表示するスコアダイアログにアクセス ](../images/download-scores/access-scores.png)
 
 ## バッチ ID を取得する {#retrieve-your-batch-id}
 
@@ -236,7 +236,6 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 | --------- | ----------- |
 | `_links.self.href` | ディレクトリ内のファイルのダウンロードに使用する GET 要求の URL です。 |
 
-
 `data` 配列内のファイルオブジェクトの `href` 値をコピーして、次の手順に進みます。
 
 ## ファイルデータをダウンロードする
@@ -271,13 +270,13 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->GETリクエストを行う前に、ファイルを保存する正しいディレクトリまたはフォルダーにいることを確認してください。
+>GET リクエストを行う前に、ファイルを保存する正しいディレクトリまたはフォルダーにいることを確認します。
 
 **応答**
 
 現在のディレクトリにある、要求したファイルがダウンロードされます。この例では、ファイル名は「filename.parket」です。
 
-![端末](../images/download-scores/response.png)
+![ 成功した API 呼び出しを示すターミナル応答の例 ](../images/download-scores/response.png)
 
 ## 顧客 AI で設定されたセグメントのダウンロード {#segment}
 

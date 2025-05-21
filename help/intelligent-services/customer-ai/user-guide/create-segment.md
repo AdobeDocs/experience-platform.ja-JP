@@ -5,10 +5,10 @@ feature: Customer AI
 title: 予測スコアでの顧客セグメントの作成
 description: 予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づくオーディエンスを発見するための顧客セグメントを作成できます。この節では、セグメントビルダーを使用してセグメントを作成する手順を説明します。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 70%
+source-wordcount: '337'
+ht-degree: 66%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 70%
 
 Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL セグメント]**」をクリックし、「**[!UICONTROL セグメントを作成]**」をクリックします。
 
-![](../images/user-guide/segments_new.png)
+![ 新しいセグメントを作成するオプションを示す、Experience Platform UI のセグメントページのスクリーンショット。](../images/user-guide/segments_new.png)
 
 「**セグメントビルダー**」が表示されます。左側の「**[!UICONTROL フィールド]**」列の「**[!UICONTROL 属性]**」タブで、「**[!UICONTROL XDM Individual Profile]**」という名前のフォルダーをクリックし、組織の名前空間を持つフォルダーをクリックします。「**[!UICONTROL Customer AI]**」という名前のフォルダーには、予測実行の結果が格納され、スコアが属するインスタンスに基づいて名前が付けられます。インスタンスフォルダーをクリックして、目的のインスタンスの結果にアクセスします。
 
