@@ -2,16 +2,34 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2583'
-ht-degree: 72%
+source-wordcount: '2652'
+ht-degree: 71%
 
 ---
 
 # Adobe Experience Platform Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK自体の最新のリリースノートについては、[Experience Platform Web SDK リリースノート ](/help/web-sdk/release-notes.md) を参照してください。
+
+## バージョン 2.30.0 - 2025年5月21日（PT）
+
+**新機能**
+
+- サードパーティ cookie を有効にする際に、データ要素を指定できるようになりました。
+- コードフィールドにクリアボタンを追加しました。
+- Adobe Experience Platform Web SDKの [ バージョン 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) が含まれます。
+
+**修正点および改善点**
+
+- イベントのグループ化が有効な場合に `onBeforeLinkClickSend` を設定できないようにする検証を追加しました。
+
+## バージョン 2.29.1 - 2025年5月8日（PT）
+
+**修正点および改善点**
+
+- 編集後すぐに「保存」をクリックしても、設定が保存されない問題を修正しました。
 
 ## バージョン 2.29.0 - 2025年3月5日（PT）
 
@@ -103,7 +121,7 @@ Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます�
 **修正点および改善点**
 
 - [ 変数を更新 ](action-types.md#update-variable) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
-- `sendEvent` アクションで使用することが推奨されるイベントタイプから [!UICONTROL &#x200B; メディア &#x200B;] イベントタイプを削除しました。
+- `sendEvent` アクションで使用することが推奨されるイベントタイプから [!UICONTROL  メディア ] イベントタイプを削除しました。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
 
@@ -161,7 +179,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **新機能**
 
-- [&#128279;](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
