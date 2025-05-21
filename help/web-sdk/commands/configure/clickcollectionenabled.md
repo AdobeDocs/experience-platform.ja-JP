@@ -48,9 +48,9 @@ Web SDKは、`<a>` および `<area>` HTML要素に対するすべてのクリ�
 
 この変数は、タグ拡張機能によって自動的に管理されるので、明示的に設定する必要はありません。 [ タグ拡張機能の設定 ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 時に次のいずれかを選択すると、該当するリンクトラッキングデータが収集されます。
 
-* [!UICONTROL  内部リンククリック数の収集 ]
-* [!UICONTROL  外部リンククリック数の収集 ]
-* [!UICONTROL  ダウンロードリンクのクリック数を収集 ]
+* [!UICONTROL &#x200B; 内部リンククリック数の収集 &#x200B;]
+* [!UICONTROL &#x200B; 外部リンククリック数の収集 &#x200B;]
+* [!UICONTROL &#x200B; ダウンロードリンクのクリック数を収集 &#x200B;]
 
 詳細は、[`clickCollection`](clickcollection.md) を参照してください。
 
