@@ -32,7 +32,7 @@ ht-degree: 19%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]* パネルで適切なカテゴリを選択するか、検索バーを使用して、使用する特定のソースに移動します。
 
-[!DNL MariaDB] を使用するには、「*[!UICONTROL データベース&#x200B;**[!UICONTROL 」の下の「]**MariaDB]*」ソースカードを選択し、「**[!UICONTROL 設定]**」を選択します。
+[!DNL MariaDB] を使用するには、「*[!UICONTROL データベース&#x200B;**[!UICONTROL 」の下の「]**&#x200B;MariaDB]*」ソースカードを選択し、「**[!UICONTROL 設定]**」を選択します。
 
 >[!TIP]
 >
