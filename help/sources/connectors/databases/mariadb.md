@@ -3,10 +3,10 @@ title: MariaDB Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して MariaDB をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 21%
+source-wordcount: '420'
+ht-degree: 26%
 
 ---
 
@@ -22,11 +22,11 @@ Experience Platform は、サードパーティのデータベースからデー
 
 ### IP アドレスの許可リスト
 
-ソースを Azure またはAmazon Web Services（AWS）上のExperience Platformに接続する前に、許可リストに地域固有の IP アドレスを追加する必要があります。 詳しくは、[Azure およびAWS上のExperience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
-### Azure 上のExperience Platformに対する認証 {#azure}
+### Experience Platformに対する認証
 
-Azure 上のExperience Platformに接続するには、次の資格情報の値を指定 [!DNL MariaDB] る必要があります。
+Experience Platformに接続するには、次の資格情報の値を指定する必要 [!DNL MariaDB] あります。
 
 >[!BEGINTABS]
 
@@ -58,26 +58,6 @@ Azure 上のExperience Platformに接続するには、次の資格情報の値�
 接続文字列の取得について詳しくは、この [[!DNL MariaDB]  ドキュメント ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) を参照してください。
 
 >[!ENDTABS]
-
-### Amazon Web Services上のExperience Platformに対する認証（AWS） {#aws}
-
->[!AVAILABILITY]
->
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
-
-AWS上のExperience Platformに接続するには、次の資格情報の値 [!DNL MariaDB] 指定する必要があります。
-
-| 資格情報 | 説明 |
-| --- | --- |
-| `server` | [!DNL MariaDB] データベースの名前または IP。 |
-| `username` | データベースの名前。 |
-| `port` | 接続先の通信エンドポイントのポート番号。 |
-| `password` | データベースに対応するユーザー名。 |
-| `database` | データベースに対応するパスワード。 |
-| `sslMode` | データ転送中にデータを暗号化する方法。 |
-| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL MariaDB] の接続仕様 ID は `3000eb99-cd47-43f3-827c-43caf170f015` です。 **注意**：この資格情報は、[!DNL Flow Service] API を使用して接続する場合にのみ必要です。 |
-
-接続文字列の取得について詳しくは、この [[!DNL MariaDB]  ドキュメント ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) を参照してください。
 
 ## API を使用した [!DNL MariaDB] のExperience Platformへの接続
 

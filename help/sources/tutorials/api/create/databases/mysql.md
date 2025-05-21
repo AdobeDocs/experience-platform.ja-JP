@@ -2,9 +2,9 @@
 title: Flow Service API を使用した MySQL のExperience Platformへの接続
 description: API を使用して MySQL データベースをExperience Platformに接続する方法について説明します。
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '607'
 ht-degree: 7%
 
 ---
@@ -124,11 +124,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "DISABLED"
           }
       },
       "connectionSpec": {
@@ -202,11 +203,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -222,7 +224,7 @@ curl -X POST \
 | `auth.params.database` | データベースの名前。 |
 | `auth.params.username` | データベースに対応するユーザー名。 |
 | `auth.params.password` | データベースに対応するパスワード。 |
-| `auth.params.sslMode` | データ転送中にデータを暗号化する方法。 |
+| `auth.params.sslMode` | サーバーサポートに応じて、SSL を適用するかどうかを制御するブール値。 この設定のデフォルトは `false` です。 |
 | `connectionSpec.id` | [!DNL MySQL] 接続仕様 ID は `26d738e0-8963-47ea-aadf-c60de735468a` です。 |
 
 +++

@@ -2,14 +2,14 @@
 title: Flow Service API を使用した PostgreSQL のExperience Platformへの接続
 description: API を使用してデータベースをExperience Platform [!DNL PostgreSQL]  接続する方法について説明します。
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: 5348158f6de9fea1a9fe186a14409afb7e7a376e
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 19%
+source-wordcount: '749'
+ht-degree: 18%
 
 ---
 
-# [!DNL Flow Service] API を使用した [!DNL PostgreSQL] ベース接続の作成
+# [!DNL Flow Service] API を使用した [!DNL PostgreSQL] のExperience Platformへの接続
 
 このガイドでは、[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL PostgreSQL] データベースをAdobe Experience Platformに接続する方法について説明します。
 
@@ -135,12 +135,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "Allow"
           }
       },
       "connectionSpec": {
@@ -217,12 +217,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -239,7 +239,7 @@ curl -X POST \
 | `auth.params.database` | [!DNL PostgreSQL] データベースの名前。 |
 | `auth.params.username` | [!DNL PostgreSQL] データベース認証に関連付けられたユーザー名。 |
 | `auth.params.password` | [!DNL PostgreSQL] データベース認証に関連付けられたパスワード。 |
-| `auth.params.sslMode` | データ転送中にデータを暗号化する方法。 使用可能な値は `Disable`、`Allow`、`Prefer`、`Verify Ca`、`Verify Full` などです。 |
+| `sslMode` | サーバーサポートに応じて、SSL を適用するかどうかを制御するブール値。 この設定のデフォルトは `false` です。 |
 | `connectionSpec.id` | [!DNL PostgreSQL] 接続仕様 ID:`74a1c565-4e59-48d7-9d67-7c03b8a13137`。 |
 
 +++

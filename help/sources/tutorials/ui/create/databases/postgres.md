@@ -2,9 +2,9 @@
 title: UI を使用した PostgreSQL のExperience Platformへの接続
 description: Experience Platform ユーザーインターフェイスのソースワークスペースを使用して、PostgreSQL データベースをExperience Platformに接続する方法について説明します。
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: 8cabf1cb86993fdde37d0b9d957f6c8ec23bb237
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '653'
 ht-degree: 18%
 
 ---
@@ -43,19 +43,20 @@ ht-degree: 18%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]* パネルで適切なカテゴリを選択するか、検索バーを使用して、使用する特定のソースに移動します。
 
-[!DNL PostgreSQL] を使用するには、「*[!UICONTROL データベース]*」の下の **[!UICONTROL PostgreSQL]** ソースカードを選択し、「**[!UICONTROL 設定]**」を選択します。
+[!DNL PostgreSQL] を使用するには、「*[!UICONTROL データベース&#x200B;**[!UICONTROL 」の下の「]**PostgreSQL DB]*」ソースカードを選択し、「**[!UICONTROL 設定]**」を選択します。
 
 >[!TIP]
 >
 >ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
+![PostgreSQL ソースカードが選択されたソースカタログ ](../../../../images/tutorials/create/postgresql/catalog.png)
 
 
 ## 既存のアカウントを使用 {#existing}
 
 既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL PostgreSQL] アカウントを選択します。
 
-![ ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/postgresql/catalog.png)
+![ ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/postgresql/existing.png)
 
 ## 新しいアカウントを作成 {#create}
 
@@ -63,7 +64,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/postgresql/existing.png)
+![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/postgresql/new.png)
 
 ### Azure 上のExperience Platformへの接続 {#azure}
 
@@ -93,7 +94,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しい [!DNL PostgreSQL] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、必要な [ 認証用の資格情報 ](../../../../connectors/databases/postgres.md#aws) を指定します。
 
-![AWSに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/postgresql/basic-auth.png)
+![AWSに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/postgresql/aws.png)
 
 ## [!DNL PostgreSQL] データのデータフローの作成
 

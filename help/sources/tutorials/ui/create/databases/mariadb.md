@@ -2,10 +2,10 @@
 title: UI を使用した MariaDB のExperience Platformへの接続
 description: Experience Platform ユーザーインターフェイスのソースワークスペースを使用して、MariaDB アカウントをExperience Platformに接続する方法を説明します。
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 16%
+source-wordcount: '492'
+ht-degree: 19%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 16%
 
 このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL MariaDB] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
-## はじめに
+## 基本を学ぶ
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -32,7 +32,7 @@ ht-degree: 16%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]* パネルで適切なカテゴリを選択するか、検索バーを使用して、使用する特定のソースに移動します。
 
-[!DNL MariaDB] を使用するには、「*[!UICONTROL データベース&#x200B;**[!UICONTROL 」の下の「]**&#x200B;MariaDB]*」ソースカードを選択し、「**[!UICONTROL 設定]**」を選択します。
+[!DNL MariaDB] を使用するには、「*[!UICONTROL データベース&#x200B;**[!UICONTROL 」の下の「]**MariaDB]*」ソースカードを選択し、「**[!UICONTROL 設定]**」を選択します。
 
 >[!TIP]
 >
@@ -54,9 +54,9 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/maria-db/new.png)
 
-### Azure 上のExperience Platformへの接続 {#azure}
+### Experience Platformへの接続
 
-アカウントキーまたは基本認証を使用して、[!DNL MariaDB] アカウントを Azure 上のExperience Platformに接続できます。
+アカウントキーまたは基本認証のいずれかを使用して、[!DNL MariaDB] アカウントをExperience Platformに接続できます。
 
 >[!BEGINTABS]
 
@@ -73,17 +73,5 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 ![ ソースワークフローで「基本認証」が選択された新しいアカウントインターフェイス ](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
-
-### Amazon Web ServicesのExperience Platform（AWS）への接続 {#aws}
-
->[!AVAILABILITY]
->
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
-
-新しい [!DNL MariaDB] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、必要な [ 認証用の資格情報 ](../../../../connectors/databases/mariadb.md#aws) を指定します。
-
-![AWSに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/maria-db/basic-auth.png)
-
-## 次の手順
 
 このチュートリアルでは、[!DNL MariaDB] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをExperience Platformに取り込むためのデータフローの設定 ](../../dataflow/databases.md) を行いましょう。

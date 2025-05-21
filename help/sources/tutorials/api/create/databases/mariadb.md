@@ -2,10 +2,10 @@
 title: Flow Service API を使用した MariaDB のExperience Platformへの接続
 description: API を使用して MariaDB アカウントをExperience Platformに接続する方法を説明します。
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
-source-git-commit: d5d47f9ca3c01424660fe33f8310586a70a32875
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 18%
+source-wordcount: '474'
+ht-degree: 22%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 18%
 
 このガイドでは、[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL MariaDB] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
-## はじめに
+## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -30,11 +30,11 @@ ht-degree: 18%
 
 Experience Platform API を正常に呼び出す方法については、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) に関するガイドを参照してください。
 
-## [!DNL MariaDB] を Azure 上のExperience Platformに接続 {#azure}
+## [!DNL MariaDB] をExperience Platformに接続
 
-[!DNL MariaDB] アカウントを Azure 上のExperience Platformに接続する方法については、以下の手順を参照してください。
+[!DNL MariaDB] アカウントをExperience Platformに接続する方法については、以下の手順を参照してください。
 
-### Azure 上のExperience Platformに [!DNL MariaDB] のベース接続を作成する {#azure-base}
+### [!DNL MariaDB] のベース接続の作成
 
 ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
@@ -165,82 +165,6 @@ curl -X POST \
 +++
 
 >[!ENDTABS]
-
-## Amazon Web Services上のExperience Platformへの [!DNL MariaDB] の接続 {#aws}
-
->[!AVAILABILITY]
->
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
-
-[!DNL MariaDB] アカウントをAWS上のExperience Platformに接続する方法については、以下の手順を参照してください。
-
-### AWS上のExperience Platformに [!DNL MariaDB] のベース接続を作成する {#aws-base}
-
-**API 形式**
-
-```https
-POST /connections
-```
-
-**リクエスト**
-
-次のリクエストは、[!DNL MariaDB] がAWS上のExperience Platformに接続するためのベース接続を作成します。
-
-+++リクエストの例を表示
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "MariaDB on Experience Platform AWS",
-      "description": "MariaDB on Experience Platform AWS",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-          "version": "1.0"
-      }
-  }'
-```
-
-| プロパティ | 説明 |
-| --- | --- |
-| `auth.params.server` | [!DNL MariaDB] データベースの名前または IP。 |
-| `auth.params.database` | データベースの名前。 |
-| `auth.params.username` | データベースに対応するユーザー名。 |
-| `auth.params.password` | データベースに対応するパスワード。 |
-| `auth.params.sslMode` | データ転送中にデータを暗号化する方法。 |
-| `connectionSpec.id` | [!DNL MariaDB] 接続仕様 ID は `3000eb99-cd47-43f3-827c-43caf170f015` です。 |
-
-+++
-
-**応答**
-
-リクエストが成功した場合は、一意の ID （`id`）を含む、新しく作成されたベース接続の詳細が返されます。
-
-+++応答の例を表示
-
-```json
-{
-    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
-    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
-}
-```
-
-+++
 
 
 ## 次の手順

@@ -2,14 +2,14 @@
 title: Ui を使用した MySQL のExperience Platformへの接続
 description: UI を使用して MySQL データベースをExperience Platformに接続する方法を説明します。
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
 source-wordcount: '540'
-ht-degree: 16%
+ht-degree: 14%
 
 ---
 
-# UI での [!DNL MySQL] ソース接続の作成
+# UI を使用した [!DNL MySQL] のExperience Platformへの接続
 
 このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL MySQL] データベースをAdobe Experience Platformに接続する方法について説明します。
 
