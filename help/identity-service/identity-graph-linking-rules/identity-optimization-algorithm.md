@@ -2,9 +2,9 @@
 title: ID 最適化アルゴリズム
 description: ID サービスでの ID 最適化アルゴリズムについて説明します。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
@@ -49,7 +49,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
 
 名前空間の優先度とその完全な機能および使用方法について詳しくは、[ 名前空間優先度ガイド ](./namespace-priority.md) を参照してください。
 
-![ グラフレイヤーと名前空間の優先度 ](../images/namespace-priority/graph-layers.png)
+![ グラフレイヤーと名前空間の優先度。](../images/namespace-priority/graph-layers.png " グラフレイヤーと名前空間の優先度。"){zoomable="yes"}
 
 ## プロセス {#process}
 
@@ -68,7 +68,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
 * グラフは、上記の順序に基づいて再確立されます。 リンクを追加することが制限制約に違反している場合（例えば、グラフに一意の名前空間を持つ複数の ID が含まれている場合）、リンクは削除されます。
 * 結果のグラフは、設定した一意の名前空間制約に準拠します。
 
-![ID 最適化アルゴリズムを視覚化した図。](../images/ido_algorithm.png)
+![ID 最適化アルゴリズムを視覚化した図。](../images/ido_algorithm.png "ID 最適化アルゴリズムを視覚化した図。"){zoomable="yes"}
 
 ## ID 最適化アルゴリズムのシナリオの例
 
@@ -95,7 +95,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
 * ただし、一意の名前空間設定により、グラフごとに最大 1 つの CRMID 名前空間と 1 つのメール名前空間が設定されるので、ID 最適化アルゴリズムはグラフを 2 つに分割します。
    * 最後に、John は最後に認証されたユーザーなので、ラップトップを表す ECID は、Jane の代わりに彼のグラフにリンクされたままになります。
 
-![ 共有デバイスのケース 1](../images/identity-settings/shared-device-case-one.png)
+![ 共有デバイスの場合。](../images/identity-settings/shared-device-case-one.png " 共有デバイスの場合 "){zoomable="yes"}
 
 >[!TAB  例 2]
 
@@ -112,7 +112,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
    * その結果、ID 最適化アルゴリズムによって古いリンク（この場合は、`timestamp=1` にリンクされていた Jane の CRMID）が削除されます。
    * ただし、Jane の CRMID は ID サービスのグラフとしては存在しなくなりますが、リアルタイム顧客プロファイルのプロファイルとしては引き続き存在します。 これは、ID グラフに 2 つ以上のリンクされた ID を含める必要があり、リンクを削除した結果、Jane の CRMID にリンクする別の ID がなくなったためです。
 
-![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
+![ ケース 2：共有デバイス。](../images/identity-settings/shared-device-case-two.png " 共有デバイスの場合 2。"){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ ID サービスの名前空間には、重要な暗黙の相対順序があり�
 
 ID 最適化アルゴリズムを使用すると、偽の電子メールや電話番号などの不正な ID 値が、複数の異なる ID グラフに伝わることはありません。
 
-![ 悪い電子メール ](../images/identity-settings/bad-email.png)
+![ 悪いメール取り込みの図。](../images/identity-settings/bad-email.png " 悪いメール取り込みの図。"){zoomable="yes"}
 
 ## 匿名イベントの関連付け
 
@@ -154,7 +154,7 @@ ECID には未認証（匿名）イベントが格納されるのに対して、
       * 最初のログインの前に `timestamp=1`、および
       * Kevin の 1 回目のログインと 2 回目のログインの間に匿名でブラウジングを行う際に、Nora が行ったアクティビティ。
 
-![anon-event-association](../images/identity-settings/anon-event-association.png)
+![ 匿名イベント関連付けを示す図。](../images/identity-settings/anon-event-association.png " 匿名イベントの関連付けを示す図。"){zoomable="yes"}
 
 
 ## 次の手順

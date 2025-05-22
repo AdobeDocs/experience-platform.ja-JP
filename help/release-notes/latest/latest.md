@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2025年5月
 description: Adobe Experience Platform の 2025年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8f1538efc96c8dc47a505511ec7f064b07f124c8
+source-git-commit: ad9ec9c3177c25e2207b67b4c939c3f6fa97883f
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1171'
 ht-degree: 28%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 28%
 >その他のAdobe Experience Platform アプリケーションのリリースノートについては、次のドキュメントを参照してください。
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年5月20日（PT）**
 
@@ -84,7 +84,7 @@ Adobe Experience Platform ID サービスを使用すると、デバイスやシ
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Identity Graph Linking Rules] の概要 | [!DNL Identity Graph Linking Rules] は、グラフの折りたたみを防ぐことで、パーソナライズされたマーケティングのために正確な顧客プロファイルを維持することを支援するように設計されています。<ul><li>[ グラフシミュレーションツール ](../../identity-service/identity-graph-linking-rules/graph-simulation.md) を使用して、設定をテストし検証します。</li><li>組織におけるグラフ折りたたみのインスタンスを監視するには、[ID ダッシュボード ](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs) を参照してください。</li><li>開始するには、[[!DNL Identity Graph Linking Rules]  実装ガイド ](../../identity-service/identity-graph-linking-rules/implementation-guide.md) を参照してください。</li></ul> **メモ**:ID 設定を手動で設定するまで、データに変更が生じます。 |
+| [!DNL Identity Graph Linking Rules] | [!DNL Identity Graph Linking Rules] が一般公開されました。 「グラフの折りたたみ」 [!DNL Identity Graph Linking Rules] 防ぎ、Experience Platformとアプリケーションをまたいでパーソナライズされたマーケティングのために、明確で正確な顧客プロファイルを確保します。 主な機能は次のとおりです。<ul><li>[ グラフシミュレーションツール ](../../identity-service/identity-graph-linking-rules/graph-simulation.md)：アルゴリズムを探索し、ID 設定の設定をテストします。</li><li> [ID 設定 ](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md)：一意の名前空間を設定し、優先度を設定する。</li><li>[ID ダッシュボード ](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs)：グラフを監視し、ID 設定を検証します。</li></ul> **注意**:ID 設定を手動で設定するまで、データは変更されません。 |
 
 {style="table-layout:auto"}
 

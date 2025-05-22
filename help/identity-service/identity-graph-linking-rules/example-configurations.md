@@ -2,10 +2,10 @@
 title: グラフ設定の例
 description: ID グラフリンクルールと ID データを使用する際に発生する可能性のある一般的なグラフシナリオについて説明します。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: cd9104e253cda4ce9a004f7931b9c38907874941
 workflow-type: tm+mt
-source-wordcount: '2759'
-ht-degree: 7%
+source-wordcount: '3316'
+ht-degree: 6%
 
 ---
 
@@ -67,13 +67,13 @@ CRMID: Tom, ECID: 111
 
 以下は、CRMID が一意で最も優先度が高い、理想的な単一人物グラフの例です。
 
-![CRMID が一意で優先順位が最も高い、理想的な一人称グラフのシミュレート例。](../images/graph-examples/crmid_only_single.png)
+![CRMID が一意で優先順位が最も高い、理想的な一人称グラフのシミュレート例。](../images/graph-examples/crmid_only_single.png "CRMID が一意で優先順位が最も高い、理想的な一人称グラフのシミュレート例。"){zoomable="yes"}
 
 >[!TAB  複数人グラフ ]
 
 次に、複数人グラフの例を示します。 この例では、「共有デバイス」シナリオが表示されます。このシナリオでは、2 つの CRMID があり、古い確立済みリンクを持つ CRMID が削除されます。
 
-![ 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。](../images/graph-examples/crmid_only_multi.png)
+![ 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。](../images/graph-examples/crmid_only_multi.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -136,13 +136,13 @@ CRMID: Summer, ECID: 222
 
 以下は、理想的な 1 人の人物のグラフのペアの例です。ここでは、各 CRMID が、ハッシュ化された電子メール名前空間と ECID にそれぞれ関連付けられています。
 
-![ この例では、2 つの別個のグラフが生成され、それぞれが 1 人の人物エンティティを表します。](../images/graph-examples/crmid_hashed_single.png)
+![ この例では、2 つの別個のグラフが生成され、それぞれが 1 人の人物エンティティを表します。](../images/graph-examples/crmid_hashed_single.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 >[!TAB  複数人グラフ：共有デバイス ]
 
 次に、デバイスが 2 人のユーザーで共有される、複数担当者グラフのシナリオの例を示します。
 
-![ この例では、Tom と Summer の両方が同じ ECID に関連付けられているので、シミュレーショングラフに「共有デバイス」のシナリオが表示されます。](../images/graph-examples/crmid_hashed_shared_device.png)
+![ この例では、Tom と Summer の両方が同じ ECID に関連付けられているので、シミュレーショングラフに「共有デバイス」のシナリオが表示されます。](../images/graph-examples/crmid_hashed_shared_device.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -158,7 +158,7 @@ CRMID: Summer, ECID: 111
 
 次に、メールが一意ではなく、2 つの異なる CRMID に関連付けられている複数人グラフシナリオの例を示します。
 
-![ このシナリオは、「共有デバイス」シナリオに似ています。 ただし、人物エンティティで ECID を共有する代わりに、同じメールアカウントに関連付けられます。](../images/graph-examples/crmid_hashed_nonunique_email.png)
+![ このシナリオは、「共有デバイス」シナリオに似ています。 ただし、人物エンティティで ECID を共有する代わりに、同じメールアカウントに関連付けられます。 「複数人グラフのシミュレート例。 この例は、2 つの CRMID があり、古い確立済みリンクが削除される共有デバイスのシナリオを示しています。」 ](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -233,13 +233,13 @@ CRMID: Summer, ECID: 444, GAID:B-B-B
 
 次に、ハッシュ化されたメールとハッシュ化された電話が [!DNL Segment Match] で使用する ID としてマークされる、理想的な一人称グラフシナリオを示します。 このシナリオでは、グラフは 2 つに分割され、異なる人物エンティティを表します。
 
-![ 理想的な単一人物グラフシナリオ。](../images/graph-examples/crmid_hashed_single_seg_match.png)
+![ 理想的な一人称グラフシナリオ。](../images/graph-examples/crmid_hashed_single_seg_match.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 >[!TAB  複数人グラフ：共有デバイス、共有コンピューター ]
 
 次に、デバイス（コンピューター）が 2 人で共有される複数人のグラフシナリオを示します。 このシナリオでは、共有コンピューターは `{ECID: 111}` によって表され、`{CRMID: Summer}` にリンクされます。これは、そのリンクが最も新しく確立されたリンクであるためです。 `{CRMID: Tom}` と `{ECID: 111}` の間のリンクが古く、CRMID がこの設定で指定された一意の名前空間であるため、`{CRMID: Tom}` が削除されました。
 
-![2 人のユーザーが 1 台のコンピューターを共有している、複数人によるグラフのシナリオ。](../images/graph-examples/shared_device_shared_computer.png)
+![2 人のユーザーが 1 台のコンピューターを共有している、複数人のグラフシナリオ。](../images/graph-examples/shared_device_shared_computer.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -257,7 +257,7 @@ CRMID: Summer, ECID: 111
 
 次に、Android デバイスが 2 人で共有される複数人のグラフシナリオを示します。 このシナリオでは、CRMID は一意の名前空間として設定されるので、`{CRMID: Tom, GAID: B-B-B, ECID:444}` の新しいリンクが古いリンクに置き換わ `{CRMID: Summer, GAID: B-B-B, ECID:444}` ます。
 
-![2 人のユーザーが Android モバイルデバイスを共有している複数人グラフシナリオ。](../images/graph-examples/shared_device_android.png)
+![2 人のユーザーが Android モバイルデバイスを共有している複数人グラフシナリオ。](../images/graph-examples/shared_device_android.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -275,7 +275,7 @@ CRMID: Tom, ECID: 444, GAID: B-B-B
 
 次に、Apple デバイスが 2 人のユーザーで共有される複数人のグラフのシナリオを示します。 このシナリオでは、IDFA は共有されますが、ECID はリセットされません。
 
-![2 人のユーザーが 1 台のApple モバイルデバイスを共有している、複数のユーザーで構成されるグラフのシナリオ。](../images/graph-examples/shared_device_apple_no_reset.png)
+![2 人のユーザーがApple モバイルデバイスを共有している、複数ユーザーのグラフシナリオ。](../images/graph-examples/shared_device_apple_no_reset.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -293,7 +293,7 @@ CRMID: Summer, ECID: 222, IDFA: A-A-A
 
 次に、Apple デバイスが 2 人のユーザーで共有される複数人のグラフのシナリオを示します。 このシナリオでは、ECID はリセットされますが、IDFA は同じままです。
 
-![2 人のユーザーがApple モバイルデバイスを共有しているものの、ECID がリセットされているマルチユーザーグラフのシナリオ。](../images/graph-examples/shared_device_apple_with_reset.png)
+![2 人のユーザーがApple モバイルデバイスを共有しているが、ECID がリセットされている複数人グラフのシナリオ。](../images/graph-examples/shared_device_apple_with_reset.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -311,7 +311,7 @@ CRMID: Summer, ECID: 555, IDFA: A-A-A
 
 次に、同じ電話番号が 2 人の人物によって共有されている、複数の人物のグラフのシナリオを示します。
 
-![ 電話の名前空間が一意でない複数人のグラフシナリオ。](../images/graph-examples/non_unique_phone.png)
+![ 電話の名前空間が一意でない複数人のグラフシナリオ。](../images/graph-examples/non_unique_phone.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -327,13 +327,13 @@ CRMID: Summer, Phone_SHA256: 123-4567
 
 この例では、`{Phone_SHA256}` も一意の名前空間としてマークされます。 したがって、1 つのグラフに `{Phone_SHA256}` 名前空間を持つ複数の ID を含めることはできません。 このシナリオでは、`{Phone_SHA256: 765-4321}` は古いリンクであるため、`{CRMID: Summer}` および `{Email_LC_SHA256: ddeeff}` からリンク解除されます。
 
-![Phone_SHA256 が一意である複数人グラフシナリオ。](../images/graph-examples/unique_phone.png)
+![Phone_SHA256 が一意である複数人グラフのシナリオ。](../images/graph-examples/unique_phone.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 >[!TAB  複数人グラフ：一意でないメール ]
 
 次に、メールが 2 人で共有される複数人のグラフシナリオを示します。
 
-![ メールが一意ではない複数人のグラフシナリオ ](../images/graph-examples/non_unique_email.png)
+![ メールが一意でない複数人グラフのシナリオ ](../images/graph-examples/non_unique_email.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -409,13 +409,13 @@ loginID: ID_C, ECID: 222
 
 次に、1 つの CRMID と複数の loginID を持つ 1 人の人物グラフシナリオを示します。
 
-![1 つの CRMID と複数の loginID を含むグラフシナリオ。](../images/graph-examples/single_crmid.png)
+![1 つの CRMID と複数の loginID を含むグラフシナリオ。](../images/graph-examples/single_crmid.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 >[!TAB  複数人グラフシナリオ：共有デバイス ]
 
 次に、デバイスが 2 人で共有される複数担当者グラフのシナリオを示します。 このシナリオでは、`{ECID:111}` は `{loginID:ID_A}` と `{loginID:ID_C}` の両方にリンクされ、`{ECID:111, loginID:ID_A}` の古い確立済みリンクは削除されます。
 
-![ 複数人の共有デバイスのシナリオ。](../images/graph-examples/single_crmid_shared_device.png)
+![ 複数人の共有デバイスのシナリオ。](../images/graph-examples/single_crmid_shared_device.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -433,7 +433,7 @@ loginID: ID_C, ECID: 111
 
 次に、不正なデータを含む複数人のグラフシナリオを示します。 このシナリオでは、`{loginID:ID_D}` は 2 人の異なるユーザーに誤ってリンクされ、より新しく確立されたリンクを優先して、古いタイムスタンプのリンクが削除されます。
 
-![ 不正なデータを含む複数ユーザーのグラフシナリオ。](../images/graph-examples/single_crmid_bad_data.png)
+![ データが正しくない複数ユーザーのグラフシナリオ。](../images/graph-examples/single_crmid_bad_data.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -451,7 +451,7 @@ CRMID: Tom, loginID: ID_D
 
 次のグラフは、「ぶら下がっている」 loginID シナリオをシミュレートします。 この例では、2 つの異なる loginID が同じ ECID にバインドされています。 ただし、`{loginID:ID_C}` は CRMID にリンクされていません。 したがって、ID サービスが、これら 2 つの loginID が 2 つの異なるエンティティを表していることを検出する方法はありません。
 
-![ 不安定な loginID シナリオ。](../images/graph-examples/dangling_example.png)
+![ 不安定な loginID シナリオ。](../images/graph-examples/dangling_example.png " 不安定な loginID シナリオ。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -529,13 +529,13 @@ loginID: ID_C, ECID: 222
 
 以下は、それぞれが 1 つの CRMID と複数の loginID を持つ 2 つの 1 人の人物グラフの例です。
 
-![1 つの CRMID と複数の loginID を含む単一人物グラフ ](../images/graph-examples/complex_single_person.png)
+![1 つの CRMID と複数の loginID を含む単一人物グラフ。](../images/graph-examples/complex_single_person.png "1 つの CRMID と複数の loginID を含む単一人物グラフ。"){zoomable="yes"}
 
 >[!TAB  複数人グラフ：共有デバイス 1]
 
 次に、`{ECID:111}` が `{loginID:ID_A}` と `{loginID:ID_C}` の両方にリンクされている、複数人の共有デバイスのシナリオを示します。 この場合、古いリンクは削除され、新しいリンクが優先されます。
 
-![ 複数人の共有デバイスグラフのシナリオ。](../images/graph-examples/complex_shared_device_one.png)
+![ 複数人の共有デバイスグラフのシナリオ。](../images/graph-examples/complex_shared_device_one.png " 複数人の共有デバイスグラフのシナリオ。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -555,7 +555,7 @@ loginID: ID_C, ECID: 111
 
 このシナリオでは、loginID のみを送信するのではなく、loginID と CRMID の両方がエクスペリエンスイベントとして送信されます。
 
-![loginID と CRMID の両方がエクスペリエンスイベントとして送信される、複数人の共有デバイスグラフのシナリオ。](../images/graph-examples/complex_shared_device_two.png)
+![loginID と CRMID の両方がエクスペリエンスイベントとして送信される、複数人の共有デバイスグラフのシナリオ。](../images/graph-examples/complex_shared_device_two.png "loginID と CRMID の両方がエクスペリエンスイベントとして送信される、複数人の共有デバイスグラフのシナリオ。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -576,7 +576,7 @@ loginID: ID_A, ECID: 111
 
 このシナリオでは、`{loginID:ID_C}` は `{CRMID:Tom}` と `{CRMID:Summer}` の両方にリンクされているので、不正なデータと見なされます。これは、理想的なグラフシナリオでは、同じ loginID を 2 つの異なるユーザーにリンクしてはならないからです。 この場合、古いリンクは削除され、新しく設定されたリンクが優先されます。
 
-![ 不正なログインデータが含まれる複数人のグラフシナリオ。](../images/graph-examples/complex_bad_data.png)
+![ 不正なログインデータが含まれる複数人のグラフシナリオ。](../images/graph-examples/complex_bad_data.png " 不正なログインデータが含まれる複数人のグラフシナリオ。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -596,7 +596,7 @@ CRMID: Tom, loginID: ID_C
 
 このシナリオでは、一意でないメールが 2 つの異なる CRMID にリンクされているので、古いリンクから新しく確立されたリンクに置き換わります。
 
-![ 一意でないメールが関与する複数人のグラフシナリオ。](../images/graph-examples/complex_non_unique_email.png)
+![ 一意でないメールが関与する複数人のグラフシナリオ。](../images/graph-examples/complex_non_unique_email.png " 一意でないメールが関与する複数人のグラフシナリオ。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -616,7 +616,7 @@ CRMID: Summer, Email_LC_SHA256: aabbcc
 
 このシナリオでは、一意でない電話番号が 2 つの異なる CRMID にリンクされており、古い確立済みリンクが削除され、より最近確立済みのリンクが優先されます。
 
-![ 一意でない電話番号が含まれる複数人のグラフシナリオ。](../images/graph-examples/complex_non_unique_phone.png)
+![ 一意でない電話番号が含まれる複数人のグラフシナリオ。](../images/graph-examples/complex_non_unique_phone.png " 一意でない電話番号が含まれる複数人のグラフシナリオ。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -693,13 +693,13 @@ CRMID: Tom, ECID: 111
 
 次に、理想的な単一人物グラフの例を示します。
 
-![1 つのメール名前空間を持つ理想的な単一人物グラフの例 ](../images/graph-examples/single_person_email.png)
+![1 つのメール名前空間を持つ理想的な単一人物グラフの例。](../images/graph-examples/single_person_email.png "1 つのメール名前空間を持つ理想的な単一人物グラフの例 "){zoomable="yes"}
 
 >[!TAB  複数人グラフ ]
 
 次に、2 人の登録ユーザーが同じデバイスを使用してブラウジングしている複数人物グラフの例を示します。
 
-![2 人の登録済みユーザーが同じデバイスを使用してブラウジングを行う、複数人のグラフシナリオ。](../images/graph-examples/two_registered_users.png)
+![2 人の登録済みユーザーが同じデバイスを使用してブラウジングを行う、複数人のグラフシナリオ。](../images/graph-examples/two_registered_users.png "2 人の登録済みユーザーが同じデバイスを使用してブラウジングを行う、複数人のグラフシナリオ。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -712,7 +712,7 @@ CRMID: Summer, ECID: 111
 
 このシナリオでは、登録ユーザーとゲストユーザーが同じデバイスを共有します。
 
-![ 登録ユーザーとゲストが同じデバイスを共有している複数人グラフの例。](../images/graph-examples/one_guest.png)
+![ 登録ユーザーとゲストが同じデバイスを共有しているマルチユーザーグラフの例。](../images/graph-examples/one_guest.png " 登録ユーザーとゲストが同じデバイスを共有している複数人グラフの例。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -724,7 +724,7 @@ Email: summer@acme.com, ECID: 111
 
 このシナリオでは、登録ユーザーとゲストユーザーがデバイスを共有します。 ただし、CRMID に対応するメール名前空間が含まれていないので、実装エラーが発生します。 このシナリオでは、Tom は登録ユーザーで、Summer はゲストユーザーです。 前のシナリオとは異なり、2 つの人物エンティティ間で共通のメール名前空間がないため、2 つのエンティティが結合されます。
 
-![ 登録ユーザーとゲストが同じデバイスを共有しても、CRMID にメール名前空間が含まれていないので実装エラーが発生する、複数人のグラフの例 ](../images/graph-examples/no_email_namespace_in_crmid.png)
+![ 登録ユーザーとゲストが同じデバイスを共有しても、CRMID にメール名前空間が含まれていないので実装エラーが発生する、複数人グラフの例。](../images/graph-examples/no_email_namespace_in_crmid.png " 登録ユーザーとゲストが同じデバイスを共有しても、CRMID にメール名前空間が含まれていないので実装エラーが発生する、複数人のグラフの例 "){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -735,7 +735,7 @@ Email: summer@acme.com, ECID: 111
 
 このシナリオでは、2 人のゲストユーザーが同じデバイスを共有します。
 
-![2 人のゲストユーザーが同じデバイスを共有している、複数人のグラフシナリオ。](../images/graph-examples/two_guests.png)
+![2 人のゲストユーザーが同じデバイスを共有している、複数人のグラフシナリオ。](../images/graph-examples/two_guests.png){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
@@ -746,7 +746,7 @@ Email: summer@acme.com, ECID: 111
 
 このシナリオでは、ゲストユーザーは項目をチェックアウトし、同じデバイスを使用して登録します。
 
-![ ゲストユーザーが項目を購入し、アカウントに登録するグラフシナリオ。](../images/graph-examples/guest_purchase.png)
+![ ゲストユーザーが項目を購入し、アカウントに登録するグラフシナリオ。](../images/graph-examples/guest_purchase.png " ゲストユーザーが項目を購入し、アカウントに登録するグラフシナリオ。"){zoomable="yes"}
 
 **グラフシミュレーションイベント入力**
 
