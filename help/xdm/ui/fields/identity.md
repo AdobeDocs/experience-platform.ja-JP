@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での ID フィールドの定義
 description: Experience Platform ユーザーインターフェイスで ID フィールドを定義する方法を説明します。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '665'
 ht-degree: 15%
 
 ---
@@ -46,7 +46,7 @@ UI で [ 新しいフィールドを定義 ](./overview.md#define) する際に�
 
 >[!IMPORTANT]
 >
->プライマリ ID フィールドが既に設定されている場合は、上記の手順に従ってスキーマのプライマリ ID フィールドを変更できます。 ただし、変更を有効にするには、プロファイル内の関連データセットを無効にしてから再度有効にする必要があります。
+>スキーマがリアルタイム顧客プロファイルでの使用に対して有効にされ、データが取り込まれたら、**プライマリ ID フィールドは変更できません**。 これを試みると、検証エラーが発生します。 別のプライマリ ID を使用する必要がある場合は、新しいスキーマと、更新された ID 設定を持つ新しいデータセットを作成する必要があります。
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ UI で [ 新しいフィールドを定義 ](./overview.md#define) する際に�
 このガイドでは、UI で ID フィールドを定義する方法について説明しました。 このスキーマを使用してデータが取り込まれると、顧客 ID グラフが更新され、スキーマの ID フィールドが反映されます。 UI で組織のプライベートグラフを調べる方法については、[ID グラフビューア ](../../../identity-service/features/identity-graph-viewer.md) に関するガイドを参照してください。
 
 [!DNL Schema Editor] で他の XDM フィールドタイプを定義する方法については、[UI でのフィールドの定義 ](./overview.md#special) の概要を参照してください。
-
