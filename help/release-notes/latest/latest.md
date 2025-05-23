@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年5月
 description: Adobe Experience Platform の 2025年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ad9ec9c3177c25e2207b67b4c939c3f6fa97883f
+source-git-commit: 3f143c34d31483e91e176b1c69d82db38a8bc6b5
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 28%
+source-wordcount: '1333'
+ht-degree: 24%
 
 ---
 
@@ -16,10 +16,10 @@ ht-degree: 28%
 >その他のAdobe Experience Platform アプリケーションのリリースノートについては、次のドキュメントを参照してください。
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年5月20日（PT）**
 
@@ -68,6 +68,7 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 
 | 機能 | 説明 |
 | --- | --- |
+| [Facebook カスタムオーディエンス ](../../destinations/catalog/social/facebook.md) アドレス関連の識別子のアップグレードとサポート | 2025 年 5 月 23 日（PT）以降、2025 年 6 月を通じて、一時的に、宛先カタログに 2 つの **[!DNL Facebook Custom Audience]** の宛先カードが数時間まで表示される場合があります。 これは、宛先サービスの内部アップグレードと、ターゲティングの改善や Facebook プロパティでのプロファイルとのマッチングのための新しいフィールドのサポートが原因です。 新しいアドレス関連フィールドについて詳しくは、[ サポートされる ID](#supported-identities) の節を参照してください。 <br><br> 「**[!UICONTROL （新規） Facebook カスタムオーディエンス]**」というラベルの付いたカードが表示された場合は、このカードを新しいアクティベーションデータフローに使用します。 既存のデータフローは自動的に更新されるので、ユーザー側で対応する必要はありません。 この期間中に既存のデータフローに加えた変更は、アップグレード後も保持されます。 アップグレードが完了すると、「**[!UICONTROL （新規） Facebook カスタムオーディエンス]**」宛先カードの名前が **[!DNL Facebook Custom Audience]** に変更されます。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。 <ul><li>フロー仕様 ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>接続仕様 ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
 | [Google カスタマーマッチ ](../../destinations/catalog/advertising/google-customer-match.md) のその他の識別子サポート | Google カスタマーマッチの宛先で、アドレス関連フィールドのマッピングがサポートされるようになり、Google Platform のマッチ率が向上しました。 <br><br>Googleがアドレスと一致するようにするには、4 つのアドレスフィールド（`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をすべてマッピングし、書き出されたプロファイルでこれらのフィールドに欠けているデータがないことを確認する必要があります。 <br> いずれかのフィールドがマッピングされていないか、データが欠落している場合、Googleはアドレスと一致しません。 |
 | [Facebook](../../destinations/catalog/social/facebook.md) 接続用のアカウントの有効期限の列 | 「参照」タブと「[ アカウント ](../../destinations/ui/destinations-workspace.md#accounts) タブに、Facebook アカウントトークンの有効期限 [ が表示される ](../../destinations/ui/destinations-workspace.md#browse) うになりました。 |
 | API で作成されたデータセットの書き出し | API で作成されたデータセットを書き出せるようになりました。 UI で作成されたデータセットのみが書き出し可能であった以前の制限は解除されました。 詳しくは、[ データセットの書き出し ](../../destinations/ui/export-datasets.md) を参照してください。 |
