@@ -22,7 +22,7 @@ ht-degree: 3%
 
 新しい [!DNL Amazon][ イベント転送の秘密鍵 ](../../../ui/event-forwarding/secrets.md) を作成し、認証メンバーを示す一意の名前を指定します。 これは、値を保護しながら、アカウントへの接続を認証するために使用されます。
 
-次に、[Core] 拡張機能と [!UICONTROL Secret] データ要素タイプを使用して ](../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成 [!UICONTROL  し、作成した `Amazon` シークレットを参照します。
+次に、[Core] 拡張機能と [!UICONTROL Secret] データ要素タイプを使用して (../../../ui/managing-resources/data-elements.md#create-a-data-element) データ要素を作成  し、作成した `Amazon` シークレットを参照します。
 
 ### 必要な設定の詳細の収集 {#configuration-details}
 
