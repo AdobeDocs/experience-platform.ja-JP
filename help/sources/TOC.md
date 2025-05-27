@@ -5,10 +5,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
+source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
 workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 92%
+source-wordcount: '1078'
+ht-degree: 91%
 
 ---
 
@@ -106,7 +106,7 @@ ht-degree: 92%
       - [Shopify ストリーミング](connectors/ecommerce/shopify-streaming.md)
    - ローカルシステム {#local-system}
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
-   - マーケティングの自動化 {#marketing-automation}
+   - マーケティングオートメーション {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
@@ -188,7 +188,7 @@ ht-degree: 92%
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify ストリーミング](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - マーケティングの自動化 {#marketing-automation}
+      - マーケティングオートメーション {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -242,6 +242,7 @@ ht-degree: 92%
    - [暗号化されたデータの取り込み](tutorials/api/encrypt-data.md)
    - [データフローをドラフトとして保存](tutorials/api/draft.md)
    - [データフローへのアクセスラベルの適用](tutorials/api/labels.md)
+   - [プライベートエンドポイントの使用](tutorials/api/private-link.md)
 - UI チュートリアル {#ui-tutorials}
    - ソース接続の作成 {#create}
       - アドビアプリケーション {#adobe-applications}
@@ -322,7 +323,7 @@ ht-degree: 92%
          - [Shopify ストリーミング](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - ローカルシステム {#local-system}
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
-      - マーケティングの自動化 {#marketing-automation}
+      - マーケティングオートメーション {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
