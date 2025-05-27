@@ -44,7 +44,7 @@ ht-degree: 8%
 
 Experience Platform UI の左側のナビゲーションで「**[!UICONTROL Sources]**」を選択し、「*[!UICONTROL Sources]*」ワークスペースを開きます。 *[!UICONTROL カテゴリ]* パネルまたは検索バーを使用して、目的のソースを見つけます。
 
-[!DNL Algolia] に接続するには、「データと ID パートナー **[!UICONTROL の下の *[!UICONTROL Algolia]**ソースカードを選択し]* 「**[!UICONTROL 設定]**」を選択します。
+[!DNL Algolia] に接続するには、「データと ID パートナー **[!UICONTROL の下の *[!UICONTROL Algolia]**&#x200B;ソースカードを選択し]* 「**[!UICONTROL 設定]**」を選択します。
 
 >[!TIP]
 >
