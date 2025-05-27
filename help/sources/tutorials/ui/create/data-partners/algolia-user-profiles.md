@@ -1,52 +1,54 @@
 ---
 title: UI を使用した Algolia ユーザープロファイルのExperience Platformへの接続
-description: アルゴリアのユーザーをExperience Platformに誘導する方法を学ぶ
+description: Algolia のユーザーインテントデータをAdobe Experience Platformに接続する方法を説明します
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
+source-git-commit: 2ba1f82fbefd9a7af7a1cf305ccafcb2c7814d7b
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 15%
+source-wordcount: '1209'
+ht-degree: 8%
 
 ---
 
-# UI[!DNL Algolia User Profiles] 使用したExperience Platformへのデータの取り込み
 
-ユーザーインターフェイスを使用して [!DNL Algolia User Profiles] アカウントからAdobe Experience Platformにデータを取り込む方法については、このチュートリアルを参照してください。
+# UI を使用したExperience Platformへの [!DNL Algolia User Profiles] データの取り込み
+
+このチュートリアルでは、ユーザーインターフェイスを使用して [!DNL Algolia User Profiles] アカウントからAdobe Experience Platformにデータを取り込む手順を説明します。
 
 ## 基本を学ぶ
 
 >[!IMPORTANT]
 >
->開始する前に、「概要 [[!DNL Algolia User Profiles]  に記載されている前提条件の手順を完了していることを確認してください ](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites)。
+>開始する前に、[[!DNL Algolia User Profiles]  概要 ](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites) に記載されている前提条件を完了していることを確認してください。
 
-このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+このチュートリアルでは、次のExperience Platform コンポーネントに関する十分な知識があることを前提としています。
 
-* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
+* [[!DNL Experience Data Model (XDM)]  システム ](../../../../../xdm/home.md):Experience Platformがカスタマーエクスペリエンスデータの整理に使用する標準化されたフレームワーク。
+
+   * [ スキーマ構成の基本 ](../../../../../xdm/schema/composition.md)：主要な原則やベストプラクティスなど、スキーマ構成について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
-* [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースから集計したデータに基づく、統合されたリアルタイム顧客プロファイル。
+* [ ソース ](../../../../home.md)：様々なソースからデータを取り込み、Experience Platform サービスを使用して、データの構造化、ラベル付け、拡張を行います。
 
 ### 必要な資格情報の収集
 
-[!DNL Algolia] をExperience Platformに接続するには、次の資格情報の値を指定する必要があります。
+[!DNL Algolia] をAdobe Experience Platformに接続するには、次の資格情報を入力します。
 
 | 資格情報 | 説明 |
-| --- | --- |
-| アプリケーション ID | [!DNL Algolia] アプリケーション ID は、[!DNL Algolia] アカウントに割り当てられた一意の識別子です。 |
-| API キー | [!DNL Algolia] API キーは、[!DNL Algolia] の検索およびインデックス作成サービスに対する API リクエストを認証および承認するために使用される資格情報です。 |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| アプリケーション ID | [!DNL Algolia] アカウントに割り当てられた一意の ID。 |
+| API キー | [!DNL Algolia] サービスへの API リクエストを認証および承認するための資格情報。 |
 
-これらの資格情報について詳しくは、[!DNL Algolia] [ 認証ドキュメント ](https://www.algolia.com/doc/tools/cli/get-started/authentication/) を参照してください。
+詳しくは、[!DNL Algolia] [ 認証ドキュメント ](https://www.algolia.com/doc/tools/cli/get-started/authentication/) を参照してください。
 
 ## [!DNL Algolia] アカウントを接続
 
-Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 *[!UICONTROL カテゴリ]* パネルで適切なカテゴリを選択できます。 または、検索バーを使用して、使用する特定のソースに移動できます。
+Experience Platform UI の左側のナビゲーションで「**[!UICONTROL Sources]**」を選択し、「*[!UICONTROL Sources]*」ワークスペースを開きます。 *[!UICONTROL カテゴリ]* パネルまたは検索バーを使用して、目的のソースを見つけます。
 
-[!DNL Algolia] を使用するには、「**[!UICONTROL データおよび ID パートナー &#x200B;]*の下の*[!UICONTROL Algolia]** ソースカードを選択してから、「**[!UICONTROL 設定]** を選択します。
+[!DNL Algolia] に接続するには、「データと ID パートナー **[!UICONTROL の下の *[!UICONTROL Algolia]**ソースカードを選択し]* 「**[!UICONTROL 設定]**」を選択します。
 
 >[!TIP]
 >
->ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
+> 認証済みアカウントがまだないソースの場合は、「**[!UICONTROL 設定]**」オプションが表示されます。 認証が完了すると、「**[!UICONTROL データを追加]**」に変わります。
 
 ![ ソースカタログと Algolia ユーザープロファイルソースが選択されています。](../../../../images/tutorials/create/algolia/user-profiles/catalog.png)
 
@@ -54,48 +56,76 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ### 既存のアカウントを使用
 
-既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Algolia User Profiles] アカウントを選択します。 続行するには、「**[!UICONTROL 次へ]**」を選択します。
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択し、使用する [!DNL Algolia User Profiles] アカウントを選択します。 次に **[!UICONTROL 次へ]** を選択します。
 
 ![既存のアカウントインターフェイス。](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
 ### 新しいアカウントを作成
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、続けて名前、説明（オプション）、資格情報 [!DNL Algolia] 入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、名前、説明（オプション）、[!DNL Algolia] の資格情報を入力します。 **[!UICONTROL ソースに接続]** を選択し、接続が確立するのを待ちます。
 
 ![ 新しいアカウントインターフェイス ](../../../../images/tutorials/create/algolia/user-profiles/new-account.png)
 
 ## データの追加
 
-[!DNL Algolia User Profiles] アカウントを作成すると、**[!UICONTROL データを追加]** 手順が表示され、Experience Platformに取り込みたい [!DNL Algolia] ユーザープロファイルを探索するためのインターフェイスが表示されます。
+[!DNL Algolia User Profiles] アカウントが作成されると、**[!UICONTROL データを追加]** 手順が表示されます。 これを使用して、取り込み用のユーザープロファイルデータを選択およびプレビューします。
 
-* インターフェイスの左側の部分では、オプションの **[!UICONTROL インデックス]** フィールドと **[!UICONTROL アフィニティ]** フィールドを入力できます。
-* インターフェイスの右側の部分では、最大 100 行のユーザープロファイルをプレビューできます。
+* 左側で、オプションとして **[!UICONTROL インデックス]** と **[!UICONTROL アフィニティ]** を入力します。
+* 右側で、最大 100 行のユーザープロファイルをプレビューします。
 
-データの選択と取り込み用のプレビューが完了したら、「**[!UICONTROL 次へ]**」を選択します。
+完了したら、「**[!UICONTROL 次へ]**」を選択します。
 
 ![ ワークフローのデータ選択ステップ ](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
 ## データフローの詳細を入力
 
-既存のデータセットを使用している場合は、[!DNL Algolia Profile] フィールドグループを使用しているスキーマに関連付けられているデータセットを選択します。
+既存のデータセットを使用する場合は、[!DNL Algolia Profile] フィールドグループを含むスキーマに関連付けられているデータセットを選択します。 [!DNL Algolia User Token] フィールドで [!DNL Algolia User Token] ID 名前空間が使用されていることを確認します。  [!DNL Algolia User Token] が現在作成または割り当てられていない場合は、以下の手順を参照してください。
 
-![ ソースワークフローの既存のデータセットステップ ](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
+![ 既存のデータセットステップ ](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
 
-新しいデータセットを作成する場合は、マッピングステップで必要な [!DNL Algolia Profile] フィールドグループを使用しているスキーマを選択します。
+新しいデータセットを作成する場合は、[!DNL Algolia Profile] フィールドグループを使用してスキーマを選択します。
 
-![ ソースワークフローの新しいデータセット手順 ](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+![ 新しいデータセットの手順 ](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+
+### ID 名前空間 [!DNL Algolia User Token] 作成
+
+[!DNL Algolia User Token] ID 名前空間が組織内に存在しない場合は、作成する必要があります。
+
+左側のナビゲーションを使用して「**[!UICONTROL ID]**」を選択し、[ID サービス ](../../../../../identity-service/home.md) UI ワークスペースにアクセスして「**[!UICONTROL ID 名前空間を作成]**」を選択します。
+
+次に、カスタム名前空間の **[!UICONTROL 表示名]** と **[!UICONTROL ID 記号]** を指定します。 この手順では、名前空間のタイプも設定する必要があります。 完了したら、「**[!UICONTROL 作成]**」をクリックします。
+
+![ID 名前空間画面を作成 ](../../../../images/tutorials/create/algolia/user-profiles/aep-identity-inputs.png)。
+
+| カスタム名前空間設定 | 値 |
+| --- | --- |
+| **[!UICONTROL 表示名]** | [!DNL Algolia User Token] |
+| **[!UICONTROL ID シンボル]** | [!DNL AlgoliaUserToken] |
+| **[!UICONTROL タイプを選択]** | [!DNL Cookie ID] |
+
+追加すると、名前空間がリストに表示されます。 これで、スキーマに適用できます。
+
+![ アルゴリア ID 名前空間が正常に作成されました。](../../../../images/tutorials/create/algolia/user-profiles/aep-algolia-user-token-identity.png)
+
+### スキーマへの名前空間の適用
+
+左側のナビゲーションを使用して「**[!UICONTROL スキーマ]**」を選択し、[ スキーマ ](../../../../../xdm/ui/overview.md) UI ワークスペースにアクセスします。 スキーマ ワークスペースを使用して、[!DNL Algolia Profile Details] フィールドグループでスキーマを作成または更新します。 次に、「**[!UICONTROL ユーザートークン]**」フィールドに移動し、右側のパネルを使用して「**[!UICONTROL ID]**」ボックスを選択します。 さらに、入力ボックスを使用して、[!DNL Algolia User Token] ID 名前空間を定義します。 完了したら「**[!UICONTROL 保存]**」を選択します。
+
+![ フィールドに ID を設定 ](../../../../images/tutorials/create/algolia/user-profiles/set-set-identity-on-field.png)
+
+**[!UICONTROL ユーザートークン]** フィールドに [!DNL Algolia User Token] ID 名前空間を割り当てると、その ID は任意のプロファイルのユーザープロファイルに表示されます。
+
+![ ユーザープロファイルインターフェイス ](../../../../images/tutorials/create/algolia/user-profiles/user-profile.png)
 
 ## XDM スキーマへのデータフィールドのマッピング
 
-マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。  詳しくは、UI の [ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+マッピングインターフェイスを使用して、ソースデータをスキーマフィールドにマッピングします。 詳しくは、[ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
 
-![ ソースワークフローのマッピングステップ ](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
+![ マッピングステップ。](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
 ## 取り込み実行のスケジュール
 
 次に、スケジュールインターフェイスを使用して、データフローの取り込みスケジュールを定義します。
-
-<!-- The Scheduling step allows for configuration of the data/time to execute the [!DNL Algolia Uer Profiles] Source connector. There is configuration to backfill the data from [!DNL Algolia] which will pull all the profiles from the source system.  If the source is scheduled, then it will retrieve modified profiles from the [!DNL Algolia] based on the configured time interval. -->
 
 ![ ソースワークフローのスケジュール手順 ](../../../../images/tutorials/create/algolia/user-profiles/scheduling.png)
 
