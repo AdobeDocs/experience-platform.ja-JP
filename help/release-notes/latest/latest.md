@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年5月
 description: Adobe Experience Platform の 2025年5月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 24%
+source-wordcount: '1530'
+ht-degree: 22%
 
 ---
 
@@ -18,13 +18,14 @@ ht-degree: 24%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年5月20日（PT）**
 
 Adobe Experience Platformの既存の機能およびドキュメントのアップデート：
 
+- [AI アシスタント](#ai-assistant)
 - [カタログサービス](#catalog-service)
 - [データ準備](#data-prep)
 - [宛先](#destinations)
@@ -33,6 +34,18 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 - [サンドボックス](#sandboxes)
 - [セグメント化サービス](#segmentation-service)
 - [ソース](#sources)
+
+## AI アシスタント {#ai-assistant}
+
+Adobe Experience Platformの AI アシスタントは、Adobe アプリケーションでのワークフローの高速化に使用できる対話型エクスペリエンスです。 AI アシスタントを使用すると、製品の知識をより深く理解したり、問題をトラブルシューティングしたり、情報を検索して運用インサイトを見つけたりできます。 AI アシスタントは、Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer、Customer Journey Analyticsをサポートします。
+
+**更新された機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| 製品サポートエージェントの一般提供 | AI アシスタントで製品サポート エージェントを使用して、ワークフローを離れることなく、シームレスにトラブルシューティングできるようになりました。 組織内のサポート管理者は、製品サポートエージェントを使用して、AI アシスタントとのやり取りからのコンテキストとセッションの詳細を含むカスタマーサポートチケットを作成できるようになりました。 <br><br> 製品サポートエージェントへのアクセスは、2025 年 11 月 30 日（PT）まで可能です。 この日以降も製品サポートエージェントのライセンスを取得して機能を使用するには、Adobe アカウント担当者に連絡する必要があります。 詳しくは、[ 製品サポートエージェントのドキュメント ](../../ai-assistant/new-features/customer-support.md) を参照してください。 |
+
+詳しくは、[AI アシスタントの概要 ](../../ai-assistant/landing.md) を参照してください。
 
 ## カタログサービス {#catalog-service}
 
@@ -69,7 +82,7 @@ Adobe Experience Platformの既存の機能およびドキュメントのアッ�
 | 機能 | 説明 |
 | --- | --- |
 | [Facebook カスタムオーディエンス ](../../destinations/catalog/social/facebook.md) アドレス関連の識別子のアップグレードとサポート | 2025 年 5 月 23 日（PT）以降、2025 年 6 月を通じて、一時的に、宛先カタログに 2 つの **[!DNL Facebook Custom Audience]** の宛先カードが数時間まで表示される場合があります。 これは、宛先サービスの内部アップグレードと、ターゲティングの改善や Facebook プロパティでのプロファイルとのマッチングのための新しいフィールドのサポートが原因です。 新しいアドレス関連フィールドについて詳しくは、[ サポートされる ID](#supported-identities) の節を参照してください。 <br><br> 「**[!UICONTROL （新規） Facebook カスタムオーディエンス]**」というラベルの付いたカードが表示された場合は、このカードを新しいアクティベーションデータフローに使用します。 既存のデータフローは自動的に更新されるので、ユーザー側で対応する必要はありません。 この期間中に既存のデータフローに加えた変更は、アップグレード後も保持されます。 アップグレードが完了すると、「**[!UICONTROL （新規） Facebook カスタムオーディエンス]**」宛先カードの名前が **[!DNL Facebook Custom Audience]** に変更されます。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。 <ul><li>フロー仕様 ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>接続仕様 ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
-| [Google Customer Match + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) 宛先用の Mobile Advertising ID サポート | [!DNL GAID] や [!DNL IDFA] などのモバイル広告 ID に基づいて [&#128279;](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities)0&rbrace;Google カスタマーマッチ + ディスプレイおよびビデオ 360&rbrace; 宛先に対してオーディエンスをアクティブ化できるようになりました。 |
+| [Google Customer Match + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) 宛先用の Mobile Advertising ID サポート | [!DNL GAID] や [!DNL IDFA] などのモバイル広告 ID に基づいて ](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities)0}Google カスタマーマッチ + ディスプレイおよびビデオ 360} 宛先に対してオーディエンスをアクティブ化できるようになりました。[ |
 | [Google カスタマーマッチ ](../../destinations/catalog/advertising/google-customer-match.md) のその他の識別子サポート | Google カスタマーマッチの宛先で、アドレス関連フィールドのマッピングがサポートされるようになり、Google Platform のマッチ率が向上しました。 <br><br>Googleがアドレスと一致するようにするには、4 つのアドレスフィールド（`address_info_first_name`、`address_info_last_name`、`address_info_country_code` および `address_info_postal_code`）をすべてマッピングし、書き出されたプロファイルでこれらのフィールドに欠けているデータがないことを確認する必要があります。 <br> いずれかのフィールドがマッピングされていないか、データが欠落している場合、Googleはアドレスと一致しません。 |
 | [Facebook](../../destinations/catalog/social/facebook.md) 接続用のアカウントの有効期限の列 | 「参照」タブと「[ アカウント ](../../destinations/ui/destinations-workspace.md#accounts) タブに、Facebook アカウントトークンの有効期限 [ が表示される ](../../destinations/ui/destinations-workspace.md#browse) うになりました。 |
 | API で作成されたデータセットの書き出し | API で作成されたデータセットを書き出せるようになりました。 UI で作成されたデータセットのみが書き出し可能であった以前の制限は解除されました。 詳しくは、[ データセットの書き出し ](../../destinations/ui/export-datasets.md) を参照してください。 |

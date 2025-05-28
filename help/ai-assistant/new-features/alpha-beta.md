@@ -1,19 +1,20 @@
 ---
-title: AI アシスタントのAlphaおよびBeta機能
-description: 現在、Alpha段階またはBeta段階にある AI アシスタントの機能について説明します。
+title: AI アシスタント用のAlphaおよびBetaの機能
+description: 現在Alpha段階またはBeta段階にある AI アシスタントの機能について説明します。
 badge: アルファ版
 exl-id: 48e7737e-9aee-4d01-8f24-bc562e443e3a
-source-git-commit: ed09335f7b703be49ed08448ed03ed7bc91831f1
+source-git-commit: 5b89a5fb30b64c0439543c06d559059e7553376c
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '67'
 ht-degree: 1%
 
 ---
 
-# AI アシスタントのAlphaおよびBeta機能
+# AI アシスタント用のAlphaおよびBetaの機能
 
-現在、Alpha段階またはBeta段階にある、Adobe Experience Platform用 AI アシスタントの機能については、次のドキュメントを参照してください。
+現在Alpha段階またはBeta段階にある、Adobe Experience Platform用 AI アシスタントの機能については、次のドキュメントを参照してください。
 
-* [カスタマーサポート用 AI アシスタント](./customer-support.md)
+* [製品サポート担当者](./customer-support.md)
 * [重要な変更の監視およびオーディエンスの予測](./audience-forecasting.md)
 * [自然言語の推定](./natural-language.md)
+* [XDM フィールド検出](./xdm-field-discovery.md)
