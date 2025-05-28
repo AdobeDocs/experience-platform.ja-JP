@@ -49,9 +49,9 @@ ht-degree: 1%
 
 | プロパティ | 説明 |
 |----------|-------------|
-| **[!UICONTROL アプリケーション ID]** | [!UICONTROL API キー ] セクションの下の Algolia ダッシュボードにある [ アプリケーション ID](https://www.algolia.com/account/api-keys/all) を入力します。 |
-| **[!UICONTROL 検索 API キー]** | 「[!UICONTROL API キー ]」セクションの下の Algolia ダッシュボードにある [ 検索 API キー ](https://www.algolia.com/account/api-keys/all) を入力します。 |
-| **[!UICONTROL インデックス名]** | 製品またはコンテンツを含む [!UICONTROL  インデックス名 ] を入力します。 このインデックスはデフォルト値として使用されます。 |
+| **[!UICONTROL アプリケーション ID]** | [!UICONTROL API キー &#x200B;] セクションの下の Algolia ダッシュボードにある [ アプリケーション ID](https://www.algolia.com/account/api-keys/all) を入力します。 |
+| **[!UICONTROL 検索 API キー]** | 「[!UICONTROL API キー &#x200B;]」セクションの下の Algolia ダッシュボードにある [ 検索 API キー ](https://www.algolia.com/account/api-keys/all) を入力します。 |
+| **[!UICONTROL インデックス名]** | 製品またはコンテンツを含む [!UICONTROL &#x200B; インデックス名 &#x200B;] を入力します。 このインデックスはデフォルト値として使用されます。 |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ Web イベントの送信に使用する新しいスキーマを追加するか�
 
 ![Experience Platformでの Algolia プロファイルフィールドグループの設定 ](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
-### [!UICONTROL  データ収集 ] タグを使用したデータのマッピングと送信
+### [!UICONTROL &#x200B; データ収集 &#x200B;] タグを使用したデータのマッピングと送信
 
 [!DNL Algolia] イベント転送拡張機能を **[!DNL Adobe Experience Platform Web SDK]** と併用すると、web サイトから [!DNL Algolia] にデータを送信できます。 これを行うには、タグプロパティを作成し、データを [!DNL XDM] オブジェクトにマッピングして、イベントを送信するルールを設定します。
 
@@ -99,7 +99,7 @@ Web イベントの送信に使用する新しいスキーマを追加するか�
 
 #### 手順 2：マッピング用のデータ要素 [!DNL XDM] 作成
 
-1. **[!DNL Adobe Experience Platform Web SDK]** を使用して [!UICONTROL  データ要素 ] を作成します。
+1. **[!DNL Adobe Experience Platform Web SDK]** を使用して [!UICONTROL &#x200B; データ要素 &#x200B;] を作成します。
 2. データ要素タイプとして **[!UICONTROL XDM オブジェクト]** を選択します。
 3. データを適切な [!DNL XDM] フィールドにマッピングし、[!DNL Algolia] 固有のフィールドが入力されていることを確認します。
 
