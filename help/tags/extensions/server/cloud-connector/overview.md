@@ -146,7 +146,7 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 拡張機能をインストールしたら、[!DNL mTLS] を使用するイベント転送ルールを作成し、ライブラリに追加できます。
 
-イベント転送プロパティに新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 ルールの名前を指定し、「**[!UICONTROL アクション]**」で新しいアクションを追加し、拡張機能を「**[!UICONTROL Adobe Cloud Connector]**」に設定します。 次に、「アクションタイプ **[!UICONTROL に対して「**[!UICONTROL  取得呼び出しを行う ]**」を選択]** ます。
+イベント転送プロパティに新しいイベント転送 [ ルール ](../../../ui/managing-resources/rules.md) を作成します。 ルールの名前を指定し、「**[!UICONTROL アクション]**」で新しいアクションを追加し、拡張機能を「**[!UICONTROL Adobe Cloud Connector]**」に設定します。 次に、「アクションタイプ **[!UICONTROL に対して「**&#x200B;[!UICONTROL &#x200B; 取得呼び出しを行う &#x200B;]&#x200B;**」を選択]** ます。
 
 ![ イベント転送ルールのアクション設定を追加するために必要なフィールドがハイライト表示されたイベント転送プロパティルール ビュー。](../../../images/extensions/server/cloud-connector/event-action.png)
 
