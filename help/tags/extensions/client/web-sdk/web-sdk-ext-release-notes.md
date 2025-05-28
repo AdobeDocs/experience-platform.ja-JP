@@ -128,7 +128,7 @@ Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます�
 **修正点および改善点**
 
 - [ 変数を更新 ](action-types.md#update-variable) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
-- `sendEvent` アクションで使用することが推奨されるイベントタイプから [!UICONTROL  メディア ] イベントタイプを削除しました。
+- `sendEvent` アクションで使用することが推奨されるイベントタイプから [!UICONTROL &#x200B; メディア &#x200B;] イベントタイプを削除しました。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
 
@@ -186,7 +186,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **新機能**
 
-- ](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
+- [&#128279;](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
 
 **修正点および改善点**
 
