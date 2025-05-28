@@ -2,17 +2,23 @@
 keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: プライバシージョブ API エンドポイント
-description: Privacy API を使用してExperience CloudアプリケーションのPrivacy Serviceジョブを管理する方法について説明します。
+description: Privacy Service API を使用してExperience Cloud アプリケーションのプライバシージョブを管理する方法について説明します。
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
+source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 45%
+source-wordcount: '1861'
+ht-degree: 44%
 
 ---
 
 # プライバシージョブエンドポイント
+
+>[!IMPORTANT]
+>
+>増加する米国の州のプライバシー法をサポートするために、Privacy Serviceは `regulation_type` の価値観を変えています。 **2025 年 6 月 12 日（PT）** 以降は、州の略語（`ucpa_ut_usa` など）を含んだ新しい値を使用します。 古い値（例：`ucpa_usa`）は **2025 年 7 月 28 日（PT）** 以降は機能しなくなります。
+>
+>リクエストの失敗を避けるために、この期限の前に統合を更新してください。
 
 このドキュメントでは、API 呼び出しを使用したプライバシージョブの操作方法について説明します。 特に、[!DNL Privacy Service] API の `/job` エンドポイントの使用について説明します。 このガイドを読む前に、[ はじめる前に ](./getting-started.md) を参照して、必要なヘッダーやサンプル API 呼び出しの読み取り方法など、API の呼び出しを正しく実行するために必要な重要な情報を確認してください。
 
@@ -22,11 +28,11 @@ ht-degree: 45%
 
 ## すべてのジョッブをリスト {#list}
 
-`/jobs` エンドポイントに対してGETリクエストを行うことで、組織内で使用可能なすべてのプライバシージョブのリストを表示できます。
+`/jobs` エンドポイントにGET リクエストを送信すると、組織内で利用可能なすべてのプライバシージョブのリストを表示できます。
 
 **API 形式**
 
-このリクエスト形式は、`/jobs` エンドポイントで `regulation` クエリパラメーターを使用するので、以下に示すように、疑問符（`?`）で始まります。 リソースをリストする場合、Privacy ServiceAPI は最大 1,000 個のジョブを返し、応答にページ番号を付けます。 その他のクエリパラメーター（`page`、`size`、日付のフィルター）を使用して、応答をフィルタリングします。 アンパサンド（`&`）を使用して、複数のパラメーターを区切ることができます。
+このリクエスト形式は、`/jobs` エンドポイントで `regulation` クエリパラメーターを使用するので、以下に示すように、疑問符（`?`）で始まります。 リソースをリストする場合、Privacy Service API は最大 1,000 個のジョブを返し、応答にページ番号を付けます。 その他のクエリパラメーター（`page`、`size`、日付のフィルター）を使用して、応答をフィルタリングします。 アンパサンド（`&`）を使用して、複数のパラメーターを区切ることができます。
 
 >[!TIP]
 >
@@ -42,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリする規制の種類。使用できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br> 上記の値が表すプライバシー規制について詳しくは、[ サポートされる規制 ](../regulations/overview.md) の概要を参照してください。 |
+| `{REGULATION}` | クエリする規制の種類。使用できる値は次のとおりです。 <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br> 上記の値が表すプライバシー規制について詳しくは、[ サポートされる規制 ](../regulations/overview.md) の概要を参照してください。 |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `100` で、最大は `1000` です。最大値を超えると、API は 400 コードエラーを返します。 |
 | `{status}` | デフォルトの動作では、すべてのステータスが含まれます。 ステータスタイプを指定すると、リクエストはそのステータスタイプに一致するプライバシージョブのみを返します。 指定できる値は次のとおりです。 <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -80,11 +86,11 @@ curl -X GET \
 >
 >サービスの不正使用を防ぐために、1 日あたりのアップロードに対するハードリミットが設定されるようになりました。システムの不正使用が判明したユーザーは、サービスへのアクセスが無効になります。その後、それらのユーザーのアクションに対処するための会議がユーザー本人を交えて開催され、Privacy Service の適切な使用について議論が行われます。
 
-新しいジョブリクエストを作成する前に、まず、データにアクセス、削除、またはオプトアウトするデータ主体の識別情報を収集する必要があります。必要なデータを取得したら、`/jobs` エンドポイントへのPOSTリクエストのペイロードで指定する必要があります。
+新しいジョブリクエストを作成する前に、まず、データにアクセス、削除、またはオプトアウトするデータ主体の識別情報を収集する必要があります。必要なデータを取得したら、`/jobs` エンドポイントに対する POST リクエストのペイロードで指定する必要があります。
 
 >[!NOTE]
 >
->互換性のあるAdobe Experience Cloud アプリケーションは、データ主体の識別に異なる値を使用します。 お使いのアプリケーションで必要な ID の詳細については [&#128279;](../experience-cloud-apps.md)Privacy ServiceおよびExperience Cloudアプリケーションに関するガイドを参照してください。 [!DNL Privacy Service] に送信する ID を決定する際の一般的なガイダンスについて詳しくは、[ プライバシーリクエストの ID データ ](../identity-data.md) のドキュメントを参照してください。
+>互換性のあるAdobe Experience Cloud アプリケーションは、データ主体の識別に異なる値を使用します。 お使いのアプリケーションで必要な識別子について詳しくは ](../experience-cloud-apps.md)[Privacy ServiceおよびExperience Cloud アプリケーション } のガイドを参照してください。 [!DNL Privacy Service] に送信する ID を決定する際の一般的なガイダンスについて詳しくは、[ プライバシーリクエストの ID データ ](../identity-data.md) のドキュメントを参照してください。
 
 [!DNL Privacy Service] API は、個人データに対して、次の 2 種類のジョブリクエストをサポートしています。
 
@@ -234,7 +240,7 @@ curl -X POST \
 
 ## ジョブのステータスの確認 {#check-status}
 
-`/jobs` エンドポイントに対するGETリクエストのパスにジョブの `jobId` を含めることで、特定のジョブに関する情報（現在の処理ステータスなど）を取得できます。
+特定のエンドポイントに対するGET リクエストのパスにジョブの `jobId` を含めることで、そのジョブの現在の処理ステータスなど `/jobs` 関する情報を取得できます。
 
 >[!IMPORTANT]
 >
