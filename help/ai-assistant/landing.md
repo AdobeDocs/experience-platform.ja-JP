@@ -98,7 +98,7 @@ AI アシスタントで製品サポート エージェントを使用すると�
 
 Watch the following video for more information on the security features of AI Assistant:
 
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441081/?learn=on&captions=jpn)
 
 >[!BEGINSHADEBOX]
 
@@ -146,8 +146,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441066/?learn=on" title="AI アシスタントのセキュリティの概要" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="AI アシスタントのセキュリティの概要"
+                    <a href="https://video.tv.adobe.com/v/3441081/?learn=on&captions=jpn" title="AI アシスタントのセキュリティの概要" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441081/?format=jpeg&nocache=1732633205785&captions=jpn" alt="AI アシスタントのセキュリティの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -155,12 +155,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" title="AI アシスタントのセキュリティの概要">AI アシスタントのセキュリティの概要 </a>
+                        <a href="https://video.tv.adobe.com/v/3441081/?learn=on&captions=jpn" target="_blank" rel="referrer" title="AI アシスタントのセキュリティの概要">AI アシスタントのセキュリティの概要 </a>
                     </p>
                     <p class="is-size-6">AI アシスタントのセキュリティ機能とプロセスの包括的な概要については、このビデオをご覧ください。 さらに、AI Assistant のセキュリティ アーキテクチャの詳細については、AI Assistant のセキュリティ ファクト シートを参照してください。</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441081/?learn=on&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>
                   <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -176,8 +176,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441024?learn=on" title="AI アシスタントの製品知識" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441024/?format=jpeg&nocache=1732633205780" alt="AI アシスタントの製品知識"
+                    <a href="https://video.tv.adobe.com/v/3441025?learn=on&captions=jpn" title="AI アシスタントの製品知識" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441025/?format=jpeg&nocache=1732633205780&captions=jpn" alt="AI アシスタントの製品知識"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,12 +185,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" title="AI アシスタントの製品知識">AI アシスタントの製品知識 </a>
+                        <a href="https://video.tv.adobe.com/v/3441025?learn=on&captions=jpn" target="_blank" rel="referrer" title="AI アシスタントの製品知識">AI アシスタントの製品知識 </a>
                     </p>
                     <p class="is-size-6">AI アシスタントでは、製品に関する知識とは、Experience Leagueのドキュメントに基づいた概念やトピックを指します。 AI アシスタントの製品知識を使用して、ワークフローを離れることなくタスクをガイドする方法については、このビデオをご覧ください。 </p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441025?learn=on&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>
                     <a href="home.md#product-knowledge" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -204,8 +204,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3444031?learn=on&enablevpops" title="AI アシスタントの操作インサイト" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444031/?format=jpeg&nocache=1732633205785" alt="AI アシスタントの操作インサイト"
+                    <a href="https://video.tv.adobe.com/v/3444033?learn=on&enablevpops&captions=jpn" title="AI アシスタントの操作インサイト" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444033/?format=jpeg&nocache=1732633205785&captions=jpn" alt="AI アシスタントの操作インサイト"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -213,12 +213,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" title="AI アシスタントの操作インサイト">AI アシスタントの操作インサイト </a>
+                        <a href="https://video.tv.adobe.com/v/3444033/?learn=on&captions=jpn" target="_blank" rel="referrer" title="AI アシスタントの操作インサイト">AI アシスタントの操作インサイト </a>
                     </p>
                     <p class="is-size-6">運用インサイトとは、オブジェクトのメタデータについてクエリされたときに AI Assistant が生成する回答を指します。 このビデオでは、運用インサイトを使用して、組織のデータオブジェクトの使用状況、系列、ハイジーンのインサイトを検出する方法を説明します。</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3444033/?learn=on&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>
                   <a href="./ui-guide.md#operational-insights" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -294,8 +294,8 @@ AI アシスタントの使用例については、次のビデオをご覧く�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3435532?learn=on" title="オーディエンスを整理" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435532/?format=jpeg&nocache=1732633205785" alt="オーディエンスを整理"
+                    <a href="https://video.tv.adobe.com/v/3441988?learn=on&captions=jpn" title="オーディエンスを整理" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441988/?format=jpeg&nocache=1732633205785&captions=jpn" alt="オーディエンスを整理"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -303,11 +303,11 @@ AI アシスタントの使用例については、次のビデオをご覧く�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" title="オーディエンスを整理"> オーディエンスを整理 </a>
+                        <a href="https://video.tv.adobe.com/v/3441988?learn=on&captions=jpn" target="_blank" rel="referrer" title="オーディエンスを整理"> オーディエンスを整理 </a>
                     </p>
                     <p class="is-size-6">このビデオでは、AI アシスタントを使用してオーディエンスを整理し、マーケティング操作を最適化する方法を説明します。</p>
                 </div>
-                  <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441988?learn=on&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>  
             </div>
@@ -319,8 +319,8 @@ AI アシスタントの使用例については、次のビデオをご覧く�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3440962/?learn=on" title="検出性パネルを使用して開始します" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440962/?format=jpeg&nocache=1732633205780" alt="検出性パネルを使用して開始します"
+                    <a href="https://video.tv.adobe.com/v/3440963/?learn=on&captions=jpn" title="検出性パネルを使用して開始します" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440963/?format=jpeg&nocache=1732633205780&captions=jpn" alt="検出性パネルを使用して開始します"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -328,12 +328,12 @@ AI アシスタントの使用例については、次のビデオをご覧く�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" title="検出性パネルを使用して開始します"> 検出性パネルを使用して開始する </a>
+                        <a href="https://video.tv.adobe.com/v/3440963/?learn=on&captions=jpn" target="_blank" rel="referrer" title="検出性パネルを使用して開始します"> 検出性パネルを使用して開始する </a>
                     </p>
                     <p class="is-size-6">このビデオでは、AI アシスタントの発見可能性パネルと、それを使用して AI アシスタントを開始する方法について説明します。</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3440963/?learn=on&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>
                   <a href="./ui-guide.md#use-discoverability" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -347,8 +347,8 @@ AI アシスタントの使用例については、次のビデオをご覧く�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441738/?learn=on" title="AI 応答の検証と検証" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441738/?format=jpeg&nocache=1732633205785" alt="AI 応答の検証と検証"
+                    <a href="https://video.tv.adobe.com/v/3441739/?learn=on&captions=jpn" title="AI 応答の検証と検証" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441739/?format=jpeg&nocache=1732633205785&captions=jpn" alt="AI 応答の検証と検証"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -356,12 +356,12 @@ AI アシスタントの使用例については、次のビデオをご覧く�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" title="AI 応答の検証と検証">AI 応答の検証と検証 </a>
+                        <a href="https://video.tv.adobe.com/v/3441739/?learn=on&captions=jpn" target="_blank" rel="referrer" title="AI 応答の検証と検証">AI 応答の検証と検証 </a>
                     </p>
                     <p class="is-size-6">このビデオでは、AI アシスタントを使用して応答を検証する方法を説明します。</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441739/?learn=on&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>
                   <a href="./ui-guide.md#verify-operational-insights-responses" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -377,8 +377,8 @@ AI アシスタントの使用例については、次のビデオをご覧く�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441680/?learn=on" title="より効果的な系統と影響の分析を実行" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441680/?format=jpeg&nocache=1732633205780" alt="より効果的な系統と影響の分析を実行"
+                    <a href="https://video.tv.adobe.com/v/3441681/?learn=on&captions=jpn" title="より効果的な系統と影響の分析を実行" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441681/?format=jpeg&nocache=1732633205780&captions=jpn" alt="より効果的な系統と影響の分析を実行"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -386,11 +386,11 @@ AI アシスタントの使用例については、次のビデオをご覧く�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" title="より効果的な系統と影響の分析を実行"> より効果的な系列と影響の分析を実行 </a>
+                        <a href="https://video.tv.adobe.com/v/3441681/?learn=on&captions=jpn" target="_blank" rel="referrer" title="より効果的な系統と影響の分析を実行"> より効果的な系列と影響の分析を実行 </a>
                     </p>
                     <p class="is-size-6">このビデオでは、データオブジェクトに変更を加える前に、AI アシスタントを使用してより効果的な影響分析を実行する方法を説明します。</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3441681/?learn=on&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                 </a>
             </div>
@@ -400,8 +400,8 @@ AI アシスタントの使用例については、次のビデオをご覧く�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3443183?learn=on" title="AI アシスタントで製品サポート エージェントを使用する" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443183/?format=jpeg&nocache=1732633205785" alt="AI アシスタントで製品サポート エージェントを使用する"
+                    <a href="https://video.tv.adobe.com/v/3443184?learn=on&captions=jpn" title="AI アシスタントで製品サポート エージェントを使用する" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443184/?format=jpeg&nocache=1732633205785&captions=jpn" alt="AI アシスタントで製品サポート エージェントを使用する"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -409,12 +409,12 @@ AI アシスタントの使用例については、次のビデオをご覧く�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" title="AI アシスタントで製品サポート エージェントを使用する">AI アシスタントで製品サポートエージェントを使用する </a>
+                        <a href="https://video.tv.adobe.com/v/3443184?learn=on&captions=jpn" target="_blank" rel="referrer" title="AI アシスタントで製品サポート エージェントを使用する">AI アシスタントで製品サポートエージェントを使用する </a>
                     </p>
                     <p class="is-size-6">製品サポートエージェントを使用して、ワークフローを離れることなくシームレスにトラブルシューティングを行う方法については、このビデオをご覧ください。</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3443184?learn=on&captions=jpn" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> ウォッチ </span>
                   </a>
                   <a href="./new-features/customer-support.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
