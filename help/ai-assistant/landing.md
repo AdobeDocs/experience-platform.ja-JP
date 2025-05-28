@@ -31,14 +31,14 @@ AI アシスタントは、Experience Platform、Real-Time CDP、Adobe Journey O
     <div><strong> 学習の向上 </strong><br/> ワークフローを中断することなく、製品の知識を発見、トラブルシューティング、および理解を深めることができます。</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/ja/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>AI アシスタントのビデオ プレイリストを参照 </strong><br/>AI アシスタントで対処できる様々な課題やユースケースについて説明します。</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/ja/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -435,11 +435,11 @@ AI アシスタントの使用例については、次のビデオをご覧く�
 
 AI アシスタントのユースケースの例については、以下を参照してください。
 
-* [ チームの新しいメンバーのオンボーディング時間を短縮 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [ オーディエンスを整理し、マーケティング業務を最適化する ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [ 依存関係を確認し、データ更新中のリスクを最小限に抑える ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [ 新機能の検出とデプロイを迅速化 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
-* [AI アシスタントでカスタマーサポートに革命を起こす ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
+* [ チームの新しいメンバーのオンボーディング時間を短縮 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=ja)
+* [ オーディエンスを整理し、マーケティング業務を最適化する ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=ja)
+* [ 依存関係を確認し、データ更新中のリスクを最小限に抑える ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=ja)
+* [ 新機能の検出とデプロイを迅速化 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=ja)
+* [AI アシスタントでカスタマーサポートに革命を起こす ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=ja)
 
 >[!TAB  追加のビデオコンテンツ ]
 
@@ -460,9 +460,9 @@ AI アシスタントのユースケースの例については、以下を参�
 <a href="./home.md" target="_blank"> ドキュメント </a> - <a href="./ui-guide.md" target="_blank">UI ガイド </a> - <a href="./access.md" target="_blank">AI アシスタントへのアクセス </a> - <a href="./privacy.md" target="_blank"> プライバシー、セキュリティ、ガバナンス </a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> ドキュメント </a>
+<a href="https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> ドキュメント </a>
 </td>
 <td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank"> ドキュメント </a>
+<a href="https://experienceleague.adobe.com/ja/docs/analytics-platform/using/ai-assistant" target="_blank"> ドキュメント </a>
 </td>
 </tr></table>
