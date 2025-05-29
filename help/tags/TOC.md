@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
+source-git-commit: 3434fd13ba4ca58f27834e75b045af079c18c64c
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '783'
 ht-degree: 85%
 
 ---
@@ -221,6 +221,8 @@ ht-degree: 85%
          * [リリースノート](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [概要](./extensions/server/adform/overview.md)
+      * [!DNL Algolia] {#algolia}
+         * [概要](./extensions/server/algolia/overview.md)
       * [!DNL Amazon] {#amazon}
          * [概要](./extensions/server/amazon/overview.md)
       * [!DNL AWS] {#aws}
