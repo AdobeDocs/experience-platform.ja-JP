@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3434fd13ba4ca58f27834e75b045af079c18c64c
+source-git-commit: f038927d6a19db5e0187ccefd76d9ecc9df91b6a
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '785'
 ht-degree: 85%
 
 ---
@@ -133,6 +133,8 @@ ht-degree: 85%
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
       * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
       * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
+      * [!DNL Algolia] Insights {#algolia-insights}
+         * [概要](./extensions/client/algolia/overview.md)
       * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
       * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
