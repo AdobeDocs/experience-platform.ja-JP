@@ -2,10 +2,10 @@
 title: Edge セグメントガイド
 description: エッジセグメント化を使用して、Experience Platformのオーディエンスをエッジ上で即座に評価し、同じページや次のページのパーソナライゼーションのユースケースを可能にする方法を説明します。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
 workflow-type: tm+mt
-source-wordcount: '1154'
-ht-degree: 26%
+source-wordcount: '1116'
+ht-degree: 23%
 
 ---
 
@@ -33,7 +33,6 @@ Edgeのセグメント化は、Adobe Experience Platformのセグメント定義
 | プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 | `homeAddress.country.equals("US", false)` | ![ 表示されるプロファイル属性の例 ](../images/methods/edge/profile-attribute.png) |
 | 24 時間未満の相対時間枠内でのプロファイル属性を持つ単一のイベント | 1 つ以上のプロファイル属性を持つ 1 つの受信イベントを参照し、24 時間未満の相対時間枠内に発生するセグメント定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![相対時間枠内にプロファイル属性を持つ単一イベントの例](../images/methods/edge/single-event-with-profile-attribute.png) |
 | セグメントのセグメント | 1 つ以上のバッチセグメントまたはエッジセグメントを含むセグメント定義。 **メモ：**&#x200B;セグメントのセグメントが使用される場合、**24 時間ごとに**&#x200B;プロファイルの不適合が発生します。 | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![セグメントのセグメントの例](../images/methods/edge/segment-of-segments.png) |
-| プロファイル属性を持つ複数のイベント | **過去 24 時間以内に**&#x200B;複数のイベントを参照し、（オプションで）1 つ以上のプロファイル属性を持つ任意のセグメント定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![プロファイル属性を持つ複数イベントの例](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
 さらに、セグメント定義 **は、エッジ上でアクティブな結合ポリシーに結び付ける必要があります**。 結合ポリシーの詳細については、[結合ポリシーガイド](../../profile/api/merge-policies.md)を参照してください。
 
