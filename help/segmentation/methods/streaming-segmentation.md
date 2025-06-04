@@ -435,7 +435,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 ![Audience Portal でフィルターアイコンがハイライト表示されています。](../images/methods/filter-audiences.png)
 
-使用可能なフィルター内で、**[!UICONTROL 頻度を更新]** に移動し、「[!UICONTROL  ストリーミング ]」を選択します。 このフィルターを使用すると、ストリーミングセグメント化を使用して評価された、組織内のすべてのオーディエンスが表示されます。
+使用可能なフィルター内で、**[!UICONTROL 頻度を更新]** に移動し、「[!UICONTROL &#x200B; ストリーミング &#x200B;]」を選択します。 このフィルターを使用すると、ストリーミングセグメント化を使用して評価された、組織内のすべてのオーディエンスが表示されます。
 
 ![ ストリーミングの更新頻度が選択され、ストリーミングセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/streaming/filter-streaming.png)
 
