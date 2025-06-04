@@ -3,7 +3,7 @@ solution: Experience Platform
 title: ストリーミングセグメント化ガイド
 description: ストリーミングセグメント化の概要、ストリーミングセグメント化を使用して評価されたオーディエンスの作成方法、ストリーミングセグメント化を使用して作成されたオーディエンスの表示方法について説明します。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
+source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 19%
@@ -169,13 +169,13 @@ WHEN(<= 24 hours before now)])
 
 | オーディエンス | スキーマ | ソースタイプ | クエリ定義 | オーディエンス ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| 最近の中断 | エクスペリエンスイベント | バッチ | 過去 24 時間に 1 つ以上の中断イベントがある | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| 最近の中断 | エクスペリエンスイベント | バッチ | 過去 24 時間に 1 つ以上の中断イベントがある | `7deb246a-49b4-4687-95f9-6316df049948` |
 | 最近のチェックアウト | エクスペリエンスイベント | ストリーミング | 過去 24 時間以内に少なくとも 1 つのチェックアウトがある | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 この場合は、次のように 3 つ目のオーディエンスを作成する必要があります。
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 ## オーディエンスを作成 {#create-audience}
@@ -435,7 +435,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 ![Audience Portal でフィルターアイコンがハイライト表示されています。](../images/methods/filter-audiences.png)
 
-使用可能なフィルター内で、**[!UICONTROL 頻度を更新]** に移動し、「[!UICONTROL &#x200B; ストリーミング &#x200B;]」を選択します。 このフィルターを使用すると、ストリーミングセグメント化を使用して評価された、組織内のすべてのオーディエンスが表示されます。
+使用可能なフィルター内で、**[!UICONTROL 頻度を更新]** に移動し、「[!UICONTROL  ストリーミング ]」を選択します。 このフィルターを使用すると、ストリーミングセグメント化を使用して評価された、組織内のすべてのオーディエンスが表示されます。
 
 ![ ストリーミングの更新頻度が選択され、ストリーミングセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/streaming/filter-streaming.png)
 
