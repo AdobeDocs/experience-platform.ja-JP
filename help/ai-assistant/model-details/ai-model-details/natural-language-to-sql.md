@@ -4,9 +4,9 @@ description: AI Assistant Natural Language to SQL AI モデルについて説明
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## モデル評価 {#model-evaluation}
 
-* **評価指標と評価手順**：モデルは精度を使用して評価されます。 例えば、すべての [!DNL NL2SQL] リクエストのうち、正しい SQL 結果を得るリクエストの数。 評価プロセスは、ルールベースの照合（SQL の標準化と直接の SQL 文字列照合）、LLM ベースの SQL ソルバー、および人間の評価の組み合わせです。
+* **評価指標とプロシージャ**:[!DNL NL2SQL] のリクエストを確認し、正しい SQL 結果が得られるリクエストの数を評価することで、モデルが評価されます。 評価プロセスは、ルールベースの照合（SQL の標準化と直接の SQL 文字列照合）、LLM ベースの SQL ソルバー、および人間の評価の組み合わせです。
 * **評価データと前処理**：回帰テストにはオープンセットを使用し、サンプルした実際の顧客トラフィックを通じてモデルのパフォーマンスを監視する週別注釈プロジェクトもあります。
 
 ## モデルの導入 {#model-deployment}
 
 * **モデルの監視**：基本モデルは [!DNL Azure] でホストされます。
-* **モデルの更新**：質問バンクの拡張により、モデルは毎週定期的に更新されます。 必要に応じて、新しいプロンプト戦略と指示を使用してモデルも更新されます。
+* **モデルの更新**:Adobe Experience Platform AI アシスタントの Operational Insights Natural Language to SQL Model は、クエスチョンバンクの拡張により、定期的（毎週）に更新されます。 必要に応じて、新しいプロンプト戦略と指示を使用してモデルも更新されます。
 
 ## 公平性と偏見 {#fairness-and-bias}
 
