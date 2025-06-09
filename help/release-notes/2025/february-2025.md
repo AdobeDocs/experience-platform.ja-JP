@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート（2025年2月）
 description: Adobe Experience Platform の 2025年2月のリリースノートです。
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1677'
 ht-degree: 16%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!TIP]
 >
->このリリースには、Federated Audience Composition アドオンの改善が含まれています。 詳しくは、[Federated Audience Composition リリースノート ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes) を参照してください。
+>このリリースには、Federated Audience Composition アドオンの改善が含まれています。 詳しくは、[Federated Audience Composition リリースノート ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) を参照してください。
 
 **リリース日：2025年2月18日（PT）**
 
@@ -94,10 +94,10 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 
 | 機能 | 説明 |
 | --- | --- |
-| アクセスラベルを使用した宛先データフローへのユーザーアクセスの管理 | Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;]](/help/access-control/abac/overview.md) 機能の一部として、[ 宛先データフロー ](/help/dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。<br> **重要**:Experience Platform ユーザーインターフェイスの上部にある検索ボックスを使用して宛先データフローを検索する場合、結果には、ユーザーアクセスラベルに表示が制限されている宛先データフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。 |
-| [2&rbrace;Marketo Engage接続の ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) オーディエンスレベルのレポート [&#128279;](/help/destinations/catalog/adobe/marketo-engage.md) | この宛先のデータフローに含まれる各オーディエンスに対して、オーディエンスレベルで分類されたアクティブ化された ID、除外された ID、失敗した ID に関する [ 情報を表示 ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) できるようになりました。 |
-| 外部オーディエンスは、[TikTok](/help/destinations/catalog/social/tiktok.md) および [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) 接続をサポートしています | [ カスタムアップロード ](../../segmentation/ui/audience-portal.md#import-audience) および [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences) から、これらの宛先に対して外部オーディエンスをアクティブ化できます。 |
-| 配列、マップ、オブジェクトをクラウドストレージの宛先に書き出す | クラウドストレージの宛先に接続する際に、新しい **[!UICONTROL 配列、マップ、オブジェクトの書き出し]** トグルを使用すると、複雑なオブジェクトを新しく書き出して宛先を選択できます。 機能について [&#128279;](/help/destinations/ui/export-arrays-maps-objects.md) 詳細を参照 。 |
+| アクセスラベルを使用した宛先データフローへのユーザーアクセスの管理 | Real-Time CDPの [[!UICONTROL  属性ベースのアクセス制御 ]](/help/access-control/abac/overview.md) 機能の一部として、[ 宛先データフロー ](/help/dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。<br> **重要**:Experience Platform ユーザーインターフェイスの上部にある検索ボックスを使用して宛先データフローを検索する場合、結果には、ユーザーアクセスラベルに表示が制限されている宛先データフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。 |
+| [2}Marketo Engage接続の ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) オーディエンスレベルのレポート ](/help/destinations/catalog/adobe/marketo-engage.md)[ | この宛先のデータフローに含まれる各オーディエンスに対して、オーディエンスレベルで分類されたアクティブ化された ID、除外された ID、失敗した ID に関する [ 情報を表示 ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) できるようになりました。 |
+| 外部オーディエンスは、[TikTok](/help/destinations/catalog/social/tiktok.md) および [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) 接続をサポートしています | [ カスタムアップロード ](../../segmentation/ui/audience-portal.md#import-audience) および [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) から、これらの宛先に対して外部オーディエンスをアクティブ化できます。 |
+| 配列、マップ、オブジェクトをクラウドストレージの宛先に書き出す | クラウドストレージの宛先に接続する際に、新しい **[!UICONTROL 配列、マップ、オブジェクトの書き出し]** トグルを使用すると、複雑なオブジェクトを新しく書き出して宛先を選択できます。 機能について ](/help/destinations/ui/export-arrays-maps-objects.md) 詳細を参照 [。 |
 
 {style="table-layout:auto"}
 
@@ -117,7 +117,7 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 持続的分割 | オーディエンス構成で、永続的な分割がサポートされるようになりました。 ID 名前空間を分割ブロックに追加することで、プロファイル別に分割する際に、分割オーディエンスを一定に保つことができます。 この機能について詳しくは、[ オーディエンス構成ドキュメント ](../../segmentation/ui/audience-composition.md) を参照してください。 |
+| 永続的分割 | オーディエンス構成で、永続的な分割がサポートされるようになりました。 ID 名前空間を分割ブロックに追加することで、プロファイル別に分割する際に、分割オーディエンスを一定に保つことができます。 この機能について詳しくは、[ オーディエンス構成ドキュメント ](../../segmentation/ui/audience-composition.md) を参照してください。 |
 
 [!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
@@ -132,6 +132,7 @@ Experience Platform のソースを使用して、Adobe アプリケーション
 | 機能 | 説明 |
 | --- | --- |
 | [!DNL Microsoft Dynamics] でのビューのサポート | [!DNL Microsoft Dynamics] ソースを使用する際に、`"entityType": "view"` を取り込めるようになりました。 詳しくは、[ ソースのExperience Platformへの接続 ](../../sources/tutorials/api/create/crm/ms-dynamics.md) に関するガイドを参照し  [!DNL Microsoft Dynamics]  ください。 |
+| 許可リストへの新しい IP アドレス | Experience Platform ソースを正常に使用するには、次の IP アドレスを許可リストに追加する必要があります。<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> 許可リストに加える <br></br> 詳しくは、[ ソース IP アドレス ](../../sources/ip-address-allow-list.md) を参照してください。 |
 
 {style="table-layout:auto"}
 
