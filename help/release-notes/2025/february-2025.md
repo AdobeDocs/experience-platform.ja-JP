@@ -94,10 +94,10 @@ Adobe Experience Platformの AI アシスタントは、Adobe アプリケーシ
 
 | 機能 | 説明 |
 | --- | --- |
-| アクセスラベルを使用した宛先データフローへのユーザーアクセスの管理 | Real-Time CDPの [[!UICONTROL  属性ベースのアクセス制御 ]](/help/access-control/abac/overview.md) 機能の一部として、[ 宛先データフロー ](/help/dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。<br> **重要**:Experience Platform ユーザーインターフェイスの上部にある検索ボックスを使用して宛先データフローを検索する場合、結果には、ユーザーアクセスラベルに表示が制限されている宛先データフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。 |
-| [2}Marketo Engage接続の ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) オーディエンスレベルのレポート ](/help/destinations/catalog/adobe/marketo-engage.md)[ | この宛先のデータフローに含まれる各オーディエンスに対して、オーディエンスレベルで分類されたアクティブ化された ID、除外された ID、失敗した ID に関する [ 情報を表示 ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) できるようになりました。 |
+| アクセスラベルを使用した宛先データフローへのユーザーアクセスの管理 | Real-Time CDPの [[!UICONTROL &#x200B; 属性ベースのアクセス制御 &#x200B;]](/help/access-control/abac/overview.md) 機能の一部として、[ 宛先データフロー ](/help/dataflows/ui/monitor-destinations.md) にアクセスラベルを適用できるようになりました。 この方法により、組織内のユーザーのサブセットのみが特定の宛先データフローにアクセスできるようになります。<br> **重要**:Experience Platform ユーザーインターフェイスの上部にある検索ボックスを使用して宛先データフローを検索する場合、結果には、ユーザーアクセスラベルに表示が制限されている宛先データフローが含まれる場合があります。 この動作は、今後のアップデートで修正される予定です。 |
+| [2&rbrace;Marketo Engage接続の ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) オーディエンスレベルのレポート [&#128279;](/help/destinations/catalog/adobe/marketo-engage.md) | この宛先のデータフローに含まれる各オーディエンスに対して、オーディエンスレベルで分類されたアクティブ化された ID、除外された ID、失敗した ID に関する [ 情報を表示 ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) できるようになりました。 |
 | 外部オーディエンスは、[TikTok](/help/destinations/catalog/social/tiktok.md) および [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) 接続をサポートしています | [ カスタムアップロード ](../../segmentation/ui/audience-portal.md#import-audience) および [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) から、これらの宛先に対して外部オーディエンスをアクティブ化できます。 |
-| 配列、マップ、オブジェクトをクラウドストレージの宛先に書き出す | クラウドストレージの宛先に接続する際に、新しい **[!UICONTROL 配列、マップ、オブジェクトの書き出し]** トグルを使用すると、複雑なオブジェクトを新しく書き出して宛先を選択できます。 機能について ](/help/destinations/ui/export-arrays-maps-objects.md) 詳細を参照 [。 |
+| 配列、マップ、オブジェクトをクラウドストレージの宛先に書き出す | クラウドストレージの宛先に接続する際に、新しい **[!UICONTROL 配列、マップ、オブジェクトの書き出し]** トグルを使用すると、複雑なオブジェクトを新しく書き出して宛先を選択できます。 機能について [&#128279;](/help/destinations/ui/export-arrays-maps-objects.md) 詳細を参照 。 |
 
 {style="table-layout:auto"}
 
