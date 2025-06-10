@@ -5,10 +5,10 @@ title: Flow Service API を使用した、生データのストリーミング�
 type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 36%
+source-wordcount: '1208'
+ht-degree: 35%
 
 ---
 
@@ -414,6 +414,10 @@ curl -X GET \
 ```
 
 ## データフローの作成
+
+>[!NOTE]
+>
+>ストリーミングデータフローを作成または更新した後、データ損失やデータ削除が発生する可能性を防ぐために、データ取り込みを 5 分間ほど一時停止する必要があります。
 
 ストリーミングデータを収集するための最後の手順は、データフローを作成することです。 現時点で、次の必要な値の準備ができています。
 

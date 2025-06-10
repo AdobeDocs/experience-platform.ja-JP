@@ -3,10 +3,10 @@ title: Flow Service API を使用した Google PubSub ソース接続の作成
 description: Flow Service API を使用して Adobe Experience Platform を Google PubSub アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 46%
+source-wordcount: '1181'
+ht-degree: 45%
 
 ---
 
@@ -257,6 +257,10 @@ curl -X POST \
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+>[!NOTE]
+>
+>ストリーミングデータフローを作成または更新した後、データ損失やデータ削除が発生する可能性を防ぐために、データ取り込みを 5 分間ほど一時停止する必要があります。
 
 ## 次の手順
 

@@ -4,10 +4,10 @@ description: ソース接続とデータフローを作成して、Snowflake イ
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 12%
+source-wordcount: '841'
+ht-degree: 11%
 
 ---
 
@@ -86,6 +86,10 @@ Experience Platformは、[!DNL Snowflake] データベースからのストリ�
       * タイムスタンプ列またはマッピングでは `TIMESTAMP_TZ` を使用できません。
 
 ## 次の手順
+
+>[!NOTE]
+>
+>ストリーミングデータフローを作成または更新した後、データ損失やデータ削除が発生する可能性を防ぐために、データ取り込みを 5 分間ほど一時停止する必要があります。
 
 次のチュートリアルでは、API を使用して [!DNL Snowflake] ストリーミングソースをExperience Platformに接続する方法の手順を説明します。
 

@@ -3,10 +3,10 @@ title: Snowflake ストリーミングアカウントのAdobe Experience Platfor
 description: Flow Service API を使用してAdobe Experience PlatformをSnowflake Streaming に接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 21%
+source-wordcount: '880'
+ht-degree: 20%
 
 ---
 
@@ -212,6 +212,10 @@ curl -X POST \
 ```
 
 ## データフローの作成
+
+>[!NOTE]
+>
+>ストリーミングデータフローを作成または更新した後、データ損失やデータ削除が発生する可能性を防ぐために、データ取り込みを 5 分間ほど一時停止する必要があります。
 
 ツアー [!DNL Snowflake] ーザーアカウントからExperience Platformにデータをストリーミングするデータフローを作成するには、次の値を指定したうえで、`/flows` エンドポイントに対して POST リクエストを行う必要があります。
 

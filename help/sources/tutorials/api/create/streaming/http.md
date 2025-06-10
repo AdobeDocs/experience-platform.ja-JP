@@ -3,9 +3,9 @@ keywords: Experience Platform；ホーム；人気のトピック；ストリー
 title: Flow Service API を使用した HTTP API ストリーミング接続の作成
 description: このチュートリアルでは、Flow Service API を使用して、生データと XDM データの両方に HTTP API ソースを使用してストリーミング接続を作成する手順を説明します
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1684'
 ht-degree: 30%
 
 ---
@@ -457,6 +457,10 @@ curl -X POST \
 ```
 
 ## データフローの作成
+
+>[!NOTE]
+>
+>ストリーミングデータフローを作成または更新した後、データ損失やデータ削除が発生する可能性を防ぐために、データ取り込みを 5 分間ほど一時停止する必要があります。
 
 ソース接続とターゲット接続を作成したら、データフローを作成できます。 データフローは、ソースからデータをスケジュールおよび収集する役割を果たします。 `/flows` エンドポイントに POST リクエストを実行することで、データフローを作成できます。
 

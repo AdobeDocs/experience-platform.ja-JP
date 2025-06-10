@@ -3,10 +3,10 @@ title: Flow Service API を使用した Azure Event Hubs Source接続の作成
 description: Flow Service API を使用してAdobe Experience Platformを Azure Event Hubs アカウントに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 30%
+source-wordcount: '1524'
+ht-degree: 29%
 
 ---
 
@@ -384,6 +384,10 @@ curl -X POST \
 | `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。`raw` および `xdm` を含むデータタイプがサポートされています。 |
 | `params.reset` | このパラメーターは、データの読み取り方法を定義します。 `latest` を使用すると、最新のデータから読み取りを開始でき、`earliest` を使用すると、ストリーム内の最初の使用可能なデータから読み取りを開始できます。 このパラメーターはオプションです。指定しない場合、デフォルトは `earliest` になります。 |
 | `params.consumerGroup` | [!DNL Event Hubs] に使用するパブリッシュまたは購読のメカニズム。 このパラメーターはオプションです。指定しない場合、デフォルトは `$Default` になります。 詳しくは、この [[!DNL Event Hubs]  イベントコンシューマーに関するガイド ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) を参照してください。 **メモ**:[!DNL Event Hubs] コンシューマーグループは、特定の時間に 1 つのフローに対してのみ使用できます。 |
+
+>[!NOTE]
+>
+>ストリーミングデータフローを作成または更新した後、データ損失やデータ削除が発生する可能性を防ぐために、データ取り込みを 5 分間ほど一時停止する必要があります。
 
 ## 次の手順
 

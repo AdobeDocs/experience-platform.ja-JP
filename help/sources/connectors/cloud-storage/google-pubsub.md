@@ -3,10 +3,10 @@ title: Google PubSub Sourceの概要
 description: API またはユーザーインターフェイスを使用して、Google PubSub と Adobe Experience Platform を接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 10%
+source-wordcount: '857'
+ht-degree: 9%
 
 ---
 
@@ -82,6 +82,10 @@ Adobe Experience Platformには、[!DNL AWS]、[!DNL Google Cloud Platform]、[!
 >サブスクリプションごとに 1 つのソースデータフローのみを作成 [!DNL Google PubSub] きます。 複数のサンドボックスにまたがる場合でも、サブスクリプションを再利用すると、データが失われます。
 
 ## [!DNL Google PubSub] をExperience Platformに接続
+
+>[!NOTE]
+>
+>ストリーミングデータフローを作成または更新した後、データ損失やデータ削除が発生する可能性を防ぐために、データ取り込みを 5 分間ほど一時停止する必要があります。
 
 以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL Google PubSub] をExperience Platformに接続する方法について説明しています。
 
