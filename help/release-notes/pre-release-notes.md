@@ -105,7 +105,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | --- | --- |
-| LinkedIn アカウントの有効期限に関する情報 | LinkedIn 宛先のアカウントの有効期限に関する情報が、[!UICONTROL  参照 ] ビューと [!UICONTROL  アカウント ] ビューで直接利用できるようになりました。 以前は、この情報はドキュメントでのみ提供されていました。 この機能強化により、LinkedIn の認証ステータスと資格情報管理がよりわかりやすくなっています。 |
+| LinkedIn アカウントの有効期限に関する情報 | LinkedIn 宛先のアカウントの有効期限に関する情報が、[!UICONTROL &#x200B; 参照 &#x200B;] ビューと [!UICONTROL &#x200B; アカウント &#x200B;] ビューで直接利用できるようになりました。 以前は、この情報はドキュメントでのみ提供されていました。 この機能強化により、LinkedIn の認証ステータスと資格情報管理がよりわかりやすくなっています。 |
 | Google カスタマーマッチ + DV360 の一般提供と機能強化 | Google カスタマーマッチ + DV360 の宛先を、すべてのExperience Platform ユーザーが使用できるようになりました。 ドキュメントに、AdobeとGoogle広告アカウント間のアカウントリンクに関する詳細なガイダンスが含まれるようになりました。 |
 | データランディングゾーン（DLZ）宛先暗号化のサポート | データランディングゾーン宛先の暗号化のサポートを追加しました。 RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できるようになりました。 |
 | エンタープライズ宛先のオーディエンスレベルの監視 | オーディエンスレベルの監視が、[[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、[[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)、[[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md) のエンタープライズ宛先で使用できるようになりました。 |
