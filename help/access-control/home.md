@@ -71,7 +71,7 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 
 リソース権限は、特定のExperience Platform機能へのアクセス権を付与します。 リソースは、関連する権限のセットを含むカテゴリに分類されており、役割に個別に割り当てることができます。
 
-[!UICONTROL  権限 ] では、役割のリソースワークスペースに、その役割に対してアクティブなサンドボックスと権限が表示されます。
+[!UICONTROL &#x200B; 権限 &#x200B;] では、役割のリソースワークスペースに、その役割に対してアクティブなサンドボックスと権限が表示されます。
 
 ![ 選択したカテゴリと権限のリストを含む役割のリソースワークスペース。](./images/permissions.png)
 
@@ -125,92 +125,92 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 
 | カテゴリ | 権限 | 説明 |
 | --- | --- | --- |
-| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler統一データの管理 ] | 統一データを表示および変更する機能。 |
-| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler統一データの表示 ] | 統一データへの読み取り専用アクセス。 |
-| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデル設定の管理 ] | モデル設定を表示および変更する機能。 |
-| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデルの設定を表示 ] | モデル設定への読み取り専用アクセス |
-| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデルプラン設定の管理 ] | プラン設定を表示および変更する機能。 |
-| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデルプラン設定の表示 ] | 計画の構成への読取り専用アクセス |
-| [!DNL AI Assistant] | [!UICONTROL AI アシスタントを有効にする ] | [!DNL [AI assistant]](../ai-assistant/access.md) の質問をする能力。 |
-| [!DNL AI Assistant] | [!UICONTROL  運用インサイトの表示 ] | へのアクセスで、[ 運用インサイト ](../ai-assistant/home.md##operational-insights) クエリに対する応答を取得します。 |
-| [!DNL AI Assistant] | [!UICONTROL  コンテンツを生成 ] | ユーザーが [!DNL AI Assistant] を使用してコンテンツを生成できるようにします。 |
-| [!DNL AI Assistant] | [!UICONTROL  ブランドキットの管理 ] | ユーザーが [!DNL AI Assistant] を使用してブランドガイドラインを作成できるようにします。 |
+| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler統一データの管理 &#x200B;] | 統一データを表示および変更する機能。 |
+| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler統一データの表示 &#x200B;] | 統一データへの読み取り専用アクセス。 |
+| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデル設定の管理 &#x200B;] | モデル設定を表示および変更する機能。 |
+| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデルの設定を表示 &#x200B;] | モデル設定への読み取り専用アクセス |
+| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデルプラン設定の管理 &#x200B;] | プラン設定を表示および変更する機能。 |
+| [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler モデルプラン設定の表示 &#x200B;] | 計画の構成への読取り専用アクセス |
+| [!DNL AI Assistant] | [!UICONTROL AI アシスタントを有効にする &#x200B;] | [[!DNL [AI assistant]]](../ai-assistant/access.md) の質問をする能力。 |
+| [!DNL AI Assistant] | [!UICONTROL &#x200B; 運用インサイトの表示 &#x200B;] | へのアクセスで、[ 運用インサイト ](../ai-assistant/home.md##operational-insights) クエリに対する応答を取得します。 |
+| [!DNL AI Assistant] | [!UICONTROL &#x200B; コンテンツを生成 &#x200B;] | ユーザーが [!DNL AI Assistant] を使用してコンテンツを生成できるようにします。 |
+| [!DNL AI Assistant] | [!UICONTROL &#x200B; ブランドキットの管理 &#x200B;] | ユーザーが [!DNL AI Assistant] を使用してブランドガイドラインを作成できるようにします。 |
 | [!DNL Alerts] | [!UICONTROL アラート履歴の表示] | アラート履歴への読み取り専用アクセス。 |
 | [!DNL Alerts] | [!UICONTROL アラートの解決] | アラートの読み取り、編集、削除へのアクセス。 |
 | [!DNL Alerts] | [!UICONTROL アラートの表示] | アラートへの読み取り専用アクセス。 |
 | [!DNL Alerts] | [!UICONTROL アラートの管理] | アラートの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL B2B Account Lists] | [!UICONTROL B2B アカウントリストの管理 ] | 左側のナビゲーションに **[!UICONTROL アカウントリスト]** を表示してアクセスする機能。 **[!UICONTROL アカウントリスト]** にアクセスできるユーザーは、すべてのアカウントリスト CRUD 機能（`/accounts-list`）にアクセスできる必要があります。 |
-| [!DNL B2B Admin Configurations] | [!UICONTROL B2B 管理設定の管理 ] | 左側のナビゲーションに **[!UICONTROL B2B 管理設定]** を表示してアクセスする機能。 **[!UICONTROL B2B 管理設定にアクセスできるユーザーは]** すべての SMS API 資格情報 CRUD 関数（`/admin-configs`）にアクセスできる必要があります。 |
-| [!DNL B2B Assets] | [!UICONTROL B2B Assetsの管理 ] | 左側のナビゲーションで **[!UICONTROL Assets]** を表示してアクセスする機能。 **[!UICONTROL Assets]** にアクセスできるユーザーは、すべてのAssets CRUD 機能（`/assets-listing`）にアクセスできる必要があります。 |
-| [!DNL B2B Assets] | [!UICONTROL B2B テンプレートの管理 ] | 左側のナビゲーションで **[!UICONTROL テンプレート]** を表示してアクセスする機能。 **[!UICONTROL テンプレート]** にアクセスできるユーザーは、すべてのテンプレート CRUD 関数（`/b2b-content-templates`）にアクセスできる必要があります。 |
-| [!DNL B2B Assets] | [!UICONTROL B2B フラグメントの管理 ] | 左側のナビゲーションで **[!UICONTROL フラグメント]** を表示してアクセスする機能。 **[!UICONTROL フラグメント]** にアクセスできるユーザーは、すべてのフラグメント CRUD 関数（`/fragments`）にアクセスできる必要があります。 |
-| [!DNL B2B Buying Groups] | [!UICONTROL B2B 購入グループの管理 ] | 左側のナビゲーションで **[!UICONTROL 購入グループ]** を表示してアクセスする機能。 **[!UICONTROL 購入グループ]** へのアクセス権を持つユーザーは、すべての購入グループ CRUD 機能（`/buying-groups`）にアクセスできる必要があります。 |
-| [!DNL B2B Dashboards] | [!UICONTROL B2B エンゲージメントダッシュボードの管理 ] | 左側のナビゲーションで **[!UICONTROL ダッシュボード]** を表示してアクセスする機能。 **[!UICONTROL ダッシュボード]** へのアクセス権を持つユーザーは、すべてのダッシュボード CRUD 関数（`/insights-dashboard`）にアクセスできる必要があります。 |
-| [!DNL B2B Channel Configurations] | [!UICONTROL B2B チャネル設定の管理 ] | 左側のナビゲーションで **[!UICONTROL チャネル]** を表示してアクセスする機能。 **[!UICONTROL チャネル]** にアクセスできるユーザーは、すべてのチャネル CRUD 関数（`/channels-config`）にアクセスできる必要があります。 |
-| [!DNL B2B Journeys] | [!UICONTROL B2B アカウントのジャーニーの管理 ] | 左側のナビゲーションで **[!UICONTROL アカウントジャーニー]** を表示してアクセスする機能。 **[!UICONTROL アカウントジャーニー]** にアクセスできるユーザーは、すべてのアカウントジャーニーの CRUD 機能（`/account-journeys`）にアクセスできる必要があります。 |
-| [!DNL Campaigns] | [!UICONTROL  キャンペーンの管理 ] | キャンペーンの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Campaigns] | [!UICONTROL  キャンペーンの承認と公開 ] | キャンペーンを承認および公開する機能。 |
-| [!DNL Campaigns] | [!UICONTROL  キャンペーンの公開 ] | キャンペーンを公開する機能 |
-| [!DNL Campaigns] | [!UICONTROL  キャンペーンの表示 ] | キャンペーンへの読み取り専用アクセス |
-| [!DNL Campaigns] | [!UICONTROL  キャンペーンレポートを表示 ] | キャンペーンレポートへの読み取り専用アクセス |
-| [!DNL Channel Configurations] | [!UICONTROL  メッセージの一般設定の表示 ] | メッセージの一般設定への読み取り専用アクセス |
-| [!DNL Channel Configurations] | [!UICONTROL  サブドメインのデリゲーションの管理 ] | サブドメインデリゲーションの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL IP プールの管理 ] | IP プールの読み取り、作成および編集へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL  メッセージの一般設定の管理 ] | メッセージの一般設定への読み取り、作成、編集、および削除アクセス |
-| [!DNL Channel Configurations] | [!UICONTROL  メッセージプリセットの管理 ] | メッセージプリセットの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL  メッセージプリセットの表示 ] | メッセージプリセットへの読み取り専用アクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL PTR レコードの管理 ] | PTR レコードの読み取りと編集へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL PTR レコードの表示 ] | PTR レコードへの読み取り専用アクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL  抑制の管理 ] | 抑制ルールの読み取り、作成、編集、および削除へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL  抑制リストの表示 ] | 抑制リストへの読み取り専用アクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL  抑制リストの書き出し ] | 抑制リストを CSV ファイルとして書き出すためのアクセス権。 |
-| [!DNL Channel Configurations] | [!UICONTROL  ランディングページ設定の管理 ] | ランディングページ設定の読み取り、作成、編集、および削除へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL SMS 設定の管理 ] | SMS 設定の読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL SMS サブドメインの管理 ] | SMS サブドメインの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL  ファイルのルーティングの管理 ] | ファイル ルーティングの読み取り、作成、編集、および削除へのアクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL  ファイルのルーティングを表示 ] | ファイルルーティングへの読み取り専用アクセス。 |
-| [!DNL Channel Configurations] | [!UICONTROL  シードリストの管理 ] | シードリストを作成および編集する機能。 |
-| [!DNL Channel Configurations] | [!UICONTROL  言語設定の管理 ] | 言語設定を作成および編集する機能。 |
-| [!DNL Channel Configurations] | [!UICONTROL Web サブドメインの管理 ] | CJM web サブドメインを作成および編集する機能。 |
-| [!DNL Channel Configurations] | [!UICONTROL  プッシュ資格情報の管理 ] | プッシュ認証情報を作成、編集、削除する機能。 |
-| [!DNL Collaborations] | [!UICONTROL Collaboration インスタンスの管理 ] | 組織のコラボレーション インスタンスを表示、作成、更新、および削除します。 他の組織のコラボレーション インスタンスを検出します。 |
-| [!DNL Collaborations] | [!UICONTROL Collaboration インスタンスの読み取り ] | 組織のコラボレーションインスタンスを読み取り、他の組織のコラボレーションインスタンスを検出します。 |
-| [!DNL Collaborations] | [!UICONTROL  接続招待の管理 ] | 組織が開始した接続招待を表示、作成および削除します。 他の組織によって開始された接続招待を承認または拒否します。 |
-| [!DNL Collaborations] | [!UICONTROL  接続招待を読み取り ] | 接続招待への読み取り専用アクセス。 |
-| [!DNL Collaborations] | [!UICONTROL Collaboration接続の管理 ] | 広告主は、設定の表示、作成、更新のほか、接続の送信と削除を行うことができます。 パブリッシャーは、接続を表示、許可、拒否できます。 |
-| [!DNL Collaborations] | [!UICONTROL Collaboration Connections を読む ] | 接続への読み取り専用アクセス |
-| [!DNL Collaborations] | [!UICONTROL  オーディエンスデータの管理 ] | オーディエンスのオンボーディングと検出。 パブリック、プライベートおよびカスタムオーディエンスを更新し、オーディエンスインベントリメタデータ設定を管理します。 |
-| [!DNL Collaborations] | [!UICONTROL  オーディエンスデータの読み取り ] | オーディエンスの読み取り、検出。 |
-| [!DNL Collaborations] | [!UICONTROL  測定データの管理 ] | 測定データのオンボーディング、更新、削除 |
-| [!DNL Collaborations] | [!UICONTROL  測定データの読み取り ] | 測定データへの読み取り専用アクセス |
-| [!DNL Collaborations] | [!UICONTROL  プロジェクトの管理 ] | 検出、共有、アクティブ化、測定の各アクティビティに対して、プロジェクトを表示、作成、更新、削除します。 |
-| [!DNL Collaborations] | [!UICONTROL  プロジェクトの読み取り ] | 検出、共有、アクティブ化、測定の各アクティビティのプロジェクトを表示します。 |
-| [!DNL Collaborations] | [!UICONTROL  ユーザーの読み取りアクティビティ ] | ユーザーアクティビティへの読み取り専用アクセス |
-| [!DNL Collaborations] | [!UICONTROL  エクスポートユーザーアクティビティ ] | ユーザーアクティビティを書き出します。 |
-| [!DNL Collaborations] | [!UICONTROL Collaborationの与信モニタリングを参照 ] | 組織レベルおよびインスタンスレベルでのクレジットの監視。 |
-| [!DNL Computed Attributes] | [!UICONTROL  計算済み属性の表示 ] | 「計算属性」タブ、在庫および詳細への読み取り専用アクセス |
-| [!DNL Computed Attributes] | [!UICONTROL  計算属性の管理 ] | ドラフトの読み取り、作成、削除、計算属性の非アクティブ化へのアクセス。 |
-| [!DNL Customer Managed Keys] | [!UICONTROL  顧客管理キーの管理 ] | 顧客管理キーを表示および設定するためのアクセス。 |
+| [!DNL B2B Account Lists] | [!UICONTROL B2B アカウントリストの管理 &#x200B;] | 左側のナビゲーションに **[!UICONTROL アカウントリスト]** を表示してアクセスする機能。 **[!UICONTROL アカウントリスト]** にアクセスできるユーザーは、すべてのアカウントリスト CRUD 機能（`/accounts-list`）にアクセスできる必要があります。 |
+| [!DNL B2B Admin Configurations] | [!UICONTROL B2B 管理設定の管理 &#x200B;] | 左側のナビゲーションに **[!UICONTROL B2B 管理設定]** を表示してアクセスする機能。 **[!UICONTROL B2B 管理設定にアクセスできるユーザーは]** すべての SMS API 資格情報 CRUD 関数（`/admin-configs`）にアクセスできる必要があります。 |
+| [!DNL B2B Assets] | [!UICONTROL B2B Assetsの管理 &#x200B;] | 左側のナビゲーションで **[!UICONTROL Assets]** を表示してアクセスする機能。 **[!UICONTROL Assets]** にアクセスできるユーザーは、すべてのAssets CRUD 機能（`/assets-listing`）にアクセスできる必要があります。 |
+| [!DNL B2B Assets] | [!UICONTROL B2B テンプレートの管理 &#x200B;] | 左側のナビゲーションで **[!UICONTROL テンプレート]** を表示してアクセスする機能。 **[!UICONTROL テンプレート]** にアクセスできるユーザーは、すべてのテンプレート CRUD 関数（`/b2b-content-templates`）にアクセスできる必要があります。 |
+| [!DNL B2B Assets] | [!UICONTROL B2B フラグメントの管理 &#x200B;] | 左側のナビゲーションで **[!UICONTROL フラグメント]** を表示してアクセスする機能。 **[!UICONTROL フラグメント]** にアクセスできるユーザーは、すべてのフラグメント CRUD 関数（`/fragments`）にアクセスできる必要があります。 |
+| [!DNL B2B Buying Groups] | [!UICONTROL B2B 購入グループの管理 &#x200B;] | 左側のナビゲーションで **[!UICONTROL 購入グループ]** を表示してアクセスする機能。 **[!UICONTROL 購入グループ]** へのアクセス権を持つユーザーは、すべての購入グループ CRUD 機能（`/buying-groups`）にアクセスできる必要があります。 |
+| [!DNL B2B Dashboards] | [!UICONTROL B2B エンゲージメントダッシュボードの管理 &#x200B;] | 左側のナビゲーションで **[!UICONTROL ダッシュボード]** を表示してアクセスする機能。 **[!UICONTROL ダッシュボード]** へのアクセス権を持つユーザーは、すべてのダッシュボード CRUD 関数（`/insights-dashboard`）にアクセスできる必要があります。 |
+| [!DNL B2B Channel Configurations] | [!UICONTROL B2B チャネル設定の管理 &#x200B;] | 左側のナビゲーションで **[!UICONTROL チャネル]** を表示してアクセスする機能。 **[!UICONTROL チャネル]** にアクセスできるユーザーは、すべてのチャネル CRUD 関数（`/channels-config`）にアクセスできる必要があります。 |
+| [!DNL B2B Journeys] | [!UICONTROL B2B アカウントのジャーニーの管理 &#x200B;] | 左側のナビゲーションで **[!UICONTROL アカウントジャーニー]** を表示してアクセスする機能。 **[!UICONTROL アカウントジャーニー]** にアクセスできるユーザーは、すべてのアカウントジャーニーの CRUD 機能（`/account-journeys`）にアクセスできる必要があります。 |
+| [!DNL Campaigns] | [!UICONTROL &#x200B; キャンペーンの管理 &#x200B;] | キャンペーンの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Campaigns] | [!UICONTROL &#x200B; キャンペーンの承認と公開 &#x200B;] | キャンペーンを承認および公開する機能。 |
+| [!DNL Campaigns] | [!UICONTROL &#x200B; キャンペーンの公開 &#x200B;] | キャンペーンを公開する機能 |
+| [!DNL Campaigns] | [!UICONTROL &#x200B; キャンペーンの表示 &#x200B;] | キャンペーンへの読み取り専用アクセス |
+| [!DNL Campaigns] | [!UICONTROL &#x200B; キャンペーンレポートを表示 &#x200B;] | キャンペーンレポートへの読み取り専用アクセス |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; メッセージの一般設定の表示 &#x200B;] | メッセージの一般設定への読み取り専用アクセス |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; サブドメインのデリゲーションの管理 &#x200B;] | サブドメインデリゲーションの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL IP プールの管理 &#x200B;] | IP プールの読み取り、作成および編集へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; メッセージの一般設定の管理 &#x200B;] | メッセージの一般設定への読み取り、作成、編集、および削除アクセス |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; メッセージプリセットの管理 &#x200B;] | メッセージプリセットの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; メッセージプリセットの表示 &#x200B;] | メッセージプリセットへの読み取り専用アクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL PTR レコードの管理 &#x200B;] | PTR レコードの読み取りと編集へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL PTR レコードの表示 &#x200B;] | PTR レコードへの読み取り専用アクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; 抑制の管理 &#x200B;] | 抑制ルールの読み取り、作成、編集、および削除へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; 抑制リストの表示 &#x200B;] | 抑制リストへの読み取り専用アクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; 抑制リストの書き出し &#x200B;] | 抑制リストを CSV ファイルとして書き出すためのアクセス権。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; ランディングページ設定の管理 &#x200B;] | ランディングページ設定の読み取り、作成、編集、および削除へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL SMS 設定の管理 &#x200B;] | SMS 設定の読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL SMS サブドメインの管理 &#x200B;] | SMS サブドメインの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; ファイルのルーティングの管理 &#x200B;] | ファイル ルーティングの読み取り、作成、編集、および削除へのアクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; ファイルのルーティングを表示 &#x200B;] | ファイルルーティングへの読み取り専用アクセス。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; シードリストの管理 &#x200B;] | シードリストを作成および編集する機能。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; 言語設定の管理 &#x200B;] | 言語設定を作成および編集する機能。 |
+| [!DNL Channel Configurations] | [!UICONTROL Web サブドメインの管理 &#x200B;] | CJM web サブドメインを作成および編集する機能。 |
+| [!DNL Channel Configurations] | [!UICONTROL &#x200B; プッシュ資格情報の管理 &#x200B;] | プッシュ認証情報を作成、編集、削除する機能。 |
+| [!DNL Collaborations] | [!UICONTROL Collaboration インスタンスの管理 &#x200B;] | 組織のコラボレーション インスタンスを表示、作成、更新、および削除します。 他の組織のコラボレーション インスタンスを検出します。 |
+| [!DNL Collaborations] | [!UICONTROL Collaboration インスタンスの読み取り &#x200B;] | 組織のコラボレーションインスタンスを読み取り、他の組織のコラボレーションインスタンスを検出します。 |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; 接続招待の管理 &#x200B;] | 組織が開始した接続招待を表示、作成および削除します。 他の組織によって開始された接続招待を承認または拒否します。 |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; 接続招待を読み取り &#x200B;] | 接続招待への読み取り専用アクセス。 |
+| [!DNL Collaborations] | [!UICONTROL Collaboration接続の管理 &#x200B;] | 広告主は、設定の表示、作成、更新のほか、接続の送信と削除を行うことができます。 パブリッシャーは、接続を表示、許可、拒否できます。 |
+| [!DNL Collaborations] | [!UICONTROL Collaboration Connections を読む &#x200B;] | 接続への読み取り専用アクセス |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; オーディエンスデータの管理 &#x200B;] | オーディエンスのオンボーディングと検出。 パブリック、プライベートおよびカスタムオーディエンスを更新し、オーディエンスインベントリメタデータ設定を管理します。 |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; オーディエンスデータの読み取り &#x200B;] | オーディエンスの読み取り、検出。 |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; 測定データの管理 &#x200B;] | 測定データのオンボーディング、更新、削除 |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; 測定データの読み取り &#x200B;] | 測定データへの読み取り専用アクセス |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; プロジェクトの管理 &#x200B;] | 検出、共有、アクティブ化、測定の各アクティビティに対して、プロジェクトを表示、作成、更新、削除します。 |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; プロジェクトの読み取り &#x200B;] | 検出、共有、アクティブ化、測定の各アクティビティのプロジェクトを表示します。 |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; ユーザーの読み取りアクティビティ &#x200B;] | ユーザーアクティビティへの読み取り専用アクセス |
+| [!DNL Collaborations] | [!UICONTROL &#x200B; エクスポートユーザーアクティビティ &#x200B;] | ユーザーアクティビティを書き出します。 |
+| [!DNL Collaborations] | [!UICONTROL Collaborationの与信モニタリングを参照 &#x200B;] | 組織レベルおよびインスタンスレベルでのクレジットの監視。 |
+| [!DNL Computed Attributes] | [!UICONTROL &#x200B; 計算済み属性の表示 &#x200B;] | 「計算属性」タブ、在庫および詳細への読み取り専用アクセス |
+| [!DNL Computed Attributes] | [!UICONTROL &#x200B; 計算属性の管理 &#x200B;] | ドラフトの読み取り、作成、削除、計算属性の非アクティブ化へのアクセス。 |
+| [!DNL Customer Managed Keys] | [!UICONTROL &#x200B; 顧客管理キーの管理 &#x200B;] | 顧客管理キーを表示および設定するためのアクセス。 |
 | [!DNL Dashboards] | [!UICONTROL ライセンス使用状況ダッシュボードの表示] | ライセンス使用状況ダッシュボードを表示する読み取り専用アクセス。 |
 | [!DNL Dashboards] | [!UICONTROL 標準ダッシュボードの管理] | Data Warehouse にないカスタム属性の追加。 |
-| [!DNL Dashboards] | [!UICONTROL  標準ダッシュボードの表示 ] | プロファイル、宛先、セグメントの各ダッシュボードへの読み取り専用アクセス。 また、左側のナビゲーションのダッシュボードと、ダッシュボードインベントリおよび「統合」タブへのアクセスを有効にします。 |
-| [!DNL Dashboards] | [!UICONTROL  カスタムダッシュボードの管理 ] | ダッシュボードの作成または編集へのアクセス。 |
-| [!DNL Dashboards] | [!UICONTROL  カスタムダッシュボードの表示 ] | ユーザー定義ダッシュボードへの読み取り専用アクセス |
-| [!DNL Dashboards] | [!UICONTROL  レポートスケジュールの管理 ] | スケジュールを作成する機能 |
-| [!DNL Dashboards] | [!UICONTROL  ダッシュボードデータのエクスポート ] | Query pro モードのダッシュボードから表形式のデータをエクスポートするユーザーの機能を制御します。 |
-| [!DNL Data Collection] | [!UICONTROL  データストリームの管理 ] | データストリームの読み取り、作成、編集へのアクセス。 |
-| [!DNL Data Collection] | [!UICONTROL  データストリームの表示 ] | データストリームへの読み取り専用アクセス |
-| [!DNL Data Governance] | [!UICONTROL  使用状況ラベルの管理 ] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
+| [!DNL Dashboards] | [!UICONTROL &#x200B; 標準ダッシュボードの表示 &#x200B;] | プロファイル、宛先、セグメントの各ダッシュボードへの読み取り専用アクセス。 また、左側のナビゲーションのダッシュボードと、ダッシュボードインベントリおよび「統合」タブへのアクセスを有効にします。 |
+| [!DNL Dashboards] | [!UICONTROL &#x200B; カスタムダッシュボードの管理 &#x200B;] | ダッシュボードの作成または編集へのアクセス。 |
+| [!DNL Dashboards] | [!UICONTROL &#x200B; カスタムダッシュボードの表示 &#x200B;] | ユーザー定義ダッシュボードへの読み取り専用アクセス |
+| [!DNL Dashboards] | [!UICONTROL &#x200B; レポートスケジュールの管理 &#x200B;] | スケジュールを作成する機能 |
+| [!DNL Dashboards] | [!UICONTROL &#x200B; ダッシュボードデータのエクスポート &#x200B;] | Query pro モードのダッシュボードから表形式のデータをエクスポートするユーザーの機能を制御します。 |
+| [!DNL Data Collection] | [!UICONTROL &#x200B; データストリームの管理 &#x200B;] | データストリームの読み取り、作成、編集へのアクセス。 |
+| [!DNL Data Collection] | [!UICONTROL &#x200B; データストリームの表示 &#x200B;] | データストリームへの読み取り専用アクセス |
+| [!DNL Data Governance] | [!UICONTROL &#x200B; 使用状況ラベルの管理 &#x200B;] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの表示] | 組織に属するデータ使用ポリシーに対する読み取り専用アクセス。 |
 | [!DNL Data Governance] | [!UICONTROL ユーザーアクティビティログを表示] | Experience Platform アクティビティを記録した [ 監査ログ ](../landing/governance-privacy-security/audit-logs/overview.md) を表示する読み取り専用アクセス。 |
-| [!DNL Data Governance] | [!UICONTROL  プライバシーコンソールを表示 ] | プライバシーコンソールへの読み取り専用アクセス |
+| [!DNL Data Governance] | [!UICONTROL &#x200B; プライバシーコンソールを表示 &#x200B;] | プライバシーコンソールへの読み取り専用アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 2 つの組織を接続し、[!DNL Segment Match] のフローを有効にするパートナー共有を作成、承認、拒否するためのアクセス権。 |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | アクティブなパートナーで [!DNL Segment Match] フィードを読み取り、作成、編集、公開するためのアクセス権。 |
-| [!DNL Data Lifecycle] | [!UICONTROL  データのライフサイクルの表示 ] | データ ライフサイクルへの読み取り専用アクセス |
-| [!DNL Data Lifecycle] | [!UICONTROL  データのライフサイクルの管理 ] | データ ライフサイクルの読み取り、作成、編集、および削除へのアクセス。 |
+| [!DNL Data Lifecycle] | [!UICONTROL &#x200B; データのライフサイクルの表示 &#x200B;] | データ ライフサイクルへの読み取り専用アクセス |
+| [!DNL Data Lifecycle] | [!UICONTROL &#x200B; データのライフサイクルの管理 &#x200B;] | データ ライフサイクルの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの管理] | 各スキーマと関連リソースへの読み取り、作成、編集および削除アクセス |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの表示] | スキーマおよび関連リソースへの読み取り専用アクセス |
 | [!DNL Data Modeling] | [!UICONTROL 関係の管理] | スキーマ関係の読み取り、作成、編集、および削除へのアクセス。 |
@@ -219,91 +219,91 @@ Experience Platform のサンドボックスについて詳しくは、「[サ�
 | [!DNL Data Management] | [!UICONTROL データセットの表示] | データセットおよびスキーマへの読み取り専用アクセス |
 | [!DNL Data Management] | [!UICONTROL データ監視] | 監視データセットおよびストリームへの読み取り専用アクセス |
 | [!DNL Data Science Workspace] | [!UICONTROL Data Science Workspace の管理] | [!DNL Data Science Workspace] での読み取り、作成、編集、および削除へのアクセス。 |
-| [!DNL Decision Management] | [!UICONTROL  エクスペリエンス決定の管理 ] | エクスペリエンス決定エンティティを管理する機能。 |
-| [!DNL Decision Management] | [!UICONTROL  エクスペリエンス決定を表示 ] | Experience Decisioning エンティティへの読み取り専用アクセス。 |
-| [!DNL Decision Management] | [!UICONTROL  決定の管理 ] | 決定エンティティの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Decisions Management] | [!UICONTROL  決定の表示 ] | 決定エンティティへの読み取り専用アクセス。 |
-| [!DNL Decision Management] | [!UICONTROL  オファーの管理 ] | すべてのオファーとコンポーネントへの読み取り、作成、編集および削除アクセス 決定およびコレクションへの読み取り専用アクセス |
-| [!DNL Decsion Management] | [!UICONTROL  ランキング戦略の管理 ] | カスタムレポートへの読み取り、作成、編集、削除アクセス、およびアクション機能の使用。 |
+| [!DNL Decision Management] | [!UICONTROL &#x200B; エクスペリエンス決定の管理 &#x200B;] | エクスペリエンス決定エンティティを管理する機能。 |
+| [!DNL Decision Management] | [!UICONTROL &#x200B; エクスペリエンス決定を表示 &#x200B;] | Experience Decisioning エンティティへの読み取り専用アクセス。 |
+| [!DNL Decision Management] | [!UICONTROL &#x200B; 決定の管理 &#x200B;] | 決定エンティティの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Decisions Management] | [!UICONTROL &#x200B; 決定の表示 &#x200B;] | 決定エンティティへの読み取り専用アクセス。 |
+| [!DNL Decision Management] | [!UICONTROL &#x200B; オファーの管理 &#x200B;] | すべてのオファーとコンポーネントへの読み取り、作成、編集および削除アクセス 決定およびコレクションへの読み取り専用アクセス |
+| [!DNL Decsion Management] | [!UICONTROL &#x200B; ランキング戦略の管理 &#x200B;] | カスタムレポートへの読み取り、作成、編集、削除アクセス、およびアクション機能の使用。 |
 | [!DNL Destinations] | [!UICONTROL 宛先の表示] | 「**[!UICONTROL カタログ]**」タブの使用可能な宛先と「**[!UICONTROL 参照]**」タブの認証済みの宛先を表示する読み取り専用アクセス。 |
 | [!DNL Destinations] | [!UICONTROL 宛先の管理] | 宛先接続および宛先アカウントの読み取り、作成、削除へのアクセス。 |
-| [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | 作成済みのアクティブな宛先に対するデータのアクティブ化機能また、この権限の場合は、宛先をアクティブ化するユーザーに [!UICONTROL  宛先の表示 ] または [!UICONTROL  宛先の管理 ] のいずれかを付与する必要があります。 |
-| [!DNL Destinations] | [!UICONTROL マッピングを使用しないセグメントアクティブ化] | [ マッピングステップ ](../destinations/ui/activate-batch-profile-destinations.md#mapping) を表示せずに、既存の宛先に対してオーディエンスをアクティブ化する機能。 ユーザーは、アクティベーションワークフローでオーディエンスを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL  宛先の表示 ] 権限を付与する必要があります。 |
-| [!DNL Destinations] | [!UICONTROL データセット宛先の管理とアクティブ化] | データセット書き出しフローを読み取り、作成、編集および無効化する機能。作成済みのアクティブなデータセットに対してデータもアクティブ化する機能。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL  宛先の表示 ] 権限を付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | 作成済みのアクティブな宛先に対するデータのアクティブ化機能また、この権限の場合は、宛先をアクティブ化するユーザーに [!UICONTROL &#x200B; 宛先の表示 &#x200B;] または [!UICONTROL &#x200B; 宛先の管理 &#x200B;] のいずれかを付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL マッピングを使用しないセグメントアクティブ化] | [ マッピングステップ ](../destinations/ui/activate-batch-profile-destinations.md#mapping) を表示せずに、既存の宛先に対してオーディエンスをアクティブ化する機能。 ユーザーは、アクティベーションワークフローでオーディエンスを追加および削除できますが、マッピングされた属性や ID を追加または削除することはできません。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL &#x200B; 宛先の表示 &#x200B;] 権限を付与する必要があります。 |
+| [!DNL Destinations] | [!UICONTROL データセット宛先の管理とアクティブ化] | データセット書き出しフローを読み取り、作成、編集および無効化する機能。作成済みのアクティブなデータセットに対してデータもアクティブ化する機能。 また、この権限の場合は、宛先に対してデータをアクティブ化するユーザーに [!UICONTROL &#x200B; 宛先の表示 &#x200B;] 権限を付与する必要があります。 |
 | [!DNL Destinations] | [!UICONTROL 宛先のオーサリング] | [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) を使用して宛先を作成する機能。 |
-| [!DNL Federated Data] | [!UICONTROL Federated Data の管理 ] | スキーマ、モデル、コンポジションの作成など、すべての連合データ機能にアクセスする機能。 |
+| [!DNL Federated Data] | [!UICONTROL Federated Data の管理 &#x200B;] | スキーマ、モデル、コンポジションの作成など、すべての連合データ機能にアクセスする機能。 |
 | [!DNL Identity Management] | [!UICONTROL ID 名前空間の管理] | ID 名前空間への読み取り、作成、編集および削除アクセス |
 | [!DNL Identity Management] | [!UICONTROL ID 名前空間の表示] | ID 名前空間への読み取り専用アクセス |
 | [!DNL Identity Management] | [!UICONTROL ID グラフの表示] | ID グラフへの読み取り専用アクセス |
-| [!DNL Identity Management] | [!UICONTROL ID 設定の管理 ] | ID 設定への読み取り、作成および編集アクセス |
-| [!DNL Identity Management] | [!UICONTROL ID 設定の表示 ] | ID 設定への読み取り専用アクセス |
-| [!DNL Intelligent Services] | [!UICONTROL  アトリビューション AI を表示 ] | アトリビューション AI 設定およびインサイトに対する読み取り専用アクセス。 |
-| [!DNL Intelligent Services] | [!UICONTROL  アトリビューション AI の管理 ] | アトリビューション AI モデルの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Intelligent Services] | [!UICONTROL  顧客 AI を表示 ] | 顧客 AI モデルの読み取りまたは表示へのアクセス。 |
-| [!DNL Intelligent Services] | [!UICONTROL  顧客 AI の管理 ] | 顧客 AI モデルを作成、更新、削除、有効化または無効化するためのアクセス権。 |
-| [!DNL IP Warmup Configurations] | [!UICONTROL IP ウォームアッププランを表示 ] | IP ウォームアッププランへの読み取り専用アクセス。 |
-| [!DNL IP Warmup Configurations] | [!UICONTROL IP ウォームアッププランの管理 ] | IP ウォームアッププランを管理する機能。 |
-| [!DNL IP Warmup Configurations] | [!UICONTROL IP ウォームアップレポートの表示 ] | IP ウォームアップレポートへの読み取り専用アクセス。 |
-| [!DNL Journeys] | [!UICONTROL ジャーニーの管理 ] | ジャーニーの読み取り、作成、編集、および削除へのアクセス。 |
-| [!DNL Journeys] | [!UICONTROL ジャーニーの表示 ] | ジャーニーへの読み取り専用アクセス。 |
-| [!DNL Journeys] | [!UICONTROL ジャーニーレポートの表示 ] | ジャーニーレポートへの読み取り専用アクセス。 |
-| [!DNL Journeys] | [!UICONTROL ジャーニーイベント、データソース、アクションの管理 ] | イベント、データソース、アクションの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Journeys] | [!UICONTROL ジャーニーイベント、データソース、アクションの表示 ] | イベント、データソース、アクションへの読み取り専用アクセス |
-| [!DNL Journeys] | [!UICONTROL ジャーニーの承認と公開 ] | ポリシーが適用されたときにジャーニーを承認および公開する機能。 |
-| [!DNL Journeys] | [!UICONTROL ジャーニーの公開 ] | ジャーニーを公開する機能 |
-| [!DNL Journey Optimizer Library] | [!UICONTROL  ライブラリ項目の管理 ] | 保存済み式を追加および削除する機能。 |
-| [!DNL Journey Optimizer Library] | [!UICONTROL  フラグメントの公開 ] | コンテンツフラグメントを公開する機能。 |
-| [!DNL Journey Optimizer Library] | [!UICONTROL  コンテンツをシミュレート ] | プレビューおよびプルーフ用に「コンテンツをシミュレート」オプションへのアクセス。 |
-| [!DNL Journey Optimizer Rules] | [!UICONTROL  頻度ルールの表示 ] | 頻度ルールへの読み取り専用アクセス。 |
-| [!DNL Journey Optimizer Rules] | [!UICONTROL  頻度ルールの管理 ] | 頻度ルールの読み取り、作成、編集、または削除へのアクセス。 |
-| [!DNL Messages] | [!UICONTROL  メッセージの管理 ] | メッセージの読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Messages] | [!UICONTROL  メッセージの表示 ] | メッセージへの読み取り専用アクセス |
-| [!DNL Messages] | [!UICONTROL  メッセージレポートの表示 ] | メッセージレポートへの読み取りおよび編集アクセス。 |
-| [!DNL Messages] | [!UICONTROL  メッセージの公開 ] | メッセージを公開する機能 |
-| [!DNL Messages] | [!UICONTROL  メッセージのプレビューとテストの管理 ] | ポリシーが適用されたときにメッセージを承認および公開する機能。 |
-| [!DNL Privacy Service] | [!UICONTROL Privacy Serviceの管理 ] | 読み取りおよび書き込みプライバシーワークフローへのアクセス。 |
-| [!DNL Privacy Service] | [!UICONTROL Privacy Serviceを表示 ] | プライバシーワークフローへの読み取り専用アクセス |
+| [!DNL Identity Management] | [!UICONTROL ID 設定の管理 &#x200B;] | ID 設定への読み取り、作成および編集アクセス |
+| [!DNL Identity Management] | [!UICONTROL ID 設定の表示 &#x200B;] | ID 設定への読み取り専用アクセス |
+| [!DNL Intelligent Services] | [!UICONTROL &#x200B; アトリビューション AI を表示 &#x200B;] | アトリビューション AI 設定およびインサイトに対する読み取り専用アクセス。 |
+| [!DNL Intelligent Services] | [!UICONTROL &#x200B; アトリビューション AI の管理 &#x200B;] | アトリビューション AI モデルの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Intelligent Services] | [!UICONTROL &#x200B; 顧客 AI を表示 &#x200B;] | 顧客 AI モデルの読み取りまたは表示へのアクセス。 |
+| [!DNL Intelligent Services] | [!UICONTROL &#x200B; 顧客 AI の管理 &#x200B;] | 顧客 AI モデルを作成、更新、削除、有効化または無効化するためのアクセス権。 |
+| [!DNL IP Warmup Configurations] | [!UICONTROL IP ウォームアッププランを表示 &#x200B;] | IP ウォームアッププランへの読み取り専用アクセス。 |
+| [!DNL IP Warmup Configurations] | [!UICONTROL IP ウォームアッププランの管理 &#x200B;] | IP ウォームアッププランを管理する機能。 |
+| [!DNL IP Warmup Configurations] | [!UICONTROL IP ウォームアップレポートの表示 &#x200B;] | IP ウォームアップレポートへの読み取り専用アクセス。 |
+| [!DNL Journeys] | [!UICONTROL ジャーニーの管理 &#x200B;] | ジャーニーの読み取り、作成、編集、および削除へのアクセス。 |
+| [!DNL Journeys] | [!UICONTROL ジャーニーの表示 &#x200B;] | ジャーニーへの読み取り専用アクセス。 |
+| [!DNL Journeys] | [!UICONTROL ジャーニーレポートの表示 &#x200B;] | ジャーニーレポートへの読み取り専用アクセス。 |
+| [!DNL Journeys] | [!UICONTROL ジャーニーイベント、データソース、アクションの管理 &#x200B;] | イベント、データソース、アクションの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Journeys] | [!UICONTROL ジャーニーイベント、データソース、アクションの表示 &#x200B;] | イベント、データソース、アクションへの読み取り専用アクセス |
+| [!DNL Journeys] | [!UICONTROL ジャーニーの承認と公開 &#x200B;] | ポリシーが適用されたときにジャーニーを承認および公開する機能。 |
+| [!DNL Journeys] | [!UICONTROL ジャーニーの公開 &#x200B;] | ジャーニーを公開する機能 |
+| [!DNL Journey Optimizer Library] | [!UICONTROL &#x200B; ライブラリ項目の管理 &#x200B;] | 保存済み式を追加および削除する機能。 |
+| [!DNL Journey Optimizer Library] | [!UICONTROL &#x200B; フラグメントの公開 &#x200B;] | コンテンツフラグメントを公開する機能。 |
+| [!DNL Journey Optimizer Library] | [!UICONTROL &#x200B; コンテンツをシミュレート &#x200B;] | プレビューおよびプルーフ用に「コンテンツをシミュレート」オプションへのアクセス。 |
+| [!DNL Journey Optimizer Rules] | [!UICONTROL &#x200B; 頻度ルールの表示 &#x200B;] | 頻度ルールへの読み取り専用アクセス。 |
+| [!DNL Journey Optimizer Rules] | [!UICONTROL &#x200B; 頻度ルールの管理 &#x200B;] | 頻度ルールの読み取り、作成、編集、または削除へのアクセス。 |
+| [!DNL Messages] | [!UICONTROL &#x200B; メッセージの管理 &#x200B;] | メッセージの読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Messages] | [!UICONTROL &#x200B; メッセージの表示 &#x200B;] | メッセージへの読み取り専用アクセス |
+| [!DNL Messages] | [!UICONTROL &#x200B; メッセージレポートの表示 &#x200B;] | メッセージレポートへの読み取りおよび編集アクセス。 |
+| [!DNL Messages] | [!UICONTROL &#x200B; メッセージの公開 &#x200B;] | メッセージを公開する機能 |
+| [!DNL Messages] | [!UICONTROL &#x200B; メッセージのプレビューとテストの管理 &#x200B;] | ポリシーが適用されたときにメッセージを承認および公開する機能。 |
+| [!DNL Privacy Service] | [!UICONTROL Privacy Serviceの管理 &#x200B;] | 読み取りおよび書き込みプライバシーワークフローへのアクセス。 |
+| [!DNL Privacy Service] | [!UICONTROL Privacy Serviceを表示 &#x200B;] | プライバシーワークフローへの読み取り専用アクセス |
 | [!DNL Profile Management] | [!UICONTROL プロファイルの管理] | 顧客プロファイルに使用するデータセットへの読み取り、作成、編集、削除アクセス使用可能なプロファイルへの読み取り専用アクセス |
 | [!DNL Profile Management] | [!UICONTROL プロファイルの表示] | 使用可能なプロファイルへの読み取り専用アクセス |
 | [!DNL Profile Management] | [!UICONTROL セグメントの管理] | オーディエンスへの読み取り、作成、編集、削除アクセス |
 | [!DNL Profile Management] | [!UICONTROL セグメントの表示] | 使用可能なオーディエンスへの読み取り専用アクセス。 |
 | [!DNL Profile Management] | [!UICONTROL 結合ポリシーの管理] | 結合ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Profile Management] | [!UICONTROL 結合ポリシーの表示] | 使用可能な結合ポリシーへの読み取り専用アクセス。 |
-| [!DNL Profile Management] | [!UICONTROL  オーディエンスのインポート ] | CSV アップロードワークフローを使用して、新しいオーディエンスを読み込む機能。 |
-| [!DNL Profile Management] | [!UICONTROL  オーディエンスセグメントを書き出し ] | 評価済みのオーディエンスをデータセットに書き出す機能。 |
+| [!DNL Profile Management] | [!UICONTROL &#x200B; オーディエンスのインポート &#x200B;] | CSV アップロードワークフローを使用して、新しいオーディエンスを読み込む機能。 |
+| [!DNL Profile Management] | [!UICONTROL &#x200B; オーディエンスセグメントを書き出し &#x200B;] | 評価済みのオーディエンスをデータセットに書き出す機能。 |
 | [!DNL Profile Management] | [!UICONTROL オーディエンスに対するセグメントの評価] | セグメント定義を評価して、オーディエンスのプロファイルを生成する機能。 |
-| [!DNL Profile Management] | [!UICONTROL B2B AI を表示 ] | すべての B2B AI/ML サービスの設定への読み取り専用アクセス。 |
-| [!DNL Profile Management] | [!UICONTROL B2B AI の管理 ] | すべての B2B AI/ML サービスの設定および設定の読み取り、作成、編集、削除へのアクセス。 |
-| [!DNL Profile Management] | [!UICONTROL B2B プロファイルの表示 ] | B2B エンティティプロファイル（アカウント、商談など）、すべての B2B AI/ML サービスの設定および設定、B2B ダッシュボードウィジェットへの読み取り専用アクセス。 |
-| [!DNL Profile Management] | [!UICONTROL B2B プロファイルの管理 ] | B2B エンティティプロファイル （アカウント、オポチュニティなど）の読み取り、作成、編集、および削除へのアクセス。 すべての B2B AI/ML サービスおよび B2B ダッシュボードウィジェットの設定と設定に対する読み取り専用アクセス。 |
-| [!DNL Profile Management] | [!UICONTROL  ルックアップの管理 ] | 類似オーディエンスを作成または削除できます。 |
-| [!DNL Profile Management] | [!UICONTROL B2B エクスペリエンスを表示 ] | B2B のプロファイルと属性を表示する機能。 |
-| [!DNL Profile Management] | [!UICONTROL  プロファイル設定の表示 ] | すべてのプロファイル設定への読み取り専用アクセス |
-| [!DNL Profile Management] | [!UICONTROL  プロファイル設定の管理 ] | すべてのプロファイル設定の読み取りおよび編集へのアクセス。 |
-| [!DNL Prospects] | [!UICONTROL  見込み客の表示 ] | 見込み客スキーマ、プロファイル、オーディエンス、見込み客アコーディオンへの読み取り専用アクセス。 |
-| [!DNL Prospects] | [!UICONTROL  見込み客の管理 ] | 見込み客スキーマ、プロファイル、オーディエンスを作成および管理する機能。 見込顧客アコーディオンへの読み取り専用アクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B AI を表示 &#x200B;] | すべての B2B AI/ML サービスの設定への読み取り専用アクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B AI の管理 &#x200B;] | すべての B2B AI/ML サービスの設定および設定の読み取り、作成、編集、削除へのアクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B プロファイルの表示 &#x200B;] | B2B エンティティプロファイル（アカウント、商談など）、すべての B2B AI/ML サービスの設定および設定、B2B ダッシュボードウィジェットへの読み取り専用アクセス。 |
+| [!DNL Profile Management] | [!UICONTROL B2B プロファイルの管理 &#x200B;] | B2B エンティティプロファイル （アカウント、オポチュニティなど）の読み取り、作成、編集、および削除へのアクセス。 すべての B2B AI/ML サービスおよび B2B ダッシュボードウィジェットの設定と設定に対する読み取り専用アクセス。 |
+| [!DNL Profile Management] | [!UICONTROL &#x200B; ルックアップの管理 &#x200B;] | 類似オーディエンスを作成または削除できます。 |
+| [!DNL Profile Management] | [!UICONTROL B2B エクスペリエンスを表示 &#x200B;] | B2B のプロファイルと属性を表示する機能。 |
+| [!DNL Profile Management] | [!UICONTROL &#x200B; プロファイル設定の表示 &#x200B;] | すべてのプロファイル設定への読み取り専用アクセス |
+| [!DNL Profile Management] | [!UICONTROL &#x200B; プロファイル設定の管理 &#x200B;] | すべてのプロファイル設定の読み取りおよび編集へのアクセス。 |
+| [!DNL Prospects] | [!UICONTROL &#x200B; 見込み客の表示 &#x200B;] | 見込み客スキーマ、プロファイル、オーディエンス、見込み客アコーディオンへの読み取り専用アクセス。 |
+| [!DNL Prospects] | [!UICONTROL &#x200B; 見込み客の管理 &#x200B;] | 見込み客スキーマ、プロファイル、オーディエンスを作成および管理する機能。 見込顧客アコーディオンへの読み取り専用アクセス。 |
 | [!DNL Query Service] | [!UICONTROL クエリの管理] | Experience Platform データの構造化 SQL クエリへの読み取り、作成、編集、および削除アクセス。 |
 | [!DNL Query Service] | [!UICONTROL クエリサービス統合の管理] | クエリサービスアクセスの有効期限が切れていない資格情報を作成、更新、削除するためのアクセス。 |
-| [!DNL Query Service] | [!UICONTROL  クエリセッションの管理 ] | 既存のセッションを削除できます。 |
-| [!DNL Query Service] | [!UICONTROL 許可リストの管理 ] | 組織の IP 制限を管理する機能。 |
-| [!DNL Reports] | [!UICONTROL  チャネルレポートの表示 ] | チャネルレポートの表示および変更機能。 |
+| [!DNL Query Service] | [!UICONTROL &#x200B; クエリセッションの管理 &#x200B;] | 既存のセッションを削除できます。 |
+| [!DNL Query Service] | [!UICONTROL 許可リストの管理 &#x200B;] | 組織の IP 制限を管理する機能。 |
+| [!DNL Reports] | [!UICONTROL &#x200B; チャネルレポートの表示 &#x200B;] | チャネルレポートの表示および変更機能。 |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの管理] | サンドボックスへの読み取り、作成、編集、削除アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの表示] | 組織に属するサンドボックスへの読み取り専用アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスのリセット] | サンドボックスをリセットする機能 |
-| [!DNL Sandbox Administration] | [!UICONTROL  パッケージの管理 ] | パッケージの作成、インポート、エクスポートへのアクセス。 |
-| [!DNL Sandbox Administration] | [!UICONTROL  パッケージの共有 ] | 異なる組織間でパッケージを共有するためのアクセス。 |
-| [!DNL Traits Configurations] | [!UICONTROL  特性を表示 ] | 特性への読み取り専用アクセス |
-| [!DNL Traits Configurations] | [!UICONTROL  特性の管理 ] | 特性を管理するためのアクセス権。 |
-| [!DNL Translation Service] | [!UICONTROL  翻訳プロジェクトの管理 ] | 翻訳プロジェクトを管理する機能 |
-| [!DNL Translation Service] | [!UICONTROL  翻訳プロジェクトの表示 ] | 翻訳プロジェクトへの読み取り専用アクセス |
-| [!DNL Translation Service] | [!UICONTROL  翻訳タスクの管理 ] | 翻訳タスクを管理する機能 |
-| [!DNL Translation Service] | [!UICONTROL  翻訳タスクの表示 ] | 翻訳タスクへの読み取り専用アクセス |
-| [!DNL Translation Service] | [!UICONTROL  翻訳レビューの管理 ] | 翻訳レビューを管理する機能。 |
-| [!DNL Translation Service] | [!UICONTROL  翻訳のレビューの表示 ] | 翻訳レビューへの読み取り専用アクセス |
-| [!DNL Translation Service] | [!UICONTROL  翻訳を社内で管理 ] | 翻訳を社内で管理する機能。 |
-| [!DNL Translation Service] | [!UICONTROL  翻訳を社内で表示 ] | 社内翻訳への読み取り専用アクセス |
-| [!DNL Translation Service] | [!UICONTROL  翻訳設定の管理 ] | 管理者が翻訳設定を管理する機能。 |
-| [!DNL Translation Service] | [!UICONTROL  翻訳プロバイダーの管理 ] | 翻訳プロバイダーを管理する機能 |
+| [!DNL Sandbox Administration] | [!UICONTROL &#x200B; パッケージの管理 &#x200B;] | パッケージの作成、インポート、エクスポートへのアクセス。 |
+| [!DNL Sandbox Administration] | [!UICONTROL &#x200B; パッケージの共有 &#x200B;] | 異なる組織間でパッケージを共有するためのアクセス。 |
+| [!DNL Traits Configurations] | [!UICONTROL &#x200B; 特性を表示 &#x200B;] | 特性への読み取り専用アクセス |
+| [!DNL Traits Configurations] | [!UICONTROL &#x200B; 特性の管理 &#x200B;] | 特性を管理するためのアクセス権。 |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳プロジェクトの管理 &#x200B;] | 翻訳プロジェクトを管理する機能 |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳プロジェクトの表示 &#x200B;] | 翻訳プロジェクトへの読み取り専用アクセス |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳タスクの管理 &#x200B;] | 翻訳タスクを管理する機能 |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳タスクの表示 &#x200B;] | 翻訳タスクへの読み取り専用アクセス |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳レビューの管理 &#x200B;] | 翻訳レビューを管理する機能。 |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳のレビューの表示 &#x200B;] | 翻訳レビューへの読み取り専用アクセス |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳を社内で管理 &#x200B;] | 翻訳を社内で管理する機能。 |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳を社内で表示 &#x200B;] | 社内翻訳への読み取り専用アクセス |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳設定の管理 &#x200B;] | 管理者が翻訳設定を管理する機能。 |
+| [!DNL Translation Service] | [!UICONTROL &#x200B; 翻訳プロバイダーの管理 &#x200B;] | 翻訳プロバイダーを管理する機能 |
 
 ## 次の手順
 

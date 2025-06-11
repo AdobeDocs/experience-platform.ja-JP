@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [query pro mode](./overview.md#query-pro-mode) を使用して [ カスタムinsight](./overview.md) を作成したら、グラフデータをPDF形式で書き出すことができます。 このアクションは、カスタムダッシュボードの概要から取得されます。
 
-ダッシュボードワークスペースで、「[!UICONTROL  参照 ] タブにリストされているインベントリからカスタムダッシュボードを選択します。
+ダッシュボードワークスペースで、「[!UICONTROL &#x200B; 参照 &#x200B;] タブにリストされているインベントリからカスタムダッシュボードを選択します。
 
 ![ カスタムダッシュボードエントリがハイライト表示されたダッシュボードインベントリ。](../images/sql-insights-query-pro-mode/dashboard-inventory-audience.png)
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->ビジュアライゼーションのみのエクスポートでは、[!UICONTROL  ダッシュボードデータのエクスポート ] 権限は必要ありません。 詳しくは、[[!UICONTROL  詳細を表示 ] ドキュメント ](./view-more.md#export) を参照してください。
+>ビジュアライゼーションのみのエクスポートでは、[!UICONTROL &#x200B; ダッシュボードデータのエクスポート &#x200B;] 権限は必要ありません。 詳しくは、[[!UICONTROL &#x200B; 詳細を表示 &#x200B;] ドキュメント ](./view-more.md#export) を参照してください。
 
 ![ 書き出しがハイライト表示されたカスタムダッシュボード。](../images/sql-insights-query-pro-mode/export.png)
 
