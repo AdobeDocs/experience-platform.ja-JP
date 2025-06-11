@@ -5,10 +5,10 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードを使用して、Experience Platform でデータを視覚化する方法について説明します。
 feature: Dashboards
 role: Developer,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3582ce4f73887f03bbb9da72f96aab1be9b99614
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 65%
+ht-degree: 64%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 65%
 * [ダッシュボードインベントリ](inventory.md)
 * [標準ダッシュボード](standard-dashboards.md)
 * [ダッシュボードを PDF にダウンロード](download.md)
-* SQL インサイト：クエリのプロ モード {#sql-insights-query-pro-mode}
+* SQL インサイト：クエリ pro モード {#sql-insights-query-pro-mode}
    * [概要](sql-insights-query-pro-mode/overview.md)
    * Data Distiller テンプレート {#templates}
       * [概要](sql-insights-query-pro-mode/templates/overview.md)
@@ -34,7 +34,7 @@ ht-degree: 65%
    * [ドリルスルー](sql-insights-query-pro-mode/drill-through.md)
    * [さらに表示](sql-insights-query-pro-mode/view-more.md)
    * [SQL を表示](sql-insights-query-pro-mode/view-sql.md)
-   * [CSV としてダウンロード](sql-insights-query-pro-mode/download-csv.md)
+   * [CSV として書き出し](sql-insights-query-pro-mode/download-csv.md)
    * [PDFとしてエクスポート](sql-insights-query-pro-mode/export-pdf.md)
 * 使用可能なダッシュボード {#guides}
    * [プロファイル](guides/profiles.md)
@@ -42,7 +42,7 @@ ht-degree: 65%
    * [オーディエンス](guides/audiences.md)
    * [宛先](guides/destinations.md)
    * [ライセンス使用状況](guides/license-usage.md)
-* Available Insights {#insights}
+* 利用可能なインサイト {#insights}
    * [プロファイル](insights/profiles.md)
    * [オーディエンス](insights/audiences.md)
    * [宛先](insights/destinations.md)
@@ -54,9 +54,9 @@ ht-degree: 65%
    * [標準ウィジェット](customize/standard-widgets.md)
    * [カスタムウィジェット](customize/custom-widgets.md)
    * [スキーマの編集](customize/edit-schema.md)
-* のインサイトのユースケー {#insights-use-cases}
+* インサイトのユースケース {#insights-use-cases}
    * [同意分析](insights-use-cases/consent-analysis.md)
-* で使用可能なデータモデ {#data-models}
+* 使用可能なデータモデル {#data-models}
    * [Real-Time Customer Data Platform Insights データモデル B2B edition](data-models/cdp-insights-data-model-b2b.md)
    * [Real-Time Customer Data Platform Insights データモデル B2C エディション](data-models/cdp-insights-data-model-b2c.md)
 * アプリケーションの統合 {#integrations}
