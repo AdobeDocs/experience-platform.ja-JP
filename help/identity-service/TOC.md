@@ -5,10 +5,10 @@ breadcrumb-title: Experience Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 feature: Identities
 role: Admin,Developer
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 71%
+source-wordcount: '144'
+ht-degree: 73%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 71%
       - [機能の概要](./identity-graph-linking-rules/overview.md)
       - [ID 最適化アルゴリズム](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [ID グラフリンクルールの実装ガイド](./identity-graph-linking-rules/implementation-guide.md)
-      - [グラフ設定の例](./identity-graph-linking-rules/example-configurations.md)
+      - [設定ガイド](./identity-graph-linking-rules/example-configurations.md)
       - [ID グラフリンクルールのトラブルシューティング](./identity-graph-linking-rules/troubleshooting.md)
       - [名前空間の優先度](./identity-graph-linking-rules/namespace-priority.md)
       - [グラフシミュレーション UI](./identity-graph-linking-rules/graph-simulation.md)

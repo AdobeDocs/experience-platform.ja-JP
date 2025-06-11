@@ -1,15 +1,17 @@
 ---
-title: グラフ設定の例
-description: ID グラフリンクルールと ID データを使用する際に発生する可能性のある一般的なグラフシナリオについて説明します。
+title: Id グラフリンクルール設定ガイド
+description: ID グラフリンクルールを使用して設定できる様々な実装タイプについて説明します。
+hide: true
+hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cd9104e253cda4ce9a004f7931b9c38907874941
+source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
 workflow-type: tm+mt
-source-wordcount: '3316'
-ht-degree: 6%
+source-wordcount: '1934'
+ht-degree: 8%
 
 ---
 
-# グラフ設定の例 {#examples-of-graph-configurations}
+# [!DNL Identity Graph Linking Rules] 設定ガイド {#configurations-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
@@ -21,740 +23,547 @@ ht-degree: 6%
 >* 「CRMID」と「loginID」は、カスタム名前空間です。 このドキュメントでは、「CRMID」はユーザー識別子で、「loginID」は特定のユーザーに関連付けられたログイン識別子です。
 >* このドキュメントで概要を説明するグラフシナリオの例をシミュレートするには、まず 2 つのカスタム名前空間を作成する必要があります。1 つは ID シンボル「CRMID」、もう 1 つは ID シンボル「loginID」です。 ID 記号では大文字と小文字が区別されます。
 
-このドキュメントでは、[!DNL Identity Graph Linking Rules] および ID データを使用する際に発生する可能性のある、一般的なシナリオのグラフ設定例について説明します。
+[!DNL Identity Graph Linking Rules] を使用して設定できる様々な実装タイプについては、このドキュメントを参照してください。
 
-## CRMID のみ
+顧客グラフシナリオは、3 つの異なるカテゴリにグループ化できます。
 
-これは、オンラインイベント（CRMID および ECID）が取り込まれ、オフラインイベント（プロファイルレコード）が CRMID に対してのみ保存される、シンプルな実装シナリオの例です。
+* **基本**: [ 基本実装 ](#basic-implementations) には、ほとんどの場合が単純な実装を含むグラフが含まれています。 これらの実装は、単一のクロスデバイス名前空間（CRMID など）を中心に展開される傾向があります。 基本的な実装はかなり簡単ですが、多くの場合、（共有デバイス **シナリオが原因で、グラフが折りたたまれ** ことがあります。
+* **中間**:[ 中間実装 ](#intermediate-implementations) には、**複数のクロスデバイス名前空間**、**一意でない ID**、**複数の一意の名前空間** など、複数の変数が含まれます。
+* **詳細**: [ 高度な実装 ](#advanced-implementations) には、複雑な多層グラフシナリオが含まれます。 高度な実装では、適切なリンクを確実に削除してグラフの折りたたみを防ぐために、正しい名前空間の優先順位を確立することが不可欠です。
 
-**実装：**
+## 基本を学ぶ
 
-| 使用されている名前空間 | Web 行動収集方法 |
-| --- | --- |
-| CRMID、ECID | Web SDK |
+次のドキュメントに進む前に、ID サービスと [!DNL Identity Graph Linking Rules] ークフローのいくつかの重要な概念を理解していることを確認してください。
 
-**イベント：**
+* [ID サービスの概要](../home.md)
+* [[!DNL Identity Graph Linking Rules] の概要](../identity-graph-linking-rules/namespace-priority.md)
+* [名前空間の優先度](namespace-priority.md)
+* [一意の名前空間](overview.md#unique-namespace)
+* [グラフシミュレーション](graph-simulation.md)
 
-次のイベントをテキストモードにコピーすると、グラフシミュレーションでこのシナリオを作成できます。
+## 基本的な実装 {#basic-implementations}
 
-```shell
-CRMID: Tom, ECID: 111
+[!DNL Identity Graph Linking Rules] の基本的な実装については、この節をお読みください。
+
+### ユースケース：1 つのクロスデバイス名前空間を使用するシンプルな実装
+
+通常、Adobeのお客様は、Web、モバイル、アプリケーションを含むすべてのプロパティで使用される 1 つのクロスデバイス名前空間を持っています。 小売、通信、金融サービスの顧客がこのタイプの実装を使用するので、このシステムは業界と地理的に無関係です。
+
+通常、エンドユーザーはクロスデバイス名前空間（多くの場合、CRMID）で表されるので、CRMID は一意の名前空間として分類する必要があります。 コンピューターと [!DNL iPhone] を所有し、デバイスを共有していないエンドユーザーは、次のような ID グラフを持つことができます。
+
+例えば、**ACME** という e コマース会社のデータアーキテクトの場合を考えてみます。 ジョンとジェーンは君の顧客だ。 カリフォルニア州サンノゼに共同生活を送るエンドユーザーです。 デスクトップコンピューターを共有し、このコンピューターを使用して web サイトを参照します。 同様に、John と Jane も [!DNL iPad] を共有し、この [!DNL iPad] を使用して web サイトを含むインターネットを参照することがあります。
+
+**テキストモード**
+
+```json
+CRMID: John, ECID: 123
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**アルゴリズム設定：**
+**アルゴリズム設定（ID 設定）**
 
-アルゴリズム設定に次の設定を行うことで、グラフシミュレーションでこのシナリオを作成できます。
+グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 優先度 | 表示名 | ID タイプ | グラフごとに一意 |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | ○ |
-| 2 | ECID | COOKIE | × |
+| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| ECID | ECID | COOKIE | | 2 |
+| IDFA | IDFA | デバイス | | 3 |
 
-**リアルタイムプライマリプロファイル用の顧客 ID の選択：**
+**シミュレーショングラフ**
 
-この設定のコンテキスト内で、プライマリ ID は次のように定義されます。
++++選択してシミュレーショングラフを表示
 
-| 認証ステータス | イベントの名前空間 | プライマリ ID |
-| --- | --- | --- |
-| Authenticated | CRMID、ECID | CRMID |
-| 未認証 | ECID | ECID |
+このグラフでは、John （エンドユーザー）は CRMID で表されています。 {ECID: 123} は、John が e コマースプラットフォームにアクセスするためにパソコンで使用した web ブラウザーを表します。 {ECID: 999} は [!DNL iPhone] で使用したブラウザーを表し、{IDFA: a-b-c} は [!DNL iPhone] を表します。
 
-**グラフの例**
+![1 つのクロスデバイス名前空間を持つシンプルな実装…](../images/configs/basic/simple-implementation.png)
+
++++
+
+### 演習
+
+グラフシミュレーションで次の設定をシミュレートします。 独自のイベントを作成するか、テキストモードを使用してコピーして貼り付けることができます。
 
 >[!BEGINTABS]
 
->[!TAB  理想的な一人称グラフ ]
+>[!TAB  共有デバイス（PC） ]
 
-以下は、CRMID が一意で最も優先度が高い、理想的な単一人物グラフの例です。
+**共有デバイス（PC）**
 
-![CRMID が一意で優先順位が最も高い、理想的な一人称グラフのシミュレート例。](../images/graph-examples/crmid_only_single.png "CRMID が一意で優先順位が最も高い、理想的な一人称グラフのシミュレート例。"){zoomable="yes"}
+**テキストモード：**
 
->[!TAB  複数人グラフ ]
-
-次に、複数人グラフの例を示します。 この例では、「共有デバイス」シナリオが表示されます。このシナリオでは、2 つの CRMID があり、古い確立済みリンクを持つ CRMID が削除されます。
-
-![ 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。](../images/graph-examples/crmid_only_multi.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
+
+**シミュレーショングラフ**
+
++++選択してシミュレーショングラフを表示
+
+このグラフでは、John と Jane は、それぞれ独自の CRMID で表されています。
+
+* {CRMID: John}
+* {CRMID: Jane}
+
+両方のユーザーが e コマースプラットフォームへのアクセスに使用するデスクトップコンピューター上のブラウザーは、{ECID: 111} で表されます。 このグラフシナリオでは、Jane は最後に認証されたエンドユーザーなので、{ECID:111} と {CRMID: John} の間のリンクは削除されます。
+
+![ 共有デバイス（PC）のシミュレーショングラフ。](../images/configs/basic/shared-device-pc.png)
+
++++
+
+>[!TAB  共有デバイス （モバイル） ]
+
+**共有デバイス （モバイル）**
+
+**テキストモード：**
+
+```json
+CRMID: John, ECID: 111, IDFA: a-b-c
+CRMID: Jane, ECID: 111, IDFA: a-b-c
+```
+
+**シミュレーショングラフ**
+
++++選択してシミュレーショングラフを表示
+
+このグラフでは、John と Jane の両方がそれぞれの CRMID で表されています。 ユーザーが使用するブラウザーは {ECID: 111} で表され、ユーザーが共有する [!DNL iPad] は {IDFA: a-b-c} で表されます。 このグラフシナリオでは、Jane は最後に認証されたエンドユーザーなので、{ECID:111} および {IDFA: a-b-c} から {CRMID: John} へのリンクは削除されます。
+
+![ 共有デバイス（モバイル）のシミュレーショングラフ。](../images/configs/basic/shared-device-mobile.png)
+
++++
 
 >[!ENDTABS]
 
-## ハッシュ化されたメールを使用した CRMID
+## 中間実装 {#intermediate-implementations}
 
-このシナリオでは、CRMID が取り込まれ、オンライン（エクスペリエンスイベント）とオフライン（プロファイルレコード）の両方のデータを表します。 このシナリオでは、ハッシュ化されたメールの取り込みも必要となります。これは、CRM レコードデータセット内で CRMID と共に送信される別の名前空間を表しています。
+[!DNL Identity Graph Linking Rules] の中間実装については、この節を参照してください。
 
->[!IMPORTANT]
+### ユースケース：データに一意でない ID が含まれる
+
+>[!TIP]
 >
->**CRMID が常にすべてのユーザーに送信されることが重要です**。 これを怠ると、ログイン ID が「ダングリング」するシナリオが発生する可能性があります。このシナリオでは、1 人のユーザーエンティティが他のユーザーとデバイスを共有していると見なされます。
+>* **一意でない ID** は、一意でない名前空間に関連付けられた ID です。
+>
+>* 以下の例では、`CChash` は、ハッシュ化されたクレジットカード番号を表すカスタム名前空間です。
 
-**実装：**
+クレジットカードを発行する商業銀行で働くデータアーキテクト。 マーケティングチームが、過去のクレジットカードのトランザクション履歴をプロファイルに含める必要があることを示しました。 この ID グラフは次のようになります。
 
-| 使用されている名前空間 | Web 行動収集方法 |
-| --- | --- |
-| CRMID、Email_LC_SHA256、ECID | Web SDK |
+**テキストモード：**
 
-**イベント：**
-
-次のイベントをテキストモードにコピーすると、グラフシミュレーションでこのシナリオを作成できます。
-
-```shell
-CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
-CRMID: Summer, ECID: 222
+```json
+CRMID: John, CChash: 1111-2222 
+CRMID: John, CChash: 3333-4444 
+CRMID: John, ECID: 123 
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**アルゴリズム設定：**
+**アルゴリズム設定（ID 設定）**
 
-アルゴリズム設定に次の設定を行うことで、グラフシミュレーションでこのシナリオを作成できます。
+グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 優先度 | 表示名 | ID タイプ | グラフごとに一意 |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | ○ |
-| 2 | メール（SHA256、小文字） | メール | × |
-| 3 | ECID | COOKIE | × |
+| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| CChash | CChash | CROSS_DEVICE | | 2 |
+| ECID | ECID | COOKIE | | 3 |
+| IDFA | IDFA | デバイス | | 4 |
 
-**プロファイル** のプライマリ ID の選択
+**シミュレーショングラフ**
 
-この設定のコンテキスト内で、プライマリ ID は次のように定義されます。
++++選択してシミュレーショングラフを表示
 
-| 認証ステータス | イベントの名前空間 | プライマリ ID |
-| --- | --- | --- |
-| Authenticated | CRMID、ECID | CRMID |
-| 未認証 | ECID | ECID |
+![ シミュレーショングラフの画像 ](../images/configs/basic/simple-implementation-non-unique.png)
 
-**グラフの例**
++++
+
+これらのクレジットカード番号や、その他の一意でない名前空間が、常に 1 人のエンドユーザーに関連付けられるとは保証されません。 2 人のエンドユーザーが同じクレジットカードに登録すると、一意でないプレースホルダー値が誤って取り込まれる場合があります。 簡単に言えば、一意でない名前空間がグラフの折りたたみを引き起こさない保証はありません。
+
+この問題を解決するために、ID サービスは最も古いリンクを削除し、最新のリンクを保持します。 これにより、グラフに CRMID が 1 つだけあるので、グラフが折りたたまれるのを防ぐことができます。
+
+### 演習
+
+グラフシミュレーションで次の設定をシミュレートします。 独自のイベントを作成するか、テキストモードを使用してコピーして貼り付けることができます。
 
 >[!BEGINTABS]
 
->[!TAB  理想的な一人称グラフ ]
+>[!TAB  同じクレジットカードを持つ 2 人のエンドユーザー ]
 
-以下は、理想的な 1 人の人物のグラフのペアの例です。ここでは、各 CRMID が、ハッシュ化された電子メール名前空間と ECID にそれぞれ関連付けられています。
+2 人の異なるエンドユーザーが、同じクレジットカードを使用して e コマース web サイトに新規登録します。 マーケティングチームは、クレジットカードが 1 つのプロファイルにのみ関連付けられるようにすることで、グラフが折りたたまれないようにします。
 
-![ この例では、2 つの別個のグラフが生成され、それぞれが 1 人の人物エンティティを表します。](../images/graph-examples/crmid_hashed_single.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
+**テキストモード：**
 
->[!TAB  複数人グラフ：共有デバイス ]
-
-次に、デバイスが 2 人のユーザーで共有される、複数担当者グラフのシナリオの例を示します。
-
-![ この例では、Tom と Summer の両方が同じ ECID に関連付けられているので、シミュレーショングラフに「共有デバイス」のシナリオが表示されます。](../images/graph-examples/crmid_hashed_shared_device.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 1111-2222
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:456
 ```
 
->[!TAB  複数人グラフ：一意でないメール ]
+**シミュレーショングラフ**
 
-次に、メールが一意ではなく、2 つの異なる CRMID に関連付けられている複数人グラフシナリオの例を示します。
++++選択してシミュレーショングラフを表示
 
-![ このシナリオは、「共有デバイス」シナリオに似ています。 ただし、人物エンティティで ECID を共有する代わりに、同じメールアカウントに関連付けられます。 「複数人グラフのシミュレート例。 この例は、2 つの CRMID があり、古い確立済みリンクが削除される共有デバイスのシナリオを示しています。」 ](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
+![2 人のエンドユーザーが同じクレジットカードで新規登録するグラフ。](../images/configs/intermediate/graph-with-same-credit-card.png)
 
-**グラフシミュレーションイベント入力**
++++
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+>[!TAB  クレジットカード番号が無効です ]
+
+データがクリーンではないので、無効なクレジットカード番号がExperience Platformに取り込まれます。
+
+**テキストモード：**
+
+```json
+CRMID: John, CChash: undefined
+CRMID: Jane, CChash: undefined
+CRMID: Jack, CChash: undefined
+CRMID: Jill, CChash: undefined
 ```
+
+**シミュレーショングラフ**
+
++++選択してシミュレーショングラフを表示
+
+![ ハッシュの問題により無効なクレジットカードが発生するグラフ。](../images/configs/intermediate/graph-with-invalid-credit-card.png)
+
++++
 
 >[!ENDTABS]
 
-## ハッシュ化されたメール、ハッシュ化された電話、GAID および IDFA を使用した CRMID
+### ユースケース：データには、ハッシュ化された CRMID とハッシュ化されていない CRMID の両方が含まれます
 
-このシナリオは前のシナリオと似ています。 ただし、このシナリオでは、ハッシュ化されたメールと電話は、[[!DNL Segment Match]](../../segmentation/ui/segment-match/overview.md) で利用する ID としてマークされます。
+は、ハッシュ化されていない（オフラインの） CRMID とハッシュ化された（オンラインの） CRMID の両方を取り込んでいます。 ハッシュ化されていない CRMID とハッシュ化された CRMID の両方の間に直接の関係があることを期待しています。 認証済みアカウントを使用してエンドユーザーが閲覧すると、ハッシュ化された CRMID がデバイス ID と共に送信されます（ID サービスで ECID として表されます）。
 
->[!IMPORTANT]
->
->**CRMID が常にすべてのユーザーに送信されることが重要です**。 これを怠ると、ログイン ID が「ダングリング」するシナリオが発生する可能性があります。このシナリオでは、1 人のユーザーエンティティが他のユーザーとデバイスを共有していると見なされます。
+**アルゴリズム設定（ID 設定）**
 
-**実装：**
+グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 使用されている名前空間 | Web 行動収集方法 |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, GAID, IDFA, ECID | Web SDK |
+| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| --- | --- | --- | --- | --- | 
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**イベント：**
 
-次のイベントをテキストモードにコピーすると、グラフシミュレーションでこのシナリオを作成できます。
+**演習**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-```
-
-**アルゴリズム設定：**
-
-アルゴリズム設定に次の設定を行うことで、グラフシミュレーションでこのシナリオを作成できます。
-
-| 優先度 | 表示名 | ID タイプ | グラフごとに一意 |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | ○ |
-| 2 | メール（SHA256、小文字） | メール | × |
-| 3 | 電話（SHA256） | Phone | × |
-| 4 | Google広告 ID （GAID） | デバイス | × |
-| 5 | Apple IDFA （Appleの ID） | デバイス | × |
-| 6 | ECID | COOKIE | × |
-
-**プロファイル** のプライマリ ID の選択
-
-この設定のコンテキスト内で、プライマリ ID は次のように定義されます。
-
-| 認証ステータス | イベントの名前空間 | プライマリ ID |
-| --- | --- | --- |
-| Authenticated | CRMID、IDFA、ECID | CRMID |
-| Authenticated | CRMID、GAID、ECID | CRMID |
-| Authenticated | CRMID、ECID | CRMID |
-| 未認証 | GAID、ECID | GAID |
-| 未認証 | IDFA、ECID | IDFA |
-| 未認証 | ECID | ECID |
-
-**グラフの例**
+グラフシミュレーションで次の設定をシミュレートします。 独自のイベントを作成するか、テキストモードを使用してコピーして貼り付けることができます。
 
 >[!BEGINTABS]
 
->[!TAB  理想的な一人称グラフ ]
+>[!TAB  シナリオ 1：共有デバイス ]
 
-次に、ハッシュ化されたメールとハッシュ化された電話が [!DNL Segment Match] で使用する ID としてマークされる、理想的な一人称グラフシナリオを示します。 このシナリオでは、グラフは 2 つに分割され、異なる人物エンティティを表します。
+ジョンとジェーンはデバイスを共有している。
 
-![ 理想的な一人称グラフシナリオ。](../images/graph-examples/crmid_hashed_single_seg_match.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
+**テキストモード：**
 
->[!TAB  複数人グラフ：共有デバイス、共有コンピューター ]
-
-次に、デバイス（コンピューター）が 2 人で共有される複数人のグラフシナリオを示します。 このシナリオでは、共有コンピューターは `{ECID: 111}` によって表され、`{CRMID: Summer}` にリンクされます。これは、そのリンクが最も新しく確立されたリンクであるためです。 `{CRMID: Tom}` と `{ECID: 111}` の間のリンクが古く、CRMID がこの設定で指定された一意の名前空間であるため、`{CRMID: Tom}` が削除されました。
-
-![2 人のユーザーが 1 台のコンピューターを共有している、複数人のグラフシナリオ。](../images/graph-examples/shared_device_shared_computer.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CRMIDhash: John
+CRMID: Jane, CRMIDhash: Jane
+CRMIDhash: John, ECID: 111 
+CRMIDhash: Jane, ECID: 111
 ```
 
->[!TAB  複数人グラフ：共有デバイス、Android モバイルデバイス ]
+![ プレースホルダー ](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
-次に、Android デバイスが 2 人で共有される複数人のグラフシナリオを示します。 このシナリオでは、CRMID は一意の名前空間として設定されるので、`{CRMID: Tom, GAID: B-B-B, ECID:444}` の新しいリンクが古いリンクに置き換わ `{CRMID: Summer, GAID: B-B-B, ECID:444}` ます。
+>[!TAB  シナリオ 2：無効なデータ ]
 
-![2 人のユーザーが Android モバイルデバイスを共有している複数人グラフシナリオ。](../images/graph-examples/shared_device_android.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
+ハッシュプロセスのエラーにより、一意でないハッシュ化された CRMID が生成され、ID サービスに送信されます。
 
-**グラフシミュレーションイベント入力**
+**テキストモード：**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Tom, ECID: 444, GAID: B-B-B
+```json
+CRMID: John, CRMIDhash: aaaa
+CRMID: Jane, CRMIDhash: aaaa
 ```
 
->[!TAB  複数人グラフ：共有デバイス、apple モバイルデバイス、ECID のリセットなし ]
+![ ハッシュプロセスでエラーが発生し、一意でないハッシュ化された CRMID が発生した共有デバイスグラフ。](../images/configs/intermediate/hashing-error.png)
 
-次に、Apple デバイスが 2 人のユーザーで共有される複数人のグラフのシナリオを示します。 このシナリオでは、IDFA は共有されますが、ECID はリセットされません。
+>[!ENDTABS]
+<!-- 
+### Use case: You are using Real-Time CDP and Adobe Commerce
 
-![2 人のユーザーがApple モバイルデバイスを共有している、複数ユーザーのグラフシナリオ。](../images/graph-examples/shared_device_apple_no_reset.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
+You have two types of end-users:
 
-**グラフシミュレーションイベント入力**
+* **Members**: An end-user who is assigned a CRMID and has an email account registered to your system.
+* **Guests**: An end-user who is not a member. They do not have an assigned CRMID and their email accounts are not registered to your system.
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 222, IDFA: A-A-A
+In this scenario, your customers are sending data from Adobe Commerce to Real-Time CDP.
+
+**Exercise**
+
+Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device between two members]
+
+In this scenario, two members share the same device to browse an e-commerce website.
+
+**Text mode**
+
+```json
+CRMID: John, Email: john@g
+CRMID: Jane, Email: jane@g
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB  複数人グラフ：共有デバイス、apple、ECID のリセット ]
+![A graph that displays two authenticated members who share a device.](../images/configs/intermediate/shared-device-two-members.png)
 
-次に、Apple デバイスが 2 人のユーザーで共有される複数人のグラフのシナリオを示します。 このシナリオでは、ECID はリセットされますが、IDFA は同じままです。
+>[!TAB Shared device between two guests]
 
-![2 人のユーザーがApple モバイルデバイスを共有しているが、ECID がリセットされている複数人グラフのシナリオ。](../images/graph-examples/shared_device_apple_with_reset.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
+In this scenario, two guests share the same device to browse an e-commerce website.
 
-**グラフシミュレーションイベント入力**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 555, IDFA: A-A-A
+```json
+Email: john@g, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
->[!TAB  複数人グラフ：一意でない電話 ]
+![A graph that displays two guests who share a device.](../images/configs/intermediate/shared-device-two-guests.png)
 
-次に、同じ電話番号が 2 人の人物によって共有されている、複数の人物のグラフのシナリオを示します。
+>[!TAB Shared device between a member and a guest]
 
-![ 電話の名前空間が一意でない複数人のグラフシナリオ。](../images/graph-examples/non_unique_phone.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
+In this scenario, a member and a guest share the same device to browse an e-commerce website.
 
-**グラフシミュレーションイベント入力**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Phone_SHA256: 123-4567
+```json
+CRMID: John, Email: john@g
+CRMID: John, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
-この例では、`{Phone_SHA256}` も一意の名前空間としてマークされます。 したがって、1 つのグラフに `{Phone_SHA256}` 名前空間を持つ複数の ID を含めることはできません。 このシナリオでは、`{Phone_SHA256: 765-4321}` は古いリンクであるため、`{CRMID: Summer}` および `{Email_LC_SHA256: ddeeff}` からリンク解除されます。
+![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
-![Phone_SHA256 が一意である複数人グラフのシナリオ。](../images/graph-examples/unique_phone.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
+>[!ENDTABS] -->
 
->[!TAB  複数人グラフ：一意でないメール ]
+### ユースケース：データには、3 つの一意の名前空間が含まれます
 
-次に、メールが 2 人で共有される複数人のグラフシナリオを示します。
+顧客は、次のように単一人物エンティティを定義します。
 
-![ メールが一意でない複数人グラフのシナリオ ](../images/graph-examples/non_unique_email.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
+* CRMID が割り当てられているエンドユーザー。
+* プロファイルをハッシュ化されたメールをサポートする宛先（例：[!DNL Facebook]）にアクティブ化できるように、ハッシュ化されたメールアドレスに関連付けられているエンドユーザー。
+* サポート担当者がメールアドレスを使用してReal-Time CDP上でプロファイルを検索できるように、メールアドレスに関連付けられたエンドユーザー。
 
-**グラフシミュレーションイベント入力**
+| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| 電子メール | 電子メール | 電子メール | ✔️ | 2 |
+| Email_LC_SHA256 | Email_LC_SHA256 | メール | ✔️ | 3 |
+| ECID | ECID | COOKIE | | 4 |
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Email_LC_SHA256: aabbcc
+グラフシミュレーションツールで次の設定をシミュレートします。 独自のイベントを作成するか、テキストモードを使用してコピーして貼り付けることができます。
+
+>[!BEGINTABS]
+
+>[!TAB 2 人のエンドユーザーがログイン ]
+
+このシナリオでは、John と Jane の両方が e コマース web サイトにログインします。
+
+**テキストモード**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash 
+CRMID: Jane, Email: jane@g, Email_LC_SHA256: jane_hash 
+CRMID: John, ECID: 111 
+CRMID: Jane, ECID: 111
 ```
+
+![ 同じデバイスを使用して web サイトにログインした 2 人のエンドユーザーを表示するグラフ。](../images/configs/intermediate/two-end-users-log-ing.png)
+
+>[!TAB  エンドユーザーがメールを変更した場合 ]
+
+**テキストモード**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
+CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
+```
+
+![ メールを変更したエンドユーザーを表示するグラフ。](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
-## 複数のログイン ID を持つ単一の CRMID （シンプルバージョン）
+## 高度な実装 {#advanced-implementations}
 
-このシナリオでは、人物エンティティを表す CRMID が 1 つあります。 ただし、1 つの個人エンティティに複数のログイン識別子を設定できます。
+高度な実装には、複雑で複数のレイヤーを持つグラフシナリオが含まれます。 これらのタイプの実装には、グラフの折りたたみを防ぐために削除する必要がある正しいリンクを識別するための **名前空間優先度** の使用が含まれます。
 
-* 特定の人物エンティティは、異なるアカウントアカウントタイプを持つことができます（個人とビジネス、州によるアカウント、ブランドによるアカウントなど）。
-* 特定のユーザーエンティティは、任意の数のアカウントに対して異なるメールアドレスを使用できます。
+**名前空間の優先度** は、名前空間を重要度別にランク付けするメタデータです。 グラフに 2 つの ID が含まれ、それぞれが異なる一意の名前空間を持つ場合、ID サービスは名前空間の優先度を使用して、削除するリンクを決定します。 詳しくは、[ 名前空間の優先度に関するドキュメント ](../identity-graph-linking-rules/namespace-priority.md) を参照してください。
 
->[!IMPORTANT]
->
->**CRMID が常にすべてのユーザーに送信されることが重要です**。 これを怠ると、ログイン ID が「ダングリング」するシナリオが発生する可能性があります。このシナリオでは、1 人のユーザーエンティティが他のユーザーとデバイスを共有していると見なされます。
+名前空間の優先度は、複雑なグラフシナリオで重要な役割を果たします。 グラフには複数のレイヤーを含めることができます。1 人のエンドユーザーを複数のログイン ID に関連付けて、これらのログイン ID をハッシュ化することもできます。 さらに、別の ECID を別のログイン ID にリンクすることもできます。 適切なレイヤーの適切なリンクが削除されるようにするには、名前空間の優先度の設定を正しく設定する必要があります。
 
-**実装：**
+[!DNL Identity Graph Linking Rules] の高度な実装については、この節を参照してください。
 
-| 使用されている名前空間 | Web 行動収集方法 |
-| --- | --- |
-| CRMID、loginID、ECID | Web SDK |
+### 使用例：複数の事業部門のサポートが必要な場合
 
-**イベント：**
+エンドユーザーは、個人用アカウントとビジネスアカウントという 2 つの異なるアカウントを持っています。 各アカウントは、異なる ID で識別されます。 このシナリオでは、一般的なグラフは次のようになります。
 
-次のイベントをテキストモードにコピーすると、グラフシミュレーションでこのシナリオを作成できます。
+**テキストモード***
 
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JohnPersonal, ECID: 222
+loginID: JohnBusiness, ECID: 222
 ```
 
-**アルゴリズム設定：**
+**アルゴリズム設定（ID 設定）**
 
-アルゴリズム設定に次の設定を行うことで、グラフシミュレーションでこのシナリオを作成できます。
+グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 優先度 | 表示名 | ID タイプ | グラフごとに一意 |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | ○ |
-| 2 | loginID | CROSS_DEVICE | × |
-| 3 | ECID | COOKIE | × |
+| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| loginID | loginID | CROSS_DEVICE | | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**プロファイル** のプライマリ ID の選択
+**シミュレーショングラフ**
 
-この設定のコンテキスト内で、プライマリ ID は次のように定義されます。
++++選択してシミュレーショングラフを表示
 
-| 認証ステータス | イベントの名前空間 | プライマリ ID |
-| --- | --- | --- |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | CRMID、loginID、ECID | CRMID |
-| Authenticated | CRMID、ECID | CRMID |
-| 未認証 | ECID | ECID |
+![ ビジネスと個人のメールを持つエンドユーザーの ID グラフ ](../images/configs/advanced/advanced.png)
 
-**グラフの例**
++++
+
+
+**演習**
+
+グラフシミュレーションで次の設定をシミュレートします。 独自のイベントを作成するか、テキストモードを使用してコピーして貼り付けることができます。
 
 >[!BEGINTABS]
 
->[!TAB  理想的なシングルユーザーのシナリオ ]
+>[!TAB  共有デバイス ]
 
-次に、1 つの CRMID と複数の loginID を持つ 1 人の人物グラフシナリオを示します。
+**テキストモード**
 
-![1 つの CRMID と複数の loginID を含むグラフシナリオ。](../images/graph-examples/single_crmid.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
-
->[!TAB  複数人グラフシナリオ：共有デバイス ]
-
-次に、デバイスが 2 人で共有される複数担当者グラフのシナリオを示します。 このシナリオでは、`{ECID:111}` は `{loginID:ID_A}` と `{loginID:ID_C}` の両方にリンクされ、`{ECID:111, loginID:ID_A}` の古い確立済みリンクは削除されます。
-
-![ 複数人の共有デバイスのシナリオ。](../images/graph-examples/single_crmid_shared_device.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: JaneBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 111
 ```
 
->[!TAB  複数ユーザーのグラフシナリオ：無効なデータ ]
+![ 高度な共有デバイスのグラフ。](../images/configs/advanced/advanced-shared-device.png)
 
-次に、不正なデータを含む複数人のグラフシナリオを示します。 このシナリオでは、`{loginID:ID_D}` は 2 人の異なるユーザーに誤ってリンクされ、より新しく確立されたリンクを優先して、古いタイムスタンプのリンクが削除されます。
+>[!TAB  無効なデータがReal-Time CDPに送信される ]
 
-![ データが正しくない複数ユーザーのグラフシナリオ。](../images/graph-examples/single_crmid_bad_data.png " 複数人グラフのシミュレート例。 この例では、2 つの CRMID があり、古い確立されたリンクが削除される共有デバイスのシナリオを示しています。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_D
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: error
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: error
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 222
 ```
 
->[!TAB &#39;ダングリング&#39; loginID]
-
-次のグラフは、「ぶら下がっている」 loginID シナリオをシミュレートします。 この例では、2 つの異なる loginID が同じ ECID にバインドされています。 ただし、`{loginID:ID_C}` は CRMID にリンクされていません。 したがって、ID サービスが、これら 2 つの loginID が 2 つの異なるエンティティを表していることを検出する方法はありません。
-
-![ 不安定な loginID シナリオ。](../images/graph-examples/dangling_example.png " 不安定な loginID シナリオ。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-loginID: ID_C, ECID: 111
-```
+![ 無効なデータがReal-Time CDPに送信されるシナリオを表示するグラフ。](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
-## 複数のログイン ID を持つ単一の CRMID （複雑なバージョン）
+### ユースケース：複数の名前空間を必要とする複雑な実装がある場合
 
-このシナリオでは、人物エンティティを表す CRMID が 1 つあります。 ただし、1 つの個人エンティティに複数のログイン識別子を設定できます。
+メディアおよびエンターテインメント企業の場合、エンドユーザーは次のアイテムを所有しています。
+* CRMID
+* ロイヤルティ ID
+さらに、エンドユーザーは e コマース web サイトで購入でき、このデータはエンドユーザーのメールアドレスに関連付けられます。 ユーザーデータは、サードパーティのデータベースプロバイダーによってもエンリッチメントされ、バッチでExperience Platformに送信されます。
 
-* 特定の人物エンティティは、異なるアカウントアカウントタイプを持つことができます（個人とビジネス、州によるアカウント、ブランドによるアカウントなど）。
-* 特定のユーザーエンティティは、任意の数のアカウントに対して異なるメールアドレスを使用できます。
+**テキストモード**
 
->[!IMPORTANT]
->
->**CRMID が常にすべてのユーザーに送信されることが重要です**。 これを怠ると、ログイン ID が「ダングリング」するシナリオが発生する可能性があります。このシナリオでは、1 人のユーザーエンティティが他のユーザーとデバイスを共有していると見なされます。
-
-**実装：**
-
-| 使用されている名前空間 | Web 行動収集方法 |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics ソースコネクタ。<br> **メモ：** デフォルトでは、AAID は ID サービスでブロックされるので、Analytics ソースを使用する場合は、AAID よりも ECID を優先する必要があります。 詳しくは、[ 実装ガイド ](./implementation-guide.md#ingest-your-data) を参照してください。</br> |
-
-**イベント：**
-
-次のイベントをテキストモードにコピーすると、グラフシミュレーションでこのシナリオを作成できます。
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+Email: john@g, orderID: aaa
+CRMID: John, thirdPartyID: xyz
+CRMID: John, ECID: 111
 ```
 
-**アルゴリズム設定：**
+**アルゴリズム設定（ID 設定）**
 
-アルゴリズム設定に次の設定を行うことで、グラフシミュレーションでこのシナリオを作成できます。
+グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 優先度 | 表示名 | ID タイプ | グラフごとに一意 |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | ○ |
-| 2 | Email_LC_SHA256 | メール | × |
-| 3 | Phone_SHA256 | Phone | × |
-| 4 | loginID | CROSS_DEVICE | × |
-| 5 | ECID | COOKIE | × |
-| 6 | AAID | COOKIE | × |
+| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
+| 電子メール | 電子メール | 電子メール | | 3 |
+| thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
+| orderID | orderID | CROSS_DEVICE | | 5 |
+| ECID | ECID | COOKIE | | 6 |
 
-**プロファイル** のプライマリ ID の選択
+**演習**
 
-この設定のコンテキスト内で、プライマリ ID は次のように定義されます。
-
-| 認証ステータス | イベントの名前空間 | プライマリ ID |
-| --- | --- | --- |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | CRMID、loginID、ECID | CRMID |
-| Authenticated | CRMID、ECID | CRMID |
-| 未認証 | ECID | ECID |
-
-**グラフの例**
+グラフシミュレーションで次の設定をシミュレートします。 独自のイベントを作成するか、テキストモードを使用してコピーして貼り付けることができます。
 
 >[!BEGINTABS]
 
->[!TAB  理想的な一人称グラフ ]
+>[!TAB  共有デバイス ]
 
-以下は、それぞれが 1 つの CRMID と複数の loginID を持つ 2 つの 1 人の人物グラフの例です。
+**テキストモード**
 
-![1 つの CRMID と複数の loginID を含む単一人物グラフ。](../images/graph-examples/complex_single_person.png "1 つの CRMID と複数の loginID を含む単一人物グラフ。"){zoomable="yes"}
-
->[!TAB  複数人グラフ：共有デバイス 1]
-
-次に、`{ECID:111}` が `{loginID:ID_A}` と `{loginID:ID_C}` の両方にリンクされている、複数人の共有デバイスのシナリオを示します。 この場合、古いリンクは削除され、新しいリンクが優先されます。
-
-![ 複数人の共有デバイスグラフのシナリオ。](../images/graph-examples/complex_shared_device_one.png " 複数人の共有デバイスグラフのシナリオ。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa 
+CRMID: John, thirdPartyID: xyz 
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB  複数人グラフ：共有デバイス 2]
+![ 共有デバイスの複雑なグラフの例 ](../images/configs/advanced/complex-shared-device.png)
 
-このシナリオでは、loginID のみを送信するのではなく、loginID と CRMID の両方がエクスペリエンスイベントとして送信されます。
+>[!TAB  エンドユーザーがメールアドレスを変更する ]
 
-![loginID と CRMID の両方がエクスペリエンスイベントとして送信される、複数人の共有デバイスグラフのシナリオ。](../images/graph-examples/complex_shared_device_two.png "loginID と CRMID の両方がエクスペリエンスイベントとして送信される、複数人の共有デバイスグラフのシナリオ。"){zoomable="yes"}
+**テキストモード**
 
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, loginID: ID_C, ECID: 111
-loginID: ID_A, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: John, loyaltyID: John, Email: john@y
 ```
 
->[!TAB  複数人グラフ：無効な loginID データ ]
+![ メールの変更が与えられた ID の動作を表示するグラフ。](../images/configs/advanced/complex-email-change.png)
 
-このシナリオでは、`{loginID:ID_C}` は `{CRMID:Tom}` と `{CRMID:Summer}` の両方にリンクされているので、不正なデータと見なされます。これは、理想的なグラフシナリオでは、同じ loginID を 2 つの異なるユーザーにリンクしてはならないからです。 この場合、古いリンクは削除され、新しく設定されたリンクが優先されます。
+>[!TAB thirdPartyID の関連付けが変更されました ]
 
-![ 不正なログインデータが含まれる複数人のグラフシナリオ。](../images/graph-examples/complex_bad_data.png " 不正なログインデータが含まれる複数人のグラフシナリオ。"){zoomable="yes"}
+**テキストモード**
 
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_C
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+CRMID: John, thirdPartyID: xyz
+CRMID: Jane, thirdPartyID: xyz
 ```
 
->[!TAB  複数人グラフ：一意でないメール ]
+![ サードパーティ ID の関連付けに変更があった場合の ID 動作を表示するグラフ。](../images/configs/advanced/complex-third-party-change.png)
 
-このシナリオでは、一意でないメールが 2 つの異なる CRMID にリンクされているので、古いリンクから新しく確立されたリンクに置き換わります。
+>[!TAB  一意でない orderID]
 
-![ 一意でないメールが関与する複数人のグラフシナリオ。](../images/graph-examples/complex_non_unique_email.png " 一意でないメールが関与する複数人のグラフシナリオ。"){zoomable="yes"}
+**テキストモード**
 
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa
+Email: jane@g, orderID: aaa
 ```
 
->[!TAB  複数人グラフ：一意でない電話 ]
+![ 一意でない注文 ID が指定された ID の動作を表示するグラフ。](../images/configs/advanced/complex-non-unique.png)
 
-このシナリオでは、一意でない電話番号が 2 つの異なる CRMID にリンクされており、古い確立済みリンクが削除され、より最近確立済みのリンクが優先されます。
+>[!TAB  エラーのある loyaltyID]
 
-![ 一意でない電話番号が含まれる複数人のグラフシナリオ。](../images/graph-examples/complex_non_unique_phone.png " 一意でない電話番号が含まれる複数人のグラフシナリオ。"){zoomable="yes"}
+**テキストモード**
 
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, Phone_SHA256: 111-1111
-CRMID: Summer, Phone_SHA256: 111-1111
+```json
+CRMID: John, loyaltyID: aaa, Email: john@g
+CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
->[!ENDTABS]
-
-## その他のAdobe Commerceでの使用
-
-この節のグラフ設定例では、Adobe Commerceのユースケースの概要を説明します。 以下の例は、2 つのユーザータイプを持つ小売顧客に焦点を当てています。
-
-* 登録済みユーザー（アカウントを作成したユーザー）
-* ゲストユーザー（メールアドレスのみを持つユーザー）
-
->[!IMPORTANT]
->
->**CRMID が常にすべてのユーザーに送信されることが重要です**。 これを怠ると、ログイン ID が「ダングリング」するシナリオが発生する可能性があります。このシナリオでは、1 人のユーザーエンティティが他のユーザーとデバイスを共有していると見なされます。
-
-**実装：**
-
-| 使用されている名前空間 | Web 行動収集方法 |
-| --- | --- |
-| CRMID、メール、ECID | Web SDK |
-
-**イベント：**
-
-次のイベントをテキストモードにコピーすると、グラフシミュレーションでこのシナリオを作成できます。
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-```
-
-**アルゴリズム設定：**
-
-アルゴリズム設定に次の設定を行うことで、グラフシミュレーションでこのシナリオを作成できます。
-
-| 優先度 | 表示名 | ID タイプ | グラフごとに一意 |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | ○ |
-| 2 | 電子メール | 電子メール | ○ |
-| 5 | ECID | COOKIE | × |
-
-**プロファイル** のプライマリ ID の選択
-
-この設定のコンテキスト内で、プライマリ ID は次のように定義されます。
-
-| ユーザーアクティビティ | イベントの名前空間 | プライマリ ID |
-| --- | --- | --- |
-| 認証済みブラウジング | CRMID、ECID | CRMID |
-| ゲストのチェックアウト | メール、ECID | メール |
-| 未認証の参照 | ECID | ECID |
-
->[!WARNING]
->
->次のグラフシナリオを機能させるには、登録ユーザーがプロファイルで CRMID とメールの両方を使用する必要があります。
-
-**グラフの例**
-
->[!BEGINTABS]
-
->[!TAB  理想的な一人称グラフ ]
-
-次に、理想的な単一人物グラフの例を示します。
-
-![1 つのメール名前空間を持つ理想的な単一人物グラフの例。](../images/graph-examples/single_person_email.png "1 つのメール名前空間を持つ理想的な単一人物グラフの例 "){zoomable="yes"}
-
->[!TAB  複数人グラフ ]
-
-次に、2 人の登録ユーザーが同じデバイスを使用してブラウジングしている複数人物グラフの例を示します。
-
-![2 人の登録済みユーザーが同じデバイスを使用してブラウジングを行う、複数人のグラフシナリオ。](../images/graph-examples/two_registered_users.png "2 人の登録済みユーザーが同じデバイスを使用してブラウジングを行う、複数人のグラフシナリオ。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Summer, Email: summer@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
-```
-
-このシナリオでは、登録ユーザーとゲストユーザーが同じデバイスを共有します。
-
-![ 登録ユーザーとゲストが同じデバイスを共有しているマルチユーザーグラフの例。](../images/graph-examples/one_guest.png " 登録ユーザーとゲストが同じデバイスを共有している複数人グラフの例。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-このシナリオでは、登録ユーザーとゲストユーザーがデバイスを共有します。 ただし、CRMID に対応するメール名前空間が含まれていないので、実装エラーが発生します。 このシナリオでは、Tom は登録ユーザーで、Summer はゲストユーザーです。 前のシナリオとは異なり、2 つの人物エンティティ間で共通のメール名前空間がないため、2 つのエンティティが結合されます。
-
-![ 登録ユーザーとゲストが同じデバイスを共有しても、CRMID にメール名前空間が含まれていないので実装エラーが発生する、複数人グラフの例。](../images/graph-examples/no_email_namespace_in_crmid.png " 登録ユーザーとゲストが同じデバイスを共有しても、CRMID にメール名前空間が含まれていないので実装エラーが発生する、複数人のグラフの例 "){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-このシナリオでは、2 人のゲストユーザーが同じデバイスを共有します。
-
-![2 人のゲストユーザーが同じデバイスを共有している、複数人のグラフシナリオ。](../images/graph-examples/two_guests.png){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-このシナリオでは、ゲストユーザーは項目をチェックアウトし、同じデバイスを使用して登録します。
-
-![ ゲストユーザーが項目を購入し、アカウントに登録するグラフシナリオ。](../images/graph-examples/guest_purchase.png " ゲストユーザーが項目を購入し、アカウントに登録するグラフシナリオ。"){zoomable="yes"}
-
-**グラフシミュレーションイベント入力**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: tom@acme.com, CRMID: Tom
-CRMID: Tom, ECID: 111
-```
+![ 誤ったロイヤルティ ID が指定された ID 行動を表示するグラフ。](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
 
