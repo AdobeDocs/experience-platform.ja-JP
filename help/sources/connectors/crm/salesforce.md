@@ -2,9 +2,9 @@
 title: Salesforce Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してSalesforceをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 1665c15c39667521bb74cca216694cf6b46bf26b
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1635'
 ht-degree: 4%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 >Amazon Web Services（AWS）でAdobe Experience Platformを実行するときに、[!DNL Salesforce] ソースを使用できるようになりました。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../landing/multi-cloud.md) を参照してください。
+
+>[!WARNING]
+>
+>[!DNL Salesforce] ソースの基本認証は、2026 年 1 月に廃止されます。 ソースの使用と [!DNL Salesforce] アカウントからExperience Platformへのデータの取り込みを続行するには、OAuth 2 クライアント資格情報認証に移行する必要があります。
 
 Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
@@ -249,7 +253,7 @@ Experience Platform Developer Console と [!DNL Postman] の設定により、[!
 | `TENANT_ID` | 作成するリソースの名前空間が適切に設定され、組織内に含まれていることを確認するために使用される ID。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | API 呼び出しを行う URL エンドポイント。 この値は固定で、常に `http://platform.adobe.io/` に設定されます。 | `http://platform.adobe.io/` |
 | `munchkinId` | [!DNL Marketo] アカウントの一意の ID。 インスタンスの取得方法について詳しくは、[ インスタンスの認証 ](../adobe-applications/marketo/marketo-auth.md) に関するチュー `munchkinId` リアルを参照してください  [!DNL Marketo]  | `123-ABC-456` |
-| `sfdc_org_id` | [!DNL Salesforce] アカウントの組織 ID。 [!DNL Salesforce] 組織 ID の取得について詳しくは、次の [[!DNL Salesforce]  ガイド ](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) を参照してください。 | `00D4W000000FgYJUA0` |
+| `sfdc_org_id` | [!DNL Salesforce] アカウントの組織 ID。 [!DNL Salesforce] 組織 ID の取得について詳しくは、次の [[!DNL Salesforce]  ガイド ](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) を参照してください。 | `00D4W000000FgYJUA0` |
 | `has_abm` | [!DNL Marketo Account-Based Marketing] を購読しているかどうかを示すブール値。 | `false` |
 | `has_msi` | [!DNL Marketo Sales Insight] を購読しているかどうかを示すブール値。 | `false` |
 

@@ -4,9 +4,9 @@ type: Tutorial
 description: Adobe Experience Platform UI を使用してSnowflake ソース接続を作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1210'
 ht-degree: 7%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 7%
 ユーザーインターフェイスを使用して [!DNL Snowflake] アカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
 
 ## はじめに
+
+>[!WARNING]
+>
+>[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 

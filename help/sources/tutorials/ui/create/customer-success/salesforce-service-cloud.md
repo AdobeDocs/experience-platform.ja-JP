@@ -2,10 +2,10 @@
 title: Experience Platform ユーザーインターフェイスを使用してSalesforce Service Cloud アカウントに接続します
 description: ユーザーインターフェイスを使用してSalesforce Service Cloud アカウントを接続し、カスタマーサクセスデータをExperience Platformに取り込む方法について説明します。
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 19%
+source-wordcount: '880'
+ht-degree: 18%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 19%
 既に有効な [!DNL Salesforce Service Cloud] 接続がある場合は、このドキュメントの残りの部分をスキップし、[ カスタマーサクセスのためのデータフローの設定 ](../../dataflow/customer-success.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
+
+>[!WARNING]
+>
+>[!DNL Salesforce Service Cloud] ソースの基本認証は、2026 年 1 月に廃止されます。 ソースの使用と [!DNL Salesforce Service Cloud] アカウントからExperience Platformへのデータの取り込みを続行するには、OAuth 2 クライアント資格情報認証に移行する必要があります。
 
 [!DNL Salesforce Service Cloud] ソースは、基本認証と OAuth2 クライアント資格情報をサポートしています。
 
@@ -55,7 +59,7 @@ OAuth2 クライアント資格情報を使用して [!DNL Salesforce Service Cl
 | クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce Service Cloud] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | API バージョン | 使用している [!DNL Salesforce Service Cloud] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
 
-[!DNL Salesforce Service Cloud] に対する OAuth の使用について詳しくは、[[!DNL Salesforce Service Cloud] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5) を参照してください。
+[!DNL Salesforce Service Cloud] に対する OAuth の使用について詳しくは、[[!DNL Salesforce Service Cloud] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
 
 >[!ENDTABS]
 

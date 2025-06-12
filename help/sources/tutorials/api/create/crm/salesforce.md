@@ -2,10 +2,10 @@
 title: Flow Service API を使用したSalesforceとExperience Platformの接続
 description: Flow Service API を使用してAdobe Experience PlatformをSalesforce アカウントに接続する方法について説明します。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 19%
+source-wordcount: '1118'
+ht-degree: 18%
 
 ---
 
@@ -29,6 +29,10 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 [!DNL Salesforce] ソースを [!DNL Azure] 上のExperience Platformに接続する方法については、以下の手順を参照してください。
 
 ### 必要な資格情報の収集
+
+>[!WARNING]
+>
+>[!DNL Salesforce] ソースの基本認証は、2026 年 1 月に廃止されます。 ソースの使用と [!DNL Salesforce] アカウントからExperience Platformへのデータの取り込みを続行するには、OAuth 2 クライアント資格情報認証に移行する必要があります。
 
 [!DNL Salesforce] ソースは、基本認証と OAuth2 クライアント資格情報をサポートしています。
 
@@ -61,7 +65,7 @@ OAuth 2 クライアント資格情報を使用して [!DNL Salesforce] アカ�
 | `apiVersion` | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 この値は、OAuth2 クライアント資格情報認証に必須です。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
-[!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5) を参照してください。
+[!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
 
 >[!ENDTABS]
 

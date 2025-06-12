@@ -2,9 +2,9 @@
 title: Salesforce ユーザーインターフェイスを使用したExperience Platform アカウントの接続
 description: ユーザーインターフェイスを使用してSalesforce アカウントを接続し、CRM データをExperience Platformに取り込む方法について説明します。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '972'
 ht-degree: 17%
 
 ---
@@ -25,6 +25,10 @@ ht-degree: 17%
 認証済みの [!DNL Salesforce] アカウントが既にある場合は、このドキュメントの残りの部分をスキップし、[CRM データのデータフローの設定 ](../../dataflow/crm.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集 {#gather-required-credentials}
+
+>[!WARNING]
+>
+>[!DNL Salesforce] ソースの基本認証は、2026 年 1 月に廃止されます。 ソースの使用と [!DNL Salesforce] アカウントからExperience Platformへのデータの取り込みを続行するには、OAuth 2 クライアント資格情報認証に移行する必要があります。
 
 [!DNL Salesforce] ソースは、基本認証と OAuth2 クライアント資格情報をサポートしています。
 
@@ -55,7 +59,7 @@ OAuth2 クライアント資格情報を使用して [!DNL Salesforce] アカウ
 | クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | API バージョン | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
 
-[!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5) を参照してください。
+[!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
 
 >[!ENDTABS]
 
