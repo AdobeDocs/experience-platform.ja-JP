@@ -3,10 +3,10 @@ title: Experience Platformのプレリリースノート
 description: Adobe Experience Platformの最新のリリースノートのプレビュー。
 hide: true
 hidefromtoc: true
-source-git-commit: c34c41d384fbc4f309dffa8bba97a0f6f3468efc
+source-git-commit: c716bac1db556fe7a47462e38ee64d7b46bbefcc
 workflow-type: tm+mt
-source-wordcount: '1480'
-ht-degree: 23%
+source-wordcount: '1299'
+ht-degree: 24%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 23%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/latest)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年6月18日（PT）**
 
@@ -38,7 +38,6 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 - [宛先](#destinations)
 - [連合オーディエンス構成](#fac)
 - [Privacy Service](#privacy-service)
-- [クエリサービス](#query-service)
 - [サンドボックス](#sandboxes)
 - [ソース](#sources)
 
@@ -105,7 +104,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | --- | --- |
-| LinkedIn アカウントの有効期限に関する情報 | LinkedIn 宛先のアカウントの有効期限に関する情報が、[!UICONTROL &#x200B; 参照 &#x200B;] ビューと [!UICONTROL &#x200B; アカウント &#x200B;] ビューで直接利用できるようになりました。 以前は、この情報はドキュメントでのみ提供されていました。 この機能強化により、LinkedIn の認証ステータスと資格情報管理がよりわかりやすくなっています。 |
+| LinkedIn アカウントの有効期限に関する情報 | LinkedIn 宛先のアカウントの有効期限に関する情報が、[!UICONTROL  参照 ] ビューと [!UICONTROL  アカウント ] ビューで直接利用できるようになりました。 以前は、この情報はドキュメントでのみ提供されていました。 この機能強化により、LinkedIn の認証ステータスと資格情報管理がよりわかりやすくなっています。 |
 | Google カスタマーマッチ + DV360 の一般提供と機能強化 | Google カスタマーマッチ + DV360 の宛先を、すべてのExperience Platform ユーザーが使用できるようになりました。 ドキュメントに、AdobeとGoogle広告アカウント間のアカウントリンクに関する詳細なガイダンスが含まれるようになりました。 |
 | データランディングゾーン（DLZ）宛先暗号化のサポート | データランディングゾーン宛先の暗号化のサポートを追加しました。 RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できるようになりました。 |
 | エンタープライズ宛先のオーディエンスレベルの監視 | オーディエンスレベルの監視が、[[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、[[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)、[[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md) のエンタープライズ宛先で使用できるようになりました。 |
@@ -120,7 +119,7 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 | 新機能 | 説明 |
 | ----------- | ----------- |
-| HIPAA 対応 | Federated Audience Composition は、HIPAA に準拠するようになりました。 Federated Audience Composition のプライバシーとセキュリティの対策について詳しくは、[Federated Audience Composition のプライバシーとセキュリティの概要 ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/privacy-security) を参照してください。 Experience Platform製品全般に関する HIPAA コンプライアンスの詳細については、[HIPAA およびAdobe製品とサービスの概要 ](https://www.adobe.com/trust/compliance/hipaa-ready.html) を参照してください。 |
+| HIPAA 対応 | Federated Audience Composition は、HIPAA に準拠するようになりました。 Federated Audience Composition のプライバシーとセキュリティの対策について詳しくは、[Federated Audience Composition のプライバシーとセキュリティの概要 ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security) を参照してください。 Experience Platform製品全般に関する HIPAA コンプライアンスの詳細については、[HIPAA およびAdobe製品とサービスの概要 ](https://www.adobe.com/trust/compliance/hipaa-ready.html) を参照してください。 |
 
 詳しくは、[Federated Audience Composition ドキュメント ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home) を参照してください。
 
@@ -132,30 +131,9 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 | 機能 | 説明 |
 |--- | ---|
-| テネシー州およびミネソタ州のプライバシー法のサポート | Privacy Serviceは、テネシー州情報保護法（`tipa_tn_usa`）とミネソタ州消費者データ保護法（`mcdpa_mn_usa`）をサポートするようになりました。 これらの新しい州レベルの規制に従って、アクセス要求および削除要求を処理できます。 詳しくは、[ 規制の概要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/privacy/regulations/overview) を参照してください。 |
+| テネシー州およびミネソタ州のプライバシー法のサポート | Privacy Serviceは、テネシー州情報保護法（`tipa_tn_usa`）とミネソタ州消費者データ保護法（`mcdpa_mn_usa`）をサポートするようになりました。 これらの新しい州レベルの規制に従って、アクセス要求および削除要求を処理できます。 詳しくは、[ 規制の概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) を参照してください。 |
 
 このサービスについて詳しくは、[Privacy Serviceの概要 ](../privacy-service/home.md) を参照してください。
-
-## クエリサービス {#query-service}
-
-クエリサービスを使用した標準 SQL を使用して、Adobe Experience Platform Data Lake でデータをクエリします。 データセットをシームレスに組み合わせ、クエリ結果から新しいデータセットを生成してレポートを強化したり、データサイエンスワークフローを有効にしたり、リアルタイム顧客プロファイルへの取り込みを容易にしたりします。
-
-**新機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| 高度な統計関数 | **Theta スケッチの交点**：近似の個別カウントおよびセット操作のために Theta スケッチを使用してセットの交点を計算する新しい関数。 **KLL ヒストグラム**:KLL （Kth minimest, L largest, Large items）スケッチを使用して、分位数の推定と分布分析のヒストグラム機能を強化しました。 これらの関数は、Data Distillerのお客様が使用できます。 |
-| SQL テンプレート ライブラリ | 一般的なユースケースに対応する SQL テンプレートの包括的なライブラリが利用できるようになりました。 この機能は、頻繁な分析パターンに対するベストプラクティステンプレートを提供し、Data Distillerのお客様が複雑な分析をより効率的に実装できるよう支援することで、クエリの開発を促進します。 |
-
-**更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| RFM モデリングの例 | Data Distillerのお客様向けに、包括的な最新性、頻度、通貨（RFM）モデリングの例を追加しました。 これには、RFM 手法を使用した顧客セグメント化および価値分析に関する詳細なドキュメントと実装ガイドが含まれます。 |
-
-{style="table-layout:auto"}
-
-[!DNL Query Service] について詳しくは、[[!DNL Query Service]  の概要](../query-service/home.md)を参照してください。
 
 ## サンドボックス {#sandboxes}
 
