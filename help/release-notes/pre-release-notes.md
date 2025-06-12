@@ -23,9 +23,9 @@ ht-degree: 24%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年6月18日（PT）**
 
@@ -119,7 +119,7 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 | 新機能 | 説明 |
 | ----------- | ----------- |
-| HIPAA 対応 | Federated Audience Composition は、HIPAA に準拠するようになりました。 Federated Audience Composition のプライバシーとセキュリティの対策について詳しくは、[Federated Audience Composition のプライバシーとセキュリティの概要 ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security) を参照してください。 Experience Platform製品全般に関する HIPAA コンプライアンスの詳細については、[HIPAA およびAdobe製品とサービスの概要 ](https://www.adobe.com/trust/compliance/hipaa-ready.html) を参照してください。 |
+| HIPAA 対応 | Federated Audience Composition は、HIPAA に準拠するようになりました。 Federated Audience Composition のプライバシーとセキュリティの対策について詳しくは、[Federated Audience Composition のプライバシーとセキュリティの概要 ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/privacy-security) を参照してください。 Experience Platform製品全般に関する HIPAA コンプライアンスの詳細については、[HIPAA およびAdobe製品とサービスの概要 ](https://www.adobe.com/trust/compliance/hipaa-ready.html) を参照してください。 |
 
 詳しくは、[Federated Audience Composition ドキュメント ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home) を参照してください。
 
@@ -131,7 +131,7 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 | 機能 | 説明 |
 |--- | ---|
-| テネシー州およびミネソタ州のプライバシー法のサポート | Privacy Serviceは、テネシー州情報保護法（`tipa_tn_usa`）とミネソタ州消費者データ保護法（`mcdpa_mn_usa`）をサポートするようになりました。 これらの新しい州レベルの規制に従って、アクセス要求および削除要求を処理できます。 詳しくは、[ 規制の概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) を参照してください。 |
+| テネシー州およびミネソタ州のプライバシー法のサポート | Privacy Serviceは、テネシー州情報保護法（`tipa_tn_usa`）とミネソタ州消費者データ保護法（`mcdpa_mn_usa`）をサポートするようになりました。 これらの新しい州レベルの規制に従って、アクセス要求および削除要求を処理できます。 詳しくは、[ 規制の概要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/privacy/regulations/overview) を参照してください。 |
 
 このサービスについて詳しくは、[Privacy Serviceの概要 ](../privacy-service/home.md) を参照してください。
 
