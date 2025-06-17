@@ -1,17 +1,19 @@
 ---
 title: AI アシスタントの自然言語から SQL モデルへの変換の詳細
 description: AI Assistant Natural Language to SQL AI モデルについて説明します。
-hide: true
-hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 3d870c367317d73bba8b75b38f7b2a93ab6b5bbd
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
 
 # AI Assistant Operational Insights Natural Language to SQL モデルの詳細
+
+>[!IMPORTANT]
+>
+>Adobeは、より多くのモデル詳細を積極的に公開しています。利用可能になり次第、Experience Leagueにドキュメントが追加されます。
 
 ## モデルの概要 {#model-overview}
 
