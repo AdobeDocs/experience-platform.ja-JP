@@ -4,10 +4,10 @@ description: ID グラフリンクルールを使用して設定できる様々�
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
+source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 7%
+source-wordcount: '1951'
+ht-degree: 8%
 
 ---
 
@@ -17,11 +17,6 @@ ht-degree: 7%
 >id="platform_identities_algorithmconfiguration"
 >title="アルゴリズムの設定"
 >abstract="取り込んだ ID に合わせて、一意の名前空間と、名前空間の優先度を設定します。"
-
->[!NOTE]
->
->* 「CRMID」と「loginID」は、カスタム名前空間です。 このドキュメントでは、「CRMID」はユーザー識別子で、「loginID」は特定のユーザーに関連付けられたログイン識別子です。
->* このドキュメントで概要を説明するグラフシナリオの例をシミュレートするには、まず 2 つのカスタム名前空間を作成する必要があります。1 つは ID シンボル「CRMID」、もう 1 つは ID シンボル「loginID」です。 ID 記号では大文字と小文字が区別されます。
 
 [!DNL Identity Graph Linking Rules] を使用して設定できる様々な実装タイプについては、このドキュメントを参照してください。
 
@@ -43,9 +38,9 @@ ht-degree: 7%
 
 ## 基本的な実装 {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->以下の基本実装演習を完了するには、「CRMID」のカスタムクロスデバイス名前空間を作成する必要があります。
+>以下の実装を完了するには、ID 記号（大文字と小文字を区別）が `CRMID` のカスタム名前空間を作成する必要があります。
 
 [!DNL Identity Graph Linking Rules] の基本的な実装については、この節をお読みください。
 
@@ -90,7 +85,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **共有デバイス（PC）**
 
-**テキストモード：**
+**テキストモード**
 
 ```json
 CRMID: John, ECID: 111
@@ -112,7 +107,7 @@ CRMID: Jane, ECID: 111
 
 **共有デバイス （モバイル）**
 
-**テキストモード：**
+**テキストモード**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -129,19 +124,23 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 ## 中間実装 {#intermediate-implementations}
 
+>[!TIP]
+>
+>**一意でない ID** は、一意でない名前空間に関連付けられた ID です。
+
 [!DNL Identity Graph Linking Rules] の中間実装については、この節を参照してください。
 
 ### ユースケース：データに一意でない ID が含まれる
 
->[!TIP]
+>[!NOTE]
 >
->* **一意でない ID** は、一意でない名前空間に関連付けられた ID です。
->
->* 以下の中間実装の演習を完了するには、「CRMID」と「CChash」のカスタムクロスデバイス名前空間を作成する必要があります。 「CCHash」は、ハッシュ化されたクレジットカード番号を表すカスタム名前空間です。
+>以下の実装を完了するには、の ID 記号（大文字と小文字を区別）を使用して次のカスタム名前空間を作成する必要があります。
+>* `CRMID`
+>* `CCHash` （これは、ハッシュ化されたクレジットカード番号を表すカスタム名前空間です。）
 
 例えば、クレジットカードを発行する商業銀行で働くデータアーキテクトの場合を考えてみます。 マーケティングチームが、過去のクレジットカードのトランザクション履歴をプロファイルに含める必要があることを示しました。 この ID グラフは次のようになります。
 
-**テキストモード：**
+**テキストモード**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -177,7 +176,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 >[!TAB  共有デバイス ]
 
-**テキストモード：**
+**テキストモード**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -194,7 +193,7 @@ CRMID: Jane, ECID:123
 
 2 人の異なるエンドユーザーが、同じクレジットカードを使用して e コマース web サイトに新規登録します。 マーケティングチームは、クレジットカードが 1 つのプロファイルにのみ関連付けられるようにすることで、グラフが折りたたまれないようにします。
 
-**テキストモード：**
+**テキストモード**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -211,7 +210,7 @@ CRMID: Jane, ECID:456
 
 データがクリーンではないので、無効なクレジットカード番号がExperience Platformに取り込まれます。
 
-**テキストモード：**
+**テキストモード**
 
 ```json
 CRMID: John, CChash: undefined
@@ -228,9 +227,11 @@ CRMID: Jill, CChash: undefined
 
 ### ユースケース：データには、ハッシュ化された CRMID とハッシュ化されていない CRMID の両方が含まれます
 
->[!TIP]
+>[!NOTE]
 >
->以下の中間実装の演習を完了するには、「CRMID」および「CRMIDhash」のカスタムクロスデバイス名前空間を作成する必要があります。
+>以下の実装を完了するには、の ID 記号（大文字と小文字を区別）を使用してカスタム名前空間を作成する必要があります。
+>* `CRMID`
+>* `CRMIDhash`
 
 ハッシュ化されていない（オフラインの） CRMID とハッシュ化された（オンラインの） CRMID の両方を取り込んでいます。 ハッシュ化されていない CRMID とハッシュ化された CRMID の両方の間に直接の関係があることが期待されます。 認証済みアカウントを使用してエンドユーザーが閲覧すると、ハッシュ化された CRMID がデバイス ID と共に送信されます（ID サービスで ECID として表されます）。
 
@@ -255,7 +256,7 @@ CRMID: Jill, CChash: undefined
 
 ジョンとジェーンはデバイスを共有している。
 
-**テキストモード：**
+**テキストモード**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -270,7 +271,7 @@ CRMIDhash: Jane, ECID: 111
 
 ハッシュプロセスのエラーにより、一意でないハッシュ化された CRMID が生成され、ID サービスに送信されます。
 
-**テキストモード：**
+**テキストモード**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -342,6 +343,10 @@ Email: jane@g, ECID: 111
 
 ### ユースケース：データには、3 つの一意の名前空間が含まれます
 
+>[!NOTE]
+>
+>以下の実装を完了するには、ID 記号（大文字と小文字を区別）が `CRMID` のカスタム名前空間を作成する必要があります。
+
 顧客は、次のように単一人物エンティティを定義します。
 
 * CRMID が割り当てられているエンドユーザー。
@@ -399,13 +404,15 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 ### 使用例：複数の事業部門のサポートが必要な場合
 
->[!TIP]
+>[!NOTE]
 >
->以下の高度な実装演習を完了するには、「CRMID」と「loginID」のカスタムクロスデバイス名前空間を作成する必要があります。
+>以下の実装を完了するには、の ID 記号（大文字と小文字を区別）を使用してカスタム名前空間を作成する必要があります。
+>* `CRMID`
+>* `loginID`
 
 エンドユーザーは、個人用アカウントとビジネスアカウントという 2 つの異なるアカウントを持っています。 各アカウントは、異なる ID で識別されます。 このシナリオでは、一般的なグラフは次のようになります。
 
-**テキストモード***
+**テキストモード**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -427,12 +434,7 @@ loginID: JohnBusiness, ECID: 222
 
 **シミュレーショングラフ**
 
-+++選択してシミュレーショングラフを表示
-
 ![ ビジネスと個人のメールを持つエンドユーザーの ID グラフ ](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **演習**
 
@@ -457,6 +459,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB  無効なデータがReal-Time CDPに送信される ]
 
+**テキストモード**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -472,9 +476,12 @@ loginID: JanePersonal, ECID: 222
 
 ### ユースケース：複数の名前空間を必要とする複雑な実装がある場合
 
->[!TIP]
+>[!NOTE]
 >
->以下の高度な実装演習を完了するには、「CRMID」、「loyaltyID」、「thirdPartyID」、「orderID」のカスタムのクロスデバイス名前空間を作成する必要があります。
+>以下の実装を完了するには、の ID 記号（大文字と小文字を区別）を使用してカスタム名前空間を作成する必要があります。
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 メディアおよびエンターテインメント企業の場合、エンドユーザーは次のアイテムを所有しています。
 
@@ -499,8 +506,8 @@ CRMID: John, ECID: 111
 | 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
-| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
-| 電子メール | 電子メール | 電子メール | | 3 |
+| loyaltyID | loyaltyID | CROSS_DEVICE | ✔️ | 2 |
+| 電子メール | 電子メール | 電子メール | ✔️ | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |
