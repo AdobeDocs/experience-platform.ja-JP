@@ -3,24 +3,16 @@ keywords: facebook 接続；facebook 接続；facebook 宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Facebook キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
+source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
 workflow-type: tm+mt
-source-wordcount: '2843'
-ht-degree: 20%
+source-wordcount: '2690'
+ht-degree: 21%
 
 ---
 
 # [!DNL Facebook] 接続
 
 ## 概要 {#overview}
-
->[!IMPORTANT]
->
->* 2025 年 5 月 23 日（PT）以降、2025 年 6 月を通じて、一時的に、宛先カタログに 2 つの **[!DNL Facebook Custom Audience]** の宛先カードが数時間まで表示される場合があります。 これは、宛先サービスの内部アップグレードと、ターゲティングの改善や Facebook プロパティでのプロファイルとのマッチングのための新しいフィールドのサポートが原因です。 新しいアドレス関連フィールドについて詳しくは、[ サポートされる ID](#supported-identities) の節を参照してください。
->* **[!UICONTROL （新規） Facebook カスタムオーディエンス]** というラベルの付いたカードが表示された場合は、このカードを新しいアクティベーションデータフローに使用します。 既存のデータフローは自動的に更新されるので、ユーザー側で対応する必要はありません。 この期間中に既存のデータフローに加えた変更は、アップグレード後も保持されます。 アップグレードが完了すると、「**[!UICONTROL （新規） Facebook カスタムオーディエンス]**」宛先カードの名前が **[!DNL Facebook Custom Audience]** に変更されます。
->* [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。
->   * フロー仕様 ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
->   * 接続仕様 ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、[!DNL Facebook] キャンペーン用のプロファイルをアクティブ化します。
 
@@ -146,8 +138,8 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 >[!NOTE]
 >
 >ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Experience Platform] によって自動的にハッシュ化されます。
-> 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。
-> 「**[!UICONTROL 変換を適用]**」オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
+>> 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。
+>> 「**[!UICONTROL 変換を適用]**」オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
 
 ![ マッピングステップでハイライト表示されている「変換コントロールを適用」 ](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -159,13 +151,13 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 次のビデオでは、[!DNL Facebook] しい宛先を設定し、オーディエンスをアクティブ化する手順も示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -182,7 +174,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 Facebook 認証トークンは 60 日ごとに期限切れになります。 トークンの有効期限が切れると、宛先へのデータの書き出しは機能しなくなります。
 
-トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[!UICONTROL または**&#x200B;[!UICONTROL &#x200B; 参照 &#x200B;]&#x200B;**タブの「アカウントの有効期限]** 列から監視できます。
+トークンの有効期限は、「**[!UICONTROL アカウント]****[!UICONTROL または**[!UICONTROL  参照 ]**タブの「アカウントの有効期限]** 列から監視できます。
 
 ![ 「参照」タブの Facebook アカウントトークンの有効期限の列 ](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
@@ -245,12 +237,12 @@ Facebook 認証トークンは 60 日ごとに期限切れになります。 ト
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-**[!UICONTROL セグメントスケジュール]** ステップでは、オーディエンスを [!DNL Facebook Custom Audiences] に送信する際に [!UICONTROL &#x200B; オーディエンスの接触チャネル &#x200B;] を指定する必要があります。
+**[!UICONTROL セグメントスケジュール]** ステップでは、オーディエンスを [!DNL Facebook Custom Audiences] に送信する際に [!UICONTROL  オーディエンスの接触チャネル ] を指定する必要があります。
 
 ![Facebook アクティベーションステップに表示されるオーディエンスの接触チャネルドロップダウン。](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
