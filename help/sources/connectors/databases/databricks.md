@@ -3,12 +3,12 @@ title: Azure Databricks
 description: Azure Databricks をExperience Platformに接続するために必要な前提条件の手順について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="ベータ版" type="Informative"
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
+source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
@@ -161,6 +161,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![Azure の Databricks UI。](../../images/tutorials/create/databricks/databricks-ui.png)
 
-## API を使用した [!DNL Databricks] のExperience Platformへの接続
+## [!DNL Databricks] をExperience Platformに接続
 
-これで、前提条件の手順が完了したので、[API を使用したアカウントのExperience Platformへの接続  [!DNL Databricks]  に関するガイドに進むことができ ](../../tutorials/api/create/databases/databricks.md) す。
+これで、前提条件の手順が完了したので、次に進み、[!DNL Databricks] アカウントをExperience Platformに接続できます。
+
+* [API を使用した接続](../../tutorials/api/create/databases/databricks.md)
+* [UI のソースワークスペースを使用した接続](../../tutorials/ui/create/databases/databricks.md)

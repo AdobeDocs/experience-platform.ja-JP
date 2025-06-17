@@ -4,10 +4,10 @@ description: API を使用して Azure Databricks をExperience Platformに接�
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 16%
+source-wordcount: '534'
+ht-degree: 17%
 
 ---
 
@@ -47,6 +47,8 @@ Experience Platform API の呼び出しを正常に実行する方法につい�
 | `accessToken` | [!DNL Databricks] アカウントを認証するアクセストークン。 [!DNL Databricks] ワークスペースを使用してアクセストークンを生成できます。 |
 | `database` | delta lake 内のデータベースの名前。 |
 | `connectionSpec.Id` | 接続仕様 ID は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。 [!DNL Databricks] の接続仕様 ID は `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b` です。 |
+
+詳しくは、[[!DNL Azure Databricks] 概要](../../../../connectors/databases/databricks.md)を参照してください。
 
 ## ベース接続の作成
 
