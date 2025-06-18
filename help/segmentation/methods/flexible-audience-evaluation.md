@@ -3,9 +3,9 @@ title: 柔軟なオーディエンス評価ガイド
 description: 柔軟なオーディエンス評価を使用して、バッチセグメント化ジョブをオンデマンドで実行する方法を説明します。
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
+source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1140'
 ht-degree: 6%
 
 ---
@@ -326,7 +326,7 @@ Experience Platform UI 内で柔軟なオーディエンス評価を実行する
 
 次のビデオでは、Experience Platformで柔軟なオーディエンス評価にアクセスして使用する方法を示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453641?&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## よくある質問 {#faq}
 
@@ -396,3 +396,10 @@ API または UI を使用して作成された柔軟なオーディエンス評
 
 +++
 
+### 柔軟なオーディエンス評価を使用してメインオーディエンスを評価する際に、すべての依存オーディエンスを評価する必要がありますか？
+
++++ 回答
+
+いいえ。柔軟なオーディエンス評価は、すべての依存オーディエンスを自動的に評価します。 例えば、オーディエンス A がオーディエンス B に依存している場合、オーディエンス B を評価するだけで済みます。柔軟なオーディエンス評価によって、オーディエンス A に続いてオーディエンス B が自動的に評価されます。
+
++++
