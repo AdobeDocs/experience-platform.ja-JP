@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスの SQL 構文
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでサポートされている SQL 構文の詳細と説明を説明します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4686'
 ht-degree: 4%
 
 ---
@@ -223,7 +223,7 @@ AS (select_query)
 | `schema` | XDM スキーマのタイトル。 この句は、新しいテーブルを既存の XDM スキーマに関連付ける場合にのみ使用します。 |
 | `rowvalidation` | （任意）データセットに取り込まれた各バッチに対して、行レベルの検証を有効にします。 デフォルトは true です。 |
 | `label` | （オプション）値 `PROFILE` を使用して、プロファイル取り込みが有効としてデータセットにラベルを付けます。 |
-| `transform` | （任意）データセットを実現する前に、機能エンジニアリング変換（文字列インデックス、ワンホットエンコーディング、TF-IDF など）を適用します。 この句は、変換されたフィーチャのプレビューに使用されます。 詳しくは [&#128279;](#transform)`TRANSFORM` 句のドキュメントを参照してください。 |
+| `transform` | （任意）データセットを実現する前に、機能エンジニアリング変換（文字列インデックス、ワンホットエンコーディング、TF-IDF など）を適用します。 この句は、変換されたフィーチャのプレビューに使用されます。 詳しくは ](#transform)[`TRANSFORM` 句のドキュメントを参照してください。 |
 | `select_query` | データセットを定義する標準の `SELECT` ステートメント。 詳しくは、[`SELECT` クエリの節 ](#select-queries) 参照してください。 |
 
 >[!NOTE]
@@ -335,6 +335,10 @@ AS SELECT * FROM movie_review_e2e_DND;
 ## INSERT INTO
 
 `INSERT INTO` コマンドは、次のように定義されます。
+
+>[!IMPORTANT]
+>
+>クエリサービスは、ITAS エンジンを使用した **追加のみの操作** をサポートしています。 `INSERT INTO` はサポートされている唯一のデータ操作コマンドであり、**update** および **delete** 操作は使用できません。 データの変更を反映するには、目的の状態を表す新しいレコードを挿入します。
 
 ```sql
 INSERT INTO table_name select_query

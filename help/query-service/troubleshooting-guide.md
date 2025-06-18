@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービスとデータDistillerに関するよくある質問
 description: このドキュメントには、クエリサービスとデータDistillerに関するよくある質問と回答が含まれています。 トピックには、データの書き出し、サードパーティツール、PSQL エラーが含まれます。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '5029'
+source-wordcount: '5055'
 ht-degree: 81%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 81%
 ### Query Service API に [!DNL Postman] を使用できますか？
 
 +++回答
-はい、[!DNL Postman]（無料のサードパーティアプリケーション）を使用して、すべての Adobe API サービスを視覚化し、操作できます。Adobe Developer Console でプロジェクトを設定し、[!DNL Postman] で使用するために必要な資格情報をすべて取得する手順については、[[!DNL Postman] 設定ガイド](https://video.tv.adobe.com/v/31656?captions=jpn)をご覧ください。[ [!DNL Postman]  コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)の公式ドキュメントを参照してください。
+はい、[!DNL Postman]（無料のサードパーティアプリケーション）を使用して、すべての Adobe API サービスを視覚化し、操作できます。Adobe Developer Console でプロジェクトを設定し、[!DNL Postman] で使用するために必要な資格情報をすべて取得する手順については、[[!DNL Postman] 設定ガイド](https://video.tv.adobe.com/v/28832)をご覧ください。[ [!DNL Postman]  コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)の公式ドキュメントを参照してください。
 +++
 
 ### UI を使用してクエリから返される行の最大数に制限はありますか？
@@ -464,7 +464,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ### ワイルドカード（* など）を使用してデータセットからすべての行を取得する必要がありますか？
 
 +++回答
-ワイルドカードを使用して行からすべてのデータを取得することはできません。クエリサービスは従来の行ベースのストアシステムではなく、**列ストア**&#x200B;として扱われる必要があるためです。
+ワイルドカードを使用して行からすべてのデータを取得することはできません。クエリサービスは従来の行ベースのストアシステムではなく、**列ストア**として扱われる必要があるためです。
 +++
 
 ### SQL クエリで `NOT IN` を使用する必要がありますか？
@@ -717,12 +717,18 @@ and timestamp < to_timestamp('2022-07-23');
 MERGE INTO SQL コンストラクトは、Data Distillerまたはクエリ サービスではサポートされていません。
 +++
 
-## ITAS クエリ
+## ITAS クエリ {#itas-queries}
 
 ### ITAS クエリとは
 
 +++回答
 INSERT INTO クエリは、ITAS クエリと呼ばれます。 なお、CREATE TABLE クエリは CTAS クエリと呼ばれます。
++++
+
+### クエリサービスは更新操作と削除操作をサポートしていますか？
+
++++回答
+いいえ。クエリサービスは、更新または削除操作をサポートしていません。 ITAS を使用した追加専用の操作のみをサポートします。
 +++
 
 ## サードパーティツール {#third-party-tools}
