@@ -3,10 +3,10 @@ title: UI でのAzure Synapse Analytics Source接続の作成
 description: Adobe Experience Platform UI を使用してAzure Synapse Analytics （以下「Synapse」）ソース接続を作成する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f8eb8640360205e8ae9579d4b664d4880bf8a368
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 48%
+source-wordcount: '469'
+ht-degree: 21%
 
 ---
 
@@ -16,55 +16,67 @@ ht-degree: 48%
 >
 >Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Synapse Analytics] ソースを利用できます。
 
-このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Azure Synapse Analytics] （以下「[!DNL Synapse]」）ソースコネクタを作成する手順について説明します。
+このガイドでは、UI のソースワークスペースを使用して [!DNL Azure Synapse Analytics] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
-## はじめに
+## 基本を学ぶ
 
-このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Synapse] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
+既に有効な [!DNL Azure Synapse Analytics] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-[!DNL Experience Platform] で [!DNL Synapse] アカウントにアクセスするには、次の値を指定する必要があります。
+認証について詳しくは、[[!DNL Azure Synapse Analytics]  概要 ](../../../../connectors/databases/synapse-analytics.md#prerequisites) を参照してください。
 
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `connectionString` | [!DNL Synapse] 認証に関連付けられた接続文字列。 [!DNL Synapse] の接続文字列パターンは `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30` です。 |
+## ソースカタログのナビゲート
 
-この値について詳しくは、[ この  [!DNL Synapse]  ドキュメント ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse) を参照してください。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-## [!DNL Synapse] アカウントの接続
+[!DNL Azure Synapse Analytics] に接続するには、「*[!UICONTROL データベース]*」カテゴリに移動し、「**[!UICONTROL Azure Synapse analytics]**」ソースカードを選択して、「**[!UICONTROL 設定]**」を選択します。
 
-必要な資格情報が揃ったら、次の手順に従って、[!DNL Synapse] アカウントを [!DNL Experience Platform] にリンクします。
+>[!TIP]
+>
+>ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+![ 「Azure Synapse Analytics」が選択されているソースカタログ ](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+## 既存のアカウントを使用 {#existing}
 
-「**[!UICONTROL データベース]**」カテゴリで、「**[!UICONTROL Azure Synapse Analytics]**」を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい [!DNL Synapse] コネクタを作成します。
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Azure Synapse Analytics] アカウントを選択します。
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
+![ ソースワークフローの既存のアカウントインターフェイス。](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
-**[!UICONTROL Azure Synapse Analytics への接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+## 新しいアカウントを作成 {#new}
 
-### 新しいアカウント
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL Synapse] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+![ ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
+### Experience Platformへの接続
 
-### 既存のアカウント
+アカウントキー認証またはサービスプリンシパルおよびキー認証のいずれかを使用して、[!DNL Azure Synapse Analytics] アカウントをExperience Platformに接続できます。
 
-既存のアカウントに接続するには、接続する [!DNL Synapse] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
+>[!BEGINTABS]
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
+>[!TAB  アカウントキー認証 ]
 
-## 次の手順
+アカウントキー認証を使用するには、「**[!UICONTROL アカウントキー認証]**」を選択し、「[ 接続文字列 ](../../../../connectors/databases/synapse-analytics.md#prerequisites)」を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
 
-このチュートリアルでは、[!DNL Synapse] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+![ ソースワークフローの「新しいアカウントを作成」手順で「アカウントキー認証 ](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png) が選択されている。
+
+>[!TAB  サービスプリンシパルとキーの認証 ]
+
+または、「**[!UICONTROL サービスプリンシパルとキー認証]**」を選択し、[ 認証資格情報 ](../../../../connectors/databases/synapse-analytics.md#prerequisites) の値を入力して、「**[!UICONTROL ソースに接続]**」を選択します。
+
+![ ソースワークフローの「新しいアカウントを作成」手順で「サービスプリンシパルとキー認証」が選択されている様子。](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
+
+>[!ENDTABS]
+
+## データのデータフロー [!DNL Azure Synapse Analytics] 作成
+
+[!DNL Azure Synapse Analytics] データベースに正常に接続できたので、[ データフローを作成し、データベースからExperience Platformにデータを取り込む ](../../dataflow/databases.md) ことができます。
