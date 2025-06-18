@@ -2,10 +2,10 @@
 title: UI を使用したSalesforce Marketing Cloud アカウントのExperience Platformへの接続
 description: UI を通じてSalesforce Marketing Cloud アカウントをExperience Platformに接続する方法について説明します。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: 0c6a51d06e57eb6de063a350bd4b17022555a0b4
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 20%
+source-wordcount: '576'
+ht-degree: 13%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 20%
 >
 >[!DNL Salesforce Marketing Cloud] ソースは 2026 年 1 月に非推奨（廃止予定）になります。 新しいソースは、代替手段として今年後半にリリースされる予定です。 新しいソースがリリースされたら、2026 年 1 月末までに、新しいアカウント接続とデータフローを作成して、新しいソースに移行する計画を立てる必要があります。
 
-このチュートリアルでは、UI を通じて [!DNL Salesforce Marketing Cloud] アカウントをAdobe Experience Platformに接続する方法の手順を説明します。
+このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL Salesforce Marketing Cloud] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
-## はじめに
+## 基本を学ぶ
 
 このチュートリアルは、 Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -30,46 +30,51 @@ ht-degree: 20%
 
 ### 必要な資格情報の収集
 
-Experience Platformで [!DNL Salesforce Marketing Cloud] アカウントにアクセスするには、次の値を指定する必要があります。
+認証について詳しくは、[[!DNL Salesforce Marketing Cloud]  概要 ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#prerequisites) を参照してください。
 
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| ホスト | アプリケーションのホストサーバー。 多くの場合、これはサブドメインです。 **メモ：**`host` 値を入力する場合は、`{subdomain}.rest.marketingcloudapis.com` を指定する必要があります。 例えば、ホスト URL が `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/` の場合、ホスト値として `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` を入力する必要があります。 |
-| クライアント ID | [!DNL Salesforce Marketing Cloud] アプリケーションに関連付けられたクライアント ID。 |
-| クライアントシークレット | [!DNL Salesforce Marketing Cloud] アプリケーションに関連付けられたクライアント秘密鍵。 |
-
-[!DNL Salesforce Marketing Cloud] の認証について詳しくは、[[!DNL Salesforce]  認証ドキュメント ](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm) を参照してください。
-
-## [!DNL Salesforce Marketing Cloud] アカウントを接続
+## ソースカタログのナビゲート
 
 >[!IMPORTANT]
 >
 >カスタムオブジェクトの取り込みは、現在、[!DNL Salesforce Marketing Cloud] ソース統合ではサポートされていません。
 
-Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] には、Experience Platformでサポートされている様々なソースが表示されます。
 
-カテゴリのリストから適切なカテゴリを選択できます。 検索バーを使用して、特定のソースをフィルタリングすることもできます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-[!UICONTROL &#x200B; マーケティング自動化 &#x200B;] カテゴリで、「**[!UICONTROL Salesforce Marketing Cloud]**」を選択し、**[!UICONTROL 設定]** を選択します。
+[!DNL Salesforce Marketing Cloud] に接続するには、「*[!UICONTROL マーケティング自動化]*」カテゴリに移動し、「**[!UICONTROL Salesforce Marketing Cloud]**」ソースカードを選択して、「**[!UICONTROL 設定]**」を選択します。
 
-![ ソースカタログとSalesforce Marketing Cloud ソースが選択されています。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+>[!TIP]
+>
+>ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントを作成すると、このオプションは **[!UICONTROL データを追加]** に変わります。
 
-**[!UICONTROL Salesforce Marketing Cloudへの接続]** ページが表示されます。 このページでは、新しいアカウントを作成するか、既存のアカウントを使用できます。
+![Salesforce Marketing Cloudのソースカードが選択されているソースカタログ ](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-### 新規アカウント
+## 既存のアカウントを使用 {#existing}
 
-新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前、説明（オプション）、[!DNL Salesforce Marketing Cloud] アカウントに対応する認証資格情報を入力します。
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Salesforce Marketing Cloud] アカウントを選択します。
 
-終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+![ ソースワークフローの既存のアカウントインターフェイスで「既存のアカウント」が選択されている様子。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
-![Salesforce Marketing Cloudの新しいアカウントを認証できる新しいアカウントインターフェイス。](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+## 新しいアカウントを作成 {#new}
 
-### 既存のアカウント
+[!DNL Salesforce Marketing Cloud] ソースを使用して、[!DNL Azure] または [!DNL Amazon Web Services] 上のExperience Platform（AWS）に接続できます。
 
-既存のアカウントがある場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、表示されるリストから使用するアカウントを選択します。
+### [!DNL Azure] でExperience Platformに接続する {#azure}
 
-![ 既存のSalesforce Marketing Cloud アカウントのリストから選択できる既存のアカウントインターフェイス。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+[!DNL Azure] でExperience Platformに接続するには、アカウント名、説明（オプション）、[ アカウント認証資格情報 ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#azure) を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-## 次の手順
+![Azure 上のExperience Platformに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/salesforce-marketing-cloud/new-azure.png)
 
-このチュートリアルでは、[!DNL Salesforce Marketing Cloud] アカウントとExperience Platformの間の接続を確立しました。 次のチュートリアルに進み、[ マーケティング自動化データをExperience Platformに取り込むためのデータフローの作成 ](../../dataflow/marketing-automation.md) を行いましょう。
+### Amazon Web ServicesのExperience Platform（AWS）への接続 {#aws}
+
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
+
+[!DNL AWS] でExperience Platformに接続するには、VA6 サンドボックスにいることを確認し、アカウント名、説明（オプション）、[ アカウント認証資格情報 ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#aws) を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+
+![AWS上のExperience Platformに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/salesforce-marketing-cloud/new-aws.png)
+
+## データのデータフロー [!DNL Salesforce Marketing Cloud] 作成
+
+[!DNL Salesforce Marketing Cloud] への接続が正常に完了したので、[ データフローを作成し、マーケティング自動化プロバイダーからExperience Platformにデータを取り込む ](../../dataflow/marketing-automation.md) ことができます。
