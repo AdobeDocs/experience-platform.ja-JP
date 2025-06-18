@@ -119,9 +119,9 @@ ht-degree: 36%
 >[!IMPORTANT]
 > 
 >* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* ID を書き出すには、ID グラフの表示 [ アクセス制御権限 ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) が必要です。
+>* ID を書き出すには、ID グラフの表示 [ アクセス制御権限 ](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) が必要です。
 
-この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)を参照してください。
+この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)を参照してください。
 
 ### 属性と ID のマッピング {#mapping-attributes-identities}
 
