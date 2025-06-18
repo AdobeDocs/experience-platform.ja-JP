@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="ベータ版" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 51%
+source-wordcount: '1054'
+ht-degree: 32%
 
 ---
 
@@ -20,7 +20,27 @@ ht-degree: 51%
 
 ## 概要 {#overview}
 
-非公開リストを使用して、Snowflake アカウントにデータを書き出します。
+Snowflake宛先コネクタを使用して、Adobe Snowflake インスタンスにデータを書き出し、[ 非公開リスト ](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about) を通じてインスタンスと共有します。
+
+Snowflakeの宛先の仕組みと、AdobeとSnowflakeの間でのデータの転送方法については、次の節を参照してください。
+
+### Snowflake データ共有の仕組み {#data-sharing}
+
+この宛先は、[!DNL Snowflake] データ共有を使用します。つまり、データが物理的に書き出されたり、独自のSnowflake インスタンスに転送されたりすることはありません。 代わりに、Adobeでは、Adobe Snowflake環境内でホストされるライブテーブルへの読み取り専用アクセスが許可されます。 この共有テーブルに対してSnowflake アカウントから直接クエリを実行できますが、テーブルを所有しておらず、指定した保持期間を超えてテーブルを変更または保持することはできません。 Adobeは、共有テーブルのライフサイクルと構造を完全に管理します。
+
+AdobeのSnowflake インスタンスから初めて自分のインスタンスにデータを共有する際に、Adobeからの非公開リストを受け入れるように求められます。
+
+### データ保持と有効期間（TTL） {#ttl}
+
+この統合を通じて共有されるすべてのデータでは、7 日間の固定有効期限（TTL）が設定されています。 最後の書き出しから 7 日後に、データフローがまだアクティブであるかどうかに関係なく、共有テーブルは自動的に期限切れになり、アクセスできなくなります。 7 日を超えてデータを保持する必要がある場合、TTL の有効期限が切れる前に、内容を独自のSnowflake インスタンスで所有するテーブルにコピーする必要があります。
+
+### オーディエンスの更新動作 {#audience-update-behavior}
+
+オーディエンスが [ バッチモード ](../../../segmentation/methods/batch-segmentation.md) で評価される場合、共有テーブルのデータは 24 時間ごとに更新されます。 つまり、オーディエンスメンバーシップの変更と共有テーブルに変更が反映される間に、最大 24 時間の遅延が発生する可能性があります。
+
+### 増分エクスポートロジック {#incremental-export}
+
+データフローが初めてオーディエンスに対して実行されると、バックフィルが実行され、現在認定されているすべてのプロファイルが共有されます。 この最初のバックフィルの後は、増分更新のみが共有テーブルに反映されます。 つまり、オーディエンスに追加されたプロファイルまたはオーディエンスから削除されたプロファイルです。 このアプローチにより、効率的な更新が保証され、共有テーブルが最新の状態に保たれます。
 
 ## 前提条件 {#prerequisites}
 
@@ -55,7 +75,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -65,7 +85,12 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 ![ 宛先への認証方法を示すサンプルスクリーンショット ](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
 
-### 宛先の詳細を入力 {#destination-details}
+### 宛先の詳細の入力 {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_accountID"
+>title="Snowflake アカウント ID を入力"
+>abstract="アカウントが組織にリンクされている場合は、次の形式を使用します。`OrganizationName.AccountName`<br><br> アカウントが組織にリンクされていない場合は、次の形式を使用します。`AccountName`"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
@@ -73,7 +98,9 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
-* **[!UICONTROL Snowflake アカウント ID]**：お使いのSnowflake アカウント ID。 例：`adobe-123456`。
+* **[!UICONTROL Snowflake アカウント ID]**：お使いのSnowflake アカウント ID。 アカウントが組織にリンクされているかどうかに応じて、次のアカウント ID 形式を使用します。
+   * アカウントが組織にリンクされている場合：`OrganizationName.AccountName`。
+   * アカウントが組織にリンクされていない場合：`AccountName`。
 * **[!UICONTROL アカウントの確認]**:「Snowflake アカウント ID の確認」をオンにして、アカウント ID が正しく、自分に属していることを確認します。
 
 >[!IMPORTANT]
@@ -90,8 +117,8 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
