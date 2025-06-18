@@ -1,7 +1,7 @@
 ---
 title: アルゴリア
 description: このコネクタを使用して、オーディエンスをアルゴリアに対してアクティブ化し、検索やレコメンデーション全体でパーソナライゼーションと使用を行います。 その後、Algolia ユーザープロファイルソースコネクタを使用して、プロファイルをReal-Time CDPに読み込み、豊富なオーディエンスを構築できます。
-source-git-commit: 2205ba48a6c17b8f34c4796c1777bfc53a6a7fe5
+source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 36%
@@ -15,7 +15,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->[!DNL Algolia] の宛先コネクタとドキュメントページは、Algolia Integration Services チームによって作成および管理されます。 お問い合わせや更新のリクエストについては、[adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com) までお問い合わせください。
+>[!DNL Algolia] の宛先コネクタとドキュメントページは、Algolia Integration Services チームによって作成および管理されます。 お問い合わせや更新のリクエストについては、[adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com) までお問い合わせください。
 
 [!DNL Algolia] の宛先接続を使用すると、Adobe Experience Platform オーディエンスをアルゴリアに送信して、パーソナライズされた検索やお勧めを受け取ることができます。 [!DNL Algolia] の宛先コネクタを使用する前に、まず [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) ソースコネクタを設定する必要があります。 ソースコネクタの設定チュートリアルでは、Algolia ユーザートークン ID を作成します。 この ID は、宛先コネクタを設定する際にマッピングに必要です。
 
@@ -43,8 +43,8 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**、**[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]**、**[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 ## サポートされている ID {#supported-identities}
 
@@ -82,7 +82,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -118,14 +118,14 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* ID を書き出すには、ID グラフの表示 [ アクセス制御権限 ](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) が必要です。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* ID を書き出すには、ID グラフの表示 [ アクセス制御権限 ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) が必要です。
 
-この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)を参照してください。
+この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)を参照してください。
 
 ### 属性と ID のマッピング {#mapping-attributes-identities}
 
-[!UICONTROL &#x200B; マッピング手順 &#x200B;] 中に、AlgoliaUserToken ソース ID を userId ターゲット ID にマッピングする必要があります。
+[!UICONTROL  マッピング手順 ] 中に、AlgoliaUserToken ソース ID を userId ターゲット ID にマッピングする必要があります。
 
 ![マッピング完了](../../assets/catalog/personalization/algolia/mapping-complete.png)
 
