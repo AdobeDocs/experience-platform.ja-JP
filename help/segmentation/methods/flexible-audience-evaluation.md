@@ -326,7 +326,7 @@ Experience Platform UI 内で柔軟なオーディエンス評価を実行する
 
 次のビデオでは、Experience Platformで柔軟なオーディエンス評価にアクセスして使用する方法を示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453641?&captions=jpn)
 
 ## よくある質問 {#faq}
 
