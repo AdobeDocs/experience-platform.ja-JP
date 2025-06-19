@@ -4,10 +4,10 @@ description: Azure で新しいエンタープライズアカウントを作成�
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 22%
+source-wordcount: '675'
+ht-degree: 19%
 
 ---
 
@@ -57,6 +57,14 @@ ht-degree: 22%
 
 左側のナビゲーションの「**[!DNL Networking]**」を選択します。 **[!DNL Firewalls and virtual networks]** の下で、「**[!DNL Allow trusted Microsoft services to bypass this firewall]**」チェックボックスを選択し、「**[!DNL Apply]**」を選択します。
 
+>[!NOTE]
+>
+>Key Vault が制限付きネットワークアクセスを使用する場合、Adobeでは次の静的 IP アドレスを追加することをお勧めします。`20.88.123.53` この IP アドレスを追加することで、Adobe サービスは接続性をより効果的に監視し、アクセスの問題が検出された場合に Platform 内アラートを提供できます。
+>
+>Adobeの IP アドレスを許可リストするタイミング、アラートの仕組み、主要なアクセス失敗通知への応答方法について詳しくは、[Azure CMK のアラートと IP アクセスの設定 ](./alerts-and-ip-access.md) を参照してください。
+>
+>Key Vault が既に公開ネットワークアクセスを許可するように設定されている場合は、それ以上のアクションは必要ありません。
+
 ![[!DNL Networking] と [!DNL Allow trusted Microsoft surfaces to bypass this firewall] の例外がハイライト表示された [!DNL Microsoft Azure] の「[!DNL Networking]」タブ ](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### キーの生成 {#generate-a-key}
@@ -69,7 +77,7 @@ Key Vault を作成したら、新しいキーを生成できます。 「**[!DN
 
 >[!NOTE]
 >
->キーをAdobeに送るために必要なので、キーに指定した名前を覚えておきます。
+>Adobeにキーを送信する際に必要なので、キーに指定した名前を覚えておきます。
 
 残りのコントロールを使用して、必要に応じて生成または読み込むキーを設定します。終了したら「**[!DNL Create]**」を選択します。
 
