@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
 workflow-type: tm+mt
-source-wordcount: '3626'
+source-wordcount: '3621'
 ht-degree: 58%
 
 ---
@@ -99,7 +99,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
   >
   > 2025 年 3 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートを展開しています。 この機能強化により、Experience Platformのレポートと出力先プラットフォームの間の整合性が向上します。
   >
-  > この更新の前は、すべてのアクティベーションの再試行が **ID 失敗** に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。
+  > この更新の前は、すべてのアクティベーションの再試行が ]**ID 失敗**[!UICONTROL  に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。
   > 
   > この機能強化は、すべてのストリーミング宛先に適用されます。
   > この機能強化に続いて、ストリーミング宛先のユーザーでは、**[!UICONTROL 失敗した ID]** 数が予想より減少する場合があります。
@@ -119,14 +119,33 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 ![ エラーメッセージがハイライト表示されたストリーミング宛先のデータフローレコード ](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### （Beta）ストリーミング宛先のオーディエンスレベルのデータフロー実行の監視 {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE Beta]{type=Informative} ストリーミング宛先のオーディエンスレベルのデータフロー実行の監視 {#audience-level-dataflow-runs-for-streaming-destinations}
 
 データフローの一部である各オーディエンスに対して、オーディエンスレベルで分類されたアクティブ化、除外、失敗した ID に関する情報を表示できます。
 
 ストリーミング宛先のオーディエンスレベルの監視は、現在、次の宛先でのみ使用できます。
 
-- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
-- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
+- [[!DNL (API) Oracle Eloqua] 接続](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+- [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+- [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+- [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+- [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+- [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+- [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+- [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+- [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+- [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+- [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+- [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+- [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+- [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+- [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+- [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+- [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+- [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+- [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+- [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 
 ![ ストリーミング宛先のオーディエンスレベルの監視。](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -305,7 +324,16 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >[!IMPORTANT]
 >
 >オーディエンスレベルの指標に関する現在の制限事項に注意してください。
->- オーディエンスレベルのビューは、現在、バッチ（ファイルベース）の宛先と [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) ストリーミングの宛先でのみ使用できます。 今後のストリーミング宛先へのロールアウトが予定されています。
+>
+>- 現在、以下に示す宛先では、オーディエンスレベルの表示を使用できます。 今後のストリーミング宛先へのロールアウトが予定されています。
+>
+>   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - バッチ（ファイルベース）の宛先
+> 
 >- バッチ宛先の場合、オーディエンスレベルの指標は、現在、データフローの正常な実行に関してのみ記録されます。 失敗したデータフロー実行や除外されたレコードに対しては、記録されません。 ストリーミング宛先へのデータフロー実行の場合、指標が取得され、アクティブ化されたレコードと除外されたレコードについて表示されます。
 
 ![ データフローパネルでハイライト表示されているオーディエンス。](../assets/ui/monitor-destinations/dashboard-segments-view.png)
