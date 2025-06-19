@@ -3,10 +3,10 @@ title: Quota API エンドポイント
 description: Data Hygiene API の/quota エンドポイントを使用すると、各ジョブタイプの組織の月間割り当て量制限に対する高度なデータライフサイクル管理の使用状況を監視できます。
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 48a83e2b615fc9116a93611a5e6a8e7f78cb4dee
+source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 29%
+source-wordcount: '492'
+ht-degree: 22%
 
 ---
 
@@ -14,10 +14,7 @@ ht-degree: 29%
 
 Data Hygiene API の `/quota` エンドポイントを使用すると、各ジョブタイプの組織の割り当て量制限に対する高度なデータライフサイクル管理の使用状況を監視できます。
 
-クォータは、次の方法でデータ・ライフサイクル・ジョブ・タイプごとに適用されます。
-
-* レコードの削除と更新は、1 か月あたり一定数のリクエストに制限されています。
-* データセットの有効期限には、有効期限が実行されるタイミングに関係なく、同時にアクティブなジョブの数に対して一定の制限があります。
+クォータの使用状況は、データ ライフサイクル ジョブの種類ごとに追跡されます。 実際の割り当て量の制限は、組織の使用権限によって異なり、定期的に確認する場合があります。 データセットの有効期限は、同時にアクティブなジョブの数にハードリミットが適用されます。
 
 ## はじめに
 
@@ -25,7 +22,15 @@ Data Hygiene API の `/quota` エンドポイントを使用すると、各ジ�
 
 * 関連ドキュメントへのリンク
 * このドキュメントのサンプル API 呼び出しの読み方に関するガイド
-* Experience PlatformAPI を呼び出すために必要な必須ヘッダーに関する重要な情報
+* Experience Platform API を呼び出すために必要な必須ヘッダーに関する重要な情報
+
+## 割り当て量と処理タイムライン {#quotas}
+
+レコードの削除リクエストは、ライセンスの使用権限に基づいて、割り当て量とサービスレベルの期待に左右されます。 これらの制限は、UI ベースの削除リクエストと API ベースの削除リクエストの両方に適用されます。
+
+>[!TIP]
+> 
+>このドキュメントでは、使用権限ベースの制限に対して使用状況をクエリする方法を説明します。 割り当て量階層、レコード削除の使用権限、SLAの動作について詳しくは、[UI ベースのレコード削除 ](../ui/record-delete.md#quotas) または [API ベースのレコード削除 ](./workorder.md#quotas) を参照してください。
 
 ## 割り当て量のリスト {#list}
 
@@ -70,13 +75,13 @@ curl -X GET \
       "name": "dailyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
       "consumed": 0,
-      "quota": 600000
+      "quota": 1000000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
       "consumed": 841,
-      "quota": 600000
+      "quota": 2000000
     },
     {
       "name": "monthlyUpdatedFieldIdentitiesQuota",
@@ -89,7 +94,5 @@ curl -X GET \
 ```
 
 | プロパティ | 説明 |
-| --- | --- |
+| -------- | ------- |
 | `quotas` | 各データ ライフサイクル ジョブ タイプのクォータ情報を一覧表示します。 各割り当て量のオブジェクトには、次のプロパティが含まれます。<ul><li>`name`: データ ライフサイクル ジョブの種類：<ul><li>`expirationDatasetQuota`：データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`: レコードの削除</li></ul></li><li>`description`: データ ライフサイクル ジョブ タイプの説明。</li><li>`consumed`：当期実行されたこのタイプのジョブの数。 オブジェクト名は、割り当て量の期間を示します。</li><li>`quota`：組織に対するこのジョブタイプの割り当て。 レコードの削除と更新の場合、割り当て量は、1 か月に実行できるジョブの数を表します。 データセット有効期限の場合、割り当て量は、任意の時点で同時にアクティブにできるジョブの数を表します。</li></ul> |
-
-{style="table-layout:auto"}

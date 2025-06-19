@@ -1,24 +1,20 @@
 ---
-title: レコードを削除
+title: レコード削除リクエスト（UI ワークフロー）
 description: Adobe Experience Platform UI でレコードを削除する方法を説明します。
-badgeBeta: label="ベータ版" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
 workflow-type: tm+mt
-source-wordcount: '1574'
-ht-degree: 25%
+source-wordcount: '1797'
+ht-degree: 22%
 
 ---
 
-# レコードの削除 {#record-delete}
+# レコード削除リクエスト（UI ワークフロー） {#record-delete}
 
-[[!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペース ](./overview.md) を使用して、プライマリ ID に基づいてAdobe Experience Platform内のレコードを削除します。 これらのレコードは、個々のコンシューマーまたは ID グラフに含まれるその他のエンティティに関連付けることができます。
+[[!UICONTROL  データライフサイクル ] ワークスペース ](./overview.md) を使用して、プライマリ ID に基づいてAdobe Experience Platform内のレコードを削除します。 これらのレコードは、個々のコンシューマーまたは ID グラフに含まれるその他のエンティティに関連付けることができます。
 
 >[!IMPORTANT]
-> 
->レコード削除機能は現在Betaにあり、**限定リリース** でのみ使用できます。 すべてのお客様にご利用いただけるわけではありません。 レコード削除リクエストは、限定リリースの組織でのみ使用できます。
-> 
-> 
+>
 >レコードの削除は、データクレンジング、匿名データの削除、またはデータの最小化のために使用されます。 これらは、EU 一般データ保護規則（GDPR）などのプライバシー規制に関するデータサブジェクト権利リクエスト（コンプライアンス）に対して使用するためのものでは&#x200B;**ありません**。コンプライアンスに関するユースケースについて詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) を参照してください。
 
 ## 前提条件 {#prerequisites}
@@ -35,9 +31,9 @@ Experience Platformの ID について詳しくは、次のドキュメントを
 
 ## リクエストの作成 {#create-request}
 
-プロセスを開始するには、Experience Platform UI の左側のナビゲーションで **[!UICONTROL データライフサイクル]** を選択します。 [!UICONTROL &#x200B; データライフサイクルリクエスト &#x200B;] ワークスペースが表示されます。 次に、ワークスペースのメインページから「**[!UICONTROL リクエストを作成]**」を選択します。
+プロセスを開始するには、Experience Platform UI の左側のナビゲーションで **[!UICONTROL データライフサイクル]** を選択します。 [!UICONTROL  データライフサイクルリクエスト ] ワークスペースが表示されます。 次に、ワークスペースのメインページから「**[!UICONTROL リクエストを作成]**」を選択します。
 
-![[!UICONTROL &#x200B; リクエストを作成 &#x200B;] が選択された [!UICONTROL &#x200B; データライフサイクルリクエスト &#x200B;] ワークスペース ](../images/ui/record-delete/create-request-button.png)
+![[!UICONTROL  リクエストを作成 ] が選択された [!UICONTROL  データライフサイクルリクエスト ] ワークスペース ](../images/ui/record-delete/create-request-button.png)
 
 リクエスト作成ワークフローが表示されます。 デフォルトでは、「**[!UICONTROL リクエストされたアクション]** セクションで **[!UICONTROL レコードを削除]** オプションが選択されています。 このオプションを選択されたままにします。
 
@@ -45,7 +41,7 @@ Experience Platformの ID について詳しくは、次のドキュメントを
 > 
 >効率を向上させ、データセット操作のコストを削減するために、Delta 形式に移動された組織は、ID サービス、リアルタイム顧客プロファイル、データレイクからデータを削除できます。 このタイプのユーザーは、デルタ移行済みと呼ばれます。 デルタ移行された組織のユーザーは、1 つまたはすべてのデータセットからレコードを削除できます。 次の画像に示すように、デルタ移行を受けていない組織のユーザーが、単一のデータセットまたはすべてのデータセットからレコードを選択的に削除できません。 この場合は、ガイドの [ID の提供 ](#provide-identities) の節に進みます。
 
-![ 「レコードを削除 [!UICONTROL &#x200B; オプションが選択されハイライト表示され &#x200B;] リクエスト作成ワークフロー ](../images/ui/record-delete/delete-record.png)
+![ 「レコードを削除 [!UICONTROL  オプションが選択されハイライト表示され ] リクエスト作成ワークフロー ](../images/ui/record-delete/delete-record.png)
 
 ## データセットの選択 {#select-dataset}
 
@@ -53,11 +49,11 @@ Experience Platformの ID について詳しくは、次のドキュメントを
 
 「**[!UICONTROL レコードの詳細]** セクションで、ラジオボタンを使用して、特定のデータセットとすべてのデータセットを選択します。 「**[!UICONTROL データセットを選択]**」を選択する場合は、データベースアイコン（![ データベースアイコン ](/help/images/icons/database.png)）に進んで、使用可能なデータセットのリストを提供するダイアログを開きます。 リストから目的のデータセットを選択し、続いて **[!UICONTROL 完了]** を選択します。
 
-[ データセットが選択され ] 完了 ![[!UICONTROL &#x200B; がハイライト表示された [!UICONTROL &#x200B; データセットを選択 &#x200B;] ダイアログ &#x200B;]](../images/ui/record-delete/select-dataset.png)
+![ データセットが選択され ] 完了 [!UICONTROL  がハイライト表示された [!UICONTROL  データセットを選択 ] ダイアログ ](../images/ui/record-delete/select-dataset.png)
 
 すべてのデータセットからレコードを削除する場合、「**[!UICONTROL すべてのデータセット]**」を選択します。
 
-![ 「[!UICONTROL &#x200B; すべてのデータセット &#x200B;] オプションが選択された [!UICONTROL &#x200B; データセットを選択 &#x200B;] ダイアログ ](../images/ui/record-delete/all-datasets.png)
+![ 「[!UICONTROL  すべてのデータセット ] オプションが選択された [!UICONTROL  データセットを選択 ] ダイアログ ](../images/ui/record-delete/all-datasets.png)
 
 >[!NOTE]
 >
@@ -124,7 +120,7 @@ JSON ファイルは、各オブジェクトが ID を表す、オブジェク�
 
 ID を手動で入力するには、「**[!UICONTROL ID を追加]**」を選択します。
 
-![ 「[!UICONTROL ID を追加 &#x200B;] オプションがハイライト表示されたリクエスト作成ワークフロー ](../images/ui/record-delete/add-identity.png)
+![ 「[!UICONTROL ID を追加 ] オプションがハイライト表示されたリクエスト作成ワークフロー ](../images/ui/record-delete/add-identity.png)
 
 ID を 1 つずつ入力できるコントロールが表示されます。 **[!UICONTROL ID 名前空間]** で、ドロップダウンメニューを使用して ID タイプを選択します。 「**[!UICONTROL プライマリ ID 値]**」で、レコードの ID 名前空間値を指定します。
 
@@ -134,27 +130,73 @@ ID を 1 つずつ入力できるコントロールが表示されます。 **[!
 
 ![ プラスアイコンと ID を追加アイコンがハイライトされたリクエスト作成ワークフロー ](../images/ui/record-delete/more-identities.png)
 
+## 割り当て量と処理タイムライン {#quotas}
+
+レコードの削除リクエストは、組織のライセンス使用権限によって決まる、1 日ごとおよび 1 か月ごとの識別子送信制限の対象です。 これらの制限は、UI ベースの削除リクエストと API ベースの削除リクエストの両方に適用されます。
+
+>[!NOTE]
+>
+>1 日に最大 **1,000,000 個の識別子を送信できますが** その権限は残りの月別クォータで与えられている場合に限られます。 1 か月の上限が 100 万未満の場合、毎日の送信がその上限を超えることはできません。
+
+### 製品別の月間送信使用権限 {#quota-limits}
+
+次の表に、製品および使用権限レベル別の識別子の送信制限の概要を示します。 各製品の月額上限は、固定の識別子上限またはライセンス取得済みデータボリュームに関連付けられた割合ベースのしきい値の、2 つの値のいずれか小さい方です。
+
+| 製品 | 使用権限の説明 | 月間キャップ （いずれか小さい方） |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDPまたはAdobe Journey Optimizer | プライバシーとセキュリティシールドまたは Healthcare Shield アドオンなし | 2,000,000 個の識別子（アドレス可能なオーディエンスの 5%） |
+| Real-Time CDPまたはAdobe Journey Optimizer | Privacy and Security Shield または Healthcare Shield アドオンを使用 | 15,000,000 個の識別子（アドレス可能なオーディエンスの 10%） |
+| Customer Journey Analytics | プライバシーとセキュリティシールドまたは Healthcare Shield アドオンなし | CJAの権利行あたり 2,000,000 の識別子または 1,000 の識別子 |
+| Customer Journey Analytics | Privacy and Security Shield または Healthcare Shield アドオンを使用 | CJAの権利行あたり 15,000,000 個の識別子または 2,000 個の識別子 |
+
+>[!NOTE]
+>
+> ほとんどの組織では、実際のアドレス可能なオーディエンスまたはCJA行の使用権限に基づいて、月間の上限が引き下げられます。
+
+クォータは、毎月 1 日にリセットされます。 未使用の割り当ては引き継がれ **い**。
+
+>[!NOTE]
+>
+>割り当て量は、組織でライセンスを取得した **送信済み識別子** の月次使用権に基づきます。 これらは、システムガードレールによって適用されるのではなく、監視およびレビューされる可能性があります。
+>
+>レコード削除は **共有サービス** です。 1 か月の上限には、Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analyticsおよび該当する Shield アドオン全体で最高の使用権限が反映されます。
+
+### 識別子の送信のタイムラインの処理 {#sla-processing-timelines}
+
+送信後、レコードの削除リクエストはキューに入り、使用権限レベルに基づいて処理されます。
+
+| 製品と使用権限の説明 | キューの期間 | 最大処理時間（SLA） |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| プライバシーとセキュリティシールドまたは Healthcare Shield アドオンなし | 最長 15 日間 | 30 日 |
+| Privacy and Security Shield または Healthcare Shield アドオンを使用 | 通常 24 時間 | 15 日 |
+
+組織でさらに上限が必要な場合は、Adobe担当者に連絡して使用権限のレビューを依頼してください。
+
+>[!TIP]
+>
+>現在のクォータの使用状況または使用権限層を確認するには、[ クォータのリファレンス ガイド ](../api/quota.md) を参照してください。
+
 ## リクエストの送信 {#submit}
 
 リクエストへの ID の追加が完了したら、「**[!UICONTROL 送信]**」を選択する前に&#x200B;**[!UICONTROL リクエスト設定]**&#x200B;でリクエストの名前とオプションの説明を入力します。
 
->[!IMPORTANT]
-> 
->毎月送信できる一意の ID レコード削除の合計数には、異なる制限があります。 これらの制限は、ライセンス契約に基づいています。 Adobe Real-Time Customer Data PlatformまたはAdobe Journey Optimizerのすべてのエディションを購入した組織は、毎月最大 100,000 件の ID レコード削除を送信できます。 **Adobe Healthcare Shield** または **Adobe Privacy &amp; Security Shield** を購入した組織は、毎月、最大 600,000 件の ID レコード削除を送信できます。<br>UI を使用して 1 つのレコードを削除するリクエストを実行すると、一度に 10,000 個の ID を送信できます。 レコードを削除する [API メソッド ](../api/workorder.md#create) を使用すると、一度に 100,000 個の ID を送信できます。<br> ベストプラクティスとして、ID の制限を上限とするリクエストあたり、できるだけ多くの ID を送信します。 大量の ID を削除する場合は、少量の ID や、レコード削除リクエストごとに 1 つの ID を送信しないでください。
+>[!TIP]
+>
+>UI を使用して、1 回のリクエストで最大 10,000 個の ID を送信できます。 より大きなボリューム（リクエストあたり最大 100,000 個の ID）を送信するには、[API メソッド ](../api/workorder.md#create) を使用します。
 
-![ リクエスト設定の [!UICONTROL &#x200B; 名前 &#x200B;] フィールドと [!UICONTROL &#x200B; 説明 &#x200B;] フィールドは「[!UICONTROL &#x200B; 送信 &#x200B;] がハイライト表示されています。](../images/ui/record-delete/submit.png)
+![ リクエスト設定の [!UICONTROL  名前 ] フィールドと [!UICONTROL  説明 ] フィールドは「[!UICONTROL  送信 ] がハイライト表示されています。](../images/ui/record-delete/submit.png)
 
-ID が削除されると復元できないことを示す [!UICONTROL &#x200B; リクエストを確認 &#x200B;] ダイアログが表示されます。 「**[!UICONTROL 送信]**」を選択して、データを削除する ID のリストを確定します。
+ID が削除されると復元できないことを示す [!UICONTROL  リクエストを確認 ] ダイアログが表示されます。 「**[!UICONTROL 送信]**」を選択して、データを削除する ID のリストを確定します。
 
-![[!UICONTROL &#x200B; リクエストを確認 &#x200B;] ダイアログ ](../images/ui/record-delete/confirm-request.png)
+![[!UICONTROL  リクエストを確認 ] ダイアログ ](../images/ui/record-delete/confirm-request.png)
 
-リクエストが送信されると、作業指示が作成され、「データライフサイクル  ワークスペースの  レコード [!UICONTROL &#x200B; タブに表示さ &#x200B;] ます。 ここから、リクエストを処理する作業指示のステータスを監視できます。
+リクエストが送信されると、作業指示が作成され、「データライフサイクル ] ワークスペースの [!UICONTROL  レコード [!UICONTROL  タブに表示さ ] ます。 ここから、リクエストを処理する作業指示のステータスを監視できます。
 
 >[!NOTE]
 >
 >レコードの削除が実行されるとどのように処理されるかの詳細については、[ タイムラインと透明性 ](../home.md#record-delete-transparency) の概要に関する節を参照してください。
 
-![ 新しいリクエストがハイライト表示された [!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペースの「[!UICONTROL &#x200B; レコード &#x200B;]」タブ。](../images/ui/record-delete/request-log.png)
+![ 新しいリクエストがハイライト表示された [!UICONTROL  データライフサイクル ] ワークスペースの「[!UICONTROL  レコード ]」タブ。](../images/ui/record-delete/request-log.png)
 
 ## 次の手順
 
