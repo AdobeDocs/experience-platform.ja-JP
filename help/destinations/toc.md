@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 5f23cb06a4c0bcd988bfcf981e473094ef7b0064
+source-git-commit: 75dec8987827a84cf791ed08f725baed5a8865ae
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1293'
 ht-degree: 75%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 75%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットを書き出し](/help/destinations/api/export-datasets.md)
-   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -91,7 +91,7 @@ ht-degree: 75%
       * [Google Ad Manager の接続](./catalog/advertising/google-ad-manager.md)
       * [（ベータ版）Google Ad Manager 360 接続](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 接続](./catalog/advertising/google-customer-match.md)
-      * [（Beta）Google Customer Match + DV360 接続](./catalog/advertising/google-customer-match-dv360.md)
+      * [Google Customer Match + DV360 接続](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360 接続](./catalog/advertising/google-dv360.md)
       * [Google gtag 拡張機能](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag 拡張機能](./catalog/advertising/linkedin.md)
