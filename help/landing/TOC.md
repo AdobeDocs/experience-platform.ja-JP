@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform でガイド、ドキュメント、チュートリアルを使用して、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
-source-git-commit: e53616a183cc8fe834782c82c56f8483d7b43eb1
+source-git-commit: 82ed3867d18153ac422a639338180865c984b614
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 53%
+source-wordcount: '336'
+ht-degree: 52%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 53%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ja)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=ja)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Experience PlatformとExperience Cloudの統合（ビデオ）](video/experience-cloud-integrations.md)
 * ガバナンス、プライバシー、セキュリティ {#governance-privacy-security}
    * [概要](./governance-privacy-security/overview.md)
@@ -78,13 +78,14 @@ ht-degree: 53%
       * Amazon Web Services {#aws}
          * [CMK 用のAWS KMS の設定](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
          * [UI を使用して、AWSに CMK を設定します](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
+      * [CMK アラート解決リファレンス](./governance-privacy-security/customer-managed-keys/alert-resolution-reference.md)
 * ライセンスの使用とガードレール {#license}
    * [データ管理ライセンス使用権限のベストプラクティス](./license-usage-and-guardrails/data-management-best-practices.md)
    * [ライセンス使用状況ダッシュボード](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [合計データ量](./license-usage-and-guardrails/total-data-volume.md)
-   * [Adobe Journey Optimizerガードレール ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=ja)
-   * [Customer Journey Analyticsガードレール ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=ja)
-   * [Real-Time CDPガードレール ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=ja)
+   * [Adobe Journey Optimizerガードレール ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analyticsガードレール ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Real-Time CDPガードレール ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [Gen2 Data Lake の移行](adls2-gen2-migration.md)
 * [用語集](glossary.md)
