@@ -1,10 +1,8 @@
 ---
 title: Id グラフリンクルール設定ガイド
 description: ID グラフリンクルールを使用して設定できる様々な実装タイプについて説明します。
-hide: true
-hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
+source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 8%
@@ -136,7 +134,7 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 >
 >以下の実装を完了するには、の ID 記号（大文字と小文字を区別）を使用して次のカスタム名前空間を作成する必要があります。
 >* `CRMID`
->* `CCHash` （これは、ハッシュ化されたクレジットカード番号を表すカスタム名前空間です。）
+>* `CChash` （これは、ハッシュ化されたクレジットカード番号を表すカスタム名前空間です。）
 
 例えば、クレジットカードを発行する商業銀行で働くデータアーキテクトの場合を考えてみます。 マーケティングチームが、過去のクレジットカードのトランザクション履歴をプロファイルに含める必要があることを示しました。 この ID グラフは次のようになります。
 
@@ -482,6 +480,7 @@ loginID: JanePersonal, ECID: 222
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
+>* `orderID`
 
 メディアおよびエンターテインメント企業の場合、エンドユーザーは次のアイテムを所有しています。
 
