@@ -2,12 +2,12 @@
 title: Demandbase の目的
 description: Experience Platformの Demandbase Intent ソースについて説明します。
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
-badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1480'
 ht-degree: 11%
 
 ---
@@ -71,6 +71,7 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 | `duration_type` | STRING | TRUE | はい | 期間のタイプ。 通常、この値は、選択したロールアップ期間に応じて、毎日、毎週、毎月のいずれかに設定されます。 このデータサンプルの場合、この値は `week` です。 |
 | `keyword_set_id` | STRING | TRUE | はい | キーワード セット ID。 これは、特定の顧客ごとに一意です。 |
 | `keyword_set` | STRING | TRUE | はい | キーワード セット名。 |
+| `keyword` | STRING | TRUE | | intent キーワード。 |
 | `is_trending` | STRING | TRUE | | 特定のトレンドの現在の状態。 トレンド状態は、過去 7 週間の平均に対する先週の意図的なアクティビティのバーストとして測定されます。 |
 | `intent_strength` | ENUM[STRING] | TRUE | | インテントの強さの定量化された指標。 使用可能な値は、`HIGH`、`MED`、`LOW` です。 |
 | `num_people_researching` | 整数 | TRUE | | 過去 7 日間に `company_id` ーザーに属し、キーワードを検索したユーザーの数。 |
