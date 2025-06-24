@@ -2,9 +2,9 @@
 title: Flow Service API を使用した SFTP ベース接続の作成
 description: Flow Service API を使用してAdobe Experience Platformを SFTP （Secure File Transfer Protocol）サーバーに接続する方法について説明します。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 14%
 
 ---
@@ -50,7 +50,7 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 
 >[!IMPORTANT]
 >
->[!DNL SFTP] コネクタは、RSA または DSA タイプの OpenSSH キーをサポートしています。 主要なファイルの内容が `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で始まり、`"-----END [RSA/DSA] PRIVATE KEY-----"` で終わることを確認してください。 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して、PPK 形式から OpenSSH 形式に変換します。
+>[!DNL SFTP] コネクタは、`ed25519`、`RSA` または `DSA` タイプの OpenSSH キーをサポートしています。 主要なファイルの内容が `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で始まり、`"-----END [RSA/DSA] PRIVATE KEY-----"` で終わることを確認してください。 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して、PPK 形式から OpenSSH 形式に変換します。
 
 **API 形式**
 
@@ -160,7 +160,7 @@ curl -X POST \
 | `auth.params.host` | [!DNL SFTP] サーバーのホスト名。 |
 | `auth.params.port` | SFTP サーバーのポート。 この整数値のデフォルトは 22 です。 |
 | `auth.params.username` | [!DNL SFTP] サーバーに関連付けられたユーザー名。 |
-| `auth.params.privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
+| `auth.params.privateKeyContent` | Base64 にエンコードされた SSH 秘密鍵の内容。 サポートされている OpenSSH キータイプは、`ed25519`、`RSA`、`DSA` です。 |
 | `auth.params.passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターは、PrivateKeyContent のパスフレーズを値として使用する必要があります。 |
 | `auth.params.maxConcurrentConnections` | Experience Platformを SFTP に接続する際に指定した同時接続の最大数。 有効にする場合、この値は 1 以上に設定する必要があります。 |
 | `auth.params.folderPath` | アクセス権を付与するフォルダーへのパス。 |

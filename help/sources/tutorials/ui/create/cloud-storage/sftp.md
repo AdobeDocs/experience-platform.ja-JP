@@ -2,9 +2,9 @@
 title: UI での SFTP Source接続の作成
 description: Adobe Experience Platform UI を使用して SFTP ソース接続を作成する方法を説明します。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '662'
 ht-degree: 25%
 
 ---
@@ -34,11 +34,11 @@ ht-degree: 25%
 
 ## [!DNL SFTP] サーバーへの接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-[!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「**[!UICONTROL SFTP]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
+[!UICONTROL  クラウドストレージ ] カテゴリで、「**[!UICONTROL SFTP]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
 
 ![Experience Platform ソースカタログと SFTP ソースが選択されています。](../../../../images/tutorials/create/sftp/catalog.png)
 
@@ -56,7 +56,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 >
 >* 作成した後は、[!DNL SFTP] ベース接続の認証タイプを変更できません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
 >
->* SFTP では、RSA または DSA タイプの OpenSSH キーをサポートしています。 主要なファイルの内容が `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で始まり、`"-----END [RSA/DSA] PRIVATE KEY-----"` で終わることを確認してください。 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して、PPK 形式から OpenSSH 形式に変換します。
+>* SFTP では、`ed25519`、`RSA` または `DSA` タイプの OpenSSH キーをサポートしています。 主要なファイルの内容が `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` で始まり、`"-----END [RSA/DSA] PRIVATE KEY-----"` で終わることを確認してください。 秘密鍵ファイルが PPK 形式のファイルの場合は、PuTTY ツールを使用して、PPK 形式から OpenSSH 形式に変換します。
 
 新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL SFTP] アカウントの名前と説明（オプション）を入力します。
 

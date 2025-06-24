@@ -2,10 +2,10 @@
 title: SFTP ソースコネクタの概要
 description: API またはユーザーインターフェイスを使用して SFTP サーバーを Adobe Experience Platform に接続する方法について説明します。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '1226'
-ht-degree: 45%
+source-wordcount: '1215'
+ht-degree: 42%
 
 ---
 
@@ -23,9 +23,9 @@ Adobe Experience Platformを使用すると、データを外部ソースから�
 
 [!DNL SFTP] ソースをExperience Platformに正常に接続するために必要な前提条件の手順については、この節を参照してください。
 
-### IP アドレス許可リスト
+### IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 許可リストに加える詳しくは、[IP アドレス ](../../ip-address-allow-list.md) ページを参照してください。
 
 ### ファイルとディレクトリの命名制約
 
@@ -183,7 +183,7 @@ SSH 公開鍵認証を使用して [!DNL SFTP] サーバーを認証するには
 | `port` | 接続先の [!DNL SFTP] サーバーポート。 指定しない場合、値はデフォルトで `22` になります。 |
 | `username` | [!DNL SFTP] サーバーにアクセスできるユーザー名。 |
 | `password` | [!DNL SFTP] サーバーのパスワード。 |
-| `privateKeyContent` | Base64 でエンコードされた SSH 秘密鍵のコンテンツ。 OpenSSH キーのタイプは、RSA または DSA のいずれかに分類する必要があります。 |
+| `privateKeyContent` | Base64 にエンコードされた SSH 秘密鍵の内容。 サポートされている OpenSSH キータイプは、`ed25519`、`RSA`、`DSA` です。 |
 | `passPhrase` | キーファイルまたはキーの内容がパスフレーズによって保護されている場合に秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContent がパスワードで保護されている場合、このパラメーターは、PrivateKeyContent のパスフレーズを値として使用する必要があります。 |
 | `maxConcurrentConnections` | このパラメーターを使用すると、Experience Platformが SFTP サーバーへの接続時に作成する同時接続数の上限を指定できます。 この値は、SFTP で設定された制限以下に設定する必要があります。 **注意**：既存の SFTP アカウントに対してこの設定が有効になっている場合、既存のデータフローではなく、今後のデータフローにのみ影響します。 |
 | `folderPath` | アクセス権を付与するフォルダーへのパス。 ソース [!DNL SFTP]、フォルダーパスを指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
