@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="ベータ版" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: c193a6aa45d179acdf655a70987875bf0da51b2b
+source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1160'
 ht-degree: 4%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 4%
 | ガードレール | 上限 | 制限タイプ |
 |---------|------------|------|
 | Experience Platform サービスのデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
+| イベント転送用データストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
 | Adobe Analyticsのデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
 | Adobe Targetのデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
 | Adobe Audience Managerのデータストリームごとの動的データストリーム設定の最大数 | 5 | パフォーマンスガードレール |
