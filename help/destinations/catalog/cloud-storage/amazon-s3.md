@@ -2,10 +2,10 @@
 title: Amazon S3 接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 48%
+source-wordcount: '1818'
+ht-degree: 39%
 
 ---
 
@@ -71,7 +71,7 @@ ht-degree: 48%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
@@ -87,32 +87,114 @@ ht-degree: 48%
 * アクセスキーと秘密鍵の認証
 * 想定される役割認証
 
-#### アクセスキーと秘密鍵の認証
+#### S3 アクセスキーと秘密鍵による認証
 
 Experience PlatformがAmazon S3 プロパティにデータを書き出せるようにAmazon S3 アクセスキーと秘密鍵を入力する場合は、この認証方法を使用します。
 
 ![ アクセスキーと秘密鍵の認証を選択する際の必須フィールドの画像 ](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
-* **[!DNL Amazon S3]アクセスキー** および秘密鍵 **: [!DNL Amazon S3] で `access key - secret access key` ペア**&#x200B;[!DNL Amazon S3] 生成して、[!DNL Amazon S3] アカウントにExperience Platform アクセス権を付与します。 詳しくは、[Amazon Web Services に関するドキュメント](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
+* **[!DNL Amazon S3]アクセスキー** および秘密鍵 **: [!DNL Amazon S3] で `access key - secret access key` ペア**[!DNL Amazon S3] 生成して、[!DNL Amazon S3] アカウントにExperience Platform アクセス権を付与します。 詳しくは、[Amazon Web Services に関するドキュメント](https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
 
   ![UI での正しい形式の PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### 想定される役割 {#assumed-role-authentication}
+#### S3 を使用した認証の役割 {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="想定される役割認証"
 >abstract="アカウントキーと秘密鍵をアドビと共有したくない場合は、この認証タイプを使用します。代わりに、Experience Platform は、役割ベースのアクセス権を使用して Amazon S3 の場所に接続します。アドビユーザー用に AWS で作成した役割の ARN をペーストします。このパターンは、`arn:aws:iam::800873819705:role/destinations-role-customer` のようになります "
 
-![ 想定される役割認証を選択する際の必須フィールドの画像 ](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 アカウントキーと秘密鍵をアドビと共有したくない場合は、この認証タイプを使用します。代わりに、Experience Platformは、役割ベースのアクセスを使用してAmazon S3 の場所に接続します。
 
-これを行うには、AWS コンソールで、Amazon S3 バケットに書き込む [ 必要な権限を持つ ](#minimum-permissions-iam-user)Adobeのユーザーを想定する必要があります。 Adobe アカウント **[!UICONTROL 670664943635]** を使用して、AWSに **[!UICONTROL 信頼済みエンティティ]** を作成します。 詳しくは、[ 役割の作成に関するAWS ドキュメント ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) を参照してください。
+![ 想定される役割認証を選択する際の必須フィールドの画像 ](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**:Adobe ユーザー用にAWSで作成したロールの ARN を貼り付けます。 パターンは `arn:aws:iam::800873819705:role/destinations-role-customer` に似ています。
+* **[!DNL Role]**:Adobe ユーザー用にAWSで作成したロールの ARN を貼り付けます。 パターンは `arn:aws:iam::800873819705:role/destinations-role-customer` に似ています。 S3 アクセスを正しく設定する方法の詳細なガイダンスについては、以下の手順を参照してください。
 * **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
+
+これを行うには、AWS コンソールで、Amazon S3 バケットに書き込むための [ 必要な権限を持つ ](#minimum-permissions-iam-user)Adobeの想定ロールを作成する必要があります。
+
+**必要な権限を持つポリシーの作成**
+
+1. AWS コンソールを開き、IAM / ポリシー/ ポリシーを作成に移動します
+2. ポリシーエディター/ JSON を選択し、以下に権限を追加します。
+
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "VisualEditor0",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:DeleteObject",
+                   "s3:GetBucketLocation",
+                   "s3:ListMultipartUploadParts"
+               ],
+               "Resource": "arn:aws:s3:::bucket/folder/*"
+           },
+           {
+               "Sid": "VisualEditor1",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:ListBucket"
+               ],
+               "Resource": "arn:aws:s3:::bucket"
+           }
+       ]
+   }
+   ```
+
+3. 次のページで、ポリシーの名前を入力し、参照用に保存します。 このポリシー名は、次の手順で役割を作成する際に必要になります。
+
+**S3 顧客アカウントでのユーザーロールの作成**
+
+1. AWS コンソールを開き、IAM / ロール /新しいロールの作成に移動します
+2. **信頼済みエンティティの種類**/**AWS アカウント** を選択します
+3. **AWS アカウント**/**別のAWS アカウント** を選択し、Adobe アカウント ID を入力します：`670664943635`
+4. 前に作成したポリシーを使用して権限を追加します
+5. 役割名（`destinations-role-customer` など）を入力します。 役割名は、パスワードと同様に、機密情報として扱う必要があります。 最大 64 文字で、英数字と次の特殊文字を含めることができます。`+=,.@-_` 次のことを確認します。
+   * Adobe アカウント ID `670664943635` は、「信頼できるエンティティを選択 **[!UICONTROL セクションに]** ります
+   * 前に作成したポリシーは、**[!UICONTROL 権限ポリシーの概要]** にあります
+
+**Adobeが想定する役割を指定**
+
+AWSでロールを作成したら、Adobeにロール ARN を指定する必要があります。 ARN は次のパターンに従います。`arn:aws:iam::800873819705:role/destinations-role-customer`
+
+ARN は、AWS コンソールでロールを作成した後、メインページに表示されます。 この ARN は、宛先を作成する際に使用します。
+
+**役割の権限と信頼関係の検証**
+
+役割に次の設定が含まれていることを確認します。
+
+* **権限**：役割には、S3 へのアクセス権限（フルアクセスまたは前述の **必要な権限を持つポリシーの作成** 手順で提供される最小限の権限）が必要です
+* **信頼関係**: ロールには、信頼関係にルート Adobe アカウント （`670664943635`）が必要です
+
+**代替：特定のAdobe ユーザーに制限（任意）**
+
+Adobe アカウント全体を許可しない場合は、特定のAdobe ユーザーのみにアクセスを制限できます。 それには、次の設定を使用して信頼ポリシーを編集します。
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+詳しくは、[ 役割の作成に関するAWS ドキュメント ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) を参照してください。
+
+
 
 ### 宛先の詳細を入力 {#destination-details}
 
@@ -209,8 +291,8 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
