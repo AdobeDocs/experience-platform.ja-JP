@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Flow Service API を使用した支払いシステムの調査
 description: このチュートリアルでは、Flow Service API を使用して支払いアプリケーションを調べます。
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 39%
+source-wordcount: '567'
+ht-degree: 41%
 
 ---
 
@@ -28,7 +28,10 @@ ht-degree: 39%
 
 ### 必要な資格情報の収集
 
-このチュートリアルでは、データの取り込み元となるサードパーティの支払い申請との有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様 ID と接続 ID が含まれます。 支払い連携の作成とこれらの値の取得について詳しくは、[ 支払いソースのExperience Platformへの接続 ](../../api/create/payments/paypal.md) チュートリアルを参照してください。
+ソースのファイルとファイル構造を調べるには、支払い申請とのアクティブな接続が必要です。 詳しくは、次のドキュメントを参照してください。
+
+* [[!DNL Square]](../create/payments/square.md)
+* [[!DNL Stripe]](../create/payments/stripe.md)
 
 ### API 呼び出し例の読み取り
 
@@ -83,29 +86,29 @@ curl -X GET \
 [
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans",
-        "path": "PayPal.Billing_Plans",
+        "name": "Stripe.Billing_Plans",
+        "path": "Stripe.Billing_Plans",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition",
-        "path": "PayPal.Billing_Plans_Payment_Definition",
+        "name": "Stripe.Billing_Plans_Payment_Definition",
+        "path": "Stripe.Billing_Plans_Payment_Definition",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
-        "path": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
+        "name": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
+        "path": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Catalog_Products",
-        "path": "PayPal.Catalog_Products",
+        "name": "Stripe.Catalog_Products",
+        "path": "Stripe.Catalog_Products",
         "canPreview": true,
         "canFetchSchema": true
     }

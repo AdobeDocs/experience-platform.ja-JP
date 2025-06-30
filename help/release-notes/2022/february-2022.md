@@ -2,7 +2,7 @@
 title: Adobe Experience Platform リリースノート（2022年2月）
 description: Adobe Experience Platform の 2022年2月のリリースノートです。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 92%
@@ -33,7 +33,7 @@ Adobe Experience Platform では、複数の [!DNL dashboards] を提供して�
 
 | 機能 | 説明 |
 | --- | --- |
-| 新しい標準宛先ウィジェット | 以下の標準ウィジェットを使用すると、宛先に関連する異なる指標を視覚化できます。<ul><li>最近アクティブ化されたセグメント（宛先別）。このウィジェットは、選択した宛先に応じて、最近アクティブ化された上位 5 つのセグメントを降順で示します。</li><li>オーディエンスサイズのトレンド。このウィジェットは、宛先アカウントにマッピングされたセグメントの期間におけるプロファイル数の関係を示します。</li><li>マッピングされていないセグメント（ID 別）。このウィジェットには、特定の宛先と ID に対して、ID 数の降順でランク付けされた上位 5 つのマッピングされていないセグメントが一覧表示されます。</li><li>マッピングされたセグメント（ID 別）。このウィジェットは、上位 5 つのマッピングされたセグメントのリストを表示します。セグメントは、ウィジェットのドロップダウンメニューから選択した宛先 ID に一致するソース ID のそれぞれのカウント数に従って、多い順に並べられます。</li><li>一般的なオーディエンス。このウィジェットには、ページ上部で選択された宛先アカウント全体でアクティブ化された上位 5 つのセグメントと、ウィジェットのドロップダウンで選択された宛先が一覧表示されます。</li></ul> 使用できる標準ウィジェットについて詳しくは、[宛先ダッシュボードドキュメント](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=ja#standard-widgets)を参照してください。 |
+| 新しい標準宛先ウィジェット | 以下の標準ウィジェットを使用すると、宛先に関連する異なる指標を視覚化できます。<ul><li>最近アクティブ化されたセグメント（宛先別）。このウィジェットは、選択した宛先に応じて、最近アクティブ化された上位 5 つのセグメントを降順で示します。</li><li>オーディエンスサイズのトレンド。このウィジェットは、宛先アカウントにマッピングされたセグメントの期間におけるプロファイル数の関係を示します。</li><li>マッピングされていないセグメント（ID 別）。このウィジェットには、特定の宛先と ID に対して、ID 数の降順でランク付けされた上位 5 つのマッピングされていないセグメントが一覧表示されます。</li><li>マッピングされたセグメント（ID 別）。このウィジェットは、上位 5 つのマッピングされたセグメントのリストを表示します。セグメントは、ウィジェットのドロップダウンメニューから選択した宛先 ID に一致するソース ID のそれぞれのカウント数に従って、多い順に並べられます。</li><li>一般的なオーディエンス。このウィジェットには、ページ上部で選択された宛先アカウント全体でアクティブ化された上位 5 つのセグメントと、ウィジェットのドロップダウンで選択された宛先が一覧表示されます。</li></ul> 使用できる標準ウィジェットについて詳しくは、[宛先ダッシュボードドキュメント](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets)を参照してください。 |
 
 [!DNL Dashboards] について詳しくは、[[!DNL Dashboards] 概要](../../dashboards/home.md)を参照してください。
 
@@ -85,6 +85,6 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| ベータ版ソースの一般公開（GA） | 以下のソースがベータ版から一般公開（GA）に昇格しました。 <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| ベータ版ソースの一般公開（GA） | 以下のソースがベータ版から一般公開（GA）に昇格しました。 <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li></ul> |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

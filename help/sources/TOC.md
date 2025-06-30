@@ -5,10 +5,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
+source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 92%
+source-wordcount: '1045'
+ht-degree: 91%
 
 ---
 
@@ -58,16 +58,14 @@ ht-degree: 92%
       - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP コネクタ](connectors/cloud-storage/sftp.md)
       - [Amazon S3 および Azure Blob コネクタ](connectors/cloud-storage/blob-s3.md)
-   - 同意および環境設定 {#consent}
+   - 同意およびユーザー設定 {#consent}
       - [OneTrust 統合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforce コネクター](connectors/crm/salesforce.md)
       - [SugarCRM コネクタ](connectors/crm/sugarcrm.md)
       - [Veeva CRM コネクタ](connectors/crm/veeva.md)
-      - [Zoho CRM コネクタ](connectors/crm/zoho.md)
    - カスタマーサクセス {#customer-success}
-      - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud コネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow コネクタ](connectors/customer-success/servicenow.md)
       - [Zendesk コネクタ](connectors/customer-success/zendesk.md)
@@ -79,7 +77,6 @@ ht-degree: 92%
       - [Azure Data Explorer コネクタ](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics コネクタ](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage コネクタ](connectors/databases/ats.md)
-      - [Couchbase コネクタ](connectors/databases/couchbase.md)
       - [Google BigQuery コネクタ](connectors/databases/bigquery.md)
       - [GreenPlum コネクタ](connectors/databases/greenplum.md)
       - [HP Vertica コネクタ](connectors/databases/hp-vertica.md)
@@ -88,7 +85,6 @@ ht-degree: 92%
       - [Microsoft SQL Server コネクタ](connectors/databases/sql-server.md)
       - [MySQL コネクタ](connectors/databases/mysql.md)
       - [Oracle コネクタ](connectors/databases/oracle.md)
-      - [Phoenix コネクタ](connectors/databases/phoenix.md)
       - [PostgreSQL コネクタ](connectors/databases/postgres.md)
       - [Snowflake ストリーミングコネクタ](connectors/databases/snowflake-streaming.md)
       - [Snowflake コネクタ](connectors/databases/snowflake.md)
@@ -114,11 +110,9 @@ ht-degree: 92%
       - [Mailchimp コネクタ](connectors/marketing-automation/mailchimp.md)
       - [Oracle Eloqua コネクタ](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
-      - [Oracle Responsys コネクタ](connectors/marketing-automation/oracle-responsys.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 支払い {#payments}
-      - [PayPal コネクタ](connectors/payments/paypal.md)
       - [正方形コネクタ](connectors/payments/square.md)
       - [Stripe コネクタ](connectors/payments/stripe.md)
    - プロトコル {#protocols}
@@ -148,7 +142,7 @@ ht-degree: 92%
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
-      - 同意および環境設定 {#consent}
+      - 同意およびユーザー設定 {#consent}
          - [OneTrust 統合](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -156,9 +150,7 @@ ht-degree: 92%
          - [SugarCRM アカウントおよび連絡先](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM イベント](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
-         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - カスタマーサクセス {#customer-success}
-         - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -170,7 +162,6 @@ ht-degree: 92%
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
-         - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -178,7 +169,6 @@ ht-degree: 92%
          - [MariaDB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
-         - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake ストリーミング](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
@@ -197,11 +187,9 @@ ht-degree: 92%
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Oracle NetSuite アクティビティ](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite エンティティ](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
-         - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
-         - [PayPal](tutorials/api/create/payments/paypal.md)
          - [正方形](tutorials/api/create/payments/square.md)
          - [Stripe](tutorials/api/create/payments/stripe.md)
       - プロトコル {#protocols}
@@ -275,7 +263,7 @@ ht-degree: 92%
          - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 と Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
-      - 同意および環境設定 {#consent}
+      - 同意およびユーザー設定 {#consent}
          - [OneTrust 統合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
@@ -283,9 +271,7 @@ ht-degree: 92%
          - [SugarCRM アカウントおよび連絡先](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM イベント](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
-         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - カスタマーサクセス {#customer-success}
-         - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -297,7 +283,6 @@ ht-degree: 92%
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
-         - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
@@ -306,7 +291,6 @@ ht-degree: 92%
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
-         - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflake ストリーミング](tutorials/ui/create/databases/snowflake-streaming.md)
@@ -334,11 +318,9 @@ ht-degree: 92%
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Oracle NetSuite アクティビティ](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite エンティティ](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
-         - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
-         - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [正方形](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - プロトコル {#protocols}

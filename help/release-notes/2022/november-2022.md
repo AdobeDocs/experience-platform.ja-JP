@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2022年11月
 description: Adobe Experience Platform の 2022年11月 のリリースノート。
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 89%
+source-wordcount: '312'
+ht-degree: 91%
 
 ---
 
@@ -46,17 +46,3 @@ XDM は、Adobe Experience Platform に取り込むデータの共通構造お�
 {style="table-layout:auto"}
 
 Experience Platformの XDM について詳しくは、「[XDM システムの概要 ](../../xdm/home.md)」を参照してください。
-
-## ソース {#sources}
-
-Adobe Experience Platformでは、外部ソースからデータを取り込むときに、Experience Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
-
-Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
-
-**更新された機能**
-
-| 機能 | 説明 |
-| --- | --- | 
-| Oracle Service Cloud ソースのベータ版の可用性 | Oracle Service Cloud ソースを使用すると、Oracle Service Cloud アカウントから Experience Platform にデータを取り込むことができます。詳しくは、[Oracle Service Cloud ソース](../../sources/connectors/customer-success/oracle-service-cloud.md)に関するドキュメントを参照してください。 |
-
-ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。

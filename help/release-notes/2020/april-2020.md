@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: リリースノート；
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '972'
 ht-degree: 58%
 
 ---
@@ -130,8 +130,7 @@ Adobe Experience Platformでは、外部ソースからデータを取り込む�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| データベースの API と UI のサポート | [!DNL Apache Spark] （HDInsights 上）、[!DNL Azure Synapse Analytics]、[!DNL Azure Table Storage]、[!DNL Hive] （HDInsights 上）、[!DNL Phoenix] の新しいソースコネクタ。 |
-| 支払いベースのアプリケーションの API と UI のサポート | [!DNL PayPal] の新しいソースコネクタ。 |
+| データベースの API と UI のサポート | （HDInsights 上の） [!DNL Apache Spark]、[!DNL Azure Synapse Analytics]、[!DNL Azure Table Storage] および [!DNL Hive] 用の新しいソースコネクタ。 |
 | プロトコルベースのアプリケーションの API と UI のサポート | [!DNL Generic OData] の新しいソースコネクタ。 |
 
 **既知の問題**

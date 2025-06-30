@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2021年10月
 description: Adobe Experience Platform の 2021年10月のリリースノート。
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 76%
+source-wordcount: '433'
+ht-degree: 79%
 
 ---
 
@@ -58,7 +58,6 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | 機能 | 説明 |
 | --- | --- |
 | [!DNL Amazon S3] ソースの機能強化 | これで、`s3SessionToken` パラメーターを使用して、一時的なセキュリティ資格情報を使用して [!DNL Amazon S3] アカウントをExperience Platformに接続できます。 このトークンを使用すると、信頼できない環境のユーザーに [!DNL Amazon S3] リソースへの短期間の一時的なアクセスを提供できます。詳しくは、[[!DNL Amazon S3] ドキュメント](../../sources/connectors/cloud-storage/s3.md#prerequisites)を参照してください。 |
-| [!DNL Generic REST API]（ベータ版） | [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) を使用して [!DNL Generic REST API] ソース接続を作成し、汎用の REST アプリケーションからExperience Platformにデータを取り込むことができるようになりました。 詳しくは、[[!DNL Generic REST API] 概要](../../sources/connectors/protocols/generic-rest.md)を参照してください。 |
-| [!DNL Zoho CRM]（ベータ版） | [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) または [ ユーザーインターフェイス ](../../sources/tutorials/ui/create/crm/zoho.md) を使用して [!DNL Zoho CRM] ソース接続を作成し、[!DNL Zoho CRM] アカウントからExperience Platformにデータを移行できるようになりました。 詳しくは、[[!DNL Zoho CRM]  の概要](../../sources/connectors/crm/zoho.md)を参照してください。 |
+| [!DNL Generic REST API]（ベータ版） | [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) を使用して [!DNL Generic REST API] ソース接続を作成し、汎用の REST アプリケーションからExperience Platformにデータを取り込むことができるようになりました。 詳しくは、[[!DNL Generic REST API]  の概要](../../sources/connectors/protocols/generic-rest.md)を参照してください。 |
 
 ソースについて詳しくは、 [ソースの概要](../../sources/home.md) を参照してください。
