@@ -11,7 +11,7 @@ ht-degree: 19%
 
 # レコード削除リクエスト（UI ワークフロー） {#record-delete}
 
-[[!UICONTROL  データライフサイクル ] ワークスペース ](./overview.md) を使用して、プライマリ ID に基づいてAdobe Experience Platform内のレコードを削除します。 これらのレコードは、個々のコンシューマーまたは ID グラフに含まれるその他のエンティティに関連付けることができます。
+[[!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペース ](./overview.md) を使用して、プライマリ ID に基づいてAdobe Experience Platform内のレコードを削除します。 これらのレコードは、個々のコンシューマーまたは ID グラフに含まれるその他のエンティティに関連付けることができます。
 
 >[!IMPORTANT]
 >
@@ -31,9 +31,9 @@ Experience Platformの ID について詳しくは、次のドキュメントを
 
 ## リクエストの作成 {#create-request}
 
-プロセスを開始するには、Experience Platform UI の左側のナビゲーションで **[!UICONTROL データライフサイクル]** を選択します。 [!UICONTROL  データライフサイクルリクエスト ] ワークスペースが表示されます。 次に、ワークスペースのメインページから「**[!UICONTROL リクエストを作成]**」を選択します。
+プロセスを開始するには、Experience Platform UI の左側のナビゲーションで **[!UICONTROL データライフサイクル]** を選択します。 [!UICONTROL &#x200B; データライフサイクルリクエスト &#x200B;] ワークスペースが表示されます。 次に、ワークスペースのメインページから「**[!UICONTROL リクエストを作成]**」を選択します。
 
-![[!UICONTROL  リクエストを作成 ] が選択された [!UICONTROL  データライフサイクルリクエスト ] ワークスペース ](../images/ui/record-delete/create-request-button.png)
+![[!UICONTROL &#x200B; リクエストを作成 &#x200B;] が選択された [!UICONTROL &#x200B; データライフサイクルリクエスト &#x200B;] ワークスペース ](../images/ui/record-delete/create-request-button.png)
 
 リクエスト作成ワークフローが表示されます。 デフォルトでは、「**[!UICONTROL リクエストされたアクション]** セクションで **[!UICONTROL レコードを削除]** オプションが選択されています。 このオプションを選択されたままにします。
 
@@ -41,7 +41,7 @@ Experience Platformの ID について詳しくは、次のドキュメントを
 > 
 >効率を向上させ、データセット操作のコストを削減するために、Delta 形式に移動された組織は、ID サービス、リアルタイム顧客プロファイル、データレイクからデータを削除できます。 このタイプのユーザーは、デルタ移行済みと呼ばれます。 デルタ移行された組織のユーザーは、1 つまたはすべてのデータセットからレコードを削除できます。 次の画像に示すように、デルタ移行を受けていない組織のユーザーが、単一のデータセットまたはすべてのデータセットからレコードを選択的に削除できません。 この場合は、ガイドの [ID の提供 ](#provide-identities) の節に進みます。
 
-![ 「レコードを削除 [!UICONTROL  オプションが選択されハイライト表示され ] リクエスト作成ワークフロー ](../images/ui/record-delete/delete-record.png)
+![ 「レコードを削除 [!UICONTROL &#x200B; オプションが選択されハイライト表示され &#x200B;] リクエスト作成ワークフロー ](../images/ui/record-delete/delete-record.png)
 
 ## データセットの選択 {#select-dataset}
 
@@ -51,11 +51,11 @@ Experience Platformの ID について詳しくは、次のドキュメントを
 
 特定のデータセットから削除するには、**[!UICONTROL データセットを選択]** を選択してから、データベースアイコン（![ データベースアイコン ](/help/images/icons/database.png)）を選択します。 表示されるダイアログで、データセットを選択し、「**[!UICONTROL 完了]**」を選択して確定します。
 
-![ データセットが選択され [!UICONTROL  完了 ] がハイライト表示された [!UICONTROL  データセットを選択 ] ダイアログ ](../images/ui/record-delete/select-dataset.png)
+![ データセットが選択され [!UICONTROL &#x200B; 完了 &#x200B;] がハイライト表示された [!UICONTROL &#x200B; データセットを選択 &#x200B;] ダイアログ ](../images/ui/record-delete/select-dataset.png)
 
 すべてのデータセットから削除するには、「**[!UICONTROL すべてのデータセット]**」を選択します。 このオプションを使用すると、操作の範囲が広がり、関連するすべての ID タイプを指定する必要があります。
 
-![ 「[!UICONTROL  すべてのデータセット ] オプションが選択された [!UICONTROL  データセットを選択 ] ダイアログ ](../images/ui/record-delete/all-datasets.png)
+![ 「[!UICONTROL &#x200B; すべてのデータセット &#x200B;] オプションが選択された [!UICONTROL &#x200B; データセットを選択 &#x200B;] ダイアログ ](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
@@ -127,7 +127,7 @@ JSON ファイルは、各オブジェクトが ID を表す、オブジェク�
 
 ID を手動で入力するには、「**[!UICONTROL ID を追加]**」を選択します。
 
-![ 「[!UICONTROL ID を追加 ] オプションがハイライト表示されたリクエスト作成ワークフロー ](../images/ui/record-delete/add-identity.png)
+![ 「[!UICONTROL ID を追加 &#x200B;] オプションがハイライト表示されたリクエスト作成ワークフロー ](../images/ui/record-delete/add-identity.png)
 
 ID を 1 つずつ入力できるコントロールが表示されます。 **[!UICONTROL ID 名前空間]** で、ドロップダウンメニューを使用して ID タイプを選択します。 「**[!UICONTROL プライマリ ID 値]**」で、レコードの ID 名前空間値を指定します。
 
@@ -191,19 +191,19 @@ ID を 1 つずつ入力できるコントロールが表示されます。 **[!
 >
 >UI を使用して、1 回のリクエストで最大 10,000 個の ID を送信できます。 より大きなボリューム（リクエストあたり最大 100,000 個の ID）を送信するには、[API メソッド ](../api/workorder.md#create) を使用します。
 
-![ リクエスト設定の [!UICONTROL  名前 ] フィールドと [!UICONTROL  説明 ] フィールドは「[!UICONTROL  送信 ] がハイライト表示されています。](../images/ui/record-delete/submit.png)
+![ リクエスト設定の [!UICONTROL &#x200B; 名前 &#x200B;] フィールドと [!UICONTROL &#x200B; 説明 &#x200B;] フィールドは「[!UICONTROL &#x200B; 送信 &#x200B;] がハイライト表示されています。](../images/ui/record-delete/submit.png)
 
-ID が削除されると復元できないことを示す [!UICONTROL  リクエストを確認 ] ダイアログが表示されます。 「**[!UICONTROL 送信]**」を選択して、データを削除する ID のリストを確定します。
+ID が削除されると復元できないことを示す [!UICONTROL &#x200B; リクエストを確認 &#x200B;] ダイアログが表示されます。 「**[!UICONTROL 送信]**」を選択して、データを削除する ID のリストを確定します。
 
-![[!UICONTROL  リクエストを確認 ] ダイアログ ](../images/ui/record-delete/confirm-request.png)
+![[!UICONTROL &#x200B; リクエストを確認 &#x200B;] ダイアログ ](../images/ui/record-delete/confirm-request.png)
 
-リクエストが送信されると、作業指示が作成され、「データライフサイクル [!UICONTROL  ワークスペースの ] レコード [!UICONTROL  タブに表示さ ] ます。 ここから、リクエストを処理する作業指示のステータスを監視できます。
+リクエストが送信されると、作業指示が作成され、「データライフサイクル [!UICONTROL &#x200B; ワークスペースの &#x200B;] レコード [!UICONTROL &#x200B; タブに表示さ &#x200B;] ます。 ここから、リクエストを処理する作業指示のステータスを監視できます。
 
 >[!NOTE]
 >
 >レコードの削除が実行されるとどのように処理されるかの詳細については、[ タイムラインと透明性 ](../home.md#record-delete-transparency) の概要に関する節を参照してください。
 
-![ 新しいリクエストがハイライト表示された [!UICONTROL  データライフサイクル ] ワークスペースの「[!UICONTROL  レコード ]」タブ。](../images/ui/record-delete/request-log.png)
+![ 新しいリクエストがハイライト表示された [!UICONTROL &#x200B; データライフサイクル &#x200B;] ワークスペースの「[!UICONTROL &#x200B; レコード &#x200B;]」タブ。](../images/ui/record-delete/request-log.png)
 
 ## 次の手順
 
