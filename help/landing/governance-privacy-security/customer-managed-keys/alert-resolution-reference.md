@@ -1,9 +1,10 @@
 ---
 title: CMK アラート解決リファレンス
 description: Adobe Experience Platformの顧客管理キー（CMK）の設定ミスによってトリガーされる一般的なアラートを特定、トラブルシューティング、解決します。 このガイドを使用して、明確で段階的な手順に従い、安全なキーアクセスを復元します。
-source-git-commit: 0d9cc046956dd380bb8816f0d8bf497bbad6140b
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
+source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '904'
 ht-degree: 1%
 
 ---
@@ -22,11 +23,7 @@ ht-degree: 1%
 
 ## キーアクセスが無効 {#key-access-disabled}
 
-このアラートは、キーが無効になっているか、関連するキー設定の問題によってキーにアクセスできないとレンダリングされたことが原因で、Adobe Experience Platformが設定済みの CMK にアクセスできないことを示します。
-
->[!IMPORTANT]
->
->この場合、Adobe CMK は、アクセスエラーを意図的な削除として扱い、SLAに基づいて、組織に関連付けられたすべてのデータをパージします。
+このアラートは、キーが無効になっているか、設定が原因でアクセスできないので、Adobe Experience Platformが設定された CMK にアクセスできないことを示します。 このような場合、システムは条件をキーへのアクセスの意図的な削除として扱います。
 
 ### 発生した場合
 
