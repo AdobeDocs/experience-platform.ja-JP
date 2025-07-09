@@ -26,7 +26,7 @@ Query Service スケジュール API を使用して、スケジュールされ�
 >
 >スケジュール済みクエリを管理する際の重要な考慮事項：<ul><li>スケジュールされたクエリは、クエリの作成に使用したアカウント（技術またはユーザー）がアクセス権または権限を失った場合に失敗します。</li><li>スケジュールされたクエリは、API または UI で削除する前に無効にする必要があります。</li><li>終了日を指定せずに無期限にスケジュールすることはできません。終了日は必ず指定する必要があります。</li></ul>
 
-アカウント要件、権限の設定、スケジュールされたクエリの管理に関する詳しいガイダンスについては、[ クエリスケジュールのドキュメント ](../ui/query-schedules.md#technical-account-user-requirements) を参照してください。 テクニカルアカウントの作成と設定に関する詳細な手順については、[Developer Consoleの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) および [ エンドツーエンドのテクニカルアカウントの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup) を参照してください。
+アカウント要件、権限の設定、スケジュールされたクエリの管理に関する詳しいガイダンスについては、[ クエリスケジュールのドキュメント ](../ui/query-schedules.md#technical-account-user-requirements) を参照してください。 テクニカルアカウントの作成と設定に関する詳細な手順については、[Developer Consoleの設定 ](https://experienceleague.adobe.com/ja/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) および [ エンドツーエンドのテクニカルアカウントの設定 ](https://experienceleague.adobe.com/ja/docs/platform-learn/tutorial-comprehensive-technical/setup) を参照してください。
 
 ## サンプル API 呼び出し
 

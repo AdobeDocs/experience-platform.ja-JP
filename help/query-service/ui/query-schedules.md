@@ -25,8 +25,8 @@ ht-degree: 12%
 
 テクニカルアカウントの作成と設定に関するその他のガイダンスについては、次を参照してください。
 
-- [Developer Consoleの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Adobe Developer Consoleを設定し、OAuth 資格情報を取得するための詳細手順。
-- [ エンドツーエンドのテクニカルアカウントの設定 ](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup):Adobe Experience Platformでテクニカルアカウントを作成および設定するための包括的なチュートリアル。
+- [Developer Consoleの設定 ](https://experienceleague.adobe.com/ja/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Adobe Developer Consoleを設定し、OAuth 資格情報を取得するための詳細手順。
+- [ エンドツーエンドのテクニカルアカウントの設定 ](https://experienceleague.adobe.com/ja/docs/platform-learn/tutorial-comprehensive-technical/setup):Adobe Experience Platformでテクニカルアカウントを作成および設定するための包括的なチュートリアル。
 
 クエリサービス UI のみを使用する場合は、必要な権限を持っていることを確認するか、テクニカルアカウントを管理する管理者と調整します。 スケジュールされたクエリはすべて「[!UICONTROL &#x200B; スケジュール済みクエリ &#x200B;]」タブのリストに追加され、スケジュールされたすべてのクエリジョブのステータス、スケジュールの詳細、エラーメッセージを監視したり、アラートを購読したりできます。 クエリの監視と管理について詳しくは、[ スケジュールされたクエリの監視ドキュメント ](./monitor-queries.md) を参照してください。
 
