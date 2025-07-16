@@ -5,10 +5,10 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: Adobe Experience Platform で生成したセグメント定義または外部ソースを使用して、リアルタイム顧客プロファイルデータからオーディエンスを作成します。
 feature: Segments
 role: User
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 79%
+source-wordcount: '208'
+ht-degree: 76%
 
 ---
 
@@ -17,12 +17,14 @@ ht-degree: 79%
 
 - [セグメント化サービスの概要](home.md)
 - [セグメント化のデータタイプ](data-types.md)
-- [ セグメント化ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja#segmentation-guardrails)
-- Segmentation API {#api}
+- [ セグメント化ガードレール ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- セグメント化 API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
+   - [オーディエンスメタデータの作成](api/create-audience.md)
    - [オーディエンス](api/audiences.md)
    - [ジョブの書き出し](api/export-jobs.md)
+   - [外部オーディエンス](api/external-audiences.md)
    - [プレビューと見積もり](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
    - [セグメントの定義](api/segment-definitions.md)
@@ -40,7 +42,7 @@ ht-degree: 79%
    - Segment Match {#segment-match}
       - [Segment Match の概要](ui/segment-match/overview.md)
       - [トラブルシューティング](ui/segment-match/troubleshooting.md)
-- のセグメント化メソッ {#methods}
+- セグメント化の方法 {#methods}
    - [概要](methods/overview.md)
    - [バッチセグメント化](methods/batch-segmentation.md)
    - [ストリーミングセグメント化](methods/streaming-segmentation.md)
@@ -63,7 +65,7 @@ ht-degree: 79%
    - [外部オーディエンスの読み込みと使用](tutorials/using-external-audiences.md)
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
    - [オーディエンスに対してデータ使用のコンプライアンスを適用](tutorials/governance.md)
-- プロファイルクエリ言語 {#pql}
+- Profile Query Language {#pql}
    - [概要](pql/overview.md)
    - [ブール関数](pql/boolean-functions.md)
    - [比較関数](pql/comparison-functions.md)
