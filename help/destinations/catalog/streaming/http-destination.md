@@ -4,10 +4,10 @@ title: HTTP API 接続
 description: Adobe Experience Platform で HTTP API 宛先を使用して、プロファイルデータをサードパーティの HTTP エンドポイントに送信できます。これによって、Experience Platform から書き出されたプロファイルデータに対して必要な独自の分析を実行したり、他の操作を実行したりできます。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
 workflow-type: tm+mt
-source-wordcount: '2690'
-ht-degree: 71%
+source-wordcount: '2746'
+ht-degree: 69%
 
 ---
 
@@ -45,7 +45,7 @@ HTTP エンドポイントとして設定できるのは、顧客独自のシス
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
 
 | 項目 | タイプ | メモ |
----------|----------|---------|
+| ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL プロファイルベース]** | セグメントのすべてのメンバーを、[宛先のアクティベーションワークフロー](../../ui/activate-segment-streaming-destinations.md#mapping)のマッピング画面で選択したように、必要なスキーマフィールド（例：メールアドレス、電話番号、姓）とともに書き出します。 |
 | 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)の詳細についてはこちらを参照してください。 |
 
@@ -58,6 +58,7 @@ Experience Platform からデータを書き出す際に HTTP API 宛先を使�
 * REST API をサポートする HTTP エンドポイントが必要です。
 * 使用する HTTP エンドポイントが、Experience Platform プロファイルスキーマをサポートする必要があります。HTTP API 宛先では、サードパーティのペイロードスキーマへの変換はサポートされていません。Experience Platform の出力スキーマの例については、[書き出されたデータ](#exported-data)の節を参照してください。
 * HTTP エンドポイントはヘッダーをサポートする必要があります。
+* HTTP エンドポイントは、適切なデータ処理を確保し、タイムアウトエラーを回避するために、2 秒以内に応答する必要があります。
 
 >[!TIP]
 >
@@ -69,7 +70,7 @@ Experience Platform からデータを書き出す際に HTTP API 宛先を使�
 
 [!DNL mTLS] は、相互認証のためのエンドツーエンドのセキュリティ方法であり、情報を共有する両方の関係者が、データが共有される前に本来の姿を保証します。 [!DNL mTLS] には、[!DNL TLS] と比較して、サーバーがクライアントの証明書を要求し、最後に検証する追加の手順が含まれます。
 
-[!DNL HTTP API] の宛先で [!DNL mTLS] を使用する場合は、[ 宛先の詳細 ](#destination-details) ページに入力するサーバーアドレスで、[!DNL TLS] プロトコルを無効にし、[!DNL mTLS] のみを有効にする必要があります。 エンドポイントで [!DNL TLS] 1.2 プロトコルがまだ有効になっている場合、クライアント認証の証明書は送信されません。 つまり、[!DNL HTTP API] の宛先で [!DNL mTLS] を使用するには、「受信側」サーバーエンドポイントが、[!DNL mTLS] み取り専用で有効な接続エンドポイントである必要があります。
+[!DNL mTLS] の宛先で [!DNL HTTP API] を使用する場合は、[ 宛先の詳細 ](#destination-details) ページに入力するサーバーアドレスで、[!DNL TLS] プロトコルを無効にし、[!DNL mTLS] のみを有効にする必要があります。 エンドポイントで [!DNL TLS] 1.2 プロトコルがまだ有効になっている場合、クライアント認証の証明書は送信されません。 つまり、[!DNL mTLS] の宛先で [!DNL HTTP API] を使用するには、「受信側」サーバーエンドポイントが、[!DNL mTLS] み取り専用で有効な接続エンドポイントである必要があります。
 
 ### 証明書の詳細の取得と検査 {#certificate}
 
@@ -87,7 +88,7 @@ HTTP API 宛先は、HTTP エンドポイントに対して、以下に示す複
 
 * 認証なしの HTTP エンドポイント。
 * ベアラートークン認証。
-* 以下の例に示すように、HTTP リクエストの本文に [!DNL client ID]、[!DNL client secret]、[!DNL grant type] を含み、本文形式を持つ [OAuth 2.0 クライアント資格情報 ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 認証。
+* 以下の例に示すように、HTTP リクエストの本文に [、](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)、[!DNL client ID] を含み、本文形式を持つ [!DNL client secret]OAuth 2.0 クライアント資格情報 [!DNL grant type] 認証。
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -112,7 +113,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。この宛先に接続する際は、次の情報を指定する必要があります。
 
@@ -159,7 +160,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!WARNING]
 > 
->[!UICONTROL OAuth 2 クライアント資格情報 &#x200B;] 認証を使用する場合、[!UICONTROL &#x200B; アクセストークン URL] には最大 1 つのクエリパラメーターを含めることができます。 クエリパラメーターを増やして [!UICONTROL &#x200B; アクセストークン URL] を追加すると、エンドポイントに接続する際に問題が発生する可能性があります。
+>[!UICONTROL OAuth 2 クライアント資格情報 ] 認証を使用する場合、[!UICONTROL  アクセストークン URL] には最大 1 つのクエリパラメーターを含めることができます。 クエリパラメーターを増やして [!UICONTROL  アクセストークン URL] を追加すると、エンドポイントに接続する際に問題が発生する可能性があります。
 
 * **[!UICONTROL アクセストークン URL]**：アクセストークンと必要に応じて更新トークンを発行する、ユーザー側の URL。
 * **[!UICONTROL クライアント ID]**：システムが Adobe Experience Platform に割り当てる [!DNL client ID]。
@@ -217,7 +218,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* [ 同意ポリシーの評価 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) は現在、HTTP API 宛先への書き出しではサポートされていません。 [詳細情報](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ ストリーミングプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-streaming-profile-destinations.md) を参照してください。
@@ -363,3 +364,7 @@ Experience Platformは、オーディエンスの選定または他の重要な�
 Experience Platform は 95％ の確率で、HTTP 宛先の各データフローにおいて、送信に成功したメッセージのスループット待ち時間を 10 分未満、リクエスト数を 1 秒あたり 10,000 件未満で提供しようと試みます。
 
 HTTP API 宛先へのリクエストが失敗した場合、Experience Platform は失敗したリクエストを保存し、リクエストをエンドポイントに送信するために 2 回再試行します。
+
+## トラブルシューティング {#troubleshooting}
+
+信頼性の高いデータ配信を確保し、タイムアウトの問題を回避するには、[ 前提条件 ](#prerequisites) セクションで指定されているように、Experience Platform リクエストに対して HTTP エンドポイントが 2 秒以内に応答することを確認します。 これよりも長い時間がかかる応答は、タイムアウトエラーとなります。
