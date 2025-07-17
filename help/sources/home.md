@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
+source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 67%
+source-wordcount: '1640'
+ht-degree: 53%
 
 ---
 
@@ -26,177 +26,247 @@ Experience Platform を使用すると、異なるソースから収集したデ
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## 高度なエンタープライズソース {#advanced-enterprise-sources}
-
-次のソースは、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) のお客様のみが利用できます。
-
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+>[!BEGINSHADEBOX]
 
 ## Adobeで構築されたソースとパートナーが構築したソース {#adobe-and-partner-built-sources}
 
-Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、&lbrace;RainFocus コネクタ [&#128279;](/help/sources/connectors/analytics/rainfocus.md) は RainFocus チームによって作成および管理されます 。
+Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、{RainFocus コネクタ [ は RainFocus チームによって作成および管理されます ](/help/sources/connectors/analytics/rainfocus.md)。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
-## ソースカテゴリ
+>[!ENDSHADEBOX]
 
-Experience Platform のソースは、次のカテゴリに分類されます。
+## ソースカタログ
+
+ソースカタログで使用可能なすべてのソースのリストについては、次の節を参照してください。
 
 ### アドビアプリケーション {#adobe-applications}
 
 Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audience Manager など、他のアドビアプリケーションからデータを取り込むことができます。詳しくは、次の関連ドキュメントを参照してください。
 
-- [Adobe Audience Manager ソースの概要](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [UI での Adobe Audience Manager ソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics Classifications データソースの概要](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics Classifications データ](connectors/adobe-applications/classifications.md)
    - [UI での Adobe Analytics Classifications データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics レポートスイートデータソースの概要](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics レポートスイートデータ](connectors/adobe-applications/analytics.md)
    - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Campaign Managed Cloud Services ソースの概要](connectors/adobe-applications/campaign.md)
+- [Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [UI での Adobe Campaign Managed Cloud Services ソース接続の作成](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Adobe Commerce ソースの概要](connectors/adobe-applications/commerce.md)
-- [Adobe Data Collection ソースの概要](connectors/adobe-applications/data-collection.md)
+- [Adobe Commerce](connectors/adobe-applications/commerce.md)
+- [Adobe Data Collection](connectors/adobe-applications/data-collection.md)
    - [UI での Customer Attributes ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] ソースの概要](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [UI での  [!DNL Marketo Engage]  ソース接続の作成](./tutorials/ui/create/adobe-applications/marketo.md)
    - [カスタムア  [!DNL Marketo Engage]  ティビティデータ用のソース接続とデータフローの作成](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
+### 高度なエンタープライズソース {#advanced-enterprise-sources}
+
+次のソースは、[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) のお客様のみが利用できます。
+
+| ソース | カテゴリ | 取り込みタイプ | Cloud |
+| --- | --- | --- | --- |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | クラウドストレージ | ストリーミング | AWS, Azure |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | データベース | バッチ | AWS, Azure |
+| [[!DNL Azure Databricks]](connectors/databases/databricks.md) | データベース | バッチ | Azure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | クラウドストレージ | ストリーミング | AWS, Azure |
+| [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | データベース | バッチ | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | データベース | バッチ | Azure |
+| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | クラウドストレージ | ストリーミング | Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | データベース | ストリーミング | AWS, Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | データベース | バッチ | AWS, Azure |
+
+{style="table-layout:auto"}
+
 ### 広告 {#advertising}
 
-Adobe Experience Platform には、サードパーティの広告システムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、広告データをExperience Platformに取り込むことができます。
 
-- [Google広告 ](connectors/advertising/ads.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [Google 広告](connectors/advertising/ads.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### Analytics {#analytics}
 
-Experience Platform には、サードパーティの分析プラットフォームからデータを取り込む機能が用意されています。詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、分析データをExperience Platformに取り込むことができます。
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | バッチ | Azure |
+| [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | ストリーミング | Azure |
+| [[!DNL RainFocus]](connectors/analytics/rainfocus.md) | ストリーミング | Azure |
+
+{style="table-layout:auto"}
 
 ### クラウドストレージ {#cloud-storage}
 
 クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードを行う必要なく、独自のデータをExperience Platformに取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parquet 形式または区切り形式で書式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用した Sources ワークフローに統合されています。詳しくは、次の関連ドキュメントを参照してください。
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+次のソースを使用して、クラウドストレージデータをExperience Platformに取り込むことができます。
+
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | バッチ | Azure |
+| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | バッチ | Azure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | バッチ | AWS, Azure |
+| [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | バッチ | Azure |
+| [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | バッチ | Azure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | バッチ | AWS, Azure |
+| [[!DNL FTP]](connectors/cloud-storage/ftp.md) | バッチ | Azure |
+| [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | バッチ | Azure |
+| [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | バッチ | Azure |
+| [[!DNL SFTP]](connectors/cloud-storage/sftp.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### 同意および環境設定 {#consent}
 
-Experience Platform は、サードパーティの同意および環境設定管理プラットフォームからデータを取り込む機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、同意および環境設定データをExperience Platformに取り込むことができます。
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### 顧客関係管理（CRM） {#customer-relationship-management}
 
 CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。Adobe Experience Platform には、[!DNL Microsoft Dynamics 365] および [!DNL Salesforce] から CRM データを取り込む機能が用意されています。詳しくは、次の関連ドキュメントを参照してください。
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+次のソースを使用して、CRM データをExperience Platformに取り込むことができます。
+
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | バッチ | Azure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | バッチ | AWS, Azure |
+| [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | バッチ | Azure |
+| [[!DNL Veeva CRM]](connectors/crm/veeva.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### カスタマーサクセス {#customer-success}
 
-Experience Platform は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、カスタマーサクセスデータをExperience Platformに取り込むことができます。
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | バッチ | Azure |
+| [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | バッチ | Azure |
+| [[!DNL Zendesk]](connectors/customer-success/zendesk.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### データベース {#database}
 
 Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+次のソースを使用して、データベースからExperience Platformにデータを取り込むことができます。
+
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | バッチ | Azure |
+| [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | バッチ | Azure |
+| [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) | バッチ | Azure |
+| [[!DNL Azure Table Storage]](connectors/databases/ats.md) | バッチ | Azure |
+| [[!DNL GreenPlum]](connectors/databases/greenplum.md) | バッチ | Azure |
+| [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) | バッチ | Azure |
+| [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | バッチ | Azure |
+| [[!DNL MariaDB]](connectors/databases/mariadb.md) | バッチ | Azure |
+| [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | バッチ | Azure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | バッチ | AWS, Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | バッチ | Azure |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | バッチ | AWS, Azure |
+| [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### データおよび ID パートナー {#data-partner}
 
-Experience Platformは、データおよび ID パートナーからのデータ取り込みをサポートしています。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、データおよび ID パートナーデータをExperience Platformに取り込むことができます。
 
-- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | バッチ | Azure |
+| [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | バッチ | Azure |
+| [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) | バッチ | Azure |
+| [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) | バッチ | Azure |
+| [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) | バッチ | Azure |
+| [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### e コマース {#ecommerce}
 
-Adobe Experience Platform には、サードパーティの e コマースシステムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、e コマースデータをExperience Platformに取り込むことができます。
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | バッチ | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify.md) | バッチ | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) | ストリーミング | Azure |
+
+{style="table-layout:auto"}
 
 ### ローカルシステム {#local-system}
 
-Adobe Experience Platform には、ローカルシステムからデータを取り込む機能が用意されています。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、ローカルシステムからExperience Platformにデータを取り込むことができます。
 
-- [ローカルファイルのアップロード](connectors/local-system/local-file-upload.md)
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [ローカルファイルのアップロード](connectors/local-system/local-file-upload.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### マーケティングの自動処理 {#marketing-automation}
 
-Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、マーケティング自動化データをExperience Platformに取り込むことができます。
 
-- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL Braze]](connectors/marketing-automation/braze.md) | ストリーミング | Azure |
+| [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | ストリーミング | Azure |
+| [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | ストリーミング | Azure |
+| [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | バッチ | Azure |
+| [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | バッチ | Azure |
+| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | バッチ | Azure |
+| [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | バッチ | Azure |
+| [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | バッチ | Azure |
+| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | バッチ | AWS, Azure |
+
+{style="table-layout:auto"}
 
 ### 支払い {#payments}
 
-Adobe Experience Platform には、サードパーティの支払いシステムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、支払いデータをExperience Platformに取り込むことができます。
 
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+| ソース | 取り込みタイプ | Cloud |
+| --- | --- | --- |
+| [[!DNL Square]](connectors/payments/square.md) | バッチ | Azure |
+| [[!DNL Stripe]](connectors/payments/stripe.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ### ストリーミング {#streaming}
 
-Adobe Experience Platform には、ストリーミングソースからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、Experience Platformにデータをストリーミングできます。
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE &#x200B; ストリーミング &#x200B;]{type=Positive}
+| ソース | 取り込みタイプ | クラウドサポート |
+| --- | --- | --- |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | ストリーミング | AWS, Azure |
+
+{style="table-layout:auto"}
 
 ### プロトコル {#protocols}
 
-Adobe Experience Platform には、サードパーティのプロトコルシステムからデータを取り込む機能が用意されています。特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+次のソースを使用して、プロトコルデータをExperience Platformに取り込むことができます。
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE &#x200B; バッチ &#x200B;]{type=Informative}
+| ソース | 取り込みタイプ | クラウドサポート |
+| --- | --- | --- |
+| [[!DNL Generic OData]](connectors/protocols/odata.md) | バッチ | Azure |
+| [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | バッチ | Azure |
+
+{style="table-layout:auto"}
 
 ## データ取得におけるソースのアクセス制御
 
