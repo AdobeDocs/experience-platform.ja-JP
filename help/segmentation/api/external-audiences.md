@@ -3,13 +3,13 @@ title: 外部オーディエンス API エンドポイント
 description: 外部オーディエンス API を使用して、Adobe Experience Platformから外部オーディエンスを作成、更新、アクティブ化および削除する方法について説明します。
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2405'
 ht-degree: 9%
 
 ---
-
 
 # 外部オーディエンスエンドポイント
 
@@ -381,7 +381,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ais/external-audience/60ccea95
 **API 形式**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **リクエスト**
@@ -391,7 +391,7 @@ POST /external-audience/{AUDIENCE_ID}/run
 +++ オーディエンスの取り込みを開始するリクエストのサンプル。
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 +++
 
 ## 特定のオーディエンス取り込みステータスの取得 {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>次のエンドポイントを使用するには、外部オーディエンス `audienceId` と取り込み実行 ID の `runId` の両方が必要です。 `audienceId` エンドポイントへの呼び出しが成功すると、`GET /external-audiences/operations/{OPERATION_ID}` を取得でき、`runId` エンドポイントの以前の呼び出しが成功すると、`POST /external-audience/{AUDIENCE_ID}/runs` を取得できます。
 
 オーディエンス ID と実行 ID の両方を提供しながら、次のエンドポイントに対してGET リクエストを実行することで、オーディエンス取り込みのステータスを取得できます。
 
@@ -514,9 +518,13 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 +++
 
-## オーディエンス取り込みステータスのリスト {#list-ingestion-statuses}
+## オーディエンス取り込み実行のリスト {#list-ingestion-runs}
 
-オーディエンス ID を指定したうえで、次のエンドポイントに対してGET リクエストを行うことで、選択した外部オーディエンスのすべての取り込みステータスを取得できます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+>[!NOTE]
+>
+>次のエンドポイントを使用するには、外部オーディエンスの `audienceId` が必要です。 `audienceId` エンドポイントへの呼び出しが成功すると、`GET /external-audiences/operations/{OPERATION_ID}` を取得できます。
+
+オーディエンス ID を指定した際に、次のエンドポイントに対してGET リクエストを行うことで、選択した外部オーディエンスに対して実行されたすべての取り込みを取得できます。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 **API 形式**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | パラメーター | 説明 | 例 |
 | --------- | ----------- | ------- |
 | `limit` | 応答で返される項目の最大数。 この値の範囲は 1 ～ 40 です。 デフォルトでは、上限は 20 に設定されています。 | `limit=30` |
-| `sortBy` | 返される項目が並べ替えられる順序。 `name` または `ingestionTime` で並べ替えることができます。 さらに、`-` 記号を追加して、**昇順** ではなく **降順** で並べ替えることができます。 デフォルトでは、項目は `ingestionTime` 順に降順で並べ替えられます。 | `sortBy=name` |
-| `property` | どのオーディエンス取り込み実行が表示されるかを決定するフィルター。 次のプロパティでフィルタリングできます。 <ul><li>`name`：オーディエンス名でフィルタリングできます。 このプロパティを使用すると、`=`、`!=`、`=contains`、または `!=contains` を使用して比較できます。 </li><li>`ingestionTime`：取り込み時間でフィルタリングできます。 このプロパティを使用すると、`>=` または `<=` を使用して比較できます。</li><li>`status`：取り込み実行のステータスでフィルタリングできます。 このプロパティを使用すると、`=`、`!=`、`=contains`、または `!=contains` を使用して比較できます。 </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | 返される項目が並べ替えられる順序。 `name` または `createdAt` で並べ替えることができます。 さらに、`-` 記号を追加して、**昇順** ではなく **降順** で並べ替えることができます。 デフォルトでは、項目は `createdAt` 順に降順で並べ替えられます。 | `sortBy=name` |
+| `property` | どのオーディエンス取り込み実行が表示されるかを決定するフィルター。 次のプロパティでフィルタリングできます。 <ul><li>`name`：オーディエンス名でフィルタリングできます。 このプロパティを使用すると、`=`、`!=`、`=contains`、または `!=contains` を使用して比較できます。 </li><li>`createdAt`：取り込み時間でフィルタリングできます。 このプロパティを使用すると、`>=` または `<=` を使用して比較できます。</li><li>`status`：取り込み実行のステータスでフィルタリングできます。 このプロパティを使用すると、`=`、`!=`、`=contains`、または `!=contains` を使用して比較できます。 </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **リクエスト**
 
-次のリクエストでは、外部オーディエンスのすべての取り込みステータスを取得します。
+次のリクエストでは、外部オーディエンスに対するすべての取り込み実行を取得します。
 
-+++ オーディエンス取得ステータスのリストを取得するリクエストのサンプル。
++++ オーディエンス取り込みの実行リストを取得するリクエストのサンプル。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **応答**
 
-応答に成功すると、HTTP ステータス 200 が、指定された外部オーディエンスの取り込みステータスのリストと共に返されます。
+応答が成功すると、HTTP ステータス 200 が、指定された外部オーディエンスに対する取り込み実行のリストと共に返されます。
 
-+++ オーディエンス取り込みステータスのリストを取得する際の応答の例。
++++ オーディエンス取り込みの実行リストを取得する際の応答のサンプルです。
 
 ```json
 {
@@ -573,19 +581,7 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 +++
 
 ## 外部オーディエンスの削除 {#delete-audience}
+
+>[!NOTE]
+>
+>次のエンドポイントを使用するには、外部オーディエンスの `audienceId` が必要です。 `audienceId` エンドポイントへの呼び出しが成功すると、`GET /external-audiences/operations/{OPERATION_ID}` を取得できます。
 
 オーディエンス ID を指定した状態で次のエンドポイントに対してDELETE リクエストを行うことで、外部オーディエンスを削除できます。
 
