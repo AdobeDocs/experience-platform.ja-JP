@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2025年6月
 description: Adobe Experience Platform の 2025年6月 のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c78dc0e83976499403e066b314a0889df803c976
+source-git-commit: cff694c1b04ba1513cb460c3b47b56eaef4b1f34
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1632'
 ht-degree: 24%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 24%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年6月18日（PT）**
 
@@ -113,7 +113,6 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | --- | --- |
-| [Google カスタマーマッチ + DV360](../../destinations/catalog/advertising/google-customer-match-dv360.md) 一般提供 | Google カスタマーマッチ + DV360 の宛先を、すべてのExperience Platform ユーザーが使用できるようになりました。 ドキュメントには、[ と ](../../destinations/catalog/advertising/google-customer-match-dv360.md#linking) の広告アカウントの間の [!DNL Adobe] アカウントのリンク [!DNL Google] に関する詳細なガイダンスが含まれるようになりました。 |
 | ストリーミング宛先の [ オーディエンスレベルの監視 ](../../dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) | オーディエンスレベルの監視が、次の宛先で使用できるようになりました。 <ul><li>[[!DNL (API) Oracle Eloqua] 接続](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)</li><li>[[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)</li><li>[[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)</li><li>[[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)</li><li>[[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)</li><li>[[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)</li><li>[[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)</li><li>[[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)</li><li>[[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)</li><li>[[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)</li><li>[[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)</li><li>[[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)</li><li>[[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)</li><li>[[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)</li><li>[[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)</li><li>[[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)</li><li>[[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)</li><li>[[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)</li></ul> |
 | [Facebook](../../destinations/catalog/social/facebook.md#supported-identities) 宛先での追加の識別子のサポート | [!DNL Facebook] の宛先では、ターゲティングを改善し Facebook プロパティのプロファイルとマッチングするために、新しいアドレス関連フィールドのマッピングをサポートするようになりました。 新しいアドレス関連フィールドについて詳しくは、[ サポートされる ID](../../destinations/catalog/social/facebook.md#supported-identities) の節を参照してください。<br> ![Facebook の追加フィールドを示す Platform UI 画像。](../2025/assets/june/facebook-destination-fields.png "Facebook の追加フィールドを示す Platform UI 画像。"){width="200" align="center" zoomable="yes"} |
 | [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) 宛先のアップグレード | 2025 年 6 月 19 日（PT）以降、宛先カタログに 2 つの **[!DNL Braze]** カードを並べて表示できるようになります。 これは、宛先サービスの内部アップグレードが原因です。 既存の [!DNL Braze] 宛先コネクタの名前は、**[!UICONTROL （非推奨） Braze に変更され]** 名前が **[!UICONTROL Braze]** の新しいカードが使用できるようになりました。 <br> カタログの **[!UICONTROL Braze]** 接続を使用して、新しいアクティベーションデータフローを取得します。 **[!UICONTROL （非推奨） Braze]** の宛先へのアクティブなデータフローがある場合、それらは自動的に更新されるので、ユーザーからのアクションは必要ありません。 <br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。 <ul><li>フロー仕様 ID: `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`</li><li>接続仕様 ID: `ab957205-5a78-4393-b901-b930ed548220`</li></ul> |
@@ -128,7 +127,7 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 | 新機能 | 説明 |
 | ----------- | ----------- |
-| Adobe Healthcare Shield のお客様向けの一般公開 | Federated Audience Composition は、オーディエンスの作成、エンリッチメントおよびプロファイルエンリッチメントのユースケースについて、Adobe Healthcare Shield のお客様が 6 月末までに利用できるようになります。 Federated Audience Composition のプライバシーとセキュリティの対策について詳しくは、[Federated Audience Composition のプライバシーとセキュリティの概要 ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/privacy-security) を参照してください。 Experience Platform製品全般に関する HIPAA コンプライアンスの詳細については、[HIPAA およびAdobe製品とサービスの概要 ](https://www.adobe.com/trust/compliance/hipaa-ready.html) を参照してください。 |
+| Adobe Healthcare Shield のお客様向けの一般公開 | Federated Audience Composition は、オーディエンスの作成、エンリッチメントおよびプロファイルエンリッチメントのユースケースについて、Adobe Healthcare Shield のお客様が 6 月末までに利用できるようになります。 Federated Audience Composition のプライバシーとセキュリティの対策について詳しくは、[Federated Audience Composition のプライバシーとセキュリティの概要 ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security) を参照してください。 Experience Platform製品全般に関する HIPAA コンプライアンスの詳細については、[HIPAA およびAdobe製品とサービスの概要 ](https://www.adobe.com/trust/compliance/hipaa-ready.html) を参照してください。 |
 
 詳しくは、[Federated Audience Composition ドキュメント ](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/home) を参照してください。
 
@@ -140,7 +139,7 @@ Federated Audience Composition を使用すると、企業はデータを作成�
 
 | 機能 | 説明 |
 | --- | ---|
-| テネシー州およびミネソタ州のプライバシー法のサポート | Privacy Serviceは、テネシー州情報保護法（`tipa_tn_usa`）とミネソタ州消費者データ保護法（`mcdpa_mn_usa`）をサポートするようになりました。 これらの新しい州レベルの規制に従って、アクセス要求および削除要求を処理できます。 詳しくは、[ 規制の概要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/privacy/regulations/overview) を参照してください。 |
+| テネシー州およびミネソタ州のプライバシー法のサポート | Privacy Serviceは、テネシー州情報保護法（`tipa_tn_usa`）とミネソタ州消費者データ保護法（`mcdpa_mn_usa`）をサポートするようになりました。 これらの新しい州レベルの規制に従って、アクセス要求および削除要求を処理できます。 詳しくは、[ 規制の概要 ](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) を参照してください。 |
 
 このサービスについて詳しくは、[Privacy Serviceの概要 ](../../privacy-service/home.md) を参照してください。
 
@@ -176,9 +175,9 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | --- | --- |
-| [!BADGE &#x200B; の &#x200B;]{type=Informative}Beta[!DNL Azure Databricks] UI サポート | UI のソースワークスペースを使用して、[!DNL Azure Databricks] アカウントをExperience Platformに接続できるようになりました。 詳しくは、[UI でのExperience Platformへの接続  [!DNL Databricks]  に関するガイドを参照し ](../../sources/connectors/databases/databricks.md) ください。 |
+| [!BADGE  の ]{type=Informative}Beta[!DNL Azure Databricks] UI サポート | UI のソースワークスペースを使用して、[!DNL Azure Databricks] アカウントをExperience Platformに接続できるようになりました。 詳しくは、[UI でのExperience Platformへの接続  [!DNL Databricks]  に関するガイドを参照し ](../../sources/connectors/databases/databricks.md) ください。 |
 | [!DNL Azure Synapse Analytics] の新しい認証タイプのサポート | [!DNL Azure Synapse Analytics] では、既存の接続文字列認証に加えて、サービスプリンシパル認証もサポートするようになりました。 詳しくは、[[!DNL Azure Synapse Analytics]  認証の概要 ](../../sources/connectors/databases/synapse-analytics.md) を参照してください。 |
-| [!DNL Salesforce] Basic Authentication の廃止 | [Salesforce CRM&rbrace; および ](../../sources/connectors/crm/salesforce.md)2&rbrace;Salesforce Service Cloud&rbrace; の基本認証は [2026 年 1 月までに廃止されます。 ](../../sources/connectors/customer-success/salesforce-service-cloud.md)接続を維持するには、OAuth 2.0 認証に移行する必要があります。 この変更は両方のソースコネクタに影響し、セキュリティの向上とSalesforce認証標準への準拠を保証します。 |
+| [!DNL Salesforce] Basic Authentication の廃止 | [Salesforce CRM} および ](../../sources/connectors/crm/salesforce.md)2}Salesforce Service Cloud} の基本認証は [2026 年 1 月までに廃止されます。 ](../../sources/connectors/customer-success/salesforce-service-cloud.md)接続を維持するには、OAuth 2.0 認証に移行する必要があります。 この変更は両方のソースコネクタに影響し、セキュリティの向上とSalesforce認証標準への準拠を保証します。 |
 
 {style="table-layout:auto"}
 
