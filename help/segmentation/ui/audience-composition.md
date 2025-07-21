@@ -3,10 +3,10 @@ solution: Experience Platform
 title: オーディエンス UI ガイド
 description: Adobe Experience Platform UI のオーディエンス構成は、プロファイルデータ要素を操作するための機能豊富なワークスペースを提供します。ワークスペースには、組織に合わせてオーディエンスを作成および編集するための直感的なコントロールが用意されています。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 79%
+source-wordcount: '2362'
+ht-degree: 78%
 
 ---
 
@@ -164,7 +164,7 @@ ht-degree: 79%
 
 >[!IMPORTANT]
 >
->属性別に除外する場合は、除外する **one** 値のみを指定できます。 コンマやセミコロンなどの任意の種類の区切り記号を使用すると、その正確な値のみが除外されます。 例えば、値を `red, blue` に設定すると、属性から用語 `red, blue` が除外されますが、用語 `red` または `blue` のいずれかが除外されます **除外されません**。
+>属性別に除外する場合は、除外する **one** 値のみを指定できます。 コンマやセミコロンなどの任意の種類の区切り記号を使用すると、その正確な値のみが除外されます。 例えば、値を `red, blue` に設定すると、属性から用語 `red, blue` が除外されますが、用語 **または** のいずれかが除外されます `red` 除外されません `blue`。
 
 ## [!UICONTROL エンリッチメント] {#enrich-block}
 
@@ -310,6 +310,10 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="その他のプロファイル"
 >abstract="「その他のプロファイル」切替スイッチを使用すると、他のパスで指定された条件に一致しない残りのプロファイルと共に、追加のパスを作成できます。"
+
+>[!NOTE]
+>
+>**[!UICONTROL 分割]** ブロックを使用するには、オーディエンスに 10 以上のプロファイルが **必要** です。
 
 **[!UICONTROL 分割]**&#x200B;ブロックタイプを使用すると、新しいオーディエンスを様々なサブオーディエンスに分割できます。オーディエンスは、割合に基づいて分割したり、属性別に分割したりできます。
 
