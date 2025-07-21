@@ -23,9 +23,9 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に [ カスタム Personalization](https://developer.adobe.com/data-collection-apis/docs/) を設定する際に **[!UICONTROL 0}Edge Network API} を使用する必要があります。]**&#x200B;すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に [ カスタム Personalization](https://developer.adobe.com/data-collection-apis/docs/) を設定する際に **[!UICONTROL 0&rbrace;Edge Network API&rbrace; を使用する必要があります。]**&#x200B;すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。
 >
-><br>1}Edge Network API を使用してプロファイル属性を取得できます [ サーバーサイド統合を追加して、web またはモバイル SDKの実装に既に使用しているものと同じデータストリームを使用します。](https://developer.adobe.com/data-collection-apis/docs/)
+><br>1&rbrace;Edge Network API を使用してプロファイル属性を取得できます [ サーバーサイド統合を追加して、web またはモバイル SDKの実装に既に使用しているものと同じデータストリームを使用します。](https://developer.adobe.com/data-collection-apis/docs/)
 >
 ><br> 上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
 
@@ -37,9 +37,9 @@ ht-degree: 51%
 
 この宛先では、実装に応じて、次のいずれかのデータ収集方法を使用する必要があります。
 
-* Web サイトからデータを収集する場合は [](/help/web-sdk/home.md)Adobe Experience Platform Web SDK} を使用します。
-* モバイルアプリケーションからデータを収集する場合は [](https://developer.adobe.com/client-sdks/documentation/)Adobe Experience Platform Mobile SDK} を使用します。
-* [Web SDK](https://developer.adobe.com/data-collection-apis/docs/) または [Mobile SDK](/help/web-sdk/home.md) を使用していない場合や、プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は [0}Edge Network API} を使用します。](https://developer.adobe.com/client-sdks/documentation/)
+* Web サイトからデータを収集する場合は [&#128279;](/help/web-sdk/home.md)Adobe Experience Platform Web SDK&rbrace; を使用します。
+* モバイルアプリケーションからデータを収集する場合は [&#128279;](https://developer.adobe.com/client-sdks/documentation/)Adobe Experience Platform Mobile SDK&rbrace; を使用します。
+* [Web SDK](https://developer.adobe.com/data-collection-apis/docs/) または [Mobile SDK](/help/web-sdk/home.md) を使用していない場合や、プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は [0&rbrace;Edge Network API&rbrace; を使用します。](https://developer.adobe.com/client-sdks/documentation/)
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -96,7 +96,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ プロファイルとオーディエンスのエッジパーソナライゼーションの宛先のアクティブ化 ](../../ui/activate-edge-personalization-destinations.md) をお読みください。
 
@@ -160,7 +160,7 @@ alloy("sendEvent", {
   });
 ```
 
-### [!UICONTROL  属性を含むカスタムPersonalization] の応答の例
+### [!UICONTROL &#x200B; 属性を含むカスタムPersonalization] の応答の例
 
 **[!UICONTROL 属性を含むカスタムPersonalization]** を使用する場合、API 応答は次の例のようになります。
 

@@ -63,7 +63,7 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 * [ デフォルトワークスペース ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace) へのアクセス
 * **承認者** [ 役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions)。
 
-詳しくは、[Target Premiumおよび ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80)2}Target Standard} の権限の付与を参照してくだ [ い。](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions)
+詳しくは、[Target Premiumおよび ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80)2&rbrace;Target Standard&rbrace; の権限の付与を参照してくだ [ い。](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions)
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -72,8 +72,8 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 >[!IMPORTANT]
 >
 >*同じページと次のページのパーソナライゼーションのユースケースに対するエッジオーディエンス* をアクティブ化する場合、オーディエンス *必須*[ エッジでのアクティブ化結合ポリシー ](../../../segmentation/ui/segment-builder.md#merge-policies) を使用します。 [!DNL active-on-edge] 結合ポリシーにより、オーディエンスは常に [ エッジ上で ](../../../segmentation/methods/edge-segmentation.md) 評価され、リアルタイムおよび次のページのパーソナライゼーションのユースケースで利用できるようになります。  実装タイプに基づいて、[ 利用可能なすべてのユースケース ](#parameter) をお読みください。
->>別の結合ポリシーを使用するエッジオーディエンスをAdobe Targetの宛先にマッピングした場合、それらのオーディエンスは、リアルタイムおよび次のページのユースケースでは評価されません。
->>[結合ポリシーの作成](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)の手順に従い、「**[!UICONTROL エッジでアクティブ化結合ポリシー]**」切り替えスイッチを必ず有効にします。
+>&#x200B;>別の結合ポリシーを使用するエッジオーディエンスをAdobe Targetの宛先にマッピングした場合、それらのオーディエンスは、リアルタイムおよび次のページのユースケースでは評価されません。
+>&#x200B;>[結合ポリシーの作成](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)の手順に従い、「**[!UICONTROL エッジでアクティブ化結合ポリシー]**」切り替えスイッチを必ず有効にします。
 
 
 | オーディエンスオリジン | サポートあり | 説明 |
@@ -104,7 +104,7 @@ Adobe Targetで、ユーザーが以下を持っていることを確認しま�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -140,8 +140,8 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 >[!NOTE]
 >
 >[ 属性を使用した同じページと次のページのパーソナライゼーション ](../../ui/activate-edge-personalization-destinations.md) にカスタム Target ワークスペースを使用すると、[ 選択したオーディエンス ](../../ui/activate-edge-personalization-destinations.md#select-audiences) のみが選択した Target ワークスペースに送信されます。 [ マッピングされた属性 ](../../ui/activate-edge-personalization-destinations.md#mapping) は、デフォルトの Target ワークスペースに送信されます。
->><br>
->>この動作は、今後の更新で変更される予定です。
+>&#x200B;><br>
+>&#x200B;>この動作は、今後の更新で変更される予定です。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -153,7 +153,7 @@ Adobe Experience Platform は、会社の Adobe Target インスタンスに自�
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ エッジパーソナライゼーションの宛先に対するオーディエンスのアクティブ化 ](../../ui/activate-edge-personalization-destinations.md) を参照してください。
 
