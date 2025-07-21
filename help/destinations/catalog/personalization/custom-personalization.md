@@ -3,9 +3,9 @@ keywords: カスタムパーソナライゼーション;宛先;Experience Platfo
 title: カスタムパーソナライゼーション接続
 description: この宛先は、Adobe Experience Platformからオーディエンス情報を取得する方法として、サイトで実行されている外部のパーソナライゼーション、コンテンツ管理システム、広告サーバーおよびその他のアプリケーションを提供します。 この宛先は、ユーザープロファイルオーディエンスメンバーシップに基づいて、リアルタイムのパーソナライゼーションを提供します。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '960'
 ht-degree: 51%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に [&#128279;](https://developer.adobe.com/data-collection-apis/docs/) カスタム Personalization **[!UICONTROL を設定する際に]** 0&rbrace;Edge Network API&rbrace; を使用する必要があります。 すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。
+>プロファイル属性には、機密データが含まれている場合があります。 このデータを保護するには、属性ベースのパーソナライゼーション用に [ カスタム Personalization](https://developer.adobe.com/data-collection-apis/docs/) を設定する際に **[!UICONTROL 0}Edge Network API} を使用する必要があります。]**&#x200B;すべてのEdge Network API 呼び出しは、[ 認証済みコンテキスト ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) で行う必要があります。
 >
-><br>1&rbrace;Edge Network API を使用してプロファイル属性を取得できます [&#128279;](https://developer.adobe.com/data-collection-apis/docs/) サーバーサイド統合を追加して、web またはモバイル SDKの実装に既に使用しているものと同じデータストリームを使用します。
+><br>1}Edge Network API を使用してプロファイル属性を取得できます [ サーバーサイド統合を追加して、web またはモバイル SDKの実装に既に使用しているものと同じデータストリームを使用します。](https://developer.adobe.com/data-collection-apis/docs/)
 >
 ><br> 上記の要件に従わない場合、パーソナライゼーションはオーディエンスメンバーシップのみに基づきます。
 
@@ -37,9 +37,9 @@ ht-degree: 51%
 
 この宛先では、実装に応じて、次のいずれかのデータ収集方法を使用する必要があります。
 
-* Web サイトからデータを収集する場合は [&#128279;](/help/web-sdk/home.md)Adobe Experience Platform Web SDK&rbrace; を使用します。
-* モバイルアプリケーションからデータを収集する場合は [&#128279;](https://developer.adobe.com/client-sdks/documentation/)Adobe Experience Platform Mobile SDK&rbrace; を使用します。
-* [Web SDK](https://developer.adobe.com/data-collection-apis/docs/) または [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) を使用していない場合や、プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は [&#128279;](/help/web-sdk/home.md)0&rbrace;Edge Network API&rbrace; を使用します。
+* Web サイトからデータを収集する場合は [](/help/web-sdk/home.md)Adobe Experience Platform Web SDK} を使用します。
+* モバイルアプリケーションからデータを収集する場合は [](https://developer.adobe.com/client-sdks/documentation/)Adobe Experience Platform Mobile SDK} を使用します。
+* [Web SDK](https://developer.adobe.com/data-collection-apis/docs/) または [Mobile SDK](/help/web-sdk/home.md) を使用していない場合や、プロファイル属性に基づいてユーザーエクスペリエンスをパーソナライズする場合は [0}Edge Network API} を使用します。](https://developer.adobe.com/client-sdks/documentation/)
 
 >[!IMPORTANT]
 >
@@ -67,13 +67,13 @@ ht-degree: 51%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="データストリーム ID について"
+>title="データストリームについて"
 >abstract="このオプションは、ページへの応答にオーディエンスを含めるデータ収集データストリームを決定します。ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。宛先を設定する前に、データストリームを設定する必要があります。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ja" text="データストリームの設定方法を学ぶ"
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -84,7 +84,7 @@ ht-degree: 51%
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：宛先についての説明を入力します。例えば、この宛先を使用しているキャンペーンを指定できます。このフィールドはオプションです。
 * **[!UICONTROL 統合エイリアス]**：この値は、JSON オブジェクト名として Experience Platform Web SDK に送信されます。
-* **[!UICONTROL データストリーム ID]**：これにより、ページへの応答にオーディエンスを含めるデータ収集データストリームが決定されます。 ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。詳しくは、[データストリームの設定](../../../datastreams/overview.md)を参照してください。
+* **[!UICONTROL Datastream]**：これにより、ページへの応答にオーディエンスを含めるデータ収集データストリームが決定されます。 ドロップダウンメニューには、宛先設定が有効になっているデータストリームのみが表示されます。詳しくは、[データストリームの設定](../../../datastreams/overview.md)を参照してください。
 
 ### アラートの有効化 {#enable-alerts}
 
@@ -96,7 +96,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ プロファイルとオーディエンスのエッジパーソナライゼーションの宛先のアクティブ化 ](../../ui/activate-edge-personalization-destinations.md) をお読みください。
 
@@ -160,7 +160,7 @@ alloy("sendEvent", {
   });
 ```
 
-### [!UICONTROL &#x200B; 属性を含むカスタムPersonalization] の応答の例
+### [!UICONTROL  属性を含むカスタムPersonalization] の応答の例
 
 **[!UICONTROL 属性を含むカスタムPersonalization]** を使用する場合、API 応答は次の例のようになります。
 
