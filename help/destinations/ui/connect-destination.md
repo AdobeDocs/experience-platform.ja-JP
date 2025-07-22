@@ -3,10 +3,10 @@ title: 新しい宛先接続の作成
 type: Tutorial
 description: Adobe Experience Platform で宛先に接続する方法、アラートを有効にする方法、接続した宛先に対するマーケティングアクションを設定する方法について説明します。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 70%
+source-wordcount: '1176'
+ht-degree: 69%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 70%
 
 >[!IMPORTANT]
 > 
->* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* データセットの書き出しをサポートする宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データセットの書き出しをサポートする宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 
@@ -50,6 +50,11 @@ ht-degree: 70%
    ![使用可能な宛先のリストと、「新しい宛先を設定」コントロールが強調表示されている、Experience Platform UI のスクリーンショット。](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## 宛先に対する認証 {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="アカウント名"
+>abstract="今後この宛先アカウントを簡単に識別できる名前を入力します。 これは、同じ宛先タイプへの複数の接続がある場合に特に便利です。"
 
 宛先に接続する最初の手順は、宛先プラットフォームへの認証です。
 
