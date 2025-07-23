@@ -4,9 +4,9 @@ description: Adobe Experience Platformの最新のリリースノートのプレ
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d30778ef3152b779157206ce0d416c0e61ba98c3
+source-git-commit: fddefb7de85b5dcb8c8721e14d04efc0567ccae4
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1358'
 ht-degree: 17%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 17%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年7月29日（PT）**
 
@@ -53,10 +53,9 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 
 | 機能 | 説明 |
 | --- | --- |
-| データランディングゾーン（DLZ）宛先暗号化のサポート | データランディングゾーン宛先の暗号化のサポートを追加しました。 RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加し、機密データの書き出しのセキュリティを強化できるようになりました。 |
-| エッジ宛先用の強化されたデータストリーム情報 | Adobe Target宛先とカスタム Personalization宛先の右パネルの情報が改善され、データストリーム名フィールドとデータストリーム ID フィールドの両方が表示されるようになり、関連するデータストリーム設定がよりわかりやすくなり、既存のデータフローを確認する際の混乱が軽減されました。 宛先設定画面の **[!UICONTROL データストリーム ID]** セレクターが **[!UICONTROL データストリーム]** に更新され、ユーザーインターフェイスがわかりやすくなりました。 |
-| 宛先選択でのマーケティングアクションの表示 | データフローを設定する際に、マーケティングアクションが [!UICONTROL &#x200B; 宛先を選択 &#x200B;] 手順の右側のパネルに表示されるようになりました。これにより、表示ページに移動しなくても、マーケティングアクションの変更をすぐに確認できます。 この改善により、宛先の設定中にマーケティングアクション設定を簡単に検証できるようになり、ユーザーエクスペリエンスが向上します。 |
-| 宛先のマーケティングアクションの編集 | 既存の宛先のマーケティングアクションを編集できるようになりました。 |
+| エッジ宛先用の強化されたデータストリーム情報 | Adobe Targetとカスタム Personalizationの宛先の右側パネルの情報が改善され、データストリーム名が表示されるようになりました。これにより、関連するデータストリーム設定がよりわかりやすく表示され、既存のデータフローを確認する際の混乱が軽減されます。 宛先設定画面の **[!UICONTROL データストリーム ID]** セレクターが **[!UICONTROL データストリーム]** に更新され、ユーザーインターフェイスがわかりやすくなりました。 |
+| 宛先選択でのマーケティングアクションの表示 | マーケティングアクションが宛先 **[!UICONTROL 参照]** タブの右側のパネルおよび **[!UICONTROL データフロー実行]** ページに表示されるようになり、表示ページに移動しなくてもマーケティングアクションの変更をすぐに確認できるようになりました。 この改善により、宛先の設定中にマーケティングアクション設定を簡単に検証できるようになり、ユーザーエクスペリエンスが向上します。 |
+| （限定ベータ版）宛先のマーケティングアクションの編集 | 既存の宛先のマーケティングアクションを編集できるようになりました。 この機能は限定的なベータ版です。 アクセスをリクエストするには、Adobe担当者にお問い合わせください。 |
 | 宛先接続のアカウント名と説明 | 宛先に接続する際にアカウント名と説明を追加できるようになり、複数のアカウントを持つ宛先をより適切に管理できます。 |
 
 **修正点**
