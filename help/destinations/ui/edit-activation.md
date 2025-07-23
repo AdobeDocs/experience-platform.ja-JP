@@ -4,9 +4,9 @@ title: アクティベーションデータフローを編集
 type: Tutorial
 description: Adobe Experience Platformの既存のアクティベーションデータフローを編集するには、この記事の手順に従います。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
+source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '857'
 ht-degree: 10%
 
 ---
@@ -20,9 +20,8 @@ Adobe Experience Platformでは、宛先に対する既存のアクティベー�
 * [マッピングされた属性と ID の編集](#edit-mapped-attributes)
 * [アクティベーションスケジュールとエクスポート頻度を編集](#edit-schedule-frequency)
 * [ 追加のデータセット ](#add-datasets) アクティベーションワークフローに
+* 書き出されたデータへの [ アクセスラベルの適用 ](#apply-access-labels)
 * アクティベーションデータフローの [ 名前と説明を編集 ](#edit-names-descriptions)
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## アクティベーションデータフローを参照 {#browse-activation-dataflows}
 
@@ -44,7 +43,7 @@ Adobe Experience Platformでは、宛先に対する既存のアクティベー�
 
 ## アクティベーションデータフローを有効または無効にする {#enable-disable-dataflows}
 
-**[!UICONTROL 有効 &#x200B;]/[!UICONTROL &#x200B; 無効]** 切替スイッチを使用して、宛先へのすべてのデータ書き出しを開始または一時停止します。
+**[!UICONTROL 有効 ]/[!UICONTROL  無効]** 切替スイッチを使用して、宛先へのすべてのデータ書き出しを開始または一時停止します。
 
 ![ データフロー実行の有効/無効の切り替えを示すExperience Platform UI 画像 ](../assets/ui/edit-activation/enable-toggle.png)
 
@@ -100,8 +99,6 @@ Adobe Experience Platformでは、宛先に対する既存のアクティベー�
 * [ プロファイル書き出しのバッチ宛先に対するオーディエンスのアクティブ化 ](./activate-batch-profile-destinations.md) （例：Amazon S3 またはOracle Eloqua）。
 * [ ストリーミングプロファイル書き出し宛先に対するオーディエンスのアクティブ化 ](./activate-streaming-profile-destinations.md) （HTTP API やAmazon Kinesis など）。
 
-
-
 ## アクティベーションデータフローへのデータセットの追加 {#add-datasets}
 
 右側のパネルで **[!UICONTROL データセットを書き出し]** を選択して、宛先に書き出す追加のデータセットを選択します。 このオプションを選択すると、[ データセット書き出しワークフロー ](export-datasets.md) が表示されます。
@@ -112,13 +109,11 @@ Adobe Experience Platformでは、宛先に対する既存のアクティベー�
 
 ![ 「データセットを書き出し」データフロー実行オプションを示すExperience Platform UI 画像。](../assets/ui/edit-activation/export-datasets.png)
 
+## アクセスラベルの適用 {#apply-access-labels}
 
+**[!UICONTROL アクセスラベルを適用]** を選択して、書き出されたデータのデータ使用ラベルを編集します。 詳しくは、[ データ使用ラベルのドキュメント ](../../data-governance/labels/overview.md) を参照してください。
 
-<!-- ## Apply access labels {#apply-access-labels}
-
-Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
-
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![ 「データセットを書き出し」データフロー実行オプションを示すExperience Platform UI 画像。](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## アクティベーションデータフローの名前と説明の編集 {#edit-names-descriptions}
 
