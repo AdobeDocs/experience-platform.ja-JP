@@ -3,18 +3,31 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
-ht-degree: 62%
+source-wordcount: '2438'
+ht-degree: 61%
 
 ---
 
 
-# リリースノート
+# Web SDK リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
+
+## バージョン 2.28.0 - 2025年7月24日（PT）
+
+**新機能**
+
+- Adobe Journey Optimizerの欠格規則をサポートするようになりました。
+
+**修正点および改善点**
+
+- [Media Analytics トラッカー ](commands/getmediaanalyticstracker.md) で、メディアオブジェクトの `length` プロパティが無効なデータタイプを誤って受け入れたエラーを修正しました。
+- ID 検索が失敗した場合にプロミス却下を適切に処理する [ID 管理 ](identity/overview.md) エラー処理を改善しました。
+- HTML コンテンツ項目を含む [ パーソナライゼーションコンテンツ ](personalization/rendering-personalization-content.md) が、見つからないコンテン `renderStatusHandler` に関するエラーでレンダリングに失敗する問題を修正しました。
+- 非 HTTP URL を適切に処理するための Activity Map[URL コレクション ](commands/configure/clickcollectionenabled.md) を修正しました。
 
 ## バージョン 2.27.0 - 2025年5月20日（PT）
 
@@ -30,11 +43,11 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 **新機能**
 
 - Web SDK NPM パッケージを使用して、カスタム Web SDK ビルドを作成し、必要なライブラリコンポーネントのみを選択できるようになりました。 これにより、ライブラリのサイズが縮小され、読み込み時間が最適化されます。 [NPM パッケージを使用してカスタム web SDK ビルドを作成する ](install/create-custom-build.md) 方法については、ドキュメントを参照してください。
-- [`getIdentity`](commands/getidentity.md) コマンドは、`kndctr` ID cookie から直接 ECID を自動的に読み取るようになりました。 `ECID` 名前空間を使用して `getIdentity` を呼び出すと、ID Cookie が既に存在する場合、web SDKは、ID を取得するためにEdge Networkに対してリクエストを実行しなくなりました。 これで、cookie から ID を読み取るようになりました。
+- [`getIdentity`](commands/getidentity.md) コマンドは、`kndctr` ID cookie から直接 ECID を自動的に読み取るようになりました。 `getIdentity` 名前空間を使用して `ECID` を呼び出すと、ID Cookie が既に存在する場合、web SDKは、ID を取得するためにEdge Networkに対してリクエストを実行しなくなりました。 これで、cookie から ID を読み取るようになりました。
 
 **修正点および改善点**
 
-- `collect` 呼び出しを送信した後、`getIdentity` コマンドが ID を返さない問題を修正しました。
+- `getIdentity` 呼び出しを送信した後、`collect` コマンドが ID を返さない問題を修正しました。
 - リダイレクトが発生する前に、パーソナライゼーションのリダイレクトによってコンテンツがちらつく問題を修正しました。
 
 ## バージョン 2.25.0 - 2025年1月23日（PT）
@@ -79,7 +92,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) コマンドでの [CORE ID](identity/overview.md#tracking-coreid-web-sdk) のリクエストに対するサポートを追加しました。
+- [getIdentity](identity/overview.md#tracking-coreid-web-sdk) コマンドでの [CORE ID](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) のリクエストに対するサポートを追加しました。
 
 **修正点および改善点**
 
@@ -143,7 +156,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 - Adobe Journey Optimizerからのアプリ内メッセージのレンダリングがサポートされるようになりました。
 - [ ページイベントの上部と下部 ](use-cases/top-bottom-page-events.md) のサポートを追加しました。
-- `sendEvent` コマンドに [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) ページ全体の範囲とデフォルトサーフェスの要求を制御するオプションを追加しました。
+- [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) コマンドに `sendEvent` ページ全体の範囲とデフォルトサーフェスの要求を制御するオプションを追加しました。
 
 **修正点および改善点**
 
@@ -155,7 +168,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [&#128279;](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
@@ -265,7 +278,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 ## バージョン 2.7.0 - 2021年10月26日（PT）
 
-- `inferences` や `destinations` など、Edge Networkからの追加情報を `sendEvent` からの戻り値で公開します。 これらの機能は現在、Betaの一部としてロールアウトされているので、これらのプロパティの形式は変わる可能性があります。
+- `sendEvent` や `inferences` など、Edge Networkからの追加情報を `destinations` からの戻り値で公開します。 これらの機能は現在、Betaの一部としてロールアウトされているので、これらのプロパティの形式は変わる可能性があります。
 
 ## バージョン 2.6.4 - 2021年9月7日（PT）
 

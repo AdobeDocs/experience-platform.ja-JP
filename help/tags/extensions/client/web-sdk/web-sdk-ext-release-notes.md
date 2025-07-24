@@ -2,17 +2,29 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2677'
-ht-degree: 71%
+source-wordcount: '2733'
+ht-degree: 69%
 
 ---
 
-# Adobe Experience Platform Web SDK 拡張機能リリースノート
+
+# Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK自体の最新のリリースノートについては、[Experience Platform Web SDK リリースノート ](/help/web-sdk/release-notes.md) を参照してください。
 
+## バージョン 2.31.0 - 2025年7月24日（PT）
+
+**新機能**
+
+- Adobe Experience Platform Web SDKの [ バージョン 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) が含まれます。
+
+**修正点および改善点**
+
+- データ要素を介してデータストリームの上書きが有効になっている場合にエラーがスローされる問題を修正しました。
+- 空の `idSyncContainerId` の上書きがエラーをスローする問題を修正しました。
+- メディアデータ要素を解決する際に、イベントオブジェクトが含まれるようになりました。
 
 ## バージョン 2.30.1 - 2025年5月27日（PT）
 
@@ -120,15 +132,15 @@ Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます�
 **新機能**
 
 - 拡張機能の設定に [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) コンポーネントのサポートを追加しました。
-- [!DNL Streaming Media Collection] 機能に [`Send Media Event`](action-types.md#send-media-event) アクションを追加しました。
-- [!DNL Streaming Media Collection] 機能用に [`Media: Quality of Experience`](data-element-types.md#quality-experience) データ要素を追加しました。
+- [`Send Media Event`](action-types.md#send-media-event) 機能に [!DNL Streaming Media Collection] アクションを追加しました。
+- [`Media: Quality of Experience`](data-element-types.md#quality-experience) 機能用に [!DNL Streaming Media Collection] データ要素を追加しました。
 
 Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます。
 
 **修正点および改善点**
 
 - [ 変数を更新 ](action-types.md#update-variable) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
-- `sendEvent` アクションで使用することが推奨されるイベントタイプから [!UICONTROL &#x200B; メディア &#x200B;] イベントタイプを削除しました。
+- [!UICONTROL  アクションで使用することが推奨されるイベントタイプから ] メディア `sendEvent` イベントタイプを削除しました。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
 
@@ -186,7 +198,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **新機能**
 
-- [&#128279;](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
@@ -391,8 +403,8 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 - `Get Decisions` に関する変更：
    - `getDecisions` コマンドを削除しました。
    - `sendEvent` コマンドに `scopes` オプションを追加しました。決定は、`sendEvent` によって解決されたプロミスで返されます。
-   - 組み込みの `__view__` 範囲が追加され、ページ全体またはビュー全体のオファーを返すようになりました。（例えば、Target での VEC オファー）。
-これらの決定は、`renderDecisions` が false に設定されている場合にのみ、`sendEvent` コマンドから返されます。
+   - ビルトインの `__view__` 範囲が追加され、ページ全体またはビュー全体のオファーを返すようになりました。（例えば、Target での VEC オファー）。
+これらの決定は、`sendEvent` が false に設定されている場合にのみ、`renderDecisions` コマンドから返されます。
    - 決定を利用可能になったときに実行する `Decisions Received` イベントを追加しました。
 - 1 回のサーバーコールで複数のパーソナライゼーション通知を組み合わせました。
 - データ要素が参照されるたびにイベント結合 ID がリセットされる問題を修正しました。
