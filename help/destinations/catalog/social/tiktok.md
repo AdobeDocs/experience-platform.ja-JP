@@ -3,10 +3,10 @@ title: TikTok 接続
 description: 広告キャンペーンでターゲティングするためのデータを使用して、TikTokでカスタムオーディエンスを作成します。 これらのオーディエンスは、web サイトを訪問したユーザーや、コンテンツを操作したユーザーである可能性があります。 TikTok Ads Manager とAdobeのリアルタイム統合を使用して、目的のオーディエンスをAdobe Experience PlatformからTikTokにすばやく安全にプッシュします。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: c1f54e02bbc4affb775b3dc9e95f3852dc5a8e39
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 39%
+source-wordcount: '1144'
+ht-degree: 40%
 
 ---
 
@@ -40,8 +40,8 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 |
-| IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 |
+| GAID | GOOGLE ADVERTISING ID | ソース ID が GAID 名前空間の場合は、GAID ターゲット ID を選択します。 Adobe Experience Platformでは、プレーンテキストと SHA256 でハッシュ化された GAID 値の両方がサポートされています。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
+| IDFA | Apple の広告主 ID | ソース ID が IDFA 名前空間の場合は、IDFA ターゲット ID を選択します。 Adobe Experience Platformでは、プレーンテキストと SHA256 でハッシュ化された IDFA 値の両方がサポートされています。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 | 電話番号 | SHA256 アルゴリズムでハッシュ化された電話番号 | プレーンテキストと SHA256 でハッシュ化された電話番号の両方がAdobe Experience Platformでサポートされており、E.164 形式である必要があります。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 | メール | SHA256 アルゴリズムでハッシュ化されたメールアドレス | Adobe Experience Platform では、プレーンテキストと SHA256 でハッシュ化されたメールアドレスの両方がサポートされています。ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。 |
 
@@ -55,7 +55,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
 | カスタムアップロード | ✓ | CSV ファイルから Experience Platform に[読み込まれた](../../../segmentation/ui/audience-portal.md#import-audience)オーディエンス。 |
-| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
+| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences) を通じてExperience Platformにインポートされたオーディエンス。 |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -106,8 +106,8 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
@@ -117,7 +117,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 ソースフィールドを選択中：
 
-* Adobe Experience Platformおよび [!DNL TikTok Ads Manager] でプロファイルを一意に識別するソース ID として、識別子（例：` Email_LC_SHA256`）を選択します。
+* Adobe Experience Platformおよび ` Email_LC_SHA256` でプロファイルを一意に識別するソース ID として、識別子（例：[!DNL TikTok Ads Manager]）を選択します。
 
 ターゲットフィールドを選択：
 
@@ -127,7 +127,7 @@ TikTokでは、以下の表に示す ID のアクティブ化をサポートし�
 
 ## 書き出したデータ {#exported-data}
 
-（**Assets / Audiences** の下にある） [!DNL TikTok Ads Manager] アカウントを確認して、Experience Platform オーディエンスが正常に書き出されたかどうかを確認します。 オーディエンスは、オーディエンスタイプ `Partner Audience` として入力されます。
+（[!DNL TikTok Ads Manager]Assets / Audiences **の下にある）** アカウントを確認して、Experience Platform オーディエンスが正常に書き出されたかどうかを確認します。 オーディエンスは、オーディエンスタイプ `Partner Audience` として入力されます。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
