@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-time Customer Data Platform ガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスを作成し、それらのオーディエンスをサードパーティの宛先に活用します。
 role: Admin
-source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
+source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 61%
+source-wordcount: '311'
+ht-degree: 60%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 61%
       * [使用例](./b2b-use-case.md)
       * [エンドツーエンドのチュートリアル](./b2b-tutorial.md)
       * [Real-Time CDP B2B Edition のガードレール](b2b-guardrails.md)
+      * [Real-Time CDP B2B edition アーキテクチャのアップグレード](b2b-architecture-upgrade.md)
 * Audience ManagerとReal-Time CDP {#evolution}
    * [Audience Manager からの進化](aam-to-rtcdp.md)
 * アカウントプロファイル {#account}
@@ -46,12 +47,12 @@ ht-degree: 61%
    * [Real-Time CDP B2B Edition の宛先](destinations/b2b.md)
 * ガードレール {#guardrails}
    * [Real-Time CDP ガードレールの概要](guardrails/overview.md)
-   * [ データ取り込みのガードレール](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=ja){target="_blank"}
+   * [ データ取り込みのガードレール ](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [ のガードレール  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
-   * [ データとセグメ  [!DNL Real-Time Customer Profile]  ト化のガードレール](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"}
-   * [ データのガ  [!DNL Identity Service]  ドレール](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=ja){target="_blank"}
-   * [ のガードレール  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=ja){target="_blank"}
-   * [ 宛先を介したデータのアクティベーションのためのガードレール](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=ja){target="_blank"}
+   * [ データとセグメ  [!DNL Real-Time Customer Profile]  ト化のガードレール ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ja){target="_blank"}
+   * [ データのガ  [!DNL Identity Service]  ドレール ](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [ のガードレール  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [ 宛先を介したデータのアクティベーションのためのガードレール ](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * ID {#identity}
    * [ID と ID 名前空間](profile/identities-overview.md)
 * 結合ポリシー {#merge-policies}
