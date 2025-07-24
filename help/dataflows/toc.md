@@ -4,10 +4,10 @@ user-guide-title: データフローガイド
 user-guide-description: データフローと、様々なサービス間でデータフローを設定する方法について説明します。
 feature: Dataflows
 role: Developer
-source-git-commit: d4c1c9fce7ef5445c8f043d1f766603235b9bd88
+source-git-commit: 2f78b70761ef676fe4ab61b89b6cbb261c99e9ca
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '66'
+ht-degree: 50%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 0%
    - [プロファイルのデータフローの監視](./ui/monitor-profiles.md)
    - [オーディエンスのデータフローの監視](./ui/monitor-audiences.md)
    - [宛先のデータフローの監視](./ui/monitor-destinations.md)
+   - [ストリーミングプロファイル取り込みのデータフローの監視](./ui/monitor-streaming-profile.md)
    - B2B 監視 {#b2b}
       - [プロファイルエンリッチメントジョブの監視](./ui/b2b/monitor-profile-enrichment.md)
 - [フローサービス API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
