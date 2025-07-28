@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
+source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1047'
 ht-degree: 91%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 91%
       - [SFTP コネクタ](connectors/cloud-storage/sftp.md)
       - [Amazon S3 および Azure Blob コネクタ](connectors/cloud-storage/blob-s3.md)
    - 同意およびユーザー設定 {#consent}
+      - [ディドミ](connectors/consent-and-preferences/didomi.md)
       - [OneTrust 統合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
@@ -264,6 +265,7 @@ ht-degree: 91%
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 と Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - 同意およびユーザー設定 {#consent}
+         - [ディドミ](tutorials/ui/create/consent-and-preferences/didomi.md)
          - [OneTrust 統合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
