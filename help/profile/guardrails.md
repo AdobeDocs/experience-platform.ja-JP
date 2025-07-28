@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 機能を最適に使用するための、プロファイルデータおよびセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: cfc221250a9c8f91b16aa1d4572263ecaf4eeccc
+source-git-commit: 1536201961211aeb747e418794196c146d86e869
 workflow-type: tm+mt
-source-wordcount: '2622'
+source-wordcount: '2636'
 ht-degree: 52%
 
 ---
@@ -120,9 +120,9 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 | --------- | ----- | ---------- | ----------- |
 | サンドボックスあたりのオーディエンス数 | 4000 | パフォーマンスガードレール | サンドボックスあたり最大 4,000 個の **アクティブ** オーディエンスを持つことができます。 組織あたり 4,000 個を超えるオーディエンスを持つことができます（各 **個人** サンドボックスのオーディエンスの数が 4,000 個未満である必要があります）。 これは、バッチ、ストリーミング、エッジオーディエンスを含みます。 追加のオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、セグメントビルダーを使用した [ オーディエンスの作成 ](/help/segmentation/ui/segment-builder.md) を参照してください。 |
 | サンドボックスごとのEdge オーディエンス | 150 | パフォーマンスガードレール | サンドボックスあたり最大 150 個の **アクティブ** エッジオーディエンスを設定できます。 各 **個人** サンドボックスのエッジオーディエンスが 150 個未満である限り、組織あたり 150 個を超えるエッジオーディエンスを持つことができます。 追加のエッジオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/methods/edge-segmentation.md) を参照してください。 |
-| すべてのサンドボックスにわたるEdgeのスループット | 1500 RPS | パフォーマンスガードレール | Edgeのセグメント化では、Adobe Experience Platform Edge Networkに入るインバウンドイベント数のピーク値（1 秒あたり 1,500 件）がサポートされています。 Edgeのセグメント化は、インバウンドイベントがAdobe Experience Platform Edge Networkに入った後、処理するのに最大 350 ミリ秒かかる場合があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/methods/edge-segmentation.md) を参照してください。 |
+| すべてのサンドボックスにわたるEdgeのスループット | 1500 RPS | パフォーマンスガードレール | Edgeのセグメント化では、実稼動用および開発用サンドボックスをまたいで、Adobe Experience Platform Edge Networkにエントリする 1 秒あたり 1,500 インバウンドイベントの結合ピーク値をサポートしています。 Edgeのセグメント化は、インバウンドイベントがAdobe Experience Platform Edge Networkに入った後、処理するのに最大 350 ミリ秒かかる場合があります。 詳しくは、[ エッジオーディエンス ](/help/segmentation/methods/edge-segmentation.md) を参照してください。 |
 | サンドボックスごとのストリーミングオーディエンス | 500 | パフォーマンスガードレール | サンドボックスあたり最大 500 個の **アクティブ** ストリーミングオーディエンスを持つことができます。 各 **個別** サンドボックスのストリーミングオーディエンスの数が 500 未満である限り、組織あたり 500 個を超えるストリーミングオーディエンスを持つことができます。 これは、ストリーミングオーディエンスとエッジオーディエンスの両方を含んでいます。 追加のストリーミングオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/methods/streaming-segmentation.md) を参照してください。 |
-| すべてのサンドボックスでのストリーミングスループット | 1500 RPS | パフォーマンスガードレール | ストリーミングセグメント化では、1 秒あたり 1,500 インバウンドイベントのピーク値をサポートしています。 ストリーミングセグメント化は、セグメントメンバーシップのプロファイルを選定するのに最大 5 分かかる場合があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/methods/streaming-segmentation.md) を参照してください。 |
+| すべてのサンドボックスでのストリーミングスループット | 1500 RPS | パフォーマンスガードレール | ストリーミングセグメント化では、実稼動および開発用サンドボックス全体で、1 秒あたり 1,500 インバウンドイベントの結合されたピーク値をサポートしています。 ストリーミングセグメント化は、セグメントメンバーシップのプロファイルを選定するのに最大 5 分かかる場合があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/methods/streaming-segmentation.md) を参照してください。 |
 | サンドボックスごとのバッチオーディエンス | 4000 | パフォーマンスガードレール | サンドボックスあたり最大 4,000 個の **アクティブ** バッチオーディエンスを持つことができます。 組織あたり 4000 個を超えるバッチオーディエンスを持つことができます（各 **個人** サンドボックスのバッチオーディエンスが 4000 個未満である必要があります）。 追加のバッチオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 |
 | サンドボックスごとのアカウントオーディエンス | 50 | システムに適用されたガードレール | 1 つのサンドボックスに作成できるアカウントオーディエンスは最大 50 個です。 サンドボックスで 50 個のオーディエンスに到達した場合、新しいアカウントオーディエンスを作成しようとすると、**[!UICONTROL オーディエンスを作成]** コントロールが無効になります。 詳しくは、[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) を参照してください。 |
 | サンドボックスごとの公開済みコンポジション | 10 | パフォーマンスガードレール | サンドボックスには、最大 10 個の公開済みコンポジションを含めることができます。 詳しくは、[UI ガイドのオーディエンス構成 ](/help/segmentation/ui/audience-composition.md) を参照してください。 |
@@ -188,7 +188,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ja#end-to-end-latency-diagrams)。
+* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
 * [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
