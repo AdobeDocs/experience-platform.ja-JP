@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
+source-git-commit: 8ba51f144e3120637d8c6027be85b1b4e6e5d613
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1051'
 ht-degree: 91%
 
 ---
@@ -232,6 +232,7 @@ ht-degree: 91%
    - [データフローをドラフトとして保存](tutorials/api/draft.md)
    - [データフローへのアクセスラベルの適用](tutorials/api/labels.md)
    - [プライベートエンドポイントの使用](tutorials/api/private-link.md)
+   - [データキャプチャの変更を有効化](tutorials/api/change-data-capture.md)
 - UI チュートリアル {#ui-tutorials}
    - ソース接続の作成 {#create}
       - アドビアプリケーション {#adobe-applications}

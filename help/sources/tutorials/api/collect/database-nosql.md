@@ -1,14 +1,12 @@
 ---
-keywords: Experience Platform;ホーム;人気のトピック;データベースデータベース;サードパーティのデータベース
-solution: Experience Platform
 title: Flow Service API を使用したデータベースソースのデータフローの作成
 type: Tutorial
 description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1428'
-ht-degree: 75%
+source-wordcount: '1453'
+ht-degree: 73%
 
 ---
 
@@ -62,58 +60,60 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Database source connection",
-        "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
-        "description": "Database source connection",
-        "data": {
-            "format": "tabular"
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Database source connection",
+    "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "Database source connection",
+    "data": {
+      "format": "tabular"
+    },
+    "params": {
+      "tableName": "test1.Mytable",
+      "columns": [
+        {
+          "name": "TestID",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "params": {
-            "tableName": "test1.Mytable",
-            "columns": [
-                {
-                    "name": "TestID",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Name",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Datefield",
-                    "type": "string",
-                    "meta:xdmType": "date-time",
-                    "xdm": {
-                        "type": "string",
-                        "format": "date-time"
-                    }
-                }
-            ]
+        {
+          "name": "Name",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-            "version": "1.0"
+        {
+          "name": "Datefield",
+          "type": "string",
+          "meta:xdmType": "date-time",
+          "xdm": {
+            "type": "string",
+            "format": "date-time"
+          }
         }
-    }'
+      ],
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+      "version": "1.0"
+    }
+  }'
 ```
 
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `baseConnectionId` | データベースソースの接続 ID。 |
-| `params.path` | ソースファイルのパス。 |
+| `params.tableName` | ソースファイルのパス。 |
+| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 詳しくは、「ソースでのデータキャプチャの変更 [ の使用に関するガイドを参照し ](../change-data-capture.md) ください。 |
 | `connectionSpec.id` | データベースソースの接続仕様 ID。 データベース仕様 ID の一覧については、[付録](#appendix)を参照してください。 |
 
 **応答**

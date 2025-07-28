@@ -5,10 +5,10 @@ title: Flow Service API を使用したクラウドストレージソースの�
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 59%
+source-wordcount: '1792'
+ht-degree: 57%
 
 ---
 
@@ -37,7 +37,7 @@ Experience Platform API を正常に呼び出す方法について詳しくは�
 
 ## ソース接続の作成 {#source}
 
-ベース接続 ID、取り込むソースファイルのパス、ソースの対応する接続仕様 ID を指定しながら [!DNL Flow Service] API の `sourceConnections` エンドポイントに対して POST リクエストを行うことで、ソース接続を作成できます。
+ベース接続 ID、取り込むソースファイルのパス、ソースの対応する接続仕様 ID を指定しながら `sourceConnections` API の [!DNL Flow Service] エンドポイントに対して POST リクエストを行うことで、ソース接続を作成できます。
 
 ソース接続を作成する場合は、データ形式属性の列挙値も定義する必要があります。
 
@@ -81,7 +81,8 @@ curl -X POST \
       },
       "params": {
           "path": "/acme/summerCampaign/account.csv",
-          "type": "file"
+          "type": "file",
+          "cdcEnabled": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -100,6 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | （オプション）取り込む圧縮ファイルのタイプを定義するプロパティ。 サポートされている圧縮ファイルのタイプは、`bzip2`、`gzip`、`deflate`、`zipDeflate`、`tarGzip`、`tar` です。 **メモ**:`compressionType` プロパティは、区切り文字付きまたは JSON ファイルを取り込む場合にのみ使用できます。 |
 | `params.path` | アクセスするソースファイルのパス。 このパラメーターは、個々のファイルまたはフォルダー全体を指します。  **注意**：ファイル名の代わりにアスタリスクを使用して、フォルダー全体の取り込みを指定できます。 例：`/acme/summerCampaign/*.csv` は `/acme/summerCampaign/` フォルダー全体を取り込みます。 |
 | `params.type` | 取り込むソースデータファイルのファイルタイプ。 タイプ `file` を使用して個々のファイルを取り込み、タイプ `folder` を使用してフォルダー全体を取り込みます。 |
+| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 このプロパティは、次のクラウドストレージソースでサポートされています。 <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> 詳しくは、「ソースでのデータキャプチャの変更 [ の使用に関するガイドを参照し ](../change-data-capture.md) ください。 |
 | `connectionSpec.id` | 特定のクラウドストレージソースに関連付けられた接続仕様 ID。 接続仕様 ID のリストについては、[付録](#appendix)を参照してください。 |
 
 **応答**
