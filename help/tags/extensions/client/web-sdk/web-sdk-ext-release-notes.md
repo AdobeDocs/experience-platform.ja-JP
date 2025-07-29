@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2733'
-ht-degree: 69%
+source-wordcount: '2801'
+ht-degree: 68%
 
 ---
 
@@ -25,6 +25,11 @@ ht-degree: 69%
 - データ要素を介してデータストリームの上書きが有効になっている場合にエラーがスローされる問題を修正しました。
 - 空の `idSyncContainerId` の上書きがエラーをスローする問題を修正しました。
 - メディアデータ要素を解決する際に、イベントオブジェクトが含まれるようになりました。
+
+**既知の問題**
+
+- v2.31.0 のリリース後、[ カスタムコンポーネントビルド ](/help/web-sdk/install/create-custom-build.md) プロセスに問題が見つかりました。 カスタムビルドは引き続き動作しますが、現在はすべてのコンポーネントがビルドに含まれているため、コンポーネントの選択に関係なく、フルサイズのパッケージが作成されます。 この問題の修正は開発中です。 カスタムコンポーネントの選択を使用してビルドサイズを最小限に抑える場合は、将来のリリースを待つことをお勧めします。
+
 
 ## バージョン 2.30.1 - 2025年5月27日（PT）
 
@@ -140,7 +145,7 @@ Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます�
 **修正点および改善点**
 
 - [ 変数を更新 ](action-types.md#update-variable) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
-- [!UICONTROL &#x200B; アクションで使用することが推奨されるイベントタイプから &#x200B;] メディア `sendEvent` イベントタイプを削除しました。
+- [!UICONTROL  アクションで使用することが推奨されるイベントタイプから ] メディア `sendEvent` イベントタイプを削除しました。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
 
@@ -198,7 +203,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **新機能**
 
-- [&#128279;](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 

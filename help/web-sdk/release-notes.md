@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2438'
-ht-degree: 61%
+source-wordcount: '2486'
+ht-degree: 60%
 
 ---
 
@@ -28,6 +28,10 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 - ID 検索が失敗した場合にプロミス却下を適切に処理する [ID 管理 ](identity/overview.md) エラー処理を改善しました。
 - HTML コンテンツ項目を含む [ パーソナライゼーションコンテンツ ](personalization/rendering-personalization-content.md) が、見つからないコンテン `renderStatusHandler` に関するエラーでレンダリングに失敗する問題を修正しました。
 - 非 HTTP URL を適切に処理するための Activity Map[URL コレクション ](commands/configure/clickcollectionenabled.md) を修正しました。
+
+**既知の問題**
+
+- [ を使用する ](/help/web-sdk/install/create-custom-build.md) カスタムビルド `npx @adobe/alloy` プロセスは、現在、バージョン 2.28.0 で期待どおりに機能していません。選択したモジュールに関係なく、すべてのコンポーネントが生成されたビルドに含まれます。 この問題は、CDN で使用可能な標準のJavaScript ファイルには影響しません。 修正中です。
 
 ## バージョン 2.27.0 - 2025年5月20日（PT）
 
@@ -168,7 +172,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [&#128279;](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
