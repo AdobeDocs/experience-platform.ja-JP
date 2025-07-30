@@ -61,8 +61,8 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 | 宛先接続のアカウント名と説明 | 宛先に接続する際に、[ アカウント名と説明を追加 ](/help/destinations/ui/connect-destination.md) できるようになりました。これにより、複数のアカウントを持つ宛先を管理しやすくなります。 |
 | エッジ宛先用の強化されたデータストリーム情報 | [Adobe Target](/help/destinations/catalog/personalization/adobe-target-v2.md) 宛先と [ カスタム Personalization](/help/destinations/catalog/personalization/custom-personalization.md) 宛先の右側パネルの情報が改善され、データストリーム名が表示されるようになりました。これにより、関連するデータストリーム設定がよりわかりやすく表示され、既存のデータフローを確認する際の混乱を減らすことができます。 宛先設定画面の **[!UICONTROL データストリーム ID]** セレクターが **[!UICONTROL データストリーム]** に更新され、ユーザーインターフェイスがわかりやすくなりました。 |
 | 宛先選択でのマーケティングアクションの表示 | マーケティングアクションが、宛先ワークスペースの「**[[!UICONTROL 参照]](/help/destinations/ui/destinations-workspace.md#browse)**」タブおよび **[[!UICONTROL データフロー実行]](/help/dataflows/ui/monitor-destinations.md)** ページの右側のパネルに表示されるようになり、表示ページに移動しなくてもマーケティングアクションの変更をすぐに確認できるようになりました。 この機能強化により、宛先を設定する際にマーケティングアクションの設定を検証しやすくなることで、ユーザーエクスペリエンスが向上します。 |
-| [!BADGE  限定ベータ版 ]{type=Informative} 宛先用マーケティングアクションの編集 | 既存の宛先に対して [ マーケティングアクションの編集 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) を行えるようになりました。 この機能は現在、限定的なベータ版です。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
-| [!BADGE  限定ベータ版 ]{type=Informative} 宛先を編集 | 作成後に [ 宛先設定を編集 ](/help/destinations/ui/edit-destination.md) できます。 この機能は現在、限定的なベータ版です。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
+| [!BADGE &#x200B; 限定ベータ版 &#x200B;]{type=Informative} 宛先用マーケティングアクションの編集 | 既存の宛先に対して [ マーケティングアクションの編集 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) を行えるようになりました。 この機能は現在、限定的なベータ版です。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
+| [!BADGE &#x200B; 限定ベータ版 &#x200B;]{type=Informative} 宛先を編集 | 作成後に [ 宛先設定を編集 ](/help/destinations/ui/edit-destination.md) できます。 この機能は現在、限定的なベータ版です。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
 
 **修正点**
 

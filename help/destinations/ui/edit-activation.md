@@ -44,7 +44,7 @@ Adobe Experience Platformでは、宛先に対する既存のアクティベー�
 
 ## アクティベーションデータフローを有効または無効にする {#enable-disable-dataflows}
 
-**[!UICONTROL 有効 ]/[!UICONTROL  無効]** 切替スイッチを使用して、宛先へのすべてのデータ書き出しを開始または一時停止します。
+**[!UICONTROL 有効 &#x200B;]/[!UICONTROL &#x200B; 無効]** 切替スイッチを使用して、宛先へのすべてのデータ書き出しを開始または一時停止します。
 
 ![ データフロー実行の有効/無効の切り替えを示すExperience Platform UI 画像 ](../assets/ui/edit-activation/enable-toggle.png)
 
