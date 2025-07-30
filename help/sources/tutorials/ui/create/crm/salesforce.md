@@ -2,16 +2,16 @@
 title: Salesforce ユーザーインターフェイスを使用したExperience Platform アカウントの接続
 description: ユーザーインターフェイスを使用してSalesforce アカウントを接続し、CRM データをExperience Platformに取り込む方法について説明します。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 17%
+source-wordcount: '1003'
+ht-degree: 13%
 
 ---
 
 # UI を使用した [!DNL Salesforce] アカウントのExperience Platformへの接続
 
-このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して [!DNL Salesforce] アカウントを連携し、CRM データをAdobe Experience Platformに取り込む手順について説明します。
+このガイドでは、[!DNL Salesforce] アカウントを連携し、Experience Platform ユーザーインターフェイスを使用して CRM データをAdobe Experience Platformに取り込む方法について説明します。
 
 ## はじめに
 
@@ -58,6 +58,7 @@ OAuth2 クライアント資格情報を使用して [!DNL Salesforce] アカウ
 | クライアント ID | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | クライアントシークレット | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | API バージョン | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 |
+| 削除されたオブジェクトを含める | ソフト削除されたレコードを含めるかどうかを決定するために使用されるブール値。 true に設定した場合、[!DNL Salesforce] クエリにソフト削除レコードを含めて、アカウントからExperience Platformに取り込むことができます。設定を指定しない場合、この値はデフォルトで `false` になります。 |
 
 [!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
 
@@ -67,13 +68,13 @@ OAuth2 クライアント資格情報を使用して [!DNL Salesforce] アカウ
 
 ## [!DNL Salesforce] アカウントを接続
 
-Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+Experience Platformの UI で、左側のメニューから **[!UICONTROL Sources]** に移動し、[!UICONTROL Sources] ワークスペースを開きます。 左側のカタログを使用してカテゴリを参照するか、検索バーを使用して接続するソースをすばやく見つけます。
 
-*[!UICONTROL CRM]* カテゴリの下の「**[!DNL Salesforce]**」を選択し、「**[!UICONTROL データを追加]**」を選択します。
+**[!DNL Salesforce]** CRM *[!UICONTROL カテゴリの下の「]*」を選択し、「**[!UICONTROL データを追加]**」を選択します。
 
 >[!TIP]
 >
->ソースカタログ内のソースは、特定のソースがまだ認証済みのアカウントを持っていない場合に「**[!UICONTROL 設定]**」オプションを表示します。 認証済みアカウントが存在すると、このオプションは **[!UICONTROL データを追加]** に変わります。
+>ソースカタログには、アカウントが接続されていない場合は **[!UICONTROL 設定]**、アカウントが既に認証されている場合は **[!UICONTROL データを追加]** と表示されます。
 
 ![Experience Platform UI のソースカタログで、Salesforce ソースカードが選択されています。](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -116,10 +117,11 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 * クライアント ID
 * クライアントシークレット
 * API バージョン
+* 削除オブジェクトを含める
 
 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
 
-![Salesforce アカウント作成用の OAuth インターフェイス ](../../../../images/tutorials/create/salesforce/oauth2.png)
+![Salesforce アカウント作成用の OAuth インターフェイス ](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 

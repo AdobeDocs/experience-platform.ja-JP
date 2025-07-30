@@ -2,16 +2,16 @@
 title: Flow Service API を使用したSalesforceとExperience Platformの接続
 description: Flow Service API を使用してAdobe Experience PlatformをSalesforce アカウントに接続する方法について説明します。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 18%
+source-wordcount: '1175'
+ht-degree: 17%
 
 ---
 
-# [!DNL Flow Service] API を使用した [!DNL Salesforce] のExperience Platformへの接続
+# [!DNL Salesforce] API を使用した [!DNL Flow Service] のExperience Platformへの接続
 
-[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Salesforce] ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
+[!DNL Salesforce]API[[!DNL Flow Service]  を使用して ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
 
 ## はじめに
 
@@ -63,13 +63,14 @@ OAuth 2 クライアント資格情報を使用して [!DNL Salesforce] アカ�
 | `clientId` | クライアント ID は、OAuth2 認証の一部として、クライアント秘密鍵と並行して使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | `clientSecret` | クライアントの秘密鍵は、クライアント ID と並行して、OAuth2 認証の一部として使用されます。 クライアント ID とクライアント秘密鍵を一緒に使用すると、[!DNL Salesforce] ーザー先のアプリケーションを識別することにより、お客様のアカウントに代わってアプリケーションが動作することができます。 |
 | `apiVersion` | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 API バージョンの値は、10 進数でフォーマットする必要があります。 例えば、API バージョン `52` を使用している場合、値を `52.0` と入力する必要があります。 このフィールドを空白のままにすると、Experience Platformでは使用可能な最新バージョンが自動的に使用されます。 この値は、OAuth2 クライアント資格情報認証に必須です。 |
+| `includeDeletedObjects` | ソフト削除されたレコードを含めるかどうかを決定するために使用されるブール値。 true に設定した場合は、ソフト削除されたレコードを [!DNL Salesforce] クエリに含めて、アカウントからExperience Platformに取り込むことができます。 設定を指定しない場合、この値はデフォルトで `false` になります。 |
 | `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様などの、ソースのコネクタプロパティを返します。[!DNL Salesforce] の接続仕様 ID は `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` です。 |
 
 [!DNL Salesforce] に対する OAuth の使用について詳しくは、[[!DNL Salesforce] OAuth 認証フローのガイド ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5) を参照してください。
 
 >[!ENDTABS]
 
-### [!DNL Azure] のExperience Platformで [!DNL Salesforce] のベース接続を作成します。
+### [!DNL Salesforce] のExperience Platformで [!DNL Azure] のベース接続を作成します。
 
 ベース接続は、ソースとExperience Platform間の情報（ソースの認証資格情報、現在の接続状況、一意のベース接続 ID など）を保持します。 ベース接続 ID により、ソース内からファイルを参照および移動し、データタイプやフォーマットに関する情報を含む、取り込みたい特定の項目を識別することができます。
 
@@ -162,7 +163,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -178,6 +180,7 @@ curl -X POST \
 | `auth.params.clientId` | [!DNL Salesforce] アカウントに関連付けられたクライアント ID。 |
 | `auth.params.clientSecret` | [!DNL Salesforce] アカウントに関連付けられたクライアントの秘密鍵。 |
 | `auth.params.apiVersion` | 使用している [!DNL Salesforce] インスタンスの REST API バージョン。 |
+| `auth.params.includeDeletedObjects` | ソフト削除されたレコードを含めるかどうかを決定するために使用されるブール値。 |
 | `connectionSpec.id` | [!DNL Salesforce] 接続仕様 ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
 
 +++
@@ -252,7 +255,7 @@ curl -X POST \
   }'
 ```
 
-[!DNL Salesforce] `jwtToken` の取得方法について詳しくは、[AWS上のExperience Platformに接続するソースの設定方法 ](../../../../connectors/crm/salesforce.md#aws) に関するガイドを参  [!DNL Salesforce]  してください。
+[!DNL Salesforce] `jwtToken` の取得方法について詳しくは、[AWS上のExperience Platformに接続するソースの設定方法  [!DNL Salesforce]  に関するガイドを参 ](../../../../connectors/crm/salesforce.md#aws) してください。
 
 +++
 
@@ -306,7 +309,7 @@ curl -X GET \
 
 +++選択すると応答の例が表示されます
 
-次の応答では、`initializing` 状態の間にベース接続 ID `3e908d3f-c390-482b-9f44-43d3d4f2eb82` の情報が表示されます。
+次の応答では、`3e908d3f-c390-482b-9f44-43d3d4f2eb82` 状態の間にベース接続 ID `initializing` の情報が表示されます。
 
 ```json
 {
@@ -349,7 +352,7 @@ curl -X GET \
 
 +++選択すると応答の例が表示されます
 
-次の応答では、`enabled` 状態の間にベース接続 ID `3e908d3f-c390-482b-9f44-43d3d4f2eb82` の情報が表示されます。
+次の応答では、`3e908d3f-c390-482b-9f44-43d3d4f2eb82` 状態の間にベース接続 ID `enabled` の情報が表示されます。
 
 ```json
 {
