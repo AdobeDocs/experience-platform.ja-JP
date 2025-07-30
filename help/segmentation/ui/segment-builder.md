@@ -131,7 +131,7 @@ ht-degree: 65%
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="外部オーディエンス"
 >abstract="「オーディエンス」タブからインポートされたオーディエンスは、Audience Portal で自動的に表示されるようになりました。 Audience Manager、Customer Journey Analytics、Segment Match、その他のカスタム統合から取り込まれたオーディエンスは、最初にセグメントビルダーで設定しなくても、すぐに使用できます。 2025 年 9 月 1 日（PT）の時点では、すべてのオーディエンスは統合検索でのみ取得され、以前のワークフローはサポートされなくなりました。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="オーディエンスポータル"
+>additional-url="https://experienceleague.adobe.com/ja/docs/experience-platform/segmentation/ui/audience-portal#list" text="オーディエンスポータル"
 
 >[!NOTE]
 >
