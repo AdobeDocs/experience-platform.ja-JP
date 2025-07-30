@@ -1,13 +1,13 @@
 ---
 title: アカウントオーディエンス
 description: アカウントオーディエンスを作成および使用してダウンストリーム宛先でアカウントプロファイルをターゲットにする方法を説明します。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P エディション" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 23%
+source-wordcount: '1528'
+ht-degree: 21%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 23%
 アカウントのセグメント化で、Adobe Experience Platformを使用すると、ユーザーベースのオーディエンスからアカウントベースのオーディエンスまで、マーケティングセグメント化エクスペリエンスの完全な使いやすさと洗練さを実現できます。
 
 アカウントオーディエンスは、アカウントベースの宛先の入力として使用できます。これにより、ダウンストリームのサービスでこれらのアカウント内のユーザーをターゲットにすることができます。 例えば、アカウントベースのオーディエンスを使用して、最高執行責任者（COO）または最高マーケティング責任者（CMO **という肩書を持つ人物の連絡先情報を持たない** 持たない）すべてのアカウントの記録を取得できます。
+
+>[!NOTE]
+>
+>B2B アーキテクチャのアップグレードの一環として、B2B エンティティを使用するオーディエンスのオーディエンスサイズの予測が、正確な精度で計算されるようになりました。 これらの予測値はプレビュー時に使用でき、B2B の複雑な関係を含むオーディエンスに対して、より正確で信頼性の高いインサイトを提供します。 <br> 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレードの概要 ](../../rtcdp/b2b-architecture-upgrade.md) を参照してください。
 
 ## 用語 {#terminology}
 
@@ -35,7 +39,7 @@ ht-degree: 23%
 
 ![ 「アカウント」セクション内で「オーディエンス」ボタンがハイライト表示されています。](../images/types/account/select.png)
 
-[!UICONTROL &#x200B; 参照 &#x200B;] ページが表示され、組織のすべてのアカウントオーディエンスのリストが表示されます。
+[!UICONTROL  参照 ] ページが表示され、組織のすべてのアカウントオーディエンスのリストが表示されます。
 
 ![ 組織に属するアカウントオーディエンスが表示されます。](../images/types/account/browse.png)
 
@@ -49,11 +53,11 @@ ht-degree: 23%
 >
 >アカウントオーディエンスは、**バッチ** セグメント化を使用して評価され、24 時間ごとに評価されます。
 
-アカウントオーディエンスを作成するには、**[!UICONTROL 参照]** ページで [!UICONTROL &#x200B; オーディエンスを作成 &#x200B;] を選択します。
+アカウントオーディエンスを作成するには、**[!UICONTROL 参照]** ページで [!UICONTROL  オーディエンスを作成 ] を選択します。
 
-![ アカウントオーディエンスの参照ページで「[!UICONTROL &#x200B; オーディエンスを作成 &#x200B;]」ボタンがハイライト表示されます。](../images/types/account/select-create-audience.png)
+![ アカウントオーディエンスの参照ページで「[!UICONTROL  オーディエンスを作成 ]」ボタンがハイライト表示されます。](../images/types/account/select-create-audience.png)
 
-セグメントビルダーが表示されます。アカウント属性とオーディエンスが左側のナビゲーションバーに表示されます。 「[!UICONTROL &#x200B; 属性 &#x200B;]」タブでは、Experience Platform で作成された属性とカスタム属性の両方を追加できます。
+セグメントビルダーが表示されます。アカウント属性とオーディエンスが左側のナビゲーションバーに表示されます。 「[!UICONTROL  属性 ]」タブでは、Experience Platform で作成された属性とカスタム属性の両方を追加できます。
 
 ![セグメントビルダーが表示されています。属性とオーディエンスのみが表示されます。](../images/types/account/segment-builder.png)
 
@@ -61,7 +65,7 @@ ht-degree: 23%
 
 ![ イベントを検索する場所は、[!UICONTROL People] フォルダー内でハイライト表示されます。](../images/types/account/attributes.png)
 
-「[!UICONTROL &#x200B; オーディエンス &#x200B;]」タブでは、以前に作成したユーザーベースのオーディエンスを追加して、独自のアカウントオーディエンスの作成時に構築できます。
+「[!UICONTROL  オーディエンス ]」タブでは、以前に作成したユーザーベースのオーディエンスを追加して、独自のアカウントオーディエンスの作成時に構築できます。
 
 ![ セグメントビルダー内の「オーディエンス」タブがハイライト表示されています。](../images/types/account/audiences.png)
 
@@ -75,11 +79,11 @@ ht-degree: 23%
 
 ![ 「フィールド」セクションで設定アイコンがハイライト表示されている様子 ](../images/types/account/select-settings.png)
 
-「[!UICONTROL &#x200B; 設定 &#x200B;]」タブの「**[!UICONTROL フィールドの関係]** セクションで「**[!UICONTROL 関係セレクターを表示]**」を選択します。
+「[!UICONTROL  設定 ]」タブの「**[!UICONTROL フィールドの関係]** セクションで「**[!UICONTROL 関係セレクターを表示]**」を選択します。
 
 ![ 「関係セレクターを表示」切替スイッチは、「設定」タブの「フィールドの関係」セクションで選択します。](../images/types/account/show-relation-selectors.png)
 
-![ 設定アイコン ](../../images/icons/settings.png) を再度選択して、「[!UICONTROL &#x200B; フィールド &#x200B;] タブに戻ります。 これで、「**[!UICONTROL 関係の確立]**」セクションが表示されます。このセクションでは、アカウントがユーザーに接続される方法と、ユーザーがオポチュニティに接続される方法を確立できます。
+![ 設定アイコン ](../../images/icons/settings.png) を再度選択して、「[!UICONTROL  フィールド ] タブに戻ります。 これで、「**[!UICONTROL 関係の確立]**」セクションが表示されます。このセクションでは、アカウントがユーザーに接続される方法と、ユーザーがオポチュニティに接続される方法を確立できます。
 
 ![ 「関係の確立」セクションがハイライト表示され、アカウントを人物に接続する方法と人物を商談に接続する方法に関するオプションが表示されています。](../images/types/account/establish-relationships.png)
 
@@ -87,7 +91,7 @@ ht-degree: 23%
 
 | オプション | 説明 |
 | ------ | ----------- |
-| 直接的な関係 | アカウントと人物の間の直接接続。 これは、人物スキーマの `personComponents` 配列に含まれる `accountID` 値の配列を介して、各ユーザーがリンクされているアカウントを指定します。 このパスは、最も頻繁に使用されます。 |
+| 直接的な関係 | アカウントと人物の間の直接接続。 これは、人物スキーマの `accountID` 配列に含まれる `personComponents` 値の配列を介して、各ユーザーがリンクされているアカウントを指定します。 このパスは、最も頻繁に使用されます。 |
 | アカウントと人物の関係 | アカウントとユーザーの関係。`accountPersonRelation` オブジェクトで定義されます。 また、このパスを使用すると、各ユーザーを複数のアカウントに接続することもできます。 組織がソースデータから明示的な関係テーブルを定義した場合に使用されます。 |
 | 商談と担当者の関係 | オポチュニティと人物の関係。`opportunityPersonRelation` オブジェクトで定義されます。 これにより、opportunity-person から opportunity に移動してアカウントに接続されます。 これにより、その人物がどの会社の商談に関連付けられているかを説明できます。 |
 
@@ -110,9 +114,9 @@ ht-degree: 23%
 
 アクティベートするオーディエンスを選択し、続けて **[!UICONTROL 宛先に対してアクティベート]** を選択します。
 
-![ 選択したオーディエンスのクイックアクションメニューで「[!UICONTROL &#x200B; 宛先に対してアクティブ化 &#x200B;]」ボタンがハイライト表示されます。](../images/types/account/activate.png)
+![ 選択したオーディエンスのクイックアクションメニューで「[!UICONTROL  宛先に対してアクティブ化 ]」ボタンがハイライト表示されます。](../images/types/account/activate.png)
 
-[!UICONTROL &#x200B; 宛先のアクティブ化 &#x200B;] ページが表示されます。 サポートされる宛先やフィールドマッピングなど、アクティベーションプロセスについて詳しくは、[ アカウントオーディエンスのアクティブ化 ](/help/destinations/ui/activate-account-audiences.md) チュートリアルをお読みください。
+[!UICONTROL  宛先のアクティブ化 ] ページが表示されます。 サポートされる宛先やフィールドマッピングなど、アクティベーションプロセスについて詳しくは、[ アカウントオーディエンスのアクティブ化 ](/help/destinations/ui/activate-account-audiences.md) チュートリアルをお読みください。
 
 ## 次の手順 {#next-steps}
 
@@ -126,8 +130,8 @@ ht-degree: 23%
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="最大ルックバックウィンドウエラー"
->abstract="エクスペリエンスイベントの最大ルックバックウィンドウは 30 日間です。"
+>title="ルックバックウィンドウ"
+>abstract="ルックバックウィンドウを使用して、ユーザーレベルのイベントの完全な履歴を表示します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -196,18 +200,19 @@ ht-degree: 23%
 
 アカウントオーディエンスを使用する場合、オーディエンス **必須** は次の制約に従います。
 
-- エクスペリエンスイベントの最大ルックバックウィンドウは **30 日** です。
 - ネストされたコンテナの最大深度は **5** です。
    - つまり、オーディエンスを作成する際に、ネストされたコンテナの数を 6 以上にすることは&#x200B;**できません**。
 - 1 つのコンテナ内のルールの最大数は **5** です。
    - つまり、オーディエンスには、オーディエンスを構成する 5 つ以上のルールが含まれています **できません**。
 - 使用できるクロスエンティティの最大数は **5** です。
    - クロスエンティティとは、オーディエンス内で異なるエンティティ間を切り替えることです。例えば、アカウントからユーザーに、さらにマーケティングリストに移行するといったことです。
-- カスタムエンティティ **使用できません** を使用します。
 - 1 つのフィールドに対して確認できる値の最大数は **50** です。
    - 例えば、「市区町村名」のフィールドがある場合、50 個の市区町村名とその値を照合できます。
-- アカウントオーディエンス **使用でき** せん `inSegment` イベント。
 - アカウントオーディエンス **連続したイベントは使用できません**。
 - アカウントオーディエンス **使用** マップは使用できません。
 - ネストされた配列の最大深度は **5** です。
 - ネストされたオブジェクトの最大数は **10** です。
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->
