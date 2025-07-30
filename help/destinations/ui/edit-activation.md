@@ -4,10 +4,10 @@ title: アクティベーションデータフローを編集
 type: Tutorial
 description: Adobe Experience Platformの既存のアクティベーションデータフローを編集するには、この記事の手順に従います。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
+source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 10%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +20,7 @@ Adobe Experience Platformでは、宛先に対する既存のアクティベー�
 * [マッピングされた属性と ID の編集](#edit-mapped-attributes)
 * [アクティベーションスケジュールとエクスポート頻度を編集](#edit-schedule-frequency)
 * [ 追加のデータセット ](#add-datasets) アクティベーションワークフローに
+* アクティベーションデータフローの [ マーケティングアクションの編集 ](#edit-marketing-actions)
 * 書き出されたデータへの [ アクセスラベルの適用 ](#apply-access-labels)
 * アクティベーションデータフローの [ 名前と説明を編集 ](#edit-names-descriptions)
 
@@ -43,7 +44,7 @@ Adobe Experience Platformでは、宛先に対する既存のアクティベー�
 
 ## アクティベーションデータフローを有効または無効にする {#enable-disable-dataflows}
 
-**[!UICONTROL 有効 &#x200B;]/[!UICONTROL &#x200B; 無効]** 切替スイッチを使用して、宛先へのすべてのデータ書き出しを開始または一時停止します。
+**[!UICONTROL 有効 ]/[!UICONTROL  無効]** 切替スイッチを使用して、宛先へのすべてのデータ書き出しを開始または一時停止します。
 
 ![ データフロー実行の有効/無効の切り替えを示すExperience Platform UI 画像 ](../assets/ui/edit-activation/enable-toggle.png)
 
@@ -108,6 +109,23 @@ Adobe Experience Platformでは、宛先に対する既存のアクティベー�
 >このオプションは、[ データセットの書き出しをサポートする宛先 ](export-datasets.md#supported-destinations) に対してのみ表示されます。
 
 ![ 「データセットを書き出し」データフロー実行オプションを示すExperience Platform UI 画像。](../assets/ui/edit-activation/export-datasets.png)
+
+## [!BADGE Beta]{type=Informative} マーケティングアクションの編集 {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>この機能は現在 **ベータ版** です。 アクセスをリクエストするには、Adobe担当者にお問い合わせください。
+
+宛先に最初に接続する際に設定したマーケティングアクションを追加または削除できます。
+
+右側のパネルで **[!UICONTROL マーケティングアクションを編集]** を選択して、マーケティングアクション選択画面を開きます。
+
+![ 「マーケティングアクションを編集」オプションを示すExperience Platform UI 画像。](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+該当するマーケティングアクションを選択し、「**[!UICONTROL 保存]**」を選択して変更を適用します。
+
+![ マーケティングアクションの編集画面を示すExperience Platform UI 画像。](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+
 
 ## アクセスラベルの適用 {#apply-access-labels}
 
