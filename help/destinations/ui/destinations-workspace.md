@@ -41,13 +41,13 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 ![広告およびクラウドストレージの宛先をいくつか表示している宛先カタログ。](../assets/ui/workspace/catalog.png)
 
-宛先カードには、プライマリとセカンダリのコントロールオプションが含まれます。 主な制御には [!UICONTROL  設定 ]、[!UICONTROL  アクティブ化 ]、[!UICONTROL  オーディエンスをアクティブ化 ] または [!UICONTROL  データセットを書き出し ] が含まれます。 セカンダリ制御を使用すると、オプションを表示できます。 これらの制御については、以下で説明します。
+宛先カードには、プライマリとセカンダリのコントロールオプションが含まれます。 主な制御には [!UICONTROL &#x200B; 設定 &#x200B;]、[!UICONTROL &#x200B; アクティブ化 &#x200B;]、[!UICONTROL &#x200B; オーディエンスをアクティブ化 &#x200B;] または [!UICONTROL &#x200B; データセットを書き出し &#x200B;] が含まれます。 セカンダリ制御を使用すると、オプションを表示できます。 これらの制御については、以下で説明します。
 
 | コントロール | 説明 |
 |---------|----------|
 | [!UICONTROL 設定] | 宛先への接続を作成できます。 |
 | [!UICONTROL アクティブ化] | 宛先への接続を確立したら、オーディエンスをアクティブ化したり、この宛先にデータセットを書き出したりできます。 |
-| [!UICONTROL  オーディエンスのアクティブ化 ] | 宛先への接続を確立したら、この宛先に対してオーディエンスをアクティブ化できます。 |
+| [!UICONTROL &#x200B; オーディエンスのアクティブ化 &#x200B;] | 宛先への接続を確立したら、この宛先に対してオーディエンスをアクティブ化できます。 |
 | [!UICONTROL データセットを書き出し] | 宛先への接続を確立したら、この宛先にデータセットを書き出すことができます。 |
 | [!UICONTROL アカウントを表示] | 宛先に接続したアカウントを表示します。 |
 | [!UICONTROL データフローを表示] | 宛先に存在するデータのアクティベーションフローを表示します。 |
@@ -69,9 +69,9 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 >[!TIP]
 >
-> * `...`Platform[!UICONTROL  列の省略記号（]）を選択し、![ アクティブ化コントロール ](/help/images/icons/data-add.png)**[!UICONTROL  アクティブ化 ]**/**[!UICONTROL  オーディエンスをアクティブ化 ]**/**[!UICONTROL  データセットを書き出し ]**コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
-> * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![詳細を編集コントロール](/help/images/icons/edit.png)**[!UICONTROL 詳細を編集&#x200B;]**コントロールを使用して、既存の宛先アカウントの詳細を[更新](update-accounts.md)します。
-> * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![削除コントロール](/help/images/icons/delete.png)**[!UICONTROL 削除&#x200B;]**コントロールを使用して、既存の宛先アカウントを[削除](delete-destination-account.md)します。
+> * `...`Platform[!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ アクティブ化コントロール ](/help/images/icons/data-add.png)**[!UICONTROL &#x200B; アクティブ化 &#x200B;]**/**[!UICONTROL &#x200B; オーディエンスをアクティブ化 &#x200B;]**/**[!UICONTROL &#x200B; データセットを書き出し &#x200B;]**&#x200B;コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
+> * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![詳細を編集コントロール](/help/images/icons/edit.png)**[!UICONTROL 詳細を編集&#x200B;]**&#x200B;コントロールを使用して、既存の宛先アカウントの詳細を[更新](update-accounts.md)します。
+> * [!UICONTROL プラットフォーム]列の省略記号（`...`）を選択し、![削除コントロール](/help/images/icons/delete.png)**[!UICONTROL 削除&#x200B;]**&#x200B;コントロールを使用して、既存の宛先アカウントを[削除](delete-destination-account.md)します。
 
 ![「アカウント」タブ](../assets/ui/workspace/destination-account-options.png)
 
@@ -82,7 +82,7 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 | [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先へのアカウント接続タイプを表します。宛先に応じて、認証オプションは次のとおりです。 <ul><li>メールマーケティングの宛先の場合：S3、FTP、Azure Blob のいずれかです。</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li><li>OAuth 1 または OAuth 2 認証</li><li>ベアラートークン認証</li></ul> |
 | [!UICONTROL ユーザー名] | [ 宛先に接続ワークフロー ](../catalog/email-marketing/overview.md#connect-destination) で選択したユーザー名。 |
 | [!UICONTROL 接続] | 宛先に対して作成された基本情報に接続された、一意の成功した宛先データフローの数を表します。 |
-| [!UICONTROL  認可日 ] | この宛先への接続が承認された日付。 |
+| [!UICONTROL &#x200B; 認可日 &#x200B;] | この宛先への接続が承認された日付。 |
 | [!UICONTROL 有効期限] | この宛先への接続認証が期限切れになる日付。 <br>**重要**：この列は現在、[Facebook](../catalog/social/facebook.md) 接続でのみ使用できます。 |
 
 {style="table-layout:auto"}
@@ -93,12 +93,12 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 
 >[!TIP]
 >
-> * `...` 名前 [!UICONTROL  列の省略記号（]）を選択し、![ オーディエンスをアクティブ化コントロール ](/help/images/icons/data-add.png)**[!UICONTROL オーディエンスをアクティブ化]** コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
-> * `...` 名前 [!UICONTROL  列の省略記号（]）を選択し、![ 宛先を編集コントロール ](/help/images/icons/edit.png)**[!UICONTROL  宛先を編集 ]**コントロールを使用して、既存の宛先接続を編集します。 詳しくは、[ 宛先の編集 ](/help/destinations/ui/edit-destination.md) に関するチュートリアルを参照してください。
-> * `...` 名前 [!UICONTROL  列の省略記号（]）を選択し、![ マーケティングアクションの編集コントロール ](/help/images/icons/edit-marketing-actions.svg)**[!UICONTROL マーケティングアクションの編集]** コントロールを使用して、選択した宛先の [ マーケティングアクションの変更 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) を行います。
-> * `...` 名前 [!UICONTROL  列の省略記号（]）を選択し、![ 削除コントロール ](/help/images/icons/delete.png)**[!UICONTROL 削除]** コントロールを使用して、既存の宛先への接続を [ 削除 ](delete-destinations.md) します。
-> * `...` 名前 [!UICONTROL  列の省略記号（]）を選択し、![ モニタリングで表示コントロール ](/help/images/icons/monitoring.png)**[!UICONTROL モニタリングで表示]** コントロールを使用して、[ モニタリングダッシュボード ](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) にこの宛先のアクティブ化情報を表示します。
-> * `...` 名前 [!UICONTROL  列で省略記号（]）を選択し、![ アラートを購読 ](/help/images/icons/alert-add.png)**[!UICONTROL アラートを購読]** コントロールを使用して、宛先データフローアラートを購読できます。 アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 宛先データフローアラートの詳細については、[コンテキスト内の宛先アラートを購読](alerts.md)を参照してください。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ オーディエンスをアクティブ化コントロール ](/help/images/icons/data-add.png)**[!UICONTROL オーディエンスをアクティブ化]** コントロールを使用して、オーディエンスまたはデータセットをその宛先に書き出すことができます。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ 宛先を編集コントロール ](/help/images/icons/edit.png)**[!UICONTROL &#x200B; 宛先を編集 &#x200B;]**&#x200B;コントロールを使用して、既存の宛先接続を編集します。 詳しくは、[ 宛先の編集 ](/help/destinations/ui/edit-destination.md) に関するチュートリアルを参照してください。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ マーケティングアクションの編集コントロール ](/help/images/icons/edit-marketing-actions.svg)**[!UICONTROL マーケティングアクションの編集]** コントロールを使用して、選択した宛先の [ マーケティングアクションの変更 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) を行います。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ 削除コントロール ](/help/images/icons/delete.png)**[!UICONTROL 削除]** コントロールを使用して、既存の宛先への接続を [ 削除 ](delete-destinations.md) します。
+> * `...` 名前 [!UICONTROL &#x200B; 列の省略記号（]）を選択し、![ モニタリングで表示コントロール ](/help/images/icons/monitoring.png)**[!UICONTROL モニタリングで表示]** コントロールを使用して、[ モニタリングダッシュボード ](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) にこの宛先のアクティブ化情報を表示します。
+> * `...` 名前 [!UICONTROL &#x200B; 列で省略記号（]）を選択し、![ アラートを購読 ](/help/images/icons/alert-add.png)**[!UICONTROL アラートを購読]** コントロールを使用して、宛先データフローアラートを購読できます。 アラートを購読して、フロー実行のステータス、成功または失敗に関するメッセージを受け取ることができます。 宛先データフローアラートの詳細については、[コンテキスト内の宛先アラートを購読](alerts.md)を参照してください。
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
 
@@ -106,10 +106,10 @@ Adobe Experience Platform で、左側のナビゲーションバーから「**[
 |---------|----------|
 | 名前 | この宛先へのアクティベーションフローに指定した名前。 |
 | データタイプ | 宛先接続でサポートされているデータのタイプ。 サポートされるデータタイプ： <ul><li>**[!UICONTROL 顧客]**</li><li>**[!UICONTROL 見込み客]**</li><li>**[!UICONTROL アカウント]**</li><li>**[!UICONTROL データセット]**</li></ul> |
-| [!UICONTROL  前回のデータフロー実行ステータス ] | 前回のデータフロー実行のステータス。データフロー実行について詳しくは、[宛先の詳細を表示](destination-details-page.md)を参照してください。 |
-| [!UICONTROL  前回のデータフロー実行日 ] | 前回のデータフローが実行された日時。データフローの実行について詳しくは、[宛先の詳細を表示](destination-details-page.md)を参照してください。 |
+| [!UICONTROL &#x200B; 前回のデータフロー実行ステータス &#x200B;] | 前回のデータフロー実行のステータス。データフロー実行について詳しくは、[宛先の詳細を表示](destination-details-page.md)を参照してください。 |
+| [!UICONTROL &#x200B; 前回のデータフロー実行日 &#x200B;] | 前回のデータフローが実行された日時。データフローの実行について詳しくは、[宛先の詳細を表示](destination-details-page.md)を参照してください。 |
 | [!UICONTROL 宛先] | アクティベーションフローに対して選択した宛先プラットフォームです。 |
-| [!UICONTROL  アカウントの有効期限 ] | この宛先への接続認証が期限切れになる日付。 <br>**重要**：この列は現在、[Facebook](../catalog/social/facebook.md) 接続でのみ使用できます。 |
+| [!UICONTROL &#x200B; アカウントの有効期限 &#x200B;] | この宛先への接続認証が期限切れになる日付。 <br>**重要**：この列は現在、[Facebook](../catalog/social/facebook.md) 接続でのみ使用できます。 |
 | [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>メールマーケティングの宛先の場合、S3、FTP または [!DNL Azure Blob] のいずれかです。</li><li>リアルタイム広告の宛先の場合：サーバー間。</li><li>ストリーミング宛先の場合、[!DNL Azure Event Hubs] または [!DNL Amazon Kinesis] のいずれかです。</li></ul> |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
 | [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されているオーディエンスの数を示します。 このコントロールを選択すると、アクティブ化されたオーディエンスの詳細が表示されます。 アクティブ化されたオーディエンスについて詳しくは、宛先詳細ページの [ アクティベーションデータ ](/help/destinations/ui/destination-details-page.md#activation-data) を参照してください。 |
