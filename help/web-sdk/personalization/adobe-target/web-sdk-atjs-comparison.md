@@ -68,7 +68,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=ja)
 
 
 ### Web SDKの設定
@@ -83,7 +83,7 @@ at.js 2.x を使用している場合は、`pageLoadEnabled` 設定を有効に�
 
 ### Web SDKの使用
 
-Adobe Target[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 内で作成されたコンテンツは、SDKによって自動的に取得およびレンダリングできます。
+Adobe Target[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) 内で作成されたコンテンツは、SDKによって自動的に取得およびレンダリングできます。
 
 Target オファーをリクエストして自動的にレンダリングするには、`sendEvent` コマンドを使用し、`renderDecisions` オプションを `true` に設定します。 これにより、自動レンダリングの対象となる、パーソナライズされたコンテンツがSDKで自動的にレンダリングされます。
 
@@ -215,7 +215,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=ja)
 
 ### Web SDKの使用
 
@@ -300,7 +300,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=ja)
 
 
 ### Web SDKの使用
@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-`applyOffers` コマンドについて詳しくは、[ 専用ドキュメント ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html) を参照してください。
+`applyOffers` コマンドについて詳しくは、[ 専用ドキュメント ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=ja) を参照してください。
 
 
 ### Web SDKの使用
@@ -490,7 +490,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=ja)
 
 ### Web SDKの使用
 
@@ -665,7 +665,7 @@ alloy("sendEvent", {
 adobe.target.triggerView("homeView")
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=ja)
 
 
 ### Web SDKの使用
@@ -691,7 +691,7 @@ alloy("sendEvent", {
 
 ## レスポンストークンの活用方法
 
-Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
+Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
 
 ### at.js の使用
 
@@ -705,7 +705,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)
 
 
 ### Web SDKの使用
@@ -714,7 +714,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Experience Platform Web SDK バージョン 2.6.0 以降を使用していることを確認します。
 
-応答トークンは、`propositions` コマンドの結果で公開される `sendEvent` の一部として返されます。 各提案には `items` の配列が含まれ、Target 管理 UI で有効になっている場合、各項目には応答トークンが入力された `meta` オブジェクトがあります。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+応答トークンは、`propositions` コマンドの結果で公開される `sendEvent` の一部として返されます。 各提案には `items` の配列が含まれ、Target 管理 UI で有効になっている場合、各項目には応答トークンが入力された `meta` オブジェクトがあります。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)
 
 **例**
 
@@ -880,7 +880,7 @@ Analytics サーバーサイドログは、at.js 設定で `analyticsLogging: se
 
 ![Analytics サーバーサイドログのワークフローを示す図 ](assets/a4t-server-side-atjs.png)
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
 
 ### Web SDKの使用
 
@@ -964,7 +964,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=ja)
 
 ### Web SDKの使用
 
@@ -1064,7 +1064,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=ja)
 
 
 ### Web SDKの使用
@@ -1144,7 +1144,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=ja)
 
 ### Web SDKの使用
 
