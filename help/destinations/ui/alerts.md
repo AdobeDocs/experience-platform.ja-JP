@@ -38,7 +38,7 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 >
 >データフローでメールベースのアラート通知を受け取るには、Experience Platform アカウントでメールの即時通知を有効にする必要があります。
 
-[!UICONTROL  宛先接続 ] ワークフローの [ 新しい宛先を設定 ](connect-destination.md) 手順で、データフローのアラートを有効にできます。
+[!UICONTROL &#x200B; 宛先接続 &#x200B;] ワークフローの [ 新しい宛先を設定 ](connect-destination.md) 手順で、データフローのアラートを有効にできます。
 
 ![ 宛先アラートセクションを示す UI 画像。](../assets/ui/alerts/destination-alerts.png)
 
@@ -79,11 +79,11 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 ![ 通知の選択方法を示す UI 画像 ](../assets/ui/alerts/select-alert-message.png)
 
-[!UICONTROL  データフロー実行の詳細 ] ページが表示されます。 画面の上半分には、属性に関する情報、対応するデータフロー実行 ID、高レベルのエラー概要など、データフローの概要が表示されます。
+[!UICONTROL &#x200B; データフロー実行の詳細 &#x200B;] ページが表示されます。 画面の上半分には、属性に関する情報、対応するデータフロー実行 ID、高レベルのエラー概要など、データフローの概要が表示されます。
 
 ![ データフロー実行の詳細ページを示す UI 画像。](../assets/ui/alerts/dataflow-overview.png)
 
-ページの下半分には、データフロー実行ステージ中に発生した [!UICONTROL  データフロー実行エラー ] が表示されます。 ここから、エラー診断をプレビューしたり、[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) を使用して、データフローに対応するエラー診断またはファイルマニフェストをダウンロードしたりできます。
+ページの下半分には、データフロー実行ステージ中に発生した [!UICONTROL &#x200B; データフロー実行エラー &#x200B;] が表示されます。 ここから、エラー診断をプレビューしたり、[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) を使用して、データフローに対応するエラー診断またはファイルマニフェストをダウンロードしたりできます。
 
 ![ データフロー実行の詳細ページを示す UI 画像（「エラー」セクションをハイライト表示） ](../assets/ui/alerts/dataflow-run-error.png)
 
@@ -95,13 +95,13 @@ Adobe Experience Platform では、Adobe Experience Platform アクティビテ�
 
 ![ アラートメールのスクリーンショット ](../assets/ui/alerts/email.png)
 
-UI アラートと同様に、[!UICONTROL  データフロー実行の概要 ] ページが表示され、データフローに関連付けられたエラーを調査するためのインターフェイスが提供されます。
+UI アラートと同様に、[!UICONTROL &#x200B; データフロー実行の概要 &#x200B;] ページが表示され、データフローに関連付けられたエラーを調査するためのインターフェイスが提供されます。
 
 ![dataflow-overview](../assets/ui/alerts/dataflow-overview.png)
 
 ## アラートを購読および購読解除 {#subscribe-and-unsubscribe}
 
-宛先 [!UICONTROL  参照 ] ページで、追加のアラートを購読したり、既存の宛先データフローに対して設定されたアラートを登録解除したりできます。
+宛先 [!UICONTROL &#x200B; 参照 &#x200B;] ページで、追加のアラートを購読したり、既存の宛先データフローに対して設定されたアラートを登録解除したりできます。
 
 ![ 宛先の参照ページを示す UI 画像 ](../assets/ui/alerts/destination-list.png)
 

@@ -39,7 +39,7 @@ Web プロパティにハイブリッドパーソナライゼーションを実�
 1. Edge Network API は、パーソナライゼーションコンテンツをアプリケーションサーバーに返します。
 1. アプリケーションサーバーは、[ID とクラスターの Cookie](#cookies) を含んだ HTML 応答をクライアントブラウザーに返します。
 1. クライアントページでは、[!DNL Web SDK] `applyResponse` コマンドが呼び出され、前のステップの [!UICONTROL Edge Network API] 応答のヘッダーと本文が渡されます。
-1. [!DNL Web SDK] フラグが [[!DNL Visual Experience Composer (VEC)] に設定されているので、](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は Target `renderDecisions``true` オファーおよびJourney Optimizer web チャネル項目を自動的にレンダリングします。
+1. [!DNL Web SDK] フラグが [[!DNL Visual Experience Composer (VEC)] に設定されているので、](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は Target `renderDecisions` `true` オファーおよびJourney Optimizer web チャネル項目を自動的にレンダリングします。
 1. Target フォームベースの [!DNL HTML]/[!DNL JSON] オファーとJourney Optimizer コードベースのエクスペリエンスは、`applyProposition` メソッドを使用して手動で適用され、提案のパーソナライゼーションコンテンツに基づいて [!DNL DOM] を更新します。
 1. Target フォームベースの [!DNL HTML]/[!DNL JSON] オファーおよびJourney Optimizer コードベースのエクスペリエンスの場合、返されたコンテンツがいつ表示されたかを示すために、表示イベントを手動で送信する必要があります。 これは、`sendEvent` コマンドを使用して行われます。
 
