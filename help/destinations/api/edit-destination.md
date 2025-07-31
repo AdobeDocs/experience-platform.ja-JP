@@ -4,9 +4,9 @@ title: Flow Service API を使用した宛先接続の編集
 type: Tutorial
 description: Flow Service API を使用して宛先接続の様々なコンポーネントを編集する方法について説明します。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1622'
 ht-degree: 26%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 26%
 
 >[!NOTE]
 >
-> このチュートリアルで説明する編集操作は、現在 Flow Service API でのみサポートされています。
+> このチュートリアルで説明する編集操作は、Experience Platform UI でもサポートされています。 詳しくは、[UI での宛先の編集 ](/help/destinations/ui/edit-destination.md) 方法に関するチュートリアルを参照してください。
 
 ## はじめに {#get-started}
 
@@ -177,15 +177,15 @@ curl -X GET \
 
 ターゲット接続のコンポーネントは、宛先によって異なります。 例えば、[!DNL Amazon S3] の宛先の場合、バケットとファイルの書き出し先のパスを更新できます。 [!DNL Pinterest] の宛先の場合は [!DNL Pinterest Advertiser ID] を更新でき、[!DNL Google Customer Match] の場合は [!DNL Pinterest Account ID] を更新できます。
 
-ターゲット接続のコンポーネントを更新するには、`/targetConnections/{TARGET_CONNECTION_ID}` エンドポイントに `PATCH` リクエストを実行し、その際にターゲット接続 ID、バージョン、使用する新しい値を指定します。 前の手順で、目的の宛先に対する既存のデータフローを調べた際に、ターゲット接続 ID を取得しました。
+ターゲット接続のコンポーネントを更新するには、`PATCH` エンドポイントに `/targetConnections/{TARGET_CONNECTION_ID}` リクエストを実行し、その際にターゲット接続 ID、バージョン、使用する新しい値を指定します。 前の手順で、目的の宛先に対する既存のデータフローを調べた際に、ターゲット接続 ID を取得しました。
 
 >[!IMPORTANT]
 >
->`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するターゲット接続の一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>`If-Match` リクエストを行う場合、`PATCH` ヘッダーは必須です。 このヘッダーの値は、更新するターゲット接続の一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
 > etag 値の最新バージョンを取得するには、`/targetConnections/{TARGET_CONNECTION_ID}` エンドポイントに対してGET リクエストを実行します。`{TARGET_CONNECTION_ID}` は、更新するターゲット接続 ID です。
 >
-> `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
+> `If-Match` リクエストを行う場合は、以下の例のように、`PATCH` ヘッダーの値を必ず二重引用符で囲みます。
 
 様々なタイプの宛先に対して、ターゲット接続仕様のパラメーターを更新する例を以下に示します。 ただし、宛先のパラメーターを更新するための一般的なルールは次のとおりです。
 
@@ -205,7 +205,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 **リクエスト**
 
-次のリクエストは、[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 宛先接続の `bucketName` および `path` パラメーターを更新します。
+次のリクエストは、`bucketName` 宛先接続の `path` および [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) パラメーターを更新します。
 
 ```shell
 curl -X PATCH \
@@ -248,7 +248,7 @@ curl -X PATCH \
 
 **リクエスト**
 
-次のリクエストは、[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 接続または [[!DNL Google Ad Manager 360]  宛先 ](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 接続のパラメーターを更新して、新しい [**[!UICONTROL &#x200B; オーディエンス ID をオーディエンス名に追加 &#x200B;]**](/help/release-notes/2023/april-2023.md#destinations) フィールドを追加します。
+次のリクエストは、[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 接続または [[!DNL Google Ad Manager 360]  宛先 ](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 接続のパラメーターを更新して、新しい [**[!UICONTROL  オーディエンス ID をオーディエンス名に追加 ]**](/help/release-notes/2023/april-2023.md#destinations) フィールドを追加します。
 
 ```shell
 curl -X PATCH \
@@ -288,7 +288,7 @@ curl -X PATCH \
 
 **リクエスト**
 
-次のリクエストは、[[!DNL Pinterest]  宛先接続 ](/help/destinations/catalog/advertising/pinterest.md#parameters) の `advertiserId` パラメーターを更新します。
+次のリクエストは、`advertiserId` 宛先接続 [[!DNL Pinterest]  の ](/help/destinations/catalog/advertising/pinterest.md#parameters) パラメーターを更新します。
 
 ```shell
 curl -X PATCH \
@@ -334,17 +334,17 @@ curl -X PATCH \
 
 宛先の資格情報を更新する場合は、ベース接続を編集します。 ベース接続のコンポーネントは、宛先によって異なります。 例えば、[!DNL Amazon S3] の宛先の場合、アクセスキーと秘密鍵を [!DNL Amazon S3] の場所に更新できます。
 
-ベース接続のコンポーネントを更新するには、`/connections` エンドポイントに `PATCH` リクエストを実行し、その際にベース接続 ID、バージョン、使用する新しい値を指定します。
+ベース接続のコンポーネントを更新するには、`PATCH` エンドポイントに `/connections` リクエストを実行し、その際にベース接続 ID、バージョン、使用する新しい値を指定します。
 
 ベース接続 ID を取得したのは、[ 前の手順 ](#look-up-dataflow-details) で、既存のデータフローを目的の宛先に調査してパラメーター `baseConnection` を取得したときです。
 
 >[!IMPORTANT]
 >
->`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するベース接続の一意のバージョンです。 etag の値は、データフロー、ベース接続など、フローエンティティが正常に更新されるたびに更新されます。
+>`If-Match` リクエストを行う場合、`PATCH` ヘッダーは必須です。 このヘッダーの値は、更新するベース接続の一意のバージョンです。 etag の値は、データフロー、ベース接続など、フローエンティティが正常に更新されるたびに更新されます。
 >
 > Etag 値の最新バージョンを取得するには、`/connections/{BASE_CONNECTION_ID}` エンドポイントに対してGET リクエストを実行します。`{BASE_CONNECTION_ID}` は、更新するベース接続 ID です。
 >
-> `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
+> `If-Match` リクエストを行う場合は、以下の例のように、`PATCH` ヘッダーの値を必ず二重引用符で囲みます。
 
 様々なタイプの宛先に対して、ベース接続仕様のパラメーターを更新する例を以下に示します。 ただし、宛先のパラメーターを更新するための一般的なルールは次のとおりです。
 
@@ -364,7 +364,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 **リクエスト**
 
-次のリクエストは、[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 宛先接続の `accessId` および `secretKey` パラメーターを更新します。
+次のリクエストは、`accessId` 宛先接続の `secretKey` および [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) パラメーターを更新します。
 
 ```shell
 curl -X PATCH \
