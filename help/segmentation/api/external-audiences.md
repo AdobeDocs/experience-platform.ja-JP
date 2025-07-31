@@ -1,12 +1,10 @@
 ---
 title: 外部オーディエンス API エンドポイント
 description: 外部オーディエンス API を使用して、Adobe Experience Platformから外部オーディエンスを作成、更新、アクティブ化および削除する方法について説明します。
-hide: true
-hidefromtoc: true
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
+source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2219'
 ht-degree: 9%
 
 ---
@@ -528,24 +526,23 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **API 形式**
 
-次のエンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。 これらのパラメーターはオプションですが、結果の絞り込みに役立てるために使用することを強くお勧めします。
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**クエリパラメータ**
+<!-- **Query parameters**
 
-+++ 使用可能なクエリパラメーターのリスト。
++++ A list of available query parameters. 
 
-| パラメーター | 説明 | 例 |
+| Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `limit` | 応答で返される項目の最大数。 この値の範囲は 1 ～ 40 です。 デフォルトでは、上限は 20 に設定されています。 | `limit=30` |
-| `sortBy` | 返される項目が並べ替えられる順序。 `name` または `createdAt` で並べ替えることができます。 さらに、`-` 記号を追加して、**昇順** ではなく **降順** で並べ替えることができます。 デフォルトでは、項目は `createdAt` 順に降順で並べ替えられます。 | `sortBy=name` |
-| `property` | どのオーディエンス取り込み実行が表示されるかを決定するフィルター。 次のプロパティでフィルタリングできます。 <ul><li>`name`：オーディエンス名でフィルタリングできます。 このプロパティを使用すると、`=`、`!=`、`=contains`、または `!=contains` を使用して比較できます。 </li><li>`createdAt`：取り込み時間でフィルタリングできます。 このプロパティを使用すると、`>=` または `<=` を使用して比較できます。</li><li>`status`：取り込み実行のステータスでフィルタリングできます。 このプロパティを使用すると、`=`、`!=`、`=contains`、または `!=contains` を使用して比較できます。 </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **リクエスト**
 
@@ -594,19 +591,23 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | プロパティ | タイプ | 説明 |
 | -------- | ---- | ----------- |
 | `runs` | オブジェクト | オーディエンスに属する取り込み実行のリストを含むオブジェクト。 このオブジェクトについて詳しくは、[ 取り込みステータスの取得 ](#retrieve-ingestion-status) を参照してください。 |
-| `_page` | オブジェクト | 結果のリストに関するページネーション情報を含むオブジェクト。 |
 
 +++
 
