@@ -1,9 +1,9 @@
 ---
 title: Didomi Sourceの概要
 description: ユーザーインターフェイスを使用して Didomi をAdobe Experience Platformに接続する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
+last-substantial-update: 2025-07-29T00:00:00Z
+exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '889'
 ht-degree: 2%
@@ -47,9 +47,9 @@ Experience Platform API を正常に呼び出す方法については、[Experie
 
 **エクスペリエンスデータモデル（XDM）スキーマ** は、[!DNL Didomi] ーザーからExperience Platformに送信するデータの構造（ユーザー ID、同意目的など）を定義します。
 
-スキーマを作成するには、Experience Platform UI の左側のナビゲーションで「[!UICONTROL &#x200B; スキーマ &#x200B;]」を選択し、「**[!UICONTROL スキーマを作成]**」を選択します。 次に、スキーマタイプとして **[!UICONTROL 標準]** を選択し、次に **[!UICONTROL 手動]** を選択して、フィールドを手動で作成します。 スキーマの基本クラスを選択し、スキーマの名前を指定します。
+スキーマを作成するには、Experience Platform UI の左側のナビゲーションで「[!UICONTROL  スキーマ ]」を選択し、「**[!UICONTROL スキーマを作成]**」を選択します。 次に、スキーマタイプとして **[!UICONTROL 標準]** を選択し、次に **[!UICONTROL 手動]** を選択して、フィールドを手動で作成します。 スキーマの基本クラスを選択し、スキーマの名前を指定します。
 
-作成したら、必須フィールドを追加してスキーマを更新します。 少なくとも 1 つのフィールドが、プライマリ ID 値についてExperience Platformに通知する [!UICONTROL ID] フィールドであることを確認してください。 最後に、データを正常に保存するために、「[!UICONTROL &#x200B; プロファイル &#x200B;]」トグルを有効になっていることを確認します。
+作成したら、必須フィールドを追加してスキーマを更新します。 少なくとも 1 つのフィールドが、プライマリ ID 値についてExperience Platformに通知する [!UICONTROL ID] フィールドであることを確認してください。 最後に、データを正常に保存するために、「[!UICONTROL  プロファイル ]」トグルを有効になっていることを確認します。
 
 ![create-schema](../../images/tutorials/create/didomi/create-schema.png)
 
@@ -63,7 +63,7 @@ Experience Platform API を正常に呼び出す方法については、[Experie
 
 Experience Platformの **データセット** は、定義したスキーマに基づいて受信データを保存するために使用されます。
 
-データセットを作成するには、Experience Platform UI の左側のナビゲーションで [!UICONTROL &#x200B; データセット &#x200B;] を選択してから、「**[!UICONTROL データセットを作成]**」を選択します。 次に、「**[!UICONTROL スキーマからデータセットを作成]**」を選択し、新しいデータセットに関連付けるスキーマを選択します。
+データセットを作成するには、Experience Platform UI の左側のナビゲーションで [!UICONTROL  データセット ] を選択してから、「**[!UICONTROL データセットを作成]**」を選択します。 次に、「**[!UICONTROL スキーマからデータセットを作成]**」を選択し、新しいデータセットに関連付けるスキーマを選択します。
 
 ![ データセットを作成 ](../../images/tutorials/create/didomi/create-dataset.png)
 

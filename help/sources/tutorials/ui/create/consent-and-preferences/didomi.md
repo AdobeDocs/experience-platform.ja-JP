@@ -1,9 +1,9 @@
 ---
 title: Didomi をExperience Platformに接続
 description: UI を使用して Didomi アカウントをExperience Platformに接続する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
+last-substantial-update: 2025-07-29T00:00:00Z
+exl-id: 1374574f-c8ba-4cf5-bad0-94a884f5c0a6
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 13%
@@ -36,7 +36,7 @@ ht-degree: 13%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-[!DNL Didomi] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、&lbrack;**[!UICONTROL Didomi]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
+[!DNL Didomi] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、[**[!UICONTROL Didomi]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
 
 >[!TIP]
 >
@@ -118,8 +118,8 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データフローが作成されたら、*[!UICONTROL ソース]* カタログに移動し、「**[!UICONTROL データフロー]**」を選択します。 データフローディレクトリを使用して [!DNL Didomi] のデータフローを探し、*[!UICONTROL データフローアクティビティ]* インターフェイスにアクセスします。 次に、右側のパネルの *[!UICONTROL プロパティ]* パネルを使用して、以下の値を取得します。
 
-* [!UICONTROL &#x200B; ストリーミングエンドポイント &#x200B;]
-* [!UICONTROL &#x200B; データフロー ID]
+* [!UICONTROL  ストリーミングエンドポイント ]
+* [!UICONTROL  データフロー ID]
 
 Experience Platform UI で、次の操作を行います。
 
