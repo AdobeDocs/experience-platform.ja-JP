@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年7月
 description: Adobe Experience Platform の 2025年7月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2a8d5576ea937cdda70f10218b5eec35613fd264
+source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
 workflow-type: tm+mt
-source-wordcount: '1623'
-ht-degree: 16%
+source-wordcount: '1457'
+ht-degree: 17%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 16%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年7月29日（PT）**
 
@@ -29,7 +29,6 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 - [処理能力](#capacity)
 - [宛先](#destinations)
 - [データ取り込み](#data-ingestion)
-- [ クエリサービス ] （#query-service
 - [Real-Time CDP B2B エディション](#b2b)
 - [サンドボックス](#sandboxes)
 - [セグメント化サービス](#segmentation-service)
@@ -62,8 +61,8 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 | 宛先接続のアカウント名と説明 | 宛先に接続する際に、[ アカウント名と説明を追加 ](/help/destinations/ui/connect-destination.md) できるようになりました。これにより、複数のアカウントを持つ宛先を管理しやすくなります。 |
 | エッジ宛先用の強化されたデータストリーム情報 | [Adobe Target](/help/destinations/catalog/personalization/adobe-target-v2.md) 宛先と [ カスタム Personalization](/help/destinations/catalog/personalization/custom-personalization.md) 宛先の右側パネルの情報が改善され、データストリーム名が表示されるようになりました。これにより、関連するデータストリーム設定がよりわかりやすく表示され、既存のデータフローを確認する際の混乱を減らすことができます。 宛先設定画面の **[!UICONTROL データストリーム ID]** セレクターが **[!UICONTROL データストリーム]** に更新され、ユーザーインターフェイスがわかりやすくなりました。 |
 | 宛先選択でのマーケティングアクションの表示 | マーケティングアクションが、宛先ワークスペースの「**[[!UICONTROL 参照]](/help/destinations/ui/destinations-workspace.md#browse)**」タブおよび **[[!UICONTROL データフロー実行]](/help/dataflows/ui/monitor-destinations.md)** ページの右側のパネルに表示されるようになり、表示ページに移動しなくてもマーケティングアクションの変更をすぐに確認できるようになりました。 この機能強化により、宛先を設定する際にマーケティングアクションの設定を検証しやすくなることで、ユーザーエクスペリエンスが向上します。 |
-| [!BADGE &#x200B; 限定ベータ版 &#x200B;]{type=Informative} 宛先用マーケティングアクションの編集 | 既存の宛先に対して [ マーケティングアクションの編集 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) を行えるようになりました。 この機能は現在、限定的なベータ版です。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
-| [!BADGE &#x200B; 限定ベータ版 &#x200B;]{type=Informative} 宛先を編集 | 作成後に [ 宛先設定を編集 ](/help/destinations/ui/edit-destination.md) できます。 この機能は現在、限定的なベータ版です。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
+| [!BADGE  限定ベータ版 ]{type=Informative} 宛先用マーケティングアクションの編集 | 既存の宛先に対して [ マーケティングアクションの編集 ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) を行えるようになりました。 この機能は現在、限定的なベータ版です。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
+| [!BADGE  限定ベータ版 ]{type=Informative} 宛先を編集 | 作成後に [ 宛先設定を編集 ](/help/destinations/ui/edit-destination.md) できます。 この機能は現在、限定的なベータ版です。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。 |
 
 **修正点**
 
@@ -84,19 +83,6 @@ Experience Platformは、様々なソースからのバッチデータ取り込�
 | ストリーミングプロファイル取り込みの監視のサポート | ストリーミングプロファイル取り込みのリアルタイム監視が使用できるようになり、スループット、待ち時間、データ品質指標に対する透明性が提供されます。 これにより、プロアクティブなアラートと実用的なインサイトがサポートされ、データエンジニアが容量違反と取り込みの問題を特定するのに役立ちます。 詳しくは、[ ストリーミングプロファイル取り込みの監視 ](../../dataflows/ui/monitor-streaming-profile.md) に関するガイドを参照してください。 |
 
 詳しくは、[ データ取り込みの概要 ](../../ingestion/home.md) を参照してください。
-
-## クエリサービス {#query-service}
-
-クエリサービスを使用した標準 SQL を使用して、Adobe Experience Platform Data Lake でデータをクエリします。 データセットをシームレスに組み合わせ、クエリ結果から新しいデータセットを生成してレポートを強化したり、データサイエンスワークフローを有効にしたり、リアルタイム顧客プロファイルへの取り込みを容易にしたりします。 例えば、顧客トランザクションデータを行動データと結合して、ターゲットマーケティングキャンペーンの高価値オーディエンスを特定できます。
-
-**新機能または更新された機能**
-
-| 機能 | 説明 |
-|--------|-------------|
-| 有効期限のない資格情報のパスワード文字制限のサポート | Data Distillerでは、[ 特定の文字制限を持つ、有効期限のない資格情報 ](../../query-service/ui/credentials.md#non-expiring-credentials) をサポートするようになりました。 パスワードには数字、小文字、大文字、特殊文字が少なくとも 1 文字必要ですが、ドル記号（$）はサポートされていません。 推奨される特殊文字には `!, @, #, ^, or &` があります。 |
-| 環境全体にわたるパフォーマンスの一貫性の向上 | Data Distiller[ 開発用サンドボックスと実稼動用サンドボックスの間でパフォーマンスの一貫性が保たれ ](../../query-service/troubleshooting-guide.md#data-distiller)、どちらの環境でも同様のバックエンドリソースが使用できるようになりました。 計算時間は、データ量と、処理時に使用可能なバックエンド計算リソースによって異なる場合があります。 |
-
-[!DNL Query Service] について詳しくは、[[!DNL Query Service] 概要](../../query-service/home.md)を参照してください。
 
 ## Real-Time CDP B2B エディション {#b2b}
 
