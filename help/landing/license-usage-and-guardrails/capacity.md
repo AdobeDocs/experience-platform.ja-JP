@@ -1,15 +1,13 @@
 ---
 title: ライセンスの使用状況と処理能力
 description: Adobe Experience Platform内でのライセンス使用状況と容量制限について説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 1%
+source-wordcount: '577'
+ht-degree: 7%
 
 ---
-
 
 # ライセンスの使用状況と容量
 
@@ -27,12 +25,12 @@ Experience Platformのガードレールについて詳しくは、[Real-Time CD
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="ストリーミングオーディエンス数"
->abstract="サンドボックスあたりのストリーミングオーディエンスの最大数。 この数には、サンドボックス内のエッジオーディエンスの数が含まれます。"
+>abstract="サンドボックスあたりの最大ストリーミングオーディエンス数。この数には、サンドボックスにあるエッジオーディエンス数が含まれます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
 >title="Edge オーディエンス"
->abstract="サンドボックスあたりのエッジオーディエンスの最大数。"
+>abstract="サンドボックスあたりの最大エッジオーディエンス数。"
 
 現在、Capacity は以下のサービスをサポートしています。
 
