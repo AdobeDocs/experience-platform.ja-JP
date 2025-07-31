@@ -1,7 +1,7 @@
 ---
 title: Real-Time CDP B2B editionのアーキテクチャのアップグレード
 description: Real-Time CDP B2B editionのアーキテクチャの包括的なアップグレードについては、このドキュメントを参照してください。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
 source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
 workflow-type: tm+mt
