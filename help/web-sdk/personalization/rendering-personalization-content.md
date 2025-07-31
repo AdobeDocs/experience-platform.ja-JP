@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Platform Web SDK を使用したパーソナライズされたコンテンツのレンダリング
-description: Adobe Experience Platform Web SDK を使用してパーソナライズされたコンテンツをレンダリングする方法について説明します。
+title: Adobe Experience Platform Web SDKを使用したパーソナライズされたコンテンツのレンダリング
+description: Adobe Experience Platform web SDKを使用してパーソナライズされたコンテンツをレンダリングする方法について説明します。
 keywords: パーソナライゼーション；renderDecisions;sendEvent;decisionScopes；提案；
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 1%
@@ -12,15 +12,15 @@ ht-degree: 1%
 
 # パーソナライズされたコンテンツのレンダリング
 
-Adobe Experience Platform Web SDK では、[&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja)Adobe Target、[&#128279;](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja)Offer decisioning、[Adobe Journey Optimizer](https://business.adobe.com/jp/products/target/adobe-target.html) など、Adobeのパーソナライゼーションソリューションからパーソナライズされたコンテンツを取得  るこ  がサポートされています。
+Adobe Experience Platform Web SDKでは、[Adobe Target、](https://business.adobe.com/jp/products/target/adobe-target.html)Offer Decisioning、[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ja) などのAdobe パーソナライゼーションソリューションからパーソナライゼーショ [ されたコンテンツの取得をサポートしてい ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ja) す。
 
-さらに、Web SDK は、[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) や [ カスタムパーソナライゼーション接続 ](../../destinations/catalog/personalization/custom-personalization.md) などのAdobe Experience Platform パーソナライゼーションの宛先を通じて、同じページおよび次のページのパーソナライゼーション機能を強化します。 同じページと次のページのパーソナライゼーション用にExperience Platformを設定する方法については、[ 専用ガイド ](../../destinations/ui/activate-edge-personalization-destinations.md) を参照してください。
+さらに、Web SDKは、[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) や [ カスタムパーソナライゼーション接続 ](../../destinations/catalog/personalization/custom-personalization.md) などのAdobe Experience Platform パーソナライゼーション宛先を通じて、同じページおよび次のページのパーソナライゼーション機能を強化します。 同じページと次のページのパーソナライゼーションに対応するExperience Platformの設定方法については、[ 専用ガイド ](../../destinations/ui/activate-edge-personalization-destinations.md) を参照してください。
 
-Adobe Targetの [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) およびAdobe Journey Optimizerの [Web キャンペーン UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ja) 内で作成されたコンテンツは、SDK によって自動的に取得およびレンダリングできます。 Adobe Target[ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja)、Adobe Journey Optimizer[ コードベースの Experience Channel](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) またはOffer decisioning内で作成されたコンテンツは、SDK によって自動的にレンダリングすることはできません。 代わりに、SDK を使用してこのコンテンツをリクエストし、手動でコンテンツをレンダリングする必要があります。
+Adobe Targetの [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) およびAdobe Journey Optimizerの [Web キャンペーン UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) で作成されたコンテンツは、SDKによって自動的に取得され、レンダリングされます。 Adobe Target[ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)、Adobe Journey Optimizer[ コードベースの Experience Channel](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/code-based-experience/get-started-code-based) またはOffer Decisioning内で作成されたコンテンツは、SDKによって自動的にレンダリングすることはできません。 代わりに、SDKを使用してこのコンテンツをリクエストし、手動でコンテンツをレンダリングする必要があります。
 
 ## コンテンツの自動レンダリング {#automatic}
 
-イベントをサーバーに送信する場合は、`renderDecisions` オプションを `true` に設定できます。 これにより、自動レンダリングの対象となる、パーソナライズされたコンテンツが SDK によって自動的にレンダリングされます。
+イベントをサーバーに送信する場合は、`renderDecisions` オプションを `true` に設定できます。 これにより、自動レンダリングの対象となる、パーソナライズされたコンテンツがSDKで自動的にレンダリングされます。
 
 ```javascript
 alloy("sendEvent", {
@@ -42,7 +42,7 @@ alloy("sendEvent", {
 
 ## コンテンツの手動レンダリング {#manual}
 
-パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定します。この関数は、SDK がサーバーから正常に応答を受信した後に呼び出されます。 コールバックには `result` オブジェクトが指定され、このオブジェクトには、返されたパーソナライゼーションコンテンツを含む `propositions` プロパティを含めることができます。 次に、イベントを送信する際にコールバック関数を提供する方法の例を示します。
+パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定します。この関数は、SDKがサーバーから正常に応答を受け取った後に呼び出されます。 コールバックには `result` オブジェクトが指定され、このオブジェクトには、返されたパーソナライゼーションコンテンツを含む `propositions` プロパティを含めることができます。 次に、イベントを送信する際にコールバック関数を提供する方法の例を示します。
 
 ```javascript
 alloy("sendEvent", {
@@ -103,9 +103,9 @@ alloy("sendEvent", {
 ]
 ```
 
-この例では、`sendEvent` コマンドの実行時に `renderDecisions` オプションが `true` に設定されていなかったので、SDK はコンテンツを自動的にレンダリングしようとしませんでした。 ただし、SDK は自動レンダリングの対象となるコンテンツを引き続き自動的に取得し、必要に応じて手動でレンダリングできるように提供しています。 各提案オブジェクトの `renderAttempted` プロパティが `false` に設定されていることに注意してください。
+この例では、`renderDecisions` コマンドが実行されたときに「`true`」オプションが「`sendEvent`」に設定されていなかったので、SDKはコンテンツを自動的にレンダリングしようとしませんでした。 ただし、SDKは自動レンダリングの対象となるコンテンツを自動的に取得し、必要に応じて手動でレンダリングできるように提供しています。 各提案オブジェクトの `renderAttempted` プロパティが `false` に設定されていることに注意してください。
 
-イベントを送信する際に代わりに `renderDecisions` オプションを `true` に設定した場合、SDK は、（前述のように）自動レンダリングの対象となる提案をレンダリングしようとしたことになります。 その結果、各提案オブジェクトの `renderAttempted` プロパティが `true` に設定されます。 この場合、これらの提案を手動でレンダリングする必要はありません。
+イベントを送信する際に代わりに `renderDecisions` オプションを `true` に設定した場合、SDKは（前述のように）自動レンダリングの対象となる提案をレンダリングしようとしたことになります。 その結果、各提案オブジェクトの `renderAttempted` プロパティが `true` に設定されます。 この場合、これらの提案を手動でレンダリングする必要はありません。
 
 これまで、自動レンダリングの対象となるパーソナライゼーションコンテンツ（Adobe Journey Optimizerの Visual Experience Composer またはAdobe Targetの Web キャンペーン UI で作成されたすべてのコンテンツ）についてのみ説明しました。 自動レンダリングの対象となるパーソナライゼーションコンテンツ _なし_ を取得するには、イベントの送信時に `decisionScopes` オプションを設定して、コンテンツをリクエストする必要があります。 範囲は、サーバーから取得したい特定の提案を識別する文字列です。
 
@@ -122,7 +122,7 @@ alloy("sendEvent", {
   });
 ```
 
-この例では、`salutation` または `discount` の範囲に一致する提案がサーバーで見つかった場合、その提案が返され、`result.propositions` 配列に含まれます。 自動レンダリングの条件を満たす提案は、`renderDecisions` または `decisionScopes` のオプションの設定方法に関係なく、引き続き `propositions` の配列に含まれます。 この場合、`propositions` の配列は次の例のようになります。
+この例では、`salutation` または `discount` の範囲に一致する提案がサーバーで見つかった場合、その提案が返され、`result.propositions` 配列に含まれます。 自動レンダリングの条件を満たす提案は、`propositions` または `renderDecisions` のオプションの設定方法に関係なく、引き続き `decisionScopes` の配列に含まれます。 この場合、`propositions` の配列は次の例のようになります。
 
 ```json
 [
@@ -224,8 +224,8 @@ alloy("sendEvent", {
 
 1. `result` オブジェクトから提案を抽出します。
 1. 各提案を反復処理し、`discount` の範囲で提案を探します。
-1. 提案が見つかった場合は、提案の各項目をループして、HTMLコンテンツである項目を探します。 （想定するよりも確認する方が良いです。
-1. HTMLコンテンツを含む項目が見つかった場合は、ページ上で `daily-special` 要素を見つけ、そのHTMLをパーソナライズされたコンテンツに置き換えます。
+1. 提案が見つかった場合は、提案の各項目をループして、HTML コンテンツである項目を探します。 （想定するよりも確認する方が良いです。
+1. HTMLのコンテンツを含んだ項目が見つかった場合は、該当するページで `daily-special` 要素を見つけ、そのHTMLをパーソナライズされたコンテンツに置き換えます。
 1. コンテンツがレンダリングされたら、`display` イベントを送信します。
 
 コードは次のようになります。
@@ -252,7 +252,7 @@ alloy("sendEvent", {
   var discountHtml;
   if (discountProposition) {
     // Find the item from proposition that should be rendered.
-    // Rather than assuming there a single item that has HTML
+    // Rather than assuming there is a single item that has HTML
     // content, find the first item whose schema indicates
     // it contains HTML content.
     for (var j = 0; j < discountProposition.items.length; j++) {
@@ -263,7 +263,7 @@ alloy("sendEvent", {
         var dailySpecialElement = document.getElementById("daily-special");
         dailySpecialElement.innerHTML = discountHtml;
         
-        // For this example, we assume there is only a signle place to update in the HTML.
+        // For this example, we assume there is only a single place to update in the HTML.
         break;  
       }
     }
@@ -298,7 +298,7 @@ alloy("sendEvent", {
 
 ### フリッカーの管理
 
-SDK は、パーソナライゼーションプロセス中に [ ちらつきの管理 ](../personalization/manage-flicker.md) を行う機能を提供します。
+SDKには、パーソナライゼーションプロセス中に [ ちらつきの管理 ](../personalization/manage-flicker.md) を行う機能が用意されています。
 
 ## 単一ページアプリケーションで、指標を増分せずに提案をレンダリングします {#applypropositions}
 
@@ -306,7 +306,7 @@ SDK は、パーソナライゼーションプロセス中に [ ちらつきの�
 
 >[!IMPORTANT]
 >
->`__view__` 範囲（または web サーフェス）の提案がページの読み込み時にレンダリングされた場合、その `renderAttempted` フラグは `true` に設定されます。 `applyPropositions` コマンドは、`renderAttempted: true` フラグを持つ `__view__` スコープ （または web サーフェス）の提案を再レンダリングしません。
+>`__view__` 範囲（または web サーフェス）の提案がページの読み込み時にレンダリングされた場合、その `renderAttempted` フラグは `true` に設定されます。 `applyPropositions` コマンドは、`__view__` フラグを持つ `renderAttempted: true` スコープ （または web サーフェス）の提案を再レンダリングしません。
 
 ### ユースケース 1：単一ページアプリケーションビューの提案の再レンダリング
 

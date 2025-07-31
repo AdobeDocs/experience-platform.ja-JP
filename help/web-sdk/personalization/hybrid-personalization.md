@@ -3,7 +3,7 @@ title: Web SDKとEdge Network API を使用したハイブリッドパーソナ�
 description: この記事では、Web SDKをEdge Network API と組み合わせて使用して、web プロパティにハイブリッドパーソナライゼーションをデプロイする方法について説明します。
 keywords: パーソナライゼーション;ハイブリッド;Server API;サーバーサイド;ハイブリッド実装;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 41%
@@ -35,11 +35,11 @@ Web プロパティにハイブリッドパーソナライゼーションを実�
 
 1. ブラウザーによって以前に保存された、接頭辞 `kndctr_` が付いている既存の Cookie は、ブラウザーリクエストに含まれます。
 1. クライアントの web ブラウザーは、アプリケーションサーバーに web ページをリクエストします。
-1. アプリケーションサーバーがページリクエストを受け取ると、[Edge Network API インタラクティブデータ収集エンドポイントに対して `POST` リクエストを実行し ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) パーソナライゼーションコンテンツを取得します。 この `POST` リクエストには `event` と `query` が含まれています。前のステップで作成した Cookie がある場合は、`meta>state>entries` 配列に含まれています。
+1. アプリケーションサーバーがページリクエストを受け取ると、`POST`Edge Network API インタラクティブデータ収集エンドポイントに対して [ リクエストを実行し ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) パーソナライゼーションコンテンツを取得します。 この `POST` リクエストには `event` と `query` が含まれています。前のステップで作成した Cookie がある場合は、`meta>state>entries` 配列に含まれています。
 1. Edge Network API は、パーソナライゼーションコンテンツをアプリケーションサーバーに返します。
 1. アプリケーションサーバーは、[ID とクラスターの Cookie](#cookies) を含んだ HTML 応答をクライアントブラウザーに返します。
 1. クライアントページでは、[!DNL Web SDK] `applyResponse` コマンドが呼び出され、前のステップの [!UICONTROL Edge Network API] 応答のヘッダーと本文が渡されます。
-1. `renderDecisions` フラグが `true` に設定されているので、[!DNL Web SDK] は Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) オファーおよびJourney Optimizer web チャネル項目を自動的にレンダリングします。
+1. [!DNL Web SDK] フラグが [[!DNL Visual Experience Composer (VEC)] に設定されているので、](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) は Target `renderDecisions``true` オファーおよびJourney Optimizer web チャネル項目を自動的にレンダリングします。
 1. Target フォームベースの [!DNL HTML]/[!DNL JSON] オファーとJourney Optimizer コードベースのエクスペリエンスは、`applyProposition` メソッドを使用して手動で適用され、提案のパーソナライゼーションコンテンツに基づいて [!DNL DOM] を更新します。
 1. Target フォームベースの [!DNL HTML]/[!DNL JSON] オファーおよびJourney Optimizer コードベースのエクスペリエンスの場合、返されたコンテンツがいつ表示されたかを示すために、表示イベントを手動で送信する必要があります。 これは、`sendEvent` コマンドを使用して行われます。
 

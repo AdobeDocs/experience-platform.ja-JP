@@ -3,7 +3,7 @@ title: at.js とExperience Platform web SDKの比較
 description: at.js 機能とExperience Platform web SDKの比較
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；範囲；スキーマ；システム図；図
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概要
 
-この記事では、`at.js` ライブラリと Experience Platform Web SDKの違いの概要を説明します。
+ここでは、`at.js` ライブラリとExperience Platform Web SDKの違いの概要を説明します。
 
 ## ライブラリのインストール
 
@@ -68,7 +68,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
 ### Web SDKの設定
@@ -83,7 +83,7 @@ at.js 2.x を使用している場合は、`pageLoadEnabled` 設定を有効に�
 
 ### Web SDKの使用
 
-Adobe Target[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) 内で作成されたコンテンツは、SDKによって自動的に取得およびレンダリングできます。
+Adobe Target[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 内で作成されたコンテンツは、SDKによって自動的に取得およびレンダリングできます。
 
 Target オファーをリクエストして自動的にレンダリングするには、`sendEvent` コマンドを使用し、`renderDecisions` オプションを `true` に設定します。 これにより、自動レンダリングの対象となる、パーソナライズされたコンテンツがSDKで自動的にレンダリングされます。
 
@@ -215,11 +215,11 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 ### Web SDKの使用
 
-`decisionScopes`: `__view__` の下で、特別なスコープを持つ `sendEvent` コマンドを実行します。 このスコープをシグナルとして使用し、Target からすべてのページ読み込みアクティビティを取得し、すべてのビューをプリフェッチします。 また、Web SDKは、すべての VEC ビューベースのアクティビティの評価も試みます。 ビューのプリフェッチの無効化は、現在 Web SDKではサポートされていません。
+`sendEvent`: `decisionScopes` の下で、特別なスコープを持つ `__view__` コマンドを実行します。 このスコープをシグナルとして使用し、Target からすべてのページ読み込みアクティビティを取得し、すべてのビューをプリフェッチします。 また、Web SDKは、すべての VEC ビューベースのアクティビティの評価も試みます。 ビューのプリフェッチの無効化は、現在 Web SDKではサポートされていません。
 
 パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定します。この関数は、SDKがサーバーから正常に応答を受け取った後に呼び出されます。 コールバックには、返されたパーソナライゼーションコンテンツを含む propositions プロパティを含めることができる結果オブジェクトが提供されます。
 
@@ -300,7 +300,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
 ### Web SDKの使用
@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-`applyOffers` コマンドについて詳しくは、[ 専用ドキュメント ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=ja) を参照してください。
+`applyOffers` コマンドについて詳しくは、[ 専用ドキュメント ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html) を参照してください。
 
 
 ### Web SDKの使用
@@ -490,7 +490,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### Web SDKの使用
 
@@ -499,7 +499,7 @@ adobe.target.sendNotifications({
 * `decisioning.propositionDisplay`: Target アクティビティのレンダリングをシグナルで通知します。
 * `decisioning.propositionInteract`：マウスクリックなど、アクティビティに対するユーザーのインタラクションを示します。
 
-`_experience.decisioning.propositions` XDM フィールドグループはオブジェクトの配列です。 各オブジェクトのプロパティは、`sendEvent` のコマンドで返される `result.propositions` から派生します。`{ id, scope, scopeDetails }`
+`_experience.decisioning.propositions` XDM フィールドグループはオブジェクトの配列です。 各オブジェクトのプロパティは、`result.propositions` のコマンドで返される `sendEvent` から派生します。`{ id, scope, scopeDetails }`
 
 **例 1 - アクティビティのレンダリング後に `decisioning.propositionDisplay` イベントを追跡**
 
@@ -665,12 +665,12 @@ alloy("sendEvent", {
 adobe.target.triggerView("homeView")
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
 ### Web SDKの使用
 
-シングルページアプリケーションのビューの変更をトリガーまたは通知するには、`sendEvent` コマンドの `xdm` オプションの下で `web.webPageDetails.viewName` プロパティを設定します。 Web SDKは、で指定された `viewName` のオファーがある場合、ビューのキャッシュをチェック `sendEvent`、そのオファーを実行してディスプレイ通知イベントを送信します。
+シングルページアプリケーションのビューの変更をトリガーまたは通知するには、`web.webPageDetails.viewName` コマンドの `xdm` オプションの下で `sendEvent` プロパティを設定します。 Web SDKは、で指定された `viewName` のオファーがある場合、ビューのキャッシュをチェック `sendEvent`、そのオファーを実行してディスプレイ通知イベントを送信します。
 
 **例**
 
@@ -691,7 +691,7 @@ alloy("sendEvent", {
 
 ## レスポンストークンの活用方法
 
-Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
+Adobe Targetから返されるPersonalization コンテンツには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細である [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) が含まれます。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、Adobe Target ユーザーインターフェイスで設定できます。
 
 ### at.js の使用
 
@@ -705,7 +705,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
 ### Web SDKの使用
@@ -714,7 +714,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Experience Platform Web SDK バージョン 2.6.0 以降を使用していることを確認します。
 
-応答トークンは、`sendEvent` コマンドの結果で公開される `propositions` の一部として返されます。 各提案には `items` の配列が含まれ、Target 管理 UI で有効になっている場合、各項目には応答トークンが入力された `meta` オブジェクトがあります。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)
+応答トークンは、`propositions` コマンドの結果で公開される `sendEvent` の一部として返されます。 各提案には `items` の配列が含まれ、Target 管理 UI で有効になっている場合、各項目には応答トークンが入力された `meta` オブジェクトがあります。 [詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 **例**
 
@@ -871,7 +871,7 @@ adobe.target.getOffers({
 }
 ```
 
-[Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を使用して、Analytics ペイロード（`tnta` トークン）を Analytics ヒットに含める必要があります。
+`tnta`Data Insertion API[ を使用して、Analytics ペイロード（](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) トークン）を Analytics ヒットに含める必要があります。
 
 #### Analytics サーバーサイドログ
 
@@ -880,7 +880,7 @@ Analytics サーバーサイドログは、at.js 設定で `analyticsLogging: se
 
 ![Analytics サーバーサイドログのワークフローを示す図 ](assets/a4t-server-side-atjs.png)
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### Web SDKの使用
 
@@ -895,7 +895,7 @@ Analytics クライアントサイドログは、その DataStream 設定に対�
 
 ![Analytics クライアントサイドログのワークフローを示す図 ](assets/analytics-disabled-datastream-config.png)
 
-顧客は、[Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を使用して Analytics と共有する必要がある Analytics トークン（`tnta`）にアクセスできます
+顧客は、`tnta`Data Insertion API[ を使用して Analytics と共有する必要がある Analytics トークン（](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)）にアクセスできます
 `sendEvent` コマンドを連結してで、結果として得られる提案配列を繰り返し処理します。
 
 **例**
@@ -964,7 +964,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### Web SDKの使用
 
@@ -1009,7 +1009,7 @@ adobe.target.getOffers({
 
 ### Web SDKの使用
 
-Target プロファイルを更新するには、`sendEvent` コマンドを使用して、`profile` を使用してキー名のプレフィックスとして `data.__adobe.target` プロパティを設定します。
+Target プロファイルを更新するには、`sendEvent` コマンドを使用して、`data.__adobe.target` を使用してキー名のプレフィックスとして `profile` プロパティを設定します。
 
 **例**
 
@@ -1064,12 +1064,12 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
 ### Web SDKの使用
 
-推奨データを送信するには、`sendEvent` コマンドを使用して、`entity` を使用してキー名のプレフィックスとして `data.__adobe.target` プロパティを設定します。
+推奨データを送信するには、`sendEvent` コマンドを使用して、`data.__adobe.target` を使用してキー名のプレフィックスとして `entity` プロパティを設定します。
 
 **例**
 
@@ -1091,7 +1091,7 @@ alloy("sendEvent", {
 
 ### at.js の使用
 
-at.js の使用 `getOffer` または `getOffers` を使用して `mbox3rdPartyId` を送信する方法は複数あります。
+at.js の使用 `mbox3rdPartyId` または `getOffer` を使用して `getOffers` を送信する方法は複数あります。
 
 **例 1**
 
@@ -1123,8 +1123,8 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-または、`targetPageParams` または `targetPageParamsAll` のいずれかで `mbox3rdPartyId` を設定する方法があります。
-`targetPageParams` で設定すると、`pag-lLoad` とも呼ばれる `target-global-mbox` のリクエストで送信されます。
+または、`mbox3rdPartyId` または `targetPageParams` のいずれかで `targetPageParamsAll` を設定する方法があります。
+`targetPageParams` で設定すると、`target-global-mbox` とも呼ばれる `pag-lLoad` のリクエストで送信されます。
 推奨は、すべてのターゲットリクエストで送信されるので、`targetPageParamsAll` を使用して設定する必要があります。
 `targetPageParamsAll` を使用する利点は、ページ上で `mbox3rdPartyId` を 1 回定義できることで、すべてのターゲットリクエストが適切な `mbox3rdPartyId` を持つようになります。
 
@@ -1144,7 +1144,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### Web SDKの使用
 
@@ -1233,7 +1233,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-メモ：`mboxes` 配列のすべての `mbox` に独自のインデックスを設定することを強くお勧めします。 通常、最初の mbox には `index=0` があり、次の mbox には `index=1` があります。
+メモ：`mbox` 配列のすべての `mboxes` に独自のインデックスを設定することを強くお勧めします。 通常、最初の mbox には `index=0` があり、次の mbox には `index=1` があります。
 
 ### Web SDKの使用
 

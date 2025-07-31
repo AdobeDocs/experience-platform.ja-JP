@@ -5,7 +5,7 @@ description: Experience Platform Web SDKの CSP を設定する方法につい�
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；コンテキスト；web；デバイス；環境；web sdk 設定；コンテンツセキュリティポリシー；
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -29,7 +29,7 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-上記の例では、`EDGE-DOMAIN` をファーストパーティドメインに置き換える必要があります。 ファーストパーティドメインが [edgeDomain](../commands/configure/edgedomain.md) 設定用に設定されます。 ファーストパーティドメインを設定していない場合は、`*.adobedc.net` に置き換える必要 `EDGE-DOMAIN` あります。 [idMigrationEnabled](../commands/configure/idmigrationenabled.md) を使用して訪問者の移行をオンにする場合、`connect-src` ディレクティブにも `*.demdex.net` を含める必要があります。
+上記の例では、`EDGE-DOMAIN` をファーストパーティドメインに置き換える必要があります。 ファーストパーティドメインが [edgeDomain](../commands/configure/edgedomain.md) 設定用に設定されます。 ファーストパーティドメインを設定していない場合は、`EDGE-DOMAIN` に置き換える必要 `*.adobedc.net` あります。 [idMigrationEnabled](../commands/configure/idmigrationenabled.md) を使用して訪問者の移行をオンにする場合、`connect-src` ディレクティブにも `*.demdex.net` を含める必要があります。
 
 ### NONCE を使用してインラインのスクリプト要素とスタイル要素を許可する
 
@@ -50,7 +50,7 @@ default-src 'nonce-SERVER-GENERATED-NONCE'
 </script>
 ```
 
-nonce を使用しない場合、もう 1 つのオプションは、`script-src` および `style-src` の CSP 指令に `unsafe-inline` を追加することです。
+nonce を使用しない場合、もう 1 つのオプションは、`unsafe-inline` および `script-src` の CSP 指令に `style-src` を追加することです。
 
 ```
 script-src 'unsafe-inline'
@@ -59,7 +59,7 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobeでは、ページ上で任意のスクリプトを実行でき **CSP のメリットが制限されるので、`unsafe-inline` を指定することは** お勧めしません。
+>Adobeでは、ページ上で任意のスクリプトを実行でき **CSP のメリットが制限されるので、** を指定することは `unsafe-inline` お勧めしません。
 
 ## アプリ内メッセージ用の CSP の設定 {#in-app-messaging}
 

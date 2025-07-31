@@ -1,11 +1,11 @@
 ---
 title: User agent client hints
-description: Web SDK におけるユーザーエージェントクライアントヒントの仕組みを説明します。 Client Hints は、web サイト所有者に、ユーザーエージェント文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。
+description: Web SDKでの User Agent クライアントヒントの仕組みを説明します。 Client Hints は、web サイト所有者に、ユーザーエージェント文字列で利用できるのとほぼ同じ量の情報に、よりプライバシーが保護された方法でアクセスできます。
 keywords: user-agent;client hints；文字列；user-agent string；低エントロピー；高エントロピー
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ User Agent クライアントヒントには、次の 2 つのカテゴリがあ
 
 低エントロピーのクライアントヒントには、ユーザーのフィンガープリントに使用できない基本情報が含まれています。 ブラウザーのブランド、プラットフォーム、要求の発信元がモバイルデバイスであるかどうかなどの情報。
 
-Web SDK では、低エントロピーのクライアントヒントがデフォルトで有効になっており、リクエストのたびに渡されます。
+Web SDKでは、低エントロピーのクライアントヒントはデフォルトで有効になっており、リクエストのたびに渡されます。
 
 | HTTP ヘッダー | JavaScript | デフォルトで User-Agent に含まれる | デフォルトで client hints に含まれる |
 |---|---|---|---|
@@ -101,35 +101,35 @@ Web SDK では、低エントロピーのクライアントヒントがデフォ
 | プロパティ | 説明 | HTTP ヘッダー | XDM パス | 例 | デフォルトでユーザーエージェントに含まれる | デフォルトで client hints に含まれる |
 | --- | --- | --- | --- | --- |---|---|
 | オペレーティングシステムのバージョン | オペレーティングシステムのバージョン。 | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | ○ | × |
-| アーキテクチャ | 基盤となる CPU アーキテクチャ。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | ○ | × |
+| アーキテクチャ | 基盤となるCPU アーキテクチャ。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | ○ | × |
 | デバイスモデル | 使用されるデバイスの名前。 | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | ○ | × |
-| ビット数 | 基になる CPU アーキテクチャがサポートするビット数です。 | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | ○ | × |
+| ビット数 | 基になるCPU アーキテクチャがサポートするビット数。 | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | ○ | × |
 | ブラウザーベンダー | ブラウザーを作成した会社。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | ○ | × |
 | ブラウザー名 | 使用されるブラウザー。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | ○ | × |
 | ブラウザーバージョン | ブラウザーの重要なバージョン。 低エントロピーのヒント `Sec-CH-UA` でも、この要素が収集されます。 正確なブラウザーバージョンは自動的に収集されません。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | ○ | × |
 
 
-Web SDK では、高エントロピーのクライアントヒントは、デフォルトで無効になっています。 これを有効にするには、高エントロピーのクライアントヒントをリクエストするように Web SDK を手動で設定する必要があります。
+Web SDKでは、高エントロピーのクライアントヒントはデフォルトで無効になっています。 これを有効にするには、高エントロピーのクライアントヒントをリクエストするように web SDKを手動で設定する必要があります。
 
-## 高エントロピーのクライアントヒントは、Experience Cloudソリューションに影響を与えます {#impact-in-experience-cloud-solutions}
+## 高エントロピーのクライアントヒントはExperience Cloud ソリューションに影響を与える {#impact-in-experience-cloud-solutions}
 
 一部のAdobe Experience Cloud ソリューションでは、レポートの生成時に、高エントロピーのクライアントヒントに含まれる情報に依存します。
 
-お使いの環境で高エントロピーのクライアントヒントを有効にしない場合、以下に説明するAdobe AnalyticsとAudience Managerのレポートおよび特性は機能しません。
+お使いの環境で高エントロピーのクライアントヒントを有効にしない場合、以下に説明するAdobe AnalyticsおよびAudience Managerのレポートと特性は機能しません。
 
 ### 高エントロピーのクライアントヒントに基づくAdobe Analytics レポート {#analytics}
 
-[ オペレーティングシステム ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=ja) ディメンションには、高エントロピーのクライアントヒントとして保存されるオペレーティングシステムバージョンが含まれます。 高エントロピーのクライアントヒントが有効になっていない場合、Chromium ブラウザーから収集されたヒットのオペレーティングシステムバージョンが不正確になる場合があります。
+[ オペレーティングシステム ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) ディメンションには、高エントロピーのクライアントヒントとして保存されるオペレーティングシステムバージョンが含まれます。 高エントロピーのクライアントヒントが有効になっていない場合、Chromium ブラウザーから収集されたヒットのオペレーティングシステムバージョンが不正確になる場合があります。
 
 ### 高エントロピーのクライアントヒントに基づくAudience Manager特性 {#aam}
 
-[!DNL Google] は、`User-Agent` ヘッダーを介して収集される情報を最小限に抑えるために、[!DNL Chrome] ブラウザー機能を更新しました。 その結果、[ プラットフォーム ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ja) を使用しているAudience Managerのお客様は、[DILレベルのキー ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=ja) に基づく特性に関する信頼性の高い情報を受け取れなくなります。
+[!DNL Google] は、[!DNL Chrome] ヘッダーを介して収集される情報を最小限に抑えるために、`User-Agent` ブラウザー機能を更新しました。 その結果、[DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ja) を使用しているAudience Managerのお客様は、[ プラットフォームレベルのキー ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html) に基づく特性に関する信頼性の高い情報を受け取れなくなります。
 
-ターゲティングにプラットフォームレベルのキーを使用するAudience Managerのお客様は、[ 特性ではなく ](/help/web-sdk/home.md) [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ja) に切り替え、信頼性の高いDILデータを引き続き受け取るには [ 高エントロピーのクライアントヒント ](#enabling-high-entropy-client-hints) を有効にする必要があります。
+ターゲティングにプラットフォームレベルのキーを使用するAudience Managerのお客様は、[DILではなく ](/help/web-sdk/home.md)[Experience Platform Web SDK](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ja) に切り替え、[ 高エントロピーのクライアントヒント ](#enabling-high-entropy-client-hints) を有効にして、信頼性の高い特性データを引き続き受信できるようにする必要があります。
 
 ## 高エントロピーのクライアントヒントの有効化 {#enabling-high-entropy-client-hints}
 
-Web SDK デプロイメントで高エントロピーのクライアントヒントを有効にするには、[`context`](/help/web-sdk/commands/configure/context.md) フィールドに追加の `highEntropyUserAgentHints` コンテキストオプションを含める必要があります。
+Web SDK デプロイメントで高エントロピーのクライアントヒントを有効にするには、`highEntropyUserAgentHints` フィールドに [`context`](/help/web-sdk/commands/configure/context.md) context オプションを追加する必要があります。
 
 例えば、web プロパティから高エントロピーのクライアントヒントを取得するには、設定は次のようになります。
 

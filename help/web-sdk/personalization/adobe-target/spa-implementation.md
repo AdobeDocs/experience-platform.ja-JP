@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDKのシングルページアプリケー�
 description: Adobe Targetを使用して、Adobe Experience Platform Web SDKのシングルページアプリケーション（SPA）実装を作成する方法について説明します。
 keywords: target;adobe target;xdm ビュー；ビュー；単一ページアプリケーション；SPA;SPA ライフサイクル；クライアントサイド；AB テスト；AB；エクスペリエンスのターゲット設定；XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 10%
@@ -19,7 +19,7 @@ Adobe Experience Platform Web SDK は、シングルページアプリケーシ�
 
 代わりに、単一ページアプリケーションなどの最新の web アプリケーションは、ブラウザー UI レンダリングの迅速な使用を推進するモデルを採用しています。これは、多くの場合、ページリロードに依存しません。 これらのエクスペリエンスは、スクロール、クリック、カーソル移動などの顧客のインタラクションによってトリガーされます。最新の web のパラダイムが進化するにつれ、パーソナライゼーションと実験をデプロイするための、ページの読み込みなどの従来の汎用イベントの関連性は機能しなくなりました。
 
-![ 従来のページライフサイクルに対する SPA のライフサイクルを示す図。](assets/spa-vs-traditional-lifecycle.png)
+![ 従来のページライフサイクルと比較した SPA のライフサイクルを示す図。](assets/spa-vs-traditional-lifecycle.png)
 
 ## Experience Platform Web SDK for SPA の利点
 
@@ -37,11 +37,11 @@ Adobe Target VEC for SPA では、ビューと呼ばれる概念を利用しま�
 
 ホームページに移動すると、ヒーロー画像がイースターの販売とサイトで利用可能な最新の製品を宣伝します。 この場合、ビューはホーム画面全体に対して定義できます。 このビューは、単に「ホーム」と呼ばれることもあります。
 
-![ ブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像 ](assets/example-views.png)
+![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像 ](assets/example-views.png)
 
 ビジネスで販売されている製品に対するお客様の関心が高まるにつれ、お客様は **製品** リンクをクリックすることにします。 ホームサイトと同様に、製品サイト全体をビューとして定義できます。 このビューには、「products-all」という名前を付けることができます。
 
-![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。すべての製品が表示されます。](assets/example-products-all.png)
+![ ブラウザーウィンドウに、すべての製品が表示された単一ページアプリケーションのサンプル画像 ](assets/example-products-all.png)
 
 ビューはサイト全体またはサイト上の視覚要素のグループとして定義できるので、製品サイトに表示される 4 つの製品はグループ化され、ビューと見なすことができます。 このビューには、「products」という名前を付けることができます。
 
@@ -49,11 +49,11 @@ Adobe Target VEC for SPA では、ビューと呼ばれる概念を利用しま�
 
 顧客が **さらに読み込み** ボタンをクリックしてサイト上のより多くの製品を検索しても、このケースでは web サイトの URL は変更されませんが、表示される 2 行目の製品のみを表すために、ここでビューを作成できます。 ビュー名は「products-page-2」にすることができます。
 
-![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。サンプル製品は追加のページに表示されます。](assets/example-load-more.png)
+![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。追加のページに表示されるサンプル製品が含まれます。](assets/example-load-more.png)
 
 顧客がサイトでいくつかの製品を購入することを決定し、チェックアウト画面に進みます。チェックアウトサイトでは、顧客は通常の配信または速達を選択するオプションを与えられます。 ビューには、サイト上の任意の視覚要素のグループを使用できるので、配信環境設定用のビューを作成して、「配信環境設定」と呼ぶこともできます。
 
-![ ブラウザーウィンドウ内の単一ページアプリケーションのチェックアウトページのサンプル画像 ](assets/example-check-out.png)
+![ ブラウザーウィンドウに表示される単一ページアプリケーションのチェックアウトページのサンプル画像 ](assets/example-check-out.png)
 
 ビューの概念は、これよりはるかに拡張することができます。 これらは、サイトで定義できるビューの例です。
 
@@ -63,7 +63,7 @@ XDM ビューはAdobe Targetで活用し、マーケターが Visual Experience 
 
 1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) のインストール
 2. パーソナライズする単一ページアプリケーション内のすべての XDM ビューを決定します。
-3. XDM ビューを定義したら、AB または XT VEC アクティビティを配信するために、`true` に設定した `sendEvent()` 関数と、シングルページアプリケーションで対応す `renderDecisions`XDM ビューを実装します。 XDM ビューは `xdm.web.webPageDetails.viewName` で渡す必要があります。 この手順では、マーケターは Visual Experience Composer を活用して、これらの XDM の A/B テストと XT テストを開始できます。
+3. XDM ビューを定義したら、AB または XT VEC アクティビティを配信するために、`sendEvent()` に設定した `renderDecisions` 関数と、シングルページアプリケーションで対応す `true`XDM ビューを実装します。 XDM ビューは `xdm.web.webPageDetails.viewName` で渡す必要があります。 この手順では、マーケターは Visual Experience Composer を活用して、これらの XDM の A/B テストと XT テストを開始できます。
 
    ```javascript
    alloy("sendEvent", { 
@@ -90,7 +90,7 @@ XDM ビューはAdobe Targetで活用し、マーケターが Visual Experience 
 
 マーケティングチームは、ホームページ全体で A/B テストを実行したいと考えています。
 
-![ ブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像 ](assets/use-case-1.png)
+![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像 ](assets/use-case-1.png)
 
 ホームサイト全体で A/B テストを実行するには、`sendEvent()` は、`home` に設定した XDM `viewName` と共に呼び出す必要があります。
 
@@ -221,7 +221,7 @@ XDM ビューの定義が完了し、渡された XDM ビューで `sendEvent()`
 
 >[!NOTE]
 >
->SPA で VEC を使用するには、{Firefox[&#128279;](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [2}Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 拡張機能をインストールして有効化する必要があります。
+>SPA で VEC を使用するには、{Firefox[ または ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)2}Chrome[ VEC Helper 拡張機能をインストールして有効化する必要があります。](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak)
 
 ### 変更パネル
 
@@ -288,6 +288,6 @@ VEC でこれらの更新を行うには、次の手順が必要です。
 
 >[!NOTE]
 >
->「チェックアウト – エクスプレス」ビューは、「エクスプレス配信 **ラジオボタンが選択されるまで、変更パネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **&#x200B;**&#x200B;ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」表示を認識しません。
+>「チェックアウト – エクスプレス」ビューは、「エクスプレス配信 **ラジオボタンが選択されるまで、変更パネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **** ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」表示を認識しません。
 
 ![ 配信環境設定セレクターを表示する Visual Experience Composer。](assets/vec-delivery-preference.png)

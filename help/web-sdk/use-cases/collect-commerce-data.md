@@ -1,8 +1,8 @@
 ---
-title: Adobe Experience Platform Web SDK を使用して、コマース、商品、注文の情報を収集します
-description: Adobe Experience Platform Web SDK を使用して、商品または買い物かごに関連するデータを追加する方法を説明します。
+title: Adobe Experience Platform Web SDKを使用して、コマース、商品、注文の情報を収集します
+description: Adobe Experience Platform web SDKを使用して、商品や買い物かごに関連するデータを追加する方法を説明します。
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 37%
@@ -49,11 +49,11 @@ ht-degree: 37%
 
 ### `Commerce` オブジェクトの例
 
-以下のセクションを展開して、`commerce` オブジェクトのフィールドを使用した Web SDK コマンドの例を確認します。
+以下のセクションを展開して、`commerce` オブジェクトのフィールドを使用した web SDK コマンドの例を確認します。
 
 +++`productViews`
 
-`productViews` フィールドを `1` に設定して基本的な Web SDK `sendEvent` 呼び出します。
+`sendEvent` フィールドを `productViews` に設定して、基本的な Web SDK `1` 呼び出しを行います。
 
 ```javascript
 alloy("sendEvent", {
@@ -89,11 +89,11 @@ alloy("sendEvent", {
 
 ### Order オブジェクトの例
 
-以下のセクションを展開して、`commerce` オブジェクトを使用した Web SDK コマンドの例を確認します。
+次のセクションを展開すると、`commerce` オブジェクトを使用した web SDK コマンドの例が表示されます。
 
 +++`Order` オブジェクトの例
 
-Web SDK `sendEvent` は、`productListItems` 配列内の複数の製品に適用される `order` オブジェクトを設定する呼び出しを行います。
+Web SDK `sendEvent` は、`order` 配列の複数の商品に適用される `productListItems` オブジェクトを設定して呼び出します。
 
 ```javascript
 alloy("sendEvent",{
@@ -149,11 +149,11 @@ alloy("sendEvent",{
 
 ### 製品リストの例
 
-以下のセクションを展開して、`productListItems` オブジェクトを使用した Web SDK コマンドの例を確認します。
+以下のセクションを展開して、`productListItems` オブジェクトを使用した web SDK コマンドの例を確認します。
 
 +++`productListItems` 例
 
-Web SDK は、`productListItems` 配列の複数の製品の `productViews` を設定して呼び出すことがで `sendEvent` ます。
+Web SDK`sendEvent` 呼び出して、`productViews` 配列の複数の商品の `productListItems` を設定します。
 
 ```javascript
 alloy("sendEvent",{
@@ -181,7 +181,7 @@ alloy("sendEvent",{
 
 +++`productListAdds` 例
 
-Web SDK は、`productListItems` 配列の複数の製品に対して `productListAdds` イベントを設定する `sendEvent` を呼び出します。
+Web SDKは、`sendEvent` 配列の複数の商品に対して `productListAdds` イベントを設定するために呼び出すことがで `productListItems` ます。
 
 ```javascript
 alloy("sendEvent",{
@@ -215,7 +215,7 @@ alloy("sendEvent",{
 
 +++`checkouts` 例
 
-Web SDK は、`productListItems` 配列の複数の製品に対して `checkouts` イベントを設定する `sendEvent` を呼び出します。
+Web SDKは、`sendEvent` 配列の複数の商品に対して `checkouts` イベントを設定するために呼び出すことがで `productListItems` ます。
 
 ```javascript
 alloy("sendEvent",{

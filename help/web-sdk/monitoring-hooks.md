@@ -1,23 +1,23 @@
 ---
-title: Adobe Experience Platform Web SDK のフックの監視
-description: Adobe Experience Platform Web SDK が提供するモニタリングフックを使用して、実装をデバッグし、Web SDK のログを取得する方法について説明します。
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+title: Adobe Experience Platform Web SDKのフックの監視
+description: Adobe Experience Platform Web SDKが提供するモニタリングフックを使用して、実装をデバッグし、Web SDK ログを取得する方法について説明します。
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
 
 ---
 
+# Web SDKのフックの監視
 
-# Web SDK のフックの監視
+Adobe Experience Platform Web SDKには、様々なシステムイベントを監視するために使用できるモニタリングフックが含まれています。 これらのツールは、独自のデバッグツールを開発したり、web SDKのログを取得したりするのに役立ちます。
 
-Adobe Experience Platform Web SDK には、様々なシステムイベントを監視するために使用できるモニタリングフックが含まれています。 これらのツールは、独自のデバッグツールを開発したり、Web SDK ログを取得したりするのに役立ちます。
-
-Web SDK は、[ デバッグ ](commands/configure/debugenabled.md) を有効にしているかどうかに関係なく、モニタリング関数をトリガーします。
+[ デバッグ ](commands/configure/debugenabled.md) を有効にしているかどうかに関係なく、Web SDKはモニタリング機能をトリガーします。
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
-このコールバック関数は、新しい Web SDK インスタンスが正常に作成されたときにトリガーされます。 関数のパラメーターについて詳しくは、以下のサンプルを参照してください。
+このコールバック関数は、新しい web SDK インスタンスが正常に作成されたときにトリガーされます。 関数のパラメーターについて詳しくは、以下のサンプルを参照してください。
 
 ```js
 onInstanceCreated(data) {
@@ -33,7 +33,7 @@ onInstanceCreated(data) {
 
 ## `onInstanceConfigured` {#onInstanceConfigured}
 
-このコールバック関数は、[`configure`](commands/configure/overview.md) コマンドが正常に解決されると、Web SDK によってトリガーされます。 関数のパラメーターについて詳しくは、以下のサンプルを参照してください。
+このコールバック関数は、[`configure`](commands/configure/overview.md) コマンドが正常に解決されたときに web SDKによってトリガーされます。 関数のパラメーターについて詳しくは、以下のサンプルを参照してください。
 
 ```js
  onInstanceConfigured(data) {
@@ -49,7 +49,7 @@ onInstanceCreated(data) {
 
 ## `onBeforeCommand` {#onBeforeCommand}
 
-このコールバック関数は、他のコマンドが実行される前に Web SDK によってトリガーされます。 この関数を使用すると、特定のコマンドの設定オプションを取得できます。 関数のパラメーターについて詳しくは、以下のサンプルを参照してください。
+このコールバック関数は、他のコマンドが実行される前に web SDKによってトリガーされます。 この関数を使用すると、特定のコマンドの設定オプションを取得できます。 関数のパラメーターについて詳しくは、以下のサンプルを参照してください。
 
 ```js
 onBeforeCommand(data) {
@@ -62,7 +62,7 @@ onBeforeCommand(data) {
 | パラメーター | タイプ | 説明 |
 |---------|----------|----------|
 | `data.instanceName` | 文字列 | Web SDK インスタンスが格納されているグローバル変数の名前。 |
-| `data.commandName` | 文字列 | この関数を実行する前の Web SDK コマンドの名前。 |
+| `data.commandName` | 文字列 | この関数を実行する前の Web SDK コマンドの名前です。 |
 | `data.options` | オブジェクト | Web SDK コマンドに渡されるオプションを含むオブジェクト。 |
 
 ## `onCommandResolved` {#onCommandResolved}
@@ -81,7 +81,7 @@ onCommandResolved(data) {
 | パラメーター | タイプ | 説明 |
 |---------|----------|----------|
 | `data.instanceName` | 文字列 | Web SDK インスタンスが格納されているグローバル変数の名前。 |
-| `data.commandName` | 文字列 | 実行された Web SDK コマンドの名前。 |
+| `data.commandName` | 文字列 | 実行した Web SDK コマンドの名前。 |
 | `data.options` | オブジェクト | Web SDK コマンドに渡されるオプションを含むオブジェクト。 |
 | `data.result` | オブジェクト | Web SDK コマンドの結果を含むオブジェクト。 |
 
@@ -101,7 +101,7 @@ onCommandRejected(data) {
 | パラメーター | タイプ | 説明 |
 |---------|----------|----------|
 | `data.instanceName` | 文字列 | Web SDK インスタンスが格納されているグローバル変数の名前。 |
-| `data.commandName` | 文字列 | 実行された Web SDK コマンドの名前。 |
+| `data.commandName` | 文字列 | 実行した Web SDK コマンドの名前。 |
 | `data.options` | オブジェクト | Web SDK コマンドに渡されるオプションを含むオブジェクト。 |
 | `data.error` | オブジェクト | ブラウザーのネットワーク呼び出しから返されたエラーメッセージ（ほとんどの場合は `fetch`）と、コマンドが拒否された理由を含むオブジェクト。 |
 
@@ -121,7 +121,7 @@ onBeforeNetworkRequest(data) {
 | パラメーター | タイプ | 説明 |
 |---------|----------|----------|
 | `data.instanceName` | 文字列 | Web SDK インスタンスが格納されているグローバル変数の名前。 |
-| `data.requestId` | 文字列 | デバッグを有効にするために Web SDK で生成される `requestId`。 |
+| `data.requestId` | 文字列 | デバッグを有効にするために Web SDKで生成される `requestId`。 |
 | `data.url` | 文字列 | リクエストされた URL。 |
 | `data.payload` | オブジェクト | `POST` メソッドを介して、JSON 形式に変換され、リクエストの本文で送信されるネットワークリクエストペイロードオブジェクト。 |
 
@@ -145,7 +145,7 @@ onNetworkResponse(data) {
 | パラメーター | タイプ | 説明 |
 |---------|----------|----------|
 | `data.instanceName` | 文字列 | Web SDK インスタンスが格納されているグローバル変数の名前。 |
-| `data.requestId` | 文字列 | デバッグを有効にするために Web SDK で生成される `requestId`。 |
+| `data.requestId` | 文字列 | デバッグを有効にするために Web SDKで生成される `requestId`。 |
 | `data.url` | 文字列 | リクエストされた URL。 |
 | `data.payload` | オブジェクト | JSON 形式に変換され、`POST` メソッドを介してリクエストの本文で送信されるペイロードオブジェクト。 |
 | `data.body` | 文字列 | 文字列形式の応答本文。 |
@@ -170,14 +170,14 @@ onNetworkError(data) {
 | パラメーター | タイプ | 説明 |
 |---------|----------|----------|
 | `data.instanceName` | 文字列 | Web SDK インスタンスが格納されているグローバル変数の名前。 |
-| `data.requestId` | 文字列 | デバッグを有効にするために Web SDK で生成される `requestId`。 |
+| `data.requestId` | 文字列 | デバッグを有効にするために Web SDKで生成される `requestId`。 |
 | `data.url` | 文字列 | リクエストされた URL。 |
 | `data.payload` | オブジェクト | JSON 形式に変換され、`POST` メソッドを介してリクエストの本文で送信されるペイロードオブジェクト。 |
 | `data.error` | オブジェクト | ブラウザーのネットワーク呼び出しから返されたエラーメッセージ（ほとんどの場合は `fetch`）と、コマンドが拒否された理由を含むオブジェクト。 |
 
 ## `onBeforeLog` {#onBeforeLog}
 
-このコールバック関数は、Web SDK がコンソールに何かを記録する前にトリガーされます。 関数のパラメーターについて詳しくは、以下のサンプルを参照してください。
+このコールバック関数は、Web SDKがコンソールに何かを記録する前にトリガーされます。 関数のパラメーターについて詳しくは、以下のサンプルを参照してください。
 
 ```js
 onBeforeLog(data) {
@@ -214,7 +214,7 @@ onBeforeLog(data) {
 | `data.instanceName` | 文字列 | Web SDK インスタンスが格納されているグローバル変数の名前。 |
 | `data.componentName` | 文字列 | ログメッセージを生成したコンポーネントの名前。 |
 | `data.payload` | オブジェクト | JSON 形式に変換され、`POST` メソッドを介してリクエストの本文で送信されるペイロードオブジェクト。 |
-| `data.status` | 文字列 | `personalization` コンポーネントは、レンダリングのステータスを Web SDK に通知します。  サポートされている値： <ul><li>`rendering-started`:Web SDK が提案をレンダリングしようとしていることを示します。 Web SDK が決定範囲またはビューのレンダリングを開始する前に、`data` オブジェクトで `personalization` コンポーネントによってレンダリングされようとしている提案と範囲名を確認できます。</li><li>`no-offers`：リクエストされたパラメーターのペイロードを受信しなかったことを示します。</li> <li>`rendering-failed`: Web SDK が提案をレンダリングできなかったことを示します。</li><li>`rendering-succeeded`：決定範囲のレンダリングが完了したことを示します。</li> <li>`rendering-redirect`: Web SDK がリダイレクト提案をレンダリングすることを示します。</li></ul> |
+| `data.status` | 文字列 | `personalization` コンポーネントは、レンダリングのステータスを Web SDKに通知します。  サポートされている値： <ul><li>`rendering-started`: Web SDKが提案をレンダリングしようとしていることを示します。 Web SDKが決定範囲またはビューのレンダリングを開始する前に、`data` オブジェクトで `personalization` コンポーネントによってレンダリングされようとしている提案と、範囲名を確認できます。</li><li>`no-offers`：リクエストされたパラメーターのペイロードを受信しなかったことを示します。</li> <li>`rendering-failed`:Web SDKが提案のレンダリングに失敗したことを示します。</li><li>`rendering-succeeded`：決定範囲のレンダリングが完了したことを示します。</li> <li>`rendering-redirect`: Web SDKがリダイレクトの提案をレンダリングすることを示します。</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
@@ -232,11 +232,11 @@ onContentHiding(data) {
 |---------|----------|----------|
 | `data.instanceName` | 文字列 | Web SDK インスタンスが格納されているグローバル変数の名前。 |
 | `data.componentName` | 文字列 | ログメッセージを生成したコンポーネントの名前。 |
-| `data.status` | 文字列 | `personalization` コンポーネントは、レンダリングのステータスを Web SDK に通知します。 サポートされている値： <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
+| `data.status` | 文字列 | `personalization` コンポーネントは、レンダリングのステータスを Web SDKに通知します。 サポートされている値： <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## NPM パッケージの使用時に監視フックを指定する方法 {#specify-monitoris-npm}
+## NPM パッケージの使用時に監視フックを指定する方法 {#specify-monitoring-npm}
 
-[NPM パッケージ ](install/npm.md) を通じて Web SDK を使用している場合は、以下に示すように、`createInstasnce` 関数で監視フックを指定できます。
+[NPM パッケージ ](install/npm.md) を通じて Web SDKを使用している場合は、以下に示すように、`createInstance` 関数でモニタリングフックを指定できます。
 
 ```js
 var monitor = {
@@ -253,11 +253,11 @@ alloy("sendEvent", { ... });
 
 ## 例 {#example}
 
-Web SDK は、`__alloyMonitors` というグローバル変数でオブジェクトの配列を検索します。
+Web SDKは、`__alloyMonitors` というグローバル変数でオブジェクトの配列を検索します。
 
-すべての Web SDK イベントを取得するには、Web SDK コードがページに読み込まれる前に、監視フックを定義する必要があります。 各監視方法は、Web SDK イベントをキャプチャします。
+すべての Web SDK イベントをキャプチャするには、Web SDK コードがページに読み込まれる前に、モニタリングフックを定義する必要があります。 各モニタリング手法は、Web SDK イベントをキャプチャします。
 
-Web SDK コードがページに読み込まれる *後* 監視フックを定義できますが、ページの読み込み前にトリガーされたフックは *取得されません*。
+モニタリングフック *後* を定義しても、Web SDK コードはページに読み込まれますが、ページの読み込み前にトリガーされたフックは *取得されません*。
 
 モニタリングフックオブジェクトを定義する場合は、特別なロジックを定義するメソッドを定義するだけで済みます。
 例えば、`onContentRendering` のみを重視する場合は、そのメソッドのみを定義できます。 すべてのモニタリングフックを一度に使用する必要はありません。

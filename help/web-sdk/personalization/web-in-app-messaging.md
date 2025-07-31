@@ -2,7 +2,7 @@
 title: Web SDKでの Web アプリ内メッセージのサポートの設定
 description: Web アプリ内メッセージをサポートするように Web SDK タグ拡張機能を設定する方法について説明します。
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Web アプリ内メッセージは、[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ja) 機能であり、Web SDKを使用してパーソナライズされたコンテンツを配信します。
 >
->Web アプリ内メッセージキャンペーンの設定方法について詳しくは、[Adobe Journey Optimizer ドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=ja) を参照してください。
+>Web アプリ内メッセージキャンペーンの設定方法について詳しくは、[Adobe Journey Optimizer ドキュメント ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html) を参照してください。
 
 
 ## 前提条件 {#prerequisites}
@@ -63,7 +63,7 @@ Web アプリ内メッセージは、次の 2 種類のトリガーをサポー�
 Web SDK拡張機能を含むタグプロパティを選択し、次の設定を使用して [ 新しいルールを作成 ](../../tags/ui/managing-resources/rules.md##create-a-rule) します。
 
 1. **[!UICONTROL 拡張機能]**: [!UICONTROL Core]
-2. **[!UICONTROL イベントタイプ]**:[!UICONTROL &#x200B; ライブラリが読み込まれました（ページのトップ） &#x200B;]
+2. **[!UICONTROL イベントタイプ]**:[!UICONTROL  ライブラリが読み込まれました（ページのトップ） ]
 
    ![ イベント設定画面を示す画像 ](assets/web-in-app-messaging/rule-configuration.png)
 
@@ -76,7 +76,7 @@ Web SDK拡張機能を含むタグプロパティを選択し、次の設定を�
 
 2. 次の **[!UICONTROL アクション]** 設定を使用します。
    * **[!UICONTROL 拡張機能]**: [!UICONTROL Adobe Experience Platform Web SDK]
-   * **[!UICONTROL アクションタイプ]**:[!UICONTROL &#x200B; イベントを送信 &#x200B;]
+   * **[!UICONTROL アクションタイプ]**:[!UICONTROL  イベントを送信 ]
 
      ![ アクション設定画面を示す画像 ](assets/web-in-app-messaging/action-configuration.png)
 
@@ -104,8 +104,8 @@ Web SDK拡張機能を含むタグプロパティを選択し、次の設定を�
 Web SDK拡張機能を含むタグプロパティを選択し、次の設定を使用して [ 新しいルールを作成 ](../../tags/ui/managing-resources/rules.md##create-a-rule) します。
 
 1. **[!UICONTROL 拡張機能]**: [!UICONTROL Core]
-2. **[!UICONTROL イベントタイプ]**:[!UICONTROL &#x200B; クリック &#x200B;]
-3. ページ上の特定の要素に対してトリガーを設定し、CSS セレクターを使用して識別情報を選択します。
+2. **[!UICONTROL イベントタイプ]**:[!UICONTROL  クリック ]
+3. 選択した CSS セレクターで識別される、ページ上の特定の要素のトリガーを設定します。
 
    ![ イベント設定画面を示す画像 ](assets/web-in-app-messaging/event-configuration-manual.png)
 
@@ -117,7 +117,7 @@ Web SDK拡張機能を含むタグプロパティを選択し、次の設定を�
 
 2. 次の **[!UICONTROL アクション]** 設定を使用します。
    * **[!UICONTROL 拡張機能]**: [!UICONTROL Adobe Experience Platform Web SDK]
-   * **[!UICONTROL アクションタイプ]**:[!UICONTROL &#x200B; ルールセットを評価 &#x200B;]
+   * **[!UICONTROL アクションタイプ]**:[!UICONTROL  ルールセットを評価 ]
 
      ![ アクション設定画面を示す画像 ](assets/web-in-app-messaging/manual-trigger-action.png)
 
@@ -184,5 +184,5 @@ Adobe Journey Optimizerからの web アプリ内メッセージは、2 とお�
 
 [Web SDK設定 ](../commands/configure/overview.md) で、必要に応じて `personalizationStorageEnabled` オプションを設定します。
 
-* `personalizationStorageEnabled: true` は、アプリ内メッセージを [Adobe Journey Optimizer キャンペーン ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=ja#configure-inapp) で定義した頻度でトリガー付けします。
+* `personalizationStorageEnabled: true` は、アプリ内メッセージを [Adobe Journey Optimizer キャンペーン ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp) で定義した頻度でトリガー付けします。
 * ページが読み込まれるたびにアプリ内メッセージを `personalizationStorageEnabled: false`トリガーします。
