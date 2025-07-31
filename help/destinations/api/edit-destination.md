@@ -248,7 +248,7 @@ curl -X PATCH \
 
 **リクエスト**
 
-次のリクエストは、[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 接続または [[!DNL Google Ad Manager 360]  宛先 ](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 接続のパラメーターを更新して、新しい [**[!UICONTROL  オーディエンス ID をオーディエンス名に追加 ]**](/help/release-notes/2023/april-2023.md#destinations) フィールドを追加します。
+次のリクエストは、[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 接続または [[!DNL Google Ad Manager 360]  宛先 ](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 接続のパラメーターを更新して、新しい [**[!UICONTROL &#x200B; オーディエンス ID をオーディエンス名に追加 &#x200B;]**](/help/release-notes/2023/april-2023.md#destinations) フィールドを追加します。
 
 ```shell
 curl -X PATCH \
