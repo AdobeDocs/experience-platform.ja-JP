@@ -2,10 +2,10 @@
 title: サンドボックスツールパッケージ API エンドポイント
 description: サンドボックスツール API の/packages エンドポイントを使用すると、Adobe Experience Platformのパッケージをプログラムで管理できます。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
+source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
 workflow-type: tm+mt
-source-wordcount: '2547'
-ht-degree: 10%
+source-wordcount: '2933'
+ht-degree: 11%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 10%
 
 ## パッケージを作成 {#create}
 
-パッケージの名前とパッケージタイプの値を指定しながら `/packages` エンドポイントに対してPOSTリクエストを行うことで、複数のアーティファクトからなるパッケージを作成できます。
+パッケージの名前とパッケージタイプの値を指定したうえで `/packages` エンドポイントに対して POST リクエストを行うことで、複数のアーティファクトからなるパッケージを作成できます。
 
 **API 形式**
 
@@ -60,7 +60,7 @@ curl -X POST \
 | `packageType` | パッケージタイプは **PARTIAL** で、特定のアーティファクトをパッケージに含めることを示します。 | 文字列 | はい |
 | `sourceSandbox` | パッケージのソースサンドボックス。 | オブジェクト | × |
 | `expiry` | パッケージの有効期限を定義するタイムスタンプ。 デフォルト値は作成日から 90 日間です。 応答の有効期限フィールドはエポック UTC 時間になります。 | 文字列（UTC タイムスタンプ形式） | × |
-| `artifacts` | パッケージにエクスポートされるアーティファクトのリスト。 `packageType` が `FULL` の場合、`artifacts` 値は **null** または **空** にする必要があります。 | 配列 | × |
+| `artifacts` | パッケージにエクスポートされるアーティファクトのリスト。 `artifacts` が **の場合、** 値は **null** または `packageType` 空 `FULL` にする必要があります。 | 配列 | × |
 
 **応答**
 
@@ -100,11 +100,11 @@ curl -X POST \
 
 ## パッケージの更新 {#update}
 
-`/packages` エンドポイントに対してPUTリクエストを実行することで、パッケージを更新できます。
+サンドボックスツール API の `/packages` エンドポイントを使用して、パッケージを更新します。
 
 ### パッケージへのアーティファクトの追加 {#add-artifacts}
 
-アーティファクトをパッケージに追加するには、`id` を指定し、`action` に **ADD** を含める必要があります。
+アーティファクトをパッケージに追加するには、`id` を指定し、**に** ADD`action` を含める必要があります。
 
 **API 形式**
 
@@ -139,7 +139,7 @@ curl -X PUT \
 | `id` | 更新するパッケージの ID。 | 文字列 | ○ |
 | `action` | アーティファクトをパッケージに追加するには、アクション値を **ADD** にする必要があります。 このアクションは、**PARTIAL** パッケージタイプでのみサポートされます。 | 文字列 | ○ |
 | `artifacts` | パッケージに追加するアーティファクトのリスト。 リストが **null** または **空** の場合、パッケージは変更されません。 アーティファクトは、パッケージに追加される前に重複排除されます。 サポートされるアーティファクトの完全なリストについては、次の表を参照してください。 | 配列 | × |
-| `expiry` | パッケージの有効期限を定義するタイムスタンプ。 ペイロードに有効期限が指定されていない場合、PUTAPI が呼び出されてから 90 日のデフォルト値です。 応答の有効期限フィールドはエポック UTC 時間になります。 | 文字列（UTC タイムスタンプ形式） | × |
+| `expiry` | パッケージの有効期限を定義するタイムスタンプ。 ペイロードに有効期限が指定されていない場合、デフォルト値はPUT API が呼び出されてから 90 日です。 応答の有効期限フィールドはエポック UTC 時間になります。 | 文字列（UTC タイムスタンプ形式） | × |
 
 現在、次のアーティファクトタイプがサポートされています。
 
@@ -198,7 +198,7 @@ curl -X PUT \
 
 ### パッケージからのアーティファクトの削除 {#delete-artifacts}
 
-パッケージからアーティファクトを削除するには、`id` を指定し、`action` に **DELETE** を含める必要があります。
+パッケージからアーティファクトを削除するには、`id` を指定し、**に** DELETE`action` を含める必要があります。
 
 **API 形式**
 
@@ -273,7 +273,7 @@ curl -X PUT \
 >
 >**UPDATE** アクションは、パッケージのパッケージメタデータフィールドを更新するために使用され、アーティファクトをパッケージに追加または削除するために使用 **できません**。
 
-パッケージ内のメタデータフィールドを更新するには、`id` を指定し、`action` の **UPDATE** を含める必要があります。
+パッケージ内のメタデータフィールドを更新するには、`id` を指定し、**の** UPDATE`action` を含める必要があります。
 
 **API 形式**
 
@@ -345,7 +345,7 @@ curl -X PUT \
 
 ## パッケージの削除 {#delete}
 
-パッケージを削除するには、`/packages` エンドポイントに対してDELETEリクエストを実行し、削除するパッケージの ID を指定します。
+パッケージを削除するには、`/packages` エンドポイントに対してDELETE リクエストを実行し、削除するパッケージの ID を指定します。
 
 **API 形式**
 
@@ -380,9 +380,9 @@ curl -X DELETE \
 }
 ```
 
-## パッケージのPublish {#publish}
+## パッケージの公開 {#publish}
 
-パッケージをサンドボックスにインポートできるようにするには、パッケージを公開する必要があります。 公開するパッケージの ID を指定したうえで、`/packages` エンドポイントに対してGETリクエストを行います。
+パッケージをサンドボックスにインポートできるようにするには、パッケージを公開する必要があります。 公開するパッケージの ID を指定したうえで、`/packages` エンドポイントに対してGET リクエストを行います。
 
 **API 形式**
 
@@ -433,7 +433,7 @@ curl -X GET \
 
 ## パッケージの検索 {#look-up-package}
 
-個々のパッケージを検索するには、リクエストパスにパッケージの対応する ID を含む `/packages` エンドポイントに対してGETリクエストを実行します。
+個々のパッケージを検索するには、リクエストパスにパッケージの対応する ID を含む `/packages` エンドポイントに対してGET リクエストを実行します。
 
 **API 形式**
 
@@ -501,7 +501,7 @@ curl -X GET \
 
 ## パッケージのリスト {#list-packages}
 
-`/packages` エンドポイントに対してGETリクエストをおこなうと、組織内のすべてのパッケージをリストできます。
+`/packages` エンドポイントに対してGET リクエストを実行することで、組織内のすべてのパッケージをリストできます。
 
 **API 形式**
 
@@ -753,7 +753,7 @@ curl -X GET \
 >
 >代替アーティファクトがターゲットサンドボックスに既に存在することは、競合解決に固有の処理です。
 
-競合や置き換えを確認した後、`/packages` エンドポイントに対してPOSTリクエストを行うことで、パッケージの読み込みを送信できます。 結果はペイロードとして提供され、ペイロードで指定された宛先サンドボックスの読み込みジョブが開始されます。
+競合や置き換えを確認したら、`/packages` エンドポイントに対して POST リクエストを実行することで、パッケージの読み込みを送信できます。 結果はペイロードとして提供され、ペイロードで指定された宛先サンドボックスの読み込みジョブが開始されます。
 
 ペイロードは、インポートジョブのユーザー指定ジョブ名と説明も受け付けます。 ユーザーが指定した名前と説明を使用できない場合は、パッケージ名と説明がジョブの名前と説明に使用されます。
 
@@ -820,7 +820,7 @@ curl -X POST \
 
 ## すべての依存オブジェクトのリスト {#dependent-objects}
 
-パッケージの ID を指定して `/packages` エンドポイントにPOSTリクエストを行い、パッケージ内の書き出されたオブジェクトのすべての依存オブジェクトをリストします。
+パッケージの ID を指定したうえで、`/packages` エンドポイントに対して POST リクエストを実行することで、パッケージ内の書き出されたオブジェクトのすべての依存オブジェクトをリストします。
 
 **API 形式**
 
@@ -900,7 +900,7 @@ curl -X POST \
 
 ## 役割ベースの権限を確認してすべてのパッケージアーティファクトをインポートする {#role-based-permissions}
 
-パッケージアーティファクトを読み込む権限があるかどうかを確認するには、パッケージの ID とターゲットのサンドボックス名を指定したうえで `/packages` エンドポイントに対してGETリクエストを行います。
+パッケージアーティファクトをインポートする権限があるかどうかを確認するには、パッケージの ID とターゲットのサンドボックス名を指定したうえで、`/packages` エンドポイントに対してGET リクエストを行います。
 
 **API 形式**
 
@@ -1048,7 +1048,7 @@ curl -X GET \
 
 ## 書き出し/読み込みジョブのリスト {#list-jobs}
 
-`/packages` エンドポイントに対してGETリクエストを実行することで、現在の書き出し/読み込みジョブをリストできます。
+`/packages` エンドポイントに対してGET リクエストを実行することで、現在の書き出し/読み込みジョブをリストできます。
 
 **API 形式**
 
@@ -1165,7 +1165,7 @@ curl -X GET \
 
 ### 共有リクエストの送信 {#send-request}
 
-`/handshake/bulkCreate` エンドポイントに承認リクエストを行うことで、POST共有のリクエストをターゲットパートナー組織に送信します。 これは、プライベートパッケージを共有する前に必要です。
+`/handshake/bulkCreate` エンドポイントに POST リクエストを実行することで、承認を共有するためのリクエストをターゲットパートナー組織に送信します。 これは、プライベートパッケージを共有する前に必要です。
 
 **API 形式**
 
@@ -1223,7 +1223,7 @@ curl -X POST \
             "modifiedByName": "{MODIFIED_BY}",
             "modifiedByIMSOrgId": "{ORG_ID}",
             "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "{LINKIND_ID}"
+            "linkingId": "{LINKING_ID}"
         }
     },
     "failedRequests": {}
@@ -1232,7 +1232,7 @@ curl -X POST \
 
 ### 受信した共有リクエストの承認 {#approve-requests}
 
-`/handshake/action` エンドポイントに対して承認リクエストを行い、ターゲットパートナー組織からの共有リクエストをPOSTします。 承認後、ソースパートナー組織はプライベートパッケージを共有できます。
+`/handshake/action` エンドポイントに POST リクエストを作成して、ターゲットパートナー組織からの共有リクエストを承認します。 承認後、ソースパートナー組織はプライベートパッケージを共有できます。
 
 **API 形式**
 
@@ -1300,7 +1300,7 @@ curl -X POST  \
 
 ### 送信/受信の共有リクエストのリスト {#outgoing-and-incoming-requests}
 
-`handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` エンドポイントに対してGETリクエストを行い、送信および受信する共有リクエストを一覧表示します。
+`handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` エンドポイントに対してGET リクエストを実行して、送信および受信の共有リクエストをリストします。
 
 **API 形式**
 
@@ -1374,7 +1374,7 @@ curl -X GET \
 
 ### 新しい共有リクエスト {#share-request}
 
-公開済みのソース組織のパッケージを取得し、パッケージ ID とターゲット組織 ID を指定したうえで、`/transfer` エンドポイントに対してPOSTリクエストを行ってターゲット組織と共有します。
+パッケージ ID とターゲット組織 ID を指定したうえで、`/transfer` エンドポイントに対して POST リクエストを実行することで、公開済みのソース組織のパッケージを取得してターゲット組織と共有します。
 
 **API 形式**
 
@@ -1434,7 +1434,7 @@ curl -X POST \
 
 ### ID による共有リクエストの取得 {#fetch-transfer-by-id}
 
-転送 ID を指定しながら `/transfer/{TRANSFER_ID}` エンドポイントに対してGETリクエストを実行して、共有リクエストの詳細を取得します。
+転送 ID を指定しながら `/transfer/{TRANSFER_ID}` エンドポイントに対してGET リクエストを実行して、共有リクエストの詳細を取得します。
 
 **API 形式**
 
@@ -1481,7 +1481,7 @@ curl -X GET \
 
 ### 共有リストを取得 {#transfers-list}
 
-`/transfer/list?{QUERY_PARAMETERS}` エンドポイントに対してGETリクエストを実行し、必要に応じてクエリパラメーターを変更することで、転送リクエストのリストを取得します。
+`/transfer/list?{QUERY_PARAMETERS}` エンドポイントに対してGET リクエストを実行し、必要に応じてクエリパラメーターを変更することで、転送リクエストのリストを取得します。
 
 **API 形式**
 
@@ -1557,7 +1557,7 @@ curl -X GET \
 
 ### パッケージの可用性をプライベートからパブリックに更新 {#update-availability}
 
-`/packages/update` エンドポイントに対してGETリクエストを実行して、パッケージをプライベートからパブリックに変更します。 デフォルトでは、パッケージは非公開で作成されます。
+`/packages/update` エンドポイントに対してGET リクエストを実行して、パッケージをプライベートからパブリックに変更します。 デフォルトでは、パッケージは非公開で作成されます。
 
 **API 形式**
 
@@ -1628,7 +1628,7 @@ curl -X PUT \
 
 ### 公開パッケージをインポートするリクエスト {#pull-public-package}
 
-`/transfer/pullRequest` エンドポイントに対してPOSTリクエストを行うことで、公開されているソース組織からパッケージを読み込みます。
+`/transfer/pullRequest` エンドポイントに POST リクエストを実行することで、公開されているソース組織からパッケージをインポートします。
 
 **API 形式**
 
@@ -1684,7 +1684,7 @@ curl -X POST \
 
 ### 公開パッケージのリスト {#list-public-packages}
 
-`/transfer/list?{QUERY_PARAMS}` エンドポイントに対してGETリクエストを実行することで、公開された可視性を持つパッケージのリストを取得します。
+`/transfer/list?{QUERY_PARAMS}` エンドポイントに対してGET リクエストを実行して、公開ビジビリティを備えたパッケージのリストを取得します。
 
 **API 形式**
 
@@ -1935,7 +1935,7 @@ curl -X GET \
 
 ## パッケージペイロード（#package-payload）をコピー
 
-リクエストパスにパッケージの対応する ID を含む `/packages/payload` エンドポイントに対してGETリクエストを実行することで、公開パッケージのペイロードをコピーできます。
+リクエストパスにパッケージの対応する ID を含む `/packages/payload` エンドポイントに対してGET リクエストを実行することで、公開パッケージのペイロードをコピーできます。
 
 **API 形式**
 
@@ -1975,5 +1975,497 @@ curl -X GET \
 {
     "imsOrgId": "{ORG_ID}",
     "packageId": "{PACKAGE_ID}"
+}
+```
+
+## オブジェクト設定の更新を移行する
+
+サンドボックスツール API の/packages エンドポイントを使用して、オブジェクト設定の更新を移行します。
+
+### 更新操作（#update-operations）
+
+パッケージ ID を指定して `/packages/{packageId}/version/compare` エンドポイントに POST リクエストを実行することで、指定された、または最新のバージョンのパッケージスナップショットを、ソースサンドボックスの現在の状態、またはパッケージが読み込まれた以前に使用されたターゲットサンドボックスと比較します。
+
+***API 形式***
+
+```http
+PATCH /packages/{packageId}/version/compare
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `packageId` | パッケージの ID。 | 文字列 | ○ |
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/compare/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "triggerNew": true,
+      "targetSandbox": "{SANDBOX_NAME}"
+  }'
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `triggerNew` | 既にアクティブまたは完了したジョブが存在する場合でも、新しい差分計算ジョブをトリガーにするフラグ。 | ブール値 | × |
+| `targetSandbox` | 差分を計算する必要があるターゲットサンドボックスの名前を表します。 指定しない場合、ソースサンドボックスがターゲットサンドボックスとして使用されます。 | 文字列 | × |
+
+**応答**
+
+以前に完了したジョブに対する応答が成功すると、以前に計算した差分結果を含むジョブオブジェクトが返されます。 新しく完了したジョブは、JobId を返します。
+
++++応答を表示（送信済みジョブ）
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "c4b7d07ae4c646279e2070a31c50bd5c",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "SUCCESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "deltaPackageVersion": {
+            "packageId": "{PACKAGE_ID}",
+            "currentVersion": 0,
+            "validated": false,
+            "rootArtifacts": [
+                {
+                    "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de",
+                    "type": "REGISTRY_SCHEMA",
+                    "found": false,
+                    "count": 0
+                }
+            ],
+            "eximGraphDelta": {
+                "vertices": [],
+                "pluginDeltas": [
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 2_1738766274074",
+                                "newValue": "Custom FieldGroup 2"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 4_1738766274074",
+                                "newValue": "Custom FieldGroup 4"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "importReplacementMap": {
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+            "5a45f8cd309d5ed5797be9a0af65e89152a51d57a6c74b52": "4ae041fa182d6faf2e7c56463399170d913138a7c5712909",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/b2b7705e770a35341b8bc5ec5e3644d9c7387266777fe4ba": "https://ns.adobe.com/sandboxtoolingstage/schemas/838c4e21ad81543ac14238ac1756012f7f98f0e0bec6b425",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de": "https://ns.adobe.com/sandboxtoolingstage/schemas/9a55692d527169d0239e126137a694ed9db2406c9bcbd06a",
+            "8f45c79235c91e7f0c09af676a77d170a34b5ee0ad5de72c": "65d755cc3300674c3cfcec620c59876af07f046884afd359",
+            "f04b8e461396ff426f8ba8dc5544f799bf287baa8e0fa5c": "b6fa821ada8cb97cac384f0b0354bbe74209ec97fb6a83a3",
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+            "c8304f3cb7986e8c9b613cd8d832125bd867fb4a5aedf67a": "4d21e9bf89ce0042b52d7d41ff177a7697d695e2617d1fc1"
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
++++応答を表示（新しく送信されたジョブ）
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "aa5cfacf35a8478c8cf44a675fab1c30 ",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "IN_PROGRESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
+### パッケージバージョンを更新（#package-versioning）
+
+`/packages/{packageId}/version/save` エンドポイントにGET リクエストを実行し、パッケージ ID を指定して、各オブジェクトのソースサンドボックスの最新のスナップショットを使用して、パッケージを新しいバージョンにアップグレードします。
+
+***API 形式***
+
+```http
+PATCH /packages/{packageId}/version/save
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `packageId` | パッケージの ID。 | 文字列 | ○ |
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**応答**
+
+応答が成功すると、バージョンアップグレードのジョブステータスが返されます。
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Version Job Package: {JOB_ID}",
+    "description": null,
+    "visibility": "TENANT",
+    "requestType": "VERSION",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPGRADE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### パッケージバージョン履歴の取得（#package-version-history）
+
+パッケージ ID を指定して `/packages/{packageId}/history` エンドポイントに対してGET リクエストを実行することで、タイムスタンプや修飾子を含む、パッケージのバージョン管理履歴を取得します。
+
+***API 形式***
+
+```http
+PATCH /packages/{packageId}/history
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `packageId` | パッケージの ID。 | 文字列 | ○ |
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**応答**
+
+応答が成功すると、パッケージのバージョン履歴が返されます。
+
+```json
+[
+    {
+        "id": "cb68591a1ed941e191e7f52e33637a26",
+        "version": 0,
+        "createdDate": 1739516784000,
+        "modifiedDate": 1739516784000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 3
+    },
+    {
+        "id": "e26189e6e4df476bb66c3fc3e66a1499",
+        "version": 0,
+        "createdDate": 1739343268000,
+        "modifiedDate": 1739343268000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 2
+    },
+    {
+        "id": "11af34c0eee449ac84ef28c66d9383e3",
+        "version": 0,
+        "createdDate": 1739343073000,
+        "modifiedDate": 1739343073000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 1
+    }
+]
+```
+
+### 更新ジョブの送信（#submit-update）
+
+パッケージ ID を指定して `/packages/{packageId}/import` エンドポイントにPATCH リクエストを実行することで、ターゲットサンドボックスオブジェクトに新しい更新をプッシュします。
+
+***API 形式***
+
+```http
+PATCH /packages/{packageId}/import
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `packageId` | パッケージの ID。 | 文字列 | ○ |
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "id": "50fd94f8072b4f248737a2b57b41058f",
+      "name": "Test Update",
+      "destinationSandbox": {
+        "name": "test-sandbox-sbt",
+        "imsOrgId": "{ORG_ID}"
+      },
+      "overwriteMappings": {
+        "https://ns.adobe.com/sandboxtoolingstage/schemas/327a48c83a5359f8160420a00d5a07f0ba8631a1fd466f9e" : {
+            "id" : "https://ns.adobe.com/sandboxtoolingstage/schemas/e346bb2cd7b26576cb51920d214aebbd42940a9bf94a75cd",
+            "type" : "REGISTRY_SCHEMA"
+        }
+      }
+  }'
+```
+
+**応答**
+
+応答が成功すると、更新のジョブ ID が返されます。
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Update Job Name",
+    "description": "Update Job Description",
+    "visibility": "TENANT",
+    "requestType": "IMPORT",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPDATE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "amanda-1",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### パッケージの更新と上書きを無効にする（#disable-update）
+
+パッケージ ID を指定して `/packages/{packageId}/?{QUERY_PARAMS}` エンドポイントにGET リクエストを行うことで、パッケージがサポートされていない場合は更新と上書きを無効にします。
+
+***API 形式***
+
+```http
+PATCH /packages/{packageId}?{QUERY_PARAMS}
+```
+
+| プロパティ | 説明 | タイプ | 必須 |
+| --- | --- | --- | --- |
+| `packageId` | パッケージの ID。 | 文字列 | ○ |
+| {QUERY_PARAM} | getCapabilities クエリパラメーター。 `true` または `false` に設定する必要があります | ブール値 | ○ |
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**応答**
+
+応答が成功すると、パッケージの機能のリストが返されます。
+
+```json
+{
+    "id": "80230dde96574a828191144709bb9b51",
+    "version": 3,
+    "createdDate": 1749808582000,
+    "modifiedDate": 1749808648000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "Ankit_Primary_Descriptor_Test",
+    "description": "RestPackage",
+    "imsOrgId": "{ORG_ID}",
+    "clientId": "usecasebuilder",
+    "packageType": "PARTIAL",
+    "expiry": 1757584598000,
+    "publishDate": 1749808648000,
+    "status": "PUBLISHED",
+    "packageVisibility": "PRIVATE",
+    "latestPackageVersion": 0,
+    "packageAccessType": "TENANT",
+    "artifactsList": [
+        {
+            "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/1c767056056de64d8030380d1b9f570d26bc15501a1e0e95",
+            "altId": null,
+            "type": "REGISTRY_SCHEMA",
+            "found": false,
+            "count": 0
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "atul-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "packageCapabilities": {
+        "capabilities": [
+            "VERSIONABLE"
+        ]
+    }
 }
 ```
