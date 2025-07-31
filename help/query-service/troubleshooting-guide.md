@@ -65,7 +65,7 @@ ht-degree: 78%
 ### Query Service API に [!DNL Postman] を使用できますか？
 
 +++回答
-はい、[!DNL Postman]（無料のサードパーティアプリケーション）を使用して、すべての Adobe API サービスを視覚化し、操作できます。Adobe Developer Console でプロジェクトを設定し、[!DNL Postman] で使用するために必要な資格情報をすべて取得する手順については、[[!DNL Postman] 設定ガイド](https://video.tv.adobe.com/v/28832)をご覧ください。[ [!DNL Postman]  コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)の公式ドキュメントを参照してください。
+はい、[!DNL Postman]（無料のサードパーティアプリケーション）を使用して、すべての Adobe API サービスを視覚化し、操作できます。Adobe Developer Console でプロジェクトを設定し、[!DNL Postman] で使用するために必要な資格情報をすべて取得する手順については、[[!DNL Postman] 設定ガイド](https://video.tv.adobe.com/v/31656?captions=jpn)をご覧ください。[ [!DNL Postman]  コレクションの開始、実行、共有に関するガイダンス](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)の公式ドキュメントを参照してください。
 +++
 
 ### UI を使用してクエリから返される行の最大数に制限はありますか？
