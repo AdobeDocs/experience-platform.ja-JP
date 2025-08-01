@@ -118,7 +118,7 @@ Admin Consoleを通じて開発者およびユーザーにExperience Platformへ
 
 Experience Platform API との統合を設定するための上記の手順は、次のビデオチュートリアルでも参照できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31656/?learn=on&captions=jpn)
 
 ### 資格情報の収集 {#gather-credentials}
 
@@ -298,7 +298,7 @@ Experience Platform内の複数のリソースにアクセスしたり、変更�
 
 システム管理者が API を使用してExperience Platform リソースへのアクセスに必要な権限を付与する方法について詳しくは、以下のビデオチュートリアルも参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
+>[!VIDEO](https://video.tv.adobe.com/v/31656/?learn=on&t=159&captions=jpn)
 
 ## Postmanを使用した API 呼び出しの認証とテスト {#use-postman}
 
@@ -308,17 +308,17 @@ Experience Platform コレクションおよび環境でのPostmanの使用に�
 
 **Experience Platform API で使用するPostman環境のダウンロードと読み込み**
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
+>[!VIDEO](https://video.tv.adobe.com/v/31656/?learn=on&t=106&captions=jpn)
 
 **Postman コレクションを使用してアクセストークンを生成する**
 
 [Identity Management サービス Postman コレクションをダウンロードし ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) 以下のビデオを視聴してアクセストークンの生成方法を確認してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34080/?learn=on&captions=jpn)
 
 **Experience Platform API Postman コレクションをダウンロードし、API とやり取りする**
 
->[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34079/?learn=on&captions=jpn)
 
 <!--
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Experience Platform APIs.
@@ -366,7 +366,7 @@ Experience Platform API を使用して操作を実行するには、システ�
 
 製品プロファイルに開発者を追加し、API を役割に割り当てるための、上記の手順のチュートリアルを、次のビデオチュートリアルでも利用できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446399/?learn=on&captions=jpn)
 
 ## その他のリソース {#additional-resources}
 
