@@ -94,13 +94,13 @@ Admin Consoleを通じて開発者およびユーザーにExperience Platformへ
 >
 >**[!UICONTROL ドキュメントを表示]** オプションを選択して、別のブラウザーウィンドウに移動し、[Experience Platform API リファレンスドキュメント ](https://developer.adobe.com/experience-platform-apis/) を参照します。
 
-### [!UICONTROL OAuth サーバー間 ] 認証タイプを選択します {#select-oauth-server-to-server}
+### [!UICONTROL OAuth サーバー間 &#x200B;] 認証タイプを選択します {#select-oauth-server-to-server}
 
 次に、「**[!UICONTROL OAuth サーバー間]**」認証タイプを選択してアクセストークンを生成し、Experience Platform API にアクセスします。 「**[!UICONTROL 次へ]**」を選択する前に、「**[!UICONTROL 資格情報名]**」テキストフィールドに資格情報に意味のある名前を付けます。
 
 >[!IMPORTANT]
 >
->今後サポートされるトークン生成方法は、**[!UICONTROL OAuth サーバー間]** メソッドのみです。 以前サポートされていた **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨となり、新しい統合用に選択することはできません。 JWT 認証方法を使用した既存の統合は 2025 年 6 月 30 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい [!UICONTROL OAuth サーバー間認証方法 ] に移行することを強くお勧めします。 詳しくは、「[!BADGE  非推奨 ]{type=negative}[JSON web トークン（JWT）の生成 ](#jwt) の節を参照してください。
+>今後サポートされるトークン生成方法は、**[!UICONTROL OAuth サーバー間]** メソッドのみです。 以前サポートされていた **[!UICONTROL サービスアカウント（JWT）]** メソッドは非推奨となり、新しい統合用に選択することはできません。 JWT 認証方法を使用した既存の統合は 2025 年 6 月 30 日（PT）まで引き続き機能しますが、Adobeでは、その日までに既存の統合を新しい [!UICONTROL OAuth サーバー間認証方法 &#x200B;] に移行することを強くお勧めします。 詳しくは、「[!BADGE &#x200B; 非推奨 &#x200B;]{type=negative}[JSON web トークン（JWT）の生成 ](#jwt) の節を参照してください。
 
 ![Experience Platform API の OAuth サーバー間認証方法を選択します。](./images/api-authentication/oauth-authentication-method.png)
 
@@ -126,8 +126,8 @@ API がプロジェクトに追加されると、プロジェクトの **[!UICON
 
 ![Developer Console で API を追加した後の統合情報 ](./images/api-authentication/api-integration-information.png)
 
-* `{API_KEY}` （[!UICONTROL  クライアント ID]）
-* `{ORG_ID}` （[!UICONTROL  組織 ID]）
+* `{API_KEY}` （[!UICONTROL &#x200B; クライアント ID]）
+* `{ORG_ID}` （[!UICONTROL &#x200B; 組織 ID]）
 
 <!--
 
@@ -163,7 +163,7 @@ Experience Platform API を呼び出すための資格情報を取得するに�
 
 ![Experience Platform API にアクセスするための新しい資格情報を作成します ](././images/api-authentication/create-credentials.gif)。
 
-次に、ドロップダウンセレクターを使用して、資格情報ウィンドウを開き、アクセストークンを生成して、API キーと組織 ID を取得します。 Experience Platform API の使用を開始するには、API リファレンスページの [**[!UICONTROL  試す ]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) ブロックに資格情報をコピーします。
+次に、ドロップダウンセレクターを使用して、資格情報ウィンドウを開き、アクセストークンを生成して、API キーと組織 ID を取得します。 Experience Platform API の使用を開始するには、API リファレンスページの [**[!UICONTROL &#x200B; 試す &#x200B;]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) ブロックに資格情報をコピーします。
 
 ![ ドロップダウンセレクターを使用して資格情報を表示し、アクセストークンを生成します。](././images/api-authentication/view-copy-credentials.gif)
 
@@ -171,7 +171,7 @@ Experience Platform API を呼び出すための資格情報を取得するに�
 >
 >Experience Platform API リファレンスドキュメントの様々なエンドポイントページ間を移動しても、ページ上部の資格情報ブロックは表示されたままになります。
 
-## [!BADGE  非推奨 ]{type=negative}JSON Web トークン（JWT）を生成 {#jwt}
+## [!BADGE &#x200B; 非推奨 &#x200B;]{type=negative}JSON Web トークン（JWT）を生成 {#jwt}
 
 >[!WARNING]
 >
@@ -221,7 +221,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `{API_KEY}` | `{API_KEY}` 前の手順 [!UICONTROL  で取得した ] ール（[ クライアント ID](#api-ims-secret)。 |
+| `{API_KEY}` | `{API_KEY}` 前の手順 [!UICONTROL &#x200B; で取得した &#x200B;] ール（[ クライアント ID](#api-ims-secret)。 |
 | `{SECRET}` | [ 前の手順 ](#api-ims-secret) で取得したクライアント秘密鍵。 |
 | `{JWT}` | [ 前の手順 ](#jwt) で生成した JWT。 |
 
@@ -348,7 +348,7 @@ Adobe Developer Consoleで統合を作成する前に、アカウントにExperi
 
 ![ 「開発者」タブが表示され、「開発者を追加」オプションがハイライト表示されます。](././images/api-authentication/add-developer1.png)
 
-**[!UICONTROL 開発者を追加]** ダイアログが表示されます。 開発者の **[!UICONTROL メールまたはユーザー名]** を入力します。 有効な [!UICONTROL  メールまたはユーザー名 ] に、開発者の詳細が表示されます。 「**[!UICONTROL 保存]**」を選択します。
+**[!UICONTROL 開発者を追加]** ダイアログが表示されます。 開発者の **[!UICONTROL メールまたはユーザー名]** を入力します。 有効な [!UICONTROL &#x200B; メールまたはユーザー名 &#x200B;] に、開発者の詳細が表示されます。 「**[!UICONTROL 保存]**」を選択します。
 
 ![ 開発者情報が入力され、「保存」オプションがハイライト表示された開発者を追加ダイアログ ](././images/api-authentication/add-developer-email.png)
 
