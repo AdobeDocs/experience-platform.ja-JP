@@ -2,15 +2,20 @@
 title: Didomi をExperience Platformに接続
 description: UI を使用して Didomi アカウントをExperience Platformに接続する方法を説明します。
 last-substantial-update: 2025-07-29T00:00:00Z
+badge: ベータ版
 exl-id: 1374574f-c8ba-4cf5-bad0-94a884f5c0a6
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 13%
+source-wordcount: '1164'
+ht-degree: 14%
 
 ---
 
 # [!DNL Didomi] をExperience Platformに接続
+
+>[!AVAILABILITY]
+>
+>[!DNL Didomi] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 このガイドでは、UI のソースワークスペースを使用して [!DNL Didomi] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
@@ -36,7 +41,7 @@ ht-degree: 13%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-[!DNL Didomi] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、&lbrack;**[!UICONTROL Didomi]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
+[!DNL Didomi] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、[**[!UICONTROL Didomi]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
 
 >[!TIP]
 >
@@ -118,8 +123,8 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データフローが作成されたら、*[!UICONTROL ソース]* カタログに移動し、「**[!UICONTROL データフロー]**」を選択します。 データフローディレクトリを使用して [!DNL Didomi] のデータフローを探し、*[!UICONTROL データフローアクティビティ]* インターフェイスにアクセスします。 次に、右側のパネルの *[!UICONTROL プロパティ]* パネルを使用して、以下の値を取得します。
 
-* [!UICONTROL &#x200B; ストリーミングエンドポイント &#x200B;]
-* [!UICONTROL &#x200B; データフロー ID]
+* [!UICONTROL  ストリーミングエンドポイント ]
+* [!UICONTROL  データフロー ID]
 
 Experience Platform UI で、次の操作を行います。
 
