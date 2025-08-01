@@ -3,10 +3,10 @@ title: Segmentation Service API ガイド
 description: Segmentation Service API を使用すると、開発者はAdobe Experience Platformのセグメント化操作をプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 5%
+source-wordcount: '614'
+ht-degree: 4%
 
 ---
 
@@ -29,6 +29,12 @@ Adobe Experience Platform [!DNL Segmentation Service] を使用すると、Adobe
 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに保持するために使用される非同期プロセスです。 `/export/jobs` エンドポイントを使用して、すべてのエクスポートジョブを取得したり、新しいエクスポートジョブを作成したり、特定のエクスポートジョブの詳細を取得したり、特定のエクスポートジョブをキャンセルしたりできます。
 
 このエンドポイントの使用について詳しくは、[ 書き出しジョブエンドポイントガイド ](./export-jobs.md) を参照してください。
+
+## 外部オーディエンス
+
+`/core/ais/external-audiences` エンドポイントを使用して、外部オーディエンスをExperience Platformにインポートし、オーディエンスの作成ステータスを取得し、外部オーディエンスを更新し、オーディエンス取り込み実行を開始し、外部オーディエンス取り込みステータスを取得し、オーディエンス取り込み実行をリストし、外部オーディエンスを削除できます。
+
+このエンドポイントの使用について詳しくは、[ 外部オーディエンスエンドポイントガイド ](./external-audiences.md) を参照してください。
 
 ## プレビューと見積もり
 

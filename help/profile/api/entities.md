@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、Profile API を使用してエンティティ（一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 37%
+source-wordcount: '1933'
+ht-degree: 33%
 
 ---
 
@@ -23,6 +23,25 @@ Adobe Experience Platformでは、RESTful API またはユーザーインター�
 ## はじめに
 
 このガイドで使用する API エンドポイントは、[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+
+>[!BEGINSHADEBOX]
+
+## エンティティの解決
+
+アーキテクチャのアップグレードの一環として、Adobeでは、最新のデータに基づく決定論的な ID マッチングを使用して、アカウントとオポチュニティのエンティティ解決を導入しています。 エンティティ解決ジョブは、B2B 属性を持つマルチエンティティオーディエンスを評価する前に、バッチセグメント化中に毎日実行されます。
+
+この機能強化により、Experience Platformでは同じエンティティを表す複数のレコードを識別して統合できるので、データの一貫性が向上し、より正確なオーディエンスのセグメント化が可能になります。
+
+以前は、アカウントとオポチュニティは、ID グラフベースの解決に依存しており、過去のすべての取り込み履歴を含め、ID を接続していました。 新しいエンティティ解決アプローチでは、ID は最新のデータのみに基づいてリンクされます
+
+### エンティティの解決はどのように機能しますか？
+
+- **以前**：データユニバーサル番号付けシステム（DUNS）番号が追加 ID として使用され、アカウントの DUNS 番号が CRM などのソースシステムで更新された場合、アカウント ID は古い DUNS 番号と新しい DUNS 番号の両方にリンクされます。
+- **後**:DUNS 番号が追加 ID として使用され、アカウントの DUNS 番号が CRM などのソースシステムで更新された場合、アカウント ID は新しい DUNS 番号にのみリンクされ、アカウントの現在の状態がより正確に反映されます。
+
+このアップデートの結果、[!DNL Profile Access] API は、エンティティ解決ジョブサイクルが完了した後の、最新の結合プロファイルビューを反映するようになりました。 さらに、一貫性のあるデータにより、セグメント化、アクティブ化、分析などのユースケースの精度と一貫性が向上します。
+
+>[!ENDSHADEBOX]
 
 ## エンティティの取得 {#retrieve-entity}
 
@@ -1196,7 +1215,7 @@ DELETE /access/entities?{QUERY_PARAMETERS}
 
 エンティティを削除するには、次のクエリパラメーターを指定する **必要があります**。
 
-- `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、`schema.name=_xdm.context.profile` を **のみ** 使用できます。
+- `schema.name`：エンティティの XDM スキーマの名前。 このユースケースでは、**を** のみ `schema.name=_xdm.context.profile` 使用できます。
 - `entityId`：取得しようとしているエンティティの ID。
 - `entityIdNS`：取得しようとしているエンティティの名前空間。 `entityId` が XID ではない場合、この値を指定する必要があ **ま**。
 - `mergePolicyId`：エンティティの結合ポリシー ID。 結合ポリシーには、ID ステッチとキー値 XDM オブジェクト結合に関する情報が含まれています。 この値を指定しない場合、デフォルトの結合ポリシーが使用されます。

@@ -4,14 +4,18 @@ title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
+source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 25%
+source-wordcount: '1558'
+ht-degree: 24%
 
 ---
 
 # セグメント定義エンドポイント
+
+>[!WARNING]
+>
+>Segmentation Service API を使用した B2B エンティティを使用したオーディエンスの作成は非推奨（廃止予定）になりました。 アカウント、アカウントと人物の関係、キャンペーン、キャンペーンメンバー、マーケティングリスト、マーケティングリストメンバー、商談、商談と人物の関係などの B2B エンティティを使用してオーディエンスを作成できなくなりました。
 
 Adobe Experience Platformでは、プロファイルのグループから特定の属性や動作のグループを定義するセグメント定義を作成できます。 セグメント定義は、[!DNL Profile Query Language] （PQL）で記述されたクエリをカプセル化するオブジェクトです。 セグメント定義は、オーディエンスを作成するためのプロファイルに適用されます。 このオブジェクト（セグメント定義）は、PQL述語とも呼ばれます。 PQLの述語は、[!DNL Real-Time Customer Profile] に提供するレコードまたは時系列データに関連する条件に基づいて、セグメント定義のルールを定義します。 PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
@@ -23,7 +27,7 @@ Adobe Experience Platformでは、プロファイルのグループから特定�
 
 ## セグメント定義のリストの取得 {#list}
 
-`/segment/definitions` エンドポイントに対してGETリクエストを行うことで、組織のすべてのセグメント定義のリストを取得できます。
+`/segment/definitions` エンドポイントにGET リクエストを実行することで、組織のすべてのセグメント定義のリストを取得できます。
 
 **API 形式**
 
@@ -338,7 +342,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 特定のセグメント定義の取得 {#get}
 
-特定のセグメント定義に関する詳細な情報を取得するには、`/segment/definitions` エンドポイントにGETリクエストを実行し、取得するセグメント定義の ID をリクエストパスで指定します。
+リクエストエンドポイントにGET リクエストを実行し、取得するセグメント定義の ID をリクエストパスで指定することで、特定のセグメント `/segment/definitions` 義に関する詳細な情報を取得できます。
 
 **API 形式**
 
@@ -427,7 +431,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 
 ## セグメント定義の一括取得 {#bulk-get}
 
-`/segment/definitions/bulk-get` エンドポイントに対してPOSTリクエストを実行し、リクエスト本文にセグメント定義の `id` 値を指定することで、指定された複数のセグメント定義に関する詳細な情報を取得できます。
+指定した複数のセグメント定義に関する詳細な情報を取得するには、`/segment/definitions/bulk-get` エンドポイントに POST リクエストを実行し、リクエスト本文でセグメント定義の `id` の値を指定します。
 
 **API 形式**
 
@@ -570,7 +574,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 ## 特定のセグメント定義の削除 {#delete}
 
-リクエストパスで削除するセグメント定義の ID をリク `/segment/definitions` ストエンドポイントに指定して、DELETEリクエストを行うことで、特定のセグメント定義を削除するようにリクエストできます。
+`/segment/definitions` エンドポイントに対してDELETE リクエストを実行し、リクエストパスで削除するセグメント定義の ID を指定することで、特定のセグメント定義を削除するようにリクエストできます。
 
 >[!NOTE]
 >
@@ -606,7 +610,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 ## 特定のセグメント定義の更新
 
-特定のセグメント定義を更新するには、`/segment/definitions` エンドポイントにPATCHリクエストを実行し、リクエストパスで更新するセグメント定義の ID を指定します。
+特定のセグメント定義を更新するには、`/segment/definitions` エンドポイントにPATCH リクエストを実行し、リクエストパスで更新するセグメント定義の ID を指定します。
 
 **API 形式**
 
@@ -709,7 +713,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 ## セグメント定義を変換
 
-セグメント定義を `pql/text` と `pql/json` の間で変換するか、`/segment/conversion` エンドポイントに対してPOSTリクエストを行って `pql/json` を `pql/text` に変換できます。
+`pql/text` エンドポイントに POST リクエストをおこなうと、`pql/json` と `pql/json` または `pql/text` の間でセグメント定義を `/segment/conversion` に変換できます。
 
 **API 形式**
 
