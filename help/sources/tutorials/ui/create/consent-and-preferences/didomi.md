@@ -41,7 +41,7 @@ ht-degree: 14%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-[!DNL Didomi] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、[**[!UICONTROL Didomi]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
+[!DNL Didomi] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、&lbrack;**[!UICONTROL Didomi]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
 
 >[!TIP]
 >
@@ -123,8 +123,8 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データフローが作成されたら、*[!UICONTROL ソース]* カタログに移動し、「**[!UICONTROL データフロー]**」を選択します。 データフローディレクトリを使用して [!DNL Didomi] のデータフローを探し、*[!UICONTROL データフローアクティビティ]* インターフェイスにアクセスします。 次に、右側のパネルの *[!UICONTROL プロパティ]* パネルを使用して、以下の値を取得します。
 
-* [!UICONTROL  ストリーミングエンドポイント ]
-* [!UICONTROL  データフロー ID]
+* [!UICONTROL &#x200B; ストリーミングエンドポイント &#x200B;]
+* [!UICONTROL &#x200B; データフロー ID]
 
 Experience Platform UI で、次の操作を行います。
 
