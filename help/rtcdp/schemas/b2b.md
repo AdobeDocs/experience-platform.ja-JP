@@ -1,25 +1,25 @@
 ---
 title: Real-time Customer Data Platform B2B Edition のスキーマ
-description: Adobe Real-time Customer Data Platform B2B Edition におけるエクスペリエンスデータモデル（XDM）スキーマの役割を概説します。
+description: Adobe Real-Time Customer Data Platform B2B editionにおけるエクスペリエンスデータモデル（XDM）スキーマの役割を概説します。
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="B2B エディション" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 09f671af0d04251ab7b0a71528cb4b9745594b1c
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 52%
+source-wordcount: '251'
+ht-degree: 47%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition のスキーマ
 
-Adobe Real-time Customer Data Platform B2B Edition には、アカウント、オポチュニティ、キャンペーンなどといった [&#128279;](../../xdm/schema/composition.md#class) 基本的な B2B データエンティティに関する詳細をキャプチャする  エクスペリエンスデータモデル （XDM） クラスが標準で複数用意されています。 さらに、Real-Time CDP B2B Edition を使用すると、これらのスキーマ間で多対 1 の関係を定義できるので、高度なセグメント化のユースケースに加えることができます。
+Adobe Real-Time Customer Data Platform B2B editionには、アカウント、オポチュニティ、キャンペーンなどといった [ 基本的な B2B データエンティティに関する詳細をキャプチャする ](../../xdm/schema/composition.md#class) エクスペリエンスデータモデル （XDM） クラスが標準で複数用意されています。 さらに、Real-Time CDP B2B editionを使用すると、これらのスキーマ間で多対 1 の関係を定義できるので、高度なセグメント化のユースケースに加えることができます。
 
 >[!IMPORTANT]
 >
->B2B スキーマを [ リアルタイム顧客プロファイル ](../../profile/home.md) に加えるには、Real-Time CDP B2B Edition へのアクセス権が必要です。
+>B2B スキーマは、Experience Platform アプリケーション（[Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition) など）で使用できます。 <br/> ただし、（内のプロファイル） B2B スキーマを（リアルタイム顧客プロファイル [ に加えるには、Real-Time CDP B2B editionへのアクセス権が必要 ](../../profile/home.md) す。
 
-Real-Time CDP B2B Edition には、次の標準クラスが用意されています。
+Real-Time CDP B2B editionには、次の標準クラスが用意されています。
 
 * [XDM Business Account](../../xdm/classes/b2b/business-account.md)
 * [XDM Business Account Person Relation](../../xdm/classes/b2b/business-account-person-relation.md)
