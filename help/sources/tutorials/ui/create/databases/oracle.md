@@ -1,69 +1,73 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；Oracle DB;oracle db
-solution: Experience Platform
-title: UI でのOracle DB Source接続の作成
-type: Tutorial
-description: Adobe Experience Platform UI を使用してOracle DB ソース接続を作成する方法を説明します。
+title: UI を使用したOracle DB のExperience Platformへの接続
+description: UI を使用してOracle DB インスタンスをExperience Platformに接続する方法について説明します。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 42%
+source-wordcount: '463'
+ht-degree: 17%
 
 ---
 
 # UI での [!DNL Oracle DB] ソース接続の作成
 
-Adobe Experience PlatformのSource コネクタには、外部ソースのデータをスケジュールに従って取り込む機能が用意されています。 このチュートリアルでは、[!DNL Experience Platform] ユーザーインターフェイスを使用して [!DNL Oracle DB] ソースコネクタを作成する手順を説明します。
+このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL Oracle DB] インスタンスをAdobe Experience Platformに接続する方法について説明します。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM)]  システム](../../../../../xdm/home.md)：[!DNL Experience Platform] が顧客体験データの整理に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データの整理に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Oracle DB] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)に関するチュートリアルに進むことができます。
+既に [!DNL Oracle DB] 接続がある場合は、このドキュメントの残りの部分をスキップして、[ データフローの設定 ](../../dataflow/databases.md) に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-[!DNL Experience Platform] で [!DNL Oracle DB] アカウントにアクセスするには、次の値を指定する必要があります。
+認証について詳しくは、[[!DNL Oracle DB]  概要 ](../../../../connectors/databases/oracle.md#prerequisites) を参照してください。
 
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `connectionString` | [!DNL Oracle DB] への接続に使用する接続文字列。 [!DNL Oracle DB] の接続文字列パターンは `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}` です。 |
-| `connectionSpec.id` | 接続の作成に必要な一意の ID。 [!DNL Oracle DB] の接続仕様 ID は `d6b52d86-f0f8-475f-89d4-ce54c8527328` です。 |
+## ソースカタログのナビゲート
 
-基本について詳しくは、[ このOracle ドキュメント ](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199) を参照してください。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-## [!DNL Oracle DB] アカウントを接続
+[!DNL Oracle DB] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、**[!UICONTROL Oracle DB]** ソース カードを選択してから、[**[!UICONTROL 設定]**] を選択します。
 
-必要な資格情報を収集したら、次の手順に従って [!DNL Oracle DB] アカウントを [!DNL Experience Platform] に接続するようにリンクできます。
+>[!TIP]
+>
+>新しい接続の場合はソースに **[!UICONTROL 設定]** が表示され、アカウントが既に存在する場合は **[!UICONTROL データを追加]** が表示されます。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左側のナビゲーションバーから **[!UICONTROL ソース]** を選択して **[!UICONTROL ソース]** ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には、アカウントを作成できる様々なソースが表示されます。
+![ 「Oracle DB」が選択されているソースカタログ ](../../../../images/tutorials/create/oracle/catalog.png)
 
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
+## 既存のアカウントを使用 {#existing}
 
-**[!UICONTROL Databases]** カテゴリで、**[!UICONTROL Oracle DB]** を選択します。 このコネクタを初めて使用する場合は、「**[!UICONTROL 設定]**」を選択します。 それ以外の場合は、「**[!UICONTROL データを追加]**」を選択して、新しい [!DNL Oracle DB] コネクタを作成します。
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Oracle DB] アカウントを選択します。
 
-![カタログ](../../../../images/tutorials/create/oracle/catalog.png)
+![ ソースワークフローの既存のアカウントインターフェイスで「既存のアカウント」が選択されている様子。](../../../../images/tutorials/create/oracle/existing.png)
 
-**[!UICONTROL Oracle DB に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
+## 新しいアカウントを作成 {#new}
 
-### 新しいアカウント
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。
 
-新しい資格情報を使用している場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。表示される入力フォームで、名前、説明（オプション）、[!DNL Oracle DB] 資格情報を入力します。 終了したら「**[!UICONTROL 接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+### Azure 上のExperience Platformへの接続 {#azure}
 
-![ 接続 ](../../../../images/tutorials/create/oracle/new.png)
+接続文字列を使用して、[!DNL Oracle DB] データベースを Azure 上のExperience Platformに接続できます。
 
-### 既存のアカウント
+接続文字列認証を使用するには、[ 接続文字列 ](../../../../connectors/databases/oracle.md#azure) を指定し、「**[!UICONTROL ソースに接続]**」を選択します。
 
-既存のアカウントに接続するには、接続する [!DNL Oracle DB] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
+![ ソースワークフローで「接続文字列認証」が選択された新しいアカウントインターフェイス ](../../../../images/tutorials/create/oracle/azure.png)
 
-![既存](../../../../images/tutorials/create/oracle/existing.png)
+### Amazon Web ServicesのExperience Platform（AWS）への接続 {#aws}
 
-## 次の手順
+>[!AVAILABILITY]
+>
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md) を参照してください。
 
-このチュートリアルでは、[!DNL Oracle DB] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データをに取り込むためのデータフローの設定  [!DNL Experience Platform]](../../dataflow/databases.md) を行いましょう。
+新しい [!DNL Oracle DB] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、必要な [ 認証用の資格情報 ](../../../../connectors/databases/oracle.md#aws) を指定します。
+
+![AWSに接続するための、ソースワークフローの新しいアカウントインターフェイス ](../../../../images/tutorials/create/oracle/aws.png)
+
+## データのデータフロー [!DNL Oracle DB] 作成
+
+[!DNL Oracle DB] データベースに正常に接続できたので、[ データフローを作成し、データベースからExperience Platformにデータを取り込む ](../../dataflow/databases.md) ことができます。

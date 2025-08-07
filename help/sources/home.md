@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1643'
 ht-degree: 56%
 
 ---
@@ -30,7 +30,7 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 ## Adobeで構築されたソースとパートナーが構築したソース {#adobe-and-partner-built-sources}
 
-Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、&lbrace;RainFocus コネクタ [ は RainFocus チームによって作成および管理されます ](/help/sources/connectors/analytics/rainfocus.md)。
+Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、{RainFocus コネクタ [ は RainFocus チームによって作成および管理されます ](/help/sources/connectors/analytics/rainfocus.md)。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
@@ -176,7 +176,7 @@ Experience Platform は、サードパーティのデータベースからデー
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | バッチ | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | バッチ | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | バッチ | AWS, Azure |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | バッチ | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | バッチ | AWS, Azure |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | バッチ | AWS, Azure |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | バッチ | Azure |
 
@@ -219,7 +219,7 @@ Experience Platform は、サードパーティのデータベースからデー
 
 {style="table-layout:auto"}
 
-### マーケティングの自動処理 {#marketing-automation}
+### マーケティングオートメーション {#marketing-automation}
 
 次のソースを使用して、マーケティング自動化データをExperience Platformに取り込むことができます。
 
