@@ -3,26 +3,26 @@ title: Dataset Expiration API エンドポイント
 description: Data Hygiene API の /ttl エンドポイントを使用すると、Adobe Experience Platform のデータセット有効期限をプログラムでスケジュール設定できます。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ca6d7d257085da65b3f08376f0bd32e51e293533
 workflow-type: tm+mt
-source-wordcount: '1966'
-ht-degree: 50%
+source-wordcount: '2331'
+ht-degree: 19%
 
 ---
 
 # データセットの有効期限エンドポイント
 
-Data Hygiene API の `/ttl` エンドポイントを使用すると、Adobe Experience Platform のデータセットの有効期限プロトコルをスケジュール設定できます。
+Data Hygiene API の `/ttl` エンドポイントを使用して、Adobe Experience Platformのデータセットをいつ削除するかをスケジュールします。
 
-データセットの有効期限は、単なる時間差の削除操作です。このデータセットは、暫定的に保護されないので、有効期限に達する前に、別の手段で削除される可能性があります。
+データセットの有効期限は、遅延した削除操作です。 データセットは、暫定的に保護されず、スケジュールされた有効期限の前に他の手段で削除される可能性があります。
 
 >[!NOTE]
 >
 >有効期限は特定の瞬間として指定されますが、有効期限が切れてから実際に削除が開始されるまで、最大 24 時間の遅延が発生する可能性があります。削除が開始されると、すべてのデータセットの痕跡がExperience Platform システムから削除されるまで、最大 7 日間かかる可能性があります。
 
-データセット削除が実際に開始される前であれば、いつでも有効期限をキャンセルしたり、そのトリガー時間を変更したりできます。データセット有効期限のキャンセル後は、新しい有効期限を設定することで再開できます。
+削除を開始する前に、有効期限をキャンセルするか、スケジュールされた時間を変更できます。 キャンセルされた有効期限を再オープンするには、新しい有効期限を設定します。
 
-データセット削除が開始されると、その有効期限ジョブは `executing` とマークされ、それ以上変更できなくなります。データセット自体は、最大 7 日間復元できる可能性がありますが、それにはアドビのサービスリクエストを通じて手動のプロセスを開始する必要があります。リクエストの実行時に、データレイク、ID サービス、リアルタイム顧客プロファイルは、別々のプロセスを開始し、各サービスからデータセットの内容を削除します。 3 つのサービスすべてからデータを削除すると、有効期限は `completed` とマークされます。
+削除が開始されると、有効期限ジョブは `executing` とマークされ、変更できなくなります。 データセットは、最大 7 日間復元できる可能性がありますが、それは手動のAdobe サービスリクエストを通じてのみです。 削除中、データレイク、ID サービス、リアルタイム顧客プロファイルは、それぞれデータセットの内容を個別に削除します。 削除が完了すると、有効期限は `completed` とマークされます。
 
 >[!WARNING]
 >
@@ -44,7 +44,9 @@ Advanced Data Lifecycle Management では、データセット有効期限エン
 
 ## データセット有効期限のリスト {#list}
 
-GET リクエストをおこなうと、組織のすべてのデータセット有効期限をリストできます。 クエリパラメーターを使用すると、適切な結果に対する応答をフィルタリングできます。
+`/ttl` エンドポイントにGET リクエストを行うことで、組織で設定されているすべてのデータセット有効期限をリストできます。
+
+クエリパラメーターを使用して結果をフィルタリングし、条件を満たす有効期限のみを返します。 各結果には、各データセット有効期限のステータスと設定の詳細が含まれます。
 
 **API 形式**
 
@@ -54,11 +56,20 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | `&` 文字で区切られた複数のパラメーターを含む、オプションのクエリパラメーターのリスト。共通のパラメーターには、ページネーション用の `limit` および `page` があります。サポートされるクエリパラメーターの完全なリストについては、[付録の節](#query-params)を参照してください。 |
+| `{QUERY_PARAMETERS}` | `&` 文字で区切られた複数のパラメーターを含む、オプションのクエリパラメーターのリスト。共通のパラメーターには、ページネーション用の `limit` および `page` があります。サポートされるクエリパラメーターの完全なリストについては、[ 付録の節 ](#query-params) サポートされるクエリパラメーターの完全なリストを参照してください。 最もよく使用されるパラメーターは、以下および付録に含まれています。 |
+| `author` | データセットの有効期限を最近更新または作成したユーザーでフィルタリングします。 SQL に似たパターン（`LIKE %john%` など）をサポートします。 |
+| `datasetId` | 特定のデータセット ID で有効期限をフィルタリングします。 |
+| `datasetName` | データセット名の一致に対する、大文字と小文字を区別しないフィルター。 |
+| `status` | ステータスのコンマ区切りリスト（`pending`、`executing`、`cancelled`、`completed`）でフィルタリングします。 |
+| `expiryDate` | 特定の有効期限を使用して有効期限をフィルタリングします。 |
+| `limit` | 返される結果の最大数を指定します（1 ～ 100、デフォルト：25）。 |
+| `page` | 0 から始まるインデックスを持つページ番号（デフォルトのページサイズ：50、最大：100）。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
+
+次のリクエストは、2021 年 8 月 1 日（PT）より前に更新され、名前が「Jane Doe」と一致するユーザーによる最終更新日のすべてのデータセット有効期限を取得します。
 
 ```shell
 curl -X GET \
@@ -81,15 +92,17 @@ curl -X GET \
 {
   "results": [
     {
-      "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-      "datasetId": "629bd9125b31471b2da7645c",
-      "datasetName": "Sample Acme dataset",
-      "sandboxName": "hygiene-beta",
-      "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
+      "ttlId": "SD-c9f113f2-d751-44bc-bc20-9d5ca0b6ae15",
+      "datasetId": "3e9f815ae1194c65b2a4c5ea",
+      "datasetName": "Acme_Profile_Engagements",
+      "sandboxName": "acme-beta",
+      "displayName": "Engagement Data Retention Policy",
+      "description": "Scheduled expiry for Acme marketing data",
+      "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
       "status": "pending",
-      "expiry": "2050-01-01T00:00:00Z",
-      "updatedAt": "2023-06-09T16:52:44.136028Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
+      "expiry": "2027-01-12T17:15:31.000Z",
+      "updatedAt": "2026-12-15T12:40:20.000Z",
+      "updatedBy": "t.lannister@acme.com <t.lannister@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
     }
   ],
   "current_page": 0,
@@ -100,30 +113,43 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `total_count` | リスト呼び出しのパラメーターに一致したデータセット有効期限の数。 |
-| `results` | 返されるデータセット有効期限の詳細が含まれます。データセット有効期限のプロパティについて詳しくは、[ルックアップ呼び出し](#lookup)を行うための応答の節を参照してください。 |
+| `results` | データセット有効期限設定の配列。 |
+| `ttlId` | データセット有効期限設定の一意の ID。 |
+| `datasetId` | この設定に関連付けられたデータセットの一意の ID。 |
+| `datasetName` | データセットの名前。 |
+| `sandboxName` | このデータセット有効期限が設定されているサンドボックス。 |
+| `displayName` | 人間が判読できる有効期限設定の名前。 |
+| `description` | 有効期限設定の説明。 |
+| `imsOrg` | 一意の組織 ID。 |
+| `status` | 有効期限の現在のステータス。 次のいずれか：`pending`、`executing`、`cancelled`、`completed`。 |
+| `expiry` | スケジュールされた有効期限の日時（ISO 8601 形式）。 |
+| `updatedAt` | この設定の最終更新のタイムスタンプ。 |
+| `updatedBy` | 設定を最後に更新したユーザーまたはサービスの識別子とメールアドレス。 |
+| `current_page` | 現在の結果ページのインデックス（0 から始まります）。 |
+| `total_pages` | 使用可能な結果ページの合計数。 |
+| `total_count` | 返されたデータセット有効期限設定レコードの合計数です。 |
 
 {style="table-layout:auto"}
 
 ## データセット有効期限の検索 {#lookup}
 
-データセットの有効期限を参照するには、`{DATASET_ID}` または `{DATASET_EXPIRATION_ID}` を使用してGET リクエストを行います。
+データセット有効期限 ID またはデータセット ID をパスパラメーターとして使用してGET リクエストを実行し、特定のデータセット有効期限設定の詳細を取得します。
 
 >[!IMPORTANT]
 >
->`{DATASET_EXPIRATION_ID}` は、応答では `ttlId` と呼ばれます。 どちらも、データセットの有効期限の一意の ID を参照します。
+>パスには、データセット有効期限 ID （例：`SD-xxxxxx-xxxx`）またはデータセット ID を指定できます。 応答の `ttlId` は、データセットの有効期限の一意の ID です。
 
 **API 形式**
 
 ```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}
+GET /ttl/{ID}
+GET /ttl/{ID}?include=history
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATASET_ID}` | 有効期限を検索したいデータセットの ID。 |
-| `{DATASET_EXPIRATION_ID}` | データセット有効期限の ID。 |
+| `{ID}` | データセット有効期限設定の一意の ID。 データセット有効期限 ID またはデータセット ID を指定できます。 |
+| `include` | （オプション） `history` に設定した場合、応答には設定の変更イベントを含む `history` 配列が含まれます。 |
 
 {style="table-layout:auto"}
 
@@ -150,37 +176,37 @@ curl -X GET \
     "datasetId": "62759f2ede9e601b63a2ee14",
     "datasetName": "XtVRwq9-38734",
     "sandboxName": "prod",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2024-05-11T15:12:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
     "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024.",
+    "imsOrg": "885737B25DC460C50A49411B@AdobeOrg",
+    "status": "pending",
+    "expiry": "2035-09-25T00:00:00Z",
+    "updatedAt": "2025-05-01T19:00:55.000Z",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `ttlId` | データセット有効期限の ID。 |
-| `datasetId` | この有効期限が適用されるデータセットの ID。 |
-| `datasetName` | この有効期限が適用されるデータセットの表示名。 |
-| `sandboxName` | ターゲットデータセットが配置されているサンドボックスの名前。 |
-| `imsOrg` | 組織の ID。 |
-| `status` | データセット有効期限の現在のステータス。 |
-| `expiry` | データセットが削除されるようにスケジュール設定された日付および時刻。 |
-| `updatedAt` | 有効期限が最後に更新された際のタイムスタンプ。 |
-| `updatedBy` | 有効期限を最後に更新したユーザー。 |
-| `displayName` | 有効期限リクエストの表示名。 |
-| `description` | 有効期限リクエストの説明。 |
+| `ttlId` | データセット有効期限設定の一意の ID。 |
+| `datasetId` | データセットの一意の ID。 |
+| `datasetName` | データセットの名前。 |
+| `sandboxName` | データセットの有効期限が設定されているサンドボックス。 |
+| `displayName` | データセット有効期限設定の、人間が判読できる名前。 |
+| `description` | データセット有効期限設定の説明。 |
+| `imsOrg` | この設定に関連付けられた一意の組織 ID。 |
+| `status` | データセット有効期限設定の現在のステータス。<br>1 つ：`pending`、`executing`、`cancelled`、`completed`。 |
+| `expiry` | データセットのスケジュールされた有効期限タイムスタンプ（ISO 8601 形式）。 |
+| `updatedAt` | 最新の更新のタイムスタンプ。 |
+| `updatedBy` | データセットの有効期限を最後に更新したユーザーまたはサービスの識別子とメール。 |
 
 {style="table-layout:auto"}
 
 ### カタログの有効期限タグ
 
-[Catalog API](../../catalog/api/getting-started.md) を使用してデータセットの詳細を検索するには、データセットに有効期限がある場合は、そのデータセットが `tags.adobe/hygiene/ttl` の下に表示されます。
+[Catalog API](../../catalog/api/getting-started.md) を使用してデータセットの詳細を検索するには、データセットにアクティブな有効期限がある場合は、そのデータセットが `tags.adobe/hygiene/ttl` の下に表示されます。
 
-次の JSON は、カタログのデータセットの詳細に対する切り捨てられた応答を表し、有効期限は `32503680000000` となっています。タグの値は、有効期限を Unix エポック開始からミリ秒の整数値でエンコードします。
+次の JSON は、有効期限値が `32503680000000` のデータセットに対して、切り詰められたカタログ API 応答を示しています。 タグは、有効期限を Unix エポックからのミリ秒数としてエンコードします。
 
 ```json
 {
@@ -200,11 +226,16 @@ curl -X GET \
 
 ## データセット有効期限の作成 {#create}
 
-指定した期間の後にデータがシステムから削除されるようにするには、データセット ID と有効期限の日時を ISO 8601 形式で指定して、特定のデータセットの有効期限をスケジュールします。
-
-データセットの有効期限を作成するには、次に示すように POST リクエストを実行し、ペイロード内で以下に示す値を指定します。
+新しいデータセット有効期限設定を作成して、データセットが期限切れになり、削除できるタイミングを定義します。\
+データセット ID、有効期限または日時（ISO 8601 形式）、表示名、（オプションで）説明を入力します。
 
 >[!NOTE]
+>
+>有効期限の値は、日付（YYYY-MM-DD）または日時（YYYY-MM-DDTHH:MM:SSZ）にすることができます。 日付のみを指定した場合、システムはその日の午前 0 時の UTC （00:00:00Z）を使用します。 有効期限は 24 時間以上先である必要があります。
+
+データセットの有効期限を作成するには、次に示すように、POST リクエストを送信します。
+
+>[!TIP]
 >
 >404 エラーが発生した場合は、リクエストに追加のフォワードスラッシュがないことを確認します。 末尾のスラッシュは、POST リクエストの失敗の原因となる可能性があります。
 
@@ -219,68 +250,69 @@ POST /ttl
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/hygiene/ttl \
-  -H `Authorization: Bearer {ACCESS_TOKEN}`
-  -H `x-gw-ims-org-id: {ORG_ID}`
-  -H `x-api-key: {API_KEY}`
-  -H `Accept: application/json`
-  -d {
-      "datasetId": "5b020a27e7040801dedbf46e",
-      "expiry": "2030-12-31T23:59:59Z"
-      "displayName": "Delete Acme Data before 2025",
-      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
-      }
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "datasetId": "3e9f815ae1194c65b2a4c5ea",
+        "expiry": "2030-12-31",
+        "displayName": "Expiry rule for Acme customers",
+        "description": "Set expiration for Acme customer dataset"
+      }'
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `datasetId` | **必須** 有効期限をスケジュール設定するターゲットデータセットの ID。 |
-| `expiry` | **必須** ISO 8601 形式の日時。 文字列に明示的なタイムゾーンオフセットがない場合、タイムゾーンは UTC と見なされます。 システム内のデータの存続期間は、指定された有効期限の値に応じて設定される。<br> メモ：<ul><li>データセットの有効期限が既に存在する場合、リクエストは失敗します。</li><li>この日付と時刻は、少なくとも **24 時間後である必要があり** す。</li></ul> |
-| `displayName` | データセット有効期限リクエストのオプション表示名。 |
-| `description` | 有効期限リクエストのオプション説明。 |
+| `datasetId` | **必須** 有効期限を適用するデータセットの一意の ID。 |
+| `expiry` | **必須。** 有効期限（ISO 8601 形式）。 これは、システム内のデータの存続期間を定義します。 日付のみを指定した場合、デフォルトでは午前 0 時（UTC）（00:00:00Z）になります。 有効期限 **少なくとも 24 時間後にする必要があります**。 <br>**注意**:<ul><li>データセットの有効期限が既に存在する場合、リクエストは失敗します。</li></ul> |
+| `displayName` | **必須。** データセットの有効期限設定の、人間が判読できる名前。 |
+| `description` | データセットの有効期限設定のオプション説明。 |
 
 **応答**
 
-応答が成功すると、HTTP 201 （作成済み）ステータスと、データセットの有効期限の新しい状態が返されます。
+応答が成功すると、HTTP 201 （作成済み）ステータスと、新しいデータセットの有効期限設定が返されます。
 
 ```json
 {
-  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-  "datasetId":   "5b020a27e7040801dedbf46e",
-  "datasetName": "Acme licensed data",
-  "sandboxName": "prod",
-  "imsOrg":      "{ORG_ID}",
-  "status":      "pending",
-  "expiry":      "2030-12-31T23:59:59Z",
-  "updatedAt":   "2021-08-19T11:14:16Z",
-  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "displayName": "Delete Acme Data before 2031",
-  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+  "ttlId": "SD-2aaf113e-3f17-4321-bf29-a2c51152b042",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Expiry rule for Acme customers",
+  "description": "Set expiration for Acme customer dataset",
+  "imsOrg": "{ORG_ID}",
+  "status": "pending",
+  "expiry": "2030-12-31T00:00:00Z",
+  "updatedAt": "2025-01-02T10:35:45.000Z",
+  "updatedBy": "s.stark@acme.com <s.stark@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `ttlId` | データセット有効期限の ID。 |
-| `datasetId` | この有効期限が適用されるデータセットの ID。 |
-| `datasetName` | この有効期限が適用されるデータセットの表示名。 |
-| `sandboxName` | ターゲットデータセットが配置されているサンドボックスの名前。 |
-| `imsOrg` | 組織の ID。 |
-| `status` | データセット有効期限の現在のステータス。 |
-| `expiry` | データセットが削除されるようにスケジュール設定された日付および時刻。 |
-| `updatedAt` | 有効期限が最後に更新された際のタイムスタンプ。 |
-| `updatedBy` | 有効期限を最後に更新したユーザー。 |
-| `displayName` | 有効期限のリクエストの表示名。 |
-| `description` | 有効期限リクエストの説明。 |
+| `ttlId` | 作成したデータセット有効期限設定の一意の ID。 |
+| `datasetId` | データセットの一意の ID。 |
+| `datasetName` | データセットの名前。 |
+| `sandboxName` | このデータセット有効期限が設定されているサンドボックス。 |
+| `displayName` | データセット有効期限設定の表示名。 |
+| `description` | データセット有効期限設定の説明。 |
+| `imsOrg` | この設定に関連付けられた一意の組織 ID。 |
+| `status` | データセット有効期限設定の現在のステータス。<br>1 つ：`pending`、`executing`、`cancelled`、`completed`。 |
+| `expiry` | データセットに対してスケジュールされた有効期限タイムスタンプ。 |
+| `updatedAt` | 最新の更新のタイムスタンプ。 |
+| `updatedBy` | データセット有効期限設定を最後に更新したユーザーまたはサービスの識別子とメール。 |
 
-データセットの有効期限が既に存在する場合、400 （無効なリクエスト） HTTP ステータスが発生します。 そのようなデータセットの有効期限が存在しない（またはデータセットへのアクセス権がない）場合、応答は失敗し、404 （見つかりません） HTTP ステータスを返します。
+データセットの有効期限が既に存在する場合、400 （無効なリクエスト） HTTP ステータスが発生します。 404 （見つかりません） HTTP ステータスは、そのようなデータセットが存在しない場合や、データセットへのアクセス権がない場合に発生します。
 
-## データセット有効期限の更新 {#update}
+## データセット有効期限設定の更新 {#update}
 
-データセットの有効期限を更新するには、PUT リクエストと `ttlId` を使用します。 `displayName`、`description`、`expiry` の情報を更新できます。
+既存のデータセット有効期限設定を更新するには、`/ttl/DATASET_EXPIRATION_ID` に対してPUT リクエストを行います。 更新できるのは、設定の `displayName`、`description`、`expiry` フィールドのみです。 更新は、有効期限ステータスが `pending` の場合にのみ許可されます。
 
 >[!NOTE]
 >
->有効期限の日時を変更する場合は、24 時間以上後にする必要があります。 この強制的な遅延により、有効期限をキャンセルまたは再スケジュールして、誤ってデータを失わないようにすることができます。
+>`expiry` フィールドには日付（YYYY-MM-DD）または日時（YYYY-MM-DDTHH:MM:SSZ）を指定できます。 日付のみを指定した場合、システムはその日の午前 0 時の UTC （00:00:00Z）を使用します。 有効期限 **少なくとも 24 時間後にする必要があります**。
 
 **API 形式**
 
@@ -290,62 +322,70 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | 変更するデータセット有効期限の ID。 メモ：これは、応答内の `ttlId` と呼ばれます。 |
+| `{DATASET_EXPIRATION_ID}` | データセット有効期限設定の一意の ID。 **メモ**：これは、応答では `ttlId` と呼ばれます。 |
 
 **リクエスト**
 
-次のリクエストでは、データセットの有効期限 `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` が 2024 年末（グリニッジ標準時）に発生するように再スケジュールされます。 既存のデータセット有効期限が見つかった場合、その有効期限は新しい `expiry` 値で更新されます。
+次のリクエストは、データセットの有効期限 `SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45` の有効期限、表示名、説明を更新します。
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2024-12-31T23:59:59Z",
-        "displayName": "Delete Acme Data before 2025",
-        "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+        "displayName": "Customer Dataset Expiry Rule",
+        "description": "Updated description for Acme customer dataset",
+        "expiry": "2031-06-15"
       }'
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `expiry` | **必須** ISO 8601 形式の日時。 文字列に明示的なタイムゾーンオフセットがない場合、タイムゾーンは UTC と見なされます。 システム内のデータの存続期間は、指定された有効期限の値に応じて設定される。 同じデータセットの以前の有効期限タイムスタンプは、指定した新しい有効期限値に置き換えられます。 この日付と時刻は、少なくとも **24 時間後である必要があり** す。 |
-| `displayName` | 有効期限のリクエストの表示名。 |
-| `description` | 有効期限リクエストのオプション説明。 |
+| `displayName` | （任意）データセットの有効期限設定の、人間が判読できる新しい名前。 |
+| `description` | （オプション）データセットの有効期限設定に関する新しい説明。 |
+| `expiry` | （任意） ISO 8601 形式の新しい有効期限または日時。 日付のみを指定した場合、デフォルトでは午前 0 時（UTC）になります。 有効期限は **少なくとも 24 時間後** にする必要があります。 |
 
-{style="table-layout:auto"}
+>[!NOTE]
+>
+>これらのフィールドのうち少なくとも 1 つをリクエストで指定する必要があります。
 
 **応答**
 
-応答が成功すると、データセットの有効期限の新しい状態と、既存の有効期限が更新された場合は HTTP ステータス 200 （OK）が返されます。
+応答が成功すると、HTTP ステータス 200 （OK）と、更新されたデータセットの有効期限設定が返されます。
 
 ```json
 {
-    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-    "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+  "ttlId": "SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Updated description for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "pending",
+  "expiry": "2031-06-15T00:00:00Z",
+  "updatedAt": "2031-05-01T14:11:12.000Z",
+  "updatedBy": "b.tarth@acme.com <b.tarth@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `ttlId` | データセット有効期限の ID。 |
-| `datasetId` | この有効期限が適用されるデータセットの ID。 |
-| `imsOrg` | 組織の ID。 |
-| `status` | データセット有効期限の現在のステータス。 |
-| `expiry` | データセットが削除されるようにスケジュール設定された日付および時刻。 |
-| `updatedAt` | 有効期限が最後に更新された際のタイムスタンプ。 |
-| `updatedBy` | 有効期限を最後に更新したユーザー。 |
+| `ttlId` | 更新されたデータセット有効期限設定の一意の ID。 |
+| `datasetId` | データセットの一意の ID。 |
+| `datasetName` | データセットの名前。 |
+| `sandboxName` | このデータセット有効期限が設定されているサンドボックス。 |
+| `displayName` | データセット有効期限設定の表示名。 |
+| `description` | データセット有効期限設定の説明。 |
+| `imsOrg` | この設定に関連付けられた組織 ID。 |
+| `status` | データセット有効期限設定の現在のステータス。<br>1 つ：`pending`、`executing`、`cancelled`、`completed`。 |
+| `expiry` | データセットに対してスケジュールされた有効期限タイムスタンプ。 |
+| `updatedAt` | 最新の更新のタイムスタンプ。 |
+| `updatedBy` | データセット有効期限設定を最後に更新したユーザーまたはサービスの識別子とメール。 |
 
 {style="table-layout:auto"}
 
@@ -353,31 +393,31 @@ curl -X PUT \
 
 ## データセット有効期限のキャンセル {#delete}
 
-DELETE リクエストを行うことでデータセット有効期限をキャンセルできます。
+`/ttl/{ID}` に対してDELETE リクエストを実行することで、保留中のデータセットの有効期限設定をキャンセルします。
 
 >[!NOTE]
 >
->ステータスが `pending` のデータセット有効期限のみをキャンセルできます。実行された有効期限または既にキャンセルされた有効期限をキャンセルしようとすると、HTTP 404 エラーが返されます。
+>`pending` ステータスのデータセット有効期限のみをキャンセルできます。 既に `executing`、`completed` または `cancelled` である有効期限をキャンセルしようとすると、HTTP 400 （無効なリクエスト）が返されます。
 
 **API 形式**
 
 ```http
-DELETE /ttl/{EXPIRATION_ID}
+DELETE /ttl/{ID}
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{EXPIRATION_ID}` | キャンセルするデータセット有効期限の `ttlId` |
+| `{ID}` | データセット有効期限設定の一意の ID。 データセット有効期限 ID またはデータセット ID を指定できます。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエストでは、ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf` を持つデータセットの有効期限がキャンセルされます。
+次のリクエストでは、ID `SD-d4a7d918-283b-41fd-bfe1-4e730a613d21` を持つデータセットの有効期限がキャンセルされます。
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-587ea89369bf \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-d4a7d918-283b-41fd-bfe1-4e730a613d21 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -386,7 +426,71 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、HTTP ステータス 204（コンテンツなし）が返され、有効期限の `status` 属性が `cancelled` に設定されます。
+応答が成功すると、HTTP ステータス 200 （OK）と、キャンセルされたデータセットの有効期限設定が返されます。 有効期限の `status` 属性が `cancelled` に設定されているわけではありません。
+
+```json
+{
+  "ttlId": "SD-d4a7d918-283b-41fd-bfe1-4e730a613d21",
+  "datasetId": "5a9e2c68d3b24f03b55a91ce",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Cancelled expiry configuration for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "cancelled",
+  "expiry": "2032-02-28T00:00:00Z",
+  "updatedAt": "2032-01-15T08:27:31.000Z",
+  "updatedBy": "s.clegane@acme.com <s.clegane@acme.com> 5A9E2C68D3B24F03B55A91CE@acme.com"
+}
+```
+
+| プロパティ | 説明 |
+|---|---|
+| `ttlId` | 削除されたデータセットの有効期限設定の一意の ID。 |
+| `datasetId` | データセットの一意の ID。 |
+| `datasetName` | データセットの名前。 |
+| `sandboxName` | このデータセットの有効期限が設定されているサンドボックス。 |
+| `displayName` | データセット有効期限設定の表示名。 |
+| `description` | データセット有効期限設定の説明。 |
+| `imsOrg` | この設定に関連付けられた一意の組織 ID。 |
+| `status` | データセット有効期限設定の現在のステータス。<br>1 つ：`pending`、`executing`、`cancelled`、`completed`。 |
+| `expiry` | データセットに対してスケジュールされた有効期限タイムスタンプ。 |
+| `updatedAt` | 最新の更新のタイムスタンプ。 |
+| `updatedBy` | データセット有効期限設定を最後に更新したユーザーまたはサービスの識別子とメール。 |
+
+**例 400 （無効なリクエスト）応答**
+
+`executing`、`completed` または `cancelled` の有効期限設定を持つデータセットをキャンセルしようとすると、400 エラーが発生します。
+
+```json
+{
+  "type": "http://ns.adobe.com/aep/errors/HYGN-3102-400",
+  "title": "The requested dataset already has an existing expiration. Additional detail: A TTL already exists for datasetId=686e9ca25ef7462aefe72c93",
+  "status": 400,
+  "report": {
+    "tenantInfo": {
+      "sandboxName": "prod",
+      "sandboxId": "not-applicable",
+      "imsOrgId": "{IMS_ORG_ID}"
+    },
+    "additionalContext": {
+      "Invoking Client ID": "acp_privacy_hygiene"
+    }
+  },
+  "error-chain": [
+    {
+      "serviceId": "HYGN",
+      "errorCode": "HYGN-3102-400",
+      "invokingServiceId": "acp_privacy_hygiene",
+      "unixTimeStampMs": 1754408150394
+    }
+  ]
+}
+```
+
+>[!NOTE]
+>
+>既に `completed` または `cancelled` になっているデータセットの有効期限をキャンセルしようとすると、404 エラーが発生します。
 
 ## 付録
 
@@ -400,7 +504,7 @@ curl -X DELETE \
 
 | パラメーター | 説明 | 例 |
 | --- | --- | --- |
-| `author` | `author` クエリパラメーターを使用して、データセットの有効期限を最後に更新したユーザーを見つけます。 作成後に更新されていない場合は、有効期限の元の作成者と一致します。 このパラメーターは、`created_by` フィールドが検索文字列に対応する有効期限に一致します。<br> 検索文字列が `LIKE` または `NOT LIKE` で始まる場合、残りは SQL 検索パターンとして扱われます。 それ以外の場合は、検索文字列全体が、`created_by` フィールドのコンテンツ全体に完全に一致する必要があるリテラル文字列として扱われます。 | `author=LIKE %john%`、`author=John Q. Public` |
+| `author` | `author` クエリパラメーターを使用して、データセットの有効期限を最後に更新したユーザーを見つけます。 作成後に更新されていない場合は、有効期限の元の作成者と一致します。 このパラメーターは、`created_by` フィールドが検索文字列に対応する有効期限に一致します。<br> 検索文字列が `LIKE` または `NOT LIKE` で始まる場合、残りは SQL 検索パターンとして扱われます。 それ以外の場合は、検索文字列全体が、`created_by` フィールドのコンテンツ全体に完全に一致する必要があるリテラル文字列として扱われます。 | `author=LIKE %john%`, `author=John Q. Public` |
 | `datasetId` | 特定のデータセットに適用する有効期限に一致します。 | `datasetId=62b3925ff20f8e1b990a7434` |
 | `datasetName` | 指定された検索文字列をデータセット名に含む有効期限に一致します。 一致する文字列では、大文字と小文字が区別されません。 | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |

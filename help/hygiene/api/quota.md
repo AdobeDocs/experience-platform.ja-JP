@@ -3,34 +3,34 @@ title: Quota API エンドポイント
 description: Data Hygiene API の/quota エンドポイントを使用すると、各ジョブタイプの組織の月間割り当て量制限に対する高度なデータライフサイクル管理の使用状況を監視できます。
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
+source-git-commit: 2c2907c5ed38ce4c87b1b73f96e1a0e64586cb97
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 22%
+source-wordcount: '372'
+ht-degree: 23%
 
 ---
 
 # Quota エンドポイント
 
-Data Hygiene API の `/quota` エンドポイントを使用すると、各ジョブタイプの組織の割り当て量制限に対する高度なデータライフサイクル管理の使用状況を監視できます。
+Data Hygiene API の `/quota` エンドポイントを使用して、組織の現在の使用状況と制限を確認します。 クォータは、Privacy and Security Shield または Healthcare Shield などの使用権限によって異なります。
 
-クォータの使用状況は、データ ライフサイクル ジョブの種類ごとに追跡されます。 実際の割り当て量の制限は、組織の使用権限によって異なり、定期的に確認する場合があります。 データセットの有効期限は、同時にアクティブなジョブの数にハードリミットが適用されます。
+現在の割り当て量の消費を監視して、各ジョブタイプの組織制限への準拠を確認します。
 
 ## はじめに
 
 このガイドで使用するエンドポイントは、Data Hygiene API の一部です。続行する前に、[概要](./overview.md)で以下の情報を確認してください。
 
-* 関連ドキュメントへのリンク
-* このドキュメントのサンプル API 呼び出しの読み方に関するガイド
-* Experience Platform API を呼び出すために必要な必須ヘッダーに関する重要な情報
+* 関連ドキュメントのリンク
+* サンプル API 呼び出しの読み方
+* Experience Platform API 呼び出しに必要なヘッダー
 
 ## 割り当て量と処理タイムライン {#quotas}
 
 レコードの削除リクエストは、ライセンスの使用権限に基づいて、割り当て量とサービスレベルの期待に左右されます。 これらの制限は、UI ベースの削除リクエストと API ベースの削除リクエストの両方に適用されます。
 
 >[!TIP]
-> 
->このドキュメントでは、使用権限ベースの制限に対して使用状況をクエリする方法を説明します。 割り当て量階層、レコード削除の使用権限、SLAの動作について詳しくは、[UI ベースのレコード削除 ](../ui/record-delete.md#quotas) または [API ベースのレコード削除 ](./workorder.md#quotas) を参照してください。
+>
+>このドキュメントでは、使用権限ベースの制限に対して使用状況をクエリする方法を説明します。 割当層、レコード削除の使用権限、SLAの動作について詳しくは、[UI ベースのレコード削除 ](../ui/record-delete.md#quotas) または [API ベースのレコード削除 ](./workorder.md#quotas) のドキュメントを参照してください。
 
 ## 割り当て量のリスト {#list}
 
@@ -43,9 +43,15 @@ GET /quota
 GET /quota?quotaType={QUOTA_TYPE}
 ```
 
+>[!NOTE]
+>
+>クォータの消費量は、毎日および毎月 1 日の 00:00 GMT にリセットされます。
+>
+>許可されたリクエストのみが割り当てにカウントされます。 却下された作業指示は、割り当てを減らしません。
+
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUOTA_TYPE}` | 取得する割り当て量のタイプを指定するオプションのクエリパラメーター。`quotaType` パラメーターが指定されていない場合、すべての割り当て量の値が API 応答で返されます。使用できるタイプの値は次のとおりです。<ul><li>`datasetExpirationQuota`：このオブジェクトは、組織で同時にアクティブなデータセットの有効期限の数と、有効期限の合計許容量を表示します。 </li><li>`dailyConsumerDeleteIdentitiesQuota`：このオブジェクトには、組織が今日行ったレコード削除リクエストの合計数と、1 日あたりの合計使用量が表示されます。<br> 注意：許可されたリクエストのみがカウントされます。 作業指示が検証に失敗したために却下された場合、それらの ID 削除は割り当てにカウントされません。</li><li>`monthlyConsumerDeleteIdentitiesQuota`：このオブジェクトは、今月に組織が行ったレコード削除リクエストの合計数と月額使用料の合計を表示します。</li><li>`monthlyUpdatedFieldIdentitiesQuota`：このオブジェクトには、今月お客様の組織が行ったレコード更新リクエストの合計数と、お客様の月間使用許可総額が表示されます。</li></ul> |
+| `{QUOTA_TYPE}` | 取得する割り当て量のタイプを指定するオプションのクエリパラメーター。`quotaType` パラメーターが指定されていない場合、すべての割り当て量の値が API 応答で返されます。使用できる値は次のとおりです。<ul><li>`datasetExpirationQuota`: アクティブなデータセット有効期限の数と合計許容値。</li><li>`dailyConsumerDeleteIdentitiesQuota`：今日および 1 日の割り当て量のレコード削除数。</li><li>`monthlyConsumerDeleteIdentitiesQuota`：今月のレコード削除数と月間割り当て量。</li></ul> |
 
 **リクエスト**
 
@@ -67,27 +73,21 @@ curl -X GET \
   "quotas": [
     {
       "name": "datasetExpirationQuota",
-      "description": "The number of concurrently active Expiration Dataset Delete in all workorder requests for the organization.",
-      "consumed": 12,
-      "quota": 50
+      "description": "The number of concurrently active dataset-expiration delete operations in all work order requests for the organization.",
+      "consumed": 11,
+      "quota": 75
     },
     {
       "name": "dailyConsumerDeleteIdentitiesQuota",
-      "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
-      "consumed": 0,
-      "quota": 1000000
+      "description": "The consumed number of deleted identities in all work order requests for the organization for today.",
+      "consumed": 314,
+      "quota": 700000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
-      "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
-      "consumed": 841,
-      "quota": 2000000
-    },
-    {
-      "name": "monthlyUpdatedFieldIdentitiesQuota",
-      "description": "The consumed number of updated identities in all workorder requests for the organization for this month.",
-      "consumed": 0,
-      "quota": 0
+      "description": "The consumed number of deleted identities in all work order requests for the organization this month.",
+      "consumed": 2764,
+      "quota": 12000000
     }
   ]
 }
@@ -95,4 +95,8 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | -------- | ------- |
-| `quotas` | 各データ ライフサイクル ジョブ タイプのクォータ情報を一覧表示します。 各割り当て量のオブジェクトには、次のプロパティが含まれます。<ul><li>`name`: データ ライフサイクル ジョブの種類：<ul><li>`expirationDatasetQuota`：データセット有効期限</li><li>`deleteIdentityWorkOrderDatasetQuota`: レコードの削除</li></ul></li><li>`description`: データ ライフサイクル ジョブ タイプの説明。</li><li>`consumed`：当期実行されたこのタイプのジョブの数。 オブジェクト名は、割り当て量の期間を示します。</li><li>`quota`：組織に対するこのジョブタイプの割り当て。 レコードの削除と更新の場合、割り当て量は、1 か月に実行できるジョブの数を表します。 データセット有効期限の場合、割り当て量は、任意の時点で同時にアクティブにできるジョブの数を表します。</li></ul> |
+| `quotas` | 各データ ライフサイクル ジョブ タイプのクォータ情報を一覧表示します。 各割り当て量のオブジェクトには、次のプロパティが含まれます。<ul><li>`name`</li><li>`description`</li><li>`consumed`</li><li>`quota`</li></ul> |
+| `name` | 割り当て量の種類の識別子。 |
+| `description` | このクォータ制限の説明。 |
+| `consumed` | 現在消費されている割り当て量。 消費金額は、その月の 1 日の 00:00 GMT と 00:00 GMT に日次割り当てにリセットされます。 |
+| `quota` | 組織に対するこのクォータの種類の最大割り当て。 |

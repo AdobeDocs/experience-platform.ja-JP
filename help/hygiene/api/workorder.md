@@ -1,30 +1,30 @@
 ---
-title: レコード削除リクエスト （作業指示エンドポイント）
-description: Data Hygiene API の/workorder エンドポイントを使用すると、ID の削除タスクをプログラムで管理できます。
+title: 削除作業指示のレコード
+description: Data Hygiene API の/workorder エンドポイントを使用して、Adobe Experience Platformでレコード削除作業指示を管理する方法を説明します。 このガイドでは、割り当て量、処理タイムライン、API の使用状況について説明します。
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: d569b1d04fa76e0a0e48364a586e8a1a773b9bf2
+source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 48%
+source-wordcount: '2104'
+ht-degree: 3%
 
 ---
 
-# レコードの削除リクエスト （作業指示エンドポイント） {#work-order-endpoint}
+# 削除作業指示のレコード {#work-order-endpoint}
 
-Data Hygiene API の `/workorder` エンドポイントを使用すると、Adobe Experience Platformのレコード削除リクエストをプログラムで管理できます。
+Data Hygiene API の `/workorder` エンドポイントを使用して、Adobe Experience Platformでのレコード削除作業指示の作成、表示および管理をおこないます。 作業指示を使用すると、データセット間でデータの削除を制御、監視および追跡して、データ品質を維持し、組織のデータガバナンス標準をサポートできます。
 
 >[!IMPORTANT]
-> 
->レコードの削除は、データクレンジング、匿名データの削除、またはデータの最小化のために使用されます。これらは、EU 一般データ保護規則（GDPR）などのプライバシー規制に関するデータサブジェクト権利リクエスト（コンプライアンス）に対して使用するためのものでは&#x200B;**ありません**。コンプライアンスに関するユースケースについて詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) を参照してください。
+>
+>レコード削除作業指示は、データクレンジング、匿名データの削除またはデータの最小化を目的としています。 **GDPR などのプライバシー規制の下で、データ主体の権利リクエストに対してレコード削除作業指示を使用しないでください。** コンプライアンスのユースケースについては、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md) を使用してください。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、Data Hygiene API の一部です。先に進む前に、[概要](./overview.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の Experience Platform API を正常に呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+開始する前に、[ 概要 ](./overview.md) を参照して、必要なヘッダー、サンプル API 呼び出しの読み方および関連ドキュメントの場所を確認してください。
 
 ## 割り当て量と処理タイムライン {#quotas}
 
-レコードの削除リクエストは、組織のライセンス使用権限によって決まる、1 日ごとおよび 1 か月ごとの識別子送信制限の対象です。 これらの制限は、UI ベースの削除リクエストと API ベースの削除リクエストの両方に適用されます。
+レコードの削除作業指示は、組織のライセンス使用権限によって決定され、1 日ごとおよび 1 か月ごとの識別子の送信制限の対象となります。 これらの制限は、UI ベースと API ベースのレコード削除リクエストの両方に適用されます。
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Data Hygiene API の `/workorder` エンドポイントを使用すると、Adob
 
 ### 製品別の月間送信使用権限 {#quota-limits}
 
-次の表に、製品および使用権限レベル別の識別子の送信制限の概要を示します。 各製品の月額上限は、固定の識別子上限またはライセンス取得済みデータボリュームに関連付けられた割合ベースのしきい値の、2 つの値のいずれか小さい方です。
+次の表に、製品および資格レベル別の識別子の送信制限を示します。 各製品の月額上限は、固定の識別子上限またはライセンス取得済みデータボリュームに関連付けられた割合ベースのしきい値の、2 つの値のいずれか小さい方です。
 
 | 製品 | 使用権限の説明 | 月間キャップ （いずれか小さい方） |
 |----------|-------------------------|---------------------------------|
@@ -43,22 +43,23 @@ Data Hygiene API の `/workorder` エンドポイントを使用すると、Adob
 
 >[!NOTE]
 >
-> ほとんどの組織では、実際のアドレス可能なオーディエンスまたはCJA行の使用権限に基づいて、月間の上限が引き下げられます。
-
-クォータは、毎月 1 日にリセットされます。 未使用の割り当ては引き継がれ **い**。
+>ほとんどの組織では、実際のアドレス可能なオーディエンスまたはCJA行の使用権限に基づいて、月間の上限が引き下げられます。
 
 >[!NOTE]
 >
->割り当て量は、組織でライセンスを取得した **送信済み識別子** の月次使用権に基づきます。 これらは、システムガードレールによって適用されるのではなく、監視およびレビューされる可能性があります。
+>クォータは、毎月 1 日にリセットされます。 未使用の割り当ては引き継がれ **い**。
+
+>[!NOTE]
 >
->レコード削除は **共有サービス** です。 1 か月の上限には、Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analyticsおよび該当する Shield アドオン全体で最高の使用権限が反映されます。
+>クォータの使用状況は、**送信された識別子** に対して組織でライセンスを取得した 1 か月の使用権限に基づきます。 クォータはシステム・ガードレールによって適用されませんが、監視および確認が可能です。\
+>レコード削除作業指示能力は **共有サービス** です。 1 か月の上限には、Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analyticsおよび該当する Shield アドオン全体で最高の使用権限が反映されます。
 
 ### 識別子の送信のタイムラインの処理 {#sla-processing-timelines}
 
-送信後、レコードの削除リクエストはキューに入り、使用権限レベルに基づいて処理されます。
+送信後、レコードの削除作業指示は、使用権限レベルに基づいてキューに入れられ、処理されます。
 
 | 製品と使用権限の説明 | キューの期間 | 最大処理時間（SLA） |
-|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+|------------------------------------|---------------------|-------------------------------|
 | プライバシーとセキュリティシールドまたは Healthcare Shield アドオンなし | 最長 15 日間 | 30 日 |
 | Privacy and Security Shield または Healthcare Shield アドオンを使用 | 通常 24 時間 | 15 日 |
 
@@ -68,13 +69,129 @@ Data Hygiene API の `/workorder` エンドポイントを使用すると、Adob
 >
 >現在のクォータの使用状況または使用権限層を確認するには、[ クォータのリファレンス ガイド ](../api/quota.md) を参照してください。
 
-## レコード削除リクエストの作成 {#create}
+## レコード削除作業指示のリスト {#list}
 
-`/workorder` エンドポイントに POST リクエストを行うことで、単一のデータセットまたはすべてのデータセットから 1 つまたは複数の ID を削除できます。
+組織のデータハイジーン操作用の、ページ分割されたレコード削除作業指示のリストを取得します。 クエリパラメーターを使用して結果をフィルタリングします。 各作業指示レコードには、アクションタイプ（`identity-delete` など）、ステータス、関連するデータセットおよびユーザーの詳細、監査メタデータが含まれています。
+
+**API 形式**
+
+```http
+GET /workorder
+```
+
+次の表では、レコード削除作業指示のリストに使用できる問合せパラメータを説明します。
+
+| クエリパラメーター | 説明 |
+| --------------- | ------------|
+| `search` | フィールド（author、displayName、description、datasetName）間で、大文字と小文字を区別しない部分一致（ワイルドカード検索）。 また、正確な有効期限 ID にも一致します。 |
+| `type` | 作業指示タイプ（`identity-delete` など）で結果をフィルタリングします。 |
+| `status` | 作業指示ステータスのコンマ区切りリスト。 ステータス値は、大文字と小文字を区別します。<br> 列挙：`received`、`validated`、`submitted`、`ingested`、`completed`、`failed` |
+| `author` | 作業指示（または元の作成者）を最後に更新した人物を検索します。 リテラルまたは SQL パターンを使用できます。 |
+| `displayName` | 作業指示の表示名で大文字と小文字が区別されない一致。 |
+| `description` | 作業指示の説明で大文字と小文字が区別されない一致。 |
+| `workorderId` | 作業指示 ID の完全一致。 |
+| `sandboxName` | リクエストで使用されているサンドボックス名と完全に一致するか、`*` を使用してすべてのサンドボックスを含めます。 |
+| `fromDate` | この日付以降に作成された作業指示でフィルタリングします。 `toDate` が設定されている必要があります。 |
+| `toDate` | この日付以前に作成された作業指示でフィルタリングします。 `fromDate` が設定されている必要があります。 |
+| `filterDate` | この日付に作成、更新、または変更された作業指示ステータスのみを返します。 |
+| `page` | 返すページインデックス （0 から始まります）。 |
+| `limit` | 1 ページあたりの最大結果数（1 ～ 100、デフォルト：25）。 |
+| `orderBy` | 結果の並べ替え順。 昇順/降順には `+` または `-` のプレフィックスを使用します。 例：`orderBy=-datasetName`。 |
+| `properties` | 結果ごとに含める追加フィールドのコンマ区切りリスト。 （オプション） |
+
+
+**リクエスト**
+
+次のリクエストは、すべての完了済みレコード削除作業指示を取得します（ページあたり 2 つに制限されています）。
+
+```shell
+curl -X GET \
+  "https://platform.adobe.io/data/core/hygiene/workorder?status=completed&limit=2" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**応答**
+
+応答が成功すると、レコード削除作業指示のページ分割されたリストが返されます。
+
+```json
+{
+  "results": [
+    {
+      "workorderId": "DI-1729d091-b08b-47f4-923f-6a4af52c93ac",
+      "orgId": "9C1F2AC143214567890ABCDE@AcmeOrg",
+      "bundleId": "BN-4cfabf02-c22a-45ef-b21f-bd8c3d631f41",
+      "action": "identity-delete",
+      "createdAt": "2034-03-15T11:02:10.935Z",
+      "updatedAt": "2034-03-15T11:10:10.938Z",
+      "operationCount": 3,
+      "targetServices": [
+        "profile",
+        "datalake",
+        "identity"
+      ],
+      "status": "received",
+      "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
+      "datasetId": "a7b7c8f3a1b8457eaa5321ab",
+      "datasetName": "Acme_Customer_Exports",
+      "displayName": "Customer Identity Delete Request",
+      "description": "Scheduled identity deletion for compliance"
+    }
+  ],
+  "total": 1,
+  "count": 1,
+  "_links": {
+    "next": {
+      "href": "https://platform.adobe.io/workorder?page=1&limit=2",
+      "templated": false
+    },
+    "page": {
+      "href": "https://platform.adobe.io/workorder?limit={limit}&page={page}",
+      "templated": true
+    }
+  }
+}
+```
+
+次の表に、応答のプロパティを示します。
+
+| プロパティ | 説明 |
+| --- | --- |
+| `results` | レコードの配列で、作業指示オブジェクトを削除します。 各オブジェクトには、以下のフィールドが含まれます。 |
+| `workorderId` | レコード削除作業指示の一意の ID。 |
+| `orgId` | 一意の組織 ID。 |
+| `bundleId` | このレコード削除作業指示を含むバンドルの一意の ID。 バンドルを使用すると、複数の削除指示をダウンストリームサービスでグループ化して処理できます。 |
+| `action` | 作業指示でリクエストされたアクションタイプ。 |
+| `createdAt` | 作業指示が作成されたときのタイムスタンプ。 |
+| `updatedAt` | 作業指示が最後に更新されたときのタイムスタンプ。 |
+| `operationCount` | 作業指示に含まれる操作の数。 |
+| `targetServices` | 作業指示のターゲットサービスのリスト。 |
+| `status` | 作業指示の現在のステータス。 使用可能な値：`received`、`validated`、`submitted`、`ingested`、`completed`、`failed`。 |
+| `createdBy` | 作業指示を作成したユーザーのメールアドレスおよび識別子。 |
+| `datasetId` | 作業指示に関連付けられたデータセットの一意の ID。 リクエストがすべてのデータセットに適用される場合、このフィールドは「すべて」に設定されます。 |
+| `datasetName` | 作業指示に関連付けられたデータセットの名前。 |
+| `displayName` | 作業指示の人間が読み取れるラベル。 |
+| `description` | 作業指示の目的の説明。 |
+| `total` | クエリに一致するレコード削除作業指示の合計数。 |
+| `count` | 現在のページのレコード削除作業指示の数。 |
+| `_links` | ページネーションとナビゲーションリンク。 |
+| `next` | 次のページ用の `href` （文字列）と `templated` （ブール値）を持つオブジェクト。 |
+| `page` | ページナビゲーション用の `href` （文字列）および `templated` （ブール値）を持つオブジェクト。 |
+
+{style="table-layout:auto"}
+
+## レコード削除作業指示の作成 {#create}
+
+単一のデータセットまたはすべてのデータセットから 1 つ以上の ID に関連付けられたレコードを削除するには、`/workorder` エンドポイントに対して POST リクエストを実行します。
+
+作業指示は非同期で処理され、送信後に作業指示リストに表示されます。
 
 >[!TIP]
 >
->API を介して送信された各レコード削除リクエストには、最大 100,000 **の ID** を含めることができます。 効率を最大限に高めるには、リクエストごとに可能な限り多くの ID を送信し、単一 ID の作業指示などの少量の送信を避けます。
+>API を通じて送信された各レコード削除作業指示には、最大 100,000 個の ID **含めることができ** す。 効率を最大化するために、リクエストのできるだけ多くの ID を送信します。 単一 ID の作業指示など、少量の送信を避けます。
 
 **API 形式**
 
@@ -84,11 +201,15 @@ POST /workorder
 
 >[!NOTE]
 >
->データライフサイクルリクエストでは、プライマリ ID または ID マップに基づいたデータセットのみを変更できます。 リクエストでは、プライマリ ID を指定するか、ID マップを指定する必要があります。
+>削除できるのは、関連付けられた XDM スキーマがプライマリ ID または ID マップを定義するデータセットからのレコードのみです。
+
+>[!NOTE]
+>
+>既にアクティブな有効期限があるデータセットに対してレコード削除作業指示を作成しようとすると、リクエストから HTTP 400 （無効なリクエスト）が返されます。アクティブな有効期限は、まだ完了していないスケジュール済みの削除です。
 
 **リクエスト**
 
-リクエストペイロードで指定された `datasetId` の値に応じて、API 呼び出しは、すべてのデータセットまたは指定する単一のデータセットから ID を削除します。 次のリクエストは、特定のデータセットから 3 つの ID を削除します。
+次のリクエストは、指定されたメールアドレスに関連付けられているすべてのレコードを、特定のデータセットから削除します。
 
 ```shell
 curl -X POST \
@@ -99,90 +220,100 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "displayName": "Acme Loyalty - Customer Data Deletion",
+        "description": "Delete all records associated with the specified email addresses from the Acme_Loyalty_2023 dataset.",
         "action": "delete_identity",
-        "datasetId": "c48b51623ec641a2949d339bad69cb15",
-        "displayName": "Example Record Delete Request",
-        "description": "Cleanup identities required by Jira request 12345.",
-        "identities": [
+        "datasetId": "7eab61f3e5c34810a49a1ab3",
+        "namespacesIdentities": [
           {
             "namespace": {
               "code": "email"
             },
-            "id": "poul.anderson@example.com"
-          },
-          {
-            "namespace": {
-              "code": "email"
-            },
-            "id": "cordwainer.smith@gmail.com"
-          },
-          {
-            "namespace": {
-              "code": "email"
-            },
-            "id": "cyril.kornbluth@yahoo.com"
+            "IDs": [
+              "alice.smith@acmecorp.com",
+              "bob.jones@acmecorp.com",
+              "charlie.brown@acmecorp.com"
+            ]
           }
         ]
       }'
 ```
 
+次の表では、レコード削除作業指示を作成するためのプロパティについて説明します。
+
 | プロパティ | 説明 |
 | --- | --- |
-| `action` | 実行するアクション。レコードを削除するには、値を `delete_identity` に設定する必要があります。 |
-| `datasetId` | 単一のデータセットから削除する場合、この値は、当該データセットの ID である必要があります。すべてのデータセットから削除する場合、値を `ALL` に設定します。<br><br> 単一のデータセットを指定する場合、データセットの関連するエクスペリエンスデータモデル（XDM）スキーマには、プライマリ ID が定義されている必要があります。 データセットにプライマリ ID がない場合、データライフサイクルリクエストで変更するには、データセットに ID マップが必要です。<br>ID マップが存在する場合、`identityMap` という名前の最上位フィールドとして存在します。<br> データセット行の ID マップに多くの ID が含まれている場合がありますが、プライマリとしてマークできるのは 1 つだけであることに注意してください。 `id` がプライマリ ID と一致するように強制するには、`"primary": true` を含める必要があります。 |
-| `displayName` | レコード削除リクエストの表示名。 |
-| `description` | レコード削除リクエストの説明。 |
-| `identities` | 削除する情報を持つ少なくとも 1 人のユーザーの ID を含む配列。各 ID は、[ID 名前空間](../../identity-service/features/namespaces.md)および値で構成されます。<ul><li>`namespace`：ID 名前空間を表す、単一の文字列プロパティ `code` が含まれます。 </li><li>`id`：ID 値。</ul>`datasetId` が単一のデータセットを指定している場合、`identities` 以下の各エンティティは、スキーマのプライマリ ID と同じ ID 名前空間を使用する必要があります。<br><br>`datasetId` が `ALL` に設定されている場合、`identities` 配列は、各データセットが異なる可能性があるので、単一の名前空間に制限されません。ただし、[ID サービス](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)でレポートされるように、リクエストは、依然として組織で使用できる名前空間の制約を受けます。 |
-
-{style="table-layout:auto"}
+| `displayName` | このレコード削除作業指示の人間が読み取れるラベル。 |
+| `description` | レコード削除作業指示の説明。 |
+| `action` | レコード削除作業指示に対してリクエストされたアクション。 特定の ID に関連付けられているレコードを削除するには、`delete_identity` を使用します。 |
+| `datasetId` | データセットの一意の ID。 特定のデータセットのデータセット ID を使用するか、`ALL` を使用してすべてのデータセットをターゲットにします。 データセットには、プライマリ ID または ID マップが必要です。 ID マップが存在する場合、`identityMap` という名前の最上位フィールドとして存在します。<br> データセット行の ID マップに多くの ID が含まれている場合がありますが、プライマリとしてマークできるのは 1 つだけであることに注意してください。 `"primary": true` がプライマリ ID と一致するように強制するには、`id` を含める必要があります。 |
+| `namespacesIdentities` | オブジェクトの配列。各オブジェクトには、以下が含まれます。<br><ul><li> `namespace`:ID 名前空間を指定する `code` プロパティを持つオブジェクト（例：「email」）。</li><li> `IDs`：この名前空間で削除する ID 値の配列。</li></ul>ID 名前空間は、ID データに対するコンテキストを提供します。 Experience Platformが提供する標準の名前空間を使用するか、独自の名前空間を作成できます。 詳しくは、[ID 名前空間ドキュメント ](../../identity-service/features/namespaces.md) および [ID サービス API 仕様 ](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) を参照してください。 |
 
 **応答**
 
-応答が成功すると、レコード削除の詳細が返されます。
+応答が成功すると、新しいレコードの削除作業指示の詳細が返されます。
 
 ```json
 {
-  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
-  "orgId": "{ORG_ID}",
-  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "workorderId": "DI-95c40d52-6229-44e8-881b-fc7f072de63d",
+  "orgId": "8B1F2AC143214567890ABCDE@AcmeOrg",
+  "bundleId": "BN-c61bec61-5ce8-498f-a538-fb84b094adc6",
   "action": "identity-delete",
-  "createdAt": "2022-07-21T18:05:28.316029Z",
-  "updatedAt": "2022-07-21T17:59:43.217801Z",
+  "createdAt": "2035-06-02T09:21:00.000Z",
+  "updatedAt": "2035-06-02T09:21:05.000Z",
+  "operationCount": 1,
+  "targetServices": [
+    "profile",
+    "datalake",
+    "identity"
+  ],
   "status": "received",
-  "createdBy": "{USER_ID}",
-  "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Record Delete Request",
-  "description": "Cleanup identities required by Jira request 12345."
+  "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
+  "datasetId": "7eab61f3e5c34810a49a1ab3",
+  "datasetName": "Acme_Loyalty_2023",
+  "displayName": "Loyalty Identity Delete Request",
+  "description": "Schedule deletion for Acme loyalty program dataset"
 }
 ```
 
+次の表に、応答のプロパティを示します。
+
 | プロパティ | 説明 |
 | --- | --- |
-| `workorderId` | 削除指示の ID。これは、後で削除のステータスを参照するのに使用できます。 |
-| `orgId` | 組織 ID。 |
-| `bundleId` | この削除指示が関連付けられているバンドルの ID（デバッグ目的で使用される）。複数の削除指示が 1 つのバンドルにまとめられて、ダウンストリームサービスで処理されます。 |
-| `action` | 作業指示によって実行されるアクション。レコードを削除する場合、値は `identity-delete` です。 |
-| `createdAt` | 削除指示が作成されたときのタイムスタンプ。 |
-| `updatedAt` | 削除指示が最後に更新されたときのタイムスタンプ。 |
-| `status` | 削除指示の現在のステータス。 |
-| `createdBy` | 削除指示を作成したユーザー。 |
-| `datasetId` | リクエストの対象となるデータセットの ID。すべてのデータセットに対するリクエストの場合、値は `ALL` に設定されます。 |
+| `workorderId` | レコード削除作業指示の一意の ID。 この値を使用して、削除のステータスまたは詳細を検索します。 |
+| `orgId` | 一意の組織 ID。 |
+| `bundleId` | このレコード削除作業指示を含むバンドルの一意の ID。 バンドルを使用すると、複数の削除指示をダウンストリームサービスでグループ化して処理できます。 |
+| `action` | レコード削除作業指示でリクエストされたアクションタイプ。 |
+| `createdAt` | 作業指示が作成されたときのタイムスタンプ。 |
+| `updatedAt` | 作業指示が最後に更新されたときのタイムスタンプ。 |
+| `operationCount` | 作業指示に含まれる操作の数。 |
+| `targetServices` | レコード削除作業指示のターゲットサービスのリスト。 |
+| `status` | レコード削除作業指示の現在のステータス。 |
+| `createdBy` | レコード削除作業指示を作成したユーザーのメールアドレスおよび識別子。 |
+| `datasetId` | データセットの一意の ID。 すべてのデータセットに対するリクエストの場合、値は `ALL` に設定されます。 |
+| `datasetName` | このレコード削除作業指示のデータセットの名前。 |
+| `displayName` | レコード削除作業指示の人間が読み取れるラベル。 |
+| `description` | レコード削除作業指示の説明。 |
 
 {style="table-layout:auto"}
 
-## レコード削除のステータスの取得 {#lookup}
+>[!NOTE]
+>
+>レコード削除作業指示のアクションプロパティは、現在、API 応答で `identity-delete` 定されています。 API が別の値（`delete_identity` など）を使用するように変更された場合、それに応じてこのドキュメントが更新されます。
 
-[ レコード削除リクエストを作成 ](#create) した後は、GET リクエストを使用して、そのステータスを確認できます。
+## 特定のレコード削除作業指示の詳細の取得 {#lookup}
+
+`/workorder/{WORKORDER_ID}` に対してGET リクエストを実行して、特定のレコード削除作業指示の情報を取得します。 応答には、アクションタイプ、ステータス、関連するデータセットおよびユーザー情報、監査メタデータが含まれます。
 
 **API 形式**
 
 ```http
-GET /workorder/{WORK_ORDER_ID}
+GET /workorder/{WORKORDER_ID}
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | 参照しているレコード削除の `workorderId`。 |
+| `{WORK_ORDER_ID}` | 参照しているレコード削除作業指示の一意の ID。 |
 
 {style="table-layout:auto"}
 
@@ -190,7 +321,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
+  https://platform.adobe.io/data/core/hygiene/workorder/DI-6fa98d52-7bd2-42a5-bf61-fb5c22ec9427 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -199,67 +330,66 @@ curl -X GET \
 
 **応答**
 
-正常な応答では、現在のステータスを含む、削除操作の詳細が返されます。
+応答が成功すると、指定されたレコード削除作業指示の詳細が返されます。
 
 ```json
 {
-  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
-  "orgId": "{ORG_ID}",
-  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "workorderId": "DI-6fa98d52-7bd2-42a5-bf61-fb5c22ec9427",
+  "orgId": "3C7F2AC143214567890ABCDE@AcmeOrg",
+  "bundleId": "BN-dbe3ffad-cb0b-401f-91ae-01c189f8e7b2",
   "action": "identity-delete",
-  "createdAt": "2022-07-21T18:05:28.316029Z",
-  "updatedAt": "2022-07-21T17:59:43.217801Z",
+  "createdAt": "2037-01-21T08:25:45.119Z",
+  "updatedAt": "2037-01-21T08:30:45.233Z",
+  "operationCount": 3,
+  "targetServices": [
+    "ajo",
+    "profile",
+    "datalake",
+    "identity"
+  ],
   "status": "received",
-  "createdBy": "{USER_ID}",
-  "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName": "Example Record Delete Request",
-  "description": "Cleanup identities required by Jira request 12345.",
-  "productStatusDetails": [
-    {
-        "productName": "Data Management",
-        "productStatus": "success",
-        "createdAt": "2022-08-08T16:51:31.535872Z"
-    },
-    {
-        "productName": "Identity Service",
-        "productStatus": "success",
-        "createdAt": "2022-08-08T16:43:46.331150Z"
-    },
-    {
-        "productName": "Profile Service",
-        "productStatus": "waiting",
-        "createdAt": "2022-08-08T16:37:13.443481Z"
-    }
-  ]
+  "createdBy": "g.baratheon@acme.com <g.baratheon@acme.com> C189F8E7B2@acme.com",
+  "datasetId": "d2f1c8a4b8f747d0ba3521e2",
+  "datasetName": "Acme_Marketing_Events",
+  "displayName": "Marketing Identity Delete Request",
+  "description": "Scheduled identity deletion for marketing compliance"
 }
 ```
 
+次の表に、応答のプロパティを示します。
+
 | プロパティ | 説明 |
 | --- | --- |
-| `workorderId` | 削除指示の ID。これは、後で削除のステータスを参照するのに使用できます。 |
-| `orgId` | 組織 ID。 |
-| `bundleId` | この削除指示が関連付けられているバンドルの ID（デバッグ目的で使用される）。複数の削除指示が 1 つのバンドルにまとめられて、ダウンストリームサービスで処理されます。 |
-| `action` | 作業指示によって実行されるアクション。レコードを削除する場合、値は `identity-delete` です。 |
-| `createdAt` | 削除指示が作成されたときのタイムスタンプ。 |
-| `updatedAt` | 削除指示が最後に更新されたときのタイムスタンプ。 |
-| `status` | 削除指示の現在のステータス。 |
-| `createdBy` | 削除指示を作成したユーザー。 |
-| `datasetId` | リクエストの対象となるデータセットの ID。すべてのデータセットに対するリクエストの場合、値は `ALL` に設定されます。 |
-| `productStatusDetails` | リクエストに関連するダウンストリームプロセスの現在のステータスをリストする配列。 各配列オブジェクトには、次のプロパティが含まれています。<ul><li>`productName`：ダウンストリームサービスの名前。</li><li>`productStatus`：ダウンストリームサービスでのリクエストの現在の処理ステータス。</li><li>`createdAt`：最新のステータスがサービスからポストされたときのタイムスタンプ。</li></ul> |
+| `workorderId` | レコード削除作業指示の一意の ID。 |
+| `orgId` | 組織の一意の ID。 |
+| `bundleId` | このレコード削除作業指示を含むバンドルの一意の ID。 バンドルを使用すると、複数の削除指示をダウンストリームサービスでグループ化して処理できます。 |
+| `action` | レコード削除作業指示でリクエストされたアクションタイプ。 |
+| `createdAt` | 作業指示が作成されたときのタイムスタンプ。 |
+| `updatedAt` | 作業指示が最後に更新されたときのタイムスタンプ。 |
+| `operationCount` | 作業指示に含まれる操作の数。 |
+| `targetServices` | このレコード削除作業指示の影響を受けるターゲットサービスのリスト。 |
+| `status` | レコード削除作業指示の現在のステータス。 |
+| `createdBy` | レコード削除作業指示を作成したユーザーのメールアドレスおよび識別子。 |
+| `datasetId` | 作業指示に関連付けられたデータセットの一意の ID。 |
+| `datasetName` | 作業指示に関連付けられたデータセットの名前。 |
+| `displayName` | レコード削除作業指示の人間が読み取れるラベル。 |
+| `description` | レコード削除作業指示の説明。 |
 
-## レコード削除リクエストの更新
+## レコード削除作業指示の更新
 
-PUT リクエストを行うことで、レコード削除の `displayName` と `description` を更新できます。
+`name` エンドポイントに対してPUT リクエストを実行して、レコード削除作業指示の `description` および `/workorder/{WORKORDER_ID}` を更新します。
 
 **API 形式**
 
 ```http
-PUT /workorder{WORK_ORDER_ID}
+PUT /workorder/{WORKORDER_ID}
 ```
+
+次の表に、このリクエストのパラメーターを示します。
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | 参照しているレコード削除の `workorderId`。 |
+| `{WORK_ORDER_ID}` | 更新するレコード削除作業指示の一意の ID。 |
 
 {style="table-layout:auto"}
 
@@ -267,44 +397,51 @@ PUT /workorder{WORK_ORDER_ID}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
+  https://platform.adobe.io/data/core/hygiene/workorder/DI-893a6b1d-47c2-41e1-b3f1-2d7c2956aabb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '{
-        "displayName" : "Update - displayName",
-        "description" : "Update - description"
+        "name": "Updated Marketing Identity Delete Request",
+        "description": "Updated deletion request for marketing data"
       }'
 ```
 
+次の表に、更新可能なプロパティを示します。
+
 | プロパティ | 説明 |
 | --- | --- |
-| `displayName` | レコード削除リクエストの更新された表示名。 |
-| `description` | レコード削除リクエストの更新された説明。 |
+| `name` | レコード削除作業指示の更新された人間が読み取れるラベル。 |
+| `description` | レコード削除作業指示の更新された説明。 |
 
 {style="table-layout:auto"}
 
 **応答**
 
-応答が成功すると、レコード削除の詳細が返されます。
+応答が成功すると、更新された作業指示リクエストが返されます。
 
 ```json
 {
-    "workorderId": "DI-61828416-963a-463f-91c1-dbc4d0ddbd43",
-    "orgId": "{ORG_ID}",
-    "bundleId": "BN-aacacc09-d10c-48c5-a64c-2ced96a78fca",
-    "action": "identity-delete",
-    "createdAt": "2024-06-12T20:02:49.398448Z",
-    "updatedAt": "2024-06-13T21:35:01.944749Z",
-    "operationCount": 1,
-    "status": "ingested",
-    "createdBy": "{USER_ID}",
-    "datasetId": "666950e6b7e2022c9e7d7a33",
-    "datasetName": "Acme_Dataset_E2E_Identity_Map_Schema_5_1718178022379",
-    "displayName": "Updated Display Name",
-    "description": "Updated Description",
-    "productStatusDetails": [
+  "workorderId": "DI-893a6b1d-47c2-41e1-b3f1-2d7c2956aabb",
+  "orgId": "7D4E2AC143214567890ABCDE@AcmeOrg",
+  "bundleId": "BN-12abcf45-32ea-45bc-9d1c-8e7b321cabc8",
+  "action": "identity-delete",
+  "createdAt": "2038-04-15T12:14:29.210Z",
+  "updatedAt": "2038-04-15T12:30:29.442Z",
+  "operationCount": 2,
+  "targetServices": [
+    "profile",
+    "datalake"
+  ],
+  "status": "received",
+  "createdBy": "b.tarth@acme.com <b.tarth@acme.com> 8E7B321CABC8@acme.com",
+  "datasetId": "1a2b3c4d5e6f7890abcdef12",
+  "datasetName": "Acme_Marketing_2024",
+  "displayName": "Updated Marketing Identity Delete Request",
+  "description": "Updated deletion request for marketing data",
+  "productStatusDetails": [
         {
             "productName": "Data Management",
             "productStatus": "waiting",
@@ -330,16 +467,21 @@ curl -X PUT \
 ```
 
 | プロパティ | 説明 |
-| --- | --- |
-| `workorderId` | 削除指示の ID。これは、後で削除のステータスを参照するのに使用できます。 |
-| `orgId` | 組織 ID。 |
-| `bundleId` | この削除指示が関連付けられているバンドルの ID（デバッグ目的で使用される）。複数の削除指示が 1 つのバンドルにまとめられて、ダウンストリームサービスで処理されます。 |
-| `action` | 作業指示によって実行されるアクション。レコードを削除する場合、値は `identity-delete` です。 |
-| `createdAt` | 削除指示が作成されたときのタイムスタンプ。 |
-| `updatedAt` | 削除指示が最後に更新されたときのタイムスタンプ。 |
-| `status` | 削除指示の現在のステータス。 |
-| `createdBy` | 削除指示を作成したユーザー。 |
-| `datasetId` | リクエストの対象となるデータセットの ID。すべてのデータセットに対するリクエストの場合、値は `ALL` に設定されます。 |
-| `productStatusDetails` | リクエストに関連するダウンストリームプロセスの現在のステータスをリストする配列。 各配列オブジェクトには、次のプロパティが含まれています。<ul><li>`productName`：ダウンストリームサービスの名前。</li><li>`productStatus`：ダウンストリームサービスでのリクエストの現在の処理ステータス。</li><li>`createdAt`：最新のステータスがサービスからポストされたときのタイムスタンプ。</li></ul> |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| `workorderId` | レコード削除作業指示の一意の ID。 |
+| `orgId` | 組織の一意の ID。 |
+| `bundleId` | このレコード削除作業指示を含むバンドルの一意の ID。 バンドルを使用すると、複数の削除指示をダウンストリームサービスでグループ化して処理できます。 |
+| `action` | レコード削除作業指示でリクエストされたアクションタイプ。 |
+| `createdAt` | 作業指示が作成されたときのタイムスタンプ。 |
+| `updatedAt` | 作業指示が最後に更新されたときのタイムスタンプ。 |
+| `operationCount` | 作業指示に含まれる操作の数。 |
+| `targetServices` | このレコード削除作業指示の影響を受けるターゲットサービスのリスト。 |
+| `status` | レコード削除作業指示の現在のステータス。 使用可能な値：`received`、`validated`、`submitted`、`ingested`、`completed`、`failed`。 |
+| `createdBy` | レコード削除作業指示を作成したユーザーのメールアドレスおよび識別子。 |
+| `datasetId` | レコードの削除作業指示に関連付けられたデータセットの一意の ID。 |
+| `datasetName` | レコードの削除作業指示に関連付けられたデータセットの名前。 |
+| `displayName` | レコード削除作業指示の人間が読み取れるラベル。 |
+| `description` | レコード削除作業指示の説明。 |
+| `productStatusDetails` | リクエストのダウンストリームプロセスの現在のステータスをリストする配列。 各オブジェクトには、以下が含まれます。<ul><li>`productName`：ダウンストリームサービスの名前。</li><li>`productStatus`：ダウンストリームサービスの現在の処理ステータス。</li><li>`createdAt`：最新のステータスがサービスからポストされたときのタイムスタンプ。</li></ul>このプロパティは、作業指示がダウンストリームサービスに送信されて処理を開始した後に使用できます。 |
 
 {style="table-layout:auto"}
