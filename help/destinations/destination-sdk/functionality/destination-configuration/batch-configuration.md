@@ -2,7 +2,7 @@
 description: Destination SDK で作成された宛先に対するファイル書き出し設定の設定方法を説明します。
 title: バッチ設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: a149e0b96b68c8ac61e355cf8605742feb4eec41
+source-git-commit: 8e7356bdc5692678e46a61b538d4b6748792a423
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 86%
@@ -95,7 +95,7 @@ Destination SDKでファイルベースの宛先を作成する場合、デフ�
 | `defaultExportMode` | 列挙 | デフォルトのファイルのエクスポートモードを定義します。サポートされている値：<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> デフォルト値は `DAILY_FULL_EXPORT` です。ファイルエクスポートのスケジューリングについて詳しくは、[バッチ有効化ドキュメント](../../../ui/activate-batch-profile-destinations.md#scheduling)を参照してください。 |
 | `allowedExportModes` | リスト | 顧客が使用できるファイルのエクスポートモードを定義します。サポートされている値：<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | リスト | 顧客が使用できるファイルエクスポートの頻度を定義します。サポートされている値：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> |
-| `defaultFrequency` | 列挙 | デフォルトのファイルエクスポートの頻度を定義します。サポートされている値を以下に示します。<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> デフォルト値は `DAILY` です。 |
+| `defaultFrequency` | 列挙 | デフォルトのファイルエクスポートの頻度を定義します。サポートされている値を以下に示します。<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> デフォルト値は `DAILY` です。 |
 | `defaultStartTime` | 文字列 | ファイルエクスポートのデフォルトの開始時間を定義します。24 時間のファイル形式を使用します。デフォルト値は「00:00」です。 |
 | `filenameConfig.allowedFilenameAppendOptions` | 文字列 | *必須*。ユーザーが選択できる、使用可能なファイル名マクロのリスト。書き出されたファイル名に追加される項目を決定します（オーディエンス ID、組織名、書き出し日時など）。`defaultFilename` を設定する場合、必ずマクロが重複するのを避けてください。<br><br>サポートされている値： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>マクロを定義する順序にかかわらず、Experience Platform UI は、常に、ここに提示された順序で表示します。<br><br> `defaultFilename` が空の場合、`allowedFilenameAppendOptions` リストには、少なくとも 1 つのマクロが含まれている必要があります。 |
 | `filenameConfig.defaultFilenameAppendOptions` | 文字列 | *必須*。ユーザーがチェックを外すことができる、事前に選択されたデフォルトのファイル名マクロ。<br><br> このリストのマクロは、`allowedFilenameAppendOptions` で定義されたもののサブセットです。 |
