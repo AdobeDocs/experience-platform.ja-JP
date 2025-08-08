@@ -1,20 +1,15 @@
 ---
 title: ソース UI のWorkspaceでの暗号化されたデータの取り込み
 description: ソース UI ワークスペースで暗号化されたデータを取り込む方法を説明します。
-badge: ベータ版
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1436'
 ht-degree: 9%
 
 ---
 
 # ソース UI での暗号化されたデータの取り込み
-
->[!AVAILABILITY]
->
->ソース UI での暗号化されたデータ取り込みのサポートはベータ版です。 機能とドキュメントは変更される場合があります。
 
 クラウドストレージバッチソースを使用して、暗号化されたデータファイルとフォルダーをAdobe Experience Platformに取り込むことができます。 暗号化されたデータの取り込みでは、非対称暗号化メカニズムを利用して、バッチデータを Experience Platform に安全に転送できます。 サポートされている非対称暗号化メカニズムは PGP と GPG です。
 
@@ -56,7 +51,7 @@ Experience Platform UI を使用して暗号化キーペアを作成できます
 
 >[!ENDSHADEBOX]
 
-Experience Platform UI でソースワークスペースに移動し、上部のヘッダーから [!UICONTROL &#x200B; キーペア &#x200B;] を選択します。
+Experience Platform UI でソースワークスペースに移動し、上部のヘッダーから [!UICONTROL  キーペア ] を選択します。
 
 ![ 「キーペア」ヘッダーが選択されているソースカタログ ](../../images/tutorials/edi/catalog.png)
 
@@ -165,4 +160,4 @@ Experience Platform UI でソースワークスペースに移動し、上部の
 
 ## 次の手順
 
-このドキュメントを読むことで、クラウドストレージバッチソースからExperience Platformに暗号化されたデータを取り込むことができるようになりました。 API を使用して暗号化されたデータを取り込む方法について詳しくは、[API を使用した暗号化されたデータの取り込み ](../api/encrypt-data.md) に関するガイドを参照し  [!DNL Flow Service]  ください。 Experience Platformのソースに関する一般的な情報については、[ ソースの概要 ](../../home.md) を参照してください。
+このドキュメントを読むことで、クラウドストレージバッチソースからExperience Platformに暗号化されたデータを取り込むことができるようになりました。 API を使用して暗号化されたデータを取り込む方法について詳しくは、[API を使用した暗号化されたデータの取り込み  [!DNL Flow Service]  に関するガイドを参照し ](../api/encrypt-data.md) ください。 Experience Platformのソースに関する一般的な情報については、[ ソースの概要 ](../../home.md) を参照してください。
