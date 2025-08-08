@@ -51,7 +51,7 @@ Experience Platform UI を使用して暗号化キーペアを作成できます
 
 >[!ENDSHADEBOX]
 
-Experience Platform UI でソースワークスペースに移動し、上部のヘッダーから [!UICONTROL  キーペア ] を選択します。
+Experience Platform UI でソースワークスペースに移動し、上部のヘッダーから [!UICONTROL &#x200B; キーペア &#x200B;] を選択します。
 
 ![ 「キーペア」ヘッダーが選択されているソースカタログ ](../../images/tutorials/edi/catalog.png)
 
