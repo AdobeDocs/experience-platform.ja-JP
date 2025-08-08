@@ -6,7 +6,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
 source-wordcount: '1280'
-ht-degree: 64%
+ht-degree: 66%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 64%
 
 >[!IMPORTANT]
 > 
->* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* データセットの書き出しをサポートする宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* データセットの書き出しをサポートする宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL データセット宛先の管理とアクティブ化]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 ## 概要 {#overview}
 
@@ -54,7 +54,7 @@ ht-degree: 64%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="アカウント名"
->abstract="今後この宛先アカウントを簡単に識別するのに役立つ名前を入力します。これは、同じ宛先に対して複数の接続がある場合に特に便利です。"
+>abstract="今後この宛先アカウントを簡単に識別するのに役立つ名前を入力します。これは、同じ宛先に複数の接続がある場合に特に便利です。"
 
 宛先に接続する最初の手順は、宛先プラットフォームへの認証です。
 
@@ -62,7 +62,7 @@ ht-degree: 64%
 
 新しい宛先接続を設定する際は、**[!UICONTROL アカウント名]** と、オプションで **[!UICONTROL 説明]** を指定する必要があります。 これらのフィールドは、すべての宛先で使用できます。
 
-* **[!UICONTROL アカウント名]**：今後この宛先アカウントを簡単に識別できる名前を入力します。 これは、同じ宛先に対して複数の接続がある場合に特に便利です。
+* **[!UICONTROL アカウント名]**：今後この宛先アカウントを簡単に識別できる名前を入力します。 これは、同じ宛先に複数の接続がある場合に特に便利です。
 * **[!UICONTROL 説明]** （オプション）：ユーザーまたはユーザーのチームがアカウントを区別するのに役立つ、接続の目的や関連するビジネスコンテキストなどの追加の詳細を追加します。
 
 これらのフィールドに明確で説明的な情報を提供すると、オーディエンスをアクティブ化する際に、正しい宛先アカウントを容易に管理および選択できます。

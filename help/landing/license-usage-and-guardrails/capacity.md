@@ -5,7 +5,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 
@@ -15,22 +15,22 @@ Adobe Experience Platformでは、の処理能力によって、組織がガー�
 
 Experience Platformのガードレールについて詳しくは、[Real-Time CDP ガードレールの概要 ](../../rtcdp/guardrails/overview.md) を参照してください。
 
-## 処理能力の動作 {#behavior}
+## 処理能力動作 {#behavior}
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="ストリーミングスループット"
->abstract="ストリーミングスループット値は、実稼動および開発用サンドボックスをまたいで、プロファイルサービスへのストリーミング取り込みに対する 1 秒あたりの結合されたピークインバウンドイベントを測定します。"
+>abstract="ストリーミングスループット値は、実稼動用サンドボックスと開発用サンドボックス全体で、プロファイルサービスへのストリーミングの取り込みに対する 1 秒ごとの合計ピークインバウンドイベントを測定します。"
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="ストリーミングオーディエンス数"
->abstract="サンドボックスあたりの最大ストリーミングオーディエンス数。この数には、サンドボックスにあるエッジオーディエンス数が含まれます。"
+>abstract="サンドボックスあたりのストリーミングオーディエンスの最大数。この数には、サンドボックス内にあるエッジオーディエンスの数が含まれます。"
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
->title="Edge オーディエンス"
->abstract="サンドボックスあたりの最大エッジオーディエンス数。"
+>title="エッジオーディエンス"
+>abstract="サンドボックスあたりのエッジオーディエンスの最大数。"
 
 現在、Capacity は以下のサービスをサポートしています。
 
