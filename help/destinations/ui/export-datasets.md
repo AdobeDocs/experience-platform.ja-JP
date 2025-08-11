@@ -3,9 +3,9 @@ title: クラウドストレージの宛先へのデータセットの書き出�
 type: Tutorial
 description: Adobe Experience Platform から目的のクラウドストレージの場所にデータセットを書き出す方法を説明します。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: b423e51e3e048a5dd7c2c15f80c8c1fcf5c2657b
+source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
 workflow-type: tm+mt
-source-wordcount: '2722'
+source-wordcount: '2721'
 ht-degree: 35%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 また、Adobeでは、（2024 年 9 月リリースより前に *作成されたすべてのデータセット書き出しデータフローのデフォルト終了日が 2025 年 9 月 1 日と導入されました*。
+>**アクション項目**:[2024 年 9 月リリースのExperience Platform](/help/release-notes/latest/latest.md#destinations) では、データセットデータフローの書き出し `endTime` 日を設定するオプションが導入されました。 Adobeでは、*2024 年 11 月 1 日（PT）より前* に作成されたすべてのデータセット書き出しデータフローに対して、2025 年 9 月 1 日（PT）のデフォルトの終了日が導入されました。
 >
 >これらのデータフローのいずれについても、終了日より前に、データフローの終了日を手動で更新する必要があります。さもないと、書き出しはその日に停止します。 Experience Platform UI を使用して、2025 年 9 月 1 日（PT）に停止に設定されるデータフローを確認します。
 >
 >データセット書き出しデータフローの終了日の編集方法については、[ スケジュールの節 ](#scheduling) を参照してください。
 
-この記事では、Adobe Experience Platform Experience Platform UI を使用して、目的のクラウドストレージの場所（[!DNL Amazon S3]、SFTP の場所、[!DNL Google Cloud Storage] など）に [ データセット ](/help/catalog/datasets/overview.md) を書き出すために必要なワークフローについて説明します。
+この記事では、Adobe Experience Platform Experience Platform UI を使用して、目的のクラウドストレージの場所（[、SFTP の場所、](/help/catalog/datasets/overview.md) など）に [!DNL Amazon S3] データセット [!DNL Google Cloud Storage] を書き出すために必要なワークフローについて説明します。
 
 Experience Platform API を使用してデータセットを書き出すこともできます。 詳しくは、[ データセット API の書き出しチュートリアル ](/help/destinations/api/export-datasets.md) を参照してください。
 
@@ -50,16 +50,16 @@ Experience Platform API を使用してデータセットを書き出すこと�
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取り込みまたは収集した後、Experience Platform UI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=ja#profile-attribute-datasets"> システム生成プロファイルスナップショットデータセット </a>。</li></td>
+    <td><ul><li>ソース、Web SDK、Mobile SDK、Analytics Data Connector およびAudience Managerを使用してデータを取り込みまたは収集した後、Experience Platform UI で作成されたプロファイルおよびエクスペリエンスイベントデータセット。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> システム生成プロファイルスナップショットデータセット </a>。</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ja#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> ドキュメントを参照してください。</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Experience Platform API を使用してデータセットを書き出すこと�
 
 このページで説明されているワークフローのエンドツーエンドの説明、データセットの書き出し機能を使用するメリット、推奨されるユースケースについては、以下のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3448819?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## サポートされる宛先 {#supported-destinations}
 
@@ -231,7 +231,7 @@ Experience Platform は、指定されたストレージの場所にフォルダ
 
 >[!TIP]
 > 
->このフォルダー構造の最初のレベル（`folder-name-you-provided`）は、データセットを書き出すために &rbrack;**宛先に接続 &lbrack; したときに指定した**&#x200B;[[!UICONTROL &#x200B; フォルダーパス &#x200B;]](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) を表します。
+>このフォルダー構造の最初のレベル（`folder-name-you-provided`）は、データセットを書き出すために **[!UICONTROL 宛先に接続]** したときに指定した [ フォルダーパス ](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) を表します。
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 

@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: b5f28a2df411d3aa99bc2714a4e2bb569c16dda1
+source-git-commit: d410471658d27e84453fabaebba698ef0530afe4
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 75%
+source-wordcount: '1311'
+ht-degree: 74%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 75%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットを書き出し](/help/destinations/api/export-datasets.md)
-   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -48,6 +48,7 @@ ht-degree: 75%
       * [宛先へのアカウントオーディエンスの有効化](./ui/activate-account-audiences.md)
       * [Experience Platform UI を使用した、オンデマンドによるバッチ宛先へのファイルの書き出し](./ui/export-file-now.md)
       * [Experience Platform UI を使用したデータセットの書き出し](./ui/export-datasets.md)
+      * [2024 年 11 月以前に作成されたデータフローのデータセット書き出しスケジュールを拡張します](./ui/dataset-expiration-update.md)
       * [（ベータ版）新しいベータ版クラウドストレージ宛先での最終選定時間 XDM 属性の使用](./ui/activate-last-qualification-time.md)
       * [配列、マップ、オブジェクトの書き出し](/help/destinations/ui/export-arrays-maps-objects.md)
       * [クラウドストレージの宛先に書き出されたデータに対する変換の実行](/help/destinations/ui/data-transformations-calculated-fields.md)
