@@ -3,10 +3,10 @@ keywords: 広告；bing;
 title: Microsoft Bing 接続
 description: Microsoft Bing の接続先を使用すると、ディスプレイ広告、検索、ネイティブを含むMicrosoft Advertising ネットワーク全体でリターゲティングとオーディエンスターゲットのデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 49%
+source-wordcount: '981'
+ht-degree: 35%
 
 ---
 
@@ -14,9 +14,31 @@ ht-degree: 49%
 
 ## 概要 {#overview}
 
-[!DNL Microsoft Bing] の宛先を使用して、[!DNL Display Advertising]、[!DNL Search]、[!DNL Native] を含む [!DNL Microsoft Advertising Network] 全体にプロファイルデータを送信します。
 
-[!DNL Microsoft Bing] の宛先は、Microsoftに *[!DNL Custom Audiences]* を作成します。 これらは、[Microsoft Advertisingのドキュメント ](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500) に記載されているように、[!DNL Microsoft Search Network] と [!DNL Audience Network] （[!DNL Native] /[!DNL Display] /[!DNL Programmatic]）の両方で使用できます。
+>[!IMPORTANT]
+>
+>* 2025 年 8 月 11 日（PT）以降、宛先カタログに 2 つの **[!DNL Microsoft Bing]** カードが並んで表示されるようになります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Microsoft Bing]** 宛先コネクタの名前は、**[!UICONTROL （非推奨）Microsoft Bing]** に変更され、**[!UICONTROL Microsoft Bing]** という名前の新しいカードが使用できるようになりました。
+>* 新しいアクティブ化データ フローには、カタログ内の新しい **[!UICONTROL Microsoft Bing]** 接続を使用します。 **[!UICONTROL （非推奨）のMicrosoft Bing]** の宛先へのアクティブなデータフローがある場合、自動的に更新されるので、ユーザー側で対応する必要はありません。
+>* [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。
+>   * フロー仕様 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
+>   * 接続仕様 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>
+> このアップグレードの後、**へのデータフローで、** アクティブ化されたプロファイルの数が減少 [!DNL Microsoft Bing] する場合があります。
+> > このドロップは、この宛先プラットフォームへのすべてのアクティベーションに対して **ECID マッピング要件** が導入されたことによって発生します。 詳しくは、このページの [ 必須マッピング ](#mandatory-mappings) の節を参照してください。
+>
+>**変更点：**
+>
+>* すべてのプロファイルアクティベーションで、ECID （Experience Cloud ID）マッピングが **必須** になりました。
+>* ECID マッピングのないプロファイルは、既存のアクティベーションデータフローから **ドロップ** されます。
+>
+>**必要な手順：**
+>
+>* オーディエンスデータを確認し、プロファイルに有効な ECID 値があることを確認します。
+>* アクティベーション指標を監視して、予想されるプロファイル数を確認します。
+
+[!DNL Microsoft Bing] の宛先を使用して、[!DNL Microsoft Advertising Network]、[!DNL Display Advertising]、[!DNL Search] を含む [!DNL Native] 全体にプロファイルデータを送信します。
+
+[!DNL Microsoft Bing] の宛先は、Microsoftに *[!DNL Custom Audiences]* を作成します。 これらは、[!DNL Microsoft Search Network]Microsoft Advertisingのドキュメント [!DNL Audience Network] に記載されているように、[!DNL Native] と [!DNL Display] （[!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500)）の両方で使用できます。
 
 プロファイルデータを [!DNL Microsoft Bing] に送信するには、まず宛先に接続する必要があります。
 
@@ -31,6 +53,7 @@ ht-degree: 49%
 | ID | 説明 |
 |---|---|
 | MAID | MICROSOFT ADVERTISING ID |
+| ECID | Experience Cloud ID。 この ID は、統合が正しく機能するために必須ですが、オーディエンスのアクティベーションには使用されません。 |
 
 {style="table-layout:auto"}
 
@@ -66,13 +89,13 @@ ht-degree: 49%
 
 宛先を設定する際には、次の情報を指定する必要があります。
 
-* [!UICONTROL &#x200B; アカウント ID]：整数フォーマットの [!DNL Bing Ads CID] です。
+* [!UICONTROL  アカウント ID]：整数フォーマットの [!DNL Bing Ads CID] です。
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -99,13 +122,22 @@ ht-degree: 49%
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-[ オーディエンススケジュール ](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順では、「[!UICONTROL &#x200B; マッピング ID]」フィールドにオーディエンス名を手動でマッピングする必要があります。 これにより、オーディエンスメタデータが [!DNL Bing] に正しく渡されます。
+[ オーディエンススケジュール ](../../ui/activate-segment-streaming-destinations.md#scheduling) 手順では、「[!UICONTROL  マッピング ID]」フィールドにオーディエンス名を手動でマッピングする必要があります。 これにより、オーディエンスメタデータが [!DNL Bing] に正しく渡されます。
 
 ![ オーディエンス名を Bing マッピング ID にマッピングする方法の例を示すオーディエンススケジュール画面を示す UI 画像。](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### 必須のマッピング {#mandatory-mappings}
+
+[ サポートされている ID](#supported-identities) の節で説明しているすべてのターゲット ID は必須であり、オーディエンスアクティベーションプロセス中にマッピングする必要があります。 これには以下が含まれます。
+
+* **MAID** （Microsoft Advertising ID）
+* **ECID** （Experience Cloud ID）
+
+必要な ID をすべてマッピングしないと、アクティベーションワークフローを完了できません。 各 ID は統合において特定の目的を果たし、宛先が正しく機能するにはすべての ID が必須となります。
 
 ## 書き出したデータ {#exported-data}
 
