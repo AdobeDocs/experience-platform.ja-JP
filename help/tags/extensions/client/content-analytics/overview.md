@@ -2,9 +2,9 @@
 title: Adobe Content Analytics拡張機能の概要
 description: Adobe Experience PlatformのAdobe Content Analytics タグ拡張機能について説明します。
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45ce2b0ff57155dccef2f7c94390a6ddff5c17cd
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -19,28 +19,26 @@ ht-degree: 0%
 
 ## Adobe Content Analytics タグ拡張機能のインストール {#install}
 
->[!NOTE]
->
->Adobe Content Analytics タグ拡張機能は、[Content Analytics ガイド付き設定ウィザード ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"} を使用すると自動的に作成されるタグプロパティの一部として自動的にインストールされます。
+Adobe Content Analytics タグ拡張機能は、[Content Analytics ガイド付き設定ウィザード ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) を使用すると自動的に作成されるタグプロパティの一部として自動的にインストールされます。
 
+<!--
+### Manual installation
 
-### 手動インストール
+In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-手動設定の場合、Adobe Content Analytics タグ拡張機能にプロパティをインストールする必要があります。 まだ行っていない場合は、[ タグプロパティの作成 ](https://experienceleague.adobe.com/ja/docs/platform-learn/implement-in-websites/configure-tags/create-a-property) に関するドキュメントを参照してください。
+After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
 
-プロパティを作成した後、または [Content Analytics ガイド付き設定ウィザード ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/content-analytics/configuration/guided) を使用して作成したプロパティを選択する際に、プロパティを開いて、左側のバーの「**[!UICONTROL 拡張機能]**」タブを選択します。
+Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the **[!DNL Adobe Content Analytics]** extension and select **[!UICONTROL Install]**.
 
-「**[!UICONTROL カタログ]**」タブを選択します。 使用可能な拡張機能のリストから、**[!DNL Adobe Content Analytics]** の拡張機能を見つけて **[!UICONTROL インストール]** を選択します。
+![Image showing the Tags UI with the Web SDK extension selected](assets/aca-tag-install.png)
 
-![Web SDK拡張機能が選択されたタグ UI を示す画像 ](assets/aca-tag-install.png)
-
-**[!UICONTROL インストール]** を選択した後、Adobe Content Analytics タグ拡張機能を設定して、設定を保存する必要があります。
-
+After selecting **[!UICONTROL Install]**, you must configure the Adobe Content Analytics tag extension and save the configuration.
+-->
 
 <!--
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
@@ -52,7 +50,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## データストリームの設定
 
-[Content Analyticsのガイド付き設定ウィザード ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/content-analytics/configuration/guided) は、**[!UICONTROL Sandbox]** および **[!UICONTROL 実稼動データストリーム]** の適切な値を自動的に選択します。 オプションで、追加の **[!UICONTROL ステージングデータストリーム]** および **[!UICONTROL 開発データストリーム]** を設定できます。
+[Content Analyticsのガイド付き設定ウィザード ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) は、**[!UICONTROL Sandbox]** および **[!UICONTROL 実稼動データストリーム]** の適切な値を自動的に選択します。 オプションで、追加の **[!UICONTROL ステージングデータストリーム]** および **[!UICONTROL 開発データストリーム]** を設定できます。
 
 ![ タグ UI のAdobe Content Analytics タグ拡張機能のデータストリーム設定を示す画像 ](assets/aca-tag-datastreams.png)
 
@@ -62,7 +60,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 >
 >別のサンドボックスとデータストリームを設定する場合、次のことを確認します
 >
->* 選択したサンドボックスは、別のコンテンツ分析設定にまだ関連付けられていません。
+>* 選択したサンドボックスは、別のContent Analytics設定にまだ関連付けられていません。
 >* 選択したデータストリームでは、有効なExperience Platform エクスペリエンスイベントデータセットでContent Analytics サービスが設定されています。
 
 データストリームの設定方法については、[ データストリーム ](../../../../datastreams/overview.md) に関するガイドを参照してください。
@@ -83,7 +81,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## イベントフィルタリングの設定
 
-Content Analyticsのデータを収集する際に、「**[!UICONTROL イベントフィルタリング]**」セクションで正規表現を変更して **[!UICONTROL ページ URL]** および **[!UICONTROL Assets URL]** をフィルタリングできます。 [Content Analytics ガイド付き設定ウィザードで定義した正規表現は ](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/content-analytics/configuration/guided) 自動的に入力されます。
+Content Analyticsのデータを収集する際に、「**[!UICONTROL イベントフィルタリング]**」セクションで正規表現を変更して **[!UICONTROL ページ URL]** および **[!UICONTROL Assets URL]** をフィルタリングできます。 [Content Analytics ガイド付き設定ウィザードで定義した正規表現は ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) 自動的に入力されます。
 
 ![ タグ UI のAdobe Content Analytics タグ拡張機能のイベントフィルタリング設定を示す画像 ](assets/aca-tag-eventfiltering.png)
 
@@ -91,7 +89,7 @@ Content Analyticsのデータを収集する際に、「**[!UICONTROL イベン�
 ### 例
 
 * すべてのドキュメントページをContent Analyticsから除外する場合。<br/> 次の正規表現を使用します。`^(?!.*documentation).*`
-* コンテンツ分析から、すべてのロゴ JPEGおよびSVG画像を除外する場合。<br/> 次の正規表現を使用します。`^(?!.*(logo\.jpg|\.svg)).*$`
+* Content Analyticsからすべてのロゴ JPEGとSVG画像を除外する場合。<br/> 次の正規表現を使用します。`^(?!.*(logo\.jpg|\.svg)).*$`
 
 **[!UICONTROL 正規表現をテスト]** を使用して、**[!UICONTROL 正規表現テスター]** で正規表現をテストできます。
 
