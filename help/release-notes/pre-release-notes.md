@@ -4,10 +4,10 @@ description: Adobe Experience Platformの最新のリリースノートのプレ
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 7e91181f71b84fdaf04a39e003cbbd415827e282
+source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 17%
+source-wordcount: '1116'
+ht-degree: 18%
 
 ---
 
@@ -23,106 +23,73 @@ ht-degree: 17%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**リリース日：2025年7月29日（PT）**
+**リリース日：2025 年 8 月**
 
 Adobe Experience Platformの既存の機能に対する新機能とアップデート：
 
+- [アラート](#alerts)
 - [宛先](#destinations)
-- [データ取り込み](#ingestion)
-- [クエリサービス](#query-service)
-- [Real-Time CDP B2B エディション](#b2b)
-- [サンドボックス](#sandboxes)
-- [セグメント化サービス](#segmentation)
+- [エクスペリエンスデータモデル（XDM）](#xdm)
+- [セグメント化サービス](#segmentation-service)
 - [ソース](#sources)
 
-## 宛先 {#destinations}
+## アラート {#alerts}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-
-**更新された宛先**
-
-| 宛先 | 説明 |
-| --- | --- |
-| Marketo宛先カードの統合 | Marketo V2 とMarketo Engage Person Sync の宛先カードは、1 つの統合された宛先カードに統合されました。 この統合により、宛先の選択プロセスが簡略化され、Marketo統合をより効率的に行うことができます。 |
-
-**新機能または更新された機能**
-
-| 機能 | 説明 |
-| --- | --- |
-| エッジ宛先用の強化されたデータストリーム情報 | Adobe Targetとカスタム Personalizationの宛先の右側パネルの情報が改善され、データストリーム名が表示されるようになりました。これにより、関連するデータストリーム設定がよりわかりやすく表示され、既存のデータフローを確認する際の混乱が軽減されます。 宛先設定画面の **[!UICONTROL データストリーム ID]** セレクターが **[!UICONTROL データストリーム]** に更新され、ユーザーインターフェイスがわかりやすくなりました。 |
-| 宛先選択でのマーケティングアクションの表示 | マーケティングアクションが宛先 **[!UICONTROL 参照]** タブの右側のパネルおよび **[!UICONTROL データフロー実行]** ページに表示されるようになり、表示ページに移動しなくてもマーケティングアクションの変更をすぐに確認できるようになりました。 この改善により、宛先の設定中にマーケティングアクション設定を簡単に検証できるようになり、ユーザーエクスペリエンスが向上します。 |
-| （限定ベータ版）宛先のマーケティングアクションの編集 | 既存の宛先のマーケティングアクションを編集できるようになりました。 この機能は限定的なベータ版です。 アクセスをリクエストするには、Adobe担当者にお問い合わせください。 |
-| （限定的なベータ版）宛先の編集 | これで、作成後に宛先設定を編集できます。 この機能は限定的なベータ版です。 アクセスをリクエストするには、Adobe担当者にお問い合わせください。 |
-| 宛先接続のアカウント名と説明 | 宛先に接続する際にアカウント名と説明を追加できるようになり、複数のアカウントを持つ宛先をより適切に管理できます。 |
-
-**修正点**
-
-| 問題 | 説明 |
-| --- | --- |
-| カテゴリスクロール機能 | 宛先とソースカタログのカテゴリ サイドメニューが、マウスポインターを置くと正しくスクロールされず、宛先カテゴリを参照するユーザーのナビゲーションの使いやすさが向上する問題を修正しました。 |
-
-詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
-
-## データ取り込み {#ingestion}
-
-Experience Platformは、様々なソースからのバッチデータ取り込みとストリーミングデータ取り込みの両方をサポートする包括的なデータ取り込みフレームワークを提供します。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| ストリーミングプロファイル取り込みの監視のサポート | ストリーミングプロファイル取り込みのリアルタイム監視が使用できるようになり、スループット、待ち時間、データ品質指標に対する透明性が提供されます。 これにより、プロアクティブなアラートと実用的なインサイトがサポートされ、データエンジニアが容量違反と取り込みの問題を特定するのに役立ちます。 |
+| ストリーミングスループット容量アラート | 3 つの新しいアラートにより、ユーザーはアラートを登録および設定して、ストリーミングスループット容量のパフォーマンスをプロアクティブに管理および監視できます。 新しいアラートには、ストリーミングのスループットが 80%、90% に達した場合、処理能力の制限を超えた場合などが含まれます。 詳細については、「[capacity alert rules](../observability/alerts/rules.md#capacity) guide」を参照してください。 |
 
-詳しくは、[ データ取り込みの概要 ](../ingestion/home.md) を参照してください。
+アラートについて詳しくは、[[!DNL Observability Insights]  概要 ](../observability/home.md) を参照してください。
 
-## クエリサービス {#query-service}
+## 宛先 {#destinations}
 
-Adobe Experience Platform クエリサービスは、プラットフォーム全体でのデータ分析と調査に対応する堅牢な SQL インターフェイスを提供します。
+Experience Platformから [!DNL Destinations] データの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-**新機能または更新された機能**
+**新しい宛先**
 
-| 機能 | 説明 |
-| ------- | ----------- |
-| セッション管理の強化 | Data Distillerのセッション管理機能が強化され、開発および実稼動環境全体でユーザーセッションをより詳細に制御し、パフォーマンスのモニタリングを強化できるようになりました。 |
-| 有効期限のない資格情報のパスワード文字制限のサポート | Data Distillerでは、特定の文字制限を持つ、有効期限のない資格情報をサポートするようになりました。 パスワードには数字、小文字、大文字、特殊文字が少なくとも 1 文字必要ですが、ドル記号（$）はサポートされていません。 推奨される特殊文字には `!, @, #, ^, or &` があります。 |
-| 環境全体にわたるパフォーマンスの一貫性の向上 | Data Distillerのパフォーマンスが開発用サンドボックスと実稼動用サンドボックスの間で一貫するようになり、どちらの環境でも同様のバックエンドリソースが使用できるようになりました。 計算時間は、データ量と、処理時に使用可能なバックエンド計算リソースによって異なる場合があります。 |
+| 宛先 | 説明 |
+| --- | --- |
+| [!DNL Acxiom Real ID Audience] の宛先 | [!DNL Acxiom Real ID Audience Connection] の宛先を使用すると、[!DNL Acxiom's]Real ID™[ テクノロジー ](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。 |
 
-詳しくは、[ クエリサービスの概要 ](../query-service/home.md) を参照してください。
 
-## Real-Time CDP B2B エディション {#b2b}
+**更新された宛先**
 
-Real-Time CDP B2B editionは、包括的な B2B 顧客データ管理機能を提供します。これにより、組織は統合された顧客プロファイルを作成し、高度な B2B オーディエンスを作成して、様々なマーケティングチャネルにわたってデータをアクティブ化できます。
-
-**新機能または更新された機能**
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| B2B アーキテクチャのアップグレード | Experience Platformは、B2B 属性を持つマルチエンティティオーディエンスを大幅に改善する新しい B2B アーキテクチャにアップグレードしています。 このアップグレードにより、結合ポリシーのサポートが統合され、オーディエンス数の精度が向上し、エンティティ解決機能が向上します。 |
-| 複数エンティティオーディエンスの結合ポリシーの統合 | B2B 属性を持つマルチエンティティオーディエンスでは、複数の結合ポリシーをサポートするのではなく、単一の結合ポリシー（デフォルトの結合ポリシー）のみをサポートするようになりました。 この変更により、一貫したオーディエンス構成が保証され、結合ロジックの管理が簡素化されます。 |
-| アカウントオーディエンス制約の更新 | アカウントオーディエンスには、エクスペリエンスイベントの 30 日間のルックバックウィンドウ、カスタムエンティティの制限、`inSegment` スタムイベントの使用制限という、以前の制約がなくなりました。 これらの更新により、複雑な B2B オーディエンス定義を柔軟に作成できるようになります。 |
-| B2B エンティティのオーディエンス数の拡張 | アカウントや商談などの B2B エンティティを持つオーディエンスのオーディエンスサイズの予測が、リアルタイムのセグメント化の結果に基づいて正確になりました。 この改善により、B2B の複雑な関係に関連するオーディエンスに対して、より正確で信頼性の高い予測が提供されます。 |
-| オーディエンスメンバーシップのアカウントスナップショット | オーディエンスメンバーシップの詳細がスナップショット書き出しのアカウントエンティティに含まれるようになり、アカウントレベルのオーディエンスステータス、タイムスタンプ、メンバーシップ指標にアクセスできるようになりました。 これにより、プロファイル（人物）とアカウントのセグメント化モデルの間に機能パリティが生じます。 |
-| マルチエンティティオーディエンス用のサンドボックスツールの変更 | 移行前に書き出された B2B エンティティとエクスペリエンスイベントを含んだマルチエンティティオーディエンスの読み込みは、サポートされなくなりました。 これらのオーディエンスは読み込みの検証に失敗し、新しいアーキテクチャに自動的に変換することはできません。 ターゲットサンドボックスにインポートする前に、移行後にオーディエンスを再エクスポートする必要があります。 |
-| B2B Entity API の廃止 | B2B エンティティ（アカウント、商談、アカウントと人物の関係、商談と人物の関係、キャンペーン、キャンペーンメンバー、マーケティングリスト、マーケティングリストメンバー）の API を使用したオーディエンスの作成は、非推奨（廃止予定）になりました。 さらに、これらの B2B エンティティに対するプロファイルアクセス API のルックアップ操作と削除操作も非推奨（廃止予定）になりました。 |
-| エンティティ解決の ID 名前空間の更新 | アカウントエンティティと商談エンティティでは、特定の ID 名前空間を使用した時間優先ベースの結合が使用されるようになりました（アカウントの場合は `b2b_account`、商談の場合は `b2b_opportunity`）。 他のすべてのエンティティは、時間の優先順位に基づくマージを使用して、プライマリ ID の重複がマージされて統合されます。 |
-
-詳しくは、[Real-Time CDP B2B editionの概要 ](../rtcdp/b2b-overview.md) を参照してください。
-
-## サンドボックス {#sandboxes}
-
-Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。
+| 宛先 | 説明 |
+| --- | --- |
+| [!DNL LinkedIn] 宛先の認証有効期限の詳細 | 期限切れの資格情報について二度と心配する必要はありません。 アカウントの有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、[!DNL LinkedIn] 認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 |
+| [!DNL Data Landing Zone] 宛先の暗号化のサポート | 書き出したデータを暗号化で保護します。 RSA 形式の公開鍵を添付して、書き出したファイルを暗号化できるようになりました。これにより、他のクラウドストレージの宛先が機密情報に提供するのと同じレベルのセキュリティが提供されます。 |
+| [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) 内部アップグレード | 2025 年 8 月 11 日（PT）以降、宛先カタログに 2 つの **[!DNL Microsoft Bing]** カードが並んで表示されるようになります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Microsoft Bing]** 宛先コネクタの名前は、**[!UICONTROL （非推奨）Microsoft Bing]** に変更され、**[!UICONTROL Microsoft Bing]** という名前の新しいカードが使用できるようになりました。 新しいアクティブ化データ フローには、カタログ内の新しい **[!UICONTROL Microsoft Bing]** 接続を使用します。 **[!UICONTROL （非推奨）のMicrosoft Bing]** の宛先へのアクティブなデータフローがある場合、自動的に更新されるので、ユーザー側で対応する必要はありません。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。<ul><li>フロー仕様 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>接続仕様 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> このアップグレードの後、**へのデータフローで、** アクティブ化されたプロファイルの数が減少 [!DNL Microsoft Bing] する場合があります。 このドロップは、この宛先プラットフォームへのすべてのアクティベーションに対して **ECID マッピング要件** が導入されたことによって発生します。 |
+| 宛先の追加 [!DNL Amazon Ads] 識別子 | Amazon広告の宛先で新しい ID （`firstName`、`lastName`、`street`、`city`、`state`、`zip`、`country`）がサポートされるようになりました。 これらのフィールドは、オーディエンスの一致率の向上を目的としており、オプションの SHA256 ハッシュを含むプレーンテキストで渡されます。 |
+| [!DNL Marketo] 宛先カードの統合 | 統合された宛先カードを使用すると、[!DNL Marketo] しい宛先設定を簡素化できます。 [!DNL Marketo] V2 と V3 のカードを 1 つの合理化されたオプションに統合し、適切な宛先を選択してすばやく開始できるようになりました。 |
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| マルチエンティティオーディエンスの読み込みの変更 | サンドボックスツールが更新され、新しい B2B アーキテクチャのアップグレードがサポートされるようになりました。 B2B エンティティとエクスペリエンスイベントを含んだマルチエンティティオーディエンスは、サンドボックスツールを使用してターゲットサンドボックスにインポートする前に、アーキテクチャのアップグレード後に再度書き出す必要があります。 アップグレード前のバージョンをインポートすると、検証に失敗します。 |
+| 2024 年 11 月以前に作成されたデータフローのデータセット書き出しスケジュールを拡張します | 2024 年 11 月より前に作成されたデータセット書き出しデータフローがある組織の場合、これらのデータフローは 2025 年 9 月 1 日に機能しなくなります。 2025 年 9 月 1 日（PT）以降もデータの書き出しを維持するためにデータフローが必要な場合、[ このガイド ](../destinations/ui/dataset-expiration-update.md) の手順に従って、データセットを書き出す各宛先のスケジュールを拡張する必要があります。 |
+| 宛先の検索、フィルタリングおよびタグ付け機能の強化 | 「参照」タブと「アカウント」タブの検索機能、フィルタリング機能、タグ付け機能の強化により、宛先管理ワークフローが向上します。 名前で特定のデータフローとアカウントを検索し、宛先プラットフォーム、ステータス、日付などの様々な条件でフィルタリングし、カスタムタグを作成して宛先を整理できるようになりました。 列の並べ替えは、前回のデータフロー実行時などのキーフィールドでも使用できるので、宛先接続の識別と管理が容易になります。 |
 
-サンドボックスについて詳しくは、[ サンドボックスの概要 ](../sandboxes/home.md) を参照してください。
+詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
+
+## エクスペリエンスデータモデル（XDM） {#xdm}
+
+XDM は、Experience Platformに取り込むデータの共通の構造と定義（スキーマ）を提供するオープンソース仕様です。 XDM 標準規格に準拠しているので、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客アクションから有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| モデルベースのスキーマ | モデルベースのスキーマを使用して、データモデリングを簡略化できます。 包括的なハウツー例やガイダンスを使用して、スキーマをより簡単に作成できるようになりました。 この機能は、現在、Campaign Orchestration のライセンスホルダーが使用でき、GA の Data Distillerのお客様にも拡大される予定で、データモデリングがよりアクセスしやすく効率的になります。 |
+
+詳しくは、[XDM の概要 ](../xdm/home.md) を参照してください。
 
 ## セグメント化サービス {#segmentation-service}
 
@@ -132,23 +99,49 @@ Experience Platform は、デジタルエクスペリエンスアプリケーシ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 外部オーディエンス API | 外部オーディエンス API を使用すると、外部で生成されたオーディエンスをプログラムでAdobe Experience Platformに読み込むことができます。 |
+| オーディエンス見積り | オーディエンスの推定がセグメントビルダー内で自動的に生成されるようになりました。 この値は、オーディエンスを変更するたびに更新され、常に最新のオーディエンスルールを反映します。 |
+
+詳しくは、[[!DNL Segmentation Service] 概要](../segmentation/home.md)を参照してください。
 
 ## ソース {#sources}
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理を行うことができます。
 
-**新しいソース**
-
-| ソース | 説明 |
-| --- | --- |
-| [!DNL Didomi] （ストリーミングSDK）のサポート | [!DNL Didomi] ソースコネクタを使用すると、[!DNL Didomi] のプラットフォームから同意管理データを取り込み、プライバシー規制や同意ベースのマーケティング戦略への準拠をサポートできます。 |
-
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 選択したソースでの change data capture のサポート | ソースコネクタを使用して、増分取り込みの変更データキャプチャを有効にするデータフローを作成できるようになりました。 この機能を使用すると、お客様はデータの種類を変更して増分取り込みを行い、データの鮮度を向上させ、処理オーバーヘッドを削減できます。 |
-| [!DNL Salesforce] でのレコードのソフト削除のサポート | [!DNL Salesforce] ソースでは、オプションの `includeDeletedObjects` パラメーターを使用して、ソフト削除されたレコードを含めることができるようになりました。 true に設定した場合、お客様は、ソフト削除されたレコードを [!DNL Salesforce] クエリに含め、これらのレコードをExperience Platformに取り込むことができます。 |
+| [!BADGE Beta]{type=Informative}UI での Azure プライベートリンクのサポート | プライベートネットワーク接続でデータを保護します。 プライベートエンドポイントを作成し、パブリックインターネットをバイパスするデータフローを設定して、機密データのセキュリティとネットワーク分離を強化できるようになりました。 |
+| [!DNL Marketo] ソースドキュメントのアップデート | [!DNL Marketo] データがExperience Platformに入った際にどのように変換されるかを完全に把握できます。 すべてのフィールドマッピングにデータ変換の詳細な説明が含まれるようになりました。これにより、`PersonID` ータがどのように変 `leadID` し、`eventType` がどのように変 `activityType` するかを正確に理解できます。 |
+| [!DNL Azure Blob Storage] のサービスプリンシパル認証のサポート | サービスプリンシパル認証を使用して、[!DNL Azure Blob Storage] アカウントをExperience Platformに接続できるようになりました。 |
 
 詳しくは、[ソースの概要](../sources/home.md)を参照してください。
+
+<!--
+
+## Query Service {#query-service}
+
+Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
+
+For more information, read the [Query Service overview](../query-service/home.md).
+
+## B2B CDP {#b2b-cdp}
+
+Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Lookup Support for B2B Classes Only | Streamline your B2B data access with focused lookup support. You can now look up Person (Profile), Experience Events, Account, and Opportunity entities directly through the Entities API. This simplified approach helps you access the most important B2B data more efficiently while reducing complexity. |
+| B2B Namespace and Schema Updates | Experience a cleaner, more streamlined B2B data model. We've simplified the B2B namespace and schema structure by removing complex relationship mappings and non-primary identity support for certain B2B classes. This makes your B2B data easier to work with and understand. |
+
+For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
+
+-->
