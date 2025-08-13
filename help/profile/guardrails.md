@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 機能を最適に使用するための、プロファイルデータおよびセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1536201961211aeb747e418794196c146d86e869
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '2636'
-ht-degree: 52%
+source-wordcount: '2649'
+ht-degree: 51%
 
 ---
 
@@ -125,7 +125,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 | すべてのサンドボックスでのストリーミングスループット | 1500 RPS | パフォーマンスガードレール | ストリーミングセグメント化では、実稼動および開発用サンドボックス全体で、1 秒あたり 1,500 インバウンドイベントの結合されたピーク値をサポートしています。 ストリーミングセグメント化は、セグメントメンバーシップのプロファイルを選定するのに最大 5 分かかる場合があります。 詳しくは、[ ストリーミングオーディエンス ](/help/segmentation/methods/streaming-segmentation.md) を参照してください。 |
 | サンドボックスごとのバッチオーディエンス | 4000 | パフォーマンスガードレール | サンドボックスあたり最大 4,000 個の **アクティブ** バッチオーディエンスを持つことができます。 組織あたり 4000 個を超えるバッチオーディエンスを持つことができます（各 **個人** サンドボックスのバッチオーディエンスが 4000 個未満である必要があります）。 追加のバッチオーディエンスを作成しようとすると、システムのパフォーマンスに影響を与える可能性があります。 |
 | サンドボックスごとのアカウントオーディエンス | 50 | システムに適用されたガードレール | 1 つのサンドボックスに作成できるアカウントオーディエンスは最大 50 個です。 サンドボックスで 50 個のオーディエンスに到達した場合、新しいアカウントオーディエンスを作成しようとすると、**[!UICONTROL オーディエンスを作成]** コントロールが無効になります。 詳しくは、[ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) を参照してください。 |
-| サンドボックスごとの公開済みコンポジション | 10 | パフォーマンスガードレール | サンドボックスには、最大 10 個の公開済みコンポジションを含めることができます。 詳しくは、[UI ガイドのオーディエンス構成 ](/help/segmentation/ui/audience-composition.md) を参照してください。 |
+| サンドボックスごとの公開済みコンポジション | 10 | パフォーマンスガードレール | サンドボックスには、最大 10 個の公開済みコンポジションを含めることができます。 詳しくは、[UI ガイドのオーディエンス構成 ](/help/segmentation/ui/audience-composition.md) を参照してください。 **メモ**:Federated Audience Composition で作成されたコンポジションは、このガードレールでカウント **されません**。 |
 | 最大オーディエンスサイズ | 30% | パフォーマンスガードレール | オーディエンスの推奨される最大メンバーシップは、システム内のプロファイルの合計数の 30% です。 プロファイルの 30% 以上をメンバーまたは複数の大きなオーディエンスとしてオーディエンスを作成できますが、システムのパフォーマンスに影響を与える可能性があります。 |
 | 柔軟なオーディエンス評価実行 | 年間 50 （実稼動サンドボックス） <br/> 年間 100 （開発用サンドボックス） | システムに適用されたガードレール | **実稼動** サンドボックスごとに 1 年に最大 50 回の柔軟なオーディエンス評価を実行できます。 **開発** サンドボックスごとに、1 年に最大 100 回の柔軟なオーディエンス評価を実行できます。 |
 | 柔軟なオーディエンス評価実行 | 1 日につき 2 回 | システムに適用されたガードレール | サンドボックスごとに最大 1 日あたり 2 回の実行があります。 |
@@ -188,7 +188,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ja#end-to-end-latency-diagrams)。
+* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
 * [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
