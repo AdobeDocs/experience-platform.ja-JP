@@ -4,10 +4,10 @@ description: Adobe Experience Platformの最新のリリースノートのプレ
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
+source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 18%
+source-wordcount: '1074'
+ht-degree: 19%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 18%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025 年 8 月**
 
@@ -39,7 +39,7 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -53,28 +53,31 @@ Experience Platformでは、様々なExperience Platform アクティビティ�
 
 Experience Platformから [!DNL Destinations] データの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
+>[!IMPORTANT]
+>
+>**データセット書き出しスケジュール拡張機能**
+>
+>2024 年 11 月より前に作成されたデータセット書き出しデータフローがある組織の場合、これらのデータフローは **2025 年 9 月 1 日** に機能しなくなります。 2025 年 9 月 1 日（PT）以降もデータの書き出しを維持するためにデータフローが必要な場合、[ このガイド ](../destinations/ui/dataset-expiration-update.md) の手順に従って、データセットを書き出す各宛先のスケジュールを拡張する必要があります。
+
 **新しい宛先**
 
 | 宛先 | 説明 |
 | --- | --- |
 | [!DNL Acxiom Real ID Audience] の宛先 | [!DNL Acxiom Real ID Audience Connection] の宛先を使用すると、[!DNL Acxiom's]Real ID™[ テクノロジー ](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。 |
 
-
 **更新された宛先**
 
 | 宛先 | 説明 |
 | --- | --- |
-| [!DNL LinkedIn] 宛先の認証有効期限の詳細 | 期限切れの資格情報について二度と心配する必要はありません。 アカウントの有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、[!DNL LinkedIn] 認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 |
+| [!DNL LinkedIn] 宛先と [!DNL Pinterest] 宛先の認証の有効期限の詳細 | アカウントの有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、[!DNL LinkedIn] ーザーと [!DNL Pinterest] 認証の有効期限が切れるタイミングを確認して、データフローが中断される前に更新できるようになりました。 |
 | [!DNL Data Landing Zone] 宛先の暗号化のサポート | 書き出したデータを暗号化で保護します。 RSA 形式の公開鍵を添付して、書き出したファイルを暗号化できるようになりました。これにより、他のクラウドストレージの宛先が機密情報に提供するのと同じレベルのセキュリティが提供されます。 |
 | [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) 内部アップグレード | 2025 年 8 月 11 日（PT）以降、宛先カタログに 2 つの **[!DNL Microsoft Bing]** カードが並んで表示されるようになります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Microsoft Bing]** 宛先コネクタの名前は、**[!UICONTROL （非推奨）Microsoft Bing]** に変更され、**[!UICONTROL Microsoft Bing]** という名前の新しいカードが使用できるようになりました。 新しいアクティブ化データ フローには、カタログ内の新しい **[!UICONTROL Microsoft Bing]** 接続を使用します。 **[!UICONTROL （非推奨）のMicrosoft Bing]** の宛先へのアクティブなデータフローがある場合、自動的に更新されるので、ユーザー側で対応する必要はありません。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。<ul><li>フロー仕様 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>接続仕様 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> このアップグレードの後、**へのデータフローで、** アクティブ化されたプロファイルの数が減少 [!DNL Microsoft Bing] する場合があります。 このドロップは、この宛先プラットフォームへのすべてのアクティベーションに対して **ECID マッピング要件** が導入されたことによって発生します。 |
-| 宛先の追加 [!DNL Amazon Ads] 識別子 | Amazon広告の宛先で新しい ID （`firstName`、`lastName`、`street`、`city`、`state`、`zip`、`country`）がサポートされるようになりました。 これらのフィールドは、オーディエンスの一致率の向上を目的としており、オプションの SHA256 ハッシュを含むプレーンテキストで渡されます。 |
 | [!DNL Marketo] 宛先カードの統合 | 統合された宛先カードを使用すると、[!DNL Marketo] しい宛先設定を簡素化できます。 [!DNL Marketo] V2 と V3 のカードを 1 つの合理化されたオプションに統合し、適切な宛先を選択してすばやく開始できるようになりました。 |
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| 2024 年 11 月以前に作成されたデータフローのデータセット書き出しスケジュールを拡張します | 2024 年 11 月より前に作成されたデータセット書き出しデータフローがある組織の場合、これらのデータフローは 2025 年 9 月 1 日に機能しなくなります。 2025 年 9 月 1 日（PT）以降もデータの書き出しを維持するためにデータフローが必要な場合、[ このガイド ](../destinations/ui/dataset-expiration-update.md) の手順に従って、データセットを書き出す各宛先のスケジュールを拡張する必要があります。 |
 | 宛先の検索、フィルタリングおよびタグ付け機能の強化 | 「参照」タブと「アカウント」タブの検索機能、フィルタリング機能、タグ付け機能の強化により、宛先管理ワークフローが向上します。 名前で特定のデータフローとアカウントを検索し、宛先プラットフォーム、ステータス、日付などの様々な条件でフィルタリングし、カスタムタグを作成して宛先を整理できるようになりました。 列の並べ替えは、前回のデータフロー実行時などのキーフィールドでも使用できるので、宛先接続の識別と管理が容易になります。 |
 
 詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
