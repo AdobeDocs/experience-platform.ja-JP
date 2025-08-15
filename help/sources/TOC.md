@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 8ba51f144e3120637d8c6027be85b1b4e6e5d613
+source-git-commit: 197cdc89abd292d87276d792201dedb2373f5564
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1056'
 ht-degree: 91%
 
 ---
@@ -205,7 +205,7 @@ ht-degree: 91%
       - [カスタマーサクセスデータの調査](tutorials/api/explore/customer-success.md)
       - [データベースのデータの調査](tutorials/api/explore/database-nosql.md)
       - [e コマースデータの調査](tutorials/api/explore/ecommerce.md)
-      - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
+      - [マーケティングオートメーションデータの調査](tutorials/api/explore/marketing-automation.md)
       - [支払いデータの調査](tutorials/api/explore/payments.md)
       - [プロトコルデータの調査](tutorials/api/explore/protocols.md)
       - [データテーブルの調査](tutorials/api/explore/tabular.md)
@@ -216,7 +216,7 @@ ht-degree: 91%
       - [カスタマーサクセスデータの収集](tutorials/api/collect/customer-success.md)
       - [データベースデータの収集](tutorials/api/collect/database-nosql.md)
       - [e コマースデータの収集](tutorials/api/collect/ecommerce.md)
-      - [マーケティング自動化データの収集](tutorials/api/collect/marketing-automation.md)
+      - [マーケティングオートメーションデータの収集](tutorials/api/collect/marketing-automation.md)
       - [支払データの収集](tutorials/api/collect/payments.md)
       - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
       - [ストリーミングデータの収集](tutorials/api/collect/streaming.md)
@@ -340,7 +340,7 @@ ht-degree: 91%
       - [カスタマーサクセス接続のデータフロー](tutorials/ui/dataflow/customer-success.md)
       - [データベース接続のデータフロー](tutorials/ui/dataflow/databases.md)
       - [e コマース接続のデータフロー](tutorials/ui/dataflow/ecommerce.md)
-      - [マーケティング自動化接続のデータフロー](tutorials/ui/dataflow/marketing-automation.md)
+      - [マーケティングオートメーション接続のデータフロー](tutorials/ui/dataflow/marketing-automation.md)
       - [支払接続のデータフロー](tutorials/ui/dataflow/payments.md)
       - [プロトコル接続のデータフロー](tutorials/ui/dataflow/protocols.md)
    - [UI のテンプレートを使用してソースのデータフローを作成する](tutorials/ui/templates.md)
@@ -356,6 +356,7 @@ ht-degree: 91%
    - [ソースアラートの購読](tutorials/ui/alerts.md)
    - [データフローをドラフトとして保存](tutorials/ui/draft.md)
    - [データフローへのアクセスラベルの適用](tutorials/ui/labels.md)
+   - [Azure プライベートエンドポイントの作成](tutorials/ui/private-link.md)
 - セルフサービスソース（バッチ SDK） {#sdk}
    - [概要](sources-sdk/overview.md)
    - 接続仕様を設定 {#config}
