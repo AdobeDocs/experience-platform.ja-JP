@@ -2,9 +2,9 @@
 title: Algolia タグ拡張機能の概要
 description: Adobe Experience Platformの Algolia タグ拡張機能について説明します。
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 24d2dc76fc4208f8e1555d90fd3c3ef2cf55643e
+source-git-commit: 904200c5d3ef2be58582e4679109390e8d4aebc1
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1977'
 ht-degree: 2%
 
 ---
@@ -27,12 +27,12 @@ ht-degree: 2%
 
 | 資格情報 | 説明 | 例 |
 | --- | --- | --- |
-| アプリケーション ID | お使いのアプリケーション ID は、アプリ [!DNL Algolia] ーションダッシュボードの「[API キー ](https://www.algolia.com/account/api-keys/all)」セクションにあります。 | 0ABCDEFG12 |
-| 検索 API キー | 検索 API キーは、[!DNL Algolia] ールダッシュボードの「[API キー ](https://www.algolia.com/account/api-keys/all)」セクションにあります。 | 1234a12345678901b1234567890c1ab1 |
+| アプリケーション ID | お使いのアプリケーション ID は、アプリ [ ーションダッシュボードの「](https://www.algolia.com/account/api-keys/all)API キー [!DNL Algolia]」セクションにあります。 | 0ABCDEFG12 |
+| 検索 API キー | 検索 API キーは、[ ールダッシュボードの「](https://www.algolia.com/account/api-keys/all)API キー [!DNL Algolia]」セクションにあります。 | 1234a12345678901b1234567890c1ab1 |
 
 ## [!DNL Algolia] Insights 拡張機能のインストールと設定 {#install-configure}
 
-[!DNL Algolia] Insights 拡張機能をインストールするには、[!UICONTROL &#x200B; データ収集 UI] に移動し、左側のナビゲーションから **[!UICONTROL タグ]** を選択します。 ここから、拡張機能を追加するプロパティを選択するか、代わりに新しいプロパティを作成します。
+[!DNL Algolia] Insights 拡張機能をインストールするには、[!UICONTROL  データ収集 UI] に移動し、左側のナビゲーションから **[!UICONTROL タグ]** を選択します。 ここから、拡張機能を追加するプロパティを選択するか、代わりに新しいプロパティを作成します。
 
 目的のプロパティを選択または作成したら、左側のナビゲーションで **[!UICONTROL 拡張機能]** を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 [!DNL Algolia] Insights カードを検索し、「**[!UICONTROL インストール]**」を選択します。
 
@@ -42,12 +42,12 @@ ht-degree: 2%
 
 | プロパティ | 説明 |
 | --- | --- |
-| アプリケーション ID | 「[!UICONTROL &#x200B; 設定の詳細 &#x200B;]」セクションで以前に収集した [ アプリケーション ID](#configuration-details) を入力します。 |
-| 検索 API キー | 「[ 設定の詳細 [!UICONTROL &#x200B; セクションで以前に収集した &#x200B;] 検索 API キー ](#configuration-details) を入力します。 |
-| インデックス名 | [!UICONTROL &#x200B; インデックス名 &#x200B;] には、製品またはコンテンツが含まれます。  このインデックスは、デフォルトとして使用されます。 |
-| ユーザートークンデータ要素 | ユーザートークンを返すデータ要素。 |
-| 認証済みユーザートークンデータ要素 | 認証済みユーザートークンを返すデータ要素を設定します。 |
-| 通貨 | 通貨タイプを選択します。  デフォルト値は `USD` に設定されています。 |
+| [!UICONTROL アプリケーション ID] | 「[!UICONTROL  設定の詳細 ]」セクションで以前に収集した [ アプリケーション ID](#configuration-details) を入力します。 |
+| [!UICONTROL  検索 API キー ] | 「[!UICONTROL  設定の詳細 ] セクションで以前に収集した [ 検索 API キー ](#configuration-details) を入力します。 |
+| [!UICONTROL  インデックス名 ] | [!UICONTROL  インデックス名 ] には、製品またはコンテンツが含まれます。  このインデックスは、デフォルトとして使用されます。 |
+| [!UICONTROL  ユーザートークンデータ要素 ] | ユーザートークンを返すデータ要素。 |
+| [!UICONTROL  認証済みユーザートークンデータ要素 ] | 認証済みユーザートークンを返すデータ要素を設定します。 |
+| [!UICONTROL 通貨] | 通貨タイプを選択します。 デフォルト値は `USD` に設定されています。 |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -63,30 +63,31 @@ ht-degree: 2%
 
 ルールのコンテキストに基づいてインサイトを読み込む場合に最も適した場所で、タグルールに **[!UICONTROL インサイトを読み込み]** アクション [!DNL Algolia] 追加します。 `search-insights.js` ライブラリをページに読み込みます。
 
-新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、[!UICONTROL &#x200B; 拡張機能 &#x200B;]&#x200B;**として**&#x200B;[!UICONTROL &#x200B; Algolia] を選択し、**[!UICONTROL アクションタイプ &#x200B;] として [!UICONTROL &#x200B; インサイトを読み込み]** を選択します。
+新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、**[!UICONTROL 拡張機能]** として [!UICONTROL Algolia] を選択し、**[!UICONTROL アクションタイプ]** として [!UICONTROL  インサイトを読み込み ] を選択します。
 
 | プロパティ | 説明 |
 | --- | --- |
-| [!UICONTROL Insight ライブラリのバージョン &#x200B;] | [!DNL Algolia] Insights のバージョン。 デフォルトは `2.13.0` です。 |
-| [!UICONTROL &#x200B; ユーザーのオプトアウトデータ要素 &#x200B;] | ユーザーのトラッキング環境設定をキャプチャするデータ要素。 |
-| [!UICONTROL &#x200B; ユーザートークン Cookie の使用 &#x200B;] | ユーザートークン Cookie の生成を許可する [!DNL Algolia] 合は、このチェックボックスをオンにします。 デフォルトでは、このオプションは `false` に設定されています。 |
+| [!UICONTROL Insight ライブラリのバージョン ] | [!DNL Algolia] Insights のバージョン。 デフォルトは `2.13.0` です。 |
+| [!UICONTROL  ユーザーのオプトアウトデータ要素 ] | ユーザーのトラッキング環境設定をキャプチャするデータ要素。 |
+| [!UICONTROL  ユーザートークン Cookie の使用 ] | ユーザートークン Cookie の生成を許可する [!DNL Algolia] 合は、このチェックボックスをオンにします。 デフォルトでは、このオプションは `false` に設定されています。 |
 
 ![](../../../images/extensions/client/algolia/load-insights.png)
 
 ### クリック済み {#clicked}
 
-**[!UICONTROL クリック]** アクションをタグルールに追加して、クリックされたイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、[!UICONTROL &#x200B; 拡張機能 &#x200B;]&#x200B;**として**&#x200B;[!UICONTROL &#x200B; アルゴリア &#x200B;] を選択、[!UICONTROL &#x200B; アクションタイプ &#x200B;] として **[!UICONTROL クリック済み]** を選択します。
+**[!UICONTROL クリック]** アクションをタグルールに追加して、クリックされたイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、**[!UICONTROL 拡張機能]** として [!UICONTROL  アルゴリア ] を選択、**[!UICONTROL アクションタイプ]** として [!UICONTROL  クリック済み ] を選択します。
 
 | プロパティ | 説明 |
 | --- | --- |
-| [!UICONTROL &#x200B; イベント名 &#x200B;] | このクリックイベントをさらに絞り込むために使用できるイベント名。 |
-| イベントの詳細データ要素 | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （オプション）</li><li>`position` （オプション）</li></ul> |
+| [!UICONTROL  イベント名 ] | このクリックイベントをさらに絞り込むために使用できるイベント名。 |
+| [!UICONTROL  イベントの詳細データ要素 ] | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （オプション）</li><li>`position` （オプション）</li></ul> |
+| [!UICONTROL  レコード ID データ要素 ] | レコード ID は、`click` イベント中にブラウザーのストレージに保存されるイベントデータのキーとして使用されます。 デフォルトでは、ページ URL はレコード ID となります。 この動作をオーバーライドするには、このプロパティを使用して、レコード ID を文字列として返すデータ要素を指定します。 |
 
 >[!NOTE]
 >
 >`queryID` と `position` の両方が含まれる場合、イベントは **検索後にクリックされたオブジェクト ID** に分類されます。 それ以外の場合は、「クリックされたオブジェクト ID **イベントとしてクラス** されます。
->&#x200B;><br>
->&#x200B;>データ要素で `indexName` が指定されない場合、イベントが送信される際に **デフォルトのインデックス名** が使用されます。
+>><br>
+>>データ要素で `indexName` が指定されない場合、イベントが送信される際に **デフォルトのインデックス名** が使用されます。
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -95,18 +96,20 @@ ht-degree: 2%
 
 ### 変換済 {#converted}
 
-**[!UICONTROL 変換済み]** アクションをタグルールに追加して、変換済みのイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、[!UICONTROL &#x200B; 拡張機能 &#x200B;]&#x200B;**として**&#x200B;[!UICONTROL &#x200B; アルゴリア &#x200B;] を選択し、**[!UICONTROL アクションタイプ &#x200B;] として [!UICONTROL &#x200B; 変換済み]** を選択します。
+**[!UICONTROL 変換済み]** アクションをタグルールに追加して、変換済みのイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、**[!UICONTROL 拡張機能]** として [!UICONTROL  アルゴリア ] を選択し、**[!UICONTROL アクションタイプ]** として [!UICONTROL  変換済み ] を選択します。
 
 | プロパティ | 説明 |
 | --- | --- |
-| イベント名 | この **convert** イベントをさらに絞り込むために使用されるイベント名。 |
-| イベントの詳細データ要素 | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （オプション）</li></ul> |
+| [!UICONTROL  イベント名 ] | この **convert** イベントをさらに絞り込むために使用されるイベント名。 |
+| [!UICONTROL  イベントの詳細データ要素 ] | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （オプション）</li></ul> |
+| [!UICONTROL  イベントデータの削除の無効化 ] | コンバージョンイベントでは、イベントデータがストレージから削除されます。 後続のコンバージョンイベントでこのデータが必要な場合は、削除プロセスを無効にして、イベントデータを引き続き使用できるようにします。 |
+| [!UICONTROL  レコード ID データ要素 ] | レコード ID は、ブラウザーストレージに保存されているイベントデータを検索するためのキーとして使用されます。 デフォルトのレコード ID はページ URL です。 この動作をオーバーライドするには、このプロパティを使用して、レコード ID を文字列として返すデータ要素を指定します。 |
 
 >[!NOTE]
 >
 >データ要素に `queryId` が含まれる場合、イベントは **検索後に変換済み** と分類されます。 そうでない場合は、**変換済み** イベントとして分類されます。
->&#x200B;><br>
->&#x200B;>データ要素で `indexName` が指定されない場合、イベントが送信される際に **デフォルトのインデックス名** が使用されます。
+>><br>
+>>データ要素で `indexName` が指定されない場合、イベントが送信される際に **デフォルトのインデックス名** が使用されます。
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -114,21 +117,21 @@ ht-degree: 2%
 
 ### 買い物かごに追加 {#added-to-cart}
 
-タグルールに **[!UICONTROL 買い物かごに追加]** アクションを追加して、追加した買い物かごへのイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、[!UICONTROL &#x200B; 拡張機能 &#x200B;]&#x200B;**として**&#x200B;[!UICONTROL &#x200B; Algolia] を選択し、**[!UICONTROL アクションタイプ &#x200B;] として [!UICONTROL &#x200B; 買い物かごに追加]** を選択します。
+タグルールに **[!UICONTROL 買い物かごに追加]** アクションを追加して、追加した買い物かごへのイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、**[!UICONTROL 拡張機能]** として [!UICONTROL Algolia] を選択し、**[!UICONTROL アクションタイプ]** として [!UICONTROL  買い物かごに追加 ] を選択します。
 
 | プロパティ | 説明 |
 | --- | --- |
-| イベント名 | この **convert** イベントをさらに絞り込むために使用されるイベント名。 |
-| イベントの詳細データ要素 | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` （オプション）</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` （オプション）</li></ul>。 |
-| 通貨 | 通貨の種類を指定します（`USD` など）。 |
+| [!UICONTROL  イベント名 ] | この **convert** イベントをさらに絞り込むために使用されるイベント名。 |
+| [!UICONTROL  イベントの詳細データ要素 ] | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` （オプション）</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` （オプション）</li></ul>。 |
+| [!UICONTROL 通貨] | 通貨タイプを選択します。 デフォルト値は `USD` に設定されています。 |
 
 >[!NOTE]
 >
 >データ要素に「`queryId`」が含まれる場合、イベントは「**検索後に買い物かごのオブジェクト ID に追加** と分類されます。 そうでない場合は、**買い物かごオブジェクト ID に追加** イベントとして分類されます。
->&#x200B;><br>
->&#x200B;>データ要素で `indexName` が指定されない場合、イベントが送信される際に **デフォルトのインデックス名** が使用されます。
->&#x200B;><br>
->&#x200B;>デフォルトのデータ要素が要件を満たさない場合は、目的のイベントの詳細を返すカスタムのデータ要素を作成できます。
+>><br>
+>>データ要素で `indexName` が指定されない場合、イベントが送信される際に **デフォルトのインデックス名** が使用されます。
+>><br>
+>>デフォルトのデータ要素が要件を満たさない場合は、目的のイベントの詳細を返すカスタムのデータ要素を作成できます。
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -136,21 +139,21 @@ ht-degree: 2%
 
 ### Purchased {#purchased}
 
-タグルールに **[!UICONTROL 購入済み]** アクションを追加して、購入したイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、[!UICONTROL &#x200B; 拡張機能 &#x200B;]&#x200B;**として**&#x200B;[!UICONTROL &#x200B; アルゴリア &#x200B;] を選択し、**[!UICONTROL アクションタイプ &#x200B;] として [!UICONTROL &#x200B; 購入済み]** を選択します。
+タグルールに **[!UICONTROL 購入済み]** アクションを追加して、購入したイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、**[!UICONTROL 拡張機能]** として [!UICONTROL  アルゴリア ] を選択し、**[!UICONTROL アクションタイプ]** として [!UICONTROL  購入済み ] を選択します。
 
 | プロパティ | 説明 |
 | --- | --- |
-| イベント名 | この **購入** イベントをさらに絞り込むために使用されるイベント名。 |
-| イベントの詳細データ要素 | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` （オプション）</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` （オプション）</li></ul>。 |
-| 通貨 | 通貨の種類を指定します（`USD` など）。 |
+| [!UICONTROL  イベント名 ] | この **購入** イベントをさらに絞り込むために使用されるイベント名。 |
+| [!UICONTROL  イベントの詳細データ要素 ] | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` （オプション）</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` （オプション）</li></ul>。 |
+| [!UICONTROL 通貨] | 通貨タイプを選択します。 デフォルト値は `USD` に設定されています。 |
 
 >[!NOTE]
 >
 >データ要素に `queryId` が含まれる場合、イベントは **検索後の購入したオブジェクト ID** に分類されます。 それ以外の場合は、**購入したオブジェクト ID** イベントとして分類されます。
->&#x200B;><br>
->&#x200B;>データ要素で `indexName` が指定されない場合、イベントが送信される際に **デフォルトのインデックス名** が使用されます。
->&#x200B;><br>
->&#x200B;>デフォルトのデータ要素が要件を満たさない場合は、目的のイベントの詳細を返すカスタムのデータ要素を作成できます。
+>><br>
+>>データ要素で `indexName` が指定されない場合、イベントが送信される際に **デフォルトのインデックス名** が使用されます。
+>><br>
+>>デフォルトのデータ要素が要件を満たさない場合は、目的のイベントの詳細を返すカスタムのデータ要素を作成できます。
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
@@ -159,12 +162,12 @@ ht-degree: 2%
 
 ### 表示済み {#viewed}
 
-タグルールに **[!UICONTROL 閲覧済み]** アクションを追加して、購入したイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、[!UICONTROL &#x200B; 拡張機能 &#x200B;]&#x200B;**として**&#x200B;[!UICONTROL &#x200B; アルゴリア &#x200B;] を選択し、**[!UICONTROL アクションタイプ &#x200B;] として [!UICONTROL &#x200B; 閲覧済み]** を選択します。
+タグルールに **[!UICONTROL 閲覧済み]** アクションを追加して、購入したイベントを [!DNL Algolia] に送信します。 新しいタグルールを作成するか、既存のルールを開きます。 要件に従って条件を定義し、**[!UICONTROL 拡張機能]** として [!UICONTROL  アルゴリア ] を選択し、**[!UICONTROL アクションタイプ]** として [!UICONTROL  閲覧済み ] を選択します。
 
 | プロパティ | 説明 |
 | --- | --- |
-| イベント名 | この **表示** イベントをさらに絞り込むために使用されるイベント名。 |
-| イベントの詳細データ要素 | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+| [!UICONTROL  イベント名 ] | この **表示** イベントをさらに絞り込むために使用されるイベント名。 |
+| [!UICONTROL  イベントの詳細データ要素 ] | データ要素は、次のようなイベントの詳細を返します。 <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]
 >
@@ -184,8 +187,12 @@ DataSet Data Element は、HTML要素に関連付けられたデータを取得�
 
 | プロパティ | 説明 |
 | --- | --- |
-| ヒット要素の Div/クラス名 | HTML要素の `data-insights-object-id`、オプションで `data-insights-position` などのデータセット属性を含む `data-insights-query-id`HTML要素名と CSS クラス名。 |
-| インデックス名要素 Div/クラス名 | HTML要素のデータセット属性（`data-indexname`）を持つHTML要素名や CSS クラス名。 |
+| [!UICONTROL  ヒット要素の Div/クラス名 ] | HTML要素の `data-insights-object-id`、オプションで `data-insights-query-id` などのデータセット属性を含む `data-insights-position`HTML要素名と CSS クラス名。 |
+| [!UICONTROL  インデックス名要素 Div/クラス名 ] | HTML要素のデータセット属性（`data-indexname`）を持つHTML要素名や CSS クラス名。 |
+| [!UICONTROL  クエリ ID データ要素 ] | クエリ ID は、HTML要素のデータセットから取得されます。 この動作をオーバーライドするには、このプロパティを使用して、クエリ ID を文字列として返すデータ要素を指定します。 |
+| [!UICONTROL  オブジェクト ID データ要素 ] | オブジェクト ID は、HTML要素のデータセットから取得されます。 この動作をオーバーライドするには、このプロパティを使用して、オブジェクト ID を配列として返すデータ要素を指定します。 |
+| [!UICONTROL  位置データ要素 ] | Positions は、HTML要素のデータセットから取得されます。 この動作をオーバーライドするには、このプロパティを使用して、位置を配列として返すデータ要素を指定します。 |
+| [!UICONTROL  インデックス名データ要素 ] | インデックス名は、HTML要素のデータセットから取得されます。 この動作をオーバーライドするには、このプロパティを使用して、インデックス名を文字列として返すデータ要素を指定します。 |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
 
@@ -220,10 +227,10 @@ DataSet Data Element は、HTML要素に関連付けられたデータを取得�
 
 | プロパティ | 説明 |
 | --- | --- |
-| オブジェクト ID パラメーター名 | オブジェクト ID を含むクエリパラメーター名。 |
-| インデックス名パラメーター名（オプション） | インデックス名を含んだクエリパラメーター名。 |
-| クエリ ID パラメーター名（オプション） | クエリ ID を含むクエリパラメーター名。 |
-| 位置パラメーター名（オプション） | Position を含むクエリパラメーター名。 |
+| [!UICONTROL  オブジェクト ID パラメーター名 ] | オブジェクト ID を含むクエリパラメーター名。 |
+| [!UICONTROL  インデックス名パラメーター名 ] | インデックス名を含んだクエリパラメーター名。 |
+| [!UICONTROL  クエリ ID パラメーター名 ] | クエリ ID を含むクエリパラメーター名。 |
+| [!UICONTROL  位置パラメーター名 ] | Position を含むクエリパラメーター名。 |
 
 ![](../../../images/extensions/client/algolia/query-string.png)
 
@@ -250,6 +257,10 @@ DataSet Data Element は、HTML要素に関連付けられたデータを取得�
 
 このデータ要素は、セッションストレージからイベントの詳細を取得します。 設定は不要です。 データは、*クリック* イベントアクション中に自動的に追加され、*変換* イベントアクション中に削除されます。
 
+| プロパティ | 説明 |
+| --- | --- |
+| [!UICONTROL  レコード ID データ要素 ] | レコード ID は、ブラウザーストレージに保存されているイベントデータを検索するためのキーとして使用されます。 デフォルトのレコード ID はページ URL です。 この動作をオーバーライドするには、このプロパティを使用して、レコード ID を文字列として返すデータ要素を指定します。 |
+
 ![](../../../images/extensions/client/algolia/storage.png)
 
 このデータ要素は、セッションストレージに保存されているものを返します。
@@ -265,7 +276,7 @@ DataSet Data Element は、HTML要素に関連付けられたデータを取得�
 
 ## 検索後にクリックまたは変換 {#clicked-converted-after-search}
 
-*検索後にクリック済み* または *検索後に変換済み* イベントには `queryId` が必要です。また、*検索後にクリック済み* にも `position` が必要です。 これらのプロパティは、InstantSearch やオートコンプリートのクエリパラメーターで `insights` フラグが有効な場合に使用できます。 サイトに関するインサイトの設定方法については、次のリソースを参照してください。
+*検索後にクリック済み* または *検索後に変換済み* イベントには `queryId` が必要です。また、`position` 検索後にクリック済み *にも* が必要です。 これらのプロパティは、InstantSearch やオートコンプリートのクエリパラメーターで `insights` フラグが有効な場合に使用できます。 サイトに関するインサイトの設定方法については、次のリソースを参照してください。
 
 * [ オートコンプリートでのインサイトの設定 ](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
 * [InstantSearch.js での Insights の設定 ](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
@@ -278,6 +289,6 @@ DataSet Data Element は、HTML要素に関連付けられたデータを取得�
 
 ## 次の手順 {#next-steps}
 
-このガイドでは、[!DNL Algolia Insights] タグ拡張機能を使用して [!DNL Algolia] にデータを送信する方法について説明しました。 サーバーサイドのイベントも [!DNL Algolia] に送信することを計画している場合は、[[!DNL Conversions API]  イベント転送拡張機能 ](../../server/algolia/overview.md) のインストールと設定に進むことができます。
+このガイドでは、[!DNL Algolia] タグ拡張機能を使用して [!DNL Algolia Insights] にデータを送信する方法について説明しました。 サーバーサイドのイベントも [!DNL Algolia] に送信することを計画している場合は、[[!DNL Conversions API]  イベント転送拡張機能 ](../../server/algolia/overview.md) のインストールと設定に進むことができます。
 
 Experience Platformのタグについて詳しくは、[ タグの概要 ](../../../home.md) を参照してください。
