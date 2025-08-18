@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；OneTrust;onetrust；同意；同意と環境設定；コンプライアンス
-solution: Experience Platform
 title: OneTrust 統合Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して、OneTrust 統合をAdobe Experience Platformに接続する方法について説明します。
-last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b3053e23f5b13fd7ebf0cf41a64c1bc5b71f2db
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 21%
+source-wordcount: '169'
+ht-degree: 4%
 
 ---
 
@@ -16,13 +13,15 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->[!DNL OneTrust Integration] ソースは、同意および環境設定データの取り込みのみをサポートし、cookie はサポートしていません。 ソースコネクタの問題については、OneTrust サポート（https://support.onetrust.com）にお問い合わせください
+>[!DNL OneTrust Integration] ソースは、同意および環境設定データの取り込みのみをサポートし、cookie はサポートしていません。 ソースコネクタの問題については、[[!DNL OneTrust]  サポート ](https://support.onetrust.com) にお問い合わせください。
 
-Adobe Experience Platformを使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+[!DNL OneTrust] は、組織が責任を持ってデータを管理し、規制を遵守し、顧客や関係者との信頼を構築するのに役立つように設計された、プライバシー、セキュリティ、信頼管理プラットフォームです。 データガバナンス、リスク管理、コンプライアンス自動化のための統一されたツールスイートを提供します。
 
-Experience Platform は、サードパーティの同意および環境設定管理プラットフォームからデータを取り込む機能を備えています。同意および環境設定プロバイダーのサポートには、[!DNL OneTrust Integration] が含まれます。
+[!DNL OneTrust Integration] ソースを使用してアカウントを接続し、同意データと環境設定データをExperience Platformに取り込みます。
 
-以下のドキュメントでは、API やユーザーインターフェイスを使用して [!DNL OneTrust Integration] をExperience Platformに接続する方法について説明しています。
+>[!IMPORTANT]
+>
+>[!DNL OneTrust Integration] ソースの場合、前回の実行が正常に完了しなかった場合でも、各実行では、前回の実行後に作成された新しいデータのみが取り込まれます。
 
 ## API を使用した [!DNL OneTrust Integration] のExperience Platformへの接続
 
