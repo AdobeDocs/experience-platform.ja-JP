@@ -4,35 +4,51 @@ title: ストリーミング宛先の IP アドレス許可リスト
 type: Documentation
 description: このページでは、Experience Platformから HTTP REST API エンドポイント、Amazon Kinesis または Azure Event Hubs インスタンスにデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 5c67466f5321038e75d22e216a8be2e745adac49
+source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 8%
+source-wordcount: '407'
+ht-degree: 4%
 
 ---
 
-# ストリーミング宛先の IP アドレス許可リスト {#ip-address-allowlist}
+
+# ストリーミング API ベースの宛先用の IP アドレス許可リスト {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobeでは、このページをブックマークに追加し、3 か月ごとに再訪問して最新の IP アドレスを確認することをお勧めします。 Adobeは新しい IP 範囲の通知を行いません。
-> * ここで説明する IP のリストは、*を使用して作成するすべての宛先に適用されます* 適用されません [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md)。
 
 ## 概要 {#overview}
 
-ここで説明する IP 範囲は、次の宛先に適用されます。
+このページで説明する IP 範囲は、次の宛先に適用されます。
 
-* [HTTP API 宛先](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [ 高度なエンタープライズ宛先 ](../../destination-types.md#advanced-enterprise-destinations):[HTTP API 宛先 ](./http-destination.md)、[[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Pega CDH リアルタイムオーディエンス ](../../destination-types.md#streaming-destinations)、[Salesforce Marketing Cloud](/help/destinations/catalog/personalization/pega-v2.md) との API ベースの統合、[Oracle Eloqua](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) などの [ ストリーミングオーディエンス書き出し宛先 ](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* [Destination SDK](../../destination-sdk/getting-started.md) 経由で作成されたパブリックまたはプライベートの宛先
 
 Experience Platformからこれらの宛先への送信トラフィックは、常にこのページにリストされている IP を経由します。
 
-このページでは、Experience Platformから HTTP エンドポイント、[!DNL Amazon Kinesis] または [!DNL Azure Event Hubs] インスタンスにデータを安全に書き出すために、許可リストに追加できる IP 範囲を提供します。 この機能は、HTTP エンドポイントがエンタープライズファイアウォールの内側にある場合や、会社のセキュリティおよびコンプライアンスの標準で、IP 範囲のリストの許可リストに加えるが必要な場合に特に便利です。
+このページでは、Experience Platformから上記の宛先に安全にデータを書き出すために、許可リストに追加できる IP 範囲を提供します。 この機能は、HTTP エンドポイントがエンタープライズファイアウォールの内側にある場合や、会社のセキュリティおよびコンプライアンスの標準で、IP 範囲のリストの許可リストに加えるが必要な場合に特に便利です。
 
 ネットワークファイアウォールを介して、ネットワークアクセス制御を定義できます。 適切な IP 範囲を指定することで、データ転送サービスのトラフィックを許可できます。
 
-Adobeでは、上記の宛先を使用する前に、次の IP 範囲を許可リストに追加することをお勧めします。 地域固有の IP 範囲を許可リストに追加しないと、これらのストリーミング宛先を使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
+## このページで IP を許可リストに加えるするタイミング {#when-to-allowlist}
+
+組織のポリシーで受信トラフィックの IP を許可リストに加える許可リストに加えるする必要がある場合は、上記の宛先を使用する前に、次のカテゴリの IP 範囲をページに追加する必要があります。
+
+1. すべての [ グローバル IP アドレス ](#global)
+2. グローバル IP アドレスに加えて、プロビジョニングする地域に対応する IP アドレスを、ページの下部にあるリストから追加します。 地域固有の IP 範囲を許可リストに追加しないと、これらのストリーミング宛先を使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。
+
+## グローバル IP アドレス {#global}
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`
+
+これらのグローバル IP アドレスに加えて、組織がプロビジョニングされている地域の IP アドレスを以下のリストから許可リストに加えるする必要があります。
 
 ## VA7：米国およびアメリカのお客様 {#us-americas}
 
@@ -209,3 +225,4 @@ Adobeでは、上記の宛先を使用する前に、次の IP 範囲を許可�
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`
+
