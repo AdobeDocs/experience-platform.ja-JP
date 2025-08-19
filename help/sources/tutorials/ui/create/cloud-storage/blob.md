@@ -1,17 +1,17 @@
 ---
-title: UI での Azure Blob Source接続の作成
-description: Experience Platform ユーザーインターフェイスを使用して、Azure Blob ソースコネクタを作成する方法を説明します。
+title: UI で Azure Blob Storage をExperience Platformに接続する
+description: UI のソースワークスペースを使用して、Azure Blob Storage アカウントをExperience Platformに接続する方法を説明します。
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 25%
+source-wordcount: '595'
+ht-degree: 18%
 
 ---
 
-# UI での [!DNL Azure Blob] ソース接続の作成
+# UI を使用した [!DNL Azure Blob Storage] のExperience Platformへの接続
 
-このチュートリアルでは、Experience Platform ユーザーインターフェイスを使用して、[!DNL Azure Blob] （以下「[!DNL Blob]」と呼びます）のソース接続を作成する手順について説明します。
+このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL Azure Blob Storage] インスタンスをAdobe Experience Platformに接続する方法について説明します。
 
 ## はじめに
 
@@ -22,7 +22,7 @@ ht-degree: 25%
    * [スキーマエディターのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md)：スキーマエディター UI を使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-既に有効な [!DNL Blob] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/batch/cloud-storage.md)に関するチュートリアルに進むことができます。
+既に有効な [!DNL Azure Blob Storage] 接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/batch/cloud-storage.md)に関するチュートリアルに進むことができます。
 
 ### サポートされているファイル形式
 
@@ -34,78 +34,56 @@ Experience Platformでは、外部ストレージから取り込む次のファ�
 
 ### 必要な資格情報の収集
 
-Experience Platformの [!DNL Blob] ストレージにアクセスするには、次の資格情報に対する有効な値を指定する必要があります。
+認証について詳しくは、[[!DNL Azure Blob Storage]  概要 ](../../../../connectors/cloud-storage/blob.md#authentication) を参照してください。
 
->[!BEGINTABS]
+## ソースカタログのナビゲート
 
->[!TAB  接続文字列認証 ]
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-| 資格情報 | 説明 |
-| --- | --- |
-| 接続文字列 | Experience Platformに対する [!DNL Blob] の認証に必要な認証情報を含む文字列。 [!DNL Blob] の接続文字列パターンは `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` です。 接続文字列について詳しくは、この [!DNL Blob] ドキュメント [ 接続文字列の設定 ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string) を参照してください。 |
-
->[!TAB SAS URI 認証 ]
-
-| 資格情報 | 説明 |
-| --- | --- |
-| SAS URI | [!DNL Blob] アカウントを接続するための代替認証タイプとして使用できる共有アクセス署名 URI です。 [!DNL Blob] の SAS URI パターンを以下に示します。`https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 詳しくは、この [!DNL Blob] ドキュメントの [ 共有アクセス署名 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) を参照してください。 |
-| コンテナ | アクセスを指定するコンテナの名前。 [!DNL Blob] ソースで新しいアカウントを作成する際に、コンテナ名を指定して、選択したサブフォルダーへのユーザーアクセスを指定できます。 |
-| フォルダーパス | アクセス権を付与するフォルダーへのパス。 |
-
->[!ENDTABS]
-
-必要な資格情報を収集したら、次の手順に従って [!DNL Blob] ストレージをExperience Platformに接続できます
-
-## [!DNL Blob] アカウントを接続
-
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
-
-画面の左側にあるカタログから適切なカテゴリを選択することができます。または、検索バーを使用して、利用したい特定のソースを見つけることもできます。
-
-[!UICONTROL &#x200B; クラウドストレージ &#x200B;] カテゴリで、「**[!UICONTROL Azure Blob ストレージ]**」を選択し、次に「**[!UICONTROL データを追加]**」を選択します。
-
-![Experience Platform ソースカタログと Azure Blob ストレージソースが選択されています。](../../../../images/tutorials/create/blob/catalog.png)
-
-**[!UICONTROL Azure Blob Storage に接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
-
-### 既存のアカウント
-
-既存のアカウントを使用するには、新しいデータフローを作成する [!DNL Blob] アカウントを選択し、「**[!UICONTROL 次へ]**」を選択して続行します。
-
-![既存](../../../../images/tutorials/create/blob/existing.png)
-
-### 新しいアカウント
+[!DNL Azure Blob Storage] に接続するには、「*[!UICONTROL クラウドストレージ]*」カテゴリに移動し、「**[!UICONTROL Azure Blob ストレージ]**」ソースカードを選択して「**[!UICONTROL 設定]**」を選択します。
 
 >[!TIP]
 >
->作成した後は、[!DNL Blob] ベース接続の認証タイプを変更できません。 認証タイプを変更するには、新しいベース接続を作成する必要があります。
+>新しい接続の場合はソースに **[!UICONTROL 設定]** が表示され、アカウントが既に存在する場合は **[!UICONTROL データを追加]** が表示されます。
 
-新しいアカウントを作成する場合は、「**[!UICONTROL 新しいアカウント]**」を選択し、新しい [!DNL Blob] アカウントの名前と説明（オプション）を入力します。
+![ ソースカタログと Azure Blob ストレージソースが選択されています。](../../../../images/tutorials/create/blob/catalog.png)
 
-![Azure Blob ストレージソースの新しいアカウント画面 ](../../../../images/tutorials/create/blob/new.png)
+## 既存のアカウントを使用
 
-[!DNL Blob] ソースは、アカウントキー認証と共有アクセス署名（SAS）認証の両方をサポートしています。 アカウントキーベースの認証では、検証用の接続文字列が必要ですが、SAS 認証では、アカウントの安全なデリゲート承認を可能にする URI を利用します。
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択して、使用する [!DNL Azure Blob Storage] アカウントを選択します。
 
-この手順では、コンテナの名前とサブフォルダーへのパスを定義することで、アカウントがアクセスできるサブフォルダーを指定することもできます。
+![Azure Blob Storage の既存のソースインターフェイス ](../../../../images/tutorials/create/blob/existing.png)
+
+## 新しいアカウントを作成
+
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前を入力して、オプションで説明を追加します。 次の認証タイプを使用して、[!DNL Azure Blob Storage] アカウントをExperience Platformに接続できます。
+
+* **アカウントキー認証**: ストレージアカウントのアクセスキーを使用して認証し、[!DNL Azure Blob Storage] アカウントに接続します。
+* **共有アクセス署名（SAS）**:SAS URI を使用して、[!DNL Azure Blob Storage] アカウントのリソースへのデリゲートされた時間制限アクセスを提供します。
+* **サービスプリンシパルベースの認証**:Azure Active Directory （AAD）サービスプリンシパル（クライアント ID とシークレット）を使用して、Azure Blob Storage アカウントに対して安全に認証します。
 
 >[!BEGINTABS]
 
->[!TAB  接続文字列 ]
+>[!TAB  アカウントキー認証 ]
 
-アカウントキーを使用して認証するには、「**[!UICONTROL アカウントキー認証]**」を選択し、接続文字列を指定します。 この手順では、アクセス先のサブフォルダーのコンテナ名およびパスを指定することもできます。 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
+**[!UICONTROL アカウントキー認証]** を選択し、`connectionString`、`container`、`folderPath` を入力します。 次に、「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-![ 接続文字列 ](../../../../images/tutorials/create/blob/connectionstring.png)
+![ 新しいアカウント作成手順のアカウントキー認証オプション。](../../../../images/tutorials/create/blob/account-key.png)
 
->[!TAB SAS URI]
+>[!TAB  共有アクセス署名 ]
 
-SAS ベースの認証では、権限、開始日、有効期限および特定のリソースへのプロビジョニングを設定できるので、SAS を使用して、様々なレベルのアクセスで認証資格情報を作成できます。
+**[!UICONTROL 共有アクセス署名]** を選択し、`sasUri`、`container` および `folderPath` を指定します。 次に、「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-共有アクセス署名を使用して認証するには、「**[!UICONTROL 共有アクセス署名認証]**」を選択し、SAS URI を指定します。 この手順では、アクセス先のサブフォルダーのコンテナ名およびパスを指定することもできます。 終了したら「**[!UICONTROL ソースに接続]**」を選択します。
+![ 新しいアカウント作成手順の共有アクセス署名認証オプション ](../../../../images/tutorials/create/blob/sas.png)
 
-![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
+>[!TAB  サービスプリンシパルベースの認証 ]
+
+**[!UICONTROL サービスプリンシパルベースの認証]** を選択し、`serviceEndpoint`、`servicePrincipalId`、`servicePrincipalKey`、`accountKind`、`tenant`、`container` および `folderPath` を入力します。 次に、「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+
+![ 新しいアカウント作成手順のサービスプリンシパルベースの認証オプション。](../../../../images/tutorials/create/blob/service-principal.png)
 
 >[!ENDTABS]
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Blob] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。
+このチュートリアルでは、[!DNL Azure Blob Storage] アカウントとの接続を確立しました。次のチュートリアルに進み、[ データフローを設定して、クラウドストレージからExperience Platformにデータを取り込む ](../../dataflow/batch/cloud-storage.md) ことができます。

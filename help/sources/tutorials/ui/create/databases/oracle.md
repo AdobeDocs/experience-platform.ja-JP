@@ -2,14 +2,14 @@
 title: UI を使用したOracle DB のExperience Platformへの接続
 description: UI を使用してOracle DB インスタンスをExperience Platformに接続する方法について説明します。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 17%
 
 ---
 
-# UI での [!DNL Oracle DB] ソース接続の作成
+# UI を使用した [!DNL Oracle DB] のExperience Platformへの接続
 
 このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL Oracle DB] インスタンスをAdobe Experience Platformに接続する方法について説明します。
 
