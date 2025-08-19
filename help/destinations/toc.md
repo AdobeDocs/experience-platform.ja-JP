@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: d410471658d27e84453fabaebba698ef0530afe4
+source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1316'
 ht-degree: 74%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 74%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットを書き出し](/help/destinations/api/export-datasets.md)
-   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -72,7 +72,8 @@ ht-degree: 74%
       * [Experience Platform オーディエンスの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
       * [Federated Audience Composition 接続 ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * 広告の宛先{#advertising}
-      * [（Beta） Acxiom の Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
+      * [（Beta） Acxiom の Audience Distribution](./catalog/advertising/acxiom-audience-connection.md)
+      * [（Beta） Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [広告の宛先の概要](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 接続](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud 拡張機能](./catalog/advertising/adobe-advertising-cloud.md)
