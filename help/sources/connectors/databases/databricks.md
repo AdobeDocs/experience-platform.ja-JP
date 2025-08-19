@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="ベータ版" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
+source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '631'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 Experience Platform [!DNL Azure Blob Storage] の資格情報を取得し、[!DNL Databricks] アカウントが後でアクセスできるようにします。
 
-資格情報を取得するには、[!DNL Connectors] API の `/credentials` エンドポイントに対してGET リクエストを実行します。
+資格情報を取得するには、`/credentials` API の [!DNL Connectors] エンドポイントに対してGET リクエストを実行します。
 
 **API 形式**
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答では、後で [!DNL Databricks] の設定で使用するための資格情報（`containerName`、`SASToken`、`storageAccountName`） [!DNL Apache Spark] 提供されます。
+正常な応答では、後で `containerName` の設定で使用するための資格情報（`SASToken`、`storageAccountName`、[!DNL Apache Spark]） [!DNL Databricks] 提供されます。
 
 +++応答の例を表示
 
@@ -76,7 +76,7 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `containerName` | [!DNL Azure Blob Storage] コンテナの名前。 この値は、後で [!DNL Databricks] の [!DNL Apache Spark] 設定を完了する際に使用します。 |
+| `containerName` | [!DNL Azure Blob Storage] コンテナの名前。 この値は、後で [!DNL Apache Spark] の [!DNL Databricks] 設定を完了する際に使用します。 |
 | `SASToken` | [!DNL Azure Blob Storage] ーザーの共有アクセス署名トークン。 この文字列には、リクエストの認証に必要なすべての情報が含まれます。 |
 | `storageAccountName` | ストレージアカウントの名前。 |
 | `SASUri` | [!DNL Azure Blob Storage] ーザーの共有アクセス署名 URI。 この文字列は、認証対象の [!DNL Azure Blob Storage] への URI とそれに対応する SAS トークンの組み合わせです。 |
@@ -145,7 +145,7 @@ curl -X POST \
 
 次に、[!DNL Databricks] クラスターがExperience Platform [!DNL Azure Blob Storage] アカウントにアクセスできることを確認する必要があります。 その際に、テーブルのデータを書き込むための暫定的な場所として [!DNL Azure Blob Storage] を使用 [!DNL delta lake] きます。
 
-アクセスを提供するには、[!DNL Apache Spark] 設定の一部として [!DNL Databricks] クラスターに SAS トークンを設定する必要があります。
+アクセスを提供するには、[!DNL Databricks] 設定の一部として [!DNL Apache Spark] クラスターに SAS トークンを設定する必要があります。
 
 [!DNL Databricks] インターフェイスで **[!DNL Advanced options]** を選択し、[!DNL Spark config] 入力ボックスに次の内容を入力します。
 
@@ -160,6 +160,12 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | SAS トークン | [!DNL Azure Blob Storage] ーザーの共有アクセス署名トークン。 この値を取得するには、[!DNL Azure Blob Storage] 資格情報を取得します。 |
 
 ![Azure の Databricks UI。](../../images/tutorials/create/databricks/databricks-ui.png)
+
+指定しない場合、フロー実行でのコピーアクティビティは失敗し、次のエラーが返されます。
+
+```shell
+Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
 
 ## [!DNL Databricks] をExperience Platformに接続
 
