@@ -1,8 +1,7 @@
 ---
 title: Adobe Experience Platform リリースノート 2025年8月
 description: Adobe Experience Platform の 2025年8月のリリースノート。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: 6b99f9f0bef18b8a4d04a18f817e300cc4c5d9a3
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 22%
@@ -22,6 +21,7 @@ ht-degree: 22%
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年8月19日（PT）**
+
 
 Adobe Experience Platformの既存の機能に対する新機能とアップデート：
 
@@ -104,6 +104,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 内部アップグレード | 2025 年 8 月 11 日（PT）以降、宛先カタログに 2 つの **[!DNL Microsoft Bing]** カードが並んで表示されるようになります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Microsoft Bing]** 宛先コネクタの名前は、**[!UICONTROL （非推奨）Microsoft Bing]** に変更され、**[!UICONTROL Microsoft Bing]** という名前の新しいカードが使用できるようになりました。 新しいアクティブ化データ フローには、カタログ内の新しい **[!UICONTROL Microsoft Bing]** 接続を使用します。 **[!UICONTROL （非推奨）のMicrosoft Bing]** の宛先へのアクティブなデータフローがある場合、自動的に更新されるので、ユーザー側で対応する必要はありません。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。<ul><li>フロー仕様 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>接続仕様 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> このアップグレードの後、**へのデータフローで、** アクティブ化されたプロファイルの数が減少 [!DNL Microsoft Bing] する場合があります。 このドロップは、この宛先プラットフォームへのすべてのアクティベーションに対して **ECID マッピング要件** が導入されたことによって発生します。 |
 
+
 **新機能または更新された機能**
 
 | 機能 | 説明 |
@@ -171,3 +172,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | [!DNL Azure Blob Storage] の認証の強化 | サービスプリンシパルベースの認証を使用して、[!DNL Azure Blob Storage] ソースをExperience Platformに接続できるようになりました。 サービスプリンシパルベースの認証を使用すると、セキュリティの強化、資格情報のローテーションの容易さ、アカウントへのきめ細かいアクセス制御が可能になります。 詳しくは、[[!DNL Azure Blob Storage] 概要](../../sources/connectors/cloud-storage/blob.md)を参照してください。 |
 
 詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
+
+<!--
+| [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
+-->
