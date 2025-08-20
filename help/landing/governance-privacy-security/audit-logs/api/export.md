@@ -4,9 +4,9 @@ description: Audit Query API を使用してExperience Platformの監査イベ�
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '168'
 ht-degree: 4%
 
 ---
@@ -43,4 +43,4 @@ curl -X POST \
 
 **応答**
 
-結果は、書き出し用に CSV ファイルに生成されます。 応答が成功すると、応答本文なしで HTTP 307 が返されます。 書き出しファイルへのリンクが、`Location` 応答ヘッダーに提供されます。
+結果はエクスポート用に CSV ファイルに生成され、各エントリはコアまたは強化監査イベントを表します。 応答が成功すると、応答本文なしで HTTP 307 が返されます。 書き出しファイルへのリンクが、`Location` 応答ヘッダーに提供されます。
