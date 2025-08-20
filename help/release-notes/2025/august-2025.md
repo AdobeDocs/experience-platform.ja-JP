@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform リリースノート 2025年8月
 description: Adobe Experience Platform の 2025年8月のリリースノート。
-source-git-commit: 6b99f9f0bef18b8a4d04a18f817e300cc4c5d9a3
+exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
+source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1448'
 ht-degree: 22%
 
 ---
@@ -16,9 +17,9 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年8月19日（PT）**
 
@@ -36,7 +37,7 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -109,7 +110,7 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 
 | 機能 | 説明 |
 | --- | --- |
-| 宛先の検索、フィルタリングおよびタグ付け機能の強化 | 「参照 [ タブと ](../../destinations/ui/destinations-workspace.md#browse) アカウント [ タブの検索機能、フィルタリング機能、タグ付け機能の強化により、宛先管理ワークフロー ](../../destinations/ui/destinations-workspace.md#accounts) 改善します。 名前で特定のデータフローとアカウントを検索し、宛先プラットフォーム、ステータス、日付などの様々な条件でフィルタリングし、カスタムタグを作成して宛先を整理できるようになりました。 列の並べ替えは、前回のデータフロー実行時などのキーフィールドでも使用できるので、宛先接続の識別と管理が容易になります。 |
+| 宛先の検索、フィルタリングおよびタグ付け機能の強化 | 「参照 [ タブと ](../../destinations/ui/destinations-workspace.md#browse) アカウント [ タブの検索機能、フィルタリング機能、タグ付け機能の強化により、宛先管理ワークフロー ](../../destinations/ui/destinations-workspace.md#accounts) 改善します。 <br> 特定のデータフローとアカウントを名前で検索し、宛先プラットフォーム、ステータス、日付などの様々な条件でフィルタリングして、カスタムタグを作成して宛先を整理できるようになりました。 列の並べ替えは、前回のデータフロー実行時などのキーフィールドでも使用できるので、宛先接続の識別と管理が容易になります。<br> ![ 「参照」タブでの宛先データフロー検索のアニメーションデモ ](../../destinations/assets/ui/workspace/search.gif) |
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
