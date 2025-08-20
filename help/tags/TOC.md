@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f038927d6a19db5e0187ccefd76d9ecc9df91b6a
+source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '787'
 ht-degree: 85%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 85%
          * [リリースノート](./extensions/client/client-data-layer/release-notes.md)
       * Adobe Content Analytics {#content-analytics}
          * [概要](./extensions/client/content-analytics/overview.md)
+         * [リリースノート](./extensions/client/content-analytics/release-notes.md)
       * Adobe ContextHub {#contexthub}
          * [概要](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
