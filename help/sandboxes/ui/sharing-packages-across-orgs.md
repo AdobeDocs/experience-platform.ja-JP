@@ -31,11 +31,11 @@ ht-degree: 0%
 
 ### 組織パートナーシックリクエストの作成
 
-組織のパートナーシックリクエストを作成するには、「**[!UICONTROL サンドボックス]****[!UICONTROL パートナー組織]**」タブに移動します。 次に、「**[!UICONTROL パートナー組織を管理]**」を選択します。
+組織のパートナーシックリクエストを作成するには、「**[!UICONTROL サンドボックス]**&#x200B;**[!UICONTROL パートナー組織]**」タブに移動します。 次に、「**[!UICONTROL パートナー組織を管理]**」を選択します。
 
 ![ 「パートナー組織」タブと「パートナー組織を管理」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-[!UICONTROL  パッケージパートナー管理 ] ダイアログで、組織 ID を「**[!UICONTROL 組織 ID を入力]**」に入力し、Enter キー（Windows）または return キー（Mac）を押します。 組織 ID は、以下の **[!UICONTROL 選択した組織 ID]** の節に表示されます。 ID を追加したら、「**[!UICONTROL 確認]**」を選択します。
+[!UICONTROL &#x200B; パッケージパートナー管理 &#x200B;] ダイアログで、組織 ID を「**[!UICONTROL 組織 ID を入力]**」に入力し、Enter キー（Windows）または return キー（Mac）を押します。 組織 ID は、以下の **[!UICONTROL 選択した組織 ID]** の節に表示されます。 ID を追加したら、「**[!UICONTROL 確認]**」を選択します。
 
 >[!TIP]
 >
@@ -43,13 +43,13 @@ ht-degree: 0%
 
 ![ 「組織 ID を入力」、「選択した組織 ID」、「確認」がハイライト表示されたパッケージパートナー組織ダイアログ ](../images/ui/sandbox-tooling/private-enter-org-id.png)
 
-共有リクエストがパートナー組織に正常に送信され、「[!UICONTROL  サンドボックス ]**[!UICONTROL パートナー組織]**」タブが表示され、「**[!UICONTROL 送信リクエスト]**」が表示されます。
+共有リクエストがパートナー組織に正常に送信され、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パートナー組織]**」タブが表示され、「**[!UICONTROL 送信リクエスト]**」が表示されます。
 
 ![ 送信リクエストがハイライト表示された「パートナー組織」タブ ](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
 ### パートナーシックリクエストを承認 {#authorize-request}
 
-組織のパートナーシックリクエストを承認するには、「[!UICONTROL  サンドボックス ]**[!UICONTROL パートナー組織]**」タブに移動します。 次に、「**[!UICONTROL 受信リクエスト]**」を選択します。
+組織のパートナーシックリクエストを承認するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パートナー組織]**」タブに移動します。 次に、「**[!UICONTROL 受信リクエスト]**」を選択します。
 
 ![ 「パートナー組織」タブと「受信リクエスト」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
@@ -57,11 +57,11 @@ ht-degree: 0%
 
 ![ 「承認」がハイライト表示されたドロップダウンメニューを表示する受信リクエストのリスト。](../images/ui/sandbox-tooling/private-approve-partner-org.png)
 
-**[!UICONTROL パートナー組織リクエストを確認]** ダイアログに、組織パートナーシップリクエストの詳細が表示されます。 承認の [!UICONTROL  理由 ] を入力し、「**[!UICONTROL 承認]**」を選択します。
+**[!UICONTROL パートナー組織リクエストを確認]** ダイアログに、組織パートナーシップリクエストの詳細が表示されます。 承認の [!UICONTROL &#x200B; 理由 &#x200B;] を入力し、「**[!UICONTROL 承認]**」を選択します。
 
 ![ 「理由」と「承認」がハイライト表示されたパートナー組織リクエストを確認ダイアログ ](../images/ui/sandbox-tooling/private-approval-partner-org.png)
 
-「[!UICONTROL  受信リクエスト ]」ページが開き、リクエストのステータスが「承認済み **[!UICONTROL に更新されました]**。
+「[!UICONTROL &#x200B; 受信リクエスト &#x200B;]」ページが開き、リクエストのステータスが「承認済み **[!UICONTROL に更新されました]**。
 
 ![ 承認済みがハイライト表示された受信リクエストのリスト。](../images/ui/sandbox-tooling/private-approved-partner-org.png)
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 #### 複数オブジェクトパッケージの共有 {#multi-object-packages}
 
-複数オブジェクトパッケージを承認済みのパートナー組織に共有するには、「[!UICONTROL  サンドボックス ]**[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）をクリックし、ドロップダウンメニューから **[!UICONTROL パッケージを共有]** を選択します。
+複数オブジェクトパッケージを承認済みのパートナー組織に共有するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）をクリックし、ドロップダウンメニューから **[!UICONTROL パッケージを共有]** を選択します。
 
 ![ パッケージを共有がハイライト表示されたドロップダウンメニューを表示するパッケージのリスト。](../images/ui/sandbox-tooling/private-share-package.png)
 
@@ -83,13 +83,13 @@ ht-degree: 0%
 
 >[!TIP]
 >
->複数の組織を選択できます。 選択した組織は、[!UICONTROL  共有設定 ] ドロップダウンの下に表示されます。
+>複数の組織を選択できます。 選択した組織は、[!UICONTROL &#x200B; 共有設定 &#x200B;] ドロップダウンの下に表示されます。
 
 ![ 「設定を共有」と「確認」がハイライト表示されたパッケージを共有ダイアログ ](../images/ui/sandbox-tooling/private-share-package-confirm.png)
 
 #### サンドボックスパッケージ全体の共有 {#entire-sandbox-packages}
 
-サンドボックスパッケージ全体を承認済みパートナー組織に共有するには、「[!UICONTROL  サンドボックス ] **[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）をクリックし、ドロップダウンメニューから **[!UICONTROL パッケージを共有]** を選択します。
+サンドボックスパッケージ全体を承認済みパートナー組織に共有するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;] **[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）をクリックし、ドロップダウンメニューから **[!UICONTROL パッケージを共有]** を選択します。
 
 ![ パッケージのリストを表示する「パッケージ」タブ。ドロップダウンメニューが表示されます。](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->複数の組織を選択できます。 選択した組織は、[!UICONTROL  共有設定 ] ドロップダウンの下に表示されます。
+>複数の組織を選択できます。 選択した組織は、[!UICONTROL &#x200B; 共有設定 &#x200B;] ドロップダウンの下に表示されます。
 
 ![ 「設定を共有」と「確認」がハイライト表示されたパッケージを共有ダイアログ ](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 ### パッケージの可用性をパブリックに更新 {#update-package}
 
-パッケージの可用性タイプを更新するには、「[!UICONTROL  サンドボックス ]**[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）を選択し、ドロップダウンメニューから **[!UICONTROL 公開パッケージに更新]** を選択します。
+パッケージの可用性タイプを更新するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パッケージ]**」タブに移動します。 次に、パッケージの横にある省略記号（`...`）を選択し、ドロップダウンメニューから **[!UICONTROL 公開パッケージに更新]** を選択します。
 
 ![ 「パッケージ」タブと「パブリックパッケージに更新」が強調表示されたドロップダウンオプションメニューを持つサンドボックス UI](../images/ui/sandbox-tooling/update-to-public.png)
 
@@ -132,7 +132,7 @@ ht-degree: 0%
 
 ### パッケージペイロードを使用して新しいパッケージを作成します
 
-パッケージペイロードを使用してパッケージを作成するには、「[!UICONTROL  サンドボックス ]**[!UICONTROL パッケージ]** タブに移動します。 次に、「**[!UICONTROL パッケージを作成]**」を選択します。
+パッケージペイロードを使用してパッケージを作成するには、「[!UICONTROL &#x200B; サンドボックス &#x200B;]&#x200B;**[!UICONTROL パッケージ]** タブに移動します。 次に、「**[!UICONTROL パッケージを作成]**」を選択します。
 
 ![ 「パッケージを作成」がハイライト表示されたサンドボックス UI](../images/ui/sandbox-tooling/create-package.png)
 
