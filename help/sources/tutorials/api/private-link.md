@@ -3,10 +3,10 @@ title: API のソースに Azure プライベートリンクを使用する
 description: Adobe Experience Platform ソースのプライベートリンクを作成および使用する方法について説明します
 badge: ベータ版
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
+source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 8%
+source-wordcount: '1657'
+ht-degree: 7%
 
 ---
 
@@ -398,9 +398,13 @@ curl -X GET \
 
 +++
 
-## インタラクティブオーサリングの有効化 {#enable-interactive-authoring}
+## Enable [!DNL Interactive Authoring] {#enable-interactive-authoring}
 
-インタラクティブオーサリングは、接続やアカウントの調査やデータのプレビューなどの機能に使用されます。 インタラクティブオーサリングを有効にするには、`/privateEndpoints/interactiveAuthoring` に対して POST リクエストを実行し、クエリパラメーターの演算子として `enable` を指定します。
+>[!IMPORTANT]
+>
+>フローを作成または更新する前、および接続を作成、更新または探索する前に、[!DNL Interactive Authoring] を有効にする必要があります。
+
+[!DNL Interactive Authoring] は、接続やアカウントの調査やデータのプレビューなどの機能に使用されます。 [!DNL Interactive Authoring] を有効にするには、`/privateEndpoints/interactiveAuthoring` に対して POST リクエストを実行し、クエリパラメーターの演算子として `enable` を指定します。
 
 **API 形式**
 
@@ -410,11 +414,11 @@ POST /privateEndpoints/interactiveAuthoring?op=enable
 
 | クエリーパラメーター | 説明 |
 | --- | --- |
-| `op` | 実行する操作。 インタラクティブオーサリングを有効にするには、`op` 値を `enable` に設定します。 |
+| `op` | 実行する操作。 [!DNL Interactive Authoring] を有効にするには、`op` の値を `enable` に設定します。 |
 
 **リクエスト**
 
-次のリクエストは、プライベートエンドポイントのインタラクティブオーサリングを有効にし、TTL を 60 分に設定します。
+次のリクエストは、プライベートエンドポイントの [!DNL Interactive Authoring] を有効にし、TTL を 60 分に設定します。
 
 +++選択してリクエストの例を表示
 
@@ -433,7 +437,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `autoTerminationMinutes` | インタラクティブオーサリング TTL （有効期間）の推移（分）。 インタラクティブオーサリングは、接続やアカウントの調査やデータのプレビューなどの機能に使用されます。 最大 TTL は 120 分に設定できます。 デフォルト TTL は 60 分です。 |
+| `autoTerminationMinutes` | [!DNL Interactive Authoring] の TTL （有効期間）は分単位です。 [!DNL Interactive Authoring] は、接続やアカウントの調査やデータのプレビューなどの機能に使用されます。 最大 TTL は 120 分に設定できます。 デフォルト TTL は 60 分です。 |
 
 +++
 
@@ -441,9 +445,9 @@ curl -X POST \
 
 リクエストが成功した場合は、HTTP ステータス 202 （許可済み）が返されます。
 
-## インタラクティブオーサリングステータスの取得 {#retrieve-interactive-authoring-status}
+## ステータス [!DNL Interactive Authoring] 取得 {#retrieve-interactive-authoring-status}
 
-プライベートエンドポイントに対するインタラクティブオーサリングの現在のステータスを表示するには、`/privateEndpoints/interactiveAuthoring` に対してGET リクエストを実行します。
+プライベートエンドポイントに関する [!DNL Interactive Authoring] の現在のステータスを表示するには、`/privateEndpoints/interactiveAuthoring` に対してGET リクエストを実行します。
 
 **API 形式**
 
@@ -453,7 +457,7 @@ GET /privateEndpoints/interactiveAuthoring
 
 **リクエスト**
 
-次のリクエストは、インタラクティブオーサリングのステータスを取得します。
+次のリクエストは、[!DNL Interactive Authoring] のステータスを取得します。
 
 +++選択してリクエストの例を表示
 
@@ -481,7 +485,7 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `status` | インタラクティブオーサリングのステータス。 有効な値は `disabled`、`enabling`、`enabled` です。 |
+| `status` | [!DNL Interactive Authoring] のステータス。 有効な値は `disabled`、`enabling`、`enabled` です。 |
 
 +++
 
@@ -819,3 +823,124 @@ curl -X GET \
 ```
 
 +++
+
+## 付録
+
+API のプライベートリンクを使用する方法について [!DNL Azure]、この節を参照してください。
+
+### プライベートリンクに接続するための [!DNL Snowflake] アカウントの設定
+
+プライベートリンクで [!DNL Snowflake] ソースを使用するには、次の前提条件の手順を完了する必要があります。
+
+まず、[!DNL Snowflake] でサポートチケットを発行し、**アカウントの** の地域の [!DNL Azure] エンドポイントサービスリソース ID[!DNL Snowflake] をリクエストする必要があります。 [!DNL Snowflake] チケットを発行するには、次の手順に従います。
+
+1. [[!DNL Snowflake] UI](https://app.snowflake.com) に移動し、メールアカウントを使用してログインします。 この手順では、プロファイル設定でメールが検証されていることを確認する必要があります。
+2. **ユーザーメニュー** を選択し、**サポート** を選択してサポートにアクセス [!DNL Snowflake] ます。
+3. サポートケースを作成するには、「**[!DNL + Support Case]**」を選択します。 次に、関連する詳細をフォームに入力し、必要なファイルを添付します。
+4. 終了したら、ケースを送信します。
+
+エンドポイントリソース ID の形式は次のとおりです。
+
+```shell
+subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
+```
+
++++を選択して例を表示
+
+```shell
+/subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
+```
+
++++
+
+| パラメーター | 説明 | 例 |
+| --- | --- | --- |
+| `{SUBSCRIPTION_ID}` | [!DNL Azure] サブスクリプションを識別する一意の ID。 | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | [!DNL Azure] アカウントの [!DNL Snowflake] 地域。 | `azwestus2` |
+
+### プライベートリンク設定の詳細の取得
+
+プライベートリンク設定の詳細を取得するには、[!DNL Snowflake] で次のコマンドを実行する必要があります。
+
+```sql
+USE ROLE accountadmin;
+SELECT key, value::varchar
+FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
+```
+
+次に、以下のプロパティの値を取得します。
+
+* `privatelink-account-url`
+* `regionless-privatelink-account-url`
+* `privatelink_ocsp-url`
+
+値を取得したら、次の呼び出しを実行して、[!DNL Snowflake] のプライベートリンクを作成できます。
+
+**リクエスト**
+
+次のリクエストは、[!DNL Snowflake] のプライベートエンドポイントを作成します。
+
+>[!BEGINTABS]
+
+>[!TAB テンプレート]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "{ENDPOINT_NAME}",
+    "subscriptionId": "{AZURE_SUBSCRIPTION_ID}",
+    "resourceGroupName": "{RESOURCE_GROUP_NAME}",
+    "resourceName": "{SNOWFLAKE_ENDPOINT_SERVICE_NAME}",
+    "fqdns": [
+      "{PRIVATELINK_ACCOUNT_URL}",
+      "{REGIONLESS_PRIVATELINK_ACCOUNT_URL}",
+      "{PRIVATELINK_OCSP_URL}"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+>[!TAB 例]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "TEST_Snowflake_PE",
+    "subscriptionId": "4575fb04-6859-4781-8948-7f3a92dc06a3",
+    "resourceGroupName": "azwestus2-privatelink",
+    "resourceName": "sf-pvlinksvc-azwestus2",
+    "fqdns": [
+      "hf06619.west-us-2.privatelink.snowflakecomputing.com",
+      "adobe-segmentationdbint.privatelink.snowflakecomputing.com",
+      "ocsp.hf06619.west-us-2.privatelink.snowflakecomputing.com"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+
+>[!ENDTABS]
+
+### [!DNL Azure Blob] および [!DNL Azure Data Lake Gen2] のプライベートエンドポイントを承認
+
+[!DNL Azure Blob] および [!DNL Azure Data Lake Gen2] ソースに対するプライベートエンドポイントリクエストを承認するには、[!DNL Azure Portal] にログインします。 左側のナビゲーションで「**[!DNL Data storage]**」を選択し、「**[!DNL Security + networking]**」タブに移動して「**[!DNL Networking]**」を選択します。 次に、「**[!DNL Private endpoints]**」を選択して、お使いのアカウントに関連付けられているプライベートエンドポイントとその現在の接続状態のリストを表示します。 保留中のリクエストを承認するには、目的のエンドポイントを選択し、「**[!DNL Approve]**」をクリックします。
+
+![ 保留中のプライベートエンドポイントのリストを含む Azure Portal。](../../images/tutorials/private-links/azure.png)
