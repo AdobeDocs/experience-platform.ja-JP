@@ -2,9 +2,9 @@
 title: Flow Service API を使用した Azure Blob Storage のExperience Platformへの接続
 description: Flow Service API を使用してAdobe Experience Platformを Azure Blob に接続する方法を説明します。
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '657'
 ht-degree: 9%
 
 ---
@@ -169,7 +169,7 @@ curl -X POST \
 | `serviceEndpoint` | [!DNL Azure Blob Storage] アカウントのエンドポイント URL。 通常は、`https://{ACCOUNT_NAME}.blob.core.windows.net` の形式です。 |
 | `servicePrincipalId` | 認証に使用する Azure Active Directory （AAD） サービス プリンシパルのクライアント/アプリケーション ID。 |
 | `servicePrincipalKey` | Azure サービスプリンシパルに関連付けられたクライアントシークレットまたはパスワード。 |
-| `accountKind` | [!DNL Azure Blob Storage] アカウントのタイプ。 一般的な値には、`StorageV2`、`BlobStorage`、`Storage` などがあります。 |
+| `accountKind` | [!DNL Azure Blob Storage] アカウントのタイプ。 共通の値には、`Storage` （汎用 V1）、`StorageV2` （汎用 V2）、`BlobStorage`、`BlockBlobStorage` などがあります。 |
 | `tenant` | サービスプリンシパルが登録されている Azure Active Directory （AAD）テナント ID。 |
 | `container` | データファイルが格納されている [!DNL Azure Blob Storage] コンテナの名前。 |
 | `folderPath` | ファイルが配置されている、指定されたコンテナ内のパス。 |

@@ -2,9 +2,9 @@
 title: Azure Blob Source コネクタの概要
 description: Azure Blob アカウントをExperience Platformに接続する方法を説明します
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: f659d78eebc1c5e74021f9a41a2a489389a6588e
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1021'
 ht-degree: 21%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 21%
 | 資格情報 | 説明 |
 | --- | --- |
 | `serviceEndpoint` | [!DNL Azure Blob Storage] アカウントのエンドポイント URL。 通常は、`https://{ACCOUNT_NAME}.blob.core.windows.net` の形式です。 |
-| `accountKind` | [!DNL Azure Blob Storage] アカウントのタイプ。 一般的な値には、`StorageV2`、`BlobStorage`、`Storage` などがあります。 |
+| `accountKind` | [!DNL Azure Blob Storage] アカウントのタイプ。 共通の値には、`Storage` （汎用 V1）、`StorageV2` （汎用 V2）、`BlobStorage`、`BlockBlobStorage` などがあります。 |
 | `servicePrincipalId` | 認証に使用する Azure Active Directory （AAD） サービス プリンシパルのクライアント/アプリケーション ID。 |
 | `servicePrincipalKey` | Azure サービスプリンシパルに関連付けられたクライアントシークレットまたはパスワード。 |
 | `tenant` | サービスプリンシパルが登録されている Azure Active Directory （AAD）テナント ID。 |

@@ -1,17 +1,16 @@
 ---
-title: ソースでのプライベートリンクのサポート
+title: API のソースに Azure プライベートリンクを使用する
 description: Adobe Experience Platform ソースのプライベートリンクを作成および使用する方法について説明します
 badge: ベータ版
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1380'
 ht-degree: 8%
 
 ---
 
-# ソースでのプライベートリンクのサポート
+# API でのソースに対する [!DNL Azure Private Link] の使用
 
 >[!AVAILABILITY]
 >
@@ -22,9 +21,11 @@ ht-degree: 8%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-このガイドでは、プライベートリンクを介して Azure ベースのソースへのプライベートエンドポイント接続を確立し、データのより安全な転送メカニズムを可能にする方法について説明します。
+[!DNL Azure Private Link] 機能を使用して、Adobe Experience Platform ソースの接続先プライベートエンドポイントを作成できます。 プライベート IP アドレスを使用してソースを仮想ネットワークに安全に接続し、パブリック IP を不要にして、攻撃対象領域を削減します。複雑なファイアウォールやネットワーク アドレス翻訳設定を不要にして、ネットワークの設定を簡略化すると同時に、データ トラフィックが許可されたサービスのみに到達するようにします。
 
-## はじめに
+このガイドでは、API を使用してプライベートエンドポイントを作成および使用する方法について説明します。
+
+## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
@@ -49,7 +50,7 @@ POST /privateEndpoints
 
 次のリクエストは、プライベートエンドポイントを作成します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X POST \
@@ -76,8 +77,8 @@ curl -X POST \
 | --- | --- |
 | `name` | プライベートエンドポイントの名前。 |
 | `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [ からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
-| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[ リソースグループの管理 ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) に関する [!DNL Azure] ガイドを参照してください。 |
-| `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[ リソースマネージャーについて ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) に関する [!DNL Azure] ガイド  [!DNL Azure]  参照してください。 |
+| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [ に関する ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
+| `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [ に関する  [!DNL Azure]  ガイド ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
 | `fqdns` | ソースの完全修飾ドメイン名。 このプロパティは、[!DNL Snowflake] ソースを使用する場合にのみ必要です。 |
 | `connectionSpec.id` | 使用しているソースの接続仕様 ID。 |
 | `connectionSpec.version` | 使用している接続仕様 ID のバージョン。 |
@@ -111,8 +112,8 @@ curl -X POST \
 | `id` | 新しく作成したプライベートエンドポイントの ID。 |
 | `name` | プライベートエンドポイントの名前。 |
 | `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [ からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
-| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[ リソースグループの管理 ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) に関する [!DNL Azure] ガイドを参照してください。 |
-| `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[ リソースマネージャーについて ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) に関する [!DNL Azure] ガイド  [!DNL Azure]  参照してください。 |
+| `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [ に関する ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
+| `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [ に関する  [!DNL Azure]  ガイド ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
 | `fqdns` | ソースの完全修飾ドメイン名。 このプロパティは、[!DNL Snowflake] ソースを使用する場合にのみ必要です。 |
 | `connectionSpec.id` | 使用しているソースの接続仕様 ID。 |
 | `connectionSpec.version` | 使用している接続仕様 ID のバージョン。 |
@@ -134,7 +135,7 @@ GET /privateEndpoints
 
 次のリクエストでは、組織内に存在するすべてのプライベートエンドポイントのリストを取得します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X GET \
@@ -211,7 +212,7 @@ GET /privateEndpoints?property=connectionSpec.id=={CONNECTION_SPEC_ID}
 
 次のリクエストは、接続仕様 ID `4c10e202-c428-4796-9208-5f1f5732b1cf` のソースに対応するすべてのプライベートエンドポイントのリストを取得します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X GET \
@@ -288,7 +289,7 @@ GET /privateEndpoints/{PRIVATE_ENDPOINT_ID}
 
 次のリクエストは、ID `2c5699b0-b9b6-486f-8877-ee5e21fe9a9d` のプライベートエンドポイントを取得します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X GET \
@@ -342,7 +343,7 @@ GET /privateEndpoints?op=autoResolve
 
 **リクエスト**
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X GET \
@@ -415,7 +416,7 @@ POST /privateEndpoints/interactiveAuthoring?op=enable
 
 次のリクエストは、プライベートエンドポイントのインタラクティブオーサリングを有効にし、TTL を 60 分に設定します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X POST \
@@ -454,7 +455,7 @@ GET /privateEndpoints/interactiveAuthoring
 
 次のリクエストは、インタラクティブオーサリングのステータスを取得します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X GET \
@@ -502,7 +503,7 @@ DELETE /privateEndpoints/{PRIVATE_ENDPOINT_ID}
 
 次のリクエストは、ID `02a74b31-a566-4a86-9cea-309b101a7f24` のプライベートエンドポイントを削除します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X DELETE \
@@ -526,7 +527,7 @@ curl -X DELETE \
 
 ### プライベートエンドポイントとの接続の作成 {#create-base-connection}
 
-Experience Platformのプライベートエンドポイントとの接続を作成するには、[!DNL Flow Service] API の `/connections` エンドポイントに対して POST リクエストを実行します。
+Experience Platformのプライベートエンドポイントとの接続を作成するには、`/connections` API の [!DNL Flow Service] エンドポイントに対して POST リクエストを実行します。
 
 **API 形式**
 
@@ -538,7 +539,7 @@ POST /connections/
 
 次のリクエストは、プライベートエンドポイントも使用して、[!DNL Snowflake] 用の認証済みベース接続を作成します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X POST \
@@ -610,7 +611,7 @@ GET /connections?property=auth.params.privateEndpointId=={PRIVATE_ENDPOINT_ID}
 
 次のリクエストは、ID `02a74b31-a566-4a86-9cea-309b101a7f24` のプライベートエンドポイントに関連付けられている既存の接続を取得します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X GET \
@@ -722,7 +723,7 @@ GET /connections?property=auth.params.usePrivateLink==true
 
 次のリクエストでは、プライベートエンドポイントを使用する、組織内のすべての接続を取得します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X GET \
