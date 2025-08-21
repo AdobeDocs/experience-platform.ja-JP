@@ -2,10 +2,11 @@
 title: Acxiom Real ID&trade; Audience Connection
 description: ' [!DNL Acxiom Real ID&trade; Audience Connection]  宛先を使用すると、 [!DNL Acxiom''s Real ID]  テクノロジーでオーディエンスを強化し、 [!DNL Altice]、 [!DNL Ampersand]、 [!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。'
 badge: label="ベータ版" type="Informative"
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
+source-git-commit: 1013487e2c38aeb1e2b0388f0c317afdcf02ba62
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 13%
+source-wordcount: '939'
+ht-degree: 12%
 
 ---
 
@@ -34,7 +35,7 @@ ht-degree: 13%
 
 * **利用条件を確認する：** 新しい [!DNL Acxiom Real ID Audience Connection] の宛先を設定する前に、利用条件を読み、署名す [!DNL Acxiom's] 必要があります。 実行した受注が完了すると、基本契約へのリンクが表示されます。 契約書に署名するまで、Experience Platformの宛先カタログに [!DNL Acxiom Real ID Audience Connection] の宛先カードは表示されません。 契約書に同意して署名すると、オンボーディングプロセス [!DNL Adobe] 完了し、[!DNL Acxiom Real ID Audience Connection] の宛先カードが表示されます。
 * **Adobe組織 ID を把握：** ユーザー契約の条件を満たすには、[!DNL Adobe] 組織 ID が必要です。 [!DNL Adobe's] 組織 ID を表示 ** する方法について詳しくは、[Experience Cloudの組織 ](https://experienceleague.adobe.com/ja/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) を参照してください。
-* **製品のライセンス [!DNL Acxiom's Real ID] 取得：** ライセンスを取得したら、Real-Time CDP内で Acxiom の Real ID を使用できるようにします。 詳細については、「[Acxiom Data Enhancement](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)」を参照してください。
+* **製品のライセンス [!DNL Acxiom's Real ID] 取得：** ライセンスを取得したら、Real-Time CDP内で Acxiom の Real ID を使用できるようにします。 詳細については、「[Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)」を参照してください。
 
 
 ## サポートされている ID {#supported-identities}
@@ -88,11 +89,13 @@ ht-degree: 13%
 ## この宛先に対してオーディエンスをアクティブ化 {#activate}
 
 >[!IMPORTANT]
->
->* データをアクティブ化するには、**宛先の表示**、**宛先のアクティブ化**、**プロファイルの表示** および **セグメントの表示**![ アクセス制御権限 ](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) が必要です。 ![アクセス制御の概要](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/overview)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* ID を書き出すには、**ID グラフの表示** アクセス制御権限 ![ が必要 ](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/home#permissions) す。
+> 
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先に対してオーディエンスをアクティブ化する手順については、![バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/ja/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)を参照してください。
+
+
+この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)を参照してください。
 
 >[!NOTE]
 >
@@ -129,7 +132,7 @@ ht-degree: 13%
 
 ## データの使用とガバナンス {#data-usage-governance}
 
-[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](https://experienceleague.adobe.com/ja/docs/experience-platform/data-governance/home)を参照してください。
+[!DNL Adobe Experience Platform] のすべての宛先は、データを処理する際のデータ使用ポリシーに準拠しています。[!DNL Adobe Experience Platform] がどのように データガバナンスを実施するかについて詳しくは、[データガバナンスの概要](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)を参照してください。
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -145,9 +148,3 @@ ht-degree: 13%
 ## 次の手順 {#next-steps}
 
 このチュートリアルでは、選択した宛先プラットフォームへのオーディエンスを正常にアクティブ化しました。 次に、宛先プラットフォームの担当者に連絡して、キャンペーンの設定を開始します。
-
-
-
-
-
-
