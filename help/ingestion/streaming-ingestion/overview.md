@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ストリーミング取り込みの概要
 description: Adobe Experience Platformのストリーミング取得は、クライアントおよびサーバーサイドデバイスからリアルタイムでExperience Platformにデータを送信する手段を提供します。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 14%
+source-wordcount: '419'
+ht-degree: 15%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL 
 
 次のビデオは、ストリーミング取得に関する理解を深めるために用意されており、上記の概念の概要を説明しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/31657?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### プロファイルレコードと [!DNL ExperienceEvents] のストリーミング
 
@@ -39,7 +39,7 @@ Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL 
 
 >[!IMPORTANT]
 >
->ストリーミング取り込みのガードレールは、サンドボックスレベルではなく、組織レベルで計算されます。 つまり、サンドボックスごとのデータ使用状況は、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスでのデータ使用は、プロファイル全体の 10% に制限されています。 ライセンス使用権限について詳しくは、[ データ管理のベストプラクティスガイド ](../../landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。
+>ストリーミング取り込み用のガードレールは、組織全体に対応するライセンス使用権限の合計にバインドされます。 さらに、開発用サンドボックスでのデータ使用は、プロファイル全体の 10% に制限されています。 ライセンス使用権限について詳しくは、[ データ管理のベストプラクティスガイド ](../../landing/license-usage-and-guardrails/data-management-best-practices.md) を参照してください。 ストリーミングスループットに制限を設定する方法については、[ 処理能力の概要 ](../../landing/license-usage-and-guardrails/capacity.md) を参照してください。
 
 | 宛先 | 予想遅延時間 |
 | --------- | ---------------- |
@@ -61,4 +61,4 @@ Adobe Experience Platformを使用すると、個々の顧客に対して [!DNL 
 
 ## Adobe Experience Platform 拡張機能
 
-Adobe Experience Platform 拡張機能を使用して、新しいストリーミング接続を作成できます。[!DNL Experience Platform] 拡張機能には、[!DNL Experience Platform] にリアルタイムに取り込まれるように [!DNL Experience Data Model] （XDM）形式のビーコンを送信するアクションが用意されています。 詳しくは、[Experience Platform 拡張機能](../../tags/extensions/client/web-sdk/overview.md)に関するドキュメントを参照してください。
+Adobe Experience Platform 拡張機能を使用して、新しいストリーミング接続を作成できます。[!DNL Experience Platform] 拡張機能には、[!DNL Experience Data Model] にリアルタイムに取り込まれるように [!DNL Experience Platform] （XDM）形式のビーコンを送信するアクションが用意されています。 詳しくは、[Experience Platform 拡張機能](../../tags/extensions/client/web-sdk/overview.md)に関するドキュメントを参照してください。

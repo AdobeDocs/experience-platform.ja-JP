@@ -2,7 +2,7 @@
 title: ライセンスの使用状況と処理能力
 description: Adobe Experience Platform内でのライセンス使用状況と容量制限について説明します。
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
+source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 7%
@@ -103,7 +103,7 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 
 #### ストリーミングスループット {#streaming-throughput}
 
-「ストリーミングスループット」セクションには、組織のサンドボックス全体でのストリーミングスループットに関する情報が表示されます。 ストリーミングスループット値は、プロファイルサービスへのストリーミング取り込みについて、1 秒あたりの結合されたピーク受信イベントを測定します。
+「ストリーミングスループット」セクションには、組織のサンドボックス内のストリーミングスループットに関する情報が表示されます。 ストリーミングスループット値は、プロファイルサービスへのストリーミング取り込みについて、1 秒あたりの結合されたピーク受信イベントを測定します。
 
 ![ 容量の詳細ページ内のストリーミングスループット セクションが表示されます。](/help/landing/images/capacity/streaming-throughput-section.png)
 

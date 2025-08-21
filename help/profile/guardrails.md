@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 機能を最適に使用するための、プロファイルデータおよびセグメント化のパフォーマンスとシステムで適用されるガードレールについて説明します。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '2649'
+source-wordcount: '2668'
 ht-degree: 51%
 
 ---
@@ -19,6 +19,8 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 >[!IMPORTANT]
 >
 >このガードレール ページに加えて、販売注文と対応する [ 製品説明 ](https://helpx.adobe.com/jp/legal/product-descriptions.html) でライセンスの使用権限を確認してください。
+>
+>または、[Capacity サービス ](../landing/license-usage-and-guardrails/capacity.md) を使用して、ストリーミングのスループットやその他をExperience Platform内でモニタリングおよび設定することもできます。
 
 このドキュメントでは、最適なシステムパフォーマンスを得るためにプロファイルデータをモデル化する際に役立つ、デフォルトの使用方法とレートの制限について説明します。次のガードレールを確認する際は、データが正しくモデル化されていることが前提になっています。データのモデル化方法に関するご質問は、カスタマーサービス担当者にお問い合わせください。
 
@@ -188,7 +190,7 @@ Adobe Experience Platformを使用すると、リアルタイム顧客プロフ�
 他のExperience Platform サービスのガードレール、エンドツーエンドの待ち時間の情報およびReal-Time CDP Product Description のドキュメントからのライセンス情報について詳しくは、次のドキュメントを参照してください。
 
 * [Real-Time CDP ガードレール](/help/rtcdp/guardrails/overview.md)
-* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ja#end-to-end-latency-diagrams)。
+* 様々なExperience Platform サービス用の [ エンドツーエンドの待ち時間の図 ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
 * [Real-Time Customer Data Platform（B2C Edition - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2P - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform（B2B - PrimeおよびUltimate パッケージ） ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
