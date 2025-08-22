@@ -21,10 +21,10 @@ ht-degree: 14%
 >
 >**[!UICONTROL Marketo Engage ユーザー同期]** の宛先カードは、**2026 年 3 月** に非推奨（廃止予定）になります。
 >
->新しい **[[!UICONTROL 0&rbrace;Marketo Engage&rbrace; の宛先へのスムーズな移行を確実に行うには、次のポイントと必要な操作を確認します。]](marketo-engage-connection.md)**
+>新しい **[[!UICONTROL 0}Marketo Engage} の宛先へのスムーズな移行を確実に行うには、次のポイントと必要な操作を確認します。]](marketo-engage-connection.md)**
 >
 >* **[!UICONTROL Marketo Engage Person Sync]** の宛先のすべてのユーザーは、2026 年 3 月までに新しい **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** の宛先に移行する必要があります。
->* **既存のデータフローは、自動的には移行されません。** 新しい [3&rbrace;Marketo Engage&rbrace; の宛先への ](marketo-engage-connection.md#connect-to-the-destination) 新しい接続を設定 **[!UICONTROL し、そこでオーディエンスをアクティブ化する必要があります。]**
+>* **既存のデータフローは、自動的には移行されません。** 新しい [3}Marketo Engage} の宛先への ](marketo-engage-connection.md#connect-to-the-destination) 新しい接続を設定 **[!UICONTROL し、そこでオーディエンスをアクティブ化する必要があります。]**
 
 
 ## 概要 {#overview}
@@ -72,13 +72,13 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 
 >[!IMPORTANT]
 >
->* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
 
 会社が複数の組織にアクセスできる場合は、Marketoへの宛先コネクタを設定するMarketo EngageとReal-Time CDPの両方で同じ組織を使用していることを確認してください。  既に宛先を設定している場合は、新しい設定で使用する既存のMarketo アカウントを選択できます。  表示されない場合は、「コネクタを宛先に接続」プロンプトをクリックすると、目的の宛先の名前、説明、Marketo Munchkin ID を設定できます。  Marketo インスタンスのMunchkin ID は、管理者/Munchkin メニューに表示されます。
 
 >[!IMPORTANT]
 >
->宛先を設定するユーザーには、Marketoのインスタンスとパーティションで [ ユーザーの編集 ](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 権限が必要です。
+>宛先を設定するユーザーには、Marketoのインスタンスとパーティションで [ ユーザーの編集 ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 権限が必要です。
 
 ![ 宛先への接続 ](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -89,7 +89,7 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 * **[!UICONTROL 最初の検索可能フィールド]**：重複排除するフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 デフォルトはメール
 * **[!UICONTROL 最初の検索可能フィールド]**：重複排除するセカンダリフィールド。 フィールドは、入力の各リードレコードに存在する必要があります。 オプション
 
-インスタンスを選択したら、設定を統合するリードパーティションも選択する必要があります。 [ リードパーティション ](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) は、Marketo Engageの概念で、ブランドや販売地域など、ビジネス上の関心事ごとにリードレコードを分離するために使用されます。 Marketoのサブスクリプションに Workspaces and Partitions 機能がない場合、またはサブスクリプションに追加のパーティションが作成されていない場合は、デフォルトのパーティションのみが使用できます。 1 つの設定で更新できるのは、設定済みパーティションに存在するリードレコードのみです。
+インスタンスを選択したら、設定を統合するリードパーティションも選択する必要があります。 [ リードパーティション ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) は、Marketo Engageの概念で、ブランドや販売地域など、ビジネス上の関心事ごとにリードレコードを分離するために使用されます。 Marketoのサブスクリプションに Workspaces and Partitions 機能がない場合、またはサブスクリプションに追加のパーティションが作成されていない場合は、デフォルトのパーティションのみが使用できます。 1 つの設定で更新できるのは、設定済みパーティションに存在するリードレコードのみです。
 
 >[!IMPORTANT]
 > 
@@ -111,7 +111,7 @@ Marketo engage に更新を送信すると、選択されたパーティショ�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先にオーディエンスセグメントをアクティベートする手順は、[ストリーミングセグメントの書き出し宛先へのプロファイルとセグメントのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 

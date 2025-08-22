@@ -45,7 +45,7 @@ Marketo Engageでオーディエンスをアクティブ化し、**[!UICONTROL �
 
 ## 前提条件 {#prerequisites}
 
-宛先を設定するユーザーは、Marketo インスタンスおよびパーティションに [ ユーザーを編集 ](https://experienceleague.adobe.com/ja/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 権限が必要です。
+宛先を設定するユーザーは、Marketo インスタンスおよびパーティションに [ ユーザーを編集 ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 権限が必要です。
 
 ## サポートされている ID {#supported-identities}
 
@@ -117,9 +117,9 @@ Marketoでは、**[!UICONTROL Marketo重複排除フィールドを使用し]** 
 
 >[!IMPORTANT]
 > 
->* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
 >
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -143,8 +143,8 @@ Marketoでは、**[!UICONTROL Marketo重複排除フィールドを使用し]** 
    * **[!UICONTROL オーディエンスとプロファイル]**:Marketo リストにオーディエンスメンバーを追加し、そのプロファイル情報を最新の状態に保つ場合は、このオプションを選択します。
    * **[!UICONTROL プロファイルのみ]**:Marketoのリードプロファイルを最新かつExperience Platformの最新情報で維持する場合、このオプションを選択します。
    * **[!UICONTROL オーディエンスのみ]**：プロファイル情報を更新せずにオーディエンスメンバーをMarketo リストに追加する場合は、このオプションを選択します。
-* **[!UICONTROL パーティション]**: *パーティションの選択は、**[!UICONTROL プロファイルのみ]**&#x200B;または&#x200B;**[!UICONTROL オーディエンスとプロファイル]**&#x200B;同期タイプ* を選択している場合にのみ使用できます。 選択したワークスペースに関連付けられているMarketo パーティション ID を選択します。 これにより、書き出されたデータを受け取るMarketoのリードパーティションを指定できます。 特定のパーティションを選択しない場合、データはMarketoの **[!UICONTROL デフォルト]** パーティションに送信されます。
-* **[!UICONTROL Marketoの重複排除フィールド]**：既存のMarketo リードを更新する際に使用するMarketoの重複排除フィールドを選択します。 このセレクターには、Marketoで重複排除フィールドとしてマークしたフィールドが表示されます。 Marketoの特定のフィールドを重複排除フィールドとして表示する場合は、Marketoでそのフィールドを [ 検索可能なフィールド ](https://experienceleague.adobe.com/ja/docs/marketo-developer/marketo/rest/lead-database/lead-database) としてマークする必要があります。
+* **[!UICONTROL パーティション]**: *パーティションの選択は、**[!UICONTROL プロファイルのみ]**または&#x200B;**[!UICONTROL オーディエンスとプロファイル]**同期タイプ* を選択している場合にのみ使用できます。 選択したワークスペースに関連付けられているMarketo パーティション ID を選択します。 これにより、書き出されたデータを受け取るMarketoのリードパーティションを指定できます。 特定のパーティションを選択しない場合、データはMarketoの **[!UICONTROL デフォルト]** パーティションに送信されます。
+* **[!UICONTROL Marketoの重複排除フィールド]**：既存のMarketo リードを更新する際に使用するMarketoの重複排除フィールドを選択します。 このセレクターには、Marketoで重複排除フィールドとしてマークしたフィールドが表示されます。 Marketoの特定のフィールドを重複排除フィールドとして表示する場合は、Marketoでそのフィールドを [ 検索可能なフィールド ](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) としてマークする必要があります。
 
   >[!NOTE]
   >
@@ -164,8 +164,8 @@ Marketoでは、**[!UICONTROL Marketo重複排除フィールドを使用し]** 
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
