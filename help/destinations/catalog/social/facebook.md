@@ -3,7 +3,7 @@ keywords: facebook 接続；facebook 接続；facebook 宛先；facebook;instagr
 title: Facebook 接続
 description: ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、Facebook キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 21%
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 ハッシュ化されたメールに基づいてオーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、[!DNL Facebook] キャンペーン用のプロファイルをアクティブ化します。
 
-この宛先は、[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]、[!DNL Messenger] など、[!DNL Custom Audiences] でサポートされてい [!DNL Facebook's] アプリファミリ全体でのオーディエンスのターゲティングに使用できます。 Campaign を実行するアプリの選択は、[!DNL Facebook Ads Manager] のプレースメントレベルに示されます。
+この宛先は、[!DNL Facebook's]、[!DNL Custom Audiences]、[!DNL Facebook]、[!DNL Instagram] など、[!DNL Audience Network] でサポートされてい [!DNL Messenger] アプリファミリ全体でのオーディエンスのターゲティングに使用できます。 Campaign を実行するアプリの選択は、[!DNL Facebook Ads Manager] のプレースメントレベルに示されます。
 
 ![Adobe Experience Platform UI での Facebook の宛先。](../../assets/catalog/social/facebook/catalog.png)
 
@@ -128,18 +128,18 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 メールアドレスを自分でハッシュ化することを選択する場合は、次の要件に必ず従ってください。
 
-* メール文字列の先頭と末尾のスペースをすべてトリミングします。例：`<space>johndoe@example.com<space>` ではなく `johndoe@example.com`;
+* メール文字列の先頭と末尾のスペースをすべてトリミングします。例：`johndoe@example.com` ではなく `<space>johndoe@example.com<space>`;
 * メール文字列をハッシュ化する場合は、小文字の文字列もハッシュ化します。
-   * 例：`EXAMPLE@EMAIL.COM` ではなく `example@email.com`;
+   * 例：`example@email.com` ではなく `EXAMPLE@EMAIL.COM`;
 * ハッシュ化された文字列がすべて小文字であることを確認します
-   * 例：`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149` ではなく `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`;
+   * 例：`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149` ではなく `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 * ひもに塩をかけるな。
 
 >[!NOTE]
 >
 >ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Experience Platform] によって自動的にハッシュ化されます。
->&#x200B;> 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。
->&#x200B;> 「**[!UICONTROL 変換を適用]**」オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
+>> 属性ソースデータは、自動的にはハッシュ化されません。 ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に [!DNL Experience Platform] がデータを自動的にハッシュ化するように設定します。
+>> 「**[!UICONTROL 変換を適用]**」オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
 
 ![ マッピングステップでハイライト表示されている「変換コントロールを適用」 ](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -151,13 +151,13 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 次のビデオでは、[!DNL Facebook] しい宛先を設定し、オーディエンスをアクティブ化する手順も示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -174,7 +174,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 Facebook 認証トークンは 60 日ごとに期限切れになります。 トークンの有効期限が切れると、宛先へのデータの書き出しは機能しなくなります。
 
-トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[!UICONTROL または**&#x200B;[!UICONTROL &#x200B; 参照 &#x200B;]&#x200B;**タブの「アカウントの有効期限]** 列から監視できます。
+トークンの有効期限は、「**[!UICONTROL アカウント]****[[!UICONTROL または]](../../ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../ui/destinations-workspace.md#browse)** 列から監視できます。
 
 ![ 「参照」タブの Facebook アカウントトークンの有効期限の列 ](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
@@ -237,12 +237,12 @@ Facebook 認証トークンは 60 日ごとに期限切れになります。 ト
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-**[!UICONTROL セグメントスケジュール]** ステップでは、オーディエンスを [!DNL Facebook Custom Audiences] に送信する際に [!UICONTROL &#x200B; オーディエンスの接触チャネル &#x200B;] を指定する必要があります。
+**[!UICONTROL セグメントスケジュール]** ステップでは、オーディエンスを [!UICONTROL  に送信する際に ] オーディエンスの接触チャネル [!DNL Facebook Custom Audiences] を指定する必要があります。
 
 ![Facebook アクティベーションステップに表示されるオーディエンスの接触チャネルドロップダウン。](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -253,17 +253,17 @@ Facebook 認証トークンは 60 日ごとに期限切れになります。 ト
 ソースフィールドを選択中：
 
 * 使用しているメールアドレスがハッシュ化されていない場合は、`Email` 名前空間をソース ID として選択します。
-* [!DNL Facebook] の [ メールハッシュ要件 ](#email-hashing-requirements) に従って、[!DNL Experience Platform] へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、`Email_LC_SHA256` 名前空間をソース ID として選択します。
+* `Email_LC_SHA256` の [!DNL Experience Platform] メールハッシュ要件 [!DNL Facebook] に従って、[ へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、](#email-hashing-requirements) 名前空間をソース ID として選択します。
 * ハッシュ化されていない電話番号がデータに含まれている場合は、`PHONE_E.164` 名前空間をソース ID として選択します。 [!DNL Experience Platform] は、[!DNL Facebook] の要件に準拠するために電話番号をハッシュ化します。
-* [!DNL Facebook][ 電話番号ハッシュ要件 ](#phone-number-hashing-requirements) に従って、[!DNL Experience Platform] へのデータ取り込みで電話番号をハッシュ化した場合は、`Phone_SHA256` 名前空間をソース ID として選択します。
+* `Phone_SHA256`[!DNL Experience Platform] 電話番号ハッシュ要件 [!DNL Facebook] に従って、[ へのデータ取り込みで電話番号をハッシュ化した場合は、](#phone-number-hashing-requirements) 名前空間をソース ID として選択します。
 * データがデバイス ID で構成されている場合は、ソース ID として `IDFA` 名前空間 [!DNL Apple] 選択します。
 * データがデバイス ID で構成されている場合は、ソース ID として `GAID` 名前空間 [!DNL Android] 選択します。
 * データが他のタイプの識別子で構成されている場合は、ソース ID として `Custom` 名前空間を選択します。
 
 ターゲットフィールドを選択：
 
-* ソース名前空間が `Email` または `Email_LC_SHA256` の場合は、`Email_LC_SHA256` 名前空間をターゲット ID として選択します。
-* ソース名前空間が `PHONE_E.164` または `Phone_SHA256` の場合は、`Phone_SHA256` 名前空間をターゲット ID として選択します。
+* ソース名前空間が `Email_LC_SHA256` または `Email` の場合は、`Email_LC_SHA256` 名前空間をターゲット ID として選択します。
+* ソース名前空間が `Phone_SHA256` または `PHONE_E.164` の場合は、`Phone_SHA256` 名前空間をターゲット ID として選択します。
 * ソース名前空間が `IDFA` または `GAID` の場合は、`IDFA` または `GAID` 名前空間をターゲット ID として選択します。
 * ソース名前空間がカスタム名前空間の場合は、`Extern_ID` 名前空間をターゲット ID として選択します。
 
@@ -295,8 +295,8 @@ Facebook 認証トークンは 60 日ごとに期限切れになります。 ト
 
 >[!IMPORTANT]
 >
->「[ アカウントの前提条件 ](#facebook-account-prerequisites)」セクションの URL テンプレートに示されているように、`business ID 206617933627973` の下の [!DNL Facebook Custom Audience Terms of Service] を必ず受け入れてください。
+>「[!DNL Facebook Custom Audience Terms of Service] アカウントの前提条件 `business ID 206617933627973`」セクションの URL テンプレートに示されているように、[ の下の ](#facebook-account-prerequisites) を必ず受け入れてください。
 
-[Facebook アカウントの前提条件 ](#facebook-account-prerequisites) の手順に従った後に `400 Bad Request` のエラーメッセージが表示された場合は、[!DNL Facebook] の権限が有効になるまで数日間待ちます。
+`400 Bad Request`Facebook アカウントの前提条件 [ の手順に従った後に ](#facebook-account-prerequisites) のエラーメッセージが表示された場合は、[!DNL Facebook] の権限が有効になるまで数日間待ちます。
 
 
