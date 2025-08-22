@@ -3,16 +3,24 @@ keywords: 飛行船タグ；飛行船の宛先
 title: Airship Tags 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンスタグとして Airship にシームレスに渡します。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 32%
+source-wordcount: '1082'
+ht-degree: 29%
 
 ---
 
 # [!DNL Airship Tags] 接続 {#airship-tags-destination}
 
 ## 概要
+
+>[!IMPORTANT]
+>
+>* 2025 年 8 月 21 日（PT）以降、宛先カタログに 2 つの **[!DNL Airship Tags]** カードが並んで表示されるようになります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Airship Tags]** 宛先コネクタの名前は、**[!UICONTROL （非推奨） Airship Tags に変更され]** 名前が **[!UICONTROL Airship Tags]** の新しいカードが使用できるようになりました。
+>* 新しいアクティベーションデータフローについては、カタログの新しい **[!UICONTROL Airship Tags]** 接続を使用します。 **[!UICONTROL （非推奨） Airship Tags]** の宛先へのアクティブなデータフローがある場合は、自動的に更新されるので、アクションは必要ありません。
+>* [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。
+>   * フロー仕様 ID: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * 接続仕様 ID: `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship] は、カスタマーエンゲージメントプラットフォームのリーダーであり、カスタマーライフサイクルのあらゆる段階で、ユーザーに対して有意義でパーソナライズされたオムニチャネルメッセージを提供するのを支援します。
 
@@ -34,7 +42,7 @@ Adobe Experience Platform オーディエンスを [!DNL Airship] に送信す�
 
 >[!TIP]
 > 
->[ このサインアップリンク ](https://go.airship.eu/accounts/register/plan/starter/) から [!DNL Airship] アカウントをまだ作成していない場合は、作成します。
+>[!DNL Airship] このサインアップリンク [ から ](https://go.airship.eu/accounts/register/plan/starter/) アカウントをまだ作成していない場合は、作成します。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -62,7 +70,7 @@ Adobe Experience Platform オーディエンスを [!DNL Airship] に送信す�
 
 Adobe Experience Platform のオーディエンスの概念は、Airship の [Tags](https://docs.airship.com/guides/audience/tags/) に似ていますが、実装にわずかな違いがあります。 この統合は、ユーザーの [Experience Platform セグメントのメンバーシップ ](../../../xdm/field-groups/profile/segmentation.md) のステータスを、[!DNL Airship] タグの有無にマップします。 例えば、`xdm:status` が `realized` に変わるExperience Platform オーディエンスの場合、タグは [!DNL Airship] チャネルまたはこのプロファイルのマッピング先である名前付きユーザーに追加されます。 `xdm:status` が `exited` に変わると、タグは削除されます。
 
-この統合を有効にするには、という名前の `adobe-segments` に *タググループ*[!DNL Airship] 作成します。
+この統合を有効にするには、という名前の *に* タググループ [!DNL Airship]`adobe-segments` 作成します。
 
 >[!IMPORTANT]
 >
@@ -72,7 +80,7 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 
 ## ベアラートークンの生成
 
-[Airship ダッシュボード **[!UICONTROL 設定]**/**[!UICONTROL API と統合]** に移動し ](https://go.airship.com) 左側のメニューで **[!UICONTROL トークン]** を選択します。
+**[!UICONTROL Airship ダッシュボード]** 設定 **[!UICONTROL /]** API と統合 [ に移動し ](https://go.airship.com) 左側のメニューで **[!UICONTROL トークン]** を選択します。
 
 **[!UICONTROL トークンを作成]** をクリックします。
 
@@ -98,7 +106,7 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -126,13 +134,13 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## マッピングに関する考慮事項 {#mapping-considerations}
 
-タグ [!DNL Airship]、デバイスインスタンスを表すチャネル（例：iPhone）または、ユーザーのすべてのデバイスを共通の識別情報（例：カスタマー ID）にマッピングする名前付きユーザーに対して設定できます。 スキーマにプレーンテキスト（ハッシュ化されていない）メールアドレスがプライマリ ID として存在する場合は、**[!UICONTROL Source属性のメールフィールドを選択し]** 以下に示すように、**[!UICONTROL ターゲット ID]** の下の右側の列で [!DNL Airship] 名のユーザーにマッピングします。
+タグ [!DNL Airship]、デバイスインスタンスを表すチャネル（例：iPhone）または、ユーザーのすべてのデバイスを共通の識別情報（例：カスタマー ID）にマッピングする名前付きユーザーに対して設定できます。 スキーマにプレーンテキスト（ハッシュ化されていない）メールアドレスがプライマリ ID として存在する場合は、**[!UICONTROL Source属性のメールフィールドを選択し]** 以下に示すように、[!DNL Airship] ターゲット ID **[!UICONTROL の下の右側の列で]** 名のユーザーにマッピングします。
 
 ![ 名前付きユーザーマッピング ](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
