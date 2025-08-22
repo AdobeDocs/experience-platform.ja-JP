@@ -106,7 +106,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 次のビデオでは、[!DNL LinkedIn Matched Audiences] しい宛先を設定し、オーディエンスをアクティブ化する手順も示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn)
 
 >[!NOTE]
 >
