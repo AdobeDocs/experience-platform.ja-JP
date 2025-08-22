@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: cbf00cbe66aa3332f5b5abd41ac5dc9f41170a95
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 74%
+source-wordcount: '1321'
+ht-degree: 73%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 74%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットを書き出し](/help/destinations/api/export-datasets.md)
-   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -66,7 +66,8 @@ ht-degree: 74%
    * Adobeの宛先{#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
       * [Experience Cloud オーディエンス](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-      * [Marketo Engage 接続](./catalog/adobe/marketo-engage.md)
+      * [Marketo Engage 接続](./catalog/adobe/marketo-engage-connection.md)
+      * [（従来の）（V2）Marketo Engage接続](./catalog/adobe/marketo-engage.md)
       * [（Beta）Marketo Engage人物同期接続](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 接続](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform オーディエンスの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
