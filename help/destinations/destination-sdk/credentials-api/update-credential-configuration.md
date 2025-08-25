@@ -2,10 +2,10 @@
 description: このページでは、Adobe Experience Platform Destination SDK を通じて、既存の資格情報設定を更新するために使用される API 呼び出しの例を示します。
 title: 資格情報設定の更新
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 97%
+source-wordcount: '610'
+ht-degree: 90%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 97%
 
 アドビと宛先プラットフォームとの間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合にのみ、この API エンドポイントを使用して資格情報設定を作成します。この場合、`/credentials` API エンドポイントを使用して、資格情報設定を作成する必要があります。
 
-グローバル認証システムを使用する場合、[新しい宛先設定を作成する](../authoring-api/destination-configuration/create-destination-configuration.md)際に、[宛先配信](../functionality/destination-configuration/destination-delivery.md)設定で `"authenticationRule":"PLATFORM_AUTHENTICATION"` を設定する必要があります。
+グローバル認証システムを使用する場合、（新しい宛先設定の作成 `"authenticationRule":"PLATFORM_AUTHENTICATION"` 時に、[ 宛先配信 ](../functionality/destination-configuration/destination-delivery.md) 設定で [ を設定する必要が ](../authoring-api/destination-configuration/create-destination-configuration.md) ります。 次に、[ 資格情報設定 ](../credentials-api/create-credential-configuration.md) を作成し、`authenticationId` 宛先配信 [ 設定の ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターで資格情報オブジェクトの ID を渡す必要があります。
 
 >[!IMPORTANT]
 >

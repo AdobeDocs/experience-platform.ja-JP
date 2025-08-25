@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してファイルベースの宛先を設定する手順について説明します。
 title: Destination SDK を使用したファイルベースの宛先の設定
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 55%
+source-wordcount: '745'
+ht-degree: 54%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 55%
 
 ## 手順 1：サーバーとファイル設定の作成 {#create-server-file-configuration}
 
-まず、`/destinations-server` エンドポイントを使用して [ サーバーとファイル設定を作成 ](../authoring-api/destination-server/create-destination-server.md) します。
+まず、[ エンドポイントを使用して ](../authoring-api/destination-server/create-destination-server.md) サーバーとファイル設定を作成 `/destinations-server` します。
 
 次に [!DNL Amazon S3] 宛先の設定例を示します。設定で使用されるフィールドと、他のタイプのファイルベースの宛先を設定するフィールドについて詳しくは、対応する [ サーバーの設定 ](../functionality/destination-server/server-specs.md) を参照してください。
 
@@ -413,8 +413,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [SSH キーを使用した SFTP 認証](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [パスワードを使用した SFTP 認証](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* `"authenticationRule": "PLATFORM_AUTHENTICATION"` を選択した場合は、[ 資格情報設定 API ドキュメント ](../credentials-api/create-credential-configuration.md#when-to-use) を参照してください。
-
+* 「`"authenticationRule": "PLATFORM_AUTHENTICATION"`」を選択した場合は、[ 資格情報設定 ](../credentials-api/create-credential-configuration.md) を作成し、`authenticationId` 宛先配信 [ 設定の ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターで資格情報オブジェクトの ID を渡す必要があります。
 
 ## 手順 5：宛先のテスト {#test-destination}
 
@@ -423,7 +422,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 宛先をテストするプロセスの一環として、Experience Platform UI を使用してオーディエンスを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、以下の 2 つのリソースを参照してください。
 
 * [オーディエンスの作成 – ドキュメントページ](/help/segmentation/ui/audience-portal.md#create-audience)
-* [ オーディエンスの作成 – ビデオのチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
+* [ オーディエンスの作成 – ビデオのチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 手順 6：宛先を公開する {#publish-destination}
 

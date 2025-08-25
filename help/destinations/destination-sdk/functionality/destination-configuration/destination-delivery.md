@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対して、書き出されたデータの移動先や、データが到達する場所で使用される認証ルールを示す、宛先配信設定の設定方法を説明します。
 title: 宛先配信
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 96%
+source-wordcount: '641'
+ht-degree: 82%
 
 ---
 
@@ -48,7 +48,8 @@ ht-degree: 96%
 
 | パラメーター | タイプ | 説明 |
 |---------|----------|------|
-| `authenticationRule` | 文字列 | [!DNL Experience Platform] が宛先に接続する方法を示します。サポートされている値：<ul><li>`CUSTOMER_AUTHENTICATION`:Experience Platformのお客様が（こちら [ に記載されているいずれかの認証方法でお使いのシステムにログインされる場合は、このオプションを使用 ](customer-authentication.md) ます。</li><li>`PLATFORM_AUTHENTICATION`：アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、このオプションを使用します。この場合、[資格情報 API 設定](../../credentials-api/create-credential-configuration.md)を使用して、資格情報オブジェクトを作成する必要があります。 </li><li>`NONE`：宛先プラットフォームにデータを送信するために認証が必要ない場合は、このオプションを使用します。 </li></ul> |
+| `authenticationRule` | 文字列 | [!DNL Experience Platform] が宛先に接続する方法を示します。サポートされている値：<ul><li>`CUSTOMER_AUTHENTICATION`:Experience Platformのお客様が（こちら [ に記載されているいずれかの認証方法でお使いのシステムにログインされる場合は、このオプションを使用 ](customer-authentication.md) ます。</li><li>`PLATFORM_AUTHENTICATION`：アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、このオプションを使用します。この場合、[credentials API](../../credentials-api/create-credential-configuration.md) 設定を使用して資格情報オブジェクトを作成し、`authenticationId` パラメーターを資格情報オブジェクト ID 値に設定する必要があります。</li><li>`NONE`：宛先プラットフォームにデータを送信するために認証が必要ない場合は、このオプションを使用します。 </li></ul> |
+| `authenticationId` | 文字列 | 認証に使用する資格情報オブジェクトの構成 ID の `instanceId` です。 このパラメーターは、特定の資格情報設定を指定する必要がある場合にのみ必要です。 |
 | `destinationServerId` | 文字列 | データの書き出し先にする[宛先サーバー](../../authoring-api/destination-server/create-destination-server.md)の `instanceId`。 |
 | `deliveryMatchers.type` | 文字列 | <ul><li>ファイルベースの宛先用に宛先配信を設定する場合は、常に、これを `SOURCE` に設定します。</li><li>ストリーミング宛先用に宛先配信を設定する場合は、`deliveryMatchers` セクションは必須ではありません。</li></ul> |
 | `deliveryMatchers.value` | 文字列 | <ul><li>ファイルベースの宛先用に宛先配信を設定する場合は、常に、これを `batch` に設定します。</li><li>ストリーミング宛先用に宛先配信を設定する場合は、`deliveryMatchers` セクションは必須ではありません。</li></ul> |
@@ -94,6 +95,32 @@ ht-degree: 96%
          ],
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"{{destinationServerId}}"
+      }
+   ]
+}
+```
+
+>[!ENDSHADEBOX]
+
+## プラットフォーム認証設定 {#platform-authentication}
+
+`PLATFORM_AUTHENTICATION` を使用する場合、宛先設定を資格情報設定にリンクするには、`authenticationId` パラメーターを指定する必要があります。
+
+1. 宛先設定で `destinationDelivery.authenticationRule` を `"PLATFORM_AUTHENTICATION"` に設定します
+2. [ 認証情報オブジェクトを作成します ](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md)。
+3. `authenticationId` パラメーターを認証情報オブジェクトの `instanceId` 値に設定します。
+
+**PLATFORM_AUTHENTICATION を使用した設定例：**
+
+>[!BEGINSHADEBOX]
+
+```json
+{
+   "destinationDelivery":[
+      {
+         "authenticationRule":"PLATFORM_AUTHENTICATION",
+         "authenticationId":"<string-here>",
+         "destinationServerId":"<string-here>"
       }
    ]
 }

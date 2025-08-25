@@ -2,10 +2,10 @@
 description: このページでは、Destination SDK を使用してストリーミングの宛先を設定する手順について説明します。
 title: Destination SDK を使用したストリーミングの宛先の設定
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 58%
+source-wordcount: '879'
+ht-degree: 57%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 58%
 
 ## 手順 1：サーバーとテンプレートの構成を作成する {#create-server-template-configuration}
 
-まず、`/destinations-server` エンドポイントを使用して [ サーバーとテンプレートの設定を作成 ](../authoring-api/destination-server/create-destination-server.md) します。
+まず、[ エンドポイントを使用して ](../authoring-api/destination-server/create-destination-server.md) サーバーとテンプレートの設定を作成 `/destinations-server` します。
 
 次に構成の例を示します。 `requestBody.value` パラメーターでのメッセージ変換テンプレートは、手順 3 の[変換テンプレートの作成](#create-transformation-template)で対応します。
 
@@ -62,7 +62,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 >[!IMPORTANT]
 >
->正しく設定されたリアルタイム（ストリーミング）宛先を作成するには、次に示すように *少なくとも 1 つのターゲット ID を `identityNamespaces` に追加する* 必要があります）。 ターゲット ID が設定されていない場合、ユーザーはアクティベーションワークフローの[マッピング手順](../../ui/activate-segment-streaming-destinations.md#mapping)以降に進むことができません。
+>正しく設定されたリアルタイム（ストリーミング）宛先を作成するには、次に示すように *少なくとも 1 つのターゲット ID を* に追加する `identityNamespaces` 必要があります）。 ターゲット ID が設定されていない場合、ユーザーはアクティベーションワークフローの[マッピング手順](../../ui/activate-segment-streaming-destinations.md#mapping)以降に進むことができません。
 
 ```shell
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -275,7 +275,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 宛先設定で `"authenticationRule": "CUSTOMER_AUTHENTICATION"` を選択し、宛先が OAuth 2 認証方式をサポートしている場合は、[OAuth 2 認証 ](../functionality/destination-configuration/oauth2-authorization.md) をお読みください。
 
-`"authenticationRule": "PLATFORM_AUTHENTICATION"` を選択した場合、[ 資格情報設定 ](../credentials-api/create-credential-configuration.md) を作成する必要があります。
+「`"authenticationRule": "PLATFORM_AUTHENTICATION"`」を選択した場合は、[ 資格情報設定 ](../credentials-api/create-credential-configuration.md) を作成し、`authenticationId` 宛先配信 [ 設定の ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターで資格情報オブジェクトの ID を渡す必要があります。
 
 ## 手順 6：宛先のテスト {#test-destination}
 
@@ -284,7 +284,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 宛先をテストするプロセスの一環として、Experience Platform UI を使用してセグメントを作成し、宛先に対してアクティブ化する必要があります。 Experience Platformでオーディエンスを作成する方法については、以下の 2 つのリソースを参照してください。
 
 * [オーディエンスドキュメントページの作成](/help/segmentation/ui/audience-portal.md#create-audience)
-* [ オーディエンスの作成のビデオチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ja)
+* [ オーディエンスの作成のビデオチュートリアル ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 手順 7：宛先を公開する {#publish-destination}
 

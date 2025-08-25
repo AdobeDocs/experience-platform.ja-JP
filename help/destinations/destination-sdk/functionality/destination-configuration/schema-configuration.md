@@ -2,10 +2,10 @@
 description: Destination SDK で作成された宛先に対するパートナースキーマの設定方法を説明します。
 title: パートナースキーマ設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '1910'
-ht-degree: 79%
+source-wordcount: '1924'
+ht-degree: 77%
 
 ---
 
@@ -148,7 +148,7 @@ Destination SDK は、動的パートナースキーマの作成をサポート�
 
 | パラメーター | タイプ | 必須／オプション | 説明 |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | 文字列 | 必須 | [!DNL Experience Platform] の顧客が宛先に接続する方法を示します。使用できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`、<br> です。 <ul><li>Experience Platformの顧客が `CUSTOMER_AUTHENTICATION` こちら [ で説明しているいずれかの認証方法でお使いのシステムにログインする場合は、](customer-authentication.md) を使用します。 </li><li> アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、資格情報 API を使用して、[資格情報オブジェクトを作成](../../credentials-api/create-credential-configuration.md)する必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
+| `dynamicEnum.authenticationRule` | 文字列 | 必須 | [!DNL Experience Platform] の顧客が宛先に接続する方法を示します。使用できる値は `CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`、<br> です。 <ul><li>Experience Platformの顧客が `CUSTOMER_AUTHENTICATION` こちら [ で説明しているいずれかの認証方法でお使いのシステムにログインする場合は、](customer-authentication.md) を使用します。 </li><li> アドビと宛先との間にグローバル認証システムがあり、[!DNL Experience Platform] の顧客が宛先への接続に認証資格情報を提供する必要がない場合は、`PLATFORM_AUTHENTICATION` を使用します。この場合、資格情報 API を使用して [ 資格情報オブジェクトを作成 ](../../credentials-api/create-credential-configuration.md)、資格情報オブジェクトの ID を `authenticationId` 宛先配信 [ 設定の ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) パラメーターに渡す必要があります。 </li><li>宛先プラットフォームにデータを送信するために認証が必要ない場合は、`NONE` を使用します。 </li></ul> |
 | `dynamicEnum.destinationServerId` | 文字列 | 必須 | 動的スキーマサーバーの `instanceId`。この宛先サーバーには、動的スキーマを取得するために Experience Platform が呼び出す API エンドポイントが含まれます。 |
 | `dynamicEnum.value` | 文字列 | 必須 | 動的スキーマサーバー設定で定義された、動的スキーマの名前。 |
 | `dynamicEnum.responseFormat` | 文字列 | 必須 | 動的スキーマを定義する際は、常に `SCHEMA` に設定します。 |
