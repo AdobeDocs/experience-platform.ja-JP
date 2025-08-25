@@ -2,10 +2,10 @@
 title: Web 拡張機能のビュー
 description: Adobe Experience Platform Web 拡張機能のライブラリモジュールのビューを定義する方法について説明します。
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 97%
+source-wordcount: '2148'
+ht-degree: 92%
 
 ---
 
@@ -68,15 +68,22 @@ window.extensionBridge.register({
 `init` メソッドは、ビューが iframe に読み込まれるとすぐに、タグによって呼び出されます。これには 1 つの引数（`info`）が渡されます。この引数は、次のプロパティを含むオブジェクトである必要があります。
 
 | プロパティ | 説明 |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | この表示で以前に保存された設定を含むオブジェクトです。 `settings` が `null` の場合は、ユーザーが保存されたバージョンを読み込むのではなく、初期設定を作成していることを示しています。`settings` がオブジェクトの場合、ユーザーは以前に保持された設定の編集を選択しているので、これを使用して表示に入力する必要があります。 |
 | `extensionSettings` | 拡張機能の設定表示から保存された設定です。これは、拡張機能の設定表示以外の表示の拡張機能設定にアクセスする場合に便利です。現在の表示が拡張機能の設定表示の場合は、`settings` を使用します。 |
 | `propertySettings` | プロパティの設定を含むオブジェクトです。 このオブジェクトに何が含まれるかについて詳しくは、 [turbine オブジェクトのガイド](../turbine.md#property-settings) を参照してください。 |
 | `tokens` | API トークンを含むオブジェクトです。 表示内から Adobe API にアクセスするには、通常 `tokens.imsAccess` 下の IMS トークンを使用する必要があります。このトークンは、アドビが開発した拡張機能に対してのみ使用できます。アドビが作成した拡張機能をアドビ従業員が代表する場合は、[データ収集エンジニアリングチームにメールを送信](mailto:reactor@adobe.com)し、許可リストに追加できるように拡張機能の名前を指定してください。 |
-| `company` | 1 つのプロパティ `orgId` を含むオブジェクトです。これ自体は、Adobe Experience Cloud ID（24 文字の英数字文字列）を表します。 |
+| `company` | `orgId` （24 文字のAdobe Experience Cloud ID）、`id` （Reactor API 内での会社の一意の ID）、`tenantId` （Adobe Identity Management System 内での組織の一意の ID）を含むオブジェクト。 |
 | `schema` | [JSON スキーマ](https://json-schema.org/)形式のオブジェクトです。このオブジェクトは[拡張機能マニフェスト](../manifest.md)から取得され、フォームの検証に役立つ場合があります。 |
+| `apiEndpoints` | Reactor API の web アドレスへの参照を含む `reactor` を含むオブジェクト。 |
+| `userConsentPermissions` | Adobeの同意フラグを含むオブジェクト [ 製品の使用状況データ ](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)。 `globalDataCollectionAndUsage` フラグに格納されているを使用して、拡張機能で *any* 顧客データの収集が許可されているかどうかを把握します。 |
+| `preferredLanguages` | 言語文字列の配列。 |
 
 表示は、この情報を使用してフォームのレンダリングと管理をおこなう必要があります。 `info.settings` を扱うだけで済むこともありますが、場合によってはその他の情報も指定する必要があります。
+
+>[!IMPORTANT]
+>
+>拡張機能の GDPR に準拠した状態を維持するには、`userConsentPermissions.globalDataCollectionAndUsage` フラグを使用して、拡張機能でユーザーに関するデータを収集できるかどうかを確認してください。
 
 ### [!DNL validate]
 
