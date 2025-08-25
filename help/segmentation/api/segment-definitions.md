@@ -4,9 +4,9 @@ title: セグメント定義 API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のセグメント定義エンドポイントを使用すると、組織のセグメント定義をプログラムで管理できます。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
+source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 24%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 24%
 
 >[!WARNING]
 >
->Segmentation Service API を使用した B2B エンティティを使用したオーディエンスの作成は非推奨（廃止予定）になりました。 アカウント、アカウントと人物の関係、キャンペーン、キャンペーンメンバー、マーケティングリスト、マーケティングリストメンバー、商談、商談と人物の関係などの B2B エンティティを使用してオーディエンスを作成できなくなりました。
+>Segmentation Service API を使用した B2B エンティティを使用したオーディエンスの作成は非推奨（廃止予定）になりました。 アカウント、アカウントと人物の関係、キャンペーン、キャンペーンメンバー、マーケティングリスト、マーケティングリストメンバー、商談、商談と人物の関係などの B2B エンティティを使用してオーディエンスを作成できなくなりました。 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレード ](../../rtcdp/b2b-architecture-upgrade.md) に関するガイドを参照してください。
 
 Adobe Experience Platformでは、プロファイルのグループから特定の属性や動作のグループを定義するセグメント定義を作成できます。 セグメント定義は、[!DNL Profile Query Language] （PQL）で記述されたクエリをカプセル化するオブジェクトです。 セグメント定義は、オーディエンスを作成するためのプロファイルに適用されます。 このオブジェクト（セグメント定義）は、PQL述語とも呼ばれます。 PQLの述語は、[!DNL Real-Time Customer Profile] に提供するレコードまたは時系列データに関連する条件に基づいて、セグメント定義のルールを定義します。 PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
