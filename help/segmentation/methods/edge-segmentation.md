@@ -2,10 +2,10 @@
 title: Edge セグメントガイド
 description: エッジセグメント化を使用して、Experience Platformのオーディエンスをエッジ上で即座に評価し、同じページや次のページのパーソナライゼーションのユースケースを可能にする方法を説明します。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
+source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 23%
+source-wordcount: '1148'
+ht-degree: 22%
 
 ---
 
@@ -26,6 +26,8 @@ Edgeのセグメント化は、Adobe Experience Platformのセグメント定義
 >[!NOTE]
 >
 >クエリが次の表のいずれかのクエリタイプと一致する場合、エッジセグメント化を使用して自動的に評価されます。クエリ式に基づいて、システムがこの機能を自動的に判断します。
+>
+>さらに、オーディエンス **のみ** にプロファイル属性が含まれている場合は、毎日評価されます。 オーディエンスをリアルタイムで評価する場合は、オーディエンスにイベントデータを追加する必要があります。
 
 | クエリタイプ | 詳細 | クエリ | 例 |
 | ---------- | ------- | ----- | ------- |
@@ -100,7 +102,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 リクエストが成功した場合は、新しく作成したセグメント定義の詳細と HTTP ステータス 200 が返されます。
 
-+++セグメント定義を作成する際の応答のサンプル
++++セグメント定義を作成する際のサンプルレスポンス。
 
 ```json
 {
