@@ -5,18 +5,14 @@ type: Documentation
 description: Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、Profile API を使用してエンティティ（一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 33%
 
 ---
 
 # エンティティエンドポイント （プロファイルアクセス）
-
->[!IMPORTANT]
->
->プロファイルアクセス API を使用した ExperienceEvent 検索は非推奨（廃止予定）になります。 ExperienceEvents の検索が必要なユースケースには、計算属性などの機能を使用してください。 この変更について詳しくは、Adobe カスタマーケアにお問い合わせください。
 
 Adobe Experience Platformでは、RESTful API またはユーザーインターフェイスを使用して、[!DNL Real-Time Customer Profile] データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Experience Platform] UI を使用したプロファイルへのアクセスについて詳しくは、[ プロファイルユーザーガイド ](../ui/user-guide.md) を参照してください。
 
@@ -44,6 +40,12 @@ Adobe Experience Platformでは、RESTful API またはユーザーインター�
 >[!ENDSHADEBOX]
 
 ## エンティティの取得 {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>API を介したルックアップリクエストで、B2B エンティティ **アカウントと人物の関係、商談と人物の関係、キャンペーン、キャンペーンメンバー、マーケティングリスト、マーケティングリストメンバー** がサポートされなくなりました。
+>
+>これらのエンティティのサポートは非推奨（廃止予定）になりました。 これらのエンティティへのアクセスに依存する統合またはワークフローが既にある場合は、引き続き機能できるようにするために、サポートされているエンティティタイプを使用するように統合またはワークフローを更新してください。
 
 プロファイルエンティティを取得するには、必要なクエリパラメーターと共に `/access/entities` エンドポイントに対してGET リクエストを行います。
 
@@ -372,7 +374,7 @@ POST /access/entities
 
 次のリクエストは、ID のリストから複数の顧客の名前とメールアドレスを取得します。
 
-+++複数のエンティティを取得するサンプルリクエスト
++++複数のエンティティを取得するリクエストのサンプル
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
@@ -590,7 +592,7 @@ POST /access/entities
 
 次のリクエストは、リクエストされた B2B アカウントを取得します。
 
-+++複数のエンティティを取得するサンプルリクエスト
++++複数のエンティティを取得するリクエストのサンプル
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
@@ -1202,6 +1204,19 @@ curl -X GET \
 +++
 
 ## エンティティを削除 {#delete-entity}
+
+>[!IMPORTANT]
+>
+>次の B2B エンティティに対する削除リクエストは非推奨（廃止予定）になりました。
+>
+>- アカウント
+>- アカウントと人物の関係
+>- Opportunity
+>- 商談と担当者の関係
+>- Campaign
+>- キャンペーンメンバー
+>- マーケティングリスト
+>- マーケティングリストメンバー
 
 プロファイルストアからエンティティを削除するには、必要なクエリパラメーターと共に `/access/entities` エンドポイントに対してDELETE リクエストを行います。
 
