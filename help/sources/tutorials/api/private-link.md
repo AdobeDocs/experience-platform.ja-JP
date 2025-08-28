@@ -1,16 +1,18 @@
 ---
-title: API のソースに Azure プライベートリンクを使用する
+title: API でのソースのプライベートリンクのサポート
 description: Adobe Experience Platform ソースのプライベートリンクを作成および使用する方法について説明します
 badge: ベータ版
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1661'
 ht-degree: 7%
 
 ---
 
-# API でのソースに対する [!DNL Azure Private Link] の使用
+# API でのソースのプライベートリンクのサポート
 
 >[!AVAILABILITY]
 >
@@ -21,7 +23,7 @@ ht-degree: 7%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-[!DNL Azure Private Link] 機能を使用して、Adobe Experience Platform ソースの接続先プライベートエンドポイントを作成できます。 プライベート IP アドレスを使用してソースを仮想ネットワークに安全に接続し、パブリック IP を不要にして、攻撃対象領域を削減します。複雑なファイアウォールやネットワーク アドレス翻訳設定を不要にして、ネットワークの設定を簡略化すると同時に、データ トラフィックが許可されたサービスのみに到達するようにします。
+プライベートリンク機能を使用して、Adobe Experience Platform ソースの接続先となるプライベートエンドポイントを作成できます。 プライベート IP アドレスを使用してソースを仮想ネットワークに安全に接続し、パブリック IP を不要にし、攻撃対象領域を削減します。 複雑なファイアウォールやネットワークアドレス翻訳設定の必要性を排除し、データトラフィックが承認済みのサービスにのみ到達するようにすることで、ネットワーク設定を簡素化します。
 
 このガイドでは、API を使用してプライベートエンドポイントを作成および使用する方法について説明します。
 
