@@ -1,15 +1,16 @@
 ---
-title: データフローを作成して、CRM からExperience Platformにデータを取り込む
+title: Source データをExperience Platformに取り込むデータフローの作成
 description: Flow Service API を使用してデータフローを作成し、ソースデータをExperience Platformに取り込む方法を説明します。
-exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+hide: true
+hidefromtoc: true
+source-git-commit: 4e9448170a6c3eb378e003bcd7520cb0e573e408
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 12%
+source-wordcount: '2137'
+ht-degree: 13%
 
 ---
 
-# データフローを作成して、CRM からExperience Platformにデータを取り込みます
+# データフローを作成して、ソースからデータを取り込みます
 
 このガイドでは、[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用してデータフローを作成し、データをAdobe Experience Platformに取り込む方法を説明します。
 
@@ -29,9 +30,9 @@ ht-degree: 12%
 
 Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../landing/api-guide.md) を参照してください。
 
-### ベース接続を作成 {#base}
+### ベース接続を作成
 
-ソースのデータフローを正常に作成するには、完全に認証されたソースアカウントと、それに対応するベース接続 ID が必要です。 この ID をお持ちでない場合は、[ ソースカタログ ](../../../home.md) を参照して、ベース接続を作成できるソースのリストを見つけてください。
+ソースのデータフローを正常に作成するには、完全に認証されたソースアカウントと、それに対応するベース接続 ID が必要です。 この ID をお持ちでない場合は、[ ソースカタログ ](../../../home.md) を参照して、ベース接続を作成できるソースのリストを確認してください。
 
 ### ターゲット XDM スキーマの作成 {#target-schema}
 
@@ -106,7 +107,7 @@ curl -X POST \
 
 +++
 
-## ソース接続の作成 {#source}
+## ソース接続の作成
 
 ソース接続は、外部ソースからExperience Platformにデータを取り込む方法を定義します。 ソースシステムと受信データの形式の両方を指定し、認証の詳細を含むベース接続を参照します。 各ソース接続は、組織に固有です。
 
@@ -133,8 +134,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "description": "A source connection for ACME contact data",
     "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "A source connection for ACME contact data",
     "data": {
       "format": "tabular"
     },
@@ -164,7 +165,8 @@ curl -X POST \
             "format": "date-time"
           }
         }
-      ]
+      ],
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -181,6 +183,7 @@ curl -X POST \
 | `data.format` | データの形式。 この値を、テーブルベースのソース（データベース、CRM、マーケティング自動化プロバイダーなど）の `tabular` に設定します。 |
 | `params.tableName` | Experience Platformに取得するソースアカウント内のテーブルの名前。 |
 | `params.columns` | Experience Platformに取り込むデータの特定のテーブル列。 |
+| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 詳しくは、「ソースでのデータキャプチャの変更 [ の使用に関するガイドを参照し ](../change-data-capture.md) ください。 |
 | `connectionSpec.id` | 使用しているソースの接続仕様 ID。 |
 
 **応答**
@@ -194,9 +197,9 @@ curl -X POST \
 }
 ```
 
-## ターゲット接続の作成 {#target}
+## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を指定する必要があります。 この接続仕様 ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
+ターゲット接続は、取り込まれたデータが取り込まれる宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様 ID を提供する必要があります。この接続仕様 ID は `c604ff05-7f1a-43c0-8e18-33bf874cb11c` です。
 
 **API 形式**
 
@@ -314,7 +317,7 @@ curl -X POST \
 }
 ```
 
-## データフロー仕様の取得 {#flow-specs}
+## データフロー仕様の取得
 
 データフローを作成する前に、まず、ソースに対応するデータフロー仕様を取得する必要があります。 この情報を取得するには、`/flowSpecs` API の [!DNL Flow Service] エンドポイントに対してGET リクエストを実行します。
 
@@ -631,16 +634,16 @@ curl -X GET \
 
 +++
 
-## データフローの作成 {#dataflow}
+## データフローの作成
 
 データフローは、Experience Platform サービス間でデータを転送する設定済みのパイプラインです。 外部ソース（データベース、クラウドストレージ、API など）からデータを取り込み、処理して、ターゲットデータセットにルーティングする方法を定義します。 その後、これらのデータセットは、ID サービス、リアルタイム顧客プロファイル、宛先などのサービスでアクティブ化と分析に使用されます。
 
 データフローを作成するには、次の項目の値が必要です。
 
-* [ソース接続 ID](#source)
-* [ターゲット接続 ID](#target)
-* [マッピング ID](#mapping)
-* [データフロー仕様 ID](#flow-specs)
+* ソース接続 ID
+* ターゲット接続 ID
+* マッピング ID
+* データフロー仕様 ID
 
 この手順では、次のパラメーターを使用して、データフローの取り込みスケジュールを設定で `scheduleParams` ます。
 
@@ -739,7 +742,7 @@ curl -X POST \
 }
 ```
 
-### UI を使用した API ワークフローの検証 {#validate-in-ui}
+### UI を使用した API ワークフローの検証
 
 Experience Platform ユーザーインターフェイスを使用して、データフローの作成を検証できます。 Experience Platform UI の *[!UICONTROL ソース]* カタログに移動し、ヘッダータブから **[!UICONTROL データフロー]** を選択します。 次に、[!UICONTROL  データフロー名 ] 列を使用し、[!DNL Flow Service] API を使用して作成したデータフローを見つけます。
 

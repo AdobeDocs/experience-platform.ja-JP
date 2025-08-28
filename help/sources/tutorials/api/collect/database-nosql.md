@@ -1,22 +1,22 @@
 ---
 title: Flow Service API を使用したデータベースソースのデータフローの作成
 type: Tutorial
-description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
+description: Flow Service API を使用して、データフローを作成し、データベースからExperience Platformにデータを取り込む方法を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1455'
 ht-degree: 73%
 
 ---
 
 # [!DNL Flow Service] API を使用したデータベースソースのデータフローの作成
 
-このチュートリアルでは、データベースソースからデータを取得し、[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用してExperience Platformに取り込む手順を説明します。
+[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用してデータフローを作成し、データベースからAdobe Experience Platformにデータを取り込む方法については、このチュートリアルをお読みください。
 
 >[!NOTE]
 >
->* データフローを作成するには、データベースソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、ベース接続を作成できるデータベースソースのリストについて [ ソースの概要 ](../../../home.md#database) を参照してください。
+>* データフローを作成するには、データベースソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、[ ソースカタログ ](../../../home.md#database) にアクセスして、ベース接続を作成できるデータベースソースのリストを確認してください。
 >* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。 [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) に対してサポートされているタイムスタンプは、UTC 時間を指定した TIMESTAMP_NTZ のみです。
 
 ## はじめに
