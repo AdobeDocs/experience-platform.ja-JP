@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年8月
 description: Adobe Experience Platform の 2025年8月のリリースノート。
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 20%
+source-wordcount: '1448'
+ht-degree: 21%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 20%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年8月19日（PT）**
 
@@ -30,14 +30,13 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 - [カタログサービス](#catalog-service)
 - [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
-- [リアルタイム顧客プロファイル](#profile)
 - [サンドボックス](#sandboxes)
 - [セグメント化サービス](#segmentation-service)
 - [ソース](#sources)
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -98,14 +97,14 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | 宛先 | 説明 |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) の宛先 | [!DNL Acxiom Real ID Audience Connection] の宛先を使用すると、[!DNL Acxiom's] 実 ID[ テクノロジー ](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。 |
-| Enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) の宛先 | 拡張 [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) 宛先は、既存の [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) コネクタのアップグレードバージョンです。 この新しいコネクタは、従来のコネクタの既存のオーディエンス同期機能に加えて、プロファイル同期機能を提供し、[!DNL Marketo Engage] とのより緊密な統合を実現します。 <br> [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) コネクタは、**2026 年 3 月** に非推奨（廃止予定）になります。 新しい **[[!UICONTROL 0&rbrace;Marketo Engage&rbrace; の宛先へのスムーズな移行を確実に行うには、次のポイントと必要な操作を確認します。]](../../destinations/catalog/adobe/marketo-engage-connection.md)** <ul><li>既存の **[!UICONTROL （従来の）（V2）Marketo Engage]** のすべてのユーザーは、2026 年 3 月までに新しい **[!UICONTROL Marketo Engage]** の宛先に移行する必要があります。</li><li> **既存のデータフローは、自動的には移行されません。** 新しい [3&rbrace;Marketo Engage&rbrace; の宛先への ](../../destinations/ui/connect-destination.md) 新しい接続を設定 **[!UICONTROL し、そこでオーディエンスをアクティブ化する必要があります。]**</li></ul> |
+| Enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) の宛先 | 拡張 [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) 宛先は、既存の [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) コネクタのアップグレードバージョンです。 この新しいコネクタは、従来のコネクタの既存のオーディエンス同期機能に加えて、プロファイル同期機能を提供し、[!DNL Marketo Engage] とのより緊密な統合を実現します。 <br> [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) コネクタは、**2026 年 3 月** に非推奨（廃止予定）になります。 新しい **[[!UICONTROL 0}Marketo Engage} の宛先へのスムーズな移行を確実に行うには、次のポイントと必要な操作を確認します。]](../../destinations/catalog/adobe/marketo-engage-connection.md)** <ul><li>既存の **[!UICONTROL （従来の）（V2）Marketo Engage]** のすべてのユーザーは、2026 年 3 月までに新しい **[!UICONTROL Marketo Engage]** の宛先に移行する必要があります。</li><li> **既存のデータフローは、自動的には移行されません。** 新しい [3}Marketo Engage} の宛先への ](../../destinations/ui/connect-destination.md) 新しい接続を設定 **[!UICONTROL し、そこでオーディエンスをアクティブ化する必要があります。]**</li></ul> |
 
 **更新された宛先**
 
 | 宛先 | 説明 |
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 内部アップグレード | 2025 年 8 月 11 日（PT）以降、短期間のうちに、宛先カタログに 2 つの **[!DNL Microsoft Bing]** カードが並んで表示される場合があります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Microsoft Bing]** 宛先コネクタの名前は、**[!UICONTROL （非推奨）Microsoft Bing]** に変更され、**[!UICONTROL Microsoft Bing]** という名前の新しいカードが使用できるようになりました。 <br> アップグレードが完了し、非推奨カードが宛先カタログから削除されました。 新しいアクティブ化データ フローについては、カタログ内の **[!UICONTROL Microsoft Bing]** 接続を使用します。 **[!UICONTROL （非推奨）のMicrosoft Bing]** の宛先へのアクティブなデータフローがある場合、自動的に更新されるので、ユーザー側で対応する必要はありません。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。<ul><li>フロー仕様 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>接続仕様 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> このアップグレードの後、**へのデータフローで、** アクティブ化されたプロファイルの数が減少 [!DNL Microsoft Bing] する場合があります。 このドロップは、この宛先プラットフォームへのすべてのアクティベーションに対して **ECID マッピング要件** が導入されたことによって発生します。 |
-| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) および [LinkedIn でマッチしたオーディエンス ](../../destinations/catalog/social/linkedin-b2b.md) 宛先の認証有効期限の詳細 | [!DNL LinkedIn] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
+| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) および [LinkedIn でマッチしたオーディエンス ](../../destinations/catalog/social/linkedin-b2b.md) 宛先の認証有効期限の詳細 | [!DNL LinkedIn] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]****[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
 
 **新機能または更新された機能**
 
@@ -125,17 +124,20 @@ XDM は、Experience Platformに取り込むデータの共通の構造と定義
 
 詳しくは、[XDM の概要 ](../../xdm/home.md) を参照してください。
 
-## リアルタイム顧客プロファイル {#profile}
+<!--
+## Real-Time Customer Profile {#profile}
 
-リアルタイム顧客プロファイルは、すべてのチャネルからのデータを 1 つのプロファイルに統合することで、各顧客のアクションにつながる統一されたビューを提供します。
+Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
 
-**新機能または更新された機能**
+**New or updated features**
 
-| 機能 | 説明 |
+| Feature | Description |
 | --- | --- |
-| Entities API のルックアップ機能の強化 | Entities API で以下がサポートされるようになりました。 <ul><li>人物（プロファイル）</li><li>エクスペリエンスイベント</li><li>アカウント</li><li>Opportunity</li></ul> このアップデートにより、API の使用が簡素化され、最適なパフォーマンスと信頼性が確保されます。 以前に結合テーブルやカスタムのマルチエンティティタイプなど、他のエンティティタイプの検索を使用していた場合、今では API の使用状況を確認し、改善されたエクスペリエンスを活用する優れた機会となっています。 詳しくは、[Real-Time CDB B2B edition アーキテクチャアップグレードガイド ](../../rtcdp/b2b-architecture-upgrade.md) を参照してください。 |
+| Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
-リアルタイム顧客プロファイルについて詳しくは、[ プロファイルの概要 ](../../profile/home.md) を参照してください。
+For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## サンドボックス {#sandboxes}
 
