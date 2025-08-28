@@ -744,11 +744,11 @@ curl -X POST \
 
 ### UI を使用した API ワークフローの検証
 
-Experience Platform ユーザーインターフェイスを使用して、データフローの作成を検証できます。 Experience Platform UI の *[!UICONTROL ソース]* カタログに移動し、ヘッダータブから **[!UICONTROL データフロー]** を選択します。 次に、[!UICONTROL  データフロー名 ] 列を使用し、[!DNL Flow Service] API を使用して作成したデータフローを見つけます。
+Experience Platform ユーザーインターフェイスを使用して、データフローの作成を検証できます。 Experience Platform UI の *[!UICONTROL ソース]* カタログに移動し、ヘッダータブから **[!UICONTROL データフロー]** を選択します。 次に、[!UICONTROL &#x200B; データフロー名 &#x200B;] 列を使用し、[!DNL Flow Service] API を使用して作成したデータフローを見つけます。
 
 ![Experience Platform UI のソースワークスペースのデータフローインターフェイス ](../../../images/tutorials/validations/dataflows-interface.png)
 
-[!UICONTROL  データフローアクティビティ ] インターフェイスを通じて、データフローをさらに検証できます。 右側のパネルを使用して、データフローの [!UICONTROL API の使用状況 ] 情報を表示します。 このセクションには、[!DNL Flow Service] のデータフロー作成プロセス中に生成されたのと同じデータフロー ID、データセット ID およびマッピング ID が表示されます。
+[!UICONTROL &#x200B; データフローアクティビティ &#x200B;] インターフェイスを通じて、データフローをさらに検証できます。 右側のパネルを使用して、データフローの [!UICONTROL API の使用状況 &#x200B;] 情報を表示します。 このセクションには、[!DNL Flow Service] のデータフロー作成プロセス中に生成されたのと同じデータフロー ID、データセット ID およびマッピング ID が表示されます。
 
 ![ ソースワークスペースのデータフロービューページ ](../../../images/tutorials/validations/api-usage.png)
 
