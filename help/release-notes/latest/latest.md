@@ -35,7 +35,7 @@ Adobe Experience Platformの既存の機能に対する新機能とアップデ�
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -96,14 +96,14 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | 宛先 | 説明 |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) の宛先 | [!DNL Acxiom Real ID Audience Connection] の宛先を使用すると、[!DNL Acxiom's] 実 ID[ テクノロジー ](https://www.acxiom.com/real-id/real-id/) 使用してオーディエンスを強化し、[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] などの複数のプラットフォームに対してオーディエンスをアクティブ化できます。 |
-| Enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) の宛先 | 拡張 [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) 宛先は、既存の [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) コネクタのアップグレードバージョンです。 この新しいコネクタは、従来のコネクタの既存のオーディエンス同期機能に加えて、プロファイル同期機能を提供し、[!DNL Marketo Engage] とのより緊密な統合を実現します。 <br> [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) コネクタは、**2026 年 3 月** に非推奨（廃止予定）になります。 新しい **[[!UICONTROL 0}Marketo Engage} の宛先へのスムーズな移行を確実に行うには、次のポイントと必要な操作を確認します。]](../../destinations/catalog/adobe/marketo-engage-connection.md)** <ul><li>既存の **[!UICONTROL （従来の）（V2）Marketo Engage]** のすべてのユーザーは、2026 年 3 月までに新しい **[!UICONTROL Marketo Engage]** の宛先に移行する必要があります。</li><li> **既存のデータフローは、自動的には移行されません。** 新しい [3}Marketo Engage} の宛先への ](../../destinations/ui/connect-destination.md) 新しい接続を設定 **[!UICONTROL し、そこでオーディエンスをアクティブ化する必要があります。]**</li></ul> |
+| Enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) の宛先 | 拡張 [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) 宛先は、既存の [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) コネクタのアップグレードバージョンです。 この新しいコネクタは、従来のコネクタの既存のオーディエンス同期機能に加えて、プロファイル同期機能を提供し、[!DNL Marketo Engage] とのより緊密な統合を実現します。 <br> [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) コネクタは、**2026 年 3 月** に非推奨（廃止予定）になります。 新しい **[[!UICONTROL 0&rbrace;Marketo Engage&rbrace; の宛先へのスムーズな移行を確実に行うには、次のポイントと必要な操作を確認します。]](../../destinations/catalog/adobe/marketo-engage-connection.md)** <ul><li>既存の **[!UICONTROL （従来の）（V2）Marketo Engage]** のすべてのユーザーは、2026 年 3 月までに新しい **[!UICONTROL Marketo Engage]** の宛先に移行する必要があります。</li><li> **既存のデータフローは、自動的には移行されません。** 新しい [3&rbrace;Marketo Engage&rbrace; の宛先への ](../../destinations/ui/connect-destination.md) 新しい接続を設定 **[!UICONTROL し、そこでオーディエンスをアクティブ化する必要があります。]**</li></ul> |
 
 **更新された宛先**
 
 | 宛先 | 説明 |
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 内部アップグレード | 2025 年 8 月 11 日（PT）以降、短期間のうちに、宛先カタログに 2 つの **[!DNL Microsoft Bing]** カードが並んで表示される場合があります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Microsoft Bing]** 宛先コネクタの名前は、**[!UICONTROL （非推奨）Microsoft Bing]** に変更され、**[!UICONTROL Microsoft Bing]** という名前の新しいカードが使用できるようになりました。 <br> アップグレードが完了し、非推奨カードが宛先カタログから削除されました。 新しいアクティブ化データ フローについては、カタログ内の **[!UICONTROL Microsoft Bing]** 接続を使用します。 **[!UICONTROL （非推奨）のMicrosoft Bing]** の宛先へのアクティブなデータフローがある場合、自動的に更新されるので、ユーザー側で対応する必要はありません。 <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。<ul><li>フロー仕様 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>接続仕様 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> このアップグレードの後、**へのデータフローで、** アクティブ化されたプロファイルの数が減少 [!DNL Microsoft Bing] する場合があります。 このドロップは、この宛先プラットフォームへのすべてのアクティベーションに対して **ECID マッピング要件** が導入されたことによって発生します。 |
-| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) および [LinkedIn でマッチしたオーディエンス ](../../destinations/catalog/social/linkedin-b2b.md) 宛先の認証有効期限の詳細 | [!DNL LinkedIn] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]****[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
+| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) および [LinkedIn でマッチしたオーディエンス ](../../destinations/catalog/social/linkedin-b2b.md) 宛先の認証有効期限の詳細 | [!DNL LinkedIn] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
 
 **新機能または更新された機能**
 
