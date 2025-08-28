@@ -2,16 +2,20 @@
 title: Real-Time Customer Data Platform B2B editionのセグメント化のユースケース
 description: 使用可能な様々なAdobe Real-Time Customer Data Platform B2B editionのユースケースの概要です。
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d819a7e72e873ef3a47f9bb7946e242cb5fb7a8a
+source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1668'
 ht-degree: 1%
 
 ---
 
 # Real-Time Customer Data Platform B2B editionのセグメント化の使用例
+
+>[!IMPORTANT]
+>
+>B2B エンティティを参照するエクスペリエンスイベントを含むオーディエンス（キャンペーン、マーケティングリストなど）はサポートされなくなりました。 詳しくは、[Real-Time CDP B2B edition アーキテクチャのアップグレードの概要 ](../../rtcdp/b2b-architecture-upgrade.md) を参照してください。
 
 このドキュメントでは、Adobe Real-Time Customer Data Platform B2B editionのセグメント定義の例と、一般的な B2B ユースケースで様々なタイプの属性を組み合わせる方法について説明します。 宛先がお客様の B2B ワークフローにどのように適合するかを理解するには、[ エンドツーエンドのチュートリアル ](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data) を参照してください。
 
@@ -56,7 +60,7 @@ B2B ユースケースのオーディエンスを効果的に作成するには�
 
 データモデルは複雑になる可能性があるので、Platform UI を使用して、データモデルのより詳細な視覚表現を表示し、ユースケースに関連する属性を見つけやすくできます。 開始するには、Platform UI に移動し、左側のナビゲーションで「スキーマ」を選択します。
 
-使用可能なリストから適切なスキーマを選択し、[!UICONTROL &#x200B; 構成 &#x200B;] サイドパネルから適切な関係を選択します。 次の例では、「人物」関係を選択すると、現在のスキーマのどの属性が関連する「人物」スキーマを参照するか（関係のソーススキーマの場合）、「人物」スキーマによって参照されるか（関係の参照スキーマの場合）が表示されます。
+使用可能なリストから適切なスキーマを選択し、[!UICONTROL  構成 ] サイドパネルから適切な関係を選択します。 次の例では、「人物」関係を選択すると、現在のスキーマのどの属性が関連する「人物」スキーマを参照するか（関係のソーススキーマの場合）、「人物」スキーマによって参照されるか（関係の参照スキーマの場合）が表示されます。
 
 ![ スキーマワークスペースで人物の関係を使用したソースキーの例 ](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
@@ -70,7 +74,7 @@ B2B ユースケースのオーディエンスを効果的に作成するには�
 
 ## 様々なセグメント化の使用例 {#use-cases}
 
-B2B editionを使用したセグメント化には、次のユースケースがあります。 各例では、オーディエンスの実行内容の説明と、それらの作成に使用されるクラスの説明を提供しています。 提供される画像は、スキーマの構造を反映した [!UICONTROL &#x200B; 属性 &#x200B;] サイドレールのファイルパスをハイライト表示します。 ディスプレイの右側にある [!UICONTROL &#x200B; セグメントのプロパティ &#x200B;] セクションには、オーディエンスの属性の分類が書き込まれています。
+B2B editionを使用したセグメント化には、次のユースケースがあります。 各例では、オーディエンスの実行内容の説明と、それらの作成に使用されるクラスの説明を提供しています。 提供される画像は、スキーマの構造を反映した [!UICONTROL  属性 ] サイドレールのファイルパスをハイライト表示します。 ディスプレイの右側にある [!UICONTROL  セグメントのプロパティ ] セクションには、オーディエンスの属性の分類が書き込まれています。
 
 ### 例 1:B2B オポチュニティの「意思決定者」を検索 {#find-decision-maker}
 
