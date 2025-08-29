@@ -103,8 +103,8 @@ conversionDetails オブジェクトは、トラッキングコード、ID、コ
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `trackingCode` | 文字列 | イベントに対するコンバージョントラッキングコード。 使用できる形式のリストについては、[AMO ID 形式 ](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats) を参照してください。 |
-| `trackingIdentities` | 文字列 | イベントの EF ID またはトラッキング ID の詳細。 使用可能な形式の一覧は、[EF ID 形式 ](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats) を参照してください。 |
+| `trackingCode` | 文字列 | イベントに対するコンバージョントラッキングコード。 使用できる形式のリストについては、[AMO ID 形式 ](https://experienceleague.adobe.com/ja/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats) を参照してください。 |
+| `trackingIdentities` | 文字列 | イベントの EF ID またはトラッキング ID の詳細。 使用可能な形式の一覧は、[EF ID 形式 ](https://experienceleague.adobe.com/ja/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats) を参照してください。 |
 | `conversionProperties` | オブジェクト | 変換プロパティのマップで、（`subscriptions=253` などの）キーと値のペアの文字列の配列として表されます。 |
 
 ## `fees` {#fees}
