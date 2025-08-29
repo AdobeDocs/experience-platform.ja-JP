@@ -1,10 +1,11 @@
 ---
 title: Marketo Engage の宛先
 description: Marketo Engageは、マーケティング、広告、分析およびコマース用の唯一のエンドツーエンドのカスタマーエクスペリエンス管理（CXM）ソリューションです。 CRM リード管理と顧客エンゲージメントから、アカウントベースのマーケティングと収益属性に至るまで、アクティビティを自動化および管理できます。
-source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 891484b279d2521115c6b1edc58f45c594a55382
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 24%
+source-wordcount: '874'
+ht-degree: 27%
 
 ---
 
@@ -12,14 +13,17 @@ ht-degree: 24%
 
 ## 宛先の変更ログ {#changelog}
 
+<!--
 >[!IMPORTANT]
 >
->**[!UICONTROL （従来の）（V2）Marketo Engage]** は、**2026 年 3 月** に非推奨（廃止予定）になります。
+>The **[!UICONTROL (Legacy) (V2) Marketo Engage]** will be deprecated in **March 2026**.
 >
->新しい **[[!UICONTROL 0&rbrace;Marketo Engage&rbrace; の宛先へのスムーズな移行を確実に行うには、次のポイントと必要な操作を確認します。]](marketo-engage-connection.md)**
+>To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
 >
->* 既存の **[!UICONTROL （従来の）（V2）Marketo Engage]** のすべてのユーザーは、2026 年 3 月までに新しい **[!UICONTROL Marketo Engage]** の宛先に移行する必要があります。
->* **既存のデータフローは、自動的には移行されません。** 新しい [3&rbrace;Marketo Engage&rbrace; の宛先への ](../../ui/connect-destination.md) 新しい接続を設定 **[!UICONTROL し、そこでオーディエンスをアクティブ化する必要があります。]**
+>* All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
+>* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
+
+-->
 
 ![2 つのMarketoの宛先カードを並べて表示した画像 ](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -79,8 +83,8 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 
 >[!IMPORTANT]
 > 
->* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* 宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 宛先を設定しオーディエンスをアクティブ化する方法について詳しくは、Marketo ドキュメントの [Marketo オーディエンスをAdobe Experience Platform静的リストにプッシュする ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ja) を参照してください。
 
@@ -95,7 +99,7 @@ Experience Platformから、組織がMarketoでアクセス権を持つ任意の
 >* ビデオで言及されている 2 つの制限は、もはや適用されません。 ビデオの記録時にサポートされていたオーディエンスメンバーシップ情報に加えて、他の多くのプロファイル属性フィールドをマッピングできるようになりました。 Marketoの静的リストにまだ存在しないMarketoにオーディエンスメンバーを書き出すこともできます。これらはリストに追加されます。
 >* Marketo V1 では、アクティベーションワークフローの **[!UICONTROL オーディエンスをスケジュール設定ステップ]** で、**[!UICONTROL マッピング ID]** を手動で追加して、Marketoにデータを正常に書き出す必要がありました。 この手動の手順は、Marketo V2 では不要になりました。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440159?quality=12&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## 宛先の監視 {#monitor-destination}
 
