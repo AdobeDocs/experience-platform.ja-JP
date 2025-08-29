@@ -3,9 +3,9 @@ title: Flow Service API を使用したデータベースソースのデータ�
 type: Tutorial
 description: Flow Service API を使用して、データフローを作成し、データベースからExperience Platformにデータを取り込む方法を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 73%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->* データフローを作成するには、データベースソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、[ ソースカタログ ](../../../home.md#database) にアクセスして、ベース接続を作成できるデータベースソースのリストを確認してください。
+>* データフローを作成するには、データベースソースを持つ有効なベース接続 ID が必要となります。 この ID がない場合は、[ ソースカタログ ](../../../home.md#database) にアクセスして、ベース接続を作成できるデータベースソースのリストを表示します。
 >* Experience Platformでデータを取り込むには、すべてのテーブルベースのバッチソースのタイムゾーンを UTC に設定する必要があります。 [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) に対してサポートされているタイムスタンプは、UTC 時間を指定した TIMESTAMP_NTZ のみです。
 
 ## はじめに
