@@ -3,7 +3,7 @@ title: Audiences API エンドポイント
 description: Adobe Experience Platform Segmentation Service API のオーディエンスエンドポイントを使用して、組織のオーディエンスをプログラムで作成、管理および更新します。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 6%
@@ -67,7 +67,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 応答に成功すると、HTTP ステータス 200 が、組織内で JSON として作成されたオーディエンスのリストと共に返されます。
 
-+++組織に属する最後に作成された 2 つのオーディエンスを含む応答のサンプル
++++組織に属する、最後に作成された 2 つのオーディエンスを含む応答のサンプル
 
 ```json
 {
@@ -166,7 +166,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -255,7 +260,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 応答に成功すると、HTTP ステータス 200 と、新しく作成されたオーディエンスに関する情報が返されます。
 
-+++Platform で生成されたオーディエンスを作成する際の応答のサンプル。
++++Platform で生成されたオーディエンスを作成する際のサンプル応答。
 
 ```json
 {
@@ -335,7 +340,7 @@ GET /audiences/{AUDIENCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | 取得しようとしているオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
+| `{AUDIENCE_ID}` | 取得しようとしているオーディエンスの ID。 これは `id` のフィールドであり、**のフィールドでは** ありません `audienceId` 注意してください。 |
 
 **リクエスト**
 
@@ -355,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 応答に成功すると、HTTP ステータス 200 と、指定されたオーディエンスに関する情報が返されます。
 
-+++Platform で生成されたオーディエンスを取得する際の応答のサンプル。
++++Platform で生成されたオーディエンスを取得する際の応答例。
 
 ```json
 {
@@ -434,11 +439,11 @@ PUT /audiences/{AUDIENCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
+| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これは `id` のフィールドであり、**のフィールドでは** ありません `audienceId` 注意してください。 |
 
 **リクエスト**
 
-+++オーディエンス全体を更新するリクエストのサンプル。
++++オーディエンス全体を更新するためのサンプルリクエスト。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -526,7 +531,7 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
+| `{AUDIENCE_ID}` | 更新するオーディエンスの ID。 これは `id` のフィールドであり、**のフィールドでは** ありません `audienceId` 注意してください。 |
 
 **リクエスト**
 
@@ -559,7 +564,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 
 応答に成功すると、HTTP ステータス 200 と、更新されたオーディエンスが返されます。
 
-+++オーディエンスのフィールドにパッチを適用する際の応答のサンプル。
++++オーディエンス内のフィールドにパッチを適用する際の応答のサンプル。
 
 ```json
 {
@@ -601,7 +606,7 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 削除するオーディエンスの ID。 これは `id` のフィールドであり、`audienceId` のフィールドでは **ありません** 注意してください。 |
+| `{AUDIENCE_ID}` | 削除するオーディエンスの ID。 これは `id` のフィールドであり、**のフィールドでは** ありません `audienceId` 注意してください。 |
 
 **リクエスト**
 
