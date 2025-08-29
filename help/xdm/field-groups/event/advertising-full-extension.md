@@ -9,13 +9,13 @@ ht-degree: 11%
 
 ---
 
-# [!UICONTROL Adobe Advertising Cloud ExperienceEvent 完全拡張 ] スキーマフィールドグループ
+# [!UICONTROL Adobe Advertising Cloud ExperienceEvent 完全拡張 &#x200B;] スキーマフィールドグループ
 
 >[!AVAILABILITY]
 >
->[!UICONTROL Adobe Advertising Cloud ExperienceEvent フル拡張機能 ] フィールドグループは、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>[!UICONTROL Adobe Advertising Cloud ExperienceEvent フル拡張機能 &#x200B;] フィールドグループは、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-[!UICONTROL Adobe Advertising Cloud ExperienceEvent 完全拡張 ] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、Adobe Advertising（以前の「[!DNL Advertising Cloud]」）が収集する共通のメトリクスをキャプチャするものです。
+[!UICONTROL Adobe Advertising Cloud ExperienceEvent 完全拡張 &#x200B;] は、[[!DNL XDM ExperienceEvent]  クラス ](../../classes/experienceevent.md) の標準スキーマフィールドグループで、Adobe Advertising（以前の「[!DNL Advertising Cloud]」）が収集する共通のメトリクスをキャプチャするものです。
 
 このドキュメントでは、[!DNL Advertising Cloud] 拡張フィールドグループの構造と使用例について説明します。
 
