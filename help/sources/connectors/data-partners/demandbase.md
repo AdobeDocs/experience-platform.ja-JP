@@ -2,13 +2,13 @@
 title: Demandbase の目的
 description: Experience Platformの Demandbase Intent ソースについて説明します。
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
-badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1480'
-ht-degree: 11%
+source-wordcount: '1478'
+ht-degree: 12%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 11%
 
 ### Experience Platformに対する権限の設定
 
-[!DNL Demandbase] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/abac/ui/permissions.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Demandbase] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/abac/ui/permissions.md) を参照してください。
 
 ### ファイルとディレクトリの命名制約
 
@@ -60,25 +60,33 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 
 [!DNL Demandbase] スキーマとデータ構造については、この節を参照してください。
 
-この [!DNL Demandbase] スキーマは、**Company Intent Weekly** と呼ばれます。 指定されたアカウントとキーワードに関する週別の意図情報（匿名の B2B 購入者の調査とコンテンツ消費）です。 データは parquet 形式です。
+この [!DNL Demandbase] スキーマは「**B2B Demandbase Account Intent**」と呼ばれます。 指定されたアカウントとキーワードに関する週別の意図情報（匿名の B2B 購入者の調査とコンテンツ消費）です。 データは parquet 形式です。
 
-| フィールド名 | データタイプ | 必須 | ビジネスキー | メモ |
-| --- | --- | --- | --- | --- |
-| `company_id` | STRING | TRUE | はい | 正規の会社 ID。 |
-| `domain` | STRING | TRUE | はい | インテントを示すアカウントの識別されたドメイン。 |
-| `start_date` | 日付 | TRUE | はい | 期間にインテント アクティビティが発生した開始日。 |
-| `end_date` | 日付 | TRUE | はい | 期間にインテント アクティビティが発生した終了日。 |
-| `duration_type` | STRING | TRUE | はい | 期間のタイプ。 通常、この値は、選択したロールアップ期間に応じて、毎日、毎週、毎月のいずれかに設定されます。 このデータサンプルの場合、この値は `week` です。 |
-| `keyword_set_id` | STRING | TRUE | はい | キーワード セット ID。 これは、特定の顧客ごとに一意です。 |
-| `keyword_set` | STRING | TRUE | はい | キーワード セット名。 |
-| `keyword` | STRING | TRUE | | intent キーワード。 |
-| `is_trending` | STRING | TRUE | | 特定のトレンドの現在の状態。 トレンド状態は、過去 7 週間の平均に対する先週の意図的なアクティビティのバーストとして測定されます。 |
-| `intent_strength` | ENUM[STRING] | TRUE | | インテントの強さの定量化された指標。 使用可能な値は、`HIGH`、`MED`、`LOW` です。 |
-| `num_people_researching` | 整数 | TRUE | | 過去 7 日間に `company_id` ーザーに属し、キーワードを検索したユーザーの数。 |
-| `num_trending_days` | 整数 | TRUE | | 特定の期間でキーワードがトレンドにあった日数。 |
-| `trending_score` | 整数 | TRUE | | トレンドスコア。 |
-| `record_id` | STRING | TRUE | | 一意のプライマリレコード ID。 |
-| `partition_date` | 日付 | TRUE | | スナップショットのカレンダー日付。 これは、毎週、週末に行われます。 |
+* クラス - XDM [!DNL Demandbase Account Intent]
+* 名前空間 – B2B [!DNL Demandbase Account Intent]
+* プライマリ ID - `intentID`
+* 関係 – B2B アカウント
+
+| フィールド名 | データタイプ | 説明 |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | オブジェクト | このフィールドには、外部ソースからのシステム監査情報が含まれます。 |
+| `_id` | 文字列 | これは、レコードの一意のシステム ID です。 |
+| `accountDomain` | 文字列 | このフィールドには、アカウントドメインが格納されます。 |
+| `accountID` | 文字列 | これは、このインテントレコードが関連付けられている B2B アカウント ID です。 |
+| `demandbaseAccountID` | 文字列 | これは [!DNL Demandbase] 内の会社 ID です。 |
+| `durationType` | 文字列 | このフィールドでは、インテントの有効期間タイプを指定します（例：「week」）。 |
+| `endDate` | 日付 | これは、インテント有効期間の終了日です。 |
+| `intentID` | 文字列 | これは、インテントレコードに対してシステムで生成された一意の値です。 |
+| `intentStrength` | 文字列 | このフィールドでは、「日」、「週」、「月」など、インテントの有効期間タイプを指定します。 |
+| `isTrending` | BOOLEAN | このフィールドは、キーワードがトレンドしているかどうかを示し、可能な値は Low、Medium、High です。 |
+| `keyword` | 文字列 | このフィールドには、[!DNL Demandbase] からの意図を示すキーワードまたはフレーズが含まれます。 |
+| `keywordSetID` | 文字列 | これは、キーワードセットの識別子です。 |
+| `keywordSetName` | 文字列 | これは、キーワードセットの名前です。 |
+| `numTrendingDays` | 整数 | このフィールドは、キーワードのトレンドが表示された日数を示します。 |
+| `partitionDate` | 日付 | これは、レコードのパーティション日付です。 |
+| `peopleResearchingCount` | 整数 | このフィールドは、キーワードを検索するユーザーの数を示します。 |
+| `startDate` | 日付 | これは、インテント有効期間の開始日です。 |
+| `trendingScore` | 整数 | このフィールドには、キーワードのトレンドスコアが含まれます。 |
 
 {style="table-layout:auto"}
 
@@ -88,7 +96,7 @@ Experience Platform上の [!DNL Demandbase] は [!DNL Google Cloud Storage] に�
 
 ## UI で [!DNL Demandbase] アカウントをExperience Platformに接続する
 
-前提条件の設定が完了したら、[ アカウントのExperience Platformへの接続 ](../../tutorials/ui/create/data-partners/demandbase.md) に関するチュートリアルを読み  [!DNL Demandbase]  統合を開始します。
+前提条件の設定が完了したら、[ アカウントのExperience Platformへの接続  [!DNL Demandbase]  に関するチュートリアルを読み ](../../tutorials/ui/create/data-partners/demandbase.md) 統合を開始します。
 
 ## よくある質問 {#faq}
 

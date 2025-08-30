@@ -2,12 +2,12 @@
 title: ボンボラの意図
 description: Experience Platformの Bombora Intent ソースについて説明します。
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
-badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1607'
 ht-degree: 10%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 10%
 
 [!DNL Bombora] は、B2B インテントデータを専門とする包括的なオーディエンスソリューションです。 [!DNL Bombora Intent] は、[!DNL Bombora] アカウントをExperience Platformに接続し、アカウントインテントデータを統合するために使用できるAdobe Experience Platform ソースです。
 
-[!DNL Bombora Intent] ソースを使用すると、会社のサージインテント データ [!DNL Bombora's] 統合して、製品やサービスを積極的に調査しているアカウントを特定できます。 [!DNL Bombora]を使用してマーケット内のアカウントに優先順位を付け、正確なセグメントを作成し、ハイパーターゲットを絞ったABMキャンペーンを実行して、変換するする可能性が最も高いアカウントマーケティング取り組みフォーカスするようにします。さらに、インテント主導の戦略を活用して、広告費用を最適化し、エンゲージメントを強化し、ROI を最大化できます。
+[!DNL Bombora Intent] ソースを使用すると、会社のサージインテント データ [!DNL Bombora's] 統合して、製品やサービスを積極的に調査しているアカウントを特定できます。 [!DNL Bombora] を使用して市場内アカウントに優先順位を付け、正確なセグメントを作成し、ターゲットを絞った ABM キャンペーンを実行し、マーケティング活動がコンバージョンする可能性が最も高いアカウントに集中できるようにします。 さらに、インテント主導の戦略を活用して、広告費用を最適化し、エンゲージメントを強化し、ROI を最大化できます。
 
-[!DNL Bombora]ソースの前提条件情報については、このドキュメントをお読みください。
+[!DNL Bombora] ソースに関する前提条件については、このドキュメントを参照してください。
 
 ## ユースケース {#use-cases}
 
-[!DNL Bombora]ソースに適用できる使用例については、以下をお読みください。
+[!DNL Bombora] ソースに適用できるユースケースの例については、次をお読みください。
 
 ### Demand-Side Platform（DSP）の統合
 
@@ -48,7 +48,7 @@ B2B マーケターは、Real-Time CDPでアカウントリストを作成して
 
 ### Experience Platformに対する権限の設定
 
-[!DNL Bombora] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/abac/ui/permissions.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Bombora] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/abac/ui/permissions.md) を参照してください。
 
 ### ファイルとディレクトリの命名制約
 
@@ -77,18 +77,27 @@ Experience Platform上の [!DNL Bombora] は [!DNL Google Cloud Storage] によ�
 
 [!DNL Bombora] スキーマとデータ構造については、この節を参照してください。
 
-[!DNL Bombora] スキーマは、**アカウントインテント毎週** と呼ばれます。 特定のアカウントとトピックに関する週別目的情報（匿名の B2B バイヤー調査およびコンテンツ消費）です。 データは parquet 形式です。
+この [!DNL Bombora] スキーマは、**B2B Bombora アカウントインテント** と呼ばれます。 特定のアカウントとトピックに関する週別目的情報（匿名の B2B バイヤー調査およびコンテンツ消費）です。 データは parquet 形式です。
 
-| フィールド名 | データタイプ | 必須 | ビジネスキー | メモ |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | STRING | TRUE | はい | 会社の正規名。 |
-| `Domain` | STRING | TRUE | はい | 識別された、意図を示しているアカウントドメイン。 |
-| `Topic_Id` | 糸 | 真 | はい | [!DNL Bombora] トピック ID。 |
-| `Topic_Name` | STRING | TRUE | | [!DNL Bombora] のトピック名。 |
-| `Cluster_Name` | STRING | TRUE | | 特定のトピックの [!DNL Bombora] 上のクラスター名。 |
-| `Cluster_Id` | STRING | TRUE | | 特定のトピックに関連付けられたクラスター ID。 |
-| `Composite_Score` | 整数 | TRUE | | 複合スコアは、指定された期間における特定のトピックのドメインの消費パターンを表します。 複合スコアは、0 ～ 100 の間で測定されます。100 は可能な限り最高のスコアを表し、0 は可能な限り低いスコアを表します。 複合スコアが 60 を超える場合は、ドメインによる特定のトピックに対する関心の増加を表します。 これは「サージ」とも呼ばれます。 |
-| `Partition_Date` | 日付 | TRUE | | スナップショットのカレンダー日付。 これは、毎週、週末に `mm/dd/yyyy` 形式で行われます。 |
+* クラス - XDM [!DNL Bombora Account Intent]
+* 名前空間 – B2B [!DNL Bombora Account Intent]
+* プライマリ ID - `intentID`
+* 関係 – B2B アカウント
+
+| フィールド名 | データタイプ | 説明 |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | オブジェクト | このフィールドは、ソースシステムの監査用にシステムによって使用されます。 |
+| `_id` | 文字列 | このフィールドは、一意の ID としてシステムで使用されます。 |
+| `accountDomain` | 文字列 | このフィールドには、アカウントドメインが格納されます。 |
+| `accountID` | 文字列 | このフィールドには、このインテントレコードが関連付けられている B2B アカウント ID が含まれています。 |
+| `bomboraAccountName` | 文字列 | このフィールドには、Bombora での会社の ID が含まれます。 |
+| `clusterID` | 文字列 | このフィールドにはクラスター ID が格納されます。 |
+| `clusterName` | 文字列 | このフィールドにはクラスター名を入力します。 |
+| `compositeScore` | 整数 | このフィールドには、インテントの複合スコアが含まれます。 |
+| `intentID` | 文字列 | このフィールドには、システムで生成された一意の値が含まれます。 |
+| `partitionDate` | 日付 | このフィールドにはパーティションの日付が格納されます。 これは、毎週、週末に `mm/dd/yyyy` 形式で行われます。 |
+| `topicID` | 文字列 | このフィールドには、Bombora のインテント トピック ID が含まれています。 |
+| `topicName` | 文字列 | このフィールドには、Bombora のインテント トピック名が含まれています。 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +107,7 @@ Experience Platform上の [!DNL Bombora] は [!DNL Google Cloud Storage] によ�
 
 ## UI で [!DNL Bombora] アカウントをExperience Platformに接続する
 
-前提条件の設定が完了したら、[ アカウントのExperience Platformへの接続 ](../../tutorials/ui/create/data-partners/bombora.md) に関するチュートリアルを読み  [!DNL Bombora]  統合を開始します。
+前提条件の設定が完了したら、[ アカウントのExperience Platformへの接続  [!DNL Bombora]  に関するチュートリアルを読み ](../../tutorials/ui/create/data-partners/bombora.md) 統合を開始します。
 
 ## よくある質問 {#faq}
 
@@ -176,11 +185,11 @@ Experience Platformでインテントデータを削除するには、データ�
 
 +++回答
 
-会社ドメインが更新されると、新しいドメイン値が次のデータフローの実行に適用されます。 これにより、次のことが保証されます。
+会社ドメインが更新されると、新しいドメイン値は次回のデータフロー実行で適用されます。 これにより、次のことが保証されます。
 
-* 今後のインテントデータでは取得アカウントマッチングに更新されたドメインが使用されます。
-* 以前は不一致だったインテントシグナルが、意図したアカウントと正しく一致する場合があります。
-* 過去に取り込まれたデータにさかのぼって変更は加えられず、新しいデータのみが表示され、受信データには更新が反映されます。
+* 今後のインテントのデータ取り込みでは、アカウントのマッチングに更新されたドメインを使用します。
+* 以前に一致しなかったインテント信号は、意図したアカウントに正しく揃うようになりました。
+* 過去に取り込んだデータに対して遡及的な変更は行われず、新しいデータのみが取り込まれ、取り込まれたデータが更新を反映します。
 
 +++
 
