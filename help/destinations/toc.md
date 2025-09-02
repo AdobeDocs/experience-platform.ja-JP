@@ -5,7 +5,7 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: cbf00cbe66aa3332f5b5abd41ac5dc9f41170a95
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 73%
@@ -32,7 +32,7 @@ ht-degree: 73%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットを書き出し](/help/destinations/api/export-datasets.md)
-   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -73,7 +73,7 @@ ht-degree: 73%
       * [Experience Platform オーディエンスの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ja)
       * [Federated Audience Composition 接続 ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * 広告の宛先{#advertising}
-      * [（Beta） Acxiom の Audience Distribution](./catalog/advertising/acxiom-audience-connection.md)
+      * [（Beta） Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
       * [（Beta） Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [広告の宛先の概要](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 接続](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -215,7 +215,7 @@ ht-degree: 73%
       * [ソーシャルの宛先の概要](./catalog/social/overview.md)
       * [Facebook 接続](./catalog/social/facebook.md)
       * [（会社） LinkedIn Matched Audiences 接続](./catalog/social/linkedin-b2b.md)
-      * [LinkedIn Matched Audiences 接続](./catalog/social/linkedin.md)
+      * [LinkedIn の一致するオーディエンスとの接続](./catalog/social/linkedin.md)
       * [TikTok 接続](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 接続](./catalog/social/twitter.md)
    * ストリーミングの宛先 {#streaming}

@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Microsoft Dynamics Source コネクタの概要
 description: API またはユーザーインターフェイスを使用してMicrosoft DynamicsをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 50%
+source-wordcount: '284'
+ht-degree: 14%
 
 ---
 
-# Microsoft Dynamics コネクタ
+# [!DNL Microsoft Dynamics] ソース
 
-Adobe Experience Platform では、外部ソースからデータを取り込むと同時に、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、および拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+[!DNL Microsoft Dynamics] は、業務をより効果的に管理するために使用できるビジネスアプリケーションスイートです。 顧客との関係、財務、サプライチェーンのいずれを監視してい [!DNL Microsoft Dynamics] 場合でも、ワークフローを合理化し、よりスマートな意思決定を行うためのツールを提供します。 プラットフォームは、エンタープライズリソースプランニングと顧客関係管理（CRM）の両方をサポートするように構築されており、ビジネスプロセスを 1 つの統合システムに統合できます。
 
-[!DNL Experience Platform] は、サードパーティの CRM システムからのデータ取り込みをサポートしています。 CRM プロバイダーのサポートは [!DNL Microsoft Dynamics] を含みます。
+[!DNL Microsoft Dynamics] ソースを使用すると、[!DNL Microsoft Dynamics] アカウントからAdobe Experience Platformにデータを取り込むことができます。
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースをExperience Platformに接続する前に、地域固有の IP アドレスを許可リストに追加する必要があります。 詳しくは、[Experience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ## [!DNL Microsoft Dynamics] から XDM へのフィールドマッピング
 

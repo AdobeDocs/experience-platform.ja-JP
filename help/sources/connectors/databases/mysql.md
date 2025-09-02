@@ -3,9 +3,9 @@ title: MySQL Source コネクタの概要
 description: API またはユーザーインターフェイスを使用して MySQL をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '622'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 ### IP アドレスの許可リスト
 
-ソースを Azure またはAmazon Web Services（AWS）上のExperience Platformに接続する前に、許可リストに地域固有の IP アドレスを追加する必要があります。 詳しくは、[Azure およびAWS上のExperience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
+ソースを Azure またはAmazon Web Services（AWS）上のExperience Platformに接続する前に、許可リストに地域固有の IP アドレスを追加する必要があります。 詳しくは、[Azure とAWS上のExperience Platformへの接続に対する IP アドレスの許可リストに加える](../../ip-address-allow-list.md) に関するガイドを参照してください。
 
 ### Azure 上のExperience Platformに対する認証 {#azure}
 
