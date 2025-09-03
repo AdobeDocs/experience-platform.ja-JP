@@ -2,9 +2,9 @@
 title: Adobe Content Analytics拡張機能のリリースノート
 description: Adobe Experience PlatformのContent Analytics タグ拡張機能に関する最新のリリースノートです。
 exl-id: 37b34915-655b-40de-b17b-43028c579e37
-source-git-commit: 9fad0b092263c08a2744023b08f5f353f2c85422
+source-git-commit: 77d19ab813f881cd3c48c27ed4a9ac02e268e23f
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '282'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 2%
 
 | バージョン | 日付 | 修正点 |
 |---|---|---|
+| 1.0.48 | 2025 年 8 月 25 日（Pt） | <ul><li>ドキュメントのシャドウルート DOM 要素内のアセットのトラッキングに対するサポートを追加しました。</li></ul> |
 | 1.0.47 | 2025 年 7 月 23 日（Pt） | <ul><li>エクスペリエンスが有効になっていなかった場合に発生し、エクスペリエンスの正規表現チェックが失敗するバグを修正しました。 この問題により、Content Analyticsのデータを収集できませんでした。</li><li>Experience Cloudで主なデフォルト言語を設定していない一部のユーザーに対して、デフォルト言語設定によってタグ UI が表示されない問題を修正しました。</li></ul> |
 | 1.0.46 | 2025 年 6 月 18 日（Pt） | <ul><li>実稼動データストリームが存在しない場合、拡張機能の設定を保存しようとするとトースト通知が追加されました。</li><li>代わりに、文字列化されたペイロードの内容をコンソールに配置することで、Content Analytics ペイロードの表示の問題を一時的に修正しました。</li><li>拡張機能 UI にローカライゼーションサポートを追加しました。</li><li>拡張機能 UI コンテンツの周囲に追加のパディングが発生する CSS の問題を部分的に修正しました。</li></ul> |
 | 1.0.45 | 2025 年 4 月 14 日 | <ul><li>ページビューイベントの待機中にContent Analytics イベントを保持することに関連する設定のバグをいくつか修正しました。 Content Analyticsは、デフォルトで、最初のページビューイベントが発生するまでイベントを発生させるのを待ちます。</li></ul> |
