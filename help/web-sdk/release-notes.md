@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
+source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 59%
+source-wordcount: '2573'
+ht-degree: 58%
 
 ---
 
@@ -15,6 +15,19 @@ ht-degree: 59%
 
 このドキュメントでは、Adobe Experience Platform Web SDK のリリースノートを示します。
 Web SDK タグ拡張機能の最新のリリースノートについては、[Web SDK タグ拡張機能リリースノート](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)を参照してください。
+
+## バージョン 2.29.0 - 2025年9月4日（PT）
+
+**新機能**
+
+- Adobe ジャーニー分析用のAdobe広告データの収集がサポートされるようになりました
+- ユーザーのプロファイルにプッシュ購読の詳細を記録できるようになりました。
+
+**修正点および改善点**
+
+- 設定の上書きセクションが置き換えられずに結合される問題を修正しました。
+- リンクコレクションがドキュメントのコンテンツ全体をリンク名として送信していた場合を修正しました。
+- 特定の提案を再レンダリングできない問題を修正しました。
 
 ## バージョン 2.28.1 - 2025年7月31日（PT）
 
@@ -178,7 +191,7 @@ Web SDK タグ拡張機能の最新のリリースノートについては、[We
 
 **新機能**
 
-- [&#128279;](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 
