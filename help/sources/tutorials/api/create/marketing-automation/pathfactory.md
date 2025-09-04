@@ -1,11 +1,10 @@
 ---
 title: Flow Service API を使用した PathFactory ベース接続の作成
 description: Flow Service API を使用して、Experience Platformに対して PathFactory アカウントを認証する方法を説明します。
-badge: ベータ版
 exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 24%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 24%
 
 ベース接続は、ソースと Adobe Experience Platform 間の認証済み接続を表します。
 
-このドキュメントでは、[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して [!DNL PathFactory] のベース接続を作成する方法について説明します。
+このドキュメントでは、[!DNL PathFactory]API[[!DNL Flow Service]  を使用して ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) のベース接続を作成する方法について説明します。
 
 ## 基本を学ぶ
 
@@ -27,7 +26,7 @@ ht-degree: 24%
 
 Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
-次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示し [!DNL PathFactory] す。
+次の節では、[!DNL PathFactory] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Flow Service] す。
 
 ### 必要な資格情報の収集 {#gather-credentials}
 

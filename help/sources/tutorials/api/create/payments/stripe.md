@@ -3,20 +3,16 @@ title: API を使用したアカウントからExperience Platformへ  [!DNL Str
 description: Flow Service API を使用してStripe アカウントからExperience Platformに支払いデータを取り込む方法を説明します
 badge: ベータ版
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2006'
 ht-degree: 40%
 
 ---
 
 # API を使用した、[!DNL Stripe] アカウントからExperience Platformへの支払いデータの取り込み
 
->[!NOTE]
->
->[!DNL Stripe] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
-
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Stripe] からAdobe Experience Platformに支払いデータを取り込む方法については、次のチュートリアルをお読みください。
+[!DNL Stripe]API[[!DNL Flow Service]  を使用して ](https://www.adobe.io/experience-platform-apis/references/flow-service/) からAdobe Experience Platformに支払いデータを取り込む方法については、次のチュートリアルをお読みください。
 
 ## 基本を学ぶ
 
@@ -117,7 +113,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | `{OBJECT}` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 値は、参照するディレクトリのパスを表します。 このソースの場合、値は `json` になります。 |
 | `fileType=json` | Experience Platformに取り込むファイルのファイルタイプ。 現在、サポートされているファイルタイプは `json` のみです。 |
 | `{PREVIEW}` | 接続のコンテンツがプレビューをサポートするかどうかを定義するブール値です。 |
-| `{SOURCE_PARAMS}` | 参照するリソースパスを指す [!DNL Base64-] エンコードされた文字列。 `{SOURCE_PARAMS}` 用に承認された形式を取得するには、リソースパスを [!DNL Base64] でエンコードする必要があります。 例えば、`{"resourcePath":"charges"}` は `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D` としてエンコードされます。 使用可能なリソースパスのリストを次に示します。 <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
+| `{SOURCE_PARAMS}` | 参照するリソースパスを指す [!DNL Base64-] エンコードされた文字列。 [!DNL Base64] 用に承認された形式を取得するには、リソースパスを `{SOURCE_PARAMS}` でエンコードする必要があります。 例えば、`{"resourcePath":"charges"}` は `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D` としてエンコードされます。 使用可能なリソースパスのリストを次に示します。 <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
 ```shell
 curl -X GET \
@@ -132,7 +128,7 @@ curl -X GET \
 
 応答が成功すると、次のような JSON 構造が返されます。
 
-+++選択して JSON ペイロードを表示する
++++選択して JSON ペイロードを表示
 
 ```json
 {
@@ -407,7 +403,7 @@ curl -X GET \
 
 ### ソース接続の作成 {#source-connection}
 
-[!DNL Flow Service] API の `/sourceConnections` エンドポイントに対して POST リクエストを実行することで、ソース接続を作成できます。 ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
+`/sourceConnections` API の [!DNL Flow Service] エンドポイントに対して POST リクエストを実行することで、ソース接続を作成できます。 ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
 **API 形式**
 
@@ -550,7 +546,7 @@ POST /conversion/mappingSets
 
 次のリクエストは、[!DNL Stripe] のマッピングを作成します。
 
-+++選択するとリクエストの例が表示されます
++++選択してリクエストの例を表示
 
 ```shell
 curl -X POST \
@@ -880,7 +876,7 @@ curl -X POST \
 | `transformations.params.mappingId` | 以前の手順で生成された[マッピング ID](#mapping)。 |
 | `transformations.params.mappingVersion` | マッピング ID の対応するバージョン。この値のデフォルトは `0` です。 |
 | `scheduleParams.startTime` | データフローが開始される時間です。 開始時間の値は、Unix タイムスタンプの形式で指定する必要があります。 |
-| `scheduleParams.frequency` | データフローがデータを収集する頻度。取り込み頻度は、次のように設定できます。  <ul><li>**1 回**：頻度を `once` に設定して、1 回限りの取り込みを作成します。 1 回限りの取り込みデータフローを作成する場合、間隔とバックフィルの設定は使用できません。 デフォルトでは、スケジュールの頻度は 1 回に設定されています。</li><li>**分**：頻度を `minute` に設定して、1 分ごとにデータを取り込むようにデータフローをスケジュールします。</li><li>**時間**：頻度を `hour` に設定して、1 時間ごとにデータを取り込むようにデータフローをスケジュールします。</li><li>**日**：頻度を `day` に設定して、1 日にデータを取り込むようにデータフローをスケジュールします。</li><li>**週**：頻度を `week` に設定して、データフローが週ごとにデータを取り込むようにスケジュールします。</li></ul> |
+| `scheduleParams.frequency` | データフローがデータを収集する頻度。取り込み頻度は、次のように設定できます。  <ul><li>**1 回**：頻度を `once` に設定して、1 回限りの取り込みを作成します。 1 回限りの取り込みデータフローを作成する場合、間隔とバックフィルの設定は使用できません。 デフォルトでは、スケジュールの頻度は 1 回に設定されています。</li><li>**分**：頻度を `minute` に設定して、1 分ごとにデータを取り込むようにデータフローをスケジュールします。</li><li>**時間**:Set データフローで 1 時間 `hour` とにデータを取り込むようにスケジュールする頻度。</li><li>**日**：頻度を `day` に設定して、1 日にデータを取り込むようにデータフローをスケジュールします。</li><li>**週**：頻度を `week` に設定して、データフローが週ごとにデータを取り込むようにスケジュールします。</li></ul> |
 | `scheduleParams.interval` | インターバルは 2 つの連続したフロー実行の間隔を指定します。例えば、頻度を日に設定し、間隔を 15 に設定すると、データフローは 15 日ごとに実行されます。 インターバルの値は 0 以外の整数にしてください。 各頻度で許容される最小のインターバル値は次のとおりです。<ul><li>**1 回**：なし</li><li>**分**: 15</li><li>**時間**: 1</li><li>**日**: 1</li><li>**週**: 1</li></ul> |
 
 **応答**

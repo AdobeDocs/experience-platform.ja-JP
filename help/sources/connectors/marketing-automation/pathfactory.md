@@ -2,20 +2,15 @@
 title: PathFactory Sourceの概要
 description: API またはユーザーインターフェイスを使用して PathFactory をAdobe Experience Platformに接続する方法について説明します。
 last-substantial-update: 2024-04-30T00:00:00Z
-badge: ベータ版
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 12%
+source-wordcount: '449'
+ht-degree: 11%
 
 ---
 
 # [!DNL PathFactory]
-
->[!NOTE]
->
->[!DNL PathFactory] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 [[!DNL PathFactory]](https://www.pathfactory.com/) は、企業がコンテンツジャーニーを管理し、インテリジェントなコンテンツインサイトを通じてエンゲージメントを促進するのに役立つ、クラウドベースのプラットフォームを提供します。 このガイドでは、最適なデータ取り込みのために PathFactory のコネクタを使用して、PathFactory からExperience Platformにデータを統合する方法について詳しく説明します。
 
@@ -37,7 +32,7 @@ ht-degree: 12%
 
 * **[PathFactory アカウント]**。
    * 有効なアカウントをお持ちでない場合は、[[!DNL PathFactory]](https://www.pathfactory.com/portal/company/contactus.shtml) にお問い合わせください。
-* 任意の [!DNL PathFactory] 製品に対する **アクティブな購読**。
+* 任意の **製品に対する** アクティブな購読 [!DNL PathFactory]。
 * **ユーザー名、パスワード、ドメイン**。
    * これらの資格情報は、[!DNL PathFactory] アカウントとそのデータにアクセスするために必要です。
 * **アクセストークン** と **API エンドポイント**。
@@ -61,7 +56,7 @@ ht-degree: 12%
 
 ### Experience Platformに対する権限の設定
 
-[!DNL PathFactory] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL PathFactory] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
 
 ## [!DNL PathFactory] をExperience Platformに接続 {#pathfactory-connect}
 

@@ -1,20 +1,15 @@
 ---
 title: Stripe
-description: 支払いデータをStripeアカウントからAdobe Experience Platformに取り込む方法を説明します
-badge: ベータ版
+description: 支払いデータをStripe アカウントからAdobe Experience Platformに取り込む方法を説明します
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 9%
+source-wordcount: '791'
+ht-degree: 8%
 
 ---
 
 # [!DNL Stripe]
-
->[!NOTE]
->
->[!DNL Stripe] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 あらゆる規模の数千の企業が、オンラインと対面の両方で [!DNL Stripe] を活用して支払いを受け入れ、新たな収益源を生み出し、Adobe Experience Platform、Adobe Commerce、[!DNL Magento Open Source] の支援を受けてグローバルに拡大しています。
 
@@ -22,13 +17,13 @@ Experience Platformの [!DNL Stripe] ソースを使用して、顧客の購入�
 
 >[!TIP]
 >
->Experience Platformの [!DNL Stripe] ソースに関するご質問は、adobe-partnership<span>@stripe.com[!DNL Stripe] お問い合わせください。
+>Experience Platformの [!DNL Stripe] ソースに関するご質問は、adobe-partnership[!DNL Stripe]@stripe.com<span> お問い合わせください。
 
 >[!BEGINSHADEBOX]
 
 **[!DNL Stripe] ソースのユースケースのサンプル**
 
-ビジネスでは、顧客はオンラインストアで商品を購入できます。その際、[!DNL Klarna]、[!DNL Afterpay]、[!DNL Affirm] または [!DNL Zip] を使用して **今すぐ購入** および **後で支払う** オプションを使用できます。
+ビジネスでは、顧客はオンラインストアで商品を購入できます。その際、**、**、**または** を使用して [!DNL Klarna] 今すぐ購入 [!DNL Afterpay] および [!DNL Affirm] 後で支払う [!DNL Zip] オプションを使用できます。
 
 [!DNL Stripe] データソースを使用して **今すぐ購入** および **後で支払う** オプションの使用状況を分析し、これらの顧客に対してパーソナライズされたオファーを試します。 例えば、チェックアウト前に買い物かごのアイテム数を増やすために、アドオン項目を推奨することを検討します。
 
@@ -42,10 +37,10 @@ Experience Platformの [!DNL Stripe] ソースを使用して、顧客の購入�
 
 ### アクセストークンの取得
 
-* [!DNL Stripe] メールアドレスとパスワードを使用して [&#128279;](https://dashboard.stripe.com/login) ダッシュボード [!DNL Stripe]  にログインします。
+* [[!DNL Stripe]  メールアドレスとパスワードを使用して ](https://dashboard.stripe.com/login) ダッシュボード [!DNL Stripe] にログインします。
 * [!DNL Developers] ダッシュボードで、「**[!DNL API keys for developers]**」を選択します。
 * 「**API キー**」タブで、「**[!DNL Reveal test key]**」を選択してアクセストークンを表示します。
-* [!DNL Flow Service] API またはExperience PlatformUI を使用して [!DNL Stripe] アカウントをExperience Platformに接続する際に、このトークンをアクセストークンとして使用できるようになりました。
+* [!DNL Stripe] API またはExperience Platform UI を使用して [!DNL Flow Service] アカウントをExperience Platformに接続する際に、このトークンをアクセストークンとして使用できるようになりました。
 
 ### 必要な資格情報の収集
 
@@ -55,7 +50,7 @@ Experience Platformの [!DNL Stripe] ソースを使用して、顧客の購入�
 
 >[!TAB API]
 
-[!DNL Flow Service] API を使用して [!DNL Stripe] アカウントに接続する場合は、次の資格情報を指定する必要があります。
+[!DNL Stripe] API を使用して [!DNL Flow Service] アカウントに接続する場合は、次の資格情報を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -64,7 +59,7 @@ Experience Platformの [!DNL Stripe] ソースを使用して、顧客の購入�
 
 >[!TAB UI]
 
-Experience Platformユーザーインターフェイスを使用して [!DNL Stripe] アカウントに接続する場合は、次の資格情報を指定する必要があります。
+Experience Platform ユーザーインターフェイスを使用して [!DNL Stripe] アカウントに接続する場合は、次の資格情報を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -93,7 +88,7 @@ Experience Platformユーザーインターフェイスを使用して [!DNL Str
 
 [!DNL Stripe] では、**料金** はあなたの [!DNL Stripe] にお金を移動しようとする試みを表します。 特定の請求属性について詳しくは、[[!DNL Stripe]  料金に関する API ガイド ](https://docs.stripe.com/api/charges) を参照してください。
 
-+++選択してStripe料金オブジェクトを表示します
++++を選択して、Stripe請求オブジェクトを表示します  
 
 ```json
 {
@@ -188,7 +183,7 @@ Experience Platformユーザーインターフェイスを使用して [!DNL Str
 
 ま [!DNL Stripe]、**購読** を使用して、顧客に定期的に請求できます。 特定の購読属性について詳しくは、購読に関する [[!DNL Stripe] API ガイド ](https://docs.stripe.com/api/subscriptions) を参照してください。
 
-+++選択してStripe購読オブジェクトを表示します
++++を選択して、Stripe購読オブジェクトを表示します
 
 ```json
 {
@@ -330,7 +325,7 @@ Experience Platformユーザーインターフェイスを使用して [!DNL Str
 
 [!DNL Stripe] では、以前に作成した料金を払い戻す **払い戻し** を使用できます。 特定の払い戻し属性について詳しくは、[[!DNL Stripe]  払い戻しに関する API ガイド ](https://docs.stripe.com/api/refunds) を参照してください。
 
-+++選択してStripe払戻オブジェクトを表示します
++++を選択して、Stripe払戻オブジェクトを表示します。
 
 ```json
 {
@@ -364,9 +359,9 @@ Experience Platformユーザーインターフェイスを使用して [!DNL Str
 
 >[!TAB  残高取引 ]
 
-[!DNL Stripe] えば、**残高取引** は、[!DNL Stripe] 勘定間の資金の移動を表します。 特定の残高取引属性について詳しくは [&#128279;](https://docs.stripe.com/api/balance_transactions) 残高取引に関する [!DNL Stripe] API ガイド」を参照してください。
+[!DNL Stripe] えば、**残高取引** は、[!DNL Stripe] 勘定間の資金の移動を表します。 特定の残高取引属性について詳しくは [[!DNL Stripe]  残高取引に関する ](https://docs.stripe.com/api/balance_transactions)API ガイド」を参照してください。
 
-+++オンにすると、Stripe残高取引オブジェクトが表示されます
++++オンにして、Stripe残高取引オブジェクトを表示します
 
 ```json
 {
@@ -394,7 +389,7 @@ Experience Platformユーザーインターフェイスを使用して [!DNL Str
 
 [!DNL Stripe] では、**顧客** はビジネスの特定の顧客を表します。 特定の顧客属性について詳しくは、[[!DNL Stripe]  顧客に関する API ガイド ](https://docs.stripe.com/api/customers) を参照してください。
 
-+++選択して、Stripe顧客オブジェクトを表示します
++++を選択して、Stripe顧客オブジェクトを表示します
 
 ```json
 {
@@ -434,7 +429,7 @@ Experience Platformユーザーインターフェイスを使用して [!DNL Str
 
 [!DNL Stripe] では、**価格** は、製品の繰り返し購入と 1 回限りの購入の両方に対する単価、通貨、オプションの請求サイクルを表します。 特定の価格属性について詳しくは、価格に関する [[!DNL Stripe] API ガイド ](https://docs.stripe.com/api/prices) を参照してください。
 
-+++選択してStripe価格オブジェクトを表示します
++++を選択して、Stripe Price オブジェクトを表示します
 
 ```json
 {
@@ -475,13 +470,13 @@ Experience Platformユーザーインターフェイスを使用して [!DNL Str
 
 ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-### Experience Platformーに対する権限の設定
+### Experience Platformに対する権限の設定
 
-[!DNL Stripe] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Stripe] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
 
 ## 次の手順
 
-前提条件の設定が完了したら、に進んで、[!DNL Stripe] データを接続してExperience Platformに取り込むことができます。 API またはユーザーインターフェイスを使用して [!DNL Stripe] 支払いデータをExperience Platformに取り込む方法については、次のガイドを参照してください。
+前提条件の設定が完了したら、次に進んで、[!DNL Stripe] データを接続してExperience Platformに取り込むことができます。 API またはユーザーインターフェイスを使用して支払いデータ [!DNL Stripe]Experience Platformに取り込む方法については、次のガイドを参照してください。
 
-* [Flow Service API を使用して、StripeアカウントからExperience Platformに支払いデータを取り込みます ](../../tutorials/api/create/payments/stripe.md)。
-* [ ユーザーインターフェイスを使用した、StripeアカウントからExperience Platformへの支払いデータの取り込み ](../../tutorials/ui/create/payments/stripe.md)。
+* [Flow Service API を使用して、Stripe アカウントからExperience Platformに支払いデータを取り込む ](../../tutorials/api/create/payments/stripe.md)。
+* [ ユーザーインターフェイスを使用した、Stripe アカウントからExperience Platformへの支払いデータの取り込み ](../../tutorials/ui/create/payments/stripe.md)。

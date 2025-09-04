@@ -3,18 +3,14 @@ title: ユーザーインターフェイスを使用して、Stripe アカウン
 description: ユーザーインターフェイスを使用してStripe アカウントからExperience Platformに支払いデータを取り込む方法を説明します。
 badge: ベータ版
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1637'
 ht-degree: 16%
 
 ---
 
 # ユーザーインターフェイスを使用した、[!DNL Stripe] アカウントからExperience Platformへの支払いデータの取り込み
-
->[!NOTE]
->
->[!DNL Stripe] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 ユーザーインターフェイスを使用して [!DNL Stripe] アカウントからAdobe Experience Platformに支払いデータを取り込む方法については、次のチュートリアルを参照してください。
 

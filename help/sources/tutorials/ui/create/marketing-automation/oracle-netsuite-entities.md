@@ -1,22 +1,15 @@
 ---
 title: UI での  [!DNL Oracle NetSuite Entities]  ソース接続の作成
 description: Adobe Experience Platform UI を使用してOracle NetSuite エンティティソース接続を作成する方法を説明します。
-hide: true
-hidefromtoc: true
-badge: ベータ版
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '689'
 ht-degree: 36%
 
 ---
 
 # UI での [!DNL Oracle NetSuite Entities] ソース接続の作成
-
->[!NOTE]
->
->[!DNL Oracle NetSuite Entities] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 UI で [!DNL Oracle NetSuite Entities] アカウントからAdobe Experience Platformに連絡先や顧客データを取り込む方法については、次のチュートリアルを参照してください。
 

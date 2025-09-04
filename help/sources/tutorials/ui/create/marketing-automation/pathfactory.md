@@ -1,11 +1,10 @@
 ---
 title: Ui を使用した PathFactory アカウントのExperience Platformへの接続
 description: UI を通じて PathFactory アカウントをExperience Platformに接続する方法を説明します。
-badge: ベータ版
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '571'
 ht-degree: 18%
 
 ---
@@ -42,11 +41,11 @@ Experience Platformで PathFactory アカウントにアクセスするには、
 
 ## [!DNL PathFactory] アカウントを接続
 
-Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] には、Experience Platformでサポートされている様々なソースが表示されます。
+Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] には、Experience Platformでサポートされている様々なソースが表示されます。
 
 カテゴリのリストから適切なカテゴリを選択できます。 検索バーを使用して、特定のソースをフィルタリングすることもできます。
 
-[!UICONTROL &#x200B; マーケティングオートメーション &#x200B;] カテゴリで、**[!UICONTROL PathFactory]** を選択してから **[!UICONTROL 設定]** を選択します。
+[!UICONTROL  マーケティングオートメーション ] カテゴリで、**[!UICONTROL PathFactory]** を選択してから **[!UICONTROL 設定]** を選択します。
 
 ![ ソースカタログと PathFactory ソースが選択されています。](../../../../images/tutorials/create/pathfactory/catalog.png)
 

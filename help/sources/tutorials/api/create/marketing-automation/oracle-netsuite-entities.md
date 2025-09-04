@@ -1,24 +1,17 @@
 ---
 title: Flow Service API を使用したOracle NetSuite エンティティのソース接続とデータフローの作成
 description: Flow Service API を使用してソース接続とデータフローを作成し、Oracle NetSuite の連絡先とカスタマーデータをExperience Platformに取り込む方法について説明します。
-hide: true
-hidefromtoc: true
-badge: ベータ版
 exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2177'
+source-wordcount: '2160'
 ht-degree: 42%
 
 ---
 
 # Flow Service API を使用した [!DNL Oracle NetSuite Entities] のソース接続とデータフローの作成
 
->[!NOTE]
->
->[!DNL Oracle NetSuite Entities] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
-
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) を使用して [!DNL Oracle NetSuite Activities Entities] アカウントからAdobe Experience Platformに連絡先と顧客データを取り込む方法については、次のチュートリアルをお読みください。
+[!DNL Oracle NetSuite Activities Entities]API[[!DNL Flow Service]  を使用して ](https://www.adobe.io/experience-platform-apis/references/flow-service/) アカウントからAdobe Experience Platformに連絡先と顧客データを取り込む方法については、次のチュートリアルをお読みください。
 
 ## はじめに
 
@@ -27,7 +20,7 @@ ht-degree: 42%
 * [ ソース ](../../../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [ サンドボックス ](../../../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Oracle NetSuite Entities] ています。
+次の節では、[!DNL Oracle NetSuite Entities] API を使用してに正常に接続するために必要な追加情報を示 [!DNL Flow Service] ています。
 
 ### 認証
 
@@ -37,7 +30,7 @@ ht-degree: 42%
 
 Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
-## [!DNL Flow Service] API を使用した [!DNL Oracle NetSuite Entities] のExperience Platformへの接続
+## [!DNL Oracle NetSuite Entities] API を使用した [!DNL Flow Service] のExperience Platformへの接続
 
 次に、[!DNL Oracle NetSuite Entities] ソースの認証、ソース接続の作成、顧客データと連絡先データをExperience Platformに取り込むためのデータフローの作成を行うために必要な手順の概要を説明します。
 
@@ -93,7 +86,7 @@ curl -X POST \
 | `auth.params.clientId` | 統合レコード作成時のクライアント ID 値。 統合レコードを作成するプロセスについては、[ こちら ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) を参照してください。 値は `7fce.....b42f` に似た 64 文字の文字列です。 |
 | `auth.params.clientSecret` | 統合レコード作成時のクライアント ID 値。 統合レコードを作成するプロセスについては、[ こちら ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) を参照してください。 値は `5c98.....1b46` に似た 64 文字の文字列です。 |
 | `auth.params.accessTokenUrl` | [!DNL NetSuite] アクセストークン URL。`https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` と同様に、ACCOUNT_ID を [!DNL NetSuite] アカウント ID に置き換えます。 |
-| `auth.params.accessToken` | アクセストークンの値は、[OAuth 2.0 認証コード付与フロー ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) チュートリアルの [ 手順 2](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) の最後に生成されます。 アクセストークンの有効期限は 60 分のみ有効です。 値は、`eyJr......f4V0` と同様の JSON web トークン（JWT）として書式設定された 1024 文字の文字列です。 |
+| `auth.params.accessToken` | アクセストークンの値は、[OAuth 2.0 認証コード付与フロー ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) チュートリアルの [ 手順 2](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) の最後に生成されます。 アクセストークンの有効期限は 60 分のみ有効です。 値は、`eyJr......f4V0` と同様の JSON web トークン（JWT）として書式設定された 1024 文字の文字列です。 |
 
 **応答**
 
@@ -174,7 +167,7 @@ curl -X GET \
 
 応答が成功すると、次のような構造が返されます。
 
-+++選択して JSON ペイロードを表示する
++++選択して JSON ペイロードを表示
 
 ```json
     "format": "hierarchical",
@@ -490,7 +483,7 @@ curl -X GET \
 
 応答が成功すると、次のような構造が返されます。
 
-+++選択して JSON ペイロードを表示する
++++選択して JSON ペイロードを表示
 
 ```json
 {
@@ -651,7 +644,7 @@ curl -X GET \
 
 ### ソース接続の作成 {#source-connection}
 
-[!DNL Flow Service] API の `/sourceConnections` エンドポイントに対して POST リクエストを実行することで、ソース接続を作成できます。 ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
+`/sourceConnections` API の [!DNL Flow Service] エンドポイントに対して POST リクエストを実行することで、ソース接続を作成できます。 ソース接続は、接続 ID、ソースデータファイルへのパス、接続仕様 ID から構成されます。
 
 **API 形式**
 
