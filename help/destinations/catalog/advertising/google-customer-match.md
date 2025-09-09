@@ -3,9 +3,9 @@ keywords: google カスタマーマッチ；Google カスタマーマッチ；Go
 title: Google Customer Match 接続
 description: Google カスタマーマッチを使用すると、オンラインおよびオフラインのデータを使用して、検索、ショッピング、Gmail など、Googleが所有および運営するプロパティをまたいで顧客にリーチし、再びエンゲージできます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
+source-git-commit: 4541e812ac1f44b5374b81685c1e41cb7f00993f
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2451'
 ht-degree: 15%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
-> Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA[&#128279;](https://digital-markets-act.ec.europa.eu/index_en)）（[EU ユーザー同意ポリシー ](https://www.google.com/about/company/user-consent-policy/)）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、[Google Ads API](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)、Customer Match および [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
-><br/>
->EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーであるAdobeは、欧州連合の DMA に基づく同意要件に準拠するために必要なツールを提供します。
-><br/>
->Adobe Privacy &amp; Security Shield を購入し、同意のないプロファイルを除外する [ 同意ポリシー ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定している場合は、何もする必要はありません。
-><br/>
->Adobe Privacy &amp; Security Shield を購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断することなく使用するには、[ セグメントビルダー ](../../../segmentation/home.md#segment-definitions) 内の [ セグメント定義 ](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
+> Googleは、欧州連合（EU）の [ デジタル市場法 ](https://developers.google.com/google-ads/api/docs/start) （DMA[）（](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)EU ユーザー同意ポリシー [）で定義されているコンプライアンスおよび同意関連の要件をサポートするために、](https://developers.google.com/display-video/api/guides/getting-started/overview)Google Ads API[、](https://digital-markets-act.ec.europa.eu/index_en)Customer Match および [Display &amp; Video 360 API](https://www.google.com/about/company/user-consent-policy/) に対する変更内容をリリースしています。 同意要件に対するこれらの変更の適用は 2024 年 3 月 6 日（PT）から開始されます。
+> ><br/>
+> >EU のユーザー同意ポリシーに準拠し、欧州経済領域（EEA）のユーザーに対するオーディエンスリストの作成を続行するには、広告主およびパートナーは、オーディエンスデータをアップロードする際にエンドユーザーの同意を渡していることを確認する必要があります。 Google パートナーであるAdobeは、欧州連合の DMA に基づく同意要件に準拠するために必要なツールを提供します。
+> ><br/>
+> >Adobe Privacy &amp; Security Shield を購入し、同意のないプロファイルを除外する [ 同意ポリシー ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) を設定している場合は、何もする必要はありません。
+> ><br/>
+> >Adobe Privacy &amp; Security Shield を購入されていないお客様が既存のReal-Time CDP Googleの宛先を引き続き中断することなく使用するには、[ セグメントビルダー ](../../../segmentation/home.md#segment-definitions) 内の [ セグメント定義 ](../../../segmentation/ui/segment-builder.md) 機能を使用して、同意のないプロファイルを除外する必要があります。
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) を使用すると、Googleが所有および運営するプロパティ（[!DNL Search]、[!DNL Shopping]、[!DNL Gmail] など）をまたいでオンラインおよびオフラインのデータを使用して、顧客にリーチし、再びエンゲージできます。
 
@@ -94,9 +94,9 @@ Experience Platformの一部の宛先には、宛先プラットフォームに�
 
 ## [!DNL Google Customer Match] アカウントの前提条件 {#google-account-prerequisites}
 
-Experience Platformで [!DNL Google Customer Match] の宛先を設定する前に、[Googleのサポートドキュメント ](https://support.google.com/google-ads/answer/6299717) に概説されている [!DNL Customer Match] の使用に関するGoogleのポリシーを読んで遵守してください。
+Experience Platformで [!DNL Google Customer Match] の宛先を設定する前に、[!DNL Customer Match]Googleのサポートドキュメント [ に概説されている ](https://support.google.com/google-ads/answer/6299717) の使用に関するGoogleのポリシーを読んで遵守してください。
 
-次に、[!DNL Google] アカウントが [!DNL Standard] 以上の権限レベルに設定されていることを確認してください。 詳しくは、[Google広告のドキュメント ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) を参照してください。
+次に、[!DNL Google] アカウントが [!DNL Standard] 以上の権限レベルに設定されていることを確認してください。 詳しくは、[Google広告のドキュメント ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) を参照してください。
 
 ### 許可リスト {#allowlist}
 
@@ -139,9 +139,9 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 ### フィールドハッシュ要件への対応 {#address-field-hashing}
 
-アドレス関連のフィールドを [!DNL Google Customer Match] にマッピングする場合、Experience Platformは `address_info_first_name` と `address_info_last_name` の値を **自動ハッシュ化** してからGoogleに送信します。 この自動ハッシュは、Googleのセキュリティおよびプライバシー要件に準拠するために必要です。
+アドレス関連のフィールドを [!DNL Google Customer Match] にマッピングする場合、Experience Platformは **と** の値を `address_info_first_name` 自動ハッシュ化 `address_info_last_name` してからGoogleに送信します。 この自動ハッシュは、Googleのセキュリティおよびプライバシー要件に準拠するために必要です。
 
-`address_info_first_name` または `address_info_last_name` に対して **事前にハッシュされた値を提供しない** ください。 既にハッシュ化された値を指定すると、一致させるプロセスが失敗します。
+**または** に対して `address_info_first_name` 事前にハッシュされた値を提供しない `address_info_last_name` ください。 既にハッシュ化された値を指定すると、一致させるプロセスが失敗します。
 
 ### カスタム名前空間の使用 {#custom-namespaces}
 
@@ -156,19 +156,19 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## ビデオの概要 {#video-overview}
 
 メリットとGoogle カスタマーマッチへのデータのアクティベート方法について詳しくは、以下のビデオをご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/326487?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## 宛先への接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。
 
@@ -179,6 +179,10 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 * **[!UICONTROL 名前]**：この宛先接続の名前を指定します
 * **[!UICONTROL 説明]**：この宛先接続の説明を入力します
 * **[!UICONTROL アカウント ID]**：お使いの [Google Ads カスタマー ID](https://support.google.com/google-ads/answer/1704344?hl=en)。 ID の形式は xxx-xxx-xxxx です。 [!DNL Google Ads Manager Account (My Client Center)] を使用している場合は、マネージャーアカウント ID を使用しないでください。 代わりに、[Google Ads 顧客 ID](https://support.google.com/google-ads/answer/1704344?hl=en) を使用します。
+
+>[!NOTE]
+>
+>OAuth2 接続プロセス中に、Google OAuth プロジェクト名として「Marketo テスト」が表示される場合があります。 AdobeはGoogle Customer Match の統合にこのプロジェクト名を使用するので、これは通常の動作です。 これは、宛先設定には影響しません。
 
 >[!IMPORTANT]
 >
@@ -194,12 +198,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を宛先に書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-**[!UICONTROL セグメントスケジュール]** 手順では、[!DNL IDFA] または [!DNL GAID] のオーディエンスを [!DNL Google Customer Match] に送信する際に [!UICONTROL &#x200B; アプリ ID] を指定する必要があります。
+**[!UICONTROL セグメントスケジュール]** 手順では、[!UICONTROL  または ] のオーディエンスを [!DNL IDFA] に送信する際に [!DNL GAID] アプリ ID[!DNL Google Customer Match] を指定する必要があります。
 
 ![ アクティベーションワークフローのセグメントスケジュール手順でハイライト表示された「Google顧客一致アプリ ID」フィールド ](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -212,17 +216,17 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ソースフィールドを選択中：
 
 * 使用しているメールアドレスがハッシュ化されていない場合は、`Email` 名前空間をソース ID として選択します。
-* [!DNL Google Customer Match] の [ メールハッシュ要件 ](#hashing-requirements) に従って、[!DNL Experience Platform] へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、`Email_LC_SHA256` 名前空間をソース ID として選択します。
+* `Email_LC_SHA256` の [!DNL Experience Platform] メールハッシュ要件 [!DNL Google Customer Match] に従って、[ へのデータ取り込み時に顧客のメールアドレスをハッシュ化した場合は、](#hashing-requirements) 名前空間をソース ID として選択します。
 * ハッシュ化されていない電話番号がデータに含まれている場合は、`PHONE_E.164` 名前空間をソース ID として選択します。 [!DNL Experience Platform] は、[!DNL Google Customer Match] の要件に準拠するために電話番号をハッシュ化します。
-* [!DNL Facebook][ 電話番号ハッシュ要件 ](#phone-number-hashing-requirements) に従って、[!DNL Experience Platform] へのデータ取り込みで電話番号をハッシュ化した場合は、`Phone_SHA256_E.164` 名前空間をソース ID として選択します。
+* `Phone_SHA256_E.164`[!DNL Experience Platform] 電話番号ハッシュ要件 [!DNL Facebook] に従って、[ へのデータ取り込みで電話番号をハッシュ化した場合は、](#phone-number-hashing-requirements) 名前空間をソース ID として選択します。
 * データがデバイス ID で構成されている場合は、ソース ID として `IDFA` 名前空間 [!DNL Apple] 選択します。
 * データがデバイス ID で構成されている場合は、ソース ID として `GAID` 名前空間 [!DNL Android] 選択します。
 * データが他のタイプの識別子で構成されている場合は、ソース ID として `Custom` 名前空間を選択します。
 
 ターゲットフィールドを選択：
 
-* ソース名前空間が `Email` または `Email_LC_SHA256` の場合は、`Email_LC_SHA256` 名前空間をターゲット ID として選択します。
-* ソース名前空間が `PHONE_E.164` または `Phone_SHA256_E.164` の場合は、`Phone_SHA256_E.164` 名前空間をターゲット ID として選択します。
+* ソース名前空間が `Email_LC_SHA256` または `Email` の場合は、`Email_LC_SHA256` 名前空間をターゲット ID として選択します。
+* ソース名前空間が `Phone_SHA256_E.164` または `PHONE_E.164` の場合は、`Phone_SHA256_E.164` 名前空間をターゲット ID として選択します。
 * ソース名前空間が `IDFA` または `GAID` の場合は、`IDFA` または `GAID` 名前空間をターゲット ID として選択します。
 * ソース名前空間がカスタム名前空間の場合は、`User_ID` 名前空間をターゲット ID として選択します。
 
@@ -256,4 +260,4 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-このエラーは、顧客アカウントが [ 前提条件 ](#google-account-prerequisites) に準拠していない場合に発生します。 この問題を修正するには、Googleに問い合わせて、自分のアカウントが許可リストに登録されており、[!DNL Standard] 以上の権限レベルに設定されていることを確認してください。 詳しくは、[Google広告のドキュメント ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) を参照してください。
+このエラーは、顧客アカウントが [ 前提条件 ](#google-account-prerequisites) に準拠していない場合に発生します。 この問題を修正するには、Googleに問い合わせて、自分のアカウントが許可リストに登録されており、[!DNL Standard] 以上の権限レベルに設定されていることを確認してください。 詳しくは、[Google広告のドキュメント ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) を参照してください。
