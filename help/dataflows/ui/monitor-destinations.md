@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI での宛先のデータフローの監視
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
+source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3623'
 ht-degree: 58%
 
 ---
@@ -86,7 +86,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
 
 個々のデータフロー実行ごとに、次の詳細が表示されます。
 
-- **[!UICONTROL データフロー実行開始]**：データフロー実行が開始された時刻です。 ストリーミングデータフロー実行の場合、Experience Platform は、データフロー実行の開始時刻に基づく指標を時間別指標の形式で取得します。つまり、ストリーミングデータフロー実行の場合、データフロー実行が例えば午後 10:30 に開始した場合、UI では、この指標は開始時刻が午後 10:00 と表示されます。
+- **[!UICONTROL データフロー実行開始]**：データフロー実行が開始された時刻です。 ストリーミングデータフロー実行の場合、Experience Platform は、データフロー実行の開始時刻に基づく指標を時間別指標の形式で取得します。つまり、ストリーミングデータフロー実行の場合、データフロー実行が例えば 10:30PM に開始すると、UI では、この指標は開始時刻が午後 10:00 と表示されます。
 - **[!UICONTROL 処理時間]**：データフロー実行が処理されるまでにかかった時間です。
    - **[!UICONTROL 完了]**&#x200B;した実行の場合、処理時間指標には常に 1 時間と表示されます。
    - まだ&#x200B;**[!UICONTROL 処理中]**&#x200B;状態のデータフロー実行の場合、データフロー実行に対応するすべての指標を処理するために、すべての指標を取得するウィンドウが 1 時間以上開いたままになります。例えば、午前 9:30 に開始したデータフロー実行が、すべての指標を取得して処理するために、1 時間 30 分間処理状態のままになるといった場合です。 次に、処理ウィンドウが閉じ、データフロー実行のステータスが&#x200B;**完了**&#x200B;に更新されると、表示される処理時間が 1 時間に変更されます。
@@ -99,7 +99,7 @@ ID は、プロファイルの様々なファセットを表します。例え�
   >
   > 2025 年 3 月より、Adobeは、ストリーミング宛先のレポート精度を高めるためのアップデートを展開しています。 この機能強化により、Experience Platformのレポートと出力先プラットフォームの間の整合性が向上します。
   >
-  > この更新の前は、すべてのアクティベーションの再試行が **ID 失敗** に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。
+  > この更新の前は、すべてのアクティベーションの再試行が **[!UICONTROL ID 失敗]** に含まれていました。 この更新後は、最後のアクティベーションの再試行のみが合計数に含まれます。
   > 
   > この機能強化は、すべてのストリーミング宛先に適用されます。
   > この機能強化に続いて、ストリーミング宛先のユーザーでは、**[!UICONTROL 失敗した ID]** 数が予想より減少する場合があります。
@@ -327,11 +327,27 @@ ID は、プロファイルの様々なファセットを表します。例え�
 >
 >- 現在、以下に示す宛先では、オーディエンスレベルの表示を使用できます。 今後のストリーミング宛先へのロールアウトが予定されています。
 >
->   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
->   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL (API) Oracle Eloqua] 接続](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+>   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+>   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+>   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+>   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+>   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+>   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+>   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+>   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+>   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - バッチ（ファイルベース）の宛先
 > 
 >- バッチ宛先の場合、オーディエンスレベルの指標は、現在、データフローの正常な実行に関してのみ記録されます。 失敗したデータフロー実行や除外されたレコードに対しては、記録されません。 ストリーミング宛先へのデータフロー実行の場合、指標が取得され、アクティブ化されたレコードと除外されたレコードについて表示されます。
