@@ -4,9 +4,9 @@ title: Flow Service API を使用して、ファイルベースの宛先に対�
 description: Flow Service API を使用して、認定プロファイルを含むファイルをクラウドストレージ宛先に書き出す方法を説明します。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
 workflow-type: tm+mt
-source-wordcount: '4763'
+source-wordcount: '4911'
 ht-degree: 9%
 
 ---
@@ -50,16 +50,16 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] がカスタマーエクスペリエンスのデータの整理に使用する、標準化されたフレームワーク。
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] を使用すると、オーディエンスを作成し、[!DNL Real-Time Customer Profile] データから [!DNL Adobe Experience Platform] でオーディエンスを生成できます。
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] を使用すると、オーディエンスを作成し、[!DNL Adobe Experience Platform] データから [!DNL Real-Time Customer Profile] でオーディエンスを生成できます。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 次の節では、Experience Platformでファイルベースの宛先に対してデータをアクティブ化するために必要な追加情報を示します。
 
 ### 必要な権限 {#permissions}
 
-プロファイルを書き出すには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+プロファイルを書き出すには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
-*ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+*ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 ### API 呼び出し例の読み取り {#reading-sample-api-calls}
 
@@ -118,7 +118,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 **リクエスト**
 
-+++[!DNL Amazon S3] の [!DNL connection spec] の取得
++++[!DNL connection spec] の [!DNL Amazon S3] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -152,7 +152,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++[!DNL Azure Blob Storage] の [!DNL connection spec] の取得
++++[!DNL connection spec] の [!DNL Azure Blob Storage] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -186,7 +186,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2] の [!DNL connection spec] の取得）
++++[!DNL connection spec] の [!DNL Azure Data Lake Gen 2(ADLS Gen2] の取得）
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -220,7 +220,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++[!DNL Data Landing Zone(DLZ)] の [!DNL connection spec] の取得
++++[!DNL connection spec] の [!DNL Data Landing Zone(DLZ)] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -254,7 +254,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **リクエスト**
 
-+++[!DNL Google Cloud Storage] の [!DNL connection spec] の取得
++++[!DNL connection spec] の [!DNL Google Cloud Storage] の取得
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -376,13 +376,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![ ユーザーがオンになっている現在の手順をハイライト表示するオーディエンスをアクティブ化する手順 ](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-[ ベース接続 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、資格情報を宛先に安全に保存します。 宛先のタイプによって、その宛先に対して認証するために必要な資格情報は異なる場合があります。 これらの認証パラメーターを見つけるには、[ オーディエンスの書き出し先の宛先の選択 ](#select-destination) の節で説明されているように、最初に目的の宛先の `connection spec` を取得してから、応答の `authSpec` を確認します。 サポートされているすべての宛先の `authSpec` プロパティについては、以下のタブを参照してください。
+[ ベース接続 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) は、資格情報を宛先に安全に保存します。 宛先のタイプによって、その宛先に対して認証するために必要な資格情報は異なる場合があります。 これらの認証パラメーターを見つけるには、`connection spec` オーディエンスの書き出し先の宛先の選択 [ の節で説明されているように、最初に目的の宛先の ](#select-destination) を取得してから、応答の `authSpec` を確認します。 サポートされているすべての宛先の `authSpec` プロパティについては、以下のタブを参照してください。
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL auth spec] を表示している [!DNL Amazon S3] - [!DNL Connection spec]
++++[!DNL Amazon S3] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
@@ -449,7 +449,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Blob Storage]
 
-+++[!DNL auth spec] を表示している [!DNL Azure Blob Storage] - [!DNL Connection spec]
++++[!DNL Azure Blob Storage] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
@@ -490,7 +490,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Data Lake Gen 2 （ADLS Gen2） ]
 
-+++[!DNL auth spec] を表示している [!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec]
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
@@ -546,7 +546,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB  データランディングゾーン（DLZ） ]
 
-+++[!DNL auth spec] を表示している [!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec]
++++[!DNL Data Landing Zone(DLZ)] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 >[!NOTE]
 >
@@ -568,7 +568,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL auth spec] を表示している [!DNL Google Cloud Storage] - [!DNL Connection spec]
++++[!DNL Google Cloud Storage] を表示している [!DNL Connection spec] - [!DNL auth spec]
 
 次の [!DNL connection spec] の例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。この例では、[!DNL connection spec] 内の認証パラメーターの場所に関する追加情報を提供しています。
 
@@ -613,7 +613,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL auth spec] を表示する [!DNL Connection spec]
++++SFTP - [!DNL Connection spec] を表示する [!DNL auth spec]
 
 >[!NOTE]
 >
@@ -1137,7 +1137,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             ]
 ```
 
-+++
++++ 
 
 **リクエスト**
 
@@ -1181,7 +1181,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-+++ ベース接続への暗号化の追加 – 応答
++++ベース接続への暗号化の追加 – 応答
 
 ```json
 {
@@ -1202,7 +1202,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 次に、ターゲット接続を作成する必要があります。 [ ターゲット接続 ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 書き出されたオーディエンスの書き出しパラメーターを保存します。 書き出しパラメータには、書き出し場所、ファイル形式、圧縮、およびその他の詳細が含まれます。 例えば、CSV ファイルの場合は、複数の書き出しオプションを選択できます。 [ ファイル形式設定ページ ](/help/destinations/ui/batch-destinations-file-formatting-options.md) で、サポートされるすべての CSV 書き出しオプションに関する詳細な情報を取得します。
 
-各宛先タイプでサポートされているプロパティを理解するには、宛先の `connection spec` で提供されている `targetSpec` のプロパティを参照してください。 サポートされているすべての宛先の `targetSpec` プロパティについては、以下のタブを参照してください。
+各宛先タイプでサポートされているプロパティを理解するには、宛先の `targetSpec` で提供されている `connection spec` のプロパティを参照してください。 サポートされているすべての宛先の `targetSpec` プロパティについては、以下のタブを参照してください。
 
 >[!BEGINTABS]
 
@@ -2402,7 +2402,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Amazon S3] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) の節を参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[ しい宛先のドキュメントページの ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 宛先の詳細の入力 [!DNL Amazon S3] の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2422,7 +2422,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec id
@@ -2456,6 +2457,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2494,7 +2496,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Azure Blob Storage] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) の節を参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[ しい宛先のドキュメントページの ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) 宛先の詳細の入力 [!DNL Azure Blob Storage] の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2514,7 +2516,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "container": "your-container-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
@@ -2548,6 +2551,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2586,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、Azure [!DNL Data Lake Gen 2(ADLS Gen2)] 宛先ドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) の節を参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、Azure [ 宛先ドキュメントページの ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) 宛先の詳細の入力 [!DNL Data Lake Gen 2(ADLS Gen2)] の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2605,7 +2609,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
@@ -2639,6 +2644,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2677,7 +2683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Data Landing Zone] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) の節を参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[ しい宛先のドキュメントページの ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) 宛先の詳細の入力 [!DNL Data Landing Zone] の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2696,7 +2702,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
@@ -2730,6 +2737,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2768,7 +2776,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->必要なターゲットパラメーターの取得方法について詳しくは、[!DNL Google Cloud Storage] しい宛先のドキュメントページの [ 宛先の詳細の入力 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) の節を参照してください。
+>必要なターゲットパラメーターの取得方法について詳しくは、[ しい宛先のドキュメントページの ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 宛先の詳細の入力 [!DNL Google Cloud Storage] の節を参照してください。
 
 リクエストの例では、ハイライト表示された行にインラインコメントが付いていることに注意してください。このコメントによって追加情報が提供されます。 リクエストを選択したターミナルにコピー&amp;ペーストする際に、リクエスト内のインラインコメントを削除します。
 
@@ -2788,7 +2796,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
@@ -2822,6 +2831,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2879,7 +2889,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
@@ -2913,6 +2924,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -3306,7 +3318,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
 
 **応答**
 
-+++和集合スキーマから使用可能な属性を取得 – 応答
++++結合スキーマからの使用可能な属性の取得 – 応答
 
 以下の応答は、簡潔にするために短縮されました。
 
@@ -4504,7 +4516,7 @@ Flow Service API からの応答は、更新されたデータフローの ID �
 
 ![ ユーザーがオンになっている現在の手順をハイライト表示するオーディエンスをアクティブ化する手順 ](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-データフローを更新するには、`PATCH` 操作を使用します。 例えば、データフローにマーケティングアクションを追加できます。 または、データフローを更新して、フィールドを必須キーまたは重複排除キーとして選択できます。
+データフローを更新するには、`PATCH` 操作を使用します。 例えば、データフローにマーケティングアクションを追加したり、データフローを更新して必須キーまたは重複排除キーとしてフィールドを選択したり、既存の宛先にファイルマニフェストの生成を追加したりできます。
 
 ### マーケティングアクションの追加 {#add-marketing-action}
 
@@ -4512,11 +4524,11 @@ Flow Service API からの応答は、更新されたデータフローの ID �
 
 >[!IMPORTANT]
 >
->`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>`If-Match` リクエストを行う場合、`PATCH` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
 > etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGET リクエストを実行します。`{ID}` は、更新するデータフロー ID です。
 >
-> `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
+> `If-Match` リクエストを行う場合は、以下の例のように、`PATCH` ヘッダーの値を必ず二重引用符で囲みます。
 
 >[!BEGINSHADEBOX]
 
@@ -4581,11 +4593,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
->`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>`If-Match` リクエストを行う場合、`PATCH` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
 > etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGET リクエストを実行します。`{ID}` は、更新するデータフロー ID です。
 >
-> `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
+> `If-Match` リクエストを行う場合は、以下の例のように、`PATCH` ヘッダーの値を必ず二重引用符で囲みます。
 
 >[!BEGINSHADEBOX]
 
@@ -4660,11 +4672,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
->`PATCH` リクエストを行う場合、`If-Match` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>`If-Match` リクエストを行う場合、`PATCH` ヘッダーは必須です。 このヘッダーの値は、更新するデータフローの一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
 >
 > etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` エンドポイントに対してGET リクエストを実行します。`{ID}` は、更新するデータフロー ID です。
 >
-> `PATCH` リクエストを行う場合は、以下の例のように、`If-Match` ヘッダーの値を必ず二重引用符で囲みます。
+> `If-Match` リクエストを行う場合は、以下の例のように、`PATCH` ヘッダーの値を必ず二重引用符で囲みます。
 
 >[!BEGINSHADEBOX]
 
@@ -4697,7 +4709,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++
 
-+++XDM 属性を重複排除キーとして追加 – リクエスト
++++重複排除キーとして XDM 属性を追加 – リクエスト
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4736,6 +4748,44 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ```
 
 +++
+
+>[!ENDSHADEBOX]
+
+### 既存の宛先へのファイルマニフェスト生成の追加 {#add-file-manifest}
+
+既存の宛先にファイルマニフェストの生成を追加するには、`PATCH` 操作を使用してターゲット接続パラメーターを更新する必要があります。 これにより、宛先のマニフェストファイルの生成が可能になり、書き出されたファイルに関するメタデータが提供されます。
+
+>[!IMPORTANT]
+>
+>`If-Match` リクエストを行う場合、`PATCH` ヘッダーは必須です。 このヘッダーの値は、更新するターゲット接続の一意のバージョンです。 etag の値は、データフロー、ターゲット接続などのフローエンティティが正常に更新されるたびに更新されます。
+>
+> etag 値の最新バージョンを取得するには、`https://platform.adobe.io/data/foundation/flowservice/targetConnections/{ID}` エンドポイントに対してGET リクエストを実行します。`{ID}` は、更新するターゲット接続 ID です。
+>
+> `If-Match` リクエストを行う場合は、以下の例のように、`PATCH` ヘッダーの値を必ず二重引用符で囲みます。
+
+>[!BEGINSHADEBOX]
+
+**リクエスト**
+
++++既存のターゲット接続へのファイルマニフェストの追加 – リクエスト
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/params/includeFileManifest",
+    "value": true
+  }
+]'
+```
 
 >[!ENDSHADEBOX]
 
