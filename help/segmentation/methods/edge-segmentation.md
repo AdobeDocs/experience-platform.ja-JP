@@ -2,7 +2,7 @@
 title: Edge セグメントガイド
 description: エッジセグメント化を使用して、Experience Platformのオーディエンスをエッジ上で即座に評価し、同じページや次のページのパーソナライゼーションのユースケースを可能にする方法を説明します。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
+source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 22%
@@ -31,10 +31,10 @@ Edgeのセグメント化は、Adobe Experience Platformのセグメント定義
 
 | クエリタイプ | 詳細 | クエリ | 例 |
 | ---------- | ------- | ----- | ------- |
-| 24 時間未満の時間枠内での単一イベント | 24 時間未満の時間枠内に 1 つの受信イベントを参照する任意のセグメント定義。 | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![相対時間枠内の単一イベントの例](../images/methods/edge/single-event.png) |
-| プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 | `homeAddress.country.equals("US", false)` | ![ 表示されるプロファイル属性の例 ](../images/methods/edge/profile-attribute.png) |
-| 24 時間未満の相対時間枠内でのプロファイル属性を持つ単一のイベント | 1 つ以上のプロファイル属性を持つ 1 つの受信イベントを参照し、24 時間未満の相対時間枠内に発生するセグメント定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![相対時間枠内にプロファイル属性を持つ単一イベントの例](../images/methods/edge/single-event-with-profile-attribute.png) |
-| セグメントのセグメント | 1 つ以上のバッチセグメントまたはエッジセグメントを含むセグメント定義。 **メモ：**&#x200B;セグメントのセグメントが使用される場合、**24 時間ごとに**&#x200B;プロファイルの不適合が発生します。 | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![セグメントのセグメントの例](../images/methods/edge/segment-of-segments.png) |
+| 24 時間未満の時間枠内での単一イベント | 24 時間未満の時間枠内に 1 つの受信イベントを参照する任意のセグメント定義。 | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![相対時間枠内の単一イベントの例](../images/methods/edge/single-event.png){zoomable="yes"} |
+| プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 | `homeAddress.country.equals("US", false)` | ![ 表示されるプロファイル属性の例 ](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| 24 時間未満の相対時間枠内でのプロファイル属性を持つ単一のイベント | 1 つ以上のプロファイル属性を持つ 1 つの受信イベントを参照し、24 時間未満の相対時間枠内に発生するセグメント定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![相対時間枠内にプロファイル属性を持つ単一イベントの例](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| セグメントのセグメント | 1 つ以上のバッチセグメントまたはエッジセグメントを含むセグメント定義。 **メモ：**&#x200B;セグメントのセグメントが使用される場合、**24 時間ごとに**&#x200B;プロファイルの不適合が発生します。 | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![セグメントのセグメントの例](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
 さらに、セグメント定義 **は、エッジ上でアクティブな結合ポリシーに結び付ける必要があります**。 結合ポリシーの詳細については、[結合ポリシーガイド](../../profile/api/merge-policies.md)を参照してください。
 
@@ -153,15 +153,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 オーディエンスポータルで、「**[!UICONTROL オーディエンスを作成]**」を選択します。
 
-![ オーディエンスを作成ボタンは、オーディエンスポータルでハイライト表示されます。](../images/methods/edge/select-create-audience.png)
+![ オーディエンスを作成ボタンは、オーディエンスポータルでハイライト表示されます。](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 ポップオーバーが表示されます。 **[!UICONTROL ルールを作成]** を選択して、セグメントビルダーに入ります。
 
-![ オーディエンスを作成ポップオーバーで「ルールを作成」ボタンがハイライト表示されます。](../images/methods/edge/select-build-rules.png)
+![ オーディエンスを作成ポップオーバーで「ルールを作成」ボタンがハイライト表示されます。](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
 セグメントビルダー内で、[ 適格なクエリタイプ ](#eligible-query-types) の 1 つに一致するセグメント定義を作成します。 セグメント定義がエッジセグメント化の対象であれば、**[!UICONTROL Edge]** を **[!UICONTROL 評価方法]** として選択できます。
 
-![ セグメント定義が表示されます。 評価タイプがハイライト表示され、セグメント定義がエッジセグメント化を使用して評価できることが示されています。](../images/methods/edge/edge-evaluation-method.png)
+![ セグメント定義が表示されます。 評価タイプがハイライト表示され、セグメント定義がエッジセグメント化を使用して評価できることが示されています。](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
 セグメント定義の作成について詳しくは、[セグメントビルダーガイド](../ui/segment-builder.md)を参照してください。
 
@@ -297,11 +297,11 @@ curl -X GET \
 
 Audience Portal のフィルターを使用すると、組織内でエッジセグメント化が有効になっているすべてのオーディエンスを取得できます。 ![ フィルターアイコン ](../../images/icons/filter.png) アイコンを選択して、フィルターのリストを表示します。
 
-![Audience Portal でフィルターアイコンがハイライト表示されています。](../images/methods/filter-audiences.png)
+![Audience Portal でフィルターアイコンがハイライト表示されています。](../images/methods/filter-audiences.png){zoomable="yes"}
 
 使用可能なフィルター内で、**更新頻度** に移動し、「Edge」を選択します。 このフィルターを使用すると、エッジセグメント化を使用して評価された、組織内のすべてのオーディエンスが表示されます。
 
-![Edgeの更新頻度が選択され、エッジセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/edge/filter-edge.png)
+![Edgeの更新頻度が選択され、エッジセグメント化を使用して評価される組織内のすべてのオーディエンスが表示されます。](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
 Experience Platformでのオーディエンスの表示について詳しくは、[ オーディエンスポータルガイド ](../ui/audience-portal.md) を参照してください。
 
@@ -321,7 +321,7 @@ Experience Platformでのオーディエンスの表示について詳しくは�
 
 **[!UICONTROL 更新された新しいオーディエンス]** 指標は、エッジのセグメント化によってオーディエンスサイズが変化したことを示す折れ線グラフで表されます。 ドロップダウンを調整して、過去 24 時間、先週または過去 30 日間を表示できます。
 
-![ プロファイルの推移カードがハイライト表示されています。](../images/methods/edge/profiles-over-time.png)
+![ プロファイルの推移カードがハイライト表示されています。](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
 オーディエンスの詳細については、[ オーディエンスポータルの概要 ](../ui/audience-portal.md#audience-details) を参照してください。
 
