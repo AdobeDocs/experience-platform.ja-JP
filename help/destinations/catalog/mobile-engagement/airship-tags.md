@@ -3,24 +3,16 @@ keywords: 飛行船タグ；飛行船の宛先
 title: Airship Tags 接続
 description: Airship 内でターゲティングするために、Adobeのオーディエンスデータをオーディエンスタグとして Airship にシームレスに渡します。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
+source-git-commit: 5a2f1c87381c39d6d15f569523cfb3b00d02b34b
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 29%
+source-wordcount: '970'
+ht-degree: 32%
 
 ---
 
 # [!DNL Airship Tags] 接続 {#airship-tags-destination}
 
 ## 概要
-
->[!IMPORTANT]
->
->* 2025 年 8 月 21 日（PT）以降、宛先カタログに 2 つの **[!DNL Airship Tags]** カードが並んで表示されるようになります。 これは、宛先サービスの内部アップグレードが原因です。 既存の **[!DNL Airship Tags]** 宛先コネクタの名前は、**[!UICONTROL （非推奨） Airship Tags に変更され]** 名前が **[!UICONTROL Airship Tags]** の新しいカードが使用できるようになりました。
->* 新しいアクティベーションデータフローについては、カタログの新しい **[!UICONTROL Airship Tags]** 接続を使用します。 **[!UICONTROL （非推奨） Airship Tags]** の宛先へのアクティブなデータフローがある場合は、自動的に更新されるので、アクションは必要ありません。
->* [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) を使用してデータフローを作成する場合は、[!DNL flow spec ID] を更新し、次の値に [!DNL connection spec ID] す必要があります。
->   * フロー仕様 ID: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
->   * 接続仕様 ID: `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship] は、カスタマーエンゲージメントプラットフォームのリーダーであり、カスタマーライフサイクルのあらゆる段階で、ユーザーに対して有意義でパーソナライズされたオムニチャネルメッセージを提供するのを支援します。
 
@@ -106,7 +98,7 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -134,7 +126,7 @@ Adobe Experience Platform のオーディエンスの概念は、Airship の [Ta
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
