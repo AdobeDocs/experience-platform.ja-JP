@@ -4,7 +4,7 @@ description: Audit Query API を使用してExperience Platformの監査イベ�
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
+source-git-commit: d4edaf61030b341cbef9d5ebe5502ed649dffcd6
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 4%
@@ -33,7 +33,7 @@ GET /audit/export
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/audit/events
+  https://platform.adobe.io/data/foundation/audit/export
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
