@@ -2,10 +2,10 @@
 title: 拡張機能マニフェスト
 description: 拡張機能の適切な使用方法を Adobe Experience Platform に知らせる JSON マニフェストファイルの設定方法について説明します。
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
 workflow-type: tm+mt
-source-wordcount: '2606'
-ht-degree: 86%
+source-wordcount: '2652'
+ht-degree: 85%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 86%
 拡張機能マニフェストは、次のプロパティで構成する必要があります。
 
 | プロパティ | 説明 |
-| --- | --- |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name` | 拡張機能の名前。他のすべての 拡張機能とは異なる名前を使用し、 [命名規則](#naming-rules) に従う必要があります。 **これは、タグが識別子として使用します。拡張機能を公開した後は変更しないでください。** |
 | `platform` | 拡張機能のプラットフォーム。 現時点で使用できる値は `web` のみです。 |
 | `version` | 拡張機能のバージョン。 [semver](https://semver.org/lang/ja/) のバージョニング形式に従う必要があります。 これは、[npm バージョンフィールド](https://docs.npmjs.com/files/package.json#version)と一致します。 |
@@ -30,6 +30,7 @@ ht-degree: 86%
 | `description` | 拡張機能の説明。これは、Experience Platform ユーザーに表示されます。 拡張機能によってユーザーが Web サイトに製品を実装できるようになる場合は、製品の動作を説明します。 「タグ」や「拡張」に言及する必要はありません。ユーザーは、タグの拡張機能が表示されることを既に知っています。 |
 | `iconPath` *（オプション）* | 拡張機能用に表示されるアイコンの相対パス。 スラッシュで始めることはできません。拡張子 `.svg` が付いた SVG ファイルを参照する必要があります。 SVGは正方形にする必要があり、Experience Platformで拡大縮小できます。 |
 | `author` | 「author」は、次の構造を持つオブジェクトです。 <ul><li>`name`：拡張機能の作成者の名前。または、会社名を使用することもできます。</li><li>`url` *（オプション）*：拡張機能の作成者の詳細を参照できる URL。</li><li>`email` *（オプション）*：拡張機能の作成者のメールアドレス。</li></ul>この構造は、[npm 作成者フィールド](https://docs.npmjs.com/files/package.json#people-fields-author-contributors)のルールと一致します。 |
+| `releaseNotesUrl` *（オプション）* | この情報を公開する場所がある場合は、拡張機能のリリースノートの URL。 この URL は、拡張機能のインストールおよびアップグレード時に、Adobe タグ UI 内でこのリンクを表示するために使用されます。 このプロパティは、Web およびEdge拡張機能でのみサポートされます。 |
 | `exchangeUrl` *（公開拡張機能に必要）* | Adobe Exchange での拡張機能のリストへの URL。パターン `https://www.adobeexchange.com/experiencecloud.details.######.html` と一致する必要があります。 |
 | `viewBasePath` | すべてのビューおよびビュー関連のリソース（HTML、JavaScript、CSS、画像）を含むサブディレクトリの相対パス。 Experience Platformは、このディレクトリを web サーバー上でホストし、このディレクトリから iframe コンテンツを読み込みます。 これは必須フィールドで、先頭にスラッシュを使用することはできません。例えば、すべてのビューが `src/view/` 内に含まれている場合、`viewBasePath` の値は `src/view/` になります。 |
 | `hostedLibFiles` *（オプション）* | ユーザーの多くは、タグ関連のすべてのファイルを自社サーバーでホストすることを好みます。これにより、ユーザーは実行時のファイルの可用性に関する確実性を高めることができ、コードを簡単にスキャンしてセキュリティの脆弱性を調べることができます。 実行時に拡張機能のライブラリ部分で JavaScript ファイルを読み込む必要がある場合は、このプロパティを使用して、これらのファイルをリストすることをお勧めします。 リストに含まれるファイルは、タグのランタイムライブラリと一緒にホストされます。 その後、拡張機能では、[getHostedLibFileUrl](./turbine.md#get-hosted-lib-file) メソッドで取得した URL 経由でファイルを読み込むことができます。<br><br>このオプションには、ホストする必要があるサードパーティのライブラリファイルの相対パスを使用した配列が含まれます。 |
@@ -74,20 +75,20 @@ ht-degree: 86%
       <td><code>schema</code></td>
       <td>拡張機能の設定表示から保存される有効なオブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a> のオブジェクト。 設定表示の開発者は、保存した settings オブジェクトがこのスキーマと一致することを確認する必要があります。このスキーマは、Experience Platform サービスを使用してデータを保存しようとした場合の検証にも使用されます。<br><br>スキーマオブジェクトの例を次に示します。
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       手動でスキーマをテストするには、<a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> などのツールを使用することをお勧めします。</td>
     </tr>
@@ -134,20 +135,20 @@ ht-degree: 86%
       <td><code>schema</code></td>
       <td>ユーザーが保存できる有効な settings オブジェクトの形式を記述する <a href="https://json-schema.org/">JSON スキーマ</a>のオブジェクト。 設定は通常、ユーザーがデータ収集ユーザーインターフェイスを使用して設定および保存します。 このような場合、拡張機能の表示では、ユーザーが指定した設定を検証するために必要な手順を実行できます。 一方で、ユーザーインターフェイスを使用せずに、タグ API を直接使用するユーザーも存在します。このスキーマの目的は、ユーザーインターフェイスが使用されているかどうかに関係なく、ユーザーが保存する settings オブジェクトが、実行時に settings オブジェクトに対して実行されるライブラリモジュールと互換性のある形式であることを、Experience Platformが適切に検証できるようにすることです。<br><br>スキーマオブジェクトの例を次に示します。<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       手動でスキーマをテストするには、<a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> などのツールを使用することをお勧めします。</td>
     </tr>
