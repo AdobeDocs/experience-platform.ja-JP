@@ -2,7 +2,7 @@
 title: Verizon MediaYahoo DataX 接続
 description: DataX は Verizon Media／Yahoo の集約インフラストラクチャです。安全で自動化されたスケーラブルな方法で Verizon Media／Yahoo が外部パートナーとデータを交換できるよう様々なコンポーネントをホストしています。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 65809628e8535027edb08e54e84b308777036ab2
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 43%
@@ -17,7 +17,7 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 >
->この宛先コネクタとドキュメントページは、[!DNL Verizon Media/Yahoo] の [!DNL DataX] チームが作成および管理します。 お問い合わせや更新のリクエストについては、[dataops@verizonmedia.comまで直接ご連絡ください ](mailto:dataops@verizonmedia.com)
+>この宛先コネクタとドキュメントページは、[!DNL Verizon Media/Yahoo] の [!DNL DataX] チームが作成および管理します。 お問い合わせや更新のリクエストについては、[dataoperations@yahooinc.comまで直接ご連絡ください ](mailto:dataoperations@yahooinc.com)
 
 ## 前提条件 {#prerequisites}
 
@@ -56,7 +56,7 @@ ht-degree: 43%
 >
 >[!DNL Verizon Media/Yahoo DataX] に 100 を超えるオーディエンスをアクティブ化すると、宛先からレート制限エラーを受け取る場合があります。 この宛先に対してオーディエンスをアクティブ化する場合、1 つのアクティベーションデータフローでアクティブ化するオーディエンスが 100 個未満になるようにしてください。 さらにセグメントをアクティブ化する必要がある場合は、同じアカウントに新しい宛先を作成します。
 
-[DataX ドキュメント ](https://developer.verizonmedia.com/datax/guide/rate-limits/) に概説されている分類やオーディエンスの投稿の割り当て量の制限に対して、[!DNL DataX] れはレート制限されています。
+[!DNL DataX]DataX ドキュメント [ に概説されている分類やオーディエンスの投稿の割り当て量の制限に対して、](https://developer.verizonmedia.com/datax/guide/rate-limits/) れはレート制限されています。
 
 
 | エラーコード | エラーメッセージ | 説明 |
@@ -67,7 +67,7 @@ ht-degree: 43%
 
 ## サポートされている ID {#supported-identities}
 
-[!DNL Verizon Media] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja#getting-started) についての詳細情報。
+[!DNL Verizon Media] では、以下の表で説明する ID のアクティブ化をサポートしています。 [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started) についての詳細情報。
 
 | ターゲット ID | 説明 | 注意点 |
 |---|---|---|
@@ -90,13 +90,13 @@ ht-degree: 43%
 
 ## ユースケース {#use-cases}
 
-[!DNL Verizon Media] （VMG）のメールアドレスをキーに特定のオーディエンスグループをターゲットにしたい広告主は、[!DNL DataX] API を使用して、新しいオーディエンスをすばやく作成し、VMG のほぼリアルタイムの API を使用して目的のオーディエンスグループをプッシュできます。
+[!DNL DataX] （VMG）のメールアドレスをキーに特定のオーディエンスグループをターゲットにしたい広告主は、[!DNL Verizon Media] API を使用して、新しいオーディエンスをすばやく作成し、VMG のほぼリアルタイムの API を使用して目的のオーディエンスグループをプッシュできます。
 
 ## 宛先に接続 {#connect}
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 ![Experience Platform UI の Yahoo DataX 宛先カード ](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
@@ -120,8 +120,8 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 宛先にオーディエンスをアクティブ化する手順については、[ 宛先へのプロファイルとオーディエンスのアクティブ化 ](../../ui/activate-segment-streaming-destinations.md) を参照してください。
 
