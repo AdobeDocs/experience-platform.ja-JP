@@ -4,7 +4,7 @@ description: （V2）Salesforce Marketing Cloud Account Engagement （旧称 Par
 badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 21ca268d3ade99cf46b6c511360084297e8163d3
+source-git-commit: d1405237698271607fa672ccae1ac731d66df263
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 20%
@@ -22,9 +22,9 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 > 
-> これは、[Salesforce Marketing Cloud アカウントエンゲージメント ](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) の宛先の V2 バージョンです。 このバージョンは、以前の宛先に代わるものであり、現在Alpha リリースにあります。
-> &#x200B;> <br>
-> &#x200B;> 現在 [Salesforce Marketing Cloud Account Engagement](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) の以前のバージョンを使用している場合は、**2026 年 1 月** より前に、この V2 バージョンに移行する必要があります。 2026 年 1 月以降、Adobeは以前のバージョンを廃止し、使用できなくなります。
+> これは、[Salesforce Marketing Cloud アカウントエンゲージメント ](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) の宛先の V2 バージョンです。 このバージョンは、以前の宛先に代わるものであり、現在Alpha リリースにあります。
+> > <br>
+> > 現在 [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) の以前のバージョンを使用している場合は、**2026 年 1 月** より前に、この V2 バージョンに移行する必要があります。 2026 年 1 月以降、Adobeは以前のバージョンを廃止し、使用できなくなります。
 
 
 ## ユースケース {#use-cases}
@@ -98,7 +98,7 @@ Experience Platformから [!DNL Marketing Cloud Account Engagement] アカウン
 
 >[!IMPORTANT]
 >
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -138,8 +138,8 @@ Experience Platformから [!DNL Marketing Cloud Account Engagement] アカウン
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
