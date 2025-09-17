@@ -27,7 +27,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->このページに記載されている IP 範囲は、ファイルベースのクラウドストレージ宛先 *Azure Blob*、[!UICONTROL Azure Data Lake Storage Gen2]、[!UICONTROL Data Landing Zone]、Microsoft Azure でホストされている SFTP サーバーでは [!UICONTROL  サポートされていません ]。
+>このページに記載されている IP 範囲は、ファイルベースのクラウドストレージ宛先 *Azure Blob*、[!UICONTROL Azure Data Lake Storage Gen2]、[!UICONTROL Data Landing Zone]、Microsoft Azure でホストされている SFTP サーバーでは [!UICONTROL &#x200B; サポートされていません &#x200B;]。
 
 ## 概要 {#overview}
 
