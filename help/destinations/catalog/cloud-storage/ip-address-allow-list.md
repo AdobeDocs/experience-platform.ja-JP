@@ -3,9 +3,9 @@ title: ファイルベースのクラウドストレージの宛先の IP アド
 type: Documentation
 description: このページでは、Experience Platformからクラウドストレージの宛先に安全にデータを書き出すために、許可リストに追加できる IP 範囲を提供します。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
+source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '305'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->このページで説明している IP 範囲は、ファイルベースのクラウドストレージ宛先 [!UICONTROL Azure Blob]、[!UICONTROL Azure Data Lake Storage Gen2] および [!UICONTROL &#x200B; データランディングゾーン &#x200B;] では *サポートされていません*。
+>このページに記載されている IP 範囲は、ファイルベースのクラウドストレージ宛先 *Azure Blob*、[!UICONTROL Azure Data Lake Storage Gen2]、[!UICONTROL Data Landing Zone]、Microsoft Azure でホストされている SFTP サーバーでは [!UICONTROL  サポートされていません ]。
 
 ## 概要 {#overview}
 
