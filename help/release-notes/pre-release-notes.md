@@ -53,7 +53,7 @@ Adobe Experience Platform AI アシスタントは、Adobe Experience Cloud ア�
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -76,13 +76,13 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | [!BADGE Beta]{type=Informative} [!DNL Snowflake Batch] コネクタ | 新しい [!DNL Snowflake Batch] コネクタが使用できるようになり、特定のユースケースに対してストリーミングコネクタの代わりに使用できます。 |
 | [!DNL Adform] の宛先 | [!DNL Adform] は、プログラムによるメディア売買ソリューションの大手プロバイダーです。 Adform をAdobe Experience Platformに接続すると、Experience Cloud ID （ECID）に基づいて、Adform を通じてファーストパーティオーディエンスをアクティブ化できます。 |
 | [!DNL Data Landing Zone] 暗号化のサポート | RSA 形式の公開鍵を添付して、書き出したファイルを暗号化できるようになりました。これにより、他のクラウドストレージの宛先が機密情報に提供するのと同じレベルのセキュリティが提供されます。 |
-| [!DNL Pinterest] 宛先の認証有効期限の詳細 | [!DNL Pinterest] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]****[[!UICONTROL または]](../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
+| [!DNL Pinterest] 宛先の認証有効期限の詳細 | [!DNL Pinterest] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[[!UICONTROL または]](../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL  タブと ]](../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL  タブの新しい並べ替え機能により、宛先管理ワークフローが向上し ]](../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。 |
+| Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL &#x200B; タブと &#x200B;]](../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL &#x200B; タブの新しい並べ替え機能により、宛先管理ワークフローが向上し &#x200B;]](../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。 |
 
 詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。
 
