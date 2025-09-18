@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent クラス
 description: XDM ExperienceEvent クラスと、イベントデータモデリングのベストプラクティスについて説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f00b195567c22f69c05909e76906c8770da4b9d0
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2777'
 ht-degree: 36%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 36%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `_id`<br>**（必須）** | 「エクスペリエンスイベントクラス `_id`」フィールドは、Adobe Experience Platformに取り込まれる個々のイベントを一意に識別します。 このフィールドは、個々のイベントの一意性を追跡、データの重複を防ぎ、ダウンストリームのサービスでそのイベントを検索するために使用されます。<br><br> 重複イベントが検出された場合、Experience Platformのアプリケーションとサービスでは重複の処理が異なる可能性があります。 例えば、同じ `_id` を持つイベントが既にプロファイルストアに存在する場合、プロファイルサービスの重複イベントはドロップされます。<br><br> 場合によ `_id` ては、[ ユニバーサル固有識別子（UUID） ](https://datatracker.ietf.org/doc/html/rfc4122) または [ グローバル固有識別子（GUID） ](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) とすることができます。<br><br> ソース接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、イベントを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結できるイベントの例としては、プライマリ ID、タイムスタンプ、イベントタイプなどがあります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
+| `_id`<br>**（必須）** | 「エクスペリエンスイベントクラス `_id`」フィールドは、Adobe Experience Platformに取り込まれる個々のイベントを一意に識別します。 このフィールドは、個々のイベントの一意性を追跡、データの重複を防ぎ、ダウンストリームのサービスでそのイベントを検索するために使用されます。<br><br> 重複イベントが検出された場合、Experience Platformのアプリケーションとサービスでは重複の処理が異なる可能性があります。 例えば、同じ `_id` を持つイベントが既にプロファイルストアに存在する場合、プロファイルサービスの重複イベントはドロップされます。 ただし、これらのイベントは、引き続きデータレイクに記録されます。<br><br> 場合によ `_id` ては、[ ユニバーサル固有識別子（UUID） ](https://datatracker.ietf.org/doc/html/rfc4122) または [ グローバル固有識別子（GUID） ](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) とすることができます。<br><br> ソース接続からデータをストリーミングする場合、または Parquet ファイルから直接取り込む場合は、イベントを一意にするフィールドの特定の組み合わせを連結して、この値を生成する必要があります。 連結できるイベントの例としては、プライマリ ID、タイムスタンプ、イベントタイプなどがあります。 連結された値は、`uri-reference` 形式の文字列にする（コロン文字は削除する）必要があります。 その後、連結された値は、SHA-256 または選択した別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>**このフィールドは、個人に関連する ID を表すものではなく**、データ記録そのものを表していることを見極めることが重要です。人物に関する ID データは、代わりに互換性のあるフィールドグループが提供する [ID フィールド](../schema/composition.md#identity)に降格させるべきです。 |
 | `eventMergeId` | [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) を使用してデータを取り込む場合、レコードを作成する原因となった取り込まれたバッチの ID を表します。 このフィールドは、データの取り込み時にシステムによって自動的に入力されます。 Web SDK 実装のコンテキスト以外に、このフィールドの使用はサポートされていません。 |
 | `eventType` | イベントのタイプまたはカテゴリを示す文字列。 このフィールドは、同じスキーマとデータセット内の異なるイベントタイプを区別する場合（リテール企業で製品を表示するイベントと買い物かごへの追加イベントを区別する場合など）に使用できます。<br><br>このプロパティの標準値は、[付録の節](#eventType)に記載されています（意図するユースケースの説明も含む）。このフィールドは拡張可能な列挙型で、つまり、独自のイベントタイプ文字列を使用して、追跡するイベントを分類することもできます。<br><br>`eventType` では、アプリケーションでのヒットごとに 1 つのイベントのみを使用するように制限されているので、最も重要なイベントをシステムに伝えるには、計算フィールドを使用する必要があります。 詳しくは、[計算フィールドのベストプラクティス](#calculated)の節を参照してください。 |
 | `producedBy` | イベントのプロデューサーまたはオリジンを表す文字列の値。セグメント化で必要な場合、このフィールドを使用すると特定のイベントプロデューサーを除外できます。<br><br>このプロパティの推奨値の一部が、[付録の節](#producedBy)に記載されています。このフィールドは拡張可能な列挙型で、つまり、独自の文字列を使用して、異なるイベントプロデューサーを表すこともできます。 |
@@ -64,13 +64,13 @@ UI を使用して手動でExperience Platformにデータを取り込む場合�
 
 アドビでは、 [!DNL XDM ExperienceEvent] クラスで使用するためのいくつかの標準フィールドグループを提供しています。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
-* [[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 &#x200B;]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL &#x200B; 残高移動 &#x200B;]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 ]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL  残高移動 ]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL キャンペーンマーケティング詳細]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL &#x200B; カードのアクション &#x200B;]](../field-groups/event/card-actions.md)
+* [[!UICONTROL  カードのアクション ]](../field-groups/event/card-actions.md)
 * [[!UICONTROL チャンネル詳細]](../field-groups/event/channel-details.md)
 * [[!UICONTROL コマース詳細]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL &#x200B; 供託内容等 &#x200B;]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL  供託内容等 ]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL デバイス下取り詳細]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 食事予約]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL エンドユーザー ID 詳細]](../field-groups/event/enduserids.md)
@@ -78,8 +78,8 @@ UI を使用して手動でExperience Platformにデータを取り込む場合�
 * [[!UICONTROL フライト予約]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 同意]](../field-groups/event/iab.md)
 * [[!UICONTROL 宿泊予約]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;]](../field-groups/event/mediaanalytics-interaction.md)
-* [[!UICONTROL &#x200B; 見積依頼の詳細 &#x200B;]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL MediaAnalytics インタラクションの詳細 ]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL  見積依頼の詳細 ]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL 予約詳細]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web 詳細]](../field-groups/event/web-details.md)
 
@@ -155,7 +155,7 @@ UI を使用して手動でExperience Platformにデータを取り込む場合�
 | `media.adSkip` | このイベントは、広告がスキップされた場合に通知します。 |
 | `media.adStart` | このイベントは、広告の開始を示します。 |
 | `media.bitrateChange` | このイベントは、ビットレートが変更された場合に通知します。 |
-| `media.bufferStart` | `media.bufferStart` イベントタイプは、バッファー処理の開始時に送信されます。 特定の `bufferResume` イベントタイプはありません。`bufferStart` イベントの後に `play` イベントが送信された場合、バッファリングは再開されたと見なされます。 |
+| `media.bufferStart` | `media.bufferStart` イベントタイプは、バッファー処理の開始時に送信されます。 特定の `bufferResume` イベントタイプはありません。`play` イベントの後に `bufferStart` イベントが送信された場合、バッファリングは再開されたと見なされます。 |
 | `media.chapterComplete` | このイベントは、チャプターが完了したことを示します。 |
 | `media.chapterSkip` | このイベントは、ユーザーが別のセクションまたはチャプターに進む、または戻る際にトリガーされます。 |
 | `media.chapterStart` | このイベントは、チャプターの開始を示します。 |
@@ -163,7 +163,7 @@ UI を使用して手動でExperience Platformにデータを取り込む場合�
 | `media.error` | このイベントは、メディアの再生中にエラーが発生した場合に通知します。 |
 | `media.pauseStart` | このイベントは、`pauseStart` イベントが発生した際に追跡します。 このイベントは、ユーザーがメディア再生で一時停止を開始するとトリガーされます。 再開イベントタイプはありません。 リク `pauseStart` ストの後に再生イベントを送信すると、再開が推論されます。 |
 | `media.ping` | `media.ping` イベントタイプは、進行中の再生ステータスを示すために使用されます。 メインコンテンツの場合、このイベントは再生中に 10 秒ごとに送信される必要があります。これは、再生が開始されてから 10 秒後に開始されます。 広告コンテンツの場合は、広告トラッキング中に 1 秒ごとに送信される必要があります。 ping イベントでは、リクエスト本文にパラメーターマップを含めないでください。 |
-| `media.play` | `media.play` イベントタイプは、プレーヤーが `buffering,` `paused` （ユーザーによって再開された場合）や `error` （自動再生などのシナリオを含む）などの別の状態から `playing` 状態に移行する際に送信されます。 このイベントは、プレーヤーの `on('Playing')` コールバックによってトリガーされます。 |
+| `media.play` | `media.play` イベントタイプは、プレーヤーが `playing` `buffering,` （ユーザーによって再開された場合）や `paused` （自動再生などのシナリオを含む）などの別の状態から `error` 状態に移行する際に送信されます。 このイベントは、プレーヤーの `on('Playing')` コールバックによってトリガーされます。 |
 | `media.sessionComplete` | このイベントは、メインコンテンツの終わりに達したときに送信されます。 |
 | `media.sessionEnd` | `media.sessionEnd` イベントタイプは、ユーザーが表示を放棄して戻る可能性が低いときに、セッションを直ちに閉じるように Media Analytics バックエンドに通知します。 このイベントが送信されない場合、セッションは、10 分間無操作状態が続いた後、または再生ヘッドを動かさずに 30 分後にタイムアウトします。 そのセッション ID を持つ後続のメディアコールは無視されます。 |
 | `media.sessionStart` | `media.sessionStart` イベントタイプは、セッション開始呼び出しで送信されます。 応答を受け取ると、セッション ID が Location ヘッダーから抽出され、収集サーバーに対する以降のすべてのイベント呼び出しに使用されます。 |
