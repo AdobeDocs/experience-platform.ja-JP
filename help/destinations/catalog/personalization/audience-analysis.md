@@ -3,16 +3,18 @@ title: オーディエンス分析の宛先
 description: お客様がCustomer Journey Analyticsで認定されるオーディエンスを表示します。
 badgeLimitedAvailability: label="限定提供" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+hide: true
+hidefromtoc: true
+source-git-commit: 4bd94c292a13a80405a3d726295ebd6eaf86aaaa
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 39%
+source-wordcount: '799'
+ht-degree: 38%
 
 ---
 
 # オーディエンス分析の宛先
 
-[!UICONTROL Audience Analysis] 宛先を使用すると、Adobe Experience Platform オーディエンスデータを [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja) に強化できます。 結果のエンリッチメントされたデータに含めるオーディエンスを選択できます。 オーディエンスの選定は、[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=ja) レポートでディメンションとして使用できるようになります。
+[!UICONTROL Audience Analysis] 宛先を使用すると、Adobe Experience Platform オーディエンスデータを [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ja) に強化できます。 結果のエンリッチメントされたデータに含めるオーディエンスを選択できます。 オーディエンスの選定は、[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) レポートでディメンションとして使用できるようになります。
 
 >[!AVAILABILITY]
 >
@@ -67,7 +69,7 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 >[!IMPORTANT]
 > 
->宛先を作成するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>宛先を作成するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 この宛先を作成するには、[ 宛先設定のチュートリアル ](../../ui/connect-destination.md) に示されている手順に従います。
 
@@ -98,7 +100,7 @@ Audience Analysis では、以下の表に示す ID のアクティベーショ�
 
 >[!IMPORTANT]
 > 
->データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 
 宛先を作成したら、宛先に必要なオーディエンスをアクティブ化できます。
 

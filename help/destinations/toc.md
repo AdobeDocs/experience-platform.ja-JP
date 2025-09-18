@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 6e76b7a594cb8482b3e33edbf6776ba3b03e6fb9
+source-git-commit: 66a1c323eaf930b4b9204d9e898bbe8356a9b1e5
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 73%
+source-wordcount: '1317'
+ht-degree: 74%
 
 ---
 
@@ -31,8 +31,8 @@ ht-degree: 73%
    * [宛先データフローの更新](./api/update-destination-dataflows.md)
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
-   * [データセットを書き出し](/help/destinations/api/export-datasets.md)
-   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [データセットの書き出し](/help/destinations/api/export-datasets.md)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -196,7 +196,6 @@ ht-degree: 73%
       * [Moengage 接続](./catalog/mobile-engagement/moengage.md)
    * パーソナライゼーションの宛先 {#personalization}
       * [パーソナライゼーションの宛先の概要](./catalog/personalization/overview.md)
-      * [（限定提供）オーディエンス分析](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce 接続](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target 接続](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 拡張機能](./catalog/personalization/adobe-target.md)
