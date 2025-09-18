@@ -3,7 +3,7 @@ title: ストリーミング宛先に対するオーディエンスデータの�
 type: Tutorial
 description: Adobe Experience Platformのオーディエンスをストリーミングの宛先にマッピングしてアクティブ化する方法について説明します。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 595856842a3890426bb196218bd8be4e321ff8aa
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 19%
@@ -15,9 +15,9 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 > 
-> * オーディエンスをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
-> * ワークフローの [ マッピングステップ ](#mapping) を実行せずにオーディエンスをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+> * オーディエンスをアクティブ化し、ワークフローの [ マッピングステップ ](#mapping) を有効にするには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+> * ワークフローの [ マッピングステップ ](#mapping) を実行せずにオーディエンスをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL マッピングを使用しないセグメントのアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。
+> * *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 > 
 > 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
@@ -64,7 +64,7 @@ ht-degree: 19%
 >この手順は、一部のオーディエンスストリーミング宛先にのみ適用されます。 宛先に **[!UICONTROL マッピング]** ステップがない場合は、[ オーディエンススケジュール ](#scheduling) にスキップします。
 >
 >ストリーミング宛先に対してオーディエンスをアクティブ化する場合、ターゲットプロファイル属性に加えて、*少なくとも 1 つのターゲット ID 名前空間* もマッピングする必要があります。 そうでない場合、オーディエンスは宛先プラットフォームに対してアクティブ化されません。
-> ![必須の ID 名前空間マッピングを示すマッピングステップの画像 ](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>> ![必須の ID 名前空間マッピングを示すマッピングステップの画像 ](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 一部のオーディエンスストリーミング宛先では、宛先内のターゲット ID としてマッピングするために、ソース属性または ID 名前空間を選択する必要があります。
@@ -129,11 +129,11 @@ ht-degree: 19%
 
      ![ オーディエンスの接触チャネルのドロップダウンがハイライト表示されました。](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
-   * 一部の宛先では、[!DNL IDFA] ーザーまたは [!DNL GAID] オーディエンスをアクティブ化する際に、**[!UICONTROL アプリ ID]** を入力する必要があります。 宛先にこのフィールドが含まれていない場合、この手順はスキップします。
+   * 一部の宛先では、**[!UICONTROL ーザーまたは]** オーディエンスをアクティブ化する際に、[!DNL IDFA] アプリ ID[!DNL GAID] を入力する必要があります。 宛先にこのフィールドが含まれていない場合、この手順はスキップします。
 
      ![ ハイライト表示されたアプリ ID ドロップダウン。](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
-1. 「**[!UICONTROL 次へ]**」を選択して、[!UICONTROL &#x200B; レビュー &#x200B;] ページに移動します。
+1. 「**[!UICONTROL 次へ]**」を選択して、[!UICONTROL  レビュー ] ページに移動します。
 
 ## レビュー {#review}
 

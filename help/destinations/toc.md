@@ -5,10 +5,10 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 66a1c323eaf930b4b9204d9e898bbe8356a9b1e5
+source-git-commit: 845074cccf96e0513b8f099a2e932de966551f10
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 74%
+source-wordcount: '1322'
+ht-degree: 73%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 74%
    * [宛先での設定可能で一般的な書き出し設定](./how-destinations-work/destinations-configurations.md)
    * [様々な宛先タイプのプロファイル書き出し動作](./how-destinations-work/profile-export-behavior.md)
    * [宛先アクティブ化ワークフローでの ID の処理](./how-destinations-work/identity-handling.md)
+   * [ストリーミング宛先のオーディエンスライフサイクル](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * API チュートリアル {#api}
    * [Flow Service API を使用した、ファイルベースの宛先に対するデータのアクティブ化 ](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Flow Service API でストリーミング宛先に接続してデータを有効化する](./api/streaming-destinations.md)
@@ -32,7 +33,7 @@ ht-degree: 74%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットの書き出し](/help/destinations/api/export-datasets.md)
-   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
