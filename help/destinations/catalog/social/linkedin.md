@@ -3,10 +3,10 @@ keywords: linkedin 接続；linkedin 接続；linkedin の宛先；linkedin;
 title: Linkedin Matched Audiences 接続
 description: ハッシュ化されたメールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制を行うための、LinkedIn キャンペーン用のプロファイルをアクティブ化します。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1234'
-ht-degree: 32%
+source-wordcount: '1250'
+ht-degree: 31%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 32%
 
 >[!IMPORTANT]
 >
->2025 年 9 月以降、[!DNL LinkedIn Matched Audiences] 宛先は [!DNL IDFA] （広告主の識別子） ID をサポートしなくなりました。  この変更は LinkedIn の要件に起因し、Experience Platformの宛先サービスのアップグレードには関係しません。
+>2025 年 9 月以降、[!DNL IDFA] は [!DNL IDFA] 宛先でサポートされなくなるので、[!DNL LinkedIn Matched Audiences] をターゲット ID としてマッピングできなくなります。 詳しくは、[!DNL LinkedIn Matched Audiences] 統合 [ ドキュメント ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) を参照してください。 この変更は LinkedIn の要件に起因し、Experience Platformの宛先サービスのアップグレードには関係しません。
 
 
 | ターゲット ID | 説明 | 注意点 |
@@ -64,7 +64,7 @@ ht-degree: 32%
 
 ## LinkedIn アカウントの前提条件 {#LinkedIn-account-prerequisites}
 
-[!UICONTROL LinkedIn でマッチしたオーディエンス &#x200B;] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントの権限レベルが [!DNL Creative Manager] 以上であることを確認してください。
+[!UICONTROL LinkedIn でマッチしたオーディエンス ] の宛先を使用する前に、[!DNL LinkedIn Campaign Manager] アカウントの権限レベルが [!DNL Creative Manager] 以上であることを確認してください。
 
 [!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、LinkedIn ドキュメントの [Advertising アカウントのユーザー権限の追加、編集、削除 ](https://www.linkedin.com/help/lms/answer/5753) を参照してください。
 
@@ -92,7 +92,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 >[!NOTE]
 >
 >ハッシュ化されていない名前空間のデータは、アクティベーション時に [!DNL Experience Platform] によって自動的にハッシュ化されます。
->&#x200B;> 属性ソースデータは、自動的にはハッシュ化されません。
+>> 属性ソースデータは、自動的にはハッシュ化されません。
 > 
 > [ID マッピング ](../../ui/activate-segment-streaming-destinations.md#mapping) 手順で、ハッシュ化されていない属性がソースフィールドに含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時にデータを自動的 [!DNL Experience Platform] ハッシュ化するように設定します。
 > 
@@ -104,13 +104,13 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
 次のビデオでは、[!DNL LinkedIn Matched Audiences] しい宛先を設定し、オーディエンスをアクティブ化する手順も示します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3411787/?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -125,7 +125,7 @@ Experience Platformでのメールアドレスの取り込みについて詳し�
 
 ### 認証資格情報を更新 {#refresh-authentication-credentials}
 
-LinkedIn トークンは 60 日ごとに期限切れになります。 トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[[!UICONTROL または]](../../ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../ui/destinations-workspace.md#browse)** 列から監視できます。
+LinkedIn トークンは 60 日ごとに期限切れになります。 トークンの有効期限は、「**[!UICONTROL アカウント]****[[!UICONTROL または]](../../ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../ui/destinations-workspace.md#browse)** 列から監視できます。
 
 トークンの有効期限が切れると、宛先へのデータの書き出しは機能しなくなります。 この状況を回避するには、次の手順を実行して再認証を行います。
 
@@ -164,8 +164,8 @@ LinkedIn トークンは 60 日ごとに期限切れになります。 トーク
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティブ化する手順については、[ストリーミングオーディエンス書き出し宛先に対するオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
