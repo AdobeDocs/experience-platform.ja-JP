@@ -5,10 +5,10 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 77%
+source-wordcount: '703'
+ht-degree: 75%
 
 ---
 
@@ -112,6 +112,7 @@ ht-degree: 77%
       * [パートナー見込み客の詳細（サンプル）](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics の完全拡張機能](./field-groups/event/analytics-full-extension.md)
+      * [Adobe Advertising Cloud 完全拡張機能](./field-groups/event/advertising-full-extension.md)
       * [広告の詳細](./field-groups/event/advertising-details.md)
       * [アプリケーションの詳細](./field-groups/event/application-details.md)
       * [残高繰り越し](./field-groups/event/balance-transfers.md)
@@ -138,7 +139,7 @@ ht-degree: 77%
       * [Web の詳細](./field-groups/event/web-details.md)
    * XDM Business Campaign {#b2b-campaign}
       * [XDM ビジネスキャンペーンの詳細](./field-groups/b2b-campaign/details.md)
-   * XDM ビジネスキャンペーンメンバー {#b2b-campaign-members}
+   * XDM Business Campaign Members {#b2b-campaign-members}
       * [XDM ビジネスキャンペーンメンバーの詳細](./field-groups/b2b-campaign-members/details.md)
    * 医薬品 {#medication}
       * [ヘルスケア薬品](./field-groups/medication/healthcare-medication.md)
@@ -230,7 +231,7 @@ ht-degree: 77%
    * [Web 情報](./data-types/web-information.md)
    * [Web インタラクション](./data-types/web-interaction.md)
    * [Web ページの詳細](./data-types/webpage-details.md)
-* [!UICONTROL スキーマ] UI {#ui}
+* [!UICONTROL  スキーマ ] UI {#ui}
    * [概要](./ui/overview.md)
    * [XDM リソースの参照](./ui/explore.md)
    * リソースの作成と編集 {#resources}
@@ -251,7 +252,7 @@ ht-degree: 77%
    * [機械学習によるスキーマ作成](./ui/ml-assisted-schema-creation.md)
    * [サンプル XDM データの生成](./ui/sample.md)
    * [XDM スキーマのエクスポート](./ui/export.md)
-* Schema Registry API {#api}
+* スキーマレジストリ API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
    * [スキーマ](api/schemas.md)
