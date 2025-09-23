@@ -5,9 +5,9 @@ user-guide-description: クロスチャネルマーケティングキャンペ�
 description: このドキュメントでは、Adobe Experience Platform の宛先の目次を示します
 feature: Destinations
 role: Admin,User
-source-git-commit: 845074cccf96e0513b8f099a2e932de966551f10
+source-git-commit: b71c6ff74fd173a4be12a9a8caf06e27c4fb54cc
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1326'
 ht-degree: 73%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [宛先アカウントの削除](./api/delete-destination-account.md)
    * [宛先データフローの削除](./api/delete-destination-dataflow.md)
    * [データセットの書き出し](/help/destinations/api/export-datasets.md)
-   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ja#use-cases)
+   * [ 宛先の API 応答の並べ替えとフィルタリング ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [新しい宛先接続の作成](./ui/connect-destination.md)
@@ -147,6 +147,7 @@ ht-degree: 73%
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 接続](./catalog/cloud-storage/sftp.md)
       * [（Beta）Snowflake ストリーミング接続](./catalog/cloud-storage/snowflake.md)
+      * [（Beta）Snowflake バッチ接続](./catalog/cloud-storage/snowflake-batch.md)
       * [許可リストに加える ファイルベースのクラウドストレージの宛先の IP アドレス。](./catalog/cloud-storage/ip-address-allow-list.md)
    * 顧客関係管理（CRM）の宛先 {#crm}
       * [Hubspot 接続](./catalog/crm/hubspot.md)

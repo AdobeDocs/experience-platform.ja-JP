@@ -1,24 +1,24 @@
 ---
-title: Snowflake ストリーミング接続
+title: Snowflake バッチ接続
 description: 非公開リストを使用して、Snowflake アカウントにデータを書き出します。
 badgeBeta: label="ベータ版" type="Informative"
-exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+badgeUltimate: label="Ultimate" type="Positive"
+source-git-commit: 3500e5ba00727c6299331cff79c56a99009cfd37
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 25%
+source-wordcount: '1642'
+ht-degree: 20%
 
 ---
 
-# Snowflake ストリーミング接続 {#snowflake-destination}
+# Snowflake バッチ接続 {#snowflake-destination}
 
 >[!IMPORTANT]
 >
->この宛先コネクタはベータ版で、一部のお客様のみご利用いただけます。 アクセス権をリクエストするには、Adobe担当者にお問い合わせください。
+>この宛先コネクタはベータ版で、Real-Time CDP Ultimateのお客様のみが利用できます。 機能とドキュメントは変更される場合があります。
 
 ## 概要 {#overview}
 
-Snowflake宛先コネクタを使用して、AdobeのSnowflake インスタンスにデータを書き出します。このインスタンスは、Adobeが [ 非公開リスト ](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about) を通じてお使いのインスタンスと共有します。
+オーディエンスデータをSnowflake アカウントの動的テーブルに送信する場合は、この宛先を使用します。 動的テーブルを使用すると、物理的なデータコピーを必要とせずにデータにアクセスできます。
 
 Snowflakeの宛先の仕組みと、AdobeとSnowflakeの間でのデータの転送方法については、次の節を参照してください。
 
@@ -26,29 +26,35 @@ Snowflakeの宛先の仕組みと、AdobeとSnowflakeの間でのデータの転
 
 この宛先は、[!DNL Snowflake] データ共有を使用します。つまり、データが物理的に書き出されたり、独自のSnowflake インスタンスに転送されたりすることはありません。 代わりに、Adobeでは、Adobe Snowflake環境内でホストされるライブテーブルへの読み取り専用アクセスが許可されます。 この共有テーブルに対してSnowflake アカウントから直接クエリを実行できますが、テーブルを所有しておらず、指定した保持期間を超えてテーブルを変更または保持することはできません。 Adobeは、共有テーブルのライフサイクルと構造を完全に管理します。
 
-AdobeのSnowflake インスタンスから初めて自分のインスタンスにデータを共有する際に、Adobeからの非公開リストを受け入れるように求められます。
+AdobeからSnowflake アカウントに初めてデータフローを設定した後、Adobeからの非公開リストへの登録を受け入れるように求められます。
 
-![Snowflake プライベートリストの承認画面を示すスクリーンショット ](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![Snowflake プライベートリストの承認画面を示すスクリーンショット ](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
 
 ### データ保持と有効期間（TTL） {#ttl}
 
-この統合を通じて共有されるすべてのデータでは、7 日間の固定有効期限（TTL）が設定されています。 最後の書き出しから 7 日後に、データフローがまだアクティブであるかどうかに関係なく、共有テーブルは自動的に期限切れになり、アクセスできなくなります。 7 日を超えてデータを保持する必要がある場合、TTL の有効期限が切れる前に、内容を独自のSnowflake インスタンスで所有するテーブルにコピーする必要があります。
+この統合を通じて共有されるすべてのデータでは、7 日間の固定有効期限（TTL）が設定されています。 最後のエクスポートから 7 日後、データフローがまだアクティブであるかどうかに関係なく、動的テーブルは自動的に期限切れになり、アクセスできなくなります。 7 日を超えてデータを保持する必要がある場合、TTL の有効期限が切れる前に、内容を独自のSnowflake インスタンスで所有するテーブルにコピーする必要があります。
+
+>[!IMPORTANT]
+>
+>Experience Platformでデータフローを削除すると、動的テーブルがSnowflake アカウントから表示されなくなります。
 
 ### オーディエンスの更新動作 {#audience-update-behavior}
 
 オーディエンスが [ バッチモード ](../../../segmentation/methods/batch-segmentation.md) で評価される場合、共有テーブルのデータは 24 時間ごとに更新されます。 つまり、オーディエンスメンバーシップの変更と共有テーブルに変更が反映される間に、最大 24 時間の遅延が発生する可能性があります。
 
-### 増分エクスポートロジック {#incremental-export}
+### バッチデータ共有ロジック {#batch-data-sharing}
 
-データフローが初めてオーディエンスに対して実行されると、バックフィルが実行され、現在認定されているすべてのプロファイルが共有されます。 この最初のバックフィルの後は、増分更新のみが共有テーブルに反映されます。 つまり、オーディエンスに追加されたプロファイルまたはオーディエンスから削除されたプロファイルです。 このアプローチにより、効率的な更新が保証され、共有テーブルが最新の状態に保たれます。
+データフローが初めてオーディエンスに対して実行されると、バックフィルが実行され、現在認定されているすべてのプロファイルが共有されます。 この最初のバックフィル後、宛先は、完全なオーディエンスメンバーシップのスナップショットを定期的に提供します。 各スナップショットは、共有テーブル内の以前のデータを置き換え、履歴データのないオーディエンスの最新の完全なビューを常に表示できるようにします。
 
 ## ストリーミングとバッチデータ共有 {#batch-vs-streaming}
 
-Experience Platformには、[Snowflake ストリーミングと ](snowflake.md)2}Snowflake バッチ [ の 2 種類のSnowflake宛先が用意されています。](../cloud-storage/snowflake-batch.md)
+Experience Platformには、[Snowflake ストリーミングと ](/help/destinations/catalog/cloud-storage/snowflake.md)2}Snowflake バッチ [ の 2 種類のSnowflake宛先が用意されています。](snowflake-batch.md)
 
-次の表に、各データ共有方法が最も適したシナリオを概説することで、使用する宛先を決定するのに役立ちます。
+どちらの宛先でも、ゼロコピー方式でSnowflakeのデータにアクセスできますが、各コネクタのユースケースに関しては、いくつかの推奨されるベストプラクティスがあります。
 
-|  | 必要に応じて [0}Snowflake バッチ } を選択](../cloud-storage/snowflake-batch.md) | 必要に応じて [0}Snowflake ストリーミング } を選択](snowflake.md) |
+次の表に、各データ共有方法が最も適したシナリオを概説することで、使用するコネクタを決定するのに役立ちます。
+
+|  | 必要に応じて [0}Snowflake バッチ } を選択](snowflake-batch.md) | 必要に応じて [0}Snowflake ストリーミング } を選択](/help/destinations/catalog/cloud-storage/snowflake.md) |
 |--------|-------------------|----------------------|
 | **更新頻度** | 定期的なスナップショット | リアルタイムでの継続的な更新 |
 | **データ表示** | 以前のデータを置き換えるオーディエンススナップショットの完了 | プロファイルの変更に基づいた増分更新 |
@@ -56,26 +62,19 @@ Experience Platformには、[Snowflake ストリーミングと ](snowflake.md)2
 | **データ管理** | 最新の完全なスナップショットを常に表示 | オーディエンスメンバーシップの変更に基づく増分更新 |
 | **シナリオの例** | ビジネスレポート、データ分析、ML モデルトレーニング | マーケティングキャンペーンの抑制、リアルタイムパーソナライゼーション |
 
-バッチデータ共有について詳しくは、[Snowflake Batch connection](../cloud-storage/snowflake-batch.md) ドキュメントを参照してください。
+ストリーミングデータ共有について詳しくは、[Snowflake ストリーミング接続 ](../cloud-storage/snowflake.md) ドキュメントを参照してください。
 
 ## ユースケース {#use-cases}
 
-ストリーミングデータ共有は、プロファイルがメンバーシップまたはその他の属性を変更したときに直ちに更新する必要があるシナリオに最適です。 これは、次のような、リアルタイムの応答性が必要なユースケースで重要です。
+バッチデータ共有は、オーディエンスの完全なスナップショットが必要で、リアルタイムの更新が不要な状況に最適です。例えば、次のような場合です。
 
-* **マーケティングキャンペーン抑制**：サービスへの新規登録や購入など、特定のアクションを実行したユーザーのマーケティングキャンペーンを直ちに抑制します
-* **リアルタイムパーソナライゼーション**：ユーザーが web サイトを訪問したり、製品ページを表示したり、買い物かごに項目を追加したりした場合などに、プロファイル属性が変更されると、即座にユーザーエクスペリエンスが更新されます
-* **即時のアクションシナリオ**：リアルタイムデータに基づいてクイック抑制とリターゲティングを実行して遅延を減らし、マーケティングキャンペーンをより関連性が高くタイムリーにします
-* **効率とニュアンス**：ユーザーの行動の変化に迅速に対応できるので、マーケティング活動の効率とニュアンスを高めることができます
-* **Real-time customer journey optimization**：セグメントメンバーシップやプロファイル属性が変更された場合は、即座にカスタマーエクスペリエンスを更新します
+* **分析ワークロード**：オーディエンスメンバーシップの完全な表示を必要とするデータ分析、レポートまたはビジネスインテリジェンスタスクを実行する場合
+* **機械学習ワークフロー**：機械学習モデルのトレーニングや、オーディエンスの完全なスナップショットのメリットを得る予測分析の実行に使用します
+* **データウェアハウス**：オーディエンスデータの現在のコピーを独自のSnowflake インスタンスに保持する必要がある場合
+* **定期的なレポート**：履歴変更のトラッキングを行わない最新のオーディエンス状態が必要な、通常のビジネスレポート用
+* **ETL プロセス**：オーディエンスデータをバッチで変換または処理する必要がある場合
 
-ストリーミングデータ共有は、セグメントの変更、ID マップの変更、属性の変更に基づいて継続的な更新を提供するので、待ち時間が重要で即時の更新が必要なシナリオに適しています。
-
-## 前提条件 {#prerequisites}
-
-Snowflake接続を設定する前に、次の前提条件を満たしていることを確認してください。
-
-* [!DNL Snowflake] アカウントにアクセスできます。
-* お使いのSnowflake アカウントは非公開リストに登録されています。 自分または社内でSnowflakeに対するアカウント管理者権限を持つユーザーがこの機能を設定できます。
+バッチデータ共有は、完全なスナップショットを提供することでデータ管理を簡素化し、増分更新や結合の変更を手動で管理する必要をなくします。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -88,6 +87,17 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 {style="table-layout:auto"}
 
+オーディエンスデータタイプでサポートされるオーディエンス：
+
+| オーディエンスデータタイプ | サポートあり | 説明 | ユースケース |
+|--------------------|-----------|-------------|-----------|
+| [ 人物オーディエンス ](/help/segmentation/types/people-audiences.md) | ✓ | 顧客プロファイルに基づき、マーケティングキャンペーンの対象となる人物のグループを指定できます。 | 頻繁な購入、買い物かごの放棄 |
+| [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) | × | アカウントベースのマーケティング戦略では、特定の組織内の個人をターゲットに設定します。 | B2B マーケティング |
+| [ 見込み客オーディエンス ](/help/segmentation/types/prospect-audiences.md) | × | まだ顧客ではないものの、ターゲットオーディエンスと特性を共有する個人をターゲットに設定します。 | サードパーティデータを使用した予測 |
+| [ データセットの書き出し ](/help/catalog/datasets/overview.md) | × | Adobe Experience Platform Data Lake に保存された構造化データのコレクション。 | レポート、データサイエンスワークフロー |
+
+{style="table-layout:auto"}
+
 ## 書き出しのタイプと頻度 {#export-type-frequency}
 
 宛先の書き出しのタイプと頻度について詳しくは、以下の表を参照してください。
@@ -95,7 +105,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 | 項目 | タイプ | メモ |
 ---------|----------|---------|
 | 書き出しタイプ | **[!UICONTROL オーディエンスの書き出し]** | [!DNL Snowflake] 宛先で使用される識別子（氏名、電話番号など）を使用して、オーディエンスのすべてのメンバーを書き出します。 |
-| 書き出し頻度 | **[!UICONTROL ストリーミング]** | ストリーミングの宛先は常に、API ベースの接続です。オーディエンス評価に基づいて Experience Platform 内でプロファイルが更新されるとすぐに、コネクタは更新を宛先プラットフォームに送信します。詳しくは、[ストリーミングの宛先](/help/destinations/destination-types.md#streaming-destinations)を参照してください。 |
+| 書き出し頻度 | **[!UICONTROL バッチ]** | この宛先は、Snowflake データ共有を通じて、オーディエンスメンバーシップ全体の定期的なスナップショットを提供します。 各スナップショットで以前のデータが置き換わるので、オーディエンスの完全なビューを常に最新に保つことができます。 |
 
 {style="table-layout:auto"}
 
@@ -109,20 +119,20 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 ### 宛先に対する認証 {#authenticate}
 
-宛先を認証するには、「**[!UICONTROL 宛先に接続]**」を選択します。
+宛先を認証するには、「**[!UICONTROL 宛先に接続]**」を選択し、アカウント名と、オプションでアカウントの説明を入力します。
 
-![ 宛先への認証方法を示すサンプルスクリーンショット ](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
+![ 宛先への認証方法を示すサンプルスクリーンショット ](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)
 
 ### 宛先の詳細の入力 {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_accountID"
+>id="platform_destinations_snowflake_batch_accountID"
 >title="Snowflake アカウント ID を入力"
 >abstract="アカウントが組織にリンクされている場合は、`OrganizationName.AccountName`<br><br> という形式を使用します。アカウントが組織にリンクされていない場合は、`AccountName` という形式を使用します"
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先の詳細を入力する方法を示すサンプルスクリーンショット ](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![ 宛先の詳細を入力する方法を示すサンプルスクリーンショット ](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -148,19 +158,37 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 >* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
 >* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
-この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
+この宛先に対してオーディエンスをアクティブ化する手順については、[バッチプロファイル書き出し宛先に対するオーディエンスデータのアクティブ化](/help/destinations/ui/activate-batch-profile-destinations.md)を参照してください。
 
 ### 属性のマッピング {#map}
 
-Snowflakeの宛先では、プロファイル属性とカスタム属性とのマッピングをサポートしています。
+この宛先に ID およびプロファイル属性を書き出すことができます。
 
-![Experience Platformの宛先のマッピング画面を示すSnowflake ユーザーインターフェイス画像。](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Experience Platformの宛先のマッピング画面を示すSnowflake ユーザーインターフェイス画像。](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png)
+
+[ 計算フィールドコントロール ](../../ui/data-transformations-calculated-fields.md) を使用して、配列に対する操作をエクスポートしたり実行したりできます。
 
 ターゲット属性は、「**[!UICONTROL 属性名]** フィールドに指定した属性名を使用して、Snowflakeで自動的に作成されます。
 
 ## 書き出されたデータ／データ書き出しの検証 {#exported-data}
 
-データが正しく書き出されたことをSnowflake アカウントで確認します。
+データは、動的テーブルを介してSnowflake アカウントにステージングされます。 データが正しく書き出されたことをSnowflake アカウントで確認します。
+
+### データ構造 {#data-structure}
+
+動的テーブルには、次の列が含まれます。
+
+* **TS**：各行が最後に更新された日時を表すタイムスタンプ列
+* **マッピング属性**：アクティベーションワークフロー中に選択したすべてのマッピング属性は、Snowflakeでは列ヘッダーとして表されます
+* **オーディエンスメンバーシップ**：データフローにマッピングされたオーディエンスのメンバーシップは、対応するセルの `active` エントリを介して示されます
+
+![ 動的テーブルデータを含むSnowflake インターフェイスを示すスクリーンショット ](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
+
+## 既知の制限事項 {#known-limitations}
+
+### 複数の結合ポリシー
+
+複数の結合ポリシーを持つオーディエンスは、単一のデータフローではサポートされません。 結合ポリシーが異なると、スナップショットが異なり、実際には、一方のオーディエンスに関連するデータは、両方のオーディエンスのデータが期待どおりに書き出されるのではなく、もう一方のオーディエンスのデータで上書きされます。
 
 ## データの使用とガバナンス {#data-usage-governance}
 
