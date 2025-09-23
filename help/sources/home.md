@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタの概要
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Experience Platform サービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 785ddd4ed3a5b8ba2c515ee6390e78b601367814
+source-git-commit: a236019dc3478c32ee035bfd337096346780d14b
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1646'
 ht-degree: 56%
 
 ---
@@ -30,7 +30,7 @@ Experience Platform を使用すると、異なるソースから収集したデ
 
 ## Adobeで構築されたソースとパートナーが構築したソース {#adobe-and-partner-built-sources}
 
-Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、&lbrace;RainFocus コネクタ [ は RainFocus チームによって作成および管理されます ](/help/sources/connectors/analytics/rainfocus.md)。
+Experience Platform ソースカタログ内のコネクタには、Adobeで構築および管理されるものと、[Sources SDK](/help/sources/sources-sdk/overview.md) を使用してパートナー企業が構築および管理するものがあります。 各パートナー構築コネクタのドキュメントページの上部にあるメモは、ソースがパートナーによって作成および管理される場合、を呼び出します。 例えば、[Amazon S3 コネクタ ](/help/sources/connectors/cloud-storage/s3.md) はAdobeによって作成され、{RainFocus コネクタ [ は RainFocus チームによって作成および管理されます ](/help/sources/connectors/analytics/rainfocus.md)。
 
 パートナーが作成および管理するコネクタの場合、コネクタに関する問題をパートナーチームが解決する必要が生じる場合があります（ドキュメントページのメモに記載されている連絡先方法）。アドビが作成および管理するコネクタに関する問題については、アドビ担当者またはカスタマーケア担当者にお問い合わせください。
 
@@ -133,7 +133,7 @@ Adobe Experience Platform を使用すると、Adobe Analytics や Adobe Audienc
 
 ### 顧客関係管理（CRM） {#customer-relationship-management}
 
-CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。Adobe Experience Platform には、[!DNL Microsoft Dynamics 365] および [!DNL Salesforce] から CRM データを取り込む機能が用意されています。詳しくは、次の関連ドキュメントを参照してください。
+CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客とのロイヤルティを高め、顧客保持率を高めます。Adobe Experience Platform には、[!DNL Microsoft Dynamics 365] および [!DNL Salesforce] から CRM データを取り込む機能が用意されています。詳しくは、次の関連ドキュメントを参照してください。
 
 次のソースを使用して、CRM データをExperience Platformに取り込むことができます。
 
@@ -233,6 +233,7 @@ Experience Platform は、サードパーティのデータベースからデー
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | バッチ | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | バッチ | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | バッチ | Azure |
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | ストリーミング | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | バッチ | AWS, Azure |
 
 {style="table-layout:auto"}

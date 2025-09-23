@@ -5,10 +5,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: 197cdc89abd292d87276d792201dedb2373f5564
+source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 91%
+source-wordcount: '1070'
+ht-degree: 90%
 
 ---
 
@@ -103,6 +103,8 @@ ht-degree: 91%
       - [Shopify ストリーミング](connectors/ecommerce/shopify-streaming.md)
    - ローカルシステム {#local-system}
       - [ローカルファイルアップロードコネクタ](connectors/local-system/local-file-upload.md)
+   - ロイヤルティ {#loyalty}
+      - [キャピラリーストリーミングイベント](connectors/loyalty/capillary.md)
    - マーケティングオートメーション {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -179,6 +181,8 @@ ht-degree: 91%
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify ストリーミング](tutorials/api/create/ecommerce/shopify-streaming.md)
+      - ロイヤルティ {#loyalty}
+         - [キャピラリーストリーミングイベント](tutorials/api/create/loyalty/capillary.md)
       - マーケティングオートメーション {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -232,7 +236,7 @@ ht-degree: 91%
    - [データフローをドラフトとして保存](tutorials/api/draft.md)
    - [データフローへのアクセスラベルの適用](tutorials/api/labels.md)
    - [プライベートエンドポイントの使用](tutorials/api/private-link.md)
-   - [データキャプチャの変更を有効化](tutorials/api/change-data-capture.md)
+   - [データキャプチャの変更を有効にする](tutorials/api/change-data-capture.md)
 - UI チュートリアル {#ui-tutorials}
    - ソース接続の作成 {#create}
       - アドビアプリケーション {#adobe-applications}
@@ -311,6 +315,8 @@ ht-degree: 91%
          - [Shopify ストリーミング](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - ローカルシステム {#local-system}
          - [ローカルファイルのアップロード](tutorials/ui/create/local-system/local-file-upload.md)
+      - ロイヤルティ {#loyalty}
+         - [キャピラリーストリーミングイベント](tutorials/ui/create/loyalty/capillary.md)
       - マーケティングオートメーション {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -322,6 +328,7 @@ ht-degree: 91%
          - [Oracle NetSuite アクティビティ](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite エンティティ](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+         - [中継コネクタ](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払い {#payments}
          - [正方形](tutorials/ui/create/payments/square.md)
