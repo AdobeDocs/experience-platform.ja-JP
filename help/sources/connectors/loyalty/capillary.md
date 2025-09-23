@@ -1,16 +1,21 @@
 ---
 title: キャピラリーストリーミングイベントの概要
 description: キャピラリからExperience Platformにデータをストリーミングする方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+last-substantial-update: 2025-09-23T00:00:00Z
+badge: ベータ版
+exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 6%
+source-wordcount: '295'
+ht-degree: 7%
 
 ---
 
 # [!DNL Capillary Streaming Events]
+
+>[!AVAILABILITY]
+>
+>[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../home.md#terms-and-conditions) を参照してください。
 
 [!DNL Capillary Technologies] は、世界中の 300 以上のブランドから信頼されている、主要なロイヤルティおよびエンゲージメントプラットフォームです。 [!DNL Capillary Streaming Events] ソースを使用すると、ビジネスが顧客プロファイル、ロイヤルティデータ、トランザクションイベントを、[!DNL Capillary] からAdobe Experience Platformへとシームレスにストリーミングできるようになります。 [!DNL Capillary] ソースを接続すると、リアルタイムのパーソナライゼーション、高度なオーディエンスのセグメント化、オムニチャネルキャンペーンオーケストレーションが可能になります。
 

@@ -1,16 +1,20 @@
 ---
 title: Flow Service API を使用した Capilary とExperience Platformの接続
 description: API を使用してキャピラリーをExperience Platformに接続する方法を説明します。
-hide: true
-hidefromtoc: true
-source-git-commit: 7119ca51e0a4db09c8adb68bcde41ab3837439d1
+badge: ベータ版
+exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 8%
+source-wordcount: '1150'
+ht-degree: 9%
 
 ---
 
 # [!DNL Capillary Streaming Events] API を使用した [!DNL Flow Service] のExperience Platformへの接続
+
+>[!AVAILABILITY]
+>
+>[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 このガイドを読んで、[!DNL Capillary Streaming Events] と [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Capillary] アカウントからAdobe Experience Platformにデータをストリーミングする方法を学びます。
 
@@ -39,7 +43,7 @@ Experience Platform API を正常に呼び出す方法については、[Experie
 4. **ターゲット接続** を作成して、データレイクにデータが確実に取り込まれるようにします。
 5. データ準備を使用して、[!DNL Capillary] ソースフィールドを正しい XDM フィールドにマッピングするマッピングを作成します。
 6. `sourceConnectionId`、`targetConnectionId`、`mappingID` を使用してデータフローを作成します
-7. 単一のサンプルプロファイル/トランザクションイベントで eTest を実行し、データフローを検証します。
+7. 単一のサンプルプロファイル/トランザクションイベントでテストし、データフローを検証します。
 
 >[!ENDSHADEBOX]
 
@@ -230,9 +234,9 @@ curl -X POST \
 
 >[!ENDTABS]
 
-### サポートされるイベント
+<!--### Supported Events
 
-[!DNL Capillary] ソースは、次のイベントをサポートしています。
+The [!DNL Capillary] source supports the following events:
 
 * `pointsIssued`
 * `tierDowngraded`
@@ -247,8 +251,7 @@ curl -X POST \
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### 履歴データの移行
 
@@ -319,11 +322,15 @@ curl -X POST \
 
 | ソーススキーマ | ターゲットスキーマ |
 |------------------------------|-------------------------------|
-| `identityMap.email.id` | `xdm:identityMap.email` |
-| `loyalty.points` | `xdm:loyaltyPoints` |
-| `loyalty.tier` | `xdm:loyaltyTier` |
+| `identityMap.email.id` | `xdm:identityMap.email[0].id` |
+| `loyalty.points` | `xdm:loyalty.points` |
+| `loyalty.tier` | `xdm:loyalty.tier` |
 | `commerce.order.priceTotal` | `xdm:commerce.order.priceTotal` |
 | `productLineItems.SKU` | `xdm:productListItems.SKU` |
+
+>[!TIP]
+>
+>データをマッピングする準備が整ったら、[ イベントとプロファイルのマッピング ](../../../../images/tutorials/create/capillary/mappings.zip) をダウンロードして、[!DNL Capillary] および [ ファイルをデータ準備にインポート ](../../../../../data-prep/ui/mapping.md#import-mapping) できます。
 
 ### データフローの作成 {#flow}
 
@@ -376,7 +383,7 @@ curl -X POST \
 
 **応答**
 
-応答が成功すると、対応するデータフロー ID を含むデータフローが返されます。
+正常な応答は、対応するデータフロー ID を含むデータフローを返します。
 
 ```json
 {

@@ -1,16 +1,20 @@
 ---
-title: UI を使用したキャピラリのExperience Platformへの接続
+title: UI を使用した Capilary とExperience Platformの接続
 description: UI を使用してキャピラリーをExperience Platformに接続する方法を説明します
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+badge: ベータ版
+exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '827'
 ht-degree: 15%
 
 ---
 
-# UI を使用した [!DNL Capillary] のExperience Platformへの接続
+# UI を使用した [!DNL Capillary Streaming Events] のExperience Platformへの接続
+
+>[!AVAILABILITY]
+>
+>[!DNL Capillary Streaming Events] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 このガイドでは、Experience Platform ユーザーインターフェイスのソースワークスペースを使用して [!DNL Capillary] データベースをAdobe Experience Platformに接続する方法について説明します。
 
@@ -74,19 +78,23 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 | --- | --- |
 | データフロー名 | データフローの名前。  デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （任意）データフローの簡単な説明です。 |
-| アラート | Experience Platformは、ユーザーが登録できるイベントベースのアラートを作成でき、これらのオプションは、これらをトリガーにする実行中のデータフローです。  詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformでは、ユーザーが登録できるイベントベースのアラートを作成できます。これらのオプションを使用すると、実行中のデータフローでこれらのアラートをトリガーできます。  詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 {style="table-layout:auto"}
 
 ## マッピング
 
-マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。  詳しくは、UI の [ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+マッピングインターフェイスを使用して、データをExperience Platformに取り込む前に、ソースデータを適切なスキーマフィールドにマッピングします。 詳しくは、UI の [ マッピングガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+
+>[!TIP]
+>
+>データをマッピングする準備が整ったら、[ イベントとプロファイルのマッピング ](../../../../images/tutorials/create/capillary/mappings.zip) をダウンロードして、[!DNL Capillary] および [ ファイルをデータ準備にインポート ](../../../../../data-prep/ui/mapping.md#import-mapping) できます。
 
 ![Capilary のマッピングインターフェイス ](../../../../images/tutorials/create/capillary/mappings.png)
 
 ## レビュー
 
-*[!UICONTROL レビュー]* 手順が表示され、データフローを作成する前に詳細をレビューできます。 詳細は、次のカテゴリ内でグループ化されます。
+*[!UICONTROL レビュー]* 手順が表示され、データフローを作成する前に詳細をレビューできます。 詳細は、次のカテゴリに分類されます。
 
 * **[!UICONTROL 接続]**：アカウント名、ソースプラットフォーム、ソース名が表示されます。
 * **[!UICONTROL データセットの割り当てとフィールドのマッピング]**：ターゲットデータセットと、そのデータセットが準拠するスキーマを表示します。
