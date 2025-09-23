@@ -6,9 +6,9 @@ user-guide-description: 顧客体験を向上させるための、分析、マ�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
+source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '788'
 ht-degree: 85%
 
 ---
@@ -202,6 +202,8 @@ ht-degree: 85%
       * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+      * [!DNL Snap Pixel] {#snap-pixel}
+         * [概要](./extensions/client/snap-pixel/overview.md)
       * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
       * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
