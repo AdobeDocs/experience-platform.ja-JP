@@ -1,26 +1,21 @@
 ---
 title: Acxiom プロスペクティングデータの読み込み
 description: UI を使用して Acxiom プロスペクティングデータを Adobe Experience Platform および Adobe Real-Time Customer Data Platform に接続する方法を説明します。
-badge: ベータ版
 exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 40%
+source-wordcount: '544'
+ht-degree: 31%
 
 ---
 
 # [!DNL Acxiom Prospecting Data Import]
 
->[!NOTE]
->
->[!DNL Acxiom Prospecting Data Import] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
-
 Adobe Experience Platformは、データパートナーアプリケーションからのデータ取り込みをサポートしています。 データおよび ID パートナーのサポートには、[!DNL Acxiom Prospecting Data Import] が含まれます。
 
-[!DNL Acxiom] のAdobe Real-time Customer Data Platformの見込み客データインポートは、可能な限り生産的な見込み客オーディエンスを提供するプロセスです。 [!DNL Acxiom] は、Real-Time CDPのファーストパーティデータを安全な書き出しで取得し、そのデータを受賞歴のあるハイジーンおよび id 解決システムで実行します。 抑制リストとして利用できるデータファイルを生成する。 その後、このデータファイルと [!DNL Acxiom Global] データベースが照合され、見込み客リストをインポート用にカスタマイズできます。
+[!DNL Acxiom] のAdobe Real-Time Customer Data Platformの見込み客データインポートは、可能な限り生産的な見込み客オーディエンスを提供するプロセスです。 [!DNL Acxiom] は、Real-Time CDPのファーストパーティデータを安全な書き出しで取得し、そのデータを受賞歴のあるハイジーンおよび id 解決システムで実行します。 抑制リストとして利用できるデータファイルを生成する。 その後、このデータファイルと [!DNL Acxiom Global] データベースが照合され、見込み客リストをインポート用にカスタマイズできます。
 
-[!DNL Acxiom] ソースを使用すると、[!DNL Amazon S3] をドロップポイントとして使用して、[!DNL Acxiom] 見込み客サービスから応答を取得し、マッピングできます。
+[!DNL Acxiom] ソースを使用すると、[!DNL Acxiom] をドロップポイントとして使用して、[!DNL Amazon S3] 見込み客サービスから応答を取得し、マッピングできます。
 
 ![acxiom-prospecting-workflow](../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/acxiom-prospecting.png)
 
@@ -28,7 +23,7 @@ Adobe Experience Platformは、データパートナーアプリケーション�
 
 ## 前提条件
 
-Experience Platformのバケットにアクセスするには、次の資格情報に対して有効な値を指定する必要があります。
+Experience Platform上のバケットにアクセスするには、次の資格情報に対して有効な値を指定する必要があります。
 
 | 資格情報 | 説明 |
 | --- | --- |
@@ -37,13 +32,13 @@ Experience Platformのバケットにアクセスするには、次の資格情�
 | [!DNL Amazon S3] 秘密鍵 | バケットの秘密鍵 ID。 この値は [!DNL Acxiom] チームから取得できます。 |
 | バケット名 | これは、ファイルが共有されるバケットです。 この値は [!DNL Acxiom] チームから取得できます。 |
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを使用する前に、地域に必要な IP アドレスを許可リストに追加する必要があります。 これらの IP アドレスを追加しないと、ソースコネクタが正しく動作しないか、エラーが発生する可能性があります。 許可リストに加える詳細な手順と許可する IP アドレスの一覧については、[IP アドレス ](../../ip-address-allow-list.md) を参照してください。
 
-### Experience Platformーに対する権限の設定
+### Experience Platformに対する権限の設定
 
-[!DNL Acxiom Prospecting Data Import] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/abac/ui/permissions.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Acxiom Prospecting Data Import] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/abac/ui/permissions.md) を参照してください。
 
 ## ファイルとディレクトリの命名制約
 

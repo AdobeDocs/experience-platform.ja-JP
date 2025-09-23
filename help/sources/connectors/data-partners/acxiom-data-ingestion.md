@@ -1,22 +1,17 @@
 ---
 title: Acxiom データ取り込み
-description: Real-time Customer Data Platformにデータを取り込み  [!DNL Acxiom]  ファーストパーティプロファイルをエンリッチメントし、オーディエンスを向上させ、複数のマーケティングチャネルにわたってアクティブ化する方法について説明します。
-badge: ベータ版
+description: Real-Time Customer Data Platformにデータを取り込み  [!DNL Acxiom]  ファーストパーティプロファイルをエンリッチメントし、オーディエンスを向上させ、複数のマーケティングチャネルにわたってアクティブ化する方法について説明します。
 exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 43%
+source-wordcount: '461'
+ht-degree: 32%
 
 ---
 
 # [!DNL Acxiom Data Ingestion]
 
->[!NOTE]
->
->[!DNL Acxiom Prospecting Data Import] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
-
-[!DNL Acxiom Data Ingestion] ソースを使用すると、[!DNL Acxiom] データをReal-time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化できます。 その後、エンリッチメントされ [!DNL Acxiom] ファーストパーティプロファイルを使用して、オーディエンスを向上させ、すべてのマーケティングチャネルをアクティブ化できます。
+[!DNL Acxiom Data Ingestion] ソースを使用すると、[!DNL Acxiom] データをReal-Time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化できます。 その後、エンリッチメントされ [!DNL Acxiom] ファーストパーティプロファイルを使用して、オーディエンスを向上させ、すべてのマーケティングチャネルをアクティブ化できます。
 
 ![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
@@ -33,13 +28,13 @@ ht-degree: 43%
 | [!DNL Amazon S3] 秘密鍵 | バケットの秘密鍵 ID。 この値は [!DNL Acxiom] チームから取得できます。 |
 | バケット名 | これは、ファイルが共有されるバケットです。 この値は [!DNL Acxiom] チームから取得できます。 |
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを使用する前に、地域に必要な IP アドレスを許可リストに追加する必要があります。 これらの IP アドレスを追加しないと、ソースコネクタが正しく動作しないか、エラーが発生する可能性があります。 許可リストに加える詳細な手順と許可する IP アドレスの一覧については、[IP アドレス ](../../ip-address-allow-list.md) を参照してください。
 
-### Experience Platformーに対する権限の設定
+### Experience Platformに対する権限の設定
 
-[!DNL Acxiom Data Ingestion] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
+**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Acxiom Data Ingestion] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../access-control/ui/overview.md) を参照してください。
 
 ### ファイルとディレクトリの命名制約
 

@@ -1,21 +1,15 @@
 ---
 title: Acxiom データ取り込み
 description: Acxiom Data Ingestion を使用して、Acxiom データをReal-Time CDPに取り込み、ファーストパーティのプロファイルを強化します。 Acxiom の拡張されたファーストパーティ・プロファイルを使用して、オーディエンスを向上させ、複数のマーケティング・チャネルにわたってアクティブ化します。
-last-substantial-update: 2024-03-19T00:00:00Z
-badge: ベータ版
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1817'
 ht-degree: 14%
 
 ---
 
 # UI での [!DNL Acxiom Data Ingestion] ソース接続とデータフローの作成
-
->[!NOTE]
->
->[!DNL Acxiom Data Ingestion] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 [!DNL Acxiom Data Ingestion] ソースを使用すると、[!DNL Acxiom] データをReal-Time Customer Data Platformに取り込み、ファーストパーティプロファイルを強化できます。 その後、エンリッチメントされ [!DNL Acxiom] ファーストパーティプロファイルを使用して、オーディエンスを向上させ、すべてのマーケティングチャネルをアクティブ化できます。
 
@@ -43,11 +37,11 @@ Experience Platform上のバケットにアクセスするには、次の資格�
 
 >[!IMPORTANT]
 >
->[!DNL Acxiom] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../../../access-control/ui/overview.md) を参照してください。
+>**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Acxiom] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../../../access-control/ui/overview.md) を参照してください。
 
 ## [!DNL Acxiom] アカウントを接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 

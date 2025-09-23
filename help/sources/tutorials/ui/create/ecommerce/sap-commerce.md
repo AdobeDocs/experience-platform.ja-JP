@@ -1,22 +1,17 @@
 ---
 title: UI での SAP Commerce ソース接続の作成
 description: Adobe Experience Platform UI を使用して SAP Commerce ソース接続を作成する方法について説明します。
-badge: ベータ版
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '959'
 ht-degree: 28%
 
 ---
 
 # UI での [!DNL SAP Commerce] ソース接続の作成
 
->[!NOTE]
->
->[!DNL SAP Commerce] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
-
-以下のチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [[!DNL SAP]  サブスクリプション請求 ](https://www.sap.com/products/financial-management/subscription-billing.html) 連絡先と顧客データを取り込むための [!DNL SAP Commerce] ソース接続を作成する手順を説明します。
+以下のチュートリアルでは、Adobe Experience Platform ユーザーインターフェイスを使用して [!DNL SAP Commerce] サブスクリプション請求 [[!DNL SAP]  連絡先と顧客データを取り込むための ](https://www.sap.com/products/financial-management/subscription-billing.html) ソース接続を作成する手順を説明します。
 
 ## はじめに {#getting-started}
 
@@ -143,7 +138,7 @@ ht-degree: 28%
 
 ## [!DNL SAP Commerce] アカウントを接続 {#connect-account}
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -208,7 +203,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 >[!TAB  顧客 ]
 
-顧客データの場合、[!DNL SAP Commerce] は [!DNL SAP Business Partners] API の [customers](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) エンドポイントと [customer-contacts relationship](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) エンドポイントを使用してデータを取得します
+顧客データの場合、[!DNL SAP Commerce] は [ API の ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)customers[ エンドポイントと ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts)customer-contacts relationship[!DNL SAP Business Partners] エンドポイントを使用してデータを取得します
 
 以下は、顧客データのデータフローのマッピング設定 [!DNL SAP Commerce] 例です。
 
@@ -232,7 +227,7 @@ Experience Platformは、選択したターゲットスキーマまたはデー�
 
 >[!TAB  連絡先 ]
 
-連絡先データの場合、[!DNL SAP Commerce] は [!DNL SAP Business Partners] API の [contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) エンドポイントを使用してデータを取得します。
+連絡先データの場合、[!DNL SAP Commerce] は [ API の ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)contacts[!DNL SAP Business Partners] エンドポイントを使用してデータを取得します。
 
 以下は、連絡先データのデータフローのマッピング設定 [!DNL SAP Commerce] 例です。
 

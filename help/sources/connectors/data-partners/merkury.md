@@ -1,21 +1,15 @@
 ---
 title: Merkury エンタープライズ Id 解決Sourceの概要
 description: ユーザーインターフェイスを使用して Merkury Enterprise Identity Resolution をAdobe Experience Platformに接続する方法を説明します。
-last-substantial-update: 2023-12-12T00:00:00Z
-badge: ベータ版
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 44%
+source-wordcount: '486'
+ht-degree: 34%
 
 ---
 
 # [!DNL Merkury Enterprise Identity Resolution]
-
->[!NOTE]
->
->[!DNL Merkury Enterprise Identity Resolution] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../home.md#terms-and-conditions) を参照してください。
 
 Adobe Experience Platformは、データパートナーアプリケーションからのデータ取り込みをサポートしています。 データパートナーのサポートには、[!DNL Merkury Enterprise Identity Resolution] が含まれます。
 
@@ -23,17 +17,17 @@ Adobe Experience Platformは、データパートナーアプリケーション�
 
 **ユーザー ID** を [!DNL Merkury] ソースの一部として利用し、組織が個人について知っているすべてを 1 つの包括的なプロファイルに結合できます。 これには、次のような詳細が含まれます。
 
-- デジタル動作
-- 購買環境設定
+- デジタル行動
+- 購入環境設定
 - 識別情報（名前、メールアドレス、物理アドレス、デバイス ID など）。
 
 取り込んだデータを、Experience Data Model （XDM） JSON、XDM Parquet または区切り形式で書式設定できます。 プロセスのすべての手順がソース作業に統合されます
 
 ![Merkury ソースのデータ処理ワークフローの図。](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
 
-## IP アドレス許可リスト
+## IP アドレスの許可リスト
 
-ソースコネクタを操作する前に、IP アドレスのリストを許可リストに追加する必要があります。 地域固有の IP アドレスを許可リストに追加しないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下する場合があります。 詳しくは、[IP アドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを使用する前に、地域に必要な IP アドレスを許可リストに追加する必要があります。 これらの IP アドレスを追加しないと、ソースコネクタが正しく動作しないか、エラーが発生する可能性があります。 許可リストに加える詳細な手順と許可する IP アドレスの一覧については、[IP アドレス ](../../ip-address-allow-list.md) を参照してください。
 
 ## ファイルとディレクトリの命名制約
 

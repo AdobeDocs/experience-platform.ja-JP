@@ -1,21 +1,15 @@
 ---
 title: Acxiom プロスペクティングデータの読み込み
 description: UI を使用して Acxiom プロスペクティングデータを Adobe Experience Platform および Adobe Real-Time Customer Data Platform に接続する方法を説明します。
-last-substantial-update: 2024-02-21T00:00:00Z
-badge: ベータ版
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1844'
 ht-degree: 14%
 
 ---
 
 # UI での [!DNL Acxiom Prospecting Data Import] ソース接続とデータフローの作成
-
->[!NOTE]
->
->[!DNL Acxiom Prospecting Data Import] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、[ ソースの概要 ](../../../../home.md#terms-and-conditions) を参照してください。
 
 [!DNL Acxiom] のAdobe Real-Time Customer Data Platformの見込み客データインポートは、可能な限り生産的な見込み客オーディエンスを提供するプロセスです。 [!DNL Acxiom] は、Real-Time CDPのファーストパーティデータを安全な書き出しで取得し、そのデータを受賞歴のあるハイジーンおよび id 解決システムで実行します。 これにより、抑制リストとして使用されるデータファイルが生成されます。 その後、このデータ・ファイルと Acxiom グローバル・データベースが照合され、見込み客リストをインポート用にカスタマイズできるようになります。
 
@@ -46,11 +40,11 @@ Experience Platform上のバケットにアクセスするには、次の資格�
 
 >[!IMPORTANT]
 >
->[!DNL Acxiom] アカウントをExperience Platformに接続するには、アカウントで **[!UICONTROL ソースの表示]** および **[!UICONTROL ソースの管理]** 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../../../access-control/ui/overview.md) を参照してください。
+>**[!UICONTROL アカウントをExperience Platformに接続するには、アカウントで]** ソースの表示 **[!UICONTROL および]** ソースの管理 [!DNL Acxiom] 権限の両方が有効になっている必要があります。 必要な権限を取得するには、製品管理者にお問い合わせください。 詳しくは、[ アクセス制御 UI ガイド ](../../../../../access-control/ui/overview.md) を参照してください。
 
 ## [!DNL Acxiom] アカウントを接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
@@ -130,7 +124,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ### データフローの詳細
 
-この手順の間に、データセットがプロファイルに対して有効になっている場合、**[!UICONTROL プロファイルデータセット]** 切り替えスイッチを選択して、プロファイル取り込み用のデータを有効にすることができます。 また、[!UICONTROL &#x200B; エラー診断 &#x200B;] および [!UICONTROL &#x200B; 部分取り込み &#x200B;] を有効にすることもできます。
+この手順の間に、データセットがプロファイルに対して有効になっている場合、**[!UICONTROL プロファイルデータセット]** 切り替えスイッチを選択して、プロファイル取り込み用のデータを有効にすることができます。 また、[!UICONTROL  エラー診断 ] および [!UICONTROL  部分取り込み ] を有効にすることもできます。
 
 * **エラー診断** - **エラー診断** を選択して、API を使用して後で参照できるエラー診断を生成するようにソースに指示します。 詳しくは、[ エラー診断の概要 ](../../../../../ingestion/quality/error-diagnostics.md) を参照してください
 * **部分取り込みを有効にする** – 部分バッチ取り込みは、特定のしきい値に到達するまで、エラーを含むデータを取り込む機能です。 この機能を使用すると、誤ったデータがすべて個別にバッチ処理されると同時に、無効な理由の詳細も含めて、正しいデータをすべてAdobe Experience Platformに取り込むことができます。  詳しくは、[ 部分取り込みの概要 ](../../../../../ingestion/batch-ingestion/partial.md) を参照してください
