@@ -316,7 +316,7 @@ curl -X DELETE \
 
 #### ID 記述子 {#identity-descriptor}
 
-ID 記述子は、[!UICONTROL Experience Platform ID サービス ] で説明されているように、「[!UICONTROL sourceSchema]」の「[!DNL Identity]sourceProperty[」が ](../../identity-service/home.md) フィールドであることを示します。
+ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で説明されているように、「[!UICONTROL sourceSchema]」の「[!DNL Identity]sourceProperty[」が ](../../identity-service/home.md) フィールドであることを示します。
 
 ```json
 {
@@ -525,7 +525,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス ] で説明さ
 
 >[!NOTE]
 >
->UI スキーマエディターでは、バージョン記述子が「[!UICONTROL  バージョン識別子 ]」として表示されます。
+>UI スキーマエディターでは、バージョン記述子が「[!UICONTROL &#x200B; バージョン識別子 &#x200B;]」として表示されます。
 
 バージョン記述子（`xdm:descriptorVersion`）は、順不同の変更イベントによる競合を検出して防ぐフィールドを指定します。
 
@@ -547,7 +547,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス ] で説明さ
 
 >[!NOTE]
 >
->UI スキーマエディターでは、タイムスタンプ記述子は「[!UICONTROL  タイムスタンプ識別子 ] として表示されます。
+>UI スキーマエディターでは、タイムスタンプ記述子は「[!UICONTROL &#x200B; タイムスタンプ識別子 &#x200B;] として表示されます。
 
 タイムスタンプ記述子（`xdm:descriptorTimestamp`）は、`"meta:behaviorType": "time-series"` を含むスキーマのタイムスタンプとして日時フィールドを指定します。
 
