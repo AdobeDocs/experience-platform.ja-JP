@@ -4,7 +4,8 @@ solution: Experience Platform
 title: モデルベースのスキーマ
 description: 機能、必須フィールド、関係、制限など、Adobe Experience Platformのモデルベースのスキーマ（リレーショナルスキーマとも呼ばれます）について説明します。
 badge: 限定提供
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -37,7 +38,7 @@ ht-degree: 0%
 
 ## モデルベースのスキーマと標準の XDM スキーマの違い
 
-Experience Platformの標準 XDM スキーマは、レコード、時系列またはアドホックの 3 つのデータ動作のいずれかに従います。 定義と詳細については、[XDM データの動作 ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/home#data-behaviors) を参照してください。
+Experience Platformの標準 XDM スキーマは、レコード、時系列またはアドホックの 3 つのデータ動作のいずれかに従います。 定義と詳細については、[XDM データの動作 ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors) を参照してください。
 
 従来のモデルでは、レコードと時系列スキーマは [ 和集合スキーマ ](../api/unions.md) に参加します（[ 和集合スキーマ UI ガイド ](../../profile/ui/union-schema.md) も参照）。 これらのスキーマは、共有 [ フィールドグループ ](./composition.md#field-group) が更新されると自動的に進化します。また、カスタムフィールドはテナント名前空間の下にネストする必要があります。 このモデルは強力ですが、オンボーディングの速度が低下したり、未使用のフィールドを含む過度に複雑なスキーマが生成されたり、追加のデータマッピングや変換が必要になったりする可能性があります。 これらの要因により、学習曲線が増加し、継続的なメンテナンス作業が増えます。
 
@@ -71,7 +72,7 @@ Experience Platformの標準 XDM スキーマは、レコード、時系列ま�
 
 >[!NOTE]
 >
->UI スキーマエディターでは、バージョン記述子とタイムスタンプ記述子は、それぞれ「[ !UICOTRNOL  バージョン識別子 ]」と「[ !UICOTRNOL  タイムスタンプ識別子 ]」として表示されます。
+>UI スキーマエディターでは、バージョン記述子とタイムスタンプ記述子は、それぞれ「[!UICONTROL  バージョン識別子 ]」と「[!UICONTROL  タイムスタンプ識別子 ]」として表示されます。
 
 **例（単一フィールド）:**
 
@@ -210,4 +211,3 @@ Should these be `@type: "xdm:descriptorRelationship",` This could be a copy-past
 * 関係は 1 対 1 と多対 1 に制限されます。
 * 使用できるかどうかは、ライセンスやイネーブルメント機能によって異なります。
 * 時系列スキーマには、複合プライマリキーが必要です。
-

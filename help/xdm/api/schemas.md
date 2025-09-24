@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマ API エンドポイント
 description: Schema Registry API の/schemas エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM スキーマをプログラムで管理できます。
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 15%
@@ -302,7 +302,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->UI スキーマエディターでは、バージョン記述子とタイムスタンプ記述子は、それぞれ「[ !UICOTRNOL  バージョン識別子 ]」と「[ !UICOTRNOL  タイムスタンプ識別子 ]」として表示されます。
+>UI スキーマエディターでは、バージョン記述子とタイムスタンプ記述子は、それぞれ「[!UICONTROL  バージョン識別子 ]」と「[!UICONTROL  タイムスタンプ識別子 ]」として表示されます。
 
 <!-- >[!AVAILABILITY]
 >

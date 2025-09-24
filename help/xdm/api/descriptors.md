@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 記述子 API エンドポイント
 description: Schema Registry API の/descriptors エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM 記述子をプログラムで管理できます。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 25%
@@ -316,7 +316,7 @@ curl -X DELETE \
 
 #### ID 記述子 {#identity-descriptor}
 
-ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で説明されているように、「[!UICONTROL sourceSchema]」の「[!DNL Identity]sourceProperty[」が ](../../identity-service/home.md) フィールドであることを示します。
+ID 記述子は、[!UICONTROL Experience Platform ID サービス ] で説明されているように、「[!UICONTROL sourceSchema]」の「[!DNL Identity]sourceProperty[」が ](../../identity-service/home.md) フィールドであることを示します。
 
 ```json
 {
@@ -525,7 +525,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 
 >[!NOTE]
 >
->UI スキーマエディターでは、バージョン記述子が「[ !UICOTRNOL  バージョン識別子 ]」として表示されます。
+>UI スキーマエディターでは、バージョン記述子が「[!UICONTROL  バージョン識別子 ]」として表示されます。
 
 バージョン記述子（`xdm:descriptorVersion`）は、順不同の変更イベントによる競合を検出して防ぐフィールドを指定します。
 
@@ -547,7 +547,7 @@ ID 記述子は、[!UICONTROL Experience Platform ID サービス &#x200B;] で�
 
 >[!NOTE]
 >
->UI スキーマエディターでは、タイムスタンプ記述子は「[ !UICOTRNOL  タイムスタンプ識別子 ] として表示されます。
+>UI スキーマエディターでは、タイムスタンプ記述子は「[!UICONTROL  タイムスタンプ識別子 ] として表示されます。
 
 タイムスタンプ記述子（`xdm:descriptorTimestamp`）は、`"meta:behaviorType": "time-series"` を含むスキーマのタイムスタンプとして日時フィールドを指定します。
 

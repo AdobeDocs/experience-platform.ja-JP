@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent クラス
 description: XDM ExperienceEvent クラスと、イベントデータモデリングのベストプラクティスについて説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f00b195567c22f69c05909e76906c8770da4b9d0
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2783'
 ht-degree: 36%
 
 ---
@@ -64,13 +64,14 @@ UI を使用して手動でExperience Platformにデータを取り込む場合�
 
 アドビでは、 [!DNL XDM ExperienceEvent] クラスで使用するためのいくつかの標準フィールドグループを提供しています。 このクラスで一般的に使用されるフィールドグループは次のとおりです。
 
-* [[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 &#x200B;]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL &#x200B; 残高移動 &#x200B;]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL Adobe Analytics ExperienceEvent 完全拡張機能 ]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent 完全拡張機能 ]](../field-groups/event/advertising-full-extension.md)
+* [[!UICONTROL  残高移動 ]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL キャンペーンマーケティング詳細]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL &#x200B; カードのアクション &#x200B;]](../field-groups/event/card-actions.md)
+* [[!UICONTROL  カードのアクション ]](../field-groups/event/card-actions.md)
 * [[!UICONTROL チャンネル詳細]](../field-groups/event/channel-details.md)
 * [[!UICONTROL コマース詳細]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL &#x200B; 供託内容等 &#x200B;]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL  供託内容等 ]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL デバイス下取り詳細]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 食事予約]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL エンドユーザー ID 詳細]](../field-groups/event/enduserids.md)
@@ -78,8 +79,8 @@ UI を使用して手動でExperience Platformにデータを取り込む場合�
 * [[!UICONTROL フライト予約]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 同意]](../field-groups/event/iab.md)
 * [[!UICONTROL 宿泊予約]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL MediaAnalytics インタラクションの詳細 &#x200B;]](../field-groups/event/mediaanalytics-interaction.md)
-* [[!UICONTROL &#x200B; 見積依頼の詳細 &#x200B;]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL MediaAnalytics インタラクションの詳細 ]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL  見積依頼の詳細 ]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL 予約詳細]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web 詳細]](../field-groups/event/web-details.md)
 
