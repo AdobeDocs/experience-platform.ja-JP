@@ -234,7 +234,7 @@ ht-degree: 75%
    * [Web 情報](./data-types/web-information.md)
    * [Web インタラクション](./data-types/web-interaction.md)
    * [Web ページの詳細](./data-types/webpage-details.md)
-* [!UICONTROL  スキーマ ] UI {#ui}
+* [!UICONTROL &#x200B; スキーマ &#x200B;] UI {#ui}
    * [概要](./ui/overview.md)
    * [XDM リソースの参照](./ui/explore.md)
    * リソースの作成と編集 {#resources}
