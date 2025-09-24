@@ -48,7 +48,7 @@ Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新�
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -70,14 +70,14 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) コネクタ | 新しい [!DNL Snowflake Batch] コネクタが使用できるようになり、特定のユースケースに対してストリーミングコネクタの代わりに使用できます。 |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) 暗号化のサポート | RSA 形式の公開鍵を添付して、書き出したファイルを暗号化できるようになりました。これにより、他のクラウドストレージの宛先が機密情報に提供するのと同じレベルのセキュリティが提供されます。 |
-| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 宛先の認証有効期限の詳細 | [!DNL Pinterest] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]****[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
+| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 宛先の認証有効期限の詳細 | [!DNL Pinterest] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL  タブと ]](../../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL  タブの新しい並べ替え機能により、宛先管理ワークフローが向上し ]](../../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| 列の幅の永続的な設定 | ページから移動して戻る際に、列の幅の設定が保持されるようになりました。 例えば、「[[!UICONTROL  参照 ]](../../destinations/ui/destinations-workspace.md#browse) タブの列幅を調整した場合、他の場所に移動してそのタブに戻っても、カスタムの列幅は変わりません。 |
+| Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL &#x200B; タブと &#x200B;]](../../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL &#x200B; タブの新しい並べ替え機能により、宛先管理ワークフローが向上し &#x200B;]](../../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| 列の幅の永続的な設定 | ページから移動して戻る際に、列の幅の設定が保持されるようになりました。 例えば、「[[!UICONTROL &#x200B; 参照 &#x200B;]](../../destinations/ui/destinations-workspace.md#browse) タブの列幅を調整した場合、他の場所に移動してそのタブに戻っても、カスタムの列幅は変わりません。 |
 
 詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。
 

@@ -27,7 +27,7 @@ ht-degree: 2%
 
 ## [!DNL Relay Connector] ソースを接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。 画面の左側にあるカタログから適切なカテゴリを選択するか、検索オプションを使用して特定のソースを検索できます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] 画面には、アカウントを作成できる様々なソースが表示されます。 画面の左側にあるカタログから適切なカテゴリを選択するか、検索オプションを使用して特定のソースを検索できます。
 
 *[!UICONTROL マーケティング自動化]* カテゴリで、[!DNL Relay Connector] ソースカードを選択し、**[!UICONTROL データを追加]** を選択します。
 
@@ -47,7 +47,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ![ データインターフェイスの選択 ](../../../../images/tutorials/create/relay-connector/upload-data.jpg)
 
-データがアップロードされたら、「[!UICONTROL  サンプルデータをプレビュー ]」セクションを使用してデータをプレビューできます。
+データがアップロードされたら、「[!UICONTROL &#x200B; サンプルデータをプレビュー &#x200B;]」セクションを使用してデータをプレビューできます。
 
 ![ アップロードされたデータ。](../../../../images/tutorials/create/relay-connector/uploaded-data.jpg)
 

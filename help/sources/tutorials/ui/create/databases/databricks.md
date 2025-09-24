@@ -45,7 +45,7 @@ ht-degree: 8%
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-[!DNL Databricks] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、[**[!UICONTROL Azure Databricks]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
+[!DNL Databricks] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、&lbrack;**[!UICONTROL Azure Databricks]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
 
 >[!TIP]
 >
@@ -70,7 +70,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/databricks/new.png)
 
-さらに、[!UICONTROL  ステージング SAS URI] 資格情報をコピーして、[!DNL Azure Databricks] 環境に貼り付ける必要があります。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+さらに、[!UICONTROL &#x200B; ステージング SAS URI] 資格情報をコピーして、[!DNL Azure Databricks] 環境に貼り付ける必要があります。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
 ![SAS URI ステージング資格情報。](../../../../images/tutorials/create/databricks/sas-uri.png)
 
