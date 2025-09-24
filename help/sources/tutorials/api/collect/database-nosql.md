@@ -3,10 +3,10 @@ title: Flow Service API を使用したデータベースソースのデータ�
 type: Tutorial
 description: Flow Service API を使用して、データフローを作成し、データベースからExperience Platformにデータを取り込む方法を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 73%
+source-wordcount: '1489'
+ht-degree: 71%
 
 ---
 
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | データベースソースの接続 ID。 |
 | `params.tableName` | ソースファイルのパス。 |
-| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 詳しくは、「ソースでのデータキャプチャの変更 [ の使用に関するガイドを参照し ](../change-data-capture.md) ください。 |
+| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 モデルベースのスキーマと共に使用すると、ターゲットデータセットとソースの同期を維持するために、挿入、更新、削除がチェンジデータキャプチャで追跡されます。 このプロパティは、次のデータベース ソースでサポートされています。 <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> この機能の概要については、[Data Mirrorの概要 ](../../../../xdm/data-mirror/overview.md) を参照してください。 実装について詳しくは、[ ソースガイドの change data capture](../change-data-capture.md) および [ モデルベースのスキーマのテクニカルリファレンス ](../../../../xdm/schema/model-based.md) を参照してください。 |
 | `connectionSpec.id` | データベースソースの接続仕様 ID。 データベース仕様 ID の一覧については、[付録](#appendix)を参照してください。 |
 
 **応答**

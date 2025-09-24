@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；スキーマ；スキーマ；作成
+keywords: Experience Platform；ホーム；人気のトピック；api;API;XDM;XDM システム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマ；スキーマ；作成
 solution: Experience Platform
 title: スキーマ API エンドポイント
 description: Schema Registry API の/schemas エンドポイントを使用すると、エクスペリエンスアプリケーション内の XDM スキーマをプログラムで管理できます。
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 20%
+source-wordcount: '2095'
+ht-degree: 15%
 
 ---
 
 # スキーマエンドポイント
 
-スキーマは、Adobe Experience Platformに取り込むデータのブループリントと考えることができます。 各スキーマは、クラスと 0 個以上のスキーマフィールドグループで構成されます。 [!DNL Schema Registry] API の `/schemas` エンドポイントを使用すると、エクスペリエンスアプリケーション内のスキーマをプログラムで管理できます。
+スキーマは、Adobe Experience Platformに取り込むデータのブループリントと考えることができます。 各スキーマは、クラスと 0 個以上のスキーマフィールドグループで構成されます。 `/schemas` API の [!DNL Schema Registry] エンドポイントを使用すると、エクスペリエンスアプリケーション内のスキーマをプログラムで管理できます。
 
 ## はじめに
 
@@ -21,7 +21,7 @@ ht-degree: 20%
 
 ## スキーマのリストの取得 {#list}
 
-`/global/schemas` または `/tenant/schemas` に対してそれぞれGETリクエストをおこなうことで、`global` コンテナまたは `tenant` コンテナの下のすべてのスキーマをリストできます。
+`global` または `tenant` に対してそれぞれGET リクエストをおこなうことで、`/global/schemas` コンテナまたは `/tenant/schemas` コンテナの下のすべてのスキーマをリストできます。
 
 >[!NOTE]
 >
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ：Adobeが作成したスキーマの場合は `global`、組織が所有するスキーマの場合は `tenant`。 |
+| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ：Adobeで作成されたスキーマの場合は `global`、組織が所有するスキーマの場合は `tenant`。 |
 | `{QUERY_PARAMS}` | 結果をフィルタリングするオプションのクエリパラメーター。 使用可能なパラメーターのリストについては、[ 付録ドキュメント ](./appendix.md#query) を参照してください。 |
 
 {style="table-layout:auto"}
 
 **リクエスト**
 
-次のリクエストは、`orderby` クエリパラメーターを使用して結果を `title` 属性で並べ替え、`tenant` コンテナからスキーマのリストを取得します。
+次のリクエストは、`tenant` クエリパラメーターを使用して結果を `orderby` 属性で並べ替え、`title` コンテナからスキーマのリストを取得します。
 
 ```shell
 curl -X GET \
@@ -99,7 +99,7 @@ curl -X GET \
 
 ## スキーマの検索 {#lookup}
 
-パスにスキーマの ID を含むGETリクエストを実行することで、特定のスキーマを検索できます。
+パスにスキーマの ID を含むGET リクエストを実行することで、特定のスキーマを検索できます。
 
 **API 形式**
 
@@ -109,7 +109,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ：Adobeが作成したスキーマの場合は `global`、組織が所有するスキーマの場合は `tenant`。 |
+| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ：Adobeで作成されたスキーマの場合は `global`、組織が所有するスキーマの場合は `tenant`。 |
 | `{SCHEMA_ID}` | 検索するスキーマの `meta:altId` または URL エンコードされた `$id`。 |
 
 {style="table-layout:auto"}
@@ -128,7 +128,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 すべての参照リクエストには、`Accept` ヘッダーに `version` を含める必要があります。 次の `Accept` ヘッダーを使用できます。
+応答の形式は、リクエストで送信される `Accept` ヘッダーによって異なります。 すべての参照リクエストには、`version` ヘッダーに `Accept` を含める必要があります。 次の `Accept` ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | ------- | ------------ |
@@ -198,6 +198,8 @@ curl -X GET \
 
 スキーマ構成プロセスは、クラスの割り当てから開始されます。このクラスは、データ（レコードまたは時系列）の主要な動作要素と、取得されるデータを記述するために必要な最小フィールドを定義します。
 
+クラスまたはフィールドグループを含まないスキーマ（モデルベースのスキーマと呼ばれる）の作成方法については、[ モデルベースのスキーマの作成 ](#create-model-based-schema) の節を参照してください。
+
 >[!NOTE]
 >
 >以下の呼び出し例は、クラスの最小構成要件を持ち、フィールドグループを持たない、API でスキーマを作成する方法の基本的な例に過ぎません。 フィールドグループとデータタイプを使用してフィールドを割り当てる方法など、API でスキーマを作成する詳細な手順については、[ スキーマ作成チュートリアル ](../tutorials/create-schema-api.md) を参照してください。
@@ -234,7 +236,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `allOf` | オブジェクトの配列。各オブジェクトは、スキーマがフィールドを実装するクラスまたはフィールドグループを参照します。 各オブジェクトには、新しいスキーマが実装するクラスまたはフィールドグループの `$id` を表す値を持つ単一のプロパティ（`$ref`）が含まれています。 1 つのクラスを指定し、0 個以上の追加のフィールドグループを含める必要があります。 上記の例では、`allOf` 配列の単一のオブジェクトがスキーマのクラスです。 |
+| `allOf` | オブジェクトの配列。各オブジェクトは、スキーマがフィールドを実装するクラスまたはフィールドグループを参照します。 各オブジェクトには、新しいスキーマが実装するクラスまたはフィールドグループの `$ref` を表す値を持つ単一のプロパティ（`$id`）が含まれています。 1 つのクラスを指定し、0 個以上の追加のフィールドグループを含める必要があります。 上記の例では、`allOf` 配列の単一のオブジェクトがスキーマのクラスです。 |
 
 {style="table-layout:auto"}
 
@@ -275,13 +277,199 @@ curl -X POST \
 }
 ```
 
-テナントコンテナで [ すべてのスキーマをリスト ](#list) するGETリクエストを実行すると、新しいスキーマが含まれるようになりました。 URL エンコードされた `$id` URI を使用して [ ルックアップ （GET）リクエスト ](#lookup) を実行すると、新しいスキーマを直接表示できます。
+テナントコンテナで [ すべてのスキーマをリスト ](#list) するGET リクエストを実行すると、新しいスキーマが含まれるようになりました。 URL エンコードされた [ URI を使用して ](#lookup) ルックアップ （GET） リクエストを実行し `$id` 新しいスキーマを直接表示することができます。
 
 スキーマにフィールドを追加するには、[PATCH操作を実行して ](#patch) スキーマの `allOf` 配列と `meta:extends` 配列にフィールドグループを追加します。
 
+## モデルベースのスキーマを作成 {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Data Mirrorおよびモデルベースのスキーマは、Adobe Journey Optimizer **オーケストレートキャンペーン** のライセンスホルダーが使用できます。 ライセンスとイネーブルメント機能に応じて、Customer Journey Analytics ユーザー向けの **限定リリース** としても使用できます。 アクセスについては、Adobe担当者にお問い合わせください。
+
+`/schemas` エンドポイントに対して POST リクエストを実行することで、モデルベースのスキーマを作成します。 モデルベースのスキーマは、構造化されたリレーショナルスタイルのデータ **クラスやフィールドグループを含まない** を格納します。 スキーマ上で直接フィールドを定義し、論理動作タグを使用して、スキーマをモデルベースとして識別します。
+
+>[!IMPORTANT]
+>
+>モデルベースのスキーマを作成するには、`meta:extends` を `"https://ns.adobe.com/xdm/data/adhoc-v2"` に設定します。 これは **論理的動作の識別子** であり、物理的な動作やクラスではありません。 **でクラスやフィールドグループを参照** ない `allOf` し、**でクラスやフィールドグループを含めない**`meta:extends` します。
+
+`POST /tenant/schemas` で最初にスキーマを作成します。 次に、[Descriptors API （`POST /tenant/descriptors`）で必要な記述子を追加し ](../api/descriptors.md) す。
+
+- [プライマリキー記述子 ](../api/descriptors.md#primary-key-descriptor): プライマリキーフィールドは **ルートレベル** にあり、**必要としてマークされている** 必要があります。
+- [ バージョン記述子 ](../api/descriptors.md#version-descriptor): **必須** プライマリキーが存在する場合。
+- [ 関係記述子 ](../api/descriptors.md#relationship-descriptor)：任意。結合を定義します。カーディナリティは取り込み時に適用されません。
+- [ タイムスタンプ記述子 ](../api/descriptors.md#timestamp-descriptor)：時系列スキーマの場合、プライマリキーはタイムスタンプ フィールドを含む **複合** キーである必要があります。
+
+>[!NOTE]
+>
+>UI スキーマエディターでは、バージョン記述子とタイムスタンプ記述子は、それぞれ「[!UICOTRNOL  バージョン識別子 ]」と「[!UICOTRNOL  タイムスタンプ識別子 ]」として表示されます。
+
+<!-- >[!AVAILABILITY]
+>
+>Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+
+>[!CAUTION]
+>
+>モデルベースのスキーマは **結合スキーマと互換性がありません**。 モデルベースのスキーマを操作する場合は、`union` に `meta:immutableTags` タグを適用しないでください。 この設定は、UI ではブロックされますが、現在は API でブロックされていません。 結合スキーマの動作について詳しくは、[ 結合エンドポイントガイド ](./unions.md) を参照してください。
+
+**API 形式**
+
+```http
+POST /tenant/schemas
+```
+
+**リクエスト**
+
+```shell
+curl --request POST \
+  --url https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+  "title": "marketing.customers",
+  "type": "object",
+  "description": "Schema of the Marketing Customers table.",
+  "definitions": {
+    "customFields": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/customFields",
+      "meta:xdmType": "object"
+    }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record"
+}
+'
+```
+
+### リクエスト本文のプロパティ
+
+| プロパティ | タイプ | 説明 |
+| ------------------------------- | ------ | --------------------------------------------------------- |
+| `title` | 文字列 | スキーマの名前を表示します。 |
+| `description` | 文字列 | スキーマの目的の簡単な説明。 |
+| `type` | 文字列 | モデルベースのスキーマには `"object"` を付ける必要があります。 |
+| `definitions` | オブジェクト | スキーマフィールドを定義するルートレベルのオブジェクトが含まれます。 |
+| `definitions.<name>.properties` | オブジェクト | フィールド名とデータタイプ。 |
+| `allOf` | 配列 | ルートレベルのオブジェクト定義（例：`#/definitions/marketing_customers`）を参照します。 |
+| `meta:extends` | 配列 | モデルベースとしてスキーマを識別するには、`"https://ns.adobe.com/xdm/data/adhoc-v2"` を含める必要があります。 |
+| `meta:behaviorType` | 文字列 | `"record"` に設定します。 `"time-series"` は、有効かつ適切な場合にのみ使用してください。 |
+
+>[!IMPORTANT]
+>
+>モデルベースのスキーマのスキーマ進化は、標準スキーマと同じ追加ルールに従います。 PATCH リクエストで新しいフィールドを追加できます。 フィールドの名前変更や削除などの変更は、データがデータセットに取り込まれていない場合にのみ許可されます。
+
+**応答**
+
+リクエストが成功すると、**HTTP 201 （作成済み）** 作成されたスキーマが返されます。
+
+>[!NOTE]
+>
+>モデルベースのスキーマは、事前シードされたフィールド（id、タイムスタンプ、eventType など）を継承しません。 すべての必須フィールドをスキーマで明示的に定義します。
+
+**応答の例**
+
+```json
+{
+  "$id": "https://ns.adobe.com/<TENANT_ID>/schemas/<SCHEMA_UUID>",
+  "meta:altId": "_<SCHEMA_ALT_ID>",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "marketing.customers",
+  "description": "Schema of the Marketing Customers table.",
+  "type": "object",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record",
+  "meta:containerId": "tenant"
+}
+```
+
+### 応答本文のプロパティ
+
+| プロパティ | タイプ | 説明 |
+| ------------------- | ------ | -------------------------- |
+| `$id` | 文字列 | 作成されたスキーマの一意の URL。 後続の API 呼び出しでを使用します。 |
+| `meta:altId` | 文字列 | スキーマの代替識別子。 |
+| `meta:resourceType` | 文字列 | リソースタイプ （常に `"schemas"`）。 |
+| `version` | 文字列 | 作成時に割り当てられるスキーマバージョン。 |
+| `title` | 文字列 | スキーマの表示名。 |
+| `description` | 文字列 | スキーマの目的の簡単な説明。 |
+| `type` | 文字列 | スキーマタイプ。 |
+| `definitions` | オブジェクト | スキーマで使用される再利用可能なオブジェクトまたはフィールドグループを定義します。 これは通常、メインデータ構造を含み、スキーマのルートを定義するために `allOf` 配列で参照されます。 |
+| `allOf` | 配列 | 1 つ以上の定義（例：`#/definitions/marketing_customers`）を参照して、スキーマのルートオブジェクトを指定します。 |
+| `meta:extends` | 配列 | スキーマをモデルベース（`adhoc-v2`）として識別します。 |
+| `meta:behaviorType` | 文字列 | 動作タイプ （有効な場合は `record` または `time-series`）。 |
+| `meta:containerId` | 文字列 | スキーマが格納されるコンテナ（例：`tenant`）。 |
+
+モデルベースのスキーマを作成した後でフィールドを追加するには、[PATCH リクエスト ](#patch) を実行します。 モデルベースのスキーマは、継承も自動展開もされません。 フィールド名の変更やフィールドの削除などの構造変更は、データがデータセットに取り込まれていない場合にのみ使用できます。 データが存在する場合は、**追加的な変更** （新しいフィールドの追加など）のみがサポートされます。
+
+新しいルートレベルフィールド（ルート定義またはルート `properties` 定内）を追加できますが、既存のフィールドのタイプを削除、名前変更、変更することはできません。
+
+>[!CAUTION]
+>
+>スキーマを使用してデータセットが初期化されると、スキーマ進化が制限されます。 データを取り込むと、フィールドを削除または変更することはできないので、事前にフィールド名とタイプを慎重に計画します。
+
 ## スキーマの更新 {#put}
 
-PUT操作（基本的にリソースの書き換え）を実行して、スキーマ全体を置き換えることができます。 PUTリクエストを通じてスキーマを更新する場合、本文には、スキーマリクエストで [ 新しいPOSTの作成 ](#create) を行う際に必要なすべてのフィールドを含める必要があります。
+PUT操作を通じて、スキーマ全体を置き換えることができます。つまり、リソースを基本的に書き換えます。 PUT リクエストを通じてスキーマを更新する場合、本文には、POST リクエストで [ 新しいスキーマの作成 ](#create) を行う際に必要なすべてのフィールドを含める必要があります。
 
 >[!NOTE]
 >
@@ -362,11 +550,11 @@ curl -X PUT \
 
 ## スキーマの一部を更新 {#patch}
 
-PATCHリクエストを使用して、スキーマの一部を更新できます。 [!DNL Schema Registry] は、`add`、`remove`、`replace` など、標準の JSON パッチ操作をすべてサポートしています。 JSON パッチについて詳しくは、[API の基本ガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
+PATCH リクエストを使用して、スキーマの一部を更新できます。 [!DNL Schema Registry] は、`add`、`remove`、`replace` など、標準の JSON パッチ操作をすべてサポートしています。 JSON パッチについて詳しくは、[API の基本ガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
 
 >[!NOTE]
 >
->個々のフィールドを更新する代わりにリソース全体を新しい値で置き換える場合は、[ スキーマ操作を使用したPUTの置き換え ](#put) の節を参照してください。
+>個々のフィールドを更新する代わりにリソース全体を新しい値に置き換える場合は、[PUT操作を使用したスキーマの置き換え ](#put) の節を参照してください。
 
 最も一般的なPATCH操作の 1 つは、以前に定義したフィールドグループをスキーマに追加することです（以下の例に示を参照）。
 
@@ -414,7 +602,7 @@ curl -X PATCH\
 
 **応答**
 
-応答には、両方の操作が正常に実行されたことが示されます。フィールドグループ `$id` が `meta:extends` 配列に追加され、フィールドグループ `$id` への参照（`$ref`）が `allOf` 配列に表示されるようになりました。
+応答には、両方の操作が正常に実行されたことが示されます。フィールドグループ `$id` が `meta:extends` 配列に追加され、フィールドグループ `$ref` への参照（`$id`）が `allOf` 配列に表示されるようになりました。
 
 ```JSON
 {
@@ -455,7 +643,7 @@ curl -X PATCH\
 
 ## リアルタイム顧客プロファイルで使用するスキーマを有効にする {#union}
 
-スキーマを [ リアルタイム顧客プロファイル ](../../profile/home.md) に参加させるには、スキーマの `meta:immutableTags` 配列に `union` タグを追加する必要があります。 これを実現するには、該当するスキーマに対してPATCHリクエストを実行します。
+スキーマを [ リアルタイム顧客プロファイル ](../../profile/home.md) に参加させるには、スキーマの `union` 配列に `meta:immutableTags` タグを追加する必要があります。 これを実現するには、該当するスキーマに対してPATCH リクエストを実行します。
 
 >[!IMPORTANT]
 >
@@ -542,7 +730,7 @@ curl -X PATCH\
 
 ## スキーマの削除 {#delete}
 
-場合によっては、スキーマをスキーマレジストリから削除する必要があります。 これを行うには、パスで指定されたスキーマ ID を使用してDELETEリクエストを実行します。
+場合によっては、スキーマをスキーマレジストリから削除する必要があります。 これを行うには、パスで指定されたスキーマ ID を使用してDELETE リクエストを実行します。
 
 **API 形式**
 

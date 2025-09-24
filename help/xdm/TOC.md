@@ -5,9 +5,9 @@ breadcrumb-title: エクスペリエンスデータモデル（XDM）ガイド
 user-guide-description: Experience Platform 内でエクスペリエンスデータモデル（XDM）システムの概要を探索し、クラスとスキーマフィールドグループを使用してエクスペリエンスデータを標準化する方法について説明します。
 feature: Schemas
 role: Developer
-source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
+source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '708'
 ht-degree: 75%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 75%
    * [データモデリングのベストプラクティス](schema/best-practices.md)
    * [機密データと個人データ](./schema/sensitive-and-personal-data.md)
    * [XDM フィールドタイプ制約](schema/field-constraints.md)
+   * [モデルベースのスキーマ](./schema/model-based.md)
    * [XDM での名前空間](./schema/namespaces.md)
    * 業界のデータモデル {#industries}
       * [概要](./schema/industries/overview.md)
@@ -73,6 +74,8 @@ ht-degree: 75%
          * [タイミング](./schema/healthcare/data-types/timing.md)
          * [仮想サービス](./schema/healthcare/data-types/virtual-service-detail.md)
    * [XDM フィールドディクショナリ](schema/field-dictionary.md)
+* Data Mirror {#data-mirror}
+   * [概要](./data-mirror/overview.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -231,7 +234,7 @@ ht-degree: 75%
    * [Web 情報](./data-types/web-information.md)
    * [Web インタラクション](./data-types/web-interaction.md)
    * [Web ページの詳細](./data-types/webpage-details.md)
-* [!UICONTROL &#x200B; スキーマ &#x200B;] UI {#ui}
+* [!UICONTROL  スキーマ ] UI {#ui}
    * [概要](./ui/overview.md)
    * [XDM リソースの参照](./ui/explore.md)
    * リソースの作成と編集 {#resources}

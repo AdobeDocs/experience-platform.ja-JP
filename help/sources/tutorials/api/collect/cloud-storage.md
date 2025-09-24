@@ -5,10 +5,10 @@ title: Flow Service API を使用したクラウドストレージソースの�
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと API を使用してExperience Platformに取り込む手順について説明します。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1792'
-ht-degree: 57%
+source-wordcount: '1834'
+ht-degree: 56%
 
 ---
 
@@ -101,7 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | （オプション）取り込む圧縮ファイルのタイプを定義するプロパティ。 サポートされている圧縮ファイルのタイプは、`bzip2`、`gzip`、`deflate`、`zipDeflate`、`tarGzip`、`tar` です。 **メモ**:`compressionType` プロパティは、区切り文字付きまたは JSON ファイルを取り込む場合にのみ使用できます。 |
 | `params.path` | アクセスするソースファイルのパス。 このパラメーターは、個々のファイルまたはフォルダー全体を指します。  **注意**：ファイル名の代わりにアスタリスクを使用して、フォルダー全体の取り込みを指定できます。 例：`/acme/summerCampaign/*.csv` は `/acme/summerCampaign/` フォルダー全体を取り込みます。 |
 | `params.type` | 取り込むソースデータファイルのファイルタイプ。 タイプ `file` を使用して個々のファイルを取り込み、タイプ `folder` を使用してフォルダー全体を取り込みます。 |
-| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 このプロパティは、次のクラウドストレージソースでサポートされています。 <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> 詳しくは、「ソースでのデータキャプチャの変更 [ の使用に関するガイドを参照し ](../change-data-capture.md) ください。 |
+| `params.cdcEnabled` | 変更履歴の取り込みが有効かどうかを示すブール値。 モデルベースのスキーマで使用される場合、変更データキャプチャは `_change_request_type` ータコントロール列（`u` — upsert、`d` — delete）に依存します。この列は、取り込み時に評価されますが、ターゲットスキーマには保存されません。 このプロパティは、次のクラウドストレージソースでサポートされています。 <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>この機能の概要については、[Data Mirrorの概要 ](../../../../xdm/data-mirror/overview.md) を参照してください。 実装について詳しくは、使用に関するガイド [ ソースでのデータキャプチャの変更 ](../change-data-capture.md) および [ モデルベースのスキーマに関するテクニカルリファレンス ](../../../../xdm/schema/model-based.md) を参照してください。 |
 | `connectionSpec.id` | 特定のクラウドストレージソースに関連付けられた接続仕様 ID。 接続仕様 ID のリストについては、[付録](#appendix)を参照してください。 |
 
 **応答**
