@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ## モデルベースのスキーマと標準の XDM スキーマの違い
 
-Experience Platformの標準 XDM スキーマは、レコード、時系列またはアドホックの 3 つのデータ動作のいずれかに従います。 定義と詳細については、[XDM データの動作 ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors) を参照してください。
+Experience Platformの標準 XDM スキーマは、レコード、時系列またはアドホックの 3 つのデータ動作のいずれかに従います。 定義と詳細については、[XDM データの動作 ](https://experienceleague.adobe.com/ja/docs/experience-platform/xdm/home#data-behaviors) を参照してください。
 
 従来のモデルでは、レコードと時系列スキーマは [ 和集合スキーマ ](../api/unions.md) に参加します（[ 和集合スキーマ UI ガイド ](../../profile/ui/union-schema.md) も参照）。 これらのスキーマは、共有 [ フィールドグループ ](./composition.md#field-group) が更新されると自動的に進化します。また、カスタムフィールドはテナント名前空間の下にネストする必要があります。 このモデルは強力ですが、オンボーディングの速度が低下したり、未使用のフィールドを含む過度に複雑なスキーマが生成されたり、追加のデータマッピングや変換が必要になったりする可能性があります。 これらの要因により、学習曲線が増加し、継続的なメンテナンス作業が増えます。
 
