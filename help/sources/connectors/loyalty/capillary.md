@@ -1,10 +1,11 @@
 ---
 title: キャピラリーストリーミングイベントの概要
 description: キャピラリからExperience Platformにデータをストリーミングする方法を説明します。
-last-substantial-update: 2025-09-23T00:00:00Z
+hide: true
+hidefromtoc: true
 badge: ベータ版
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 7%

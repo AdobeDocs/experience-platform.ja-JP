@@ -1,9 +1,11 @@
 ---
 title: UI を使用した Capilary とExperience Platformの接続
 description: UI を使用してキャピラリーをExperience Platformに接続する方法を説明します
+hide: true
+hidefromtoc: true
 badge: ベータ版
 exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 15%

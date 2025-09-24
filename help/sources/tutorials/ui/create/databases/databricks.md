@@ -1,24 +1,25 @@
 ---
-title: Ui を使用した Azure Databricks のExperience Platformへの接続
-description: ユーザーインターフェイスを使用して Azure Databricks をExperience Platformに接続する方法について説明します。
+title: Ui を使用した Databricks のExperience Platformへの接続
+description: ユーザーインターフェイスを使用して Databricks をExperience Platformに接続する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="ベータ版" type="Informative"
-source-git-commit: 2bd16d5a55c5bbeedbc6a6012d9f0229eee8433a
+exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '481'
 ht-degree: 8%
 
 ---
 
-# UI で [!DNL Azure Databricks] をExperience Platformに接続する
+# UI で [!DNL Databricks] をExperience Platformに接続する
 
 >[!AVAILABILITY]
 >
->* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Databricks] ソースを利用できます。
+>* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Databricks] ソースを利用できます。
 >
->* [!DNL Azure Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
+>* [!DNL Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../../../home.md#terms-and-conditions) を参照してください。
 
-このガイドでは、UI のソースワークスペースを使用して [!DNL Azure Databricks] アカウントをAdobe Experience Platformに接続する方法について説明します。
+このガイドでは、UI のソースワークスペースを使用して [!DNL Databricks] アカウントをAdobe Experience Platformに接続する方法について説明します。
 
 ## 基本を学ぶ
 
@@ -29,22 +30,22 @@ ht-degree: 8%
 
 ### 必要な資格情報の収集
 
-[!DNL Azure Databricks] をExperience Platformに接続するには、次の資格情報の値を指定します。
+[!DNL Databricks] をExperience Platformに接続するには、次の資格情報の値を指定します。
 
 | 資格情報 | 説明 |
 | --- | --- |
-| ドメイン | [!DNL Azure Databricks] ワークスペースの URL。 例：`https://adb-1234567890123456.7.azuredatabricks.net`。 |
-| クラスター ID | [!DNL Azure Databricks] 内のクラスターの ID。 このクラスターは、既に既存のクラスターであり、インタラクティブなクラスターである必要があります。 |
-| アクセストークン | [!DNL Azure Databricks] アカウントを認証するアクセストークン。 [!DNL Azure Databricks] ワークスペースを使用してアクセストークンを生成できます。 |
+| ドメイン | [!DNL Databricks] ワークスペースの URL。 例：`https://adb-1234567890123456.7.azuredatabricks.net`。 |
+| クラスター ID | [!DNL Databricks] 内のクラスターの ID。 このクラスターは、既に既存のクラスターであり、インタラクティブなクラスターである必要があります。 |
+| アクセストークン | [!DNL Databricks] アカウントを認証するアクセストークン。 [!DNL Databricks] ワークスペースを使用してアクセストークンを生成できます。 |
 | データベース | delta lake 内のデータベースの名前。 |
 
-詳しくは、[[!DNL Azure Databricks] 概要](../../../../connectors/databases/databricks.md)を参照してください。
+詳しくは、[[!DNL Databricks] 概要](../../../../connectors/databases/databricks.md)を参照してください。
 
 ## ソースカタログのナビゲート
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、*[!UICONTROL Sources]* ワークスペースにアクセスします。 カテゴリを選択するか、検索バーを使用してソースを検索します。
 
-[!DNL Azure Databricks] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、&lbrack;**[!UICONTROL Azure Databricks]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
+[!DNL Databricks] に接続するには、[*[!UICONTROL データベース]*] カテゴリに移動し、[**[!UICONTROL Azure Databricks]** ソース カードを選択してから [**[!UICONTROL 設定]**] を選択します。
 
 >[!TIP]
 >
@@ -69,7 +70,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ![ アカウント名とオプションの説明が表示された、ソースワークフローの新しいアカウントインターフェイス。](../../../../images/tutorials/create/databricks/new.png)
 
-さらに、[!UICONTROL &#x200B; ステージング SAS URI] 資格情報をコピーして、[!DNL Azure Databricks] 環境に貼り付ける必要があります。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+さらに、[!UICONTROL  ステージング SAS URI] 資格情報をコピーして、[!DNL Azure Databricks] 環境に貼り付ける必要があります。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
 ![SAS URI ステージング資格情報。](../../../../images/tutorials/create/databricks/sas-uri.png)
 

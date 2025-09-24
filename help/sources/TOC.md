@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースからデータを取り込みます。 既に取り込んだデータの構造化、ラベル付けおよび拡張方法について説明します。
 feature: Sources
 role: Developer
-source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1069'
 ht-degree: 90%
 
 ---
@@ -363,7 +363,7 @@ ht-degree: 90%
    - [ソースアラートの購読](tutorials/ui/alerts.md)
    - [データフローをドラフトとして保存](tutorials/ui/draft.md)
    - [データフローへのアクセスラベルの適用](tutorials/ui/labels.md)
-   - [Azure プライベートエンドポイントの作成](tutorials/ui/private-link.md)
+   - [プライベートエンドポイントの作成](tutorials/ui/private-link.md)
 - セルフサービスソース（バッチ SDK） {#sdk}
    - [概要](sources-sdk/overview.md)
    - 接続仕様を設定 {#config}

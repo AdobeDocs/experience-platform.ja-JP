@@ -1,26 +1,26 @@
 ---
-title: Azure Databricks
-description: Azure Databricks をExperience Platformに接続するために必要な前提条件の手順について説明します。
+title: Databricks
+description: Databricks をExperience Platformに接続するために必要な前提条件の手順について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="ベータ版" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '631'
-ht-degree: 4%
+source-wordcount: '628'
+ht-degree: 3%
 
 ---
 
-# [!DNL Azure Databricks]
+# [!DNL Databricks]
 
 >[!AVAILABILITY]
 >
->* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Azure Databricks] ソースを利用できます。
+>* Real-Time CDP Ultimateを購入したユーザーは、ソースカタログで [!DNL Databricks] ソースを利用できます。
 >
->* [!DNL Azure Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../home.md#terms-and-conditions) を参照してください。
+>* [!DNL Databricks] ソースはベータ版です。ベータラベル付きソースの使用について詳しくは、ソースの概要の [ 利用条件 ](../../home.md#terms-and-conditions) を参照してください。
 
-[!DNL Azure Databricks] は、データ分析、機械学習、AI 用に設計されたクラウドベースのプラットフォームです。 [!DNL Databricks] を使用して [!DNL Azure] と統合し、データソリューションを大規模に構築、デプロイ、管理するための総合的な環境を提供できます。
+[!DNL Databricks] は、データ分析、機械学習、AI 用に設計されたクラウドベースのプラットフォームです。 [!DNL Databricks] を使用すると、データソリューションを大規模に構築、デプロイ、管理するための総合的な環境を統合および提供できます。
 
 [!DNL Databricks] ソースを使用してアカウントを接続し、[!DNL Databricks] データをAdobe Experience Platformに取り込みます。
 

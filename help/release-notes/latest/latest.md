@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート 2025年8月
 description: Adobe Experience Platform の 2025年8月のリリースノート。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 22%
+source-wordcount: '1480'
+ht-degree: 21%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年9月23日（PT）**
 
@@ -48,7 +48,7 @@ Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新�
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -70,14 +70,14 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) コネクタ | 新しい [!DNL Snowflake Batch] コネクタが使用できるようになり、特定のユースケースに対してストリーミングコネクタの代わりに使用できます。 |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) 暗号化のサポート | RSA 形式の公開鍵を添付して、書き出したファイルを暗号化できるようになりました。これにより、他のクラウドストレージの宛先が機密情報に提供するのと同じレベルのセキュリティが提供されます。 |
-| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 宛先の認証有効期限の詳細 | [!DNL Pinterest] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
+| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 宛先の認証有効期限の詳細 | [!DNL Pinterest] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]****[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL &#x200B; タブと &#x200B;]](../../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL &#x200B; タブの新しい並べ替え機能により、宛先管理ワークフローが向上し &#x200B;]](../../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| 列の幅の永続的な設定 | ページから移動して戻る際に、列の幅の設定が保持されるようになりました。 例えば、「[[!UICONTROL &#x200B; 参照 &#x200B;]](../../destinations/ui/destinations-workspace.md#browse) タブの列幅を調整した場合、他の場所に移動してそのタブに戻っても、カスタムの列幅は変わりません。 |
+| Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL  タブと ]](../../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL  タブの新しい並べ替え機能により、宛先管理ワークフローが向上し ]](../../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| 列の幅の永続的な設定 | ページから移動して戻る際に、列の幅の設定が保持されるようになりました。 例えば、「[[!UICONTROL  参照 ]](../../destinations/ui/destinations-workspace.md#browse) タブの列幅を調整した場合、他の場所に移動してそのタブに戻っても、カスタムの列幅は変わりません。 |
 
 詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。
 
@@ -90,12 +90,9 @@ XDM は、Experience Platformに取り込むデータの共通の構造と定義
 | 機能 | 説明 |
 | ------- | ----------- |
 | モデルベースのスキーマ | モデルベースのスキーマを使用して、データモデリングを簡略化できます。 包括的なハウツー例やガイダンスを使用して、スキーマをより簡単に作成できるようになりました。 この機能は、現在、Campaign Orchestration のライセンスホルダーが使用でき、GA の Data Distillerのお客様にも拡大される予定で、データモデリングがよりアクセスしやすく効率的になります。 この機能には、時系列データと変更データのキャプチャ機能のサポートが含まれています。 |
+| Data Mirror | モデルベースのスキーマを使用して、クラウドデータウェアハウス（Snowflake、Databricks、BigQuery など）からAdobe Experience Platformに行レベルの変更を取り込む。 Data Mirrorでは、既存のデータベース構造をデータレイクに直接ミラーリングすることで、アップストリーム ETL を排除し、関係、バージョン管理、削除を保持します。 変更データ取得機能を使用した時系列およびレコードイベントのスキーマ動作はすべてサポートされます。 この機能は現在、Campaign Orchestration のライセンスホルダーで使用でき、この限定リリースを通じてCustomer Journey Analyticsのお客様も含めて拡張される予定です。 詳しくは、[Data Mirror ドキュメント ](../../xdm/data-mirror/overview.md) を参照してください。 アクセスについては、Adobe担当者にお問い合わせください。 |
 
 詳しくは、[XDM の概要 ](../../xdm/home.md) を参照してください。
-<!--
-
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
--->
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -138,7 +135,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 | --- | --- |
 | 一般公開の新しいソース | 次のソースが一般提供されるようになりました。複数のソースコネクタがBetaから GA に更新されました。 <ul><li>[Acxiom のデータ取り込み ](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom 見込み客データの取り込み ](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury エンタープライズ ](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>。これらのソースが完全にサポートされ、実稼動で使用できる状態になりました。 |
 | [!DNL Snowflake] キーペア認証のサポート | キーペア認証をサポートし、Snowflake接続のセキュリティを強化しました。 基本認証（ユーザー名/パスワード）は 2025 年 11 月までに廃止される予定です。セキュリティを向上させるには、キーペア認証に移行することをお勧めします。 詳しくは、[[!DNL Snowflake]  ドキュメント ](../../sources/connectors/databases/snowflake.md) を参照してください。 |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | [[!DNL Capillary Streaming Events]  ソース ](../../sources/connectors/loyalty/capillary.md) を使用すると、[!DNL Capillary] アカウントからExperience Platformにロイヤルティデータをストリーミングできます。 |
 | ソースでのプライベートリンクのサポートの一般提供 | 選択したソースグループに対して **プライベートリンク** を使用できるようになりました。 この機能を使用して、ソースが接続できるプライベートエンドポイントを作成します。 プライベートエンドポイントを使用すると、パブリックインターネットをバイパスする接続とデータフローを設定して、機密データのセキュリティとネットワーク分離を強化できます。 プライベートリンクのサポートは、次のソースで利用できます。 <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>。詳しくは、（API での [ プライベートリンクの作成および ](../../sources/tutorials/api/private-link.md)UI での [ プライベートリンクの作成に関するガイドを参照し ](../../sources/tutorials/ui/private-link.md) ください。 |
 
 詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->
