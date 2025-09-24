@@ -3,9 +3,9 @@ title: データランディングゾーンの宛先
 description: データランディングゾーンに接続してオーディエンスをアクティブ化し、データセットを書き出す方法を説明します。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4eef1804d6974fd54f5e74e0efe62257190f408b
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '2019'
 ht-degree: 32%
 
 ---
@@ -27,10 +27,10 @@ Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロ
 
 ![ データランディングゾーン宛先の実装がクラウドのサポートに基づいてどのように異なるかを示す図。](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png " クラウドサポートによるデータランディングゾーンの宛先実装 "){zoomable="yes"}
 
-## API または UI を介して [!UICONTROL &#x200B; データランディングゾーン &#x200B;] ストレージに接続 {#connect-api-or-ui}
+## API または UI を介して [!UICONTROL  データランディングゾーン ] ストレージに接続 {#connect-api-or-ui}
 
-* Experience Platform ユーザーインターフェイスを使用して [!UICONTROL &#x200B; データランディングゾーン &#x200B;] ストレージの場所に接続するには、以下の [ 宛先への接続 ](#connect) および [ この宛先に対するオーディエンスのアクティブ化 ](#activate) の節を参照してください。
-* [!UICONTROL &#x200B; データランディングゾーン &#x200B;] ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用したファイルベースの宛先に対するオーディエンスのアクティブ化 ](../../api/activate-segments-file-based-destinations.md) を参照してください。
+* Experience Platform ユーザーインターフェイスを使用して [!UICONTROL  データランディングゾーン ] ストレージの場所に接続するには、以下の [ 宛先への接続 ](#connect) および [ この宛先に対するオーディエンスのアクティブ化 ](#activate) の節を参照してください。
+* [!UICONTROL  データランディングゾーン ] ストレージの場所にプログラムで接続するには、[Flow Service API チュートリアルを使用したファイルベースの宛先に対するオーディエンスのアクティブ化 ](../../api/activate-segments-file-based-destinations.md) を参照してください。
 
 ## サポートされるオーディエンス {#supported-audiences}
 
@@ -54,7 +54,7 @@ Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロ
 
 {style="table-layout:auto"}
 
-## データセットを書き出し {#export-datasets}
+## データセットの書き出し {#export-datasets}
 
 この宛先では、データセットの書き出しをサポートしています。 データセットの書き出しを設定する方法について詳しくは、次のチュートリアルを参照してください。
 
@@ -71,7 +71,7 @@ Experience Platformでは、[!DNL Data Landing Zone] コンテナにアップロ
 
 >[!AVAILABILITY]
 >
->この節の内容は、Microsoft Azure 上で動作するExperience Platformの実装に適用されます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud) を参照してください。
+>この節の内容は、Microsoft Azure 上で動作するExperience Platformの実装に適用されます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
 
 [!DNL Azure Storage Explorer] またはコマンドラインインターフェイスを通じて、コンテナに対してファイルの読み取りと書き込みを行うことができます。
 
@@ -148,7 +148,7 @@ curl -X GET \
 
 ### 資格情報 [!DNL Data Landing Zone] 更新 {#update-dlz-credentials}
 
-必要に応じて、資格情報を更新することもできます。 [!DNL Connectors] API の `/credentials` エンドポイントに対して POST リクエストを実行することで、`SASToken` を更新できます。
+必要に応じて、資格情報を更新することもできます。 `SASToken` API の `/credentials` エンドポイントに対して POST リクエストを実行することで、[!DNL Connectors] を更新できます。
 
 **API 形式**
 
@@ -192,7 +192,7 @@ curl -X POST \
 
 >[!ENDSHADEBOX]
 
-上記の API 呼び出しで返され [!DNL Data Landing Zone] 表示名（`containerName`）と SAS URL を入力し、「**次へ**」を選択します。
+上記の API 呼び出しで返され `containerName` 表示名（[!DNL Data Landing Zone]）と SAS URL を入力し、「**次へ**」を選択します。
 
 ![Azure UI でハイライト表示されている接続情報を入力 ](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/ja/docs/experience-platform/landing/multi-cloud) を参照してください。
+>この節の内容は、Amazon Web Services（AWS）上で動作するExperience Platformの実装に適用されます。 AWS上で動作するExperience Platformは、現在、限られた数のお客様が利用できます。 サポートされるExperience Platform インフラストラクチャについて詳しくは、[Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud) を参照してください。
 
 以下の操作を実行して、AWSでプロビジョニングされた [!DNL Data Landing Zone] インスタンスに対する資格情報を取得します。 次に、任意のクライアントを使用して [!DNL Data Landing Zone] インスタンスに接続します。
 
@@ -280,18 +280,20 @@ curl --request GET \
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ja)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つの節でリストされているフィールドに入力します。
 
 ### 宛先に対する認証 {#authenticate}
 
-「[ 前提条件 ](#prerequisites)」セクションの説明に従って、[!DNL Data Landing Zone] コンテナが [!DNL Azure Storage Explorer] に接続されていることを確認します。 [!DNL Data Landing Zone] は、Adobeでプロビジョニングされたストレージであるため、Experience Platform UI で宛先への認証のためにそれ以上手順を実行する必要はありません。
+「[!DNL Data Landing Zone] 前提条件 [!DNL Azure Storage Explorer]」セクションの説明に従って、[ コンテナが ](#prerequisites) に接続されていることを確認します。 [!DNL Data Landing Zone] は、Adobeでプロビジョニングされたストレージであるため、Experience Platform UI で宛先への認証のためにそれ以上手順を実行する必要はありません。
 
 ### 宛先の詳細を入力 {#destination-details}
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
+* **[!UICONTROL 暗号化キー]**：必要に応じて、RSA 形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。正しい形式の暗号化キーの例については、以下の画像を参照してください。
+  ![UI での正しい形式の PGP キーの例を示す画像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 * **[!UICONTROL 名前]**：この宛先に希望する名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL フォルダーパス]**：書き出したファイルをホストする宛先フォルダーへのパス。
@@ -314,8 +316,8 @@ curl --request GET \
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先に対してオーディエンスをアクティブ化する手順については、[ プロファイル書き出しのバッチ宛先に対するオーディエンスデータのアクティブ化 ](../../ui/activate-batch-profile-destinations.md) を参照してください。
 
