@@ -1,14 +1,11 @@
 ---
 title: UI でのソースのプライベートリンクのサポート
 description: Experience Platform UI でソースに Azure プライベートリンクを使用する方法を説明します。
-badge: ベータ版
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 1%
+source-wordcount: '814'
+ht-degree: 0%
 
 ---
 
@@ -16,16 +13,29 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->この機能はベータ版で、現在、次のソースでのみサポートされています。
+>この機能は、次のソースでサポートされています。
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>プライベートリンクサポートは、現在、Adobe Healthcare Shield またはAdobe Privacy &amp; Security Shield を購入した組織でのみ利用できます。
 
 プライベートリンク機能を使用して、Adobe Experience Platform ソースの接続先となるプライベートエンドポイントを作成できます。 プライベート IP アドレスを使用してソースを仮想ネットワークに安全に接続し、パブリック IP を不要にし、攻撃対象領域を削減します。 複雑なファイアウォールやネットワークアドレス翻訳設定の必要性を排除し、データトラフィックが承認済みのサービスにのみ到達するようにすることで、ネットワーク設定を簡素化します。
 
 Experience Platform UI のソースワークスペースを使用してプライベートエンドポイントを作成し、使用する方法については、このガイドを参照してください。
+
+>[!BEGINSHADEBOX]
+
+## プライベートリンクサポートのライセンス使用権限
+
+ソースでのプライベートリンクサポートに関するライセンス使用権限の指標は次のとおりです。
+
+* お客様は、すべてのサンドボックスと組織にわたって、サポートされているソース（[!DNL Azure Blob Storage]、[!DNL ADLS Gen2]、[!DNL Azure File Storage]）を通じたデータ転送を年間で最大 2 TB まで利用できます。
+* 各組織には、すべての実稼動サンドボックスに対して最大 10 個のエンドポイントを設定できます。
+* 各組織には、すべての開発用サンドボックスに対して最大 1 つのエンドポイントを設定できます。
+
+>[!ENDSHADEBOX]
 
 ## プライベートエンドポイントの作成
 
@@ -45,7 +55,6 @@ Experience Platform UI のソースワークスペースを使用してプライ
 | `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [ からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
 | `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [ に関する ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
 | `resourceGroup` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [ に関する  [!DNL Azure]  ガイド ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
-| `fqdns` | ソースの完全修飾ドメイン名。 **メモ**：このプロパティは、[!DNL Snowflake] ソースを使用する場合にのみ必要です。 |
 
 {style="table-layout:auto"}
 
@@ -67,17 +76,17 @@ Experience Platform UI のソースワークスペースを使用してプライ
 
 >[!NOTE]
 >
->「[!UICONTROL &#x200B; プライベートエンドポイント &#x200B;]」オプションが有効な場合、Experience Platformは選択したソースに承認済みのプライベートエンドポイントが存在するかどうかを確認します。 承認済みエンドポイントが見つからない場合は、接続を確立できません。
+>「[!UICONTROL  プライベートエンドポイント ]」オプションが有効な場合、Experience Platformは選択したソースに承認済みのプライベートエンドポイントが存在するかどうかを確認します。 承認済みエンドポイントが見つからない場合は、接続を確立できません。
 
 ![ プライベートエンドポイントを有効にした新しいアカウント認証手順。](../../images/tutorials/private-links/new-account.png)
 
-次に、ソースの [!UICONTROL &#x200B; 既存のアカウント &#x200B;] インターフェイスに移動します。 このインターフェイスを使用して、既存のアカウントと対応するステータスのリストを表示します。 フィルターアイコン ![ フィルターアイコン ](../../../images/icons/filter.png) を選択すると、プライベートエンドポイントとの接続が有効になっているアカウントのみを表示できます。
+次に、ソースの [!UICONTROL  既存のアカウント ] インターフェイスに移動します。 このインターフェイスを使用して、既存のアカウントと対応するステータスのリストを表示します。 フィルターアイコン ![ フィルターアイコン ](../../../images/icons/filter.png) を選択すると、プライベートエンドポイントとの接続が有効になっているアカウントのみを表示できます。
 
 ![ ソースワークフローの既存のアカウントインターフェイスには、プライベートエンドポイント接続が有効になっているフィルター済みアカウントのみが表示されます。](../../images/tutorials/private-links/existing-private-endpoints.png)
 
-使用するアカウントを選択し、「**[!UICONTROL インタラクティブオーサリング]** を有効にします。 この切替スイッチは、接続のテスト、フォルダーリストの参照、データのプレビューを可能にする [!UICONTROL &#x200B; 機能である &#x200B;] インタラクティブオーサリング [!DNL Azure] をアクティブにします。 プライベートエンドポイント接続には、[!UICONTROL &#x200B; インタラクティブオーサリング &#x200B;] を有効にする必要があります。 この切り替えは 60 分後に自動的に無効になるので、手動ではオフにできないことに注意してください。
+使用するアカウントを選択し、「**[!UICONTROL インタラクティブオーサリング]** を有効にします。 この切替スイッチは、接続のテスト、フォルダーリストの参照、データのプレビューを可能にする [!UICONTROL  機能である ] インタラクティブオーサリング [!DNL Azure] をアクティブにします。 プライベートエンドポイント接続には、[!UICONTROL  インタラクティブオーサリング ] を有効にする必要があります。 この切り替えは 60 分後に自動的に無効になるので、手動ではオフにできないことに注意してください。
 
-[!UICONTROL &#x200B; インタラクティブオーサリング &#x200B;] を有効にするには数分かかります。 設定を有効にしたら、「**[!UICONTROL 次へ]**」を選択して次の手順に進み、取り込むデータを選択します。
+[!UICONTROL  インタラクティブオーサリング ] を有効にするには数分かかります。 設定を有効にしたら、「**[!UICONTROL 次へ]**」を選択して次の手順に進み、取り込むデータを選択します。
 
 ![ 既存のアカウントが選択され、インタラクティブオーサリングが有効になっている。](../../images/tutorials/private-links/interactive-authoring.png)
 

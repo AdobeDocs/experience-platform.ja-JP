@@ -1,13 +1,10 @@
 ---
 title: API でのソースのプライベートリンクのサポート
 description: Adobe Experience Platform ソースのプライベートリンクを作成および使用する方法について説明します
-badge: ベータ版
-hide: true
-hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1515'
 ht-degree: 7%
 
 ---
@@ -16,23 +13,36 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->この機能は限定提供（LA）で、現在、次のソースでのみサポートされています。
+>この機能は、次のソースでサポートされています。
 >
->* [[!DNL Azure Blob]](../../connectors/cloud-storage/blob.md)
->* [[!DNL Azure Data Lake Gen2]](../../connectors/cloud-storage/adls-gen2.md)
+>* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
+>* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>プライベートリンクサポートは、現在、Adobe Healthcare Shield またはAdobe Privacy &amp; Security Shield を購入した組織でのみ利用できます。
 
 プライベートリンク機能を使用して、Adobe Experience Platform ソースの接続先となるプライベートエンドポイントを作成できます。 プライベート IP アドレスを使用してソースを仮想ネットワークに安全に接続し、パブリック IP を不要にし、攻撃対象領域を削減します。 複雑なファイアウォールやネットワークアドレス翻訳設定の必要性を排除し、データトラフィックが承認済みのサービスにのみ到達するようにすることで、ネットワーク設定を簡素化します。
 
 このガイドでは、API を使用してプライベートエンドポイントを作成および使用する方法について説明します。
 
+>[!BEGINSHADEBOX]
+
+## プライベートリンクサポートのライセンス使用権限
+
+ソースでのプライベートリンクサポートに関するライセンス使用権限の指標は次のとおりです。
+
+* お客様は、すべてのサンドボックスと組織にわたって、サポートされているソース（[!DNL Azure Blob Storage]、[!DNL ADLS Gen2]、[!DNL Azure File Storage]）を通じたデータ転送を年間で最大 2 TB まで利用できます。
+* 各組織には、すべての実稼動サンドボックスに対して最大 10 個のエンドポイントを設定できます。
+* 各組織には、すべての開発用サンドボックスに対して最大 1 つのエンドポイントを設定できます。
+
+>[!ENDSHADEBOX]
+
 ## 基本を学ぶ
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、[!DNL Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [ サンドボックス ](../../../sandboxes/home.md):Experience Platformには、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
+* [ ソース ](../../home.md):Experience Platformを使用すると、データを様々なソースから取得しながら、Experience Platform サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
+* [ サンドボックス ](../../../sandboxes/home.md): Experience Platformには、1 つのExperience Platform インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
 ### Platform API の使用
 
@@ -67,7 +77,6 @@ curl -X POST \
       "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
       "resourceGroupName": "acme-sources-experience-platform",
       "resourceName": "acmeexperienceplatform",
-      "fqdns": [],
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
@@ -81,7 +90,6 @@ curl -X POST \
 | `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [ からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
 | `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [ に関する ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
 | `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [ に関する  [!DNL Azure]  ガイド ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
-| `fqdns` | ソースの完全修飾ドメイン名。 このプロパティは、[!DNL Snowflake] ソースを使用する場合にのみ必要です。 |
 | `connectionSpec.id` | 使用しているソースの接続仕様 ID。 |
 | `connectionSpec.version` | 使用している接続仕様 ID のバージョン。 |
 
@@ -100,7 +108,6 @@ curl -X POST \
   "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
   "resourceGroupName": "acme-sources-experience-platform",
   "resourceName": "acmeexperienceplatform",
-  "fqdns": [],
   "connectionSpec": {
       "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
       "version": "1.0"
@@ -116,7 +123,6 @@ curl -X POST \
 | `subscriptionId` | [!DNL Azure] サブスクリプションに関連付けられた ID。 詳しくは、[!DNL Azure] のガイド [ からサブスクリプションとテナント ID を取得する  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) を参照してください。 |
 | `resourceGroupName` | [!DNL Azure] のリソースグループの名前。 リソースグループには、[!DNL Azure] ソリューションに関連するリソースが含まれています。 詳しくは、[!DNL Azure] リソースグループの管理 [ に関する ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) ガイドを参照してください。 |
 | `resourceName` | リソースの名前。 [!DNL Azure] えば、リソースとは、仮想マシン、Web アプリ、データベースなどのインスタンスを指します。 詳しくは、[!DNL Azure] リソースマネージャーについて [ に関する  [!DNL Azure]  ガイド ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) 参照してください。 |
-| `fqdns` | ソースの完全修飾ドメイン名。 このプロパティは、[!DNL Snowflake] ソースを使用する場合にのみ必要です。 |
 | `connectionSpec.id` | 使用しているソースの接続仕様 ID。 |
 | `connectionSpec.version` | 使用している接続仕様 ID のバージョン。 |
 | `state` | プライベートエンドポイントの現在の状態。 有効な状態は次のとおりです。 <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
@@ -543,7 +549,7 @@ POST /connections/
 
 **リクエスト**
 
-次のリクエストは、プライベートエンドポイントも使用して、[!DNL Snowflake] 用の認証済みベース接続を作成します。
+次のリクエストは、プライベートエンドポイントも使用して、[!DNL Azure Blob Storage] 用の認証済みベース接続を作成します。
 
 +++選択してリクエストの例を表示
 
@@ -556,8 +562,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection",
-      "description": "A base connection for a Snowflake source that uses a private link.",
+      "name": "Azure Blob Storage base connection",
+      "description": "A base connection for a Azure Blob Storage source that uses a private link.",
       "auth": {
           "specName": "ConnectionString",
           "params": {
@@ -566,7 +572,7 @@ curl -X POST \
           }
       },
       "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
       }
   }'
@@ -577,10 +583,10 @@ curl -X POST \
 | `name` | ベース接続の名前。 |
 | `description` | （オプション）接続に関する追加情報を提供する説明。 |
 | `auth.specName` | ソースをExperience Platformに接続するために使用される認証。 |
-| `auth.params.connectionString` | [!DNL Snowflake] 接続文字列。 詳しくは、[[!DNL Snowflake] API 認証ガイド ](../api/create/databases/snowflake.md) を参照してください。 |
+| `auth.params.connectionString` | [!DNL Azure Blob Storage] 接続文字列。 詳しくは、[[!DNL Azure Blob Storage] API 認証ガイド ](../api/create/cloud-storage/blob.md) を参照してください。 |
 | `auth.params.usePrivateLink` | プライベートエンドポイントを使用しているかどうかを判断するブール値。 プライベートエンドポイントを使用している場合、この値を `true` に設定します。 |
-| `connectionSpec.id` | [!DNL Snowflake] の接続仕様 ID |
-| `connectionSpec.version` | [!DNL Snowflake] 接続仕様 ID のバージョン。 |
+| `connectionSpec.id` | [!DNL Azure Blob Storage] の接続仕様 ID |
+| `connectionSpec.version` | [!DNL Azure Blob Storage] 接続仕様 ID のバージョン。 |
 
 +++
 
@@ -830,24 +836,32 @@ curl -X GET \
 
 API のプライベートリンクを使用する方法について [!DNL Azure]、この節を参照してください。
 
-### プライベートリンクに接続するための [!DNL Snowflake] アカウントの設定
+### [!DNL Azure Blob] および [!DNL Azure Data Lake Gen2] のプライベートエンドポイントを承認
 
-プライベートリンクで [!DNL Snowflake] ソースを使用するには、次の前提条件の手順を完了する必要があります。
+[!DNL Azure Blob] および [!DNL Azure Data Lake Gen2] ソースに対するプライベートエンドポイントリクエストを承認するには、[!DNL Azure Portal] にログインします。 左側のナビゲーションで「**[!DNL Data storage]**」を選択し、「**[!DNL Security + networking]**」タブに移動して「**[!DNL Networking]**」を選択します。 次に、「**[!DNL Private endpoints]**」を選択して、お使いのアカウントに関連付けられているプライベートエンドポイントとその現在の接続状態のリストを表示します。 保留中のリクエストを承認するには、目的のエンドポイントを選択し、「**[!DNL Approve]**」をクリックします。
 
-まず、[!DNL Snowflake] でサポートチケットを発行し、**アカウントの** の地域の [!DNL Azure] エンドポイントサービスリソース ID[!DNL Snowflake] をリクエストする必要があります。 [!DNL Snowflake] チケットを発行するには、次の手順に従います。
+![ 保留中のプライベートエンドポイントのリストを含む Azure Portal。](../../images/tutorials/private-links/azure.png)
 
-1. [[!DNL Snowflake] UI](https://app.snowflake.com) に移動し、メールアカウントを使用してログインします。 この手順では、プロファイル設定でメールが検証されていることを確認する必要があります。
-2. **ユーザーメニュー** を選択し、**サポート** を選択してサポートにアクセス [!DNL Snowflake] ます。
-3. サポートケースを作成するには、「**[!DNL + Support Case]**」を選択します。 次に、関連する詳細をフォームに入力し、必要なファイルを添付します。
-4. 終了したら、ケースを送信します。
+<!--
 
-エンドポイントリソース ID の形式は次のとおりです。
+### Configure your [!DNL Snowflake] account to connect to private links
+
+You must complete the following prerequisite steps in order to use the [!DNL Snowflake] source with private links.
+
+First, you must raise a support ticket in [!DNL Snowflake] and request for the **endpoint service resource ID** of the [!DNL Azure] region of your [!DNL Snowflake] account. Follow the steps below to raise a [!DNL Snowflake] ticket:
+
+1. Navigate to the [[!DNL Snowflake] UI](https://app.snowflake.com) and sign in with your email account. During this step, you must ensure that your email is verified in profile settings.
+2. Select your **user menu** and then select **support** to access [!DNL Snowflake] support.
+3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
+4. When finished, submit the case.
+
+The endpoint resource ID is formatted as follows:
 
 ```shell
 subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
 ```
 
-+++を選択して例を表示
++++Select to view example
 
 ```shell
 /subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
@@ -855,14 +869,14 @@ subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/
 
 +++
 
-| パラメーター | 説明 | 例 |
+| Parameter | Description | Example |
 | --- | --- | --- |
-| `{SUBSCRIPTION_ID}` | [!DNL Azure] サブスクリプションを識別する一意の ID。 | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
-| `{REGION}` | [!DNL Azure] アカウントの [!DNL Snowflake] 地域。 | `azwestus2` |
+| `{SUBSCRIPTION_ID}` | The unique ID that identifies your [!DNL Azure] subscription. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | The [!DNL Azure] region of your [!DNL Snowflake] account. | `azwestus2` |
 
-### プライベートリンク設定の詳細の取得
+### Retrieve your private link configuration details
 
-プライベートリンク設定の詳細を取得するには、[!DNL Snowflake] で次のコマンドを実行する必要があります。
+To retrieve your private link configuration details, you must run the following command in [!DNL Snowflake]:
 
 ```sql
 USE ROLE accountadmin;
@@ -870,21 +884,21 @@ SELECT key, value::varchar
 FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
 ```
 
-次に、以下のプロパティの値を取得します。
+Next, retrieve values for the following properties:
 
 * `privatelink-account-url`
 * `regionless-privatelink-account-url`
 * `privatelink_ocsp-url`
 
-値を取得したら、次の呼び出しを実行して、[!DNL Snowflake] のプライベートリンクを作成できます。
+Once you have retrieved the values, you can make the following call to create a private link for [!DNL Snowflake].
 
-**リクエスト**
+**Request**
 
-次のリクエストは、[!DNL Snowflake] のプライベートエンドポイントを作成します。
+The following request creates a private endpoint for [!DNL Snowflake]:
 
 >[!BEGINTABS]
 
->[!TAB テンプレート]
+>[!TAB Template]
 
 ```shell
 curl -X POST \
@@ -911,7 +925,7 @@ curl -X POST \
   }'
 ```
 
->[!TAB 例]
+>[!TAB Example]
 
 ```shell
 curl -X POST \
@@ -938,11 +952,6 @@ curl -X POST \
   }'
 ```
 
-
 >[!ENDTABS]
 
-### [!DNL Azure Blob] および [!DNL Azure Data Lake Gen2] のプライベートエンドポイントを承認
-
-[!DNL Azure Blob] および [!DNL Azure Data Lake Gen2] ソースに対するプライベートエンドポイントリクエストを承認するには、[!DNL Azure Portal] にログインします。 左側のナビゲーションで「**[!DNL Data storage]**」を選択し、「**[!DNL Security + networking]**」タブに移動して「**[!DNL Networking]**」を選択します。 次に、「**[!DNL Private endpoints]**」を選択して、お使いのアカウントに関連付けられているプライベートエンドポイントとその現在の接続状態のリストを表示します。 保留中のリクエストを承認するには、目的のエンドポイントを選択し、「**[!DNL Approve]**」をクリックします。
-
-![ 保留中のプライベートエンドポイントのリストを含む Azure Portal。](../../images/tutorials/private-links/azure.png)
+-->
