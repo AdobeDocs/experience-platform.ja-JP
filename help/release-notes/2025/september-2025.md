@@ -1,7 +1,6 @@
 ---
-title: Adobe Experience Platform リリースノート 2025年8月
-description: Adobe Experience Platform の 2025年8月のリリースノート。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform リリースノート 2025年9月
+description: Adobe Experience Platform の 2025年9月のリリースノート。
 source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
 workflow-type: tm+mt
 source-wordcount: '1402'
@@ -92,6 +91,7 @@ XDM は、Experience Platformに取り込むデータの共通の構造と定義
 | モデルベースのスキーマ | モデルベースのスキーマを使用して、データモデリングを簡略化できます。 包括的なハウツー例やガイダンスを使用して、スキーマをより簡単に作成できるようになりました。 この機能は、現在、Campaign Orchestration のライセンスホルダーが使用でき、GA の Data Distillerのお客様にも拡大される予定で、データモデリングがよりアクセスしやすく効率的になります。 この機能には、時系列データと変更データのキャプチャ機能のサポートが含まれています。 |
 
 詳しくは、[XDM の概要 ](../../xdm/home.md) を参照してください。
+
 <!--
 
 | Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
