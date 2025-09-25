@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能リリースノート
 description: Adobe Experience Platform Web SDK タグ拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '2947'
-ht-degree: 65%
+source-wordcount: '2970'
+ht-degree: 64%
 
 ---
 
@@ -13,6 +13,13 @@ ht-degree: 65%
 # Web SDK 拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Web SDK タグ拡張機能のリリースノートについて説明します。SDK自体の最新のリリースノートについては、[Experience Platform Web SDK リリースノート ](/help/web-sdk/release-notes.md) を参照してください。
+
+## バージョン 2.33.0 - 2025年9月24日（PT）
+
+**新機能**
+
+- プッシュ通知の表示がサポートされるようになりました
+- Adobe Experience Platform Web SDKの [ バージョン 2.30.0](../../../../web-sdk/release-notes.md#2-30-0) が含まれます。
 
 ## バージョン 2.32.0 - 2025年9月4日（PT）
 
@@ -161,7 +168,7 @@ Adobe Experience Platform Web SDK のバージョン 2.20.0 が含まれます�
 **修正点および改善点**
 
 - [ 変数を更新 ](action-types.md#update-variable) アクションでデータ要素を検索する際に発生していたエラーを修正しました。
-- [!UICONTROL &#x200B; アクションで使用することが推奨されるイベントタイプから &#x200B;] メディア `sendEvent` イベントタイプを削除しました。
+- [!UICONTROL  アクションで使用することが推奨されるイベントタイプから ] メディア `sendEvent` イベントタイプを削除しました。
 
 ## バージョン 2.22.0 - 2024年5月3日（PT）
 
@@ -219,7 +226,7 @@ Adobe Experience Platform Web SDK のバージョン 2.19.1 が含まれます�
 
 **新機能**
 
-- [&#128279;](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書きのサポートを追加しました。
+- ](../../../../datastreams/overrides.md)データストリーム ID のコマンドごとの上書き[のサポートを追加しました。
 
 **修正点および改善点**
 

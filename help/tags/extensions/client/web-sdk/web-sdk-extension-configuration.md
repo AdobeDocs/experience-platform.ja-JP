@@ -2,9 +2,9 @@
 title: Web SDK タグ拡張機能の設定
 description: タグ UI でExperience Platform Web SDK タグ拡張機能を設定する方法について説明します。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3107'
 ht-degree: 3%
 
 ---
@@ -42,14 +42,14 @@ Web SDK ライブラリには、パーソナライゼーション、ID、リン�
 >[!IMPORTANT]
 >
 >Web SDK コンポーネントを無効にすると、既存の実装が壊れる可能性があります。 コンポーネントを無効にするたびに、実装を徹底的にテストして、必要なすべての機能が期待どおりに動作していることを確認します。
->&#x200B;>コンポーネントを無効にすると、そのコンポーネントの設定を編集できなくなります。
+>>コンポーネントを無効にすると、そのコンポーネントの設定を編集できなくなります。
 
 Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成するには、次の手順に従います。
 
 1. タグ拡張機能の設定ページで、「**[!UICONTROL カスタムビルドコンポーネント]**」セクションを展開します。
 1. 必要に応じて、コンポーネントを有効または無効にします。 次のコンポーネントから選択できます。
    * **[!UICONTROL アクティビティコレクター]**：このコンポーネントを使用すると、リンクの自動収集と Activity Map のトラッキングを行えます。
-   * **[!UICONTROL Advertising]**：このコンポーネントには、Adobe Advertisingに必要なすべてのJavaScript コードが含まれています。 また、アトリビューション測定への広告データの使用方法を定義するために、[!UICONTROL SDK インスタンス &#x200B;] セクションの [!UICONTROL 0&rbrace;Adobe Advertising&rbrace; 設定とタグルールの &#x200B;]Advertising[!UICONTROL &#x200B; 設定も追加されます。]
+   * **[!UICONTROL Advertising]**：このコンポーネントには、Adobe Advertisingに必要なすべてのJavaScript コードが含まれています。 また、アトリビューション測定への広告データの使用方法を定義するために、[!UICONTROL SDK インスタンス ] セクションの [!UICONTROL 0}Adobe Advertising} 設定とタグルールの ]Advertising[!UICONTROL  設定も追加されます。]
    * **[!UICONTROL オーディエンス]**：このコンポーネントを使用すると、URL や cookie ベースの宛先などのAudience Manager統合や、ID の同期を有効にできます。
    * **[!UICONTROL 同意]**：このコンポーネントは、同意統合を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
       * [ 同意を設定 ](action-types.md#set-consent) アクションタイプ
@@ -60,7 +60,8 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
    * **[!UICONTROL Media Analytics ブリッジ]**：このコンポーネントは、Media Analytics インターフェイスを使用してEdge Network Streaming Media を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
       * [Media Analytics トラッカーを取得 ](action-types.md#get-media-analytics-tracker) アクションタイプ
    * **[!UICONTROL Personalization]**：このコンポーネントは、Adobe TargetとAdobe Journey Optimizerの統合を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
-      * [ 提案を適用アクション ](action-types.md) タイプ
+      * [ 提案の適用 ](action-types.md#apply-propositions) アクションタイプ
+   * **[!UICONTROL プッシュ通知]**：このコンポーネントは、Adobe Journey Optimizerの web プッシュ通知を有効にします。
    * **[!UICONTROL ルールエンジン]**：このコンポーネントは、Adobe Journey Optimizer オンデバイス判定を有効にします。 このコンポーネントを無効にすると、次の要素が無効になります。
       * [ ルールセットを評価 ](action-types.md#evaluate-rulesets) アクションタイプ
       * [ ルールセット項目を登録 ](event-types.md#subscribe-ruleset-items) イベントタイプ
@@ -102,12 +103,12 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 
 ![ タグ UI の web SDK タグ拡張機能のプライバシー設定を示す画像 ](assets/web-sdk-ext-privacy.png)
 
-| [!UICONTROL &#x200B; デフォルトの同意レベル &#x200B;] | 説明 |
+| [!UICONTROL  デフォルトの同意レベル ] | 説明 |
 | --- | --- |
-| [!UICONTROL &#x200B; イン &#x200B;] | ユーザーが同意環境設定を指定する前に発生するイベントを収集します。 |
-| [!UICONTROL &#x200B; アウト &#x200B;] | ユーザーが同意環境設定を指定する前に発生するイベントを破棄します。 |
+| [!UICONTROL  イン ] | ユーザーが同意環境設定を指定する前に発生するイベントを収集します。 |
+| [!UICONTROL  アウト ] | ユーザーが同意環境設定を指定する前に発生するイベントを破棄します。 |
 | [!UICONTROL 保留中] | ユーザーが同意環境設定を指定する前に発生するイベントをキューに追加します。 同意の環境設定が指定されると、指定された環境設定に応じてイベントが収集または破棄されます。 |
-| [!UICONTROL &#x200B; データ要素によって提供 &#x200B;] | デフォルトの同意レベルは、定義した別のデータ要素によって決まります。 このオプションを使用する場合は、提供されたドロップダウンメニューを使用してデータ要素を指定する必要があります。 |
+| [!UICONTROL  データ要素によって提供 ] | デフォルトの同意レベルは、定義した別のデータ要素によって決まります。 このオプションを使用する場合は、提供されたドロップダウンメニューを使用してデータ要素を指定する必要があります。 |
 
 >[!TIP]
 >
@@ -123,10 +124,9 @@ Web SDK タグ拡張機能を使用してカスタム web SDK ビルドを作成
 * **[!UICONTROL サードパーティ cookie を使用]**：このオプションを有効にすると、Web SDKはユーザー ID をサードパーティ cookie に保存しようとします。 成功した場合、ユーザーは、各ドメインで個別のユーザーとして識別されるのではなく、複数のドメインを移動する際に単一のユーザーとして識別されます。 このオプションが有効になっている場合、ブラウザーがサードパーティ cookie をサポートしていない場合や、ユーザーによってサードパーティ cookie が許可されないように設定されている場合には、SDKでサードパーティ cookie にユーザー ID を格納できない可能性があります。 この場合、SDKはファーストパーティドメインにのみ ID を保存します。
 
   >[!IMPORTANT]
-  >&#x200B;>サードパーティ cookie は、Web SDKの [ ファーストパーティデバイス ID](../../../../web-sdk/identity/first-party-device-ids.md) 機能と互換性がありません。
-  >&#x200B;>ファーストパーティデバイス ID またはサードパーティ Cookie のいずれかを使用できますが、両方の機能を同時に使用することはできません。
+  >>サードパーティ cookie は、Web SDKの [ ファーストパーティデバイス ID](../../../../web-sdk/identity/first-party-device-ids.md) 機能と互換性がありません。
+  >>ファーストパーティデバイス ID またはサードパーティ Cookie のいずれかを使用できますが、両方の機能を同時に使用することはできません。
   >
-
 ## パーソナライゼーション設定の指定 {#personalization}
 
 このセクションでは、パーソナライズされたコンテンツの読み込み中にページの特定の部分を非表示にする方法を設定できます。 これにより、訪問者にはパーソナライズされたページのみが表示されます。
@@ -278,6 +278,6 @@ Web SDK コマンドを使用して上書きを渡す代わりに、以下に示
 
 ## 詳細設定を指定
 
-Edge Networkとのやり取りに使用するベースパスを変更する必要がある場合は **&#x200B;**&#x200B;Edge ベースパス &rbrace; フィールドを使用します。 ベータ版やアルファ版の場合は、Adobeからフィールドの変更を求められる場合があります。
+Edge Networkとのやり取りに使用するベースパスを変更する必要がある場合は **** Edge ベースパス } フィールドを使用します。 ベータ版やアルファ版の場合は、Adobeからフィールドの変更を求められる場合があります。
 
 ![Web SDK タグ拡張機能ページを使用した詳細設定を示す画像。](assets/advanced-settings.png)

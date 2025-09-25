@@ -1,9 +1,9 @@
 ---
 title: pushNotification
 description: Web SDKのプッシュ通知を設定して、ブラウザーベースのプッシュメッセージを有効にします。
-source-git-commit: 9c3f19cc2b32ab70869584b620f5a55d5b808751
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 >
 > Web SDKのプッシュ通知は現在 **ベータ版** です。 機能とドキュメントは変更される場合があります。
 
-`pushNotifications` プロパティを使用すると、web アプリケーションのプッシュ通知を設定できます。 この機能を使用すると、web サイトが現在ブラウザーに読み込まれていない場合やブラウザーが実行されていない場合でも、web アプリはサーバーからプッシュされたメッセージを受信できます。
+`pushNotifications` プロパティを使用すると、web アプリケーションのプッシュ通知を設定できます。 この機能を使用すると、web サイトが現在ブラウザーに読み込まれていない場合でも、web アプリはサーバーからプッシュされたメッセージを受信できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -24,6 +24,8 @@ ht-degree: 2%
 1. **ユーザー権限**：ユーザーは、通知の権限を明示的に付与する必要があります
 2. **サービスワーカー**：プッシュ通知が機能するには、登録済みのサービスワーカーが必要です
 3. **VAPID キー**：安全な通信のための VAPID （任意申請サーバー ID）キーを生成します
+4. **アプリケーション ID**:VAPID キーをAdobe Journey Optimizer内に保存する際に使用するアプリ ID。チャネル/プッシュ設定/プッシュ資格情報
+5. **トラッキングデータセット ID**:「AJO プッシュトラッキングエクスペリエンスイベントデータセット」という名前のシステムデータセットの ID。 これをAdobe Journey Optimizer/データセットから取得
 
 ## VAPID キーの生成 {#generate-vapid-keys}
 
@@ -36,6 +38,21 @@ web-push generate-vapid-keys
 
 これにより、公開鍵と秘密鍵のペアが生成されます。 Web SDK設定で公開鍵を使用し、その秘密鍵をAdobe Journey Optimizer プッシュ通知チャネル内に保存します。
 
+## サービスワーカーのJavaScriptのインストール
+
+サービスワーカーコードは、Web サイトと同じドメインから提供する必要があります。 Adobeの CDN からサービスワーカーコードをダウンロードし、独自のサーバーからJavaScript ファイルをホストします。 Web SDK サービスワーカーコードは、次の URL 構造を使用して使用できます。
+
+- **縮小**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.min.js`
+- **フル**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.js`
+
+サービスワーカーのインストール方法の例を次に示します。
+
+```html
+<script>
+  navigator.serviceWorker.register("/alloyServiceWorker.js", { scope: "/" });
+</script>
+```
+
 ## Web SDK タグ拡張機能を使用してプッシュ通知を設定します {#configure-push-notifications-tag-extension}
 
 プッシュ通知を有効にして設定するには、次の手順に従います。
@@ -43,10 +60,12 @@ web-push generate-vapid-keys
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、**[!UICONTROL Adobe Experience Platform Web SDK]** カードの [!UICONTROL &#x200B; 設定 &#x200B;] をクリックします。
-1. 「カスタムビルドコンポーネント **セクションの** プッシュ通知を有効にする」を選択します。
-1. 下にスクロールして、「プッシュ通知 [!UICONTROL &#x200B; セクションを見つけ &#x200B;] す。
+1. **[!UICONTROL 拡張機能]** に移動し、**[!UICONTROL Adobe Experience Platform Web SDK]** カードの [!UICONTROL  設定 ] をクリックします。
+1. 「**[!UICONTROL カスタムビルドコンポーネント]**」セクションで、**[!UICONTROL プッシュ通知]** を有効にします。
+1. 下にスクロールして、「プッシュ通知 [!UICONTROL  セクションを見つけ ] す。
 1. VAPID 公開鍵を「**[!UICONTROL VAPID 公開鍵]**」フィールドに入力します。
+1. 「**[!UICONTROL アプリケーション ID]**」フィールドにアプリケーション ID を入力します。
+1. 「**[!UICONTROL トラッキングデータセット ID]**」フィールドにトラッキングデータセット ID を入力します。
 1. 「**[!UICONTROL 保存]**」をクリックして、変更を公開します。
 
 >[!NOTE]
@@ -64,6 +83,8 @@ alloy("configure", {
   pushNotifications: {
     vapidPublicKey:
       "BEl62iUYgUivElbkzaBgNL3r3vOAhvJyFXjS6FjjRRojYD4NElJkLBJKZvS3xAAh4_gE3WnMaZNu_KGP4jAQlJz",
+    applicationId: "my-app-id",
+    trackingDatasetId: "4dc19305cdd27e03dd9a6bbe",
   },
 });
 ```
@@ -71,8 +92,10 @@ alloy("configure", {
 ## プロパティ {#properties}
 
 | プロパティ | タイプ | 必須 | 説明 |
-| ------ | ------ | -------- | ----- |
+|---------|----|---------|-----------|
 | `vapidPublicKey` | 文字列 | ○ | プッシュ購読に使用される VAPID 公開鍵。 Base64 でエンコードされた文字列である必要があります。 |
+| `applicationId` | 文字列 | ○ | この VAPID 公開鍵に関連付けられているアプリケーション ID。 |
+| `trackingDatasetId` | 文字列 | ○ | プッシュ通知トラッキングに使用されるシステムデータセット ID。 |
 
 ## 重要な考慮事項 {#important-considerations}
 
