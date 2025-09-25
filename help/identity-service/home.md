@@ -106,7 +106,7 @@ ID グラフは異なる ID 名前空間の関係を表すマップで、顧客 
 
 次のビデオは、ID と ID のグラフについての理解をサポートすることを目的としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422774?quality=12&learn=on&captions=jpn)
 
 ## Experience Platform インフラストラクチャ内での ID サービスの役割について
 
