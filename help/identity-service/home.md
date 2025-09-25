@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ID サービスの概要
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1574'
 ht-degree: 8%
 
 ---
@@ -74,6 +74,10 @@ ID サービスは、その使命を達成するために次の操作を提供�
 
 ## ID サービスによる ID のリンク方法
 
+>[!IMPORTANT]
+>
+>ID サービスでは大文字と小文字が区別されます。 例えば、**abc<span>@gmail.com** と **ABC<span>@GMAIL.COM** は、2 つの異なるメール ID として扱われます。
+
 ID 名前空間と ID 値が一致すると、2 つの ID 間のリンクが確立されます。
 
 一般的なログインイベント **2 つの ID を送信** のExperience Platformへの送信：
@@ -102,7 +106,7 @@ ID グラフは異なる ID 名前空間の関係を表すマップで、顧客 
 
 次のビデオは、ID と ID のグラフについての理解をサポートすることを目的としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3422774?quality=12&learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Experience Platform インフラストラクチャ内での ID サービスの役割について
 

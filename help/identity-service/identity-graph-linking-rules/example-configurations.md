@@ -2,7 +2,7 @@
 title: Id グラフリンクルール設定ガイド
 description: ID グラフリンクルールを使用して設定できる様々な実装タイプについて説明します。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
+source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 8%
@@ -61,7 +61,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| 表示名 | ID 記号 | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | ECID | ECID | COOKIE | | 2 |
@@ -133,6 +133,7 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 >[!NOTE]
 >
 >以下の実装を完了するには、の ID 記号（大文字と小文字を区別）を使用して次のカスタム名前空間を作成する必要があります。
+>
 >* `CRMID`
 >* `CChash` （これは、ハッシュ化されたクレジットカード番号を表すカスタム名前空間です。）
 
@@ -151,7 +152,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| 表示名 | ID 記号 | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CChash | CChash | CROSS_DEVICE | | 2 |
@@ -228,6 +229,7 @@ CRMID: Jill, CChash: undefined
 >[!NOTE]
 >
 >以下の実装を完了するには、の ID 記号（大文字と小文字を区別）を使用してカスタム名前空間を作成する必要があります。
+>
 >* `CRMID`
 >* `CRMIDhash`
 
@@ -237,7 +239,7 @@ CRMID: Jill, CChash: undefined
 
 グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| 表示名 | ID 記号 | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
 | --- | --- | --- | --- | --- | 
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
@@ -351,7 +353,7 @@ Email: jane@g, ECID: 111
 * プロファイルをハッシュ化されたメールをサポートする宛先（例：[!DNL Facebook]）にアクティブ化できるように、ハッシュ化されたメールアドレスに関連付けられているエンドユーザー。
 * サポート担当者がメールアドレスを使用してReal-Time CDP上でプロファイルを検索できるように、メールアドレスに関連付けられたエンドユーザー。
 
-| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| 表示名 | ID 記号 | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | 電子メール | 電子メール | 電子メール | ✔️ | 2 |
@@ -424,7 +426,7 @@ loginID: JohnBusiness, ECID: 222
 
 グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| 表示名 | ID 記号 | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | loginID | loginID | CROSS_DEVICE | | 2 |
@@ -477,6 +479,7 @@ loginID: JanePersonal, ECID: 222
 >[!NOTE]
 >
 >以下の実装を完了するには、の ID 記号（大文字と小文字を区別）を使用してカスタム名前空間を作成する必要があります。
+>
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
@@ -502,7 +505,7 @@ CRMID: John, ECID: 111
 
 グラフをシミュレートする前に、グラフシミュレーションインターフェイスで次の設定を行います。
 
-| 表示名 | ID シンボル | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
+| 表示名 | ID 記号 | ID タイプ | グラフごとに一意 | 名前空間の優先度 |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | loyaltyID | loyaltyID | CROSS_DEVICE | ✔️ | 2 |
