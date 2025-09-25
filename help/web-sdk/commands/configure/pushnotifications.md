@@ -60,9 +60,9 @@ web-push generate-vapid-keys
 1. Adobe IDの資格情報を使用して [experience.adobe.com](https://experience.adobe.com) にログインします。
 1. **[!UICONTROL データ収集]**/**[!UICONTROL タグ]** に移動します。
 1. 目的のタグプロパティを選択します。
-1. **[!UICONTROL 拡張機能]** に移動し、**[!UICONTROL Adobe Experience Platform Web SDK]** カードの [!UICONTROL  設定 ] をクリックします。
+1. **[!UICONTROL 拡張機能]** に移動し、**[!UICONTROL Adobe Experience Platform Web SDK]** カードの [!UICONTROL &#x200B; 設定 &#x200B;] をクリックします。
 1. 「**[!UICONTROL カスタムビルドコンポーネント]**」セクションで、**[!UICONTROL プッシュ通知]** を有効にします。
-1. 下にスクロールして、「プッシュ通知 [!UICONTROL  セクションを見つけ ] す。
+1. 下にスクロールして、「プッシュ通知 [!UICONTROL &#x200B; セクションを見つけ &#x200B;] す。
 1. VAPID 公開鍵を「**[!UICONTROL VAPID 公開鍵]**」フィールドに入力します。
 1. 「**[!UICONTROL アプリケーション ID]**」フィールドにアプリケーション ID を入力します。
 1. 「**[!UICONTROL トラッキングデータセット ID]**」フィールドにトラッキングデータセット ID を入力します。
