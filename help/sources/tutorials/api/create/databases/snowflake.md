@@ -3,20 +3,20 @@ title: Flow Service API を使用したSnowflakeとExperience Platformの接続
 description: Flow Service API を使用してAdobe Experience PlatformをSnowflakeに接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 15%
+source-wordcount: '880'
+ht-degree: 18%
 
 ---
 
-# [!DNL Flow Service] API を使用した [!DNL Snowflake] のExperience Platformへの接続
+# [!DNL Snowflake] API を使用した [!DNL Flow Service] のExperience Platformへの接続
 
 >[!IMPORTANT]
 >
 >Real-Time Customer Data Platform Ultimateを購入したユーザーは、ソースカタログで [!DNL Snowflake] ソースを利用できます。
 
-[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) を使用して [!DNL Snowflake] ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
+[!DNL Snowflake]API[[!DNL Flow Service]  を使用して ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) ソースアカウントをAdobe Experience Platformに接続する方法については、このガイドを参照してください。
 
 ## はじめに
 
@@ -29,54 +29,23 @@ ht-degree: 15%
 
 Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
 
-次の節では、[!DNL Flow Service] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Snowflake] す。
-
-## [!DNL Snowflake] を Azure 上のExperience Platformに接続 {#azure}
-
-[!DNL Snowflake] ソースを Azure 上のExperience Platformに接続する方法については、以下の手順を参照してください。
+次の節では、[!DNL Snowflake] API を使用してに正常に接続するために必要な追加情報を示し [!DNL Flow Service] す。
 
 ### 必要な資格情報の収集
+
+認証について詳しくは、[[!DNL Snowflake]  概要 ](../../../../connectors/databases/snowflake.md#prerequisites) を参照してください。
+
+## [!DNL Snowflake] を Azure 上のExperience Platformに接続 {#azure}
 
 >[!WARNING]
 >
 >[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
 
-[!DNL Snowflake] ソースを認証するには、次の資格情報プロパティの値を指定する必要があります。
-
->[!BEGINTABS]
-
->[!TAB  アカウントキー認証 ]
-
-| 資格情報 | 説明 |
-| ---------- | ----------- |
-| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[ アカウント識別子の取得 ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) に関するガイドを参  [!DNL Snowflake]  してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
-| `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
-| `database` | [!DNL Snowflake] データベースには、Experience Platformに取り込むデータが含まれています。 |
-| `username` | [!DNL Snowflake] アカウントのユーザー名。 |
-| `password` | [!DNL Snowflake] ユーザーアカウントのパスワード。 |
-| `role` | [!DNL Snowflake] セッションで使用する既定のアクセス制御ロールです。 役割は、指定したユーザーに既に割り当てられている既存の役割である必要があります。 デフォルトの役割は `PUBLIC` です。 |
-| `connectionString` | [!DNL Snowflake] インスタンスへの接続に使用する接続文字列。 [!DNL Snowflake] の接続文字列パターンは `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` です |
-
->[!TAB  キーペア認証 ]
-
-キーペア認証を使用するには、[!DNL Snowflake] ソースのアカウントを作成する際に、2048 ビットの RSA キーペアを生成してから、次の値を指定する必要があります。
-
-| 資格情報 | 説明 |
-| --- | --- |
-| `account` | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[ アカウント識別子の取得 ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) に関するガイドを参  [!DNL Snowflake]  してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
-| `username` | [!DNL Snowflake] アカウントのユーザー名。 |
-| `privateKey` | [!DNL Snowflake] アカウントの [!DNL Base64-] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵のいずれかを生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対して認証を行う際に、秘密鍵のパスフレーズも指定する必要があります。 詳しくは、[ 秘密鍵の取得 ](../../../../connectors/databases/snowflake.md) に関す  [!DNL Snowflake]  ガイドを参照してください。 |
-| `privateKeyPassphrase` | 秘密鍵のパスフレーズは、暗号化された秘密鍵を使用して認証を行う場合に使用する必要がある、追加のセキュリティレイヤーです。 暗号化されていない秘密鍵を使用している場合は、パスフレーズを指定する必要はありません。 |
-| `database` | Experience Platformに取り込むデータを含んだ [!DNL Snowflake] データベース。 |
-| `warehouse` | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
-
-これらの値について詳しくは、[[!DNL Snowflake]  キーペア認証ガイド ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) を参照してください。
-
->[!ENDTABS]
+[!DNL Snowflake] ソースを Azure 上のExperience Platformに接続する方法については、以下の手順を参照してください。
 
 >[!NOTE]
 >
->[!DNL Snowflake] データベースからExperience Platformにデータをアンロードできるようにするには、`PREVENT_UNLOAD_TO_INLINE_URL` フラグを `FALSE` に設定する必要があります。
+>`PREVENT_UNLOAD_TO_INLINE_URL` データベースからExperience Platformにデータをアンロードできるようにするには、`FALSE` フラグを [!DNL Snowflake] に設定する必要があります。
 
 ### Azure 上のExperience Platformに [!DNL Snowflake] のベース接続を作成する {#azure-base}
 
@@ -181,7 +150,7 @@ curl -X POST \
 | `auth.params.account` | [!DNL Snowflake] アカウントの名前。 |
 | `auth.params.username` | [!DNL Snowflake] アカウントに関連付けられたユーザー名。 |
 | `auth.params.database` | データの取得元となる [!DNL Snowflake] データベース。 |
-| `auth.params.privateKey` | [!DNL Snowflake] アカウントの [!DNL Base64-] エンコードされた暗号化された秘密鍵。 |
+| `auth.params.privateKey` | [!DNL Base64-] アカウントの [!DNL Snowflake] エンコードされた暗号化された秘密鍵。 |
 | `auth.params.privateKeyPassphrase` | 秘密鍵に対応するパスフレーズ。 |
 | `auth.params.warehouse` | 使用している [!DNL Snowflake] ウェアハウス。 |
 | `connectionSpec.id` | [!DNL Snowflake] 接続仕様 ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`。 |
@@ -190,7 +159,7 @@ curl -X POST \
 
 +++応答
 
-応答が成功すると、一意の接続識別子（`id`）を含む、新しく作成された接続が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
+リクエストが成功した場合は、一意の ID （`id`）を含む、新しく作成された接続の詳細が返されます。
 
 ```json
 {
@@ -214,8 +183,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection with encrypted private key",
-      "description": "Snowflake base connection with encrypted private key",
+      "name": "Snowflake base connection with unencrypted private key",
+      "description": "Snowflake base connection with unencrypted private key",
       "auth": {
         "specName": "KeyPair Authentication",
         "params": {
@@ -238,7 +207,7 @@ curl -X POST \
 | `auth.params.account` | [!DNL Snowflake] アカウントの名前。 |
 | `auth.params.username` | [!DNL Snowflake] アカウントに関連付けられたユーザー名。 |
 | `auth.params.database` | データの取得元となる [!DNL Snowflake] データベース。 |
-| `auth.params.privateKey` | [!DNL Snowflake] アカウントの [!DNL Base64-] エンコードされた暗号化されていない秘密鍵。 |
+| `auth.params.privateKey` | [!DNL Base64-] アカウントの [!DNL Snowflake] エンコードされた暗号化されていない秘密鍵。 |
 | `auth.params.warehouse` | 使用している [!DNL Snowflake] ウェアハウス。 |
 | `connectionSpec.id` | [!DNL Snowflake] 接続仕様 ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`。 |
 
@@ -246,7 +215,7 @@ curl -X POST \
 
 +++応答
 
-応答が成功すると、一意の接続識別子（`id`）を含む、新しく作成された接続が返されます。 この ID は、次のチュートリアルでデータを調べるために必要です。
+リクエストが成功した場合は、一意の ID （`id`）を含む、新しく作成された接続の詳細が返されます。
 
 ```json
 {
@@ -275,11 +244,13 @@ curl -X POST \
 POST /connections
 ```
 
-**リクエスト**
+>[!BEGINTABS]
 
-次のリクエストでは、AWS上のExperience Platformに日付を取り込む [!DNL Snowflake] のベース接続を作成しています。
+>[!TAB  基本認証 ]
 
-+++選択すると例が表示されます
+次のリクエストでは、AWS上のExperience Platformにデータを取り込 [!DNL Snowflake] ためのベース接続を作成しています。
+
++++リクエスト
 
 ```shell
 curl -X POST \
@@ -323,11 +294,9 @@ curl -X POST \
 
 +++
 
-**応答**
++++応答
 
-リクエストが成功した場合は、一意の ID（`id`）を含む、新しく作成した接続の詳細が返されます。この ID は、次のチュートリアルでストレージを調査するために必要になります。
-
-+++選択すると例が表示されます
+リクエストが成功した場合は、一意の ID （`id`）を含む、新しく作成された接続の詳細が返されます。
 
 ```json
 {
@@ -337,6 +306,65 @@ curl -X POST \
 ```
 
 +++
+
+>[!TAB  暗号化されていない秘密鍵を使用したキーペア認証 ]
+
++++リクエスト
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection with unencrypted private key",
+      "description": "Snowflake base connection with unencrypted private key",
+      "auth": {
+        "specName": "KeyPair Authentication",
+        "params": {
+            "account": "acme-snowflake123",
+            "username": "acme-cj123",
+            "database": "ACME_DB",
+            "privateKey": "{BASE_64_ENCODED_PRIVATE_KEY}",
+            "warehouse": "COMPUTE_WH"
+        }
+    },
+    "connectionSpec": {
+        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+        "version": "1.0"
+    }
+  }'
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `auth.params.account` | [!DNL Snowflake] アカウントの名前。 |
+| `auth.params.username` | [!DNL Snowflake] アカウントに関連付けられたユーザー名。 |
+| `auth.params.database` | データの取得元となる [!DNL Snowflake] データベース。 |
+| `auth.params.privateKey` | [!DNL Base64-] アカウントの [!DNL Snowflake] エンコードされた暗号化されていない秘密鍵。 |
+| `auth.params.warehouse` | 使用している [!DNL Snowflake] ウェアハウス。 |
+| `connectionSpec.id` | [!DNL Snowflake] 接続仕様 ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`。 |
+
++++
+
+
++++応答
+
+リクエストが成功した場合は、一意の ID （`id`）を含む、新しく作成された接続の詳細が返されます。
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700d77b-0000-0200-0000-5e3b41a10000\""
+}
+```
+
++++
+
+>[!ENDTABS]
 
 このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Snowflake] ベース接続を作成しました。このベース接続 ID は、次のチュートリアルで使用できます。
 
