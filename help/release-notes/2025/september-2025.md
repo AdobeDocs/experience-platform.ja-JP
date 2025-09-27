@@ -41,10 +41,10 @@ Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新�
 
 | 機能 | 説明 |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新しいアジェンティック層です。 Experience Platform Agent Orchestratorは、プラットフォームの豊富なデータとカスタマーナレッジを活用するように設計されており、専用のエキスパートであるAdobe Experience Platform Agents の背後にあるインテリジェンスと推論を強化し、複雑な意思決定や問題解決のタスクを人間の監督によって迅速かつ大規模に実行できるようにします。 AI アシスタントなどの会話型インターフェイスで自然言語を使用して質問したり、ヘルプをリクエストしたりすると、Agent Orchestratorは自動的に専門のエージェントを呼び出して、適切な回答を得ます。 Agent Orchestratorは、会話履歴を記憶しているので、コンテキストを繰り返すことなく自然に前の質問に基づいて構築でき、複数のエージェントからのインサイトを組み合わせて、明確で統一された回答を提供します。 詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。 |
+| Agent Orchestrator | Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新しいアジェンティック層です。 Experience Platform Agent Orchestratorは、プラットフォームの豊富なデータとカスタマーナレッジを活用するように設計されており、専用のエキスパートであるAdobe Experience Platform Agents の背後にあるインテリジェンスと推論を強化し、複雑な意思決定や問題解決のタスクを人間の監督によって迅速かつ大規模に実行できるようにします。 AI アシスタントなどの会話型インターフェイスで自然言語を使用して質問したり、ヘルプをリクエストしたりすると、Agent Orchestratorは自動的に専門のエージェントを呼び出して、適切な回答を得ます。 Agent Orchestratorは、会話履歴を記憶しているので、コンテキストを繰り返すことなく自然に前の質問に基づいて構築でき、複数のエージェントからのインサイトを組み合わせて、明確で統一された回答を提供します。 詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。 |
 | Audience Agent | Audience Agentを使用すると、オーディエンスサイズの大きな変化の検出、重複オーディエンスの検出、オーディエンスインベントリの調査、オーディエンスのサイズの取得など、オーディエンスに関するインサイトを表示できます。 詳しくは、[Audience Agent ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/audience) を参照してください。 |
 
-詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home) を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/home) を参照してください。
 
 ## アラート {#alerts}
 
