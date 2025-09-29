@@ -1,10 +1,8 @@
 ---
 title: UI でリレーをExperience Platformに接続
 description: Adobe Experience Platform UI を使用して、リレーコネクタのカスタムソース接続を作成する方法を説明します。
-hide: true
-hidefromtoc: true
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
-source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
+source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 2%
@@ -27,7 +25,7 @@ ht-degree: 2%
 
 ## [!DNL Relay Connector] ソースを接続
 
-Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL &#x200B; ソース &#x200B;] ワークスペースにアクセスします。 [!UICONTROL &#x200B; カタログ &#x200B;] 画面には、アカウントを作成できる様々なソースが表示されます。 画面の左側にあるカタログから適切なカテゴリを選択するか、検索オプションを使用して特定のソースを検索できます。
+Experience Platform UI の左側のナビゲーションバーで「**[!UICONTROL ソース]**」を選択し、「[!UICONTROL  ソース ] ワークスペースにアクセスします。 [!UICONTROL  カタログ ] 画面には、アカウントを作成できる様々なソースが表示されます。 画面の左側にあるカタログから適切なカテゴリを選択するか、検索オプションを使用して特定のソースを検索できます。
 
 *[!UICONTROL マーケティング自動化]* カテゴリで、[!DNL Relay Connector] ソースカードを選択し、**[!UICONTROL データを追加]** を選択します。
 
@@ -47,7 +45,7 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ![ データインターフェイスの選択 ](../../../../images/tutorials/create/relay-connector/upload-data.jpg)
 
-データがアップロードされたら、「[!UICONTROL &#x200B; サンプルデータをプレビュー &#x200B;]」セクションを使用してデータをプレビューできます。
+データがアップロードされたら、「[!UICONTROL  サンプルデータをプレビュー ]」セクションを使用してデータをプレビューできます。
 
 ![ アップロードされたデータ。](../../../../images/tutorials/create/relay-connector/uploaded-data.jpg)
 
@@ -83,5 +81,5 @@ Experience Platform UI の左側のナビゲーションバーで「**[!UICONTRO
 
 ## その他のリソース
 
-* [Flow Service API を使用して新しい接続仕様を作成する ](https://experienceleague.adobe.com/ja/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [UI を使用したソースへの接続 ](https://experienceleague.adobe.com/ja/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Flow Service API を使用して新しい接続仕様を作成する ](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [UI を使用したソースへの接続 ](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
