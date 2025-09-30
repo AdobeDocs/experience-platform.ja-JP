@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: Web SDK
 role: Developer
-source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
+source-git-commit: c697d0e924545caf430382385797bde340b57d94
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 50%
+source-wordcount: '241'
+ht-degree: 46%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 50%
    * [NPM パッケージを使用して web SDKをインストールします](install/npm.md)
    * [NPM パッケージを使用したカスタム web SDK ビルドの作成](install/create-custom-build.md)
 * コマンド {#commands}
-   * の設定{#configure}
+   * configure {#configure}
       * [概要](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
@@ -43,6 +43,7 @@ ht-degree: 50%
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
       * [prehidingStyle](commands/configure/prehidingstyle.md)
+      * [pushNotification](commands/configure/pushnotifications.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
@@ -63,6 +64,7 @@ ht-degree: 50%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [sendPushSubscription](commands/sendPushSubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [データストリームの上書きの設定](commands/datastream-overrides.md)
    * [コマンドの応答](commands/command-responses.md)
@@ -72,7 +74,7 @@ ht-degree: 50%
    * [ファーストパーティデバイス ID](identity/first-party-device-ids.md)
    * [モバイルから web、およびクロスドメインでの ID の共有](identity/id-sharing.md)
 
-* パーソナライゼーション {#personalization}
+* パーソナライズ機能 {#personalization}
    * [表示イベントの管理](personalization/display-events.md)
    * [パーソナライズされたコンテンツのレンダリング](personalization/rendering-personalization-content.md)
    * [ハイブリッド実装を使用したパーソナライゼーション](personalization/hybrid-personalization.md)
@@ -83,7 +85,7 @@ ht-degree: 50%
       * [レスポンストークンへのアクセス](personalization/adobe-target/accessing-response-tokens.md)
       * [mbox サードパーティ ID の使用](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [at.js ライブラリと Web SDK の比較](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Analytics for Target（A4T）ログ {#a4t}
+      * Analytics for Target （A4T）ログ {#a4t}
          * [概要](personalization/adobe-target/analytics-logging/overview.md)
          * [クライアントサイドログ](personalization/adobe-target/analytics-logging/client-side.md)
          * [サーバーサイドログ](personalization/adobe-target/analytics-logging/server-side.md)
