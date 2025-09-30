@@ -1,14 +1,14 @@
 ---
 title: Demandbase 接続
 description: この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 DemandBase の B2B Demand Side Platform（DSP）を使用して、ターゲットアカウント内の関連するペルソナやロールにアドバタイズします。 Target アカウントは、マーケティングや販売におけるその他のダウンストリームのユースケース向けに、Demandbase のサードパーティデータを使用して強化することもできます。
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
-badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ja#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P エディション" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
+source-git-commit: 39012e2308af57af7c9193bdc4894f8f2e358606
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 26%
+source-wordcount: '762'
+ht-degree: 25%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 26%
 
 >[!AVAILABILITY]
 >
->&#x200B;>Demandbase の宛先に対してアカウントオーディエンスをアクティブ化する機能は、Real-Time Customer Data Platformの [B2B](/help/rtcdp/overview.md#rtcdp-b2b) エディションと [B2Person](/help/rtcdp/overview.md#rtcdp-b2p) エディションを購入する企業が利用できます。
+>Demandbase の宛先に対してアカウントオーディエンスをアクティブ化する機能は、Real-Time Customer Data Platformの [B2B](/help/rtcdp/overview.md#rtcdp-b2b) エディションと [B2Person](/help/rtcdp/overview.md#rtcdp-b2p) エディションを購入する企業が利用できます。
 
 [ アカウントオーディエンス ](/help/segmentation/types/account-audiences.md) に基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のために、Demandbase キャンペーン用のプロファイルをアクティブ化します。
 
@@ -24,7 +24,7 @@ ht-degree: 26%
 
 この宛先を使用して、Account-Based Marketing（ABM）のユースケースのアカウントオーディエンスをアクティベートします。 DemandBase の B2B Demand Side Platform（DSP）を使用して、ターゲットアカウント内の関連するペルソナやロールにアドバタイズします。 Target アカウントは、マーケティングや販売におけるその他のダウンストリームのユースケース向けに、Demandbase のサードパーティデータを使用して強化することもできます。
 
-例えば、Demandbase のアドテックDSPを活用して、ファネルのトップのリードジェネレーション向けに特定のペルソナや主要アカウント内の役割をターゲットにしたり、購入グループを作成して成長させたりします。 Demandbase の宛先を使用して、アカウントを効果的にターゲットにする他のユースケースを検討します。
+例えば、Demandbase のアドテックDSPを活用して、funnelトップのリードジェネレーション向けの特定のペルソナや主要アカウント内の役割をターゲットにしたり、購入グループを作成して成長させたりします。 Demandbase の宛先を使用して、アカウントを効果的にターゲットにする他のユースケースを検討します。
 
 この統合を使用すると、リアルタイムのアカウント情報検索を使用して web サイトエクスペリエンスをパーソナライズし、エンゲージメントを最適化することもできます。
 
@@ -61,7 +61,7 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -89,10 +89,24 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にアカウントオーディエンスをアクティブ化する手順については、[ アカウントオーディエンスのアクティブ化 ](/help/destinations/ui/activate-account-audiences.md) をお読みください。
+
+### 必須のマッピング {#mandatory-mappings}
+
+[!DNL Demandbase] の宛先に対してオーディエンスをアクティブ化する場合は、マッピング手順で次の必須のフィールドマッピングを設定する必要があります。
+
+| ソースフィールド | ターゲットフィールド | 説明 |
+|--------------|--------------|-------------|
+| `xdm: accountName` | `xdm: accountName` | アカウントの名前 |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | アカウント組織の電子メールドメイン |
+| `xdm: accountKey.sourceKey` | `Identity: primaryId` | アカウントのプライマリ識別子 |
+
+![Demandbase マッピング ](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+
+これらのマッピングは、宛先が正しく機能するために必要であり、アクティベーションワークフローを続行する前に設定する必要があります。
 
 ## 追加のメモと重要な引き出し {#additional-notes}
 
