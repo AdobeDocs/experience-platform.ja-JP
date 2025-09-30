@@ -11,7 +11,7 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL  結合スキーマ ] UI ガイド
+# [!UICONTROL &#x200B; 結合スキーマ &#x200B;] UI ガイド
 
 Adobe Experience Platformのユーザーインターフェイス（UI）では、組織内の任意の結合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係および要因となるスキーマをプレビューできます。 このガイドでは、Experience Platform UI を使用して和集合スキーマを表示および調査する方法について詳しく説明します。
 
@@ -40,7 +40,7 @@ Adobe Experience Platformのユーザーインターフェイス（UI）では�
 
 ## 和集合スキーマの表示 {#view-union-schemas}
 
-Experience Platform UI 内で結合スキーマに移動するには、左側のナビゲーションから **[!UICONTROL プロファイル]** を選択し、「**[!UICONTROL 結合スキーマ]**」タブを選択します。 [!UICONTROL  和集合スキーマ ] タブが開き、現在選択しているクラスの和集合スキーマが表示されます。
+Experience Platform UI 内で結合スキーマに移動するには、左側のナビゲーションから **[!UICONTROL プロファイル]** を選択し、「**[!UICONTROL 結合スキーマ]**」タブを選択します。 [!UICONTROL &#x200B; 和集合スキーマ &#x200B;] タブが開き、現在選択しているクラスの和集合スキーマが表示されます。
 
 ![ 「プロファイルと和集合スキーマ」タブがハイライト表示された和集合スキーマページが表示されます。](../images/union-schema/landing.png)
 
