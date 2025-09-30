@@ -4,18 +4,18 @@ title: 結合スキーマ UI ガイド
 type: Documentation
 description: Adobe Experience Platformのユーザーインターフェイス（UI）では、組織内の任意の結合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係および要因となるスキーマをプレビューできます。 このガイドでは、Experience Platform UI を使用して和集合スキーマを表示および調査する方法について詳しく説明します。
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1206'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL &#x200B; 結合スキーマ &#x200B;] UI ガイド
+# [!UICONTROL  結合スキーマ ] UI ガイド
 
 Adobe Experience Platformのユーザーインターフェイス（UI）では、組織内の任意の結合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係および要因となるスキーマをプレビューできます。 このガイドでは、Experience Platform UI を使用して和集合スキーマを表示および調査する方法について詳しく説明します。
 
-## はじめに
+## はじめに {#getting-started}
 
 この UI ガイドは、リアルタイム顧客プロファイルデータの管理に関連する様々な [!DNL Experience Platform] サービスを理解しているユーザーを対象としています。 このガイドを読む前、または UI を使用する前に、次のサービスのドキュメントを確認してください。
 
@@ -23,7 +23,14 @@ Adobe Experience Platformのユーザーインターフェイス（UI）では�
 * [[!DNL Identity Service]](../../identity-service/home.md):[!DNL Real-Time Customer Profile] に取り込まれる際に、異なるデータソースの ID を結合することで、[!DNL Experience Platform] を有効にします。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Experience Platform] が、カスタマーエクスペリエンスデータを整理する際に使用する、標準化されたフレームワーク。
 
-## 結合スキーマについて
+## 結合スキーマについて {#understanding-union-schemas}
+
+>[!CONTEXTUALHELP]
+>id="rtcdp_collaboration_union_schema"
+>title="結合スキーマ"
+>abstract=""
+
+<!-- The above contextual help is used in the Collaboration UI for a read more link. -->
 
 リアルタイム顧客プロファイルを使用すると、Adobe Experience Platformと統合されたシステムをまたいで、各顧客インタラクションの顧客属性およびタイムスタンプ付きイベントを含む、堅牢な一元化されたプロファイルを作成できます。 このデータの形式と構造は、エクスペリエンスデータモデル（XDM）スキーマによって提供されます。各スキーマは XDM クラスに基づいており、そのクラスと互換性のあるフィールドが含まれています。
 
@@ -31,13 +38,13 @@ Adobe Experience Platformのユーザーインターフェイス（UI）では�
 
 結合スキーマを使用するには、XDM スキーマに関する深い理解が必要です。 詳しくは、まず [ スキーマ構成の基本 ](../../xdm/schema/composition.md) をお読みください。
 
-## 和集合スキーマの表示
+## 和集合スキーマの表示 {#view-union-schemas}
 
-Experience Platform UI 内で結合スキーマに移動するには、左側のナビゲーションから **[!UICONTROL プロファイル]** を選択し、「**[!UICONTROL 結合スキーマ]**」タブを選択します。 [!UICONTROL &#x200B; 和集合スキーマ &#x200B;] タブが開き、現在選択しているクラスの和集合スキーマが表示されます。
+Experience Platform UI 内で結合スキーマに移動するには、左側のナビゲーションから **[!UICONTROL プロファイル]** を選択し、「**[!UICONTROL 結合スキーマ]**」タブを選択します。 [!UICONTROL  和集合スキーマ ] タブが開き、現在選択しているクラスの和集合スキーマが表示されます。
 
 ![ 「プロファイルと和集合スキーマ」タブがハイライト表示された和集合スキーマページが表示されます。](../images/union-schema/landing.png)
 
-## クラスを選択
+## クラスを選択 {#select-a-class}
 
 特定の XDM クラスの結合スキーマを表示するには、「**[!UICONTROL クラス]**」ドロップダウンからクラスを選択します。 すべてのクラスに和集合スキーマがあるわけではないため、ドロップダウンでは和集合スキーマ（プロファイルで有効になったスキーマを持つクラスを意味）を持つクラスのみを使用できます。
 
@@ -45,7 +52,7 @@ Experience Platform UI 内で結合スキーマに移動するには、左側の
 
 ![ 結合スキーマのクラスを含むドロップダウンがハイライト表示されている様子。](../images/union-schema/class.png)
 
-## 結合スキーマの調査
+## 結合スキーマの調査 {#explore-union-schemas}
 
 上下にスクロールして完全なスキーマ構造を表示し、右山括弧（`>`）を選択してネストされたフィールドを展開することで、結合スキーマを調べることができます。
 
@@ -61,7 +68,7 @@ Experience Platform UI 内で結合スキーマに移動するには、左側の
 
 ![ スキーマに関連するデータセットのリストがハイライト表示されます。](../images/union-schema/datasets.png)
 
-## 貢献するスキーマの表示
+## 貢献するスキーマの表示 {#view-contributing-schemas}
 
 また、「貢献するすべてのスキーマ **[!UICONTROL を選択してスキーマのリストを展開すると、結合スキーマに貢献する特定のスキーマを表示するこ]** もできます。 選択したクラスと、Experience Platform内に作成したスキーマの数に応じて、1 つのスキーマを含む短いリストや、多くのスキーマを含む長いリストを作成できます。
 
@@ -71,7 +78,7 @@ Experience Platform UI 内で結合スキーマに移動するには、左側の
 
 ![ 選択した貢献スキーマがハイライト表示されます。 貢献するスキーマの一部であるフィールドは黒のままですが、貢献するスキーマの一部ではないフィールドは灰色表示になります。](../images/union-schema/select-schema.png)
 
-## ID の表示
+## ID の表示 {#view-identities}
 
 UI を使用すると、**[!UICONTROL ID]** を選択してリストを展開することで、結合スキーマに含まれる ID のリストを表示できます。
 
@@ -83,7 +90,7 @@ UI を使用すると、**[!UICONTROL ID]** を選択してリストを展開す
 
 ![ 選択した ID がハイライト表示されています。 選択した ID に関する詳細が右側のサイドバーに表示されます。](../images/union-schema/select-identity.png)
 
-## 関係を表示
+## 関係を表示 {#view-relationships}
 
 結合スキーマ UI を使用すると、選択したスキーマクラスに基づくスキーマに対して定義された関係を表示することもできます。 関係の定義は、顧客データに対するより複雑なインサイトを得るために、異なるクラスに属する 2 つのスキーマを接続する方法です。
 
