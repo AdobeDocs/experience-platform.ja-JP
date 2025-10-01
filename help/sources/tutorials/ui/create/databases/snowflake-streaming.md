@@ -2,16 +2,16 @@
 title: UI を使用した、Snowflake データベースからExperience Platformへのデータのストリーミング
 description: Snwoflake データベースからExperience Platformにデータをストリーミングする方法を説明します
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
+source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1451'
 ht-degree: 16%
 
 ---
 
 # UI を使用した、[!DNL Snowflake] データベースからExperience Platformへのデータのストリーミング
 
-ユーザーインターフェイスを使用して [!DNL Snowflake] データベースからAdobe Experience Platformにデータをストリーミングする方法については、このガイドに従ってください。
+UI のソースワークスペースを使用して [!DNL Snowflake] データベースからExperience Platformにデータをストリーミングする方法については、このガイドを参照してください。
 
 ## 基本を学ぶ
 
@@ -24,13 +24,13 @@ ht-degree: 16%
 
 ### 認証
 
-[!DNL Snowflake] からExperience Platformにストリーミングデータを取り込む前に実行する必要がある手順については、[ ストリーミングデータの前提条件の設定 ](../../../../connectors/databases/snowflake-streaming.md) に関するガイドを参照して  [!DNL Snowflake]  ださい。
+[ からExperience Platformにストリーミングデータを取り込む前に実行する必要がある手順については、 [!DNL Snowflake]  ストリーミングデータの前提条件の設定 ](../../../../connectors/databases/snowflake-streaming.md) に関するガイドを参照して [!DNL Snowflake] ださい。
 
 ## [!DNL Snowflake Streaming] ソースを使用したExperience Platformへ [!DNL Snowflake] データのストリーミング
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-*Databases* カテゴリの下の [**[!DNL Snowflake Streaming]**] を選択し、[**[!UICONTROL Add data]**] を選択します。
+*Databases* カテゴリの下の [**[!DNL Snowflake Streaming]**] を選択し、[**[!UICONTROL 設定]**] を選択します。
 
 >[!TIP]
 >
@@ -40,37 +40,33 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 **[!UICONTROL Snowflake ストリーミングアカウントを接続]** ページが表示されます。 このページでは、新しい資格情報または既存の資格情報を使用できます。
 
->[!BEGINTABS]
+### 新しいアカウントを作成
 
->[!TAB  新規アカウントの作成 ]
-
-新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、名前、説明（オプション）、の資格情報を入力します。
-
-終了したら「**[!UICONTROL ソースに接続]**」を選択し、新しい接続が確立されるまでしばらく待ちます。
+新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前と説明（オプション）を入力します。
 
 ![ ソースワークフローの新しいアカウント作成インターフェイス ](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
-| 資格情報 | 説明 |
-| --- | --- |
-| アカウント | [!DNL Snowflake] アカウントの名前。 アカウント名の規則については、[[!DNL Snowflake Streaming]  認証ガイド ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials) を参照してください。 |
-| ウェアハウス | [!DNL Snowflake] ウェアハウスの名前。 ウェアハウスは、[!DNL Snowflake] でのクエリの実行を管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込むには、個別にアクセスする必要があります。 |
-| データベース | [!DNL Snowflake] データベースの名前。 データベースには、Experience Platformに取り込むデータが含まれています。 |
-| スキーマ | （オプション） [!DNL Snowflake] アカウントに関連付けられたデータベーススキーマ。 |
-| ユーザー名 | [!DNL Snowflake] アカウントのユーザー名。 |
-| パスワード | [!DNL Snowflake] アカウントのパスワード。 |
-| 役割 | （オプション）特定の接続についてユーザーに提供できる、カスタムで定義された役割。 指定しない場合、この値はデフォルトで `public` になります。 |
+>[!BEGINTABS]
 
-アカウントの作成について詳しくは、[!DNL Snowflake Streaming] の概要の [ 役割の設定 ](../../../../connectors/databases/snowflake-streaming.md#configure-role-settings) の節を参照してください。
+>[!TAB  基本認証 ]
 
->[!TAB  既存のアカウントを使用 ]
+[!UICONTROL  基本認証 ] を使用するには、「**[!UICONTROL Snowflakeの基本認証]**」を選択し、[!DNL Snowflake] アカウントの資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択し、既存のアカウントカタログから目的のアカウントを選択します。
+詳しくは、[!DNL Snowflake Streaming] の概要を参照してください [ 必要な資格情報の収集 ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)。
 
-「**[!UICONTROL 次へ]**」を選択して次に進みます。
+![ ソースワークフローで、基本認証が選択された新しいアカウントインターフェイス ](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
-![ ソースカタログの既存のアカウント選択ページ ](../../../../images/tutorials/create/snowflake-streaming/existing.png)
+>[!TAB  キーペア認証 ]
+
+[!UICONTROL  キーペア認証 ] を使用するには、「**[!UICONTROL Snowflakeのキーペア認証]**」を選択し、[!DNL Snowflake] アカウントの資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+
+詳しくは、[!DNL Snowflake Streaming] の概要を参照してください [ 必要な資格情報の収集 ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)。
+
+![ ソースワークフローの新しいアカウントインターフェイス、選択されたキーペア認証 ](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
 >[!ENDTABS]
+
+既存のアカウントを使用するには、「**[!UICONTROL 既存のアカウント]**」を選択し、リストからアカウントを選択して、「**[!UICONTROL 次へ]**」を選択します。
 
 ## データの選択 {#select-data}
 
@@ -83,8 +79,6 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 [!UICONTROL データを選択]ステップが表示されます。この手順では、Experience Platformに読み込むデータを選択し、タイムスタンプとタイムゾーンを設定し、生データを取り込むためのサンプルソースデータファイルを指定する必要があります。
 
 画面左側のデータベースディレクトリを使用して、Experience Platformに読み込むテーブルを選択します。
-
-![ データベーステーブルが選択された状態の選択データインターフェイス ](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
 次に、テーブルのタイムスタンプ列タイプを選択します。 `TIMESTAMP_NTZ` または `TIMESTAMP_LTZ` の 2 種類のタイムスタンプ列を選択できます。 列タイプ `TIMESTAMP_NTZ` を選択する場合は、タイムゾーンも指定する必要があります。 列には null 以外の制約を指定する必要があります。 詳しくは、[ 制限事項とよくある質問 ](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions) の節を参照してください。
 
@@ -108,13 +102,11 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データセットは、スキーマ（列）とフィールド（行）で構成されるデータコレクション（通常はテーブル）を格納し管理するための構造です。Experience Platformに正常に取り込まれたデータは、データレイク内にデータセットとして保持されます。 この手順では、新しいデータセットを作成するか、既存のデータセットを使用します。
 
->[!BEGINTABS]
+既存のデータセットがある場合は、「**[!UICONTROL 既存のデータセット]**」を選択し、「**[!UICONTROL 詳細検索]**」オプションを使用して、組織内のすべてのデータセットのウィンドウを表示します。これには、リアルタイム顧客プロファイルへの取り込みが有効になっているかどうかなど、それぞれの詳細が含まれます。
 
->[!TAB  新しいデータセットを使用する ]
+![ 既存のデータセット選択インターフェイス ](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
 
 新しいデータセットを使用するには、「**[!UICONTROL 新しいデータセット]**」を選択し、データセットの名前とオプションの説明を入力します。 また、データセットが準拠するエクスペリエンスデータモデル（XDM）スキーマを選択する必要があります。
-
-![ 新しいデータセット選択インターフェイス ](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
 | 新しいデータセットの詳細 | 説明 |
 | --- | --- |
@@ -122,28 +114,11 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 | 説明 | （任意）新しいデータセットの簡単な概要です。 |
 | スキーマ | 組織に存在するスキーマのドロップダウンリスト。 ソース設定プロセスの前に、独自のスキーマを作成することもできます。 詳しくは、[UI での XDM スキーマの作成 ](../../../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。 |
 
->[!TAB 既存のデータセットを使用する]
-
-既存のデータセットがある場合は、「**[!UICONTROL 既存のデータセット]**」を選択し、「**[!UICONTROL 詳細検索]**」オプションを使用すると、組織内のすべてのデータセットのウィンドウが表示されます。これには、リアルタイム顧客プロファイルへの取り込みが有効になっているかどうかなど、それぞれの詳細が含まれます。
-
-![ 既存のデータセット選択インターフェイス ](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
-
->[!ENDTABS]
-
-+++プロファイル取り込み、エラー診断、部分取り込みを有効にする手順を選択します。
-
-データセットがリアルタイム顧客プロファイルに対して有効になっている場合、この手順の間に **[!UICONTROL プロファイルデータセット]** を切り替えて、プロファイル取り込み用のデータを有効にすることができます。 また、この手順を使用して、**[!UICONTROL エラー診断]** および **[!UICONTROL 部分取り込み]** を有効にすることもできます。
-
-* **[!UICONTROL エラー診断]**: **[!UICONTROL エラー診断]** を選択して、データセットアクティビティとデータフローステータスを監視する際に後で参照できるエラー診断を生成するようにソースに指示します。
-* **[!UICONTROL 部分取り込み]**：部分バッチ取り込みは、設定可能な特定のしきい値まで、エラーを含んだデータを取り込む機能です。 この機能を使用すると、正確なデータをすべてExperience Platformに正常に取り込みながら、不正なデータがすべて無効な理由に関する情報と共に個別にバッチ処理されます。
-
-+++
-
 ### データフローの詳細 {#dataflow-details}
 
 データセットを設定したら、名前、説明（オプション）、アラート設定など、データフローの詳細を指定する必要があります。
 
-![ データフローの詳細設定手順。](../../../../images/tutorials/create/snowflake-streaming/dataflow-details.png)
+![ データフローの詳細設定手順。](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
 
 | データフロー設定 | 説明 |
 | --- | --- |

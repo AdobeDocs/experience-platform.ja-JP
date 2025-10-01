@@ -3,21 +3,21 @@ title: Snowflake ストリーミングアカウントのAdobe Experience Platfor
 description: Flow Service API を使用してAdobe Experience PlatformをSnowflake Streaming に接続する方法について説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: a4a464f1f3b61311754a39f2a6e6a4ef21af3ab0
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '874'
 ht-degree: 20%
 
 ---
 
-# [!DNL Flow Service] API[!DNL Snowflake] 使用したExperience Platformへのデータのストリーミング
+# [!DNL Snowflake] API[!DNL Flow Service] 使用したExperience Platformへのデータのストリーミング
 
 >[!IMPORTANT]
 >
 >
 > Real-Time Customer Data Platform Ultimateを購入したユーザーは、API で [!DNL Snowflake] ストリーミングソースを利用できます。
 
-このチュートリアルでは、[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) を使用して、[!DNL Snowflake] アカウントからAdobe Experience Platformにデータを接続してストリーミングする手順について説明します。
+このチュートリアルでは、[!DNL Snowflake]API[[!DNL Flow Service]  を使用して、](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) アカウントからAdobe Experience Platformにデータを接続してストリーミングする手順について説明します。
 
 ## はじめに
 
@@ -26,11 +26,13 @@ ht-degree: 20%
 * [ソース](../../../../home.md)：[!DNL Experience Platform] を使用すると、データを様々なソースから取得しながら、[!DNL Experience Platform] サービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] には、単一の [!DNL Experience Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスが用意されています。
 
-前提条件として、[!DNL Snowflake] ストリーミングソースに関する設定と情報を行います。 [[!DNL Snowflake]  ストリーミングソースの概要 ](../../../../connectors/databases/snowflake-streaming.md) を参照してください。
-
 ### Experience Platform API の使用
 
 Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+
+### 必要な資格情報の収集
+
+認証について詳しくは、[[!DNL Snowflake]  概要 ](../../../../connectors/databases/snowflake-streaming.md#prerequisites) を参照してください。
 
 ## ベース接続の作成 {#create-a-base-connection}
 
@@ -290,7 +292,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、[!DNL Flow Service] API を使用して [!DNL Snowflake] データのストリーミングデータフローを作成しました。 Adobe Experience Platform ソースについて詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、[!DNL Snowflake] API を使用して [!DNL Flow Service] データのストリーミングデータフローを作成しました。 Adobe Experience Platform ソースについて詳しくは、次のドキュメントを参照してください。
 
 * [ソースの概要](../../../../home.md)
 * [API を使用したデータフローの監視](../../monitor.md)
