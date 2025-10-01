@@ -4,10 +4,10 @@ type: Tutorial
 description: Adobe Experience Platform UI を使用してSnowflake ソース接続を作成する方法を説明します。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 7%
+source-wordcount: '1250'
+ht-degree: 6%
 
 ---
 
@@ -32,13 +32,13 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->[!DNL Snowflake] データベースからExperience Platformにデータをアンロードできるようにするには、`PREVENT_UNLOAD_TO_INLINE_URL` フラグを `FALSE` に設定する必要があります。
+>`PREVENT_UNLOAD_TO_INLINE_URL` データベースからExperience Platformにデータをアンロードできるようにするには、`FALSE` フラグを [!DNL Snowflake] に設定する必要があります。
 
 ## ソースカタログのナビゲート {#navigate}
 
 Experience Platformの UI で、左側のナビゲーションから **[!UICONTROL Sources]** を選択し、[!UICONTROL Sources] ワークスペースにアクセスします。 画面の左側にあるカタログから適切なカテゴリを選択することができます。または、使用する特定のソースを検索オプションを使用して探すこともできます。
 
-*[!UICONTROL データベース]* カテゴリの下の「**[!DNL Snowflake]**」を選択し、「**[!UICONTROL 設定]**」を選択します。
+**[!DNL Snowflake]** データベース *[!UICONTROL カテゴリの下の「]*」を選択し、「**[!UICONTROL 設定]**」を選択します。
 
 >[!TIP]
 >
@@ -74,7 +74,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 | 資格情報 | 説明 |
 | --- | --- |
-| アカウント | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[ アカウント識別子の取得 ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) に関するガイドを参  [!DNL Snowflake]  してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
+| アカウント | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[ アカウント識別子の取得  [!DNL Snowflake]  に関するガイドを参 ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | ウェアハウス | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
 | データベース | [!DNL Snowflake] データベースには、Experience Platformに取り込むデータが含まれています。 |
 | ユーザー名 | [!DNL Snowflake] アカウントのユーザー名。 |
@@ -92,9 +92,9 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 | 資格情報 | 説明 |
 | --- | --- |
-| アカウント | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[ アカウント識別子の取得 ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) に関するガイドを参  [!DNL Snowflake]  してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
+| アカウント | アカウント名は、組織内のアカウントを一意に識別します。 この場合、アカウントを異なる [!DNL Snowflake] 組織で一意に識別する必要があります。 これを行うには、アカウント名の前に組織名を追加する必要があります。 例：`orgname-account_name`。 詳しくは、[ アカウント識別子の取得  [!DNL Snowflake]  に関するガイドを参 ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) してください。 詳しくは、[[!DNL Snowflake] ドキュメント](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)を参照してください。 |
 | ユーザー名 | [!DNL Snowflake] アカウントのユーザー名。 |
-| 秘密鍵 | [!DNL Snowflake] アカウントの [!DNL Base64-] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵のいずれかを生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対して認証を行う際に、秘密鍵のパスフレーズも指定する必要があります。 詳しくは、[ 秘密鍵の取得 ](../../../../connectors/databases/snowflake.md) に関す  [!DNL Snowflake]  ガイドを参照してください。 |
+| 秘密鍵 | [!DNL Base64-] アカウントの [!DNL Snowflake] エンコードされた秘密鍵。 暗号化された秘密鍵または暗号化されていない秘密鍵のいずれかを生成できます。 暗号化された秘密鍵を使用している場合は、Experience Platformに対して認証を行う際に、秘密鍵のパスフレーズも指定する必要があります。 詳しくは、[ 秘密鍵の取得  [!DNL Snowflake]  に関す ](../../../../connectors/databases/snowflake.md) ガイドを参照してください。 |
 | 秘密鍵のパスフレーズ | 秘密鍵のパスフレーズは、暗号化された秘密鍵を使用して認証を行う場合に使用する必要がある、追加のセキュリティレイヤーです。 暗号化されていない秘密鍵を使用している場合は、パスフレーズを指定する必要はありません。 |
 | データベース | Experience Platformに取り込むデータを含んだ [!DNL Snowflake] データベース。 |
 | ウェアハウス | [!DNL Snowflake] ウェアハウスは、アプリケーションのクエリ実行プロセスを管理します。 各 [!DNL Snowflake] ウェアハウスは互いに独立しており、データをExperience Platformに取り込む際は個別にアクセスする必要があります。 |
@@ -111,17 +111,25 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しい [!DNL Snowflake] アカウントを作成し、AWSでExperience Platformに接続するには、VA6 サンドボックスに属していることを確認し、認証に必要な資格情報を入力します。
 
+>[!BEGINTABS]
+
+>[!TAB  キーペア認証 ]
+
+キーペアを使用して接続するには、「**[!UICONTROL キーペア認証]**」を選択し、認証資格情報を入力して、「**[!UICONTROL ソースに接続]**」を選択します。 これらの資格情報について詳しくは、[[!DNL Snowflake]  バッチの概要 ](../../../../connectors/databases/snowflake.md#gather-required-credentials) を参照してください。
+
+![ キーペア認証の新しいアカウント作成手順。](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+
+>[!TAB  基本認証 ]
+
+>[!WARNING]
+>
+>[!DNL Snowflake] ソースの基本認証（またはアカウントキー認証）は、2025 年 11 月に非推奨（廃止予定）になります。 ソースの使用とデータベースからExperience Platformへのデータの取り込みを続行するには、キーペアベースの認証に移行する必要があります。 非推奨（廃止予定）について詳しくは、[[!DNL Snowflake]  資格情報の漏洩リスクの軽減に関するベストプラクティスガイド ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/) を参照してください。
+
+ユーザー名とパスワードの組み合わせを使用して接続するには、「**[!UICONTROL 基本認証]**」を選択し、認証資格情報を入力して「**[!UICONTROL ソースに接続]**」を選択します。 これらの資格情報について詳しくは、[[!DNL Snowflake]  バッチの概要 ](../../../../connectors/databases/snowflake.md#gather-required-credentials) を参照してください。
+
 ![SnowflakeをAWS上のExperience Platformに接続できるソースワークフローの新しいアカウント手順 ](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
-| 資格情報 | 説明 |
-| --- | --- |
-| ホスト | [!DNL Snowflake] アカウントが接続するホスト URL。 |
-| ポート | インターネット経由でサーバーに接続するときに [!DNL Snowflake] が使用するポート番号です。 |
-| ユーザー名 | [!DNL Snowflake] アカウントに関連付けられたユーザー名。 |
-| パスワード | [!DNL Snowflake] アカウントに関連付けられたパスワード。 |
-| データベース | データの取得元となる [!DNL Snowflake] データベース。 |
-| スキーマ | [!DNL Snowflake] データベースに関連付けられたスキーマの名前。 データベースアクセス権を付与するユーザーが、このスキーマにもアクセスできることを確認する必要があります。 |
-| ウェアハウス | 使用している [!DNL Snowflake] ウェアハウス。 |
+>[!ENDTABS]
 
 ### サンプルデータのプレビューをスキップ {#skip-preview-of-sample-data}
 
