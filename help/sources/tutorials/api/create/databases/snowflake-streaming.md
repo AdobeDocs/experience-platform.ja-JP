@@ -28,11 +28,11 @@ ht-degree: 20%
 
 ### Experience Platform API の使用
 
-Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 ](../../../../../landing/api-guide.md) を参照してください。
+Experience Platform API を正常に呼び出す方法について詳しくは、[Experience Platform API の概要 &#x200B;](../../../../../landing/api-guide.md) を参照してください。
 
 ### 必要な資格情報の収集
 
-認証について詳しくは、[[!DNL Snowflake]  概要 ](../../../../connectors/databases/snowflake-streaming.md#prerequisites) を参照してください。
+認証について詳しくは、[[!DNL Snowflake]  概要 &#x200B;](../../../../connectors/databases/snowflake-streaming.md#prerequisites) を参照してください。
 
 ## ベース接続の作成 {#create-a-base-connection}
 
@@ -199,7 +199,7 @@ curl -X POST \
 | `connectionSpec.id` | [!DNL Snowflake] ストリーミングソースの接続仕様 ID。 |
 | `params.tableName` | Experience Platformに取り込む、[!DNL Snowflake] データベース内のテーブルの名前。 |
 | `params.timestampColumn` | 増分値を取得するために使用されるタイムスタンプ列の名前。 |
-| `params.backfill` | データが最初（0 エポック時間）から取得されるか、ソースが開始された時間から取得されるかを決定するブール値フラグ。 この値について詳しくは、[[!DNL Snowflake]  ストリーミングソースの概要 ](../../../../connectors/databases/snowflake-streaming.md) を参照してください。 |
+| `params.backfill` | データが最初（0 エポック時間）から取得されるか、ソースが開始された時間から取得されるかを決定するブール値フラグ。 この値について詳しくは、[[!DNL Snowflake]  ストリーミングソースの概要 &#x200B;](../../../../connectors/databases/snowflake-streaming.md) を参照してください。 |
 | `params.timezoneValue` | タイムゾーンの値は、[!DNL Snowflake] データベースに対するクエリ時に、どのタイムゾーンの現在の時刻を取得するかを示します。 設定のタイムスタンプ列が `TIMESTAMP_NTZ` に設定されている場合は、このパラメーターを指定する必要があります。 指定しない場合、デフォルト `timezoneValue`UTC になります。 |
 
 **応答**

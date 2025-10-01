@@ -24,7 +24,7 @@ UI のソースワークスペースを使用して [!DNL Snowflake] データ�
 
 ### 認証
 
-[ からExperience Platformにストリーミングデータを取り込む前に実行する必要がある手順については、 [!DNL Snowflake]  ストリーミングデータの前提条件の設定 ](../../../../connectors/databases/snowflake-streaming.md) に関するガイドを参照して [!DNL Snowflake] ださい。
+[&#x200B; からExperience Platformにストリーミングデータを取り込む前に実行する必要がある手順については、 [!DNL Snowflake]  ストリーミングデータの前提条件の設定 &#x200B;](../../../../connectors/databases/snowflake-streaming.md) に関するガイドを参照して [!DNL Snowflake] ださい。
 
 ## [!DNL Snowflake Streaming] ソースを使用したExperience Platformへ [!DNL Snowflake] データのストリーミング
 
@@ -44,25 +44,25 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 新しいアカウントを作成するには、「**[!UICONTROL 新しいアカウント]**」を選択し、アカウントの名前と説明（オプション）を入力します。
 
-![ ソースワークフローの新しいアカウント作成インターフェイス ](../../../../images/tutorials/create/snowflake-streaming/new.png)
+![&#x200B; ソースワークフローの新しいアカウント作成インターフェイス &#x200B;](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
 >[!BEGINTABS]
 
 >[!TAB  基本認証 ]
 
-[!UICONTROL  基本認証 ] を使用するには、「**[!UICONTROL Snowflakeの基本認証]**」を選択し、[!DNL Snowflake] アカウントの資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+[!UICONTROL &#x200B; 基本認証 &#x200B;] を使用するには、「**[!UICONTROL Snowflakeの基本認証]**」を選択し、[!DNL Snowflake] アカウントの資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-詳しくは、[!DNL Snowflake Streaming] の概要を参照してください [ 必要な資格情報の収集 ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)。
+詳しくは、[!DNL Snowflake Streaming] の概要を参照してください [&#x200B; 必要な資格情報の収集 &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)。
 
-![ ソースワークフローで、基本認証が選択された新しいアカウントインターフェイス ](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
+![&#x200B; ソースワークフローで、基本認証が選択された新しいアカウントインターフェイス &#x200B;](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
 >[!TAB  キーペア認証 ]
 
-[!UICONTROL  キーペア認証 ] を使用するには、「**[!UICONTROL Snowflakeのキーペア認証]**」を選択し、[!DNL Snowflake] アカウントの資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
+[!UICONTROL &#x200B; キーペア認証 &#x200B;] を使用するには、「**[!UICONTROL Snowflakeのキーペア認証]**」を選択し、[!DNL Snowflake] アカウントの資格情報を入力します。 終了したら「**[!UICONTROL ソースに接続]**」を選択し、接続が確立されるまでしばらく待ちます。
 
-詳しくは、[!DNL Snowflake Streaming] の概要を参照してください [ 必要な資格情報の収集 ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)。
+詳しくは、[!DNL Snowflake Streaming] の概要を参照してください [&#x200B; 必要な資格情報の収集 &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)。
 
-![ ソースワークフローの新しいアカウントインターフェイス、選択されたキーペア認証 ](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
+![&#x200B; ソースワークフローの新しいアカウントインターフェイス、選択されたキーペア認証 &#x200B;](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
 >[!ENDTABS]
 
@@ -74,25 +74,25 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 >
 >* ストリーミングデータフローを作成するには、ソーステーブルにタイムスタンプ列が存在する必要があります。 タイムスタンプは、Experience Platformがデータを取り込むタイミングと増分データをストリーミングするタイミングを把握するために必要です。 既存の接続のタイムスタンプ列を遡及的に追加し、新しいデータフローを作成できます。
 >
->* サンプルソースデータファイルのデータフィールドの大文字と小文字が、識別子の場合の解決に関する [!DNL Snowflake] のガイダンスに従っていることを確認してください。 詳しくは、[[!DNL Snowflake]  識別子の大文字/小文字の区別に関するドキュメント ](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) を参照してください。
+>* サンプルソースデータファイルのデータフィールドの大文字と小文字が、識別子の場合の解決に関する [!DNL Snowflake] のガイダンスに従っていることを確認してください。 詳しくは、[[!DNL Snowflake]  識別子の大文字/小文字の区別に関するドキュメント &#x200B;](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) を参照してください。
 
 [!UICONTROL データを選択]ステップが表示されます。この手順では、Experience Platformに読み込むデータを選択し、タイムスタンプとタイムゾーンを設定し、生データを取り込むためのサンプルソースデータファイルを指定する必要があります。
 
 画面左側のデータベースディレクトリを使用して、Experience Platformに読み込むテーブルを選択します。
 
-次に、テーブルのタイムスタンプ列タイプを選択します。 `TIMESTAMP_NTZ` または `TIMESTAMP_LTZ` の 2 種類のタイムスタンプ列を選択できます。 列タイプ `TIMESTAMP_NTZ` を選択する場合は、タイムゾーンも指定する必要があります。 列には null 以外の制約を指定する必要があります。 詳しくは、[ 制限事項とよくある質問 ](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions) の節を参照してください。
+次に、テーブルのタイムスタンプ列タイプを選択します。 `TIMESTAMP_NTZ` または `TIMESTAMP_LTZ` の 2 種類のタイムスタンプ列を選択できます。 列タイプ `TIMESTAMP_NTZ` を選択する場合は、タイムゾーンも指定する必要があります。 列には null 以外の制約を指定する必要があります。 詳しくは、[&#x200B; 制限事項とよくある質問 &#x200B;](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions) の節を参照してください。
 
 この手順でバックフィル設定を指定することもできます。 バックフィルは、最初に取り込むデータを決定します。 バックフィルが有効になっている場合、指定されたパス内の現在のすべてのファイルが、最初にスケジュールされた取り込み時に取り込まれます。 そうでない場合は、最初の取り込みの実行から開始時刻の間に読み込まれたファイルのみが取り込まれます。 開始時間より前に読み込まれたファイルは取り込まれません。
 
 **[!UICONTROL バックフィル]** 切替スイッチを選択して、バックフィルを有効にします。
 
-![ タイムスタンプ、タイムゾーン、バックフィルの設定手順 ](../../../../images/tutorials/create/snowflake-streaming/timezone.png)
+![&#x200B; タイムスタンプ、タイムゾーン、バックフィルの設定手順 &#x200B;](../../../../images/tutorials/create/snowflake-streaming/timezone.png)
 
 最後に、「**[!UICONTROL ファイルを選択]** を選択して、サンプルソースデータをアップロードし、後の手順で元のデータをエクスペリエンスデータモデル（XDM）にマッピングするために使用するマッピングセットを作成するのに役立ちます。
 
 終了したら、「**[!UICONTROL 次へ]** を選択して続行します。
 
-![ ソースサンプルデータのプレビュー。](../../../../images/tutorials/create/snowflake-streaming/preview.png)
+![&#x200B; ソースサンプルデータのプレビュー。](../../../../images/tutorials/create/snowflake-streaming/preview.png)
 
 ## データセットとデータフローの詳細の指定 {#provide-dataset-and-dataflow-details}
 
@@ -104,7 +104,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 既存のデータセットがある場合は、「**[!UICONTROL 既存のデータセット]**」を選択し、「**[!UICONTROL 詳細検索]**」オプションを使用して、組織内のすべてのデータセットのウィンドウを表示します。これには、リアルタイム顧客プロファイルへの取り込みが有効になっているかどうかなど、それぞれの詳細が含まれます。
 
-![ 既存のデータセット選択インターフェイス ](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
+![&#x200B; 既存のデータセット選択インターフェイス &#x200B;](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
 
 新しいデータセットを使用するには、「**[!UICONTROL 新しいデータセット]**」を選択し、データセットの名前とオプションの説明を入力します。 また、データセットが準拠するエクスペリエンスデータモデル（XDM）スキーマを選択する必要があります。
 
@@ -112,27 +112,27 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 | --- | --- |
 | 出力データセット名 | 新規データセットの名前。 |
 | 説明 | （任意）新しいデータセットの簡単な概要です。 |
-| スキーマ | 組織に存在するスキーマのドロップダウンリスト。 ソース設定プロセスの前に、独自のスキーマを作成することもできます。 詳しくは、[UI での XDM スキーマの作成 ](../../../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。 |
+| スキーマ | 組織に存在するスキーマのドロップダウンリスト。 ソース設定プロセスの前に、独自のスキーマを作成することもできます。 詳しくは、[UI での XDM スキーマの作成 &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md) に関するガイドを参照してください。 |
 
 ### データフローの詳細 {#dataflow-details}
 
 データセットを設定したら、名前、説明（オプション）、アラート設定など、データフローの詳細を指定する必要があります。
 
-![ データフローの詳細設定手順。](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
+![&#x200B; データフローの詳細設定手順。](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
 
 | データフロー設定 | 説明 |
 | --- | --- |
 | データフロー名 | データフローの名前。  デフォルトでは、読み込まれるファイルの名前が使用されます。 |
 | 説明 | （任意）データフローの簡単な説明です。 |
-| アラート | Experience Platformでは、ユーザーが登録できるイベントベースのアラートを作成できます。 これらのオプションをトリガーするには、実行中のデータフローが必要です。 詳しくは、[ アラートの概要 ](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
+| アラート | Experience Platformでは、ユーザーが登録できるイベントベースのアラートを作成できます。 これらのオプションをトリガーするには、実行中のデータフローが必要です。 詳しくは、[&#x200B; アラートの概要 &#x200B;](../../alerts.md) を参照してください <ul><li>**ソースデータフロー実行開始**：データフロー実行が開始したときに通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行成功**：データフローがエラーなく終了した場合に通知を受け取るには、このアラートを選択します。</li><li>**ソースデータフロー実行の失敗**：データフローの実行がエラーで終了した場合に通知を受け取るには、このアラートを選択します。</li></ul> |
 
 終了したら、「**[!UICONTROL 次へ]** を選択して続行します。
 
 ## XDM スキーマへのフィールドのマッピング {#mapping}
 
-「[!UICONTROL マッピング]」手順が表示されます。マッピングインターフェイスを使用して、ソースデータをExperience Platformに取り込む前に、そのデータを適切なスキーマフィールドにマッピングし、「**[!UICONTROL 次へ]**」を選択します。 マッピングインターフェイスの使用方法に関するガイドについては、[ データ準備 UI ガイド ](../../../../../data-prep/ui/mapping.md) を参照してください。
+「[!UICONTROL マッピング]」手順が表示されます。マッピングインターフェイスを使用して、ソースデータをExperience Platformに取り込む前に、そのデータを適切なスキーマフィールドにマッピングし、「**[!UICONTROL 次へ]**」を選択します。 マッピングインターフェイスの使用方法に関するガイドについては、[&#x200B; データ準備 UI ガイド &#x200B;](../../../../../data-prep/ui/mapping.md) を参照してください。
 
-![ ソースワークフローのマッピングインターフェイス ](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
+![&#x200B; ソースワークフローのマッピングインターフェイス &#x200B;](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
 
 ## データフローのレビュー {#review}
 
@@ -143,7 +143,7 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 データフローをレビューしたら、「**[!UICONTROL 終了]**」を選択し、データフローが作成されるまでしばらく待ちます。
 
-![ ソースワークフローのレビュー手順 ](../../../../images/tutorials/create/snowflake-streaming/review.png)
+![&#x200B; ソースワークフローのレビュー手順 &#x200B;](../../../../images/tutorials/create/snowflake-streaming/review.png)
 
 ## 次の手順
 
@@ -151,12 +151,12 @@ Experience Platformの UI で、左側のナビゲーションから **[!UICONTR
 
 ### データフローの監視
 
-データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 ストリーミングデータフローの監視方法について詳しくは、[UI でのストリーミングデータフローの監視 ](../../monitor-streaming.md) に関するチュートリアルを参照してください。
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視し、取り込み率、成功、エラーに関する情報を表示できます。 ストリーミングデータフローの監視方法について詳しくは、[UI でのストリーミングデータフローの監視 &#x200B;](../../monitor-streaming.md) に関するチュートリアルを参照してください。
 
 ### データフローの更新
 
-データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 ](../../update-dataflows.md) に関するチュートリアルを参照してください。
+データフローのスケジュール、マッピング、一般情報の設定を更新するには、[UI でのソースデータフローの更新 &#x200B;](../../update-dataflows.md) に関するチュートリアルを参照してください。
 
 ### データフローの削除
 
-不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 ](../../delete.md) のチュートリアルを参照してください。
+不要になったデータフローや誤って作成されたデータフローは、**[!UICONTROL データフロー]**&#x200B;ワークスペース内にある&#x200B;**[!UICONTROL 削除]**&#x200B;機能で削除できます。データフローの削除方法について詳しくは、[UI でのデータフローの削除 &#x200B;](../../delete.md) のチュートリアルを参照してください。
