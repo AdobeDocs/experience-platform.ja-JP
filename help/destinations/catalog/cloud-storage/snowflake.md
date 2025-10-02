@@ -19,7 +19,7 @@ ht-degree: 25%
 
 ## 概要 {#overview}
 
-Snowflake宛先コネクタを使用して、AdobeのSnowflake インスタンスにデータを書き出します。このインスタンスは、Adobeが [ 非公開リスト ](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about) を通じてお使いのインスタンスと共有します。
+Snowflake宛先コネクタを使用して、AdobeのSnowflake インスタンスにデータを書き出します。このインスタンスは、Adobeが [&#x200B; 非公開リスト &#x200B;](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about) を通じてお使いのインスタンスと共有します。
 
 Snowflakeの宛先の仕組みと、AdobeとSnowflakeの間でのデータの転送方法については、次の節を参照してください。
 
@@ -29,7 +29,7 @@ Snowflakeの宛先の仕組みと、AdobeとSnowflakeの間でのデータの転
 
 AdobeのSnowflake インスタンスから初めて自分のインスタンスにデータを共有する際に、Adobeからの非公開リストを受け入れるように求められます。
 
-![Snowflake プライベートリストの承認画面を示すスクリーンショット ](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![Snowflake プライベートリストの承認画面を示すスクリーンショット &#x200B;](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
 
 ### データ保持と有効期間（TTL） {#ttl}
 
@@ -37,7 +37,7 @@ AdobeのSnowflake インスタンスから初めて自分のインスタンス�
 
 ### オーディエンスの更新動作 {#audience-update-behavior}
 
-オーディエンスが [ バッチモード ](../../../segmentation/methods/batch-segmentation.md) で評価される場合、共有テーブルのデータは 24 時間ごとに更新されます。 つまり、オーディエンスメンバーシップの変更と共有テーブルに変更が反映される間に、最大 24 時間の遅延が発生する可能性があります。
+オーディエンスが [&#x200B; バッチモード &#x200B;](../../../segmentation/methods/batch-segmentation.md) で評価される場合、共有テーブルのデータは 24 時間ごとに更新されます。 つまり、オーディエンスメンバーシップの変更と共有テーブルに変更が反映される間に、最大 24 時間の遅延が発生する可能性があります。
 
 ### 増分エクスポートロジック {#incremental-export}
 
@@ -45,11 +45,11 @@ AdobeのSnowflake インスタンスから初めて自分のインスタンス�
 
 ## ストリーミングとバッチデータ共有 {#batch-vs-streaming}
 
-Experience Platformには、[Snowflake ストリーミングと ](snowflake.md)2}Snowflake バッチ [ の 2 種類のSnowflake宛先が用意されています。](../cloud-storage/snowflake-batch.md)
+Experience Platformには、[Snowflake ストリーミングと &#x200B;](snowflake.md)2&rbrace;Snowflake バッチ [&#x200B; の 2 種類のSnowflake宛先が用意されています。](../cloud-storage/snowflake-batch.md)
 
 次の表に、各データ共有方法が最も適したシナリオを概説することで、使用する宛先を決定するのに役立ちます。
 
-|  | 必要に応じて [0}Snowflake バッチ } を選択](../cloud-storage/snowflake-batch.md) | 必要に応じて [0}Snowflake ストリーミング } を選択](snowflake.md) |
+|  | 必要に応じて [0&rbrace;Snowflake バッチ &rbrace; を選択](../cloud-storage/snowflake-batch.md) | 必要に応じて [0&rbrace;Snowflake ストリーミング &rbrace; を選択](snowflake.md) |
 |--------|-------------------|----------------------|
 | **更新頻度** | 定期的なスナップショット | リアルタイムでの継続的な更新 |
 | **データ表示** | 以前のデータを置き換えるオーディエンススナップショットの完了 | プロファイルの変更に基づいた増分更新 |
@@ -84,8 +84,8 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 | オーディエンスオリジン | サポートあり | 説明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [ セグメント化サービス ](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
-| その他すべてのオーディエンスの接触チャネル | ✓ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [ 様々なオーディエンスのオリジン ](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [ 読み込み ](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [&#x200B; セグメント化サービス &#x200B;](../../../segmentation/home.md) を通じて生成されたオーディエンス。 |
+| その他すべてのオーディエンスの接触チャネル | ✓ | このカテゴリには、[!DNL Segmentation Service] を通じて生成されたオーディエンス以外のすべてのオーディエンスの接触チャネルが含まれます。 [&#x200B; 様々なオーディエンスのオリジン &#x200B;](/help/segmentation/ui/audience-portal.md#customize) について確認する。 次に例を示します。 <ul><li> csv ファイルからExperience Platformへのカスタムアップロードオーディエンス [&#x200B; 読み込み &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)</li><li> 類似オーディエンス、 </li><li> 連合オーディエンス、 </li><li> Adobe Journey Optimizerなど、他のExperience Platform アプリで生成されたオーディエンス。 </li><li> その他。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 >[!IMPORTANT]
 > 
->宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
+>宛先に接続するには、**[!UICONTROL 宛先の表示]** および **[!UICONTROL 宛先の管理]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 詳しくは、[アクセス制御の概要](/help/access-control/ui/overview.md)または製品管理者に問い合わせて、必要な権限を取得してください。
 
 この宛先に接続するには、[宛先設定のチュートリアル](../../ui/connect-destination.md)の手順に従ってください。宛先の設定ワークフローで、以下の 2 つのセクションにリストされているフィールドに入力します。
 
@@ -112,7 +112,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 宛先を認証するには、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-![ 宛先への認証方法を示すサンプルスクリーンショット ](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
+![&#x200B; 宛先への認証方法を示すサンプルスクリーンショット &#x200B;](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
 
 ### 宛先の詳細の入力 {#destination-details}
 
@@ -123,7 +123,7 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 宛先の詳細を設定するには、以下の必須フィールドとオプションフィールドに入力します。UI のフィールドの横のアスタリスクは、そのフィールドが必須であることを示します。
 
-![ 宛先の詳細を入力する方法を示すサンプルスクリーンショット ](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![&#x200B; 宛先の詳細を入力する方法を示すサンプルスクリーンショット &#x200B;](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL 名前]**：今後この宛先を認識するための名前。
 * **[!UICONTROL 説明]**：今後この宛先を識別するのに役立つ説明。
@@ -146,8 +146,8 @@ Snowflake接続を設定する前に、次の前提条件を満たしている�
 
 >[!IMPORTANT]
 > 
->* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
->* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**[ アクセス制御権限 ](/help/access-control/home.md#permissions) が必要です。<br> ![ 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
+>* データをアクティブ化するには、**[!UICONTROL 宛先の表示]**、**[!UICONTROL 宛先のアクティブ化]**、**[!UICONTROL プロファイルの表示]** および **[!UICONTROL セグメントの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。 [アクセス制御の概要](/help/access-control/ui/overview.md)を参照するか、製品管理者に問い合わせて必要な権限を取得してください。
+>* *ID* を書き出すには、**[!UICONTROL ID グラフの表示]**&#x200B;[&#x200B; アクセス制御権限 &#x200B;](/help/access-control/home.md#permissions) が必要です。<br> ![&#x200B; 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択します。](/help/destinations/assets/overview/export-identities-to-destination.png " 宛先に対してオーディエンスをアクティブ化するために、ワークフローでハイライト表示されている ID 名前空間を選択 "){width="100" zoomable="yes"}
 
 この宛先にオーディエンスをアクティベートする手順は、[ストリーミングオーディエンスの書き出し宛先へのプロファイルとオーディエンスのアクティベート](/help/destinations/ui/activate-segment-streaming-destinations.md)を参照してください。
 
