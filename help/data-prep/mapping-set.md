@@ -20,7 +20,7 @@ ht-degree: 93%
 この概要では、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 - [Data Prep](./home.md)：Data Prep を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータのマッピング、変換、検証をおこなうことができます。
-- [ データフロー ](../dataflows/home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
+- [&#x200B; データフロー &#x200B;](../dataflows/home.md)：データフローは、Experience Platform間でデータを移動するデータジョブを表します。 データフローは異なるサービスをまたいで設定され、ソースコネクタからターゲットデータセット、[!DNL Identity] および [!DNL Profile]、[!DNL Destinations] へとデータを移動できます。
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md)：[!DNL Experience Platform] にデータを送信するメソッド。
 - [[!DNL Experience Data Model (XDM) System]](../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
 
@@ -74,8 +74,8 @@ ht-degree: 93%
 | `outputSchema` | 入力データが保持する XDM スキーマは、準拠するように変換されます。 |
 | `mappings` | ソーススキーマから宛先スキーマへのフィールド間マッピングの配列。 |
 | `sourceType` | リストされた各マッピングについて、`sourceType` 属性はマッピングするソースのタイプを示します。`ATTRIBUTE`、`STATIC`、`EXPRESSION` のいずれかです。 <ul><li> `ATTRIBUTE` は、ソースパス内の任意の値に対して使用されます。 </li><li>`STATIC` は、宛先パスに挿入される値に使用されます。この値は一定で、ソーススキーマの影響を受けません。</li><li> `EXPRESSION` は、実行時に解決される式に使用されます。使用可能な式のリストは、[マッピング関数ガイド](./functions.md)に記載されています。</li> </ul> |
-| `source` | リストされた各マッピングについて、`source` 属性はマッピングするフィールドを示します。ソースの設定方法について詳しくは、[ ソースの概要 ](../sources/home.md) を参照してください。 |
-| `destination` | リストされた各マッピングついて、`destination` 属性はフィールド（`source` フィールドから抽出された値が配置されるフィールドのパス）を示します。宛先の設定方法について詳しくは、[ 宛先の概要 ](../destinations/home.md) を参照してください。 |
+| `source` | リストされた各マッピングについて、`source` 属性はマッピングするフィールドを示します。ソースの設定方法について詳しくは、[&#x200B; ソースの概要 &#x200B;](../sources/home.md) を参照してください。 |
+| `destination` | リストされた各マッピングついて、`destination` 属性はフィールド（`source` フィールドから抽出された値が配置されるフィールドのパス）を示します。宛先の設定方法について詳しくは、[&#x200B; 宛先の概要 &#x200B;](../destinations/home.md) を参照してください。 |
 | `mappings.name` | （*オプション*）マッピングの名前。 |
 | `mappings.description` | （*オプション*）マッピングの説明。 |
 
