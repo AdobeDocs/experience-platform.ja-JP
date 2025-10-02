@@ -4,10 +4,10 @@ solution: Experience Platform
 title: マッピングセットの概要
 description: Adobe Experience Platform Data Prep でのマッピングセットの使用方法を説明します。
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 95%
+source-wordcount: '979'
+ht-degree: 93%
 
 ---
 
@@ -82,6 +82,10 @@ ht-degree: 95%
 ## マッピングソースの設定
 
 マッピングでは、`source` はフィールド、式、または静的な値にすることができます。指定されたソースタイプに基づいて、様々な方法で値を抽出できます。
+
+>[!TIP]
+>
+>マッピングが完全に保存されるように、データ取り込みを開始する前に、マッピングを保存してから最大 10 分待ちます。
 
 ### 列データのフィールド
 
