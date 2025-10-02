@@ -2,10 +2,10 @@
 title: ライセンスの使用状況と処理能力
 description: Adobe Experience Platform内でのライセンス使用状況と容量制限について説明します。
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 568a0ba7707402496167145ce2673181b240496e
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 6%
+source-wordcount: '1603'
+ht-degree: 7%
 
 ---
 
@@ -169,6 +169,12 @@ Experience Platformは、サンドボックスのスループットを 15 分の
 | --- | --- | --- | --- |
 | バッチからストリーミングへの変換 | ストリーミングに変換されるバッチワークロードは、スループットを大幅に向上させる可能性があり、パフォーマンスとリソース割り当てに影響を与えます。 例えば、レート制限のないイベントの後に一括プロファイル更新を実行する場合などです。 | 低遅延処理が必要ない場合のバッチのユースケースには、ストリーミング戦略は不要です。 | ユースケースの要件を評価します。 バッチ送信マーケティングの場合は、ストリーミングではなく [ バッチ取り込み ](/help/ingestion/batch-ingestion/overview.md) を使用して、データ取り込みをより効率的に管理することを検討します。 |
 | 不要なデータ取り込み | パーソナライゼーションに不要なデータの取り込みは、価値を追加することなくスループットを向上させ、リソースを無駄にします。 例えば、関連度に関係なく、すべての分析トラフィックをプロファイルに取り込みます。 | 過剰な無関係なデータはノイズを生み出し、影響を受けるデータポイントを特定するのが難しくなります。 また、オーディエンスとプロファイルを定義および管理する際に摩擦が生じる可能性があります。 | ユースケースに必要なデータのみを取り込みます。 不要なデータは必ず除外してください。<ul><li>**Adobe Analytics**: [ 行レベルのフィルタリング ](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) を使用して、データ取り込みを最適化します。</li><li>**ソース**:[[!DNL Flow Service] API を使用して、](/help/sources/tutorials/api/filter.md) や [!DNL Snowflake] などのサポートされているソースの行レベルのデータ [!DNL Google BigQuery] をフィルタリングします。</li></li>**Edge データストリーム**: [ 動的データストリーム ](/help/datastreams/configure-dynamic-datastream.md) を設定して、WebSDK から受信するトラフィックの行レベルのフィルタリングを実行します。</li></ul> |
+
+## ビデオの概要 {#video}
+
+次のビデオでは、処理能力の概要を説明しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## よくある質問 {#faq}
 

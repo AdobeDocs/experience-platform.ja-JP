@@ -2,9 +2,9 @@
 title: Adobe Experience Platform リリースノート 2025年9月
 description: Adobe Experience Platform の 2025年9月のリリースノート。
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1422'
 ht-degree: 22%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ja/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ja/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ja/docs/analytics-platform/using/releases/pre-release-notes)
->- [連合オーディエンス構成](https://experienceleague.adobe.com/ja/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ja/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [連合オーディエンス構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **リリース日：2025年9月23日（PT）**
 
@@ -41,14 +41,14 @@ Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新�
 
 | 機能 | 説明 |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新しいアジェンティック層です。 Experience Platform Agent Orchestratorは、プラットフォームの豊富なデータとカスタマーナレッジを活用するように設計されており、専用のエキスパートであるAdobe Experience Platform Agents の背後にあるインテリジェンスと推論を強化し、複雑な意思決定や問題解決のタスクを人間の監督によって迅速かつ大規模に実行できるようにします。 AI アシスタントなどの会話型インターフェイスで自然言語を使用して質問したり、ヘルプをリクエストしたりすると、Agent Orchestratorは自動的に専門のエージェントを呼び出して、適切な回答を得ます。 Agent Orchestratorは、会話履歴を記憶しているので、コンテキストを繰り返すことなく自然に前の質問に基づいて構築でき、複数のエージェントからのインサイトを組み合わせて、明確で統一された回答を提供します。 詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。 |
-| Audience Agent | Audience Agentを使用すると、オーディエンスサイズの大きな変化の検出、重複オーディエンスの検出、オーディエンスインベントリの調査、オーディエンスのサイズの取得など、オーディエンスに関するインサイトを表示できます。 詳しくは、[Audience Agent ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/agents/audience) を参照してください。 |
+| Agent Orchestrator | Adobe Experience Platform Agent OrchestratorはAdobe Experience Platformの新しいアジェンティック層です。 Experience Platform Agent Orchestratorは、プラットフォームの豊富なデータとカスタマーナレッジを活用するように設計されており、専用のエキスパートであるAdobe Experience Platform Agents の背後にあるインテリジェンスと推論を強化し、複雑な意思決定や問題解決のタスクを人間の監督によって迅速かつ大規模に実行できるようにします。 AI アシスタントなどの会話型インターフェイスで自然言語を使用して質問したり、ヘルプをリクエストしたりすると、Agent Orchestratorは自動的に専門のエージェントを呼び出して、適切な回答を得ます。 Agent Orchestratorは、会話履歴を記憶しているので、コンテキストを繰り返すことなく自然に前の質問に基づいて構築でき、複数のエージェントからのインサイトを組み合わせて、明確で統一された回答を提供します。 詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) を参照してください。 |
+| Audience Agent | Audience Agentを使用すると、オーディエンスサイズの大きな変化の検出、重複オーディエンスの検出、オーディエンスインベントリの調査、オーディエンスのサイズの取得など、オーディエンスに関するインサイトを表示できます。 詳しくは、[Audience Agent ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience) を参照してください。 |
 
-詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-cloud-ai/experience-cloud-ai/home) を参照してください。
+詳しくは、[Agent Orchestrator ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home) を参照してください。
 
 ## アラート {#alerts}
 
-Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL &#x200B; アラート &#x200B;]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
+Experience Platformでは、様々なExperience Platform アクティビティに関するイベントベースのアラートを登録できます。 Experience Platform ユーザーインターフェイスの「[!UICONTROL  アラート ]」タブを使用して、様々なアラートルールを購読し、UI 内またはメール通知を通じてアラートメッセージを受け取るように選択できます。
 
 **新機能**
 
@@ -70,14 +70,14 @@ Experience Platformから [!DNL Destinations] データの円滑なアクティ�
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) コネクタ | 新しい [!DNL Snowflake Batch] コネクタが使用できるようになり、特定のユースケースに対してストリーミングコネクタの代わりに使用できます。 |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) 暗号化のサポート | RSA 形式の公開鍵を添付して、書き出したファイルを暗号化できるようになりました。これにより、他のクラウドストレージの宛先が機密情報に提供するのと同じレベルのセキュリティが提供されます。 |
-| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 宛先の認証有効期限の詳細 | [!DNL Pinterest] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]**&#x200B;**[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
+| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 宛先の認証有効期限の詳細 | [!DNL Pinterest] の宛先の認証の有効期限に関する情報がExperience Platform インターフェイスに直接表示されるようになり、認証の有効期限が切れるタイミングを確認し、データフローが中断される前に更新できるようになりました。 トークンの有効期限は、「**[!UICONTROL アカウント]****[[!UICONTROL または]](../../destinations/ui/destinations-workspace.md#accounts)** 参照 **[[!UICONTROL タブの「アカウントの有効期限]](../../destinations/ui/destinations-workspace.md#browse)** 列から監視できます。 |
 
 **新機能または更新された機能**
 
 | 機能 | 説明 |
 | --- | --- |
-| Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL &#x200B; タブと &#x200B;]](../../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL &#x200B; タブの新しい並べ替え機能により、宛先管理ワークフローが向上し &#x200B;]](../../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| 列の幅の永続的な設定 | ページから移動して戻る際に、列の幅の設定が保持されるようになりました。 例えば、「[[!UICONTROL &#x200B; 参照 &#x200B;]](../../destinations/ui/destinations-workspace.md#browse) タブの列幅を調整した場合、他の場所に移動してそのタブに戻っても、カスタムの列幅は変わりません。 |
+| Experience Platform UI での宛先管理機能の強化 | 「参照 [[!UICONTROL  タブと ]](../../destinations/ui/destinations-workspace.md#browse) アカウント [[!UICONTROL  タブの新しい並べ替え機能により、宛先管理ワークフローが向上し ]](../../destinations/ui/destinations-workspace.md#accounts) す。 また、アカウント認証の有効期限が近づくと、視覚的なインジケーターも表示されるようになりました。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| 列の幅の永続的な設定 | ページから移動して戻る際に、列の幅の設定が保持されるようになりました。 例えば、「[[!UICONTROL  参照 ]](../../destinations/ui/destinations-workspace.md#browse) タブの列幅を調整した場合、他の場所に移動してそのタブに戻っても、カスタムの列幅は変わりません。 |
 
 詳しくは、[ 宛先の概要 ](../../destinations/home.md) を参照してください。
 
@@ -106,7 +106,7 @@ Adobe Experience Platform を使用すると、顧客がいつどこからブラ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プロファイルビューアの機能強化 | 2025 年 9 月リリースには、プロファイルビューアに対する次の機能強化が含まれています。 <ul><li>**組み合わせビュー**：属性、イベント、インサイトが単一のビューに組み合わされました。</li><li>**AI で生成されたインサイト**：プロファイルの詳細ページに、AI で生成されたインサイトが表示され、プロファイルから生成された詳細を知ることができるようになりました。 これらのインサイトには、傾向スコアやトレンド分析などの情報を含めることができます。</li><li>**スタイルの更新**：プロファイルの詳細ページが視覚的に更新されました。</li><li>**参照**：検索とカスタマイズ機能を備えたインタラクティブカードベースのカルーセルを使用して、プロファイルを参照できるようになりました。</li></ul> |
+| [!BADGE Alpha]{type=Informative} この機能は現在Alphaにあります。 プロファイルビューアの機能強化 | 2025 年 9 月リリースには、プロファイルビューアに対する次の機能強化が含まれています。 <ul><li>**組み合わせビュー**：属性、イベント、インサイトが単一のビューに組み合わされました。</li><li>**AI で生成されたインサイト**：プロファイルの詳細ページに、AI で生成されたインサイトが表示され、プロファイルから生成された詳細を知ることができるようになりました。 これらのインサイトには、傾向スコアやトレンド分析などの情報を含めることができます。</li><li>**スタイルの更新**：プロファイルの詳細ページが視覚的に更新されました。</li><li>**参照**：検索とカスタマイズ機能を備えたインタラクティブカードベースのカルーセルを使用して、プロファイルを参照できるようになりました。</li></ul> |
 
 詳しくは、[ リアルタイム顧客プロファイルの概要 ](../../profile/home.md) を参照してください。
 

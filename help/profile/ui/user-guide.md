@@ -3,9 +3,9 @@ keywords: Experience Platform；プロファイル；リアルタイム顧客プ
 title: リアルタイム顧客プロファイル UI ガイド
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。 このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルを操作するためのガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '2004'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 >[!NOTE]
 >
->Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL &#x200B; プロファイル &#x200B;] ダッシュボードは表示されません。 代わりに、「[!UICONTROL &#x200B; 概要 &#x200B;]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
+>Experience Platformを初めて使用する組織で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、[!UICONTROL  プロファイル ] ダッシュボードは表示されません。 代わりに、「[!UICONTROL  概要 ]」タブに、リアルタイム顧客プロファイルを初めて使用する際に役立つリンクやドキュメントが表示されます。
 
 ### プロファイルダッシュボード {#profile-dashboard}
 
@@ -38,7 +38,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ![ プロファイルダッシュボードが表示されます。](../../dashboards/images/profiles/dashboard-overview.png)
 
-## [!UICONTROL &#x200B; 参照 &#x200B;] タブ
+## [!UICONTROL  参照 ] タブ
 
 「**[!UICONTROL 参照]**」タブでは、切り替えを選択して、プロファイルを **カード** 表示または **グラフ** 表示で表示できます。
 
@@ -48,7 +48,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ![ 組織に属するプロファイルが表示されます。](../images/user-guide/profile-browse.png)
 
-### [!UICONTROL &#x200B; 結合ポリシー &#x200B;] で参照
+### [!UICONTROL  結合ポリシー ] で参照
 
 「**[!UICONTROL 参照]**」タブは、デフォルトで組織のデフォルトの結合ポリシーに設定されています。 別の結合ポリシーを選択するには、結合ポリシー名の横にある `X` を選択し、セレクターを使用して **[!UICONTROL 結合ポリシーを選択]** ダイアログを開きます。
 
@@ -58,7 +58,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ![ 結合ポリシーセレクターがハイライト表示されている様子 ](../images/user-guide/browse-by-merge-policy.png)
 
-**[!UICONTROL 結合ポリシーを選択]** ダイアログで結合ポリシーを選択するには、ポリシー名の横のラジオボタンを選択し、**[!UICONTROL 選択]** を使用して [!UICONTROL &#x200B; 参照 &#x200B;] タブに戻ります。 次に、「**[!UICONTROL 表示]**」を選択して、サンプルプロファイルを更新し、新しい結合ポリシーが適用されたプロファイルのサンプリングを確認します。
+**[!UICONTROL 結合ポリシーを選択]** ダイアログで結合ポリシーを選択するには、ポリシー名の横のラジオボタンを選択し、**[!UICONTROL 選択]** を使用して [!UICONTROL  参照 ] タブに戻ります。 次に、「**[!UICONTROL 表示]**」を選択して、サンプルプロファイルを更新し、新しい結合ポリシーが適用されたプロファイルのサンプリングを確認します。
 
 ![ フィルターする結合ポリシーを選択できるダイアログが表示されます。](../images/user-guide/select-merge-policy.png)
 
@@ -86,7 +86,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ![ フィルタリングする ID 名前空間を選択できるダイアログが表示されます。](../images/user-guide/select-identity-namespace.png)
 
-[!UICONTROL ID 名前空間 &#x200B;] を選択し、「[!UICONTROL &#x200B; 参照 &#x200B;] タブに戻ると、選択した名前空間に関連する **[!UICONTROL ID 値]** を入力できます。
+[!UICONTROL ID 名前空間 ] を選択し、「[!UICONTROL  参照 ] タブに戻ると、選択した名前空間に関連する **[!UICONTROL ID 値]** を入力できます。
 
 >[!NOTE]
 >
@@ -127,6 +127,8 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 #### AI インサイトのウィジェット {#ai-insight-widgets}
 
+[!BADGE Alpha]{type=Informative} この機能は現在Alphaにあります。
+
 「**[!UICONTROL AI insight Widgets]**」セクションには、AI によって生成されたウィジェットが表示されます。 これらのウィジェットは、人口統計（年齢、性別、場所など）、ユーザー行動（購入履歴、web サイトのアクティビティ、ソーシャルメディアのエンゲージメントなど）、心理画像（興味、好み、ライフスタイルの選択など）などのプロファイルデータに基づいて、プロファイルに対する迅速なインサイトを提供します。 すべての AI ウィジェットは、プロファイルに存在する **既に** データを使用します。
 
 ![AI insight Widgets セクションが表示されます。](../images/user-guide/ai-insight-widgets.png)
@@ -144,6 +146,8 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 ![ 表示名を表示切替スイッチがハイライト表示されています。](../images/user-guide/show-display-names.png)
 
 #### 自動分類ウィジェット {#auto-classified-widgets}
+
+[!BADGE Alpha]{type=Informative} この機能は現在Alphaにあります。
 
 **[!UICONTROL 自動分類ウィジェット]** セクションには、結合スキーマを活用して属性が属するソースフィールドグループを決定するウィジェットが表示され、データの元の場所についてより明確なコンテキストが提供されます。 検索バーを使用すると、ウィジェット内でキーワードをより簡単に検索できます。
 
@@ -163,7 +167,7 @@ Experience Platform UI で、左側のナビゲーションで「**[!UICONTROL �
 
 ![ 「属性」タブがハイライト表示されています。 プロファイル属性が表示されます。](../images/user-guide/attributes.png)
 
-Edgeで使用できる属性を表示するには、データロケーションセレクターの **[!UICONTROL 0&rbrace;Edge&rbrace; を選択します。]**
+Edgeで使用できる属性を表示するには、データロケーションセレクターの **[!UICONTROL 0}Edge} を選択します。]**
 
 ![ 「属性」タブ内のデータロケーションセレクターがハイライト表示されています。](../images/user-guide/attributes-select.png)
 
@@ -185,7 +189,7 @@ Experience Platformのセグメント化について詳しくは、[Experience P
 
 ![ 「オーディエンスメンバーシップ」タブがハイライト表示されます。 プロファイルのオーディエンスメンバーシップの詳細が表示されます。](../images/user-guide/audience-membership.png)
 
-Edgeで使用可能なプロファイルのオーディエンスメンバーシップを表示するには、データロケーションセレクターの **[!UICONTROL 0&rbrace;Edge&rbrace; を選択します。]**&#x200B;エッジセグメント化について詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
+Edgeで使用可能なプロファイルのオーディエンスメンバーシップを表示するには、データロケーションセレクターの **[!UICONTROL 0}Edge} を選択します。]**&#x200B;エッジセグメント化について詳しくは、[ エッジセグメント化ガイド ](../../segmentation/methods/edge-segmentation.md) を参照してください。
 
 ![ 「オーディエンスメンバーシップ」タブ内のデータロケーションセレクターがハイライト表示されます。](../images/user-guide/audience-membership-select.png)
 
