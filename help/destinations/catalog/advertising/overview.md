@@ -22,7 +22,7 @@ Adobe Experience Platformをデマンドサイドプラットフォーム（DSP�
 
 現在、Experience Platformは、以下に示す広告宛先をサポートしています。
 
-接続と拡張機能の違いを理解するには、宛先のタイプとカテゴリ ページの [ 接続 ](../../destination-types.md#connections) を参照してください。
+接続と拡張機能の違いを理解するには、宛先のタイプとカテゴリ ページの [&#x200B; 接続 &#x200B;](../../destination-types.md#connections) を参照してください。
 
 ### 接続
 
